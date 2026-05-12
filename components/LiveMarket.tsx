@@ -5,25 +5,15 @@ import { ChevronRight, Star } from "lucide-react";
 import { IndexCard } from "./IndexCard";
 import { StockCard } from "./StockCard";
 import { FuturesHeatmap } from "./FuturesHeatmap";
-import { TickerTape } from "./TickerTape";
 import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
-import {
-  mockIndices,
-  mockQuotes,
-  mockFutures,
-  RECOMMENDED_SYMBOLS,
-} from "@/lib/api";
+import { mockIndices, mockQuotes, mockFutures, RECOMMENDED_SYMBOLS } from "@/lib/api";
 
-type MarketData = {
-  indices: IndexQuote[];
-  quotes:  Quote[];
-  futures: FutureItem[];
-};
+type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
 
 function CardSkeleton() {
   return (
     <div
-      className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border animate-pulse"
+      className="min-w-[155px] flex-shrink-0 rounded-2xl border animate-pulse"
       style={{ background: "var(--card)", borderColor: "var(--border)", height: 148 }}
     />
   );
@@ -40,16 +30,13 @@ export function LiveMarket() {
       .catch(() => setLoading(false));
   }, []);
 
-  const indices  = data?.indices ?? mockIndices;
-  const quotes   = data?.quotes  ?? mockQuotes;
-  const futures  = data?.futures ?? mockFutures;
+  const indices     = data?.indices ?? mockIndices;
+  const quotes      = data?.quotes  ?? mockQuotes;
+  const futures     = data?.futures ?? mockFutures;
   const recommended = quotes.filter((q) => RECOMMENDED_SYMBOLS.includes(q.symbol));
 
   return (
     <>
-      {/* 티커 테이프 */}
-      <TickerTape quotes={quotes} />
-
       {/* Investus 추천주식 */}
       <section className="px-4 lg:px-0 pt-5">
         <div className="flex items-center justify-between mb-3">

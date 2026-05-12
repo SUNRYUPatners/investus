@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { TickerTape } from "@/components/TickerTape";
 import { LiveMarket } from "@/components/LiveMarket";
 import { NewsCard } from "@/components/NewsCard";
 import { FearGreedGauge } from "@/components/FearGreedGauge";
@@ -7,11 +8,7 @@ import { SP500Heatmap } from "@/components/SP500Heatmap";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
 import { ChevronRight } from "lucide-react";
-import {
-  getNews,
-  getFearGreed,
-  getBuffett,
-} from "@/lib/api";
+import { getNews, getFearGreed, getBuffett, mockQuotes } from "@/lib/api";
 
 export default async function HomePage() {
   const [news, fearGreed, buffett] = await Promise.all([
@@ -23,10 +20,8 @@ export default async function HomePage() {
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
-
-      {/* LiveMarket: TickerTape + 추천주식 + 인기종목 + 주요지수 + FuturesHeatmap */}
-      {/* 클라이언트에서 /api/market-data를 fetch → 실시간 데이터 */}
-      <LiveMarket />
+      {/* 티커 테이프: mock 사용 (애니메이션 목적) */}
+      <TickerTape quotes={mockQuotes} />
 
       <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10 pb-24">
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-2">
@@ -37,25 +32,24 @@ export default async function HomePage() {
             {/* 관심종목 */}
             <WatchlistSection />
 
+            {/* 추천주식 · 인기종목 · 주요지수 · Futures (실시간) */}
+            <LiveMarket />
+
             {/* S&P 500 섹터 히트맵 */}
             <section className="px-4 lg:px-0 pt-4 pb-4 lg:pb-0">
               <SP500Heatmap />
             </section>
 
-            {/* 광고 — 모바일 전용 */}
+            {/* 광고 · 시장심리 · 버핏지수 · 뉴스 — 모바일 전용 */}
             <section className="px-4 lg:hidden pt-4">
               <AdBanner format="auto" />
             </section>
-
-            {/* 시장심리 / 버핏지수 — 모바일 전용 */}
             <section className="px-4 lg:hidden pt-4">
               <FearGreedGauge data={fearGreed} />
             </section>
             <section className="px-4 lg:hidden pt-4">
               <BuffettGauge data={buffett} />
             </section>
-
-            {/* 뉴스 — 모바일 전용 */}
             <section className="px-4 lg:hidden pt-4 pb-2">
               <div className="flex items-center justify-between mb-3">
                 <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
@@ -66,19 +60,16 @@ export default async function HomePage() {
                 </button>
               </div>
               <div className="flex flex-col gap-3">
-                {news.map((item) => (
-                  <NewsCard key={item.id} item={item} />
-                ))}
+                {news.map((item) => <NewsCard key={item.id} item={item} />)}
               </div>
             </section>
           </div>
 
-          {/* ── 오른쪽 컬럼 (데스크톱 전용) ── */}
+          {/* ── 오른쪽 컬럼 (데스크톱 전용, sticky) ── */}
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] gap-5 pb-10">
             <AdBanner format="auto" />
             <FearGreedGauge data={fearGreed} />
             <BuffettGauge data={buffett} />
-
             <div>
               <div className="flex items-center justify-between mb-3">
                 <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
@@ -89,9 +80,7 @@ export default async function HomePage() {
                 </button>
               </div>
               <div className="flex flex-col gap-3">
-                {news.slice(0, 5).map((item) => (
-                  <NewsCard key={item.id} item={item} />
-                ))}
+                {news.slice(0, 5).map((item) => <NewsCard key={item.id} item={item} />)}
               </div>
             </div>
           </div>
