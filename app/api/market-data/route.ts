@@ -1,13 +1,17 @@
 import { NextResponse } from "next/server";
 import { fetchFinnhubBatch, fetchFinnhubRawQuote, type FinnhubRawQuote } from "@/lib/finnhub";
 import {
-  mockIndices, mockQuotes, mockFutures, INDEX_MAP,
+  mockIndices, mockQuotes, mockFutures,
   type IndexQuote, type Quote, type FutureItem,
 } from "@/lib/api";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
-// ── Synthetic sparkline (방향만 정확하면 충분 — 추가 API 호출 없음) ─────────
+const UA =
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
+  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+
+// ── Synthetic sparkline ───────────────────────────────────────────────────
 
 function syntheticSparkline(price: number, changePercent: number): number[] {
   const n = 9;
@@ -30,17 +34,108 @@ async function getUSDKRW(): Promise<number | null> {
   } catch { return null; }
 }
 
-// ── 핵심 Finnhub 호출 — 한 번에 묶어서 rate limit 최소화 ─────────────────
-//   stocks 13 + indices 3 (^GSPC/^IXIC/^DJI) + crypto 2 (BTC/ETH) = 18 calls
-
-const INDEX_FH: Record<string, string> = {
-  SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI",
+// ── Index quotes — Yahoo Finance (free, no key needed) ───────────────────
+// Maps our internal symbol → Yahoo Finance symbol → Stooq symbol
+const INDEX_YAHOO: Record<string, string> = {
+  SPX: "%5EGSPC", COMP: "%5EIXIC", DJI: "%5EDJI",
 };
+const INDEX_STOOQ: Record<string, string> = {
+  SPX: "^spx", COMP: "^ndq", DJI: "^dji",
+};
+
+type IndexLive = { price: number; change: number; changePercent: number };
+
+async function fetchYahooIndexQuote(yahooSym: string): Promise<IndexLive | null> {
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${yahooSym}?interval=1d&range=5d&includePrePost=false`;
+    const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
+    if (!res.ok) return null;
+    const json   = await res.json();
+    const meta   = json?.chart?.result?.[0]?.meta;
+    if (!meta || !meta.regularMarketPrice) return null;
+    const price   = meta.regularMarketPrice as number;
+    const prev    = (meta.chartPreviousClose ?? meta.previousClose ?? 0) as number;
+    const change  = prev > 0 ? price - prev : 0;
+    const changePct = prev > 0 ? (change / prev) * 100 : 0;
+    return { price, change, changePercent: changePct };
+  } catch { return null; }
+}
+
+async function fetchStooqIndexQuote(stooqSym: string): Promise<IndexLive | null> {
+  try {
+    const url = `https://stooq.com/q/l/?s=${encodeURIComponent(stooqSym)}&f=sd2t2ohlcv&h&e=json`;
+    const res = await fetch(url, { headers: { "User-Agent": UA } });
+    if (!res.ok) return null;
+    const json = await res.json();
+    const sym  = json?.symbols?.[0];
+    if (!sym?.close) return null;
+    const price = sym.close as number;
+    const open  = sym.open  as number;
+    const change    = price - open;
+    const changePct = open > 0 ? (change / open) * 100 : 0;
+    return { price, change, changePercent: changePct };
+  } catch { return null; }
+}
+
+async function fetchIndexQuote(symbol: string): Promise<IndexLive | null> {
+  const yahoo = INDEX_YAHOO[symbol];
+  if (yahoo) {
+    const r = await fetchYahooIndexQuote(yahoo);
+    if (r) return r;
+  }
+  const stooq = INDEX_STOOQ[symbol];
+  if (stooq) return fetchStooqIndexQuote(stooq);
+  return null;
+}
+
+// ── Yahoo Finance for commodity/FX/index futures ─────────────────────────
+// Yahoo Finance `=F` suffix for front-month futures contracts
+
+const YAHOO_FUTURES: Record<string, string> = {
+  RTY: "RTY=F", CL: "CL=F", NG: "NG=F", RB: "RB=F",
+  GC: "GC=F",   SI: "SI=F", HG: "HG=F",
+  ZN: "ZN=F",   ZB: "ZB=F",
+  "6E": "6E=F", "6J": "6J=F",
+  ZC: "ZC=F",   ZW: "ZW=F", ZS: "ZS=F",
+};
+
+async function fetchYahooFutureQuote(yahooCom: string): Promise<IndexLive | null> {
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooCom)}?interval=1d&range=2d&includePrePost=false`;
+    const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
+    if (!res.ok) return null;
+    const json  = await res.json();
+    const meta  = json?.chart?.result?.[0]?.meta;
+    if (!meta?.regularMarketPrice) return null;
+    const price = meta.regularMarketPrice as number;
+    const prev  = (meta.chartPreviousClose ?? 0) as number;
+    const change    = prev > 0 ? price - prev : 0;
+    const changePct = prev > 0 ? (change / prev) * 100 : 0;
+    return { price, change, changePercent: changePct };
+  } catch { return null; }
+}
+
+// ── Crypto via Finnhub (CoinGecko fallback) ───────────────────────────────
 
 const CRYPTO_FH: Record<string, string> = {
   BTC: "BINANCE:BTCUSDT",
   ETH: "BINANCE:ETHUSDT",
 };
+
+async function fetchCoinGecko(): Promise<Map<string, IndexLive>> {
+  const out = new Map<string, IndexLive>();
+  try {
+    const res = await fetch(
+      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true",
+      { headers: { "User-Agent": UA } }
+    );
+    if (!res.ok) return out;
+    const d = await res.json();
+    if (d.bitcoin?.usd)  out.set("BTC", { price: d.bitcoin.usd,  change: 0, changePercent: d.bitcoin.usd_24h_change  ?? 0 });
+    if (d.ethereum?.usd) out.set("ETH", { price: d.ethereum.usd, change: 0, changePercent: d.ethereum.usd_24h_change ?? 0 });
+  } catch { /* ignore */ }
+  return out;
+}
 
 // Index futures → reuse 위에서 가져온 지수 데이터 (중복 호출 없음)
 const FUTURES_FROM_INDEX: Record<string, string> = {
@@ -50,58 +145,69 @@ const FUTURES_FROM_INDEX: Record<string, string> = {
 export async function GET() {
   const token = process.env.FINNHUB_API_KEY ?? "";
 
-  // ── 1) 주식 13종 일괄 조회 ─────────────────────────────────────────────
-  const stockSymbols = mockQuotes.map((q) => q.symbol);
-  const stockMap     = await fetchFinnhubBatch(stockSymbols);
+  // ── 병렬 조회 ─────────────────────────────────────────────────────────
+  const stockSymbols   = mockQuotes.map((q) => q.symbol);
+  const indexSymbols   = mockIndices.filter((m) => !m.isCurrency).map((m) => m.symbol);
+  const futureSymbols  = Object.keys(YAHOO_FUTURES);
+  const cryptoFHSyms   = Object.values(CRYPTO_FH);
 
-  // ── 2) 지수 3종 + 크립토 2종 조회 ─────────────────────────────────────
-  const indexFHSyms  = ["^GSPC", "^IXIC", "^DJI"] as const;
-  const cryptoFHSyms = Object.values(CRYPTO_FH);
-
-  const [indexResults, cryptoResults, krwRate] = await Promise.all([
-    token
-      ? Promise.allSettled(indexFHSyms.map((s) => fetchFinnhubRawQuote(s)))
-      : Promise.resolve(indexFHSyms.map(() => ({ status: "fulfilled", value: null } as PromiseFulfilledResult<null>))),
+  const [
+    stockMap,
+    indexLiveArr,
+    futuresLiveArr,
+    cryptoResults,
+    cgMap,
+    krwRate,
+  ] = await Promise.all([
+    fetchFinnhubBatch(stockSymbols),
+    Promise.allSettled(indexSymbols.map((s) => fetchIndexQuote(s))),
+    Promise.allSettled(futureSymbols.map((s) => fetchYahooFutureQuote(YAHOO_FUTURES[s]))),
     token
       ? Promise.allSettled(cryptoFHSyms.map((s) => fetchFinnhubRawQuote(s)))
       : Promise.resolve(cryptoFHSyms.map(() => ({ status: "fulfilled", value: null } as PromiseFulfilledResult<null>))),
+    fetchCoinGecko(),
     getUSDKRW(),
   ]);
 
-  // index symbol → raw quote
-  const indexRaw = new Map<string, FinnhubRawQuote>();
-  indexFHSyms.forEach((sym, i) => {
-    const r = indexResults[i];
-    if (r.status === "fulfilled" && r.value) indexRaw.set(sym, r.value);
+  // symbol → live index data
+  const indexLive = new Map<string, IndexLive>();
+  indexSymbols.forEach((sym, i) => {
+    const r = indexLiveArr[i];
+    if (r.status === "fulfilled" && r.value) indexLive.set(sym, r.value);
   });
 
-  // crypto symbol → raw quote
+  // symbol → live futures data (Yahoo)
+  const futureLive = new Map<string, IndexLive>();
+  futureSymbols.forEach((sym, i) => {
+    const r = futuresLiveArr[i];
+    if (r.status === "fulfilled" && r.value) futureLive.set(sym, r.value);
+  });
+
+  // crypto symbol → raw quote (Finnhub)
   const cryptoRaw = new Map<string, FinnhubRawQuote>();
   Object.values(CRYPTO_FH).forEach((sym, i) => {
     const r = cryptoResults[i];
     if (r.status === "fulfilled" && r.value) cryptoRaw.set(sym, r.value);
   });
 
-  // ── 지수 (INDEX_MAP 순서 유지) ────────────────────────────────────────
+  // ── 지수 ─────────────────────────────────────────────────────────────
   const indices: IndexQuote[] = mockIndices.map((mock) => {
     if (mock.isCurrency) {
       const val = krwRate ?? mock.value;
       return { ...mock, value: val, change: val - mock.value, changePercent: ((val - mock.value) / mock.value) * 100 };
     }
-    const fhSym = INDEX_FH[mock.symbol];
-    const q     = fhSym ? indexRaw.get(fhSym) : undefined;
-    if (!q || q.c === 0) return mock;
-    const prev = q.pc || (q.c - q.d);
+    const live = indexLive.get(mock.symbol);
+    if (!live) return mock;
     return {
       ...mock,
-      value:         q.c,
-      change:        q.d,
-      changePercent: prev > 0 ? (q.d / prev) * 100 : q.dp,
-      sparkline:     syntheticSparkline(q.c, q.dp),
+      value:         live.price,
+      change:        live.change,
+      changePercent: live.changePercent,
+      sparkline:     syntheticSparkline(live.price, live.changePercent),
     };
   });
 
-  // ── 주식 (synthetic sparkline) ────────────────────────────────────────
+  // ── 주식 ─────────────────────────────────────────────────────────────
   const quotes: Quote[] = mockQuotes.map((mock) => {
     const q = stockMap.get(mock.symbol);
     if (!q) return mock;
@@ -114,26 +220,28 @@ export async function GET() {
     };
   });
 
-  // ── 선물 ──────────────────────────────────────────────────────────────
+  // ── 선물 ─────────────────────────────────────────────────────────────
   const futures: FutureItem[] = mockFutures.map((f) => {
-    // 지수 선물 → 이미 가져온 지수 데이터 재사용 (추가 API 호출 없음)
+    // 1) 지수 선물 → 이미 가져온 지수 데이터 재사용
     const idxKey = FUTURES_FROM_INDEX[f.symbol];
     if (idxKey) {
-      const fhSym = INDEX_FH[idxKey];
-      const q     = fhSym ? indexRaw.get(fhSym) : undefined;
-      if (q && q.c > 0) return { ...f, price: q.c, change: q.d, changePercent: q.dp, isMock: false };
-      return { ...f, isMock: true };
+      const live = indexLive.get(idxKey);
+      if (live) return { ...f, price: live.price, change: live.change, changePercent: live.changePercent, isMock: false };
     }
 
-    // 크립토
-    const cryptoFH = CRYPTO_FH[f.symbol];
-    if (cryptoFH) {
-      const q = cryptoRaw.get(cryptoFH);
-      if (q && q.c > 0) return { ...f, price: q.c, change: q.d, changePercent: q.dp, isMock: false };
-      return { ...f, isMock: true };
+    // 2) Yahoo Finance 선물
+    const yhLive = futureLive.get(f.symbol);
+    if (yhLive) return { ...f, price: yhLive.price, change: yhLive.change, changePercent: yhLive.changePercent, isMock: false };
+
+    // 3) 크립토 — Finnhub primary, CoinGecko fallback
+    if (f.symbol === "BTC" || f.symbol === "ETH") {
+      const fhSym = CRYPTO_FH[f.symbol];
+      const fhQ   = fhSym ? cryptoRaw.get(fhSym) : undefined;
+      if (fhQ && fhQ.c > 0) return { ...f, price: fhQ.c, change: fhQ.d, changePercent: fhQ.dp, isMock: false };
+      const cg = cgMap.get(f.symbol);
+      if (cg) return { ...f, price: cg.price, change: cg.change, changePercent: cg.changePercent, isMock: false };
     }
 
-    // 나머지 (원유/채권/농산물 — 무료 API 미지원)
     return { ...f, isMock: true };
   });
 
