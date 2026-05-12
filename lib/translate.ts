@@ -1,43 +1,25 @@
-import Anthropic from "@anthropic-ai/sdk";
-
-let client: Anthropic | null = null;
-function getClient(): Anthropic | null {
-  if (!process.env.ANTHROPIC_API_KEY) return null;
-  if (!client) client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  return client;
+/**
+ * Free Google Translate endpoint — no API key required.
+ * Translates a batch of English headlines to Korean in parallel.
+ */
+async function translateOne(text: string): Promise<string> {
+  const url =
+    `https://translate.googleapis.com/translate_a/single` +
+    `?client=gtx&sl=en&tl=ko&dt=t&q=${encodeURIComponent(text)}`;
+  const res = await fetch(url);
+  if (!res.ok) return text;
+  const data = await res.json() as unknown[][];
+  // Response[0] is an array of [translated_chunk, original_chunk, ...]
+  const translated = (data?.[0] as unknown[][] | undefined)
+    ?.map((s) => (s as unknown[])?.[0] ?? "")
+    .join("") ?? "";
+  return translated.trim() || text;
 }
 
-/**
- * Batch-translate English news headlines to Korean using Claude Haiku.
- * Returns original titles if API key missing or on any error.
- */
 export async function translateHeadlines(titles: string[]): Promise<string[]> {
   if (titles.length === 0) return [];
-  const ai = getClient();
-  if (!ai) return titles;
-
   try {
-    const numbered = titles.map((t, i) => `${i + 1}. ${t}`).join("\n");
-    const msg = await ai.messages.create({
-      model:      "claude-haiku-4-5-20251001",
-      max_tokens: 1024,
-      messages: [{
-        role: "user",
-        content:
-          `Translate these English financial news headlines to Korean. ` +
-          `Return ONLY a JSON array of strings (same order, same count). No explanation.\n\n` +
-          numbered,
-      }],
-    });
-
-    const text = msg.content.find((b) => b.type === "text")?.text ?? "";
-    const match = text.match(/\[[\s\S]*\]/);
-    if (!match) return titles;
-    const parsed: unknown = JSON.parse(match[0]);
-    if (!Array.isArray(parsed) || parsed.length !== titles.length) return titles;
-    return (parsed as unknown[]).map((s, i) =>
-      typeof s === "string" && s.trim() ? s.trim() : titles[i]
-    );
+    return await Promise.all(titles.map(translateOne));
   } catch {
     return titles;
   }
