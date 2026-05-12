@@ -46,6 +46,8 @@ export type NewsItem = {
   time: string;
   category: string;
   categoryColor: "mint" | "red" | "blue" | "purple" | "yellow" | "orange";
+  url?: string;
+  image?: string;
 };
 
 export type Holding = {
@@ -495,7 +497,7 @@ export async function getNews(): Promise<NewsItem[]> {
     const { fetchFinnhubMarketNews } = await import("./finnhub");
     const items = await fetchFinnhubMarketNews();
     if (items.length > 0) {
-      return items.slice(0, 8).map((n, i) => {
+      return items.slice(0, 20).map((n, i) => {
         const { category, categoryColor } = detectCategory(n.headline);
         return {
           id:            n.id || i,
@@ -505,6 +507,8 @@ export async function getNews(): Promise<NewsItem[]> {
           time:          relTimeKo(n.datetime),
           category,
           categoryColor,
+          url:           n.url   || undefined,
+          image:         n.image || undefined,
         };
       });
     }

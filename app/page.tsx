@@ -1,13 +1,12 @@
 import { Header } from "@/components/Header";
 import { TickerTape } from "@/components/TickerTape";
 import { LiveMarket } from "@/components/LiveMarket";
-import { NewsCard } from "@/components/NewsCard";
+import { NewsSection } from "@/components/NewsSection";
 import { FearGreedGauge } from "@/components/FearGreedGauge";
 import { BuffettGauge } from "@/components/BuffettGauge";
 import { SP500Heatmap } from "@/components/SP500Heatmap";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
-import { ChevronRight } from "lucide-react";
 import { getNews, getFearGreed, getBuffett, mockQuotes } from "@/lib/api";
 
 export default async function HomePage() {
@@ -51,17 +50,7 @@ export default async function HomePage() {
               <BuffettGauge data={buffett} />
             </section>
             <section className="px-4 lg:hidden pt-4 pb-2">
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-                  시장 뉴스
-                </h2>
-                <button className="flex items-center gap-0.5 text-xs font-medium" style={{ color: "var(--mint)" }}>
-                  더보기 <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-              <div className="flex flex-col gap-3">
-                {news.map((item) => <NewsCard key={item.id} item={item} />)}
-              </div>
+              <NewsSection news={news} />
             </section>
           </div>
 
@@ -70,19 +59,7 @@ export default async function HomePage() {
             <AdBanner format="auto" />
             <FearGreedGauge data={fearGreed} />
             <BuffettGauge data={buffett} />
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-                  시장 뉴스
-                </h2>
-                <button className="flex items-center gap-0.5 text-xs font-medium" style={{ color: "var(--mint)" }}>
-                  더보기 <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-              <div className="flex flex-col gap-3">
-                {news.slice(0, 5).map((item) => <NewsCard key={item.id} item={item} />)}
-              </div>
-            </div>
+            <NewsSection news={news} />
           </div>
 
         </div>
