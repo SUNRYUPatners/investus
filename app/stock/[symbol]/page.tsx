@@ -213,8 +213,8 @@ export default function StockPage({
                       borderStyle:       "solid",
                     }}
                   >
-                    <span className="text-[8px] shrink-0" style={{ color: "var(--muted)" }}>{label}</span>
-                    <span className="text-[8px] font-semibold font-mono-num text-right" style={{ color: "var(--text)" }}>{value}</span>
+                    <span className="text-[9px] shrink-0" style={{ color: "var(--muted)" }}>{label}</span>
+                    <span className="text-[9px] font-semibold font-mono-num text-right" style={{ color: "var(--text)" }}>{value}</span>
                   </div>
                 );
               })}
