@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const PERIODS = ["1D", "1W", "1M", "3M", "1Y", "5Y"] as const;
+const PERIODS = ["1D", "1W", "1M", "3M", "1Y", "5Y", "10Y", "ALL"] as const;
 type Period = (typeof PERIODS)[number];
 
 type Point = { ts: number; close: number; volume: number };
@@ -35,6 +35,7 @@ function xFmt(ts: number, period: Period): string {
     return `${d.getMonth() + 1}/${d.getDate()}`;
   if (period === "1Y")
     return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
+  // 5Y / 10Y / ALL → year
   return String(d.getFullYear());
 }
 
