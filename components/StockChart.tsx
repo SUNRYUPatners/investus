@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const PERIODS = ["1D", "1M", "YTD", "3Y", "5Y", "10Y", "ALL"] as const;
+const PERIODS = ["1D", "1W", "1M", "3M", "1Y", "5Y"] as const;
 type Period = (typeof PERIODS)[number];
 
 type Point = { ts: number; close: number; volume: number };
@@ -29,14 +29,13 @@ function xFmt(ts: number, period: Period): string {
       hour: "numeric", minute: "2-digit", hour12: false,
       timeZone: "America/New_York",
     });
-  if (period === "1M") return `${d.getMonth() + 1}/${d.getDate()}`;
-  if (period === "YTD")
+  if (period === "1W")
+    return `${d.getMonth() + 1}/${d.getDate()}`;
+  if (period === "1M" || period === "3M")
+    return `${d.getMonth() + 1}/${d.getDate()}`;
+  if (period === "1Y")
     return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
   return String(d.getFullYear());
-}
-
-function xFmtAll(ts: number): string {
-  return String(new Date(ts * 1000).getFullYear());
 }
 
 function fullFmt(ts: number, period: Period): string {
@@ -150,11 +149,11 @@ export function StockChart({ symbol }: { symbol: string }) {
           const idx = Math.round(t * (N - 1));
           return {
             x: xAt(idx),
-            label: period === "ALL" ? xFmtAll(pts[idx].ts) : xFmt(pts[idx].ts, period),
+            label: xFmt(pts[idx].ts, period),
           };
         })
         .filter((t, i, arr) => i === 0 || t.label !== arr[i - 1].label)
-    : [];
+  : [];
 
   // Previous close line (for 1D only)
   const prevY = period === "1D" && data?.chartPreviousClose
