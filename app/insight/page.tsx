@@ -1,0 +1,235 @@
+import { Header } from "@/components/Header";
+import { XTimeline } from "@/components/XTimeline";
+import { YoutubeChannels } from "@/components/YoutubeChannels";
+import { BookCarousel } from "@/components/BookCarousel";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { AdBanner } from "@/components/AdBanner";
+
+export default function InsightPage() {
+  return (
+    <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
+      <Header />
+
+      <main className="max-w-[480px] lg:max-w-3xl mx-auto px-4 lg:px-8 pb-24 lg:pb-10">
+        {/* Title */}
+        <div className="pt-5 pb-4">
+          <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
+            인사이트 💡
+          </h1>
+          <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>
+            투자 인사이트 · 추천 도서 · 유튜브
+          </p>
+        </div>
+
+        {/* ── 전자책 배너 ── */}
+        <section className="mb-6">
+          <Link
+            href="/buy"
+            className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
+            style={{ borderColor: "rgba(0,229,160,0.25)" }}
+          >
+            <div
+              className="relative px-5 py-5 flex gap-4 items-center"
+              style={{
+                background: "linear-gradient(135deg, #0d1f18 0%, #0a0c10 60%, #0d1520 100%)",
+              }}
+            >
+              {/* Glow */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle at 20% 50%, rgba(0,229,160,0.08) 0%, transparent 60%)",
+                }}
+              />
+
+              {/* Book cover */}
+              <div
+                className="relative w-[68px] h-[96px] rounded-xl flex-shrink-0 flex flex-col items-center justify-center gap-1 shadow-lg"
+                style={{
+                  background: "linear-gradient(160deg, #0f2d1e, #071510)",
+                  border: "1px solid rgba(0,229,160,0.3)",
+                  boxShadow: "0 8px 24px rgba(0,229,160,0.15)",
+                }}
+              >
+                <span className="text-2xl">📈</span>
+                <p
+                  className="text-[7px] font-bold text-center px-1 leading-tight"
+                  style={{ color: "var(--mint)" }}
+                >
+                  절대로 잃지말고
+                  <br />
+                  미래에 투자하라
+                </p>
+              </div>
+
+              {/* Info */}
+              <div className="flex-1 min-w-0">
+                <div
+                  className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-2"
+                  style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}
+                >
+                  ✦ 신규 출간
+                </div>
+                <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
+                  절대로 잃지 말고 미래에 투자하라
+                </p>
+                <p className="text-[11px] mb-2.5" style={{ color: "var(--muted)" }}>
+                  잃지 않는 투자의 원칙 · 미래 유망 섹터
+                </p>
+                <div className="flex items-center justify-between">
+                  <p className="text-base font-bold font-mono-num" style={{ color: "var(--mint)" }}>
+                    ₩19,900
+                  </p>
+                  <span
+                    className="text-[11px] font-bold px-3 py-1.5 rounded-full"
+                    style={{ background: "var(--mint)", color: "#000" }}
+                  >
+                    구매하기 →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        {/* ── 투자 교육 배너 ── */}
+        <section className="mb-6">
+          <Link
+            href="/education"
+            className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
+            style={{ borderColor: "rgba(139,92,246,0.25)" }}
+          >
+            <div
+              className="relative px-5 py-5 flex items-center gap-4"
+              style={{
+                background: "linear-gradient(135deg, #1a0d2e 0%, #0d0d1f 60%, #0a0c10 100%)",
+              }}
+            >
+              {/* Glow */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle at 80% 50%, rgba(139,92,246,0.1) 0%, transparent 60%)",
+                }}
+              />
+
+              {/* Icon */}
+              <div
+                className="relative w-[68px] h-[68px] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg"
+                style={{
+                  background: "linear-gradient(145deg, #2d1a4e, #1a0d2e)",
+                  border: "1px solid rgba(139,92,246,0.35)",
+                  boxShadow: "0 8px 24px rgba(139,92,246,0.2)",
+                }}
+              >
+                <span className="text-3xl">🎓</span>
+              </div>
+
+              {/* Info */}
+              <div className="flex-1 min-w-0">
+                <div
+                  className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-2"
+                  style={{ background: "rgba(139,92,246,0.2)", color: "#a78bfa" }}
+                >
+                  ✦ 소수 정예 클래스
+                </div>
+                <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
+                  미국주식 투자 교육
+                </p>
+                <p className="text-[11px] mb-2.5" style={{ color: "var(--muted)" }}>
+                  4주 · 실전 중심 · 종목 분석 포함
+                </p>
+                <div className="flex items-center justify-between">
+                  <p className="text-xs" style={{ color: "#a78bfa" }}>
+                    선착순 모집 중
+                  </p>
+                  <span
+                    className="text-[11px] font-bold px-3 py-1.5 rounded-full"
+                    style={{
+                      background: "linear-gradient(135deg, #7c3aed, #a78bfa)",
+                      color: "#fff",
+                    }}
+                  >
+                    신청하기 →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        {/* ── 광고 ── */}
+        <section className="mb-4">
+          <AdBanner format="auto" />
+        </section>
+
+        {/* ── X 피드 ── */}
+        <section className="mb-6">
+          <div className="flex items-center justify-between mb-3">
+            <h2
+              className="text-xs font-semibold tracking-widest uppercase font-syne"
+              style={{ color: "var(--muted)" }}
+            >
+              X 피드
+            </h2>
+            <a
+              href="https://x.com/hnryu_cio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-[10px]"
+              style={{ color: "var(--mint)" }}
+            >
+              @hnryu_cio <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+
+          {/* Profile chip */}
+          <div
+            className="flex items-center gap-2 px-3 py-2 rounded-xl border mb-3"
+            style={{ background: "var(--card)", borderColor: "var(--border)" }}
+          >
+            <div
+              className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 text-white"
+              style={{ background: "linear-gradient(135deg,#1d9bf0,#0d6efd)" }}
+            >
+              𝕏
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-xs font-semibold" style={{ color: "var(--text)" }}>@hnryu_cio</p>
+              <p className="text-[10px]" style={{ color: "var(--muted)" }}>
+                게시물 · 재게시 포함 실시간 피드
+              </p>
+            </div>
+          </div>
+
+          <XTimeline />
+        </section>
+
+        {/* ── 추천 도서 ── */}
+        <section className="mb-6">
+          <h2
+            className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
+            style={{ color: "var(--muted)" }}
+          >
+            추천 도서
+          </h2>
+          <BookCarousel />
+        </section>
+
+        {/* ── 유튜브 채널 ── */}
+        <section>
+          <h2
+            className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
+            style={{ color: "var(--muted)" }}
+          >
+            추천 유튜브 채널
+          </h2>
+          <YoutubeChannels />
+        </section>
+      </main>
+    </div>
+  );
+}
