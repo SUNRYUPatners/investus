@@ -22,7 +22,7 @@ function bg(pct: number) {
 
 function textColor(pct: number) {
   const t = Math.min(Math.abs(pct) / 3, 1);
-  return t > 0.45 ? "#000" : pct >= 0 ? "#00e5a0" : "#ff4d6d";
+  return t > 0.45 ? "#fff" : pct >= 0 ? "#00e5a0" : "#ff4d6d";
 }
 
 const LAYOUT: { rowH: number; sections: { key: string; flex: number; maxStocks: number }[] }[] = [
