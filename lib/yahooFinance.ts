@@ -45,7 +45,7 @@ async function fetchQuoteV8(symbol: string): Promise<YFQuote | null> {
   try {
     const res = await fetch(url, {
       headers: yfHeaders(),
-      next: { revalidate: 300 },
+      next: { revalidate: 60 },
     });
     if (!res.ok) return null;
     const json = await res.json();
@@ -82,7 +82,7 @@ export async function fetchBatchQuotes(symbols: string[]): Promise<YFQuote[]> {
         `&fields=regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketVolume,shortName,marketCap`;
       const res = await fetch(url, {
         headers: yfHeaders(),
-        next: { revalidate: 300 },
+        next: { revalidate: 60 },
       });
       if (!res.ok) continue;
       const json   = await res.json();
@@ -121,7 +121,7 @@ export async function fetchIndex(yahooSymbol: string): Promise<YFIndex | null> {
         `&fields=regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketVolume,regularMarketPreviousClose,shortName`;
       const res = await fetch(url, {
         headers: yfHeaders(),
-        next: { revalidate: 300 },
+        next: { revalidate: 60 },
       });
       if (!res.ok) continue;
       const json = await res.json();
@@ -157,7 +157,7 @@ export async function fetchSparkline(symbol: string): Promise<number[]> {
   try {
     const res = await fetch(url, {
       headers: yfHeaders(),
-      next: { revalidate: 300 },
+      next: { revalidate: 60 },
     });
     if (!res.ok) return [];
     const json = await res.json();

@@ -12,7 +12,7 @@ function bg(pct: number) {
 }
 function textColor(pct: number) {
   const t = Math.min(Math.abs(pct) / 3, 1);
-  return t > 0.45 ? "#fff" : pct >= 0 ? "#00e5a0" : "#ff4d6d";
+  return pct >= 0 ? "#00e5a0" : "#ff4d6d";
 }
 
 // ── Treemap layout config ───────────────────────────────────────────────────

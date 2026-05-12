@@ -12,6 +12,7 @@ import {
   fmtVolume,
   fmtMarketCap,
 } from "./yahooFinance";
+import { toYahoo } from "./symbolMap";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -374,9 +375,9 @@ const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string
 
 const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
 
-// 5분 캐시 (서버 컴포넌트 전용)
+// 60초 캐시 — 실패 시 null 반환(mock 캐시 방지)
 const _fetchLiveIndices = unstable_cache(
-  async (): Promise<IndexQuote[]> => {
+  async (): Promise<IndexQuote[] | null> => {
     const results = await Promise.allSettled(
       INDEX_MAP.map(async (m) => {
         const [q, spark] = await Promise.all([
@@ -401,16 +402,16 @@ const _fetchLiveIndices = unstable_cache(
       .filter((r): r is PromiseFulfilledResult<IndexQuote | null> => r.status === "fulfilled")
       .map((r) => r.value)
       .filter((v): v is IndexQuote => v !== null);
-    return live.length > 0 ? live : mockIndices;
+    return live.length > 0 ? live : null;
   },
   ["yf-indices"],
-  { revalidate: 300 }
+  { revalidate: 60 }
 );
 
 const _fetchLiveQuotes = unstable_cache(
-  async (): Promise<Quote[]> => {
+  async (): Promise<Quote[] | null> => {
     const live = await fetchBatchQuotes(ALL_QUOTE_SYMBOLS);
-    if (live.length === 0) return mockQuotes;
+    if (live.length === 0) return null;
 
     const sparkMap = new Map<string, number[]>();
     await Promise.allSettled(
@@ -435,12 +436,12 @@ const _fetchLiveQuotes = unstable_cache(
     });
   },
   ["yf-quotes"],
-  { revalidate: 300 }
+  { revalidate: 60 }
 );
 
 export async function getIndices(): Promise<IndexQuote[]> {
   try {
-    return await _fetchLiveIndices();
+    return (await _fetchLiveIndices()) ?? mockIndices;
   } catch {
     return mockIndices;
   }
@@ -448,7 +449,7 @@ export async function getIndices(): Promise<IndexQuote[]> {
 
 export async function getQuotes(symbols?: string[]): Promise<Quote[]> {
   try {
-    const all = await _fetchLiveQuotes();
+    const all = (await _fetchLiveQuotes()) ?? mockQuotes;
     if (symbols) return all.filter((q) => symbols.includes(q.symbol));
     return all;
   } catch {
@@ -483,8 +484,30 @@ export async function getFearGreed(): Promise<FearGreedData> {
   return mockFearGreed;
 }
 
+const _fetchLiveFutures = unstable_cache(
+  async (): Promise<FutureItem[] | null> => {
+    const yahooSymbols = mockFutures.map((f) => toYahoo(f.symbol));
+    const quotes = await fetchBatchQuotes(yahooSymbols);
+    if (quotes.length === 0) return null;
+
+    const quoteMap = new Map(quotes.map((q) => [q.symbol, q]));
+    const live = mockFutures.map((f) => {
+      const q = quoteMap.get(toYahoo(f.symbol));
+      if (!q) return f;
+      return { symbol: f.symbol, name: f.name, price: q.price, change: q.change, changePercent: q.changePercent, group: f.group };
+    });
+    return live;
+  },
+  ["yf-futures"],
+  { revalidate: 60 }
+);
+
 export async function getFutures(): Promise<FutureItem[]> {
-  return mockFutures;
+  try {
+    return (await _fetchLiveFutures()) ?? mockFutures;
+  } catch {
+    return mockFutures;
+  }
 }
 
 export async function getBuffett(): Promise<BuffettData> {
