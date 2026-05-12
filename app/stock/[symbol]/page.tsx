@@ -195,11 +195,6 @@ export default function StockPage({
             className="mx-4 rounded-xl border overflow-hidden mb-3"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
           >
-            <div className="px-2.5 py-1 border-b" style={{ borderColor: "var(--border)" }}>
-              <h2 className="text-[8px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-                주요 지표
-              </h2>
-            </div>
             <div className="grid grid-cols-4">
               {stats.map(([label, value], i) => {
                 const cols         = 4;
@@ -210,7 +205,7 @@ export default function StockPage({
                 return (
                   <div
                     key={label}
-                    className="flex flex-col px-2 py-0.5"
+                    className="flex items-center justify-between gap-1 px-2.5 py-2"
                     style={{
                       borderColor:       "var(--border)",
                       borderBottomWidth: isLastRow ? "0px" : "1px",
@@ -218,8 +213,8 @@ export default function StockPage({
                       borderStyle:       "solid",
                     }}
                   >
-                    <span className="text-[7.5px] leading-snug" style={{ color: "var(--muted)" }}>{label}</span>
-                    <span className="text-[9px] font-semibold font-mono-num leading-snug" style={{ color: "var(--text)" }}>{value}</span>
+                    <span className="text-[10px] shrink-0" style={{ color: "var(--muted)" }}>{label}</span>
+                    <span className="text-[10px] font-semibold font-mono-num text-right" style={{ color: "var(--text)" }}>{value}</span>
                   </div>
                 );
               })}
