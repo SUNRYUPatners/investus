@@ -33,7 +33,7 @@ export type FinnhubMetrics = {
   week52High:    number | null;
   week52Low:     number | null;
   pe:            number | null;
-  marketCap:     number | null; // in millions USD
+  marketCap:     number | null; // millions USD
   eps:           number | null;
   beta:          number | null;
   dividendYield: number | null;
@@ -45,13 +45,22 @@ export type FinnhubCandle = {
   volume: number;
 };
 
-// ── Batch quote (for home page stocks) ────────────────────────────────────
+export type FinnhubNewsItem = {
+  id: number;
+  category: string;
+  datetime: number;
+  headline: string;
+  image: string;
+  source: string;
+  summary: string;
+  url: string;
+};
+
+// ── Internal single quote ─────────────────────────────────────────────────
 
 async function fetchOne(symbol: string, token: string): Promise<FinnhubQuote | null> {
   try {
-    const res = await fetch(
-      `${BASE}/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`
-    );
+    const res = await fetch(`${BASE}/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`);
     if (!res.ok) return null;
     const d = await res.json();
     if (!d.c || d.c === 0) return null;
@@ -60,6 +69,8 @@ async function fetchOne(symbol: string, token: string): Promise<FinnhubQuote | n
     return null;
   }
 }
+
+// ── Batch quote (home page stocks) ────────────────────────────────────────
 
 export async function fetchFinnhubBatch(
   symbols: string[]
@@ -72,7 +83,7 @@ export async function fetchFinnhubBatch(
   return map;
 }
 
-// ── Raw quote (price + OHLC, for detail page) ─────────────────────────────
+// ── Raw quote with OHLC (detail page) ────────────────────────────────────
 
 export async function fetchFinnhubRawQuote(symbol: string): Promise<FinnhubRawQuote | null> {
   const token = getToken();
@@ -88,7 +99,7 @@ export async function fetchFinnhubRawQuote(symbol: string): Promise<FinnhubRawQu
   }
 }
 
-// ── Company profile (name, exchange, currency) ────────────────────────────
+// ── Company profile ───────────────────────────────────────────────────────
 
 export async function fetchFinnhubProfile(symbol: string): Promise<FinnhubProfile | null> {
   const token = getToken();
@@ -104,33 +115,31 @@ export async function fetchFinnhubProfile(symbol: string): Promise<FinnhubProfil
   }
 }
 
-// ── Basic financials (PE, market cap, 52w, beta, etc.) ───────────────────
+// ── Basic financials ──────────────────────────────────────────────────────
 
 export async function fetchFinnhubMetrics(symbol: string): Promise<FinnhubMetrics | null> {
   const token = getToken();
   if (!token) return null;
   try {
-    const res = await fetch(
-      `${BASE}/stock/metric?symbol=${encodeURIComponent(symbol)}&metric=all&token=${token}`
-    );
+    const res = await fetch(`${BASE}/stock/metric?symbol=${encodeURIComponent(symbol)}&metric=all&token=${token}`);
     if (!res.ok) return null;
     const d = await res.json();
     const m = d.metric ?? {};
     return {
-      week52High:    m["52WeekHigh"]                    ?? null,
-      week52Low:     m["52WeekLow"]                     ?? null,
-      pe:            m.peBasicExclExtraTTM              ?? null,
-      marketCap:     m.marketCapitalization             ?? null,
-      eps:           m.epsBasicExclExtraAnnual          ?? null,
-      beta:          m.beta                             ?? null,
-      dividendYield: m.dividendYieldIndicatedAnnual     ?? null,
+      week52High:    m["52WeekHigh"]                ?? null,
+      week52Low:     m["52WeekLow"]                 ?? null,
+      pe:            m.peBasicExclExtraTTM          ?? null,
+      marketCap:     m.marketCapitalization         ?? null,
+      eps:           m.epsBasicExclExtraAnnual      ?? null,
+      beta:          m.beta                         ?? null,
+      dividendYield: m.dividendYieldIndicatedAnnual ?? null,
     };
   } catch {
     return null;
   }
 }
 
-// ── Candles (for chart, resolution: 1/5/15/30/60/D/W/M) ─────────────────
+// ── Candles (chart) ───────────────────────────────────────────────────────
 
 export async function fetchFinnhubCandles(
   symbol: string,
@@ -156,5 +165,51 @@ export async function fetchFinnhubCandles(
     }));
   } catch {
     return null;
+  }
+}
+
+// ── 1D sparkline (30-min candles, for today's intraday movement) ──────────
+
+export async function fetchFinnhubSparkline(symbol: string): Promise<number[]> {
+  const now  = Math.floor(Date.now() / 1000);
+  const from = now - 8 * 3600; // ~8h back covers today's US session
+  const candles = await fetchFinnhubCandles(symbol, "30", from, now);
+  if (!candles || candles.length < 2) return [];
+  return candles.map((c) => c.close);
+}
+
+// ── Market news (home page) ───────────────────────────────────────────────
+
+export async function fetchFinnhubMarketNews(): Promise<FinnhubNewsItem[]> {
+  const token = getToken();
+  if (!token) return [];
+  try {
+    const res = await fetch(`${BASE}/news?category=general&minId=0&token=${token}`);
+    if (!res.ok) return [];
+    const d = await res.json();
+    return Array.isArray(d) ? d : [];
+  } catch {
+    return [];
+  }
+}
+
+// ── Company news (stock detail page) ─────────────────────────────────────
+
+export async function fetchFinnhubCompanyNews(
+  symbol: string,
+  fromDate: string, // YYYY-MM-DD
+  toDate: string
+): Promise<FinnhubNewsItem[]> {
+  const token = getToken();
+  if (!token) return [];
+  try {
+    const res = await fetch(
+      `${BASE}/company-news?symbol=${encodeURIComponent(symbol)}&from=${fromDate}&to=${toDate}&token=${token}`
+    );
+    if (!res.ok) return [];
+    const d = await res.json();
+    return Array.isArray(d) ? d : [];
+  } catch {
+    return [];
   }
 }
