@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { fetchFinnhubBatch } from "@/lib/finnhub";
 import { ALL_GURU_SYMBOLS } from "@/lib/holdings13f";
 
-export const dynamic = "force-dynamic";
+// Cache 60s — Finnhub rate limit 방지
+export const revalidate = 60;
 
 export async function GET() {
   try {

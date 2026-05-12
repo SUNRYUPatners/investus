@@ -1,11 +1,9 @@
 import { NextResponse } from "next/server";
-import { fetchBatchQuotes } from "@/lib/yahooFinance";
 import {
   fetchFinnhubBatch,
   fetchFinnhubRawQuote,
   fetchFinnhubSparkline,
 } from "@/lib/finnhub";
-import { toYahoo } from "@/lib/symbolMap";
 import {
   mockIndices, mockQuotes, mockFutures, INDEX_MAP,
   type IndexQuote, type Quote, type FutureItem,
@@ -13,8 +11,7 @@ import {
 
 export const dynamic = "force-dynamic";
 
-// ── Finnhub symbol mapping for futures/indices/crypto ─────────────────────
-// Symbols that Finnhub supports natively
+// ── Finnhub symbol mapping for futures/indices/crypto/metals ─────────────
 const FINNHUB_SYMBOL: Record<string, string> = {
   // Index futures → underlying index
   ES:    "^GSPC",
@@ -27,6 +24,9 @@ const FINNHUB_SYMBOL: Record<string, string> = {
   // FX futures (OANDA pairs)
   "6E":  "OANDA:EUR_USD",
   "6J":  "OANDA:USD_JPY",
+  // Metals (OANDA spot pairs)
+  GC:    "OANDA:XAU_USD",  // Gold
+  SI:    "OANDA:XAG_USD",  // Silver
 };
 
 // ── USD/KRW via ExchangeRate-API ──────────────────────────────────────────
@@ -127,75 +127,40 @@ async function getLiveQuotes(): Promise<Quote[]> {
     if (r.status === "fulfilled" && r.value.length >= 2) sparkMap.set(sym, r.value);
   });
 
-  if (finnhubMap.size > 0) {
-    return mockQuotes.map((mock) => {
-      const q = finnhubMap.get(mock.symbol);
-      if (!q) return mock;
-      return {
-        symbol:        mock.symbol,
-        name:          mock.name,
-        price:         q.price,
-        change:        q.change,
-        changePercent: q.changePercent,
-        sparkline:     sparkMap.get(mock.symbol) ?? mock.sparkline,
-        volume:        mock.volume,
-        marketCap:     mock.marketCap,
-      } satisfies Quote;
-    });
-  }
-
-  // Full fallback to Yahoo Finance
-  const yahooQuotes = await fetchBatchQuotes(symbols).catch(() => []);
-  if (yahooQuotes.length === 0) return mockQuotes;
-  return yahooQuotes.map((q) => {
-    const mock = mockQuotes.find((m) => m.symbol === q.symbol);
+  return mockQuotes.map((mock) => {
+    const q = finnhubMap.get(mock.symbol);
+    if (!q) return mock;
     return {
-      symbol:        q.symbol,
-      name:          q.shortName,
+      symbol:        mock.symbol,
+      name:          mock.name,
       price:         q.price,
       change:        q.change,
       changePercent: q.changePercent,
-      sparkline:     sparkMap.get(q.symbol) ?? mock?.sparkline ?? [],
-      volume:        mock?.volume ?? "—",
-      marketCap:     mock?.marketCap ?? "—",
+      sparkline:     sparkMap.get(mock.symbol) ?? mock.sparkline,
+      volume:        mock.volume,
+      marketCap:     mock.marketCap,
     } satisfies Quote;
   });
 }
 
-// ── 선물: Finnhub for index/crypto/FX, Yahoo fallback for commodities ─────
+// ── 선물: Finnhub only (commodities/bonds without Finnhub support → mock) ──
 
 async function getLiveFutures(): Promise<FutureItem[]> {
   const token = process.env.FINNHUB_API_KEY ?? "";
-
-  // Split into Finnhub-supported and Yahoo-only symbols
-  const finnhubSyms  = mockFutures.filter((f) => FINNHUB_SYMBOL[f.symbol]);
-  const yahooOnlyFut = mockFutures.filter((f) => !FINNHUB_SYMBOL[f.symbol]);
+  if (!token) return mockFutures;
 
   const resultMap = new Map<string, { price: number; change: number; changePercent: number }>();
 
-  // Fetch Finnhub-supported futures
-  if (token && finnhubSyms.length > 0) {
-    await Promise.allSettled(
-      finnhubSyms.map(async (f) => {
-        const fhSym = FINNHUB_SYMBOL[f.symbol]!;
-        const q = await fetchFinnhubRawQuote(fhSym);
-        if (q && q.c > 0) {
-          resultMap.set(f.symbol, { price: q.c, change: q.d, changePercent: q.dp });
-        }
-      })
-    );
-  }
-
-  // Fetch Yahoo-only futures (commodities, bonds)
-  if (yahooOnlyFut.length > 0) {
-    const yahooSyms = yahooOnlyFut.map((f) => toYahoo(f.symbol));
-    const quotes = await fetchBatchQuotes(yahooSyms).catch(() => []);
-    const qMap = new Map(quotes.map((q) => [q.symbol, q]));
-    yahooOnlyFut.forEach((f) => {
-      const q = qMap.get(toYahoo(f.symbol));
-      if (q) resultMap.set(f.symbol, { price: q.price, change: q.change, changePercent: q.changePercent });
-    });
-  }
+  await Promise.allSettled(
+    mockFutures.map(async (f) => {
+      const fhSym = FINNHUB_SYMBOL[f.symbol];
+      if (!fhSym) return; // 미지원 심볼(원유/채권/농산물) → mock 유지
+      const q = await fetchFinnhubRawQuote(fhSym);
+      if (q && q.c > 0) {
+        resultMap.set(f.symbol, { price: q.c, change: q.d, changePercent: q.dp });
+      }
+    })
+  );
 
   return mockFutures.map((f) => {
     const live = resultMap.get(f.symbol);

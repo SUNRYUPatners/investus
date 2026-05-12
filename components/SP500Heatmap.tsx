@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { MiniChartPopup } from "./MiniChartPopup";
 
-type StockTile = { symbol: string; name: string; changePercent: number; weight: number };
+type StockTile = { symbol: string; name: string; price: number | null; changePercent: number; weight: number };
 type Sector    = { key: string; name: string; stocks: StockTile[] };
 
 type PopupState = {
@@ -56,65 +56,65 @@ const LAYOUT: { rowH: number; sections: { key: string; flex: number; maxStocks: 
 
 const MOCK_SECTORS: Sector[] = [
   { key: "IT",     name: "정보기술",    stocks: [
-    { symbol: "AAPL",  name: "Apple",     changePercent:  1.14, weight: 7.2 },
-    { symbol: "MSFT",  name: "Microsoft", changePercent:  1.02, weight: 6.8 },
-    { symbol: "NVDA",  name: "NVIDIA",    changePercent:  2.18, weight: 5.8 },
-    { symbol: "AVGO",  name: "Broadcom",  changePercent:  0.85, weight: 2.5 },
-    { symbol: "AMD",   name: "AMD",       changePercent:  2.17, weight: 1.8 },
-    { symbol: "ORCL",  name: "Oracle",    changePercent: -0.70, weight: 1.5 },
+    { symbol: "AAPL",  name: "Apple",     price: null, changePercent:  1.14, weight: 7.2 },
+    { symbol: "MSFT",  name: "Microsoft", price: null, changePercent:  1.02, weight: 6.8 },
+    { symbol: "NVDA",  name: "NVIDIA",    price: null, changePercent:  2.18, weight: 5.8 },
+    { symbol: "AVGO",  name: "Broadcom",  price: null, changePercent:  0.85, weight: 2.5 },
+    { symbol: "AMD",   name: "AMD",       price: null, changePercent:  2.17, weight: 1.8 },
+    { symbol: "ORCL",  name: "Oracle",    price: null, changePercent: -0.70, weight: 1.5 },
   ]},
   { key: "COMM",   name: "커뮤니케이션", stocks: [
-    { symbol: "META",  name: "Meta",      changePercent:  1.72, weight: 2.8 },
-    { symbol: "GOOGL", name: "Alphabet",  changePercent: -0.69, weight: 2.6 },
-    { symbol: "NFLX",  name: "Netflix",   changePercent: -0.84, weight: 0.8 },
-    { symbol: "DIS",   name: "Disney",    changePercent: -1.20, weight: 0.7 },
+    { symbol: "META",  name: "Meta",      price: null, changePercent:  1.72, weight: 2.8 },
+    { symbol: "GOOGL", name: "Alphabet",  price: null, changePercent: -0.69, weight: 2.6 },
+    { symbol: "NFLX",  name: "Netflix",   price: null, changePercent: -0.84, weight: 0.8 },
+    { symbol: "DIS",   name: "Disney",    price: null, changePercent: -1.20, weight: 0.7 },
   ]},
   { key: "HEALTH", name: "헬스케어",    stocks: [
-    { symbol: "LLY",   name: "Eli Lilly",    changePercent:  0.95, weight: 2.0 },
-    { symbol: "UNH",   name: "UnitedHealth", changePercent:  0.42, weight: 1.8 },
-    { symbol: "JNJ",   name: "J&J",          changePercent: -0.28, weight: 1.4 },
-    { symbol: "ABBV",  name: "AbbVie",       changePercent:  0.63, weight: 1.2 },
+    { symbol: "LLY",   name: "Eli Lilly",    price: null, changePercent:  0.95, weight: 2.0 },
+    { symbol: "UNH",   name: "UnitedHealth", price: null, changePercent:  0.42, weight: 1.8 },
+    { symbol: "JNJ",   name: "J&J",          price: null, changePercent: -0.28, weight: 1.4 },
+    { symbol: "ABBV",  name: "AbbVie",       price: null, changePercent:  0.63, weight: 1.2 },
   ]},
   { key: "FIN",    name: "금융",        stocks: [
-    { symbol: "BRK-B", name: "Berkshire",   changePercent:  0.78, weight: 3.5 },
-    { symbol: "JPM",   name: "JPMorgan",    changePercent:  1.28, weight: 2.2 },
-    { symbol: "V",     name: "Visa",        changePercent:  0.55, weight: 1.9 },
-    { symbol: "MA",    name: "Mastercard",  changePercent:  0.62, weight: 1.5 },
+    { symbol: "BRK-B", name: "Berkshire",   price: null, changePercent:  0.78, weight: 3.5 },
+    { symbol: "JPM",   name: "JPMorgan",    price: null, changePercent:  1.28, weight: 2.2 },
+    { symbol: "V",     name: "Visa",        price: null, changePercent:  0.55, weight: 1.9 },
+    { symbol: "MA",    name: "Mastercard",  price: null, changePercent:  0.62, weight: 1.5 },
   ]},
   { key: "CONS_D", name: "임의소비재",  stocks: [
-    { symbol: "AMZN",  name: "Amazon",    changePercent:  1.01, weight: 4.0 },
-    { symbol: "TSLA",  name: "Tesla",     changePercent: -2.18, weight: 1.8 },
-    { symbol: "HD",    name: "HomeDepot", changePercent:  0.35, weight: 1.0 },
-    { symbol: "NKE",   name: "Nike",      changePercent: -0.92, weight: 0.6 },
+    { symbol: "AMZN",  name: "Amazon",    price: null, changePercent:  1.01, weight: 4.0 },
+    { symbol: "TSLA",  name: "Tesla",     price: null, changePercent: -2.18, weight: 1.8 },
+    { symbol: "HD",    name: "HomeDepot", price: null, changePercent:  0.35, weight: 1.0 },
+    { symbol: "NKE",   name: "Nike",      price: null, changePercent: -0.92, weight: 0.6 },
   ]},
   { key: "IND",    name: "산업재",      stocks: [
-    { symbol: "GE",    name: "GE",           changePercent:  1.45, weight: 1.0 },
-    { symbol: "CAT",   name: "Caterpillar",  changePercent:  0.72, weight: 0.9 },
-    { symbol: "BA",    name: "Boeing",       changePercent: -1.34, weight: 0.7 },
-    { symbol: "RTX",   name: "Raytheon",     changePercent:  0.48, weight: 0.7 },
+    { symbol: "GE",    name: "GE",           price: null, changePercent:  1.45, weight: 1.0 },
+    { symbol: "CAT",   name: "Caterpillar",  price: null, changePercent:  0.72, weight: 0.9 },
+    { symbol: "BA",    name: "Boeing",       price: null, changePercent: -1.34, weight: 0.7 },
+    { symbol: "RTX",   name: "Raytheon",     price: null, changePercent:  0.48, weight: 0.7 },
   ]},
   { key: "CONS_S", name: "필수소비재",  stocks: [
-    { symbol: "WMT",   name: "Walmart",   changePercent:  0.38, weight: 1.5 },
-    { symbol: "COST",  name: "Costco",    changePercent:  0.91, weight: 1.0 },
-    { symbol: "PG",    name: "P&G",       changePercent:  0.18, weight: 1.0 },
-    { symbol: "KO",    name: "Coca-Cola", changePercent:  0.12, weight: 0.9 },
+    { symbol: "WMT",   name: "Walmart",   price: null, changePercent:  0.38, weight: 1.5 },
+    { symbol: "COST",  name: "Costco",    price: null, changePercent:  0.91, weight: 1.0 },
+    { symbol: "PG",    name: "P&G",       price: null, changePercent:  0.18, weight: 1.0 },
+    { symbol: "KO",    name: "Coca-Cola", price: null, changePercent:  0.12, weight: 0.9 },
   ]},
   { key: "ENERGY", name: "에너지",      stocks: [
-    { symbol: "XOM",   name: "ExxonMobil",     changePercent: -0.52, weight: 2.0 },
-    { symbol: "CVX",   name: "Chevron",        changePercent: -0.38, weight: 1.4 },
-    { symbol: "COP",   name: "ConocoPhillips", changePercent: -0.75, weight: 0.7 },
+    { symbol: "XOM",   name: "ExxonMobil",     price: null, changePercent: -0.52, weight: 2.0 },
+    { symbol: "CVX",   name: "Chevron",        price: null, changePercent: -0.38, weight: 1.4 },
+    { symbol: "COP",   name: "ConocoPhillips", price: null, changePercent: -0.75, weight: 0.7 },
   ]},
   { key: "MAT",    name: "소재",        stocks: [
-    { symbol: "LIN",   name: "Linde",        changePercent:  0.35, weight: 0.8 },
-    { symbol: "APD",   name: "Air Products", changePercent:  0.22, weight: 0.4 },
+    { symbol: "LIN",   name: "Linde",        price: null, changePercent:  0.35, weight: 0.8 },
+    { symbol: "APD",   name: "Air Products", price: null, changePercent:  0.22, weight: 0.4 },
   ]},
   { key: "UTIL",   name: "유틸리티",    stocks: [
-    { symbol: "NEE",   name: "NextEra", changePercent: -0.44, weight: 0.8 },
-    { symbol: "DUK",   name: "Duke",    changePercent:  0.15, weight: 0.4 },
+    { symbol: "NEE",   name: "NextEra", price: null, changePercent: -0.44, weight: 0.8 },
+    { symbol: "DUK",   name: "Duke",    price: null, changePercent:  0.15, weight: 0.4 },
   ]},
   { key: "REIT",   name: "부동산",      stocks: [
-    { symbol: "AMT",   name: "American Tower", changePercent: -0.88, weight: 0.6 },
-    { symbol: "PLD",   name: "Prologis",       changePercent:  0.42, weight: 0.5 },
+    { symbol: "AMT",   name: "American Tower", price: null, changePercent: -0.88, weight: 0.6 },
+    { symbol: "PLD",   name: "Prologis",       price: null, changePercent:  0.42, weight: 0.5 },
   ]},
 ];
 
@@ -172,12 +172,24 @@ function SectorBlock({
               >
                 {s.symbol}
               </p>
-              <p
-                className="text-[12px] font-bold font-mono-num tabular-nums leading-none"
-                style={{ color: tc }}
-              >
-                {s.changePercent >= 0 ? "+" : ""}{s.changePercent.toFixed(2)}%
-              </p>
+              <div className="w-full">
+                {s.price != null && (
+                  <p
+                    className="text-[9px] font-mono-num tabular-nums leading-none opacity-80 truncate"
+                    style={{ color: tc }}
+                  >
+                    ${s.price >= 1000
+                      ? s.price.toLocaleString("en-US", { maximumFractionDigits: 0 })
+                      : s.price.toFixed(2)}
+                  </p>
+                )}
+                <p
+                  className="text-[11px] font-bold font-mono-num tabular-nums leading-none mt-0.5"
+                  style={{ color: tc }}
+                >
+                  {s.changePercent >= 0 ? "+" : ""}{s.changePercent.toFixed(2)}%
+                </p>
+              </div>
             </div>
           );
         })}

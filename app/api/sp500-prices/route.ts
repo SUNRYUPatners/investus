@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { fetchFinnhubBatch } from "@/lib/finnhub";
 
-export const dynamic = "force-dynamic";
+// Cache 60s — Finnhub rate limit 방지 (60 req/min, 38 symbols per call)
+export const revalidate = 60;
 
 type SectorStock = { symbol: string; name: string; weight: number };
 type SectorDef   = { key: string; name: string; stocks: SectorStock[] };
@@ -90,9 +91,14 @@ export async function GET() {
   const allSymbols = SECTORS.flatMap((s) => s.stocks.map((t) => t.symbol));
   const changeMap: Record<string, number> = { ...MOCK_CHANGES };
 
+  const priceMap: Record<string, number> = {};
+
   try {
     const liveMap = await fetchFinnhubBatch(allSymbols);
-    liveMap.forEach((q) => { changeMap[q.symbol] = q.changePercent; });
+    liveMap.forEach((q) => {
+      changeMap[q.symbol] = q.changePercent;
+      priceMap[q.symbol]  = q.price;
+    });
   } catch {
     // keep mock fallback
   }
@@ -104,6 +110,7 @@ export async function GET() {
       stocks: s.stocks.map((t) => ({
         symbol:        t.symbol,
         name:          t.name,
+        price:         priceMap[t.symbol]  ?? null,
         changePercent: changeMap[t.symbol] ?? 0,
         weight:        t.weight,
       })),
