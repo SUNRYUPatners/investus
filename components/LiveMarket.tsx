@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChevronRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { IndexCard } from "./IndexCard";
 import { StockCard } from "./StockCard";
 import { FuturesHeatmap } from "./FuturesHeatmap";
@@ -9,6 +9,29 @@ import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
 import { mockIndices, mockQuotes, mockFutures, RECOMMENDED_SYMBOLS } from "@/lib/api";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
+
+function ESTClock() {
+  const [time, setTime] = useState("");
+  useEffect(() => {
+    const tick = () =>
+      setTime(
+        new Date().toLocaleTimeString("en-US", {
+          timeZone: "America/New_York",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        }),
+      );
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <span className="text-[10px] font-mono-num tabular-nums" style={{ color: "var(--muted)" }}>
+      {time} EST
+    </span>
+  );
+}
 
 function CardSkeleton() {
   return (
@@ -24,20 +47,26 @@ export function LiveMarket() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 이전 캐시를 즉시 표시 (mock 대신 마지막 실제값 사용)
+    // 이전 캐시를 즉시 표시해 mock flash 방지
     try {
       const cached = localStorage.getItem("market-data-cache");
       if (cached) { setData(JSON.parse(cached)); setLoading(false); }
     } catch { /* ignore */ }
 
-    fetch("/api/market-data")
-      .then((r) => r.json())
-      .then((d: MarketData) => {
-        setData(d);
-        setLoading(false);
-        try { localStorage.setItem("market-data-cache", JSON.stringify(d)); } catch { /* ignore */ }
-      })
-      .catch(() => setLoading(false));
+    const load = () => {
+      fetch("/api/market-data")
+        .then((r) => r.json())
+        .then((d: MarketData) => {
+          setData(d);
+          setLoading(false);
+          try { localStorage.setItem("market-data-cache", JSON.stringify(d)); } catch { /* ignore */ }
+        })
+        .catch(() => setLoading(false)); // 실패 시 기존 캐시 유지 (mock 노출 방지)
+    };
+
+    load();
+    const id = setInterval(load, 60_000); // 60초마다 자동 갱신
+    return () => clearInterval(id);
   }, []);
 
   const indices     = data?.indices ?? mockIndices;
@@ -71,9 +100,7 @@ export function LiveMarket() {
           <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
             인기 종목
           </h2>
-          <button className="flex items-center gap-0.5 text-xs font-medium" style={{ color: "var(--mint)" }}>
-            전체 <ChevronRight className="w-3.5 h-3.5" />
-          </button>
+          <ESTClock />
         </div>
         <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
           {loading

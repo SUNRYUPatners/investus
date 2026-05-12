@@ -34,7 +34,6 @@ const ROWS: {
     cells: [
       { sym: "CL",  flex: 3   },
       { sym: "NG",  flex: 2   },
-      { sym: "RB",  flex: 1.5 },
       { sym: "GC",  flex: 3   },
       { sym: "SI",  flex: 2   },
       { sym: "HG",  flex: 1.5 },
@@ -70,7 +69,6 @@ const SHORT: Record<string, string> = {
   RTY: "러셀 2000",
   CL:  "WTI 원유",
   NG:  "천연가스",
-  RB:  "RBOB 가솔린",
   GC:  "금",
   SI:  "은",
   HG:  "구리",
@@ -122,89 +120,85 @@ export function FuturesHeatmap({ items }: Props) {
         <div style={{ minWidth: "680px" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
             {ROWS.map((row) => (
-              <div
-                key={row.groupLabel}
-                className="flex"
-                style={{ height: row.rowH, gap: "1px" }}
-              >
-                {row.cells.map(({ sym, flex }) => {
-                  const item = bySymbol[sym];
-                  if (!item) return null;
-                  const pos = item.changePercent >= 0;
-                  const displayName = SHORT[sym] ?? item.name;
+              <div key={row.groupLabel} style={{ display: "flex", flexDirection: "column" }}>
+                {/* Sector label strip */}
+                <div
+                  style={{
+                    height: 18,
+                    background: "rgba(255,255,255,0.04)",
+                    display: "flex",
+                    alignItems: "center",
+                    paddingLeft: 8,
+                    borderBottom: "1px solid var(--border)",
+                  }}
+                >
+                  <span
+                    className="text-[9px] font-semibold tracking-wider uppercase font-syne"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {row.groupLabel}
+                  </span>
+                </div>
 
-                  return (
-                    <div
-                      key={sym}
-                      className="flex flex-col items-start justify-between p-1.5 overflow-hidden cursor-pointer select-none transition-opacity active:opacity-80"
-                      style={{ flex, background: bg(item.changePercent), minWidth: 0 }}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setPopup({
-                          symbol: sym,
-                          name: displayName,
-                          changePercent: item.changePercent,
-                          anchorX: e.clientX,
-                          anchorY: e.clientY,
-                        });
-                      }}
-                    >
-                      {/* Name + MOCK badge */}
-                      <div className="w-full flex items-start justify-between gap-0.5">
+                {/* Tiles */}
+                <div className="flex" style={{ height: row.rowH, gap: "1px" }}>
+                  {row.cells.map(({ sym, flex }) => {
+                    const item = bySymbol[sym];
+                    if (!item) return null;
+                    const pos = item.changePercent >= 0;
+                    const displayName = SHORT[sym] ?? item.name;
+
+                    return (
+                      <div
+                        key={sym}
+                        className="flex flex-col items-start justify-between p-1.5 overflow-hidden cursor-pointer select-none transition-opacity active:opacity-80"
+                        style={{ flex, background: bg(item.changePercent), minWidth: 0 }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setPopup({
+                            symbol: sym,
+                            name: displayName,
+                            changePercent: item.changePercent,
+                            anchorX: e.clientX,
+                            anchorY: e.clientY,
+                          });
+                        }}
+                      >
+                        {/* Name */}
                         <p
-                          className="text-[9px] font-semibold leading-tight break-words flex-1"
+                          className="text-[11px] font-semibold leading-tight w-full"
                           style={{ color: TILE_TEXT, wordBreak: "break-word" }}
                         >
                           {displayName}
                         </p>
-                        {item.isMock && (
-                          <span
-                            className="text-[7px] font-bold leading-none px-0.5 rounded flex-shrink-0 mt-0.5"
-                            style={{ background: "rgba(0,0,0,0.4)", color: TILE_TEXT, opacity: 0.7 }}
-                          >
-                            MOCK
-                          </span>
-                        )}
-                      </div>
 
-                      {/* Bottom: change + price */}
-                      <div className="w-full">
-                        <p
-                          className="text-[12px] font-bold font-mono-num tabular-nums leading-none"
-                          style={{ color: TILE_TEXT, textShadow: TILE_SHADOW }}
-                        >
-                          {pos ? "+" : ""}{item.changePercent.toFixed(2)}%
-                        </p>
-                        <p
-                          className="text-[8px] font-mono-num tabular-nums leading-none mt-0.5 truncate"
-                          style={{ color: TILE_TEXT, opacity: 0.85 }}
-                        >
-                          {item.price < 10
-                            ? item.price.toFixed(3)
-                            : item.price < 100
-                            ? item.price.toFixed(2)
-                            : item.price.toLocaleString("en-US", { maximumFractionDigits: 1 })}
-                        </p>
+                        {/* Bottom: change + price */}
+                        <div className="w-full">
+                          <p
+                            className="text-[14px] font-bold font-mono-num tabular-nums leading-none"
+                            style={{ color: TILE_TEXT }}
+                          >
+                            {pos ? "+" : ""}{item.changePercent.toFixed(2)}%
+                          </p>
+                          <p
+                            className="text-[10px] font-mono-num tabular-nums leading-none mt-0.5 truncate"
+                            style={{ color: TILE_TEXT, opacity: 0.85 }}
+                          >
+                            {item.price < 10
+                              ? item.price.toFixed(3)
+                              : item.price < 100
+                              ? item.price.toFixed(2)
+                              : item.price.toLocaleString("en-US", { maximumFractionDigits: 1 })}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Row group labels */}
-      <div
-        className="flex px-4 py-2 gap-4 border-t"
-        style={{ borderColor: "var(--border)" }}
-      >
-        {ROWS.map((row) => (
-          <span key={row.groupLabel} className="text-[10px]" style={{ color: "var(--muted)" }}>
-            {row.groupLabel}
-          </span>
-        ))}
       </div>
 
       {popup && (

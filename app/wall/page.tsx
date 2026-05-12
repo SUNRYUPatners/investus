@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, Users } from "lucide-react";
 import { Header } from "@/components/Header";
@@ -32,17 +32,25 @@ const MOCK_POSTS: Post[] = [
   { id: 7,  symbol: "MSFT", nickname: "익명_6631", holdingLabel: "15주 보유",  content: "코파일럿 기업 침투율이 생각보다 빠르게 올라오고 있음. 클라우드 + AI 조합이 진짜 무서운 회사.",                         time: "4시간 전", likes: 31, comments: 7  },
 ];
 
-type VerifyMode = "none" | "upload" | "broker";
+type VerifyMode = "none" | "upload" | "broker" | "broker-notice";
 type MainTab = "discussion" | "creator";
 
 export default function WallPage() {
   const { user } = useAuth();
-  const [mainTab, setMainTab]         = useState<MainTab>("discussion");
-  const [selected, setSelected]       = useState("NVDA");
-  const [liked, setLiked]             = useState<Set<number>>(new Set());
-  const [showVerify, setShowVerify]   = useState(false);
-  const [verifyMode, setVerifyMode]   = useState<VerifyMode>("none");
-  const [uploadDone, setUploadDone]   = useState(false);
+  const [mainTab, setMainTab]             = useState<MainTab>("discussion");
+  const [selected, setSelected]           = useState("NVDA");
+  const [liked, setLiked]                 = useState<Set<number>>(new Set());
+  const [showVerify, setShowVerify]       = useState(false);
+  const [verifyMode, setVerifyMode]       = useState<VerifyMode>("none");
+  const [uploadDone, setUploadDone]       = useState(false);
+  const [hasCreatorProfile, setHasCreatorProfile] = useState(false);
+
+  useEffect(() => {
+    try {
+      const c = localStorage.getItem("investus_my_creator");
+      setHasCreatorProfile(!!c);
+    } catch {}
+  }, []);
 
   const posts = MOCK_POSTS.filter((p) => p.symbol === selected);
 
@@ -73,11 +81,19 @@ export default function WallPage() {
             <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>투자자 커뮤니티 &amp; 크리에이터 마켓</p>
           </div>
           {mainTab === "creator" && (
-            <Link href="/creator/setup"
-              className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
-              style={{ background: "var(--mint)", color: "#000" }}>
-              <Sparkles className="w-3.5 h-3.5" />크리에이터 되기
-            </Link>
+            hasCreatorProfile ? (
+              <Link href="/creator/dashboard"
+                className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
+                style={{ background: "var(--mint)", color: "#000" }}>
+                ✦ 내 채널 관리
+              </Link>
+            ) : (
+              <Link href="/creator/setup"
+                className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
+                style={{ background: "var(--mint)", color: "#000" }}>
+                <Sparkles className="w-3.5 h-3.5" />크리에이터 되기
+              </Link>
+            )
           )}
           {mainTab === "discussion" && (
             <div className="flex items-center gap-1 text-[10px] px-2 py-1 rounded-full border"
@@ -206,24 +222,44 @@ export default function WallPage() {
         {mainTab === "creator" && (
           <div className="px-4">
             {/* Intro banner */}
-            <div className="rounded-2xl p-4 mb-5 border"
-              style={{ background: "linear-gradient(135deg, rgba(0,229,160,0.1) 0%, rgba(0,229,160,0.03) 100%)", borderColor: "rgba(0,229,160,0.2)" }}>
-              <div className="flex items-start gap-3">
-                <span className="text-3xl">🏆</span>
-                <div>
-                  <h2 className="text-sm font-bold font-syne mb-1" style={{ color: "var(--text)" }}>크리에이터 마켓</h2>
-                  <p className="text-[11px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
-                    실제 계좌 수익률을 공개하고 포트폴리오·강의·전자책으로 구독료를 받으세요.
-                    플랫폼 수수료는 <span style={{ color: "var(--mint)", fontWeight: 700 }}>10%</span>만 적용됩니다.
-                  </p>
-                  <Link href="/creator/setup"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl"
-                    style={{ background: "var(--mint)", color: "#000" }}>
-                    <Sparkles className="w-3.5 h-3.5" />나도 크리에이터 되기
-                  </Link>
+            {hasCreatorProfile ? (
+              <Link href="/creator/dashboard"
+                className="rounded-2xl p-4 mb-5 border flex items-center gap-4 active:opacity-80 transition-opacity"
+                style={{
+                  background: "linear-gradient(135deg, rgba(0,229,160,0.12) 0%, rgba(0,229,160,0.03) 100%)",
+                  borderColor: "rgba(0,229,160,0.3)",
+                  textDecoration: "none",
+                }}>
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
+                  style={{ background: "rgba(0,229,160,0.1)" }}>
+                  ✦
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-bold font-syne mb-0.5" style={{ color: "var(--text)" }}>내 크리에이터 채널</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>콘텐츠 작성 · 프로필 수정 · 인증 관리</p>
+                </div>
+                <span className="text-xs font-bold flex-shrink-0" style={{ color: "var(--mint)" }}>관리 →</span>
+              </Link>
+            ) : (
+              <div className="rounded-2xl p-4 mb-5 border"
+                style={{ background: "linear-gradient(135deg, rgba(0,229,160,0.1) 0%, rgba(0,229,160,0.03) 100%)", borderColor: "rgba(0,229,160,0.2)" }}>
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl">🏆</span>
+                  <div>
+                    <h2 className="text-sm font-bold font-syne mb-1" style={{ color: "var(--text)" }}>크리에이터 마켓</h2>
+                    <p className="text-[11px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+                      실제 계좌 수익률을 공개하고 포트폴리오·강의·전자책으로 구독료를 받으세요.
+                      플랫폼 수수료는 <span style={{ color: "var(--mint)", fontWeight: 700 }}>10%</span>만 적용됩니다.
+                    </p>
+                    <Link href="/creator/setup"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl"
+                      style={{ background: "var(--mint)", color: "#000" }}>
+                      <Sparkles className="w-3.5 h-3.5" />나도 크리에이터 되기
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             {/* How it works */}
             <div className="grid grid-cols-3 gap-2 mb-5">
@@ -331,13 +367,43 @@ export default function WallPage() {
               <div className="flex flex-col gap-2 mb-4">
                 {["키움증권", "삼성증권", "미래에셋증권", "NH투자증권"].map((broker) => (
                   <button key={broker}
-                    className="w-full py-3.5 rounded-2xl border text-sm font-semibold flex items-center justify-between px-4"
+                    onClick={() => setVerifyMode("broker-notice")}
+                    className="w-full py-3.5 rounded-2xl border text-sm font-semibold flex items-center justify-between px-4 active:opacity-70 transition-opacity"
                     style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}>
                     {broker}
-                    <span className="text-xs" style={{ color: "var(--muted)" }}>연동하기 →</span>
+                    <span className="text-xs" style={{ color: "var(--mint)" }}>연동하기 →</span>
                   </button>
                 ))}
                 <button onClick={() => setVerifyMode("none")} className="w-full mt-1 py-2 text-xs" style={{ color: "var(--muted)" }}>
+                  돌아가기
+                </button>
+              </div>
+            )}
+
+            {verifyMode === "broker-notice" && (
+              <div className="mb-4">
+                <div className="flex flex-col items-center gap-3 py-6 mb-4 rounded-2xl"
+                  style={{ background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)" }}>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
+                    style={{ background: "rgba(0,229,160,0.10)" }}>
+                    🔧
+                  </div>
+                  <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>
+                    증권사 직접 연동 준비 중
+                  </p>
+                  <p className="text-xs text-center leading-relaxed px-4" style={{ color: "var(--muted)" }}>
+                    현재 증권사 API 연동 기능을 준비하고 있습니다.{"\n"}
+                    지금은 HTS/MTS 보유 화면 캡쳐 업로드로{"\n"}
+                    대신 인증해 주세요.
+                  </p>
+                </div>
+                <button
+                  onClick={() => { setVerifyMode("upload"); }}
+                  className="w-full py-3 rounded-2xl text-sm font-bold text-black mb-2 active:opacity-80 transition-opacity"
+                  style={{ background: "var(--mint)" }}>
+                  캡쳐 업로드로 인증하기
+                </button>
+                <button onClick={() => setVerifyMode("broker")} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
                   돌아가기
                 </button>
               </div>

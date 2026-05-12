@@ -118,9 +118,14 @@ export default function CreatorSetupPage() {
           </div>
         </div>
 
-        <Link href="/wall"
+        <Link href="/creator/dashboard"
           className="w-full max-w-xs py-3.5 rounded-2xl text-sm font-bold text-black text-center block"
           style={{ background: "var(--mint)" }}>
+          내 크리에이터 채널 관리하기 →
+        </Link>
+        <Link href="/wall"
+          className="w-full max-w-xs py-2 text-xs text-center block mt-2"
+          style={{ color: "var(--muted)" }}>
           종목이야기로 돌아가기
         </Link>
       </div>

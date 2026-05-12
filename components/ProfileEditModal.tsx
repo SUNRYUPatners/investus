@@ -1,0 +1,225 @@
+"use client";
+
+import { useRef, useState } from "react";
+import { X, Camera, Check } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+
+const EMOJI_PRESETS = [
+  "🦁","🐯","🦊","🐻","🐼","🐨",
+  "🦅","🦋","🌟","💫","🔥","⚡",
+  "💎","🚀","🎯","🏆","💰","📈",
+  "🌙","☀️","🎭","🎪","🌊","🏔️",
+];
+
+function resizeImageToBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      const size   = 200;
+      const canvas = document.createElement("canvas");
+      canvas.width = canvas.height = size;
+      const ctx = canvas.getContext("2d")!;
+      // crop center square
+      const s = Math.min(img.width, img.height);
+      const sx = (img.width  - s) / 2;
+      const sy = (img.height - s) / 2;
+      ctx.drawImage(img, sx, sy, s, s, 0, 0, size, size);
+      URL.revokeObjectURL(url);
+      resolve(canvas.toDataURL("image/jpeg", 0.7));
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
+}
+
+export function ProfileEditModal({ onClose }: { onClose: () => void }) {
+  const { user, updateProfile } = useAuth();
+  const fileRef  = useRef<HTMLInputElement>(null);
+
+  const [avatar,   setAvatar]   = useState(user?.avatar ?? "");
+  const [nickname, setNickname] = useState(user?.nickname ?? "");
+  const [tab,      setTab]      = useState<"emoji" | "photo">("emoji");
+  const [saving,   setSaving]   = useState(false);
+
+  const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    try {
+      const b64 = await resizeImageToBase64(file);
+      setAvatar(b64);
+      setTab("photo");
+    } catch { /* ignore */ }
+    e.target.value = "";
+  };
+
+  const handleSave = () => {
+    if (!nickname.trim()) return;
+    setSaving(true);
+    updateProfile({ nickname: nickname.trim(), avatar: avatar || undefined });
+    setTimeout(() => { setSaving(false); onClose(); }, 300);
+  };
+
+  const isPhoto = avatar.startsWith("data:");
+
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col" style={{ background: "var(--bg)" }}>
+
+      {/* Header */}
+      <div
+        className="flex items-center justify-between px-4 py-3 border-b flex-shrink-0"
+        style={{ borderColor: "var(--border)" }}
+      >
+        <button onClick={onClose}>
+          <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
+        </button>
+        <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
+          프로필 수정
+        </h2>
+        <button
+          onClick={handleSave}
+          disabled={!nickname.trim() || saving}
+          className="text-xs font-bold px-3 py-1.5 rounded-lg disabled:opacity-40 active:opacity-70 transition-opacity"
+          style={{ background: "var(--mint)", color: "#000" }}
+        >
+          {saving ? "저장 중..." : "저장"}
+        </button>
+      </div>
+
+      <div className="flex-1 overflow-y-auto">
+
+        {/* Avatar preview */}
+        <div className="flex flex-col items-center pt-8 pb-6 px-4">
+          <div className="relative">
+            {isPhoto ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={avatar}
+                alt="avatar"
+                className="w-24 h-24 rounded-full object-cover"
+                style={{ border: "3px solid var(--mint)" }}
+              />
+            ) : (
+              <div
+                className="w-24 h-24 rounded-full flex items-center justify-center text-4xl"
+                style={{
+                  background: avatar
+                    ? "rgba(0,229,160,0.12)"
+                    : "linear-gradient(135deg,#00e5a0,#0d6efd)",
+                  border: "3px solid rgba(0,229,160,0.3)",
+                }}
+              >
+                {avatar || "👤"}
+              </div>
+            )}
+            {/* Camera button */}
+            <button
+              onClick={() => fileRef.current?.click()}
+              className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center border-2 active:opacity-70"
+              style={{ background: "var(--mint)", borderColor: "var(--bg)" }}
+            >
+              <Camera className="w-4 h-4 text-black" />
+            </button>
+          </div>
+          <input
+            ref={fileRef}
+            type="file"
+            accept="image/*"
+            className="hidden"
+            onChange={handleFile}
+          />
+          <button
+            onClick={() => fileRef.current?.click()}
+            className="mt-3 text-xs active:opacity-70"
+            style={{ color: "var(--mint)" }}
+          >
+            사진 업로드
+          </button>
+        </div>
+
+        {/* Nickname */}
+        <div className="px-4 mb-6">
+          <label className="text-[10px] font-semibold mb-1.5 block" style={{ color: "var(--muted)" }}>
+            이름 (닉네임)
+          </label>
+          <input
+            value={nickname}
+            onChange={(e) => setNickname(e.target.value)}
+            maxLength={20}
+            placeholder="이름을 입력하세요"
+            className="w-full rounded-xl px-3 py-2.5 text-sm outline-none border"
+            style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }}
+          />
+          <p className="text-[10px] mt-1 text-right" style={{ color: "var(--muted)" }}>
+            {nickname.length} / 20
+          </p>
+        </div>
+
+        {/* Phone (read-only, masked) */}
+        <div className="px-4 mb-6">
+          <label className="text-[10px] font-semibold mb-1.5 block" style={{ color: "var(--muted)" }}>
+            전화번호 <span className="font-normal">(본인만 볼 수 있음)</span>
+          </label>
+          <div
+            className="w-full rounded-xl px-3 py-2.5 text-sm border flex items-center gap-2"
+            style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)" }}
+          >
+            <span className="font-mono-num" style={{ color: "var(--muted)" }}>
+              {user?.phone
+                ? user.phone.replace(/(\d{3})\d{4}(\d{4})/, "$1-****-$2")
+                : "—"}
+            </span>
+            <span
+              className="ml-auto text-[9px] px-1.5 py-0.5 rounded"
+              style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
+            >
+              🔒 비공개
+            </span>
+          </div>
+        </div>
+
+        {/* Emoji picker */}
+        <div className="px-4 mb-8">
+          <label className="text-[10px] font-semibold mb-2 block" style={{ color: "var(--muted)" }}>
+            아바타 이모지 선택
+          </label>
+          <div className="grid grid-cols-6 gap-2">
+            {/* Clear option */}
+            <button
+              onClick={() => setAvatar("")}
+              className="w-full aspect-square rounded-xl flex items-center justify-center border transition-all active:opacity-70"
+              style={{
+                background: avatar === "" && !isPhoto ? "rgba(0,229,160,0.12)" : "var(--card)",
+                borderColor: avatar === "" && !isPhoto ? "var(--mint)" : "var(--border)",
+              }}
+            >
+              <span className="text-[10px]" style={{ color: "var(--muted)" }}>없음</span>
+            </button>
+            {EMOJI_PRESETS.map((em) => {
+              const active = avatar === em;
+              return (
+                <button
+                  key={em}
+                  onClick={() => setAvatar(em)}
+                  className="w-full aspect-square rounded-xl flex items-center justify-center text-2xl border transition-all active:opacity-70 relative"
+                  style={{
+                    background:  active ? "rgba(0,229,160,0.12)" : "var(--card)",
+                    borderColor: active ? "var(--mint)"           : "var(--border)",
+                  }}
+                >
+                  {em}
+                  {active && (
+                    <span className="absolute top-0.5 right-0.5">
+                      <Check className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}

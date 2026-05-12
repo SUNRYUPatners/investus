@@ -1,8 +1,7 @@
 import { Header } from "@/components/Header";
-import { XTimeline } from "@/components/XTimeline";
+import { ReportFeed } from "@/components/ReportFeed";
 import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
-import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { AdBanner } from "@/components/AdBanner";
 
@@ -166,46 +165,9 @@ export default function InsightPage() {
           <AdBanner format="auto" />
         </section>
 
-        {/* ── X 피드 ── */}
+        {/* ── Investus 리포트 ── */}
         <section className="mb-6">
-          <div className="flex items-center justify-between mb-3">
-            <h2
-              className="text-xs font-semibold tracking-widest uppercase font-syne"
-              style={{ color: "var(--muted)" }}
-            >
-              X 피드
-            </h2>
-            <a
-              href="https://x.com/hnryu_cio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-[10px]"
-              style={{ color: "var(--mint)" }}
-            >
-              @hnryu_cio <ExternalLink className="w-3 h-3" />
-            </a>
-          </div>
-
-          {/* Profile chip */}
-          <div
-            className="flex items-center gap-2 px-3 py-2 rounded-xl border mb-3"
-            style={{ background: "var(--card)", borderColor: "var(--border)" }}
-          >
-            <div
-              className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 text-white"
-              style={{ background: "linear-gradient(135deg,#1d9bf0,#0d6efd)" }}
-            >
-              𝕏
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-xs font-semibold" style={{ color: "var(--text)" }}>@hnryu_cio</p>
-              <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-                게시물 · 재게시 포함 실시간 피드
-              </p>
-            </div>
-          </div>
-
-          <XTimeline />
+          <ReportFeed />
         </section>
 
         {/* ── 추천 도서 ── */}

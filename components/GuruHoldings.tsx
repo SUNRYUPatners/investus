@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { ChevronDown, RefreshCw } from "lucide-react";
 import { GURUS, type Guru } from "@/lib/holdings13f";
 
@@ -103,10 +104,11 @@ function GuruCard({
             const clr = pos === null ? "var(--muted)" : pos ? UP : DOWN;
 
             return (
-              <div
+              <Link
                 key={h.symbol}
-                className={`flex items-center px-4 py-2.5 ${i < guru.holdings.length - 1 ? "border-b" : ""}`}
-                style={{ borderColor: "var(--border)" }}
+                href={`/stock/${h.symbol}`}
+                className={`flex items-center px-4 py-2.5 active:opacity-70 transition-opacity ${i < guru.holdings.length - 1 ? "border-b" : ""}`}
+                style={{ borderColor: "var(--border)", textDecoration: "none" }}
               >
                 {/* Symbol + name */}
                 <div className="flex-1 min-w-0">
@@ -164,7 +166,7 @@ function GuruCard({
                     </p>
                   )}
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

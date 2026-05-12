@@ -3,8 +3,10 @@
 import { use, useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { StockChart } from "@/components/StockChart";
-import { ChevronLeft, ExternalLink } from "lucide-react";
+import { NewsCard } from "@/components/NewsCard";
+import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import type { NewsItem } from "@/lib/api";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -30,14 +32,6 @@ type Detail = {
   eps: number | null;
 };
 
-type NewsItem = {
-  uuid: string;
-  title: string;
-  publisher: string;
-  link: string;
-  providerPublishTime: number;
-  thumbnail: string | null;
-};
 
 // ── Formatters ─────────────────────────────────────────────────────────────
 
@@ -63,12 +57,6 @@ function fmtNum(v: number | null, dp = 2): string {
 }
 function fmtPct(v: number | null): string {
   return v == null ? "—" : (v * 100).toFixed(2) + "%";
-}
-function relTime(ts: number): string {
-  const s = Math.floor(Date.now() / 1000 - ts);
-  if (s < 3600)   return `${Math.floor(s / 60)}분 전`;
-  if (s < 86400)  return `${Math.floor(s / 3600)}시간 전`;
-  return `${Math.floor(s / 86400)}일 전`;
 }
 
 const UP   = "#00e5a0";
@@ -224,60 +212,16 @@ export default function StockPage({
 
         {/* ── 관련 뉴스 ── */}
         {news.length > 0 && (
-          <div
-            className="mx-4 rounded-2xl border overflow-hidden mb-4"
-            style={{ background: "var(--card)", borderColor: "var(--border)" }}
-          >
-            <div className="px-4 py-3 border-b" style={{ borderColor: "var(--border)" }}>
-              <h2
-                className="text-xs font-semibold tracking-widest uppercase font-syne"
-                style={{ color: "var(--muted)" }}
-              >
-                관련 뉴스
-              </h2>
-            </div>
-
-            <div>
-              {news.filter((n) => n.link).map((n, i) => (
-                <a
-                  key={n.uuid}
-                  href={n.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 px-4 py-3.5 transition-opacity hover:opacity-70 active:opacity-50 cursor-pointer"
-                  style={{
-                    borderBottom: i < news.length - 1 ? "1px solid var(--border)" : "none",
-                    textDecoration: "none",
-                  }}
-                >
-                  {/* Thumbnail */}
-                  {n.thumbnail && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={n.thumbnail}
-                      alt=""
-                      className="w-16 h-12 rounded-lg object-cover flex-shrink-0"
-                    />
-                  )}
-
-                  {/* Text */}
-                  <div className="flex-1 min-w-0">
-                    <p
-                      className="text-[13px] leading-snug line-clamp-2 font-medium"
-                      style={{ color: "var(--text)" }}
-                    >
-                      {n.title}
-                    </p>
-                    <p className="text-[11px] mt-1" style={{ color: "var(--muted)" }}>
-                      {n.publisher} · {relTime(n.providerPublishTime)}
-                    </p>
-                  </div>
-
-                  <ExternalLink
-                    className="w-3.5 h-3.5 flex-shrink-0 mt-0.5"
-                    style={{ color: "var(--muted)" }}
-                  />
-                </a>
+          <div className="mx-4 mb-4">
+            <h2
+              className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
+              style={{ color: "var(--muted)" }}
+            >
+              관련 뉴스
+            </h2>
+            <div className="flex flex-col gap-3">
+              {news.map((n) => (
+                <NewsCard key={n.id} item={n} />
               ))}
             </div>
           </div>
@@ -285,23 +229,21 @@ export default function StockPage({
 
         {/* Loading skeleton for news */}
         {news.length === 0 && !detailLoading && (
-          <div
-            className="mx-4 rounded-2xl border overflow-hidden mb-4"
-            style={{ background: "var(--card)", borderColor: "var(--border)" }}
-          >
-            <div className="px-4 py-3 border-b" style={{ borderColor: "var(--border)" }}>
-              <h2 className="text-xs font-semibold tracking-widest uppercase font-syne"
-                style={{ color: "var(--muted)" }}>
-                관련 뉴스
-              </h2>
-            </div>
-            <div className="p-4 space-y-3">
+          <div className="mx-4 mb-4">
+            <h2
+              className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
+              style={{ color: "var(--muted)" }}
+            >
+              관련 뉴스
+            </h2>
+            <div className="flex flex-col gap-3">
               {[1, 2, 3].map((k) => (
-                <div key={k} className="flex gap-3">
-                  <div className="w-16 h-12 rounded-lg animate-pulse flex-shrink-0"
-                    style={{ background: "var(--border)" }} />
-                  <div className="flex-1 space-y-2">
-                    <div className="h-4 rounded animate-pulse" style={{ background: "var(--border)" }} />
+                <div key={k} className="rounded-2xl p-4 border flex gap-3"
+                  style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <div className="w-10 rounded-xl animate-pulse flex-shrink-0"
+                    style={{ background: "var(--border)", minHeight: 44 }} />
+                  <div className="flex-1 space-y-2 py-1">
+                    <div className="h-3.5 rounded animate-pulse" style={{ background: "var(--border)" }} />
                     <div className="h-3 w-2/3 rounded animate-pulse" style={{ background: "var(--border)" }} />
                   </div>
                 </div>

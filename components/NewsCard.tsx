@@ -21,12 +21,12 @@ export function NewsCard({ item, large = false }: { item: NewsItem; large?: bool
   const inner = (
     <div className="flex items-start gap-3">
       {/* Thumbnail or emoji */}
-      {large && item.image ? (
+      {item.image ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={item.image}
           alt=""
-          className="flex-shrink-0 w-20 h-14 rounded-xl object-cover"
+          className={`flex-shrink-0 rounded-xl object-cover ${large ? "w-20 h-14" : "w-10 h-10"}`}
         />
       ) : (
         <div

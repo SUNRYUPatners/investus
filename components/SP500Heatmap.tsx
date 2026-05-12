@@ -24,29 +24,39 @@ const TILE_TEXT = "rgba(255,255,255,0.95)";
 
 const LAYOUT: { rowH: number; sections: { key: string; flex: number; maxStocks: number }[] }[] = [
   {
-    rowH: 102,
+    rowH: 100,
     sections: [
-      { key: "IT",     flex: 6.0, maxStocks: 5 },
-      { key: "COMM",   flex: 2.5, maxStocks: 3 },
-      { key: "HEALTH", flex: 2.5, maxStocks: 3 },
+      { key: "IT", flex: 10, maxStocks: 6 },
+    ],
+  },
+  {
+    rowH: 90,
+    sections: [
+      { key: "COMM",   flex: 4, maxStocks: 4 },
+      { key: "HEALTH", flex: 5, maxStocks: 5 },
     ],
   },
   {
     rowH: 82,
     sections: [
-      { key: "FIN",    flex: 3.5, maxStocks: 4 },
-      { key: "CONS_D", flex: 3.0, maxStocks: 3 },
-      { key: "IND",    flex: 2.0, maxStocks: 3 },
-      { key: "CONS_S", flex: 1.5, maxStocks: 2 },
+      { key: "FIN",    flex: 5, maxStocks: 5 },
+      { key: "CONS_D", flex: 5, maxStocks: 4 },
+    ],
+  },
+  {
+    rowH: 74,
+    sections: [
+      { key: "IND",    flex: 3, maxStocks: 4 },
+      { key: "CONS_S", flex: 3, maxStocks: 4 },
+      { key: "ENERGY", flex: 3, maxStocks: 3 },
     ],
   },
   {
     rowH: 64,
     sections: [
-      { key: "ENERGY", flex: 2.0, maxStocks: 3 },
-      { key: "MAT",    flex: 1.0, maxStocks: 2 },
-      { key: "UTIL",   flex: 1.0, maxStocks: 2 },
-      { key: "REIT",   flex: 1.0, maxStocks: 2 },
+      { key: "MAT",  flex: 2, maxStocks: 3 },
+      { key: "UTIL", flex: 2, maxStocks: 3 },
+      { key: "REIT", flex: 2, maxStocks: 2 },
     ],
   },
 ];
@@ -71,12 +81,14 @@ const MOCK_SECTORS: Sector[] = [
     { symbol: "UNH",   name: "UnitedHealth", price: null, changePercent:  0.42, weight: 1.8 },
     { symbol: "JNJ",   name: "J&J",          price: null, changePercent: -0.28, weight: 1.4 },
     { symbol: "ABBV",  name: "AbbVie",       price: null, changePercent:  0.63, weight: 1.2 },
+    { symbol: "MRK",   name: "Merck",        price: null, changePercent: -0.41, weight: 1.1 },
   ]},
   { key: "FIN",    name: "금융",        stocks: [
     { symbol: "BRK-B", name: "Berkshire",   price: null, changePercent:  0.78, weight: 3.5 },
     { symbol: "JPM",   name: "JPMorgan",    price: null, changePercent:  1.28, weight: 2.2 },
     { symbol: "V",     name: "Visa",        price: null, changePercent:  0.55, weight: 1.9 },
     { symbol: "MA",    name: "Mastercard",  price: null, changePercent:  0.62, weight: 1.5 },
+    { symbol: "WFC",   name: "Wells Fargo", price: null, changePercent:  0.91, weight: 1.2 },
   ]},
   { key: "CONS_D", name: "임의소비재",  stocks: [
     { symbol: "AMZN",  name: "Amazon",    price: null, changePercent:  1.01, weight: 4.0 },
@@ -104,10 +116,12 @@ const MOCK_SECTORS: Sector[] = [
   { key: "MAT",    name: "소재",        stocks: [
     { symbol: "LIN",   name: "Linde",        price: null, changePercent:  0.35, weight: 0.8 },
     { symbol: "APD",   name: "Air Products", price: null, changePercent:  0.22, weight: 0.4 },
+    { symbol: "ECL",   name: "Ecolab",       price: null, changePercent:  0.18, weight: 0.3 },
   ]},
   { key: "UTIL",   name: "유틸리티",    stocks: [
-    { symbol: "NEE",   name: "NextEra", price: null, changePercent: -0.44, weight: 0.8 },
-    { symbol: "DUK",   name: "Duke",    price: null, changePercent:  0.15, weight: 0.4 },
+    { symbol: "NEE",   name: "NextEra",   price: null, changePercent: -0.44, weight: 0.8 },
+    { symbol: "DUK",   name: "Duke",      price: null, changePercent:  0.15, weight: 0.4 },
+    { symbol: "SO",    name: "Southern",  price: null, changePercent:  0.08, weight: 0.3 },
   ]},
   { key: "REIT",   name: "부동산",      stocks: [
     { symbol: "AMT",   name: "American Tower", price: null, changePercent: -0.88, weight: 0.6 },
@@ -161,16 +175,24 @@ function SectorBlock({
                 onTileClick(s.symbol, s.name, s.changePercent, e.clientX, e.clientY);
               }}
             >
-              <p
-                className="text-[9px] font-semibold leading-tight truncate w-full"
-                style={{ color: TILE_TEXT, textShadow: TILE_SHADOW }}
-              >
-                {s.symbol}
-              </p>
+              <div className="w-full overflow-hidden">
+                <p
+                  className="text-[11px] font-semibold leading-none truncate"
+                  style={{ color: TILE_TEXT }}
+                >
+                  {s.symbol}
+                </p>
+                <p
+                  className="text-[8px] leading-tight truncate mt-0.5"
+                  style={{ color: TILE_TEXT, opacity: 0.7 }}
+                >
+                  {s.name}
+                </p>
+              </div>
               <div className="w-full">
                 {s.price != null && (
                   <p
-                    className="text-[8px] font-mono-num tabular-nums leading-none truncate"
+                    className="text-[10px] font-mono-num tabular-nums leading-none truncate"
                     style={{ color: TILE_TEXT, opacity: 0.85 }}
                   >
                     ${s.price >= 1000
@@ -179,8 +201,8 @@ function SectorBlock({
                   </p>
                 )}
                 <p
-                  className="text-[10px] font-bold font-mono-num tabular-nums leading-none mt-0.5"
-                  style={{ color: TILE_TEXT, textShadow: TILE_SHADOW }}
+                  className="text-[12px] font-bold font-mono-num tabular-nums leading-none mt-0.5"
+                  style={{ color: TILE_TEXT }}
                 >
                   {s.changePercent >= 0 ? "+" : ""}{s.changePercent.toFixed(2)}%
                 </p>
