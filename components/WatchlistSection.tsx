@@ -5,8 +5,8 @@ import { mockQuotes } from "@/lib/api";
 import { Sparkline } from "./Sparkline";
 import { Star } from "lucide-react";
 
-const UP   = "#ff4d6d";
-const DOWN = "#00e5a0";
+const UP   = "#00e5a0";
+const DOWN = "#ff4d6d";
 
 export function WatchlistSection() {
   const { list, remove } = useWatchlist();

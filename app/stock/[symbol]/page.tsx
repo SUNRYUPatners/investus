@@ -71,8 +71,8 @@ function relTime(ts: number): string {
   return `${Math.floor(s / 86400)}일 전`;
 }
 
-const UP   = "#ff4d6d";
-const DOWN = "#00e5a0";
+const UP   = "#00e5a0";
+const DOWN = "#ff4d6d";
 
 // ── Page ──────────────────────────────────────────────────────────────────
 

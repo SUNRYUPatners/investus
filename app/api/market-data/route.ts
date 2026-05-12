@@ -34,69 +34,53 @@ async function getUSDKRW(): Promise<number | null> {
   } catch { return null; }
 }
 
-// ── Index quotes — Yahoo Finance (free, no key needed) ───────────────────
-// Maps our internal symbol → Yahoo Finance symbol → Stooq symbol
-const INDEX_YAHOO: Record<string, string> = {
-  SPX: "%5EGSPC", COMP: "%5EIXIC", DJI: "%5EDJI",
-};
-const INDEX_STOOQ: Record<string, string> = {
-  SPX: "^spx", COMP: "^ndq", DJI: "^dji",
-};
-
 type IndexLive = { price: number; change: number; changePercent: number };
 
-async function fetchYahooIndexQuote(yahooSym: string): Promise<IndexLive | null> {
+// ── Twelve Data ETF batch (works on Vercel; free tier 8 req/min) ──────────
+// SPY≈SPX/10.03  QQQ≈COMP/36.83  DIA≈DJI/100  IWM≈RTY/10.05  GLD≈GC/10
+const ETF_SYMS = ["SPY", "QQQ", "DIA", "IWM", "GLD"] as const;
+
+// ETF → spot index derivation (factor = index / etf_price, confirmed live)
+const ETF_INDEX: Record<string, { sym: string; factor: number }> = {
+  SPY: { sym: "SPX",  factor: 10.03 },
+  QQQ: { sym: "COMP", factor: 36.83 },
+  DIA: { sym: "DJI",  factor: 100   },
+};
+
+async function fetchTwelveDataETFBatch(): Promise<Map<string, IndexLive>> {
+  const out = new Map<string, IndexLive>();
+  const apiKey = process.env.TWELVEDATA_API_KEY;
+  if (!apiKey) return out;
   try {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${yahooSym}?interval=1d&range=5d&includePrePost=false`;
-    const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
-    if (!res.ok) return null;
-    const json   = await res.json();
-    const meta   = json?.chart?.result?.[0]?.meta;
-    if (!meta || !meta.regularMarketPrice) return null;
-    const price   = meta.regularMarketPrice as number;
-    const prev    = (meta.chartPreviousClose ?? meta.previousClose ?? 0) as number;
-    const change  = prev > 0 ? price - prev : 0;
-    const changePct = prev > 0 ? (change / prev) * 100 : 0;
-    return { price, change, changePercent: changePct };
-  } catch { return null; }
+    const res = await fetch(
+      `https://api.twelvedata.com/quote?symbol=${ETF_SYMS.join(",")}&apikey=${apiKey}`,
+    );
+    if (!res.ok) return out;
+    const data = await res.json() as Record<string, {
+      close?: string; percent_change?: string; change?: string; status?: string;
+    }>;
+    for (const [sym, q] of Object.entries(data)) {
+      if (q.status === "error" || !q.close) continue;
+      const price = parseFloat(q.close);
+      if (!isNaN(price) && price > 0) {
+        out.set(sym, {
+          price,
+          change:        parseFloat(q.change        ?? "0"),
+          changePercent: parseFloat(q.percent_change ?? "0"),
+        });
+      }
+    }
+  } catch { /* ignore */ }
+  return out;
 }
 
-async function fetchStooqIndexQuote(stooqSym: string): Promise<IndexLive | null> {
-  try {
-    const url = `https://stooq.com/q/l/?s=${encodeURIComponent(stooqSym)}&f=sd2t2ohlcv&h&e=json`;
-    const res = await fetch(url, { headers: { "User-Agent": UA } });
-    if (!res.ok) return null;
-    const json = await res.json();
-    const sym  = json?.symbols?.[0];
-    if (!sym?.close) return null;
-    const price = sym.close as number;
-    const open  = sym.open  as number;
-    const change    = price - open;
-    const changePct = open > 0 ? (change / open) * 100 : 0;
-    return { price, change, changePercent: changePct };
-  } catch { return null; }
-}
-
-async function fetchIndexQuote(symbol: string): Promise<IndexLive | null> {
-  const yahoo = INDEX_YAHOO[symbol];
-  if (yahoo) {
-    const r = await fetchYahooIndexQuote(yahoo);
-    if (r) return r;
-  }
-  const stooq = INDEX_STOOQ[symbol];
-  if (stooq) return fetchStooqIndexQuote(stooq);
-  return null;
-}
-
-// ── Yahoo Finance for commodity/FX/index futures ─────────────────────────
-// Yahoo Finance `=F` suffix for front-month futures contracts
-
+// ── Yahoo Finance for commodity/FX futures (fallback; blocked on Vercel) ─
 const YAHOO_FUTURES: Record<string, string> = {
-  RTY: "RTY=F", CL: "CL=F", NG: "NG=F", RB: "RB=F",
-  GC: "GC=F",   SI: "SI=F", HG: "HG=F",
-  ZN: "ZN=F",   ZB: "ZB=F",
+  CL: "CL=F", NG: "NG=F", RB: "RB=F",
+  SI: "SI=F", HG: "HG=F",
+  ZN: "ZN=F", ZB: "ZB=F",
   "6E": "6E=F", "6J": "6J=F",
-  ZC: "ZC=F",   ZW: "ZW=F", ZS: "ZS=F",
+  ZC: "ZC=F", ZW: "ZW=F", ZS: "ZS=F",
 };
 
 async function fetchYahooFutureQuote(yahooCom: string): Promise<IndexLive | null> {
@@ -146,21 +130,20 @@ export async function GET() {
   const token = process.env.FINNHUB_API_KEY ?? "";
 
   // ── 병렬 조회 ─────────────────────────────────────────────────────────
-  const stockSymbols   = mockQuotes.map((q) => q.symbol);
-  const indexSymbols   = mockIndices.filter((m) => !m.isCurrency).map((m) => m.symbol);
-  const futureSymbols  = Object.keys(YAHOO_FUTURES);
-  const cryptoFHSyms   = Object.values(CRYPTO_FH);
+  const stockSymbols  = mockQuotes.map((q) => q.symbol);
+  const futureSymbols = Object.keys(YAHOO_FUTURES);
+  const cryptoFHSyms  = Object.values(CRYPTO_FH);
 
   const [
     stockMap,
-    indexLiveArr,
+    etfMap,
     futuresLiveArr,
     cryptoResults,
     cgMap,
     krwRate,
   ] = await Promise.all([
     fetchFinnhubBatch(stockSymbols),
-    Promise.allSettled(indexSymbols.map((s) => fetchIndexQuote(s))),
+    fetchTwelveDataETFBatch(),
     Promise.allSettled(futureSymbols.map((s) => fetchYahooFutureQuote(YAHOO_FUTURES[s]))),
     token
       ? Promise.allSettled(cryptoFHSyms.map((s) => fetchFinnhubRawQuote(s)))
@@ -169,14 +152,20 @@ export async function GET() {
     getUSDKRW(),
   ]);
 
-  // symbol → live index data
+  // Build indexLive map from ETF proxies
   const indexLive = new Map<string, IndexLive>();
-  indexSymbols.forEach((sym, i) => {
-    const r = indexLiveArr[i];
-    if (r.status === "fulfilled" && r.value) indexLive.set(sym, r.value);
-  });
+  for (const [etfSym, { sym: idxSym, factor }] of Object.entries(ETF_INDEX)) {
+    const etf = etfMap.get(etfSym);
+    if (etf) {
+      indexLive.set(idxSym, {
+        price:         etf.price * factor,
+        change:        etf.change * factor,
+        changePercent: etf.changePercent,
+      });
+    }
+  }
 
-  // symbol → live futures data (Yahoo)
+  // symbol → live commodity futures data (Yahoo; works locally, mock on Vercel)
   const futureLive = new Map<string, IndexLive>();
   futureSymbols.forEach((sym, i) => {
     const r = futuresLiveArr[i];
@@ -222,18 +211,30 @@ export async function GET() {
 
   // ── 선물 ─────────────────────────────────────────────────────────────
   const futures: FutureItem[] = mockFutures.map((f) => {
-    // 1) 지수 선물 → 이미 가져온 지수 데이터 재사용
+    // 1) ES/NQ/YM → 지수 데이터 재사용 (ETF 프록시에서 파생)
     const idxKey = FUTURES_FROM_INDEX[f.symbol];
     if (idxKey) {
       const live = indexLive.get(idxKey);
       if (live) return { ...f, price: live.price, change: live.change, changePercent: live.changePercent, isMock: false };
     }
 
-    // 2) Yahoo Finance 선물
+    // 2) RTY → IWM × 10.05
+    if (f.symbol === "RTY") {
+      const iwm = etfMap.get("IWM");
+      if (iwm) return { ...f, price: iwm.price * 10.05, change: iwm.change * 10.05, changePercent: iwm.changePercent, isMock: false };
+    }
+
+    // 3) GC (금) → GLD × 10
+    if (f.symbol === "GC") {
+      const gld = etfMap.get("GLD");
+      if (gld) return { ...f, price: gld.price * 10, change: gld.change * 10, changePercent: gld.changePercent, isMock: false };
+    }
+
+    // 4) 원자재/채권/외환 → Yahoo Finance (로컬 전용, Vercel에선 mock)
     const yhLive = futureLive.get(f.symbol);
     if (yhLive) return { ...f, price: yhLive.price, change: yhLive.change, changePercent: yhLive.changePercent, isMock: false };
 
-    // 3) 크립토 — Finnhub primary, CoinGecko fallback
+    // 5) 크립토 — Finnhub primary, CoinGecko fallback
     if (f.symbol === "BTC" || f.symbol === "ETH") {
       const fhSym = CRYPTO_FH[f.symbol];
       const fhQ   = fhSym ? cryptoRaw.get(fhSym) : undefined;

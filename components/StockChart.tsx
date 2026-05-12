@@ -19,8 +19,8 @@ const VH    = 48;  // volume height
 const GAP   = 4;   // gap between chart and volume
 const SVG_H = PAD.top + CH + GAP + VH + PAD.bottom;
 
-const UP   = "#ff4d6d";
-const DOWN = "#00e5a0";
+const UP   = "#00e5a0";
+const DOWN = "#ff4d6d";
 
 function xFmt(ts: number, period: Period): string {
   const d = new Date(ts * 1000);

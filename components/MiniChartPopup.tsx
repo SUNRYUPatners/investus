@@ -13,8 +13,8 @@ type Props = {
   onClose: () => void;
 };
 
-const UP   = "#ff4d6d";
-const DOWN = "#00e5a0";
+const UP   = "#00e5a0";
+const DOWN = "#ff4d6d";
 const CW   = 208;
 const CH   = 64;
 const POPUP_W = 240;
