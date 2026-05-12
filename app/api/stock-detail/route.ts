@@ -1,10 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import { mockQuotes } from "@/lib/api";
 import { toYahoo } from "@/lib/symbolMap";
+import {
+  fetchFinnhubRawQuote,
+  fetchFinnhubProfile,
+  fetchFinnhubMetrics,
+} from "@/lib/finnhub";
 
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+
+// ── Mock fallback ─────────────────────────────────────────────────────────
 
 function mockDetail(symbol: string) {
   const q = mockQuotes.find((m) => m.symbol === symbol);
@@ -33,13 +40,14 @@ function mockDetail(symbol: string) {
   };
 }
 
+// ── Yahoo Finance v8 fallback ─────────────────────────────────────────────
+
 async function fetchV8Meta(symbol: string) {
   const url =
     `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}` +
     `?interval=5m&range=1d&includePrePost=false`;
   const res = await fetch(url, {
     headers: { "User-Agent": UA, Accept: "application/json" },
-    next: { revalidate: 60 },
   });
   if (!res.ok) return null;
   const json   = await res.json();
@@ -62,7 +70,6 @@ async function fetchV7Fundamentals(symbol: string) {
   try {
     const res = await fetch(url, {
       headers: { "User-Agent": UA, Accept: "application/json" },
-      next: { revalidate: 300 },
     });
     if (!res.ok) return null;
     const json = await res.json();
@@ -72,15 +79,54 @@ async function fetchV7Fundamentals(symbol: string) {
   }
 }
 
+// ── Main handler ──────────────────────────────────────────────────────────
+
 export async function GET(req: NextRequest) {
   const rawSymbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase();
   if (!rawSymbol) return NextResponse.json({ error: "no symbol" }, { status: 400 });
-  const symbol = toYahoo(rawSymbol);
+  const yahooSymbol = toYahoo(rawSymbol);
+  // If toYahoo returned a different symbol, it's a futures/index — use Yahoo Finance
+  const isIndexOrFutures = yahooSymbol !== rawSymbol;
 
   try {
+    // ── Finnhub path: regular US stocks ──────────────────────────────────
+    if (!isIndexOrFutures) {
+      const [rawQ, profile, metrics] = await Promise.all([
+        fetchFinnhubRawQuote(rawSymbol),
+        fetchFinnhubProfile(rawSymbol),
+        fetchFinnhubMetrics(rawSymbol),
+      ]);
+
+      if (rawQ && rawQ.c > 0) {
+        const prev = rawQ.pc || (rawQ.c - rawQ.d);
+        return NextResponse.json({
+          symbol:        rawSymbol,
+          name:          profile?.name        ?? rawSymbol,
+          exchange:      profile?.exchange    ?? "US",
+          currency:      profile?.currency    ?? "USD",
+          price:         rawQ.c,
+          change:        rawQ.d,
+          changePercent: rawQ.dp,
+          open:          rawQ.o  || null,
+          high:          rawQ.h  || null,
+          low:           rawQ.l  || null,
+          volume:        null,
+          week52High:    metrics?.week52High    ?? null,
+          week52Low:     metrics?.week52Low     ?? null,
+          pe:            metrics?.pe            ?? null,
+          marketCap:     metrics?.marketCap != null ? metrics.marketCap * 1_000_000 : null,
+          avgVolume:     null,
+          dividendYield: metrics?.dividendYield ?? null,
+          beta:          metrics?.beta          ?? null,
+          eps:           metrics?.eps           ?? null,
+        });
+      }
+    }
+
+    // ── Yahoo Finance path: indices, futures, or Finnhub fallback ─────────
     const [v8, v7] = await Promise.all([
-      fetchV8Meta(symbol),
-      fetchV7Fundamentals(symbol),
+      fetchV8Meta(yahooSymbol),
+      fetchV7Fundamentals(yahooSymbol),
     ]);
 
     if (!v8) {
@@ -93,8 +139,8 @@ export async function GET(req: NextRequest) {
     const prev = meta.chartPreviousClose ?? meta.regularMarketPrice ?? 0;
 
     return NextResponse.json({
-      symbol:        meta.symbol           ?? symbol,
-      name:          meta.longName         ?? meta.shortName ?? symbol,
+      symbol:        meta.symbol           ?? rawSymbol,
+      name:          meta.longName         ?? meta.shortName ?? rawSymbol,
       exchange:      meta.fullExchangeName ?? meta.exchangeName ?? "",
       currency:      meta.currency         ?? "USD",
       price:         meta.regularMarketPrice     ?? 0,

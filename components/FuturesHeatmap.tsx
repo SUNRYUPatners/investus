@@ -140,7 +140,7 @@ export function FuturesHeatmap({ items }: Props) {
                   return (
                     <div
                       key={sym}
-                      className="flex flex-col items-start justify-between p-2 overflow-hidden cursor-pointer select-none transition-opacity active:opacity-80"
+                      className="flex flex-col items-start justify-between p-1.5 overflow-hidden cursor-pointer select-none transition-opacity active:opacity-80"
                       style={{ flex, background: bg(item.changePercent), minWidth: 0 }}
                       onClick={(e) => {
                         e.stopPropagation();
@@ -156,8 +156,8 @@ export function FuturesHeatmap({ items }: Props) {
                       {/* Name */}
                       <div className="w-full">
                         <p
-                          className="text-[11px] font-semibold leading-tight truncate"
-                          style={{ color: tc }}
+                          className="text-[10px] font-semibold leading-tight break-words"
+                          style={{ color: tc, wordBreak: "break-word" }}
                         >
                           {displayName}
                         </p>
