@@ -1,8 +1,5 @@
 {
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "framework": "nextjs",
-  "env": {
-    "ALPHA_VANTAGE_API_KEY": "@alpha_vantage_api_key"
-  }
+  "framework": "nextjs"
 }
