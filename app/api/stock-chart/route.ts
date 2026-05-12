@@ -16,12 +16,13 @@ type PeriodCfg = {
 };
 
 const PERIOD_CFG: Record<string, PeriodCfg> = {
-  "1D":  { tdInterval: "5min",   tdOutputSize: 78,  yhInterval: "5m",  yhRange: "1d"  },
-  "1M":  { tdInterval: "1day",   tdOutputSize: 30,  yhInterval: "1d",  yhRange: "1mo" },
-  "YTD": { tdInterval: "1day",   tdOutputSize: 365, yhInterval: "1d",  yhRange: "ytd" },
-  "3Y":  { tdInterval: "1week",  tdOutputSize: 156, yhInterval: "1wk", yhRange: "3y"  },
-  "5Y":  { tdInterval: "1week",  tdOutputSize: 260, yhInterval: "1wk", yhRange: "5y"  },
-  "10Y": { tdInterval: "1month", tdOutputSize: 120, yhInterval: "1mo", yhRange: "10y" },
+  "1D":  { tdInterval: "5min",   tdOutputSize: 78,   yhInterval: "5m",  yhRange: "1d"  },
+  "1M":  { tdInterval: "1day",   tdOutputSize: 30,   yhInterval: "1d",  yhRange: "1mo" },
+  "YTD": { tdInterval: "1day",   tdOutputSize: 365,  yhInterval: "1d",  yhRange: "ytd" },
+  "3Y":  { tdInterval: "1week",  tdOutputSize: 156,  yhInterval: "1wk", yhRange: "3y"  },
+  "5Y":  { tdInterval: "1week",  tdOutputSize: 260,  yhInterval: "1wk", yhRange: "5y"  },
+  "10Y": { tdInterval: "1month", tdOutputSize: 120,  yhInterval: "1mo", yhRange: "10y" },
+  "ALL": { tdInterval: "1month", tdOutputSize: 5000, yhInterval: "1mo", yhRange: "max" },
 };
 
 // ── Mock fallback ─────────────────────────────────────────────────────────

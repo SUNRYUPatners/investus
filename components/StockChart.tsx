@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const PERIODS = ["1D", "1M", "YTD", "3Y", "5Y", "10Y"] as const;
+const PERIODS = ["1D", "1M", "YTD", "3Y", "5Y", "10Y", "ALL"] as const;
 type Period = (typeof PERIODS)[number];
 
 type Point = { ts: number; close: number; volume: number };
@@ -33,6 +33,10 @@ function xFmt(ts: number, period: Period): string {
   if (period === "YTD")
     return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
   return String(d.getFullYear());
+}
+
+function xFmtAll(ts: number): string {
+  return String(new Date(ts * 1000).getFullYear());
 }
 
 function fullFmt(ts: number, period: Period): string {
@@ -139,12 +143,17 @@ export function StockChart({ symbol }: { symbol: string }) {
     label: (pLo + t * (pHi - pLo)).toFixed(2),
   }));
 
-  // X-axis ticks (5 evenly spaced)
+  // X-axis ticks (5 evenly spaced, deduplicated for ALL)
   const xTicks = N > 0
-    ? [0, 0.25, 0.5, 0.75, 1].map((t) => {
-        const idx = Math.round(t * (N - 1));
-        return { x: xAt(idx), label: xFmt(pts[idx].ts, period) };
-      })
+    ? [0, 0.25, 0.5, 0.75, 1]
+        .map((t) => {
+          const idx = Math.round(t * (N - 1));
+          return {
+            x: xAt(idx),
+            label: period === "ALL" ? xFmtAll(pts[idx].ts) : xFmt(pts[idx].ts, period),
+          };
+        })
+        .filter((t, i, arr) => i === 0 || t.label !== arr[i - 1].label)
     : [];
 
   // Previous close line (for 1D only)
@@ -166,12 +175,12 @@ export function StockChart({ symbol }: { symbol: string }) {
   return (
     <div>
       {/* Period tabs */}
-      <div className="flex gap-1 px-4 pt-4 pb-3">
+      <div className="flex gap-0.5 px-3 pt-4 pb-3">
         {PERIODS.map((p) => (
           <button
             key={p}
             onClick={() => setPeriod(p)}
-            className="flex-1 py-1.5 rounded-xl text-xs font-bold transition-all"
+            className="flex-1 py-1 rounded-lg text-[10px] font-bold transition-all"
             style={
               period === p
                 ? { background: color, color: "#000" }

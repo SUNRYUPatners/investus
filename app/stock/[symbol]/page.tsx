@@ -192,25 +192,25 @@ export default function StockPage({
         {/* ── 주요 지표 ── */}
         {stats.length > 0 && (
           <div
-            className="mx-4 rounded-2xl border overflow-hidden mb-4"
+            className="mx-4 rounded-xl border overflow-hidden mb-3"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
           >
-            <div className="px-3 py-1.5 border-b" style={{ borderColor: "var(--border)" }}>
-              <h2 className="text-[9px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+            <div className="px-2.5 py-1 border-b" style={{ borderColor: "var(--border)" }}>
+              <h2 className="text-[8px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
                 주요 지표
               </h2>
             </div>
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-4">
               {stats.map(([label, value], i) => {
-                const cols    = 3;
-                const total   = stats.length;
+                const cols         = 4;
+                const total        = stats.length;
                 const lastRowStart = total - (total % cols || cols);
                 const isLastRow    = i >= lastRowStart;
                 const colIdx       = i % cols;
                 return (
                   <div
                     key={label}
-                    className="flex flex-col px-2.5 py-1"
+                    className="flex flex-col px-2 py-0.5"
                     style={{
                       borderColor:       "var(--border)",
                       borderBottomWidth: isLastRow ? "0px" : "1px",
@@ -218,8 +218,8 @@ export default function StockPage({
                       borderStyle:       "solid",
                     }}
                   >
-                    <span className="text-[8.5px] leading-tight" style={{ color: "var(--muted)" }}>{label}</span>
-                    <span className="text-[10px] font-semibold font-mono-num leading-tight mt-0.5" style={{ color: "var(--text)" }}>{value}</span>
+                    <span className="text-[7.5px] leading-snug" style={{ color: "var(--muted)" }}>{label}</span>
+                    <span className="text-[9px] font-semibold font-mono-num leading-snug" style={{ color: "var(--text)" }}>{value}</span>
                   </div>
                 );
               })}
