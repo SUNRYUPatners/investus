@@ -256,8 +256,6 @@ const mockQuotes: Quote[] = [
   },
 ];
 
-const RECOMMENDED_SYMBOLS = ["GOOGL", "TSLA", "PLTR", "IBM", "JPM"];
-
 const mockFearGreed: FearGreedData = {
   value: 62,
   label: "Greed",
@@ -362,18 +360,17 @@ const mockNews: NewsItem[] = [
 ];
 
 // ── API Functions ──────────────────────────────────────────────────────────
-// To enable Alpha Vantage: set ALPHA_VANTAGE_API_KEY in .env.local
-// and uncomment the fetch blocks below.
 
-// Yahoo Finance 심볼 매핑 (지수)
-const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [
+export const RECOMMENDED_SYMBOLS = ["GOOGL", "TSLA", "PLTR", "IBM", "JPM"];
+const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
+
+export const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [
   { yahoo: "^GSPC",    symbol: "SPX",    name: "S&P 500", fullName: "S&P 500 Index" },
   { yahoo: "^IXIC",    symbol: "COMP",   name: "NASDAQ",  fullName: "NASDAQ Composite" },
   { yahoo: "^DJI",     symbol: "DJI",    name: "DOW",     fullName: "Dow Jones Industrial" },
   { yahoo: "USDKRW=X", symbol: "USDKRW", name: "원달러",  fullName: "USD/KRW 환율", isCurrency: true },
 ];
-
-const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
+export { mockIndices, mockFutures };
 
 // 60초 캐시 — 실패 시 null 반환(mock 캐시 방지)
 const _fetchLiveIndices = unstable_cache(

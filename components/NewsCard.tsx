@@ -30,12 +30,15 @@ export function NewsCard({ item }: { item: NewsItem }) {
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
       <div className="flex items-start gap-3">
-        {/* Emoji icon box */}
+        {/* Emoji + 카테고리 텍스트 */}
         <div
-          className="flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center text-lg"
-          style={{ background: style.bg }}
+          className="flex-shrink-0 w-10 rounded-xl flex flex-col items-center justify-center gap-0.5 py-1.5"
+          style={{ background: style.bg, minHeight: 44 }}
         >
-          {emoji}
+          <span className="text-base leading-none">{emoji}</span>
+          <span className="text-[8px] font-semibold leading-none" style={{ color: style.color }}>
+            {item.category}
+          </span>
         </div>
 
         {/* Content */}
