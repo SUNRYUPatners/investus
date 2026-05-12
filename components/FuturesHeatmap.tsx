@@ -153,14 +153,22 @@ export function FuturesHeatmap({ items }: Props) {
                         });
                       }}
                     >
-                      {/* Name */}
-                      <div className="w-full">
+                      {/* Name + MOCK badge */}
+                      <div className="w-full flex items-start justify-between gap-0.5">
                         <p
-                          className="text-[10px] font-semibold leading-tight break-words"
+                          className="text-[10px] font-semibold leading-tight break-words flex-1"
                           style={{ color: tc, wordBreak: "break-word" }}
                         >
                           {displayName}
                         </p>
+                        {item.isMock && (
+                          <span
+                            className="text-[7px] font-bold leading-none px-0.5 rounded flex-shrink-0 mt-0.5"
+                            style={{ background: "rgba(0,0,0,0.35)", color: tc, opacity: 0.7 }}
+                          >
+                            MOCK
+                          </span>
+                        )}
                       </div>
 
                       {/* Bottom: change + price */}

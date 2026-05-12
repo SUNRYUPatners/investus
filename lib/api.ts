@@ -78,6 +78,7 @@ export type FutureItem = {
   change: number;
   changePercent: number;
   group: string;
+  isMock?: boolean;
 };
 
 // ── Mock Data ──────────────────────────────────────────────────────────────

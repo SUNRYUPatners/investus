@@ -217,10 +217,20 @@ export function SP500Heatmap() {
   const [popup, setPopup]     = useState<PopupState | null>(null);
 
   useEffect(() => {
+    // 이전 캐시를 즉시 표시 (mock 대신 마지막 실제값 사용)
+    try {
+      const cached = localStorage.getItem("sp500-cache");
+      if (cached) setSectors(JSON.parse(cached));
+    } catch { /* ignore */ }
+
     fetch("/api/sp500-prices")
       .then((r) => r.json())
-      .then((data: Sector[]) => setSectors(data))
-      .catch(() => setSectors(MOCK_SECTORS));
+      .then((data: Sector[]) => {
+        setSectors(data);
+        try { localStorage.setItem("sp500-cache", JSON.stringify(data)); } catch { /* ignore */ }
+      })
+      .catch(() => { if (!sectors) setSectors(MOCK_SECTORS); });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const sectorMap = Object.fromEntries(

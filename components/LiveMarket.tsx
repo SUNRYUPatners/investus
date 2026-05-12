@@ -24,9 +24,19 @@ export function LiveMarket() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // 이전 캐시를 즉시 표시 (mock 대신 마지막 실제값 사용)
+    try {
+      const cached = localStorage.getItem("market-data-cache");
+      if (cached) { setData(JSON.parse(cached)); setLoading(false); }
+    } catch { /* ignore */ }
+
     fetch("/api/market-data")
       .then((r) => r.json())
-      .then((d: MarketData) => { setData(d); setLoading(false); })
+      .then((d: MarketData) => {
+        setData(d);
+        setLoading(false);
+        try { localStorage.setItem("market-data-cache", JSON.stringify(d)); } catch { /* ignore */ }
+      })
       .catch(() => setLoading(false));
   }, []);
 

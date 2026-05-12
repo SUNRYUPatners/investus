@@ -164,8 +164,8 @@ async function getLiveFutures(): Promise<FutureItem[]> {
 
   return mockFutures.map((f) => {
     const live = resultMap.get(f.symbol);
-    if (!live) return f;
-    return { ...f, price: live.price, change: live.change, changePercent: live.changePercent };
+    if (!live) return { ...f, isMock: true };  // Finnhub 미지원 → mock 표시
+    return { ...f, price: live.price, change: live.change, changePercent: live.changePercent, isMock: false };
   });
 }
 

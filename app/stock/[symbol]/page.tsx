@@ -195,16 +195,11 @@ export default function StockPage({
             className="mx-4 rounded-2xl border overflow-hidden mb-4"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
           >
-            <div className="px-4 py-3 border-b" style={{ borderColor: "var(--border)" }}>
-              <h2
-                className="text-xs font-semibold tracking-widest uppercase font-syne"
-                style={{ color: "var(--muted)" }}
-              >
+            <div className="px-3 py-2 border-b" style={{ borderColor: "var(--border)" }}>
+              <h2 className="text-[10px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
                 주요 지표
               </h2>
             </div>
-
-            {/* 4-column grid matching Yahoo Finance layout */}
             <div className="grid grid-cols-2 lg:grid-cols-4">
               {stats.map(([label, value], i) => {
                 const isLastRow = i >= stats.length - 2;
@@ -212,22 +207,15 @@ export default function StockPage({
                 return (
                   <div
                     key={label}
-                    className="flex items-center justify-between px-4 py-2.5 border-b"
+                    className="flex items-center justify-between px-3 py-1.5 border-b"
                     style={{
                       borderColor: "var(--border)",
                       borderBottomWidth: isLastRow ? "0px" : "1px",
                       borderRightWidth:  isOdd ? "1px" : "0px",
                     }}
                   >
-                    <span className="text-[11px]" style={{ color: "var(--muted)" }}>
-                      {label}
-                    </span>
-                    <span
-                      className="text-xs font-semibold font-mono-num"
-                      style={{ color: "var(--text)" }}
-                    >
-                      {value}
-                    </span>
+                    <span className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</span>
+                    <span className="text-[10px] font-semibold font-mono-num" style={{ color: "var(--text)" }}>{value}</span>
                   </div>
                 );
               })}
@@ -251,15 +239,16 @@ export default function StockPage({
             </div>
 
             <div>
-              {news.map((n, i) => (
+              {news.filter((n) => n.link).map((n, i) => (
                 <a
                   key={n.uuid}
                   href={n.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 px-4 py-3.5 transition-colors"
+                  className="flex items-start gap-3 px-4 py-3.5 transition-opacity hover:opacity-70 active:opacity-50 cursor-pointer"
                   style={{
                     borderBottom: i < news.length - 1 ? "1px solid var(--border)" : "none",
+                    textDecoration: "none",
                   }}
                 >
                   {/* Thumbnail */}

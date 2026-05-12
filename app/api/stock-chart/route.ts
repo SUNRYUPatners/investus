@@ -17,12 +17,12 @@ type PeriodCfg = {
 };
 
 const PERIOD_CFG: Record<string, PeriodCfg> = {
-  "1D":  { interval: "5m",  range: "1d",  fhRes: "5",  daysBack: 1   * 86400 },
-  "1M":  { interval: "1d",  range: "1mo", fhRes: "D",  daysBack: 30  * 86400 },
-  "YTD": { interval: "1d",  range: "ytd", fhRes: "D",  daysBack: 365 * 86400 },
-  "3Y":  { interval: "1wk", range: "3y",  fhRes: "W",  daysBack: 3   * 365 * 86400 },
-  "5Y":  { interval: "1wk", range: "5y",  fhRes: "W",  daysBack: 5   * 365 * 86400 },
-  "10Y": { interval: "1mo", range: "10y", fhRes: "M",  daysBack: 10  * 365 * 86400 },
+  "1D":  { interval: "5m",  range: "1d",  fhRes: "5",  daysBack: 4   * 86400 }, // 4일 여유로 주말/휴장 대응
+  "1M":  { interval: "1d",  range: "1mo", fhRes: "D",  daysBack: 35  * 86400 },
+  "YTD": { interval: "1d",  range: "ytd", fhRes: "D",  daysBack: 0            }, // 아래에서 Jan 1 계산
+  "3Y":  { interval: "1wk", range: "3y",  fhRes: "W",  daysBack: 3   * 366 * 86400 },
+  "5Y":  { interval: "1wk", range: "5y",  fhRes: "W",  daysBack: 5   * 366 * 86400 },
+  "10Y": { interval: "1mo", range: "10y", fhRes: "M",  daysBack: 10  * 366 * 86400 },
 };
 
 // ── Mock fallback ─────────────────────────────────────────────────────────
@@ -123,7 +123,10 @@ export async function GET(req: NextRequest) {
     // ── Finnhub candles: regular US stocks ───────────────────────────────
     if (!isIndexOrFutures) {
       const now  = Math.floor(Date.now() / 1000);
-      const from = now - cfg.daysBack;
+      // YTD: Jan 1 of current year
+      const from = period === "YTD"
+        ? Math.floor(new Date(new Date().getFullYear(), 0, 1).getTime() / 1000)
+        : now - cfg.daysBack;
       const candles = await fetchFinnhubCandles(rawSymbol, cfg.fhRes, from, now);
       if (candles && candles.length > 0) {
         return NextResponse.json({
