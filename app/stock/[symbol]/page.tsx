@@ -205,7 +205,7 @@ export default function StockPage({
                 return (
                   <div
                     key={label}
-                    className="flex items-center justify-between gap-1 px-2.5 py-2"
+                    className="flex items-center justify-between gap-1 px-2.5 py-1.5"
                     style={{
                       borderColor:       "var(--border)",
                       borderBottomWidth: isLastRow ? "0px" : "1px",
@@ -213,8 +213,8 @@ export default function StockPage({
                       borderStyle:       "solid",
                     }}
                   >
-                    <span className="text-[10px] shrink-0" style={{ color: "var(--muted)" }}>{label}</span>
-                    <span className="text-[10px] font-semibold font-mono-num text-right" style={{ color: "var(--text)" }}>{value}</span>
+                    <span className="text-[8px] shrink-0" style={{ color: "var(--muted)" }}>{label}</span>
+                    <span className="text-[8px] font-semibold font-mono-num text-right" style={{ color: "var(--text)" }}>{value}</span>
                   </div>
                 );
               })}
