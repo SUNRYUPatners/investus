@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { ChevronDown, RefreshCw } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { GURUS, type Guru } from "@/lib/holdings13f";
 
 const BADGE: Record<string, { label: string; color: string }> = {
@@ -19,72 +19,69 @@ function fmt(n: number) {
   return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
-function GuruCard({
-  guru,
-  prices,
-  loading,
-}: {
-  guru: Guru;
-  prices: PriceMap;
-  loading: boolean;
-}) {
-  const [open, setOpen] = useState(false);
+function GuruCard({ guru }: { guru: Guru }) {
+  const [open,    setOpen]    = useState(false);
+  const [prices,  setPrices]  = useState<PriceMap>({});
+  const [loading, setLoading] = useState(false);
+  const [fetched, setFetched] = useState(false);
+
+  const handleOpen = () => {
+    const next = !open;
+    setOpen(next);
+
+    // Fetch prices the first time the card is expanded
+    if (next && !fetched) {
+      setLoading(true);
+      setFetched(true);
+      const syms = guru.holdings.map((h) => h.symbol).join(",");
+      fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
+        .then((r) => r.json())
+        .then((data: PriceMap) => setPrices(data))
+        .catch(() => {})
+        .finally(() => setLoading(false));
+    }
+  };
 
   return (
     <div
       className="rounded-2xl border overflow-hidden"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
-      {/* Header — always visible */}
+      {/* ── Header ── */}
       <button
         className="w-full flex items-center gap-3 px-4 py-3.5 active:opacity-80 transition-opacity"
-        onClick={() => setOpen((v) => !v)}
+        onClick={handleOpen}
       >
-        {/* Avatar */}
         <div
           className="w-11 h-11 rounded-full flex items-center justify-center text-xl flex-shrink-0"
-          style={{
-            background: `${guru.color}18`,
-            border: `2px solid ${guru.color}44`,
-          }}
+          style={{ background: `${guru.color}18`, border: `2px solid ${guru.color}44` }}
         >
           {guru.emoji}
         </div>
 
         <div className="flex-1 text-left min-w-0">
-          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>
-            {guru.name}
-          </p>
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-            {guru.fund}
-          </p>
+          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{guru.name}</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>{guru.fund}</p>
         </div>
 
         <div className="text-right flex-shrink-0 mr-1">
-          <p className="text-xs font-semibold" style={{ color: guru.color }}>
-            {guru.aum}
-          </p>
+          <p className="text-xs font-semibold" style={{ color: guru.color }}>{guru.aum}</p>
           <div className="flex items-center justify-end gap-1 mt-0.5">
             <span className="text-[9px] px-1 py-0.5 rounded"
               style={{ background: `${BADGE[guru.disclosureType].color}18`, color: BADGE[guru.disclosureType].color }}>
               {BADGE[guru.disclosureType].label}
             </span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-              {guru.quarter}
-            </span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>{guru.quarter}</span>
           </div>
         </div>
 
         <ChevronDown
           className="w-4 h-4 flex-shrink-0 transition-transform"
-          style={{
-            color: "var(--muted)",
-            transform: open ? "rotate(180deg)" : "none",
-          }}
+          style={{ color: "var(--muted)", transform: open ? "rotate(180deg)" : "none" }}
         />
       </button>
 
-      {/* Holdings list */}
+      {/* ── Holdings list ── */}
       {open && (
         <div className="border-t" style={{ borderColor: "var(--border)" }}>
           {/* Column header */}
@@ -93,7 +90,7 @@ function GuruCard({
             style={{ color: "var(--muted)", background: "var(--bg)" }}
           >
             <span className="flex-1">종목</span>
-            <span className="w-16 text-right">비중</span>
+            <span className="w-14 text-right">비중</span>
             <span className="w-20 text-right">현재가</span>
             <span className="w-16 text-right">등락률</span>
           </div>
@@ -107,7 +104,9 @@ function GuruCard({
               <Link
                 key={h.symbol}
                 href={`/stock/${h.symbol}`}
-                className={`flex items-center px-4 py-2.5 active:opacity-70 transition-opacity ${i < guru.holdings.length - 1 ? "border-b" : ""}`}
+                className={`flex items-center px-4 py-2.5 active:opacity-70 transition-opacity ${
+                  i < guru.holdings.length - 1 ? "border-b" : ""
+                }`}
                 style={{ borderColor: "var(--border)", textDecoration: "none" }}
               >
                 {/* Symbol + name */}
@@ -128,12 +127,11 @@ function GuruCard({
                   </p>
                 </div>
 
-                {/* 포트폴리오 비중 */}
-                <div className="w-16 text-right">
+                {/* 비중 */}
+                <div className="w-14 text-right">
                   <p className="text-xs font-mono-num font-semibold" style={{ color: guru.color }}>
                     {h.portfolioPct.toFixed(1)}%
                   </p>
-                  {/* mini bar */}
                   <div className="h-0.5 rounded-full mt-0.5 ml-auto"
                     style={{
                       width: `${Math.min(100, (h.portfolioPct / guru.holdings[0].portfolioPct) * 100)}%`,
@@ -145,30 +143,60 @@ function GuruCard({
 
                 {/* 현재가 */}
                 <div className="w-20 text-right">
-                  {loading || !p ? (
-                    <div className="h-3 w-14 rounded ml-auto animate-pulse"
-                      style={{ background: "var(--border)" }} />
-                  ) : (
+                  {loading ? (
+                    <div className="h-3 w-14 rounded ml-auto animate-pulse" style={{ background: "var(--border)" }} />
+                  ) : p ? (
                     <p className="text-xs font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
                       {fmt(p.price)}
                     </p>
+                  ) : (
+                    <p className="text-xs font-mono-num" style={{ color: "var(--muted)" }}>—</p>
                   )}
                 </div>
 
                 {/* 등락률 */}
                 <div className="w-16 text-right">
-                  {loading || !p ? (
-                    <div className="h-3 w-10 rounded ml-auto animate-pulse"
-                      style={{ background: "var(--border)" }} />
-                  ) : (
+                  {loading ? (
+                    <div className="h-3 w-10 rounded ml-auto animate-pulse" style={{ background: "var(--border)" }} />
+                  ) : p ? (
                     <p className="text-[11px] font-mono-num font-semibold" style={{ color: clr }}>
                       {pos ? "+" : ""}{p.changePercent.toFixed(2)}%
                     </p>
+                  ) : (
+                    <p className="text-[11px] font-mono-num" style={{ color: "var(--muted)" }}>—</p>
                   )}
                 </div>
               </Link>
             );
           })}
+
+          {/* Refresh row */}
+          <div
+            className="flex items-center justify-between px-4 py-2 border-t"
+            style={{ borderColor: "var(--border)", background: "var(--bg)" }}
+          >
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              Finnhub 실시간 · {guru.quarter} 공시 기준
+            </span>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setLoading(true);
+                const syms = guru.holdings.map((h) => h.symbol).join(",");
+                fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
+                  .then((r) => r.json())
+                  .then((data: PriceMap) => setPrices(data))
+                  .catch(() => {})
+                  .finally(() => setLoading(false));
+              }}
+              disabled={loading}
+              className="text-[10px] font-semibold px-2 py-0.5 rounded disabled:opacity-40 active:opacity-70 transition-opacity"
+              style={{ color: "var(--mint)", background: "rgba(0,229,160,0.08)" }}
+            >
+              {loading ? "로딩 중..." : "새로고침"}
+            </button>
+          </div>
         </div>
       )}
     </div>
@@ -176,70 +204,35 @@ function GuruCard({
 }
 
 export function GuruHoldings() {
-  const [prices,  setPrices]  = useState<PriceMap>({});
-  const [loading, setLoading] = useState(true);
-  const [lastAt,  setLastAt]  = useState("");
-
-  const fetchPrices = () => {
-    setLoading(true);
-    fetch("/api/guru-prices")
-      .then((r) => r.json())
-      .then((data) => {
-        setPrices(data);
-        setLastAt(new Date().toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" }));
-      })
-      .catch(() => {})
-      .finally(() => setLoading(false));
-  };
-
-  useEffect(() => { fetchPrices(); }, []);
-
   return (
     <div>
       {/* Section header */}
       <div className="flex items-center justify-between mb-3">
         <div>
-          <h2
-            className="text-xs font-semibold tracking-widest uppercase font-syne"
-            style={{ color: "var(--muted)" }}
-          >
+          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
             투자 대가 13F
           </h2>
           <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
-            보유 종목 · 가격 실시간
+            클릭하면 보유 종목 · 실시간 가격 확인
           </p>
         </div>
-        <button
-          onClick={fetchPrices}
-          disabled={loading}
-          className="flex items-center gap-1 text-[10px] px-2 py-1 rounded-lg border disabled:opacity-40 transition-opacity"
-          style={{ borderColor: "var(--border)", color: "var(--muted)" }}
-        >
-          <RefreshCw className={`w-3 h-3 ${loading ? "animate-spin" : ""}`} />
-          {lastAt || "업데이트"}
-        </button>
       </div>
 
-      {/* Note */}
+      {/* Notice */}
       <div
         className="flex items-center gap-2 rounded-xl px-3 py-2 mb-3 border"
         style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.12)" }}
       >
         <span className="text-xs">📋</span>
         <p className="text-[10px] leading-relaxed" style={{ color: "var(--muted)" }}>
-          SEC 13F·STOCK Act 공시 기준 · 분기별 업데이트 · 현재가 실시간
+          SEC 13F·STOCK Act 공시 기준 · 분기별 업데이트 · 현재가 Finnhub 실시간
         </p>
       </div>
 
       {/* Guru cards */}
       <div className="flex flex-col gap-3">
         {GURUS.map((guru) => (
-          <GuruCard
-            key={guru.id}
-            guru={guru}
-            prices={prices}
-            loading={loading}
-          />
+          <GuruCard key={guru.id} guru={guru} />
         ))}
       </div>
     </div>
