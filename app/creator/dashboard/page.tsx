@@ -92,13 +92,40 @@ export default function CreatorDashboardPage() {
     setEBio(c.bio);
     setEAvatar(c.avatar);
     setETags(c.tags);
+
+    // Sync approval status from server
+    if (c.status !== "approved") {
+      fetch(`/api/admin/verifications?phone=${encodeURIComponent(user.phone)}`)
+        .then((r) => r.json())
+        .then(({ status }) => {
+          if (status === "approved") {
+            const updated = { ...c, status: "approved" as const };
+            saveCreator(updated);
+            setCreator(updated);
+          }
+        })
+        .catch(() => {});
+    }
   }, [user, router]);
 
   if (!creator || !user) return null;
 
   /* ── Actions ── */
-  const handleVerify = () => {
-    const updated = { ...creator, status: "approved" as const };
+  const handleVerify = async () => {
+    // Submit to server as pending (admin must approve)
+    await fetch("/api/admin/verifications", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        phone: user.phone,
+        nickname: creator.nickname,
+        avatar: creator.avatar,
+        bio: creator.bio,
+      }),
+    }).catch(() => {});
+
+    // Locally mark pending (not auto-approved)
+    const updated = { ...creator, status: "pending" as const };
     saveCreator(updated);
     setCreator(updated);
     setShowVerify(false);
@@ -231,7 +258,12 @@ export default function CreatorDashboardPage() {
               </div>
             </div>
 
-            {creator.status !== "approved" ? (
+            {creator.status === "pending" ? (
+              <div className="w-full py-3 rounded-xl text-sm font-bold text-center"
+                style={{ background: "rgba(251,191,36,0.12)", color: "#fbbf24" }}>
+                ⏳ 심사 중 — 승인 대기 중
+              </div>
+            ) : creator.status !== "approved" ? (
               <button onClick={() => setShowVerify(true)}
                 className="w-full py-3 rounded-xl text-sm font-bold text-black active:opacity-80 transition-opacity"
                 style={{ background: "var(--mint)" }}>
@@ -252,17 +284,33 @@ export default function CreatorDashboardPage() {
           <div className="rounded-2xl p-4 mb-4 border"
             style={{ background: "rgba(251,191,36,0.04)", borderColor: "rgba(251,191,36,0.2)" }}>
             <div className="flex items-start gap-3">
-              <span className="text-xl flex-shrink-0">⚠️</span>
+              <span className="text-xl flex-shrink-0">{creator.status === "pending" ? "⏳" : "⚠️"}</span>
               <div>
-                <p className="text-xs font-semibold mb-1" style={{ color: "#fbbf24" }}>인증 후 콘텐츠를 올릴 수 있어요</p>
-                <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                  HTS/MTS 보유 화면 캡쳐를 업로드하면 즉시 활성화됩니다.
-                </p>
-                <button onClick={() => setShowVerify(true)}
-                  className="mt-2 text-[11px] font-bold underline"
-                  style={{ color: "var(--mint)" }}>
-                  지금 인증하기 →
-                </button>
+                {creator.status === "pending" ? (
+                  <>
+                    <p className="text-xs font-semibold mb-1" style={{ color: "#fbbf24" }}>인증 심사 중</p>
+                    <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                      캡쳐 업로드가 접수되었습니다. 관리자 검토 후 1~2일 내 승인됩니다.
+                    </p>
+                    <button onClick={() => setShowVerify(true)}
+                      className="mt-2 text-[11px] font-bold underline"
+                      style={{ color: "var(--muted)" }}>
+                      캡쳐 재업로드 →
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-xs font-semibold mb-1" style={{ color: "#fbbf24" }}>인증 후 콘텐츠를 올릴 수 있어요</p>
+                    <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                      HTS/MTS 보유 화면 캡쳐를 업로드하면 관리자 검토 후 승인됩니다.
+                    </p>
+                    <button onClick={() => setShowVerify(true)}
+                      className="mt-2 text-[11px] font-bold underline"
+                      style={{ color: "var(--mint)" }}>
+                      지금 인증하기 →
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>
