@@ -20,10 +20,8 @@ function bg(pct: number) {
   return pct >= 0 ? `rgba(0,229,160,${a})` : `rgba(255,77,109,${a})`;
 }
 
-function textColor(pct: number) {
-  const t = Math.min(Math.abs(pct) / 3, 1);
-  return pct >= 0 ? "#00e5a0" : "#ff4d6d";
-}
+const TILE_TEXT   = "rgba(255,255,255,0.95)";
+const TILE_SHADOW = "0 1px 3px rgba(0,0,0,0.7), 0 0 6px rgba(0,0,0,0.4)";
 
 const LAYOUT: { rowH: number; sections: { key: string; flex: number; maxStocks: number }[] }[] = [
   {
@@ -150,9 +148,7 @@ function SectorBlock({
 
       {/* Individual stock tiles */}
       <div className="flex overflow-hidden" style={{ height: tileH, gap: "1px" }}>
-        {visibleStocks.map((s) => {
-          const tc = textColor(s.changePercent);
-          return (
+        {visibleStocks.map((s) => (
             <div
               key={s.symbol}
               className="flex flex-col items-start justify-between p-1.5 overflow-hidden select-none cursor-pointer transition-opacity active:opacity-80"
@@ -167,16 +163,16 @@ function SectorBlock({
               }}
             >
               <p
-                className="text-[10px] font-semibold leading-tight truncate w-full"
-                style={{ color: tc }}
+                className="text-[8px] font-semibold leading-tight truncate w-full"
+                style={{ color: TILE_TEXT, textShadow: TILE_SHADOW }}
               >
                 {s.symbol}
               </p>
               <div className="w-full">
                 {s.price != null && (
                   <p
-                    className="text-[9px] font-mono-num tabular-nums leading-none opacity-80 truncate"
-                    style={{ color: tc }}
+                    className="text-[7px] font-mono-num tabular-nums leading-none truncate"
+                    style={{ color: TILE_TEXT, textShadow: TILE_SHADOW, opacity: 0.85 }}
                   >
                     ${s.price >= 1000
                       ? s.price.toLocaleString("en-US", { maximumFractionDigits: 0 })
@@ -184,15 +180,14 @@ function SectorBlock({
                   </p>
                 )}
                 <p
-                  className="text-[11px] font-bold font-mono-num tabular-nums leading-none mt-0.5"
-                  style={{ color: tc }}
+                  className="text-[9px] font-bold font-mono-num tabular-nums leading-none mt-0.5"
+                  style={{ color: TILE_TEXT, textShadow: TILE_SHADOW }}
                 >
                   {s.changePercent >= 0 ? "+" : ""}{s.changePercent.toFixed(2)}%
                 </p>
               </div>
             </div>
-          );
-        })}
+          ))}
       </div>
     </div>
   );

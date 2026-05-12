@@ -497,11 +497,14 @@ export async function getNews(): Promise<NewsItem[]> {
     const { fetchFinnhubMarketNews } = await import("./finnhub");
     const items = await fetchFinnhubMarketNews();
     if (items.length > 0) {
-      return items.slice(0, 20).map((n, i) => {
+      const raw = items.slice(0, 20);
+      const { translateHeadlines } = await import("./translate");
+      const titles = await translateHeadlines(raw.map((n) => n.headline));
+      return raw.map((n, i) => {
         const { category, categoryColor } = detectCategory(n.headline);
         return {
           id:            n.id || i,
-          title:         n.headline,
+          title:         titles[i] ?? n.headline,
           summary:       n.summary || "",
           source:        n.source,
           time:          relTimeKo(n.datetime),

@@ -10,10 +10,9 @@ function bg(pct: number) {
   const a = 0.18 + t * 0.64;
   return pct >= 0 ? `rgba(0,229,160,${a})` : `rgba(255,77,109,${a})`;
 }
-function textColor(pct: number) {
-  const t = Math.min(Math.abs(pct) / 3, 1);
-  return pct >= 0 ? "#00e5a0" : "#ff4d6d";
-}
+// White text looks best on coloured heatmap tiles; dark shadow keeps it legible at all intensities
+const TILE_TEXT   = "rgba(255,255,255,0.95)";
+const TILE_SHADOW = "0 1px 3px rgba(0,0,0,0.7), 0 0 6px rgba(0,0,0,0.4)";
 
 // ── Treemap layout config ───────────────────────────────────────────────────
 const ROWS: {
@@ -134,7 +133,6 @@ export function FuturesHeatmap({ items }: Props) {
                   const item = bySymbol[sym];
                   if (!item) return null;
                   const pos = item.changePercent >= 0;
-                  const tc = textColor(item.changePercent);
                   const displayName = SHORT[sym] ?? item.name;
 
                   return (
@@ -156,15 +154,15 @@ export function FuturesHeatmap({ items }: Props) {
                       {/* Name + MOCK badge */}
                       <div className="w-full flex items-start justify-between gap-0.5">
                         <p
-                          className="text-[10px] font-semibold leading-tight break-words flex-1"
-                          style={{ color: tc, wordBreak: "break-word" }}
+                          className="text-[8px] font-semibold leading-tight break-words flex-1"
+                          style={{ color: TILE_TEXT, textShadow: TILE_SHADOW, wordBreak: "break-word" }}
                         >
                           {displayName}
                         </p>
                         {item.isMock && (
                           <span
-                            className="text-[7px] font-bold leading-none px-0.5 rounded flex-shrink-0 mt-0.5"
-                            style={{ background: "rgba(0,0,0,0.35)", color: tc, opacity: 0.7 }}
+                            className="text-[6px] font-bold leading-none px-0.5 rounded flex-shrink-0 mt-0.5"
+                            style={{ background: "rgba(0,0,0,0.4)", color: TILE_TEXT, opacity: 0.7 }}
                           >
                             MOCK
                           </span>
@@ -174,14 +172,14 @@ export function FuturesHeatmap({ items }: Props) {
                       {/* Bottom: change + price */}
                       <div className="w-full">
                         <p
-                          className="text-[13px] font-bold font-mono-num tabular-nums leading-none"
-                          style={{ color: tc }}
+                          className="text-[11px] font-bold font-mono-num tabular-nums leading-none"
+                          style={{ color: TILE_TEXT, textShadow: TILE_SHADOW }}
                         >
                           {pos ? "+" : ""}{item.changePercent.toFixed(2)}%
                         </p>
                         <p
-                          className="text-[9px] font-mono-num tabular-nums leading-none mt-0.5 opacity-70 truncate"
-                          style={{ color: tc }}
+                          className="text-[7px] font-mono-num tabular-nums leading-none mt-0.5 truncate"
+                          style={{ color: TILE_TEXT, textShadow: TILE_SHADOW, opacity: 0.85 }}
                         >
                           {item.price < 10
                             ? item.price.toFixed(3)

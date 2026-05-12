@@ -13,20 +13,10 @@ export async function GET(req: NextRequest) {
 
   const items = await fetchFinnhubCompanyNews(symbol, fmt(fromDate), fmt(toDate));
 
-  const news = items
-    .filter((n) => n.headline && n.url)
-    .slice(0, 7)
-    .map((n) => ({
-      uuid:                String(n.id),
-      title:               n.headline,
-      publisher:           n.source,
-      link:                n.url,
-      providerPublishTime: n.datetime,
-      thumbnail:           n.image || null,
-    }));
+  const raw = items.filter((n) => n.headline && n.url).slice(0, 7);
 
-  // Fallback: try Yahoo Finance if Finnhub returned nothing (no API key)
-  if (news.length === 0) {
+  // Fallback: try Yahoo Finance if Finnhub returned nothing
+  if (raw.length === 0) {
     try {
       const url =
         `https://query1.finance.yahoo.com/v1/finance/search` +
@@ -39,23 +29,34 @@ export async function GET(req: NextRequest) {
       });
       if (res.ok) {
         const json = await res.json();
-        const fallback = ((json?.news ?? []) as Record<string, unknown>[])
-          .filter((n) => n.type === "STORY")
-          .slice(0, 7)
-          .map((n) => ({
-            uuid:                String(n.uuid),
-            title:               n.title,
-            publisher:           n.publisher,
-            link:                n.link,
-            providerPublishTime: n.providerPublishTime,
-            thumbnail:
-              (n.thumbnail as { resolutions?: { url: string }[] } | undefined)
-                ?.resolutions?.[0]?.url ?? null,
-          }));
-        return NextResponse.json(fallback);
+        const yhRaw = ((json?.news ?? []) as Record<string, unknown>[])
+          .filter((n) => n.type === "STORY").slice(0, 7);
+        const yhTitles = yhRaw.map((n) => String(n.title ?? ""));
+        const { translateHeadlines } = await import("@/lib/translate");
+        const translated = await translateHeadlines(yhTitles);
+        return NextResponse.json(yhRaw.map((n, i) => ({
+          uuid:                String(n.uuid),
+          title:               translated[i] ?? yhTitles[i],
+          publisher:           n.publisher,
+          link:                n.link,
+          providerPublishTime: n.providerPublishTime,
+          thumbnail:
+            (n.thumbnail as { resolutions?: { url: string }[] } | undefined)
+              ?.resolutions?.[0]?.url ?? null,
+        })));
       }
     } catch { /* ignore */ }
+    return NextResponse.json([]);
   }
 
-  return NextResponse.json(news);
+  const { translateHeadlines } = await import("@/lib/translate");
+  const titles = await translateHeadlines(raw.map((n) => n.headline));
+  return NextResponse.json(raw.map((n, i) => ({
+    uuid:                String(n.id),
+    title:               titles[i] ?? n.headline,
+    publisher:           n.source,
+    link:                n.url,
+    providerPublishTime: n.datetime,
+    thumbnail:           n.image || null,
+  })));
 }

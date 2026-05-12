@@ -7,10 +7,6 @@ import {
 
 export const revalidate = 60;
 
-const UA =
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
-  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
-
 // ── Synthetic sparkline ───────────────────────────────────────────────────
 
 function syntheticSparkline(price: number, changePercent: number): number[] {
@@ -34,26 +30,37 @@ async function getUSDKRW(): Promise<number | null> {
   } catch { return null; }
 }
 
-type IndexLive = { price: number; change: number; changePercent: number };
+type ETFQuote = { price: number; change: number; changePercent: number };
 
-// ── Twelve Data ETF batch (works on Vercel; free tier 8 req/min) ──────────
-// SPY≈SPX/10.03  QQQ≈COMP/36.83  DIA≈DJI/100  IWM≈RTY/10.05  GLD≈GC/10
-const ETF_SYMS = ["SPY", "QQQ", "DIA", "IWM", "GLD"] as const;
+// ── Single Twelve Data batch: indices + all commodity proxies ─────────────
+//
+// Index ETFs (scale-factor → absolute index level):
+//   SPY × 10.03 ≈ SPX   QQQ × 36.83 ≈ COMP   DIA × 100 ≈ DJI
+//   IWM × 10.05 ≈ RTY   GLD × 10 ≈ GC (gold)
+//
+// Forex/FX futures (1:1 or inverted):
+//   EUR/USD → 6E    USD/JPY → 6J
+//
+// Commodity ETF proxies (live change%, mock absolute price):
+//   USO→CL   UNG→NG   SLV→SI   COPX→HG
+//   WEAT→ZW  CORN→ZC  SOYB→ZS
+//   TLT→ZB   IEF→ZN
 
-// ETF → spot index derivation (factor = index / etf_price, confirmed live)
-const ETF_INDEX: Record<string, { sym: string; factor: number }> = {
-  SPY: { sym: "SPX",  factor: 10.03 },
-  QQQ: { sym: "COMP", factor: 36.83 },
-  DIA: { sym: "DJI",  factor: 100   },
-};
+const ALL_ETF_SYMS = [
+  "SPY", "QQQ", "DIA", "IWM", "GLD",
+  "EUR/USD", "USD/JPY",
+  "USO", "UNG", "SLV", "COPX",
+  "WEAT", "CORN", "SOYB",
+  "TLT", "IEF",
+].join(",");
 
-async function fetchTwelveDataETFBatch(): Promise<Map<string, IndexLive>> {
-  const out = new Map<string, IndexLive>();
+async function fetchTwelveDataBatch(): Promise<Map<string, ETFQuote>> {
+  const out = new Map<string, ETFQuote>();
   const apiKey = process.env.TWELVEDATA_API_KEY;
   if (!apiKey) return out;
   try {
     const res = await fetch(
-      `https://api.twelvedata.com/quote?symbol=${ETF_SYMS.join(",")}&apikey=${apiKey}`,
+      `https://api.twelvedata.com/quote?symbol=${ALL_ETF_SYMS}&apikey=${apiKey}`,
     );
     if (!res.ok) return out;
     const data = await res.json() as Record<string, {
@@ -74,30 +81,24 @@ async function fetchTwelveDataETFBatch(): Promise<Map<string, IndexLive>> {
   return out;
 }
 
-// ── Yahoo Finance for commodity/FX futures (fallback; blocked on Vercel) ─
-const YAHOO_FUTURES: Record<string, string> = {
-  CL: "CL=F", NG: "NG=F", RB: "RB=F",
-  SI: "SI=F", HG: "HG=F",
-  ZN: "ZN=F", ZB: "ZB=F",
-  "6E": "6E=F", "6J": "6J=F",
-  ZC: "ZC=F", ZW: "ZW=F", ZS: "ZS=F",
+// ETF → index: price = ETF × factor
+const ETF_INDEX: Record<string, { sym: string; factor: number }> = {
+  SPY: { sym: "SPX",  factor: 10.03 },
+  QQQ: { sym: "COMP", factor: 36.83 },
+  DIA: { sym: "DJI",  factor: 100   },
 };
 
-async function fetchYahooFutureQuote(yahooCom: string): Promise<IndexLive | null> {
-  try {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooCom)}?interval=1d&range=2d&includePrePost=false`;
-    const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
-    if (!res.ok) return null;
-    const json  = await res.json();
-    const meta  = json?.chart?.result?.[0]?.meta;
-    if (!meta?.regularMarketPrice) return null;
-    const price = meta.regularMarketPrice as number;
-    const prev  = (meta.chartPreviousClose ?? 0) as number;
-    const change    = prev > 0 ? price - prev : 0;
-    const changePct = prev > 0 ? (change / prev) * 100 : 0;
-    return { price, change, changePercent: changePct };
-  } catch { return null; }
-}
+// ETF → futures: only change% is live; price derived from mock × (1 + chg%)
+const ETF_FUTURE_CHG: Record<string, string> = {
+  USO:  "CL",  UNG:  "NG",  SLV:  "SI",  COPX: "HG",
+  WEAT: "ZW",  CORN: "ZC",  SOYB: "ZS",
+  TLT:  "ZB",  IEF:  "ZN",
+};
+
+// Index futures → reuse derived index data
+const FUTURES_FROM_INDEX: Record<string, string> = {
+  ES: "SPX", NQ: "COMP", YM: "DJI",
+};
 
 // ── Crypto via Finnhub (CoinGecko fallback) ───────────────────────────────
 
@@ -106,45 +107,31 @@ const CRYPTO_FH: Record<string, string> = {
   ETH: "BINANCE:ETHUSDT",
 };
 
-async function fetchCoinGecko(): Promise<Map<string, IndexLive>> {
-  const out = new Map<string, IndexLive>();
+async function fetchCoinGecko(): Promise<Map<string, ETFQuote>> {
+  const out = new Map<string, ETFQuote>();
   try {
     const res = await fetch(
       "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true",
-      { headers: { "User-Agent": UA } }
     );
     if (!res.ok) return out;
     const d = await res.json();
-    if (d.bitcoin?.usd)  out.set("BTC", { price: d.bitcoin.usd,  change: 0, changePercent: d.bitcoin.usd_24h_change  ?? 0 });
-    if (d.ethereum?.usd) out.set("ETH", { price: d.ethereum.usd, change: 0, changePercent: d.ethereum.usd_24h_change ?? 0 });
+    if (d.bitcoin?.usd)
+      out.set("BTC", { price: d.bitcoin.usd,  change: 0, changePercent: d.bitcoin.usd_24h_change  ?? 0 });
+    if (d.ethereum?.usd)
+      out.set("ETH", { price: d.ethereum.usd, change: 0, changePercent: d.ethereum.usd_24h_change ?? 0 });
   } catch { /* ignore */ }
   return out;
 }
 
-// Index futures → reuse 위에서 가져온 지수 데이터 (중복 호출 없음)
-const FUTURES_FROM_INDEX: Record<string, string> = {
-  ES: "SPX", NQ: "COMP", YM: "DJI",
-};
-
 export async function GET() {
   const token = process.env.FINNHUB_API_KEY ?? "";
 
-  // ── 병렬 조회 ─────────────────────────────────────────────────────────
-  const stockSymbols  = mockQuotes.map((q) => q.symbol);
-  const futureSymbols = Object.keys(YAHOO_FUTURES);
-  const cryptoFHSyms  = Object.values(CRYPTO_FH);
+  const stockSymbols = mockQuotes.map((q) => q.symbol);
+  const cryptoFHSyms = Object.values(CRYPTO_FH);
 
-  const [
-    stockMap,
-    etfMap,
-    futuresLiveArr,
-    cryptoResults,
-    cgMap,
-    krwRate,
-  ] = await Promise.all([
+  const [stockMap, etfMap, cryptoResults, cgMap, krwRate] = await Promise.all([
     fetchFinnhubBatch(stockSymbols),
-    fetchTwelveDataETFBatch(),
-    Promise.allSettled(futureSymbols.map((s) => fetchYahooFutureQuote(YAHOO_FUTURES[s]))),
+    fetchTwelveDataBatch(),
     token
       ? Promise.allSettled(cryptoFHSyms.map((s) => fetchFinnhubRawQuote(s)))
       : Promise.resolve(cryptoFHSyms.map(() => ({ status: "fulfilled", value: null } as PromiseFulfilledResult<null>))),
@@ -152,8 +139,8 @@ export async function GET() {
     getUSDKRW(),
   ]);
 
-  // Build indexLive map from ETF proxies
-  const indexLive = new Map<string, IndexLive>();
+  // Build indexLive map from ETF scale factors
+  const indexLive = new Map<string, ETFQuote>();
   for (const [etfSym, { sym: idxSym, factor }] of Object.entries(ETF_INDEX)) {
     const etf = etfMap.get(etfSym);
     if (etf) {
@@ -164,13 +151,6 @@ export async function GET() {
       });
     }
   }
-
-  // symbol → live commodity futures data (Yahoo; works locally, mock on Vercel)
-  const futureLive = new Map<string, IndexLive>();
-  futureSymbols.forEach((sym, i) => {
-    const r = futuresLiveArr[i];
-    if (r.status === "fulfilled" && r.value) futureLive.set(sym, r.value);
-  });
 
   // crypto symbol → raw quote (Finnhub)
   const cryptoRaw = new Map<string, FinnhubRawQuote>();
@@ -210,8 +190,15 @@ export async function GET() {
   });
 
   // ── 선물 ─────────────────────────────────────────────────────────────
+  // Build future→ETF change% lookup
+  const futureChgMap = new Map<string, number>();
+  for (const [etfSym, futureSym] of Object.entries(ETF_FUTURE_CHG)) {
+    const etf = etfMap.get(etfSym);
+    if (etf) futureChgMap.set(futureSym, etf.changePercent);
+  }
+
   const futures: FutureItem[] = mockFutures.map((f) => {
-    // 1) ES/NQ/YM → 지수 데이터 재사용 (ETF 프록시에서 파생)
+    // 1) ES/NQ/YM → ETF-derived index level (accurate price + change%)
     const idxKey = FUTURES_FROM_INDEX[f.symbol];
     if (idxKey) {
       const live = indexLive.get(idxKey);
@@ -230,11 +217,28 @@ export async function GET() {
       if (gld) return { ...f, price: gld.price * 10, change: gld.change * 10, changePercent: gld.changePercent, isMock: false };
     }
 
-    // 4) 원자재/채권/외환 → Yahoo Finance (로컬 전용, Vercel에선 mock)
-    const yhLive = futureLive.get(f.symbol);
-    if (yhLive) return { ...f, price: yhLive.price, change: yhLive.change, changePercent: yhLive.changePercent, isMock: false };
+    // 4) 6E (EUR/USD), 6J (USD/JPY) — direct forex rate from Twelve Data
+    if (f.symbol === "6E") {
+      const eur = etfMap.get("EUR/USD");
+      if (eur) return { ...f, price: eur.price, change: eur.change, changePercent: eur.changePercent, isMock: false };
+    }
+    if (f.symbol === "6J") {
+      const jpy = etfMap.get("USD/JPY");
+      if (jpy) return { ...f, price: jpy.price, change: jpy.change, changePercent: jpy.changePercent, isMock: false };
+    }
 
-    // 5) 크립토 — Finnhub primary, CoinGecko fallback
+    // 5) Commodity ETF proxies — live change%, mock absolute price
+    const liveChg = futureChgMap.get(f.symbol);
+    if (liveChg !== undefined) {
+      return {
+        ...f,
+        changePercent: liveChg,
+        change:        f.price * liveChg / 100,
+        isMock:        false,
+      };
+    }
+
+    // 6) 크립토 — Finnhub primary, CoinGecko fallback
     if (f.symbol === "BTC" || f.symbol === "ETH") {
       const fhSym = CRYPTO_FH[f.symbol];
       const fhQ   = fhSym ? cryptoRaw.get(fhSym) : undefined;
