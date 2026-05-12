@@ -126,13 +126,18 @@ export async function fetchFinnhubMetrics(symbol: string): Promise<FinnhubMetric
     const d = await res.json();
     const m = d.metric ?? {};
     return {
-      week52High:    m["52WeekHigh"]                ?? null,
-      week52Low:     m["52WeekLow"]                 ?? null,
-      pe:            m.peBasicExclExtraTTM          ?? null,
-      marketCap:     m.marketCapitalization         ?? null,
-      eps:           m.epsBasicExclExtraAnnual      ?? null,
-      beta:          m.beta                         ?? null,
-      dividendYield: m.dividendYieldIndicatedAnnual ?? null,
+      week52High:    m["52WeekHigh"]                   ?? null,
+      week52Low:     m["52WeekLow"]                    ?? null,
+      pe:            m.peBasicExclExtraTTM             ?? m.peAnnual             ?? null,
+      marketCap:     m.marketCapitalization            ?? null,
+      eps:           m.epsBasicExclExtraAnnual         ?? m.epsAnnual            ?? null,
+      beta:          m.beta                            ?? null,
+      // Finnhub returns dividendYield as %-unit (e.g. 0.36 = 0.36%); normalize to ratio
+      dividendYield: m.dividendYieldIndicatedAnnual != null
+        ? m.dividendYieldIndicatedAnnual / 100
+        : m.currentDividendYieldTTM != null
+          ? m.currentDividendYieldTTM / 100
+          : null,
     };
   } catch {
     return null;

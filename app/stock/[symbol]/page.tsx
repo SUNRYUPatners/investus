@@ -195,27 +195,31 @@ export default function StockPage({
             className="mx-4 rounded-2xl border overflow-hidden mb-4"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
           >
-            <div className="px-3 py-2 border-b" style={{ borderColor: "var(--border)" }}>
-              <h2 className="text-[10px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+            <div className="px-3 py-1.5 border-b" style={{ borderColor: "var(--border)" }}>
+              <h2 className="text-[9px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
                 주요 지표
               </h2>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-3">
               {stats.map(([label, value], i) => {
-                const isLastRow = i >= stats.length - 2;
-                const isOdd     = i % 2 === 0;
+                const cols    = 3;
+                const total   = stats.length;
+                const lastRowStart = total - (total % cols || cols);
+                const isLastRow    = i >= lastRowStart;
+                const colIdx       = i % cols;
                 return (
                   <div
                     key={label}
-                    className="flex items-center justify-between px-3 py-1.5 border-b"
+                    className="flex flex-col px-2.5 py-1"
                     style={{
-                      borderColor: "var(--border)",
+                      borderColor:       "var(--border)",
                       borderBottomWidth: isLastRow ? "0px" : "1px",
-                      borderRightWidth:  isOdd ? "1px" : "0px",
+                      borderRightWidth:  colIdx < cols - 1 ? "1px" : "0px",
+                      borderStyle:       "solid",
                     }}
                   >
-                    <span className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</span>
-                    <span className="text-[10px] font-semibold font-mono-num" style={{ color: "var(--text)" }}>{value}</span>
+                    <span className="text-[8.5px] leading-tight" style={{ color: "var(--muted)" }}>{label}</span>
+                    <span className="text-[10px] font-semibold font-mono-num leading-tight mt-0.5" style={{ color: "var(--text)" }}>{value}</span>
                   </div>
                 );
               })}
