@@ -41,7 +41,7 @@ export const SEED_REPORTS: Report[] = [
     subject:       "🇺🇸 트럼프 방중 (미중무역)",
     date:          "2026-05-13",
     isPinned:      true,
-    images:        ["/reports/r14_c.png"],
+    images:        ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Donald_Trump_and_Xi_Jinping_at_G20_in_Argentina_01_dec_2018.jpg/800px-Donald_Trump_and_Xi_Jinping_at_G20_in_Argentina_01_dec_2018.jpg"],
   },
   {
     id:            "seed-002",
@@ -52,7 +52,7 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "purple",
     subject:       "📈 CPI (인플레·금리)",
     date:          "2026-05-13",
-    images:        ["/reports/r11_c.png"],
+    images:        ["https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80"],
   },
   {
     id:            "seed-003",
@@ -63,7 +63,7 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "blue",
     subject:       "🟢 NVIDIA (AI반도체)",
     date:          "2026-05-13",
-    images:        ["/reports/r1_c.png"],
+    images:        ["https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&q=80"],
   },
   {
     id:            "seed-004",
@@ -74,7 +74,7 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "blue",
     subject:       "🏎️ 테슬라 (AI·반도체)",
     date:          "2026-05-13",
-    images:        ["/reports/r19_c.png", "/reports/r18_c.png"],
+    images:        ["https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&q=80"],
   },
   {
     id:            "seed-005",
@@ -85,7 +85,7 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "orange",
     subject:       "🌐 구글·SpaceX·Anthropic (우주·AI)",
     date:          "2026-05-13",
-    images:        ["/reports/r12_c.png"],
+    images:        ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"],
   },
   {
     id:            "seed-006",
@@ -96,7 +96,7 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "orange",
     subject:       "🚀 SpaceX·Rocket Lab (우주)",
     date:          "2026-05-13",
-    images:        ["/reports/r17_c.png", "/reports/r7_c.png"],
+    images:        ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Falcon_9_first_stage_landing_on_OCISLY_%28cropped%29.jpg/800px-Falcon_9_first_stage_landing_on_OCISLY_%28cropped%29.jpg"],
   },
   {
     id:            "seed-007",
@@ -107,7 +107,7 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "blue",
     subject:       "🏎️ 테슬라 (FSD·자율주행)",
     date:          "2026-05-13",
-    images:        ["/reports/r16_c.png"],
+    images:        ["https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"],
   },
   {
     id:            "seed-008",
@@ -118,7 +118,7 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "blue",
     subject:       "🍎 애플 (웨어러블·AI)",
     date:          "2026-05-13",
-    images:        [],
+    images:        ["https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=800&q=80"],
   },
   {
     id:            "seed-009",
@@ -129,7 +129,7 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "orange",
     subject:       "₿ 암호화폐 (CLARITY Act)",
     date:          "2026-05-13",
-    images:        ["/reports/r13_c.png"],
+    images:        ["https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800&q=80"],
   },
   {
     id:            "seed-010",
@@ -140,6 +140,6 @@ export const SEED_REPORTS: Report[] = [
     categoryColor: "mint",
     subject:       "🛸 Google·SpaceX (우주·AI인프라)",
     date:          "2026-05-13",
-    images:        ["/reports/r12_c.png", "/reports/r10_c.png"],
+    images:        ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"],
   },
 ];

@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { mockQuotes } from "@/lib/api";
 import { toYahoo } from "@/lib/symbolMap";
 import {
   fetchFinnhubRawQuote,
@@ -10,35 +9,6 @@ import {
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
-
-// ── Mock fallback ─────────────────────────────────────────────────────────
-
-function mockDetail(symbol: string) {
-  const q = mockQuotes.find((m) => m.symbol === symbol);
-  if (!q) return null;
-  return {
-    symbol,
-    name:          q.name,
-    exchange:      "NASDAQ",
-    currency:      "USD",
-    price:         q.price,
-    change:        q.change,
-    changePercent: q.changePercent,
-    open:          q.price - q.change * 0.6,
-    high:          q.price * 1.008,
-    low:           q.price * 0.992,
-    volume:        null,
-    pe:            null,
-    marketCap:     null,
-    week52High:    q.price * 1.18,
-    week52Low:     q.price * 0.78,
-    avgVolume:     null,
-    dividendYield: null,
-    beta:          null,
-    eps:           null,
-    _mock:         true,
-  };
-}
 
 // ── Yahoo Finance v8 fallback ─────────────────────────────────────────────
 
@@ -130,8 +100,6 @@ export async function GET(req: NextRequest) {
     ]);
 
     if (!v8) {
-      const mock = mockDetail(rawSymbol);
-      if (mock) return NextResponse.json(mock);
       return NextResponse.json({ error: "not found" }, { status: 404 });
     }
 
@@ -162,8 +130,6 @@ export async function GET(req: NextRequest) {
       eps:           v7?.epsTrailingTwelveMonths ?? null,
     });
   } catch {
-    const mock = mockDetail(rawSymbol);
-    if (mock) return NextResponse.json(mock);
-    return NextResponse.json({ error: "not found" }, { status: 404 });
+    return NextResponse.json({ error: "fetch failed" }, { status: 503 });
   }
 }

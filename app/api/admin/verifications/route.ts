@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSupabase } from "@/lib/supabase";
 
-const ADMIN_TOKEN = process.env.ADMIN_TOKEN ?? "investus2026";
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN ?? "investustjsltjsl!99";
 
 function getAdminToken(req: NextRequest): string | null {
   // Authorization: Bearer <token>  OR  ?token= (legacy, deprecated)

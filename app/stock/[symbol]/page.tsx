@@ -72,16 +72,22 @@ export default function StockPage({
   const { symbol } = use(params);
   const upper      = symbol.toUpperCase();
 
-  const [detail, setDetail] = useState<Detail | null>(null);
-  const [news,   setNews]   = useState<NewsItem[]>([]);
+  const [detail, setDetail]           = useState<Detail | null>(null);
+  const [news,   setNews]             = useState<NewsItem[]>([]);
   const [detailLoading, setDetailLoading] = useState(true);
+  const [detailError, setDetailError] = useState(false);
+
+  const fetchDetail = () => {
+    setDetailLoading(true);
+    setDetailError(false);
+    fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`)
+      .then((r) => { if (!r.ok) throw new Error("no data"); return r.json(); })
+      .then((d) => { setDetail(d); setDetailLoading(false); })
+      .catch(() => { setDetailLoading(false); setDetailError(true); });
+  };
 
   useEffect(() => {
-    setDetailLoading(true);
-    fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`)
-      .then((r) => r.json())
-      .then((d) => { setDetail(d); setDetailLoading(false); })
-      .catch(() => setDetailLoading(false));
+    fetchDetail();
 
     fetch(`/api/stock-news?symbol=${encodeURIComponent(upper)}`)
       .then((r) => r.json())
@@ -148,7 +154,15 @@ export default function StockPage({
             </div>
 
             {/* Right: price + change */}
-            {detail ? (
+            {detailError ? (
+              <button
+                onClick={fetchDetail}
+                className="text-xs px-3 py-2 rounded-xl font-semibold flex-shrink-0"
+                style={{ background: "rgba(255,77,109,0.12)", color: "#ff4d6d" }}
+              >
+                다시 시도
+              </button>
+            ) : detail ? (
               <div className="text-right flex-shrink-0">
                 <p className="text-2xl font-bold font-mono-num" style={{ color: "var(--text)" }}>
                   ${detail.price.toFixed(2)}

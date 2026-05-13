@@ -60,6 +60,7 @@ export function StockChart({ symbol }: { symbol: string }) {
   const [period, setPeriod]   = useState<Period>("1D");
   const [data, setData]       = useState<ChartData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError]     = useState(false);
   const [hover, setHover]     = useState<number | null>(null);
   const svgRef                = useRef<SVGSVGElement>(null);
   const [W, setW]             = useState(480);
@@ -77,11 +78,12 @@ export function StockChart({ symbol }: { symbol: string }) {
   // Fetch chart data on period change
   useEffect(() => {
     setLoading(true);
+    setError(false);
     setHover(null);
     fetch(`/api/stock-chart?symbol=${encodeURIComponent(symbol)}&period=${period}`)
-      .then((r) => r.json())
-      .then((d) => { setData(d); setLoading(false); })
-      .catch(() => setLoading(false));
+      .then((r) => { if (!r.ok) throw new Error("no data"); return r.json(); })
+      .then((d) => { setData(d.points?.length ? d : null); setLoading(false); if (!d.points?.length) setError(true); })
+      .catch(() => { setLoading(false); setError(true); });
   }, [symbol, period]);
 
   // Derived values
@@ -224,6 +226,18 @@ export function StockChart({ symbol }: { symbol: string }) {
               className="w-7 h-7 rounded-full border-2 animate-spin"
               style={{ borderColor: `${color}22`, borderTopColor: color }}
             />
+          </div>
+        )}
+        {error && !loading && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            <p className="text-xs" style={{ color: "var(--muted)" }}>차트 데이터를 불러오지 못했습니다</p>
+            <button
+              className="text-[11px] px-3 py-1.5 rounded-lg font-semibold"
+              style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
+              onClick={() => { setError(false); setLoading(true); fetch(`/api/stock-chart?symbol=${encodeURIComponent(symbol)}&period=${period}`).then(r=>r.json()).then(d=>{setData(d);setLoading(false);}).catch(()=>{setLoading(false);setError(true);}); }}
+            >
+              다시 시도
+            </button>
           </div>
         )}
 

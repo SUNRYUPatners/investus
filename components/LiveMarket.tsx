@@ -42,6 +42,14 @@ function CardSkeleton() {
   );
 }
 
+function isMarketOpen(): boolean {
+  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
+  const day = now.getDay(); // 0=Sun 6=Sat
+  if (day === 0 || day === 6) return false;
+  const mins = now.getHours() * 60 + now.getMinutes();
+  return mins >= 9 * 60 + 30 && mins < 16 * 60;
+}
+
 export function LiveMarket() {
   const [data, setData]       = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -77,6 +85,8 @@ export function LiveMarket() {
     };
 
     load();
+    // 장 마감 시 폴링 불필요 — 전날 마감 데이터를 캐시에서 그대로 표시
+    if (!isMarketOpen()) return;
     const id = setInterval(load, 60_000);
     return () => clearInterval(id);
   }, []);

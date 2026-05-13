@@ -18,19 +18,6 @@ const YAHOO_CFG: Record<string, { interval: string; range: string }> = {
   "ALL": { interval: "1mo", range: "max" },
 };
 
-// ── Mock fallback ─────────────────────────────────────────────────────────
-function mockChart(symbol: string, period: string) {
-  const count = ({ "1D": 78, "1W": 42, "1M": 22, "3M": 65, "1Y": 52, "5Y": 60, "10Y": 120, "ALL": 240 } as Record<string, number>)[period] ?? 78;
-  let p = 150;
-  const now  = Math.floor(Date.now() / 1000);
-  const step = period === "1D" ? 300 : period === "1W" ? 3600 : 86400;
-  const points = Array.from({ length: count }, (_, i) => {
-    p = Math.max(p * (1 + (Math.random() - 0.48) * 0.012), 1);
-    return { ts: now - (count - 1 - i) * step, close: Math.round(p * 100) / 100, volume: Math.round(1e7 * Math.random()) };
-  });
-  return { symbol, chartPreviousClose: points[0].close, regularMarketPrice: points[points.length - 1].close, points, _mock: true };
-}
-
 // ── Finnhub candle ────────────────────────────────────────────────────────
 async function fetchFinnhub(symbol: string, period: string) {
   const token = process.env.FINNHUB_API_KEY ?? "";
@@ -128,7 +115,7 @@ export async function GET(req: NextRequest) {
   if (period === "10Y" || period === "ALL") {
     const yahoo = await fetchYahoo(symbol, period);
     if (yahoo) return NextResponse.json(yahoo);
-    return NextResponse.json(mockChart(symbol, period));
+    return NextResponse.json({ error: "no data" }, { status: 503 });
   }
 
   // 1D ~ 5Y → Finnhub
@@ -136,8 +123,8 @@ export async function GET(req: NextRequest) {
   if (finnhub) return NextResponse.json(finnhub);
 
   // Finnhub failed → Yahoo fallback
-  const yahooFallback = await fetchYahoo(symbol, period === "1Y" ? "10Y" : "10Y");
+  const yahooFallback = await fetchYahoo(symbol, "10Y");
   if (yahooFallback) return NextResponse.json(yahooFallback);
 
-  return NextResponse.json(mockChart(symbol, period));
+  return NextResponse.json({ error: "no data" }, { status: 503 });
 }

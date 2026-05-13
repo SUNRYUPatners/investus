@@ -35,7 +35,7 @@ export default function AdminCreatorsPage() {
   const [manualPhone, setManualPhone]   = useState("");
   const [manualResult, setManualResult] = useState<string | null>(null);
 
-  const TOKEN = "investus2026";
+  const TOKEN = "investustjsltjsl!99";
   const authHeader = { Authorization: `Bearer ${TOKEN}` };
 
   const load = useCallback(async () => {
