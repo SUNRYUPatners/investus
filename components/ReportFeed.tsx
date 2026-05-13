@@ -24,18 +24,26 @@ function ReportCard({ report }: { report: Report }) {
     >
       {/* Summary row */}
       <div className="p-4">
-        {/* Top: category + date + pin */}
-        <div className="flex items-center gap-2 mb-2">
+        {/* Top: category + subject + date + pin */}
+        <div className="flex items-center gap-1.5 mb-2 flex-wrap">
           <span
-            className="text-[9px] font-bold px-2 py-0.5 rounded-full"
+            className="text-[9px] font-bold px-2 py-0.5 rounded-full flex-shrink-0"
             style={{ background: style.bg, color: style.color }}
           >
             {emoji} {report.category}
           </span>
-          {report.isPinned && (
-            <Pin className="w-3 h-3" style={{ color: style.color }} />
+          {report.subject && (
+            <span
+              className="text-[9px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0"
+              style={{ background: "rgba(255,255,255,0.06)", color: "var(--text)" }}
+            >
+              {report.subject}
+            </span>
           )}
-          <span className="text-[10px] ml-auto" style={{ color: "var(--muted)" }}>
+          {report.isPinned && (
+            <Pin className="w-3 h-3 flex-shrink-0" style={{ color: style.color }} />
+          )}
+          <span className="text-[10px] ml-auto flex-shrink-0" style={{ color: "var(--muted)" }}>
             {report.date}
           </span>
         </div>
