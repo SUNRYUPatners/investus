@@ -4,9 +4,29 @@ const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
-// ── Yahoo Finance config (primary — no rate limit, no API key) ────────────
+// ── Server-side in-memory cache (same pattern as market-data route) ───────
+type ChartResult = {
+  symbol: string;
+  chartPreviousClose: number | null;
+  regularMarketPrice: number | null;
+  points: { ts: number; close: number; volume: number }[];
+};
+
+const _cache = new Map<string, { data: ChartResult; at: number }>();
+const TTL: Record<string, number> = {
+  "1D": 60_000,
+  "1W": 120_000,
+  "1M": 300_000,
+  "3M": 300_000,
+  "1Y": 600_000,
+  "5Y": 600_000,
+  "10Y": 3_600_000,
+  "ALL": 3_600_000,
+};
+
+// ── Yahoo Finance config ──────────────────────────────────────────────────
 const YAHOO_CFG: Record<string, { interval: string; range: string }> = {
-  "1D":  { interval: "2m",  range: "1d"  },
+  "1D":  { interval: "5m",  range: "1d"  }, // same as stock-detail (works on Vercel)
   "1W":  { interval: "1h",  range: "5d"  },
   "1M":  { interval: "1d",  range: "1mo" },
   "3M":  { interval: "1d",  range: "3mo" },
@@ -16,39 +36,21 @@ const YAHOO_CFG: Record<string, { interval: string; range: string }> = {
   "ALL": { interval: "1mo", range: "max" },
 };
 
-// ── Finnhub config (secondary — rate limited 60/min free tier) ────────────
-const FINNHUB_CFG: Record<string, { resolution: string; daysBack: number }> = {
-  "1D": { resolution: "5",  daysBack: 1    },
-  "1W": { resolution: "60", daysBack: 7    },
-  "1M": { resolution: "D",  daysBack: 30   },
-  "3M": { resolution: "D",  daysBack: 90   },
-  "1Y": { resolution: "W",  daysBack: 365  },
-  "5Y": { resolution: "M",  daysBack: 1825 },
-};
-
-type ChartResult = {
-  symbol: string;
-  chartPreviousClose: number | null;
-  regularMarketPrice: number | null;
-  points: { ts: number; close: number; volume: number }[];
-};
-
-// ── Yahoo Finance (tries query1 + query2 for reliability) ─────────────────
+// ── Yahoo Finance — plain fetch (no next:revalidate, same as stock-detail) ─
 async function fetchYahoo(symbol: string, period: string): Promise<ChartResult | null> {
   const cfg = YAHOO_CFG[period];
   if (!cfg) return null;
 
-  const revalidate = period === "10Y" || period === "ALL" ? 3600 : 60;
-
+  // Try query1 then query2 (stock-detail uses query1 and works on Vercel)
   for (const host of ["query1", "query2"]) {
     try {
       const url =
         `https://${host}.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}` +
         `?interval=${cfg.interval}&range=${cfg.range}&includePrePost=false`;
 
+      // Plain fetch — no next:{revalidate} so Next.js doesn't interfere
       const res = await fetch(url, {
         headers: { "User-Agent": UA, Accept: "application/json" },
-        next: { revalidate },
       });
       if (!res.ok) continue;
 
@@ -78,62 +80,13 @@ async function fetchYahoo(symbol: string, period: string): Promise<ChartResult |
   return null;
 }
 
-// ── Finnhub (fallback only — avoids consuming rate limit budget) ──────────
-async function fetchFinnhub(symbol: string, period: string): Promise<ChartResult | null> {
-  const token = process.env.FINNHUB_API_KEY ?? "";
-  if (!token) return null;
-
-  const cfg = FINNHUB_CFG[period];
-  if (!cfg) return null;
-
-  const to = Math.floor(Date.now() / 1000);
-  let from: number;
-
-  if (period === "1D") {
-    const est = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
-    est.setHours(9, 30, 0, 0);
-    from = Math.floor(est.getTime() / 1000);
-    if (from > to) from = to - 86400;
-  } else {
-    from = to - cfg.daysBack * 86400;
-  }
-
-  const url =
-    `https://finnhub.io/api/v1/stock/candle` +
-    `?symbol=${encodeURIComponent(symbol)}` +
-    `&resolution=${cfg.resolution}` +
-    `&from=${from}&to=${to}` +
-    `&token=${token}`;
-
-  try {
-    const res  = await fetch(url, { next: { revalidate: 60 } });
-    if (!res.ok) return null;
-    const json = await res.json();
-    if (json.s !== "ok" || !Array.isArray(json.t) || json.t.length === 0) return null;
-
-    const points = (json.t as number[]).map((ts: number, i: number) => ({
-      ts,
-      close:  Math.round((json.c[i] as number) * 100) / 100,
-      volume: (json.v?.[i] as number) ?? 0,
-    }));
-
-    return {
-      symbol,
-      chartPreviousClose: (json.o?.[0] as number | undefined) ?? points[0]?.close ?? null,
-      regularMarketPrice: points[points.length - 1]?.close ?? null,
-      points,
-    };
-  } catch { return null; }
-}
-
-// ── Slice to last trading day (for 1D fallback from 5D data) ─────────────
+// ── Slice to last trading day (1D fallback from 5D) ───────────────────────
 function sliceLastTradingDay(result: ChartResult): ChartResult {
   if (result.points.length === 0) return result;
-  const pts      = result.points;
-  const lastTs   = pts[pts.length - 1].ts;
-  // Find the first point of the same calendar day (UTC) as the last point
-  const lastDay  = Math.floor(lastTs / 86400) * 86400;
-  const dayPts   = pts.filter((p) => p.ts >= lastDay);
+  const pts    = result.points;
+  const lastTs = pts[pts.length - 1].ts;
+  const lastDay = Math.floor(lastTs / 86400) * 86400;
+  const dayPts  = pts.filter((p) => p.ts >= lastDay);
   return { ...result, points: dayPts.length > 0 ? dayPts : pts };
 }
 
@@ -142,27 +95,34 @@ export async function GET(req: NextRequest) {
   const symbol = (req.nextUrl.searchParams.get("symbol") ?? "AAPL").toUpperCase();
   const period = req.nextUrl.searchParams.get("period") ?? "1D";
 
-  // 10Y / ALL → Yahoo only (long-term history)
-  if (period === "10Y" || period === "ALL") {
-    const yahoo = await fetchYahoo(symbol, period);
-    if (yahoo) return NextResponse.json(yahoo);
-    return NextResponse.json({ error: "no data" }, { status: 503 });
+  // Check server-side cache first
+  const cKey    = `${symbol}-${period}`;
+  const cached  = _cache.get(cKey);
+  const ttl     = TTL[period] ?? 60_000;
+  if (cached && Date.now() - cached.at < ttl) {
+    return NextResponse.json(cached.data);
   }
 
-  // 1D ~ 5Y → Yahoo primary, Finnhub secondary
-  // Using Yahoo first prevents burning Finnhub's 60/min quota on charts
+  // Fetch from Yahoo Finance (plain fetch, same approach as stock-detail route)
   const yahoo = await fetchYahoo(symbol, period);
-  if (yahoo) return NextResponse.json(yahoo);
+  if (yahoo) {
+    _cache.set(cKey, { data: yahoo, at: Date.now() });
+    return NextResponse.json(yahoo);
+  }
 
-  // Yahoo failed → try Finnhub
-  const finnhub = await fetchFinnhub(symbol, period);
-  if (finnhub) return NextResponse.json(finnhub);
-
-  // Both failed for 1D → try Yahoo 5D and slice last trading day
-  // Handles: market closed today, weekend, pre-market, etc.
+  // 1D only: if Yahoo 1D failed, try Yahoo 5D and slice last trading day
   if (period === "1D") {
     const yahoo5d = await fetchYahoo(symbol, "1W");
-    if (yahoo5d) return NextResponse.json(sliceLastTradingDay(yahoo5d));
+    if (yahoo5d) {
+      const sliced = sliceLastTradingDay(yahoo5d);
+      _cache.set(cKey, { data: sliced, at: Date.now() });
+      return NextResponse.json(sliced);
+    }
+  }
+
+  // Return stale cache rather than 503 (better UX when API momentarily fails)
+  if (cached) {
+    return NextResponse.json(cached.data);
   }
 
   return NextResponse.json({ error: "no data" }, { status: 503 });
