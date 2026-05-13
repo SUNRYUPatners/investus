@@ -78,12 +78,31 @@ export default function StockPage({
   const [detailError, setDetailError] = useState(false);
 
   const fetchDetail = () => {
+    const cacheKey = `stock-detail-${upper}`;
+
+    // Load cached detail first — prevents skeleton flash on revisit
+    try {
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) {
+        const d = JSON.parse(cached) as Detail;
+        if (d?.price) { setDetail(d); setDetailLoading(false); }
+      }
+    } catch { /* ignore */ }
+
     setDetailLoading(true);
     setDetailError(false);
     fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`)
       .then((r) => { if (!r.ok) throw new Error("no data"); return r.json(); })
-      .then((d) => { setDetail(d); setDetailLoading(false); })
-      .catch(() => { setDetailLoading(false); setDetailError(true); });
+      .then((d: Detail) => {
+        setDetail(d);
+        setDetailLoading(false);
+        try { localStorage.setItem(cacheKey, JSON.stringify(d)); } catch { /* ignore */ }
+      })
+      .catch(() => {
+        setDetailLoading(false);
+        // Keep cached detail visible; only show error button if nothing loaded
+        setDetail((prev) => { if (!prev) setDetailError(true); return prev; });
+      });
   };
 
   useEffect(() => {

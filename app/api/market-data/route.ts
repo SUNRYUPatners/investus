@@ -1,16 +1,16 @@
 import { NextResponse } from "next/server";
 import { fetchFinnhubBatch, fetchFinnhubRawQuote, type FinnhubRawQuote } from "@/lib/finnhub";
 import {
-  mockIndices, mockQuotes, mockFutures,
+  mockQuotes, mockFutures,
   type IndexQuote, type Quote, type FutureItem,
 } from "@/lib/api";
 
 export const revalidate = 60;
 
-// ── In-memory cache (survives hot-reload in dev, prevents rate-limit bursts) ─
-type CachePayload = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
+// ── In-memory cache — 실데이터만 저장 (mock 절대 캐시 금지) ──────────────
+type CachePayload = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[]; liveAt: number };
 let _cache: { data: CachePayload; at: number } | null = null;
-const CACHE_TTL = 55_000; // 55 s — refresh before revalidate window expires
+const CACHE_TTL = 55_000; // 55 s
 
 // ── Synthetic sparkline ───────────────────────────────────────────────────
 
@@ -183,35 +183,54 @@ export async function GET() {
     if (r.status === "fulfilled" && r.value) cryptoRaw.set(sym, r.value);
   });
 
-  // ── 지수 ─────────────────────────────────────────────────────────────
-  const indices: IndexQuote[] = mockIndices.map((mock) => {
-    if (mock.isCurrency) {
-      const val = fxRates.krw ?? mock.value;
-      return { ...mock, value: val, change: val - mock.value, changePercent: ((val - mock.value) / mock.value) * 100 };
-    }
-    const live = indexLive.get(mock.symbol);
-    if (!live) return mock;
-    return {
-      ...mock,
-      value:         live.price,
-      change:        live.change,
-      changePercent: live.changePercent,
-      sparkline:     syntheticSparkline(live.price, live.changePercent),
-    };
-  });
+  // ── 지수 (라이브 데이터만 — ETF 없으면 해당 지수 제외) ───────────────
+  const INDEX_META: Record<string, { symbol: string; name: string; fullName: string; isCurrency?: boolean }> = {
+    SPX:    { symbol: "SPX",    name: "S&P 500", fullName: "S&P 500 Index" },
+    COMP:   { symbol: "COMP",   name: "NASDAQ",  fullName: "NASDAQ Composite" },
+    DJI:    { symbol: "DJI",    name: "DOW",     fullName: "Dow Jones Industrial" },
+    USDKRW: { symbol: "USDKRW", name: "원달러",  fullName: "USD/KRW 환율", isCurrency: true },
+  };
 
-  // ── 주식 ─────────────────────────────────────────────────────────────
-  const quotes: Quote[] = mockQuotes.map((mock) => {
-    const q = fhMap.get(mock.symbol);
-    if (!q) return mock;
-    return {
-      ...mock,
-      price:         q.price,
-      change:        q.change,
-      changePercent: q.changePercent,
-      sparkline:     syntheticSparkline(q.price, q.changePercent),
-    };
-  });
+  const indices: IndexQuote[] = [];
+
+  // USD/KRW — open.er-api.com 기반
+  if (fxRates.krw) {
+    const prev = 1372.50; // rough reference — change% approximate
+    const val  = fxRates.krw;
+    indices.push({
+      symbol: "USDKRW", name: "원달러", fullName: "USD/KRW 환율",
+      value: val, change: val - prev, changePercent: ((val - prev) / prev) * 100,
+      sparkline: syntheticSparkline(val, ((val - prev) / prev) * 100),
+      isCurrency: true,
+    });
+  }
+  for (const [idxSym, live] of indexLive.entries()) {
+    const meta = INDEX_META[idxSym];
+    if (!meta) continue;
+    indices.push({
+      symbol: meta.symbol, name: meta.name, fullName: meta.fullName,
+      value: live.price, change: live.change, changePercent: live.changePercent,
+      sparkline: syntheticSparkline(live.price, live.changePercent),
+    });
+  }
+
+  // ── 주식 (Finnhub 실데이터 있는 종목만) ───────────────────────────────
+  const quotes: Quote[] = mockQuotes
+    .map((mock) => {
+      const q = fhMap.get(mock.symbol);
+      if (!q || q.price === 0) return null; // 실데이터 없으면 제외
+      return {
+        symbol:        mock.symbol,
+        name:          mock.name,
+        price:         q.price,
+        change:        q.change,
+        changePercent: q.changePercent,
+        sparkline:     syntheticSparkline(q.price, q.changePercent),
+        volume:        mock.volume,
+        marketCap:     mock.marketCap,
+      } satisfies Quote;
+    })
+    .filter((q): q is Quote => q !== null);
 
   // ── 선물 ─────────────────────────────────────────────────────────────
   // Build future→ETF change% lookup from Finnhub
@@ -221,7 +240,7 @@ export async function GET() {
     if (etf) futureChgMap.set(futureSym, etf.changePercent);
   }
 
-  const futures: FutureItem[] = mockFutures.map((f) => {
+  const futures: FutureItem[] = mockFutures.map((f): FutureItem | null => {
     // 1) ES/NQ/YM → ETF-derived index level (accurate price + change%)
     const idxKey = FUTURES_FROM_INDEX[f.symbol];
     if (idxKey) {
@@ -269,10 +288,15 @@ export async function GET() {
       if (cg) return { ...f, price: cg.price, change: cg.change, changePercent: cg.changePercent, isMock: false };
     }
 
-    return { ...f, isMock: true };
-  });
+    return null; // 실데이터 없는 선물 항목 제외
+  }).filter((f): f is FutureItem => f !== null);
 
-  const payload: CachePayload = { indices, quotes, futures };
+  // 실데이터가 하나도 없으면 503 — 클라이언트가 이전 캐시 유지
+  if (quotes.length === 0 && indices.length === 0) {
+    return NextResponse.json({ error: "no live data" }, { status: 503 });
+  }
+
+  const payload: CachePayload = { indices, quotes, futures, liveAt: Date.now() };
   _cache = { data: payload, at: Date.now() };
   return NextResponse.json(payload);
 }

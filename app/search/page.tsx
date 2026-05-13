@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, useEffect } from "react";
 import { Search, X } from "lucide-react";
 import Link from "next/link";
-import { mockQuotes } from "@/lib/api";
-import type { Quote } from "@/lib/api";
+import { mockQuotes, type Quote } from "@/lib/api";
 import { Header } from "@/components/Header";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { GuruHoldings } from "@/components/GuruHoldings";
@@ -15,12 +14,19 @@ const DOWN = "#00e5a0";
 
 const POPULAR = ["AAPL", "NVDA", "TSLA", "MSFT", "AMZN", "META", "GOOGL", "AMD"];
 
+// Static symbol registry — source of truth for symbol + name only
+const SYMBOL_REGISTRY = mockQuotes.map(({ symbol, name, volume, marketCap }) => ({
+  symbol, name, volume, marketCap,
+}));
+
 function StockRow({
   stock,
+  hasLivePrice,
   inWatchlist,
   onToggle,
 }: {
   stock: Quote;
+  hasLivePrice: boolean;
   inWatchlist: boolean;
   onToggle: () => void;
 }) {
@@ -48,12 +54,21 @@ function StockRow({
         </div>
 
         <div className="text-right flex-shrink-0">
-          <p className="text-sm font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
-            ${stock.price.toFixed(2)}
-          </p>
-          <p className="text-xs font-mono-num" style={{ color }}>
-            {pos ? "+" : ""}{stock.changePercent.toFixed(2)}%
-          </p>
+          {hasLivePrice ? (
+            <>
+              <p className="text-sm font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
+                ${stock.price.toFixed(2)}
+              </p>
+              <p className="text-xs font-mono-num" style={{ color }}>
+                {pos ? "+" : ""}{stock.changePercent.toFixed(2)}%
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="text-sm font-mono-num" style={{ color: "var(--muted)" }}>—</p>
+              <p className="text-xs" style={{ color: "var(--muted)" }}>—</p>
+            </>
+          )}
         </div>
       </Link>
 
@@ -75,24 +90,53 @@ function StockRow({
 
 export default function SearchPage() {
   const [query, setQuery]     = useState("");
-  const [results, setResults] = useState<Quote[]>([]);
   const [, startTransition]   = useTransition();
+  const [searchQuery, setSearchQuery] = useState("");
   const { list, toggle }      = useWatchlist();
+
+  // Live prices from market-data-cache (same cache LiveMarket writes)
+  const [liveMap, setLiveMap] = useState<Map<string, Quote>>(new Map());
+
+  useEffect(() => {
+    const load = () => {
+      try {
+        const cached = localStorage.getItem("market-data-cache");
+        if (cached) {
+          const d = JSON.parse(cached) as { quotes?: Quote[] };
+          if (Array.isArray(d?.quotes)) {
+            setLiveMap(new Map(d.quotes.map((q) => [q.symbol, q])));
+          }
+        }
+      } catch { /* ignore */ }
+    };
+    load();
+    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") load(); };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
+  // Build enriched stock list: static symbol/name + live price (or no price flag)
+  const enriched = SYMBOL_REGISTRY.map((s) => {
+    const live = liveMap.get(s.symbol);
+    return {
+      stock: live ?? { ...s, price: 0, change: 0, changePercent: 0, sparkline: [] } as Quote,
+      hasLivePrice: !!live,
+    };
+  });
 
   const handleChange = (q: string) => {
     setQuery(q);
-    startTransition(() => {
-      if (!q.trim()) { setResults([]); return; }
-      const lq = q.toLowerCase();
-      setResults(
-        mockQuotes.filter(
-          (s) => s.symbol.toLowerCase().includes(lq) || s.name.toLowerCase().includes(lq)
-        )
-      );
-    });
+    startTransition(() => setSearchQuery(q));
   };
 
-  const popularStocks = mockQuotes.filter((q) => POPULAR.includes(q.symbol));
+  const lq = searchQuery.toLowerCase();
+  const results = searchQuery.trim()
+    ? enriched.filter(({ stock }) =>
+        stock.symbol.toLowerCase().includes(lq) || stock.name.toLowerCase().includes(lq)
+      )
+    : [];
+
+  const popularStocks = enriched.filter(({ stock }) => POPULAR.includes(stock.symbol));
   const showResults   = query.length > 0;
 
   return (
@@ -132,12 +176,13 @@ export default function SearchPage() {
                 </p>
                 {results.length > 0 ? (
                   <div className="flex flex-col gap-2">
-                    {results.map((s) => (
+                    {results.map(({ stock, hasLivePrice }) => (
                       <StockRow
-                        key={s.symbol}
-                        stock={s}
-                        inWatchlist={list.includes(s.symbol)}
-                        onToggle={() => toggle(s.symbol)}
+                        key={stock.symbol}
+                        stock={stock}
+                        hasLivePrice={hasLivePrice}
+                        inWatchlist={list.includes(stock.symbol)}
+                        onToggle={() => toggle(stock.symbol)}
                       />
                     ))}
                   </div>
@@ -169,12 +214,13 @@ export default function SearchPage() {
                     인기 종목
                   </h2>
                   <div className="flex flex-col gap-2">
-                    {popularStocks.map((s) => (
+                    {popularStocks.map(({ stock, hasLivePrice }) => (
                       <StockRow
-                        key={s.symbol}
-                        stock={s}
-                        inWatchlist={list.includes(s.symbol)}
-                        onToggle={() => toggle(s.symbol)}
+                        key={stock.symbol}
+                        stock={stock}
+                        hasLivePrice={hasLivePrice}
+                        inWatchlist={list.includes(stock.symbol)}
+                        onToggle={() => toggle(stock.symbol)}
                       />
                     ))}
                   </div>

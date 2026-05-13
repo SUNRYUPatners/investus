@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useWatchlist } from "@/hooks/useWatchlist";
-import { mockQuotes, type Quote } from "@/lib/api";
+import type { Quote } from "@/lib/api";
 import { Sparkline } from "./Sparkline";
 import { Star } from "lucide-react";
 
@@ -14,31 +14,24 @@ export function WatchlistSection() {
   const [liveQuotes, setLiveQuotes] = useState<Quote[]>([]);
 
   useEffect(() => {
-    // Read from the market-data cache that LiveMarket writes
-    const tryCache = () => {
+    const load = () => {
       try {
         const cached = localStorage.getItem("market-data-cache");
         if (cached) {
-          const d = JSON.parse(cached);
+          const d = JSON.parse(cached) as { quotes?: Quote[] };
           if (Array.isArray(d?.quotes)) setLiveQuotes(d.quotes);
         }
       } catch { /* ignore */ }
     };
-    tryCache();
-    // Also re-read whenever the market data updates (storage event)
-    const onStorage = (e: StorageEvent) => {
-      if (e.key === "market-data-cache") tryCache();
-    };
+    load();
+    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") load(); };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
   }, []);
 
   if (list.length === 0) return null;
 
-  const allQuotes = liveQuotes.length > 0 ? liveQuotes : mockQuotes;
-  const stocks = list
-    .map((sym) => allQuotes.find((q) => q.symbol === sym))
-    .filter(Boolean) as Quote[];
+  const liveMap = new Map(liveQuotes.map((q) => [q.symbol, q]));
 
   return (
     <section className="px-4 pt-5">
@@ -53,18 +46,42 @@ export function WatchlistSection() {
       </div>
 
       <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
-        {stocks.map((stock) => {
+        {list.map((sym) => {
+          const stock = liveMap.get(sym);
+
+          if (!stock) {
+            return (
+              <div
+                key={sym}
+                className="min-w-[140px] flex-shrink-0 rounded-2xl p-3 border relative"
+                style={{ background: "var(--card)", borderColor: "var(--border)" }}
+              >
+                <button onClick={() => remove(sym)} className="absolute top-2 right-2 p-0.5" aria-label="관심종목 제거">
+                  <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
+                </button>
+                <div className="mb-6 pr-5">
+                  <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{sym}</p>
+                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>로딩 중...</p>
+                </div>
+                <div className="flex items-end justify-between">
+                  <p className="text-sm font-bold font-mono-num" style={{ color: "var(--muted)" }}>—</p>
+                  <p className="text-xs" style={{ color: "var(--muted)" }}>—</p>
+                </div>
+              </div>
+            );
+          }
+
           const pos   = stock.changePercent >= 0;
           const color = pos ? UP : DOWN;
+
           return (
             <div
-              key={stock.symbol}
+              key={sym}
               className="min-w-[140px] flex-shrink-0 rounded-2xl p-3 border relative"
               style={{ background: "var(--card)", borderColor: "var(--border)" }}
             >
-              {/* Remove button */}
               <button
-                onClick={() => remove(stock.symbol)}
+                onClick={() => remove(sym)}
                 className="absolute top-2 right-2 p-0.5"
                 aria-label="관심종목 제거"
               >

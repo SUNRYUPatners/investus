@@ -14,9 +14,9 @@ type ChartData = {
 
 // Chart layout constants
 const PAD   = { top: 10, right: 56, bottom: 22, left: 2 };
-const CH    = 210; // price chart height
-const VH    = 48;  // volume height
-const GAP   = 4;   // gap between chart and volume
+const CH    = 210;
+const VH    = 48;
+const GAP   = 4;
 const SVG_H = PAD.top + CH + GAP + VH + PAD.bottom;
 
 const UP   = "#00e5a0";
@@ -29,13 +29,10 @@ function xFmt(ts: number, period: Period): string {
       hour: "numeric", minute: "2-digit", hour12: false,
       timeZone: "America/New_York",
     });
-  if (period === "1W")
-    return `${d.getMonth() + 1}/${d.getDate()}`;
-  if (period === "1M" || period === "3M")
+  if (period === "1W" || period === "1M" || period === "3M")
     return `${d.getMonth() + 1}/${d.getDate()}`;
   if (period === "1Y")
     return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
-  // 5Y / 10Y / ALL → year
   return String(d.getFullYear());
 }
 
@@ -56,16 +53,32 @@ function fmtVol(v: number): string {
   return v.toLocaleString("ko-KR");
 }
 
+function cacheKey(symbol: string, period: string) {
+  return `chart-${symbol}-${period}`;
+}
+
+function readCache(symbol: string, period: string): ChartData | null {
+  try {
+    const raw = localStorage.getItem(cacheKey(symbol, period));
+    if (!raw) return null;
+    const d = JSON.parse(raw) as ChartData;
+    return d.points?.length ? d : null;
+  } catch { return null; }
+}
+
+function writeCache(symbol: string, period: string, data: ChartData) {
+  try { localStorage.setItem(cacheKey(symbol, period), JSON.stringify(data)); } catch { /* ignore */ }
+}
+
 export function StockChart({ symbol }: { symbol: string }) {
   const [period, setPeriod]   = useState<Period>("1D");
   const [data, setData]       = useState<ChartData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError]     = useState(false);
+  const [fetchFailed, setFetchFailed] = useState(false); // true only when API failed AND no cache
   const [hover, setHover]     = useState<number | null>(null);
   const svgRef                = useRef<SVGSVGElement>(null);
   const [W, setW]             = useState(480);
 
-  // Observe container width
   useEffect(() => {
     const el = svgRef.current?.parentElement;
     if (!el) return;
@@ -75,15 +88,40 @@ export function StockChart({ symbol }: { symbol: string }) {
     return () => obs.disconnect();
   }, []);
 
-  // Fetch chart data on period change
+  const doFetch = (sym: string, per: Period, isRetry = false) => {
+    // Load cache immediately (shows stale data while refreshing)
+    const cached = readCache(sym, per);
+    if (cached) {
+      setData(cached);
+      setLoading(false);
+      setFetchFailed(false);
+    } else if (!isRetry) {
+      setLoading(true);
+      setFetchFailed(false);
+    }
+
+    fetch(`/api/stock-chart?symbol=${encodeURIComponent(sym)}&period=${per}`)
+      .then((r) => { if (!r.ok) throw new Error(`${r.status}`); return r.json(); })
+      .then((d: ChartData) => {
+        if (!d.points?.length) throw new Error("empty");
+        setData(d);
+        setLoading(false);
+        setFetchFailed(false);
+        writeCache(sym, per, d);
+      })
+      .catch(() => {
+        setLoading(false);
+        // If we already have (cached) data on screen, keep it — no error shown
+        if (!cached) setFetchFailed(true);
+      });
+  };
+
   useEffect(() => {
-    setLoading(true);
-    setError(false);
     setHover(null);
-    fetch(`/api/stock-chart?symbol=${encodeURIComponent(symbol)}&period=${period}`)
-      .then((r) => { if (!r.ok) throw new Error("no data"); return r.json(); })
-      .then((d) => { setData(d.points?.length ? d : null); setLoading(false); if (!d.points?.length) setError(true); })
-      .catch(() => { setLoading(false); setError(true); });
+    setData(null);
+    setFetchFailed(false);
+    doFetch(symbol, period);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [symbol, period]);
 
   // Derived values
@@ -97,7 +135,6 @@ export function StockChart({ symbol }: { symbol: string }) {
   const maxP = N ? Math.max(...prices) : 1;
   const maxV = vols.length ? Math.max(...vols, 1) : 1;
 
-  // 7% padding around price range
   const pad  = (maxP - minP) * 0.07 || maxP * 0.05 || 1;
   const pLo  = minP - pad;
   const pHi  = maxP + pad;
@@ -109,7 +146,6 @@ export function StockChart({ symbol }: { symbol: string }) {
     return PAD.top + CH - ((p - pLo) / (pHi - pLo)) * CH;
   }
 
-  // Build SVG paths
   let linePath = "";
   let areaPath = "";
   prices.forEach((p, i) => {
@@ -125,13 +161,11 @@ export function StockChart({ symbol }: { symbol: string }) {
     areaPath += ` L${xN},${yB} L${x0},${yB} Z`;
   }
 
-  // Color based on direction
   const base    = period === "1D" ? (data?.chartPreviousClose ?? prices[0]) : prices[0];
   const last    = prices[N - 1] ?? 0;
   const isUp    = last >= (base ?? last);
   const color   = isUp ? UP : DOWN;
 
-  // Active point (hover or last)
   const activeIdx   = hover ?? N - 1;
   const activePrice = prices[activeIdx] ?? 0;
   const activeVol   = vols[activeIdx]   ?? 0;
@@ -139,31 +173,24 @@ export function StockChart({ symbol }: { symbol: string }) {
   const chgFromBase = base ? activePrice - base : 0;
   const pctFromBase = base ? (chgFromBase / base) * 100 : 0;
 
-  // Y-axis ticks (4 levels)
   const yTicks = [0, 0.333, 0.667, 1].map((t) => ({
     y:     PAD.top + CH * (1 - t),
     label: (pLo + t * (pHi - pLo)).toFixed(2),
   }));
 
-  // X-axis ticks (5 evenly spaced, deduplicated for ALL)
   const xTicks = N > 0
     ? [0, 0.25, 0.5, 0.75, 1]
         .map((t) => {
           const idx = Math.round(t * (N - 1));
-          return {
-            x: xAt(idx),
-            label: xFmt(pts[idx].ts, period),
-          };
+          return { x: xAt(idx), label: xFmt(pts[idx].ts, period) };
         })
         .filter((t, i, arr) => i === 0 || t.label !== arr[i - 1].label)
-  : [];
+    : [];
 
-  // Previous close line (for 1D only)
   const prevY = period === "1D" && data?.chartPreviousClose
     ? yP(data.chartPreviousClose)
     : null;
 
-  // Pointer handler
   function handlePointer(e: React.PointerEvent<SVGSVGElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
     const rawX = e.clientX - rect.left - PAD.left;
@@ -171,8 +198,8 @@ export function StockChart({ symbol }: { symbol: string }) {
     setHover(Math.max(0, Math.min(N - 1, idx)));
   }
 
-  const clipId   = `cp-${symbol}`;
-  const gradId   = `ag-${symbol}`;
+  const clipId = `cp-${symbol}`;
+  const gradId = `ag-${symbol}`;
 
   return (
     <div>
@@ -194,7 +221,7 @@ export function StockChart({ symbol }: { symbol: string }) {
         ))}
       </div>
 
-      {/* Price readout — updates on hover */}
+      {/* Price readout */}
       <div className="px-4 pb-2" style={{ minHeight: 52 }}>
         {N > 0 && (
           <>
@@ -220,7 +247,8 @@ export function StockChart({ symbol }: { symbol: string }) {
 
       {/* SVG Chart */}
       <div style={{ position: "relative", height: SVG_H }}>
-        {loading && (
+        {/* Loading spinner overlay — chart still visible underneath if cached */}
+        {loading && N === 0 && (
           <div className="absolute inset-0 flex items-center justify-center">
             <div
               className="w-7 h-7 rounded-full border-2 animate-spin"
@@ -228,13 +256,15 @@ export function StockChart({ symbol }: { symbol: string }) {
             />
           </div>
         )}
-        {error && !loading && (
+
+        {/* No data at all and fetch failed */}
+        {fetchFailed && N === 0 && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
             <p className="text-xs" style={{ color: "var(--muted)" }}>차트 데이터를 불러오지 못했습니다</p>
             <button
               className="text-[11px] px-3 py-1.5 rounded-lg font-semibold"
               style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
-              onClick={() => { setError(false); setLoading(true); fetch(`/api/stock-chart?symbol=${encodeURIComponent(symbol)}&period=${period}`).then(r=>r.json()).then(d=>{setData(d);setLoading(false);}).catch(()=>{setLoading(false);setError(true);}); }}
+              onClick={() => { setFetchFailed(false); setLoading(true); doFetch(symbol, period, true); }}
             >
               다시 시도
             </button>
@@ -245,7 +275,7 @@ export function StockChart({ symbol }: { symbol: string }) {
           ref={svgRef}
           width="100%"
           height={SVG_H}
-          style={{ display: "block", cursor: "crosshair", opacity: loading ? 0.3 : 1 }}
+          style={{ display: "block", cursor: "crosshair", opacity: loading && N > 0 ? 0.5 : 1 }}
           onPointerMove={handlePointer}
           onPointerLeave={() => setHover(null)}
         >
@@ -259,7 +289,6 @@ export function StockChart({ symbol }: { symbol: string }) {
             </clipPath>
           </defs>
 
-          {/* Horizontal grid lines */}
           {yTicks.map((t, i) => (
             <line key={i}
               x1={PAD.left} y1={t.y} x2={PAD.left + plotW} y2={t.y}
@@ -267,7 +296,6 @@ export function StockChart({ symbol }: { symbol: string }) {
             />
           ))}
 
-          {/* Previous close dashed line (1D) */}
           {prevY != null && (
             <line
               x1={PAD.left} y1={prevY} x2={PAD.left + plotW} y2={prevY}
@@ -275,18 +303,15 @@ export function StockChart({ symbol }: { symbol: string }) {
             />
           )}
 
-          {/* Area fill */}
           {areaPath && (
             <path d={areaPath} fill={`url(#${gradId})`} clipPath={`url(#${clipId})`} />
           )}
 
-          {/* Price line */}
           {linePath && (
             <path d={linePath} fill="none" stroke={color} strokeWidth="1.6"
               clipPath={`url(#${clipId})`} />
           )}
 
-          {/* Volume bars */}
           {pts.map((p, i) => {
             const bH = maxV > 0 ? (p.volume / maxV) * VH * 0.85 : 0;
             const bW = Math.max(1.5, plotW / N * 0.75);
@@ -300,7 +325,6 @@ export function StockChart({ symbol }: { symbol: string }) {
             );
           })}
 
-          {/* Y-axis labels */}
           {yTicks.map((t, i) => (
             <text key={i}
               x={PAD.left + plotW + 5} y={t.y}
@@ -311,7 +335,6 @@ export function StockChart({ symbol }: { symbol: string }) {
             </text>
           ))}
 
-          {/* X-axis labels */}
           {xTicks.map((t, i) => (
             <text key={i}
               x={t.x} y={SVG_H - 3}
@@ -321,7 +344,6 @@ export function StockChart({ symbol }: { symbol: string }) {
             </text>
           ))}
 
-          {/* Hover: crosshair + dot */}
           {hover != null && N > 0 && (
             <>
               <line
@@ -337,7 +359,6 @@ export function StockChart({ symbol }: { symbol: string }) {
             </>
           )}
 
-          {/* Always show dot at last point when not hovering */}
           {hover == null && N > 0 && (
             <circle
               cx={xAt(N - 1)} cy={yP(prices[N - 1])}
