@@ -7,6 +7,7 @@ import { BuffettGauge } from "@/components/BuffettGauge";
 import { SP500Heatmap } from "@/components/SP500Heatmap";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
+import { ReportFeed } from "@/components/ReportFeed";
 import { getNews, getFearGreed, getBuffett, mockQuotes } from "@/lib/api";
 
 export default async function HomePage() {
@@ -39,7 +40,7 @@ export default async function HomePage() {
               <SP500Heatmap />
             </section>
 
-            {/* 광고 · 시장심리 · 버핏지수 · 뉴스 — 모바일 전용 */}
+            {/* 광고 · 시장심리 · 버핏지수 — 모바일 전용 */}
             <section className="px-4 lg:hidden pt-4">
               <AdBanner format="auto" />
             </section>
@@ -49,6 +50,13 @@ export default async function HomePage() {
             <section className="px-4 lg:hidden pt-4">
               <BuffettGauge data={buffett} />
             </section>
+
+            {/* Investus 리포트 — 뉴스 위 */}
+            <section className="px-4 lg:hidden pt-4">
+              <ReportFeed />
+            </section>
+
+            {/* 시장 뉴스 */}
             <section className="px-4 lg:hidden pt-4 pb-2">
               <NewsSection news={news} />
             </section>
@@ -59,6 +67,7 @@ export default async function HomePage() {
             <AdBanner format="auto" />
             <FearGreedGauge data={fearGreed} />
             <BuffettGauge data={buffett} />
+            <ReportFeed />
             <NewsSection news={news} />
           </div>
 
