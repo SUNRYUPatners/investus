@@ -226,22 +226,22 @@ function AuthSection() {
 
   const reset = () => { setPhone(""); setPw(""); setError(""); setLoading(false); };
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     setLoading(true);
     setError("");
-    const ok = login(phone, pw);
+    const ok = await login(phone, pw);
     setLoading(false);
     if (!ok) { setError("전화번호 또는 비밀번호가 올바르지 않습니다."); return; }
     setMode("idle");
     reset();
   };
 
-  const handleSignup = () => {
+  const handleSignup = async () => {
     if (phone.replace(/\D/g, "").length < 10) { setError("올바른 전화번호를 입력해주세요."); return; }
     if (pw.length < 4) { setError("비밀번호는 4자 이상이어야 합니다."); return; }
     setLoading(true);
     setError("");
-    const result = signup(phone, pw);
+    const result = await signup(phone, pw);
     setLoading(false);
     if (!result.ok) { setError(result.msg); return; }
     setMode("idle");

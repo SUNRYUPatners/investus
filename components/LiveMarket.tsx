@@ -6,7 +6,7 @@ import { IndexCard } from "./IndexCard";
 import { StockCard } from "./StockCard";
 import { FuturesHeatmap } from "./FuturesHeatmap";
 import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
-import { mockIndices, mockQuotes, mockFutures, RECOMMENDED_SYMBOLS } from "@/lib/api";
+import { RECOMMENDED_SYMBOLS } from "@/lib/api";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
 
@@ -47,31 +47,43 @@ export function LiveMarket() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 이전 캐시를 즉시 표시해 mock flash 방지
+    // 이전 캐시를 즉시 표시 — mock flash 방지
     try {
       const cached = localStorage.getItem("market-data-cache");
-      if (cached) { setData(JSON.parse(cached)); setLoading(false); }
+      if (cached) {
+        const parsed = JSON.parse(cached) as MarketData;
+        // 캐시에 실제 데이터 구조가 있을 때만 표시 (부분 mock 방지)
+        if (parsed?.indices?.length && parsed?.quotes?.length) {
+          setData(parsed);
+          setLoading(false);
+        }
+      }
     } catch { /* ignore */ }
 
     const load = () => {
       fetch("/api/market-data")
-        .then((r) => r.json())
+        .then((r) => { if (!r.ok) throw new Error("http " + r.status); return r.json(); })
         .then((d: MarketData) => {
+          if (!d?.indices?.length || !d?.quotes?.length) throw new Error("empty");
           setData(d);
           setLoading(false);
           try { localStorage.setItem("market-data-cache", JSON.stringify(d)); } catch { /* ignore */ }
+          // watchlist도 같은 캐시를 보도록 storage 이벤트 트리거
+          try { window.dispatchEvent(new StorageEvent("storage", { key: "market-data-cache" })); } catch { /* ignore */ }
         })
-        .catch(() => setLoading(false)); // 실패 시 기존 캐시 유지 (mock 노출 방지)
+        .catch(() => {
+          // API 실패: 캐시 있으면 현재 표시 유지, 없으면 skeleton 유지 — mock 노출 금지
+        });
     };
 
     load();
-    const id = setInterval(load, 60_000); // 60초마다 자동 갱신
+    const id = setInterval(load, 60_000);
     return () => clearInterval(id);
   }, []);
 
-  const indices     = data?.indices ?? mockIndices;
-  const quotes      = data?.quotes  ?? mockQuotes;
-  const futures     = data?.futures ?? mockFutures;
+  const indices     = data?.indices ?? [];
+  const quotes      = data?.quotes  ?? [];
+  const futures     = data?.futures ?? [];
   const recommended = quotes.filter((q) => RECOMMENDED_SYMBOLS.includes(q.symbol));
 
   return (

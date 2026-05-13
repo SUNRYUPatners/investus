@@ -35,15 +35,15 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
   const [visible, setVisible] = useState(false);
   const [error, setError]     = useState("");
 
-  const handleLogin = () => {
-    const ok = login(phone, pw);
+  const handleLogin = async () => {
+    const ok = await login(phone, pw);
     if (!ok) { setError("전화번호 또는 비밀번호가 올바르지 않습니다."); return; }
     onSuccess();
   };
-  const handleSignup = () => {
+  const handleSignup = async () => {
     if (phone.replace(/\D/g, "").length < 10) { setError("올바른 전화번호를 입력해주세요."); return; }
     if (pw.length < 4) { setError("비밀번호는 4자 이상이어야 합니다."); return; }
-    const result = signup(phone, pw);
+    const result = await signup(phone, pw);
     if (!result.ok) { setError(result.msg); return; }
     onSuccess();
   };

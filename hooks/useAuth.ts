@@ -9,17 +9,35 @@ export type AuthUser = {
   avatar?:    string; // emoji char OR "data:image/..." base64
 };
 
-type StoredUser = { phone: string; pw: string; nickname: string; avatar?: string };
+type StoredUser = { phone: string; pwHash: string; nickname: string; avatar?: string };
+
+async function hashPw(pw: string): Promise<string> {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(pw));
+  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
 
 function avatarKey(phone: string) { return `uss_avatar_${phone}`; }
 
 export function useAuth() {
   const [user, setUser] = useLocalStorage<AuthUser | null>("uss_auth", null);
 
-  const login = (phone: string, pw: string): boolean => {
+  const login = async (phone: string, pw: string): Promise<boolean> => {
     try {
       const users: StoredUser[] = JSON.parse(localStorage.getItem("uss_users") ?? "[]");
-      const found = users.find((u) => u.phone === phone && u.pw === pw);
+      const pwHash = await hashPw(pw);
+      // 구형 plain-text pw 레코드와 호환: pwHash가 없으면 pw 필드로 비교 후 마이그레이션
+      const found = users.find((u) => {
+        if (u.phone !== phone) return false;
+        if (u.pwHash) return u.pwHash === pwHash;
+        // legacy: plain pw → migrate in-place
+        if ((u as Record<string, unknown>)["pw"] === pw) {
+          u.pwHash = pwHash;
+          delete (u as Record<string, unknown>)["pw"];
+          localStorage.setItem("uss_users", JSON.stringify(users));
+          return true;
+        }
+        return false;
+      });
       if (!found) return false;
       const avatar = localStorage.getItem(avatarKey(phone)) ?? undefined;
       setUser({ phone: found.phone, nickname: found.nickname, isVerified: false, avatar });
@@ -27,12 +45,13 @@ export function useAuth() {
     } catch { return false; }
   };
 
-  const signup = (phone: string, pw: string): { ok: boolean; msg: string } => {
+  const signup = async (phone: string, pw: string): Promise<{ ok: boolean; msg: string }> => {
     try {
       const users: StoredUser[] = JSON.parse(localStorage.getItem("uss_users") ?? "[]");
       if (users.find((u) => u.phone === phone)) return { ok: false, msg: "이미 가입된 번호입니다" };
       const nickname = `투자자_${phone.slice(-4)}`;
-      users.push({ phone, pw, nickname });
+      const pwHash = await hashPw(pw);
+      users.push({ phone, pwHash, nickname });
       localStorage.setItem("uss_users", JSON.stringify(users));
       setUser({ phone, nickname, isVerified: false });
       return { ok: true, msg: "" };

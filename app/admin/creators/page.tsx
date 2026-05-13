@@ -36,11 +36,12 @@ export default function AdminCreatorsPage() {
   const [manualResult, setManualResult] = useState<string | null>(null);
 
   const TOKEN = "investus2026";
+  const authHeader = { Authorization: `Bearer ${TOKEN}` };
 
   const load = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/admin/verifications?token=${TOKEN}`);
+      const res = await fetch("/api/admin/verifications", { headers: authHeader });
       const data = await res.json();
       setList(Array.isArray(data) ? data : []);
     } catch {
@@ -48,6 +49,7 @@ export default function AdminCreatorsPage() {
     } finally {
       setLoading(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -62,9 +64,9 @@ export default function AdminCreatorsPage() {
   const act = async (phone: string, action: "approve" | "reject") => {
     setActing(phone);
     try {
-      await fetch(`/api/admin/verifications?token=${TOKEN}`, {
+      await fetch("/api/admin/verifications", {
         method: "PATCH",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...authHeader },
         body: JSON.stringify({ phone, action }),
       });
       await load();
@@ -78,9 +80,9 @@ export default function AdminCreatorsPage() {
     if (!phone) return;
     setActing("manual");
     try {
-      await fetch(`/api/admin/verifications?token=${TOKEN}`, {
+      await fetch("/api/admin/verifications", {
         method: "PATCH",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...authHeader },
         body: JSON.stringify({ phone, action: "approve" }),
       });
       setManualResult(`✓ ${phone} 승인 완료`);

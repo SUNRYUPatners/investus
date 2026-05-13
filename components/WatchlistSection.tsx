@@ -1,7 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useWatchlist } from "@/hooks/useWatchlist";
-import { mockQuotes } from "@/lib/api";
+import { mockQuotes, type Quote } from "@/lib/api";
 import { Sparkline } from "./Sparkline";
 import { Star } from "lucide-react";
 
@@ -10,12 +11,34 @@ const DOWN = "#ff4d6d";
 
 export function WatchlistSection() {
   const { list, remove } = useWatchlist();
+  const [liveQuotes, setLiveQuotes] = useState<Quote[]>([]);
+
+  useEffect(() => {
+    // Read from the market-data cache that LiveMarket writes
+    const tryCache = () => {
+      try {
+        const cached = localStorage.getItem("market-data-cache");
+        if (cached) {
+          const d = JSON.parse(cached);
+          if (Array.isArray(d?.quotes)) setLiveQuotes(d.quotes);
+        }
+      } catch { /* ignore */ }
+    };
+    tryCache();
+    // Also re-read whenever the market data updates (storage event)
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === "market-data-cache") tryCache();
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
 
   if (list.length === 0) return null;
 
+  const allQuotes = liveQuotes.length > 0 ? liveQuotes : mockQuotes;
   const stocks = list
-    .map((sym) => mockQuotes.find((q) => q.symbol === sym))
-    .filter(Boolean) as typeof mockQuotes;
+    .map((sym) => allQuotes.find((q) => q.symbol === sym))
+    .filter(Boolean) as Quote[];
 
   return (
     <section className="px-4 pt-5">
