@@ -17,57 +17,36 @@ function yfHeaders() {
   };
 }
 
-// Wilshire 5000 Full Cap Index — historical chart API to get current + past values
+// S&P 500 monthly chart as Wilshire proxy (Wilshire 5000 not available on Yahoo Finance)
+// S&P 500 × 9.5 ≈ Wilshire 5000 index level; calibrated via W5000_CAP_FACTOR
 async function fetchWilshire(): Promise<{ now: number; q1ago: number; y1ago: number } | null> {
-  // Try Wilshire 5000 first, then use S&P 500 as proxy
-  for (const sym of ["%5EW5000", "%5EWILSHIRE5000"]) {
+  // Use S&P 500 directly — Wilshire 5000 tickers (^W5000, ^WILSHIRE5000) are unreliable
+  // query2 confirmed working from Vercel; query1 may block
+  for (const range of ["2y", "1y"]) {
     try {
-      const url = `${YF_BASE}/v8/finance/chart/${sym}?interval=1mo&range=2y`;
+      const url = `${YF_BASE}/v8/finance/chart/%5EGSPC?interval=1mo&range=${range}`;
       const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 8000);
+      const timer = setTimeout(() => ctrl.abort(), 6000);
       const res = await fetch(url, {
         headers: yfHeaders(),
         cache: "no-store",
         signal: ctrl.signal,
       });
       clearTimeout(timer);
-      if (!res.ok) throw new Error(`${sym} ${res.status}`);
+      if (!res.ok) throw new Error(`GSPC ${res.status}`);
       const json = await res.json();
       const closes: number[] = json?.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? [];
       const valid = closes.filter((v) => v != null && isFinite(v));
       if (valid.length < 4) throw new Error("insufficient data");
 
-      const now   = valid[valid.length - 1];
-      const q1ago = valid[valid.length - 4]  ?? valid[0]; // ~3 months back
-      const y1ago = valid[valid.length - 13] ?? valid[0]; // ~12 months back
-
+      const scale = 9.5;
+      const now   = valid[valid.length - 1]  * scale;
+      const q1ago = (valid[valid.length - 4]  ?? valid[0]) * scale;
+      const y1ago = (valid[valid.length - 13] ?? valid[0]) * scale;
       return { now, q1ago, y1ago };
     } catch { continue; }
   }
-
-  // Fall back: use S&P 500 as proxy
-  // S&P 500 represents ~80% of Wilshire 5000, scale by 9.5 to approximate Wilshire 5000 index
-  // (S&P at 5200 → Wilshire ≈ 49,400; total mkt cap ~$58T with W5000_CAP_FACTOR=1.183)
-  try {
-    const url = `${YF_BASE}/v8/finance/chart/%5EGSPC?interval=1mo&range=2y`;
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 8000);
-    const res = await fetch(url, { headers: yfHeaders(), cache: "no-store", signal: ctrl.signal });
-    clearTimeout(timer);
-    if (!res.ok) return null;
-    const json = await res.json();
-    const closes: number[] = json?.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? [];
-    const valid = closes.filter((v) => v != null && isFinite(v));
-    if (valid.length < 4) return null;
-
-    const scale = 9.5;
-    const now   = valid[valid.length - 1]  * scale;
-    const q1ago = (valid[valid.length - 4]  ?? valid[0]) * scale;
-    const y1ago = (valid[valid.length - 13] ?? valid[0]) * scale;
-    return { now, q1ago, y1ago };
-  } catch {
-    return null;
-  }
+  return null;
 }
 
 // Parse the last numeric value from a FRED CSV response (DATE,VALUE rows)
@@ -99,10 +78,10 @@ async function fetchFredGDP(): Promise<number | null> {
   }
 }
 
-// Calibration: maps Wilshire 5000 index value → approximate US total market cap in billions
-// Based on known reference: Q1 2025 Wilshire ≈ 46,500 → market cap ≈ $55,000B
-// (1 W5000 point ≈ $1.183B, calibrated 2025-Q1)
-const W5000_CAP_FACTOR = 1.183; // billion USD per W5000 index point
+// Calibration: S&P 500 × 9.5 → synthetic Wilshire level → × W5000_CAP_FACTOR → market cap (billions)
+// Reference: S&P at ~5800 (Q1 2025) → synthetic W5000 ≈ 55,100 → mkt cap ≈ $65T
+// (1 synthetic W5000 point ≈ $1.183B, calibrated 2025-Q1)
+const W5000_CAP_FACTOR = 1.183; // billion USD per synthetic W5000 point
 
 export async function GET() {
   try {

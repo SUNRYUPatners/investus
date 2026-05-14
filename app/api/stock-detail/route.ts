@@ -62,10 +62,11 @@ async function fetchV8Meta(yahooSym: string) {
 // ── Yahoo Finance v8 direct index fetch (matches market-data/route.ts) ───
 // Uses query2 only — confirmed working from Vercel IPs; query1 may block
 
-const INDEX_YF: Record<string, { yfSym: string; name: string }> = {
-  SPX:  { yfSym: "^GSPC", name: "S&P 500 Index"       },
-  COMP: { yfSym: "^IXIC", name: "NASDAQ Composite"     },
-  DJI:  { yfSym: "^DJI",  name: "Dow Jones Industrial" },
+const INDEX_YF: Record<string, { yfSym: string; name: string; isCurrency?: boolean }> = {
+  SPX:    { yfSym: "^GSPC",    name: "S&P 500 Index"       },
+  COMP:   { yfSym: "^IXIC",    name: "NASDAQ Composite"     },
+  DJI:    { yfSym: "^DJI",     name: "Dow Jones Industrial" },
+  USDKRW: { yfSym: "USDKRW=X", name: "USD/KRW", isCurrency: true },
 };
 
 async function fetchIndexDirect(rawSym: string) {
@@ -84,7 +85,7 @@ async function fetchIndexDirect(rawSym: string) {
     if (!res.ok) return null;
     const meta = (await res.json())?.chart?.result?.[0]?.meta as Record<string, unknown> | undefined;
     if (!meta?.regularMarketPrice) return null;
-    return { meta, name: idx.name };
+    return { meta, name: idx.name, isCurrency: idx.isCurrency };
   } catch {
     return null;
   }
@@ -152,14 +153,14 @@ export async function GET(req: NextRequest) {
     // Same URL pattern as market-data/route.ts (confirmed working from Vercel)
     const yfDirect = await fetchIndexDirect(rawSymbol);
     if (yfDirect) {
-      const { meta, name } = yfDirect;
+      const { meta, name, isCurrency } = yfDirect;
       const price = Number(meta.regularMarketPrice);
       const prev  = Number(meta.chartPreviousClose ?? meta.regularMarketPreviousClose ?? price);
       return saveAndRespond(rawSymbol, {
         symbol:        rawSymbol,
         name,
-        exchange:      "Index",
-        currency:      "USD",
+        exchange:      isCurrency ? "FX" : "Index",
+        currency:      isCurrency ? "KRW" : "USD",
         price,
         change:        price - prev,
         changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0,
