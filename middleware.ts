@@ -20,6 +20,8 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // api/ 경로는 제외 — Set-Cookie가 붙으면 Vercel CDN이 API 응답을 캐싱하지 않음
-  matcher: ["/((?!api/|_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|webp|ico|txt|xml)).*)"],
+  // /api/* 완전 제외 — Set-Cookie가 붙으면 Vercel CDN이 캐싱 안 함
+  matcher: [
+    "/((?!api(?:/|$)|_next/static|_next/image|favicon\\.ico|.*\\.(?:png|jpg|jpeg|svg|webp|ico|txt|xml)).*)",
+  ],
 };

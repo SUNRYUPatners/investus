@@ -8,7 +8,8 @@ import {
   type IndexQuote, type Quote, type FutureItem,
 } from "@/lib/api";
 
-export const revalidate = 60;
+// Next.js ISR 비활성 — Cache-Control 헤더를 직접 관리
+export const dynamic = "force-dynamic";
 
 // ── In-memory cache ───────────────────────────────────────────────────────
 // 장 마감 중: 캐시 무기한 서빙 (외부 API 호출 없음)
