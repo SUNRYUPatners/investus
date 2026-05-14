@@ -21,6 +21,76 @@ const YF_SYM: Record<string, string> = {
   BTC: "BTC-USD", ETH: "ETH-USD",
 };
 
+// Futures → Stooq symbol (historical CSV, no rate limits, no API key)
+const STOOQ_SYM: Record<string, string> = {
+  ES: "es.f", NQ: "nq.f", YM: "ym.f", RTY: "rty.f",
+  CL: "cl.f", NG: "ng.f", GC: "gc.f", SI: "si.f", HG: "hg.f",
+  ZN: "zn.f", ZB: "zb.f", "6E": "6e.f", "6J": "6j.f",
+  ZC: "zc.f", ZW: "zw.f", ZS: "zs.f",
+  BTC: "@btcusd", ETH: "@ethusd",
+};
+// Some Stooq futures are in cents
+const STOOQ_DIVISOR: Record<string, number> = { SI: 100, HG: 100 };
+
+const STOOQ_INTERVAL: Record<string, string> = {
+  "1D": "d", "YTD": "d", "1Y": "d", "5Y": "w", "10Y": "m", "ALL": "m",
+};
+
+async function fetchStooqChart(sym: string, period: string): Promise<ChartResult | null> {
+  const stooqSym = STOOQ_SYM[sym];
+  if (!stooqSym) return null;
+  const interval = STOOQ_INTERVAL[period];
+  if (!interval) return null;
+
+  const divisor = STOOQ_DIVISOR[sym] ?? 1;
+  const now = new Date();
+  const d2 = now.toISOString().slice(0, 10).replace(/-/g, "");
+  const d1Offset: Record<string, number> = {
+    "1D": 5, "YTD": 365, "1Y": 370, "5Y": 1830, "10Y": 3660, "ALL": 36500,
+  };
+  const d1Date = new Date(now);
+  d1Date.setDate(d1Date.getDate() - (d1Offset[period] ?? 3660));
+  const d1 = d1Date.toISOString().slice(0, 10).replace(/-/g, "");
+
+  try {
+    const url = `https://stooq.com/q/d/l/?s=${encodeURIComponent(stooqSym)}&d1=${d1}&d2=${d2}&i=${interval}`;
+    const ctrl = new AbortController();
+    const tid  = setTimeout(() => ctrl.abort(), 8_000);
+    const res  = await fetch(url, {
+      headers: { "User-Agent": UA_YF, Accept: "text/csv,*/*" },
+      cache: "no-store",
+      signal: ctrl.signal,
+    });
+    clearTimeout(tid);
+    if (!res.ok) return null;
+    const text  = await res.text();
+    const lines = text.trim().split("\n").slice(1); // skip header
+    if (lines.length < 2) return null;
+
+    const points = lines
+      .map((line) => {
+        const cols = line.split(",");
+        // Date, Open, High, Low, Close, Volume
+        if (cols.length < 5) return null;
+        const dateStr = cols[0].trim();
+        const close   = parseFloat(cols[4]) / divisor;
+        if (!dateStr || isNaN(close) || close <= 0) return null;
+        const ts = Math.floor(new Date(dateStr + "T16:00:00Z").getTime() / 1000);
+        return { ts, close, volume: parseInt(cols[5] ?? "0") || 0 };
+      })
+      .filter((p): p is { ts: number; close: number; volume: number } => p !== null);
+
+    if (points.length < 2) return null;
+
+    return {
+      symbol: sym,
+      chartPreviousClose: points[0].close,
+      regularMarketPrice: points[points.length - 1].close,
+      points,
+    };
+  } catch { return null; }
+}
+
 const YF_RANGE_INTERVAL: Record<string, { range: string; interval: string }> = {
   "1D":  { range: "1d",  interval: "5m"  },
   "YTD": { range: "ytd", interval: "1d"  },
@@ -32,19 +102,52 @@ const YF_RANGE_INTERVAL: Record<string, { range: string; interval: string }> = {
 
 const UA_YF = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
+// Yahoo Finance crumb cache (in-memory, ~1h TTL)
+let _yfCrumb: { crumb: string; cookie: string; at: number } | null = null;
+
+async function getYahooCrumb(): Promise<{ crumb: string; cookie: string } | null> {
+  if (_yfCrumb && Date.now() - _yfCrumb.at < 50 * 60_000) return _yfCrumb;
+  try {
+    const r1  = await fetch("https://fc.yahoo.com/", {
+      headers: { "User-Agent": UA_YF },
+      redirect: "follow",
+      cache: "no-store",
+    });
+    const setCookies = r1.headers.getSetCookie?.() ?? [];
+    const cookie = setCookies.map((c) => c.split(";")[0]).join("; ");
+
+    const r2  = await fetch("https://query1.finance.yahoo.com/v1/test/getcrumb", {
+      headers: { "User-Agent": UA_YF, Cookie: cookie, Accept: "*/*" },
+      cache: "no-store",
+    });
+    if (!r2.ok) return null;
+    const crumb = (await r2.text()).trim();
+    if (!crumb || crumb.length < 3) return null;
+    _yfCrumb = { crumb, cookie, at: Date.now() };
+    return _yfCrumb;
+  } catch { return null; }
+}
+
 async function fetchYahooChart(rawSym: string, period: string): Promise<ChartResult | null> {
   const yfSym = YF_SYM[rawSym] ?? rawSym;
   const cfg   = YF_RANGE_INTERVAL[period];
   if (!cfg) return null;
 
+  const auth  = await getYahooCrumb();
   const bases = ["https://query1.finance.yahoo.com", "https://query2.finance.yahoo.com"];
+
   for (const base of bases) {
     try {
-      const url = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=${cfg.interval}&range=${cfg.range}&includePrePost=false`;
+      const crumbParam = auth ? `&crumb=${encodeURIComponent(auth.crumb)}` : "";
+      const url = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=${cfg.interval}&range=${cfg.range}&includePrePost=false${crumbParam}`;
       const ctrl = new AbortController();
       const tid  = setTimeout(() => ctrl.abort(), 8_000);
       const res  = await fetch(url, {
-        headers: { "User-Agent": UA_YF, Accept: "application/json" },
+        headers: {
+          "User-Agent": UA_YF,
+          Accept: "application/json",
+          ...(auth ? { Cookie: auth.cookie } : {}),
+        },
         cache: "no-store",
         signal: ctrl.signal,
       });
@@ -221,12 +324,16 @@ export async function GET(req: NextRequest) {
   const isFutureOrCrypto = symbol in YF_SYM;
 
   if (isFutureOrCrypto) {
-    // Futures/crypto: Yahoo Finance first (has GC=F, NQ=F, BTC-USD support),
-    // then TwelveData as fallback (GC1!, NQ1!, BTC/USD)
+    // Futures/crypto order: Yahoo Finance → Stooq (no rate limit, no key) → TwelveData
     const yahoo = await fetchYahooChart(symbol, period);
     if (yahoo) {
       _cache.set(cKey, { data: yahoo, at: Date.now() });
       return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
+    }
+    const stooq = await fetchStooqChart(symbol, period);
+    if (stooq) {
+      _cache.set(cKey, { data: stooq, at: Date.now() });
+      return NextResponse.json(stooq, { headers: { "Cache-Control": cc } });
     }
     const twelve = await fetchTwelveData(symbol, period);
     if (twelve) {
