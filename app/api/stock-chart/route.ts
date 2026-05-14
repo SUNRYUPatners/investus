@@ -130,17 +130,22 @@ export async function GET(req: NextRequest) {
   const open   = isMarketOpen();
   const ttl    = LIVE_TTL[period] ?? 60_000;
 
+  // CDN 캐시 헤더 (장 마감: 12시간+24h stale, 장 중: TTL+2min stale)
+  const cc = open
+    ? `public, s-maxage=${Math.floor(ttl / 1000)}, stale-while-revalidate=120`
+    : "public, s-maxage=43200, stale-while-revalidate=86400";
+
   // 장 마감 중: 1D 차트는 전날 종가로 충분 → 캐시 무기한
   // 장 중 + 장기 차트(YTD 이상): TTL 기반 갱신
   if (cached && (!open && period === "1D" || Date.now() - cached.at < ttl)) {
-    return NextResponse.json(cached.data);
+    return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
   }
 
   // 1. TwelveData (primary — reliable, not blocked)
   const twelve = await fetchTwelveData(symbol, period);
   if (twelve) {
     _cache.set(cKey, { data: twelve, at: Date.now() });
-    return NextResponse.json(twelve);
+    return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
   }
 
   // 2. Finnhub minimal chart (only for 1D, uses free /quote endpoint)
@@ -148,12 +153,12 @@ export async function GET(req: NextRequest) {
     const minimal = await fetchFinnhubMinimalChart(symbol);
     if (minimal) {
       _cache.set(cKey, { data: minimal, at: Date.now() });
-      return NextResponse.json(minimal);
+      return NextResponse.json(minimal, { headers: { "Cache-Control": cc } });
     }
   }
 
   // 3. Return stale cache rather than 503
-  if (cached) return NextResponse.json(cached.data);
+  if (cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
 
-  return NextResponse.json({ error: "no data" }, { status: 503 });
+  return NextResponse.json({ error: "no data" }, { status: 503, headers: { "Cache-Control": "no-store" } });
 }

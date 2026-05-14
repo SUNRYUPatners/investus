@@ -12,8 +12,12 @@ const _cache = new Map<string, { data: Record<string, unknown>; at: number }>();
 const LIVE_TTL = 60_000; // 60 s
 
 function saveAndRespond(symbol: string, data: Record<string, unknown>) {
+  const isOpen = isMarketOpen();
+  const cc = isOpen
+    ? "public, s-maxage=55, stale-while-revalidate=120"
+    : "public, s-maxage=3600, stale-while-revalidate=86400";
   _cache.set(symbol, { data, at: Date.now() });
-  return NextResponse.json(data);
+  return NextResponse.json(data, { headers: { "Cache-Control": cc } });
 }
 
 const UA =

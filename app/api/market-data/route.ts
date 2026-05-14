@@ -187,41 +187,37 @@ export async function GET(req: Request) {
     fetchCoinGecko(),
     // Commodity futures: Stooq batched (5/chunk, 200ms gap) → YF v8 fallback
     // Batching prevents Stooq anti-bot blocking from same Vercel IP
+    // Commodity futures: Stooq + YF run simultaneously per symbol, max 5s total
+    // Stooq/YF may be blocked on Vercel IPs — parallel fetch + master timeout
     (async () => {
       type CommodityEntry = { key: string; price: number; change: number; changePercent: number };
-      const stooqMap  = new Map<string, CommodityEntry>();
-      const syms      = Object.entries(COMMODITY_STOOQ);
-      const CHUNK     = 5;
-      const GAP       = 200; // ms between chunks
+      const comMap = new Map<string, CommodityEntry>();
 
-      for (let i = 0; i < syms.length; i += CHUNK) {
-        const chunk = syms.slice(i, i + CHUNK);
-        const results = await Promise.allSettled(
-          chunk.map(async ([key, stooqSym]) => {
-            const r = await fetchStooqFuture(stooqSym);
-            return r ? ({ key, ...r } as CommodityEntry) : null;
-          })
-        );
-        for (const r of results) {
-          if (r.status === "fulfilled" && r.value) stooqMap.set(r.value.key, r.value);
-        }
-        if (i + CHUNK < syms.length) await new Promise<void>((res) => setTimeout(res, GAP));
-      }
+      const fetchWithTimeout = async (key: string, stooqSym: string): Promise<CommodityEntry | null> => {
+        const yfSym = COMMODITY_FUTURES_YF[key];
+        const [stooqR, yfR] = await Promise.allSettled([
+          fetchStooqFuture(stooqSym),
+          yfSym ? fetchFutureV8(yfSym) : Promise.resolve(null),
+        ]);
+        const r =
+          (stooqR.status === "fulfilled" && stooqR.value) ? stooqR.value :
+          (yfR.status   === "fulfilled" && yfR.value)     ? yfR.value     : null;
+        return r ? { key, ...r } : null;
+      };
 
-      // YF v8 fallback for symbols Stooq didn't return
-      const missing = Object.entries(COMMODITY_FUTURES_YF).filter(([k]) => !stooqMap.has(k));
-      if (missing.length > 0) {
-        const yfResults = await Promise.allSettled(
-          missing.map(async ([key, yfSym]) => {
-            const r = await fetchFutureV8(yfSym);
-            return r ? ({ key, ...r } as CommodityEntry) : null;
-          })
-        );
-        for (const r of yfResults) {
-          if (r.status === "fulfilled" && r.value) stooqMap.set(r.value.key, r.value);
-        }
-      }
-      return [...stooqMap.values()];
+      // Master 5s timeout — whatever resolves by then is used; rest falls back to ETF change%
+      const masterTimeout = new Promise<CommodityEntry[]>((res) => setTimeout(() => res([]), 5_000));
+      const allFetches    = Promise.allSettled(
+        Object.entries(COMMODITY_STOOQ).map(([key, stooqSym]) => fetchWithTimeout(key, stooqSym))
+      ).then((results) => {
+        const out: CommodityEntry[] = [];
+        for (const r of results) if (r.status === "fulfilled" && r.value) out.push(r.value);
+        return out;
+      });
+
+      const entries = await Promise.race([allFetches, masterTimeout]);
+      for (const e of entries) comMap.set(e.key, e);
+      return [...comMap.values()];
     })(),
   ]);
 
@@ -359,7 +355,10 @@ export async function GET(req: Request) {
 
   // 실데이터가 하나도 없으면 503 — 클라이언트가 이전 캐시 유지
   if (quotes.length === 0 && indices.length === 0) {
-    return NextResponse.json({ error: "no live data" }, { status: 503 });
+    return NextResponse.json({ error: "no live data" }, {
+      status: 503,
+      headers: { "Cache-Control": "no-store" },
+    });
   }
 
   const payload: CachePayload = { indices, quotes, futures, liveAt: Date.now() };
@@ -371,5 +370,13 @@ export async function GET(req: Request) {
     _cache = { data: payload, at: isComplete ? Date.now() : Date.now() - (LIVE_TTL - 15_000) };
   }
 
-  return NextResponse.json(payload);
+  // CDN 캐시 — 장 마감 시 1시간(+24h stale), 장 중 55초(+2min stale)
+  // Vercel 엣지 CDN이 캐시하므로 콜드스타트/인스턴스 차이 없이 전세계 동일 응답
+  const ccHeader = open
+    ? "public, s-maxage=55, stale-while-revalidate=120"
+    : "public, s-maxage=3600, stale-while-revalidate=86400";
+
+  return NextResponse.json(payload, {
+    headers: { "Cache-Control": ccHeader },
+  });
 }

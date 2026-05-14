@@ -160,13 +160,17 @@ export async function fetchFutureV8(
   for (const base of [YF_BASE, YF_BASE2]) {
     for (const range of ["5d", "1mo"]) {
       try {
+        const ctrl = new AbortController();
+        const tid  = setTimeout(() => ctrl.abort(), 3_000);
         const url =
           `${base}/v8/finance/chart/${encodeURIComponent(yahooSym)}` +
           `?interval=1d&range=${range}&includePrePost=false`;
         const res = await fetch(url, {
           headers: yfHeaders(),
           cache: "no-store",
+          signal: ctrl.signal,
         });
+        clearTimeout(tid);
         if (!res.ok) continue;
         const json = await res.json();
         const meta = json?.chart?.result?.[0]?.meta;
