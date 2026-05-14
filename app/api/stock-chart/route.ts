@@ -12,12 +12,13 @@ const TWELVE_FUTURES: Record<string, string> = {
 // Crypto → TwelveData pair format
 const TWELVE_CRYPTO: Record<string, string> = { BTC: "BTC/USD", ETH: "ETH/USD" };
 
-// Futures/Crypto → Yahoo Finance symbol format (fallback)
+// Futures/Crypto → Yahoo Finance symbol format
+// For index futures, use the underlying index (^GSPC etc.) — longer history than ES=F
 const YF_SYM: Record<string, string> = {
-  ES: "ES=F", NQ: "NQ=F", YM: "YM=F", RTY: "RTY=F",
-  CL: "CL=F", NG: "NG=F", GC: "GC=F", SI: "SI=F", HG: "HG=F",
-  ZN: "ZN=F", ZB: "ZB=F", "6E": "6E=F", "6J": "6J=F",
-  ZC: "ZC=F", ZW: "ZW=F", ZS: "ZS=F",
+  ES: "^GSPC", NQ: "^IXIC", YM: "^DJI", RTY: "^RUT",
+  CL: "CL=F",  NG: "NG=F",  GC: "GC=F", SI: "SI=F", HG: "HG=F",
+  ZN: "ZN=F",  ZB: "ZB=F",  "6E": "EURUSD=X", "6J": "JPY=X",
+  ZC: "ZC=F",  ZW: "ZW=F",  ZS: "ZS=F",
   BTC: "BTC-USD", ETH: "ETH-USD",
 };
 
