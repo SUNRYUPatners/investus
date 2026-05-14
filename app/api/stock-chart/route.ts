@@ -2,29 +2,39 @@ import { NextRequest, NextResponse } from "next/server";
 import { isMarketOpen } from "@/lib/marketHours";
 
 // ── Symbol maps ───────────────────────────────────────────────────────────────
-// Futures → TwelveData ETF proxy (continuous contracts not supported on free plan)
-// ETFs track the underlying closely enough for 10Y trend charts
+// Futures + Index cards → TwelveData ETF proxy (continuous contracts not supported on free plan)
 const TWELVE_FUTURES: Record<string, string> = {
-  ES: "SPY",  NQ: "QQQ",  YM: "DIA",  RTY: "IWM",
-  CL: "USO",  NG: "UNG",  GC: "GLD",  SI: "SLV",  HG: "COPX",
+  // Index futures + cards (ETF proxy)
+  ES: "SPY",  NQ: "QQQ",   YM: "DIA",  RTY: "IWM",
+  SPX: "SPY", COMP: "QQQ", DJI: "DIA",
+  // Commodities
+  CL: "USO",  NG: "UNG",   GC: "GLD",  SI: "SLV",  HG: "COPX",
   ZN: "IEF",  ZB: "TLT",  "6E": "FXE", "6J": "FXY",
-  ZC: "CORN", ZW: "WEAT", ZS: "SOYB",
+  ZC: "CORN", ZW: "WEAT",  ZS: "SOYB",
+  // Forex index card
+  USDKRW: "USD/KRW",
 };
 // Crypto → TwelveData pair format
 const TWELVE_CRYPTO: Record<string, string> = { BTC: "BTC/USD", ETH: "ETH/USD" };
 
-// Futures/Crypto → Yahoo Finance symbol format
-// For index futures, use the underlying index (^GSPC etc.) — longer history than ES=F
+// Futures/Crypto/Index cards → Yahoo Finance symbol format
 const YF_SYM: Record<string, string> = {
+  // Index cards (direct index tickers)
+  SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI", USDKRW: "USDKRW=X",
+  // Index futures (underlying index — better history than ES=F)
   ES: "^GSPC", NQ: "^IXIC", YM: "^DJI", RTY: "^RUT",
+  // Commodities
   CL: "CL=F",  NG: "NG=F",  GC: "GC=F", SI: "SI=F", HG: "HG=F",
   ZN: "ZN=F",  ZB: "ZB=F",  "6E": "EURUSD=X", "6J": "JPY=X",
   ZC: "ZC=F",  ZW: "ZW=F",  ZS: "ZS=F",
   BTC: "BTC-USD", ETH: "ETH-USD",
 };
 
-// Futures → Stooq symbol (historical CSV, no rate limits, no API key)
+// Futures/Indices → Stooq symbol (historical CSV, no rate limits, no API key)
 const STOOQ_SYM: Record<string, string> = {
+  // Index cards
+  SPX: "^spx", COMP: "^ixic", DJI: "^dji",
+  // Index futures
   ES: "es.f", NQ: "nq.f", YM: "ym.f", RTY: "rty.f",
   CL: "cl.f", NG: "ng.f", GC: "gc.f", SI: "si.f", HG: "hg.f",
   ZN: "zn.f", ZB: "zb.f", "6E": "6e.f", "6J": "6j.f",

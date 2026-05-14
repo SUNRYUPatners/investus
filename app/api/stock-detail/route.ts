@@ -109,7 +109,44 @@ export async function GET(req: NextRequest) {
   const yahooSymbol     = toYahoo(rawSymbol);
   const isIndexOrFuture = yahooSymbol !== rawSymbol;
 
+  // ETF proxy for major US indices (Finnhub is reliable; Yahoo often blocked from Vercel)
+  const INDEX_ETF: Record<string, { etf: string; factor: number; name: string; exchange: string }> = {
+    SPX:  { etf: "SPY",  factor: 10.03, name: "S&P 500 Index",       exchange: "Index" },
+    COMP: { etf: "QQQ",  factor: 36.83, name: "NASDAQ Composite",     exchange: "Index" },
+    DJI:  { etf: "DIA",  factor: 100,   name: "Dow Jones Industrial", exchange: "Index" },
+  };
+
   try {
+    // ── 0) Finnhub ETF proxy for major indices (SPX/COMP/DJI) ────────────
+    const idxMeta = INDEX_ETF[rawSymbol];
+    if (idxMeta) {
+      const etfQ = await fetchFinnhubRawQuote(idxMeta.etf);
+      if (etfQ && etfQ.c > 0) {
+        const f = idxMeta.factor;
+        return saveAndRespond(rawSymbol, {
+          symbol:        rawSymbol,
+          name:          idxMeta.name,
+          exchange:      idxMeta.exchange,
+          currency:      "USD",
+          price:         etfQ.c * f,
+          change:        etfQ.d * f,
+          changePercent: etfQ.dp,
+          open:          etfQ.o ? etfQ.o * f : null,
+          high:          etfQ.h ? etfQ.h * f : null,
+          low:           etfQ.l ? etfQ.l * f : null,
+          volume:        null,
+          week52High:    null,
+          week52Low:     null,
+          pe:            null,
+          marketCap:     null,
+          avgVolume:     null,
+          dividendYield: null,
+          beta:          null,
+          eps:           null,
+        });
+      }
+    }
+
     // ── 1) Finnhub path: regular US stocks ──────────────────────────────
     if (!isIndexOrFuture) {
       const [rawQ, profile, metrics] = await Promise.all([
