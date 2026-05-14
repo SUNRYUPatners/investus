@@ -2,12 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { isMarketOpen } from "@/lib/marketHours";
 
 // ── Symbol maps ───────────────────────────────────────────────────────────────
-// Futures → TwelveData format (continuous contract)
+// Futures → TwelveData ETF proxy (continuous contracts not supported on free plan)
+// ETFs track the underlying closely enough for 10Y trend charts
 const TWELVE_FUTURES: Record<string, string> = {
-  ES: "ES1!", NQ: "NQ1!", YM: "YM1!", RTY: "RTY1!",
-  CL: "CL1!", NG: "NG1!", GC: "GC1!", SI: "SI1!", HG: "HG1!",
-  ZN: "ZN1!", ZB: "ZB1!", "6E": "6E1!", "6J": "6J1!",
-  ZC: "ZC1!", ZW: "ZW1!", ZS: "ZS1!",
+  ES: "SPY",  NQ: "QQQ",  YM: "DIA",  RTY: "IWM",
+  CL: "USO",  NG: "UNG",  GC: "GLD",  SI: "SLV",  HG: "COPX",
+  ZN: "IEF",  ZB: "TLT",  "6E": "FXE", "6J": "FXY",
+  ZC: "CORN", ZW: "WEAT", ZS: "SOYB",
 };
 // Crypto → TwelveData pair format
 const TWELVE_CRYPTO: Record<string, string> = { BTC: "BTC/USD", ETH: "ETH/USD" };
@@ -331,7 +332,13 @@ export async function GET(req: NextRequest) {
   const isFutureOrCrypto = symbol in YF_SYM;
 
   if (isFutureOrCrypto) {
-    // Futures/crypto order: Yahoo Finance → Stooq (no rate limit, no key) → TwelveData
+    // Futures/crypto: TwelveData first (via ETF proxy: GC→GLD, ES→SPY, BTC/USD)
+    // then Yahoo Finance (GC=F, ^GSPC, BTC-USD) as fallback
+    const twelve = await fetchTwelveData(symbol, period);
+    if (twelve) {
+      _cache.set(cKey, { data: twelve, at: Date.now() });
+      return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
+    }
     const yahoo = await fetchYahooChart(symbol, period);
     if (yahoo) {
       _cache.set(cKey, { data: yahoo, at: Date.now() });
@@ -341,11 +348,6 @@ export async function GET(req: NextRequest) {
     if (stooq) {
       _cache.set(cKey, { data: stooq, at: Date.now() });
       return NextResponse.json(stooq, { headers: { "Cache-Control": cc } });
-    }
-    const twelve = await fetchTwelveData(symbol, period);
-    if (twelve) {
-      _cache.set(cKey, { data: twelve, at: Date.now() });
-      return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
     }
   } else {
     // Regular stocks: TwelveData first (reliable, no IP block),
