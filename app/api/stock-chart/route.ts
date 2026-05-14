@@ -2,17 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 import { isMarketOpen } from "@/lib/marketHours";
 
 // ── Symbol maps ───────────────────────────────────────────────────────────────
-// Futures + Index cards → TwelveData ETF proxy (continuous contracts not supported on free plan)
+// Futures → TwelveData ETF proxy (continuous contracts not supported on free plan)
+// Index cards (SPX/COMP/DJI) intentionally NOT mapped here — TwelveData supports
+// them directly under their own symbol and returns the correct price level.
 const TWELVE_FUTURES: Record<string, string> = {
-  // Index futures + cards (ETF proxy)
-  ES: "SPY",  NQ: "QQQ",   YM: "DIA",  RTY: "IWM",
-  SPX: "SPY", COMP: "QQQ", DJI: "DIA",
+  // Index futures (ETF proxy — price scale similar enough for trend charts)
+  ES: "SPY",  NQ: "QQQ",  YM: "DIA",  RTY: "IWM",
   // Commodities
-  CL: "USO",  NG: "UNG",   GC: "GLD",  SI: "SLV",  HG: "COPX",
+  CL: "USO",  NG: "UNG",  GC: "GLD",  SI: "SLV",  HG: "COPX",
   ZN: "IEF",  ZB: "TLT",  "6E": "FXE", "6J": "FXY",
-  ZC: "CORN", ZW: "WEAT",  ZS: "SOYB",
-  // Forex index card
-  USDKRW: "USD/KRW",
+  ZC: "CORN", ZW: "WEAT", ZS: "SOYB",
 };
 // Crypto → TwelveData pair format
 const TWELVE_CRYPTO: Record<string, string> = { BTC: "BTC/USD", ETH: "ETH/USD" };
@@ -309,22 +308,26 @@ async function fetchFinnhubMinimalChart(symbol: string): Promise<ChartResult | n
     );
     if (!res.ok) return null;
     const q = await res.json();
-    if (!q.c || q.c <= 0) return null;
+    // Use c (live) if available; fall back to pc (prev close) when market is closed
+    const livePrice = q.c && q.c > 0 ? q.c : null;
+    const basePrice = livePrice ?? q.pc;
+    if (!basePrice || basePrice <= 0) return null;
 
     // Build real 3-point 1D chart from real Finnhub data
     const now = Math.floor(Date.now() / 1000);
     const est = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
     est.setHours(9, 30, 0, 0);
     const openTs = Math.floor(est.getTime() / 1000);
+    const openPrice = (livePrice ? (q.o || q.c) : q.pc) * scale;
 
     return {
       symbol,
       chartPreviousClose: q.pc ? q.pc * scale : null,
-      regularMarketPrice: q.c  * scale,
+      regularMarketPrice: basePrice * scale,
       points: [
-        { ts: openTs - 86400, close: (q.pc || q.c) * scale, volume: 0 }, // prev close
-        { ts: openTs,         close: (q.o  || q.c) * scale, volume: 0 }, // today open
-        { ts: now,            close:  q.c           * scale, volume: 0 }, // current price
+        { ts: openTs - 86400, close: (q.pc || basePrice) * scale, volume: 0 },
+        { ts: openTs,         close: openPrice,                    volume: 0 },
+        { ts: now,            close: basePrice * scale,            volume: 0 },
       ],
     };
   } catch { return null; }
