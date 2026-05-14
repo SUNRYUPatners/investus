@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { toYahoo } from "@/lib/symbolMap";
+
+export const dynamic = "force-dynamic";
 import {
   fetchFinnhubRawQuote,
   fetchFinnhubProfile,
@@ -41,7 +43,7 @@ async function fetchV8Meta(yahooSym: string) {
           `?interval=1d&range=${range}&includePrePost=false`;
         const res = await fetch(url, {
           headers: { "User-Agent": UA, Accept: "application/json" },
-          next: { revalidate: 60 },
+          
         });
         if (!res.ok) continue;
         const json   = await res.json();
@@ -76,7 +78,7 @@ async function fetchV7Quote(yahooSym: string) {
         `${base}/v7/finance/quote?symbols=${encodeURIComponent(yahooSym)}&fields=${fields}`;
       const res = await fetch(url, {
         headers: { "User-Agent": UA, Accept: "application/json" },
-        next: { revalidate: 60 },
+        
       });
       if (!res.ok) continue;
       const json = await res.json();
