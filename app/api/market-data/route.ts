@@ -355,12 +355,9 @@ export async function GET(req: Request) {
 
   const payload: CachePayload = { indices, quotes, futures, liveAt: Date.now() };
 
-  // 데이터가 충분할 때만 캐시 — 불완전한 결과를 55초간 서빙하는 것을 방지
-  // indices > 1: 원달러 외 지수가 있어야 함 / futures > 10: 절반 이상 로드되어야 함
+  // 완전한 데이터: 55초 캐시 / 불완전: 15초 캐시 (rate limit 방지 + 빠른 재시도)
   const isComplete = quotes.length > 0 && indices.length > 1 && futures.length >= 10;
-  if (isComplete) {
-    _cache = { data: payload, at: Date.now() };
-  }
+  _cache = { data: payload, at: isComplete ? Date.now() : Date.now() - (CACHE_TTL - 15_000) };
 
   return NextResponse.json(payload);
 }

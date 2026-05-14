@@ -81,15 +81,16 @@ export default function StockPage({
     const cacheKey = `stock-detail-${upper}`;
 
     // Load cached detail first — prevents skeleton flash on revisit
+    let hasCached = false;
     try {
-      const cached = localStorage.getItem(cacheKey);
-      if (cached) {
-        const d = JSON.parse(cached) as Detail;
-        if (d?.price) { setDetail(d); setDetailLoading(false); }
+      const raw = localStorage.getItem(cacheKey);
+      if (raw) {
+        const d = JSON.parse(raw) as Detail;
+        if (d?.price) { setDetail(d); setDetailLoading(false); hasCached = true; }
       }
     } catch { /* ignore */ }
 
-    setDetailLoading(true);
+    if (!hasCached) setDetailLoading(true); // only show spinner if nothing cached
     setDetailError(false);
     fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`)
       .then((r) => { if (!r.ok) throw new Error("no data"); return r.json(); })

@@ -6,6 +6,15 @@ import {
   fetchFinnhubMetrics,
 } from "@/lib/finnhub";
 
+// Server-side cache — avoids hammering Finnhub/Yahoo on every navigation
+const _cache = new Map<string, { data: Record<string, unknown>; at: number }>();
+const CACHE_TTL = 60_000; // 60 s
+
+function saveAndRespond(symbol: string, data: Record<string, unknown>) {
+  _cache.set(symbol, { data, at: Date.now() });
+  return NextResponse.json(data);
+}
+
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
@@ -80,6 +89,12 @@ export async function GET(req: NextRequest) {
   const rawSymbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase();
   if (!rawSymbol) return NextResponse.json({ error: "no symbol" }, { status: 400 });
 
+  // Serve from server-side cache if fresh
+  const cached = _cache.get(rawSymbol);
+  if (cached && Date.now() - cached.at < CACHE_TTL) {
+    return NextResponse.json(cached.data);
+  }
+
   const yahooSymbol     = toYahoo(rawSymbol);
   const isIndexOrFuture = yahooSymbol !== rawSymbol;
 
@@ -93,7 +108,7 @@ export async function GET(req: NextRequest) {
       ]);
 
       if (rawQ && rawQ.c > 0) {
-        return NextResponse.json({
+        return saveAndRespond(rawSymbol, {
           symbol:        rawSymbol,
           name:          profile?.name        ?? rawSymbol,
           exchange:      profile?.exchange    ?? "US",
@@ -126,7 +141,7 @@ export async function GET(req: NextRequest) {
     if (v7q) {
       const prev = Number(v7q.regularMarketPreviousClose ?? v7q.regularMarketPrice ?? 0);
       const cur  = Number(v7q.regularMarketPrice ?? 0);
-      return NextResponse.json({
+      return saveAndRespond(rawSymbol, {
         symbol:        rawSymbol,
         name:          String(v7q.longName ?? v7q.shortName ?? rawSymbol),
         exchange:      String(v7q.fullExchangeName ?? v7q.exchange ?? "US"),
@@ -151,6 +166,8 @@ export async function GET(req: NextRequest) {
 
     // ── 3) Yahoo Finance v8 chart meta — last resort ─────────────────────
     if (!v8) {
+      // Serve stale cache rather than 404 — user sees something instead of error
+      if (cached) return NextResponse.json(cached.data);
       return NextResponse.json({ error: "not found" }, { status: 404 });
     }
 
@@ -158,7 +175,7 @@ export async function GET(req: NextRequest) {
     const cur  = Number(meta.regularMarketPrice ?? 0);
     const prev = Number(meta.chartPreviousClose ?? meta.regularMarketPreviousClose ?? cur);
 
-    return NextResponse.json({
+    return saveAndRespond(rawSymbol, {
       symbol:        String(meta.symbol    ?? rawSymbol),
       name:          String(meta.longName  ?? meta.shortName ?? rawSymbol),
       exchange:      String(meta.fullExchangeName ?? meta.exchangeName ?? ""),
@@ -181,6 +198,8 @@ export async function GET(req: NextRequest) {
     });
   } catch (e) {
     console.error("[stock-detail]", rawSymbol, e);
+    // Serve stale cache on error — user sees yesterday's data instead of error
+    if (cached) return NextResponse.json(cached.data);
     return NextResponse.json({ error: "fetch failed" }, { status: 503 });
   }
 }

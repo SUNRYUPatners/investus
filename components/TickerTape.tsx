@@ -1,6 +1,7 @@
-import type { Quote } from "@/lib/api";
+"use client";
 
-type Props = { quotes: Quote[] };
+import { useEffect, useState } from "react";
+import type { Quote } from "@/lib/api";
 
 function TickerItem({ q }: { q: Quote }) {
   const pos = q.changePercent >= 0;
@@ -22,8 +23,25 @@ function TickerItem({ q }: { q: Quote }) {
   );
 }
 
-export function TickerTape({ quotes }: Props) {
-  const items = [...quotes, ...quotes]; // duplicate for seamless loop
+export function TickerTape({ fallback }: { fallback: Quote[] }) {
+  const [quotes, setQuotes] = useState<Quote[]>(fallback);
+
+  useEffect(() => {
+    // Sync from localStorage populated by LiveMarket
+    const sync = () => {
+      try {
+        const raw = localStorage.getItem("market-data-cache");
+        if (!raw) return;
+        const d = JSON.parse(raw) as { quotes?: Quote[] };
+        if (Array.isArray(d?.quotes) && d.quotes.length > 0) setQuotes(d.quotes);
+      } catch { /* ignore */ }
+    };
+    sync();
+    window.addEventListener("storage", sync);
+    return () => window.removeEventListener("storage", sync);
+  }, []);
+
+  const items = [...quotes, ...quotes];
 
   return (
     <div
