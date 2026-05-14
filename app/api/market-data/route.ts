@@ -179,49 +179,10 @@ export async function GET(req: Request) {
   const token = process.env.FINNHUB_API_KEY ?? "";
 
   const stockSymbols = mockQuotes.map((q) => q.symbol);
-  // Fetch stocks + all ETF proxies in one Finnhub batch (60 calls/min limit)
-  // NOTE: ETF_PROXY_SYMS removed from batch — reduces Finnhub calls so rate-limit is less likely
-  // ETF proxies for indices (SPY/QQQ/DIA) are now fetched via Yahoo Finance directly
   const cryptoFHSyms = Object.values(CRYPTO_FH);
 
-  // Yahoo Finance direct index fetch — used when Finnhub ETF proxies are rate-limited
-  const fetchYFIndexDirect = async (): Promise<Map<string, ETFQuote>> => {
-    const out = new Map<string, ETFQuote>();
-    const YF_INDEX_MAP: Record<string, string> = {
-      SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI",
-    };
-    await Promise.allSettled(
-      Object.entries(YF_INDEX_MAP).map(async ([sym, yfSym]) => {
-        try {
-          const ctrl = new AbortController();
-          const tid  = setTimeout(() => ctrl.abort(), 4_000);
-          const url  =
-            `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yfSym)}` +
-            `?interval=1d&range=5d&includePrePost=false`;
-          const res = await fetch(url, {
-            headers: {
-              "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-              Accept: "application/json",
-            },
-            cache: "no-store",
-            signal: ctrl.signal,
-          });
-          clearTimeout(tid);
-          if (!res.ok) return;
-          const json = await res.json();
-          const meta = json?.chart?.result?.[0]?.meta;
-          if (!meta?.regularMarketPrice) return;
-          const price = Number(meta.regularMarketPrice);
-          const prev  = Number(meta.chartPreviousClose ?? meta.regularMarketPreviousClose ?? price);
-          out.set(sym, { price, change: price - prev, changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0 });
-        } catch { /* ignore */ }
-      })
-    );
-    return out;
-  };
-
   const [fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap] = await Promise.all([
-    fetchFinnhubBatch(stockSymbols), // stocks only — no ETF proxies to avoid rate limit
+    fetchFinnhubBatch([...stockSymbols, ...ETF_PROXY_SYMS]), // stocks + ETF proxies
     getForexRates(),
     token
       ? Promise.allSettled(cryptoFHSyms.map((s) => fetchFinnhubRawQuote(s)))
@@ -261,7 +222,27 @@ export async function GET(req: Request) {
       for (const e of entries) comMap.set(e.key, e);
       return [...comMap.values()];
     })(),
-    fetchYFIndexDirect(),
+    // Yahoo Finance direct index fetch: ^GSPC, ^IXIC, ^DJI — backup when Finnhub ETF proxies fail
+    (async (): Promise<Map<string, ETFQuote>> => {
+      const out = new Map<string, ETFQuote>();
+      const MAP = { SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI" } as const;
+      await Promise.allSettled(Object.entries(MAP).map(async ([sym, yfSym]) => {
+        try {
+          const ctrl = new AbortController();
+          const tid  = setTimeout(() => ctrl.abort(), 4_000);
+          const url  = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=1d&range=5d`;
+          const res  = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0", Accept: "application/json" }, cache: "no-store", signal: ctrl.signal });
+          clearTimeout(tid);
+          if (!res.ok) return;
+          const meta = (await res.json())?.chart?.result?.[0]?.meta;
+          if (!meta?.regularMarketPrice) return;
+          const price = Number(meta.regularMarketPrice);
+          const prev  = Number(meta.chartPreviousClose ?? price);
+          out.set(sym, { price, change: price - prev, changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0 });
+        } catch { /* ignore */ }
+      }));
+      return out;
+    })(),
   ]);
 
   // 앱 내부 심볼 (CL, NG, …) → 실선물 시세
