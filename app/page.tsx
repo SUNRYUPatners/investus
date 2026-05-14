@@ -8,7 +8,6 @@ import { SP500Heatmap } from "@/components/SP500Heatmap";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
 import { ReportFeed } from "@/components/ReportFeed";
-import { mockQuotes } from "@/lib/api";
 import { getLocale } from "@/lib/getLocale";
 
 export default async function HomePage() {
@@ -18,7 +17,7 @@ export default async function HomePage() {
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       {/* 티커 테이프: LiveMarket이 localStorage 업데이트하면 자동 동기화 */}
-      <TickerTape fallback={mockQuotes} />
+      <TickerTape />
 
       <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10 pb-24">
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-2">

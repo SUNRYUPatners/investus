@@ -23,8 +23,8 @@ function TickerItem({ q }: { q: Quote }) {
   );
 }
 
-export function TickerTape({ fallback }: { fallback: Quote[] }) {
-  const [quotes, setQuotes] = useState<Quote[]>(fallback);
+export function TickerTape() {
+  const [quotes, setQuotes] = useState<Quote[]>([]);
 
   useEffect(() => {
     // Sync from localStorage populated by LiveMarket
@@ -40,6 +40,8 @@ export function TickerTape({ fallback }: { fallback: Quote[] }) {
     window.addEventListener("storage", sync);
     return () => window.removeEventListener("storage", sync);
   }, []);
+
+  if (quotes.length === 0) return null;
 
   const items = [...quotes, ...quotes];
 

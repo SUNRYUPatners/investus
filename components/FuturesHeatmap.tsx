@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { FutureItem } from "@/lib/api";
 import { MiniChartPopup } from "./MiniChartPopup";
 
@@ -102,12 +102,31 @@ function isMarketOpen() {
 type Props = { items: FutureItem[] };
 
 export function FuturesHeatmap({ items }: Props) {
-  const [popup, setPopup] = useState<PopupState | null>(null);
-  const [open, setOpen]   = useState(false);
+  const [popup, setPopup]     = useState<PopupState | null>(null);
+  const [open, setOpen]       = useState(false);
+  const [thumbL, setThumbL]   = useState(0);
+  const [thumbW, setThumbW]   = useState(100);
+  const scrollRef             = useRef<HTMLDivElement>(null);
   const bySymbol = Object.fromEntries(items.map((i) => [i.symbol, i]));
 
-  // 클라이언트 마운트 후 장 상태 반영
   useState(() => { setOpen(isMarketOpen()); });
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const update = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = el;
+      const max = scrollWidth - clientWidth;
+      if (max <= 0) { setThumbW(100); return; }
+      const w = (clientWidth / scrollWidth) * 100;
+      setThumbW(w);
+      setThumbL((scrollLeft / max) * (100 - w));
+    };
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => { el.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+  }, []);
 
   return (
     <div
@@ -128,8 +147,12 @@ export function FuturesHeatmap({ items }: Props) {
       </div>
 
       {/* Treemap — horizontal scroll on small screens */}
-      <div className="overflow-x-auto" style={{ touchAction: "pan-x" }}>
-        <div style={{ minWidth: "680px" }}>
+      <div
+        ref={scrollRef}
+        className="overflow-x-auto"
+        style={{ touchAction: "pan-x", overflowY: "hidden" }}
+      >
+        <div style={{ minWidth: "680px", touchAction: "pan-x" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
             {ROWS.map((row) => (
               <div key={row.groupLabel} style={{ display: "flex", flexDirection: "column" }}>
@@ -212,6 +235,18 @@ export function FuturesHeatmap({ items }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Scroll indicator bar */}
+      {thumbW < 98 && (
+        <div className="px-4 py-2.5" style={{ borderTop: "1px solid var(--border)" }}>
+          <div className="relative h-[3px] rounded-full" style={{ background: "var(--border)" }}>
+            <div
+              className="absolute top-0 h-[3px] rounded-full"
+              style={{ left: `${thumbL}%`, width: `${thumbW}%`, background: "var(--muted-2)", borderRadius: 9999 }}
+            />
+          </div>
+        </div>
+      )}
 
       {popup && (
         <MiniChartPopup
