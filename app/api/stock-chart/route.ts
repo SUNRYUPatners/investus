@@ -218,21 +218,37 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
   }
 
-  // 1. TwelveData (primary — reliable, not blocked; handles futures/crypto too)
-  const twelve = await fetchTwelveData(symbol, period);
-  if (twelve) {
-    _cache.set(cKey, { data: twelve, at: Date.now() });
-    return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
+  const isFutureOrCrypto = symbol in YF_SYM;
+
+  if (isFutureOrCrypto) {
+    // Futures/crypto: Yahoo Finance first (has GC=F, NQ=F, BTC-USD support),
+    // then TwelveData as fallback (GC1!, NQ1!, BTC/USD)
+    const yahoo = await fetchYahooChart(symbol, period);
+    if (yahoo) {
+      _cache.set(cKey, { data: yahoo, at: Date.now() });
+      return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
+    }
+    const twelve = await fetchTwelveData(symbol, period);
+    if (twelve) {
+      _cache.set(cKey, { data: twelve, at: Date.now() });
+      return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
+    }
+  } else {
+    // Regular stocks: TwelveData first (reliable, no IP block),
+    // then Yahoo Finance as fallback
+    const twelve = await fetchTwelveData(symbol, period);
+    if (twelve) {
+      _cache.set(cKey, { data: twelve, at: Date.now() });
+      return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
+    }
+    const yahoo = await fetchYahooChart(symbol, period);
+    if (yahoo) {
+      _cache.set(cKey, { data: yahoo, at: Date.now() });
+      return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
+    }
   }
 
-  // 2. Yahoo Finance (covers futures GC=F, NQ=F, crypto BTC-USD, etc.)
-  const yahoo = await fetchYahooChart(symbol, period);
-  if (yahoo) {
-    _cache.set(cKey, { data: yahoo, at: Date.now() });
-    return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
-  }
-
-  // 3. Finnhub minimal chart (only for 1D, uses free /quote endpoint)
+  // Finnhub minimal chart (only for 1D, uses free /quote endpoint)
   if (period === "1D") {
     const minimal = await fetchFinnhubMinimalChart(symbol);
     if (minimal) {
@@ -241,7 +257,7 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  // 4. Return stale cache rather than 503
+  // Return stale cache rather than 503
   if (cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
 
   return NextResponse.json({ error: "no data" }, { status: 503, headers: { "Cache-Control": "no-store" } });
