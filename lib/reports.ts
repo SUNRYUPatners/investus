@@ -75,7 +75,7 @@ export const SEED_REPORTS: Report[] = [
     subject:       "📊 S&P500 (ATH·실적시즌)",
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:26",
-    images:        ["https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80"],
+    images:        ["https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=800&q=80"],
   },
 
   {
@@ -88,7 +88,7 @@ export const SEED_REPORTS: Report[] = [
     subject:       "📘 Meta (AI·광고플랫폼)",
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:26",
-    images:        ["https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=800&q=80"],
+    images:        ["https://images.unsplash.com/photo-1679300082344-6f2b3a33d2d2?w=800&q=80"],
   },
 
   {

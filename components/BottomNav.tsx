@@ -22,10 +22,10 @@ export function BottomNav() {
       style={{
         background: "var(--card)",
         borderColor: "var(--border)",
-        paddingBottom: "env(safe-area-inset-bottom)",
+        paddingBottom: "max(env(safe-area-inset-bottom), 8px)",
       }}
     >
-      <div className="max-w-[480px] mx-auto flex items-stretch h-16">
+      <div className="max-w-[480px] mx-auto flex items-center h-[52px]">
         {navItems.map(({ href, emoji, label }) => {
           const isActive = href === "/"
             ? pathname === "/"
@@ -35,7 +35,7 @@ export function BottomNav() {
             <Link
               key={href}
               href={href}
-              className="flex-1 flex flex-col items-center justify-center gap-1"
+              className="flex-1 flex flex-col items-center justify-center gap-1 pt-1"
               style={{ color: isActive ? "var(--mint)" : "var(--muted)" }}
             >
               <span

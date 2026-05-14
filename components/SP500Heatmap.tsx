@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MiniChartPopup } from "./MiniChartPopup";
 
 type StockTile = { symbol: string; name: string; price: number | null; changePercent: number; weight: number };
@@ -231,6 +231,26 @@ function SkeletonRow({ rowH, sections }: { rowH: number; sections: { flex: numbe
 export function SP500Heatmap() {
   const [sectors, setSectors] = useState<Sector[] | null>(null);
   const [popup, setPopup]     = useState<PopupState | null>(null);
+  const [thumbL, setThumbL]   = useState(0);
+  const [thumbW, setThumbW]   = useState(100);
+  const scrollRef             = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const update = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = el;
+      const max = scrollWidth - clientWidth;
+      if (max <= 0) { setThumbW(100); return; }
+      const w = (clientWidth / scrollWidth) * 100;
+      setThumbW(w);
+      setThumbL((scrollLeft / max) * (100 - w));
+    };
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => { el.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+  }, []);
 
   useEffect(() => {
     // 이전 캐시를 즉시 표시 (mock 대신 마지막 실제값 사용)
@@ -245,12 +265,12 @@ export function SP500Heatmap() {
         setSectors(data);
         try { localStorage.setItem("sp500-cache", JSON.stringify(data)); } catch { /* ignore */ }
       })
-      .catch(() => { if (!sectors) setSectors(MOCK_SECTORS); });
+      .catch(() => { /* keep null — no mock */ });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const sectorMap = Object.fromEntries(
-    (sectors ?? MOCK_SECTORS).map((s) => [s.key, s])
+    (sectors ?? []).map((s) => [s.key, s])
   );
 
   const handleTileClick = (symbol: string, name: string, changePercent: number, x: number, y: number) => {
@@ -276,8 +296,8 @@ export function SP500Heatmap() {
       </div>
 
       {/* Treemap — horizontal scroll on small screens */}
-      <div className="overflow-x-auto" style={{ touchAction: "pan-x" }}>
-        <div style={{ minWidth: "520px" }}>
+      <div ref={scrollRef} className="overflow-x-auto" style={{ touchAction: "pan-x", overflowY: "hidden" }}>
+        <div style={{ minWidth: "520px", touchAction: "pan-x" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
             {sectors === null
               ? LAYOUT.map((row, ri) => (
@@ -308,6 +328,18 @@ export function SP500Heatmap() {
           </div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      {thumbW < 98 && (
+        <div className="px-4 py-2.5" style={{ borderTop: "1px solid var(--border)" }}>
+          <div className="relative h-[3px] rounded-full" style={{ background: "var(--border)" }}>
+            <div
+              className="absolute top-0 h-[3px] rounded-full"
+              style={{ left: `${thumbL}%`, width: `${thumbW}%`, background: "var(--muted-2)", borderRadius: 9999 }}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <div className="px-4 py-2 border-t" style={{ borderColor: "var(--border)" }}>

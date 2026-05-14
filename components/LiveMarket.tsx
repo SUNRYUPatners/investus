@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { IndexCard } from "./IndexCard";
 import { StockCard } from "./StockCard";
 import { FuturesHeatmap } from "./FuturesHeatmap";
@@ -10,6 +10,25 @@ import { RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { useLocale } from "@/contexts/LocaleContext";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
+
+function useScrollIndicator() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [canLeft, setCanLeft]   = useState(false);
+  const [canRight, setCanRight] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const update = () => {
+      setCanLeft(el.scrollLeft > 4);
+      setCanRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
+    };
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => { el.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+  }, []);
+  return { ref, canLeft, canRight };
+}
 
 function ESTClock() {
   const [time, setTime] = useState("");
@@ -56,6 +75,10 @@ export function LiveMarket() {
   const [data, setData]       = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(true);
   const [fetchFailed, setFetchFailed] = useState(false);
+
+  const recScroll    = useScrollIndicator();
+  const quotesScroll = useScrollIndicator();
+  const idxScroll    = useScrollIndicator();
 
   const doLoad = (isRetry = false) => {
     if (isRetry) { setFetchFailed(false); setLoading(true); }
@@ -169,10 +192,24 @@ export function LiveMarket() {
           </div>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
         </div>
-        <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
-          {loading
-            ? Array.from({ length: 3 }).map((_, i) => <CardSkeleton key={i} />)
-            : recommended.map((s) => <StockCard key={s.symbol} stock={s} />)}
+        <div className="relative">
+          {recScroll.canLeft && (
+            <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
+              style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
+              <ChevronLeft className="w-4 h-4 ml-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
+          <div ref={recScroll.ref} className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+            {loading
+              ? Array.from({ length: 3 }).map((_, i) => <CardSkeleton key={i} />)
+              : recommended.map((s) => <StockCard key={s.symbol} stock={s} />)}
+          </div>
+          {recScroll.canRight && (
+            <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
+              style={{ background: "linear-gradient(to left, var(--bg) 40%, transparent)" }}>
+              <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
         </div>
       </section>
 
@@ -184,10 +221,24 @@ export function LiveMarket() {
           </h2>
           <ESTClock />
         </div>
-        <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
-          {loading
-            ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
-            : quotes.map((s) => <StockCard key={s.symbol} stock={s} />)}
+        <div className="relative">
+          {quotesScroll.canLeft && (
+            <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
+              style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
+              <ChevronLeft className="w-4 h-4 ml-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
+          <div ref={quotesScroll.ref} className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+            {loading
+              ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
+              : quotes.map((s) => <StockCard key={s.symbol} stock={s} />)}
+          </div>
+          {quotesScroll.canRight && (
+            <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
+              style={{ background: "linear-gradient(to left, var(--bg) 40%, transparent)" }}>
+              <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
         </div>
       </section>
 
@@ -199,10 +250,24 @@ export function LiveMarket() {
           </h2>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.liveEst}</span>
         </div>
-        <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
-          {loading
-            ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
-            : indices.map((idx) => <IndexCard key={idx.symbol} index={idx} />)}
+        <div className="relative">
+          {idxScroll.canLeft && (
+            <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
+              style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
+              <ChevronLeft className="w-4 h-4 ml-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
+          <div ref={idxScroll.ref} className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+            {loading
+              ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
+              : indices.map((idx) => <IndexCard key={idx.symbol} index={idx} />)}
+          </div>
+          {idxScroll.canRight && (
+            <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
+              style={{ background: "linear-gradient(to left, var(--bg) 40%, transparent)" }}>
+              <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
         </div>
       </section>
 

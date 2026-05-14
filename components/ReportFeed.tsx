@@ -10,11 +10,11 @@ import {
   type Report,
 } from "@/lib/reports";
 
-// ── 24h 필터 ──────────────────────────────────────────────────────────────
+// ── 7일 필터 ──────────────────────────────────────────────────────────────
 // updatedAt: "2026.05.14 07:27" KST 형식
-// 현재 시각 기준 24시간 이내 리포트만 표시
+// 현재 시각 기준 7일 이내 리포트만 표시
 
-const TWENTY_FOUR_H = 24 * 60 * 60 * 1000;
+const SHOW_WINDOW = 7 * 24 * 60 * 60 * 1000;
 
 function parseKST(s: string): Date {
   // "2026.05.14 07:27" → UTC 변환 (KST = UTC+9)
@@ -25,13 +25,13 @@ function parseKST(s: string): Date {
   return new Date(Date.UTC(y, m - 1, d, h - 9, mn));
 }
 
-function isWithin24h(r: Report): boolean {
+function isWithinWindow(r: Report): boolean {
   const s = r.updatedAt ?? r.date;
   if (!s) return false;
   try {
     const dt = parseKST(s);
     if (isNaN(dt.getTime())) return false;
-    return Date.now() - dt.getTime() < TWENTY_FOUR_H;
+    return Date.now() - dt.getTime() < SHOW_WINDOW;
   } catch {
     return false;
   }
@@ -185,8 +185,8 @@ function ReportCard({ report }: { report: Report }) {
 // ── ReportFeed (main export) ──────────────────────────────────────────────
 
 export function ReportFeed() {
-  // 24시간 이내 리포트만 표시, 핀 우선 정렬
-  const recent = SEED_REPORTS.filter(isWithin24h);
+  // 7일 이내 리포트만 표시, 핀 우선 정렬
+  const recent = SEED_REPORTS.filter(isWithinWindow);
   const all    = [
     ...recent.filter((r) => r.isPinned),
     ...recent.filter((r) => !r.isPinned),
@@ -207,11 +207,9 @@ export function ReportFeed() {
             시장 분석 · 종목 인사이트
           </p>
         </div>
-        {all.length > 0 && (
-          <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-            {all.length}개
-          </span>
-        )}
+        <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+          류현우 최고투자책임자 발행
+        </span>
       </div>
 
       {/* Report cards */}

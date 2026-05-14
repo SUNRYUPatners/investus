@@ -62,6 +62,14 @@ function fmtPct(v: number | null): string {
 const UP   = "#00e5a0";
 const DOWN = "#ff4d6d";
 
+function isMarketOpen(): boolean {
+  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
+  const day = now.getDay();
+  if (day === 0 || day === 6) return false;
+  const mins = now.getHours() * 60 + now.getMinutes();
+  return mins >= 9 * 60 + 30 && mins < 16 * 60;
+}
+
 // ── Page ──────────────────────────────────────────────────────────────────
 
 export default function StockPage({
@@ -92,6 +100,10 @@ export default function StockPage({
     } catch { /* ignore */ }
 
     if (!hasCached) setDetailLoading(true); // only show spinner if nothing cached
+
+    // If market is closed and we have cached data, skip fresh fetch
+    if (!isMarketOpen() && hasCached) return;
+
     setDetailError(false);
     fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`)
       .then((r) => { if (!r.ok) throw new Error("no data"); return r.json(); })
