@@ -43,7 +43,7 @@ async function fetchV8Meta(yahooSym: string) {
           `?interval=1d&range=${range}&includePrePost=false`;
         const res = await fetch(url, {
           headers: { "User-Agent": UA, Accept: "application/json" },
-          
+          cache: "no-store",
         });
         if (!res.ok) continue;
         const json   = await res.json();
@@ -57,6 +57,37 @@ async function fetchV8Meta(yahooSym: string) {
     }
   }
   return null;
+}
+
+// ── Yahoo Finance v8 direct index fetch (matches market-data/route.ts) ───
+// Uses query2 only — confirmed working from Vercel IPs; query1 may block
+
+const INDEX_YF: Record<string, { yfSym: string; name: string }> = {
+  SPX:  { yfSym: "^GSPC", name: "S&P 500 Index"       },
+  COMP: { yfSym: "^IXIC", name: "NASDAQ Composite"     },
+  DJI:  { yfSym: "^DJI",  name: "Dow Jones Industrial" },
+};
+
+async function fetchIndexDirect(rawSym: string) {
+  const idx = INDEX_YF[rawSym];
+  if (!idx) return null;
+  try {
+    const ctrl = new AbortController();
+    const tid  = setTimeout(() => ctrl.abort(), 5_000);
+    const url  = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(idx.yfSym)}?interval=1d&range=5d`;
+    const res  = await fetch(url, {
+      headers: { "User-Agent": UA, Accept: "application/json" },
+      cache: "no-store",
+      signal: ctrl.signal,
+    });
+    clearTimeout(tid);
+    if (!res.ok) return null;
+    const meta = (await res.json())?.chart?.result?.[0]?.meta as Record<string, unknown> | undefined;
+    if (!meta?.regularMarketPrice) return null;
+    return { meta, name: idx.name };
+  } catch {
+    return null;
+  }
 }
 
 // ── Yahoo Finance v7 quote — price + OHLCV ───────────────────────────────
@@ -117,7 +148,33 @@ export async function GET(req: NextRequest) {
   };
 
   try {
-    // ── 0) Finnhub ETF proxy for major indices (SPX/COMP/DJI) ────────────
+    // ── 0) Yahoo Finance v8 direct — primary for SPX/COMP/DJI ────────────
+    // Same URL pattern as market-data/route.ts (confirmed working from Vercel)
+    const yfDirect = await fetchIndexDirect(rawSymbol);
+    if (yfDirect) {
+      const { meta, name } = yfDirect;
+      const price = Number(meta.regularMarketPrice);
+      const prev  = Number(meta.chartPreviousClose ?? meta.regularMarketPreviousClose ?? price);
+      return saveAndRespond(rawSymbol, {
+        symbol:        rawSymbol,
+        name,
+        exchange:      "Index",
+        currency:      "USD",
+        price,
+        change:        price - prev,
+        changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0,
+        open:          meta.regularMarketOpen    != null ? Number(meta.regularMarketOpen)    : null,
+        high:          meta.regularMarketDayHigh != null ? Number(meta.regularMarketDayHigh) : null,
+        low:           meta.regularMarketDayLow  != null ? Number(meta.regularMarketDayLow)  : null,
+        volume:        meta.regularMarketVolume  != null ? Number(meta.regularMarketVolume)  : null,
+        week52High:    meta.fiftyTwoWeekHigh     != null ? Number(meta.fiftyTwoWeekHigh)     : null,
+        week52Low:     meta.fiftyTwoWeekLow      != null ? Number(meta.fiftyTwoWeekLow)      : null,
+        pe:            null, marketCap: null, avgVolume: null,
+        dividendYield: null, beta: null, eps: null,
+      });
+    }
+
+    // ── 1) Finnhub ETF proxy for major indices (SPX/COMP/DJI) — fallback ─
     // When market is closed Finnhub returns c=0; fall back to pc (prev close)
     const idxMeta = INDEX_ETF[rawSymbol];
     if (idxMeta) {
@@ -153,7 +210,7 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // ── 1) Finnhub path: regular US stocks ──────────────────────────────
+    // ── 2) Finnhub path: regular US stocks ──────────────────────────────
     if (!isIndexOrFuture) {
       const [rawQ, profile, metrics] = await Promise.all([
         fetchFinnhubRawQuote(rawSymbol),
