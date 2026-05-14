@@ -118,22 +118,28 @@ export async function GET(req: NextRequest) {
 
   try {
     // ── 0) Finnhub ETF proxy for major indices (SPX/COMP/DJI) ────────────
+    // When market is closed Finnhub returns c=0; fall back to pc (prev close)
     const idxMeta = INDEX_ETF[rawSymbol];
     if (idxMeta) {
       const etfQ = await fetchFinnhubRawQuote(idxMeta.etf);
-      if (etfQ && etfQ.c > 0) {
-        const f = idxMeta.factor;
+      const etfPrice = etfQ?.c && etfQ.c > 0 ? etfQ.c : etfQ?.pc;
+      if (etfQ && etfPrice && etfPrice > 0) {
+        const f        = idxMeta.factor;
+        const isLive   = etfQ.c > 0;
+        const price    = etfPrice * f;
+        const change   = isLive ? etfQ.d  * f : 0;
+        const changePct = isLive ? etfQ.dp    : 0;
         return saveAndRespond(rawSymbol, {
           symbol:        rawSymbol,
           name:          idxMeta.name,
           exchange:      idxMeta.exchange,
           currency:      "USD",
-          price:         etfQ.c * f,
-          change:        etfQ.d * f,
-          changePercent: etfQ.dp,
-          open:          etfQ.o ? etfQ.o * f : null,
-          high:          etfQ.h ? etfQ.h * f : null,
-          low:           etfQ.l ? etfQ.l * f : null,
+          price,
+          change,
+          changePercent: changePct,
+          open:          isLive && etfQ.o ? etfQ.o * f : null,
+          high:          isLive && etfQ.h ? etfQ.h * f : null,
+          low:           isLive && etfQ.l ? etfQ.l * f : null,
           volume:        null,
           week52High:    null,
           week52Low:     null,
