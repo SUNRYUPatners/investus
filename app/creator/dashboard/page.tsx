@@ -60,17 +60,18 @@ function saveContents(cs: MyContent[]) {
 }
 
 export default function CreatorDashboardPage() {
-  const { user } = useAuth();
+  const { user, loaded: authLoaded } = useAuth();
   const router = useRouter();
 
   const [creator, setCreator]       = useState<MyCreator | null>(null);
   const [contents, setContents]     = useState<MyContent[]>([]);
   const [tab, setTab]               = useState<ContentType | "all">("all");
 
-  const [showWrite,  setShowWrite]  = useState(false);
-  const [showVerify, setShowVerify] = useState(false);
-  const [uploadDone, setUploadDone] = useState(false);
-  const [showEdit,   setShowEdit]   = useState(false);
+  const [showWrite,    setShowWrite]    = useState(false);
+  const [showVerify,   setShowVerify]   = useState(false);
+  const [uploadDone,   setUploadDone]   = useState(false);
+  const [showEdit,     setShowEdit]     = useState(false);
+  const [cancelling,   setCancelling]   = useState(false);
 
   // Write form
   const [wType,        setWType]        = useState<ContentType>("post");
@@ -89,6 +90,7 @@ export default function CreatorDashboardPage() {
   const [eTags,     setETags]     = useState<string[]>([]);
 
   useEffect(() => {
+    if (!authLoaded) return; // localStorage 로드 대기
     if (!user) { router.replace("/more"); return; }
     const c = loadCreator();
     if (!c) { router.replace("/creator/setup"); return; }
@@ -112,11 +114,30 @@ export default function CreatorDashboardPage() {
         })
         .catch(() => {});
     }
-  }, [user, router]);
+  }, [authLoaded, user, router]);
+
+  // auth 로딩 중이면 빈 화면 대신 로딩 표시
+  if (!authLoaded) return (
+    <div className="min-h-screen flex items-center justify-center" style={{ background: "var(--bg)" }}>
+      <div className="w-6 h-6 rounded-full border-2 animate-spin"
+        style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
+    </div>
+  );
 
   if (!creator || !user) return null;
 
   /* ── Actions ── */
+  const handleCancelApplication = async () => {
+    if (!confirm("신청을 취소하시겠어요? 프로필과 신청 내역이 삭제됩니다.")) return;
+    setCancelling(true);
+    // Supabase에서 삭제
+    await fetch(`/api/creator/cancel?phone=${encodeURIComponent(user.phone)}`, { method: "DELETE" }).catch(() => {});
+    // localStorage 정리
+    try { localStorage.removeItem("investus_my_creator"); } catch {}
+    try { localStorage.removeItem("investus_creator_contents"); } catch {}
+    router.replace("/creator/setup");
+  };
+
   const handleVerify = async () => {
     // Submit to server as pending (admin must approve)
     await fetch("/api/admin/verifications", {
@@ -303,11 +324,18 @@ export default function CreatorDashboardPage() {
                     <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
                       캡쳐 업로드가 접수되었습니다. 관리자 검토 후 1~2일 내 승인됩니다.
                     </p>
-                    <button onClick={() => setShowVerify(true)}
-                      className="mt-2 text-[11px] font-bold underline"
-                      style={{ color: "var(--muted)" }}>
-                      캡쳐 재업로드 →
-                    </button>
+                    <div className="flex items-center gap-4 mt-2">
+                      <button onClick={() => setShowVerify(true)}
+                        className="text-[11px] font-bold underline"
+                        style={{ color: "var(--muted)" }}>
+                        캡쳐 재업로드 →
+                      </button>
+                      <button onClick={handleCancelApplication} disabled={cancelling}
+                        className="text-[11px] font-bold underline disabled:opacity-40"
+                        style={{ color: "#ff4d6d" }}>
+                        {cancelling ? "취소 중…" : "신청 취소"}
+                      </button>
+                    </div>
                   </>
                 ) : (
                   <>

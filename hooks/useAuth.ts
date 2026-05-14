@@ -19,7 +19,7 @@ async function hashPw(pw: string): Promise<string> {
 function avatarKey(phone: string) { return `uss_avatar_${phone}`; }
 
 export function useAuth() {
-  const [user, setUser] = useLocalStorage<AuthUser | null>("uss_auth", null);
+  const [user, setUser, loaded] = useLocalStorage<AuthUser | null>("uss_auth", null);
 
   const login = async (phone: string, pw: string): Promise<boolean> => {
     try {
@@ -78,5 +78,5 @@ export function useAuth() {
   const logout  = () => setUser(null);
   const verify  = () => setUser((u) => u ? { ...u, isVerified: true } : null);
 
-  return { user, login, signup, logout, verify, updateProfile };
+  return { user, loaded, login, signup, logout, verify, updateProfile };
 }
