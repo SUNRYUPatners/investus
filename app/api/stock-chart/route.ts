@@ -41,10 +41,14 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
   for (const base of bases) {
     try {
       const url = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=${cfg.interval}&range=${cfg.range}&includePrePost=false`;
-      const res = await fetch(url, {
+      const ctrl = new AbortController();
+      const tid  = setTimeout(() => ctrl.abort(), 8_000);
+      const res  = await fetch(url, {
         headers: { "User-Agent": UA_YF, Accept: "application/json" },
-        signal: AbortSignal.timeout(6_000),
+        cache: "no-store",
+        signal: ctrl.signal,
       });
+      clearTimeout(tid);
       if (!res.ok) continue;
       const json   = await res.json();
       const result = json?.chart?.result?.[0];
