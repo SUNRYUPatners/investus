@@ -31,9 +31,10 @@ const YF_SYM: Record<string, string> = {
 };
 
 // Futures/Indices → Stooq symbol (historical CSV, no rate limits, no API key)
+// Index cards use futures as proxy — same price level, free on Stooq
 const STOOQ_SYM: Record<string, string> = {
-  // Index cards
-  SPX: "^spx", COMP: "^ixic", DJI: "^dji",
+  // Index cards (ES/NQ/YM trade at same price level as SPX/NDX/DJI)
+  SPX: "es.f", COMP: "nq.f", DJI: "ym.f",
   // Index futures
   ES: "es.f", NQ: "nq.f", YM: "ym.f", RTY: "rty.f",
   CL: "cl.f", NG: "ng.f", GC: "gc.f", SI: "si.f", HG: "hg.f",
@@ -286,14 +287,25 @@ async function fetchTwelveData(symbol: string, period: string): Promise<ChartRes
 }
 
 // ── Finnhub quote → minimal 1D chart (fallback when TwelveData unavailable) ─
-// Uses the working /quote endpoint (free plan) to build a real-price 3-point chart
+// Uses the working /quote endpoint (free plan) to build a real-price 3-point chart.
+// For index cards (SPX/COMP/DJI), uses ETF proxy scaled by factor.
+const FINNHUB_INDEX_ETF: Record<string, { etf: string; factor: number }> = {
+  SPX:  { etf: "SPY", factor: 10.03 },
+  COMP: { etf: "QQQ", factor: 36.83 },
+  DJI:  { etf: "DIA", factor: 100   },
+};
+
 async function fetchFinnhubMinimalChart(symbol: string): Promise<ChartResult | null> {
   const token = process.env.FINNHUB_API_KEY ?? "";
   if (!token) return null;
 
+  const etfInfo   = FINNHUB_INDEX_ETF[symbol];
+  const fhSymbol  = etfInfo ? etfInfo.etf : symbol;
+  const scale     = etfInfo ? etfInfo.factor : 1;
+
   try {
     const res = await fetch(
-      `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`,
+      `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(fhSymbol)}&token=${token}`,
     );
     if (!res.ok) return null;
     const q = await res.json();
@@ -307,12 +319,12 @@ async function fetchFinnhubMinimalChart(symbol: string): Promise<ChartResult | n
 
     return {
       symbol,
-      chartPreviousClose: q.pc ?? null,
-      regularMarketPrice: q.c,
+      chartPreviousClose: q.pc ? q.pc * scale : null,
+      regularMarketPrice: q.c  * scale,
       points: [
-        { ts: openTs - 86400, close: q.pc || q.c, volume: 0 }, // prev close
-        { ts: openTs,         close: q.o  || q.c, volume: 0 }, // today open
-        { ts: now,            close: q.c,          volume: 0 }, // current price
+        { ts: openTs - 86400, close: (q.pc || q.c) * scale, volume: 0 }, // prev close
+        { ts: openTs,         close: (q.o  || q.c) * scale, volume: 0 }, // today open
+        { ts: now,            close:  q.c           * scale, volume: 0 }, // current price
       ],
     };
   } catch { return null; }
