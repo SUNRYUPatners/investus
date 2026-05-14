@@ -19,6 +19,9 @@ type MyContent = {
   description: string;
   body: string;
   isPremium: boolean;
+  price: number;
+  externalUrl: string;
+  fileLabel: string;
   createdAt: string;
   likeCount: number;
   viewCount: number;
@@ -70,11 +73,14 @@ export default function CreatorDashboardPage() {
   const [showEdit,   setShowEdit]   = useState(false);
 
   // Write form
-  const [wType,    setWType]    = useState<ContentType>("post");
-  const [wTitle,   setWTitle]   = useState("");
-  const [wDesc,    setWDesc]    = useState("");
-  const [wBody,    setWBody]    = useState("");
-  const [wPremium, setWPremium] = useState(false);
+  const [wType,        setWType]        = useState<ContentType>("post");
+  const [wTitle,       setWTitle]       = useState("");
+  const [wDesc,        setWDesc]        = useState("");
+  const [wBody,        setWBody]        = useState("");
+  const [wPremium,     setWPremium]     = useState(false);
+  const [wPrice,       setWPrice]       = useState("");
+  const [wExternalUrl, setWExternalUrl] = useState("");
+  const [wFileLabel,   setWFileLabel]   = useState("");
 
   // Edit form
   const [eNickname, setENickname] = useState("");
@@ -134,13 +140,17 @@ export default function CreatorDashboardPage() {
 
   const handleWrite = () => {
     if (!wTitle.trim()) return;
+    const priceNum = parseFloat(wPrice.replace(/,/g, "")) || 0;
     const item: MyContent = {
       id: Date.now().toString(),
       type: wType,
       title: wTitle.trim(),
       description: wDesc.trim(),
       body: wBody.trim(),
-      isPremium: wPremium,
+      isPremium: wPremium || priceNum > 0,
+      price: priceNum,
+      externalUrl: wExternalUrl.trim(),
+      fileLabel: wFileLabel.trim(),
       createdAt: new Date().toISOString().slice(0, 10),
       likeCount: 0,
       viewCount: 0,
@@ -150,6 +160,7 @@ export default function CreatorDashboardPage() {
     setContents(next);
     setShowWrite(false);
     setWTitle(""); setWDesc(""); setWBody(""); setWPremium(false); setWType("post");
+    setWPrice(""); setWExternalUrl(""); setWFileLabel("");
   };
 
   const handleDelete = (id: string) => {
@@ -403,10 +414,28 @@ export default function CreatorDashboardPage() {
                           style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
                           {TYPE_LABEL[c.type]}
                         </span>
-                        {c.isPremium && (
+                        {c.price > 0 && (
+                          <span className="text-[10px] px-1.5 py-0.5 rounded-md font-mono-num"
+                            style={{ background: "rgba(251,191,36,0.1)", color: "#fbbf24" }}>
+                            ₩{c.price.toLocaleString()}
+                          </span>
+                        )}
+                        {c.isPremium && !c.price && (
                           <span className="text-[10px] px-1.5 py-0.5 rounded-md flex items-center gap-0.5"
                             style={{ background: "rgba(251,191,36,0.1)", color: "#fbbf24" }}>
                             <Lock className="w-2.5 h-2.5" />구독 전용
+                          </span>
+                        )}
+                        {c.externalUrl && (
+                          <span className="text-[10px] px-1.5 py-0.5 rounded-md"
+                            style={{ background: "rgba(99,102,241,0.1)", color: "#818cf8" }}>
+                            링크 연결됨
+                          </span>
+                        )}
+                        {c.fileLabel && (
+                          <span className="text-[10px] px-1.5 py-0.5 rounded-md truncate max-w-[100px]"
+                            style={{ background: "rgba(99,102,241,0.1)", color: "#818cf8" }}>
+                            📎 {c.fileLabel}
                           </span>
                         )}
                       </div>
@@ -488,9 +517,52 @@ export default function CreatorDashboardPage() {
             <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>본문</p>
             <textarea value={wBody} onChange={(e) => setWBody(e.target.value)}
               placeholder="본문 내용을 입력하세요..."
-              rows={9}
+              rows={7}
               className="w-full px-4 py-3 rounded-xl border mb-4 text-sm outline-none resize-none"
               style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }} />
+
+            {/* Lecture URL */}
+            {wType === "lecture" && (
+              <>
+                <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>강의 링크 (YouTube / 외부 URL)</p>
+                <input value={wExternalUrl} onChange={(e) => setWExternalUrl(e.target.value)}
+                  placeholder="https://youtube.com/watch?v=..."
+                  className="w-full px-4 py-3 rounded-xl border mb-4 text-sm outline-none"
+                  style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }} />
+              </>
+            )}
+
+            {/* Ebook file */}
+            {wType === "book" && (
+              <>
+                <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>전자책 파일 (PDF)</p>
+                <label className="flex items-center gap-3 w-full px-4 py-3 rounded-xl border mb-4 cursor-pointer active:opacity-70 transition-opacity"
+                  style={{ background: "var(--card)", borderColor: wFileLabel ? "var(--mint)" : "var(--border)" }}>
+                  <Upload className="w-4 h-4 flex-shrink-0" style={{ color: wFileLabel ? "var(--mint)" : "var(--muted)" }} />
+                  <span className="text-sm truncate" style={{ color: wFileLabel ? "var(--text)" : "var(--muted)" }}>
+                    {wFileLabel || "PDF 파일 선택"}
+                  </span>
+                  <input type="file" accept=".pdf,application/pdf" className="hidden"
+                    onChange={(e) => {
+                      const f = e.target.files?.[0];
+                      if (f) setWFileLabel(f.name);
+                    }} />
+                </label>
+              </>
+            )}
+
+            {/* Price */}
+            <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>
+              가격 <span style={{ color: "var(--mint)" }}>(0 = 무료)</span>
+            </p>
+            <div className="flex items-center gap-2 rounded-xl border mb-4 px-4"
+              style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <span className="text-sm" style={{ color: "var(--muted)" }}>₩</span>
+              <input value={wPrice} onChange={(e) => setWPrice(e.target.value.replace(/[^0-9]/g, ""))}
+                placeholder="0"
+                className="flex-1 py-3 bg-transparent text-sm outline-none font-mono-num"
+                style={{ color: "var(--text)" }} />
+            </div>
 
             {/* Premium toggle */}
             <div className="flex items-center justify-between p-4 rounded-xl border"

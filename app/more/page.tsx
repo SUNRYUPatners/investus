@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { ChevronRight, LogOut, User, Phone, Lock, Eye, EyeOff, Pencil, X, Send, CheckCircle2, TrendingUp } from "lucide-react";
+import { ChevronRight, LogOut, User, Phone, Lock, Eye, EyeOff, Pencil, X, Send, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
 import { AdBanner } from "@/components/AdBanner";
@@ -188,6 +188,86 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { phone: 
         </div>
       </div>
     </div>
+  );
+}
+
+// ── Creator Channel Section ─────────────────────────────────────────────────
+
+function CreatorSection() {
+  const { user } = useAuth();
+  const [profile, setProfile] = useState<{ nickname: string; avatar: string; bio: string; status: string } | null>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("investus_my_creator");
+      setProfile(raw ? JSON.parse(raw) : null);
+    } catch { setProfile(null); }
+    setLoaded(true);
+  }, []);
+
+  if (!user || !loaded) return null;
+
+  if (profile) {
+    const isPhoto = (profile.avatar ?? "").startsWith("data:");
+    const statusColor = profile.status === "approved" ? "var(--mint)" : profile.status === "pending" ? "#f59e0b" : "var(--muted)";
+    const statusLabel = profile.status === "approved" ? "승인됨" : profile.status === "pending" ? "심사 중" : "미승인";
+
+    return (
+      <Link href="/creator/dashboard" style={{ textDecoration: "none" }}>
+        <div
+          className="rounded-2xl p-4 mb-6 border flex items-center gap-4 active:opacity-70 transition-opacity"
+          style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.2)" }}
+        >
+          {/* Avatar */}
+          {isPhoto ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={profile.avatar} alt="creator" className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+              style={{ border: "2px solid rgba(0,229,160,0.4)" }} />
+          ) : (
+            <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-2xl"
+              style={{ background: "rgba(0,229,160,0.12)", border: "2px solid rgba(0,229,160,0.3)" }}>
+              {profile.avatar || <Sparkles className="w-5 h-5" style={{ color: "var(--mint)" }} />}
+            </div>
+          )}
+
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-0.5">
+              <p className="text-sm font-bold font-syne truncate" style={{ color: "var(--text)" }}>{profile.nickname}</p>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
+                style={{ background: `${statusColor}22`, color: statusColor }}>
+                {statusLabel}
+              </span>
+            </div>
+            <p className="text-[11px] truncate" style={{ color: "var(--muted)" }}>{profile.bio || "내 채널을 관리하세요"}</p>
+          </div>
+
+          <div className="flex-shrink-0 flex flex-col items-center gap-1">
+            <span className="text-[10px] font-semibold" style={{ color: "var(--mint)" }}>채널 관리</span>
+            <ChevronRight className="w-4 h-4" style={{ color: "var(--mint)" }} />
+          </div>
+        </div>
+      </Link>
+    );
+  }
+
+  return (
+    <Link href="/creator/setup" style={{ textDecoration: "none" }}>
+      <div
+        className="rounded-2xl p-4 mb-6 border flex items-center gap-4 active:opacity-70 transition-opacity"
+        style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.15)" }}
+      >
+        <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+          style={{ background: "rgba(0,229,160,0.12)", border: "2px solid rgba(0,229,160,0.3)" }}>
+          <Sparkles className="w-5 h-5" style={{ color: "var(--mint)" }} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>크리에이터 되기</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>전자책, 강의, 리포트를 판매하세요</p>
+        </div>
+        <ChevronRight className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
+      </div>
+    </Link>
   );
 }
 
@@ -451,6 +531,9 @@ export default function MorePage() {
 
         {/* Auth section */}
         <AuthSection />
+
+        {/* Creator channel */}
+        <CreatorSection />
 
         {/* 광고 */}
         <AdBanner format="auto" />
