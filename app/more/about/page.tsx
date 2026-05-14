@@ -218,7 +218,7 @@ export default function AboutPage() {
         {/* ── Stock Performance ── */}
         <div className="mb-6">
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            실제 수익률 공개 · 2024년 기준
+            실제 수익률 공개 · 2026년 기준
           </p>
 
           {/* Total return hero */}
@@ -245,20 +245,25 @@ export default function AboutPage() {
                   ✦ 인증됨
                 </div>
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-3 flex-wrap">
                 <div>
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>투자 원금</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>약 1.4억</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>XX억</p>
                 </div>
                 <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
                 <div>
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>현재 가치</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>약 2.8억</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>XX억</p>
                 </div>
                 <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
                 <div>
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>수익</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>약 +1.4억</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>+XX억</p>
+                </div>
+                <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
+                <div>
+                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>원금 대비</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>약 2배↑</p>
                 </div>
               </div>
             </div>
@@ -283,10 +288,10 @@ export default function AboutPage() {
           {/* Per-stock returns */}
           <div className="grid grid-cols-2 gap-2.5">
             {[
-              { symbol: "TSLA", name: "테슬라", ret: "+100.49%", shares: "342.56주", color: "#e879f9" },
-              { symbol: "PLTR", name: "팔란티어", ret: "+133.24%", shares: "102.62주", color: "#60a5fa" },
-              { symbol: "IBM",  name: "IBM",     ret: "+139.76%", shares: "5.514주",  color: "#34d399" },
-              { symbol: "META", name: "메타",    ret: "+159.99%", shares: "0.002주",  color: "#fb923c" },
+              { symbol: "TSLA", name: "테슬라", ret: "+100.49%", shares: "XXX주", color: "#e879f9" },
+              { symbol: "PLTR", name: "팔란티어", ret: "+133.24%", shares: "XXX주", color: "#60a5fa" },
+              { symbol: "IBM",  name: "IBM",     ret: "+139.76%", shares: "XXX주", color: "#34d399" },
+              { symbol: "META", name: "메타",    ret: "+159.99%", shares: "XXX주", color: "#fb923c" },
             ].map((s) => (
               <div
                 key={s.symbol}
@@ -309,7 +314,7 @@ export default function AboutPage() {
           </div>
 
           <p className="text-[10px] text-center mt-3" style={{ color: "var(--muted)" }}>
-            * 정확한 매입가·현재가는 비공개. 수익률·보유 수량·억 단위 금액만 공개.
+            * 정확한 매입가·현재가·보유 수량은 비공개. 수익률·배수만 공개.
           </p>
         </div>
 
