@@ -4,7 +4,7 @@ import type { BuffettData } from "@/lib/api";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const YF_BASE = "https://query1.finance.yahoo.com";
+const YF_BASE = "https://query2.finance.yahoo.com";
 
 function yfHeaders() {
   return {
