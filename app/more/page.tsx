@@ -282,7 +282,7 @@ function InstallSection() {
   const [prompt, setPrompt]           = useState<BeforeInstallPromptEvent | null>(null);
   const [isIOS, setIsIOS]             = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
-  const [showGuide, setShowGuide]     = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
 
   useEffect(() => {
     const standalone =
@@ -306,124 +306,167 @@ function InstallSection() {
     const { outcome } = await prompt.userChoice;
     if (outcome === "accepted") setIsInstalled(true);
     setPrompt(null);
+    setShowConfirm(false);
   };
 
   if (isInstalled) return null;
 
-  return (
-    <div className="mt-6">
-      <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-        앱으로 설치
-      </p>
-
-      {/* iOS — 홈 화면에 추가 */}
-      {isIOS && (
+  // Android / Desktop with native prompt — show confirm sheet then install directly
+  if (!isIOS && prompt) {
+    return (
+      <div className="mt-6">
+        <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+          앱으로 설치
+        </p>
         <button
-          onClick={() => setShowGuide(true)}
+          onClick={() => setShowConfirm(true)}
           className="w-full rounded-2xl p-4 border flex items-center gap-4 active:opacity-70 transition-opacity"
-          style={{ background: "var(--card)", borderColor: "var(--border)", textAlign: "left" }}
+          style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.3)", textAlign: "left" }}
         >
           <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
             style={{ background: "rgba(0,229,160,0.12)" }}>
             <span className="text-xl">📲</span>
           </div>
           <div className="flex-1">
-            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>홈 화면에 추가</p>
-            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>앱처럼 전체화면으로 실행</p>
+            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>홈 화면에 추가하시겠습니까?</p>
+            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>앱처럼 전체화면으로 실행 · 무료</p>
+          </div>
+          <span className="px-3 py-1.5 rounded-full text-[11px] font-bold text-black flex-shrink-0"
+            style={{ background: "var(--mint)" }}>
+            추가
+          </span>
+        </button>
+
+        {showConfirm && (
+          <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.65)" }}
+            onClick={() => setShowConfirm(false)}>
+            <div className="w-full max-w-[480px] mx-auto rounded-t-3xl pb-10 px-5 pt-1"
+              style={{ background: "var(--card)" }}
+              onClick={(e) => e.stopPropagation()}>
+              <div className="w-10 h-1 rounded-full mx-auto mt-3 mb-6" style={{ background: "var(--border)" }} />
+              <div className="flex flex-col items-center gap-3 mb-7">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center"
+                  style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}>
+                  <span className="text-3xl">📲</span>
+                </div>
+                <h2 className="text-base font-bold font-syne text-center" style={{ color: "var(--text)" }}>
+                  홈 화면에 추가하시겠습니까?
+                </h2>
+                <p className="text-[12px] text-center leading-relaxed" style={{ color: "var(--muted)" }}>
+                  설치하면 앱처럼 전체화면으로 실행됩니다.<br />광고 없이 더 빠르게 사용하세요.
+                </p>
+              </div>
+              <button
+                onClick={handleInstall}
+                className="w-full py-3.5 rounded-xl text-sm font-bold text-black mb-3 active:opacity-80"
+                style={{ background: "var(--mint)" }}>
+                추가하기
+              </button>
+              <button
+                onClick={() => setShowConfirm(false)}
+                className="w-full py-2.5 rounded-xl text-sm"
+                style={{ color: "var(--muted)" }}>
+                취소
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // iOS — cannot trigger programmatically, must guide user
+  if (isIOS) {
+    return (
+      <div className="mt-6">
+        <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+          앱으로 설치
+        </p>
+        <button
+          onClick={() => setShowConfirm(true)}
+          className="w-full rounded-2xl p-4 border flex items-center gap-4 active:opacity-70 transition-opacity"
+          style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.3)", textAlign: "left" }}
+        >
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+            style={{ background: "rgba(0,229,160,0.12)" }}>
+            <span className="text-xl">📲</span>
+          </div>
+          <div className="flex-1">
+            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>홈 화면에 추가하시겠습니까?</p>
+            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>Safari → 공유 → 홈 화면에 추가</p>
           </div>
           <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-40" style={{ color: "var(--muted)" }} />
         </button>
-      )}
 
-      {/* Android / Desktop — 네이티브 설치 프롬프트 */}
-      {!isIOS && prompt && (
-        <button
-          onClick={handleInstall}
-          className="w-full rounded-2xl p-4 border flex items-center gap-4 active:opacity-70 transition-opacity"
-          style={{ background: "var(--card)", borderColor: "var(--border)", textAlign: "left" }}
-        >
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "rgba(0,229,160,0.12)" }}>
-            <span className="text-xl">📲</span>
-          </div>
-          <div className="flex-1">
-            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>앱으로 설치하기</p>
-            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>홈 화면에서 바로 실행 · 전체화면</p>
-          </div>
-          <span className="px-3 py-1 rounded-full text-[10px] font-bold text-black flex-shrink-0"
-            style={{ background: "var(--mint)" }}>
-            설치
-          </span>
-        </button>
-      )}
-
-      {/* 데스크톱 — 즐겨찾기 안내 */}
-      {!isIOS && !prompt && (
-        <div className="rounded-2xl p-4 border flex items-start gap-4"
-          style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "rgba(96,165,250,0.12)" }}>
-            <span className="text-xl">🔖</span>
-          </div>
-          <div className="flex-1">
-            <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>즐겨찾기 저장</p>
-            <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-              주소창 오른쪽 ★ 클릭 또는{" "}
-              <span className="font-mono text-[10px]">⌘+D</span> (Mac) /{" "}
-              <span className="font-mono text-[10px]">Ctrl+D</span> (Windows)
-            </p>
-          </div>
-        </div>
-      )}
-
-      {/* iOS 가이드 모달 */}
-      {showGuide && (
-        <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.7)" }}
-          onClick={() => setShowGuide(false)}>
-          <div className="w-full max-w-[480px] mx-auto rounded-t-3xl pb-10 px-5"
-            style={{ background: "var(--card)" }}
-            onClick={(e) => e.stopPropagation()}>
-            <div className="w-10 h-1 rounded-full mx-auto mt-3 mb-5" style={{ background: "var(--border)" }} />
-            <h2 className="text-base font-bold font-syne mb-1 text-center" style={{ color: "var(--text)" }}>
-              홈 화면에 추가하기
-            </h2>
-            <p className="text-[11px] text-center mb-5" style={{ color: "var(--muted)" }}>
-              Safari에서 아래 순서대로 따라하세요
-            </p>
-            <div className="flex flex-col gap-4 mb-6">
-              {([
-                ["1", "🧭", "Safari에서 investus.kr 열기", "다른 브라우저(Chrome 등)는 지원 안 됨"],
-                ["2", "⬆️", "하단 가운데 공유 버튼 탭", "네모 위에 화살표 아이콘"],
-                ["3", "➕", '"홈 화면에 추가" 선택', "스크롤해서 찾아주세요"],
-                ["4", "✅", '"추가" 탭 → 완료!', "홈 화면에 Investus 아이콘이 생겨요"],
-              ] as const).map(([num, icon, text, hint]) => (
-                <div key={num} className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5"
-                    style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
-                    {num}
-                  </div>
-                  <span className="text-xl flex-shrink-0">{icon}</span>
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{text}</p>
-                    <p className="text-[10px]" style={{ color: "var(--muted)" }}>{hint}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="rounded-xl p-3 mb-5" style={{ background: "rgba(0,229,160,0.07)", border: "1px solid rgba(0,229,160,0.15)" }}>
-              <p className="text-[11px] text-center" style={{ color: "var(--mint)" }}>
-                ✦ 설치 후 홈 화면 아이콘 탭 → 광고 없이 전체화면 앱처럼 실행
+        {showConfirm && (
+          <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.65)" }}
+            onClick={() => setShowConfirm(false)}>
+            <div className="w-full max-w-[480px] mx-auto rounded-t-3xl pb-10 px-5 pt-1"
+              style={{ background: "var(--card)" }}
+              onClick={(e) => e.stopPropagation()}>
+              <div className="w-10 h-1 rounded-full mx-auto mt-3 mb-5" style={{ background: "var(--border)" }} />
+              <h2 className="text-base font-bold font-syne mb-1 text-center" style={{ color: "var(--text)" }}>
+                홈 화면에 추가
+              </h2>
+              <p className="text-[11px] text-center mb-5" style={{ color: "var(--muted)" }}>
+                Safari에서 아래 순서로 추가해 주세요
               </p>
+              <div className="flex flex-col gap-3.5 mb-6">
+                {([
+                  ["⬆️", "Safari 하단 공유 버튼 탭", "네모 + 화살표 아이콘"],
+                  ["➕", '"홈 화면에 추가" 선택", "목록을 스크롤해서 찾으세요'],
+                  ["✅", '"추가" 탭 → 완료', "홈 화면에 Investus 아이콘 생성"],
+                ] as [string, string, string][]).map(([icon, text, hint], i) => (
+                  <div key={i} className="flex items-center gap-3.5">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-base"
+                      style={{ background: "rgba(0,229,160,0.10)", border: "1px solid rgba(0,229,160,0.2)" }}>
+                      {icon}
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{text}</p>
+                      <p className="text-[10px]" style={{ color: "var(--muted)" }}>{hint}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="rounded-xl p-3 mb-5" style={{ background: "rgba(0,229,160,0.07)", border: "1px solid rgba(0,229,160,0.15)" }}>
+                <p className="text-[11px] text-center" style={{ color: "var(--mint)" }}>
+                  ✦ 아이콘 탭 시 광고 없는 전체화면 앱으로 실행됩니다
+                </p>
+              </div>
+              <button
+                onClick={() => setShowConfirm(false)}
+                className="w-full py-3 rounded-xl text-sm font-bold text-black"
+                style={{ background: "var(--mint)" }}>
+                확인
+              </button>
             </div>
-            <button
-              onClick={() => setShowGuide(false)}
-              className="w-full py-3 rounded-xl text-sm font-bold text-black"
-              style={{ background: "var(--mint)" }}>
-              확인
-            </button>
           </div>
+        )}
+      </div>
+    );
+  }
+
+  // Desktop, no install prompt — bookmark tip
+  return (
+    <div className="mt-6">
+      <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+        빠른 접속
+      </p>
+      <div className="rounded-2xl p-4 border flex items-start gap-4"
+        style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+          style={{ background: "rgba(96,165,250,0.12)" }}>
+          <span className="text-xl">🔖</span>
         </div>
-      )}
+        <div className="flex-1">
+          <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>즐겨찾기 저장</p>
+          <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+            <span className="font-mono text-[10px]">⌘+D</span> (Mac) /{" "}
+            <span className="font-mono text-[10px]">Ctrl+D</span> (Windows)
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -661,7 +704,7 @@ export default function MorePage() {
   ];
   const MENU_HREFS = [
     ["/more/about", undefined],
-    [undefined, undefined, undefined],
+    ["/more/notices", undefined, "/more/faq"],
     ["/more/terms", "/more/privacy", "/more/disclaimer"],
   ];
 

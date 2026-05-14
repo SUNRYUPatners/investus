@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Vercel toolbar — 완전 숨김 */
+vercel-toolbar,
+#vercel-toolbar,
+[data-vercel-toolbar],
+.__vercel-toolbar,
+#__vercel_toolbar_wrapper {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 @theme inline {
   --font-sans: var(--font-kr);
   --font-mono: var(--font-mono);
