@@ -162,13 +162,17 @@ export async function GET(req: Request) {
   const refresh = url.searchParams.has("refresh");
   const open    = isMarketOpen();
 
+  const ccHeader = open
+    ? "public, s-maxage=55, stale-while-revalidate=120"
+    : "public, s-maxage=3600, stale-while-revalidate=86400";
+
   // 장 마감 중: 캐시가 있으면 즉시 반환 (API 호출 없음)
   if (!open && !refresh && _cache) {
-    return NextResponse.json(_cache.data);
+    return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
   }
   // 장 중: 55초 TTL 캐시
   if (!refresh && _cache && Date.now() - _cache.at < LIVE_TTL) {
-    return NextResponse.json(_cache.data);
+    return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
   }
 
   const token = process.env.FINNHUB_API_KEY ?? "";
@@ -369,12 +373,6 @@ export async function GET(req: Request) {
   if (quotes.length > 0) {
     _cache = { data: payload, at: isComplete ? Date.now() : Date.now() - (LIVE_TTL - 15_000) };
   }
-
-  // CDN 캐시 — 장 마감 시 1시간(+24h stale), 장 중 55초(+2min stale)
-  // Vercel 엣지 CDN이 캐시하므로 콜드스타트/인스턴스 차이 없이 전세계 동일 응답
-  const ccHeader = open
-    ? "public, s-maxage=55, stale-while-revalidate=120"
-    : "public, s-maxage=3600, stale-while-revalidate=86400";
 
   return NextResponse.json(payload, {
     headers: { "Cache-Control": ccHeader },

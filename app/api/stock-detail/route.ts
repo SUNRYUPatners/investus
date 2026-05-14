@@ -96,10 +96,13 @@ export async function GET(req: NextRequest) {
 
   const cached = _cache.get(rawSymbol);
   const open   = isMarketOpen();
+  const cc = open
+    ? "public, s-maxage=55, stale-while-revalidate=120"
+    : "public, s-maxage=3600, stale-while-revalidate=86400";
   // 장 마감 중: 캐시가 있으면 즉시 반환
-  if (!open && cached) return NextResponse.json(cached.data);
+  if (!open && cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
   // 장 중: 60초 TTL
-  if (cached && Date.now() - cached.at < LIVE_TTL) return NextResponse.json(cached.data);
+  if (cached && Date.now() - cached.at < LIVE_TTL) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
 
   const yahooSymbol     = toYahoo(rawSymbol);
   const isIndexOrFuture = yahooSymbol !== rawSymbol;
