@@ -75,8 +75,12 @@ export function LiveMarket() {
         setLoading(false);
         setFetchFailed(false);
         try {
-          // quotes가 있는 경우만 localStorage에 저장
-          if ((d?.quotes?.length ?? 0) > 0) {
+          // indices + quotes + futures 모두 있을 때만 저장 (장마감 후 표시용 완전한 데이터)
+          const isComplete =
+            (d?.indices?.length ?? 0) > 0 &&
+            (d?.quotes?.length ?? 0) > 0 &&
+            (d?.futures?.length ?? 0) >= 8;
+          if (isComplete) {
             localStorage.setItem("market-data-cache", JSON.stringify(d));
             window.dispatchEvent(new StorageEvent("storage", { key: "market-data-cache" }));
           }
@@ -98,7 +102,8 @@ export function LiveMarket() {
   };
 
   useEffect(() => {
-    // 이전 캐시를 즉시 표시 — 시크릿 모드에서도 skeleton 최소화
+    // 1. 캐시를 즉시 표시
+    let hasCachedData = false;
     try {
       const cached = localStorage.getItem("market-data-cache");
       if (cached) {
@@ -106,15 +111,23 @@ export function LiveMarket() {
         if ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0) {
           setData(parsed);
           setLoading(false);
+          hasCachedData = true;
         }
       }
     } catch { /* ignore */ }
 
+    // 2. 장 마감 중 + 캐시 있음 → API 호출 안 함, 캐시 그대로 표시
+    //    장 시작 시점에 인터벌이 자동으로 doLoad() 호출함
+    if (!isMarketOpen() && hasCachedData) {
+      const id = setInterval(() => {
+        if (isMarketOpen()) doLoad();
+      }, 60_000);
+      return () => clearInterval(id);
+    }
+
+    // 3. 장 중이거나 캐시 없음 → 즉시 fetch
     doLoad();
 
-    // 60초마다 체크 — 장 중일 때만 실제 API 호출
-    // (마운트 시점이 아닌 인터벌 실행 시점에 장 여부를 판단해야
-    //  장 시작 전 켜놔도 개장 후 자동 갱신됨)
     const id = setInterval(() => {
       if (isMarketOpen()) doLoad();
     }, 60_000);
