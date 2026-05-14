@@ -4,6 +4,7 @@ import "./globals.css";
 import { BottomNav } from "@/components/BottomNav";
 import { DesktopSidebar } from "@/components/DesktopSidebar";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
+import { PullToRefresh } from "@/components/PullToRefresh";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 import { getLocale } from "@/lib/getLocale";
 import Script from "next/script";
@@ -59,6 +60,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body style={{ background: "var(--bg)" }}>
         <LocaleProvider locale={locale}>
           <ServiceWorkerRegistration />
+          <PullToRefresh />
           <div className="lg:flex lg:min-h-screen">
             <DesktopSidebar />
             <div className="flex-1 min-w-0 lg:ml-64">

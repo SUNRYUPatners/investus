@@ -382,7 +382,8 @@ export async function GET(req: Request) {
       if (cg) return { ...f, price: cg.price, change: cg.change, changePercent: cg.changePercent, isMock: false };
     }
 
-    return null; // 실데이터 없는 선물 항목 제외
+    // 실데이터 없으면 mock 데이터라도 표시 (타일 자체가 사라지지 않도록)
+    return { ...f, isMock: true };
   }).filter((f): f is FutureItem => f !== null);
 
   // 실데이터가 하나도 없으면 503 — 클라이언트가 이전 캐시 유지
