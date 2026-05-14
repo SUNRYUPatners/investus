@@ -113,8 +113,14 @@ async function getYahooCrumb(): Promise<{ crumb: string; cookie: string } | null
       redirect: "follow",
       cache: "no-store",
     });
-    const setCookies = r1.headers.getSetCookie?.() ?? [];
-    const cookie = setCookies.map((c) => c.split(";")[0]).join("; ");
+    // getSetCookie() is in the Fetch spec but not in all Next.js environments
+    const rawCookie = r1.headers.get("set-cookie") ?? "";
+    // Strip flags; keep name=value pairs only
+    const cookie = rawCookie
+      .split(",")
+      .map((seg) => seg.trim().split(";")[0].trim())
+      .filter(Boolean)
+      .join("; ");
 
     const r2  = await fetch("https://query1.finance.yahoo.com/v1/test/getcrumb", {
       headers: { "User-Agent": UA_YF, Cookie: cookie, Accept: "*/*" },
