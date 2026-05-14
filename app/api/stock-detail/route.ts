@@ -22,13 +22,11 @@ function saveAndRespond(symbol: string, data: Record<string, unknown>) {
   return NextResponse.json(data, { headers: { "Cache-Control": cc } });
 }
 
-const UA =
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
-  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+const UA = "Mozilla/5.0";
 
 const YF_HOSTS = [
-  "https://query1.finance.yahoo.com",
   "https://query2.finance.yahoo.com",
+  "https://query1.finance.yahoo.com",
 ];
 
 // ── Yahoo Finance v8 chart — range=5d 기본, 1d 폴백 ──────────────────────
