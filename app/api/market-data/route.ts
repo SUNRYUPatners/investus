@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { fetchFinnhubBatch, fetchFinnhubRawQuote, type FinnhubRawQuote } from "@/lib/finnhub";
 import { fetchFutureV8 } from "@/lib/yahooFinance";
 import { fetchStooqFuture } from "@/lib/stooq";
+import { isMarketOpen } from "@/lib/marketHours";
 import {
   mockQuotes, mockFutures,
   type IndexQuote, type Quote, type FutureItem,
@@ -9,10 +10,12 @@ import {
 
 export const revalidate = 60;
 
-// ── In-memory cache — 실데이터만 저장 (mock 절대 캐시 금지) ──────────────
+// ── In-memory cache ───────────────────────────────────────────────────────
+// 장 마감 중: 캐시 무기한 서빙 (외부 API 호출 없음)
+// 장 중: 55초 TTL로 갱신
 type CachePayload = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[]; liveAt: number };
 let _cache: { data: CachePayload; at: number } | null = null;
-const CACHE_TTL = 55_000; // 55 s
+const LIVE_TTL = 55_000; // 55 s (장 중 갱신 주기)
 
 // ── Synthetic sparkline ───────────────────────────────────────────────────
 
@@ -155,10 +158,16 @@ async function fetchCoinGecko(): Promise<Map<string, ETFQuote>> {
 }
 
 export async function GET(req: Request) {
-  const url = new URL(req.url);
+  const url     = new URL(req.url);
   const refresh = url.searchParams.has("refresh");
-  // Return cached payload if still fresh — avoids bursting Finnhub rate limit
-  if (!refresh && _cache && Date.now() - _cache.at < CACHE_TTL) {
+  const open    = isMarketOpen();
+
+  // 장 마감 중: 캐시가 있으면 즉시 반환 (API 호출 없음)
+  if (!open && !refresh && _cache) {
+    return NextResponse.json(_cache.data);
+  }
+  // 장 중: 55초 TTL 캐시
+  if (!refresh && _cache && Date.now() - _cache.at < LIVE_TTL) {
     return NextResponse.json(_cache.data);
   }
 
@@ -355,9 +364,12 @@ export async function GET(req: Request) {
 
   const payload: CachePayload = { indices, quotes, futures, liveAt: Date.now() };
 
-  // 완전한 데이터: 55초 캐시 / 불완전: 15초 캐시 (rate limit 방지 + 빠른 재시도)
+  // 데이터가 있으면 무조건 캐시 저장
+  // 불완전 데이터(일부 API 실패): 15초 후 재시도 가능하도록 at을 과거로 설정
   const isComplete = quotes.length > 0 && indices.length > 1 && futures.length >= 10;
-  _cache = { data: payload, at: isComplete ? Date.now() : Date.now() - (CACHE_TTL - 15_000) };
+  if (quotes.length > 0) {
+    _cache = { data: payload, at: isComplete ? Date.now() : Date.now() - (LIVE_TTL - 15_000) };
+  }
 
   return NextResponse.json(payload);
 }

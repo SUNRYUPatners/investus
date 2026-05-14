@@ -5,10 +5,11 @@ import {
   fetchFinnhubProfile,
   fetchFinnhubMetrics,
 } from "@/lib/finnhub";
+import { isMarketOpen } from "@/lib/marketHours";
 
-// Server-side cache — avoids hammering Finnhub/Yahoo on every navigation
+// Server-side cache: 장 마감 중 무기한, 장 중 60초 TTL
 const _cache = new Map<string, { data: Record<string, unknown>; at: number }>();
-const CACHE_TTL = 60_000; // 60 s
+const LIVE_TTL = 60_000; // 60 s
 
 function saveAndRespond(symbol: string, data: Record<string, unknown>) {
   _cache.set(symbol, { data, at: Date.now() });
@@ -89,11 +90,12 @@ export async function GET(req: NextRequest) {
   const rawSymbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase();
   if (!rawSymbol) return NextResponse.json({ error: "no symbol" }, { status: 400 });
 
-  // Serve from server-side cache if fresh
   const cached = _cache.get(rawSymbol);
-  if (cached && Date.now() - cached.at < CACHE_TTL) {
-    return NextResponse.json(cached.data);
-  }
+  const open   = isMarketOpen();
+  // 장 마감 중: 캐시가 있으면 즉시 반환
+  if (!open && cached) return NextResponse.json(cached.data);
+  // 장 중: 60초 TTL
+  if (cached && Date.now() - cached.at < LIVE_TTL) return NextResponse.json(cached.data);
 
   const yahooSymbol     = toYahoo(rawSymbol);
   const isIndexOrFuture = yahooSymbol !== rawSymbol;

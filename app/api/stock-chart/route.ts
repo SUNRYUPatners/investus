@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { isMarketOpen } from "@/lib/marketHours";
 
 // ── Server-side in-memory cache ───────────────────────────────────────────
+// 장 마감 중: 무기한 캐시 / 장 중: TTL 기반 갱신
 type ChartResult = {
   symbol: string;
   chartPreviousClose: number | null;
@@ -8,7 +10,7 @@ type ChartResult = {
   points: { ts: number; close: number; volume: number }[];
 };
 const _cache = new Map<string, { data: ChartResult; at: number }>();
-const TTL: Record<string, number> = {
+const LIVE_TTL: Record<string, number> = {
   "1D": 60_000, "YTD": 300_000,
   "1Y": 600_000, "5Y": 600_000, "10Y": 3_600_000, "ALL": 3_600_000,
 };
@@ -125,9 +127,12 @@ export async function GET(req: NextRequest) {
 
   const cKey   = `${symbol}-${period}`;
   const cached = _cache.get(cKey);
-  const ttl    = TTL[period] ?? 60_000;
+  const open   = isMarketOpen();
+  const ttl    = LIVE_TTL[period] ?? 60_000;
 
-  if (cached && Date.now() - cached.at < ttl) {
+  // 장 마감 중: 1D 차트는 전날 종가로 충분 → 캐시 무기한
+  // 장 중 + 장기 차트(YTD 이상): TTL 기반 갱신
+  if (cached && (!open && period === "1D" || Date.now() - cached.at < ttl)) {
     return NextResponse.json(cached.data);
   }
 
