@@ -103,7 +103,9 @@ export async function fetchFinnhubRawQuote(symbol: string): Promise<FinnhubRawQu
     const res = await fetch(`${BASE}/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`);
     if (!res.ok) return null;
     const d = await res.json();
-    if (!d.c || d.c === 0) return null;
+    // Return data even when c=0 (market closed) as long as pc (prev close) is valid
+    // Callers that need live price should check c > 0 themselves
+    if (!d || ((!d.c || d.c === 0) && (!d.pc || d.pc === 0))) return null;
     return d as FinnhubRawQuote;
   } catch {
     return null;
