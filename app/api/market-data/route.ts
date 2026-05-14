@@ -176,21 +176,30 @@ export async function GET(req: Request) {
       ? Promise.allSettled(cryptoFHSyms.map((s) => fetchFinnhubRawQuote(s)))
       : Promise.resolve(cryptoFHSyms.map(() => ({ status: "fulfilled", value: null } as PromiseFulfilledResult<null>))),
     fetchCoinGecko(),
-    // Commodity futures: Stooq (parallel, no rate limit) → YF v8 fallback
+    // Commodity futures: Stooq batched (5/chunk, 200ms gap) → YF v8 fallback
+    // Batching prevents Stooq anti-bot blocking from same Vercel IP
     (async () => {
       type CommodityEntry = { key: string; price: number; change: number; changePercent: number };
-      // 1) Try Stooq in parallel for all symbols
-      const stooqResults = await Promise.allSettled(
-        Object.entries(COMMODITY_STOOQ).map(async ([key, stooqSym]) => {
-          const r = await fetchStooqFuture(stooqSym);
-          return r ? ({ key, ...r } as CommodityEntry) : null;
-        })
-      );
-      const stooqMap = new Map<string, CommodityEntry>();
-      for (const r of stooqResults) {
-        if (r.status === "fulfilled" && r.value) stooqMap.set(r.value.key, r.value);
+      const stooqMap  = new Map<string, CommodityEntry>();
+      const syms      = Object.entries(COMMODITY_STOOQ);
+      const CHUNK     = 5;
+      const GAP       = 200; // ms between chunks
+
+      for (let i = 0; i < syms.length; i += CHUNK) {
+        const chunk = syms.slice(i, i + CHUNK);
+        const results = await Promise.allSettled(
+          chunk.map(async ([key, stooqSym]) => {
+            const r = await fetchStooqFuture(stooqSym);
+            return r ? ({ key, ...r } as CommodityEntry) : null;
+          })
+        );
+        for (const r of results) {
+          if (r.status === "fulfilled" && r.value) stooqMap.set(r.value.key, r.value);
+        }
+        if (i + CHUNK < syms.length) await new Promise<void>((res) => setTimeout(res, GAP));
       }
-      // 2) YF v8 fallback for symbols Stooq didn't return
+
+      // YF v8 fallback for symbols Stooq didn't return
       const missing = Object.entries(COMMODITY_FUTURES_YF).filter(([k]) => !stooqMap.has(k));
       if (missing.length > 0) {
         const yfResults = await Promise.allSettled(
@@ -346,8 +355,10 @@ export async function GET(req: Request) {
 
   const payload: CachePayload = { indices, quotes, futures, liveAt: Date.now() };
 
-  // quotes가 비어있으면 캐시 저장 금지 — 다음 요청이 재시도하도록
-  if (quotes.length > 0) {
+  // 데이터가 충분할 때만 캐시 — 불완전한 결과를 55초간 서빙하는 것을 방지
+  // indices > 1: 원달러 외 지수가 있어야 함 / futures > 10: 절반 이상 로드되어야 함
+  const isComplete = quotes.length > 0 && indices.length > 1 && futures.length >= 10;
+  if (isComplete) {
     _cache = { data: payload, at: Date.now() };
   }
 

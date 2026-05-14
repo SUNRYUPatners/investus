@@ -13,9 +13,12 @@ export type StooqQuote = { price: number; change: number; changePercent: number 
  */
 export async function fetchStooqFuture(stooqSym: string): Promise<StooqQuote | null> {
   try {
+    const controller = new AbortController();
+    const timeout    = setTimeout(() => controller.abort(), 5_000);
     // f=sd2t2ohlcvkp → Symbol,Date,Time,Open,High,Low,Close,Volume,PrevClose
     const url = `https://stooq.com/q/l/?s=${encodeURIComponent(stooqSym)}&f=sd2t2ohlcvkp&h&e=csv`;
     const res = await fetch(url, {
+      signal: controller.signal,
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
@@ -24,6 +27,7 @@ export async function fetchStooqFuture(stooqSym: string): Promise<StooqQuote | n
       },
       cache: "no-store",
     });
+    clearTimeout(timeout);
     if (!res.ok) return null;
     const text = await res.text();
     const lines = text.trim().split("\n");

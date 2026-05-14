@@ -8,12 +8,11 @@ import { SP500Heatmap } from "@/components/SP500Heatmap";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
 import { ReportFeed } from "@/components/ReportFeed";
-import { getNews, getFearGreed, getBuffett, mockQuotes } from "@/lib/api";
+import { getFearGreed, getBuffett, mockQuotes } from "@/lib/api";
 import { getLocale } from "@/lib/getLocale";
 
 export default async function HomePage() {
-  const [news, fearGreed, buffett, locale] = await Promise.all([
-    getNews(),
+  const [fearGreed, buffett, locale] = await Promise.all([
     getFearGreed(),
     getBuffett(),
     getLocale(),
@@ -60,7 +59,7 @@ export default async function HomePage() {
 
             {/* 시장 뉴스 */}
             <section className="px-4 lg:hidden pt-4 pb-2">
-              <NewsSection news={news} />
+              <NewsSection />
             </section>
           </div>
 
@@ -69,7 +68,7 @@ export default async function HomePage() {
             <AdBanner format="auto" />
             <FearGreedGauge data={fearGreed} locale={locale} />
             <BuffettGauge data={buffett} locale={locale} />
-            <NewsSection news={news} />
+            <NewsSection />
           </div>
 
         </div>
