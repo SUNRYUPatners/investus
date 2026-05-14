@@ -2,17 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const navItems = [
-  { href: "/",       emoji: "📊", label: "홈" },
-  { href: "/search", emoji: "🔍", label: "검색" },
-  { href: "/wall",   emoji: "💬", label: "종목이야기" },
-  { href: "/insight",emoji: "💡", label: "인사이트" },
-  { href: "/more",   emoji: "···", label: "더보기" },
-];
+import { useLocale } from "@/contexts/LocaleContext";
 
 export function BottomNav() {
   const pathname = usePathname();
+  const t = useLocale();
+
+  const navItems = [
+    { href: "/",        emoji: "📊", label: t.nav.home    },
+    { href: "/search",  emoji: "🔍", label: t.nav.search  },
+    { href: "/wall",    emoji: "💬", label: t.nav.wall    },
+    { href: "/insight", emoji: "💡", label: t.nav.insight },
+    { href: "/more",    emoji: "···", label: t.nav.more   },
+  ];
 
   return (
     <nav

@@ -9,7 +9,7 @@ type ChartResult = {
 };
 const _cache = new Map<string, { data: ChartResult; at: number }>();
 const TTL: Record<string, number> = {
-  "1D": 60_000, "1W": 180_000, "1M": 300_000, "3M": 300_000,
+  "1D": 60_000, "YTD": 300_000,
   "1Y": 600_000, "5Y": 600_000, "10Y": 3_600_000, "ALL": 3_600_000,
 };
 
@@ -17,9 +17,6 @@ const TTL: Record<string, number> = {
 // Sign up free at https://twelvedata.com/ and set TWELVEDATA_API_KEY in Vercel
 const TWELVE_CFG: Record<string, { interval: string; outputsize: number }> = {
   "1D":  { interval: "5min",   outputsize: 80  },
-  "1W":  { interval: "1h",     outputsize: 40  },
-  "1M":  { interval: "1day",   outputsize: 23  },
-  "3M":  { interval: "1day",   outputsize: 66  },
   "1Y":  { interval: "1week",  outputsize: 53  },
   "5Y":  { interval: "1month", outputsize: 60  },
   "10Y": { interval: "1month", outputsize: 120 },
@@ -40,15 +37,26 @@ async function fetchTwelveData(symbol: string, period: string): Promise<ChartRes
   const apiKey = process.env.TWELVEDATA_API_KEY;
   if (!apiKey) return null;
 
-  const cfg = TWELVE_CFG[period];
-  if (!cfg) return null;
-
-  const url =
-    `https://api.twelvedata.com/time_series` +
-    `?symbol=${encodeURIComponent(symbol)}` +
-    `&interval=${cfg.interval}` +
-    `&outputsize=${cfg.outputsize}` +
-    `&apikey=${apiKey}`;
+  // YTD: use start_date instead of outputsize
+  let url: string;
+  if (period === "YTD") {
+    const year = new Date().getFullYear();
+    url =
+      `https://api.twelvedata.com/time_series` +
+      `?symbol=${encodeURIComponent(symbol)}` +
+      `&interval=1day` +
+      `&start_date=${year}-01-01` +
+      `&apikey=${apiKey}`;
+  } else {
+    const cfg = TWELVE_CFG[period];
+    if (!cfg) return null;
+    url =
+      `https://api.twelvedata.com/time_series` +
+      `?symbol=${encodeURIComponent(symbol)}` +
+      `&interval=${cfg.interval}` +
+      `&outputsize=${cfg.outputsize}` +
+      `&apikey=${apiKey}`;
+  }
 
   try {
     const res = await fetch(url); // plain fetch, no caching — use our own cache

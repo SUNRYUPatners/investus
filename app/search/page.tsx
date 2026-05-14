@@ -3,11 +3,13 @@
 import { useState, useTransition, useEffect } from "react";
 import { Search, X } from "lucide-react";
 import Link from "next/link";
-import { mockQuotes, type Quote } from "@/lib/api";
+import { mockQuotes, type Quote, RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { Header } from "@/components/Header";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { GuruHoldings } from "@/components/GuruHoldings";
 import { AdBanner } from "@/components/AdBanner";
+import { Star } from "lucide-react";
+import { useLocale } from "@/contexts/LocaleContext";
 
 const UP   = "#ff4d6d";
 const DOWN = "#00e5a0";
@@ -30,6 +32,7 @@ function StockRow({
   inWatchlist: boolean;
   onToggle: () => void;
 }) {
+  const t     = useLocale();
   const pos   = stock.changePercent >= 0;
   const color = pos ? UP : DOWN;
 
@@ -75,7 +78,7 @@ function StockRow({
       <button
         onClick={onToggle}
         className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg active:scale-90 transition-transform"
-        aria-label={inWatchlist ? "관심종목 제거" : "관심종목 추가"}
+        aria-label={inWatchlist ? t.search.watchlistRemove : t.search.watchlistAdd}
       >
         <span
           className="text-lg leading-none"
@@ -89,6 +92,7 @@ function StockRow({
 }
 
 export default function SearchPage() {
+  const t = useLocale();
   const [query, setQuery]     = useState("");
   const [, startTransition]   = useTransition();
   const [searchQuery, setSearchQuery] = useState("");
@@ -136,7 +140,8 @@ export default function SearchPage() {
       )
     : [];
 
-  const popularStocks = enriched.filter(({ stock }) => POPULAR.includes(stock.symbol));
+  const popularStocks     = enriched.filter(({ stock }) => POPULAR.includes(stock.symbol));
+  const recommendedStocks = enriched.filter(({ stock }) => RECOMMENDED_SYMBOLS.includes(stock.symbol));
   const showResults   = query.length > 0;
 
   return (
@@ -156,7 +161,7 @@ export default function SearchPage() {
               <Search className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
               <input
                 type="text"
-                placeholder="종목명 또는 티커 검색"
+                placeholder={t.search.placeholder}
                 value={query}
                 onChange={(e) => handleChange(e.target.value)}
                 className="flex-1 bg-transparent text-sm outline-none"
@@ -172,7 +177,7 @@ export default function SearchPage() {
             {showResults ? (
               <div>
                 <p className="text-xs mb-3" style={{ color: "var(--muted)" }}>
-                  검색 결과 {results.length}개
+                  {t.search.results(results.length)}
                 </p>
                 {results.length > 0 ? (
                   <div className="flex flex-col gap-2">
@@ -190,7 +195,7 @@ export default function SearchPage() {
                   <div className="flex flex-col items-center justify-center py-16 gap-3">
                     <Search className="w-10 h-10 opacity-20" style={{ color: "var(--muted)" }} />
                     <p className="text-sm" style={{ color: "var(--muted)" }}>
-                      &quot;{query}&quot; 검색 결과가 없습니다
+                      {t.search.noResults(query)}
                     </p>
                   </div>
                 )}
@@ -205,13 +210,38 @@ export default function SearchPage() {
                 {/* 광고 */}
                 <AdBanner format="auto" />
 
+                {/* Investus 추천주식 */}
+                <div>
+                  <div className="flex items-center gap-1.5 mb-3">
+                    <Star className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} fill="var(--mint)" />
+                    <h2
+                      className="text-xs font-semibold tracking-widest uppercase font-syne"
+                      style={{ color: "var(--text)" }}
+                    >
+                      {t.search.picks}
+                    </h2>
+                    <span className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>{t.search.cioPicks}</span>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    {recommendedStocks.map(({ stock, hasLivePrice }) => (
+                      <StockRow
+                        key={stock.symbol}
+                        stock={stock}
+                        hasLivePrice={hasLivePrice}
+                        inWatchlist={list.includes(stock.symbol)}
+                        onToggle={() => toggle(stock.symbol)}
+                      />
+                    ))}
+                  </div>
+                </div>
+
                 {/* 인기 종목 */}
                 <div>
                   <h2
                     className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
                     style={{ color: "var(--muted)" }}
                   >
-                    인기 종목
+                    {t.search.popular}
                   </h2>
                   <div className="flex flex-col gap-2">
                     {popularStocks.map(({ stock, hasLivePrice }) => (

@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { TrendingUp } from "lucide-react";
+import { useLocale } from "@/contexts/LocaleContext";
 
 function getEstStatus() {
   const now = new Date();
@@ -16,6 +18,7 @@ function getEstStatus() {
 }
 
 export function Header() {
+  const t = useLocale();
   const [time, setTime] = useState("");
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -46,13 +49,12 @@ export function Header() {
       <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
         {/* 로고 — 모바일만 표시 */}
         <div className="flex items-center gap-2 lg:hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/logo.jpeg"
-            alt="Investus"
-            className="w-8 h-8 rounded-lg object-cover"
-            style={{ boxShadow: "0 2px 8px rgba(212,175,55,0.3)" }}
-          />
+          <div
+            className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+            style={{ background: "var(--mint)" }}
+          >
+            <TrendingUp className="w-4 h-4 text-black" strokeWidth={2.5} />
+          </div>
           <span
             className="text-lg font-bold tracking-tight font-syne"
             style={{ color: "var(--text)" }}
@@ -63,7 +65,7 @@ export function Header() {
 
         {/* 데스크톱: 사이트 타이틀 */}
         <span className="hidden lg:block text-sm font-semibold font-syne" style={{ color: "var(--muted)" }}>
-          실시간 미국주식
+          {t.header.tagline}
         </span>
 
         {/* EST 시계 + 마켓 상태 */}
@@ -86,6 +88,14 @@ export function Header() {
               >
                 {open ? "● OPEN" : "● CLOSED"}
               </span>
+              {open && (
+                <span
+                  className="text-[9px] font-mono-num"
+                  style={{ color: "var(--muted)", opacity: 0.6 }}
+                >
+                  ↻ 60s
+                </span>
+              )}
             </>
           )}
         </div>

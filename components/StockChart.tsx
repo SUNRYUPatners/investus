@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 
-const PERIODS = ["1D", "1W", "1M", "3M", "1Y", "5Y", "10Y", "ALL"] as const;
+const PERIODS = ["1D", "YTD", "1Y", "5Y", "10Y", "ALL"] as const;
 type Period = (typeof PERIODS)[number];
 
 type Point = { ts: number; close: number; volume: number };
@@ -29,28 +30,35 @@ function xFmt(ts: number, period: Period): string {
       hour: "numeric", minute: "2-digit", hour12: false,
       timeZone: "America/New_York",
     });
-  if (period === "1W" || period === "1M" || period === "3M")
+  if (period === "YTD")
     return `${d.getMonth() + 1}/${d.getDate()}`;
   if (period === "1Y")
     return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
   return String(d.getFullYear());
 }
 
-function fullFmt(ts: number, period: Period): string {
+function fullFmt(ts: number, period: Period, locale: "ko" | "en"): string {
   const d = new Date(ts * 1000);
+  const lang = locale === "ko" ? "ko-KR" : "en-US";
   if (period === "1D")
-    return d.toLocaleString("ko-KR", {
+    return d.toLocaleString(lang, {
       month: "short", day: "numeric",
       hour: "2-digit", minute: "2-digit",
       timeZone: "America/New_York",
     }) + " EST";
-  return d.toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric" });
+  return d.toLocaleDateString(lang, { year: "numeric", month: "long", day: "numeric" });
 }
 
-function fmtVol(v: number): string {
-  if (v >= 1e8) return (v / 1e8).toFixed(1) + "억";
-  if (v >= 1e4) return Math.round(v / 1e4).toLocaleString() + "만";
-  return v.toLocaleString("ko-KR");
+function fmtVol(v: number, locale: "ko" | "en"): string {
+  if (locale === "ko") {
+    if (v >= 1e8) return (v / 1e8).toFixed(1) + "억";
+    if (v >= 1e4) return Math.round(v / 1e4).toLocaleString() + "만";
+    return v.toLocaleString("ko-KR");
+  }
+  if (v >= 1e9) return (v / 1e9).toFixed(1) + "B";
+  if (v >= 1e6) return (v / 1e6).toFixed(1) + "M";
+  if (v >= 1e3) return (v / 1e3).toFixed(1) + "K";
+  return v.toLocaleString();
 }
 
 function cacheKey(symbol: string, period: string) {
@@ -71,6 +79,8 @@ function writeCache(symbol: string, period: string, data: ChartData) {
 }
 
 export function StockChart({ symbol }: { symbol: string }) {
+  const t    = useLocale();
+  const lc   = useLocaleCode();
   const [period, setPeriod]   = useState<Period>("1D");
   const [data, setData]       = useState<ChartData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -238,7 +248,7 @@ export function StockChart({ symbol }: { symbol: string }) {
             </div>
             {hover != null && activeTs > 0 && (
               <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-                {fullFmt(activeTs, period)} · 거래량 {fmtVol(activeVol)}
+                {fullFmt(activeTs, period, lc)} · {t.chart.volume} {fmtVol(activeVol, lc)}
               </p>
             )}
           </>
@@ -260,13 +270,13 @@ export function StockChart({ symbol }: { symbol: string }) {
         {/* No data at all and fetch failed */}
         {fetchFailed && N === 0 && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-            <p className="text-xs" style={{ color: "var(--muted)" }}>차트 데이터를 불러오지 못했습니다</p>
+            <p className="text-xs" style={{ color: "var(--muted)" }}>{t.chart.loadFailed}</p>
             <button
               className="text-[11px] px-3 py-1.5 rounded-lg font-semibold"
               style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
               onClick={() => { setFetchFailed(false); setLoading(true); doFetch(symbol, period, true); }}
             >
-              다시 시도
+              {t.chart.retry}
             </button>
           </div>
         )}

@@ -91,11 +91,23 @@ type PopupState = {
   anchorY: number;
 };
 
+function isMarketOpen() {
+  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
+  const day = now.getDay();
+  if (day === 0 || day === 6) return false;
+  const m = now.getHours() * 60 + now.getMinutes();
+  return m >= 9 * 60 + 30 && m < 16 * 60;
+}
+
 type Props = { items: FutureItem[] };
 
 export function FuturesHeatmap({ items }: Props) {
   const [popup, setPopup] = useState<PopupState | null>(null);
+  const [open, setOpen]   = useState(false);
   const bySymbol = Object.fromEntries(items.map((i) => [i.symbol, i]));
+
+  // 클라이언트 마운트 후 장 상태 반영
+  useState(() => { setOpen(isMarketOpen()); });
 
   return (
     <div
@@ -111,7 +123,7 @@ export function FuturesHeatmap({ items }: Props) {
           Futures Map
         </h2>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          선물 시장 · 실시간
+          {open ? "선물 시장 · 실시간" : "선물 시장 · 전장 종가"}
         </span>
       </div>
 

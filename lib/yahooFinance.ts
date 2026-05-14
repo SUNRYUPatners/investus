@@ -149,6 +149,41 @@ export async function fetchIndex(yahooSymbol: string): Promise<YFIndex | null> {
   };
 }
 
+/**
+ * 상품 선물 v8 조회 (v7는 Unauthorized) — range=5d로 장 마감 중에도 안정적
+ * internalKey: 앱 내부 심볼 (CL, NG, GC …)
+ * yahooSym:    Yahoo Finance 티커 (CL=F, NG=F, GC=F …)
+ */
+export async function fetchFutureV8(
+  yahooSym: string,
+): Promise<{ price: number; change: number; changePercent: number } | null> {
+  for (const base of [YF_BASE, YF_BASE2]) {
+    for (const range of ["5d", "1mo"]) {
+      try {
+        const url =
+          `${base}/v8/finance/chart/${encodeURIComponent(yahooSym)}` +
+          `?interval=1d&range=${range}&includePrePost=false`;
+        const res = await fetch(url, {
+          headers: yfHeaders(),
+          cache: "no-store",
+        });
+        if (!res.ok) continue;
+        const json = await res.json();
+        const meta = json?.chart?.result?.[0]?.meta;
+        if (!meta?.regularMarketPrice) continue;
+        const price = Number(meta.regularMarketPrice);
+        const prev  = Number(meta.chartPreviousClose ?? meta.regularMarketPreviousClose ?? price);
+        return {
+          price,
+          change:        price - prev,
+          changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0,
+        };
+      } catch { /* try next host / range */ }
+    }
+  }
+  return null;
+}
+
 /** 스파크라인 (1시간봉 × 9개) */
 export async function fetchSparkline(symbol: string): Promise<number[]> {
   const url =

@@ -4,8 +4,13 @@ import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
 import Link from "next/link";
 import { AdBanner } from "@/components/AdBanner";
+import { getLocale } from "@/lib/getLocale";
+import { getT } from "@/lib/i18n";
 
-export default function InsightPage() {
+export default async function InsightPage() {
+  const locale = await getLocale();
+  const t = getT(locale).insight;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
@@ -14,10 +19,10 @@ export default function InsightPage() {
         {/* Title */}
         <div className="pt-5 pb-4">
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
-            인사이트 💡
+            {t.title}
           </h1>
           <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>
-            투자 인사이트 · 추천 도서 · 유튜브
+            {t.subtitle}
           </p>
         </div>
 
@@ -34,7 +39,6 @@ export default function InsightPage() {
                 background: "linear-gradient(135deg, #0d1f18 0%, #0a0c10 60%, #0d1520 100%)",
               }}
             >
-              {/* Glow */}
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
@@ -43,7 +47,6 @@ export default function InsightPage() {
                 }}
               />
 
-              {/* Book cover */}
               <div
                 className="relative w-[68px] h-[96px] rounded-xl flex-shrink-0 flex flex-col items-center justify-center gap-1 shadow-lg"
                 style={{
@@ -57,25 +60,24 @@ export default function InsightPage() {
                   className="text-[7px] font-bold text-center px-1 leading-tight"
                   style={{ color: "var(--mint)" }}
                 >
-                  절대로 잃지말고
+                  {t.bookCoverL1}
                   <br />
-                  미래에 투자하라
+                  {t.bookCoverL2}
                 </p>
               </div>
 
-              {/* Info */}
               <div className="flex-1 min-w-0">
                 <div
                   className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-2"
                   style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}
                 >
-                  ✦ 신규 출간
+                  {t.newRelease}
                 </div>
                 <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
-                  절대로 잃지 말고 미래에 투자하라
+                  {t.bookTitle}
                 </p>
                 <p className="text-[11px] mb-2.5" style={{ color: "var(--muted)" }}>
-                  잃지 않는 투자의 원칙 · 미래 유망 섹터
+                  {t.bookSubtitle}
                 </p>
                 <div className="flex items-center justify-between">
                   <p className="text-base font-bold font-mono-num" style={{ color: "var(--mint)" }}>
@@ -85,7 +87,7 @@ export default function InsightPage() {
                     className="text-[11px] font-bold px-3 py-1.5 rounded-full"
                     style={{ background: "var(--mint)", color: "#000" }}
                   >
-                    구매하기 →
+                    {t.buy}
                   </span>
                 </div>
               </div>
@@ -106,7 +108,6 @@ export default function InsightPage() {
                 background: "linear-gradient(135deg, #1a0d2e 0%, #0d0d1f 60%, #0a0c10 100%)",
               }}
             >
-              {/* Glow */}
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
@@ -115,7 +116,6 @@ export default function InsightPage() {
                 }}
               />
 
-              {/* Icon */}
               <div
                 className="relative w-[68px] h-[68px] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg"
                 style={{
@@ -127,23 +127,22 @@ export default function InsightPage() {
                 <span className="text-3xl">🎓</span>
               </div>
 
-              {/* Info */}
               <div className="flex-1 min-w-0">
                 <div
                   className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-2"
                   style={{ background: "rgba(139,92,246,0.2)", color: "#a78bfa" }}
                 >
-                  ✦ 소수 정예 클래스
+                  {t.exclusiveClass}
                 </div>
                 <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
-                  미국주식 투자 교육
+                  {t.courseTitle}
                 </p>
                 <p className="text-[11px] mb-2.5" style={{ color: "var(--muted)" }}>
-                  4주 · 실전 중심 · 종목 분석 포함
+                  {t.courseSub}
                 </p>
                 <div className="flex items-center justify-between">
                   <p className="text-xs" style={{ color: "#a78bfa" }}>
-                    선착순 모집 중
+                    {t.limitedSpots}
                   </p>
                   <span
                     className="text-[11px] font-bold px-3 py-1.5 rounded-full"
@@ -152,7 +151,7 @@ export default function InsightPage() {
                       color: "#fff",
                     }}
                   >
-                    신청하기 →
+                    {t.apply}
                   </span>
                 </div>
               </div>
@@ -176,7 +175,7 @@ export default function InsightPage() {
             className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
             style={{ color: "var(--muted)" }}
           >
-            추천 도서
+            {t.books}
           </h2>
           <BookCarousel />
         </section>
@@ -187,7 +186,7 @@ export default function InsightPage() {
             className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
             style={{ color: "var(--muted)" }}
           >
-            추천 유튜브 채널
+            {t.youtube}
           </h2>
           <YoutubeChannels />
         </section>

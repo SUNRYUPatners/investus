@@ -4,43 +4,20 @@ import { useState } from "react";
 import { Header } from "@/components/Header";
 import { ChevronLeft, CheckCircle, BookOpen, TrendingUp, Users, Clock, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { useLocale } from "@/contexts/LocaleContext";
 
-const CURRICULUM = [
-  {
-    week: "1주차",
-    title: "투자 마인드셋",
-    items: ["잃지 않는 투자의 원칙", "리스크 관리 기초", "포트폴리오 설계 철학"],
-  },
-  {
-    week: "2주차",
-    title: "미국 시장 이해",
-    items: ["S&P500 / 나스닥 구조 분석", "섹터 로테이션 전략", "경기 사이클과 투자 타이밍"],
-  },
-  {
-    week: "3주차",
-    title: "종목 분석 실전",
-    items: ["재무제표 읽는 법", "밸류에이션 기초 (PER, PBR, EV/EBITDA)", "성장주 vs 가치주 선별 기준"],
-  },
-  {
-    week: "4주차",
-    title: "미래 투자 섹터",
-    items: ["AI · 반도체 산업 분석", "에너지 전환과 투자 기회", "실전 포트폴리오 구성 실습"],
-  },
+const HIGHLIGHT_ICONS = [
+  <Clock className="w-5 h-5" key="clock" />,
+  <Users className="w-5 h-5" key="users" />,
+  <BookOpen className="w-5 h-5" key="book" />,
+  <TrendingUp className="w-5 h-5" key="trend" />,
 ];
 
-const HIGHLIGHTS = [
-  { icon: <Clock className="w-5 h-5" />,       label: "4주 과정",       sub: "주 2회 · 90분" },
-  { icon: <Users className="w-5 h-5" />,        label: "소수 정예",       sub: "회당 최대 8명" },
-  { icon: <BookOpen className="w-5 h-5" />,     label: "자료 제공",       sub: "강의 PDF 포함" },
-  { icon: <TrendingUp className="w-5 h-5" />,   label: "실전 중심",       sub: "종목 토론 포함" },
-];
-
-const LEVELS = ["주식 처음입니다", "6개월 미만", "6개월~2년", "2년 이상"];
-const AMOUNTS = ["500만원 미만", "500~2,000만원", "2,000~5,000만원", "5,000만원 이상"];
-
-type Step = "form" | "success";
+type Step = "form" | "submitting" | "success" | "error";
 
 export default function EducationPage() {
+  const t  = useLocale();
+  const ed = t.education;
   const [step, setStep]           = useState<Step>("form");
   const [openWeek, setOpenWeek]   = useState<number | null>(0);
   const [name,   setName]         = useState("");
@@ -50,19 +27,29 @@ export default function EducationPage() {
   const [msg,    setMsg]          = useState("");
   const [error,  setError]        = useState("");
 
-  const handleSubmit = () => {
-    if (!name.trim())  { setError("이름을 입력해주세요."); return; }
-    if (!phone.trim()) { setError("연락처를 입력해주세요."); return; }
-    if (!level)        { setError("투자 경력을 선택해주세요."); return; }
+  const handleSubmit = async () => {
+    if (!name.trim())  { setError(ed.errName); return; }
+    if (!phone.trim()) { setError(ed.errPhone); return; }
+    if (!level)        { setError(ed.errLevel); return; }
 
-    // Save to localStorage (will be reviewed by host)
+    setError("");
+    setStep("submitting");
+
     try {
-      const apps = JSON.parse(localStorage.getItem("edu_applications") ?? "[]");
-      apps.push({ name, phone, level, amount, msg, at: new Date().toISOString() });
-      localStorage.setItem("edu_applications", JSON.stringify(apps));
-    } catch {}
-
-    setStep("success");
+      const res = await fetch("/api/edu-apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, level, amount, message: msg }),
+      });
+      if (!res.ok) {
+        const d = await res.json().catch(() => ({}));
+        throw new Error((d as { error?: string }).error ?? "서버 오류");
+      }
+      setStep("success");
+    } catch (e) {
+      setError((e as Error).message ?? "신청 중 오류가 발생했습니다. 다시 시도해주세요.");
+      setStep("form");
+    }
   };
 
   /* ── 신청 완료 ── */
@@ -80,11 +67,10 @@ export default function EducationPage() {
         </div>
         <div className="text-center">
           <p className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
-            신청 완료!
+            {ed.successTitle}
           </p>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            {name}님, 신청해 주셔서 감사합니다.{"\n"}
-            빠른 시일 내에 연락드리겠습니다.
+            {ed.successMsg(name)}
           </p>
         </div>
 
@@ -93,13 +79,13 @@ export default function EducationPage() {
           style={{ background: "var(--card)", borderColor: "var(--border)" }}
         >
           <p className="text-xs font-semibold mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            신청 내역
+            {ed.summaryTitle}
           </p>
           {[
-            ["이름",     name],
-            ["연락처",   phone],
-            ["투자 경력", level],
-            ["투자 규모", amount || "미입력"],
+            [ed.summaryName,   name],
+            [ed.summaryPhone,  phone],
+            [ed.summaryLevel,  level],
+            [ed.summaryAmount, amount || ed.noAmount],
           ].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b last:border-0"
               style={{ borderColor: "var(--border)" }}>
@@ -114,7 +100,7 @@ export default function EducationPage() {
           className="text-xs"
           style={{ color: "var(--muted)" }}
         >
-          인사이트로 돌아가기
+          {ed.backToInsight}
         </Link>
       </div>
     );
@@ -129,7 +115,7 @@ export default function EducationPage() {
         <Link href="/insight"
           className="inline-flex items-center gap-1 text-xs mb-5"
           style={{ color: "var(--muted)" }}>
-          <ChevronLeft className="w-3.5 h-3.5" /> 인사이트
+          <ChevronLeft className="w-3.5 h-3.5" /> {ed.back}
         </Link>
 
         {/* Hero */}
@@ -146,20 +132,21 @@ export default function EducationPage() {
             className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-3"
             style={{ background: "rgba(139,92,246,0.2)", color: "#a78bfa" }}
           >
-            ✦ 소수 정예 클래스
+            {ed.badge}
           </div>
           <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "var(--text)" }}>
-            미국주식<br />투자 교육
+            {ed.heroTitle1}<br />{ed.heroTitle2}
           </h1>
           <p className="text-[13px] leading-relaxed" style={{ color: "var(--muted)" }}>
-            잃지 않는 투자의 원칙부터<br />
-            실전 종목 분석까지 — 4주 집중 과정
+            {ed.heroDesc.split("\n").map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </p>
         </div>
 
         {/* Highlights */}
         <div className="grid grid-cols-2 gap-2 mb-6">
-          {HIGHLIGHTS.map((h) => (
+          {ed.highlights.map((h, i) => (
             <div
               key={h.label}
               className="rounded-xl p-3.5 border flex items-center gap-3"
@@ -169,7 +156,7 @@ export default function EducationPage() {
                 className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: "rgba(139,92,246,0.12)", color: "#a78bfa" }}
               >
-                {h.icon}
+                {HIGHLIGHT_ICONS[i]}
               </div>
               <div>
                 <p className="text-xs font-bold" style={{ color: "var(--text)" }}>{h.label}</p>
@@ -183,12 +170,12 @@ export default function EducationPage() {
         <div className="mb-6">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
             style={{ color: "var(--muted)" }}>
-            커리큘럼
+            {ed.curriculum}
           </p>
           <div className="rounded-2xl border overflow-hidden"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-            {CURRICULUM.map((c, i) => (
-              <div key={c.week} className={i < CURRICULUM.length - 1 ? "border-b" : ""}
+            {ed.weeks.map((c, i) => (
+              <div key={c.week} className={i < ed.weeks.length - 1 ? "border-b" : ""}
                 style={{ borderColor: "var(--border)" }}>
                 <button
                   onClick={() => setOpenWeek(openWeek === i ? null : i)}
@@ -233,17 +220,17 @@ export default function EducationPage() {
         <div className="mb-5">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
             style={{ color: "var(--muted)" }}>
-            수강 신청
+            {ed.formTitle}
           </p>
           <div className="flex flex-col gap-2">
 
-            {/* 이름 */}
+            {/* Name */}
             <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border"
               style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-              <span className="text-[11px] w-12 flex-shrink-0" style={{ color: "var(--muted)" }}>이름</span>
+              <span className="text-[11px] w-14 flex-shrink-0" style={{ color: "var(--muted)" }}>{ed.nameLbl}</span>
               <input
                 type="text"
-                placeholder="홍길동 (필수)"
+                placeholder={ed.namePH}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="flex-1 bg-transparent text-sm outline-none"
@@ -251,13 +238,13 @@ export default function EducationPage() {
               />
             </div>
 
-            {/* 연락처 */}
+            {/* Contact */}
             <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border"
               style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-              <span className="text-[11px] w-12 flex-shrink-0" style={{ color: "var(--muted)" }}>연락처</span>
+              <span className="text-[11px] w-14 flex-shrink-0" style={{ color: "var(--muted)" }}>{ed.phoneLbl}</span>
               <input
                 type="tel"
-                placeholder="010-0000-0000 (필수)"
+                placeholder={ed.phonePH}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 className="flex-1 bg-transparent text-sm outline-none"
@@ -265,13 +252,13 @@ export default function EducationPage() {
               />
             </div>
 
-            {/* 투자 경력 */}
+            {/* Investment experience */}
             <div>
               <p className="text-[11px] mb-1.5 ml-1" style={{ color: "var(--muted)" }}>
-                투자 경력 (필수)
+                {ed.levelLbl}
               </p>
               <div className="grid grid-cols-2 gap-1.5">
-                {LEVELS.map((l) => (
+                {ed.levels.map((l) => (
                   <button
                     key={l}
                     onClick={() => setLevel(l)}
@@ -286,13 +273,13 @@ export default function EducationPage() {
               </div>
             </div>
 
-            {/* 투자 규모 */}
+            {/* Portfolio size */}
             <div>
               <p className="text-[11px] mb-1.5 ml-1" style={{ color: "var(--muted)" }}>
-                현재 투자 규모 (선택)
+                {ed.amountLbl}
               </p>
               <div className="grid grid-cols-2 gap-1.5">
-                {AMOUNTS.map((a) => (
+                {ed.amounts.map((a) => (
                   <button
                     key={a}
                     onClick={() => setAmount(amount === a ? "" : a)}
@@ -307,9 +294,9 @@ export default function EducationPage() {
               </div>
             </div>
 
-            {/* 문의 사항 */}
+            {/* Message */}
             <textarea
-              placeholder="문의 사항이나 궁금한 점을 남겨주세요. (선택)"
+              placeholder={ed.msgPH}
               value={msg}
               onChange={(e) => setMsg(e.target.value)}
               rows={3}
@@ -329,19 +316,21 @@ export default function EducationPage() {
 
         <button
           onClick={handleSubmit}
-          className="w-full py-4 rounded-2xl text-base font-bold active:opacity-80 transition-opacity"
+          disabled={step === "submitting"}
+          className="w-full py-4 rounded-2xl text-base font-bold active:opacity-80 transition-opacity disabled:opacity-60"
           style={{
             background: "linear-gradient(135deg, #7c3aed, #a78bfa)",
             color: "#fff",
             boxShadow: "0 4px 24px rgba(139,92,246,0.35)",
           }}
         >
-          수강 신청하기
+          {step === "submitting" ? ed.submitting : ed.submit}
         </button>
 
         <p className="text-[10px] text-center mt-3 leading-relaxed" style={{ color: "var(--muted)" }}>
-          신청 접수 후 1~2일 내 연락드립니다.{"\n"}
-          문의: @hnryu_cio (X) · 카카오톡 오픈채팅
+          {ed.notice.split("\n").map((line, i) => (
+            <span key={i}>{line}{i === 0 && <br />}</span>
+          ))}
         </p>
       </main>
     </div>

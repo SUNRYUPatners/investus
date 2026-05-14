@@ -9,12 +9,14 @@ import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
 import { ReportFeed } from "@/components/ReportFeed";
 import { getNews, getFearGreed, getBuffett, mockQuotes } from "@/lib/api";
+import { getLocale } from "@/lib/getLocale";
 
 export default async function HomePage() {
-  const [news, fearGreed, buffett] = await Promise.all([
+  const [news, fearGreed, buffett, locale] = await Promise.all([
     getNews(),
     getFearGreed(),
     getBuffett(),
+    getLocale(),
   ]);
 
   return (
@@ -40,20 +42,20 @@ export default async function HomePage() {
               <SP500Heatmap />
             </section>
 
+            {/* Investus 리포트 — 히트맵 아래 (모바일 + 데스크톱 공통) */}
+            <section className="px-4 lg:px-0 pt-4 lg:pt-6">
+              <ReportFeed />
+            </section>
+
             {/* 광고 · 시장심리 · 버핏지수 — 모바일 전용 */}
             <section className="px-4 lg:hidden pt-4">
               <AdBanner format="auto" />
             </section>
             <section className="px-4 lg:hidden pt-4">
-              <FearGreedGauge data={fearGreed} />
+              <FearGreedGauge data={fearGreed} locale={locale} />
             </section>
             <section className="px-4 lg:hidden pt-4">
-              <BuffettGauge data={buffett} />
-            </section>
-
-            {/* Investus 리포트 — 뉴스 위 */}
-            <section className="px-4 lg:hidden pt-4">
-              <ReportFeed />
+              <BuffettGauge data={buffett} locale={locale} />
             </section>
 
             {/* 시장 뉴스 */}
@@ -65,9 +67,8 @@ export default async function HomePage() {
           {/* ── 오른쪽 컬럼 (데스크톱 전용, sticky) ── */}
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] gap-5 pb-10">
             <AdBanner format="auto" />
-            <FearGreedGauge data={fearGreed} />
-            <BuffettGauge data={buffett} />
-            <ReportFeed />
+            <FearGreedGauge data={fearGreed} locale={locale} />
+            <BuffettGauge data={buffett} locale={locale} />
             <NewsSection news={news} />
           </div>
 

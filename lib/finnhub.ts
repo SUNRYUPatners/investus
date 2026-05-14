@@ -71,15 +71,26 @@ async function fetchOne(symbol: string, token: string): Promise<FinnhubQuote | n
 }
 
 // ── Batch quote (home page stocks) ────────────────────────────────────────
+// Chunked to avoid Finnhub burst limit on cold starts
 
 export async function fetchFinnhubBatch(
   symbols: string[]
 ): Promise<Map<string, FinnhubQuote>> {
   const token = getToken();
   if (!token) return new Map();
-  const results = await Promise.all(symbols.map((s) => fetchOne(s, token)));
-  const map = new Map<string, FinnhubQuote>();
-  results.forEach((q) => { if (q) map.set(q.symbol, q); });
+
+  const map   = new Map<string, FinnhubQuote>();
+  const CHUNK = 10;
+  const DELAY = 120; // ms between chunks — stays within 60/min free limit
+
+  for (let i = 0; i < symbols.length; i += CHUNK) {
+    const chunk   = symbols.slice(i, i + CHUNK);
+    const results = await Promise.all(chunk.map((s) => fetchOne(s, token)));
+    results.forEach((q) => { if (q) map.set(q.symbol, q); });
+    if (i + CHUNK < symbols.length) {
+      await new Promise<void>((r) => setTimeout(r, DELAY));
+    }
+  }
   return map;
 }
 

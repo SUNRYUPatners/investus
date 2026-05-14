@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import { ChevronDown, Pin } from "lucide-react";
 import {
@@ -10,12 +10,44 @@ import {
   type Report,
 } from "@/lib/reports";
 
-// ── ReportCard ────────────────────────────────────────────────────────────────
+// ── 24h 필터 ──────────────────────────────────────────────────────────────
+// updatedAt: "2026.05.14 07:27" KST 형식
+// 현재 시각 기준 24시간 이내 리포트만 표시
+
+const TWENTY_FOUR_H = 24 * 60 * 60 * 1000;
+
+function parseKST(s: string): Date {
+  // "2026.05.14 07:27" → UTC 변환 (KST = UTC+9)
+  const [datePart, timePart = "00:00"] = s.split(" ");
+  const sep = datePart.includes(".") ? "." : "-";
+  const [y, m, d] = datePart.split(sep).map(Number);
+  const [h, mn]   = timePart.split(":").map(Number);
+  return new Date(Date.UTC(y, m - 1, d, h - 9, mn));
+}
+
+function isWithin24h(r: Report): boolean {
+  const s = r.updatedAt ?? r.date;
+  if (!s) return false;
+  try {
+    const dt = parseKST(s);
+    if (isNaN(dt.getTime())) return false;
+    return Date.now() - dt.getTime() < TWENTY_FOUR_H;
+  } catch {
+    return false;
+  }
+}
+
+// ── ReportCard ────────────────────────────────────────────────────────────
 
 function ReportCard({ report }: { report: Report }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen]               = useState(false);
+  const [failedImgs, setFailedImgs]   = useState<Set<number>>(new Set());
   const style = CATEGORY_STYLE[report.categoryColor];
   const emoji = CATEGORY_EMOJI[report.category];
+
+  const handleImgError = useCallback((idx: number) => {
+    setFailedImgs((prev) => new Set(prev).add(idx));
+  }, []);
 
   return (
     <div
@@ -24,7 +56,7 @@ function ReportCard({ report }: { report: Report }) {
     >
       {/* Summary row */}
       <div className="p-4">
-        {/* Top: category + subject + date + pin */}
+        {/* Top: category + subject + pin + updatedAt */}
         <div className="flex items-center gap-1.5 mb-2 flex-wrap">
           <span
             className="text-[9px] font-bold px-2 py-0.5 rounded-full flex-shrink-0"
@@ -43,8 +75,11 @@ function ReportCard({ report }: { report: Report }) {
           {report.isPinned && (
             <Pin className="w-3 h-3 flex-shrink-0" style={{ color: style.color }} />
           )}
-          <span className="text-[10px] ml-auto flex-shrink-0" style={{ color: "var(--muted)" }}>
-            {report.date}
+          <span
+            className="text-[9px] font-mono-num tabular-nums ml-auto flex-shrink-0"
+            style={{ color: "var(--muted)", opacity: 0.7 }}
+          >
+            {report.updatedAt ?? report.date}
           </span>
         </div>
 
@@ -91,34 +126,52 @@ function ReportCard({ report }: { report: Report }) {
           style={{ borderColor: "var(--border)", background: "rgba(255,255,255,0.02)" }}
         >
           {/* Images */}
-          {report.images && report.images.length > 0 && (
-            <div className={`grid gap-2 mb-4 ${report.images.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
-              {report.images.map((src, i) => (
-                <div key={i} className="relative rounded-xl overflow-hidden border" style={{ borderColor: "var(--border)", aspectRatio: "16/9" }}>
-                  <Image src={src} alt={`참고 자료 ${i + 1}`} fill style={{ objectFit: "cover" }} sizes="(max-width: 480px) 50vw, 240px" />
-                </div>
-              ))}
-            </div>
-          )}
+          {report.images && report.images.length > 0 && (() => {
+            const visibleImgs = report.images.filter((_, i) => !failedImgs.has(i));
+            if (visibleImgs.length === 0) return null;
+            return (
+              <div className={`grid gap-2 mb-4 ${visibleImgs.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+                {report.images.map((src, i) => {
+                  if (failedImgs.has(i)) return null;
+                  return (
+                    <div key={i} className="relative rounded-xl overflow-hidden border"
+                      style={{ borderColor: "var(--border)", aspectRatio: "16/9" }}>
+                      <Image
+                        src={src}
+                        alt={`참고 자료 ${i + 1}`}
+                        fill
+                        style={{ objectFit: "cover" }}
+                        sizes="(max-width: 480px) 50vw, 240px"
+                        onError={() => handleImgError(i)}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })()}
 
           {report.body.split("\n").map((line, i) => {
             if (line.startsWith("■")) {
               return (
-                <p key={i} className="text-xs font-bold mt-4 mb-1.5 first:mt-0" style={{ color: style.color }}>
+                <p key={i} className="text-xs font-bold mt-4 mb-1.5 first:mt-0"
+                  style={{ color: style.color }}>
                   {line}
                 </p>
               );
             }
             if (line.startsWith("•") || line.match(/^[0-9]+\)/)) {
               return (
-                <p key={i} className="text-[12px] leading-relaxed pl-3 mb-1" style={{ color: "var(--muted)" }}>
+                <p key={i} className="text-[12px] leading-relaxed pl-3 mb-1"
+                  style={{ color: "var(--muted)" }}>
                   {line}
                 </p>
               );
             }
             if (line.trim() === "") return <div key={i} className="h-1" />;
             return (
-              <p key={i} className="text-[12px] leading-relaxed mb-1" style={{ color: "var(--text)" }}>
+              <p key={i} className="text-[12px] leading-relaxed mb-1"
+                style={{ color: "var(--text)" }}>
                 {line}
               </p>
             );
@@ -129,12 +182,14 @@ function ReportCard({ report }: { report: Report }) {
   );
 }
 
-// ── ReportFeed (main export) ──────────────────────────────────────────────────
+// ── ReportFeed (main export) ──────────────────────────────────────────────
 
 export function ReportFeed() {
-  const all = [
-    ...SEED_REPORTS.filter((r) => r.isPinned),
-    ...SEED_REPORTS.filter((r) => !r.isPinned),
+  // 24시간 이내 리포트만 표시, 핀 우선 정렬
+  const recent = SEED_REPORTS.filter(isWithin24h);
+  const all    = [
+    ...recent.filter((r) => r.isPinned),
+    ...recent.filter((r) => !r.isPinned),
   ];
 
   return (
@@ -152,14 +207,35 @@ export function ReportFeed() {
             시장 분석 · 종목 인사이트
           </p>
         </div>
+        {all.length > 0 && (
+          <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+            {all.length}개
+          </span>
+        )}
       </div>
 
       {/* Report cards */}
-      <div className="flex flex-col gap-3">
-        {all.map((r) => (
-          <ReportCard key={r.id} report={r} />
-        ))}
-      </div>
+      {all.length > 0 ? (
+        <div className="flex flex-col gap-3">
+          {all.map((r) => (
+            <ReportCard key={r.id} report={r} />
+          ))}
+        </div>
+      ) : (
+        /* 24h 경과 후 빈 상태 */
+        <div
+          className="rounded-2xl border p-8 flex flex-col items-center gap-2 text-center"
+          style={{ background: "var(--card)", borderColor: "var(--border)" }}
+        >
+          <p className="text-2xl">📋</p>
+          <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>
+            오늘의 리포트를 준비 중입니다
+          </p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+            매일 아침 새로운 시장 분석이 업데이트됩니다
+          </p>
+        </div>
+      )}
     </>
   );
 }

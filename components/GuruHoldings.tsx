@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { GURUS, type Guru } from "@/lib/holdings13f";
+import { useLocale } from "@/contexts/LocaleContext";
 
 const BADGE: Record<string, { label: string; color: string }> = {
   "13F":       { label: "SEC 13F",   color: "#60a5fa" },
@@ -20,6 +21,7 @@ function fmt(n: number) {
 }
 
 function GuruCard({ guru }: { guru: Guru }) {
+  const t = useLocale();
   const [open,    setOpen]    = useState(false);
   const [prices,  setPrices]  = useState<PriceMap>({});
   const [loading, setLoading] = useState(false);
@@ -89,10 +91,10 @@ function GuruCard({ guru }: { guru: Guru }) {
             className="flex items-center px-4 py-2 text-[10px] font-semibold"
             style={{ color: "var(--muted)", background: "var(--bg)" }}
           >
-            <span className="flex-1">종목</span>
-            <span className="w-14 text-right">비중</span>
-            <span className="w-20 text-right">현재가</span>
-            <span className="w-16 text-right">등락률</span>
+            <span className="flex-1">{t.guru.colSymbol}</span>
+            <span className="w-14 text-right">{t.guru.colWeight}</span>
+            <span className="w-20 text-right">{t.guru.colPrice}</span>
+            <span className="w-16 text-right">{t.guru.colChange}</span>
           </div>
 
           {guru.holdings.map((h, i) => {
@@ -176,7 +178,7 @@ function GuruCard({ guru }: { guru: Guru }) {
             style={{ borderColor: "var(--border)", background: "var(--bg)" }}
           >
             <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-              Finnhub 실시간 · {guru.quarter} 공시 기준
+              {t.guru.source} · {guru.quarter}
             </span>
             <button
               onClick={(e) => {
@@ -194,7 +196,7 @@ function GuruCard({ guru }: { guru: Guru }) {
               className="text-[10px] font-semibold px-2 py-0.5 rounded disabled:opacity-40 active:opacity-70 transition-opacity"
               style={{ color: "var(--mint)", background: "rgba(0,229,160,0.08)" }}
             >
-              {loading ? "로딩 중..." : "새로고침"}
+              {loading ? t.guru.loading : t.guru.refresh}
             </button>
           </div>
         </div>
@@ -204,28 +206,27 @@ function GuruCard({ guru }: { guru: Guru }) {
 }
 
 export function GuruHoldings() {
+  const t = useLocale();
   return (
     <div>
-      {/* Section header */}
       <div className="flex items-center justify-between mb-3">
         <div>
           <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-            투자 대가 13F
+            {t.guru.sectionTitle}
           </h2>
           <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
-            클릭하면 보유 종목 · 실시간 가격 확인
+            {t.guru.subtitle}
           </p>
         </div>
       </div>
 
-      {/* Notice */}
       <div
         className="flex items-center gap-2 rounded-xl px-3 py-2 mb-3 border"
         style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.12)" }}
       >
         <span className="text-xs">📋</span>
         <p className="text-[10px] leading-relaxed" style={{ color: "var(--muted)" }}>
-          SEC 13F·STOCK Act 공시 기준 · 분기별 업데이트 · 현재가 Finnhub 실시간
+          {t.guru.notice}
         </p>
       </div>
 

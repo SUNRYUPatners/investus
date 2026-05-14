@@ -5,11 +5,13 @@ import { useWatchlist } from "@/hooks/useWatchlist";
 import type { Quote } from "@/lib/api";
 import { Sparkline } from "./Sparkline";
 import { Star } from "lucide-react";
+import { useLocale } from "@/contexts/LocaleContext";
 
 const UP   = "#00e5a0";
 const DOWN = "#ff4d6d";
 
 export function WatchlistSection() {
+  const t = useLocale();
   const { list, remove } = useWatchlist();
   const [liveQuotes, setLiveQuotes] = useState<Quote[]>([]);
 
@@ -39,10 +41,10 @@ export function WatchlistSection() {
         <div className="flex items-center gap-1.5">
           <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
           <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
-            관심종목
+            {t.watchlist.title}
           </h2>
         </div>
-        <span className="text-[10px]" style={{ color: "var(--muted)" }}>{list.length}개</span>
+        <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.watchlist.count(list.length)}</span>
       </div>
 
       <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
@@ -56,12 +58,12 @@ export function WatchlistSection() {
                 className="min-w-[140px] flex-shrink-0 rounded-2xl p-3 border relative"
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}
               >
-                <button onClick={() => remove(sym)} className="absolute top-2 right-2 p-0.5" aria-label="관심종목 제거">
+                <button onClick={() => remove(sym)} className="absolute top-2 right-2 p-0.5" aria-label={t.watchlist.removeLabel}>
                   <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
                 </button>
                 <div className="mb-6 pr-5">
                   <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{sym}</p>
-                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>로딩 중...</p>
+                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>{t.watchlist.loading}</p>
                 </div>
                 <div className="flex items-end justify-between">
                   <p className="text-sm font-bold font-mono-num" style={{ color: "var(--muted)" }}>—</p>
@@ -83,7 +85,7 @@ export function WatchlistSection() {
               <button
                 onClick={() => remove(sym)}
                 className="absolute top-2 right-2 p-0.5"
-                aria-label="관심종목 제거"
+                aria-label={t.watchlist.removeLabel}
               >
                 <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
               </button>

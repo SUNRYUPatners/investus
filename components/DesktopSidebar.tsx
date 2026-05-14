@@ -4,14 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { TrendingUp } from "lucide-react";
-
-const NAV = [
-  { href: "/",        emoji: "📊", label: "홈"         },
-  { href: "/search",  emoji: "🔍", label: "검색"       },
-  { href: "/wall",    emoji: "💬", label: "종목이야기"  },
-  { href: "/insight", emoji: "💡", label: "인사이트"   },
-  { href: "/more",    emoji: "···", label: "더보기"    },
-];
+import { useLocale } from "@/contexts/LocaleContext";
 
 function useClock() {
   const [time, setTime]   = useState("");
@@ -43,8 +36,17 @@ function useClock() {
 }
 
 export function DesktopSidebar() {
+  const t = useLocale();
   const pathname = usePathname();
   const { time, open, mounted } = useClock();
+
+  const NAV = [
+    { href: "/",        emoji: "📊", label: t.nav.home    },
+    { href: "/search",  emoji: "🔍", label: t.nav.search  },
+    { href: "/wall",    emoji: "💬", label: t.nav.wall    },
+    { href: "/insight", emoji: "💡", label: t.nav.insight },
+    { href: "/more",    emoji: "···", label: t.nav.more   },
+  ];
 
   return (
     <aside
@@ -64,7 +66,7 @@ export function DesktopSidebar() {
               Investus
             </div>
             <div className="text-[10px] leading-none" style={{ color: "var(--muted)" }}>
-              인베스트어스
+              {t.more.tagline.split(" · ")[0]}
             </div>
           </div>
         </Link>
@@ -122,7 +124,7 @@ export function DesktopSidebar() {
                   : { background: "rgba(107,114,128,0.08)", color: "var(--muted)" }
               }
             >
-              {open ? "● 마켓 개장 중" : "● 마켓 종료"}
+              {open ? t.header.marketOpen : t.header.marketClosed}
             </div>
           </>
         )}

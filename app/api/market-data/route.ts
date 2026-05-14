@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { fetchFinnhubBatch, fetchFinnhubRawQuote, type FinnhubRawQuote } from "@/lib/finnhub";
+import { fetchFutureV8 } from "@/lib/yahooFinance";
+import { fetchStooqFuture } from "@/lib/stooq";
 import {
   mockQuotes, mockFutures,
   type IndexQuote, type Quote, type FutureItem,
@@ -87,10 +89,10 @@ type ETFQuote = { price: number; change: number; changePercent: number };
 //   SPY × 10.03 ≈ SPX   QQQ × 36.83 ≈ COMP   DIA × 100 ≈ DJI
 //   IWM × 10.05 ≈ RTY   GLD × 10 ≈ GC (gold)
 //
-// Commodity ETF proxies (live change%, mock absolute price):
+// Commodity ETF proxies (Yahoo Finance 실패 시 change% 폴백):
 //   USO→CL   UNG→NG   SLV→SI   COPX→HG
 //   WEAT→ZW  CORN→ZC  SOYB→ZS
-//   TLT→ZB   IEF→ZN
+//   TLT→ZB   IEF→ZN   GLD→GC(gold)
 
 const ETF_PROXY_SYMS = [
   "SPY", "QQQ", "DIA", "IWM", "GLD",
@@ -118,6 +120,17 @@ const FUTURES_FROM_INDEX: Record<string, string> = {
   ES: "SPX", NQ: "COMP", YM: "DJI",
 };
 
+// ── Commodity futures — Stooq primary, Yahoo Finance v8 fallback ─────────
+// Yahoo Finance is rate-limited from Vercel servers → Stooq CSV is reliable
+const COMMODITY_STOOQ: Record<string, string> = {
+  CL: "CL.F",  NG: "NG.F",  GC: "GC.F",  SI: "SI.F",  HG: "HG.F",
+  ZN: "ZN.F",  ZB: "ZB.F",  ZC: "ZC.F",  ZW: "ZW.F",  ZS: "ZS.F",
+};
+const COMMODITY_FUTURES_YF: Record<string, string> = {
+  CL: "CL=F",   NG: "NG=F",   GC: "GC=F",   SI: "SI=F",   HG: "HG=F",
+  ZN: "ZN=F",   ZB: "ZB=F",   ZC: "ZC=F",   ZW: "ZW=F",   ZS: "ZS=F",
+};
+
 // ── Crypto via Finnhub (CoinGecko fallback) ───────────────────────────────
 
 const CRYPTO_FH: Record<string, string> = {
@@ -141,9 +154,11 @@ async function fetchCoinGecko(): Promise<Map<string, ETFQuote>> {
   return out;
 }
 
-export async function GET() {
+export async function GET(req: Request) {
+  const url = new URL(req.url);
+  const refresh = url.searchParams.has("refresh");
   // Return cached payload if still fresh — avoids bursting Finnhub rate limit
-  if (_cache && Date.now() - _cache.at < CACHE_TTL) {
+  if (!refresh && _cache && Date.now() - _cache.at < CACHE_TTL) {
     return NextResponse.json(_cache.data);
   }
 
@@ -154,14 +169,46 @@ export async function GET() {
   const allFinnhubSyms = [...stockSymbols, ...ETF_PROXY_SYMS];
   const cryptoFHSyms   = Object.values(CRYPTO_FH);
 
-  const [fhMap, fxRates, cryptoResults, cgMap] = await Promise.all([
+  const [fhMap, fxRates, cryptoResults, cgMap, yfComEntries] = await Promise.all([
     fetchFinnhubBatch(allFinnhubSyms),
     getForexRates(),
     token
       ? Promise.allSettled(cryptoFHSyms.map((s) => fetchFinnhubRawQuote(s)))
       : Promise.resolve(cryptoFHSyms.map(() => ({ status: "fulfilled", value: null } as PromiseFulfilledResult<null>))),
     fetchCoinGecko(),
+    // Commodity futures: Stooq (parallel, no rate limit) → YF v8 fallback
+    (async () => {
+      type CommodityEntry = { key: string; price: number; change: number; changePercent: number };
+      // 1) Try Stooq in parallel for all symbols
+      const stooqResults = await Promise.allSettled(
+        Object.entries(COMMODITY_STOOQ).map(async ([key, stooqSym]) => {
+          const r = await fetchStooqFuture(stooqSym);
+          return r ? ({ key, ...r } as CommodityEntry) : null;
+        })
+      );
+      const stooqMap = new Map<string, CommodityEntry>();
+      for (const r of stooqResults) {
+        if (r.status === "fulfilled" && r.value) stooqMap.set(r.value.key, r.value);
+      }
+      // 2) YF v8 fallback for symbols Stooq didn't return
+      const missing = Object.entries(COMMODITY_FUTURES_YF).filter(([k]) => !stooqMap.has(k));
+      if (missing.length > 0) {
+        const yfResults = await Promise.allSettled(
+          missing.map(async ([key, yfSym]) => {
+            const r = await fetchFutureV8(yfSym);
+            return r ? ({ key, ...r } as CommodityEntry) : null;
+          })
+        );
+        for (const r of yfResults) {
+          if (r.status === "fulfilled" && r.value) stooqMap.set(r.value.key, r.value);
+        }
+      }
+      return [...stooqMap.values()];
+    })(),
   ]);
+
+  // 앱 내부 심볼 (CL, NG, …) → 실선물 시세
+  const yfComMap = new Map(yfComEntries.map((r) => [r.key, r]));
 
   // Build indexLive map from Finnhub ETF data
   const indexLive = new Map<string, ETFQuote>();
@@ -254,10 +301,22 @@ export async function GET() {
       if (iwm) return { ...f, price: iwm.price * 10.05, change: iwm.change * 10.05, changePercent: iwm.changePercent, isMock: false };
     }
 
-    // 3) GC (금) → GLD × 10 (Finnhub)
-    if (f.symbol === "GC") {
-      const gld = fhMap.get("GLD");
-      if (gld) return { ...f, price: gld.price * 10, change: gld.change * 10, changePercent: gld.changePercent, isMock: false };
+    // 3) Commodity & bond futures — Yahoo Finance v8 실선물가격 (v7 Unauthorized 우회)
+    if (COMMODITY_FUTURES_YF[f.symbol]) {
+      const yf = yfComMap.get(f.symbol); // keyed by internal sym (CL, NG, …)
+      if (yf && yf.price > 0) {
+        return { ...f, price: yf.price, change: yf.change, changePercent: yf.changePercent, isMock: false };
+      }
+      // Yahoo 실패 시 GC는 GLD×10 폴백
+      if (f.symbol === "GC") {
+        const gld = fhMap.get("GLD");
+        if (gld) return { ...f, price: gld.price * 10, change: gld.change * 10, changePercent: gld.changePercent, isMock: false };
+      }
+      // 나머지는 ETF change%만이라도 반영
+      const liveChg = futureChgMap.get(f.symbol);
+      if (liveChg !== undefined) {
+        return { ...f, changePercent: liveChg, change: f.price * liveChg / 100, isMock: false };
+      }
     }
 
     // 4) 6E (EUR/USD), 6J (USD/JPY) — Frankfurter (current + daily change%)
@@ -266,17 +325,6 @@ export async function GET() {
     }
     if (f.symbol === "6J" && fxRates.usdjpy) {
       return { ...f, price: fxRates.usdjpy, change: fxRates.usdjpy * fxRates.usdjpyChange / 100, changePercent: fxRates.usdjpyChange, isMock: false };
-    }
-
-    // 5) Commodity ETF proxies — live change%, mock absolute price (Finnhub)
-    const liveChg = futureChgMap.get(f.symbol);
-    if (liveChg !== undefined) {
-      return {
-        ...f,
-        changePercent: liveChg,
-        change:        f.price * liveChg / 100,
-        isMock:        false,
-      };
     }
 
     // 6) 크립토 — Finnhub primary, CoinGecko fallback
@@ -297,6 +345,11 @@ export async function GET() {
   }
 
   const payload: CachePayload = { indices, quotes, futures, liveAt: Date.now() };
-  _cache = { data: payload, at: Date.now() };
+
+  // quotes가 비어있으면 캐시 저장 금지 — 다음 요청이 재시도하도록
+  if (quotes.length > 0) {
+    _cache = { data: payload, at: Date.now() };
+  }
+
   return NextResponse.json(payload);
 }

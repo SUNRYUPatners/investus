@@ -4,6 +4,8 @@ import "./globals.css";
 import { BottomNav } from "@/components/BottomNav";
 import { DesktopSidebar } from "@/components/DesktopSidebar";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
+import { LocaleProvider } from "@/contexts/LocaleContext";
+import { getLocale } from "@/lib/getLocale";
 import Script from "next/script";
 
 const syne = Syne({
@@ -47,30 +49,33 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale();
   return (
     <html
-      lang="ko"
+      lang={locale}
       className={`${syne.variable} ${ibmPlexMono.variable} ${notoSansKR.variable}`}
     >
       <body style={{ background: "var(--bg)" }}>
-        <ServiceWorkerRegistration />
-        <div className="lg:flex lg:min-h-screen">
-          <DesktopSidebar />
-          <div className="flex-1 min-w-0 lg:ml-64">
-            {children}
+        <LocaleProvider locale={locale}>
+          <ServiceWorkerRegistration />
+          <div className="lg:flex lg:min-h-screen">
+            <DesktopSidebar />
+            <div className="flex-1 min-w-0 lg:ml-64">
+              {children}
+            </div>
           </div>
-        </div>
-        <BottomNav />
-        {/* Google AdSense — pub ID 설정 시 자동 활성화 */}
-        {process.env.NEXT_PUBLIC_ADSENSE_PUB_ID && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUB_ID}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
+          <BottomNav />
+          {/* Google AdSense — pub ID 설정 시 자동 활성화 */}
+          {process.env.NEXT_PUBLIC_ADSENSE_PUB_ID && (
+            <Script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUB_ID}`}
+              crossOrigin="anonymous"
+              strategy="afterInteractive"
+            />
+          )}
+        </LocaleProvider>
       </body>
     </html>
   );

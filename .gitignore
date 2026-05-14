@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local media / reference files (not source)
+/books/
+/logo/
+/error/
+investus 리포트/
+참고/
+test-perm.txt
+lib/test-new.ts
+app/api/market-data/test.ts
