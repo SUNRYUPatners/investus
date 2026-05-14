@@ -112,7 +112,7 @@ const YF_RANGE_INTERVAL: Record<string, { range: string; interval: string }> = {
   "ALL": { range: "max", interval: "1mo" },
 };
 
-const UA_YF = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+const UA_YF = "Mozilla/5.0";
 
 // Yahoo Finance crumb cache (in-memory, ~1h TTL)
 let _yfCrumb: { crumb: string; cookie: string; at: number } | null = null;
@@ -152,7 +152,7 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
   if (!cfg) return null;
 
   const auth  = await getYahooCrumb();
-  const bases = ["https://query1.finance.yahoo.com", "https://query2.finance.yahoo.com"];
+  const bases = ["https://query2.finance.yahoo.com", "https://query1.finance.yahoo.com"];
 
   for (const base of bases) {
     try {
