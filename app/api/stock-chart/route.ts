@@ -1,6 +1,76 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isMarketOpen } from "@/lib/marketHours";
 
+// ── Symbol maps ───────────────────────────────────────────────────────────────
+// Futures → TwelveData format (continuous contract)
+const TWELVE_FUTURES: Record<string, string> = {
+  ES: "ES1!", NQ: "NQ1!", YM: "YM1!", RTY: "RTY1!",
+  CL: "CL1!", NG: "NG1!", GC: "GC1!", SI: "SI1!", HG: "HG1!",
+  ZN: "ZN1!", ZB: "ZB1!", "6E": "6E1!", "6J": "6J1!",
+  ZC: "ZC1!", ZW: "ZW1!", ZS: "ZS1!",
+};
+// Crypto → TwelveData pair format
+const TWELVE_CRYPTO: Record<string, string> = { BTC: "BTC/USD", ETH: "ETH/USD" };
+
+// Futures/Crypto → Yahoo Finance symbol format (fallback)
+const YF_SYM: Record<string, string> = {
+  ES: "ES=F", NQ: "NQ=F", YM: "YM=F", RTY: "RTY=F",
+  CL: "CL=F", NG: "NG=F", GC: "GC=F", SI: "SI=F", HG: "HG=F",
+  ZN: "ZN=F", ZB: "ZB=F", "6E": "6E=F", "6J": "6J=F",
+  ZC: "ZC=F", ZW: "ZW=F", ZS: "ZS=F",
+  BTC: "BTC-USD", ETH: "ETH-USD",
+};
+
+const YF_RANGE_INTERVAL: Record<string, { range: string; interval: string }> = {
+  "1D":  { range: "1d",  interval: "5m"  },
+  "YTD": { range: "ytd", interval: "1d"  },
+  "1Y":  { range: "1y",  interval: "1wk" },
+  "5Y":  { range: "5y",  interval: "1mo" },
+  "10Y": { range: "10y", interval: "1mo" },
+  "ALL": { range: "max", interval: "1mo" },
+};
+
+const UA_YF = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+
+async function fetchYahooChart(rawSym: string, period: string): Promise<ChartResult | null> {
+  const yfSym = YF_SYM[rawSym] ?? rawSym;
+  const cfg   = YF_RANGE_INTERVAL[period];
+  if (!cfg) return null;
+
+  const bases = ["https://query1.finance.yahoo.com", "https://query2.finance.yahoo.com"];
+  for (const base of bases) {
+    try {
+      const url = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=${cfg.interval}&range=${cfg.range}&includePrePost=false`;
+      const res = await fetch(url, {
+        headers: { "User-Agent": UA_YF, Accept: "application/json" },
+        signal: AbortSignal.timeout(6_000),
+      });
+      if (!res.ok) continue;
+      const json   = await res.json();
+      const result = json?.chart?.result?.[0];
+      if (!result?.timestamp || !result?.indicators?.quote?.[0]?.close) continue;
+
+      const timestamps: number[] = result.timestamp;
+      const closes: (number | null)[] = result.indicators.quote[0].close;
+
+      const points = timestamps
+        .map((ts, i) => ({ ts, close: closes[i] ?? NaN, volume: 0 }))
+        .filter((p) => !isNaN(p.close) && p.close > 0);
+
+      if (points.length < 2) continue;
+
+      const meta = result.meta as Record<string, unknown>;
+      return {
+        symbol: rawSym,
+        chartPreviousClose: Number(meta.chartPreviousClose ?? points[0].close) || null,
+        regularMarketPrice: Number(meta.regularMarketPrice ?? points[points.length - 1].close) || null,
+        points,
+      };
+    } catch { /* try next */ }
+  }
+  return null;
+}
+
 // ── Server-side in-memory cache ───────────────────────────────────────────
 // 장 마감 중: 무기한 캐시 / 장 중: TTL 기반 갱신
 type ChartResult = {
@@ -39,13 +109,16 @@ async function fetchTwelveData(symbol: string, period: string): Promise<ChartRes
   const apiKey = process.env.TWELVEDATA_API_KEY;
   if (!apiKey) return null;
 
+  // Map futures/crypto to TwelveData format
+  const tdSymbol = TWELVE_FUTURES[symbol] ?? TWELVE_CRYPTO[symbol] ?? symbol;
+
   // YTD: use start_date instead of outputsize
   let url: string;
   if (period === "YTD") {
     const year = new Date().getFullYear();
     url =
       `https://api.twelvedata.com/time_series` +
-      `?symbol=${encodeURIComponent(symbol)}` +
+      `?symbol=${encodeURIComponent(tdSymbol)}` +
       `&interval=1day` +
       `&start_date=${year}-01-01` +
       `&apikey=${apiKey}`;
@@ -54,7 +127,7 @@ async function fetchTwelveData(symbol: string, period: string): Promise<ChartRes
     if (!cfg) return null;
     url =
       `https://api.twelvedata.com/time_series` +
-      `?symbol=${encodeURIComponent(symbol)}` +
+      `?symbol=${encodeURIComponent(tdSymbol)}` +
       `&interval=${cfg.interval}` +
       `&outputsize=${cfg.outputsize}` +
       `&apikey=${apiKey}`;
@@ -141,14 +214,21 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
   }
 
-  // 1. TwelveData (primary — reliable, not blocked)
+  // 1. TwelveData (primary — reliable, not blocked; handles futures/crypto too)
   const twelve = await fetchTwelveData(symbol, period);
   if (twelve) {
     _cache.set(cKey, { data: twelve, at: Date.now() });
     return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
   }
 
-  // 2. Finnhub minimal chart (only for 1D, uses free /quote endpoint)
+  // 2. Yahoo Finance (covers futures GC=F, NQ=F, crypto BTC-USD, etc.)
+  const yahoo = await fetchYahooChart(symbol, period);
+  if (yahoo) {
+    _cache.set(cKey, { data: yahoo, at: Date.now() });
+    return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
+  }
+
+  // 3. Finnhub minimal chart (only for 1D, uses free /quote endpoint)
   if (period === "1D") {
     const minimal = await fetchFinnhubMinimalChart(symbol);
     if (minimal) {
@@ -157,7 +237,7 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  // 3. Return stale cache rather than 503
+  // 4. Return stale cache rather than 503
   if (cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
 
   return NextResponse.json({ error: "no data" }, { status: 503, headers: { "Cache-Control": "no-store" } });

@@ -271,6 +271,163 @@ function CreatorSection() {
   );
 }
 
+// ── Install / Add to Home Screen ───────────────────────────────────────────
+
+interface BeforeInstallPromptEvent extends Event {
+  prompt(): Promise<void>;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
+}
+
+function InstallSection() {
+  const [prompt, setPrompt]           = useState<BeforeInstallPromptEvent | null>(null);
+  const [isIOS, setIsIOS]             = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false);
+  const [showGuide, setShowGuide]     = useState(false);
+
+  useEffect(() => {
+    const standalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      (navigator as Navigator & { standalone?: boolean }).standalone === true;
+    if (standalone) { setIsInstalled(true); return; }
+
+    setIsIOS(/iP(hone|ad|od)/.test(navigator.userAgent));
+
+    const handler = (e: Event) => {
+      e.preventDefault();
+      setPrompt(e as BeforeInstallPromptEvent);
+    };
+    window.addEventListener("beforeinstallprompt", handler);
+    return () => window.removeEventListener("beforeinstallprompt", handler);
+  }, []);
+
+  const handleInstall = async () => {
+    if (!prompt) return;
+    await prompt.prompt();
+    const { outcome } = await prompt.userChoice;
+    if (outcome === "accepted") setIsInstalled(true);
+    setPrompt(null);
+  };
+
+  if (isInstalled) return null;
+
+  return (
+    <div className="mt-6">
+      <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+        앱으로 설치
+      </p>
+
+      {/* iOS — 홈 화면에 추가 */}
+      {isIOS && (
+        <button
+          onClick={() => setShowGuide(true)}
+          className="w-full rounded-2xl p-4 border flex items-center gap-4 active:opacity-70 transition-opacity"
+          style={{ background: "var(--card)", borderColor: "var(--border)", textAlign: "left" }}
+        >
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+            style={{ background: "rgba(0,229,160,0.12)" }}>
+            <span className="text-xl">📲</span>
+          </div>
+          <div className="flex-1">
+            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>홈 화면에 추가</p>
+            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>앱처럼 전체화면으로 실행</p>
+          </div>
+          <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-40" style={{ color: "var(--muted)" }} />
+        </button>
+      )}
+
+      {/* Android / Desktop — 네이티브 설치 프롬프트 */}
+      {!isIOS && prompt && (
+        <button
+          onClick={handleInstall}
+          className="w-full rounded-2xl p-4 border flex items-center gap-4 active:opacity-70 transition-opacity"
+          style={{ background: "var(--card)", borderColor: "var(--border)", textAlign: "left" }}
+        >
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+            style={{ background: "rgba(0,229,160,0.12)" }}>
+            <span className="text-xl">📲</span>
+          </div>
+          <div className="flex-1">
+            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>앱으로 설치하기</p>
+            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>홈 화면에서 바로 실행 · 전체화면</p>
+          </div>
+          <span className="px-3 py-1 rounded-full text-[10px] font-bold text-black flex-shrink-0"
+            style={{ background: "var(--mint)" }}>
+            설치
+          </span>
+        </button>
+      )}
+
+      {/* 데스크톱 — 즐겨찾기 안내 */}
+      {!isIOS && !prompt && (
+        <div className="rounded-2xl p-4 border flex items-start gap-4"
+          style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+            style={{ background: "rgba(96,165,250,0.12)" }}>
+            <span className="text-xl">🔖</span>
+          </div>
+          <div className="flex-1">
+            <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>즐겨찾기 저장</p>
+            <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+              주소창 오른쪽 ★ 클릭 또는{" "}
+              <span className="font-mono text-[10px]">⌘+D</span> (Mac) /{" "}
+              <span className="font-mono text-[10px]">Ctrl+D</span> (Windows)
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* iOS 가이드 모달 */}
+      {showGuide && (
+        <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.7)" }}
+          onClick={() => setShowGuide(false)}>
+          <div className="w-full max-w-[480px] mx-auto rounded-t-3xl pb-10 px-5"
+            style={{ background: "var(--card)" }}
+            onClick={(e) => e.stopPropagation()}>
+            <div className="w-10 h-1 rounded-full mx-auto mt-3 mb-5" style={{ background: "var(--border)" }} />
+            <h2 className="text-base font-bold font-syne mb-1 text-center" style={{ color: "var(--text)" }}>
+              홈 화면에 추가하기
+            </h2>
+            <p className="text-[11px] text-center mb-5" style={{ color: "var(--muted)" }}>
+              Safari에서 아래 순서대로 따라하세요
+            </p>
+            <div className="flex flex-col gap-4 mb-6">
+              {([
+                ["1", "🧭", "Safari에서 investus.kr 열기", "다른 브라우저(Chrome 등)는 지원 안 됨"],
+                ["2", "⬆️", "하단 가운데 공유 버튼 탭", "네모 위에 화살표 아이콘"],
+                ["3", "➕", '"홈 화면에 추가" 선택', "스크롤해서 찾아주세요"],
+                ["4", "✅", '"추가" 탭 → 완료!', "홈 화면에 Investus 아이콘이 생겨요"],
+              ] as const).map(([num, icon, text, hint]) => (
+                <div key={num} className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5"
+                    style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+                    {num}
+                  </div>
+                  <span className="text-xl flex-shrink-0">{icon}</span>
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{text}</p>
+                    <p className="text-[10px]" style={{ color: "var(--muted)" }}>{hint}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-xl p-3 mb-5" style={{ background: "rgba(0,229,160,0.07)", border: "1px solid rgba(0,229,160,0.15)" }}>
+              <p className="text-[11px] text-center" style={{ color: "var(--mint)" }}>
+                ✦ 설치 후 홈 화면 아이콘 탭 → 광고 없이 전체화면 앱처럼 실행
+              </p>
+            </div>
+            <button
+              onClick={() => setShowGuide(false)}
+              className="w-full py-3 rounded-xl text-sm font-bold text-black"
+              style={{ background: "var(--mint)" }}>
+              확인
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 type AuthMode = "idle" | "login" | "signup";
 
 function AuthSection() {
@@ -571,6 +728,9 @@ export default function MorePage() {
             </div>
           ))}
         </div>
+
+        {/* Install / Add to Home Screen */}
+        <InstallSection />
 
         {/* Footer note */}
         <p className="text-center text-[10px] mt-8" style={{ color: "var(--muted)" }}>
