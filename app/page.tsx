@@ -2,21 +2,17 @@ import { Header } from "@/components/Header";
 import { TickerTape } from "@/components/TickerTape";
 import { LiveMarket } from "@/components/LiveMarket";
 import { NewsSection } from "@/components/NewsSection";
-import { FearGreedGauge } from "@/components/FearGreedGauge";
-import { BuffettGauge } from "@/components/BuffettGauge";
+import { FearGreedWidget } from "@/components/FearGreedWidget";
+import { BuffettWidget } from "@/components/BuffettWidget";
 import { SP500Heatmap } from "@/components/SP500Heatmap";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
 import { ReportFeed } from "@/components/ReportFeed";
-import { getFearGreed, getBuffett, mockQuotes } from "@/lib/api";
+import { mockQuotes } from "@/lib/api";
 import { getLocale } from "@/lib/getLocale";
 
 export default async function HomePage() {
-  const [fearGreed, buffett, locale] = await Promise.all([
-    getFearGreed(),
-    getBuffett(),
-    getLocale(),
-  ]);
+  const locale = await getLocale();
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
@@ -51,10 +47,10 @@ export default async function HomePage() {
               <AdBanner format="auto" />
             </section>
             <section className="px-4 lg:hidden pt-4">
-              <FearGreedGauge data={fearGreed} locale={locale} />
+              <FearGreedWidget locale={locale} />
             </section>
             <section className="px-4 lg:hidden pt-4">
-              <BuffettGauge data={buffett} locale={locale} />
+              <BuffettWidget locale={locale} />
             </section>
 
             {/* 시장 뉴스 */}
@@ -66,8 +62,8 @@ export default async function HomePage() {
           {/* ── 오른쪽 컬럼 (데스크톱 전용, sticky) ── */}
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] gap-5 pb-10">
             <AdBanner format="auto" />
-            <FearGreedGauge data={fearGreed} locale={locale} />
-            <BuffettGauge data={buffett} locale={locale} />
+            <FearGreedWidget locale={locale} />
+            <BuffettWidget locale={locale} />
             <NewsSection />
           </div>
 

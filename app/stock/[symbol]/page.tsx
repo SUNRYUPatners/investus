@@ -1,11 +1,11 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { StockChart } from "@/components/StockChart";
 import { NewsCard } from "@/components/NewsCard";
 import { ChevronLeft } from "lucide-react";
-import Link from "next/link";
 import type { NewsItem } from "@/lib/api";
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -47,7 +47,7 @@ function fmtVol(v: number | null): string {
 }
 function fmtCap(v: number | null): string {
   if (v == null) return "—";
-  if (v >= 1e12) return (v / 1e12).toFixed(3) + "조";
+  if (v >= 1e12) return (v / 1e12).toFixed(2) + "조";
   if (v >= 1e8)  return Math.round(v / 1e8) + "억";
   if (v >= 1e9)  return (v / 1e9).toFixed(2) + "B";
   return "$" + v.toLocaleString();
@@ -71,6 +71,7 @@ export default function StockPage({
 }) {
   const { symbol } = use(params);
   const upper      = symbol.toUpperCase();
+  const router     = useRouter();
 
   const [detail, setDetail]           = useState<Detail | null>(null);
   const [news,   setNews]             = useState<NewsItem[]>([]);
@@ -143,13 +144,13 @@ export default function StockPage({
       <main className="max-w-[480px] lg:max-w-2xl mx-auto pb-24 lg:pb-10">
         {/* Back button */}
         <div className="px-4 pt-4 pb-2">
-          <Link
-            href="/search"
+          <button
+            onClick={() => router.back()}
             className="inline-flex items-center gap-1 text-xs"
             style={{ color: "var(--muted)" }}
           >
-            <ChevronLeft className="w-3.5 h-3.5" /> 검색으로
-          </Link>
+            <ChevronLeft className="w-3.5 h-3.5" /> 뒤로
+          </button>
         </div>
 
         {/* ── 종목 헤더 ── */}
@@ -236,7 +237,7 @@ export default function StockPage({
                     }}
                   >
                     <span className="text-[9px] shrink-0" style={{ color: "var(--muted)" }}>{label}</span>
-                    <span className="text-[9px] font-semibold font-mono-num text-right" style={{ color: "var(--text)" }}>{value}</span>
+                    <span className="text-[9px] font-semibold font-mono-num text-right whitespace-nowrap" style={{ color: "var(--text)" }}>{value}</span>
                   </div>
                 );
               })}
