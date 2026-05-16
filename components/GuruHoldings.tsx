@@ -31,15 +31,19 @@ function GuruCard({ guru }: { guru: Guru }) {
     const next = !open;
     setOpen(next);
 
-    // Fetch prices the first time the card is expanded
-    if (next && !fetched) {
+    // Fetch prices the first time the card is expanded, or retry if previous fetch returned no data
+    const hasData = Object.keys(prices).length > 0;
+    if (next && (!fetched || !hasData)) {
       setLoading(true);
       setFetched(true);
       const syms = guru.holdings.map((h) => h.symbol).join(",");
       fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
         .then((r) => r.json())
-        .then((data: PriceMap) => setPrices(data))
-        .catch(() => {})
+        .then((data: PriceMap) => {
+          if (Object.keys(data).length > 0) setPrices(data);
+          else setFetched(false); // allow retry on next open if still empty
+        })
+        .catch(() => { setFetched(false); })
         .finally(() => setLoading(false));
     }
   };
