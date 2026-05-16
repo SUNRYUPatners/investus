@@ -9,16 +9,11 @@ import {
 } from "@/lib/finnhub";
 import { isMarketOpen } from "@/lib/marketHours";
 
-// Server-side cache: 장 마감 중 무기한, 장 중 60초 TTL
-const _cache = new Map<string, { data: Record<string, unknown>; at: number }>();
-const LIVE_TTL = 60_000; // 60 s
-
-function saveAndRespond(symbol: string, data: Record<string, unknown>) {
-  const isOpen = isMarketOpen();
-  const cc = isOpen
+// CDN caching via Cache-Control — Vercel serverless is stateless (no in-memory cache)
+function saveAndRespond(_symbol: string, data: Record<string, unknown>) {
+  const cc = isMarketOpen()
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=3600, stale-while-revalidate=86400";
-  _cache.set(symbol, { data, at: Date.now() });
   return NextResponse.json(data, { headers: { "Cache-Control": cc } });
 }
 
@@ -55,6 +50,38 @@ async function fetchV8Meta(yahooSym: string) {
     }
   }
   return null;
+}
+
+// ── open.er-api.com — USDKRW fallback (always available, no auth) ─────────
+async function fetchErApiUSDKRW(): Promise<{ price: number; prevPrice: number } | null> {
+  try {
+    // Previous business day for change%
+    const prev = new Date();
+    prev.setDate(prev.getDate() - 1);
+    if (prev.getDay() === 0) prev.setDate(prev.getDate() - 2);
+    if (prev.getDay() === 6) prev.setDate(prev.getDate() - 1);
+    const prevStr = prev.toISOString().split("T")[0];
+
+    const ctrl = new AbortController();
+    const tid  = setTimeout(() => ctrl.abort(), 6_000);
+    const [curRes, prevRes] = await Promise.all([
+      fetch("https://open.er-api.com/v6/latest/USD",       { cache: "no-store", signal: ctrl.signal }),
+      fetch(`https://open.er-api.com/v6/${prevStr}/USD`,   { cache: "no-store", signal: ctrl.signal }),
+    ]);
+    clearTimeout(tid);
+
+    if (!curRes.ok) return null;
+    const cur   = await curRes.json();
+    const price = cur?.rates?.KRW as number | undefined;
+    if (!price || price <= 0) return null;
+
+    let prevPrice = price;
+    if (prevRes.ok) {
+      const pd = await prevRes.json();
+      prevPrice = (pd?.rates?.KRW as number | undefined) ?? price;
+    }
+    return { price, prevPrice };
+  } catch { return null; }
 }
 
 // ── Yahoo Finance v8 direct index fetch (matches market-data/route.ts) ───
@@ -126,15 +153,6 @@ export async function GET(req: NextRequest) {
   const rawSymbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase();
   if (!rawSymbol) return NextResponse.json({ error: "no symbol" }, { status: 400 });
 
-  const cached = _cache.get(rawSymbol);
-  const open   = isMarketOpen();
-  const cc = open
-    ? "public, s-maxage=55, stale-while-revalidate=120"
-    : "public, s-maxage=3600, stale-while-revalidate=86400";
-  // 장 마감 중: 캐시가 있으면 즉시 반환
-  if (!open && cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
-  // 장 중: 60초 TTL
-  if (cached && Date.now() - cached.at < LIVE_TTL) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
 
   const yahooSymbol     = toYahoo(rawSymbol);
   const isIndexOrFuture = yahooSymbol !== rawSymbol;
@@ -171,6 +189,24 @@ export async function GET(req: NextRequest) {
         pe:            null, marketCap: null, avgVolume: null,
         dividendYield: null, beta: null, eps: null,
       });
+    }
+
+    // ── 0-b) USDKRW: er-api fallback when Yahoo Finance fails ───────────────
+    if (rawSymbol === "USDKRW") {
+      const er = await fetchErApiUSDKRW();
+      if (er) {
+        const chg = er.price - er.prevPrice;
+        return saveAndRespond("USDKRW", {
+          symbol: "USDKRW", name: "USD/KRW", exchange: "FX", currency: "KRW",
+          price:         er.price,
+          change:        chg,
+          changePercent: er.prevPrice > 0 ? (chg / er.prevPrice) * 100 : 0,
+          open: null, high: null, low: null, volume: null,
+          week52High: null, week52Low: null,
+          pe: null, marketCap: null, avgVolume: null,
+          dividendYield: null, beta: null, eps: null,
+        });
+      }
     }
 
     // ── 1) Finnhub ETF proxy for major indices (SPX/COMP/DJI) — fallback ─
@@ -276,9 +312,7 @@ export async function GET(req: NextRequest) {
 
     // ── 3) Yahoo Finance v8 chart meta — last resort ─────────────────────
     if (!v8) {
-      // Serve stale cache rather than 404 — user sees something instead of error
-      if (cached) return NextResponse.json(cached.data);
-      return NextResponse.json({ error: "not found" }, { status: 404 });
+      return NextResponse.json({ error: "not found" }, { status: 404, headers: { "Cache-Control": "no-store" } });
     }
 
     const { meta } = v8;
@@ -308,8 +342,6 @@ export async function GET(req: NextRequest) {
     });
   } catch (e) {
     console.error("[stock-detail]", rawSymbol, e);
-    // Serve stale cache on error — user sees yesterday's data instead of error
-    if (cached) return NextResponse.json(cached.data);
-    return NextResponse.json({ error: "fetch failed" }, { status: 503 });
+    return NextResponse.json({ error: "fetch failed" }, { status: 503, headers: { "Cache-Control": "no-store" } });
   }
 }
