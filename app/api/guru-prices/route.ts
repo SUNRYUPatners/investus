@@ -2,10 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { fetchFinnhubBatch } from "@/lib/finnhub";
 import { isMarketOpen } from "@/lib/marketHours";
 
-type PriceEntry = { price: number; change: number; changePercent: number };
-
-// Per-symbol in-memory cache — holds last prices across market close / server restarts
-const _cache = new Map<string, PriceEntry>();
+// Vercel is serverless — in-memory cache resets on cold starts.
+// CDN caching (s-maxage) handles persistence instead.
+export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
   const raw = req.nextUrl.searchParams.get("symbols") ?? "";
@@ -19,29 +18,23 @@ export async function GET(req: NextRequest) {
 
   const open = isMarketOpen();
 
-  // Symbols not yet in cache (e.g. after server restart)
-  const missing = symbols.filter((s) => !_cache.has(s));
+  // Always fetch Finnhub:
+  // - Market open  → returns live price (c)
+  // - Market closed → fetchOne falls back to prev-close (pc) when c=0
+  const liveMap = await fetchFinnhubBatch(symbols);
+  const map: Record<string, { price: number; change: number; changePercent: number }> = {};
+  liveMap.forEach((q) => {
+    map[q.symbol] = { price: q.price, change: q.change, changePercent: q.changePercent };
+  });
 
-  // Fetch from Finnhub when: market open (always refresh) OR cache has gaps
-  if (open || missing.length > 0) {
-    const toFetch = open ? symbols : missing;
-    try {
-      const liveMap = await fetchFinnhubBatch(toFetch);
-      liveMap.forEach((q) => {
-        _cache.set(q.symbol, { price: q.price, change: q.change, changePercent: q.changePercent });
-      });
-    } catch { /* keep existing cache on error */ }
-  }
-
-  const map: Record<string, PriceEntry> = {};
-  for (const sym of symbols) {
-    const c = _cache.get(sym);
-    if (c) map[sym] = c;
+  // Never cache an empty response — next request should retry Finnhub
+  if (Object.keys(map).length === 0) {
+    return NextResponse.json(map, { headers: { "Cache-Control": "no-store" } });
   }
 
   const cc = open
-    ? "s-maxage=60, stale-while-revalidate=30"
-    : "s-maxage=3600, stale-while-revalidate=86400";
+    ? "public, s-maxage=60, stale-while-revalidate=120"
+    : "public, s-maxage=3600, stale-while-revalidate=86400";
 
   return NextResponse.json(map, { headers: { "Cache-Control": cc } });
 }
