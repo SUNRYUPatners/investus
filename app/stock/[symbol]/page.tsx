@@ -86,6 +86,31 @@ export default function StockPage({
   const [detailLoading, setDetailLoading] = useState(true);
   const [detailError, setDetailError] = useState(false);
 
+  // Fallback: if stock-detail API fails, use 1D chart data for price + change%
+  const fetchDetailFromChart = () => {
+    fetch(`/api/stock-chart?symbol=${encodeURIComponent(upper)}&period=1D`)
+      .then((r) => r.json())
+      .then((chart: { regularMarketPrice?: number | null; chartPreviousClose?: number | null }) => {
+        const price = chart.regularMarketPrice ?? 0;
+        if (!price) { setDetailError(true); return; }
+        const prev  = chart.chartPreviousClose ?? price;
+        const chg   = price - prev;
+        const NAME_MAP: Record<string, string> = {
+          USDKRW: "USD/KRW", "6E": "EUR/USD", "6J": "USD/JPY",
+        };
+        setDetail({
+          symbol: upper, name: NAME_MAP[upper] ?? upper, exchange: "FX", currency: upper === "USDKRW" ? "KRW" : "USD",
+          price, change: chg,
+          changePercent: prev > 0 ? (chg / prev) * 100 : 0,
+          open: null, high: null, low: null, volume: null,
+          pe: null, marketCap: null, week52High: null, week52Low: null,
+          avgVolume: null, dividendYield: null, beta: null, eps: null,
+        });
+        setDetailLoading(false);
+      })
+      .catch(() => setDetailError(true));
+  };
+
   const fetchDetail = () => {
     const cacheKey = `stock-detail-${upper}`;
 
@@ -114,8 +139,10 @@ export default function StockPage({
       })
       .catch(() => {
         setDetailLoading(false);
-        // Keep cached detail visible; only show error button if nothing loaded
-        setDetail((prev) => { if (!prev) setDetailError(true); return prev; });
+        setDetail((prev) => {
+          if (!prev) fetchDetailFromChart(); // no cached data — try 1D chart as fallback
+          return prev;
+        });
       });
   };
 
