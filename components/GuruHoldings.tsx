@@ -2,9 +2,26 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Calendar } from "lucide-react";
 import { GURUS, type Guru } from "@/lib/holdings13f";
 import { useLocale } from "@/contexts/LocaleContext";
+
+// Returns the next 13F filing deadline after today.
+// Deadlines: Feb 14 (Q4 prev yr), May 15 (Q1), Aug 14 (Q2), Nov 14 (Q3)
+function getNextFilingInfo(): { quarter: string; dateStr: string } {
+  const now = new Date();
+  const y   = now.getFullYear();
+  const candidates = [
+    { quarter: `${y - 1} Q4`, date: new Date(y, 1, 14) },
+    { quarter: `${y} Q1`,     date: new Date(y, 4, 15) },
+    { quarter: `${y} Q2`,     date: new Date(y, 7, 14) },
+    { quarter: `${y} Q3`,     date: new Date(y, 10, 14) },
+    { quarter: `${y} Q4`,     date: new Date(y + 1, 1, 14) },
+  ];
+  const next = candidates.find((c) => c.date > now) ?? candidates[candidates.length - 1];
+  const dateStr = next.date.toLocaleDateString("ko-KR", { month: "long", day: "numeric" });
+  return { quarter: next.quarter, dateStr };
+}
 
 const BADGE: Record<string, { label: string; color: string }> = {
   "13F":       { label: "SEC 13F",   color: "#60a5fa" },
@@ -206,7 +223,8 @@ function GuruCard({ guru }: { guru: Guru }) {
 }
 
 export function GuruHoldings() {
-  const t = useLocale();
+  const t    = useLocale();
+  const next = getNextFilingInfo();
   return (
     <div>
       <div className="flex items-center justify-between mb-3">
@@ -221,12 +239,23 @@ export function GuruHoldings() {
       </div>
 
       <div
-        className="flex items-center gap-2 rounded-xl px-3 py-2 mb-3 border"
+        className="flex items-center gap-2 rounded-xl px-3 py-2 mb-2 border"
         style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.12)" }}
       >
         <span className="text-xs">📋</span>
         <p className="text-[10px] leading-relaxed" style={{ color: "var(--muted)" }}>
           {t.guru.notice}
+        </p>
+      </div>
+
+      {/* Next 13F filing date */}
+      <div
+        className="flex items-center gap-2 rounded-xl px-3 py-2 mb-3 border"
+        style={{ background: "rgba(251,191,36,0.04)", borderColor: "rgba(251,191,36,0.15)" }}
+      >
+        <Calendar className="w-3 h-3 flex-shrink-0" style={{ color: "#fbbf24" }} />
+        <p className="text-[10px]" style={{ color: "var(--muted)" }}>
+          {t.guru.nextFiling(next.quarter, next.dateStr)}
         </p>
       </div>
 
