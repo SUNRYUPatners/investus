@@ -703,7 +703,7 @@ export default function MorePage() {
     ["📄", "🔒", "⚠️"],
   ];
   const MENU_HREFS = [
-    ["/more/about", undefined],
+    ["/more/about", "/more/version"],
     ["/more/notices", undefined, "/more/faq"],
     ["/more/terms", "/more/privacy", "/more/disclaimer"],
   ];

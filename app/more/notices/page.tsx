@@ -5,11 +5,10 @@ import { Header } from "@/components/Header";
 import { ChevronLeft, ChevronDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-type NoticeType = "notice" | "update" | "legal";
+type NoticeType = "notice" | "legal";
 
 const TYPE_CONFIG: Record<NoticeType, { label: string; color: string; bg: string }> = {
   notice: { label: "공지", color: "#60a5fa", bg: "rgba(96,165,250,0.12)" },
-  update: { label: "업데이트", color: "var(--mint)", bg: "rgba(0,229,160,0.10)" },
   legal:  { label: "법적 고지", color: "#f59e0b", bg: "rgba(245,158,11,0.10)" },
 };
 
@@ -34,7 +33,7 @@ const NOTICES: { id: string; type: NoticeType; date: string; title: string; body
 미국주식을 포함한 모든 금융투자상품은 원금 손실이 발생할 수 있습니다. Investus 정보를 참고하여 발생한 투자 손실에 대해 Investus 및 운영자는 어떠한 법적 책임도 부담하지 않습니다.
 
 ■ 저작권 및 데이터 출처
-제공 데이터는 Yahoo Finance, Finnhub, CNN Business, FRED 등 공신력 있는 외부 API를 통해 수집됩니다. 무단 크롤링·상업적 재배포를 금합니다.`,
+제공 데이터는 Finnhub, Stooq, CNN Business, FRED 등 공신력 있는 외부 API를 통해 수집됩니다. 무단 크롤링·상업적 재배포를 금합니다.`,
   },
   {
     id: "n004",
@@ -59,40 +58,6 @@ const NOTICES: { id: string; type: NoticeType; date: string; title: string; body
 관심종목 등은 기기의 로컬 저장소(localStorage)에 보관되어 Investus 서버에 전송되지 않습니다.
 
 자세한 사항은 더보기 → 개인정보처리방침을 참고해 주세요.`,
-  },
-  {
-    id: "n003",
-    type: "update",
-    date: "2026-05-14",
-    title: "데이터 영구 저장 & 뒤로가기 개선",
-    body: `■ 장마감 데이터 유지
-- 장 마감 시점의 실제 시세 데이터를 저장하여 개장 전까지 그대로 표시합니다.
-- 빈 화면 또는 가짜 데이터(Mock)는 절대 표시하지 않습니다.
-- 공포&탐욕 지수·버핏 지수도 동일하게 실데이터 기반 캐싱 방식 적용
-
-■ 개별 종목 뒤로가기
-- 종목 상세 화면에서 뒤로가기 시 이전 화면(홈·검색·관심종목 등) 그대로 복귀합니다.
-
-■ 시가총액 표시 개선
-- 1.672조 → 1.67조 (소수 둘째 자리까지 표시, 줄바꿈 방지)`,
-  },
-  {
-    id: "n002",
-    type: "update",
-    date: "2026-05-10",
-    title: "당겨서 새로고침 · PWA 설치 · 관심종목 클릭",
-    body: `■ 당겨서 새로고침 (Pull to Refresh)
-- iOS 홈 화면 앱 모드에서 화면 최상단에서 아래로 당기면 새로고침됩니다.
-
-■ 관심종목 → 종목 상세 이동
-- 홈 화면 관심종목 카드 클릭 시 해당 종목의 상세 페이지로 이동합니다.
-
-■ 앱 설치 버튼 추가
-- 더보기 탭 하단에 홈 화면 추가(PWA 설치) 버튼이 추가되었습니다.
-- iOS(Safari), Android(Chrome), 데스크톱 환경 모두 지원
-
-■ 서비스 워커 캐시 최적화
-- API 응답이 캐시되던 문제를 수정하여 항상 최신 데이터를 표시합니다.`,
   },
   {
     id: "n001",
