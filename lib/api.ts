@@ -1,18 +1,7 @@
 /**
- * 데이터 추상화 레이어
- * - yahoo-finance2 를 통해 실시간 주가 조회 (서버 전용)
- * - 실패 시 mock 데이터로 폴백
+ * 타입 정의 및 목 데이터 레이어
+ * 실시간 데이터는 각 API 라우트(Finnhub/Stooq/TwelveData)에서 직접 처리
  */
-
-import { unstable_cache } from "next/cache";
-import {
-  fetchBatchQuotes,
-  fetchIndex,
-  fetchSparkline,
-  fmtVolume,
-  fmtMarketCap,
-} from "./yahooFinance";
-import { toYahoo } from "./symbolMap";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -365,103 +354,14 @@ const mockNews: NewsItem[] = [
 // ── API Functions ──────────────────────────────────────────────────────────
 
 export const RECOMMENDED_SYMBOLS = ["GOOGL", "TSLA", "PLTR", "IBM", "JPM"];
-const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
 
-export const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [
-  { yahoo: "^GSPC",    symbol: "SPX",    name: "S&P 500", fullName: "S&P 500 Index" },
-  { yahoo: "^IXIC",    symbol: "COMP",   name: "NASDAQ",  fullName: "NASDAQ Composite" },
-  { yahoo: "^DJI",     symbol: "DJI",    name: "DOW",     fullName: "Dow Jones Industrial" },
-  { yahoo: "USDKRW=X", symbol: "USDKRW", name: "원달러",  fullName: "USD/KRW 환율", isCurrency: true },
+export const INDEX_MAP: { symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [
+  { symbol: "SPX",    name: "S&P 500", fullName: "S&P 500 Index" },
+  { symbol: "COMP",   name: "NASDAQ",  fullName: "NASDAQ Composite" },
+  { symbol: "DJI",    name: "DOW",     fullName: "Dow Jones Industrial" },
+  { symbol: "USDKRW", name: "원달러",  fullName: "USD/KRW 환율", isCurrency: true },
 ];
 export { mockIndices, mockFutures };
-
-// 60초 캐시 — 실패 시 null 반환(mock 캐시 방지)
-const _fetchLiveIndices = unstable_cache(
-  async (): Promise<IndexQuote[] | null> => {
-    const results = await Promise.allSettled(
-      INDEX_MAP.map(async (m) => {
-        const [q, spark] = await Promise.all([
-          fetchIndex(m.yahoo),
-          fetchSparkline(m.yahoo).catch(() => [] as number[]),
-        ]);
-        if (!q) return null;
-        const idx: IndexQuote = {
-          symbol: m.symbol,
-          name: m.name,
-          fullName: m.fullName,
-          value: q.price,
-          change: q.change,
-          changePercent: q.changePercent,
-          sparkline: spark,
-        };
-        if (m.isCurrency) idx.isCurrency = true;
-        return idx;
-      })
-    );
-    const live = results
-      .filter((r): r is PromiseFulfilledResult<IndexQuote | null> => r.status === "fulfilled")
-      .map((r) => r.value)
-      .filter((v): v is IndexQuote => v !== null);
-    return live.length > 0 ? live : null;
-  },
-  ["yf-indices"],
-  { revalidate: 60 }
-);
-
-const _fetchLiveQuotes = unstable_cache(
-  async (): Promise<Quote[] | null> => {
-    const live = await fetchBatchQuotes(ALL_QUOTE_SYMBOLS);
-    if (live.length === 0) return null;
-
-    const sparkMap = new Map<string, number[]>();
-    await Promise.allSettled(
-      ALL_QUOTE_SYMBOLS.map(async (sym) => {
-        const s = await fetchSparkline(sym).catch(() => [] as number[]);
-        if (s.length > 0) sparkMap.set(sym, s);
-      })
-    );
-
-    return live.map((q) => {
-      const mock = mockQuotes.find((m) => m.symbol === q.symbol);
-      return {
-        symbol: q.symbol,
-        name: q.shortName,
-        price: q.price,
-        change: q.change,
-        changePercent: q.changePercent,
-        sparkline: sparkMap.get(q.symbol) ?? mock?.sparkline ?? [],
-        volume: fmtVolume(q.volume),
-        marketCap: fmtMarketCap(q.marketCap),
-      } satisfies Quote;
-    });
-  },
-  ["yf-quotes"],
-  { revalidate: 60 }
-);
-
-export async function getIndices(): Promise<IndexQuote[]> {
-  try {
-    return (await _fetchLiveIndices()) ?? mockIndices;
-  } catch {
-    return mockIndices;
-  }
-}
-
-export async function getQuotes(symbols?: string[]): Promise<Quote[]> {
-  try {
-    const all = (await _fetchLiveQuotes()) ?? mockQuotes;
-    if (symbols) return all.filter((q) => symbols.includes(q.symbol));
-    return all;
-  } catch {
-    if (symbols) return mockQuotes.filter((q) => symbols.includes(q.symbol));
-    return mockQuotes;
-  }
-}
-
-export async function getQuote(symbol: string): Promise<Quote | null> {
-  const quotes = await getQuotes([symbol]);
-  return quotes[0] ?? null;
-}
 
 export async function searchQuotes(query: string): Promise<Quote[]> {
   const q = query.toLowerCase();
@@ -517,44 +417,6 @@ export async function getNews(): Promise<NewsItem[]> {
     }
   } catch { /* ignore */ }
   return mockNews;
-}
-
-export async function getRecommendedStocks(): Promise<Quote[]> {
-  return mockQuotes.filter((q) => RECOMMENDED_SYMBOLS.includes(q.symbol));
-}
-
-export async function getFearGreed(): Promise<FearGreedData> {
-  return mockFearGreed;
-}
-
-const _fetchLiveFutures = unstable_cache(
-  async (): Promise<FutureItem[] | null> => {
-    const yahooSymbols = mockFutures.map((f) => toYahoo(f.symbol));
-    const quotes = await fetchBatchQuotes(yahooSymbols);
-    if (quotes.length === 0) return null;
-
-    const quoteMap = new Map(quotes.map((q) => [q.symbol, q]));
-    const live = mockFutures.map((f) => {
-      const q = quoteMap.get(toYahoo(f.symbol));
-      if (!q) return f;
-      return { symbol: f.symbol, name: f.name, price: q.price, change: q.change, changePercent: q.changePercent, group: f.group };
-    });
-    return live;
-  },
-  ["yf-futures"],
-  { revalidate: 60 }
-);
-
-export async function getFutures(): Promise<FutureItem[]> {
-  try {
-    return (await _fetchLiveFutures()) ?? mockFutures;
-  } catch {
-    return mockFutures;
-  }
-}
-
-export async function getBuffett(): Promise<BuffettData> {
-  return mockBuffett;
 }
 
 export { mockQuotes };

@@ -34,15 +34,22 @@ const YF_SYM: Record<string, string> = {
 const STOOQ_SYM: Record<string, string> = {
   // Index cards (ES/NQ/YM trade at same price level as SPX/NDX/DJI)
   SPX: "es.f", COMP: "nq.f", DJI: "ym.f",
+  // FX
+  USDKRW: "usdkrw", "6E": "6e.f", "6J": "6j.f",
   // Index futures
   ES: "es.f", NQ: "nq.f", YM: "ym.f", RTY: "rty.f",
   CL: "cl.f", NG: "ng.f", GC: "gc.f", SI: "si.f", HG: "hg.f",
-  ZN: "zn.f", ZB: "zb.f", "6E": "6e.f", "6J": "6j.f",
+  ZN: "zn.f", ZB: "zb.f",
   ZC: "zc.f", ZW: "zw.f", ZS: "zs.f",
   BTC: "@btcusd", ETH: "@ethusd",
 };
 // Some Stooq futures are in cents
 const STOOQ_DIVISOR: Record<string, number> = { SI: 100, HG: 100 };
+
+// Valid price ranges for data quality filtering
+const PRICE_RANGE: Record<string, [number, number]> = {
+  USDKRW: [600, 2500],   // KRW has never been below 600 or above 2500 vs USD
+};
 
 const STOOQ_INTERVAL: Record<string, string> = {
   "1D": "d", "YTD": "d", "1Y": "d", "5Y": "w", "10Y": "m", "ALL": "m",
@@ -79,6 +86,7 @@ async function fetchStooqChart(sym: string, period: string): Promise<ChartResult
     const lines = text.trim().split("\n").slice(1); // skip header
     if (lines.length < 2) return null;
 
+    const [minPrice, maxPrice] = PRICE_RANGE[sym] ?? [0, Infinity];
     const points = lines
       .map((line) => {
         const cols = line.split(",");
@@ -87,6 +95,7 @@ async function fetchStooqChart(sym: string, period: string): Promise<ChartResult
         const dateStr = cols[0].trim();
         const close   = parseFloat(cols[4]) / divisor;
         if (!dateStr || isNaN(close) || close <= 0) return null;
+        if (close < minPrice || close > maxPrice) return null; // data quality filter
         const ts = Math.floor(new Date(dateStr + "T16:00:00Z").getTime() / 1000);
         return { ts, close, volume: parseInt(cols[5] ?? "0") || 0 };
       })
@@ -177,10 +186,11 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
 
       const timestamps: number[] = result.timestamp;
       const closes: (number | null)[] = result.indicators.quote[0].close;
+      const [minP, maxP] = PRICE_RANGE[rawSym] ?? [0, Infinity];
 
       const points = timestamps
         .map((ts, i) => ({ ts, close: closes[i] ?? NaN, volume: 0 }))
-        .filter((p) => !isNaN(p.close) && p.close > 0);
+        .filter((p) => !isNaN(p.close) && p.close > 0 && p.close >= minP && p.close <= maxP);
 
       if (points.length < 2) continue;
 

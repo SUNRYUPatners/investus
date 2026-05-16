@@ -4,45 +4,71 @@ import type { BuffettData } from "@/lib/api";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const YF_BASE = "https://query2.finance.yahoo.com";
+// S&P 500 monthly data via Stooq (no auth, no rate limit, reliable from Vercel)
+// S&P 500 × 9.5 ≈ Wilshire 5000 index level; calibrated via W5000_CAP_FACTOR
+async function fetchSP500Stooq(): Promise<{ now: number; q1ago: number; y1ago: number } | null> {
+  const d2    = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+  const d1    = new Date(Date.now() - 2 * 365 * 86400_000).toISOString().slice(0, 10).replace(/-/g, "");
+  try {
+    const ctrl = new AbortController();
+    const tid  = setTimeout(() => ctrl.abort(), 8_000);
+    // Stooq: ^spx = S&P 500 index, i=m = monthly interval
+    const res  = await fetch(`https://stooq.com/q/d/l/?s=%5espx&d1=${d1}&d2=${d2}&i=m`, {
+      headers: { "User-Agent": "Mozilla/5.0", Accept: "text/csv,*/*" },
+      cache: "no-store",
+      signal: ctrl.signal,
+    });
+    clearTimeout(tid);
+    if (!res.ok) return null;
+    const text  = await res.text();
+    const lines = text.trim().split("\n").slice(1); // skip header row
+    if (lines.length < 4) return null;
 
-function yfHeaders() {
-  return {
-    "User-Agent": "Mozilla/5.0",
-    Accept: "application/json",
-  };
+    const closes: number[] = [];
+    for (const line of lines) {
+      const cols  = line.split(",");
+      const close = parseFloat(cols[4] ?? ""); // Date,Open,High,Low,Close,Volume
+      if (!isNaN(close) && close > 0) closes.push(close);
+    }
+    if (closes.length < 4) return null;
+
+    const scale = 9.5;
+    return {
+      now:   closes[closes.length - 1]  * scale,
+      q1ago: (closes[closes.length - 4]  ?? closes[0]) * scale,
+      y1ago: (closes[closes.length - 13] ?? closes[0]) * scale,
+    };
+  } catch { return null; }
 }
 
-// S&P 500 monthly chart as Wilshire proxy (Wilshire 5000 not available on Yahoo Finance)
-// S&P 500 × 9.5 ≈ Wilshire 5000 index level; calibrated via W5000_CAP_FACTOR
-async function fetchWilshire(): Promise<{ now: number; q1ago: number; y1ago: number } | null> {
-  // Use S&P 500 directly — Wilshire 5000 tickers (^W5000, ^WILSHIRE5000) are unreliable
-  // query2 confirmed working from Vercel; query1 may block
+// Yahoo Finance fallback (kept as secondary — Stooq preferred)
+async function fetchSP500YF(): Promise<{ now: number; q1ago: number; y1ago: number } | null> {
   for (const range of ["2y", "1y"]) {
     try {
-      const url = `${YF_BASE}/v8/finance/chart/%5EGSPC?interval=1mo&range=${range}`;
-      const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 6000);
-      const res = await fetch(url, {
-        headers: yfHeaders(),
-        cache: "no-store",
-        signal: ctrl.signal,
-      });
+      const ctrl  = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 6_000);
+      const res   = await fetch(
+        `https://query2.finance.yahoo.com/v8/finance/chart/%5EGSPC?interval=1mo&range=${range}`,
+        { headers: { "User-Agent": "Mozilla/5.0", Accept: "application/json" }, cache: "no-store", signal: ctrl.signal },
+      );
       clearTimeout(timer);
       if (!res.ok) throw new Error(`GSPC ${res.status}`);
-      const json = await res.json();
-      const closes: number[] = json?.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? [];
+      const closes: number[] = (await res.json())?.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? [];
       const valid = closes.filter((v) => v != null && isFinite(v));
       if (valid.length < 4) throw new Error("insufficient data");
-
       const scale = 9.5;
-      const now   = valid[valid.length - 1]  * scale;
-      const q1ago = (valid[valid.length - 4]  ?? valid[0]) * scale;
-      const y1ago = (valid[valid.length - 13] ?? valid[0]) * scale;
-      return { now, q1ago, y1ago };
+      return {
+        now:   valid[valid.length - 1]  * scale,
+        q1ago: (valid[valid.length - 4]  ?? valid[0]) * scale,
+        y1ago: (valid[valid.length - 13] ?? valid[0]) * scale,
+      };
     } catch { continue; }
   }
   return null;
+}
+
+async function fetchWilshire() {
+  return (await fetchSP500Stooq()) ?? (await fetchSP500YF());
 }
 
 // Parse the last numeric value from a FRED CSV response (DATE,VALUE rows)

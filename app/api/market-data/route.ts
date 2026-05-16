@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { fetchFinnhubBatch, fetchFinnhubRawQuote, type FinnhubRawQuote } from "@/lib/finnhub";
-import { fetchFutureV8 } from "@/lib/yahooFinance";
+import { fetchFutureV8 } from "@/lib/yahooFinance"; // commodity futures fallback only
 import { fetchStooqFuture } from "@/lib/stooq";
 import { isMarketOpen } from "@/lib/marketHours";
 import {
@@ -181,17 +181,14 @@ export async function GET(req: Request) {
   const stockSymbols = mockQuotes.map((q) => q.symbol);
   const cryptoFHSyms = Object.values(CRYPTO_FH);
 
-  const [fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap] = await Promise.all([
+  const [fhMap, fxRates, cryptoResults, cgMap, yfComEntries] = await Promise.all([
     fetchFinnhubBatch([...stockSymbols, ...ETF_PROXY_SYMS]), // stocks + ETF proxies
     getForexRates(),
     token
       ? Promise.allSettled(cryptoFHSyms.map((s) => fetchFinnhubRawQuote(s)))
       : Promise.resolve(cryptoFHSyms.map(() => ({ status: "fulfilled", value: null } as PromiseFulfilledResult<null>))),
     fetchCoinGecko(),
-    // Commodity futures: Stooq batched (5/chunk, 200ms gap) → YF v8 fallback
-    // Batching prevents Stooq anti-bot blocking from same Vercel IP
-    // Commodity futures: Stooq + YF run simultaneously per symbol, max 5s total
-    // Stooq/YF may be blocked on Vercel IPs — parallel fetch + master timeout
+    // Commodity futures: Stooq primary → Yahoo Finance v8 fallback, 5s master timeout
     (async () => {
       type CommodityEntry = { key: string; price: number; change: number; changePercent: number };
       const comMap = new Map<string, CommodityEntry>();
@@ -208,7 +205,6 @@ export async function GET(req: Request) {
         return r ? { key, ...r } : null;
       };
 
-      // Master 5s timeout — whatever resolves by then is used; rest falls back to ETF change%
       const masterTimeout = new Promise<CommodityEntry[]>((res) => setTimeout(() => res([]), 5_000));
       const allFetches    = Promise.allSettled(
         Object.entries(COMMODITY_STOOQ).map(([key, stooqSym]) => fetchWithTimeout(key, stooqSym))
@@ -222,43 +218,15 @@ export async function GET(req: Request) {
       for (const e of entries) comMap.set(e.key, e);
       return [...comMap.values()];
     })(),
-    // Yahoo Finance direct index fetch: ^GSPC, ^IXIC, ^DJI — backup when Finnhub ETF proxies fail
-    (async (): Promise<Map<string, ETFQuote>> => {
-      const out = new Map<string, ETFQuote>();
-      const MAP = { SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI" } as const;
-      await Promise.allSettled(Object.entries(MAP).map(async ([sym, yfSym]) => {
-        try {
-          const ctrl = new AbortController();
-          const tid  = setTimeout(() => ctrl.abort(), 4_000);
-          const url  = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=1d&range=5d`;
-          const res  = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0", Accept: "application/json" }, cache: "no-store", signal: ctrl.signal });
-          clearTimeout(tid);
-          if (!res.ok) return;
-          const meta = (await res.json())?.chart?.result?.[0]?.meta;
-          if (!meta?.regularMarketPrice) return;
-          const price = Number(meta.regularMarketPrice);
-          const prev  = Number(meta.chartPreviousClose ?? price);
-          out.set(sym, { price, change: price - prev, changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0 });
-        } catch { /* ignore */ }
-      }));
-      return out;
-    })(),
   ]);
 
   // 앱 내부 심볼 (CL, NG, …) → 실선물 시세
   const yfComMap = new Map(yfComEntries.map((r) => [r.key, r]));
 
-  // Build indexLive map: Yahoo Finance direct (primary) → Finnhub ETF proxy (fallback)
-  // YF direct is more reliable on Vercel (Finnhub rate-limits ETF proxies under load)
+  // Build indexLive map: Finnhub ETF proxy (SPY×10.03, QQQ×36.83, DIA×100)
+  // Yahoo Finance direct index fetch removed — unreliable from Vercel IPs
   const indexLive = new Map<string, ETFQuote>();
   for (const [etfSym, { sym: idxSym, factor }] of Object.entries(ETF_INDEX)) {
-    // 1) Yahoo Finance direct index (^GSPC, ^IXIC, ^DJI) — primary
-    const yfDirect = yfIndexMap.get(idxSym);
-    if (yfDirect) {
-      indexLive.set(idxSym, yfDirect);
-      continue;
-    }
-    // 2) Finnhub ETF proxy (SPY × 10.03, QQQ × 36.83, DIA × 100) — fallback
     const etf = fhMap.get(etfSym);
     if (etf) {
       indexLive.set(idxSym, {
