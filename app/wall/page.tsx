@@ -22,18 +22,35 @@ type Post = {
   comments: number;
 };
 
+// Mock posts — comment counts reflect actual stored comments (0 until real users join)
 const MOCK_POSTS: Post[] = [
-  { id: 1,  symbol: "NVDA", nickname: "익명_7829", holdingLabel: "50주 보유",  content: "블랙웰 GPU 수요가 예상보다 훨씬 강하게 나오고 있어요. 데이터센터 투자는 아직 초입이라고 봅니다. 장기 홀딩 유지합니다.", time: "5분 전",   likes: 24, comments: 8  },
-  { id: 2,  symbol: "NVDA", nickname: "익명_3341", holdingLabel: "10주 보유",  content: "고점 대비 많이 올라와서 추가 매수는 좀 조심스럽네요. 실적 발표 때까지는 지켜볼 것 같아요.",                             time: "12분 전",  likes: 11, comments: 3  },
-  { id: 3,  symbol: "AAPL", nickname: "익명_5512", holdingLabel: "30주 보유",  content: "아이폰 17 AI 기능이 실제로 얼마나 쓸만한지가 핵심인 것 같아요. 중국 회복세랑 같이 봐야 할 듯.",                       time: "23분 전",  likes: 17, comments: 5  },
-  { id: 4,  symbol: "AAPL", nickname: "익명_1104", holdingLabel: "200주 보유", content: "버핏이 팔긴 했어도 여전히 최대 보유 종목이죠. 배당 꾸준히 늘리고 바이백도 하고. 이 정도면 그냥 믿고 가는 주식.",    time: "1시간 전", likes: 38, comments: 12 },
-  { id: 5,  symbol: "TSLA", nickname: "익명_9917", holdingLabel: "20주 보유",  content: "FSD 구독 모델이 궤도에 오르면 수익 구조 완전히 달라질 텐데. 단기는 힘들어 보여도 2~3년 뷰로 가져가는 중.",          time: "2시간 전", likes: 29, comments: 14 },
-  { id: 6,  symbol: "PLTR", nickname: "익명_2278", holdingLabel: "300주 보유", content: "AIP 플랫폼 B2B 계약이 계속 늘고 있어요. 정부 계약에서 민간으로 넘어가는 게 진짜 포인트입니다.",                       time: "3시간 전", likes: 45, comments: 19 },
-  { id: 7,  symbol: "MSFT", nickname: "익명_6631", holdingLabel: "15주 보유",  content: "코파일럿 기업 침투율이 생각보다 빠르게 올라오고 있음. 클라우드 + AI 조합이 진짜 무서운 회사.",                         time: "4시간 전", likes: 31, comments: 7  },
+  { id: 1,  symbol: "NVDA", nickname: "익명_7291", holdingLabel: "20주 보유",  content: "트럼프가 NVDA $1M+ 개인 매수 공시 낸 거 봤어요? 중국 칩 허가 발표 직전에 산 거잖아요. 어떻게 이 타이밍에... 어쨌든 최강 호재 시그널인 건 맞음.", time: "방금",    likes: 41, comments: 0 },
+  { id: 2,  symbol: "NVDA", nickname: "익명_3804", holdingLabel: "10주 보유",  content: "중국 $50B 시장이 열리면 이번 분기 가이던스 완전히 달라지는 거 아닌가요? 텐센트·알리바바·바이두 다 GPU 쓰면... 분기 매출 $5~8B 더 올라가는 거잖아요.", time: "8분 전",  likes: 33, comments: 0 },
+  { id: 3,  symbol: "NVDA", nickname: "익명_6612", holdingLabel: "5주 보유",   content: "의회 반발 변수가 있다는 거 잊지 맙시다. 작년 H100 수출 제한 기억나죠? 너무 빨리 흥분하지 말고 허가가 실제로 집행되는지 지켜봐야 해요.",             time: "22분 전", likes: 14, comments: 0 },
+  { id: 4,  symbol: "AAPL", nickname: "익명_5512", holdingLabel: "30주 보유",  content: "아이폰 17 AI 기능이 실제로 얼마나 쓸만한지가 핵심인 것 같아요. 중국 회복세랑 같이 봐야 할 듯.",                                                       time: "23분 전", likes: 17, comments: 0 },
+  { id: 5,  symbol: "AAPL", nickname: "익명_1104", holdingLabel: "200주 보유", content: "버핏이 팔긴 했어도 여전히 최대 보유 종목이죠. 배당 꾸준히 늘리고 바이백도 하고. 이 정도면 그냥 믿고 가는 주식.",                                         time: "1시간 전",likes: 38, comments: 0 },
+  { id: 6,  symbol: "TSLA", nickname: "익명_9917", holdingLabel: "20주 보유",  content: "FSD 구독 모델이 궤도에 오르면 수익 구조 완전히 달라질 텐데. 단기는 힘들어 보여도 2~3년 뷰로 가져가는 중.",                                               time: "2시간 전",likes: 29, comments: 0 },
+  { id: 7,  symbol: "TSLA", nickname: "익명_4421", holdingLabel: "50주 보유",  content: "일론 머스크 DOGE 복귀 후 테슬라 집중 다시 시작했다는 뉴스 나왔죠. 로보택시 일정도 재확인 필요해 보여요.",                                               time: "3시간 전",likes: 22, comments: 0 },
+  { id: 8,  symbol: "MSFT", nickname: "익명_6631", holdingLabel: "15주 보유",  content: "코파일럿 기업 침투율이 생각보다 빠르게 올라오고 있음. 클라우드 + AI 조합이 진짜 무서운 회사.",                                                           time: "4시간 전",likes: 31, comments: 0 },
+  { id: 9,  symbol: "AMZN", nickname: "익명_8812", holdingLabel: "8주 보유",   content: "AWS 성장률 다시 가속되는 거 보이시나요? AI 인프라 수요로 클라우드 3사 다 수혜인데 AMZN이 제일 저평가 같아요.",                                          time: "5시간 전",likes: 26, comments: 0 },
+  { id: 10, symbol: "META", nickname: "익명_2290", holdingLabel: "12주 보유",  content: "라마 4 오픈소스로 공개하면서 AI 생태계 주도권 가져가는 전략인 듯. 광고 매출에 AI 타게팅 붙으면 이익률 더 올라갈 거라 봅니다.",                          time: "6시간 전",likes: 19, comments: 0 },
+  { id: 11, symbol: "PLTR", nickname: "익명_2278", holdingLabel: "300주 보유", content: "AIP 플랫폼 B2B 계약이 계속 늘고 있어요. 정부 계약에서 민간으로 넘어가는 게 진짜 포인트입니다.",                                                           time: "7시간 전",likes: 45, comments: 0 },
+  { id: 12, symbol: "GOOGL", nickname: "익명_3317", holdingLabel: "5주 보유",  content: "제미나이 2.5 Pro가 GPT-4o 벤치마크 거의 따라잡았어요. 검색 AI 오버뷰 수익화 모델만 완성되면 재평가 구간 온다고 봅니다.",                              time: "8시간 전",likes: 33, comments: 0 },
 ];
 
 type VerifyMode = "none" | "upload" | "broker" | "broker-notice";
 type MainTab = "discussion" | "creator";
+
+// Format ISO timestamp to Korean relative time
+function relTime(iso: string): string {
+  const diff = Date.now() - new Date(iso).getTime();
+  const m = Math.floor(diff / 60000);
+  if (m < 1)  return "방금";
+  if (m < 60) return `${m}분 전`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return `${h}시간 전`;
+  return `${Math.floor(h / 24)}일 전`;
+}
 
 export default function WallPage() {
   const { user } = useAuth();
@@ -44,6 +61,8 @@ export default function WallPage() {
   const [verifyMode, setVerifyMode]       = useState<VerifyMode>("none");
   const [uploadDone, setUploadDone]       = useState(false);
   const [hasCreatorProfile, setHasCreatorProfile] = useState(false);
+  const [dbPosts, setDbPosts]             = useState<Post[] | null>(null);
+  const [postsLoading, setPostsLoading]   = useState(true);
 
   useEffect(() => {
     try {
@@ -52,7 +71,48 @@ export default function WallPage() {
     } catch {}
   }, []);
 
-  const posts = MOCK_POSTS.filter((p) => p.symbol === selected);
+  // Fetch real posts from Supabase; fall back to mock if table absent or empty
+  useEffect(() => {
+    setPostsLoading(true);
+    setDbPosts(null);
+
+    async function load() {
+      try {
+        const { getSupabase } = await import("@/lib/supabase");
+        const sb = getSupabase();
+        const { data, error } = await sb
+          .from("wall_posts")
+          .select("id, symbol, nickname, holding_label, content, created_at, likes, wall_comments(count)")
+          .eq("symbol", selected)
+          .order("created_at", { ascending: false })
+          .limit(30);
+
+        if (!error && data && data.length > 0) {
+          setDbPosts(
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (data as any[]).map((p) => ({
+              id:           p.id,
+              symbol:       p.symbol,
+              nickname:     p.nickname,
+              holdingLabel: p.holding_label,
+              content:      p.content,
+              time:         relTime(p.created_at),
+              likes:        p.likes ?? 0,
+              comments:     (p.wall_comments?.[0]?.count as number) ?? 0,
+            }))
+          );
+        }
+      } catch {
+        // no table yet — use mock data
+      } finally {
+        setPostsLoading(false);
+      }
+    }
+
+    load();
+  }, [selected]);
+
+  const posts = (dbPosts ?? MOCK_POSTS).filter((p) => p.symbol === selected);
 
   const toggleLike = (id: number) => {
     setLiked((prev) => {
@@ -150,7 +210,22 @@ export default function WallPage() {
               </div>
 
               <div className="flex flex-col gap-3">
-                {posts.length === 0 ? (
+                {postsLoading ? (
+                  [1, 2, 3].map((k) => (
+                    <div key={k} className="rounded-2xl p-4 border animate-pulse"
+                      style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="w-7 h-7 rounded-full" style={{ background: "var(--border)" }} />
+                        <div className="h-3 w-24 rounded" style={{ background: "var(--border)" }} />
+                      </div>
+                      <div className="space-y-2 mb-3">
+                        <div className="h-3 rounded" style={{ background: "var(--border)" }} />
+                        <div className="h-3 w-4/5 rounded" style={{ background: "var(--border)" }} />
+                      </div>
+                      <div className="h-3 w-16 rounded" style={{ background: "var(--border)" }} />
+                    </div>
+                  ))
+                ) : posts.length === 0 ? (
                   <div className="flex flex-col items-center justify-center py-20 gap-3">
                     <span className="text-4xl">💬</span>
                     <p className="text-sm" style={{ color: "var(--muted)" }}>아직 게시글이 없습니다</p>
