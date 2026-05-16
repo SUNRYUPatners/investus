@@ -4,8 +4,8 @@
  * - v7 quote API 폴백 (배치 조회용)
  */
 
-const YF_BASE  = "https://query1.finance.yahoo.com";
-const YF_BASE2 = "https://query2.finance.yahoo.com";
+const YF_BASE  = "https://query2.finance.yahoo.com";
+const YF_BASE2 = "https://query1.finance.yahoo.com";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -27,12 +27,8 @@ export type YFIndex = YFQuote & {
 
 function yfHeaders() {
   return {
-    "User-Agent":
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
-      "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Accept-Language": "en-US,en;q=0.9",
+    "User-Agent": "Mozilla/5.0",
     Accept: "application/json",
-    Referer: "https://finance.yahoo.com/",
   };
 }
 
