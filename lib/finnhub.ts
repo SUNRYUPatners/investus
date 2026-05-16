@@ -63,8 +63,16 @@ async function fetchOne(symbol: string, token: string): Promise<FinnhubQuote | n
     const res = await fetch(`${BASE}/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`);
     if (!res.ok) return null;
     const d = await res.json();
-    if (!d.c || d.c === 0) return null;
-    return { symbol, price: Number(d.c), change: Number(d.d ?? 0), changePercent: Number(d.dp ?? 0) };
+    // c=0 when market closed — fall back to pc (prev close), change=0
+    const isLive = d.c && d.c > 0;
+    const price  = isLive ? d.c : d.pc;
+    if (!price || price === 0) return null;
+    return {
+      symbol,
+      price:         Number(price),
+      change:        isLive ? Number(d.d  ?? 0) : 0,
+      changePercent: isLive ? Number(d.dp ?? 0) : 0,
+    };
   } catch {
     return null;
   }
