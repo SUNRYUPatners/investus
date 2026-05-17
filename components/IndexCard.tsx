@@ -16,11 +16,11 @@ export function IndexCard({ index }: { index: IndexQuote }) {
   return (
     <Link
       href={`/stock/${index.symbol}`}
-      className="w-[155px] flex-shrink-0 rounded-2xl p-4 border block"
+      className="w-[155px] lg:w-[190px] flex-shrink-0 rounded-2xl p-4 border block"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
       <div className="mb-2">
-        <p className="text-sm font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
+        <p className="text-sm font-bold font-mono-num tabular-nums truncate" style={{ color: "var(--text)" }}>
           {displayValue}
         </p>
         <p className="text-[10px] truncate" style={{ color: "var(--muted)" }}>
@@ -28,13 +28,13 @@ export function IndexCard({ index }: { index: IndexQuote }) {
         </p>
       </div>
 
-      <Sparkline data={index.sparkline} positive={pos} width={100} height={28} />
+      <Sparkline data={index.sparkline} positive={pos} width={100} height={28} className="w-full" />
 
-      <div className="mt-1.5 flex items-end justify-between">
-        <p className="text-sm font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
+      <div className="mt-1.5 flex items-end justify-between gap-1">
+        <p className="text-sm font-bold font-mono-num tabular-nums truncate min-w-0" style={{ color: "var(--text)" }}>
           {displayValue}
         </p>
-        <p className="text-xs font-mono-num tabular-nums" style={{ color }}>
+        <p className="text-xs font-mono-num tabular-nums flex-shrink-0" style={{ color }}>
           {pos ? "+" : ""}{index.changePercent.toFixed(2)}%
         </p>
       </div>

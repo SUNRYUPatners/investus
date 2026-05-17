@@ -10,9 +10,10 @@ type Props = {
   positive: boolean;
   width?: number;
   height?: number;
+  className?: string;
 };
 
-export function Sparkline({ data, positive, width = W, height = H }: Props) {
+export function Sparkline({ data, positive, width = W, height = H, className }: Props) {
   if (data.length < 2) return null;
 
   const min = Math.min(...data);
@@ -40,6 +41,7 @@ export function Sparkline({ data, positive, width = W, height = H }: Props) {
       viewBox={`0 0 ${width} ${height}`}
       fill="none"
       aria-hidden
+      className={className}
     >
       <defs>
         <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">

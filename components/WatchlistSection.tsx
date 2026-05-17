@@ -64,7 +64,7 @@ export function WatchlistSection() {
   const liveMap = new Map(liveQuotes.map((q) => [q.symbol, q]));
 
   return (
-    <section className="px-4 pt-5">
+    <section className="px-4 lg:px-0 pt-5">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-1.5">
           <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
@@ -89,7 +89,7 @@ export function WatchlistSection() {
               <Link
                 key={sym}
                 href={`/stock/${sym}`}
-                className="w-[155px] flex-shrink-0 rounded-2xl p-4 border block relative active:opacity-70 transition-opacity"
+                className="w-[155px] lg:w-[190px] flex-shrink-0 rounded-2xl p-4 border block relative active:opacity-70 transition-opacity"
                 style={{ background: "var(--card)", borderColor: "var(--border)", textDecoration: "none" }}
               >
                 <button
@@ -104,9 +104,9 @@ export function WatchlistSection() {
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>{t.watchlist.loading}</p>
                 </div>
                 <div className="h-[28px]" />
-                <div className="mt-1.5 flex items-end justify-between">
+                <div className="mt-1.5 flex items-end justify-between gap-1">
                   <p className="text-sm font-bold font-mono-num" style={{ color: "var(--muted)" }}>—</p>
-                  <p className="text-xs" style={{ color: "var(--muted)" }}>—</p>
+                  <p className="text-xs flex-shrink-0" style={{ color: "var(--muted)" }}>—</p>
                 </div>
               </Link>
             );
@@ -120,7 +120,7 @@ export function WatchlistSection() {
             <Link
               key={sym}
               href={`/stock/${sym}`}
-              className="w-[155px] flex-shrink-0 rounded-2xl p-4 border block relative active:opacity-70 transition-opacity"
+              className="w-[155px] lg:w-[190px] flex-shrink-0 rounded-2xl p-4 border block relative active:opacity-70 transition-opacity"
               style={{ background: "var(--card)", borderColor: "var(--border)", textDecoration: "none" }}
             >
               <button
@@ -135,18 +135,18 @@ export function WatchlistSection() {
                 <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>
                   {sym}
                 </p>
-                <p className="text-[10px] truncate max-w-[100px]" style={{ color: "var(--muted)" }}>
+                <p className="text-[10px] truncate max-w-[100px] lg:max-w-full" style={{ color: "var(--muted)" }}>
                   {stock?.name ?? sym}
                 </p>
               </div>
 
-              <Sparkline data={sparkline} positive={pos} width={100} height={28} />
+              <Sparkline data={sparkline} positive={pos} width={100} height={28} className="w-full" />
 
-              <div className="mt-1.5 flex items-end justify-between">
-                <p className="text-sm font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
+              <div className="mt-1.5 flex items-end justify-between gap-1">
+                <p className="text-sm font-bold font-mono-num tabular-nums truncate min-w-0" style={{ color: "var(--text)" }}>
                   ${priceData.price.toFixed(2)}
                 </p>
-                <p className="text-xs font-mono-num" style={{ color }}>
+                <p className="text-xs font-mono-num flex-shrink-0" style={{ color }}>
                   {pos ? "+" : ""}{priceData.changePercent.toFixed(2)}%
                 </p>
               </div>
