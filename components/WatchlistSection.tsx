@@ -91,7 +91,7 @@ export function WatchlistSection() {
             return (
               <Link key={sym} href={`/stock/${sym}`} style={{ textDecoration: "none" }}>
                 <div
-                  className="min-w-[140px] flex-shrink-0 rounded-2xl p-3 border relative active:opacity-70 transition-opacity"
+                  className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border relative active:opacity-70 transition-opacity"
                   style={{ background: "var(--card)", borderColor: "var(--border)" }}
                 >
                   <button
@@ -101,7 +101,7 @@ export function WatchlistSection() {
                   >
                     <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
                   </button>
-                  <div className="mb-6 pr-5">
+                  <div className="mb-3 pr-5">
                     <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{sym}</p>
                     <p className="text-[10px]" style={{ color: "var(--muted)" }}>{t.watchlist.loading}</p>
                   </div>
@@ -121,7 +121,7 @@ export function WatchlistSection() {
           return (
             <Link key={sym} href={`/stock/${sym}`} style={{ textDecoration: "none" }}>
               <div
-                className="min-w-[140px] flex-shrink-0 rounded-2xl p-3 border relative active:opacity-70 transition-opacity"
+                className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border relative active:opacity-70 transition-opacity"
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}
               >
                 <button
