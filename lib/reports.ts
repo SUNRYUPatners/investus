@@ -38,6 +38,19 @@ export const SEED_REPORTS: Report[] = [
   // ══════════════════════════════════════════════════════════════════════════
 
   {
+    id:            "seed-032",
+    title:         "📋 2026년 5월 18일 — 오늘의 한장 요약",
+    summary:       "SpaceX IPO 6월 12일 Nasdaq 상장 확정, BlackRock $5~10B 단독 매수 시도 / 테슬라 FSD V14.3.3 출시·자율주행 통계 공개 / Ackman Microsoft $2.3B 베팅·Google 전량 매도 / 버핏 Apple 25년 $10,000→$120,000 / 테슬라 한국·대만 칩 설계 채용 / Jamie Dimon \"50년 중 AI 최고 낙관\"",
+    body:          "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🚀 SpaceX IPO — 6월 12일 Nasdaq $SPCE 상장\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• 총 조달 $15B, BlackRock이 12%($5~10B) 단독 매수 시도\n• 소매 투자자 30% 물량 배정 — 역대 IPO 중 이례적\n• Starlink = 국가 인터넷 인프라 수준, 장기 성장 스토리\n→ 2026년 최대 투자 이벤트. 관련 수혜: TSLA, 우주 ETF\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🚗 테슬라 FSD V14.3.3 출시\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• 자율주행 통계(Self-Driving Stats) 최초 공개 — 98% 정확도\n• Smart Summary 응답 속도 대폭 향상\n• 주차 표시 없는 주차장에서 완벽 자동 주차 시연\n• NHTSA 규제 장벽 해소 → FSD 글로벌 확장 가속\n→ FSD 구독 수익 가속, 로봇택시 타임라인 앞당김\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n💼 Bill Ackman — MSFT $2.3B 베팅, GOOGL 전량 매도\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Pershing Square: Google 전량 매도 → Microsoft $2.3B 집중 투자\n• Azure AI·Copilot 생태계 → \"AI 시대 최대 수혜자\" 판단\n• Google 반독점 소송·AI 뒤처짐 리스크 회피\n→ 빅테크 AI 패권 구도 전환 시그널\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🍎 워런 버핏 × 애플 — $10,000 → $120,000\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• 2016년 5월 버크셔 첫 Apple 공시, 이후 12배 수익\n• 버핏 원금 $36B → 평가액 $180B+ (최고점)\n• Apple Intelligence AI 사이클 → 차기 성장 동력 시작\n→ \"위대한 기업을 적당한 가격에\" 원칙의 완벽한 구현\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🔬 테슬라 — 한국·대만 반도체 엔지니어 대규모 채용\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• GDDR·LPDDR·DRAM 전문 설계 엔지니어 모집\n• Cortex AI 슈퍼컴퓨터 칩 내재화 전략 구체화\n• 삼성·SK하이닉스 출신 메모리 인재 직접 채용\n→ NVIDIA 의존도 축소, 자체 칩 완성 시 마진 대폭 개선\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🏦 Jamie Dimon — \"50년 중 AI 가장 낙관적\"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• \"Most optimistic picture of AI I've ever heard in my 50-year career.\"\n• 월가 레전드(Ackman·Druckenmiller·Baron) 일제히 AI 수혜주 집중\n• JP모건 AI 투자 $15B+, COiN·LOXM 등 실전 도입\n→ AI는 테마가 아닌 현실 — 방향성 확인\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📌 오늘의 핵심 픽\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• 최우선 관심: $SPCE (SpaceX IPO 6/12)\n• 단기 모멘텀: TSLA (FSD 14.3.3 + 칩 내재화)\n• 장기 보유: MSFT (Ackman $2.3B + Copilot)\n• 헤지 확인: AAPL (버핏 Apple Intelligence 사이클)",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 오늘의 시장 요약",
+    date:          "2026-05-18",
+    updatedAt:     "2026.05.18 08:35",
+    isPinned:      true,
+  },
+
+  {
     id:            "seed-033",
     title:         "SpaceX IPO 6월 12일 Nasdaq — BlackRock $5~10B 단독 매수 시도, $SPCE",
     summary:       "SpaceX가 6월 12일 Nasdaq에 $SPCE 티커로 상장 예정입니다. 총 조달 규모 $15B 중 BlackRock이 12% 전체($5~10B)를 단독 매입하려 한다는 보도가 나왔습니다. 기관들이 상어처럼 달려들고 있으며, 소매 투자자에게는 IPO 물량의 30%가 배정됩니다.",
