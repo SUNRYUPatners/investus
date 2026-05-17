@@ -45,36 +45,9 @@ import {
   type Report,
 } from "@/lib/reports";
 
-// ── 3일 필터 ──────────────────────────────────────────────────────────────
-// updatedAt: "2026.05.14 07:27" KST 형식
-// 현재 시각 기준 3일 이내 리포트만 표시
-
-const SHOW_WINDOW = 3 * 24 * 60 * 60 * 1000;
-
-function parseKST(s: string): Date {
-  // "2026.05.14 07:27" → UTC 변환 (KST = UTC+9)
-  const [datePart, timePart = "00:00"] = s.split(" ");
-  const sep = datePart.includes(".") ? "." : "-";
-  const [y, m, d] = datePart.split(sep).map(Number);
-  const [h, mn]   = timePart.split(":").map(Number);
-  return new Date(Date.UTC(y, m - 1, d, h - 9, mn));
-}
-
 function getDateKey(r: Report): string {
   const s = r.updatedAt ?? r.date ?? "";
   return s.split(" ")[0].replace(/\./g, "-"); // "2026.05.15 08:30" → "2026-05-15"
-}
-
-function isWithinWindow(r: Report): boolean {
-  const s = r.updatedAt ?? r.date;
-  if (!s) return false;
-  try {
-    const dt = parseKST(s);
-    if (isNaN(dt.getTime())) return false;
-    return Date.now() - dt.getTime() < SHOW_WINDOW;
-  } catch {
-    return false;
-  }
 }
 
 // ── ReportCard ────────────────────────────────────────────────────────────
@@ -305,7 +278,7 @@ export function ReportFeed() {
   const [showOlder, setShowOlder] = useState(false);
   const olderRef = useRef<HTMLDivElement>(null);
 
-  const recent = SEED_REPORTS.filter(isWithinWindow);
+  const recent = SEED_REPORTS;
 
   // 가장 최근 날짜 파악 (이 날짜의 리포트만 isPinned 적용)
   const latestDateKey = recent.reduce((max, r) => {
@@ -354,7 +327,7 @@ export function ReportFeed() {
       <DailyQuote />
 
       {/* Report cards */}
-      {all.length > 0 ? (
+      {all.length > 0 && (
         <div className="flex flex-col gap-3">
           {todayReports.map((r) => (
             <ReportCard key={r.id} report={r} />
@@ -385,21 +358,8 @@ export function ReportFeed() {
             </>
           )}
         </div>
-      ) : (
-        /* 24h 경과 후 빈 상태 */
-        <div
-          className="rounded-2xl border p-8 flex flex-col items-center gap-2 text-center"
-          style={{ background: "var(--card)", borderColor: "var(--border)" }}
-        >
-          <p className="text-2xl">📋</p>
-          <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>
-            오늘의 리포트를 준비 중입니다
-          </p>
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-            매일 아침 새로운 시장 분석이 업데이트됩니다
-          </p>
-        </div>
       )}
     </>
+
   );
 }
