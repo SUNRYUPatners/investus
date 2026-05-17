@@ -91,7 +91,7 @@ export function WatchlistSection() {
             return (
               <Link key={sym} href={`/stock/${sym}`} style={{ textDecoration: "none" }}>
                 <div
-                  className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border relative active:opacity-70 transition-opacity"
+                  className="min-w-[155px] h-[148px] flex-shrink-0 rounded-2xl p-4 border relative flex flex-col active:opacity-70 transition-opacity"
                   style={{ background: "var(--card)", borderColor: "var(--border)" }}
                 >
                   <button
@@ -101,11 +101,11 @@ export function WatchlistSection() {
                   >
                     <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
                   </button>
-                  <div className="mb-3 pr-5">
+                  <div className="mb-2 pr-5">
                     <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{sym}</p>
                     <p className="text-[10px]" style={{ color: "var(--muted)" }}>{t.watchlist.loading}</p>
                   </div>
-                  <div className="flex items-end justify-between">
+                  <div className="mt-auto flex items-end justify-between">
                     <p className="text-sm font-bold font-mono-num" style={{ color: "var(--muted)" }}>—</p>
                     <p className="text-xs" style={{ color: "var(--muted)" }}>—</p>
                   </div>
@@ -121,7 +121,7 @@ export function WatchlistSection() {
           return (
             <Link key={sym} href={`/stock/${sym}`} style={{ textDecoration: "none" }}>
               <div
-                className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border relative active:opacity-70 transition-opacity"
+                className="min-w-[155px] h-[148px] flex-shrink-0 rounded-2xl p-4 border relative flex flex-col active:opacity-70 transition-opacity"
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}
               >
                 <button
@@ -143,7 +143,7 @@ export function WatchlistSection() {
 
                 <Sparkline data={sparkline} positive={pos} width={100} height={28} />
 
-                <div className="mt-1.5 flex items-end justify-between">
+                <div className="mt-auto pt-1.5 flex items-end justify-between">
                   <p className="text-sm font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
                     ${priceData.price.toFixed(2)}
                   </p>

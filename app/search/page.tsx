@@ -5,6 +5,7 @@ import { Search, X } from "lucide-react";
 import Link from "next/link";
 import { mockQuotes, type Quote, RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { Header } from "@/components/Header";
+import { TickerTape } from "@/components/TickerTape";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { GuruHoldings } from "@/components/GuruHoldings";
 import { AdBanner } from "@/components/AdBanner";
@@ -187,6 +188,7 @@ export default function SearchPage() {
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
+      <TickerTape />
 
       <main className="max-w-[480px] mx-auto lg:max-w-none px-4 lg:px-8 pt-5 pb-24 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start">
@@ -204,8 +206,8 @@ export default function SearchPage() {
                 placeholder={t.search.placeholder}
                 value={query}
                 onChange={(e) => handleChange(e.target.value)}
-                className="flex-1 bg-transparent text-sm outline-none"
-                style={{ color: "var(--text)" }}
+                className="flex-1 bg-transparent outline-none"
+                style={{ color: "var(--text)", fontSize: "16px" }}
               />
               {query && (
                 <button onClick={() => handleChange("")}>

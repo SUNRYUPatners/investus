@@ -21,7 +21,7 @@ export function IndexCard({ index }: { index: IndexQuote }) {
   return (
     <Link
       href={`/stock/${index.symbol}`}
-      className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border block"
+      className="min-w-[155px] h-[148px] flex-shrink-0 rounded-2xl p-4 border block overflow-hidden"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
       <div className="flex items-start justify-between mb-3">

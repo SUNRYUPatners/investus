@@ -13,11 +13,11 @@ export function StockCard({ stock }: { stock: Quote }) {
   return (
     <Link
       href={`/stock/${stock.symbol}`}
-      className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border block"
+      className="min-w-[155px] h-[148px] flex-shrink-0 rounded-2xl p-4 border block overflow-hidden"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
       {/* Header */}
-      <div className="flex items-start justify-between mb-3">
+      <div className="flex items-start justify-between mb-2">
         <div>
           <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
             {stock.symbol}
@@ -34,10 +34,10 @@ export function StockCard({ stock }: { stock: Quote }) {
         </span>
       </div>
 
-      <Sparkline data={stock.sparkline} positive={pos} />
+      <Sparkline data={stock.sparkline} positive={pos} height={28} />
 
       {/* Price */}
-      <div className="mt-2">
+      <div className="mt-1">
         <p className="text-base font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
           ${stock.price.toFixed(2)}
         </p>
