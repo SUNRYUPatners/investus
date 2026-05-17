@@ -34,6 +34,90 @@ export const CATEGORY_EMOJI: Record<ReportCategory, string> = {
 export const SEED_REPORTS: Report[] = [
 
   // ══════════════════════════════════════════════════════════════════════════
+  // 2026-05-18 리포트
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-033",
+    title:         "SpaceX IPO 6월 12일 Nasdaq — BlackRock $5~10B 단독 매수 시도, $SPCE",
+    summary:       "SpaceX가 6월 12일 Nasdaq에 $SPCE 티커로 상장 예정입니다. 총 조달 규모 $15B 중 BlackRock이 12% 전체($5~10B)를 단독 매입하려 한다는 보도가 나왔습니다. 기관들이 상어처럼 달려들고 있으며, 소매 투자자에게는 IPO 물량의 30%가 배정됩니다.",
+    body:          "■ SpaceX IPO 핵심 사실\n\n• 상장일: 2026년 6월 12일 (예정)\n• 거래소: Nasdaq\n• 티커: $SPCE\n• 총 조달 규모: $15B (150억 달러)\n• 현재 기업 가치: $350B+\n\n■ BlackRock의 단독 매수 시도\n\n\"BlackRock is trying to buy 12% of the entire SpaceX IPO in one go.\"\n\"They want $5 to $10 billion out of the $15 billion raise.\"\n\n• 세계 최대 자산운용사가 IPO 물량의 12%를 단일 기관으로 매입 시도\n• 이는 역대 IPO 중 가장 공격적인 단일 기관 참여 시도 중 하나\n• BlackRock의 SpaceX 베팅 = AI·우주 인프라 장기 투자 선언\n\n■ 물량 배분 구조\n\n• 기관 투자자: IPO 물량의 70%\n• 소매 투자자: IPO 물량의 30%\n→ \"가장 기대되는 IPO에 소매 투자자도 30% 참여 가능\"\n→ 기관이 물량을 독점하지 못하는 구조 — 이례적\n\n■ 왜 SpaceX인가\n\n1) Starlink 인터넷: 전 세계 미연결 지역 커버 → GDP 대체 수준 영향\n2) 발사 서비스: 경쟁자 없음 (Falcon 9 재사용 기술 독점)\n3) Starship: 화성 식민지·달 임무 → 초장기 성장 스토리\n4) 군사·정부 계약: 미 우주군·NASA 핵심 파트너\n5) AI + 우주: Elon Musk의 xAI와 시너지\n\n■ Starlink 성장성\n\n\"Starlink Internet access enables people to learn anything and access the global market for their goods and services, improving their standard of living.\"\n\n\"The internet is the one single thing that literally lifts an entire country when they sign with Starlink gets a parallel Internet infrastructure.\"\n\n→ 단순 위성 인터넷이 아닌 국가 인프라 수준 서비스\n\n■ 투자 시사점\n\n• SpaceX IPO 당일 유동성 풀 형성 → 단기 변동성 주의\n• 장기 보유 관점: 우주·인터넷·AI 복합 플랫폼\n• 관련 수혜: TSLA(머스크 생태계), 우주 ETF(UFO), 위성 부품주\n• NASDAQ 편입 이후 수동 ETF 자금 자동 유입 예정\n\n■ 결론\n\nSpaceX IPO는 2026년 최대 이벤트입니다. BlackRock의 단독 $5~10B 매수 시도는 기관 투자자들이 이 기회를 얼마나 소중히 여기는지 보여줍니다. 6월 12일 $SPCE 상장은 투자 역사에 남을 이정표가 될 것입니다.",
+    category:      "특집",
+    categoryColor: "purple",
+    subject:       "🚀 SpaceX IPO ($SPCE·Nasdaq)",
+    date:          "2026-05-18",
+    updatedAt:     "2026.05.18 08:30",
+    isPinned:      true,
+    images:        ["/charts/spacex-ipo.svg"],
+  },
+
+  {
+    id:            "seed-034",
+    title:         "테슬라 FSD V14.3.3 출시 — 자율주행 통계 공개·스마트 서머리 대폭 개선",
+    summary:       "Tesla FSD V14.3.3이 공식 출시됐습니다. 자율주행 주행 통계(Self-Driving Stats) 공개, 스마트 서머리(Smart Summary) 속도 대폭 증가, 주행 편의성 개선이 핵심입니다. FSD V4.3.2에서 주차 공간 수동 신호·도로 표시 없이도 완벽 자동 주차를 시연한 동영상도 화제입니다.",
+    body:          "■ FSD V14.3.3 주요 업데이트\n\n\"Tesla FSD 14.3.3 is just landed, and it comes with it.\"\n\"Actually Smart Summary's speed has also been increased.\"\n\"Software version: 2026.14.6.6\"\n\n■ 핵심 변경 사항\n\n1) Self-Driving Stats (자율주행 통계) 공개\n   • 누적 자율주행 거리, 개입 빈도, 안전 이벤트 데이터\n   • 사용자가 실시간으로 자신의 FSD 성과 확인 가능\n   • 테슬라 → 투명성 강화 전략\n\n2) Smart Summary 속도 개선\n   • AI 기반 차량 요약 기능 응답 속도 대폭 향상\n   • 음성 인터랙션 더욱 자연스럽게\n\n3) 주행 편의성 개선\n   \"It's so refined. The way it slows down so slightly (1 mph) when it can't see over a hill... it's so refined. The way each build it feels more and more like a personal robotic assistant.\"\n\n4) 완벽 자동 주차 (V14.3.2 시연)\n   \"My Model 3 parked itself as FSD V4.3.2 in the latest actually Tesla FSD V14.3.3 update.\"\n   • 도로 표시 없는 주차장\n   • 수동 신호 없이 스스로 주차 완료\n   • \"FSD correctly identified the road and used hand signals to direct it to a parking spot I didn't even think of!\"\n\n■ 자율주행 정확도 수치 (V14.3.3)\n\n\"Tesla FSD 14.3.3 is the gold standard in self-driving comfort.\"\n• 98% 정확도 달성 (최신 주행 데이터 기준)\n• 가장 긴 자율주행 연속 주행 기록 경신\n• 도시 환경·복잡 교차로 처리 능력 향상\n\n■ NHTSA 규제 동향\n\n\"NHTSA closed its Smart Investigation six weeks ago after ISS first reported that Tesla's access issues have been resolved. The regulatory path is now clear to push the feature further.\"\n\n→ NHTSA의 규제 장벽 해소 → FSD 글로벌 확장 가속 예상\n\n■ 투자 시사점\n\n• FSD 구독 수익 가속: V14.3.3 업데이트로 신규 구독 전환 촉진\n• 로봇택시 상용화 타임라인 앞당김 (2026년 하반기 텍사스·CA)\n• Optimus 로봇과 동일 AI 아키텍처 — 기술 시너지\n• 완성차 경쟁사 대비 FSD 격차 3~5년 이상 유지\n\n■ 결론\n\nFSD V14.3.3은 \"자율주행이 실제로 작동한다\"는 것을 통계로 증명하는 단계로 진입했습니다. 테슬라가 자율주행 통계를 공개 제공하는 순간, 투자자들의 FSD 수익화에 대한 확신도 함께 강화됩니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "🚗 테슬라 FSD V14.3.3",
+    date:          "2026-05-18",
+    updatedAt:     "2026.05.18 08:25",
+    isPinned:      true,
+    images:        ["/charts/tesla-fsd-1433.svg"],
+  },
+
+  {
+    id:            "seed-035",
+    title:         "Bill Ackman, Microsoft $2.3B 베팅 — Google 전량 매도 후 집중 투자",
+    summary:       "Bill Ackman의 Pershing Square가 Microsoft에 MASSIVE $2.3B(약 3.1조 원)를 투자했습니다. Ackman은 $GOOGL 전량을 매도해 그 자금으로 Microsoft를 매수했다고 밝혔습니다. Microsoft의 AI·클라우드 복합 성장에 베팅한 역대급 집중 투자입니다.",
+    body:          "■ 핵심 공시\n\n\"Bill Ackman just invested a MASSIVE $2.3 BILLION in $MSFT.\"\n\"Bill Ackman sold ALL of his $GOOGL shares as a 'source of funds for $80,000 worth of Microsoft' but $GOOGL declining 7%.\"\n\n■ Ackman의 MS 투자 근거 (추정)\n\n1) Azure AI: OpenAI 파트너십 독점적 수혜 → 클라우드 점유율 확대\n2) Copilot 생태계: Office 365 → 기업용 AI 전환 가장 빠른 기업\n3) GitHub Copilot: 개발자 AI 시장 지배적 위치\n4) 밸류에이션: Google 대비 AI 전환 속도·안정성 우위\n5) 규제 리스크: Google 반독점 소송 노출 vs MS 상대적 안전\n\n■ Google 전량 매도의 의미\n\n\"Bill Ackman sold ALL of his $GOOGL shares.\"\n\n• Google 반독점 소송 (검색 시장 독점) 리스크\n• YouTube 광고 성장 둔화 우려\n• Gemini AI의 ChatGPT 대비 뒤처진 채택률\n• OpenAI 소송(개인정보 공유)에서 공동 피고 포함\n\n→ Google 매도는 단순 차익 실현이 아닌 \"AI 전쟁 1등 바꾸기\" 판단\n\n■ 거물 투자자들의 Microsoft 베팅 흐름\n\n• Bill Ackman: $2.3B 신규 매수\n• Stanley Druckenmiller: 보유 비중 유지\n• 다수 헤지펀드: Q1 13F에서 MSFT 비중 확대\n\n■ Microsoft 현황\n\n• 시총: $3.3T+ (세계 1~2위 경쟁)\n• Azure 성장률: +33% YoY (2025 Q4)\n• Copilot 기업 계정: 8,500만+ 사용자\n• FY2025 FCF: $70B+ 예상\n\n■ 결론\n\nAckman의 $2.3B Microsoft 집중 투자는 \"AI 시대의 최대 수혜자는 Microsoft\"라는 강한 확신의 표현입니다. Google 전량 매도와의 조합은 2026년 빅테크 간 AI 패권 구도의 전환을 시사합니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "💼 Ackman (MS $2.3B·구글 매도)",
+    date:          "2026-05-18",
+    updatedAt:     "2026.05.18 08:20",
+    images:        ["/charts/ackman-msft.svg"],
+  },
+
+  {
+    id:            "seed-036",
+    title:         "워런 버핏 × 애플 25년 — $10,000이 $120,000으로, 버핏의 최고 베팅",
+    summary:       "버핏이 1999년 3월 처음 AAPL을 공시 매수한 역사적 순간을 돌아봅니다. 버크셔 헤서웨이는 2016년 5월 16일 처음 Apple 매입을 공시했고, 이후 Apple 주가는 $9 → $300+로 33배 상승했습니다. 버핏이 Apple에 투자한 $10,000은 오늘 ~$120,000이 됐습니다.",
+    body:          "■ 버핏의 Apple 투자 타임라인\n\n\"WARREN BUFFETT FIRST DISCLOSED BUYING APPLE $AAPL STOCK IN MARCH 1999.\"\n\"Berkshire Hathaway first disclosed buying Apple on May 16th, 2016.\"\n\n• 1999.03: 버핏 개인 첫 AAPL 공시 매수\n• 2016.05.16: 버크셔 헤서웨이 공식 첫 Apple 매입 공시\n• 2024: Apple = 버크셔 최대 단일 포지션 (한때 포트폴리오 50%+)\n• 2025: 버핏 일부 Apple 매도 (전략적 차익 실현)\n\n■ 수익률 계산\n\n\"Every $10,000 that Warren Buffett invested into Apple stock a year ago is ~$120,000 today.\"\n\n• 버크셔의 Apple 평균 매입 단가: 약 $35~40 (분할 조정)\n• 현재 Apple 주가: $200+ (약 5~6배)\n• 버크셔 Apple 투자 원금: $36B → 평가액 $180B+ (최고점)\n• 전체 버핏 레거시 수익의 Apple 기여분: 추정 $100B+\n\n■ \"It's not worth anything under $300\"\n\n\"Here's a chart of what has happened since Warren Buffett invested into Apple stock.\"\n\"Apple is not worth anything under $300.\" — 시장 분석가 인용\n\n• 현재 주가 ~$213에서 추가 상승 여력\n• AI 기능(Apple Intelligence) 본격화 → 기기 교체 사이클 자극\n• 서비스 매출 $100B+ 달성 임박\n\n■ 버핏이 Apple을 고른 이유 (회고)\n\n1) 소비자 생태계: 아이폰 교체율 90%+ 충성도\n2) 브랜드 프리미엄: 가격 인상 능력 (버핏의 핵심 기준)\n3) 자사주 매입: FCF의 90%+ 주주환원\n4) 단순한 비즈니스 모델: 버핏이 이해할 수 있는 제품\n5) 팀 쿡의 운영 탁월성\n\n■ 현재 상황\n\n• 버핏 Apple 일부 매도 (세금 효율화 목적) — 근본적 신뢰는 유지\n• 버크셔의 Apple 비중: 여전히 1위\n• Apple Intelligence(AI) 사이클 시작 → 차기 성장 동력\n\n■ 결론\n\n버핏의 Apple 투자는 역사상 가장 위대한 단일 주식 베팅 중 하나입니다. \"위대한 기업을 적당한 가격에 사라\"는 버핏의 원칙이 Apple로 완벽하게 구현됐습니다. AI 시대에 Apple의 새로운 성장 사이클이 시작되고 있습니다.",
+    category:      "특집",
+    categoryColor: "orange",
+    subject:       "🍎 버핏 × 애플 (25년 투자 레거시)",
+    date:          "2026-05-18",
+    updatedAt:     "2026.05.18 08:15",
+    images:        ["/charts/buffett-apple.svg"],
+  },
+
+  {
+    id:            "seed-037",
+    title:         "테슬라, 한국·대만서 칩 설계 엔지니어 대규모 채용 — Cortex AI 슈퍼컴퓨터 자립화",
+    summary:       "Tesla가 한국과 대만에서 반도체 전문 Electrical Design Engineer를 대규모 채용 중입니다. GDDR, LPDDR, DRAM 메모리 설계 전문가를 찾고 있으며, 이는 Cortex AI 슈퍼컴퓨터의 칩을 Giga Texas로 출하하기 전 추가 처리하는 역할입니다. 테슬라의 반도체 내재화 전략이 구체화됩니다.",
+    body:          "■ 채용 공고 핵심 내용\n\n\"BREAKING: Tesla is hiring Software Electrical Design Engineers for teams in South Korea and Taiwan, prioritizing deep knowledge of memory types like GDDR, LPDDR, DRAM, GDDR, SDRAM.\"\n\n■ 채용 지역 및 역할\n\n• 지역: 한국(South Korea), 대만(Taiwan)\n• 직군: Electrical Design Engineer\n• 전문 분야:\n  - GDDR (그래픽 DDR 메모리)\n  - LPDDR (저전력 DDR, 모바일·차량)\n  - DRAM 설계\n  - GDDR·SDRAM 아키텍처\n\n■ Cortex AI 슈퍼컴퓨터란\n\n\"Cortex, Tesla's AI supercomputer, part of, shipping the product that is then shipped to Giga Texas for further processing at the Battery Campus.\"\n\n• Cortex = 테슬라의 자체 AI 훈련 슈퍼컴퓨터\n• FSD·Optimus 훈련에 사용되는 핵심 인프라\n• 기가텍사스 Battery Campus에서 최종 통합\n• NVIDIA GPU 의존도 축소 → 자체 칩 개발 병행\n\n■ 왜 한국·대만인가\n\n1) 한국: 삼성전자·SK하이닉스 출신 메모리 전문 인재 풀\n2) 대만: TSMC 협력 엔지니어링 생태계\n3) 아시아 현지 생산·공급망과의 직접 협업 필요\n4) 시간대: 아시아 공급망 실시간 관리\n\n■ 테슬라 반도체 내재화 전략 큰 그림\n\n\"These engineers will design the complex motherboards that are the core computing architecture of Tesla's vehicles and the future AI chip. That means level of compute efficiency is critical to scale Cortex, on top of its neural nets in Optimus and Cybercab.\"\n\n로드맵:\n1단계: NVIDIA GPU 활용 (현재)\n2단계: 자체 칩 설계 + TSMC 위탁 생산\n3단계: 아시아 엔지니어링 거점 → 칩 완전 자립\n\n■ 투자 시사점\n\n• 테슬라: 반도체 내재화 성공 시 GPU 비용 대폭 절감 → 마진 개선\n• NVIDIA: 단기적 테슬라 주문 의존도 변화 가능성 (장기 리스크)\n• 삼성전자·SK하이닉스: 테슬라 HBM/LPDDR 공급 수혜 기대\n• TSMC: 테슬라 자체 칩 위탁 생산 파트너 가능성\n\n■ 결론\n\n테슬라의 한국·대만 칩 설계 엔지니어 채용은 \"전기차 기업\"에서 \"반도체 기업\"으로의 전환을 공식화합니다. Cortex AI 슈퍼컴퓨터 자립화는 FSD·Optimus의 훈련 비용을 낮추고, 장기적으로 테슬라의 AI 경쟁력을 근본적으로 강화합니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "🔬 테슬라 (칩 내재화·아시아 채용)",
+    date:          "2026-05-18",
+    updatedAt:     "2026.05.18 08:10",
+    images:        ["/charts/tesla-chip-asia.svg"],
+  },
+
+  {
+    id:            "seed-038",
+    title:         "Jamie Dimon \"50년 커리어 중 AI 가장 낙관\" — JP모건 AI 전환 가속",
+    summary:       "JP모건 CEO Jamie Dimon이 AI에 대해 \"50년 커리어 중 들어본 것 중 가장 낙관적인 그림\"이라고 발언했습니다. Bill Ackman의 Microsoft $2.3B 투자, 다수 기관 투자자들의 AI 수혜주 포트폴리오 업데이트가 맞물리며 AI 강세론이 다시 한번 확인됩니다.",
+    body:          "■ Jamie Dimon 발언\n\n\"JAMIE DIMON: MOST OPTIMISTIC PICTURE OF AI I'VE EVER HEARD IN MY 50-YEAR CAREER. IT'S GONNA BE GREAT.\"\n\n■ Dimon이 낙관하는 이유\n\n1) 생산성 혁명: AI가 지식 노동자 생산성을 10~100배 향상\n2) 의료·법률·금융 전문직 보완 → 비용 절감\n3) JP모건 자체 AI 적용: 금융 분석·리스크 관리·고객 서비스\n4) 인터넷 혁명보다 더 큰 파급력 예상\n\n■ JP모건의 AI 전환 현황\n\n• AI 특허 출원: 업계 최다 수준\n• LOXM: 주식 거래 AI 시스템 (대형 주문 최적 실행)\n• COiN (Contract Intelligence): 법률 문서 분석 AI\n• AI 관련 인력: 1,500명+ AI 전문 직군\n• 연간 AI 투자: $15B+ (IT 전체 예산의 상당 부분)\n\n■ 월가 CEO들의 AI 낙관론 흐름\n\n\"Many famous investors, including Ron Baron, Bill Ackman, Buffett and a bunch more just updated their portfolios — here's what they're all invested in.\"\n\"Q1 2024 (A List): Bill Ackman...\"\n\"Stanley Druckenmiller\"\n\n공통 포지션:\n• Microsoft (AI 클라우드)\n• Amazon (AWS AI)\n• Google/Alphabet (검색 + Gemini)\n• NVIDIA (AI 인프라)\n→ 월가 레전드들이 일제히 AI 수혜주로 집중\n\n■ 시장 시사점\n\n• Dimon 발언 + Ackman 베팅 = AI 강세론 기관 컨센서스 형성\n• 금융 섹터의 AI 전환 투자 가속 → Salesforce·ServiceNow·Microsoft 수혜\n• 소매 투자자들에게 \"AI는 테마가 아닌 현실\"이라는 신호\n\n■ S&P 500 계절성 참고\n\n\"S&P 500 has struggled from May to October during midterm election years (1962-2022).\"\n\n• 역사적으로 5~10월은 계절적 약세 구간\n• AI 모멘텀이 계절 패턴을 극복할 수 있는지 주목\n• CPI·Fed 통화정책이 변수\n\n■ 결론\n\nJamie Dimon의 \"50년 중 가장 낙관적\" 발언은 단순 립서비스가 아닙니다. JP모건이 AI에 수십억 달러를 투자하고 있다는 사실이 뒷받침합니다. 월가 최고 CEO들이 AI 수혜주로 포트폴리오를 재편하는 지금, 방향성은 명확합니다.",
+    category:      "매크로",
+    categoryColor: "mint",
+    subject:       "🏦 Dimon (AI 낙관론·월가 포트폴리오)",
+    date:          "2026-05-18",
+    updatedAt:     "2026.05.18 08:05",
+    images:        ["/charts/dimon-ai.svg"],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
   // 2026-05-15 리포트
   // ══════════════════════════════════════════════════════════════════════════
 
