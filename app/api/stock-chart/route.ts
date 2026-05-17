@@ -6,9 +6,7 @@ import { isMarketOpen } from "@/lib/marketHours";
 // Index cards (SPX/COMP/DJI) intentionally NOT mapped here — TwelveData supports
 // them directly under their own symbol and returns the correct price level.
 const TWELVE_FUTURES: Record<string, string> = {
-  // Index futures (ETF proxy — price scale similar enough for trend charts)
-  ES: "SPY",  NQ: "QQQ",  YM: "DIA",  RTY: "IWM",
-  // Commodities
+  // Commodities (TwelveData free supports these ETF proxies for trend charts)
   CL: "USO",  NG: "UNG",  GC: "GLD",  SI: "SLV",  HG: "COPX",
   ZN: "IEF",  ZB: "TLT",  "6E": "FXE", "6J": "FXY",
   ZC: "CORN", ZW: "WEAT", ZS: "SOYB",
@@ -20,8 +18,8 @@ const TWELVE_CRYPTO: Record<string, string> = { BTC: "BTC/USD", ETH: "ETH/USD" }
 const YF_SYM: Record<string, string> = {
   // Index cards (direct index tickers)
   SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI", USDKRW: "USDKRW=X",
-  // Index futures (underlying index — better history than ES=F)
-  ES: "^GSPC", NQ: "^IXIC", YM: "^DJI", RTY: "^RUT",
+  // Index futures (actual futures contracts — not spot indices)
+  ES: "ES=F", NQ: "NQ=F", YM: "YM=F", RTY: "RTY=F",
   // Commodities
   CL: "CL=F",  NG: "NG=F",  GC: "GC=F", SI: "SI=F", HG: "HG=F",
   ZN: "ZN=F",  ZB: "ZB=F",  "6E": "EURUSD=X", "6J": "JPY=X",

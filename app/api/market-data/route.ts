@@ -140,18 +140,15 @@ const ETF_FUTURE_CHG: Record<string, string> = {
   TLT:  "ZB",  IEF:  "ZN",
 };
 
-// Index futures → reuse derived index data
-const FUTURES_FROM_INDEX: Record<string, string> = {
-  ES: "SPX", NQ: "COMP", YM: "DJI",
-};
-
-// ── Commodity futures — Stooq primary, Yahoo Finance v8 fallback ─────────
-// Yahoo Finance is rate-limited from Vercel servers → Stooq CSV is reliable
+// ── Futures — Stooq primary (index + commodity), Yahoo Finance v8 fallback ──
+// Index futures use actual ES=F/NQ=F/YM=F — NOT spot index data
 const COMMODITY_STOOQ: Record<string, string> = {
+  ES: "ES.F",  NQ: "NQ.F",  YM: "YM.F",
   CL: "CL.F",  NG: "NG.F",  GC: "GC.F",  SI: "SI.F",  HG: "HG.F",
   ZN: "ZN.F",  ZB: "ZB.F",  ZC: "ZC.F",  ZW: "ZW.F",  ZS: "ZS.F",
 };
 const COMMODITY_FUTURES_YF: Record<string, string> = {
+  ES: "ES=F",  NQ: "NQ=F",  YM: "YM=F",  RTY: "RTY=F",
   CL: "CL=F",   NG: "NG=F",   GC: "GC=F",   SI: "SI=F",   HG: "HG=F",
   ZN: "ZN=F",   ZB: "ZB=F",   ZC: "ZC=F",   ZW: "ZW=F",   ZS: "ZS=F",
 };
@@ -237,8 +234,8 @@ export async function GET(req: Request) {
       const fetchWithTimeout = async (key: string, stooqSym: string): Promise<CommodityEntry | null> => {
         const yfSym = COMMODITY_FUTURES_YF[key];
         const [stooqR, yfR] = await Promise.allSettled([
-          fetchStooqFuture(stooqSym),
-          yfSym ? fetchFutureV8(yfSym) : Promise.resolve(null),
+          stooqSym ? fetchStooqFuture(stooqSym) : Promise.resolve(null),
+          yfSym    ? fetchFutureV8(yfSym)        : Promise.resolve(null),
         ]);
         const r =
           (stooqR.status === "fulfilled" && stooqR.value) ? stooqR.value :
@@ -246,10 +243,13 @@ export async function GET(req: Request) {
         return r ? { key, ...r } : null;
       };
 
+      // Iterate over union of Stooq + YF keys (RTY is YF-only)
+      const allFutureKeys = [...new Set([...Object.keys(COMMODITY_STOOQ), ...Object.keys(COMMODITY_FUTURES_YF)])];
+
       // Master 5s timeout — whatever resolves by then is used; rest falls back to ETF change%
       const masterTimeout = new Promise<CommodityEntry[]>((res) => setTimeout(() => res([]), 5_000));
       const allFetches    = Promise.allSettled(
-        Object.entries(COMMODITY_STOOQ).map(([key, stooqSym]) => fetchWithTimeout(key, stooqSym))
+        allFutureKeys.map((key) => fetchWithTimeout(key, COMMODITY_STOOQ[key] ?? ""))
       ).then((results) => {
         const out: CommodityEntry[] = [];
         for (const r of results) if (r.status === "fulfilled" && r.value) out.push(r.value);
@@ -394,31 +394,21 @@ export async function GET(req: Request) {
   }
 
   const futures: FutureItem[] = mockFutures.map((f): FutureItem | null => {
-    // 1) ES/NQ/YM → ETF-derived index level (accurate price + change%)
-    const idxKey = FUTURES_FROM_INDEX[f.symbol];
-    if (idxKey) {
-      const live = indexLive.get(idxKey);
-      if (live) return { ...f, price: live.price, change: live.change, changePercent: live.changePercent, isMock: false };
-    }
-
-    // 2) RTY → IWM × 10.05 (Finnhub)
-    if (f.symbol === "RTY") {
-      const iwm = fhMap.get("IWM");
-      if (iwm) return { ...f, price: iwm.price * 10.05, change: iwm.change * 10.05, changePercent: iwm.changePercent, isMock: false };
-    }
-
-    // 3) Commodity & bond futures — Yahoo Finance v8 실선물가격 (v7 Unauthorized 우회)
+    // 1) All real futures (index + commodity + bond) — YF v8 via CF proxy (Stooq primary when available)
     if (COMMODITY_FUTURES_YF[f.symbol]) {
-      const yf = yfComMap.get(f.symbol); // keyed by internal sym (CL, NG, …)
+      const yf = yfComMap.get(f.symbol);
       if (yf && yf.price > 0) {
         return { ...f, price: yf.price, change: yf.change, changePercent: yf.changePercent, isMock: false };
       }
-      // Yahoo 실패 시 GC는 GLD×10 폴백
+      // Fallbacks: GC → GLD×10, RTY → IWM×10.05, others → ETF change%
       if (f.symbol === "GC") {
         const gld = fhMap.get("GLD");
         if (gld) return { ...f, price: gld.price * 10, change: gld.change * 10, changePercent: gld.changePercent, isMock: false };
       }
-      // 나머지는 ETF change%만이라도 반영
+      if (f.symbol === "RTY") {
+        const iwm = fhMap.get("IWM");
+        if (iwm) return { ...f, price: iwm.price * 10.05, change: iwm.change * 10.05, changePercent: iwm.changePercent, isMock: false };
+      }
       const liveChg = futureChgMap.get(f.symbol);
       if (liveChg !== undefined) {
         return { ...f, changePercent: liveChg, change: f.price * liveChg / 100, isMock: false };
