@@ -86,27 +86,27 @@ export function WatchlistSection() {
 
           if (!priceData) {
             return (
-              <Link key={sym} href={`/stock/${sym}`} style={{ textDecoration: "none" }}>
-                <div
-                  className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border relative active:opacity-70 transition-opacity"
-                  style={{ background: "var(--card)", borderColor: "var(--border)" }}
+              <Link
+                key={sym}
+                href={`/stock/${sym}`}
+                className="w-[155px] flex-shrink-0 rounded-2xl p-4 border block relative active:opacity-70 transition-opacity"
+                style={{ background: "var(--card)", borderColor: "var(--border)", textDecoration: "none" }}
+              >
+                <button
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); remove(sym); }}
+                  className="absolute top-2 right-2 p-0.5"
+                  aria-label={t.watchlist.removeLabel}
                 >
-                  <button
-                    onClick={(e) => { e.preventDefault(); e.stopPropagation(); remove(sym); }}
-                    className="absolute top-2 right-2 p-0.5"
-                    aria-label={t.watchlist.removeLabel}
-                  >
-                    <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
-                  </button>
-                  <div className="mb-2 pr-5">
-                    <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{sym}</p>
-                    <p className="text-[10px]" style={{ color: "var(--muted)" }}>{t.watchlist.loading}</p>
-                  </div>
-                  <div className="h-[28px]" />
-                  <div className="mt-1.5 flex items-end justify-between">
-                    <p className="text-sm font-bold font-mono-num" style={{ color: "var(--muted)" }}>—</p>
-                    <p className="text-xs" style={{ color: "var(--muted)" }}>—</p>
-                  </div>
+                  <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
+                </button>
+                <div className="mb-2 pr-5">
+                  <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{sym}</p>
+                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>{t.watchlist.loading}</p>
+                </div>
+                <div className="h-[28px]" />
+                <div className="mt-1.5 flex items-end justify-between">
+                  <p className="text-sm font-bold font-mono-num" style={{ color: "var(--muted)" }}>—</p>
+                  <p className="text-xs" style={{ color: "var(--muted)" }}>—</p>
                 </div>
               </Link>
             );
@@ -117,38 +117,38 @@ export function WatchlistSection() {
           const sparkline = stock?.sparkline ?? [];
 
           return (
-            <Link key={sym} href={`/stock/${sym}`} style={{ textDecoration: "none" }}>
-              <div
-                className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border relative active:opacity-70 transition-opacity"
-                style={{ background: "var(--card)", borderColor: "var(--border)" }}
+            <Link
+              key={sym}
+              href={`/stock/${sym}`}
+              className="w-[155px] flex-shrink-0 rounded-2xl p-4 border block relative active:opacity-70 transition-opacity"
+              style={{ background: "var(--card)", borderColor: "var(--border)", textDecoration: "none" }}
+            >
+              <button
+                onClick={(e) => { e.preventDefault(); e.stopPropagation(); remove(sym); }}
+                className="absolute top-2 right-2 p-0.5"
+                aria-label={t.watchlist.removeLabel}
               >
-                <button
-                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); remove(sym); }}
-                  className="absolute top-2 right-2 p-0.5"
-                  aria-label={t.watchlist.removeLabel}
-                >
-                  <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
-                </button>
+                <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
+              </button>
 
-                <div className="mb-2 pr-5">
-                  <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>
-                    {sym}
-                  </p>
-                  <p className="text-[10px] truncate" style={{ color: "var(--muted)" }}>
-                    {stock?.name ?? sym}
-                  </p>
-                </div>
+              <div className="mb-2 pr-5">
+                <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>
+                  {sym}
+                </p>
+                <p className="text-[10px] truncate max-w-[100px]" style={{ color: "var(--muted)" }}>
+                  {stock?.name ?? sym}
+                </p>
+              </div>
 
-                <Sparkline data={sparkline} positive={pos} width={100} height={28} />
+              <Sparkline data={sparkline} positive={pos} width={100} height={28} />
 
-                <div className="mt-1.5 flex items-end justify-between">
-                  <p className="text-sm font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
-                    ${priceData.price.toFixed(2)}
-                  </p>
-                  <p className="text-xs font-mono-num" style={{ color }}>
-                    {pos ? "+" : ""}{priceData.changePercent.toFixed(2)}%
-                  </p>
-                </div>
+              <div className="mt-1.5 flex items-end justify-between">
+                <p className="text-sm font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
+                  ${priceData.price.toFixed(2)}
+                </p>
+                <p className="text-xs font-mono-num" style={{ color }}>
+                  {pos ? "+" : ""}{priceData.changePercent.toFixed(2)}%
+                </p>
               </div>
             </Link>
           );

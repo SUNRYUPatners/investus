@@ -16,7 +16,7 @@ export function IndexCard({ index }: { index: IndexQuote }) {
   return (
     <Link
       href={`/stock/${index.symbol}`}
-      className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border block"
+      className="w-[155px] flex-shrink-0 rounded-2xl p-4 border block"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
       <div className="mb-2">

@@ -12,7 +12,7 @@ export function StockCard({ stock }: { stock: Quote }) {
   return (
     <Link
       href={`/stock/${stock.symbol}`}
-      className="min-w-[155px] flex-shrink-0 rounded-2xl p-4 border block"
+      className="w-[155px] flex-shrink-0 rounded-2xl p-4 border block"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
       <div className="mb-2">
