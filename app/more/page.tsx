@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { ChevronRight, LogOut, User, Phone, Lock, Eye, EyeOff, Pencil, X, Send, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
+import { ChevronRight, LogOut, User, Mail, Lock, Eye, EyeOff, Pencil, X, Send, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
 import { AdBanner } from "@/components/AdBanner";
@@ -40,7 +40,7 @@ function MenuItem({ label, sub, emoji, href, onClick }: MenuItem_t) {
 // ── Feedback Modal ──────────────────────────────────────────────────────────
 const CATEGORY_EMOJIS = ["🐛", "💡", "🌟", "💬"];
 
-function FeedbackModal({ onClose, user }: { onClose: () => void; user: { phone: string; nickname: string } | null }) {
+function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: string; nickname: string } | null }) {
   const t = useLocale();
   const fb = t.more.feedback;
   const [state, handleSubmit] = useForm("xgodqoey");
@@ -58,18 +58,15 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { phone: 
   const canSend = message.trim().length >= 5 && !state.submitting;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.6)" }}
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.6)" }}
       onClick={() => !state.submitting && onClose()}>
       <div
-        className="w-full max-w-[480px] mx-auto rounded-t-3xl pb-10"
+        className="w-full max-w-[480px] rounded-3xl max-h-[90vh] overflow-y-auto"
         style={{ background: "var(--card)" }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Handle bar */}
-        <div className="w-10 h-1 rounded-full mx-auto mt-3 mb-5" style={{ background: "var(--border)" }} />
-
         {/* Header */}
-        <div className="flex items-center justify-between px-5 mb-5">
+        <div className="flex items-center justify-between px-5 pt-5 mb-5">
           <div className="flex items-center gap-2">
             <span className="text-xl">💌</span>
             <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{fb.title}</h2>
@@ -79,20 +76,8 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { phone: 
           </button>
         </div>
 
-        <div className="px-5">
-          {/* Login guard */}
-          {!user ? (
-            <div className="flex flex-col items-center gap-4 py-8">
-              <span className="text-3xl">🔒</span>
-              <p className="text-sm font-semibold text-center" style={{ color: "var(--text)" }}>{fb.loginReq}</p>
-              <p className="text-xs text-center" style={{ color: "var(--muted)" }}>{fb.loginReqDesc}</p>
-              <button onClick={onClose}
-                className="px-6 py-2.5 rounded-xl text-sm font-bold text-black"
-                style={{ background: "var(--mint)" }}>
-                {fb.confirm}
-              </button>
-            </div>
-          ) : state.succeeded ? (
+        <div className="px-5 pb-6">
+          {state.succeeded ? (
             /* Success */
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="w-14 h-14 rounded-full flex items-center justify-center"
@@ -117,7 +102,9 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { phone: 
                 handleSubmit({
                   category: categoryLabel,
                   message: message.trim(),
-                  user: `${user.nickname} (${user.phone.replace(/(\d{3})\d{4}(\d{4})/, "$1-****-$2")})`,
+                  sender: user
+                    ? `${user.nickname} (${user.email})`
+                    : "익명",
                   _subject: `[Investus 피드백] ${categoryLabel}`,
                 });
               }}
@@ -338,12 +325,11 @@ function InstallSection() {
         </button>
 
         {showConfirm && (
-          <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.65)" }}
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.65)" }}
             onClick={() => setShowConfirm(false)}>
-            <div className="w-full max-w-[480px] mx-auto rounded-t-3xl pb-10 px-5 pt-1"
+            <div className="w-full max-w-[380px] rounded-3xl px-5 py-7"
               style={{ background: "var(--card)" }}
               onClick={(e) => e.stopPropagation()}>
-              <div className="w-10 h-1 rounded-full mx-auto mt-3 mb-6" style={{ background: "var(--border)" }} />
               <div className="flex flex-col items-center gap-3 mb-7">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center"
                   style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}>
@@ -399,41 +385,68 @@ function InstallSection() {
         </button>
 
         {showConfirm && (
-          <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.65)" }}
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.65)" }}
             onClick={() => setShowConfirm(false)}>
-            <div className="w-full max-w-[480px] mx-auto rounded-t-3xl pb-10 px-5 pt-1"
+            <div className="w-full max-w-[360px] rounded-3xl px-5 py-6"
               style={{ background: "var(--card)" }}
               onClick={(e) => e.stopPropagation()}>
-              <div className="w-10 h-1 rounded-full mx-auto mt-3 mb-5" style={{ background: "var(--border)" }} />
-              <h2 className="text-base font-bold font-syne mb-1 text-center" style={{ color: "var(--text)" }}>
-                홈 화면에 추가
-              </h2>
-              <p className="text-[11px] text-center mb-5" style={{ color: "var(--muted)" }}>
-                Safari에서 아래 순서로 추가해 주세요
-              </p>
-              <div className="flex flex-col gap-3.5 mb-6">
+              {/* Header */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 rounded-2xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}>
+                  <span className="text-2xl">📲</span>
+                </div>
+                <div>
+                  <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>홈 화면에 추가</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>앱처럼 전체화면 · 광고 없음</p>
+                </div>
+              </div>
+
+              {/* Address bar visual */}
+              <div className="rounded-2xl p-3 mb-4" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}>
+                <p className="text-[10px] text-center mb-2 font-semibold" style={{ color: "var(--muted)" }}>
+                  Safari 주소창 옆 ··· 버튼을 탭하세요
+                </p>
+                <div className="flex items-center gap-2 px-2 py-1.5 rounded-xl" style={{ background: "#1c1c1e" }}>
+                  <div className="flex-1 flex items-center gap-1.5 px-2.5 py-1 rounded-lg" style={{ background: "#2c2c2e" }}>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#636366" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span className="text-[10px] flex-1" style={{ color: "#8e8e93" }}>investus.kr</span>
+                  </div>
+                  <div className="relative flex-shrink-0">
+                    <div className="absolute -inset-1.5 rounded-lg animate-pulse" style={{ background: "rgba(0,229,160,0.3)" }} />
+                    <div className="relative w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "#2c2c2e" }}>
+                      <span className="text-[13px] font-bold tracking-tight" style={{ color: "#00e5a0" }}>···</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-1.5 mt-2">
+                  <div className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--mint)" }} />
+                  <span className="text-[10px] font-semibold" style={{ color: "var(--mint)" }}>초록 표시 ··· 버튼 탭!</span>
+                </div>
+              </div>
+
+              {/* 4 Steps */}
+              <div className="flex flex-col gap-2.5 mb-4">
                 {([
-                  ["⬆️", "Safari 하단 공유 버튼 탭", "네모 + 화살표 아이콘"],
-                  ["➕", '"홈 화면에 추가" 선택", "목록을 스크롤해서 찾으세요'],
-                  ["✅", '"추가" 탭 → 완료', "홈 화면에 Investus 아이콘 생성"],
-                ] as [string, string, string][]).map(([icon, text, hint], i) => (
-                  <div key={i} className="flex items-center gap-3.5">
-                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-base"
-                      style={{ background: "rgba(0,229,160,0.10)", border: "1px solid rgba(0,229,160,0.2)" }}>
+                  ["1", "···", "주소창 옆 ··· 탭"],
+                  ["2", "⬆️", "공유 탭"],
+                  ["3", "⋯",  "더보기(···) 탭"],
+                  ["4", "➕", "홈 화면에 추가 탭 → 완료!"],
+                ] as [string, string, string][]).map(([step, icon, text]) => (
+                  <div key={step} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold"
+                      style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+                      {step}
+                    </div>
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-base"
+                      style={{ background: "rgba(255,255,255,0.06)" }}>
                       {icon}
                     </div>
-                    <div>
-                      <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{text}</p>
-                      <p className="text-[10px]" style={{ color: "var(--muted)" }}>{hint}</p>
-                    </div>
+                    <p className="text-[13px]" style={{ color: "var(--text)" }}>{text}</p>
                   </div>
                 ))}
               </div>
-              <div className="rounded-xl p-3 mb-5" style={{ background: "rgba(0,229,160,0.07)", border: "1px solid rgba(0,229,160,0.15)" }}>
-                <p className="text-[11px] text-center" style={{ color: "var(--mint)" }}>
-                  ✦ 아이콘 탭 시 광고 없는 전체화면 앱으로 실행됩니다
-                </p>
-              </div>
+
               <button
                 onClick={() => setShowConfirm(false)}
                 className="w-full py-3 rounded-xl text-sm font-bold text-black"
@@ -478,19 +491,21 @@ function AuthSection() {
   const au = t.more.auth;
   const { user, login, signup, logout } = useAuth();
   const [mode,       setMode]       = useState<AuthMode>("idle");
-  const [phone,      setPhone]      = useState("");
+  const [email,      setEmail]      = useState("");
   const [pw,         setPw]         = useState("");
   const [pwVisible,  setPwVisible]  = useState(false);
   const [error,      setError]      = useState("");
   const [loading,    setLoading]    = useState(false);
   const [editOpen,   setEditOpen]   = useState(false);
+  const [confirmEmail, setConfirmEmail] = useState(false);
 
-  const reset = () => { setPhone(""); setPw(""); setError(""); setLoading(false); };
+  const reset = () => { setEmail(""); setPw(""); setError(""); setLoading(false); setConfirmEmail(false); };
 
   const handleLogin = async () => {
+    if (!email.includes("@")) { setError(au.errEmail); return; }
     setLoading(true);
     setError("");
-    const ok = await login(phone, pw);
+    const ok = await login(email, pw);
     setLoading(false);
     if (!ok) { setError(au.errLogin); return; }
     setMode("idle");
@@ -498,13 +513,14 @@ function AuthSection() {
   };
 
   const handleSignup = async () => {
-    if (phone.replace(/\D/g, "").length < 10) { setError(au.errPhone); return; }
-    if (pw.length < 4) { setError(au.errPw); return; }
+    if (!email.includes("@")) { setError(au.errEmail); return; }
+    if (pw.length < 6) { setError(au.errPw); return; }
     setLoading(true);
     setError("");
-    const result = await signup(phone, pw);
+    const result = await signup(email, pw);
     setLoading(false);
     if (!result.ok) { setError(result.msg); return; }
+    if (result.msg === "confirm_email") { setConfirmEmail(true); return; }
     setMode("idle");
     reset();
   };
@@ -549,9 +565,9 @@ function AuthSection() {
               <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
                 {user.nickname}
               </p>
-              {/* Phone masked — only visible to logged-in user */}
-              <p className="text-xs font-mono-num mt-0.5 flex items-center gap-1" style={{ color: "var(--muted)" }}>
-                🔒 {user.phone.replace(/(\d{3})\d{4}(\d{4})/, "$1-****-$2")}
+              {/* Email — only visible to logged-in user */}
+              <p className="text-xs mt-0.5 flex items-center gap-1 truncate" style={{ color: "var(--muted)" }}>
+                ✉️ {user.email}
               </p>
             </div>
 
@@ -580,38 +596,61 @@ function AuthSection() {
     );
   }
 
-  /* ── Auth form ── */
-  if (mode !== "idle") {
-    return (
-      <div
-        className="rounded-2xl p-5 mb-6 border"
-        style={{ background: "var(--card)", borderColor: "var(--border)" }}
-      >
-        <h2 className="text-sm font-bold font-syne mb-4" style={{ color: "var(--text)" }}>
-          {mode === "login" ? au.formLogin : au.formSignup}
-        </h2>
+  const closeForm = () => { setMode("idle"); reset(); };
 
-        {/* Phone */}
-        <div
-          className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-3"
-          style={{ background: "var(--bg)", borderColor: "var(--border)" }}
-        >
-          <Phone className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
+  /* ── Auth bottom sheet ── */
+  const authSheet = mode !== "idle" && (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ background: "rgba(0,0,0,0.6)" }}
+      onClick={closeForm}
+    >
+      <div
+        className="w-full max-w-[380px] rounded-3xl px-5 py-6"
+        style={{ background: "var(--card)" }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between mb-5">
+          <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
+            {mode === "login" ? au.formLogin : au.formSignup}
+          </h2>
+          <button onClick={closeForm}>
+            <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
+          </button>
+        </div>
+
+        {/* Email confirm state */}
+        {confirmEmail ? (
+          <div className="flex flex-col items-center gap-4 py-4 mb-3">
+            <span className="text-3xl">📬</span>
+            <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>이메일을 확인해주세요</p>
+            <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
+              {email}로 인증 링크를 보냈습니다.<br />링크 클릭 후 로그인해주세요.
+            </p>
+            <button onClick={() => { setConfirmEmail(false); setMode("login"); }}
+              className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
+              로그인으로 이동
+            </button>
+          </div>
+        ) : (
+          <>
+        {/* Email */}
+        <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-3"
+          style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
+          <Mail className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
           <input
-            type="tel"
-            placeholder={au.phonePH}
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            type="email"
+            placeholder={au.emailPH}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="flex-1 bg-transparent text-sm outline-none"
             style={{ color: "var(--text)" }}
           />
         </div>
 
         {/* Password */}
-        <div
-          className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-4"
-          style={{ background: "var(--bg)", borderColor: "var(--border)" }}
-        >
+        <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-4"
+          style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
           <Lock className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
           <input
             type={pwVisible ? "text" : "password"}
@@ -629,9 +668,7 @@ function AuthSection() {
           </button>
         </div>
 
-        {error && (
-          <p className="text-xs mb-3" style={{ color: "#ff4d6d" }}>{error}</p>
-        )}
+        {error && <p className="text-xs mb-3" style={{ color: "#ff4d6d" }}>{error}</p>}
 
         <button
           onClick={mode === "login" ? handleLogin : handleSignup}
@@ -642,52 +679,50 @@ function AuthSection() {
           {mode === "login" ? au.formLogin : au.formSignup}
         </button>
 
-        <button
-          onClick={() => { setMode("idle"); reset(); }}
-          className="w-full py-2 text-xs"
-          style={{ color: "var(--muted)" }}
-        >
+        <button onClick={closeForm} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
           {au.cancel}
         </button>
+          </>
+        )}
       </div>
-    );
-  }
+    </div>
+  );
 
   /* ── Default: show login/signup buttons ── */
   return (
-    <div
-      className="rounded-2xl p-5 mb-6 border"
-      style={{ background: "var(--card)", borderColor: "var(--border)" }}
-    >
-      <div className="flex items-center gap-3 mb-4">
-        <div
-          className="w-12 h-12 rounded-full flex items-center justify-center"
-          style={{ background: "var(--border)" }}
-        >
-          <User className="w-6 h-6" style={{ color: "var(--muted)" }} />
+    <>
+      {authSheet}
+      <div
+        className="rounded-2xl p-5 mb-6 border"
+        style={{ background: "var(--card)", borderColor: "var(--border)" }}
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "var(--border)" }}>
+            <User className="w-6 h-6" style={{ color: "var(--muted)" }} />
+          </div>
+          <div>
+            <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{au.loginTitle}</p>
+            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{au.loginDesc}</p>
+          </div>
         </div>
-        <div>
-          <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{au.loginTitle}</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{au.loginDesc}</p>
+        <div className="flex gap-2">
+          <button
+            onClick={() => setMode("login")}
+            className="flex-1 py-2.5 rounded-xl text-sm font-semibold border active:opacity-70 transition-opacity"
+            style={{ borderColor: "var(--mint)", color: "var(--mint)" }}
+          >
+            {au.login}
+          </button>
+          <button
+            onClick={() => setMode("signup")}
+            className="flex-1 py-2.5 rounded-xl text-sm font-bold text-black active:opacity-70 transition-opacity"
+            style={{ background: "var(--mint)" }}
+          >
+            {au.signup}
+          </button>
         </div>
       </div>
-      <div className="flex gap-2">
-        <button
-          onClick={() => setMode("login")}
-          className="flex-1 py-2.5 rounded-xl text-sm font-semibold border active:opacity-70 transition-opacity"
-          style={{ borderColor: "var(--mint)", color: "var(--mint)" }}
-        >
-          {au.login}
-        </button>
-        <button
-          onClick={() => setMode("signup")}
-          className="flex-1 py-2.5 rounded-xl text-sm font-bold text-black active:opacity-70 transition-opacity"
-          style={{ background: "var(--mint)" }}
-        >
-          {au.signup}
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
 
@@ -699,12 +734,12 @@ export default function MorePage() {
 
   const MENU_EMOJIS = [
     ["📊", "🔖"],
-    ["📢", "💌", "❓"],
+    ["📢", "🔔", "💌", "❓"],
     ["📄", "🔒", "⚠️"],
   ];
   const MENU_HREFS = [
-    ["/more/about", undefined],
-    ["/more/notices", undefined, "/more/faq"],
+    ["/more/about", "/more/version"],
+    ["/more/notices", "/more/notifications", undefined, "/more/faq"],
     ["/more/terms", "/more/privacy", "/more/disclaimer"],
   ];
 
@@ -715,7 +750,7 @@ export default function MorePage() {
       sub:     item.sub,
       emoji:   MENU_EMOJIS[si][ii],
       href:    MENU_HREFS[si][ii],
-      onClick: si === 1 && ii === 1 ? () => setShowFeedback(true) : undefined,
+      onClick: si === 1 && ii === 2 ? () => setShowFeedback(true) : undefined,
     })),
   }));
 
@@ -729,16 +764,10 @@ export default function MorePage() {
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{mo.title}</h1>
         </div>
 
-        {/* Auth section */}
         <AuthSection />
-
-        {/* Creator channel */}
         <CreatorSection />
-
-        {/* 광고 */}
         <AdBanner format="auto" />
 
-        {/* App identity card */}
         <div className="rounded-2xl p-5 mb-6 border text-center"
           style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.15)" }}>
           <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3"
@@ -750,8 +779,7 @@ export default function MorePage() {
           <p className="text-[10px] mt-1 font-mono-num" style={{ color: "var(--muted)" }}>investus.kr</p>
         </div>
 
-        {/* Menu sections */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 mb-6">
           {sections.map((section) => (
             <div key={section.title}>
               <p className="text-xs font-semibold tracking-widest uppercase mb-2 font-syne"
@@ -772,10 +800,8 @@ export default function MorePage() {
           ))}
         </div>
 
-        {/* Install / Add to Home Screen */}
         <InstallSection />
 
-        {/* Footer note */}
         <p className="text-center text-[10px] mt-8" style={{ color: "var(--muted)" }}>
           {mo.footer.split("\n").map((line, i) => (
             <span key={i}>{line}{i === 0 && <br />}</span>

@@ -22,6 +22,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "필수 항목 누락" }, { status: 400 });
   }
 
+  if (name.trim().length > 50 || phone.trim().length > 20 || level.trim().length > 100) {
+    return NextResponse.json({ error: "입력값이 너무 깁니다" }, { status: 400 });
+  }
+  if ((amount?.trim().length ?? 0) > 100 || (message?.trim().length ?? 0) > 500) {
+    return NextResponse.json({ error: "입력값이 너무 깁니다" }, { status: 400 });
+  }
+
   const supabase = createClient(url, key);
 
   const { error } = await supabase.from("edu_applications").insert([{
@@ -33,8 +40,8 @@ export async function POST(req: NextRequest) {
   }]);
 
   if (error) {
-    console.error("edu_apply insert error:", error);
-    return NextResponse.json({ error: "저장 실패: " + error.message }, { status: 500 });
+    console.error("edu_apply insert error:", error.message);
+    return NextResponse.json({ error: "저장 실패. 잠시 후 다시 시도해주세요." }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true });

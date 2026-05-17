@@ -32,6 +32,12 @@ body {
   color: var(--text);
   font-family: var(--font-kr), 'Noto Sans KR', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove 300ms tap delay on all interactive elements */
+a, button, [role="button"] {
+  touch-action: manipulation;
 }
 
 /* ── Ticker tape animation ── */
@@ -62,5 +68,12 @@ body {
 
 /* ── Bottom nav safe area ── */
 .pb-safe {
-  padding-bottom: calc(env(safe-area-inset-bottom) + 4rem);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 6.5rem);
+}
+
+/* PWA standalone: extra breathing room */
+@media (display-mode: standalone) {
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 7.5rem);
+  }
 }

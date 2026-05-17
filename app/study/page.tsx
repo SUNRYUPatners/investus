@@ -1,7 +1,6 @@
 "use client";
 
 import { Header } from "@/components/Header";
-import { ExternalLink } from "lucide-react";
 
 // ── Books ────────────────────────────────────────────────────────────────────
 type Book = { title: string; desc: string; kyobo: string };
@@ -31,39 +30,6 @@ const BOOKS: Record<string, { color: string; books: Book[] }> = {
     ],
   },
 };
-
-// ── XTimeline ────────────────────────────────────────────────────────────────
-function XProfileCard() {
-  return (
-    <div className="rounded-2xl border overflow-hidden"
-      style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-      {/* Profile header */}
-      <div className="p-4 border-b" style={{ borderColor: "var(--border)" }}>
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0"
-            style={{ background: "linear-gradient(135deg,#1d9bf0,#0d6efd)" }}>
-            𝕏
-          </div>
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>@hnryu_cio</p>
-            <p className="text-xs" style={{ color: "var(--muted)" }}>미국주식 · 투자 인사이트</p>
-          </div>
-          <a href="https://x.com/hnryu_cio" target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full"
-            style={{ background: "#1d9bf0", color: "#fff" }}>
-            팔로우
-          </a>
-        </div>
-      </div>
-      {/* CTA */}
-      <a href="https://x.com/hnryu_cio" target="_blank" rel="noopener noreferrer"
-        className="flex items-center justify-between px-4 py-3 active:opacity-70 transition-opacity">
-        <p className="text-sm" style={{ color: "var(--muted)" }}>최신 게시물 보기</p>
-        <ExternalLink className="w-4 h-4" style={{ color: "var(--muted)" }} />
-      </a>
-    </div>
-  );
-}
 
 // ── YouTube placeholder ───────────────────────────────────────────────────────
 function YoutubeSection() {
@@ -134,15 +100,6 @@ export default function StudyPage() {
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>공부방 📚</h1>
           <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>투자 인사이트 · 추천 도서</p>
         </div>
-
-        {/* X 프로필 */}
-        <section className="mb-6">
-          <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
-            style={{ color: "var(--muted)" }}>
-            X 프로필
-          </h2>
-          <XProfileCard />
-        </section>
 
         {/* YouTube */}
         <section className="mb-6">

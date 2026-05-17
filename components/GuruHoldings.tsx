@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { GURUS, type Guru } from "@/lib/holdings13f";
@@ -11,8 +11,8 @@ const BADGE: Record<string, { label: string; color: string }> = {
   "STOCK_ACT": { label: "STOCK Act", color: "#f472b6" },
 };
 
-const UP   = "#ff4d6d";
-const DOWN = "#00e5a0";
+const UP   = "#00e5a0";
+const DOWN = "#ff4d6d";
 
 type PriceMap = Record<string, { price: number; change: number; changePercent: number }>;
 
@@ -20,28 +20,64 @@ function fmt(n: number) {
   return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
-function GuruCard({ guru }: { guru: Guru }) {
+function readLocalCache(symbols: string[]): PriceMap {
+  const result: PriceMap = {};
+  try {
+    // 1. market-data-cache (LiveMarket이 쓰는 공유 캐시)
+    const mdRaw = localStorage.getItem("market-data-cache");
+    if (mdRaw) {
+      const md = JSON.parse(mdRaw) as {
+        quotes?: { symbol: string; price: number; change: number; changePercent: number }[];
+      };
+      (md?.quotes ?? []).forEach((q) => {
+        if (symbols.includes(q.symbol) && q.price > 0)
+          result[q.symbol] = { price: q.price, change: q.change, changePercent: q.changePercent };
+      });
+    }
+    // 2. 개별 종목 상세 캐시 (stock/[symbol] 페이지가 쓰는 캐시)
+    symbols.forEach((sym) => {
+      if (result[sym]) return;
+      const raw = localStorage.getItem(`stock-detail-${sym}`);
+      if (!raw) return;
+      const d = JSON.parse(raw) as { price?: number; change?: number; changePercent?: number };
+      if (d?.price && d.price > 0)
+        result[sym] = { price: d.price, change: d.change ?? 0, changePercent: d.changePercent ?? 0 };
+    });
+  } catch { /* ignore */ }
+  return result;
+}
+
+function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggle: () => void }) {
   const t = useLocale();
-  const [open,    setOpen]    = useState(false);
   const [prices,  setPrices]  = useState<PriceMap>({});
   const [loading, setLoading] = useState(false);
   const [fetched, setFetched] = useState(false);
 
-  const handleOpen = () => {
-    const next = !open;
-    setOpen(next);
+  const fetchPrices = (syms: string[]) => {
+    const cached = readLocalCache(syms);
+    if (Object.keys(cached).length > 0) setPrices((p) => ({ ...p, ...cached }));
 
-    // Fetch prices the first time the card is expanded
-    if (next && !fetched) {
-      setLoading(true);
+    setLoading(true);
+    fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms.join(","))}`)
+      .then((r) => r.json())
+      .then((data: PriceMap) => {
+        if (Object.keys(data).length > 0) setPrices((p) => ({ ...p, ...data }));
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  };
+
+  // Fetch prices when opened (including on back-navigation restore)
+  useEffect(() => {
+    if (open && !fetched) {
       setFetched(true);
-      const syms = guru.holdings.map((h) => h.symbol).join(",");
-      fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
-        .then((r) => r.json())
-        .then((data: PriceMap) => setPrices(data))
-        .catch(() => {})
-        .finally(() => setLoading(false));
+      fetchPrices(guru.holdings.map((h) => h.symbol));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  const handleOpen = () => {
+    onToggle();
   };
 
   return (
@@ -75,6 +111,12 @@ function GuruCard({ guru }: { guru: Guru }) {
             </span>
             <span className="text-[10px]" style={{ color: "var(--muted)" }}>{guru.quarter}</span>
           </div>
+          <p className="text-[9px] mt-0.5 font-mono-num" style={{ color: "var(--muted)" }}>
+            공시 {guru.filingDate}
+          </p>
+          <p className="text-[9px] font-mono-num" style={{ color: "var(--muted)" }}>
+            다음 {guru.nextFilingDate}
+          </p>
         </div>
 
         <ChevronDown
@@ -184,13 +226,7 @@ function GuruCard({ guru }: { guru: Guru }) {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                setLoading(true);
-                const syms = guru.holdings.map((h) => h.symbol).join(",");
-                fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
-                  .then((r) => r.json())
-                  .then((data: PriceMap) => setPrices(data))
-                  .catch(() => {})
-                  .finally(() => setLoading(false));
+                fetchPrices(guru.holdings.map((h) => h.symbol));
               }}
               disabled={loading}
               className="text-[10px] font-semibold px-2 py-0.5 rounded disabled:opacity-40 active:opacity-70 transition-opacity"
@@ -207,6 +243,24 @@ function GuruCard({ guru }: { guru: Guru }) {
 
 export function GuruHoldings() {
   const t = useLocale();
+
+  // Persist open/closed state across navigation (back button restores state)
+  const [openSet, setOpenSet] = useState<Set<string>>(() => {
+    try {
+      const raw = sessionStorage.getItem("guru-open");
+      return new Set(JSON.parse(raw ?? "[]") as string[]);
+    } catch { return new Set(); }
+  });
+
+  const toggle = (id: string) => {
+    setOpenSet((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      try { sessionStorage.setItem("guru-open", JSON.stringify([...next])); } catch {}
+      return next;
+    });
+  };
+
   return (
     <div>
       <div className="flex items-center justify-between mb-3">
@@ -230,10 +284,14 @@ export function GuruHoldings() {
         </p>
       </div>
 
-      {/* Guru cards */}
       <div className="flex flex-col gap-3">
         {GURUS.map((guru) => (
-          <GuruCard key={guru.id} guru={guru} />
+          <GuruCard
+            key={guru.id}
+            guru={guru}
+            open={openSet.has(guru.id)}
+            onToggle={() => toggle(guru.id)}
+          />
         ))}
       </div>
     </div>

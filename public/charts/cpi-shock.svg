@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#ef4444" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">CPI · 4월 인플레이션</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">헤드라인 +3.8% 예상 상회 — 금리 인하 후퇴</text>
+  <!-- CPI chart -->
+  <text x="55" y="92" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">월별 CPI 추이 (%)</text>
+  <line x1="100" y1="100" x2="560" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="100" y1="140" x2="560" y2="140" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="100" y1="180" x2="560" y2="180" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="100" y1="220" x2="560" y2="220" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="92" y="103" text-anchor="end" fill="#475569" font-size="9" font-family="Arial">4%</text>
+  <text x="92" y="143" text-anchor="end" fill="#475569" font-size="9" font-family="Arial">3.5%</text>
+  <text x="92" y="183" text-anchor="end" fill="#475569" font-size="9" font-family="Arial">3%</text>
+  <text x="92" y="223" text-anchor="end" fill="#475569" font-size="9" font-family="Arial">2.5%</text>
+  <!-- CPI line: dropping then rising -->
+  <polyline points="110,160 160,165 210,180 260,200 310,220 360,210 410,175 460,160 510,132 555,116" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+  <polygon points="110,160 160,165 210,180 260,200 310,220 360,210 410,175 460,160 510,132 555,116 555,280 110,280" fill="rgba(239,68,68,0.06)"/>
+  <!-- Latest ATH marker -->
+  <circle cx="555" cy="116" r="8" fill="rgba(239,68,68,0.3)" stroke="#ef4444" stroke-width="2"/>
+  <text x="555" y="104" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Arial" font-weight="bold">+3.8% !</text>
+  <!-- Expected line (dashed) -->
+  <line x1="510" y1="132" x2="555" y2="128" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="530" y="145" text-anchor="middle" fill="#60a5fa" font-size="9" font-family="Arial">예상 +3.6%</text>
+  <!-- X labels -->
+  <text x="110" y="298" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Nov</text>
+  <text x="210" y="298" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Jan</text>
+  <text x="310" y="298" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Feb</text>
+  <text x="410" y="298" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Mar</text>
+  <text x="510" y="298" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Apr (예상)</text>
+  <text x="555" y="298" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Arial">Apr (실제)</text>
+  <!-- Right panel -->
+  <rect x="585" y="88" width="195" height="225" rx="10" fill="rgba(239,68,68,0.05)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="682" y="112" text-anchor="middle" fill="#fca5a5" font-size="12" font-family="Arial" font-weight="bold">핵심 지표</text>
+  <line x1="600" y1="120" x2="765" y2="120" stroke="rgba(239,68,68,0.15)" stroke-width="1"/>
+  <text x="600" y="140" fill="#94a3b8" font-size="10" font-family="Arial">헤드라인 CPI</text>
+  <text x="765" y="140" text-anchor="end" fill="#ef4444" font-size="12" font-family="Arial" font-weight="bold">+3.8%</text>
+  <text x="600" y="158" fill="#475569" font-size="9" font-family="Arial">예상 +3.6%</text>
+  <text x="600" y="180" fill="#94a3b8" font-size="10" font-family="Arial">근원 CPI</text>
+  <text x="765" y="180" text-anchor="end" fill="#ef4444" font-size="12" font-family="Arial" font-weight="bold">+2.8%</text>
+  <text x="600" y="198" fill="#475569" font-size="9" font-family="Arial">예상 +2.6%</text>
+  <line x1="600" y1="210" x2="765" y2="210" stroke="rgba(239,68,68,0.1)" stroke-width="1"/>
+  <text x="600" y="228" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">자산별 영향</text>
+  <text x="600" y="246" fill="#ef4444" font-size="10" font-family="Arial">TLT 장기채 역풍</text>
+  <text x="600" y="264" fill="#ef4444" font-size="10" font-family="Arial">성장주 밸류 압박</text>
+  <text x="600" y="282" fill="#00e5a0" font-size="10" font-family="Arial">에너지주 XLE 수혜</text>
+  <text x="600" y="300" fill="#00e5a0" font-size="10" font-family="Arial">달러 강세 지속</text>
+  <!-- Bottom -->
+  <rect x="30" y="340" width="540" height="60" rx="8" fill="rgba(239,68,68,0.04)" stroke="rgba(239,68,68,0.12)" stroke-width="1"/>
+  <text x="300" y="360" text-anchor="middle" fill="#fca5a5" font-size="11" font-family="Arial" font-weight="bold">연준 금리 경로 재조정</text>
+  <text x="300" y="380" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">기존 7·9월 금리 인하 기대 → 후퇴</text>
+  <text x="300" y="397" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">에너지가 전체 물가 상승분 40%+ 차지</text>
+  <text x="400" y="430" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.13</text>
+</svg>

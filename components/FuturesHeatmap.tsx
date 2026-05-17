@@ -149,10 +149,10 @@ export function FuturesHeatmap({ items }: Props) {
       {/* Treemap — horizontal scroll on small screens */}
       <div
         ref={scrollRef}
-        className="overflow-x-auto"
-        style={{ touchAction: "pan-x", overflowY: "hidden" }}
+        className="overflow-x-auto no-scrollbar"
+        style={{ touchAction: "pan-x pan-y", overflowY: "hidden" }}
       >
-        <div style={{ minWidth: "680px", touchAction: "pan-x" }}>
+        <div style={{ minWidth: "680px", touchAction: "pan-x pan-y" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
             {ROWS.map((row) => (
               <div key={row.groupLabel} style={{ display: "flex", flexDirection: "column" }}>
@@ -187,7 +187,7 @@ export function FuturesHeatmap({ items }: Props) {
                       <div
                         key={sym}
                         className="flex flex-col items-start justify-between p-1.5 overflow-hidden cursor-pointer select-none transition-opacity active:opacity-80"
-                        style={{ flex, background: bg(item.changePercent), minWidth: 0 }}
+                        style={{ flex, background: bg(item.changePercent), minWidth: 0, touchAction: "pan-x pan-y" }}
                         onClick={(e) => {
                           e.stopPropagation();
                           setPopup({
@@ -236,17 +236,15 @@ export function FuturesHeatmap({ items }: Props) {
         </div>
       </div>
 
-      {/* Scroll indicator bar */}
-      {thumbW < 98 && (
-        <div className="px-4 py-2.5" style={{ borderTop: "1px solid var(--border)" }}>
-          <div className="relative h-[3px] rounded-full" style={{ background: "var(--border)" }}>
-            <div
-              className="absolute top-0 h-[3px] rounded-full"
-              style={{ left: `${thumbL}%`, width: `${thumbW}%`, background: "var(--muted-2)", borderRadius: 9999 }}
-            />
-          </div>
+      {/* Scroll indicator bar — always visible */}
+      <div className="px-4 py-2.5" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="relative h-[3px] rounded-full" style={{ background: "var(--border)" }}>
+          <div
+            className="absolute top-0 h-[3px] rounded-full"
+            style={{ left: `${thumbL}%`, width: `${thumbW}%`, background: "var(--muted-2)", borderRadius: 9999 }}
+          />
         </div>
-      )}
+      </div>
 
       {popup && (
         <MiniChartPopup

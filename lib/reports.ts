@@ -34,6 +34,116 @@ export const CATEGORY_EMOJI: Record<ReportCategory, string> = {
 export const SEED_REPORTS: Report[] = [
 
   // ══════════════════════════════════════════════════════════════════════════
+  // 2026-05-15 리포트
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-026",
+    title:         "트럼프-시진핑 베이징 회담 — \"매우 좋은 감정\", 관세 합의 임박",
+    summary:       "트럼프 대통령이 베이징에서 시진핑 주석과 회담 후 \"매우 좋은 감정(very good feeling)\"이라 발언했습니다. 60명 이상의 CEO가 동행한 이번 방문은 단순 외교가 아닌 관세 145% 대폭 완화 및 중국 $1조 대미 투자 합의를 포함한 역대급 딜로 평가됩니다.",
+    body:          "■ 트럼프 직접 발언\n\n\"We talked about a lot of things. We had a very good meeting. We want things to happen. One thing he agreed is that, let's get those borders — so they can make a lot of stuff. And they told reporters 'very good feelings' coming out of the summit.\"\n\n■ Xi said: 'We have GOOD FEELINGS' about trade deal talks.\n\n■ 협상 핵심 내용\n\n• 중국 $1조 대미 투자 약속\n• 관세 145% → 협상 인하 예정\n• 농산물·에너지 대미 구매 확대\n• 2026.08E 최종 합의 목표\n\n■ 종목별 직접 수혜\n\n1) TSLA: 중국 FSD 규제 완화 협의 → 중국 매출 반등\n2) NVDA: H20+ 대중 수출 허가 완화 → $50B 시장 개방\n3) AAPL: 중국 AI 기능 개방 협의, 아이폰 판매 회복\n4) AMZN·LNG: 중국 대규모 구매 합의 수혜\n\n■ 핵심 시사점\n\n\"There was a reason 60 CEOs went on this trip and that is a MAJOR trade deal.\" — Jefferies\n\n60명 CEO 동행(머스크·젠슨황·팀쿡·다이먼·저커버그·핑크)은 역대급 딜의 신호입니다. AI 반도체·전기차·금융 모두 촉매.\n\n■ 결론\n\n트럼프-시진핑 '매우 좋은 감정' 발언은 90일 유예 이후 실질 합의의 분수령입니다. 관세 완화 합의 시 TSLA·NVDA·AAPL 중국 매출 회복이 동시에 진행됩니다.",
+    category:      "매크로",
+    categoryColor: "blue",
+    subject:       "🇺🇸🇨🇳 미중 무역 (트럼프-시진핑)",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:30",
+    isPinned:      true,
+    images:        ["/charts/trump-china-trade.svg"],
+  },
+
+  {
+    id:            "seed-021",
+    title:         "NVIDIA 중국 AI칩 판매 허가 — 18개社, $50B 시장 개방",
+    summary:       "트럼프 행정부가 NVIDIA에 중국 첨단 기업 18곳에 고급 AI 반도체 판매를 허가했습니다. 알래스카 귀환 중 트럼프가 직접 젠슨 황에게 전화해 합의를 전달. 현재 $12B 승인 시장이 $50B로 확대될 수 있는 역사적 전환점입니다.",
+    body:          "■ 핵심 발표\n\n\"The United States Market has just CLEARED NVIDIA to sell advanced chips to 10 Chinese firms. This could be a $50 BILLION DOLLAR market. President Trump called up CEO Jensen Huang in Alaska on the way home — and a deal has seemingly been struck.\"\n\n■ 시장 영향 규모\n\n• 현재 승인 중국 시장: ~$12B\n• 신규 허가 후 잠재 시장: ~$50B\n• 승인 기업 수: 18개 첨단 기업\n• 확장 배율: +4.2배\n\n■ 정치적 맥락\n\n• 트럼프 NVDA 개인 $1M+ 매수 공시 직후 허가\n• 미중 무역협상의 첨단기술 분야 양보\n• 알래스카 귀환 중 트럼프-젠슨황 직통 전화\n• 젠슨황 에어포스원 탑승 → 협상 핵심 당사자\n\n■ NVDA 수혜 분석\n\n• 중국 AI 수요: 텐센트·알리바바·바이두 GPU 폭증 예상\n• H20 이상급 칩 수출 허가 범위 확대 기대\n• 분기 매출 증가분: 애널리스트 $5~8B 추가 추정\n• 마진: 소프트웨어·서비스 번들 포함 시 고마진 유지\n\n■ 수혜 파급 효과\n\n• AMD: 경쟁 격화지만 중국 시장 동반 확대 수혜\n• TSMC: 고급 GPU 생산 주문 증가\n• SK하이닉스·마이크론: HBM 수요 폭증\n\n■ 결론\n\n중국 AI칩 허가는 NVDA에게 기존 예상치를 크게 웃도는 매출 성장 동력입니다. 단, 의회 반발·국가안보 심사 재개 리스크는 모니터링 필요합니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "🟢 NVIDIA (중국·AI칩 허가)",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:35",
+    isPinned:      true,
+    images:        ["/charts/nvda-china.svg"],
+  },
+
+  {
+    id:            "seed-023",
+    title:         "트럼프 NVDA 개인 매수 공시 — 113페이지, 3,642건 거래 내역",
+    summary:       "트럼프 대통령이 2026년 자산 공시를 제출했습니다. 113페이지, 3,642건 거래 내역에 NVIDIA(NVDA)·ServiceNow(NOW) 각 $1M+ 개인 매수가 포함되어 있습니다. 중국 AI칩 판매 허가 발표 직전 타이밍이 강력한 정책 수혜 시그널로 해석됩니다.",
+    body:          "■ 공시 핵심 내용\n\n• 공시 분량: 113페이지\n• 총 거래 건수: 3,642건\n• $1M+ 이상 개인 매수:\n  - NVDA (Nvidia Corp): $1M+\n  - NOW (ServiceNow): $1M+\n\n■ 타이밍의 의미\n\n공시 시점과 정책 발표 순서:\n1. 트럼프 NVDA $1M+ 개인 매수 (공시 내)\n2. 미중 무역협상 AI칩 분야 논의\n3. NVDA 중국 판매 허가 발표\n→ \"행정부 정책과 연동된 선행 매수\" 해석\n\n■ 시장 반응\n\n\"매우 강세(VERY BULLISH) 시그널\" — 트레이더들 해석\n• NVDA 공시 당일 +4.8% 급등\n• ServiceNow도 동반 상승\n\n■ ServiceNow 매수 시사점\n\n• NOW는 AI 엔터프라이즈 플랫폼 선두 기업\n• 연방정부 IT 시스템 현대화 → 가장 큰 수혜\n• 트럼프 행정부 DOGE(정부 효율화) 프로젝트와 연계\n\n■ 법적·윤리적 논란\n\n• 대통령의 정책과 직결된 종목 개인 매수 → 내부정보 논란\n• STOCK Act(주식거래법) 의무 공시 대상\n• 민주당 의원 \"이해충돌\" 제기 예상\n\n■ 투자자 관점\n\n\"Don't underestimate the man's words(or trades).\" 트럼프의 개인 포트폴리오 변화는 향후 정책 방향을 선행하는 지표로 시장이 주목합니다.\n\n■ 결론\n\n트럼프의 NVDA·NOW 대규모 개인 매수는 AI 정책 수혜 종목의 최강 확인 신호입니다. AI 칩·엔터프라이즈 AI 소프트웨어 두 섹터 모두에 대한 행정부의 지원 기조가 지속될 것임을 시사합니다.",
+    category:      "종목분석",
+    categoryColor: "orange",
+    subject:       "🏛️ 트럼프 (NVDA·NOW 공시)",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:40",
+    images:        ["/charts/trump-nvda.svg"],
+  },
+
+  {
+    id:            "seed-024",
+    title:         "ChatGPT 개인정보 집단소송 — Meta·Google 무단 공유 혐의",
+    summary:       "OpenAI가 ChatGPT 사용자의 비공개 대화를 Meta(Facebook·Instagram)·Google Analytics에 무단 공유했다는 집단소송이 제기됐습니다. 광고 타겟팅 목적 사용이 핵심 혐의로, OpenAI의 규제 리스크가 확대되고 경쟁사 Anthropic·Gemini의 반사 수혜가 예상됩니다.",
+    body:          "■ 소송 요지\n\n\"Sam Altman catching your private ChatGPT conversations to send to Meta and Google.\"\n\n• 피고: OpenAI / Meta(공동) / Google(공동)\n• 혐의: ChatGPT 비공개 대화를 광고 타겟팅 목적으로 Meta·Google에 무단 공유\n• 트래킹 기술 내장 — 사용자 동의 없이 데이터 추출\n\n■ 소송 상세\n\n• 사용자 개인 질문·민감한 대화·금융 계획·의료 정보·정치적 견해 수집\n• Facebook Pixel·Google Analytics 추적 공유 혐의\n• \"Responsible AI\" 표방하면서 반대로 행동\n• 집단(Class Action) → 피해자 수백만 명\n\n■ OpenAI의 입장\n\n아직 공식 입장 없음. 법무팀 대응 중.\n\n■ 시장 영향\n\n• OpenAI 기업가치 압박 ($157B 밸류에이션 의문)\n• IPO 일정에 리스크 변수 추가\n• 규제 강화 선제 압박 (미국·EU 동시)\n\n■ 경쟁사 반사 수혜\n\n• Anthropic (Claude): 프라이버시 우선 정책 강점\n• Google Gemini: 아이러니하게도 공동 피고이나 자체 AI 브랜딩 강화\n• Microsoft Copilot: 기업용 데이터 보호 계약 강점\n\n■ 결론\n\nOpenAI 소송은 단순 소송이 아닌 \"AI 프라이버시 규제\"의 실질적 시험대입니다. 프라이버시를 경쟁력으로 내세운 Anthropic과 애플의 온디바이스 AI 전략이 상대적으로 재평가받을 수 있습니다.",
+    category:      "섹터",
+    categoryColor: "red",
+    subject:       "⚖️ OpenAI (소송·규제)",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:25",
+    images:        ["/charts/openai-lawsuit.svg"],
+  },
+
+  {
+    id:            "seed-025",
+    title:         "혼다 2040 완전 전기차 계획 철회 — 테슬라 독주 구조 강화",
+    summary:       "Honda CEO가 2040년 완전 전기차 전환 목표를 공식 철회했습니다. \"이 목표를 달성하기 어렵다고 판단했다\"고 밝혔습니다. EV 수요 기대 미달·충전 인프라 부족·하이브리드 수요 급증이 원인입니다. 테슬라의 기술 해자는 더욱 강화됩니다.",
+    body:          "■ CEO 공식 발표\n\n\"We have withdrawn this target. We have judged that it will be difficult to achieve.\"\n\n2040 완전 전기차 전환 목표 → 공식 철회\n\n■ 철회 배경\n\n1) EV 수요 기대 대비 실제 수요 미달\n2) 충전 인프라 구축 속도 지연\n3) 하이브리드 수요 예상 초과 급증\n4) 전기차 원가·가격 경쟁력 한계\n5) 중국 BYD 가격 전쟁 대응 불가\n\n■ 완성차 EV 목표 비교\n\n• Tesla: 이미 100% EV ✓\n• GM: 2035년 목표 (유지)\n• Ford: 2035년 목표 유럽 (유지)\n• VW: 2033년 유럽만 (하향 조정됨)\n• Honda: 2040 목표 ✗ 철회\n• Toyota: 하이브리드 중심 유지 (원래 회의적)\n\n■ 투자 시사점\n\n① 테슬라 수혜: 경쟁사 EV 포기 → 테슬라 독주 구조 강화\n② 하이브리드 부품주: 덴소·아이신·모비스 등 수혜\n③ 혼다 EV 투자 매력 저하 → 주가 압박 지속\n④ EV 충전 인프라: 수요 성장 둔화 → 밸류에이션 재점검\n\n■ 테슬라 기술 해자 강화\n\n\"완성차가 EV를 포기하면 테슬라의 기술적 해자는 더욱 강화된다.\"\n• 소프트웨어(FSD) 격차: 현재 3~5년\n• 배터리 원가: 경쟁사 대비 30~40% 저렴\n• 충전 네트워크(Supercharger): 업계 표준화 완료\n\n■ 결론\n\n혼다의 EV 철회는 테슬라의 독주를 더 오래 지속시키는 구조적 신호입니다. 단기적으로는 전체 EV 시장 성장에 의문을 제기하지만, 장기적으로는 테슬라만이 살아남는 시나리오를 강화합니다.",
+    category:      "섹터",
+    categoryColor: "orange",
+    subject:       "🚗 혼다 (EV 철회·테슬라)",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:20",
+    images:        ["/charts/honda-ev.svg"],
+  },
+
+  {
+    id:            "seed-022",
+    title:         "테슬라 세미 × 캘리포니아 $10억 보조금 — 물류 혁명의 분기점",
+    summary:       "Gavin Newsom 캘리포니아 주지사가 Tesla Semi 200대+ 도입에 $1B 보조금 프로그램을 공개했습니다. 디젤 트럭 대비 77% 운영비 절감, 대당 최대 $100,000 비용 절감 가능. 물류 대기업의 EV 전환 촉매가 될 전망입니다.",
+    body:          "■ 프로그램 개요\n\n• 주도: Gavin Newsom 캘리포니아 주지사\n• 총 규모: $1B (10억 달러)\n• 초기 배정: $200M\n• 대상: Tesla Semi 200대 이상\n• 공공·민간 물류 기업 모두 적용\n\n■ 비용 절감 분석\n\n• 디젤 트럭: $0.256/마일\n• Tesla Semi: $0.059/마일\n• Tesla Semi + CA 보조금: $0.042/마일\n• 절감 비율: 약 77%\n\n• 대당 절감 총액: $30,000~$100,000 (주행 거리 따라)\n• 보조금 인센티브 포함 시 초기 비용 회수 기간 급감\n\n■ 왜 지금인가\n\n• 중국 전기차(BYD 등) 미국 진입 차단 → 테슬라 독점 수혜\n• CA 배출 규제 2035년 디젤 트럭 신규 등록 금지\n• 물류 기업 연간 유지비 수백만달러 절감 가능\n• Cybertruck 경찰 도입에 이은 정부 조달 시장 확대\n\n■ 수혜 기업\n\n• 테슬라: B2B 물류 시장 직접 공략 (기존 B2C 위주)\n• 캘리포니아 물류 대기업: Ryder, XPO, Werner\n• 전기 트럭 충전 인프라: ChargePoint, EVgo\n\n■ 중국 EV 표준 충돌\n\n참고: 중국에서 테슬라는 두 개의 별도 충전 포트를 가짐 (AC 전용·GB 국가 표준). 미국과 표준 상이 → 수출 제한, 테슬라 미국 내 독점 지위 강화.\n\n■ 결론\n\nCybertruck 경찰 도입에 이어 Tesla Semi CA 보조금은 테슬라의 정부 조달 시장 진입 교두보입니다. FSD·에너지·로봇택시에 이어 '물류 자율화' 사업이 새로운 성장축으로 부상하고 있습니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "🚛 테슬라 (Semi·물류혁명)",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:15",
+    images:        ["/charts/tesla-semi-ca.svg"],
+  },
+
+  {
+    id:            "seed-020",
+    title:         "xAI Grok Build 출시 — Heavy 구독자 독점, AI 에이전트 코딩 시대",
+    summary:       "일론 머스크의 xAI가 Grok Build early beta를 $300/월 SuperGrok Heavy 구독자에게 독점 출시했습니다. 병렬 서브에이전트, MCP 툴, 실시간 스트리밍, 헤드리스 모드 등을 탑재한 AI 코딩 에이전트입니다. Claude·Cursor·Windsurf와 정면 경쟁합니다.",
+    body:          "■ Grok Build 핵심 기능\n\n\"BREAKING: xAI launches Grok Build early beta exclusively for SuperGrok Heavy subscribers.\"\n\n• AI 병렬 서브에이전트 (동시 다중 작업)\n• MCP(Model Context Protocol) 툴 지원\n• 실시간 스트리밍 워크플로우\n• 헤드리스 스크립팅 모드\n• 멀티에이전트 협업\n• 앱 빌딩·코딩 자동화\n\n■ 가격 구조\n\n• Free ($0): 기본 Grok 채팅\n• Plus ($30/월): 향상된 Grok 모델\n• Heavy ($300/월): Grok Build 독점 액세스\n→ Grok Build는 Heavy 전용 — 진입 장벽 존재\n\n■ 경쟁 포지션\n\n| 제품 | 가격 | 회사 |\n|---|---|---|\n| Grok Build | $300/월 | xAI |\n| Claude Pro | $20/월 | Anthropic |\n| Cursor Pro | $20/월 | Cursor |\n| Windsurf | $15/월 | Codeium |\n\n→ 가격이 10~20배 높으나 \"가장 강력한 에이전트\" 포지션 목표\n\n■ 투자 시사점\n\n• xAI 비상장 → TSLA 간접 수혜 (머스크 연결성)\n• 기업용 AI 코딩 시장: $50B+ 성장 예상\n• Anthropic·Microsoft Copilot 시장 점유율 압박\n• GPU 수요 증가 → NVDA 추가 수혜\n\n■ 결론\n\nGrok Build는 머스크의 AI 사업 확장에서 B2B 엔터프라이즈 개발자 시장 진입을 선언합니다. Heavy $300/월의 높은 가격 장벽은 오히려 \"전문 개발자 전용 프리미엄\" 포지셔닝 전략으로 읽힙니다.",
+    category:      "섹터",
+    categoryColor: "purple",
+    subject:       "🤖 xAI·Grok Build (AI 코딩)",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:10",
+    images:        ["/charts/grok-build.svg"],
+  },
+
+  {
+    id:            "seed-027",
+    title:         "테슬라 기가상하이 4월 생산 3년 최고 — 배터리 특허·CA 세금혜택 삼중 호재",
+    summary:       "기가상하이의 4월 2026년 생산량이 최근 3년 최고치를 기록했습니다. 동시에 테슬라는 배터리 대량 생산 원가 혁신 특허를 취득하고, 캘리포니아 세금 크레딧으로 가격 경쟁력을 강화하고 있습니다. BYD 경쟁에도 불구한 볼륨 회복 신호입니다.",
+    body:          "■ 기가상하이 4월 생산량\n\n\"Tesla's April production in Giga Shanghai looks pretty good. According to the data, this year's production in Giga Shanghai is the highest in the last three years.\"\n\n• 4월 생산량: ~82,000대 (추정)\n• 최근 3년 최고치 달성\n• BYD·중국 로컬 경쟁 심화에도 볼륨 회복\n\n■ 배터리 특허 (원가 혁신)\n\n\"Tesla has filed a patent that is the key to massive cost reductions for battery manufacturing.\"\n\n• 4680 셀 생산 공정 대폭 단순화\n• 경쟁사 대비 30~40% 원가 절감 목표\n• 양산 적용 시 ASP 유지하면서 마진 개선\n\n■ 캘리포니아 세금 크레딧\n\n\"California tax credits allows Tesla to continue to lower prices for vehicles and maintain high margins.\"\n\n• 소비자: $7,500 세금 크레딧\n• 테슬라: 가격 인하 없이도 구매 유인 제공\n• 원가 절감 + 세금혜택 = 이중 가격 경쟁력\n\n■ 테슬라 반응 속도\n\n테슬라 세미 후방 카메라 반응 시간:\n• 70밀리초(ms) — 업계 최고 수준\n• 기존 대형 트럭 대비 10배+ 빠른 반응\n• FSD 기술의 트럭 적용 직결\n\n■ 결론\n\n기가상하이 생산 최고치 + 배터리 원가 특허 + CA 세금혜택의 삼중 호재는 테슬라의 2026년 Q2 실적 기대치를 높입니다. BYD와의 치킨게임에서 원가 우위로 살아남는 구조가 완성되고 있습니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "🏭 테슬라 (생산·원가혁신)",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:05",
+    images:        ["/charts/tesla-gigashah.svg"],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
   // 2026-05-14 리포트
   // ══════════════════════════════════════════════════════════════════════════
 
@@ -48,7 +158,7 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:26",
     isPinned:      true,
-    images:        ["https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80"],
+    images:        ["/charts/fed-warsh.svg"],
   },
 
   {
@@ -62,7 +172,7 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:27",
     isPinned:      true,
-    images:        ["https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&q=80"],
+    images:        ["/charts/tesla-baron.svg"],
   },
 
   {
@@ -75,7 +185,7 @@ export const SEED_REPORTS: Report[] = [
     subject:       "📊 S&P500 (ATH·실적시즌)",
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:26",
-    images:        ["https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=800&q=80"],
+    images:        ["/charts/sp500-ath.svg"],
   },
 
   {
@@ -88,7 +198,7 @@ export const SEED_REPORTS: Report[] = [
     subject:       "📘 Meta (AI·광고플랫폼)",
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:26",
-    images:        ["https://images.unsplash.com/photo-1679300082344-6f2b3a33d2d2?w=800&q=80"],
+    images:        ["/charts/meta-ai.svg"],
   },
 
   {
@@ -101,7 +211,7 @@ export const SEED_REPORTS: Report[] = [
     subject:       "🤖 AI 패러다임 (젠슨 황)",
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:25",
-    images:        ["https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80"],
+    images:        ["/charts/ai-paradox.svg"],
   },
 
   {
@@ -114,7 +224,7 @@ export const SEED_REPORTS: Report[] = [
     subject:       "🔆 광학통신 (LITE·COHR·LSCC)",
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:26",
-    images:        ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"],
+    images:        ["/charts/optical-comm.svg"],
   },
 
   {
@@ -128,132 +238,7 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-05-14",
     updatedAt:     "2026.05.14 07:26",
     isPinned:      false,
-    images:        ["https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&q=80"],
+    images:        ["/charts/soxx-rsi.svg"],
   },
 
-  // ══════════════════════════════════════════════════════════════════════════
-  // 2026-05-13 리포트 (기존)
-  // ══════════════════════════════════════════════════════════════════════════
-
-  {
-    id:            "seed-001",
-    title:         "트럼프 방중 — 머스크·젠슨황만 에어포스원 탑승, $1조 투자 딜 임박",
-    summary:       "트럼프 대통령의 중국 방문에서 일론 머스크(테슬라)·젠슨 황(NVIDIA)이 에어포스원 탑승 유일한 CEO로 확인됐습니다. 현지에서 미중 간 '역대급 경제 합의' 발표 임박 신호가 나오고 있으며, 중국 측 $1조 대미 투자 등 관세 완화 패키지 협상 중이라는 보도가 나왔습니다.",
-    body:          "■ 에어포스원 탑승 CEO (2명만 확인)\n\n• 일론 머스크 (테슬라·스페이스X)\n• 젠슨 황 (NVIDIA)\n→ AI 반도체·전기차가 협상 핵심 어젠다임을 시사\n\n■ 전체 CEO 방중 대표단\n\n• 팀 쿡 (Apple) — $3.2T\n• 제이미 다이먼 (JPMorgan) — $765B\n• 마크 저커버그 (Meta) — $863B\n• 래리 핑크 (BlackRock)\n• 스티븐 슈워츠먼 (Blackstone)\n• 데이비드 솔로몬 (Goldman Sachs)\n• 60명+ CEO 동행 → 단순 외교 방문 아닌 '역대급 딜' 신호\n\n■ 시장이 주목하는 합의 항목\n\n• 새로운 미중 경제 협정 체결\n• 중국의 대미 투자 $1조+ 약속\n• 관세 완화 패키지 (트럼프 145% → 협상 타결 시 인하)\n• 농산물·에너지 구매 확대\n• 지정학 리스크 완화 (대만 긴장 일부 해소)\n\n■ 종목별 시사점\n\n1) TSLA: 중국 FSD 규제 완화 협의 → 중국 매출 반등 기대\n2) NVDA: H20 이상급 대중 수출 허가 완화 가능성 주목\n3) AAPL: 중국 AI 기능 개방 협의, 아이폰 판매 회복 기대\n4) 농산물·LNG: 중국 대규모 구매 합의 시 ADM·LNG 종목 수혜\n\n■ 리스크\n\n• 협상 결과 발표 일정 미확정\n• 외교적 쇼에 그칠 경우 기대감 실망 매도\n• 의회 비준 필요한 항목은 시간 소요\n\n■ 결론\n\n\"There was a reason 60 CEOs went on this trip and that is a MAJOR trade deal.\" — Per Jefferies. 60명 CEO 방중은 역대급 딜의 증거입니다. AI 반도체·전기차·에너지 모두 촉매 역할을 할 수 있습니다.",
-    category:      "매크로",
-    categoryColor: "purple",
-    subject:       "🇺🇸 트럼프 방중 (미중무역)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.14 07:26",
-    isPinned:      true,
-    images:        ["https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80"],
-  },
-  {
-    id:            "seed-002",
-    title:         "4월 CPI 쇼크 — 헤드라인 +3.8% 예상 상회, 금리 인하 시계 후퇴",
-    summary:       "4월 소비자물가지수(CPI)가 예상을 상회했습니다. 헤드라인 CPI +3.8%(예상 +3.6%), 근원 CPI +2.8%(예상 +2.6%) — 2023년 5월 이후 최고 헤드라인, 2025년 9월 이후 최고 근원 수치입니다.",
-    body:          "■ 4월 CPI 실제 데이터\n\n• 헤드라인 CPI: +3.8% (예상 +3.6%) → 예상 상회 ⚠️\n• 근원 CPI (식품·에너지 제외): +2.8% (예상 +2.6%) → 예상 상회 ⚠️\n• 에너지: 전체 물가 상승분의 40% 이상 차지\n\n■ 연준(Fed) 금리 경로 재조정\n\n• 기존 시장 기대(7·9월 인하) → 후퇴\n• CME FedWatch 연내 인하 확률 급감\n• 연준 \"데이터 의존\" 기조 유지\n\n■ 자산별 대응 전략\n\n1) 채권: 장기물 TLT 단기 역풍, 단기물(SHY·BIL) 선호\n2) 성장주: 밸류에이션 압박 — 금리 민감 성장주 주의\n3) 에너지주: 물가 상승 수혜 — XLE, OXY 주목\n4) 달러: 강세 유지 가능성\n\n■ 결론\n\n에너지·원자재 비중을 점검하고, 금리 인하 기대보다는 인플레 지속 가능성을 열어두세요.",
-    category:      "매크로",
-    categoryColor: "purple",
-    subject:       "📈 CPI (인플레·금리)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80"],
-  },
-  {
-    id:            "seed-003",
-    title:         "NVIDIA — 젠슨 황, 삼성·TSMC·마이크론 공급망 동맹 확대 선언",
-    summary:       "NVIDIA CEO 젠슨 황이 삼성, TSMC, 마이크론 등 공급망 파트너에 감사를 표하며 '가능한 한 빠르게 확장하겠다'고 밝혔습니다. AI 인프라 수요 폭증에 대응한 생산 능력 확충 의지를 재확인했습니다.",
-    body:          "■ 발언 요지\n\n\"우리는 삼성, TSMC, 마이크론을 비롯한 파트너들에게 매우 감사하다. 가능한 한 빠르게 그들과 함께 확장하고자 한다.\"\n\n■ 공급망 파트너별 분석\n\n• TSMC: Blackwell GPU CoWoS 패키징 핵심 파트너\n• 삼성전자: HBM 메모리 및 패키징 협력 확대 기대\n• 마이크론: HBM3E 공급 확대 — SK하이닉스와 경쟁\n\n■ 한국 기업 수혜\n\n• SK하이닉스: HBM3E 독점 공급 유지, 수혜 최대\n• 삼성전자: HBM 퀄 테스트 통과 후 비중 확대 기대\n\n■ 결론\n\nAI 인프라 투자 사이클 2027년까지 지속. NVIDIA + 삼성전자·SK하이닉스·SOXX ETF 주목.",
-    category:      "종목분석",
-    categoryColor: "blue",
-    subject:       "🟢 NVIDIA (AI반도체)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&q=80"],
-  },
-  {
-    id:            "seed-004",
-    title:         "Tesla Terrafab × TSMC — 반도체 자립화 전략과 투자 시사점",
-    summary:       "테슬라가 자체 반도체 생산 시설 'Terrafab'을 공식 발표했습니다. TSMC는 애리조나 팹에 $20B를 추가 투자하며 테슬라·스페이스X의 공식 칩 파트너로 나섭니다.",
-    body:          "■ Terrafab 핵심 내용\n\n테슬라·스페이스X 필요 칩을 자체 공급망으로 충당하는 장기 전략.\n\n■ TSMC 투자 내용\n\n• 애리조나 팹 추가 투자: $20B\n• 미래 팹 추가 배정: $2.5B\n• 테슬라·스페이스X 공식 파트너 예정\n\n■ NVIDIA 플레이북 비교\n\n머스크가 NVIDIA 전략을 그대로 따르는 중:\n1) 배터리 셀 컨소시엄 → 자체 셀 생산\n2) 자체 AI 칩 (Dojo, HW5) 설계\n3) Terrafab으로 생산 내재화\n\n■ 결론\n\nTerrafab × TSMC 협력은 테슬라가 AI·에너지·로보틱스 복합 플랫폼으로 재평가받는 전환점입니다.",
-    category:      "종목분석",
-    categoryColor: "blue",
-    subject:       "🏎️ 테슬라 (AI·반도체)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&q=80"],
-  },
-  {
-    id:            "seed-005",
-    title:         "Google × SpaceX × Anthropic — 우주·AI 삼각 동맹의 투자 시사점",
-    summary:       "구글이 SpaceX 지분 7%, Anthropic 지분 15%를 보유하며 우주·AI 생태계 허브로 부상. 이 삼각 동맹은 다음 10년 인프라 투자 사이클의 핵심 축입니다.",
-    body:          "■ 삼각 동맹 구조\n\n구글 → SpaceX (지분 7%): 저궤도 위성·우주 인프라\n구글 → Anthropic (지분 15%): Claude AI·기업용 AI 솔루션\nSpaceX → 구글: 스타링크 기반 클라우드 연결성\n\n■ 시너지 포인트\n\n• 구글: 우주 인프라 + AI 모델 동시 확보\n• SpaceX: 구글 클라우드 데이터 위성 전송 수익화\n• Anthropic: 구글 TPU 학습 비용 절감 + 엔터프라이즈 판로\n\n■ 투자 접근법\n\nSpaceX·Anthropic은 비상장. GOOGL을 통한 간접 투자.\n• GOOGL: 클라우드(GCP) + AI + 우주 시너지 수혜\n\n■ 결론\n\n구글은 광고·검색을 넘어 우주·AI 인프라 플랫폼으로 재평가 시점입니다.",
-    category:      "섹터",
-    categoryColor: "orange",
-    subject:       "🌐 구글·SpaceX·Anthropic (우주·AI)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"],
-  },
-  {
-    id:            "seed-006",
-    title:         "Rocket Lab 주목 — SpaceX 자율기술 해자와 소형 위성 발사 수혜",
-    summary:       "SpaceX Falcon 9은 결정론적 알고리즘으로 400회+ 자율 귀환 성공. 발사 비용 경쟁사 대비 60~70% 저렴. SpaceX 비상장 제약 속 소형 위성 발사 대안 RKLB 주목.",
-    body:          "■ Falcon 9 자율 시스템\n\n• 결정론적(deterministic) 알고리즘 — AI 머신러닝 아님\n• 400회 이상 부스터 귀환 성공\n• Falcon 9 발사 비용: ~$6,700만 (경쟁사 대비 60~70% 저렴)\n\n■ Rocket Lab (RKLB)\n\n• Electron 로켓: 소형 위성 전용, 100kg 이하 탑재\n• Neutron 로켓: 중형급 시장 진입 개발 중\n• 우주 부품 사업(Space Systems) 고성장 중\n\n■ 결론\n\nSpaceX 기술 해자는 5~10년간 복제 불가. 비상장 제약 속 RKLB가 우주 투자의 현실적 대안입니다.",
-    category:      "섹터",
-    categoryColor: "orange",
-    subject:       "🚀 SpaceX·Rocket Lab (우주)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=800&q=80"],
-  },
-  {
-    id:            "seed-007",
-    title:         "테슬라 FSD — 자율주행이 바꾸는 삶, 구독 수익화의 진짜 시작",
-    summary:       "팔·다리 없이 태어난 John Z가 테슬라 FSD로 처음 독립적 이동이 가능해졌습니다. 구독 수익화·라이선싱 모델이 테슬라의 다음 성장 동력임을 보여주는 상징적 사례입니다.",
-    body:          "■ FSD 접근성 사례\n\nJohn Z: 팔·다리 없이 태어난 사용자. 테슬라 Model Y + FSD로 처음 완전한 이동의 자유.\n\"가속 페달을 밟을 수 없는 나에게 FSD는 삶의 확장이다.\"\n\n■ FSD 구독 모델 현황\n\n• FSD 월정액: $99/월\n• 누적 활성 사용자: ~60만 명 (2026 Q1)\n• 자율주행 누적 마일리지: 30억 마일+ 돌파\n\n■ 라이선싱 수익 모델\n\n• 현대차·GM 등과 협의 보도\n• 계약 1건 = 연간 수억 달러 수익 가능\n\n■ 결론\n\nFSD는 구독·라이선싱 네 가지 레이어를 가진 복합 사업. 테슬라 밸류에이션에서 FSD 소프트웨어 가치 반영 시점이 다가오고 있습니다.",
-    category:      "종목분석",
-    categoryColor: "blue",
-    subject:       "🏎️ 테슬라 (FSD·자율주행)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"],
-  },
-  {
-    id:            "seed-008",
-    title:         "애플 AirPods Pro — 카메라 탑재, Siri AI 비서 완전체 전환 시작",
-    summary:       "애플이 카메라를 내장한 신형 AirPods 개발에 착수했습니다. 카메라가 Siri에 시각 정보를 제공하고 주변 환경을 인식해 맥락 기반 AI 응답을 제공하게 됩니다.",
-    body:          "■ 핵심 내용\n\n• 각 이어버드에 소형 카메라 탑재\n• 카메라로 Siri에 시각 정보 실시간 제공\n• 사진·영상 촬영은 불가 — AI 맥락 인식 전용\n• 캡처 데이터는 로컬 처리 (프라이버시)\n\n■ 투자 시사점\n\n1) 애플 생태계 락인 강화\n2) 온디바이스 AI 반도체 수요 증가 → TSMC·SK하이닉스 수혜\n3) 웨어러블 사업부 성장 가속 — 애플 전체 매출의 ~10%\n\n■ 결론\n\nAirPods 카메라 탑재는 단순 업그레이드가 아닌 일상 AI 비서 플랫폼 진출. AAPL 장기 보유 논리를 강화합니다.",
-    category:      "종목분석",
-    categoryColor: "blue",
-    subject:       "🍎 애플 (웨어러블·AI)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=800&q=80"],
-  },
-  {
-    id:            "seed-009",
-    title:         "CLARITY Act — 암호화폐 법제화, 트럼프의 코인 시장 신호",
-    summary:       "트럼프가 CLARITY Act 투표 동일주에 비트코인·암호화폐 매수 발언을 했습니다. 과거 동일 패턴에서 시장이 반응했던 전례를 고려하면 법안 통과 시 제도 자금 유입이 본격화할 가능성이 높습니다.",
-    body:          "■ CLARITY Act란\n\n디지털 자산을 증권 또는 상품으로 분류하는 기준을 명확히 하는 법안.\n\n■ 트럼프 발언\n\n\"지금 주식과 암호화폐를 매수하기 시작할 때다.\" — CLARITY Act 투표 당일\n\"Don't underestimate the man's words.\"\n\n■ 법안 통과 시 시장 영향\n\n1) 비트코인: 기관 투자 불확실성 해소 → ETF 추가 자금 유입\n2) 이더리움: \"증권 아님\" 명확화 → DeFi 재활성화\n3) 코인베이스(COIN): 규제 명확화 최대 수혜\n\n■ 결론\n\n트럼프 발언 + CLARITY Act 타이밍은 우연이 아닙니다. 법안 통과 여부를 집중 모니터링하세요.",
-    category:      "매크로",
-    categoryColor: "orange",
-    subject:       "₿ 암호화폐 (CLARITY Act)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800&q=80"],
-  },
-  {
-    id:            "seed-010",
-    title:         "Google × SpaceX — 궤도 위성 데이터센터, AI 인프라 패러다임 전환",
-    summary:       "구글과 스페이스X가 우주 궤도에 데이터센터를 공동 개발합니다. AI 수요 급증으로 지상 데이터센터 전력·냉각이 한계에 달한 가운데 위성 기반 인프라가 구조적 해결책으로 부상했습니다.",
-    body:          "■ 핵심 소식\n\n\"Google and SpaceX are in talks to launch data centers into orbit amid surging AI demand.\" — WSJ\n\n■ 왜 우주 데이터센터인가\n\n• 전력: AI 클러스터 1개 = 소도시 연간 전력 소비\n• 냉각: 발열 처리 비용이 운영비 40%+\n• 우주: 무한 태양광 + 자연 방열 → 두 제약 모두 해소\n\n■ 구글·SpaceX 각자의 이해관계\n\n구글: GCP 용량 확장 + 스타링크 연결성\nSpaceX: 새 B2B 사업 + 스타십 발사 수요 창출\n\n■ 투자 접근법\n\n• GOOGL: 직접 수혜\n• RKLB: 소형 위성 발사 수요 증가\n\n■ 결론\n\n우주 데이터센터 투자 시계는 지금부터입니다.",
-    category:      "섹터",
-    categoryColor: "mint",
-    subject:       "🛸 Google·SpaceX (우주·AI인프라)",
-    date:          "2026-05-13",
-    updatedAt:     "2026.05.13 22:00",
-    images:        ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"],
-  },
 ];

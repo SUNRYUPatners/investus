@@ -35,13 +35,15 @@ export default function AdminCreatorsPage() {
   const [manualPhone, setManualPhone]   = useState("");
   const [manualResult, setManualResult] = useState<string | null>(null);
 
-  const TOKEN = "investustjsltjsl!99";
-  const authHeader = { Authorization: `Bearer ${TOKEN}` };
+  // Token is entered by the user at login — never hardcoded in the bundle
+  const [token, setToken] = useState("");
+  const authHeader = () => ({ Authorization: `Bearer ${token}` });
 
   const load = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/admin/verifications", { headers: authHeader });
+      const res = await fetch("/api/admin/verifications", { headers: authHeader() });
+      if (res.status === 401) { setAuthed(false); return; }
       const data = await res.json();
       setList(Array.isArray(data) ? data : []);
     } catch {
@@ -50,14 +52,18 @@ export default function AdminCreatorsPage() {
       setLoading(false);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     if (authed) load();
   }, [authed, load]);
 
-  const handleLogin = () => {
-    if (pw === TOKEN) { setAuthed(true); setPwError(false); }
+  const handleLogin = async () => {
+    // Verify token against the API (server validates against ADMIN_TOKEN env var)
+    const res = await fetch("/api/admin/verifications", {
+      headers: { Authorization: `Bearer ${pw}` },
+    });
+    if (res.ok) { setToken(pw); setAuthed(true); setPwError(false); }
     else { setPwError(true); setPw(""); }
   };
 
@@ -66,7 +72,7 @@ export default function AdminCreatorsPage() {
     try {
       await fetch("/api/admin/verifications", {
         method: "PATCH",
-        headers: { "Content-Type": "application/json", ...authHeader },
+        headers: { "Content-Type": "application/json", ...authHeader() },
         body: JSON.stringify({ phone, action }),
       });
       await load();

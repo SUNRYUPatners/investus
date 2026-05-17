@@ -53,11 +53,12 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
     e.target.value = "";
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!nickname.trim()) return;
     setSaving(true);
-    updateProfile({ nickname: nickname.trim(), avatar: avatar || undefined });
-    setTimeout(() => { setSaving(false); onClose(); }, 300);
+    await updateProfile({ nickname: nickname.trim(), avatar: avatar || undefined });
+    setSaving(false);
+    onClose();
   };
 
   const isPhoto = avatar.startsWith("data:");
@@ -155,22 +156,20 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
           </p>
         </div>
 
-        {/* Phone (read-only, masked) */}
+        {/* Email (read-only) */}
         <div className="px-4 mb-6">
           <label className="text-[10px] font-semibold mb-1.5 block" style={{ color: "var(--muted)" }}>
-            전화번호 <span className="font-normal">(본인만 볼 수 있음)</span>
+            이메일 <span className="font-normal">(본인만 볼 수 있음)</span>
           </label>
           <div
             className="w-full rounded-xl px-3 py-2.5 text-sm border flex items-center gap-2"
             style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)" }}
           >
-            <span className="font-mono-num" style={{ color: "var(--muted)" }}>
-              {user?.phone
-                ? user.phone.replace(/(\d{3})\d{4}(\d{4})/, "$1-****-$2")
-                : "—"}
+            <span className="truncate" style={{ color: "var(--muted)" }}>
+              {user?.email ?? "—"}
             </span>
             <span
-              className="ml-auto text-[9px] px-1.5 py-0.5 rounded"
+              className="ml-auto flex-shrink-0 text-[9px] px-1.5 py-0.5 rounded"
               style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
             >
               🔒 비공개

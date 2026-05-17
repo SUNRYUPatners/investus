@@ -248,17 +248,17 @@ export default function AboutPage() {
               <div className="flex gap-3 flex-wrap">
                 <div>
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>투자 원금</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>XX억</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>X3억</p>
                 </div>
                 <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
                 <div>
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>현재 가치</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>XX억</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>X7억</p>
                 </div>
                 <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
                 <div>
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>수익</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>+XX억</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>+X3억</p>
                 </div>
                 <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
                 <div>
@@ -288,10 +288,10 @@ export default function AboutPage() {
           {/* Per-stock returns */}
           <div className="grid grid-cols-2 gap-2.5">
             {[
-              { symbol: "TSLA", name: "테슬라", ret: "+100.49%", shares: "XXX주", color: "#e879f9" },
-              { symbol: "PLTR", name: "팔란티어", ret: "+133.24%", shares: "XXX주", color: "#60a5fa" },
-              { symbol: "IBM",  name: "IBM",     ret: "+139.76%", shares: "XXX주", color: "#34d399" },
-              { symbol: "META", name: "메타",    ret: "+159.99%", shares: "XXX주", color: "#fb923c" },
+              { symbol: "TSLA", name: "테슬라", ret: "+100.49%", shares: "XX7주", color: "#e879f9" },
+              { symbol: "PLTR", name: "팔란티어", ret: "+133.24%", shares: "XX3주", color: "#60a5fa" },
+              { symbol: "IBM",  name: "IBM",     ret: "+139.76%", shares: "XX2주", color: "#34d399" },
+              { symbol: "META", name: "메타",    ret: "+159.99%", shares: "XX8주", color: "#fb923c" },
             ].map((s) => (
               <div
                 key={s.symbol}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+    <linearGradient id="tsla" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">RON BARON · TESLA 10년 시나리오</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">주가 $2,500 목표 — 시총 $8.3조 전망</text>
+  <!-- Price bars: Today, $2000, $2500 -->
+  <text x="55" y="92" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">테슬라 시총 비교 ($조)</text>
+  <!-- Current ~$1.45T -->
+  <text x="150" y="120" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">현재</text>
+  <rect x="100" y="125" width="100" height="155" rx="4" fill="rgba(96,165,250,0.4)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="150" y="295" text-anchor="middle" fill="#60a5fa" font-size="14" font-family="Arial" font-weight="bold">$1.45조</text>
+  <text x="150" y="313" text-anchor="middle" fill="#475569" font-size="10" font-family="Arial">~$437/주</text>
+  <!-- $2000 scenario -->
+  <text x="330" y="120" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">2026~2033 목표</text>
+  <rect x="280" y="82" width="100" height="198" rx="4" fill="rgba(96,165,250,0.55)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="330" y="295" text-anchor="middle" fill="#60a5fa" font-size="14" font-family="Arial" font-weight="bold">$6.6조</text>
+  <text x="330" y="313" text-anchor="middle" fill="#475569" font-size="10" font-family="Arial">$2,000/주</text>
+  <!-- $2500 scenario -->
+  <text x="510" y="103" text-anchor="middle" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">Ron Baron 목표</text>
+  <rect x="460" y="62" width="100" height="218" rx="4" fill="rgba(251,191,36,0.5)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="510" y="295" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="Arial" font-weight="bold">$8.3조</text>
+  <text x="510" y="313" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="Arial" font-weight="bold">$2,500/주</text>
+  <!-- Right: 4 growth pillars -->
+  <rect x="620" y="62" width="165" height="260" rx="10" fill="rgba(96,165,250,0.06)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <text x="703" y="86" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">성장 4축</text>
+  <line x1="635" y1="94" x2="770" y2="94" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="635" y="114" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">① FSD 구독</text>
+  <text x="635" y="130" fill="#94a3b8" font-size="10" font-family="Arial">소프트웨어 마진 ~80%</text>
+  <text x="635" y="152" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">② Cybercab 로봇택시</text>
+  <text x="635" y="168" fill="#94a3b8" font-size="10" font-family="Arial">2026H2 텍사스·캘리포니아</text>
+  <text x="635" y="190" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">③ 에너지 사업부</text>
+  <text x="635" y="206" fill="#94a3b8" font-size="10" font-family="Arial">Megapack 수주 폭증</text>
+  <text x="635" y="228" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">④ Optimus 로봇</text>
+  <text x="635" y="244" fill="#94a3b8" font-size="10" font-family="Arial">2027~2028년 양산 목표</text>
+  <line x1="635" y1="258" x2="770" y2="258" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="703" y="278" text-anchor="middle" fill="#e2e8f0" font-size="11" font-family="Arial" font-weight="bold">현재 대비 +5.7배</text>
+  <!-- bottom ROI -->
+  <rect x="55" y="340" width="540" height="52" rx="8" fill="rgba(251,191,36,0.05)" stroke="rgba(251,191,36,0.2)" stroke-width="1"/>
+  <text x="285" y="359" text-anchor="middle" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">Ron Baron 투자 현황</text>
+  <text x="130" y="379" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">투자원금 $1.7B</text>
+  <text x="285" y="379" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial">현재 평가 $15B+</text>
+  <text x="450" y="379" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial">수익 +780%</text>
+  <text x="400" y="430" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.14</text>
+</svg>

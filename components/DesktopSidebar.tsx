@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { TrendingUp } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
@@ -38,6 +38,7 @@ function useClock() {
 export function DesktopSidebar() {
   const t = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
   const { time, open, mounted } = useClock();
 
   const NAV = [
@@ -78,10 +79,13 @@ export function DesktopSidebar() {
           const isActive =
             href === "/" ? pathname === "/" : pathname.startsWith(href);
           return (
-            <Link
+            <button
               key={href}
-              href={href}
-              className="flex items-center gap-3 px-3 py-2.5 rounded-xl mb-0.5 transition-all group"
+              onClick={() => {
+                if (isActive) window.scrollTo({ top: 0, behavior: "smooth" });
+                else router.push(href);
+              }}
+              className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl mb-0.5 transition-all text-left"
               style={
                 isActive
                   ? { background: "rgba(0,229,160,0.1)", color: "var(--mint)" }
@@ -101,7 +105,7 @@ export function DesktopSidebar() {
                   style={{ background: "var(--mint)" }}
                 />
               )}
-            </Link>
+            </button>
           );
         })}
       </nav>

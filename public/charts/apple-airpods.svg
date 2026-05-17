@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#e2e8f0" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">APPLE · AirPods Pro 카메라</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">카메라 탑재 — Siri AI 비서 완전체 시작</text>
+  <!-- Left: Feature diagram -->
+  <rect x="30" y="88" width="330" height="260" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="195" y="112" text-anchor="middle" fill="#e2e8f0" font-size="12" font-family="Arial" font-weight="bold">신형 AirPods 핵심 기능</text>
+  <line x1="50" y1="120" x2="340" y2="120" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="55" y="148" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">📷 카메라</text>
+  <text x="55" y="166" fill="#e2e8f0" font-size="10" font-family="Arial">각 이어버드에 소형 카메라 내장</text>
+  <text x="55" y="182" fill="#64748b" font-size="10" font-family="Arial">사진 촬영 아님 — AI 맥락 인식 전용</text>
+  <text x="55" y="208" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">🤖 Siri 연동</text>
+  <text x="55" y="226" fill="#e2e8f0" font-size="10" font-family="Arial">주변 환경 실시간 인식 → 맥락 AI 응답</text>
+  <text x="55" y="242" fill="#64748b" font-size="10" font-family="Arial">"이 레스토랑 리뷰는?" "저 간판 번역해줘"</text>
+  <text x="55" y="268" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">🔒 프라이버시</text>
+  <text x="55" y="286" fill="#e2e8f0" font-size="10" font-family="Arial">캡처 데이터 로컬 처리 (클라우드 비전송)</text>
+  <text x="55" y="302" fill="#64748b" font-size="10" font-family="Arial">Apple's on-device AI 철학 유지</text>
+  <text x="55" y="328" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">🔗 생태계 통합</text>
+  <text x="55" y="346" fill="#e2e8f0" font-size="10" font-family="Arial">iPhone·Mac·Vision Pro와 완전 연동</text>
+  <!-- Right: Investment impact -->
+  <rect x="380" y="88" width="390" height="260" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="575" y="112" text-anchor="middle" fill="#94a3b8" font-size="12" font-family="Arial" font-weight="bold">투자 시사점</text>
+  <line x1="400" y1="120" x2="750" y2="120" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="400" y="142" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">① 애플 생태계 락인 강화</text>
+  <text x="400" y="159" fill="#e2e8f0" font-size="10" font-family="Arial">AirPods → 일상 AI 비서 플랫폼</text>
+  <text x="400" y="175" fill="#64748b" font-size="10" font-family="Arial">교체 사이클 단축 · 프리미엄 ASP 유지</text>
+  <text x="400" y="200" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">② 온디바이스 AI 반도체 수요</text>
+  <text x="400" y="217" fill="#e2e8f0" font-size="10" font-family="Arial">TSMC 3nm 이하 고성능 칩 필요</text>
+  <text x="400" y="233" fill="#64748b" font-size="10" font-family="Arial">SK하이닉스·TSMC 수혜</text>
+  <text x="400" y="258" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">③ 웨어러블 사업부 성장</text>
+  <text x="400" y="275" fill="#e2e8f0" font-size="10" font-family="Arial">Apple 전체 매출의 ~10%</text>
+  <text x="400" y="291" fill="#fbbf24" font-size="10" font-family="Arial">AirPods + Watch + Vision Pro 동반 성장</text>
+  <line x1="400" y1="305" x2="750" y2="305" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="575" y="325" text-anchor="middle" fill="#e2e8f0" font-size="11" font-family="Arial" font-weight="bold">AAPL 장기 보유 논리 강화</text>
+  <text x="575" y="343" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">단순 업그레이드 → AI 비서 플랫폼 전환</text>
+  <!-- Bottom -->
+  <rect x="30" y="368" width="740" height="40" rx="8" fill="rgba(255,255,255,0.02)"/>
+  <text x="400" y="385" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">AI 웨어러블 경쟁: Meta Ray-Ban vs Apple AirPods Camera</text>
+  <text x="400" y="402" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">일상 AI 비서 시장 선점 경쟁 — 애플의 생태계 방어 전략</text>
+  <text x="400" y="430" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.13</text>
+</svg>

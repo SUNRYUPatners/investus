@@ -5,6 +5,7 @@ import { MiniChartPopup } from "./MiniChartPopup";
 
 type StockTile = { symbol: string; name: string; price: number | null; changePercent: number; weight: number };
 type Sector    = { key: string; name: string; stocks: StockTile[] };
+type ApiResponse = { isLive: boolean; sectors: Sector[] };
 
 type PopupState = {
   symbol: string;
@@ -101,6 +102,7 @@ function SectorBlock({
                 flex: s.weight / totalW,
                 background: bg(s.changePercent),
                 minWidth: 0,
+                touchAction: "pan-x pan-y",
               }}
               onClick={(e) => {
                 e.stopPropagation();
@@ -162,6 +164,7 @@ function SkeletonRow({ rowH, sections }: { rowH: number; sections: { flex: numbe
 
 export function SP500Heatmap() {
   const [sectors, setSectors] = useState<Sector[] | null>(null);
+  const [isLive, setIsLive]   = useState(true);
   const [popup, setPopup]     = useState<PopupState | null>(null);
   const [thumbL, setThumbL]   = useState(0);
   const [thumbW, setThumbW]   = useState(100);
@@ -185,19 +188,24 @@ export function SP500Heatmap() {
   }, []);
 
   useEffect(() => {
-    // 이전 캐시를 즉시 표시 (mock 대신 마지막 실제값 사용)
     try {
       const cached = localStorage.getItem("sp500-cache");
-      if (cached) setSectors(JSON.parse(cached));
+      if (cached) {
+        const parsed = JSON.parse(cached) as ApiResponse | Sector[];
+        const sectors = Array.isArray(parsed) ? parsed : parsed.sectors;
+        setSectors(sectors);
+        if (!Array.isArray(parsed)) setIsLive(parsed.isLive);
+      }
     } catch { /* ignore */ }
 
     fetch("/api/sp500-prices")
       .then((r) => r.json())
-      .then((data: Sector[]) => {
-        setSectors(data);
+      .then((data: ApiResponse) => {
+        setSectors(data.sectors);
+        setIsLive(data.isLive);
         try { localStorage.setItem("sp500-cache", JSON.stringify(data)); } catch { /* ignore */ }
       })
-      .catch(() => { /* keep null — no mock */ });
+      .catch(() => { /* keep cached or null */ });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -228,8 +236,8 @@ export function SP500Heatmap() {
       </div>
 
       {/* Treemap — horizontal scroll on small screens */}
-      <div ref={scrollRef} className="overflow-x-auto" style={{ touchAction: "pan-x", overflowY: "hidden" }}>
-        <div style={{ minWidth: "520px", touchAction: "pan-x" }}>
+      <div ref={scrollRef} className="overflow-x-auto no-scrollbar" style={{ touchAction: "pan-x pan-y", overflowY: "hidden" }}>
+        <div style={{ minWidth: "520px", touchAction: "pan-x pan-y" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
             {sectors === null
               ? LAYOUT.map((row, ri) => (
@@ -261,23 +269,26 @@ export function SP500Heatmap() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      {thumbW < 98 && (
-        <div className="px-4 py-2.5" style={{ borderTop: "1px solid var(--border)" }}>
-          <div className="relative h-[3px] rounded-full" style={{ background: "var(--border)" }}>
-            <div
-              className="absolute top-0 h-[3px] rounded-full"
-              style={{ left: `${thumbL}%`, width: `${thumbW}%`, background: "var(--muted-2)", borderRadius: 9999 }}
-            />
-          </div>
+      {/* Scroll indicator — always visible */}
+      <div className="px-4 py-2.5" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="relative h-[3px] rounded-full" style={{ background: "var(--border)" }}>
+          <div
+            className="absolute top-0 h-[3px] rounded-full"
+            style={{ left: `${thumbL}%`, width: `${thumbW}%`, background: "var(--muted-2)", borderRadius: 9999 }}
+          />
         </div>
-      )}
+      </div>
 
       {/* Footer */}
-      <div className="px-4 py-2 border-t" style={{ borderColor: "var(--border)" }}>
+      <div className="px-4 py-2 border-t flex items-center justify-between" style={{ borderColor: "var(--border)" }}>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
           S&P 500 · 섹터 구성 · 시가총액 비례
         </span>
+        {!isLive && sectors !== null && (
+          <span className="text-[9px] px-1.5 py-0.5 rounded-full" style={{ background: "rgba(245,158,11,0.12)", color: "#f59e0b" }}>
+            참고용
+          </span>
+        )}
       </div>
 
       {popup && (

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00e5a0"/><stop offset="100%" stop-color="#00b580"/></linearGradient>
+    <linearGradient id="pr" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Header -->
+  <text x="400" y="38" text-anchor="middle" fill="#00e5a0" font-size="13" font-family="Arial" font-weight="bold" letter-spacing="3">xAI · GROK BUILD BETA</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">에이전트 AI 코딩 플랫폼 출시</text>
+  <!-- Tier cards -->
+  <!-- Free -->
+  <rect x="30" y="90" width="220" height="320" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="140" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial" font-weight="bold">FREE</text>
+  <text x="140" y="145" text-anchor="middle" fill="#e2e8f0" font-size="22" font-family="Arial" font-weight="bold">$0</text>
+  <text x="140" y="163" text-anchor="middle" fill="#64748b" font-size="11" font-family="Arial">/월</text>
+  <line x1="50" y1="175" x2="230" y2="175" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="60" y="198" fill="#94a3b8" font-size="11" font-family="Arial">✓  기본 Grok 채팅</text>
+  <text x="60" y="220" fill="#94a3b8" font-size="11" font-family="Arial">✓  제한된 쿼리 수</text>
+  <text x="60" y="242" fill="#94a3b8" font-size="11" font-family="Arial">✗  Grok Build 없음</text>
+  <text x="60" y="264" fill="#94a3b8" font-size="11" font-family="Arial">✗  에이전트 기능 없음</text>
+  <text x="60" y="286" fill="#94a3b8" font-size="11" font-family="Arial">✗  MCP 플러그인 없음</text>
+  <!-- Plus -->
+  <rect x="290" y="90" width="220" height="320" rx="12" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.25)" stroke-width="1"/>
+  <text x="400" y="118" text-anchor="middle" fill="#60a5fa" font-size="13" font-family="Arial" font-weight="bold">PLUS</text>
+  <text x="400" y="145" text-anchor="middle" fill="#e2e8f0" font-size="22" font-family="Arial" font-weight="bold">$30</text>
+  <text x="400" y="163" text-anchor="middle" fill="#64748b" font-size="11" font-family="Arial">/월</text>
+  <line x1="310" y1="175" x2="490" y2="175" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+  <text x="320" y="198" fill="#e2e8f0" font-size="11" font-family="Arial">✓  무제한 Grok 채팅</text>
+  <text x="320" y="220" fill="#e2e8f0" font-size="11" font-family="Arial">✓  이미지 생성</text>
+  <text x="320" y="242" fill="#e2e8f0" font-size="11" font-family="Arial">✓  딥서치</text>
+  <text x="320" y="264" fill="#64748b" font-size="11" font-family="Arial">✗  Grok Build 없음</text>
+  <text x="320" y="286" fill="#64748b" font-size="11" font-family="Arial">✗  MCP 플러그인 없음</text>
+  <!-- Heavy (FEATURED) -->
+  <rect x="550" y="82" width="220" height="336" rx="12" fill="rgba(0,229,160,0.08)" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="610" y="75" width="100" height="20" rx="10" fill="url(#gr)"/>
+  <text x="660" y="89" text-anchor="middle" fill="#0a0f1e" font-size="10" font-family="Arial" font-weight="bold">GROK BUILD 포함</text>
+  <text x="660" y="118" text-anchor="middle" fill="#00e5a0" font-size="13" font-family="Arial" font-weight="bold">HEAVY</text>
+  <text x="660" y="145" text-anchor="middle" fill="#e2e8f0" font-size="22" font-family="Arial" font-weight="bold">$300</text>
+  <text x="660" y="163" text-anchor="middle" fill="#64748b" font-size="11" font-family="Arial">/월</text>
+  <line x1="570" y1="175" x2="750" y2="175" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="580" y="198" fill="#00e5a0" font-size="11" font-family="Arial">✓  Grok Build 베타 독점</text>
+  <text x="580" y="220" fill="#00e5a0" font-size="11" font-family="Arial">✓  멀티에이전트 동시 실행</text>
+  <text x="580" y="242" fill="#00e5a0" font-size="11" font-family="Arial">✓  MCP 플러그인·훅 지원</text>
+  <text x="580" y="264" fill="#00e5a0" font-size="11" font-family="Arial">✓  헤드리스 스크립팅</text>
+  <text x="580" y="286" fill="#00e5a0" font-size="11" font-family="Arial">✓  AI 앱 빌더</text>
+  <text x="580" y="308" fill="#00e5a0" font-size="11" font-family="Arial">✓  조기 얼리엑세스</text>
+  <!-- Bottom note -->
+  <text x="400" y="428" text-anchor="middle" fill="#475569" font-size="11" font-family="Arial">Heavy 구독자에게 먼저 제공 · 추후 전체 공개 예정</text>
+  <text x="400" y="445" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.15</text>
+</svg>

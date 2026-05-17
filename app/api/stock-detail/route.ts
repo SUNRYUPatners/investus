@@ -1,17 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { toYahoo } from "@/lib/symbolMap";
-
-export const dynamic = "force-dynamic";
 import {
   fetchFinnhubRawQuote,
   fetchFinnhubProfile,
   fetchFinnhubMetrics,
 } from "@/lib/finnhub";
+import { fetchQuoteV8 } from "@/lib/yahooFinance";
 import { isMarketOpen } from "@/lib/marketHours";
+import { kvGetDetail, kvSetDetail } from "@/lib/kv";
+
+
+export const dynamic = "force-dynamic";
 
 // Server-side cache: 장 마감 중 무기한, 장 중 60초 TTL
 const _cache = new Map<string, { data: Record<string, unknown>; at: number }>();
-const LIVE_TTL = 60_000; // 60 s
+const LIVE_TTL = 60_000;
 
 function saveAndRespond(symbol: string, data: Record<string, unknown>) {
   const isOpen = isMarketOpen();
@@ -19,111 +21,24 @@ function saveAndRespond(symbol: string, data: Record<string, unknown>) {
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=3600, stale-while-revalidate=86400";
   _cache.set(symbol, { data, at: Date.now() });
+  kvSetDetail(symbol, data);
   return NextResponse.json(data, { headers: { "Cache-Control": cc } });
 }
 
-const UA = "Mozilla/5.0";
-
-const YF_HOSTS = [
-  "https://query2.finance.yahoo.com",
-  "https://query1.finance.yahoo.com",
-];
-
-// ── Yahoo Finance v8 chart — range=5d 기본, 1d 폴백 ──────────────────────
-// range=1d 는 장 마감 중에 result=null 을 반환하므로 5d를 사용
-
-async function fetchV8Meta(yahooSym: string) {
-  for (const base of YF_HOSTS) {
-    for (const range of ["5d", "1mo"]) {
-      try {
-        const url =
-          `${base}/v8/finance/chart/${encodeURIComponent(yahooSym)}` +
-          `?interval=1d&range=${range}&includePrePost=false`;
-        const res = await fetch(url, {
-          headers: { "User-Agent": UA, Accept: "application/json" },
-          cache: "no-store",
-        });
-        if (!res.ok) continue;
-        const json   = await res.json();
-        const result = json?.chart?.result?.[0];
-        if (!result?.meta) continue;
-        const meta = result.meta as Record<string, unknown>;
-        // regularMarketPrice must be present
-        if (!meta.regularMarketPrice) continue;
-        return { meta, result };
-      } catch { /* try next */ }
-    }
-  }
-  return null;
-}
-
-// ── Yahoo Finance v8 direct index fetch (matches market-data/route.ts) ───
-// Uses query2 only — confirmed working from Vercel IPs; query1 may block
-
-const INDEX_YF: Record<string, { yfSym: string; name: string; isCurrency?: boolean }> = {
-  SPX:    { yfSym: "^GSPC",    name: "S&P 500 Index"       },
-  COMP:   { yfSym: "^IXIC",    name: "NASDAQ Composite"     },
-  DJI:    { yfSym: "^DJI",     name: "Dow Jones Industrial" },
-  USDKRW: { yfSym: "USDKRW=X", name: "USD/KRW", isCurrency: true },
+// ── Index sources (same priority as market-data/route.ts) ────────────────
+// Primary: Yahoo Finance direct (^GSPC, ^IXIC, ^DJI)
+// Fallback: Finnhub ETF proxy (SPY×10.03, QQQ×36.83, DIA×100)
+const INDEX_ETF: Record<string, { etf: string; factor: number; name: string; yfSym: string }> = {
+  SPX:  { etf: "SPY", factor: 10.03, name: "S&P 500 Index",       yfSym: "^GSPC" },
+  COMP: { etf: "QQQ", factor: 36.83, name: "NASDAQ Composite",     yfSym: "^IXIC" },
+  DJI:  { etf: "DIA", factor: 100,   name: "Dow Jones Industrial", yfSym: "^DJI"  },
 };
 
-async function fetchIndexDirect(rawSym: string) {
-  const idx = INDEX_YF[rawSym];
-  if (!idx) return null;
-  try {
-    const ctrl = new AbortController();
-    const tid  = setTimeout(() => ctrl.abort(), 5_000);
-    const url  = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(idx.yfSym)}?interval=1d&range=5d`;
-    const res  = await fetch(url, {
-      headers: { "User-Agent": UA, Accept: "application/json" },
-      cache: "no-store",
-      signal: ctrl.signal,
-    });
-    clearTimeout(tid);
-    if (!res.ok) return null;
-    const meta = (await res.json())?.chart?.result?.[0]?.meta as Record<string, unknown> | undefined;
-    if (!meta?.regularMarketPrice) return null;
-    return { meta, name: idx.name, isCurrency: idx.isCurrency };
-  } catch {
-    return null;
-  }
-}
-
-// ── Yahoo Finance v7 quote — price + OHLCV ───────────────────────────────
-
-async function fetchV7Quote(yahooSym: string) {
-  const fields = [
-    "regularMarketPrice", "regularMarketChange", "regularMarketChangePercent",
-    "regularMarketOpen", "regularMarketDayHigh", "regularMarketDayLow",
-    "regularMarketVolume", "regularMarketPreviousClose",
-    "trailingPE", "marketCap", "averageDailyVolume3Month",
-    "trailingAnnualDividendYield", "beta", "epsTrailingTwelveMonths",
-    "fiftyTwoWeekHigh", "fiftyTwoWeekLow",
-    "shortName", "longName", "fullExchangeName", "currency",
-  ].join(",");
-
-  for (const base of YF_HOSTS) {
-    try {
-      const url =
-        `${base}/v7/finance/quote?symbols=${encodeURIComponent(yahooSym)}&fields=${fields}`;
-      const res = await fetch(url, {
-        headers: { "User-Agent": UA, Accept: "application/json" },
-        
-      });
-      if (!res.ok) continue;
-      const json = await res.json();
-      const q    = json?.quoteResponse?.result?.[0];
-      if (!q || !q.regularMarketPrice) continue;
-      return q as Record<string, unknown>;
-    } catch { /* try next */ }
-  }
-  return null;
-}
-
-// ── Main handler ──────────────────────────────────────────────────────────
+// IWM → RTY (Russell 2000)
+const RTY_ETF = { etf: "IWM", factor: 10.05, name: "Russell 2000" };
 
 export async function GET(req: NextRequest) {
-  const rawSymbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase();
+  const rawSymbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase().slice(0, 12);
   if (!rawSymbol) return NextResponse.json({ error: "no symbol" }, { status: 400 });
 
   const cached = _cache.get(rawSymbol);
@@ -131,185 +46,195 @@ export async function GET(req: NextRequest) {
   const cc = open
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=3600, stale-while-revalidate=86400";
-  // 장 마감 중: 캐시가 있으면 즉시 반환
+
+  // 장 마감 중: 인메모리 캐시 → KV → API 순서로 시도
   if (!open && cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
+  if (!open) {
+    const kvData = await kvGetDetail(rawSymbol);
+    if (kvData) {
+      _cache.set(rawSymbol, { data: kvData, at: Date.now() });
+      return NextResponse.json(kvData, { headers: { "Cache-Control": cc } });
+    }
+  }
   // 장 중: 60초 TTL
   if (cached && Date.now() - cached.at < LIVE_TTL) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
 
-  const yahooSymbol     = toYahoo(rawSymbol);
-  const isIndexOrFuture = yahooSymbol !== rawSymbol;
-
-  // ETF proxy for major US indices (Finnhub is reliable; Yahoo often blocked from Vercel)
-  const INDEX_ETF: Record<string, { etf: string; factor: number; name: string; exchange: string }> = {
-    SPX:  { etf: "SPY",  factor: 10.03, name: "S&P 500 Index",       exchange: "Index" },
-    COMP: { etf: "QQQ",  factor: 36.83, name: "NASDAQ Composite",     exchange: "Index" },
-    DJI:  { etf: "DIA",  factor: 100,   name: "Dow Jones Industrial", exchange: "Index" },
-  };
-
   try {
-    // ── 0) Yahoo Finance v8 direct — primary for SPX/COMP/DJI ────────────
-    // Same URL pattern as market-data/route.ts (confirmed working from Vercel)
-    const yfDirect = await fetchIndexDirect(rawSymbol);
-    if (yfDirect) {
-      const { meta, name, isCurrency } = yfDirect;
-      const price = Number(meta.regularMarketPrice);
-      const prev  = Number(meta.chartPreviousClose ?? meta.regularMarketPreviousClose ?? price);
-      return saveAndRespond(rawSymbol, {
-        symbol:        rawSymbol,
-        name,
-        exchange:      isCurrency ? "FX" : "Index",
-        currency:      isCurrency ? "KRW" : "USD",
-        price,
-        change:        price - prev,
-        changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0,
-        open:          meta.regularMarketOpen    != null ? Number(meta.regularMarketOpen)    : null,
-        high:          meta.regularMarketDayHigh != null ? Number(meta.regularMarketDayHigh) : null,
-        low:           meta.regularMarketDayLow  != null ? Number(meta.regularMarketDayLow)  : null,
-        volume:        meta.regularMarketVolume  != null ? Number(meta.regularMarketVolume)  : null,
-        week52High:    meta.fiftyTwoWeekHigh     != null ? Number(meta.fiftyTwoWeekHigh)     : null,
-        week52Low:     meta.fiftyTwoWeekLow      != null ? Number(meta.fiftyTwoWeekLow)      : null,
-        pe:            null, marketCap: null, avgVolume: null,
-        dividendYield: null, beta: null, eps: null,
-      });
-    }
-
-    // ── 1) Finnhub ETF proxy for major indices (SPX/COMP/DJI) — fallback ─
-    // When market is closed Finnhub returns c=0; fall back to pc (prev close)
+    // ── 1) 주요 지수: YF direct primary → Finnhub ETF proxy fallback ────────
+    // market-data와 완전히 동일한 우선순위 — 가격 일치 보장
     const idxMeta = INDEX_ETF[rawSymbol];
     if (idxMeta) {
+      // Yahoo Finance v8 — 모든 가격의 통일 소스
+      const yfDirect = await fetchQuoteV8(idxMeta.yfSym);
+      if (yfDirect) {
+        return saveAndRespond(rawSymbol, {
+          symbol: rawSymbol, name: idxMeta.name,
+          exchange: "Index", currency: "USD",
+          price: yfDirect.price, change: yfDirect.change,
+          changePercent: yfDirect.changePercent,
+          open: null, high: null, low: null, volume: null,
+          week52High: null, week52Low: null,
+          pe: null, marketCap: null,
+          avgVolume: null, dividendYield: null,
+          beta: null, eps: null,
+        });
+      }
+      // Fallback: Finnhub ETF proxy
       const etfQ = await fetchFinnhubRawQuote(idxMeta.etf);
-      const etfPrice = etfQ?.c && etfQ.c > 0 ? etfQ.c : etfQ?.pc;
-      if (etfQ && etfPrice && etfPrice > 0) {
-        const f        = idxMeta.factor;
+      if (etfQ) {
         const isLive   = etfQ.c > 0;
+        const etfPrice = isLive ? etfQ.c : etfQ.pc;
+        const f        = idxMeta.factor;
         const price    = etfPrice * f;
-        const change   = isLive ? etfQ.d  * f : 0;
-        const changePct = isLive ? etfQ.dp    : 0;
+        const prev     = etfQ.pc * f;
         return saveAndRespond(rawSymbol, {
           symbol:        rawSymbol,
           name:          idxMeta.name,
-          exchange:      idxMeta.exchange,
+          exchange:      "Index",
           currency:      "USD",
           price,
-          change,
-          changePercent: changePct,
+          change:        price - prev,
+          changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0,
           open:          isLive && etfQ.o ? etfQ.o * f : null,
           high:          isLive && etfQ.h ? etfQ.h * f : null,
           low:           isLive && etfQ.l ? etfQ.l * f : null,
           volume:        null,
-          week52High:    null,
-          week52Low:     null,
-          pe:            null,
-          marketCap:     null,
-          avgVolume:     null,
-          dividendYield: null,
-          beta:          null,
-          eps:           null,
+          week52High:    null, week52Low:     null,
+          pe:            null, marketCap:     null,
+          avgVolume:     null, dividendYield: null,
+          beta:          null, eps:           null,
         });
       }
     }
 
-    // ── 2) Finnhub path: regular US stocks ──────────────────────────────
-    if (!isIndexOrFuture) {
-      const [rawQ, profile, metrics] = await Promise.all([
-        fetchFinnhubRawQuote(rawSymbol),
-        fetchFinnhubProfile(rawSymbol),
-        fetchFinnhubMetrics(rawSymbol),
-      ]);
-
-      if (rawQ && rawQ.c > 0) {
+    // RTY (Russell 2000)
+    if (rawSymbol === "RTY") {
+      const etfQ = await fetchFinnhubRawQuote(RTY_ETF.etf);
+      if (etfQ) {
+        const isLive = etfQ.c > 0;
+        const f      = RTY_ETF.factor;
+        const price  = (isLive ? etfQ.c : etfQ.pc) * f;
+        const prev   = etfQ.pc * f;
         return saveAndRespond(rawSymbol, {
-          symbol:        rawSymbol,
-          name:          profile?.name        ?? rawSymbol,
-          exchange:      profile?.exchange    ?? "US",
-          currency:      profile?.currency    ?? "USD",
-          price:         rawQ.c,
-          change:        rawQ.d,
-          changePercent: rawQ.dp,
-          open:          rawQ.o  || null,
-          high:          rawQ.h  || null,
-          low:           rawQ.l  || null,
-          volume:        null,
-          week52High:    metrics?.week52High    ?? null,
-          week52Low:     metrics?.week52Low     ?? null,
-          pe:            metrics?.pe            ?? null,
-          marketCap:     metrics?.marketCap != null ? metrics.marketCap * 1_000_000 : null,
-          avgVolume:     null,
-          dividendYield: metrics?.dividendYield ?? null,
-          beta:          metrics?.beta          ?? null,
-          eps:           metrics?.eps           ?? null,
+          symbol: rawSymbol, name: RTY_ETF.name,
+          exchange: "Index", currency: "USD",
+          price, change: price - prev,
+          changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0,
+          open: null, high: null, low: null, volume: null,
+          week52High: null, week52Low: null,
+          pe: null, marketCap: null, avgVolume: null,
+          dividendYield: null, beta: null, eps: null,
         });
       }
     }
 
-    // ── 2) Yahoo Finance v7 quote — primary fallback for price data ──────
-    const [v7q, v8] = await Promise.all([
-      fetchV7Quote(yahooSymbol),
-      fetchV8Meta(yahooSymbol),
+    // ── 2) 일반 미국 주식: Yahoo Finance v8 (primary, 홈탭과 동일 소스) → Finnhub fallback ──
+    const [yfQuote, profile, metrics] = await Promise.all([
+      fetchQuoteV8(rawSymbol),          // Yahoo Finance v8 — market-data와 동일한 소스
+      fetchFinnhubProfile(rawSymbol),   // 회사명·거래소·통화
+      fetchFinnhubMetrics(rawSymbol),   // PE·52w·배당·베타
     ]);
 
-    if (v7q) {
-      const prev = Number(v7q.regularMarketPreviousClose ?? v7q.regularMarketPrice ?? 0);
-      const cur  = Number(v7q.regularMarketPrice ?? 0);
+    if (yfQuote && yfQuote.price > 0) {
       return saveAndRespond(rawSymbol, {
         symbol:        rawSymbol,
-        name:          String(v7q.longName ?? v7q.shortName ?? rawSymbol),
-        exchange:      String(v7q.fullExchangeName ?? v7q.exchange ?? "US"),
-        currency:      String(v7q.currency ?? "USD"),
-        price:         cur,
-        change:        Number(v7q.regularMarketChange ?? cur - prev),
-        changePercent: Number(v7q.regularMarketChangePercent ?? (prev > 0 ? ((cur - prev) / prev) * 100 : 0)),
-        open:          v7q.regularMarketOpen          != null ? Number(v7q.regularMarketOpen)          : null,
-        high:          v7q.regularMarketDayHigh       != null ? Number(v7q.regularMarketDayHigh)       : null,
-        low:           v7q.regularMarketDayLow        != null ? Number(v7q.regularMarketDayLow)        : null,
-        volume:        v7q.regularMarketVolume        != null ? Number(v7q.regularMarketVolume)        : null,
-        week52High:    v7q.fiftyTwoWeekHigh           != null ? Number(v7q.fiftyTwoWeekHigh)           : null,
-        week52Low:     v7q.fiftyTwoWeekLow            != null ? Number(v7q.fiftyTwoWeekLow)            : null,
-        pe:            v7q.trailingPE                 != null ? Number(v7q.trailingPE)                 : null,
-        marketCap:     v7q.marketCap                  != null ? Number(v7q.marketCap)                  : null,
-        avgVolume:     v7q.averageDailyVolume3Month   != null ? Number(v7q.averageDailyVolume3Month)   : null,
-        dividendYield: v7q.trailingAnnualDividendYield != null ? Number(v7q.trailingAnnualDividendYield) : null,
-        beta:          v7q.beta                       != null ? Number(v7q.beta)                       : null,
-        eps:           v7q.epsTrailingTwelveMonths    != null ? Number(v7q.epsTrailingTwelveMonths)    : null,
+        name:          profile?.name     ?? yfQuote.shortName ?? rawSymbol,
+        exchange:      profile?.exchange ?? "US",
+        currency:      profile?.currency ?? "USD",
+        price:         yfQuote.price,
+        change:        yfQuote.change,
+        changePercent: yfQuote.changePercent,
+        open:          yfQuote.open  ?? null,
+        high:          yfQuote.high  ?? null,
+        low:           yfQuote.low   ?? null,
+        volume:        yfQuote.volume > 0 ? yfQuote.volume : null,
+        week52High:    metrics?.week52High    ?? null,
+        week52Low:     metrics?.week52Low     ?? null,
+        pe:            metrics?.pe            ?? null,
+        marketCap:     metrics?.marketCap != null ? metrics.marketCap * 1_000_000 : null,
+        avgVolume:     null,
+        dividendYield: metrics?.dividendYield ?? null,
+        beta:          metrics?.beta          ?? null,
+        eps:           metrics?.eps           ?? null,
       });
     }
 
-    // ── 3) Yahoo Finance v8 chart meta — last resort ─────────────────────
-    if (!v8) {
-      // Serve stale cache rather than 404 — user sees something instead of error
-      if (cached) return NextResponse.json(cached.data);
-      return NextResponse.json({ error: "not found" }, { status: 404 });
+    // Yahoo Finance 실패 → Finnhub fallback
+    const rawQ = await fetchFinnhubRawQuote(rawSymbol);
+    if (rawQ && (rawQ.c > 0 || rawQ.pc > 0)) {
+      const isLive = rawQ.c > 0;
+      const price  = isLive ? rawQ.c : rawQ.pc;
+      return saveAndRespond(rawSymbol, {
+        symbol:        rawSymbol,
+        name:          profile?.name     ?? rawSymbol,
+        exchange:      profile?.exchange ?? "US",
+        currency:      profile?.currency ?? "USD",
+        price,
+        change:        isLive ? rawQ.d  : 0,
+        changePercent: isLive ? rawQ.dp : 0,
+        open:          isLive && rawQ.o ? rawQ.o : null,
+        high:          isLive && rawQ.h ? rawQ.h : null,
+        low:           isLive && rawQ.l ? rawQ.l : null,
+        volume:        null,
+        week52High:    metrics?.week52High    ?? null,
+        week52Low:     metrics?.week52Low     ?? null,
+        pe:            metrics?.pe            ?? null,
+        marketCap:     metrics?.marketCap != null ? metrics.marketCap * 1_000_000 : null,
+        avgVolume:     null,
+        dividendYield: metrics?.dividendYield ?? null,
+        beta:          metrics?.beta          ?? null,
+        eps:           metrics?.eps           ?? null,
+      });
     }
 
-    const { meta } = v8;
-    const cur  = Number(meta.regularMarketPrice ?? 0);
-    const prev = Number(meta.chartPreviousClose ?? meta.regularMarketPreviousClose ?? cur);
+    // ── 3) TwelveData /quote fallback ────────────────────────────────────
+    // Yahoo Finance·Finnhub 모두 실패 시 (SQ·EXAS 등 특정 심볼 대응)
+    try {
+      const tdKey = process.env.TWELVEDATA_API_KEY;
+      if (tdKey) {
+        const tdRes = await fetch(
+          `https://api.twelvedata.com/quote?symbol=${encodeURIComponent(rawSymbol)}&apikey=${tdKey}`,
+          { cache: "no-store" }
+        );
+        if (tdRes.ok) {
+          const td = await tdRes.json();
+          const price = parseFloat(td.close ?? "0");
+          if (price > 0) {
+            const change        = parseFloat(td.change ?? "0");
+            const changePercent = parseFloat(td.percent_change ?? "0");
+            return saveAndRespond(rawSymbol, {
+              symbol:        rawSymbol,
+              name:          profile?.name ?? td.name ?? rawSymbol,
+              exchange:      profile?.exchange ?? td.exchange ?? "US",
+              currency:      profile?.currency ?? td.currency ?? "USD",
+              price,
+              change,
+              changePercent,
+              open:          parseFloat(td.open ?? "0") || null,
+              high:          parseFloat(td.fifty_two_week?.high ?? "0") || null,
+              low:           parseFloat(td.fifty_two_week?.low  ?? "0") || null,
+              volume:        parseInt(td.volume ?? "0") || null,
+              week52High:    metrics?.week52High    ?? null,
+              week52Low:     metrics?.week52Low     ?? null,
+              pe:            metrics?.pe            ?? null,
+              marketCap:     metrics?.marketCap != null ? metrics.marketCap * 1_000_000 : null,
+              avgVolume:     null,
+              dividendYield: metrics?.dividendYield ?? null,
+              beta:          metrics?.beta          ?? null,
+              eps:           metrics?.eps           ?? null,
+            });
+          }
+        }
+      }
+    } catch { /* fall through */ }
 
-    return saveAndRespond(rawSymbol, {
-      symbol:        String(meta.symbol    ?? rawSymbol),
-      name:          String(meta.longName  ?? meta.shortName ?? rawSymbol),
-      exchange:      String(meta.fullExchangeName ?? meta.exchangeName ?? ""),
-      currency:      String(meta.currency  ?? "USD"),
-      price:         cur,
-      change:        cur - prev,
-      changePercent: prev > 0 ? ((cur - prev) / prev) * 100 : 0,
-      open:          meta.regularMarketOpen    != null ? Number(meta.regularMarketOpen)    : null,
-      high:          meta.regularMarketDayHigh != null ? Number(meta.regularMarketDayHigh) : null,
-      low:           meta.regularMarketDayLow  != null ? Number(meta.regularMarketDayLow)  : null,
-      volume:        meta.regularMarketVolume  != null ? Number(meta.regularMarketVolume)  : null,
-      week52High:    meta.fiftyTwoWeekHigh     != null ? Number(meta.fiftyTwoWeekHigh)     : null,
-      week52Low:     meta.fiftyTwoWeekLow      != null ? Number(meta.fiftyTwoWeekLow)      : null,
-      pe:            null,
-      marketCap:     null,
-      avgVolume:     null,
-      dividendYield: null,
-      beta:          null,
-      eps:           null,
-    });
+    // ── 4) 모든 API 실패 → 스테일 캐시 서빙 ─────────────────────────────
+    if (cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
+    return NextResponse.json({ error: "not found" }, { status: 404 });
+
   } catch (e) {
     console.error("[stock-detail]", rawSymbol, e);
-    // Serve stale cache on error — user sees yesterday's data instead of error
-    if (cached) return NextResponse.json(cached.data);
+    if (cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
     return NextResponse.json({ error: "fetch failed" }, { status: 503 });
   }
 }

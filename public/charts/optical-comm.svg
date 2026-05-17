@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+    <linearGradient id="optg" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">광학통신 · AI 데이터센터 수혜</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">LITE · COHR · LSCC — AI 인프라 핵심 공급망</text>
+  <!-- Market size chart -->
+  <text x="55" y="92" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">글로벌 광트랜시버 시장 ($B)</text>
+  <text x="180" y="125" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">2024</text>
+  <rect x="145" y="130" width="70" height="100" rx="4" fill="rgba(0,229,160,0.3)" stroke="#00e5a0" stroke-width="1"/>
+  <text x="180" y="240" text-anchor="middle" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">$14B</text>
+  <text x="280" y="125" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">2025E</text>
+  <rect x="245" y="108" width="70" height="122" rx="4" fill="rgba(0,229,160,0.45)" stroke="#00e5a0" stroke-width="1"/>
+  <text x="280" y="240" text-anchor="middle" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">$18B</text>
+  <text x="380" y="125" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">2026E</text>
+  <rect x="345" y="88" width="70" height="142" rx="4" fill="rgba(0,229,160,0.6)" stroke="#00e5a0" stroke-width="1"/>
+  <text x="380" y="240" text-anchor="middle" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">$26B</text>
+  <text x="480" y="113" text-anchor="middle" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">2027E</text>
+  <rect x="445" y="72" width="70" height="158" rx="4" fill="rgba(251,191,36,0.5)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="480" y="240" text-anchor="middle" fill="#fbbf24" font-size="12" font-family="Arial" font-weight="bold">$34B</text>
+  <text x="555" y="100" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Arial" font-weight="bold">2028E</text>
+  <rect x="545" y="60" width="70" height="170" rx="4" fill="rgba(239,68,68,0.5)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="580" y="240" text-anchor="middle" fill="#ef4444" font-size="12" font-family="Arial" font-weight="bold">$42B</text>
+  <text x="360" y="264" text-anchor="middle" fill="#475569" font-size="10" font-family="Arial">연평균 +32% 성장률 (CAGR)</text>
+  <!-- Right panel -->
+  <rect x="645" y="75" width="140" height="210" rx="10" fill="rgba(0,229,160,0.05)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="715" y="100" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">핵심 3종목</text>
+  <line x1="660" y1="108" x2="770" y2="108" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+  <text x="660" y="130" fill="#fbbf24" font-size="12" font-family="Arial" font-weight="bold">LITE</text>
+  <text x="660" y="146" fill="#94a3b8" font-size="9" font-family="Arial">Lumentum</text>
+  <text x="660" y="160" fill="#94a3b8" font-size="9" font-family="Arial">광트랜시버·레이저</text>
+  <text x="660" y="186" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">COHR</text>
+  <text x="660" y="202" fill="#94a3b8" font-size="9" font-family="Arial">Coherent</text>
+  <text x="660" y="216" fill="#94a3b8" font-size="9" font-family="Arial">400G~800G 트랜시버</text>
+  <text x="660" y="242" fill="#c084fc" font-size="12" font-family="Arial" font-weight="bold">LSCC</text>
+  <text x="660" y="258" fill="#94a3b8" font-size="9" font-family="Arial">Lattice Semi</text>
+  <text x="660" y="272" fill="#94a3b8" font-size="9" font-family="Arial">FPGA 제어 로직</text>
+  <!-- Bottom insight -->
+  <rect x="30" y="302" width="590" height="95" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(0,229,160,0.1)" stroke-width="1"/>
+  <text x="315" y="325" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">AI 클러스터 1개 = 광트랜시버 8,000개+ 필요</text>
+  <text x="120" y="350" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">구리케이블 한계</text>
+  <text x="230" y="350" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Arial">→</text>
+  <text x="340" y="350" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial">광통신 대체</text>
+  <text x="450" y="350" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Arial">→</text>
+  <text x="560" y="350" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="Arial">저지연·고대역폭·저발열</text>
+  <text x="315" y="380" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">NVIDIA Blackwell + GB300 확산 → 2026~2027 광통신 수요 폭증 확실시</text>
+  <text x="400" y="430" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.14</text>
+</svg>

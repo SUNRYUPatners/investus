@@ -7,6 +7,9 @@ const COMMODITY_STOOQ: Record<string, string> = {
 };
 
 export async function GET() {
+  if (process.env.NODE_ENV !== "development")
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+
   const results: Record<string, unknown> = {};
   for (const [sym, stooqSym] of Object.entries(COMMODITY_STOOQ)) {
     const r = await fetchStooqFuture(stooqSym);

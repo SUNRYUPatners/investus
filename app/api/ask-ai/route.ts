@@ -1,0 +1,112 @@
+import { NextRequest, NextResponse } from "next/server";
+
+export const runtime = "nodejs";
+
+// Server-side rate limit: max 30 calls per IP per day (resets on cold start)
+const ipLog = new Map<string, { count: number; resetAt: number }>();
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const rec = ipLog.get(ip);
+  if (!rec || now > rec.resetAt) {
+    ipLog.set(ip, { count: 1, resetAt: now + 86_400_000 });
+    return true;
+  }
+  if (rec.count >= 30) return false;
+  rec.count++;
+  return true;
+}
+
+const STOCK_CONTEXT: Record<string, string> = {
+  NVDA:  "NVIDIA — AI GPU 시장 1위, 블랙웰·GB200 데이터센터 수요",
+  TSLA:  "Tesla — FSD 자율주행, 기가상하이 생산, Cybercab 로봇택시",
+  AAPL:  "Apple — iPhone, AI 기능, 서비스 매출, 애플 인텔리전스",
+  MSFT:  "Microsoft — Azure 클라우드, Copilot AI, OpenAI 파트너십",
+  META:  "Meta — AI 광고 플랫폼, Ray-Ban 스마트글래스, LLaMA 오픈소스",
+  AMZN:  "Amazon — AWS 클라우드 1위, 물류 자동화, Alexa AI",
+  GOOGL: "Alphabet/Google — AI 검색, GCP, YouTube, Gemini 모델",
+  PLTR:  "Palantir — AIP 플랫폼, 정부·민간 AI 계약, DOGE 정부효율화",
+  AMD:   "AMD — MI300X AI 가속기, EPYC 서버 CPU, 데이터센터 점유율",
+  AVGO:  "Broadcom — AI 맞춤칩(ASIC), 네트워킹, VMware 통합",
+  COIN:  "Coinbase — 미국 1위 암호화폐 거래소, CLARITY Act 수혜",
+  SMCI:  "Super Micro Computer — AI 서버 랙 솔루션, NVIDIA 파트너",
+  RKLB:  "Rocket Lab — Electron 소형위성 발사, Neutron 개발 중",
+  IONQ:  "IonQ — 이온트랩 양자컴퓨터, 정부 계약, 클라우드 접근",
+  CEG:   "Constellation Energy — 원자력 에너지, AI 데이터센터 전력 공급",
+};
+
+const ALLOWED_ORIGINS = ["https://investus.kr", "https://investus-chi.vercel.app", "http://localhost:3000"];
+
+export async function POST(req: NextRequest) {
+  // Block requests from outside our domain (default-deny)
+  const origin  = req.headers.get("origin")  ?? "";
+  const referer = req.headers.get("referer") ?? "";
+  const isAllowed = ALLOWED_ORIGINS.some((o) => origin.startsWith(o) || referer.startsWith(o));
+  if (!isAllowed) {
+    return NextResponse.json({ answer: "잘못된 요청입니다." }, { status: 403 });
+  }
+
+  // Server-side IP rate limit
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
+  if (!checkRateLimit(ip)) {
+    return NextResponse.json({ answer: "일일 요청 한도를 초과했습니다. 내일 다시 시도해주세요." }, { status: 429 });
+  }
+
+  let body: { question?: string; symbol?: string } = {};
+  try { body = await req.json(); } catch { return NextResponse.json({ answer: "잘못된 요청입니다." }, { status: 400 }); }
+  const question = String(body.question ?? "").slice(0, 500);
+  const symbol   = String(body.symbol   ?? "").slice(0, 10).toUpperCase();
+  if (!question.trim()) return NextResponse.json({ answer: "질문을 입력해주세요." });
+
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json({
+      answer: "AI 기능을 사용하려면 ANTHROPIC_API_KEY 환경변수를 설정해주세요.\n\nVercel 대시보드 → Settings → Environment Variables에 추가하세요.",
+    });
+  }
+
+  const stockInfo = STOCK_CONTEXT[symbol] ?? `${symbol} 미국 주식`;
+
+  const today = new Date().toLocaleDateString("ko-KR", {
+    year: "numeric", month: "long", day: "numeric", weekday: "long",
+  });
+
+  const system = `당신은 한국 서학개미(미국 주식 개인 투자자)를 위한 투자 정보 도우미입니다.
+오늘 날짜: ${today}
+현재 사용자가 보고 있는 종목: ${symbol} (${stockInfo})
+
+답변 규칙:
+- 항상 한국어로 간결하게 답변 (3~5문장 이내)
+- 투자 권유가 아닌 정보 제공임을 명심
+- 수익 보장 발언 절대 금지
+- 시장 상황·뉴스 관련 질문엔 알고 있는 최신 정보 기반 답변
+- 포트폴리오 평가 요청 시 일반적인 분산 투자 원칙 기준으로 조언
+- 마지막에 "※ 본 답변은 투자 참고용이며 투자 권유가 아닙니다." 문구 추가 불필요 (UI에 이미 표시됨)
+- 말투: 친근하고 전문적, 이모지 적절히 사용`;
+
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-haiku-4-5-20251001",
+        max_tokens: 450,
+        system,
+        messages: [{ role: "user", content: question }],
+      }),
+    });
+
+    const data = await res.json() as { content?: { text: string }[]; error?: { message: string } };
+    if (!res.ok || data.error) {
+      return NextResponse.json({ answer: `API 오류: ${data.error?.message ?? res.status}` });
+    }
+    const answer = data.content?.[0]?.text ?? "응답을 가져올 수 없습니다.";
+    return NextResponse.json({ answer });
+  } catch {
+    return NextResponse.json({ answer: "오류가 발생했습니다. 잠시 후 다시 시도해주세요." });
+  }
+}

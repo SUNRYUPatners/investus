@@ -4,26 +4,42 @@ import Link from "next/link";
 import { ShieldCheck, Users, TrendingUp } from "lucide-react";
 import type { Creator } from "@/lib/creators";
 
-export function CreatorCard({ creator }: { creator: Creator }) {
+const RANK_MEDAL = ["🥇", "🥈", "🥉"];
+const RANK_COLORS = ["#FFD700", "#C0C0C0", "#CD7F32"];
+
+export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number }) {
   const { id, nickname, avatar, coverGradient, bio, tags, subscriptionPrice, subscriberCount, annualReturn, portfolio, isVerified, accountBroker } = creator;
   const topHoldings = portfolio.slice(0, 3);
+  const medal = rank != null && rank <= 3 ? RANK_MEDAL[rank - 1] : null;
+  const medalColor = rank != null && rank <= 3 ? RANK_COLORS[rank - 1] : null;
 
   return (
     <Link href={`/creator/${id}`} className="block">
       <div className="rounded-2xl border overflow-hidden transition-all active:scale-[0.98]"
-        style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+        style={{ background: "var(--card)", borderColor: medal ? `${medalColor}44` : "var(--border)" }}>
         {/* Cover gradient bar */}
-        <div className="h-1.5" style={{ background: "var(--mint)", opacity: 0.6 }} />
+        <div className="h-1.5" style={{ background: medal ? medalColor! : "var(--mint)", opacity: medal ? 0.8 : 0.6 }} />
 
         <div className="p-4">
           {/* Top row */}
           <div className="flex items-start gap-3 mb-3">
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-              style={{ background: coverGradient || "var(--bg)" }}>
-              {avatar}
+            <div className="relative w-12 h-12 flex-shrink-0">
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
+                style={{ background: coverGradient || "var(--bg)" }}>
+                {avatar}
+              </div>
+              {medal && (
+                <span className="absolute -top-1.5 -right-1.5 text-base leading-none">{medal}</span>
+              )}
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-1.5 flex-wrap">
+                {rank != null && rank <= 3 && (
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
+                    style={{ background: `${medalColor}22`, color: medalColor! }}>
+                    {rank}위
+                  </span>
+                )}
                 <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{nickname}</span>
                 {isVerified && (
                   <span className="flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded-full"

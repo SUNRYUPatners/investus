@@ -1,15 +1,27 @@
 import { NextResponse } from "next/server";
 import { fetchFinnhubBatch, fetchFinnhubRawQuote, type FinnhubRawQuote } from "@/lib/finnhub";
-import { fetchFutureV8 } from "@/lib/yahooFinance";
+import { fetchBatchQuotes, fetchFutureV8, fetchQuoteV8, type YFQuote } from "@/lib/yahooFinance";
+
+// YF 프록시 (YF_PROXY_URL 설정 시 CF Worker 경유)
+const YF_PROXY = process.env.YF_PROXY_URL ?? "";
+function yfProxyFetch(url: string, init: RequestInit = {}): Promise<Response> {
+  if (YF_PROXY) return fetch(`${YF_PROXY}?url=${encodeURIComponent(url)}`, init);
+  return fetch(url, { headers: { "User-Agent": "Mozilla/5.0", Accept: "application/json" }, ...init });
+}
 import { fetchStooqFuture } from "@/lib/stooq";
 import { isMarketOpen } from "@/lib/marketHours";
+import { kvGetDetail, kvSetDetail, kvGetPrice, kvSetPrice } from "@/lib/kv";
 import {
   mockQuotes, mockFutures,
   type IndexQuote, type Quote, type FutureItem,
 } from "@/lib/api";
 
+const KV_MARKET_KEY = "market-data:v3";
+
 // Next.js ISR 비활성 — Cache-Control 헤더를 직접 관리
 export const dynamic = "force-dynamic";
+// 순차 chunked v8 fetch로 최대 ~15s 소요 가능 → 30s 허용
+export const maxDuration = 30;
 
 // ── In-memory cache ───────────────────────────────────────────────────────
 // 장 마감 중: 캐시 무기한 서빙 (외부 API 호출 없음)
@@ -36,6 +48,7 @@ function syntheticSparkline(price: number, changePercent: number): number[] {
 
 type ForexRates = {
   krw:          number | null;
+  krwPrev:      number | null;
   eurusd:       number | null;
   eurusdChange: number;
   usdjpy:       number | null;
@@ -43,33 +56,40 @@ type ForexRates = {
 };
 
 async function getForexRates(): Promise<ForexRates> {
-  const out: ForexRates = { krw: null, eurusd: null, eurusdChange: 0, usdjpy: null, usdjpyChange: 0 };
+  const out: ForexRates = { krw: null, krwPrev: null, eurusd: null, eurusdChange: 0, usdjpy: null, usdjpyChange: 0 };
+
+  // KRW=X via YF 프록시 — Apple과 동일 소스, 변화율까지 정확
+  const [krwYF, fxLatest, fxPrev] = await Promise.allSettled([
+    fetchQuoteV8("KRW=X"),
+    fetch("https://api.frankfurter.app/latest?from=USD&to=EUR,JPY"),
+    (() => {
+      const prevDate = new Date();
+      prevDate.setDate(prevDate.getDate() - 1);
+      if (prevDate.getDay() === 0) prevDate.setDate(prevDate.getDate() - 2);
+      if (prevDate.getDay() === 6) prevDate.setDate(prevDate.getDate() - 1);
+      return fetch(`https://api.frankfurter.app/${prevDate.toISOString().split("T")[0]}?from=USD&to=EUR,JPY`);
+    })(),
+  ]);
+
+  // KRW: YF primary (KRW=X), open.er-api fallback
+  if (krwYF.status === "fulfilled" && krwYF.value && krwYF.value.price > 0) {
+    out.krw     = krwYF.value.price;
+    out.krwPrev = krwYF.value.price - krwYF.value.change; // change = price - prev
+  } else {
+    // fallback: open.er-api (변화율 정보 없음)
+    try {
+      const r = await fetch("https://open.er-api.com/v6/latest/USD");
+      if (r.ok) { const d = await r.json(); out.krw = d?.rates?.KRW ?? null; }
+    } catch { /* ignore */ }
+  }
+
+  // EUR/USD, USD/JPY via frankfurter
   try {
-    // Previous business day (go back up to 5 days for weekends)
-    const prevDate = new Date();
-    prevDate.setDate(prevDate.getDate() - 1);
-    if (prevDate.getDay() === 0) prevDate.setDate(prevDate.getDate() - 2); // Sun → Fri
-    if (prevDate.getDay() === 6) prevDate.setDate(prevDate.getDate() - 1); // Sat → Fri
-    const prevStr = prevDate.toISOString().split("T")[0];
-
-    const [usdRes, fxLatest, fxPrev] = await Promise.all([
-      fetch("https://open.er-api.com/v6/latest/USD"),
-      fetch("https://api.frankfurter.app/latest?from=USD&to=EUR,JPY"),
-      fetch(`https://api.frankfurter.app/${prevStr}?from=USD&to=EUR,JPY`),
-    ]);
-
-    const usd  = usdRes.ok  ? await usdRes.json()  : null;
-    const now  = fxLatest.ok ? await fxLatest.json() : null;
-    const prev = fxPrev.ok   ? await fxPrev.json()   : null;
-
-    out.krw = usd?.rates?.KRW ?? null;
-
+    const now  = fxLatest.status  === "fulfilled" && fxLatest.value.ok  ? await fxLatest.value.json()  : null;
+    const prev = fxPrev.status    === "fulfilled" && fxPrev.value.ok    ? await fxPrev.value.json()    : null;
     if (now?.rates?.EUR) {
-      const curEur  = now.rates.EUR  as number;
-      const prevEur = (prev?.rates?.EUR as number | undefined) ?? curEur;
-      // EUR/USD = USD per 1 EUR = 1 / (USD per EUR from "from=USD")
-      const curEURUSD  = 1 / curEur;
-      const prevEURUSD = 1 / prevEur;
+      const curEURUSD  = 1 / (now.rates.EUR  as number);
+      const prevEURUSD = prev?.rates?.EUR ? 1 / (prev.rates.EUR as number) : curEURUSD;
       out.eurusd       = curEURUSD;
       out.eurusdChange = prevEURUSD !== 0 ? ((curEURUSD - prevEURUSD) / prevEURUSD) * 100 : 0;
     }
@@ -80,6 +100,7 @@ async function getForexRates(): Promise<ForexRates> {
       out.usdjpyChange = prevJpy !== 0 ? ((curJpy - prevJpy) / prevJpy) * 100 : 0;
     }
   } catch { /* ignore */ }
+
   return out;
 }
 
@@ -167,9 +188,23 @@ export async function GET(req: Request) {
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=3600, stale-while-revalidate=86400";
 
-  // 장 마감 중: 캐시가 있으면 즉시 반환 (API 호출 없음)
+  // 장 마감 중: 인메모리 캐시 → KV → API 순서로 시도
   if (!open && !refresh && _cache) {
     return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
+  }
+  if (!open && !refresh) {
+    const kvData = await kvGetDetail(KV_MARKET_KEY);
+    if (kvData) {
+      const payload = kvData as unknown as CachePayload;
+      // 누락 심볼 있으면 early return 하지 않고 fresh fetch로 진행
+      const allSym  = mockQuotes.map((q) => q.symbol);
+      const kvSyms  = new Set((payload.quotes ?? []).map((q) => q.symbol));
+      const allPresent = allSym.every((s) => kvSyms.has(s));
+      if (allPresent) {
+        _cache = { data: payload, at: Date.now() };
+        return NextResponse.json(payload, { headers: { "Cache-Control": ccHeader } });
+      }
+    }
   }
   // 장 중: 55초 TTL 캐시
   if (!refresh && _cache && Date.now() - _cache.at < LIVE_TTL) {
@@ -181,8 +216,11 @@ export async function GET(req: Request) {
   const stockSymbols = mockQuotes.map((q) => q.symbol);
   const cryptoFHSyms = Object.values(CRYPTO_FH);
 
-  const [fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap] = await Promise.all([
-    fetchFinnhubBatch([...stockSymbols, ...ETF_PROXY_SYMS]), // stocks + ETF proxies
+  const [yfStockQuotes, fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap] = await Promise.all([
+    // v7 배치 → 누락 심볼 순차 chunked v8 (3개씩 200ms 간격, Vercel rate-limit 우회)
+    fetchBatchQuotes(stockSymbols),
+    // Finnhub — ETF 프록시(지수·선물용)만 사용 (주식 가격은 YF v8로 통일)
+    fetchFinnhubBatch([...ETF_PROXY_SYMS]),
     getForexRates(),
     token
       ? Promise.allSettled(cryptoFHSyms.map((s) => fetchFinnhubRawQuote(s)))
@@ -231,13 +269,18 @@ export async function GET(req: Request) {
           const ctrl = new AbortController();
           const tid  = setTimeout(() => ctrl.abort(), 4_000);
           const url  = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=1d&range=5d`;
-          const res  = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0", Accept: "application/json" }, cache: "no-store", signal: ctrl.signal });
+          const res  = await yfProxyFetch(url, { cache: "no-store", signal: ctrl.signal });
           clearTimeout(tid);
           if (!res.ok) return;
-          const meta = (await res.json())?.chart?.result?.[0]?.meta;
+          const json   = await res.json();
+          const result = json?.chart?.result?.[0];
+          const meta   = result?.meta;
           if (!meta?.regularMarketPrice) return;
-          const price = Number(meta.regularMarketPrice);
-          const prev  = Number(meta.chartPreviousClose ?? price);
+          const price  = Number(meta.regularMarketPrice);
+          const isOpen = meta.marketState === "REGULAR";
+          const rawC: unknown[] = result?.indicators?.quote?.[0]?.close ?? [];
+          const closes = rawC.filter((c): c is number => typeof c === "number" && c > 0);
+          const prev   = isOpen ? (closes.at(-1) ?? price) : (closes.at(-2) ?? closes.at(-1) ?? price);
           out.set(sym, { price, change: price - prev, changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0 });
         } catch { /* ignore */ }
       }));
@@ -286,14 +329,14 @@ export async function GET(req: Request) {
 
   const indices: IndexQuote[] = [];
 
-  // USD/KRW — open.er-api.com 기반
+  // USD/KRW — open.er-api.com (현재) + frankfurter.app (전일) 기반
   if (fxRates.krw) {
-    const prev = 1372.50; // rough reference — change% approximate
     const val  = fxRates.krw;
+    const prev = fxRates.krwPrev ?? val; // 전일 실제값, 없으면 변화율 0
     indices.push({
       symbol: "USDKRW", name: "원달러", fullName: "USD/KRW 환율",
-      value: val, change: val - prev, changePercent: ((val - prev) / prev) * 100,
-      sparkline: syntheticSparkline(val, ((val - prev) / prev) * 100),
+      value: val, change: val - prev, changePercent: prev !== 0 ? ((val - prev) / prev) * 100 : 0,
+      sparkline: syntheticSparkline(val, prev !== 0 ? ((val - prev) / prev) * 100 : 0),
       isCurrency: true,
     });
   }
@@ -307,23 +350,40 @@ export async function GET(req: Request) {
     });
   }
 
-  // ── 주식 (Finnhub 실데이터 있는 종목만) ───────────────────────────────
-  const quotes: Quote[] = mockQuotes
-    .map((mock) => {
-      const q = fhMap.get(mock.symbol);
-      if (!q || q.price === 0) return null; // 실데이터 없으면 제외
-      return {
-        symbol:        mock.symbol,
-        name:          mock.name,
-        price:         q.price,
-        change:        q.change,
-        changePercent: q.changePercent,
-        sparkline:     syntheticSparkline(q.price, q.changePercent),
-        volume:        mock.volume,
-        marketCap:     mock.marketCap,
-      } satisfies Quote;
-    })
-    .filter((q): q is Quote => q !== null);
+  // ── 주식: YF → Finnhub → KV → 개별YF 순으로, 어떤 경우도 실종 없음 ──
+  const yfStockMap = new Map(yfStockQuotes.map((q) => [q.symbol, q]));
+
+  const buildStockQuote = (
+    mock: Quote,
+    p: { price: number; change: number; changePercent: number },
+  ): Quote => ({
+    symbol:        mock.symbol,
+    name:          mock.name,
+    price:         p.price,
+    change:        p.change,
+    changePercent: p.changePercent,
+    sparkline:     syntheticSparkline(p.price, p.changePercent),
+    volume:        mock.volume,
+    marketCap:     mock.marketCap,
+  });
+
+  const now = Date.now();
+  const quotes: Quote[] = (await Promise.all(
+    mockQuotes.map(async (mock): Promise<Quote | null> => {
+      // 1) YF v8 결과 (위에서 이미 병렬로 모두 fetch 완료)
+      const yf = yfStockMap.get(mock.symbol);
+      if (yf && yf.price > 0) {
+        kvSetPrice(mock.symbol, { price: yf.price, change: yf.change, changePercent: yf.changePercent, at: now });
+        return buildStockQuote(mock, yf);
+      }
+      // 2) KV persistent cache (전 거래일 종가 — YF 장애 시)
+      const kv = await kvGetPrice(mock.symbol);
+      if (kv && kv.price > 0) {
+        return buildStockQuote(mock, kv);
+      }
+      return null;
+    }),
+  )).filter((q): q is Quote => q !== null);
 
   // ── 선물 ─────────────────────────────────────────────────────────────
   // Build future→ETF change% lookup from Finnhub
@@ -397,9 +457,13 @@ export async function GET(req: Request) {
 
   // 데이터가 있으면 무조건 캐시 저장
   // 불완전 데이터(일부 API 실패): 15초 후 재시도 가능하도록 at을 과거로 설정
+  // 데이터 완전성: 지수 2개 이상 + 선물 10개 이상이면 완전
   const isComplete = quotes.length > 0 && indices.length > 1 && futures.length >= 10;
   if (quotes.length > 0) {
+    // 완전 데이터면 full TTL, 부분 데이터면 15초 후 재시도
     _cache = { data: payload, at: isComplete ? Date.now() : Date.now() - (LIVE_TTL - 15_000) };
+    // KV 저장 — 항상 저장 (전날 종가 보존, 7일 TTL, 서버재시작/콜드스타트 대비)
+    kvSetDetail(KV_MARKET_KEY, payload as unknown as Record<string, unknown>);
   }
 
   return NextResponse.json(payload, {

@@ -9,20 +9,14 @@ const categoryStyle: Record<string, { bg: string; color: string }> = {
   orange: { bg: "rgba(249,115,22,0.12)", color: "#fb923c" },
 };
 
-const categoryEmoji: Record<string, string> = {
-  거시경제: "🏦", 실적: "📈", 기술: "💻", 자동차: "⚡",
-  시장:     "📊", 투자: "💰", 금융: "🏛️", 에너지: "⛽",
-};
-
 export function NewsCard({ item, large = false }: { item: NewsItem; large?: boolean }) {
   const style = categoryStyle[item.categoryColor] ?? categoryStyle.blue;
-  const emoji = categoryEmoji[item.category] ?? "📰";
 
   const inner = (
     <div className="flex items-start gap-3">
-      {/* Thumbnail or emoji */}
+      {/* Thumbnail or color block */}
       {item.image ? (
-        // eslint-disable-next-line @next/next/no-img-element
+        /* eslint-disable-next-line @next/next/no-img-element */
         <img
           src={item.image}
           alt=""
@@ -30,26 +24,13 @@ export function NewsCard({ item, large = false }: { item: NewsItem; large?: bool
         />
       ) : (
         <div
-          className="flex-shrink-0 w-10 rounded-xl flex flex-col items-center justify-center gap-0.5 py-1.5"
+          className="flex-shrink-0 w-10 rounded-xl"
           style={{ background: style.bg, minHeight: large ? 52 : 44 }}
-        >
-          <span className={`${large ? "text-lg" : "text-base"} leading-none`}>{emoji}</span>
-          <span className="text-[8px] font-semibold leading-none" style={{ color: style.color }}>
-            {item.category}
-          </span>
-        </div>
+        />
       )}
 
       {/* Content */}
       <div className="flex-1 min-w-0">
-        {large && item.image && (
-          <span
-            className="text-[8px] font-semibold leading-none px-1.5 py-0.5 rounded mb-1.5 inline-block"
-            style={{ background: style.bg, color: style.color }}
-          >
-            {item.category}
-          </span>
-        )}
         <h3
           className={`font-medium leading-snug ${large ? "text-[14px] line-clamp-3" : "text-[13px] line-clamp-2"}`}
           style={{ color: "var(--text)" }}
@@ -61,12 +42,17 @@ export function NewsCard({ item, large = false }: { item: NewsItem; large?: bool
             {item.summary}
           </p>
         )}
-        <div className="flex items-center gap-1.5 mt-1.5">
+        {/* Source · time · category — all same line, same size */}
+        <div className="flex items-center gap-1.5 mt-1.5 flex-wrap">
           <span className="text-[10px] font-semibold" style={{ color: style.color }}>
             {item.source}
           </span>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>·</span>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{item.time}</span>
+          <span className="text-[10px]" style={{ color: "var(--muted)" }}>·</span>
+          <span className="text-[10px] font-bold uppercase tracking-wide" style={{ color: style.color }}>
+            {item.category}
+          </span>
         </div>
       </div>
     </div>

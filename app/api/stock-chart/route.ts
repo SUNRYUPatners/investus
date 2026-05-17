@@ -69,7 +69,7 @@ async function fetchStooqChart(sym: string, period: string): Promise<ChartResult
     const ctrl = new AbortController();
     const tid  = setTimeout(() => ctrl.abort(), 8_000);
     const res  = await fetch(url, {
-      headers: { "User-Agent": UA_YF, Accept: "text/csv,*/*" },
+      headers: { "User-Agent": "Mozilla/5.0", Accept: "text/csv,*/*" },
       cache: "no-store",
       signal: ctrl.signal,
     });
@@ -112,38 +112,18 @@ const YF_RANGE_INTERVAL: Record<string, { range: string; interval: string }> = {
   "ALL": { range: "max", interval: "1mo" },
 };
 
-const UA_YF = "Mozilla/5.0";
-
-// Yahoo Finance crumb cache (in-memory, ~1h TTL)
-let _yfCrumb: { crumb: string; cookie: string; at: number } | null = null;
-
-async function getYahooCrumb(): Promise<{ crumb: string; cookie: string } | null> {
-  if (_yfCrumb && Date.now() - _yfCrumb.at < 50 * 60_000) return _yfCrumb;
-  try {
-    const r1  = await fetch("https://fc.yahoo.com/", {
-      headers: { "User-Agent": UA_YF },
-      redirect: "follow",
-      cache: "no-store",
-    });
-    // getSetCookie() is in the Fetch spec but not in all Next.js environments
-    const rawCookie = r1.headers.get("set-cookie") ?? "";
-    // Strip flags; keep name=value pairs only
-    const cookie = rawCookie
-      .split(",")
-      .map((seg) => seg.trim().split(";")[0].trim())
-      .filter(Boolean)
-      .join("; ");
-
-    const r2  = await fetch("https://query1.finance.yahoo.com/v1/test/getcrumb", {
-      headers: { "User-Agent": UA_YF, Cookie: cookie, Accept: "*/*" },
-      cache: "no-store",
-    });
-    if (!r2.ok) return null;
-    const crumb = (await r2.text()).trim();
-    if (!crumb || crumb.length < 3) return null;
-    _yfCrumb = { crumb, cookie, at: Date.now() };
-    return _yfCrumb;
-  } catch { return null; }
+// CF Worker 프록시 — Vercel IP 차단 우회 (YF_PROXY_URL 설정 필수)
+const YF_PROXY = process.env.YF_PROXY_URL ?? "";
+function yfProxyFetch(url: string, init: RequestInit = {}): Promise<Response> {
+  if (YF_PROXY) return fetch(`${YF_PROXY}?url=${encodeURIComponent(url)}`, init);
+  return fetch(url, {
+    headers: {
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      Accept: "application/json",
+      Referer: "https://finance.yahoo.com/",
+    },
+    ...init,
+  });
 }
 
 async function fetchYahooChart(rawSym: string, period: string): Promise<ChartResult | null> {
@@ -151,24 +131,12 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
   const cfg   = YF_RANGE_INTERVAL[period];
   if (!cfg) return null;
 
-  const auth  = await getYahooCrumb();
-  const bases = ["https://query2.finance.yahoo.com", "https://query1.finance.yahoo.com"];
-
-  for (const base of bases) {
+  for (const base of ["https://query2.finance.yahoo.com", "https://query1.finance.yahoo.com"]) {
     try {
-      const crumbParam = auth ? `&crumb=${encodeURIComponent(auth.crumb)}` : "";
-      const url = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=${cfg.interval}&range=${cfg.range}&includePrePost=false${crumbParam}`;
+      const url  = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=${cfg.interval}&range=${cfg.range}&includePrePost=false`;
       const ctrl = new AbortController();
       const tid  = setTimeout(() => ctrl.abort(), 8_000);
-      const res  = await fetch(url, {
-        headers: {
-          "User-Agent": UA_YF,
-          Accept: "application/json",
-          ...(auth ? { Cookie: auth.cookie } : {}),
-        },
-        cache: "no-store",
-        signal: ctrl.signal,
-      });
+      const res  = await yfProxyFetch(url, { cache: "no-store", signal: ctrl.signal });
       clearTimeout(tid);
       if (!res.ok) continue;
       const json   = await res.json();
@@ -176,22 +144,50 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
       if (!result?.timestamp || !result?.indicators?.quote?.[0]?.close) continue;
 
       const timestamps: number[] = result.timestamp;
-      const closes: (number | null)[] = result.indicators.quote[0].close;
+      const rawCloses: (number | null)[] = result.indicators.quote[0].close;
+      const rawVolumes: (number | null)[] = result.indicators.quote[0].volume ?? [];
 
       const points = timestamps
-        .map((ts, i) => ({ ts, close: closes[i] ?? NaN, volume: 0 }))
+        .map((ts, i) => ({
+          ts,
+          close:  rawCloses[i]  ?? NaN,
+          volume: rawVolumes[i] ?? 0,
+        }))
         .filter((p) => !isNaN(p.close) && p.close > 0);
 
       if (points.length < 2) continue;
 
-      const meta = result.meta as Record<string, unknown>;
+      const meta   = result.meta as Record<string, unknown>;
+      const price  = Number(meta.regularMarketPrice ?? points[points.length - 1].close);
+      const isOpen = meta.marketState === "REGULAR";
+
+      // 전날 종가: regularMarketPreviousClose > closes 배열 기반 계산 > chartPreviousClose
+      // closes 배열 기반: 1D(interval=5m) 에서는 적용 불가 → 5d daily range 사용
+      let prevClose: number | null = meta.regularMarketPreviousClose
+        ? Number(meta.regularMarketPreviousClose)
+        : null;
+
+      // 1D 차트이고 regularMarketPreviousClose가 없으면 (장 마감/주말) — 5d daily로 보완
+      if (!prevClose && cfg.range === "1d") {
+        try {
+          const dailyUrl = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=1d&range=5d&includePrePost=false`;
+          const dr = await yfProxyFetch(dailyUrl, { cache: "no-store" });
+          if (dr.ok) {
+            const dj = await dr.json();
+            const dc = (dj?.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? []) as (number | null)[];
+            const validDc = dc.filter((c): c is number => typeof c === "number" && c > 0);
+            prevClose = isOpen ? (validDc.at(-1) ?? null) : (validDc.at(-2) ?? null);
+          }
+        } catch { /* ignore */ }
+      }
+
       return {
-        symbol: rawSym,
-        chartPreviousClose: Number(meta.chartPreviousClose ?? points[0].close) || null,
-        regularMarketPrice: Number(meta.regularMarketPrice ?? points[points.length - 1].close) || null,
+        symbol:             rawSym,
+        chartPreviousClose: prevClose ?? (Number(meta.chartPreviousClose ?? points[0].close) || null),
+        regularMarketPrice: price || null,
         points,
       };
-    } catch { /* try next */ }
+    } catch { /* try next base */ }
   }
   return null;
 }
@@ -335,8 +331,11 @@ async function fetchFinnhubMinimalChart(symbol: string): Promise<ChartResult | n
 
 // ── Handler ───────────────────────────────────────────────────────────────
 export async function GET(req: NextRequest) {
-  const symbol = (req.nextUrl.searchParams.get("symbol") ?? "AAPL").toUpperCase();
-  const period = req.nextUrl.searchParams.get("period") ?? "1D";
+  const symbol = (req.nextUrl.searchParams.get("symbol") ?? "AAPL").toUpperCase().slice(0, 12);
+  const VALID_PERIODS = new Set(["1D","YTD","1Y","5Y","10Y","ALL"]);
+  const period = VALID_PERIODS.has(req.nextUrl.searchParams.get("period") ?? "")
+    ? req.nextUrl.searchParams.get("period")!
+    : "1D";
 
   const cKey   = `${symbol}-${period}`;
   const cached = _cache.get(cKey);
@@ -356,40 +355,30 @@ export async function GET(req: NextRequest) {
 
   const isFutureOrCrypto = symbol in YF_SYM;
 
+  // YF via CF 프록시 — primary (모든 종목/선물/지수/크립토)
+  const yahoo = await fetchYahooChart(symbol, period);
+  if (yahoo) {
+    _cache.set(cKey, { data: yahoo, at: Date.now() });
+    return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
+  }
+
+  // TwelveData — fallback (YF 실패 시)
+  const twelve = await fetchTwelveData(symbol, period);
+  if (twelve) {
+    _cache.set(cKey, { data: twelve, at: Date.now() });
+    return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
+  }
+
+  // Stooq — 선물/지수 전용 추가 fallback
   if (isFutureOrCrypto) {
-    // Futures/crypto: TwelveData first (via ETF proxy: GC→GLD, ES→SPY, BTC/USD)
-    // then Yahoo Finance (GC=F, ^GSPC, BTC-USD) as fallback
-    const twelve = await fetchTwelveData(symbol, period);
-    if (twelve) {
-      _cache.set(cKey, { data: twelve, at: Date.now() });
-      return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
-    }
-    const yahoo = await fetchYahooChart(symbol, period);
-    if (yahoo) {
-      _cache.set(cKey, { data: yahoo, at: Date.now() });
-      return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
-    }
     const stooq = await fetchStooqChart(symbol, period);
     if (stooq) {
       _cache.set(cKey, { data: stooq, at: Date.now() });
       return NextResponse.json(stooq, { headers: { "Cache-Control": cc } });
     }
-  } else {
-    // Regular stocks: TwelveData first (reliable, no IP block),
-    // then Yahoo Finance as fallback
-    const twelve = await fetchTwelveData(symbol, period);
-    if (twelve) {
-      _cache.set(cKey, { data: twelve, at: Date.now() });
-      return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
-    }
-    const yahoo = await fetchYahooChart(symbol, period);
-    if (yahoo) {
-      _cache.set(cKey, { data: yahoo, at: Date.now() });
-      return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
-    }
   }
 
-  // Finnhub minimal chart (only for 1D, uses free /quote endpoint)
+  // Finnhub minimal — 1D 최후 수단
   if (period === "1D") {
     const minimal = await fetchFinnhubMinimalChart(symbol);
     if (minimal) {

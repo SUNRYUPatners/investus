@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
-const ADMIN_PW = "investustjsltjsl!99";
+// Token entered at runtime — not bundled
 
 type Application = {
   id: string;
@@ -28,8 +28,12 @@ export default function ApplicationsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState("");
 
-  const login = () => {
-    if (pw === ADMIN_PW) { setAuthed(true); setPwError(false); }
+  const login = async () => {
+    // Validate token against the API — never check it client-side
+    const res = await fetch("/api/admin/verifications", {
+      headers: { Authorization: `Bearer ${pw}` },
+    });
+    if (res.ok) { setAuthed(true); setPwError(false); }
     else { setPwError(true); }
   };
 

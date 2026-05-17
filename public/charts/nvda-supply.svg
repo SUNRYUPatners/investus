@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#76b900" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">NVIDIA · 공급망 동맹</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">삼성·TSMC·마이크론 — 가능한 한 빠르게 확장</text>
+  <!-- NVIDIA Center -->
+  <circle cx="400" cy="225" r="60" fill="rgba(118,185,0,0.15)" stroke="#76b900" stroke-width="2"/>
+  <text x="400" y="218" text-anchor="middle" fill="#76b900" font-size="16" font-family="Arial" font-weight="bold">NVIDIA</text>
+  <text x="400" y="238" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">AI 설계·판매</text>
+  <!-- TSMC -->
+  <circle cx="185" cy="150" r="50" fill="rgba(96,165,250,0.1)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="185" y="145" text-anchor="middle" fill="#60a5fa" font-size="13" font-family="Arial" font-weight="bold">TSMC</text>
+  <text x="185" y="162" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">CoWoS 패키징</text>
+  <line x1="230" y1="177" x2="345" y2="196" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/>
+  <!-- Samsung -->
+  <circle cx="160" cy="310" r="50" fill="rgba(14,165,233,0.1)" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="160" y="305" text-anchor="middle" fill="#0ea5e9" font-size="13" font-family="Arial" font-weight="bold">삼성전자</text>
+  <text x="160" y="322" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">HBM + 패키징</text>
+  <line x1="207" y1="291" x2="343" y2="251" stroke="rgba(14,165,233,0.4)" stroke-width="1.5"/>
+  <!-- Micron -->
+  <circle cx="620" cy="150" r="50" fill="rgba(168,85,247,0.1)" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="620" y="145" text-anchor="middle" fill="#a855f7" font-size="13" font-family="Arial" font-weight="bold">Micron</text>
+  <text x="620" y="162" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">HBM3E 공급</text>
+  <line x1="574" y1="177" x2="458" y2="196" stroke="rgba(168,85,247,0.4)" stroke-width="1.5"/>
+  <!-- SK Hynix -->
+  <circle cx="640" cy="310" r="50" fill="rgba(251,191,36,0.1)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="640" y="305" text-anchor="middle" fill="#fbbf24" font-size="13" font-family="Arial" font-weight="bold">SK하이닉스</text>
+  <text x="640" y="322" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">HBM3E 독점</text>
+  <line x1="594" y1="291" x2="458" y2="251" stroke="rgba(251,191,36,0.4)" stroke-width="1.5"/>
+  <!-- Labels around NVIDIA -->
+  <text x="310" y="185" text-anchor="middle" fill="#60a5fa" font-size="9" font-family="Arial">GPU 제조</text>
+  <text x="310" y="255" text-anchor="middle" fill="#0ea5e9" font-size="9" font-family="Arial">HBM 공급</text>
+  <text x="490" y="185" text-anchor="middle" fill="#a855f7" font-size="9" font-family="Arial">HBM3E</text>
+  <text x="490" y="255" text-anchor="middle" fill="#fbbf24" font-size="9" font-family="Arial">HBM 독점</text>
+  <!-- Bottom insight -->
+  <rect x="30" y="385" width="740" height="38" rx="8" fill="rgba(118,185,0,0.05)" stroke="rgba(118,185,0,0.15)" stroke-width="1"/>
+  <text x="400" y="400" text-anchor="middle" fill="#76b900" font-size="11" font-family="Arial" font-weight="bold">젠슨 황: "가능한 한 빠르게 파트너들과 확장하겠다"</text>
+  <text x="400" y="416" text-anchor="middle" fill="#475569" font-size="10" font-family="Arial">AI 인프라 투자 사이클 2027년까지 지속 — SK하이닉스 최대 수혜</text>
+  <text x="400" y="440" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.13</text>
+</svg>

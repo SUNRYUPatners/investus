@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#1a0a0a"/></linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="100%" stop-color="#dc2626"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#ef4444" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">OPENAI · 개인정보 집단 소송</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Arial" font-weight="bold">ChatGPT 사용자 데이터 → Meta·Google 무단 공유 혐의</text>
+  <!-- Data flow diagram -->
+  <!-- Users box -->
+  <rect x="30" y="100" width="150" height="220" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="105" y="130" text-anchor="middle" fill="#e2e8f0" font-size="28" font-family="Arial">👤</text>
+  <text x="105" y="155" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">ChatGPT</text>
+  <text x="105" y="172" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">사용자</text>
+  <line x1="55" y1="188" x2="155" y2="188" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="105" y="205" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">개인 질문</text>
+  <text x="105" y="220" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">민감한 대화</text>
+  <text x="105" y="235" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">금융 계획</text>
+  <text x="105" y="250" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">의료 정보</text>
+  <text x="105" y="265" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">정치적 견해</text>
+  <text x="105" y="300" text-anchor="middle" fill="#475569" font-size="10" font-family="Arial">비공개 대화</text>
+  <text x="105" y="315" text-anchor="middle" fill="#475569" font-size="10" font-family="Arial">신뢰하며 사용</text>
+  <!-- Arrow 1 -->
+  <line x1="180" y1="210" x2="300" y2="210" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="300,205 315,210 300,215" fill="#ef4444"/>
+  <rect x="180" y="188" width="120" height="22" rx="4" fill="rgba(239,68,68,0.15)"/>
+  <text x="240" y="203" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Arial" font-weight="bold">트래킹 기술 내장</text>
+  <!-- OpenAI box -->
+  <rect x="315" y="100" width="170" height="220" rx="12" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.4)" stroke-width="1.5"/>
+  <text x="400" y="135" text-anchor="middle" fill="#ef4444" font-size="22" font-family="Arial" font-weight="bold">OpenAI</text>
+  <line x1="330" y1="148" x2="470" y2="148" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="400" y="168" text-anchor="middle" fill="#fca5a5" font-size="11" font-family="Arial">데이터 수집·분석</text>
+  <text x="400" y="185" text-anchor="middle" fill="#fca5a5" font-size="11" font-family="Arial">사용자 프로파일링</text>
+  <text x="400" y="202" text-anchor="middle" fill="#fca5a5" font-size="11" font-family="Arial">광고 타겟팅 데이터</text>
+  <text x="400" y="240" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial">"Responsible AI"</text>
+  <text x="400" y="255" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial">표방하면서...</text>
+  <text x="400" y="290" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Arial" font-weight="bold">⚠️ 집단 소송 피고</text>
+  <!-- Arrow 2 - to Meta -->
+  <line x1="485" y1="175" x2="580" y2="145" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="580,140 595,150 578,155" fill="#ef4444"/>
+  <!-- Arrow 3 - to Google -->
+  <line x1="485" y1="245" x2="580" y2="280" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="580,285 595,275 582,268" fill="#ef4444"/>
+  <!-- Meta box -->
+  <rect x="595" y="95" width="170" height="110" rx="12" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+  <text x="680" y="122" text-anchor="middle" fill="#60a5fa" font-size="18" font-family="Arial" font-weight="bold">Meta</text>
+  <text x="680" y="143" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">광고 타겟팅 활용</text>
+  <text x="680" y="158" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">사용자 행동 분석</text>
+  <text x="680" y="190" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Arial" font-weight="bold">공동 피고</text>
+  <!-- Google box -->
+  <rect x="595" y="240" width="170" height="110" rx="12" fill="rgba(234,179,8,0.08)" stroke="rgba(234,179,8,0.3)" stroke-width="1"/>
+  <text x="680" y="267" text-anchor="middle" fill="#fbbf24" font-size="18" font-family="Arial" font-weight="bold">Google</text>
+  <text x="680" y="288" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">광고 타겟팅 활용</text>
+  <text x="680" y="303" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">Analytics 추적 공유</text>
+  <text x="680" y="335" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Arial" font-weight="bold">공동 피고</text>
+  <!-- Bottom -->
+  <rect x="30" y="368" width="740" height="50" rx="8" fill="rgba(239,68,68,0.06)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="400" y="388" text-anchor="middle" fill="#fca5a5" font-size="11" font-family="Arial" font-weight="bold">소송 요지: ChatGPT 비공개 대화를 광고 타겟팅 목적으로 Meta·Google에 무단 공유</text>
+  <text x="400" y="407" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">결과: OpenAI 주가 압박 가능 · 규제 리스크 확대 · 경쟁사(Anthropic·Gemini) 반사 수혜</text>
+  <text x="400" y="435" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.15</text>
+</svg>

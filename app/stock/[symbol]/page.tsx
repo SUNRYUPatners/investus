@@ -1,11 +1,12 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { StockChart } from "@/components/StockChart";
 import { NewsCard } from "@/components/NewsCard";
 import { ChevronLeft } from "lucide-react";
+import { useWatchlist } from "@/hooks/useWatchlist";
 import type { NewsItem } from "@/lib/api";
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -80,14 +81,37 @@ export default function StockPage({
   const { symbol } = use(params);
   const upper      = symbol.toUpperCase();
   const router     = useRouter();
+  const { list: watchlist, toggle: toggleWatchlist } = useWatchlist();
 
   const [detail, setDetail]           = useState<Detail | null>(null);
   const [news,   setNews]             = useState<NewsItem[]>([]);
   const [detailLoading, setDetailLoading] = useState(true);
   const [detailError, setDetailError] = useState(false);
 
+  const fetchDetailRef = useRef<() => void>(() => {});
+
+  // market-data-cache의 해당 심볼 가격 조회 (홈탭과 동일한 숫자 보장)
+  const getMarketCachePrice = (): { price: number; change: number; changePercent: number } | null => {
+    try {
+      const raw = localStorage.getItem("market-data-cache");
+      if (!raw) return null;
+      const md = JSON.parse(raw) as {
+        quotes?: { symbol: string; price: number; change: number; changePercent: number }[];
+        indices?: { symbol: string; value: number; change: number; changePercent: number }[];
+      };
+      const q = md?.quotes?.find((q) => q.symbol === upper);
+      if (q && q.price > 0) return { price: q.price, change: q.change, changePercent: q.changePercent };
+      const idx = md?.indices?.find((i) => i.symbol === upper);
+      if (idx && idx.value > 0) return { price: idx.value, change: idx.change, changePercent: idx.changePercent };
+    } catch { /* ignore */ }
+    return null;
+  };
+
   const fetchDetail = () => {
     const cacheKey = `stock-detail-${upper}`;
+
+    // 홈탭과 동일한 가격: market-data-cache에서 먼저 읽기
+    const marketPrice = getMarketCachePrice();
 
     // Load cached detail first — prevents skeleton flash on revisit
     let hasCached = false;
@@ -95,20 +119,36 @@ export default function StockPage({
       const raw = localStorage.getItem(cacheKey);
       if (raw) {
         const d = JSON.parse(raw) as Detail;
-        if (d?.price) { setDetail(d); setDetailLoading(false); hasCached = true; }
+        if (d?.price) {
+          // market-data 캐시 가격이 있으면 덮어쓰기 (홈탭·상단바·차트 일치)
+          setDetail(marketPrice ? { ...d, ...marketPrice } : d);
+          setDetailLoading(false);
+          hasCached = true;
+        }
       }
     } catch { /* ignore */ }
 
-    if (!hasCached) setDetailLoading(true); // only show spinner if nothing cached
+    // market-data 캐시 가격만 있고 detail 캐시 없으면 미리 가격 표시
+    if (!hasCached && marketPrice) {
+      setDetail((prev) => prev
+        ? { ...prev, ...marketPrice }
+        : { symbol: upper, name: upper, exchange: "US", currency: "USD", ...marketPrice,
+            open: null, high: null, low: null, volume: null, pe: null, marketCap: null,
+            week52High: null, week52Low: null, avgVolume: null, dividendYield: null, beta: null, eps: null });
+      setDetailLoading(false);
+      hasCached = true;
+    }
 
-    // If market is closed and we have cached data, skip fresh fetch
-    if (!isMarketOpen() && hasCached) return;
+    if (!hasCached) setDetailLoading(true);
 
     setDetailError(false);
-    fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`)
+    fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`, { cache: "no-store" })
       .then((r) => { if (!r.ok) throw new Error("no data"); return r.json(); })
       .then((d: Detail) => {
-        setDetail(d);
+        // market-data 캐시 가격으로 덮어쓰기 — 홈탭과 숫자 일치
+        const latestMarketPrice = getMarketCachePrice();
+        const final = latestMarketPrice ? { ...d, ...latestMarketPrice } : d;
+        setDetail(final);
         setDetailLoading(false);
         try { localStorage.setItem(cacheKey, JSON.stringify(d)); } catch { /* ignore */ }
       })
@@ -119,13 +159,25 @@ export default function StockPage({
       });
   };
 
+  fetchDetailRef.current = fetchDetail;
+
   useEffect(() => {
-    fetchDetail();
+    fetchDetailRef.current();
 
     fetch(`/api/stock-news?symbol=${encodeURIComponent(upper)}`)
       .then((r) => r.json())
       .then(setNews)
       .catch(() => {});
+
+    // 장중 60초마다 자동 갱신 — market-data-cache 가격 먼저 반영 후 API 호출
+    const timer = setInterval(() => {
+      if (!isMarketOpen()) return;
+      const mp = getMarketCachePrice();
+      if (mp) setDetail((prev) => prev ? { ...prev, ...mp } : prev);
+      fetchDetailRef.current();
+    }, 60_000);
+    return () => clearInterval(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [upper]);
 
   const isUp  = (detail?.changePercent ?? 0) >= 0;
@@ -154,14 +206,30 @@ export default function StockPage({
       <Header />
 
       <main className="max-w-[480px] lg:max-w-2xl mx-auto pb-24 lg:pb-10">
-        {/* Back button */}
-        <div className="px-4 pt-4 pb-2">
+        {/* Back button + watchlist star */}
+        <div className="px-4 pt-4 pb-2 flex items-center justify-between">
           <button
             onClick={() => router.back()}
             className="inline-flex items-center gap-1 text-xs"
             style={{ color: "var(--muted)" }}
           >
             <ChevronLeft className="w-3.5 h-3.5" /> 뒤로
+          </button>
+          <button
+            onClick={() => toggleWatchlist(upper)}
+            className="w-9 h-9 flex items-center justify-center rounded-xl active:scale-90 transition-transform"
+            style={{ background: "var(--card)" }}
+            aria-label={watchlist.includes(upper) ? "관심종목 제거" : "관심종목 추가"}
+          >
+            <span
+              className="text-xl leading-none"
+              style={{
+                color: watchlist.includes(upper) ? "#facc15" : "var(--border)",
+                filter: watchlist.includes(upper) ? "drop-shadow(0 0 5px #facc15)" : "none",
+              }}
+            >
+              ★
+            </span>
           </button>
         </div>
 
@@ -221,7 +289,28 @@ export default function StockPage({
           className="mx-4 rounded-2xl border overflow-hidden mb-4"
           style={{ background: "var(--card)", borderColor: "var(--border)" }}
         >
-          <StockChart symbol={upper} />
+          <StockChart
+            symbol={upper}
+            livePrice={detail?.price}
+            liveChange={detail?.change}
+            liveChangePercent={detail?.changePercent}
+            onPriceLoaded={(price, change, changePercent) => {
+              // stock-detail이 없을 때 차트 데이터로 가격 표시
+              setDetail((prev) => {
+                if (prev && prev.price > 0) return prev;
+                return {
+                  symbol: upper, name: prev?.name ?? upper,
+                  exchange: prev?.exchange ?? "US", currency: prev?.currency ?? "USD",
+                  price, change, changePercent,
+                  open: null, high: null, low: null, volume: null,
+                  pe: null, marketCap: null, week52High: null, week52Low: null,
+                  avgVolume: null, dividendYield: null, beta: null, eps: null,
+                };
+              });
+              setDetailError(false);
+              setDetailLoading(false);
+            }}
+          />
         </div>
 
         {/* ── 주요 지표 ── */}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">TESLA TERRAFAB × TSMC</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">반도체 자립화 — NVIDIA 플레이북 그대로</text>
+  <!-- Left: Tesla verticals -->
+  <rect x="30" y="88" width="330" height="280" rx="12" fill="rgba(96,165,250,0.04)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="195" y="112" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">테슬라 자립화 3단계</text>
+  <line x1="50" y1="120" x2="340" y2="120" stroke="rgba(96,165,250,0.1)" stroke-width="1"/>
+  <rect x="55" y="135" width="280" height="45" rx="6" fill="rgba(0,229,160,0.1)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <text x="195" y="152" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">① 배터리 자립 ✓</text>
+  <text x="195" y="169" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">4680 셀 자체 생산 (완료)</text>
+  <rect x="55" y="192" width="280" height="45" rx="6" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <text x="195" y="209" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">② AI칩 자체 설계 ✓</text>
+  <text x="195" y="226" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">Dojo D1, HW5 자체 설계</text>
+  <rect x="55" y="249" width="280" height="45" rx="6" fill="rgba(251,191,36,0.1)" stroke="rgba(251,191,36,0.3)" stroke-width="1.5"/>
+  <text x="195" y="266" text-anchor="middle" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">③ Terrafab 생산 내재화 ←</text>
+  <text x="195" y="283" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">TSMC 애리조나팹과 협력</text>
+  <text x="195" y="318" text-anchor="middle" fill="#e2e8f0" font-size="10" font-family="Arial">머스크 = NVIDIA 전략 그대로 복사</text>
+  <text x="195" y="335" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">설계→외주제조→내재화 순서</text>
+  <!-- Right: TSMC investment -->
+  <rect x="380" y="88" width="390" height="280" rx="12" fill="rgba(96,165,250,0.04)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="575" y="112" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">TSMC 애리조나 투자 계획</text>
+  <line x1="400" y1="120" x2="750" y2="120" stroke="rgba(96,165,250,0.1)" stroke-width="1"/>
+  <!-- Bar chart -->
+  <text x="450" y="155" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">기존 팹</text>
+  <rect x="400" y="160" width="100" height="80" rx="4" fill="rgba(96,165,250,0.4)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="450" y="254" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">$12B</text>
+  <text x="575" y="140" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="Arial" font-weight="bold">추가 투자</text>
+  <rect x="520" y="145" width="110" height="95" rx="4" fill="rgba(251,191,36,0.5)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="575" y="254" text-anchor="middle" fill="#fbbf24" font-size="12" font-family="Arial" font-weight="bold">+$20B</text>
+  <text x="700" y="148" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial">미래팹</text>
+  <rect x="650" y="152" width="80" height="88" rx="4" fill="rgba(0,229,160,0.3)" stroke="#00e5a0" stroke-width="1"/>
+  <text x="690" y="254" text-anchor="middle" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">+$2.5B</text>
+  <line x1="400" y1="270" x2="750" y2="270" stroke="rgba(96,165,250,0.1)" stroke-width="1"/>
+  <text x="575" y="293" text-anchor="middle" fill="#e2e8f0" font-size="11" font-family="Arial">테슬라·스페이스X 공식 파트너</text>
+  <text x="575" y="312" text-anchor="middle" fill="#fbbf24" font-size="12" font-family="Arial" font-weight="bold">총 $34.5B 애리조나 AI팹 투자</text>
+  <text x="575" y="348" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">미국 내 AI칩 생산 내재화 → 관세 리스크 ↓</text>
+  <!-- Bottom -->
+  <rect x="30" y="388" width="740" height="34" rx="6" fill="rgba(255,255,255,0.02)"/>
+  <text x="400" y="409" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">Terrafab × TSMC = 테슬라가 AI+에너지+로보틱스 복합 플랫폼으로 재평가받는 전환점</text>
+  <text x="400" y="440" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.13</text>
+</svg>

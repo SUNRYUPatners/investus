@@ -1,11 +1,13 @@
 import { NextResponse } from "next/server";
 
-const YF_BASE = "https://query1.finance.yahoo.com";
+const YF_BASE  = "https://query1.finance.yahoo.com";
 const YF_BASE2 = "https://query2.finance.yahoo.com";
 
 export async function GET() {
+  if (process.env.NODE_ENV !== "development")
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+
   const results: Record<string, unknown> = {};
-  
   for (const base of [YF_BASE, YF_BASE2]) {
     const url = `${base}/v8/finance/chart/CL%3DF?interval=1d&range=5d&includePrePost=false`;
     try {
@@ -20,16 +22,10 @@ export async function GET() {
       });
       const json = await res.json();
       const meta = json?.chart?.result?.[0]?.meta;
-      results[base] = {
-        status: res.status,
-        ok: res.ok,
-        price: meta?.regularMarketPrice ?? null,
-        error: json?.chart?.error ?? null,
-      };
+      results[base] = { status: res.status, ok: res.ok, price: meta?.regularMarketPrice ?? null, error: json?.chart?.error ?? null };
     } catch (e) {
       results[base] = { error: String(e) };
     }
   }
-  
   return NextResponse.json(results);
 }

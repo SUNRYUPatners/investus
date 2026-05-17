@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050a18"/><stop offset="100%" stop-color="#0a1428"/></linearGradient>
+    <linearGradient id="star" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+    <linearGradient id="orb" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Stars background -->
+  <circle cx="50" cy="30" r="1" fill="rgba(255,255,255,0.4)"/><circle cx="150" cy="60" r="0.8" fill="rgba(255,255,255,0.3)"/><circle cx="700" cy="25" r="1.2" fill="rgba(255,255,255,0.5)"/><circle cx="750" cy="80" r="0.8" fill="rgba(255,255,255,0.3)"/><circle cx="600" cy="40" r="1" fill="rgba(255,255,255,0.4)"/><circle cx="250" cy="20" r="0.6" fill="rgba(255,255,255,0.3)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">SPACEX · 궤도 데이터센터</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">스타링크를 넘어서는 새 수익원</text>
+  <!-- Chart area -->
+  <rect x="40" y="80" width="500" height="300" rx="4" fill="none"/>
+  <!-- Grid lines -->
+  <line x1="100" y1="90" x2="540" y2="90" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="100" y1="155" x2="540" y2="155" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="100" y1="220" x2="540" y2="220" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="100" y1="285" x2="540" y2="285" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="100" y1="350" x2="540" y2="350" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Y-axis labels -->
+  <text x="95" y="94" text-anchor="end" fill="#475569" font-size="10" font-family="Arial">$200B</text>
+  <text x="95" y="159" text-anchor="end" fill="#475569" font-size="10" font-family="Arial">$150B</text>
+  <text x="95" y="224" text-anchor="end" fill="#475569" font-size="10" font-family="Arial">$100B</text>
+  <text x="95" y="289" text-anchor="end" fill="#475569" font-size="10" font-family="Arial">$50B</text>
+  <text x="95" y="354" text-anchor="end" fill="#475569" font-size="10" font-family="Arial">$0</text>
+  <!-- Starlink bars -->
+  <rect x="120" y="298" width="60" height="52" fill="url(#star)" rx="4"/>
+  <rect x="200" y="285" width="60" height="65" fill="url(#star)" rx="4"/>
+  <rect x="280" y="264" width="60" height="86" fill="url(#star)" rx="4"/>
+  <rect x="360" y="233" width="60" height="117" fill="url(#star)" rx="4"/>
+  <rect x="440" y="194" width="60" height="156" fill="url(#star)" rx="4"/>
+  <!-- Orbital DC bars (on top, projected) -->
+  <rect x="360" y="298" width="60" height="35" rx="4" fill="url(#orb)" opacity="0.7"/>
+  <rect x="440" y="246" width="60" height="52" rx="4" fill="url(#orb)" opacity="0.8"/>
+  <!-- X-axis labels -->
+  <text x="150" y="368" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2024</text>
+  <text x="230" y="368" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2025</text>
+  <text x="310" y="368" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2026E</text>
+  <text x="390" y="368" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2027E</text>
+  <text x="470" y="368" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2028E</text>
+  <!-- Legend -->
+  <rect x="100" y="380" width="12" height="12" rx="2" fill="url(#star)"/>
+  <text x="118" y="391" fill="#60a5fa" font-size="11" font-family="Arial">스타링크 수익</text>
+  <rect x="230" y="380" width="12" height="12" rx="2" fill="url(#orb)"/>
+  <text x="248" y="391" fill="#c084fc" font-size="11" font-family="Arial">궤도 데이터센터 (예상)</text>
+  <!-- Right panel -->
+  <rect x="565" y="80" width="215" height="290" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="672" y="108" text-anchor="middle" fill="#94a3b8" font-size="12" font-family="Arial" font-weight="bold">궤도 DC 핵심 지표</text>
+  <line x1="580" y1="118" x2="765" y2="118" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="580" y="142" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold">월 임대 단가</text>
+  <text x="765" y="142" text-anchor="end" fill="#e2e8f0" font-size="16" font-family="Arial" font-weight="bold">$178M</text>
+  <text x="765" y="157" text-anchor="end" fill="#475569" font-size="10" font-family="Arial">/월 거의 순이익</text>
+  <line x1="580" y1="170" x2="765" y2="170" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="580" y="192" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold">스타링크 구독</text>
+  <text x="765" y="192" text-anchor="end" fill="#e2e8f0" font-size="14" font-family="Arial" font-weight="bold">12M+</text>
+  <text x="765" y="207" text-anchor="end" fill="#475569" font-size="10" font-family="Arial">160개국+</text>
+  <line x1="580" y1="220" x2="765" y2="220" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="580" y="242" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold">연간 계약가</text>
+  <text x="765" y="242" text-anchor="end" fill="#e2e8f0" font-size="14" font-family="Arial" font-weight="bold">$90K</text>
+  <text x="765" y="257" text-anchor="end" fill="#475569" font-size="10" font-family="Arial">/12개월</text>
+  <line x1="580" y1="270" x2="765" y2="270" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="580" y="295" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">"스타링크보다 크다"</text>
+  <text x="580" y="313" fill="#475569" font-size="10" font-family="Arial">— Elon Musk, 2026.05</text>
+  <text x="400" y="430" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.15</text>
+</svg>

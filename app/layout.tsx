@@ -47,8 +47,7 @@ export const viewport: Viewport = {
   themeColor: "#00e5a0",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  viewportFit: "cover", // env(safe-area-inset-bottom) requires this on iOS
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

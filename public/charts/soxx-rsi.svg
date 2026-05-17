@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#ef4444" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">SOXX · Jefferies 경고</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">RSI 81.1 과매수 — 반도체 47% 실적 미스 전망</text>
+  <!-- RSI gauge -->
+  <text x="200" y="92" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">SOXX RSI 지표</text>
+  <!-- RSI bar background -->
+  <rect x="55" y="105" width="300" height="30" rx="6" fill="rgba(255,255,255,0.05)"/>
+  <!-- Green zone 0-30 -->
+  <rect x="55" y="105" width="90" height="30" rx="6" fill="rgba(0,229,160,0.3)"/>
+  <text x="100" y="125" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial">과매도</text>
+  <!-- Yellow zone 30-70 -->
+  <rect x="145" y="105" width="120" height="30" fill="rgba(251,191,36,0.3)"/>
+  <text x="205" y="125" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="Arial">중립</text>
+  <!-- Red zone 70-100 -->
+  <rect x="265" y="105" width="90" height="30" rx="6" fill="rgba(239,68,68,0.4)"/>
+  <text x="310" y="125" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Arial">과매수</text>
+  <!-- Current marker at ~81 -->
+  <rect x="292" y="100" width="3" height="40" rx="1" fill="#ffffff"/>
+  <text x="294" y="97" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Arial" font-weight="bold">81.1 ↑</text>
+  <!-- Labels -->
+  <text x="55" y="148" fill="#475569" font-size="9" font-family="Arial">0</text>
+  <text x="145" y="148" fill="#475569" font-size="9" font-family="Arial">30</text>
+  <text x="265" y="148" fill="#475569" font-size="9" font-family="Arial">70</text>
+  <text x="355" y="148" fill="#475569" font-size="9" font-family="Arial">100</text>
+  <!-- Historical context -->
+  <text x="200" y="175" text-anchor="middle" fill="#fca5a5" font-size="11" font-family="Arial">2019년 7월 이후 최고 과매수 수준</text>
+  <!-- Vulnerable vs Strong segment chart -->
+  <text x="200" y="210" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">반도체 세그먼트 전망</text>
+  <rect x="55" y="222" width="290" height="22" rx="4" fill="rgba(239,68,68,0.5)"/>
+  <text x="200" y="237" text-anchor="middle" fill="#fca5a5" font-size="11" font-family="Arial" font-weight="bold">⚠ PC·모바일·차량용 (47% 미스 위험)</text>
+  <rect x="55" y="255" width="180" height="22" rx="4" fill="rgba(0,229,160,0.5)"/>
+  <text x="145" y="270" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">✓ AI 가속기·HBM (강세 지속)</text>
+  <rect x="55" y="288" width="140" height="22" rx="4" fill="rgba(0,229,160,0.35)"/>
+  <text x="125" y="303" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">✓ 광통신 반도체</text>
+  <!-- Right panel: Jefferies details -->
+  <rect x="380" y="88" width="390" height="290" rx="12" fill="rgba(239,68,68,0.04)" stroke="rgba(239,68,68,0.15)" stroke-width="1"/>
+  <text x="575" y="112" text-anchor="middle" fill="#fca5a5" font-size="12" font-family="Arial" font-weight="bold">Jefferies 리포트</text>
+  <line x1="400" y1="120" x2="750" y2="120" stroke="rgba(239,68,68,0.15)" stroke-width="1"/>
+  <text x="400" y="140" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">과매수 4가지 근거</text>
+  <text x="400" y="158" fill="#e2e8f0" font-size="10" font-family="Arial">① 선행 PER 60~80배 (밸류 스트레치)</text>
+  <text x="400" y="176" fill="#e2e8f0" font-size="10" font-family="Arial">② NVDA·AMD 상위 2사에 수요 집중</text>
+  <text x="400" y="194" fill="#e2e8f0" font-size="10" font-family="Arial">③ PC·스마트폰 재고 정상화 지연</text>
+  <text x="400" y="212" fill="#e2e8f0" font-size="10" font-family="Arial">④ 관세 공급망 재편 비용 미반영</text>
+  <line x1="400" y1="225" x2="750" y2="225" stroke="rgba(239,68,68,0.1)" stroke-width="1"/>
+  <text x="400" y="245" fill="#fbbf24" font-size="10" font-family="Arial" font-weight="bold">투자 전략</text>
+  <text x="400" y="263" fill="#e2e8f0" font-size="10" font-family="Arial">• SOXX 비중 과대: 단기 차익 실현 고려</text>
+  <text x="400" y="281" fill="#e2e8f0" font-size="10" font-family="Arial">• NVDA·AVGO·AMAT로 집중 재편</text>
+  <text x="400" y="299" fill="#e2e8f0" font-size="10" font-family="Arial">• RSI 70+ + 비AI 매출 비중 높은 종목 주의</text>
+  <line x1="400" y1="312" x2="750" y2="312" stroke="rgba(239,68,68,0.1)" stroke-width="1"/>
+  <text x="575" y="335" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Arial" font-weight="bold">AI 직접 수혜 vs 낙수 기대 — 양극화 심화</text>
+  <text x="575" y="353" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">종목 선별이 그 어느 때보다 중요한 시점</text>
+  <!-- Bottom -->
+  <rect x="30" y="398" width="740" height="30" rx="6" fill="rgba(255,255,255,0.02)"/>
+  <text x="400" y="418" text-anchor="middle" fill="#475569" font-size="11" font-family="Arial">ATH 경신 속에서도 고평가 비AI 반도체는 실적 시즌에 실망을 줄 수 있다</text>
+  <text x="400" y="440" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.14</text>
+</svg>

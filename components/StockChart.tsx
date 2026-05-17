@@ -78,7 +78,19 @@ function writeCache(symbol: string, period: string, data: ChartData) {
   try { localStorage.setItem(cacheKey(symbol, period), JSON.stringify(data)); } catch { /* ignore */ }
 }
 
-export function StockChart({ symbol }: { symbol: string }) {
+export function StockChart({
+  symbol,
+  livePrice,
+  liveChange,
+  liveChangePercent,
+  onPriceLoaded,
+}: {
+  symbol: string;
+  livePrice?: number;
+  liveChange?: number;
+  liveChangePercent?: number;
+  onPriceLoaded?: (price: number, change: number, changePercent: number) => void;
+}) {
   const t    = useLocale();
   const lc   = useLocaleCode();
   const [period, setPeriod]   = useState<Period>("1D");
@@ -118,6 +130,20 @@ export function StockChart({ symbol }: { symbol: string }) {
         setLoading(false);
         setFetchFailed(false);
         writeCache(sym, per, d);
+        // 1D 차트에서 가격 추출 — stock-detail 실패 시 폴백으로 사용
+        if (per === "1D" && onPriceLoaded) {
+          const lastClose = d.points[d.points.length - 1]?.close;
+          const prev      = d.chartPreviousClose;
+          if (lastClose && lastClose > 0 && prev && prev > 0) {
+            const change        = lastClose - prev;
+            const changePercent = (change / prev) * 100;
+            onPriceLoaded(lastClose, change, changePercent);
+          } else if (d.regularMarketPrice && d.regularMarketPrice > 0 && prev && prev > 0) {
+            const change        = d.regularMarketPrice - prev;
+            const changePercent = (change / prev) * 100;
+            onPriceLoaded(d.regularMarketPrice, change, changePercent);
+          }
+        }
       })
       .catch(() => {
         setLoading(false);
@@ -172,9 +198,6 @@ export function StockChart({ symbol }: { symbol: string }) {
   }
 
   const base    = period === "1D" ? (data?.chartPreviousClose ?? prices[0]) : prices[0];
-  const last    = prices[N - 1] ?? 0;
-  const isUp    = last >= (base ?? last);
-  const color   = isUp ? UP : DOWN;
 
   const activeIdx   = hover ?? N - 1;
   const activePrice = prices[activeIdx] ?? 0;
@@ -182,6 +205,15 @@ export function StockChart({ symbol }: { symbol: string }) {
   const activeTs    = pts[activeIdx]?.ts ?? 0;
   const chgFromBase = base ? activePrice - base : 0;
   const pctFromBase = base ? (chgFromBase / base) * 100 : 0;
+
+  // When not hovering, show live price from parent (same source as page header)
+  const showLive      = hover == null && livePrice != null;
+  const dispPrice     = showLive ? livePrice!                  : activePrice;
+  const dispChange    = showLive ? (liveChange    ?? chgFromBase)    : chgFromBase;
+  const dispChangePct = showLive ? (liveChangePercent ?? pctFromBase) : pctFromBase;
+
+  const isUp  = dispChangePct >= 0;
+  const color = isUp ? UP : DOWN;
 
   const yTicks = [0, 0.333, 0.667, 1].map((t) => ({
     y:     PAD.top + CH * (1 - t),
@@ -237,13 +269,13 @@ export function StockChart({ symbol }: { symbol: string }) {
           <>
             <div className="flex items-baseline gap-2 flex-wrap">
               <span className="text-2xl font-bold font-mono-num" style={{ color: "var(--text)" }}>
-                ${activePrice.toFixed(2)}
+                ${dispPrice.toFixed(2)}
               </span>
               <span className="text-sm font-mono-num" style={{ color }}>
-                {chgFromBase >= 0 ? "+" : ""}
-                {chgFromBase.toFixed(2)}&nbsp;
-                ({pctFromBase >= 0 ? "+" : ""}
-                {pctFromBase.toFixed(2)}%)
+                {dispChange >= 0 ? "+" : ""}
+                {dispChange.toFixed(2)}&nbsp;
+                ({dispChangePct >= 0 ? "+" : ""}
+                {dispChangePct.toFixed(2)}%)
               </span>
             </div>
             {hover != null && activeTs > 0 && (

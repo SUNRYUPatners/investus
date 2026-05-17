@@ -74,7 +74,7 @@ const FAQS = [
     items: [
       {
         q: "관심종목은 어떻게 저장되나요?",
-        a: "관심종목은 기기의 로컬 저장소(localStorage)에 저장됩니다. 로그인과 무관하게 동작하며, 브라우저 캐시를 지우거나 다른 기기에서 접속하면 초기화됩니다. 향후 계정 연동 동기화를 지원할 예정입니다.",
+        a: "관심종목은 로그인 계정에 연동되어 저장됩니다. 로그인 상태에서는 다른 기기에서 접속해도 동일한 관심종목 목록이 유지됩니다. 비로그인 이용 시에는 현재 기기에만 저장됩니다.",
       },
       {
         q: "앱으로 다운로드해서 사용할 수 있나요?",
@@ -86,7 +86,7 @@ const FAQS = [
       },
       {
         q: "버그나 오류를 발견했을 때 어떻게 신고하나요?",
-        a: "더보기 탭 → '피드백 보내기'를 통해 오류 신고, 기능 제안, 문의를 보내주세요. 로그인 후 이용 가능하며, X(구 트위터) @hnryu_cio로 직접 DM을 보내셔도 됩니다.",
+        a: "더보기 탭 → '피드백 보내기'를 통해 오류 신고, 기능 제안, 문의를 보내주세요. 로그인 후 이용 가능하며, sunryupatners@gmail.com으로 이메일을 보내셔도 됩니다.",
       },
     ],
   },
@@ -157,7 +157,8 @@ export default function FAQPage() {
         <div className="mt-8 rounded-2xl p-4 border text-center" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>추가 문의</p>
           <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-            X(구 트위터) <span style={{ color: "var(--mint)" }}>@hnryu_cio</span> 또는 더보기 → 피드백 보내기
+            더보기 → 피드백 보내기 또는{" "}
+            <span style={{ color: "var(--mint)" }}>sunryupatners@gmail.com</span>
           </p>
         </div>
       </main>

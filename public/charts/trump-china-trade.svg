@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+    <linearGradient id="us" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="cn" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#cc0000"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
+    <linearGradient id="deal" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">미중 무역 협상 · 2026년 타임라인</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">트럼프-시진핑 "매우 좋은 감정" — 관세 완화 가속</text>
+  <!-- Timeline line -->
+  <line x1="80" y1="200" x2="720" y2="200" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <!-- Event 1 -->
+  <circle cx="130" cy="200" r="10" fill="url(#cn)"/>
+  <line x1="130" y1="190" x2="130" y2="110" stroke="rgba(204,0,0,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="60" y="80" width="140" height="28" rx="6" fill="rgba(204,0,0,0.15)" stroke="rgba(204,0,0,0.3)" stroke-width="1"/>
+  <text x="130" y="98" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Arial" font-weight="bold">관세 145% 발동</text>
+  <text x="130" y="225" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2025.04</text>
+  <!-- Event 2 -->
+  <circle cx="260" cy="200" r="10" fill="#475569"/>
+  <line x1="260" y1="210" x2="260" y2="290" stroke="rgba(100,116,139,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="190" y="295" width="140" height="28" rx="6" fill="rgba(71,85,105,0.2)" stroke="rgba(71,85,105,0.3)" stroke-width="1"/>
+  <text x="260" y="313" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">보복 관세 125%</text>
+  <text x="260" y="225" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2025.05</text>
+  <!-- Event 3 -->
+  <circle cx="400" cy="200" r="10" fill="#f59e0b"/>
+  <line x1="400" y1="190" x2="400" y2="110" stroke="rgba(245,158,11,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="315" y="80" width="170" height="28" rx="6" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+  <text x="400" y="98" text-anchor="middle" fill="#fcd34d" font-size="11" font-family="Arial" font-weight="bold">90일 협상 유예</text>
+  <text x="400" y="225" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2026.02</text>
+  <!-- Event 4 -->
+  <circle cx="540" cy="200" r="12" fill="url(#deal)"/>
+  <line x1="540" y1="210" x2="540" y2="290" stroke="rgba(0,229,160,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="450" y="293" width="180" height="42" rx="6" fill="rgba(0,181,128,0.12)" stroke="rgba(0,229,160,0.35)" stroke-width="1"/>
+  <text x="540" y="313" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">트럼프-시진핑 회담</text>
+  <text x="540" y="328" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial">"매우 좋은 감정"</text>
+  <text x="540" y="225" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2026.05</text>
+  <!-- Event 5 (projected) -->
+  <circle cx="680" cy="200" r="10" fill="rgba(0,229,160,0.3)" stroke="#00e5a0" stroke-width="2" stroke-dasharray="3,2"/>
+  <line x1="680" y1="190" x2="680" y2="110" stroke="rgba(0,229,160,0.25)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="600" y="80" width="160" height="28" rx="6" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="680" y="98" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">관세 합의 (예상)</text>
+  <text x="680" y="225" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2026.08E</text>
+  <!-- Info box -->
+  <rect x="60" y="360" width="680" height="60" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="400" y="381" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">협상 핵심 내용</text>
+  <text x="180" y="402" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial">중국 $1조 대미 투자</text>
+  <text x="400" y="402" text-anchor="middle" fill="#fcd34d" font-size="11" font-family="Arial">관세 145% → 협상 인하</text>
+  <text x="620" y="402" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial">TSLA·NVDA 수혜 직접</text>
+  <text x="400" y="435" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.15</text>
+</svg>

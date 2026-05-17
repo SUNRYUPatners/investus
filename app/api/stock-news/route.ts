@@ -33,7 +33,7 @@ function relTimeKo(unix: number): string {
 // ── Route ─────────────────────────────────────────────────────────────────
 
 export async function GET(req: NextRequest) {
-  const symbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase();
+  const symbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase().slice(0, 12);
   if (!symbol) return NextResponse.json([]);
 
   const toDate   = new Date();

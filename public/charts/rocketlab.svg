@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#fb923c" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">ROCKET LAB · SpaceX 대안</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">RKLB — 소형 위성 발사 현실적 투자 접근법</text>
+  <!-- Launch cost comparison -->
+  <text x="55" y="92" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">발사 비용 비교</text>
+  <!-- SpaceX Falcon 9 -->
+  <text x="175" y="125" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">Falcon 9</text>
+  <rect x="100" y="130" width="150" height="150" rx="6" fill="rgba(0,229,160,0.3)" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="175" y="200" text-anchor="middle" fill="#00e5a0" font-size="22" font-family="Arial" font-weight="bold">$67M</text>
+  <text x="175" y="220" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">1회 발사</text>
+  <text x="175" y="237" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial">대형 탑재·재사용</text>
+  <text x="175" y="290" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">경쟁사 대비 60~70%↓</text>
+  <!-- Electron -->
+  <text x="380" y="125" text-anchor="middle" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">Electron (RKLB)</text>
+  <rect x="305" y="160" width="150" height="120" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="380" y="210" text-anchor="middle" fill="#fb923c" font-size="22" font-family="Arial" font-weight="bold">$7.5M</text>
+  <text x="380" y="228" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">소형 위성 전용</text>
+  <text x="380" y="244" text-anchor="middle" fill="#fb923c" font-size="10" font-family="Arial">100kg 이하 탑재</text>
+  <!-- Right: RKLB info -->
+  <rect x="520" y="88" width="255" height="280" rx="12" fill="rgba(251,146,60,0.05)" stroke="rgba(251,146,60,0.2)" stroke-width="1"/>
+  <text x="648" y="112" text-anchor="middle" fill="#fb923c" font-size="12" font-family="Arial" font-weight="bold">RKLB 성장 포인트</text>
+  <line x1="540" y1="120" x2="755" y2="120" stroke="rgba(251,146,60,0.15)" stroke-width="1"/>
+  <text x="540" y="142" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">Electron 로켓</text>
+  <text x="540" y="158" fill="#e2e8f0" font-size="10" font-family="Arial">• 소형 위성 전용 전문화</text>
+  <text x="540" y="174" fill="#e2e8f0" font-size="10" font-family="Arial">• 100+ 번의 발사 경험</text>
+  <text x="540" y="190" fill="#e2e8f0" font-size="10" font-family="Arial">• 귀환 부스터 개발 중</text>
+  <text x="540" y="214" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">Neutron (개발 중)</text>
+  <text x="540" y="230" fill="#e2e8f0" font-size="10" font-family="Arial">• 중형 위성 시장 진입</text>
+  <text x="540" y="246" fill="#e2e8f0" font-size="10" font-family="Arial">• SpaceX 보완 포지션</text>
+  <text x="540" y="270" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">Space Systems 사업</text>
+  <text x="540" y="286" fill="#e2e8f0" font-size="10" font-family="Arial">• 위성 부품·스페이스크래프트</text>
+  <text x="540" y="302" fill="#e2e8f0" font-size="10" font-family="Arial">• 정부·방산·상업 수요</text>
+  <text x="540" y="318" fill="#e2e8f0" font-size="10" font-family="Arial">• 고성장 반복 수익 모델</text>
+  <line x1="540" y1="330" x2="755" y2="330" stroke="rgba(251,146,60,0.1)" stroke-width="1"/>
+  <text x="648" y="352" text-anchor="middle" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">SpaceX 비상장 → RKLB 대안</text>
+  <!-- Bottom -->
+  <rect x="30" y="385" width="480" height="40" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(251,146,60,0.1)" stroke-width="1"/>
+  <text x="245" y="402" text-anchor="middle" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">Falcon 9 기술 해자는 5~10년간 복제 불가</text>
+  <text x="245" y="419" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">우주 투자 접근: GOOGL(간접) + RKLB(직접)</text>
+  <text x="400" y="445" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.13</text>
+</svg>

@@ -1,82 +1,119 @@
 "use client";
 
-import { useLocalStorage } from "./useLocalStorage";
+import { useState, useEffect } from "react";
+import { getSupabase } from "@/lib/supabase";
+import type { User } from "@supabase/supabase-js";
 
 export type AuthUser = {
-  phone:      string;
+  id:         string;
+  email:      string;
   nickname:   string;
   isVerified: boolean;
-  avatar?:    string; // emoji char OR "data:image/..." base64
+  avatar?:    string;
 };
 
-type StoredUser = { phone: string; pwHash: string; nickname: string; avatar?: string };
+function avatarKey(id: string) { return `uss_avatar_${id}`; }
 
-async function hashPw(pw: string): Promise<string> {
-  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(pw));
-  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+function buildUser(u: User, isVerified = false): AuthUser {
+  const avatar =
+    typeof window !== "undefined"
+      ? (localStorage.getItem(avatarKey(u.id)) ?? undefined)
+      : undefined;
+  return {
+    id:         u.id,
+    email:      u.email ?? "",
+    nickname:   String(
+      u.user_metadata?.nickname ??
+      `투자자_${(u.email ?? "user").split("@")[0].slice(-4)}`
+    ),
+    isVerified,
+    avatar,
+  };
 }
 
-function avatarKey(phone: string) { return `uss_avatar_${phone}`; }
+async function fetchVerified(email: string): Promise<boolean> {
+  try {
+    const res = await fetch(`/api/admin/verifications?phone=${encodeURIComponent(email)}`);
+    if (!res.ok) return false;
+    const data = await res.json();
+    return data?.status === "approved";
+  } catch { return false; }
+}
 
 export function useAuth() {
-  const [user, setUser, loaded] = useLocalStorage<AuthUser | null>("uss_auth", null);
+  const [user, setUser]   = useState<AuthUser | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
-  const login = async (phone: string, pw: string): Promise<boolean> => {
-    try {
-      const users: StoredUser[] = JSON.parse(localStorage.getItem("uss_users") ?? "[]");
-      const pwHash = await hashPw(pw);
-      // 구형 plain-text pw 레코드와 호환: pwHash가 없으면 pw 필드로 비교 후 마이그레이션
-      const found = users.find((u) => {
-        if (u.phone !== phone) return false;
-        if (u.pwHash) return u.pwHash === pwHash;
-        // legacy: plain pw → migrate in-place
-        if ((u as Record<string, unknown>)["pw"] === pw) {
-          u.pwHash = pwHash;
-          delete (u as Record<string, unknown>)["pw"];
-          localStorage.setItem("uss_users", JSON.stringify(users));
-          return true;
-        }
-        return false;
-      });
-      if (!found) return false;
-      const avatar = localStorage.getItem(avatarKey(phone)) ?? undefined;
-      setUser({ phone: found.phone, nickname: found.nickname, isVerified: false, avatar });
-      return true;
-    } catch { return false; }
+  useEffect(() => {
+    const supabase = getSupabase();
+
+    // Initial session load
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
+      if (session?.user) {
+        const verified = await fetchVerified(session.user.email ?? "");
+        setUser(buildUser(session.user, verified));
+      }
+      setLoaded(true);
+    });
+
+    // Subsequent auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === "SIGNED_IN" && session?.user) {
+        const verified = await fetchVerified(session.user.email ?? "");
+        setUser(buildUser(session.user, verified));
+      } else if (event === "SIGNED_OUT") {
+        setUser(null);
+      } else if (event === "USER_UPDATED" && session?.user) {
+        setUser((prev) => prev ? buildUser(session.user!, prev.isVerified) : null);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const login = async (email: string, pw: string): Promise<boolean> => {
+    const { error } = await getSupabase().auth.signInWithPassword({ email, password: pw });
+    return !error;
   };
 
-  const signup = async (phone: string, pw: string): Promise<{ ok: boolean; msg: string }> => {
-    try {
-      const users: StoredUser[] = JSON.parse(localStorage.getItem("uss_users") ?? "[]");
-      if (users.find((u) => u.phone === phone)) return { ok: false, msg: "이미 가입된 번호입니다" };
-      const nickname = `투자자_${phone.slice(-4)}`;
-      const pwHash = await hashPw(pw);
-      users.push({ phone, pwHash, nickname });
-      localStorage.setItem("uss_users", JSON.stringify(users));
-      setUser({ phone, nickname, isVerified: false });
-      return { ok: true, msg: "" };
-    } catch { return { ok: false, msg: "오류가 발생했습니다" }; }
-  };
-
-  const updateProfile = (updates: { nickname?: string; avatar?: string }) => {
-    if (!user) return;
-    // Persist avatar separately (may be large base64)
-    if (updates.avatar !== undefined) {
-      try { localStorage.setItem(avatarKey(user.phone), updates.avatar); } catch { /* ignore */ }
+  const signup = async (email: string, pw: string): Promise<{ ok: boolean; msg: string }> => {
+    const nickname = `투자자_${email.split("@")[0].slice(-4)}`;
+    const { data, error } = await getSupabase().auth.signUp({
+      email,
+      password: pw,
+      options: {
+        data: { nickname },
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+    if (error) {
+      const msg = error.message.toLowerCase();
+      if (msg.includes("already registered") || msg.includes("already")) {
+        return { ok: false, msg: "이미 가입된 이메일입니다." };
+      }
+      return { ok: false, msg: error.message };
     }
-    // Update users store nickname
+    // session null = email confirmation required (enable "disable email confirmation" in Supabase dashboard)
+    if (!data.session) return { ok: true, msg: "confirm_email" };
+    return { ok: true, msg: "" };
+  };
+
+  const logout = async () => {
+    await getSupabase().auth.signOut();
+  };
+
+  const updateProfile = async (updates: { nickname?: string; avatar?: string }) => {
+    if (!user) return;
+    if (updates.avatar !== undefined) {
+      try { localStorage.setItem(avatarKey(user.id), updates.avatar); } catch {}
+    }
     if (updates.nickname !== undefined) {
-      try {
-        const users: StoredUser[] = JSON.parse(localStorage.getItem("uss_users") ?? "[]");
-        const idx = users.findIndex((u) => u.phone === user.phone);
-        if (idx !== -1) { users[idx].nickname = updates.nickname!; localStorage.setItem("uss_users", JSON.stringify(users)); }
-      } catch { /* ignore */ }
+      await getSupabase().auth.updateUser({ data: { nickname: updates.nickname } });
     }
     setUser((u) => u ? { ...u, ...updates } : null);
   };
 
-  const logout  = () => setUser(null);
-  const verify  = () => setUser((u) => u ? { ...u, isVerified: true } : null);
+  const verify = () => setUser((u) => u ? { ...u, isVerified: true } : null);
 
   return { user, loaded, login, signup, logout, verify, updateProfile };
 }

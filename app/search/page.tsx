@@ -98,25 +98,65 @@ export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const { list, toggle }      = useWatchlist();
 
-  // Live prices from market-data-cache (same cache LiveMarket writes)
+  // Live prices: localStorage 캐시 → 누락 심볼은 API 직접 fetch
   const [liveMap, setLiveMap] = useState<Map<string, Quote>>(new Map());
 
   useEffect(() => {
-    const load = () => {
+    const ALL_SYMBOLS = [...new Set([...POPULAR, ...RECOMMENDED_SYMBOLS, ...SYMBOL_REGISTRY.map(s => s.symbol)])];
+
+    const loadFromCache = (): Map<string, Quote> => {
       try {
         const cached = localStorage.getItem("market-data-cache");
         if (cached) {
           const d = JSON.parse(cached) as { quotes?: Quote[] };
-          if (Array.isArray(d?.quotes)) {
-            setLiveMap(new Map(d.quotes.map((q) => [q.symbol, q])));
-          }
+          if (Array.isArray(d?.quotes)) return new Map(d.quotes.map((q) => [q.symbol, q]));
         }
       } catch { /* ignore */ }
+      return new Map();
     };
-    load();
-    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") load(); };
+
+    const fetchMissing = async (map: Map<string, Quote>) => {
+      const missing = ALL_SYMBOLS.filter((s) => !map.has(s));
+      if (missing.length === 0) return;
+      try {
+        const r = await fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`);
+        const data = await r.json() as Record<string, { price: number; change: number; changePercent: number }>;
+        setLiveMap((prev) => {
+          const next = new Map(prev);
+          SYMBOL_REGISTRY.forEach((s) => {
+            if (data[s.symbol]?.price > 0 && !next.has(s.symbol)) {
+              next.set(s.symbol, {
+                ...s,
+                price:         data[s.symbol].price,
+                change:        data[s.symbol].change,
+                changePercent: data[s.symbol].changePercent,
+                sparkline:     [],
+              } as Quote);
+            }
+          });
+          return next;
+        });
+      } catch { /* ignore */ }
+    };
+
+    const init = async () => {
+      const map = loadFromCache();
+      if (map.size > 0) setLiveMap(map);
+      // 캐시 여부와 무관하게 누락 심볼 보완
+      await fetchMissing(map);
+    };
+
+    init();
+
+    const onStorage = (e: StorageEvent) => {
+      if (e.key !== "market-data-cache") return;
+      const map = loadFromCache();
+      setLiveMap(map);
+      fetchMissing(map);
+    };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Build enriched stock list: static symbol/name + live price (or no price flag)

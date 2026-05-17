@@ -4,4 +4,4 @@ Allow: /
 # 어드민 페이지 크롤러 차단
 Disallow: /admin/
 
-Sitemap: https://investus-chi.vercel.app/sitemap.xml
+Sitemap: https://investus.kr/sitemap.xml

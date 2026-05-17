@@ -80,6 +80,9 @@ export function LiveMarket() {
   const quotesScroll = useScrollIndicator();
   const idxScroll    = useScrollIndicator();
 
+  // Ref so the interval always calls the latest version of doLoad
+  const doLoadRef = useRef<(isRetry?: boolean) => void>(() => {});
+
   const doLoad = (isRetry = false) => {
     if (isRetry) { setFetchFailed(false); setLoading(true); }
 
@@ -87,23 +90,39 @@ export function LiveMarket() {
     const controller = new AbortController();
     const timeout    = setTimeout(() => controller.abort(), 15_000);
 
-    fetch("/api/market-data", { signal: controller.signal })
+    fetch("/api/market-data", { signal: controller.signal, cache: "no-store" })
       .then((r) => { if (!r.ok) throw new Error("http " + r.status); return r.json(); })
-      .then((d: MarketData) => {
+      .then(async (d: MarketData) => {
         clearTimeout(timeout);
-        // 최소한 하나라도 있으면 표시 (부분 데이터 허용)
         const hasData = (d?.quotes?.length ?? 0) > 0 || (d?.indices?.length ?? 0) > 0;
         if (!hasData) throw new Error("empty");
+
+        // 누락 심볼 보완: RECOMMENDED_SYMBOLS + POPULAR 중 quotes에 없는 심볼 개별 fetch
+        const quoteSym = new Set(d.quotes.map((q) => q.symbol));
+        const allNeeded = [...new Set([...RECOMMENDED_SYMBOLS, "AAPL", "NVDA", "MSFT", "AMZN", "META", "AMD"])];
+        const missing   = allNeeded.filter((s) => !quoteSym.has(s));
+        if (missing.length > 0) {
+          try {
+            const pr = await fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`);
+            const prices = await pr.json() as Record<string, { price: number; change: number; changePercent: number }>;
+            for (const sym of missing) {
+              const p = prices[sym];
+              if (p?.price > 0) {
+                d.quotes.push({
+                  symbol: sym, name: sym,
+                  price: p.price, change: p.change, changePercent: p.changePercent,
+                  sparkline: [], volume: "0", marketCap: "—",
+                });
+              }
+            }
+          } catch { /* 보완 실패 시 있는 데이터로 표시 */ }
+        }
+
         setData(d);
         setLoading(false);
         setFetchFailed(false);
         try {
-          // indices + quotes + futures 모두 있을 때만 저장 (장마감 후 표시용 완전한 데이터)
-          const isComplete =
-            (d?.indices?.length ?? 0) > 0 &&
-            (d?.quotes?.length ?? 0) > 0 &&
-            (d?.futures?.length ?? 0) >= 8;
-          if (isComplete) {
+          if ((d?.quotes?.length ?? 0) > 0) {
             localStorage.setItem("market-data-cache", JSON.stringify(d));
             window.dispatchEvent(new StorageEvent("storage", { key: "market-data-cache" }));
           }
@@ -114,15 +133,16 @@ export function LiveMarket() {
         // 캐시 데이터가 이미 표시 중이면 에러 숨김, 없으면 retry 버튼 표시
         setData((prev) => {
           if (!prev) {
-            // abort(타임아웃)이면 재시도 유도, 그 외 에러도 동일
-            const isAbort = e instanceof DOMException && e.name === "AbortError";
-            if (isAbort || true) setFetchFailed(true);
+            setFetchFailed(true);
             setLoading(false);
           }
           return prev;
         });
       });
   };
+
+  // Keep ref pointing to the latest doLoad on every render
+  doLoadRef.current = doLoad;
 
   useEffect(() => {
     // 1. 캐시를 즉시 표시
@@ -139,20 +159,13 @@ export function LiveMarket() {
       }
     } catch { /* ignore */ }
 
-    // 2. 장 마감 중 + 캐시 있음 → API 호출 안 함, 캐시 그대로 표시
-    //    장 시작 시점에 인터벌이 자동으로 doLoad() 호출함
-    if (!isMarketOpen() && hasCachedData) {
-      const id = setInterval(() => {
-        if (isMarketOpen()) doLoad();
-      }, 60_000);
-      return () => clearInterval(id);
-    }
+    // 항상 최신 데이터를 서버에서 가져옴 (localStorage는 로딩 중 임시 표시용)
+    // 장 마감 중이어도 1회 fetch — 서버 KV 캐시에서 당일 종가를 즉시 반환
+    doLoadRef.current();
 
-    // 3. 장 중이거나 캐시 없음 → 즉시 fetch
-    doLoad();
-
+    // 장 중일 때만 60초마다 갱신
     const id = setInterval(() => {
-      if (isMarketOpen()) doLoad();
+      if (isMarketOpen()) doLoadRef.current();
     }, 60_000);
     return () => clearInterval(id);
   // eslint-disable-next-line react-hooks/exhaustive-deps

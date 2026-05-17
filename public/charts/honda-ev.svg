@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+    <linearGradient id="evg" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+    <linearGradient id="gas" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#f59e0b" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">HONDA · EV 전략 철회</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">2040 완전 전기차 계획 포기 — 내연기관 생존 선언</text>
+  <!-- Chart: EV sales target % by maker -->
+  <text x="55" y="95" fill="#94a3b8" font-size="12" font-family="Arial" font-weight="bold">완전 EV 전환 목표 연도</text>
+  <!-- Makers comparison -->
+  <!-- Tesla - already EV -->
+  <text x="55" y="130" fill="#e2e8f0" font-size="12" font-family="Arial">Tesla</text>
+  <rect x="165" y="116" width="400" height="22" rx="4" fill="url(#evg)"/>
+  <text x="575" y="132" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold"> 이미 100% EV ✓</text>
+  <!-- GM -->
+  <text x="55" y="168" fill="#e2e8f0" font-size="12" font-family="Arial">GM</text>
+  <rect x="165" y="154" width="340" height="22" rx="4" fill="rgba(96,165,250,0.5)"/>
+  <text x="515" y="170" fill="#60a5fa" font-size="12" font-family="Arial"> 2035년 목표</text>
+  <!-- Ford -->
+  <text x="55" y="206" fill="#e2e8f0" font-size="12" font-family="Arial">Ford</text>
+  <rect x="165" y="192" width="360" height="22" rx="4" fill="rgba(96,165,250,0.4)"/>
+  <text x="535" y="208" fill="#60a5fa" font-size="12" font-family="Arial"> 2035년 (유럽)</text>
+  <!-- VW -->
+  <text x="55" y="244" fill="#e2e8f0" font-size="12" font-family="Arial">VW</text>
+  <rect x="165" y="230" width="320" height="22" rx="4" fill="rgba(168,85,247,0.4)"/>
+  <text x="495" y="246" fill="#a855f7" font-size="12" font-family="Arial"> 2033년 (유럽만)</text>
+  <!-- Honda - CROSSED OUT -->
+  <text x="55" y="282" fill="#e2e8f0" font-size="12" font-family="Arial">Honda</text>
+  <rect x="165" y="268" width="300" height="22" rx="4" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.3)" stroke-width="1" stroke-dasharray="6,3"/>
+  <line x1="165" y1="279" x2="465" y2="279" stroke="#ef4444" stroke-width="2"/>
+  <text x="475" y="284" fill="#ef4444" font-size="12" font-family="Arial" font-weight="bold"> 2040 목표 ✗ 철회</text>
+  <!-- Toyota -->
+  <text x="55" y="320" fill="#e2e8f0" font-size="12" font-family="Arial">Toyota</text>
+  <rect x="165" y="306" width="220" height="22" rx="4" fill="rgba(100,116,139,0.3)" stroke="rgba(100,116,139,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="395" y="322" fill="#64748b" font-size="12" font-family="Arial"> 하이브리드 중심 유지</text>
+  <!-- Right panel: What Honda said -->
+  <rect x="570" y="95" width="210" height="235" rx="10" fill="rgba(245,158,11,0.06)" stroke="rgba(245,158,11,0.25)" stroke-width="1"/>
+  <text x="675" y="120" text-anchor="middle" fill="#fbbf24" font-size="12" font-family="Arial" font-weight="bold">혼다 CEO 발언</text>
+  <line x1="585" y1="130" x2="765" y2="130" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+  <text x="585" y="152" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">철회 이유</text>
+  <text x="585" y="170" fill="#e2e8f0" font-size="10" font-family="Arial">• EV 수요 기대 미달</text>
+  <text x="585" y="187" fill="#e2e8f0" font-size="10" font-family="Arial">• 충전 인프라 부족</text>
+  <text x="585" y="204" fill="#e2e8f0" font-size="10" font-family="Arial">• 하이브리드 수요 급증</text>
+  <text x="585" y="221" fill="#e2e8f0" font-size="10" font-family="Arial">• 전기차 가격 경쟁력</text>
+  <line x1="585" y1="233" x2="765" y2="233" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+  <text x="585" y="252" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">투자 시사점</text>
+  <text x="585" y="270" fill="#00e5a0" font-size="10" font-family="Arial">↑ 테슬라 경쟁 감소</text>
+  <text x="585" y="287" fill="#f59e0b" font-size="10" font-family="Arial">↑ 하이브리드 부품주</text>
+  <text x="585" y="304" fill="#ef4444" font-size="10" font-family="Arial">↓ 혼다 EV 투자 매력</text>
+  <!-- Bottom -->
+  <rect x="55" y="358" width="490" height="52" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="300" y="377" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">시사점: EV 전환 속도 둔화 → 테슬라 독주 지속</text>
+  <text x="300" y="396" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">완성차 EV 포기는 테슬라의 기술적 해자를 더욱 강화한다</text>
+  <text x="400" y="430" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.15</text>
+</svg>

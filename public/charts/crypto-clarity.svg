@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+    <linearGradient id="btc" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#f59e0b" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">CLARITY ACT · 암호화폐 법제화</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">트럼프 코인 매수 선언 — 제도 자금 유입 촉매</text>
+  <!-- Left: Law explanation -->
+  <rect x="30" y="88" width="340" height="270" rx="12" fill="rgba(245,158,11,0.05)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+  <text x="200" y="112" text-anchor="middle" fill="#fbbf24" font-size="12" font-family="Arial" font-weight="bold">CLARITY Act란?</text>
+  <line x1="50" y1="120" x2="350" y2="120" stroke="rgba(245,158,11,0.15)" stroke-width="1"/>
+  <text x="55" y="145" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">핵심 내용</text>
+  <text x="55" y="163" fill="#e2e8f0" font-size="10" font-family="Arial">디지털 자산을 증권 또는 상품으로</text>
+  <text x="55" y="179" fill="#e2e8f0" font-size="10" font-family="Arial">분류하는 기준을 명확히 하는 법안</text>
+  <line x1="55" y1="193" x2="350" y2="193" stroke="rgba(245,158,11,0.1)" stroke-width="1"/>
+  <text x="55" y="213" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">트럼프 발언 (투표 당일)</text>
+  <text x="55" y="231" fill="#fbbf24" font-size="10" font-family="Arial">"지금 주식과 암호화폐를 매수하기</text>
+  <text x="55" y="247" fill="#fbbf24" font-size="10" font-family="Arial"> 시작할 때다"</text>
+  <text x="55" y="263" fill="#94a3b8" font-size="10" font-family="Arial">"Don't underestimate the man's words"</text>
+  <line x1="55" y1="277" x2="350" y2="277" stroke="rgba(245,158,11,0.1)" stroke-width="1"/>
+  <text x="55" y="297" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">법안 통과 시 기대 효과</text>
+  <text x="55" y="315" fill="#00e5a0" font-size="10" font-family="Arial">✓ 기관 투자 불확실성 해소</text>
+  <text x="55" y="333" fill="#00e5a0" font-size="10" font-family="Arial">✓ 비트코인 ETF 추가 자금 유입</text>
+  <text x="55" y="349" fill="#00e5a0" font-size="10" font-family="Arial">✓ 이더리움 "증권 아님" 확정</text>
+  <!-- Right: Impact by asset -->
+  <rect x="390" y="88" width="385" height="270" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="582" y="112" text-anchor="middle" fill="#94a3b8" font-size="12" font-family="Arial" font-weight="bold">자산별 법안 통과 시 영향</text>
+  <line x1="410" y1="120" x2="755" y2="120" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- BTC -->
+  <text x="415" y="145" fill="#f59e0b" font-size="13" font-family="Arial" font-weight="bold">₿ 비트코인</text>
+  <rect x="415" y="152" width="300" height="22" rx="3" fill="rgba(245,158,11,0.5)"/>
+  <text x="415" y="187" fill="#94a3b8" font-size="10" font-family="Arial">기관 투자 + ETF 유입 극대화</text>
+  <!-- ETH -->
+  <text x="415" y="212" fill="#60a5fa" font-size="13" font-family="Arial" font-weight="bold">Ξ 이더리움</text>
+  <rect x="415" y="219" width="240" height="22" rx="3" fill="rgba(96,165,250,0.4)"/>
+  <text x="415" y="254" fill="#94a3b8" font-size="10" font-family="Arial">DeFi 재활성화 기대</text>
+  <!-- COIN -->
+  <text x="415" y="279" fill="#00e5a0" font-size="13" font-family="Arial" font-weight="bold">📈 Coinbase (COIN)</text>
+  <rect x="415" y="286" width="280" height="22" rx="3" fill="rgba(0,229,160,0.4)"/>
+  <text x="415" y="321" fill="#94a3b8" font-size="10" font-family="Arial">규제 명확화 최대 수혜 — 미국 거래소 1위</text>
+  <!-- Bottom -->
+  <rect x="30" y="380" width="740" height="42" rx="8" fill="rgba(245,158,11,0.04)" stroke="rgba(245,158,11,0.12)" stroke-width="1"/>
+  <text x="400" y="398" text-anchor="middle" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold">트럼프 발언 + CLARITY Act 투표 타이밍 = 우연 아님</text>
+  <text x="400" y="415" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">법안 통과 여부 집중 모니터링 — 통과 시 제도 자금 대규모 유입 가능</text>
+  <text x="400" y="440" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.13</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0f1a2e"/></linearGradient>
+    <linearGradient id="meta" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <text x="400" y="35" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="3">META · ARK 역발상 분석</text>
+  <text x="400" y="60" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">"가장 오해받는 메가캡" — AI 광고 플랫폼으로 변모</text>
+  <!-- Left: AI investment breakdown -->
+  <rect x="30" y="88" width="340" height="290" rx="12" fill="rgba(96,165,250,0.04)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="200" y="114" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">Meta AI 투자 현황</text>
+  <line x1="50" y1="122" x2="350" y2="122" stroke="rgba(96,165,250,0.1)" stroke-width="1"/>
+  <!-- bars -->
+  <text x="55" y="150" fill="#94a3b8" font-size="11" font-family="Arial">AI 광고 예산</text>
+  <rect x="180" y="137" width="160" height="18" rx="3" fill="rgba(96,165,250,0.7)"/>
+  <text x="348" y="151" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold"> $8B</text>
+  <text x="55" y="180" fill="#94a3b8" font-size="11" font-family="Arial">광고 매출 성장</text>
+  <rect x="180" y="167" width="130" height="18" rx="3" fill="rgba(96,165,250,0.5)"/>
+  <text x="318" y="181" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold"> +20%+</text>
+  <text x="55" y="210" fill="#94a3b8" font-size="11" font-family="Arial">FCF (연간)</text>
+  <rect x="180" y="197" width="150" height="18" rx="3" fill="rgba(96,165,250,0.6)"/>
+  <text x="338" y="211" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold"> $50B+</text>
+  <text x="55" y="240" fill="#94a3b8" font-size="11" font-family="Arial">소셜 그래프</text>
+  <rect x="180" y="227" width="170" height="18" rx="3" fill="rgba(96,165,250,0.8)"/>
+  <text x="358" y="241" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold"> 30억+</text>
+  <line x1="50" y1="258" x2="350" y2="258" stroke="rgba(96,165,250,0.1)" stroke-width="1"/>
+  <text x="55" y="278" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">ARK 핵심 주장:</text>
+  <text x="55" y="296" fill="#e2e8f0" font-size="10" font-family="Arial">• AI Advantage+ → 광고주 ROI 2배</text>
+  <text x="55" y="314" fill="#e2e8f0" font-size="10" font-family="Arial">• Ray-Ban 스마트안경 AI 선점</text>
+  <text x="55" y="332" fill="#e2e8f0" font-size="10" font-family="Arial">• LLaMA 오픈소스 → 개발자 생태계</text>
+  <text x="55" y="350" fill="#e2e8f0" font-size="10" font-family="Arial">• 러시아·이란 제외해도 성장 유지</text>
+  <!-- Right: valuation vs peers -->
+  <rect x="390" y="88" width="385" height="290" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="582" y="114" text-anchor="middle" fill="#94a3b8" font-size="12" font-family="Arial" font-weight="bold">빅테크 AI 전환 속도 비교</text>
+  <line x1="410" y1="122" x2="755" y2="122" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="415" y="148" fill="#e2e8f0" font-size="12" font-family="Arial">Meta</text>
+  <rect x="490" y="133" width="230" height="20" rx="3" fill="rgba(96,165,250,0.7)"/>
+  <text x="728" y="148" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold"> 最高속 AI 전환</text>
+  <text x="415" y="185" fill="#e2e8f0" font-size="12" font-family="Arial">Google</text>
+  <rect x="490" y="170" width="200" height="20" rx="3" fill="rgba(251,191,36,0.5)"/>
+  <text x="698" y="185" fill="#fbbf24" font-size="11" font-family="Arial"> 빠름</text>
+  <text x="415" y="222" fill="#e2e8f0" font-size="12" font-family="Arial">Microsoft</text>
+  <rect x="490" y="207" width="180" height="20" rx="3" fill="rgba(168,85,247,0.5)"/>
+  <text x="678" y="222" fill="#c084fc" font-size="11" font-family="Arial"> 빠름</text>
+  <text x="415" y="259" fill="#e2e8f0" font-size="12" font-family="Arial">Apple</text>
+  <rect x="490" y="244" width="120" height="20" rx="3" fill="rgba(100,116,139,0.4)"/>
+  <text x="618" y="259" fill="#64748b" font-size="11" font-family="Arial"> 느림</text>
+  <text x="415" y="296" fill="#e2e8f0" font-size="12" font-family="Arial">Amazon</text>
+  <rect x="490" y="281" width="150" height="20" rx="3" fill="rgba(100,116,139,0.35)"/>
+  <text x="648" y="296" fill="#64748b" font-size="11" font-family="Arial"> 중간</text>
+  <line x1="410" y1="313" x2="755" y2="313" stroke="rgba(96,165,250,0.1)" stroke-width="1"/>
+  <text x="582" y="335" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">META: 빅테크 중 가장 저렴한 밸류에이션</text>
+  <text x="582" y="355" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">시총 $1.4T+ · 광고+AI+웨어러블 삼각 성장</text>
+  <text x="400" y="430" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.14</text>
+</svg>

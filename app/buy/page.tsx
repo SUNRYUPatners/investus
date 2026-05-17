@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const BOOK = {
   title:    "절대로 잃지 말고 미래에 투자하라",
-  author:   "@hnryu_cio",
+  author:   "SUNRYU Partners CIO",
   desc:     "잃지 않는 투자의 원칙부터 미래 유망 섹터까지 — 실전 중심의 미국주식 투자 전략",
   price:    19900,
   file:     "/ebook/book.pdf",

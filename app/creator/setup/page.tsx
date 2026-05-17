@@ -29,22 +29,25 @@ const EMPTY: CreatorDraft = {
 /* ── Inline login/signup ──────────────────────────────────── */
 function LoginGate({ onSuccess }: { onSuccess: () => void }) {
   const { login, signup } = useAuth();
-  const [mode, setMode]       = useState<"login" | "signup">("login");
-  const [phone, setPhone]     = useState("");
-  const [pw, setPw]           = useState("");
-  const [visible, setVisible] = useState(false);
-  const [error, setError]     = useState("");
+  const [mode, setMode]         = useState<"login" | "signup">("login");
+  const [email, setEmail]       = useState("");
+  const [pw, setPw]             = useState("");
+  const [visible, setVisible]   = useState(false);
+  const [error, setError]       = useState("");
+  const [confirmEmail, setConfirmEmail] = useState(false);
 
   const handleLogin = async () => {
-    const ok = await login(phone, pw);
-    if (!ok) { setError("전화번호 또는 비밀번호가 올바르지 않습니다."); return; }
+    if (!email.includes("@")) { setError("올바른 이메일 주소를 입력해주세요."); return; }
+    const ok = await login(email, pw);
+    if (!ok) { setError("이메일 또는 비밀번호가 올바르지 않습니다."); return; }
     onSuccess();
   };
   const handleSignup = async () => {
-    if (phone.replace(/\D/g, "").length < 10) { setError("올바른 전화번호를 입력해주세요."); return; }
-    if (pw.length < 4) { setError("비밀번호는 4자 이상이어야 합니다."); return; }
-    const result = await signup(phone, pw);
+    if (!email.includes("@")) { setError("올바른 이메일 주소를 입력해주세요."); return; }
+    if (pw.length < 6) { setError("비밀번호는 6자 이상이어야 합니다."); return; }
+    const result = await signup(email, pw);
     if (!result.ok) { setError(result.msg); return; }
+    if (result.msg === "confirm_email") { setConfirmEmail(true); return; }
     onSuccess();
   };
 
@@ -73,15 +76,29 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
             ))}
           </div>
 
+          {confirmEmail ? (
+            <div className="flex flex-col items-center gap-3 py-3">
+              <span className="text-2xl">📬</span>
+              <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
+                {email}로 인증 링크를 보냈습니다.<br />링크 클릭 후 로그인해주세요.
+              </p>
+              <button onClick={() => { setConfirmEmail(false); setMode("login"); }}
+                className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
+                로그인으로 이동
+              </button>
+            </div>
+          ) : (
           <input
-            type="tel"
-            placeholder="전화번호 (010-0000-0000)"
-            value={phone}
-            onChange={(e) => { setPhone(e.target.value); setError(""); }}
+            type="email"
+            placeholder="이메일 주소"
+            value={email}
+            onChange={(e) => { setEmail(e.target.value); setError(""); }}
             className="w-full px-4 py-3 rounded-xl text-sm outline-none"
             style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--text)" }}
           />
 
+          )}
+          {!confirmEmail && (
           <div className="relative">
             <input
               type={visible ? "text" : "password"}
@@ -97,15 +114,16 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
               {visible ? <EyeOff className="w-4 h-4" style={{ color: "var(--muted)" }} /> : <Eye className="w-4 h-4" style={{ color: "var(--muted)" }} />}
             </button>
           </div>
+          )}
 
           {error && <p className="text-xs" style={{ color: "#ff4d6d" }}>{error}</p>}
 
-          <button
+          {!confirmEmail && <button
             onClick={mode === "login" ? handleLogin : handleSignup}
             className="w-full py-3 rounded-xl text-sm font-bold"
             style={{ background: "var(--mint)", color: "#000" }}>
             {mode === "login" ? "로그인 후 시작하기" : "가입하고 시작하기"}
-          </button>
+          </button>}
         </div>
 
         <Link href="/wall" className="block text-center mt-4 text-xs" style={{ color: "var(--muted)" }}>
@@ -190,7 +208,7 @@ export default function CreatorSetupPage() {
   const finishStep3 = () => {
     const payload = {
       ...draft,
-      id: user.phone,
+      id: user.email,
       status: "pending",
       createdAt: new Date().toISOString(),
     };
@@ -205,7 +223,7 @@ export default function CreatorSetupPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        phone: user.phone,
+        phone: user.email,
         nickname: draft.nickname,
         avatar: draft.avatar,
         bio: draft.bio,
@@ -287,7 +305,29 @@ export default function CreatorSetupPage() {
         {step === 1 && (
           <div className="px-4">
             <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>기본 프로필 설정</h1>
-            <p className="text-xs mb-5" style={{ color: "var(--muted)" }}>구독자들에게 보여질 프로필을 설정해 주세요</p>
+            <p className="text-xs mb-4" style={{ color: "var(--muted)" }}>구독자들에게 보여질 프로필을 설정해 주세요</p>
+
+            {/* Fee disclosure notice */}
+            <div className="rounded-2xl border p-4 mb-5"
+              style={{ background: "rgba(251,191,36,0.06)", borderColor: "rgba(251,191,36,0.25)" }}>
+              <div className="flex items-start gap-2.5">
+                <span className="text-base flex-shrink-0">💡</span>
+                <div>
+                  <p className="text-[11px] font-bold mb-1.5" style={{ color: "#fbbf24" }}>크리에이터 수익 안내</p>
+                  <ul className="flex flex-col gap-1">
+                    <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
+                      · 구독료의 <span style={{ color: "var(--text)", fontWeight: 600 }}>90%</span>가 크리에이터에게 매월 정산됩니다.
+                    </li>
+                    <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
+                      · 플랫폼 운영 수수료 <span style={{ color: "var(--text)", fontWeight: 600 }}>10%</span>가 차감됩니다.
+                    </li>
+                    <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
+                      · 계좌 인증 후 승인이 완료되어야 수익화가 시작됩니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
             <p className="text-xs font-semibold mb-2" style={{ color: "var(--muted)" }}>아바타 선택</p>
             <div className="grid grid-cols-6 gap-2 mb-5">

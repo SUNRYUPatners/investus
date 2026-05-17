@@ -103,7 +103,7 @@ export default function CreatorDashboardPage() {
 
     // Sync approval status from server
     if (c.status !== "approved") {
-      fetch(`/api/admin/verifications?phone=${encodeURIComponent(user.phone)}`)
+      fetch(`/api/admin/verifications?phone=${encodeURIComponent(user.email)}`)
         .then((r) => r.json())
         .then(({ status }) => {
           if (status === "approved") {
@@ -131,7 +131,7 @@ export default function CreatorDashboardPage() {
     if (!confirm("신청을 취소하시겠어요? 프로필과 신청 내역이 삭제됩니다.")) return;
     setCancelling(true);
     // Supabase에서 삭제
-    await fetch(`/api/creator/cancel?phone=${encodeURIComponent(user.phone)}`, { method: "DELETE" }).catch(() => {});
+    await fetch(`/api/creator/cancel?phone=${encodeURIComponent(user.email)}`, { method: "DELETE" }).catch(() => {});
     // localStorage 정리
     try { localStorage.removeItem("investus_my_creator"); } catch {}
     try { localStorage.removeItem("investus_creator_contents"); } catch {}
@@ -144,7 +144,7 @@ export default function CreatorDashboardPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        phone: user.phone,
+        phone: user.email,
         nickname: creator.nickname,
         avatar: creator.avatar,
         bio: creator.bio,

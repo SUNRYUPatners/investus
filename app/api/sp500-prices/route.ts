@@ -90,21 +90,25 @@ const MOCK_CHANGES: Record<string, number> = {
 export async function GET() {
   const allSymbols = SECTORS.flatMap((s) => s.stocks.map((t) => t.symbol));
   const changeMap: Record<string, number> = { ...MOCK_CHANGES };
-
-  const priceMap: Record<string, number> = {};
+  const priceMap:  Record<string, number> = {};
+  let isLive = false;
 
   try {
     const liveMap = await fetchFinnhubBatch(allSymbols);
-    liveMap.forEach((q) => {
-      changeMap[q.symbol] = q.changePercent;
-      priceMap[q.symbol]  = q.price;
-    });
+    if (liveMap.size > 0) {
+      isLive = true;
+      liveMap.forEach((q) => {
+        changeMap[q.symbol] = q.changePercent;
+        priceMap[q.symbol]  = q.price;
+      });
+    }
   } catch {
     // keep mock fallback
   }
 
-  return NextResponse.json(
-    SECTORS.map((s) => ({
+  return NextResponse.json({
+    isLive,
+    sectors: SECTORS.map((s) => ({
       key: s.key,
       name: s.name,
       stocks: s.stocks.map((t) => ({
@@ -114,6 +118,6 @@ export async function GET() {
         changePercent: changeMap[t.symbol] ?? 0,
         weight:        t.weight,
       })),
-    }))
-  );
+    })),
+  });
 }

@@ -15,6 +15,28 @@ const TYPE_CONFIG: Record<NoticeType, { label: string; color: string; bg: string
 
 const NOTICES: { id: string; type: NoticeType; date: string; title: string; body: string }[] = [
   {
+    id: "n007",
+    type: "notice",
+    date: "2026-05-16",
+    title: "서비스 개선 안내 — 지속 업데이트 중",
+    body: `안녕하세요, Investus팀입니다.
+
+현재 서비스를 지속적으로 개선하고 있습니다.
+
+■ 현재 상황
+- 일부 데이터나 UI가 잠시 맞지 않을 수 있습니다.
+- 이상한 부분이 있으면 화면을 당겨서 새로고침해 주세요.
+- 빠르게 수정하고 있으니 양해 부탁드립니다.
+
+■ 곧 출시 예정
+- 종목 알림 기능 (상승/하락 가격 알림)
+- 포트폴리오 수익률 계산기
+- 크리에이터 마켓 정식 오픈
+
+업데이트 이력은 더보기 → 버전 정보에서 확인하세요.
+문의: sunryupatners@gmail.com`,
+  },
+  {
     id: "n005",
     type: "legal",
     date: "2026-05-14",
@@ -61,40 +83,6 @@ const NOTICES: { id: string; type: NoticeType; date: string; title: string; body
 자세한 사항은 더보기 → 개인정보처리방침을 참고해 주세요.`,
   },
   {
-    id: "n003",
-    type: "update",
-    date: "2026-05-14",
-    title: "데이터 영구 저장 & 뒤로가기 개선",
-    body: `■ 장마감 데이터 유지
-- 장 마감 시점의 실제 시세 데이터를 저장하여 개장 전까지 그대로 표시합니다.
-- 빈 화면 또는 가짜 데이터(Mock)는 절대 표시하지 않습니다.
-- 공포&탐욕 지수·버핏 지수도 동일하게 실데이터 기반 캐싱 방식 적용
-
-■ 개별 종목 뒤로가기
-- 종목 상세 화면에서 뒤로가기 시 이전 화면(홈·검색·관심종목 등) 그대로 복귀합니다.
-
-■ 시가총액 표시 개선
-- 1.672조 → 1.67조 (소수 둘째 자리까지 표시, 줄바꿈 방지)`,
-  },
-  {
-    id: "n002",
-    type: "update",
-    date: "2026-05-10",
-    title: "당겨서 새로고침 · PWA 설치 · 관심종목 클릭",
-    body: `■ 당겨서 새로고침 (Pull to Refresh)
-- iOS 홈 화면 앱 모드에서 화면 최상단에서 아래로 당기면 새로고침됩니다.
-
-■ 관심종목 → 종목 상세 이동
-- 홈 화면 관심종목 카드 클릭 시 해당 종목의 상세 페이지로 이동합니다.
-
-■ 앱 설치 버튼 추가
-- 더보기 탭 하단에 홈 화면 추가(PWA 설치) 버튼이 추가되었습니다.
-- iOS(Safari), Android(Chrome), 데스크톱 환경 모두 지원
-
-■ 서비스 워커 캐시 최적화
-- API 응답이 캐시되던 문제를 수정하여 항상 최신 데이터를 표시합니다.`,
-  },
-  {
     id: "n001",
     type: "notice",
     date: "2026-05-01",
@@ -117,12 +105,12 @@ const NOTICES: { id: string; type: NoticeType; date: string; title: string; body
 - 포트폴리오 수익률 계산기
 
 이용해 주셔서 감사합니다.
-Investus CIO @hnryu_cio`,
+SUNRYU Partners CIO`,
   },
 ];
 
 function NoticeItem({ notice }: { notice: typeof NOTICES[number] }) {
-  const [open, setOpen] = useState(notice.id === "n005");
+  const [open, setOpen] = useState(notice.id === "n007");
   const cfg = TYPE_CONFIG[notice.type];
   return (
     <div className="border-b last:border-b-0" style={{ borderColor: "var(--border)" }}>
