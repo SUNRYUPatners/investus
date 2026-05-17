@@ -237,9 +237,10 @@ export async function GET(req: Request) {
           stooqSym ? fetchStooqFuture(stooqSym) : Promise.resolve(null),
           yfSym    ? fetchFutureV8(yfSym)        : Promise.resolve(null),
         ]);
+        // YF via CF proxy 우선 — 차트와 동일 소스로 일관성 보장
         const r =
-          (stooqR.status === "fulfilled" && stooqR.value) ? stooqR.value :
-          (yfR.status   === "fulfilled" && yfR.value)     ? yfR.value     : null;
+          (yfR.status   === "fulfilled" && yfR.value)     ? yfR.value     :
+          (stooqR.status === "fulfilled" && stooqR.value) ? stooqR.value  : null;
         return r ? { key, ...r } : null;
       };
 
