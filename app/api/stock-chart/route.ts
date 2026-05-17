@@ -29,11 +29,8 @@ const YF_SYM: Record<string, string> = {
 
 // Futures/Indices → Stooq symbol (historical CSV, no rate limits, no API key)
 // Index cards use futures as proxy — same price level, free on Stooq
+// Stooq: 상품/채권 선물만 사용 — 지수/지수선물은 Stooq 심볼이 맞지 않아 제외
 const STOOQ_SYM: Record<string, string> = {
-  // Index cards (ES/NQ/YM trade at same price level as SPX/NDX/DJI)
-  SPX: "es.f", COMP: "nq.f", DJI: "ym.f",
-  // Index futures
-  ES: "es.f", NQ: "nq.f", YM: "ym.f", RTY: "rty.f",
   CL: "cl.f", NG: "ng.f", GC: "gc.f", SI: "si.f", HG: "hg.f",
   ZN: "zn.f", ZB: "zb.f", "6E": "6e.f", "6J": "6j.f",
   ZC: "zc.f", ZW: "zw.f", ZS: "zs.f",
@@ -138,14 +135,14 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
       clearTimeout(tid);
       if (!res.ok) continue;
       const json   = await res.json();
-      const result = json?.chart?.result?.[0];
-      if (!result?.timestamp || !result?.indicators?.quote?.[0]?.close) continue;
+      let result = json?.chart?.result?.[0];
+      if (!result?.indicators?.quote?.[0]) continue;
 
-      const timestamps: number[] = result.timestamp;
-      const rawCloses: (number | null)[] = result.indicators.quote[0].close;
-      const rawVolumes: (number | null)[] = result.indicators.quote[0].volume ?? [];
+      let timestamps: number[]          = result.timestamp ?? [];
+      let rawCloses:  (number | null)[] = result.indicators.quote[0].close  ?? [];
+      let rawVolumes: (number | null)[] = result.indicators.quote[0].volume ?? [];
 
-      const points = timestamps
+      let points = timestamps
         .map((ts, i) => ({
           ts,
           close:  rawCloses[i]  ?? NaN,
@@ -153,20 +150,45 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
         }))
         .filter((p) => !isNaN(p.close) && p.close > 0);
 
+      // 주말/휴장: 1D 5분봉이 비어있음 → range=5d 로 마지막 거래일 데이터 사용
+      if (points.length < 2 && cfg.range === "1d") {
+        const ctrl2 = new AbortController();
+        const tid2  = setTimeout(() => ctrl2.abort(), 8_000);
+        const url5d = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=5m&range=5d&includePrePost=false`;
+        const res2  = await yfProxyFetch(url5d, { cache: "no-store", signal: ctrl2.signal });
+        clearTimeout(tid2);
+        if (res2.ok) {
+          const json2   = await res2.json();
+          const result2 = json2?.chart?.result?.[0];
+          if (result2?.timestamp) {
+            result     = result2;
+            timestamps = result2.timestamp;
+            rawCloses  = result2.indicators?.quote?.[0]?.close  ?? [];
+            rawVolumes = result2.indicators?.quote?.[0]?.volume ?? [];
+            const all  = timestamps
+              .map((ts, i) => ({ ts, close: rawCloses[i] ?? NaN, volume: rawVolumes[i] ?? 0 }))
+              .filter((p) => !isNaN(p.close) && p.close > 0);
+            // 마지막 거래일 데이터만 — 마지막 바에서 24시간 이내
+            if (all.length > 0) {
+              const maxTs = all[all.length - 1].ts;
+              points = all.filter((p) => p.ts > maxTs - 86_400);
+            }
+          }
+        }
+      }
+
       if (points.length < 2) continue;
 
       const meta   = result.meta as Record<string, unknown>;
       const price  = Number(meta.regularMarketPrice ?? points[points.length - 1].close);
       const isOpen = meta.marketState === "REGULAR";
 
-      // 전날 종가: regularMarketPreviousClose > closes 배열 기반 계산 > chartPreviousClose
-      // closes 배열 기반: 1D(interval=5m) 에서는 적용 불가 → 5d daily range 사용
       let prevClose: number | null = meta.regularMarketPreviousClose
         ? Number(meta.regularMarketPreviousClose)
         : null;
 
-      // 1D 차트이고 regularMarketPreviousClose가 없으면 (장 마감/주말) — 5d daily로 보완
-      if (!prevClose && cfg.range === "1d") {
+      // prevClose 없으면 5d daily 범위로 보완
+      if (!prevClose) {
         try {
           const dailyUrl = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=1d&range=5d&includePrePost=false`;
           const dr = await yfProxyFetch(dailyUrl, { cache: "no-store" });
