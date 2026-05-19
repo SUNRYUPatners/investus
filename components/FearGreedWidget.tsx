@@ -5,7 +5,7 @@ import { FearGreedGauge } from "./FearGreedGauge";
 import type { FearGreedData } from "@/lib/api";
 import type { Locale } from "@/lib/i18n";
 
-const CACHE_KEY = "fear-greed-cache";
+const CACHE_KEY = "fear-greed-cache-v2";
 
 function isMarketOpen(): boolean {
   const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));

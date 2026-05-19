@@ -5,7 +5,7 @@ import { BuffettGauge } from "./BuffettGauge";
 import type { BuffettData } from "@/lib/api";
 import type { Locale } from "@/lib/i18n";
 
-const CACHE_KEY = "buffett-cache";
+const CACHE_KEY = "buffett-cache-v2";
 
 function isMarketOpen(): boolean {
   const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));

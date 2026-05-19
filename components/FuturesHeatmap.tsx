@@ -103,13 +103,11 @@ type Props = { items: FutureItem[] };
 
 export function FuturesHeatmap({ items }: Props) {
   const [popup, setPopup]     = useState<PopupState | null>(null);
-  const [open, setOpen]       = useState(false);
+  const [open, setOpen]       = useState(isMarketOpen);
   const [thumbL, setThumbL]   = useState(0);
   const [thumbW, setThumbW]   = useState(100);
   const scrollRef             = useRef<HTMLDivElement>(null);
   const bySymbol = Object.fromEntries(items.map((i) => [i.symbol, i]));
-
-  useState(() => { setOpen(isMarketOpen()); });
 
   useEffect(() => {
     const el = scrollRef.current;

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { BuffettData } from "@/lib/api";
+import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -10,6 +11,8 @@ function yfProxyFetch(url: string, init: RequestInit = {}): Promise<Response> {
   if (YF_PROXY) return fetch(`${YF_PROXY}?url=${encodeURIComponent(url)}`, init);
   return fetch(url, { headers: { "User-Agent": "Mozilla/5.0", Accept: "application/json" }, ...init });
 }
+
+const KV_KEY = "buffett:v1";
 
 // S&P 500 monthly chart as Wilshire proxy (Wilshire 5000 not available on Yahoo Finance)
 // S&P 500 × 9.5 ≈ Wilshire 5000 index level; calibrated via W5000_CAP_FACTOR
@@ -81,21 +84,17 @@ export async function GET() {
     const [wilshire, gdpB] = await Promise.all([fetchWilshire(), fetchFredGDP()]);
 
     if (!wilshire) {
-      // Use hardcoded realistic values as last resort (2025 Q2 calibration)
-      // Better than showing nothing
-      const gdp = gdpB ?? 29369;
-      const fallbackRatio = 192;
-      const data: BuffettData = {
-        ratio: fallbackRatio,
-        marketCap: "~$56.5T",
-        gdp: `~$${(gdp / 1000).toFixed(1)}T`,
-        prevQuarter: 185,
-        prevYear: 172,
-        updatedAt: `${new Date().getFullYear()} Q${Math.ceil((new Date().getMonth() + 1) / 3)}`,
-      };
-      return NextResponse.json(data, {
-        headers: { "Cache-Control": "s-maxage=1800, stale-while-revalidate=86400" },
-      });
+      // YF 실패 → KV에서 마지막 실제 값 사용 (하드코딩 fallback 금지)
+      const kvData = await kvGetDetail(KV_KEY);
+      if (kvData && (kvData as unknown as BuffettData).ratio != null) {
+        return NextResponse.json(kvData, {
+          headers: { "Cache-Control": "s-maxage=1800, stale-while-revalidate=86400" },
+        });
+      }
+      return NextResponse.json(
+        { error: "일시적 오류" },
+        { status: 503, headers: { "Cache-Control": "no-store" } },
+      );
     }
 
     // Fall back to BEA 2024 annual if FRED is down
@@ -120,22 +119,23 @@ export async function GET() {
       updatedAt:   quarter,
     };
 
+    // KV에 저장 — API 실패 시 실제 마지막 값 사용 가능
+    kvSetDetail(KV_KEY, data as unknown as Record<string, unknown>);
+
     return NextResponse.json(data, {
       headers: { "Cache-Control": "s-maxage=3600, stale-while-revalidate=86400" },
     });
   } catch {
-    const gdp = 29369;
-    const fallbackRatio = 192;
-    const data: BuffettData = {
-      ratio: fallbackRatio,
-      marketCap: "~$56.5T",
-      gdp: `~$${(gdp / 1000).toFixed(1)}T`,
-      prevQuarter: 185,
-      prevYear: 172,
-      updatedAt: `${new Date().getFullYear()} Q${Math.ceil((new Date().getMonth() + 1) / 3)}`,
-    };
-    return NextResponse.json(data, {
-      headers: { "Cache-Control": "s-maxage=300, stale-while-revalidate=3600" },
-    });
+    // 전체 실패 → KV에서 마지막 실제 값 사용
+    const kvData = await kvGetDetail(KV_KEY);
+    if (kvData && (kvData as unknown as BuffettData).ratio != null) {
+      return NextResponse.json(kvData, {
+        headers: { "Cache-Control": "s-maxage=300, stale-while-revalidate=3600" },
+      });
+    }
+    return NextResponse.json(
+      { error: "일시적 오류" },
+      { status: 503, headers: { "Cache-Control": "no-store" } },
+    );
   }
 }

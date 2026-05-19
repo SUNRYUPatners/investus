@@ -10,7 +10,9 @@ const ZONE_ICONS  = ["😱", "😨", "😐", "⚡", "🔥"];
 const ZONE_RANGES = [{ from: 0, to: 25 }, { from: 25, to: 45 }, { from: 45, to: 55 }, { from: 55, to: 75 }, { from: 75, to: 100 }];
 
 function getZoneIdx(v: number) {
-  return ZONE_RANGES.findIndex((z) => v >= z.from && v <= z.to) ?? 2;
+  const idx = ZONE_RANGES.findIndex((z) => v >= z.from && v <= z.to);
+  if (idx >= 0) return idx;
+  return v < 25 ? 0 : 4; // below range = extreme fear, above range = extreme greed
 }
 
 function PrevValue({ label, value, zones }: { label: string; value: number; zones: { label: string }[] }) {
