@@ -10,6 +10,7 @@ import { LocaleProvider } from "@/contexts/LocaleContext";
 import { VersionBanner } from "@/components/VersionBanner";
 import { getLocale } from "@/lib/getLocale";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -100,6 +101,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             strategy="afterInteractive"
           />
         </LocaleProvider>
+        <Analytics />
       </body>
     </html>
   );
