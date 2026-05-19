@@ -60,7 +60,7 @@ export default async function HomePage() {
           </div>
 
           {/* ── 오른쪽 컬럼 (데스크톱 전용, sticky) ── */}
-          <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] gap-5 pb-10">
+          <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
             <AdBanner format="auto" />
             <FearGreedWidget locale={locale} />
             <BuffettWidget locale={locale} />

@@ -125,7 +125,7 @@ export default async function InsightPage() {
           </div>
 
           {/* Right sidebar */}
-          <aside className="sticky top-6 flex flex-col gap-5">
+          <aside className="sticky top-[57px] max-h-[calc(100vh-57px)] overflow-y-auto no-scrollbar flex flex-col gap-5">
             {EbookBanner}
             {EduBanner}
             <AdBanner format="auto" />
