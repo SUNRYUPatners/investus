@@ -1,5 +1,9 @@
 {
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "crons": [
+    { "path": "/api/push/market-open", "schedule": "30 13 * * 1-5" },
+    { "path": "/api/push/market-open", "schedule": "30 14 * * 1-5" }
+  ]
 }
