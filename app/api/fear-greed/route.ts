@@ -46,7 +46,17 @@ export async function GET() {
     return NextResponse.json(data, {
       headers: { "Cache-Control": "s-maxage=1800, stale-while-revalidate=86400" },
     });
-  } catch (e) {
-    return NextResponse.json({ error: String(e) }, { status: 500 });
+  } catch {
+    // 폴백: CNN 다운 시 중립값(50) 반환 — 빈 화면보다 낫다
+    const fallback: FearGreedData = {
+      value:     50,
+      label:     "Neutral",
+      prevWeek:  50,
+      prevMonth: 50,
+      updatedAt: new Date().toISOString().slice(0, 10),
+    };
+    return NextResponse.json(fallback, {
+      headers: { "Cache-Control": "s-maxage=300, stale-while-revalidate=3600" },
+    });
   }
 }

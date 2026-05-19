@@ -1,6 +1,18 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+
+function getRelativeTime(ts: number): string {
+  const diff = Date.now() - ts;
+  const secs = Math.floor(diff / 1000);
+  if (secs < 60) return "방금";
+  const mins = Math.floor(secs / 60);
+  if (mins < 60) return `${mins}분 전`;
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours}시간 전`;
+  const days = Math.floor(hours / 24);
+  return `${days}일 전`;
+}
 import Link from "next/link";
 import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, Users, TrendingUp, Send, X, ChevronDown } from "lucide-react";
 import { Header } from "@/components/Header";
@@ -31,11 +43,17 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
   const [localComments, setLocalComments] = useState<Comment[]>([]);
   const [likedComments, setLikedComments] = useState<Set<number>>(new Set());
   const [input, setInput] = useState("");
+  const [, setTick] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setLocalComments(MOCK_COMMENTS[post.id] ?? []);
   }, [post.id]);
+
+  useEffect(() => {
+    const id = setInterval(() => setTick((t) => t + 1), 60_000);
+    return () => clearInterval(id);
+  }, []);
 
   const submitComment = () => {
     if (!input.trim() || !user) return;
@@ -44,7 +62,7 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
       nickname: user.nickname,
       holdingLabel: "보유 인증",
       content: input.trim(),
-      time: "방금 전",
+      createdAt: Date.now(),
       likes: 0,
     };
     setLocalComments((prev) => [newComment, ...prev]);
@@ -108,7 +126,7 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
                   <div className="flex items-center gap-1.5 mb-1">
                     <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{c.nickname}</span>
                     <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(0,229,160,0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
-                    <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{c.time}</span>
+                    <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{getRelativeTime(c.createdAt)}</span>
                   </div>
                   <p className="text-[12px] leading-relaxed mb-1.5" style={{ color: "var(--text)" }}>{c.content}</p>
                   <button
@@ -245,9 +263,9 @@ function AskAI({ symbol }: { symbol: string }) {
           <div className="w-full rounded-2xl p-4 border mt-1"
             style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
             <p className="text-xs font-bold mb-1" style={{ color: "var(--mint)" }}>✦ 무제한으로 사용하려면 구독하세요</p>
-            <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>월 ₩4,900으로 AI 질문 무제한 + 프리미엄 기능</p>
+            <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>월 ₩5,900으로 AI 질문 무제한 + 리포트 전체 열람</p>
             <button className="w-full py-2.5 rounded-xl text-sm font-bold text-black" style={{ background: "var(--mint)" }}>
-              구독하기 ₩4,900/월
+              구독하기 ₩5,900/월
             </button>
           </div>
         </div>
@@ -348,12 +366,18 @@ export default function WallPage() {
   const [hasCreatorProfile, setHasCreatorProfile] = useState(false);
   const [commentPost, setCommentPost]     = useState<Post | null>(null);
   const [creatorSort, setCreatorSort]     = useState<CreatorSort>("popular");
+  const [, setTick] = useState(0);
 
   useEffect(() => {
     try {
       const c = localStorage.getItem("investus_my_creator");
       setHasCreatorProfile(!!c);
     } catch {}
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(() => setTick((t) => t + 1), 60_000);
+    return () => clearInterval(id);
   }, []);
 
   const posts = MOCK_POSTS.filter((p) => p.symbol === selected);
@@ -498,7 +522,7 @@ export default function WallPage() {
                             </span>
                           </div>
                         </div>
-                        <span className="text-[10px]" style={{ color: "var(--muted)" }}>{post.time}</span>
+                        <span className="text-[10px]" style={{ color: "var(--muted)" }}>{getRelativeTime(post.createdAt)}</span>
                       </div>
                       <p className="text-[13px] leading-relaxed mb-3" style={{ color: "var(--text)" }}>{post.content}</p>
                       <div className="flex items-center gap-4">

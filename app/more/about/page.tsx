@@ -108,6 +108,109 @@ export default function AboutPage() {
           ))}
         </div>
 
+        {/* ── Stock Performance ── */}
+        <div className="mb-6">
+          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            실제 수익률 공개 · 2026년 기준
+          </p>
+
+          {/* Total return hero */}
+          <div
+            className="relative rounded-2xl overflow-hidden p-5 mb-3"
+            style={{ background: "linear-gradient(145deg, #0a1f14 0%, #0a0c10 60%, #120a1f 100%)" }}
+          >
+            <div className="absolute inset-0 pointer-events-none"
+              style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(0,229,160,0.08) 0%, transparent 60%)" }} />
+            <div className="relative">
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <p className="text-[10px] font-semibold tracking-widest uppercase font-syne mb-1" style={{ color: "var(--mint)" }}>
+                    종합계좌 전체 수익률
+                  </p>
+                  <p className="text-4xl font-bold font-syne" style={{ color: "var(--mint)" }}>
+                    +103.69%
+                  </p>
+                </div>
+                <div
+                  className="px-3 py-1.5 rounded-full text-[10px] font-bold"
+                  style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.25)" }}
+                >
+                  ✦ 인증됨
+                </div>
+              </div>
+              <div className="flex gap-3 flex-wrap">
+                <div>
+                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>투자 원금</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>X3억</p>
+                </div>
+                <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
+                <div>
+                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>현재 가치</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>X7억</p>
+                </div>
+                <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
+                <div>
+                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>수익</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>+X3억</p>
+                </div>
+                <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
+                <div>
+                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>원금 대비</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>약 2배↑</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Emphasis banner */}
+          <div
+            className="rounded-2xl p-4 mb-3 text-center"
+            style={{
+              background: "linear-gradient(135deg, rgba(0,229,160,0.08), rgba(99,102,241,0.08))",
+              border: "1px solid rgba(0,229,160,0.18)",
+            }}
+          >
+            <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>
+              전 보유 종목 수익률 <span style={{ color: "var(--mint)" }}>100% 이상</span>
+            </p>
+            <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+              단 한 종목도 손실 없이 — 계좌 전체 수익률 100% 돌파
+            </p>
+          </div>
+
+          {/* Per-stock returns */}
+          <div className="grid grid-cols-2 gap-2.5">
+            {[
+              { symbol: "TSLA", name: "테슬라", ret: "+100.49%", shares: "XX7주", color: "#e879f9" },
+              { symbol: "PLTR", name: "팔란티어", ret: "+133.24%", shares: "XX3주", color: "#60a5fa" },
+              { symbol: "IBM",  name: "IBM",     ret: "+139.76%", shares: "XX2주", color: "#34d399" },
+              { symbol: "META", name: "메타",    ret: "+159.99%", shares: "XX8주", color: "#fb923c" },
+            ].map((s) => (
+              <div
+                key={s.symbol}
+                className="rounded-2xl p-4 border"
+                style={{ background: "var(--card)", borderColor: "var(--border)" }}
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs font-bold font-syne" style={{ color: "var(--text)" }}>{s.symbol}</span>
+                  <span
+                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                    style={{ background: `${s.color}18`, color: s.color }}
+                  >
+                    {s.ret}
+                  </span>
+                </div>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>{s.name}</p>
+                <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>{s.shares}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[10px] text-center mt-3" style={{ color: "var(--muted)" }}>
+            * 정확한 매입가·현재가·보유 수량은 비공개. 수익률·배수만 공개.
+          </p>
+        </div>
+
         {/* ── Founder ── */}
         <div
           className="rounded-2xl p-5 mb-6 border"
@@ -213,109 +316,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* ── Stock Performance ── */}
-        <div className="mb-6">
-          <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            실제 수익률 공개 · 2026년 기준
-          </p>
-
-          {/* Total return hero */}
-          <div
-            className="relative rounded-2xl overflow-hidden p-5 mb-3"
-            style={{ background: "linear-gradient(145deg, #0a1f14 0%, #0a0c10 60%, #120a1f 100%)" }}
-          >
-            <div className="absolute inset-0 pointer-events-none"
-              style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(0,229,160,0.08) 0%, transparent 60%)" }} />
-            <div className="relative">
-              <div className="flex items-start justify-between mb-3">
-                <div>
-                  <p className="text-[10px] font-semibold tracking-widest uppercase font-syne mb-1" style={{ color: "var(--mint)" }}>
-                    종합계좌 전체 수익률
-                  </p>
-                  <p className="text-4xl font-bold font-syne" style={{ color: "var(--mint)" }}>
-                    +103.69%
-                  </p>
-                </div>
-                <div
-                  className="px-3 py-1.5 rounded-full text-[10px] font-bold"
-                  style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.25)" }}
-                >
-                  ✦ 인증됨
-                </div>
-              </div>
-              <div className="flex gap-3 flex-wrap">
-                <div>
-                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>투자 원금</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>X3억</p>
-                </div>
-                <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
-                <div>
-                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>현재 가치</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>X7억</p>
-                </div>
-                <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
-                <div>
-                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>수익</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>+X3억</p>
-                </div>
-                <div className="w-px self-stretch" style={{ background: "var(--border)" }} />
-                <div>
-                  <p className="text-[10px]" style={{ color: "var(--muted)" }}>원금 대비</p>
-                  <p className="text-sm font-bold" style={{ color: "var(--mint)" }}>약 2배↑</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Emphasis banner */}
-          <div
-            className="rounded-2xl p-4 mb-3 text-center"
-            style={{
-              background: "linear-gradient(135deg, rgba(0,229,160,0.08), rgba(99,102,241,0.08))",
-              border: "1px solid rgba(0,229,160,0.18)",
-            }}
-          >
-            <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>
-              전 보유 종목 수익률 <span style={{ color: "var(--mint)" }}>100% 이상</span>
-            </p>
-            <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-              단 한 종목도 손실 없이 — 계좌 전체 수익률 100% 돌파
-            </p>
-          </div>
-
-          {/* Per-stock returns */}
-          <div className="grid grid-cols-2 gap-2.5">
-            {[
-              { symbol: "TSLA", name: "테슬라", ret: "+100.49%", shares: "XX7주", color: "#e879f9" },
-              { symbol: "PLTR", name: "팔란티어", ret: "+133.24%", shares: "XX3주", color: "#60a5fa" },
-              { symbol: "IBM",  name: "IBM",     ret: "+139.76%", shares: "XX2주", color: "#34d399" },
-              { symbol: "META", name: "메타",    ret: "+159.99%", shares: "XX8주", color: "#fb923c" },
-            ].map((s) => (
-              <div
-                key={s.symbol}
-                className="rounded-2xl p-4 border"
-                style={{ background: "var(--card)", borderColor: "var(--border)" }}
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-bold font-syne" style={{ color: "var(--text)" }}>{s.symbol}</span>
-                  <span
-                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                    style={{ background: `${s.color}18`, color: s.color }}
-                  >
-                    {s.ret}
-                  </span>
-                </div>
-                <p className="text-[11px]" style={{ color: "var(--muted)" }}>{s.name}</p>
-                <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>{s.shares}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-[10px] text-center mt-3" style={{ color: "var(--muted)" }}>
-            * 정확한 매입가·현재가·보유 수량은 비공개. 수익률·배수만 공개.
-          </p>
         </div>
 
         {/* ── Footer brand ── */}

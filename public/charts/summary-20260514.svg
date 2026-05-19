@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" width="800" height="580">
+  <defs>
+    <linearGradient id="bg14" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0c1525"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c2410c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="580" fill="url(#bg14)"/>
+
+  <!-- Header band -->
+  <rect width="800" height="62" fill="rgba(0,229,160,0.07)"/>
+  <rect x="0" y="61" width="800" height="1" fill="rgba(0,229,160,0.2)"/>
+  <text x="400" y="24" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">SUNRYU PARTNERS · 2026.05.14 오늘의 한장 요약</text>
+  <text x="400" y="48" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Arial" font-weight="bold">6가지 핵심 뉴스 · 한눈에 보기</text>
+
+  <!-- Card 1: 케빈 워시 연준 -->
+  <rect x="20" y="80" width="370" height="145" rx="10" fill="rgba(153,27,27,0.08)" stroke="rgba(248,113,113,0.3)" stroke-width="1"/>
+  <rect x="20" y="80" width="4" height="145" rx="2" fill="url(#gr)"/>
+  <circle cx="56" cy="112" r="18" fill="rgba(153,27,27,0.2)" stroke="rgba(248,113,113,0.4)" stroke-width="1"/>
+  <text x="56" y="118" text-anchor="middle" fill="#f87171" font-size="16" font-family="Arial">🏛️</text>
+  <text x="84" y="105" fill="#f87171" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">연준의장 교체</text>
+  <text x="84" y="122" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">케빈 워시 인준 확정 · 파월 교체</text>
+  <rect x="36" y="140" width="340" height="28" rx="6" fill="rgba(153,27,27,0.12)"/>
+  <text x="56" y="158" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">상원 찬성</text>
+  <text x="128" y="158" fill="#e2e8f0" font-size="11" font-family="Arial">51표 · 인플레 억제 우선 매파 성향</text>
+  <text x="36" y="183" fill="#94a3b8" font-size="10" font-family="Arial">▸ 단기 금리 인하 기대 후퇴 · 달러 강세 압력</text>
+  <text x="36" y="200" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ TLT·장기채 비중 신중 조절 필요</text>
+
+  <!-- Card 2: Ron Baron 테슬라 -->
+  <rect x="410" y="80" width="370" height="145" rx="10" fill="rgba(29,78,216,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <rect x="410" y="80" width="4" height="145" rx="2" fill="url(#gb)"/>
+  <circle cx="446" cy="112" r="18" fill="rgba(29,78,216,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="446" y="118" text-anchor="middle" fill="#60a5fa" font-size="16" font-family="Arial">🏎️</text>
+  <text x="474" y="105" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Ron Baron · 테슬라</text>
+  <text x="474" y="122" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">10년 내 $2,500 · 시총 $8.3조</text>
+  <rect x="426" y="140" width="340" height="28" rx="6" fill="rgba(29,78,216,0.12)"/>
+  <text x="446" y="158" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">투자 수익</text>
+  <text x="514" y="158" fill="#e2e8f0" font-size="11" font-family="Arial">$1.7B → $15B+ · 현재 5.7배 상승 여력</text>
+  <text x="426" y="183" fill="#94a3b8" font-size="10" font-family="Arial">▸ FSD·로봇택시·에너지·Optimus 4축 성장</text>
+  <text x="426" y="200" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ "지금은 테슬라를 살 때" CNBC 직격 발언</text>
+
+  <!-- Card 3: S&P500 신고가 -->
+  <rect x="20" y="242" width="370" height="145" rx="10" fill="rgba(0,181,128,0.07)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <rect x="20" y="242" width="4" height="145" rx="2" fill="url(#gm)"/>
+  <circle cx="56" cy="274" r="18" fill="rgba(0,181,128,0.15)" stroke="rgba(0,229,160,0.4)" stroke-width="1"/>
+  <text x="56" y="280" text-anchor="middle" fill="#00e5a0" font-size="16" font-family="Arial">📊</text>
+  <text x="84" y="267" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">S&amp;P500 신고가</text>
+  <text x="84" y="284" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">ATH 경신 · 주간 +0.96% · $350B 추가</text>
+  <rect x="36" y="302" width="340" height="28" rx="6" fill="rgba(0,181,128,0.1)"/>
+  <text x="56" y="320" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">실적 시즌</text>
+  <text x="128" y="320" fill="#e2e8f0" font-size="11" font-family="Arial">EPS 상회 74% · 광학통신·AI칩 급등</text>
+  <text x="36" y="345" fill="#94a3b8" font-size="10" font-family="Arial">▸ 4/26 이후 연속 ATH · Cerebras IPO 가격 상향</text>
+  <text x="36" y="362" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ CPI+이란 리스크 변수 · 변동성 대비 필요</text>
+
+  <!-- Card 4: Meta AI -->
+  <rect x="410" y="242" width="370" height="145" rx="10" fill="rgba(29,78,216,0.08)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <rect x="410" y="242" width="4" height="145" rx="2" fill="url(#gb)"/>
+  <circle cx="446" cy="274" r="18" fill="rgba(29,78,216,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="446" y="280" text-anchor="middle" fill="#60a5fa" font-size="16" font-family="Arial">📘</text>
+  <text x="474" y="267" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Meta AI</text>
+  <text x="474" y="284" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">"가장 오해받는 메가캡" — ARK 분석</text>
+  <rect x="426" y="302" width="340" height="28" rx="6" fill="rgba(29,78,216,0.12)"/>
+  <text x="446" y="320" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">AI 투자</text>
+  <text x="506" y="320" fill="#e2e8f0" font-size="11" font-family="Arial">$8B · 광고 ROI 2배 · LLaMA 오픈소스</text>
+  <text x="426" y="345" fill="#94a3b8" font-size="10" font-family="Arial">▸ 러시아·이란 리스크로 본질 가치 저평가 중</text>
+  <text x="426" y="362" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ AI 광고+웨어러블+LLM 3축 조용히 최강 생태계</text>
+
+  <!-- Card 5: 젠슨황 AI 역설 -->
+  <rect x="20" y="404" width="370" height="145" rx="10" fill="rgba(124,58,237,0.08)" stroke="rgba(167,139,250,0.25)" stroke-width="1"/>
+  <rect x="20" y="404" width="4" height="145" rx="2" fill="url(#gp)"/>
+  <circle cx="56" cy="436" r="18" fill="rgba(124,58,237,0.2)" stroke="rgba(167,139,250,0.4)" stroke-width="1"/>
+  <text x="56" y="442" text-anchor="middle" fill="#a78bfa" font-size="16" font-family="Arial">🤖</text>
+  <text x="84" y="429" fill="#a78bfa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">젠슨 황 AI 역설</text>
+  <text x="84" y="446" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">"방사선 전문의 3000만 명 늘었다"</text>
+  <rect x="36" y="464" width="340" height="28" rx="6" fill="rgba(124,58,237,0.12)"/>
+  <text x="56" y="482" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold">핵심</text>
+  <text x="90" y="482" fill="#e2e8f0" font-size="11" font-family="Arial">AI는 대체가 아닌 인간 수요를 배가시킴</text>
+  <text x="36" y="507" fill="#94a3b8" font-size="10" font-family="Arial">▸ 교육·법률·금융·소프트웨어 전 산업 적용</text>
+  <text x="36" y="524" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ NVIDIA: 배가 효과의 핵심 인프라 · 수요 무한 사이클</text>
+
+  <!-- Card 6: 광학통신 -->
+  <rect x="410" y="404" width="370" height="145" rx="10" fill="rgba(0,181,128,0.07)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <rect x="410" y="404" width="4" height="145" rx="2" fill="url(#gm)"/>
+  <circle cx="446" cy="436" r="18" fill="rgba(0,181,128,0.15)" stroke="rgba(0,229,160,0.4)" stroke-width="1"/>
+  <text x="446" y="442" text-anchor="middle" fill="#00e5a0" font-size="16" font-family="Arial">🔆</text>
+  <text x="474" y="429" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">광학통신 폭발</text>
+  <text x="474" y="446" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">LITE·COHR·LSCC AI 데이터센터</text>
+  <rect x="426" y="464" width="340" height="28" rx="6" fill="rgba(0,181,128,0.1)"/>
+  <text x="446" y="482" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">시장 규모</text>
+  <text x="524" y="482" fill="#e2e8f0" font-size="11" font-family="Arial">$18B → $42B (연평균 +32%)</text>
+  <text x="426" y="507" fill="#94a3b8" font-size="10" font-family="Arial">▸ GB200 NVL72 랙당 광트랜시버 8,000개+ 필요</text>
+  <text x="426" y="524" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ AI 인프라의 "조용한 실력자" · GPU 수요와 연동</text>
+
+  <!-- Footer -->
+  <rect x="0" y="557" width="800" height="23" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="572" text-anchor="middle" fill="#334155" font-size="9" font-family="Arial">SUNRYU Partners CIO · 2026.05.14 · investus.kr</text>
+</svg>

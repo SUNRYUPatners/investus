@@ -37,6 +37,7 @@ export type FinnhubMetrics = {
   eps:           number | null;
   beta:          number | null;
   dividendYield: number | null;
+  avgVolume:     number | null; // 10-day avg volume (shares)
 };
 
 export type FinnhubCandle = {
@@ -151,6 +152,10 @@ export async function fetchFinnhubMetrics(symbol: string): Promise<FinnhubMetric
         : m.currentDividendYieldTTM != null
           ? m.currentDividendYieldTTM / 100
           : null,
+      // 10-day average trading volume (in millions from Finnhub → convert to shares)
+      avgVolume: m["10DayAverageTradingVolume"] != null
+        ? Math.round(m["10DayAverageTradingVolume"] * 1_000_000)
+        : null,
     };
   } catch {
     return null;

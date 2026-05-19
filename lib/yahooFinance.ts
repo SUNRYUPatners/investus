@@ -76,13 +76,23 @@ export async function fetchQuoteV8(symbol: string): Promise<YFQuote | null> {
       // chartPreviousClose는 부정확 — closes 배열에서 직접 전날 종가 추출
       // 장 마감: closes[-1]=당일종가, closes[-2]=전날종가
       // 장 중:  closes[-1]=전날종가 (당일 캔들 미완성), regularMarketPrice=현재가
-      const rawCloses: unknown[] = result?.indicators?.quote?.[0]?.close ?? [];
+      const q0         = result?.indicators?.quote?.[0] ?? {};
+      const rawCloses: unknown[] = q0.close ?? [];
+      const rawOpens:  unknown[] = q0.open  ?? [];
       const closes = rawCloses.filter((c): c is number => typeof c === "number" && c > 0);
+      const opens  = rawOpens.filter((o): o is number  => typeof o === "number" && o > 0);
+
       const prev = isOpen
-        ? (closes.at(-1) ?? price)          // 장 중: 마지막 완성 종가 = 전날
-        : (closes.at(-2) ?? closes.at(-1) ?? price); // 장 마감: 마지막이 당일, 그 전이 전날
+        ? (closes.at(-1) ?? price)
+        : (closes.at(-2) ?? closes.at(-1) ?? price);
 
       const change = price - prev;
+
+      // open: meta field (장 중) → last valid bar open (장 마감) → null
+      const openPrice =
+        (meta.regularMarketOpen ? Number(meta.regularMarketOpen) : null) ??
+        (opens.length > 0 ? opens.at(-1)! : null);
+
       return {
         symbol:        String(meta.symbol ?? symbol),
         shortName:     String(meta.longName ?? meta.shortName ?? symbol),
@@ -91,9 +101,9 @@ export async function fetchQuoteV8(symbol: string): Promise<YFQuote | null> {
         changePercent: prev > 0 ? (change / prev) * 100 : 0,
         volume:        Number(meta.regularMarketVolume ?? 0),
         marketCap:     null,
-        open:  isOpen && meta.regularMarketOpen    ? Number(meta.regularMarketOpen)    : null,
-        high:  isOpen && meta.regularMarketDayHigh ? Number(meta.regularMarketDayHigh) : null,
-        low:   isOpen && meta.regularMarketDayLow  ? Number(meta.regularMarketDayLow)  : null,
+        open:  openPrice,
+        high:  meta.regularMarketDayHigh ? Number(meta.regularMarketDayHigh) : null,
+        low:   meta.regularMarketDayLow  ? Number(meta.regularMarketDayLow)  : null,
       };
     } catch { /* try next host */ }
   }
@@ -135,9 +145,9 @@ export async function fetchBatchQuotes(symbols: string[]): Promise<YFQuote[]> {
             changePercent: Number(q.regularMarketChangePercent ?? 0),
             volume:        Number(q.regularMarketVolume ?? 0),
             marketCap:     q.marketCap != null ? Number(q.marketCap) : null,
-            open:  isOpen && q.regularMarketOpen    ? Number(q.regularMarketOpen)    : null,
-            high:  isOpen && q.regularMarketDayHigh ? Number(q.regularMarketDayHigh) : null,
-            low:   isOpen && q.regularMarketDayLow  ? Number(q.regularMarketDayLow)  : null,
+            open:  q.regularMarketOpen    ? Number(q.regularMarketOpen)    : null,
+            high:  q.regularMarketDayHigh ? Number(q.regularMarketDayHigh) : null,
+            low:   q.regularMarketDayLow  ? Number(q.regularMarketDayLow)  : null,
           };
         });
       if (valid.length > 0) { v7Results = valid; break; }

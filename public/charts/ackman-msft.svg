@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0c1525"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#dc2626"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <text x="400" y="32" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="3">Bill Ackman · Pershing Square · Q1 2026</text>
+  <text x="400" y="57" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">Microsoft $2.3B 집중 투자 — Google 전량 매도</text>
+
+  <!-- Left: sell -->
+  <rect x="30" y="80" width="340" height="200" rx="10" fill="rgba(220,38,38,0.06)" stroke="rgba(248,113,113,0.25)" stroke-width="1"/>
+  <rect x="30" y="80" width="340" height="36" rx="10" fill="rgba(220,38,38,0.15)"/>
+  <text x="200" y="103" text-anchor="middle" fill="#f87171" font-size="12" font-family="Arial" font-weight="bold">매도 — Google $GOOGL 전량</text>
+  <text x="50" y="136" fill="#94a3b8" font-size="11" font-family="Arial">① 반독점 소송 (검색 시장 독점)</text>
+  <text x="50" y="158" fill="#94a3b8" font-size="11" font-family="Arial">② Gemini AI — ChatGPT 대비 채택률 저조</text>
+  <text x="50" y="180" fill="#94a3b8" font-size="11" font-family="Arial">③ OpenAI 소송 공동 피고 포함</text>
+  <text x="50" y="202" fill="#94a3b8" font-size="11" font-family="Arial">④ AI 전쟁 1위 교체 판단</text>
+  <text x="50" y="224" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">→ "AI 패권 구도 전환" 시그널</text>
+  <text x="50" y="257" fill="#ef4444" font-size="34" font-family="Arial" font-weight="bold">SELL</text>
+
+  <!-- Arrow -->
+  <text x="390" y="193" text-anchor="middle" fill="#334155" font-size="28" font-family="Arial">→</text>
+
+  <!-- Right: buy -->
+  <rect x="430" y="80" width="340" height="200" rx="10" fill="rgba(29,78,216,0.06)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <rect x="430" y="80" width="340" height="36" rx="10" fill="rgba(29,78,216,0.2)"/>
+  <text x="600" y="103" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">매수 — Microsoft $MSFT $2.3B</text>
+  <text x="450" y="136" fill="#94a3b8" font-size="11" font-family="Arial">① Azure AI — OpenAI 독점 파트너십</text>
+  <text x="450" y="158" fill="#94a3b8" font-size="11" font-family="Arial">② Copilot — 기업 AI 전환 가장 빠른 기업</text>
+  <text x="450" y="180" fill="#94a3b8" font-size="11" font-family="Arial">③ GitHub Copilot — 개발자 AI 시장 1위</text>
+  <text x="450" y="202" fill="#94a3b8" font-size="11" font-family="Arial">④ 규제 리스크 최소 — 반독점 안전</text>
+  <text x="450" y="224" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">→ "AI 시대 최대 수혜자" 확신</text>
+  <text x="450" y="257" fill="#3b82f6" font-size="34" font-family="Arial" font-weight="bold">$2.3B</text>
+
+  <!-- Bottom stats row -->
+  <rect x="30" y="308" width="220" height="80" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="140" y="332" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">MS 시총</text>
+  <text x="140" y="358" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">$3.3T+</text>
+  <text x="140" y="378" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">세계 1~2위 경쟁</text>
+
+  <rect x="270" y="308" width="220" height="80" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="380" y="332" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Azure 성장률</text>
+  <text x="380" y="358" text-anchor="middle" fill="#60a5fa" font-size="20" font-family="Arial" font-weight="bold">+33%</text>
+  <text x="380" y="378" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">YoY Q4 2025</text>
+
+  <rect x="510" y="308" width="260" height="80" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="640" y="332" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Copilot 기업 계정</text>
+  <text x="640" y="358" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">8,500만+</text>
+  <text x="640" y="378" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">AI 전환 속도 최상위</text>
+
+  <text x="400" y="416" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.18</text>
+</svg>

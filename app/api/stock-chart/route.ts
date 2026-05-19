@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isMarketOpen } from "@/lib/marketHours";
+import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
 // ── Symbol maps ───────────────────────────────────────────────────────────────
 // Futures → TwelveData ETF proxy (continuous contracts not supported on free plan)
@@ -358,7 +359,6 @@ export async function GET(req: NextRequest) {
     : "1D";
 
   const cKey   = `${symbol}-${period}`;
-  const cached = _cache.get(cKey);
   const open   = isMarketOpen();
   const ttl    = LIVE_TTL[period] ?? 60_000;
 
@@ -366,6 +366,17 @@ export async function GET(req: NextRequest) {
   const cc = open
     ? `public, s-maxage=${Math.floor(ttl / 1000)}, stale-while-revalidate=120`
     : "public, s-maxage=43200, stale-while-revalidate=86400";
+
+  // 인메모리 없으면 KV에서 즉시 복원 (cold start 대응)
+  let cached = _cache.get(cKey) ?? null;
+  if (!cached) {
+    const kvData = await kvGetDetail(`chart:${cKey}`);
+    if (kvData) {
+      // 장 마감: fresh, 장 중: TTL 만료(0)로 복원 → 아래서 API 갱신
+      cached = { data: kvData as unknown as ChartResult, at: open ? 0 : Date.now() };
+      _cache.set(cKey, cached);
+    }
+  }
 
   // 장 마감 중: 1D 차트는 전날 종가로 충분 → 캐시 무기한
   // 장 중 + 장기 차트(YTD 이상): TTL 기반 갱신
@@ -375,40 +386,34 @@ export async function GET(req: NextRequest) {
 
   const isFutureOrCrypto = symbol in YF_SYM;
 
+  const save = (data: ChartResult) => {
+    _cache.set(cKey, { data, at: Date.now() });
+    kvSetDetail(`chart:${cKey}`, data as unknown as Record<string, unknown>);
+  };
+
   // YF via CF 프록시 — primary (모든 종목/선물/지수/크립토)
   const yahoo = await fetchYahooChart(symbol, period);
-  if (yahoo) {
-    _cache.set(cKey, { data: yahoo, at: Date.now() });
-    return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } });
-  }
+  if (yahoo) { save(yahoo); return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } }); }
 
-  // TwelveData — fallback (YF 실패 시)
+  // TwelveData — fallback
   const twelve = await fetchTwelveData(symbol, period);
-  if (twelve) {
-    _cache.set(cKey, { data: twelve, at: Date.now() });
-    return NextResponse.json(twelve, { headers: { "Cache-Control": cc } });
-  }
+  if (twelve) { save(twelve); return NextResponse.json(twelve, { headers: { "Cache-Control": cc } }); }
 
   // Stooq — 선물/지수 전용 추가 fallback
   if (isFutureOrCrypto) {
     const stooq = await fetchStooqChart(symbol, period);
-    if (stooq) {
-      _cache.set(cKey, { data: stooq, at: Date.now() });
-      return NextResponse.json(stooq, { headers: { "Cache-Control": cc } });
-    }
+    if (stooq) { save(stooq); return NextResponse.json(stooq, { headers: { "Cache-Control": cc } }); }
   }
 
   // Finnhub minimal — 1D 최후 수단
   if (period === "1D") {
     const minimal = await fetchFinnhubMinimalChart(symbol);
-    if (minimal) {
-      _cache.set(cKey, { data: minimal, at: Date.now() });
-      return NextResponse.json(minimal, { headers: { "Cache-Control": cc } });
-    }
+    if (minimal) { save(minimal); return NextResponse.json(minimal, { headers: { "Cache-Control": cc } }); }
   }
 
-  // Return stale cache rather than 503
+  // 모든 API 실패 → 스테일 캐시 무조건 서빙 (오류 반환 절대 금지)
   if (cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
 
-  return NextResponse.json({ error: "no data" }, { status: 503, headers: { "Cache-Control": "no-store" } });
+  // 진짜 아무것도 없음 (최초 접속 + 모든 API 실패) → 재시도 신호
+  return NextResponse.json({ error: "일시적 오류" }, { status: 503, headers: { "Cache-Control": "no-store" } });
 }

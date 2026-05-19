@@ -14,55 +14,59 @@ type NotiKey =
   | "price_alert";
 
 type NotiConfig = {
-  key: NotiKey;
+  key:   NotiKey;
   emoji: string;
   label: string;
-  desc: string;
+  desc:  string;
   color: string;
+  pushEnabled?: boolean; // 실제 Web Push 연동 여부
+  comingSoon?: boolean;
 };
 
 const NOTIFICATIONS: NotiConfig[] = [
   {
-    key:   "market_open",
-    emoji: "🔔",
-    label: "장 시작 알림",
-    desc:  "미국 주식 시장 개장 (오전 10:30 KST)",
-    color: "#00e5a0",
+    key:         "market_open",
+    emoji:       "🔔",
+    label:       "장 시작 알림",
+    desc:        "미국 주식 시장 개장 (오전 10:30 KST)",
+    color:       "#00e5a0",
   },
   {
-    key:   "market_close",
-    emoji: "🔕",
-    label: "장 마감 알림",
-    desc:  "미국 주식 시장 마감 (오전 5:00 KST)",
-    color: "#60a5fa",
+    key:         "market_close",
+    emoji:       "🔕",
+    label:       "장 마감 알림",
+    desc:        "미국 주식 시장 마감 (오전 5:00 KST)",
+    color:       "#60a5fa",
   },
   {
-    key:   "report_publish",
-    emoji: "📋",
-    label: "리포트 발행 알림",
-    desc:  "Investus 새 리포트·인사이트 업데이트",
-    color: "#c084fc",
+    key:         "report_publish",
+    emoji:       "📋",
+    label:       "리포트 업데이트 알림",
+    desc:        "Investus 새 리포트·인사이트 발행 시 즉시 알림",
+    color:       "#c084fc",
+    pushEnabled: true,
   },
   {
-    key:   "like_comment",
-    emoji: "💬",
-    label: "좋아요·댓글 알림",
-    desc:  "내 게시글에 좋아요·댓글이 달릴 때",
-    color: "#fb923c",
+    key:         "like_comment",
+    emoji:       "💬",
+    label:       "좋아요·댓글 알림",
+    desc:        "내 게시글에 좋아요·댓글이 달릴 때",
+    color:       "#fb923c",
   },
   {
-    key:   "new_subscriber",
-    emoji: "⭐",
-    label: "구독 알림",
-    desc:  "내 크리에이터 채널 신규 구독자",
-    color: "#fbbf24",
+    key:         "new_subscriber",
+    emoji:       "⭐",
+    label:       "구독 알림",
+    desc:        "내 크리에이터 채널 신규 구독자",
+    color:       "#fbbf24",
   },
   {
-    key:   "price_alert",
-    emoji: "📈",
-    label: "가격 알림",
-    desc:  "관심종목 목표가 도달 시 알림 (준비 중)",
-    color: "#f472b6",
+    key:         "price_alert",
+    emoji:       "📈",
+    label:       "가격 알림",
+    desc:        "관심종목 목표가 도달 시 알림 (준비 중)",
+    color:       "#f472b6",
+    comingSoon:  true,
   },
 ];
 
@@ -74,20 +78,49 @@ function loadPrefs(): Record<NotiKey, boolean> {
     if (raw) return JSON.parse(raw);
   } catch { /* ignore */ }
   return {
-    market_open:     true,
-    market_close:    false,
-    report_publish:  true,
-    like_comment:    true,
-    new_subscriber:  true,
-    price_alert:     false,
+    market_open:    true,
+    market_close:   false,
+    report_publish: true,
+    like_comment:   true,
+    new_subscriber: true,
+    price_alert:    false,
   };
 }
 
-function Toggle({ on, onChange }: { on: boolean; onChange: (v: boolean) => void }) {
+async function subscribePush(): Promise<PushSubscription | null> {
+  if (!("serviceWorker" in navigator) || !("PushManager" in window)) return null;
+  const reg = await navigator.serviceWorker.ready;
+  const existing = await reg.pushManager.getSubscription();
+  if (existing) return existing;
+
+  const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!;
+  const raw = atob(publicKey.replace(/-/g, "+").replace(/_/g, "/"));
+  const appServerKey = new Uint8Array(raw.length);
+  for (let i = 0; i < raw.length; i++) appServerKey[i] = raw.charCodeAt(i);
+
+  return reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: appServerKey });
+}
+
+async function unsubscribePush(): Promise<void> {
+  if (!("serviceWorker" in navigator)) return;
+  const reg = await navigator.serviceWorker.ready;
+  const sub = await reg.pushManager.getSubscription();
+  if (sub) {
+    await fetch("/api/push/unsubscribe", {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ endpoint: sub.endpoint }),
+    });
+    await sub.unsubscribe();
+  }
+}
+
+function Toggle({ on, onChange, disabled }: { on: boolean; onChange: (v: boolean) => void; disabled?: boolean }) {
   return (
     <button
-      onClick={() => onChange(!on)}
-      className="relative flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200"
+      onClick={() => !disabled && onChange(!on)}
+      disabled={disabled}
+      className="relative flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 disabled:opacity-40"
       style={{ background: on ? "var(--mint)" : "rgba(255,255,255,0.1)" }}
     >
       <span
@@ -103,9 +136,11 @@ function Toggle({ on, onChange }: { on: boolean; onChange: (v: boolean) => void 
 
 export default function NotificationsPage() {
   const router = useRouter();
-  const [prefs, setPrefs]   = useState<Record<NotiKey, boolean> | null>(null);
-  const [granted, setGranted] = useState<boolean | null>(null);
+  const [prefs, setPrefs]         = useState<Record<NotiKey, boolean> | null>(null);
+  const [granted, setGranted]     = useState<boolean | null>(null);
   const [requesting, setRequesting] = useState(false);
+  const [pushLoading, setPushLoading] = useState(false);
+  const [pushStatus, setPushStatus] = useState<"idle" | "ok" | "err">("idle");
 
   useEffect(() => {
     setPrefs(loadPrefs());
@@ -114,21 +149,57 @@ export default function NotificationsPage() {
     }
   }, []);
 
-  const update = (key: NotiKey, val: boolean) => {
-    setPrefs((prev) => {
-      if (!prev) return prev;
-      const next = { ...prev, [key]: val };
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch { /* ignore */ }
-      return next;
-    });
-  };
-
   const requestPermission = async () => {
     if (typeof Notification === "undefined") return;
     setRequesting(true);
     const result = await Notification.requestPermission();
     setGranted(result === "granted");
     setRequesting(false);
+  };
+
+  const update = async (key: NotiKey, val: boolean) => {
+    setPrefs((prev) => {
+      if (!prev) return prev;
+      const next = { ...prev, [key]: val };
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      return next;
+    });
+
+    // report_publish 토글 → 실제 Web Push 구독/해제
+    const cfg = NOTIFICATIONS.find((n) => n.key === key);
+    if (cfg?.pushEnabled) {
+      if (val) {
+        // 구독
+        setPushLoading(true);
+        setPushStatus("idle");
+        try {
+          if (Notification.permission !== "granted") {
+            const perm = await Notification.requestPermission();
+            setGranted(perm === "granted");
+            if (perm !== "granted") { setPushLoading(false); return; }
+          }
+          const sub = await subscribePush();
+          if (sub) {
+            const res = await fetch("/api/push/subscribe", {
+              method:  "POST",
+              headers: { "Content-Type": "application/json" },
+              body:    JSON.stringify(sub.toJSON()),
+            });
+            setPushStatus(res.ok ? "ok" : "err");
+          }
+        } catch {
+          setPushStatus("err");
+        } finally {
+          setPushLoading(false);
+        }
+      } else {
+        // 해제
+        setPushLoading(true);
+        try { await unsubscribePush(); } catch { /* ignore */ }
+        setPushLoading(false);
+        setPushStatus("idle");
+      }
+    }
   };
 
   if (!prefs) return null;
@@ -162,7 +233,7 @@ export default function NotificationsPage() {
                   알림 권한이 필요합니다
                 </p>
                 <p className="text-[11px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
-                  장 시작·리포트 알림을 받으려면 브라우저 알림 권한을 허용해주세요.
+                  리포트·장 시작 알림을 받으려면 브라우저 알림 권한을 허용해주세요.
                 </p>
                 <button
                   onClick={requestPermission}
@@ -187,6 +258,26 @@ export default function NotificationsPage() {
           </div>
         )}
 
+        {/* Push 구독 결과 배너 */}
+        {pushStatus === "ok" && (
+          <div
+            className="rounded-xl px-3 py-2 mb-4 flex items-center gap-2"
+            style={{ background: "rgba(0,229,160,0.08)", border: "1px solid rgba(0,229,160,0.15)" }}
+          >
+            <span className="text-sm">📋</span>
+            <p className="text-[11px]" style={{ color: "var(--mint)" }}>리포트 업데이트 알림 구독 완료!</p>
+          </div>
+        )}
+        {pushStatus === "err" && (
+          <div
+            className="rounded-xl px-3 py-2 mb-4 flex items-center gap-2"
+            style={{ background: "rgba(255,77,109,0.08)", border: "1px solid rgba(255,77,109,0.2)" }}
+          >
+            <span className="text-sm">⚠️</span>
+            <p className="text-[11px]" style={{ color: "#ff4d6d" }}>구독 설정 중 오류가 발생했습니다. 다시 시도해주세요.</p>
+          </div>
+        )}
+
         {/* 알림 목록 */}
         <div
           className="rounded-2xl border overflow-hidden mb-4"
@@ -194,7 +285,6 @@ export default function NotificationsPage() {
         >
           {NOTIFICATIONS.map((noti, idx) => {
             const isLast = idx === NOTIFICATIONS.length - 1;
-            const isComingSoon = noti.key === "price_alert";
             return (
               <div
                 key={noti.key}
@@ -208,9 +298,9 @@ export default function NotificationsPage() {
                   {noti.emoji}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5 flex-wrap">
                     <p className="text-sm font-medium" style={{ color: "var(--text)" }}>{noti.label}</p>
-                    {isComingSoon && (
+                    {noti.comingSoon && (
                       <span
                         className="text-[8px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
                         style={{ background: "rgba(255,255,255,0.08)", color: "var(--muted)" }}
@@ -218,12 +308,21 @@ export default function NotificationsPage() {
                         준비 중
                       </span>
                     )}
+                    {noti.pushEnabled && (
+                      <span
+                        className="text-[8px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
+                        style={{ background: "rgba(192,132,252,0.15)", color: "#c084fc" }}
+                      >
+                        PUSH
+                      </span>
+                    )}
                   </div>
                   <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{noti.desc}</p>
                 </div>
                 <Toggle
-                  on={!isComingSoon && prefs[noti.key]}
-                  onChange={(v) => !isComingSoon && update(noti.key, v)}
+                  on={!noti.comingSoon && prefs[noti.key]}
+                  onChange={(v) => !noti.comingSoon && update(noti.key, v)}
+                  disabled={noti.comingSoon || pushLoading && noti.pushEnabled}
                 />
               </div>
             );
@@ -237,6 +336,7 @@ export default function NotificationsPage() {
         >
           <p className="text-[10px] leading-relaxed" style={{ color: "var(--muted)" }}>
             · 알림은 브라우저 또는 PWA 앱 설치 시 수신됩니다.{"\n"}
+            · 리포트 알림(PUSH)은 앱이 꺼져 있어도 실시간으로 전송됩니다.{"\n"}
             · 장시작·장마감 알림은 미국 동부 시간 기준으로 발송됩니다.{"\n"}
             · 가격 알림 기능은 곧 출시 예정입니다.
           </p>

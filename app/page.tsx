@@ -8,6 +8,7 @@ import { SP500Heatmap } from "@/components/SP500Heatmap";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
 import { ReportFeed } from "@/components/ReportFeed";
+import { OnboardingModal } from "@/components/OnboardingModal";
 import { getLocale } from "@/lib/getLocale";
 
 export default async function HomePage() {
@@ -42,7 +43,7 @@ export default async function HomePage() {
             </section>
 
             {/* 광고 · 시장심리 · 버핏지수 — 모바일 전용 */}
-            <section className="px-4 lg:hidden pt-4">
+            <section className="px-4 lg:hidden pt-5">
               <AdBanner format="auto" />
             </section>
             <section className="px-4 lg:hidden pt-4">
@@ -68,6 +69,7 @@ export default async function HomePage() {
 
         </div>
       </main>
+      <OnboardingModal />
     </div>
   );
 }

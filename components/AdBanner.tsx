@@ -26,25 +26,8 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
     } catch {}
   }, [pubId, slotId]);
 
-  /* ── 개발 환경 / 미설정 시 플레이스홀더 ── */
-  if (!pubId || !slotId) {
-    const h = format === "rectangle" ? 250 : 72;
-    return (
-      <div
-        className="w-full rounded-xl flex flex-col items-center justify-center gap-1 my-1"
-        style={{
-          height:       h,
-          background:   "rgba(255,255,255,0.025)",
-          border:       "1px dashed var(--border)",
-        }}
-      >
-        <span className="text-lg opacity-30">📢</span>
-        <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-          광고 영역 · AdSense 설정 후 표시
-        </p>
-      </div>
-    );
-  }
+  /* ── 미설정 시 숨김 (AdSense 승인 전) ── */
+  if (!pubId || !slotId) return null;
 
   /* ── 실제 AdSense 광고 ── */
   const insStyle: React.CSSProperties =

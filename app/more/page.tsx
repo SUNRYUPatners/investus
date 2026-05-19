@@ -484,22 +484,24 @@ function InstallSection() {
   );
 }
 
-type AuthMode = "idle" | "login" | "signup";
+type AuthMode = "idle" | "login" | "signup" | "reset";
 
 function AuthSection() {
   const t = useLocale();
   const au = t.more.auth;
-  const { user, login, signup, logout } = useAuth();
-  const [mode,       setMode]       = useState<AuthMode>("idle");
-  const [email,      setEmail]      = useState("");
-  const [pw,         setPw]         = useState("");
-  const [pwVisible,  setPwVisible]  = useState(false);
-  const [error,      setError]      = useState("");
-  const [loading,    setLoading]    = useState(false);
-  const [editOpen,   setEditOpen]   = useState(false);
+  const { user, login, signup, logout, resetPassword, loginWithOAuth } = useAuth();
+  const [mode,         setMode]         = useState<AuthMode>("idle");
+  const [email,        setEmail]        = useState("");
+  const [pw,           setPw]           = useState("");
+  const [pwVisible,    setPwVisible]    = useState(false);
+  const [error,        setError]        = useState("");
+  const [loading,      setLoading]      = useState(false);
+  const [editOpen,     setEditOpen]     = useState(false);
   const [confirmEmail, setConfirmEmail] = useState(false);
+  const [resetSent,    setResetSent]    = useState(false);
+  const [termsAgreed,  setTermsAgreed]  = useState(false);
 
-  const reset = () => { setEmail(""); setPw(""); setError(""); setLoading(false); setConfirmEmail(false); };
+  const reset = () => { setEmail(""); setPw(""); setError(""); setLoading(false); setConfirmEmail(false); setResetSent(false); setTermsAgreed(false); };
 
   const handleLogin = async () => {
     if (!email.includes("@")) { setError(au.errEmail); return; }
@@ -515,6 +517,7 @@ function AuthSection() {
   const handleSignup = async () => {
     if (!email.includes("@")) { setError(au.errEmail); return; }
     if (pw.length < 6) { setError(au.errPw); return; }
+    if (!termsAgreed) { setError("이용약관 및 개인정보처리방침에 동의해주세요."); return; }
     setLoading(true);
     setError("");
     const result = await signup(email, pw);
@@ -523,6 +526,16 @@ function AuthSection() {
     if (result.msg === "confirm_email") { setConfirmEmail(true); return; }
     setMode("idle");
     reset();
+  };
+
+  const handleReset = async () => {
+    if (!email.includes("@")) { setError(au.errEmail); return; }
+    setLoading(true);
+    setError("");
+    const result = await resetPassword(email);
+    setLoading(false);
+    if (!result.ok) { setError(result.msg); return; }
+    setResetSent(true);
   };
 
   /* ── Logged-in profile ── */
@@ -612,7 +625,7 @@ function AuthSection() {
       >
         <div className="flex items-center justify-between mb-5">
           <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-            {mode === "login" ? au.formLogin : au.formSignup}
+            {mode === "login" ? au.formLogin : mode === "signup" ? au.formSignup : "비밀번호 찾기"}
           </h2>
           <button onClick={closeForm}>
             <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
@@ -625,63 +638,147 @@ function AuthSection() {
             <span className="text-3xl">📬</span>
             <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>이메일을 확인해주세요</p>
             <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
-              {email}로 인증 링크를 보냈습니다.<br />링크 클릭 후 로그인해주세요.
+              {email}로 인증 링크를 보냈습니다.<br />링크를 클릭하면 자동으로 로그인됩니다.
             </p>
             <button onClick={() => { setConfirmEmail(false); setMode("login"); }}
               className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
               로그인으로 이동
             </button>
           </div>
+        ) : resetSent ? (
+          <div className="flex flex-col items-center gap-4 py-4 mb-3">
+            <span className="text-3xl">✉️</span>
+            <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>재설정 메일을 보냈습니다</p>
+            <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
+              {email}로 비밀번호 재설정 링크를 보냈습니다.<br />메일함을 확인해주세요.
+            </p>
+            <button onClick={() => { setResetSent(false); setMode("login"); }}
+              className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
+              로그인으로 이동
+            </button>
+          </div>
         ) : (
           <>
-        {/* Email */}
-        <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-3"
-          style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
-          <Mail className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
-          <input
-            type="email"
-            placeholder={au.emailPH}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 bg-transparent text-sm outline-none"
-            style={{ color: "var(--text)" }}
-          />
-        </div>
+          {/* Email */}
+          <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-3"
+            style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
+            <Mail className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
+            <input
+              type="email"
+              placeholder={au.emailPH}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 bg-transparent text-sm outline-none"
+              style={{ color: "var(--text)" }}
+            />
+          </div>
 
-        {/* Password */}
-        <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-4"
-          style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
-          <Lock className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
-          <input
-            type={pwVisible ? "text" : "password"}
-            placeholder={au.pwPH}
-            value={pw}
-            onChange={(e) => setPw(e.target.value)}
-            className="flex-1 bg-transparent text-sm outline-none"
-            style={{ color: "var(--text)" }}
-            onKeyDown={(e) => e.key === "Enter" && (mode === "login" ? handleLogin() : handleSignup())}
-          />
-          <button onClick={() => setPwVisible((v) => !v)}>
-            {pwVisible
-              ? <EyeOff className="w-4 h-4" style={{ color: "var(--muted)" }} />
-              : <Eye    className="w-4 h-4" style={{ color: "var(--muted)" }} />}
+          {/* Password (login/signup only) */}
+          {mode !== "reset" && (
+            <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-3"
+              style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
+              <Lock className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
+              <input
+                type={pwVisible ? "text" : "password"}
+                placeholder={au.pwPH}
+                value={pw}
+                onChange={(e) => setPw(e.target.value)}
+                className="flex-1 bg-transparent text-sm outline-none"
+                style={{ color: "var(--text)" }}
+                onKeyDown={(e) => e.key === "Enter" && (mode === "login" ? handleLogin() : handleSignup())}
+              />
+              <button onClick={() => setPwVisible((v) => !v)}>
+                {pwVisible
+                  ? <EyeOff className="w-4 h-4" style={{ color: "var(--muted)" }} />
+                  : <Eye    className="w-4 h-4" style={{ color: "var(--muted)" }} />}
+              </button>
+            </div>
+          )}
+
+          {/* 약관 동의 (signup only) */}
+          {mode === "signup" && (
+            <label className="flex items-start gap-2 mb-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={termsAgreed}
+                onChange={(e) => setTermsAgreed(e.target.checked)}
+                className="mt-0.5 flex-shrink-0"
+              />
+              <span className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                <Link href="/more/terms" onClick={closeForm} style={{ color: "var(--mint)" }}>이용약관</Link>
+                {" 및 "}
+                <Link href="/more/privacy" onClick={closeForm} style={{ color: "var(--mint)" }}>개인정보처리방침</Link>
+                에 동의합니다. (만 14세 이상)
+              </span>
+            </label>
+          )}
+
+          {/* 로그인 - 비밀번호 찾기 링크 */}
+          {mode === "login" && (
+            <button
+              onClick={() => { setMode("reset"); setError(""); }}
+              className="text-[11px] mb-3 text-left w-full"
+              style={{ color: "var(--muted)" }}
+            >
+              비밀번호를 잊으셨나요? <span style={{ color: "var(--mint)" }}>비밀번호 찾기</span>
+            </button>
+          )}
+
+          {error && <p className="text-xs mb-3" style={{ color: "#ff4d6d" }}>{error}</p>}
+
+          <button
+            onClick={mode === "login" ? handleLogin : mode === "signup" ? handleSignup : handleReset}
+            disabled={loading}
+            className="w-full py-3 rounded-xl text-sm font-bold text-black mb-3 active:opacity-80 transition-opacity disabled:opacity-50"
+            style={{ background: "var(--mint)" }}
+          >
+            {loading ? "처리 중..." : mode === "login" ? au.formLogin : mode === "signup" ? au.formSignup : "재설정 메일 보내기"}
           </button>
-        </div>
 
-        {error && <p className="text-xs mb-3" style={{ color: "#ff4d6d" }}>{error}</p>}
+          {/* 소셜 로그인 (login / signup 모드에서만) */}
+          {(mode === "login" || mode === "signup") && (
+            <div className="mb-3">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
+                <span className="text-[11px]" style={{ color: "var(--muted)" }}>또는</span>
+                <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
+              </div>
+              <button
+                onClick={() => loginWithOAuth("google")}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border mb-2 text-sm font-medium active:opacity-70 transition-opacity"
+                style={{ borderColor: "var(--border)", background: "var(--bg)", color: "var(--text)" }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                Google로 계속하기
+              </button>
+              <button
+                onClick={() => loginWithOAuth("kakao")}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium active:opacity-70 transition-opacity"
+                style={{ background: "#FEE500", color: "#3C1E1E" }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#3C1E1E" d="M12 3C6.48 3 2 6.72 2 11.28c0 2.9 1.74 5.45 4.36 6.97l-.9 3.35 3.94-2.6c.83.15 1.68.23 2.6.23 5.52 0 10-3.72 10-8.28C22 6.72 17.52 3 12 3z"/>
+                </svg>
+                카카오로 계속하기
+              </button>
+            </div>
+          )}
 
-        <button
-          onClick={mode === "login" ? handleLogin : handleSignup}
-          disabled={loading}
-          className="w-full py-3 rounded-xl text-sm font-bold text-black mb-3 active:opacity-80 transition-opacity disabled:opacity-50"
-          style={{ background: "var(--mint)" }}
-        >
-          {mode === "login" ? au.formLogin : au.formSignup}
-        </button>
-
-        <button onClick={closeForm} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
-          {au.cancel}
-        </button>
+          {/* mode 전환 */}
+          {mode === "reset" ? (
+            <button onClick={() => { setMode("login"); setError(""); }} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
+              로그인으로 돌아가기
+            </button>
+          ) : (
+            <button onClick={closeForm} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
+              {au.cancel}
+            </button>
+          )}
           </>
         )}
       </div>
@@ -705,7 +802,7 @@ function AuthSection() {
             <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{au.loginDesc}</p>
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 mb-3">
           <button
             onClick={() => setMode("login")}
             className="flex-1 py-2.5 rounded-xl text-sm font-semibold border active:opacity-70 transition-opacity"
@@ -719,6 +816,36 @@ function AuthSection() {
             style={{ background: "var(--mint)" }}
           >
             {au.signup}
+          </button>
+        </div>
+        <div className="flex items-center gap-2 mb-3">
+          <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
+          <span className="text-[11px]" style={{ color: "var(--muted)" }}>소셜 로그인</span>
+          <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={() => loginWithOAuth("google")}
+            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border text-xs font-medium active:opacity-70 transition-opacity"
+            style={{ borderColor: "var(--border)", background: "var(--bg)", color: "var(--text)" }}
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Google
+          </button>
+          <button
+            onClick={() => loginWithOAuth("kakao")}
+            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-xs font-medium active:opacity-70 transition-opacity"
+            style={{ background: "#FEE500", color: "#3C1E1E" }}
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#3C1E1E" d="M12 3C6.48 3 2 6.72 2 11.28c0 2.9 1.74 5.45 4.36 6.97l-.9 3.35 3.94-2.6c.83.15 1.68.23 2.6.23 5.52 0 10-3.72 10-8.28C22 6.72 17.52 3 12 3z"/>
+            </svg>
+            카카오
           </button>
         </div>
       </div>

@@ -9,6 +9,7 @@ export type AuthUser = {
   email:      string;
   nickname:   string;
   isVerified: boolean;
+  isPro:      boolean;
   avatar?:    string;
 };
 
@@ -27,6 +28,7 @@ function buildUser(u: User, isVerified = false): AuthUser {
       `투자자_${(u.email ?? "user").split("@")[0].slice(-4)}`
     ),
     isVerified,
+    isPro:      u.user_metadata?.investus_pro === true,
     avatar,
   };
 }
@@ -115,5 +117,20 @@ export function useAuth() {
 
   const verify = () => setUser((u) => u ? { ...u, isVerified: true } : null);
 
-  return { user, loaded, login, signup, logout, verify, updateProfile };
+  const resetPassword = async (email: string): Promise<{ ok: boolean; msg: string }> => {
+    const { error } = await getSupabase().auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/auth/callback?type=recovery`,
+    });
+    if (error) return { ok: false, msg: error.message };
+    return { ok: true, msg: "" };
+  };
+
+  const loginWithOAuth = async (provider: "google" | "kakao") => {
+    await getSupabase().auth.signInWithOAuth({
+      provider,
+      options: { redirectTo: `${window.location.origin}/auth/callback` },
+    });
+  };
+
+  return { user, loaded, login, signup, logout, verify, updateProfile, resetPassword, loginWithOAuth };
 }

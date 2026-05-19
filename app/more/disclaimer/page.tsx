@@ -121,7 +121,7 @@ export default function DisclaimerPage() {
         </div>
 
         <p className="text-center text-[10px]" style={{ color: "var(--muted)" }}>
-          본 유의사항은 2025년 1월 1일부터 적용됩니다.{"\n"}
+          본 유의사항은 2026년 5월 18일부터 적용됩니다.{"\n"}
           Investus · 투자 책임은 본인에게 있습니다.
         </p>
       </main>

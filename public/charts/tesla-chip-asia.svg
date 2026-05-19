@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#0c1830"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <text x="400" y="32" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="3">Tesla 반도체 내재화 · 한국 · 대만 채용 2026</text>
+  <text x="400" y="57" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">Cortex AI 슈퍼컴퓨터 자립화 전략</text>
+
+  <!-- Roadmap -->
+  <line x1="80" y1="200" x2="720" y2="200" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+
+  <!-- Phase 1 -->
+  <circle cx="130" cy="200" r="28" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="130" y="197" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold">Phase</text>
+  <text x="130" y="211" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">1</text>
+  <text x="130" y="242" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">NVIDIA GPU</text>
+  <text x="130" y="255" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">의존 (현재)</text>
+  <line x1="130" y1="172" x2="130" y2="120" stroke="rgba(96,165,250,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="68" y="95" width="124" height="24" rx="5" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <text x="130" y="111" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial">H100·H200 GPU</text>
+
+  <!-- Phase 2 -->
+  <circle cx="310" cy="200" r="28" fill="rgba(96,165,250,0.2)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="310" y="197" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold">Phase</text>
+  <text x="310" y="211" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">2</text>
+  <text x="310" y="242" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">자체 칩 설계</text>
+  <text x="310" y="255" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">TSMC 위탁</text>
+  <line x1="310" y1="228" x2="310" y2="280" stroke="rgba(96,165,250,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="245" y="281" width="130" height="24" rx="5" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <text x="310" y="297" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial">자체 설계 + 대만 생산</text>
+
+  <!-- Phase 3: NOW -->
+  <circle cx="510" cy="200" r="32" fill="rgba(0,229,160,0.2)" stroke="#00e5a0" stroke-width="2"/>
+  <text x="510" y="197" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">Phase</text>
+  <text x="510" y="211" text-anchor="middle" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">3 ▶</text>
+  <text x="510" y="247" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">아시아 거점</text>
+  <text x="510" y="260" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">엔지니어링</text>
+  <line x1="510" y1="168" x2="510" y2="116" stroke="rgba(0,229,160,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="430" y="90" width="160" height="24" rx="5" fill="rgba(0,229,160,0.1)" stroke="rgba(0,229,160,0.35)" stroke-width="1"/>
+  <text x="510" y="106" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">한국·대만 채용 ← NOW</text>
+
+  <!-- Phase 4 (future) -->
+  <circle cx="680" cy="200" r="28" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.4)" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="680" y="197" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial">Phase</text>
+  <text x="680" y="211" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial">4</text>
+  <text x="680" y="242" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">칩 완전</text>
+  <text x="680" y="255" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">자립 (목표)</text>
+  <line x1="680" y1="228" x2="680" y2="280" stroke="rgba(0,229,160,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="615" y="281" width="130" height="24" rx="5" fill="rgba(0,229,160,0.05)" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+  <text x="680" y="297" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">마진 대폭 개선</text>
+
+  <!-- Chip types -->
+  <rect x="60" y="326" width="680" height="72" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="400" y="348" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">채용 대상 — 메모리 전문 분야</text>
+  <text x="170" y="372" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">GDDR</text>
+  <text x="170" y="386" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">그래픽 DDR</text>
+  <text x="330" y="372" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">LPDDR</text>
+  <text x="330" y="386" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">저전력 DDR</text>
+  <text x="490" y="372" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">DRAM</text>
+  <text x="490" y="386" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">메모리 설계</text>
+  <text x="650" y="372" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">SDRAM</text>
+  <text x="650" y="386" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">아키텍처</text>
+
+  <text x="400" y="418" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.18</text>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" width="800" height="580">
+  <defs>
+    <linearGradient id="bg19" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0c1525"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c2410c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="580" fill="url(#bg19)"/>
+
+  <!-- Header band -->
+  <rect width="800" height="62" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.18)" stroke-width="0"/>
+  <rect x="0" y="61" width="800" height="1" fill="rgba(0,229,160,0.2)"/>
+
+  <!-- Header text -->
+  <text x="400" y="24" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">SUNRYU PARTNERS · 2026.05.19 오늘의 한장 요약</text>
+  <text x="400" y="48" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Arial" font-weight="bold">6가지 핵심 뉴스 · 한눈에 보기</text>
+
+  <!-- ─────────── ROW 1 ─────────── -->
+
+  <!-- Card 1: Starlink -->
+  <rect x="20" y="80" width="370" height="145" rx="10" fill="rgba(124,58,237,0.08)" stroke="rgba(167,139,250,0.3)" stroke-width="1"/>
+  <rect x="20" y="80" width="4" height="145" rx="2" fill="url(#gp)"/>
+  <circle cx="56" cy="112" r="18" fill="rgba(124,58,237,0.2)" stroke="rgba(167,139,250,0.4)" stroke-width="1"/>
+  <text x="56" y="118" text-anchor="middle" fill="#a78bfa" font-size="16" font-family="Arial">🚀</text>
+  <text x="84" y="105" fill="#a78bfa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">SpaceX Starlink</text>
+  <text x="84" y="122" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">10M+ 구독자 · $11.4B · EBITDA 54%</text>
+  <rect x="36" y="140" width="340" height="28" rx="6" fill="rgba(124,58,237,0.12)"/>
+  <text x="56" y="158" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold">IPO 밸류</text>
+  <text x="116" y="158" fill="#e2e8f0" font-size="11" font-family="Arial">$1.5~1.75T · SpaceX 발사 점유율 86%</text>
+  <text x="36" y="183" fill="#94a3b8" font-size="10" font-family="Arial">▸ 전 세계 22억 명 미접속 인구 = 무한 성장 시장</text>
+  <text x="36" y="200" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 6월 12일 $SPCE 상장 · 역대 최대 IPO 카운트다운</text>
+
+  <!-- Card 2: META 구조조정 -->
+  <rect x="410" y="80" width="370" height="145" rx="10" fill="rgba(153,27,27,0.08)" stroke="rgba(248,113,113,0.3)" stroke-width="1"/>
+  <rect x="410" y="80" width="4" height="145" rx="2" fill="url(#gr)"/>
+  <circle cx="446" cy="112" r="18" fill="rgba(153,27,27,0.2)" stroke="rgba(248,113,113,0.4)" stroke-width="1"/>
+  <text x="446" y="118" text-anchor="middle" fill="#f87171" font-size="16" font-family="Arial">📉</text>
+  <text x="474" y="105" fill="#f87171" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">META</text>
+  <text x="474" y="122" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">5% 구조조정 · 수요일 3회 분할 발표</text>
+  <rect x="426" y="140" width="340" height="28" rx="6" fill="rgba(153,27,27,0.12)"/>
+  <text x="446" y="158" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">동시에</text>
+  <text x="496" y="158" fill="#e2e8f0" font-size="11" font-family="Arial">NVIDIA 실적 발표 당일 · AI 전환 가속</text>
+  <text x="426" y="183" fill="#94a3b8" font-size="10" font-family="Arial">▸ 관리직 축소 · AI 워크플로우 전면 전환</text>
+  <text x="426" y="200" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 비용 절감 + AI 마진 개선 기대 · 단기 긍정적</text>
+
+  <!-- ─────────── ROW 2 ─────────── -->
+
+  <!-- Card 3: SpaceX 선물 + Burry -->
+  <rect x="20" y="242" width="370" height="145" rx="10" fill="rgba(124,58,237,0.08)" stroke="rgba(167,139,250,0.25)" stroke-width="1"/>
+  <rect x="20" y="242" width="4" height="145" rx="2" fill="url(#gp)"/>
+  <circle cx="56" cy="274" r="18" fill="rgba(124,58,237,0.2)" stroke="rgba(167,139,250,0.4)" stroke-width="1"/>
+  <text x="56" y="280" text-anchor="middle" fill="#a78bfa" font-size="16" font-family="Arial">💹</text>
+  <text x="84" y="267" fill="#a78bfa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">SpaceX 선물 · Michael Burry</text>
+  <text x="84" y="284" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">HyperLiquid $208 · TSMC $2.04B</text>
+  <rect x="36" y="302" width="340" height="28" rx="6" fill="rgba(124,58,237,0.12)"/>
+  <text x="56" y="320" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold">IPO 공모가</text>
+  <text x="130" y="320" fill="#e2e8f0" font-size="11" font-family="Arial">$47 추정 · 선물 $208 = 4.4배 프리미엄</text>
+  <text x="36" y="345" fill="#94a3b8" font-size="10" font-family="Arial">▸ Burry: TSMC $2.04B · Broadcom $40B 베팅</text>
+  <text x="36" y="362" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ AI 제조업체가 다음 수혜자 — 역발상 포지션</text>
+
+  <!-- Card 4: 이란 핵협상 -->
+  <rect x="410" y="242" width="370" height="145" rx="10" fill="rgba(153,27,27,0.08)" stroke="rgba(248,113,113,0.25)" stroke-width="1"/>
+  <rect x="410" y="242" width="4" height="145" rx="2" fill="url(#gr)"/>
+  <circle cx="446" cy="274" r="18" fill="rgba(153,27,27,0.2)" stroke="rgba(248,113,113,0.4)" stroke-width="1"/>
+  <text x="446" y="280" text-anchor="middle" fill="#f87171" font-size="16" font-family="Arial">🇮🇷</text>
+  <text x="474" y="267" fill="#f87171" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">미국-이란 핵협상</text>
+  <text x="474" y="284" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">카타르·UAE 중재 · 핵무기 포기 조건</text>
+  <rect x="426" y="302" width="340" height="28" rx="6" fill="rgba(153,27,27,0.12)"/>
+  <text x="446" y="320" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">조건</text>
+  <text x="484" y="320" fill="#e2e8f0" font-size="11" font-family="Arial">핵무기 포기 → 대규모 군사 공격 자제</text>
+  <text x="426" y="345" fill="#94a3b8" font-size="10" font-family="Arial">▸ 트럼프 임기 최대 외교 성과 가능성</text>
+  <text x="426" y="362" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 합의 시 원유 하락 · 지정학 리스크 프리미엄 축소</text>
+
+  <!-- ─────────── ROW 3 ─────────── -->
+
+  <!-- Card 5: OpenAI vs Musk -->
+  <rect x="20" y="404" width="370" height="145" rx="10" fill="rgba(194,65,12,0.08)" stroke="rgba(251,146,60,0.25)" stroke-width="1"/>
+  <rect x="20" y="404" width="4" height="145" rx="2" fill="url(#go)"/>
+  <circle cx="56" cy="436" r="18" fill="rgba(194,65,12,0.2)" stroke="rgba(251,146,60,0.4)" stroke-width="1"/>
+  <text x="56" y="442" text-anchor="middle" fill="#fb923c" font-size="16" font-family="Arial">⚖️</text>
+  <text x="84" y="429" fill="#fb923c" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">OpenAI vs Musk 소송</text>
+  <text x="84" y="446" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">Trump 개입 · 30일 만에 종결</text>
+  <rect x="36" y="464" width="340" height="28" rx="6" fill="rgba(194,65,12,0.12)"/>
+  <text x="56" y="482" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">IPO 장벽</text>
+  <text x="120" y="482" fill="#e2e8f0" font-size="11" font-family="Arial">최대 법적 걸림돌 해소 · 밸류 $150~200B</text>
+  <text x="36" y="507" fill="#94a3b8" font-size="10" font-family="Arial">▸ xAI Composer 2.5 SWE-Bench 76.9% 1위</text>
+  <text x="36" y="524" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ OpenAI IPO 2026 하반기 · AI 섹터 전체 촉매</text>
+
+  <!-- Card 6: Tesla FSD 아키텍처 -->
+  <rect x="410" y="404" width="370" height="145" rx="10" fill="rgba(29,78,216,0.08)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <rect x="410" y="404" width="4" height="145" rx="2" fill="url(#gb)"/>
+  <circle cx="446" cy="436" r="18" fill="rgba(29,78,216,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="446" y="442" text-anchor="middle" fill="#60a5fa" font-size="16" font-family="Arial">🚗</text>
+  <text x="474" y="429" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Tesla FSD 아키텍처</text>
+  <text x="474" y="446" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">750,000:1 압축 · 인간과 동일 구조</text>
+  <rect x="426" y="464" width="340" height="28" rx="6" fill="rgba(29,78,216,0.12)"/>
+  <text x="446" y="482" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">처리량</text>
+  <text x="500" y="482" fill="#e2e8f0" font-size="11" font-family="Arial">초당 1.5GB · 240fps · 텍사스 3도시 운영 중</text>
+  <text x="426" y="507" fill="#94a3b8" font-size="10" font-family="Arial">▸ Optimus 로봇 동일 아키텍처 · Samsung Summit 발표</text>
+  <text x="426" y="524" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 2026년 말 미국 전역 인간 수준 자율주행 목표</text>
+
+  <!-- Footer -->
+  <rect x="0" y="557" width="800" height="23" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="572" text-anchor="middle" fill="#334155" font-size="9" font-family="Arial">SUNRYU Partners CIO · 2026.05.19 · investus.kr</text>
+</svg>

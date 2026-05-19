@@ -141,8 +141,8 @@ export function FuturesHeatmap({ items }: Props) {
         <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
           Futures Map
         </h2>
-        <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          {open ? "선물 시장 · 실시간" : "선물 시장 · 전장 종가"}
+        <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
+          {open ? "선물 · 실시간" : "선물 · 전장 종가"}
         </span>
       </div>
 

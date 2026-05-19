@@ -7,6 +7,7 @@ import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistratio
 import { PullToRefresh } from "@/components/PullToRefresh";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import { LocaleProvider } from "@/contexts/LocaleContext";
+import { VersionBanner } from "@/components/VersionBanner";
 import { getLocale } from "@/lib/getLocale";
 import Script from "next/script";
 
@@ -33,14 +34,35 @@ const notoSansKR = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   title: "Investus — 인베스트어스",
-  description: "미국 주식 시장 실시간 정보 · S&P500 · NASDAQ · DOW",
-  metadataBase: new URL("https://investus.kr"),
+  description: "미국 주식 실시간 시세 · S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 시장 분석 리포트",
+  metadataBase: new URL("https://www.investus.kr"),
+  keywords: ["미국주식", "주식", "S&P500", "나스닥", "투자", "주가", "실시간", "선물", "비트코인", "투자정보"],
+  openGraph: {
+    title: "Investus — 미국주식 실시간 정보",
+    description: "S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 버핏지수 · 시장분석 리포트",
+    url: "https://www.investus.kr",
+    siteName: "Investus",
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Investus — 미국주식 실시간 정보",
+    description: "S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 버핏지수 · 시장분석 리포트",
+  },
+  robots: { index: true, follow: true },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
     title: "Investus",
   },
   formatDetection: { telephone: false },
+  verification: {
+    google: "gWru1tXVNVr--phsNN1YCa53uJoAgx53ut5k2kfDCXo",
+    other: {
+      "naver-site-verification": "62e5066af0d7a38be59c4ad514534d0e43e85d9b",
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -60,6 +82,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body style={{ background: "var(--bg)" }}>
         <LocaleProvider locale={locale}>
           <ServiceWorkerRegistration />
+          <VersionBanner />
           <PullToRefresh />
           <PWAInstallPrompt />
           <div className="lg:flex lg:min-h-screen">
@@ -69,15 +92,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
           </div>
           <BottomNav />
-          {/* Google AdSense — pub ID 설정 시 자동 활성화 */}
-          {process.env.NEXT_PUBLIC_ADSENSE_PUB_ID && (
-            <Script
-              async
-              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUB_ID}`}
-              crossOrigin="anonymous"
-              strategy="afterInteractive"
-            />
-          )}
+          {/* Google AdSense */}
+          <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1075509322890486"
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
         </LocaleProvider>
       </body>
     </html>

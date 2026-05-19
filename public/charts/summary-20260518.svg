@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" width="800" height="580">
+  <defs>
+    <linearGradient id="bg18" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0c1525"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c2410c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="580" fill="url(#bg18)"/>
+
+  <!-- Header band -->
+  <rect width="800" height="62" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.18)" stroke-width="0"/>
+  <rect x="0" y="61" width="800" height="1" fill="rgba(0,229,160,0.2)"/>
+
+  <!-- Header text -->
+  <text x="400" y="24" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">SUNRYU PARTNERS · 2026.05.18 오늘의 한장 요약</text>
+  <text x="400" y="48" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Arial" font-weight="bold">6가지 핵심 뉴스 · 한눈에 보기</text>
+
+  <!-- ─────────── ROW 1 ─────────── -->
+
+  <!-- Card 1: SpaceX IPO -->
+  <rect x="20" y="80" width="370" height="145" rx="10" fill="rgba(124,58,237,0.08)" stroke="rgba(167,139,250,0.3)" stroke-width="1"/>
+  <rect x="20" y="80" width="4" height="145" rx="2" fill="url(#gp)"/>
+  <!-- Icon circle -->
+  <circle cx="56" cy="112" r="18" fill="rgba(124,58,237,0.2)" stroke="rgba(167,139,250,0.4)" stroke-width="1"/>
+  <text x="56" y="118" text-anchor="middle" fill="#a78bfa" font-size="16" font-family="Arial">🚀</text>
+  <!-- Title -->
+  <text x="84" y="105" fill="#a78bfa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">SpaceX IPO</text>
+  <text x="84" y="122" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">$SPCE · 6월 12일 Nasdaq</text>
+  <!-- Key stat -->
+  <rect x="36" y="140" width="340" height="28" rx="6" fill="rgba(124,58,237,0.12)"/>
+  <text x="56" y="158" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold">총 조달</text>
+  <text x="112" y="158" fill="#e2e8f0" font-size="11" font-family="Arial">$15B · BlackRock $5~10B 단독 매수 시도</text>
+  <!-- Bullets -->
+  <text x="36" y="183" fill="#94a3b8" font-size="10" font-family="Arial">▸ 소매 투자자 30% 물량 배정 — 역대 IPO 최고 수혜</text>
+  <text x="36" y="200" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 2026년 최대 투자 이벤트 · 관련 수혜: TSLA, 우주 ETF</text>
+
+  <!-- Card 2: Tesla FSD -->
+  <rect x="410" y="80" width="370" height="145" rx="10" fill="rgba(29,78,216,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <rect x="410" y="80" width="4" height="145" rx="2" fill="url(#gb)"/>
+  <circle cx="446" cy="112" r="18" fill="rgba(29,78,216,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="446" y="118" text-anchor="middle" fill="#60a5fa" font-size="16" font-family="Arial">🚗</text>
+  <text x="474" y="105" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Tesla FSD</text>
+  <text x="474" y="122" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">V14.3.3 출시 · 자율주행 통계 공개</text>
+  <rect x="426" y="140" width="340" height="28" rx="6" fill="rgba(29,78,216,0.12)"/>
+  <text x="446" y="158" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">정확도</text>
+  <text x="500" y="158" fill="#e2e8f0" font-size="11" font-family="Arial">98% · Smart Summary 속도 대폭 향상</text>
+  <text x="426" y="183" fill="#94a3b8" font-size="10" font-family="Arial">▸ Self-Driving Stats 최초 공개 · 자동 주차 완벽 시연</text>
+  <text x="426" y="200" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ FSD 구독 가속 · 로봇택시 타임라인 앞당김</text>
+
+  <!-- ─────────── ROW 2 ─────────── -->
+
+  <!-- Card 3: Ackman MSFT -->
+  <rect x="20" y="242" width="370" height="145" rx="10" fill="rgba(29,78,216,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <rect x="20" y="242" width="4" height="145" rx="2" fill="url(#gb)"/>
+  <circle cx="56" cy="274" r="18" fill="rgba(29,78,216,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="56" y="280" text-anchor="middle" fill="#60a5fa" font-size="16" font-family="Arial">💼</text>
+  <text x="84" y="267" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Bill Ackman</text>
+  <text x="84" y="284" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">MSFT $2.3B · GOOGL 전량 매도</text>
+  <rect x="36" y="302" width="340" height="28" rx="6" fill="rgba(29,78,216,0.12)"/>
+  <text x="56" y="320" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">집중 투자</text>
+  <text x="122" y="320" fill="#e2e8f0" font-size="11" font-family="Arial">Microsoft Azure AI · Copilot 생태계</text>
+  <text x="36" y="345" fill="#94a3b8" font-size="10" font-family="Arial">▸ Google 반독점 소송 리스크 회피 · AI 패권 1위 전환</text>
+  <text x="36" y="362" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 빅테크 AI 패권 구도 전환 시그널</text>
+
+  <!-- Card 4: Buffett Apple -->
+  <rect x="410" y="242" width="370" height="145" rx="10" fill="rgba(194,65,12,0.08)" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <rect x="410" y="242" width="4" height="145" rx="2" fill="url(#go)"/>
+  <circle cx="446" cy="274" r="18" fill="rgba(194,65,12,0.2)" stroke="rgba(251,146,60,0.4)" stroke-width="1"/>
+  <text x="446" y="280" text-anchor="middle" fill="#fb923c" font-size="16" font-family="Arial">🍎</text>
+  <text x="474" y="267" fill="#fb923c" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Warren Buffett × Apple</text>
+  <text x="474" y="284" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">25년 레거시 · $10K → $120K</text>
+  <rect x="426" y="302" width="340" height="28" rx="6" fill="rgba(194,65,12,0.12)"/>
+  <text x="446" y="320" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">버크셔</text>
+  <text x="498" y="320" fill="#e2e8f0" font-size="11" font-family="Arial">원금 $36B → 평가액 $180B+ (최고점)</text>
+  <text x="426" y="345" fill="#94a3b8" font-size="10" font-family="Arial">▸ 2016.05.16 첫 공시 · Apple Intelligence 차기 성장 동력</text>
+  <text x="426" y="362" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ "위대한 기업을 적당한 가격에" — 완벽한 구현</text>
+
+  <!-- ─────────── ROW 3 ─────────── -->
+
+  <!-- Card 5: Tesla Chip Asia -->
+  <rect x="20" y="404" width="370" height="145" rx="10" fill="rgba(29,78,216,0.08)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <rect x="20" y="404" width="4" height="145" rx="2" fill="url(#gb)"/>
+  <circle cx="56" cy="436" r="18" fill="rgba(29,78,216,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="56" y="442" text-anchor="middle" fill="#60a5fa" font-size="16" font-family="Arial">🔬</text>
+  <text x="84" y="429" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Tesla 반도체 내재화</text>
+  <text x="84" y="446" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">한국·대만 칩 설계 엔지니어 채용</text>
+  <rect x="36" y="464" width="340" height="28" rx="6" fill="rgba(29,78,216,0.12)"/>
+  <text x="56" y="482" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">Cortex AI</text>
+  <text x="116" y="482" fill="#e2e8f0" font-size="11" font-family="Arial">슈퍼컴퓨터 자립화 · GDDR·LPDDR·DRAM</text>
+  <text x="36" y="507" fill="#94a3b8" font-size="10" font-family="Arial">▸ 삼성·SK하이닉스 출신 메모리 전문가 직접 채용</text>
+  <text x="36" y="524" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ NVIDIA 의존도 축소 · 자체 칩 완성 시 마진 대폭 개선</text>
+
+  <!-- Card 6: Dimon AI -->
+  <rect x="410" y="404" width="370" height="145" rx="10" fill="rgba(0,181,128,0.07)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <rect x="410" y="404" width="4" height="145" rx="2" fill="url(#gm)"/>
+  <circle cx="446" cy="436" r="18" fill="rgba(0,181,128,0.15)" stroke="rgba(0,229,160,0.4)" stroke-width="1"/>
+  <text x="446" y="442" text-anchor="middle" fill="#00e5a0" font-size="16" font-family="Arial">🏦</text>
+  <text x="474" y="429" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Jamie Dimon · JP모건</text>
+  <text x="474" y="446" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">"50년 중 AI 가장 낙관적"</text>
+  <rect x="426" y="464" width="340" height="28" rx="6" fill="rgba(0,181,128,0.1)"/>
+  <text x="446" y="482" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">JP모건</text>
+  <text x="504" y="482" fill="#e2e8f0" font-size="11" font-family="Arial">AI 투자 $15B+ · COiN·LOXM 실전 도입</text>
+  <text x="426" y="507" fill="#94a3b8" font-size="10" font-family="Arial">▸ Ackman·Druckenmiller·Baron 일제히 AI 수혜주 집중</text>
+  <text x="426" y="524" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ AI는 테마가 아닌 현실 — 방향성 확인</text>
+
+  <!-- Footer -->
+  <rect x="0" y="557" width="800" height="23" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="572" text-anchor="middle" fill="#334155" font-size="9" font-family="Arial">SUNRYU Partners CIO · 2026.05.18 · investus.app</text>
+</svg>

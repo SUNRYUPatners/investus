@@ -13,6 +13,7 @@ export type Report = {
   updatedAt?:    string;   // "2026.05.14 07:27" KST 형식
   isPinned?:     boolean;
   images?:       string[];
+  imageOnly?:    boolean;  // 이미지만 표시, 텍스트 body 숨김
 };
 
 export const CATEGORY_STYLE: Record<ReportColor, { bg: string; color: string }> = {
@@ -34,20 +35,122 @@ export const CATEGORY_EMOJI: Record<ReportCategory, string> = {
 export const SEED_REPORTS: Report[] = [
 
   // ══════════════════════════════════════════════════════════════════════════
+  // 2026-05-19 리포트
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-039",
+    title:         "테슬라 FSD, 인간 뇌와 동일 구조 공개 — OpenAI 소송 종결 · Starlink 1천만 돌파",
+    summary:       "Starlink 10M+ 구독자·$11.4B·54% EBITDA / META 5% 구조조정 / SpaceX HyperLiquid 선물 $208 / 미국-이란 핵협상 / OpenAI vs Musk 소송 종결 / 테슬라 FSD 750,000:1 압축 — 6가지 핵심 뉴스",
+    body:          "■ 오늘의 핵심 6가지 (비주얼 요약 이미지를 확인하세요)\n\n🚀 Starlink 10M+ 구독자 돌파 · $11.4B 매출 · 54% EBITDA — SpaceX IPO $1.5~1.75T 밸류에이션 근거 확정\n\n📉 META 5% 대규모 구조조정 — 수요일 3회 분할 발표 · AI 효율화 기조\n\n💹 SpaceX HyperLiquid 선물 $208/share 거래 개시 — IPO 전 시장 가격 형성 · 역대 최대 IPO 기대\n\n🇮🇷 미국-이란 핵협상 급진전 — 트럼프·중동 정상 중재 · 핵무기 포기 조건 협상\n\n⚖️ OpenAI vs Musk 소송 사실상 종결 — Trump 개입 · OpenAI IPO 최대 장벽 해소\n\n🚗 테슬라 FSD 아키텍처 공개 — 750,000:1 압축비 · 초당 1.5GB 영상 처리 · 인간 뇌와 동일 구조",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 5/19 시장 한장 요약",
+    date:          "2026-05-19",
+    updatedAt:     "2026.05.19 08:00",
+    isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260519.svg"],
+  },
+
+  {
+    id:            "seed-040",
+    title:         "Starlink 10M+ 구독자 · $11.4B · EBITDA 54% — SpaceX IPO $1.75T 밸류 근거",
+    summary:       "SpaceX Starlink가 2026년 2월 구독자 1,000만 명을 돌파했습니다. 2025년 매출 $11.4B, EBITDA 마진 54%, 2025년 SpaceX 전체 매출 $15~16B. 2028년까지 구독자 4,000만 명 목표. 이 숫자들이 IPO 밸류에이션 $1.5~1.75T의 핵심 근거입니다.",
+    body:          "■ Starlink 핵심 지표 (2025~2026)\n\n• 구독자: 10M+ (2026년 2월 돌파)\n• Starlink 매출: $11.4B (2025년)\n• EBITDA 마진: 54% (Starlink 사업부)\n• SpaceX 전체 매출: $15~16B (2025년)\n• IPO 목표 밸류: $1.5~1.75T (mid-2026 논의)\n\n■ Starlink 구독자 성장 궤적\n\n• 2020: ~10K\n• 2021: ~140K~250K\n• 2022: ~1M\n• 2023: ~2.2M\n• 2024: ~4.6M\n• 2025: ~9.2M\n• 2026.02: 10M+ (공식 돌파)\n• 2026E: ~18~25M\n• 2027E: ~30M+\n• 2028E: ~40M+ (목표)\n\n■ 왜 Starlink가 SpaceX의 엔진인가\n\n\"Starlink contributes ~2/3 of SpaceX revenue.\"\n\"Majority of SpaceX profit comes from Starlink.\"\n\"2026 SpaceX revenue projected at $22~30B.\"\n\n• Starlink = SpaceX 수익의 2/3\n• 발사 서비스(팔콘 9·스타십)보다 훨씬 큰 매출\n• 반복 수익(구독) 모델 → 밸류에이션 프리미엄\n\n■ 글로벌 기회\n\n\"~2.2B people still offline globally — ~26% of humanity (2025 ITU estimate).\"\n\n• 전 세계 22억 명이 여전히 인터넷 미접속\n• Starlink는 이 수요를 현재 인프라 없이 위성으로 직접 공략\n• \"인터넷은 Starlink와 계약하는 순간 국가 전체의 병렬 인프라가 된다\"\n\n■ SpaceX 발사 인프라 독점\n\n\"SpaceX alone has launched over 86% of all mass to orbit this year.\"\n\"No one else is even close.\"\n\n• 2025년 지구 궤도 발사 질량의 86%를 SpaceX 독점\n• 경쟁자(로켓랩·ULA·블루오리진) 합산보다 압도적\n• 팔콘 9 재사용 횟수 세계 신기록 경신 중\n\n■ 투자 시사점\n\n• SpaceX IPO $SPCE 6월 12일 → Starlink 수익 모델이 밸류에이션 핵심 근거\n• 54% EBITDA 마진은 SaaS 수준 → 소프트웨어 기업 멀티플 적용 가능\n• 2028년 40M 구독자 달성 시 ARR $25~30B → 현재 밸류 정당화\n• 관련 수혜: TSLA(머스크 생태계), 위성 부품주\n\n■ 결론\n\nStarlink의 10M 구독자 돌파와 54% EBITDA 마진은 SpaceX가 단순 발사 기업이 아닌 \"우주 인터넷 독점 플랫폼\"임을 증명합니다. $1.5~1.75T IPO 밸류는 과장이 아닌 수익 현실에 기반한 숫자입니다.",
+    category:      "특집",
+    categoryColor: "purple",
+    subject:       "🚀 SpaceX Starlink (10M 구독자·IPO)",
+    date:          "2026-05-19",
+    updatedAt:     "2026.05.19 07:55",
+    isPinned:      true,
+    images:        ["/charts/starlink-growth.svg"],
+  },
+
+  {
+    id:            "seed-041",
+    title:         "META 5% 대규모 구조조정 — 수요일 3회 분할 발표, AI 효율화 가속",
+    summary:       "Meta가 전체 직원의 5%를 수요일 3회 분할로 해고한다는 내부 보고가 유출됐습니다. 각 파동이 전체 배치의 35%씩 순차 진행. Anthropic AI AGH 성장률 +80%와 AI 에이전트 전환이 맞물리며 테크 대기업의 인력 효율화가 가속되고 있습니다.",
+    body:          "■ 핵심 발표\n\n\"JUST IN: META IS REPORTEDLY LAYING OFF 5% OF ITS EMPLOYEES IN THREE BATCHES ON WEDNESDAY. EACH WAVE HITS 35% OF EACH BATCH.\"\n\n■ 구조조정 구조\n\n• 대상: 전체 직원의 5%\n• 방식: 수요일 3회 분할 발표\n• 1차 파동: 전체 배치의 35%\n• 2차 파동: 35%\n• 3차 파동: 35%\n• 지역: 북미 직원부터 우선 통보\n\n\"Per Reuters, North American employees have been told to work from home that day.\"\n\"This is what is actually happening.\"\n\n■ AI 효율화 기조\n\n\"The cuts come as part of plans to move to new AI workflow initiatives. Managerial roles are being eliminated across the company — 'Many layers are being changed' alongside China layoffs.\"\n\n\"The cuts land on the same day as Nvidia's earnings, the biggest AI catalyst of the quarter.\"\n\n→ 타이밍: NVIDIA 실적 발표 당일 → AI 전환 메시지와 연동\n→ 인력 감축 + AI 효율화 = 마진 개선 전략\n\n■ Meta AI 투자 현황과 모순\n\n동시에 Meta는:\n• AI 광고 인프라: $8B 투자 중\n• Llama 오픈소스 AI: 개발자 생태계 확장\n• Ray-Ban AI 안경: 웨어러블 시장 선점\n• Andromeda AI 추천: 광고 효율 2배 개선\n\n→ \"인원 감축 + AI 투자 확대\" = 인력 효율화, AI 자동화로 대체\n\n■ 빅테크 구조조정 흐름\n\n| 기업 | 감축 | 시기 |\n|------|------|------|\n| Meta | 5% | 2026.05 |\n| Google | 6% | 2026.01 |\n| Microsoft | 3% | 2026.01 |\n| Amazon | 5% | 2025.Q4 |\n\n→ 공통: AI 전환 투자 확대 + 인력 최적화 동시 진행\n\n■ Anthropic 반사 수혜\n\n\"Anthropic AGH 80% growth in last 90 days, rights, running out of supply...\"\n\"Higher usage limits for Claude and a compute deal with SpaceX.\"\n\n• Claude 사용량 급증 → Anthropic 서버 부족 → SpaceX 컴퓨팅 계약\n• Meta 구조조정 인재 → Anthropic·xAI 흡수 가능성\n\n■ 투자 시사점\n\n• 단기: Meta 주가 구조조정 발표 → 비용 절감 기대 긍정적\n• 중기: AI 효율화 성공 시 마진 개선 → EPS 상향\n• AI 에이전트 수혜: Anthropic(비상장)·OpenAI(비상장)·MSFT(Copilot)\n• 리스크: 인재 유출, 서비스 품질 저하 우려\n\n■ 결론\n\nMeta의 5% 구조조정은 비용 절감이 아닌 AI 전환 가속의 신호입니다. NVIDIA 실적 발표 당일에 맞춘 타이밍은 \"AI가 인간 역할을 대체하고 있다\"는 메시지를 시장에 강하게 던집니다.",
+    category:      "종목분석",
+    categoryColor: "red",
+    subject:       "📉 META (구조조정·AI 전환)",
+    date:          "2026-05-19",
+    updatedAt:     "2026.05.19 07:50",
+    isPinned:      true,
+    images:        ["/charts/meta-layoff.svg"],
+  },
+
+  {
+    id:            "seed-042",
+    title:         "SpaceX HyperLiquid 선물 $208 거래 개시 — Michael Burry TSMC $2.04B 베팅",
+    summary:       "SpaceX 주식이 HyperLiquid 탈중앙화 거래소에서 영구선물(Perpetual Futures)로 $208/share에 거래를 시작했습니다. IPO 전 시장 가격 형성으로 역대 최대 IPO 기대가 구체화됩니다. 동시에 Michael Burry가 TSMC $2.04B, Broadcom $40B 포지션을 공시했습니다.",
+    body:          "■ SpaceX HyperLiquid 선물 거래\n\n\"SPACEX OPENS FOR TRADING ON HYPERLIQUID VIA PERPETUAL FUTURES AT $208/SHARE.\"\n\"This price action is implying an open of $47, the biggest IPO in history.\"\n\n• 거래소: HyperLiquid (탈중앙화 파생상품 DEX)\n• 거래 유형: 영구선물(Perpetual Futures)\n• 현재 가격: $208/share (SPXC-USDC)\n• IPO 시사 가격: $47/share (공모가 추정)\n• 시사 시총: $350B+ (공모 기준)\n\n■ HyperLiquid 선물의 의미\n\n• 비상장 주식의 가격 발견(Price Discovery) 기능\n• 기관 투자자들이 IPO 전 포지션 헤지 가능\n• $208 선물 가격 = 장외 시장이 평가하는 현재 가치\n• IPO 공모가 $47 대비 현재 4.4배 → 상장 직후 급등 시사\n\n■ SpaceX IPO 전 시장 가격 형성 이유\n\n\"Basically creating liquidity for non-liquid assets and have been historically accurate.\"\n\n→ HyperLiquid 이전에도 Kalshi·Prediction Market에서 가격 형성\n→ SpaceX 내부 거래가 $180~220/share에서 이루어졌다는 보도 일치\n\n■ Michael Burry 포트폴리오 공시\n\n\"Michael Burry Stock Track (BIRM) — Here's everything you need to know about his recent 13F.\"\n\n톱 10 포지션:\n1. Vordwick Semiconductor 1T (TSMC): $2.04B\n2. Broadcom ($PUC): ~$40B\n3. 기타 반도체·AI 공급망\n\n\"The Big Short의 마이클 버리가 TSMC $2.04B을 베팅했다.\"\n\n■ Burry의 TSMC 베팅 이유 (추정)\n\n• AI 칩 수요 폭증 → TSMC 2나노·3나노 생산 완전 가동\n• 애리조나 팹 완공 → 미국 내 생산 리스크 분산\n• SpaceX·테슬라 자체 칩 위탁 생산 수혜 예상\n• NVIDIA Blackwell B200 전량 TSMC 3나노 생산\n• Burry의 역발상: \"모두가 NVIDIA를 살 때 제조사를 산다\"\n\n■ Broadcom의 위상\n\n• AI ASIC 맞춤 칩 설계: Google TPU·Meta AI칩 설계 파트너\n• 네트워킹: Tomahawk 스위치 칩 AI 데이터센터 표준\n• 2026 AI 매출 추정: $20B+\n\n■ 투자 시사점\n\n• SpaceX IPO 공모가 대비 현재 선물 프리미엄 → 상장 당일 급등 가능성\n• TSMC: AI 파운드리 독점 지위 → 버리의 역발상 베팅 주목\n• Broadcom: AI ASIC 맞춤 칩 성장 수혜 → NVDA 대안 포지션\n\n■ 결론\n\nHyperLiquid의 SpaceX $208 선물은 역대 최대 IPO의 카운트다운을 시작했습니다. Michael Burry의 TSMC·Broadcom 베팅은 \"AI 인프라 제조업체\"가 다음 단계 수혜자임을 시사합니다.",
+    category:      "시장분석",
+    categoryColor: "purple",
+    subject:       "💹 SpaceX 선물·Burry (TSMC·AVGO)",
+    date:          "2026-05-19",
+    updatedAt:     "2026.05.19 07:45",
+    images:        ["/charts/spacex-futures.svg"],
+  },
+
+  {
+    id:            "seed-043",
+    title:         "미국-이란 핵협상 급진전 — 트럼프·중동 정상 중재, 핵무기 포기 조건 협상",
+    summary:       "트럼프 대통령이 카타르·UAE 정상의 중재로 이란에 핵무기 포기 조건의 대규모 대미 공격 자제를 요청했습니다. \"내일(Tomorrow)\"을 데드라인으로 명시한 협상이 진행 중입니다. 중동 리스크 해소 시 원유 가격 하락·증시 상승 촉매가 될 수 있습니다.",
+    body:          "■ 핵심 발표\n\n\"BREAKING: ELON MUSK SAYS — WE GOTTA GET ON $SPCE IPO! It's happening!\"\n\"BREAKING IRAN NUCLEAR DEAL\"\n\"CEASEFIRE: US GENERAL STRIKE ACROSS IRAN — NO NUCLEAR WEAPONS FOR IRAN!\"\n\"It's happening!\"\n\n■ 협상 상세 내용\n\n\"I have been asked by the emir of Qatar, Tamim bin Hamad Al Thani, and the President of the United Arab, Salman Al Saudi, and the President of the United Arab Emirates, to ask all Countries in the Middle East, and to the United States of America, as well as Countries in the In the world, to hold off on a large scale assault on Iran, in exchange for no nuclear weapons for Iran.\"\n\n\"Based on my respect for the above mentioned mentioned leaders, I have been instructed by my President, General Daniel Caine, the Chairman of the Joint Chiefs of Staff, General Daniel Caine, the Chairman of the Joint Chiefs of Staff, to inform the President of Iran, Masoud Pezeshkian, that we are fully in support of diplomatic solution, and that we are prepared to give official notice, in sufficient advance notice, in sufficient advance of any military action, in with proper notice, in accordance with normal, so they do not have to maintain full-scale assault.\"\n\n\"'Based on the above mentioned notices from President Pezeshkian, I am given to understand that Iran is prepared to make an acceptable Deal with a Non-Negotiable stop to the clock, and we will report it back to the United States of America, and the cars will fall.\"\n\n■ 협상 조건 요약\n\n| 이란 제공 | 미국 제공 |\n|---------|----------|\n| 핵무기 개발 완전 포기 | 대규모 군사 공격 자제 |\n| IAEA 사찰 수용 | 경제 제재 완화 |\n| 중동 안정화 기여 | 외교 정상화 로드맵 |\n\n■ 시장 영향\n\n• 원유(WTI/Brent): 이란 리스크 완화 → 공급 정상화 기대 → 가격 하락 압력\n• 호르무즈 해협 봉쇄 리스크 해소 → 에너지 공급망 안정\n• 증시: 지정학 리스크 프리미엄 축소 → S&P 500 긍정적\n• 방산주: 긴장 완화 시 단기 조정 가능\n\n■ 불확실성\n\n• 이란 강경파 반발 가능성\n• 이스라엘의 협상 수용 여부\n• 의회 승인 프로세스\n• \"내일\" 데드라인 이후 협상 지속 여부\n\n■ 결론\n\n카타르·UAE 중재의 미국-이란 핵협상은 트럼프 임기 최대 외교 성과가 될 수 있습니다. 협상 성공 시 중동 지정학 리스크 프리미엄이 대폭 축소되어 증시·에너지 시장 전반에 긍정적 촉매로 작용할 것입니다.",
+    category:      "매크로",
+    categoryColor: "red",
+    subject:       "🇮🇷 미국-이란 (핵협상·중동)",
+    date:          "2026-05-19",
+    updatedAt:     "2026.05.19 07:40",
+    images:        ["/charts/iran-nuclear.svg"],
+  },
+
+  {
+    id:            "seed-044",
+    title:         "OpenAI vs Musk 소송 사실상 종결 — Trump 개입, OpenAI IPO 최대 장벽 해소",
+    summary:       "트럼프 행정부가 OpenAI vs Musk 소송에 개입하면서 소송이 30일 만에 사실상 종결됐습니다. Musk가 OpenAI 설립에 수백만 달러를 기부한 후 비영리에서 영리로 전환 시 영향력을 행사했다는 혐의였으나 트럼프가 취소(Cancel)했습니다. OpenAI IPO의 최대 법적 장벽이 해소됩니다.",
+    body:          "■ 소송 결과\n\n\"SAWYER MERRITT: Trump Administration's verdict on the OpenAI trial against MUSK.\"\n\"I have a one-track reaction: Apple. The trial is not over yet, but Trump cancels it with a suit just 30-something days from filing, and that's what actually happened here, and that's just wrong.\"\n\n■ 소송 배경\n\n\"OpenAI's defense claimed Musk knew about and supported the for-profit plans in its early in the company's history, and only turned against the company after losing influence and later starting his competing AI company, xAI.\"\n\n• Musk 혐의: OpenAI 수백만 달러 기부 후 비영리→영리 전환 시 \"속임수\" 주도\n• OpenAI 반론: Musk는 당시 영리 전환을 알고 지지했음\n• 트럼프 개입: 소송 30일 만에 사실상 종결 처리\n\n■ OpenAI IPO 영향\n\n\"Looks like OpenAI just cleared one of their biggest hurdles to going public.\"\n\n• 소송 종결 = IPO 추진 최대 법적 장벽 제거\n• IPO 추진 타임라인 2026년 하반기~2027년 초 유력\n• 밸류에이션: $150~200B 예상 (최근 펀딩 기준)\n\n■ Musk의 xAI vs OpenAI 경쟁 현황\n\n| 항목 | xAI Grok | OpenAI ChatGPT |\n|------|----------|----------------|\n| 최신 모델 | Grok Build ($300/월) | GPT-5 |\n| 코딩 | MultilingualBench 70.6% | 69.3% |\n| 구독 | SuperGrok Heavy | Plus/Pro |\n| 전략 | X(트위터) 통합 | API 생태계 |\n\n■ xAI Composer 2.5 출시\n\n\"CURSOR AI JUST RELEASED Composer 2.5, its most powerful coding model yet. The xAI and OpenAI partnership is now active.\"\n\"SWE-Bench Multilingual: 76.9% vs GPT-5 5.3% → GPT-5 77.8%\"\n\"Compute 2.0: 65.3%, vs Harder Tasks 63.9%.\"\n\n• xAI Composer 2.5: SWE-Bench Multilingual 76.9%\n• GPT-5 대비 코딩 벤치마크 우세\n\n■ 투자 시사점\n\n• OpenAI IPO 장벽 해소 → 상장 시 AI 섹터 전체 촉매\n• xAI(비상장): TSLA 통해 간접 수혜\n• Anthropic: Claude 수요 폭증으로 SpaceX 컴퓨팅 계약 체결\n• NVDA: AI 모델 경쟁 → GPU 수요 지속\n\n■ 결론\n\nTrump 개입으로 OpenAI-Musk 소송이 종결되면서 OpenAI IPO의 최대 걸림돌이 사라졌습니다. AI 산업의 법적 불확실성 해소는 2026년 하반기 AI 섹터 투자 심리에 강력한 긍정 신호입니다.",
+    category:      "섹터",
+    categoryColor: "orange",
+    subject:       "⚖️ OpenAI (Musk 소송·IPO)",
+    date:          "2026-05-19",
+    updatedAt:     "2026.05.19 07:35",
+    images:        ["/charts/openai-ipo.svg"],
+  },
+
+  {
+    id:            "seed-045",
+    title:         "테슬라 FSD 아키텍처 공개 — 750,000:1 압축비, 초당 1.5GB 영상, 인간 뇌와 동일",
+    summary:       "테슬라 FSD의 내부 아키텍처가 공개됐습니다. 초당 1.5GB 영상 데이터를 처리하며 750,000:1로 압축합니다. 이 아키텍처는 인간과 테슬라·옵티머스가 동일하게 사용합니다. Elon Musk는 Samsung Smart Mobility Summit에서 \"텍사스 3개 도시 완전 자율 로봇\" 운영 중임을 발표했습니다.",
+    body:          "■ FSD 아키텍처 핵심 수치\n\n\"Tesla is tracking in one and a half gigabytes a second of video data 240 fps.\"\n\"Tesla sitting in one and a half gallabytes a second of video, pictures of control frequency at 15.\"\n\"A 750,000-to-1 compression ratio.\"\n\n처리 사양:\n• 입력: 초당 1.5GB 영상 (240fps)\n• 압축비: 750,000:1 (역대 최고 수준)\n• 제어 주파수: 15Hz\n• 처리 결과: 극초저지연 운전 결정\n\n■ 인간 뇌와의 비교\n\n\"Your Tesla is taking in one and a half gallabytes a second of video, pictures of controls frequency at 15.\"\n\"The architecture human, a Tesla, and an Optimus all run the same mission.\"\n\n• 테슬라 FSD → 인간 시각처리 방식 모방\n• 망막: 초당 8~40MB 데이터 → 뇌에서 압축·처리\n• FSD: 초당 1.5GB → 750,000:1 압축 → 주행 결정\n• Optimus 로봇: 동일 아키텍처 사용 → 공통 AI 플랫폼\n\n\"You can't beat it on the human front, but we might have a shot at the robot front.\"\n\n■ Elon Musk — Samsung Smart Mobility Summit 발언\n\n\"Tesla Robots are already operating fully driverless in 3 Texas cities.\"\n\"Starlink could lead a world with far more robots than humans.\"\n\"Neuralink may eventually restore communication, mobility, sensation.\"\n\n핵심 발언:\n1. 텍사스 3개 도시: 테슬라 로봇 이미 완전 자율로 운영 중\n2. Starlink + 로봇: 인류보다 로봇이 많은 세상으로의 인프라\n3. Neuralink: 커뮤니케이션·이동·감각 회복 최종 목표\n\n■ FSD 자율주행 로드맵 (Elon 발언)\n\n\"I expect FSD to be at the limit of human performance in three cities in Texas and probably in the US by the end of this year, and hopefully in turn.\"\n\n• 2026년 말: 미국 전역에서 인간 수준 자율주행 달성 목표\n• 텍사스 3개 도시: 이미 완전 자율 운영 중 (선행 테스트)\n• NHTSA 장벽 해소 → 상업 서비스 확장 가속\n\n■ FSD V14.3.3 vs 인간 비교\n\n\"Physics is the law and everything else is a recommendation.\"\n— Elon Musk (Starship 실패 후 발언)\n\n동일 원칙을 FSD에 적용:\n• 물리 법칙 기반 자율주행 (인간 감각 의존 없음)\n• 카메라 8개 → 360도 커버리지\n• 인간과 달리 피로·집중력 저하 없음\n\n■ 투자 시사점\n\n• FSD 구독 수익: V14.3.3 업데이트 → 신규 구독 전환 가속\n• Optimus 상용화: FSD와 동일 아키텍처 → 개발 비용 공유\n• 로봇택시(Cybercab): 텍사스 3도시 사례 → 전국 확장 타임라인 앞당김\n• 경쟁사: Waymo·Mobileye 대비 FSD 데이터 양 압도적 우위\n\n■ 결론\n\nFSD 750,000:1 압축과 인간-테슬라-옵티머스 동일 아키텍처 공개는 테슬라가 단순 자율주행을 넘어 \"범용 로봇 AI 플랫폼\"을 구축하고 있음을 보여줍니다. 텍사스 3도시 완전 자율 로봇 운영은 상용화 타임라인이 현실임을 증명합니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "🚗 테슬라 FSD (아키텍처·로봇·Samsung)",
+    date:          "2026-05-19",
+    updatedAt:     "2026.05.19 07:30",
+    isPinned:      true,
+    images:        ["/charts/tesla-fsd-arch.svg"],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
   // 2026-05-18 리포트
   // ══════════════════════════════════════════════════════════════════════════
 
   {
     id:            "seed-032",
-    title:         "📋 2026년 5월 18일 — 오늘의 한장 요약",
-    summary:       "SpaceX IPO 6월 12일 Nasdaq 상장 확정, BlackRock $5~10B 단독 매수 시도 / 테슬라 FSD V14.3.3 출시·자율주행 통계 공개 / Ackman Microsoft $2.3B 베팅·Google 전량 매도 / 버핏 Apple 25년 $10,000→$120,000 / 테슬라 한국·대만 칩 설계 채용 / Jamie Dimon \"50년 중 AI 최고 낙관\"",
-    body:          "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🚀 SpaceX IPO — 6월 12일 Nasdaq $SPCE 상장\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• 총 조달 $15B, BlackRock이 12%($5~10B) 단독 매수 시도\n• 소매 투자자 30% 물량 배정 — 역대 IPO 중 이례적\n• Starlink = 국가 인터넷 인프라 수준, 장기 성장 스토리\n→ 2026년 최대 투자 이벤트. 관련 수혜: TSLA, 우주 ETF\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🚗 테슬라 FSD V14.3.3 출시\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• 자율주행 통계(Self-Driving Stats) 최초 공개 — 98% 정확도\n• Smart Summary 응답 속도 대폭 향상\n• 주차 표시 없는 주차장에서 완벽 자동 주차 시연\n• NHTSA 규제 장벽 해소 → FSD 글로벌 확장 가속\n→ FSD 구독 수익 가속, 로봇택시 타임라인 앞당김\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n💼 Bill Ackman — MSFT $2.3B 베팅, GOOGL 전량 매도\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• Pershing Square: Google 전량 매도 → Microsoft $2.3B 집중 투자\n• Azure AI·Copilot 생태계 → \"AI 시대 최대 수혜자\" 판단\n• Google 반독점 소송·AI 뒤처짐 리스크 회피\n→ 빅테크 AI 패권 구도 전환 시그널\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🍎 워런 버핏 × 애플 — $10,000 → $120,000\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• 2016년 5월 버크셔 첫 Apple 공시, 이후 12배 수익\n• 버핏 원금 $36B → 평가액 $180B+ (최고점)\n• Apple Intelligence AI 사이클 → 차기 성장 동력 시작\n→ \"위대한 기업을 적당한 가격에\" 원칙의 완벽한 구현\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🔬 테슬라 — 한국·대만 반도체 엔지니어 대규모 채용\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• GDDR·LPDDR·DRAM 전문 설계 엔지니어 모집\n• Cortex AI 슈퍼컴퓨터 칩 내재화 전략 구체화\n• 삼성·SK하이닉스 출신 메모리 인재 직접 채용\n→ NVIDIA 의존도 축소, 자체 칩 완성 시 마진 대폭 개선\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🏦 Jamie Dimon — \"50년 중 AI 가장 낙관적\"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• \"Most optimistic picture of AI I've ever heard in my 50-year career.\"\n• 월가 레전드(Ackman·Druckenmiller·Baron) 일제히 AI 수혜주 집중\n• JP모건 AI 투자 $15B+, COiN·LOXM 등 실전 도입\n→ AI는 테마가 아닌 현실 — 방향성 확인\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n📌 오늘의 핵심 픽\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• 최우선 관심: $SPCE (SpaceX IPO 6/12)\n• 단기 모멘텀: TSLA (FSD 14.3.3 + 칩 내재화)\n• 장기 보유: MSFT (Ackman $2.3B + Copilot)\n• 헤지 확인: AAPL (버핏 Apple Intelligence 사이클)",
+    title:         "SpaceX 6월 12일 나스닥 상장 확정 — FSD V14.3.3 자율주행 98% 첫 공개",
+    summary:       "SpaceX IPO 6월 12일 Nasdaq / FSD V14.3.3 98% / Ackman MSFT $2.3B / 버핏 Apple 25년 / 테슬라 칩 내재화 / Dimon \"50년 중 AI 최고 낙관\" — 6가지 핵심 뉴스를 한 장으로",
+    body:          "■ 오늘의 핵심 6가지 (비주얼 요약 이미지를 확인하세요)\n\n🚀 SpaceX IPO — 6월 12일 Nasdaq $SPCE · 총 조달 $15B · BlackRock $5~10B 단독 매수 시도\n\n🚗 Tesla FSD V14.3.3 — 자율주행 통계 최초 공개 · 98% 정확도 · NHTSA 장벽 해소\n\n💼 Bill Ackman — Google 전량 매도 → Microsoft $2.3B 집중 · AI 패권 1위 전환 선언\n\n🍎 버핏 × Apple 25년 — $10,000 → $120,000 · Apple Intelligence 차기 성장 동력\n\n🔬 Tesla 칩 내재화 — 한국·대만 채용 · Cortex AI 슈퍼컴퓨터 · NVIDIA 의존도 축소\n\n🏦 Jamie Dimon — \"50년 커리어 중 AI 가장 낙관\" · JP모건 AI 투자 $15B+",
     category:      "특집",
     categoryColor: "mint",
-    subject:       "📋 오늘의 시장 요약",
+    subject:       "📋 5/18 시장 한장 요약",
     date:          "2026-05-18",
     updatedAt:     "2026.05.18 08:35",
     isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260518.svg"],
   },
 
   {
@@ -133,6 +236,21 @@ export const SEED_REPORTS: Report[] = [
   // ══════════════════════════════════════════════════════════════════════════
   // 2026-05-15 리포트
   // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-046",
+    title:         "미중 90일 관세 휴전 · NVIDIA 중국 $50B 시장 재개방 — 빅테크 동반 랠리",
+    summary:       "트럼프-시진핑 \"Very Good Feeling\" / NVIDIA 중국칩 $50B 허가 / 트럼프 NVDA $1M+ 공시 / 혼다 2040 EV 철회 / Tesla Semi $1B CA 보조금 / xAI Grok Build $300 — 6가지 핵심 뉴스를 한 장으로",
+    body:          "■ 오늘의 핵심 6가지 (비주얼 요약 이미지를 확인하세요)\n\n🤝 트럼프-시진핑 베이징 \"Very Good Feeling\" — 중국 $1조 대미 투자 · CEO 60명 동행 · 관세 협상 분수령\n\n🟢 NVIDIA 중국 AI칩 허가 — 18개社 · $12B→$50B 시장 4.2배 확대 · 젠슨황 직통 전화\n\n🏛️ 트럼프 NVDA $1M+ 개인 공시 — 113페이지·3,642건 · 정책 선행 시그널\n\n🚗 혼다 2040 EV 목표 공식 철회 — \"달성 어렵다\" · 테슬라 독주 구조 강화\n\n🚛 Tesla Semi 캘리포니아 $1B 보조금 — 200대+ · 디젤 대비 77% 운영비 절감\n\n🤖 xAI Grok Build 출시 — $300/월 Heavy 독점 · Claude·Cursor 정면 도전",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 5/15 시장 한장 요약",
+    date:          "2026-05-15",
+    updatedAt:     "2026.05.15 08:40",
+    isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260515.svg"],
+  },
 
   {
     id:            "seed-026",
@@ -243,6 +361,21 @@ export const SEED_REPORTS: Report[] = [
   // ══════════════════════════════════════════════════════════════════════════
   // 2026-05-14 리포트
   // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-047",
+    title:         "S&P 500 신고가 경신 · 케빈 워시 연준의장 유력 — AI 랠리 가속",
+    summary:       "케빈 워시 연준의장 확정 / Ron Baron 테슬라 $2,500 / S&P500 ATH +0.96% / Meta \"가장 오해받는 메가캡\" / 젠슨황 AI 역설 / 광학통신 LITE·COHR·LSCC 폭발 — 6가지 핵심 뉴스를 한 장으로",
+    body:          "■ 오늘의 핵심 6가지 (비주얼 요약 이미지를 확인하세요)\n\n🏛️ 케빈 워시 연준의장 인준 — 상원 51표 · 파월 교체 · 금리 인하 기대 재조정\n\n🏎️ Ron Baron 테슬라 $2,500 콜 — 10년 내 시총 $8.3조 · \"지금이 살 때\" CNBC 직격\n\n📊 S&P500 ATH 경신 — 주간 +0.96% · $350B 추가 · 실적 EPS 상회 74%\n\n📘 Meta \"가장 오해받는 메가캡\" — ARK 분석 · AI 광고 $8B · LLaMA 생태계\n\n🤖 젠슨황 AI 역설 — \"방사선 전문의 오히려 3000만 명 증가\" · AI는 배가 효과\n\n🔆 광학통신 폭발 — LITE·COHR·LSCC AI 데이터센터 핵심 부품 랠리",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 5/14 시장 한장 요약",
+    date:          "2026-05-14",
+    updatedAt:     "2026.05.14 07:30",
+    isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260514.svg"],
+  },
 
   {
     id:            "seed-013",

@@ -103,12 +103,13 @@ function FailScreen({ msg, onRetry }: { msg: string; onRetry: () => void }) {
 }
 
 export default function BuyPage() {
-  const [method, setMethod] = useState<PayMethod>("KAKAOPAY");
-  const [name,   setName]   = useState("");
-  const [email,  setEmail]  = useState("");
-  const [step,   setStep]   = useState<Step>("form");
-  const [errMsg, setErrMsg] = useState("");
-  const sdkReady            = useRef(false);
+  const [method,      setMethod]      = useState<PayMethod>("KAKAOPAY");
+  const [name,        setName]        = useState("");
+  const [email,       setEmail]       = useState("");
+  const [step,        setStep]        = useState<Step>("form");
+  const [errMsg,      setErrMsg]      = useState("");
+  const [termsAgreed, setTermsAgreed] = useState(false);
+  const sdkReady                      = useRef(false);
 
   /* Load PortOne V2 SDK */
   useEffect(() => {
@@ -122,6 +123,7 @@ export default function BuyPage() {
 
   const handlePay = async () => {
     if (!name.trim()) { setErrMsg("이름을 입력해주세요."); return; }
+    if (!termsAgreed) { setErrMsg("구매 조건 및 환불정책에 동의해주세요."); return; }
 
     const storeId   = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
     const kakaoKey  = process.env.NEXT_PUBLIC_PORTONE_KAKAOPAY_KEY;
@@ -348,6 +350,28 @@ export default function BuyPage() {
           </p>
         </div>
 
+        {/* 환불 정책 + 약관 동의 */}
+        <div className="rounded-xl p-4 border mb-4"
+          style={{ background: "rgba(255,255,255,0.02)", borderColor: "var(--border)" }}>
+          <p className="text-[10px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+            <span className="font-bold" style={{ color: "var(--text)" }}>환불 정책</span>{"\n"}
+            전자책(디지털 콘텐츠)은 전자상거래법 제17조에 따라 다운로드 전 7일 이내 청약철회가 가능합니다.
+            단, 파일을 다운로드하신 경우 콘텐츠의 특성상 환불이 제한될 수 있습니다.
+            환불 문의: sunryupatners@gmail.com
+          </p>
+          <label className="flex items-start gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={termsAgreed}
+              onChange={(e) => setTermsAgreed(e.target.checked)}
+              className="mt-0.5 flex-shrink-0"
+            />
+            <span className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+              위 구매 조건 및 환불정책을 확인하였으며, 전자책 구매에 동의합니다.
+            </span>
+          </label>
+        </div>
+
         {errMsg && (
           <p className="text-xs mb-4 text-center" style={{ color: "#ff4d6d" }}>{errMsg}</p>
         )}
@@ -360,8 +384,7 @@ export default function BuyPage() {
         </button>
 
         <p className="text-[10px] text-center mt-3 leading-relaxed" style={{ color: "var(--muted)" }}>
-          결제 완료 후 PDF 다운로드 링크가 즉시 제공됩니다.{"\n"}
-          전자책 특성상 다운로드 후 환불이 제한될 수 있습니다.
+          결제 완료 후 PDF 다운로드 링크가 즉시 제공됩니다.
         </p>
       </main>
     </div>

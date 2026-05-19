@@ -188,9 +188,6 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
                 구독하기 · {creator.subscriptionPrice === 0 ? "무료" : `₩${creator.subscriptionPrice.toLocaleString()}/월`}
               </button>
             )}
-            <p className="text-[10px] text-center mt-2" style={{ color: "var(--muted)" }}>
-              구독료의 10%는 플랫폼 수수료로 적용됩니다
-            </p>
           </div>
         </div>
 
@@ -330,7 +327,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
                   )}
                 </button>
                 <p className="text-[10px] text-center mt-2" style={{ color: "var(--muted)" }}>
-                  구독료의 10%는 플랫폼 운영 수수료입니다 · 언제든 해지 가능
+                  언제든 해지 가능
                 </p>
               </>
             )}

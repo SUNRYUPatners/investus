@@ -74,7 +74,6 @@ export function LiveMarket() {
   const t = useLocale();
   const [data, setData]       = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [fetchFailed, setFetchFailed] = useState(false);
 
   const recScroll    = useScrollIndicator();
   const quotesScroll = useScrollIndicator();
@@ -83,15 +82,19 @@ export function LiveMarket() {
   // Ref so the interval always calls the latest version of doLoad
   const doLoadRef = useRef<(isRetry?: boolean) => void>(() => {});
 
-  const doLoad = (isRetry = false) => {
-    if (isRetry) { setFetchFailed(false); setLoading(true); }
+  const doLoad = (isRetry = false, retryDelay = 3000) => {
+    if (isRetry) { setLoading(true); }
 
     // 15초 타임아웃
     const controller = new AbortController();
     const timeout    = setTimeout(() => controller.abort(), 15_000);
 
     fetch("/api/market-data", { signal: controller.signal, cache: "no-store" })
-      .then((r) => { if (!r.ok) throw new Error("http " + r.status); return r.json(); })
+      .then((r) => {
+        if (r.status === 503) throw Object.assign(new Error("retry"), { retry: true });
+        if (!r.ok) throw new Error("http " + r.status);
+        return r.json();
+      })
       .then(async (d: MarketData) => {
         clearTimeout(timeout);
         const hasData = (d?.quotes?.length ?? 0) > 0 || (d?.indices?.length ?? 0) > 0;
@@ -120,7 +123,6 @@ export function LiveMarket() {
 
         setData(d);
         setLoading(false);
-        setFetchFailed(false);
         try {
           if ((d?.quotes?.length ?? 0) > 0) {
             localStorage.setItem("market-data-cache", JSON.stringify(d));
@@ -128,16 +130,24 @@ export function LiveMarket() {
           }
         } catch { /* ignore */ }
       })
-      .catch((e: unknown) => {
+      .catch((e: unknown & { retry?: boolean }) => {
         clearTimeout(timeout);
-        // 캐시 데이터가 이미 표시 중이면 에러 숨김, 없으면 retry 버튼 표시
-        setData((prev) => {
-          if (!prev) {
-            setFetchFailed(true);
-            setLoading(false);
-          }
-          return prev;
-        });
+        const shouldRetry = (e as { retry?: boolean })?.retry;
+        if (shouldRetry) {
+          // 503 일시적 오류 — 데이터 없으면 스켈레톤 유지하면서 재시도, 있으면 보이는 채로 재시도
+          const next = Math.min(retryDelay * 2, 15_000);
+          setTimeout(() => doLoad(false, next), retryDelay);
+        } else {
+          // 기존 데이터 있으면 그대로 유지, 없으면 재시도 버튼 (절대 빈 화면 금지)
+          setData((prev) => {
+            if (!prev) {
+              // 데이터 없을 때도 재시도 버튼 대신 자동 재시도
+              setTimeout(() => doLoad(true, 3000), 5000);
+              setLoading(false);
+            }
+            return prev;
+          });
+        }
       });
   };
 
@@ -146,7 +156,6 @@ export function LiveMarket() {
 
   useEffect(() => {
     // 1. 캐시를 즉시 표시
-    let hasCachedData = false;
     try {
       const cached = localStorage.getItem("market-data-cache");
       if (cached) {
@@ -154,7 +163,6 @@ export function LiveMarket() {
         if ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0) {
           setData(parsed);
           setLoading(false);
-          hasCachedData = true;
         }
       }
     } catch { /* ignore */ }
@@ -167,7 +175,23 @@ export function LiveMarket() {
     const id = setInterval(() => {
       if (isMarketOpen()) doLoadRef.current();
     }, 60_000);
-    return () => clearInterval(id);
+
+    // 탭/앱 복귀 시 5분 이상 지났으면 자동 새로고침 (stale data 방지)
+    let hiddenAt = 0;
+    const onVisibility = () => {
+      if (document.hidden) {
+        hiddenAt = Date.now();
+      } else if (hiddenAt > 0 && Date.now() - hiddenAt > 5 * 60_000) {
+        doLoadRef.current();
+        hiddenAt = 0;
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+
+    return () => {
+      clearInterval(id);
+      document.removeEventListener("visibilitychange", onVisibility);
+    };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -176,21 +200,6 @@ export function LiveMarket() {
   const futures     = data?.futures ?? [];
   const recommended = quotes.filter((q) => RECOMMENDED_SYMBOLS.includes(q.symbol));
 
-  // 로딩 실패 시 — 캐시도 없는 경우 재시도 UI
-  if (fetchFailed && !data) {
-    return (
-      <section className="px-4 lg:px-0 pt-8 flex flex-col items-center gap-3">
-        <p className="text-sm" style={{ color: "var(--muted)" }}>{t.market.loadFailed}</p>
-        <button
-          onClick={() => doLoad(true)}
-          className="text-xs px-4 py-2 rounded-xl font-semibold"
-          style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}
-        >
-          {t.market.retry}
-        </button>
-      </section>
-    );
-  }
 
   return (
     <>

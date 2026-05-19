@@ -7,7 +7,7 @@ import Link from "next/link";
 const SECTIONS = [
   {
     title: "1. 개인정보 수집 항목 및 방법",
-    body: "서비스는 회원가입 시 다음과 같은 최소한의 정보를 수집합니다.\n\n• 필수 항목: 전화번호, 비밀번호(암호화 저장)\n• 자동 수집: 서비스 이용 기록, 접속 로그, 기기 식별 정보(광고 ID), 앱 버전\n\n개인정보는 이용자가 직접 입력하는 방식 또는 서비스 이용 과정에서 자동으로 생성·수집됩니다.",
+    body: "서비스는 회원가입 시 다음과 같은 최소한의 정보를 수집합니다.\n\n• 이메일/비밀번호 가입: 이메일 주소, 비밀번호(암호화 저장)\n• 소셜 로그인(Google, Kakao): 이메일 주소, 프로필 닉네임 (해당 제공자 정책에 따름)\n• 자동 수집: 서비스 이용 기록, 접속 로그, 기기 식별 정보(광고 ID), 앱 버전\n\n개인정보는 이용자가 직접 입력하는 방식 또는 서비스 이용 과정에서 자동으로 생성·수집됩니다.",
   },
   {
     title: "2. 개인정보 수집 및 이용 목적",
@@ -47,7 +47,7 @@ const SECTIONS = [
   },
   {
     title: "부칙",
-    body: "본 방침은 2025년 1월 1일부터 시행됩니다.",
+    body: "본 방침은 2026년 5월 18일부터 시행됩니다.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function PrivacyPage() {
           </Link>
         </div>
         <h1 className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>개인정보처리방침</h1>
-        <p className="text-[11px] mb-6" style={{ color: "var(--muted)" }}>최종 개정일: 2025년 1월 1일</p>
+        <p className="text-[11px] mb-6" style={{ color: "var(--muted)" }}>최종 개정일: 2026년 5월 18일</p>
 
         <div className="flex flex-col gap-5">
           {SECTIONS.map((s) => (

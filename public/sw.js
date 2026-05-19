@@ -15,6 +15,35 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// ── Push 알림 수신 ────────────────────────────────────────────────────────
+self.addEventListener("push", (e) => {
+  let data = { title: "📋 Investus", message: "새 리포트가 업데이트됐습니다.", url: "/" };
+  try { if (e.data) data = { ...data, ...JSON.parse(e.data.text()) }; } catch { /* ignore */ }
+
+  e.waitUntil(
+    self.registration.showNotification(data.title, {
+      body: data.message,
+      icon: "/logo-sunryu.jpeg",
+      badge: "/logo-sunryu.jpeg",
+      data: { url: data.url },
+      tag: "report-update",
+      renotify: true,
+    })
+  );
+});
+
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  const url = e.notification.data?.url ?? "/";
+  e.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((clients) => {
+      const existing = clients.find((c) => c.url.includes(self.location.origin));
+      if (existing) { existing.focus(); existing.navigate(url); }
+      else self.clients.openWindow(url);
+    })
+  );
+});
+
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
   const url = new URL(e.request.url);

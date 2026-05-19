@@ -86,7 +86,6 @@ export default function StockPage({
   const [detail, setDetail]           = useState<Detail | null>(null);
   const [news,   setNews]             = useState<NewsItem[]>([]);
   const [detailLoading, setDetailLoading] = useState(true);
-  const [detailError, setDetailError] = useState(false);
 
   const fetchDetailRef = useRef<() => void>(() => {});
 
@@ -141,22 +140,38 @@ export default function StockPage({
 
     if (!hasCached) setDetailLoading(true);
 
-    setDetailError(false);
-    fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`, { cache: "no-store" })
-      .then((r) => { if (!r.ok) throw new Error("no data"); return r.json(); })
-      .then((d: Detail) => {
-        // market-data 캐시 가격으로 덮어쓰기 — 홈탭과 숫자 일치
-        const latestMarketPrice = getMarketCachePrice();
-        const final = latestMarketPrice ? { ...d, ...latestMarketPrice } : d;
-        setDetail(final);
-        setDetailLoading(false);
-        try { localStorage.setItem(cacheKey, JSON.stringify(d)); } catch { /* ignore */ }
-      })
-      .catch(() => {
-        setDetailLoading(false);
-        // Keep cached detail visible; only show error button if nothing loaded
-        setDetail((prev) => { if (!prev) setDetailError(true); return prev; });
-      });
+
+    const tryFetch = (delay: number) => {
+      fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`, { cache: "no-store" })
+        .then((r) => {
+          // 503 = 일시적 오류 → 재시도. 그 외 non-ok = 심볼 없음
+          if (r.status === 503) throw Object.assign(new Error("retry"), { retry: true });
+          if (!r.ok) throw new Error("not-found");
+          return r.json();
+        })
+        .then((d: Detail) => {
+          const latestMarketPrice = getMarketCachePrice();
+          const final = latestMarketPrice ? { ...d, ...latestMarketPrice } : d;
+          setDetail(final);
+          setDetailLoading(false);
+          try { localStorage.setItem(cacheKey, JSON.stringify(d)); } catch { /* ignore */ }
+        })
+        .catch(() => {
+          // 503이든 네트워크 오류든 모두 재시도 — 절대 에러 상태 표시 금지
+          // 기존 데이터 있으면 그대로 유지하고 백그라운드 재시도
+          setDetail((prev) => {
+            if (!prev) {
+              // 데이터 없을 때: 스켈레톤 유지하면서 재시도
+              const next = Math.min(delay * 2, 10_000);
+              setTimeout(() => tryFetch(next), delay);
+            }
+            return prev;
+          });
+          setDetailLoading(false);
+        });
+    };
+
+    tryFetch(1500);
   };
 
   fetchDetailRef.current = fetchDetail;
@@ -255,15 +270,7 @@ export default function StockPage({
             </div>
 
             {/* Right: price + change */}
-            {detailError ? (
-              <button
-                onClick={fetchDetail}
-                className="text-xs px-3 py-2 rounded-xl font-semibold flex-shrink-0"
-                style={{ background: "rgba(255,77,109,0.12)", color: "#ff4d6d" }}
-              >
-                다시 시도
-              </button>
-            ) : detail ? (
+            {detail ? (
               <div className="text-right flex-shrink-0">
                 <p className="text-2xl font-bold font-mono-num" style={{ color: "var(--text)" }}>
                   ${detail.price.toFixed(2)}
@@ -307,7 +314,6 @@ export default function StockPage({
                   avgVolume: null, dividendYield: null, beta: null, eps: null,
                 };
               });
-              setDetailError(false);
               setDetailLoading(false);
             }}
           />

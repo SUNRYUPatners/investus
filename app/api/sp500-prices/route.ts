@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { fetchFinnhubBatch } from "@/lib/finnhub";
+import { fetchBatchQuotes } from "@/lib/yahooFinance";
 
-// Cache 60s — Finnhub rate limit 방지 (60 req/min, 38 symbols per call)
+// Cache 60s
 export const revalidate = 60;
 
 type SectorStock = { symbol: string; name: string; weight: number };
@@ -94,13 +94,15 @@ export async function GET() {
   let isLive = false;
 
   try {
-    const liveMap = await fetchFinnhubBatch(allSymbols);
-    if (liveMap.size > 0) {
+    const yfQuotes = await fetchBatchQuotes(allSymbols);
+    if (yfQuotes.length > 0) {
       isLive = true;
-      liveMap.forEach((q) => {
-        changeMap[q.symbol] = q.changePercent;
-        priceMap[q.symbol]  = q.price;
-      });
+      for (const q of yfQuotes) {
+        if (q.price > 0) {
+          changeMap[q.symbol] = q.changePercent;
+          priceMap[q.symbol]  = q.price;
+        }
+      }
     }
   } catch {
     // keep mock fallback

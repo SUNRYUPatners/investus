@@ -31,9 +31,11 @@ export function PWAInstallPrompt() {
     try {
       const modalShown   = !!localStorage.getItem(MODAL_KEY);
       const bannerGone   = !!localStorage.getItem(BANNER_KEY);
-      if (!modalShown) {
+      const onboarded    = !!localStorage.getItem("investus_onboarded");
+      // 온보딩 안 끝났으면 PWA 모달 표시 안 함 (충돌 방지)
+      if (!modalShown && onboarded) {
         timer = setTimeout(() => setShow(true), 2500);
-      } else if (ios && !bannerGone) {
+      } else if (ios && !bannerGone && onboarded) {
         setShowBanner(true);
       }
     } catch { /* ignore */ }
@@ -72,17 +74,21 @@ export function PWAInstallPrompt() {
 
   return (
     <>
-      {/* ── Persistent iOS mini-banner (above bottom nav) ── */}
+      {/* ── 미니 배너 (iOS 전용, 모달 닫은 후) ── */}
       {showBanner && isIOS && !show && (
-        <div className="fixed inset-x-0 z-40 flex justify-center px-4 lg:hidden"
-          style={{ bottom: "calc(env(safe-area-inset-bottom) + 72px)" }}>
-          <div className="flex items-center gap-2.5 w-full max-w-[420px] rounded-2xl px-4 py-3 cursor-pointer active:opacity-80"
+        <div
+          className="fixed inset-x-0 z-40 flex justify-center px-4 lg:hidden"
+          style={{ bottom: "calc(env(safe-area-inset-bottom) + 72px)" }}
+        >
+          <div
+            className="flex items-center gap-2.5 w-full max-w-[420px] rounded-2xl px-4 py-3 cursor-pointer active:opacity-80"
             style={{ background: "rgba(0,229,160,0.10)", border: "1px solid rgba(0,229,160,0.35)", backdropFilter: "blur(12px)" }}
-            onClick={() => setShow(true)}>
+            onClick={() => setShow(true)}
+          >
             <span className="text-xl flex-shrink-0">📲</span>
             <div className="flex-1 min-w-0">
-              <p className="text-[12px] font-bold" style={{ color: "var(--mint)" }}>홈 화면에 추가하기</p>
-              <p className="text-[10px]" style={{ color: "var(--muted)" }}>앱처럼 실행 · 탭하면 설치 방법 안내</p>
+              <p className="text-[12px] font-bold" style={{ color: "var(--mint)" }}>앱으로 보기</p>
+              <p className="text-[10px]" style={{ color: "var(--muted)" }}>탭하면 설치 방법 안내해드려요</p>
             </div>
             <button
               className="text-[18px] flex-shrink-0 px-1"
@@ -95,105 +101,151 @@ export function PWAInstallPrompt() {
         </div>
       )}
 
-      {/* ── Main modal ── */}
+      {/* ── 메인 모달 ── */}
       {show && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-          style={{ background: "rgba(0,0,0,0.7)" }}
+          className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-4 sm:p-6"
+          style={{ background: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)" }}
           onClick={closeModal}
         >
           <div
-            className="w-full max-w-[360px] rounded-3xl overflow-hidden"
+            className="w-full max-w-[380px] rounded-3xl overflow-hidden"
             style={{ background: "var(--card)" }}
             onClick={(e) => e.stopPropagation()}
           >
             {isIOS ? (
+              /* ── iPhone 전용: 수동 설치 안내 ── */
               <div className="p-5">
-                {/* Header */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}>
-                    <span className="text-2xl">📲</span>
+                {/* 헤더 */}
+                <div className="flex items-center gap-3 mb-5">
+                  <div
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl"
+                    style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}
+                  >
+                    📲
                   </div>
                   <div>
-                    <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>홈 화면에 추가</p>
-                    <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>앱처럼 전체화면 · 광고 없음</p>
+                    <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
+                      Investus 앱으로 보기
+                    </p>
+                    <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
+                      아이폰은 Safari에서 직접 추가해야 해요
+                    </p>
                   </div>
                 </div>
 
-                {/* Address bar visual — highlight ··· button */}
-                <div className="rounded-2xl p-3 mb-4" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}>
-                  <p className="text-[10px] text-center mb-2 font-semibold" style={{ color: "var(--muted)" }}>
-                    Safari 주소창 옆 ··· 버튼을 탭하세요
+                {/* 안내 박스 */}
+                <div
+                  className="rounded-2xl p-4 mb-4"
+                  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}
+                >
+                  <p className="text-[11px] font-semibold mb-3 text-center" style={{ color: "var(--muted)" }}>
+                    Safari 브라우저에서 아래 순서대로 따라하세요
                   </p>
-                  {/* Fake Safari address bar */}
-                  <div className="flex items-center gap-2 px-2 py-1.5 rounded-xl" style={{ background: "#1c1c1e" }}>
-                    <div className="flex-1 flex items-center gap-1.5 px-2.5 py-1 rounded-lg" style={{ background: "#2c2c2e" }}>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#636366" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                      <span className="text-[10px] flex-1" style={{ color: "#8e8e93" }}>investus.kr</span>
-                    </div>
-                    {/* ··· highlighted */}
-                    <div className="relative flex-shrink-0">
-                      <div className="absolute -inset-1.5 rounded-lg animate-pulse" style={{ background: "rgba(0,229,160,0.3)" }} />
-                      <div className="relative w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "#2c2c2e" }}>
-                        <span className="text-[13px] font-bold tracking-tight" style={{ color: "#00e5a0" }}>···</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center gap-1.5 mt-2">
-                    <div className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--mint)" }} />
-                    <span className="text-[10px] font-semibold" style={{ color: "var(--mint)" }}>초록 표시 ··· 버튼 탭!</span>
-                  </div>
-                </div>
 
-                {/* 4 steps */}
-                <div className="flex flex-col gap-2.5 mb-4">
+                  {/* 3단계 */}
                   {([
-                    ["1", "···", "주소창 옆 ··· 탭"],
-                    ["2", "⬆️", "공유 탭"],
-                    ["3", "⋯", "더보기(···) 탭"],
-                    ["4", "➕", "홈 화면에 추가 탭 → 완료!"],
-                  ] as [string, string, string][]).map(([step, icon, text]) => (
-                    <div key={step} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold"
-                        style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
-                        {step}
+                    {
+                      step: "1",
+                      icon: "⬆️",
+                      title: "공유 버튼 탭",
+                      desc: "화면 하단 가운데 ⬆️ 버튼",
+                    },
+                    {
+                      step: "2",
+                      icon: "＋",
+                      title: "홈 화면에 추가 탭",
+                      desc: "메뉴를 아래로 스크롤하면 보여요",
+                    },
+                    {
+                      step: "3",
+                      icon: "✓",
+                      title: "추가 탭 → 완료!",
+                      desc: "홈 화면에 Investus 앱 아이콘 생성",
+                    },
+                  ]).map((s) => (
+                    <div key={s.step} className="flex items-start gap-3 mb-3 last:mb-0">
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold mt-0.5"
+                        style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}
+                      >
+                        {s.step}
                       </div>
-                      <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-base"
-                        style={{ background: "rgba(255,255,255,0.06)" }}>
-                        {icon}
+                      <div
+                        className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-lg"
+                        style={{ background: "rgba(255,255,255,0.07)" }}
+                      >
+                        {s.icon}
                       </div>
-                      <p className="text-[13px]" style={{ color: "var(--text)" }}>{text}</p>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-[13px] font-semibold" style={{ color: "var(--text)" }}>{s.title}</p>
+                        <p className="text-[11px]" style={{ color: "var(--muted)" }}>{s.desc}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
 
-                <button onClick={closeModal}
+                {/* 설치 후 혜택 */}
+                <div className="flex gap-3 mb-4">
+                  {[["⚡", "빠른 실행"], ["📱", "전체화면"], ["🔔", "알림 지원"]].map(([ic, lb]) => (
+                    <div key={lb} className="flex-1 flex flex-col items-center gap-1 py-2 rounded-xl" style={{ background: "rgba(255,255,255,0.04)" }}>
+                      <span className="text-base">{ic}</span>
+                      <p className="text-[10px] font-semibold text-center" style={{ color: "var(--muted)" }}>{lb}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  onClick={closeModal}
                   className="w-full py-3 rounded-xl text-sm font-bold text-black"
-                  style={{ background: "var(--mint)" }}>
-                  확인
+                  style={{ background: "var(--mint)" }}
+                >
+                  확인했어요
                 </button>
               </div>
             ) : (
+              /* ── Android / 기타: 자동 설치 ── */
               <div className="p-5">
+                {/* 헤더 */}
                 <div className="flex items-center gap-4 mb-5">
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}>
-                    <span className="text-3xl">📲</span>
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 text-3xl"
+                    style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}
+                  >
+                    📲
                   </div>
                   <div>
-                    <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>홈 화면에 추가하시겠습니까?</p>
-                    <p className="text-[12px] mt-0.5" style={{ color: "var(--muted)" }}>앱처럼 빠르게 실행 · 광고 없는 전체화면</p>
+                    <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
+                      Investus 앱으로 보기
+                    </p>
+                    <p className="text-[12px] mt-0.5" style={{ color: "var(--muted)" }}>
+                      버튼 하나로 홈 화면에 앱 설치
+                    </p>
                   </div>
                 </div>
-                <button onClick={handleInstall}
-                  className="w-full py-3.5 rounded-xl text-sm font-bold text-black mb-3"
-                  style={{ background: "var(--mint)" }}>
-                  {prompt ? "홈 화면에 추가" : "확인"}
+
+                {/* 혜택 */}
+                <div className="flex gap-2.5 mb-5">
+                  {[["⚡", "빠른 실행"], ["📱", "전체화면"], ["🔔", "알림 지원"]].map(([ic, lb]) => (
+                    <div key={lb} className="flex-1 flex flex-col items-center gap-1.5 py-3 rounded-xl" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}>
+                      <span className="text-xl">{ic}</span>
+                      <p className="text-[11px] font-semibold text-center" style={{ color: "var(--muted)" }}>{lb}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  onClick={handleInstall}
+                  className="w-full py-3.5 rounded-xl text-sm font-bold text-black mb-3 transition-opacity active:opacity-80"
+                  style={{ background: "var(--mint)" }}
+                >
+                  앱 설치하기
                 </button>
-                <button onClick={closeModal}
+                <button
+                  onClick={closeModal}
                   className="w-full py-2.5 rounded-xl text-sm"
-                  style={{ color: "var(--muted)" }}>
+                  style={{ color: "var(--muted)" }}
+                >
                   나중에
                 </button>
               </div>

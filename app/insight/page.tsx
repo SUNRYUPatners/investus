@@ -102,6 +102,7 @@ export default async function InsightPage() {
           <section className="mb-6">{EduBanner}</section>
           <section className="mb-4"><AdBanner format="auto" /></section>
           <section className="mb-6"><ReportFeed /></section>
+          <section className="mb-4"><AdBanner format="auto" /></section>
           <section className="mb-6">
             <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
               {t.books}

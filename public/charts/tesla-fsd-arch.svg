@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#061420"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+
+  <text x="400" y="30" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="3">Tesla FSD 아키텍처 · 2026.05.19</text>
+  <text x="400" y="56" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">750,000:1 압축 · 인간과 동일 구조</text>
+
+  <!-- Processing pipeline -->
+  <text x="30" y="86" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">FSD 실시간 처리 파이프라인</text>
+
+  <!-- Step 1: Input -->
+  <rect x="20" y="96" width="145" height="80" rx="8" fill="rgba(29,78,216,0.1)" stroke="rgba(59,130,246,0.4)" stroke-width="1.5"/>
+  <text x="92" y="122" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold">📷 카메라 입력</text>
+  <text x="92" y="142" text-anchor="middle" fill="#e2e8f0" font-size="16" font-family="Arial" font-weight="bold">1.5 GB/s</text>
+  <text x="92" y="162" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">240fps · 8개 카메라</text>
+  <text x="92" y="175" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">360도 커버리지</text>
+
+  <text x="178" y="140" text-anchor="middle" fill="#3b82f6" font-size="20" font-family="Arial">→</text>
+
+  <!-- Step 2: Compression -->
+  <rect x="192" y="96" width="145" height="80" rx="8" fill="rgba(29,78,216,0.12)" stroke="rgba(59,130,246,0.5)" stroke-width="1.5"/>
+  <text x="264" y="122" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold">🧠 AI 압축</text>
+  <text x="264" y="142" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Arial" font-weight="bold">750,000:1</text>
+  <text x="264" y="162" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">신경망 특징 추출</text>
+  <text x="264" y="175" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">핵심 정보만 보존</text>
+
+  <text x="350" y="140" text-anchor="middle" fill="#3b82f6" font-size="20" font-family="Arial">→</text>
+
+  <!-- Step 3: Decision -->
+  <rect x="364" y="96" width="145" height="80" rx="8" fill="rgba(29,78,216,0.14)" stroke="rgba(59,130,246,0.6)" stroke-width="1.5"/>
+  <text x="436" y="122" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold">⚡ 주행 결정</text>
+  <text x="436" y="142" text-anchor="middle" fill="#e2e8f0" font-size="16" font-family="Arial" font-weight="bold">15 Hz</text>
+  <text x="436" y="162" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">초당 15회 업데이트</text>
+  <text x="436" y="175" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">극초저지연</text>
+
+  <text x="522" y="140" text-anchor="middle" fill="#3b82f6" font-size="20" font-family="Arial">→</text>
+
+  <!-- Step 4: Output -->
+  <rect x="536" y="96" width="244" height="80" rx="8" fill="rgba(0,181,128,0.1)" stroke="rgba(0,229,160,0.4)" stroke-width="1.5"/>
+  <text x="658" y="118" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">🚗 조향·가속·제동</text>
+  <text x="568" y="140" fill="#94a3b8" font-size="9" font-family="Arial">▸ 피로 없음 · 집중력 저하 없음</text>
+  <text x="568" y="158" fill="#94a3b8" font-size="9" font-family="Arial">▸ 98% 자율주행 정확도</text>
+  <text x="568" y="176" fill="#00e5a0" font-size="9" font-family="Arial" font-weight="bold">텍사스 3개 도시 완전 자율 운영 중</text>
+
+  <!-- Common architecture -->
+  <rect x="20" y="195" width="760" height="55" rx="8" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+  <text x="400" y="217" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">동일 아키텍처로 구동되는 3가지</text>
+  <text x="180" y="240" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Arial">🧑 인간</text>
+  <text x="400" y="240" text-anchor="middle" fill="#60a5fa" font-size="14" font-family="Arial">🚗 Tesla FSD</text>
+  <text x="620" y="240" text-anchor="middle" fill="#00e5a0" font-size="14" font-family="Arial">🤖 Optimus</text>
+
+  <!-- Samsung Summit -->
+  <rect x="20" y="268" width="370" height="130" rx="8" fill="rgba(29,78,216,0.06)" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+  <text x="205" y="290" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">Elon · Samsung Smart Mobility Summit</text>
+  <text x="36" y="312" fill="#94a3b8" font-size="10" font-family="Arial">▸ 텍사스 3도시: 로봇 이미 완전 자율 운영 중</text>
+  <text x="36" y="330" fill="#94a3b8" font-size="10" font-family="Arial">▸ Starlink → 인류보다 로봇 많은 세상 인프라</text>
+  <text x="36" y="348" fill="#94a3b8" font-size="10" font-family="Arial">▸ Neuralink → 커뮤니케이션·이동·감각 회복</text>
+  <text x="36" y="366" fill="#94a3b8" font-size="10" font-family="Arial">▸ 2026년 말 미국 전역 인간 수준 FSD 목표</text>
+  <text x="36" y="386" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 로봇택시·Optimus 상용화 타임라인 앞당김</text>
+
+  <!-- Key comparison -->
+  <rect x="410" y="268" width="370" height="130" rx="8" fill="rgba(0,181,128,0.05)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="595" y="290" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">인간 vs Tesla FSD 비교</text>
+  <!-- Header row -->
+  <text x="490" y="312" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial">항목</text>
+  <text x="610" y="312" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">인간</text>
+  <text x="730" y="312" text-anchor="middle" fill="#60a5fa" font-size="9" font-family="Arial">Tesla FSD</text>
+  <line x1="426" y1="317" x2="772" y2="317" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="490" y="333" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">입력량</text>
+  <text x="610" y="333" text-anchor="middle" fill="#e2e8f0" font-size="9" font-family="Arial">8~40MB/s</text>
+  <text x="730" y="333" text-anchor="middle" fill="#60a5fa" font-size="9" font-family="Arial" font-weight="bold">1,500MB/s</text>
+  <text x="490" y="351" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">피로</text>
+  <text x="610" y="351" text-anchor="middle" fill="#f87171" font-size="9" font-family="Arial">있음</text>
+  <text x="730" y="351" text-anchor="middle" fill="#00e5a0" font-size="9" font-family="Arial" font-weight="bold">없음</text>
+  <text x="490" y="369" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">정확도</text>
+  <text x="610" y="369" text-anchor="middle" fill="#e2e8f0" font-size="9" font-family="Arial">가변적</text>
+  <text x="730" y="369" text-anchor="middle" fill="#00e5a0" font-size="9" font-family="Arial" font-weight="bold">98% (V14.3.3)</text>
+  <text x="490" y="387" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">24/7 운행</text>
+  <text x="610" y="387" text-anchor="middle" fill="#f87171" font-size="9" font-family="Arial">불가</text>
+  <text x="730" y="387" text-anchor="middle" fill="#00e5a0" font-size="9" font-family="Arial" font-weight="bold">가능</text>
+
+  <text x="400" y="418" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.19</text>
+</svg>

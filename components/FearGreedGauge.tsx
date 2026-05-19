@@ -47,7 +47,7 @@ export function FearGreedGauge({ data, locale }: { data: FearGreedData; locale?:
         <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
           {t.fearGreed.sectionTitle}
         </h2>
-        <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.fearGreed.subtitle}</span>
+        <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>{t.fearGreed.subtitle}</span>
       </div>
 
       <div className="flex items-center gap-5 px-4 py-4">

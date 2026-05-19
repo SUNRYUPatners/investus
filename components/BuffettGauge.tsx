@@ -63,8 +63,8 @@ export function BuffettGauge({ data, locale }: { data: BuffettData; locale?: Loc
         <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
           {t.buffett.sectionTitle}
         </h2>
-        <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          {t.buffett.subtitle} · {data.updatedAt}
+        <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
+          {data.updatedAt} · S&P500 추정
         </span>
       </div>
 

@@ -147,10 +147,11 @@ export default function CreatorSetupPage() {
   const [newAlloc, setNewAlloc]   = useState("");
 
   // Step 4 (verification)
-  const fileRef                       = useRef<HTMLInputElement>(null);
-  const [previewUrl, setPreviewUrl]   = useState<string | null>(null);
-  const [submitting, setSubmitting]   = useState(false);
-  const [submitted, setSubmitted]     = useState(false);
+  const fileRef                         = useRef<HTMLInputElement>(null);
+  const [previewUrl, setPreviewUrl]     = useState<string | null>(null);
+  const [submitting, setSubmitting]     = useState(false);
+  const [submitted, setSubmitted]       = useState(false);
+  const [creatorAgreed, setCreatorAgreed] = useState(false);
 
   useEffect(() => {
     // Check if already a creator
@@ -308,7 +309,7 @@ export default function CreatorSetupPage() {
             <p className="text-xs mb-4" style={{ color: "var(--muted)" }}>구독자들에게 보여질 프로필을 설정해 주세요</p>
 
             {/* Fee disclosure notice */}
-            <div className="rounded-2xl border p-4 mb-5"
+            <div className="rounded-2xl border p-4 mb-3"
               style={{ background: "rgba(251,191,36,0.06)", borderColor: "rgba(251,191,36,0.25)" }}>
               <div className="flex items-start gap-2.5">
                 <span className="text-base flex-shrink-0">💡</span>
@@ -323,6 +324,31 @@ export default function CreatorSetupPage() {
                     </li>
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
                       · 계좌 인증 후 승인이 완료되어야 수익화가 시작됩니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 투자자문 금지 고지 */}
+            <div className="rounded-2xl border p-4 mb-5"
+              style={{ background: "rgba(255,77,109,0.05)", borderColor: "rgba(255,77,109,0.2)" }}>
+              <div className="flex items-start gap-2.5">
+                <span className="text-base flex-shrink-0">⚠️</span>
+                <div>
+                  <p className="text-[11px] font-bold mb-1.5" style={{ color: "#ff4d6d" }}>콘텐츠 제작 시 필수 준수 사항</p>
+                  <ul className="flex flex-col gap-1">
+                    <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
+                      · 특정 종목의 <span style={{ color: "var(--text)", fontWeight: 600 }}>매수·매도를 직접 권유하는 콘텐츠</span>는 금지됩니다.
+                    </li>
+                    <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
+                      · 금융위원회 미등록 상태로 <span style={{ color: "var(--text)", fontWeight: 600 }}>투자자문·일임 서비스를 제공하면 위법</span>입니다.
+                    </li>
+                    <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
+                      · 모든 콘텐츠는 <span style={{ color: "var(--text)", fontWeight: 600 }}>정보 제공 목적</span>으로만 작성하고, 투자 결과에 대한 책임을 지지 않음을 명시해야 합니다.
+                    </li>
+                    <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
+                      · 위반 시 콘텐츠 삭제 및 채널 정지 조치가 취해질 수 있습니다.
                     </li>
                   </ul>
                 </div>
@@ -536,10 +562,26 @@ export default function CreatorSetupPage() {
               </button>
             )}
 
+            {/* 투자자문 금지 동의 체크박스 */}
+            <div className="rounded-xl p-3 mb-3" style={{ background: "rgba(255,77,109,0.05)", border: "1px solid rgba(255,77,109,0.2)" }}>
+              <label className="flex items-start gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={creatorAgreed}
+                  onChange={(e) => setCreatorAgreed(e.target.checked)}
+                  className="mt-0.5 flex-shrink-0"
+                />
+                <span className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                  특정 종목 매수·매도를 직접 권유하지 않고, 모든 콘텐츠는 정보 제공 목적으로만 작성하겠습니다. 금융소비자보호법상 미등록 투자자문 행위를 하지 않겠습니다.
+                </span>
+              </label>
+            </div>
+
             {/* Notice */}
             <div className="rounded-xl p-3 mb-5" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.15)" }}>
               <p className="text-[11px] leading-relaxed" style={{ color: "#fbbf24" }}>
-                업로드 후 관리자가 검토합니다. 승인까지 1~2 영업일이 소요될 수 있습니다.
+                업로드 후 관리자가 검토합니다. 승인까지 1~2 영업일이 소요될 수 있습니다.<br />
+                승인 결과는 가입 이메일({user?.email})로 안내됩니다.
               </p>
             </div>
 
@@ -548,9 +590,9 @@ export default function CreatorSetupPage() {
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}>이전</button>
               <button
                 onClick={handleSubmitVerification}
-                disabled={!previewUrl || submitting}
+                disabled={!previewUrl || submitting || !creatorAgreed}
                 className="flex-[2] py-3.5 rounded-2xl text-sm font-bold text-black flex items-center justify-center gap-2 transition-opacity"
-                style={{ background: "var(--mint)", opacity: previewUrl && !submitting ? 1 : 0.4 }}>
+                style={{ background: "var(--mint)", opacity: previewUrl && !submitting && creatorAgreed ? 1 : 0.4 }}>
                 <CheckCircle2 className="w-4 h-4" />
                 {submitting ? "제출 중..." : "인증 신청 완료"}
               </button>

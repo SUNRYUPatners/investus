@@ -58,48 +58,46 @@ type ForexRates = {
 async function getForexRates(): Promise<ForexRates> {
   const out: ForexRates = { krw: null, krwPrev: null, eurusd: null, eurusdChange: 0, usdjpy: null, usdjpyChange: 0 };
 
-  // KRW=X via YF 프록시 — Apple과 동일 소스, 변화율까지 정확
-  const [krwYF, fxLatest, fxPrev] = await Promise.allSettled([
+  // YF로 KRW, EURUSD, JPY 한번에 가져옴 — 변화율 정확 (Frankfurter 0% 버그 제거)
+  const [krwYF, eurYF, jpyYF, fxLatest] = await Promise.allSettled([
     fetchQuoteV8("KRW=X"),
+    fetchQuoteV8("EURUSD=X"),
+    fetchQuoteV8("JPY=X"),
     fetch("https://api.frankfurter.app/latest?from=USD&to=EUR,JPY"),
-    (() => {
-      const prevDate = new Date();
-      prevDate.setDate(prevDate.getDate() - 1);
-      if (prevDate.getDay() === 0) prevDate.setDate(prevDate.getDate() - 2);
-      if (prevDate.getDay() === 6) prevDate.setDate(prevDate.getDate() - 1);
-      return fetch(`https://api.frankfurter.app/${prevDate.toISOString().split("T")[0]}?from=USD&to=EUR,JPY`);
-    })(),
   ]);
 
-  // KRW: YF primary (KRW=X), open.er-api fallback
+  // KRW
   if (krwYF.status === "fulfilled" && krwYF.value && krwYF.value.price > 0) {
     out.krw     = krwYF.value.price;
-    out.krwPrev = krwYF.value.price - krwYF.value.change; // change = price - prev
+    out.krwPrev = krwYF.value.price - krwYF.value.change;
   } else {
-    // fallback: open.er-api (변화율 정보 없음)
     try {
       const r = await fetch("https://open.er-api.com/v6/latest/USD");
       if (r.ok) { const d = await r.json(); out.krw = d?.rates?.KRW ?? null; }
     } catch { /* ignore */ }
   }
 
-  // EUR/USD, USD/JPY via frankfurter
-  try {
-    const now  = fxLatest.status  === "fulfilled" && fxLatest.value.ok  ? await fxLatest.value.json()  : null;
-    const prev = fxPrev.status    === "fulfilled" && fxPrev.value.ok    ? await fxPrev.value.json()    : null;
-    if (now?.rates?.EUR) {
-      const curEURUSD  = 1 / (now.rates.EUR  as number);
-      const prevEURUSD = prev?.rates?.EUR ? 1 / (prev.rates.EUR as number) : curEURUSD;
-      out.eurusd       = curEURUSD;
-      out.eurusdChange = prevEURUSD !== 0 ? ((curEURUSD - prevEURUSD) / prevEURUSD) * 100 : 0;
-    }
-    if (now?.rates?.JPY) {
-      const curJpy  = now.rates.JPY  as number;
-      const prevJpy = (prev?.rates?.JPY as number | undefined) ?? curJpy;
-      out.usdjpy       = curJpy;
-      out.usdjpyChange = prevJpy !== 0 ? ((curJpy - prevJpy) / prevJpy) * 100 : 0;
-    }
-  } catch { /* ignore */ }
+  // EUR/USD — YF primary (실시간 변화율 포함), Frankfurter price fallback
+  if (eurYF.status === "fulfilled" && eurYF.value && eurYF.value.price > 0) {
+    out.eurusd       = eurYF.value.price;
+    out.eurusdChange = eurYF.value.changePercent;
+  } else if (fxLatest.status === "fulfilled" && fxLatest.value.ok) {
+    try {
+      const now = await fxLatest.value.json();
+      if (now?.rates?.EUR) out.eurusd = 1 / (now.rates.EUR as number);
+    } catch { /* ignore */ }
+  }
+
+  // USD/JPY — YF primary, Frankfurter fallback
+  if (jpyYF.status === "fulfilled" && jpyYF.value && jpyYF.value.price > 0) {
+    out.usdjpy       = jpyYF.value.price;
+    out.usdjpyChange = jpyYF.value.changePercent;
+  } else if (fxLatest.status === "fulfilled" && fxLatest.value.ok) {
+    try {
+      const now = await (fxLatest.value.clone()).json();
+      if (now?.rates?.JPY) out.usdjpy = now.rates.JPY as number;
+    } catch { /* ignore */ }
+  }
 
   return out;
 }
@@ -185,27 +183,26 @@ export async function GET(req: Request) {
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=3600, stale-while-revalidate=86400";
 
-  // 장 마감 중: 인메모리 캐시 → KV → API 순서로 시도
-  if (!open && !refresh && _cache) {
-    return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
-  }
-  if (!open && !refresh) {
+  // ── cold start: 인메모리 없으면 즉시 KV에서 복원 ────────────────────────────
+  if (!_cache && !refresh) {
     const kvData = await kvGetDetail(KV_MARKET_KEY);
     if (kvData) {
       const payload = kvData as unknown as CachePayload;
-      // 누락 심볼 있으면 early return 하지 않고 fresh fetch로 진행
-      const allSym  = mockQuotes.map((q) => q.symbol);
-      const kvSyms  = new Set((payload.quotes ?? []).map((q) => q.symbol));
-      const allPresent = allSym.every((s) => kvSyms.has(s));
-      if (allPresent) {
-        _cache = { data: payload, at: Date.now() };
-        return NextResponse.json(payload, { headers: { "Cache-Control": ccHeader } });
-      }
+      // 장 마감: fresh로 복원. 장 중: liveAt=0으로 복원해 아래서 API 갱신 유도
+      _cache = { data: payload, at: open ? 0 : Date.now() };
     }
   }
-  // 장 중: 55초 TTL 캐시
-  if (!refresh && _cache && Date.now() - _cache.at < LIVE_TTL) {
+
+  // 장 마감: 인메모리 캐시 있으면 바로 서빙 (API 호출 없음)
+  if (!open && !refresh && _cache) {
     return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
+  }
+  // 장 중: liveAt(실제 데이터 신선도) 기준 55초 TTL
+  if (!refresh && _cache) {
+    const dataAge = Date.now() - (_cache.data.liveAt ?? 0);
+    if (dataAge < LIVE_TTL) {
+      return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
+    }
   }
 
   const token = process.env.FINNHUB_API_KEY ?? "";
@@ -436,11 +433,17 @@ export async function GET(req: Request) {
     return null; // 실데이터 없는 항목 제외 — mock 절대 표시 금지
   }).filter((f): f is FutureItem => f !== null);
 
-  // 실데이터가 하나도 없으면 503 — 클라이언트가 이전 캐시 유지
+  // 실데이터가 하나도 없으면 스테일 캐시 무조건 서빙 (오류 반환 절대 금지)
   if (quotes.length === 0 && indices.length === 0) {
-    return NextResponse.json({ error: "no live data" }, {
+    if (_cache) {
+      // 스테일이라도 기존 캐시 서빙 — 15초 후 재시도 유도
+      _cache = { data: _cache.data, at: Date.now() - (LIVE_TTL - 15_000) };
+      return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
+    }
+    // 캐시도 전혀 없는 최초 cold start + 모든 API 실패 — 503으로 재시도 유도
+    return NextResponse.json({ error: "일시적 오류" }, {
       status: 503,
-      headers: { "Cache-Control": "no-store" },
+      headers: { "Retry-After": "3", "Cache-Control": "no-store" },
     });
   }
 

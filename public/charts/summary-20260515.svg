@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" width="800" height="580">
+  <defs>
+    <linearGradient id="bg15" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0c1525"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c2410c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="580" fill="url(#bg15)"/>
+
+  <!-- Header band -->
+  <rect width="800" height="62" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.18)" stroke-width="0"/>
+  <rect x="0" y="61" width="800" height="1" fill="rgba(0,229,160,0.2)"/>
+
+  <!-- Header text -->
+  <text x="400" y="24" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">SUNRYU PARTNERS · 2026.05.15 오늘의 한장 요약</text>
+  <text x="400" y="48" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Arial" font-weight="bold">6가지 핵심 뉴스 · 한눈에 보기</text>
+
+  <!-- ─────────── ROW 1 ─────────── -->
+
+  <!-- Card 1: 트럼프-시진핑 -->
+  <rect x="20" y="80" width="370" height="145" rx="10" fill="rgba(29,78,216,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <rect x="20" y="80" width="4" height="145" rx="2" fill="url(#gb)"/>
+  <circle cx="56" cy="112" r="18" fill="rgba(29,78,216,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="56" y="118" text-anchor="middle" fill="#60a5fa" font-size="16" font-family="Arial">🤝</text>
+  <text x="84" y="105" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">미중 무역 협상</text>
+  <text x="84" y="122" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">트럼프-시진핑 "Very Good Feeling"</text>
+  <rect x="36" y="140" width="340" height="28" rx="6" fill="rgba(29,78,216,0.12)"/>
+  <text x="56" y="158" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">딜 규모</text>
+  <text x="112" y="158" fill="#e2e8f0" font-size="11" font-family="Arial">중국 $1조 대미 투자 · CEO 60명 동행</text>
+  <text x="36" y="183" fill="#94a3b8" font-size="10" font-family="Arial">▸ 관세 145% 인하 협상 · 2026.08E 최종 합의 목표</text>
+  <text x="36" y="200" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ TSLA·NVDA·AAPL 중국 매출 동시 회복 촉매</text>
+
+  <!-- Card 2: NVIDIA 중국칩 -->
+  <rect x="410" y="80" width="370" height="145" rx="10" fill="rgba(29,78,216,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <rect x="410" y="80" width="4" height="145" rx="2" fill="url(#gb)"/>
+  <circle cx="446" cy="112" r="18" fill="rgba(29,78,216,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="446" y="118" text-anchor="middle" fill="#60a5fa" font-size="16" font-family="Arial">🟢</text>
+  <text x="474" y="105" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">NVIDIA</text>
+  <text x="474" y="122" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">중국 AI칩 판매 허가 · $50B 시장</text>
+  <rect x="426" y="140" width="340" height="28" rx="6" fill="rgba(29,78,216,0.12)"/>
+  <text x="446" y="158" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">허가 기업</text>
+  <text x="514" y="158" fill="#e2e8f0" font-size="11" font-family="Arial">18개社 · $12B → $50B (4.2배 확대)</text>
+  <text x="426" y="183" fill="#94a3b8" font-size="10" font-family="Arial">▸ 트럼프 알래스카 귀환 중 젠슨황 직통 전화</text>
+  <text x="426" y="200" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ NVDA 분기 추가 매출 $5~8B · HBM 수혜</text>
+
+  <!-- ─────────── ROW 2 ─────────── -->
+
+  <!-- Card 3: 트럼프 NVDA 공시 -->
+  <rect x="20" y="242" width="370" height="145" rx="10" fill="rgba(194,65,12,0.08)" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <rect x="20" y="242" width="4" height="145" rx="2" fill="url(#go)"/>
+  <circle cx="56" cy="274" r="18" fill="rgba(194,65,12,0.2)" stroke="rgba(251,146,60,0.4)" stroke-width="1"/>
+  <text x="56" y="280" text-anchor="middle" fill="#fb923c" font-size="16" font-family="Arial">🏛️</text>
+  <text x="84" y="267" fill="#fb923c" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">트럼프 자산 공시</text>
+  <text x="84" y="284" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">NVDA·NOW 각 $1M+ 개인 매수</text>
+  <rect x="36" y="302" width="340" height="28" rx="6" fill="rgba(194,65,12,0.12)"/>
+  <text x="56" y="320" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">공시 규모</text>
+  <text x="124" y="320" fill="#e2e8f0" font-size="11" font-family="Arial">113페이지 · 3,642건 거래 내역</text>
+  <text x="36" y="345" fill="#94a3b8" font-size="10" font-family="Arial">▸ 중국칩 허가 발표 직전 타이밍 → 정책 선행 시그널</text>
+  <text x="36" y="362" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ AI칩·엔터프라이즈 소프트 정책 지원 지속 확인</text>
+
+  <!-- Card 4: 혼다 EV 철회 -->
+  <rect x="410" y="242" width="370" height="145" rx="10" fill="rgba(194,65,12,0.08)" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <rect x="410" y="242" width="4" height="145" rx="2" fill="url(#go)"/>
+  <circle cx="446" cy="274" r="18" fill="rgba(194,65,12,0.2)" stroke="rgba(251,146,60,0.4)" stroke-width="1"/>
+  <text x="446" y="280" text-anchor="middle" fill="#fb923c" font-size="16" font-family="Arial">🚗</text>
+  <text x="474" y="267" fill="#fb923c" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">혼다 EV 전략 철회</text>
+  <text x="474" y="284" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">2040 완전 EV 목표 공식 포기</text>
+  <rect x="426" y="302" width="340" height="28" rx="6" fill="rgba(194,65,12,0.12)"/>
+  <text x="446" y="320" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">CEO 발언</text>
+  <text x="510" y="320" fill="#e2e8f0" font-size="11" font-family="Arial">"달성 어렵다고 판단" 공식 선언</text>
+  <text x="426" y="345" fill="#94a3b8" font-size="10" font-family="Arial">▸ EV 수요 미달·충전 인프라 부족·하이브리드 급증</text>
+  <text x="426" y="362" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 테슬라 독주 구조 강화 · FSD 격차 3~5년 유지</text>
+
+  <!-- ─────────── ROW 3 ─────────── -->
+
+  <!-- Card 5: Tesla Semi CA -->
+  <rect x="20" y="404" width="370" height="145" rx="10" fill="rgba(0,181,128,0.07)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <rect x="20" y="404" width="4" height="145" rx="2" fill="url(#gm)"/>
+  <circle cx="56" cy="436" r="18" fill="rgba(0,181,128,0.15)" stroke="rgba(0,229,160,0.4)" stroke-width="1"/>
+  <text x="56" y="442" text-anchor="middle" fill="#00e5a0" font-size="16" font-family="Arial">🚛</text>
+  <text x="84" y="429" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">Tesla Semi</text>
+  <text x="84" y="446" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">캘리포니아 $1B 보조금 · 200대+</text>
+  <rect x="36" y="464" width="340" height="28" rx="6" fill="rgba(0,181,128,0.1)"/>
+  <text x="56" y="482" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">운영비</text>
+  <text x="110" y="482" fill="#e2e8f0" font-size="11" font-family="Arial">디젤 대비 77% 절감 · 대당 $100K 절약</text>
+  <text x="36" y="507" fill="#94a3b8" font-size="10" font-family="Arial">▸ B2B 물류 시장 직접 공략 · 정부 조달 교두보</text>
+  <text x="36" y="524" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 물류 자율화 새 성장축 · 2035년 CA 디젤 금지</text>
+
+  <!-- Card 6: xAI Grok Build -->
+  <rect x="410" y="404" width="370" height="145" rx="10" fill="rgba(124,58,237,0.08)" stroke="rgba(167,139,250,0.25)" stroke-width="1"/>
+  <rect x="410" y="404" width="4" height="145" rx="2" fill="url(#gp)"/>
+  <circle cx="446" cy="436" r="18" fill="rgba(124,58,237,0.2)" stroke="rgba(167,139,250,0.4)" stroke-width="1"/>
+  <text x="446" y="442" text-anchor="middle" fill="#a78bfa" font-size="16" font-family="Arial">🤖</text>
+  <text x="474" y="429" fill="#a78bfa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="1">xAI Grok Build</text>
+  <text x="474" y="446" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">Heavy $300/월 독점 · AI 코딩 에이전트</text>
+  <rect x="426" y="464" width="340" height="28" rx="6" fill="rgba(124,58,237,0.12)"/>
+  <text x="446" y="482" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold">경쟁사</text>
+  <text x="502" y="482" fill="#e2e8f0" font-size="11" font-family="Arial">Claude·Cursor·Windsurf 정면 도전</text>
+  <text x="426" y="507" fill="#94a3b8" font-size="10" font-family="Arial">▸ 병렬 서브에이전트·MCP·헤드리스 모드 탑재</text>
+  <text x="426" y="524" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 기업용 AI 코딩 시장 $50B+ · NVDA GPU 수요 추가</text>
+
+  <!-- Footer -->
+  <rect x="0" y="557" width="800" height="23" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="572" text-anchor="middle" fill="#334155" font-size="9" font-family="Arial">SUNRYU Partners CIO · 2026.05.15 · investus.kr</text>
+</svg>

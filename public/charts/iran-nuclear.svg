@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#1a0808"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+
+  <text x="400" y="30" text-anchor="middle" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="3">미국-이란 핵협상 · 2026.05.19</text>
+  <text x="400" y="56" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">카타르·UAE 중재 · 핵무기 포기 조건 협상</text>
+
+  <!-- Negotiation flow -->
+  <!-- Qatar -->
+  <rect x="20" y="80" width="140" height="80" rx="8" fill="rgba(153,27,27,0.1)" stroke="rgba(248,113,113,0.3)" stroke-width="1"/>
+  <text x="90" y="108" text-anchor="middle" font-size="22" font-family="Arial">🇶🇦</text>
+  <text x="90" y="128" text-anchor="middle" fill="#e2e8f0" font-size="11" font-family="Arial" font-weight="bold">카타르</text>
+  <text x="90" y="144" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">Tamim bin Hamad</text>
+  <text x="90" y="157" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">Al Thani</text>
+
+  <!-- UAE -->
+  <rect x="170" y="80" width="140" height="80" rx="8" fill="rgba(153,27,27,0.1)" stroke="rgba(248,113,113,0.3)" stroke-width="1"/>
+  <text x="240" y="108" text-anchor="middle" font-size="22" font-family="Arial">🇦🇪</text>
+  <text x="240" y="128" text-anchor="middle" fill="#e2e8f0" font-size="11" font-family="Arial" font-weight="bold">UAE</text>
+  <text x="240" y="144" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">Salman Al Saudi</text>
+
+  <!-- Arrow down -->
+  <text x="90" y="178" text-anchor="middle" fill="#475569" font-size="18" font-family="Arial">↓</text>
+  <text x="240" y="178" text-anchor="middle" fill="#475569" font-size="18" font-family="Arial">↓</text>
+
+  <!-- Trump -->
+  <rect x="20" y="188" width="290" height="80" rx="8" fill="rgba(153,27,27,0.15)" stroke="rgba(248,113,113,0.5)" stroke-width="1.5"/>
+  <text x="165" y="216" text-anchor="middle" font-size="22" font-family="Arial">🇺🇸</text>
+  <text x="165" y="236" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">트럼프 (미국)</text>
+  <text x="165" y="254" text-anchor="middle" fill="#f87171" font-size="10" font-family="Arial">General Daniel Caine 합참의장</text>
+  <text x="165" y="269" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">대규모 공격 자제 제안</text>
+
+  <!-- Arrow right -->
+  <text x="327" y="232" text-anchor="middle" fill="#475569" font-size="22" font-family="Arial">⟺</text>
+
+  <!-- Iran -->
+  <rect x="350" y="188" width="290" height="80" rx="8" fill="rgba(153,27,27,0.12)" stroke="rgba(248,113,113,0.4)" stroke-width="1.5"/>
+  <text x="495" y="216" text-anchor="middle" font-size="22" font-family="Arial">🇮🇷</text>
+  <text x="495" y="236" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">이란 (Pezeshkian)</text>
+  <text x="495" y="254" text-anchor="middle" fill="#f87171" font-size="10" font-family="Arial">핵무기 개발 포기 조건</text>
+  <text x="495" y="269" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">"Acceptable Deal" 검토 중</text>
+
+  <!-- Deal terms -->
+  <rect x="20" y="285" width="290" height="115" rx="8" fill="rgba(0,181,128,0.06)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="165" y="305" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">미국이 제공</text>
+  <text x="36" y="325" fill="#94a3b8" font-size="10" font-family="Arial">✓ 대규모 군사 공격 자제</text>
+  <text x="36" y="343" fill="#94a3b8" font-size="10" font-family="Arial">✓ 경제 제재 완화 로드맵</text>
+  <text x="36" y="361" fill="#94a3b8" font-size="10" font-family="Arial">✓ 외교 정상화 논의</text>
+  <text x="36" y="379" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 트럼프 임기 최대 외교 성과 가능</text>
+
+  <rect x="350" y="285" width="290" height="115" rx="8" fill="rgba(153,27,27,0.06)" stroke="rgba(248,113,113,0.2)" stroke-width="1"/>
+  <text x="495" y="305" text-anchor="middle" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">이란이 제공</text>
+  <text x="366" y="325" fill="#94a3b8" font-size="10" font-family="Arial">✓ 핵무기 개발 완전 포기</text>
+  <text x="366" y="343" fill="#94a3b8" font-size="10" font-family="Arial">✓ IAEA 사찰 수용</text>
+  <text x="366" y="361" fill="#94a3b8" font-size="10" font-family="Arial">✓ 중동 안정화 기여</text>
+  <text x="366" y="379" fill="#f87171" font-size="10" font-family="Arial" font-weight="bold">→ 강경파 반발 리스크 잔존</text>
+
+  <!-- Market impact -->
+  <rect x="660" y="80" width="120" height="320" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="720" y="102" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial" font-weight="bold">합의 시 효과</text>
+  <line x1="668" y1="108" x2="772" y2="108" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="720" y="130" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial">원유↓</text>
+  <text x="720" y="148" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">공급 정상화</text>
+  <line x1="668" y1="158" x2="772" y2="158" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="720" y="178" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial">증시↑</text>
+  <text x="720" y="196" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">지정학 축소</text>
+  <line x1="668" y1="208" x2="772" y2="208" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="720" y="228" text-anchor="middle" fill="#f87171" font-size="11" font-family="Arial">방산↓</text>
+  <text x="720" y="246" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">긴장 완화</text>
+  <line x1="668" y1="256" x2="772" y2="256" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="720" y="276" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial">달러↓</text>
+  <text x="720" y="294" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">리스크 완화</text>
+  <line x1="668" y1="305" x2="772" y2="305" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="720" y="325" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">호르무즈</text>
+  <text x="720" y="340" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">봉쇄 해소</text>
+  <text x="720" y="358" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">에너지 안정</text>
+
+  <text x="400" y="418" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.19</text>
+</svg>

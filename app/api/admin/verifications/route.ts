@@ -9,11 +9,26 @@ function getAdminToken(req: NextRequest): string | null {
   return null;
 }
 
+// Simple in-memory rate limit for failed admin auth attempts (10/min per IP)
+const _authFails = new Map<string, { count: number; resetAt: number }>();
+function checkAdminRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const rec = _authFails.get(ip);
+  if (!rec || now > rec.resetAt) {
+    _authFails.set(ip, { count: 1, resetAt: now + 60_000 });
+    return true;
+  }
+  if (rec.count >= 10) return false;
+  rec.count++;
+  return true;
+}
+
 // GET /api/admin/verifications  (Authorization: Bearer <token>) → list all (admin)
 // GET /api/admin/verifications?phone=...                        → check one user's status
 export async function GET(req: NextRequest) {
   const token = getAdminToken(req);
   const phone = req.nextUrl.searchParams.get("phone");
+  const ip    = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
 
   // Admin: list all verifications
   if (ADMIN_TOKEN && token === ADMIN_TOKEN) {
@@ -35,6 +50,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ status: data?.status ?? null });
   }
 
+  // Wrong/missing token — rate limit brute-force attempts
+  if (!checkAdminRateLimit(ip)) {
+    return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+  }
   return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 }
 
@@ -66,7 +85,7 @@ export async function POST(req: NextRequest) {
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
         _subject: `[Investus] 크리에이터 인증 신청 — ${nickname}`,
-        message: `새 크리에이터 인증 신청\n\n닉네임: ${nickname}\n전화번호: ${phone}\n자기소개: ${bio}\n\n승인 페이지: https://investus.vercel.app/admin/creators`,
+        message: `새 크리에이터 인증 신청\n\n닉네임: ${nickname}\n이메일: ${phone}\n자기소개: ${bio}\n\n승인 페이지: https://investus.kr/admin/creators`,
       }),
     });
   } catch {}
@@ -95,5 +114,26 @@ export async function PATCH(req: NextRequest) {
     .eq("phone", phone);
 
   if (error) return NextResponse.json({ error: "업데이트 실패" }, { status: 500 });
+
+  // 신청자에게 결과 이메일 알림 (phone 필드에 이메일 저장됨)
+  if (phone.includes("@")) {
+    try {
+      const isApproved = action === "approve";
+      await fetch("https://formspree.io/f/xgodqoey", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _replyto: phone,
+          _subject: isApproved
+            ? "[Investus] 크리에이터 인증이 승인되었습니다 🎉"
+            : "[Investus] 크리에이터 인증 심사 결과 안내",
+          message: isApproved
+            ? `안녕하세요!\n\nInvestus 크리에이터 인증이 승인되었습니다.\n이제 투자 리포트와 콘텐츠를 작성하고 구독자를 모집할 수 있습니다.\n\nInvestus 앱에서 크리에이터 대시보드를 확인해 주세요.\nhttps://investus.kr`
+            : `안녕하세요.\n\nInvestus 크리에이터 인증 심사 결과, 이번에는 승인이 어렵습니다.\n계좌 인증 캡쳐가 불명확하거나 요건을 충족하지 못한 경우 재신청이 가능합니다.\n\n문의: sunryupatners@gmail.com`,
+        }),
+      });
+    } catch { /* 알림 실패는 무시 */ }
+  }
+
   return NextResponse.json({ status });
 }

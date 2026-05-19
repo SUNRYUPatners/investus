@@ -1,18 +1,46 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Redis } from "@upstash/redis";
 
 export const runtime = "nodejs";
 
-// Server-side rate limit: max 30 calls per IP per day (resets on cold start)
-const ipLog = new Map<string, { count: number; resetAt: number }>();
+// Upstash Redis로 IP당 하루 30회 영속 rate limit
+let _redis: Redis | null = null;
+function getRedis(): Redis | null {
+  if (_redis) return _redis;
+  const url   = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) return null;
+  _redis = new Redis({ url, token });
+  return _redis;
+}
 
-function checkRateLimit(ip: string): boolean {
+// Redis 없을 때 in-memory 폴백 (로컬 개발용)
+const ipLog = new Map<string, { count: number; resetAt: number }>();
+const DAILY_LIMIT = 30;
+
+async function checkRateLimit(ip: string): Promise<boolean> {
+  const redis = getRedis();
+  if (redis) {
+    const key = `ai_rl:${ip}`;
+    const count = await redis.incr(key).catch(() => null);
+    if (count === null) return true; // Redis 오류 시 허용
+    if (count === 1) {
+      // 자정까지 TTL 계산 (KST)
+      const now = new Date();
+      const kst = new Date(now.getTime() + 9 * 3600_000);
+      const secondsUntilMidnight = (24 - kst.getHours()) * 3600 - kst.getMinutes() * 60 - kst.getSeconds();
+      await redis.expire(key, secondsUntilMidnight).catch(() => {});
+    }
+    return count <= DAILY_LIMIT;
+  }
+  // in-memory fallback
   const now = Date.now();
   const rec = ipLog.get(ip);
   if (!rec || now > rec.resetAt) {
     ipLog.set(ip, { count: 1, resetAt: now + 86_400_000 });
     return true;
   }
-  if (rec.count >= 30) return false;
+  if (rec.count >= DAILY_LIMIT) return false;
   rec.count++;
   return true;
 }
@@ -35,7 +63,12 @@ const STOCK_CONTEXT: Record<string, string> = {
   CEG:   "Constellation Energy — 원자력 에너지, AI 데이터센터 전력 공급",
 };
 
-const ALLOWED_ORIGINS = ["https://investus.kr", "https://investus-chi.vercel.app", "http://localhost:3000"];
+const ALLOWED_ORIGINS = [
+  "https://investus.kr",
+  "https://www.investus.kr",
+  "https://investus-chi.vercel.app",
+  "http://localhost:3000",
+];
 
 export async function POST(req: NextRequest) {
   // Block requests from outside our domain (default-deny)
@@ -46,10 +79,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ answer: "잘못된 요청입니다." }, { status: 403 });
   }
 
-  // Server-side IP rate limit
+  // Server-side IP rate limit (Redis 영속)
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
-  if (!checkRateLimit(ip)) {
-    return NextResponse.json({ answer: "일일 요청 한도를 초과했습니다. 내일 다시 시도해주세요." }, { status: 429 });
+  const allowed = await checkRateLimit(ip);
+  if (!allowed) {
+    return NextResponse.json({ answer: "일일 요청 한도를 초과했습니다. 내일 자정에 초기화됩니다." }, { status: 429 });
   }
 
   let body: { question?: string; symbol?: string } = {};

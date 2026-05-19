@@ -110,20 +110,24 @@ export function StockChart({
     return () => obs.disconnect();
   }, []);
 
-  const doFetch = (sym: string, per: Period, isRetry = false) => {
+  const doFetch = (sym: string, per: Period, retryDelay = 0) => {
     // Load cache immediately (shows stale data while refreshing)
     const cached = readCache(sym, per);
     if (cached) {
       setData(cached);
       setLoading(false);
       setFetchFailed(false);
-    } else if (!isRetry) {
+    } else if (retryDelay === 0) {
       setLoading(true);
       setFetchFailed(false);
     }
 
     fetch(`/api/stock-chart?symbol=${encodeURIComponent(sym)}&period=${per}`)
-      .then((r) => { if (!r.ok) throw new Error(`${r.status}`); return r.json(); })
+      .then((r) => {
+        if (r.status === 503) throw Object.assign(new Error("retry"), { retry: true });
+        if (!r.ok) throw new Error(`${r.status}`);
+        return r.json();
+      })
       .then((d: ChartData) => {
         if (!d.points?.length) throw new Error("empty");
         setData(d);
@@ -145,10 +149,13 @@ export function StockChart({
           }
         }
       })
-      .catch(() => {
+      .catch((err: Error & { retry?: boolean }) => {
         setLoading(false);
-        // If we already have (cached) data on screen, keep it — no error shown
-        if (!cached) setFetchFailed(true);
+        if (cached) return; // 캐시 데이터 있으면 그대로 유지
+        // 자동 재시도 — 절대 에러 상태 표시 금지 (503 또는 네트워크 오류 모두)
+        const next = Math.min((retryDelay || 2000) * 2, 12_000);
+        void err; // suppress unused warning
+        setTimeout(() => doFetch(sym, per, next), retryDelay || 2000);
       });
   };
 
@@ -156,7 +163,7 @@ export function StockChart({
     setHover(null);
     setData(null);
     setFetchFailed(false);
-    doFetch(symbol, period);
+    doFetch(symbol, period, 0);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [symbol, period]);
 
@@ -306,7 +313,7 @@ export function StockChart({
             <button
               className="text-[11px] px-3 py-1.5 rounded-lg font-semibold"
               style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
-              onClick={() => { setFetchFailed(false); setLoading(true); doFetch(symbol, period, true); }}
+              onClick={() => { setFetchFailed(false); setLoading(true); doFetch(symbol, period, 0); }}
             >
               {t.chart.retry}
             </button>

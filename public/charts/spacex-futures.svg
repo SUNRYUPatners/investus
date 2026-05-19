@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#100a28"/></linearGradient>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+
+  <text x="400" y="30" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="3">SpaceX 선물 · Michael Burry · 2026.05.19</text>
+  <text x="400" y="56" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">HyperLiquid $208 · TSMC $2.04B 베팅</text>
+
+  <!-- SpaceX Price Section -->
+  <rect x="20" y="76" width="370" height="185" rx="8" fill="rgba(124,58,237,0.07)" stroke="rgba(167,139,250,0.3)" stroke-width="1"/>
+  <text x="205" y="100" text-anchor="middle" fill="#a78bfa" font-size="12" font-family="Arial" font-weight="bold">SpaceX HyperLiquid 선물 가격</text>
+
+  <!-- Price display -->
+  <text x="205" y="148" text-anchor="middle" fill="#e2e8f0" font-size="42" font-family="Arial" font-weight="bold">$208</text>
+  <text x="205" y="170" text-anchor="middle" fill="#00e5a0" font-size="12" font-family="Arial">SPXC-USDC · 영구선물</text>
+
+  <!-- IPO price vs futures -->
+  <rect x="36" y="185" width="152" height="56" rx="6" fill="rgba(255,255,255,0.04)"/>
+  <text x="112" y="205" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">IPO 공모가 (추정)</text>
+  <text x="112" y="230" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">$47</text>
+
+  <text x="222" y="218" text-anchor="middle" fill="#a78bfa" font-size="22" font-family="Arial">×4.4</text>
+
+  <rect x="230" y="185" width="144" height="56" rx="6" fill="rgba(124,58,237,0.1)" stroke="rgba(167,139,250,0.3)" stroke-width="1"/>
+  <text x="302" y="205" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="Arial">선물 프리미엄</text>
+  <text x="302" y="230" text-anchor="middle" fill="#a78bfa" font-size="20" font-family="Arial" font-weight="bold">$208</text>
+
+  <text x="205" y="256" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 역대 최대 IPO · 상장 당일 급등 시사</text>
+
+  <!-- Burry Portfolio -->
+  <rect x="410" y="76" width="370" height="185" rx="8" fill="rgba(0,181,128,0.06)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <text x="595" y="100" text-anchor="middle" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">Michael Burry 13F 포트폴리오</text>
+
+  <!-- TSMC bar -->
+  <text x="430" y="128" fill="#94a3b8" font-size="10" font-family="Arial">TSMC (TSM)</text>
+  <rect x="430" y="134" width="320" height="22" rx="4" fill="rgba(255,255,255,0.04)"/>
+  <rect x="430" y="134" width="275" height="22" rx="4" fill="rgba(0,229,160,0.35)" stroke="#00e5a0" stroke-width="1"/>
+  <text x="714" y="150" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">$2.04B</text>
+
+  <!-- Broadcom bar -->
+  <text x="430" y="175" fill="#94a3b8" font-size="10" font-family="Arial">Broadcom (AVGO)</text>
+  <rect x="430" y="181" width="320" height="22" rx="4" fill="rgba(255,255,255,0.04)"/>
+  <rect x="430" y="181" width="200" height="22" rx="4" fill="rgba(124,58,237,0.35)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="638" y="197" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold">$40B+</text>
+
+  <rect x="425" y="218" width="345" height="36" rx="6" fill="rgba(0,181,128,0.08)"/>
+  <text x="597" y="232" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">Burry의 역발상:</text>
+  <text x="597" y="248" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">"NVIDIA 살 때 제조사를 산다" → TSMC·AVGO</text>
+
+  <!-- Bottom section: why TSMC & AVGO -->
+  <rect x="20" y="278" width="370" height="125" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(167,139,250,0.2)" stroke-width="1"/>
+  <text x="205" y="300" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold">Burry가 TSMC를 고른 이유</text>
+  <text x="36" y="320" fill="#94a3b8" font-size="10" font-family="Arial">▸ AI 칩 수요 폭증 → 2나노·3나노 생산 풀캡</text>
+  <text x="36" y="338" fill="#94a3b8" font-size="10" font-family="Arial">▸ NVIDIA Blackwell B200 전량 TSMC 위탁</text>
+  <text x="36" y="356" fill="#94a3b8" font-size="10" font-family="Arial">▸ 애리조나 팹 완공 → 미국 내 생산 리스크 분산</text>
+  <text x="36" y="374" fill="#94a3b8" font-size="10" font-family="Arial">▸ SpaceX·Tesla 자체칩 위탁 수혜 예상</text>
+  <text x="36" y="392" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ AI 파운드리 독점 지위 · 수요 한계 없음</text>
+
+  <rect x="410" y="278" width="370" height="125" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="595" y="300" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">Broadcom의 위상</text>
+  <text x="426" y="320" fill="#94a3b8" font-size="10" font-family="Arial">▸ Google TPU·Meta AI칩 맞춤 설계 파트너</text>
+  <text x="426" y="338" fill="#94a3b8" font-size="10" font-family="Arial">▸ Tomahawk 스위치칩 AI 데이터센터 표준</text>
+  <text x="426" y="356" fill="#94a3b8" font-size="10" font-family="Arial">▸ 2026 AI 매출 추정 $20B+</text>
+  <text x="426" y="374" fill="#94a3b8" font-size="10" font-family="Arial">▸ AI ASIC 맞춤칩 성장 수혜 독점</text>
+  <text x="426" y="392" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ NVDA 대안 포지션 · 고마진 유지</text>
+
+  <text x="400" y="418" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.19</text>
+</svg>

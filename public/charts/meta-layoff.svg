@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#1a0808"/></linearGradient>
+    <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#991b1b"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+
+  <text x="400" y="30" text-anchor="middle" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="3">META · 2026.05.19</text>
+  <text x="400" y="56" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">5% 구조조정 · 수요일 3회 분할 발표</text>
+
+  <!-- 3-wave layoff diagram -->
+  <text x="30" y="90" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">구조조정 3파 구조</text>
+
+  <!-- Wave 1 -->
+  <rect x="20" y="100" width="230" height="100" rx="8" fill="rgba(153,27,27,0.12)" stroke="rgba(248,113,113,0.4)" stroke-width="1.5"/>
+  <text x="135" y="125" text-anchor="middle" fill="#f87171" font-size="13" font-family="Arial" font-weight="bold">1차 파동</text>
+  <text x="135" y="150" text-anchor="middle" fill="#e2e8f0" font-size="22" font-family="Arial" font-weight="bold">35%</text>
+  <text x="135" y="170" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">수요일 오전</text>
+  <text x="135" y="188" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">북미 우선 통보</text>
+
+  <text x="272" y="155" text-anchor="middle" fill="#475569" font-size="20" font-family="Arial">→</text>
+
+  <!-- Wave 2 -->
+  <rect x="285" y="100" width="230" height="100" rx="8" fill="rgba(153,27,27,0.15)" stroke="rgba(248,113,113,0.5)" stroke-width="1.5"/>
+  <text x="400" y="125" text-anchor="middle" fill="#f87171" font-size="13" font-family="Arial" font-weight="bold">2차 파동</text>
+  <text x="400" y="150" text-anchor="middle" fill="#e2e8f0" font-size="22" font-family="Arial" font-weight="bold">35%</text>
+  <text x="400" y="170" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">수요일 오후</text>
+  <text x="400" y="188" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">관리직 집중</text>
+
+  <text x="537" y="155" text-anchor="middle" fill="#475569" font-size="20" font-family="Arial">→</text>
+
+  <!-- Wave 3 -->
+  <rect x="550" y="100" width="230" height="100" rx="8" fill="rgba(153,27,27,0.18)" stroke="rgba(248,113,113,0.6)" stroke-width="1.5"/>
+  <text x="665" y="125" text-anchor="middle" fill="#f87171" font-size="13" font-family="Arial" font-weight="bold">3차 파동</text>
+  <text x="665" y="150" text-anchor="middle" fill="#e2e8f0" font-size="22" font-family="Arial" font-weight="bold">30%</text>
+  <text x="665" y="170" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">수요일 저녁</text>
+  <text x="665" y="188" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">글로벌 완료</text>
+
+  <!-- Total indicator -->
+  <rect x="270" y="215" width="260" height="36" rx="8" fill="rgba(153,27,27,0.2)" stroke="rgba(248,113,113,0.5)" stroke-width="1.5"/>
+  <text x="400" y="238" text-anchor="middle" fill="#f87171" font-size="14" font-family="Arial" font-weight="bold">총 감원: 전체 직원의 5%</text>
+
+  <!-- Big tech layoff comparison -->
+  <text x="30" y="278" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">빅테크 감원 비교</text>
+
+  <rect x="20" y="288" width="480" height="110" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Bars -->
+  <!-- Meta 5% -->
+  <text x="80" y="310" text-anchor="end" fill="#e2e8f0" font-size="11" font-family="Arial">META</text>
+  <rect x="90" y="298" width="200" height="18" rx="3" fill="rgba(248,113,113,0.4)" stroke="#f87171" stroke-width="1"/>
+  <text x="296" y="311" fill="#f87171" font-size="10" font-family="Arial" font-weight="bold"> 5%</text>
+
+  <!-- Google 6% -->
+  <text x="80" y="336" text-anchor="end" fill="#e2e8f0" font-size="11" font-family="Arial">Google</text>
+  <rect x="90" y="324" width="240" height="18" rx="3" fill="rgba(96,165,250,0.3)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="336" y="337" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold"> 6%</text>
+
+  <!-- Amazon 5% -->
+  <text x="80" y="362" text-anchor="end" fill="#e2e8f0" font-size="11" font-family="Arial">Amazon</text>
+  <rect x="90" y="350" width="200" height="18" rx="3" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1"/>
+  <text x="296" y="363" fill="#fb923c" font-size="10" font-family="Arial" font-weight="bold"> 5%</text>
+
+  <!-- MS 3% -->
+  <text x="80" y="388" text-anchor="end" fill="#e2e8f0" font-size="11" font-family="Arial">Microsoft</text>
+  <rect x="90" y="376" width="120" height="18" rx="3" fill="rgba(167,139,250,0.3)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="216" y="389" fill="#a78bfa" font-size="10" font-family="Arial" font-weight="bold"> 3%</text>
+
+  <!-- Right panel: AI investment still growing -->
+  <rect x="535" y="270" width="245" height="140" rx="6" fill="rgba(0,181,128,0.05)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="657" y="292" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">동시에 AI 투자 확대</text>
+  <line x1="545" y1="299" x2="770" y2="299" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="545" y="318" fill="#94a3b8" font-size="10" font-family="Arial">▸ AI 광고 투자 <tspan fill="#00e5a0" font-weight="bold">$8B</tspan> 진행 중</text>
+  <text x="545" y="336" fill="#94a3b8" font-size="10" font-family="Arial">▸ Llama 오픈소스 생태계 확장</text>
+  <text x="545" y="354" fill="#94a3b8" font-size="10" font-family="Arial">▸ Ray-Ban AI 안경 웨어러블 선점</text>
+  <text x="545" y="372" fill="#94a3b8" font-size="10" font-family="Arial">▸ Andromeda AI 광고 효율 2배</text>
+  <text x="545" y="393" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">→ 인력↓ + AI 자동화↑ = 마진 개선</text>
+
+  <text x="400" y="418" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.19</text>
+</svg>
