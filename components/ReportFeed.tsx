@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ChevronDown, Pin, X, Lock } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocale } from "@/contexts/LocaleContext";
 
 // 토스페이먼츠 연결 전까지 false — true로 바꾸면 구독 게이팅 복활
 const SUBSCRIPTION_ENABLED = false;
@@ -98,9 +99,7 @@ function ImageLightbox({ src, onClose }: { src: string; onClose: () => void }) {
         />
       </div>
 
-      <p className="absolute bottom-6 left-0 right-0 text-center text-xs text-white/40 pointer-events-none">
-        스와이프하여 닫기 · 두 손가락으로 확대
-      </p>
+      <SwipeCloseHint />
     </div>
   );
 }
@@ -110,6 +109,15 @@ import {
   CATEGORY_EMOJI,
   type Report,
 } from "@/lib/reports";
+
+function SwipeCloseHint() {
+  const t = useLocale();
+  return (
+    <p className="absolute bottom-6 left-0 right-0 text-center text-xs text-white/40 pointer-events-none">
+      {t.reports.swipeClose}
+    </p>
+  );
+}
 
 function getDateKey(r: Report): string {
   const s = r.updatedAt ?? r.date ?? "";
@@ -186,6 +194,7 @@ function ImageGrid({ images, failedImgs, onError, onOpen }: {
 
 function LockedReportGroup({ reports }: { reports: Report[] }) {
   const [expanded, setExpanded] = useState(false);
+  const t = useLocale();
   return (
     <div className="rounded-2xl border overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
       {/* 헤더 토글 */}
@@ -197,8 +206,8 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
           <Lock className="w-3.5 h-3.5" style={{ color: "var(--muted)" }} />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-bold leading-none mb-0.5" style={{ color: "var(--text)" }}>추가 리포트 {reports.length}건</p>
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>구독하면 전부 열람 가능해요</p>
+          <p className="text-sm font-bold leading-none mb-0.5" style={{ color: "var(--text)" }}>{t.reports.lockedCount(reports.length)}</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>{t.reports.lockedDesc}</p>
         </div>
         <ChevronDown
           className="w-4 h-4 flex-shrink-0 transition-transform duration-200"
@@ -241,7 +250,7 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
           className="w-full py-2.5 rounded-xl text-sm font-bold text-black text-center block active:opacity-80 transition-opacity"
           style={{ background: "var(--mint)" }}
         >
-          구독하기 ₩5,900/월
+          {t.reports.subscribe}
         </Link>
       </div>
     </div>
@@ -252,6 +261,7 @@ function ReportCard({ report }: { report: Report }) {
   const [open, setOpen]               = useState(false);
   const [failedImgs, setFailedImgs]   = useState<Set<number>>(new Set());
   const [lightbox, setLightbox]       = useState<string | null>(null);
+  const t     = useLocale();
   const style = CATEGORY_STYLE[report.categoryColor];
   const emoji = CATEGORY_EMOJI[report.category];
 
@@ -386,7 +396,7 @@ function ReportCard({ report }: { report: Report }) {
           style={{ color: style.color }}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? "접기" : "더보기"}
+          {open ? t.reports.showLess : t.reports.showMore}
           <ChevronDown
             className="w-3.5 h-3.5 transition-transform"
             style={{ transform: open ? "rotate(180deg)" : "none" }}
@@ -513,6 +523,7 @@ function DailyQuote() {
 export function ReportFeed() {
   const { user } = useAuth();
   const isPro = user?.isPro === true;
+  const t = useLocale();
 
   const recent = SEED_REPORTS.filter(isWithinWeek);
 
@@ -552,14 +563,14 @@ export function ReportFeed() {
             className="text-xs font-semibold tracking-widest uppercase font-syne"
             style={{ color: "var(--muted)" }}
           >
-            Investus 리포트
+            {t.reports.sectionTitle}
           </h2>
           <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
-            시장 분석 · 종목 인사이트
+            {t.reports.subtitle}
           </p>
         </div>
         <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
-          SUNRYU CIO 작성
+          {t.reports.author}
         </span>
       </div>
 

@@ -7,6 +7,7 @@ import { StockChart } from "@/components/StockChart";
 import { NewsCard } from "@/components/NewsCard";
 import { ChevronLeft } from "lucide-react";
 import { useWatchlist } from "@/hooks/useWatchlist";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import type { NewsItem } from "@/lib/api";
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -40,17 +41,30 @@ function fmtUSD(v: number | null): string {
   if (v == null) return "—";
   return "$" + v.toFixed(2);
 }
-function fmtVol(v: number | null): string {
+function fmtVolKo(v: number | null): string {
   if (v == null) return "—";
   if (v >= 1e8)  return (v / 1e8).toFixed(1) + "억";
   if (v >= 1e4)  return Math.round(v / 1e4).toLocaleString() + "만";
   return v.toLocaleString("ko-KR");
 }
-function fmtCap(v: number | null): string {
+function fmtVolEn(v: number | null): string {
+  if (v == null) return "—";
+  if (v >= 1e9)  return (v / 1e9).toFixed(1) + "B";
+  if (v >= 1e6)  return (v / 1e6).toFixed(1) + "M";
+  if (v >= 1e3)  return (v / 1e3).toFixed(1) + "K";
+  return v.toLocaleString();
+}
+function fmtCapKo(v: number | null): string {
   if (v == null) return "—";
   if (v >= 1e12) return (v / 1e12).toFixed(2) + "조";
   if (v >= 1e8)  return Math.round(v / 1e8) + "억";
-  if (v >= 1e9)  return (v / 1e9).toFixed(2) + "B";
+  return "$" + v.toLocaleString();
+}
+function fmtCapEn(v: number | null): string {
+  if (v == null) return "—";
+  if (v >= 1e12) return "$" + (v / 1e12).toFixed(2) + "T";
+  if (v >= 1e9)  return "$" + (v / 1e9).toFixed(2) + "B";
+  if (v >= 1e6)  return "$" + (v / 1e6).toFixed(2) + "M";
   return "$" + v.toLocaleString();
 }
 function fmtNum(v: number | null, dp = 2): string {
@@ -82,6 +96,10 @@ export default function StockPage({
   const upper      = symbol.toUpperCase();
   const router     = useRouter();
   const { list: watchlist, toggle: toggleWatchlist } = useWatchlist();
+  const t          = useLocale();
+  const locale     = useLocaleCode();
+  const fmtVol     = locale === "en" ? fmtVolEn : fmtVolKo;
+  const fmtCap     = locale === "en" ? fmtCapEn : fmtCapKo;
 
   const [detail, setDetail]           = useState<Detail | null>(null);
   const [news,   setNews]             = useState<NewsItem[]>([]);
@@ -201,18 +219,18 @@ export default function StockPage({
   // Stats grid — matches screenshot layout
   const stats: [string, string][] = detail
     ? [
-        ["개장가",     fmtUSD(detail.open)],
-        ["거래량",     fmtVol(detail.volume)],
-        ["52주 최고",  fmtUSD(detail.week52High)],
-        ["수익률",     fmtPct(detail.dividendYield)],
-        ["최고가",     fmtUSD(detail.high)],
-        ["PER",        fmtNum(detail.pe)],
-        ["52주 최저",  fmtUSD(detail.week52Low)],
-        ["베타",       fmtNum(detail.beta)],
-        ["최저가",     fmtUSD(detail.low)],
-        ["시가총액",   fmtCap(detail.marketCap)],
-        ["평균 거래량", fmtVol(detail.avgVolume)],
-        ["주당순이익", detail.eps != null ? "$" + detail.eps.toFixed(2) : "—"],
+        [t.stock.open,          fmtUSD(detail.open)],
+        [t.stock.volume,        fmtVol(detail.volume)],
+        [t.stock.week52High,    fmtUSD(detail.week52High)],
+        [t.stock.dividendYield, fmtPct(detail.dividendYield)],
+        [t.stock.dayHigh,       fmtUSD(detail.high)],
+        [t.stock.pe,            fmtNum(detail.pe)],
+        [t.stock.week52Low,     fmtUSD(detail.week52Low)],
+        [t.stock.beta,          fmtNum(detail.beta)],
+        [t.stock.dayLow,        fmtUSD(detail.low)],
+        [t.stock.marketCap,     fmtCap(detail.marketCap)],
+        [t.stock.avgVolume,     fmtVol(detail.avgVolume)],
+        [t.stock.eps,           detail.eps != null ? "$" + detail.eps.toFixed(2) : "—"],
       ]
     : [];
 
@@ -228,13 +246,13 @@ export default function StockPage({
             className="inline-flex items-center gap-1 text-xs"
             style={{ color: "var(--muted)" }}
           >
-            <ChevronLeft className="w-3.5 h-3.5" /> 뒤로
+            <ChevronLeft className="w-3.5 h-3.5" /> {t.stock.back}
           </button>
           <button
             onClick={() => toggleWatchlist(upper)}
             className="w-9 h-9 flex items-center justify-center rounded-xl active:scale-90 transition-transform"
             style={{ background: "var(--card)" }}
-            aria-label={watchlist.includes(upper) ? "관심종목 제거" : "관심종목 추가"}
+            aria-label={watchlist.includes(upper) ? t.stock.watchlistRemove : t.stock.watchlistAdd}
           >
             <span
               className="text-xl leading-none"
@@ -359,7 +377,7 @@ export default function StockPage({
               className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
               style={{ color: "var(--muted)" }}
             >
-              관련 뉴스
+              {t.stock.relatedNews}
             </h2>
             <div className="flex flex-col gap-3">
               {news.map((n) => (
@@ -376,7 +394,7 @@ export default function StockPage({
               className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
               style={{ color: "var(--muted)" }}
             >
-              관련 뉴스
+              {t.stock.relatedNews}
             </h2>
             <div className="flex flex-col gap-3">
               {[1, 2, 3].map((k) => (

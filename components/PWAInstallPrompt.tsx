@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useLocale } from "@/contexts/LocaleContext";
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
@@ -14,6 +15,7 @@ export function PWAInstallPrompt() {
   const [showBanner, setShowBanner] = useState(false);
   const [isIOS,      setIsIOS]      = useState(false);
   const [prompt,     setPrompt]     = useState<BeforeInstallPromptEvent | null>(null);
+  const t = useLocale();
 
   useEffect(() => {
     const standalone =
@@ -87,8 +89,8 @@ export function PWAInstallPrompt() {
           >
             <span className="text-xl flex-shrink-0">📲</span>
             <div className="flex-1 min-w-0">
-              <p className="text-[12px] font-bold" style={{ color: "var(--mint)" }}>앱으로 보기</p>
-              <p className="text-[10px]" style={{ color: "var(--muted)" }}>탭하면 설치 방법 안내해드려요</p>
+              <p className="text-[12px] font-bold" style={{ color: "var(--mint)" }}>{t.pwa.bannerTitle}</p>
+              <p className="text-[10px]" style={{ color: "var(--muted)" }}>{t.pwa.bannerDesc}</p>
             </div>
             <button
               className="text-[18px] flex-shrink-0 px-1"
@@ -126,10 +128,10 @@ export function PWAInstallPrompt() {
                   </div>
                   <div>
                     <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
-                      Investus 앱으로 보기
+                      {t.pwa.viewAsApp}
                     </p>
                     <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-                      아이폰은 Safari에서 직접 추가해야 해요
+                      {t.pwa.iosSubtitle}
                     </p>
                   </div>
                 </div>
@@ -140,30 +142,10 @@ export function PWAInstallPrompt() {
                   style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}
                 >
                   <p className="text-[11px] font-semibold mb-3 text-center" style={{ color: "var(--muted)" }}>
-                    Safari 브라우저에서 아래 순서대로 따라하세요
+                    {t.pwa.iosGuideTitle}
                   </p>
 
-                  {/* 3단계 */}
-                  {([
-                    {
-                      step: "1",
-                      icon: "⬆️",
-                      title: "공유 버튼 탭",
-                      desc: "화면 하단 가운데 ⬆️ 버튼",
-                    },
-                    {
-                      step: "2",
-                      icon: "＋",
-                      title: "홈 화면에 추가 탭",
-                      desc: "메뉴를 아래로 스크롤하면 보여요",
-                    },
-                    {
-                      step: "3",
-                      icon: "✓",
-                      title: "추가 탭 → 완료!",
-                      desc: "홈 화면에 Investus 앱 아이콘 생성",
-                    },
-                  ]).map((s) => (
+                  {t.pwa.iosSteps.map((s) => (
                     <div key={s.step} className="flex items-start gap-3 mb-3 last:mb-0">
                       <div
                         className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold mt-0.5"
@@ -187,7 +169,7 @@ export function PWAInstallPrompt() {
 
                 {/* 설치 후 혜택 */}
                 <div className="flex gap-3 mb-4">
-                  {[["⚡", "빠른 실행"], ["📱", "전체화면"], ["🔔", "알림 지원"]].map(([ic, lb]) => (
+                  {t.pwa.benefits.map(([ic, lb]) => (
                     <div key={lb} className="flex-1 flex flex-col items-center gap-1 py-2 rounded-xl" style={{ background: "rgba(255,255,255,0.04)" }}>
                       <span className="text-base">{ic}</span>
                       <p className="text-[10px] font-semibold text-center" style={{ color: "var(--muted)" }}>{lb}</p>
@@ -200,7 +182,7 @@ export function PWAInstallPrompt() {
                   className="w-full py-3 rounded-xl text-sm font-bold text-black"
                   style={{ background: "var(--mint)" }}
                 >
-                  확인했어요
+                  {t.pwa.confirm}
                 </button>
               </div>
             ) : (
@@ -216,17 +198,17 @@ export function PWAInstallPrompt() {
                   </div>
                   <div>
                     <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
-                      Investus 앱으로 보기
+                      {t.pwa.viewAsApp}
                     </p>
                     <p className="text-[12px] mt-0.5" style={{ color: "var(--muted)" }}>
-                      버튼 하나로 홈 화면에 앱 설치
+                      {t.pwa.androidSubtitle}
                     </p>
                   </div>
                 </div>
 
                 {/* 혜택 */}
                 <div className="flex gap-2.5 mb-5">
-                  {[["⚡", "빠른 실행"], ["📱", "전체화면"], ["🔔", "알림 지원"]].map(([ic, lb]) => (
+                  {t.pwa.benefits.map(([ic, lb]) => (
                     <div key={lb} className="flex-1 flex flex-col items-center gap-1.5 py-3 rounded-xl" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}>
                       <span className="text-xl">{ic}</span>
                       <p className="text-[11px] font-semibold text-center" style={{ color: "var(--muted)" }}>{lb}</p>
@@ -239,14 +221,14 @@ export function PWAInstallPrompt() {
                   className="w-full py-3.5 rounded-xl text-sm font-bold text-black mb-3 transition-opacity active:opacity-80"
                   style={{ background: "var(--mint)" }}
                 >
-                  앱 설치하기
+                  {t.pwa.install}
                 </button>
                 <button
                   onClick={closeModal}
                   className="w-full py-2.5 rounded-xl text-sm"
                   style={{ color: "var(--muted)" }}
                 >
-                  나중에
+                  {t.pwa.later}
                 </button>
               </div>
             )}

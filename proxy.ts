@@ -6,8 +6,8 @@ export function proxy(req: NextRequest) {
   // Already has locale cookie — respect it
   if (req.cookies.has("locale")) return res;
 
-  // Vercel sets x-vercel-ip-country on every request
-  const country = req.headers.get("x-vercel-ip-country") ?? "KR";
+  // Vercel sets x-vercel-ip-country on every request (ISO 3166-1 alpha-2)
+  const country = req.headers.get("x-vercel-ip-country") ?? "";
   const locale  = country === "KR" ? "ko" : "en";
 
   res.cookies.set("locale", locale, {
