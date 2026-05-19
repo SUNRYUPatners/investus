@@ -184,12 +184,16 @@ export async function GET(req: Request) {
     : "public, s-maxage=3600, stale-while-revalidate=86400";
 
   // ── cold start: 인메모리 없으면 즉시 KV에서 복원 ────────────────────────────
+  const STALE_LIMIT = 30 * 60_000; // 장 중 30분 초과 데이터는 신뢰 불가 → API 강제 갱신
   if (!_cache && !refresh) {
     const kvData = await kvGetDetail(KV_MARKET_KEY);
     if (kvData) {
       const payload = kvData as unknown as CachePayload;
+      const age = Date.now() - (payload.liveAt ?? 0);
       // 장 마감: fresh로 복원. 장 중: liveAt=0으로 복원해 아래서 API 갱신 유도
-      _cache = { data: payload, at: open ? 0 : Date.now() };
+      // 단, 장 중 30분 초과 스테일 데이터는 즉시 갱신 필수 (가격 오차 방지)
+      const staleForMarket = open && age > STALE_LIMIT;
+      _cache = { data: payload, at: staleForMarket ? 0 : (open ? 0 : Date.now()) };
     }
   }
 
@@ -407,10 +411,7 @@ export async function GET(req: Request) {
         const iwm = fhMap.get("IWM");
         if (iwm) return { ...f, price: iwm.price * 10.05, change: iwm.change * 10.05, changePercent: iwm.changePercent, isMock: false };
       }
-      const liveChg = futureChgMap.get(f.symbol);
-      if (liveChg !== undefined) {
-        return { ...f, changePercent: liveChg, change: f.price * liveChg / 100, isMock: false };
-      }
+      // ETF change%만 있고 실제 가격 없음 → 표시 금지 (mock 가격으로 change 계산하면 오류)
     }
 
     // 4) 6E (EUR/USD), 6J (USD/JPY) — Frankfurter (current + daily change%)

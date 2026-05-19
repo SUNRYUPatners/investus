@@ -20,8 +20,9 @@ function saveAndRespond(symbol: string, data: Record<string, unknown>) {
   const cc = isOpen
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=3600, stale-while-revalidate=86400";
-  _cache.set(symbol, { data, at: Date.now() });
-  kvSetDetail(symbol, data);
+  const now = Date.now();
+  _cache.set(symbol, { data, at: now });
+  kvSetDetail(symbol, { ...data, _fetchedAt: now });
   return NextResponse.json(data, { headers: { "Cache-Control": cc } });
 }
 
@@ -47,12 +48,15 @@ export async function GET(req: NextRequest) {
     : "public, s-maxage=3600, stale-while-revalidate=86400";
 
   // ── 캐시 복원: 인메모리 없으면 즉시 KV에서 복원 (cold start 대응) ──────────
+  const STALE_LIMIT = 30 * 60_000; // 장 중 30분 초과 KV 데이터는 신뢰 불가
   let cached = _cache.get(rawSymbol) ?? null;
   if (!cached) {
     const kvData = await kvGetDetail(rawSymbol);
     if (kvData) {
-      // 장 마감: fresh로 복원. 장 중: TTL 만료(0)로 복원 → 아래서 API 갱신 시도
-      cached = { data: kvData, at: open ? 0 : Date.now() };
+      const kvAge = Date.now() - (Number(kvData._fetchedAt ?? 0));
+      // 장 중 30분 초과 스테일: API 강제 갱신 (at=0). 장 마감: fresh 그대로.
+      const tooStale = open && kvAge > STALE_LIMIT;
+      cached = { data: kvData, at: tooStale ? 0 : (open ? 0 : Date.now()) };
       _cache.set(rawSymbol, cached);
     }
   }

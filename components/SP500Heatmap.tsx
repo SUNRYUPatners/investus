@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { MiniChartPopup } from "./MiniChartPopup";
 
-type StockTile = { symbol: string; name: string; price: number | null; changePercent: number; weight: number };
+type StockTile = { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number };
 type Sector    = { key: string; name: string; stocks: StockTile[] };
 type ApiResponse = { isLive: boolean; sectors: Sector[] };
 
@@ -15,7 +15,8 @@ type PopupState = {
   anchorY: number;
 };
 
-function bg(pct: number) {
+function bg(pct: number | null) {
+  if (pct == null) return "rgba(255,255,255,0.06)";
   const t = Math.min(Math.abs(pct) / 3, 1);
   const a = 0.16 + t * 0.64;
   return pct >= 0 ? `rgba(0,229,160,${a})` : `rgba(255,77,109,${a})`;
@@ -106,7 +107,7 @@ function SectorBlock({
               }}
               onClick={(e) => {
                 e.stopPropagation();
-                onTileClick(s.symbol, s.name, s.changePercent, e.clientX, e.clientY);
+                onTileClick(s.symbol, s.name, s.changePercent ?? 0, e.clientX, e.clientY);
               }}
             >
               <div className="w-full overflow-hidden">
@@ -138,7 +139,7 @@ function SectorBlock({
                   className="text-[12px] font-bold font-mono-num tabular-nums leading-none mt-0.5"
                   style={{ color: TILE_TEXT }}
                 >
-                  {s.changePercent >= 0 ? "+" : ""}{s.changePercent.toFixed(2)}%
+                  {s.changePercent == null ? "—" : `${s.changePercent >= 0 ? "+" : ""}${s.changePercent.toFixed(2)}%`}
                 </p>
               </div>
             </div>

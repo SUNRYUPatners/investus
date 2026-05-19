@@ -73,23 +73,9 @@ const SECTORS: SectorDef[] = [
   ]},
 ];
 
-const MOCK_CHANGES: Record<string, number> = {
-  AAPL: 1.14,  MSFT: 1.02,  NVDA: 2.18, AVGO: 0.85,  AMD: 2.17,  ORCL: -0.70,
-  META: 1.72,  GOOGL: -0.69, NFLX: -0.84, DIS: -1.20,
-  LLY: 0.95,   UNH: 0.42,  JNJ: -0.28,  ABBV: 0.63,  MRK: -0.15,
-  "BRK-B": 0.78, JPM: 1.28, V: 0.55,    MA: 0.62,    GS: 1.05,
-  AMZN: 1.01,  TSLA: -2.18, HD: 0.35,   NKE: -0.92,
-  GE: 1.45,    CAT: 0.72,  BA: -1.34,   RTX: 0.48,
-  WMT: 0.38,   COST: 0.91, PG: 0.18,    KO: 0.12,
-  XOM: -0.52,  CVX: -0.38, COP: -0.75,
-  LIN: 0.35,   APD: 0.22,
-  NEE: -0.44,  DUK: 0.15,
-  AMT: -0.88,  PLD: 0.42,
-};
-
 export async function GET() {
   const allSymbols = SECTORS.flatMap((s) => s.stocks.map((t) => t.symbol));
-  const changeMap: Record<string, number> = { ...MOCK_CHANGES };
+  const changeMap: Record<string, number | null> = {};
   const priceMap:  Record<string, number> = {};
   let isLive = false;
 
@@ -104,9 +90,7 @@ export async function GET() {
         }
       }
     }
-  } catch {
-    // keep mock fallback
-  }
+  } catch { /* fall through — isLive stays false, all data null */ }
 
   return NextResponse.json({
     isLive,
@@ -117,7 +101,7 @@ export async function GET() {
         symbol:        t.symbol,
         name:          t.name,
         price:         priceMap[t.symbol]  ?? null,
-        changePercent: changeMap[t.symbol] ?? 0,
+        changePercent: changeMap[t.symbol] ?? null,
         weight:        t.weight,
       })),
     })),
