@@ -1,17 +1,20 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useLocale } from "@/contexts/LocaleContext";
 
-function getRelativeTime(ts: number): string {
+type WallT = ReturnType<typeof useLocale>["wall"];
+
+function getRelativeTime(ts: number, w: WallT): string {
   const diff = Date.now() - ts;
   const secs = Math.floor(diff / 1000);
-  if (secs < 60) return "방금";
+  if (secs < 60) return w.relativeNow;
   const mins = Math.floor(secs / 60);
-  if (mins < 60) return `${mins}분 전`;
+  if (mins < 60) return w.relativeMin(mins);
   const hours = Math.floor(mins / 60);
-  if (hours < 24) return `${hours}시간 전`;
+  if (hours < 24) return w.relativeHour(hours);
   const days = Math.floor(hours / 24);
-  return `${days}일 전`;
+  return w.relativeDay(days);
 }
 import Link from "next/link";
 import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, Users, TrendingUp, Send, X, ChevronDown } from "lucide-react";
@@ -29,17 +32,13 @@ const STOCKS = [
   "RKLB", "IONQ", "CEG",
 ];
 
-const STOCK_KR: Record<string, string> = {
-  NVDA: "엔비디아", TSLA: "테슬라", AAPL: "애플", PLTR: "팔란티어",
-  MSFT: "마이크로소프트", META: "메타", AMZN: "아마존", GOOGL: "구글",
-  AMD: "AMD", AVGO: "브로드컴", COIN: "코인베이스", SMCI: "슈퍼마이크로",
-  RKLB: "로켓랩", IONQ: "아이온큐", CEG: "컨스텔레이션",
-};
 
 
 // ── Comment Modal ─────────────────────────────────────────────────────────────
 function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
   const { user } = useAuth();
+  const t = useLocale();
+  const w = t.wall;
   const [localComments, setLocalComments] = useState<Comment[]>([]);
   const [likedComments, setLikedComments] = useState<Set<number>>(new Set());
   const [input, setInput] = useState("");
@@ -60,7 +59,7 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
     const newComment: Comment = {
       id: Date.now(),
       nickname: user.nickname,
-      holdingLabel: "보유 인증",
+      holdingLabel: w.verified,
       content: input.trim(),
       createdAt: Date.now(),
       likes: 0,
@@ -94,7 +93,7 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
             <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
               {post.symbol}
             </span>
-            <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>댓글 {localComments.length}</span>
+            <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{w.commentCount(localComments.length)}</span>
           </div>
           <button onClick={onClose} className="p-1">
             <X className="w-4 h-4" style={{ color: "var(--muted)" }} />
@@ -116,7 +115,7 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
           {localComments.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-10 gap-2">
               <span className="text-3xl">💬</span>
-              <p className="text-sm" style={{ color: "var(--muted)" }}>첫 댓글을 남겨보세요</p>
+              <p className="text-sm" style={{ color: "var(--muted)" }}>{w.commentEmpty}</p>
             </div>
           ) : (
             localComments.map((c) => (
@@ -126,7 +125,7 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
                   <div className="flex items-center gap-1.5 mb-1">
                     <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{c.nickname}</span>
                     <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(0,229,160,0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
-                    <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{getRelativeTime(c.createdAt)}</span>
+                    <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{getRelativeTime(c.createdAt, w)}</span>
                   </div>
                   <p className="text-[12px] leading-relaxed mb-1.5" style={{ color: "var(--text)" }}>{c.content}</p>
                   <button
@@ -153,7 +152,7 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && submitComment()}
-                placeholder="댓글을 입력하세요..."
+                placeholder={w.commentInput}
                 maxLength={200}
                 className="flex-1 text-[13px] bg-transparent outline-none"
                 style={{ color: "var(--text)" }}
@@ -169,9 +168,9 @@ function CommentModal({ post, onClose }: { post: Post; onClose: () => void }) {
             </div>
           ) : (
             <div className="flex items-center gap-3 py-1">
-              <p className="flex-1 text-xs" style={{ color: "var(--muted)" }}>댓글을 작성하려면 로그인이 필요합니다</p>
+              <p className="flex-1 text-xs" style={{ color: "var(--muted)" }}>{w.loginToComment}</p>
               <Link href="/more" onClick={onClose} className="text-xs font-bold px-3 py-1.5 rounded-lg" style={{ background: "var(--mint)", color: "#000" }}>
-                로그인
+                {w.login}
               </Link>
             </div>
           )}
@@ -195,6 +194,8 @@ function AskAI({ symbol }: { symbol: string }) {
   const [loading, setLoading]   = useState(false);
   const [count, setCount]       = useState(0);
   const inputRef                = useRef<HTMLInputElement>(null);
+  const t = useLocale();
+  const w = t.wall;
 
   useEffect(() => {
     try {
@@ -205,13 +206,7 @@ function AskAI({ symbol }: { symbol: string }) {
 
   const limitReached = count >= DAILY_LIMIT;
   const remaining    = DAILY_LIMIT - count;
-
-  const CHIPS = [
-    `${symbol} 지금 매수해도 될까?`,
-    "오늘 하락장 이유 뭐야?",
-    `${symbol} 목표주가는?`,
-    "내 포트폴리오 비중 조언해줘",
-  ];
+  const CHIPS        = w.aiChips(symbol);
 
   const ask = async (q: string) => {
     if (!q.trim() || loading || limitReached) return;
@@ -224,12 +219,12 @@ function AskAI({ symbol }: { symbol: string }) {
         body:    JSON.stringify({ question: q, symbol }),
       });
       const data = await res.json() as { answer?: string };
-      setAnswer(data.answer ?? "응답을 가져올 수 없습니다.");
+      setAnswer(data.answer ?? w.aiDisclaimer);
       const newCount = count + 1;
       setCount(newCount);
       try { localStorage.setItem(getTodayKey(), String(newCount)); } catch {}
     } catch {
-      setAnswer("네트워크 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+      setAnswer(w.aiDisclaimer);
     }
     setLoading(false);
   };
@@ -249,7 +244,7 @@ function AskAI({ symbol }: { symbol: string }) {
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4" style={{ color: "var(--mint)" }} />
             <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-              Investus AI에게 {symbol} 질문하기
+              {w.aiTitle(symbol)}
             </p>
             <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full ml-auto"
               style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>Claude</span>
@@ -258,14 +253,14 @@ function AskAI({ symbol }: { symbol: string }) {
         <div className="px-4 py-6 flex flex-col items-center gap-3 text-center">
           <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
             style={{ background: "rgba(0,229,160,0.08)" }}>⏰</div>
-          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>오늘 질문 횟수를 다 사용했습니다</p>
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>하루 5회 무료 · 내일 자정에 초기화됩니다</p>
+          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{w.aiLimitTitle}</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>{w.aiLimitSub}</p>
           <div className="w-full rounded-2xl p-4 border mt-1"
             style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
-            <p className="text-xs font-bold mb-1" style={{ color: "var(--mint)" }}>✦ 무제한으로 사용하려면 구독하세요</p>
-            <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>월 ₩5,900으로 AI 질문 무제한 + 리포트 전체 열람</p>
+            <p className="text-xs font-bold mb-1" style={{ color: "var(--mint)" }}>{w.aiSubLabel}</p>
+            <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>{w.aiSubDesc}</p>
             <button className="w-full py-2.5 rounded-xl text-sm font-bold text-black" style={{ background: "var(--mint)" }}>
-              구독하기 ₩5,900/월
+              {w.aiSubscribe}
             </button>
           </div>
         </div>
@@ -281,14 +276,14 @@ function AskAI({ symbol }: { symbol: string }) {
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4" style={{ color: "var(--mint)" }} />
           <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-            Investus AI에게 {symbol} 질문하기
+            {w.aiTitle(symbol)}
           </p>
           <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full ml-auto"
             style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>Claude</span>
         </div>
         <div className="flex items-center justify-between mt-0.5">
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>종목 분석 · 시장 뉴스 · 포트폴리오 조언</p>
-          <p className="text-[10px]" style={{ color: "var(--muted)" }}>오늘 {remaining}회 남음</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>{w.aiSubtitle}</p>
+          <p className="text-[10px]" style={{ color: "var(--muted)" }}>{w.aiRemaining(remaining)}</p>
         </div>
       </div>
 
@@ -310,7 +305,7 @@ function AskAI({ symbol }: { symbol: string }) {
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
-          placeholder={`예) ${symbol} 실적 어떻게 돼?`}
+          placeholder={w.aiPlaceholder(symbol)}
           className="flex-1 text-[13px] bg-transparent outline-none"
           style={{ color: "var(--text)" }}
         />
@@ -340,7 +335,7 @@ function AskAI({ symbol }: { symbol: string }) {
               )}
             </div>
             {answer && (
-              <p className="text-[9px] mt-1 pl-1" style={{ color: "var(--muted)" }}>AI 답변은 참고용이며 투자 권유가 아닙니다.</p>
+              <p className="text-[9px] mt-1 pl-1" style={{ color: "var(--muted)" }}>{w.aiDisclaimer}</p>
             )}
           </div>
         </div>
@@ -357,6 +352,8 @@ type CreatorSort = "popular" | "return" | "subscribers" | "newest";
 
 export default function WallPage() {
   const { user } = useAuth();
+  const t  = useLocale();
+  const w  = t.wall;
   const [mainTab, setMainTab]             = useState<MainTab>("discussion");
   const [selected, setSelected]           = useState("NVDA");
   const [liked, setLiked]                 = useState<Set<number>>(new Set());
@@ -415,21 +412,21 @@ export default function WallPage() {
         {/* Page title */}
         <div className="flex items-center justify-between px-4 pt-5 pb-3">
           <div>
-            <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>종토방 💬</h1>
-            <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>종목 토론 · AI 분석 · 크리에이터 강의</p>
+            <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{w.pageTitle}</h1>
+            <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{w.pageSubtitle}</p>
           </div>
           {mainTab === "creator" && (
             hasCreatorProfile ? (
               <Link href="/creator/dashboard"
                 className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
                 style={{ background: "var(--mint)", color: "#000" }}>
-                ✦ 내 채널 관리
+                ✦ {w.creatorMyChannel}
               </Link>
             ) : (
               <Link href="/creator/setup"
                 className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
                 style={{ background: "var(--mint)", color: "#000" }}>
-                <Sparkles className="w-3.5 h-3.5" />크리에이터 되기
+                <Sparkles className="w-3.5 h-3.5" />{w.creatorChannelBtn}
               </Link>
             )
           )}
@@ -437,7 +434,7 @@ export default function WallPage() {
             <div className="flex items-center gap-1 text-[10px] px-2 py-1 rounded-full border"
               style={{ borderColor: "rgba(0,229,160,0.3)", color: "var(--mint)" }}>
               <Lock className="w-3 h-3" />
-              익명 · 보유 인증
+              {w.anonBadge}
             </div>
           )}
         </div>
@@ -449,14 +446,14 @@ export default function WallPage() {
             style={mainTab === "discussion"
               ? { background: "var(--mint)", color: "#000" }
               : { color: "var(--muted)" }}>
-            <MessageCircle className="w-3.5 h-3.5" />종목 토론
+            <MessageCircle className="w-3.5 h-3.5" />{w.tabDiscussion}
           </button>
           <button onClick={() => setMainTab("creator")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
             style={mainTab === "creator"
               ? { background: "var(--mint)", color: "#000" }
               : { color: "var(--muted)" }}>
-            <Users className="w-3.5 h-3.5" />크리에이터
+            <Users className="w-3.5 h-3.5" />{w.tabCreator}
           </button>
         </div>
 
@@ -467,7 +464,7 @@ export default function WallPage() {
               style={{ background: "rgba(0,229,160,0.05)", borderColor: "rgba(0,229,160,0.15)" }}>
               <ShieldCheck className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "var(--mint)" }} />
               <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                실제 보유 종목만 토론 참여 가능합니다. 캡쳐 업로드 또는 증권사 연동으로 보유 수량을 인증하면 댓글을 작성할 수 있어요.
+                {w.notice}
               </p>
             </div>
 
@@ -485,7 +482,7 @@ export default function WallPage() {
                   </span>
                   <span className="text-[9px] leading-none"
                     style={{ color: selected === sym ? "rgba(0,0,0,0.6)" : "var(--muted)" }}>
-                    {STOCK_KR[sym]}
+                    {w.stockNames[sym]}
                   </span>
                 </button>
               ))}
@@ -503,8 +500,8 @@ export default function WallPage() {
                 {posts.length === 0 ? (
                   <div className="col-span-full flex flex-col items-center justify-center py-20 gap-3">
                     <span className="text-4xl">💬</span>
-                    <p className="text-sm" style={{ color: "var(--muted)" }}>아직 게시글이 없습니다</p>
-                    <p className="text-xs" style={{ color: "var(--muted)" }}>첫 번째 의견을 남겨보세요</p>
+                    <p className="text-sm" style={{ color: "var(--muted)" }}>{w.emptyPosts}</p>
+                    <p className="text-xs" style={{ color: "var(--muted)" }}>{w.emptyPostsSub}</p>
                   </div>
                 ) : (
                   posts.map((post) => (
@@ -522,7 +519,7 @@ export default function WallPage() {
                             </span>
                           </div>
                         </div>
-                        <span className="text-[10px]" style={{ color: "var(--muted)" }}>{getRelativeTime(post.createdAt)}</span>
+                        <span className="text-[10px]" style={{ color: "var(--muted)" }}>{getRelativeTime(post.createdAt, w)}</span>
                       </div>
                       <p className="text-[13px] leading-relaxed mb-3" style={{ color: "var(--text)" }}>{post.content}</p>
                       <div className="flex items-center gap-4">
@@ -560,10 +557,10 @@ export default function WallPage() {
                 <div className="rounded-2xl p-4 border flex items-center gap-3"
                   style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.2)" }}>
                   <User className="w-5 h-5 flex-shrink-0" style={{ color: "var(--mint)" }} />
-                  <p className="flex-1 text-xs" style={{ color: "var(--muted)" }}>글을 작성하려면 로그인이 필요합니다</p>
+                  <p className="flex-1 text-xs" style={{ color: "var(--muted)" }}>{w.loginToPost}</p>
                   <Link href="/more" className="text-xs font-bold px-3 py-1.5 rounded-lg flex-shrink-0"
                     style={{ background: "var(--mint)", color: "#000" }}>
-                    로그인
+                    {w.login}
                   </Link>
                 </div>
               </div>
@@ -586,10 +583,10 @@ export default function WallPage() {
                   <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
                     style={{ background: "rgba(0,229,160,0.1)" }}>✦</div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-bold font-syne mb-0.5" style={{ color: "var(--text)" }}>내 크리에이터 채널</p>
-                    <p className="text-[11px]" style={{ color: "var(--muted)" }}>콘텐츠 작성 · 프로필 수정 · 인증 관리</p>
+                    <p className="text-sm font-bold font-syne mb-0.5" style={{ color: "var(--text)" }}>{w.creatorMyChannel}</p>
+                    <p className="text-[11px]" style={{ color: "var(--muted)" }}>{w.creatorMyDesc}</p>
                   </div>
-                  <span className="text-xs font-bold flex-shrink-0" style={{ color: "var(--mint)" }}>관리 →</span>
+                  <span className="text-xs font-bold flex-shrink-0" style={{ color: "var(--mint)" }}>{w.creatorManage}</span>
                 </Link>
               ) : (
                 <div className="rounded-2xl p-4 border"
@@ -597,14 +594,14 @@ export default function WallPage() {
                   <div className="flex items-start gap-3">
                     <span className="text-3xl">🏆</span>
                     <div>
-                      <h2 className="text-sm font-bold font-syne mb-1" style={{ color: "var(--text)" }}>크리에이터 마켓</h2>
+                      <h2 className="text-sm font-bold font-syne mb-1" style={{ color: "var(--text)" }}>{w.creatorMarket}</h2>
                       <p className="text-[11px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
-                        실제 계좌 수익률을 공개하고 포트폴리오·강의·전자책으로 구독료를 받으세요.
+                        {w.creatorMarketDesc}
                       </p>
                       <Link href="/creator/setup"
                         className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl"
                         style={{ background: "var(--mint)", color: "#000" }}>
-                        <Sparkles className="w-3.5 h-3.5" />나도 크리에이터 되기
+                        <Sparkles className="w-3.5 h-3.5" />{w.creatorBecome}
                       </Link>
                     </div>
                   </div>
@@ -612,11 +609,7 @@ export default function WallPage() {
               )}
 
               <div className="grid grid-cols-3 gap-2 mt-5 lg:mt-0">
-                {[
-                  { icon: "📊", title: "계좌 연동", desc: "증권사 연동으로 실제 수익률 인증" },
-                  { icon: "💡", title: "콘텐츠 판매", desc: "강의·전자책·리포트 업로드" },
-                  { icon: "💰", title: "수익 정산", desc: "구독 수익 매월 정산" },
-                ].map((item) => (
+                {w.creatorFeatures.map((item) => (
                   <div key={item.title} className="rounded-xl p-3 text-center border"
                     style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                     <div className="text-xl mb-1">{item.icon}</div>
@@ -638,7 +631,7 @@ export default function WallPage() {
                 className="text-[10px] text-center font-semibold tracking-widest uppercase pt-4 pb-3"
                 style={{ color: "var(--muted)" }}
               >
-                이달의 크리에이터 시상대
+                {w.creatorPodium}
               </p>
               <div className="flex items-end justify-center gap-2 px-5">
                 {/* 2위 — 은 */}
@@ -655,7 +648,7 @@ export default function WallPage() {
                     <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[1].annualReturn}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#C0C0C0" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#C0C0C0" }}>{CREATORS[1].subscriberCount.toLocaleString()}명</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#C0C0C0" }}>{w.subscribers(CREATORS[1].subscriberCount)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-base"
@@ -684,7 +677,7 @@ export default function WallPage() {
                     <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[0].annualReturn}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#FFD700" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#FFD700" }}>{CREATORS[0].subscriberCount.toLocaleString()}명</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#FFD700" }}>{w.subscribers(CREATORS[0].subscriberCount)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-xl"
@@ -713,7 +706,7 @@ export default function WallPage() {
                     <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[2].annualReturn}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#CD7F32" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#CD7F32" }}>{CREATORS[2].subscriberCount.toLocaleString()}명</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#CD7F32" }}>{w.subscribers(CREATORS[2].subscriberCount)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-base"
@@ -731,14 +724,14 @@ export default function WallPage() {
             </div>
 
             <div className="flex items-center justify-between mb-2 mt-2">
-              <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>인기 크리에이터</h2>
-              <span className="text-[10px]" style={{ color: "var(--muted)" }}>{CREATORS.length}명 활동 중</span>
+              <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{w.creatorTitle}</h2>
+              <span className="text-[10px]" style={{ color: "var(--muted)" }}>{w.creatorCount(CREATORS.length)}</span>
             </div>
 
             {/* 정렬 필터 */}
             <div className="flex gap-1.5 mb-3 overflow-x-auto no-scrollbar pb-0.5">
               {(["popular", "return", "subscribers", "newest"] as const).map((key) => {
-                const labels = { popular: "인기순", return: "수익률순", subscribers: "구독자순", newest: "최신등록순" };
+                const labels = w.sortLabels;
                 const active = creatorSort === key;
                 return (
                   <button
@@ -780,10 +773,10 @@ export default function WallPage() {
             <div className="w-10 h-1 rounded-full mx-auto mb-6" style={{ background: "var(--border)" }} />
             <div className="flex items-center gap-3 mb-4">
               <ShieldCheck className="w-6 h-6" style={{ color: "var(--mint)" }} />
-              <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>보유 종목 인증</h2>
+              <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{w.verifyTitle}</h2>
             </div>
             <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
-              종토방에 글을 작성하려면 해당 종목의 실제 보유를 인증해야 합니다.
+              {w.verifyDesc}
             </p>
 
             {verifyMode === "none" && (
@@ -792,15 +785,15 @@ export default function WallPage() {
                   className="flex-1 flex flex-col items-center gap-2 py-4 rounded-2xl border"
                   style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}>
                   <Upload className="w-5 h-5" style={{ color: "var(--mint)" }} />
-                  <span className="text-xs font-semibold">캡쳐 업로드</span>
-                  <span className="text-[10px]" style={{ color: "var(--muted)" }}>HTS/MTS 보유 화면</span>
+                  <span className="text-xs font-semibold">{w.verifyCapture}</span>
+                  <span className="text-[10px]" style={{ color: "var(--muted)" }}>{w.verifyCaptureDesc}</span>
                 </button>
                 <button onClick={() => setVerifyMode("broker")}
                   className="flex-1 flex flex-col items-center gap-2 py-4 rounded-2xl border"
                   style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}>
                   <ShieldCheck className="w-5 h-5" style={{ color: "var(--mint)" }} />
-                  <span className="text-xs font-semibold">증권사 연동</span>
-                  <span className="text-[10px]" style={{ color: "var(--muted)" }}>자동 보유 확인</span>
+                  <span className="text-xs font-semibold">{w.verifyBroker}</span>
+                  <span className="text-[10px]" style={{ color: "var(--muted)" }}>{w.verifyBrokerDesc}</span>
                 </button>
               </div>
             )}
@@ -811,12 +804,12 @@ export default function WallPage() {
                   className="w-full flex flex-col items-center gap-3 py-8 rounded-2xl border border-dashed cursor-pointer"
                   style={{ borderColor: "rgba(0,229,160,0.4)", background: "rgba(0,229,160,0.04)" }}>
                   <Upload className="w-8 h-8" style={{ color: "var(--mint)" }} />
-                  <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>캡쳐 이미지 업로드</p>
-                  <p className="text-xs" style={{ color: "var(--muted)" }}>HTS/MTS 보유 화면 캡쳐를 첨부해주세요</p>
+                  <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{w.captureLabel}</p>
+                  <p className="text-xs" style={{ color: "var(--muted)" }}>{w.captureDesc}</p>
                 </label>
                 <input id="screenshot-upload" type="file" accept="image/*" className="hidden" onChange={() => setUploadDone(true)} />
                 <button onClick={() => setVerifyMode("none")} className="w-full mt-2 py-2 text-xs" style={{ color: "var(--muted)" }}>
-                  돌아가기
+                  {w.goBack}
                 </button>
               </div>
             )}
@@ -827,26 +820,26 @@ export default function WallPage() {
                   style={{ background: "rgba(0,229,160,0.15)" }}>
                   <ShieldCheck className="w-6 h-6" style={{ color: "var(--mint)" }} />
                 </div>
-                <p className="text-sm font-bold" style={{ color: "var(--text)" }}>업로드 완료!</p>
+                <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{w.uploadDone}</p>
                 <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
-                  검토 후 글쓰기가 활성화됩니다. (데모: 즉시 활성화)
+                  {w.uploadDoneDesc}
                 </p>
                 <button onClick={() => setShowVerify(false)}
                   className="mt-2 px-6 py-2.5 rounded-xl text-sm font-bold text-black"
                   style={{ background: "var(--mint)" }}>
-                  글 작성하기
+                  {w.writePost}
                 </button>
               </div>
             )}
 
             {verifyMode === "broker" && (
               <div className="flex flex-col gap-2 mb-4">
-                {["키움증권", "삼성증권", "미래에셋증권", "NH투자증권"].map((broker) => (
+                {["Kiwoom", "Samsung", "Mirae Asset", "NH Investment"].map((broker) => (
                   <button key={broker} onClick={() => setVerifyMode("broker-notice")}
                     className="w-full py-3.5 rounded-2xl border text-sm font-semibold flex items-center justify-between px-4 active:opacity-70 transition-opacity"
                     style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}>
                     {broker}
-                    <span className="text-xs" style={{ color: "var(--mint)" }}>연동하기 →</span>
+                    <span className="text-xs" style={{ color: "var(--mint)" }}>{w.connect}</span>
                   </button>
                 ))}
                 <button onClick={() => setVerifyMode("none")} className="w-full mt-1 py-2 text-xs" style={{ color: "var(--muted)" }}>
@@ -861,17 +854,15 @@ export default function WallPage() {
                   style={{ background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)" }}>
                   <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
                     style={{ background: "rgba(0,229,160,0.10)" }}>🔧</div>
-                  <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>증권사 직접 연동 준비 중</p>
+                  <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>{w.brokerNoticeTitle}</p>
                   <p className="text-xs text-center leading-relaxed px-4" style={{ color: "var(--muted)" }}>
-                    현재 증권사 API 연동 기능을 준비하고 있습니다.{"\n"}
-                    지금은 HTS/MTS 보유 화면 캡쳐 업로드로{"\n"}
-                    대신 인증해 주세요.
+                    {w.brokerNoticeDesc}
                   </p>
                 </div>
                 <button onClick={() => setVerifyMode("upload")}
                   className="w-full py-3 rounded-2xl text-sm font-bold text-black mb-2 active:opacity-80 transition-opacity"
                   style={{ background: "var(--mint)" }}>
-                  캡쳐 업로드로 인증하기
+                  {w.switchToCapture}
                 </button>
                 <button onClick={() => setVerifyMode("broker")} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
                   돌아가기
@@ -880,7 +871,7 @@ export default function WallPage() {
             )}
 
             <p className="text-[10px] text-center" style={{ color: "var(--muted)" }}>
-              인증 정보는 보유 수량 확인 목적으로만 사용되며 저장되지 않습니다.
+              {w.verifyNotice}
             </p>
           </div>
         </div>

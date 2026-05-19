@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import type { FutureItem } from "@/lib/api";
 import { MiniChartPopup } from "./MiniChartPopup";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 // ── Color helpers ───────────────────────────────────────────────────────────
 function bg(pct: number) {
@@ -15,12 +16,12 @@ const TILE_TEXT = "rgba(255,255,255,0.95)";
 // ── Treemap layout config ───────────────────────────────────────────────────
 const ROWS: {
   rowH: number;
-  groupLabel: string;
+  groupKey: string;
   cells: { sym: string; flex: number }[];
 }[] = [
   {
     rowH: 90,
-    groupLabel: "지수",
+    groupKey: "indices",
     cells: [
       { sym: "ES",  flex: 4   },
       { sym: "NQ",  flex: 3.5 },
@@ -30,7 +31,7 @@ const ROWS: {
   },
   {
     rowH: 70,
-    groupLabel: "에너지 · 금속",
+    groupKey: "energy",
     cells: [
       { sym: "CL",  flex: 3   },
       { sym: "NG",  flex: 2   },
@@ -41,7 +42,7 @@ const ROWS: {
   },
   {
     rowH: 58,
-    groupLabel: "채권 · 외환 · 농산물",
+    groupKey: "bonds",
     cells: [
       { sym: "ZN",  flex: 2.5 },
       { sym: "ZB",  flex: 2   },
@@ -54,7 +55,7 @@ const ROWS: {
   },
   {
     rowH: 65,
-    groupLabel: "암호화폐",
+    groupKey: "crypto",
     cells: [
       { sym: "BTC", flex: 4   },
       { sym: "ETH", flex: 2.5 },
@@ -62,7 +63,20 @@ const ROWS: {
   },
 ];
 
-const SHORT: Record<string, string> = {
+const GROUP_KO: Record<string, string> = {
+  indices: "지수",
+  energy:  "에너지 · 금속",
+  bonds:   "채권 · 외환 · 농산물",
+  crypto:  "암호화폐",
+};
+const GROUP_EN: Record<string, string> = {
+  indices: "Indices",
+  energy:  "Energy · Metals",
+  bonds:   "Bonds · FX · Agri",
+  crypto:  "Crypto",
+};
+
+const SHORT_KO: Record<string, string> = {
   ES:  "S&P 500",
   NQ:  "나스닥 100",
   YM:  "다우존스",
@@ -81,6 +95,26 @@ const SHORT: Record<string, string> = {
   ZS:  "대두",
   BTC: "비트코인",
   ETH: "이더리움",
+};
+const SHORT_EN: Record<string, string> = {
+  ES:  "S&P 500",
+  NQ:  "Nasdaq 100",
+  YM:  "Dow Jones",
+  RTY: "Russell 2000",
+  CL:  "WTI Crude",
+  NG:  "Nat. Gas",
+  GC:  "Gold",
+  SI:  "Silver",
+  HG:  "Copper",
+  ZN:  "10Y T-Note",
+  ZB:  "30Y T-Bond",
+  "6E": "EUR/USD",
+  "6J": "USD/JPY",
+  ZC:  "Corn",
+  ZW:  "Wheat",
+  ZS:  "Soybeans",
+  BTC: "Bitcoin",
+  ETH: "Ethereum",
 };
 
 type PopupState = {
@@ -107,6 +141,9 @@ export function FuturesHeatmap({ items }: Props) {
   const [thumbL, setThumbL]   = useState(0);
   const [thumbW, setThumbW]   = useState(100);
   const scrollRef             = useRef<HTMLDivElement>(null);
+  const locale                = useLocaleCode();
+  const SHORT                 = locale === "ko" ? SHORT_KO : SHORT_EN;
+  const GROUP                 = locale === "ko" ? GROUP_KO : GROUP_EN;
   const bySymbol = Object.fromEntries(items.map((i) => [i.symbol, i]));
 
   useEffect(() => {
@@ -140,7 +177,9 @@ export function FuturesHeatmap({ items }: Props) {
           Futures Map
         </h2>
         <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
-          {open ? "선물 · 실시간" : "선물 · 전장 종가"}
+          {open
+            ? (locale === "ko" ? "선물 · 실시간" : "Futures · Live")
+            : (locale === "ko" ? "선물 · 전장 종가" : "Futures · Prev Close")}
         </span>
       </div>
 
@@ -153,7 +192,7 @@ export function FuturesHeatmap({ items }: Props) {
         <div style={{ minWidth: "680px", touchAction: "pan-x pan-y" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
             {ROWS.map((row) => (
-              <div key={row.groupLabel} style={{ display: "flex", flexDirection: "column" }}>
+              <div key={row.groupKey} style={{ display: "flex", flexDirection: "column" }}>
                 {/* Sector label strip */}
                 <div
                   style={{
@@ -169,7 +208,7 @@ export function FuturesHeatmap({ items }: Props) {
                     className="text-[9px] font-semibold tracking-wider uppercase font-syne"
                     style={{ color: "var(--muted)" }}
                   >
-                    {row.groupLabel}
+                    {GROUP[row.groupKey]}
                   </span>
                 </div>
 
