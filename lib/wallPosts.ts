@@ -26,6 +26,8 @@ export type Comment = {
   likes:        number;
 };
 
+const T20 = 1779231600000; // 2026-05-20 08:00 KST
+export const LATEST_UPDATE = T20;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T19 = 1779145200000; // 2026-05-19 08:00 KST
 const T18 = 1779058800000; // 2026-05-18 08:00 KST
 const T15 = 1778799600000; // 2026-05-15 08:00 KST
@@ -38,6 +40,63 @@ const d = (n: number) => n * 86_400_000;
 export const MOCK_POSTS: Post[] = [
 
   // ════════════════════════════════════════════════════════════════════════
+  // 2026-05-20 — NVDA Q4 +74% / Tesla $95B + 휴스턴 태양광 / Semi 77% 절감 /
+  //              Karpathy→Anthropic / Buffett·Google·S&P 복리
+  // ════════════════════════════════════════════════════════════════════════
+
+  // NVDA — Q4 2025 실적 ────────────────────────────────────────────────────
+  { id: 84, symbol: "NVDA", nickname: "익명_2841", holdingLabel: "18주 보유",
+    content: "NVDA 작년 연수익 74% 나왔는데 더 놀라운 건 마진이 70%라는 거예요. 데이터센터가 89%라서 이제 GPU 파는 회사가 아니라 AI 인프라 독점 기업으로 봐야 할 것 같아요.",
+    createdAt: T20 - m(3), likes: 47, comments: 2 },
+  { id: 85, symbol: "NVDA", nickname: "익명_7193", holdingLabel: "6주 보유",
+    content: "공정가치 $179라는데 지금 주가 보면 고평가 구간이긴 해요. 그래도 Blackwell 수요가 워낙 터졌다고 하니 이 계산 자체가 바뀔 수도 있잖아요. 일단 홀딩.",
+    createdAt: T20 - m(18), likes: 31, comments: 0 },
+
+  // TSLA — $95B 매출 + 태양광 + Semi ──────────────────────────────────────
+  { id: 86, symbol: "TSLA", nickname: "익명_5382", holdingLabel: "65주 보유",
+    content: "테슬라 $95B이 2012년 $0.2B에서 13년 만에 온 거잖아요. 근데 에너지 사업이 13%까지 올라온 게 더 눈에 띄어요. 자동차 매출보다 에너지가 먼저 추월하는 날이 오는 거 아닌가요.",
+    createdAt: T20 - m(7), likes: 53, comments: 2 },
+  { id: 87, symbol: "TSLA", nickname: "익명_9034", holdingLabel: "22주 보유",
+    content: "Semi 운영비 77% 절감이면 물류회사들이 계산기 두드리면 답 나오잖아요. 캘리포니아 보조금도 나왔으니 이제 물량이 빠르게 늘 것 같아요. FSD 올라타면 기사 인건비까지 줄어드는 건데.",
+    createdAt: T20 - m(22), likes: 38, comments: 2 },
+  { id: 88, symbol: "TSLA", nickname: "익명_3617", holdingLabel: "110주 보유",
+    content: "휴스턴에 태양광 공장 짓는다는 거 봤어요? Megapack 시설 옆에 같이 짓는다는데 2030년 100GW 목표래요. 자동차 회사가 이걸 한다는 게 아직도 신기하고 에너지 플랫폼 기업으로 봐야 할 것 같아요.",
+    createdAt: T20 - m(35), likes: 29, comments: 0 },
+
+  // GOOGL — Karpathy + 플랫폼 지배력 ──────────────────────────────────────
+  { id: 89, symbol: "GOOGL", nickname: "익명_4728", holdingLabel: "32주 보유",
+    content: "카파시가 Anthropic 갔어요. OpenAI한테는 충격이겠지만 구글 입장에선 좀 애매한 거죠. Anthropic 최대 투자자 중 하나가 구글이라 간접 수혜도 있긴 한데... 복잡하네요.",
+    createdAt: T20 - m(4), likes: 44, comments: 2 },
+  { id: 90, symbol: "GOOGL", nickname: "익명_6153", holdingLabel: "48주 보유",
+    content: "구글 3B+ 사용자 제품이 6개라는 거 들어보셨어요? Gmail·검색·Maps·안드로이드·크롬·유튜브 다요. 이런 회사가 역대에 없었대요. AI가 검색 죽인다고들 하는데 이 기반이 쉽게 흔들릴 것 같지 않아요.",
+    createdAt: T20 - m(28), likes: 36, comments: 2 },
+
+  // AAPL — S&P 복리 / Buffett ────────────────────────────────────────────
+  { id: 91, symbol: "AAPL", nickname: "익명_8246", holdingLabel: "85주 보유",
+    content: "버핏 '시간이 지나면 이긴다'는 말이 결국 S&P 장기 복리 얘기예요. $10K 10년 보유하면 $27.7K인데 왜 못 참는지 모르겠어요. 폭락 때 파는 게 제일 큰 실수라는 거 머리로는 알면서.",
+    createdAt: T20 - m(11), likes: 42, comments: 2 },
+
+  // ETF — VOO / SPY / QQQ / SCHD ──────────────────────────────────────────
+  { id: 92, symbol: "VOO", nickname: "익명_3847", holdingLabel: "120주 보유",
+    content: "VOO 요즘 신고가 근처인데 그냥 계속 들고 가는 게 맞겠죠? S&P500이 무너지면 어차피 다 같이 힘든 거라서 딱히 대안도 없고. 그냥 버티는 게 전략인 것 같아요.",
+    createdAt: T20 - m(15), likes: 38, comments: 2 },
+  { id: 93, symbol: "VOO", nickname: "익명_7293", holdingLabel: "280주 보유",
+    content: "월급 들어올 때마다 VOO 사는 게 9년 됐어요. 이것저것 분석하고 갈아탔다가 결국 VOO가 제일 낫다는 결론으로 돌아왔어요.",
+    createdAt: T20 - m(40), likes: 51, comments: 0 },
+  { id: 94, symbol: "SPY", nickname: "익명_5182", holdingLabel: "65주 보유",
+    content: "SPY랑 VOO 둘 다 S&P500 추종인데 수수료 빼면 차이 없다는 거 알면서도 SPY 거래량이 워낙 커서 유동성 때문에 자꾸 SPY로 손이 가요.",
+    createdAt: T20 - m(45), likes: 29, comments: 0 },
+  { id: 95, symbol: "QQQ", nickname: "익명_8341", holdingLabel: "45주 보유",
+    content: "QQQ가 AI 붐 타고 많이 올랐는데 나스닥100이니까 NVDA·MSFT·애플이 다 들어있잖아요. 개별종목 고르기 귀찮으면 QQQ 하나로 커버되는 것 같긴 해요.",
+    createdAt: T20 - m(20), likes: 44, comments: 2 },
+  { id: 96, symbol: "QQQ", nickname: "익명_2948", holdingLabel: "30주 보유",
+    content: "QQQ 최근 5년 수익률이 말이 안 되는 수준이에요. AI 반도체 붐 꺼지면 타격이 크긴 하겠지만 장기로는 올라가는 방향 아닌가 싶어요.",
+    createdAt: T20 - m(55), likes: 27, comments: 0 },
+  { id: 97, symbol: "SCHD", nickname: "익명_6419", holdingLabel: "200주 보유",
+    content: "SCHD 배당이 꼬박꼬박 들어오는 게 좋긴 한데 최근 3년 QQQ 대비 수익률이 많이 아쉬운 건 맞아요. 그냥 배당 재투자하면서 길게 가는 전략으로 홀딩 중.",
+    createdAt: T20 - m(30), likes: 33, comments: 1 },
+
+  // ════════════════════════════════════════════════════════════════════════
   // 2026-05-19 — Tesla FSD 삼성 서밋 / META 5% 구조조정 / SpaceX 선물 $208 /
   //              Burry TSMC $2.04B / 미국-이란 핵협상 / OpenAI vs Musk 종결 /
   //              Starlink 1,000만 돌파
@@ -45,7 +104,7 @@ export const MOCK_POSTS: Post[] = [
 
   // TSLA — Tesla FSD 삼성 서밋 ───────────────────────────────────────────
   { id: 75, symbol: "TSLA", nickname: "익명_5291", holdingLabel: "90주 보유",
-    content: "일론이 삼성 스마트 모빌리티 서밋에서 한 발언 정리: 텍사스 3개 도시에서 옵티머스 로봇이 이미 완전 자율 운영 중이고, FSD·옵티머스·인간이 동일한 신경망 아키텍처로 구동된다는 게 핵심이에요. 로봇택시·옵티머스 상용화 타임라인이 앞당겨지는 시그널이에요.",
+    content: "삼성 서밋에서 일론 발언 봤어요? 텍사스 3도시에서 Optimus가 이미 완전 자율 운영 중이래요. FSD랑 Optimus랑 인간이 같은 신경망 쓴다는 것도 공개했는데, 이게 사실이면 타임라인이 완전히 달라지는 거잖아요.",
     createdAt: T19 - m(2), likes: 54, comments: 3 },
   { id: 76, symbol: "TSLA", nickname: "익명_8812", holdingLabel: "180주 보유",
     content: "FSD 아키텍처 공개 내용 봤어요? 카메라 1.5GB/s 입력을 750,000:1로 압축해서 초당 15회 주행 결정. 인간 뇌와 동일한 신경망 방식으로 피로 없이 98% 정확도 24/7 운행. 이제 단순 마케팅이 아니라 수치로 증명된 거잖아요. Cybercab 상용화 확신 강해졌어요.",
@@ -53,7 +112,7 @@ export const MOCK_POSTS: Post[] = [
 
   // META — 5% 구조조정 ────────────────────────────────────────────────────
   { id: 77, symbol: "META", nickname: "익명_3391", holdingLabel: "40주 보유",
-    content: "META 5% 감원 수요일 3차 분할 발표: 오전 35%(북미) → 오후 35%(관리직) → 저녁 30%(글로벌) 순으로 진행돼요. Google 6%·Amazon 5%랑 같은 흐름인데 META는 동시에 AI 광고 $8B 투자 계속이에요. 인력↓ + AI 자동화↑ = 마진 개선 스토리가 더 명확해졌어요.",
+    content: "META 감원 3번 나눠서 발표한다는 거 봤어요? 북미 → 관리직 → 글로벌 순으로. 자르면서 AI에 $8B 쏟아붓는 게 좀 아이러니하긴 한데, 결국 이게 제일 빠른 마진 개선 방법이긴 해요.",
     createdAt: T19 - m(5), likes: 47, comments: 4 },
   { id: 78, symbol: "META", nickname: "익명_6678", holdingLabel: "25주 보유",
     content: "사람 자르면서 AI에 $8B 쏟아붓는 게 모순처럼 보이지만 완전히 합리적인 전략이에요. Llama 오픈소스 생태계 + Ray-Ban AI 안경 + Andromeda 광고 효율 2배... 빅테크 표준 플레이북이 됐네요. 장기 홀딩 유지합니다.",
@@ -61,12 +120,12 @@ export const MOCK_POSTS: Post[] = [
 
   // AVGO — Burry TSMC·AVGO 베팅 ─────────────────────────────────────────
   { id: 79, symbol: "AVGO", nickname: "익명_2219", holdingLabel: "20주 보유",
-    content: "Michael Burry가 TSMC $2.04B 포지션 잡았어요. '빅숏' 아저씨가 AI 파운드리에 이렇게 크게 베팅한다는 게 진짜 의미 있는 시그널이에요. Broadcom도 같이 담았다고 하는데, Google TPU·Meta AI칩 맞춤 설계 독점 + Tomahawk 스위치칩 = AI 데이터센터 필수 부품 조합이네요.",
+    content: "Burry가 TSMC $2.04B 포지션 잡았어요. AI 붐에서 직접 칩 사는 게 아니라 만드는 데 베팅한다는 게 납득 가는 로직이에요. Broadcom도 같이 담았다는데 구글·메타 맞춤 AI칩 독점하는 거 보고 들어간 것 같아요.",
     createdAt: T19 - m(4), likes: 38, comments: 3 },
 
   // NVDA — Burry 역발상 ─────────────────────────────────────────────────
   { id: 80, symbol: "NVDA", nickname: "익명_4488", holdingLabel: "8주 보유",
-    content: "Burry의 논리: 'NVDA 살 때 제조사를 산다' → TSMC $2.04B 베팅. AI 붐이 진짜면 칩 수요는 무한하고 TSMC만이 2나노·3나노 생산 가능하니 NVDA보다 상단이 더 안전하다는 역발상이에요. 그래도 저는 NVDA도 동시에 가져가는 게 맞다고 봐요. NVIDIA 없이 AI 없으니까요.",
+    content: "Burry 로직이 재밌어요. NVDA 살 때 제조사를 산다는 거잖아요. 2·3나노 할 수 있는 게 TSMC밖에 없으니 NVDA보다 상단이 더 안전하다는 역발상. 근데 저는 NVDA도 같이 가져가야 한다고 봐요.",
     createdAt: T19 - m(20), likes: 33, comments: 2 },
 
   // RKLB — Starlink 1,000만 돌파 ────────────────────────────────────────
@@ -353,6 +412,43 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-05-20 신규 ──────────────────────────────────────────────────────
+  84: [
+    { id: 1, nickname: "익명_3719", holdingLabel: "30주 보유", content: "CUDA 개발자가 400만이라는데 AMD로 갈아타려면 몇 년짜리 작업이에요. 이게 진짜 해자죠.", createdAt: T20 - m(2), likes: 11 },
+    { id: 2, nickname: "익명_6582", holdingLabel: "9주 보유", content: "마진 70%이 소프트웨어 회사 수준이에요. 하드웨어 파는데 이게 말이 되나 싶어요.", createdAt: T20 - m(1), likes: 8 },
+  ],
+  86: [
+    { id: 1, nickname: "익명_1847", holdingLabel: "40주 보유", content: "에너지 마진이 자동차보다 높다고 하던데 비중 올라오면 전체 수익성이 달라지겠죠.", createdAt: T20 - m(5), likes: 14 },
+    { id: 2, nickname: "익명_7392", holdingLabel: "18주 보유", content: "Megapack 이미 완판 행진 중이잖아요. 태양광까지 합치면 에너지 사업부만 따로 상장해도 될 규모 아닌가요.", createdAt: T20 - m(2), likes: 10 },
+  ],
+  87: [
+    { id: 1, nickname: "익명_5013", holdingLabel: "30주 보유", content: "UPS·PepsiCo·Walmart 이미 주문했다는데 대형이 움직이면 중소형도 따라가는 거죠.", createdAt: T20 - m(18), likes: 9 },
+    { id: 2, nickname: "익명_2964", holdingLabel: "11주 보유", content: "Megacharger 30분에 400마일이면 고속도로 노선 커버 충분하지 않나요. 인프라 생각보다 빨리 깔릴 것 같아요.", createdAt: T20 - m(10), likes: 6 },
+  ],
+  89: [
+    { id: 1, nickname: "익명_4381", holdingLabel: "55주 보유", content: "유튜브 혼자서도 세계 2위 검색엔진이라는 말 있잖아요. 6개 합치면 진짜 말이 안 되는 규모.", createdAt: T20 - m(3), likes: 13 },
+    { id: 2, nickname: "익명_8027", holdingLabel: "20주 보유", content: "반독점 소송이 변수긴 한데 이 플랫폼 지배력은 법원도 어떻게 못 할 것 같아요. 쪼개면 각각이 올라가는 거 아닌가요.", createdAt: T20 - m(1), likes: 7 },
+  ],
+  90: [
+    { id: 1, nickname: "익명_5291", holdingLabel: "33주 보유", content: "처음에 AI가 구글 검색 다 대체할 것 같아서 걱정했는데 광고 매출이 오히려 늘었다는 게 신기해요.", createdAt: T20 - m(24), likes: 8 },
+    { id: 2, nickname: "익명_1648", holdingLabel: "16주 보유", content: "유튜브·크롬·안드로이드 각각이 독립 기업이어도 될 규모인데 그게 6개라는 게 진짜 이해가 안 돼요.", createdAt: T20 - m(20), likes: 6 },
+  ],
+  91: [
+    { id: 1, nickname: "익명_6739", holdingLabel: "70주 보유", content: "코로나 때 팔았다는 사람 주변에 진짜 있어요. 2020년 3월에 다 팔고 몇 달 후에 다시 샀다는... 저도 그때 흔들렸는데.", createdAt: T20 - m(9), likes: 16 },
+    { id: 2, nickname: "익명_3158", holdingLabel: "14주 보유", content: "20년 보유하면 $76.8K, 30년이면 $212K라는데 이걸 이해하면 단타가 얼마나 비효율적인지 바로 알죠.", createdAt: T20 - m(4), likes: 9 },
+  ],
+  92: [
+    { id: 1, nickname: "익명_4192", holdingLabel: "90주 보유", content: "신고가 때마다 사기 무섭긴 한데 결국 시장은 항상 새 신고가를 찍어왔으니까요. 그냥 꾸준히 사는 게 맞는 것 같아요.", createdAt: T20 - m(12), likes: 14 },
+    { id: 2, nickname: "익명_8019", holdingLabel: "210주 보유", content: "저도 이것저것 갈아탔다가 결국 VOO로 돌아왔어요. 단순한 게 제일 강한 전략인 것 같아요.", createdAt: T20 - m(8), likes: 11 },
+  ],
+  95: [
+    { id: 1, nickname: "익명_5831", holdingLabel: "15주 보유", content: "TQQQ 들고 있다가 QQQ로 갔어요. 레버리지는 장기 보유하면 안 된다는 거 몸으로 배웠어요.", createdAt: T20 - m(17), likes: 18 },
+    { id: 2, nickname: "익명_7264", holdingLabel: "60주 보유", content: "나스닥이 무너지면 QQQ도 같이 가는 거라 변동성은 SPY보다 크긴 한데 장기 수익률이 압도적이죠.", createdAt: T20 - m(11), likes: 9 },
+  ],
+  97: [
+    { id: 1, nickname: "익명_3746", holdingLabel: "160주 보유", content: "배당 재투자 계좌에 넣어두고 신경 안 쓰는 게 제일 편한 방법 같아요. 10년 지나면 배당 자체가 꽤 커지더라고요.", createdAt: T20 - m(26), likes: 12 },
+  ],
+
   // ── 2026-05-19 신규 ──────────────────────────────────────────────────────
   75: [
     { id: 1, nickname: "익명_3341", holdingLabel: "60주 보유", content: "텍사스 3도시 완전 자율 운영이 실제로 확인된 건가요? 아직 제한적 테스트 아닌지... 어쨌든 데이터가 쌓이는 속도가 경쟁사랑 비교가 안 되는 건 맞아요.", createdAt: T19 - m(1), likes: 9 },

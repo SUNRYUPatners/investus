@@ -163,21 +163,28 @@ function ImageGrid({ images, failedImgs, onError, onOpen }: {
     <div className={`grid gap-2 ${visible.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
       {images.map((src, i) => {
         if (failedImgs.has(i)) return null;
+        const isChart = src.startsWith("/charts/");
         return (
           <button
             key={i}
             className="relative rounded-xl overflow-hidden border w-full"
-            style={{ borderColor: "var(--border)", aspectRatio: "16/9", display: "block" }}
+            style={{
+              borderColor: "var(--border)",
+              display: "block",
+              // SVG 차트: 800×580 자연 비율 유지 (contain). 외부 이미지: 16/9 crop
+              aspectRatio: isChart ? "800/580" : "16/9",
+              background: isChart ? "rgba(8,13,26,0.8)" : undefined,
+            }}
             onClick={() => onOpen(src)}
           >
             <Image
               src={src}
               alt={`참고 자료 ${i + 1}`}
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: isChart ? "contain" : "cover" }}
               sizes="(max-width: 480px) 90vw, 440px"
               onError={() => onError(i)}
-              unoptimized={src.startsWith("/charts/")}
+              unoptimized={isChart}
             />
             <span className="absolute bottom-1.5 right-1.5 text-[9px] px-1.5 py-0.5 rounded-full font-semibold"
               style={{ background: "rgba(0,0,0,0.5)", color: "rgba(255,255,255,0.7)" }}>
@@ -298,7 +305,7 @@ function ReportCard({ report }: { report: Report }) {
                 </span>
               )}
               {report.isPinned && (
-                <Pin className="w-3 h-3 flex-shrink-0" style={{ color: style.color }} />
+                <Pin className="w-3 h-3 flex-shrink-0" style={{ color: "#d4af37" }} />
               )}
               <span
                 className="text-[9px] font-mono-num tabular-nums ml-auto flex-shrink-0"
@@ -358,7 +365,7 @@ function ReportCard({ report }: { report: Report }) {
             </span>
           )}
           {report.isPinned && (
-            <Pin className="w-3 h-3 flex-shrink-0" style={{ color: style.color }} />
+            <Pin className="w-3 h-3 flex-shrink-0" style={{ color: "#d4af37" }} />
           )}
           <span
             className="text-[9px] font-mono-num tabular-nums ml-auto flex-shrink-0"
@@ -524,6 +531,7 @@ export function ReportFeed() {
   const { user } = useAuth();
   const isPro = user?.isPro === true;
   const t = useLocale();
+  const [showOlder, setShowOlder] = useState(false);
 
   const recent = SEED_REPORTS.filter(isWithinWeek);
 
@@ -546,13 +554,18 @@ export function ReportFeed() {
     return tb > ta ? 1 : -1;
   });
 
-  // 열람 가능 vs 잠긴 리포트 분리
-  const freeReports   = SUBSCRIPTION_ENABLED
-    ? all.filter((r) => isPro || isWithin24h(r))
-    : all;
-  const lockedReports = SUBSCRIPTION_ENABLED && !isPro
-    ? all.filter((r) => !isWithin24h(r))
-    : [];
+  // 최신 날짜 그룹 vs 이전 날짜 그룹 분리
+  const latestGroup = all.filter((r) => getDateKey(r) === latestDateKey);
+  const olderGroup  = all.filter((r) => getDateKey(r) < latestDateKey);
+
+  // 열람 가능 vs 잠긴 리포트 분리 (구독 게이팅)
+  const applyGate = (list: typeof all) => ({
+    free:   SUBSCRIPTION_ENABLED ? list.filter((r) => isPro || isWithin24h(r)) : list,
+    locked: SUBSCRIPTION_ENABLED && !isPro ? list.filter((r) => !isWithin24h(r)) : [],
+  });
+
+  const latest = applyGate(latestGroup);
+  const older  = applyGate(olderGroup);
 
   return (
     <>
@@ -580,12 +593,37 @@ export function ReportFeed() {
       {/* Report cards */}
       {all.length > 0 && (
         <div className="flex flex-col gap-3">
-          {/* 열람 가능한 리포트 */}
-          {freeReports.map((r) => <ReportCard key={r.id} report={r} />)}
+          {/* 최신 날짜 리포트 — 항상 표시 */}
+          {latest.free.map((r) => <ReportCard key={r.id} report={r} />)}
+          {latest.locked.length > 0 && <LockedReportGroup reports={latest.locked} />}
 
-          {/* 잠긴 리포트 — 전체를 하나의 그룹 박스로 묶어서 구독하기 버튼 1개만 표시 */}
-          {lockedReports.length > 0 && (
-            <LockedReportGroup reports={lockedReports} />
+          {/* 이전 날짜 리포트 — 더보기 토글 */}
+          {olderGroup.length > 0 && (
+            <>
+              {!showOlder ? (
+                <button
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"
+                  style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
+                  onClick={() => setShowOlder(true)}
+                >
+                  {t.reports.olderCount(olderGroup.length)}
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              ) : (
+                <>
+                  {older.free.map((r) => <ReportCard key={r.id} report={r} />)}
+                  {older.locked.length > 0 && <LockedReportGroup reports={older.locked} />}
+                  <button
+                    className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"
+                    style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
+                    onClick={() => setShowOlder(false)}
+                  >
+                    {t.reports.collapse}
+                    <ChevronDown className="w-4 h-4 rotate-180" />
+                  </button>
+                </>
+              )}
+            </>
           )}
         </div>
       )}

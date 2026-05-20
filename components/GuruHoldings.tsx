@@ -2,17 +2,45 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, HelpCircle, X } from "lucide-react";
 import { GURUS, type Guru } from "@/lib/holdings13f";
 import { useLocale } from "@/contexts/LocaleContext";
+import { SectionInfo } from "./SectionInfo";
+
+const GURU_INFO: Record<string, { title: string; body: string }> = {
+  berkshire: {
+    title: "워렌 버핏",
+    body: "버크셔 해서웨이 회장. \"가치투자의 아버지\". 60년간 연평균 ~20% 수익률. \"좋은 기업을 적당한 가격에, 오래 보유\"가 핵심 철학. 13F 공시로 포트폴리오 공개.",
+  },
+  ark: {
+    title: "캐시 우드",
+    body: "ARK Invest 창업자. AI·바이오·핀테크·자율주행 등 혁신 테마 전문. 테슬라 최고 강세론자 중 한 명. 고위험 고성장주 집중 투자 전략.",
+  },
+  baron: {
+    title: "론 베론",
+    body: "바론 캐피털 창업자. \"10년 이상 보유\"가 철학인 장기 성장주 투자자. 테슬라 초기 투자자로 유명. $310억 운용.",
+  },
+  pelosi: {
+    title: "낸시 펠로시",
+    body: "미국 전 하원의장. 현직 의원으로 STOCK Act 공시 의무 대상. 빅테크 집중 투자로 유명. 공개 공시 기준 수익률이 S&P 500을 지속 상회해 주목받음.",
+  },
+  ackman: {
+    title: "빌 애크먼",
+    body: "퍼싱 스퀘어 캐피털 창업자. 집중 포트폴리오(10종목 내외)로 운용. 행동주의 투자자로 기업 경영에 직접 개입하는 전략으로 유명.",
+  },
+  druckenmiller: {
+    title: "스탠리 드러켄밀러",
+    body: "듀케인 패밀리 오피스 운용. 조지 소로스와 함께 영란은행을 무너뜨린 전설적 매크로 투자자. 트렌드 추종 + 집중 투자 전략.",
+  },
+};
 
 const BADGE: Record<string, { label: string; color: string }> = {
   "13F":       { label: "SEC 13F",   color: "#60a5fa" },
   "STOCK_ACT": { label: "STOCK Act", color: "#f472b6" },
 };
 
-const UP   = "#00e5a0";
-const DOWN = "#ff4d6d";
+const UP   = "#10b981";
+const DOWN = "#ef4444";
 
 type PriceMap = Record<string, { price: number; change: number; changePercent: number }>;
 
@@ -52,6 +80,8 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
   const [prices,  setPrices]  = useState<PriceMap>({});
   const [loading, setLoading] = useState(false);
   const [fetched, setFetched] = useState(false);
+  const [infoOpen, setInfoOpen] = useState(false);
+  const info = GURU_INFO[guru.id];
 
   const fetchPrices = (syms: string[]) => {
     const cached = readLocalCache(syms);
@@ -98,7 +128,18 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
         </div>
 
         <div className="flex-1 text-left min-w-0">
-          <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{guru.name}</p>
+          <div className="flex items-center gap-1.5">
+            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{guru.name}</p>
+            {info && (
+              <button
+                onClick={(e) => { e.stopPropagation(); setInfoOpen((v) => !v); }}
+                className="flex-shrink-0 opacity-50 hover:opacity-80 active:opacity-60 transition-opacity"
+                aria-label="설명 보기"
+              >
+                <HelpCircle className="w-3.5 h-3.5" style={{ color: "var(--muted)" }} />
+              </button>
+            )}
+          </div>
           <p className="text-[11px]" style={{ color: "var(--muted)" }}>{guru.fund}</p>
         </div>
 
@@ -124,6 +165,23 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
           style={{ color: "var(--muted)", transform: open ? "rotate(180deg)" : "none" }}
         />
       </button>
+
+      {/* ── Guru info panel ── */}
+      {infoOpen && info && (
+        <div
+          className="mx-3 mb-2 rounded-xl border px-3 py-2.5 relative"
+          style={{ background: `${guru.color}0d`, borderColor: `${guru.color}22` }}
+        >
+          <button
+            onClick={() => setInfoOpen(false)}
+            className="absolute top-2 right-2 opacity-40 hover:opacity-70"
+          >
+            <X className="w-3 h-3" style={{ color: "var(--text)" }} />
+          </button>
+          <p className="text-[11px] font-bold mb-1" style={{ color: guru.color }}>{info.title}</p>
+          <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{info.body}</p>
+        </div>
+      )}
 
       {/* ── Holdings list ── */}
       {open && (
@@ -265,9 +323,15 @@ export function GuruHoldings() {
     <div>
       <div className="flex items-center justify-between mb-3">
         <div>
-          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-            {t.guru.sectionTitle}
-          </h2>
+          <SectionInfo title={t.guru.sectionTitle} side="right">
+            <p className="font-bold mb-1" style={{ color: "#60a5fa" }}>13F 공시란?</p>
+            <p style={{ color: "var(--muted)" }}>미국에서 자산 <b>$1억 이상</b> 기관투자자는 매 분기마다 보유 주식을 SEC(미국 증권거래위원회)에 의무 보고해야 해요. 이게 바로 <b>13F 공시</b>예요.</p>
+            <div className="mt-2 space-y-1">
+              <p>📋 분기 종료 후 <b>45일 이내</b> 공시 의무</p>
+              <p>⏱️ 실제 매수 시점보다 최대 <b>3개월 늦게</b> 공개됨</p>
+              <p>❓ 각 투자대가 이름 옆 <b>?</b>를 눌러 개인 소개 확인</p>
+            </div>
+          </SectionInfo>
           <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
             {t.guru.subtitle}
           </p>

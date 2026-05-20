@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgts" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#081520"/></linearGradient>
+    <linearGradient id="gteal2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgts)"/>
+
+  <!-- Header -->
+  <rect width="800" height="58" fill="rgba(0,229,160,0.07)"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(0,229,160,0.25)"/>
+  <text x="400" y="22" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">Investus.kr · TESLA 분석</text>
+  <text x="400" y="44" text-anchor="middle" fill="#e2e8f0" font-size="19" font-family="Arial" font-weight="bold">Tesla Semi + 자율주행 트럭 · EV 가격 경쟁력</text>
+
+  <!-- Tesla Semi section -->
+  <rect x="20" y="75" width="460" height="195" rx="12" fill="rgba(0,229,160,0.05)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <rect x="20" y="75" width="4" height="195" rx="2" fill="url(#gteal2)"/>
+
+  <text x="40" y="103" fill="#00e5a0" font-size="13" font-family="Arial" font-weight="bold">🚛 Tesla Semi — 자율 트럭 혁명</text>
+  <rect x="40" y="110" width="424" height="1" fill="rgba(0,229,160,0.2)"/>
+
+  <!-- Semi stats -->
+  <rect x="40" y="120" width="195" height="60" rx="8" fill="rgba(0,229,160,0.08)"/>
+  <text x="137" y="147" text-anchor="middle" fill="#00e5a0" font-size="20" font-family="Arial" font-weight="bold">500mi</text>
+  <text x="137" y="163" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">완충 주행거리</text>
+  <text x="137" y="175" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">1회 충전 기준</text>
+
+  <rect x="250" y="120" width="195" height="60" rx="8" fill="rgba(96,165,250,0.08)"/>
+  <text x="347" y="147" text-anchor="middle" fill="#60a5fa" font-size="20" font-family="Arial" font-weight="bold">-77%</text>
+  <text x="347" y="163" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">운영비 절감</text>
+  <text x="347" y="175" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">디젤 트럭 대비</text>
+
+  <text x="40" y="207" fill="#94a3b8" font-size="11" font-family="Arial">▸  캘리포니아 자율주행 트럭 수요 급증</text>
+  <text x="40" y="225" fill="#94a3b8" font-size="11" font-family="Arial">▸  Ivan Torres: Model 3 $38,990 가격 분석</text>
+  <text x="40" y="243" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">▸  Semi + FSD = 물류 혁명 · 디젤 시대 종말</text>
+  <text x="40" y="258" fill="#64748b" font-size="10" font-family="Arial">     Elon: "AI가 인간 노동 대체에 책임 없다"</text>
+
+  <!-- FSD Revenue section -->
+  <rect x="500" y="75" width="280" height="195" rx="12" fill="rgba(96,165,250,0.05)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <text x="520" y="105" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">FSD 수익 전망</text>
+  <rect x="520" y="112" width="240" height="1" fill="rgba(96,165,250,0.2)"/>
+
+  <!-- FSD Revenue bars (simplified) -->
+  <text x="520" y="135" fill="#94a3b8" font-size="10" font-family="Arial">구독 수익 ($B)</text>
+  <rect x="520" y="145" width="60" height="18" rx="3" fill="rgba(96,165,250,0.3)"/>
+  <text x="590" y="158" fill="#60a5fa" font-size="11" font-family="Arial">2024: $1.2B</text>
+  <rect x="520" y="170" width="100" height="18" rx="3" fill="rgba(96,165,250,0.4)"/>
+  <text x="630" y="183" fill="#60a5fa" font-size="11" font-family="Arial">2025: $2.0B</text>
+  <rect x="520" y="195" width="150" height="18" rx="3" fill="rgba(0,229,160,0.4)"/>
+  <text x="680" y="208" fill="#00e5a0" font-size="11" font-family="Arial">2026E: $4B+</text>
+  <rect x="520" y="220" width="200" height="18" rx="3" fill="rgba(0,229,160,0.5)"/>
+  <text x="730" y="233" fill="#00e5a0" font-size="11" font-family="Arial">2027E: $8B+</text>
+  <text x="520" y="255" fill="#64748b" font-size="10" font-family="Arial">자율주행 상용화 → 급격 가속</text>
+
+  <!-- EV Pricing section -->
+  <rect x="20" y="290" width="760" height="175" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="40" y="318" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">■ Tesla EV 라인업 가격 — 경쟁력 분석</text>
+  <rect x="40" y="325" width="740" height="1" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Model 3 -->
+  <rect x="40" y="338" width="340" height="55" rx="8" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+  <text x="60" y="360" fill="#00e5a0" font-size="13" font-family="Arial" font-weight="bold">Model 3</text>
+  <text x="60" y="378" fill="#e2e8f0" font-size="18" font-family="Arial" font-weight="bold">$38,990</text>
+  <text x="220" y="360" fill="#94a3b8" font-size="10" font-family="Arial">세단 · 장거리 주행</text>
+  <text x="220" y="378" fill="#64748b" font-size="10" font-family="Arial">FSD 옵션 +$8,000</text>
+  <text x="220" y="392" fill="#64748b" font-size="10" font-family="Arial">세금 공제 후 실질가 ↓</text>
+
+  <!-- Model Y -->
+  <rect x="400" y="338" width="360" height="55" rx="8" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+  <text x="420" y="360" fill="#00e5a0" font-size="13" font-family="Arial" font-weight="bold">Model Y</text>
+  <text x="420" y="378" fill="#e2e8f0" font-size="18" font-family="Arial" font-weight="bold">$39,950</text>
+  <text x="580" y="360" fill="#94a3b8" font-size="10" font-family="Arial">SUV · 가장 인기</text>
+  <text x="580" y="378" fill="#64748b" font-size="10" font-family="Arial">세계 최다 판매 차종</text>
+  <text x="580" y="392" fill="#64748b" font-size="10" font-family="Arial">2025 글로벌 1위 유지</text>
+
+  <!-- S&P 500 comparison row -->
+  <rect x="40" y="406" width="740" height="42" rx="8" fill="rgba(251,146,60,0.06)" stroke="rgba(251,146,60,0.15)" stroke-width="1"/>
+  <text x="60" y="424" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">S&amp;P 500 vs Tesla 10년 수익률</text>
+  <text x="60" y="440" fill="#94a3b8" font-size="11" font-family="Arial">S&amp;P 500 2015-2025: +247% · Tesla 2015-2025: +1,240% · TSLA이 5배 아웃퍼폼</text>
+  <text x="620" y="432" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">TSLA: +5배</text>
+
+  <!-- Footer -->
+  <rect x="0" y="496" width="800" height="24" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="512" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial" letter-spacing="2">Investus.kr · 본 자료는 투자 참고용이며 투자 결정의 책임은 본인에게 있습니다</text>
+</svg>

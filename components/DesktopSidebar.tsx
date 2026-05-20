@@ -42,11 +42,12 @@ export function DesktopSidebar() {
   const { time, open, mounted } = useClock();
 
   const NAV = [
-    { href: "/",        emoji: "📊", label: t.nav.home    },
-    { href: "/search",  emoji: "🔍", label: t.nav.search  },
-    { href: "/wall",    emoji: "💬", label: t.nav.wall    },
-    { href: "/insight", emoji: "💡", label: t.nav.insight },
-    { href: "/more",    emoji: "···", label: t.nav.more   },
+    { href: "/",          emoji: "📊", label: t.nav.home      },
+    { href: "/search",    emoji: "🔍", label: t.nav.search    },
+    { href: "/portfolio", emoji: "💼", label: t.nav.portfolio },
+    { href: "/wall",      emoji: "💬", label: t.nav.wall      },
+    { href: "/insight",   emoji: "💡", label: t.nav.insight   },
+    { href: "/more",      emoji: "···", label: t.nav.more     },
   ];
 
   return (

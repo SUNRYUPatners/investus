@@ -332,7 +332,7 @@ export default function CreatorDashboardPage() {
                       </button>
                       <button onClick={handleCancelApplication} disabled={cancelling}
                         className="text-[11px] font-bold underline disabled:opacity-40"
-                        style={{ color: "#ff4d6d" }}>
+                        style={{ color: "#ef4444" }}>
                         {cancelling ? "취소 중…" : "신청 취소"}
                       </button>
                     </div>
@@ -484,7 +484,7 @@ export default function CreatorDashboardPage() {
                       </span>
                       <button onClick={() => handleDelete(c.id)}
                         className="flex items-center gap-0.5 text-[10px] active:opacity-70 transition-opacity"
-                        style={{ color: "#ff4d6d" }}>
+                        style={{ color: "#ef4444" }}>
                         <Trash2 className="w-3 h-3" />삭제
                       </button>
                     </div>

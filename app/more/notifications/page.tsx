@@ -29,7 +29,7 @@ const NOTIFICATIONS: NotiConfig[] = [
     emoji:       "🔔",
     label:       "장 시작 알림",
     desc:        "미국 주식 시장 개장 (오전 10:30 KST)",
-    color:       "#00e5a0",
+    color:       "#10b981",
   },
   {
     key:         "market_close",
@@ -274,7 +274,7 @@ export default function NotificationsPage() {
             style={{ background: "rgba(255,77,109,0.08)", border: "1px solid rgba(255,77,109,0.2)" }}
           >
             <span className="text-sm">⚠️</span>
-            <p className="text-[11px]" style={{ color: "#ff4d6d" }}>구독 설정 중 오류가 발생했습니다. 다시 시도해주세요.</p>
+            <p className="text-[11px]" style={{ color: "#ef4444" }}>구독 설정 중 오류가 발생했습니다. 다시 시도해주세요.</p>
           </div>
         )}
 

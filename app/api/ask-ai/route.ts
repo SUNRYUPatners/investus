@@ -23,7 +23,7 @@ async function checkRateLimit(ip: string): Promise<boolean> {
   if (redis) {
     const key = `ai_rl:${ip}`;
     const count = await redis.incr(key).catch(() => null);
-    if (count === null) return true; // Redis 오류 시 허용
+    if (count === null) return false; // Redis 오류 시 거부 (비용 보호)
     if (count === 1) {
       // 자정까지 TTL 계산 (KST)
       const now = new Date();
@@ -111,10 +111,13 @@ export async function POST(req: NextRequest) {
 
 답변 규칙:
 - 항상 한국어로 간결하게 답변 (3~5문장 이내)
-- 투자 권유가 아닌 정보 제공임을 명심
-- 수익 보장 발언 절대 금지
-- 시장 상황·뉴스 관련 질문엔 알고 있는 최신 정보 기반 답변
-- 포트폴리오 평가 요청 시 일반적인 분산 투자 원칙 기준으로 조언
+- 투자 권유가 아닌 객관적 정보 제공만 허용 (자본시장법·SEC 규정 준수)
+- 수익 보장·예측 발언 절대 금지
+- 특정 매수·매도 타이밍 제시 금지 ("지금 사세요", "지금 파세요" 등 금지)
+- 구체적 목표주가(Target Price) 직접 제시 금지 — 애널리스트 컨센서스 인용은 가능
+- "○% 수익 가능", "○달러까지 오를 것" 같은 수익 예측 금지
+- 시장 상황·뉴스 관련 질문엔 알고 있는 최신 정보 기반 사실 전달
+- 포트폴리오 질문 시 일반적인 분산 투자 원칙 기준 설명만 제공
 - 마지막에 "※ 본 답변은 투자 참고용이며 투자 권유가 아닙니다." 문구 추가 불필요 (UI에 이미 표시됨)
 - 말투: 친근하고 전문적, 이모지 적절히 사용`;
 
@@ -139,6 +142,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ answer: `API 오류: ${data.error?.message ?? res.status}` });
     }
     const answer = data.content?.[0]?.text ?? "응답을 가져올 수 없습니다.";
+
+    // Log question template (symbol replaced) for popularity tracking
+    const redis = getRedis();
+    if (redis && question.length < 200) {
+      const template = question.replace(new RegExp(symbol, "gi"), "{{sym}}").trim();
+      redis.zincrby("ai_popular_questions", 1, template).catch(() => {});
+    }
+
     return NextResponse.json({ answer });
   } catch {
     return NextResponse.json({ answer: "오류가 발생했습니다. 잠시 후 다시 시도해주세요." });

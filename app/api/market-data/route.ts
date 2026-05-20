@@ -129,6 +129,7 @@ const ETF_INDEX: Record<string, { sym: string; factor: number }> = {
   SPY: { sym: "SPX",  factor: 10.03 },
   QQQ: { sym: "COMP", factor: 36.83 },
   DIA: { sym: "DJI",  factor: 100   },
+  IWM: { sym: "RTY",  factor: 10.05 },
 };
 
 // ETF → futures: only change% is live; price derived from mock × (1 + chg%)
@@ -149,6 +150,8 @@ const COMMODITY_FUTURES_YF: Record<string, string> = {
   ES: "ES=F",  NQ: "NQ=F",  YM: "YM=F",  RTY: "RTY=F",
   CL: "CL=F",   NG: "NG=F",   GC: "GC=F",   SI: "SI=F",   HG: "HG=F",
   ZN: "ZN=F",   ZB: "ZB=F",   ZC: "ZC=F",   ZW: "ZW=F",   ZS: "ZS=F",
+  // 해외 지수 (spot index via Yahoo)
+  NK: "^N225", DAX: "^GDAXI", FTSE: "^FTSE", HSI: "^HSI",
 };
 
 // ── Crypto via Finnhub (CoinGecko fallback) ───────────────────────────────
@@ -265,7 +268,7 @@ export async function GET(req: Request) {
     // Yahoo Finance direct index fetch: ^GSPC, ^IXIC, ^DJI — backup when Finnhub ETF proxies fail
     (async (): Promise<Map<string, ETFQuote>> => {
       const out = new Map<string, ETFQuote>();
-      const MAP = { SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI" } as const;
+      const MAP = { SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI", RTY: "^RUT" } as const;
       await Promise.allSettled(Object.entries(MAP).map(async ([sym, yfSym]) => {
         try {
           const ctrl = new AbortController();
@@ -323,10 +326,11 @@ export async function GET(req: Request) {
 
   // ── 지수 (라이브 데이터만 — ETF 없으면 해당 지수 제외) ───────────────
   const INDEX_META: Record<string, { symbol: string; name: string; fullName: string; isCurrency?: boolean }> = {
-    SPX:    { symbol: "SPX",    name: "S&P 500", fullName: "S&P 500 Index" },
-    COMP:   { symbol: "COMP",   name: "NASDAQ",  fullName: "NASDAQ Composite" },
-    DJI:    { symbol: "DJI",    name: "DOW",     fullName: "Dow Jones Industrial" },
-    USDKRW: { symbol: "USDKRW", name: "원달러",  fullName: "USD/KRW 환율", isCurrency: true },
+    SPX:    { symbol: "SPX",    name: "S&P 500",      fullName: "S&P 500 Index" },
+    COMP:   { symbol: "COMP",   name: "NASDAQ",       fullName: "NASDAQ Composite" },
+    DJI:    { symbol: "DJI",    name: "DOW",          fullName: "Dow Jones Industrial" },
+    RTY:    { symbol: "RTY",    name: "Russell 2000", fullName: "Russell 2000 Index" },
+    USDKRW: { symbol: "USDKRW", name: "원달러",       fullName: "USD/KRW 환율", isCurrency: true },
   };
 
   const indices: IndexQuote[] = [];

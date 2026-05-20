@@ -2,11 +2,12 @@ export type Locale = "ko" | "en";
 
 const ko = {
   nav: {
-    home:    "홈",
-    search:  "검색",
-    wall:    "종토방",
-    insight: "인사이트",
-    more:    "더보기",
+    home:      "홈",
+    search:    "검색",
+    portfolio: "자산",
+    wall:      "종토방",
+    insight:   "인사이트",
+    more:      "더보기",
   },
   header: { tagline: "실시간 미국주식", marketOpen: "● 마켓 개장 중", marketClosed: "● 마켓 종료" },
   market: {
@@ -154,6 +155,7 @@ const ko = {
       {
         title: "앱 정보",
         items: [
+          { label: "미국주식 입문 가이드", sub: "처음 왔다면 여기서 시작하세요" },
           { label: "Investus 소개",   sub: "미국주식 투자 정보 플랫폼" },
           { label: "버전 정보",         sub: "v1.0.4 · 업데이트 이력" },
         ],
@@ -233,13 +235,15 @@ const ko = {
   reports: {
     sectionTitle: "Investus 리포트",
     subtitle:     "시장 분석 · 종목 인사이트",
-    author:       "SUNRYU CIO 작성",
+    author:       "류현우, SUNRYU Partners CIO 작성",
     lockedCount:  (n: number) => `추가 리포트 ${n}건`,
     lockedDesc:   "구독하면 전부 열람 가능해요",
     subscribe:    "구독하기 ₩5,900/월",
     showMore:     "더보기",
     showLess:     "접기",
     swipeClose:   "스와이프하여 닫기 · 두 손가락으로 확대",
+    olderCount:   (n: number) => `이전 리포트 ${n}건 더보기`,
+    collapse:     "접기",
   },
   onboarding: {
     steps: [
@@ -327,6 +331,7 @@ const ko = {
       MSFT: "마이크로소프트", META: "메타", AMZN: "아마존", GOOGL: "구글",
       AMD: "AMD", AVGO: "브로드컴", COIN: "코인베이스", SMCI: "슈퍼마이크로",
       RKLB: "로켓랩", IONQ: "아이온큐", CEG: "컨스텔레이션",
+      VOO: "S&P500 ETF", SPY: "S&P500 ETF", QQQ: "나스닥100", SCHD: "배당성장",
     } as Record<string, string>,
   },
   pwa: {
@@ -350,11 +355,12 @@ const ko = {
 
 const en: typeof ko = {
   nav: {
-    home:    "Home",
-    search:  "Search",
-    wall:    "Discussion",
-    insight: "Insights",
-    more:    "More",
+    home:      "Home",
+    search:    "Search",
+    portfolio: "Portfolio",
+    wall:      "Discussion",
+    insight:   "Insights",
+    more:      "More",
   },
   header: { tagline: "US Stock Live", marketOpen: "● MARKET OPEN", marketClosed: "● MARKET CLOSED" },
   market: {
@@ -502,7 +508,8 @@ const en: typeof ko = {
       {
         title: "App Info",
         items: [
-          { label: "About Investus",  sub: "US Stock Investment Platform" },
+          { label: "Beginner's Guide",  sub: "Start here if it's your first time" },
+          { label: "About Investus",   sub: "US Stock Investment Platform" },
           { label: "Version",          sub: "v1.0.4 · Update history" },
         ],
       },
@@ -581,13 +588,15 @@ const en: typeof ko = {
   reports: {
     sectionTitle: "Investus Reports",
     subtitle:     "Market analysis · Stock insights",
-    author:       "By SUNRYU CIO",
+    author:       "By 류현우, SUNRYU Partners CIO",
     lockedCount:  (n: number) => `+${n} more report${n === 1 ? "" : "s"}`,
     lockedDesc:   "Subscribe to read all reports",
     subscribe:    "Subscribe ₩5,900/mo",
     showMore:     "More",
     showLess:     "Less",
     swipeClose:   "Swipe to close · Pinch to zoom",
+    olderCount:   (n: number) => `Show ${n} older report${n === 1 ? "" : "s"}`,
+    collapse:     "Collapse",
   },
   onboarding: {
     steps: [
@@ -675,6 +684,7 @@ const en: typeof ko = {
       MSFT: "Microsoft", META: "Meta", AMZN: "Amazon", GOOGL: "Alphabet",
       AMD: "AMD", AVGO: "Broadcom", COIN: "Coinbase", SMCI: "Super Micro",
       RKLB: "Rocket Lab", IONQ: "IonQ", CEG: "Constellation",
+      VOO: "S&P 500 ETF", SPY: "S&P 500 ETF", QQQ: "Nasdaq 100", SCHD: "Dividend",
     } as Record<string, string>,
   },
   pwa: {

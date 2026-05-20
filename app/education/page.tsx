@@ -311,7 +311,7 @@ export default function EducationPage() {
         </div>
 
         {error && (
-          <p className="text-xs mb-4 text-center" style={{ color: "#ff4d6d" }}>{error}</p>
+          <p className="text-xs mb-4 text-center" style={{ color: "#ef4444" }}>{error}</p>
         )}
 
         <button

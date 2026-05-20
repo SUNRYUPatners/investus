@@ -157,11 +157,11 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
             <div className="grid grid-cols-3 gap-3 mb-5 p-3 rounded-2xl"
               style={{ background: "var(--bg)" }}>
               <div className="text-center">
-                <div className="text-lg font-bold font-mono-num" style={{ color: "#ff4d6d" }}>+{creator.annualReturn}%</div>
+                <div className="text-lg font-bold font-mono-num" style={{ color: "#ef4444" }}>+{creator.annualReturn}%</div>
                 <div className="text-[10px]" style={{ color: "var(--muted)" }}>연수익률</div>
               </div>
               <div className="text-center border-x" style={{ borderColor: "var(--border)" }}>
-                <div className="text-lg font-bold font-mono-num" style={{ color: "#ff4d6d" }}>+{creator.totalReturn}%</div>
+                <div className="text-lg font-bold font-mono-num" style={{ color: "#ef4444" }}>+{creator.totalReturn}%</div>
                 <div className="text-[10px]" style={{ color: "var(--muted)" }}>누적수익률</div>
               </div>
               <div className="text-center">
@@ -228,7 +228,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
                 </div>
                 {/* Return */}
                 <span className="text-xs font-bold font-mono-num w-16 text-right flex-shrink-0"
-                  style={{ color: h.avgReturn >= 0 ? "#ff4d6d" : "#00e5a0" }}>
+                  style={{ color: h.avgReturn >= 0 ? "#ef4444" : "#10b981" }}>
                   {h.avgReturn >= 0 ? "+" : ""}{h.avgReturn}%
                 </span>
               </div>

@@ -14,7 +14,7 @@ type Verification = {
 };
 
 const STATUS_LABEL = { pending: "검토 대기", approved: "승인됨", rejected: "거절됨" };
-const STATUS_COLOR = { pending: "#f59e0b", approved: "#00e5a0", rejected: "#ff4d6d" };
+const STATUS_COLOR = { pending: "#f59e0b", approved: "#10b981", rejected: "#ef4444" };
 
 function fmtDate(iso: string) {
   const d = new Date(iso);
@@ -132,13 +132,13 @@ export default function AdminCreatorsPage() {
               className="w-full px-4 py-3 rounded-xl text-sm outline-none"
               style={{
                 background: "var(--bg)",
-                border: `1px solid ${pwError ? "#ff4d6d" : "var(--border)"}`,
+                border: `1px solid ${pwError ? "#ef4444" : "var(--border)"}`,
                 color: "var(--text)",
               }}
             />
 
             {pwError && (
-              <p className="text-xs text-center" style={{ color: "#ff4d6d" }}>
+              <p className="text-xs text-center" style={{ color: "#ef4444" }}>
                 비밀번호가 틀렸습니다
               </p>
             )}
@@ -236,7 +236,7 @@ export default function AdminCreatorsPage() {
             </button>
           </div>
           {manualResult && (
-            <p className="text-xs" style={{ color: manualResult.startsWith("✓") ? "var(--mint)" : "#ff4d6d" }}>
+            <p className="text-xs" style={{ color: manualResult.startsWith("✓") ? "var(--mint)" : "#ef4444" }}>
               {manualResult}
             </p>
           )}
@@ -310,7 +310,7 @@ export default function AdminCreatorsPage() {
                       onClick={() => act(v.phone, "reject")}
                       disabled={acting === v.phone}
                       className="flex-1 py-2 rounded-xl text-xs font-bold disabled:opacity-40 flex items-center justify-center gap-1"
-                      style={{ background: "rgba(255,77,109,0.12)", color: "#ff4d6d" }}
+                      style={{ background: "rgba(255,77,109,0.12)", color: "#ef4444" }}
                     >
                       <XCircle className="w-3.5 h-3.5" />
                       거절

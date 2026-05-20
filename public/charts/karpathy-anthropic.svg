@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgk" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0c0820"/></linearGradient>
+    <linearGradient id="gpurp" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgk)"/>
+
+  <!-- Header -->
+  <rect width="800" height="58" fill="rgba(167,139,250,0.07)"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(167,139,250,0.25)"/>
+  <text x="400" y="22" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">Investus.kr · AI 업계 분석</text>
+  <text x="400" y="44" text-anchor="middle" fill="#e2e8f0" font-size="19" font-family="Arial" font-weight="bold">Andrej Karpathy → Anthropic · AI 패권 재편</text>
+
+  <!-- Karpathy profile card -->
+  <rect x="20" y="75" width="360" height="200" rx="12" fill="rgba(167,139,250,0.07)" stroke="rgba(167,139,250,0.25)" stroke-width="1"/>
+  <rect x="20" y="75" width="4" height="200" rx="2" fill="url(#gpurp)"/>
+
+  <circle cx="90" cy="140" r="36" fill="rgba(167,139,250,0.15)" stroke="rgba(167,139,250,0.4)" stroke-width="2"/>
+  <text x="90" y="148" text-anchor="middle" fill="#a78bfa" font-size="28" font-family="Arial">🧠</text>
+
+  <text x="140" y="110" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">ANDREJ KARPATHY</text>
+  <text x="140" y="130" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">Tesla AI 前 디렉터</text>
+  <text x="140" y="150" fill="#94a3b8" font-size="11" font-family="Arial">OpenAI 공동창업자</text>
+  <text x="140" y="170" fill="#94a3b8" font-size="11" font-family="Arial">Stanford CS 박사</text>
+
+  <rect x="40" y="195" width="330" height="60" rx="8" fill="rgba(167,139,250,0.1)"/>
+  <text x="60" y="218" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold">Anthropic 합류 역할</text>
+  <text x="60" y="236" fill="#e2e8f0" font-size="11" font-family="Arial">프리트레이닝 · 컴퓨트 스케일링 · 프론티어 랩</text>
+  <text x="60" y="250" fill="#64748b" font-size="10" font-family="Arial">"Anthropic 선택 = 지불할 가치 있는 유일한 곳"</text>
+
+  <!-- Anthropic card -->
+  <rect x="400" y="75" width="380" height="200" rx="12" fill="rgba(167,139,250,0.07)" stroke="rgba(167,139,250,0.2)" stroke-width="1"/>
+
+  <text x="420" y="108" fill="#a78bfa" font-size="12" font-family="Arial" font-weight="bold">■ Anthropic 현황</text>
+
+  <!-- Stats -->
+  <rect x="420" y="118" width="155" height="50" rx="8" fill="rgba(167,139,250,0.1)"/>
+  <text x="497" y="141" text-anchor="middle" fill="#a78bfa" font-size="20" font-family="Arial" font-weight="bold">$300B</text>
+  <text x="497" y="158" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">IPO 목표 밸류에이션</text>
+
+  <rect x="590" y="118" width="170" height="50" rx="8" fill="rgba(0,229,160,0.08)"/>
+  <text x="675" y="141" text-anchor="middle" fill="#00e5a0" font-size="20" font-family="Arial" font-weight="bold">Top 4</text>
+  <text x="675" y="158" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">OpenAI 경쟁 상위 4개 독식</text>
+
+  <rect x="420" y="180" width="340" height="80" rx="8" fill="rgba(167,139,250,0.06)"/>
+  <text x="440" y="205" fill="#94a3b8" font-size="11" font-family="Arial">▸ Claude 사용량 급증 → SpaceX 컴퓨팅 계약 체결</text>
+  <text x="440" y="225" fill="#94a3b8" font-size="11" font-family="Arial">▸ Anthropic AGH 80% 성장 (최근 90일)</text>
+  <text x="440" y="245" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">▸ 새 테마: AnthropicGAI 출현</text>
+
+  <!-- AI Rankings -->
+  <rect x="20" y="295" width="760" height="180" rx="12" fill="rgba(167,139,250,0.04)" stroke="rgba(167,139,250,0.15)" stroke-width="1"/>
+  <text x="40" y="322" fill="#a78bfa" font-size="13" font-family="Arial" font-weight="bold">■ AI 모델 순위 — Anthropic의 상위 4위 독식</text>
+  <rect x="40" y="330" width="740" height="1" fill="rgba(167,139,250,0.15)"/>
+
+  <!-- Rankings table -->
+  <rect x="40" y="345" width="720" height="36" rx="6" fill="rgba(167,139,250,0.15)"/>
+  <text x="60" y="368" fill="#a78bfa" font-size="12" font-family="Arial" font-weight="bold">#1</text>
+  <text x="90" y="368" fill="#e2e8f0" font-size="12" font-family="Arial" font-weight="bold">Claude Opus</text>
+  <text x="250" y="368" fill="#94a3b8" font-size="11" font-family="Arial">Anthropic · 최상위 추론 · 롱컨텍스트</text>
+  <text x="620" y="368" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">Anthropic</text>
+
+  <rect x="40" y="385" width="720" height="36" rx="6" fill="rgba(167,139,250,0.1)"/>
+  <text x="60" y="408" fill="#a78bfa" font-size="12" font-family="Arial" font-weight="bold">#2</text>
+  <text x="90" y="408" fill="#e2e8f0" font-size="12" font-family="Arial" font-weight="bold">Claude Sonnet</text>
+  <text x="250" y="408" fill="#94a3b8" font-size="11" font-family="Arial">Anthropic · 속도·비용 균형 · 코딩 탁월</text>
+  <text x="620" y="408" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">Anthropic</text>
+
+  <rect x="40" y="425" width="720" height="36" rx="6" fill="rgba(167,139,250,0.08)"/>
+  <text x="60" y="448" fill="#a78bfa" font-size="12" font-family="Arial" font-weight="bold">#3</text>
+  <text x="90" y="448" fill="#e2e8f0" font-size="12" font-family="Arial" font-weight="bold">Claude Haiku</text>
+  <text x="250" y="448" fill="#94a3b8" font-size="11" font-family="Arial">Anthropic · 초고속 · 경량 에지 추론</text>
+  <text x="620" y="448" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">Anthropic</text>
+
+  <text x="40" y="475" fill="#64748b" font-size="10" font-family="Arial">#4도 Anthropic 계열 · OpenAI GPT-5는 5위권 진입 — 판도 완전 역전</text>
+
+  <!-- Footer -->
+  <rect x="0" y="496" width="800" height="24" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="512" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial" letter-spacing="2">Investus.kr · 본 자료는 투자 참고용이며 투자 결정의 책임은 본인에게 있습니다</text>
+</svg>

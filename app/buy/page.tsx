@@ -87,7 +87,7 @@ function FailScreen({ msg, onRetry }: { msg: string; onRetry: () => void }) {
       style={{ background: "var(--bg)" }}>
       <div className="w-20 h-20 rounded-full flex items-center justify-center"
         style={{ background: "rgba(255,77,109,0.15)" }}>
-        <XCircle className="w-10 h-10" style={{ color: "#ff4d6d" }} />
+        <XCircle className="w-10 h-10" style={{ color: "#ef4444" }} />
       </div>
       <div className="text-center">
         <p className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>결제 실패</p>
@@ -373,7 +373,7 @@ export default function BuyPage() {
         </div>
 
         {errMsg && (
-          <p className="text-xs mb-4 text-center" style={{ color: "#ff4d6d" }}>{errMsg}</p>
+          <p className="text-xs mb-4 text-center" style={{ color: "#ef4444" }}>{errMsg}</p>
         )}
 
         <button

@@ -9,6 +9,8 @@ import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
 import { ReportFeed } from "@/components/ReportFeed";
 import { OnboardingModal } from "@/components/OnboardingModal";
+import { PortfolioWidget } from "@/components/PortfolioWidget";
+import { FirstVisitBanner } from "@/components/FirstVisitBanner";
 import { getLocale } from "@/lib/getLocale";
 
 export default async function HomePage() {
@@ -25,6 +27,12 @@ export default async function HomePage() {
 
           {/* ── 왼쪽 컬럼 ── */}
           <div className="lg:flex-1 lg:min-w-0">
+
+            {/* 첫 방문자 가이드 배너 */}
+            <FirstVisitBanner />
+
+            {/* 내 보유종목 (포트폴리오에 종목이 있을 때만 표시) */}
+            <PortfolioWidget />
 
             {/* 관심종목 */}
             <WatchlistSection />

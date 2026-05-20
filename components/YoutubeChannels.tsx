@@ -16,7 +16,7 @@ const CHANNELS: Channel[] = [
   { key: "sbs",    name: "SBS Biz",        initial: "SBS",  color: "#3b82f6", pageUrl: "https://www.youtube.com/@SBSBiz2021/streams"         },
   { key: "yonhap", name: "연합경제TV",      initial: "연합", color: "#ef4444", pageUrl: "https://www.youtube.com/@연합뉴스경제TV/streams"      },
   { key: "hk",     name: "한경글로벌마켓",  initial: "한경", color: "#f59e0b", pageUrl: "https://www.youtube.com/@hkglobalmarket"             },
-  { key: "money",  name: "머니코믹스",      initial: "머니", color: "#00e5a0", pageUrl: "https://www.youtube.com/@moneymoneycomics/streams"   },
+  { key: "money",  name: "머니코믹스",      initial: "머니", color: "#10b981", pageUrl: "https://www.youtube.com/@moneymoneycomics/streams"   },
 ];
 
 /* ── avatar ─────────────────────────────────────────────────── */

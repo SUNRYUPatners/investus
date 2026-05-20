@@ -6,19 +6,19 @@ import type { NewsItem } from "@/lib/api";
 
 function detectCategory(headline: string): { category: string; categoryColor: NewsItem["categoryColor"] } {
   const h = headline.toLowerCase();
-  if (/fed|fomc|rate|gdp|economy|inflation|cpi|macro|fiscal/.test(h))
+  if (/\bfed\b|fomc|\brate\b|gdp|economy|inflation|cpi|macro|fiscal/.test(h))
     return { category: "거시경제", categoryColor: "mint" };
-  if (/earning|revenue|profit|eps|quarter|guidance|forecast/.test(h))
+  if (/earning|revenue|profit|\beps\b|quarter|guidance|forecast/.test(h))
     return { category: "실적", categoryColor: "red" };
-  if (/ai|artificial intelligence|tech|software|chip|nvidia|semiconductor/.test(h))
+  if (/\bai\b|artificial intelligence|\btech\b|software|\bchip\b|nvidia|semiconductor/.test(h))
     return { category: "기술", categoryColor: "blue" };
-  if (/ev|electric vehicle|auto|tesla|ford|gm|car/.test(h))
+  if (/\bev\b|electric vehicle|automaker|automotive|\btesla\b|\bford\b|\bgm\b|\bcar\b/.test(h))
     return { category: "자동차", categoryColor: "yellow" };
-  if (/oil|energy|gas|crude|opec|exxon|chevron/.test(h))
+  if (/\boil\b|energy|\bgas\b|crude|\bopec\b|exxon|chevron/.test(h))
     return { category: "에너지", categoryColor: "orange" };
-  if (/bank|finance|crypto|bitcoin|ether|currency|forex/.test(h))
+  if (/\bbank\b|finance|crypto|bitcoin|ether|currency|forex/.test(h))
     return { category: "금융", categoryColor: "purple" };
-  if (/invest|fund|portfolio|warren|buffett|etf/.test(h))
+  if (/invest|\bfund\b|portfolio|warren|buffett|\betf\b/.test(h))
     return { category: "투자", categoryColor: "orange" };
   return { category: "시장", categoryColor: "blue" };
 }

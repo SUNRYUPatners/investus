@@ -8,6 +8,7 @@ import { FuturesHeatmap } from "./FuturesHeatmap";
 import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
 import { RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { useLocale } from "@/contexts/LocaleContext";
+import { SectionInfo } from "./SectionInfo";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
 
@@ -207,7 +208,7 @@ export function LiveMarket() {
       <section className="px-4 lg:px-0 pt-5">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-1.5">
-            <Star className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} fill="var(--mint)" />
+            <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
             <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
               {t.market.picks}
             </h2>
@@ -267,9 +268,16 @@ export function LiveMarket() {
       {/* 주요 지수 */}
       <section className="px-4 lg:px-0 pt-6">
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-            {t.market.indices}
-          </h2>
+          <SectionInfo title={t.market.indices}>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>주요 지수란?</p>
+            <p style={{ color: "var(--muted)" }}>미국 증시 전체 흐름을 나타내는 대표 지표예요.</p>
+            <div className="mt-2 space-y-1">
+              <p>📈 <b>S&P 500</b> — 미국 대형주 500개 평균. 미국 경제의 대표 지수</p>
+              <p>💻 <b>NASDAQ</b> — 기술주 중심. 애플·구글·엔비디아 등 포함</p>
+              <p>🏭 <b>DOW</b> — 미국 전통 대기업 30개 평균</p>
+              <p>📦 <b>Russell 2000</b> — 중소형주 2000개. 미국 경기 선행 지표</p>
+            </div>
+          </SectionInfo>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.liveEst}</span>
         </div>
         <div className="relative">

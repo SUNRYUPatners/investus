@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgar" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#100820"/></linearGradient>
+    <linearGradient id="gorange2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c2410c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgar)"/>
+
+  <!-- Header -->
+  <rect width="800" height="58" fill="rgba(251,146,60,0.07)"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(251,146,60,0.25)"/>
+  <text x="400" y="22" text-anchor="middle" fill="#fb923c" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">The Elon Frontier</text>
+  <text x="400" y="44" text-anchor="middle" fill="#e2e8f0" font-size="19" font-family="Arial" font-weight="bold">AI = 무한 자원 · 로봇 · 보편적 기본소득</text>
+
+  <!-- Book cover reference -->
+  <rect x="20" y="75" width="240" height="310" rx="12" fill="rgba(251,146,60,0.07)" stroke="rgba(251,146,60,0.25)" stroke-width="1"/>
+  <text x="140" y="130" text-anchor="middle" fill="#fb923c" font-size="40" font-family="Arial">📖</text>
+  <text x="140" y="165" text-anchor="middle" fill="#e2e8f0" font-size="15" font-family="Arial" font-weight="bold">The Elon</text>
+  <text x="140" y="185" text-anchor="middle" fill="#e2e8f0" font-size="15" font-family="Arial" font-weight="bold">Frontier</text>
+  <rect x="50" y="200" width="180" height="1" fill="rgba(251,146,60,0.3)"/>
+  <text x="140" y="225" text-anchor="middle" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">일론 머스크 저</text>
+  <text x="140" y="250" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">AI · 로봇 · 인류의</text>
+  <text x="140" y="268" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">미래에 관하여</text>
+
+  <rect x="50" y="290" width="180" height="55" rx="8" fill="rgba(251,146,60,0.1)"/>
+  <text x="140" y="318" text-anchor="middle" fill="#fb923c" font-size="12" font-family="Arial" font-weight="bold">"AI는 인간 노동을</text>
+  <text x="140" y="336" text-anchor="middle" fill="#fb923c" font-size="12" font-family="Arial" font-weight="bold">대체할 것이다"</text>
+  <text x="140" y="357" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">— Elon Musk</text>
+
+  <!-- Key theses -->
+  <rect x="280" y="75" width="500" height="310" rx="12" fill="rgba(251,146,60,0.04)" stroke="rgba(251,146,60,0.15)" stroke-width="1"/>
+  <text x="300" y="105" fill="#fb923c" font-size="13" font-family="Arial" font-weight="bold">■ The Elon Frontier 핵심 테제</text>
+  <rect x="300" y="113" width="460" height="1" fill="rgba(251,146,60,0.2)"/>
+
+  <!-- Thesis 1: AI as resource -->
+  <rect x="300" y="124" width="460" height="65" rx="8" fill="rgba(251,146,60,0.08)"/>
+  <text x="320" y="148" fill="#fb923c" font-size="12" font-family="Arial" font-weight="bold">🤖 AI = 무한 자원</text>
+  <text x="320" y="168" fill="#94a3b8" font-size="11" font-family="Arial">AI는 석유·전기처럼 인류의 기본 자원이 된다</text>
+  <text x="320" y="182" fill="#64748b" font-size="10" font-family="Arial">누구나 접근 가능 · 비용 제로 수렴 · 지능 민주화</text>
+
+  <!-- Thesis 2: Humanoid robots -->
+  <rect x="300" y="200" width="460" height="65" rx="8" fill="rgba(167,139,250,0.07)"/>
+  <text x="320" y="224" fill="#a78bfa" font-size="12" font-family="Arial" font-weight="bold">🦾 휴머노이드 로봇 시대</text>
+  <text x="320" y="244" fill="#94a3b8" font-size="11" font-family="Arial">Optimus 로봇이 인간보다 많아지는 세계 가능</text>
+  <text x="320" y="258" fill="#64748b" font-size="10" font-family="Arial">Starlink 인프라 + Optimus = 글로벌 로봇 네트워크</text>
+
+  <!-- Thesis 3: UBI -->
+  <rect x="300" y="276" width="460" height="65" rx="8" fill="rgba(0,229,160,0.06)"/>
+  <text x="320" y="300" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">💰 보편적 기본소득(UBI)</text>
+  <text x="320" y="320" fill="#94a3b8" font-size="11" font-family="Arial">AI가 노동을 대체 → UBI로 분배 → 인류 번영</text>
+  <text x="320" y="334" fill="#64748b" font-size="10" font-family="Arial">노동 가치 재정의 · 창의적 활동에 집중</text>
+
+  <!-- Elon quote -->
+  <rect x="300" y="352" width="460" height="28" rx="6" fill="rgba(251,146,60,0.12)"/>
+  <text x="320" y="371" fill="#fb923c" font-size="10" font-family="Arial" font-weight="bold">"나는 AI가 인간 노동을 대체하는 것에 책임이 없다" — Elon</text>
+
+  <!-- Investment implications -->
+  <rect x="20" y="405" width="760" height="70" rx="12" fill="rgba(251,146,60,0.05)" stroke="rgba(251,146,60,0.15)" stroke-width="1"/>
+  <text x="40" y="430" fill="#fb923c" font-size="12" font-family="Arial" font-weight="bold">■ 투자 시사점</text>
+  <text x="40" y="452" fill="#e2e8f0" font-size="11" font-family="Arial">🟢 TSLA: Optimus 로봇 + FSD + 에너지 = AI 시대 복합 수혜 핵심주</text>
+  <text x="40" y="468" fill="#e2e8f0" font-size="11" font-family="Arial">🟢 NVDA: AI 연산 인프라 독점 · 로봇 AI 칩 수요 폭발적 성장 예상</text>
+
+  <!-- Neuralink addition -->
+  <rect x="20" y="478" width="760" height="14" rx="4" fill="rgba(167,139,250,0.06)"/>
+  <text x="400" y="490" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="Arial">Neuralink: 커뮤니케이션·이동·감각 회복 — AI+인간 융합의 최종 단계</text>
+
+  <!-- Footer -->
+  <rect x="0" y="496" width="800" height="24" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="512" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial" letter-spacing="2">Investus.kr · 본 자료는 투자 참고용이며 투자 결정의 책임은 본인에게 있습니다</text>
+</svg>

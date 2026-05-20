@@ -40,8 +40,21 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(data ?? []);
   }
 
-  // User: check their own status
+  // User: check their own status — JWT required, can only query their own email
   if (phone) {
+    // Verify the requester's JWT and ensure they're querying their own email
+    const authHeader = req.headers.get("authorization");
+    const jwtToken = authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : null;
+    if (jwtToken) {
+      const { data: { user } } = await getSupabase().auth.getUser(jwtToken);
+      if (!user || user.email !== phone) {
+        return NextResponse.json({ status: null });
+      }
+    } else {
+      // No token → return null without revealing whether email exists
+      return NextResponse.json({ status: null });
+    }
+
     const { data } = await getSupabase()
       .from("creator_verifications")
       .select("status")

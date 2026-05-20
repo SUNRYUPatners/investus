@@ -106,7 +106,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
                 style={{
                   background: avatar
                     ? "rgba(0,229,160,0.12)"
-                    : "linear-gradient(135deg,#00e5a0,#0d6efd)",
+                    : "linear-gradient(135deg,#10b981,#0d6efd)",
                   border: "3px solid rgba(0,229,160,0.3)",
                 }}
               >

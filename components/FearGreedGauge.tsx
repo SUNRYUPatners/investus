@@ -1,11 +1,14 @@
+"use client";
+
 import type { FearGreedData } from "@/lib/api";
 import type { Locale } from "@/lib/i18n";
 import { getT } from "@/lib/i18n";
+import { SectionInfo } from "./SectionInfo";
 
 const GAUGE_R = 32;
 const C = 2 * Math.PI * GAUGE_R;
 
-const ZONE_COLORS = ["#00e5a0", "#7ed957", "#ffd166", "#ff8c55", "#ff4d6d"];
+const ZONE_COLORS = ["#10b981", "#7ed957", "#ffd166", "#ff8c55", "#ef4444"];
 const ZONE_ICONS  = ["😱", "😨", "😐", "⚡", "🔥"];
 const ZONE_RANGES = [{ from: 0, to: 25 }, { from: 25, to: 45 }, { from: 45, to: 55 }, { from: 55, to: 75 }, { from: 75, to: 100 }];
 
@@ -46,9 +49,18 @@ export function FearGreedGauge({ data, locale }: { data: FearGreedData; locale?:
         className="flex items-center justify-between px-4 py-3 border-b"
         style={{ borderColor: "var(--border)" }}
       >
-        <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-          {t.fearGreed.sectionTitle}
-        </h2>
+        <SectionInfo title={t.fearGreed.sectionTitle} side="right">
+          <p className="font-bold mb-1" style={{ color: "#ffd166" }}>공포 & 탐욕 지수란?</p>
+          <p style={{ color: "var(--muted)" }}>지금 투자자들이 <b>얼마나 두려워하거나 욕심내는지</b>를 0~100으로 표현해요.</p>
+          <div className="mt-2 space-y-1">
+            <p>😱 <b>0~25 극단적 공포</b> — 공황 상태. 역사적으로 <b>매수 기회</b></p>
+            <p>😟 <b>26~44 공포</b> — 불안 심리 우세</p>
+            <p>😐 <b>45~55 중립</b> — 균형 상태</p>
+            <p>😊 <b>56~74 탐욕</b> — 낙관 심리 우세</p>
+            <p>🤑 <b>75~100 극단적 탐욕</b> — 과열. 버핏이 현금 비중 늘리는 구간</p>
+          </div>
+          <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>"남들이 탐욕스러울 때 공포를 느끼고, 남들이 공포스러울 때 탐욕스러워라" — 워런 버핏</p>
+        </SectionInfo>
         <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>{t.fearGreed.subtitle}</span>
       </div>
 

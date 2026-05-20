@@ -14,7 +14,7 @@ const STATS = [
 const PRINCIPLES = [
   {
     icon: <Shield className="w-5 h-5" />,
-    color: "#00e5a0",
+    color: "#10b981",
     title: "절대 잃지 않는 투자",
     desc: "수익 극대화 이전에 원금 보존을 최우선합니다. 리스크를 철저히 계산하고, 확신이 없는 종목에는 절대 진입하지 않습니다.",
   },

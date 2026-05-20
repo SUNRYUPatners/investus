@@ -12,8 +12,8 @@ import { AdBanner } from "@/components/AdBanner";
 import { Star } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
 
-const UP   = "#ff4d6d";
-const DOWN = "#00e5a0";
+const UP   = "#10b981";
+const DOWN = "#ef4444";
 
 const POPULAR = ["AAPL", "NVDA", "TSLA", "MSFT", "AMZN", "META", "GOOGL", "AMD"];
 

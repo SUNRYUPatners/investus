@@ -8,8 +8,8 @@ import { Star } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
 import Link from "next/link";
 
-const UP   = "#00e5a0";
-const DOWN = "#ff4d6d";
+const UP   = "#10b981";
+const DOWN = "#ef4444";
 
 type PriceData = { price: number; change: number; changePercent: number };
 
@@ -67,7 +67,7 @@ export function WatchlistSection() {
     <section className="px-4 lg:px-0 pt-5">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-1.5">
-          <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
+          <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
           <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
             {t.watchlist.title}
           </h2>
@@ -97,7 +97,7 @@ export function WatchlistSection() {
                   className="absolute top-2 right-2 p-0.5"
                   aria-label={t.watchlist.removeLabel}
                 >
-                  <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
+                  <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
                 </button>
                 <div className="mb-2 pr-5">
                   <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{sym}</p>
@@ -128,7 +128,7 @@ export function WatchlistSection() {
                 className="absolute top-2 right-2 p-0.5"
                 aria-label={t.watchlist.removeLabel}
               >
-                <Star className="w-3.5 h-3.5" style={{ color: "#facc15" }} fill="#facc15" />
+                <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
               </button>
 
               <div className="mb-2 pr-5">

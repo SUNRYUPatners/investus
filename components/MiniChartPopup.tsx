@@ -7,20 +7,28 @@ type ChartPoint = { ts: number; close: number };
 type Props = {
   symbol: string;
   name: string;
+  price?: number;
   changePercent: number;
   anchorX: number;
   anchorY: number;
   onClose: () => void;
 };
 
-const UP   = "#00e5a0";
-const DOWN = "#ff4d6d";
+const UP   = "#10b981";
+const DOWN = "#ef4444";
 const CW   = 208;
 const CH   = 64;
 const POPUP_W = 240;
 const POPUP_H = 160;
 
-export function MiniChartPopup({ symbol, name, changePercent, anchorX, anchorY, onClose }: Props) {
+function fmtPrice(p: number): string {
+  if (p < 10)   return p.toFixed(3);
+  if (p < 100)  return p.toFixed(2);
+  if (p < 1000) return p.toFixed(2);
+  return p.toLocaleString("en-US", { maximumFractionDigits: 1 });
+}
+
+export function MiniChartPopup({ symbol, name, price, changePercent, anchorX, anchorY, onClose }: Props) {
   const [points, setPoints] = useState<ChartPoint[] | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const pos   = changePercent >= 0;
@@ -104,9 +112,16 @@ export function MiniChartPopup({ symbol, name, changePercent, anchorX, anchorY, 
             {name}
           </p>
         </div>
-        <span className="text-xs font-bold font-mono-num flex-shrink-0" style={{ color }}>
-          {pos ? "+" : ""}{changePercent.toFixed(2)}%
-        </span>
+        <div className="text-right flex-shrink-0">
+          {price != null && (
+            <p className="text-sm font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
+              {fmtPrice(price)}
+            </p>
+          )}
+          <span className="text-xs font-bold font-mono-num" style={{ color }}>
+            {pos ? "+" : ""}{changePercent.toFixed(2)}%
+          </span>
+        </div>
       </div>
 
       {/* Chart */}

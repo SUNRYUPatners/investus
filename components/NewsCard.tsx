@@ -1,8 +1,8 @@
 import type { NewsItem } from "@/lib/api";
 
 const categoryStyle: Record<string, { bg: string; color: string }> = {
-  mint:   { bg: "rgba(0,229,160,0.12)",  color: "#00e5a0" },
-  red:    { bg: "rgba(255,77,109,0.12)", color: "#ff4d6d" },
+  mint:   { bg: "rgba(0,229,160,0.12)",  color: "#10b981" },
+  red:    { bg: "rgba(255,77,109,0.12)", color: "#ef4444" },
   blue:   { bg: "rgba(59,130,246,0.12)", color: "#60a5fa" },
   purple: { bg: "rgba(168,85,247,0.12)", color: "#c084fc" },
   yellow: { bg: "rgba(234,179,8,0.12)",  color: "#facc15" },
@@ -20,6 +20,7 @@ export function NewsCard({ item, large = false }: { item: NewsItem; large?: bool
         <img
           src={item.image}
           alt=""
+          referrerPolicy="no-referrer"
           className={`flex-shrink-0 rounded-xl object-cover ${large ? "w-20 h-14" : "w-10 h-10"}`}
         />
       ) : (

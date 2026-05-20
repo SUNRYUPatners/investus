@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { IndexQuote } from "@/lib/api";
 import { Sparkline } from "./Sparkline";
 
-const UP   = "#00e5a0";
-const DOWN = "#ff4d6d";
+const UP   = "#10b981";
+const DOWN = "#ef4444";
 
 export function IndexCard({ index }: { index: IndexQuote }) {
   const pos = index.changePercent >= 0;

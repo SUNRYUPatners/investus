@@ -123,6 +123,15 @@ const mockIndices: IndexQuote[] = [
     sparkline: [1382, 1380, 1378, 1376, 1375, 1374, 1373, 1372, 1372],
     isCurrency: true,
   },
+  {
+    symbol: "RTY",
+    name: "Russell 2000",
+    fullName: "Russell 2000 Index",
+    value: 2041.3,
+    change: -8.4,
+    changePercent: -0.41,
+    sparkline: [2058, 2055, 2050, 2048, 2045, 2043, 2042, 2041, 2041],
+  },
 ];
 
 const mockQuotes: Quote[] = [
@@ -300,6 +309,11 @@ const mockFutures: FutureItem[] = [
   { symbol: "ZC", name: "옥수수 선물 (Corn)", price: 461.25, change: 4.0, changePercent: 0.87, group: "농산물" },
   { symbol: "ZW", name: "밀 선물 (Wheat)", price: 582.5, change: -7.25, changePercent: -1.23, group: "농산물" },
   { symbol: "ZS",  name: "대두 선물 (Soybeans)", price: 1178.0,  change:  5.25, changePercent:  0.45, group: "농산물"  },
+  // 해외지수
+  { symbol: "NK",   name: "닛케이 225",   price: 38000.0, change: -200.0, changePercent: -0.52, group: "해외지수" },
+  { symbol: "DAX",  name: "DAX",          price: 23500.0, change:  120.0, changePercent:  0.51, group: "해외지수" },
+  { symbol: "FTSE", name: "FTSE 100",     price:  8600.0, change:  -30.0, changePercent: -0.35, group: "해외지수" },
+  { symbol: "HSI",  name: "항셍",         price: 23000.0, change:  -80.0, changePercent: -0.35, group: "해외지수" },
   // 암호화폐
   { symbol: "BTC", name: "비트코인",             price: 62850.0, change: 1240.0, changePercent:  2.01, group: "암호화폐" },
   { symbol: "ETH", name: "이더리움",             price:  3124.0, change:   64.5, changePercent:  2.11, group: "암호화폐" },
@@ -368,10 +382,11 @@ export const RECOMMENDED_SYMBOLS = ["GOOGL", "TSLA", "PLTR", "IBM", "JPM"];
 const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
 
 export const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [
-  { yahoo: "^GSPC",    symbol: "SPX",    name: "S&P 500", fullName: "S&P 500 Index" },
-  { yahoo: "^IXIC",    symbol: "COMP",   name: "NASDAQ",  fullName: "NASDAQ Composite" },
-  { yahoo: "^DJI",     symbol: "DJI",    name: "DOW",     fullName: "Dow Jones Industrial" },
-  { yahoo: "USDKRW=X", symbol: "USDKRW", name: "원달러",  fullName: "USD/KRW 환율", isCurrency: true },
+  { yahoo: "^GSPC",    symbol: "SPX",    name: "S&P 500",      fullName: "S&P 500 Index" },
+  { yahoo: "^IXIC",    symbol: "COMP",   name: "NASDAQ",       fullName: "NASDAQ Composite" },
+  { yahoo: "^DJI",     symbol: "DJI",    name: "DOW",          fullName: "Dow Jones Industrial" },
+  { yahoo: "^RUT",     symbol: "RTY",    name: "Russell 2000", fullName: "Russell 2000 Index" },
+  { yahoo: "USDKRW=X", symbol: "USDKRW", name: "원달러",       fullName: "USD/KRW 환율", isCurrency: true },
 ];
 export { mockIndices, mockFutures };
 
@@ -475,13 +490,13 @@ export async function searchQuotes(query: string): Promise<Quote[]> {
 // ── Category detection from Finnhub news headline ─────────────────────────
 function detectCategory(headline: string): { category: string; categoryColor: NewsItem["categoryColor"] } {
   const h = headline.toLowerCase();
-  if (/fed|fomc|rate|gdp|economy|inflation|cpi|macro|fiscal/.test(h)) return { category: "거시경제", categoryColor: "mint" };
-  if (/earning|revenue|profit|eps|quarter|guidance|forecast/.test(h))  return { category: "실적",     categoryColor: "red" };
-  if (/ai|artificial intelligence|tech|software|chip|nvidia|semiconductor/.test(h)) return { category: "기술", categoryColor: "blue" };
-  if (/ev|electric vehicle|auto|tesla|ford|gm|car/.test(h))            return { category: "자동차",   categoryColor: "yellow" };
-  if (/oil|energy|gas|crude|opec|exxon|chevron/.test(h))               return { category: "에너지",   categoryColor: "orange" };
-  if (/bank|finance|crypto|bitcoin|ether|currency|forex/.test(h))      return { category: "금융",     categoryColor: "purple" };
-  if (/invest|fund|portfolio|warren|buffett|etf/.test(h))              return { category: "투자",     categoryColor: "orange" };
+  if (/\bfed\b|fomc|\brate\b|gdp|economy|inflation|cpi|macro|fiscal/.test(h)) return { category: "거시경제", categoryColor: "mint" };
+  if (/earning|revenue|profit|\beps\b|quarter|guidance|forecast/.test(h))      return { category: "실적",     categoryColor: "red" };
+  if (/\bai\b|artificial intelligence|\btech\b|software|\bchip\b|nvidia|semiconductor/.test(h)) return { category: "기술", categoryColor: "blue" };
+  if (/\bev\b|electric vehicle|automaker|automotive|\btesla\b|\bford\b|\bgm\b|\bcar\b/.test(h)) return { category: "자동차", categoryColor: "yellow" };
+  if (/\boil\b|energy|\bgas\b|crude|\bopec\b|exxon|chevron/.test(h))           return { category: "에너지",   categoryColor: "orange" };
+  if (/\bbank\b|finance|crypto|bitcoin|ether|currency|forex/.test(h))          return { category: "금융",     categoryColor: "purple" };
+  if (/invest|\bfund\b|portfolio|warren|buffett|\betf\b/.test(h))              return { category: "투자",     categoryColor: "orange" };
   return { category: "시장", categoryColor: "blue" };
 }
 

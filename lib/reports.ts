@@ -35,6 +35,119 @@ export const CATEGORY_EMOJI: Record<ReportCategory, string> = {
 export const SEED_REPORTS: Report[] = [
 
   // ══════════════════════════════════════════════════════════════════════════
+  // 2026-05-20 리포트
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-048",
+    title:         "NVIDIA +74% · Tesla $95B · Karpathy→Anthropic · KOSPI 교훈 · AI 노동혁명",
+    summary:       "NVIDIA Q4 +74% 수익 · 70% 마진 / Tesla $95B 매출 + 휴스턴 태양광 공장 / Karpathy Anthropic 합류 · AI 상위 4위 독식 / KOSPI 폭락 후 회복 교훈 / The Elon Frontier — 6가지 핵심 뉴스를 한 장으로",
+    body:          "■ 오늘의 핵심 6가지 (비주얼 요약 이미지를 확인하세요)\n\n🟢 NVIDIA Q4 2025 — +74% 연수익 · 70% 매출총이익률 · 43% FCF · 공정가치 $179 · 데이터센터 89%\n\n🚗 Tesla 매출 $95B (2025) + 휴스턴 태양광 기가팩토리 — 100GW 목표 · 에너지 사업 본격화\n\n🚛 Tesla Semi + EV 가격 — Model 3 $38,990 · 자율 트럭 혁명 · FSD 수익 급성장\n\n🧠 Andrej Karpathy → Anthropic — AI 모델 상위 4위 독식 · IPO $300B 목표 · Karpathy 프리트레이닝 담당\n\n🤖 The Elon Frontier — AI = 무한 자원 · 휴머노이드 로봇 · 보편적 기본소득(UBI)\n\n📈 KOSPI 폭락 회복 교훈 — $1M 보유 → $1.1M vs 매도 시 $600K · 공포에 팔지 마라",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 5/20 시장 한장 요약",
+    date:          "2026-05-20",
+    updatedAt:     "2026.05.20 08:00",
+    isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260520.svg"],
+  },
+
+  {
+    id:            "seed-049",
+    title:         "NVIDIA Q4 2025 — +74% 연수익, 70% 마진, 공정가치 $179 분석",
+    summary:       "NVIDIA 2025 회계연도 Q4 결산 분석입니다. 연간 수익률 +74%, 매출총이익률 70%, 잉여현금흐름률 43%를 기록했습니다. 공정가치는 $179로 현재 주가 대비 20% 고평가 상태이나 데이터센터(89%)·게이밍(+47%)·전문시각화(+159%) 고성장이 지속됩니다.",
+    body:          "■ NVIDIA Q4 2025 핵심 지표\n\n• 연간 수익률: +74% (2025 회계연도 기준)\n• 매출총이익률: 70% (Gross Margin)\n• 잉여현금흐름률: 43% (FCF Margin)\n• 공정가치 추정: $179/share\n• 현재가 대비 고평가: +20% (주의 구간)\n\n■ 매출 세그먼트 분석\n\n데이터센터: 전체 매출의 89%\n• Blackwell B200 GPU 출하 시작\n• 클라우드 3사(AWS·Azure·GCP) 선주문 초과\n• Microsoft, Google, Amazon 각 $20B+ 투자 발표\n\n게이밍: +47% YoY\n• RTX 5090 출시 → 초고사양 수요 폭발\n• 게임 AI (DLSS 4.0) 전 게임 적용 확산\n\n전문 시각화: +159% YoY\n• Omniverse 플랫폼 기업 채택 확산\n• 자동차 시뮬레이션 수요 급증\n\n■ CUDA 생태계의 해자\n\n\"CUDA = NVIDIA의 진짜 경쟁력\"\n\n• CUDA 개발자: 400만 명+\n• CUDA 위에 구축된 AI 모델: 수만 개\n• AMD·Intel 전환 비용: 수년 리팩토링 필요\n→ 고착성(Lock-in) 효과 극히 강함\n\n■ Blackwell B200 수요 전망\n\n\"Demand for Blackwell is insane\" — Jensen Huang\n\n• B200 출하가: ~$40,000/GPU\n• H100 대비 AI 추론 속도: 30배 향상\n• GB200 NVL72 시스템: $3M/랙\n• 수요 > 공급 상황 2026년까지 지속 전망\n\n■ 위험 요소\n\n• 공정가치 $179 대비 현재 과평가 → 단기 조정 가능성\n• AMD MI300X 시장 점유율 일부 잠식\n• 중국 수출 규제 재강화 리스크\n• Anthropic·Google 자체 TPU 확대 → 장기 리스크\n\n■ 결론\n\nNVIDIA의 AI 인프라 독점 지위는 단기간 깨지지 않습니다. 공정가치 $179 대비 현재 고평가지만, Blackwell 수요 폭발이 이를 정당화할 수 있습니다. 장기 보유 논리는 유효하되, 단기 과열은 주의 필요합니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "🟢 NVIDIA (Q4 2025·Blackwell)",
+    date:          "2026-05-20",
+    updatedAt:     "2026.05.20 07:55",
+    isPinned:      true,
+    images:        ["/charts/nvidia-q4-2025.svg"],
+  },
+
+  {
+    id:            "seed-050",
+    title:         "Tesla 매출 $95B (2025) + 휴스턴 태양광 기가팩토리 — 100GW 목표",
+    summary:       "Tesla의 2025년 연간 매출이 $95B를 기록했습니다. 2012년 $0에서 시작해 13년 만에 475배 성장입니다. 동시에 Tesla가 텍사스 휴스턴에 거대 태양광 패널 공장 건설을 신청했습니다. 메가팩 시설과 병행 입지로 2030년까지 100GW 태양광 목표를 추진합니다.",
+    body:          "■ Tesla 연간 매출 성장 궤적\n\n| 연도 | 매출 | 성장 |\n|------|------|------|\n| 2012 | $0.2B | 시작 |\n| 2016 | $7.0B | 35배 |\n| 2019 | $24.6B | 123배 |\n| 2021 | $53.8B | 269배 |\n| 2023 | $97.7B | 489배 |\n| 2025 | $95.0B | 475배 |\n\n\"Tesla Revenue: From $0 in 2012 to $95B in 2025\"\n\n■ 2025년 매출 구조 분석\n\n• 자동차: ~$77B (81%)\n• 에너지 생성·저장: ~$12B (13%)\n• 서비스 및 기타: ~$6B (6%)\n→ 에너지 사업 비중 빠르게 증가 중\n\n■ 테슬라 태양광 기가팩토리 — 휴스턴 텍사스\n\n\"Electrek: Tesla is applying to build a giant solar panel factory in Houston, Texas, for co-location with Megapack facilities.\"\n\n핵심 내용:\n• 위치: 텍사스 휴스턴\n• 유형: 거대 태양광 패널(Solar Panel) 제조 공장\n• 병행 시설: 메가팩(Megapack) 에너지 저장 시설\n• 목표: 2030년까지 100GW 태양광 생산 능력\n\n■ 100GW의 의미\n\n현재 전 세계 태양광 연간 설치량 ~380GW (2024)\n→ Tesla 혼자 100GW 공급 시 전 세계 설치량의 26% 차지 가능\n→ 현재 최대 태양광 제조업체(Longi, ~60GW)보다 1.67배 큰 규모\n\n■ Tesla = 에너지 + 모빌리티 + AI 복합 기업\n\n\"Tesla is not just a car company anymore.\"\n\nShyp Merrith 테제:\n1) 자동차: Model 3·Y·S·X·Cybertruck·Semi\n2) 에너지: Megapack·Powerwall·Solar·Supercharger\n3) AI: FSD·Optimus·Dojo·Cortex\n\n→ 세 사업부 모두 독립 상장 가능한 규모\n\n■ 자사주 매입 발표\n\n\"Tesla announces $1 share buyback program\"\n\n• 주주가치 환원 신호\n• 경영진의 주가 저평가 확신 표현\n• FCF 개선으로 재원 확보 가능\n\n■ 투자 시사점\n\n• 매출 성장: $95B → $130B+ (2026E 전망)\n• 에너지 사업 마진 개선 → 전체 수익성 향상\n• 태양광 공장 완공 시 에너지 매출 2~3배 가능\n• 자사주 매입 → EPS 개선 효과\n\n■ 결론\n\nTesla의 $95B 매출과 휴스턴 태양광 기가팩토리는 \"AI 자동차 기업\"을 넘어 \"에너지 플랫폼 기업\"으로의 전환을 공식화합니다. 2030년 100GW 목표가 달성되면 Tesla의 에너지 사업만으로도 수십조 원 가치입니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🚗 Tesla (매출 $95B·태양광)",
+    date:          "2026-05-20",
+    updatedAt:     "2026.05.20 07:50",
+    isPinned:      true,
+    images:        ["/charts/tsla-revenue-solar.svg"],
+  },
+
+  {
+    id:            "seed-051",
+    title:         "Tesla Semi + 자율 트럭 혁명 — Model 3 $38,990 · FSD 수익 급성장",
+    summary:       "Tesla Semi가 캘리포니아 자율주행 트럭 수요를 선점하고 있습니다. 완충 주행거리 500마일, 디젤 대비 운영비 77% 절감이 핵심 경쟁력입니다. Model 3 $38,990·Model Y $39,950의 가격 경쟁력과 함께 FSD 구독 수익이 2026년 $4B+으로 급증할 전망입니다.",
+    body:          "■ Tesla Semi 핵심 스펙\n\n• 주행거리: 500마일 (완충 1회)\n• 운영비: 디젤 대비 77% 절감\n• 충전: Megacharger 30분 → 400마일\n• 제로백: 5초 (만재 80,000파운드)\n• 자율주행: FSD 지원 (OTA 업데이트)\n\n■ 캘리포니아 자율주행 트럭 수요\n\n\"California demand for autonomous trucking\" — Ivan Torres 분석\n\n• CA주: 2035년 디젤 트럭 신규 판매 금지 법안\n• 물류 회사: UPS·PepsiCo·Walmart 이미 주문\n• 총 미국 트럭: ~320만 대 → 교체 시장 $2T+\n• Semi FSD 탑재 시 운전기사 비용 절감 → ROI 극대화\n\n■ FSD 수익 전망\n\n| 연도 | FSD 구독 수익 |\n|------|---------------|\n| 2024 | ~$1.2B |\n| 2025 | ~$2.0B |\n| 2026E | ~$4.0B |\n| 2027E | ~$8.0B |\n| 2028E | ~$15B+ |\n\n\"Elon: FSD 구독 수익이 자동차 판매 수익을 초과할 것\"\n\n■ Tesla EV 가격 — 경쟁력\n\n| 모델 | 가격 | 특징 |\n|------|------|------|\n| Model 3 | $38,990 | 세단·장거리 |\n| Model Y | $39,950 | SUV·세계 최다 판매 |\n| Cybertruck | $49,890+ | 픽업트럭 |\n| Tesla Semi | $150,000+ | 상용 트럭 |\n\n세금 공제(최대 $7,500) 적용 시 실질 구매가 대폭 하락\n\n■ Elon Musk 발언 — AI와 노동\n\n\"Elon on AI replacing labor: 'not responsible for AI replacing human labor'\"\n\n• AI가 Semi 운전기사를 대체하는 구조\n• 물류 비용 혁명 → 전 산업 파급 효과\n• Sawyer Merritt: Semi 수요 분석으로 TSLA 강세 전망\n\n■ S&P 500 vs Tesla 10년 비교\n\n• S&P 500 (2015-2025): +247%\n• Tesla (2015-2025): +1,240%\n• Tesla가 S&P 500 대비 5배 아웃퍼폼\n\n■ 결론\n\nTesla Semi는 디젤 시대 종말의 선두주자입니다. 자율주행 트럭과 FSD 구독 수익의 폭발적 성장은 Tesla를 \"소프트웨어 기업\"으로 재평가하게 만들 것입니다. $38,990 Model 3는 EV 대중화의 가격 임계점을 돌파했습니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🚛 Tesla Semi (자율트럭·EV 가격)",
+    date:          "2026-05-20",
+    updatedAt:     "2026.05.20 07:45",
+    images:        ["/charts/tesla-semi-ev.svg"],
+  },
+
+  {
+    id:            "seed-052",
+    title:         "Andrej Karpathy Anthropic 합류 — AI 모델 상위 4위 독식, IPO $300B 목표",
+    summary:       "Tesla AI 전 디렉터이자 OpenAI 공동창업자 Andrej Karpathy가 Anthropic에 합류했습니다. 프리트레이닝과 컴퓨트 스케일링을 담당합니다. Anthropic은 OpenAI와의 경쟁에서 AI 모델 상위 4개를 독식하며 IPO $300B 목표를 향해 달리고 있습니다.",
+    body:          "■ Andrej Karpathy — 경력 프로필\n\n• 스탠퍼드 CS 박사 (딥러닝·컴퓨터비전)\n• OpenAI 공동창업자 (2015년 GPT-1 시대)\n• Tesla AI 디렉터 (2017~2022) — FSD 아키텍처 설계\n• Karpathy.ai: AI 교육 채널 (수백만 팔로워)\n• 2023: OpenAI 복귀 → 2024: 독립\n\n■ Anthropic 합류 발표\n\n\"Andrej Karpathy joins Anthropic — confirmed working on pre-training, compute scaling, frontier labs.\"\n\"Choice of Anthropic = 'the single worth paying for' — Karpathy\"\n\n합류 역할:\n• 프리트레이닝(Pre-training) 총괄\n• 컴퓨트 스케일링 전략\n• 프론티어 랩 연구\n\n■ Anthropic — AI 업계 현황\n\n| 지표 | 수치 |\n|------|------|\n| IPO 목표 밸류 | $300B |\n| 최근 90일 성장률 | 80% (AGH) |\n| 상위 4위 모델 독식 | Claude Opus·Sonnet·Haiku 등 |\n| SpaceX 컴퓨팅 계약 | 서버 부족 → 긴급 계약 |\n\n■ AI 모델 순위 — Anthropic 독식\n\n\"Anthropic dominated top 4 spots in OpenAI competition\"\n\n• #1 Claude Opus: 최상위 추론·롱컨텍스트\n• #2 Claude Sonnet: 속도·비용 균형·코딩\n• #3 Claude Haiku: 초고속·경량 에지\n• #4 Claude 계열 (추가 특화 모델)\n• GPT-5: 5위권 진입 — 판도 역전\n\n■ Anthropic vs OpenAI 경쟁 구도\n\n| 항목 | Anthropic | OpenAI |\n|------|-----------|--------|\n| 안전성 | Constitutional AI | RLHF |\n| 컨텍스트 | 200K 토큰 | 128K 토큰 |\n| API 가격 | 경쟁력 있음 | 유사 |\n| IPO 상태 | 준비 중 ($300B) | 준비 중 ($150~200B) |\n| 주요 파트너 | Amazon, Google | Microsoft |\n\n■ 새 테마: AnthropicGAI\n\n\"새 테마 AnthropicGAI 출현 / Andrej K joining\"\n\n→ Anthropic이 단순 AI 스타트업을 넘어 AGI 레이스 공식 참가자로 시장 인식\n\n■ Anthropic 투자 방법 (비상장)\n\n• 직접 투자 불가 (비상장)\n• 간접 수혜: Google ($GOOGL — Anthropic 주요 투자자)\n• 간접 수혜: Amazon ($AMZN — AWS에서 Claude API 독점)\n• IPO 시: 공모 참여 고려\n\n■ 결론\n\nKarpathy의 Anthropic 합류는 AI 업계 최대 인재 이동입니다. Anthropic이 단순한 안전 AI 기업에서 AGI 패권을 노리는 최전선으로 이동했음을 상징합니다. Claude의 AI 모델 상위 4위 독식은 2026년 AI 판도의 결정적 변화입니다.",
+    category:      "섹터",
+    categoryColor: "purple",
+    subject:       "🧠 Anthropic (Karpathy·AI 순위)",
+    date:          "2026-05-20",
+    updatedAt:     "2026.05.20 07:40",
+    isPinned:      true,
+    images:        ["/charts/karpathy-anthropic.svg"],
+  },
+
+  {
+    id:            "seed-053",
+    title:         "The Elon Frontier — AI = 무한 자원, 휴머노이드 로봇, 보편적 기본소득",
+    summary:       "Elon Musk의 저서 'The Elon Frontier'가 AI 시대 인류의 미래를 제시합니다. AI는 석유·전기처럼 무한한 자원이 되고, 휴머노이드 로봇이 인간 노동을 대체하며, 보편적 기본소득(UBI)이 도입됩니다. Elon은 '나는 AI가 인간 노동을 대체하는 것에 책임이 없다'고 발언했습니다.",
+    body:          "■ The Elon Frontier — 핵심 테제\n\n\"The Elon Frontier: AI as abundant resource, humanoid robots, universal basic income, labor abundance thesis\"\n\n■ 테제 1: AI = 무한 자원\n\n\"AI is an abundant resource like oil or electricity.\"\n\n• 과거: 지식과 계산 능력은 희소 자원\n• 현재: AI로 누구나 지식 전문가 수준 접근 가능\n• 미래: AI 비용이 전기처럼 제로에 수렴\n→ 민주화된 지능 → 생산성 혁명\n\n■ 테제 2: 휴머노이드 로봇 시대\n\n\"Starlink could lead a world with far more robots than humans.\"\n\n• Optimus 생산: 2026년 수만 대 → 2030년 수백만 대 목표\n• Optimus 단가: $20,000~$30,000 목표 (현재 $200,000+)\n• 용도: 공장·물류·가사·간병·농업\n• Starlink 인프라: 로봇 글로벌 네트워크 통신 담당\n\n■ 테제 3: 보편적 기본소득(UBI)\n\n\"Labor abundance → Universal Basic Income\"\n\n• AI + 로봇 = 대부분의 생산 담당\n• 인간 = 창의·관계·예술에 집중\n• UBI = AI가 창출한 부를 분배하는 시스템\n→ 노동 가치의 근본적 재정의\n\n■ Elon Musk 발언 — 노동 대체\n\n\"Elon on AI replacing labor: 'not responsible for AI replacing human labor'\"\n\n• AI·로봇이 인간 일자리를 대체하는 것은 불가역적\n• Elon: 개인의 책임이 아닌 기술 진보의 필연\n• 해법: UBI + 새로운 가치 창출 활동\n\n■ Neuralink의 역할\n\n\"Neuralink may eventually restore communication, mobility, sensation.\"\n\n• 신체 장애 극복 → 커뮤니케이션 회복\n• 뇌-컴퓨터 인터페이스 → AI와 인간 융합\n• 최종 단계: 인간 인지 능력의 기하급수적 확장\n\n■ Tesla · NVIDIA 수혜 구조\n\n| 기업 | AI 노동혁명 수혜 |\n|------|------------------|\n| TSLA | Optimus 로봇 · FSD · 에너지 |\n| NVDA | AI 연산 인프라 · 로봇 GPU |\n| SPCE | Starlink 로봇 통신 인프라 |\n\n■ 결론\n\n'The Elon Frontier'가 제시하는 미래는 공상이 아닌 이미 시작된 현실입니다. Optimus 로봇·Neuralink·Starlink가 교차하는 지점에서 Tesla·NVIDIA가 이 혁명의 핵심 수혜자로 자리잡고 있습니다.",
+    category:      "특집",
+    categoryColor: "orange",
+    subject:       "🤖 The Elon Frontier (AI·로봇·UBI)",
+    date:          "2026-05-20",
+    updatedAt:     "2026.05.20 07:35",
+    images:        ["/charts/ai-robot-abundance.svg"],
+  },
+
+  {
+    id:            "seed-054",
+    title:         "KOSPI 폭락과 회복 — $1M 보유하면 $1.1M, 팔면 $600K · 공포에 팔지 마라",
+    summary:       "KOSPI가 장중 8,048 역사적 고점을 터치했습니다. 개인투자자 신용잔고도 사상 최고치입니다. 역사적으로 폭락 시 보유한 투자자는 10년 후 $1M → $1.1M을 달성했지만, 공포에 판 투자자는 $600K에 그쳤습니다. 시장은 항상 회복합니다.",
+    body:          "■ KOSPI 현황\n\n• 장중 최고점: 8,048 터치\n• 개인 신용잔고: 사상 최고치\n• 개인투자자 공포 지수: 높은 수준\n\n\"개인투자자들은 폭락 시 공황 매도하지만 시장은 항상 회복한다\"\n\n■ 두 가지 선택의 결과\n\n케이스 A — 폭락 시 패닉 매도:\n• 초기 투자금: $1,000,000\n• 폭락(-30~40%) 시 손절 매도\n• 10년 후 결과: ~$600,000\n• 결과: -40% 영구 손실 확정\n\n케이스 B — 보유 지속:\n• 초기 투자금: $1,000,000\n• 폭락 무시 → 장기 보유 유지\n• 10년 후 결과: ~$1,100,000\n• 결과: +10% 수익 + 배당 + 복리\n\n→ 차이: $500,000 (5억 원)\n\n■ KOSPI 주요 폭락·회복 역사\n\n1997년 IMF 외환위기:\n• 폭락: -70%\n• 회복: 3년 후 완전 회복\n• 이후: +400% 상승\n→ 1997년에 판 투자자 = 영구 손실\n\n2008년 글로벌 금융위기:\n• 폭락: -55%\n• 회복: 2010년 완전 회복\n• 이후: KOSPI 최고점 갱신\n\n2020년 코로나 패닉:\n• 폭락: -35%\n• 회복: 8개월 만에 완전 회복\n• 이후: 사상 최고점 3,316 돌파\n\n■ 왜 개인이 손해를 보는가\n\n\"개인 신용 부채가 사상 최고치를 기록하고 있습니다\"\n\n• 레버리지 투자 → 폭락 시 강제 청산\n• 공포 심리 → 저점에서 매도\n• 반등 시 현금 소진 → 매수 기회 박탈\n\n■ 버핏의 원칙 적용\n\n\"나는 시간이 지나면 내가 이길 것이라는 걸 안다\" — Warren Buffett\n\n• 시장 폭락 = 할인 세일\n• 정기 적립 → 평균 단가 하락\n• 레버리지 없이 → 강제 청산 없음\n• 시간이 내 편 → 복리의 마법\n\n■ 결론\n\nKOSPI 8,048 고점과 신용잔고 최고치는 경고 신호이지만, 동시에 '시장이 건강하게 기능하고 있다'는 증거이기도 합니다. 폭락이 와도 버티는 투자자가 결국 이깁니다. 공포에 팔지 마십시오.",
+    category:      "시장분석",
+    categoryColor: "mint",
+    subject:       "📈 KOSPI (폭락·회복·장기투자)",
+    date:          "2026-05-20",
+    updatedAt:     "2026.05.20 07:30",
+    images:        ["/charts/kospi-crash-recovery.svg"],
+  },
+
+  {
+    id:            "seed-055",
+    title:         "Warren Buffett \"반드시 이긴다\" + Google 6개 3B+ 플랫폼 · S&P 500 복리",
+    summary:       "Warren Buffett의 \"시간이 지나면 내가 이길 것\"이라는 투자 철학과 Google CEO Sundar Pichai의 6개 3B+ 사용자 플랫폼(Gmail·Search·Maps·Android·Chrome·YouTube) 발표, S&P 500 장기 복리 수익률 분석을 다룹니다.",
+    body:          "■ Warren Buffett 투자 철학\n\n\"나는 시간이 지나면 내가 이길 것이라는 걸 안다\" — Warren Buffett\n\n• 이 발언의 맥락: 단기 시장 변동에 흔들리지 않는 확신\n• 버핏의 버크셔 헤서웨이 60년 CAGR: +19.8%\n• S&P 500 같은 기간 CAGR: +10.2%\n→ 버핏이 두 배 아웃퍼폼\n\n■ Google (Alphabet) — 6개 3B+ 플랫폼\n\n\"Google CEO Sundar Pichai: 6 products with 3B+ users\"\n\n| 플랫폼 | 사용자 | 특징 |\n|--------|--------|------|\n| Gmail | 3B+ | 무료 이메일 세계 1위 |\n| Search | 3B+ | 검색 시장 92% 점유 |\n| Maps | 3B+ | 내비게이션 표준 |\n| Android | 3B+ | 모바일 OS 72% |\n| Chrome | 3B+ | 웹 브라우저 1위 |\n| YouTube | 3B+ | 동영상 플랫폼 1위 |\n\n\"역대 6개 제품 동시 3B+ 달성 기업: 전무\" — 독보적 플랫폼 지배력\n\n■ Google AI 전환 현황\n\n• Gemini 2.5: 코딩·추론 벤치마크 상위\n• AI Overview: 검색 결과 AI 통합\n• Google Cloud AI: 기업 AI 시장 3위\n• YouTube AI: 추천 알고리즘 AI 완전 전환\n\n리스크:\n• 검색 시장 AI 위협 (ChatGPT·Perplexity)\n• 반독점 소송 지속\n→ 그래도 광고 매출 $230B+ 방어력 유지\n\n■ S&P 500 장기 수익률 분석\n\n| 연도 | S&P 500 연간 수익률 |\n|------|---------------------|\n| 2008 | -38.5% (금융위기) |\n| 2009 | +26.5% (반등) |\n| 2017 | +21.8% (트럼프 1기) |\n| 2020 | +18.4% (코로나 반등) |\n| 2022 | -18.1% (금리 충격) |\n| 2023 | +26.3% (AI 랠리) |\n| 2024 | +23.3% (AI 지속) |\n\n10년 CAGR: +10.7%\n$10,000 → $27,700 (10년 보유)\n$10,000 → $76,800 (20년 보유)\n\n■ 복리의 마법 — 투자 기간별\n\n| 기간 | $10K의 성장 (10.7% CAGR) |\n|------|---------------------------|\n| 5년 | $16,600 |\n| 10년 | $27,700 |\n| 20년 | $76,800 |\n| 30년 | $212,800 |\n\n\"가장 강력한 힘은 복리다\" — Albert Einstein\n\n■ 결론\n\n버핏의 \"반드시 이긴다\"는 확신은 복리와 시간에 대한 깊은 이해에서 나옵니다. Google의 6개 3B+ 플랫폼은 AI 시대에도 흔들리지 않는 광고 제국의 기반입니다. S&P 500의 10년 CAGR +10.7%는 장기 투자의 가장 확실한 근거입니다.",
+    category:      "시장분석",
+    categoryColor: "orange",
+    subject:       "💰 Buffett·Google·S&P 500 (복리)",
+    date:          "2026-05-20",
+    updatedAt:     "2026.05.20 07:25",
+    images:        ["/charts/buffett-google-sp500.svg"],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
   // 2026-05-19 리포트
   // ══════════════════════════════════════════════════════════════════════════
 

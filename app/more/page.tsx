@@ -140,10 +140,10 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
                 rows={5}
                 maxLength={500}
                 className="w-full px-4 py-3 rounded-xl border text-sm outline-none resize-none mb-1"
-                style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}
+                style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)", fontSize: "16px" }}
               />
               <ValidationError field="message" prefix="내용" errors={state.errors}
-                className="text-xs mb-2" style={{ color: "#ff4d6d" }} />
+                className="text-xs mb-2" style={{ color: "#ef4444" }} />
               <div className="flex justify-between mb-4">
                 <span className="text-[10px]" style={{ color: "var(--muted)" }}>{fb.minChars}</span>
                 <span className="text-[10px] font-mono-num" style={{ color: "var(--muted)" }}>
@@ -153,7 +153,7 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
 
               {/* Generic form error */}
               <ValidationError errors={state.errors}
-                className="text-xs mb-3 text-center block" style={{ color: "#ff4d6d" }} />
+                className="text-xs mb-3 text-center block" style={{ color: "#ef4444" }} />
 
               <button
                 type="submit"
@@ -415,7 +415,7 @@ function InstallSection() {
                   <div className="relative flex-shrink-0">
                     <div className="absolute -inset-1.5 rounded-lg animate-pulse" style={{ background: "rgba(0,229,160,0.3)" }} />
                     <div className="relative w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "#2c2c2e" }}>
-                      <span className="text-[13px] font-bold tracking-tight" style={{ color: "#00e5a0" }}>···</span>
+                      <span className="text-[13px] font-bold tracking-tight" style={{ color: "#10b981" }}>···</span>
                     </div>
                   </div>
                 </div>
@@ -563,7 +563,7 @@ function AuthSection() {
                 style={{
                   background: user.avatar
                     ? "rgba(0,229,160,0.12)"
-                    : "linear-gradient(135deg,#00e5a0,#0d6efd)",
+                    : "linear-gradient(135deg,#10b981,#0d6efd)",
                   border: "2px solid rgba(0,229,160,0.3)",
                   fontSize: user.avatar ? "1.75rem" : undefined,
                 }}
@@ -597,7 +597,7 @@ function AuthSection() {
           <button
             onClick={logout}
             className="mt-4 w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border text-sm font-semibold active:opacity-70 transition-opacity"
-            style={{ borderColor: "rgba(255,77,109,0.3)", color: "#ff4d6d" }}
+            style={{ borderColor: "rgba(255,77,109,0.3)", color: "#ef4444" }}
           >
             <LogOut className="w-4 h-4" />
             {au.logout}
@@ -669,7 +669,7 @@ function AuthSection() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 bg-transparent text-sm outline-none"
-              style={{ color: "var(--text)" }}
+              style={{ color: "var(--text)", fontSize: "16px" }}
             />
           </div>
 
@@ -684,7 +684,7 @@ function AuthSection() {
                 value={pw}
                 onChange={(e) => setPw(e.target.value)}
                 className="flex-1 bg-transparent text-sm outline-none"
-                style={{ color: "var(--text)" }}
+                style={{ color: "var(--text)", fontSize: "16px" }}
                 onKeyDown={(e) => e.key === "Enter" && (mode === "login" ? handleLogin() : handleSignup())}
               />
               <button onClick={() => setPwVisible((v) => !v)}>
@@ -724,7 +724,7 @@ function AuthSection() {
             </button>
           )}
 
-          {error && <p className="text-xs mb-3" style={{ color: "#ff4d6d" }}>{error}</p>}
+          {error && <p className="text-xs mb-3" style={{ color: "#ef4444" }}>{error}</p>}
 
           <button
             onClick={mode === "login" ? handleLogin : mode === "signup" ? handleSignup : handleReset}
@@ -860,12 +860,12 @@ export default function MorePage() {
   const [showFeedback, setShowFeedback] = useState(false);
 
   const MENU_EMOJIS = [
-    ["📊", "🔖"],
+    ["📖", "📊", "🔖"],
     ["📢", "🔔", "💌", "❓"],
     ["📄", "🔒", "⚠️"],
   ];
   const MENU_HREFS = [
-    ["/more/about", "/more/version"],
+    ["/more/guide", "/more/about", "/more/version"],
     ["/more/notices", "/more/notifications", undefined, "/more/faq"],
     ["/more/terms", "/more/privacy", "/more/disclaimer"],
   ];

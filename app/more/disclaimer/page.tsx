@@ -9,7 +9,7 @@ const WARNINGS = [
     emoji: "⚠️",
     title: "투자 원금 손실 위험",
     body: "미국주식 및 모든 금융 투자상품은 원금 손실이 발생할 수 있습니다. 투자 원금의 전부 또는 일부를 잃을 수 있으며, 특히 레버리지 상품이나 고변동성 종목의 경우 손실이 투자 원금을 초과할 수도 있습니다.",
-    color: "#ff4d6d",
+    color: "#ef4444",
     bg: "rgba(255,77,109,0.08)",
   },
   {
@@ -37,7 +37,7 @@ const WARNINGS = [
     emoji: "📰",
     title: "뉴스 및 외부 데이터",
     body: "서비스 내 뉴스, 시세, 재무 데이터는 외부 데이터 제공업체로부터 수집됩니다. 데이터의 정확성 및 최신성을 보장하지 않으며, 데이터 오류로 인해 발생한 손해에 대해 서비스는 책임을 지지 않습니다.",
-    color: "#00e5a0",
+    color: "#10b981",
     bg: "rgba(0,229,160,0.08)",
   },
   {
@@ -82,7 +82,7 @@ export default function DisclaimerPage() {
           className="rounded-2xl p-4 mb-6 border"
           style={{ background: "rgba(255,77,109,0.06)", borderColor: "rgba(255,77,109,0.2)" }}
         >
-          <p className="text-sm font-bold mb-1" style={{ color: "#ff4d6d" }}>⚠️ 중요 고지</p>
+          <p className="text-sm font-bold mb-1" style={{ color: "#ef4444" }}>⚠️ 중요 고지</p>
           <p className="text-[13px] leading-relaxed" style={{ color: "var(--text)" }}>
             본 앱은 미국 증권법 및 대한민국 자본시장법상 투자매매업·투자중개업·투자자문업 인가를 받지 않았습니다.
             제공되는 모든 정보는 투자 참고 자료일 뿐이며, 투자 손실에 대해 일체의 법적 책임을 지지 않습니다.

@@ -14,7 +14,7 @@
   <!-- Header band -->
   <rect width="800" height="62" fill="rgba(0,229,160,0.07)"/>
   <rect x="0" y="61" width="800" height="1" fill="rgba(0,229,160,0.2)"/>
-  <text x="400" y="24" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">SUNRYU PARTNERS · 2026.05.14 오늘의 한장 요약</text>
+  <text x="400" y="24" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">2026.05.14 오늘의 한장 요약</text>
   <text x="400" y="48" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Arial" font-weight="bold">6가지 핵심 뉴스 · 한눈에 보기</text>
 
   <!-- Card 1: 케빈 워시 연준 -->

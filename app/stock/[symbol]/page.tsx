@@ -74,8 +74,8 @@ function fmtPct(v: number | null): string {
   return v == null ? "—" : (v * 100).toFixed(2) + "%";
 }
 
-const UP   = "#00e5a0";
-const DOWN = "#ff4d6d";
+const UP   = "#10b981";
+const DOWN = "#ef4444";
 
 function isMarketOpen(): boolean {
   const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));

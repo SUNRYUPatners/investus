@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgn" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0a1220"/></linearGradient>
+    <linearGradient id="ggreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00e5a0"/><stop offset="100%" stop-color="#00b580"/></linearGradient>
+    <linearGradient id="gblue" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="gpurple" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgn)"/>
+
+  <!-- Header -->
+  <rect width="800" height="58" fill="rgba(96,165,250,0.07)"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(96,165,250,0.25)"/>
+  <text x="400" y="22" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">NVIDIA 분석</text>
+  <text x="400" y="44" text-anchor="middle" fill="#e2e8f0" font-size="19" font-family="Arial" font-weight="bold">NVIDIA Q4 2025 — AI 인프라 독점 지위</text>
+
+  <!-- Main metric boxes -->
+  <!-- +74% Return -->
+  <rect x="20" y="75" width="170" height="90" rx="10" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.3)" stroke-width="1"/>
+  <text x="105" y="108" text-anchor="middle" fill="#00e5a0" font-size="30" font-family="Arial" font-weight="bold">+74%</text>
+  <text x="105" y="128" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">연간 수익률</text>
+  <text x="105" y="148" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">2025 회계연도</text>
+
+  <!-- 70% Gross Margin -->
+  <rect x="205" y="75" width="170" height="90" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <text x="290" y="108" text-anchor="middle" fill="#60a5fa" font-size="30" font-family="Arial" font-weight="bold">70%</text>
+  <text x="290" y="128" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">매출총이익률</text>
+  <text x="290" y="148" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Gross Margin</text>
+
+  <!-- 43% FCF -->
+  <rect x="390" y="75" width="170" height="90" rx="10" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.3)" stroke-width="1"/>
+  <text x="475" y="108" text-anchor="middle" fill="#a78bfa" font-size="30" font-family="Arial" font-weight="bold">43%</text>
+  <text x="475" y="128" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">잉여현금흐름률</text>
+  <text x="475" y="148" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">FCF Margin</text>
+
+  <!-- $179 Fair Value -->
+  <rect x="575" y="75" width="205" height="90" rx="10" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <text x="677" y="108" text-anchor="middle" fill="#fb923c" font-size="30" font-family="Arial" font-weight="bold">$179</text>
+  <text x="677" y="128" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">공정 가치 추정</text>
+  <text x="677" y="148" text-anchor="middle" fill="#f87171" font-size="10" font-family="Arial">현재가 대비 +20% 고평가</text>
+
+  <!-- Revenue breakdown section -->
+  <text x="20" y="192" fill="#e2e8f0" font-size="14" font-family="Arial" font-weight="bold">매출 세그먼트 분석</text>
+  <rect x="0" y="198" width="800" height="1" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Datacenter bar -->
+  <rect x="20" y="212" width="620" height="38" rx="6" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <rect x="20" y="212" width="546" height="38" rx="6" fill="rgba(96,165,250,0.22)"/>
+  <text x="36" y="236" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">데이터센터</text>
+  <text x="650" y="235" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">89%</text>
+  <text x="700" y="235" fill="#64748b" font-size="11" font-family="Arial">매출 비중</text>
+
+  <!-- Gaming bar -->
+  <rect x="20" y="264" width="300" height="38" rx="6" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+  <rect x="20" y="264" width="141" height="38" rx="6" fill="rgba(0,229,160,0.2)"/>
+  <text x="36" y="288" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">게이밍</text>
+  <text x="150" y="287" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">+47%</text>
+  <text x="200" y="287" fill="#64748b" font-size="11" font-family="Arial">YoY 성장</text>
+
+  <!-- Pro Visualization bar -->
+  <rect x="340" y="264" width="300" height="38" rx="6" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.15)" stroke-width="1"/>
+  <rect x="340" y="264" width="239" height="38" rx="6" fill="rgba(167,139,250,0.2)"/>
+  <text x="356" y="288" fill="#a78bfa" font-size="12" font-family="Arial" font-weight="bold">전문 시각화</text>
+  <text x="480" y="287" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">+159%</text>
+  <text x="540" y="287" fill="#64748b" font-size="11" font-family="Arial">YoY 성장</text>
+
+  <!-- Investment thesis -->
+  <rect x="20" y="322" width="760" height="165" rx="12" fill="rgba(96,165,250,0.05)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="40" y="348" fill="#60a5fa" font-size="12" font-family="Arial" font-weight="bold">■ 투자 핵심 포인트</text>
+
+  <text x="40" y="372" fill="#e2e8f0" font-size="12" font-family="Arial">🟢  Blackwell B200 GPU 수요 폭발 — 클라우드 3사(AWS·Azure·GCP) 선주문 초과</text>
+  <text x="40" y="396" fill="#e2e8f0" font-size="12" font-family="Arial">🟢  소프트웨어(CUDA 생태계) 고착성 — 경쟁사 전환 비용 극히 높음</text>
+  <text x="40" y="420" fill="#e2e8f0" font-size="12" font-family="Arial">⚠️  공정가치 $179 대비 현재가 20% 고평가 — 성장 프리미엄 이미 반영</text>
+  <text x="40" y="444" fill="#e2e8f0" font-size="12" font-family="Arial">⚠️  AMD MI300X · Google TPU 경쟁 심화 — 점유율 일부 잠식 가능성</text>
+
+  <rect x="40" y="458" width="740" height="1" fill="rgba(255,255,255,0.06)"/>
+  <text x="40" y="476" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">결론: AI 인프라 독점 · 고평가 감안해도 장기 보유 논리 유효 — $179 목표가 기준 매수 판단</text>
+
+  <!-- Footer -->
+  <rect x="0" y="496" width="800" height="24" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="512" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial" letter-spacing="2">Investus.kr · 본 자료는 투자 참고용이며 투자 결정의 책임은 본인에게 있습니다</text>
+</svg>

@@ -69,10 +69,10 @@ export default function ApplicationsPage() {
             onKeyDown={(e) => e.key === "Enter" && login()}
             style={{ width: "100%", background: "#1e2028", border: "1px solid #2a2d38", borderRadius: 10, padding: "10px 14px", color: "#e8eaed", fontSize: 14, outline: "none", boxSizing: "border-box" }}
           />
-          {pwError && <p style={{ color: "#ff4d6d", fontSize: 12, marginTop: 6 }}>비밀번호가 틀렸습니다.</p>}
+          {pwError && <p style={{ color: "#ef4444", fontSize: 12, marginTop: 6 }}>비밀번호가 틀렸습니다.</p>}
           <button
             onClick={login}
-            style={{ marginTop: 14, width: "100%", background: "#00e5a0", color: "#000", border: "none", borderRadius: 10, padding: "11px 0", fontWeight: 700, fontSize: 14, cursor: "pointer" }}
+            style={{ marginTop: 14, width: "100%", background: "#10b981", color: "#000", border: "none", borderRadius: 10, padding: "11px 0", fontWeight: 700, fontSize: 14, cursor: "pointer" }}
           >
             확인
           </button>
@@ -87,7 +87,7 @@ export default function ApplicationsPage() {
       <p style={{ fontSize: 12, color: "#6b7280", marginBottom: 20 }}>총 {rows.length}건</p>
 
       {loading && <p style={{ color: "#6b7280" }}>불러오는 중…</p>}
-      {error   && <p style={{ color: "#ff4d6d" }}>오류: {error}</p>}
+      {error   && <p style={{ color: "#ef4444" }}>오류: {error}</p>}
       {!loading && !error && rows.length === 0 && (
         <p style={{ color: "#6b7280" }}>신청 내역이 없습니다.</p>
       )}

@@ -3,7 +3,19 @@
 import { useState, useRef, useEffect } from "react";
 import type { FutureItem } from "@/lib/api";
 import { MiniChartPopup } from "./MiniChartPopup";
+import { SectionInfo } from "./SectionInfo";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+
+function useIsDesktop() {
+  const [lg, setLg] = useState(false);
+  useEffect(() => {
+    const check = () => setLg(window.innerWidth >= 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  return lg;
+}
 
 // ── Color helpers ───────────────────────────────────────────────────────────
 function bg(pct: number) {
@@ -20,13 +32,13 @@ const ROWS: {
   cells: { sym: string; flex: number }[];
 }[] = [
   {
-    rowH: 90,
-    groupKey: "indices",
+    rowH: 80,
+    groupKey: "global",
     cells: [
-      { sym: "ES",  flex: 4   },
-      { sym: "NQ",  flex: 3.5 },
-      { sym: "YM",  flex: 2.5 },
-      { sym: "RTY", flex: 2   },
+      { sym: "NK",   flex: 3   },
+      { sym: "DAX",  flex: 3   },
+      { sym: "FTSE", flex: 2.5 },
+      { sym: "HSI",  flex: 2.5 },
     ],
   },
   {
@@ -41,7 +53,7 @@ const ROWS: {
     ],
   },
   {
-    rowH: 58,
+    rowH: 70,
     groupKey: "bonds",
     cells: [
       { sym: "ZN",  flex: 2.5 },
@@ -64,23 +76,23 @@ const ROWS: {
 ];
 
 const GROUP_KO: Record<string, string> = {
-  indices: "지수",
-  energy:  "에너지 · 금속",
-  bonds:   "채권 · 외환 · 농산물",
-  crypto:  "암호화폐",
+  global: "해외 지수",
+  energy: "에너지 · 금속",
+  bonds:  "채권 · 외환 · 농산물",
+  crypto: "암호화폐",
 };
 const GROUP_EN: Record<string, string> = {
-  indices: "Indices",
-  energy:  "Energy · Metals",
-  bonds:   "Bonds · FX · Agri",
-  crypto:  "Crypto",
+  global: "Global Indices",
+  energy: "Energy · Metals",
+  bonds:  "Bonds · FX · Agri",
+  crypto: "Crypto",
 };
 
 const SHORT_KO: Record<string, string> = {
-  ES:  "S&P 500",
-  NQ:  "나스닥 100",
-  YM:  "다우존스",
-  RTY: "러셀 2000",
+  NK:   "닛케이 225",
+  DAX:  "DAX",
+  FTSE: "FTSE 100",
+  HSI:  "항셍",
   CL:  "WTI 원유",
   NG:  "천연가스",
   GC:  "금",
@@ -97,10 +109,10 @@ const SHORT_KO: Record<string, string> = {
   ETH: "이더리움",
 };
 const SHORT_EN: Record<string, string> = {
-  ES:  "S&P 500",
-  NQ:  "Nasdaq 100",
-  YM:  "Dow Jones",
-  RTY: "Russell 2000",
+  NK:   "Nikkei 225",
+  DAX:  "DAX",
+  FTSE: "FTSE 100",
+  HSI:  "Hang Seng",
   CL:  "WTI Crude",
   NG:  "Nat. Gas",
   GC:  "Gold",
@@ -120,6 +132,7 @@ const SHORT_EN: Record<string, string> = {
 type PopupState = {
   symbol: string;
   name: string;
+  price: number;
   changePercent: number;
   anchorX: number;
   anchorY: number;
@@ -142,6 +155,7 @@ export function FuturesHeatmap({ items }: Props) {
   const [thumbW, setThumbW]   = useState(100);
   const scrollRef             = useRef<HTMLDivElement>(null);
   const locale                = useLocaleCode();
+  const isDesktop             = useIsDesktop();
   const SHORT                 = locale === "ko" ? SHORT_KO : SHORT_EN;
   const GROUP                 = locale === "ko" ? GROUP_KO : GROUP_EN;
   const bySymbol = Object.fromEntries(items.map((i) => [i.symbol, i]));
@@ -173,9 +187,18 @@ export function FuturesHeatmap({ items }: Props) {
         className="flex items-center justify-between px-4 py-3 border-b"
         style={{ borderColor: "var(--border)" }}
       >
-        <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-          Futures Map
-        </h2>
+        <SectionInfo title="Futures Map" side="left">
+          <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>선물 시장이란?</p>
+          <p style={{ color: "var(--muted)" }}>현물(주식)보다 <b>먼저 움직이는</b> 시장이에요. 내일 증시 방향을 미리 가늠할 수 있어요.</p>
+          <div className="mt-2 space-y-1">
+            <p>🌍 <b>해외 지수</b> — 일본·유럽·중국 등 글로벌 증시 흐름</p>
+            <p>🛢️ <b>에너지·금속</b> — 원유·금·은. 인플레이션 & 안전자산 지표</p>
+            <p>💵 <b>채권·외환</b> — 미국채 금리 오르면 주식엔 부담</p>
+            <p>🌽 <b>농산물</b> — 글로벌 물가 영향</p>
+            <p>₿ <b>암호화폐</b> — 위험자산 선호도 바로미터</p>
+          </div>
+          <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>타일이 클수록 시장에서 중요도가 높아요. 클릭하면 10년 차트를 볼 수 있어요.</p>
+        </SectionInfo>
         <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
           {open
             ? (locale === "ko" ? "선물 · 실시간" : "Futures · Live")
@@ -191,7 +214,9 @@ export function FuturesHeatmap({ items }: Props) {
       >
         <div style={{ minWidth: "680px", touchAction: "pan-x pan-y" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
-            {ROWS.map((row) => (
+            {ROWS.map((row) => {
+              const rH = isDesktop ? row.rowH + 40 : row.rowH;
+              return (
               <div key={row.groupKey} style={{ display: "flex", flexDirection: "column" }}>
                 {/* Sector label strip */}
                 <div
@@ -213,7 +238,7 @@ export function FuturesHeatmap({ items }: Props) {
                 </div>
 
                 {/* Tiles */}
-                <div className="flex" style={{ height: row.rowH, gap: "1px" }}>
+                <div className="flex" style={{ height: rH, gap: "1px" }}>
                   {row.cells.map(({ sym, flex }) => {
                     const item = bySymbol[sym];
                     if (!item) return null;
@@ -230,6 +255,7 @@ export function FuturesHeatmap({ items }: Props) {
                           setPopup({
                             symbol: sym,
                             name: displayName,
+                            price: item.price,
                             changePercent: item.changePercent,
                             anchorX: e.clientX,
                             anchorY: e.clientY,
@@ -268,7 +294,8 @@ export function FuturesHeatmap({ items }: Props) {
                   })}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -287,6 +314,7 @@ export function FuturesHeatmap({ items }: Props) {
         <MiniChartPopup
           symbol={popup.symbol}
           name={popup.name}
+          price={popup.price}
           changePercent={popup.changePercent}
           anchorX={popup.anchorX}
           anchorY={popup.anchorY}

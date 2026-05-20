@@ -7,6 +7,7 @@ import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistratio
 import { PullToRefresh } from "@/components/PullToRefresh";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import { LocaleProvider } from "@/contexts/LocaleContext";
+import { AuthProvider } from "@/contexts/AuthContext";
 import { VersionBanner } from "@/components/VersionBanner";
 import { getLocale } from "@/lib/getLocale";
 import Script from "next/script";
@@ -37,10 +38,10 @@ export const metadata: Metadata = {
   title: "Investus — 인베스트어스",
   description: "미국 주식 실시간 시세 · S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 시장 분석 리포트",
   metadataBase: new URL("https://www.investus.kr"),
-  keywords: ["미국주식", "주식", "S&P500", "나스닥", "투자", "주가", "실시간", "선물", "비트코인", "투자정보"],
+  keywords: ["미국주식", "주식", "S&P500", "나스닥", "투자", "주가", "실시간", "선물", "비트코인", "투자정보", "NVIDIA", "테슬라", "애플", "엔비디아", "AI주식", "성장주", "포트폴리오", "주식분석", "시장분석", "투자리포트"],
   openGraph: {
-    title: "Investus — 미국주식 실시간 정보",
-    description: "S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 버핏지수 · 시장분석 리포트",
+    title: "Investus — 미국주식 실시간 정보 · AI 투자 분석",
+    description: "NVIDIA·Tesla·Apple 실시간 · S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · AI 시장분석 리포트",
     url: "https://www.investus.kr",
     siteName: "Investus",
     locale: "ko_KR",
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#00e5a0",
+  themeColor: "#10b981",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover", // env(safe-area-inset-bottom) requires this on iOS
@@ -81,25 +82,45 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={`${syne.variable} ${ibmPlexMono.variable} ${notoSansKR.variable}`}
     >
       <body style={{ background: "var(--bg)" }}>
+        {/* iOS PWA: prevent rubber-band overscroll at bottom revealing content under nav */}
+        <Script id="ios-overscroll" strategy="afterInteractive">{`
+          (function(){
+            var startY = 0;
+            document.addEventListener('touchstart', function(e){
+              startY = e.touches[0].clientY;
+            }, { passive: true });
+            document.addEventListener('touchmove', function(e){
+              if (e.touches.length !== 1) return; // ignore pinch
+              var dy = e.touches[0].clientY - startY;
+              var atBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 4;
+              // Only block downward swipe (scroll down) when already at bottom
+              if (atBottom && dy < 0) {
+                e.preventDefault();
+              }
+            }, { passive: false });
+          })();
+        `}</Script>
         <LocaleProvider locale={locale}>
-          <ServiceWorkerRegistration />
-          <VersionBanner />
-          <PullToRefresh />
-          <PWAInstallPrompt />
-          <div className="lg:flex lg:min-h-screen">
-            <DesktopSidebar />
-            <div className="flex-1 min-w-0 lg:ml-64">
-              {children}
+          <AuthProvider>
+            <ServiceWorkerRegistration />
+            <VersionBanner />
+            <PullToRefresh />
+            <PWAInstallPrompt />
+            <div className="lg:flex lg:min-h-screen">
+              <DesktopSidebar />
+              <div className="flex-1 min-w-0 lg:ml-64">
+                {children}
+              </div>
             </div>
-          </div>
-          <BottomNav />
-          {/* Google AdSense */}
-          <Script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1075509322890486"
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
+            <BottomNav />
+            {/* Google AdSense */}
+            <Script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1075509322890486"
+              crossOrigin="anonymous"
+              strategy="afterInteractive"
+            />
+          </AuthProvider>
         </LocaleProvider>
         <Analytics />
       </body>

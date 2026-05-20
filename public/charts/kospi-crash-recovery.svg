@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgkr" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0a1020"/></linearGradient>
+    <linearGradient id="ggreen2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00e5a0"/><stop offset="100%" stop-color="#00b580"/></linearGradient>
+    <linearGradient id="gred2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#991b1b"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgkr)"/>
+
+  <!-- Header -->
+  <rect width="800" height="58" fill="rgba(0,229,160,0.07)"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(0,229,160,0.2)"/>
+  <text x="400" y="22" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">Investus.kr · 장기 투자 교훈</text>
+  <text x="400" y="44" text-anchor="middle" fill="#e2e8f0" font-size="19" font-family="Arial" font-weight="bold">KOSPI 폭락과 회복 — 팔지 말고 버텨라</text>
+
+  <!-- KOSPI Record High -->
+  <rect x="20" y="75" width="760" height="55" rx="10" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="400" y="100" text-anchor="middle" fill="#00e5a0" font-size="16" font-family="Arial" font-weight="bold">🚀 KOSPI 8,048 장중 최고점 터치 — 역사적 고점</text>
+  <text x="400" y="120" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">개인투자자 신용잔고 사상 최고치 · 공포에 팔면 손해 · 보유하면 복리</text>
+
+  <!-- Two outcome comparison -->
+  <rect x="20" y="148" width="365" height="170" rx="12" fill="rgba(248,113,113,0.06)" stroke="rgba(248,113,113,0.25)" stroke-width="1"/>
+  <rect x="20" y="148" width="4" height="170" rx="2" fill="url(#gred2)"/>
+
+  <text x="40" y="178" fill="#f87171" font-size="13" font-family="Arial" font-weight="bold">❌ 폭락 시 매도한 투자자</text>
+  <text x="60" y="200" fill="#94a3b8" font-size="11" font-family="Arial">• 초기 투자금: $1,000,000</text>
+  <text x="60" y="220" fill="#94a3b8" font-size="11" font-family="Arial">• 폭락 패닉 → 손절 매도</text>
+  <text x="60" y="240" fill="#94a3b8" font-size="11" font-family="Arial">• 10년 후 회수금</text>
+  <text x="200" y="258" fill="#f87171" font-size="28" font-family="Arial" font-weight="bold">$600K</text>
+  <text x="60" y="278" fill="#f87171" font-size="11" font-family="Arial">-40% 손실 확정 · 복리 기회 박탈</text>
+  <text x="60" y="298" fill="#64748b" font-size="10" font-family="Arial">감정적 결정 → 영구적 자산 손실</text>
+
+  <rect x="415" y="148" width="365" height="170" rx="12" fill="rgba(0,229,160,0.06)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <rect x="415" y="148" width="4" height="170" rx="2" fill="url(#ggreen2)"/>
+
+  <text x="435" y="178" fill="#00e5a0" font-size="13" font-family="Arial" font-weight="bold">✅ 보유 지속한 투자자</text>
+  <text x="455" y="200" fill="#94a3b8" font-size="11" font-family="Arial">• 초기 투자금: $1,000,000</text>
+  <text x="455" y="220" fill="#94a3b8" font-size="11" font-family="Arial">• 폭락 무시 → 장기 보유 유지</text>
+  <text x="455" y="240" fill="#94a3b8" font-size="11" font-family="Arial">• 10년 후 평가금</text>
+  <text x="585" y="258" fill="#00e5a0" font-size="28" font-family="Arial" font-weight="bold">$1.1M</text>
+  <text x="455" y="278" fill="#00e5a0" font-size="11" font-family="Arial">+10% 수익 + 배당 + 복리 효과</text>
+  <text x="455" y="298" fill="#64748b" font-size="10" font-family="Arial">인내심 → 시간이 일함 · 복리 수익</text>
+
+  <!-- KOSPI crash events timeline -->
+  <rect x="20" y="338" width="760" height="130" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="40" y="362" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">■ KOSPI 주요 폭락 · 회복 역사</text>
+  <rect x="40" y="370" width="740" height="1" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Timeline entries -->
+  <rect x="40" y="382" width="700" height="26" rx="5" fill="rgba(248,113,113,0.1)"/>
+  <text x="60" y="400" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">1997  </text>
+  <text x="105" y="400" fill="#e2e8f0" font-size="11" font-family="Arial">IMF 외환위기 — KOSPI -70% → 3년 후 완전 회복 + 400% 상승</text>
+
+  <rect x="40" y="412" width="700" height="26" rx="5" fill="rgba(248,113,113,0.08)"/>
+  <text x="60" y="430" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">2008  </text>
+  <text x="105" y="430" fill="#e2e8f0" font-size="11" font-family="Arial">글로벌 금융위기 — KOSPI -55% → 2010년 완전 회복, 최고점 갱신</text>
+
+  <rect x="40" y="442" width="700" height="26" rx="5" fill="rgba(248,113,113,0.06)"/>
+  <text x="60" y="460" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">2020  </text>
+  <text x="105" y="460" fill="#e2e8f0" font-size="11" font-family="Arial">코로나 패닉 — KOSPI -35% → 8개월 만에 회복, 사상 최고점 3,316 돌파</text>
+
+  <!-- Footer -->
+  <rect x="0" y="496" width="800" height="24" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="512" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial" letter-spacing="2">Investus.kr · 본 자료는 투자 참고용이며 투자 결정의 책임은 본인에게 있습니다</text>
+</svg>

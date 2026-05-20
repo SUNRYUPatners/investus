@@ -116,7 +116,7 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
           </div>
           )}
 
-          {error && <p className="text-xs" style={{ color: "#ff4d6d" }}>{error}</p>}
+          {error && <p className="text-xs" style={{ color: "#ef4444" }}>{error}</p>}
 
           {!confirmEmail && <button
             onClick={mode === "login" ? handleLogin : handleSignup}
@@ -336,7 +336,7 @@ export default function CreatorSetupPage() {
               <div className="flex items-start gap-2.5">
                 <span className="text-base flex-shrink-0">⚠️</span>
                 <div>
-                  <p className="text-[11px] font-bold mb-1.5" style={{ color: "#ff4d6d" }}>콘텐츠 제작 시 필수 준수 사항</p>
+                  <p className="text-[11px] font-bold mb-1.5" style={{ color: "#ef4444" }}>콘텐츠 제작 시 필수 준수 사항</p>
                   <ul className="flex flex-col gap-1">
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
                       · 특정 종목의 <span style={{ color: "var(--text)", fontWeight: 600 }}>매수·매도를 직접 권유하는 콘텐츠</span>는 금지됩니다.
@@ -432,7 +432,7 @@ export default function CreatorSetupPage() {
                   </div>
                 ))}
                 <div className="flex justify-end px-4 py-2 border-t" style={{ borderColor: "var(--border)" }}>
-                  <span className="text-[10px]" style={{ color: totalAlloc > 100 ? "#ff4d6d" : "var(--muted)" }}>
+                  <span className="text-[10px]" style={{ color: totalAlloc > 100 ? "#ef4444" : "var(--muted)" }}>
                     합계 {totalAlloc.toFixed(1)}% {totalAlloc > 100 && "⚠️ 100% 초과"}
                   </span>
                 </div>

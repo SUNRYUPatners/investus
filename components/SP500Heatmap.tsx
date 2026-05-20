@@ -2,6 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 import { MiniChartPopup } from "./MiniChartPopup";
+import { SectionInfo } from "./SectionInfo";
+
+function useIsDesktop() {
+  const [lg, setLg] = useState(false);
+  useEffect(() => {
+    const check = () => setLg(window.innerWidth >= 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  return lg;
+}
 
 type StockTile = { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number };
 type Sector    = { key: string; name: string; stocks: StockTile[] };
@@ -10,6 +22,7 @@ type ApiResponse = { isLive: boolean; sectors: Sector[] };
 type PopupState = {
   symbol: string;
   name: string;
+  price?: number;
   changePercent: number;
   anchorX: number;
   anchorY: number;
@@ -74,7 +87,7 @@ function SectorBlock({
   flex: number;
   rowH: number;
   maxStocks: number;
-  onTileClick: (symbol: string, name: string, changePercent: number, x: number, y: number) => void;
+  onTileClick: (symbol: string, name: string, changePercent: number, x: number, y: number, price?: number) => void;
 }) {
   const visibleStocks = sector.stocks.slice(0, maxStocks);
   const totalW = visibleStocks.reduce((a, s) => a + s.weight, 0);
@@ -107,7 +120,7 @@ function SectorBlock({
               }}
               onClick={(e) => {
                 e.stopPropagation();
-                onTileClick(s.symbol, s.name, s.changePercent ?? 0, e.clientX, e.clientY);
+                onTileClick(s.symbol, s.name, s.changePercent ?? 0, e.clientX, e.clientY, s.price ?? undefined);
               }}
             >
               <div className="w-full overflow-hidden">
@@ -167,6 +180,7 @@ export function SP500Heatmap() {
   const [sectors, setSectors] = useState<Sector[] | null>(null);
   const [isLive, setIsLive]   = useState(true);
   const [popup, setPopup]     = useState<PopupState | null>(null);
+  const isDesktop = useIsDesktop();
   const [thumbL, setThumbL]   = useState(0);
   const [thumbW, setThumbW]   = useState(100);
   const scrollRef             = useRef<HTMLDivElement>(null);
@@ -214,8 +228,8 @@ export function SP500Heatmap() {
     (sectors ?? []).map((s) => [s.key, s])
   );
 
-  const handleTileClick = (symbol: string, name: string, changePercent: number, x: number, y: number) => {
-    setPopup({ symbol, name, changePercent, anchorX: x, anchorY: y });
+  const handleTileClick = (symbol: string, name: string, changePercent: number, x: number, y: number, price?: number) => {
+    setPopup({ symbol, name, price, changePercent, anchorX: x, anchorY: y });
   };
 
   return (
@@ -228,9 +242,17 @@ export function SP500Heatmap() {
         className="flex items-center justify-between px-4 py-3 border-b"
         style={{ borderColor: "var(--border)" }}
       >
-        <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-          S&P 500
-        </h2>
+        <SectionInfo title="S&P 500 히트맵">
+          <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>S&P 500 히트맵이란?</p>
+          <p style={{ color: "var(--muted)" }}>미국 대형주 500개를 <b>한 화면</b>에서 보는 지도예요.</p>
+          <div className="mt-2 space-y-1">
+            <p>🟩 <b>초록색</b> = 오늘 오른 종목</p>
+            <p>🟥 <b>빨간색</b> = 오늘 내린 종목</p>
+            <p>📐 <b>타일 크기</b> = 시가총액. 클수록 대형주 (애플·엔비디아 등)</p>
+            <p>🏢 <b>섹터 구분</b> = 기술·헬스케어·금융 등 업종별로 묶여 있어요</p>
+          </div>
+          <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>종목 클릭 → 10년 차트를 바로 확인할 수 있어요</p>
+        </SectionInfo>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
           섹터별 등락률
         </span>
@@ -241,14 +263,17 @@ export function SP500Heatmap() {
         <div style={{ minWidth: "520px", touchAction: "pan-x pan-y" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
             {sectors === null
-              ? LAYOUT.map((row, ri) => (
-                  <SkeletonRow key={ri} rowH={row.rowH} sections={row.sections} />
-                ))
-              : LAYOUT.map((row) => (
+              ? LAYOUT.map((row, ri) => {
+                  const rH = isDesktop ? row.rowH + 40 : row.rowH;
+                  return <SkeletonRow key={ri} rowH={rH} sections={row.sections} />;
+                })
+              : LAYOUT.map((row) => {
+                  const rH = isDesktop ? row.rowH + 40 : row.rowH;
+                  return (
                   <div
                     key={row.sections.map((s) => s.key).join("-")}
                     className="flex"
-                    style={{ height: row.rowH, gap: "1px" }}
+                    style={{ height: rH, gap: "1px" }}
                   >
                     {row.sections.map(({ key, flex, maxStocks }) => {
                       const sector = sectorMap[key];
@@ -258,14 +283,15 @@ export function SP500Heatmap() {
                           key={key}
                           sector={sector}
                           flex={flex}
-                          rowH={row.rowH}
+                          rowH={rH}
                           maxStocks={maxStocks}
                           onTileClick={handleTileClick}
                         />
                       );
                     })}
                   </div>
-                ))}
+                  );
+                })}
           </div>
         </div>
       </div>
@@ -296,6 +322,7 @@ export function SP500Heatmap() {
         <MiniChartPopup
           symbol={popup.symbol}
           name={popup.name}
+          price={popup.price}
           changePercent={popup.changePercent}
           anchorX={popup.anchorX}
           anchorY={popup.anchorY}

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgt" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0a1220"/></linearGradient>
+    <linearGradient id="gteal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00e5a0"/><stop offset="100%" stop-color="#00b580"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgt)"/>
+
+  <!-- Header -->
+  <rect width="800" height="58" fill="rgba(0,229,160,0.07)"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(0,229,160,0.25)"/>
+  <text x="400" y="22" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">Investus.kr · TESLA 분석</text>
+  <text x="400" y="44" text-anchor="middle" fill="#e2e8f0" font-size="19" font-family="Arial" font-weight="bold">Tesla 매출 성장 + 태양광 기가팩토리</text>
+
+  <!-- Revenue chart title -->
+  <text x="20" y="88" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">Tesla 연간 매출 성장 ($B)</text>
+
+  <!-- Bar chart background -->
+  <rect x="20" y="95" width="760" height="185" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Year labels and bars -->
+  <!-- 2012: ~$0.2B -->
+  <rect x="40" y="245" width="40" height="5" rx="2" fill="rgba(0,229,160,0.6)"/>
+  <text x="60" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2012</text>
+
+  <!-- 2014: ~$3.2B -->
+  <rect x="100" y="235" width="40" height="15" rx="2" fill="rgba(0,229,160,0.65)"/>
+  <text x="120" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2014</text>
+
+  <!-- 2016: ~$7B -->
+  <rect x="160" y="218" width="40" height="32" rx="2" fill="rgba(0,229,160,0.7)"/>
+  <text x="180" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2016</text>
+
+  <!-- 2018: ~$21.5B -->
+  <rect x="220" y="150" width="40" height="100" rx="2" fill="rgba(0,229,160,0.75)"/>
+  <text x="240" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2018</text>
+
+  <!-- 2019: ~$24.6B -->
+  <rect x="280" y="137" width="40" height="113" rx="2" fill="rgba(0,229,160,0.78)"/>
+  <text x="300" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2019</text>
+
+  <!-- 2020: ~$31.5B -->
+  <rect x="340" y="113" width="40" height="137" rx="2" fill="rgba(0,229,160,0.82)"/>
+  <text x="360" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2020</text>
+
+  <!-- 2021: ~$53.8B -->
+  <rect x="400" y="104" width="40" height="146" rx="2" fill="rgba(0,229,160,0.85)"/>
+  <text x="420" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2021</text>
+  <text x="420" y="100" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Arial">$54B</text>
+
+  <!-- 2022: ~$81.5B -->
+  <rect x="460" y="107" width="40" height="143" rx="2" fill="rgba(0,229,160,0.88)"/>
+  <text x="480" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2022</text>
+  <text x="480" y="103" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Arial">$82B</text>
+
+  <!-- 2023: ~$97.7B -->
+  <rect x="520" y="105" width="40" height="145" rx="2" fill="rgba(0,229,160,0.91)"/>
+  <text x="540" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2023</text>
+  <text x="540" y="101" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Arial">$98B</text>
+
+  <!-- 2024: ~$97.7B -->
+  <rect x="580" y="109" width="40" height="141" rx="2" fill="rgba(0,229,160,0.9)"/>
+  <text x="600" y="263" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">2024</text>
+  <text x="600" y="105" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Arial">$98B</text>
+
+  <!-- 2025: $95B -->
+  <rect x="640" y="111" width="40" height="139" rx="2" fill="url(#gteal)"/>
+  <text x="660" y="263" text-anchor="middle" fill="#00e5a0" font-size="9" font-family="Arial" font-weight="bold">2025</text>
+  <text x="660" y="107" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">$95B</text>
+
+  <!-- 2012 label -->
+  <text x="60" y="256" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">$0.2B</text>
+
+  <!-- Growth arrow -->
+  <text x="710" y="185" fill="#94a3b8" font-size="10" font-family="Arial">2012→2025</text>
+  <text x="710" y="205" fill="#00e5a0" font-size="14" font-family="Arial" font-weight="bold">+475x</text>
+
+  <!-- Solar section -->
+  <rect x="20" y="298" width="760" height="185" rx="12" fill="rgba(0,229,160,0.04)" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+
+  <text x="40" y="326" fill="#00e5a0" font-size="14" font-family="Arial" font-weight="bold">■ Tesla 태양광 기가팩토리 — 휴스턴 텍사스</text>
+
+  <!-- Solar stats row -->
+  <rect x="40" y="340" width="200" height="70" rx="8" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="140" y="368" text-anchor="middle" fill="#00e5a0" font-size="24" font-family="Arial" font-weight="bold">100GW</text>
+  <text x="140" y="388" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">2030 태양광 목표</text>
+  <text x="140" y="403" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">목표 생산 용량</text>
+
+  <rect x="260" y="340" width="200" height="70" rx="8" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <text x="360" y="368" text-anchor="middle" fill="#60a5fa" font-size="20" font-family="Arial" font-weight="bold">Houston</text>
+  <text x="360" y="388" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">거대 태양광 패널 공장</text>
+  <text x="360" y="403" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">Megapack 시설 병행</text>
+
+  <rect x="480" y="340" width="280" height="70" rx="8" fill="rgba(251,146,60,0.06)" stroke="rgba(251,146,60,0.2)" stroke-width="1"/>
+  <text x="620" y="368" text-anchor="middle" fill="#fb923c" font-size="18" font-family="Arial" font-weight="bold">에너지 + 모빌리티</text>
+  <text x="620" y="388" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">Tesla = 종합 에너지 기업</text>
+  <text x="620" y="403" text-anchor="middle" fill="#64748b" font-size="10" font-family="Arial">자동차 → 에너지 → AI</text>
+
+  <rect x="40" y="428" width="740" height="1" fill="rgba(255,255,255,0.06)"/>
+
+  <text x="40" y="452" fill="#94a3b8" font-size="11" font-family="Arial">▸  Electrek: Tesla, 휴스턴 거대 태양광 패널 공장 건설 신청 · 메가팩 시설과 병행 입지 계획</text>
+  <text x="40" y="472" fill="#94a3b8" font-size="11" font-family="Arial">▸  Shyp Merrith 테제: Tesla는 AI 기술로 가속될 것 · FSD 수익 + Semi + 태양광 = 복합 성장</text>
+  <text x="40" y="492" fill="#00e5a0" font-size="12" font-family="Arial" font-weight="bold">→  Tesla $1 자사주 매입 발표 · 에너지 사업 본격화로 밸류에이션 재평가 기대</text>
+
+  <!-- Footer -->
+  <rect x="0" y="496" width="800" height="24" fill="rgba(0,0,0,0.3)"/>
+  <text x="400" y="512" text-anchor="middle" fill="#475569" font-size="9" font-family="Arial" letter-spacing="2">Investus.kr · 본 자료는 투자 참고용이며 투자 결정의 책임은 본인에게 있습니다</text>
+</svg>

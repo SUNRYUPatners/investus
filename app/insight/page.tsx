@@ -86,48 +86,54 @@ export default async function InsightPage() {
   );
 
   return (
-    <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
+    <div className="min-h-screen pb-safe lg:pb-0 lg:h-screen lg:flex lg:flex-col" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 pb-24 lg:pb-10">
-        {/* Title */}
-        <div className="pt-5 pb-4">
+      {/* ── Mobile ── */}
+      <main className="lg:hidden max-w-[480px] mx-auto px-0 pb-24">
+        <div className="px-4 pt-5 pb-4">
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
           <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
         </div>
+        <section className="px-4 mb-6">{EbookBanner}</section>
+        <section className="px-4 mb-6">{EduBanner}</section>
+        <section className="px-4 mb-4"><AdBanner format="auto" /></section>
+        <section className="px-4 mb-6"><ReportFeed /></section>
+        <section className="px-4 mb-4"><AdBanner format="auto" /></section>
+        <section className="px-4 mb-6">
+          <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {t.books}
+          </h2>
+          <BookCarousel />
+        </section>
+        <section className="px-4">
+          <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            {t.youtube}
+          </h2>
+          <YoutubeChannels />
+        </section>
+      </main>
 
-        {/* ── Mobile layout (linear) ── */}
-        <div className="lg:hidden">
-          <section className="mb-6">{EbookBanner}</section>
-          <section className="mb-6">{EduBanner}</section>
-          <section className="mb-4"><AdBanner format="auto" /></section>
-          <section className="mb-6"><ReportFeed /></section>
-          <section className="mb-4"><AdBanner format="auto" /></section>
-          <section className="mb-6">
-            <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-              {t.books}
-            </h2>
-            <BookCarousel />
-          </section>
-          <section>
-            <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-              {t.youtube}
-            </h2>
-            <YoutubeChannels />
-          </section>
+      {/* ── Desktop: 두 컬럼 독립 스크롤 ── */}
+      <div className="hidden lg:flex lg:flex-1 lg:min-h-0 lg:gap-10 lg:px-8">
+        {/* 왼쪽 — 리포트 독립 스크롤 */}
+        <div className="flex-1 min-w-0 overflow-y-auto no-scrollbar pb-10">
+          <div className="pt-5 pb-4">
+            <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
+            <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
+          </div>
+          <ReportFeed />
         </div>
 
-        {/* ── Desktop layout (2-col) ── */}
-        <div className="hidden lg:grid lg:grid-cols-[1fr_420px] lg:gap-10 lg:items-start">
-          {/* Left: Reports (main) */}
-          <div>
-            <section className="mb-6"><ReportFeed /></section>
-          </div>
-
-          {/* Right sidebar */}
-          <aside className="sticky top-[57px] max-h-[calc(100vh-57px)] overflow-y-auto no-scrollbar flex flex-col gap-5">
+        {/* 오른쪽 — 사이드바: 배너는 항상 고정, 나머지만 스크롤 */}
+        <aside className="w-[420px] flex-shrink-0 flex flex-col pt-5 overflow-hidden">
+          {/* 배너: flex-shrink-0 → 창 크기와 무관하게 항상 완전 표시 */}
+          <div className="flex-shrink-0 flex flex-col gap-5">
             {EbookBanner}
             {EduBanner}
+          </div>
+          {/* 나머지 콘텐츠만 스크롤 */}
+          <div className="flex-1 min-h-0 overflow-y-auto no-scrollbar flex flex-col gap-5 pt-5 pb-10">
             <AdBanner format="auto" />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
@@ -141,9 +147,9 @@ export default async function InsightPage() {
               </h2>
               <YoutubeChannels />
             </section>
-          </aside>
-        </div>
-      </main>
+          </div>
+        </aside>
+      </div>
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 import { fetchBatchQuotes } from "@/lib/yahooFinance";
 
-// Cache 60s
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 type SectorStock = { symbol: string; name: string; weight: number };
 type SectorDef   = { key: string; name: string; stocks: SectorStock[] };
@@ -73,14 +72,57 @@ const SECTORS: SectorDef[] = [
   ]},
 ];
 
+// ── Server-side in-memory cache (60s during market, 30min off-hours) ─────────
+import { isMarketOpen } from "@/lib/marketHours";
+
+type SectorResult = {
+  isLive: boolean;
+  sectors: { key: string; name: string; stocks: { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number }[] }[];
+};
+let _cached: { data: SectorResult; at: number } | null = null;
+
+function buildSectors(priceMap: Record<string, number>, changeMap: Record<string, number | null>, isLive: boolean): SectorResult {
+  return {
+    isLive,
+    sectors: SECTORS.map((s) => ({
+      key:    s.key,
+      name:   s.name,
+      stocks: s.stocks.map((t) => ({
+        symbol:        t.symbol,
+        name:          t.name,
+        price:         priceMap[t.symbol]  ?? null,
+        changePercent: changeMap[t.symbol] ?? null,
+        weight:        t.weight,
+      })),
+    })),
+  };
+}
+
 export async function GET() {
+  const open = isMarketOpen();
+  const TTL  = open ? 60_000 : 30 * 60_000;
+  const cc   = open
+    ? "public, s-maxage=55, stale-while-revalidate=120"
+    : "public, s-maxage=1800, stale-while-revalidate=86400";
+
+  // Serve from in-memory cache if fresh
+  if (_cached && Date.now() - _cached.at < TTL) {
+    return NextResponse.json(_cached.data, { headers: { "Cache-Control": cc } });
+  }
+
   const allSymbols = SECTORS.flatMap((s) => s.stocks.map((t) => t.symbol));
   const changeMap: Record<string, number | null> = {};
   const priceMap:  Record<string, number> = {};
   let isLive = false;
 
   try {
-    const yfQuotes = await fetchBatchQuotes(allSymbols);
+    // Split into two parallel batches to halve Yahoo Finance latency
+    const mid   = Math.ceil(allSymbols.length / 2);
+    const [a, b] = await Promise.all([
+      fetchBatchQuotes(allSymbols.slice(0, mid)),
+      fetchBatchQuotes(allSymbols.slice(mid)),
+    ]);
+    const yfQuotes = [...a, ...b];
     if (yfQuotes.length > 0) {
       isLive = true;
       for (const q of yfQuotes) {
@@ -90,20 +132,10 @@ export async function GET() {
         }
       }
     }
-  } catch { /* fall through — isLive stays false, all data null */ }
+  } catch { /* fall through — isLive stays false */ }
 
-  return NextResponse.json({
-    isLive,
-    sectors: SECTORS.map((s) => ({
-      key: s.key,
-      name: s.name,
-      stocks: s.stocks.map((t) => ({
-        symbol:        t.symbol,
-        name:          t.name,
-        price:         priceMap[t.symbol]  ?? null,
-        changePercent: changeMap[t.symbol] ?? null,
-        weight:        t.weight,
-      })),
-    })),
-  });
+  const result: SectorResult = buildSectors(priceMap, changeMap, isLive);
+  _cached = { data: result, at: Date.now() };
+
+  return NextResponse.json(result, { headers: { "Cache-Control": cc } });
 }
