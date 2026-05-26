@@ -52,27 +52,60 @@ export function PortfolioWidget() {
 
   useEffect(() => {
     if (!loaded || holdings.length === 0) return;
-    // Use guru-prices (same API as 추천주식/인기종목) so prices are always consistent
-    const syms = [...holdings.map((h) => h.symbol), "USDKRW=X"].join(",");
+
+    const syms = holdings.map((h) => h.symbol);
+
+    // Read prices from market-data-cache (written by LiveMarket, YF v7 batch — accurate source)
+    const applyCache = (): string[] => {
+      const found: string[] = [];
+      try {
+        const raw = localStorage.getItem("market-data-cache");
+        if (!raw) return found;
+        const d = JSON.parse(raw) as { quotes?: { symbol: string; price: number; changePercent: number; change?: number }[]; _ts?: number };
+        const map = new Map((d.quotes ?? []).map((q) => [q.symbol, q]));
+        const matched = syms.filter((s) => map.has(s) && (map.get(s)!.price > 0));
+        if (matched.length > 0) {
+          setQuotes(matched.map((s) => ({ symbol: s, shortName: s, price: map.get(s)!.price, changePercent: map.get(s)!.changePercent })));
+          matched.forEach((s) => found.push(s));
+        }
+      } catch { /* ignore */ }
+      return found;
+    };
+
+    // Apply cached values immediately
+    const foundInCache = applyCache();
+
+    // Subscribe to LiveMarket cache updates — auto-sync when LiveMarket refreshes
+    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(); };
+    window.addEventListener("storage", onStorage);
+
+    // For symbols NOT in cache, supplement with guru-prices (but never overwrite cache)
+    const missing = syms.filter((s) => !foundInCache.includes(s));
+    const fetchSyms = [...missing, "USDKRW=X"];
     setFetching(true);
-    fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
+    fetch(`/api/guru-prices?symbols=${encodeURIComponent(fetchSyms.join(","))}`)
       .then((r) => r.json())
       .then((d: GuruResp) => {
         const rate = d["USDKRW=X"]?.price ?? 1350;
         setUsdkrw(rate > 100 ? rate : 1350);
-        const mapped: LiveQ[] = holdings
-          .map((h) => h.symbol)
-          .filter((s) => d[s] && d[s].price > 0)
-          .map((s) => ({
-            symbol:        s,
-            shortName:     s,
-            price:         d[s].price,
-            changePercent: d[s].changePercent,
-          }));
-        setQuotes(mapped);
+        if (missing.length > 0) {
+          const extra = missing.filter((s) => d[s]?.price > 0).map((s) => ({ symbol: s, shortName: s, price: d[s].price, changePercent: d[s].changePercent }));
+          if (extra.length > 0) setQuotes((prev) => { const keep = prev.filter((q) => !missing.includes(q.symbol)); return [...keep, ...extra]; });
+        }
+        // Also get USDKRW from market-data-cache if available
+        try {
+          const raw = localStorage.getItem("market-data-cache");
+          if (raw) {
+            const md = JSON.parse(raw) as { indices?: { symbol: string; value: number }[] };
+            const krwIndex = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
+            if (krwIndex && krwIndex.value > 100) setUsdkrw(krwIndex.value);
+          }
+        } catch { /* ignore */ }
       })
       .catch(() => {})
       .finally(() => setFetching(false));
+
+    return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
 
   if (!loaded) return null;

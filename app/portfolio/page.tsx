@@ -912,18 +912,37 @@ export default function PortfolioPage() {
   const locale                          = useLocaleCode();
 
   const fetchLive = useCallback(async (syms: string[]) => {
+    if (syms.length === 0) return;
     setFetching(true);
     try {
-      const allSyms = [...new Set([...syms, "USDKRW=X"])];
-      const res  = await fetch(`/api/guru-prices?symbols=${encodeURIComponent(allSyms.join(","))}`);
-      const data = await res.json() as GuruResp;
-      const rate = data["USDKRW=X"]?.price ?? 1350;
-      setUsdkrw(rate > 100 ? rate : 1350);
+      // 1) Read from market-data-cache (YF v7 batch — same accurate source as 추천주식/히트맵)
       const map: Record<string, LiveQ> = {};
-      syms.forEach((s) => {
-        if (data[s]?.price > 0)
-          map[s] = { symbol: s, shortName: s, price: data[s].price, changePercent: data[s].changePercent };
-      });
+      const missing: string[] = [];
+      try {
+        const raw = localStorage.getItem("market-data-cache");
+        if (raw) {
+          const md = JSON.parse(raw) as { quotes?: { symbol: string; price: number; changePercent: number; change?: number }[]; indices?: { symbol: string; value: number }[] };
+          const cacheMap = new Map((md.quotes ?? []).map((q) => [q.symbol, q]));
+          syms.forEach((s) => {
+            const q = cacheMap.get(s);
+            if (q && q.price > 0) map[s] = { symbol: s, shortName: s, price: q.price, changePercent: q.changePercent };
+            else missing.push(s);
+          });
+          // USDKRW from indices
+          const krw = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
+          if (krw?.value && krw.value > 100) setUsdkrw(krw.value);
+        } else { missing.push(...syms); }
+      } catch { missing.push(...syms); }
+
+      // 2) Supplement missing symbols from guru-prices
+      if (missing.length > 0) {
+        const res  = await fetch(`/api/guru-prices?symbols=${encodeURIComponent([...missing, "USDKRW=X"].join(","))}`);
+        const data = await res.json() as GuruResp;
+        const rate = data["USDKRW=X"]?.price ?? 1350;
+        if (rate > 100) setUsdkrw(rate);
+        missing.forEach((s) => { if (data[s]?.price > 0) map[s] = { symbol: s, shortName: s, price: data[s].price, changePercent: data[s].changePercent }; });
+      }
+
       setLiveMap(map);
     } catch { /* keep stale */ } finally { setFetching(false); }
   }, []);

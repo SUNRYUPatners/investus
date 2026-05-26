@@ -200,9 +200,15 @@ export async function GET(req: Request) {
     }
   }
 
-  // 장 마감: 인메모리 캐시 있으면 바로 서빙 (API 호출 없음)
+  // 장 마감: 캐시가 당일(EST) 데이터이면 바로 서빙 — 날짜가 바뀌면 강제 갱신
   if (!open && !refresh && _cache) {
-    return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
+    const cacheDay = new Date(_cache.data.liveAt ?? 0).toLocaleDateString("en-US", { timeZone: "America/New_York" });
+    const today    = new Date().toLocaleDateString("en-US", { timeZone: "America/New_York" });
+    if (cacheDay === today) {
+      return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
+    }
+    // 날짜가 달라졌으면 캐시 무효화 → 아래서 API 재fetch
+    _cache = null;
   }
   // 장 중: liveAt(실제 데이터 신선도) 기준 55초 TTL
   if (!refresh && _cache) {
@@ -218,7 +224,7 @@ export async function GET(req: Request) {
   const cryptoFHSyms = Object.values(CRYPTO_FH);
 
   const [yfStockQuotes, fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap] = await Promise.all([
-    // v7 배치 → 누락 심볼 순차 chunked v8 (3개씩 200ms 간격, Vercel rate-limit 우회)
+    // YF v7 batch — Yahoo Finance 앱 종가와 일치하는 정확한 가격 소스
     fetchBatchQuotes(stockSymbols),
     // Finnhub — ETF 프록시(지수·선물용)만 사용 (주식 가격은 YF v8로 통일)
     fetchFinnhubBatch([...ETF_PROXY_SYMS]),
@@ -356,7 +362,7 @@ export async function GET(req: Request) {
     });
   }
 
-  // ── 주식: YF → Finnhub → KV → 개별YF 순으로, 어떤 경우도 실종 없음 ──
+  // ── 주식: YF v7 batch → KV 순으로 ──
   const yfStockMap = new Map(yfStockQuotes.map((q) => [q.symbol, q]));
 
   const buildStockQuote = (
@@ -376,7 +382,7 @@ export async function GET(req: Request) {
   const now = Date.now();
   const quotes: Quote[] = (await Promise.all(
     mockQuotes.map(async (mock): Promise<Quote | null> => {
-      // 1) YF v8 결과 (위에서 이미 병렬로 모두 fetch 완료)
+      // 1) YF v7 batch 결과 — Yahoo Finance 앱 종가와 일치
       const yf = yfStockMap.get(mock.symbol);
       if (yf && yf.price > 0) {
         kvSetPrice(mock.symbol, { price: yf.price, change: yf.change, changePercent: yf.changePercent, at: now });

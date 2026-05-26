@@ -121,7 +121,7 @@ export function LiveMarket() {
         setLoading(false);
         try {
           if ((d?.quotes?.length ?? 0) > 0) {
-            localStorage.setItem("market-data-cache", JSON.stringify(d));
+            localStorage.setItem("market-data-cache", JSON.stringify({ ...d, _ts: Date.now() }));
             window.dispatchEvent(new StorageEvent("storage", { key: "market-data-cache" }));
           }
         } catch { /* ignore */ }
@@ -151,12 +151,14 @@ export function LiveMarket() {
   doLoadRef.current = doLoad;
 
   useEffect(() => {
-    // 1. 캐시를 즉시 표시
+    // 1. 캐시를 즉시 표시 — 5분 이내 데이터만 사용 (오래된 캐시는 잘못된 가격 표시 방지)
     try {
       const cached = localStorage.getItem("market-data-cache");
       if (cached) {
-        const parsed = JSON.parse(cached) as MarketData;
-        if ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0) {
+        const parsed = JSON.parse(cached) as MarketData & { _ts?: number };
+        const ageMs = Date.now() - (parsed._ts ?? 0);
+        const FRESH_MS = 5 * 60 * 1000; // 5분
+        if (ageMs < FRESH_MS && ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0)) {
           setData(parsed);
           setLoading(false);
         }

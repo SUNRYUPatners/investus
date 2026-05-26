@@ -17,22 +17,45 @@ export function HomeAIInsight() {
   const [expanded, setExpanded] = useState(false);
   const fetchedAI = useRef(false);
 
-  // Fetch live prices — same guru-prices API as 추천주식/인기종목 for consistency
+  // Fetch live prices — market-data-cache (YF v7 batch, accurate) → guru-prices for missing
   useEffect(() => {
     if (!loaded || holdings.length === 0) return;
-    const syms = [...holdings.map((h) => h.symbol), "USDKRW=X"].join(",");
-    fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
+    const syms = holdings.map((h) => h.symbol);
+
+    // Read from market-data-cache first (same source as 추천주식)
+    const applyCache = (): string[] => {
+      const found: string[] = [];
+      try {
+        const raw = localStorage.getItem("market-data-cache");
+        if (!raw) return found;
+        const d = JSON.parse(raw) as { quotes?: { symbol: string; price: number; change?: number; changePercent: number }[] };
+        const map = new Map((d.quotes ?? []).map((q) => [q.symbol, q]));
+        const matched = syms.filter((s) => map.has(s) && (map.get(s)!.price > 0));
+        if (matched.length > 0) {
+          setQuotes(matched.map((s) => ({ symbol: s, price: map.get(s)!.price, change: map.get(s)!.change ?? 0, changePercent: map.get(s)!.changePercent })));
+          matched.forEach((s) => found.push(s));
+        }
+      } catch { /* ignore */ }
+      return found;
+    };
+
+    const foundInCache = applyCache();
+    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(); };
+    window.addEventListener("storage", onStorage);
+
+    // Supplement missing symbols with guru-prices
+    const missing = [...syms.filter((s) => !foundInCache.includes(s)), "USDKRW=X"];
+    fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`)
       .then((r) => r.json())
       .then((d: GuruResp) => {
         const rate = d["USDKRW=X"]?.price ?? 1350;
         setUsdkrw(rate > 100 ? rate : 1350);
-        const mapped: LiveQ[] = holdings
-          .map((h) => h.symbol)
-          .filter((s) => d[s] && d[s].price > 0)
-          .map((s) => ({ symbol: s, price: d[s].price, change: d[s].change, changePercent: d[s].changePercent }));
-        setQuotes(mapped);
+        const extras = missing.filter((s) => s !== "USDKRW=X" && d[s]?.price > 0).map((s) => ({ symbol: s, price: d[s].price, change: d[s].change, changePercent: d[s].changePercent }));
+        if (extras.length > 0) setQuotes((prev) => { const keep = prev.filter((q) => !missing.includes(q.symbol)); return [...keep, ...extras]; });
       })
       .catch(() => {});
+
+    return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
 
   // Auto-fetch AI analysis once prices are ready
