@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAdminSupabase } from "@/lib/supabase";
+import { isNYSEHoliday } from "@/lib/marketHours";
 
 export const maxDuration = 60;
 
@@ -316,12 +317,18 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
+  // NYSE 휴일이면 글 생성 스킵 (Memorial Day, 독립기념일 등)
+  const sessionParam = req.nextUrl.searchParams.get("session");
+  const isReportSession = sessionParam === "report";
+  if (!isReportSession && isNYSEHoliday()) {
+    return NextResponse.json({ ok: false, reason: "NYSE holiday — no posts generated" });
+  }
+
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: "no api key" }, { status: 503 });
   }
 
-  const sessionParam = req.nextUrl.searchParams.get("session");
   const session: SessionType =
     sessionParam === "midday" ? "midday" :
     sessionParam === "close"  ? "close"  :

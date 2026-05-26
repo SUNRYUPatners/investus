@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import webpush from "web-push";
+import { isNYSEHoliday } from "@/lib/marketHours";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -25,13 +26,14 @@ function isAuthorized(req: NextRequest): boolean {
   return false;
 }
 
-// 현재 ET 기준 9:25~9:40 사이인지 확인 (DST 자동 처리)
+// ET 기준 9:25~9:40 사이인지 확인 (DST 자동, NYSE 휴일 제외)
 function isMarketOpenWindow(): boolean {
-  const etStr = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
-  const et    = new Date(etStr);
-  const mins  = et.getHours() * 60 + et.getMinutes();
+  const now   = new Date();
+  const et    = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
   const day   = et.getDay();
   if (day === 0 || day === 6) return false;
+  if (isNYSEHoliday(now)) return false;
+  const mins  = et.getHours() * 60 + et.getMinutes();
   return mins >= 9 * 60 + 25 && mins <= 9 * 60 + 40;
 }
 

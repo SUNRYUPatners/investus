@@ -11,6 +11,7 @@ import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import type { NewsItem } from "@/lib/api";
 import { SEED_REPORTS, REPORT_TICKERS, CATEGORY_STYLE, CATEGORY_EMOJI } from "@/lib/reports";
 import type { Report } from "@/lib/reports";
+import { isMarketOpen as checkMarketOpen } from "@/lib/marketHours";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -79,13 +80,8 @@ function fmtPct(v: number | null): string {
 const UP   = "#10b981";
 const DOWN = "#ef4444";
 
-function isMarketOpen(): boolean {
-  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
-  const day = now.getDay();
-  if (day === 0 || day === 6) return false;
-  const mins = now.getHours() * 60 + now.getMinutes();
-  return mins >= 9 * 60 + 30 && mins < 16 * 60;
-}
+// Use the shared lib which includes NYSE holidays + DST
+const isMarketOpen = checkMarketOpen;
 
 // ── Investus 리포트 카드 — ReportFeed 스타일 그대로 ──────────────────────────
 function ReportCard({ r }: { r: Report }) {
