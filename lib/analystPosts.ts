@@ -242,6 +242,98 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-20]: [
+    {
+      alias: "강남 사자 #24",
+      content: "교환비율 문제가 진짜 핵심임. SpaceX $350B 기준으로 TSLA 주주 희석 계산하면 합병 시너지 가정이 상당히 공격적이어야 현재 주가 프리미엄이 정당화됨. 숫자 불편하게 나온다는 거 충분히 이해함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 12).toISOString(),
+    },
+    {
+      alias: "서초 곰 #39",
+      content: "Kalshi 33%도 솔직히 높다고 봄. TSLA 이사회 승인 없이 Elon이 단독으로 발표할 성격의 딜이 아닌데, 보도 자체가 협상 레버리지용일 가능성 배제 못 함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 8).toISOString(),
+    },
+    {
+      alias: "판교 사자 #22",
+      content: "합병 안 되더라도 SpaceX 연산 자원이 TSLA FSD에 투입되는 사이드 딜 가능성은 있음. 그 자체만으로도 기술 밸류 재평가 재료 될 수 있어서 상황 계속 봐야 함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 4).toISOString(),
+    },
+  ],
+  [-19]: [
+    {
+      alias: "을지로 팔콘 #16",
+      content: "$8억 초과분 IR 자료만으로 파악 안 될 수 있음. 다음 분기 컨퍼런스콜에서 세그먼트별 직접 물어봐야 할 사안이라고 생각함. Optimus 개발비 공시 방식부터 명확히 해달라고 해야 함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 40).toISOString(),
+    },
+    {
+      alias: "마포 수리부엉이 #28",
+      content: "에너지 부문이 버텨준다는 거 맞는데, 주식수 35% 증가가 EPS에 누적으로 쌓이는 희석 효과는 과소평가하면 안 됨. 단기 실적보다 장기 주주가치 훼손 여부가 더 중요한 포인트임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 25).toISOString(),
+    },
+  ],
+  [-18]: [
+    {
+      alias: "여의도 독수리 #08",
+      content: "평단 $147에 $506 보는 감정 공감함. MI400 나오기 전까지 CoWoS 병목이 유일한 제약인데, TSMC 내 AMD 배분 비중이 늘어나는 추세라 해소 시점이 생각보다 빠를 수도 있음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 70).toISOString(),
+    },
+    {
+      alias: "잠실 독수리 #41",
+      content: "공급 제약이 AMD만의 문제 아니라는 거 맞음. 다만 수요가 공급 초과하는 구간에선 가격 협상력이 AMD한테 있다는 게 실질적인 마진 레버리지 포인트임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 55).toISOString(),
+    },
+    {
+      alias: "광화문 호랑이 #35",
+      content: "구조적 상승 여력이라는 표현이 AI 인프라 수요 지속 가정에서만 성립한다는 점은 체크해야 함. 그 가정 흔들리는 시점에 배수 리레이팅이 빠르게 역행할 수 있음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 40).toISOString(),
+    },
+    {
+      alias: "을지로 황소 #05",
+      content: "채널 체크에서 MI300X 수요 공급 역전 확인됨. 이 구간 AMD 마진이 올라오면 실적이 컨센서스 웃도는 분기 나올 수 있어서 다음 가이던스 체크가 중요함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 22).toISOString(),
+    },
+  ],
+  [-17]: [
+    {
+      alias: "여의도 매 #17",
+      content: "2028 HBM4 팹 타임라인이면 SK하이닉스 우위 구간이 길게 이어짐. 그 사이 MU가 HBM3E 수율 올려서 간격 좁히는 게 핵심 변수인데, 아이다호 착공 속도가 시장 기대보다 느리면 2028도 낙관일 수 있음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 115).toISOString(),
+    },
+    {
+      alias: "잠실 독수리 #41",
+      content: "정치인 보유 이슈는 단기 노이즈지만 CHIPS법 자금 집행 지속성 확인하는 계기가 됨. 정책 리스크 관리 측면에서 유의미한 시그널이라 봄. MU 2027 픽이라는 뷰 동의함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 100).toISOString(),
+    },
+  ],
+  [-16]: [
+    {
+      alias: "판교 호랑이 #35",
+      content: "$350B 보수적으로 보인다는 뷰 동의함. B2G 군사 계약이 리커링으로 쌓이면 기업가치 재산정 필요한 시점인데, 비상장이라 반영 타이밍이 상장 이후에나 오는 게 문제임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 155).toISOString(),
+    },
+    {
+      alias: "마포 수리부엉이 #28",
+      content: "TSLA 합병 루머가 직접 IPO 타이밍 재는 시그널이라는 해석 흥미로움. 합병이면 이 밸류에이션 계산이 통째로 바뀌는 거라 두 시나리오 동시에 준비해야 함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 140).toISOString(),
+    },
+    {
+      alias: "강남 사자 #24",
+      content: "비상장 직접 포지션 없는 거 아쉬운 날이라는 거 공감함. SPAC이나 간접 경로 검토해볼 만하다는 생각인데, 현실적으론 TSLA 통해서 간접 익스포저 잡는 게 지금 유일한 방법임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
+    },
+  ],
+  [-15]: [
+    {
+      alias: "을지로 황소 #05",
+      content: "서비스 매출 $100B 달성 시점이 관건이라는 거 동의. 현재 런레이트 보면 2027년 안에 가능한 수치인데, 시장이 얼마나 선반영하느냐가 지금 $311 적정성 판단의 핵심임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 200).toISOString(),
+    },
+    {
+      alias: "잠실 매 #78",
+      content: "App Store 통행료 논리가 에이전트 시대에 강화된다는 뷰 맞음. 다만 EU 규제 결정이 에이전트 매출화 전에 선행될 수 있어서 그 타이밍 체크가 리스크 포인트임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 180).toISOString(),
+    },
+  ],
   [-14]: [
     {
       alias: "서초 독수리 #27",
