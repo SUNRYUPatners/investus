@@ -650,10 +650,10 @@ export default function CreatorDashboardPage() {
               <>
                 <div className="flex items-center gap-3 mb-4">
                   <ShieldCheck className="w-6 h-6" style={{ color: "var(--mint)" }} />
-                  <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>크리에이터 인증</h2>
+                  <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>투자클럽 계좌 인증</h2>
                 </div>
                 <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
-                  실제 보유 종목 화면 캡처를 업로드하면 즉시 크리에이터 활동이 시작됩니다.
+                  실제 보유 종목 화면 캡처를 업로드하면 즉시 투자클럽 활동이 시작됩니다.
                 </p>
                 <label htmlFor="creator-verify"
                   className="w-full flex flex-col items-center gap-3 py-8 rounded-2xl border border-dashed cursor-pointer mb-4 active:opacity-70 transition-opacity"

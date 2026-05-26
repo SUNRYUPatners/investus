@@ -35,7 +35,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4" style={{ background: "var(--bg)" }}>
         <span className="text-4xl">🔍</span>
-        <p className="text-sm" style={{ color: "var(--muted)" }}>크리에이터를 찾을 수 없습니다</p>
+        <p className="text-sm" style={{ color: "var(--muted)" }}>투자클럽을 찾을 수 없습니다</p>
         <Link href="/wall" className="text-xs px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
           돌아가기
         </Link>
@@ -57,7 +57,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
         <div className="px-4 pt-4 pb-2">
           <Link href="/wall" className="flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
             <ChevronLeft className="w-4 h-4" />
-            종목이야기 / 크리에이터
+            종목이야기 / 투자클럽
           </Link>
         </div>
 
@@ -124,7 +124,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
             {/* Free + ad-supported notice */}
             <div className="w-full py-3 rounded-2xl flex flex-col items-center gap-0.5 border"
               style={{ borderColor: "rgba(0,229,160,0.25)", background: "rgba(0,229,160,0.05)" }}>
-              <span className="text-xs font-bold" style={{ color: "var(--mint)" }}>무료 콘텐츠 · 광고로 크리에이터를 지원합니다</span>
+              <span className="text-xs font-bold" style={{ color: "var(--mint)" }}>무료 콘텐츠 · 광고로 투자클럽을 지원합니다</span>
               <span className="text-[10px]" style={{ color: "var(--muted)" }}>모든 콘텐츠를 무료로 이용하실 수 있습니다</span>
             </div>
           </div>

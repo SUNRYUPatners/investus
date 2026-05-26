@@ -382,7 +382,7 @@ const SECTIONS: Section[] = [
   {
     id: "wall",
     emoji: "💬",
-    title: "피드 탭 — 종목토론·애널들은·투자채널",
+    title: "피드 탭 — 종목토론·애널들은·투자클럽",
     content: (
       <>
         <p className="pt-3">피드 탭에는 <b style={{ color: "var(--text)" }}>3개의 채널</b>이 있어요.</p>
@@ -390,7 +390,7 @@ const SECTIONS: Section[] = [
           {[
             ["💬 종목토론", "종목별 투자자 토론방. 실제 보유 인증 투자자들의 생생한 의견"],
             ["👔 애널들은", "인증된 애널리스트만 참여하는 익명 채널. 현직 애널리스트의 솔직한 속마음"],
-            ["🌟 투자채널", "계좌 인증 투자자들의 무료 콘텐츠 채널. 강의·리포트·게시글 전부 무료"],
+            ["🌟 투자클럽", "계좌 인증 투자자들의 무료 콘텐츠 채널. 강의·리포트·게시글 전부 무료"],
           ].map(([t, d]) => (
             <div key={t} className="rounded-lg px-3 py-2 border" style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
               <p className="font-bold text-[12px]" style={{ color: "var(--text)" }}>{t}</p>
@@ -403,7 +403,7 @@ const SECTIONS: Section[] = [
             ["🔴 NEW 배지", "최근 새 글이 올라온 종목. 최신 토론 바로 확인"],
             ["💼 보유확인", "실제 해당 종목을 보유한 투자자 인증 글"],
             ["👍 좋아요", "공감하는 의견에 좋아요"],
-            ["✏️ 글쓰기", "로그인 후 종목토론 참여 가능. 투자채널은 계좌 인증 후 개설"],
+            ["✏️ 글쓰기", "로그인 후 종목토론 참여 가능. 투자클럽은 계좌 인증 후 개설"],
           ].map(([t, d]) => (
             <div key={t} className="flex gap-2">
               <span className="font-bold text-[12px] flex-shrink-0" style={{ color: "var(--text)" }}>{t}</span>
@@ -412,8 +412,8 @@ const SECTIONS: Section[] = [
           ))}
         </div>
         <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.15)" }}>
-          <p className="text-[11px]" style={{ color: "var(--mint)" }}>💡 투자채널 개설 방법</p>
-          <p className="text-[11px] mt-0.5">회원가입 → 투자채널 신청 → 계좌 인증 승인 후 콘텐츠 작성 가능. 모든 콘텐츠 무료 공개, 광고 수익 정산.</p>
+          <p className="text-[11px]" style={{ color: "var(--mint)" }}>💡 투자클럽 개설 방법</p>
+          <p className="text-[11px] mt-0.5">회원가입 → 투자클럽 신청 → 계좌 인증 승인 후 콘텐츠 작성 가능. 모든 콘텐츠 무료 공개, 광고 수익 정산.</p>
         </div>
       </>
     ),

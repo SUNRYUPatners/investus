@@ -56,10 +56,10 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
         <div className="text-center mb-8">
           <div className="text-4xl mb-3">🚀</div>
           <h1 className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
-            크리에이터 되기
+            투자클럽 만들기
           </h1>
           <p className="text-xs" style={{ color: "var(--muted)" }}>
-            로그인 후 크리에이터로 등록할 수 있어요
+            로그인 후 투자클럽을 만들 수 있어요
           </p>
         </div>
 
@@ -271,7 +271,7 @@ export default function CreatorSetupPage() {
         <Link href="/creator/dashboard"
           className="w-full max-w-xs py-3.5 rounded-2xl text-sm font-bold text-center block"
           style={{ background: "var(--mint)", color: "#000" }}>
-          내 크리에이터 채널 보기 →
+          내 투자클럽 보기 →
         </Link>
         <Link href="/wall"
           className="w-full max-w-xs py-2 text-xs text-center block"
@@ -289,7 +289,7 @@ export default function CreatorSetupPage() {
         {/* Back */}
         <div className="px-4 pt-4 pb-2">
           <Link href="/wall" className="flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-4 h-4" />종목이야기 / 크리에이터 되기
+            <ChevronLeft className="w-4 h-4" />종목이야기 / 투자클럽
           </Link>
         </div>
 
@@ -313,10 +313,10 @@ export default function CreatorSetupPage() {
               <div className="flex items-start gap-2.5">
                 <span className="text-base flex-shrink-0">💡</span>
                 <div>
-                  <p className="text-[11px] font-bold mb-1.5" style={{ color: "var(--mint)" }}>크리에이터 수익 안내 (유튜브 방식)</p>
+                  <p className="text-[11px] font-bold mb-1.5" style={{ color: "var(--mint)" }}>투자클럽 수익 안내 (유튜브 방식)</p>
                   <ul className="flex flex-col gap-1">
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
-                      · 콘텐츠 조회수 기반 <span style={{ color: "var(--text)", fontWeight: 600 }}>광고 수익</span>이 크리에이터에게 지급됩니다.
+                      · 콘텐츠 조회수 기반 <span style={{ color: "var(--text)", fontWeight: 600 }}>광고 수익</span>이 클럽 운영자에게 지급됩니다.
                     </li>
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
                       · 시청자는 <span style={{ color: "var(--text)", fontWeight: 600 }}>완전 무료</span>로 모든 콘텐츠를 이용합니다.
