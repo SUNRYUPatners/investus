@@ -61,5 +61,16 @@ export async function GET() {
       .in("endpoint", expired);
   }
 
+  // 리포트 업데이트 시 애널리스트 탭 + 종토방에도 글 자동 생성
+  try {
+    const base = process.env.NEXT_PUBLIC_APP_URL ?? "https://www.investus.kr";
+    const cronSecret = process.env.CRON_SECRET ?? "";
+    await fetch(`${base}/api/cron/market-open-posts?session=report`, {
+      headers: cronSecret ? { authorization: `Bearer ${cronSecret}` } : {},
+    });
+  } catch {
+    // 실패해도 push 전송 결과는 반환
+  }
+
   return NextResponse.json({ sent, expired: expired.length, total: subs.length });
 }
