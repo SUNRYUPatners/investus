@@ -79,9 +79,9 @@ export async function GET(req: NextRequest) {
     for (const { sym, d } of kvResults) {
       if (d && d.price > 0) {
         result[sym] = { price: d.price, change: d.change, changePercent: d.changePercent };
-        _sym.set(sym, { ...d, at: now });
-        // 장 중이면 KV 데이터는 임시(fresh fetch로 덮어쓰기 위해 짧은 TTL 설정)
-        if (open) _sym.set(sym, { ...d, at: 0 }); // at=0 → 다음 요청에 재조회
+        _sym.set(sym, { ...d, at: open ? 0 : now });
+        // 장 중이면 KV는 임시 폴백 — 반드시 YF로 재조회해서 stale 방지
+        if (open) stillNeed.push(sym);
       } else {
         stillNeed.push(sym);
       }
