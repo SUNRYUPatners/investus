@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { fetchBatchQuotes } from "@/lib/yahooFinance";
+import { getPrices, ccHeader } from "@/lib/priceCache";
 
 export const dynamic = "force-dynamic";
 
@@ -7,41 +7,12 @@ export async function GET(req: NextRequest) {
   const raw     = req.nextUrl.searchParams.get("symbols") ?? "";
   const symbols = raw.split(",").map((s) => s.trim().toUpperCase()).filter(Boolean);
 
-  // Always include USDKRW=X so the client can do currency conversion
+  // Always include USDKRW=X for currency conversion
   const all    = [...new Set([...symbols, "USDKRW=X"])];
-  const quotes = await fetchBatchQuotes(all);
+  const prices = await getPrices(all);
 
-  // Finnhub fallback for any stock symbols Yahoo Finance missed
-  const stockSymbols = all.filter(s => s !== "USDKRW=X");
-  const found        = new Set(quotes.map(q => q.symbol));
-  const missing      = stockSymbols.filter(s => !found.has(s));
-
-  if (missing.length > 0) {
-    try {
-      const { fetchFinnhubBatch } = await import("@/lib/finnhub");
-      const fhMap = await fetchFinnhubBatch(missing);
-      fhMap.forEach((fhQ, sym) => {
-        quotes.push({
-          symbol:        sym,
-          shortName:     sym,
-          price:         fhQ.price,
-          change:        fhQ.change,
-          changePercent: fhQ.changePercent,
-          volume:        0,
-          marketCap:     null,
-          open:          null,
-          high:          null,
-          low:           null,
-        });
-      });
-    } catch { /* Finnhub also failed — omit these symbols */ }
-  }
-
-  const usdkrwQ    = quotes.find(q => q.symbol === "USDKRW=X");
-  const stockQuotes = quotes.filter(q => q.symbol !== "USDKRW=X");
-
-  // USDKRW fallback via open exchange rates when Yahoo Finance is blocked
-  let usdkrw = usdkrwQ?.price ?? 0;
+  // Extract USDKRW with open.er-api.com fallback when YF fails
+  let usdkrw = prices["USDKRW=X"]?.price ?? 0;
   if (!usdkrw) {
     try {
       const resp = await fetch("https://open.er-api.com/v6/latest/USD", {
@@ -54,5 +25,23 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  return NextResponse.json({ quotes: stockQuotes, usdkrw });
+  const stockQuotes = symbols
+    .filter((s) => s !== "USDKRW=X" && prices[s])
+    .map((s) => ({
+      symbol:        s,
+      shortName:     s,
+      price:         prices[s].price,
+      change:        prices[s].change,
+      changePercent: prices[s].changePercent,
+      volume:        0,
+      marketCap:     null,
+      open:          null,
+      high:          null,
+      low:           null,
+    }));
+
+  return NextResponse.json(
+    { quotes: stockQuotes, usdkrw },
+    { headers: { "Cache-Control": ccHeader() } },
+  );
 }
