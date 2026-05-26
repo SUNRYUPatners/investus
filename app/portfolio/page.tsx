@@ -19,8 +19,9 @@ import { PortfolioAI } from "@/components/PortfolioAI";
 
 // ── Types & Constants ─────────────────────────────────────────────────────────
 
-type LiveQ = { symbol: string; shortName: string; price: number; changePercent: number };
-type ApiResp = { quotes: LiveQ[]; usdkrw: number };
+type LiveQ    = { symbol: string; shortName: string; price: number; changePercent: number };
+type GuruEntry = { price: number; change: number; changePercent: number };
+type GuruResp  = Record<string, GuruEntry>;
 type Cur = "USD" | "KRW";
 
 const BROKERAGES_KR = [
@@ -500,12 +501,12 @@ function AddSheet({ onClose, onAdd, existing }: {
     }
     setLooking(true); setErr("");
     try {
-      const res  = await fetch(`/api/portfolio-prices?symbols=${upper}`);
-      const data = await res.json() as ApiResp;
-      if (data.quotes.length > 0) {
-        const q = data.quotes[0];
-        setSelected({ symbol: q.symbol, name: q.shortName, price: q.price });
-        setAvgCost(q.price.toFixed(2));
+      const res  = await fetch(`/api/guru-prices?symbols=${encodeURIComponent(upper)}`);
+      const data = await res.json() as GuruResp;
+      const entry = data[upper];
+      if (entry?.price > 0) {
+        setSelected({ symbol: upper, name: upper, price: entry.price });
+        setAvgCost(entry.price.toFixed(2));
       } else {
         setErr("종목을 찾을 수 없습니다.");
       }
@@ -913,12 +914,17 @@ export default function PortfolioPage() {
   const fetchLive = useCallback(async (syms: string[]) => {
     setFetching(true);
     try {
-      const res  = await fetch(`/api/portfolio-prices?symbols=${syms.join(",")}`);
-      const data = await res.json() as ApiResp;
+      const allSyms = [...new Set([...syms, "USDKRW=X"])];
+      const res  = await fetch(`/api/guru-prices?symbols=${encodeURIComponent(allSyms.join(","))}`);
+      const data = await res.json() as GuruResp;
+      const rate = data["USDKRW=X"]?.price ?? 1350;
+      setUsdkrw(rate > 100 ? rate : 1350);
       const map: Record<string, LiveQ> = {};
-      data.quotes.forEach((q) => { map[q.symbol] = q; });
+      syms.forEach((s) => {
+        if (data[s]?.price > 0)
+          map[s] = { symbol: s, shortName: s, price: data[s].price, changePercent: data[s].changePercent };
+      });
       setLiveMap(map);
-      setUsdkrw(data.usdkrw);
     } catch { /* keep stale */ } finally { setFetching(false); }
   }, []);
 
