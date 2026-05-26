@@ -302,7 +302,10 @@ export default function SearchPage() {
           </div>
 
           {/* 오른쪽: 투자대가 13F — 데스크톱 전용 sticky */}
-          <div className="hidden lg:block lg:w-[400px] lg:flex-shrink-0 lg:sticky lg:top-[57px]">
+          <div
+            className="hidden lg:block lg:w-[400px] lg:flex-shrink-0 no-scrollbar"
+            style={{ position: "sticky", top: 57, maxHeight: "calc(100vh - 57px)", overflowY: "auto" }}
+          >
             <GuruHoldings />
           </div>
 

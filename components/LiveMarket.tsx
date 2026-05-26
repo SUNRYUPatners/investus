@@ -5,10 +5,12 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { IndexCard } from "./IndexCard";
 import { StockCard } from "./StockCard";
 import { FuturesHeatmap } from "./FuturesHeatmap";
+import { SP500Heatmap } from "./SP500Heatmap";
 import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
 import { RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { useLocale } from "@/contexts/LocaleContext";
 import { SectionInfo } from "./SectionInfo";
+import { isMarketOpen } from "@/lib/marketHours";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
 
@@ -63,13 +65,6 @@ function CardSkeleton() {
   );
 }
 
-function isMarketOpen(): boolean {
-  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
-  const day = now.getDay(); // 0=Sun 6=Sat
-  if (day === 0 || day === 6) return false;
-  const mins = now.getHours() * 60 + now.getMinutes();
-  return mins >= 9 * 60 + 30 && mins < 16 * 60;
-}
 
 export function LiveMarket() {
   const t = useLocale();
@@ -172,26 +167,25 @@ export function LiveMarket() {
     // 장 마감 중이어도 1회 fetch — 서버 KV 캐시에서 당일 종가를 즉시 반환
     doLoadRef.current();
 
-    // 장 중일 때만 60초마다 갱신
+    // 장 중: 60초마다 갱신 / 장 마감: 5분마다 갱신 (항상 최신 데이터 유지)
     const id = setInterval(() => {
-      if (isMarketOpen()) doLoadRef.current();
-    }, 60_000);
+      doLoadRef.current();
+    }, isMarketOpen() ? 60_000 : 5 * 60_000);
 
-    // 탭/앱 복귀 시 5분 이상 지났으면 자동 새로고침 (stale data 방지)
-    let hiddenAt = 0;
+    // 다른 앱/탭에서 돌아오면 즉시 갱신 (임계값 없음)
     const onVisibility = () => {
-      if (document.hidden) {
-        hiddenAt = Date.now();
-      } else if (hiddenAt > 0 && Date.now() - hiddenAt > 5 * 60_000) {
-        doLoadRef.current();
-        hiddenAt = 0;
-      }
+      if (!document.hidden) doLoadRef.current();
     };
+    // 데스크탑: 창 포커스 복귀 시에도 갱신
+    const onFocus = () => doLoadRef.current();
+
     document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("focus", onFocus);
 
     return () => {
       clearInterval(id);
       document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("focus", onFocus);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -299,6 +293,11 @@ export function LiveMarket() {
             </div>
           )}
         </div>
+      </section>
+
+      {/* S&P 500 섹터 히트맵 */}
+      <section className="px-4 lg:px-0 pt-6">
+        <SP500Heatmap />
       </section>
 
       {/* Futures 히트맵 */}

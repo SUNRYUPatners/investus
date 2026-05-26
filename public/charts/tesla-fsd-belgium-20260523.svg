@@ -1,0 +1,58 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <text x="30" y="32" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="3">INVESTUS · Tesla FSD EU</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">FSD 벨기에 2,000+ 테스트 · EU One-Time Payment 유럽 여름</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.23</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Progress meter -->
+  <rect x="30" y="82" width="370" height="160" rx="10" fill="#071208" stroke="rgba(0,229,160,0.35)" stroke-width="1.5"/>
+  <text x="50" y="108" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">🇧🇪 벨기에 FSD 테스트 진행률</text>
+
+  <text x="215" y="148" font-family="Arial,sans-serif" font-size="38" fill="white" font-weight="700" text-anchor="middle">2,000+</text>
+  <text x="215" y="168" font-family="Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">테스트 드라이브 완료</text>
+
+  <!-- Progress bar -->
+  <rect x="50" y="180" width="330" height="16" rx="8" fill="#0a1a10"/>
+  <rect x="50" y="180" width="132" height="16" rx="8" fill="#00e5a0"/>
+  <text x="215" y="213" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">목표 5,000km 완주까지 약 40% 달성</text>
+  <text x="50" y="232" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">FSD v12.6.4.2 · Road Awareness AI · 최악 기상 조건 포함 테스트</text>
+
+  <!-- EU significance -->
+  <rect x="420" y="82" width="350" height="160" rx="10" fill="#0a0b12" stroke="rgba(250,204,21,0.3)" stroke-width="1.5"/>
+  <text x="440" y="108" font-family="Arial,sans-serif" font-size="11" fill="#facc15" font-weight="700">🌍 벨기에가 핵심인 이유</text>
+  <text x="440" y="130" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• EU 자율주행 규제 중 가장 보수적</text>
+  <text x="440" y="148" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 벨기에 통과 = EU 전역 기준 충족</text>
+  <text x="440" y="168" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">다음 순서</text>
+  <text x="440" y="186" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">🇩🇪 독일 → 🇫🇷 프랑스 → 🇳🇱 네덜란드</text>
+  <text x="440" y="204" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">순차 승인 기대</text>
+  <text x="440" y="228" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Anick De Ridder (플란더스 교통장관) 공식 발표</text>
+
+  <!-- EU OTP section -->
+  <rect x="30" y="258" width="740" height="90" rx="10" fill="#071208" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="50" y="282" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">💳 FSD EU One-Time Payment — 유럽 여름 출시 공식 확인</text>
+
+  <rect x="50" y="292" width="340" height="46" rx="8" fill="#0a1a10" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="220" y="312" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Tesla EU 공식 사이트</text>
+  <text x="220" y="329" font-family="Arial,sans-serif" font-size="9" fill="#e5e7eb" text-anchor="middle">"FSD is not yet available but on its way"</text>
+  <text x="220" y="342" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">"depends on development and regulatory approval"</text>
+
+  <text x="415" y="312" font-family="Arial,sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">→</text>
+
+  <rect x="430" y="292" width="320" height="46" rx="8" fill="#0a1a10" stroke="rgba(0,229,160,0.3)" stroke-width="1.5"/>
+  <text x="590" y="312" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" text-anchor="middle">유럽 여름 (2026) 출시</text>
+  <text x="590" y="329" font-family="Arial,sans-serif" font-size="9" fill="#e5e7eb" text-anchor="middle">벨기에 5,000km 완주 → 당국 승인</text>
+  <text x="590" y="342" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle">유럽 80만 대 잠재 수익화 대상</text>
+
+  <!-- Revenue potential -->
+  <rect x="30" y="360" width="740" height="38" rx="8" fill="#0d1020" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="50" y="378" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700">유럽 FSD 수익화 추정:</text>
+  <text x="170" y="378" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">유럽 Tesla 약 80만 대 × 전환율 10% × €8,000~9,000 = €640M~720M 일시 매출</text>
+  <text x="50" y="392" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">+ 월정액 모델 전환 시 장기 반복 수익 구조로 전환 가능</text>
+
+  <line x1="30" y1="410" x2="770" y2="410" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="424" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="424" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

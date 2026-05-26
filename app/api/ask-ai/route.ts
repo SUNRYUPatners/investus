@@ -105,12 +105,41 @@ export async function POST(req: NextRequest) {
     year: "numeric", month: "long", day: "numeric", weekday: "long",
   });
 
+  // 실시간 주가 + 애널리스트 목표주가 주입
+  let realtimeContext = "";
+  if (symbol) {
+    const finnhubKey = process.env.FINNHUB_API_KEY ?? "";
+    try {
+      const [quoteRes, targetRes] = await Promise.allSettled([
+        fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${finnhubKey}`, { signal: AbortSignal.timeout(3000) }),
+        fetch(`https://finnhub.io/api/v1/stock/price-target?symbol=${symbol}&token=${finnhubKey}`, { signal: AbortSignal.timeout(3000) }),
+      ]);
+
+      const quote = quoteRes.status === "fulfilled" && quoteRes.value.ok
+        ? await quoteRes.value.json() as { c?: number; dp?: number }
+        : null;
+      const target = targetRes.status === "fulfilled" && targetRes.value.ok
+        ? await targetRes.value.json() as { targetMean?: number; targetHigh?: number; targetLow?: number; lastUpdated?: string }
+        : null;
+
+      const lines: string[] = [];
+      if (quote?.c && quote.c > 0) {
+        lines.push(`현재가: $${quote.c.toFixed(2)} (전일 대비 ${(quote.dp ?? 0) >= 0 ? "+" : ""}${(quote.dp ?? 0).toFixed(2)}%)`);
+      }
+      if (target?.targetMean && target.targetMean > 0) {
+        lines.push(`애널리스트 평균 목표주가: $${target.targetMean.toFixed(2)} (최저 $${(target.targetLow ?? 0).toFixed(2)} ~ 최고 $${(target.targetHigh ?? 0).toFixed(2)})`);
+        if (target.lastUpdated) lines.push(`목표주가 업데이트: ${target.lastUpdated}`);
+      }
+      if (lines.length > 0) realtimeContext = "\n실시간 데이터:\n" + lines.join("\n");
+    } catch { /* 실시간 데이터 실패 시 정적 컨텍스트만 사용 */ }
+  }
+
   const system = `당신은 한국 서학개미(미국 주식 개인 투자자)를 위한 투자 정보 도우미입니다.
 오늘 날짜: ${today}
-현재 사용자가 보고 있는 종목: ${symbol} (${stockInfo})
+현재 사용자가 보고 있는 종목: ${symbol} (${stockInfo})${realtimeContext}
 
 답변 규칙:
-- 항상 한국어로 간결하게 답변 (3~5문장 이내)
+- 질문한 언어로 답변 (한국어 질문 → 한국어, 영어 질문 → 영어), 간결하게 (3~5문장 이내)
 - 투자 권유가 아닌 객관적 정보 제공만 허용 (자본시장법·SEC 규정 준수)
 - 수익 보장·예측 발언 절대 금지
 - 특정 매수·매도 타이밍 제시 금지 ("지금 사세요", "지금 파세요" 등 금지)

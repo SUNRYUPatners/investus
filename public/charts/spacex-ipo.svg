@@ -1,54 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a0f1e"/><stop offset="100%" stop-color="#100a28"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0c1525"/></linearGradient>
     <linearGradient id="gp" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
-    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0.5"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
   </defs>
+
   <rect width="800" height="430" fill="url(#bg)"/>
-  <text x="400" y="32" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="3">SpaceX IPO · 2026.06.12 Nasdaq $SPCE</text>
-  <text x="400" y="57" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Arial" font-weight="bold">$15B 조달 — BlackRock $5~10B 단독 매수 시도</text>
+  <rect width="800" height="58" fill="rgba(168,85,247,0.07)"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(168,85,247,0.25)"/>
 
-  <!-- IPO 물량 파이 차트 (두 개 반원) -->
-  <!-- 기관 70% -->
-  <path d="M 200 220 L 200 120 A 100 100 0 1 1 120 330 Z" fill="rgba(124,58,237,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
-  <text x="165" y="235" text-anchor="middle" fill="#a78bfa" font-size="22" font-family="Arial" font-weight="bold">70%</text>
-  <text x="165" y="256" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">기관 투자자</text>
-  <!-- 소매 30% -->
-  <path d="M 200 220 L 120 330 A 100 100 0 0 1 200 120 Z" fill="rgba(0,229,160,0.35)" stroke="#00e5a0" stroke-width="1.5"/>
-  <text x="233" y="282" text-anchor="middle" fill="#00e5a0" font-size="18" font-family="Arial" font-weight="bold">30%</text>
-  <text x="240" y="300" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">소매 투자자</text>
+  <text x="400" y="22" text-anchor="middle" fill="#c084fc" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">SpaceX 공개 S-1 SEC 제출 · 2026.05.21</text>
+  <text x="400" y="45" text-anchor="middle" fill="#e2e8f0" font-size="17" font-family="Arial" font-weight="bold">IPO 공식 시작 · 티커 $SPCX · 머스크 의결권 85.1%</text>
 
-  <!-- BlackRock bar -->
-  <text x="380" y="105" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">IPO 물량 배분 ($15B 기준)</text>
-  <!-- Bar: BlackRock -->
-  <rect x="380" y="120" width="370" height="22" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-  <rect x="380" y="120" width="185" height="22" rx="4" fill="rgba(124,58,237,0.5)" stroke="#a78bfa" stroke-width="1"/>
-  <text x="392" y="136" fill="#e2e8f0" font-size="11" font-family="Arial" font-weight="bold">BlackRock</text>
-  <text x="575" y="136" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold">$5~10B (12%)</text>
-  <!-- Bar: 기타 기관 -->
-  <rect x="380" y="154" width="370" height="22" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-  <rect x="380" y="154" width="222" height="22" rx="4" fill="rgba(59,130,246,0.4)" stroke="#60a5fa" stroke-width="1"/>
-  <text x="392" y="170" fill="#e2e8f0" font-size="11" font-family="Arial" font-weight="bold">기타 기관</text>
-  <text x="612" y="170" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">$5.5B (58%)</text>
-  <!-- Bar: 소매 -->
-  <rect x="380" y="188" width="370" height="22" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-  <rect x="380" y="188" width="111" height="22" rx="4" fill="rgba(0,229,160,0.4)" stroke="#00e5a0" stroke-width="1"/>
-  <text x="392" y="204" fill="#e2e8f0" font-size="11" font-family="Arial" font-weight="bold">소매 투자자</text>
-  <text x="499" y="204" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">$4.5B (30%)</text>
+  <!-- Left panel: S-1 핵심 사실 -->
+  <rect x="20" y="75" width="370" height="330" rx="10" fill="rgba(168,85,247,0.06)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <rect x="20" y="75" width="4" height="330" rx="2" fill="url(#gp)"/>
 
-  <!-- 5 reasons -->
-  <rect x="380" y="230" width="370" height="160" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
-  <text x="565" y="252" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Arial" font-weight="bold">SpaceX가 특별한 이유</text>
-  <text x="396" y="274" fill="#94a3b8" font-size="11" font-family="Arial">① Starlink — 전 세계 국가 인터넷 인프라 수준</text>
-  <text x="396" y="296" fill="#94a3b8" font-size="11" font-family="Arial">② Falcon 9 재사용 — 경쟁자 없는 발사 기술</text>
-  <text x="396" y="318" fill="#94a3b8" font-size="11" font-family="Arial">③ Starship — 화성 식민지·달 임무 초장기 스토리</text>
-  <text x="396" y="340" fill="#94a3b8" font-size="11" font-family="Arial">④ 군사·정부 계약 — 미 우주군·NASA 핵심 파트너</text>
-  <text x="396" y="362" fill="#94a3b8" font-size="11" font-family="Arial">⑤ AI + 우주 — xAI와 시너지, 머스크 생태계</text>
+  <text x="205" y="105" text-anchor="middle" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="2">S-1 제출 핵심 사실</text>
 
-  <!-- Key stat highlight -->
-  <rect x="60" y="340" width="290" height="58" rx="8" fill="rgba(124,58,237,0.1)" stroke="rgba(167,139,250,0.3)" stroke-width="1"/>
-  <text x="205" y="364" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Arial">현재 기업 가치</text>
-  <text x="205" y="387" text-anchor="middle" fill="#a78bfa" font-size="22" font-family="Arial" font-weight="bold">$350B+</text>
+  <!-- 티커 -->
+  <rect x="35" y="115" width="340" height="40" rx="6" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="52" y="130" fill="#94a3b8" font-size="10" font-family="Arial">티커 / 제출일</text>
+  <text x="52" y="149" fill="#c084fc" font-size="18" font-family="Arial" font-weight="bold">$SPCX · 2026년 5월 20일 SEC 공개 제출</text>
 
-  <text x="400" y="416" text-anchor="middle" fill="#334155" font-size="10" font-family="Arial">SUNRYU Partners CIO · 2026.05.18</text>
+  <!-- 이중의결권 -->
+  <rect x="35" y="163" width="340" height="55" rx="6" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.25)" stroke-width="1"/>
+  <text x="52" y="179" fill="#94a3b8" font-size="10" font-family="Arial">이중 의결권 구조 (Dual Class)</text>
+  <text x="52" y="197" fill="#f87171" font-size="16" font-family="Arial" font-weight="bold">머스크 의결권 합산 85.1%</text>
+  <text x="52" y="213" fill="#64748b" font-size="10" font-family="Arial">Class A 주식 12.3% · Class B 주식 93.6% → 사실상 지배구조 독점</text>
+
+  <!-- CEO / 주소 -->
+  <rect x="35" y="226" width="340" height="38" rx="6" fill="rgba(100,116,139,0.1)" stroke="rgba(100,116,139,0.2)" stroke-width="1"/>
+  <text x="52" y="241" fill="#94a3b8" font-size="10" font-family="Arial">CEO / 본사</text>
+  <text x="52" y="257" fill="#e2e8f0" font-size="13" font-family="Arial" font-weight="bold">Elon Musk · 1 Rocket Road, Starbase, Texas 78521</text>
+
+  <!-- Starlink -->
+  <rect x="35" y="272" width="340" height="40" rx="6" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="52" y="288" fill="#94a3b8" font-size="10" font-family="Arial">Starlink 유료 가입자</text>
+  <text x="52" y="305" fill="#00e5a0" font-size="16" font-family="Arial" font-weight="bold">1,000만 돌파 (2020→2026 · 6년)</text>
+
+  <!-- CIO 코멘트 -->
+  <rect x="35" y="320" width="340" height="78" rx="6" fill="rgba(212,175,55,0.07)" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
+  <text x="52" y="337" fill="#d4af37" font-size="10" font-family="Arial" font-weight="bold">CIO 시각</text>
+  <text x="52" y="353" fill="#cbd5e1" font-size="10.5" font-family="Arial">SpaceX는 로켓 회사가 아니다. Starlink(통신) +</text>
+  <text x="52" y="368" fill="#cbd5e1" font-size="10.5" font-family="Arial">Starship(화물·여객) + AI 인프라 연결의 복합 플랫폼.</text>
+  <text x="52" y="383" fill="#d4af37" font-size="10.5" font-family="Arial" font-weight="bold">IPO 후 S&amp;P500 편입 → 패시브 자금 대규모 유입 기대.</text>
+
+  <!-- Right panel: 투자 분석 -->
+  <rect x="410" y="75" width="370" height="330" rx="10" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <text x="595" y="105" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">투자 포인트 분석</text>
+
+  <!-- Bull -->
+  <rect x="425" y="115" width="340" height="58" rx="6" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="442" y="133" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">🚀 Bull Case</text>
+  <text x="442" y="149" fill="#cbd5e1" font-size="10.5" font-family="Arial">Starlink 독점 위성 인터넷 · Starship 발사 시장 지배</text>
+  <text x="442" y="164" fill="#cbd5e1" font-size="10.5" font-family="Arial">TAM $500B+ 우주경제 · S&amp;P500 편입 패시브 유입</text>
+
+  <!-- Bear -->
+  <rect x="425" y="181" width="340" height="58" rx="6" fill="rgba(239,68,68,0.07)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="442" y="199" fill="#f87171" font-size="11" font-family="Arial" font-weight="bold">⚠️ Bear Case / 리스크</text>
+  <text x="442" y="215" fill="#cbd5e1" font-size="10.5" font-family="Arial">머스크 집중 리스크: 85.1% 의결권 + 다중 겸직</text>
+  <text x="442" y="230" fill="#cbd5e1" font-size="10.5" font-family="Arial">Starship 상용화 지연 · FAA 발사 허가 규제</text>
+
+  <!-- 간접투자 -->
+  <rect x="425" y="247" width="340" height="58" rx="6" fill="rgba(59,130,246,0.07)" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+  <text x="442" y="265" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">📊 현재 간접 노출 방법</text>
+  <text x="442" y="281" fill="#cbd5e1" font-size="10.5" font-family="Arial">SpaceX 비상장 중 → RKLB (Rocket Lab) 주목</text>
+  <text x="442" y="296" fill="#cbd5e1" font-size="10.5" font-family="Arial">위성 발사 수요 확대 수혜 · $SPCX 상장 후 직접 매수</text>
+
+  <!-- SpaceX 사업구조 -->
+  <rect x="425" y="313" width="340" height="88" rx="6" fill="rgba(168,85,247,0.07)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="442" y="331" fill="#c084fc" font-size="11" font-family="Arial" font-weight="bold">SpaceX 사업 구조</text>
+  <text x="442" y="348" fill="#cbd5e1" font-size="10.5" font-family="Arial">① Starlink — 위성 인터넷 · 1,000만 유료 구독자</text>
+  <text x="442" y="363" fill="#cbd5e1" font-size="10.5" font-family="Arial">② Falcon 9 — 발사 시장 점유율 60%+ · 재사용</text>
+  <text x="442" y="378" fill="#cbd5e1" font-size="10.5" font-family="Arial">③ Starship — 대형 화물·여객 발사 · 화성 목표</text>
+  <text x="442" y="393" fill="#cbd5e1" font-size="10.5" font-family="Arial">④ AI 인프라 — 저궤도 위성망 연결 데이터 허브</text>
+
+  <!-- Watermark -->
+  <text x="780" y="420" text-anchor="end" fill="rgba(148,163,184,0.3)" font-size="9" font-family="Arial">SUNRYU Partners CIO · investus.kr</text>
 </svg>

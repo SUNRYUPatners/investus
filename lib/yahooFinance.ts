@@ -203,41 +203,51 @@ export async function fetchIndex(yahooSymbol: string): Promise<YFIndex | null> {
   return { ...q, previousClose: q.price - q.change };
 }
 
-/** 상품 선물 v8 조회 */
+/** 상품 선물 v8 조회 — 2 bases × 2 ranges 병렬 race, 첫 성공값 반환 */
 export async function fetchFutureV8(
   yahooSym: string,
 ): Promise<{ price: number; change: number; changePercent: number } | null> {
-  for (const base of [YF_BASE, YF_BASE2]) {
-    for (const range of ["5d", "1mo"]) {
-      try {
+  const attempts = ([YF_BASE, YF_BASE2] as const).flatMap((base) =>
+    (["5d", "1mo"] as const).map((range) =>
+      (async () => {
         const ctrl = new AbortController();
-        const tid  = setTimeout(() => ctrl.abort(), 3_000);
+        const tid  = setTimeout(() => ctrl.abort(), 4_000);
         const url  =
           `${base}/v8/finance/chart/${encodeURIComponent(yahooSym)}` +
           `?interval=1d&range=${range}&includePrePost=false`;
-        const res = await yfFetch(url, { cache: "no-store", signal: ctrl.signal });
-        clearTimeout(tid);
-        if (!res.ok) continue;
-        const json   = await res.json();
-        const result = json?.chart?.result?.[0];
-        const meta   = result?.meta;
-        if (!meta?.regularMarketPrice) continue;
-        const price  = Number(meta.regularMarketPrice);
-        const isOpen = meta.marketState === "REGULAR";
-        const rawCloses: unknown[] = result?.indicators?.quote?.[0]?.close ?? [];
-        const closes = rawCloses.filter((c): c is number => typeof c === "number" && c > 0);
-        const prev   = isOpen
-          ? (closes.at(-1) ?? price)
-          : (closes.at(-2) ?? closes.at(-1) ?? price);
-        return {
-          price,
-          change:        price - prev,
-          changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0,
-        };
-      } catch { /* try next host / range */ }
-    }
-  }
-  return null;
+        try {
+          const res = await yfFetch(url, { cache: "no-store", signal: ctrl.signal });
+          clearTimeout(tid);
+          if (!res.ok) return null;
+          const json   = await res.json();
+          const result = json?.chart?.result?.[0];
+          const meta   = result?.meta;
+          if (!meta?.regularMarketPrice) return null;
+          const price  = Number(meta.regularMarketPrice);
+          const isOpen = meta.marketState === "REGULAR";
+          const rawCloses: unknown[] = result?.indicators?.quote?.[0]?.close ?? [];
+          const closes = rawCloses.filter((c): c is number => typeof c === "number" && c > 0);
+          const prev   = isOpen
+            ? (closes.at(-1) ?? price)
+            : (closes.at(-2) ?? closes.at(-1) ?? price);
+          return {
+            price,
+            change:        price - prev,
+            changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0,
+          };
+        } catch {
+          clearTimeout(tid);
+          return null;
+        }
+      })(),
+    ),
+  );
+
+  // 4개 요청 동시 진행 — 첫 유효 응답 즉시 반환
+  const result = await Promise.any(
+    attempts.map((p) => p.then((r) => r ?? Promise.reject(new Error("null")))),
+  ).catch(() => null);
+  return result ?? null;
 }
 
 /** 스파크라인 (1시간봉 × 9개) */

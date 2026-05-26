@@ -54,29 +54,29 @@ export default async function InsightPage() {
     <Link
       href="/education"
       className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
-      style={{ borderColor: "rgba(139,92,246,0.25)" }}
+      style={{ borderColor: "rgba(212,175,55,0.3)" }}
     >
       <div
         className="relative px-5 py-5 flex items-center gap-4"
-        style={{ background: "linear-gradient(135deg, #1a0d2e 0%, #0d0d1f 60%, #0a0c10 100%)" }}
+        style={{ background: "linear-gradient(135deg, #1c1500 0%, #0d0b00 60%, #0a0c10 100%)" }}
       >
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(circle at 80% 50%, rgba(139,92,246,0.1) 0%, transparent 60%)" }} />
+          style={{ background: "radial-gradient(circle at 80% 50%, rgba(212,175,55,0.1) 0%, transparent 60%)" }} />
         <div className="relative w-[68px] h-[68px] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg"
-          style={{ background: "linear-gradient(145deg, #2d1a4e, #1a0d2e)", border: "1px solid rgba(139,92,246,0.35)", boxShadow: "0 8px 24px rgba(139,92,246,0.2)" }}>
+          style={{ background: "linear-gradient(145deg, #2a1f00, #1a1400)", border: "1px solid rgba(212,175,55,0.4)", boxShadow: "0 8px 24px rgba(212,175,55,0.2)" }}>
           <span className="text-3xl">🎓</span>
         </div>
         <div className="flex-1 min-w-0">
           <div className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-2"
-            style={{ background: "rgba(139,92,246,0.2)", color: "#a78bfa" }}>
+            style={{ background: "rgba(212,175,55,0.18)", color: "#d4af37" }}>
             {t.exclusiveClass}
           </div>
           <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>{t.courseTitle}</p>
           <p className="text-[11px] mb-2.5" style={{ color: "var(--muted)" }}>{t.courseSub}</p>
           <div className="flex items-center justify-between">
-            <p className="text-xs" style={{ color: "#a78bfa" }}>{t.limitedSpots}</p>
+            <p className="text-xs" style={{ color: "#d4af37" }}>{t.limitedSpots}</p>
             <span className="text-[11px] font-bold px-3 py-1.5 rounded-full"
-              style={{ background: "linear-gradient(135deg, #7c3aed, #a78bfa)", color: "#fff" }}>
+              style={{ background: "linear-gradient(135deg, #b8960c, #d4af37)", color: "#000" }}>
               {t.apply}
             </span>
           </div>

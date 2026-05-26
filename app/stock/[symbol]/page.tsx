@@ -5,10 +5,12 @@ import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { StockChart } from "@/components/StockChart";
 import { NewsCard } from "@/components/NewsCard";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, ChevronDown } from "lucide-react";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import type { NewsItem } from "@/lib/api";
+import { SEED_REPORTS, REPORT_TICKERS, CATEGORY_STYLE, CATEGORY_EMOJI } from "@/lib/reports";
+import type { Report } from "@/lib/reports";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -83,6 +85,169 @@ function isMarketOpen(): boolean {
   if (day === 0 || day === 6) return false;
   const mins = now.getHours() * 60 + now.getMinutes();
   return mins >= 9 * 60 + 30 && mins < 16 * 60;
+}
+
+// ── Investus 리포트 카드 — ReportFeed 스타일 그대로 ──────────────────────────
+function ReportCard({ r }: { r: Report }) {
+  const [open, setOpen] = useState(false);
+  const style = CATEGORY_STYLE[r.categoryColor];
+  const emoji = CATEGORY_EMOJI[r.category];
+  const hasImages = (r.images?.length ?? 0) > 0;
+
+  return (
+    <div
+      className="rounded-2xl border overflow-hidden"
+      style={{ background: "var(--card)", borderColor: "var(--border)" }}
+    >
+      {/* 요약 영역 */}
+      <div className="p-4">
+        {/* 카테고리 + subject + 날짜 */}
+        <div className="flex items-center gap-1.5 mb-2 flex-wrap">
+          <span
+            className="text-[9px] font-bold px-2 py-0.5 rounded-full flex-shrink-0"
+            style={{ background: style.bg, color: style.color }}
+          >
+            {emoji} {r.category}
+          </span>
+          {r.subject && (
+            <span
+              className="text-[9px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0"
+              style={{ background: "rgba(255,255,255,0.06)", color: "var(--text)" }}
+            >
+              {r.subject}
+            </span>
+          )}
+          <span
+            className="text-[9px] font-mono-num tabular-nums ml-auto flex-shrink-0"
+            style={{ color: "var(--muted)", opacity: 0.7 }}
+          >
+            {r.updatedAt ?? r.date}
+          </span>
+        </div>
+
+        {/* 제목 */}
+        <h3 className="text-sm font-bold leading-snug mb-2" style={{ color: "var(--text)" }}>
+          {r.title}
+        </h3>
+
+        {/* 요약 — 3줄 클램프, 펼치면 전체 */}
+        <p
+          className="text-[12px] leading-relaxed"
+          style={{
+            color: "var(--muted)",
+            display: "-webkit-box",
+            WebkitLineClamp: open ? undefined : 3,
+            WebkitBoxOrient: "vertical" as const,
+            overflow: open ? "visible" : "hidden",
+          }}
+        >
+          {r.summary}
+        </p>
+
+        {/* 더 보기 버튼 */}
+        <button
+          className="flex items-center gap-0.5 text-[11px] font-semibold mt-2.5 active:opacity-60 transition-opacity"
+          style={{ color: style.color, background: "none", border: "none", cursor: "pointer", padding: 0 }}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? "접기" : "더 보기"}
+          <ChevronDown
+            className="w-3.5 h-3.5 transition-transform"
+            style={{ transform: open ? "rotate(180deg)" : "none" }}
+          />
+        </button>
+      </div>
+
+      {/* 전체 본문 — 펼쳤을 때만 */}
+      {open && (
+        <div
+          className="border-t px-4 py-4"
+          style={{ borderColor: "var(--border)", background: "rgba(255,255,255,0.02)" }}
+        >
+          {/* 이미지 — 펼쳤을 때만 표시 */}
+          {hasImages && (
+            <div className="flex flex-col gap-2 mb-4">
+              {r.images!.map((src) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={src} src={src} alt="" className="w-full rounded-xl"
+                  style={{ objectFit: "contain" }} />
+              ))}
+            </div>
+          )}
+
+          {/* 본문 파싱 — ReportFeed와 동일 */}
+          {!r.imageOnly && r.body && r.body.split("\n").map((line, i) => {
+            if (line.startsWith("■"))
+              return <p key={i} className="text-xs font-bold mt-4 mb-1.5 first:mt-0" style={{ color: style.color }}>{line}</p>;
+            if (line.startsWith("•") || line.match(/^[0-9]+\)/))
+              return <p key={i} className="text-[12px] leading-relaxed pl-3 mb-1" style={{ color: "var(--muted)" }}>{line}</p>;
+            if (line.trim() === "")
+              return <div key={i} className="h-1" />;
+            return <p key={i} className="text-[12px] leading-relaxed mb-1" style={{ color: "var(--text)" }}>{line}</p>;
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Investus 리포트 섹션 ────────────────────────────────────────────────────
+function getDateKey(r: Report): string {
+  const s = r.updatedAt ?? r.date ?? "";
+  return s.split(" ")[0].replace(/\./g, "-");
+}
+
+function StockReports({ symbol, className = "" }: { symbol: string; className?: string }) {
+  const [showOlder, setShowOlder] = useState(false);
+
+  const reports: Report[] = SEED_REPORTS.filter(
+    (r) =>
+      REPORT_TICKERS[r.id]?.includes(symbol) &&
+      !r.subject?.includes("한장 요약"),
+  );
+
+  if (reports.length === 0) return null;
+
+  const latestDateKey = reports.reduce((max, r) => {
+    const d = getDateKey(r);
+    return d > max ? d : max;
+  }, "");
+
+  const latestGroup = reports.filter((r) => getDateKey(r) === latestDateKey);
+  const olderGroup  = reports.filter((r) => getDateKey(r) < latestDateKey);
+
+  return (
+    <div className={className}>
+      <h2
+        className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
+        style={{ color: "var(--muted)" }}
+      >
+        Investus 리포트
+      </h2>
+      <div className="flex flex-col gap-3">
+        {/* 최신 날짜 리포트 — 항상 표시 */}
+        {latestGroup.map((r) => <ReportCard key={r.id} r={r} />)}
+
+        {/* 이전 날짜 리포트 — 더보기 토글 */}
+        {olderGroup.length > 0 && (
+          <>
+            {!showOlder ? (
+              <button
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"
+                style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
+                onClick={() => setShowOlder(true)}
+              >
+                이전 리포트 더보기 ({olderGroup.length}개)
+                <ChevronDown className="w-4 h-4" />
+              </button>
+            ) : (
+              olderGroup.map((r) => <ReportCard key={r.id} r={r} />)
+            )}
+          </>
+        )}
+      </div>
+    </div>
+  );
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────
@@ -238,9 +403,10 @@ export default function StockPage({
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] lg:max-w-2xl mx-auto pb-24 lg:pb-10">
-        {/* Back button + watchlist star */}
-        <div className="px-4 pt-4 pb-2 flex items-center justify-between">
+      <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 pb-24 lg:pb-10">
+
+        {/* 뒤로가기 */}
+        <div className="px-4 lg:px-0 pt-4 pb-2">
           <button
             onClick={() => router.back()}
             className="inline-flex items-center gap-1 text-xs"
@@ -248,169 +414,219 @@ export default function StockPage({
           >
             <ChevronLeft className="w-3.5 h-3.5" /> {t.stock.back}
           </button>
-          <button
-            onClick={() => toggleWatchlist(upper)}
-            className="w-9 h-9 flex items-center justify-center rounded-xl active:scale-90 transition-transform"
-            style={{ background: "var(--card)" }}
-            aria-label={watchlist.includes(upper) ? t.stock.watchlistRemove : t.stock.watchlistAdd}
-          >
-            <span
-              className="text-xl leading-none"
-              style={{
-                color: watchlist.includes(upper) ? "#facc15" : "var(--border)",
-                filter: watchlist.includes(upper) ? "drop-shadow(0 0 5px #facc15)" : "none",
-              }}
-            >
-              ★
-            </span>
-          </button>
         </div>
 
-        {/* ── 종목 헤더 ── */}
-        <div className="px-4 pb-4">
-          <div className="flex items-start justify-between gap-4">
-            {/* Left: symbol + name */}
-            <div>
-              <h1 className="text-2xl font-bold font-syne" style={{ color: "var(--text)" }}>
-                {upper}
-              </h1>
-              {detailLoading ? (
-                <div className="h-4 w-32 rounded animate-pulse mt-1"
-                  style={{ background: "var(--card)" }} />
-              ) : (
-                <p className="text-sm leading-snug" style={{ color: "var(--muted)" }}>
-                  {detail?.name ?? "—"}
-                </p>
-              )}
-              <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>
+        {/* 홈탭과 동일: flex gap-8 */}
+        <div className="lg:flex lg:gap-8 lg:items-start">
+
+          {/* ── 왼쪽 컬럼 ── */}
+          <div className="lg:flex-1 lg:min-w-0">
+            {/* 종목 헤더 — 모바일 */}
+            <div className="px-4 pb-4 lg:hidden">
+              <div className="flex items-start justify-between gap-4">
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <h1 className="text-2xl font-bold font-syne" style={{ color: "var(--text)" }}>{upper}</h1>
+                    <button
+                      onClick={() => toggleWatchlist(upper)}
+                      className="flex-shrink-0 active:scale-90 transition-transform"
+                      aria-label={watchlist.includes(upper) ? t.stock.watchlistRemove : t.stock.watchlistAdd}
+                    >
+                      <span className="text-xl leading-none" style={{
+                        color: watchlist.includes(upper) ? "#facc15" : "var(--border)",
+                        filter: watchlist.includes(upper) ? "drop-shadow(0 0 5px #facc15)" : "none",
+                      }}>★</span>
+                    </button>
+                  </div>
+                  {detailLoading
+                    ? <div className="h-4 w-32 rounded animate-pulse mt-1" style={{ background: "var(--card)" }} />
+                    : <p className="text-sm leading-snug" style={{ color: "var(--muted)" }}>{detail?.name ?? "—"}</p>}
+                  <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>
+                    {detail ? `${detail.exchange} · ${detail.currency}` : ""}
+                  </p>
+                </div>
+                {detail ? (
+                  <div className="text-right flex-shrink-0">
+                    <p className="text-2xl font-bold font-mono-num" style={{ color: "var(--text)" }}>
+                      ${detail.price.toFixed(2)}
+                    </p>
+                    <p className="text-sm font-mono-num mt-0.5" style={{ color }}>
+                      {isUp ? "+" : ""}{detail.change.toFixed(2)}&nbsp;
+                      <span className="text-xs">({isUp ? "+" : ""}{detail.changePercent.toFixed(2)}%)</span>
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-1">
+                    <div className="h-7 w-24 rounded animate-pulse" style={{ background: "var(--card)" }} />
+                    <div className="h-4 w-20 rounded animate-pulse" style={{ background: "var(--card)" }} />
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* 종목 헤더 — 데스크탑 */}
+            <div className="hidden lg:block pb-4">
+              <div className="flex items-start gap-3 mb-1">
+                <h1 className="text-3xl font-bold font-syne" style={{ color: "var(--text)" }}>{upper}</h1>
+                <button
+                  onClick={() => toggleWatchlist(upper)}
+                  className="mt-1 flex-shrink-0 active:scale-90 transition-transform"
+                  aria-label={watchlist.includes(upper) ? t.stock.watchlistRemove : t.stock.watchlistAdd}
+                >
+                  <span className="text-2xl leading-none" style={{
+                    color: watchlist.includes(upper) ? "#facc15" : "var(--border)",
+                    filter: watchlist.includes(upper) ? "drop-shadow(0 0 5px #facc15)" : "none",
+                  }}>★</span>
+                </button>
+              </div>
+              {detailLoading
+                ? <div className="h-5 w-48 rounded animate-pulse" style={{ background: "var(--card)" }} />
+                : <p className="text-base leading-snug" style={{ color: "var(--muted)" }}>{detail?.name ?? "—"}</p>}
+              <p className="text-xs mt-0.5 mb-3" style={{ color: "var(--muted)" }}>
                 {detail ? `${detail.exchange} · ${detail.currency}` : ""}
               </p>
+              {detail ? (
+                <div className="flex items-baseline gap-3">
+                  <p className="text-4xl font-bold font-mono-num" style={{ color: "var(--text)" }}>
+                    ${detail.price.toFixed(2)}
+                  </p>
+                  <p className="text-lg font-mono-num" style={{ color }}>
+                    {isUp ? "+" : ""}{detail.change.toFixed(2)}&nbsp;
+                    <span className="text-sm">({isUp ? "+" : ""}{detail.changePercent.toFixed(2)}%)</span>
+                  </p>
+                </div>
+              ) : (
+                <div className="flex gap-3">
+                  <div className="h-10 w-36 rounded animate-pulse" style={{ background: "var(--card)" }} />
+                  <div className="h-6 w-24 rounded animate-pulse mt-2" style={{ background: "var(--card)" }} />
+                </div>
+              )}
             </div>
 
-            {/* Right: price + change */}
-            {detail ? (
-              <div className="text-right flex-shrink-0">
-                <p className="text-2xl font-bold font-mono-num" style={{ color: "var(--text)" }}>
-                  ${detail.price.toFixed(2)}
-                </p>
-                <p className="text-sm font-mono-num mt-0.5" style={{ color }}>
-                  {isUp ? "+" : ""}{detail.change.toFixed(2)}&nbsp;
-                  <span className="text-xs">
-                    ({isUp ? "+" : ""}{detail.changePercent.toFixed(2)}%)
-                  </span>
-                </p>
-              </div>
-            ) : (
-              <div className="space-y-1">
-                <div className="h-7 w-24 rounded animate-pulse" style={{ background: "var(--card)" }} />
-                <div className="h-4 w-20 rounded animate-pulse" style={{ background: "var(--card)" }} />
+            {/* 차트 */}
+            <div
+              className="mx-4 lg:mx-0 rounded-2xl border overflow-hidden mb-4"
+              style={{ background: "var(--card)", borderColor: "var(--border)" }}
+            >
+              <StockChart
+                symbol={upper}
+                livePrice={detail?.price}
+                liveChange={detail?.change}
+                liveChangePercent={detail?.changePercent}
+                onPriceLoaded={(price, change, changePercent) => {
+                  setDetail((prev) => {
+                    if (prev && prev.price > 0) return prev;
+                    return {
+                      symbol: upper, name: prev?.name ?? upper,
+                      exchange: prev?.exchange ?? "US", currency: prev?.currency ?? "USD",
+                      price, change, changePercent,
+                      open: null, high: null, low: null, volume: null,
+                      pe: null, marketCap: null, week52High: null, week52Low: null,
+                      avgVolume: null, dividendYield: null, beta: null, eps: null,
+                    };
+                  });
+                  setDetailLoading(false);
+                }}
+              />
+            </div>
+
+            {/* 주요 지표 */}
+            {stats.length > 0 && (
+              <div
+                className="mx-4 lg:mx-0 rounded-xl border overflow-hidden mb-4"
+                style={{ background: "var(--card)", borderColor: "var(--border)" }}
+              >
+                <div className="grid grid-cols-4">
+                  {stats.map(([label, value], i) => {
+                    const cols = 4;
+                    const total = stats.length;
+                    const lastRowStart = total - (total % cols || cols);
+                    const isLastRow = i >= lastRowStart;
+                    const colIdx = i % cols;
+                    return (
+                      <div
+                        key={label}
+                        className="flex items-center justify-between gap-1 px-2.5 py-1.5"
+                        style={{
+                          borderColor: "var(--border)",
+                          borderBottomWidth: isLastRow ? "0px" : "1px",
+                          borderRightWidth: colIdx < cols - 1 ? "1px" : "0px",
+                          borderStyle: "solid",
+                        }}
+                      >
+                        <span className="text-[9px] shrink-0" style={{ color: "var(--muted)" }}>{label}</span>
+                        <span className="text-[9px] font-semibold font-mono-num text-right whitespace-nowrap" style={{ color: "var(--text)" }}>{value}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             )}
-          </div>
-        </div>
 
-        {/* ── 차트 ── */}
-        <div
-          className="mx-4 rounded-2xl border overflow-hidden mb-4"
-          style={{ background: "var(--card)", borderColor: "var(--border)" }}
-        >
-          <StockChart
-            symbol={upper}
-            livePrice={detail?.price}
-            liveChange={detail?.change}
-            liveChangePercent={detail?.changePercent}
-            onPriceLoaded={(price, change, changePercent) => {
-              // stock-detail이 없을 때 차트 데이터로 가격 표시
-              setDetail((prev) => {
-                if (prev && prev.price > 0) return prev;
-                return {
-                  symbol: upper, name: prev?.name ?? upper,
-                  exchange: prev?.exchange ?? "US", currency: prev?.currency ?? "USD",
-                  price, change, changePercent,
-                  open: null, high: null, low: null, volume: null,
-                  pe: null, marketCap: null, week52High: null, week52Low: null,
-                  avgVolume: null, dividendYield: null, beta: null, eps: null,
-                };
-              });
-              setDetailLoading(false);
-            }}
-          />
-        </div>
+            {/* 리포트 — 지표 바로 아래 (모바일 + 데스크탑 공통) */}
+            <StockReports symbol={upper} className="mx-4 lg:mx-0 mb-4" />
 
-        {/* ── 주요 지표 ── */}
-        {stats.length > 0 && (
-          <div
-            className="mx-4 rounded-xl border overflow-hidden mb-3"
-            style={{ background: "var(--card)", borderColor: "var(--border)" }}
-          >
-            <div className="grid grid-cols-4">
-              {stats.map(([label, value], i) => {
-                const cols         = 4;
-                const total        = stats.length;
-                const lastRowStart = total - (total % cols || cols);
-                const isLastRow    = i >= lastRowStart;
-                const colIdx       = i % cols;
-                return (
-                  <div
-                    key={label}
-                    className="flex items-center justify-between gap-1 px-2.5 py-1.5"
-                    style={{
-                      borderColor:       "var(--border)",
-                      borderBottomWidth: isLastRow ? "0px" : "1px",
-                      borderRightWidth:  colIdx < cols - 1 ? "1px" : "0px",
-                      borderStyle:       "solid",
-                    }}
-                  >
-                    <span className="text-[9px] shrink-0" style={{ color: "var(--muted)" }}>{label}</span>
-                    <span className="text-[9px] font-semibold font-mono-num text-right whitespace-nowrap" style={{ color: "var(--text)" }}>{value}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* ── 관련 뉴스 ── */}
-        {news.length > 0 && (
-          <div className="mx-4 mb-4">
-            <h2
-              className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
-              style={{ color: "var(--muted)" }}
-            >
-              {t.stock.relatedNews}
-            </h2>
-            <div className="flex flex-col gap-3">
-              {news.map((n) => (
-                <NewsCard key={n.id} item={n} />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Loading skeleton for news */}
-        {news.length === 0 && !detailLoading && (
-          <div className="mx-4 mb-4">
-            <h2
-              className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
-              style={{ color: "var(--muted)" }}
-            >
-              {t.stock.relatedNews}
-            </h2>
-            <div className="flex flex-col gap-3">
-              {[1, 2, 3].map((k) => (
-                <div key={k} className="rounded-2xl p-4 border flex gap-3"
-                  style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                  <div className="w-10 rounded-xl animate-pulse flex-shrink-0"
-                    style={{ background: "var(--border)", minHeight: 44 }} />
-                  <div className="flex-1 space-y-2 py-1">
-                    <div className="h-3.5 rounded animate-pulse" style={{ background: "var(--border)" }} />
-                    <div className="h-3 w-2/3 rounded animate-pulse" style={{ background: "var(--border)" }} />
-                  </div>
+            {/* 뉴스 — 모바일 전용 */}
+            <div className="lg:hidden mx-4 mb-4">
+              <h2 className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
+                style={{ color: "var(--muted)" }}>
+                {t.stock.relatedNews}
+              </h2>
+              {news.length > 0 ? (
+                <div className="flex flex-col gap-3">
+                  {news.map((n) => <NewsCard key={n.id} item={n} />)}
                 </div>
-              ))}
+              ) : (
+                <div className="flex flex-col gap-3">
+                  {[1, 2, 3].map((k) => (
+                    <div key={k} className="rounded-2xl p-4 border flex gap-3"
+                      style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                      <div className="w-10 rounded-xl animate-pulse flex-shrink-0"
+                        style={{ background: "var(--border)", minHeight: 44 }} />
+                      <div className="flex-1 space-y-2 py-1">
+                        <div className="h-3.5 rounded animate-pulse" style={{ background: "var(--border)" }} />
+                        <div className="h-3 w-2/3 rounded animate-pulse" style={{ background: "var(--border)" }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
-        )}
+
+          {/* ── 오른쪽 사이드바 — 홈탭과 동일한 구조 ── */}
+          <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
+            <div
+              className="rounded-2xl border p-4"
+              style={{ background: "var(--card)", borderColor: "var(--border)" }}
+            >
+              <h2 className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
+                style={{ color: "var(--muted)" }}>
+                {t.stock.relatedNews}
+              </h2>
+              {news.length > 0 ? (
+                <div className="flex flex-col gap-3">
+                  {news.map((n) => <NewsCard key={n.id} item={n} />)}
+                </div>
+              ) : (
+                <div className="flex flex-col gap-3">
+                  {[1, 2, 3].map((k) => (
+                    <div key={k} className="rounded-xl p-3 border flex gap-2"
+                      style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
+                      <div className="w-8 rounded-lg animate-pulse flex-shrink-0"
+                        style={{ background: "var(--border)", minHeight: 36 }} />
+                      <div className="flex-1 space-y-2 py-0.5">
+                        <div className="h-3 rounded animate-pulse" style={{ background: "var(--border)" }} />
+                        <div className="h-2.5 w-2/3 rounded animate-pulse" style={{ background: "var(--border)" }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
       </main>
     </div>
   );

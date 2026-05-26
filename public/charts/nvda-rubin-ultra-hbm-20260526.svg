@@ -1,0 +1,82 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#60a5fa"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" letter-spacing="2">INVESTUS · NVDA REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">Vera Rubin Ultra — HBM 메모리 7.2배 점프</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.26</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Bar chart: HBM per GPU evolution -->
+  <!-- A100: 40GB, H100: 80GB, H200: 144GB, B200: 288GB, Rubin: 288GB, Rubin Ultra: 576GB -->
+  <!-- Scale: max 576GB = 200px height -->
+
+  <!-- Labels at top -->
+  <text x="30" y="90" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">HBM 메모리 (GPU당, GB)</text>
+
+  <!-- Bars -->
+  <!-- A100: 40GB = 200*(40/576) = 13.9px -->
+  <rect x="60" y="245" width="60" height="14" rx="3" fill="#374151"/>
+  <text x="90" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">A100</text>
+  <text x="90" y="282" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">2020</text>
+  <text x="90" y="240" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">40GB</text>
+
+  <!-- H100: 80GB = 200*(80/576) = 27.8px -->
+  <rect x="160" y="231" width="60" height="28" rx="3" fill="#60a5fa" fill-opacity="0.4"/>
+  <text x="190" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">H100</text>
+  <text x="190" y="282" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">2022</text>
+  <text x="190" y="227" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">80GB</text>
+  <text x="190" y="215" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" font-weight="700">2x</text>
+
+  <!-- H200: 144GB = 200*(144/576) = 50px -->
+  <rect x="260" y="209" width="60" height="50" rx="3" fill="#60a5fa" fill-opacity="0.55"/>
+  <text x="290" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">H200</text>
+  <text x="290" y="282" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">2024</text>
+  <text x="290" y="205" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">144GB</text>
+
+  <!-- B200: 288GB = 200*(288/576) = 100px -->
+  <rect x="360" y="159" width="60" height="100" rx="3" fill="#60a5fa" fill-opacity="0.7"/>
+  <text x="390" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">B200</text>
+  <text x="390" y="282" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">2025</text>
+  <text x="390" y="155" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">288GB</text>
+
+  <!-- Rubin: 288GB = same as B200 (also 288) but different note -->
+  <rect x="460" y="159" width="60" height="100" rx="3" fill="#60a5fa" fill-opacity="0.85"/>
+  <text x="490" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Rubin</text>
+  <text x="490" y="282" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">2026</text>
+  <text x="490" y="155" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">288GB</text>
+  <text x="490" y="143" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" font-weight="700">3.6x</text>
+
+  <!-- Rubin Ultra: 576GB = 200px -->
+  <rect x="560" y="59" width="80" height="200" rx="3" fill="#fb923c"/>
+  <text x="600" y="270" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle" font-weight="700">Rubin Ultra</text>
+  <text x="600" y="282" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">2027</text>
+  <text x="600" y="55" font-family="Arial,sans-serif" font-size="12" fill="#fb923c" text-anchor="middle" font-weight="700">576GB</text>
+  <text x="600" y="42" font-family="Arial,sans-serif" font-size="14" fill="#fb923c" text-anchor="middle" font-weight="900">7.2x ↑</text>
+
+  <!-- Baseline line -->
+  <line x1="50" y1="259" x2="670" y2="259" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Key insight box -->
+  <rect x="30" y="300" width="740" height="60" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="50" y="322" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">■ 핵심 포인트</text>
+  <text x="50" y="340" font-family="Arial,sans-serif" font-size="11" fill="white">H100 → Rubin Ultra 메모리 7.2배 (80GB → 576GB) — AI 모델 크기 한계 극적 확장</text>
+  <text x="50" y="352" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Rubin Ultra = 2+2 board-level assembly · 4개 다이 합산 1TB · HBM4 stack ~36GB × 16</text>
+
+  <!-- Additional metrics -->
+  <rect x="30" y="372" width="235" height="44" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <text x="50" y="390" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">A100 → H100</text>
+  <text x="50" y="407" font-family="Arial,sans-serif" font-size="18" fill="#60a5fa" font-weight="700">2x</text>
+
+  <rect x="278" y="372" width="235" height="44" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <text x="298" y="390" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">H100 → Rubin</text>
+  <text x="298" y="407" font-family="Arial,sans-serif" font-size="18" fill="#60a5fa" font-weight="700">3.6x</text>
+
+  <rect x="526" y="372" width="244" height="44" rx="6" fill="#0a0f1e" stroke="#fb923c" stroke-width="1"/>
+  <text x="546" y="390" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">H100 → Rubin Ultra</text>
+  <text x="546" y="407" font-family="Arial,sans-serif" font-size="18" fill="#fb923c" font-weight="700">7.2x</text>
+
+  <!-- Footer -->
+  <line x1="30" y1="424" x2="770" y2="424" stroke="#1e2330" stroke-width="1"/>
+  <text x="770" y="418" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
+</svg>

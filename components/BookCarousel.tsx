@@ -165,7 +165,7 @@ export function BookCarousel() {
   return (
     <div
       className="flex gap-4 overflow-x-auto pb-3 no-scrollbar"
-      style={{ touchAction: "pan-x" }}
+      style={{ touchAction: "pan-x pan-y" }}
     >
       {BOOKS.map((book) => (
         <BookCard key={`${book.title}-${book.isbn}`} book={book} />

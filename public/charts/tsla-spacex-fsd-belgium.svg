@@ -1,0 +1,60 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#080d08"/>
+  <rect x="0" y="0" width="800" height="3" fill="#fb923c"/>
+
+  <text x="30" y="34" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" letter-spacing="3">INVESTUS · TESLA / SPACEX</text>
+  <text x="30" y="60" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">Tesla·SpaceX 합병 · FSD 벨기에 · Robotaxi</text>
+  <text x="770" y="34" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="end">2026.05.22</text>
+  <line x1="30" y1="72" x2="770" y2="72" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Left hero: center=182 -->
+  <text x="182" y="106" font-family="Arial,sans-serif" font-size="12" fill="#fb923c" font-weight="700" text-anchor="middle">Kalshi 예측시장 합병 확률</text>
+  <text x="182" y="188" font-family="Arial,sans-serif" font-size="96" fill="#fb923c" font-weight="700" text-anchor="middle">41%</text>
+  <text x="182" y="212" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Tesla + SpaceX 1년 내 합병</text>
+  <text x="182" y="228" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" text-anchor="middle">실현 시 Starlink 수익 편입</text>
+
+  <line x1="360" y1="84" x2="360" y2="285" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Right: 3 news cards x=376 w=390 center=571 -->
+  <!-- Card 1 FSD Belgium -->
+  <rect x="376" y="84" width="390" height="60" rx="8" fill="#0a180a" stroke="rgba(0,229,160,0.45)" stroke-width="1.5"/>
+  <text x="571" y="108" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" text-anchor="middle" font-weight="700">✅ FSD 벨기에 공식 승인</text>
+  <text x="571" y="126" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" text-anchor="middle">FSD v12.6 · EU 최보수 규제기관 통과</text>
+  <text x="571" y="140" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">→ EU 전역 확산 기반 마련</text>
+
+  <!-- Card 2 Robotaxi -->
+  <rect x="376" y="152" width="390" height="60" rx="8" fill="#1a100a" stroke="rgba(251,146,60,0.45)" stroke-width="1.5"/>
+  <text x="571" y="176" font-family="Arial,sans-serif" font-size="13" fill="#fb923c" text-anchor="middle" font-weight="700">🚖 텍사스 Robotaxi 수백 대</text>
+  <text x="571" y="194" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" text-anchor="middle">소매 Robotaxi 배치 계획 확인</text>
+  <text x="571" y="208" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">FSD 신뢰 → Cybercab 상용화</text>
+
+  <!-- Card 3 SpaceX datacenter -->
+  <rect x="376" y="220" width="390" height="60" rx="8" fill="#0a0a1a" stroke="rgba(192,132,252,0.45)" stroke-width="1.5"/>
+  <text x="571" y="244" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" text-anchor="middle" font-weight="700">🛸 SpaceX 데이터센터 혁신</text>
+  <text x="571" y="262" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" text-anchor="middle">냉각 불필요 · Colossus AI 이전</text>
+  <text x="571" y="276" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">→ xAI + SpaceX 인프라 통합</text>
+
+  <!-- Bottom: beneficiary stocks -->
+  <text x="400" y="308" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" text-anchor="middle" font-weight="700">수혜 종목</text>
+
+  <!-- 4 tiles: w=164 each, gap=16, total=4×164+3×16=704. x=48 to 752 -->
+  <rect x="48" y="316" width="164" height="50" rx="8" fill="#1a100a" stroke="rgba(251,146,60,0.4)" stroke-width="1"/>
+  <text x="130" y="338" font-family="Arial,sans-serif" font-size="18" fill="#fb923c" text-anchor="middle" font-weight="700">TSLA</text>
+  <text x="130" y="356" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">합병·FSD 직접 수혜</text>
+
+  <rect x="228" y="316" width="164" height="50" rx="8" fill="#0a1020" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+  <text x="310" y="338" font-family="Arial,sans-serif" font-size="18" fill="#60a5fa" text-anchor="middle" font-weight="700">NVDA</text>
+  <text x="310" y="356" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Colossus GPU 공급</text>
+
+  <rect x="408" y="316" width="164" height="50" rx="8" fill="#0f0a1a" stroke="rgba(192,132,252,0.4)" stroke-width="1"/>
+  <text x="490" y="338" font-family="Arial,sans-serif" font-size="18" fill="#c084fc" text-anchor="middle" font-weight="700">GOOGL</text>
+  <text x="490" y="356" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">SpaceX 지분 6% 보유</text>
+
+  <rect x="588" y="316" width="164" height="50" rx="8" fill="#071a0a" stroke="rgba(0,229,160,0.4)" stroke-width="1"/>
+  <text x="670" y="338" font-family="Arial,sans-serif" font-size="18" fill="#00e5a0" text-anchor="middle" font-weight="700">AMZN</text>
+  <text x="670" y="356" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">AI 컴퓨팅 인프라</text>
+
+  <line x1="30" y1="382" x2="770" y2="382" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="400" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="400" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

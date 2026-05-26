@@ -1,0 +1,111 @@
+<svg width="800" height="480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" fill="#06100e"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <!-- Header -->
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="3">INVESTUS · SPECIAL REPORT — STARLINK</text>
+  <text x="30" y="56" font-family="Arial,sans-serif" font-size="20" fill="white" font-weight="700">Starlink 완전분석 — 우주의 현금 인출기</text>
+  <text x="770" y="30" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="end">2026.05.22</text>
+  <text x="770" y="44" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="end">SpaceX S-1 기준</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#0d2420" stroke-width="1"/>
+
+  <!-- Subscriber growth chart: 4 bars -->
+  <!-- Labels y=80, bars from y=100 to y=200, values above bars -->
+  <text x="210" y="82" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" font-weight="700" text-anchor="middle">구독자 성장 (백만명)</text>
+
+  <!-- Bar backgrounds -->
+  <rect x="75" y="98" width="60" height="102" rx="4" fill="rgba(0,229,160,0.06)"/>
+  <rect x="155" y="98" width="60" height="102" rx="4" fill="rgba(0,229,160,0.06)"/>
+  <rect x="235" y="98" width="60" height="102" rx="4" fill="rgba(0,229,160,0.06)"/>
+  <rect x="315" y="98" width="60" height="102" rx="4" fill="rgba(0,229,160,0.06)"/>
+
+  <!-- Bar 1: 2023 2.3M — height = 2.3/10.3*90 ≈ 20 -->
+  <rect x="75" y="180" width="60" height="20" rx="3" fill="rgba(0,229,160,0.4)"/>
+  <text x="105" y="173" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">2.3M</text>
+  <text x="105" y="214" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2023</text>
+
+  <!-- Bar 2: 2024 4.4M — height ≈ 38 -->
+  <rect x="155" y="162" width="60" height="38" rx="3" fill="rgba(0,229,160,0.55)"/>
+  <text x="185" y="155" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">4.4M</text>
+  <text x="185" y="214" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2024</text>
+
+  <!-- Bar 3: 2025년말 8.9M — height ≈ 78 -->
+  <rect x="235" y="122" width="60" height="78" rx="3" fill="rgba(0,229,160,0.75)"/>
+  <text x="265" y="115" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">8.9M</text>
+  <text x="265" y="214" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2025.12</text>
+
+  <!-- Bar 4: Q1 2026 10.3M — height ≈ 90 -->
+  <rect x="315" y="110" width="60" height="90" rx="3" fill="#00e5a0"/>
+  <text x="345" y="103" font-family="Arial,sans-serif" font-size="12" fill="white" font-weight="700" text-anchor="middle">10.3M</text>
+  <text x="345" y="214" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle">2026 Q1</text>
+
+  <!-- Revenue bar chart (right side) -->
+  <text x="600" y="82" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" font-weight="700" text-anchor="middle">매출 (억 달러)</text>
+
+  <!-- Bar 1: 2024 $7.7B — height = 7.7/11.4*90 ≈ 61 -->
+  <rect x="490" y="139" width="60" height="61" rx="3" fill="rgba(0,229,160,0.55)"/>
+  <text x="520" y="132" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">$7.7B</text>
+  <text x="520" y="214" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2024</text>
+
+  <!-- Bar 2: 2025 $11.4B — height = 90 -->
+  <rect x="570" y="110" width="60" height="90" rx="3" fill="#00e5a0"/>
+  <text x="600" y="103" font-family="Arial,sans-serif" font-size="12" fill="white" font-weight="700" text-anchor="middle">$11.4B</text>
+  <text x="600" y="214" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle">2025</text>
+  <text x="600" y="226" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle">+50% YoY</text>
+
+  <!-- Q1 2026 bar: $3.257B annualized ~$13B -->
+  <rect x="650" y="120" width="60" height="80" rx="3" fill="rgba(0,229,160,0.6)" stroke="rgba(0,229,160,0.4)" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="680" y="113" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" text-anchor="middle">$3.26B</text>
+  <text x="680" y="214" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2026 Q1</text>
+  <text x="680" y="226" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">(분기)</text>
+
+  <!-- Divider -->
+  <line x1="430" y1="80" x2="430" y2="230" stroke="#0d2420" stroke-width="1"/>
+
+  <!-- Key metrics row -->
+  <rect x="30" y="232" width="740" height="38" rx="8" fill="rgba(0,20,16,0.9)" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+  <!-- 5 metrics: centers at 108, 248, 400, 552, 692 -->
+  <text x="108" y="246" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">영업이익</text>
+  <text x="108" y="260" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700" text-anchor="middle">$4.42B</text>
+  <text x="248" y="246" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">영업이익률</text>
+  <text x="248" y="260" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700" text-anchor="middle">63%</text>
+  <text x="400" y="246" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">월 ARPU</text>
+  <text x="400" y="260" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700" text-anchor="middle">$81/월</text>
+  <text x="552" y="246" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">서비스 국가</text>
+  <text x="552" y="260" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700" text-anchor="middle">160개국+</text>
+  <text x="692" y="246" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">위성 운용</text>
+  <text x="692" y="260" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700" text-anchor="middle">10,296기</text>
+
+  <!-- Starlink funds everything -->
+  <rect x="30" y="282" width="740" height="36" rx="8" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <text x="400" y="298" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">💡 Starlink이 SpaceX 전체를 먹여살린다</text>
+  <text x="400" y="312" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Starlink 영업이익 $4.42B → SpaceX 발사부문 손실 $657M + xAI 손실 $6.35B 보전</text>
+
+  <!-- Satellite constellation visualization -->
+  <text x="400" y="350" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" font-weight="700" text-anchor="middle">위성 궤도 현황 및 확장 계획</text>
+
+  <!-- Three boxes for satellite info -->
+  <rect x="30" y="358" width="228" height="56" rx="8" fill="#060e0c" stroke="rgba(0,229,160,0.3)" stroke-width="1"/>
+  <text x="144" y="376" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle" font-weight="700">🛰 현재 운용 위성</text>
+  <text x="144" y="396" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700" text-anchor="middle">10,296기</text>
+  <text x="144" y="408" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">저궤도(LEO) ~480km</text>
+
+  <rect x="270" y="358" width="228" height="56" rx="8" fill="#060e0c" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <text x="384" y="376" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle" font-weight="700">📡 승인된 총 위성</text>
+  <text x="384" y="396" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700" text-anchor="middle">22,500기</text>
+  <text x="384" y="408" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Gen2 7,500기 추가 승인(2026.01)</text>
+
+  <rect x="510" y="358" width="260" height="56" rx="8" fill="#060e0c" stroke="rgba(192,132,252,0.3)" stroke-width="1"/>
+  <text x="640" y="376" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle" font-weight="700">🌐 잠재 최대 규모</text>
+  <text x="640" y="396" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700" text-anchor="middle">34,400기</text>
+  <text x="640" y="408" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">이론적 최대치 · 글로벌 커버리지 완성</text>
+
+  <!-- Risk: Amazon Kuiper -->
+  <rect x="30" y="426" width="740" height="28" rx="6" fill="rgba(239,68,68,0.07)" stroke="rgba(239,68,68,0.18)" stroke-width="1"/>
+  <text x="400" y="444" font-family="Arial,sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">⚠ 경쟁 리스크: Amazon Kuiper 위성망 구축 중 · ARPU $81/월은 2023 $99에서 18% 하락 — 가격 경쟁 압박</text>
+
+  <!-- Footer -->
+  <line x1="30" y1="462" x2="770" y2="462" stroke="#0d2420" stroke-width="1"/>
+  <text x="30" y="476" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 출처: SpaceX S-1 (SEC, 2026.05.20)</text>
+  <text x="770" y="476" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

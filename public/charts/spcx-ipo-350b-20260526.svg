@@ -1,0 +1,58 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#c084fc"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="2">INVESTUS · SPCX REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">SpaceX $350B IPO · xAI 데이터센터 12개월 vs 경쟁사 48개월+</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.26</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- IPO metrics top row -->
+  <rect x="30" y="84" width="220" height="80" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="140" y="110" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">기업가치</text>
+  <text x="140" y="142" font-family="Arial,sans-serif" font-size="26" fill="#c084fc" font-weight="900" text-anchor="middle">$350B</text>
+  <text x="140" y="158" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">역대 최대 IPO 도전</text>
+
+  <rect x="268" y="84" width="220" height="80" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="378" y="110" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">공모 규모</text>
+  <text x="378" y="142" font-family="Arial,sans-serif" font-size="26" fill="#c084fc" font-weight="900" text-anchor="middle">$1.5B</text>
+  <text x="378" y="158" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">나스닥 상장 추진</text>
+
+  <rect x="506" y="84" width="264" height="80" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="638" y="110" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">DC 완공 타임라인</text>
+  <text x="638" y="136" font-family="Arial,sans-serif" font-size="18" fill="#c084fc" font-weight="900" text-anchor="middle">12개월</text>
+  <text x="638" y="152" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">vs 경쟁사</text>
+  <text x="638" y="166" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" font-weight="700" text-anchor="middle">48개월+</text>
+
+  <!-- Speed comparison -->
+  <rect x="30" y="180" width="740" height="60" rx="8" fill="#060b18" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="50" y="204" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ xAI/SpaceX 데이터센터 속도 우위 (Epoch AI 분석)</text>
+  <!-- SpaceX bar -->
+  <rect x="50" y="216" width="120" height="14" rx="3" fill="#c084fc"/>
+  <text x="180" y="228" font-family="Arial,sans-serif" font-size="11" fill="white"> xAI Colossus 2 — 12개월 완공</text>
+  <!-- Competitor bar -->
+
+  <!-- DC Economics -->
+  <rect x="30" y="256" width="354" height="110" rx="8" fill="#060b18" stroke="#1e2330" stroke-width="1"/>
+  <text x="50" y="280" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">GW당 연간 가치 스윙</text>
+  <text x="50" y="302" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">Active DC:  +$20B/년 임대 수익</text>
+  <text x="50" y="322" font-family="Arial,sans-serif" font-size="13" fill="#ef4444" font-weight="700">Under Const: -$5B/년 현금 소진</text>
+  <text x="50" y="344" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">→ 빠른 완공 = GW당 연 $25B 가치 차이</text>
+  <text x="50" y="358" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">SpaceX 속도: 경쟁사 대비 4배 빠름</text>
+
+  <rect x="402" y="256" width="368" height="110" rx="8" fill="#060b18" stroke="#1e2330" stroke-width="1"/>
+  <text x="422" y="280" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">GW당 건설 비용 비교</text>
+  <text x="422" y="300" font-family="Arial,sans-serif" font-size="11" fill="white">SpaceX:    $30~40B (파이낸싱 0달러)</text>
+  <text x="422" y="320" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">경쟁사:     $60B+ (파이낸싱 $10B+)</text>
+  <text x="422" y="342" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">2026 미국 DC 계획 중 33~50% 지연·취소 예상</text>
+  <text x="422" y="358" font-family="Arial,sans-serif" font-size="10" fill="#c084fc">→ SpaceX 독점적 수혜 구조</text>
+
+  <!-- Government contracts -->
+  <rect x="30" y="380" width="740" height="36" rx="6" fill="#0d0a1a" stroke="#1e2330" stroke-width="1"/>
+  <text x="50" y="398" font-family="Arial,sans-serif" font-size="11" fill="white">정부 계약 성장: 65.4% → 53.3% → 더 견고한 매출 기반으로 진화 · NASA·DOD·Space Force 계약 누적 $22~24B</text>
+  <text x="50" y="412" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Starlink Q1 $1B+ 영업이익 · 기업가치 기반 Starlink 단독으로 정당화 가능</text>
+
+  <!-- Footer -->
+  <line x1="30" y1="424" x2="770" y2="424" stroke="#1e2330" stroke-width="1"/>
+  <text x="770" y="428" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
+</svg>

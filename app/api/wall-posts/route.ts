@@ -97,6 +97,44 @@ export async function POST(req: NextRequest) {
   return NextResponse.json(data, { status: 201 });
 }
 
+// PATCH /api/wall-posts?id=123  — edit own post content
+export async function PATCH(req: NextRequest) {
+  const authUser = await getUserFromRequest(req);
+  if (!authUser) return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
+
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "필수 항목 누락" }, { status: 400 });
+
+  let body: { content?: string };
+  try { body = await req.json(); }
+  catch { return NextResponse.json({ error: "잘못된 요청" }, { status: 400 }); }
+
+  const trimmed = body.content?.trim() ?? "";
+  if (trimmed.length < 5)   return NextResponse.json({ error: "내용이 너무 짧습니다." }, { status: 400 });
+  if (trimmed.length > 300) return NextResponse.json({ error: "300자 이내로 작성해주세요." }, { status: 400 });
+  if (isContentBanned(trimmed)) return NextResponse.json({ error: "게시할 수 없는 내용이 포함되어 있습니다." }, { status: 400 });
+
+  // Verify ownership
+  const { data: post } = await getSupabase()
+    .from("wall_posts")
+    .select("user_id")
+    .eq("id", id)
+    .single();
+
+  if (!post || post.user_id !== authUser.email) {
+    return NextResponse.json({ error: "권한 없음" }, { status: 403 });
+  }
+
+  const { error } = await getAdminSupabase()
+    .from("wall_posts")
+    .update({ content: trimmed })
+    .eq("id", id);
+
+  if (error) return NextResponse.json({ error: "수정 실패" }, { status: 500 });
+
+  return NextResponse.json({ ok: true, content: trimmed });
+}
+
 // DELETE /api/wall-posts?id=123  — requires JWT (owner only)
 export async function DELETE(req: NextRequest) {
   const authUser = await getUserFromRequest(req);

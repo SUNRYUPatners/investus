@@ -30,6 +30,7 @@ const NOTIFICATIONS: NotiConfig[] = [
     label:       "장 시작 알림",
     desc:        "미국 주식 시장 개장 (오전 10:30 KST)",
     color:       "#10b981",
+    pushEnabled: true,
   },
   {
     key:         "market_close",

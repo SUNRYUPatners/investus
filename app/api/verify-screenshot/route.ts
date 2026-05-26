@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
   if (!approved) {
     return NextResponse.json({
       approved: false,
-      message: "증권사 계좌 화면이 아닌 것 같습니다. 계좌 잔고나 보유 종목 화면을 캡쳐해주세요.",
+      message: "증권사 계좌 화면이 아닌 것 같습니다. 계좌 잔고나 보유 종목 화면을 캡처해주세요.",
     });
   }
 

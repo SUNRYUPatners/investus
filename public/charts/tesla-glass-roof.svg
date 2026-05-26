@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0c1525"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c2410c"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="58" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.18)" stroke-width="0"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(0,229,160,0.25)"/>
+
+  <text x="400" y="22" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">TESLA 특허 분석 · 2026.05.21</text>
+  <text x="400" y="45" text-anchor="middle" fill="#e2e8f0" font-size="17" font-family="Arial" font-weight="bold">유리지붕 Active HVAC + Acoustic Tuning 특허 — 차량 냉각 혁신</text>
+
+  <!-- Left: Patent diagram description -->
+  <rect x="20" y="75" width="370" height="330" rx="10" fill="rgba(0,229,160,0.05)" stroke="rgba(0,229,160,0.18)" stroke-width="1"/>
+  <rect x="20" y="75" width="4" height="330" rx="2" fill="url(#gm)"/>
+
+  <text x="205" y="105" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="2">특허 구조 다이어그램</text>
+
+  <!-- Glass roof diagram -->
+  <!-- Sun rays -->
+  <text x="205" y="130" text-anchor="middle" fill="#fbbf24" font-size="12" font-family="Arial">☀ 태양 복사열</text>
+  <line x1="205" y1="136" x2="205" y2="148" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4,2"/>
+
+  <!-- Outer glass layer (perforated) -->
+  <rect x="60" y="150" width="290" height="22" rx="4" fill="rgba(147,197,253,0.25)" stroke="rgba(147,197,253,0.6)" stroke-width="1.5"/>
+  <text x="205" y="165" text-anchor="middle" fill="#93c5fd" font-size="10" font-family="Arial" font-weight="bold">외부 유리 (천공 레이어 — 구멍 뚫린 구조)</text>
+
+  <!-- Air gap with airflow arrows -->
+  <rect x="60" y="174" width="290" height="28" rx="0" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="205" y="192" text-anchor="middle" fill="#00e5a0" font-size="11" font-family="Arial">→ → → 공기 흐름 (Air Gap) → → →</text>
+
+  <!-- Inner glass layer -->
+  <rect x="60" y="204" width="290" height="22" rx="4" fill="rgba(147,197,253,0.15)" stroke="rgba(147,197,253,0.4)" stroke-width="1.5"/>
+  <text x="205" y="219" text-anchor="middle" fill="#93c5fd" font-size="10" font-family="Arial" font-weight="bold">내부 유리 (공명 제어 레이어)</text>
+
+  <!-- Car interior -->
+  <rect x="60" y="228" width="290" height="35" rx="4" fill="rgba(30,41,59,0.8)" stroke="rgba(100,116,139,0.3)" stroke-width="1"/>
+  <text x="205" y="250" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial">차량 실내 (쾌적한 온도 유지)</text>
+
+  <!-- Explanations -->
+  <rect x="35" y="275" width="340" height="42" rx="6" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="52" y="292" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">🌡 Active HVAC 원리</text>
+  <text x="52" y="307" fill="#cbd5e1" font-size="10" font-family="Arial">천공 외부 유리 → 공기 펌핑 → 에어갭 통과 → 단열 + 냉각</text>
+  <text x="52" y="315" fill="#64748b" font-size="9" font-family="Arial">일반 썬루프 대비 내부 온도 현저히 낮아짐 (에너지 효율 향상)</text>
+
+  <rect x="35" y="325" width="340" height="42" rx="6" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="52" y="342" fill="#c084fc" font-size="10" font-family="Arial" font-weight="bold">🔊 Acoustic Tuning 원리</text>
+  <text x="52" y="357" fill="#cbd5e1" font-size="10" font-family="Arial">내부 유리 레이어 공명 제어 → 외부 소음 차단 + 음향 최적화</text>
+  <text x="52" y="365" fill="#64748b" font-size="9" font-family="Arial">주파수 조절로 주행 소음 흡수 — 명품차 NVH 수준 목표</text>
+
+  <!-- Right: Investment analysis -->
+  <rect x="410" y="75" width="370" height="330" rx="10" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <text x="595" y="105" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">투자 시사점</text>
+
+  <rect x="425" y="115" width="340" height="60" rx="6" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.2)" stroke-width="1"/>
+  <text x="442" y="133" fill="#fb923c" font-size="11" font-family="Arial" font-weight="bold">⚡ 에너지 효율 + 주행거리 확대</text>
+  <text x="442" y="149" fill="#cbd5e1" font-size="10.5" font-family="Arial">에어컨 부하 감소 → 배터리 소모 줄어듦</text>
+  <text x="442" y="164" fill="#cbd5e1" font-size="10.5" font-family="Arial">동일 배터리로 주행거리 연장 → 경쟁력 강화</text>
+
+  <rect x="425" y="183" width="340" height="60" rx="6" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.18)" stroke-width="1"/>
+  <text x="442" y="201" fill="#00e5a0" font-size="11" font-family="Arial" font-weight="bold">🚗 Model 3/Y 프리미엄 포지셔닝</text>
+  <text x="442" y="217" fill="#cbd5e1" font-size="10.5" font-family="Arial">썬루프 기술이 명품차 수준 → ASP 상승 여력</text>
+  <text x="442" y="232" fill="#cbd5e1" font-size="10.5" font-family="Arial">BYD 대비 기술 우위 지속 — 특허 장벽 확보</text>
+
+  <rect x="425" y="251" width="340" height="60" rx="6" fill="rgba(59,130,246,0.07)" stroke="rgba(59,130,246,0.18)" stroke-width="1"/>
+  <text x="442" y="269" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">🔧 Cybercab / Robotaxi 적용 기대</text>
+  <text x="442" y="285" fill="#cbd5e1" font-size="10.5" font-family="Arial">자율주행차 내부 쾌적함이 상품성 핵심 요소</text>
+  <text x="442" y="300" fill="#cbd5e1" font-size="10.5" font-family="Arial">승객 경험 차별화 → 로보택시 시장 선점 무기</text>
+
+  <rect x="425" y="319" width="340" height="78" rx="6" fill="rgba(212,175,55,0.07)" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
+  <text x="442" y="336" fill="#d4af37" font-size="11" font-family="Arial" font-weight="bold">CIO 시각</text>
+  <text x="442" y="353" fill="#cbd5e1" font-size="10.5" font-family="Arial">이 특허는 단순 편의기능이 아니다. EV 주행거리,</text>
+  <text x="442" y="368" fill="#cbd5e1" font-size="10.5" font-family="Arial">NVH(소음·진동·내구성), 프리미엄 포지셔닝을 동시에</text>
+  <text x="442" y="383" fill="#cbd5e1" font-size="10.5" font-family="Arial">겨냥한 복합 기술이다. BYD와의 격차 확대가 기대된다.</text>
+
+  <!-- Watermark -->
+  <text x="780" y="420" text-anchor="end" fill="rgba(148,163,184,0.3)" font-size="9" font-family="Arial">SUNRYU Partners CIO · investus.kr</text>
+</svg>

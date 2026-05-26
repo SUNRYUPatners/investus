@@ -1,0 +1,58 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#60a5fa"/>
+
+  <text x="30" y="32" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" letter-spacing="3">INVESTUS · AMD · CPU</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="20" fill="white" font-weight="700">AMD CPU 수요 폭발 — Lisa Su 업데이트</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.23</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Main growth stat -->
+  <rect x="30" y="82" width="240" height="150" rx="10" fill="#060b18" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/>
+  <text x="150" y="112" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" text-anchor="middle">📈 향후 3년 수요 성장</text>
+  <text x="150" y="168" font-family="Arial,sans-serif" font-size="52" fill="#60a5fa" font-weight="700" text-anchor="middle">20%</text>
+  <text x="150" y="192" font-family="Arial,sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">연평균 (서버 CPU)</text>
+  <text x="150" y="210" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">— Lisa Su 공식 전망</text>
+
+  <!-- EPYC Venice card -->
+  <rect x="290" y="82" width="230" height="150" rx="10" fill="#060b18" stroke="rgba(96,165,250,0.3)" stroke-width="1.5"/>
+  <text x="405" y="112" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" text-anchor="middle">🔵 차세대 EPYC 'Venice'</text>
+  <text x="405" y="148" font-family="Arial,sans-serif" font-size="22" fill="white" font-weight="700" text-anchor="middle">TSMC 3nm</text>
+  <text x="405" y="168" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">생산 착수 완료</text>
+  <text x="405" y="190" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">출시: 2026 하반기 예상</text>
+  <text x="405" y="208" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">성능 +30~40% (vs Genoa)</text>
+
+  <!-- Supply status card -->
+  <rect x="540" y="82" width="230" height="150" rx="10" fill="#060b18" stroke="rgba(251,146,60,0.4)" stroke-width="1.5"/>
+  <text x="655" y="112" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700" text-anchor="middle">⚠ 현재 공급 상황</text>
+  <text x="655" y="158" font-family="Arial,sans-serif" font-size="30" fill="#fb923c" font-weight="700" text-anchor="middle">"tight"</text>
+  <text x="655" y="178" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Lisa Su 직접 발언</text>
+  <text x="655" y="198" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">중국 매출 비중 ~20%</text>
+  <text x="655" y="212" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">대만 투자 $10B+</text>
+
+  <!-- Demand drivers -->
+  <rect x="30" y="248" width="740" height="80" rx="10" fill="#0a0b12" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <text x="50" y="272" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">수요 드라이버 — 데이터센터 3대 병목</text>
+
+  <rect x="50" y="282" width="200" height="34" rx="6" fill="#0d1520" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <text x="150" y="296" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" text-anchor="middle">1. CPU (공급 tight)</text>
+  <text x="150" y="310" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">AI 추론 + 에이전틱 AI 급증</text>
+
+  <rect x="270" y="282" width="200" height="34" rx="6" fill="#0d1520" stroke="rgba(192,132,252,0.3)" stroke-width="1"/>
+  <text x="370" y="296" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" text-anchor="middle">2. 메모리 (HBM 부족)</text>
+  <text x="370" y="310" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">DDR5 수요 동반 급증</text>
+
+  <rect x="490" y="282" width="260" height="34" rx="6" fill="#0d1520" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <text x="620" y="296" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" text-anchor="middle">3. 데이터센터 전력</text>
+  <text x="620" y="310" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">용량 제한 — 에너지 인프라 투자 필요</text>
+
+  <!-- AMD vs Intel context -->
+  <rect x="30" y="342" width="740" height="44" rx="8" fill="#0d1020" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="50" y="360" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700">AMD EPYC 점유율:</text>
+  <text x="175" y="360" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">2020년 &lt;5% → 2026년 25~30% (Intel 역전) · Venice로 추가 확대 전망</text>
+  <text x="50" y="378" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">CEO 발언: "업계가 몇 년 전에는 이 수준의 CPU 수요를 예상하지 못했다. 앞으로 5년간 지속될 것."</text>
+
+  <line x1="30" y1="398" x2="770" y2="398" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="416" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="416" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

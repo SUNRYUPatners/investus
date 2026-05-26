@@ -1,0 +1,64 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#071208"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <text x="30" y="34" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="3">INVESTUS · TESLA EUROPE</text>
+  <text x="30" y="60" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">Tesla 유럽 4월 2026 — 경쟁사 전멸</text>
+  <text x="770" y="34" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="end">2026.05.22</text>
+  <line x1="30" y1="72" x2="770" y2="72" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Left hero -->
+  <text x="182" y="172" font-family="Arial,sans-serif" font-size="90" fill="#00e5a0" font-weight="700" text-anchor="middle">+30%</text>
+  <text x="182" y="200" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">유럽 YoY 판매 성장</text>
+  <text x="182" y="218" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" text-anchor="middle">독일 +39%  ·  스페인 +29%</text>
+
+  <line x1="360" y1="84" x2="360" y2="300" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Right: comparison bars -->
+  <!-- Label col x=376, bar from x=530 to max x=740, value col x=768 -->
+  <text x="570" y="100" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">경쟁사 4월 유럽 YoY</text>
+
+  <!-- Tesla +30% → bar w=168 (30/53×296, max=Tesla+VW range) -->
+  <!-- Simple scale: bar width = abs(pct)/8 * 40 → Tesla=150, others small -->
+  <!-- Tesla: +30% → bar=150 green -->
+  <text x="376" y="134" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tesla</text>
+  <rect x="466" y="120" width="180" height="18" rx="4" fill="#00e5a0" opacity="0.85"/>
+  <text x="768" y="134" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="end">+30%</text>
+
+  <!-- Mercedes -7% → bar=42 red -->
+  <text x="376" y="174" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">Mercedes</text>
+  <rect x="466" y="160" width="42" height="18" rx="4" fill="#ef4444" opacity="0.7"/>
+  <text x="768" y="174" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="end">−7%</text>
+
+  <!-- VW -8% → bar=48 -->
+  <text x="376" y="214" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">Volkswagen</text>
+  <rect x="466" y="200" width="48" height="18" rx="4" fill="#ef4444" opacity="0.7"/>
+  <text x="768" y="214" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="end">−8%</text>
+
+  <!-- Toyota -7% → bar=42 -->
+  <text x="376" y="254" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">Toyota</text>
+  <rect x="466" y="240" width="42" height="18" rx="4" fill="#ef4444" opacity="0.7"/>
+  <text x="768" y="254" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="end">−7%</text>
+
+  <!-- Hyundai etc -->
+  <text x="376" y="292" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">현대·기아·혼다</text>
+  <rect x="466" y="278" width="28" height="18" rx="4" fill="#ef4444" opacity="0.5"/>
+  <text x="768" y="292" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="end">하락</text>
+
+  <!-- Bottom: 2 reason tiles -->
+  <text x="400" y="318" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" text-anchor="middle" font-weight="700">Tesla 유럽 강세 이유</text>
+
+  <!-- Left tile: x=36 w=350 center=211 -->
+  <rect x="36" y="326" width="350" height="52" rx="8" fill="#071a0a" stroke="rgba(0,229,160,0.35)" stroke-width="1.5"/>
+  <text x="211" y="348" font-family="Arial,sans-serif" font-size="15" fill="white" text-anchor="middle" font-weight="700">✅ FSD 벨기에 공식 승인</text>
+  <text x="211" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">EU 최보수 규제기관 통과 → 전역 확산</text>
+
+  <!-- Right tile: x=414 w=350 center=589 -->
+  <rect x="414" y="326" width="350" height="52" rx="8" fill="#071a0a" stroke="rgba(96,165,250,0.35)" stroke-width="1.5"/>
+  <text x="589" y="348" font-family="Arial,sans-serif" font-size="15" fill="white" text-anchor="middle" font-weight="700">🛰 Starlink 차량 내 연동</text>
+  <text x="589" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">통신사 없이 직접 연결 · 독점 모빌리티</text>
+
+  <line x1="30" y1="392" x2="770" y2="392" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="410" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="410" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

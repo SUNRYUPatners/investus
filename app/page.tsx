@@ -4,12 +4,12 @@ import { LiveMarket } from "@/components/LiveMarket";
 import { NewsSection } from "@/components/NewsSection";
 import { FearGreedWidget } from "@/components/FearGreedWidget";
 import { BuffettWidget } from "@/components/BuffettWidget";
-import { SP500Heatmap } from "@/components/SP500Heatmap";
 import { WatchlistSection } from "@/components/WatchlistSection";
 import { AdBanner } from "@/components/AdBanner";
 import { ReportFeed } from "@/components/ReportFeed";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
+import { HomeAIInsight } from "@/components/HomeAIInsight";
 import { FirstVisitBanner } from "@/components/FirstVisitBanner";
 import { getLocale } from "@/lib/getLocale";
 
@@ -34,16 +34,14 @@ export default async function HomePage() {
             {/* 내 보유종목 (포트폴리오에 종목이 있을 때만 표시) */}
             <PortfolioWidget />
 
+            {/* 내 포트폴리오 AI 분석 — 오늘 등락 이유 요약 */}
+            <HomeAIInsight />
+
             {/* 관심종목 */}
             <WatchlistSection />
 
-            {/* 추천주식 · 인기종목 · 주요지수 · Futures (실시간) */}
+            {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures (실시간) */}
             <LiveMarket />
-
-            {/* S&P 500 섹터 히트맵 */}
-            <section className="px-4 lg:px-0 pt-4 pb-4 lg:pb-0">
-              <SP500Heatmap />
-            </section>
 
             {/* Investus 리포트 — 히트맵 아래 (모바일 + 데스크톱 공통) */}
             <section className="px-4 lg:px-0 pt-4 lg:pt-6">

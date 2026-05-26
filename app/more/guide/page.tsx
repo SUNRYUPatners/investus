@@ -66,8 +66,8 @@ const SECTIONS: Section[] = [
             {[
               ["① 실시간 티커", "화면 상단에 주요 종목 실시간 등락률이 흘러가요"],
               ["② 내 보유종목", "직접 추가한 종목의 수익률을 한눈에 확인"],
-              ["③ CIO 추천주식", "SUNRYU Partners CIO가 선별한 투자 추천 종목"],
-              ["④ 인기 종목", "실시간 거래량 기준 인기 종목 8개"],
+              ["③ Investus 추천주식", "SUNRYU Partners CIO가 선별한 투자 추천 종목"],
+              ["④ 인기 종목", "주요 미국 대형주 실시간 시세 (AAPL·NVDA·TSLA 등)"],
               ["⑤ 주요 지수", "S&P 500, NASDAQ, DOW, Russell 2000, 원달러 환율"],
               ["⑥ FUTURES MAP", "선물 시장 — 내일 증시를 미리 가늠하는 지표"],
               ["⑦ S&P 500 히트맵", "500개 종목을 색깔로 한눈에 보는 시장 지도"],
@@ -259,8 +259,8 @@ const SECTIONS: Section[] = [
         <div className="space-y-2 mt-2">
           {[
             ["🔍 종목 검색", "티커(AAPL, NVDA 등) 또는 회사명으로 검색. 검색 결과 클릭 → 상세 페이지로 이동"],
-            ["⭐ CIO 추천주식", "Investus CIO가 선별한 핵심 투자 종목. 상단에 별 아이콘으로 표시"],
-            ["🔥 인기 종목", "거래량·조회수 기준 인기 종목 8개"],
+            ["⭐ Investus 추천주식", "SUNRYU Partners CIO가 선별한 핵심 투자 종목. 상단에 별 아이콘으로 표시"],
+            ["🔥 인기 종목", "주요 미국 대형주 실시간 시세"],
             ["📋 13F 투자대가", "화면 오른쪽에서 워런 버핏, 론 배런 등의 포트폴리오 확인"],
           ].map(([t, d]) => (
             <div key={t} className="flex gap-2">
@@ -327,7 +327,7 @@ const SECTIONS: Section[] = [
             ["💰 현재가", "달러 기준 실시간 가격 (장 마감 후엔 종가)"],
             ["📉 등락률", "오늘 전일 대비 얼마나 올랐는지/내렸는지"],
             ["📦 시가총액", "Market Cap. 기업 전체 가치. 대형주 기준 $1T(1조달러) 이상"],
-            ["📋 CIO 리포트", "해당 종목에 대한 SUNRYU Partners CIO 분석 리포트"],
+            ["📰 뉴스 & 리포트", "해당 종목의 최신 관련 뉴스 및 Investus 분석 리포트"],
           ].map(([t, d]) => (
             <div key={t} className="flex gap-2">
               <span className="font-bold text-[12px] flex-shrink-0" style={{ color: "var(--text)" }}>{t}</span>
@@ -341,10 +341,10 @@ const SECTIONS: Section[] = [
   {
     id: "portfolio",
     emoji: "💼",
-    title: "포트폴리오 — 내 수익률 추적",
+    title: "자산 탭 — 포트폴리오 & AI 투자비서",
     content: (
       <>
-        <p className="pt-3">내가 투자한 종목의 <b style={{ color: "var(--text)" }}>총 수익률을 자동으로 계산</b>해줘요.</p>
+        <p className="pt-3">내가 투자한 종목의 <b style={{ color: "var(--text)" }}>총 수익률을 자동으로 계산</b>하고, <b style={{ color: "var(--text)" }}>AI 투자비서</b>가 분석해줘요.</p>
         <div className="space-y-2 mt-2">
           {[
             ["➕ 종목 추가", "종목명 + 평균 매수가 + 수량 입력"],
@@ -358,22 +358,52 @@ const SECTIONS: Section[] = [
             </div>
           ))}
         </div>
+
+        {/* AI 비서 */}
+        <div className="rounded-xl p-3 mt-3 border" style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+          <p className="text-[12px] font-bold mb-2" style={{ color: "var(--mint)" }}>✦ 나만의 AI 투자비서 (Claude)</p>
+          <div className="space-y-1.5">
+            {[
+              ["내 포트 분석", "종목별 등락 이유, 수익률 요약, 비중 편향 여부 자동 분석"],
+              ["자유 질문", "\"오늘 왜 떨어졌어?\", \"리밸런싱 해야 할까?\" 등 자유롭게 질문"],
+              ["빠른 질문 칩", "자주 묻는 질문을 버튼 한 번으로 바로 질문"],
+              ["하루 10회", "무료 사용자는 하루 10회 이용 가능"],
+            ].map(([t, d]) => (
+              <div key={t} className="flex gap-2">
+                <span className="font-bold text-[11px] flex-shrink-0" style={{ color: "var(--text)" }}>{t}</span>
+                <span className="text-[11px]">{d}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </>
     ),
   },
   {
     id: "wall",
     emoji: "💬",
-    title: "종목 토론방 — 투자자들과 소통",
+    title: "피드 탭 — 종목토론·애널들은·크리에이터",
     content: (
       <>
-        <p className="pt-3">각 종목별로 투자자들이 생각을 나누는 <b style={{ color: "var(--text)" }}>토론 공간</b>이에요.</p>
+        <p className="pt-3">피드 탭에는 <b style={{ color: "var(--text)" }}>3개의 채널</b>이 있어요.</p>
         <div className="space-y-2 mt-2">
           {[
-            ["🔴 NEW 배지", "최근 새 글이 올라온 종목 표시. 최신 토론 확인 가능"],
-            ["💼 보유확인", "해당 종목을 실제 보유한 투자자의 글"],
+            ["💬 종목토론", "종목별 투자자 토론방. 실제 보유 인증 투자자들의 생생한 의견"],
+            ["👔 애널들은", "인증된 애널리스트만 참여하는 익명 채널. 현직 애널리스트의 솔직한 속마음"],
+            ["🌟 크리에이터", "승인된 크리에이터들의 채널. 전자책·강의·리포트 등 콘텐츠 확인"],
+          ].map(([t, d]) => (
+            <div key={t} className="rounded-lg px-3 py-2 border" style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
+              <p className="font-bold text-[12px]" style={{ color: "var(--text)" }}>{t}</p>
+              <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{d}</p>
+            </div>
+          ))}
+        </div>
+        <div className="space-y-1.5 mt-3">
+          {[
+            ["🔴 NEW 배지", "최근 새 글이 올라온 종목. 최신 토론 바로 확인"],
+            ["💼 보유확인", "실제 해당 종목을 보유한 투자자 인증 글"],
             ["👍 좋아요", "공감하는 의견에 좋아요"],
-            ["✏️ 글쓰기", "로그인 + 크리에이터 인증 후 참여 가능"],
+            ["✏️ 글쓰기", "로그인 + 크리에이터 신청 승인 후 참여 가능"],
           ].map(([t, d]) => (
             <div key={t} className="flex gap-2">
               <span className="font-bold text-[12px] flex-shrink-0" style={{ color: "var(--text)" }}>{t}</span>
@@ -431,7 +461,7 @@ export default function GuidePage() {
         {/* Header */}
         <div className="mb-6">
           <p className="text-[11px] font-semibold tracking-widest uppercase" style={{ color: "var(--mint)" }}>INVESTUS</p>
-          <h1 className="text-2xl font-bold mt-1" style={{ color: "var(--text)" }}>미국주식 입문 가이드</h1>
+          <h1 className="text-2xl font-bold mt-1" style={{ color: "var(--text)" }}>Investus 사용법</h1>
           <p className="text-sm mt-1.5" style={{ color: "var(--muted)" }}>
             미국 주식 완전 초보도 이해할 수 있게 각 기능을 설명해드려요. 궁금한 항목을 눌러보세요.
           </p>

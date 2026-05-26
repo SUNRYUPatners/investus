@@ -460,26 +460,68 @@ function InstallSection() {
     );
   }
 
-  // Desktop, no install prompt — bookmark tip
+  // Desktop, no install prompt — bookmark tip with click modal
   return (
     <div className="mt-6">
       <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
         빠른 접속
       </p>
-      <div className="rounded-2xl p-4 border flex items-start gap-4"
-        style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+      <button
+        onClick={() => setShowConfirm(true)}
+        className="w-full rounded-2xl p-4 border flex items-start gap-4 active:opacity-70 transition-opacity text-left"
+        style={{ background: "var(--card)", borderColor: "rgba(96,165,250,0.3)" }}>
         <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
           style={{ background: "rgba(96,165,250,0.12)" }}>
           <span className="text-xl">🔖</span>
         </div>
         <div className="flex-1">
           <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>즐겨찾기 저장</p>
-          <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-            <span className="font-mono text-[10px]">⌘+D</span> (Mac) /{" "}
-            <span className="font-mono text-[10px]">Ctrl+D</span> (Windows)
-          </p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>탭하면 추가 방법 안내</p>
         </div>
-      </div>
+        <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-30 mt-1" style={{ color: "var(--muted)" }} />
+      </button>
+
+      {showConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.65)" }}
+          onClick={() => setShowConfirm(false)}>
+          <div className="w-full max-w-[360px] rounded-3xl px-5 py-6"
+            style={{ background: "var(--card)" }}
+            onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-11 h-11 rounded-2xl flex items-center justify-center flex-shrink-0"
+                style={{ background: "rgba(96,165,250,0.12)", border: "1.5px solid rgba(96,165,250,0.25)" }}>
+                <span className="text-2xl">🔖</span>
+              </div>
+              <div>
+                <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>즐겨찾기 저장</p>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>빠르게 Investus로 돌아오세요</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2.5 mb-5">
+              {([
+                ["🍎", "Mac / Safari", "⌘ + D"],
+                ["🪟", "Windows / Chrome", "Ctrl + D"],
+                ["⭐", "주소창 별표", "주소창 오른쪽 ★ 클릭"],
+                ["📌", "Arc / Edge / Firefox", "동일하게 ⌘D / Ctrl+D"],
+              ] as [string, string, string][]).map(([icon, label, tip]) => (
+                <div key={label} className="flex items-center gap-3 px-3 py-2.5 rounded-xl"
+                  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid var(--border)" }}>
+                  <span className="text-lg flex-shrink-0">{icon}</span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[11px] font-semibold" style={{ color: "var(--text)" }}>{label}</p>
+                    <p className="text-[10px] font-mono" style={{ color: "var(--muted)" }}>{tip}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button onClick={() => setShowConfirm(false)}
+              className="w-full py-3 rounded-xl text-sm font-bold text-black"
+              style={{ background: "var(--mint)" }}>
+              확인
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -881,60 +923,163 @@ export default function MorePage() {
     })),
   }));
 
+  // Right sidebar quick-link tiles (3×3 grid)
+  const sidebarLinks = [
+    { emoji: "📖", label: "사용 가이드",  href: "/more/guide" },
+    { emoji: "📊", label: "소개",         href: "/more/about" },
+    { emoji: "🔖", label: "업데이트",     href: "/more/version" },
+    { emoji: "📢", label: "공지사항",     href: "/more/notices" },
+    { emoji: "❓", label: "FAQ",          href: "/more/faq" },
+    { emoji: "💌", label: "피드백",       href: undefined, action: () => setShowFeedback(true) },
+    { emoji: "📄", label: "이용약관",     href: "/more/terms" },
+    { emoji: "🔒", label: "개인정보",     href: "/more/privacy" },
+    { emoji: "⚠️", label: "법적고지",     href: "/more/disclaimer" },
+  ];
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 lg:px-8 pb-24 lg:pb-10">
-        {/* Title */}
-        <div className="pt-5 pb-5">
+      {/* ── Mobile: single column / Desktop: 2-column ── */}
+      <div className="max-w-[480px] lg:max-w-[1100px] mx-auto px-4 lg:px-8 pb-24 lg:pb-10">
+
+        {/* Mobile title (hidden on desktop — desktop has no separate title) */}
+        <div className="pt-5 pb-5 lg:hidden">
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{mo.title}</h1>
         </div>
 
-        <AuthSection />
-        <CreatorSection />
-        <AdBanner format="auto" />
+        <div className="lg:grid lg:gap-8 lg:items-start lg:pt-6" style={{ gridTemplateColumns: "1fr 300px" }}>
 
-        <div className="rounded-2xl p-5 mb-6 border text-center"
-          style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.15)" }}>
-          <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3"
-            style={{ background: "var(--mint)" }}>
-            <TrendingUp className="w-7 h-7 text-black" strokeWidth={2.5} />
-          </div>
-          <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>Investus</p>
-          <p className="text-xs" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
-          <p className="text-[10px] mt-1 font-mono-num" style={{ color: "var(--muted)" }}>investus.kr</p>
-        </div>
+          {/* ══ LEFT COLUMN ══════════════════════════════════════════════════ */}
+          <div>
+            {/* Profile — top left on desktop */}
+            <AuthSection />
 
-        <div className="flex flex-col gap-4 mb-6">
-          {sections.map((section) => (
-            <div key={section.title}>
-              <p className="text-xs font-semibold tracking-widest uppercase mb-2 font-syne"
-                style={{ color: "var(--muted)" }}>
-                {section.title}
-              </p>
-              <div className="rounded-2xl border overflow-hidden"
-                style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                {section.items.map((item, idx) => (
-                  <div key={item.label}
-                    className={idx < section.items.length - 1 ? "border-b" : ""}
-                    style={{ borderColor: "var(--border)" }}>
-                    <MenuItem {...item} />
-                  </div>
-                ))}
+            {/* Mobile: creator + brand card here */}
+            <div className="lg:hidden">
+              <CreatorSection />
+              <div className="rounded-2xl p-5 mb-6 border text-center"
+                style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.15)" }}>
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3"
+                  style={{ background: "var(--mint)" }}>
+                  <TrendingUp className="w-7 h-7 text-black" strokeWidth={2.5} />
+                </div>
+                <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>Investus</p>
+                <p className="text-xs" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
+                <p className="text-[10px] mt-1" style={{ color: "var(--muted)" }}>investus.kr</p>
               </div>
             </div>
-          ))}
-        </div>
 
-        <InstallSection />
+            <AdBanner format="auto" />
 
-        <p className="text-center text-[10px] mt-8" style={{ color: "var(--muted)" }}>
-          {mo.footer.split("\n").map((line, i) => (
-            <span key={i}>{line}{i === 0 && <br />}</span>
-          ))}
-        </p>
-      </main>
+            {/* Menu sections — 앱정보 + 고객지원 (법적고지는 right sidebar에) */}
+            <div className="flex flex-col gap-4 mb-6">
+              {sections.slice(0, 2).map((section) => (
+                <div key={section.title}>
+                  <p className="text-xs font-semibold tracking-widest uppercase mb-2 font-syne"
+                    style={{ color: "var(--muted)" }}>
+                    {section.title}
+                  </p>
+                  <div className="rounded-2xl border overflow-hidden"
+                    style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                    {section.items.map((item, idx) => (
+                      <div key={item.label}
+                        className={idx < section.items.length - 1 ? "border-b" : ""}
+                        style={{ borderColor: "var(--border)" }}>
+                        <MenuItem {...item} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              {/* 법적고지 — mobile only (on desktop it's in right sidebar) */}
+              <div className="lg:hidden">
+                <p className="text-xs font-semibold tracking-widest uppercase mb-2 font-syne"
+                  style={{ color: "var(--muted)" }}>
+                  {sections[2]?.title}
+                </p>
+                <div className="rounded-2xl border overflow-hidden"
+                  style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  {sections[2]?.items.map((item, idx) => (
+                    <div key={item.label}
+                      className={idx < (sections[2]?.items.length ?? 0) - 1 ? "border-b" : ""}
+                      style={{ borderColor: "var(--border)" }}>
+                      <MenuItem {...item} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* 모바일에서만 InstallSection 표시 — 데스크탑은 사이드바 */}
+            <div className="lg:hidden">
+              <InstallSection />
+            </div>
+
+            <p className="text-center text-[10px] mt-8 lg:text-left" style={{ color: "var(--muted)" }}>
+              {mo.footer.split("\n").map((line, i) => (
+                <span key={i}>{line}{i === 0 && <br />}</span>
+              ))}
+            </p>
+          </div>
+
+          {/* ══ RIGHT SIDEBAR (desktop only) ══════════════════════════════════ */}
+          <div className="hidden lg:flex lg:flex-col lg:gap-5 lg:sticky" style={{ top: "24px" }}>
+
+            {/* 1. Investus 브랜드 카드 — 최상단 */}
+            <div className="rounded-2xl p-5 border text-center"
+              style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.2)" }}>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3"
+                style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(0,229,160,0.3)" }}>
+                <TrendingUp className="w-8 h-8 text-black" strokeWidth={2.5} />
+              </div>
+              <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>Investus</p>
+              <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
+              <p className="text-[10px] mt-2 font-mono" style={{ color: "rgba(0,229,160,0.6)" }}>investus.kr</p>
+            </div>
+
+            {/* 2. 크리에이터 되기 */}
+            <CreatorSection />
+
+            {/* 3. 바로가기 링크 3×3 그리드 */}
+            <div>
+              <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+                바로가기
+              </p>
+              <div className="grid grid-cols-3 gap-2">
+                {sidebarLinks.map((link) => {
+                  const inner = (
+                    <div
+                      className="flex flex-col items-center gap-1.5 py-3 rounded-xl border transition-all hover:border-opacity-60"
+                      style={{ background: "var(--card)", borderColor: "var(--border)" }}
+                    >
+                      <span className="text-lg">{link.emoji}</span>
+                      <span className="text-[10px] font-medium text-center leading-tight" style={{ color: "var(--muted)" }}>
+                        {link.label}
+                      </span>
+                    </div>
+                  );
+                  if (link.href) {
+                    return <Link key={link.label} href={link.href} style={{ textDecoration: "none" }}>{inner}</Link>;
+                  }
+                  return (
+                    <button key={link.label} onClick={link.action} className="text-left">
+                      {inner}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* 4. 즐겨찾기 / 앱 설치 */}
+            <div className="-mt-1">
+              <InstallSection />
+            </div>
+          </div>
+
+        </div>{/* end lg:grid */}
+      </div>
 
       {showFeedback && (
         <FeedbackModal onClose={() => setShowFeedback(false)} user={user} />

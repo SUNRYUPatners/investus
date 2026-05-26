@@ -1,0 +1,50 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#60a5fa"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" letter-spacing="2">INVESTUS · 매크로 · Fed</text>
+  <text x="30" y="56" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">Fed 새 의장 Marsh 취임 — 10월 금리 인하 · Tom Lee 강세장</text>
+  <text x="770" y="56" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.23</text>
+  <line x1="30" y1="68" x2="770" y2="68" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Big number: October rate cut -->
+  <rect x="30" y="80" width="220" height="150" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.5"/>
+  <text x="140" y="112" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" text-anchor="middle">10월 FOMC 인하</text>
+  <text x="140" y="168" font-family="Arial,sans-serif" font-size="52" fill="#60a5fa" font-weight="700" text-anchor="middle">25bp</text>
+  <text x="140" y="192" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">선물 시장 가격 반영 시작</text>
+  <text x="140" y="208" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">연내 1~2회 인하 전망</text>
+
+  <!-- Marsh key quotes -->
+  <rect x="268" y="80" width="502" height="150" rx="8" fill="#0a0b12" stroke="#6b7280" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="288" y="106" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb" font-weight="700">Marsh 취임 핵심 발언</text>
+  <rect x="288" y="116" width="462" height="36" rx="4" fill="rgba(96,165,250,0.08)"/>
+  <text x="298" y="130" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-style="italic">"We are in the early innings of a structural</text>
+  <text x="298" y="146" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-style="italic">decline in prices."</text>
+  <text x="288" y="168" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• Marsh = 연준 내 최대 비둘기파(dove) 의장</text>
+  <text x="288" y="184" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• CNBC: "CALLS FOR FED REGIME CHANGE"</text>
+  <text x="288" y="200" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 취임 당일: 연준 선물 급등 · S&amp;P ATH 근접</text>
+  <text x="288" y="218" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">인플레 3%→2%대 하락 · 에너지 가격 하락 · 공급망 정상화</text>
+
+  <!-- Deflation bet row -->
+  <rect x="30" y="244" width="460" height="88" rx="8" fill="#0a0b12" stroke="#6b7280" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="50" y="268" font-family="Arial,sans-serif" font-size="11" fill="#facc15" font-weight="700">메가 투자자 디플레 베팅</text>
+  <text x="50" y="288" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">Elon Musk · Sam Altman · Jeff Bezos · Stanley Druckenmiller</text>
+  <text x="50" y="306" font-family="Arial,sans-serif" font-size="10" fill="#facc15">→ 모두 디플레이션 방향 베팅 합류</text>
+  <text x="50" y="324" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">AI 생산성 폭발 + 에너지 하락 + 관세 완화 = 구조적 디플레 진입 컨센서스</text>
+
+  <!-- Tom Lee -->
+  <rect x="510" y="244" width="260" height="88" rx="8" fill="#0d0b05" stroke="#facc15" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="530" y="268" font-family="Arial,sans-serif" font-size="11" fill="#facc15" font-weight="700">Tom Lee — 강세장 선언</text>
+  <text x="530" y="288" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">조정 소화 후 장기 상승 진입</text>
+  <text x="530" y="306" font-family="Arial,sans-serif" font-size="10" fill="white" font-weight="600">S&amp;P ATH 재도전</text>
+  <text x="530" y="322" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">소형주 Russell 2000 동반 강세</text>
+
+  <!-- Bottom conclusion -->
+  <rect x="30" y="344" width="740" height="50" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="50" y="364" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700">투자 시사점:</text>
+  <text x="130" y="364" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">Marsh 취임 + 10월 인하 경로 확립 → 할인율 하락 → NVDA·TSLA·META 성장주 밸류에이션 상승</text>
+  <text x="50" y="382" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">금리 인하 = 오토론 이자 하락 → Tesla 수요 회복 · AI 인프라 투자 비용 하락 → 빅테크 가속</text>
+
+  <line x1="30" y1="406" x2="770" y2="406" stroke="#1e2330" stroke-width="1"/>
+  <text x="770" y="422" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

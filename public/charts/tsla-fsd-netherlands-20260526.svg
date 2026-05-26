@@ -1,0 +1,63 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · TSLA REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">FSD Supervised — 네덜란드 최초 해외 테스트 · EU 확산 신호탄</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.26</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Map visual (simplified world map regions) -->
+  <!-- US label -->
+  <rect x="30" y="90" width="220" height="130" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="140" y="130" font-family="Arial,sans-serif" font-size="28" text-anchor="middle">🇺🇸</text>
+  <text x="140" y="158" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">미국</text>
+  <text x="140" y="176" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">FSD 상용화 중</text>
+  <text x="140" y="192" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle">✓ Active</text>
+  <text x="140" y="212" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">1번째 시장</text>
+
+  <!-- China label -->
+  <rect x="270" y="90" width="220" height="130" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="380" y="130" font-family="Arial,sans-serif" font-size="28" text-anchor="middle">🇨🇳</text>
+  <text x="380" y="158" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">중국</text>
+  <text x="380" y="176" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">특스拉보조주행 명칭</text>
+  <text x="380" y="192" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle">✓ Active</text>
+  <text x="380" y="212" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">2번째 시장</text>
+
+  <!-- Netherlands — NEW -->
+  <rect x="510" y="90" width="260" height="130" rx="8" fill="#001208" stroke="#fb923c" stroke-width="2"/>
+  <rect x="510" y="90" width="260" height="30" rx="8" fill="#fb923c" fill-opacity="0.15"/>
+  <text x="640" y="108" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" text-anchor="middle">🆕 신규</text>
+  <text x="640" y="140" font-family="Arial,sans-serif" font-size="28" text-anchor="middle">🇳🇱</text>
+  <text x="640" y="168" font-family="Arial,sans-serif" font-size="13" fill="#fb923c" font-weight="700" text-anchor="middle">네덜란드</text>
+  <text x="640" y="186" font-family="Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">최초 해외 FSD 실도로 테스트</text>
+  <text x="640" y="202" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">⚡ LIVE</text>
+  <text x="640" y="214" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">3번째 시장 진입</text>
+
+  <!-- Arrow: US → CN → NL -->
+  <text x="257" y="158" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" text-anchor="middle">→</text>
+  <text x="497" y="158" font-family="Arial,sans-serif" font-size="20" fill="#fb923c" text-anchor="middle">→</text>
+
+  <!-- Event details -->
+  <rect x="30" y="240" width="740" height="80" rx="8" fill="#060b18" stroke="#fb923c" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="50" y="264" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">■ 사건 개요</text>
+  <text x="50" y="284" font-family="Arial,sans-serif" font-size="11" fill="white">네덜란드 유명 유튜버 Franz Knol이 FSD Supervised를 첫 체험 — 실도로에서 충돌 위기를 FSD가 직접 회피</text>
+  <text x="50" y="300" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">미국·중국 외 지역에서 FSD Supervised가 실도로 테스트된 최초 공식 사례 · EU 전역 확산의 시발점</text>
+  <text x="50" y="314" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">벨기에 FSD v12.6.4.2 공식 승인(이전 리포트) → 네덜란드 실도로 테스트 → 유럽 순차 확장 예상</text>
+
+  <!-- Impact cards -->
+  <rect x="30" y="334" width="354" height="64" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <text x="50" y="356" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">다음 단계</text>
+  <text x="50" y="374" font-family="Arial,sans-serif" font-size="12" fill="white" font-weight="700">독일 · 프랑스 · 이탈리아 순차 확장</text>
+  <text x="50" y="390" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">EU 승인 도미노 → Cybercab 유럽 수익화 기반</text>
+
+  <rect x="398" y="334" width="372" height="64" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <text x="418" y="356" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 시사점</text>
+  <text x="418" y="374" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">FSD 유럽 구독 수익화 가시화</text>
+  <text x="418" y="390" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">EU 80만+ 테슬라 차량 → FSD 전환 잠재 수익</text>
+
+  <!-- Footer -->
+  <line x1="30" y1="408" x2="770" y2="408" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="422" font-family="Arial,sans-serif" font-size="8" fill="#374151">투자 참고용 · 투자 권유 아님</text>
+  <text x="770" y="422" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
+</svg>

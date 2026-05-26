@@ -1,0 +1,99 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#60a5fa"/>
+
+  <!-- Header -->
+  <text x="30" y="32" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="3">INVESTUS · SPECIAL REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="22" fill="white" font-weight="700">SpaceX S-1 완전분석 — $SPCX 상장 임박</text>
+  <text x="770" y="32" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="end">2026.05.22</text>
+  <text x="770" y="46" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="end">SEC 제출 2026.05.20</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Card 1: Revenue growth (left, row1) x=30 w=222 -->
+  <rect x="30" y="80" width="222" height="110" rx="10" fill="#060b18" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/>
+  <rect x="30" y="80" width="5" height="110" rx="3" fill="#60a5fa"/>
+  <text x="141" y="103" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" text-anchor="middle">📈  연매출 성장</text>
+  <text x="141" y="128" font-family="Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">2023   →   2024   →   2025</text>
+  <text x="141" y="155" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700" text-anchor="middle">$10.4B → $14.0B → $18.7B</text>
+  <text x="141" y="176" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle">YoY +33% (2025)</text>
+
+  <!-- Card 2: Valuation (center, row1) x=264 w=272 -->
+  <rect x="264" y="80" width="272" height="110" rx="10" fill="#0a0820" stroke="rgba(192,132,252,0.4)" stroke-width="1.5"/>
+  <rect x="264" y="80" width="5" height="110" rx="3" fill="#c084fc"/>
+  <text x="400" y="103" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700" text-anchor="middle">🚀  기업가치 &amp; IPO</text>
+  <text x="400" y="140" font-family="Arial,sans-serif" font-size="34" fill="#c084fc" font-weight="700" text-anchor="middle">$1.75~2T</text>
+  <text x="400" y="160" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">나스닥 상장 예정 · 2026년 6월 11~12일</text>
+  <text x="400" y="176" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="middle">공모가 $45~78 (5:1 분할 후) · BofA·GS·JPM 주관</text>
+
+  <!-- Card 3: Starlink (right, row1) x=548 w=222 -->
+  <rect x="548" y="80" width="222" height="110" rx="10" fill="#071a07" stroke="rgba(0,229,160,0.4)" stroke-width="1.5"/>
+  <rect x="548" y="80" width="5" height="110" rx="3" fill="#00e5a0"/>
+  <text x="659" y="103" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">🛰  Starlink 현황</text>
+  <text x="659" y="138" font-family="Arial,sans-serif" font-size="32" fill="#00e5a0" font-weight="700" text-anchor="middle">1,030만</text>
+  <text x="659" y="156" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">유료 구독자 · 160개국</text>
+  <text x="659" y="172" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle">매출 $11.4B · 영업이익 $4.42B</text>
+  <text x="659" y="184" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">영업이익률 63%</text>
+
+  <!-- Row 2: 3-segment breakdown -->
+  <text x="400" y="214" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" font-weight="700" text-anchor="middle">3개 사업부문 구조 (2025 기준)</text>
+
+  <!-- Segment: Starlink/Connectivity x=30 w=228 -->
+  <rect x="30" y="222" width="228" height="90" rx="10" fill="#071a07" stroke="rgba(0,229,160,0.5)" stroke-width="1.5"/>
+  <text x="144" y="244" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">🛰 Connectivity (Starlink)</text>
+  <text x="144" y="264" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" font-weight="700" text-anchor="middle">$11.4B</text>
+  <text x="144" y="280" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">전체 매출의 61%</text>
+  <text x="144" y="296" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle">영업이익 +$4.42B ✓ 흑자</text>
+  <text x="144" y="306" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">YoY +50%</text>
+
+  <!-- Segment: Space/Launch x=270 w=228 -->
+  <rect x="270" y="222" width="228" height="90" rx="10" fill="#060b18" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/>
+  <text x="384" y="244" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" text-anchor="middle">🚀 Space (발사서비스)</text>
+  <text x="384" y="264" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" font-weight="700" text-anchor="middle">$4.1B</text>
+  <text x="384" y="280" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">전체 매출의 22%</text>
+  <text x="384" y="296" font-family="Arial,sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">영업손실 −$657M</text>
+  <text x="384" y="306" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">연간 발사 165회 (6년 연속 기록)</text>
+
+  <!-- Segment: AI/xAI x=510 w=260 -->
+  <rect x="510" y="222" width="260" height="90" rx="10" fill="#1a0820" stroke="rgba(255,77,109,0.4)" stroke-width="1.5"/>
+  <text x="640" y="244" font-family="Arial,sans-serif" font-size="11" fill="#ff4d6d" font-weight="700" text-anchor="middle">🤖 AI (xAI 통합)</text>
+  <text x="640" y="264" font-family="Arial,sans-serif" font-size="22" fill="#ff4d6d" font-weight="700" text-anchor="middle">$3.2B</text>
+  <text x="640" y="280" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">전체 매출의 17%</text>
+  <text x="640" y="296" font-family="Arial,sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">영업손실 −$6.35B ← 적자 주범</text>
+  <text x="640" y="306" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">COLOSSUS AI 컴퓨트 투자 집중</text>
+
+  <!-- Row 3: Key metrics strip -->
+  <rect x="30" y="326" width="740" height="36" rx="8" fill="rgba(7,12,26,0.9)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <!-- 4 metrics evenly spaced: centers at 115, 300, 500, 685 -->
+  <text x="115" y="340" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">순손실</text>
+  <text x="115" y="354" font-family="Arial,sans-serif" font-size="12" fill="#ef4444" font-weight="700" text-anchor="middle">−$4.9B</text>
+  <text x="300" y="340" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">위성 운용 중</text>
+  <text x="300" y="354" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700" text-anchor="middle">10,296기</text>
+  <text x="500" y="340" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">정부계약 누적</text>
+  <text x="500" y="354" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700" text-anchor="middle">$24.4B</text>
+  <text x="685" y="340" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">월 평균 ARPU</text>
+  <text x="685" y="354" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700" text-anchor="middle">$81</text>
+
+  <!-- Row 4: Shareholder structure -->
+  <rect x="30" y="374" width="358" height="90" rx="10" fill="#070914" stroke="rgba(251,146,60,0.3)" stroke-width="1.5"/>
+  <text x="209" y="396" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700" text-anchor="middle">⚡ 의결권 구조 (핵심 리스크)</text>
+  <text x="209" y="420" font-family="Arial,sans-serif" font-size="28" fill="#fb923c" font-weight="700" text-anchor="middle">머스크 85.1%</text>
+  <text x="209" y="438" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">소액주주 의결권 사실상 없음</text>
+  <text x="209" y="453" font-family="Arial,sans-serif" font-size="9" fill="#ef4444" text-anchor="middle">S-1 명시 리스크: 머스크 의존도 절대적</text>
+
+  <!-- Row 4 right: TAM -->
+  <rect x="400" y="374" width="370" height="90" rx="10" fill="#060c12" stroke="rgba(0,229,160,0.3)" stroke-width="1.5"/>
+  <text x="585" y="396" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">🌐 총 잠재시장(TAM) · 투자 포인트</text>
+  <text x="585" y="422" font-family="Arial,sans-serif" font-size="26" fill="#00e5a0" font-weight="700" text-anchor="middle">$28.5조</text>
+  <text x="585" y="440" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">우주·통신·AI 통합 TAM</text>
+  <text x="585" y="454" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Starlink 흑자가 SpaceX+xAI 손실 보전 중</text>
+
+  <!-- Row 5: S&P500 inclusion note (full width) -->
+  <rect x="30" y="476" width="740" height="44" rx="8" fill="rgba(96,165,250,0.06)" stroke="rgba(96,165,250,0.22)" stroke-width="1"/>
+  <text x="400" y="494" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" text-anchor="middle">📋 상장 후 주목 포인트: S&amp;P500 편입 시 패시브 자금 수십조 원 강제 유입</text>
+  <text x="400" y="510" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">청약 채널: Schwab · Fidelity · Robinhood · SoFi · E*Trade (국내 투자자 접근 가능)</text>
+
+  <!-- Footer -->
+  <line x1="30" y1="534" x2="770" y2="534" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="552" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다. 출처: SpaceX S-1 (SEC, 2026.05.20)</text>
+  <text x="770" y="552" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

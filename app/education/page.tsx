@@ -2,15 +2,38 @@
 
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { ChevronLeft, CheckCircle, BookOpen, TrendingUp, Users, Clock, ChevronDown } from "lucide-react";
+import { ChevronLeft, CheckCircle, BookOpen, TrendingUp, Users, Clock, ChevronDown, User } from "lucide-react";
 import Link from "next/link";
 import { useLocale } from "@/contexts/LocaleContext";
 
 const HIGHLIGHT_ICONS = [
   <Clock className="w-5 h-5" key="clock" />,
-  <Users className="w-5 h-5" key="users" />,
-  <BookOpen className="w-5 h-5" key="book" />,
   <TrendingUp className="w-5 h-5" key="trend" />,
+  <BookOpen className="w-5 h-5" key="book" />,
+  <Users className="w-5 h-5" key="users" />,
+];
+
+const COURSE_TYPES = [
+  {
+    id: "one-on-one",
+    emoji: "👤",
+    title: "1:1 개인 수업",
+    badge: "완전 맞춤형",
+    badgeColor: "#60a5fa",
+    desc: "CIO가 직접 1:1로 지도합니다. 내 수준과 목표에 맞는 완전 맞춤형 커리큘럼으로 가장 빠르게 성장할 수 있는 방식입니다.",
+    details: ["완전 맞춤 커리큘럼", "일정 유연하게 협의", "CIO 직접 지도", "빠른 실력 향상"],
+    detailColor: "#60a5fa",
+  },
+  {
+    id: "group",
+    emoji: "👥",
+    title: "소수정예 그룹",
+    badge: "최대 8명",
+    badgeColor: "#a78bfa",
+    desc: "소규모 그룹으로 함께 배우고 토론합니다. 다양한 시각과 질문 속에서 더 넓은 시야를 키울 수 있습니다.",
+    details: ["최대 8명 소규모", "주 1회 · 90분", "강의 PDF 제공", "종목 토론 포함"],
+    detailColor: "#a78bfa",
+  },
 ];
 
 type Step = "form" | "submitting" | "success" | "error";
@@ -20,6 +43,7 @@ export default function EducationPage() {
   const ed = t.education;
   const [step, setStep]           = useState<Step>("form");
   const [openWeek, setOpenWeek]   = useState<number | null>(0);
+  const [courseType, setCourseType] = useState("");
   const [name,   setName]         = useState("");
   const [phone,  setPhone]        = useState("");
   const [level,  setLevel]        = useState("");
@@ -27,19 +51,30 @@ export default function EducationPage() {
   const [msg,    setMsg]          = useState("");
   const [error,  setError]        = useState("");
 
+  const selectedCourse = COURSE_TYPES.find((c) => c.id === courseType);
+
   const handleSubmit = async () => {
-    if (!name.trim())  { setError(ed.errName); return; }
-    if (!phone.trim()) { setError(ed.errPhone); return; }
-    if (!level)        { setError(ed.errLevel); return; }
+    if (!courseType)    { setError(ed.errCourse); return; }
+    if (!name.trim())   { setError(ed.errName);  return; }
+    if (!phone.trim())  { setError(ed.errPhone); return; }
+    if (!level)         { setError(ed.errLevel); return; }
 
     setError("");
     setStep("submitting");
+
+    const courseLabel = selectedCourse?.title ?? courseType;
 
     try {
       const res = await fetch("/api/edu-apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone, level, amount, message: msg }),
+        body: JSON.stringify({
+          name,
+          phone,
+          level: `[${courseLabel}] ${level}`,
+          amount,
+          message: msg,
+        }),
       });
       if (!res.ok) {
         const d = await res.json().catch(() => ({}));
@@ -61,9 +96,9 @@ export default function EducationPage() {
       >
         <div
           className="w-20 h-20 rounded-full flex items-center justify-center"
-          style={{ background: "rgba(139,92,246,0.15)" }}
+          style={{ background: "rgba(212,175,55,0.15)" }}
         >
-          <CheckCircle className="w-10 h-10" style={{ color: "#a78bfa" }} />
+          <CheckCircle className="w-10 h-10" style={{ color: "#d4af37" }} />
         </div>
         <div className="text-center">
           <p className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
@@ -82,10 +117,11 @@ export default function EducationPage() {
             {ed.summaryTitle}
           </p>
           {[
-            [ed.summaryName,   name],
-            [ed.summaryPhone,  phone],
-            [ed.summaryLevel,  level],
-            [ed.summaryAmount, amount || ed.noAmount],
+            [ed.summaryCourse,  selectedCourse?.title ?? courseType],
+            [ed.summaryName,    name],
+            [ed.summaryPhone,   phone],
+            [ed.summaryLevel,   level],
+            [ed.summaryAmount,  amount || ed.noAmount],
           ].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b last:border-0"
               style={{ borderColor: "var(--border)" }}>
@@ -95,11 +131,7 @@ export default function EducationPage() {
           ))}
         </div>
 
-        <Link
-          href="/insight"
-          className="text-xs"
-          style={{ color: "var(--muted)" }}
-        >
+        <Link href="/insight" className="text-xs" style={{ color: "var(--muted)" }}>
           {ed.backToInsight}
         </Link>
       </div>
@@ -122,15 +154,15 @@ export default function EducationPage() {
         <div
           className="rounded-2xl px-5 py-6 mb-6 relative overflow-hidden"
           style={{
-            background: "linear-gradient(135deg, #1a0d2e 0%, #0d0d1f 60%, #0a0c10 100%)",
-            border: "1px solid rgba(139,92,246,0.25)",
+            background: "linear-gradient(135deg, #1c1500 0%, #0d0b00 60%, #0a0c10 100%)",
+            border: "1px solid rgba(212,175,55,0.3)",
           }}
         >
           <div className="absolute inset-0 pointer-events-none"
-            style={{ background: "radial-gradient(circle at 80% 20%, rgba(139,92,246,0.12) 0%, transparent 60%)" }} />
+            style={{ background: "radial-gradient(circle at 80% 20%, rgba(212,175,55,0.1) 0%, transparent 60%)" }} />
           <div
             className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-3"
-            style={{ background: "rgba(139,92,246,0.2)", color: "#a78bfa" }}
+            style={{ background: "rgba(212,175,55,0.18)", color: "#d4af37" }}
           >
             {ed.badge}
           </div>
@@ -144,6 +176,79 @@ export default function EducationPage() {
           </p>
         </div>
 
+        {/* ── 수업 유형 선택 ── */}
+        <div className="mb-6">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
+            style={{ color: "var(--muted)" }}>
+            {ed.courseTypeLbl}
+          </p>
+          <div className="flex flex-col gap-3">
+            {COURSE_TYPES.map((c) => {
+              const selected = courseType === c.id;
+              return (
+                <button
+                  key={c.id}
+                  onClick={() => setCourseType(c.id)}
+                  className="w-full text-left rounded-2xl p-4 border transition-all"
+                  style={selected
+                    ? { background: `${c.detailColor}12`, borderColor: c.detailColor }
+                    : { background: "var(--card)", borderColor: "var(--border)" }}
+                >
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                      style={{ background: selected ? `${c.detailColor}20` : "var(--bg)" }}
+                    >
+                      {c.emoji}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
+                          {c.title}
+                        </p>
+                        <span
+                          className="text-[9px] font-bold px-2 py-0.5 rounded-full"
+                          style={{ background: `${c.detailColor}20`, color: c.detailColor }}
+                        >
+                          {c.badge}
+                        </span>
+                      </div>
+                      <p className="text-[12px] leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
+                        {c.desc}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {c.details.map((d) => (
+                          <span
+                            key={d}
+                            className="text-[10px] px-2 py-0.5 rounded-full"
+                            style={{
+                              background: selected ? `${c.detailColor}15` : "rgba(255,255,255,0.04)",
+                              color: selected ? c.detailColor : "var(--muted)",
+                              border: `1px solid ${selected ? `${c.detailColor}30` : "var(--border)"}`,
+                            }}
+                          >
+                            {d}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    {/* 선택 표시 */}
+                    <div
+                      className="w-5 h-5 rounded-full border-2 flex-shrink-0 mt-0.5 flex items-center justify-center"
+                      style={{
+                        borderColor: selected ? c.detailColor : "var(--border)",
+                        background: selected ? c.detailColor : "transparent",
+                      }}
+                    >
+                      {selected && <div className="w-2 h-2 rounded-full bg-white" />}
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         {/* Highlights */}
         <div className="grid grid-cols-2 gap-2 mb-6">
           {ed.highlights.map((h, i) => (
@@ -154,7 +259,7 @@ export default function EducationPage() {
             >
               <div
                 className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ background: "rgba(139,92,246,0.12)", color: "#a78bfa" }}
+                style={{ background: "rgba(212,175,55,0.12)", color: "#d4af37" }}
               >
                 {HIGHLIGHT_ICONS[i]}
               </div>
@@ -184,7 +289,7 @@ export default function EducationPage() {
                   <div className="flex items-center gap-3 text-left">
                     <span
                       className="text-[10px] font-bold px-2 py-0.5 rounded-full flex-shrink-0"
-                      style={{ background: "rgba(139,92,246,0.15)", color: "#a78bfa" }}
+                      style={{ background: "rgba(212,175,55,0.15)", color: "#d4af37" }}
                     >
                       {c.week}
                     </span>
@@ -205,7 +310,7 @@ export default function EducationPage() {
                     {c.items.map((item) => (
                       <div key={item} className="flex items-start gap-2 py-1">
                         <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0"
-                          style={{ background: "#a78bfa" }} />
+                          style={{ background: "#d4af37" }} />
                         <p className="text-[12px]" style={{ color: "var(--muted)" }}>{item}</p>
                       </div>
                     ))}
@@ -264,7 +369,7 @@ export default function EducationPage() {
                     onClick={() => setLevel(l)}
                     className="py-2.5 rounded-xl border text-xs font-medium transition-all"
                     style={level === l
-                      ? { background: "rgba(139,92,246,0.2)", borderColor: "#a78bfa", color: "#a78bfa" }
+                      ? { background: "rgba(212,175,55,0.18)", borderColor: "#d4af37", color: "#d4af37" }
                       : { background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
                   >
                     {l}
@@ -285,7 +390,7 @@ export default function EducationPage() {
                     onClick={() => setAmount(amount === a ? "" : a)}
                     className="py-2.5 rounded-xl border text-xs font-medium transition-all"
                     style={amount === a
-                      ? { background: "rgba(139,92,246,0.2)", borderColor: "#a78bfa", color: "#a78bfa" }
+                      ? { background: "rgba(212,175,55,0.18)", borderColor: "#d4af37", color: "#d4af37" }
                       : { background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
                   >
                     {a}
@@ -319,9 +424,11 @@ export default function EducationPage() {
           disabled={step === "submitting"}
           className="w-full py-4 rounded-2xl text-base font-bold active:opacity-80 transition-opacity disabled:opacity-60"
           style={{
-            background: "linear-gradient(135deg, #7c3aed, #a78bfa)",
-            color: "#fff",
-            boxShadow: "0 4px 24px rgba(139,92,246,0.35)",
+            background: selectedCourse
+              ? `linear-gradient(135deg, ${selectedCourse.detailColor}cc, ${selectedCourse.detailColor})`
+              : "linear-gradient(135deg, #b8960c, #d4af37)",
+            color: selectedCourse ? "#fff" : "#000",
+            boxShadow: `0 4px 24px ${selectedCourse?.detailColor ?? "#d4af37"}55`,
           }}
         >
           {step === "submitting" ? ed.submitting : ed.submit}

@@ -1,0 +1,77 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#c084fc"/>
+
+  <text x="30" y="32" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="3">INVESTUS · SpaceX IPO</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="20" fill="white" font-weight="700">SpaceX IPO 락업 구조 · Starlink Q1 $1B 영업이익</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.23</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- IPO Price card -->
+  <rect x="30" y="82" width="230" height="110" rx="10" fill="#0d0a1a" stroke="rgba(192,132,252,0.4)" stroke-width="1.5"/>
+  <text x="145" y="112" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700" text-anchor="middle">🚀 IPO 예상 가격</text>
+  <text x="145" y="150" font-family="Arial,sans-serif" font-size="36" fill="white" font-weight="700" text-anchor="middle">~$1,000</text>
+  <text x="145" y="172" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">주당 / 기업가치 최대 $2T</text>
+  <text x="145" y="184" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="middle">Musk 의결권 79~85%</text>
+
+  <!-- Starlink profit card -->
+  <rect x="280" y="82" width="230" height="110" rx="10" fill="#071208" stroke="rgba(0,229,160,0.4)" stroke-width="1.5"/>
+  <text x="395" y="112" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">🛰 Starlink Q1 영업이익</text>
+  <text x="395" y="150" font-family="Arial,sans-serif" font-size="36" fill="#00e5a0" font-weight="700" text-anchor="middle">$1B+</text>
+  <text x="395" y="172" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2025 연간: $4.42B (이익률 63%)</text>
+  <text x="395" y="184" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">xAI 적자 상쇄하는 현금창출기</text>
+
+  <!-- Merger probability card -->
+  <rect x="530" y="82" width="240" height="110" rx="10" fill="#0a0d08" stroke="rgba(251,146,60,0.4)" stroke-width="1.5"/>
+  <text x="650" y="112" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700" text-anchor="middle">⚡ Tesla·SpaceX 합병 확률</text>
+  <text x="605" y="152" font-family="Arial,sans-serif" font-size="28" fill="#fb923c" font-weight="700" text-anchor="middle">85%</text>
+  <text x="605" y="170" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Dan Ives (Wedbush)</text>
+  <text x="700" y="152" font-family="Arial,sans-serif" font-size="28" fill="#facc15" font-weight="700" text-anchor="middle">63%</text>
+  <text x="700" y="170" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Kalshi 예측시장</text>
+  <text x="650" y="184" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">2027년 합병 → TSLA 직접 수혜</text>
+
+  <!-- Lock-up structure timeline -->
+  <rect x="30" y="208" width="740" height="130" rx="10" fill="#0a0b12" stroke="rgba(192,132,252,0.2)" stroke-width="1"/>
+  <text x="50" y="232" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">📋 S-1 락업 단계별 해제 구조 (Elon Musk 제외)</text>
+
+  <!-- Timeline steps -->
+  <rect x="50" y="245" width="150" height="70" rx="8" fill="#12101e" stroke="rgba(192,132,252,0.3)" stroke-width="1"/>
+  <text x="125" y="265" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="700" text-anchor="middle">1단계</text>
+  <text x="125" y="280" font-family="Arial,sans-serif" font-size="11" fill="white" font-weight="700" text-anchor="middle">20% 해제</text>
+  <text x="125" y="294" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Q2 2026 실적 후</text>
+  <text x="125" y="308" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">적격 내부자 주식</text>
+
+  <text x="215" y="283" font-family="Arial,sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">→</text>
+
+  <rect x="230" y="245" width="150" height="70" rx="8" fill="#12101e" stroke="rgba(192,132,252,0.3)" stroke-width="1"/>
+  <text x="305" y="265" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="700" text-anchor="middle">2단계</text>
+  <text x="305" y="280" font-family="Arial,sans-serif" font-size="11" fill="white" font-weight="700" text-anchor="middle">+10% 해제</text>
+  <text x="305" y="294" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">주가 IPO 대비 +30%+</text>
+  <text x="305" y="308" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">10일 중 5일 조건 충족</text>
+
+  <text x="395" y="283" font-family="Arial,sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">→</text>
+
+  <rect x="410" y="245" width="150" height="70" rx="8" fill="#12101e" stroke="rgba(192,132,252,0.3)" stroke-width="1"/>
+  <text x="485" y="265" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="700" text-anchor="middle">3단계</text>
+  <text x="485" y="280" font-family="Arial,sans-serif" font-size="11" fill="white" font-weight="700" text-anchor="middle">+20% 해제</text>
+  <text x="485" y="294" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Q3 2026 실적 후</text>
+  <text x="485" y="308" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">추가 해제</text>
+
+  <text x="575" y="283" font-family="Arial,sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">→</text>
+
+  <rect x="590" y="245" width="150" height="70" rx="8" fill="#12101e" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <text x="665" y="265" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" font-weight="700" text-anchor="middle">4단계</text>
+  <text x="665" y="280" font-family="Arial,sans-serif" font-size="11" fill="white" font-weight="700" text-anchor="middle">~17% 해제</text>
+  <text x="665" y="294" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">상장 후 180일 이후</text>
+  <text x="665" y="308" font-family="Arial,sans-serif" font-size="8" fill="#fb923c" text-anchor="middle">머스크 별도 구조</text>
+
+  <!-- Schwab note -->
+  <rect x="30" y="352" width="740" height="40" rx="8" fill="#0d1020" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <text x="50" y="369" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700">Schwab IPO 참여:</text>
+  <text x="145" y="369" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">최소 $100,000 잔고 필요 · Trade→IPO탭 수신 동의 → 관심 표명 → 로드쇼 후 정식 제출</text>
+  <text x="50" y="385" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">⚠ 과잉 수요 시 소량 배정 가능 · Schwab 외: Fidelity · Robinhood · SoFi · E*Trade</text>
+
+  <line x1="30" y1="404" x2="770" y2="404" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="420" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="420" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

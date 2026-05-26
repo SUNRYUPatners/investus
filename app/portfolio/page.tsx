@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import {
   Plus, Trash2, TrendingUp, TrendingDown,
-  Search, X, RefreshCw, Building2, ChevronRight, Wallet, LogIn, Lock,
+  Search, X, RefreshCw, Building2, ChevronRight, ChevronDown, ChevronUp, Wallet, LogIn, Lock,
   Camera, CheckSquare, Square, AlertTriangle, Sparkles, CheckCircle2,
 } from "lucide-react";
 import { getSupabase } from "@/lib/supabase";
@@ -15,6 +15,7 @@ import { mockQuotes } from "@/lib/api";
 import type { Holding } from "@/lib/api";
 import { useLocaleCode } from "@/contexts/LocaleContext";
 import { AdBanner } from "@/components/AdBanner";
+import { PortfolioAI } from "@/components/PortfolioAI";
 
 // ── Types & Constants ─────────────────────────────────────────────────────────
 
@@ -256,7 +257,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                   </p>
                 </div>
                 <div className="space-y-1.5 text-[11px]" style={{ color: "var(--muted)" }}>
-                  <p>평단가가 <b style={{ color: "var(--text)" }}>달러($)로 표시된 화면</b>을 캡쳐해야 자동 입력됩니다.</p>
+                  <p>평단가가 <b style={{ color: "var(--text)" }}>달러($)로 표시된 화면</b>을 캡처해야 자동 입력됩니다.</p>
                   <div className="mt-2 pt-2 border-t space-y-1" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
                     <p>🟠 <b>키움</b> — 해외주식 보유 → 외화 탭 선택</p>
                     <p>🌐 <b>미래에셋</b> — 해외주식 → USD 표시로 전환</p>
@@ -270,7 +271,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                 <div className="flex items-start gap-2">
                   <Sparkles className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: "var(--mint)" }} />
                   <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                    <b style={{ color: "var(--text)" }}>보유종목 화면을 캡쳐</b>해 주세요. 종목명·수량·평단가(USD)가 보이면 AI가 자동 인식합니다.
+                    <b style={{ color: "var(--text)" }}>보유종목 화면을 캡처</b>해 주세요. 종목명·수량·평단가(USD)가 보이면 AI가 자동 인식합니다.
                   </p>
                 </div>
               </div>
@@ -307,7 +308,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
               <div>
                 <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>종목을 인식하지 못했어요</p>
                 <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                  {errMsg || "보유종목이 잘 보이는 화면을 캡쳐해서 다시 시도해주세요."}
+                  {errMsg || "보유종목이 잘 보이는 화면을 캡처해서 다시 시도해주세요."}
                 </p>
               </div>
               <button
@@ -422,7 +423,7 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
                       <span className="text-base">📷</span>
                       <div>
                         <p className="text-[12px] font-semibold" style={{ color: "var(--text)" }}>앱에서 USD 설정 후 다시 찍기</p>
-                        <p className="text-[10px]" style={{ color: "var(--muted)" }}>평단가가 $ 달러로 보이는 화면을 캡쳐하세요</p>
+                        <p className="text-[10px]" style={{ color: "var(--muted)" }}>평단가가 $ 달러로 보이는 화면을 캡처하세요</p>
                       </div>
                     </button>
                     <div className="flex items-center gap-2 px-1">
@@ -579,10 +580,6 @@ function AddSheet({ onClose, onAdd, existing }: {
               <div className="flex items-center justify-between px-4 py-3 rounded-2xl border"
                 style={{ background: "var(--bg)", borderColor: "rgba(0,229,160,0.3)" }}>
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-                    style={{ background: "rgba(0,229,160,0.12)" }}>
-                    <span className="text-xs font-bold font-mono-num" style={{ color: "var(--mint)" }}>{selected.symbol.slice(0, 2)}</span>
-                  </div>
                   <div>
                     <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{selected.symbol}</p>
                     <p className="text-[11px] max-w-[160px] truncate" style={{ color: "var(--muted)" }}>{selected.name}</p>
@@ -668,12 +665,6 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
       {/* Top row */}
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "rgba(0,229,160,0.1)" }}>
-            <span className="text-[13px] font-bold font-mono-num leading-none" style={{ color: "var(--mint)" }}>
-              {holding.symbol.slice(0, 2)}
-            </span>
-          </div>
           <div>
             <p className="text-sm font-bold font-mono-num leading-tight" style={{ color: "var(--text)" }}>{holding.symbol}</p>
             <p className="text-[11px] leading-tight mt-0.5 max-w-[140px] truncate" style={{ color: "var(--muted)" }}>{name}</p>
@@ -834,28 +825,34 @@ function SummaryCard({ holdings, liveMap, cur, rate, loading, onRefresh, locale 
 // ── Brokerage section ─────────────────────────────────────────────────────────
 
 function BrokerageSection({ locale, onImport }: { locale: string; onImport: () => void }) {
-  const [tab, setTab] = useState<"kr" | "us">("kr");
+  const [tab,       setTab]       = useState<"kr" | "us">("kr");
+  const [collapsed, setCollapsed] = useState(true);
   const list = tab === "kr" ? BROKERAGES_KR : BROKERAGES_US;
   return (
     <div className="rounded-2xl border overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-      <div className="flex items-center justify-between px-4 py-3 border-b" style={{ borderColor: "var(--border)" }}>
+      <button
+        className="w-full flex items-center justify-between px-4 py-3 transition-opacity hover:opacity-80"
+        onClick={() => setCollapsed((v) => !v)}
+        style={collapsed ? {} : { borderBottom: "1px solid var(--border)" }}
+      >
         <div className="flex items-center gap-2">
           <Building2 className="w-4 h-4" style={{ color: "var(--muted)" }} />
           <h3 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
             {locale === "ko" ? "증권사 계좌 연동" : "Brokerage Connection"}
           </h3>
         </div>
-        <div className="flex items-center gap-0.5 rounded-lg p-0.5" style={{ background: "var(--bg)" }}>
-          {(["kr", "us"] as const).map((t) => (
-            <button key={t} onClick={() => setTab(t)}
-              className="px-2.5 py-1 rounded-md text-[10px] font-semibold transition-all"
-              style={tab === t ? { background: "var(--card)", color: "var(--text)" } : { color: "var(--muted)" }}>
-              {t.toUpperCase()}
-            </button>
-          ))}
+        <div className="flex items-center gap-2">
+          {collapsed && (
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {locale === "ko" ? "펼치기" : "Expand"}
+            </span>
+          )}
+          {collapsed
+            ? <ChevronDown className="w-4 h-4" style={{ color: "var(--muted)" }} />
+            : <ChevronUp   className="w-4 h-4" style={{ color: "var(--muted)" }} />}
         </div>
-      </div>
-      <div className="p-4">
+      </button>
+      {!collapsed && <div className="p-4">
         <div className="grid grid-cols-4 gap-2 mb-4">
           {list.map((b) => (
             <div key={b.name} className="rounded-xl py-3 px-1 flex flex-col items-center gap-1.5"
@@ -896,7 +893,7 @@ function BrokerageSection({ locale, onImport }: { locale: string; onImport: () =
               : "Full API auto-sync coming after brokerage partnerships"}
           </p>
         </div>
-      </div>
+      </div>}
     </div>
   );
 }
@@ -1019,6 +1016,13 @@ export default function PortfolioPage() {
             />
           )}
 
+          {/* 모바일 전용: AI 비서 (전체 요약과 보유종목 사이) */}
+          {loaded && holdings.length > 0 && (
+            <div className="lg:hidden mb-5">
+              <PortfolioAI holdings={holdings} liveMap={liveMap} usdkrw={usdkrw} />
+            </div>
+          )}
+
           {/* Holdings header */}
           {loaded && holdings.length > 0 && (
             <div className="flex items-center justify-between mb-3">
@@ -1098,14 +1102,24 @@ export default function PortfolioPage() {
         </div>
 
         {/* ── Right (desktop) / Below (mobile) ── */}
-        <div className={holdings.length > 0 ? "mt-6 lg:mt-0" : "mt-0"}>
-          {/* Ad at top of right column */}
-          <div className="mb-5">
-            <AdBanner format="auto" />
+        {/* 데스크탑: 증권사(1위) → AI(2위) / 모바일: AI(1위) → 증권사(2위) */}
+        <div className={`flex flex-col ${holdings.length > 0 ? "mt-6 lg:mt-0" : "mt-0"}`}>
+          {/* 증권사 계좌 연동 — 데스크탑 1위, 모바일 2위 */}
+          <div className="order-2 lg:order-1 mb-5">
+            <BrokerageSection locale={locale} onImport={() => setShowImport(true)} />
           </div>
-          <BrokerageSection locale={locale} onImport={() => setShowImport(true)} />
-          {/* Ad below brokerage section */}
-          <div className="mt-5">
+          {/* AI 포트폴리오 비서 — 데스크탑만 표시 (모바일은 왼쪽 컬럼에 삽입) */}
+          {loaded && holdings.length > 0 && (
+            <div className="hidden lg:block order-2 mb-5">
+              <PortfolioAI
+                holdings={holdings}
+                liveMap={liveMap}
+                usdkrw={usdkrw}
+              />
+            </div>
+          )}
+          {/* Ad */}
+          <div className="order-3 mb-5">
             <AdBanner format="auto" />
           </div>
         </div>

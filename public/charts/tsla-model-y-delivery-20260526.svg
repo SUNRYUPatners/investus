@@ -1,0 +1,57 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · TSLA REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Tesla Model Y 신형 — 첫 고객 인도 오늘 (5/26) · 8만 대 추가 주문</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.26</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Date highlight -->
+  <rect x="30" y="84" width="200" height="80" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="130" y="116" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">첫 인도일</text>
+  <text x="130" y="144" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" font-weight="900" text-anchor="middle">5월 26일</text>
+  <text x="130" y="158" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">오늘 / 2026.05.26</text>
+
+  <!-- Bonus orders -->
+  <rect x="248" y="84" width="200" height="80" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="348" y="116" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">추가 보너스 주문</text>
+  <text x="348" y="144" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" font-weight="900" text-anchor="middle">+80,000</text>
+  <text x="348" y="158" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">기존 예약자 잠금가 보너스</text>
+
+  <!-- Key specs -->
+  <rect x="466" y="84" width="304" height="80" rx="8" fill="#060b18" stroke="#1e2330" stroke-width="1"/>
+  <text x="486" y="106" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" font-weight="700">주요 제원</text>
+  <text x="486" y="124" font-family="Arial,sans-serif" font-size="10" fill="white">🔋 325마일 항속거리 · 0→60mph 2.4초</text>
+  <text x="486" y="140" font-family="Arial,sans-serif" font-size="10" fill="white">⚡ 460kW 충전 · 듀얼모터 AWD</text>
+  <text x="486" y="156" font-family="Arial,sans-serif" font-size="10" fill="white">🪑 7인승 · 18.1인치 센터 디스플레이</text>
+
+  <!-- Event details -->
+  <rect x="30" y="180" width="740" height="70" rx="8" fill="#060b18" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="50" y="204" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">■ 인도 시작 배경</text>
+  <text x="50" y="224" font-family="Arial,sans-serif" font-size="11" fill="white">기존 Model Y 보유자들이 구형 차량을 신형 Model Y와 트레이드인하며 보너스 주문 쏠림 현상 발생</text>
+  <text x="50" y="240" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">VIN 배정 완료 → 5월 26일 공식 첫 인도 발표 · 80,000대 추가 확보로 Q2 인도량 대폭 상향 예상</text>
+
+  <!-- Revenue impact -->
+  <rect x="30" y="264" width="354" height="90" rx="8" fill="#060b18" stroke="#1e2330" stroke-width="1"/>
+  <text x="50" y="288" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Q2 실적 영향</text>
+  <text x="50" y="310" font-family="Arial,sans-serif" font-size="13" fill="white" font-weight="700">+80,000대 추가 → Q2 인도 기록 가능</text>
+  <text x="50" y="328" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">Model Y @ ~$45,000 ASP</text>
+  <text x="50" y="344" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">추가 매출 기여 ~$3.6B</text>
+
+  <rect x="402" y="264" width="368" height="90" rx="8" fill="#060b18" stroke="#1e2330" stroke-width="1"/>
+  <text x="422" y="288" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">투자 시사점</text>
+  <text x="422" y="308" font-family="Arial,sans-serif" font-size="11" fill="white">• 신형 싸이클 수요 확인 — 구형 대비 업그레이드 수요 강</text>
+  <text x="422" y="326" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">• 텍사스 생산 비중 확대 → 관세 리스크 완화</text>
+  <text x="422" y="344" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">• 기가텍사스 풀가동 → Q3·Q4 생산 레버리지</text>
+
+  <!-- Quote -->
+  <rect x="30" y="368" width="740" height="40" rx="6" fill="#0d0b05" stroke="#1e2330" stroke-width="1"/>
+  <text x="50" y="385" font-family="Arial,sans-serif" font-size="11" fill="white" font-style="italic">"Tesla has officially started assigning VINs to Model Y customers — deliveries starting this week."</text>
+  <text x="50" y="400" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">— Sayor Meriti (@SayorMeriti), 2026.05.26</text>
+
+  <!-- Footer -->
+  <line x1="30" y1="418" x2="770" y2="418" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="427" font-family="Arial,sans-serif" font-size="8" fill="#374151">투자 참고용 · 투자 권유 아님</text>
+  <text x="770" y="427" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
+</svg>

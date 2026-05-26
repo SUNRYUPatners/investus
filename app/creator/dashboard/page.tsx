@@ -322,13 +322,13 @@ export default function CreatorDashboardPage() {
                   <>
                     <p className="text-xs font-semibold mb-1" style={{ color: "#fbbf24" }}>인증 심사 중</p>
                     <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                      캡쳐 업로드가 접수되었습니다. 관리자 검토 후 1~2일 내 승인됩니다.
+                      캡처 업로드가 접수되었습니다. 관리자 검토 후 1~2일 내 승인됩니다.
                     </p>
                     <div className="flex items-center gap-4 mt-2">
                       <button onClick={() => setShowVerify(true)}
                         className="text-[11px] font-bold underline"
                         style={{ color: "var(--muted)" }}>
-                        캡쳐 재업로드 →
+                        캡처 재업로드 →
                       </button>
                       <button onClick={handleCancelApplication} disabled={cancelling}
                         className="text-[11px] font-bold underline disabled:opacity-40"
@@ -341,7 +341,7 @@ export default function CreatorDashboardPage() {
                   <>
                     <p className="text-xs font-semibold mb-1" style={{ color: "#fbbf24" }}>인증 후 콘텐츠를 올릴 수 있어요</p>
                     <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                      HTS/MTS 보유 화면 캡쳐를 업로드하면 관리자 검토 후 승인됩니다.
+                      HTS/MTS 보유 화면 캡처를 업로드하면 관리자 검토 후 승인됩니다.
                     </p>
                     <button onClick={() => setShowVerify(true)}
                       className="mt-2 text-[11px] font-bold underline"
@@ -689,13 +689,13 @@ export default function CreatorDashboardPage() {
                   <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>크리에이터 인증</h2>
                 </div>
                 <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
-                  실제 보유 종목 화면 캡쳐를 업로드하면 즉시 크리에이터 활동이 시작됩니다.
+                  실제 보유 종목 화면 캡처를 업로드하면 즉시 크리에이터 활동이 시작됩니다.
                 </p>
                 <label htmlFor="creator-verify"
                   className="w-full flex flex-col items-center gap-3 py-8 rounded-2xl border border-dashed cursor-pointer mb-4 active:opacity-70 transition-opacity"
                   style={{ borderColor: "rgba(0,229,160,0.4)", background: "rgba(0,229,160,0.04)" }}>
                   <Upload className="w-8 h-8" style={{ color: "var(--mint)" }} />
-                  <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>HTS/MTS 보유 화면 캡쳐 업로드</p>
+                  <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>HTS/MTS 보유 화면 캡처 업로드</p>
                   <p className="text-xs" style={{ color: "var(--muted)" }}>이미지를 탭해서 첨부해 주세요</p>
                 </label>
                 <input id="creator-verify" type="file" accept="image/*" className="hidden"

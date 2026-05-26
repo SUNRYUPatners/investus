@@ -524,12 +524,12 @@ export default function CreatorSetupPage() {
           <div className="px-4">
             <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>계좌 인증</h1>
             <p className="text-xs mb-5" style={{ color: "var(--muted)" }}>
-              {draft.broker} HTS/MTS의 계좌·잔고 화면을 캡쳐해서 업로드해 주세요.
+              {draft.broker} HTS/MTS의 계좌·잔고 화면을 캡처해서 업로드해 주세요.
             </p>
 
             {/* Instructions */}
             <div className="rounded-2xl border p-4 mb-4" style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.15)" }}>
-              <p className="text-xs font-semibold mb-2" style={{ color: "var(--mint)" }}>캡쳐 방법</p>
+              <p className="text-xs font-semibold mb-2" style={{ color: "var(--mint)" }}>캡처 방법</p>
               <ul className="text-[11px] flex flex-col gap-1.5" style={{ color: "var(--muted)" }}>
                 <li>① {draft.broker || "증권사"} 앱 실행 → 계좌 잔고 / 보유종목 화면</li>
                 <li>② 전화번호 뒷 4자리가 보이도록 마스킹 최소화</li>
@@ -543,7 +543,7 @@ export default function CreatorSetupPage() {
             {previewUrl ? (
               <div className="relative mb-4 rounded-2xl overflow-hidden border" style={{ borderColor: "var(--mint)" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={previewUrl} alt="캡쳐 미리보기" className="w-full object-contain max-h-64" />
+                <img src={previewUrl} alt="캡처 미리보기" className="w-full object-contain max-h-64" />
                 <button
                   onClick={() => { setPreviewUrl(null); if (fileRef.current) fileRef.current.value = ""; }}
                   className="absolute top-2 right-2 text-[10px] px-2 py-1 rounded-lg font-semibold"
@@ -557,7 +557,7 @@ export default function CreatorSetupPage() {
                 className="w-full py-10 rounded-2xl border-2 border-dashed flex flex-col items-center justify-center gap-2 mb-4 transition-opacity active:opacity-70"
                 style={{ borderColor: "var(--border)", background: "var(--card)" }}>
                 <Upload className="w-6 h-6" style={{ color: "var(--muted)" }} />
-                <span className="text-xs font-semibold" style={{ color: "var(--muted)" }}>캡쳐 이미지 업로드</span>
+                <span className="text-xs font-semibold" style={{ color: "var(--muted)" }}>캡처 이미지 업로드</span>
                 <span className="text-[10px]" style={{ color: "var(--muted)" }}>탭하여 갤러리 열기</span>
               </button>
             )}

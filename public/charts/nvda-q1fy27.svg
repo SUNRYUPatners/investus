@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080d1a"/><stop offset="100%" stop-color="#0c1525"/></linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00b580"/><stop offset="100%" stop-color="#00e5a0"/></linearGradient>
+    <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00e5a0"/><stop offset="100%" stop-color="#00b580"/></linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
+  </defs>
+
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="58" fill="rgba(59,130,246,0.07)" stroke="rgba(59,130,246,0.18)" stroke-width="0"/>
+  <rect x="0" y="57" width="800" height="1" fill="rgba(59,130,246,0.25)"/>
+
+  <text x="400" y="22" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Arial" font-weight="bold" letter-spacing="4">NVIDIA Q1 FY2027 실적 · 2026.05.21</text>
+  <text x="400" y="45" text-anchor="middle" fill="#e2e8f0" font-size="17" font-family="Arial" font-weight="bold">데이터센터 $75.2B · 분기 영업CF $50.3B · 사상 최대</text>
+
+  <!-- Left: Key metrics -->
+  <rect x="20" y="75" width="370" height="330" rx="10" fill="rgba(59,130,246,0.06)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <rect x="20" y="75" width="4" height="330" rx="2" fill="url(#gb)"/>
+
+  <text x="210" y="105" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="2">핵심 지표 (Q1 FY2027 · 분기)</text>
+
+  <!-- Metric rows -->
+  <rect x="35" y="118" width="340" height="44" rx="6" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="52" y="137" fill="#94a3b8" font-size="10" font-family="Arial">데이터센터 매출</text>
+  <text x="52" y="155" fill="#00e5a0" font-size="20" font-family="Arial" font-weight="bold">$75.2B</text>
+  <text x="350" y="144" text-anchor="end" fill="#00e5a0" font-size="13" font-family="Arial" font-weight="bold">+92% YoY ↑</text>
+
+  <rect x="35" y="170" width="340" height="44" rx="6" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+  <text x="52" y="189" fill="#94a3b8" font-size="10" font-family="Arial">분기 순이익</text>
+  <text x="52" y="207" fill="#60a5fa" font-size="20" font-family="Arial" font-weight="bold">$58.3B</text>
+  <text x="350" y="196" text-anchor="end" fill="#60a5fa" font-size="13" font-family="Arial" font-weight="bold">vs $18.8B (전년)</text>
+
+  <rect x="35" y="222" width="340" height="44" rx="6" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="52" y="241" fill="#94a3b8" font-size="10" font-family="Arial">영업 현금흐름 (OCF)</text>
+  <text x="52" y="259" fill="#c084fc" font-size="20" font-family="Arial" font-weight="bold">$50.3B</text>
+  <text x="350" y="248" text-anchor="end" fill="#c084fc" font-size="13" font-family="Arial" font-weight="bold">vs $27.4B (전년)</text>
+
+  <rect x="35" y="274" width="160" height="44" rx="6" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.2)" stroke-width="1"/>
+  <text x="52" y="293" fill="#94a3b8" font-size="10" font-family="Arial">매출총이익률</text>
+  <text x="52" y="311" fill="#fb923c" font-size="20" font-family="Arial" font-weight="bold">71%+</text>
+
+  <rect x="205" y="274" width="170" height="44" rx="6" fill="rgba(249,115,22,0.08)" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+  <text x="222" y="293" fill="#94a3b8" font-size="10" font-family="Arial">DC 전년 동기 비교</text>
+  <text x="222" y="311" fill="#fb923c" font-size="18" font-family="Arial" font-weight="bold">$39.1B → $75.2B</text>
+
+  <rect x="35" y="326" width="340" height="65" rx="6" fill="rgba(0,229,160,0.05)" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+  <text x="52" y="345" fill="#94a3b8" font-size="10" font-family="Arial">애널리스트 반응</text>
+  <text x="52" y="363" fill="#e2e8f0" font-size="12" font-family="Arial">"Another robust eye-popping quarter."</text>
+  <text x="52" y="378" fill="#64748b" font-size="10" font-family="Arial">— Dan Ives, Wedbush Securities</text>
+  <text x="52" y="393" fill="#e2e8f0" font-size="11" font-family="Arial">"2026년 전 세계 최대 OCF 기업 될 것" — AJ Investment Research</text>
+
+  <!-- Right: Bar chart -->
+  <rect x="410" y="75" width="370" height="330" rx="10" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <text x="595" y="105" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">NVIDIA 데이터센터 분기 매출 추이 ($B)</text>
+
+  <!-- Bar chart: approximate quarterly DC revenue -->
+  <!-- Q1 FY25: 22.6, Q2 FY25: 26.3, Q3 FY25: 30.8, Q4 FY25: 35.6, Q1 FY26: 39.1, Q2 FY26: 41.1, Q3 FY26: 51.2, Q4 FY26: 62.3, Q1 FY27: 75.2 -->
+  <text x="430" y="125" fill="#64748b" font-size="9" font-family="Arial">$80B</text>
+  <line x1="455" y1="127" x2="770" y2="127" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="430" y="175" fill="#64748b" font-size="9" font-family="Arial">$60B</text>
+  <line x1="455" y1="177" x2="770" y2="177" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="430" y="225" fill="#64748b" font-size="9" font-family="Arial">$40B</text>
+  <line x1="455" y1="227" x2="770" y2="227" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="430" y="275" fill="#64748b" font-size="9" font-family="Arial">$20B</text>
+  <line x1="455" y1="277" x2="770" y2="277" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="430" y="327" fill="#64748b" font-size="9" font-family="Arial">$0B</text>
+  <line x1="455" y1="327" x2="770" y2="327" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- max=75.2 → scale: 200px / 80 = 2.5px per $B, bottom at y=327 -->
+  <!-- Q1FY25: 22.6 → 56.5px bar, Q2: 26.3→65.75, Q3: 30.8→77, Q4: 35.6→89, Q1FY26:39.1→97.75, Q2:41.1→102.75, Q3:51.2→128, Q4:62.3→155.75, Q1FY27:75.2→188 -->
+
+  <rect x="460" y="270" width="26" height="57" rx="3" fill="rgba(59,130,246,0.5)"/>
+  <rect x="492" y="261" width="26" height="66" rx="3" fill="rgba(59,130,246,0.5)"/>
+  <rect x="524" y="250" width="26" height="77" rx="3" fill="rgba(59,130,246,0.5)"/>
+  <rect x="556" y="238" width="26" height="89" rx="3" fill="rgba(59,130,246,0.5)"/>
+  <rect x="588" y="229" width="26" height="98" rx="3" fill="rgba(59,130,246,0.6)"/>
+  <rect x="620" y="224" width="26" height="103" rx="3" fill="rgba(59,130,246,0.65)"/>
+  <rect x="652" y="199" width="26" height="128" rx="3" fill="rgba(59,130,246,0.7)"/>
+  <rect x="684" y="171" width="26" height="156" rx="3" fill="rgba(59,130,246,0.8)"/>
+  <rect x="716" y="139" width="26" height="188" rx="3" fill="url(#bar2)"/>
+
+  <!-- Labels -->
+  <text x="473" y="340" text-anchor="middle" fill="#64748b" font-size="8" font-family="Arial">Q1</text>
+  <text x="505" y="340" text-anchor="middle" fill="#64748b" font-size="8" font-family="Arial">Q2</text>
+  <text x="537" y="340" text-anchor="middle" fill="#64748b" font-size="8" font-family="Arial">Q3</text>
+  <text x="569" y="340" text-anchor="middle" fill="#64748b" font-size="8" font-family="Arial">Q4</text>
+  <text x="601" y="340" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Arial">Q1</text>
+  <text x="633" y="340" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Arial">Q2</text>
+  <text x="665" y="340" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Arial">Q3</text>
+  <text x="697" y="340" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="Arial">Q4</text>
+  <text x="729" y="340" text-anchor="middle" fill="#00e5a0" font-size="8" font-family="Arial" font-weight="bold">Q1*</text>
+
+  <text x="520" y="355" text-anchor="middle" fill="#64748b" font-size="9" font-family="Arial">FY2025</text>
+  <text x="648" y="355" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Arial">FY2026</text>
+  <text x="729" y="355" text-anchor="middle" fill="#00e5a0" font-size="9" font-family="Arial">FY27</text>
+
+  <text x="729" y="132" text-anchor="middle" fill="#00e5a0" font-size="10" font-family="Arial" font-weight="bold">$75.2B</text>
+
+  <!-- Watermark -->
+  <text x="780" y="420" text-anchor="end" fill="rgba(148,163,184,0.3)" font-size="9" font-family="Arial">SUNRYU Partners CIO · investus.kr</text>
+</svg>

@@ -33,6 +33,11 @@ step() { echo -e "\n${YELLOW}[$1/4]${NC} $2"; }
 ok()   { echo -e "${GREEN}✓${NC} $1"; }
 fail() { echo -e "${RED}✗ $1${NC}"; exit 1; }
 
+# ── 0. SW 캐시 키 갱신 (배포마다 새 타임스탬프 → 모든 브라우저 SW 업데이트 강제) ─
+NEW_TS=$(node -e "process.stdout.write(String(Date.now()))")
+sed -i '' "s/investus-v[0-9]*/investus-v${NEW_TS}/" public/sw.js
+ok "SW 캐시 키 갱신: investus-v${NEW_TS}"
+
 # ── 1. TypeScript 타입 체크 ───────────────────────────────────────────────────
 step 1 "TypeScript 타입 체크..."
 TSC_OUT=$(npx tsc --noEmit 2>&1 || true)
@@ -89,7 +94,7 @@ echo -e "   URL: ${DEPLOY_URL}"
 # ── 5. 리포트 알림 발송 (--notify 플래그 있을 때만) ──────────────────────────
 if [ "$SEND_NOTIFY" = "true" ]; then
   echo -e "\n${YELLOW}[5/5]${NC} 리포트 알림 발송 중..."
-  NOTIFY_RESULT=$(curl -s -X POST "https://investus-chi.vercel.app/api/push/notify" \
+  NOTIFY_RESULT=$(curl -s -X POST "https://www.investus.kr/api/push/notify" \
     -H "Content-Type: application/json" \
     -H "x-notify-secret: ${NOTIFY_SECRET}" \
     -d "{\"title\":\"${NOTIFY_TITLE}\",\"message\":\"${NOTIFY_MSG}\",\"url\":\"/\"}")

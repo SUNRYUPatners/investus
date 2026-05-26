@@ -18,9 +18,8 @@ export function NewsCard({ item, large = false }: { item: NewsItem; large?: bool
       {item.image ? (
         /* eslint-disable-next-line @next/next/no-img-element */
         <img
-          src={item.image}
+          src={`/api/img-proxy?url=${encodeURIComponent(item.image)}`}
           alt=""
-          referrerPolicy="no-referrer"
           className={`flex-shrink-0 rounded-xl object-cover ${large ? "w-20 h-14" : "w-10 h-10"}`}
         />
       ) : (

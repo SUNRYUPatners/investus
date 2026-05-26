@@ -3,6 +3,12 @@ import { NextRequest, NextResponse } from "next/server";
 export function proxy(req: NextRequest) {
   const res = NextResponse.next();
 
+  // Block search-engine indexing on Vercel preview URLs and non-canonical domains
+  const host = req.headers.get("host") ?? "";
+  if (!host.includes("investus.kr")) {
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
+
   // Already has locale cookie — respect it
   if (req.cookies.has("locale")) return res;
 

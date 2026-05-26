@@ -1,0 +1,82 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#060b18"/>
+  <rect x="0" y="0" width="800" height="3" fill="#60a5fa"/>
+
+  <text x="30" y="34" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" letter-spacing="3">INVESTUS · MACRO</text>
+  <text x="30" y="60" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">미-이란 핵합의 임박 → 가스비↓ → 증시↑</text>
+  <text x="770" y="34" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="end">2026.05.22</text>
+  <line x1="30" y1="72" x2="770" y2="72" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Breaking banner -->
+  <rect x="36" y="82" width="728" height="28" rx="6" fill="rgba(96,165,250,0.10)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <text x="400" y="100" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="700">🚨 미-이란 핵합의 임박 — 즉각 제재 해제 · 이란 원유 공급 재개</text>
+
+  <!-- Flow chain: 5 boxes, w=118 each, arrows between -->
+  <!-- Total: 5×118 + 4×27 + 2×30(margins) = 590+108+60 = 758 ≤ 764 ✓ -->
+  <!-- x: 36, 181, 326, 471, 616 → centers: 95, 240, 385, 530, 675 -->
+
+  <!-- Box 1: 이란 원유 -->
+  <rect x="36" y="122" width="118" height="72" rx="10" fill="#0a1422" stroke="rgba(96,165,250,0.5)" stroke-width="1.5"/>
+  <text x="95" y="148" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">🛢</text>
+  <text x="95" y="168" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" text-anchor="middle" font-weight="700">이란 원유</text>
+  <text x="95" y="184" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">공급 재개</text>
+  <text x="162" y="162" font-family="Arial,sans-serif" font-size="22" fill="#6b7280" text-anchor="middle">→</text>
+
+  <!-- Box 2: 유가 하락 -->
+  <rect x="181" y="122" width="118" height="72" rx="10" fill="#071a07" stroke="rgba(0,229,160,0.5)" stroke-width="1.5"/>
+  <text x="240" y="148" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">📉</text>
+  <text x="240" y="168" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" text-anchor="middle" font-weight="700">유가 하락</text>
+  <text x="240" y="184" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle">$65~70</text>
+  <text x="307" y="162" font-family="Arial,sans-serif" font-size="22" fill="#6b7280" text-anchor="middle">→</text>
+
+  <!-- Box 3: 가스비 하락 -->
+  <rect x="326" y="122" width="118" height="72" rx="10" fill="#071a07" stroke="rgba(0,229,160,0.5)" stroke-width="1.5"/>
+  <text x="385" y="148" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">⛽</text>
+  <text x="385" y="168" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" text-anchor="middle" font-weight="700">가스비 하락</text>
+  <text x="385" y="184" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">$3.18→$2.50</text>
+  <text x="452" y="162" font-family="Arial,sans-serif" font-size="22" fill="#6b7280" text-anchor="middle">→</text>
+
+  <!-- Box 4: 금리 인하 -->
+  <rect x="471" y="122" width="118" height="72" rx="10" fill="#0a0820" stroke="rgba(192,132,252,0.5)" stroke-width="1.5"/>
+  <text x="530" y="148" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">🏦</text>
+  <text x="530" y="168" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" text-anchor="middle" font-weight="700">인플레 완화</text>
+  <text x="530" y="184" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">→ 금리 인하</text>
+  <text x="597" y="162" font-family="Arial,sans-serif" font-size="22" fill="#6b7280" text-anchor="middle">→</text>
+
+  <!-- Box 5: 증시 호재 -->
+  <rect x="616" y="122" width="118" height="72" rx="10" fill="#1a1200" stroke="rgba(251,146,60,0.6)" stroke-width="2"/>
+  <text x="675" y="146" font-family="Arial,sans-serif" font-size="28" text-anchor="middle">📈</text>
+  <text x="675" y="172" font-family="Arial,sans-serif" font-size="13" fill="#fb923c" text-anchor="middle" font-weight="700">증시 호재</text>
+  <text x="675" y="188" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">하반기 강세장</text>
+
+  <!-- Consumer income effect -->
+  <rect x="36" y="210" width="728" height="26" rx="6" fill="rgba(0,229,160,0.06)" stroke="rgba(0,229,160,0.18)" stroke-width="1"/>
+  <text x="400" y="227" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" text-anchor="middle">💵 소비자 효과: 가스비↓ = 가처분소득↑ → 아이폰·EV·소비재 수요 회복</text>
+
+  <!-- Beneficiary stocks: 4 tiles w=164 gap=16 x=48 to 752 -->
+  <text x="400" y="260" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" text-anchor="middle" font-weight="700">수혜 종목 (금리 인하 + 소비 회복)</text>
+
+  <rect x="48" y="268" width="164" height="48" rx="8" fill="#0a1020" stroke="rgba(96,165,250,0.35)" stroke-width="1"/>
+  <text x="130" y="289" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle" font-weight="700">NVDA</text>
+  <text x="130" y="306" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">성장주 할인율↓</text>
+
+  <rect x="228" y="268" width="164" height="48" rx="8" fill="#071a07" stroke="rgba(0,229,160,0.35)" stroke-width="1"/>
+  <text x="310" y="289" font-family="Arial,sans-serif" font-size="16" fill="#00e5a0" text-anchor="middle" font-weight="700">TSLA</text>
+  <text x="310" y="306" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">EV 금융 부담↓</text>
+
+  <rect x="408" y="268" width="164" height="48" rx="8" fill="#1a0a0a" stroke="rgba(255,77,109,0.35)" stroke-width="1"/>
+  <text x="490" y="289" font-family="Arial,sans-serif" font-size="16" fill="#ff4d6d" text-anchor="middle" font-weight="700">META</text>
+  <text x="490" y="306" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">광고 예산 회복</text>
+
+  <rect x="588" y="268" width="164" height="48" rx="8" fill="#0a0a10" stroke="rgba(200,205,212,0.25)" stroke-width="1"/>
+  <text x="670" y="289" font-family="Arial,sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="700">AAPL</text>
+  <text x="670" y="306" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">프리미엄 소비 회복</text>
+
+  <!-- Risk strip -->
+  <rect x="36" y="332" width="728" height="28" rx="6" fill="rgba(239,68,68,0.07)" stroke="rgba(239,68,68,0.18)" stroke-width="1"/>
+  <text x="400" y="350" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">⚠ 리스크: 이란 강경파 반발 → 합의 불발 시 유가 재상승 · 지정학 리스크 재부상</text>
+
+  <line x1="30" y1="378" x2="770" y2="378" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="396" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="396" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

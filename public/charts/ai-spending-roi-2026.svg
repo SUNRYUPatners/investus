@@ -1,0 +1,58 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#0d0a18"/>
+  <rect x="0" y="0" width="800" height="3" fill="#c084fc"/>
+
+  <text x="30" y="34" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="3">INVESTUS · AI ENTERPRISE</text>
+  <text x="30" y="60" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">AI 지출 ROI 검증 — 인프라↑ vs 앱 구독↓</text>
+  <text x="770" y="34" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="end">2026.05.22</text>
+  <line x1="30" y1="72" x2="770" y2="72" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Breaking banner (2 lines) -->
+  <rect x="36" y="82" width="728" height="42" rx="6" fill="rgba(239,68,68,0.10)" stroke="rgba(239,68,68,0.3)" stroke-width="1"/>
+  <text x="400" y="100" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="700">🚨 BREAKING — Microsoft CTO 전사 메일</text>
+  <text x="400" y="116" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">"Claude Code 비용 과다" → 라이선스 즉시 취소</text>
+
+  <!-- VS divider -->
+  <line x1="400" y1="138" x2="400" y2="310" stroke="#1e2330" stroke-width="1.5"/>
+
+  <!-- LEFT: 줄이는 곳 -->
+  <text x="215" y="158" font-family="Arial,sans-serif" font-size="28" fill="#ef4444" text-anchor="middle">❌</text>
+  <text x="215" y="180" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" text-anchor="middle" font-weight="700">줄이는 곳</text>
+
+  <rect x="44" y="190" width="330" height="36" rx="8" fill="rgba(239,68,68,0.07)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="209" y="207" font-family="Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="700">MSFT</text>
+  <text x="209" y="220" font-family="Arial,sans-serif" font-size="10" fill="#c8cdd4" text-anchor="middle">Claude Code 구독 취소</text>
+
+  <rect x="44" y="234" width="330" height="36" rx="8" fill="rgba(239,68,68,0.07)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="209" y="251" font-family="Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="700">기업 AI SaaS</text>
+  <text x="209" y="264" font-family="Arial,sans-serif" font-size="10" fill="#c8cdd4" text-anchor="middle">예산 20~25% 삭감 증가</text>
+
+  <rect x="44" y="278" width="330" height="36" rx="8" fill="rgba(239,68,68,0.07)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="209" y="295" font-family="Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="700">앱 레이어 SaaS</text>
+  <text x="209" y="308" font-family="Arial,sans-serif" font-size="10" fill="#c8cdd4" text-anchor="middle">ROI 미증명 → 조정 리스크</text>
+
+  <!-- RIGHT: 늘리는 곳 -->
+  <text x="585" y="158" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" text-anchor="middle">✅</text>
+  <text x="585" y="180" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" text-anchor="middle" font-weight="700">늘리는 곳</text>
+
+  <rect x="426" y="190" width="330" height="36" rx="8" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="591" y="207" font-family="Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="700">AMZN AWS</text>
+  <text x="591" y="220" font-family="Arial,sans-serif" font-size="10" fill="#c8cdd4" text-anchor="middle">AI 인프라 $1B 추가 투자</text>
+
+  <rect x="426" y="234" width="330" height="36" rx="8" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="591" y="251" font-family="Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="700">NVDA</text>
+  <text x="591" y="264" font-family="Arial,sans-serif" font-size="10" fill="#c8cdd4" text-anchor="middle">GPU 수요 여전히 폭발</text>
+
+  <rect x="426" y="278" width="330" height="36" rx="8" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="591" y="295" font-family="Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="700">AI 인프라 레이어</text>
+  <text x="591" y="308" font-family="Arial,sans-serif" font-size="10" fill="#c8cdd4" text-anchor="middle">데이터센터 CAPEX 강세</text>
+
+  <!-- Bottom conclusion -->
+  <rect x="36" y="326" width="728" height="40" rx="8" fill="rgba(192,132,252,0.10)" stroke="rgba(192,132,252,0.3)" stroke-width="1"/>
+  <text x="400" y="343" font-family="Arial,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="700">💡 인프라 레이어(NVDA·AMZN) 강세 / AI 앱 구독은 ROI 검증 국면</text>
+  <text x="400" y="358" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">버블 아님 — NVDA OCF $50B이 실제 증거</text>
+
+  <line x1="30" y1="384" x2="770" y2="384" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="402" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="402" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

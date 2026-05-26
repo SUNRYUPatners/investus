@@ -3,19 +3,7 @@
 import { useEffect, useState } from "react";
 import { TrendingUp } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
-
-function getEstStatus() {
-  const now = new Date();
-  const estHour = parseInt(
-    now.toLocaleString("en-US", { timeZone: "America/New_York", hour: "numeric", hour12: false })
-  );
-  const estMin = parseInt(
-    now.toLocaleString("en-US", { timeZone: "America/New_York", minute: "numeric" })
-  );
-  const totalMin = estHour * 60 + estMin;
-  const isWeekday = [1, 2, 3, 4, 5].includes(now.getDay());
-  return isWeekday && totalMin >= 570 && totalMin < 960; // 9:30~16:00
-}
+import { isMarketOpen } from "@/lib/marketHours";
 
 export function Header() {
   const t = useLocale();
@@ -34,7 +22,7 @@ export function Header() {
         hour12: false,
       });
       setTime(t);
-      setOpen(getEstStatus());
+      setOpen(isMarketOpen());
     };
     tick();
     const id = setInterval(tick, 1000);

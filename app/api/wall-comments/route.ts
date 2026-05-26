@@ -18,10 +18,10 @@ export async function GET(req: NextRequest) {
 
   const { data, error } = await getSupabase()
     .from("wall_comments")
-    .select("id, post_id, user_id, nickname, content, likes, created_at")
+    .select("id, post_id, user_id, nickname, content, likes, created_at, parent_id")
     .eq("post_id", postId)
-    .order("created_at", { ascending: false })
-    .limit(100);
+    .order("created_at", { ascending: true })
+    .limit(200);
 
   if (error) return NextResponse.json([]);
   return NextResponse.json(data ?? []);
@@ -34,11 +34,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
   }
 
-  let body: { post_id?: number; content?: string };
+  let body: { post_id?: number; content?: string; parent_id?: number };
   try { body = await req.json(); }
   catch { return NextResponse.json({ error: "잘못된 요청" }, { status: 400 }); }
 
-  const { post_id, content } = body;
+  const { post_id, content, parent_id } = body;
   if (!post_id || !content) {
     return NextResponse.json({ error: "필수 항목 누락" }, { status: 400 });
   }
@@ -60,8 +60,8 @@ export async function POST(req: NextRequest) {
 
   const { data, error } = await getSupabase()
     .from("wall_comments")
-    .insert({ post_id, user_id: authUser.email, nickname: makeAnonNick(authUser.email), content: trimmed })
-    .select("id, post_id, user_id, nickname, content, likes, created_at")
+    .insert({ post_id, user_id: authUser.email, nickname: makeAnonNick(authUser.email), content: trimmed, parent_id: parent_id ?? null })
+    .select("id, post_id, user_id, nickname, content, likes, created_at, parent_id")
     .single();
 
   if (error) return NextResponse.json({ error: "댓글 게시 실패" }, { status: 500 });

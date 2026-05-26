@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import Image from "next/image";
 import { ChevronDown, Pin, X, Lock } from "lucide-react";
 import Link from "next/link";
@@ -16,6 +16,13 @@ function ImageLightbox({ src, onClose }: { src: string; onClose: () => void }) {
   const [translate, setTranslate] = useState({ x: 0, y: 0 });
   const [dragOpacity, setDragOpacity] = useState(1);
   const isTracking = useRef(false);
+
+  // ESC 키로 닫기
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (e.touches.length > 1) return; // 핀치줌 중엔 스와이프 무시
@@ -61,27 +68,30 @@ function ImageLightbox({ src, onClose }: { src: string; onClose: () => void }) {
 
   return (
     <div
-      className="fixed inset-0 z-50"
-      style={{ background: `rgba(0,0,0,${0.92 * dragOpacity})` }}
+      className="fixed inset-0 z-[9999] flex items-center justify-center"
+      style={{ background: `rgba(0,0,0,${0.92 * dragOpacity})`, backdropFilter: "blur(4px)" }}
       onClick={onClose}
     >
-      {/* X 버튼 — safe area 아래에 고정 */}
+      {/* X 버튼 */}
       <button
-        className="absolute right-4 w-10 h-10 rounded-full flex items-center justify-center z-10"
-        style={{
-          top: "max(1rem, calc(env(safe-area-inset-top) + 0.5rem))",
-          background: "rgba(255,255,255,0.18)",
-        }}
+        className="absolute right-4 top-4 w-10 h-10 rounded-full flex items-center justify-center z-10"
+        style={{ background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.2)" }}
         onClick={(e) => { e.stopPropagation(); onClose(); }}
       >
         <X className="w-5 h-5 text-white" />
       </button>
 
-      {/* 이미지 영역 — 스와이프에 따라 이동 */}
+      {/* 배경 클릭 닫기 안내 — 데스크탑 */}
+      <p className="hidden lg:block absolute top-4 left-1/2 -translate-x-1/2 text-xs text-white/40 pointer-events-none">
+        배경 클릭 또는 ESC로 닫기
+      </p>
+
+      {/* 이미지 영역 */}
       <div
-        className="w-full h-full flex items-center justify-center overflow-auto"
+        className="relative flex items-center justify-center"
         style={{
-          touchAction: "pinch-zoom",
+          maxWidth: "min(90vw, 1100px)",
+          maxHeight: "90vh",
           transform: `translate(${translate.x}px, ${translate.y}px)`,
           transition: isTracking.current ? "none" : "transform 0.25s ease, opacity 0.25s ease",
           opacity: dragOpacity,
@@ -95,10 +105,18 @@ function ImageLightbox({ src, onClose }: { src: string; onClose: () => void }) {
         <img
           src={src}
           alt="확대 보기"
-          style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", touchAction: "pinch-zoom" }}
+          style={{
+            maxWidth: "min(90vw, 1100px)",
+            maxHeight: "90vh",
+            objectFit: "contain",
+            touchAction: "pinch-zoom",
+            borderRadius: "12px",
+            boxShadow: "0 24px 80px rgba(0,0,0,0.6)",
+          }}
         />
       </div>
 
+      {/* 모바일 스와이프 힌트 */}
       <SwipeCloseHint />
     </div>
   );
@@ -167,28 +185,37 @@ function ImageGrid({ images, failedImgs, onError, onOpen }: {
         return (
           <button
             key={i}
-            className="relative rounded-xl overflow-hidden border w-full"
-            style={{
-              borderColor: "var(--border)",
-              display: "block",
-              // SVG 차트: 800×580 자연 비율 유지 (contain). 외부 이미지: 16/9 crop
-              aspectRatio: isChart ? "800/580" : "16/9",
-              background: isChart ? "rgba(8,13,26,0.8)" : undefined,
-            }}
+            className="group relative rounded-xl overflow-hidden border w-full cursor-zoom-in block"
+            style={{ borderColor: "var(--border)" }}
             onClick={() => onOpen(src)}
           >
-            <Image
-              src={src}
-              alt={`참고 자료 ${i + 1}`}
-              fill
-              style={{ objectFit: isChart ? "contain" : "cover" }}
-              sizes="(max-width: 480px) 90vw, 440px"
-              onError={() => onError(i)}
-              unoptimized={isChart}
-            />
-            <span className="absolute bottom-1.5 right-1.5 text-[9px] px-1.5 py-0.5 rounded-full font-semibold"
-              style={{ background: "rgba(0,0,0,0.5)", color: "rgba(255,255,255,0.7)" }}>
-              🔍 확대
+            {isChart ? (
+              // SVG 차트는 plain <img>로 렌더링 — Next.js Image fill이 SVG에서 오작동하는 케이스 방지
+              <img
+                src={src}
+                alt={`참고 자료 ${i + 1}`}
+                className="w-full h-auto block"
+                loading="lazy"
+                onError={() => onError(i)}
+              />
+            ) : (
+              <div className="relative" style={{ aspectRatio: "16/9" }}>
+                <Image
+                  src={src}
+                  alt={`참고 자료 ${i + 1}`}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 480px) 90vw, 800px"
+                  onError={() => onError(i)}
+                />
+              </div>
+            )}
+            {/* 확대 힌트 */}
+            <span
+              className="absolute bottom-2 right-2 text-[9px] px-2 py-1 rounded-full font-semibold opacity-70 group-hover:opacity-100 transition-opacity"
+              style={{ background: "rgba(0,0,0,0.55)", color: "rgba(255,255,255,0.85)" }}
+            >
+              🔍 클릭하여 확대
             </span>
           </button>
         );

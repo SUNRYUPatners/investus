@@ -15,7 +15,7 @@ type ChartData = {
 
 // Chart layout constants
 const PAD   = { top: 10, right: 56, bottom: 22, left: 2 };
-const CH    = 210;
+const CH    = 280;
 const VH    = 48;
 const GAP   = 4;
 const SVG_H = PAD.top + CH + GAP + VH + PAD.bottom;
@@ -378,7 +378,8 @@ export function StockChart({
             <text key={i}
               x={PAD.left + plotW + 5} y={t.y}
               dominantBaseline="middle"
-              fontSize="9.5" fill="var(--muted)" textAnchor="start"
+              className="chart-axis-label"
+              fill="var(--muted)" textAnchor="start"
             >
               {t.label}
             </text>
@@ -387,7 +388,8 @@ export function StockChart({
           {xTicks.map((t, i) => (
             <text key={i}
               x={t.x} y={SVG_H - 3}
-              fontSize="9" fill="var(--muted)" textAnchor="middle"
+              className="chart-axis-label"
+              fill="var(--muted)" textAnchor="middle"
             >
               {t.label}
             </text>

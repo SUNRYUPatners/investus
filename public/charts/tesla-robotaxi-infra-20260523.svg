@@ -1,0 +1,66 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#fb923c"/>
+
+  <text x="30" y="32" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" letter-spacing="3">INVESTUS · Tesla Robotaxi</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">Tesla Robotaxi 인프라 4개 도시 · FSD EU · Norway</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.23</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- 4 city cards -->
+  <text x="30" y="96" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">🏙 미국 4개 도시 인프라 동시 구축 중</text>
+
+  <rect x="30" y="104" width="170" height="120" rx="8" fill="#0d0c07" stroke="rgba(251,146,60,0.4)" stroke-width="1.5"/>
+  <text x="115" y="126" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" text-anchor="middle">📍 Irving, Texas</text>
+  <text x="115" y="146" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700" text-anchor="middle">25,000</text>
+  <text x="115" y="162" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">sqft 운영 거점</text>
+  <text x="115" y="178" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">배차·정비·청소</text>
+  <text x="115" y="193" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">Supercharger ~18슬롯</text>
+  <text x="115" y="208" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">2°C 보관 공간</text>
+
+  <rect x="212" y="104" width="170" height="120" rx="8" fill="#0d0c07" stroke="rgba(251,146,60,0.4)" stroke-width="1.5"/>
+  <text x="297" y="126" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" text-anchor="middle">📍 Houston, Texas</text>
+  <text x="297" y="146" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700" text-anchor="middle">36,000</text>
+  <text x="297" y="162" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">sqft Cybercab 세차장</text>
+  <text x="297" y="178" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Cybercab 실도로 목격</text>
+  <text x="297" y="193" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">Robotaxi 데칼 차량</text>
+  <text x="297" y="208" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">전면 테스트 진행 중</text>
+
+  <rect x="394" y="104" width="170" height="120" rx="8" fill="#0d0c07" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <text x="479" y="126" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" text-anchor="middle">📍 Chandler, AZ</text>
+  <text x="479" y="152" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700" text-anchor="middle">물류 허브</text>
+  <text x="479" y="170" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">부품 조달·현지 정비</text>
+  <text x="479" y="188" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Phoenix 권역 거점</text>
+  <text x="479" y="208" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">건설 착공 완료</text>
+
+  <rect x="576" y="104" width="194" height="120" rx="8" fill="#0d0c07" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <text x="673" y="126" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" text-anchor="middle">📍 Mesa, AZ (추가)</text>
+  <text x="673" y="152" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700" text-anchor="middle">정비 센터</text>
+  <text x="673" y="170" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">자율주행 차량 전용</text>
+  <text x="673" y="188" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">차량→운영 통합 스택</text>
+  <text x="673" y="208" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">Cybercab 대배치 준비</text>
+
+  <!-- FSD Belgium -->
+  <rect x="30" y="238" width="360" height="86" rx="10" fill="#071208" stroke="rgba(0,229,160,0.3)" stroke-width="1.5"/>
+  <text x="50" y="260" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">🇧🇪 FSD 벨기에 — EU 규제 최고 난이도 통과 중</text>
+  <text x="50" y="278" font-family="Arial,sans-serif" font-size="13" fill="white" font-weight="700">2,000+ 테스트 드라이브 완료</text>
+  <text x="50" y="294" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">목표: 5,000km 완주 · FSD v12.6.4.2 (Road Awareness AI)</text>
+  <text x="50" y="310" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">통과 후 → 독일·프랑스·네덜란드 순차 승인 · EU One-Time Payment 여름 출시</text>
+
+  <!-- Norway -->
+  <rect x="410" y="238" width="360" height="86" rx="10" fill="#07091a" stroke="rgba(250,204,21,0.3)" stroke-width="1.5"/>
+  <text x="430" y="260" font-family="Arial,sans-serif" font-size="11" fill="#facc15" font-weight="700">🇳🇴 Tesla Norway Model Y — 역사적 기록</text>
+  <text x="590" y="292" font-family="Arial,sans-serif" font-size="28" fill="#facc15" font-weight="700" text-anchor="middle">100,000대</text>
+  <text x="430" y="308" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">단일 차종 최초 등록 · 2021년 8월 출시 후 5년 이내</text>
+  <text x="430" y="322" font-family="Arial,sans-serif" font-size="9" fill="#facc15">노르웨이 승용차 29대 중 1대 = Model Y · 전 세계 베스트셀링 3회</text>
+
+  <!-- Key insight bar -->
+  <rect x="30" y="337" width="740" height="40" rx="8" fill="#0a0f1a" stroke="rgba(251,146,60,0.2)" stroke-width="1"/>
+  <text x="50" y="355" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700">핵심:</text>
+  <text x="90" y="355" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">Tesla는 자율주행 차량이 아닌 전체 Robotaxi 오퍼레이션 스택을 구축 중 — Waymo·Uber와 근본적 차별화</text>
+  <text x="50" y="371" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">배차 → 정비 → 청소 → 충전 → 재배차 완결형 인프라 = Cybercab 대규모 상용화 임박 신호</text>
+
+  <line x1="30" y1="390" x2="770" y2="390" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="408" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="408" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

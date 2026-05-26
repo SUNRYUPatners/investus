@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { TrendingUp } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
+import { isMarketOpen } from "@/lib/marketHours";
 
 function useClock() {
   const [time, setTime]   = useState("");
@@ -20,12 +21,8 @@ function useClock() {
         hour: "2-digit", minute: "2-digit", second: "2-digit",
         hour12: false,
       });
-      const estH = parseInt(now.toLocaleString("en-US", { timeZone: "America/New_York", hour: "numeric", hour12: false }));
-      const estM = parseInt(now.toLocaleString("en-US", { timeZone: "America/New_York", minute: "numeric" }));
-      const total = estH * 60 + estM;
-      const isWeekday = [1, 2, 3, 4, 5].includes(now.getDay());
       setTime(t);
-      setOpen(isWeekday && total >= 570 && total < 960);
+      setOpen(isMarketOpen());
     };
     tick();
     const id = setInterval(tick, 1000);

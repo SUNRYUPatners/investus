@@ -9,6 +9,7 @@ import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { VersionBanner } from "@/components/VersionBanner";
+import { ReportUpdateBanner } from "@/components/ReportUpdateBanner";
 import { getLocale } from "@/lib/getLocale";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
@@ -35,24 +36,38 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "Investus — 인베스트어스",
-  description: "미국 주식 실시간 시세 · S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 시장 분석 리포트",
+  title: "Investus — 인베스트어스 | 미국주식 투자 플랫폼",
+  description: "인베스트어스(Investus) — 미국 주식 실시간 시세 · S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 버핏지수 · 시장 분석 리포트. 선류파트너스 CIO 직접 분석.",
   metadataBase: new URL("https://www.investus.kr"),
-  keywords: ["미국주식", "주식", "S&P500", "나스닥", "투자", "주가", "실시간", "선물", "비트코인", "투자정보", "NVIDIA", "테슬라", "애플", "엔비디아", "AI주식", "성장주", "포트폴리오", "주식분석", "시장분석", "투자리포트"],
+  keywords: [
+    "인베스트어스", "investus", "investus.kr", "인베스트어스케이알",
+    "선류파트너스", "선류 파트너스", "SUNRYU Partners",
+    "미국주식", "미국 주식", "미국주식 투자", "미국주식 플랫폼",
+    "주식", "S&P500", "나스닥", "NASDAQ", "다우존스", "DOW",
+    "투자", "주가", "실시간 주가", "선물", "비트코인",
+    "투자정보", "주식정보", "시세", "실시간시세",
+    "NVIDIA", "엔비디아", "테슬라", "Tesla", "애플", "Apple",
+    "AI주식", "성장주", "포트폴리오", "주식분석", "시장분석", "투자리포트",
+    "공포탐욕지수", "버핏지수", "섹터분석", "미국주식투자정보",
+  ],
   openGraph: {
-    title: "Investus — 미국주식 실시간 정보 · AI 투자 분석",
-    description: "NVIDIA·Tesla·Apple 실시간 · S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · AI 시장분석 리포트",
+    title: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
+    description: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
     url: "https://www.investus.kr",
-    siteName: "Investus",
+    siteName: "Investus — 인베스트어스",
     locale: "ko_KR",
     type: "website",
+    images: [{ url: "/icons/icon-512.png", width: 512, height: 512, alt: "Investus 인베스트어스" }],
   },
   twitter: {
     card: "summary",
-    title: "Investus — 미국주식 실시간 정보",
-    description: "S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 버핏지수 · 시장분석 리포트",
+    title: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
+    description: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
   },
-  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://www.investus.kr",
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -62,7 +77,7 @@ export const metadata: Metadata = {
   verification: {
     google: "gWru1tXVNVr--phsNN1YCa53uJoAgx53ut5k2kfDCXo",
     other: {
-      "naver-site-verification": "62e5066af0d7a38be59c4ad514534d0e43e85d9b",
+      "naver-site-verification": "cf0399adf4ed75c57528ec884d2924f6c41d9a03",
     },
   },
 };
@@ -74,6 +89,35 @@ export const viewport: Viewport = {
   viewportFit: "cover", // env(safe-area-inset-bottom) requires this on iOS
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.investus.kr/#website",
+      "url": "https://www.investus.kr",
+      "name": "Investus — 인베스트어스",
+      "alternateName": ["인베스트어스", "investus.kr", "인베스트어스케이알"],
+      "description": "미국주식 실시간 시세 · 시장 분석 리포트 · 선류파트너스 CIO 투자 정보",
+      "inLanguage": "ko-KR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.investus.kr/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.investus.kr/#organization",
+      "name": "SUNRYU Partners",
+      "alternateName": ["선류파트너스", "선류 파트너스", "Investus"],
+      "url": "https://www.investus.kr",
+      "logo": { "@type": "ImageObject", "url": "https://www.investus.kr/icons/icon-512.png" },
+      "sameAs": ["https://www.investus.kr"],
+    },
+  ],
+};
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
   return (
@@ -81,6 +125,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       lang={locale}
       className={`${syne.variable} ${ibmPlexMono.variable} ${notoSansKR.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body style={{ background: "var(--bg)" }}>
         {/* iOS PWA: prevent rubber-band overscroll at bottom revealing content under nav */}
         <Script id="ios-overscroll" strategy="afterInteractive">{`
@@ -104,11 +154,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <AuthProvider>
             <ServiceWorkerRegistration />
             <VersionBanner />
+            <ReportUpdateBanner />
             <PullToRefresh />
             <PWAInstallPrompt />
-            <div className="lg:flex lg:min-h-screen">
+            <div className="lg:min-h-screen">
               <DesktopSidebar />
-              <div className="flex-1 min-w-0 lg:ml-64">
+              <div className="lg:pl-64">
                 {children}
               </div>
             </div>

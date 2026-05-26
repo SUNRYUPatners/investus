@@ -142,7 +142,7 @@ export async function PATCH(req: NextRequest) {
             : "[Investus] 크리에이터 인증 심사 결과 안내",
           message: isApproved
             ? `안녕하세요!\n\nInvestus 크리에이터 인증이 승인되었습니다.\n이제 투자 리포트와 콘텐츠를 작성하고 구독자를 모집할 수 있습니다.\n\nInvestus 앱에서 크리에이터 대시보드를 확인해 주세요.\nhttps://investus.kr`
-            : `안녕하세요.\n\nInvestus 크리에이터 인증 심사 결과, 이번에는 승인이 어렵습니다.\n계좌 인증 캡쳐가 불명확하거나 요건을 충족하지 못한 경우 재신청이 가능합니다.\n\n문의: sunryupatners@gmail.com`,
+            : `안녕하세요.\n\nInvestus 크리에이터 인증 심사 결과, 이번에는 승인이 어렵습니다.\n계좌 인증 캡처가 불명확하거나 요건을 충족하지 못한 경우 재신청이 가능합니다.\n\n문의: sunryupatners@gmail.com`,
         }),
       });
     } catch { /* 알림 실패는 무시 */ }

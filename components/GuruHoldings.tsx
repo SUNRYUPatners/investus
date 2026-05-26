@@ -84,11 +84,16 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
   const info = GURU_INFO[guru.id];
 
   const fetchPrices = (syms: string[]) => {
+    // market-data-cache / stock-detail 캐시 먼저 적용
     const cached = readLocalCache(syms);
     if (Object.keys(cached).length > 0) setPrices((p) => ({ ...p, ...cached }));
 
+    // 캐시에 없는 심볼만 API 호출 — 캐시 가격을 덮어쓰지 않음
+    const missing = syms.filter((s) => !cached[s]);
+    if (missing.length === 0) return;
+
     setLoading(true);
-    fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms.join(","))}`)
+    fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`)
       .then((r) => r.json())
       .then((data: PriceMap) => {
         if (Object.keys(data).length > 0) setPrices((p) => ({ ...p, ...data }));

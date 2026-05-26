@@ -251,8 +251,8 @@ export async function GET(req: Request) {
       // Iterate over union of Stooq + YF keys (RTY is YF-only)
       const allFutureKeys = [...new Set([...Object.keys(COMMODITY_STOOQ), ...Object.keys(COMMODITY_FUTURES_YF)])];
 
-      // Master 5s timeout — whatever resolves by then is used; rest falls back to ETF change%
-      const masterTimeout = new Promise<CommodityEntry[]>((res) => setTimeout(() => res([]), 5_000));
+      // Master 10s timeout — parallel fetchFutureV8 (4 bases×ranges simultaneously) resolves in ~4s
+      const masterTimeout = new Promise<CommodityEntry[]>((res) => setTimeout(() => res([]), 10_000));
       const allFetches    = Promise.allSettled(
         allFutureKeys.map((key) => fetchWithTimeout(key, COMMODITY_STOOQ[key] ?? ""))
       ).then((results) => {

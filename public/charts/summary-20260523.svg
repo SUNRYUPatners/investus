@@ -1,0 +1,69 @@
+<svg width="800" height="580" viewBox="0 0 800 580" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="580" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · DAILY BRIEF</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="20" fill="white" font-weight="700">5/23 오늘의 핵심 6가지</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.23</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Row 1 Left: SpaceX IPO -->
+  <rect x="30" y="76" width="358" height="92" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="76" width="4" height="92" rx="2" fill="#c084fc"/>
+  <text x="48" y="100" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">SpaceX IPO</text>
+  <text x="48" y="128" font-family="Arial,sans-serif" font-size="30" fill="#c084fc" font-weight="700">$1,000</text>
+  <text x="48" y="148" font-family="Arial,sans-serif" font-size="11" fill="white">/주 접근 · Starlink Q1 $1B 영업이익</text>
+  <text x="48" y="162" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">락업: Q2 실적 후 20% · +30% 시 추가 해제</text>
+
+  <!-- Row 1 Right: Tesla FSD China -->
+  <rect x="412" y="76" width="358" height="92" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="412" y="76" width="4" height="92" rx="2" fill="#00e5a0"/>
+  <text x="430" y="100" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tesla 중국 FSD 개명</text>
+  <text x="430" y="128" font-family="Arial,sans-serif" font-size="16" fill="white" font-weight="700">特斯拉辅助驾驶</text>
+  <text x="430" y="148" font-family="Arial,sans-serif" font-size="11" fill="white">가격 64,000 RMB 유지 · 규제 순응</text>
+  <text x="430" y="162" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">벨기에 2,000+ 테스트 · EU 여름 출시 예정</text>
+
+  <!-- Row 2 Left: AMD CPU -->
+  <rect x="30" y="178" width="358" height="92" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="178" width="4" height="92" rx="2" fill="#60a5fa"/>
+  <text x="48" y="202" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">AMD CPU 수요 — Lisa Su</text>
+  <text x="48" y="238" font-family="Arial,sans-serif" font-size="38" fill="#60a5fa" font-weight="700">+20%</text>
+  <text x="48" y="256" font-family="Arial,sans-serif" font-size="11" fill="white">/년 · 3년 전망 · 공급 tight</text>
+  <text x="48" y="264" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">EPYC Venice TSMC 3nm 생산 착수</text>
+
+  <!-- Row 2 Right: META Megapack + Robotaxi -->
+  <rect x="412" y="178" width="358" height="92" rx="8" fill="#0d0b05" stroke="#fb923c" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="412" y="178" width="4" height="92" rx="2" fill="#fb923c"/>
+  <text x="430" y="202" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">META 메가팩 · Robotaxi 인프라</text>
+  <text x="591" y="240" font-family="Arial,sans-serif" font-size="36" fill="#fb923c" font-weight="700" text-anchor="middle">$200M</text>
+  <text x="430" y="257" font-family="Arial,sans-serif" font-size="10" fill="white">Tesla 메가팩 · 와이오밍 AI DC</text>
+  <text x="430" y="264" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Robotaxi 거점 4개 도시 동시 구축</text>
+
+  <!-- Row 3 Left: Fed Marsh -->
+  <rect x="30" y="280" width="358" height="92" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.35"/>
+  <rect x="30" y="280" width="4" height="92" rx="2" fill="#60a5fa"/>
+  <text x="48" y="304" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">Fed 새 의장 Marsh 공식 취임</text>
+  <text x="48" y="330" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700">10월 금리 인하 선물 반영 시작</text>
+  <text x="48" y="350" font-family="Arial,sans-serif" font-size="10" fill="white">"물가의 구조적 하락 초입"</text>
+  <text x="48" y="366" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Musk·Altman·Bezos·Druckenmiller 디플레 베팅</text>
+
+  <!-- Row 3 Right: Tom Lee Bull -->
+  <rect x="412" y="280" width="358" height="92" rx="8" fill="#0d0b05" stroke="#facc15" stroke-width="1.2" stroke-opacity="0.4"/>
+  <rect x="412" y="280" width="4" height="92" rx="2" fill="#facc15"/>
+  <text x="430" y="304" font-family="Arial,sans-serif" font-size="11" fill="#facc15" font-weight="700">Tom Lee — 강세장 지속 선언</text>
+  <text x="430" y="330" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700">조정 소화 후 장기 상승 사이클</text>
+  <text x="430" y="350" font-family="Arial,sans-serif" font-size="10" fill="white">S&amp;P ATH 재도전 · 소형주 동반 강세</text>
+  <text x="430" y="366" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Tesla Norway Model Y 10만대 최초 달성</text>
+
+  <!-- Footer full-width -->
+  <rect x="30" y="382" width="740" height="72" rx="8" fill="#060b18" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="30" y="382" width="4" height="72" rx="2" fill="#00e5a0"/>
+  <text x="48" y="403" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">핵심 투자 포인트</text>
+  <text x="48" y="421" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">SpaceX IPO 락업 구조 파악 필수 · AMD CPU 3년 20% = AI 인프라 잊혀진 수혜주</text>
+  <text x="48" y="438" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">Marsh 취임 → 10월 인하 기대 · META 메가팩 = Tesla 에너지 사업 가속</text>
+  <text x="48" y="448" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Tesla Robotaxi 인프라 4개 도시 확대 = Cybercab 상용화 임박 신호</text>
+
+  <line x1="30" y1="466" x2="770" y2="466" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="482" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="482" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

@@ -26,8 +26,12 @@ export type Comment = {
   likes:        number;
 };
 
+const T26 = 1779750000000; // 2026-05-26 08:00 KST
+export const LATEST_UPDATE = T26;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
+const T23 = 1779490800000; // 2026-05-23 08:00 KST
+const T22 = 1779404400000; // 2026-05-22 08:00 KST
+const T21 = 1779318000000; // 2026-05-21 08:00 KST
 const T20 = 1779231600000; // 2026-05-20 08:00 KST
-export const LATEST_UPDATE = T20;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T19 = 1779145200000; // 2026-05-19 08:00 KST
 const T18 = 1779058800000; // 2026-05-18 08:00 KST
 const T15 = 1778799600000; // 2026-05-15 08:00 KST
@@ -38,6 +42,194 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-05-26 — NVDA Rubin Ultra 7.2x / Cybercab 165Wh / FSD 네덜란드 /
+  //              Tesla 텍사스 법인 / Model Y 첫 인도 / SpaceX $350B /
+  //              Anthropic $45B ARR
+  // ════════════════════════════════════════════════════════════════════════
+
+  // NVDA — Rubin Ultra HBM 7.2x ─────────────────────────────────────────
+  { id: 128, symbol: "NVDA", nickname: "익명_3847", holdingLabel: "32주 보유",
+    content: "Rubin Ultra가 576GB라는 거 진짜예요? H100 80GB 대비 7.2배면 이제 GPT-4급 모델을 GPU 한 장에 다 올릴 수 있다는 얘기잖아요. 데이터센터 구축 비용 자체가 혁신될 것 같아요. SK하이닉스 HBM4 독점 공급이면 같이 사야 하나요",
+    createdAt: T26 - 8*60_000, likes: 74, comments: 3 },
+  { id: 129, symbol: "NVDA", nickname: "익명_5192", holdingLabel: "18주 보유",
+    content: "A100 40GB → Rubin Ultra 576GB가 7년 만에 14.4배 점프라는 거 계산해보니 소름돋네요. 이 속도면 2030년엔 TB급 HBM이 나오는 건가요. Vera CPU까지 자체 설계라면 진짜 NVDA가 인텔·AMD 서버시장까지 먹으려는 거잖아요",
+    createdAt: T26 - 25*60_000, likes: 58, comments: 2 },
+
+  // TSLA — Cybercab 165Wh/mile ──────────────────────────────────────────
+  { id: 130, symbol: "TSLA", nickname: "익명_7483", holdingLabel: "75주 보유",
+    content: "Cybercab 165Wh/mile이 공식 인증이라는 거 보고 바로 계산기 두드렸어요. 마일당 $0.02면 연간 10만 마일 달려봤자 에너지 비용 $2,000이에요. 기존 택시 유지비가 $12,000 이상인데 이건 비교 자체가 안 되는 구조잖아요. 로보택시 마진이 얼마나 날지 진짜 기대돼요",
+    createdAt: T26 - 12*60_000, likes: 91, comments: 4 },
+  { id: 131, symbol: "TSLA", nickname: "익명_2938", holdingLabel: "40주 보유",
+    content: "Lucid Air도 190Wh인데 Cybercab이 165라니... 이건 자율주행 전용으로 설계해서 나온 숫자인 거잖아요. 스티어링휠도 없고 페달도 없으니 경량화가 극도로 된 거고. Waymo가 이 효율 따라오려면 차를 처음부터 다시 만들어야 해요. 진짜 해자네요",
+    createdAt: T26 - 30*60_000, likes: 67, comments: 3 },
+
+  // TSLA — FSD 네덜란드 ─────────────────────────────────────────────────
+  { id: 132, symbol: "TSLA", nickname: "익명_6174", holdingLabel: "55주 보유",
+    content: "FSD가 드디어 미국·중국 넘어서 네덜란드에서 실도로 테스트됐어요! 벨기에 승인 나고 바로 네덜란드 실주행이라는 건 여름 EU 출시 진짜 가능하다는 거잖아요. 유럽 테슬라 80만 대 중 FSD 10%만 전환해도 어마어마한 소프트웨어 매출이에요",
+    createdAt: T26 - 15*60_000, likes: 83, comments: 3 },
+
+  // TSLA — 텍사스 법인 ──────────────────────────────────────────────────
+  { id: 133, symbol: "TSLA", nickname: "익명_9021", holdingLabel: "120주 보유",
+    content: "테슬라가 NASDAQ 최초 텍사스 상장 기업이 됐다는 거 역사적인 순간 같아요. SpaceX도 텍사스, xAI도 텍사스, 이제 Tesla도 텍사스. 머스크 생태계가 완전히 텍사스로 모인 거잖아요. 세금 혜택에 기가텍사스 확장까지 장기 비용 구조가 확실히 개선되겠죠",
+    createdAt: T26 - 20*60_000, likes: 72, comments: 3 },
+
+  // TSLA — Model Y 첫 인도 ──────────────────────────────────────────────
+  { id: 134, symbol: "TSLA", nickname: "익명_4827", holdingLabel: "90주 보유",
+    content: "드디어 신형 Model Y 오늘 첫 인도! 8만 대 보너스 주문까지 확보됐다는 게 진짜 대단해요. Q2 인도량이 얼마나 나올지 벌써 기대되네요. 0-60 2.4초에 460kW 충전까지 스펙이 완전 괴물이에요. 지금 Model 3 타고 있는데 교체 진지하게 고민 중이에요",
+    createdAt: T26 - 6*60_000, likes: 96, comments: 5 },
+  { id: 135, symbol: "TSLA", nickname: "익명_1583", holdingLabel: "22주 보유",
+    content: "색상 내장 플라스틱 패널이라서 도색 공정이 없다는 게 포인트예요. 도장 비용 빠지면 원가 절감 상당할 건데 마진 개선으로 직결될 것 같아요. 거기에 에너지 사업 메가팩 매출까지 더해지면 Q2 실적 진짜 기대해도 될 것 같아요",
+    createdAt: T26 - 35*60_000, likes: 61, comments: 2 },
+
+  // SPCX — SpaceX $350B IPO + xAI DC ──────────────────────────────────
+  { id: 136, symbol: "SPCX", nickname: "익명_8372", holdingLabel: "관심종목",
+    content: "$350B에 $1.5B 공모라는 거 Starlink 영업이익만 봐도 납득이 돼요. Q1에 $1B 벌었으면 연환산 $4B이고 63% 마진이면 기업가치 $350B이 오히려 저평가일 수 있어요. xAI DC 12개월 완공 vs 경쟁사 48개월이라는 건 속도 자체가 해자인 거잖아요",
+    createdAt: T26 - 9*60_000, likes: 78, comments: 3 },
+  { id: 137, symbol: "SPCX", nickname: "익명_3194", holdingLabel: "관심종목",
+    content: "DC 1GW당 연 $20B 임대 수익 vs 건설 중 연 $5B 손실이라는 경제성 계산이 진짜 무섭네요. 빨리 완공할수록 GW당 $25B 이득인데 SpaceX가 12개월이면 경쟁사 3.6GW당 손실을 SpaceX는 1GW 수익으로 벌 수 있는 거잖아요. IPO 청약 진지하게 고민 중이에요",
+    createdAt: T26 - 28*60_000, likes: 64, comments: 2 },
+
+  // AMZN — Anthropic $45B ARR ──────────────────────────────────────────
+  { id: 138, symbol: "AMZN", nickname: "익명_7293", holdingLabel: "35주 보유",
+    content: "Anthropic $45B ARR이요?? 2월에 $9B이었는데 5개월 만에 5배라는 게 말이 되나요ㅋㅋ AWS가 독점 배포 파트너라는 게 진짜 중요한데 이 성장세가 AWS AI 매출로 그대로 반영되는 구조잖아요. AMZN 들고 있는 게 진짜 든든하게 느껴지네요",
+    createdAt: T26 - 14*60_000, likes: 85, comments: 3 },
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-05-23 — SpaceX $1,000 접근·락업 / Tesla 중국 FSD 개명 / AMD 20%/yr /
+  //              META 메가팩 $200M / Robotaxi 4도시 / FSD 벨기에 / Norway 100k /
+  //              Fed Marsh 취임·10월 금리 인하
+  // ════════════════════════════════════════════════════════════════════════
+
+  // SPCX — SpaceX IPO $1,000 접근 + 락업 ────────────────────────────────
+  { id: 116, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
+    content: "SpaceX 비상장 $1,000이라고요?? 진짜냐요 ㅋㅋ 공모가 $45~78 얘기할 때 청약 넣으려고 Schwab 계좌 열었는데 이 가격이면 벌써 10배넘은 거잖아요. Starlink만으로도 이미 돈 버는 회사인데 상장하면 얼마까지 가는 거야",
+    createdAt: T23 - 7*60_000, likes: 63, comments: 3 },
+  { id: 117, symbol: "SPCX", nickname: "익명_5391", holdingLabel: "관심종목",
+    content: "락업 Q2 실적 후 20%부터 단계적으로 푸는 거 확인했어요. 상장 첫날 바로 물량 터지는 건 아니니까 그나마 다행이고... Robinhood Gold 있으면 우선배정 된다 해서 Gold 가입해뒀어요",
+    createdAt: T23 - 25*60_000, likes: 48, comments: 2 },
+
+  // TSLA — 중국 FSD 개명 ─────────────────────────────────────────────────
+  { id: 118, symbol: "TSLA", nickname: "익명_7293", holdingLabel: "90주 보유",
+    content: "중국 FSD 이름 바꿨다는 뉴스 보셨어요? 特斯拉辅助驾驶... 뭔지 모르겠는데 기능은 그대로고 가격도 안 올렸대요. 규제 때문에 이름만 바꾼 거라 어차피 팔리는 건 다를 게 없는 거잖아요. 중국에서 FSD 돈 버는 거 시작되는 거 맞죠?",
+    createdAt: T23 - 10*60_000, likes: 77, comments: 4 },
+  { id: 119, symbol: "TSLA", nickname: "익명_4618", holdingLabel: "50주 보유",
+    content: "Texas 4개 도시에 Robotaxi 시설 짓고 있다는 거 보고 오늘 추가매수했어요. Irving에 25,000sqft 배차시설에 Supercharger까지 넣는다는데 이거 진짜 상용화 임박한 거 아닌가요. Waymo처럼 외주 쓰는 게 아니라 직접 다 짓는다는 게 완전 다른 얘기예요",
+    createdAt: T23 - 18*60_000, likes: 91, comments: 5 },
+  { id: 120, symbol: "TSLA", nickname: "익명_3847", holdingLabel: "120주 보유",
+    content: "벨기에 FSD 2천회 테스트 완료라는 거 보고 소름돋았어요. 벨기에가 유럽에서 제일 규제 빡빡하다고 들었는데 거기서 이만큼 굴렸으면 여름에 유럽 출시 진짜 되는 거 아닌가요. 유럽 80만대 중에 FSD 전환율만 10%여도...",
+    createdAt: T23 - 35*60_000, likes: 84, comments: 4 },
+  { id: 121, symbol: "TSLA", nickname: "익명_9024", holdingLabel: "200주 보유",
+    content: "노르웨이 Model Y 10만대 첫 돌파 ㄷㄷ 한 나라에서 단일 차종 10만대가 처음이라는데... 노르웨이 29대 중 1대가 Model Y라니 그 나라 아직 못 가봤는데 길에서 엄청 보이겠네요. 독일 프랑스도 EV 보급 가속되면 결국 비슷하게 가겠죠",
+    createdAt: T23 - 42*60_000, likes: 69, comments: 3 },
+
+  // AMD — CPU 3년 20% 성장 ────────────────────────────────────────────────
+  { id: 122, symbol: "AMD", nickname: "익명_6193", holdingLabel: "45주 보유",
+    content: "Lisa Su가 CPU 3년 20%/년 성장 얘기하면서 공급이 tight하다는 거 이거 진짜예요? AMD 들고 있는데 GPU만 핫한 줄 알았는데 AI 에이전트 때문에 CPU도 엄청 먹는다는 거잖아요. Venice가 3nm에서 생산 시작했다는 것도 오늘 처음 알았어요",
+    createdAt: T23 - 12*60_000, likes: 58, comments: 3 },
+  { id: 123, symbol: "AMD", nickname: "익명_1847", holdingLabel: "20주 보유",
+    content: "AMD 들고 있으면서 솔직히 NVDA 못 따라가는 거 속상했는데 CPU 얘기 나오니까 좀 낫네요. EPYC 점유율 계속 오르고 있다는데 Intel이 진짜 힘들어 보여요. 이번에 매수 타이밍 잘 잡은 건지 모르겠어요",
+    createdAt: T23 - 29*60_000, likes: 41, comments: 2 },
+
+  // META — 메가팩 $200M ──────────────────────────────────────────────────
+  { id: 124, symbol: "META", nickname: "익명_5726", holdingLabel: "30주 보유",
+    content: "META가 Tesla 메가팩 $200M어치 산다는 거 보고 둘 다 들고 있어서 기분 좋네요 ㅋㅋ 와이오밍 AI DC 전력용이라는데 AI 서버 전기 진짜 많이 먹나봐요. 청정에너지로 가면서 전기세도 아끼는 거니까 META 입장에서 나쁠 게 없겠죠",
+    createdAt: T23 - 8*60_000, likes: 47, comments: 2 },
+  { id: 125, symbol: "TSLA", nickname: "익명_8372", holdingLabel: "75주 보유",
+    content: "META가 Tesla 메가팩 $200M 계약했다는 뉴스 좋네요. 이제 AI회사들이 Tesla 배터리 사는 거잖아요. TSLA 에너지 사업이 EV 못지않게 커지는 거 체감되고 있어요. 지금 가격에 추가 들어갈까 고민 중이에요",
+    createdAt: T23 - 16*60_000, likes: 82, comments: 3 },
+
+  // Macro — Fed Marsh·금리 인하·Tom Lee ────────────────────────────────
+  { id: 126, symbol: "NVDA", nickname: "익명_4193", holdingLabel: "55주 보유",
+    content: "Marsh 새 의장 취임하면서 10월 금리 인하 얘기 나오네요. 금리 내려가면 성장주 좋다는 거 알면서도 매번 설레요 ㅋㅋ Tom Lee도 강세장 지속이라고 하고... NVDA 55주 들고 버티길 잘한 것 같아요",
+    createdAt: T23 - 6*60_000, likes: 71, comments: 3 },
+  { id: 127, symbol: "TSLA", nickname: "익명_2948", holdingLabel: "110주 보유",
+    content: "Fed 의장 바뀌고 금리 인하 기대 강해지는 거 보니까 테슬라 오토론 이자 내려갈 날도 얼마 안 남은 것 같아요. 할부 이자 줄면 구매 수요 올라가는 거잖아요. Tom Lee 강세장 선언도 나왔고 하반기 기대되네요",
+    createdAt: T23 - 22*60_000, likes: 66, comments: 3 },
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-05-22 — SpaceX IPO 소매 직접 / NVDA $270B FCF /
+  //              Tesla 유럽 +30% / TSLA+SpaceX 합병 41% / FSD 벨기에 /
+  //              AI ROI 검증 MSFT / OpenAI $5.7B vs Anthropic / 이란 핵합의
+  // ════════════════════════════════════════════════════════════════════════
+
+  // NVDA — $270B FCF 전망 ──────────────────────────────────────────────────
+  { id: 104, symbol: "NVDA", nickname: "익명_5821", holdingLabel: "40주 보유",
+    content: "NVDA 12개월 $270B 현금 창출 전망이라는데, Q1 OCF가 $50.3B이면 연환산만 해도 $200B이에요. 여기서 Blackwell 수요가 더 가속되면 $270B이 보수적인 숫자일 수 있겠다 싶어요. 이 돈 어디에 쓸지가 더 궁금해요.",
+    createdAt: T22 - 5*60_000, likes: 74, comments: 3 },
+  { id: 105, symbol: "NVDA", nickname: "익명_3047", holdingLabel: "8주 보유",
+    content: "애플 연간 FCF가 $110B이고 NVDA 12개월 전망이 $270B이면... 소프트웨어 없이 하드웨어 팔아서 2배 넘게 버는 거잖아요. CUDA 해자가 진짜 경제적 해자인 게 수치로 증명되는 순간이에요.",
+    createdAt: T22 - 22*60_000, likes: 51, comments: 2 },
+
+  // TSLA — 유럽 +30% ────────────────────────────────────────────────────
+  { id: 106, symbol: "TSLA", nickname: "익명_7392", holdingLabel: "150주 보유",
+    content: "Tesla 유럽 4월 +30%인데 Mercedes -7% Volkswagen -8%이에요. 독일 차들이 자국 시장에서도 밀리는 게 진짜 충격이에요. FSD 벨기에 승인까지 나왔으니 하반기 유럽 점유율 더 올라가겠죠.",
+    createdAt: T22 - 8*60_000, likes: 88, comments: 4 },
+  { id: 107, symbol: "TSLA", nickname: "익명_2619", holdingLabel: "60주 보유",
+    content: "Musk 브랜드 리스크 때문에 유럽 판매 망했다는 말 많았는데 데이터 보면 반대잖아요. Deutsche Bank가 '경쟁사 압도적 증거'라고 한 게 정확한 표현인 것 같아요. Starlink 연동까지 되면 진짜 독점 플랫폼이에요.",
+    createdAt: T22 - 31*60_000, likes: 62, comments: 3 },
+
+  // TSLA — 합병 41% + FSD 벨기에 + Robotaxi ──────────────────────────────
+  { id: 108, symbol: "TSLA", nickname: "익명_9143", holdingLabel: "200주 보유",
+    content: "Kalshi에서 Tesla/SpaceX 합병 41%라는 거 보셨어요? 41%면 그냥 찌라시가 아니라 시장이 진지하게 보기 시작한 거잖아요. 합병되면 Starlink 수익이 테슬라 재무에 반영되는 거고 밸류에이션이 완전히 달라지죠.",
+    createdAt: T22 - 14*60_000, likes: 95, comments: 5 },
+  { id: 109, symbol: "TSLA", nickname: "익명_4856", holdingLabel: "85주 보유",
+    content: "FSD 벨기에 승인이 왜 중요하냐면 벨기에가 EU에서 가장 보수적인 규제기관이에요. 거기서 통과했으면 독일·프랑스 승인은 시간문제예요. 텍사스 Robotaxi 수백 대 계획이랑 합치면 2026 하반기 FSD 수익화 본격화가 보여요.",
+    createdAt: T22 - 45*60_000, likes: 71, comments: 3 },
+
+  // MSFT — AI ROI 검증 ────────────────────────────────────────────────────
+  { id: 110, symbol: "MSFT", nickname: "익명_6284", holdingLabel: "35주 보유",
+    content: "MSFT CTO가 Claude Code 취소했다는 거 보셨어요? $10B AI 인프라 구축하는 회사가 구독 자르는 게 의미심장해요. AI 앱 레이어가 진짜 ROI 증명 못 하면 기업 예산 삭감 1순위가 되는 구조예요. NVDA·AMZN은 괜찮지만 SaaS AI는 조심해야 할 것 같아요.",
+    createdAt: T22 - 11*60_000, likes: 58, comments: 3 },
+  { id: 111, symbol: "AMZN", nickname: "익명_8371", holdingLabel: "20주 보유",
+    content: "MSFT가 Claude 취소하는 동안 AMZN은 AI 인프라에 $1B 더 쏜다는 게 포인트예요. 앱 레이어는 잘리고 인프라 레이어는 더 커지는 AI 지출 양극화가 명확해지고 있어요. AWS AI가 직접 수혜받는 구조죠.",
+    createdAt: T22 - 27*60_000, likes: 44, comments: 2 },
+
+  // GOOGL / MSFT — OpenAI vs Anthropic ─────────────────────────────────
+  { id: 112, symbol: "GOOGL", nickname: "익명_3728", holdingLabel: "45주 보유",
+    content: "OpenAI Q1 $5.7B · Anthropic Q1 $4.7B 역전됐는데, 구글이 Anthropic 최대 투자자잖아요. Anthropic $1.5B SpaceX 컴퓨팅 계약으로 GPU 제약 풀리면 반등 가능하고, 그게 구글 수혜로 돌아오는 거예요. GOOGL이 AI 경쟁에서 양쪽 다 먹는 묘한 포지션이네요.",
+    createdAt: T22 - 18*60_000, likes: 53, comments: 2 },
+  { id: 113, symbol: "MSFT", nickname: "익명_5193", holdingLabel: "50주 보유",
+    content: "OpenAI $5.7B이면 연환산 $22B 이상인데 MSFT 49% 지분이니까 간접으로 $11B이상이 MSFT에 귀속되는 구조예요. Azure 독점 배포까지 합치면 OpenAI 성장이 곧 MSFT 성장이에요. AI 왕좌 경쟁 수혜 가장 크게 받는 건 결국 MSFT인 것 같아요.",
+    createdAt: T22 - 38*60_000, likes: 67, comments: 3 },
+
+  // SPCX — SpaceX IPO 소매 직접 참여 ────────────────────────────────────
+  { id: 114, symbol: "SPCX", nickname: "익명_7034", holdingLabel: "관심종목",
+    content: "SpaceX 소매 IPO 청약이 Schwab·Fidelity·Robinhood 다 된다는데 진짜 역사적인 순간이에요. 의결권 구조 문제 있지만 Starlink 1천만 가입자에 Starship 상용화까지 있으면 밸류에이션이 얼마로 나올지 진짜 궁금해요.",
+    createdAt: T22 - 6*60_000, likes: 42, comments: 2 },
+  { id: 115, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
+    content: "드디어 $SPCX 청약 시작이에요. S&P500 편입되면 패시브 자금 수십억 달러가 강제 유입되는데 상장 첫날 얼마나 튀어오를지 계산이 안 돼요. 분할 매수로 접근하는 게 안전할 것 같아요.",
+    createdAt: T22 - 20*60_000, likes: 58, comments: 3 },
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-05-21 — NVDA Q1 FY2027 $75.2B / SpaceX IPO S-1 $SPCX /
+  //              Tesla 유리지붕 특허 Active HVAC
+  // ════════════════════════════════════════════════════════════════════════
+
+  // NVDA — Q1 FY2027 실적 ─────────────────────────────────────────────────
+  { id: 98, symbol: "NVDA", nickname: "익명_4291", holdingLabel: "25주 보유",
+    content: "NVDA Q1 FY2027 데이터센터 $75.2B이 나왔는데 전년 동기 $39.1B이니까 92% 성장이에요. OCF이 $50B이 단일 분기에 나온다는 게 말이 되나 싶어요. 마이크로소프트랑 아마존보다 현금을 더 많이 버는 회사가 되는 거잖아요.",
+    createdAt: T21 - m(5), likes: 61, comments: 3 },
+  { id: 99, symbol: "NVDA", nickname: "익명_8172", holdingLabel: "12주 보유",
+    content: "Dan Ives가 'eye-popping'이라 했는데 맞는 표현이에요. 분기 순이익 $58.3B이면 연환산 $230B인데 시총이랑 비교해봐도 여전히 AI 슈퍼사이클이 끝나지 않았다는 증거 아닐까요? 홀딩 유지합니다.",
+    createdAt: T21 - m(18), likes: 43, comments: 2 },
+
+  // SPCX — IPO S-1 SEC 제출 ─────────────────────────────────────────────
+  { id: 100, symbol: "SPCX", nickname: "익명_6037", holdingLabel: "관심종목",
+    content: "SpaceX S-1 공개됐어요! 티커 $SPCX로 드디어 상장 절차 시작됐네요. 머스크 의결권 85.1%라 소액주주 영향력은 없지만 Starlink 1천만 가입자에 Starship까지 있으면 밸류에이션이 어떻게 나올지 진짜 궁금해요. 우주경제 시대가 드디어 개인 투자자에게도 열리는 순간이에요.",
+    createdAt: T21 - m(8), likes: 55, comments: 3 },
+  { id: 101, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
+    content: "S&P500 편입 시 패시브 자금이 엄청나게 들어올 텐데요. Class B 93.6% 머스크가 가져간다는 거 좀 걸리긴 해요. 2028년 Starlink 1억 가입자 달성하면 Starlink 단독으로도 밸류에이션 정당화되는 구조라 장기 보유 논리가 있어요.",
+    createdAt: T21 - m(25), likes: 38, comments: 2 },
+
+  // TSLA — 유리지붕 특허 ──────────────────────────────────────────────────
+  { id: 102, symbol: "TSLA", nickname: "익명_3918", holdingLabel: "55주 보유",
+    content: "테슬라 유리지붕 특허 보셨어요? 외부 유리에 구멍 뚫고 에어갭으로 공기 순환시켜서 냉각하는 방식이래요. 에어컨 부하 줄이면 배터리 효율 올라가는 거잖아요. BYD가 이 수준을 따라오려면 꽤 걸릴 것 같아요.",
+    createdAt: T21 - m(12), likes: 47, comments: 3 },
+  { id: 103, symbol: "TSLA", nickname: "익명_7264", holdingLabel: "30주 보유",
+    content: "Acoustic Tuning까지 결합했다는 게 포인트예요. 소음 차단 + 열 차단 동시에 잡으면 프리미엄 포지셔닝이 명품차 수준이잖아요. Cybercab에 이게 들어가면 승차 경험이 완전히 달라질 것 같아요. 로보택시 상용화 기대감 올라가네요.",
+    createdAt: T21 - m(30), likes: 34, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-05-20 — NVDA Q4 +74% / Tesla $95B + 휴스턴 태양광 / Semi 77% 절감 /
@@ -128,9 +320,9 @@ export const MOCK_POSTS: Post[] = [
     content: "Burry 로직이 재밌어요. NVDA 살 때 제조사를 산다는 거잖아요. 2·3나노 할 수 있는 게 TSMC밖에 없으니 NVDA보다 상단이 더 안전하다는 역발상. 근데 저는 NVDA도 같이 가져가야 한다고 봐요.",
     createdAt: T19 - m(20), likes: 33, comments: 2 },
 
-  // RKLB — Starlink 1,000만 돌파 ────────────────────────────────────────
-  { id: 81, symbol: "RKLB", nickname: "익명_7723", holdingLabel: "150주 보유",
-    content: "Starlink 유료 가입자 1,000만 돌파했어요. 2020년 시작해서 6년 만에 1,000만이면 엄청난 속도. 2028년 1억 목표인데 달성되면 Starlink 단독으로도 SpaceX 밸류에이션 정당화돼요. SpaceX 비상장이라 아쉽지만 위성 발사 사업 파이가 커지면 로켓랩도 수혜 분명히 있어요.",
+  // SPCX — Starlink 1,000만 돌파 ─────────────────────────────────────────
+  { id: 81, symbol: "SPCX", nickname: "익명_7723", holdingLabel: "관심종목",
+    content: "Starlink 유료 가입자 1,000만 돌파했어요. 2020년 시작해서 6년 만에 1,000만이면 엄청난 속도. 2028년 1억 목표인데 달성되면 Starlink 단독으로도 SpaceX 밸류에이션 정당화돼요. 이제 $SPCX 직접 투자 길도 열렸으니 상장 이후가 기대돼요.",
     createdAt: T19 - m(8), likes: 36, comments: 2 },
 
   // MSFT — OpenAI vs Musk 소송 종결 ─────────────────────────────────────
@@ -384,7 +576,7 @@ export const MOCK_POSTS: Post[] = [
     content: "Electron 발사 성공률이 엄청나게 높아요. Neutron 중형 로켓 개발 완료되면 SpaceX 소형-중형 시장 다 커버하는 회사가 됩니다.",
     createdAt: T14 - h(2), likes: 48, comments: 4 },
   { id: 27, symbol: "RKLB", nickname: "익명_7712", holdingLabel: "500주 보유",
-    content: "Space Systems 부품 사업 매출이 생각보다 탄탄해요. 발사 사업 + 위성 부품 + 향후 Neutron = 3단 성장 스토리인데 SpaceX 비상장이라 대안으로 가장 좋아요.",
+    content: "Space Systems 부품 사업 매출이 생각보다 탄탄해요. 발사 사업 + 위성 부품 + Neutron = 3단 성장 스토리. SpaceX 상장해도 RKLB은 소형 위성 발사 독점 포지션이라 영역이 다른 독립 회사예요.",
     createdAt: T14 - d(1), likes: 57, comments: 2 },
   { id: 43, symbol: "RKLB", nickname: "익명_4419", holdingLabel: "100주 보유",
     content: "국방부 계약이 계속 들어오고 있어요. 국가 안보 분야에서 신뢰받는 위성 발사 업체로 자리잡은 것 같아요.",
@@ -412,6 +604,216 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-05-26 신규 ──────────────────────────────────────────────────────
+  128: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "50주 보유", content: "7.2배면 단순 스펙 개선이 아니라 패러다임이 바뀌는 거잖아요. GPT-4 급 모델을 GPU 한 장에 넣으면 추론 비용이 얼마나 내려가는 건지... NVDA 홀딩 이유가 하나 더 생겼어요", createdAt: T26 - m(5), likes: 31 },
+    { id: 2, nickname: "익명_4829", holdingLabel: "15주 보유", content: "SK하이닉스가 HBM4 독점 공급 유력이면 하이닉스도 같이 봐야겠네요. NVDA랑 같이 움직이는 구조이니까 둘 다 들고 가야 할 것 같아요", createdAt: T26 - m(3), likes: 23 },
+    { id: 3, nickname: "익명_2817", holdingLabel: "8주 보유", content: "Vera CPU 자체 설계까지 되면 NVDA가 서버 한 대를 통째로 바꿔버리는 거잖아요. Intel 데이터센터 사업이 진짜 힘들어 보여요", createdAt: T26 + m(2), likes: 18 },
+  ],
+  129: [
+    { id: 1, nickname: "익명_9183", holdingLabel: "22주 보유", content: "14년 만에 14.4배면 무어의 법칙보다 빠른 거 아닌가요ㅋㅋ AI 인프라 사이클이 얼마나 갈지 모르겠지만 아직 끝날 기미가 없어 보여요", createdAt: T26 - m(12), likes: 19 },
+    { id: 2, nickname: "익명_7374", holdingLabel: "40주 보유", content: "TSMC CoWoS 수요도 폭발하겠네요. 4개 다이 패키징이면 CoWoS-L 라인 꽉 찰 거예요. TSMC 주주로서 반가운 소식이에요", createdAt: T26 - m(7), likes: 14 },
+  ],
+  130: [
+    { id: 1, nickname: "익명_5273", holdingLabel: "30주 보유", content: "마일당 $0.02면 뉴욕에서 캘리포니아까지 3,000마일에 에너지 비용이 $60이에요. 가솔린 차로 같은 거리 가면 기름값만 $300 넘잖아요. 이 차가 상용화되면 진짜 물류·택시 시장이 뒤집히는 거예요", createdAt: T26 - m(7), likes: 42 },
+    { id: 2, nickname: "익명_3918", holdingLabel: "60주 보유", content: "Waymo가 이 효율 따라오려면 GM Cruise처럼 완전 새 차 개발해야 해요. 근데 Tesla는 이미 Cybercab 생산 라인 올리고 있잖아요. 타이밍 게임에서 이미 이긴 것 같아요", createdAt: T26 - m(4), likes: 35 },
+    { id: 3, nickname: "익명_7264", holdingLabel: "15주 보유", content: "165 Wh vs 190 Wh 차이가 크지 않아 보여도 플릿 단위로 1억 마일 달리면 에너지 비용 $2.5M 차이나요. 규모의 경제에서 이 효율 우위는 엄청난 해자예요", createdAt: T26 + m(1), likes: 28 },
+    { id: 4, nickname: "익명_1483", holdingLabel: "80주 보유", content: "스티어링휠·페달 없애서 이 효율 나온 거 생각해보면 자율주행 전용 설계가 맞는 방향이에요. 이제 사람이 조작하는 차 설계가 오히려 비효율이 된 거죠", createdAt: T26 + m(5), likes: 21 },
+  ],
+  131: [
+    { id: 1, nickname: "익명_6192", holdingLabel: "45주 보유", content: "Lucid도 190Wh인데 그게 제일 효율적인 줄 알았어요. Cybercab이 165면 진짜 차원이 다르네요. 자율주행 전용 설계의 힘이 이런 거군요", createdAt: T26 - m(18), likes: 29 },
+    { id: 2, nickname: "익명_4827", holdingLabel: "25주 보유", content: "Waymo가 Jaguar I-PACE 기반인데 그 차 효율이 얼마나 되는지 찾아보니 300Wh 넘는다고 하더라고요. 운영비 격차가 엄청 날 거예요", createdAt: T26 - m(9), likes: 22 },
+    { id: 3, nickname: "익명_8291", holdingLabel: "100주 보유", content: "해자 맞아요. 경쟁사가 아무리 소프트웨어 잘 만들어도 하드웨어 효율이 이 정도 차이면 운영비에서 절대 못 따라와요. 장기 홀딩 확신 올라갔어요", createdAt: T26 + m(3), likes: 36 },
+  ],
+  132: [
+    { id: 1, nickname: "익명_5193", holdingLabel: "35주 보유", content: "FSD가 드디어 미국 밖에서 실도로 달리는 걸 공개적으로 확인한 거잖아요. 충돌 위기를 FSD가 막았다는 거 진짜 신기해요. 영상 찾아봐야겠어요", createdAt: T26 - m(8), likes: 37 },
+    { id: 2, nickname: "익명_7483", holdingLabel: "90주 보유", content: "유럽 FSD 여름 출시라는 거 이제 기정사실로 봐야겠죠. 벨기에 승인 → 네덜란드 테스트 → 독일·프랑스 순이면 Q3 안에 EU 전역 가능성 있어요", createdAt: T26 - m(3), likes: 28 },
+    { id: 3, nickname: "익명_2948", holdingLabel: "12주 보유", content: "EU 80만대 × FSD $8,000 = 64억 달러 잠재 시장이에요. 전환율 10%만 해도 $640M인데 이게 한 분기 소프트웨어 수익에 더해지면 마진이 얼마나 올라갈지", createdAt: T26 + m(4), likes: 41 },
+  ],
+  133: [
+    { id: 1, nickname: "익명_6174", holdingLabel: "70주 보유", content: "캘리포니아 주소득세 13.3% vs 텍사스 0%... 임원들이 어마어마하게 절세하겠네요. 그 돈이 다시 회사 투자로 돌아올 거고. 장기 비용 구조 개선이 확실해요", createdAt: T26 - m(11), likes: 44 },
+    { id: 2, nickname: "익명_3847", holdingLabel: "20주 보유", content: "머스크 생태계가 텍사스로 다 집중되면 오스틴이 제2의 실리콘밸리가 되는 거잖아요. Tesla·SpaceX·xAI 다 거기 있으면 인재들이 다 거기로 몰리겠죠", createdAt: T26 - m(5), likes: 31 },
+    { id: 3, nickname: "익명_9293", holdingLabel: "150주 보유", content: "NASDAQ 최초 텍사스 상장 기업이라는 타이틀 자체도 역사적인 거예요. 텍사스 주민들 자부심 장난 아니겠다ㅋㅋ 기가텍사스 방문하고 싶어지네요", createdAt: T26 + m(2), likes: 24 },
+  ],
+  134: [
+    { id: 1, nickname: "익명_8372", holdingLabel: "110주 보유", content: "오늘 인도 첫날이에요! 8만 대 보너스까지 있다는 게 진짜 수요 검증이잖아요. 0-60 2.4초에 460kW 충전이면 스펙 자체가 레전드급이에요. Q2 실적 기대해도 될 것 같아요", createdAt: T26 - m(3), likes: 53 },
+    { id: 2, nickname: "익명_4193", holdingLabel: "45주 보유", content: "무도장 색상 내장 패널 진짜 신기한 접근이에요. 도장 라인 빠지면 공장 투자비도 절감되고 원가도 내려가는 거잖아요. 기가텍사스 가동율 높아지면 마진 개선 기대해봐도 돼요", createdAt: T26 - m(1), likes: 38 },
+    { id: 3, nickname: "익명_2938", holdingLabel: "8주 보유", content: "기존 Model Y 보유자가 신형으로 교체하면서 보너스 주문 쌓였다는 거 결국 구형 오너들도 만족한다는 거잖아요. 브랜드 충성도 확인된 게 장기적으로 더 중요한 포인트 같아요", createdAt: T26 + m(3), likes: 27 },
+    { id: 4, nickname: "익명_6827", holdingLabel: "60주 보유", content: "텍사스 생산 + 관세 리스크 낮음 + 8만대 보너스 주문 = Q2 인도 역대 최고 가능성 충분해요. 어닝 시즌까지 홀딩하기로 했어요", createdAt: T26 + m(7), likes: 44 },
+    { id: 5, nickname: "익명_1583", holdingLabel: "30주 보유", content: "7인승인 거 가족 차로 딱이에요. 거기다 에어 서스펜션까지ㅋㅋ 이 가격에 이 스펙이면 경쟁 차 뭐가 있어요. 진지하게 주문 넣으려고요", createdAt: T26 + m(12), likes: 19 },
+  ],
+  135: [
+    { id: 1, nickname: "익명_9021", holdingLabel: "55주 보유", content: "도색 공정 없애는 건 테슬라가 계속 밀어붙이던 방향이잖아요. 이게 되면 공장 투자 비용도 내려가고 생산 속도도 빨라지는 게 맞아요", createdAt: T26 - m(20), likes: 22 },
+    { id: 2, nickname: "익명_7483", holdingLabel: "80주 보유", content: "메가팩 $200M 계약 같은 에너지 사업이 EV 판매랑 독립적으로 성장하는 구조가 진짜 무서운 거예요. 주가가 EV 판매만으로 움직이는 시대는 끝났죠", createdAt: T26 - m(10), likes: 31 },
+  ],
+  136: [
+    { id: 1, nickname: "익명_4827", holdingLabel: "관심종목", content: "$350B에 $1.5B 공모라는 게 희석률이 0.4%밖에 안 되는 거잖아요. 투자자 입장에선 이게 오히려 낫죠. Starlink 영업이익 $4B 기준 EV/EBIT이 87배인데 AI+우주 기업치고 비싸지 않아요", createdAt: T26 - m(5), likes: 39 },
+    { id: 2, nickname: "익명_3194", holdingLabel: "관심종목", content: "xAI DC 12개월 완공이 가능한 이유가 Starship 발사체 기술력으로 모듈 단위 조립이 된다는 설이 있더라고요. 진짜면 DC 시장도 뒤집는 거예요", createdAt: T26 - m(2), likes: 28 },
+    { id: 3, nickname: "익명_6192", holdingLabel: "관심종목", content: "S&P500 편입 시 패시브 자금 수십조 원 유입이라는 거 IPO 이벤트 중에서 역대급이에요. Robinhood Gold 넣어뒀으니 배정 기대해볼게요", createdAt: T26 + m(4), likes: 21 },
+  ],
+  137: [
+    { id: 1, nickname: "익명_8372", holdingLabel: "관심종목", content: "Meta Prometheus 8.7년 ㅋㅋㅋ 그거 완공되면 GPT-8 나와있겠다. xAI가 12개월이라는 건 완전히 다른 실행력이에요. 이게 바로 머스크 스타일의 강점이죠", createdAt: T26 - m(14), likes: 33 },
+    { id: 2, nickname: "익명_2938", holdingLabel: "관심종목", content: "33~50% DC 계획이 지연·취소될 거라는 Epoch AI 분석이 맞으면 SpaceX만 공급할 수 있는 AI 컴퓨팅 수요가 폭증하는 거잖아요. 정말 독점 공급자 포지션이에요", createdAt: T26 - m(7), likes: 25 },
+  ],
+  138: [
+    { id: 1, nickname: "익명_5193", holdingLabel: "40주 보유", content: "5개월 만에 $9B에서 $45B이 사실이에요?? 이게 지수함수 성장인데 Claude가 도대체 얼마나 팔리는 건지... AMZN 들고 있어서 기분 좋은 뉴스예요", createdAt: T26 - m(9), likes: 47 },
+    { id: 2, nickname: "익명_7293", holdingLabel: "25주 보유", content: "AWS AI Bedrock이 Claude 기반이라는 거 알면서도 이 성장이 AWS 매출로 얼마나 반영되는지 생각 못 했어요. Anthropic ARR = AWS AI 매출이나 마찬가지인 구조네요. AMZN 추가 담아야겠어요", createdAt: T26 - m(4), likes: 38 },
+    { id: 3, nickname: "익명_3918", holdingLabel: "18주 보유", content: "세계 최대 비상장 기업이 되면 IPO 압박이 더 커지겠죠. Anthropic 상장 시 AMZN 지분 가치가 엄청날 거예요. 장기 이벤트로 AMZN 홀딩 이유 하나 추가됐어요", createdAt: T26 + m(2), likes: 29 },
+  ],
+
+  // ── 2026-05-23 신규 ──────────────────────────────────────────────────────
+  116: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "관심종목", content: "비상장 $1,000이면 상장날 어디까지 튀는 건지ㅋㅋㅋ 저도 Schwab 계좌에 넣어뒀는데 $100,000 조건 맞추기가 좀 힘드네요", createdAt: T23 - m(4), likes: 28 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "Starlink가 분기에 $1B 버는 거면 연간 $4B+인데 이거 하나로도 상장하고도 남을 회사잖아요. 일단 청약 넣고 보려고요", createdAt: T23 - m(2), likes: 19 },
+    { id: 3, nickname: "익명_9274", holdingLabel: "관심종목", content: "Schwab 조건 까다롭네요. 그냥 Robinhood Gold로 우선배정 노리는 게 더 현실적인 것 같아요. 저는 Gold 이미 있어서 신청해봤어요", createdAt: T23 + m(3), likes: 14 },
+  ],
+  117: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "관심종목", content: "단계적으로 푸는 거 알고 나서 좀 안심됐어요. 상장날 바로 폭탄 맞는 건 아닌 거잖아요", createdAt: T23 - m(16), likes: 17 },
+    { id: 2, nickname: "익명_7481", holdingLabel: "관심종목", content: "+30% 되면 물량 더 나온다는 게 좀 묘하긴 한데... 그래도 그만큼 올랐다는 거니까 뭐 괜찮은 거 아닐까요", createdAt: T23 - m(8), likes: 11 },
+  ],
+  118: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "130주 보유", content: "중국에서 데이터 쌓이면 결국 글로벌 FSD 더 좋아지는 거잖아요. 이름만 바꿔서 중국 시장 지켰으니 테슬라 입장에선 엄청 남는 장사네요", createdAt: T23 - m(6), likes: 34 },
+    { id: 2, nickname: "익명_2817", holdingLabel: "60주 보유", content: "미국·캐나다·중국 다음 EU 되면 FSD 팔 수 있는 나라가 진짜 많아지는 거잖아요. 유럽 여름에 출시되면 그때 또 기대해볼만 하겠어요", createdAt: T23 - m(3), likes: 22 },
+    { id: 3, nickname: "익명_6193", holdingLabel: "25주 보유", content: "Cybercab도 중국 들어가면 현지 데이터로 훨씬 빨리 학습할 수 있겠죠. 이게 경쟁사가 따라올 수 없는 부분인 것 같아요", createdAt: T23 + m(5), likes: 18 },
+    { id: 4, nickname: "익명_8374", holdingLabel: "45주 보유", content: "가격 안 올리고 이름만 바꿔서 해결한 거 대단하긴 해요. 중국팀 일 잘하네요 ㅋㅋ", createdAt: T23 + m(9), likes: 13 },
+  ],
+  119: [
+    { id: 1, nickname: "익명_7392", holdingLabel: "180주 보유", content: "Irving에 25,000sqft 자체 시설 짓는다는 게 진짜 규모가 다르네요. 주차장 빌리는 Waymo랑 비교하면 레벨 자체가 달라요. 오늘 추가 담았어요", createdAt: T23 - m(10), likes: 47 },
+    { id: 2, nickname: "익명_1948", holdingLabel: "90주 보유", content: "휴스턴 세차장 36,000sqft면 차 엄청 많이 돌리겠다는 거잖아요. 이게 파일럿 규모가 아닌데ㅋㅋ 기대됩니다", createdAt: T23 - m(6), likes: 35 },
+    { id: 3, nickname: "익명_5283", holdingLabel: "50주 보유", content: "4개 도시 동시에 진행하는 거 보면 올 하반기 안에 뭔가 나오긴 하겠죠. 기대하면서 버티는 중이에요", createdAt: T23 - m(3), likes: 28 },
+    { id: 4, nickname: "익명_9027", holdingLabel: "30주 보유", content: "Uber는 차도 없고 인프라도 없잖아요. Tesla는 차 만들고 충전소 깔고 정비소까지 다 짓는 거니까 나중에 수익 구조가 완전 다를 거예요", createdAt: T23 + m(4), likes: 31 },
+    { id: 5, nickname: "익명_3751", holdingLabel: "70주 보유", content: "텍사스부터 시작하는 거 맞는 순서 같아요. 규제도 덜 하고 이미 거점 다 짓고 있으니까 올 하반기가 기대돼요", createdAt: T23 + m(8), likes: 22 },
+  ],
+  120: [
+    { id: 1, nickname: "익명_6481", holdingLabel: "100주 보유", content: "벨기에가 유럽에서 제일 까다롭다고 들었는데 2,000회 넘었다니 빠르게 가고 있는 거 맞죠? 5,000km 목표면 절반 이상 온 거잖아요", createdAt: T23 - m(22), likes: 39 },
+    { id: 2, nickname: "익명_2917", holdingLabel: "55주 보유", content: "유럽 여름에 One-Time Payment 나오면 유럽 80만대 오너들한테 팔 수 있는 거잖아요. 10%만 사줘도 엄청난 숫자인데 기대돼요", createdAt: T23 - m(14), likes: 27 },
+    { id: 3, nickname: "익명_8293", holdingLabel: "35주 보유", content: "벨기에 되면 독일 프랑스도 시간문제 아닐까요. 유럽 전체 열리면 그때가 진짜 소프트웨어 매출 시작인 거잖아요", createdAt: T23 - m(7), likes: 19 },
+    { id: 4, nickname: "익명_4736", holdingLabel: "20주 보유", content: "비 오는 날도 테스트한다는 거 보고 좋았어요. 날씨 가리면 실제로 못 쓰는 거니까 이게 중요한 거잖아요", createdAt: T23 + m(3), likes: 15 },
+  ],
+  121: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "160주 보유", content: "노르웨이가 90% EV 됐다는데 독일 프랑스도 결국 거기로 가겠죠. 거기서 Model Y가 이렇게 팔리면 독일에서도 같은 일 생길 것 같아요", createdAt: T23 - m(28), likes: 31 },
+    { id: 2, nickname: "익명_7192", holdingLabel: "80주 보유", content: "한 나라에서 단일 차종 10만대 처음이라는 게 진짜 대단한 기록이에요. 국민차 됐다고 봐도 되는 수준이죠", createdAt: T23 - m(15), likes: 23 },
+    { id: 3, nickname: "익명_5841", holdingLabel: "40주 보유", content: "스웨덴 덴마크도 비슷하게 갈 것 같아요. 스칸디나비아는 이미 Tesla 세상인 듯ㅋㅋ", createdAt: T23 - m(8), likes: 16 },
+  ],
+  122: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "35주 보유", content: "AI 쓰면 쓸수록 CPU도 같이 먹는다는 거 생각 못 했는데ㅋㅋ GPU만 핫한 줄 알았어요. AMD 조금 들고 있어서 다행이에요", createdAt: T23 - m(8), likes: 26 },
+    { id: 2, nickname: "익명_7391", holdingLabel: "18주 보유", content: "Intel이 진짜 힘들어 보여요. AMD가 30%에서 더 올라오면 예전 NVDA-AMD 구도랑 비슷하게 되는 건가요", createdAt: T23 - m(4), likes: 18 },
+    { id: 3, nickname: "익명_2847", holdingLabel: "50주 보유", content: "NVDA에 치여서 AMD 잊고 있었는데 오늘 리포트 보고 다시 봤어요. 가격도 NVDA보다 훨씬 낮고 좋은데", createdAt: T23 + m(2), likes: 21 },
+  ],
+  123: [
+    { id: 1, nickname: "익명_9182", holdingLabel: "15주 보유", content: "3nm이면 전력 효율도 좋을 텐데 데이터센터 전기값 비싸지는 요즘에 AMD 서버 CPU 당연히 더 선호하게 되지 않을까요", createdAt: T23 - m(17), likes: 13 },
+    { id: 2, nickname: "익명_6294", holdingLabel: "28주 보유", content: "3년 20%/년이면 계속 사줄 이유가 있는 거잖아요. 이번에 분할로 좀 더 담을까 고민 중이에요", createdAt: T23 - m(9), likes: 16 },
+  ],
+  124: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "22주 보유", content: "AI 서버가 전기 엄청 먹는다는데 배터리로 안정화한다는 거 처음 들어봤어요. 확실히 그냥 전력 끌어오는 것보단 낫겠죠", createdAt: T23 - m(5), likes: 22 },
+    { id: 2, nickname: "익명_7291", holdingLabel: "12주 보유", content: "META 30주 들고 있는데 이런 뉴스 볼 때마다 장기 홀딩 맞다는 생각 들어요. AI 인프라 계속 투자하는 거 좋아요", createdAt: T23 - m(2), likes: 14 },
+  ],
+  125: [
+    { id: 1, nickname: "익명_5829", holdingLabel: "100주 보유", content: "META AMZN 같은 빅테크가 Tesla 배터리 사는 거 이제 자연스러운 흐름이 됐네요. TSLA 에너지 매출 꾸준히 오르겠죠", createdAt: T23 - m(9), likes: 38 },
+    { id: 2, nickname: "익명_2741", holdingLabel: "45주 보유", content: "메가팩 단가는 내려가는데 주문은 더 들어오는 거잖아요. 원래 이렇게 좋은 구조가 EV 사업에 있었으면ㅋㅋ", createdAt: T23 - m(5), likes: 25 },
+    { id: 3, nickname: "익명_8193", holdingLabel: "60주 보유", content: "에너지 마진이 EV보다 높다는 얘기 맞는 것 같아요. 저도 TSLA 더 담으면서 에너지 사업 기대하고 있어요", createdAt: T23 + m(3), likes: 19 },
+  ],
+  126: [
+    { id: 1, nickname: "익명_7429", holdingLabel: "48주 보유", content: "Marsh 취임하자마자 선물 시장 반응이 바로 나오네요. 금리 내려가면 NVDA 같은 성장주 다시 불붙는 거잖아요. 지금 들고 있어서 다행이에요", createdAt: T23 - m(4), likes: 35 },
+    { id: 2, nickname: "익명_3192", holdingLabel: "30주 보유", content: "Tom Lee 강세장이라고 하고 Marsh도 인하 시사하고... 이게 다 맞아 떨어지면 하반기 진짜 좋을 것 같아요. 소형주도 담아볼까 고민 중이에요", createdAt: T23 - m(2), likes: 21 },
+    { id: 3, nickname: "익명_9047", holdingLabel: "70주 보유", content: "Druckenmiller까지 같은 방향 보면 이건 그냥 따라가야 하는 거 아닌가요ㅋㅋ 55주 들고 버틸게요", createdAt: T23 + m(4), likes: 27 },
+  ],
+  127: [
+    { id: 1, nickname: "익명_4817", holdingLabel: "85주 보유", content: "금리 내려가면 할부 이자 줄어드는 거잖아요. 그러면 테슬라 월 할부금 낮아지는 거고 구매 수요 올라가는 거 아닌가요. 자동차 사는 사람들 이자 엄청 신경 쓰더라고요", createdAt: T23 - m(14), likes: 29 },
+    { id: 2, nickname: "익명_6382", holdingLabel: "40주 보유", content: "오토론 이자 낮아지면 진짜 판매 늘어나는 거 맞아요. 친구가 TSLA 사고 싶다는데 이자 때문에 망설이고 있거든요. 그때가 오면 사줄 것 같아요 ㅋㅋ", createdAt: T23 - m(7), likes: 24 },
+    { id: 3, nickname: "익명_1938", holdingLabel: "25주 보유", content: "Tom Lee 이번에도 맞으면 좋겠어요. 110주 들고 버티는 분들 존경스러워요... 저도 분할 더 모을까 봐요", createdAt: T23 + m(2), likes: 17 },
+  ],
+
+  // ── 2026-05-22 신규 ──────────────────────────────────────────────────────
+  104: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "22주 보유", content: "OCF $50B 단일 분기가 나왔는데 $270B이 보수적이라는 게 말이 돼요. Blackwell 풀 램프업이면 Q2부터 더 올라가는 거잖아요.", createdAt: T22 - m(3), likes: 24 },
+    { id: 2, nickname: "익명_8413", holdingLabel: "15주 보유", content: "이 돈으로 M&A 나서면 AI 앱 레이어까지 NVDA가 통합할 수 있어요. 소프트웨어 마진 더해지면 밸류에이션이 다시 계산돼야 해요.", createdAt: T22 - m(1), likes: 11 },
+    { id: 3, nickname: "익명_2047", holdingLabel: "50주 보유", content: "사우디 아람코 연간 이익 $80B의 3배를 NVDA가 12개월에 낸다는 거 진짜 실감이 안 나요.", createdAt: T22 + m(6), likes: 18 },
+  ],
+  105: [
+    { id: 1, nickname: "익명_4819", holdingLabel: "10주 보유", content: "애플 FCF가 그렇게 많다고 했는데 NVDA가 2.5배라니. 하드웨어 회사가 소프트웨어 회사보다 현금 더 번다는 게 역대 처음 아닌가요.", createdAt: T22 - m(15), likes: 13 },
+    { id: 2, nickname: "익명_7382", holdingLabel: "30주 보유", content: "자사주 매입으로 쓰면 EPS 끌어올리면서 주가 지지 효과도 있어요. NVDA 바이백 프로그램 규모가 기대되네요.", createdAt: T22 - m(9), likes: 8 },
+  ],
+  106: [
+    { id: 1, nickname: "익명_9421", holdingLabel: "100주 보유", content: "독일에서 +39%가 나왔다는 게 진짜 의미 있어요. 독일이 BMW·VW·Mercedes 홈그라운드인데 거기서 이겼다는 거잖아요.", createdAt: T22 - m(5), likes: 31 },
+    { id: 2, nickname: "익명_3574", holdingLabel: "40주 보유", content: "FSD 벨기에 승인이랑 맞물려서 유럽 판매가 더 가속될 것 같아요. 소프트웨어 구독 수익까지 더해지면 유럽이 진짜 성장 엔진이 되겠네요.", createdAt: T22 - m(3), likes: 17 },
+    { id: 3, nickname: "익명_6281", holdingLabel: "20주 보유", content: "Starlink 연동이 완성되면 Tesla 차는 통신사 없이도 된다는 거잖아요. 독점 에코시스템이 완성되는 거예요.", createdAt: T22 + m(4), likes: 14 },
+    { id: 4, nickname: "익명_1937", holdingLabel: "75주 보유", content: "경쟁사들 -7~8%인데 Tesla만 +30%라는 게 이미 EV 시장 재편이 끝난 게 아닌가 싶어요.", createdAt: T22 + m(8), likes: 22 },
+  ],
+  107: [
+    { id: 1, nickname: "익명_5842", holdingLabel: "90주 보유", content: "브랜드 리스크 때문에 유럽 기피한다는 게 실제 데이터랑 다르네요. 제품력이 브랜드 리스크를 이기는 거 보여주는 거 아닌가요.", createdAt: T22 - m(22), likes: 19 },
+    { id: 2, nickname: "익명_4193", holdingLabel: "55주 보유", content: "독점 모빌리티 플랫폼이라는 표현이 딱 맞아요. FSD+Starlink+Supercharger 다 합쳐지면 경쟁 자체가 불가능해요.", createdAt: T22 - m(14), likes: 12 },
+    { id: 3, nickname: "익명_8027", holdingLabel: "30주 보유", content: "Musk 정치 리스크 많이들 걱정했는데 매출이 이렇게 나오면 그냥 홀딩이 맞네요.", createdAt: T22 - m(7), likes: 9 },
+  ],
+  108: [
+    { id: 1, nickname: "익명_7419", holdingLabel: "250주 보유", content: "41%면 시장이 절반 가까이 실현된다고 보는 거잖아요. 합병되면 Starlink 1천만 가입자 수익이 Tesla 재무에 합쳐지는데 주가가 어디로 갈지 계산이 안 돼요.", createdAt: T22 - m(8), likes: 43 },
+    { id: 2, nickname: "익명_2816", holdingLabel: "120주 보유", content: "Cybercab + FSD + Starlink 통합이 되면 이건 단순 자동차 회사 밸류에이션으로 볼 수가 없어요.", createdAt: T22 - m(5), likes: 28 },
+    { id: 3, nickname: "익명_9382", holdingLabel: "60주 보유", content: "텍사스 Robotaxi 수백 대부터 시작해서 FSD 데이터 쌓이면 전국 확대 로드맵이 보여요. 이게 진짜 게임체인저예요.", createdAt: T22 + m(2), likes: 21 },
+    { id: 4, nickname: "익명_5037", holdingLabel: "45주 보유", content: "벨기에 연방 교통부가 EU에서 가장 까다롭다는 거 진짜였어요. 거기 통과하면 EU 전체는 시간 문제잖아요.", createdAt: T22 + m(5), likes: 16 },
+    { id: 5, nickname: "익명_1482", holdingLabel: "15주 보유", content: "합병 실현되면 TSLA 지금 주가가 헐값으로 보일 것 같아요. 기다리는 게 맞는 전략.", createdAt: T22 + m(10), likes: 31 },
+  ],
+  109: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "70주 보유", content: "FSD 통계 → 신뢰 → Cybercab 확장 이 순서가 논리적이에요. 텍사스에서 먼저 증명하고 캘리포니아·유럽 순으로 가는 거 현실적인 로드맵이에요.", createdAt: T22 - m(32), likes: 22 },
+    { id: 2, nickname: "익명_6193", holdingLabel: "38주 보유", content: "SpaceX Depot Supercharger Only 건설 허가가 Robotaxi 인프라 준비라는 신호잖아요. 이미 하드웨어 인프라 깔고 있는 거예요.", createdAt: T22 - m(19), likes: 14 },
+    { id: 3, nickname: "익명_8271", holdingLabel: "25주 보유", content: "벨기에 통과가 이렇게 빨리 나올 줄 몰랐어요. FSD 개선 속도가 예상보다 훨씬 빠르네요.", createdAt: T22 - m(11), likes: 10 },
+  ],
+  110: [
+    { id: 1, nickname: "익명_4928", holdingLabel: "28주 보유", content: "CTO가 직접 전사 메일 보내서 취소한 거잖아요. AI 구독 ROI 검증이 이제 CEO·CTO 레벨 어젠다가 됐다는 신호예요.", createdAt: T22 - m(7), likes: 27 },
+    { id: 2, nickname: "익명_7381", holdingLabel: "12주 보유", content: "NVDA·AMZN 인프라는 괜찮고 앱 레이어 SaaS가 잘리는 구조면 포트폴리오 재조정이 필요하겠네요.", createdAt: T22 - m(3), likes: 16 },
+    { id: 3, nickname: "익명_2046", holdingLabel: "55주 보유", content: "AI 슈퍼사이클 정상화라는 표현이 맞는 것 같아요. 버블 아니고 과잉 투자 후 선별화 단계인 거죠.", createdAt: T22 + m(4), likes: 12 },
+  ],
+  111: [
+    { id: 1, nickname: "익명_5193", holdingLabel: "16주 보유", content: "MSFT는 자르고 AMZN은 더 쏘는 게 AI 인프라 수요가 진짜라는 증거예요. 앱 레이어만 ROI 안 나오는 거지 인프라는 여전히 강세예요.", createdAt: T22 - m(18), likes: 21 },
+    { id: 2, nickname: "익명_8374", holdingLabel: "33주 보유", content: "AWS Bedrock이 Claude·Titan·Llama 다 제공하니까 어떤 모델이 이겨도 AWS가 수혜받는 구조예요. 좋은 포지션이에요.", createdAt: T22 - m(9), likes: 13 },
+  ],
+  112: [
+    { id: 1, nickname: "익명_3719", holdingLabel: "42주 보유", content: "구글이 Anthropic에 $2B 넣고 AWS도 $4B 넣었으니까 Anthropic이 크면 GOOGL·AMZN 둘 다 수혜예요. OpenAI가 커도 MSFT 수혜고. AI 왕좌 경쟁에서 빅테크가 어떻게 해도 이기는 구조네요.", createdAt: T22 - m(12), likes: 34 },
+    { id: 2, nickname: "익명_6481", holdingLabel: "20주 보유", content: "SpaceX 컴퓨팅 계약으로 GPU 제약 풀리면 Anthropic 반격 가능해요. 1년 후가 기대돼요.", createdAt: T22 - m(6), likes: 18 },
+  ],
+  113: [
+    { id: 1, nickname: "익명_9283", holdingLabel: "60주 보유", content: "OpenAI 49% 지분에 Azure 독점 배포까지면 MSFT는 AI 인프라 투자 $10B+ 했는데 OpenAI 성장이 그걸 몇 배로 돌려주는 구조잖아요.", createdAt: T22 - m(27), likes: 29 },
+    { id: 2, nickname: "익명_4872", holdingLabel: "18주 보유", content: "Claude Code 취소 뉴스랑 OpenAI 역전이 같은 날 나온 게 묘해요. MSFT는 OpenAI에 집중하겠다는 선언처럼 보여요.", createdAt: T22 - m(15), likes: 17 },
+    { id: 3, nickname: "익명_1629", holdingLabel: "40주 보유", content: "연환산 $22B AI 매출을 MSFT가 49% 가지는 거면 이미 AI 투자 회수 시작이에요. 장기 홀딩 논리 강화됐어요.", createdAt: T22 - m(8), likes: 14 },
+  ],
+  114: [
+    { id: 1, nickname: "익명_5847", holdingLabel: "관심종목", content: "청약 방법 Robinhood Gold 있으면 우선 배정이라는 거 진짜 좋은 정보예요. Schwab은 $1,000 이상 계좌 조건이 있다는 것도 확인했어요.", createdAt: T22 - m(4), likes: 19 },
+    { id: 2, nickname: "익명_3294", holdingLabel: "관심종목", content: "Starlink 2028년 1억 명 달성하면 그것만으로도 상장 밸류에이션이 정당화돼요. 분할 매수로 장기 보유 생각하고 있어요.", createdAt: T22 - m(1), likes: 11 },
+  ],
+  115: [
+    { id: 1, nickname: "익명_8291", holdingLabel: "관심종목", content: "Class B 주식 구조라서 의결권은 없지만 수익 공유는 되니까 장기 보유 메리트는 충분해요.", createdAt: T22 - m(14), likes: 17 },
+    { id: 2, nickname: "익명_4719", holdingLabel: "관심종목", content: "첫날 변동성이 워낙 클 테니 며칠 지켜보고 들어가는 게 나을 수도 있겠어요. 상장일이 기대돼요.", createdAt: T22 - m(8), likes: 13 },
+    { id: 3, nickname: "익명_6293", holdingLabel: "관심종목", content: "Starship 완전 상용화되면 화물 발사 비용이 10분의 1로 줄어드는 거잖아요. 그게 실현되면 지금 가격은 저렴한 거예요.", createdAt: T22 - m(3), likes: 21 },
+  ],
+
+  // ── 2026-05-21 신규 ──────────────────────────────────────────────────────
+  98: [
+    { id: 1, nickname: "익명_5531", holdingLabel: "40주 보유", content: "OCF $50B 분기면 연환산 $200B이에요. S&P500 전체 기업 중 이 수준 나오는 회사가 없었는데 NVDA가 처음 뚫는 거잖아요.", createdAt: T21 - m(3), likes: 19 },
+    { id: 2, nickname: "익명_3849", holdingLabel: "7주 보유", content: "근데 마진이 이렇게 높으면 언제 다음 아키텍처 나올 때 다운사이클 걱정도 있어요. 지금은 맞는 방향이지만 Rubin 이후 구간은 좀 지켜봐야죠.", createdAt: T21 - m(1), likes: 7 },
+    { id: 3, nickname: "익명_7182", holdingLabel: "60주 보유", content: "DC 매출만 $75.2B이면 전체 NVDA 회사가 작년에 이 수준도 못 됐었잖아요. 성장 속도가 비현실적이에요.", createdAt: T21 + m(4), likes: 14 },
+  ],
+  99: [
+    { id: 1, nickname: "익명_2094", holdingLabel: "20주 보유", content: "시총 대비 OCF yield로 따지면 여전히 성장 주식 치고는 저렴한 편이에요. 장기 복리 계산하면 홀딩이 맞아요.", createdAt: T21 - m(10), likes: 11 },
+    { id: 2, nickname: "익명_8361", holdingLabel: "5주 보유", content: "근데 실적은 좋은데 주가가 안 오른다면 시장이 뭘 우려하는 건지 파악이 필요하겠죠.", createdAt: T21 - m(5), likes: 5 },
+  ],
+  100: [
+    { id: 1, nickname: "익명_4719", holdingLabel: "150주 보유", content: "SpaceX 상장하면 IPO 청약 꼭 참여하고 싶어요. 머스크 의결권 문제는 있지만 Starlink 사업만 봐도 충분히 매력적이에요.", createdAt: T21 - m(4), likes: 22 },
+    { id: 2, nickname: "익명_6293", holdingLabel: "90주 보유", content: "Class B 93.6% 들고 있으면 소액주주는 사실상 의결권 없는 채권자나 다름없어요. 수익만 보고 들어가야죠.", createdAt: T21 - m(2), likes: 13 },
+    { id: 3, nickname: "익명_8044", holdingLabel: "50주 보유", content: "Starlink 2028 목표 1억 명이면 지금 1천만 대비 10배 성장이에요. 그것만으로도 밸류에이션 설명이 돼요.", createdAt: T21 + m(3), likes: 16 },
+  ],
+  101: [
+    { id: 1, nickname: "익명_3127", holdingLabel: "120주 보유", content: "S&P500 편입 시 Vanguard·Blackrock 강제 매수분만 해도 몇십억 달러 규모 아닌가요. 그때가 진짜 상승 시작 아닐까요.", createdAt: T21 - m(15), likes: 17 },
+    { id: 2, nickname: "익명_5891", holdingLabel: "60주 보유", content: "오너리스크 85.1% 감안해도 Starship 완전 상용화가 실현되면 화물 발사 비용이 10분의1 되는 거잖아요. 리스크 감수할 만해요.", createdAt: T21 - m(8), likes: 10 },
+  ],
+  102: [
+    { id: 1, nickname: "익명_9274", holdingLabel: "75주 보유", content: "에어갭 냉각 방식이 기발한 거 같아요. 단순히 더블 글레이징이 아니라 공기를 순환시킨다는 발상 자체가 달라요. 에어컨 쓸 일이 줄면 여름 주행거리가 확 늘어나겠네요.", createdAt: T21 - m(6), likes: 18 },
+    { id: 2, nickname: "익명_1538", holdingLabel: "20주 보유", content: "Acoustic tuning이 더 신기한 거 같아요. 주파수 맞춰서 소음 없앤다는 게 스피커 없이 액티브 노이즈 캔슬링 하는 거랑 비슷한 원리인가요?", createdAt: T21 - m(3), likes: 9 },
+    { id: 3, nickname: "익명_4682", holdingLabel: "45주 보유", content: "이게 Cybercab에 들어가면 완전히 다른 레벨의 승차 경험이겠죠. 열 차단 + 소음 차단 + FSD = 리무진급 경험.", createdAt: T21 + m(5), likes: 14 },
+  ],
+  103: [
+    { id: 1, nickname: "익명_7051", holdingLabel: "90주 보유", content: "BYD도 더블 글레이징 썬루프 쓰지만 이렇게 에어갭 액티브 쿨링까지 하는 건 없잖아요. 특허 장벽이 생기면 복제도 어렵고요.", createdAt: T21 - m(18), likes: 12 },
+    { id: 2, nickname: "익명_3826", holdingLabel: "15주 보유", content: "프리미엄 옵션으로 추가 수익화도 가능하겠어요. ASP 올리면 마진 개선이고 Tesla 매력도 올라가는 거죠.", createdAt: T21 - m(9), likes: 8 },
+  ],
+
   // ── 2026-05-20 신규 ──────────────────────────────────────────────────────
   84: [
     { id: 1, nickname: "익명_3719", holdingLabel: "30주 보유", content: "CUDA 개발자가 400만이라는데 AMD로 갈아타려면 몇 년짜리 작업이에요. 이게 진짜 해자죠.", createdAt: T20 - m(2), likes: 11 },

@@ -5,6 +5,7 @@ import type { FutureItem } from "@/lib/api";
 import { MiniChartPopup } from "./MiniChartPopup";
 import { SectionInfo } from "./SectionInfo";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+import { isMarketOpen } from "@/lib/marketHours";
 
 function useIsDesktop() {
   const [lg, setLg] = useState(false);
@@ -138,13 +139,6 @@ type PopupState = {
   anchorY: number;
 };
 
-function isMarketOpen() {
-  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
-  const day = now.getDay();
-  if (day === 0 || day === 6) return false;
-  const m = now.getHours() * 60 + now.getMinutes();
-  return m >= 9 * 60 + 30 && m < 16 * 60;
-}
 
 type Props = { items: FutureItem[] };
 

@@ -19,6 +19,8 @@ const TWELVE_CRYPTO: Record<string, string> = { BTC: "BTC/USD", ETH: "ETH/USD" }
 const YF_SYM: Record<string, string> = {
   // Index cards (direct index tickers)
   SPX: "^GSPC", COMP: "^IXIC", DJI: "^DJI", USDKRW: "USDKRW=X",
+  // Global indices (FuturesHeatmap)
+  NK: "^N225", DAX: "^GDAXI", FTSE: "^FTSE", HSI: "^HSI",
   // Index futures (actual futures contracts — not spot indices)
   ES: "ES=F", NQ: "NQ=F", YM: "YM=F", RTY: "RTY=F",
   // Commodities
@@ -29,9 +31,10 @@ const YF_SYM: Record<string, string> = {
 };
 
 // Futures/Indices → Stooq symbol (historical CSV, no rate limits, no API key)
-// Index cards use futures as proxy — same price level, free on Stooq
-// Stooq: 상품/채권 선물만 사용 — 지수/지수선물은 Stooq 심볼이 맞지 않아 제외
 const STOOQ_SYM: Record<string, string> = {
+  // Global indices
+  NK: "^nkx", DAX: "^dax", FTSE: "^ftx", HSI: "^hsi",
+  // Commodities & bonds
   CL: "cl.f", NG: "ng.f", GC: "gc.f", SI: "si.f", HG: "hg.f",
   ZN: "zn.f", ZB: "zb.f", "6E": "6e.f", "6J": "6j.f",
   ZC: "zc.f", ZW: "zw.f", ZS: "zs.f",

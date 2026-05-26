@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "@/contexts/LocaleContext";
 
@@ -10,6 +10,7 @@ export function BottomNav() {
   const t        = useLocale();
   const [, startTransition] = useTransition();
   const [pending, setPending] = useState<string | null>(null);
+  const lastTap = useRef<{ href: string; time: number } | null>(null);
 
   // Clear pending when navigation finishes
   useEffect(() => { setPending(null); }, [pathname]);
@@ -51,8 +52,29 @@ export function BottomNav() {
               key={href}
               onPointerDown={(e) => {
                 e.preventDefault();
-                if (isActive && !pending) {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                const now = Date.now();
+                const isDoubleTap =
+                  lastTap.current &&
+                  lastTap.current.href === href &&
+                  now - lastTap.current.time < 400;
+                lastTap.current = { href, time: now };
+
+                if (isDoubleTap) {
+                  // 더블탭 → 무조건 루트로
+                  if (pathname !== href) {
+                    setPending(href);
+                    startTransition(() => { router.push(href); });
+                  } else {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                } else if (isActive && !pending) {
+                  // 싱글탭 (이미 활성) → 서브페이지면 루트로, 루트면 맨위로
+                  if (pathname !== href) {
+                    setPending(href);
+                    startTransition(() => { router.push(href); });
+                  } else {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
                 } else {
                   setPending(href);
                   startTransition(() => { router.push(href); });

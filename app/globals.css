@@ -102,3 +102,21 @@ a, button, [role="button"] {
     padding-bottom: calc(env(safe-area-inset-bottom) + 10rem);
   }
 }
+
+/* Chart axis labels: mobile 9px, desktop 11px */
+.chart-axis-label { font-size: 9px; }
+@media (min-width: 1024px) {
+  .chart-axis-label { font-size: 11px; }
+}
+
+/* iOS Safari auto-zoom 방지: 입력 포커스 시 font-size < 16px → 화면 확대 제거 */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+  font-size: 16px;
+}

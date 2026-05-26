@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { TrendingUp, TrendingDown, ChevronRight, Wallet } from "lucide-react";
+import { TrendingUp, TrendingDown, ChevronRight, Wallet, ChevronDown, ChevronUp } from "lucide-react";
 import { usePortfolio } from "@/hooks/usePortfolio";
 
 type LiveQ   = { symbol: string; shortName: string; price: number; changePercent: number };
@@ -43,10 +43,11 @@ function CurToggle({ cur, onChange }: { cur: Cur; onChange: (c: Cur) => void }) 
 export function PortfolioWidget() {
   const router  = useRouter();
   const { holdings, cur, setCur, loaded, isLoggedIn } = usePortfolio();
-  const [quotes,   setQuotes]   = useState<LiveQ[]>([]);
-  const [usdkrw,   setUsdkrw]   = useState(1350);
-  const [fetching, setFetching] = useState(false);
-  const [showAll,  setShowAll]  = useState(false);
+  const [quotes,    setQuotes]    = useState<LiveQ[]>([]);
+  const [usdkrw,    setUsdkrw]    = useState(1350);
+  const [fetching,  setFetching]  = useState(false);
+  const [showAll,   setShowAll]   = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
     if (!loaded || holdings.length === 0) return;
@@ -59,7 +60,38 @@ export function PortfolioWidget() {
       .finally(() => setFetching(false));
   }, [loaded, holdings.length]);
 
-  if (!loaded || !isLoggedIn || holdings.length === 0) return null;
+  if (!loaded) return null;
+
+  if (!isLoggedIn) {
+    return (
+      <section className="px-4 lg:px-0 pt-4">
+        <div className="rounded-2xl overflow-hidden"
+          style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
+          <div className="flex items-center gap-2 px-4 py-3.5">
+            <div className="w-6 h-6 rounded-lg flex items-center justify-center"
+              style={{ background: "rgba(0,229,160,0.12)" }}>
+              <Wallet className="w-3 h-3" style={{ color: "var(--mint)" }} />
+            </div>
+            <span className="text-sm font-bold" style={{ color: "var(--text)" }}>내 보유종목</span>
+          </div>
+          <div className="border-t px-4 py-4 flex items-center justify-between gap-3"
+            style={{ borderColor: "var(--border)" }}>
+            <p className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
+              로그인 후 포트폴리오를 연동하면<br/>보유 종목과 수익률을 확인할 수 있어요
+            </p>
+            <button
+              onClick={() => router.push("/portfolio")}
+              className="flex-shrink-0 text-[11px] font-bold px-3 py-1.5 rounded-xl transition-opacity active:opacity-70"
+              style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+              연동하기
+            </button>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (holdings.length === 0) return null;
 
   let totalCost  = 0;
   let totalValue = 0;
@@ -90,10 +122,22 @@ export function PortfolioWidget() {
         <span className="text-sm font-bold" style={{ color: "var(--text)" }}>내 보유종목</span>
       </div>
       <div className="flex items-center gap-2">
-        <CurToggle cur={cur} onChange={setCur} />
-        <button className="flex items-center gap-0.5" onClick={() => router.push("/portfolio")}>
-          <span className="text-[10px]" style={{ color: "var(--muted)" }}>전체</span>
-          <ChevronRight className="w-3 h-3" style={{ color: "var(--muted)" }} />
+        {!collapsed && <CurToggle cur={cur} onChange={setCur} />}
+        {!collapsed && (
+          <button className="flex items-center gap-0.5" onClick={() => router.push("/portfolio")}>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>전체</span>
+            <ChevronRight className="w-3 h-3" style={{ color: "var(--muted)" }} />
+          </button>
+        )}
+        <button
+          onClick={() => setCollapsed((v) => !v)}
+          className="flex items-center gap-0.5 px-1.5 py-0.5 rounded-lg transition-opacity hover:opacity-70"
+          style={{ background: "var(--border)" }}
+        >
+          <span className="text-[10px]" style={{ color: "var(--muted)" }}>{collapsed ? "펼치기" : "숨기기"}</span>
+          {collapsed
+            ? <ChevronDown className="w-3 h-3" style={{ color: "var(--muted)" }} />
+            : <ChevronUp className="w-3 h-3" style={{ color: "var(--muted)" }} />}
         </button>
       </div>
     </div>
@@ -120,8 +164,9 @@ export function PortfolioWidget() {
       <div className="rounded-2xl overflow-hidden"
         style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
         {header}
-        {summaryRow}
+        {!collapsed && summaryRow}
 
+        {!collapsed && <>
         {/* ── Mobile: horizontal swipe ── */}
         <div className="lg:hidden flex gap-2.5 overflow-x-auto no-scrollbar px-4 pb-4"
           style={{ scrollSnapType: "x mandatory" }}>
@@ -134,11 +179,7 @@ export function PortfolioWidget() {
                 className="flex-shrink-0 flex flex-col gap-1.5 rounded-xl p-3 text-left transition-opacity active:opacity-70"
                 style={{ background: "var(--bg)", border: "1px solid var(--border)", width: "110px", scrollSnapAlign: "start" }}
                 onClick={() => router.push(`/stock/${h.symbol}`)}>
-                <div className="flex items-center gap-1.5">
-                  <div className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 text-[9px] font-bold"
-                    style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
-                    {h.symbol.slice(0, 2)}
-                  </div>
+                <div className="flex items-center">
                   <span className="text-xs font-bold truncate" style={{ color: "var(--text)" }}>{h.symbol}</span>
                 </div>
                 <div className="text-[11px] font-mono tabular-nums leading-none" style={{ color: "var(--muted)" }}>
@@ -180,10 +221,6 @@ export function PortfolioWidget() {
                 style={!isLast ? { borderBottom: "1px solid var(--border)" } : {}}
                 onClick={() => router.push(`/stock/${h.symbol}`)}>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 text-[10px] font-bold"
-                    style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
-                    {h.symbol.slice(0, 2)}
-                  </div>
                   <div>
                     <div className="text-xs font-bold" style={{ color: "var(--text)" }}>{h.symbol}</div>
                     <div className="text-[10px] tabular-nums leading-tight" style={{ color: "var(--muted)" }}>
@@ -228,6 +265,7 @@ export function PortfolioWidget() {
             </button>
           )}
         </div>
+        </>}
       </div>
     </section>
   );

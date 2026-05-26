@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 88" width="320" height="88">
+  <defs>
+    <!-- Investus 텍스트: 흰색 → 하단 골드 #d4af37 아주 살짝 -->
+    <linearGradient id="textGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="65%"  stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+
+    <!-- 아이콘 박스 내부: 깊은 다크 네이비 -->
+    <linearGradient id="boxGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#111c35"/>
+      <stop offset="100%" stop-color="#0b1220"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 전체 배경 (다크 네이비) -->
+  <rect width="320" height="88" fill="#0a0f1e" rx="12"/>
+
+  <!-- 아이콘 박스 — 다크 네이비, 미묘한 테두리 -->
+  <rect x="16" y="14" width="60" height="60" rx="14"
+        fill="url(#boxGrad)"
+        stroke="#1e3050" stroke-width="1.2"/>
+
+  <!-- TrendingUp 화살표 — 작게, 박스 중앙 (박스 47% 너비, scale=1.4) -->
+  <polyline
+    points="32,51  41,42  48,49  60,37"
+    fill="none" stroke="#dce8f5" stroke-width="2.2"
+    stroke-linecap="round" stroke-linejoin="round"
+  />
+  <polyline
+    points="51,37  60,37  60,45"
+    fill="none" stroke="#dce8f5" stroke-width="2.2"
+    stroke-linecap="round" stroke-linejoin="round"
+  />
+
+  <!-- Investus 텍스트 (흰색 → 하단 골드 그라데이션) -->
+  <text
+    x="90" y="41"
+    font-family="Arial, sans-serif"
+    font-size="22" font-weight="bold"
+    fill="url(#textGrad)"
+    letter-spacing="0.5"
+  >Investus</text>
+
+  <!-- 인베스트어스 서브텍스트 -->
+  <text
+    x="91" y="62"
+    font-family="Arial, sans-serif"
+    font-size="13"
+    fill="#6b7fa3"
+    letter-spacing="0.3"
+  >인베스트어스</text>
+</svg>

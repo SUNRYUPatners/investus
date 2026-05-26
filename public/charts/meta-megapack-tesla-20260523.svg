@@ -1,0 +1,62 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#fb923c"/>
+
+  <text x="30" y="32" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" letter-spacing="3">INVESTUS · META · Tesla Energy</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">META $200M Tesla 메가팩 — 와이오밍 AI 데이터센터</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.23</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Deal size big number -->
+  <rect x="30" y="82" width="260" height="160" rx="10" fill="#0d0c07" stroke="rgba(251,146,60,0.4)" stroke-width="1.5"/>
+  <text x="160" y="118" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700" text-anchor="middle">💰 계약 규모</text>
+  <text x="160" y="170" font-family="Arial,sans-serif" font-size="52" fill="#fb923c" font-weight="700" text-anchor="middle">$200M</text>
+  <text x="160" y="196" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Tesla Megapack 배터리</text>
+  <text x="160" y="214" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">META → 와이오밍 AI DC</text>
+  <text x="160" y="232" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="middle">Tesla 에너지 사업 최대 계약 중 하나</text>
+
+  <!-- Project specs -->
+  <rect x="310" y="82" width="460" height="160" rx="10" fill="#0a0b12" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <text x="330" y="108" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">📋 프로젝트 구성 (Enbridge 파트너십)</text>
+
+  <rect x="330" y="118" width="120" height="60" rx="6" fill="#0d1a0d" stroke="rgba(0,229,160,0.3)" stroke-width="1"/>
+  <text x="390" y="142" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">태양광</text>
+  <text x="390" y="160" font-family="Arial,sans-serif" font-size="18" fill="#00e5a0" font-weight="700" text-anchor="middle">365MW</text>
+  <text x="390" y="174" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">솔라 패널</text>
+
+  <rect x="466" y="118" width="140" height="60" rx="6" fill="#0d1a0d" stroke="rgba(0,229,160,0.3)" stroke-width="1"/>
+  <text x="536" y="142" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">배터리 저장</text>
+  <text x="536" y="158" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" font-weight="700" text-anchor="middle">200MW</text>
+  <text x="536" y="173" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle">1,600MWh</text>
+
+  <rect x="622" y="118" width="130" height="60" rx="6" fill="#0d0a1a" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+  <text x="687" y="142" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">총 파트너십</text>
+  <text x="687" y="162" font-family="Arial,sans-serif" font-size="18" fill="#fb923c" font-weight="700" text-anchor="middle">1.6GW</text>
+  <text x="687" y="176" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">청정에너지</text>
+
+  <text x="330" y="214" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">목적: META AI 데이터센터 안정적 전력 공급 (와이오밍)</text>
+  <text x="330" y="230" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Enbridge: META·Enbridge 청정에너지 파트너십 확장</text>
+
+  <!-- Tesla Energy growth story -->
+  <rect x="30" y="256" width="460" height="90" rx="10" fill="#0a0b12" stroke="rgba(251,146,60,0.2)" stroke-width="1"/>
+  <text x="50" y="280" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">📈 Tesla 에너지 사업 성장 스토리</text>
+  <text x="50" y="300" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• AI DC 붐 = Tesla Megapack 구조적 수요 급증</text>
+  <text x="50" y="318" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 수요처 다변화: 유틸리티 → AI 하이퍼스케일러</text>
+  <text x="50" y="336" font-family="Arial,sans-serif" font-size="10" fill="#fb923c">• META·AMZN·MSFT 등 빅테크 = Tesla 에너지 고객화</text>
+
+  <!-- META benefit -->
+  <rect x="510" y="256" width="260" height="90" rx="10" fill="#0a0b12" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <text x="530" y="280" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">META 수혜</text>
+  <text x="530" y="298" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">AI DC 전력 안정화</text>
+  <text x="530" y="314" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">청정에너지 ESG 목표 충족</text>
+  <text x="530" y="332" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">운영비 절감 + 탄소중립 가속</text>
+
+  <!-- Bottom bar -->
+  <rect x="30" y="358" width="740" height="38" rx="8" fill="#0d1020" stroke="rgba(251,146,60,0.15)" stroke-width="1"/>
+  <text x="50" y="376" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700">결론:</text>
+  <text x="85" y="376" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">Tesla는 EV 제조사에서 'AI 인프라 에너지 공급자'로 포지셔닝 확장 중 — 에너지 사업 밸류에이션 재평가 트리거</text>
+  <text x="50" y="390" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Megapack 단가 하락 + 수요 폭증 = 마진 개선 + 매출 성장 동시 달성 구조</text>
+
+  <line x1="30" y1="406" x2="770" y2="406" stroke="#1e2330" stroke-width="1"/>
+  <text x="770" y="422" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

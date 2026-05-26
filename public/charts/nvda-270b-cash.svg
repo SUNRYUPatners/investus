@@ -1,0 +1,60 @@
+<svg width="800" height="430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#060b18"/>
+  <rect x="0" y="0" width="800" height="3" fill="#60a5fa"/>
+
+  <text x="30" y="34" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" letter-spacing="3">INVESTUS · NVIDIA</text>
+  <text x="30" y="60" font-family="Arial,sans-serif" font-size="19" fill="white" font-weight="700">NVIDIA 12개월 잉여현금흐름 전망</text>
+  <text x="770" y="34" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="end">2026.05.22</text>
+  <line x1="30" y1="72" x2="770" y2="72" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Left hero -->
+  <text x="195" y="168" font-family="Arial,sans-serif" font-size="86" fill="#60a5fa" font-weight="700" text-anchor="middle">$270B</text>
+  <text x="195" y="194" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">12개월 FCF 전망</text>
+  <text x="195" y="212" font-family="Arial,sans-serif" font-size="11" fill="#c8cdd4" text-anchor="middle">애플 FCF의 2.5배</text>
+
+  <line x1="382" y1="84" x2="382" y2="295" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Right: bar chart -->
+  <!-- Label col x=398, bar from x=530, value col x=768 -->
+  <text x="590" y="100" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" text-anchor="middle">분기 OCF 성장 추이</text>
+
+  <!-- Q3 FY26  $35.6B → bar w=107 (35.6/60×180) -->
+  <text x="398" y="132" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Q3 FY26</text>
+  <rect x="490" y="118" width="107" height="18" rx="4" fill="#1e3a5f"/>
+  <text x="768" y="132" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="end">$35.6B</text>
+
+  <!-- Q4 FY26  $39.8B → bar w=120 -->
+  <text x="398" y="174" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Q4 FY26</text>
+  <rect x="490" y="160" width="120" height="18" rx="4" fill="#1e3a5f"/>
+  <text x="768" y="174" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="end">$39.8B</text>
+
+  <!-- Q1 FY27 $50.3B highlight → bar w=151 -->
+  <text x="398" y="216" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700">Q1 FY27 실적</text>
+  <rect x="490" y="202" width="151" height="20" rx="4" fill="#2563eb"/>
+  <text x="768" y="218" font-family="Arial,sans-serif" font-size="12" fill="white" text-anchor="end" font-weight="700">$50.3B 🔥</text>
+
+  <!-- Q2 FY27E ~$60B+ dashed → bar w=180 -->
+  <text x="398" y="258" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Q2 FY27 예상</text>
+  <rect x="490" y="244" width="180" height="18" rx="4" fill="#0d2545" stroke="#60a5fa" stroke-width="1" stroke-dasharray="5 3"/>
+  <text x="768" y="258" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="end">~$60B+</text>
+
+  <!-- Bottom: 3 use case tiles -->
+  <!-- w=228 each, gap=17, total=3×228+2×17=718. x=41: 41+228=269 gap=17 286+228=514 gap=17 531+228=759 -->
+  <text x="400" y="310" font-family="Arial,sans-serif" font-size="12" fill="#c8cdd4" text-anchor="middle" font-weight="700">$270B 활용 시나리오</text>
+
+  <rect x="36" y="320" width="228" height="52" rx="8" fill="#0a1525" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <text x="150" y="344" font-family="Arial,sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="700">🏢 M&amp;A</text>
+  <text x="150" y="362" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">AI 소프트웨어 인수</text>
+
+  <rect x="282" y="320" width="228" height="52" rx="8" fill="#0a1525" stroke="rgba(0,229,160,0.3)" stroke-width="1"/>
+  <text x="396" y="344" font-family="Arial,sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="700">📈 자사주 매입</text>
+  <text x="396" y="362" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">EPS 상승 → 주가 지지</text>
+
+  <rect x="528" y="320" width="228" height="52" rx="8" fill="#0a1525" stroke="rgba(192,132,252,0.3)" stroke-width="1"/>
+  <text x="642" y="344" font-family="Arial,sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="700">💰 배당 상향</text>
+  <text x="642" y="362" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">$0.01/주 → 점진 증가</text>
+
+  <line x1="30" y1="390" x2="770" y2="390" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="408" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="408" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>
