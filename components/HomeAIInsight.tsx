@@ -4,8 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import { Sparkles, ChevronDown, ChevronUp } from "lucide-react";
 import { usePortfolio } from "@/hooks/usePortfolio";
 
-type LiveQ = { symbol: string; price: number; change: number; changePercent: number };
-type ApiResp = { quotes: LiveQ[]; usdkrw: number };
+type PriceEntry = { price: number; change: number; changePercent: number };
+type GuruResp   = Record<string, PriceEntry>;
+type LiveQ      = { symbol: string; price: number; change: number; changePercent: number };
 
 export function HomeAIInsight() {
   const { holdings, loaded, isLoggedIn } = usePortfolio();
@@ -16,13 +17,21 @@ export function HomeAIInsight() {
   const [expanded, setExpanded] = useState(false);
   const fetchedAI = useRef(false);
 
-  // Fetch live prices
+  // Fetch live prices — same guru-prices API as 추천주식/인기종목 for consistency
   useEffect(() => {
     if (!loaded || holdings.length === 0) return;
-    const syms = holdings.map((h) => h.symbol).join(",");
-    fetch(`/api/portfolio-prices?symbols=${syms}`)
+    const syms = [...holdings.map((h) => h.symbol), "USDKRW=X"].join(",");
+    fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
       .then((r) => r.json())
-      .then((d: ApiResp) => { setQuotes(d.quotes); setUsdkrw(d.usdkrw); })
+      .then((d: GuruResp) => {
+        const rate = d["USDKRW=X"]?.price ?? 1350;
+        setUsdkrw(rate > 100 ? rate : 1350);
+        const mapped: LiveQ[] = holdings
+          .map((h) => h.symbol)
+          .filter((s) => d[s] && d[s].price > 0)
+          .map((s) => ({ symbol: s, price: d[s].price, change: d[s].change, changePercent: d[s].changePercent }));
+        setQuotes(mapped);
+      })
       .catch(() => {});
   }, [loaded, holdings.length]);
 

@@ -5,9 +5,10 @@ import { useRouter } from "next/navigation";
 import { TrendingUp, TrendingDown, ChevronRight, Wallet, ChevronDown, ChevronUp } from "lucide-react";
 import { usePortfolio } from "@/hooks/usePortfolio";
 
-type LiveQ   = { symbol: string; shortName: string; price: number; changePercent: number };
-type ApiResp = { quotes: LiveQ[]; usdkrw: number };
-type Cur     = "USD" | "KRW";
+type PriceEntry = { price: number; change: number; changePercent: number };
+type GuruResp   = Record<string, PriceEntry>;
+type LiveQ      = { symbol: string; shortName: string; price: number; changePercent: number };
+type Cur        = "USD" | "KRW";
 
 function fmtUSD(v: number) {
   return "$" + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -51,11 +52,25 @@ export function PortfolioWidget() {
 
   useEffect(() => {
     if (!loaded || holdings.length === 0) return;
-    const syms = holdings.map((h) => h.symbol).join(",");
+    // Use guru-prices (same API as 추천주식/인기종목) so prices are always consistent
+    const syms = [...holdings.map((h) => h.symbol), "USDKRW=X"].join(",");
     setFetching(true);
-    fetch(`/api/portfolio-prices?symbols=${syms}`)
+    fetch(`/api/guru-prices?symbols=${encodeURIComponent(syms)}`)
       .then((r) => r.json())
-      .then((d: ApiResp) => { setQuotes(d.quotes); setUsdkrw(d.usdkrw); })
+      .then((d: GuruResp) => {
+        const rate = d["USDKRW=X"]?.price ?? 1350;
+        setUsdkrw(rate > 100 ? rate : 1350);
+        const mapped: LiveQ[] = holdings
+          .map((h) => h.symbol)
+          .filter((s) => d[s] && d[s].price > 0)
+          .map((s) => ({
+            symbol:        s,
+            shortName:     s,
+            price:         d[s].price,
+            changePercent: d[s].changePercent,
+          }));
+        setQuotes(mapped);
+      })
       .catch(() => {})
       .finally(() => setFetching(false));
   }, [loaded, holdings.length]);

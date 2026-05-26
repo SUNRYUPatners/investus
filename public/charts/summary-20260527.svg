@@ -124,8 +124,8 @@
   <!-- Market Sentiment -->
   <rect x="544" y="420" width="224" height="96" rx="8" fill="rgba(30,45,74,0.6)" stroke="#334155" stroke-width="1" stroke-opacity="0.5"/>
   <text x="560" y="439" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" font-weight="700">오늘의 시장 한줄 요약</text>
-  <text x="560" y="458" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">"Tesla는 적자지만 AI 로봇·</text>
-  <text x="560" y="474" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">우주 합병 모멘텀으로 주가 방어.</text>
+  <text x="560" y="458" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">"Tesla Q1 자동차 부문 손실에도</text>
+  <text x="560" y="474" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">AI·로봇·합병 모멘텀으로 주가 방어.</text>
   <text x="560" y="490" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">AMD $1T 합류로 반도체 섹터</text>
   <text x="560" y="506" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="600">신고점 행진 지속 중."</text>
 
