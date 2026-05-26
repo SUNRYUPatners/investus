@@ -1,0 +1,145 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07091a"/>
+      <stop offset="100%" stop-color="#0b0e22"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1429"/>
+      <stop offset="100%" stop-color="#0a0d1f"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1200" fill="url(#bgGrad)"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="800" height="4" fill="#00e5a0"/>
+
+  <!-- Subtle grid texture -->
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#1e2330" stroke-width="0.5" stroke-opacity="0.5"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#1e2330" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <!-- ── HEADER ── -->
+  <text x="400" y="52" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle" letter-spacing="4">INVESTUS · 인베스트어스</text>
+  <text x="400" y="100" font-family="Arial,sans-serif" font-size="32" fill="white" font-weight="900" text-anchor="middle">미국주식 투자의 모든 것</text>
+  <text x="400" y="130" font-family="Arial,sans-serif" font-size="32" fill="#00e5a0" font-weight="900" text-anchor="middle" filter="url(#glow)">한 화면에서, 완전 무료</text>
+  <text x="400" y="162" font-family="Arial,sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">www.investus.kr</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="185" x2="740" y2="185" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- ── FEATURE CARDS ── -->
+
+  <!-- Card 1: AI 전날 장 요약 -->
+  <rect x="30" y="205" width="358" height="145" rx="16" fill="url(#cardGrad)" stroke="#00e5a0" stroke-width="1.2"/>
+  <rect x="30" y="205" width="358" height="4" rx="2" fill="#00e5a0"/>
+  <text x="62" y="242" font-family="Arial,sans-serif" font-size="22">🤖</text>
+  <text x="95" y="240" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">AI 전날 장 요약</text>
+  <text x="95" y="258" font-family="Arial,sans-serif" font-size="10" fill="#4b5563">매일 아침 자동 업데이트</text>
+  <text x="48" y="283" font-family="Arial,sans-serif" font-size="12" fill="#d1d5db">매일 아침 홈 화면에 들어가면</text>
+  <text x="48" y="301" font-family="Arial,sans-serif" font-size="12" fill="#d1d5db">어젯밤 미국장 흐름을 AI가</text>
+  <text x="48" y="319" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">한 문장으로 요약해줌.</text>
+  <text x="48" y="337" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">바쁜 직장인 필수 ✓</text>
+
+  <!-- Card 2: 포트폴리오 AI 점검 -->
+  <rect x="412" y="205" width="358" height="145" rx="16" fill="url(#cardGrad)" stroke="#60a5fa" stroke-width="1.2"/>
+  <rect x="412" y="205" width="358" height="4" rx="2" fill="#60a5fa"/>
+  <text x="444" y="242" font-family="Arial,sans-serif" font-size="22">💼</text>
+  <text x="477" y="240" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700">포트폴리오 AI 점검</text>
+  <text x="477" y="258" font-family="Arial,sans-serif" font-size="10" fill="#4b5563">보유 종목 즉시 분석</text>
+  <text x="430" y="283" font-family="Arial,sans-serif" font-size="12" fill="#d1d5db">내 보유 종목을 입력하면</text>
+  <text x="430" y="301" font-family="Arial,sans-serif" font-size="12" fill="#d1d5db">AI가 현재 상태와 리스크를</text>
+  <text x="430" y="319" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700">한 번에 점검해줌.</text>
+  <text x="430" y="337" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">종목별 개별 분석 포함 ✓</text>
+
+  <!-- Card 3: 리포트 무료 -->
+  <rect x="30" y="368" width="358" height="145" rx="16" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="1.2"/>
+  <rect x="30" y="368" width="358" height="4" rx="2" fill="#f59e0b"/>
+  <text x="62" y="405" font-family="Arial,sans-serif" font-size="22">📊</text>
+  <text x="95" y="403" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" font-weight="700">애널리스트 리포트</text>
+  <text x="95" y="421" font-family="Arial,sans-serif" font-size="10" fill="#4b5563">매일 업데이트 · 완전 무료</text>
+  <text x="48" y="446" font-family="Arial,sans-serif" font-size="12" fill="#d1d5db">NVDA · TSLA · AAPL · AMZN</text>
+  <text x="48" y="464" font-family="Arial,sans-serif" font-size="12" fill="#d1d5db">주요 종목 리포트가 매일 올라옴.</text>
+  <text x="48" y="482" font-family="Arial,sans-serif" font-size="12" fill="#f59e0b" font-weight="700">증권사 구독 없이 전부 무료.</text>
+  <text x="48" y="500" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">차트 + 핵심 인사이트 포함 ✓</text>
+
+  <!-- Card 4: 종목 토론방 -->
+  <rect x="412" y="368" width="358" height="145" rx="16" fill="url(#cardGrad)" stroke="#34d399" stroke-width="1.2"/>
+  <rect x="412" y="368" width="358" height="4" rx="2" fill="#34d399"/>
+  <text x="444" y="405" font-family="Arial,sans-serif" font-size="22">💬</text>
+  <text x="477" y="403" font-family="Arial,sans-serif" font-size="14" fill="#34d399" font-weight="700">종목 토론방</text>
+  <text x="477" y="421" font-family="Arial,sans-serif" font-size="10" fill="#4b5563">실시간 · 보유 인증 기반</text>
+  <text x="430" y="446" font-family="Arial,sans-serif" font-size="12" fill="#d1d5db">종목별 투자자 의견을 실시간으로</text>
+  <text x="430" y="464" font-family="Arial,sans-serif" font-size="12" fill="#d1d5db">보고 직접 참여 가능.</text>
+  <text x="430" y="482" font-family="Arial,sans-serif" font-size="12" fill="#34d399" font-weight="700">보유 인증 기반이라 신뢰도 높음.</text>
+  <text x="430" y="500" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">NVDA · TSLA · PLTR 등 ✓</text>
+
+  <!-- Card 5: 애널리스트 뒷담화 (WIDE - full width, most important) -->
+  <rect x="30" y="531" width="740" height="195" rx="16" fill="url(#cardGrad)" stroke="#a78bfa" stroke-width="1.5"/>
+  <rect x="30" y="531" width="740" height="4" rx="2" fill="#a78bfa"/>
+  <!-- Badge -->
+  <rect x="650" y="548" width="106" height="22" rx="11" fill="rgba(167,139,250,0.2)"/>
+  <text x="703" y="563" font-family="Arial,sans-serif" font-size="10" fill="#a78bfa" font-weight="700" text-anchor="middle">✦ 특별 기능</text>
+  <text x="62" y="568" font-family="Arial,sans-serif" font-size="22">🔐</text>
+  <text x="95" y="566" font-family="Arial,sans-serif" font-size="16" fill="#a78bfa" font-weight="700">애널리스트 뒷담화</text>
+  <text x="95" y="584" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">현직 애널들이 익명으로 올리는 솔직한 내부 뷰</text>
+
+  <!-- Quote box 1 -->
+  <rect x="48" y="600" width="335" height="100" rx="10" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.25)" stroke-width="1"/>
+  <text x="64" y="622" font-family="Arial,sans-serif" font-size="10" fill="#a78bfa" font-weight="700">여의도 독수리 #42 · NVDA</text>
+  <text x="64" y="641" font-family="Arial,sans-serif" font-size="11" fill="#d1d5db">"우리 팀 내부 NVDA 목표주가</text>
+  <text x="64" y="658" font-family="Arial,sans-serif" font-size="11" fill="#d1d5db">공식 발표보다 꽤 높음. 컨센서스</text>
+  <text x="64" y="675" font-family="Arial,sans-serif" font-size="11" fill="#d1d5db">튀면 부담이라 보수적으로 잡는 거임."</text>
+  <text x="64" y="692" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">👍 61</text>
+
+  <!-- Quote box 2 -->
+  <rect x="403" y="600" width="352" height="100" rx="10" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.25)" stroke-width="1"/>
+  <text x="419" y="622" font-family="Arial,sans-serif" font-size="10" fill="#a78bfa" font-weight="700">강남 수리부엉이 #63 · NVDA</text>
+  <text x="419" y="641" font-family="Arial,sans-serif" font-size="11" fill="#d1d5db">"Rubin Ultra HBM 수치 보고</text>
+  <text x="419" y="658" font-family="Arial,sans-serif" font-size="11" fill="#d1d5db">2027 타겟 모델 다시 짰음. 시장이</text>
+  <text x="419" y="675" font-family="Arial,sans-serif" font-size="11" fill="#d1d5db">이 영향을 제대로 안 보고 있는 것 같아."</text>
+  <text x="419" y="692" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">👍 93</text>
+
+  <!-- ── EXTRA FEATURES ROW ── -->
+  <rect x="30" y="744" width="740" height="72" rx="14" fill="rgba(255,255,255,0.03)" stroke="#1e2330" stroke-width="1"/>
+  <text x="400" y="768" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle" font-weight="700">+ 이런 기능도 다 있음</text>
+  <text x="400" y="798" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">공포탐욕지수  ·  버핏지수  ·  선물 히트맵  ·  실시간 시세  ·  ETF 정보  ·  종목 차트</text>
+
+  <!-- ── FREE BADGE ── -->
+  <rect x="240" y="836" width="320" height="56" rx="28" fill="rgba(0,229,160,0.12)" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="400" y="860" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">🎉 가입 불필요 · 전부 무료</text>
+  <text x="400" y="880" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">광고만 있고 모든 기능 무제한 이용</text>
+
+  <!-- ── DIVIDER ── -->
+  <line x1="60" y1="912" x2="740" y2="912" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- ── STATS ROW ── -->
+  <text x="180" y="944" font-family="Arial,sans-serif" font-size="28" fill="white" font-weight="900" text-anchor="middle">매일</text>
+  <text x="180" y="964" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">리포트 업데이트</text>
+
+  <line x1="267" y1="930" x2="267" y2="970" stroke="#1e2330" stroke-width="1"/>
+
+  <text x="400" y="944" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" font-weight="900" text-anchor="middle">₩0</text>
+  <text x="400" y="964" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">완전 무료</text>
+
+  <line x1="533" y1="930" x2="533" y2="970" stroke="#1e2330" stroke-width="1"/>
+
+  <text x="620" y="944" font-family="Arial,sans-serif" font-size="28" fill="white" font-weight="900" text-anchor="middle">한 화면</text>
+  <text x="620" y="964" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">모든 정보</text>
+
+  <!-- ── CTA ── -->
+  <rect x="120" y="990" width="560" height="68" rx="34" fill="#00e5a0"/>
+  <text x="400" y="1022" font-family="Arial,sans-serif" font-size="18" fill="#07091a" font-weight="900" text-anchor="middle">지금 바로 무료로 시작하기</text>
+  <text x="400" y="1045" font-family="Arial,sans-serif" font-size="13" fill="#065f46" text-anchor="middle" font-weight="700">www.investus.kr</text>
+
+  <!-- ── FOOTER ── -->
+  <line x1="30" y1="1080" x2="770" y2="1080" stroke="#1e2330" stroke-width="1"/>
+  <text x="400" y="1100" font-family="Arial,sans-serif" font-size="10" fill="#374151" text-anchor="middle">투자 참고용 · 투자 권유 아님 · 모든 정보는 참고 목적으로만 활용하시기 바랍니다</text>
+  <text x="400" y="1118" font-family="Arial,sans-serif" font-size="10" fill="#374151" text-anchor="middle">INVESTUS — 인베스트어스 · investus.kr</text>
+  <text x="770" y="1118" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
+</svg>
