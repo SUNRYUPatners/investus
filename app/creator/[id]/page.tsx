@@ -1,12 +1,10 @@
 "use client";
 
-import { use, useState, useEffect, useCallback } from "react";
-import { useRouter } from "next/navigation";
+import { use, useState } from "react";
 import Link from "next/link";
-import { ShieldCheck, Users, TrendingUp, ChevronLeft, Heart, Eye, Lock, PlayCircle, BookOpen, FileText, MessageSquare, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare } from "lucide-react";
 import { Header } from "@/components/Header";
 import { getCreator, contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
-import { useAuth } from "@/hooks/useAuth";
 
 const CONTENT_TABS: { key: ContentType | "all"; label: string }[] = [
   { key: "all",     label: "전체" },
@@ -27,60 +25,11 @@ function fmtDate(d: string) {
   return d.replace("-", "년 ").replace("-", "월 ") + "일";
 }
 
-function isSubscribed(creatorId: string): boolean {
-  try {
-    const subs: { creatorId: string; expiresAt: number }[] =
-      JSON.parse(localStorage.getItem("investus_subscriptions") ?? "[]");
-    return subs.some((s) => s.creatorId === creatorId && s.expiresAt > Date.now());
-  } catch { return false; }
-}
-
-function saveSubscription(creatorId: string) {
-  try {
-    const subs: { creatorId: string; expiresAt: number }[] =
-      JSON.parse(localStorage.getItem("investus_subscriptions") ?? "[]");
-    const filtered = subs.filter((s) => s.creatorId !== creatorId);
-    const expiresAt = Date.now() + 30 * 24 * 60 * 60 * 1000; // 30 days
-    filtered.push({ creatorId, expiresAt });
-    localStorage.setItem("investus_subscriptions", JSON.stringify(filtered));
-  } catch {}
-}
 
 export default function CreatorProfilePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
-  const { user } = useAuth();
-  const router = useRouter();
-
   const creator: Creator | undefined = getCreator(id);
-  const [subscribed, setSubscribed] = useState(false);
   const [contentTab, setContentTab] = useState<ContentType | "all">("all");
-  const [showPayModal, setShowPayModal] = useState(false);
-  const [paying, setPaying] = useState(false);
-  const [payDone, setPayDone] = useState(false);
-  const [payMethod, setPayMethod] = useState<"kakao" | "naver" | "card">("kakao");
-
-  useEffect(() => {
-    if (creator) setSubscribed(isSubscribed(creator.id));
-  }, [creator]);
-
-  const handleSubscribe = useCallback(() => {
-    if (!user) { router.push("/more"); return; }
-    if (subscribed) return;
-    setPayDone(false);
-    setShowPayModal(true);
-  }, [user, subscribed, router]);
-
-  const handlePay = useCallback(async () => {
-    if (paying) return;
-    setPaying(true);
-
-    // Demo mode: simulate payment
-    await new Promise((r) => setTimeout(r, 1500));
-    saveSubscription(creator!.id);
-    setSubscribed(true);
-    setPayDone(true);
-    setPaying(false);
-  }, [paying, creator]);
 
   if (!creator) {
     return (
@@ -166,28 +115,18 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               </div>
               <div className="text-center">
                 <div className="text-lg font-bold font-mono-num" style={{ color: "var(--text)" }}>
-                  {creator.subscriberCount.toLocaleString()}
+                  {creator.followerCount.toLocaleString()}
                 </div>
-                <div className="text-[10px]" style={{ color: "var(--muted)" }}>구독자</div>
+                <div className="text-[10px]" style={{ color: "var(--muted)" }}>팔로워</div>
               </div>
             </div>
 
-            {/* Subscribe button */}
-            {subscribed ? (
-              <div className="w-full py-3.5 rounded-2xl flex items-center justify-center gap-2 border"
-                style={{ borderColor: "var(--mint)", color: "var(--mint)" }}>
-                <CheckCircle2 className="w-5 h-5" />
-                <span className="text-sm font-bold">구독 중</span>
-              </div>
-            ) : (
-              <button
-                onClick={handleSubscribe}
-                className="w-full py-3.5 rounded-2xl text-sm font-bold text-black flex items-center justify-center gap-2 active:opacity-80 transition-opacity"
-                style={{ background: "var(--mint)" }}>
-                <Users className="w-4 h-4" />
-                구독하기 · {creator.subscriptionPrice === 0 ? "무료" : `₩${creator.subscriptionPrice.toLocaleString()}/월`}
-              </button>
-            )}
+            {/* Free + ad-supported notice */}
+            <div className="w-full py-3 rounded-2xl flex flex-col items-center gap-0.5 border"
+              style={{ borderColor: "rgba(0,229,160,0.25)", background: "rgba(0,229,160,0.05)" }}>
+              <span className="text-xs font-bold" style={{ color: "var(--mint)" }}>무료 콘텐츠 · 광고로 크리에이터를 지원합니다</span>
+              <span className="text-[10px]" style={{ color: "var(--muted)" }}>모든 콘텐츠를 무료로 이용하실 수 있습니다</span>
+            </div>
           </div>
         </div>
 
@@ -256,95 +195,17 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
           {/* Content list */}
           <div className="flex flex-col gap-3">
             {filteredContents.map((content) => (
-              <ContentCard key={content.id} content={content} subscribed={subscribed} onLock={handleSubscribe} />
+              <ContentCard key={content.id} content={content} />
             ))}
           </div>
         </div>
       </main>
 
-      {/* Payment modal */}
-      {showPayModal && (
-        <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.7)" }}
-          onClick={() => !paying && setShowPayModal(false)}>
-          <div className="w-full max-w-[480px] mx-auto rounded-t-3xl p-6 pb-10"
-            style={{ background: "var(--card)" }}
-            onClick={(e) => e.stopPropagation()}>
-            <div className="w-10 h-1 rounded-full mx-auto mb-6" style={{ background: "var(--border)" }} />
-
-            {payDone ? (
-              <div className="flex flex-col items-center gap-4 py-4">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center text-3xl"
-                  style={{ background: "rgba(0,229,160,0.15)" }}>
-                  ✅
-                </div>
-                <h2 className="text-lg font-bold font-syne" style={{ color: "var(--text)" }}>구독 완료!</h2>
-                <p className="text-sm text-center" style={{ color: "var(--muted)" }}>
-                  {creator.nickname}의 모든 프리미엄 콘텐츠를<br />이용할 수 있습니다.
-                </p>
-                <button onClick={() => setShowPayModal(false)}
-                  className="w-full py-3.5 rounded-2xl text-sm font-bold text-black"
-                  style={{ background: "var(--mint)" }}>
-                  콘텐츠 보기
-                </button>
-              </div>
-            ) : (
-              <>
-                <h2 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
-                  {creator.nickname} 구독
-                </h2>
-                <p className="text-sm mb-5" style={{ color: "var(--muted)" }}>
-                  월 ₩{creator.subscriptionPrice.toLocaleString()} · 30일 자동 갱신
-                </p>
-
-                {/* Payment methods */}
-                <p className="text-xs mb-2 font-semibold" style={{ color: "var(--muted)" }}>결제 수단</p>
-                <div className="flex flex-col gap-2 mb-5">
-                  {(["kakao", "naver", "card"] as const).map((m) => {
-                    const labels = { kakao: "카카오페이", naver: "네이버페이", card: "신용/체크카드" };
-                    const emojis = { kakao: "💛", naver: "💚", card: "💳" };
-                    return (
-                      <button key={m}
-                        onClick={() => setPayMethod(m)}
-                        className="w-full py-3.5 px-4 rounded-2xl border flex items-center gap-3 transition-all"
-                        style={payMethod === m
-                          ? { borderColor: "var(--mint)", background: "rgba(0,229,160,0.06)", color: "var(--text)" }
-                          : { borderColor: "var(--border)", background: "var(--bg)", color: "var(--text)" }}>
-                        <span className="text-lg">{emojis[m]}</span>
-                        <span className="text-sm font-semibold">{labels[m]}</span>
-                        {payMethod === m && <CheckCircle2 className="w-4 h-4 ml-auto" style={{ color: "var(--mint)" }} />}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <button onClick={handlePay} disabled={paying}
-                  className="w-full py-3.5 rounded-2xl text-sm font-bold text-black flex items-center justify-center gap-2 active:opacity-80 transition-opacity"
-                  style={{ background: "var(--mint)", opacity: paying ? 0.7 : 1 }}>
-                  {paying ? (
-                    <><span className="animate-spin">⏳</span> 결제 처리 중...</>
-                  ) : (
-                    `₩${creator.subscriptionPrice.toLocaleString()} 결제하기`
-                  )}
-                </button>
-                <p className="text-[10px] text-center mt-2" style={{ color: "var(--muted)" }}>
-                  언제든 해지 가능
-                </p>
-              </>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
 
-function ContentCard({ content, subscribed, onLock }: {
-  content: CreatorContent;
-  subscribed: boolean;
-  onLock: () => void;
-}) {
-  const isLocked = content.isPremium && !subscribed;
-
+function ContentCard({ content }: { content: CreatorContent }) {
   return (
     <div className="rounded-2xl border overflow-hidden"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}>
@@ -361,14 +222,8 @@ function ContentCard({ content, subscribed, onLock }: {
                 {CONTENT_ICON[content.type]}
                 <span className="ml-0.5">{contentTypeLabel(content.type)}</span>
               </span>
-              {content.isPremium && (
-                <span className="text-[10px] px-1.5 py-0.5 rounded-md"
-                  style={{ background: "rgba(251,191,36,0.1)", color: "#fbbf24" }}>
-                  구독 전용
-                </span>
-              )}
             </div>
-            <p className="text-sm font-semibold leading-snug mb-1" style={{ color: isLocked ? "var(--muted)" : "var(--text)" }}>
+            <p className="text-sm font-semibold leading-snug mb-1" style={{ color: "var(--text)" }}>
               {content.title}
             </p>
             <p className="text-[11px] leading-relaxed line-clamp-2" style={{ color: "var(--muted)" }}>
@@ -391,15 +246,6 @@ function ContentCard({ content, subscribed, onLock }: {
             </span>
           </div>
         </div>
-
-        {isLocked && (
-          <button onClick={onLock}
-            className="w-full mt-3 py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs font-bold border"
-            style={{ borderColor: "#fbbf24", color: "#fbbf24", background: "rgba(251,191,36,0.06)" }}>
-            <Lock className="w-3.5 h-3.5" />
-            구독하고 전체 보기
-          </button>
-        )}
       </div>
     </div>
   );

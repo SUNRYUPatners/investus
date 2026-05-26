@@ -836,11 +836,11 @@ export default function WallPage() {
 
   const sortedCreators = [...CREATORS].sort((a, b) => {
     if (creatorSort === "return")      return b.annualReturn - a.annualReturn;
-    if (creatorSort === "subscribers") return b.subscriberCount - a.subscriberCount;
+    if (creatorSort === "subscribers") return b.followerCount - a.followerCount;
     if (creatorSort === "newest")      return b.inceptionDate.localeCompare(a.inceptionDate);
-    // popular: sort by total engagement (subscriberCount weight + content views)
-    const scoreA = a.subscriberCount * 10 + a.contents.reduce((s, c) => s + c.viewCount, 0) / 100;
-    const scoreB = b.subscriberCount * 10 + b.contents.reduce((s, c) => s + c.viewCount, 0) / 100;
+    // popular: sort by total engagement (followerCount weight + content views)
+    const scoreA = a.followerCount * 10 + a.contents.reduce((s, c) => s + c.viewCount, 0) / 100;
+    const scoreB = b.followerCount * 10 + b.contents.reduce((s, c) => s + c.viewCount, 0) / 100;
     return scoreB - scoreA;
   });
 
@@ -1305,7 +1305,7 @@ export default function WallPage() {
                     <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[1].annualReturn}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#C0C0C0" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#C0C0C0" }}>{w.subscribers(CREATORS[1].subscriberCount)}</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#C0C0C0" }}>{w.subscribers(CREATORS[1].followerCount)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-base"
@@ -1334,7 +1334,7 @@ export default function WallPage() {
                     <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[0].annualReturn}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#FFD700" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#FFD700" }}>{w.subscribers(CREATORS[0].subscriberCount)}</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#FFD700" }}>{w.subscribers(CREATORS[0].followerCount)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-xl"
@@ -1363,7 +1363,7 @@ export default function WallPage() {
                     <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[2].annualReturn}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#CD7F32" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#CD7F32" }}>{w.subscribers(CREATORS[2].subscriberCount)}</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#CD7F32" }}>{w.subscribers(CREATORS[2].followerCount)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-base"

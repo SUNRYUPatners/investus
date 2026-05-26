@@ -8,7 +8,7 @@ const RANK_MEDAL = ["🥇", "🥈", "🥉"];
 const RANK_COLORS = ["#FFD700", "#C0C0C0", "#CD7F32"];
 
 export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number }) {
-  const { id, nickname, avatar, coverGradient, bio, tags, subscriptionPrice, subscriberCount, annualReturn, portfolio, isVerified, accountBroker } = creator;
+  const { id, nickname, avatar, coverGradient, bio, tags, followerCount, annualReturn, portfolio, isVerified, accountBroker } = creator;
   const topHoldings = portfolio.slice(0, 3);
   const medal = rank != null && rank <= 3 ? RANK_MEDAL[rank - 1] : null;
   const medalColor = rank != null && rank <= 3 ? RANK_COLORS[rank - 1] : null;
@@ -74,7 +74,7 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
             <div className="flex items-center gap-1">
               <Users className="w-3 h-3" style={{ color: "var(--muted)" }} />
               <span className="text-xs font-mono-num" style={{ color: "var(--text)" }}>
-                {subscriberCount.toLocaleString()}명
+                {followerCount.toLocaleString()}명
               </span>
             </div>
           </div>
@@ -92,16 +92,9 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
             ))}
           </div>
 
-          {/* Bottom: price + CTA */}
+          {/* Bottom: CTA */}
           <div className="flex items-center justify-between">
-            <div>
-              <span className="text-base font-bold font-mono-num" style={{ color: "var(--text)" }}>
-                {subscriptionPrice === 0 ? "무료" : `₩${subscriptionPrice.toLocaleString()}`}
-              </span>
-              {subscriptionPrice > 0 && (
-                <span className="text-[10px] ml-1" style={{ color: "var(--muted)" }}>/월</span>
-              )}
-            </div>
+            <span className="text-[11px] font-bold" style={{ color: "var(--mint)" }}>무료 · 광고 지원형</span>
             <span className="text-xs font-bold px-4 py-2 rounded-xl"
               style={{ background: "var(--mint)", color: "#000" }}>
               프로필 보기

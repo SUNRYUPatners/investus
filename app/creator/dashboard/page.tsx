@@ -7,7 +7,7 @@ import { Header } from "@/components/Header";
 import { useAuth } from "@/hooks/useAuth";
 import {
   ChevronLeft, Plus, Pencil, ShieldCheck, Upload,
-  Trash2, Eye, Heart, Lock, X, CheckCircle2,
+  Trash2, Eye, Heart, X, CheckCircle2,
 } from "lucide-react";
 
 type ContentType = "post" | "report" | "lecture" | "book";
@@ -18,8 +18,6 @@ type MyContent = {
   title: string;
   description: string;
   body: string;
-  isPremium: boolean;
-  price: number;
   externalUrl: string;
   fileLabel: string;
   createdAt: string;
@@ -33,7 +31,6 @@ type MyCreator = {
   avatar: string;
   bio: string;
   tags: string[];
-  subscriptionPrice: number;
   broker: string;
   portfolio: { symbol: string; name: string; allocation: number }[];
   status: "pending" | "approved";
@@ -78,8 +75,6 @@ export default function CreatorDashboardPage() {
   const [wTitle,       setWTitle]       = useState("");
   const [wDesc,        setWDesc]        = useState("");
   const [wBody,        setWBody]        = useState("");
-  const [wPremium,     setWPremium]     = useState(false);
-  const [wPrice,       setWPrice]       = useState("");
   const [wExternalUrl, setWExternalUrl] = useState("");
   const [wFileLabel,   setWFileLabel]   = useState("");
 
@@ -161,15 +156,12 @@ export default function CreatorDashboardPage() {
 
   const handleWrite = () => {
     if (!wTitle.trim()) return;
-    const priceNum = parseFloat(wPrice.replace(/,/g, "")) || 0;
     const item: MyContent = {
       id: Date.now().toString(),
       type: wType,
       title: wTitle.trim(),
       description: wDesc.trim(),
       body: wBody.trim(),
-      isPremium: wPremium || priceNum > 0,
-      price: priceNum,
       externalUrl: wExternalUrl.trim(),
       fileLabel: wFileLabel.trim(),
       createdAt: new Date().toISOString().slice(0, 10),
@@ -180,8 +172,8 @@ export default function CreatorDashboardPage() {
     saveContents(next);
     setContents(next);
     setShowWrite(false);
-    setWTitle(""); setWDesc(""); setWBody(""); setWPremium(false); setWType("post");
-    setWPrice(""); setWExternalUrl(""); setWFileLabel("");
+    setWTitle(""); setWDesc(""); setWBody(""); setWType("post");
+    setWExternalUrl(""); setWFileLabel("");
   };
 
   const handleDelete = (id: string) => {
@@ -210,6 +202,7 @@ export default function CreatorDashboardPage() {
   const visible = tab === "all" ? contents : contents.filter((c) => c.type === tab);
   const totalViews = contents.reduce((s, c) => s + c.viewCount, 0);
   const totalAlloc = creator.portfolio.reduce((s, h) => s + h.allocation, 0);
+  const estimatedRevenue = Math.round(totalViews * 20);
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
@@ -255,7 +248,7 @@ export default function CreatorDashboardPage() {
                   )}
                 </div>
                 <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-                  {creator.broker} · {creator.subscriptionPrice === 0 ? "무료" : `₩${creator.subscriptionPrice.toLocaleString()}/월`}
+                  {creator.broker} · 광고 수익형
                 </p>
               </div>
               <button onClick={() => setShowEdit(true)}
@@ -275,18 +268,20 @@ export default function CreatorDashboardPage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-2 p-3 rounded-xl mb-4" style={{ background: "var(--bg)" }}>
+            <div className="grid grid-cols-3 gap-2 p-3 rounded-xl mb-3" style={{ background: "var(--bg)" }}>
               <div className="text-center">
                 <div className="text-base font-bold font-mono-num" style={{ color: "var(--mint)" }}>{contents.length}</div>
                 <div className="text-[10px]" style={{ color: "var(--muted)" }}>게시물</div>
               </div>
               <div className="text-center border-x" style={{ borderColor: "var(--border)" }}>
-                <div className="text-base font-bold font-mono-num" style={{ color: "var(--mint)" }}>0</div>
-                <div className="text-[10px]" style={{ color: "var(--muted)" }}>구독자</div>
-              </div>
-              <div className="text-center">
                 <div className="text-base font-bold font-mono-num" style={{ color: "var(--mint)" }}>{totalViews.toLocaleString()}</div>
                 <div className="text-[10px]" style={{ color: "var(--muted)" }}>총 조회</div>
+              </div>
+              <div className="text-center">
+                <div className="text-base font-bold font-mono-num" style={{ color: "#fbbf24" }}>
+                  {estimatedRevenue > 0 ? `₩${estimatedRevenue.toLocaleString()}` : "₩0"}
+                </div>
+                <div className="text-[10px]" style={{ color: "var(--muted)" }}>예상 광고수익</div>
               </div>
             </div>
 
@@ -442,18 +437,6 @@ export default function CreatorDashboardPage() {
                           style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
                           {TYPE_LABEL[c.type]}
                         </span>
-                        {c.price > 0 && (
-                          <span className="text-[10px] px-1.5 py-0.5 rounded-md font-mono-num"
-                            style={{ background: "rgba(251,191,36,0.1)", color: "#fbbf24" }}>
-                            ₩{c.price.toLocaleString()}
-                          </span>
-                        )}
-                        {c.isPremium && !c.price && (
-                          <span className="text-[10px] px-1.5 py-0.5 rounded-md flex items-center gap-0.5"
-                            style={{ background: "rgba(251,191,36,0.1)", color: "#fbbf24" }}>
-                            <Lock className="w-2.5 h-2.5" />구독 전용
-                          </span>
-                        )}
                         {c.externalUrl && (
                           <span className="text-[10px] px-1.5 py-0.5 rounded-md"
                             style={{ background: "rgba(99,102,241,0.1)", color: "#818cf8" }}>
@@ -579,32 +562,13 @@ export default function CreatorDashboardPage() {
               </>
             )}
 
-            {/* Price */}
-            <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>
-              가격 <span style={{ color: "var(--mint)" }}>(0 = 무료)</span>
-            </p>
-            <div className="flex items-center gap-2 rounded-xl border mb-4 px-4"
-              style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-              <span className="text-sm" style={{ color: "var(--muted)" }}>₩</span>
-              <input value={wPrice} onChange={(e) => setWPrice(e.target.value.replace(/[^0-9]/g, ""))}
-                placeholder="0"
-                className="flex-1 py-3 bg-transparent text-sm outline-none font-mono-num"
-                style={{ color: "var(--text)" }} />
-            </div>
-
-            {/* Premium toggle */}
-            <div className="flex items-center justify-between p-4 rounded-xl border"
-              style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-              <div>
-                <p className="text-xs font-semibold" style={{ color: "var(--text)" }}>구독 전용</p>
-                <p className="text-[10px]" style={{ color: "var(--muted)" }}>켜면 구독자만 볼 수 있어요</p>
-              </div>
-              <button onClick={() => setWPremium((v) => !v)}
-                className="w-12 h-6 rounded-full relative transition-colors"
-                style={{ background: wPremium ? "var(--mint)" : "var(--border)" }}>
-                <div className="w-5 h-5 rounded-full absolute top-0.5 transition-all bg-white"
-                  style={{ left: wPremium ? "calc(100% - 22px)" : "2px" }} />
-              </button>
+            {/* Ad model notice */}
+            <div className="flex items-center gap-2 p-3 rounded-xl border"
+              style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+              <span className="text-sm">💡</span>
+              <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+                모든 콘텐츠는 무료로 공개됩니다. 조회수 기반 광고 수익이 정산됩니다.
+              </p>
             </div>
           </div>
         </div>
@@ -666,7 +630,7 @@ export default function CreatorDashboardPage() {
               <Link href="/creator/setup"
                 className="text-xs font-semibold"
                 style={{ color: "var(--muted)" }}>
-                포트폴리오 · 구독료 전체 수정 →
+                포트폴리오 전체 수정 →
               </Link>
             </div>
           </div>

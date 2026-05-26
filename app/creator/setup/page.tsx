@@ -12,18 +12,17 @@ import { useAuth } from "@/hooks/useAuth";
 
 const AVATARS = ["🦁", "🚀", "👑", "💰", "🐂", "🦅", "🎯", "💎", "🔥", "🌊", "⚡", "🧠"];
 const TAG_OPTIONS = ["가치투자", "성장주", "배당주", "ETF", "테크", "AI반도체", "장기홀딩", "단기트레이딩", "적립식", "배당성장", "현금흐름", "패시브투자"];
-const PRICE_OPTIONS = [0, 9900, 15000, 19000, 29000, 39000, 49000, 59000];
 const BROKERS = ["키움증권", "삼성증권", "미래에셋증권", "NH투자증권", "토스증권", "카카오페이증권", "신한투자증권", "기타"];
 
 type Holding = { symbol: string; name: string; allocation: number };
 type CreatorDraft = {
   nickname: string; avatar: string; bio: string; tags: string[];
-  subscriptionPrice: number; broker: string; portfolio: Holding[];
+  broker: string; portfolio: Holding[];
 };
 
 const EMPTY: CreatorDraft = {
   nickname: "", avatar: "🦁", bio: "", tags: [],
-  subscriptionPrice: 29000, broker: "", portfolio: [],
+  broker: "", portfolio: [],
 };
 
 /* ── Inline login/signup ──────────────────────────────────── */
@@ -205,8 +204,8 @@ export default function CreatorSetupPage() {
     reader.readAsDataURL(file);
   };
 
-  // Save to localStorage then advance to step 4
-  const finishStep3 = () => {
+  // Save to localStorage then advance to step 3 (verification)
+  const finishStep2 = () => {
     const payload = {
       ...draft,
       id: user.email,
@@ -214,7 +213,7 @@ export default function CreatorSetupPage() {
       createdAt: new Date().toISOString(),
     };
     try { localStorage.setItem("investus_my_creator", JSON.stringify(payload)); } catch {}
-    setStep(4);
+    setStep(3);
   };
 
   // Submit verification to API
@@ -262,7 +261,7 @@ export default function CreatorSetupPage() {
               <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>승인 후 가능한 것들</p>
               <ul className="text-[11px] leading-relaxed list-none flex flex-col gap-1" style={{ color: "var(--muted)" }}>
                 <li>✓ 투자 분석 글 · 리포트 작성</li>
-                <li>✓ 유료 구독 채널 운영</li>
+                <li>✓ 광고 수익 정산 (조회수 기반)</li>
                 <li>✓ 포트폴리오 공개 및 팔로워 모집</li>
               </ul>
             </div>
@@ -296,7 +295,7 @@ export default function CreatorSetupPage() {
 
         {/* Step indicator */}
         <div className="flex items-center gap-2 px-4 py-4">
-          {[1, 2, 3, 4].map((s) => (
+          {[1, 2, 3].map((s) => (
             <div key={s} className="flex-1 h-1 rounded-full transition-all"
               style={{ background: s <= step ? "var(--mint)" : "var(--border)" }} />
           ))}
@@ -308,19 +307,19 @@ export default function CreatorSetupPage() {
             <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>기본 프로필 설정</h1>
             <p className="text-xs mb-4" style={{ color: "var(--muted)" }}>구독자들에게 보여질 프로필을 설정해 주세요</p>
 
-            {/* Fee disclosure notice */}
+            {/* Ad revenue notice */}
             <div className="rounded-2xl border p-4 mb-3"
-              style={{ background: "rgba(251,191,36,0.06)", borderColor: "rgba(251,191,36,0.25)" }}>
+              style={{ background: "rgba(0,229,160,0.06)", borderColor: "rgba(0,229,160,0.2)" }}>
               <div className="flex items-start gap-2.5">
                 <span className="text-base flex-shrink-0">💡</span>
                 <div>
-                  <p className="text-[11px] font-bold mb-1.5" style={{ color: "#fbbf24" }}>크리에이터 수익 안내</p>
+                  <p className="text-[11px] font-bold mb-1.5" style={{ color: "var(--mint)" }}>크리에이터 수익 안내 (유튜브 방식)</p>
                   <ul className="flex flex-col gap-1">
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
-                      · 구독료의 <span style={{ color: "var(--text)", fontWeight: 600 }}>90%</span>가 크리에이터에게 매월 정산됩니다.
+                      · 콘텐츠 조회수 기반 <span style={{ color: "var(--text)", fontWeight: 600 }}>광고 수익</span>이 크리에이터에게 지급됩니다.
                     </li>
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
-                      · 플랫폼 운영 수수료 <span style={{ color: "var(--text)", fontWeight: 600 }}>10%</span>가 차감됩니다.
+                      · 시청자는 <span style={{ color: "var(--text)", fontWeight: 600 }}>완전 무료</span>로 모든 콘텐츠를 이용합니다.
                     </li>
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
                       · 계좌 인증 후 승인이 완료되어야 수익화가 시작됩니다.
@@ -462,65 +461,17 @@ export default function CreatorSetupPage() {
             <div className="flex gap-2">
               <button onClick={() => setStep(1)} className="flex-1 py-3.5 rounded-2xl text-sm font-bold border"
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}>이전</button>
-              <button onClick={() => setStep(3)} disabled={!canNext2}
+              <button onClick={finishStep2} disabled={!canNext2}
                 className="flex-[2] py-3.5 rounded-2xl text-sm font-bold text-black flex items-center justify-center gap-2 transition-opacity"
                 style={{ background: "var(--mint)", opacity: canNext2 ? 1 : 0.4 }}>
-                다음 — 구독 설정 <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ── Step 3: Subscription ── */}
-        {step === 3 && (
-          <div className="px-4">
-            <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>구독 요금 설정</h1>
-            <p className="text-xs mb-5" style={{ color: "var(--muted)" }}>구독자가 월 납부하는 금액. 수수료 10% 제외 후 정산됩니다.</p>
-
-            <div className="grid grid-cols-2 gap-2 mb-5">
-              {PRICE_OPTIONS.map((p) => (
-                <button key={p} onClick={() => setDraft((d) => ({ ...d, subscriptionPrice: p }))}
-                  className="py-4 rounded-2xl border text-center transition-all"
-                  style={draft.subscriptionPrice === p
-                    ? { borderColor: "var(--mint)", background: "rgba(0,229,160,0.06)" }
-                    : { borderColor: "var(--border)", background: "var(--card)" }}>
-                  <div className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>
-                    {p === 0 ? "무료" : `₩${p.toLocaleString()}`}
-                  </div>
-                  {p > 0 && <div className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
-                    정산 ₩{Math.round(p * 0.9).toLocaleString()}
-                  </div>}
-                </button>
-              ))}
-            </div>
-
-            <div className="rounded-2xl p-4 mb-6 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-              <h3 className="text-xs font-bold mb-3" style={{ color: "var(--muted)" }}>예상 수익 시뮬레이션</h3>
-              {[100, 500, 1000].map((n) => (
-                <div key={n} className="flex justify-between text-xs mb-2">
-                  <span style={{ color: "var(--muted)" }}>구독자 {n.toLocaleString()}명</span>
-                  <span className="font-mono-num font-bold" style={{ color: "var(--mint)" }}>
-                    {draft.subscriptionPrice === 0 ? "무료"
-                      : `₩${Math.round(draft.subscriptionPrice * 0.9 * n).toLocaleString()}/월`}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex gap-2">
-              <button onClick={() => setStep(2)} className="flex-1 py-3.5 rounded-2xl text-sm font-bold border"
-                style={{ borderColor: "var(--border)", color: "var(--muted)" }}>이전</button>
-              <button onClick={finishStep3}
-                className="flex-[2] py-3.5 rounded-2xl text-sm font-bold text-black flex items-center justify-center gap-2"
-                style={{ background: "var(--mint)" }}>
                 다음 — 계좌 인증 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         )}
 
-        {/* ── Step 4: Account verification (screenshot upload) ── */}
-        {step === 4 && (
+        {/* ── Step 3: Account verification (screenshot upload) ── */}
+        {step === 3 && (
           <div className="px-4">
             <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>계좌 인증</h1>
             <p className="text-xs mb-5" style={{ color: "var(--muted)" }}>
@@ -586,7 +537,7 @@ export default function CreatorSetupPage() {
             </div>
 
             <div className="flex gap-2">
-              <button onClick={() => setStep(3)} className="flex-1 py-3.5 rounded-2xl text-sm font-bold border"
+              <button onClick={() => setStep(2)} className="flex-1 py-3.5 rounded-2xl text-sm font-bold border"
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}>이전</button>
               <button
                 onClick={handleSubmitVerification}
