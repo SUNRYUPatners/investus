@@ -392,7 +392,7 @@ function AskAI({ symbol }: { symbol: string }) {
             <p className="text-xs font-bold mb-1" style={{ color: "var(--mint)" }}>{w.aiSubLabel}</p>
             <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>{w.aiSubDesc}</p>
             <button
-              onClick={() => router.push("/more")}
+              onClick={() => router.push("/")}
               className="w-full py-2.5 rounded-xl text-sm font-bold text-black"
               style={{ background: "var(--mint)" }}>
               {w.aiSubscribe}
