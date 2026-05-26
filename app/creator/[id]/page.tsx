@@ -2,7 +2,7 @@
 
 import { use, useState } from "react";
 import Link from "next/link";
-import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare } from "lucide-react";
+import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { getCreator, contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
 
@@ -26,10 +26,25 @@ function fmtDate(d: string) {
 }
 
 
+function loadSubscribed(creatorId: string): boolean {
+  try { return localStorage.getItem(`investus_subscribed_${creatorId}`) === "1"; } catch { return false; }
+}
+function saveSubscribed(creatorId: string, val: boolean) {
+  try {
+    if (val) localStorage.setItem(`investus_subscribed_${creatorId}`, "1");
+    else localStorage.removeItem(`investus_subscribed_${creatorId}`);
+  } catch {}
+}
+
 export default function CreatorProfilePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const creator: Creator | undefined = getCreator(id);
   const [contentTab, setContentTab] = useState<ContentType | "all">("all");
+  const [isSubscribed, setIsSubscribed] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return loadSubscribed(id);
+  });
+  const [showSubModal, setShowSubModal] = useState(false);
 
   if (!creator) {
     return (
@@ -121,12 +136,28 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               </div>
             </div>
 
-            {/* Free + ad-supported notice */}
-            <div className="w-full py-3 rounded-2xl flex flex-col items-center gap-0.5 border"
-              style={{ borderColor: "rgba(0,229,160,0.25)", background: "rgba(0,229,160,0.05)" }}>
-              <span className="text-xs font-bold" style={{ color: "var(--mint)" }}>무료 콘텐츠 · 광고로 투자클럽을 지원합니다</span>
-              <span className="text-[10px]" style={{ color: "var(--muted)" }}>모든 콘텐츠를 무료로 이용하실 수 있습니다</span>
-            </div>
+            {/* Subscribe or free notice */}
+            {creator.subscriptionEnabled ? (
+              isSubscribed ? (
+                <div className="w-full py-3 rounded-2xl flex items-center justify-center gap-2 border"
+                  style={{ borderColor: "rgba(0,229,160,0.25)", background: "rgba(0,229,160,0.05)" }}>
+                  <CheckCircle2 className="w-4 h-4" style={{ color: "var(--mint)" }} />
+                  <span className="text-xs font-bold" style={{ color: "var(--mint)" }}>구독 중 — 모든 콘텐츠 이용 가능</span>
+                </div>
+              ) : (
+                <button onClick={() => setShowSubModal(true)}
+                  className="w-full py-3 rounded-2xl text-sm font-bold text-black active:opacity-80 transition-opacity"
+                  style={{ background: "var(--mint)" }}>
+                  구독하기 ₩{creator.subscriptionPrice?.toLocaleString()}/월 →
+                </button>
+              )
+            ) : (
+              <div className="w-full py-3 rounded-2xl flex flex-col items-center gap-0.5 border"
+                style={{ borderColor: "rgba(0,229,160,0.25)", background: "rgba(0,229,160,0.05)" }}>
+                <span className="text-xs font-bold" style={{ color: "var(--mint)" }}>무료 콘텐츠 · 광고로 투자클럽을 지원합니다</span>
+                <span className="text-[10px]" style={{ color: "var(--muted)" }}>모든 콘텐츠를 무료로 이용하실 수 있습니다</span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -195,25 +226,85 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
           {/* Content list */}
           <div className="flex flex-col gap-3">
             {filteredContents.map((content) => (
-              <ContentCard key={content.id} content={content} />
+              <ContentCard
+                key={content.id}
+                content={content}
+                locked={!!(creator.subscriptionEnabled && content.isPremium && !isSubscribed)}
+                onUnlock={() => setShowSubModal(true)}
+              />
             ))}
           </div>
         </div>
       </main>
 
+      {/* Subscribe modal */}
+      {showSubModal && (
+        <div className="fixed inset-0 z-50 flex items-end" style={{ background: "rgba(0,0,0,0.6)" }}
+          onClick={() => setShowSubModal(false)}>
+          <div className="w-full max-w-[480px] mx-auto rounded-t-3xl p-6 pb-10"
+            style={{ background: "var(--card)" }}
+            onClick={(e) => e.stopPropagation()}>
+            <div className="w-10 h-1 rounded-full mx-auto mb-6" style={{ background: "var(--border)" }} />
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
+                  {creator.nickname} 구독
+                </h2>
+                <p className="text-sm mt-0.5" style={{ color: "var(--muted)" }}>
+                  프리미엄 콘텐츠 무제한 이용
+                </p>
+              </div>
+              <button onClick={() => setShowSubModal(false)}>
+                <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
+              </button>
+            </div>
+
+            <div className="rounded-2xl p-4 mb-5 border" style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-bold" style={{ color: "var(--text)" }}>월 구독</span>
+                <span className="text-xl font-bold font-mono-num" style={{ color: "var(--mint)" }}>
+                  ₩{creator.subscriptionPrice?.toLocaleString()}
+                </span>
+              </div>
+              <div className="flex flex-col gap-2">
+                {["프리미엄 콘텐츠 전체 이용", "신규 콘텐츠 즉시 열람", "광고 없이 이용"].map((f) => (
+                  <div key={f} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" style={{ color: "var(--mint)" }} />
+                    <span className="text-xs" style={{ color: "var(--muted)" }}>{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button
+              onClick={() => {
+                setIsSubscribed(true);
+                saveSubscribed(id, true);
+                setShowSubModal(false);
+              }}
+              className="w-full py-4 rounded-2xl text-sm font-bold text-black active:opacity-80 transition-opacity mb-3"
+              style={{ background: "var(--mint)" }}>
+              구독 시작하기 →
+            </button>
+            <p className="text-[10px] text-center" style={{ color: "var(--muted)" }}>
+              결제 시스템은 준비 중입니다 · 베타 기간 무료 체험
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-function ContentCard({ content }: { content: CreatorContent }) {
+function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; locked: boolean; onUnlock: () => void }) {
   return (
     <div className="rounded-2xl border overflow-hidden"
-      style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+      style={{ background: "var(--card)", borderColor: locked ? "rgba(99,102,241,0.2)" : "var(--border)" }}>
       <div className="p-4">
         <div className="flex items-start gap-3">
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0 relative"
             style={{ background: "var(--bg)" }}>
-            {content.thumbnail}
+            {locked ? <Lock className="w-5 h-5" style={{ color: "var(--muted)" }} /> : content.thumbnail}
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 mb-1 flex-wrap">
@@ -222,21 +313,36 @@ function ContentCard({ content }: { content: CreatorContent }) {
                 {CONTENT_ICON[content.type]}
                 <span className="ml-0.5">{contentTypeLabel(content.type)}</span>
               </span>
+              {content.isPremium && (
+                <span className="text-[10px] px-1.5 py-0.5 rounded-md"
+                  style={{ background: "rgba(99,102,241,0.12)", color: "#818cf8" }}>
+                  {locked ? "🔒 구독 전용" : "✓ 구독"}
+                </span>
+              )}
             </div>
-            <p className="text-sm font-semibold leading-snug mb-1" style={{ color: "var(--text)" }}>
+            <p className="text-sm font-semibold leading-snug mb-1"
+              style={{ color: locked ? "var(--muted)" : "var(--text)" }}>
               {content.title}
             </p>
-            <p className="text-[11px] leading-relaxed line-clamp-2" style={{ color: "var(--muted)" }}>
-              {content.description}
-            </p>
+            {locked ? (
+              <button onClick={onUnlock}
+                className="text-[11px] font-bold underline"
+                style={{ color: "#818cf8" }}>
+                구독하면 바로 열람 가능 →
+              </button>
+            ) : (
+              <p className="text-[11px] leading-relaxed line-clamp-2" style={{ color: "var(--muted)" }}>
+                {content.description}
+              </p>
+            )}
           </div>
         </div>
 
         {/* Meta row */}
         <div className="flex items-center gap-4 mt-3 pt-3 border-t" style={{ borderColor: "var(--border)" }}>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{fmtDate(content.createdAt)}</span>
-          {content.duration && <span className="text-[10px]" style={{ color: "var(--muted)" }}>⏱ {content.duration}</span>}
-          {content.pages && <span className="text-[10px]" style={{ color: "var(--muted)" }}>📄 {content.pages}p</span>}
+          {!locked && content.duration && <span className="text-[10px]" style={{ color: "var(--muted)" }}>⏱ {content.duration}</span>}
+          {!locked && content.pages && <span className="text-[10px]" style={{ color: "var(--muted)" }}>📄 {content.pages}p</span>}
           <div className="ml-auto flex items-center gap-3">
             <span className="flex items-center gap-0.5 text-[10px]" style={{ color: "var(--muted)" }}>
               <Heart className="w-3 h-3" />{content.likeCount}

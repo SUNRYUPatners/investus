@@ -18,6 +18,7 @@ export type CreatorContent = {
   pages?: number      // for books
   likeCount: number
   viewCount: number
+  isPremium?: boolean // requires subscription when creator.subscriptionEnabled
 }
 
 export type Creator = {
@@ -35,6 +36,8 @@ export type Creator = {
   accountBroker: string
   portfolio: CreatorHolding[]
   contents: CreatorContent[]
+  subscriptionEnabled?: boolean  // club leader opt-in to paid tier
+  subscriptionPrice?: number     // monthly price in KRW (e.g., 5900)
 }
 
 export const CREATORS: Creator[] = [
@@ -51,6 +54,8 @@ export const CREATORS: Creator[] = [
     inceptionDate: "2019-03",
     isVerified: true,
     accountBroker: "키움증권",
+    subscriptionEnabled: true,
+    subscriptionPrice: 9900,
     portfolio: [
       { symbol: "AAPL",  name: "애플",          allocation: 28.4, avgReturn: 156.3 },
       { symbol: "MSFT",  name: "마이크로소프트", allocation: 22.1, avgReturn: 203.7 },
@@ -62,8 +67,8 @@ export const CREATORS: Creator[] = [
     contents: [
       { id: "jw1", type: "lecture", title: "워렌 버핏처럼 기업 분석하는 법", description: "재무제표 읽는 법부터 내재가치 계산까지. 실제 분석 사례 포함 7시간 강의", thumbnail: "📊", createdAt: "2025-04-12", duration: "7시간 20분", likeCount: 284, viewCount: 3210 },
       { id: "jw2", type: "book",    title: "한국인을 위한 미국 가치투자",       description: "국내 최초 미국주식 가치투자 전략서. 실제 포트폴리오 공개.",              thumbnail: "📚", createdAt: "2025-02-28", pages: 312,          likeCount: 512, viewCount: 8741 },
-      { id: "jw3", type: "report",  title: "2025 Q1 포트폴리오 리뷰",           description: "매 분기 공개하는 포지션 변화와 투자 근거 상세 리포트",                  thumbnail: "📋", createdAt: "2025-04-02",                      likeCount: 147, viewCount: 1892 },
-      { id: "jw4", type: "post",    title: "버핏이 애플을 파는 진짜 이유",       description: "세금 전략인가, 포지션 조정인가? 심층 분석",                            thumbnail: "💡", createdAt: "2025-05-01",                      likeCount:  89, viewCount: 4523 },
+      { id: "jw3", type: "report",  title: "2025 Q1 포트폴리오 리뷰",           description: "매 분기 공개하는 포지션 변화와 투자 근거 상세 리포트",                  thumbnail: "📋", createdAt: "2025-04-02",                      likeCount: 147, viewCount: 1892, isPremium: true },
+      { id: "jw4", type: "post",    title: "버핏이 애플을 파는 진짜 이유",       description: "세금 전략인가, 포지션 조정인가? 심층 분석",                            thumbnail: "💡", createdAt: "2025-05-01",                      likeCount:  89, viewCount: 4523, isPremium: true },
     ],
   },
   {

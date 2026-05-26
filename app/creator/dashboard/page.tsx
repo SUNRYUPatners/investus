@@ -35,6 +35,8 @@ type MyCreator = {
   portfolio: { symbol: string; name: string; allocation: number }[];
   status: "pending" | "approved";
   createdAt: string;
+  subscriptionEnabled?: boolean;
+  subscriptionPrice?: number;
 };
 
 const AVATARS = ["🦁", "🚀", "👑", "💰", "🐂", "🦅", "🎯", "💎", "🔥", "🌊", "⚡", "🧠"];
@@ -79,10 +81,12 @@ export default function CreatorDashboardPage() {
   const [wFileLabel,   setWFileLabel]   = useState("");
 
   // Edit form
-  const [eNickname, setENickname] = useState("");
-  const [eBio,      setEBio]      = useState("");
-  const [eAvatar,   setEAvatar]   = useState("");
-  const [eTags,     setETags]     = useState<string[]>([]);
+  const [eNickname,         setENickname]         = useState("");
+  const [eBio,              setEBio]              = useState("");
+  const [eAvatar,           setEAvatar]           = useState("");
+  const [eTags,             setETags]             = useState<string[]>([]);
+  const [eSubEnabled,       setESubEnabled]       = useState(false);
+  const [eSubPrice,         setESubPrice]         = useState(9900);
 
   useEffect(() => {
     if (!authLoaded) return; // localStorage 로드 대기
@@ -95,6 +99,8 @@ export default function CreatorDashboardPage() {
     setEBio(c.bio);
     setEAvatar(c.avatar);
     setETags(c.tags);
+    setESubEnabled(c.subscriptionEnabled ?? false);
+    setESubPrice(c.subscriptionPrice ?? 9900);
 
     // Sync approval status from server
     if (c.status !== "approved") {
@@ -189,6 +195,8 @@ export default function CreatorDashboardPage() {
       bio: eBio.trim() || creator.bio,
       avatar: eAvatar,
       tags: eTags,
+      subscriptionEnabled: eSubEnabled,
+      subscriptionPrice: eSubEnabled ? eSubPrice : undefined,
     };
     saveCreator(updated);
     setCreator(updated);
@@ -248,7 +256,7 @@ export default function CreatorDashboardPage() {
                   )}
                 </div>
                 <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-                  {creator.broker} · 광고 수익형
+                  {creator.broker} · {creator.subscriptionEnabled ? `₩${creator.subscriptionPrice?.toLocaleString()}/월 구독` : "광고 수익형"}
                 </p>
               </div>
               <button onClick={() => setShowEdit(true)}
@@ -625,6 +633,47 @@ export default function CreatorDashboardPage() {
                 </button>
               ))}
             </div>
+
+            {/* Subscription toggle */}
+            {creator.status === "approved" && (
+              <div className="mb-6 rounded-2xl border p-4" style={{ borderColor: "var(--border)", background: "var(--bg)" }}>
+                <div className="flex items-center justify-between mb-1">
+                  <div>
+                    <p className="text-xs font-bold" style={{ color: "var(--text)" }}>유료 구독 활성화</p>
+                    <p className="text-[10px]" style={{ color: "var(--muted)" }}>
+                      {eSubEnabled ? "구독자만 볼 수 있는 프리미엄 콘텐츠를 설정할 수 있어요" : "광고 수익형 무료 클럽으로 운영 중"}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setESubEnabled((v) => !v)}
+                    className="w-11 h-6 rounded-full transition-colors flex-shrink-0 relative"
+                    style={{ background: eSubEnabled ? "var(--mint)" : "var(--border)" }}>
+                    <span className="absolute top-0.5 w-5 h-5 rounded-full transition-all"
+                      style={{
+                        background: "#fff",
+                        left: eSubEnabled ? "calc(100% - 1.375rem)" : "2px",
+                      }} />
+                  </button>
+                </div>
+
+                {eSubEnabled && (
+                  <div className="mt-3 pt-3 border-t" style={{ borderColor: "var(--border)" }}>
+                    <p className="text-[10px] font-semibold mb-2" style={{ color: "var(--muted)" }}>월 구독료</p>
+                    <div className="flex gap-2">
+                      {[5900, 9900, 14900].map((p) => (
+                        <button key={p} onClick={() => setESubPrice(p)}
+                          className="flex-1 py-2 rounded-xl text-xs font-bold border transition-all active:opacity-70"
+                          style={eSubPrice === p
+                            ? { background: "var(--mint)", color: "#000", borderColor: "var(--mint)" }
+                            : { background: "var(--card)", color: "var(--muted)", borderColor: "var(--border)" }}>
+                          ₩{p.toLocaleString()}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
 
             <div className="pt-4 border-t" style={{ borderColor: "var(--border)" }}>
               <Link href="/creator/setup"
