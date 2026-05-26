@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#e31937" opacity="0.8"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#e31937" font-weight="600" letter-spacing="2">TSLA · 중국 판매 · 2026.05.27</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="20" fill="#ffffff" font-weight="700">베이징 NEV 84,000대 등록 — 테슬라 중국 수요 회복 신호</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">가족 구매자 중심 · Model Y 신형 인도 효과 · Q2 강세 전망</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Big Number -->
+  <text x="32" y="150" font-family="'SF Pro Display',Arial,sans-serif" font-size="64" fill="#e31937" font-weight="800">84,000</text>
+  <text x="32" y="178" font-family="Arial,sans-serif" font-size="14" fill="#94a3b8">베이징 NEV 등록 (가족 구매자 대상) — 역대급 수치</text>
+
+  <!-- Bar chart: estimated quarterly NEV registrations (Tesla China) -->
+  <text x="32" y="215" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">■ 테슬라 중국 분기별 등록 추이 (추정)</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="360" x2="540" y2="360" stroke="#1e2d4a" stroke-width="1"/>
+  <line x1="80" y1="220" x2="80" y2="360" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Y-axis labels -->
+  <text x="74" y="360" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="end">0</text>
+  <text x="74" y="318" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="end">50K</text>
+  <text x="74" y="275" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="end">100K</text>
+  <text x="74" y="233" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="end">150K</text>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="318" x2="540" y2="318" stroke="#1e2d4a" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="80" y1="275" x2="540" y2="275" stroke="#1e2d4a" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="80" y1="233" x2="540" y2="233" stroke="#1e2d4a" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- Bars (Q1 2025 ~ Q2 2026E) -->
+  <!-- Q1 2025: ~135K -->
+  <rect x="95" y="247" width="44" height="113" rx="3" fill="#e31937" opacity="0.5"/>
+  <text x="117" y="243" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">135K</text>
+  <text x="117" y="373" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="middle">Q1'25</text>
+
+  <!-- Q2 2025: ~120K -->
+  <rect x="160" y="261" width="44" height="99" rx="3" fill="#e31937" opacity="0.5"/>
+  <text x="182" y="257" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">120K</text>
+  <text x="182" y="373" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="middle">Q2'25</text>
+
+  <!-- Q3 2025: ~118K -->
+  <rect x="225" y="263" width="44" height="97" rx="3" fill="#e31937" opacity="0.5"/>
+  <text x="247" y="259" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">118K</text>
+  <text x="247" y="373" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="middle">Q3'25</text>
+
+  <!-- Q4 2025: ~130K -->
+  <rect x="290" y="253" width="44" height="107" rx="3" fill="#e31937" opacity="0.6"/>
+  <text x="312" y="249" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">130K</text>
+  <text x="312" y="373" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="middle">Q4'25</text>
+
+  <!-- Q1 2026: ~109K (actual) -->
+  <rect x="355" y="273" width="44" height="87" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <text x="377" y="269" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">109K</text>
+  <text x="377" y="373" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Q1'26</text>
+
+  <!-- Q2 2026E: ~140K+ strong -->
+  <rect x="420" y="240" width="44" height="120" rx="3" fill="#4ade80" opacity="0.8"/>
+  <text x="442" y="236" font-family="Arial,sans-serif" font-size="9" fill="#4ade80" font-weight="700" text-anchor="middle">140K+E</text>
+  <text x="442" y="373" font-family="Arial,sans-serif" font-size="9" fill="#4ade80" font-weight="700" text-anchor="middle">Q2'26E</text>
+
+  <!-- Right side analysis -->
+  <text x="560" y="130" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="700">■ 강세 요인</text>
+  <text x="560" y="148" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 신형 Model Y 첫 인도 효과</text>
+  <text x="560" y="164" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 미중 관세 협상 우호 분위기</text>
+  <text x="560" y="180" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• NEV 보조금 연장 확인</text>
+  <text x="560" y="196" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 84K 가족 구매층 → 반복 구매</text>
+
+  <text x="560" y="228" font-family="Arial,sans-serif" font-size="11" fill="#f87171" font-weight="700">■ 경쟁 리스크</text>
+  <text x="560" y="246" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• BYD Han/Atto — 현지 가격 경쟁</text>
+  <text x="560" y="262" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• Geely·Chery 급성장</text>
+  <text x="560" y="278" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 중국 토종 AI 차량 마케팅 강화</text>
+
+  <text x="560" y="310" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ 투자 포인트</text>
+  <text x="560" y="328" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• China = 테슬라 전체 매출 20%+</text>
+  <text x="560" y="344" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• Q2 회복 확인 시 주가 촉매</text>
+  <text x="560" y="360" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• FSD 중국 승인 여부도 변수</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.27</text>
+</svg>

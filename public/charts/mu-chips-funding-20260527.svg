@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#fb923c" opacity="0.9"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="600" letter-spacing="2">MU · CHIPS법 · 2026.05.27</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="20" fill="#ffffff" font-weight="700">마이크론 CHIPS법 $51.6억 수령 확정 + 정치인 매수</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">상원 상무위원회 CHIPS법 감독 · 의원 3인 올해 MU 매수 공시</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Big Amount -->
+  <rect x="32" y="114" width="280" height="70" rx="8" fill="rgba(251,146,60,0.1)" stroke="#fb923c" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="50" y="140" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="600">CHIPS법 보조금 수령액</text>
+  <text x="50" y="168" font-family="'SF Pro Display',Arial,sans-serif" font-size="30" fill="#ffffff" font-weight="800">$5,166,000,000</text>
+  <text x="50" y="180" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">$5.166B · 상원 상무위 감독 하 확정</text>
+
+  <!-- Politicians Table -->
+  <text x="32" y="212" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">■ CHIPS법 감독 의원들의 MU 매수 (2026년 내)</text>
+
+  <rect x="32" y="222" width="736" height="26" rx="4" fill="rgba(30,45,74,0.8)"/>
+  <text x="50" y="239" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-weight="600">의원</text>
+  <text x="260" y="239" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-weight="600">직책 · 위원회</text>
+  <text x="520" y="239" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-weight="600">수익률 (MU 기준)</text>
+  <text x="690" y="239" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-weight="600" text-anchor="middle">비고</text>
+
+  <!-- Row 1 -->
+  <rect x="32" y="248" width="736" height="28" rx="0" fill="rgba(251,146,60,0.06)"/>
+  <text x="50" y="266" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Cleo Fields</text>
+  <text x="260" y="266" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">상원의원 · 상무위</text>
+  <text x="520" y="266" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="700">+40%</text>
+  <text x="690" y="266" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">올해 내 매수 공시</text>
+
+  <!-- Row 2 -->
+  <rect x="32" y="276" width="736" height="28" rx="0" fill="rgba(0,0,0,0.1)"/>
+  <text x="50" y="294" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Tom Carper</text>
+  <text x="260" y="294" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">전 상원의원 · 환경위</text>
+  <text x="520" y="294" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="700">+12%</text>
+  <text x="690" y="294" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">올해 내 매수 공시</text>
+
+  <!-- Row 3 -->
+  <rect x="32" y="304" width="736" height="28" rx="0" fill="rgba(251,146,60,0.06)"/>
+  <text x="50" y="322" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">John Fetterman</text>
+  <text x="260" y="322" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">상원의원 · 상무위</text>
+  <text x="520" y="322" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="700">+48%</text>
+  <text x="690" y="322" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">올해 내 매수 공시</text>
+
+  <!-- MU Stock price -->
+  <rect x="32" y="346" width="280" height="56" rx="8" fill="rgba(251,146,60,0.06)" stroke="#fb923c" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="50" y="366" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="600">마이크론(MU) 주가</text>
+  <text x="50" y="386" font-family="'SF Pro Display',Arial,sans-serif" font-size="22" fill="#ffffff" font-weight="700">$858.30</text>
+  <text x="200" y="386" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">YTD: 상승 추세</text>
+
+  <!-- Analysis right side -->
+  <text x="330" y="352" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">■ 투자 시사점</text>
+  <text x="330" y="369" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• CHIPS법 자금 → Idaho·NY 공장 확장 직결</text>
+  <text x="330" y="385" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• HBM4 생산 능력 대폭 확대 → NVDA 공급망 핵심</text>
+  <text x="330" y="401" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 정치인 매수 = 정책 지속성 확신 신호 (논란 있음)</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.27</text>
+</svg>

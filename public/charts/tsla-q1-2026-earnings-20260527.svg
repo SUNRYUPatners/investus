@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#e31937" opacity="0.8"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#e31937" font-weight="600" letter-spacing="2">TSLA · 실적 분석 · 2026.05.27</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="21" fill="#ffffff" font-weight="700">Tesla Q1 2026 실적 — 매출 성장 속 적자 지속</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">매출 +15% YoY 성장 / 영업손실 -$19.4억 / 순손실 -$42.8억</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Income Statement Table -->
+  <!-- Header Row -->
+  <rect x="32" y="112" width="736" height="28" rx="4" fill="rgba(30,45,74,0.8)"/>
+  <text x="50" y="131" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-weight="600">(단위: 백만 달러)</text>
+  <text x="360" y="131" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" text-anchor="middle">Q1 2026</text>
+  <text x="480" y="131" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-weight="600" text-anchor="middle">Q1 2025</text>
+  <text x="600" y="131" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-weight="600" text-anchor="middle">FY2025</text>
+  <text x="720" y="131" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-weight="600" text-anchor="middle">FY2024</text>
+
+  <!-- Revenue Row -->
+  <rect x="32" y="141" width="736" height="26" rx="0" fill="rgba(74,222,128,0.06)"/>
+  <text x="50" y="158" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Revenue</text>
+  <text x="360" y="158" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" font-weight="700" text-anchor="middle">$4,694</text>
+  <text x="480" y="158" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">$4,067</text>
+  <text x="600" y="158" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">$18,674</text>
+  <text x="720" y="158" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">$14,015</text>
+
+  <!-- Total Costs Row -->
+  <rect x="32" y="167" width="736" height="26" rx="0" fill="rgba(0,0,0,0.1)"/>
+  <text x="50" y="184" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Total Costs &amp; Expenses</text>
+  <text x="360" y="184" font-family="Arial,sans-serif" font-size="12" fill="#f87171" font-weight="700" text-anchor="middle">$6,637</text>
+  <text x="480" y="184" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">$4,040</text>
+  <text x="600" y="184" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">$21,263</text>
+  <text x="720" y="184" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">$13,549</text>
+
+  <!-- Operating Income Row -->
+  <rect x="32" y="193" width="736" height="26" rx="0" fill="rgba(248,113,113,0.06)"/>
+  <text x="50" y="210" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Operating Income (Loss)</text>
+  <text x="360" y="210" font-family="Arial,sans-serif" font-size="12" fill="#f87171" font-weight="700" text-anchor="middle">($1,943)</text>
+  <text x="480" y="210" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">$27</text>
+  <text x="600" y="210" font-family="Arial,sans-serif" font-size="12" fill="#f87171" text-anchor="middle">($2,589)</text>
+  <text x="720" y="210" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">$466</text>
+
+  <!-- Net Income Row -->
+  <rect x="32" y="219" width="736" height="26" rx="0" fill="rgba(0,0,0,0.1)"/>
+  <text x="50" y="236" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Net Income (Loss)</text>
+  <text x="360" y="236" font-family="Arial,sans-serif" font-size="12" fill="#f87171" font-weight="700" text-anchor="middle">($4,276)</text>
+  <text x="480" y="236" font-family="Arial,sans-serif" font-size="12" fill="#f87171" text-anchor="middle">($528)</text>
+  <text x="600" y="236" font-family="Arial,sans-serif" font-size="12" fill="#f87171" text-anchor="middle">($4,937)</text>
+  <text x="720" y="236" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">$791</text>
+
+  <!-- EPS Row -->
+  <rect x="32" y="245" width="736" height="26" rx="0" fill="rgba(248,113,113,0.06)"/>
+  <text x="50" y="262" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">EPS (Diluted)</text>
+  <text x="360" y="262" font-family="Arial,sans-serif" font-size="12" fill="#f87171" font-weight="700" text-anchor="middle">($1.27)</text>
+  <text x="480" y="262" font-family="Arial,sans-serif" font-size="12" fill="#f87171" text-anchor="middle">($0.18)</text>
+  <text x="600" y="262" font-family="Arial,sans-serif" font-size="12" fill="#f87171" text-anchor="middle">($1.69)</text>
+  <text x="720" y="262" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">$0.01</text>
+
+  <!-- Shares Row -->
+  <rect x="32" y="271" width="736" height="26" rx="0" fill="rgba(0,0,0,0.1)"/>
+  <text x="50" y="288" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Shares (Diluted, M)</text>
+  <text x="360" y="288" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">3,884</text>
+  <text x="480" y="288" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">2,875</text>
+  <text x="600" y="288" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">2,926</text>
+  <text x="720" y="288" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">9,956</text>
+
+  <!-- Bottom Analysis -->
+  <rect x="32" y="312" width="236" height="80" rx="8" fill="rgba(248,113,113,0.08)" stroke="#f87171" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="50" y="332" font-family="Arial,sans-serif" font-size="10" fill="#f87171" font-weight="700">⚠ 핵심 우려</text>
+  <text x="50" y="349" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 비용 급증: +64% YoY ($4.04B→$6.64B)</text>
+  <text x="50" y="364" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 순손실 FY2025 역대 최대 (-$4.9B)</text>
+  <text x="50" y="379" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 주식수 급증: 2,875M → 3,884M (+35%)</text>
+
+  <rect x="285" y="312" width="236" height="80" rx="8" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="303" y="332" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="700">✓ 긍정 요소</text>
+  <text x="303" y="349" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 매출 +15.4% YoY ($4.07B→$4.69B)</text>
+  <text x="303" y="364" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• FSD·에너지 고마진 사업 확대 중</text>
+  <text x="303" y="379" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• Optimus·로보택시 수익화 임박</text>
+
+  <rect x="538" y="312" width="230" height="80" rx="8" fill="rgba(192,132,252,0.06)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="556" y="332" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700">📌 투자 포인트</text>
+  <text x="556" y="349" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 성장 비용 vs 수익화 타임라인이 핵심</text>
+  <text x="556" y="364" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 2026 H2 Cybercab·Optimus 수익 여부</text>
+  <text x="556" y="379" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 주가 $422 = "AI 기업" 밸류에이션 선반영</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.27</text>
+</svg>

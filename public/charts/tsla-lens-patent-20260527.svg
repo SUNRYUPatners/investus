@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+    <radialGradient id="lensGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#e31937" opacity="0.8"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#e31937" font-weight="600" letter-spacing="2">TSLA · 특허 분석 · 2026.05.27</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="20" fill="#ffffff" font-weight="700">Tesla 카메라 렌즈 자동 세정 시스템 특허 등록</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">US Patent No. 12,636,684 B1  ·  등록일: 2026년 5월 26일</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Patent Badge -->
+  <rect x="32" y="114" width="200" height="60" rx="8" fill="rgba(59,130,246,0.12)" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="42" y="138" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700">U.S. PATENT</text>
+  <text x="42" y="155" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" font-weight="800">12,636,684 B1</text>
+  <text x="42" y="169" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Issued May 26, 2026 · Tesla, Inc.</text>
+
+  <!-- Lens Visual -->
+  <circle cx="580" cy="230" r="100" fill="url(#lensGlow)" stroke="#1e3a5f" stroke-width="1"/>
+  <circle cx="580" cy="230" r="80" fill="rgba(10,15,30,0.9)" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="580" cy="230" r="55" fill="rgba(10,15,30,0.95)" stroke="#60a5fa" stroke-width="1.5"/>
+  <circle cx="580" cy="230" r="32" fill="rgba(20,30,60,0.9)" stroke="#93c5fd" stroke-width="1"/>
+  <circle cx="580" cy="230" r="14" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1"/>
+  <!-- Wiper mechanism hint -->
+  <path d="M 508 230 Q 540 195 580 190" stroke="#fbbf24" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+  <text x="498" y="195" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24">와이퍼</text>
+  <!-- Spray nozzle hint -->
+  <path d="M 652 175 L 620 210" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="655" y="172" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa">분사 노즐</text>
+  <text x="560" y="235" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">카메라</text>
+  <text x="560" y="248" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">렌즈</text>
+
+  <!-- Details -->
+  <text x="32" y="198" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ 특허 핵심 내용</text>
+  <text x="32" y="216" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">자율주행 차량 카메라 렌즈를 자동으로</text>
+  <text x="32" y="232" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">감지·세정하는 통합 시스템</text>
+
+  <text x="32" y="260" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ 세정 트리거 조건</text>
+  <text x="32" y="278" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 카메라 이미지 오염도 AI 자동 감지</text>
+  <text x="32" y="294" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 다른 센서(레이더·라이다 불필요)의</text>
+  <text x="32" y="310" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">  교차 데이터로 세정 필요성 판단</text>
+  <text x="32" y="326" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 비·눈·먼지·벌레 등 다양한 이물질 대응</text>
+  <text x="32" y="342" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 와이퍼+세정액 복합 작동 메커니즘</text>
+
+  <text x="32" y="368" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ 투자 시사점</text>
+  <text x="32" y="384" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• FSD 카메라 전용 설계 → 순수 카메라 기반 AV의 핵심 단점 극복</text>
+  <text x="32" y="400" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 악천후 FSD 신뢰도 향상 → Robotaxi 상업화 가속 요소</text>
+  <text x="32" y="416" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 9 claims · 7 drawing sheets · 출원인: Tesla, Inc. (Austin, TX)</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.27</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+    <linearGradient id="tslaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e31937;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#e31937;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="spcxGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#005288;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#005288;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#e31937" opacity="0.8"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="'SF Pro Display',Arial,sans-serif" font-size="11" fill="#e31937" font-weight="600" letter-spacing="2">TSLA · 특집 분석 · 2026.05.27</text>
+  <text x="32" y="68" font-family="'SF Pro Display',Arial,sans-serif" font-size="22" fill="#ffffff" font-weight="700">Tesla–SpaceX 합병 가능성 전면 분석</text>
+  <text x="32" y="90" font-family="'SF Pro Display',Arial,sans-serif" font-size="13" fill="#94a3b8">CNBC 보도 · Dan Ives 12개월 예측 · Kalshi 예측시장 급변</text>
+
+  <!-- Divider -->
+  <line x1="32" y1="106" x2="768" y2="106" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- LEFT: Tesla Card -->
+  <rect x="32" y="118" width="355" height="190" rx="10" fill="url(#tslaGrad)" stroke="#e31937" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="50" y="145" font-family="Arial,sans-serif" font-size="11" fill="#e31937" font-weight="700" letter-spacing="1">TSLA  테슬라</text>
+  <text x="50" y="167" font-family="'SF Pro Display',Arial,sans-serif" font-size="28" fill="#ffffff" font-weight="800">$422.24</text>
+  <text x="50" y="187" font-family="Arial,sans-serif" font-size="13" fill="#f87171">▼ -4.75%  |  합병 루머 이후 변동성 확대</text>
+
+  <text x="50" y="215" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">현재 시총</text>
+  <text x="160" y="215" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">$1.35T</text>
+  <text x="50" y="232" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">합병 후 예상 시총</text>
+  <text x="160" y="232" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="600">$3.17T (Dan Ives)</text>
+  <text x="50" y="249" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Wedbush 목표주가</text>
+  <text x="160" y="249" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="600">$500</text>
+  <text x="50" y="266" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Kalshi 합병 확률</text>
+  <text x="160" y="266" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="600">77% → 33% (하루 만에 급락)</text>
+  <text x="50" y="283" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">SpaceX 마지막 민간가치</text>
+  <text x="160" y="283" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">$350B</text>
+  <text x="50" y="300" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">12개월 내 합병 가능성</text>
+  <text x="160" y="300" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="600">Wedbush "가장 빠른 경로"</text>
+
+  <!-- RIGHT: SpaceX Card -->
+  <rect x="413" y="118" width="355" height="190" rx="10" fill="url(#spcxGrad)" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="431" y="145" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700" letter-spacing="1">SPCX  스페이스X (비상장)</text>
+  <text x="431" y="167" font-family="'SF Pro Display',Arial,sans-serif" font-size="28" fill="#ffffff" font-weight="800">$350B</text>
+  <text x="431" y="187" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa">기업가치 · IPO 진행 중</text>
+
+  <text x="431" y="215" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">주요 사업</text>
+  <text x="540" y="215" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">Starlink · Starship · 정부계약</text>
+  <text x="431" y="232" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Starlink 구독자</text>
+  <text x="540" y="232" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="600">4,000만+ (급성장)</text>
+  <text x="431" y="249" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">TSLA 합병 시 효과</text>
+  <text x="540" y="249" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="600">Starlink OTA · FSD 데이터 루프</text>
+  <text x="431" y="266" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">IPO 공모 규모</text>
+  <text x="540" y="266" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">$1.5B (신청 중)</text>
+  <text x="431" y="283" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">미 국방부 계약</text>
+  <text x="540" y="283" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="600">$2.35B SDN (신규)</text>
+  <text x="431" y="300" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">TSLA 주주 이익</text>
+  <text x="540" y="300" font-family="Arial,sans-serif" font-size="11" fill="#fbbf24" font-weight="600">Starlink 가치 직접 수혜</text>
+
+  <!-- Pro/Con Section -->
+  <rect x="32" y="326" width="355" height="76" rx="8" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="50" y="346" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="700">✓ 합병 찬성 논리</text>
+  <text x="50" y="362" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• Starlink-Tesla OTA 통합 → FSD 데이터 피드백 루프 가속</text>
+  <text x="50" y="376" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 머스크 이해관계 단일화 → "일론이 Tesla에 집중하나?" 우려 해소</text>
+  <text x="50" y="390" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 구독 매출 다각화 → EV 마진 압박 상쇄</text>
+
+  <rect x="413" y="326" width="355" height="76" rx="8" fill="rgba(248,113,113,0.06)" stroke="#f87171" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="431" y="346" font-family="Arial,sans-serif" font-size="10" fill="#f87171" font-weight="700">✗ 합병 반대 논리</text>
+  <text x="431" y="362" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 교환비율 불투명 → TSLA 주주 희석 리스크</text>
+  <text x="431" y="376" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• 규제 심사 (CFIUS·국방부) — 공개 후 TSLA 구조 복잡화</text>
+  <text x="431" y="390" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">• Kalshi 예측시장 33%로 급락 → 시장이 회의적으로 돌아섬</text>
+
+  <!-- Watermark -->
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.27</text>
+</svg>

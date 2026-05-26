@@ -26,8 +26,9 @@ export type Comment = {
   likes:        number;
 };
 
+const T27 = 1779836400000; // 2026-05-27 08:00 KST
+export const LATEST_UPDATE = T27;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T26 = 1779750000000; // 2026-05-26 08:00 KST
-export const LATEST_UPDATE = T26;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T23 = 1779490800000; // 2026-05-23 08:00 KST
 const T22 = 1779404400000; // 2026-05-22 08:00 KST
 const T21 = 1779318000000; // 2026-05-21 08:00 KST
@@ -42,6 +43,81 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-05-27 — TSLA-SpaceX 합병 / Q1 적자 / Optimus5 / 렌즈특허 /
+  //              중국 NEV 84K / SpaceX 우주군 $23.5억 / Starlink 38항공사 /
+  //              AMD $1T / MU CHIPS $51.6억 / AAPL $380
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — Tesla-SpaceX 합병 루머 ──────────────────────────────────────────
+  { id: 139, symbol: "TSLA", nickname: "익명_4729", holdingLabel: "85주 보유",
+    content: "CNBC에 Tesla-SpaceX 합병 검토 나왔는데 진짜예요?? 아침에 보고 심장 떨렸는데 Kalshi가 77%에서 33%로 하루 만에 반토막난 거 보니까 진짜 될 것 같진 않네요. 그래도 시장이 합병 가능성을 33%로 보는 것 자체가 놀라운 거잖아요. 일론이 테슬라에만 집중했으면 좋겠는데",
+    createdAt: T27 - 7*60_000, likes: 112, comments: 5 },
+  { id: 140, symbol: "TSLA", nickname: "익명_8391", holdingLabel: "160주 보유",
+    content: "합병 되면 좋은 게 머스크 관심이 테슬라 하나로 집중된다는 거잖아요. 지금 SpaceX, xAI, Starlink, Boring 다 신경쓰면서 테슬라 집중이 안 된다는 게 주주 입장에서 불만이었는데. 근데 교환비율 문제가 진짜 걸려요. SpaceX가 $350B인데 테슬라 주주들이 얼마나 희석될지 계산이 안 되네요",
+    createdAt: T27 - 22*60_000, likes: 89, comments: 4 },
+  { id: 141, symbol: "SPCX", nickname: "익명_3847", holdingLabel: "관심종목",
+    content: "테슬라 합병보다 SpaceX 단독 IPO가 더 좋다고 봐요. 합병되면 SpaceX의 고성장이 테슬라 비용 구조에 묶이는 거잖아요. 별도 IPO면 Starlink만으로 $200B+ 가치 인정받을 수 있는데 굳이 합치는 게 맞는지 모르겠어요. Dan Ives 전망이 다야 아무것도 확정 안 된 거죠",
+    createdAt: T27 - 35*60_000, likes: 67, comments: 3 },
+
+  // TSLA — Q1 2026 실적 ─────────────────────────────────────────────────
+  { id: 142, symbol: "TSLA", nickname: "익명_6283", holdingLabel: "45주 보유",
+    content: "Q1 순손실 -$42.8억이요?? 매출은 늘었는데 비용이 갑자기 +64%면 이게 뭔가요 진짜. 연간으로 -$49억인데 이건 역대 최대 적자잖아요. 로봇이나 FSD에 다 쏟아붓는다는데 언제까지 기다려야 하는 건지... 주가가 $422인 게 이해가 안 됩니다 저는",
+    createdAt: T27 - 14*60_000, likes: 78, comments: 4 },
+  { id: 143, symbol: "TSLA", nickname: "익명_5174", holdingLabel: "200주 보유",
+    content: "적자 보고 흔들리시는 분들 이해는 하는데 테슬라 지금 옵티머스·사이버캡에 올인하는 시기잖아요. 아마존도 2000년대 초에 수년간 적자 냈는데 버틴 사람이 진짜 돈 번 거잖아요. 비용이 R&D로 가는 건지 낭비로 가는 건지 그게 핵심인데 저는 로봇이 상용화되면 다 회수된다고 봐요",
+    createdAt: T27 - 41*60_000, likes: 94, comments: 5 },
+
+  // TSLA — Optimus 5 ────────────────────────────────────────────────────
+  { id: 144, symbol: "TSLA", nickname: "익명_1927", holdingLabel: "70주 보유",
+    content: "머스크가 Optimus 5를 '세계 최고, 경쟁자 없음'이라고 했는데 이거 진짜 말이 되는 게 FSD AI랑 동일 아키텍처쓰는 거잖아요. 보스턴다이내믹스 Atlas는 좋아 보여도 생산 단가가 너무 비싸고 Figure나 1X는 아직 시연 수준이고. 테슬라만 양산 체계 갖춘 AI 로봇 회사예요 지금",
+    createdAt: T27 - 9*60_000, likes: 86, comments: 3 },
+  { id: 145, symbol: "TSLA", nickname: "익명_7481", holdingLabel: "30주 보유",
+    content: "솔직히 옵티머스 발표가 너무 많아서 피로감 있는데... Gen1 Gen2 Gen3 Gen4 Gen5 이제 5세대까지 나왔다고 하는데 정작 외부 판매는 언제 시작하는 건지 모르겠어요. 테슬라 공장에 자기들이 쓴다는 얘기만 하는데 외부 기업에 파는 시점이 진짜 주가 촉매가 될 것 같아요",
+    createdAt: T27 - 28*60_000, likes: 55, comments: 3 },
+
+  // TSLA — 렌즈 특허 ────────────────────────────────────────────────────
+  { id: 146, symbol: "TSLA", nickname: "익명_3618", holdingLabel: "55주 보유",
+    content: "카메라 렌즈 자동 세정 특허 나온 거 보고 이건 진짜 실용적인 기술이다 싶었어요. 순수 카메라 기반 FSD의 가장 큰 단점이 비오는 날 렌즈 오염인데 이게 AI로 감지해서 자동으로 닦는다는 거잖아요. Waymo가 라이다 쓰는 이유 중 하나가 이 문제인데 테슬라가 카메라만으로 극복하는 거네요",
+    createdAt: T27 - 18*60_000, likes: 71, comments: 3 },
+
+  // TSLA — 중국 NEV ─────────────────────────────────────────────────────
+  { id: 147, symbol: "TSLA", nickname: "익명_9273", holdingLabel: "110주 보유",
+    content: "베이징 NEV 84,000대면 역대급 맞죠? 신형 Model Y 효과에 미중 관세 협상 분위기까지 겹친 거잖아요. Q1에 중국 10만대 좀 넘긴 게 아쉬웠는데 Q2에 14만대 가면 전체 실적 분위기 달라져요. 중국이 회복되면 다른 거 다 커버가 되거든요",
+    createdAt: T27 - 6*60_000, likes: 103, comments: 4 },
+
+  // SPCX — 미 우주군 SDN 계약 ─────────────────────────────────────────
+  { id: 148, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
+    content: "$2.35B 우주군 계약이요. Starlink가 이제 민간 인터넷만이 아니라 군사 통신망 핵심 인프라가 됐다는 거잖아요. 비상장이라 직접 투자가 안 되니까 답답한데 IPO 되면 정부 계약 수익이 기업가치에 명시적으로 반영될 거예요. 진짜 상장 언제 하는 거야",
+    createdAt: T27 - 13*60_000, likes: 88, comments: 4 },
+  { id: 149, symbol: "SPCX", nickname: "익명_6173", holdingLabel: "관심종목",
+    content: "Starlink가 항공사 38개에 군사 통신까지 먹으면 구독 수익 + 정부 계약 이중으로 들어오는 구조잖아요. 거기다 Starship 발사 서비스도 있고. 이 세 가지 수익원을 다 가진 회사가 $350B인데 IPO 되면 진짜 얼마나 갈지 기대되네요. 테슬라 합병보단 단독 IPO가 낫다고 봐요",
+    createdAt: T27 - 30*60_000, likes: 74, comments: 3 },
+
+  // AMD — $1T 달성 ──────────────────────────────────────────────────────
+  { id: 150, symbol: "AMD", nickname: "익명_5291", holdingLabel: "60주 보유",
+    content: "$1조 달러 달성!! AMD 들고 4년째인데 이 순간 보려고 버텼어요 ㅠㅠ $506에 +5.86%라니... MI300X가 NVDA 못 구하는 기업들 다 흡수하는 거 보면서 언젠간 올 줄 알았어요. Lisa Su 진짜 대단한 CEO예요. 아직도 추가매수 고민 중인데 $1T 넘겨도 갈 길이 있을까요",
+    createdAt: T27 - 5*60_000, likes: 134, comments: 6 },
+  { id: 151, symbol: "AMD", nickname: "익명_8492", holdingLabel: "25주 보유",
+    content: "AMD $1T이라니 진짜 역사적인 순간이네요. 2022년에 $5에서 $506이 되는 동안 포기한 적도 있었는데 결국 여기까지 왔어요. NVDA보다 밸류에이션이 낮아서 AI GPU 대안으로 계속 사들이는 기관들 덕분인 것 같아요. 연내 $600 가능할까요",
+    createdAt: T27 - 20*60_000, likes: 97, comments: 4 },
+
+  // MU — CHIPS법 + 정치인 매수 ─────────────────────────────────────────
+  { id: 152, symbol: "MU", nickname: "익명_3947", holdingLabel: "40주 보유",
+    content: "마이크론 CHIPS법 $51.6억 확정이고 거기다 CHIPS법 감독하는 상원의원들이 직접 MU 샀다는 거잖아요. Fetterman이 +48%라고... 이건 논란이 있는 거긴 한데 어찌됐든 CHIPS법이 계속된다는 거 확신하고 산 거잖아요. HBM4에서 SK하이닉스랑 같이 NVDA 먹이는 구조면 장기 들고 가야겠네요",
+    createdAt: T27 - 17*60_000, likes: 82, comments: 3 },
+  { id: 153, symbol: "MU", nickname: "익명_1738", holdingLabel: "15주 보유",
+    content: "마이크론 주가 $858이라는 게 믿기지 않네요. 작년에 $100대였는데. CHIPS법 보조금에 HBM4 수요까지 겹쳐서 이렇게 온 거잖아요. 아이다호 새 팹 다 지어지면 생산량 얼마나 늘어나는 건지 궁금하네요. 지금이라도 들어가야 하는 건지",
+    createdAt: T27 - 36*60_000, likes: 61, comments: 2 },
+
+  // AAPL — 목표주가 $380 ─────────────────────────────────────────────
+  { id: 154, symbol: "AAPL", nickname: "익명_7294", holdingLabel: "50주 보유",
+    content: "BofA가 목표주가 $380 올렸어요. 에이전트 AI 시대에 앱스토어가 AI 에이전트 진입 게이트라는 논리가 진짜 맞는 말이에요. 결제는 Apple Pay, 인증은 Face ID, AI는 Siri... 이 모든 게 하나로 연결되는 생태계 가진 게 애플밖에 없잖아요. $311에서 $380이면 아직 22% 업사이드 있는 거고",
+    createdAt: T27 - 11*60_000, likes: 91, comments: 4 },
+  { id: 155, symbol: "AAPL", nickname: "익명_4827", holdingLabel: "35주 보유",
+    content: "애플 들고 있으면서 AI 모멘텀이 약하다고 생각했는데 BofA 리포트 보니까 생각이 바뀌네요. 온디바이스 AI가 개인정보 보호랑 연결되는 게 강점이라는 거잖아요. 기기 교체 사이클 올라오면 다음 실적부터 반영될 거고... $380 간다는 데 동의해요",
+    createdAt: T27 - 29*60_000, likes: 63, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-05-26 — NVDA Rubin Ultra 7.2x / Cybercab 165Wh / FSD 네덜란드 /
@@ -604,6 +680,103 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-05-27 신규 ──────────────────────────────────────────────────────
+  139: [
+    { id: 1, nickname: "익명_7291", holdingLabel: "120주 보유", content: "Dan Ives가 12개월이라는 게 진짜 무게감 있는 말이에요. 보통 분석가들이 막 던지는 말이 아니고 Wedbush 직인 찍힌 리포트인데. 근데 Kalshi 33%는 시장이 냉정하게 보는 거니까 반반이라 봐야 할 것 같아요", createdAt: T27 - m(4), likes: 47 },
+    { id: 2, nickname: "익명_3847", holdingLabel: "50주 보유", content: "합병보다 SpaceX 단독 IPO가 테슬라 주주한테 더 유리할 것 같아요. 합병되면 SpaceX 가치가 테슬라 주가에 녹아드는 거잖아요. 지금 테슬라 $422면 그 안에 SpaceX 프리미엄이 얼마나 들어가 있는 건지 계산이 안 돼요", createdAt: T27 - m(2), likes: 38 },
+    { id: 3, nickname: "익명_5628", holdingLabel: "80주 보유", content: "테슬라가 Starlink 기반으로 OTA 업데이트 하면 어디서든 가능해지는 거잖아요. 지금도 되는데 더 빨라지는 거고. FSD 데이터 피드백 루프 가속이 진짜 핵심인 것 같아요", createdAt: T27 + m(1), likes: 29 },
+    { id: 4, nickname: "익명_9183", holdingLabel: "180주 보유", content: "CFIUS 심사가 발목 잡을 것 같아요. SpaceX가 군사 계약 많은 회사인데 공개 합병되면 심사 장기화 필수예요. 이것 때문에 Kalshi가 33%로 내려간 거 아닐까요", createdAt: T27 + m(3), likes: 22 },
+    { id: 5, nickname: "익명_6182", holdingLabel: "65주 보유", content: "결국 머스크 결정인데... 이 분이 예측 불가능한 행동 많이 해서요. 발표 나오면 그때 대응하는 게 맞을 것 같아요. 지금 포지션 유지합니다", createdAt: T27 + m(6), likes: 15 },
+  ],
+  140: [
+    { id: 1, nickname: "익명_5391", holdingLabel: "200주 보유", content: "교환비율이 핵심이에요. SpaceX $350B이면 테슬라 주식 발행을 얼마나 해야 하는 건데요. 지금도 주식수 급증해서 EPS 희석되는 판에 합병 나오면 얼마나 더 발행할지 계산하기 무서워요", createdAt: T27 - m(14), likes: 31 },
+    { id: 2, nickname: "익명_2947", holdingLabel: "95주 보유", content: "머스크 이해관계 단일화는 진짜 중요한 포인트예요. 지금 테슬라 CEO인데 xAI·SpaceX·Boring 다 신경쓰면 집중이 분산되잖아요. 합병으로 하나로 모이면 테슬라가 더 빨리 갈 수도 있어요", createdAt: T27 - m(8), likes: 25 },
+    { id: 3, nickname: "익명_4837", holdingLabel: "35주 보유", content: "매크로 입장에서 테슬라-SpaceX 합병이 되면 시총 $3T 가는 건데 그러면 S&P500 비중이 엄청 올라가요. 패시브 펀드 강제 매수가 발생하는 구조예요", createdAt: T27 + m(2), likes: 19 },
+    { id: 4, nickname: "익명_8273", holdingLabel: "140주 보유", content: "결국 다 일론이 정하는 거잖아요. 발표 전까지 포지션 줄이는 사람도 있을 것 같고 저도 일부 현금화 고민 중이에요", createdAt: T27 + m(5), likes: 12 },
+  ],
+  141: [
+    { id: 1, nickname: "익명_7293", holdingLabel: "관심종목", content: "SpaceX 단독 IPO면 Starlink 구독 수익이 배수로 인정받을 수 있어요. 합병되면 테슬라 EV 적자랑 같은 basket에 들어가서 밸류에이션이 희석되는 거잖아요. 저도 단독 IPO 선호해요", createdAt: T27 - m(21), likes: 34 },
+    { id: 2, nickname: "익명_4182", holdingLabel: "관심종목", content: "Starlink가 항공사 38개 계약, 우주군 $23.5억 계약 나온 걸 보면 단독 $500B도 가능해 보여요. 합치면 그 가치가 희석되는 거죠", createdAt: T27 - m(12), likes: 27 },
+    { id: 3, nickname: "익명_6381", holdingLabel: "관심종목", content: "3년 후에 SpaceX 단독 IPO 나오면 그때 사면 되니까 지금 TSLA 합병 루머에 흔들릴 필요는 없는 것 같아요", createdAt: T27 + m(1), likes: 18 },
+  ],
+  142: [
+    { id: 1, nickname: "익명_8372", holdingLabel: "35주 보유", content: "비용 +64%가 다 R&D면 이해하는데 혹시 낭비 없는지 체크가 필요해요. 아마존은 AWS 수익으로 e-commerce 적자 커버했는데 테슬라는 에너지 사업이 그 역할을 해줘야 할 것 같아요", createdAt: T27 - m(8), likes: 36 },
+    { id: 2, nickname: "익명_5294", holdingLabel: "210주 보유", content: "FY2025 -$4.9B 역대 최대 적자인데 시장이 $422 유지한다는 게 로봇·FSD 옵션 가치가 그만큼 크다는 거잖아요. AI 기업 밸류에이션으로 보면 지금도 싸다는 논리가 있고 저는 그 편이에요", createdAt: T27 - m(3), likes: 48 },
+    { id: 3, nickname: "익명_3748", holdingLabel: "75주 보유", content: "주식수 35% 증가가 제일 싫어요. 기존 주주 희석이 이렇게 빨리 되는 건... 스톡옵션 남발 아닌가요. 경영진 집중 견제가 필요해 보여요", createdAt: T27 + m(2), likes: 22 },
+    { id: 4, nickname: "익명_2837", holdingLabel: "45주 보유", content: "에너지 부문 마진이 괜찮다고 들었는데 그게 EV 적자를 얼마나 커버하는지 다음 IR 자료에서 세그먼트별로 봐야 할 것 같아요", createdAt: T27 + m(4), likes: 17 },
+  ],
+  143: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "250주 보유", content: "아마존 2000년대 초 적자 예시 항상 나오는데 그 논리 동의해요. 테슬라가 옵티머스 양산 시작하면 공장 인건비 절감이 직결 수익으로 잡혀요. 그때 되면 지금 적자가 투자였다는 게 증명되는 거죠", createdAt: T27 - m(23), likes: 53 },
+    { id: 2, nickname: "익명_4827", holdingLabel: "110주 보유", content: "버티기 힘든 건 맞아요 솔직히. -$4.9B 적자에 주가는 $422... 하지만 이 회사가 Cybercab 깔면 우버·택시 전체를 먹는다는 걸 믿으면 버틸 수 있어요. 믿음의 싸움이에요", createdAt: T27 - m(15), likes: 41 },
+    { id: 3, nickname: "익명_1948", holdingLabel: "30주 보유", content: "장기 투자 할 수 있는 여유 자금으로만 들어가는 게 맞아요. 지금 단기 수익 바라고 들어가면 멘탈 버텨내기 힘들 것 같아요", createdAt: T27 - m(7), likes: 28 },
+    { id: 4, nickname: "익명_7391", holdingLabel: "185주 보유", content: "FSD 구독료가 월 $99인데 테슬라 차 700만대 중 10%만 구독해도 분기 $2.1B이에요. 이게 시작만 되면 흑자 전환은 순식간이에요", createdAt: T27 + m(2), likes: 35 },
+    { id: 5, nickname: "익명_9182", holdingLabel: "60주 보유", content: "Cybercab 7월 오스틴 배포가 진짜로 시작되면 그때 분위기 180도 바뀔 것 같아요. 지금은 그 직전 인내의 시간이에요", createdAt: T27 + m(5), likes: 19 },
+  ],
+  144: [
+    { id: 1, nickname: "익명_5183", holdingLabel: "55주 보유", content: "FSD랑 동일 AI 쓴다는 게 결정적이에요. 자동차로 쌓은 수백억 마일 데이터를 로봇 훈련에 전용한다는 거잖아요. Figure·1X가 이걸 따라오려면 얼마나 걸릴지 모르겠어요", createdAt: T27 - m(6), likes: 44 },
+    { id: 2, nickname: "익명_3729", holdingLabel: "90주 보유", content: "보스턴다이내믹스가 20년 했는데 테슬라가 4년 만에 추월한다는 게 처음엔 말이 안 된다고 생각했는데 AI 훈련 속도가 다르니까 가능한 거였네요. Lisa AI 개발 어시스턴트로 빠르게 배우는 구조가 핵심이었던 거잖아요", createdAt: T27 - m(2), likes: 33 },
+    { id: 3, nickname: "익명_8294", holdingLabel: "20주 보유", content: "공장 자체 투입이 수익 경로로 제일 빠른 것 같아요. 외부 판매 기다리지 말고 자기들이 써서 인건비 아끼면 그게 실질 수익이잖아요. 다음 실적 설명회에서 옵티머스 투입 효과 수치로 나와주면 좋겠네요", createdAt: T27 + m(3), likes: 26 },
+  ],
+  145: [
+    { id: 1, nickname: "익명_4193", holdingLabel: "40주 보유", content: "Gen5 발표까지는 좋은데 실제 외부 판매 발표가 진짜 모멘텀이 될 것 같아요. BMW·삼성 같은 기업이 옵티머스 몇 대 산다고 계약하면 그때 주가 다르게 움직일 것 같아요", createdAt: T27 - m(14), likes: 28 },
+    { id: 2, nickname: "익명_7283", holdingLabel: "70주 보유", content: "Gen5가 정말 '아무도 가깝지 않다'면 경쟁사들이 3~4년은 못 따라온다는 거잖아요. 그 시간 동안 테슬라가 양산 체계 완성하면 first mover 해자가 엄청 커지는 거예요", createdAt: T27 - m(6), likes: 21 },
+    { id: 3, nickname: "익명_2748", holdingLabel: "25주 보유", content: "매년 새 디자인 나온다는 게 iPhone처럼 연간 교체 사이클 만들려는 건가요? 기업 고객이 매년 업그레이드하면 구독처럼 되는 거잖아요 나중에", createdAt: T27 + m(2), likes: 18 },
+  ],
+  146: [
+    { id: 1, nickname: "익명_8392", holdingLabel: "65주 보유", content: "진짜 실용적인 특허예요. FSD가 비오는 날 실패하는 영상 많이 봤는데 이게 해결되면 전천후 주행 가능한 거잖아요. Cybercab 상용화에 직결되는 핵심 기술이에요", createdAt: T27 - m(10), likes: 39 },
+    { id: 2, nickname: "익명_5194", holdingLabel: "35주 보유", content: "Waymo가 라이다 쓰는 이유 중 하나가 카메라 오염 문제라고 들었는데 테슬라가 카메라만으로 이걸 극복하면 라이다 없는 게 약점이 아니게 되는 거잖아요. 테슬라 방식 맞다는 거 계속 증명되네요", createdAt: T27 - m(4), likes: 31 },
+    { id: 3, nickname: "익명_6291", holdingLabel: "100주 보유", content: "9개 클레임이면 핵심 기술 꽤 넓게 특허 잡은 거예요. 경쟁사들이 비슷한 기술 개발하려면 라이선스 받거나 다른 방법 찾아야 하는 거고. 경쟁 진입 장벽이 하나 더 생긴 거예요", createdAt: T27 + m(2), likes: 23 },
+  ],
+  147: [
+    { id: 1, nickname: "익명_3827", holdingLabel: "90주 보유", content: "중국 84K면 역대 탑권 맞죠. Q2 14만대 달성하면 전체 인도량 50만대 넘어갈 것 같은데 그러면 시장 예상치 서프라이즈 충분히 가능해요. 중국 회복이 진짜 핵심이에요", createdAt: T27 - m(3), likes: 52 },
+    { id: 2, nickname: "익명_6193", holdingLabel: "150주 보유", content: "신형 Model Y 효과 + 미중 분위기 개선이 동시에 터진 거라 Q2 기대가 크네요. 근데 BYD가 다음 달 또 신모델 나온다는데 가격 경쟁은 계속 빡셀 것 같아요", createdAt: T27 - m(1), likes: 38 },
+    { id: 3, nickname: "익명_7374", holdingLabel: "45주 보유", content: "FSD 중국 승인이 미중 협상 카드로 쓰이고 있다는데 그게 풀리면 더 큰 모멘텀이에요. 지금 84K도 FSD 없이 달성한 거잖아요. FSD 승인 나면 얼마나 더 팔릴지", createdAt: T27 + m(3), likes: 27 },
+    { id: 4, nickname: "익명_2947", holdingLabel: "70주 보유", content: "중국 체크 완료. Q2 낙관이에요. 중국이 테슬라 전체 매출 20%인데 거기서 30% 성장 나오면 연결 매출이 달라지는 거잖아요", createdAt: T27 + m(5), likes: 19 },
+  ],
+  148: [
+    { id: 1, nickname: "익명_4827", holdingLabel: "관심종목", content: "B2C(개인 구독) + B2B(기업 항공) + B2G(정부 군사) 세 개 다 챙기는 구조면 리스크 분산도 완벽해요. 어느 쪽이 흔들려도 나머지가 받쳐주는 거잖아요. IPO 빨리 해줬으면", createdAt: T27 - m(8), likes: 43 },
+    { id: 2, nickname: "익명_7382", holdingLabel: "관심종목", content: "군사 계약이라 공시 내용 제한적인 거 이해는 하는데... Starlink 군용 버전이 따로 있다는 게 놀랍네요. 상용 인프라 기반에 보안 레이어 올린 거라면 마진도 훨씬 높겠죠", createdAt: T27 - m(3), likes: 31 },
+    { id: 3, nickname: "익명_2938", holdingLabel: "관심종목", content: "$2.35B를 Firm-Fixed-Price로 받는다는 거 예산 초과해도 차이 없이 받는 구조잖아요. 그러면 비용 절감 인센티브가 생기고 SpaceX 마진이 올라가는 거예요. 계약 구조가 좋네요", createdAt: T27 + m(2), likes: 24 },
+    { id: 4, nickname: "익명_5193", holdingLabel: "관심종목", content: "SDN 계약 성공하면 Space Force 다음 계약, 육군·해군 차례로 들어올 수 있어요. 미군 전체 통신망 계약이면 규모가 $10B도 가능한 거잖아요", createdAt: T27 + m(5), likes: 17 },
+  ],
+  149: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "관심종목", content: "Starlink 단독으로만 봐도 $200B 가치인데 Starship + 정부 계약 더하면 $400B 이상이라는 논리 이해해요. 지금 $350B 기업가치가 오히려 저평가일 수도 있어요. IPO 빨리 해줬으면", createdAt: T27 - m(17), likes: 36 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "Conner 인수 시너지까지 더하면 항공 부분 수익이 더 빠르게 올라오겠네요. 기내 인터넷이 표준화되면 나중엔 기내 엔터테인먼트까지 Starlink 통해서 파는 구조도 될 것 같아요", createdAt: T27 - m(9), likes: 28 },
+    { id: 3, nickname: "익명_9183", holdingLabel: "관심종목", content: "테슬라 합병보다 단독 IPO면 청약 넣고 싶어요. RKLB 들고 있는데 SpaceX IPO 나오면 비중 이동해야 할 것 같아요. 우주 섹터가 진짜 커지고 있어요", createdAt: T27 + m(1), likes: 21 },
+  ],
+  150: [
+    { id: 1, nickname: "익명_5193", holdingLabel: "80주 보유", content: "$1조라니... AMD 2020년에 $60억짜리 회사였는데 17배가 됐어요. Lisa Su가 없었으면 불가능했을 거예요. 진짜 대단한 CEO예요. 이 기세로 $1.5T 갈 수 있을까요", createdAt: T27 - m(3), likes: 67 },
+    { id: 2, nickname: "익명_7293", holdingLabel: "45주 보유", content: "NVDA 대안 수요가 진짜 힘이에요. NVDA 못 구하는 기업들이 MI300X로 몰리는 거 보면 이제 GPU 시장이 독점에서 이원화로 가는 거잖아요. 둘 다 좋아요", createdAt: T27 - m(1), likes: 52 },
+    { id: 3, nickname: "익명_3847", holdingLabel: "100주 보유", content: "EPYC 서버 CPU도 인텔 잠식이 계속되고 있어요. GPU + CPU 다 먹는 건 NVDA도 노리는 건데 AMD가 먼저 CPU에서 자리잡은 거잖아요. 시총 $1T이 끝이 아닌 것 같아요", createdAt: T27 + m(2), likes: 38 },
+    { id: 4, nickname: "익명_9182", holdingLabel: "30주 보유", content: "Ackman이 MS에 $2.3B 넣은 것도 AI 섹터 전체에 긍정적 신호가 됐죠. AMD도 그 물결 탄 것 같아요. 기관들이 AI 투자 계속 늘리는 구조에서 AMD는 빠질 수 없는 픽이에요", createdAt: T27 + m(4), likes: 29 },
+    { id: 5, nickname: "익명_4827", holdingLabel: "150주 보유", content: "오늘 같은 날 들고 있는 게 행복해요. 연내 $600 보고 갑니다. MI400 나오면 또 한 번 점프하겠죠", createdAt: T27 + m(7), likes: 43 },
+    { id: 6, nickname: "익명_2948", holdingLabel: "12주 보유", content: "소량 들고 있어서 수익 별로 없지만 그래도 $1T 기업 주주라는 게 기분 좋네요ㅋㅋ 더 살걸 그랬어요", createdAt: T27 + m(9), likes: 18 },
+  ],
+  151: [
+    { id: 1, nickname: "익명_6182", holdingLabel: "55주 보유", content: "2022년 저점에서 버텨서 6배 넘게 됐어요. 그때 $80에 물타기 했는데 평단이 $120이에요. 이제 네 배 됐네요. 긴 여정이었어요", createdAt: T27 - m(11), likes: 45 },
+    { id: 2, nickname: "익명_3847", holdingLabel: "80주 보유", content: "반도체 사이클이 AI로 완전히 바뀐 거예요. 예전엔 PC·스마트폰 사이클 타서 주기적 하락이 있었는데 지금은 AI 인프라 투자가 구조적이라 사이클이 완화됐어요. AMD는 그 구조 변화의 수혜주예요", createdAt: T27 - m(5), likes: 33 },
+    { id: 3, nickname: "익명_8294", holdingLabel: "20주 보유", content: "소량이라도 들고 있어서 다행이에요. $600 갈 때까지 안 팔겠습니다", createdAt: T27 + m(1), likes: 27 },
+    { id: 4, nickname: "익명_7182", holdingLabel: "35주 보유", content: "Ryzen AI PC도 시작됐고 이제 엔터프라이즈 AI까지 AMD 안 들어가는 곳이 없어요. 다음 $2T 클럽 가능성 있을까요", createdAt: T27 + m(3), likes: 22 },
+  ],
+  152: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "55주 보유", content: "CHIPS법 감독 의원이 직접 MU 산다는 게 논란이긴 한데... 어찌됐든 CHIPS법이 계속될 거라는 확신이 없으면 의원이 살 이유가 없잖아요. 정책 지속성 확신의 역설적 신호로 봐요", createdAt: T27 - m(10), likes: 41 },
+    { id: 2, nickname: "익명_7293", holdingLabel: "25주 보유", content: "Fetterman +48%라는 게 진짜네요. 그 분 포트폴리오 보고 싶다는 생각 들어요ㅋㅋ 어쨌든 HBM4 대량 생산 체계 갖추면 NVDA 공급망에서 핵심이 되는 거잖아요", createdAt: T27 - m(4), likes: 29 },
+    { id: 3, nickname: "익명_2947", holdingLabel: "40주 보유", content: "$51.6억이 아이다호·뉴욕 팹에 다 들어가면 생산 능력이 엄청 늘어나는 거잖아요. SK하이닉스랑 HBM 양강 체제 완성되면 AI 반도체 슈퍼사이클 내내 수혜예요", createdAt: T27 + m(2), likes: 21 },
+  ],
+  153: [
+    { id: 1, nickname: "익명_8391", holdingLabel: "30주 보유", content: "$858이면 작년 대비 몇 배예요? 진짜 놀랍네요. 메모리도 AI 시대에 완전 다른 종목이 됐어요. SK하이닉스도 같이 보고 있는데 둘 다 들고 가는 게 맞을 것 같아요", createdAt: T27 - m(23), likes: 27 },
+    { id: 2, nickname: "익명_6192", holdingLabel: "15주 보유", content: "지금이라도 들어가는 게 맞는지 모르겠는데... HBM4 시장이 막 시작됐으니 아직 초기라고 보면 지금도 늦지 않은 것 같기도 하고요. NVDA 실적 계속 좋으면 MU도 같이 가는 구조니까요", createdAt: T27 - m(11), likes: 18 },
+  ],
+  154: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "60주 보유", content: "에이전트 AI가 App Store를 통해야 한다는 논리 완전 동의해요. 구글도 마이크로소프트도 최종적으로 아이폰 사용자에게 닿으려면 애플 허락 맡아야 하잖아요. 이 통행료가 엄청난 거예요", createdAt: T27 - m(7), likes: 47 },
+    { id: 2, nickname: "익명_3847", holdingLabel: "90주 보유", content: "기기 교체 사이클이 진짜 핵심인데 iPhone 15 미만 유저가 AI 기능 못 쓰면 자연스럽게 업그레이드해야 하잖아요. 15억 명 중 절반이 교체하면 매출 얼마예요. 생각만 해도 무서운 숫자예요", createdAt: T27 - m(2), likes: 38 },
+    { id: 3, nickname: "익명_7294", holdingLabel: "25주 보유", content: "서비스 매출이 $100B 가면 그게 애플 주가를 다음 레벨로 올리는 거예요. 지금 $311인데 $380은 충분히 가능하고 그 이상도 볼 수 있을 것 같아요", createdAt: T27 + m(2), likes: 28 },
+    { id: 4, nickname: "익명_9182", holdingLabel: "40주 보유", content: "Face ID + Apple Pay + Siri 에이전트화... 이 세 개가 연결되면 결제부터 쇼핑까지 아이폰 안에서 다 해결되는 거잖아요. 어마어마한 생태계예요", createdAt: T27 + m(4), likes: 21 },
+  ],
+  155: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "120주 보유", content: "애플은 AI 기업 중에 하드웨어 포함해서 생태계를 통째로 가진 유일한 회사예요. 소프트웨어만 있는 OpenAI나 구글과 다른 차원이에요. $380 목표가 맞다고 봐요", createdAt: T27 - m(16), likes: 33 },
+    { id: 2, nickname: "익명_4829", holdingLabel: "35주 보유", content: "컨센서스 평균 $365인데 지금 $311이면 여기서 17% 업사이드잖아요. 배당도 나오고 자사주 매입도 계속하는데 이 가격에 안 사면 언제 사요", createdAt: T27 - m(8), likes: 25 },
+  ],
   // ── 2026-05-26 신규 ──────────────────────────────────────────────────────
   128: [
     { id: 1, nickname: "익명_6291", holdingLabel: "50주 보유", content: "7.2배면 단순 스펙 개선이 아니라 패러다임이 바뀌는 거잖아요. GPT-4 급 모델을 GPU 한 장에 넣으면 추론 비용이 얼마나 내려가는 건지... NVDA 홀딩 이유가 하나 더 생겼어요", createdAt: T26 - m(5), likes: 31 },

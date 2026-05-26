@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#3b82f6" opacity="0.9"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="600" letter-spacing="2">SPCX · Starlink 항공 · 2026.05.27</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="20" fill="#ffffff" font-weight="700">Starlink 파트너 항공사 38개 — 글로벌 항공 인터넷 장악</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">38 airlines · 최대 용량 1.5Gbps/기 · 승객당 월 $10~ 수익</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Big number -->
+  <text x="32" y="148" font-family="'SF Pro Display',Arial,sans-serif" font-size="64" fill="#3b82f6" font-weight="800">38</text>
+  <text x="32" y="170" font-family="Arial,sans-serif" font-size="14" fill="#94a3b8">항공사 파트너십 체결 (2026년 5월 기준)</text>
+
+  <!-- Airline list - 3 columns -->
+  <text x="32" y="196" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">■ 주요 파트너 항공사</text>
+
+  <!-- Column 1: US carriers -->
+  <text x="32" y="214" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" font-weight="600">🇺🇸 미국</text>
+  <text x="32" y="229" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• United Airlines</text>
+  <text x="32" y="243" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• American Airlines</text>
+  <text x="32" y="257" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Delta Airlines</text>
+  <text x="32" y="271" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Alaska Airlines</text>
+  <text x="32" y="285" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Hawaiian Airlines</text>
+  <text x="32" y="299" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• JSX</text>
+
+  <!-- Column 2: European -->
+  <text x="200" y="214" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" font-weight="600">🇪🇺 유럽</text>
+  <text x="200" y="229" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Air France</text>
+  <text x="200" y="243" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• British Airways</text>
+  <text x="200" y="257" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Iberia</text>
+  <text x="200" y="271" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Virgin Atlantic</text>
+  <text x="200" y="285" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Air Baltic</text>
+  <text x="200" y="299" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Air Canada</text>
+  <text x="200" y="313" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Brussels Airlines</text>
+  <text x="200" y="327" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Condor</text>
+
+  <!-- Column 3: Asia-Pacific etc -->
+  <text x="370" y="214" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" font-weight="600">🌏 아태·기타</text>
+  <text x="370" y="229" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Singapore Airlines</text>
+  <text x="370" y="243" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Korean Air</text>
+  <text x="370" y="257" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Air Dolomiti</text>
+  <text x="370" y="271" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Asiana Airlines</text>
+  <text x="370" y="285" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Austria Airlines</text>
+  <text x="370" y="299" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Air Busan</text>
+  <text x="370" y="313" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• Discover Airlines</text>
+  <text x="370" y="327" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">• + 더 많은 항공사</text>
+
+  <!-- Revenue Model -->
+  <rect x="544" y="114" width="222" height="168" rx="8" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="560" y="136" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">수익 모델</text>
+  <text x="560" y="154" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">항공사 계약 수수료</text>
+  <text x="700" y="154" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="600" text-anchor="end">$10~20/승객</text>
+  <text x="560" y="170" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">항공기당 월 정액</text>
+  <text x="700" y="170" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="600" text-anchor="end">$15K~25K</text>
+  <text x="560" y="186" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">파트너 항공사 수</text>
+  <text x="700" y="186" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="600" text-anchor="end">38개</text>
+  <text x="560" y="202" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">운용 항공기 수 (전체)</text>
+  <text x="700" y="202" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="600" text-anchor="end">~3,000대</text>
+  <text x="560" y="218" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">연 예상 매출</text>
+  <text x="700" y="218" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="600" text-anchor="end">$540M~900M</text>
+  <line x1="560" y1="228" x2="752" y2="228" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="560" y="244" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">성장률 (YoY)</text>
+  <text x="700" y="244" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="600" text-anchor="end">+200%+ 급증</text>
+  <text x="560" y="260" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">SpaceX 기업가치 기여</text>
+  <text x="700" y="260" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="600" text-anchor="end">~$50B+ 추정</text>
+  <text x="560" y="276" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Conner 인수 시너지</text>
+  <text x="700" y="276" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" font-weight="600" text-anchor="end">추가 부스트 예상</text>
+
+  <!-- Bottom note -->
+  <rect x="32" y="348" width="736" height="50" rx="8" fill="rgba(59,130,246,0.06)" stroke="#3b82f6" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="50" y="368" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">핵심 시사점</text>
+  <text x="50" y="386" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Starlink 항공 인터넷은 SpaceX의 B2B 구독 수익 모델. SpaceX IPO 시 이 수익이 기업가치에 직접 반영됨. Delta 같은 최신 합류사도 몇 개월 내 전 기종 설치 완료 예정으로 파트너 수는 계속 증가.</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.27</text>
+</svg>

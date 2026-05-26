@@ -17,6 +17,74 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-05-27 신규 ─────────────────────────────────────────────────────
+  {
+    id: -20,
+    alias: "여의도 매 #17",
+    symbol: "TSLA",
+    content:
+      "CNBC Tesla-SpaceX 합병 보도 나왔을 때 팀 전체가 잠깐 멈췄음. 내가 작성한 Wedbush 리포트랑 방향이 비슷한데 Kalshi 33%로 내려간 게 맞는 판단 같기도 하고. 합병 실제로 되면 교환비율 계산이 제일 문제임. SpaceX 비상장 상태에서 $350B으로 박아놓으면 TSLA 주주 희석이 얼마나 될지 지금 모델 돌리는 중인데 숫자가 좀 불편하게 나옴. 당장 결론 내기는 이른 상황.",
+    likes: 117,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 18).toISOString(),
+    liked: false,
+  },
+  {
+    id: -19,
+    alias: "강남 독수리 #52",
+    symbol: "TSLA",
+    content:
+      "Q1 2026 실적 들여다봄. 비용 +64%가 다 설명이 되냐고? 안 됨. Optimus 개발비·Supercharger 확장·FSD 연구비 다 더해도 내가 보던 예상치보다 $8억 정도 초과임. 어디서 샜는지 세그먼트별 분해가 필요한데 IR 자료 보면서 마저 파악해야 함. 일단 에너지 부문 마진이 괜찮아서 그나마 버티는 구조임. 주식수 35% 증가는 솔직히 별로임.",
+    likes: 94,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 52).toISOString(),
+    liked: false,
+  },
+  {
+    id: -18,
+    alias: "판교 황소 #31",
+    symbol: "AMD",
+    content:
+      "AMD $1T 공식 선언 날 내 포지션 확인했더니 평단이 $147임. 오늘 $506이면 3.4배. 시총 $1조 달성이 끝이 아니고 MI400 나오면 다음 레그가 있음. 문제는 TSMC CoWoS 공급 제약인데 이게 AMD만의 문제가 아니라 섹터 전체 병목임. MI300X 수요가 공급을 초과하는 상황이라 가격 협상력이 AMD한테 있음. 단기 고점 우려 있어도 구조적으론 추가 상승 여력 있다고 봄.",
+    likes: 138,
+    comments: 4,
+    created_at: new Date(Date.now() - 1000 * 60 * 87).toISOString(),
+    liked: false,
+  },
+  {
+    id: -17,
+    alias: "서초 매 #64",
+    symbol: "MU",
+    content:
+      "CHIPS법 $51.6억 수령 확정이랑 정치인 매수 얘기 오늘 같이 나온 게 흥미롭네. 이해충돌 논란 빼고 투자 관점으로만 보면 — 정책 지속성에 대한 내부 확신 없이 살 이유가 없다는 거임. HBM4 라인 증설 속도가 관건인데 아이다호 팹 올라오는 타임라인 2028년이면 그 전까지는 SK하이닉스가 계속 우위임. MU는 2027~2028 픽임. 지금 들어가는 건 조금 이름.",
+    likes: 82,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 134).toISOString(),
+    liked: false,
+  },
+  {
+    id: -16,
+    alias: "을지로 표범 #43",
+    symbol: "SPCX",
+    content:
+      "우주군 $23.5억 계약이 나온 날 Starlink 군용 세그먼트 가치 다시 계산함. B2C 구독 + B2B 항공 38사 + B2G 군사 계약 세 다리 구조면 $350B 기업가치가 오히려 보수적으로 보임. SpaceX IPO 타이밍 문제인데 TSLA 합병 루머가 나온 걸 보면 직접 IPO 카드를 꺼낼 시점을 재는 것 같기도 함. 비상장이라 직접 포지션이 없는 게 아쉬운 날이었음.",
+    likes: 106,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 173).toISOString(),
+    liked: false,
+  },
+  {
+    id: -15,
+    alias: "광화문 매 #04",
+    symbol: "AAPL",
+    content:
+      "BofA $380 상향 보고 우리 팀 뷰랑 같은 방향이라 뭔가 묘함. 에이전트 AI 시대 Apple 플랫폼 통행료 논리가 맞는 게, 어떤 AI 에이전트든 결국 아이폰 사용자에게 닿으려면 App Store 통해야 하잖음. 근데 지금 $311이 이미 그 기대를 선반영한 건지 여전히 저평가인지 — 서비스 매출 $100B 달성 시점이 관건임. 내 개인 계좌에선 비중 유지 중임.",
+    likes: 79,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 218).toISOString(),
+    liked: false,
+  },
+  // ── 기존 ─────────────────────────────────────────────────────────────────
   {
     id: -14,
     alias: "여의도 독수리 #08",

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="580" fill="url(#bg)"/>
+
+  <!-- Top accent bars -->
+  <rect x="0" y="0" width="320" height="4" fill="#e31937"/>
+  <rect x="320" y="0" width="160" height="4" fill="#3b82f6"/>
+  <rect x="480" y="0" width="160" height="4" fill="#4ade80"/>
+  <rect x="640" y="0" width="160" height="4" fill="#fb923c"/>
+
+  <!-- Header -->
+  <text x="400" y="32" font-family="'SF Pro Display',Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" letter-spacing="3">2026 . 05 . 27  DAILY MARKET BRIEF</text>
+  <text x="400" y="58" font-family="'SF Pro Display',Arial,sans-serif" font-size="24" fill="#ffffff" font-weight="800" text-anchor="middle">오늘의 핵심 10대 뉴스</text>
+  <line x1="32" y1="72" x2="768" y2="72" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <!-- Card 1: TSLA SpaceX Merger -->
+  <rect x="32" y="84" width="228" height="96" rx="8" fill="rgba(227,25,55,0.08)" stroke="#e31937" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="48" y="103" font-family="Arial,sans-serif" font-size="9" fill="#e31937" font-weight="700">TSLA — 합병 루머</text>
+  <text x="48" y="118" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">Tesla-SpaceX 합병</text>
+  <text x="48" y="133" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">CNBC 보도 · Dan Ives 12개월 예측</text>
+  <text x="48" y="147" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Kalshi 확률 77% → 33% 급락</text>
+  <text x="48" y="163" font-family="Arial,sans-serif" font-size="10" fill="#f87171">시총 $3.17T 가능성 vs 주주 희석 리스크</text>
+  <text x="48" y="174" font-family="Arial,sans-serif" font-size="9" fill="#e31937" font-weight="600">TSLA $422.24  ▼ -4.75%</text>
+
+  <!-- Card 2: TSLA Q1 Earnings -->
+  <rect x="288" y="84" width="228" height="96" rx="8" fill="rgba(227,25,55,0.08)" stroke="#e31937" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="304" y="103" font-family="Arial,sans-serif" font-size="9" fill="#e31937" font-weight="700">TSLA — Q1 2026 실적</text>
+  <text x="304" y="118" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">순손실 -$42.8억</text>
+  <text x="304" y="133" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">매출 $46.9억 (+15% YoY)</text>
+  <text x="304" y="147" font-family="Arial,sans-serif" font-size="10" fill="#f87171">영업손실 -$19.4억 · EPS -$1.27</text>
+  <text x="304" y="161" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">비용 급증 +64% · 수익화 타임라인 주목</text>
+  <text x="304" y="174" font-family="Arial,sans-serif" font-size="9" fill="#f87171" font-weight="600">FY2025 순손실 -$49.4억 역대 최대</text>
+
+  <!-- Card 3: TSLA Lens Patent -->
+  <rect x="544" y="84" width="224" height="96" rx="8" fill="rgba(227,25,55,0.08)" stroke="#e31937" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="560" y="103" font-family="Arial,sans-serif" font-size="9" fill="#e31937" font-weight="700">TSLA — 특허</text>
+  <text x="560" y="118" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">렌즈 자동 세정 특허</text>
+  <text x="560" y="133" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">US 12,636,684 B1 · 등록 2026.05.26</text>
+  <text x="560" y="147" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">카메라 오염 AI 감지 + 자동 세정</text>
+  <text x="560" y="161" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">FSD 악천후 신뢰도 향상 핵심 기술</text>
+  <text x="560" y="174" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" font-weight="600">Robotaxi 상용화 가속 요소</text>
+
+  <!-- Row 2 -->
+  <!-- Card 4: TSLA Optimus 5 -->
+  <rect x="32" y="196" width="228" height="96" rx="8" fill="rgba(192,132,252,0.08)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="48" y="215" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="700">TSLA — 로봇</text>
+  <text x="48" y="230" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">Optimus 5 완성 임박</text>
+  <text x="48" y="245" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">머스크: "세계 최고, 경쟁자 없음"</text>
+  <text x="48" y="259" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Final stages · 새 디자인 매년 개선</text>
+  <text x="48" y="273" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">연 $20T 로봇 시장 — 테슬라 선두</text>
+  <text x="48" y="286" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="600">공장 자체 투입 → 인건비 절감</text>
+
+  <!-- Card 5: TSLA Beijing NEV -->
+  <rect x="288" y="196" width="228" height="96" rx="8" fill="rgba(227,25,55,0.08)" stroke="#e31937" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="304" y="215" font-family="Arial,sans-serif" font-size="9" fill="#e31937" font-weight="700">TSLA — 중국</text>
+  <text x="304" y="230" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">베이징 NEV 84,000대</text>
+  <text x="304" y="245" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">가족 구매자 중심 등록 역대급 수치</text>
+  <text x="304" y="259" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">신형 Model Y 효과 · Q2 강세 전망</text>
+  <text x="304" y="273" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">BYD·Geely 경쟁 속 회복 신호</text>
+  <text x="304" y="286" font-family="Arial,sans-serif" font-size="9" fill="#4ade80" font-weight="600">중국 매출 20%+ — 회복 확인 시 촉매</text>
+
+  <!-- Card 6: SPCX SDN -->
+  <rect x="544" y="196" width="224" height="96" rx="8" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="560" y="215" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" font-weight="700">SPCX — 국방</text>
+  <text x="560" y="230" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">미 우주군 $23.5억 계약</text>
+  <text x="560" y="245" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">SDN Backbone · Firm-Fixed OTA</text>
+  <text x="560" y="259" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">전투원 연결 저궤도 위성망 구축</text>
+  <text x="560" y="273" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">2027년 말 프로토타입 완성 목표</text>
+  <text x="560" y="286" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" font-weight="600">Starlink 군수 수익 → IPO 가치 지지</text>
+
+  <!-- Row 3 -->
+  <!-- Card 7: SPCX Airlines -->
+  <rect x="32" y="308" width="228" height="96" rx="8" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="48" y="327" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" font-weight="700">SPCX — Starlink 항공</text>
+  <text x="48" y="342" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">항공사 38개 파트너</text>
+  <text x="48" y="357" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">United·Delta·Air France 등 대형사</text>
+  <text x="48" y="371" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">기당 월 $15K~25K · 38사 3,000대+</text>
+  <text x="48" y="385" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">연 예상 수익 $540M~900M</text>
+  <text x="48" y="398" font-family="Arial,sans-serif" font-size="9" fill="#4ade80" font-weight="600">항공 구독 +200% YoY 급증</text>
+
+  <!-- Card 8: AMD $1T -->
+  <rect x="288" y="308" width="228" height="96" rx="8" fill="rgba(74,222,128,0.08)" stroke="#4ade80" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="304" y="327" font-family="Arial,sans-serif" font-size="9" fill="#4ade80" font-weight="700">AMD — 마일스톤</text>
+  <text x="304" y="342" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">시총 $1조 첫 돌파 🎉</text>
+  <text x="304" y="357" font-family="Arial,sans-serif" font-size="10" fill="#4ade80">$506.20 (+5.86%) · $28.03↑</text>
+  <text x="304" y="371" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">MI300X AI GPU · EPYC 서버 CPU</text>
+  <text x="304" y="385" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">NVDA 대안 수요 · Ackman 투자</text>
+  <text x="304" y="398" font-family="Arial,sans-serif" font-size="9" fill="#4ade80" font-weight="600">$1T 클럽 7번째 합류</text>
+
+  <!-- Card 9: MU CHIPS -->
+  <rect x="544" y="308" width="224" height="96" rx="8" fill="rgba(251,146,60,0.08)" stroke="#fb923c" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="560" y="327" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" font-weight="700">MU — CHIPS법</text>
+  <text x="560" y="342" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">$51.6억 수령 확정</text>
+  <text x="560" y="357" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">상원 상무위 CHIPS법 감독 하</text>
+  <text x="560" y="371" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Fields +40% · Fetterman +48%</text>
+  <text x="560" y="385" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">의원 3인 올해 MU 매수 공시</text>
+  <text x="560" y="398" font-family="Arial,sans-serif" font-size="9" fill="#4ade80" font-weight="600">HBM4 생산 확대 → NVDA 공급망 핵심</text>
+
+  <!-- Row 4 -->
+  <!-- Card 10: AAPL Price Target -->
+  <rect x="32" y="420" width="228" height="96" rx="8" fill="rgba(96,165,250,0.08)" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="48" y="439" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" font-weight="700">AAPL — 목표주가</text>
+  <text x="48" y="454" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">BofA $380 상향</text>
+  <text x="48" y="469" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">기존 $330 → $380 (+15%↑ 상향)</text>
+  <text x="48" y="483" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">에이전트 AI 플랫폼 가치 재평가</text>
+  <text x="48" y="497" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">현재 $311 → 업사이드 +22%</text>
+  <text x="48" y="510" font-family="Arial,sans-serif" font-size="9" fill="#4ade80" font-weight="600">컨센서스 평균 ~$365 · 추가 상향 여지</text>
+
+  <!-- Bill Ackman Portfolio note -->
+  <rect x="288" y="420" width="228" height="96" rx="8" fill="rgba(251,191,36,0.06)" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="304" y="439" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24" font-weight="700">주목 — Bill Ackman Q1 2026</text>
+  <text x="304" y="454" font-family="Arial,sans-serif" font-size="12" fill="#ffffff" font-weight="700">포트폴리오 공개</text>
+  <text x="304" y="469" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">AMZN 19% · BN 17% · MSFT 15%</text>
+  <text x="304" y="483" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Uber 14% · HHH 11% · META 10%</text>
+  <text x="304" y="497" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Hilton 7% · Hilton 2%</text>
+  <text x="304" y="510" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24" font-weight="600">MSFT 대형 신규 포지션 주목</text>
+
+  <!-- Market Sentiment -->
+  <rect x="544" y="420" width="224" height="96" rx="8" fill="rgba(30,45,74,0.6)" stroke="#334155" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="560" y="439" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" font-weight="700">오늘의 시장 한줄 요약</text>
+  <text x="560" y="458" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">"Tesla는 적자지만 AI 로봇·</text>
+  <text x="560" y="474" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">우주 합병 모멘텀으로 주가 방어.</text>
+  <text x="560" y="490" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">AMD $1T 합류로 반도체 섹터</text>
+  <text x="560" y="506" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="600">신고점 행진 지속 중."</text>
+
+  <!-- Footer -->
+  <line x1="32" y1="530" x2="768" y2="530" stroke="#1e2d4a" stroke-width="0.5"/>
+  <text x="400" y="548" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="middle">SUNRYU Partners Investment Research  ·  2026.05.27  ·  10 Key Reports</text>
+  <text x="400" y="562" font-family="Arial,sans-serif" font-size="8" fill="#1e2d4a" text-anchor="middle">본 리포트는 투자 참고용이며 투자 결정의 최종 책임은 투자자 본인에게 있습니다.</text>
+</svg>

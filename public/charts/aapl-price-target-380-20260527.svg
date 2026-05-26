@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+    <linearGradient id="priceBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0.2"/>
+    </linearGradient>
+    <linearGradient id="targetBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#4ade80;stop-opacity:0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#60a5fa" opacity="0.9"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="600" letter-spacing="2">AAPL · 목표주가 · 2026.05.27</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="20" fill="#ffffff" font-weight="700">Apple 목표주가 $380으로 상향 — BofA (기존 $330)</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">에이전트 AI 시대의 플랫폼 지배력 재평가 · +15.2% 업사이드</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Price vs Target visual -->
+  <text x="32" y="130" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">■ 주가 vs 목표주가</text>
+
+  <!-- Current price bar -->
+  <text x="32" y="152" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">현재 주가</text>
+  <rect x="120" y="140" width="264" height="20" rx="3" fill="url(#priceBar)"/>
+  <text x="390" y="154" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700">$311.01</text>
+
+  <!-- BofA target bar -->
+  <text x="32" y="180" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">BofA 목표가</text>
+  <rect x="120" y="168" width="380" height="20" rx="3" fill="url(#targetBar)"/>
+  <text x="506" y="182" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" font-weight="700">$380</text>
+
+  <!-- Previous target bar -->
+  <text x="32" y="208" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">기존 목표가</text>
+  <rect x="120" y="196" width="330" height="20" rx="3" fill="rgba(148,163,184,0.3)"/>
+  <text x="456" y="210" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">$330</text>
+
+  <!-- Upside label -->
+  <text x="32" y="236" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">업사이드</text>
+  <text x="120" y="236" font-family="Arial,sans-serif" font-size="16" fill="#4ade80" font-weight="800">+22.2%  ($311 → $380)</text>
+
+  <!-- Divider -->
+  <line x1="32" y1="252" x2="760" y2="252" stroke="#1e2d4a" stroke-width="0.5"/>
+
+  <!-- BofA Rationale -->
+  <text x="32" y="272" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">■ BofA 상향 근거 — 에이전트 AI 시대의 Apple</text>
+  <text x="32" y="290" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 에이전트 AI 세계에서 앱 접근·개인정보·결제·음성·온디바이스 AI를 동시에 장악하는 유일한 플랫폼</text>
+  <text x="32" y="306" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• Siri 차세대 에이전트화 → 기기 교체 사이클 촉발 (iPhone, iPad, Mac 동시)</text>
+  <text x="32" y="322" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• App Store = 에이전트 플랫폼 진입점 → 결제 수수료 수익 보호</text>
+  <text x="32" y="338" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• AI 보조기기(AirPods, Watch) 확장 → 생태계 매출 $120B+ 목표</text>
+
+  <!-- Analyst targets comparison -->
+  <text x="32" y="366" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">■ 애널리스트 목표주가 현황</text>
+
+  <rect x="32" y="374" width="736" height="24" rx="3" fill="rgba(30,45,74,0.6)"/>
+  <text x="50" y="390" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">BofA $380 ↑</text>
+  <text x="170" y="390" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Wedbush $390</text>
+  <text x="300" y="390" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Morgan Stanley $370</text>
+  <text x="450" y="390" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Goldman Sachs $360</text>
+  <text x="600" y="390" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">컨센서스 평균 ~$365</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.27</text>
+</svg>
