@@ -6,7 +6,7 @@
  * Cache hierarchy (write): in-memory + KV updated together on every fresh fetch
  */
 
-import { fetchQuoteV8, type YFQuote } from "@/lib/yahooFinance";
+import { fetchBatchQuotes, fetchQuoteV8, type YFQuote } from "@/lib/yahooFinance";
 import { isMarketOpen } from "@/lib/marketHours";
 import { kvGetPrice, kvSetPrice, type PriceData } from "@/lib/kv";
 
@@ -31,18 +31,6 @@ function setCache(sym: string, data: PriceEntry): void {
   kvSetPrice(sym, entry);
 }
 
-async function fetchYFChunked(symbols: string[]): Promise<YFQuote[]> {
-  const out: YFQuote[] = [];
-  const CHUNK = 3;
-  const DELAY = 200;
-  for (let i = 0; i < symbols.length; i += CHUNK) {
-    const chunk = symbols.slice(i, i + CHUNK);
-    const rows = await Promise.all(chunk.map(fetchQuoteV8));
-    rows.forEach((q) => { if (q && q.price > 0) out.push(q); });
-    if (i + CHUNK < symbols.length) await new Promise<void>((r) => setTimeout(r, DELAY));
-  }
-  return out;
-}
 
 async function fetchTDPrice(sym: string): Promise<PriceEntry | null> {
   const key = process.env.TWELVEDATA_API_KEY;
@@ -101,9 +89,9 @@ export async function getPrices(
   if (!open && stillNeed.length === 0) return result;
   if (need.length === 0) return result;
 
-  // 3) Yahoo Finance v8 (chunked to avoid rate-limit)
+  // 3) Yahoo Finance v7 batch (same source as market-data — correct prices)
   try {
-    const yfRows = await fetchYFChunked(need);
+    const yfRows = await fetchBatchQuotes(need);
     yfRows.forEach((q) => {
       if (q.price > 0) {
         const entry = { price: q.price, change: q.change, changePercent: q.changePercent };
