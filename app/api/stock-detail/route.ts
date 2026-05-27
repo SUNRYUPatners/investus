@@ -4,7 +4,7 @@ import {
   fetchFinnhubProfile,
   fetchFinnhubMetrics,
 } from "@/lib/finnhub";
-import { fetchQuoteV8 } from "@/lib/yahooFinance";
+import { fetchBatchQuotes, fetchQuoteV8 } from "@/lib/yahooFinance";
 import { isMarketOpen } from "@/lib/marketHours";
 import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
@@ -71,8 +71,8 @@ export async function GET(req: NextRequest) {
     // market-data와 완전히 동일한 우선순위 — 가격 일치 보장
     const idxMeta = INDEX_ETF[rawSymbol];
     if (idxMeta) {
-      // Yahoo Finance v8 — 모든 가격의 통일 소스
-      const yfDirect = await fetchQuoteV8(idxMeta.yfSym);
+      // Yahoo Finance v7 batch — market-data와 동일한 소스
+      const [yfDirect] = await fetchBatchQuotes([idxMeta.yfSym]);
       if (yfDirect) {
         return saveAndRespond(rawSymbol, {
           symbol: rawSymbol, name: idxMeta.name,
@@ -166,7 +166,7 @@ export async function GET(req: NextRequest) {
     };
     const futuresMeta = FUTURES_YF[rawSymbol];
     if (futuresMeta) {
-      const yf = await fetchQuoteV8(futuresMeta.yfSym);
+      const [yf] = await fetchBatchQuotes([futuresMeta.yfSym]);
       if (yf && yf.price > 0) {
         return saveAndRespond(rawSymbol, {
           symbol: rawSymbol, name: futuresMeta.name,
@@ -181,9 +181,9 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // ── 2b) 일반 미국 주식: Yahoo Finance v8 (primary, 홈탭과 동일 소스) → Finnhub fallback ──
-    const [yfQuote, profile, metrics] = await Promise.all([
-      fetchQuoteV8(rawSymbol),          // Yahoo Finance v8 — market-data와 동일한 소스
+    // ── 2b) 일반 미국 주식: Yahoo Finance v7 batch (market-data와 동일 소스) → Finnhub fallback ──
+    const [[yfQuote], profile, metrics] = await Promise.all([
+      fetchBatchQuotes([rawSymbol]),    // Yahoo Finance v7 batch — market-data와 동일한 소스
       fetchFinnhubProfile(rawSymbol),   // 회사명·거래소·통화
       fetchFinnhubMetrics(rawSymbol),   // PE·52w·배당·베타
     ]);

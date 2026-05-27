@@ -15,7 +15,7 @@ export function HomeAIInsight() {
   const [expanded, setExpanded] = useState(false);
   const fetchedAI = useRef(false);
 
-  // Fetch live prices — market-data-cache (YF v7 batch, accurate) → guru-prices for missing
+  // Fetch live prices from market-data-cache only (YF v7 batch — same source as 추천주식/히트맵)
   useEffect(() => {
     if (!loaded || holdings.length === 0) return;
     const syms = holdings.map((h) => h.symbol);

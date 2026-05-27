@@ -459,12 +459,26 @@ export default function GuidePage() {
         </div>
 
         {/* Header */}
-        <div className="mb-6">
+        <div className="mb-4">
           <p className="text-[11px] font-semibold tracking-widest uppercase" style={{ color: "var(--mint)" }}>INVESTUS</p>
           <h1 className="text-2xl font-bold mt-1" style={{ color: "var(--text)" }}>Investus 사용법</h1>
           <p className="text-sm mt-1.5" style={{ color: "var(--muted)" }}>
             미국 주식 완전 초보도 이해할 수 있게 각 기능을 설명해드려요. 궁금한 항목을 눌러보세요.
           </p>
+        </div>
+
+        {/* ? 버튼 안내 배너 */}
+        <div className="mb-5 rounded-2xl border px-4 py-3.5 flex items-start gap-3"
+          style={{ background: "rgba(0,229,160,0.06)", borderColor: "rgba(0,229,160,0.2)" }}>
+          <span className="text-xl flex-shrink-0 mt-0.5">❓</span>
+          <div>
+            <p className="text-[13px] font-bold" style={{ color: "var(--text)" }}>
+              실시간으로 궁금하다면 제목 옆 <span style={{ color: "var(--mint)" }}>?</span>를 탭해보세요!
+            </p>
+            <p className="text-[12px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
+              홈·검색·인사이트 탭의 각 섹션 제목 옆 <b style={{ color: "var(--text)" }}>?</b> 아이콘을 누르면 해당 기능의 설명을 바로 확인할 수 있어요. 앱을 보면서 그 자리에서 바로 탭하면 돼요.
+            </p>
+          </div>
         </div>
 
         {/* Quick nav */}
