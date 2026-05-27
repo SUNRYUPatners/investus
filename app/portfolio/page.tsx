@@ -19,10 +19,8 @@ import { PortfolioAI } from "@/components/PortfolioAI";
 
 // ── Types & Constants ─────────────────────────────────────────────────────────
 
-type LiveQ    = { symbol: string; shortName: string; price: number; changePercent: number };
-type GuruEntry = { price: number; change: number; changePercent: number };
-type GuruResp  = Record<string, GuruEntry>;
-type Cur = "USD" | "KRW";
+type LiveQ = { symbol: string; shortName: string; price: number; changePercent: number };
+type Cur   = "USD" | "KRW";
 
 const BROKERAGES_KR = [
   { name: "키움", emoji: "🟠" }, { name: "KB증권", emoji: "🟡" },
@@ -502,7 +500,7 @@ function AddSheet({ onClose, onAdd, existing }: {
     setLooking(true); setErr("");
     try {
       const res  = await fetch(`/api/guru-prices?symbols=${encodeURIComponent(upper)}`);
-      const data = await res.json() as GuruResp;
+      const data = await res.json() as Record<string, { price: number; changePercent: number }>;
       const entry = data[upper];
       if (entry?.price > 0) {
         setSelected({ symbol: upper, name: upper, price: entry.price });
@@ -745,9 +743,9 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
 
 // ── Summary card ──────────────────────────────────────────────────────────────
 
-function SummaryCard({ holdings, liveMap, cur, rate, loading, onRefresh, locale }: {
+function SummaryCard({ holdings, liveMap, cur, rate, onRefresh, locale }: {
   holdings: Holding[]; liveMap: Record<string, LiveQ>;
-  cur: Cur; rate: number; loading: boolean;
+  cur: Cur; rate: number;
   onRefresh: () => void; locale: string;
 }) {
   const totalVal  = holdings.reduce((s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0);
@@ -774,9 +772,9 @@ function SummaryCard({ holdings, liveMap, cur, rate, loading, onRefresh, locale 
           <p className="text-[10px] font-semibold tracking-widest uppercase font-syne" style={{ color: "rgba(0,229,160,0.7)" }}>
             {locale === "ko" ? "총 평가금액" : "Total Portfolio Value"}
           </p>
-          <button onClick={onRefresh} disabled={loading} className="transition-opacity disabled:opacity-40">
+          <button onClick={onRefresh} className="transition-opacity active:opacity-50">
             <RefreshCw className="w-3.5 h-3.5" strokeWidth={2}
-              style={{ color: "rgba(0,229,160,0.5)", animation: loading ? "spin 1s linear infinite" : undefined } as React.CSSProperties} />
+              style={{ color: "rgba(0,229,160,0.5)" }} />
           </button>
         </div>
 
@@ -904,51 +902,40 @@ function BrokerageSection({ locale, onImport }: { locale: string; onImport: () =
 export default function PortfolioPage() {
   const router                          = useRouter();
   const { holdings, setHoldings, cur, setCur, loaded, isLoggedIn } = usePortfolio();
-  const [liveMap, setLiveMap]           = useState<Record<string, LiveQ>>({});
-  const [usdkrw, setUsdkrw]            = useState(1350);
-  const [fetching, setFetching]         = useState(false);
-  const [showAdd, setShowAdd]           = useState(false);
-  const [showImport, setShowImport]     = useState(false);
-  const locale                          = useLocaleCode();
+  const [liveMap, setLiveMap]       = useState<Record<string, LiveQ>>({});
+  const [usdkrw, setUsdkrw]        = useState(1350);
+  const [showAdd, setShowAdd]       = useState(false);
+  const [showImport, setShowImport] = useState(false);
+  const locale                      = useLocaleCode();
 
-  const fetchLive = useCallback(async (syms: string[]) => {
+  const fetchLive = useCallback((syms: string[]) => {
     if (syms.length === 0) return;
-    setFetching(true);
     try {
-      // 1) Read from market-data-cache (YF v7 batch — same accurate source as 추천주식/히트맵)
+      const raw = localStorage.getItem("market-data-cache");
+      if (!raw) return;
+      const md = JSON.parse(raw) as {
+        quotes?:  { symbol: string; price: number; changePercent: number }[];
+        indices?: { symbol: string; value: number }[];
+      };
+      const cacheMap = new Map((md.quotes ?? []).map((q) => [q.symbol, q]));
       const map: Record<string, LiveQ> = {};
-      const missing: string[] = [];
-      try {
-        const raw = localStorage.getItem("market-data-cache");
-        if (raw) {
-          const md = JSON.parse(raw) as { quotes?: { symbol: string; price: number; changePercent: number; change?: number }[]; indices?: { symbol: string; value: number }[] };
-          const cacheMap = new Map((md.quotes ?? []).map((q) => [q.symbol, q]));
-          syms.forEach((s) => {
-            const q = cacheMap.get(s);
-            if (q && q.price > 0) map[s] = { symbol: s, shortName: s, price: q.price, changePercent: q.changePercent };
-            else missing.push(s);
-          });
-          // USDKRW from indices
-          const krw = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
-          if (krw?.value && krw.value > 100) setUsdkrw(krw.value);
-        } else { missing.push(...syms); }
-      } catch { missing.push(...syms); }
-
-      // 2) Supplement missing symbols from guru-prices
-      if (missing.length > 0) {
-        const res  = await fetch(`/api/guru-prices?symbols=${encodeURIComponent([...missing, "USDKRW=X"].join(","))}`);
-        const data = await res.json() as GuruResp;
-        const rate = data["USDKRW=X"]?.price ?? 1350;
-        if (rate > 100) setUsdkrw(rate);
-        missing.forEach((s) => { if (data[s]?.price > 0) map[s] = { symbol: s, shortName: s, price: data[s].price, changePercent: data[s].changePercent }; });
-      }
-
-      setLiveMap(map);
-    } catch { /* keep stale */ } finally { setFetching(false); }
+      syms.forEach((s) => {
+        const q = cacheMap.get(s);
+        if (q && q.price > 0) map[s] = { symbol: s, shortName: s, price: q.price, changePercent: q.changePercent };
+      });
+      if (Object.keys(map).length > 0) setLiveMap(map);
+      const krw = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
+      if (krw?.value && krw.value > 100) setUsdkrw(krw.value);
+    } catch { /* ignore */ }
   }, []);
 
   useEffect(() => {
-    if (loaded) fetchLive(holdings.length > 0 ? holdings.map((h) => h.symbol) : []);
+    if (!loaded || holdings.length === 0) return;
+    const syms = holdings.map((h) => h.symbol);
+    fetchLive(syms);
+    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") fetchLive(syms); };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loaded, holdings]);
 
@@ -1035,7 +1022,6 @@ export default function PortfolioPage() {
             <SummaryCard
               holdings={holdings} liveMap={liveMap}
               cur={cur} rate={usdkrw}
-              loading={fetching}
               onRefresh={() => fetchLive(holdings.map((h) => h.symbol))}
               locale={locale}
             />

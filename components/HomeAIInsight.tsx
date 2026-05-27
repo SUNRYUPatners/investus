@@ -4,9 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Sparkles, ChevronDown, ChevronUp } from "lucide-react";
 import { usePortfolio } from "@/hooks/usePortfolio";
 
-type PriceEntry = { price: number; change: number; changePercent: number };
-type GuruResp   = Record<string, PriceEntry>;
-type LiveQ      = { symbol: string; price: number; change: number; changePercent: number };
+type LiveQ = { symbol: string; price: number; change: number; changePercent: number };
 
 export function HomeAIInsight() {
   const { holdings, loaded, isLoggedIn } = usePortfolio();
@@ -22,38 +20,28 @@ export function HomeAIInsight() {
     if (!loaded || holdings.length === 0) return;
     const syms = holdings.map((h) => h.symbol);
 
-    // Read from market-data-cache first (same source as 추천주식)
-    const applyCache = (): string[] => {
-      const found: string[] = [];
+    // Read from market-data-cache (same source as 추천주식/히트맵)
+    const applyCache = () => {
       try {
         const raw = localStorage.getItem("market-data-cache");
-        if (!raw) return found;
-        const d = JSON.parse(raw) as { quotes?: { symbol: string; price: number; change?: number; changePercent: number }[] };
+        if (!raw) return;
+        const d = JSON.parse(raw) as {
+          quotes?:  { symbol: string; price: number; change?: number; changePercent: number }[];
+          indices?: { symbol: string; value: number }[];
+        };
         const map = new Map((d.quotes ?? []).map((q) => [q.symbol, q]));
         const matched = syms.filter((s) => map.has(s) && (map.get(s)!.price > 0));
         if (matched.length > 0) {
           setQuotes(matched.map((s) => ({ symbol: s, price: map.get(s)!.price, change: map.get(s)!.change ?? 0, changePercent: map.get(s)!.changePercent })));
-          matched.forEach((s) => found.push(s));
         }
+        const krw = (d.indices ?? []).find((i) => i.symbol === "USDKRW");
+        if (krw && krw.value > 100) setUsdkrw(krw.value);
       } catch { /* ignore */ }
-      return found;
     };
 
-    const foundInCache = applyCache();
+    applyCache();
     const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(); };
     window.addEventListener("storage", onStorage);
-
-    // Supplement missing symbols with guru-prices
-    const missing = [...syms.filter((s) => !foundInCache.includes(s)), "USDKRW=X"];
-    fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`)
-      .then((r) => r.json())
-      .then((d: GuruResp) => {
-        const rate = d["USDKRW=X"]?.price ?? 1350;
-        setUsdkrw(rate > 100 ? rate : 1350);
-        const extras = missing.filter((s) => s !== "USDKRW=X" && d[s]?.price > 0).map((s) => ({ symbol: s, price: d[s].price, change: d[s].change, changePercent: d[s].changePercent }));
-        if (extras.length > 0) setQuotes((prev) => { const keep = prev.filter((q) => !missing.includes(q.symbol)); return [...keep, ...extras]; });
-      })
-      .catch(() => {});
 
     return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);

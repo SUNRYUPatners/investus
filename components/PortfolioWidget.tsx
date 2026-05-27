@@ -5,10 +5,8 @@ import { useRouter } from "next/navigation";
 import { TrendingUp, TrendingDown, ChevronRight, Wallet, ChevronDown, ChevronUp } from "lucide-react";
 import { usePortfolio } from "@/hooks/usePortfolio";
 
-type PriceEntry = { price: number; change: number; changePercent: number };
-type GuruResp   = Record<string, PriceEntry>;
-type LiveQ      = { symbol: string; shortName: string; price: number; changePercent: number };
-type Cur        = "USD" | "KRW";
+type LiveQ = { symbol: string; shortName: string; price: number; changePercent: number };
+type Cur   = "USD" | "KRW";
 
 function fmtUSD(v: number) {
   return "$" + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -46,7 +44,6 @@ export function PortfolioWidget() {
   const { holdings, cur, setCur, loaded, isLoggedIn } = usePortfolio();
   const [quotes,    setQuotes]    = useState<LiveQ[]>([]);
   const [usdkrw,    setUsdkrw]    = useState(1350);
-  const [fetching,  setFetching]  = useState(false);
   const [showAll,   setShowAll]   = useState(false);
   const [collapsed, setCollapsed] = useState(false);
 
@@ -55,55 +52,34 @@ export function PortfolioWidget() {
 
     const syms = holdings.map((h) => h.symbol);
 
-    // Read prices from market-data-cache (written by LiveMarket, YF v7 batch — accurate source)
-    const applyCache = (): string[] => {
-      const found: string[] = [];
+    // Single price source: market-data-cache (written by LiveMarket via YF v7 batch)
+    // This is the SAME source as 추천주식·인기종목 — guarantees identical prices everywhere
+    const applyCache = () => {
       try {
         const raw = localStorage.getItem("market-data-cache");
-        if (!raw) return found;
-        const d = JSON.parse(raw) as { quotes?: { symbol: string; price: number; changePercent: number; change?: number }[]; _ts?: number };
+        if (!raw) return;
+        const d = JSON.parse(raw) as {
+          quotes?: { symbol: string; price: number; changePercent: number }[];
+          indices?: { symbol: string; value: number }[];
+        };
         const map = new Map((d.quotes ?? []).map((q) => [q.symbol, q]));
-        const matched = syms.filter((s) => map.has(s) && (map.get(s)!.price > 0));
-        if (matched.length > 0) {
-          setQuotes(matched.map((s) => ({ symbol: s, shortName: s, price: map.get(s)!.price, changePercent: map.get(s)!.changePercent })));
-          matched.forEach((s) => found.push(s));
+        const found = syms.filter((s) => { const q = map.get(s); return q && q.price > 0; });
+        if (found.length > 0) {
+          setQuotes(found.map((s) => {
+            const q = map.get(s)!;
+            return { symbol: s, shortName: s, price: q.price, changePercent: q.changePercent };
+          }));
         }
+        const krw = (d.indices ?? []).find((i) => i.symbol === "USDKRW");
+        if (krw && krw.value > 100) setUsdkrw(krw.value);
       } catch { /* ignore */ }
-      return found;
     };
 
-    // Apply cached values immediately
-    const foundInCache = applyCache();
+    applyCache();
 
-    // Subscribe to LiveMarket cache updates — auto-sync when LiveMarket refreshes
+    // Auto-sync whenever LiveMarket refreshes the cache
     const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(); };
     window.addEventListener("storage", onStorage);
-
-    // For symbols NOT in cache, supplement with guru-prices (but never overwrite cache)
-    const missing = syms.filter((s) => !foundInCache.includes(s));
-    const fetchSyms = [...missing, "USDKRW=X"];
-    setFetching(true);
-    fetch(`/api/guru-prices?symbols=${encodeURIComponent(fetchSyms.join(","))}`)
-      .then((r) => r.json())
-      .then((d: GuruResp) => {
-        const rate = d["USDKRW=X"]?.price ?? 1350;
-        setUsdkrw(rate > 100 ? rate : 1350);
-        if (missing.length > 0) {
-          const extra = missing.filter((s) => d[s]?.price > 0).map((s) => ({ symbol: s, shortName: s, price: d[s].price, changePercent: d[s].changePercent }));
-          if (extra.length > 0) setQuotes((prev) => { const keep = prev.filter((q) => !missing.includes(q.symbol)); return [...keep, ...extra]; });
-        }
-        // Also get USDKRW from market-data-cache if available
-        try {
-          const raw = localStorage.getItem("market-data-cache");
-          if (raw) {
-            const md = JSON.parse(raw) as { indices?: { symbol: string; value: number }[] };
-            const krwIndex = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
-            if (krwIndex && krwIndex.value > 100) setUsdkrw(krwIndex.value);
-          }
-        } catch { /* ignore */ }
-      })
-      .catch(() => {})
-      .finally(() => setFetching(false));
 
     return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
@@ -194,7 +170,7 @@ export function PortfolioWidget() {
   const summaryRow = (
     <div className="px-4 pb-2.5 flex items-center gap-3">
       <div className="text-lg font-bold tabular-nums" style={{ color: "var(--text)" }}>
-        {fetching && quotes.length === 0 ? "—" : fmtVal(totalValue, cur, usdkrw)}
+        {fmtVal(totalValue, cur, usdkrw)}
       </div>
       <div className="flex items-center gap-1">
         {totalPnl >= 0
@@ -234,7 +210,7 @@ export function PortfolioWidget() {
                   {h.q ? (cur === "USD" ? `$${price.toFixed(2)}` : fmtKRW(price * usdkrw)) : "—"}
                 </div>
                 <div className="text-xs font-bold tabular-nums" style={{ color: "var(--text)" }}>
-                  {fetching && !h.q ? "—" : fmtVal(h.val, cur, usdkrw)}
+                  {fmtVal(h.val, cur, usdkrw)}
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] tabular-nums" style={{ color: clr(pnlPct) }}>
@@ -283,7 +259,7 @@ export function PortfolioWidget() {
                 </div>
                 <div className="text-right">
                   <div className="text-xs font-bold tabular-nums" style={{ color: "var(--text)" }}>
-                    {fetching && !h.q ? "—" : fmtVal(h.val, cur, usdkrw)}
+                    {fmtVal(h.val, cur, usdkrw)}
                   </div>
                   <div className="text-[10px] tabular-nums" style={{ color: clr(pnlPct) }}>
                     {sgn(pnlPct)}{pnlPct.toFixed(2)}%
