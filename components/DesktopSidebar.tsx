@@ -133,7 +133,7 @@ export function DesktopSidebar() {
 
         {/* Investus version */}
         <p className="text-[10px] text-center" style={{ color: "var(--border)" }}>
-          investus.kr · v1.0.4
+          investus.kr × SRP
         </p>
       </div>
     </aside>

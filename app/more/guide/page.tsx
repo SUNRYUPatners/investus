@@ -65,12 +65,14 @@ const SECTIONS: Section[] = [
           <div className="px-3 py-2 space-y-2">
             {[
               ["① 실시간 티커", "화면 상단에 주요 종목 실시간 등락률이 흘러가요"],
-              ["② 내 보유종목", "직접 추가한 종목의 수익률을 한눈에 확인"],
-              ["③ Investus 추천주식", "SUNRYU Partners CIO가 선별한 투자 추천 종목"],
-              ["④ 인기 종목", "주요 미국 대형주 실시간 시세 (AAPL·NVDA·TSLA 등)"],
-              ["⑤ 주요 지수", "S&P 500, NASDAQ, DOW, Russell 2000, 원달러 환율"],
-              ["⑥ FUTURES MAP", "선물 시장 — 내일 증시를 미리 가늠하는 지표"],
-              ["⑦ S&P 500 히트맵", "500개 종목을 색깔로 한눈에 보는 시장 지도"],
+              ["② 내 보유종목", "직접 추가한 종목의 수익률을 한눈에 확인 (탭 이동 시 즉시 표시)"],
+              ["③ 포트폴리오 AI 분석", "장마감 후 자동으로 내 종목 등락 원인 분석. 장중에는 수동으로 3회 무료"],
+              ["④ 관심종목", "즐겨찾기 종목 한눈에 모아보기"],
+              ["⑤ Investus 추천주식", "SUNRYU Partners CIO가 선별한 투자 추천 종목"],
+              ["⑥ 인기 종목", "주요 미국 대형주 실시간 시세 (AAPL·NVDA·TSLA 등)"],
+              ["⑦ 주요 지수", "S&P 500, NASDAQ, DOW, Russell 2000, 원달러 환율"],
+              ["⑧ FUTURES MAP", "선물 시장 — 내일 증시를 미리 가늠하는 지표"],
+              ["⑨ S&P 500 히트맵", "500개 종목을 색깔로 한눈에 보는 시장 지도"],
             ].map(([t, d]) => (
               <div key={t} className="flex gap-2">
                 <span className="font-bold text-[12px] flex-shrink-0" style={{ color: "var(--text)" }}>{t}</span>
@@ -376,6 +378,24 @@ const SECTIONS: Section[] = [
             ))}
           </div>
         </div>
+
+        {/* 홈탭 AI */}
+        <div className="rounded-xl p-3 mt-2 border" style={{ background: "rgba(99,102,241,0.04)", borderColor: "rgba(99,102,241,0.2)" }}>
+          <p className="text-[12px] font-bold mb-2" style={{ color: "#818cf8" }}>🏠 홈탭 포트폴리오 등락 분석</p>
+          <div className="space-y-1.5">
+            {[
+              ["장마감 자동분석", "미국 장 마감(새벽 5시 KST) 후 자동으로 오늘 종목 등락 이유 분석·저장"],
+              ["무료 무제한", "장마감 분석은 횟수 제한 없이 무료"],
+              ["장중 재분석", "장이 열린 동안 수동으로 최신 분석 요청 — 하루 3회 무료"],
+              ["주말·휴일", "마지막 거래일 분석 결과를 그대로 유지"],
+            ].map(([t, d]) => (
+              <div key={t} className="flex gap-2">
+                <span className="font-bold text-[11px] flex-shrink-0" style={{ color: "var(--text)" }}>{t}</span>
+                <span className="text-[11px]">{d}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </>
     ),
   },
@@ -403,6 +423,8 @@ const SECTIONS: Section[] = [
             ["🔴 NEW 배지", "최근 새 글이 올라온 종목. 최신 토론 바로 확인"],
             ["💼 보유확인", "실제 해당 종목을 보유한 투자자 인증 글"],
             ["👍 좋아요", "공감하는 의견에 좋아요"],
+            ["💬 댓글", "댓글 버튼 탭하면 바로 아래에 펼쳐짐 (팝업 아님). 거기서 바로 작성 가능"],
+            ["📖 글 펼치기", "글 본문을 탭·클릭하면 전체 내용이 펼쳐짐"],
             ["✏️ 글쓰기", "로그인 후 종목토론 참여 가능. 투자클럽은 계좌 인증 후 개설"],
           ].map(([t, d]) => (
             <div key={t} className="flex gap-2">
