@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "@/contexts/LocaleContext";
 import Link from "next/link";
@@ -501,8 +501,12 @@ export default function WallPage() {
   const [uploading, setUploading]         = useState(false);
   const [uploadErr, setUploadErr]         = useState("");
   const [hasCreatorProfile, setHasCreatorProfile] = useState(false);
-  const [commentPost, setCommentPost]     = useState<Post | null>(null);
-  const [commentRealId, setCommentRealId] = useState<number | undefined>();
+  const [expandedWallComments, setExpandedWallComments] = useState<Set<number>>(new Set());
+  const [wallComments, setWallComments]       = useState<Record<number, CommentWithReplies[]>>({});
+  const [wallCommentInput, setWallCommentInput] = useState<Record<number, string>>({});
+  const [wallCommentSubmitting, setWallCommentSubmitting] = useState<number | null>(null);
+  const [wallReplyTo, setWallReplyTo]         = useState<Record<number, { id: number; nickname: string } | null>>({});
+  const [wallLikedComments, setWallLikedComments] = useState<Set<number>>(new Set());
   const [creatorSort, setCreatorSort]     = useState<CreatorSort>("popular");
   const [, setTick] = useState(0);
   const [lastSeen, setLastSeen] = useState<Record<string, number>>({});
@@ -771,6 +775,9 @@ export default function WallPage() {
       const comment: AnalystComment = await res.json();
       setAnalystComments((prev) => ({ ...prev, [postId]: [...(prev[postId] ?? []), comment] }));
       setCommentDraft((prev) => ({ ...prev, [postId]: "" }));
+      setAnalystPosts((prev) => prev.map((p) =>
+        p.id === postId ? { ...p, comments: (p.comments ?? 0) + 1 } : p
+      ));
     }
     setSubmittingComment(null);
   };
@@ -818,6 +825,110 @@ export default function WallPage() {
       setEditErr("네트워크 오류. 다시 시도해주세요.");
     }
     setSavingEdit(false);
+  };
+
+  // ── Inline wall comment handlers ─────────────────────────────────────────
+  const toggleWallComments = async (postId: number, realId: number | null) => {
+    const isOpen = expandedWallComments.has(postId);
+    if (isOpen) {
+      setExpandedWallComments((prev) => { const n = new Set(prev); n.delete(postId); return n; });
+      return;
+    }
+    setExpandedWallComments((prev) => new Set(prev).add(postId));
+    if (wallComments[postId]) return;
+    if (realId != null) {
+      try {
+        const res = await fetch(`/api/wall-comments?post_id=${realId}`);
+        const data = await res.json() as ApiComment[];
+        if (Array.isArray(data)) {
+          setWallComments((prev) => ({ ...prev, [postId]: data.map((c) => ({
+            id:           c.id,
+            nickname:     c.nickname,
+            holdingLabel: "보유인증",
+            content:      c.content,
+            createdAt:    new Date(c.created_at).getTime(),
+            likes:        c.likes,
+            parentId:     c.parent_id ?? null,
+          })) }));
+        }
+      } catch { setWallComments((prev) => ({ ...prev, [postId]: [] })); }
+    } else {
+      setWallComments((prev) => ({
+        ...prev, [postId]: (MOCK_COMMENTS[postId] ?? []).map((c) => ({ ...c, parentId: null })),
+      }));
+    }
+  };
+
+  const submitWallComment = async (postId: number, realId: number | null) => {
+    const content = wallCommentInput[postId]?.trim();
+    if (!user || !content || wallCommentSubmitting === postId) return;
+    setWallCommentSubmitting(postId);
+    try {
+      if (realId != null) {
+        const body: Record<string, unknown> = { post_id: realId, content };
+        const replyTo = wallReplyTo[postId];
+        if (replyTo) body.parent_id = replyTo.id;
+        const res = await fetch("/api/wall-comments", {
+          method: "POST", headers: await authHeaders(), body: JSON.stringify(body),
+        });
+        const data = await res.json() as ApiComment & { error?: string };
+        if (res.ok && !data.error) {
+          setWallComments((prev) => ({ ...prev, [postId]: [...(prev[postId] ?? []), {
+            id: data.id, nickname: data.nickname, holdingLabel: "보유인증",
+            content: data.content, createdAt: new Date(data.created_at).getTime(),
+            likes: 0, parentId: data.parent_id ?? null,
+          }] }));
+          setWallCommentInput((prev) => ({ ...prev, [postId]: "" }));
+          setWallReplyTo((prev) => ({ ...prev, [postId]: null }));
+          setRealPosts((prev) => prev.map((r) =>
+            r.id === realId ? { ...r, comments: r.comments + 1 } : r
+          ));
+        }
+      } else {
+        setWallComments((prev) => ({ ...prev, [postId]: [...(prev[postId] ?? []), {
+          id: Date.now(), nickname: makeAnonNick(user.email), holdingLabel: w.verified,
+          content, createdAt: Date.now(), likes: 0,
+          parentId: wallReplyTo[postId]?.id ?? null,
+        }] }));
+        setWallCommentInput((prev) => ({ ...prev, [postId]: "" }));
+        setWallReplyTo((prev) => ({ ...prev, [postId]: null }));
+      }
+    } catch {}
+    setWallCommentSubmitting(null);
+  };
+
+  const renderWallComment = (c: CommentWithReplies, postId: number, all: CommentWithReplies[], isReply = false): React.ReactNode => {
+    const replies = all.filter((r) => r.parentId === c.id);
+    return (
+      <div key={c.id} className={isReply ? "ml-8 mt-2" : ""}>
+        <div className="flex gap-2.5">
+          {isReply && <div className="w-px self-stretch mr-0.5" style={{ background: "var(--border)" }} />}
+          <div className={`w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-bold flex-shrink-0 mt-0.5 ${isReply ? "opacity-70" : ""}`}
+            style={{ background: "var(--border)", color: "var(--muted)" }}>익</div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-1.5 mb-0.5">
+              <span className={`font-semibold ${isReply ? "text-[10px]" : "text-xs"}`} style={{ color: "var(--text)" }}>{c.nickname}</span>
+              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(0,229,160,0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
+              <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{getRelativeTime(c.createdAt, w)}</span>
+            </div>
+            <p className={`leading-relaxed mb-1 ${isReply ? "text-[11px]" : "text-[12px]"}`} style={{ color: "var(--text)" }}>{c.content}</p>
+            <div className="flex items-center gap-3">
+              <button onClick={() => setWallLikedComments((prev) => { const n = new Set(prev); n.has(c.id) ? n.delete(c.id) : n.add(c.id); return n; })}
+                className="flex items-center gap-1 text-[10px]"
+                style={{ color: wallLikedComments.has(c.id) ? "var(--mint)" : "var(--muted)" }}>
+                <ThumbsUp className="w-3 h-3" />
+                {c.likes + (wallLikedComments.has(c.id) ? 1 : 0)}
+              </button>
+              {!isReply && user && (
+                <button onClick={() => setWallReplyTo((p) => ({ ...p, [postId]: { id: c.id, nickname: c.nickname } }))}
+                  className="text-[10px]" style={{ color: "var(--muted)" }}>답글</button>
+              )}
+            </div>
+          </div>
+        </div>
+        {replies.map((r) => renderWallComment(r, postId, all, true))}
+      </div>
+    );
   };
 
   // Merge real Supabase posts (first) with mock posts
@@ -1181,16 +1292,55 @@ export default function WallPage() {
                           {post.likes + (liked.has(post.id) ? 1 : 0)}
                         </button>
                         <button
-                          onClick={() => {
-                            setCommentPost(post);
-                            setCommentRealId(post.id >= 100000 ? post.id - 100000 : undefined);
-                          }}
+                          onClick={() => toggleWallComments(post.id, realId)}
                           className="flex items-center gap-1.5 text-xs active:opacity-60 transition-opacity"
-                          style={{ color: "var(--muted)" }}>
+                          style={{ color: expandedWallComments.has(post.id) ? "var(--mint)" : "var(--muted)" }}>
                           <MessageCircle className="w-3.5 h-3.5" />
-                          {post.comments}
+                          {wallComments[post.id] !== undefined ? wallComments[post.id].length : post.comments}
                         </button>
                       </div>
+
+                      {/* Inline comments */}
+                      {expandedWallComments.has(post.id) && (
+                        <div className="mt-3 pt-3 border-t" style={{ borderColor: "var(--border)" }}>
+                          {(wallComments[post.id] ?? []).filter((c) => !c.parentId).length === 0 ? (
+                            <p className="text-xs text-center py-3" style={{ color: "var(--muted)" }}>{w.commentEmpty}</p>
+                          ) : (
+                            <div className="space-y-3 mb-3">
+                              {(wallComments[post.id] ?? []).filter((c) => !c.parentId)
+                                .map((c) => renderWallComment(c, post.id, wallComments[post.id] ?? []))}
+                            </div>
+                          )}
+                          {wallReplyTo[post.id] && (
+                            <div className="flex items-center gap-1.5 mb-1.5 px-1">
+                              <span className="text-[10px]" style={{ color: "var(--mint)" }}>↩ {wallReplyTo[post.id]!.nickname}에게 답글</span>
+                              <button onClick={() => setWallReplyTo((p) => ({ ...p, [post.id]: null }))} className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>취소</button>
+                            </div>
+                          )}
+                          {user ? (
+                            <div className="flex gap-2 mt-2">
+                              <input
+                                value={wallCommentInput[post.id] ?? ""}
+                                onChange={(e) => setWallCommentInput((p) => ({ ...p, [post.id]: e.target.value }))}
+                                onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); submitWallComment(post.id, realId); }}}
+                                placeholder={wallReplyTo[post.id] ? `${wallReplyTo[post.id]!.nickname}에게 답글...` : w.commentInput}
+                                maxLength={200}
+                                className="flex-1 text-[12px] rounded-xl px-3 py-2 border outline-none"
+                                style={{ background: "var(--bg)", borderColor: "rgba(0,229,160,0.3)", color: "var(--text)", fontSize: "16px" }}
+                              />
+                              <button
+                                onClick={() => submitWallComment(post.id, realId)}
+                                disabled={wallCommentSubmitting === post.id || !wallCommentInput[post.id]?.trim()}
+                                className="px-3 py-2 rounded-xl text-[11px] font-bold transition-opacity disabled:opacity-40"
+                                style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+                                {wallCommentSubmitting === post.id ? "..." : "전송"}
+                              </button>
+                            </div>
+                          ) : (
+                            <p className="text-[11px] text-center py-2" style={{ color: "var(--muted)" }}>💬 댓글은 로그인 후 작성할 수 있습니다</p>
+                          )}
+                        </div>
+                      )}
                     </article>
                   );})
                 )}
@@ -1604,7 +1754,11 @@ export default function WallPage() {
                           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                         </svg>
                         <span>
-                          {post.id < 0 ? (post.comments ?? 0) : (analystComments[post.id]?.length ?? 0)}
+                          {post.id < 0
+                            ? (post.comments ?? 0)
+                            : analystComments[post.id] !== undefined
+                              ? analystComments[post.id].length
+                              : (post.comments ?? 0)}
                         </span>
                       </button>
                     </div>
@@ -1671,15 +1825,6 @@ export default function WallPage() {
           </div>
         )}
       </main>
-
-      {/* Comment Modal */}
-      {commentPost && (
-        <CommentModal
-          post={commentPost}
-          realPostId={commentRealId}
-          onClose={() => { setCommentPost(null); setCommentRealId(undefined); }}
-        />
-      )}
 
       {/* Write modal */}
       {showWrite && user && (

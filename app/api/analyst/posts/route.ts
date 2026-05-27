@@ -18,21 +18,28 @@ export async function GET(req: NextRequest) {
   const { data, error } = await query;
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
-  // Get current user's likes using liker_hash (no user_id in likes table)
   const user = await getUserFromRequest(req);
-  let likedIds: number[] = [];
-  if (user && data && data.length > 0) {
-    const hash = likerHash(user.id);
-    const ids = data.map((p) => p.id);
-    const { data: likeData } = await supabase
-      .from("analyst_post_likes")
-      .select("post_id")
-      .eq("liker_hash", hash)
-      .in("post_id", ids);
-    likedIds = (likeData ?? []).map((l) => l.post_id);
-  }
+  const ids = (data ?? []).map((p) => p.id);
 
-  const posts = (data ?? []).map((p) => ({ ...p, liked: likedIds.includes(p.id) }));
+  // Parallel: user's likes + comment counts per post
+  const [likeData, commentRows] = await Promise.all([
+    user && ids.length > 0
+      ? supabase.from("analyst_post_likes").select("post_id").eq("liker_hash", likerHash(user.id)).in("post_id", ids).then((r) => r.data ?? [])
+      : Promise.resolve([] as { post_id: number }[]),
+    ids.length > 0
+      ? supabase.from("analyst_post_comments").select("post_id").in("post_id", ids).then((r) => r.data ?? [])
+      : Promise.resolve([] as { post_id: number }[]),
+  ]);
+
+  const likedIds = likeData.map((l) => l.post_id);
+  const commentCounts: Record<number, number> = {};
+  commentRows.forEach((r) => { commentCounts[r.post_id] = (commentCounts[r.post_id] ?? 0) + 1; });
+
+  const posts = (data ?? []).map((p) => ({
+    ...p,
+    comments: commentCounts[p.id] ?? 0,
+    liked: likedIds.includes(p.id),
+  }));
   return NextResponse.json(posts);
 }
 
@@ -71,5 +78,5 @@ export async function POST(req: NextRequest) {
     .single();
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json({ ...data, liked: false });
+  return NextResponse.json({ ...data, comments: 0, liked: false });
 }
