@@ -125,23 +125,29 @@ export default async function InsightPage() {
           <ReportFeed />
         </div>
 
-        {/* 오른쪽 — sticky 사이드바: 뷰포트 안에서 독립 스크롤 */}
-        <aside className="w-[420px] flex-shrink-0 sticky top-[57px] max-h-[calc(100vh-57px)] overflow-y-auto no-scrollbar flex flex-col gap-5 pt-5 pb-10">
-          {EbookBanner}
-          {EduBanner}
-          <AdBanner format="auto" />
-          <section>
-            <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-              {t.books}
-            </h2>
-            <BookCarousel />
-          </section>
-          <section>
-            <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-              {t.youtube}
-            </h2>
-            <YoutubeChannels />
-          </section>
+        {/* 오른쪽 — sticky 사이드바 (홈탭과 동일한 w-[340px]) */}
+        <aside className="w-[340px] flex-shrink-0 sticky top-[57px] max-h-[calc(100vh-57px)] flex flex-col overflow-hidden">
+          {/* 배너: 항상 고정 표시, 스크롤로 밀리지 않음 */}
+          <div className="flex-shrink-0 flex flex-col gap-4 pt-5">
+            {EbookBanner}
+            {EduBanner}
+          </div>
+          {/* 나머지만 스크롤 */}
+          <div className="flex-1 min-h-0 overflow-y-auto no-scrollbar flex flex-col gap-5 pt-5 pb-10">
+            <AdBanner format="auto" />
+            <section>
+              <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+                {t.books}
+              </h2>
+              <BookCarousel />
+            </section>
+            <section>
+              <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+                {t.youtube}
+              </h2>
+              <YoutubeChannels />
+            </section>
+          </div>
         </aside>
       </div>
     </div>
