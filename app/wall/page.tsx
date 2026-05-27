@@ -529,7 +529,8 @@ export default function WallPage() {
   const [postingAnalyst, setPostingAnalyst]     = useState(false);
   const [analystPostErr, setAnalystPostErr]     = useState("");
   const [expandedComments, setExpandedComments] = useState<Set<number>>(new Set());
-  const [expandedContent, setExpandedContent]   = useState<Set<number>>(new Set());
+  const [expandedContent, setExpandedContent]     = useState<Set<number>>(new Set());
+  const [expandedDiscussion, setExpandedDiscussion] = useState<Set<number>>(new Set());
   const [analystComments, setAnalystComments]   = useState<Record<number, AnalystComment[]>>({});
   const [commentDraft, setCommentDraft]         = useState<Record<number, string>>({});
   const [submittingComment, setSubmittingComment] = useState<number | null>(null);
@@ -1282,7 +1283,15 @@ export default function WallPage() {
                           </div>
                         </div>
                       ) : (
-                        <p className="text-[13px] leading-relaxed mb-3" style={{ color: "var(--text)" }}>{post.content}</p>
+                        <div
+                          onClick={() => setExpandedDiscussion((prev) => { const n = new Set(prev); n.has(post.id) ? n.delete(post.id) : n.add(post.id); return n; })}
+                          className="mb-3 cursor-pointer select-none active:opacity-70"
+                        >
+                          <p className={`text-[13px] leading-relaxed ${expandedDiscussion.has(post.id) ? "" : "line-clamp-3"}`} style={{ color: "var(--text)" }}>{post.content}</p>
+                          {!expandedDiscussion.has(post.id) && (
+                            <span className="text-[11px] mt-0.5 block" style={{ color: "var(--mint)", opacity: 0.7 }}>더보기</span>
+                          )}
+                        </div>
                       )}
                       <div className="flex items-center gap-4">
                         <button onClick={() => toggleLike(post.id)}
@@ -1725,17 +1734,19 @@ export default function WallPage() {
                         {getRelativeTime(new Date(post.created_at).getTime(), w)}
                       </span>
                     </div>
-                    <p className={`text-[13px] leading-relaxed ${expandedContent.has(post.id) ? "" : "line-clamp-2"}`} style={{ color: "var(--text)" }}>{post.content}</p>
-                    <button
+                    <div
                       onClick={() => setExpandedContent((prev) => {
                         const next = new Set(prev);
                         next.has(post.id) ? next.delete(post.id) : next.add(post.id);
                         return next;
                       })}
-                      className="text-[11px] mb-2 mt-0.5"
-                      style={{ color: "#a78bfa" }}>
-                      {expandedContent.has(post.id) ? "접기" : "더보기"}
-                    </button>
+                      className="mb-2 cursor-pointer select-none active:opacity-70"
+                    >
+                      <p className={`text-[13px] leading-relaxed ${expandedContent.has(post.id) ? "" : "line-clamp-2"}`} style={{ color: "var(--text)" }}>{post.content}</p>
+                      <span className="text-[11px] mt-0.5 block" style={{ color: "#a78bfa" }}>
+                        {expandedContent.has(post.id) ? "접기" : "더보기"}
+                      </span>
+                    </div>
 
                     {/* Action row: like + comment toggle */}
                     <div className="flex items-center gap-3">
