@@ -1141,6 +1141,21 @@ export const SEED_REPORTS: Report[] = [
   // ══════════════════════════════════════════════════════════════════════════
 
   {
+    id:            "seed-103",
+    title:         "TSLA SBW · NVDA Blackwell Ultra · MU 10배 사이클 · CXMT $24.2B · AMZN Bedrock · TSLA 유럽 +46.5% · SpaceX IPO $350B",
+    summary:       "Cybertruck SBW·FSD 통합 혁신 · Blackwell Ultra H1 2027 수주잔고 확보 · MU 세 번째 10배 사이클(HBM) 시작 · CXMT $24.2B 조달·Corsair 채용 · AWS Bedrock 마진 +2.1bps · EU+UK +46.5% YoY 3개월 연속 반등 · Ron Baron '세계 최대 기업' · $350B — 2026.05.28 핵심 7개 이슈",
+    body:          "■ 오늘의 핵심 7가지 (비주얼 요약 이미지를 확인하세요)\n\n🚗 TSLA Cybertruck SBW — 핸들·바퀴 물리 단절 · FSD 통합 최적화 · OTA 조향 튜닝 · Cybercab 양산 선행 기술 · 장전 $443\n\n🔵 NVDA Blackwell Ultra 납품 개시 — H1 2027 수주잔고(Committed PO) · Jensen '시총 저평가' · 하이퍼스케일러 $225B+ CAPEX · Anthropic $64B 계약\n\n💾 MU 10년 10배 성장 사이클 — 1990 $0.33B → 2024 $30B → 세 번째 10배 사이클(HBM) 시작 가능성 · Elon 데이터 공유\n\n⚠️ 메모리 CXMT $24.2B 조달 — 중국 DRAM 70% 과점 도전 · Corsair 이미 채용 · 범용 DRAM 가격 하락 압력 · HBM은 단기 영향 제한적\n\n☁️ AMZN AWS Bedrock·Claude 마진 개선 — Q/Q +2.1bps(Azure -2.5bps) · Trinium 칩 NVDA 의존 절감 · 하이퍼스케일러 중 유일 상승\n\n🚗 TSLA 유럽 3개월 연속 반등 — EU+UK +46.5% YoY · EU 단독 +67% · ACEA 공식 데이터 · 신형 Model Y 효과\n\n🚀 SpaceX IPO 시나리오 — Ron Baron '세계 최대 기업' 10년 뷰 · $350B · Starship 완전 재사용 올해 목표 · MS $555B 파트너십",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 5/28 시장 한장 요약",
+    date:          "2026-05-28",
+    updatedAt:     "2026.05.28 07:30",
+    isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260528.svg"],
+  },
+
+  {
     id:            "seed-096",
     title:         "Tesla Cybertruck 스티어-바이-와이어 — 핸들과 바퀴가 물리적으로 분리된 세계 최초 양산차",
     summary:       "Tesla Cybertruck은 스티어링 컬럼(조향축) 없이 센서·소프트웨어·전동 액추에이터로만 조향하는 세계 최초 양산 SBW 차량입니다. FSD 시스템과의 통합 최적화, OTA 조향 튜닝, 오프로드 반응 자동 조정이 가능합니다. 장전 주가 $443 기준 $500 논의가 소셜에서 활발합니다.",
@@ -1312,6 +1327,7 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-093": ["AMD"],
   "seed-094": ["MU"],
   "seed-095": ["AAPL"],
+  "seed-103": ["TSLA", "NVDA", "MU", "AMZN", "SPCX"],
   "seed-096": ["TSLA"],
   "seed-097": ["NVDA"],
   "seed-098": ["MU"],
