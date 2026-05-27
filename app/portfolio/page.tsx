@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import {
@@ -743,6 +743,78 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
 
 // ── Summary card ──────────────────────────────────────────────────────────────
 
+// ── Mini Bubble Chart ─────────────────────────────────────────────────────────
+
+const BUBBLE_COLORS = ["#00e5a0","#60a5fa","#a78bfa","#fbbf24","#f472b6","#2dd4bf","#fb923c"];
+
+function BubbleChart({ holdings, liveMap }: {
+  holdings: { symbol: string; shares: number; avgCost: number }[];
+  liveMap:  Record<string, { price: number }>;
+}) {
+  const S = 88, CX = 44, CY = 44;
+
+  const items = useMemo(() => {
+    const vals = holdings.map((h) => h.shares * (liveMap[h.symbol]?.price ?? h.avgCost));
+    const total = vals.reduce((a, b) => a + b, 0);
+    if (total === 0) return [];
+    return holdings
+      .map((h, i) => ({ symbol: h.symbol.slice(0, 4), weight: vals[i] / total, color: BUBBLE_COLORS[i % BUBBLE_COLORS.length] }))
+      .sort((a, b) => b.weight - a.weight);
+  }, [holdings, liveMap]);
+
+  const packed = useMemo(() => {
+    if (!items.length) return [];
+    const MAX_R = S * 0.39;
+    const cs = items.map((item, i) => ({
+      ...item,
+      r: Math.max(7, Math.sqrt(item.weight) * MAX_R),
+      x: CX + Math.cos((i / items.length) * Math.PI * 2) * 12,
+      y: CY + Math.sin((i / items.length) * Math.PI * 2) * 12,
+    }));
+    for (let t = 0; t < 130; t++) {
+      for (let i = 0; i < cs.length; i++) {
+        for (let j = i + 1; j < cs.length; j++) {
+          const dx = cs[j].x - cs[i].x, dy = cs[j].y - cs[i].y;
+          const d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+          const min = cs[i].r + cs[j].r + 1.5;
+          if (d < min) {
+            const push = (min - d) / d * 0.55;
+            cs[i].x -= dx * push; cs[i].y -= dy * push;
+            cs[j].x += dx * push; cs[j].y += dy * push;
+          }
+        }
+      }
+      for (const c of cs) { c.x += (CX - c.x) * 0.04; c.y += (CY - c.y) * 0.04; }
+    }
+    for (const c of cs) {
+      c.x = Math.max(c.r + 1, Math.min(S - c.r - 1, c.x));
+      c.y = Math.max(c.r + 1, Math.min(S - c.r - 1, c.y));
+    }
+    return cs;
+  }, [items]);
+
+  if (!packed.length) return null;
+
+  return (
+    <svg width={S} height={S} viewBox={`0 0 ${S} ${S}`} aria-hidden>
+      {packed.map((c) => (
+        <g key={c.symbol}>
+          <circle cx={c.x} cy={c.y} r={c.r} fill={c.color} opacity={0.82} />
+          {c.r >= 10 && (
+            <text x={c.x} y={c.y} textAnchor="middle" dominantBaseline="central"
+              fontSize={Math.max(6, Math.floor(c.r * 0.42))} fontWeight="700"
+              fill="rgba(0,0,0,0.75)" fontFamily="monospace">
+              {c.symbol}
+            </text>
+          )}
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+// ── SummaryCard ───────────────────────────────────────────────────────────────
+
 function SummaryCard({ holdings, liveMap, cur, rate, onRefresh, locale }: {
   holdings: Holding[]; liveMap: Record<string, LiveQ>;
   cur: Cur; rate: number;
@@ -768,38 +840,46 @@ function SummaryCard({ holdings, liveMap, cur, rate, onRefresh, locale }: {
         style={{ background: "radial-gradient(circle at 15% 50%, rgba(0,229,160,0.09) 0%, transparent 60%)" }} />
 
       <div className="relative p-5">
-        <div className="flex items-center justify-between mb-3">
-          <p className="text-[10px] font-semibold tracking-widest uppercase font-syne" style={{ color: "rgba(0,229,160,0.7)" }}>
-            {locale === "ko" ? "총 평가금액" : "Total Portfolio Value"}
-          </p>
-          <button onClick={onRefresh} className="transition-opacity active:opacity-50">
-            <RefreshCw className="w-3.5 h-3.5" strokeWidth={2}
-              style={{ color: "rgba(0,229,160,0.5)" }} />
-          </button>
-        </div>
+        {/* Top row: value info (left) + bubble chart (right) */}
+        <div className="flex items-start gap-3 mb-4">
+          {/* Left — title + value + daily */}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[10px] font-semibold tracking-widest uppercase font-syne" style={{ color: "rgba(0,229,160,0.7)" }}>
+                {locale === "ko" ? "총 평가금액" : "Total Portfolio Value"}
+              </p>
+              <button onClick={onRefresh} className="transition-opacity active:opacity-50">
+                <RefreshCw className="w-3.5 h-3.5" strokeWidth={2} style={{ color: "rgba(0,229,160,0.5)" }} />
+              </button>
+            </div>
+            <p className="text-[32px] font-bold font-mono-num tabular-nums leading-none" style={{ color: "var(--text)" }}>
+              {mainVal}
+            </p>
+            <p className="text-[11px] font-mono-num mt-0.5 mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>
+              {subVal}
+            </p>
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-mono-num font-semibold" style={{ color: clr(dailyPnl) }}>
+                {dailyPnl >= 0 ? "▲" : "▼"} {sgn(dailyPnl)}{fmtVal(Math.abs(dailyPnl), cur, rate, 0)}
+              </span>
+              <span className="text-[11px] font-mono-num font-bold px-2 py-0.5 rounded-full"
+                style={dailyPnl >= 0
+                  ? { background: "rgba(0,229,160,0.15)", color: "var(--mint)" }
+                  : { background: "rgba(255,77,109,0.15)", color: "#ef4444" }}>
+                {sgn(dailyPct)}{Math.abs(dailyPct).toFixed(2)}%
+              </span>
+              <span className="text-[10px]" style={{ color: "rgba(255,255,255,0.35)" }}>
+                {locale === "ko" ? "오늘" : "Today"}
+              </span>
+            </div>
+          </div>
 
-        {/* Main value */}
-        <p className="text-[32px] font-bold font-mono-num tabular-nums leading-none" style={{ color: "var(--text)" }}>
-          {mainVal}
-        </p>
-        <p className="text-[11px] font-mono-num mt-0.5 mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>
-          {subVal}
-        </p>
-
-        {/* Daily */}
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-sm font-mono-num font-semibold" style={{ color: clr(dailyPnl) }}>
-            {dailyPnl >= 0 ? "▲" : "▼"} {sgn(dailyPnl)}{fmtVal(Math.abs(dailyPnl), cur, rate, 0)}
-          </span>
-          <span className="text-[11px] font-mono-num font-bold px-2 py-0.5 rounded-full"
-            style={dailyPnl >= 0
-              ? { background: "rgba(0,229,160,0.15)", color: "var(--mint)" }
-              : { background: "rgba(255,77,109,0.15)", color: "#ef4444" }}>
-            {sgn(dailyPct)}{Math.abs(dailyPct).toFixed(2)}%
-          </span>
-          <span className="text-[10px]" style={{ color: "rgba(255,255,255,0.35)" }}>
-            {locale === "ko" ? "오늘" : "Today"}
-          </span>
+          {/* Right — bubble chart */}
+          {holdings.length > 0 && (
+            <div className="flex-shrink-0 self-center opacity-90">
+              <BubbleChart holdings={holdings} liveMap={liveMap} />
+            </div>
+          )}
         </div>
 
         {/* Stats grid */}
