@@ -6,11 +6,23 @@ import { usePortfolio } from "@/hooks/usePortfolio";
 
 type LiveQ = { symbol: string; price: number; change: number; changePercent: number };
 
+const AI_CACHE_KEY = () => {
+  const d = new Date();
+  return `home_ai_${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+};
+
+function loadCachedAnswer(): string | null {
+  try { return localStorage.getItem(AI_CACHE_KEY()); } catch { return null; }
+}
+function saveCachedAnswer(a: string) {
+  try { localStorage.setItem(AI_CACHE_KEY(), a); } catch { /* ignore */ }
+}
+
 export function HomeAIInsight() {
   const { holdings, loaded, isLoggedIn } = usePortfolio();
   const [quotes,   setQuotes]   = useState<LiveQ[]>([]);
   const [usdkrw,   setUsdkrw]   = useState(1350);
-  const [answer,   setAnswer]   = useState<string | null>(null);
+  const [answer,   setAnswer]   = useState<string | null>(() => loadCachedAnswer());
   const [loading,  setLoading]  = useState(false);
   const [expanded, setExpanded] = useState(false);
   const fetchedAI = useRef(false);
@@ -46,9 +58,10 @@ export function HomeAIInsight() {
     return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
 
-  // Auto-fetch AI analysis once prices are ready
+  // Auto-fetch AI analysis once prices are ready (skip if today's cache exists)
   useEffect(() => {
     if (fetchedAI.current || quotes.length === 0 || holdings.length === 0) return;
+    if (loadCachedAnswer()) return; // already have today's analysis
     fetchedAI.current = true;
 
     const liveMap = Object.fromEntries(quotes.map((q) => [q.symbol, q]));
@@ -83,7 +96,11 @@ export function HomeAIInsight() {
       }),
     })
       .then((r) => r.json())
-      .then((d: { answer?: string }) => setAnswer(d.answer ?? null))
+      .then((d: { answer?: string }) => {
+        const a = d.answer ?? null;
+        setAnswer(a);
+        if (a) saveCachedAnswer(a);
+      })
       .catch(() => {})
       .finally(() => setLoading(false));
   // eslint-disable-next-line react-hooks/exhaustive-deps

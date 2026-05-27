@@ -12,11 +12,34 @@ type PortfolioMeta = {
   sp_currency?:  Cur;
 };
 
+const LS_PORTFOLIO = "sp_portfolio_cache";
+const LS_CURRENCY  = "sp_currency_cache";
+
+function readLocalCache(): { holdings: Holding[]; cur: Cur } | null {
+  try {
+    const raw = localStorage.getItem(LS_PORTFOLIO);
+    if (!raw) return null;
+    return { holdings: JSON.parse(raw) as Holding[], cur: (localStorage.getItem(LS_CURRENCY) as Cur | null) ?? "USD" };
+  } catch { return null; }
+}
+
+function writeLocalCache(holdings: Holding[], cur: Cur) {
+  try {
+    localStorage.setItem(LS_PORTFOLIO, JSON.stringify(holdings));
+    localStorage.setItem(LS_CURRENCY, cur);
+  } catch { /* ignore */ }
+}
+
 export function usePortfolio() {
   const { user, loaded: authLoaded } = useAuth();
-  const [holdings,    setHoldingsState] = useState<Holding[]>([]);
-  const [cur,         setCurState]      = useState<Cur>("USD");
+
+  // Seed state from localStorage immediately (avoids blank flash)
+  const localCache = typeof window !== "undefined" ? readLocalCache() : null;
+  const [holdings,    setHoldingsState] = useState<Holding[]>(() => localCache?.holdings ?? []);
+  const [cur,         setCurState]      = useState<Cur>(() => localCache?.cur ?? "USD");
   const [cloudLoaded, setCloudLoaded]   = useState(false);
+  // If localStorage has data we can render immediately; cloud sync happens in background
+  const hasLocalCache = localCache !== null && localCache.holdings.length > 0;
   const synced = useRef(false);
 
   // Load holdings from Supabase user_metadata when user is known
@@ -27,6 +50,7 @@ export function usePortfolio() {
       setCurState("USD");
       setCloudLoaded(true);
       synced.current = false;
+      try { localStorage.removeItem(LS_PORTFOLIO); localStorage.removeItem(LS_CURRENCY); } catch { /* ignore */ }
       return;
     }
     if (synced.current) return;
@@ -35,8 +59,11 @@ export function usePortfolio() {
 
     getSupabase().auth.getUser().then(({ data }) => {
       const meta = data.user?.user_metadata as PortfolioMeta | undefined;
-      setHoldingsState(meta?.sp_portfolio ?? []);
-      if (meta?.sp_currency) setCurState(meta.sp_currency);
+      const h = meta?.sp_portfolio ?? [];
+      const c = meta?.sp_currency ?? "USD";
+      setHoldingsState(h);
+      if (meta?.sp_currency) setCurState(c);
+      writeLocalCache(h, c);
       setCloudLoaded(true);
     });
   }, [authLoaded, user?.id]);
@@ -54,6 +81,7 @@ export function usePortfolio() {
   const setHoldings = useCallback((val: Holding[] | ((p: Holding[]) => Holding[])) => {
     setHoldingsState((prev) => {
       const next = typeof val === "function" ? val(prev) : val;
+      writeLocalCache(next, cur);
       saveToCloud(next, cur);
       return next;
     });
@@ -62,6 +90,7 @@ export function usePortfolio() {
 
   const setCur = useCallback((c: Cur) => {
     setCurState(c);
+    writeLocalCache(holdings, c);
     saveToCloud(holdings, c);
   }, [saveToCloud, holdings]);
 
@@ -70,7 +99,8 @@ export function usePortfolio() {
     setHoldings,
     cur,
     setCur,
-    loaded:     authLoaded && cloudLoaded,
-    isLoggedIn: !!user,
+    // Show immediately from localStorage cache; full cloud sync updates in background
+    loaded:     hasLocalCache || (authLoaded && cloudLoaded),
+    isLoggedIn: hasLocalCache || !!user,
   };
 }
