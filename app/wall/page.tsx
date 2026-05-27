@@ -632,10 +632,16 @@ export default function WallPage() {
         .then((r) => r.json())
         .then((d) => {
           const real = Array.isArray(d) ? d : [];
-          // Mock posts fill in below real posts; avoid ID collision (mock IDs are negative)
-          setAnalystPosts([...real, ...MOCK_ANALYST_POSTS]);
+          const merged = [...real, ...MOCK_ANALYST_POSTS];
+          merged.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+          setAnalystPosts(merged);
         })
-        .catch(() => { setAnalystPosts([...MOCK_ANALYST_POSTS]); })
+        .catch(() => {
+          const fallback = [...MOCK_ANALYST_POSTS].sort(
+            (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+          );
+          setAnalystPosts(fallback);
+        })
         .finally(() => setAnalystLoading(false))
     );
   }, [mainTab]);
