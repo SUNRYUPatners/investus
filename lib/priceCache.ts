@@ -16,7 +16,8 @@ type CacheEntry = PriceEntry & { at: number };
 
 // Module-level singleton — shared across all requests within the same instance
 const _cache = new Map<string, CacheEntry>();
-const LIVE_TTL = 60_000; // 1 min during market hours
+const LIVE_TTL       = 60_000;            // 1 min during market hours
+const CLOSED_KV_TTL = 23 * 60 * 60_000; // 23h — force YF v7 refresh once per day when market closed
 
 function getCached(sym: string, open: boolean): CacheEntry | null {
   const e = _cache.get(sym);
@@ -77,16 +78,17 @@ export async function getPrices(
   const stillNeed: string[] = [];
   for (const { sym, d } of kvRows) {
     if (d && d.price > 0) {
+      const kvAge   = Date.now() - (d.at ?? 0);
+      const tooOld  = !open && kvAge > CLOSED_KV_TTL;
       result[sym] = { price: d.price, change: d.change, changePercent: d.changePercent };
-      // Always re-fetch from YF when market is open to avoid serving stale KV
-      _cache.set(sym, { ...d, at: open ? 0 : Date.now() });
-      if (open) stillNeed.push(sym);
+      _cache.set(sym, { ...d, at: open || tooOld ? 0 : Date.now() });
+      if (open || tooOld) stillNeed.push(sym); // re-fetch when live or KV is stale
     } else {
       stillNeed.push(sym);
     }
   }
   need.splice(0, need.length, ...stillNeed);
-  if (!open && stillNeed.length === 0) return result;
+  if (need.length === 0) return result;
   if (need.length === 0) return result;
 
   // 3) Yahoo Finance v7 batch (same source as market-data — correct prices)
