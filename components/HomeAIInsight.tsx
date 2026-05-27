@@ -1,38 +1,73 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Sparkles, ChevronDown, ChevronUp } from "lucide-react";
+import { Sparkles, ChevronDown, ChevronUp, RefreshCw } from "lucide-react";
 import { usePortfolio } from "@/hooks/usePortfolio";
+import { NYSE_HOLIDAYS, isMarketOpen } from "@/lib/marketHours";
+import { useRouter } from "next/navigation";
 
 type LiveQ = { symbol: string; price: number; change: number; changePercent: number };
 
-const AI_CACHE_KEY = () => {
-  const d = new Date();
-  return `home_ai_${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
-};
+const INTRADAY_LIMIT = 3;
 
-function loadCachedAnswer(): string | null {
-  try { return localStorage.getItem(AI_CACHE_KEY()); } catch { return null; }
+/** YYYY-MM-DD of the most recent NYSE trading day that has already closed (≥ 16:00 ET) */
+function lastMarketCloseDate(): string {
+  const now  = new Date();
+  const etNow = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+  const pastCloseToday = etNow.getHours() * 60 + etNow.getMinutes() >= 16 * 60;
+
+  for (let back = 0; back < 10; back++) {
+    const d   = new Date(etNow);
+    d.setDate(d.getDate() - back);
+    const dow = d.getDay();
+    const str = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    if (dow === 0 || dow === 6 || NYSE_HOLIDAYS.has(str)) continue;
+    if (back > 0 || pastCloseToday) return str;
+  }
+  return new Date().toISOString().slice(0, 10);
 }
-function saveCachedAnswer(a: string) {
-  try { localStorage.setItem(AI_CACHE_KEY(), a); } catch { /* ignore */ }
+
+function todayET(): string {
+  const et = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
+  return `${et.getFullYear()}-${String(et.getMonth() + 1).padStart(2, "0")}-${String(et.getDate()).padStart(2, "0")}`;
 }
+
+// ─── localStorage helpers ────────────────────────────────────────────────────
+function closeCacheKey()    { return `home_ai_close_${lastMarketCloseDate()}`; }
+function intradayCountKey() { return `home_ai_intra_${todayET()}`; }
+
+function readCloseCache():    string | null { try { return localStorage.getItem(closeCacheKey());                  } catch { return null; } }
+function writeCloseCache(a: string)         { try { localStorage.setItem(closeCacheKey(), a);                     } catch { /* ignore */ } }
+function readIntradayCount(): number        { try { return parseInt(localStorage.getItem(intradayCountKey()) ?? "0", 10); } catch { return 0; } }
+function bumpIntradayCount(): number        { const n = readIntradayCount() + 1; try { localStorage.setItem(intradayCountKey(), String(n)); } catch { /* ignore */ } return n; }
 
 export function HomeAIInsight() {
+  const router = useRouter();
   const { holdings, loaded, isLoggedIn } = usePortfolio();
-  const [quotes,   setQuotes]   = useState<LiveQ[]>([]);
-  const [usdkrw,   setUsdkrw]   = useState(1350);
-  const [answer,   setAnswer]   = useState<string | null>(() => loadCachedAnswer());
-  const [loading,  setLoading]  = useState(false);
-  const [expanded, setExpanded] = useState(false);
-  const fetchedAI = useRef(false);
+  const [quotes,        setQuotes]        = useState<LiveQ[]>([]);
+  const [usdkrw,        setUsdkrw]        = useState(1350);
+  const [closeAnswer,   setCloseAnswer]   = useState<string | null>(null);
+  const [displayAnswer, setDisplayAnswer] = useState<string | null>(null);
+  const [loading,       setLoading]       = useState(false);
+  const [expanded,      setExpanded]      = useState(false);
+  const [intradayUsed,  setIntradayUsed]  = useState(0);
+  const [marketOpen,    setMarketOpen]    = useState(false);
+  const autoFetched = useRef(false);
 
-  // Fetch live prices from market-data-cache only (YF v7 batch — same source as 추천주식/히트맵)
+  // Init from localStorage on client
+  useEffect(() => {
+    const cached = readCloseCache();
+    setCloseAnswer(cached);
+    setDisplayAnswer(cached);
+    setIntradayUsed(readIntradayCount());
+    setMarketOpen(isMarketOpen());
+  }, []);
+
+  // Sync prices from market-data-cache
   useEffect(() => {
     if (!loaded || holdings.length === 0) return;
     const syms = holdings.map((h) => h.symbol);
 
-    // Read from market-data-cache (same source as 추천주식/히트맵)
     const applyCache = () => {
       try {
         const raw = localStorage.getItem("market-data-cache");
@@ -54,93 +89,101 @@ export function HomeAIInsight() {
     applyCache();
     const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(); };
     window.addEventListener("storage", onStorage);
-
     return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
 
-  // Auto-fetch AI analysis once prices are ready (skip if today's cache exists)
+  // Auto-fetch ONLY when market is closed and no close cache exists yet
   useEffect(() => {
-    if (fetchedAI.current || quotes.length === 0 || holdings.length === 0) return;
-    if (loadCachedAnswer()) return; // already have today's analysis
-    fetchedAI.current = true;
-
-    const liveMap = Object.fromEntries(quotes.map((q) => [q.symbol, q]));
-    const totalValue = holdings.reduce(
-      (s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0
-    );
-    const totalCost = holdings.reduce((s, h) => s + h.shares * h.avgCost, 0);
-    const totalPnlPct = totalCost > 0 ? ((totalValue - totalCost) / totalCost) * 100 : 0;
-
-    const enriched = holdings.map((h) => {
-      const price        = liveMap[h.symbol]?.price ?? h.avgCost;
-      const dayChangePct = liveMap[h.symbol]?.changePercent ?? 0;
-      const value        = h.shares * price;
-      const costBasis    = h.shares * h.avgCost;
-      const pnlPct       = costBasis > 0 ? ((value - costBasis) / costBasis) * 100 : 0;
-      const weightPct    = totalValue > 0 ? (value / totalValue) * 100 : 0;
-      return { symbol: h.symbol, shares: h.shares, avgCost: h.avgCost, currentPrice: price, value, costBasis, pnlPct, dayChangePct, weightPct };
-    });
-
-    setLoading(true);
-    fetch("/api/portfolio-ai", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        question: "오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지 분석해줘",
-        holdings: enriched,
-        totalValue,
-        totalCost,
-        totalPnlPct,
-        usdkrw,
-        fetchNews: true,
-      }),
-    })
-      .then((r) => r.json())
-      .then((d: { answer?: string }) => {
-        const a = d.answer ?? null;
-        setAnswer(a);
-        if (a) saveCachedAnswer(a);
-      })
-      .catch(() => {})
-      .finally(() => setLoading(false));
+    if (autoFetched.current || quotes.length === 0 || holdings.length === 0) return;
+    if (isMarketOpen()) return;           // during market hours: manual only
+    if (readCloseCache()) return;         // already have today's close cache
+    autoFetched.current = true;
+    runAnalysis(false);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [quotes.length]);
 
+  function buildPayload() {
+    const liveMap   = Object.fromEntries(quotes.map((q) => [q.symbol, q]));
+    const totalValue = holdings.reduce((s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0);
+    const totalCost  = holdings.reduce((s, h) => s + h.shares * h.avgCost, 0);
+    const totalPnlPct = totalCost > 0 ? ((totalValue - totalCost) / totalCost) * 100 : 0;
+    const enriched = holdings.map((h) => {
+      const price = liveMap[h.symbol]?.price ?? h.avgCost;
+      const dayChangePct = liveMap[h.symbol]?.changePercent ?? 0;
+      const value = h.shares * price;
+      const costBasis = h.shares * h.avgCost;
+      const pnlPct = costBasis > 0 ? ((value - costBasis) / costBasis) * 100 : 0;
+      const weightPct = totalValue > 0 ? (value / totalValue) * 100 : 0;
+      return { symbol: h.symbol, shares: h.shares, avgCost: h.avgCost, currentPrice: price, value, costBasis, pnlPct, dayChangePct, weightPct };
+    });
+    return { holdings: enriched, totalValue, totalCost, totalPnlPct, usdkrw };
+  }
+
+  async function runAnalysis(isIntraday: boolean) {
+    if (loading || holdings.length === 0 || quotes.length === 0) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/portfolio-ai", {
+        method:  "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          question: "오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지 분석해줘",
+          ...buildPayload(),
+          fetchNews: true,
+        }),
+      });
+      const d = await res.json() as { answer?: string };
+      const a = d.answer ?? null;
+      if (a) {
+        setDisplayAnswer(a);
+        if (isIntraday) {
+          const n = bumpIntradayCount();
+          setIntradayUsed(n);
+        } else {
+          // close-cache: persist as close analysis
+          setCloseAnswer(a);
+          writeCloseCache(a);
+        }
+        setExpanded(true);
+      }
+    } catch { /* ignore */ }
+    finally   { setLoading(false); }
+  }
+
+  function handleRefresh() {
+    if (intradayUsed >= INTRADAY_LIMIT) return;
+    runAnalysis(true);
+  }
+
   if (!loaded || !isLoggedIn || holdings.length === 0) return null;
+
+  const remaining = INTRADAY_LIMIT - intradayUsed;
+  const limitReached = marketOpen && intradayUsed >= INTRADAY_LIMIT;
 
   return (
     <div className="px-4 lg:px-0 mt-3">
-      <div
-        className="rounded-2xl border overflow-hidden"
-        style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.2)" }}
-      >
-        {/* Header — always visible, tap to expand */}
+      <div className="rounded-2xl border overflow-hidden"
+        style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.2)" }}>
+
+        {/* Header */}
         <button
           onClick={() => setExpanded((v) => !v)}
           className="w-full px-4 py-3 flex items-center gap-2 active:opacity-70 transition-opacity"
           style={{ background: "rgba(0,229,160,0.03)" }}
         >
           <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
-          <span
-            className="text-sm font-bold font-syne flex-1 text-left"
-            style={{ color: "var(--text)" }}
-          >
-            오늘 내 포트폴리오 등락 분석
+          <span className="text-sm font-bold font-syne flex-1 text-left" style={{ color: "var(--text)" }}>
+            {marketOpen ? "장중 포트폴리오 분석" : "오늘 포트폴리오 등락 분석"}
           </span>
-          <span
-            className="text-[10px] font-bold px-1.5 py-0.5 rounded-full mr-1"
-            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}
-          >
-            Claude
-          </span>
+          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full mr-1"
+            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>Claude</span>
           {expanded
-            ? <ChevronUp  className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
-            : <ChevronDown className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
-          }
+            ? <ChevronUp   className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
+            : <ChevronDown className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />}
         </button>
 
-        {/* Collapsed: 2-line preview */}
-        {!expanded && (loading || answer) && (
+        {/* Collapsed preview (2 lines) */}
+        {!expanded && (loading || displayAnswer) && (
           <div className="px-4 pb-3 pt-0.5">
             {loading ? (
               <div className="flex gap-1.5 items-center py-1">
@@ -149,30 +192,79 @@ export function HomeAIInsight() {
                     style={{ background: "var(--mint)", animationDelay: `${d}ms` }} />
                 ))}
               </div>
-            ) : answer ? (
+            ) : displayAnswer ? (
               <p className="text-[12px] leading-relaxed line-clamp-2" style={{ color: "var(--muted)" }}>
-                {answer}
+                {displayAnswer}
               </p>
             ) : null}
           </div>
         )}
 
-        {/* Expanded: full answer */}
+        {/* Expanded */}
         {expanded && (
-          <div className="px-4 pt-3 pb-4 border-t" style={{ borderColor: "rgba(0,229,160,0.1)" }}>
-            {loading ? (
-              <div className="flex gap-1.5 items-center py-2">
-                {[0, 150, 300].map((d) => (
-                  <div key={d} className="w-1.5 h-1.5 rounded-full animate-bounce"
-                    style={{ background: "var(--mint)", animationDelay: `${d}ms` }} />
-                ))}
+          <div className="border-t" style={{ borderColor: "rgba(0,229,160,0.1)" }}>
+            <div className="px-4 pt-3 pb-3">
+              {loading ? (
+                <div className="flex gap-1.5 items-center py-2">
+                  {[0, 150, 300].map((d) => (
+                    <div key={d} className="w-1.5 h-1.5 rounded-full animate-bounce"
+                      style={{ background: "var(--mint)", animationDelay: `${d}ms` }} />
+                  ))}
+                </div>
+              ) : displayAnswer ? (
+                <p className="text-[12px] leading-relaxed whitespace-pre-line" style={{ color: "var(--text)" }}>
+                  {displayAnswer}
+                </p>
+              ) : (
+                <p className="text-[12px]" style={{ color: "var(--muted)" }}>
+                  {marketOpen ? "아래 버튼으로 지금 분석해보세요." : "잠시 후 분석 결과가 나타납니다."}
+                </p>
+              )}
+            </div>
+
+            {/* Intraday re-analysis button — only during market hours */}
+            {marketOpen && (
+              <div className="px-4 pb-4 border-t pt-3" style={{ borderColor: "rgba(0,229,160,0.06)" }}>
+                {limitReached ? (
+                  /* Limit reached */
+                  <div className="rounded-xl p-3 flex flex-col items-center gap-2 text-center"
+                    style={{ background: "rgba(0,229,160,0.04)", border: "1px solid rgba(0,229,160,0.12)" }}>
+                    <p className="text-[11px] font-bold" style={{ color: "var(--text)" }}>
+                      오늘 무료 장중 분석 {INTRADAY_LIMIT}회 소진
+                    </p>
+                    <p className="text-[10px]" style={{ color: "var(--muted)" }}>
+                      장마감 후 자동 분석은 무제한 무료예요 · 지금 더 분석하려면 구독을 업그레이드해요
+                    </p>
+                    <button
+                      onClick={() => router.push("/more")}
+                      className="px-4 py-1.5 rounded-xl text-[11px] font-bold text-black mt-0.5"
+                      style={{ background: "var(--mint)" }}>
+                      구독 알아보기
+                    </button>
+                  </div>
+                ) : (
+                  /* Refresh button */
+                  <button
+                    onClick={handleRefresh}
+                    disabled={loading}
+                    className="w-full flex items-center justify-between rounded-xl px-3.5 py-2.5 transition-opacity active:opacity-60 disabled:opacity-40"
+                    style={{ background: "rgba(0,229,160,0.08)", border: "1px solid rgba(0,229,160,0.18)" }}>
+                    <div className="flex items-center gap-2">
+                      <RefreshCw className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} />
+                      <span className="text-[12px] font-bold" style={{ color: "var(--mint)" }}>
+                        지금 다시 분석
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                      style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+                      오늘 {remaining}/{INTRADAY_LIMIT}회 남음
+                    </span>
+                  </button>
+                )}
               </div>
-            ) : answer ? (
-              <p className="text-[12px] leading-relaxed whitespace-pre-line" style={{ color: "var(--text)" }}>
-                {answer}
-              </p>
-            ) : null}
-            <p className="text-[9px] text-center mt-3" style={{ color: "var(--muted)" }}>
+            )}
+
+            <p className="text-[9px] text-center pb-3" style={{ color: "var(--muted)" }}>
               투자 참고용 · 투자 권유 아님
             </p>
           </div>
