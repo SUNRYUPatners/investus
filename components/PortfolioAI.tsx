@@ -181,10 +181,9 @@ export function PortfolioAI({
             </div>
           )}
 
-          {/* 대화 영역 — 모바일 maxHeight 480px, 데스크탑 flex-1으로 남은 공간 꽉 채움 */}
+          {/* 대화 영역 — 모바일 max-h-[55vh], 데스크탑 flex-1으로 남은 공간 꽉 채움 */}
           <div ref={chatRef}
-            className="px-4 py-3 space-y-4 overflow-y-auto flex-1"
-            style={{ maxHeight: messages.length === 0 ? undefined : undefined }}>
+            className="px-4 py-3 space-y-4 overflow-y-auto max-h-[55vh] lg:max-h-none lg:flex-1">
               {messages.map((m, i) => (
                 <div key={i} className={`flex gap-2.5 ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                   {m.role === "assistant" && (
