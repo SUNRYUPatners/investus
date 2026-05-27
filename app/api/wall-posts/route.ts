@@ -27,16 +27,24 @@ export async function GET(req: NextRequest) {
   const symbol = req.nextUrl.searchParams.get("symbol")?.toUpperCase();
   if (!symbol) return NextResponse.json([]);
 
-  const { data, error } = await getSupabase()
-    .from("wall_posts")
-    .select("id, symbol, user_id, nickname, holding_label, content, likes, comments, created_at")
-    .eq("symbol", symbol)
-    .order("created_at", { ascending: false })
-    .limit(50);
+  const [{ data, error }, authUser] = await Promise.all([
+    getSupabase()
+      .from("wall_posts")
+      .select("id, symbol, user_id, nickname, holding_label, content, likes, comments, created_at")
+      .eq("symbol", symbol)
+      .order("created_at", { ascending: false })
+      .limit(50),
+    getUserFromRequest(req),
+  ]);
 
   if (error) return NextResponse.json([]);
 
-  return NextResponse.json(data ?? []);
+  // Strip user_id (email) — never expose to client. Replace with is_mine boolean.
+  const safe = (data ?? []).map(({ user_id, ...rest }) => ({
+    ...rest,
+    is_mine: !!authUser && user_id === authUser.email,
+  }));
+  return NextResponse.json(safe);
 }
 
 // POST /api/wall-posts  — create a new post (requires JWT)
@@ -84,7 +92,7 @@ export async function POST(req: NextRequest) {
       holding_label: holdingLabel ?? "보유확인",
       content:       trimmed,
     })
-    .select("id, symbol, user_id, nickname, holding_label, content, likes, comments, created_at")
+    .select("id, symbol, nickname, holding_label, content, likes, comments, created_at")
     .single();
 
   if (error) {
@@ -94,7 +102,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "게시 실패" }, { status: 500 });
   }
 
-  return NextResponse.json(data, { status: 201 });
+  return NextResponse.json({ ...data, symbol: symbol.toUpperCase(), is_mine: true }, { status: 201 });
 }
 
 // PATCH /api/wall-posts?id=123  — edit own post content

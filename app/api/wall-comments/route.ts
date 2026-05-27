@@ -16,15 +16,24 @@ export async function GET(req: NextRequest) {
   const postId = req.nextUrl.searchParams.get("post_id");
   if (!postId) return NextResponse.json([]);
 
-  const { data, error } = await getSupabase()
-    .from("wall_comments")
-    .select("id, post_id, user_id, nickname, content, likes, created_at, parent_id")
-    .eq("post_id", postId)
-    .order("created_at", { ascending: true })
-    .limit(200);
+  const [{ data, error }, authUser] = await Promise.all([
+    getSupabase()
+      .from("wall_comments")
+      .select("id, post_id, user_id, nickname, content, likes, created_at, parent_id")
+      .eq("post_id", postId)
+      .order("created_at", { ascending: true })
+      .limit(200),
+    getUserFromRequest(req),
+  ]);
 
   if (error) return NextResponse.json([]);
-  return NextResponse.json(data ?? []);
+
+  // Strip user_id (email) — never expose to client.
+  const safe = (data ?? []).map(({ user_id, ...rest }) => ({
+    ...rest,
+    is_mine: !!authUser && user_id === authUser.email,
+  }));
+  return NextResponse.json(safe);
 }
 
 // POST /api/wall-comments  — requires JWT
@@ -61,7 +70,7 @@ export async function POST(req: NextRequest) {
   const { data, error } = await getSupabase()
     .from("wall_comments")
     .insert({ post_id, user_id: authUser.email, nickname: makeAnonNick(authUser.email), content: trimmed, parent_id: parent_id ?? null })
-    .select("id, post_id, user_id, nickname, content, likes, created_at, parent_id")
+    .select("id, post_id, nickname, content, likes, created_at, parent_id")
     .single();
 
   if (error) return NextResponse.json({ error: "댓글 게시 실패" }, { status: 500 });
@@ -79,7 +88,7 @@ export async function POST(req: NextRequest) {
       .eq("id", post_id);
   }
 
-  return NextResponse.json(data, { status: 201 });
+  return NextResponse.json({ ...data, post_id, is_mine: true }, { status: 201 });
 }
 
 // DELETE /api/wall-comments?id=123  — requires JWT (owner only)

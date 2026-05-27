@@ -49,7 +49,7 @@ function getRelativeTime(ts: number, w: WallT): string {
   return w.relativeDay(days);
 }
 
-type ApiComment = { id: number; post_id: number; user_id: string; nickname: string; content: string; likes: number; created_at: string; parent_id?: number | null };
+type ApiComment = { id: number; post_id: number; is_mine: boolean; nickname: string; content: string; likes: number; created_at: string; parent_id?: number | null };
 
 // ── 서학개미 인기 종목 + ETF ──────────────────────────────────────────────────
 const ALL_SYMBOLS = [
@@ -579,7 +579,7 @@ export default function WallPage() {
   const [savingEdit, setSavingEdit]         = useState(false);
 
   // ── Real posts (from Supabase) merged on top of mock posts ───────────────
-  type RealPost = { id: number; symbol: string; user_id: string; nickname: string; holding_label: string; content: string; likes: number; comments: number; created_at: string };
+  type RealPost = { id: number; symbol: string; is_mine: boolean; nickname: string; holding_label: string; content: string; likes: number; comments: number; created_at: string };
   const [realPosts, setRealPosts]         = useState<RealPost[]>([]);
 
   // ── Holdings from localStorage (portfolio) ───────────────────────────────
@@ -915,7 +915,7 @@ export default function WallPage() {
         setRealPosts((prev) => [{
           id:            data.id!,
           symbol:        selected,
-          user_id:       user.email,
+          is_mine:       true,
           nickname:      data.nickname ?? "익명",
           holding_label: holdingLabel,
           content:       writeContent.trim(),
@@ -1097,7 +1097,7 @@ export default function WallPage() {
                     // Look up the real post to check ownership and get realId for delete
                     const realId   = post.id >= 100000 ? post.id - 100000 : null;
                     const realPost = realId != null ? realPosts.find((r) => r.id === realId) : null;
-                    const isOwn    = !!realPost && realPost.user_id === user?.email;
+                    const isOwn    = !!realPost && realPost.is_mine;
                     const isEditing = editingPostId === realId;
                     return (
                     <article key={post.id} className="rounded-2xl p-4 border"
