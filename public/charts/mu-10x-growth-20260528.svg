@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e"/>
+      <stop offset="100%" style="stop-color:#0d1528"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#60a5fa" opacity="0.9"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="600" letter-spacing="2">MU · 마이크론 · 2026.05.28</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="20" fill="#ffffff" font-weight="700">마이크론 10년 10배 성장 — 역사는 반복된다</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">Elon Musk 공유 데이터 · 1990→2024 수익 성장 · 세 번째 사이클 시작?</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- Revenue bar chart -->
+  <text x="32" y="126" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">■ Micron Technology 연도별 수익</text>
+
+  <!-- Bars: scaled to 260px max for $30B -->
+  <!-- 1990: $0.33B → 2.9px -->
+  <rect x="60" y="310" width="60" height="3" rx="2" fill="#60a5fa" opacity="0.5"/>
+  <text x="90" y="326" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">1990</text>
+  <text x="90" y="307" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">$0.33B</text>
+
+  <!-- 2000: $1.3B → 11.3px -->
+  <rect x="160" y="301" width="60" height="12" rx="2" fill="#60a5fa" opacity="0.55"/>
+  <text x="190" y="326" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">2000</text>
+  <text x="190" y="299" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">$1.3B</text>
+
+  <!-- 2010: $8.7B → 75.4px -->
+  <rect x="260" y="238" width="60" height="75" rx="2" fill="#60a5fa" opacity="0.65"/>
+  <text x="290" y="326" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">2010</text>
+  <text x="290" y="235" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">$8.7B</text>
+
+  <!-- 2016: $12.4B → 107.5px -->
+  <rect x="360" y="206" width="60" height="107" rx="2" fill="#60a5fa" opacity="0.72"/>
+  <text x="390" y="326" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">2016</text>
+  <text x="390" y="203" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">$12.4B</text>
+
+  <!-- 2024: $30B → 260px -->
+  <rect x="460" y="153" width="60" height="160" rx="2" fill="#60a5fa" opacity="0.9"/>
+  <text x="490" y="326" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle" font-weight="700">2024</text>
+  <text x="490" y="150" font-family="'SF Pro Display',Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="800">$30B</text>
+
+  <!-- 2030E (projected) -->
+  <rect x="560" y="88" width="60" height="225" rx="2" fill="rgba(96,165,250,0.35)" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="590" y="326" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">2030E</text>
+  <text x="590" y="85" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">$200B?</text>
+  <text x="590" y="100" font-family="Arial,sans-serif" font-size="8" fill="#475569" text-anchor="middle">HBM 사이클</text>
+
+  <!-- Baseline -->
+  <line x1="40" y1="313" x2="680" y2="313" stroke="#1e2d4a" stroke-width="1"/>
+
+  <!-- 10x arrows -->
+  <text x="155" y="290" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24" text-anchor="middle">1st 10x</text>
+  <line x1="90" y1="308" x2="190" y2="308" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="2,2" marker-end="url(#arr)"/>
+
+  <text x="390" y="184" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24" text-anchor="middle">2nd 10x</text>
+  <line x1="290" y1="234" x2="490" y2="149" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+  <text x="590" y="135" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24" text-anchor="middle">3rd 10x?</text>
+
+  <!-- Right: quotes + insight -->
+  <rect x="660" y="114" width="108" height="90" rx="8" fill="rgba(96,165,250,0.08)" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="714" y="138" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" font-weight="700">Elon Musk</text>
+  <text x="714" y="154" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">"History doesn't</text>
+  <text x="714" y="168" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">repeat, but it</text>
+  <text x="714" y="182" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">rhymes."</text>
+  <text x="714" y="198" font-family="Arial,sans-serif" font-size="8" fill="#475569" text-anchor="middle">@elonmusk</text>
+
+  <!-- Bottom insight -->
+  <text x="32" y="352" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">■ 투자 시사점</text>
+  <text x="32" y="369" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• HBM4 = AI GPU 필수 소재 → Micron이 SK하이닉스와 양대 공급사로 구조화</text>
+  <text x="32" y="385" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• CHIPS법 $51.6B 지원 → Idaho·뉴욕 팹 확장 → 2028년 HBM4 생산 능력 대폭 증가</text>
+  <text x="32" y="401" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 과거 2회 10배 사이클 이후 AI 사이클이 세 번째를 만들 구조 갖춰짐 (단, CXMT 리스크 병존)</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.28</text>
+</svg>

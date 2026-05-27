@@ -1136,6 +1136,101 @@ export const SEED_REPORTS: Report[] = [
     images:        ["/charts/aapl-price-target-380-20260527.svg"],
   },
 
+  // ══════════════════════════════════════════════════════════════════════════
+  // 2026-05-28 리포트
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-096",
+    title:         "Tesla Cybertruck 스티어-바이-와이어 — 핸들과 바퀴가 물리적으로 분리된 세계 최초 양산차",
+    summary:       "Tesla Cybertruck은 스티어링 컬럼(조향축) 없이 센서·소프트웨어·전동 액추에이터로만 조향하는 세계 최초 양산 SBW 차량입니다. FSD 시스템과의 통합 최적화, OTA 조향 튜닝, 오프로드 반응 자동 조정이 가능합니다. 장전 주가 $443 기준 $500 논의가 소셜에서 활발합니다.",
+    body:          "■ 스티어-바이-와이어(SBW)란?\n\nTesla Cybertruck은 핸들과 앞바퀴를 물리적으로 연결하는 스티어링 컬럼(조향축)을 제거했습니다.\n\n전통적 구조: 핸들 회전 → 컬럼 → 기어박스 → 타이로드 → 바퀴\nCybertruck SBW: 핸들 회전 → 센서 디지털 변환 → 소프트웨어 → 전동 액추에이터 → 바퀴\n\n\"Steering stopped being hardware-only.\"\n\n■ SBW의 핵심 장점\n\n① 조향 반응 완전 소프트웨어 제어 — 저속(예민), 고속(안정) 자동 전환\n② 오프로드 최적화 — \"A giant stainless-steel beast suddenly turns like something way smaller and feels weirdly smooth off-road.\"\n③ FSD 명령 정밀 실행 — 물리 컬럼 마찰 없이 전동 액추에이터가 FSD 신호 직접 실행\n④ OTA 업데이트 — 조향 특성을 소프트웨어로 지속 개선 (하드웨어 교체 불필요)\n\n■ FSD와의 시너지\n\nSBW는 FSD(완전 자율주행)와 자연스럽게 통합됩니다. 물리적 스티어링 컬럼이 없으면:\n• FSD 제어 시 기계적 저항 제로 → 정밀도 향상\n• 인간 운전자 개입 없는 완전 자율 주행 구조에 최적\n• Cybercab(완전 자율 로보택시) 설계의 직접 전신\n\n■ 투자 관점\n\n• SBW = Cybercab 양산을 위한 핵심 선행 기술 — 7월 오스틴 배포 일정과 직결\n• 조향 성능 OTA 구독 업그레이드 잠재력 (장기 소프트웨어 수익화)\n• Tesla만이 SBW + FSD + 에너지 시스템을 수직 통합한 유일한 양산차 제조사\n\n■ 주가 동향\n\n장전 거래에서 Tesla 주가는 $443.07을 기록하며 반등 분위기입니다. \"We reaching $500 soon?\" 논의가 소셜에서 활발합니다.\n\n■ 결론\n\n스티어-바이-와이어는 단순한 기술 혁신이 아니라 \"조향이 하드웨어에서 소프트웨어로 이전된\" 패러다임 전환입니다. Cybercab 상용화 타임라인과 맞물려 Tesla 자율주행 전략의 핵심 기반 기술로 평가됩니다.",
+    category:      "종목분석",
+    categoryColor: "red",
+    subject:       "🚗 Tesla (Cybertruck SBW)",
+    date:          "2026-05-28",
+    updatedAt:     "2026.05.28 07:15",
+    images:        ["/charts/tsla-steer-by-wire-20260528.svg"],
+  },
+
+  {
+    id:            "seed-097",
+    title:         "NVDA Blackwell Ultra 납품 개시 — H1 2027 수주잔고·$5조 달러 시총 논거",
+    summary:       "Nvidia Blackwell Ultra가 고객사에 본격 납품되기 시작했으며 H1 2027까지 공급 가시성이 확보됐습니다. Jensen Huang은 Nvidia 시총이 '매우 저평가'라고 언급했습니다. 하이퍼스케일러 3사가 $225B+ CAPEX를 집중 투입하며 2027년 $5조 달러 시총 논의가 부상 중입니다.",
+    body:          "■ Blackwell Ultra 납품 개시\n\n\"Blackwell Ultra is in customers' hands, and shipment visibility now extends into H1 2027 in committed customer purchase orders.\"\n\nMicrosoft($80B), Meta($65B), Amazon($80B+) 등 하이퍼스케일러 전체의 자본지출이 Nvidia로 집중되고 있습니다.\n\n■ Jensen Huang의 밸류에이션 발언\n\n\"Nvidia's market cap will be 'very much undervalued' as you realize headquarters is the sponsor of the AI revolution.\"\n\n현재 Nvidia는 AI 인프라 투자의 핵심 허브로, 그 규모에 비해 저평가됐다는 논리입니다.\n\n■ $5조 달러 논거\n\n• \"Nvidia is the only platform that makes investments in every company and API service\"\n• Anthropic과 $64B 규모 GPU 공급 계약(2029년까지)\n• 2027년 $5조 달러(약 6,900조원) 시총 논의 부상\n\n■ Brookfield CEO 발언\n\n\"If you are building a big inference business and want to make money, it's all about custom chips [Nvidia], so it's a differentiation strategy.\" — Bruce Flatt, CEO\n\n■ 클라우드 마진 우위 (SemiAnalysis)\n\nNvidia GPU를 가장 효율적으로 활용하는 하이퍼스케일러가 마진 우위를 가져가는 구조:\n• AWS: Q/Q +2.1bps 개선\n• GCP: +0.4bps 보합\n• Microsoft Azure: -2.5bps 하락\n\n■ 결론\n\nBlackwell Ultra 수주잔고 H1 2027 확보 + 하이퍼스케일러 $225B+ CAPEX 집중 + Anthropic $64B 계약 = Nvidia 매출 가시성이 역대 최고 수준입니다. $5조 목표는 현재 수주잔고·마진율 기준 DCF로 설명 가능한 범위입니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🟩 NVDA (Blackwell Ultra·$5T)",
+    date:          "2026-05-28",
+    updatedAt:     "2026.05.28 07:20",
+    images:        ["/charts/nvda-blackwell-ultra-20260528.svg"],
+  },
+
+  {
+    id:            "seed-098",
+    title:         "마이크론 10년 10배 성장 — 1990년 $3.3억에서 2024년 $300억, 세 번째 사이클 시작?",
+    summary:       "일론 머스크가 공유한 Micron Technology 수익 데이터: 1990년 $333M → 2000년 $1.3B → 2010년 $8.7B → 2024년 $30B. 10년 단위 10배 성장이 두 번 반복됐고 AI 반도체 수요가 세 번째 사이클을 만들 구조가 갖춰지고 있습니다.",
+    body:          "■ 마이크론 10년 10배 성장 이력\n\n일론 머스크(@elonmusk)가 공유한 Micron Technology 수익 데이터:\n\n• 1990년: $333M (3,330억원)\n• 2000년: $1.3B\n• 2010년: $8.7B\n• 2016년: $12.4B\n• 2024년: $30B (30조원)\n\n\"Second time $MU's revenue has grown 10x in a decade. History doesn't repeat, but it rhymes.\"\n\n■ 세 번째 10배 사이클 근거\n\n1990~2000: PC 혁명이 DRAM 수요 폭발 → 10배 성장\n2014~2024: 스마트폰·서버 수요 + 클라우드 확장 → 10배 성장\n2024~2034?: AI 인프라 HBM 수요 구조화 → 세 번째 10배 가능성\n\n■ HBM4 사이클의 의미\n\nNvidia Blackwell Ultra 등 최신 AI GPU는 HBM4를 필수로 요구합니다. Micron은 SK하이닉스와 함께 HBM4 양대 공급사로 자리잡고 있으며:\n\n• CHIPS법 $51.6B 지원 확정\n• Idaho·뉴욕 팹 확장 → 2028년 HBM4 생산 능력 대폭 증가\n• Nvidia 공급망 핵심 포지션 확보\n\n■ 주의 사항\n\n중국 CXMT가 $24.2B 자금을 조달하며 범용 DRAM 가격 경쟁을 예고하고 있습니다(별도 리포트 참조). HBM 영역은 기술 격차가 커 단기 영향이 제한적이나, 범용 DRAM 비중에 따라 리스크가 다릅니다.\n\n■ 결론\n\n수익 10배 성장은 과거 두 번 일어났습니다. AI 인프라 투자 사이클이 세 번째를 가능하게 할 구조적 근거는 충분합니다. HBM4 양산 능력 확대 타임라인(2028)을 기준으로 중장기 포지션을 설계하는 것이 합리적입니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "💾 마이크론 (10배 성장 사이클)",
+    date:          "2026-05-28",
+    updatedAt:     "2026.05.28 07:25",
+    images:        ["/charts/mu-10x-growth-20260528.svg"],
+  },
+
+  {
+    id:            "seed-099",
+    title:         "중국 CXMT $242억 자금 조달 — 삼성·SK하이닉스·마이크론 DRAM 70% 과점 균열",
+    summary:       "삼성·SK하이닉스·마이크론이 전 세계 DRAM의 약 70%를 통제하는 구조에 도전이 시작됐습니다. 중국 CXMT가 $24.2B(약 33조원) 신규 자금을 조달하며 생산 능력을 두 배로 늘립니다. 미국 브랜드 Corsair가 이미 CXMT 팹 칩을 채용 중으로, 시장 침투는 현실화 단계입니다.",
+    body:          "■ DRAM 시장 현황\n\n현재 전 세계 DRAM 시장의 약 70%를 삼성반도체·SK하이닉스·Micron 세 회사가 장악하고 있습니다.\n\n■ 중국 CXMT의 도전\n\n중국 최대 메모리 반도체 기업 CXMT(창신메모리테크놀로지)가 2026년 $24.2B(약 33조원)의 신규 자금을 조달했습니다. 동시에 $2.4B 규모 IPO도 추진 중입니다.\n\n\"China's memory giant, just got $24.2 BILLION to fight the $2.4B IPO — now China is loaded with $24.2 BILLION in fresh capital, ready to undercut everything.\"\n\n■ 이미 미국 시장 침투 중\n\n\"Corsair, one of the biggest American memory brands, already gets chips from Chinese companies made inside CXMT's fabs.\"\n\nCorsair가 CXMT 팹 칩을 채용한다는 것은 제품 품질이 이미 상용 기준을 통과했음을 의미합니다. 저가 공세의 기반이 갖춰진 것입니다.\n\n■ 영향 분석\n\n위험 영역 (범용 DRAM):\n• PC·스마트폰·서버 DDR5 — 가격 하락 압력\n• 시장 점유율 잠식 가능성\n• Corsair 등 채널 확대 시 속도 가속\n\n안전 영역 (HBM):\n• HBM3E·HBM4 — CXMT가 아직 생산하지 못하는 영역\n• AI GPU 필수 소재 → 기술 격차로 단기 영향 제한적\n• SK하이닉스·Micron HBM 포지션은 유지\n\n■ 결론\n\n삼성·SK하이닉스·Micron 투자자 관점에서 범용 DRAM 비중이 높은 포지션은 리스크를 점검해야 합니다. 단, AI 메모리(HBM) 특화 포지션은 단기 CXMT 위협과 무관합니다. 종목별로 제품 믹스를 확인하는 것이 핵심입니다.",
+    category:      "섹터",
+    categoryColor: "red",
+    subject:       "⚡ 메모리 섹터 (CXMT 위협)",
+    date:          "2026-05-28",
+    updatedAt:     "2026.05.28 07:30",
+    images:        ["/charts/cxmt-dram-threat-20260528.svg"],
+  },
+
+  {
+    id:            "seed-100",
+    title:         "Amazon AWS, Bedrock·Claude가 이끄는 마진 개선 — 하이퍼스케일러 중 유일한 Q/Q 상승",
+    summary:       "Amazon 1분기 실적은 Bedrock을 통한 Claude 고객 지출 급증이 주도했습니다. SemiAnalysis 분석에 따르면 AWS는 Q/Q 마진이 +2.1bps 개선된 반면, Microsoft Azure는 -2.5bps, GCP는 보합입니다. Trinium 칩 기반 AI 추론 비용 절감이 AWS 경쟁 우위를 재구축하고 있습니다.",
+    body:          "■ AWS Q1 2026 성장 동력\n\n\"Amazon's this quarter driven primarily by customer spending growth on Claude through Bedrock.\"\n\nAWS의 Q1 성장은 단순 클라우드 인프라가 아닌, Anthropic Claude를 Bedrock을 통해 사용하는 기업 고객들의 지출 증가가 핵심이었습니다.\n\n■ SemiAnalysis 하이퍼스케일러 마진 비교\n\n클라우드 부문 Q/Q 마진 변화 (SemiAnalysis 분석):\n\n| 사업자 | Q3 2025 | Q4 2025 | Q1 2026 |\n|--------|---------|---------|----------|\n| AWS | +1.7bps | +0.5bps | +2.1bps ↑ |\n| GCP | -0.3bps | +0.4bps | +0.4bps |\n| Azure | +2.6bps | -1.0bps | -2.5bps ↓ |\n\nAWS가 3분기 연속 개선되는 반면, Azure는 2분기 연속 하락입니다.\n\n■ Trinium 칩의 역할\n\nAmazon이 자체 설계한 Trinium AI 칩이 Bedrock의 비용 구조를 낮추고 있습니다. GPU 비용 없이 AI 추론을 처리하는 구조가 마진 개선의 핵심 동력입니다.\n\n■ Anthropic 성장 효과\n\n\"SemiAnalysis article highlighting that $42T+ AWS is beginning to close Amazon's AI cloud race as Bedrock and Anthropic drive stronger growth and expanding margins.\"\n\nClaude 모델이 기업용 AI 표준으로 자리잡으면서 AWS 차별화 포인트가 되고 있습니다.\n\n■ Andy Jassy 발언\n\nAndy Jassy는 AWS의 AI 성과가 Claude를 통한 Bedrock 고객 지출 성장에서 비롯됐음을 직접 확인했습니다.\n\n■ 결론\n\nAWS가 Azure를 마진에서 앞서는 새로운 구조가 만들어지고 있습니다. Bedrock·Claude 생태계가 기업 AI 표준으로 자리잡으면 AWS의 마진과 성장률 모두 구조적으로 개선될 것입니다. AMZN 장기 보유 근거가 AI 인프라 측면에서 강화되는 국면입니다.",
+    category:      "종목분석",
+    categoryColor: "orange",
+    subject:       "📦 Amazon (AWS Bedrock·Claude)",
+    date:          "2026-05-28",
+    updatedAt:     "2026.05.28 07:35",
+    images:        ["/charts/amzn-bedrock-margin-20260528.svg"],
+  },
+
+  {
+    id:            "seed-101",
+    title:         "Tesla 유럽 판매 3개월 연속 반등 — 4월 EU+UK +46.5% YoY, 10,654대",
+    summary:       "ACEA 공식 통계에 따르면 Tesla의 4월 유럽(EU+EFTA+UK) 신차 등록 대수가 전년 동월 대비 +46.5% 급증한 10,654대를 기록했습니다. EU 단독으로는 +67% 성장해 9,169대에 달했습니다. 이는 3개월 연속 회복세로, 신형 Model Y 효과와 브랜드 반등을 시사합니다.",
+    body:          "■ 4월 유럽 공식 판매 데이터 (ACEA)\n\n유럽자동차공업협회(ACEA) 공식 통계 (2026년 4월):\n\n• EU+EFTA+UK 합계: 10,654대 (+46.5% YoY)\n• EU 단독: 9,169대 (+67% YoY)\n• 3개월 연속 전년 대비 성장\n\n\"April marked the third consecutive month of growth for Tesla in Europe, signaling that the momentum regains serious traction.\"\n\n■ 3개월 연속 반등의 의미\n\n2025년 유럽에서 Tesla는 브랜드 이미지 악화와 경쟁 심화로 어려움을 겪었습니다. 그러나 신형 Model Y 출시 + 가격 조정 + 미중 분위기 개선을 배경으로 3개월 연속 회복세가 ACEA 데이터로 확인됐습니다.\n\n■ 경쟁사 대비 (ACEA 4월)\n\n전통 OEM 대부분이 역성장한 환경에서 Tesla만 고성장:\n• Volkswagen Group: -3.8% YoY\n• BMW Group: -6.3% YoY\n• Mercedes-Benz: -3.4% YoY\n• Stellantis: -7.6% YoY\n• Tesla: +46.5% YoY ← 역주행\n\n■ 유럽 EV 시장 구조\n\n유럽은 규제 강화로 전기차 의무 비율이 높아지는 구조입니다. Tesla는 이 구조 변화의 직접 수혜자로, 유럽 판매 회복이 글로벌 판매 목표 달성에 핵심적입니다.\n\n■ 추가 촉매: SpaceX Megapack 벨기에 착공\n\n\"SpaceX's FIRST EVER Tesla Megapack battery energy storage facility has started construction in Belgium. The 100MWh big battery will use 150 Megapack units.\" (Sawyer Merritt)\n\nSpaceX가 Tesla 에너지 제품을 대규모 채용하는 것은 수직 통합 시너지를 보여줍니다.\n\n■ 결론\n\n3개월 연속 반등 데이터는 'Tesla 유럽 외면' 내러티브가 바뀌고 있음을 시사합니다. Q2 전체 유럽 데이터가 확인될 경우 글로벌 인도량 서프라이즈의 한 축이 될 수 있습니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🚗 Tesla (유럽 판매 반등)",
+    date:          "2026-05-28",
+    updatedAt:     "2026.05.28 07:40",
+    images:        ["/charts/tsla-europe-sales-20260528.svg"],
+  },
+
+  {
+    id:            "seed-102",
+    title:         "SpaceX IPO 시나리오 4가지 — Ron Baron '세계 최대 기업' 전망 & 완전 재사용 선언",
+    summary:       "Ron Baron Capital이 SpaceX를 '세계 최대 기업 중 하나'가 될 것이라 전망했습니다. AJ Investment Research는 SpaceX IPO 또는 Tesla 합병의 4가지 시나리오를 분석했습니다. Elon Musk는 2026년 내 Starship 완전 재사용 달성을 선언했고, Microsoft와 $555B 인프라 파트너십도 부각됩니다.",
+    body:          "■ Ron Baron의 SpaceX 장기 전망\n\n\"This is going to become one of the biggest companies on the planet — I'm talking about over the next 10 years.\"\n\nRon Baron Capital은 SpaceX 최대 주주 중 하나로, 장기적으로 시총 기준 세계 최대 기업에 근접할 것이라는 강한 확신을 표명했습니다.\n\n■ AJ Investment Research — 4가지 시나리오\n\n\"Bookmark this post and come back to it when it's announced.\"\n\n1. SpaceX, Tesla 대상 전량 주식 교환 합병 제안\n2. Elon의 SpaceX 슈퍼보팅 Class B 주식 구조 유지\n3. Tesla의 Elon 관련 밸류에이션 할인 요인 제거 효과\n4. Starlink 단독 분리 상장 (별도 IPO) 가능성\n\n■ Elon Musk — 완전 재사용 선언\n\n\"We've achieved partial reusability with Falcon 9 by landing the booster. We've now landed the booster 346 times, but we have to throw away the upper stage. The upper stage, if you throw it away, is equivalent to throwing away a $10M each time you fly... achieving full reusability this year.\"\n\n완전 재사용 달성 시 발사 비용이 현재의 10분의 1 수준으로 낮아지며, 수익성이 폭발적으로 개선됩니다.\n\n■ Microsoft $555B 인프라 파트너십\n\nSpaceX가 Microsoft와 5년간 대규모 인프라 파트너십을 체결했습니다. Azure 클라우드를 Starlink 백엔드로 활용하는 구조로 알려져 있습니다.\n\n■ SpaceX 수익 구조 3개 축\n\n• B2C: Starlink 개인 구독\n• B2B: 항공사 38개 Starlink 계약\n• B2G: 미 우주군 $2.35B SDN 계약\n\n■ 투자 접근 (비상장)\n\nSpaceX는 현재 직접 투자 불가합니다. 간접 포지션:\n• TSLA: 합병 시나리오 현실화 시 직접 수혜\n• RKLB: 우주 섹터 대체 투자\n• AMZN: 인프라 경쟁 관계이나 AI 수요 수혜 동반\n\n■ 결론\n\nRon Baron의 장기 전망과 Elon의 완전 재사용 목표가 실현되면 현재 $350B 기업가치는 시작점에 불과합니다. IPO 시점과 구조가 결정되는 시기가 TSLA를 포함한 관련 종목의 주요 모멘텀이 될 것입니다.",
+    category:      "특집",
+    categoryColor: "purple",
+    subject:       "🚀 SpaceX (IPO·세계 최대)",
+    date:          "2026-05-28",
+    updatedAt:     "2026.05.28 07:45",
+    images:        ["/charts/spcx-ipo-baron-20260528.svg"],
+  },
+
   {
     id:            "seed-019",
     title:         "Jefferies 경고 — 반도체 47% 미스 전망, SOXX RSI 81 과매수 구간",
@@ -1217,4 +1312,11 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-093": ["AMD"],
   "seed-094": ["MU"],
   "seed-095": ["AAPL"],
+  "seed-096": ["TSLA"],
+  "seed-097": ["NVDA"],
+  "seed-098": ["MU"],
+  "seed-099": ["MU", "SMSN", "SKHH"],
+  "seed-100": ["AMZN"],
+  "seed-101": ["TSLA"],
+  "seed-102": ["SPCX", "TSLA"],
 };

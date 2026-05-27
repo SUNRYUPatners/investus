@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080a1a"/>
+      <stop offset="100%" style="stop-color:#0d0f2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#c084fc" opacity="0.9"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="600" letter-spacing="2">SpaceX · IPO 시나리오 · 2026.05.28</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="20" fill="#ffffff" font-weight="700">SpaceX IPO — Ron Baron "세계 최대 기업" · 완전 재사용 선언</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">4가지 IPO 시나리오 · Microsoft 파트너십 · Starship 재사용</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#1a1040" stroke-width="1"/>
+
+  <!-- Valuation -->
+  <rect x="32" y="114" width="200" height="70" rx="8" fill="rgba(192,132,252,0.10)" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="50" y="137" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="600">현재 기업가치 (비상장)</text>
+  <text x="50" y="165" font-family="'SF Pro Display',Arial,sans-serif" font-size="30" fill="#ffffff" font-weight="800">$350B</text>
+  <text x="50" y="178" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">약 483조원 · 론 배런 최대주주</text>
+
+  <!-- Ron Baron quote -->
+  <rect x="248" y="114" width="520" height="70" rx="8" fill="rgba(192,132,252,0.06)" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="265" y="137" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="600">Ron Baron Capital (SpaceX 최대주주)</text>
+  <text x="265" y="156" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0" font-style="italic">"This is going to become one of the biggest companies</text>
+  <text x="265" y="173" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0" font-style="italic">on the planet — I'm talking about over the next 10 years."</text>
+
+  <!-- 4 Scenarios -->
+  <text x="32" y="210" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ IPO/합병 4가지 시나리오 (AJ Investment Research)</text>
+
+  <rect x="32" y="220" width="360" height="30" rx="4" fill="rgba(192,132,252,0.08)"/>
+  <text x="50" y="239" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">① SpaceX, Tesla 대상 전량 주식 교환 합병 제안</text>
+
+  <rect x="32" y="254" width="360" height="30" rx="4" fill="rgba(192,132,252,0.05)"/>
+  <text x="50" y="272" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">② Elon 슈퍼보팅 Class B 주식 구조 유지</text>
+
+  <rect x="32" y="288" width="360" height="30" rx="4" fill="rgba(192,132,252,0.08)"/>
+  <text x="50" y="307" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">③ Tesla 밸류에이션 할인 요인(Elon) 제거</text>
+
+  <rect x="32" y="322" width="360" height="30" rx="4" fill="rgba(192,132,252,0.05)"/>
+  <text x="50" y="340" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">④ Starlink 단독 분리 상장 (별도 IPO)</text>
+
+  <!-- Right: Elon reusability + Microsoft -->
+  <text x="410" y="210" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ 기술·사업 촉매</text>
+
+  <rect x="410" y="220" width="358" height="54" rx="6" fill="rgba(0,229,160,0.06)" stroke="#00e5a0" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="426" y="238" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="600">🚀 Starship 완전 재사용 올해 목표</text>
+  <text x="426" y="254" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">"Upper stage 버리면 $10M 낭비 — 올해 완전 재사용 달성"</text>
+  <text x="426" y="268" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Falcon 9 부스터 346회 회수 기록 보유</text>
+
+  <rect x="410" y="284" width="358" height="38" rx="6" fill="rgba(96,165,250,0.06)" stroke="#60a5fa" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="426" y="301" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="600">☁️ Microsoft $555B 인프라 파트너십</text>
+  <text x="426" y="316" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">5년간 Azure 클라우드를 Starlink 백엔드로 활용</text>
+
+  <rect x="410" y="332" width="358" height="30" rx="4" fill="rgba(192,132,252,0.06)"/>
+  <text x="426" y="348" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">수익원: B2C(개인) + B2B(항공사 38개) + B2G(미 우주군 $2.35B)</text>
+
+  <!-- Bottom -->
+  <text x="32" y="376" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ 투자 시사점</text>
+  <text x="32" y="393" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 현재 $350B 기업가치는 완전 재사용 달성 시 발사 비용 10분의 1로 — 수익성 폭발적 개선 예상</text>
+  <text x="32" y="410" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• IPO 직접 투자 불가 — TSLA(합병 시), RKLB(경쟁사), AMZN(AWS 인프라) 간접 포지션 검토</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.28</text>
+</svg>

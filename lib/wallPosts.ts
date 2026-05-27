@@ -26,8 +26,9 @@ export type Comment = {
   likes:        number;
 };
 
+const T28 = 1779922800000; // 2026-05-28 08:00 KST
+export const LATEST_UPDATE = T28;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
-export const LATEST_UPDATE = T27;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T26 = 1779750000000; // 2026-05-26 08:00 KST
 const T23 = 1779490800000; // 2026-05-23 08:00 KST
 const T22 = 1779404400000; // 2026-05-22 08:00 KST
@@ -43,6 +44,67 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-05-28 — TSLA SBW / NVDA Blackwell Ultra / MU 10배 사이클 /
+  //              CXMT 위협 / AMZN Bedrock / TSLA 유럽 / SpaceX IPO
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — 스티어-바이-와이어 ───────────────────────────────────────────────
+  { id: 156, symbol: "TSLA", nickname: "익명_3927", holdingLabel: "75주 보유",
+    content: "Cybertruck 스티어-바이-와이어 설명 보고 진짜 놀랐어요. 핸들이랑 바퀴가 물리적으로 연결 안 된다는 게... 처음엔 그게 안전한가 했는데 생각해보면 전동 액추에이터가 소프트웨어로 제어되면 FSD랑 완전히 통합되는 거잖아요. Cybercab에 이 기술 들어가면 물리 조향 컬럼 아예 없는 로보택시 만들 수 있겠다 싶었어요.",
+    createdAt: T28 - 8*60_000, likes: 94, comments: 3 },
+  { id: 157, symbol: "TSLA", nickname: "익명_8214", holdingLabel: "40주 보유",
+    content: "SBW가 OTA로 조향 특성 바꿀 수 있다는 거 진짜 게임체인저예요. 지금도 Cybertruck 오프로드 모드 들어가면 반응이 달라지는 거 이거 때문이었구나 싶었어요. 하드웨어 건드리지 않고 소프트웨어로 차 성격 바꾼다는 게 iPhone이랑 비슷한 수익 모델로 갈 수 있겠다는 생각도 들어요. 조향 구독 업그레이드라던가.",
+    createdAt: T28 - 21*60_000, likes: 71, comments: 2 },
+
+  // NVDA — Blackwell Ultra ─────────────────────────────────────────────────
+  { id: 158, symbol: "NVDA", nickname: "익명_5473", holdingLabel: "30주 보유",
+    content: "H1 2027까지 수주잔고 확보됐다는 게 지금 NVDA 들고 있는 제일 큰 안정감이에요. 2027년 상반기 매출이 이미 계약서에 있다는 거잖아요. Jensen이 '시총 저평가'라고 직접 말한 건 처음 들어봤는데 그분이 그런 말 함부로 안 하시는 분이라 진짜 자신감 있는 거 아닌가요. $5T가 어디서 나온 숫자인지 궁금하긴 한데 수주잔고 기준으론 설명이 되는 것 같기도 해요.",
+    createdAt: T28 - 11*60_000, likes: 118, comments: 4 },
+  { id: 159, symbol: "NVDA", nickname: "익명_7632", holdingLabel: "15주 보유",
+    content: "하이퍼스케일러 3개사 CAPEX 합치면 $225B 넘는데 그게 다 Nvidia로 가는 구조면 공급자 파워가 어마어마한 거예요. Brookfield CEO가 '인퍼런스 사업하려면 다 Nvidia'라고 말한 거 보면 지금 NVDA 빼고 AI 인프라 얘기가 안 되는 상황이에요. 단기 조정 와도 수주잔고 있으면 버티는 거죠.",
+    createdAt: T28 - 33*60_000, likes: 87, comments: 3 },
+
+  // MU — 10배 성장 사이클 ──────────────────────────────────────────────────
+  { id: 160, symbol: "MU", nickname: "익명_4819", holdingLabel: "55주 보유",
+    content: "일론이 올린 마이크론 수익 데이터 보고 다시 정리해봤는데 진짜 10년 단위로 반복되는 패턴이 있어요. 1990년에 $333M이던 게 2024년 $30B이면 90배잖아요. AI 인프라에서 HBM이 필수 소재가 된 지금이 세 번째 10배 사이클 시작점이라면... 지금 들어가도 늦지 않은 거 아닌가 하는 생각이에요.",
+    createdAt: T28 - 15*60_000, likes: 76, comments: 3 },
+  { id: 161, symbol: "MU", nickname: "익명_2948", holdingLabel: "22주 보유",
+    content: "CHIPS법 $51.6B 지원에 10배 사이클 논리까지 나오면 MU 강세론이 굉장히 설득력 있어요. 근데 CXMT 리포트도 같이 나왔는데 범용 DRAM은 진짜 위협이 실제인 것 같아요. HBM은 기술 격차가 크다고 하는데 MU 제품 믹스에서 HBM 비중이 얼마나 되는지 확인해봐야 할 것 같아요.",
+    createdAt: T28 - 44*60_000, likes: 52, comments: 2 },
+
+  // 메모리 — CXMT ──────────────────────────────────────────────────────────
+  { id: 162, symbol: "MU", nickname: "익명_6371", holdingLabel: "35주 보유",
+    content: "$242억이면 한국 돈으로 33조예요. 중국이 이걸 한 번에 쏟아붓는다고? Corsair가 이미 쓰고 있다는 게 제일 충격적이었어요. 그냥 중국 저품질 제품 아니라 이미 미국 브랜드 납품 자격을 얻은 거잖아요. 삼성·SK하이닉스가 범용 DRAM에서 가격 압박 받는 건 이미 시작된 것 같아요.",
+    createdAt: T28 - 9*60_000, likes: 88, comments: 4 },
+  { id: 163, symbol: "MU", nickname: "익명_9183", holdingLabel: "10주 보유",
+    content: "CXMT 리포트 무섭긴 한데 HBM은 다른 이야기라는 게 그나마 다행이에요. AI GPU에서 HBM은 CXMT가 못 만드는 영역이고 이게 지금 당장 MU 주가에 영향 주는 건 제한적일 것 같아요. 다만 3~5년 뒤에 CXMT가 HBM까지 따라오면 그때 상황이 달라질 수 있으니 타임라인은 봐야 할 것 같아요.",
+    createdAt: T28 - 28*60_000, likes: 63, comments: 3 },
+
+  // AMZN — Bedrock/Claude ──────────────────────────────────────────────────
+  { id: 164, symbol: "AMZN", nickname: "익명_7284", holdingLabel: "25주 보유",
+    content: "AWS Q/Q 마진 +2.1bps인데 Azure가 -2.5bps라고? 이 차이가 뒤집어지는 게 아니라 벌어지고 있다는 게 진짜 중요해요. Claude가 기업 AI 표준으로 자리잡으면 Bedrock 기반 AWS가 AI 클라우드 대장이 되는 거잖아요. Anthropic 투자 잘했다는 게 이제 숫자로 나오는 중이에요.",
+    createdAt: T28 - 12*60_000, likes: 95, comments: 3 },
+  { id: 165, symbol: "AMZN", nickname: "익명_3847", holdingLabel: "60주 보유",
+    content: "Trinium 칩이 마진 개선 핵심이라는 게 NVDA 안 사도 AI 추론을 처리한다는 거잖아요. AWS가 NVDA 의존도를 낮추면서 Claude 서비스하는 구조면 마진이 구조적으로 개선되는 거예요. Andy Jassy가 Claude through Bedrock을 직접 언급한 것 자체가 얼마나 큰 비중인지 보여주는 거고요.",
+    createdAt: T28 - 37*60_000, likes: 73, comments: 2 },
+
+  // TSLA — 유럽 판매 ───────────────────────────────────────────────────────
+  { id: 166, symbol: "TSLA", nickname: "익명_1847", holdingLabel: "90주 보유",
+    content: "+46.5%가 ACEA 공식 데이터라는 거 진짜 중요해요. 그동안 '테슬라 유럽에서 망했다'는 얘기가 너무 많았는데 3개월 연속 반등이 공식 통계로 나왔어요. EU 단독 +67%이면 브랜드 회복 속도가 생각보다 빠른 거예요. 신형 Model Y 효과 아직 유럽에서 본격적으로 반영 안 된 부분도 있을 것 같아서 Q2 데이터가 더 기대돼요.",
+    createdAt: T28 - 7*60_000, likes: 109, comments: 4 },
+  { id: 167, symbol: "TSLA", nickname: "익명_5291", holdingLabel: "50주 보유",
+    content: "VW -3.8%, BMW -6.3%인데 테슬라만 +46.5%면 이건 그냥 브랜드 반등이 아니라 유럽 EV 시장 자체에서 테슬라가 빈 자리를 채우는 거예요. 규제로 전기차 비율 올려야 하는데 BYD는 아직 유럽에서 덜 알려졌고 결국 테슬라로 돌아오는 구조인 것 같아요. SpaceX Megapack 벨기에 착공 소식도 같이 나와서 유럽 시장 강화하는 분위기예요.",
+    createdAt: T28 - 29*60_000, likes: 84, comments: 3 },
+
+  // SPCX — IPO 시나리오 ────────────────────────────────────────────────────
+  { id: 168, symbol: "SPCX", nickname: "익명_8492", holdingLabel: "관심종목",
+    content: "Ron Baron이 '세계 최대 기업'이라고 하면 그냥 하는 말이 아니에요. 그 분 포트폴리오에서 SpaceX 비중이 얼마인지 공개되진 않았지만 실제로 가장 큰 주주 중 하나인 게 맞아요. Elon이 완전 재사용 올해 목표라고 한 거 실현되면 발사 비용이 지금의 10분의 1인데 그러면 $350B도 저평가가 맞는 거예요. IPO 빨리 해줬으면 진짜.",
+    createdAt: T28 - 16*60_000, likes: 97, comments: 4 },
+  { id: 169, symbol: "SPCX", nickname: "익명_3726", holdingLabel: "관심종목",
+    content: "4가지 시나리오 중 저는 Starlink 단독 상장이 제일 좋다고 봐요. Starlink만 해도 B2C + 항공 38개사 + 군사 계약 다 있는데 거기다 Starship 발사 비즈니스까지 포함하면 $300B 이상 나와요. 테슬라랑 합치면 테슬라 주주는 좋을 수 있어도 SpaceX 고성장이 EV 비용 구조에 발목 잡히는 게 아닌가 싶어서요.",
+    createdAt: T28 - 42*60_000, likes: 74, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-05-27 — TSLA-SpaceX 합병 / Q1 적자 / Optimus5 / 렌즈특허 /
@@ -680,6 +742,79 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-05-28 신규 ──────────────────────────────────────────────────────
+  156: [
+    { id: 1, nickname: "익명_5291", holdingLabel: "110주 보유", content: "Cybercab에 SBW 들어가면 물리 스티어링 컬럼 아예 빼고 내부 공간을 더 넓게 쓸 수 있는 거잖아요. 로보택시 실내 디자인 자유도가 훨씬 높아지는 거예요. FSD 8세대랑 맞물리면 진짜 완성도 있는 자율주행차가 나올 것 같아요.", createdAt: T28 - m(5), likes: 41 },
+    { id: 2, nickname: "익명_7394", holdingLabel: "30주 보유", content: "소프트웨어 제어가 100%면 해킹 리스크 어떻게 보나요? 물리 컬럼이 없으면 소프트웨어 장애 시 완전 제어 불능이 되는 거 아닌가 해서요.", createdAt: T28 - m(2), likes: 19 },
+    { id: 3, nickname: "익명_8271", holdingLabel: "65주 보유", content: "리던던시 설계가 핵심이죠. Tesla가 이미 3중 센서 체계로 신뢰성 확보하는 구조인데 SBW도 백업 액추에이터 있을 거예요. Cybertruck이 이미 양산되고 있다는 게 이미 안전 기준 통과한 증거고요.", createdAt: T28 + m(1), likes: 33 },
+  ],
+  157: [
+    { id: 1, nickname: "익명_4193", holdingLabel: "20주 보유", content: "조향 구독 업그레이드 말씀하신 거 진짜 가능한 시나리오예요. 지금도 FSD 구독이 $99/월인데 스포츠 모드 조향이나 오프로드 특화 조향을 따로 팔면 하드웨어 없이 소프트웨어로 매출 만드는 거잖아요. 애플이 Apple One처럼.", createdAt: T28 - m(12), likes: 28 },
+    { id: 2, nickname: "익명_6382", holdingLabel: "85주 보유", content: "이거 결국 차량이 플랫폼이 되는 거예요. OTA로 기능 추가·개선·구독화가 가능하면 판매 후에도 지속 수익이 발생하는 구조. 테슬라가 Apple처럼 생태계 기반 수익 모델 만드는 길로 가고 있는 거예요.", createdAt: T28 + m(2), likes: 22 },
+  ],
+  158: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "50주 보유", content: "H1 2027 수주잔고가 Committed Purchase Orders라는 게 핵심이에요. '예상 수요'가 아니라 계약서 싸인된 물량이라는 거잖아요. 이 정도 가시성 가진 기업이 PER 얼마든 비싸다고 할 수 있나 싶어요.", createdAt: T28 - m(7), likes: 54 },
+    { id: 2, nickname: "익명_7284", holdingLabel: "22주 보유", content: "Anthropic $64B 계약이 실제로 존재한다면 그게 NVDA 연간 매출의 얼마예요. 지난 분기 $44B이었나요? 계약 하나가 분기 매출에 버금가는 규모면 가시성이 진짜 다른 수준이네요.", createdAt: T28 - m(3), likes: 38 },
+    { id: 3, nickname: "익명_9182", holdingLabel: "8주 보유", content: "AWS, Meta, MS, Google이 다 사는 구조에서 공급 부족이 생기면 가격 협상력은 NVDA에 있는 거잖아요. GPU ASP(평균판매가) 계속 오르는 이유가 그거예요.", createdAt: T28 + m(1), likes: 27 },
+    { id: 4, nickname: "익명_5192", holdingLabel: "40주 보유", content: "단기 조정이 와도 매분기 수주잔고 업데이트 나오면 주가 버팀목이 되는 거예요. 지금 NVDA 포지션 유지가 맞다고 봐요.", createdAt: T28 + m(4), likes: 21 },
+  ],
+  159: [
+    { id: 1, nickname: "익명_8374", holdingLabel: "35주 보유", content: "Brookfield CEO가 AI 인프라 기업인데 그 분이 '다 Nvidia'라고 하면 진짜 현업에서 느끼는 거잖아요. 분석가 의견보다 실제 구축하는 사람 말이 더 신뢰가 가요.", createdAt: T28 - m(19), likes: 33 },
+    { id: 2, nickname: "익명_4827", holdingLabel: "12주 보유", content: "$225B+ CAPEX를 Nvidia 없이 소화할 방법이 없는 상황이에요. AMD MI300X가 대안이긴 한데 수요 대비 공급이 너무 달리니까요. 이 구조 당분간 안 꺾여요.", createdAt: T28 + m(1), likes: 26 },
+    { id: 3, nickname: "익명_6291", holdingLabel: "60주 보유", content: "Azure 마진 -2.5bps 나온 거 보면 MS도 NVDA GPU 비용 부담이 크다는 거잖아요. AWS는 Trinium으로 일부 대체하는데 MS는 순수하게 NVDA 의존 → 비용 구조 불리해지는 거예요.", createdAt: T28 + m(3), likes: 18 },
+  ],
+  160: [
+    { id: 1, nickname: "익명_2847", holdingLabel: "40주 보유", content: "90배 성장이 진짜로 가능했던 거 보면 반도체 사이클이 AI로 한번 더 점프할 수 있다고 봐요. 다만 CXMT가 변수인데 HBM은 못 따라온다는 거 믿으면 MU 장기 보유 맞다고 생각해요.", createdAt: T28 - m(9), likes: 37 },
+    { id: 2, nickname: "익명_5193", holdingLabel: "18주 보유", content: "Elon이 MU 데이터 올린 거 자체가 의미 있어요. NVDA 공급망 핵심 업체를 관심 있게 보는 거잖아요. Tesla가 AI 훈련에 HBM 쓰는 양이 늘어날수록 MU 수요도 늘어나는 구조예요.", createdAt: T28 + m(1), likes: 24 },
+    { id: 3, nickname: "익명_7291", holdingLabel: "25주 보유", content: "CHIPS법 팹 확장이 2028년 완성이면 그때까지 2년 남았는데 그 전에 HBM4 수요가 피크를 찍으면 타이밍이 딱 맞는 거예요. 2026~2028이 MU의 황금기일 수 있어요.", createdAt: T28 + m(4), likes: 19 },
+  ],
+  161: [
+    { id: 1, nickname: "익명_3918", holdingLabel: "30주 보유", content: "MU 작년 연간 리포트에서 HBM 비중이 전체 매출의 30% 수준이었던 것 같아요. 이게 2026년에 50% 넘어가면 CXMT 리스크는 절반으로 줄어드는 거고, 나머지 범용 DRAM은 가격 압박 받더라도 전체 마진이 올라가는 구조가 돼요.", createdAt: T28 - m(27), likes: 22 },
+    { id: 2, nickname: "익명_6284", holdingLabel: "45주 보유", content: "HBM이랑 범용 DRAM을 같이 파는 포트폴리오에서 HBM 비중 늘리는 게 지금 MU 경영진의 핵심 전략이에요. 실적 컨퍼런스콜에서 매 분기 업데이트 나오니 그거 보면 방향성 확인돼요.", createdAt: T28 + m(2), likes: 16 },
+  ],
+  162: [
+    { id: 1, nickname: "익명_7392", holdingLabel: "25주 보유", content: "중국 정부가 33조를 한 번에 넣는다는 게 이건 기업 투자가 아니라 국가 전략이에요. 삼성·SK하이닉스가 정부 지원 없이 싸움하는 거랑 차원이 다른 경쟁이에요. 한국 정부도 HBM 방어에 더 적극적으로 나와야 할 것 같아요.", createdAt: T28 - m(5), likes: 46 },
+    { id: 2, nickname: "익명_4819", holdingLabel: "60주 보유", content: "Corsair가 쓴다는 거 진짜 충격이었어요. 게이머들이 쓰는 RAM이 중국산이 됐다는 건데... 미국 제재가 완전하지 않다는 증거이기도 하고요. 소비자는 싸면 사는 거니까요.", createdAt: T28 - m(2), likes: 31 },
+    { id: 3, nickname: "익명_9183", holdingLabel: "15주 보유", content: "범용 DRAM 가격 하락이 나쁜 것만은 아니에요. PC 제조사나 스마트폰 업체 입장에선 부품 비용이 낮아지는 거니까 최종 제품 마진 올라가죠. 소비자도 PC 조립 비용 낮아지고. 문제는 MU 같은 생산자 마진이 줄어드는 거예요.", createdAt: T28 + m(3), likes: 23 },
+    { id: 4, nickname: "익명_2847", holdingLabel: "80주 보유", content: "결론은 HBM 비중 높은 SK하이닉스가 CXMT 충격을 제일 적게 받는 구조예요. Micron은 HBM 늘리는 중이고 삼성이 제일 노출이 크고요. 메모리 내에서도 종목 선별이 필요한 시점이에요.", createdAt: T28 + m(6), likes: 35 },
+  ],
+  163: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "35주 보유", content: "3~5년 후 CXMT가 HBM까지 따라오면 그건 완전히 다른 게임인데 그때까지 SK하이닉스·Micron이 얼마나 격차를 벌려놓느냐가 핵심이에요. 기술 리드 = 생존이에요 이 업계에서.", createdAt: T28 - m(14), likes: 29 },
+    { id: 2, nickname: "익명_8374", holdingLabel: "10주 보유", content: "지금 당장 HBM 영향 없다는 거 확인하고 MU 추가 매수했어요. CXMT 리포트 나왔을 때 잠깐 흔들렸는데 내용 보니까 지금 내 포지션엔 직접 영향 제한적이라 판단했어요.", createdAt: T28 + m(2), likes: 21 },
+    { id: 3, nickname: "익명_3829", holdingLabel: "50주 보유", content: "결국 미국이 CXMT에 추가 제재 카드 쓸 수 있어요. Corsair 같은 기업이 중국산 채용한다는 게 의회에서 문제 삼으면 새 제재 나올 수 있고 그러면 CXMT 타격이 클 수 있어요.", createdAt: T28 + m(5), likes: 17 },
+  ],
+  164: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "30주 보유", content: "Trinium이 NVDA GPU 없이 AI 추론한다는 게 AMZN이 NVDA 의존 줄인다는 거잖아요. 그러면 비용 구조가 개선되고 마진이 올라가는 거예요. 근데 NVDA 투자자 입장에선 Amazon이 NVDA 덜 사는 거 아닌가 걱정도 되긴 해요.", createdAt: T28 - m(7), likes: 44 },
+    { id: 2, nickname: "익명_4827", holdingLabel: "45주 보유", content: "Bedrock에서 Claude 쓰는 기업 늘어나면 Anthropic도 수혜고 AMZN도 수혜고 NVDA도 수혜예요. 훈련용 GPU는 계속 NVDA 사야 하고, 추론 일부를 Trinium으로 대체하는 거라 NVDA 수요가 줄어드는 건 아니에요.", createdAt: T28 + m(1), likes: 31 },
+    { id: 3, nickname: "익명_8192", holdingLabel: "15주 보유", content: "Azure -2.5bps 하락이 계속되면 기업 IT 담당자들이 AWS로 넘어오는 속도가 빨라져요. 마진 개선이 가격 경쟁력으로 이어지면 시장 점유율 변화도 나올 수 있어요.", createdAt: T28 + m(3), likes: 22 },
+  ],
+  165: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "70주 보유", content: "Andy Jassy가 Claude through Bedrock이라고 직접 언급한 게 IR에서 특정 파트너 제품 이름을 저렇게 노출한다는 게 보통 일이 아니에요. 그만큼 수치가 크다는 거예요.", createdAt: T28 - m(18), likes: 36 },
+    { id: 2, nickname: "익명_5291", holdingLabel: "25주 보유", content: "AMZN 장기 홀딩 명분이 AWS AI 마진인데 이게 데이터로 확인되고 있어요. AWS 성장 + 마진 개선 + 광고 수익 + 물류 효율화면 3~5년 뷰로 진짜 좋은 주식이에요.", createdAt: T28 + m(2), likes: 24 },
+  ],
+  166: [
+    { id: 1, nickname: "익명_7394", holdingLabel: "130주 보유", content: "EU 단독 +67%면 전년 동월 대비 거의 두 배 가는 속도예요. 3개월 연속이면 트렌드가 된 거예요. Q2 전체 데이터 나오면 글로벌 인도량 컨센서스 대폭 상향 조정될 것 같아요. 유럽이 회복하면 연간 170만~180만대도 가능해 보여요.", createdAt: T28 - m(4), likes: 62 },
+    { id: 2, nickname: "익명_2948", holdingLabel: "70주 보유", content: "VW, BMW 다 역성장하는 환경인데 Tesla만 +46.5% 나온 거 보면 유럽 소비자들이 EV 살 때 대안이 없다는 거예요. BYD는 아직 인지도 낮고 전통 OEM 전기차는 품질·소프트웨어 차이가 크니까요.", createdAt: T28 - m(1), likes: 47 },
+    { id: 3, nickname: "익명_4182", holdingLabel: "35주 보유", content: "브랜드 회복 속도가 생각보다 빠른 게 일론 관련 유럽 정서가 생각보다 빨리 희석되는 거 아닐까요. 아니면 신형 Model Y 제품력이 그걸 압도하는 거거나. 어찌됐든 실데이터가 나오는 게 중요해요.", createdAt: T28 + m(2), likes: 31 },
+    { id: 4, nickname: "익명_8291", holdingLabel: "20주 보유", content: "FSD 유럽 승인 나오면 그다음 레벨이에요. 지금은 FSD 없이 이 수치인데 FSD 허가 나오는 순간 유럽 판매가 또 점프할 수 있어요.", createdAt: T28 + m(5), likes: 25 },
+  ],
+  167: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "55주 보유", content: "SpaceX Megapack 벨기에 착공이 같이 나온 게 의미 있어요. SpaceX가 Tesla 에너지 제품 대규모 채용하면 에너지 부문 매출에 직접 기여하는 거잖아요. Tesla-SpaceX 수직 통합 시너지가 실현되는 거예요.", createdAt: T28 - m(15), likes: 39 },
+    { id: 2, nickname: "익명_7394", holdingLabel: "80주 보유", content: "유럽 EV 의무비율 강화되면 딜러들이 목표 맞추려고 Tesla 더 팔 수밖에 없는 구조예요. 규제가 테슬라 편인 거예요. 이 구조적 수혜가 3~5년은 지속될 것 같아요.", createdAt: T28 + m(1), likes: 28 },
+    { id: 3, nickname: "익명_3827", holdingLabel: "28주 보유", content: "Model Y 인도 시작한 지 얼마 안 됐는데 대기 수요도 아직 많이 남아있을 거예요. 5~6월 데이터도 지금 추세 유지하면 Q2 전체 유럽이 역대 최고 될 수도 있어요.", createdAt: T28 + m(4), likes: 22 },
+  ],
+  168: [
+    { id: 1, nickname: "익명_4819", holdingLabel: "관심종목", content: "완전 재사용 달성하면 발사 비용이 10분의 1이 된다는 게 수익성이 폭발적으로 개선되는 거예요. 지금 Starship 발사 비용이 $2000만이라면 $200만으로 낮아지는 거잖아요. 그러면 상업 위성 발사 수요가 폭발적으로 늘어날 거예요.", createdAt: T28 - m(10), likes: 51 },
+    { id: 2, nickname: "익명_7291", holdingLabel: "관심종목", content: "Ron Baron이 세계 최대 기업이라는 게 과장이 아닐 수 있어요. B2C + B2B + B2G 세 개 다 성장 중이고 완전 재사용으로 단가 낮아지면 발사 서비스까지 4개 축이에요. $350B이 시작점이라는 거 동의해요.", createdAt: T28 - m(5), likes: 38 },
+    { id: 3, nickname: "익명_2847", holdingLabel: "관심종목", content: "비상장이라 직접 못 사는 게 너무 아쉬워요. RKLB 들고 있는데 SpaceX IPO 나오면 비중 이동 고민해야 할 것 같아요. 일단 IPO 소식 나올 때까지 RKLB 홀딩이요.", createdAt: T28 + m(1), likes: 27 },
+    { id: 4, nickname: "익명_6183", holdingLabel: "관심종목", content: "Microsoft $555B 파트너십이면 AWS가 아닌 Azure 쪽으로 간다는 거잖아요. SpaceX 인프라 구축에 Azure가 핵심이 된다면 MS 입장에서도 SpaceX IPO가 AWS와의 경쟁에서 이기는 카드가 될 수 있어요.", createdAt: T28 + m(3), likes: 21 },
+  ],
+  169: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "관심종목", content: "Starlink 단독 상장 시나리오 저도 선호해요. Starlink 기업가치만 $200B+ 나오고 거기서 Starship 발사 서비스 별도로 평가받으면 둘 다 독립적으로 성장할 수 있어요. 합치면 서로 발목 잡는 부분이 생기죠.", createdAt: T28 - m(25), likes: 32 },
+    { id: 2, nickname: "익명_8293", holdingLabel: "관심종목", content: "테슬라-SpaceX 합병 시 TSLA 주주 희석이 얼마나 되는지 계산해봤는데... SpaceX $350B이면 TSLA 주식 발행이 엄청나요. 지금 $430 기준으로 $350B어치면 약 8억주 발행이고 그게 기존 주식수의 25% 넘어요. 합병 조건이 진짜 중요해요.", createdAt: T28 - m(12), likes: 29 },
+    { id: 3, nickname: "익명_5192", holdingLabel: "관심종목", content: "어떤 시나리오든 결국 Elon이 정하는 거잖아요. 나는 그냥 발표 나올 때까지 TSLA 홀딩하면서 상황 보는 게 맞다고 봐요. 시나리오 예측보다 결과 보고 대응이 낫죠.", createdAt: T28 + m(2), likes: 23 },
+  ],
+
   // ── 2026-05-27 신규 ──────────────────────────────────────────────────────
   139: [
     { id: 1, nickname: "익명_7291", holdingLabel: "120주 보유", content: "Dan Ives가 12개월이라는 게 진짜 무게감 있는 말이에요. 보통 분석가들이 막 던지는 말이 아니고 Wedbush 직인 찍힌 리포트인데. 근데 Kalshi 33%는 시장이 냉정하게 보는 거니까 반반이라 봐야 할 것 같아요", createdAt: T27 - m(4), likes: 47 },

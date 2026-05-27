@@ -17,6 +17,95 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-05-28 신규 ─────────────────────────────────────────────────────
+  {
+    id: -28,
+    alias: "여의도 매 #17",
+    symbol: "TSLA",
+    content:
+      "Cybertruck SBW 리포트 봤음. 투자 관점 핵심은 FSD 통합 최적화임. 물리 컬럼 없으면 FSD가 조향 명령을 전동 액추에이터에 직접 때리는 거라 반응 정밀도가 다름. 7월 오스틴 Cybercab 배포 일정이랑 맞물리면 SBW가 로보택시 핵심 기술로 재평가받을 것임. 단기 주가보다 이 기술이 Cybercab 양산 일정에 리스크 없다는 거 확인이 더 중요함. 지금 $443 프리마켓.",
+    likes: 121,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
+    liked: false,
+  },
+  {
+    id: -27,
+    alias: "강남 독수리 #52",
+    symbol: "NVDA",
+    content:
+      "Blackwell Ultra H1 2027 수주잔고 확보 나왔을 때 내부에서 바로 모델 업데이트했음. Committed PO라면 취소 위약금 있는 구조라 실매출 전환률 95%+ 임. 일반 백로그랑 성격이 다름. Jensen '시총 저평가' 발언은 CEO가 자주 하는 말이 아닌데 근거가 있음. $5T 타겟 내는 기관 나올 것 같음. 내 타겟은 보수적이지만 방향은 동일.",
+    likes: 158,
+    comments: 4,
+    created_at: new Date(Date.now() - 1000 * 60 * 38).toISOString(),
+    liked: false,
+  },
+  {
+    id: -26,
+    alias: "판교 황소 #31",
+    symbol: "MU",
+    content:
+      "Elon이 올린 MU 10배 사이클 데이터 봤음. 흥미로운 건 2016~2024년 구간이 HBM 없을 때도 $12.4B→$30B 갔다는 거임. 근데 지금은 HBM4가 AI GPU 필수 소재가 된 상황이라 성장 속도가 다를 수 있음. CXMT $24B 조달은 범용 DRAM 마진에 진짜 리스크임. MU 제품 믹스에서 HBM 비중이 2027년 50% 돌파 시점이 포인트.",
+    likes: 97,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 72).toISOString(),
+    liked: false,
+  },
+  {
+    id: -25,
+    alias: "서초 매 #64",
+    symbol: "MU",
+    content:
+      "CXMT $24.2B 리포트 정리. Corsair 납품이 이미 실현됐다는 거라 품질 기준 통과는 확인됨. 문제는 국가 보조금 받는 기업이 적자 감수하고 가격 덤핑 가능하다는 거임. 삼성 범용 DRAM 마진 제일 먼저 압박. MU는 HBM 비중이 방어벽. SK하이닉스가 이 싸움에서 제일 유리한 포지션. 종목 선별 중요한 구간.",
+    likes: 86,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 110).toISOString(),
+    liked: false,
+  },
+  {
+    id: -24,
+    alias: "광화문 늑대 #69",
+    symbol: "AMZN",
+    content:
+      "SemiAnalysis 하이퍼스케일러 마진 차트 봤는데 생각보다 큰 의미임. Azure 3분기 연속 하락이고 AWS는 개선 중. 기업 IT 예산 배분에서 Azure→AWS 이동이 가시적으로 나오면 시장 점유율 데이터 변화가 나올 것임. Bedrock·Claude 생태계가 굳어지면 전환 비용 높아져서 고착화됨. AMZN 클라우드 리레이팅 시점 가까워지는 중.",
+    likes: 112,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 145).toISOString(),
+    liked: false,
+  },
+  {
+    id: -23,
+    alias: "을지로 사자 #77",
+    symbol: "TSLA",
+    content:
+      "ACEA 4월 데이터 EU+UK +46.5% 확인했음. 3개월 연속 반등은 '트렌드 전환'으로 분류할 근거 충분함. 내가 유럽 반등 리포트 낼 때 2개월로는 확신 못 했는데 3개월이면 다름. Q2 전체 인도량 컨센서스 현재 45만대인데 유럽 회복 반영하면 47~48만대까지 올라갈 수 있음. FSD 유럽 승인 나오면 한 번 더 재평가.",
+    likes: 134,
+    comments: 4,
+    created_at: new Date(Date.now() - 1000 * 60 * 185).toISOString(),
+    liked: false,
+  },
+  {
+    id: -22,
+    alias: "잠실 콘도르 #53",
+    symbol: "SPCX",
+    content:
+      "Ron Baron '세계 최대 기업' 발언 맥락 이해하려면 10년 뷰 전제 중요. 완전 재사용 달성 + Starlink 글로벌 커버리지 + B2G 계약 확장이 10년 안에 동시에 되면 그게 세계 최대 기업 논리임. 4가지 시나리오 중 내가 제일 가능성 높다고 보는 건 Starlink 단독 분리 상장. 합병은 CFIUS·주주 희석 이슈로 현실적으로 어렵고.",
+    likes: 89,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 230).toISOString(),
+    liked: false,
+  },
+  {
+    id: -21,
+    alias: "마포 황소 #11",
+    symbol: "NVDA",
+    content:
+      "오늘 리포트 다 보고 전반적인 뷰 정리 — AI 인프라 투자 사이클 꺾일 조짐 없음. NVDA H1 2027 수주잔고, AMZN Bedrock 마진 개선, 하이퍼스케일러 CAPEX 유지 다 같은 방향. CXMT 메모리 위협은 AI 메모리엔 단기 영향 없고. Tesla 유럽 반등은 단기 모멘텀. 전체 AI 섹터 방향 강세 유지. NVDA 비중 줄일 이유 없음.",
+    likes: 143,
+    comments: 4,
+    created_at: new Date(Date.now() - 1000 * 60 * 275).toISOString(),
+    liked: false,
+  },
   // ── 2026-05-27 신규 ─────────────────────────────────────────────────────
   {
     id: -20,
@@ -242,6 +331,152 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-28]: [
+    {
+      alias: "강남 독수리 #52",
+      content: "Cybercab 배포 일정 7월 오스틴이면 SBW 양산 리스크가 없다는 게 이미 확인된 거임. 리포트 봐서 기술 설명 좋은데 투자자한테 제일 중요한 건 그게 Cybercab 타임라인 지연 리스크를 제거한다는 논리임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 9).toISOString(),
+    },
+    {
+      alias: "서초 수리부엉이 #91",
+      content: "조향 구독 수익화 잠재력은 맞는 방향인데 규제 이슈 있을 수 있음. 안전 관련 기능을 구독 게이팅하는 건 도로교통법 저촉 가능성 있어서 어떤 기능까지 유료화 가능한지 법적 검토가 먼저임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 5).toISOString(),
+    },
+    {
+      alias: "판교 황소 #31",
+      content: "FSD-SBW 통합 최적화가 Waymo 대비 Tesla 자율주행 아키텍처 우위 근거 중 하나임. Waymo 라이다 방식은 SBW 없어도 되는 구조라 비교가 어렵지만, 순수 카메라+AI 방식에서 SBW는 필수적인 하드웨어 요소임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 2).toISOString(),
+    },
+  ],
+  [-27]: [
+    {
+      alias: "을지로 사자 #77",
+      content: "Committed PO 개념 중요한 포인트 잡았음. 취소 불가 계약이면 매출 가시성이 다른 차원임. NVDA 실적 발표 때마다 수주잔고 숫자 업데이트 나오는 걸 계속 봐야 함. 이게 줄어드는 시점이 매도 신호임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 25).toISOString(),
+    },
+    {
+      alias: "마포 황소 #11",
+      content: "Anthropic $64B 계약이 모두 NVDA GPU 기반이라면 Anthropic이 NVDA 최대 고객 중 하나인 거임. Claude 모델 성장 = NVDA 매출 성장이 연동되는 구조인데 이 상관관계가 시장에서 충분히 인식 안 됐음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 18).toISOString(),
+    },
+    {
+      alias: "여의도 콘도르 #19",
+      content: "5T 타겟 내는 기관 나오면 주가 레벨 달라짐. 지금 $3.5T 정도인데 5T면 40% 업사이드. 수주잔고 기반 DCF에서 그게 나오려면 마진 가정이 현재보다 높아야 하는데 Blackwell Ultra ASP 추세가 핵심.",
+      created_at: new Date(Date.now() - 1000 * 60 * 12).toISOString(),
+    },
+    {
+      alias: "강남 팔콘 #62",
+      content: "Azure -2.5bps 하락이 계속되면 MS가 NVDA 구매 감소로 비용 절감 시도할 수 있음. 근데 그러면 AI 서비스 경쟁력이 떨어지는 딜레마에 빠지는 거라 실제로 줄이기 어려운 구조임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 7).toISOString(),
+    },
+  ],
+  [-26]: [
+    {
+      alias: "서초 매 #64",
+      content: "HBM 비중 50% 돌파 타임라인 동의. 2027년 전후가 MU 밸류에이션 재평가 시점임. 그 전까지 범용 DRAM 마진 압박 감수해야 하는데 그 구간을 버틸 현금 흐름이 있는지 보는 게 중요함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 55).toISOString(),
+    },
+    {
+      alias: "잠실 황소 #95",
+      content: "10배 사이클 논리 매력적인데 과거 두 번 중 한 번은 ~4배 성장이었음. 정확히 '10배'라는 수치에 집착하기보다 AI 수요 구조화가 몇 배 성장을 만드는지가 투자 포인트임. 방향은 맞음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 42).toISOString(),
+    },
+    {
+      alias: "판교 늑대 #09",
+      content: "CHIPS법 팹 2028년 완성 전까지 SK하이닉스 HBM 우위가 유지되는 구간임. MU는 그 이후 종목으로 포지셔닝하는 게 맞을 수도 있음. 지금 사려면 2028년 HBM 생산량 기대를 선반영하는 판단이어야 함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 33).toISOString(),
+    },
+  ],
+  [-25]: [
+    {
+      alias: "판교 황소 #31",
+      content: "국가 보조금 덤핑 경쟁은 중국이 DRAM뿐 아니라 다른 산업에서도 써온 방법임. 삼성이 과거에도 버텨냈는데 그때와 다른 건 CXMT가 기술 수준 자체를 빠르게 따라오고 있다는 거임. 3~5년이 중요한 관찰 구간.",
+      created_at: new Date(Date.now() - 1000 * 60 * 88).toISOString(),
+    },
+    {
+      alias: "여의도 매 #33",
+      content: "미국 추가 제재 카드가 변수임. Corsair 채용 이슈 의회에서 터지면 CXMT 제재 나올 수 있고 그러면 판세가 달라짐. 제재 리스크가 CXMT 포지션의 숨겨진 취약점임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 72).toISOString(),
+    },
+  ],
+  [-24]: [
+    {
+      alias: "을지로 팔콘 #16",
+      content: "Azure 마진 하락이 기업 예산 배분 변화로 이어지는 시그널 확인되면 AWS 점유율 데이터를 4Q 실적에서 봐야 함. 마진→점유율→주가 시퀀스가 AMZN 리레이팅 경로임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
+    },
+    {
+      alias: "마포 올빼미 #73",
+      content: "Trinium + Bedrock 조합이 NVDA 의존 줄이는 구조라는 게 중요함. AI 클라우드 마진 구조에서 GPU 비용이 제일 크고, 자체 칩으로 대체하면 그게 직접 마진으로 들어오는 거임. AWS 마진 개선의 구조적 근거임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 108).toISOString(),
+    },
+    {
+      alias: "강남 올빼미 #85",
+      content: "Anthropic이 AWS에 독점적으로 붙어있는 게 아니라 Google도 투자자인데, Bedrock 통해 Claude 쓰는 기업 수가 얼마나 되는지 실제 숫자가 중요함. 다음 실적 발표에서 Bedrock 고객사 수 공개 여부 체크해야 함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 95).toISOString(),
+    },
+  ],
+  [-23]: [
+    {
+      alias: "잠실 콘도르 #53",
+      content: "FSD 유럽 승인 타임라인이 어떻게 되는지가 다음 레그임. 독일 규제당국이 제일 까다로운데 독일 통과하면 전체 EU 적용 가능한 구조임. 내부에서 2027년 초 보는 시각도 있음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 160).toISOString(),
+    },
+    {
+      alias: "여의도 매 #17",
+      content: "Q2 인도량 컨센서스 47~48만대면 YoY로 얼마임? 전년 Q2가 44만대 수준이었으니까 7~9% 성장이고 시장이 기대치 낮춰놓은 거라 서프라이즈 가능성 있음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 145).toISOString(),
+    },
+    {
+      alias: "판교 늑대 #09",
+      content: "3개월 연속 반등이 신형 Model Y 출시 효과인지 브랜드 회복인지 구분이 중요함. 신차 효과면 일시적일 수 있고 브랜드 회복이면 구조적임. 다음 1~2개월 데이터가 판별 포인트.",
+      created_at: new Date(Date.now() - 1000 * 60 * 128).toISOString(),
+    },
+    {
+      alias: "광화문 늑대 #69",
+      content: "SpaceX Megapack 벨기에 착공이 같이 나온 게 Tesla 에너지 부문 매출 모델에 영향 있음. SpaceX가 Megapack 구독식으로 계속 사면 에너지 부문이 안정적 B2B 수요처 생기는 거임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 112).toISOString(),
+    },
+  ],
+  [-22]: [
+    {
+      alias: "여의도 콘도르 #19",
+      content: "Starlink 단독 상장이 맞는 방향이라는 데 동의. 합병은 CFIUS 심사 6개월+ 걸리고 주주 희석 승인까지 받으려면 1년은 걸림. 단독 상장은 절차 단순하고 Starlink 자체 밸류에이션 극대화됨.",
+      created_at: new Date(Date.now() - 1000 * 60 * 200).toISOString(),
+    },
+    {
+      alias: "을지로 사자 #77",
+      content: "완전 재사용 올해 목표는 Elon 특유의 낙관 타임라인임. 실제로 되면 발사 비용 혁명인데 현실적으로는 2027년 초로 보는 시각이 더 많음. 그래도 방향은 맞음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 185).toISOString(),
+    },
+    {
+      alias: "잠실 황소 #95",
+      content: "B2G 수익이 Starlink 기업가치에서 핵심 프리미엄 요소임. 군사 통신 계약은 경쟁입찰 없이 독점적 구조가 가능하고 마진이 B2C 대비 훨씬 높음. $2.35B 계약이 시작이라면 규모 확대 가능성 있음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 168).toISOString(),
+    },
+  ],
+  [-21]: [
+    {
+      alias: "을지로 팔콘 #16",
+      content: "전체 뷰 정리 맞음. AI 섹터 전반 강세 유지. 단 CXMT 이슈가 메모리 내 종목 선별을 만들어내는 거고 이게 섹터 전체 위험이 아닌 종목 분산 요인임. 포트폴리오 내 MU와 SKH 비중 재조정 고민 중.",
+      created_at: new Date(Date.now() - 1000 * 60 * 245).toISOString(),
+    },
+    {
+      alias: "강남 올빼미 #85",
+      content: "Tesla 유럽 데이터가 단기 모멘텀이라는 표현이 맞는데 단기라도 Q2 인도량 숫자가 서프라이즈 나오면 주가 단기 모멘텀 생기는 거임. 7월 실적 발표 전까지 TSLA 포지션 유지 전략 맞음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 228).toISOString(),
+    },
+    {
+      alias: "마포 황소 #11",
+      content: "오늘처럼 NVDA, AMZN, TSLA, MU 다 긍정적 재료 나오는 날 시장 흐름 보면 AI 섹터 방향이 분명함. 개별 종목 리스크보다 섹터 방향이 중요한 구간임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 210).toISOString(),
+    },
+    {
+      alias: "판교 황소 #31",
+      content: "SpaceX IPO 시나리오가 TSLA에 어떤 영향 주는지가 개인적으로 제일 주시하는 변수임. 합병되면 TSLA 주주 희석, 단독 IPO면 TSLA 프리미엄 일부 소멸. 어느 쪽이든 가격 조정 가능성 있음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 195).toISOString(),
+    },
+  ],
   [-20]: [
     {
       alias: "강남 사자 #24",

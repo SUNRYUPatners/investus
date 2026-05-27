@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0a0a"/>
+      <stop offset="100%" style="stop-color:#1a0f0f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="430" fill="url(#bg)"/>
+  <rect width="800" height="3" fill="#ef4444" opacity="0.9"/>
+
+  <!-- Header -->
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" font-weight="600" letter-spacing="2">TSLA · Cybertruck · 2026.05.28</text>
+  <text x="32" y="66" font-family="'SF Pro Display',Arial,sans-serif" font-size="20" fill="#ffffff" font-weight="700">스티어-바이-와이어 — 조향이 하드웨어에서 소프트웨어로</text>
+  <text x="32" y="88" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">세계 최초 SBW 양산차 · 핸들과 바퀴 물리적 단절 · FSD 통합 최적화</text>
+  <line x1="32" y1="102" x2="768" y2="102" stroke="#2d1515" stroke-width="1"/>
+
+  <!-- Left: Traditional vs SBW -->
+  <text x="32" y="126" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" font-weight="700">■ 전통 조향 vs 스티어-바이-와이어</text>
+
+  <!-- Traditional box -->
+  <rect x="32" y="134" width="220" height="120" rx="8" fill="rgba(239,68,68,0.07)" stroke="#ef4444" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="132" y="155" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle" font-weight="600">전통 방식</text>
+  <text x="132" y="174" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">핸들 → 컬럼</text>
+  <text x="132" y="190" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">→ 기어박스</text>
+  <text x="132" y="206" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">→ 타이로드</text>
+  <text x="132" y="222" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">→ 바퀴</text>
+  <text x="132" y="242" font-family="Arial,sans-serif" font-size="9" fill="#475569" text-anchor="middle">물리적 연결 필수</text>
+
+  <!-- Arrow -->
+  <text x="262" y="200" font-family="Arial,sans-serif" font-size="20" fill="#ef4444" text-anchor="middle">→</text>
+
+  <!-- SBW box -->
+  <rect x="278" y="134" width="220" height="120" rx="8" fill="rgba(0,229,160,0.07)" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="388" y="155" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle" font-weight="700">Cybertruck SBW ✓</text>
+  <text x="388" y="174" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">핸들 → 센서</text>
+  <text x="388" y="190" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">→ 소프트웨어</text>
+  <text x="388" y="206" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">→ 전동 액추에이터</text>
+  <text x="388" y="222" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">→ 바퀴</text>
+  <text x="388" y="242" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle">물리 컬럼 제로 · OTA 튜닝 가능</text>
+
+  <!-- Right: Benefits -->
+  <text x="524" y="126" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" font-weight="700">■ 핵심 장점</text>
+  <rect x="524" y="134" width="244" height="120" rx="8" fill="rgba(239,68,68,0.06)" stroke="#ef4444" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="540" y="158" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">① 조향 반응 소프트웨어로 자유 조정</text>
+  <text x="540" y="176" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">② 오프로드 최적화 자동 전환</text>
+  <text x="540" y="194" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">③ FSD 명령 정밀 실행 (마찰 없음)</text>
+  <text x="540" y="212" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">④ OTA 업데이트로 지속 개선</text>
+  <text x="540" y="236" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">"Steering stopped being hardware-only"</text>
+
+  <!-- Quote -->
+  <rect x="32" y="272" width="450" height="50" rx="6" fill="rgba(239,68,68,0.06)" stroke="#ef4444" stroke-width="0.5" stroke-opacity="0.25"/>
+  <text x="48" y="291" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-style="italic">"A giant stainless-steel beast suddenly turns like something</text>
+  <text x="48" y="308" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" font-style="italic">way smaller and feels weirdly smooth off-road."</text>
+  <text x="48" y="323" font-family="Arial,sans-serif" font-size="9" fill="#64748b">— Mario Nawfal @MarioNawfal</text>
+
+  <!-- Stock box -->
+  <rect x="524" y="272" width="244" height="50" rx="8" fill="rgba(0,229,160,0.06)" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="293" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Tesla 장전 주가</text>
+  <text x="540" y="313" font-family="'SF Pro Display',Arial,sans-serif" font-size="24" fill="#ffffff" font-weight="800">$443.07</text>
+  <text x="690" y="313" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">$500 논의 중</text>
+
+  <!-- Bottom insight -->
+  <text x="32" y="352" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" font-weight="700">■ 투자 시사점</text>
+  <text x="32" y="369" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• SBW는 FSD 완성도를 결정하는 하드웨어 인프라 — Cybercab 상용화 핵심 기술</text>
+  <text x="32" y="385" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• 소프트웨어 제어 = OTA 수익화 가능 (조향 성능 구독 업그레이드 잠재력)</text>
+  <text x="32" y="401" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">• Tesla만이 SBW + FSD + 에너지 시스템을 수직 통합한 유일한 생산차 제조사</text>
+
+  <text x="768" y="424" font-family="Arial,sans-serif" font-size="9" fill="#334155" text-anchor="end">SUNRYU Partners · 2026.05.28</text>
+</svg>
