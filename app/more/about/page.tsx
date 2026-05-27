@@ -1,7 +1,7 @@
 "use client";
 
 import { Header } from "@/components/Header";
-import { ChevronLeft, BookOpen, PlayCircle, TrendingUp, Shield, Layers } from "lucide-react";
+import { ChevronLeft, BookOpen, PlayCircle, TrendingUp, Shield, Layers, AlertTriangle, Award } from "lucide-react";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -326,6 +326,70 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* ── 법적 고지 및 운영 자격 ── */}
+        <div className="mb-5">
+          <div className="flex items-center gap-2 mb-3">
+            <Shield className="w-3.5 h-3.5" style={{ color: "var(--muted)" }} />
+            <p className="text-[10px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+              법적 고지 및 운영 자격
+            </p>
+          </div>
+
+          {/* 사전교육 이수 증서 */}
+          <div className="rounded-2xl border p-4 mb-3"
+            style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                style={{ background: "rgba(0,229,160,0.1)", border: "1px solid rgba(0,229,160,0.2)" }}>
+                <Award className="w-5 h-5" style={{ color: "var(--mint)" }} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-bold mb-0.5" style={{ color: "var(--text)" }}>
+                  금융투자협회 유사투자자문업 사전교육 이수
+                </p>
+                <p className="text-[11px] mb-2" style={{ color: "var(--muted)" }}>
+                  금융투자교육원 (KIFIN) · 2023년 03월 23일 · 8시간
+                </p>
+                <div className="rounded-lg px-3 py-2"
+                  style={{ background: "rgba(0,229,160,0.05)", border: "1px solid rgba(0,229,160,0.12)" }}>
+                  <p className="text-[10px] font-mono" style={{ color: "var(--muted)" }}>
+                    수료번호 제 26066-2023-90318호
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 서비스 성격 안내 */}
+          <div className="rounded-2xl border p-4 mb-3"
+            style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+            <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>서비스 성격 안내</p>
+            <div className="flex flex-col gap-2">
+              {[
+                "Investus는 투자 정보 제공을 목적으로 운영되는 서비스입니다.",
+                "제공되는 리포트·AI 분석·시장 데이터는 모두 참고용이며, 개인별 투자 권유가 아닙니다.",
+                "투자 결과에 대한 최종 책임은 투자자 본인에게 있습니다.",
+                "원금 손실이 발생할 수 있으며, 과거 수익률은 미래 성과를 보장하지 않습니다.",
+              ].map((t) => (
+                <div key={t} className="flex gap-2 items-start">
+                  <div className="w-1 h-1 rounded-full flex-shrink-0 mt-1.5" style={{ background: "var(--muted)" }} />
+                  <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{t}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 주의 배너 */}
+          <div className="rounded-xl px-4 py-3 flex items-start gap-2.5"
+            style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.18)" }}>
+            <AlertTriangle className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "#fbbf24" }} />
+            <p className="text-[11px] leading-relaxed" style={{ color: "rgba(251,191,36,0.8)" }}>
+              Investus는 자본시장법상 투자자문업(인가) 또는 투자일임업 서비스가 아닙니다.
+              금융투자상품 투자 전 반드시 공인 금융 전문가의 상담을 받으시기 바랍니다.
+            </p>
           </div>
         </div>
 
