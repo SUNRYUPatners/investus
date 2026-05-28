@@ -6,6 +6,7 @@ import { IndexCard } from "./IndexCard";
 import { StockCard } from "./StockCard";
 import { FuturesHeatmap } from "./FuturesHeatmap";
 import { SP500Heatmap } from "./SP500Heatmap";
+import { MarketAISummary } from "./MarketAISummary";
 import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
 import { RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { useLocale } from "@/contexts/LocaleContext";
@@ -306,6 +307,9 @@ export function LiveMarket() {
       <section className="px-4 lg:px-0 pt-6">
         <FuturesHeatmap items={futures} />
       </section>
+
+      {/* 시장 종합 AI 분석 — S&P500 섹터 + Futures 데이터 기반 */}
+      <MarketAISummary />
     </>
   );
 }
