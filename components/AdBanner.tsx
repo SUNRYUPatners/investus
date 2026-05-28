@@ -8,28 +8,44 @@ declare global {
   }
 }
 
+const PUB_ID = "ca-pub-1075509322890486";
+
 interface AdBannerProps {
-  slot?: string;   // 특정 슬롯 ID (없으면 env var 사용)
+  slot?: string;
   format?: "auto" | "rectangle" | "horizontal";
 }
 
 export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
-  const pubId  = process.env.NEXT_PUBLIC_ADSENSE_PUB_ID;
+  const pubId  = process.env.NEXT_PUBLIC_ADSENSE_PUB_ID ?? PUB_ID;
   const slotId = slot ?? process.env.NEXT_PUBLIC_ADSENSE_SLOT_ID;
   const pushed = useRef(false);
 
   useEffect(() => {
-    if (!pubId || !slotId || pushed.current) return;
+    if (!pubId || pushed.current) return;
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
       pushed.current = true;
-    } catch {}
-  }, [pubId, slotId]);
+    } catch { /* ignore */ }
+  }, [pubId]);
 
-  /* ── 미설정 시 숨김 (AdSense 승인 전) ── */
-  if (!pubId || !slotId) return null;
+  if (!pubId) return null;
 
-  /* ── 실제 AdSense 광고 ── */
+  // 슬롯 ID 없을 때 — 자동 광고 ins 태그 (구글이 자동 배치)
+  if (!slotId) {
+    return (
+      <div className="w-full my-1 overflow-hidden rounded-xl">
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client={pubId}
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      </div>
+    );
+  }
+
+  // 슬롯 ID 있을 때 — 지정 광고 단위
   const insStyle: React.CSSProperties =
     format === "rectangle"
       ? { display: "inline-block", width: "300px", height: "250px" }

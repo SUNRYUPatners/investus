@@ -164,13 +164,19 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </div>
             </div>
             <BottomNav />
-            {/* Google AdSense */}
+            {/* Google AdSense — 자동 광고 활성화 */}
             <Script
               async
               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1075509322890486"
               crossOrigin="anonymous"
               strategy="afterInteractive"
             />
+            <Script id="adsense-auto-ads" strategy="afterInteractive">{`
+              (window.adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-1075509322890486",
+                enable_page_level_ads: true
+              });
+            `}</Script>
           </AuthProvider>
         </LocaleProvider>
         <Analytics />
