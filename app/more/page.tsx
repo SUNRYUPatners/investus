@@ -8,7 +8,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
 import { AdBanner } from "@/components/AdBanner";
 import { useForm, ValidationError } from "@formspree/react";
-import { useLocale } from "@/contexts/LocaleContext";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 
 type MenuItem_t = { label: string; sub: string; emoji: string; href?: string; onClick?: () => void };
 
@@ -526,6 +526,43 @@ function InstallSection() {
   );
 }
 
+// ── Locale Toggle ───────────────────────────────────────────────────────────
+function LocaleToggle() {
+  const locale = useLocaleCode();
+  const isKo   = locale === "ko";
+
+  const switchTo = (lang: "ko" | "en") => {
+    document.cookie = `locale=${lang}; path=/; max-age=${60 * 60 * 24 * 30}; samesite=lax`;
+    window.location.reload();
+  };
+
+  return (
+    <div className="flex items-center justify-center lg:justify-start gap-2 mt-8 mb-2">
+      <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+        {isKo ? "언어" : "Language"}
+      </span>
+      <div className="flex rounded-full border overflow-hidden" style={{ borderColor: "var(--border)" }}>
+        {(["ko", "en"] as const).map((lang) => {
+          const active = locale === lang;
+          return (
+            <button
+              key={lang}
+              onClick={() => !active && switchTo(lang)}
+              className="px-3 py-1 text-[11px] font-bold transition-colors"
+              style={{
+                background: active ? "var(--mint)" : "transparent",
+                color:      active ? "#000" : "var(--muted)",
+              }}
+            >
+              {lang.toUpperCase()}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 type AuthMode = "idle" | "login" | "signup" | "reset";
 
 function AuthSection() {
@@ -1017,7 +1054,9 @@ export default function MorePage() {
               <InstallSection />
             </div>
 
-            <p className="text-center text-[10px] mt-8 lg:text-left" style={{ color: "var(--muted)" }}>
+            <LocaleToggle />
+
+            <p className="text-center text-[10px] mt-4 lg:text-left" style={{ color: "var(--muted)" }}>
               {mo.footer.split("\n").map((line, i) => (
                 <span key={i}>{line}{i === 0 && <br />}</span>
               ))}
