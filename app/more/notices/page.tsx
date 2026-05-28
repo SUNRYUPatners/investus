@@ -5,48 +5,14 @@ import { Header } from "@/components/Header";
 import { ChevronLeft, ChevronDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-type NoticeType = "notice" | "update" | "legal";
+type NoticeType = "notice" | "legal";
 
 const TYPE_CONFIG: Record<NoticeType, { label: string; color: string; bg: string }> = {
   notice: { label: "공지", color: "#60a5fa", bg: "rgba(96,165,250,0.12)" },
-  update: { label: "업데이트", color: "var(--mint)", bg: "rgba(0,229,160,0.10)" },
   legal:  { label: "법적 고지", color: "#f59e0b", bg: "rgba(245,158,11,0.10)" },
 };
 
 const NOTICES: { id: string; type: NoticeType; date: string; title: string; body: string }[] = [
-  {
-    id: "n011",
-    type: "update",
-    date: "2026-05-27",
-    title: "v1.0.7 업데이트 — AI 분석·댓글·레이아웃 개선",
-    body: `안녕하세요, Investus팀입니다.
-
-v1.0.7 업데이트로 여러 기능이 개선되었습니다.
-
-■ 홈탭 개선
-- 내 보유종목: 탭 이동 시 딜레이 없이 즉시 표시 (이전에는 0.5~1초 지연)
-- 포트폴리오 AI 분석 신규: 장마감 후 자동으로 1회 분석하여 저장. 장중에는 수동으로 3회 무료 재분석 가능
-- 장마감 분석은 주말·휴일에도 마지막 거래일 결과를 그대로 보여줌
-
-■ 자산 탭 개선
-- AI 비서 답변이 중간에 잘리던 문제 해결 (응답 길이 제한 개선)
-
-■ 피드 탭 개선
-- 종목토론 댓글: 팝업창 → 인라인 펼치기 방식으로 변경 (더 자연스럽게)
-- 종목토론·애널들은: 글 본문을 탭·클릭하면 전체 내용 펼치기
-- 애널들은 댓글 수가 실시간으로 바로 반영됨
-
-■ 데스크탑 레이아웃
-- 홈·검색·자산·인사이트 탭의 오른쪽 사이드바 너비를 340px로 통일
-- 인사이트 탭에서 리포트 내용이 잘리던 문제 해결
-
-■ 법적 고지
-- 더보기 → Investus 소개 하단에 법적 고지 및 운영 자격 섹션 추가
-- 금융투자협회(KIFIN) 유사투자자문업 사전교육 이수 정보 표시
-
-감사합니다.
-SUNRYU Partners CIO`,
-  },
   {
     id: "n010",
     type: "legal",
@@ -239,7 +205,7 @@ export default function NoticesPage() {
             <ChevronLeft className="w-3.5 h-3.5" /> 뒤로
           </button>
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>공지사항</h1>
-          <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>업데이트 · 법적 고지 · 서비스 안내</p>
+          <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>법적 고지 · 서비스 안내</p>
         </div>
 
         <div className="mt-4 rounded-2xl border overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
