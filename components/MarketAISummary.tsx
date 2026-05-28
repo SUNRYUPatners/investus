@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Sparkles, ChevronDown, ChevronUp, RefreshCw } from "lucide-react";
 import { NYSE_HOLIDAYS, isMarketOpen } from "@/lib/marketHours";
+import { useLocale } from "@/contexts/LocaleContext";
 
 const INTRADAY_LIMIT = 3;
 
@@ -35,6 +36,7 @@ function readIntradayCount(): number        { try { return parseInt(localStorage
 function bumpIntradayCount(): number        { const n = readIntradayCount() + 1; try { localStorage.setItem(INTRA_KEY(), String(n)); } catch { /* ignore */ } return n; }
 
 export function MarketAISummary() {
+  const t = useLocale();
   const [summary,      setSummary]      = useState<string | null>(null);
   const [loading,      setLoading]      = useState(false);
   const [expanded,     setExpanded]     = useState(false);
@@ -91,11 +93,12 @@ export function MarketAISummary() {
 
   const remaining    = INTRADAY_LIMIT - intradayUsed;
   const limitReached = marketOpen && intradayUsed >= INTRADAY_LIMIT;
+  const ms = t.marketSummary;
   const dateLabel    = date
     ? marketOpen
-      ? `${date.slice(5, 7)}/${date.slice(8, 10)} 기준 · 장중`
-      : `${date.slice(5, 7)}/${date.slice(8, 10)} 장마감 기준`
-    : "장마감 기준";
+      ? `${date.slice(5, 7)}/${date.slice(8, 10)} ${ms.intraLive}`
+      : `${date.slice(5, 7)}/${date.slice(8, 10)} ${ms.intraClosed}`
+    : ms.fallback;
 
   return (
     <div className="mt-4 px-4 lg:px-0">
@@ -111,7 +114,7 @@ export function MarketAISummary() {
         >
           <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: "#63b3ed" }} />
           <span className="text-sm font-bold font-syne flex-1 text-left" style={{ color: "var(--text)" }}>
-            {marketOpen ? "장중 시장 분석" : "시장 종합 분석"}
+            {marketOpen ? ms.titleOpen : ms.titleClosed}
           </span>
           <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full mr-1"
             style={{ background: "rgba(99,179,237,0.15)", color: "#63b3ed" }}>
@@ -155,10 +158,10 @@ export function MarketAISummary() {
                   <div className="rounded-xl p-3 flex flex-col items-center gap-1.5 text-center"
                     style={{ background: "rgba(99,179,237,0.04)", border: "1px solid rgba(99,179,237,0.12)" }}>
                     <p className="text-[11px] font-bold" style={{ color: "var(--text)" }}>
-                      오늘 무료 장중 분석 {INTRADAY_LIMIT}회 소진
+                      {ms.limitTitle(INTRADAY_LIMIT)}
                     </p>
                     <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-                      장마감 후 자동 분석은 무제한 무료예요
+                      {ms.limitDesc}
                     </p>
                   </div>
                 ) : (
@@ -171,12 +174,12 @@ export function MarketAISummary() {
                     <div className="flex items-center gap-2">
                       <RefreshCw className="w-3.5 h-3.5" style={{ color: "#63b3ed" }} />
                       <span className="text-[12px] font-bold" style={{ color: "#63b3ed" }}>
-                        지금 다시 분석
+                        {ms.refresh}
                       </span>
                     </div>
                     <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
                       style={{ background: "rgba(99,179,237,0.15)", color: "#63b3ed" }}>
-                      오늘 {remaining}/{INTRADAY_LIMIT}회 남음
+                      {ms.remaining(remaining, INTRADAY_LIMIT)}
                     </span>
                   </button>
                 )}
@@ -184,7 +187,7 @@ export function MarketAISummary() {
             )}
 
             <p className="text-[9px] text-center pb-3" style={{ color: "var(--muted)" }}>
-              {dateLabel} · S&P500 섹터 + 주요 선물 데이터 기반 · 투자 권유 아님
+              {dateLabel} · {ms.disclaimer}
             </p>
           </div>
         )}

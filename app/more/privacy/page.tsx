@@ -3,8 +3,9 @@
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
-const SECTIONS = [
+const SECTIONS_KO = [
   {
     title: "1. 개인정보 수집 항목 및 방법",
     body: "서비스는 다음과 같은 최소한의 정보를 수집합니다.\n\n[회원가입]\n• 이메일/비밀번호 가입: 이메일 주소, 비밀번호(암호화 저장)\n• 소셜 로그인(Google, Kakao): 이메일 주소, 프로필 닉네임 (해당 제공자 정책에 따름)\n\n[투자교육 신청]\n• 이름, 연락처(전화번호), 투자 경험 수준, 투자 가능 금액(선택), 문의 내용(선택)\n• 수집 목적: 교육 과정 안내 및 수강 확인 연락\n• 보유 기간: 교육 신청 처리 완료 후 1년\n\n[자동 수집]\n• 서비스 이용 기록, 접속 로그, 기기 식별 정보(광고 ID), 앱 버전\n\n개인정보는 이용자가 직접 입력하는 방식 또는 서비스 이용 과정에서 자동으로 생성·수집됩니다.",
@@ -23,7 +24,7 @@ const SECTIONS = [
   },
   {
     title: "5. 개인정보 처리 위탁",
-    body: "서비스는 원활한 서비스 제공을 위해 아래와 같이 개인정보 처리를 위탁합니다.\n\n• Vercel Inc. (미국) — 서비스 호스팅 및 서버 운영\n• Supabase Inc. (미국) — 회원 인증 및 데이터베이스 저장\n• Upstash Inc. (미국) — 요청 횟수 제한(Rate Limiting) 처리\n• Formspree Inc. (미국) — 크리에이터 인증 신청 이메일 알림 전송 (이메일, 닉네임, 자기소개 포함)\n\n위탁 계약 시 개인정보 보호 관련 사항을 명시하고 이를 준수하도록 관리합니다. 위 업체들은 모두 미국에 서버를 두며, 해당국의 개인정보 보호 법규를 따릅니다.",
+    body: "서비스는 원활한 서비스 제공을 위해 아래와 같이 개인정보 처리를 위탁합니다.\n\n• Vercel Inc. (미국) — 서비스 호스팅 및 서버 운영\n• Supabase Inc. (미국) — 회원 인증 및 데이터베이스 저장\n• Upstash Inc. (미국) — 요청 횟수 제한(Rate Limiting) 처리\n• Formspree Inc. (미국) — 크리에이터 인증 신청 이메일 알림 전송 (이메일, 닉네임, 자기소개 포함)\n\n위탁 계약 시 개인정보 보호 관련 사항을 명시하고 이를 준수하도록 관리합니다.",
   },
   {
     title: "6. 이용자의 권리 및 행사 방법",
@@ -51,18 +52,73 @@ const SECTIONS = [
   },
 ];
 
+const SECTIONS_EN = [
+  {
+    title: "1. Personal Information Collected",
+    body: "The Service collects the minimum necessary information as follows.\n\n[Account Registration]\n• Email/Password: Email address, password (encrypted)\n• Social login (Google, Kakao): Email address, profile nickname (per respective provider policy)\n\n[Investment Education Application]\n• Name, contact (phone number), investment experience level, investable amount (optional), inquiry (optional)\n• Purpose: Course guidance and enrollment confirmation contact\n• Retention: 1 year after application processing is complete\n\n[Automatically Collected]\n• Usage records, access logs, device identifiers (advertising ID), app version\n\nPersonal information is collected directly by the user or automatically generated during service use.",
+  },
+  {
+    title: "2. Purpose of Collection and Use",
+    body: "Collected personal information is used solely for the following purposes:\n\n• Member identification and service use management\n• Providing personalized investment information and alerts\n• Preventing unauthorized use and enhancing security\n• Statistics and analysis for service improvement\n• Compliance with legal obligations",
+  },
+  {
+    title: "3. Retention and Use Period",
+    body: "The Service destroys personal information without delay when a member withdraws or when the collection purpose is achieved. However, information required to be retained by law will be kept for the legally specified period.\n\n• Records related to contracts or withdrawal of offers: 5 years (E-Commerce Act)\n• Login records: 3 months (Protection of Communications Secrets Act)",
+  },
+  {
+    title: "4. Third-Party Disclosure and Cross-Border Transfer",
+    body: "The Service does not, in principle, share personal information with third parties. Exceptions include:\n\n• Cases where the user has given prior consent\n• Cases required by law or requested by investigative authorities\n\n[Cross-Border Transfer]\nWhen applying for creator verification, minimal information (email, nickname, self-introduction) is sent for email notifications:\n\n• Recipient: Formspree Inc.\n• Country: United States\n• Purpose: Email notification delivery\n• Retention: Immediately deleted after email transmission\n\nIf you do not consent to the above, creator verification applications may be restricted.",
+  },
+  {
+    title: "5. Data Processing Delegation",
+    body: "The Service delegates personal information processing to the following entities:\n\n• Vercel Inc. (USA) — Service hosting and server operations\n• Supabase Inc. (USA) — Member authentication and database storage\n• Upstash Inc. (USA) — Rate limiting\n• Formspree Inc. (USA) — Creator verification email notifications (email, nickname, self-introduction)\n\nAll entities are contractually required to comply with data protection requirements.",
+  },
+  {
+    title: "6. User Rights and How to Exercise Them",
+    body: "Users may exercise the following rights at any time:\n\n• Request to access or correct personal information\n• Request to suspend personal information processing\n• Request to delete personal information (right to be forgotten)\n• Account withdrawal and complete deletion\n\nUpon account deletion, all posts, comments, and creator verification data will be deleted. Requests may be submitted via email (sunryupatners@gmail.com), and the Service will respond within 10 business days.",
+  },
+  {
+    title: "7. Technical and Managerial Protection Measures",
+    body: "The Service takes the following measures to protect personal information:\n\n• Encrypted password storage\n• Minimized access rights and access log management\n• Regular security vulnerability assessments\n• Internal management plans and implementation",
+  },
+  {
+    title: "8. Cookies and Similar Technologies",
+    body: "The Service uses localStorage for user convenience and service improvement. Stored information includes portfolio and watchlist settings and is not transmitted to servers.",
+  },
+  {
+    title: "9. Changes to Privacy Policy",
+    body: "If this policy changes, advance notice will be provided at least 7 days prior through in-app announcements or pop-ups. Additional consent may be requested for significant changes.",
+  },
+  {
+    title: "10. Privacy Officer",
+    body: "For inquiries, complaints, or remedies related to personal information:\n\n• Officer: Investus Operations Team\n• Email: sunryupatners@gmail.com\n• Response time: Within 10 business days of receipt",
+  },
+  {
+    title: "Supplementary Provisions",
+    body: "This policy takes effect as of May 20, 2026.",
+  },
+];
+
 export default function PrivacyPage() {
+  const locale   = useLocaleCode();
+  const isKo     = locale === "ko";
+  const SECTIONS = isKo ? SECTIONS_KO : SECTIONS_EN;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-24 lg:pb-10">
         <div className="pt-4 pb-2">
           <Link href="/more" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 더보기
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "더보기" : "More"}
           </Link>
         </div>
-        <h1 className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>개인정보처리방침</h1>
-        <p className="text-[11px] mb-6" style={{ color: "var(--muted)" }}>최종 개정일: 2026년 5월 20일</p>
+        <h1 className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
+          {isKo ? "개인정보처리방침" : "Privacy Policy"}
+        </h1>
+        <p className="text-[11px] mb-6" style={{ color: "var(--muted)" }}>
+          {isKo ? "최종 개정일: 2026년 5월 20일" : "Last updated: May 20, 2026"}
+        </p>
 
         <div className="flex flex-col gap-5">
           {SECTIONS.map((s) => (

@@ -3,8 +3,9 @@
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
-const SECTIONS = [
+const SECTIONS_KO = [
   {
     title: "제1조 (목적)",
     body: '이 약관은 Investus(이하 "서비스")가 제공하는 미국주식 투자 정보 서비스의 이용과 관련하여 서비스와 이용자 사이의 권리·의무 및 책임 사항을 규정함을 목적으로 합니다.',
@@ -55,18 +56,77 @@ const SECTIONS = [
   },
 ];
 
+const SECTIONS_EN = [
+  {
+    title: "Article 1 (Purpose)",
+    body: 'This Agreement governs the rights, obligations, and responsibilities between Investus (hereinafter "Service") and its users in connection with the US stock investment information service provided by Investus.',
+  },
+  {
+    title: "Article 2 (Definitions)",
+    body: '"Service" refers to all services (US stock prices, news, portfolio management, etc.) provided through the mobile app and web platform operated by Investus.\n"User" refers to any individual or entity that accesses the Service and uses it in accordance with this Agreement.',
+  },
+  {
+    title: "Article 3 (Effectiveness and Amendment)",
+    body: "This Agreement takes effect when posted on the Service screen or notified to Users. The Service may amend this Agreement as necessary and will provide advance notice of changes. Users who do not agree to the amended Agreement may discontinue use and withdraw from the Service.",
+  },
+  {
+    title: "Article 4 (Service Provision and Changes)",
+    body: "The Service provides US stock price information, related news, portfolio management features, and more. Service content may change based on operational or technical requirements, and changes will be announced in advance.",
+  },
+  {
+    title: "Article 5 (Service Interruption)",
+    body: "The Service may temporarily suspend provision due to unavoidable circumstances such as system maintenance, repair, replacement, failure, or communication outages. The Service is not liable for damages caused by service interruptions unless attributable to its own negligence.",
+  },
+  {
+    title: "Article 6 (User Obligations)",
+    body: "Users must comply with this Agreement and applicable laws. Users must not interpret information provided by the Service as investment advice or make investment decisions based solely on such information. Unauthorized reproduction, distribution, or commercial use of Service content is prohibited.",
+  },
+  {
+    title: "Article 7 (Ad-Supported Revenue Model)",
+    body: "The Service operates on an ad-supported basis, providing all features to users free of charge. No subscription fees are charged for AI questions, report access, or Invest Club content.\nInvest Club creators receive ad revenue payouts based on content views. Payout criteria and amounts are subject to Service policies and may change with advance notice.",
+  },
+  {
+    title: "Article 8 (Creator Revenue Payouts)",
+    body: "Approved Invest Club creators may receive ad revenue proportional to content views.\nPayouts are made on a monthly basis and minimum payout thresholds may apply.\nAccount verification and identity confirmation must be completed before payouts.\nRevenue payouts may be suspended if a creator posts false information or violates these Terms.",
+  },
+  {
+    title: "Article 9 (Intellectual Property)",
+    body: "Intellectual property rights to content provided by the Service (design, UI, software, data, etc.) belong to the Service or the respective rights holders. Users may not copy, modify, distribute, or sell such content without written permission from the Service.",
+  },
+  {
+    title: "Article 10 (Limitation of Liability)",
+    body: "All information (prices, news, etc.) provided by the Service is for reference only. The Service does not warrant the accuracy or completeness of the information and assumes no responsibility for investment decisions made based on such information or their outcomes.",
+  },
+  {
+    title: "Article 11 (Governing Law and Dispute Resolution)",
+    body: "This Agreement shall be interpreted and applied in accordance with the laws of the Republic of Korea. For disputes arising from use of the Service, the court with jurisdiction over the Service operator's location shall serve as the court of first instance.",
+  },
+  {
+    title: "Supplementary Provisions",
+    body: "These Terms shall take effect as of May 18, 2026.",
+  },
+];
+
 export default function TermsPage() {
+  const locale   = useLocaleCode();
+  const isKo     = locale === "ko";
+  const SECTIONS = isKo ? SECTIONS_KO : SECTIONS_EN;
+
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-24 lg:pb-10">
         <div className="pt-4 pb-2">
           <Link href="/more" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 더보기
+            <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "더보기" : "More"}
           </Link>
         </div>
-        <h1 className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>이용약관</h1>
-        <p className="text-[11px] mb-6" style={{ color: "var(--muted)" }}>최종 개정일: 2026년 5월 18일</p>
+        <h1 className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
+          {isKo ? "이용약관" : "Terms of Service"}
+        </h1>
+        <p className="text-[11px] mb-6" style={{ color: "var(--muted)" }}>
+          {isKo ? "최종 개정일: 2026년 5월 18일" : "Last updated: May 18, 2026"}
+        </p>
 
         <div className="flex flex-col gap-5">
           {SECTIONS.map((s) => (

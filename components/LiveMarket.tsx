@@ -9,7 +9,7 @@ import { SP500Heatmap } from "./SP500Heatmap";
 import { MarketAISummary } from "./MarketAISummary";
 import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
 import { RECOMMENDED_SYMBOLS } from "@/lib/api";
-import { useLocale } from "@/contexts/LocaleContext";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { SectionInfo } from "./SectionInfo";
 import { isMarketOpen } from "@/lib/marketHours";
 
@@ -68,7 +68,8 @@ function CardSkeleton() {
 
 
 export function LiveMarket() {
-  const t = useLocale();
+  const t      = useLocale();
+  const locale = useLocaleCode();
   const [data, setData]       = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -266,14 +267,25 @@ export function LiveMarket() {
       <section className="px-4 lg:px-0 pt-6">
         <div className="flex items-center justify-between mb-3">
           <SectionInfo title={t.market.indices}>
-            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>주요 지수란?</p>
-            <p style={{ color: "var(--muted)" }}>미국 증시 전체 흐름을 나타내는 대표 지표예요.</p>
-            <div className="mt-2 space-y-1">
-              <p>📈 <b>S&P 500</b> — 미국 대형주 500개 평균. 미국 경제의 대표 지수</p>
-              <p>💻 <b>NASDAQ</b> — 기술주 중심. 애플·구글·엔비디아 등 포함</p>
-              <p>🏭 <b>DOW</b> — 미국 전통 대기업 30개 평균</p>
-              <p>📦 <b>Russell 2000</b> — 중소형주 2000개. 미국 경기 선행 지표</p>
-            </div>
+            {locale === "ko" ? (<>
+              <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>주요 지수란?</p>
+              <p style={{ color: "var(--muted)" }}>미국 증시 전체 흐름을 나타내는 대표 지표예요.</p>
+              <div className="mt-2 space-y-1">
+                <p>📈 <b>S&P 500</b> — 미국 대형주 500개 평균. 미국 경제의 대표 지수</p>
+                <p>💻 <b>NASDAQ</b> — 기술주 중심. 애플·구글·엔비디아 등 포함</p>
+                <p>🏭 <b>DOW</b> — 미국 전통 대기업 30개 평균</p>
+                <p>📦 <b>Russell 2000</b> — 중소형주 2000개. 미국 경기 선행 지표</p>
+              </div>
+            </>) : (<>
+              <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>What are Major Indices?</p>
+              <p style={{ color: "var(--muted)" }}>Key benchmarks tracking the overall direction of US markets.</p>
+              <div className="mt-2 space-y-1">
+                <p>📈 <b>S&P 500</b> — Average of 500 large-cap US stocks. The benchmark for the US economy</p>
+                <p>💻 <b>NASDAQ</b> — Tech-heavy index. Includes Apple, Alphabet, Nvidia, etc.</p>
+                <p>🏭 <b>DOW</b> — Average of 30 major traditional US blue chips</p>
+                <p>📦 <b>Russell 2000</b> — 2,000 small/mid-cap stocks. A leading indicator for the US economy</p>
+              </div>
+            </>)}
           </SectionInfo>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.liveEst}</span>
         </div>

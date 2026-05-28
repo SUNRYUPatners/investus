@@ -182,16 +182,29 @@ export function FuturesHeatmap({ items }: Props) {
         style={{ borderColor: "var(--border)" }}
       >
         <SectionInfo title="Futures Map" side="left">
-          <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>선물 시장이란?</p>
-          <p style={{ color: "var(--muted)" }}>현물(주식)보다 <b>먼저 움직이는</b> 시장이에요. 내일 증시 방향을 미리 가늠할 수 있어요.</p>
-          <div className="mt-2 space-y-1">
-            <p>🌍 <b>해외 지수</b> — 일본·유럽·중국 등 글로벌 증시 흐름</p>
-            <p>🛢️ <b>에너지·금속</b> — 원유·금·은. 인플레이션 & 안전자산 지표</p>
-            <p>💵 <b>채권·외환</b> — 미국채 금리 오르면 주식엔 부담</p>
-            <p>🌽 <b>농산물</b> — 글로벌 물가 영향</p>
-            <p>₿ <b>암호화폐</b> — 위험자산 선호도 바로미터</p>
-          </div>
-          <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>타일이 클수록 시장에서 중요도가 높아요. 클릭하면 10년 차트를 볼 수 있어요.</p>
+          {locale === "ko" ? (<>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>선물 시장이란?</p>
+            <p style={{ color: "var(--muted)" }}>현물(주식)보다 <b>먼저 움직이는</b> 시장이에요. 내일 증시 방향을 미리 가늠할 수 있어요.</p>
+            <div className="mt-2 space-y-1">
+              <p>🌍 <b>해외 지수</b> — 일본·유럽·중국 등 글로벌 증시 흐름</p>
+              <p>🛢️ <b>에너지·금속</b> — 원유·금·은. 인플레이션 & 안전자산 지표</p>
+              <p>💵 <b>채권·외환</b> — 미국채 금리 오르면 주식엔 부담</p>
+              <p>🌽 <b>농산물</b> — 글로벌 물가 영향</p>
+              <p>₿ <b>암호화폐</b> — 위험자산 선호도 바로미터</p>
+            </div>
+            <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>타일이 클수록 시장에서 중요도가 높아요. 클릭하면 10년 차트를 볼 수 있어요.</p>
+          </>) : (<>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>What is the Futures Market?</p>
+            <p style={{ color: "var(--muted)" }}>Futures move <b>before</b> stocks — giving you a preview of tomorrow&apos;s market direction.</p>
+            <div className="mt-2 space-y-1">
+              <p>🌍 <b>Global Indices</b> — Japan, Europe, China market trends</p>
+              <p>🛢️ <b>Energy · Metals</b> — Crude oil, gold, silver. Inflation & safe-haven signals</p>
+              <p>💵 <b>Bonds · FX</b> — Rising US Treasury yields put pressure on stocks</p>
+              <p>🌽 <b>Agriculture</b> — Global inflation impact</p>
+              <p>₿ <b>Crypto</b> — Risk-appetite barometer</p>
+            </div>
+            <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>Larger tiles = higher market importance. Click to view a 10-year chart.</p>
+          </>)}
         </SectionInfo>
         <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
           {open

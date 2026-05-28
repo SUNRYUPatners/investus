@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { MiniChartPopup } from "./MiniChartPopup";
 import { SectionInfo } from "./SectionInfo";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 function useIsDesktop() {
   const [lg, setLg] = useState(false);
@@ -184,6 +185,7 @@ export function SP500Heatmap() {
   const [thumbL, setThumbL]   = useState(0);
   const [thumbW, setThumbW]   = useState(100);
   const scrollRef             = useRef<HTMLDivElement>(null);
+  const locale                = useLocaleCode();
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -242,19 +244,31 @@ export function SP500Heatmap() {
         className="flex items-center justify-between px-4 py-3 border-b"
         style={{ borderColor: "var(--border)" }}
       >
-        <SectionInfo title="S&P 500 히트맵">
-          <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>S&P 500 히트맵이란?</p>
-          <p style={{ color: "var(--muted)" }}>미국 대형주 500개를 <b>한 화면</b>에서 보는 지도예요.</p>
-          <div className="mt-2 space-y-1">
-            <p>🟩 <b>초록색</b> = 오늘 오른 종목</p>
-            <p>🟥 <b>빨간색</b> = 오늘 내린 종목</p>
-            <p>📐 <b>타일 크기</b> = 시가총액. 클수록 대형주 (애플·엔비디아 등)</p>
-            <p>🏢 <b>섹터 구분</b> = 기술·헬스케어·금융 등 업종별로 묶여 있어요</p>
-          </div>
-          <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>종목 클릭 → 10년 차트를 바로 확인할 수 있어요</p>
+        <SectionInfo title={locale === "ko" ? "S&P 500 히트맵" : "S&P 500 Heatmap"}>
+          {locale === "ko" ? (<>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>S&P 500 히트맵이란?</p>
+            <p style={{ color: "var(--muted)" }}>미국 대형주 500개를 <b>한 화면</b>에서 보는 지도예요.</p>
+            <div className="mt-2 space-y-1">
+              <p>🟩 <b>초록색</b> = 오늘 오른 종목</p>
+              <p>🟥 <b>빨간색</b> = 오늘 내린 종목</p>
+              <p>📐 <b>타일 크기</b> = 시가총액. 클수록 대형주 (애플·엔비디아 등)</p>
+              <p>🏢 <b>섹터 구분</b> = 기술·헬스케어·금융 등 업종별로 묶여 있어요</p>
+            </div>
+            <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>종목 클릭 → 10년 차트를 바로 확인할 수 있어요</p>
+          </>) : (<>
+            <p className="font-bold mb-1" style={{ color: "var(--mint)" }}>What is the S&P 500 Heatmap?</p>
+            <p style={{ color: "var(--muted)" }}>A map showing all 500 large-cap US stocks <b>at a glance</b>.</p>
+            <div className="mt-2 space-y-1">
+              <p>🟩 <b>Green</b> = stocks up today</p>
+              <p>🟥 <b>Red</b> = stocks down today</p>
+              <p>📐 <b>Tile size</b> = market cap — larger tiles are bigger companies (Apple, Nvidia, etc.)</p>
+              <p>🏢 <b>Sector groups</b> = Tech, Healthcare, Financials, etc.</p>
+            </div>
+            <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>Click any tile → view its 10-year chart instantly</p>
+          </>)}
         </SectionInfo>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          섹터별 등락률
+          {locale === "ko" ? "섹터별 등락률" : "Sector Changes"}
         </span>
       </div>
 
