@@ -89,16 +89,17 @@ ${ftLines}
 투자 권유 없이 팩트 중심으로, 증권사 리서치 요약 톤으로 작성.`;
 }
 
-export async function GET() {
+export async function GET(req: Request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return NextResponse.json({ error: "no key" }, { status: 503 });
 
-  const date    = lastTradingDay();
+  const force    = new URL(req.url).searchParams.get("force") === "1";
+  const date     = lastTradingDay();
   const cacheKey = `market-summary-v1-${date}`;
   const redis    = getRedis();
 
-  // 캐시 확인
-  if (redis) {
+  // 캐시 확인 (강제 갱신 시 스킵)
+  if (!force && redis) {
     const cached = await redis.get<string>(cacheKey).catch(() => null);
     if (cached) return NextResponse.json({ summary: cached, date, cached: true });
   }
