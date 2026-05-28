@@ -52,15 +52,20 @@ export function HomeAIInsight() {
   const [expanded,      setExpanded]      = useState(false);
   const [intradayUsed,  setIntradayUsed]  = useState(0);
   const [marketOpen,    setMarketOpen]    = useState(false);
-  const autoFetched = useRef(false);
+  // tracks the trading day we last auto-fetched for
+  const fetchedForDay = useRef("");
 
-  // Init from localStorage on client
+  // Init from localStorage + poll market status every minute
   useEffect(() => {
     const cached = readCloseCache();
     setCloseAnswer(cached);
     setDisplayAnswer(cached);
     setIntradayUsed(readIntradayCount());
-    setMarketOpen(isMarketOpen());
+
+    const update = () => setMarketOpen(isMarketOpen());
+    update();
+    const id = setInterval(update, 60_000);
+    return () => clearInterval(id);
   }, []);
 
   // Sync prices from market-data-cache
@@ -92,15 +97,22 @@ export function HomeAIInsight() {
     return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
 
-  // Auto-fetch ONLY when market is closed and no close cache exists yet
+  // Auto-fetch post-close: triggers when marketOpen → false OR when prices first arrive after close
   useEffect(() => {
-    if (autoFetched.current || quotes.length === 0 || holdings.length === 0) return;
-    if (isMarketOpen()) return;           // during market hours: manual only
-    if (readCloseCache()) return;         // already have today's close cache
-    autoFetched.current = true;
+    if (marketOpen) return;                            // still open — wait
+    if (quotes.length === 0 || holdings.length === 0) return; // no price data yet
+    const day = lastMarketCloseDate();
+    if (fetchedForDay.current === day) return;         // already fetched for this close
+    if (readCloseCache()) {                            // fresh localStorage cache exists
+      setDisplayAnswer(readCloseCache());
+      setCloseAnswer(readCloseCache());
+      fetchedForDay.current = day;
+      return;
+    }
+    fetchedForDay.current = day;
     runAnalysis(false);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [quotes.length]);
+  }, [marketOpen, quotes.length]);
 
   function buildPayload() {
     const liveMap   = Object.fromEntries(quotes.map((q) => [q.symbol, q]));
@@ -140,7 +152,6 @@ export function HomeAIInsight() {
           const n = bumpIntradayCount();
           setIntradayUsed(n);
         } else {
-          // close-cache: persist as close analysis
           setCloseAnswer(a);
           writeCloseCache(a);
         }
@@ -222,11 +233,10 @@ export function HomeAIInsight() {
               )}
             </div>
 
-            {/* Intraday re-analysis button — only during market hours */}
+            {/* 장중 재분석 버튼 — only during market hours */}
             {marketOpen && (
               <div className="px-4 pb-4 border-t pt-3" style={{ borderColor: "rgba(0,229,160,0.06)" }}>
                 {limitReached ? (
-                  /* Limit reached */
                   <div className="rounded-xl p-3 flex flex-col items-center gap-2 text-center"
                     style={{ background: "rgba(0,229,160,0.04)", border: "1px solid rgba(0,229,160,0.12)" }}>
                     <p className="text-[11px] font-bold" style={{ color: "var(--text)" }}>
@@ -243,7 +253,6 @@ export function HomeAIInsight() {
                     </button>
                   </div>
                 ) : (
-                  /* Refresh button */
                   <button
                     onClick={handleRefresh}
                     disabled={loading}

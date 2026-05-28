@@ -43,31 +43,43 @@ export function MarketAISummary() {
   const [date,         setDate]         = useState("");
   const [marketOpen,   setMarketOpen]   = useState(false);
   const [intradayUsed, setIntradayUsed] = useState(0);
-  const fetched = useRef(false);
+  // tracks the trading day we last fetched for (prevents duplicate calls)
+  const fetchedForDay = useRef("");
 
+  // Init from localStorage + poll market status every minute
   useEffect(() => {
     const cached = readCloseCache();
     if (cached) { setSummary(cached); setDate(lastTradingDay()); }
     setIntradayUsed(readIntradayCount());
-    setMarketOpen(isMarketOpen());
+
+    const update = () => setMarketOpen(isMarketOpen());
+    update();
+    const id = setInterval(update, 60_000);
+    return () => clearInterval(id);
   }, []);
 
-  // 장마감 후 캐시 없으면 자동 1회 fetch
+  // Auto-fetch post-close: triggers when marketOpen transitions false (or on mount if already closed)
   useEffect(() => {
-    if (fetched.current) return;
-    if (isMarketOpen()) return;
-    if (readCloseCache()) return;
-    fetched.current = true;
+    if (marketOpen) return;                            // still open — wait
+    const day = lastTradingDay();
+    if (fetchedForDay.current === day) return;         // already fetched for this close
+    if (readCloseCache()) {                            // fresh localStorage cache exists
+      setSummary(readCloseCache()!);
+      setDate(day);
+      fetchedForDay.current = day;
+      return;
+    }
+    fetchedForDay.current = day;
     doFetch(false);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [marketOpen]);
 
   async function doFetch(intraday: boolean) {
     if (loading) return;
     setLoading(true);
     try {
-      const url = intraday ? "/api/market-summary?force=1" : "/api/market-summary";
-      const res = await fetch(url);
+      // Always force=1: bypasses stale Redis cache (intraday or post-close)
+      const res = await fetch("/api/market-summary?force=1");
       if (!res.ok) return;
       const d = await res.json() as { summary?: string; date?: string };
       if (!d.summary) return;
