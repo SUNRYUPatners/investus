@@ -303,13 +303,13 @@ export function LiveMarket() {
         <SP500Heatmap />
       </section>
 
+      {/* 시장 종합 AI 분석 — S&P500 섹터 + Futures 데이터 기반 */}
+      <MarketAISummary />
+
       {/* Futures 히트맵 */}
       <section className="px-4 lg:px-0 pt-6">
         <FuturesHeatmap items={futures} />
       </section>
-
-      {/* 시장 종합 AI 분석 — S&P500 섹터 + Futures 데이터 기반 */}
-      <MarketAISummary />
     </>
   );
 }
