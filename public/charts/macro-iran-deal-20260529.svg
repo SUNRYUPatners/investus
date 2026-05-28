@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#0d1629"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="460" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#ff4d6d"/>
+
+  <rect x="32" y="20" width="70" height="22" rx="5" fill="rgba(255,77,109,0.15)"/>
+  <text x="67" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#ff4d6d" text-anchor="middle">매크로</text>
+  <text x="114" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
+  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+
+  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">이란 핵협상 — 30개월 내 제재 해제</text>
+  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ff4d6d">시나리오 · 원유·방산 섹터 임팩트</text>
+  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">미-이란 핵 프레임워크 협상 진행 · 역대 최대 핵무기 감축 · XLE·RTX 관찰 필요</text>
+
+  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <rect x="32" y="148" width="356" height="80" rx="8" fill="rgba(255,77,109,0.07)" stroke="rgba(255,77,109,0.2)" stroke-width="1"/>
+  <text x="48" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#ff4d6d">🌏  협상 현황</text>
+  <text x="48" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">미-이란 핵 프레임워크 합의 초안 진행 중</text>
+  <text x="48" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">역대 최대 규모 핵무기 감축 조건 협의 포함</text>
+  <text x="48" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">30개월 내 단계적 제재 해제 시나리오 논의</text>
+
+  <rect x="412" y="148" width="356" height="80" rx="8" fill="rgba(255,77,109,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="428" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#ff4d6d">🛢️  원유 섹터 영향</text>
+  <text x="428" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">이란 원유 수출 재개 시 공급 과잉 압력 → WTI 하락</text>
+  <text x="428" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">XLE(에너지 ETF) 단기 조정 압력 · 유가 민감 포지션 주의</text>
+  <text x="428" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">이란 일일 원유 생산 300만 배럴+ 재개 가능성</text>
+
+  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(255,77,109,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#ff4d6d">🛡️  방산 섹터 영향</text>
+  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">협상 타결 시 중동 긴장 완화 → RTX·LMT 단기 조정</text>
+  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">단, 핵 감축 이후 재래식 군비 경쟁 가속 가능 — 장기 중립</text>
+  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">유럽 방위비 확대 트렌드와 무관 — 글로벌 방산 수요 지속</text>
+
+  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(255,77,109,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#ff4d6d">📊  포지션 전략</text>
+  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">XLE 비중 과대 시 일부 차익 실현 검토</text>
+  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">협상 결렬 시 유가 반등 → XLE 재진입 기회</text>
+  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">이란 재개 + OPEC 감산 유지 → 공급 순증 제한 가능</text>
+
+  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(255,77,109,0.06)" stroke="rgba(255,77,109,0.15)" stroke-width="1"/>
+  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY RISK FACTOR</text>
+  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#ff4d6d" text-anchor="middle">30개월 제재 해제 → 원유 공급 충격 · XLE·RTX 단기 포지션 조정 필요 · 협상 진행 모니터링</text>
+
+  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
+  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+</svg>

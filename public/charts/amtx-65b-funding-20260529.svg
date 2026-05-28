@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#0d1629"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="460" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#c084fc"/>
+
+  <rect x="32" y="20" width="60" height="22" rx="5" fill="rgba(192,132,252,0.15)"/>
+  <text x="62" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#c084fc" text-anchor="middle">AMTX</text>
+  <text x="104" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
+  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+
+  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">Anthropic $65B 펀딩 라운드</text>
+  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#c084fc">세계에서 가장 가치 있는 사기업</text>
+  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">Claude 연매출 $47B · OpenAI·Google·Amazon과 어깨 나란히 · 상장 논의 본격화</text>
+
+  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Stats -->
+  <rect x="32" y="148" width="224" height="80" rx="8" fill="rgba(192,132,252,0.08)" stroke="rgba(192,132,252,0.2)" stroke-width="1"/>
+  <text x="144" y="176" font-family="system-ui,sans-serif" font-size="26" font-weight="800" fill="#c084fc" text-anchor="middle">$65B</text>
+  <text x="144" y="194" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">기업가치</text>
+  <text x="144" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Valuation</text>
+
+  <rect x="268" y="148" width="224" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="380" y="176" font-family="system-ui,sans-serif" font-size="26" font-weight="800" fill="#c084fc" text-anchor="middle">$47B</text>
+  <text x="380" y="194" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">연 매출 (ARR)</text>
+  <text x="380" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Annual Revenue</text>
+
+  <rect x="504" y="148" width="264" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="636" y="172" font-family="system-ui,sans-serif" font-size="17" font-weight="800" fill="#c084fc" text-anchor="middle">비상장 AI</text>
+  <text x="636" y="192" font-family="system-ui,sans-serif" font-size="17" font-weight="800" fill="#c084fc" text-anchor="middle">세계 1위</text>
+  <text x="636" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Largest Private AI</text>
+
+  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">🤖  Claude 성장 속도</text>
+  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Claude 연매출 $47B — OpenAI ChatGPT와 직접 경쟁</text>
+  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">AWS Bedrock 통해 기업 고객 클로드 사용 폭발적 증가</text>
+  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">5개월 내 5배 성장 — 기업용 AI 시장 가장 빠른 성장</text>
+
+  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">📈  IPO 전망</text>
+  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">$65B 기업가치 → IPO 시 $100B+ 재평가 논의</text>
+  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Amazon AWS 최대 주주 → 상장 후 AWS 밸류에이션 재평가</text>
+  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">Google도 주요 투자자 — 상장 시 투자수익 실현 기대</text>
+
+  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.15)" stroke-width="1"/>
+  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY CATALYST</text>
+  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#c084fc" text-anchor="middle">$65B 세계 최대 비상장 AI · Claude $47B ARR · IPO 시 AMZN·GOOGL 투자수익 실현 촉매</text>
+
+  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
+  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+</svg>

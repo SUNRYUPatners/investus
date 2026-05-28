@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#0d1629"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="460" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#60a5fa"/>
+
+  <!-- Header -->
+  <rect x="32" y="20" width="60" height="22" rx="5" fill="rgba(96,165,250,0.15)"/>
+  <text x="62" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#60a5fa" text-anchor="middle">TSLA</text>
+  <text x="104" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
+  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+
+  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">중국 Model Y 연말 프로모션 연장</text>
+  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#60a5fa">+ FSD 중국 진출 — NIO 창업자 긍정 발언</text>
+  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">무이자·저금리 2026년 말까지 연장 · Li Bin "업계에 좋은 일"</text>
+
+  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <rect x="32" y="148" width="356" height="80" rx="8" fill="rgba(96,165,250,0.07)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <text x="48" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">🇨🇳  중국 프로모션 연장</text>
+  <text x="48" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Model Y 무이자·저금리 할부 프로모션 2026년 말까지 연장</text>
+  <text x="48" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">연말 소비 촉진 + 기가 상하이 가동률 극대화 이중 효과</text>
+  <text x="48" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">BYD·NIO 가격 경쟁에 대응하는 Tesla 특유의 금융 전략</text>
+
+  <rect x="412" y="148" width="356" height="80" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="428" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">🤖  FSD 중국 진출 진전</text>
+  <text x="428" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">FSD 중국 출시 협의 진행 중 — 규제 데이터 협의 단계</text>
+  <text x="428" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">NIO 창업자 Li Bin: "테슬라 FSD 중국 진출은 업계에 좋은 일"</text>
+  <text x="428" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">경쟁사 CEO의 긍정 발언 = 기술 격차 공개 인정</text>
+
+  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">📦  기가 상하이 가동</text>
+  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">중국 생산 → 중국 판매 구조로 관세 영향 최소화</text>
+  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">기가 상하이 연 90만대+ 생산 능력 · Q2 볼륨 기여 핵심</text>
+  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">2024년 대비 중국 판매 +YoY 추세 유지 중 (CPCA 데이터)</text>
+
+  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">📈  FSD 중국 TAM</text>
+  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">중국 FSD 구독 개방 시 연간 수십억 달러 소프트웨어 수익</text>
+  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">200만대+ 중국 출고 차량 FSD 업셀링 기반 잠재</text>
+  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">소프트웨어 마진율 ~80% — 하드웨어 판매와 질적으로 다름</text>
+
+  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(96,165,250,0.06)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY CATALYST</text>
+  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#60a5fa" text-anchor="middle">중국 FSD 출시 공식화 시 → 소프트웨어 수익 원년 · 중국 판매량 재가속 복합 촉매</text>
+
+  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
+  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+</svg>

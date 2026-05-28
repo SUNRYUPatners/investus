@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#0d1629"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="460" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#fb923c"/>
+
+  <rect x="32" y="20" width="70" height="22" rx="5" fill="rgba(249,115,22,0.15)"/>
+  <text x="67" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#fb923c" text-anchor="middle">매크로</text>
+  <text x="114" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
+  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+
+  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">CBDC 전면 폐지 확정</text>
+  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#fb923c">트럼프 행정부 Scott Bessent 공식 선언</text>
+  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">디지털 달러 없음 공식 확인 · 비트코인·암호화폐 정책 환경 긍정</text>
+
+  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <rect x="32" y="148" width="356" height="80" rx="8" fill="rgba(249,115,22,0.07)" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+  <text x="48" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">💰  CBDC 폐지 의미</text>
+  <text x="48" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Scott Bessent 재무장관: "디지털 달러는 없다" 공식 확인</text>
+  <text x="48" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">연준 주도 CBDC 발행 영구 차단 — 입법 추진 예고</text>
+  <text x="48" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">"Digital assets의 Wild West 통제" 동시 선언 — 규제 명확화</text>
+
+  <rect x="412" y="148" width="356" height="80" rx="8" fill="rgba(249,115,22,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="428" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">₿  BTC 정책 수혜</text>
+  <text x="428" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">CBDC 없음 → 비트코인 민간 디지털 화폐 지위 강화</text>
+  <text x="428" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">트럼프 전략적 비트코인 비축 정책과 일관 — 친암호화폐 행정부</text>
+  <text x="428" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">비트코인 국채 보유 제안 논의 → BTC 수요 기반 확대</text>
+
+  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(249,115,22,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">🏦  스테이블코인 수혜</text>
+  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">CBDC 대신 민간 스테이블코인(USDT·USDC) 공식 역할</text>
+  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Tether·Circle 규제 명확화 → 제도권 편입 가속</text>
+  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">GENIUS Act 스테이블코인 법안과 시너지 — COIN 수혜</text>
+
+  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(249,115,22,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">📈  투자 포지션</text>
+  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">BTC 현물 ETF(IBIT·FBTC) — 정책 수혜 직접 노출</text>
+  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Coinbase(COIN) — 스테이블코인 규제 명확화 수혜</text>
+  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">MicroStrategy(MSTR) — BTC 비축 기업 레버리지 노출</text>
+
+  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(249,115,22,0.06)" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY CATALYST</text>
+  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#fb923c" text-anchor="middle">CBDC 폐지 + BTC 비축 정책 = 미국 친암호화폐 정책 환경 확정 · IBIT·COIN 구조적 수혜</text>
+
+  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
+  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+</svg>

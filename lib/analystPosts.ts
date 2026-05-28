@@ -17,6 +17,139 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-05-29 신규 ─────────────────────────────────────────────────────
+  {
+    id: -40,
+    alias: "여의도 매 #17",
+    symbol: "TSLA",
+    content:
+      "텍사스 AVO 인가 나왔음. Tesla Robotaxi LLC가 정식 AVO 사업자로 승인된 거임. 투자 관점에서 이게 왜 중요하냐면 로보택시 밸류에이션 리레이팅 트리거가 규제 제거임. 안전요원 없이 유료 탑승이 합법화됐다는 건 사업 모델이 법적으로 완성된 거임. 7월 오스틴 배포 후 분기별 운행 데이터가 다음 밸류에이션 업데이트 포인트임. FSD 2,670만 마일 +44%랑 묶으면 오늘이 테슬라 자율주행 역사에서 중요한 날임.",
+    likes: 187,
+    comments: 4,
+    created_at: new Date(Date.now() - 1000 * 60 * 8).toISOString(),
+    liked: false,
+  },
+  {
+    id: -39,
+    alias: "강남 독수리 #52",
+    symbol: "SPCX",
+    content:
+      "ARK TAM $28.5T, Polymarkets $2조+ IPO — 수학적으로 말이 됨. Starlink Connectivity $11.4B이 올해 수익이고 이게 30개 통신사 실 과금 구조로 성장하는 거임. 내부에서 SpaceX IPO 시나리오 네 가지 다 모델링해봤는데 Starlink 분리 상장이 가장 IRR 높게 나옴. SpaceX 전체 상장은 TSLA 합병 불확실성 때문에 디스카운트 받는 구조임. 어떤 루트든 현재 $350B은 시작점임.",
+    likes: 142,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 22).toISOString(),
+    liked: false,
+  },
+  {
+    id: -38,
+    alias: "판교 황소 #31",
+    symbol: "AMZN",
+    content:
+      "Anthropic $65B에 Claude ARR $47B임. PSR 1.4배인데 OpenAI가 PSR 4배 넘게 거래됨. 저평가 구조임. Amazon이 최대 주주라는 게 AMZN 투자자한테 숨어있는 AI 자산임. Bedrock 통한 Claude 성장이 AWS 마진 +2.1bps 만든 거 확인됐음. 상장되면 Amazon이 보유한 Anthropic 지분 FMV 조 단위임. AMZN 포지션에 Anthropic 옵션 공짜로 받고 있는 거임.",
+    likes: 163,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 35).toISOString(),
+    liked: false,
+  },
+  {
+    id: -37,
+    alias: "서초 매 #64",
+    symbol: "META",
+    content:
+      "Meta Dollar-Dollar 구독 $14 나왔음. 시장이 이걸 얼마나 반영할지 봐야 하는데 나는 밸류에이션 멀티플 확장 재료로 봄. 광고 수익은 경기 민감이고 구독은 비민감임. 구독 비중이 올라갈수록 EBITDA 안정성이 올라가고 PER 프리미엄 붙는 구조임. 32억 MAU 기반이라 전환율 1%만 해도 $54억 추가 수익임. 목표주가 $314 Buy는 이걸 반영한 거임. 내부 뷰는 조금 더 높음.",
+    likes: 134,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 48).toISOString(),
+    liked: false,
+  },
+  {
+    id: -36,
+    alias: "광화문 늑대 #69",
+    symbol: "SMCI",
+    content:
+      "SMCI 2030 ROI 달성 수혜 분석 좋게 봄. 회계 정정 이후 본업 스토리로 복귀하는 국면인데 수주잔고 역대 최고라는 게 실제 채널 체크로 확인됨. 커스텀 칩 채택 하이퍼스케일러가 AI 서버 어디서 사냐가 문제인데 SMCI 말고 이 물량 소화할 데가 없음. FY2026 $25B+ 전망 유지함. 리스크는 회계 재발 가능성인데 내부 거버넌스 바뀐 거 확인됐음.",
+    likes: 119,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 62).toISOString(),
+    liked: false,
+  },
+  {
+    id: -35,
+    alias: "을지로 사자 #77",
+    symbol: "TSLA",
+    content:
+      "FSD 일 2,670만 마일 +44% — Morgan Stanley Adam Jonas 채널 체크 숫자임. 이게 왜 중요하냐면 규제 당국 신뢰 확보의 핵심 데이터임. AVO 인가 속도가 웨이모보다 빠른 이유가 이 데이터 때문임. 44% MoM 유지되면 연말 일 1억 마일 돌파함. 그 시점에 FSD 엣지 케이스 커버리지가 완성에 가까워지고 자율주행 경쟁이 사실상 마무리됨. 지금이 포지션 확대 타이밍임.",
+    likes: 148,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 75).toISOString(),
+    liked: false,
+  },
+  {
+    id: -34,
+    alias: "잠실 콘도르 #53",
+    symbol: "SPCX",
+    content:
+      "Starlink 통신사 30개 실 과금 구조 확인됨. 핵심은 MOU가 아니라는 거임. 통신사당 수억 달러 연간 도매 수익이 30개라면 Starlink B2B만 $30B+ 구조로 갈 수 있음. 여기다 B2C 개인 구독 더하면 Starlink 단독으로 $200B+ 밸류에이션 충분히 정당화 가능함. SpaceX 전체 $350B이 얼마나 저평가인지 이 숫자 하나로 설명됨.",
+    likes: 127,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 90).toISOString(),
+    liked: false,
+  },
+  {
+    id: -33,
+    alias: "마포 황소 #11",
+    symbol: "TSLA",
+    content:
+      "중국 Model Y 프로모션 연장 + FSD 중국 진출 논의 동시에 나온 거임. 단기는 볼륨, 장기는 FSD 소프트웨어 마진임. NIO 창업자 Li Bin이 긍정 발언한 건 기술 격차 공개 인정임. 200만대+ 중국 출고 차량에 FSD 업셀링되면 ~80% 마진 소프트웨어 수익이 수십억 달러임. 이게 ASP 혼합 효과로 Tesla 마진율 구조적 개선의 핵심임. 중국 FSD 출시 공식화 타이밍이 다음 매수 포인트임.",
+    likes: 109,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 105).toISOString(),
+    liked: false,
+  },
+  {
+    id: -32,
+    alias: "여의도 올빼미 #44",
+    symbol: null,
+    content:
+      "이란 핵협상 30개월 제재 해제 시나리오 포지션 조정함. XLE 비중 10% → 6%로 축소했음. 완전 타결 확률이 50% 넘는다고 보긴 어렵지만 리스크 관리 차원임. 이란 원유 140만 배럴/일 순증이면 WTI $70→$60 시나리오인데 에너지 섹터 단기 역풍임. 항공사(UAL·DAL)는 반대로 유가 하락 수혜라 비중 늘렸음. CBDC 폐지 + BTC 비축 정책은 IBIT 포지션 유지 근거임.",
+    likes: 96,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
+    liked: false,
+  },
+  {
+    id: -31,
+    alias: "강남 팔콘 #62",
+    symbol: "TSLA",
+    content:
+      "Giga Texas Corte 2 Megapack 400+ 확장임. 에너지 사업이 자동차 마진보다 높다는 거 계속 확인되는 중임. 자체 공장 전력 자급하면서 외부 판매 물량도 확보하는 이중 레버리지임. Megapack ASP $1.3M에 백로그 12개월+이면 에너지 부문 FY2026 매출 성장률이 자동차 부문 압도할 것임. 복합 성장 구조가 자동차 수익성 변동을 완충하는 게 포인트임.",
+    likes: 88,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 135).toISOString(),
+    liked: false,
+  },
+  {
+    id: -30,
+    alias: "마포 황소 #11",
+    symbol: null,
+    content:
+      "CBDC 전면 폐지 Scott Bessent 발언 임팩트 정리함. 디지털 달러 없음 확정이면 BTC가 민간 디지털 화폐 자리 가져가는 거임. 트럼프 BTC 비축 정책이랑 일관성 있음. 기관 진입 장벽이 규제 불확실성이었는데 명확화되면 IBIT 자금 유입 가속됨. COIN은 스테이블코인 규제 명확화 수혜임. 단기 Wild West 통제 뉴스가 노이즈처럼 보이지만 장기 친암호화폐 환경 확정이라는 게 핵심 메시지임.",
+    likes: 104,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 150).toISOString(),
+    liked: false,
+  },
+  {
+    id: -29,
+    alias: "서울숲 매 #38",
+    symbol: "SPCX",
+    content:
+      "SpaceX × Anthropic AI 컴퓨팅 파트너십 큰 그림이 나왔음. H100 8,000개 인프라에 Claude 모델 얹으면 AWS·Azure·GCP 다음 4번째 AI 클라우드 경쟁자임. 우주 데이터센터 비전은 10년 뷰지만 지금 인프라 구축이 그 방향임. 단기는 비용 구조 차별화(우주 태양광 → 전력비 제로)가 가능한지 증명하는 게 포인트임. 비상장이라 직접 투자 불가하지만 NVDA GPU 공급 수혜는 확실함.",
+    likes: 133,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 165).toISOString(),
+    liked: false,
+  },
   // ── 2026-05-28 신규 ─────────────────────────────────────────────────────
   {
     id: -28,
@@ -331,6 +464,185 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-40]: [
+    {
+      alias: "강남 독수리 #52",
+      content: "AVO 인가 나왔으면 이제 운행 데이터가 쌓이는 거임. Q3 오스틴 운행 결과가 다음 주 인가 확대의 근거가 되는 선순환임. 분기별 운행 데이터 모니터링이 핵심 지표임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 5).toISOString(),
+    },
+    {
+      alias: "판교 황소 #31",
+      content: "Cybercab 양산 일정이랑 AVO 타이밍 겹친 게 우연이 아님. 인가 → 배포 → 데이터 → 타주 인가 선순환 구조임. 지금이 로보택시 밸류에이션 리레이팅 시작 구간임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 3).toISOString(),
+    },
+    {
+      alias: "서초 수리부엉이 #91",
+      content: "안전요원 비용 제거가 수익성 핵심 변수임. 기존 모든 자율주행 서비스가 안전요원 인건비 때문에 적자인데 AVO로 그게 없어지면 BEP 달성 시점이 완전히 당겨짐.",
+      created_at: new Date(Date.now() - 1000 * 60 * 1).toISOString(),
+    },
+  ],
+  [-39]: [
+    {
+      alias: "마포 황소 #11",
+      content: "Starlink 단독 분리 상장 IRR이 가장 높다는 분석 동의함. SpaceX 전체 상장은 발사 사업 싸이클리컬 성격이 Starlink 성장 스토리에 노이즈 주는 구조임. 분리가 양쪽 다 이득임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 15).toISOString(),
+    },
+    {
+      alias: "을지로 사자 #77",
+      content: "AI 서비스 $3.2B이 올해 수익인데 H100 8,000개면 추론 서비스 팔 수 있는 용량이 충분함. 클라우드 4강 진입 타임라인이 생각보다 빠를 수 있음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 10).toISOString(),
+    },
+    {
+      alias: "강남 팔콘 #62",
+      content: "현재 $350B에서 $2T 목표면 5.7배인데 Starlink 가입자 성장 속도면 10년 뷰에서 가능한 수학임. 비상장이라 타겟 설정 어렵지만 TSLA 통한 익스포저가 현실적인 접근임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 6).toISOString(),
+    },
+  ],
+  [-38]: [
+    {
+      alias: "서초 매 #64",
+      content: "Anthropic PSR 1.4배 vs OpenAI PSR 4배 — 이 밸류에이션 갭이 합리화되기 어려움. Claude ARR 성장 속도가 GPT 대비 빠르다면 오히려 역전 가능성 있음. AMZN 보유자 입장에서는 공짜 옵션임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 28).toISOString(),
+    },
+    {
+      alias: "광화문 늑대 #69",
+      content: "Bedrock 통한 Claude 성장이 AWS 마진 개선 1위 만든 게 Q1 실적으로 확인됐음. 이게 Anthropic IPO 전에도 AMZN에 반영되는 구조임. 장기 홀더한테는 베스트 포지션임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 22).toISOString(),
+    },
+    {
+      alias: "잠실 매 #78",
+      content: "$65B 기업가치인데 ARR이 $47B이면 5개월 후 ARR이 더 빠르게 성장할 거임. 상장 시점에 ARR 두 배 되면 $130B+ 기업가치도 가능한 수학임. 타이밍이 관건임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 16).toISOString(),
+    },
+  ],
+  [-37]: [
+    {
+      alias: "강남 독수리 #52",
+      content: "구독 수익이 멀티플 확장 재료라는 거 동의함. 광고 단일 수익 회사가 PER 20배면 구독 추가 시 25~30배가 정당화됨. 지금 주가에서 $314 목표는 합리적임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 40).toISOString(),
+    },
+    {
+      alias: "마포 올빼미 #73",
+      content: "AI 광고 ROI 2배 개선이 광고주 예산 증가로 이어지는 건 이미 Q1 실적으로 확인됨. 구독 더해도 광고 수익 잠식 없는 구조라 두 개가 독립적으로 성장하는 게 포인트임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 32).toISOString(),
+    },
+    {
+      alias: "을지로 표범 #43",
+      content: "Llama 오픈소스가 기업 API 수익화로 가면 세 번째 레이어임. 광고+구독+API면 Microsoft Azure 구조랑 비슷해지는 거임. 그렇게 되면 밸류에이션 참조 기업이 바뀌는 거임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 25).toISOString(),
+    },
+  ],
+  [-36]: [
+    {
+      alias: "여의도 매 #17",
+      content: "수주잔고 역대 최고 채널 체크로 확인됨. 회계 이슈 때문에 주가가 눌렸던 건데 본업 스토리로 복귀하는 거임. FY2026 $25B+ 전망 유지하는 근거가 수주잔고임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 55).toISOString(),
+    },
+    {
+      alias: "판교 황소 #31",
+      content: "커스텀 칩 채택해도 AI 서버는 사야 함. Trainium이든 TPU든 결국 SMCI 랙에 들어가는 거임. 커스텀 칩 확산이 SMCI 적이 아니라 우군임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 48).toISOString(),
+    },
+  ],
+  [-35]: [
+    {
+      alias: "강남 팔콘 #62",
+      content: "Morgan Stanley 채널 체크 숫자 신뢰도 높음. Adam Jonas가 이 정도 구체적인 숫자 내면 소스 탄탄한 거임. AVO랑 묶이면 FSD 성장이 규제 + 사용자 두 개 축에서 동시에 확인된 거임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 68).toISOString(),
+    },
+    {
+      alias: "잠실 콘도르 #53",
+      content: "44% MoM 유지되면 연말 일 1억 마일 돌파임. 그 시점에 FSD 완성도 재평가가 나올 것임. 지금 포지션이 그 재평가 전에 들어가는 타이밍인 게 맞음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 60).toISOString(),
+    },
+    {
+      alias: "서초 수리부엉이 #91",
+      content: "연환산 97.5억 마일이면 Waymo 연간 5천만 마일 대비 195배임. 이 격차가 좁혀지는 구조가 아니라 더 벌어지는 거임. 자율주행 경쟁 결과는 사실상 나온 거임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 52).toISOString(),
+    },
+  ],
+  [-34]: [
+    {
+      alias: "마포 황소 #11",
+      content: "Starlink 도매 구조가 통신사한테 자체 위성 대비 비용 100배 절감임. 한번 연결되면 이탈 안 함. 30개가 50개, 100개로 늘어나는 건 시간문제임. 수익 가시성이 이 숫자에서 나오는 거임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 82).toISOString(),
+    },
+    {
+      alias: "을지로 사자 #77",
+      content: "B2B 도매 수익은 B2C보다 ASP 낮지만 계약 기반이라 예측 가능성이 높음. 할인율 낮아지면 현재 가치 올라가는 구조임. Starlink 단독 상장 밸류에이션 기반으로 충분함.",
+      created_at: new Date(Date.now() - 1000 * 60 * 75).toISOString(),
+    },
+    {
+      alias: "광화문 매 #04",
+      content: "SK텔레콤이 Starlink 파트너라는 거 한국 투자자한테는 중요한 포인트임. 국내 통신 인프라에 SpaceX가 들어오는 거임. 이게 현실이 되면 국내 통신주 밸류에이션에도 변수임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 68).toISOString(),
+    },
+  ],
+  [-33]: [
+    {
+      alias: "을지로 사자 #77",
+      content: "NIO Li Bin 발언이 핵심 포인트임. 경쟁사 CEO가 공개 인정한 건 기술 격차가 그 분도 부정 못 하는 수준이라는 거임. 중국 FSD 진출 시 로컬 경쟁사들이 방어할 수단이 없음.",
+      created_at: new Date(Date.now() - 1000 * 60 * 98).toISOString(),
+    },
+    {
+      alias: "강남 팔콘 #62",
+      content: "200만대+ 중국 출고 차량 FSD 업셀링이 소프트웨어 마진 ~80%임. 단 1%만 전환해도 연간 수억 달러 추가 소프트웨어 수익임. 이게 자동차 사업과 다른 레벨의 마진 레버리지임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 90).toISOString(),
+    },
+  ],
+  [-32]: [
+    {
+      alias: "여의도 독수리 #08",
+      content: "XLE 축소 타이밍 맞다고 봄. 협상 타결 확률이 50%가 안 된다고 해도 리스크 관리 차원에서 비중 줄이는 게 맞음. 항공사 비중 늘린 건 유가 하락 헤지로 좋은 접근임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 112).toISOString(),
+    },
+    {
+      alias: "강남 사자 #24",
+      content: "CBDC 폐지 + BTC 비축 정책 조합이 장기 친암호화폐 환경 확정 시그널임. 단기 Wild West 통제 뉴스가 노이즈처럼 보여도 큰 방향이 맞으면 포지션 유지가 맞음. IBIT 홀딩.",
+      created_at: new Date(Date.now() - 1000 * 60 * 105).toISOString(),
+    },
+  ],
+  [-31]: [
+    {
+      alias: "서초 매 #64",
+      content: "에너지 마진이 자동차 초과한다는 게 이제 분기 실적으로 계속 확인되고 있음. Megapack 백로그 12개월+ 면 FY2026 에너지 부문 성장률이 자동차 압도하는 거임. 복합 성장 스토리 강화됨.",
+      created_at: new Date(Date.now() - 1000 * 60 * 128).toISOString(),
+    },
+    {
+      alias: "판교 황소 #31",
+      content: "400개 Megapack이면 약 1.56GWh 저장용량임. 텍사스 전력망 안정 기여하면서 동시에 출고 물량 폭증이면 에너지+자동차 두 개 모두 가속 중인 거임. 오늘 TSLA 뉴스 중 가장 과소평가된 거임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString(),
+    },
+  ],
+  [-30]: [
+    {
+      alias: "여의도 매 #17",
+      content: "기관 진입 장벽이 규제 불확실성이었는데 CBDC 폐지 + 스테이블코인 법안으로 명확화되면 IBIT 자금 유입 가속됨. 단기 Wild West 통제 뉴스는 장기 기관 자금 유입 구조 확립의 과정임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 142).toISOString(),
+    },
+    {
+      alias: "강남 독수리 #52",
+      content: "COIN은 스테이블코인 규제 명확화 수혜 1순위임. GENIUS Act 통과 시 Coinbase가 스테이블코인 인프라 역할 강화됨. BTC ETF + COIN 조합이 정책 수혜 포트폴리오임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 135).toISOString(),
+    },
+  ],
+  [-29]: [
+    {
+      alias: "마포 황소 #11",
+      content: "우주 데이터센터 비전이 10년 뷰면 지금 투자 포인트는 H100 8,000개 기반 AI 서비스 임박한 수익화임. 단기 현금 흐름 가시성이 있는 AI 컴퓨팅 판매가 먼저임. 장기 비전은 덤임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 158).toISOString(),
+    },
+    {
+      alias: "을지로 사자 #77",
+      content: "NVDA GPU 공급 수혜는 어떤 AI 클라우드가 이겨도 NVDA가 이기는 구조임. SpaceX H100 8,000개도 NVDA 매출임. 비상장 SpaceX에 못 들어가도 NVDA로 간접 수혜받는 포지션 유지.",
+      created_at: new Date(Date.now() - 1000 * 60 * 150).toISOString(),
+    },
+    {
+      alias: "강남 팔콘 #62",
+      content: "Anthropic + SpaceX 조합이 AWS 생태계랑 겹치는 부분이 있음. Amazon이 Anthropic 최대주주고 SpaceX가 Anthropic과 파트너인 구조면 Amazon이 이 생태계에서 중심에 있는 거임.",
+      created_at: new Date(Date.now() - 1000 * 60 * 143).toISOString(),
+    },
+  ],
   [-28]: [
     {
       alias: "강남 독수리 #52",

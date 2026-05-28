@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#0d1629"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="460" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#c084fc"/>
+
+  <rect x="32" y="20" width="60" height="22" rx="5" fill="rgba(192,132,252,0.15)"/>
+  <text x="62" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#c084fc" text-anchor="middle">META</text>
+  <text x="104" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
+  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+
+  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">META Dollar-Dollar 구독 출시</text>
+  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#c084fc">광고 외 새 수익 레이어 · 애널 Buy $314</text>
+  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">$14/월 Meta Dollar-Dollar 구독 · 광고 외 구독 수익 레이어 확보 · 밸류에이션 재평가 촉매</text>
+
+  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <rect x="32" y="148" width="230" height="80" rx="8" fill="rgba(192,132,252,0.08)" stroke="rgba(192,132,252,0.2)" stroke-width="1"/>
+  <text x="147" y="176" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#c084fc" text-anchor="middle">$14/월</text>
+  <text x="147" y="194" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">Dollar-Dollar 구독</text>
+  <text x="147" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Subscription Price</text>
+
+  <rect x="274" y="148" width="230" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="389" y="176" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#c084fc" text-anchor="middle">$314</text>
+  <text x="389" y="194" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">애널 목표주가</text>
+  <text x="389" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Analyst Target (Buy)</text>
+
+  <rect x="516" y="148" width="252" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="642" y="172" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#c084fc" text-anchor="middle">광고 外</text>
+  <text x="642" y="192" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#c084fc" text-anchor="middle">수익 다각화</text>
+  <text x="642" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Revenue Diversification</text>
+
+  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">💎  구독 모델 의미</text>
+  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">광고 수익 단일 의존 구조 → 구독 수익 2트랙 체계 전환</text>
+  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">경기 민감성 낮은 구독 수익 → PER 멀티플 확장 재료</text>
+  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">32억 MAU × 일부 전환 = 구독 TAM 수십억 달러</text>
+
+  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">📈  성장 촉매</text>
+  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">AI 광고 최적화(ROI 2배) + 구독 수익 복합 성장</text>
+  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Ray-Ban 스마트 안경 + Orion AR → 하드웨어 TAM 추가</text>
+  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">Llama 오픈소스 → 기업 API 수익화 → 3번째 수익 축</text>
+
+  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.15)" stroke-width="1"/>
+  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY CATALYST</text>
+  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#c084fc" text-anchor="middle">광고 → 광고+구독+AI API 3트랙 수익화 · 밸류에이션 재평가 + 애널 Buy $314 목표</text>
+
+  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
+  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+</svg>

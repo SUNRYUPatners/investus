@@ -26,8 +26,9 @@ export type Comment = {
   likes:        number;
 };
 
+const T29 = 1780009200000; // 2026-05-29 08:00 KST
+export const LATEST_UPDATE = T29;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
-export const LATEST_UPDATE = T28;    // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
 const T26 = 1779750000000; // 2026-05-26 08:00 KST
 const T23 = 1779490800000; // 2026-05-23 08:00 KST
@@ -105,6 +106,52 @@ export const MOCK_POSTS: Post[] = [
   { id: 169, symbol: "SPCX", nickname: "익명_3726", holdingLabel: "관심종목",
     content: "4가지 시나리오 중 저는 Starlink 단독 상장이 제일 좋다고 봐요. Starlink만 해도 B2C + 항공 38개사 + 군사 계약 다 있는데 거기다 Starship 발사 비즈니스까지 포함하면 $300B 이상 나와요. 테슬라랑 합치면 테슬라 주주는 좋을 수 있어도 SpaceX 고성장이 EV 비용 구조에 발목 잡히는 게 아닌가 싶어서요.",
     createdAt: T28 - 42*60_000, likes: 74, comments: 3 },
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-05-29 — TSLA AVO인가 / FSD 2,670만 마일 / 중국 FSD / Giga Texas /
+  //              SPCX IPO TAM / Starlink 30사 / SpaceX×AMTX / AMTX $65B /
+  //              SMCI ROI 2030 / META 구독 / 이란협상 / CBDC폐지
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — AVO 로보택시 공식 인가 ──────────────────────────────────────────
+  { id: 170, symbol: "TSLA", nickname: "익명_2847", holdingLabel: "120주 보유",
+    content: "텍사스 AVO 인가 진짜 나왔어요. Tesla Robotaxi LLC가 정식 AVO 사업자 승인 받은 거잖아요. 안전요원 없이 유료 탑승 가능한 게 이제 법적으로 확정된 거고 7월 오스틴 배포가 현실이 된 거예요. 이게 로보택시 밸류에이션 재평가 트리거가 맞는데 시장이 아직 안 움직이는 게 오히려 기회 같아요.",
+    createdAt: T29 - 12*60_000, likes: 134, comments: 5 },
+  { id: 171, symbol: "TSLA", nickname: "익명_5183", holdingLabel: "55주 보유",
+    content: "웨이모가 샌프란시스코 몇 년 걸린 거 테슬라가 텍사스에서 더 빠르게 인가 받았어요. FSD 일 2,670만 마일 데이터가 규제 당국 신뢰의 핵심이라고 봐요. 이 속도면 연말에 다른 주도 AVO 인가 받을 수 있을 거예요.",
+    createdAt: T29 - 28*60_000, likes: 98, comments: 4 },
+
+  // TSLA — FSD 2,670만 마일 ─────────────────────────────────────────────
+  { id: 172, symbol: "TSLA", nickname: "익명_9374", holdingLabel: "80주 보유",
+    content: "FSD 일 2,670만 마일 +44%가 Morgan Stanley에서 나온 건데 이게 월 성장률이 44%예요. 이 속도 유지되면 연말에 일 5천만 마일 넘는 거잖아요. 웨이모 연간 5천만 마일인데 테슬라가 하루에 그걸 찍는 거예요. 데이터 해자가 넓어질수록 자율주행 경쟁은 이미 끝난 거라고 봐요.",
+    createdAt: T29 - 9*60_000, likes: 117, comments: 5 },
+  { id: 173, symbol: "TSLA", nickname: "익명_6291", holdingLabel: "35주 보유",
+    content: "4월 1,850만에서 5월 2,670만으로 한 달 만에 820만 마일 늘어난 거잖아요. FSD 구독자가 그만큼 빠르게 늘고 있다는 건데 AVO 인가랑 맞물리면 다음 달은 더 크게 뛸 것 같아요. 연간 97억 마일이면 경쟁 자체가 안 되는 수준이에요.",
+    createdAt: T29 - 35*60_000, likes: 83, comments: 3 },
+
+  // SPCX — IPO TAM 분석 ────────────────────────────────────────────────
+  { id: 174, symbol: "SPCX", nickname: "익명_7483", holdingLabel: "관심종목",
+    content: "ARK가 SpaceX TAM을 $28.5조로 분석한 건 발사 + Starlink + AI 컴퓨팅 다 합친 숫자예요. Polymarkets에서 IPO 시총 $2조+ 가능성이 제일 높게 책정되는 건 현재 $350B이 얼마나 저평가인지 시장이 이미 알고 있다는 거죠. 빨리 상장해줬으면 진짜.",
+    createdAt: T29 - 14*60_000, likes: 108, comments: 4 },
+  { id: 175, symbol: "SPCX", nickname: "익명_3916", holdingLabel: "관심종목",
+    content: "Starlink 통신사 30개가 실 과금 구조라는 게 핵심이에요. MOU나 파일럿이 아니라 진짜 돈이 들어오고 있는 거잖아요. 통신사 30개 × 연간 수억씩 = Starlink B2B만 수십억 달러 구조가 이미 완성됐다는 거예요. 여기다 B2C 개인 구독까지 합하면 Starlink 단독으로도 수천억 달러 밸류에이션 가능해요.",
+    createdAt: T29 - 41*60_000, likes: 79, comments: 3 },
+
+  // AMTX — Anthropic $65B ──────────────────────────────────────────────
+  { id: 176, symbol: "AMZN", nickname: "익명_1847", holdingLabel: "40주 보유",
+    content: "Anthropic $65B에 Claude ARR $47B이면 PSR(주가매출비율)이 거의 1.4배밖에 안 돼요. OpenAI는 $157B에 매출 $35B이면 PSR 4배인데 Anthropic이 훨씬 싼 거잖아요. Amazon이 최대주주인데 상장하면 AMZN 주가에 직접 반영될 것 같아요. Bedrock 통한 Claude 성장이 AWS 마진 1위 만든 것도 증명됐으니까요.",
+    createdAt: T29 - 18*60_000, likes: 96, comments: 4 },
+  { id: 177, symbol: "SMCI", nickname: "익명_4829", holdingLabel: "100주 보유",
+    content: "SMCI가 2030 AI ROI 달성 수혜 1순위라는 분석 공감해요. 회계 정정 끝나고 이제 본업 얘기를 할 수 있는 구간인데 수주잔고가 역대 최고라는 거잖아요. 커스텀 칩 채택 하이퍼스케일러들이 AI 서버를 계속 사야 하는 구조에서 SMCI 빼고는 이 물량 소화할 수 있는 데가 없어요.",
+    createdAt: T29 - 23*60_000, likes: 71, comments: 3 },
+
+  // META — Dollar-Dollar 구독 ──────────────────────────────────────────
+  { id: 178, symbol: "META", nickname: "익명_8374", holdingLabel: "65주 보유",
+    content: "Meta가 $14 구독 내놓은 게 생각보다 큰 변화예요. 32억 MAU 중 1%만 전환해도 연간 $54억 구독 수익인데 광고랑 같이 가면 PSR 올라가는 거잖아요. 애널 목표주가 $314 Buy 나온 것도 이 구독 레이어가 밸류에이션 멀티플을 SaaS 수준으로 끌어올릴 수 있다는 거고요.",
+    createdAt: T29 - 11*60_000, likes: 89, comments: 3 },
+  { id: 179, symbol: "META", nickname: "익명_2938", holdingLabel: "30주 보유",
+    content: "AI 광고 ROI 2배 + 구독 수익 + Llama API 수익화까지 합치면 Meta가 세 개 수익 레이어를 동시에 키우는 거예요. 광고 회사에서 플랫폼 기업으로 재평가 받으면 지금 주가에서 30~40% 더 갈 수 있다고 봐요. $314 목표도 사실 보수적인 것 같아요.",
+    createdAt: T29 - 47*60_000, likes: 62, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-05-27 — TSLA-SpaceX 합병 / Q1 적자 / Optimus5 / 렌즈특허 /
@@ -813,6 +860,62 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 1, nickname: "익명_3847", holdingLabel: "관심종목", content: "Starlink 단독 상장 시나리오 저도 선호해요. Starlink 기업가치만 $200B+ 나오고 거기서 Starship 발사 서비스 별도로 평가받으면 둘 다 독립적으로 성장할 수 있어요. 합치면 서로 발목 잡는 부분이 생기죠.", createdAt: T28 - m(25), likes: 32 },
     { id: 2, nickname: "익명_8293", holdingLabel: "관심종목", content: "테슬라-SpaceX 합병 시 TSLA 주주 희석이 얼마나 되는지 계산해봤는데... SpaceX $350B이면 TSLA 주식 발행이 엄청나요. 지금 $430 기준으로 $350B어치면 약 8억주 발행이고 그게 기존 주식수의 25% 넘어요. 합병 조건이 진짜 중요해요.", createdAt: T28 - m(12), likes: 29 },
     { id: 3, nickname: "익명_5192", holdingLabel: "관심종목", content: "어떤 시나리오든 결국 Elon이 정하는 거잖아요. 나는 그냥 발표 나올 때까지 TSLA 홀딩하면서 상황 보는 게 맞다고 봐요. 시나리오 예측보다 결과 보고 대응이 낫죠.", createdAt: T28 + m(2), likes: 23 },
+  ],
+
+  // ── 2026-05-29 신규 ──────────────────────────────────────────────────────
+  170: [
+    { id: 1, nickname: "익명_5183", holdingLabel: "55주 보유", content: "7월 오스틴 배포가 이제 일정이 아니라 현실이에요. AVO 인가가 나왔으면 법적으로 막을 수가 없는 거잖아요. 로보택시 밸류에이션 재평가가 이번 분기 실적 전에 먼저 올 것 같아요.", createdAt: T29 + m(3), likes: 62 },
+    { id: 2, nickname: "익명_9374", holdingLabel: "80주 보유", content: "웨이모는 샌프란에서 인가 받는데 몇 년 걸렸는지 아세요? 테슬라는 텍사스에서 훨씬 빠른 속도로 뚫은 거예요. FSD 데이터 2,670만 마일이 규제 신뢰의 근거인 거죠.", createdAt: T29 + m(8), likes: 44 },
+    { id: 3, nickname: "익명_2938", holdingLabel: "30주 보유", content: "안전요원 비용 빠지면 운영 마진이 완전히 달라지는 거잖아요. 택시 기사 인건비 없는 로보택시 vs 우버 기사 있는 구조면 Tesla가 절반 가격에 2배 마진이에요.", createdAt: T29 + m(15), likes: 31 },
+    { id: 4, nickname: "익명_6291", holdingLabel: "35주 보유", content: "Cybercab 양산이 7월 AVO랑 겹치는 타이밍이 우연이 아닌 것 같아요. AVO 인가 먼저 확보하고 양산 시작하는 전략이었던 거죠. 일론이 일정 관리를 이렇게 했구나 싶어요.", createdAt: T29 + m(20), likes: 26 },
+    { id: 5, nickname: "익명_8492", holdingLabel: "관심종목", content: "이게 실현되면 $TSLA 밸류에이션 접근법 자체가 바뀌어야 해요. EV 제조사가 아니라 플랫폼 기업으로 봐야 하는 거잖아요. 지금 주가는 그걸 아직 안 반영한 거고요.", createdAt: T29 + m(25), likes: 19 },
+  ],
+  171: [
+    { id: 1, nickname: "익명_2847", holdingLabel: "120주 보유", content: "AVO 인가 속도가 빠른 이유가 바로 이 데이터예요. 일 2,670만 마일 쌓인 사고 기록·개입률 데이터를 규제 당국에 보여주면 승인 안 해줄 이유가 없는 거죠.", createdAt: T29 + m(5), likes: 48 },
+    { id: 2, nickname: "익명_4183", holdingLabel: "45주 보유", content: "44% MoM이면 6개월 후 일 5,000만 마일이 나오는 거잖아요. 그 시점에 AVO 운행 데이터까지 합쳐지면 다른 주 인가도 연쇄적으로 나올 것 같아요.", createdAt: T29 + m(12), likes: 33 },
+    { id: 3, nickname: "익명_7483", holdingLabel: "관심종목", content: "FSD 구독자가 이만큼 늘고 있다는 증거잖아요. $99/월 × 구독자 수가 소프트웨어 수익인데 이게 계속 올라가는 거면 마진 개선이 자동으로 되는 구조예요.", createdAt: T29 + m(18), likes: 25 },
+    { id: 4, nickname: "익명_3916", holdingLabel: "관심종목", content: "웨이모 연간 5천만 마일을 테슬라가 하루에 달성하는 게 멀지 않았네요. 이 격차가 좁혀지는 게 아니라 더 벌어지는 구조예요.", createdAt: T29 + m(22), likes: 18 },
+  ],
+  172: [
+    { id: 1, nickname: "익명_5183", holdingLabel: "55주 보유", content: "AVO 인가랑 FSD 데이터가 동시에 나온 날이 역대 가장 강한 자율주행 뉴스 조합이에요. 둘이 서로를 강화하는 선순환인데 시장이 아직 충분히 반영 안 한 것 같아요.", createdAt: T29 + m(2), likes: 54 },
+    { id: 2, nickname: "익명_9374", holdingLabel: "80주 보유", content: "Morgan Stanley Adam Jonas가 직접 채널 체크한 숫자라는 게 신뢰도가 높은 거예요. 공식 데이터가 아닌 채널 체크인데 이 정도 구체적인 숫자가 나왔다는 건 소스가 탄탄하다는 거죠.", createdAt: T29 + m(9), likes: 37 },
+    { id: 3, nickname: "익명_4829", holdingLabel: "100주 보유", content: "연환산 97.5억 마일이면 경쟁사 전부 합쳐도 테슬라 못 따라가요. 이게 FSD 개선 속도의 근거인데 AVO 인가까지 겹치면 완전 자율 레벨이 현실화되는 시간이 단축되는 거예요.", createdAt: T29 + m(16), likes: 29 },
+  ],
+  173: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "35주 보유", content: "820만 마일/일이 한 달 만에 늘어난 건데 이게 신규 FSD 구독자가 그만큼 생겼다는 뜻이에요. AVO 발표 후 다음 달 숫자가 더 올라갈 것 같아요.", createdAt: T29 + m(4), likes: 41 },
+    { id: 2, nickname: "익명_2847", holdingLabel: "120주 보유", content: "이 속도로 가면 연내 일 1억 마일도 가능한데 그러면 FSD의 엣지 케이스 커버리지가 완성에 가까워지는 거예요. 자율주행 완성 타임라인이 예상보다 빠르게 당겨질 것 같아요.", createdAt: T29 + m(11), likes: 28 },
+    { id: 3, nickname: "익명_8374", holdingLabel: "65주 보유", content: "44% MoM 성장이 지속되면 내년 이맘때 일 5억 마일 넘는 거잖아요. 그때 웨이모랑 비교하면 자율주행 시장은 사실상 끝났다고 볼 수 있어요.", createdAt: T29 + m(17), likes: 21 },
+  ],
+  174: [
+    { id: 1, nickname: "익명_3726", holdingLabel: "관심종목", content: "TAM $28.5조면 현재 $350B 기업가치는 TAM 대비 1.2%예요. 10% 침투율에 적정 마진 적용해도 $2조 이상 나오는 수학이에요. Polymarkets가 $2조+를 제일 높게 보는 게 합리적이라고 봐요.", createdAt: T29 + m(6), likes: 67 },
+    { id: 2, nickname: "익명_8492", holdingLabel: "관심종목", content: "Starlink Connectivity $11.4B이 이미 현재 수익이고 앞으로 커지는 거잖아요. 통신사 30개 과금 구조가 실제 과금이라는 게 확인됐으니까 이게 계속 올라가는 건 확정이에요.", createdAt: T29 + m(14), likes: 49 },
+    { id: 3, nickname: "익명_1847", holdingLabel: "40주 보유", content: "AI 서비스 $3.2B도 이제 시작이에요. H100 8,000개 기반 인프라에 Anthropic 연계까지 되면 클라우드 4번째 강자로 올라오는 속도가 생각보다 빠를 것 같아요.", createdAt: T29 + m(20), likes: 35 },
+    { id: 4, nickname: "익명_4729", holdingLabel: "관심종목", content: "비상장이라 직접 못 사는 게 진짜 아쉬워요. 지금 살 수 있는 거라고는 TSLA밖에 없는데 합병 시나리오가 현실이 되길 바랄 수밖에요.", createdAt: T29 + m(25), likes: 28 },
+  ],
+  175: [
+    { id: 1, nickname: "익명_7483", holdingLabel: "관심종목", content: "핸드셰이크가 아니라 실 과금이라는 게 핵심이에요. T-Mobile이랑 SoftBank가 실제로 돈을 내고 있다는 거잖아요. 이게 수익 현실화 단계라는 증거예요.", createdAt: T29 + m(7), likes: 58 },
+    { id: 2, nickname: "익명_3916", holdingLabel: "관심종목", content: "통신사 입장에서는 자체 위성 쏘는 것보다 Starlink 도매 받는 게 100배 싸요. 이 구조가 한번 자리 잡으면 더 많은 통신사가 들어오는 건 시간문제예요. 50개, 100개로 늘어날 거예요.", createdAt: T29 + m(14), likes: 44 },
+    { id: 3, nickname: "익명_2938", holdingLabel: "30주 보유", content: "Starlink 단독 분리 상장 시 이 30개 과금 계약이 B2B 수익 가시성이에요. 할인율이 낮아지면 현재 가치가 올라가는데 과금 계약이 많을수록 리스크가 줄어드는 거잖아요.", createdAt: T29 + m(21), likes: 31 },
+  ],
+  176: [
+    { id: 1, nickname: "익명_5847", holdingLabel: "85주 보유", content: "Anthropic $65B인데 Claude ARR $47B이면 PSR 1.4배예요. OpenAI PSR 4배 대비 엄청 싼 거잖아요. Amazon이 최대 주주인데 상장하면 AMZN 주가에 수조 원어치 가치가 반영될 거예요.", createdAt: T29 + m(5), likes: 73 },
+    { id: 2, nickname: "익명_2847", holdingLabel: "120주 보유", content: "Bedrock 통한 Claude 성장이 AWS 마진 1위 만든 거 확인됐잖아요. Anthropic 상장되면 Amazon이 보유한 지분 가치 실현이 엄청날 거고 AWS 밸류에이션도 같이 올라가는 구조예요.", createdAt: T29 + m(12), likes: 51 },
+    { id: 3, nickname: "익명_9374", holdingLabel: "80주 보유", content: "세계 최대 비상장 AI 기업이 됐는데 IPO 안 하면 이상한 거잖아요. 2026~2027 상장 논의 본격화하면 그 전에 AMZN 포지션 늘려야 할 것 같아요.", createdAt: T29 + m(18), likes: 38 },
+    { id: 4, nickname: "익명_6291", holdingLabel: "35주 보유", content: "Claude $47B ARR 5개월 만에 5배 성장이면 속도가 말이 안 되는 수준이에요. 기업용 AI 채택이 이 정도로 빠를 줄 몰랐는데 Anthropic이 OpenAI보다 기업 고객에 더 잘 먹히는 것 같아요.", createdAt: T29 + m(24), likes: 27 },
+  ],
+  177: [
+    { id: 1, nickname: "익명_4182", holdingLabel: "200주 보유", content: "SMCI 수주잔고 역대 최고라는 거 진짜예요. 회계 정정 끝나고 이제 본업 얘기를 할 수 있는 국면인데 AI 서버 수요가 SMCI 없이는 소화가 안 되는 구조예요. 2030 ROI 수혜 1순위 동의합니다.", createdAt: T29 + m(8), likes: 59 },
+    { id: 2, nickname: "익명_5183", holdingLabel: "55주 보유", content: "커스텀 칩 채택하는 하이퍼스케일러들이 AI 서버는 어쨌든 사야 해요. Trainium이든 TPU든 결국 SMCI 랙에 들어가는 거니까 커스텀 칩 확산이 오히려 SMCI 수요 증가예요.", createdAt: T29 + m(15), likes: 42 },
+    { id: 3, nickname: "익명_3847", holdingLabel: "50주 보유", content: "나스닥 상폐 위기 해소하고 정상화된 거 확인됐으면 이제 실적으로 증명할 때예요. FY2026 $25B+ 전망이 현실이 되면 지금 주가에서 50% 이상 업사이드 남아 있어요.", createdAt: T29 + m(22), likes: 31 },
+  ],
+  178: [
+    { id: 1, nickname: "익명_9183", holdingLabel: "45주 보유", content: "광고 회사에서 구독+AI 기업으로 재평가받으면 멀티플이 20배에서 30배로 올라가는 거잖아요. 지금 주가에 구독 수익이 반영 안 됐으니까 $314 목표가 오히려 보수적일 수 있어요.", createdAt: T29 + m(4), likes: 71 },
+    { id: 2, nickname: "익명_6182", holdingLabel: "80주 보유", content: "32억 MAU 중 1%만 전환해도 $54억 구독 수익인데 이게 예측 가능한 반복 수익이에요. 광고는 경기에 민감한데 구독은 아니잖아요. 포트폴리오 안정성이 올라가는 거예요.", createdAt: T29 + m(11), likes: 53 },
+    { id: 3, nickname: "익명_2938", holdingLabel: "30주 보유", content: "AI 광고 ROI 2배 개선 + 구독 수익 + Llama API까지 합치면 세 개 수익 레이어예요. 이게 다 동시에 성장하는 구조면 META가 빅테크 중 가장 레버리지 높은 AI 수혜주가 되는 거 아닌가요.", createdAt: T29 + m(18), likes: 39 },
+  ],
+  179: [
+    { id: 1, nickname: "익명_8374", holdingLabel: "65주 보유", content: "$14 구독이 생각보다 전환율 높을 것 같아요. 광고 싫어하는 사용자들이 많은데 그 사람들이 $14에 광고 없애는 건 충분히 쓸 의향이 있을 것 같거든요.", createdAt: T29 + m(6), likes: 45 },
+    { id: 2, nickname: "익명_4829", holdingLabel: "100주 보유", content: "Ray-Ban 스마트 안경 + Orion AR 더하면 하드웨어 TAM까지 추가되는 거잖아요. 광고·구독·AI API·하드웨어 네 개 레이어면 애플 수준의 생태계가 되는 거예요.", createdAt: T29 + m(13), likes: 34 },
   ],
 
   // ── 2026-05-27 신규 ──────────────────────────────────────────────────────
