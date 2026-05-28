@@ -1137,7 +1137,7 @@ export default function WallPage() {
             style={mainTab === "analyst"
               ? { background: "#7c3aed", color: "#fff" }
               : { color: "var(--muted)" }}>
-            <EyeOff className="w-3.5 h-3.5" />애널들은
+            <EyeOff className="w-3.5 h-3.5" />{w.tabAnalyst}
           </button>
           <button onClick={() => setMainTab("creator")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
@@ -1589,13 +1589,12 @@ export default function WallPage() {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-xl"
                   style={{ background: "rgba(124,58,237,0.2)" }}>🤫</div>
                 <div>
-                  <p className="text-sm font-bold mb-1" style={{ color: "#a78bfa" }}>애널들은 — 애널리스트 속마음</p>
-                  <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                    공개석상에서 못하는 말, 여기선 할 수 있어요.<br />
-                    미국 종목은 물론 코스피·코스닥도 다뤄요 — 애널들은 탭에서만.
+                  <p className="text-sm font-bold mb-1" style={{ color: "#a78bfa" }}>{w.analystTitle}</p>
+                  <p className="text-[11px] leading-relaxed whitespace-pre-line" style={{ color: "var(--muted)" }}>
+                    {w.analystDesc}
                   </p>
                   <p className="text-[10px] mt-2 leading-relaxed" style={{ color: "rgba(167,139,250,0.55)" }}>
-                    ⚠ 미공개 중요정보(MNPI) 공유는 자본시장법 위반입니다. 모든 내용은 개인 의견이며 투자 권유가 아닙니다.
+                    {w.analystMnpi}
                   </p>
                 </div>
               </div>
@@ -1606,11 +1605,11 @@ export default function WallPage() {
               <div className="text-center py-6 mb-4 rounded-2xl border"
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                 <EyeOff className="w-8 h-8 mx-auto mb-3" style={{ color: "#7c3aed" }} />
-                <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>로그인이 필요합니다</p>
-                <p className="text-xs mb-4" style={{ color: "var(--muted)" }}>로그인 후 좋아요 및 애널리스트 인증이 가능합니다</p>
+                <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{w.analystLoginRequired}</p>
+                <p className="text-xs mb-4" style={{ color: "var(--muted)" }}>{w.analystLoginDesc}</p>
                 <Link href="/more" className="inline-block text-xs font-bold px-5 py-2 rounded-xl"
                   style={{ background: "#7c3aed", color: "#fff" }}>
-                  로그인하기
+                  {w.analystLoginBtn}
                 </Link>
               </div>
             ) : analystStatus === "approved" ? (
@@ -1620,7 +1619,7 @@ export default function WallPage() {
                   style={{ background: "rgba(124,58,237,0.08)", borderColor: "rgba(124,58,237,0.25)" }}>
                   <div className="flex items-center gap-2 mb-3">
                     <FileCheck className="w-4 h-4" style={{ color: "#a78bfa" }} />
-                    <span className="text-xs font-bold" style={{ color: "#a78bfa" }}>인증 애널리스트</span>
+                    <span className="text-xs font-bold" style={{ color: "#a78bfa" }}>{w.analystCertified}</span>
                     <span className="text-xs px-2 py-0.5 rounded-full font-mono" style={{ background: "rgba(124,58,237,0.2)", color: "#c4b5fd" }}>
                       {analystAlias}
                     </span>
@@ -1628,7 +1627,7 @@ export default function WallPage() {
                   <textarea
                     value={analystPost}
                     onChange={(e) => setAnalystPost(e.target.value)}
-                    placeholder="공개석상에서 못했던 말, 여기서 솔직하게 (10~1000자)"
+                    placeholder={w.analystPlaceholder}
                     maxLength={1000}
                     rows={3}
                     className="w-full rounded-xl p-3 text-[13px] leading-relaxed resize-none outline-none border mb-2"
@@ -1696,16 +1695,15 @@ export default function WallPage() {
                 <span className="text-base flex-shrink-0 mt-0.5">🔐</span>
                 <div>
                   <p className="text-[11px] font-bold mb-1.5" style={{ color: "#a78bfa" }}>
-                    신원 보장 — 서버에 아무것도 남지 않습니다
+                    {w.analystPrivacyTitle}
                   </p>
                   <ul className="text-[10px] leading-relaxed space-y-1" style={{ color: "var(--muted)" }}>
-                    <li>• 게시글·댓글에는 <b style={{ color: "var(--text)" }}>닉네임만 기록</b>되며, 이메일·계정정보·실명은 일절 저장되지 않습니다.</li>
-                    <li>• 인증 시 제출하신 명함·신분증 이미지는 AI 판독 즉시 폐기되며, 서버 어디에도 보관되지 않습니다.</li>
-                    <li>• 닉네임은 복호화가 불가능한 단방향 암호화로 생성되어, <b style={{ color: "var(--text)" }}>운영자 포함 누구도</b> 닉네임과 실제 신원을 연결할 수 없습니다.</li>
-                    <li>• 법적 요청이 있더라도 연결 가능한 신원 정보가 존재하지 않아 제공 자체가 불가능한 구조입니다.</li>
+                    {w.analystPrivacy.map((item, i) => (
+                      <li key={i} dangerouslySetInnerHTML={{ __html: `• ${item.replace(/<b>/g, `<b style="color:var(--text)">`)}` }} />
+                    ))}
                   </ul>
                   <p className="text-[9px] mt-2" style={{ color: "rgba(167,139,250,0.45)" }}>
-                    단, 미공개 중요정보(MNPI) 공유는 자본시장법 위반입니다. 개인 의견만 작성해주세요.
+                    {w.analystPrivacyNote}
                   </p>
                 </div>
               </div>
@@ -1719,7 +1717,7 @@ export default function WallPage() {
               </div>
             ) : analystPosts.length === 0 ? (
               <div className="text-center py-12">
-                <p className="text-sm" style={{ color: "var(--muted)" }}>아직 애널들은이 없습니다.</p>
+                <p className="text-sm" style={{ color: "var(--muted)" }}>{w.analystEmpty}</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">

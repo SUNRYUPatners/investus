@@ -20,6 +20,20 @@ type StockTile = { symbol: string; name: string; price: number | null; changePer
 type Sector    = { key: string; name: string; stocks: StockTile[] };
 type ApiResponse = { isLive: boolean; sectors: Sector[] };
 
+const SECTOR_EN: Record<string, string> = {
+  "정보기술":    "Information Technology",
+  "커뮤니케이션": "Communication Services",
+  "헬스케어":   "Health Care",
+  "금융":       "Financials",
+  "임의소비재":  "Consumer Discretionary",
+  "필수소비재":  "Consumer Staples",
+  "에너지":     "Energy",
+  "산업재":     "Industrials",
+  "부동산":     "Real Estate",
+  "소재":       "Materials",
+  "유틸리티":   "Utilities",
+};
+
 type PopupState = {
   symbol: string;
   name: string;
@@ -90,6 +104,7 @@ function SectorBlock({
   maxStocks: number;
   onTileClick: (symbol: string, name: string, changePercent: number, x: number, y: number, price?: number) => void;
 }) {
+  const locale = useLocaleCode();
   const visibleStocks = sector.stocks.slice(0, maxStocks);
   const totalW = visibleStocks.reduce((a, s) => a + s.weight, 0);
   const LABEL_H = 14;
@@ -103,7 +118,7 @@ function SectorBlock({
         style={{ height: LABEL_H, background: "rgba(255,255,255,0.03)" }}
       >
         <span className="text-[8px] font-semibold truncate" style={{ color: "var(--muted)" }}>
-          {sector.name}
+          {locale === "ko" ? sector.name : (SECTOR_EN[sector.name] ?? sector.name)}
         </span>
       </div>
 

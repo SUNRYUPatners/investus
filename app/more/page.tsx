@@ -266,6 +266,8 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 function InstallSection() {
+  const locale2   = useLocaleCode();
+  const isKo2     = locale2 === "ko";
   const [prompt, setPrompt]           = useState<BeforeInstallPromptEvent | null>(null);
   const [isIOS, setIsIOS]             = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
@@ -303,7 +305,7 @@ function InstallSection() {
     return (
       <div className="mt-6">
         <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-          앱으로 설치
+          {isKo2 ? "앱으로 설치" : "Install App"}
         </p>
         <button
           onClick={() => setShowConfirm(true)}
@@ -315,12 +317,12 @@ function InstallSection() {
             <span className="text-xl">📲</span>
           </div>
           <div className="flex-1">
-            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>홈 화면에 추가하시겠습니까?</p>
-            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>앱처럼 전체화면으로 실행 · 무료</p>
+            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo2 ? "홈 화면에 추가하시겠습니까?" : "Add to Home Screen?"}</p>
+            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{isKo2 ? "앱처럼 전체화면으로 실행 · 무료" : "Runs full-screen like an app · Free"}</p>
           </div>
           <span className="px-3 py-1.5 rounded-full text-[11px] font-bold text-black flex-shrink-0"
             style={{ background: "var(--mint)" }}>
-            추가
+            {isKo2 ? "추가" : "Add"}
           </span>
         </button>
 
@@ -336,23 +338,25 @@ function InstallSection() {
                   <span className="text-3xl">📲</span>
                 </div>
                 <h2 className="text-base font-bold font-syne text-center" style={{ color: "var(--text)" }}>
-                  홈 화면에 추가하시겠습니까?
+                  {isKo2 ? "홈 화면에 추가하시겠습니까?" : "Add to Home Screen?"}
                 </h2>
                 <p className="text-[12px] text-center leading-relaxed" style={{ color: "var(--muted)" }}>
-                  설치하면 앱처럼 전체화면으로 실행됩니다.<br />광고 없이 더 빠르게 사용하세요.
+                  {isKo2
+                    ? <>설치하면 앱처럼 전체화면으로 실행됩니다.<br />광고 없이 더 빠르게 사용하세요.</>
+                    : <>Runs full-screen like a native app.<br />Faster and ad-free.</>}
                 </p>
               </div>
               <button
                 onClick={handleInstall}
                 className="w-full py-3.5 rounded-xl text-sm font-bold text-black mb-3 active:opacity-80"
                 style={{ background: "var(--mint)" }}>
-                추가하기
+                {isKo2 ? "추가하기" : "Add to Home Screen"}
               </button>
               <button
                 onClick={() => setShowConfirm(false)}
                 className="w-full py-2.5 rounded-xl text-sm"
                 style={{ color: "var(--muted)" }}>
-                취소
+                {isKo2 ? "취소" : "Cancel"}
               </button>
             </div>
           </div>
@@ -366,7 +370,7 @@ function InstallSection() {
     return (
       <div className="mt-6">
         <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-          앱으로 설치
+          {isKo2 ? "앱으로 설치" : "Install App"}
         </p>
         <button
           onClick={() => setShowConfirm(true)}
@@ -378,8 +382,8 @@ function InstallSection() {
             <span className="text-xl">📲</span>
           </div>
           <div className="flex-1">
-            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>홈 화면에 추가하시겠습니까?</p>
-            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>Safari → 공유 → 홈 화면에 추가</p>
+            <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo2 ? "홈 화면에 추가하시겠습니까?" : "Add to Home Screen?"}</p>
+            <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{isKo2 ? "Safari → 공유 → 홈 화면에 추가" : "Safari → Share → Add to Home Screen"}</p>
           </div>
           <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-40" style={{ color: "var(--muted)" }} />
         </button>
@@ -464,7 +468,7 @@ function InstallSection() {
   return (
     <div className="mt-6">
       <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-        빠른 접속
+        {isKo2 ? "빠른 접속" : "Quick Access"}
       </p>
       <button
         onClick={() => setShowConfirm(true)}
@@ -475,8 +479,8 @@ function InstallSection() {
           <span className="text-xl">🔖</span>
         </div>
         <div className="flex-1">
-          <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>즐겨찾기 저장</p>
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>탭하면 추가 방법 안내</p>
+          <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{isKo2 ? "즐겨찾기 저장" : "Save Bookmark"}</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>{isKo2 ? "탭하면 추가 방법 안내" : "Tap for instructions"}</p>
         </div>
         <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-30 mt-1" style={{ color: "var(--muted)" }} />
       </button>
@@ -960,17 +964,20 @@ export default function MorePage() {
     })),
   }));
 
+  const locale    = useLocaleCode();
+  const isKo      = locale === "ko";
+
   // Right sidebar quick-link tiles (3×3 grid)
   const sidebarLinks = [
-    { emoji: "📖", label: "사용 가이드",  href: "/more/guide" },
-    { emoji: "📊", label: "소개",         href: "/more/about" },
-    { emoji: "🔖", label: "업데이트",     href: "/more/version" },
-    { emoji: "📢", label: "공지사항",     href: "/more/notices" },
-    { emoji: "❓", label: "FAQ",          href: "/more/faq" },
-    { emoji: "💌", label: "피드백",       href: undefined, action: () => setShowFeedback(true) },
-    { emoji: "📄", label: "이용약관",     href: "/more/terms" },
-    { emoji: "🔒", label: "개인정보",     href: "/more/privacy" },
-    { emoji: "⚠️", label: "법적고지",     href: "/more/disclaimer" },
+    { emoji: "📖", label: isKo ? "사용 가이드" : "Guide",      href: "/more/guide" },
+    { emoji: "📊", label: isKo ? "소개"        : "About",      href: "/more/about" },
+    { emoji: "🔖", label: isKo ? "업데이트"    : "Updates",    href: "/more/version" },
+    { emoji: "📢", label: isKo ? "공지사항"    : "Notices",    href: "/more/notices" },
+    { emoji: "❓", label: "FAQ",                                href: "/more/faq" },
+    { emoji: "💌", label: isKo ? "피드백"      : "Feedback",   href: undefined, action: () => setShowFeedback(true) },
+    { emoji: "📄", label: isKo ? "이용약관"    : "Terms",      href: "/more/terms" },
+    { emoji: "🔒", label: isKo ? "개인정보"    : "Privacy",    href: "/more/privacy" },
+    { emoji: "⚠️", label: isKo ? "법적고지"    : "Disclaimer", href: "/more/disclaimer" },
   ];
 
   return (
@@ -1007,7 +1014,9 @@ export default function MorePage() {
               </div>
             </div>
 
-            <AdBanner format="auto" />
+            <div className="lg:hidden">
+              <AdBanner format="auto" />
+            </div>
 
             {/* Menu sections — 앱정보 + 고객지원 (법적고지는 right sidebar에) */}
             <div className="flex flex-col gap-4 mb-6">
@@ -1084,7 +1093,7 @@ export default function MorePage() {
             {/* 3. 바로가기 링크 3×3 그리드 */}
             <div>
               <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-                바로가기
+                {isKo ? "바로가기" : "Quick Links"}
               </p>
               <div className="grid grid-cols-3 gap-2">
                 {sidebarLinks.map((link) => {

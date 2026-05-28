@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { TrendingUp, TrendingDown, ChevronRight, Wallet, ChevronDown, ChevronUp } from "lucide-react";
 import { usePortfolio } from "@/hooks/usePortfolio";
+import { useLocaleCode } from "@/contexts/LocaleContext";
 
 type LiveQ = { symbol: string; shortName: string; price: number; changePercent: number };
 type Cur   = "USD" | "KRW";
@@ -41,6 +42,8 @@ function CurToggle({ cur, onChange }: { cur: Cur; onChange: (c: Cur) => void }) 
 
 export function PortfolioWidget() {
   const router  = useRouter();
+  const locale  = useLocaleCode();
+  const isKo    = locale === "ko";
   const { holdings, cur, setCur, loaded, isLoggedIn } = usePortfolio();
   const [quotes,    setQuotes]    = useState<LiveQ[]>([]);
   const [usdkrw,    setUsdkrw]    = useState(1350);
@@ -96,18 +99,20 @@ export function PortfolioWidget() {
               style={{ background: "rgba(0,229,160,0.12)" }}>
               <Wallet className="w-3 h-3" style={{ color: "var(--mint)" }} />
             </div>
-            <span className="text-sm font-bold" style={{ color: "var(--text)" }}>내 보유종목</span>
+            <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "내 보유종목" : "My Holdings"}</span>
           </div>
           <div className="border-t px-4 py-4 flex items-center justify-between gap-3"
             style={{ borderColor: "var(--border)" }}>
             <p className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
-              로그인 후 포트폴리오를 연동하면<br/>보유 종목과 수익률을 확인할 수 있어요
+              {isKo
+                ? <>로그인 후 포트폴리오를 연동하면<br/>보유 종목과 수익률을 확인할 수 있어요</>
+                : "Connect your portfolio after logging in to track your holdings and returns."}
             </p>
             <button
               onClick={() => router.push("/portfolio")}
               className="flex-shrink-0 text-[11px] font-bold px-3 py-1.5 rounded-xl transition-opacity active:opacity-70"
               style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
-              연동하기
+              {isKo ? "연동하기" : "Connect"}
             </button>
           </div>
         </div>
@@ -143,13 +148,13 @@ export function PortfolioWidget() {
           style={{ background: "rgba(0,229,160,0.12)" }}>
           <Wallet className="w-3 h-3" style={{ color: "var(--mint)" }} />
         </div>
-        <span className="text-sm font-bold" style={{ color: "var(--text)" }}>내 보유종목</span>
+        <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "내 보유종목" : "My Holdings"}</span>
       </div>
       <div className="flex items-center gap-2">
         {!collapsed && <CurToggle cur={cur} onChange={setCur} />}
         {!collapsed && (
           <button className="flex items-center gap-0.5" onClick={() => router.push("/portfolio")}>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>전체</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>{isKo ? "전체" : "All"}</span>
             <ChevronRight className="w-3 h-3" style={{ color: "var(--muted)" }} />
           </button>
         )}
@@ -275,7 +280,7 @@ export function PortfolioWidget() {
               className="w-full py-2.5 text-center text-[11px] border-t"
               style={{ borderColor: "var(--border)", color: "var(--muted)" }}
               onClick={() => setShowAll((v) => !v)}>
-              {showAll ? "접기 ▲" : `+${enriched.length - DESKTOP_LIMIT}개 더보기 ▼`}
+              {showAll ? (isKo ? "접기 ▲" : "Show less ▲") : (isKo ? `+${enriched.length - DESKTOP_LIMIT}개 더보기 ▼` : `+${enriched.length - DESKTOP_LIMIT} more ▼`)}
             </button>
           )}
 

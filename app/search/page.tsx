@@ -249,8 +249,10 @@ export default function SearchPage() {
                   <GuruHoldings />
                 </div>
 
-                {/* 광고 */}
-                <AdBanner format="auto" />
+                {/* 광고 — 모바일 전용 */}
+                <div className="lg:hidden">
+                  <AdBanner format="auto" />
+                </div>
 
                 {/* Investus 추천주식 */}
                 <div>
