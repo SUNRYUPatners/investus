@@ -1360,6 +1360,13 @@ export default function WallPage() {
                   );})
                 )}
               </div>
+
+              {/* 광고 — 포스트 목록 아래 */}
+              {posts.length > 0 && (
+                <div className="mt-4">
+                  <AdBanner format="auto" />
+                </div>
+              )}
             </div>
 
             {/* Write / Login prompt */}
@@ -1707,6 +1714,11 @@ export default function WallPage() {
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* 광고 — 애널 헤더와 포스트 피드 사이 */}
+            <div className="mb-4">
+              <AdBanner format="auto" />
             </div>
 
             {/* Posts feed */}

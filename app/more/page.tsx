@@ -1039,6 +1039,11 @@ export default function MorePage() {
                 </div>
               ))}
 
+              {/* 광고 — 메뉴 섹션 사이 (모바일) */}
+              <div className="lg:hidden">
+                <AdBanner format="auto" />
+              </div>
+
               {/* 법적고지 — mobile only (on desktop it's in right sidebar) */}
               <div className="lg:hidden">
                 <p className="text-xs font-semibold tracking-widest uppercase mb-2 font-syne"
@@ -1120,7 +1125,10 @@ export default function MorePage() {
               </div>
             </div>
 
-            {/* 4. 즐겨찾기 / 앱 설치 */}
+            {/* 4. 광고 */}
+            <AdBanner format="auto" />
+
+            {/* 5. 즐겨찾기 / 앱 설치 */}
             <div className="-mt-1">
               <InstallSection />
             </div>

@@ -40,6 +40,11 @@ export default async function HomePage() {
             {/* 관심종목 */}
             <WatchlistSection />
 
+            {/* 광고 — 관심종목과 시장 데이터 사이 */}
+            <section className="px-4 lg:px-0 pt-4">
+              <AdBanner format="auto" />
+            </section>
+
             {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures (실시간) */}
             <LiveMarket />
 
