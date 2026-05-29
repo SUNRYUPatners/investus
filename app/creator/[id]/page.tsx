@@ -2,9 +2,11 @@
 
 import { use, useState } from "react";
 import Link from "next/link";
-import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard } from "lucide-react";
 import { Header } from "@/components/Header";
 import { getCreator, contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
+
+const ACCOUNT = { bank: "카카오뱅크", number: "3333-22-2070396", holder: "류현우" };
 
 const CONTENT_TABS: { key: ContentType | "all"; label: string }[] = [
   { key: "all",     label: "전체" },
@@ -276,6 +278,60 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               </div>
             </div>
 
+            {/* 결제 수단 — 계좌이체 활성 */}
+            <div className="flex items-center gap-3 rounded-2xl border p-3 mb-2"
+              style={{ background: "var(--bg)", borderColor: "var(--mint)" }}>
+              <span className="text-lg">🏦</span>
+              <div className="flex-1">
+                <p className="text-xs font-bold" style={{ color: "var(--text)" }}>계좌이체</p>
+                <p className="text-[10px]" style={{ color: "var(--muted)" }}>카카오뱅크 · 수수료 없음</p>
+              </div>
+              <div className="w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center flex-shrink-0"
+                style={{ borderColor: "var(--mint)" }}>
+                <div className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--mint)" }} />
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-1.5 mb-4 opacity-40 pointer-events-none select-none">
+              {[
+                { icon: <CreditCard className="w-4 h-4" />, label: "신용·체크카드" },
+                { icon: <span className="text-sm font-black text-[#0064FF]">toss</span>, label: "토스페이" },
+                { icon: <span className="text-base">💛</span>, label: "카카오페이" },
+                { icon: <span className="text-sm font-black text-[#03C75A]">N</span>, label: "네이버페이" },
+              ].map(({ icon, label }) => (
+                <div key={label} className="flex items-center gap-2 py-2 px-3 rounded-xl border relative"
+                  style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  {icon}
+                  <span className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</span>
+                  <span className="absolute top-1 right-1 text-[7px] px-1 py-0.5 rounded-full"
+                    style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}>준비중</span>
+                </div>
+              ))}
+            </div>
+
+            {/* 계좌 정보 */}
+            <div className="rounded-xl border p-3 mb-4" style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
+              {[
+                { label: "은행", value: ACCOUNT.bank },
+                { label: "예금주", value: ACCOUNT.holder },
+              ].map(({ label, value }) => (
+                <div key={label} className="flex justify-between py-1 border-b" style={{ borderColor: "var(--border)" }}>
+                  <span className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</span>
+                  <span className="text-[10px] font-medium" style={{ color: "var(--text)" }}>{value}</span>
+                </div>
+              ))}
+              <div className="flex justify-between items-center py-1">
+                <span className="text-[10px]" style={{ color: "var(--muted)" }}>계좌번호</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[10px] font-bold font-mono" style={{ color: "var(--text)" }}>{ACCOUNT.number}</span>
+                  <button onClick={() => navigator.clipboard.writeText(ACCOUNT.number)}
+                    className="flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px]"
+                    style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}>
+                    <Copy className="w-2.5 h-2.5" />복사
+                  </button>
+                </div>
+              </div>
+            </div>
+
             <button
               onClick={() => {
                 setIsSubscribed(true);
@@ -284,10 +340,10 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               }}
               className="w-full py-4 rounded-2xl text-sm font-bold text-black active:opacity-80 transition-opacity mb-3"
               style={{ background: "var(--mint)" }}>
-              구독 시작하기 →
+              입금 완료 — 구독 시작하기 →
             </button>
-            <p className="text-[10px] text-center" style={{ color: "var(--muted)" }}>
-              결제 시스템은 준비 중입니다 · 베타 기간 무료 체험
+            <p className="text-[10px] text-center leading-relaxed" style={{ color: "var(--muted)" }}>
+              입금자명에 닉네임을 입력해주세요 · 확인 후 구독이 활성화됩니다
             </p>
           </div>
         </div>
