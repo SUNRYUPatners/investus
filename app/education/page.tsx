@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { ChevronLeft, CheckCircle, BookOpen, TrendingUp, Users, Clock, ChevronDown, User } from "lucide-react";
+import { ChevronLeft, CheckCircle, BookOpen, TrendingUp, Users, Clock, ChevronDown, Copy, CreditCard } from "lucide-react";
 import Link from "next/link";
 import { useLocale } from "@/contexts/LocaleContext";
 
@@ -13,11 +13,18 @@ const HIGHLIGHT_ICONS = [
   <Users className="w-5 h-5" key="users" />,
 ];
 
+const ACCOUNT = {
+  bank:   "카카오뱅크",
+  number: "3333-22-2070396",
+  holder: "류현우",
+};
+
 const COURSE_TYPES = [
   {
     id: "one-on-one",
     emoji: "👤",
     title: "1:1 개인 수업",
+    price: 1000000,
     badge: "완전 맞춤형",
     badgeColor: "#60a5fa",
     desc: "CIO가 직접 1:1로 지도합니다. 내 수준과 목표에 맞는 완전 맞춤형 커리큘럼으로 가장 빠르게 성장할 수 있는 방식입니다.",
@@ -28,6 +35,7 @@ const COURSE_TYPES = [
     id: "group",
     emoji: "👥",
     title: "소수정예 그룹",
+    price: 300000,
     badge: "최대 8명",
     badgeColor: "#a78bfa",
     desc: "소규모 그룹으로 함께 배우고 토론합니다. 다양한 시각과 질문 속에서 더 넓은 시야를 키울 수 있습니다.",
@@ -36,7 +44,59 @@ const COURSE_TYPES = [
   },
 ];
 
+function fmt(n: number) {
+  return "₩" + n.toLocaleString("ko-KR");
+}
+
 type Step = "form" | "submitting" | "success" | "error";
+
+function AccountInfo({ name }: { name: string }) {
+  const [copied, setCopied] = useState(false);
+  const copy = () => {
+    navigator.clipboard.writeText(ACCOUNT.number);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+  return (
+    <div className="w-full max-w-sm rounded-2xl border p-5"
+      style={{ background: "var(--card)", borderColor: "rgba(212,175,55,0.3)" }}>
+      <p className="text-xs font-semibold mb-3 font-syne" style={{ color: "#d4af37" }}>
+        계좌이체 안내
+      </p>
+      {[
+        { label: "은행", value: ACCOUNT.bank },
+        { label: "예금주", value: ACCOUNT.holder },
+      ].map(({ label, value }) => (
+        <div key={label} className="flex justify-between py-1.5 border-b"
+          style={{ borderColor: "var(--border)" }}>
+          <span className="text-xs" style={{ color: "var(--muted)" }}>{label}</span>
+          <span className="text-xs font-medium" style={{ color: "var(--text)" }}>{value}</span>
+        </div>
+      ))}
+      <div className="flex justify-between items-center py-1.5 border-b"
+        style={{ borderColor: "var(--border)" }}>
+        <span className="text-xs" style={{ color: "var(--muted)" }}>계좌번호</span>
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-bold font-mono" style={{ color: "var(--text)" }}>{ACCOUNT.number}</span>
+          <button onClick={copy}
+            className="flex items-center gap-1 px-2 py-0.5 rounded-lg text-[10px] font-semibold"
+            style={{
+              background: copied ? "rgba(212,175,55,0.2)" : "rgba(255,255,255,0.06)",
+              color: copied ? "#d4af37" : "var(--muted)",
+            }}>
+            <Copy className="w-3 h-3" />{copied ? "복사됨" : "복사"}
+          </button>
+        </div>
+      </div>
+      <div className="pt-2 text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+        입금자명에{" "}
+        <span className="font-bold" style={{ color: "var(--text)" }}>{name}</span>
+        으로 입금해주세요.{"\n"}
+        확인 후 1~2일 내 연락드립니다.
+      </div>
+    </div>
+  );
+}
 
 export default function EducationPage() {
   const t  = useLocale();
@@ -121,7 +181,7 @@ export default function EducationPage() {
             [ed.summaryName,    name],
             [ed.summaryPhone,   phone],
             [ed.summaryLevel,   level],
-            [ed.summaryAmount,  amount || ed.noAmount],
+            ...(selectedCourse ? [["수강료", fmt(selectedCourse.price)]] : []),
           ].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b last:border-0"
               style={{ borderColor: "var(--border)" }}>
@@ -130,6 +190,8 @@ export default function EducationPage() {
             </div>
           ))}
         </div>
+
+        <AccountInfo name={name} />
 
         <Link href="/insight" className="text-xs" style={{ color: "var(--muted)" }}>
           {ed.backToInsight}
@@ -202,7 +264,7 @@ export default function EducationPage() {
                       {c.emoji}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="flex items-center gap-2 mb-1 flex-wrap">
                         <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
                           {c.title}
                         </p>
@@ -211,6 +273,9 @@ export default function EducationPage() {
                           style={{ background: `${c.detailColor}20`, color: c.detailColor }}
                         >
                           {c.badge}
+                        </span>
+                        <span className="text-[11px] font-bold ml-auto" style={{ color: c.detailColor }}>
+                          {fmt(c.price)}
                         </span>
                       </div>
                       <p className="text-[12px] leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
@@ -418,6 +483,50 @@ export default function EducationPage() {
         {error && (
           <p className="text-xs mb-4 text-center" style={{ color: "#ef4444" }}>{error}</p>
         )}
+
+        {/* 결제 수단 */}
+        <div className="mb-5">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
+            style={{ color: "var(--muted)" }}>
+            결제 수단
+          </p>
+          <div className="flex items-center gap-3 rounded-2xl border p-4 mb-2"
+            style={{ background: "var(--card)", borderColor: "#d4af37" }}>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "rgba(212,175,55,0.12)" }}>
+              <span className="text-lg">🏦</span>
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-bold" style={{ color: "var(--text)" }}>계좌이체</p>
+              <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+                카카오뱅크 · 수수료 없음 · 신청 완료 후 계좌 안내
+              </p>
+            </div>
+            <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center"
+              style={{ borderColor: "#d4af37" }}>
+              <div className="w-2 h-2 rounded-full" style={{ background: "#d4af37" }} />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-2 opacity-40 pointer-events-none select-none">
+            {[
+              { icon: <CreditCard className="w-5 h-5" />, label: "신용·체크카드" },
+              { icon: <span className="text-base font-black text-[#0064FF]">toss</span>, label: "토스페이" },
+              { icon: <span className="text-lg">💛</span>, label: "카카오페이" },
+              { icon: <span className="text-base font-black text-[#03C75A]">N</span>, label: "네이버페이" },
+            ].map(({ icon, label }) => (
+              <div key={label}
+                className="flex flex-col items-center gap-1.5 py-3 rounded-2xl border relative"
+                style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                {icon}
+                <span className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</span>
+                <span className="absolute top-1.5 right-1.5 text-[8px] px-1.5 py-0.5 rounded-full font-semibold"
+                  style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}>
+                  준비중
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <button
           onClick={handleSubmit}
