@@ -139,7 +139,7 @@ export function MarketAISummary() {
 
         {/* 접힌 상태: 미리보기 */}
         {!expanded && (loading || summary) && (
-          <div className="px-4 pb-3 pt-0.5">
+          <div className="px-4 pb-3 pt-0.5 cursor-pointer" onClick={() => setExpanded(true)}>
             {loading ? (
               <Dots color="#63b3ed" />
             ) : summary ? (

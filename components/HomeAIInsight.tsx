@@ -195,7 +195,7 @@ export function HomeAIInsight() {
 
         {/* Collapsed preview (2 lines) */}
         {!expanded && (loading || displayAnswer) && (
-          <div className="px-4 pb-3 pt-0.5">
+          <div className="px-4 pb-3 pt-0.5 cursor-pointer" onClick={() => setExpanded(true)}>
             {loading ? (
               <div className="flex gap-1.5 items-center py-1">
                 {[0, 150, 300].map((d) => (
