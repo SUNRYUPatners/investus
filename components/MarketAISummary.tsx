@@ -48,12 +48,17 @@ export function MarketAISummary() {
 
   // Init from localStorage + poll market status every minute
   useEffect(() => {
-    const cached = readCloseCache();
-    if (cached) { setSummary(cached); setDate(lastTradingDay()); }
+    const open = isMarketOpen();
+    setMarketOpen(open);
+    // Only show close cache when market is closed — during market hours the
+    // previous-close summary conflicts with current live market data.
+    if (!open) {
+      const cached = readCloseCache();
+      if (cached) { setSummary(cached); setDate(lastTradingDay()); }
+    }
     setIntradayUsed(readIntradayCount());
 
     const update = () => setMarketOpen(isMarketOpen());
-    update();
     const id = setInterval(update, 60_000);
     return () => clearInterval(id);
   }, []);

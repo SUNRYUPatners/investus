@@ -48,6 +48,7 @@ export function HomeAIInsight() {
   const [usdkrw,        setUsdkrw]        = useState(1350);
   const [closeAnswer,   setCloseAnswer]   = useState<string | null>(null);
   const [displayAnswer, setDisplayAnswer] = useState<string | null>(null);
+  const [analysisDate,  setAnalysisDate]  = useState("");
   const [loading,       setLoading]       = useState(false);
   const [expanded,      setExpanded]      = useState(false);
   const [intradayUsed,  setIntradayUsed]  = useState(0);
@@ -57,13 +58,17 @@ export function HomeAIInsight() {
 
   // Init from localStorage + poll market status every minute
   useEffect(() => {
-    const cached = readCloseCache();
+    const open = isMarketOpen();
+    // Only show close cache when market is closed — during market hours the
+    // previous-close percentages conflict with live portfolio widget prices.
+    const cached = !open ? readCloseCache() : null;
     setCloseAnswer(cached);
     setDisplayAnswer(cached);
+    if (cached) setAnalysisDate(lastMarketCloseDate());
+    setMarketOpen(open);
     setIntradayUsed(readIntradayCount());
 
     const update = () => setMarketOpen(isMarketOpen());
-    update();
     const id = setInterval(update, 60_000);
     return () => clearInterval(id);
   }, []);
@@ -104,11 +109,16 @@ export function HomeAIInsight() {
     const day = lastMarketCloseDate();
     if (fetchedForDay.current === day) return;         // already fetched for this close
     if (readCloseCache()) {                            // fresh localStorage cache exists
-      setDisplayAnswer(readCloseCache());
-      setCloseAnswer(readCloseCache());
+      const c = readCloseCache()!;
+      setDisplayAnswer(c);
+      setCloseAnswer(c);
+      setAnalysisDate(day);
       fetchedForDay.current = day;
       return;
     }
+    // Clear stale display so loading dots show immediately
+    setDisplayAnswer(null);
+    setAnalysisDate("");
     fetchedForDay.current = day;
     runAnalysis(false);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -154,6 +164,7 @@ export function HomeAIInsight() {
         } else {
           setCloseAnswer(a);
           writeCloseCache(a);
+          setAnalysisDate(lastMarketCloseDate());
         }
         setExpanded(true);
       }
@@ -183,10 +194,17 @@ export function HomeAIInsight() {
           style={{ background: "rgba(0,229,160,0.03)" }}
         >
           <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
-          <span className="text-sm font-bold font-syne flex-1 text-left" style={{ color: "var(--text)" }}>
-            {marketOpen ? "장중 포트폴리오 분석" : "오늘 포트폴리오 등락 분석"}
-          </span>
-          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full mr-1"
+          <div className="flex-1 text-left min-w-0">
+            <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
+              {marketOpen ? "장중 포트폴리오 분석" : "오늘 포트폴리오 등락 분석"}
+            </span>
+            {!marketOpen && analysisDate && (
+              <span className="block text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
+                {analysisDate.slice(5, 7)}/{analysisDate.slice(8, 10)} 장마감 기준
+              </span>
+            )}
+          </div>
+          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full mr-1 flex-shrink-0"
             style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>Claude</span>
           {expanded
             ? <ChevronUp   className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
