@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 declare global {
   interface Window {
@@ -18,7 +18,9 @@ interface AdBannerProps {
 export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
   const pubId  = process.env.NEXT_PUBLIC_ADSENSE_PUB_ID ?? PUB_ID;
   const slotId = slot ?? process.env.NEXT_PUBLIC_ADSENSE_SLOT_ID;
-  const pushed = useRef(false);
+  const pushed  = useRef(false);
+  const insRef  = useRef<HTMLModElement>(null);
+  const [adFilled, setAdFilled] = useState(false);
 
   useEffect(() => {
     if (!pubId || pushed.current) return;
@@ -26,41 +28,59 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
       pushed.current = true;
     } catch { /* ignore */ }
+
+    // AdSense sets data-ad-status="filled" when an ad loads
+    const timer = setTimeout(() => {
+      const status = insRef.current?.getAttribute("data-ad-status");
+      setAdFilled(status === "filled");
+    }, 2500);
+    return () => clearTimeout(timer);
   }, [pubId]);
 
   if (!pubId) return null;
 
-  // 슬롯 ID 없을 때 — 자동 광고 ins 태그 (구글이 자동 배치)
-  if (!slotId) {
-    return (
-      <div className="w-full my-1 overflow-hidden rounded-xl" style={{ maxHeight: 280, minHeight: 0 }}>
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block", maxHeight: 280 }}
-          data-ad-client={pubId}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-      </div>
-    );
-  }
-
-  // 슬롯 ID 있을 때 — 지정 광고 단위
   const insStyle: React.CSSProperties =
     format === "rectangle"
       ? { display: "inline-block", width: "300px", height: "250px" }
       : format === "horizontal"
       ? { display: "block", width: "100%", height: "90px" }
-      : { display: "block", maxHeight: 280 };
+      : { display: "block" };
 
   return (
-    <div className="w-full my-1 overflow-hidden rounded-xl" style={{ maxHeight: 280, minHeight: 0 }}>
+    <div className="w-full my-2 rounded-xl overflow-hidden" style={{ minHeight: 72 }}>
+      {/* 광고 미승인 중일 때 표시되는 광고 문의 배너 */}
+      {!adFilled && (
+        <a
+          href="mailto:sunryupatners@gmail.com?subject=Investus%20광고%20문의"
+          className="flex items-center justify-between w-full px-4 py-3 rounded-xl border transition-opacity hover:opacity-80 active:opacity-60"
+          style={{
+            background: "rgba(255,255,255,0.03)",
+            borderColor: "rgba(255,255,255,0.07)",
+            textDecoration: "none",
+          }}
+        >
+          <div>
+            <p className="text-[11px] font-semibold" style={{ color: "var(--text)" }}>
+              📢 광고 문의
+            </p>
+            <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
+              증권사·핀테크·투자 관련 광고 · sunryupatners@gmail.com
+            </p>
+          </div>
+          <span className="text-[10px] font-semibold px-2 py-1 rounded-lg flex-shrink-0 ml-3"
+            style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
+            문의하기
+          </span>
+        </a>
+      )}
+      {/* AdSense ins 태그 — 승인 후 실제 광고 표시 */}
       <ins
+        ref={insRef}
         className="adsbygoogle"
-        style={insStyle}
+        style={{ ...insStyle, display: adFilled ? "block" : "none" }}
         data-ad-client={pubId}
-        data-ad-slot={slotId}
-        {...(format === "auto"
+        {...(slotId ? { "data-ad-slot": slotId } : {})}
+        {...(format === "auto" || !slotId
           ? { "data-ad-format": "auto", "data-full-width-responsive": "true" }
           : {})}
       />

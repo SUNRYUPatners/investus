@@ -1,53 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0f1e"/>
-      <stop offset="100%" stop-color="#0d1629"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="460" fill="url(#bg)"/>
-  <rect x="0" y="0" width="800" height="4" fill="#c084fc"/>
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#c084fc"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="2">INVESTUS · SPCX × AMTX REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">SpaceX × Anthropic — 위성 AI 컴퓨팅 파트너십 체결</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.29</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
 
-  <rect x="32" y="20" width="80" height="22" rx="5" fill="rgba(192,132,252,0.15)"/>
-  <text x="72" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#c084fc" text-anchor="middle">SPCX×AMTX</text>
-  <text x="124" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
-  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+  <!-- Partnership visual -->
+  <rect x="30" y="84" width="310" height="120" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="185" y="114" font-family="Arial,sans-serif" font-size="28" text-anchor="middle">🚀</text>
+  <text x="185" y="148" font-family="Arial,sans-serif" font-size="16" fill="#c084fc" font-weight="900" text-anchor="middle">SpaceX</text>
+  <text x="185" y="168" font-family="Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">위성 컴퓨팅 인프라 제공</text>
+  <text x="185" y="184" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Starlink 위성 + xAI Colossus</text>
+  <text x="185" y="200" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="middle">저궤도 분산 컴퓨팅</text>
 
-  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">SpaceX × Anthropic AI 컴퓨팅</text>
-  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#c084fc">파트너십 + 우주 데이터센터 비전</text>
-  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">SpaceX 8,000개 H100 · v1.0 AI 서비스 플랫폼 · 우주 데이터센터 확장</text>
+  <text x="395" y="152" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" text-anchor="middle">×</text>
 
-  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <rect x="460" y="84" width="310" height="120" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="615" y="114" font-family="Arial,sans-serif" font-size="28" text-anchor="middle">🤖</text>
+  <text x="615" y="148" font-family="Arial,sans-serif" font-size="16" fill="#00e5a0" font-weight="900" text-anchor="middle">Anthropic</text>
+  <text x="615" y="168" font-family="Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">Claude AI 모델 공급</text>
+  <text x="615" y="184" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">$65B 펀딩 · $47B ARR 목표</text>
+  <text x="615" y="200" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle">엣지 AI 추론 전문화</text>
 
-  <rect x="32" y="148" width="356" height="80" rx="8" fill="rgba(192,132,252,0.07)" stroke="rgba(192,132,252,0.2)" stroke-width="1"/>
-  <text x="48" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">🤖  AI 컴퓨팅 플랫폼</text>
-  <text x="48" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">SpaceX 8,000개 H100 GPU → v1.0 AI 서비스 플랫폼 완성</text>
-  <text x="48" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Elon: "AI 컴퓨팅을 서비스로 — 우주 데이터센터로 확장"</text>
-  <text x="48" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">xAI Grok + SpaceX 인프라 시너지 → AI 클라우드 경쟁 진입</text>
+  <rect x="30" y="218" width="740" height="64" rx="8" fill="#060b18" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="30" y="218" width="4" height="64" rx="2" fill="#c084fc"/>
+  <text x="50" y="240" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ 파트너십 핵심 내용</text>
+  <text x="50" y="260" font-family="Arial,sans-serif" font-size="11" fill="white">SpaceX 위성망에 Anthropic AI 탑재 → 지상 인터넷 불필요한 엣지 AI 서비스 구현</text>
+  <text x="50" y="276" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">군용·오지·해양·항공 등 인터넷 음영지역 AI 서비스 독점 공급 — 경쟁사 진입 불가 구조</text>
 
-  <rect x="412" y="148" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="428" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">🛰️  우주 데이터센터</text>
-  <text x="428" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">지상 전력 제약 없는 우주 기반 AI 컴퓨팅 인프라 비전</text>
-  <text x="428" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Starship 완전 재사용 + 우주 태양광 → 에너지 무제한</text>
-  <text x="428" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">10년 뷰 — 우주 인프라가 AI 컴퓨팅의 새 프론티어</text>
+  <rect x="30" y="296" width="354" height="90" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <rect x="30" y="296" width="4" height="90" rx="2" fill="#c084fc"/>
+  <text x="50" y="318" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">SPCX 수혜</text>
+  <text x="50" y="342" font-family="Arial,sans-serif" font-size="12" fill="white" font-weight="700">위성 컴퓨팅 신규 수익원 확보</text>
+  <text x="50" y="362" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">Starlink → 통신 + AI 컴퓨팅 이중 수익</text>
+  <text x="50" y="378" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">xAI Colossus 지상 DC + 위성 엣지 = 완결된 AI 인프라</text>
 
-  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">🔗  Anthropic 연결</text>
-  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">📈  투자 시사점</text>
-  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">SpaceX GPU 인프라 + Anthropic Claude 모델 조합</text>
-  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">xAI·Claude 협력 구조 → AI 인프라 공급망 확장</text>
-  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">비상장 양사 수혜 — 간접 투자 포트폴리오 설계 필요</text>
+  <rect x="402" y="296" width="368" height="90" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <rect x="402" y="296" width="4" height="90" rx="2" fill="#00e5a0"/>
+  <text x="422" y="318" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">AMTX(Anthropic) 수혜</text>
+  <text x="422" y="342" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">SpaceX 인프라로 배포 채널 확장</text>
+  <text x="422" y="362" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">AWS·GCP·Azure 외 위성 채널 추가</text>
+  <text x="422" y="378" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">방산·정부 계약 진입 — 고마진 B2G 수익</text>
 
-  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">TSLA: Elon 생태계 확장 수혜 · NVDA: GPU 공급 수혜</text>
-  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">우주 데이터센터 현실화 시 CAPEX 수혜 섹터 확대</text>
-  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">비상장 SpaceX·Anthropic IPO 대기 — 상장 시 직접 수혜</text>
-
-  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.15)" stroke-width="1"/>
-  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY CATALYST</text>
-  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#c084fc" text-anchor="middle">SpaceX 8K H100 + Anthropic 협력 = AI 클라우드 3강 도전 · 우주 데이터센터 10년 비전 구체화</text>
-
-  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
-  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+  <line x1="30" y1="400" x2="770" y2="400" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="416" font-family="Arial,sans-serif" font-size="8" fill="#374151">투자 참고용 · 투자 권유 아님</text>
+  <text x="770" y="416" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
 </svg>

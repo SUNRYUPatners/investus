@@ -1,57 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0f1e"/>
-      <stop offset="100%" stop-color="#0d1629"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="460" fill="url(#bg)"/>
-  <rect x="0" y="0" width="800" height="4" fill="#60a5fa"/>
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#c084fc"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="2">INVESTUS · SPCX REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Starlink 30개 통신사 파트너십 — 실과금 B2B2C 구조 확립</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.29</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
 
-  <rect x="32" y="20" width="60" height="22" rx="5" fill="rgba(96,165,250,0.15)"/>
-  <text x="62" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#60a5fa" text-anchor="middle">SPCX</text>
-  <text x="104" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
-  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+  <!-- Hero number -->
+  <rect x="30" y="84" width="320" height="130" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="2"/>
+  <text x="175" y="120" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">글로벌 통신사 파트너</text>
+  <text x="175" y="180" font-family="Arial,sans-serif" font-size="60" fill="#c084fc" font-weight="900" text-anchor="middle">30+</text>
+  <text x="175" y="208" font-family="Arial,sans-serif" font-size="11" fill="white" text-anchor="middle">실 과금 통신사 수</text>
 
-  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">Starlink — 전 세계 30개+ 통신사</text>
-  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#60a5fa">네트워크 레이어 파트너십 · 실 과금 구조</text>
-  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">핸드셰이크 아닌 실제 과금 구조 · 통신 인프라 핵심 레이어로 진입</text>
+  <!-- Right region breakdown -->
+  <rect x="368" y="84" width="402" height="60" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.6"/>
+  <text x="440" y="106" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">🌎 미주</text>
+  <text x="440" y="128" font-family="Arial,sans-serif" font-size="12" fill="white" font-weight="700">T-Mobile · AT&amp;T · Verizon 포함</text>
+  <text x="680" y="120" font-family="Arial,sans-serif" font-size="20" fill="#c084fc" font-weight="900" text-anchor="middle">12</text>
 
-  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <rect x="368" y="154" width="402" height="60" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.4"/>
+  <text x="440" y="176" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">🌍 유럽·아시아</text>
+  <text x="440" y="198" font-family="Arial,sans-serif" font-size="12" fill="white" font-weight="700">도이치텔레콤 · NTT · KT 포함</text>
+  <text x="680" y="190" font-family="Arial,sans-serif" font-size="20" fill="#c084fc" font-weight="900" text-anchor="middle">18</text>
 
-  <!-- Stats -->
-  <rect x="32" y="148" width="230" height="80" rx="8" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
-  <text x="147" y="178" font-family="system-ui,sans-serif" font-size="30" font-weight="800" fill="#60a5fa" text-anchor="middle">30+</text>
-  <text x="147" y="198" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">글로벌 통신사 파트너</text>
-  <text x="147" y="216" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Carrier Partners</text>
+  <!-- Model explanation -->
+  <rect x="30" y="228" width="740" height="64" rx="8" fill="#060b18" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="30" y="228" width="4" height="64" rx="2" fill="#c084fc"/>
+  <text x="50" y="250" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">■ B2B2C 수익 구조</text>
+  <text x="50" y="270" font-family="Arial,sans-serif" font-size="11" fill="white">통신사가 Starlink 위성 용량을 구매 → 자체 요금제에 번들 → 최종 소비자에 판매</text>
+  <text x="50" y="286" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">SpaceX는 B2B 도매 수익 안정적 확보 · 통신사는 커버리지 확장 · 소비자는 원활한 연결</text>
 
-  <rect x="274" y="148" width="230" height="80" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="389" y="178" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#60a5fa" text-anchor="middle">실 과금</text>
-  <text x="389" y="198" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">수익화 구조 확인</text>
-  <text x="389" y="216" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Revenue-Generating</text>
+  <rect x="30" y="306" width="354" height="80" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <rect x="30" y="306" width="4" height="80" rx="2" fill="#c084fc"/>
+  <text x="50" y="328" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">수익 규모</text>
+  <text x="50" y="352" font-family="Arial,sans-serif" font-size="12" fill="white" font-weight="700">Starlink 연 $11.4B 매출</text>
+  <text x="50" y="372" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">Q1 영업이익 $1B 돌파 · 흑자 구조 확립</text>
+  <text x="50" y="382" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">파트너사 수 → 수익 직결 상관관계</text>
 
-  <rect x="516" y="148" width="252" height="80" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="642" y="178" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#60a5fa" text-anchor="middle">B2B2C</text>
-  <text x="642" y="198" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">통신사 → 소비자 연결</text>
-  <text x="642" y="216" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Distribution Model</text>
+  <rect x="402" y="306" width="368" height="80" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <rect x="402" y="306" width="4" height="80" rx="2" fill="#c084fc"/>
+  <text x="422" y="328" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 시사점</text>
+  <text x="422" y="352" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">30개 → 100개 파트너 경로 확인</text>
+  <text x="422" y="372" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">B2B2C = 예측 가능한 반복 수익 구조</text>
+  <text x="422" y="382" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">SpaceX IPO 핵심 밸류에이션 근거</text>
 
-  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">📡  파트너십 구조</text>
-  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">T-Mobile·Deutsche Telekom·SoftBank·SK텔레콤 등 포함</text>
-  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">기존 통신사 인프라의 틈새 커버리지를 Starlink로 보완</text>
-  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">MOU가 아닌 실제 계약·과금 → 수익 현실화 단계</text>
-
-  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">💰  수익 영향</text>
-  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">통신사당 수억 달러 규모 연간 도매 수익 가능</text>
-  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">30개 × 수억 = Starlink B2B 수익 수십억 달러 구조</text>
-  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">Starlink 단독 분리 상장 시 이 수익 구조가 밸류에이션 기반</text>
-
-  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(96,165,250,0.06)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
-  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY CATALYST</text>
-  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#60a5fa" text-anchor="middle">30개+ 통신사 실 과금 구조 = Starlink B2B 수익 현실화 · 위성통신 인프라 표준으로 자리매김</text>
-
-  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
-  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+  <line x1="30" y1="400" x2="770" y2="400" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="416" font-family="Arial,sans-serif" font-size="8" fill="#374151">투자 참고용 · 투자 권유 아님</text>
+  <text x="770" y="416" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
 </svg>

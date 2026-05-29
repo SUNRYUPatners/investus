@@ -1,97 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" width="800" height="580">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0f1e"/>
-      <stop offset="100%" stop-color="#0d1629"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="580" fill="url(#bg)"/>
-  <rect x="0" y="0" width="800" height="4" fill="#00e5a0"/>
+<svg width="800" height="580" viewBox="0 0 800 580" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="580" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
 
-  <!-- Header -->
-  <text x="32" y="42" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#00e5a0" letter-spacing="2">2026.05.29  MARKET BRIEF</text>
-  <text x="32" y="70" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#ffffff">5/29 시장 한장 요약</text>
-  <text x="32" y="92" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">핵심 12개 이슈 · TSLA · SPCX · AMTX · SMCI · META · 매크로</text>
-  <text x="768" y="42" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)" text-anchor="end">SUNRYU Partners CIO</text>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · DAILY BRIEF</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="20" fill="white" font-weight="700">5/29 오늘의 핵심 6가지</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.29</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
 
-  <line x1="32" y1="104" x2="768" y2="104" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Row 1 Left: TSLA AVO -->
+  <rect x="30" y="76" width="358" height="92" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="76" width="4" height="92" rx="2" fill="#00e5a0"/>
+  <text x="48" y="100" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tesla Robotaxi AVO 인가</text>
+  <text x="48" y="132" font-family="Arial,sans-serif" font-size="30" fill="#00e5a0" font-weight="700">Austin</text>
+  <text x="48" y="152" font-family="Arial,sans-serif" font-size="11" fill="white">Texas 상업 운행 공식 허가</text>
+  <text x="48" y="162" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Cybercab Q2 유료 서비스 · Robotaxi 수익화 전환점</text>
 
-  <!-- Left column -->
-  <!-- 1 -->
-  <rect x="32" y="116" width="360" height="52" rx="8" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.18)" stroke-width="1"/>
-  <text x="48" y="136" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#00e5a0">🤖  TSLA — 텍사스 로보택시 AVO 공식 인가</text>
-  <text x="48" y="152" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">Tesla Robotaxi LLC · 텍사스 DMV 승인 · SAE Level 4+ 상업 운행</text>
-  <text x="48" y="162" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">유료 완전 무감독 로보택시 합법화 · 7월 오스틴 배포 일정 가시화</text>
+  <!-- Row 1 Right: SPCX IPO -->
+  <rect x="412" y="76" width="358" height="92" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="412" y="76" width="4" height="92" rx="2" fill="#c084fc"/>
+  <text x="430" y="100" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">SpaceX S-1 · TAM $28.5T</text>
+  <text x="430" y="132" font-family="Arial,sans-serif" font-size="30" fill="#c084fc" font-weight="700">$350B</text>
+  <text x="430" y="152" font-family="Arial,sans-serif" font-size="11" fill="white">역대 최대 IPO · 나스닥 상장 추진</text>
+  <text x="430" y="162" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">3개 사업부 공개 · Starlink Q1 $1B 영업이익</text>
 
-  <!-- 2 -->
-  <rect x="32" y="176" width="360" height="52" rx="8" fill="rgba(0,229,160,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="48" y="196" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#00e5a0">🚗  TSLA — FSD 일일 2,670만 마일 · 전월比 +44%</text>
-  <text x="48" y="212" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">4월 1,850만 → 5월 2,670만 마일/일 (Morgan Stanley)</text>
-  <text x="48" y="222" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">연환산 97.5억 마일 · 전 세계 데이터 축적 가속</text>
+  <!-- Row 2 Left: FSD 27M -->
+  <rect x="30" y="178" width="358" height="92" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="178" width="4" height="92" rx="2" fill="#00e5a0"/>
+  <text x="48" y="202" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tesla FSD 누적 주행</text>
+  <text x="48" y="246" font-family="Arial,sans-serif" font-size="38" fill="#00e5a0" font-weight="700">+44%</text>
+  <text x="48" y="260" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">주간 주행 급등 · 누적 2,670만 마일 돌파</text>
 
-  <!-- 3 -->
-  <rect x="32" y="236" width="360" height="52" rx="8" fill="rgba(0,229,160,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="48" y="256" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">🇨🇳  TSLA — 중국 Model Y 연말 프로모션 + FSD 진출</text>
-  <text x="48" y="272" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">무이자·저금리 프로모션 2026년 말까지 연장</text>
-  <text x="48" y="282" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">NIO 창업자 Li Bin: "테슬라 FSD 중국 진출은 업계에 좋은 일"</text>
+  <!-- Row 2 Right: AMTX $65B -->
+  <rect x="412" y="178" width="358" height="92" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.4"/>
+  <rect x="412" y="178" width="4" height="92" rx="2" fill="#00e5a0"/>
+  <text x="430" y="202" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Anthropic 신규 펀딩</text>
+  <text x="591" y="240" font-family="Arial,sans-serif" font-size="36" fill="#00e5a0" font-weight="700" text-anchor="middle">$65B</text>
+  <text x="430" y="257" font-family="Arial,sans-serif" font-size="10" fill="white">비상장 AI 세계 최대 · ARR $47B 목표</text>
+  <text x="430" y="264" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">AMZN 최대 투자자 · AWS AI 매출 직결</text>
 
-  <!-- 4 -->
-  <rect x="32" y="296" width="360" height="52" rx="8" fill="rgba(0,229,160,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">⚡  TSLA — Giga Texas Corte 2 · 400+ Megapack 확장</text>
-  <text x="48" y="332" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">Phase 2: 250~290 Megapack · Limnadale BESS 90MW</text>
-  <text x="48" y="342" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">Model Y·Cybertruck 물량 폭증 · 수송 트럭 줄이어</text>
+  <!-- Row 3 Left: META $14 -->
+  <rect x="30" y="280" width="358" height="92" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.35"/>
+  <rect x="30" y="280" width="4" height="92" rx="2" fill="#60a5fa"/>
+  <text x="48" y="304" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">META 구독 출시</text>
+  <text x="48" y="340" font-family="Arial,sans-serif" font-size="30" fill="#60a5fa" font-weight="700">$14/월</text>
+  <text x="48" y="360" font-family="Arial,sans-serif" font-size="10" fill="white">Meta Blue · 광고 없는 프리미엄 플랜</text>
+  <text x="48" y="366" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">광고 외 반복 수익 모델 · 목표주가 $314</text>
 
-  <!-- 5 -->
-  <rect x="32" y="356" width="360" height="52" rx="8" fill="rgba(96,165,250,0.07)" stroke="rgba(96,165,250,0.18)" stroke-width="1"/>
-  <text x="48" y="376" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">🚀  SPCX — S-1 IPO 분석 · ARK TAM $28.5조</text>
-  <text x="48" y="392" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">Space $4.1B · Connectivity $11.4B · AI $3.2B (2025)</text>
-  <text x="48" y="402" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">Polymarkets IPO 시총 $2조+ · ARK $28.5T TAM 분석</text>
+  <!-- Row 3 Right: CBDC Ban -->
+  <rect x="412" y="280" width="358" height="92" rx="8" fill="#0d0b05" stroke="#fb923c" stroke-width="1.2" stroke-opacity="0.4"/>
+  <rect x="412" y="280" width="4" height="92" rx="2" fill="#fb923c"/>
+  <text x="430" y="304" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">CBDC 폐지 · BTC 정책 수혜</text>
+  <text x="430" y="340" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700">디지털 달러 없음 공식 확인</text>
+  <text x="430" y="360" font-family="Arial,sans-serif" font-size="10" fill="white">Bessent 재무장관 입법 추진 선언</text>
+  <text x="430" y="366" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">IBIT·COIN·MSTR 정책 수혜 확정</text>
 
-  <!-- 6 -->
-  <rect x="32" y="416" width="360" height="52" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="48" y="436" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">📡  SPCX — Starlink 30개 통신사 파트너십</text>
-  <text x="48" y="452" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">전 세계 통신사 30개+가 Starlink를 네트워크 레이어로 연동</text>
-  <text x="48" y="462" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">핸드셰이크 아닌 실제 과금 구조 · 통신 인프라 핵심으로</text>
+  <!-- Key insight footer -->
+  <rect x="30" y="382" width="740" height="72" rx="8" fill="#060b18" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="30" y="382" width="4" height="72" rx="2" fill="#00e5a0"/>
+  <text x="48" y="403" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">핵심 투자 포인트</text>
+  <text x="48" y="421" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">TSLA AVO 인가 = Robotaxi 수익화 전환점 · SpaceX S-1 = $350B 밸류에이션 근거 공개</text>
+  <text x="48" y="438" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">Anthropic $65B = AMZN AWS AI 수익 직결 · META $14 구독 = 광고 의존도 감소</text>
+  <text x="48" y="448" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">CBDC 폐지 공식화 = BTC 민간 화폐 지위 강화 · 이란 협상 = XLE 단기 조정 경보</text>
 
-  <!-- Right column -->
-  <!-- 7 -->
-  <rect x="408" y="116" width="360" height="52" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="424" y="136" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#60a5fa">🛰️  SPCX × AMTX — AI 컴퓨팅 파트너십 + 우주 데이터센터</text>
-  <text x="424" y="152" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">SpaceX 8,000개 H100 · v1.0 AI 서비스 플랫폼 완성</text>
-  <text x="424" y="162" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">Elon: "AI 컴퓨팅을 서비스로 — 우주 데이터센터로 확장"</text>
-
-  <!-- 8 -->
-  <rect x="408" y="176" width="360" height="52" rx="8" fill="rgba(168,85,247,0.07)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
-  <text x="424" y="196" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">🤖  AMTX — Anthropic $65B 펀딩 · 가장 가치 있는 사기업</text>
-  <text x="424" y="212" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">Claude 연매출 $47B · 세계 최대 비상장 AI 기업 등극</text>
-  <text x="424" y="222" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">OpenAI·Google·Amazon과 어깨 나란히 · 상장 논의</text>
-
-  <!-- 9 -->
-  <rect x="408" y="236" width="360" height="52" rx="8" fill="rgba(249,115,22,0.06)" stroke="rgba(249,115,22,0.18)" stroke-width="1"/>
-  <text x="424" y="256" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">💻  SMCI — AI 인프라 ROI 2030 · 커스텀 칩 하이퍼스케일러 1위</text>
-  <text x="424" y="272" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">2030년 AI 인프라 투자 양(+)의 ROI 달성 전망</text>
-  <text x="424" y="282" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">커스텀 칩 고집 → 하이퍼스케일러 AI 매출 점유율 최대</text>
-
-  <!-- 10 -->
-  <rect x="408" y="296" width="360" height="52" rx="8" fill="rgba(96,165,250,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="424" y="316" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">💎  META — Dollar-Dollar 구독 출시 · 새 수익 레이어</text>
-  <text x="424" y="332" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">$14 Meta Dollar-Dollar 구독 · 애널 목표주가 $314 Buy</text>
-  <text x="424" y="342" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">광고 외 구독 수익 레이어 확보 · 밸류에이션 재평가 촉매</text>
-
-  <!-- 11 -->
-  <rect x="408" y="356" width="360" height="52" rx="8" fill="rgba(255,77,109,0.07)" stroke="rgba(255,77,109,0.18)" stroke-width="1"/>
-  <text x="424" y="376" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#ff4d6d">🌏  이란 핵협상 — 30개월 내 제재 해제 시나리오</text>
-  <text x="424" y="392" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">미-이란 핵 프레임워크 협상 진행 · 역대 최대 핵무기 감축</text>
-  <text x="424" y="402" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">원유·방산 섹터 포지션 조정 · XLE·RTX 관찰 필요</text>
-
-  <!-- 12 -->
-  <rect x="408" y="416" width="360" height="52" rx="8" fill="rgba(249,115,22,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="424" y="436" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">💰  CBDC 전면 폐지 확정 — 트럼프 행정부 Scott Bessent</text>
-  <text x="424" y="452" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.65)">디지털 달러 없음 공식 확인 · 비트코인·암호화폐 수혜</text>
-  <text x="424" y="462" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">"Digital assets의 Wild West 통제" 선언 · BTC 정책 환경 긍정</text>
-
-  <!-- Footer -->
-  <line x1="32" y1="488" x2="768" y2="488" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-  <text x="32" y="506" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 장마감 기준 · 투자 권유 아님 · 참고용</text>
-  <text x="768" y="506" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+  <line x1="30" y1="466" x2="770" y2="466" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="482" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="482" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
 </svg>

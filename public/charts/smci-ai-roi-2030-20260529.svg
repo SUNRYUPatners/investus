@@ -1,53 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0f1e"/>
-      <stop offset="100%" stop-color="#0d1629"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="460" fill="url(#bg)"/>
-  <rect x="0" y="0" width="800" height="4" fill="#fb923c"/>
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#fb923c"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700" letter-spacing="2">INVESTUS · SMCI REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">SMCI AI 인프라 ROI — 2030년까지 투자 회수 전망</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.29</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
 
-  <rect x="32" y="20" width="60" height="22" rx="5" fill="rgba(249,115,22,0.15)"/>
-  <text x="62" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#fb923c" text-anchor="middle">SMCI</text>
-  <text x="104" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
-  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+  <!-- ROI timeline -->
+  <rect x="30" y="84" width="740" height="110" rx="8" fill="#060b18" stroke="#fb923c" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="50" y="106" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">AI 인프라 투자 회수 타임라인</text>
 
-  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">AI 인프라 투자 ROI 2030년 달성</text>
-  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#fb923c">커스텀 칩 하이퍼스케일러 AI 매출 1위</text>
-  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">2030년 AI 인프라 양(+)의 ROI 달성 전망 · 커스텀 칩 고집 → 점유율 최대</text>
+  <!-- Timeline bar -->
+  <rect x="50" y="120" width="700" height="8" rx="4" fill="#1e2330"/>
+  <rect x="50" y="120" width="350" height="8" rx="4" fill="#fb923c"/>
 
-  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="50" y="146" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">2026</text>
+  <text x="50" y="158" font-family="Arial,sans-serif" font-size="9" fill="#fb923c">수주 $40B</text>
 
-  <rect x="32" y="148" width="356" height="80" rx="8" fill="rgba(249,115,22,0.08)" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
-  <text x="48" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">💻  ROI 2030 전망</text>
-  <text x="48" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">현재 AI 인프라 투자는 비용 > 수익 — 2030년 역전 전망</text>
-  <text x="48" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">AI 추론 가격 하락 + 사용량 증가 복합 효과로 양의 ROI</text>
-  <text x="48" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">하이퍼스케일러 $225B+ CAPEX 2027~2030 회수 구조</text>
+  <text x="230" y="146" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">2027</text>
+  <text x="230" y="158" font-family="Arial,sans-serif" font-size="9" fill="#fb923c">매출 $30B</text>
 
-  <rect x="412" y="148" width="356" height="80" rx="8" fill="rgba(249,115,22,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="428" y="170" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">🔧  커스텀 칩 전략</text>
-  <text x="428" y="188" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">커스텀 칩 고집 → 하이퍼스케일러 AI 매출 점유율 최대</text>
-  <text x="428" y="204" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">NVIDIA GPU 위존도 낮추는 자체 칩 → 마진 개선 구조</text>
-  <text x="428" y="220" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">Brookfield CEO: 커스텀 칩이 AI 인프라 차별화 핵심</text>
+  <text x="400" y="146" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">2028</text>
+  <text x="400" y="158" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af">흑자 전환</text>
 
-  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(249,115,22,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">🏗️  SMCI 포지션</text>
-  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Super Micro = AI 서버 인프라 핵심 공급사</text>
-  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">커스텀 랙 솔루션 + 액체 냉각 + GPU 최적화 서버</text>
-  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">NVDA Blackwell Ultra 채택 하이퍼스케일러 주요 공급사</text>
+  <text x="580" y="146" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">2030</text>
+  <text x="580" y="158" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af">ROI 완성</text>
 
-  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(249,115,22,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fb923c">📊  실적 모멘텀</text>
-  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">회계 정정 완료 → 신뢰 회복 + 수주잔고 역대 최고</text>
-  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">FY2026 매출 $25B+ 전망 · 2030 ROI 달성 시 수혜 1순위</text>
-  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">단기 회계 리스크 해소 후 본업 성장 스토리로 재평가</text>
+  <text x="400" y="182" font-family="Arial,sans-serif" font-size="11" fill="white" text-anchor="middle">현재 위치 → 2030 목표 ROI 달성까지 약 4년 구간</text>
 
-  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(249,115,22,0.06)" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
-  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY CATALYST</text>
-  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#fb923c" text-anchor="middle">2030 AI ROI 전환 + 커스텀 칩 채택 확대 = SMCI AI 서버 수요 구조적 성장 수혜</text>
+  <!-- Key metrics -->
+  <rect x="30" y="206" width="220" height="100" rx="8" fill="#0d0a1a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="140" y="230" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">현재 수주 잔고</text>
+  <text x="140" y="270" font-family="Arial,sans-serif" font-size="28" fill="#fb923c" font-weight="900" text-anchor="middle">$40B</text>
+  <text x="140" y="292" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">2026~2028 납품 예정</text>
+  <text x="140" y="302" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">NVDA GPU 우선 할당</text>
 
-  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
-  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+  <rect x="268" y="206" width="220" height="100" rx="8" fill="#0d0a1a" stroke="#fb923c" stroke-width="1.2" stroke-opacity="0.6"/>
+  <text x="378" y="230" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">2027 매출 목표</text>
+  <text x="378" y="270" font-family="Arial,sans-serif" font-size="28" fill="white" font-weight="900" text-anchor="middle">$30B</text>
+  <text x="378" y="292" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">현재 $15B → 2배 성장</text>
+  <text x="378" y="302" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">AI DC 수요 지속 성장</text>
+
+  <rect x="506" y="206" width="264" height="100" rx="8" fill="#0d0a1a" stroke="#fb923c" stroke-width="1.2" stroke-opacity="0.5"/>
+  <text x="638" y="230" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">2030 ROI 시나리오</text>
+  <text x="638" y="260" font-family="Arial,sans-serif" font-size="18" fill="#fb923c" font-weight="900" text-anchor="middle">3x 이상</text>
+  <text x="638" y="282" font-family="Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">현 주가 대비 업사이드</text>
+  <text x="638" y="298" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">AI 인프라 독점 포지션 유지 시</text>
+  <text x="638" y="304" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">(Bull case 가정)</text>
+
+  <rect x="30" y="318" width="740" height="60" rx="8" fill="#060b18" stroke="#fb923c" stroke-width="1" stroke-opacity="0.3"/>
+  <rect x="30" y="318" width="4" height="60" rx="2" fill="#fb923c"/>
+  <text x="50" y="340" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">■ SMCI 경쟁 우위</text>
+  <text x="50" y="360" font-family="Arial,sans-serif" font-size="11" fill="white">NVDA Blackwell Ultra GPU 우선 공급 + 액랭 냉각 시스템 특허 보유 → AI DC 핵심 납품사</text>
+  <text x="50" y="372" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Dell·HPE 대비 SMCI 액랭 시스템 에너지 효율 40% 우위 · 납기 경쟁력 확보</text>
+
+  <line x1="30" y1="392" x2="770" y2="392" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="408" font-family="Arial,sans-serif" font-size="8" fill="#374151">투자 참고용 · 투자 권유 아님</text>
+  <text x="770" y="408" font-family="Arial,sans-serif" font-size="9" fill="#fb923c" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
 </svg>

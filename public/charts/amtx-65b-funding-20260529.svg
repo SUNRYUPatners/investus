@@ -1,57 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0f1e"/>
-      <stop offset="100%" stop-color="#0d1629"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="460" fill="url(#bg)"/>
-  <rect x="0" y="0" width="800" height="4" fill="#c084fc"/>
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · AMTX(ANTHROPIC) REPORT</text>
+  <text x="30" y="58" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Anthropic $65B 펀딩 확정 — 비상장 AI 기업 세계 최대</text>
+  <text x="770" y="58" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.29</text>
+  <line x1="30" y1="70" x2="770" y2="70" stroke="#1e2330" stroke-width="1"/>
 
-  <rect x="32" y="20" width="60" height="22" rx="5" fill="rgba(192,132,252,0.15)"/>
-  <text x="62" y="35" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#c084fc" text-anchor="middle">AMTX</text>
-  <text x="104" y="35" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">2026.05.29</text>
-  <text x="768" y="35" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO</text>
+  <!-- Big hero -->
+  <rect x="30" y="84" width="360" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="2"/>
+  <text x="205" y="120" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">신규 펀딩 라운드</text>
+  <text x="205" y="176" font-family="Arial,sans-serif" font-size="46" fill="#00e5a0" font-weight="900" text-anchor="middle">$65B</text>
+  <text x="205" y="208" font-family="Arial,sans-serif" font-size="11" fill="white" text-anchor="middle">세계 최대 비상장 AI 기업 펀딩</text>
 
-  <text x="32" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#ffffff">Anthropic $65B 펀딩 라운드</text>
-  <text x="32" y="96" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#c084fc">세계에서 가장 가치 있는 사기업</text>
-  <text x="32" y="118" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">Claude 연매출 $47B · OpenAI·Google·Amazon과 어깨 나란히 · 상장 논의 본격화</text>
+  <!-- ARR growth bars (right side) -->
+  <text x="420" y="98" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">ARR 성장 ($B)</text>
+  <rect x="420" y="108" width="24" height="100" rx="3" fill="#1e2330"/>
+  <text x="432" y="220" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">Q3'25</text>
+  <text x="432" y="232" font-family="Arial,sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">$9B</text>
 
-  <line x1="32" y1="132" x2="768" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <rect x="460" y="90" width="24" height="118" rx="3" fill="#00e5a0" fill-opacity="0.5"/>
+  <text x="472" y="220" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">Q4'25</text>
+  <text x="472" y="232" font-family="Arial,sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">$19B</text>
 
-  <!-- Stats -->
-  <rect x="32" y="148" width="224" height="80" rx="8" fill="rgba(192,132,252,0.08)" stroke="rgba(192,132,252,0.2)" stroke-width="1"/>
-  <text x="144" y="176" font-family="system-ui,sans-serif" font-size="26" font-weight="800" fill="#c084fc" text-anchor="middle">$65B</text>
-  <text x="144" y="194" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">기업가치</text>
-  <text x="144" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Valuation</text>
+  <rect x="500" y="60" width="24" height="148" rx="3" fill="#00e5a0" fill-opacity="0.7"/>
+  <text x="512" y="220" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">Q1'26</text>
+  <text x="512" y="232" font-family="Arial,sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">$30B</text>
 
-  <rect x="268" y="148" width="224" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="380" y="176" font-family="system-ui,sans-serif" font-size="26" font-weight="800" fill="#c084fc" text-anchor="middle">$47B</text>
-  <text x="380" y="194" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">연 매출 (ARR)</text>
-  <text x="380" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Annual Revenue</text>
+  <rect x="540" y="10" width="36" height="198" rx="3" fill="#00e5a0"/>
+  <text x="558" y="220" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle" font-weight="700">May'26</text>
+  <text x="558" y="232" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle" font-weight="700">$47B</text>
+  <text x="558" y="8" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle" font-weight="700">⭐</text>
+  <line x1="410" y1="208" x2="770" y2="208" stroke="#1e2330" stroke-width="1"/>
 
-  <rect x="504" y="148" width="264" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="636" y="172" font-family="system-ui,sans-serif" font-size="17" font-weight="800" fill="#c084fc" text-anchor="middle">비상장 AI</text>
-  <text x="636" y="192" font-family="system-ui,sans-serif" font-size="17" font-weight="800" fill="#c084fc" text-anchor="middle">세계 1위</text>
-  <text x="636" y="212" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.35)" text-anchor="middle">Largest Private AI</text>
+  <!-- Comparison -->
+  <rect x="610" y="84" width="160" height="120" rx="8" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <text x="690" y="108" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">vs 타 유니콘</text>
+  <text x="690" y="132" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Stripe $65B</text>
+  <text x="690" y="152" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">SpaceX $350B</text>
+  <text x="690" y="176" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">Anthropic ARR</text>
+  <text x="690" y="196" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" text-anchor="middle">세계 1위 임박</text>
 
-  <rect x="32" y="244" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="48" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">🤖  Claude 성장 속도</text>
-  <text x="48" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Claude 연매출 $47B — OpenAI ChatGPT와 직접 경쟁</text>
-  <text x="48" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">AWS Bedrock 통해 기업 고객 클로드 사용 폭발적 증가</text>
-  <text x="48" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">5개월 내 5배 성장 — 기업용 AI 시장 가장 빠른 성장</text>
+  <rect x="30" y="238" width="740" height="60" rx="8" fill="#060b18" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="30" y="238" width="4" height="60" rx="2" fill="#00e5a0"/>
+  <text x="50" y="260" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">■ Amazon(AMZN) 간접 수혜</text>
+  <text x="50" y="280" font-family="Arial,sans-serif" font-size="11" fill="white">최대 투자자 $4B+ · AWS 독점 배포 파트너 → Anthropic ARR 성장 = AWS AI 매출 직결</text>
+  <text x="50" y="292" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Claude API 급성장 → AWS 클라우드 AI 수익 동반 상승</text>
 
-  <rect x="412" y="244" width="356" height="80" rx="8" fill="rgba(192,132,252,0.05)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-  <text x="428" y="266" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c084fc">📈  IPO 전망</text>
-  <text x="428" y="284" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">$65B 기업가치 → IPO 시 $100B+ 재평가 논의</text>
-  <text x="428" y="300" font-family="system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.7)">Amazon AWS 최대 주주 → 상장 후 AWS 밸류에이션 재평가</text>
-  <text x="428" y="316" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">Google도 주요 투자자 — 상장 시 투자수익 실현 기대</text>
+  <rect x="30" y="310" width="354" height="76" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <rect x="30" y="310" width="4" height="76" rx="2" fill="#00e5a0"/>
+  <text x="50" y="332" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">성장률</text>
+  <text x="50" y="358" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700">8개월 만에 ARR 5배 성장</text>
+  <text x="50" y="378" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">$9B(Sep'25) → $47B(May'26)</text>
 
-  <rect x="32" y="340" width="736" height="54" rx="8" fill="rgba(192,132,252,0.06)" stroke="rgba(192,132,252,0.15)" stroke-width="1"/>
-  <text x="400" y="360" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle">KEY CATALYST</text>
-  <text x="400" y="382" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#c084fc" text-anchor="middle">$65B 세계 최대 비상장 AI · Claude $47B ARR · IPO 시 AMZN·GOOGL 투자수익 실현 촉매</text>
+  <rect x="402" y="310" width="368" height="76" rx="6" fill="#0a0f1e" stroke="#1e2330" stroke-width="1"/>
+  <rect x="402" y="310" width="4" height="76" rx="2" fill="#00e5a0"/>
+  <text x="422" y="332" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">투자 시사점</text>
+  <text x="422" y="358" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">AMZN = Anthropic 성장의 최대 수혜주</text>
+  <text x="422" y="378" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">AWS AI 수익 직결 · 주가 디스카운트 해소 기대</text>
 
-  <line x1="32" y1="408" x2="768" y2="408" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-  <text x="32" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">2026.05.29 · 투자 권유 아님 · 참고용</text>
-  <text x="768" y="426" font-family="system-ui,sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="end">SUNRYU Partners CIO  ·  Investus</text>
+  <line x1="30" y1="400" x2="770" y2="400" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="416" font-family="Arial,sans-serif" font-size="8" fill="#374151">투자 참고용 · 투자 권유 아님</text>
+  <text x="770" y="416" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="end" font-weight="700">SUNRYU Partners CIO</text>
 </svg>
