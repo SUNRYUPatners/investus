@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { StockChart } from "@/components/StockChart";
 import { NewsCard } from "@/components/NewsCard";
 import { ChevronLeft, ChevronDown } from "lucide-react";
+import { ShareButton } from "@/components/ShareButton";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import type { NewsItem } from "@/lib/api";
@@ -402,8 +403,8 @@ export default function StockPage({
 
       <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 pb-24 lg:pb-10">
 
-        {/* 뒤로가기 */}
-        <div className="px-4 lg:px-0 pt-4 pb-2">
+        {/* 뒤로가기 + 공유 */}
+        <div className="px-4 lg:px-0 pt-4 pb-2 flex items-center justify-between">
           <button
             onClick={() => router.back()}
             className="inline-flex items-center gap-1 text-xs"
@@ -411,6 +412,12 @@ export default function StockPage({
           >
             <ChevronLeft className="w-3.5 h-3.5" /> {t.stock.back}
           </button>
+          <ShareButton
+            title={`${upper} ${detail?.name ?? ""} 주가 | Investus`}
+            text={`${upper} 실시간 주가 · 차트 · 분석 — Investus 인베스트어스`}
+            url={`https://www.investus.kr/stock/${upper}`}
+            size="sm"
+          />
         </div>
 
         {/* 홈탭과 동일: flex gap-8 */}

@@ -6,6 +6,7 @@ import { ChevronDown, Pin, X, Lock } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocale } from "@/contexts/LocaleContext";
+import { ShareButton } from "@/components/ShareButton";
 
 // 토스페이먼츠 연결 전까지 false — true로 바꾸면 구독 게이팅 복활
 const SUBSCRIPTION_ENABLED = false;
@@ -402,13 +403,21 @@ function ReportCard({ report }: { report: Report }) {
           </span>
         </div>
 
-        {/* Title */}
-        <h3
-          className="text-sm font-bold leading-snug mb-2"
-          style={{ color: "var(--text)" }}
-        >
-          {report.title}
-        </h3>
+        {/* Title + 공유 */}
+        <div className="flex items-start justify-between gap-2 mb-2">
+          <h3
+            className="text-sm font-bold leading-snug flex-1 min-w-0"
+            style={{ color: "var(--text)" }}
+          >
+            {report.title}
+          </h3>
+          <ShareButton
+            title={report.title}
+            text={`[Investus 리포트] ${report.title}\n${report.summary?.slice(0, 80) ?? ""}`}
+            url={`https://www.investus.kr/insight`}
+            size="sm"
+          />
+        </div>
 
         {/* Summary */}
         <p

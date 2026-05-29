@@ -25,7 +25,7 @@ export function InstallBanner() {
       // 방문 카운터
       const visits = parseInt(localStorage.getItem(VISIT_KEY) ?? "0", 10) + 1;
       localStorage.setItem(VISIT_KEY, String(visits));
-      if (visits < 3) return; // 3번 방문 전에는 안 보임
+      if (visits < 2) return; // 2번 방문부터 표시
 
       // iOS 감지
       const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) && !(window as unknown as Record<string, unknown>).MSStream;
