@@ -33,10 +33,10 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
   // 슬롯 ID 없을 때 — 자동 광고 ins 태그 (구글이 자동 배치)
   if (!slotId) {
     return (
-      <div className="w-full my-1 overflow-hidden rounded-xl">
+      <div className="w-full my-1 overflow-hidden rounded-xl" style={{ maxHeight: 280, minHeight: 0 }}>
         <ins
           className="adsbygoogle"
-          style={{ display: "block" }}
+          style={{ display: "block", maxHeight: 280 }}
           data-ad-client={pubId}
           data-ad-format="auto"
           data-full-width-responsive="true"
@@ -51,10 +51,10 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
       ? { display: "inline-block", width: "300px", height: "250px" }
       : format === "horizontal"
       ? { display: "block", width: "100%", height: "90px" }
-      : { display: "block" };
+      : { display: "block", maxHeight: 280 };
 
   return (
-    <div className="w-full my-1 overflow-hidden rounded-xl">
+    <div className="w-full my-1 overflow-hidden rounded-xl" style={{ maxHeight: 280, minHeight: 0 }}>
       <ins
         className="adsbygoogle"
         style={insStyle}
