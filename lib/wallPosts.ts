@@ -183,7 +183,7 @@ export const MOCK_POSTS: Post[] = [
     content: "머스크가 Optimus 5를 '세계 최고, 경쟁자 없음'이라고 했는데 이거 진짜 말이 되는 게 FSD AI랑 동일 아키텍처쓰는 거잖아요. 보스턴다이내믹스 Atlas는 좋아 보여도 생산 단가가 너무 비싸고 Figure나 1X는 아직 시연 수준이고. 테슬라만 양산 체계 갖춘 AI 로봇 회사예요 지금",
     createdAt: T27 - 9*60_000, likes: 86, comments: 3 },
   { id: 145, symbol: "TSLA", nickname: "익명_7481", holdingLabel: "30주 보유",
-    content: "솔직히 옵티머스 발표가 너무 많아서 피로감 있는데... Gen1 Gen2 Gen3 Gen4 Gen5 이제 5세대까지 나왔다고 하는데 정작 외부 판매는 언제 시작하는 건지 모르겠어요. 테슬라 공장에 자기들이 쓴다는 얘기만 하는데 외부 기업에 파는 시점이 진짜 주가 촉매가 될 것 같아요",
+    content: "옵티머스 발표가 너무 많아서 피로감 있는데... Gen1 Gen2 Gen3 Gen4 Gen5 이제 5세대까지 나왔다고 하는데 정작 외부 판매는 언제 시작하는 건지 모르겠어요. 테슬라 공장에 자기들이 쓴다는 얘기만 하는데 외부 기업에 파는 시점이 진짜 주가 촉매가 될 것 같아요",
     createdAt: T27 - 28*60_000, likes: 55, comments: 3 },
 
   // TSLA — 렌즈 특허 ────────────────────────────────────────────────────
@@ -314,7 +314,7 @@ export const MOCK_POSTS: Post[] = [
     content: "Lisa Su가 CPU 3년 20%/년 성장 얘기하면서 공급이 tight하다는 거 이거 진짜예요? AMD 들고 있는데 GPU만 핫한 줄 알았는데 AI 에이전트 때문에 CPU도 엄청 먹는다는 거잖아요. Venice가 3nm에서 생산 시작했다는 것도 오늘 처음 알았어요",
     createdAt: T23 - 12*60_000, likes: 58, comments: 3 },
   { id: 123, symbol: "AMD", nickname: "익명_1847", holdingLabel: "20주 보유",
-    content: "AMD 들고 있으면서 솔직히 NVDA 못 따라가는 거 속상했는데 CPU 얘기 나오니까 좀 낫네요. EPYC 점유율 계속 오르고 있다는데 Intel이 진짜 힘들어 보여요. 이번에 매수 타이밍 잘 잡은 건지 모르겠어요",
+    content: "AMD 들고 있으면서 NVDA 못 따라가는 거 속상했는데 CPU 얘기 나오니까 좀 낫네요. EPYC 점유율 계속 오르고 있다는데 Intel이 진짜 힘들어 보여요. 이번에 매수 타이밍 잘 잡은 건지 모르겠어요",
     createdAt: T23 - 29*60_000, likes: 41, comments: 2 },
 
   // META — 메가팩 $200M ──────────────────────────────────────────────────
@@ -588,7 +588,7 @@ export const MOCK_POSTS: Post[] = [
     content: "젠슨 황 에어포스원 탑승이 진짜 상징적인 거예요. 이 정도 정치적 커버가 있으면 의회 반발도 막기 어렵죠. NVDA가 미국 국가 전략 자산이 된 거나 다름없어요.",
     createdAt: T15 - m(35), likes: 52, comments: 3 },
   { id: 52, symbol: "NVDA", nickname: "익명_4403", holdingLabel: "8주 보유",
-    content: "솔직히 PER 40배라 추가 매수가 부담스럽긴 한데... 중국 $50B 반영되면 EPS가 완전히 다른 레벨이라 지금 가격이 오히려 싸 보이기도 해요. 분할 매수 중.",
+    content: "PER 40배라 추가 매수가 부담스럽긴 한데... 중국 $50B 반영되면 EPS가 완전히 다른 레벨이라 지금 가격이 오히려 싸 보이기도 해요. 분할 매수 중.",
     createdAt: T15 - h(1), likes: 19, comments: 0 },
 
   // TSLA
@@ -945,7 +945,7 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   ],
   143: [
     { id: 1, nickname: "익명_6291", holdingLabel: "250주 보유", content: "아마존 2000년대 초 적자 예시 항상 나오는데 그 논리 동의해요. 테슬라가 옵티머스 양산 시작하면 공장 인건비 절감이 직결 수익으로 잡혀요. 그때 되면 지금 적자가 투자였다는 게 증명되는 거죠", createdAt: T27 - m(23), likes: 53 },
-    { id: 2, nickname: "익명_4827", holdingLabel: "110주 보유", content: "버티기 힘든 건 맞아요 솔직히. -$4.9B 적자에 주가는 $422... 하지만 이 회사가 Cybercab 깔면 우버·택시 전체를 먹는다는 걸 믿으면 버틸 수 있어요. 믿음의 싸움이에요", createdAt: T27 - m(15), likes: 41 },
+    { id: 2, nickname: "익명_4827", holdingLabel: "110주 보유", content: "버티기 힘든 건 맞아요. -$4.9B 적자에 주가는 $422... 하지만 이 회사가 Cybercab 깔면 우버·택시 전체를 먹는다는 걸 믿으면 버틸 수 있어요. 믿음의 싸움이에요", createdAt: T27 - m(15), likes: 41 },
     { id: 3, nickname: "익명_1948", holdingLabel: "30주 보유", content: "장기 투자 할 수 있는 여유 자금으로만 들어가는 게 맞아요. 지금 단기 수익 바라고 들어가면 멘탈 버텨내기 힘들 것 같아요", createdAt: T27 - m(7), likes: 28 },
     { id: 4, nickname: "익명_7391", holdingLabel: "185주 보유", content: "FSD 구독료가 월 $99인데 테슬라 차 700만대 중 10%만 구독해도 분기 $2.1B이에요. 이게 시작만 되면 흑자 전환은 순식간이에요", createdAt: T27 + m(2), likes: 35 },
     { id: 5, nickname: "익명_9182", holdingLabel: "60주 보유", content: "Cybercab 7월 오스틴 배포가 진짜로 시작되면 그때 분위기 180도 바뀔 것 같아요. 지금은 그 직전 인내의 시간이에요", createdAt: T27 + m(5), likes: 19 },
@@ -1275,7 +1275,7 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   77: [
     { id: 1, nickname: "익명_5521", holdingLabel: "55주 보유", content: "3차 분할 발표 구조가 흥미로워요. 한 번에 충격 주는 게 아니라 파도처럼 나눠서 발표하는 게 주가 관리 의도 같기도 해요. 어쨌든 $8B AI 투자 유지는 진짜 좋은 신호.", createdAt: T19 - m(4), likes: 12 },
     { id: 2, nickname: "익명_7738", holdingLabel: "18주 보유", content: "관리직 집중 감원이면 의사결정 레이어 줄이겠다는 거잖아요. AI 도구로 관리 업무 자동화하겠다는 선언이에요. 단기 충격 있겠지만 장기는 긍정적이라고 봐요.", createdAt: T19 - m(2), likes: 9 },
-    { id: 3, nickname: "익명_2234", holdingLabel: "8주 보유", content: "솔직히 이 소식으로 주가 단기 하락하면 추가 매수 기회라고 봐요. 빅테크 구조조정은 항상 마진 개선 + 주가 재평가로 이어졌잖아요.", createdAt: T19 - m(1), likes: 7 },
+    { id: 3, nickname: "익명_2234", holdingLabel: "8주 보유", content: "이 소식으로 주가 단기 하락하면 추가 매수 기회라고 봐요. 빅테크 구조조정은 항상 마진 개선 + 주가 재평가로 이어졌잖아요.", createdAt: T19 - m(1), likes: 7 },
     { id: 4, nickname: "익명_3392", holdingLabel: "30주 보유", content: "Andromeda AI 광고 시스템 효율 2배라는 거 이미 Q1 실적에서 일부 반영됐는데, 인력 최적화까지 더해지면 Q2·Q3 마진이 사상 최고 갱신하겠네요.", createdAt: T19, likes: 15 },
   ],
   79: [

@@ -33,11 +33,8 @@ function todayET(): string {
 }
 
 // ─── localStorage helpers ────────────────────────────────────────────────────
-function closeCacheKey()    { return `home_ai_close_${lastMarketCloseDate()}`; }
 function intradayCountKey() { return `home_ai_intra_${todayET()}`; }
 
-function readCloseCache():    string | null { try { return localStorage.getItem(closeCacheKey());                  } catch { return null; } }
-function writeCloseCache(a: string)         { try { localStorage.setItem(closeCacheKey(), a);                     } catch { /* ignore */ } }
 function readIntradayCount(): number        { try { return parseInt(localStorage.getItem(intradayCountKey()) ?? "0", 10); } catch { return 0; } }
 function bumpIntradayCount(): number        { const n = readIntradayCount() + 1; try { localStorage.setItem(intradayCountKey(), String(n)); } catch { /* ignore */ } return n; }
 
@@ -46,7 +43,6 @@ export function HomeAIInsight() {
   const { holdings, loaded, isLoggedIn } = usePortfolio();
   const [quotes,        setQuotes]        = useState<LiveQ[]>([]);
   const [usdkrw,        setUsdkrw]        = useState(1350);
-  const [closeAnswer,   setCloseAnswer]   = useState<string | null>(null);
   const [displayAnswer, setDisplayAnswer] = useState<string | null>(null);
   const [analysisDate,  setAnalysisDate]  = useState("");
   const [loading,       setLoading]       = useState(false);
@@ -56,16 +52,9 @@ export function HomeAIInsight() {
   // tracks the trading day we last auto-fetched for
   const fetchedForDay = useRef("");
 
-  // Init from localStorage + poll market status every minute
+  // Init market status + poll every minute
   useEffect(() => {
-    const open = isMarketOpen();
-    // Only show close cache when market is closed — during market hours the
-    // previous-close percentages conflict with live portfolio widget prices.
-    const cached = !open ? readCloseCache() : null;
-    setCloseAnswer(cached);
-    setDisplayAnswer(cached);
-    if (cached) setAnalysisDate(lastMarketCloseDate());
-    setMarketOpen(open);
+    setMarketOpen(isMarketOpen());
     setIntradayUsed(readIntradayCount());
 
     const update = () => setMarketOpen(isMarketOpen());
@@ -107,16 +96,7 @@ export function HomeAIInsight() {
     if (marketOpen) return;                            // still open — wait
     if (quotes.length === 0 || holdings.length === 0) return; // no price data yet
     const day = lastMarketCloseDate();
-    if (fetchedForDay.current === day) return;         // already fetched for this close
-    if (readCloseCache()) {                            // fresh localStorage cache exists
-      const c = readCloseCache()!;
-      setDisplayAnswer(c);
-      setCloseAnswer(c);
-      setAnalysisDate(day);
-      fetchedForDay.current = day;
-      return;
-    }
-    // Clear stale display so loading dots show immediately
+    if (fetchedForDay.current === day) return;         // already fetched this session
     setDisplayAnswer(null);
     setAnalysisDate("");
     fetchedForDay.current = day;
@@ -162,8 +142,6 @@ export function HomeAIInsight() {
           const n = bumpIntradayCount();
           setIntradayUsed(n);
         } else {
-          setCloseAnswer(a);
-          writeCloseCache(a);
           setAnalysisDate(lastMarketCloseDate());
         }
         setExpanded(true);

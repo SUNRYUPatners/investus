@@ -943,7 +943,7 @@ export default function WallPage() {
     id:           r.id + 100000,
     symbol:       r.symbol,
     nickname:     r.nickname,
-    holdingLabel: r.holding_label,
+    holdingLabel: /주 보유$/.test(r.holding_label ?? "") || ["관심종목","보유확인","보유인증"].includes(r.holding_label ?? "") ? r.holding_label : "보유확인",
     content:      r.content,
     createdAt:    new Date(r.created_at).getTime(),
     likes:        r.likes,

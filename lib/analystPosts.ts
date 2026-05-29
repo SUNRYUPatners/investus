@@ -256,7 +256,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "강남 독수리 #52",
     symbol: "TSLA",
     content:
-      "Q1 2026 실적 들여다봄. 비용 +64%가 다 설명이 되냐고? 안 됨. Optimus 개발비·Supercharger 확장·FSD 연구비 다 더해도 내가 보던 예상치보다 $8억 정도 초과임. 어디서 샜는지 세그먼트별 분해가 필요한데 IR 자료 보면서 마저 파악해야 함. 일단 에너지 부문 마진이 괜찮아서 그나마 버티는 구조임. 주식수 35% 증가는 솔직히 별로임.",
+      "Q1 2026 실적 들여다봄. 비용 +64%가 다 설명이 되냐고? 안 됨. Optimus 개발비·Supercharger 확장·FSD 연구비 다 더해도 내가 보던 예상치보다 $8억 정도 초과임. 어디서 샜는지 세그먼트별 분해가 필요한데 IR 자료 보면서 마저 파악해야 함. 일단 에너지 부문 마진이 괜찮아서 그나마 버티는 구조임. 주식수 35% 증가는 별로임.",
     likes: 94,
     comments: 2,
     created_at: new Date(Date.now() - 1000 * 60 * 52).toISOString(),
@@ -323,7 +323,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "강남 사자 #24",
     symbol: "TSLA",
     content:
-      "내 개인 계좌 기준으론 테슬라 비중을 지난달 대비 절반으로 줄였음. FSD 마일당 개입 수치는 진짜 좋아졌는데 오스틴 파일럿 확장 속도가 예상보다 느려서. 공식 리포트엔 목표주가 그대로인데 솔직히 말하면 단기 가격 부담이 좀 있음. 260달러대 이상은 현 상황에서 안 사는 게 맞다고 봄.",
+      "내 개인 계좌 기준으론 테슬라 비중을 지난달 대비 절반으로 줄였음. FSD 마일당 개입 수치는 진짜 좋아졌는데 오스틴 파일럿 확장 속도가 예상보다 느려서. 공식 리포트엔 목표주가 그대로인데 단기 가격 부담이 좀 있음. 260달러대 이상은 현 상황에서 안 사는 게 맞다고 봄.",
     likes: 74,
     comments: 2,
     created_at: new Date(Date.now() - 1000 * 60 * 65).toISOString(),
@@ -345,7 +345,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "을지로 황소 #05",
     symbol: "AMZN",
     content:
-      "AWS 클라우드 세그먼트 마진이 분기마다 50~100bps씩 올라오고 있는 거 시장이 제대로 안 보고 있음. 이 추세대로면 2027년 AWS 영업이익률 40% 돌파 가능한데, 그 시점에 AMZN 전체 밸류에이션 리레이팅이 다시 일어날 거임. 솔직히 지금 주가가 이 시나리오를 반도 안 반영했다고 생각함.",
+      "AWS 클라우드 세그먼트 마진이 분기마다 50~100bps씩 올라오고 있는 거 시장이 제대로 안 보고 있음. 이 추세대로면 2027년 AWS 영업이익률 40% 돌파 가능한데, 그 시점에 AMZN 전체 밸류에이션 리레이팅이 다시 일어날 거임. 내 판단으론 지금 주가가 이 시나리오를 반도 안 반영했다고 생각함.",
     likes: 81,
     comments: 2,
     created_at: new Date(Date.now() - 1000 * 60 * 110).toISOString(),
@@ -367,7 +367,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "마포 수리부엉이 #28",
     symbol: "PLTR",
     content:
-      "팔란티어 섹터 7년 보면서 이렇게 상업 부문이 정부 부문을 역전한 분기는 처음임. 근데 문제는 이걸 정당화할 수 있는 매출 배수가 지금 40배인데, 역성장 한 번 나오면 그 배수 유지 자체가 논거를 잃음. 내부에서도 이 주가에서 추가 매수 의견 내는 사람은 솔직히 없음.",
+      "팔란티어 섹터 7년 보면서 이렇게 상업 부문이 정부 부문을 역전한 분기는 처음임. 근데 문제는 이걸 정당화할 수 있는 매출 배수가 지금 40배인데, 역성장 한 번 나오면 그 배수 유지 자체가 논거를 잃음. 내부에서도 이 주가에서 추가 매수 의견 내는 사람은 없음.",
     likes: 43,
     comments: 2,
     created_at: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(),
@@ -378,7 +378,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "판교 사자 #22",
     symbol: "MSFT",
     content:
-      "DCF 다시 돌려봤는데 Azure AI 기여분 포함하면 합리적인 타겟이 시장 컨센서스보다 15~20% 높게 나옴. 근데 그게 실적에 찍히려면 기업들 AI 도입 속도가 지금 추세를 유지해야 함. 솔직히 낙관론 쪽에 베팅하는 게 맞다고 보는데, 공식 리포트 숫자는 보수적으로 유지할 수밖에 없는 구조라서.",
+      "DCF 다시 돌려봤는데 Azure AI 기여분 포함하면 합리적인 타겟이 시장 컨센서스보다 15~20% 높게 나옴. 근데 그게 실적에 찍히려면 기업들 AI 도입 속도가 지금 추세를 유지해야 함. 내 뷰는 낙관론 쪽에 베팅하는 게 맞다고 보는데, 공식 리포트 숫자는 보수적으로 유지할 수밖에 없는 구조라서.",
     likes: 67,
     comments: 2,
     created_at: new Date(Date.now() - 1000 * 60 * 60 * 7).toISOString(),
@@ -433,7 +433,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "을지로 팔콘 #16",
     symbol: "TSLA",
     content:
-      "모두가 베어리시한 게 오히려 카운터 시그널 같다는 생각도 드는데, 진짜 문제는 EV 침투율이 둔화된 게 일시적인지 구조적인지 판단이 안 선다는 거임. 공식 리포트엔 '하반기 회복' 썼는데 솔직히 반신반의임. 사이버캡 이야기가 주가 버티게 해주는 거지, 본업 모멘텀만 보면 쉽지 않음.",
+      "모두가 베어리시한 게 오히려 카운터 시그널 같다는 생각도 드는데, 진짜 문제는 EV 침투율이 둔화된 게 일시적인지 구조적인지 판단이 안 선다는 거임. 공식 리포트엔 '하반기 회복' 썼는데 반신반의임. 사이버캡 이야기가 주가 버티게 해주는 거지, 본업 모멘텀만 보면 쉽지 않음.",
     likes: 37,
     comments: 1,
     created_at: new Date(Date.now() - 1000 * 60 * 60 * 22).toISOString(),
@@ -797,7 +797,7 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
     },
     {
       alias: "서초 곰 #39",
-      content: "Kalshi 33%도 솔직히 높다고 봄. TSLA 이사회 승인 없이 Elon이 단독으로 발표할 성격의 딜이 아닌데, 보도 자체가 협상 레버리지용일 가능성 배제 못 함.",
+      content: "Kalshi 33%도 높다고 봄. TSLA 이사회 승인 없이 Elon이 단독으로 발표할 성격의 딜이 아닌데, 보도 자체가 협상 레버리지용일 가능성 배제 못 함.",
       created_at: new Date(Date.now() - 1000 * 60 * 8).toISOString(),
     },
     {
@@ -944,7 +944,7 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
     },
     {
       alias: "을지로 표범 #43",
-      content: "내부에서 추가 매수 의견 없다는 거 솔직히 읽힘. 공식 리포트 목표주가 올리려면 성장 가속 확인이 먼저라는 거 맞음.",
+      content: "내부에서 추가 매수 의견 없다는 게 그대로 읽힘. 공식 리포트 목표주가 올리려면 성장 가속 확인이 먼저라는 거 맞음.",
       created_at: new Date(Date.now() - 1000 * 60 * 60 * 3 - 1000 * 60 * 40).toISOString(),
     },
   ],
