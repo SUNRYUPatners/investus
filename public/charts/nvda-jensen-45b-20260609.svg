@@ -1,0 +1,69 @@
+<svg viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d14;border-radius:12px">
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="56" rx="12" fill="#111118"/>
+  <text x="20" y="22" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">🟢 NVDA</text>
+  <text x="20" y="40" font-family="Arial,sans-serif" font-size="13" fill="#ffffff" font-weight="700">Jensen Huang, $45B+ 8개 기업 전략 투자</text>
+
+  <!-- Total badge -->
+  <rect x="14" y="66" width="372" height="50" rx="10" fill="#0a1020" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="200" y="83" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle" font-weight="600">NVIDIA 총 전략 투자 규모</text>
+  <text x="200" y="108" font-family="Arial,sans-serif" font-size="32" fill="#60a5fa" text-anchor="middle" font-weight="900">$45B+</text>
+
+  <!-- Bar Chart: 8 companies -->
+  <text x="20" y="140" font-family="Arial,sans-serif" font-size="11" fill="#888899" font-weight="600">투자처별 규모</text>
+
+  <!-- OpenAI $30B -->
+  <text x="105" y="158" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" text-anchor="end">OpenAI</text>
+  <rect x="110" y="147" width="240" height="16" rx="3" fill="#60a5fa"/>
+  <text x="356" y="158" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" font-weight="700">$30B</text>
+
+  <!-- Coherent Icons $3B -->
+  <text x="105" y="178" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" text-anchor="end">Coherent Icons</text>
+  <rect x="110" y="167" width="24" height="16" rx="3" fill="#4489ee" fill-opacity="0.8"/>
+  <text x="140" y="178" font-family="Arial,sans-serif" font-size="9" fill="#7799cc">$3B</text>
+
+  <!-- Waymo $1B -->
+  <text x="105" y="198" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" text-anchor="end">Waymo</text>
+  <rect x="110" y="187" width="8" height="16" rx="3" fill="#4489ee" fill-opacity="0.7"/>
+  <text x="124" y="198" font-family="Arial,sans-serif" font-size="9" fill="#7799cc">$1B</text>
+
+  <!-- Cerebral $1B -->
+  <text x="105" y="218" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" text-anchor="end">Cerebral</text>
+  <rect x="110" y="207" width="8" height="16" rx="3" fill="#4489ee" fill-opacity="0.6"/>
+  <text x="124" y="218" font-family="Arial,sans-serif" font-size="9" fill="#7799cc">$1B</text>
+
+  <!-- xAI $500M -->
+  <text x="105" y="238" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" text-anchor="end">xAI (Elon)</text>
+  <rect x="110" y="227" width="4" height="16" rx="3" fill="#c084fc" fill-opacity="0.8"/>
+  <text x="120" y="238" font-family="Arial,sans-serif" font-size="9" fill="#c084fc">$500M</text>
+
+  <!-- Perplexity $500M -->
+  <text x="105" y="258" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" text-anchor="end">Perplexity</text>
+  <rect x="110" y="247" width="4" height="16" rx="3" fill="#c084fc" fill-opacity="0.6"/>
+  <text x="120" y="258" font-family="Arial,sans-serif" font-size="9" fill="#9966cc">$500M</text>
+
+  <!-- Lambda Deep $250M -->
+  <text x="105" y="278" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" text-anchor="end">Lambda Deep</text>
+  <rect x="110" y="267" width="2" height="16" rx="2" fill="#888899"/>
+  <text x="118" y="278" font-family="Arial,sans-serif" font-size="9" fill="#888899">$250M</text>
+
+  <!-- CoreWeave $200M -->
+  <text x="105" y="298" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" text-anchor="end">CoreWeave</text>
+  <rect x="110" y="287" width="2" height="16" rx="2" fill="#888899"/>
+  <text x="118" y="298" font-family="Arial,sans-serif" font-size="9" fill="#888899">$200M</text>
+
+  <!-- Insight box -->
+  <rect x="14" y="314" width="372" height="58" rx="8" fill="#0a1020" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="28" y="332" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700">📌 Jensen Huang의 전략적 의도</text>
+  <text x="28" y="350" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">AI 인프라 생태계 전체에 NVIDIA를 앵커로 삽입.</text>
+  <text x="28" y="364" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">OpenAI $30B = GPU 공급 계약 + 전략 파트너십의 총가치.</text>
+  <text x="28" y="378" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">FOLLOW THE CAPITAL — 젠슨이 투자하는 곳이 AI 미래의 중심.</text>
+
+  <!-- SK Hynix partnership teaser -->
+  <rect x="14" y="382" width="372" height="50" rx="8" fill="#0f1118" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="28" y="400" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">+ SK하이닉스 × NVIDIA 멀티이어 기술 파트너십</text>
+  <text x="28" y="416" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">Very Rubin AI 슈퍼컴퓨터 + HBM4 선행 공급 계약 공동 발표</text>
+  <text x="28" y="428" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">Jensen: "AI 팩토리는 차세대 산업혁명의 엔진"</text>
+
+  <text x="200" y="447" font-family="Arial,sans-serif" font-size="9" fill="#333344" text-anchor="middle">2026.06.09 | investus.kr</text>
+</svg>

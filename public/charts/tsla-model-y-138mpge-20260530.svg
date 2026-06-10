@@ -1,0 +1,62 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Tesla Model Y 138 MPGe — 역사상 가장 에너지 효율적인 전기 SUV</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.30</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- MPGe rating -->
+  <rect x="30" y="80" width="225" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="48" y="104" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">EPA 공식 인증</text>
+  <text x="48" y="156" font-family="Arial,sans-serif" font-size="48" fill="#00e5a0" font-weight="700">138</text>
+  <text x="48" y="176" font-family="Arial,sans-serif" font-size="14" fill="white">MPGe</text>
+  <text x="48" y="196" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">역사상 최고 효율 전기 SUV</text>
+  <text x="48" y="212" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">미국 정부 공식 인증 · $39,990</text>
+
+  <!-- Energy cost comparison -->
+  <rect x="275" y="80" width="225" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="275" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="293" y="104" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">에너지 비용 비교</text>
+  <text x="293" y="132" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">$0.025/마일</text>
+  <text x="293" y="148" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Model Y (전기)</text>
+  <text x="293" y="170" font-family="Arial,sans-serif" font-size="13" fill="#6b7280">$0.12~0.15/마일</text>
+  <text x="293" y="186" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">가솔린 SUV 평균</text>
+  <text x="293" y="208" font-family="Arial,sans-serif" font-size="10" fill="white">연간 $3,000~5,000 절약</text>
+
+  <!-- Robotaxi economics -->
+  <rect x="520" y="80" width="250" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="520" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="538" y="104" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">로보택시 경제성</text>
+  <text x="538" y="130" font-family="Arial,sans-serif" font-size="10" fill="white">Model Y: 138 MPGe → $0.025/mi</text>
+  <text x="538" y="150" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">Cybercab: 165Wh/mi → $0.020/mi</text>
+  <text x="538" y="170" font-family="Arial,sans-serif" font-size="10" fill="white">기존 택시 대비 운영비 80% 절감</text>
+  <text x="538" y="190" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">연 10만 마일 에너지 절감: ~$9,500</text>
+  <text x="538" y="208" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Waymo 추종 불가 구조적 해자</text>
+
+  <!-- Key insight -->
+  <rect x="30" y="234" width="740" height="100" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="30" y="234" width="4" height="100" rx="2" fill="#00e5a0"/>
+  <text x="48" y="256" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">투자 시사점</text>
+  <text x="48" y="276" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• EPA 138 MPGe 인증 = 로보택시 손익분기점을 낮추는 구조적 경쟁 우위 · 소비자 마케팅 강점</text>
+  <text x="48" y="294" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• Cybercab 165Wh/mile과 함께 Tesla 플릿 경제학이 경쟁사와 비교 불가 수준으로 차별화</text>
+  <text x="48" y="312" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• $0.025/마일 로보택시 에너지 비용 = 가솔린 택시 대비 구조적 80%+ 절감 · 손익분기 빠른 달성</text>
+  <text x="48" y="326" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">Waymo I-PACE 효율 대비 40%+ 우위 · 경쟁사가 따라오려면 플랫폼 재설계 필요</text>
+
+  <line x1="30" y1="346" x2="770" y2="346" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Key stats row -->
+  <text x="48" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">EPA 인증 MPGe</text>
+  <text x="48" y="384" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">138 MPGe</text>
+  <text x="200" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">에너지 비용</text>
+  <text x="200" y="384" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">$0.025/mi</text>
+  <text x="360" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Cybercab 에너지</text>
+  <text x="360" y="384" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">$0.020/mi</text>
+  <text x="520" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">연간 절감 (로보택시)</text>
+  <text x="520" y="384" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">~$9,500</text>
+
+  <line x1="30" y1="400" x2="770" y2="400" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="416" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="416" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0c10"/>
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="purGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#9333ea"/><stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="30" y="24" width="10" height="40" rx="3" fill="url(#blueGrad)"/>
+  <text x="50" y="40" fill="#60a5fa" font-size="11" font-weight="700" letter-spacing="2">NVIDIA × SPACEX</text>
+  <text x="50" y="60" fill="white" font-size="18" font-weight="800">Jensen Huang, IPO 직전 "HUGE 발표" 예정 — 파트너십 공시 임박</text>
+  <text x="750" y="44" fill="#60a5fa" font-size="11" text-anchor="end">2026.06.08</text>
+  <line x1="30" y1="80" x2="770" y2="80" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- Breaking banner -->
+  <rect x="30" y="92" width="740" height="42" rx="8" fill="#ff4d6d" fill-opacity="0.12" stroke="#ff4d6d" stroke-opacity="0.35"/>
+  <text x="400" y="118" fill="#ff4d6d" font-size="14" font-weight="900" text-anchor="middle">🚨 BREAKING — 내부 소식통: NVIDIA+SpaceX 파트너십 IPO 직전 발표 예정</text>
+
+  <!-- NVIDIA + SpaceX visual -->
+  <rect x="30" y="150" width="340" height="120" rx="12" fill="#60a5fa" fill-opacity="0.07" stroke="#60a5fa" stroke-opacity="0.2"/>
+  <text x="200" y="188" fill="#60a5fa" font-size="16" font-weight="900" text-anchor="middle">🟢 NVIDIA</text>
+  <text x="200" y="214" fill="rgba(255,255,255,0.7)" font-size="12" text-anchor="middle">Jensen Huang CEO</text>
+  <text x="200" y="238" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">AI 칩 세계 1위 · H100/B200/GB300</text>
+  <text x="200" y="258" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">시총 $3.3T+</text>
+
+  <!-- Arrow -->
+  <text x="397" y="218" fill="rgba(255,255,255,0.6)" font-size="28" text-anchor="middle">⚡</text>
+  <text x="397" y="244" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="middle">파트너십</text>
+
+  <rect x="430" y="150" width="340" height="120" rx="12" fill="#c084fc" fill-opacity="0.07" stroke="#c084fc" stroke-opacity="0.2"/>
+  <text x="600" y="188" fill="#c084fc" font-size="16" font-weight="900" text-anchor="middle">🚀 SpaceX</text>
+  <text x="600" y="214" fill="rgba(255,255,255,0.7)" font-size="12" text-anchor="middle">Elon Musk CEO</text>
+  <text x="600" y="238" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">Starlink AI · Colossus · xAI</text>
+  <text x="600" y="258" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">IPO 기업가치 $1.75T</text>
+
+  <!-- What the partnership could mean -->
+  <text x="30" y="298" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="1">파트너십이 의미하는 것</text>
+
+  <rect x="30" y="308" width="230" height="58" rx="8" fill="rgba(255,255,255,0.04)"/>
+  <text x="50" y="328" fill="rgba(255,255,255,0.5)" font-size="10">GPU 우선 공급</text>
+  <text x="50" y="352" fill="white" font-size="13" font-weight="700">NVIDIA GPU SpaceX 독점 배정</text>
+
+  <rect x="276" y="308" width="230" height="58" rx="8" fill="rgba(255,255,255,0.04)"/>
+  <text x="296" y="328" fill="rgba(255,255,255,0.5)" font-size="10">AI 인프라 통합</text>
+  <text x="296" y="352" fill="white" font-size="13" font-weight="700">Starlink × NVIDIA 컴퓨팅 결합</text>
+
+  <rect x="522" y="308" width="248" height="58" rx="8" fill="#ff4d6d" fill-opacity="0.07" stroke="#ff4d6d" stroke-opacity="0.2"/>
+  <text x="542" y="328" fill="#ff4d6d" font-size="10" font-weight="700">변동성 경고</text>
+  <text x="542" y="352" fill="white" font-size="13" font-weight="700">EXTREME VOLATILITY 예상</text>
+
+  <text x="400" y="420" fill="rgba(255,255,255,0.2)" font-size="10" text-anchor="middle">WimaxZ / 내부 소식통 · Investus · investus.kr</text>
+</svg>

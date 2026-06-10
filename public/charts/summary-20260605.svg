@@ -1,0 +1,127 @@
+<svg viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0f0c"/>
+      <stop offset="100%" stop-color="#060a07"/>
+    </linearGradient>
+    <linearGradient id="cardSPCX" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1030"/>
+      <stop offset="100%" stop-color="#120b20"/>
+    </linearGradient>
+    <linearGradient id="cardTSLA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d2019"/>
+      <stop offset="100%" stop-color="#081510"/>
+    </linearGradient>
+    <linearGradient id="cardSP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12082a"/>
+      <stop offset="100%" stop-color="#0a0520"/>
+    </linearGradient>
+    <linearGradient id="cardMRVL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0e08"/>
+      <stop offset="100%" stop-color="#110900"/>
+    </linearGradient>
+    <linearGradient id="cardAMZN" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101520"/>
+      <stop offset="100%" stop-color="#080d16"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="560" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="480" height="52" fill="#0d1a11"/>
+  <rect x="0" y="50" width="480" height="2" fill="#00e5a0" opacity="0.6"/>
+  <text x="24" y="22" font-size="11" fill="#00e5a0" font-weight="700" letter-spacing="2" opacity="0.9">INVESTUS</text>
+  <text x="24" y="40" font-size="16" fill="#ffffff" font-weight="700">📋 6/5 시장 한장 요약</text>
+  <text x="440" y="36" font-size="10" fill="#4a7a60" text-anchor="end">2026.06.05</text>
+
+  <!-- ── Card 1: SPCX Goldman $332B ─────────────────────────────── -->
+  <rect x="16" y="64" width="215" height="130" rx="14" fill="url(#cardSPCX)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="16" y="64" width="215" height="4" rx="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="84" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="1.5">SPCX · GOLDMAN SACHS</text>
+  <text x="28" y="108" font-size="30" fill="#c084fc" font-weight="900" letter-spacing="-1">$332B</text>
+  <text x="28" y="124" font-size="10" fill="#9966e6" font-weight="600">AI 매출 2030E</text>
+  <rect x="28" y="132" width="190" height="1" fill="#c084fc" opacity="0.15"/>
+  <text x="28" y="148" font-size="10" fill="#c0a0e8">$3.1B → $332B</text>
+  <text x="28" y="163" font-size="9" fill="#806090">Goldman: 4년간 100배 성장 전망</text>
+  <text x="190" y="108" font-size="22" fill="#c084fc" font-weight="900" opacity="0.5">×100</text>
+
+  <!-- ── Card 2: TSLA TD Cowen $490 ─────────────────────────────── -->
+  <rect x="249" y="64" width="215" height="130" rx="14" fill="url(#cardTSLA)" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="249" y="64" width="215" height="4" rx="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="261" y="84" font-size="9" fill="#00e5a0" font-weight="700" letter-spacing="1.5">TSLA · TD COWEN</text>
+  <text x="261" y="108" font-size="30" fill="#00e5a0" font-weight="900" letter-spacing="-1">$490</text>
+  <text x="261" y="124" font-size="10" fill="#00b87a" font-weight="600">목표주가 (현재 $423)</text>
+  <rect x="261" y="132" width="190" height="1" fill="#00e5a0" opacity="0.15"/>
+  <text x="261" y="148" font-size="10" fill="#a0e8c0">BUY 재확인 · +15.6% 업사이드</text>
+  <text x="261" y="163" font-size="9" fill="#609870">Model Y L 미국 출시 시 100K 수요</text>
+  <text x="438" y="108" font-size="13" fill="#00e5a0" opacity="0.5">↑BUY</text>
+
+  <!-- ── Card 3: SPCX S&P 500 편입 유력 ──────────────────────────── -->
+  <rect x="16" y="208" width="215" height="118" rx="14" fill="url(#cardSP)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="16" y="208" width="215" height="4" rx="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="228" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="1.5">SPCX · S&amp;P 500</text>
+  <text x="28" y="252" font-size="13" fill="#c084fc" font-weight="900">편입 유력 ✓</text>
+  <text x="28" y="269" font-size="10" fill="#9060d0" font-weight="600">기준 변경 없음 확정</text>
+  <rect x="28" y="275" width="190" height="1" fill="#c084fc" opacity="0.15"/>
+  <text x="28" y="291" font-size="10" fill="#b090e0">IPO 후 MegaCap 예외 조기 편입 가능</text>
+  <text x="28" y="309" font-size="9" fill="#604090">편입 시 패시브 자금 $300B~$500B 유입</text>
+
+  <!-- ── Card 4: MRVL +245% (NVIDIA not SpaceX) ──────────────────── -->
+  <rect x="249" y="208" width="215" height="118" rx="14" fill="url(#cardMRVL)" stroke="#fb923c" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="249" y="208" width="215" height="4" rx="2" fill="#fb923c" opacity="0.7"/>
+  <text x="261" y="228" font-size="9" fill="#fb923c" font-weight="700" letter-spacing="1.5">MRVL · MARVELL TECH</text>
+  <text x="261" y="257" font-size="32" fill="#fb923c" font-weight="900" letter-spacing="-1">+245%</text>
+  <text x="261" y="274" font-size="10" fill="#d06820" font-weight="600">NVIDIA $2B 투자 이후</text>
+  <rect x="261" y="280" width="190" height="1" fill="#fb923c" opacity="0.15"/>
+  <text x="261" y="295" font-size="10" fill="#e0a878">3/31 이후 66일 · 젠슨황 발언 +65%↑</text>
+  <text x="261" y="309" font-size="9" fill="#905030">현재 시총 ~$278B · $1T 목표 3.6x</text>
+
+  <!-- ── Card 5: AMZN AI Robot (full width) ─────────────────────── -->
+  <rect x="16" y="340" width="448" height="106" rx="14" fill="url(#cardAMZN)" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="16" y="340" width="448" height="4" rx="2" fill="#60a5fa" opacity="0.7"/>
+  <text x="28" y="360" font-size="9" fill="#60a5fa" font-weight="700" letter-spacing="1.5">AMZN · AMAZON</text>
+  <rect x="28" y="370" width="44" height="44" rx="8" fill="#1a2540" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="50" y="400" font-size="24" text-anchor="middle">🤖</text>
+  <text x="82" y="384" font-size="18" fill="#60a5fa" font-weight="900">"터치 감각" AI 로봇 최초 공개</text>
+  <text x="82" y="400" font-size="10" fill="#4a80c0" font-weight="600">Amazon's First AI Robot with Touch Sensors</text>
+  <rect x="82" y="407" width="370" height="1" fill="#60a5fa" opacity="0.15"/>
+  <text x="82" y="421" font-size="10" fill="#90b8e8">협소 공간 탐색 가능 · 유럽+미국 배치 · 90,000대 전기 배송 밴도 동시 발표</text>
+  <text x="82" y="435" font-size="9" fill="#405070">Amazon 물류 자동화의 다음 단계 — 접촉력 없이 물체 감지</text>
+
+  <!-- Footer -->
+  <rect x="0" y="462" width="480" height="98" fill="#080d0a"/>
+  <rect x="0" y="462" width="480" height="1" fill="#1a3025"/>
+  <text x="240" y="482" text-anchor="middle" font-size="9" fill="#2a5040" font-weight="600" letter-spacing="1">오늘의 핵심 5가지</text>
+
+  <!-- SPCX Goldman -->
+  <rect x="20" y="491" width="84" height="56" rx="8" fill="#1a1030" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="62" y="512" text-anchor="middle" font-size="8" fill="#c084fc" font-weight="700">SPCX</text>
+  <text x="62" y="527" text-anchor="middle" font-size="12" fill="#c084fc" font-weight="900">$332B</text>
+  <text x="62" y="540" text-anchor="middle" font-size="7" fill="#9060c0">AI 2030E</text>
+
+  <!-- TSLA -->
+  <rect x="112" y="491" width="84" height="56" rx="8" fill="#0d2019" stroke="#00e5a0" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="154" y="512" text-anchor="middle" font-size="8" fill="#00e5a0" font-weight="700">TSLA</text>
+  <text x="154" y="527" text-anchor="middle" font-size="12" fill="#00e5a0" font-weight="900">$490</text>
+  <text x="154" y="540" text-anchor="middle" font-size="7" fill="#00a060">TD Cowen PT</text>
+
+  <!-- S&P SPCX 편입 -->
+  <rect x="204" y="491" width="76" height="56" rx="8" fill="#12082a" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="242" y="510" text-anchor="middle" font-size="7" fill="#c084fc" font-weight="700">SPCX</text>
+  <text x="242" y="525" text-anchor="middle" font-size="10" fill="#c084fc" font-weight="900">S&amp;P편입</text>
+  <text x="242" y="540" text-anchor="middle" font-size="7" fill="#8050c0">유력 ✓</text>
+
+  <!-- MRVL -->
+  <rect x="288" y="491" width="84" height="56" rx="8" fill="#1a0e08" stroke="#fb923c" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="330" y="512" text-anchor="middle" font-size="8" fill="#fb923c" font-weight="700">MRVL</text>
+  <text x="330" y="527" text-anchor="middle" font-size="12" fill="#fb923c" font-weight="900">+245%</text>
+  <text x="330" y="540" text-anchor="middle" font-size="7" fill="#c06020">NVIDIA 효과</text>
+
+  <!-- AMZN -->
+  <rect x="380" y="491" width="80" height="56" rx="8" fill="#101520" stroke="#60a5fa" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="420" y="512" text-anchor="middle" font-size="8" fill="#60a5fa" font-weight="700">AMZN</text>
+  <text x="420" y="527" text-anchor="middle" font-size="18" fill="#60a5fa" font-weight="900">🤖</text>
+  <text x="420" y="540" text-anchor="middle" font-size="7" fill="#4070a0">AI 로봇</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Tesla FSD 71개국 공식 지원 · Arizona 승인 · 안전성 3배 개선</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.30</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- FSD 71 countries -->
+  <rect x="30" y="80" width="225" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="48" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">FSD 글로벌 확산</text>
+  <text x="48" y="158" font-family="Arial,sans-serif" font-size="52" fill="#00e5a0" font-weight="700">71</text>
+  <text x="48" y="178" font-family="Arial,sans-serif" font-size="11" fill="white">공식 지원 국가</text>
+  <text x="48" y="196" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">미국·중국 외 70개국 확산</text>
+  <text x="48" y="210" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Arizona 최신 공식 승인 완료</text>
+
+  <!-- Safety improvement -->
+  <rect x="275" y="80" width="225" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="275" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="293" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">안전성 3배 개선</text>
+  <text x="293" y="138" font-family="Arial,sans-serif" font-size="12" fill="#6b7280">50,000마일/건</text>
+  <text x="293" y="160" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">↓ 150,000마일/건</text>
+  <text x="293" y="178" font-family="Arial,sans-serif" font-size="10" fill="white">사고 간격 3배 확대</text>
+  <text x="293" y="194" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">인간 운전자 수준(165K마일) 임박</text>
+  <text x="293" y="208" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Menz Analytics 공식 데이터</text>
+
+  <!-- Revenue potential -->
+  <rect x="520" y="80" width="250" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="520" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="538" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">FSD 수익 구조</text>
+  <text x="538" y="138" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" font-weight="700">$8,000</text>
+  <text x="538" y="156" font-family="Arial,sans-serif" font-size="10" fill="white">FSD One-Time (미국 기준)</text>
+  <text x="538" y="176" font-family="Arial,sans-serif" font-size="16" fill="#00e5a0" font-weight="700">$99/월</text>
+  <text x="538" y="194" font-family="Arial,sans-serif" font-size="10" fill="white">FSD 월 구독</text>
+  <text x="538" y="210" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">71개국 확산 = 잠재 수백만 고객</text>
+
+  <!-- Key insight -->
+  <rect x="30" y="234" width="740" height="110" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="30" y="234" width="4" height="110" rx="2" fill="#00e5a0"/>
+  <text x="48" y="258" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">투자 시사점</text>
+  <text x="48" y="278" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• FSD 71개국 = 소프트웨어 수익화 지역 확대 · EU·아시아 FSD One-Time Payment 수익 현실화</text>
+  <text x="48" y="296" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 150K마일/건 데이터 = 규제 기관 신뢰 근거 · Arizona 성공 → 더 많은 주·국가 도미노 승인</text>
+  <text x="48" y="314" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• EU 80만 대 Tesla 보유 · FSD 전환율 10% 시 $640M~$800M 소프트웨어 매출 추가 가능</text>
+  <text x="48" y="332" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">• 150K마일/건 → 165K마일/건(인간) 갭 좁혀지면 Full Autonomy 규제 승인 트리거 현실화</text>
+  <text x="48" y="338" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">50개 주 순차 승인 사이클 시작 신호 · Ashok Elluswamy 자율주행 디렉터 직접 확인</text>
+
+  <!-- Stats row -->
+  <rect x="30" y="356" width="740" height="34" rx="6" fill="#050e08" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="48" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">지원국가</text>
+  <text x="130" y="378" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">71개국</text>
+  <text x="260" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">사고 간격</text>
+  <text x="340" y="378" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">150K마일/건</text>
+  <text x="490" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">인간 수준</text>
+  <text x="560" y="378" font-family="Arial,sans-serif" font-size="14" fill="#6b7280" font-weight="700">165K마일/건</text>
+  <text x="680" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">구독</text>
+  <text x="710" y="378" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">$99/월</text>
+
+  <line x1="30" y1="402" x2="770" y2="402" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="418" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="418" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

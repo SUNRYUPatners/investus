@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#ef4444">⚡ Tesla × xAI — Megapack $269M</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">TSLA SEC 공시 · xAI 상업 계약 · 2026.06.04</text>
+
+  <!-- BIG $269M -->
+  <rect x="30" y="65" width="280" height="160" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="170" y="95" font-size="11" font-weight="700" fill="#ef4444" text-anchor="middle">xAI Megapack 구매액</text>
+  <text x="170" y="165" font-size="72" font-weight="900" fill="white" text-anchor="middle">$269M</text>
+  <text x="170" y="188" font-size="10" fill="#9ca3af" text-anchor="middle">2026년 1~4월 (4개월)</text>
+  <text x="170" y="207" font-size="9" fill="#6b7280" text-anchor="middle">출처: TSLA SEC 공시 p.243</text>
+
+  <!-- Flow diagram: Tesla → xAI -->
+  <rect x="330" y="65" width="440" height="160" rx="12" fill="#111827"/>
+  <text x="550" y="90" font-size="11" font-weight="700" fill="#ef4444" text-anchor="middle">Tesla ↔ Elon Musk 계열사 거래 흐름</text>
+  <!-- Tesla box -->
+  <rect x="355" y="105" width="100" height="40" rx="8" fill="#dc2626" opacity="0.9"/>
+  <text x="405" y="130" font-size="13" font-weight="900" fill="white" text-anchor="middle">TESLA</text>
+  <!-- Arrow -->
+  <line x1="455" y1="125" x2="510" y2="125" stroke="#6b7280" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="483" y="116" font-size="8" fill="#9ca3af" text-anchor="middle">Megapack</text>
+  <text x="483" y="136" font-size="8" fill="#ef4444" text-anchor="middle">$269M</text>
+  <!-- xAI box -->
+  <rect x="510" y="105" width="90" height="40" rx="8" fill="#1a1a3e" stroke="#7c3aed" stroke-width="1"/>
+  <text x="555" y="130" font-size="13" font-weight="900" fill="#c084fc" text-anchor="middle">xAI</text>
+  <!-- SpaceX -->
+  <rect x="355" y="160" width="100" height="35" rx="8" fill="#1a2a1a" stroke="#4ade80" stroke-width="1"/>
+  <text x="405" y="182" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">SpaceX</text>
+  <line x1="455" y1="177" x2="510" y2="177" stroke="#6b7280" stroke-width="1" stroke-dasharray="4 2"/>
+  <rect x="510" y="160" width="90" height="35" rx="8" fill="#1a1a1a"/>
+  <text x="555" y="178" font-size="9" fill="#9ca3af" text-anchor="middle">X Holdings</text>
+  <text x="555" y="190" font-size="8" fill="#6b7280" text-anchor="middle">광고 $4M (2025)</text>
+  <!-- Elon -->
+  <ellipse cx="685" cy="125" rx="50" ry="22" fill="#2d1b69"/>
+  <text x="685" y="122" font-size="10" font-weight="700" fill="#c084fc" text-anchor="middle">Elon Musk</text>
+  <text x="685" y="135" font-size="8" fill="#9ca3af" text-anchor="middle">공통 통제자</text>
+  <line x1="635" y1="115" x2="665" y2="115" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="635" y1="135" x2="665" y2="135" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <!-- Payment timeline table -->
+  <rect x="30" y="240" width="740" height="100" rx="12" fill="#111827"/>
+  <text x="400" y="262" font-size="11" font-weight="700" fill="#ef4444" text-anchor="middle">xAI ↔ Tesla 거래 연도별 내역 (SEC 공시)</text>
+  <!-- Header -->
+  <rect x="50" y="270" width="700" height="22" rx="4" fill="#1a0a0a"/>
+  <text x="100" y="284" font-size="9" fill="#9ca3af" text-anchor="middle">연도</text>
+  <text x="250" y="284" font-size="9" fill="#9ca3af" text-anchor="middle">2024</text>
+  <text x="380" y="284" font-size="9" fill="#9ca3af" text-anchor="middle">2025</text>
+  <text x="520" y="284" font-size="9" fill="#9ca3af" text-anchor="middle">2026 (1~4월)</text>
+  <text x="660" y="284" font-size="9" fill="#9ca3af" text-anchor="middle">누계</text>
+  <!-- Row -->
+  <text x="100" y="306" font-size="9" fill="#e2e8f0" text-anchor="middle">xAI → Tesla</text>
+  <text x="250" y="306" font-size="11" font-weight="700" fill="white" text-anchor="middle">$191M</text>
+  <text x="380" y="306" font-size="11" font-weight="700" fill="white" text-anchor="middle">$506M</text>
+  <text x="520" y="306" font-size="13" font-weight="800" fill="#ef4444" text-anchor="middle">$303M</text>
+  <text x="660" y="306" font-size="12" font-weight="700" fill="#fca5a5" text-anchor="middle">$1,000M+</text>
+  <!-- SpaceX row -->
+  <text x="100" y="326" font-size="9" fill="#4ade80" text-anchor="middle">SpaceX → Tesla</text>
+  <text x="250" y="326" font-size="10" fill="#9ca3af" text-anchor="middle">$4M</text>
+  <text x="380" y="326" font-size="10" fill="#9ca3af" text-anchor="middle">$147M</text>
+  <text x="520" y="326" font-size="10" fill="#9ca3af" text-anchor="middle">$4M</text>
+  <text x="660" y="326" font-size="10" fill="#9ca3af" text-anchor="middle">$155M+</text>
+
+  <!-- Bottom note -->
+  <rect x="30" y="355" width="740" height="55" rx="12" fill="#111827"/>
+  <text x="400" y="377" font-size="10" font-weight="700" fill="#c084fc" text-anchor="middle">핵심 의미</text>
+  <text x="400" y="395" font-size="9" fill="#9ca3af" text-anchor="middle">xAI 슈퍼컴퓨터 전력 인프라에 Tesla Megapack 대규모 납품 — Elon 계열사 간 수직통합 생태계 실현</text>
+  <text x="400" y="410" font-size="9" fill="#6b7280" text-anchor="middle">Tesla는 에너지 사업부로 xAI·SpaceX의 핵심 공급사 역할 수행 중</text>
+
+  <text x="770" y="430" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

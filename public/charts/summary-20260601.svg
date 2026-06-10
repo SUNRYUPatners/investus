@@ -1,0 +1,95 @@
+<svg width="800" height="650" viewBox="0 0 800 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="650" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · DAILY BRIEF</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="20" fill="white" font-weight="700">6/1 오늘의 핵심 4가지</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.06.01</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Card 1: SPCX SpaceX-Tesla 합병 (purple) -->
+  <rect x="30" y="76" width="358" height="140" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="30" y="76" width="4" height="140" rx="2" fill="#c084fc"/>
+  <text x="48" y="100" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">SPCX · SpaceX-Tesla 합병 가능성</text>
+  <!-- rocket icon -->
+  <text x="320" y="110" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" opacity="0.15">🚀</text>
+  <text x="48" y="128" font-family="Arial,sans-serif" font-size="34" fill="#c084fc" font-weight="700">$20T+</text>
+  <text x="48" y="148" font-family="Arial,sans-serif" font-size="10" fill="white">합병 시 결합 기업가치 · Bitcoin $20B+ 보유 예상</text>
+  <text x="48" y="164" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">이사회 4명 겹침 · SpaceX IPO 6/12 앞두고 시너지 부각</text>
+  <text x="48" y="178" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Starlink + FSD 결합 시 모빌리티·통신 독점 플랫폼</text>
+  <text x="48" y="206" font-family="Arial,sans-serif" font-size="9" fill="#c084fc">SPCX ETF = 합병 직접 수혜 · IPO 전 선제 포지셔닝 기회</text>
+
+  <!-- Card 2: TSLA FSD Europe (mint) -->
+  <rect x="412" y="76" width="358" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="412" y="76" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="430" y="100" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">TSLA · FSD 유럽 11개국 동시 출시</text>
+  <!-- europe bar chart mini -->
+  <rect x="650" y="95" width="8" height="30" rx="2" fill="#00e5a0" opacity="0.3"/>
+  <rect x="662" y="88" width="8" height="37" rx="2" fill="#00e5a0" opacity="0.5"/>
+  <rect x="674" y="82" width="8" height="43" rx="2" fill="#00e5a0" opacity="0.7"/>
+  <rect x="686" y="76" width="8" height="49" rx="2" fill="#00e5a0"/>
+  <text x="430" y="128" font-family="Arial,sans-serif" font-size="34" fill="#00e5a0" font-weight="700">11개국</text>
+  <text x="430" y="148" font-family="Arial,sans-serif" font-size="10" fill="white">유럽 동시 출시 · NL·BE·FR·NO·SE·AT·LT·LV·EE·DE·GB</text>
+  <text x="430" y="164" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">유럽 TSLA 누적 대수 수백만 대 → FSD 구독 전환 시장</text>
+  <text x="430" y="178" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">EU 규제 통과 = 가장 까다로운 장벽 돌파 증명</text>
+  <text x="430" y="206" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">월 $99 구독 × 유럽 사용자 = 연 수억 달러 소프트웨어 매출</text>
+
+  <!-- Card 3: NVDA Morgan Stanley (blue) -->
+  <rect x="30" y="228" width="358" height="140" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="30" y="228" width="4" height="140" rx="2" fill="#60a5fa"/>
+  <text x="48" y="252" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">NVDA · Morgan Stanley "우리가 틀렸다"</text>
+  <!-- upward arrow chart -->
+  <polyline points="280,360 300,348 320,332 340,310 360,290 380,268" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.3" transform="translate(0,-40)"/>
+  <text x="48" y="278" font-family="Arial,sans-serif" font-size="14" fill="#6b7280" font-weight="700" text-decoration="line-through">❌ 과대평가</text>
+  <text x="48" y="298" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700">✅ 탑픽 상향</text>
+  <text x="48" y="318" font-family="Arial,sans-serif" font-size="10" fill="white">FY27 매출 추정 $308B — 전년비 +100% YoY</text>
+  <text x="48" y="334" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">AI 최적화 서버 $108B (YoY +100%) · 월가 컨센서스 상향 시작</text>
+  <text x="48" y="348" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">모건스탠리 반전 = AI 사이클 얼마나 초기인지 증명</text>
+  <text x="48" y="362" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa">기관 리레이팅 초입 · 컨센서스 상향 도미노 예상</text>
+
+  <!-- Card 4: PLTR valuation (orange) -->
+  <rect x="412" y="228" width="358" height="140" rx="8" fill="#120a03" stroke="#fb923c" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="412" y="228" width="4" height="140" rx="2" fill="#fb923c"/>
+  <text x="430" y="252" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">PLTR · 고평가 논란 반박 완성</text>
+  <!-- bar comparison chart -->
+  <rect x="620" y="280" width="28" height="60" rx="3" fill="#fb923c" opacity="0.8"/>
+  <text x="620" y="348" font-family="Arial,sans-serif" font-size="8" fill="#fb923c" text-anchor="middle" transform="translate(14,0)">PLTR</text>
+  <rect x="660" y="315" width="28" height="25" rx="3" fill="#6b7280" opacity="0.5"/>
+  <text x="660" y="348" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle" transform="translate(14,0)">SNOW</text>
+  <rect x="700" y="325" width="28" height="15" rx="3" fill="#6b7280" opacity="0.3"/>
+  <text x="700" y="348" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle" transform="translate(14,0)">CRWD</text>
+  <text x="430" y="280" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">GAAP 순이익 비교 (TTM)</text>
+  <text x="430" y="298" font-family="Arial,sans-serif" font-size="22" fill="#fb923c" font-weight="700">$1.33B</text>
+  <text x="430" y="316" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">vs Snowflake $183M · CrowdStrike $92M</text>
+  <text x="430" y="332" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">PLTR GAAP 흑자 · SNOW/CRWD는 GAAP 적자</text>
+  <text x="430" y="348" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">성장률 2배 빠르며 마진 24%+ · 동일 멀티플 부당</text>
+  <text x="430" y="362" font-family="Arial,sans-serif" font-size="9" fill="#fb923c">고평가 내러티브 붕괴 → 기관 재평가 트리거</text>
+
+  <!-- GAAP 비교 시각화 -->
+  <rect x="30" y="382" width="740" height="100" rx="8" fill="#060b18" stroke="#1e2330" stroke-width="1"/>
+  <text x="48" y="404" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" font-weight="600">PLTR vs 경쟁사 GAAP 순이익 비교</text>
+  <!-- PLTR bar -->
+  <rect x="48" y="414" width="370" height="20" rx="4" fill="#fb923c" opacity="0.8"/>
+  <text x="426" y="429" font-family="Arial,sans-serif" font-size="10" fill="#fb923c" font-weight="700"> $1.33B</text>
+  <text x="52" y="429" font-family="Arial,sans-serif" font-size="9" fill="white">PLTR</text>
+  <!-- SNOW bar -->
+  <rect x="48" y="440" width="51" height="16" rx="4" fill="#6b7280" opacity="0.5"/>
+  <text x="104" y="453" font-family="Arial,sans-serif" font-size="9" fill="#6b7280"> SNOW $183M</text>
+  <!-- CRWD bar -->
+  <rect x="48" y="460" width="26" height="16" rx="4" fill="#6b7280" opacity="0.3"/>
+  <text x="78" y="473" font-family="Arial,sans-serif" font-size="9" fill="#6b7280"> CRWD $92M</text>
+  <text x="580" y="470" font-family="Arial,sans-serif" font-size="9" fill="#fb923c">PLTR = SNOW의 7배 · CRWD의 14배</text>
+
+  <!-- Footer -->
+  <rect x="30" y="496" width="740" height="90" rx="8" fill="#060b18" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="30" y="496" width="4" height="90" rx="2" fill="#00e5a0"/>
+  <text x="48" y="518" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">핵심 투자 포인트</text>
+  <text x="48" y="536" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">SPCX: SpaceX+Tesla 합병 시 $20T 결합기업 · IPO 6/12 앞두고 시너지 극대화 · SPCX ETF 직접 수혜</text>
+  <text x="48" y="554" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">TSLA: FSD 유럽 11개국 동시 출시 = 소프트웨어 수익화 폭발적 확장 · 월 $99 구독 구조</text>
+  <text x="48" y="572" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">NVDA: Morgan Stanley 탑픽 반전 + FY27 $308B(+100%) · 기관 리레이팅 도미노 시작</text>
+  <text x="48" y="584" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">PLTR: GAAP $1.33B = SNOW 7배·CRWD 14배 · 고평가 내러티브 완전 붕괴 · 재평가 구간</text>
+
+  <line x1="30" y1="600" x2="770" y2="600" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="634" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="634" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <!-- bg -->
+  <rect width="800" height="440" fill="#0a0c10"/>
+  <rect width="800" height="440" fill="url(#bg2)" opacity="0.4"/>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="pur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+    <linearGradient id="blu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- header -->
+  <rect x="30" y="24" width="10" height="36" rx="3" fill="url(#pur)"/>
+  <text x="50" y="42" fill="#c084fc" font-size="11" font-weight="700" letter-spacing="2">SPACEX · S-1 AMENDMENT NO.2</text>
+  <text x="50" y="58" fill="white" font-size="19" font-weight="800">구글 클라우드 계약 공시</text>
+  <text x="700" y="44" fill="#c084fc" font-size="11" font-weight="600" text-anchor="end">2026.06.07</text>
+
+  <!-- divider -->
+  <line x1="30" y1="76" x2="770" y2="76" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- main deal card -->
+  <rect x="30" y="92" width="460" height="130" rx="12" fill="#c084fc" fill-opacity="0.07" stroke="#c084fc" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="50" y="120" fill="#c084fc" font-size="11" font-weight="700" letter-spacing="1">GOOGLE CLOUD SERVICE AGREEMENT</text>
+  <text x="50" y="148" fill="white" font-size="36" font-weight="900">$920M</text>
+  <text x="190" y="148" fill="rgba(255,255,255,0.5)" font-size="16" font-weight="500">/월 (月)</text>
+  <text x="50" y="172" fill="rgba(255,255,255,0.6)" font-size="13">110,000 NVIDIA GPU · CPU · 메모리 제공</text>
+  <text x="50" y="192" fill="rgba(255,255,255,0.45)" font-size="12">2026년 10월 ~ 2029년 6월 (약 3년)</text>
+
+  <!-- right stats -->
+  <rect x="510" y="92" width="260" height="60" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.06"/>
+  <text x="524" y="118" fill="rgba(255,255,255,0.5)" font-size="11">연간 계약 가치</text>
+  <text x="524" y="140" fill="white" font-size="24" font-weight="800">$11.0B<tspan fill="#c084fc" font-size="13" font-weight="600">/년</tspan></text>
+
+  <rect x="510" y="162" width="260" height="60" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.06"/>
+  <text x="524" y="188" fill="rgba(255,255,255,0.5)" font-size="11">총 계약 규모 (3년)</text>
+  <text x="524" y="210" fill="white" font-size="24" font-weight="800">$33.1B</text>
+
+  <!-- key terms -->
+  <text x="30" y="252" fill="rgba(255,255,255,0.45)" font-size="11" font-weight="700" letter-spacing="1">계약 주요 조건</text>
+
+  <!-- term row 1 -->
+  <rect x="30" y="264" width="220" height="64" rx="8" fill="#60a5fa" fill-opacity="0.07" stroke="#60a5fa" stroke-opacity="0.15"/>
+  <text x="44" y="286" fill="#60a5fa" font-size="10" font-weight="700">GPU 납기</text>
+  <text x="44" y="304" fill="white" font-size="13" font-weight="700">2026.09.30까지</text>
+  <text x="44" y="320" fill="rgba(255,255,255,0.45)" font-size="11">초기 100% 가동 전 할인 요금 적용</text>
+
+  <rect x="264" y="264" width="220" height="64" rx="8" fill="#60a5fa" fill-opacity="0.07" stroke="#60a5fa" stroke-opacity="0.15"/>
+  <text x="278" y="286" fill="#60a5fa" font-size="10" font-weight="700">해지 조건</text>
+  <text x="278" y="304" fill="white" font-size="13" font-weight="700">90일 사전 통보</text>
+  <text x="278" y="320" fill="rgba(255,255,255,0.45)" font-size="11">2026.12.31 이후 양측 해지 가능</text>
+
+  <rect x="498" y="264" width="272" height="64" rx="8" fill="#60a5fa" fill-opacity="0.07" stroke="#60a5fa" stroke-opacity="0.15"/>
+  <text x="512" y="286" fill="#60a5fa" font-size="10" font-weight="700">IP 소유권</text>
+  <text x="512" y="304" fill="white" font-size="13" font-weight="700">구글이 전액 보유</text>
+  <text x="512" y="320" fill="rgba(255,255,255,0.45)" font-size="11">콘텐츠·AI 모델·관련 데이터</text>
+
+  <!-- filing info -->
+  <rect x="30" y="348" width="740" height="52" rx="8" fill="#c084fc" fill-opacity="0.05" stroke="#c084fc" stroke-opacity="0.12"/>
+  <text x="46" y="370" fill="#c084fc" font-size="10" font-weight="700">S-1 AMENDMENT NO.2 · 2026.06.03 SEC 제출</text>
+  <text x="46" y="389" fill="rgba(255,255,255,0.5)" font-size="12">등록 번호 333-296070 · SpaceX가 이전에는 공개하지 않았던 Google 계약 내용을 최초 공시</text>
+
+  <!-- footer -->
+  <text x="400" y="430" fill="rgba(255,255,255,0.2)" font-size="10" text-anchor="middle">Investus · investus.kr</text>
+</svg>

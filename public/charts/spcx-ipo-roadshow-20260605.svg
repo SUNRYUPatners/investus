@@ -1,0 +1,65 @@
+<svg viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c0820"/>
+      <stop offset="100%" stop-color="#070514"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="440" fill="url(#bg)"/>
+  <rect x="0" y="0" width="480" height="50" fill="#11091e"/>
+  <rect x="0" y="48" width="480" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="24" y="20" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="2">INVESTUS REPORT</text>
+  <text x="24" y="38" font-size="15" fill="#ffffff" font-weight="700">🚀 SPCX IPO Roadshow — CFO 브리핑 핵심</text>
+
+  <!-- Key roadshow highlights -->
+  <!-- 1: Goldman Sachs leads -->
+  <rect x="16" y="62" width="215" height="90" rx="12" fill="#1a1030" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="16" y="62" width="215" height="3" rx="1" fill="#c084fc" opacity="0.8"/>
+  <text x="28" y="84" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="1">UNDERWRITER</text>
+  <text x="28" y="106" font-size="22" fill="#ffffff" font-weight="900">Goldman Sachs</text>
+  <text x="28" y="122" font-size="10" fill="#9966e6">Lead Underwriter 공식 확인</text>
+  <text x="28" y="138" font-size="9" fill="#7050a0">Financial Times · CFO 직접 발표</text>
+
+  <!-- 2: Jamie Dimon involvement -->
+  <rect x="249" y="62" width="215" height="90" rx="12" fill="#1a1030" stroke="#e0a0ff" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="249" y="62" width="215" height="3" rx="1" fill="#e0a0ff" opacity="0.8"/>
+  <text x="261" y="84" font-size="9" fill="#e0a0ff" font-weight="700" letter-spacing="1">JPMORGAN CEO</text>
+  <text x="261" y="106" font-size="22" fill="#ffffff" font-weight="900">Jamie Dimon</text>
+  <text x="261" y="122" font-size="10" fill="#c080e0">CEO 직접 SpaceX IPO 관여</text>
+  <text x="261" y="138" font-size="9" fill="#8060b0">$1.25B → $1.42B 인수 규모 확대</text>
+
+  <!-- 3: Starlink V3 AI compute key claim -->
+  <rect x="16" y="164" width="448" height="84" rx="12" fill="#160c28" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3"/>
+  <rect x="16" y="164" width="448" height="3" rx="1" fill="#c084fc" opacity="0.5"/>
+  <text x="28" y="184" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="1">STARLINK V3 — KEY ROADSHOW CLAIM</text>
+  <text x="28" y="206" font-size="13" fill="#ffffff" font-weight="700">"WE ARE THE ONLY COMPANY THAT CAN DO THIS"</text>
+  <text x="28" y="222" font-size="10" fill="#a080d0">위성에서 배터리 제거 → AI 컴퓨팅 추가 · Starlink = 공중 AI 데이터센터</text>
+  <text x="28" y="236" font-size="9" fill="#7050a0">V3 위성: 7 Tbps 용량 · 기존 V1 대비 20x · 2025말 본격 배치 시작</text>
+
+  <!-- 4: CFO profile -->
+  <rect x="16" y="260" width="215" height="84" rx="12" fill="#1a1030" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="28" y="282" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="1">ROADSHOW PRESENTER</text>
+  <text x="28" y="302" font-size="16" fill="#ffffff" font-weight="800">Brett Johnson CFO</text>
+  <text x="28" y="318" font-size="10" fill="#9060c0">SpaceX 15년 베테랑 · 사상 첫 로드쇼</text>
+  <text x="28" y="332" font-size="9" fill="#7050a0">이차 시장(Secondary) 주식 판매 종료 선언</text>
+
+  <!-- 5: Secondary market exit -->
+  <rect x="249" y="260" width="215" height="84" rx="12" fill="#1a1030" stroke="#e0a0ff" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="261" y="282" font-size="9" fill="#e0a0ff" font-weight="700" letter-spacing="1">SECONDARY MARKET</text>
+  <text x="261" y="302" font-size="16" fill="#ffffff" font-weight="800">매각 종료 선언</text>
+  <text x="261" y="318" font-size="10" fill="#c080e0">더 이상 이차시장에서 주식 판매 안 함</text>
+  <text x="261" y="332" font-size="9" fill="#8060b0">IPO만이 유일한 공식 매수 경로</text>
+
+  <!-- Key stats row -->
+  <rect x="16" y="356" width="448" height="72" rx="10" fill="#0e0820" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="240" y="374" text-anchor="middle" font-size="9" fill="#6040a0" font-weight="700" letter-spacing="1.5">IPO 핵심 제원</text>
+  <!-- 4 stats -->
+  <text x="72" y="400" text-anchor="middle" font-size="18" fill="#c084fc" font-weight="900">$135</text>
+  <text x="72" y="415" text-anchor="middle" font-size="8" fill="#8060b0">공모가</text>
+  <text x="185" y="400" text-anchor="middle" font-size="18" fill="#c084fc" font-weight="900">$74.4B</text>
+  <text x="185" y="415" text-anchor="middle" font-size="8" fill="#8060b0">조달액</text>
+  <text x="300" y="400" text-anchor="middle" font-size="18" fill="#c084fc" font-weight="900">6/12</text>
+  <text x="300" y="415" text-anchor="middle" font-size="8" fill="#8060b0">상장일</text>
+  <text x="408" y="400" text-anchor="middle" font-size="18" fill="#c084fc" font-weight="900">$1.75T</text>
+  <text x="408" y="415" text-anchor="middle" font-size="8" fill="#8060b0">기업가치</text>
+</svg>

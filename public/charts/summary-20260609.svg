@@ -1,0 +1,87 @@
+<svg viewBox="0 0 400 580" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d14;border-radius:12px">
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="50" rx="12" fill="#111118"/>
+  <text x="200" y="20" font-family="Arial,sans-serif" font-size="10" fill="#888899" text-anchor="middle" font-weight="600">2026.06.09</text>
+  <text x="200" y="38" font-family="Arial,sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="800">📋 시장 한장 요약</text>
+
+  <!-- TSLA block -->
+  <rect x="8" y="58" width="384" height="108" rx="8" fill="#0a1a12" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="18" y="74" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="800">🚗 TSLA</text>
+
+  <!-- China May -->
+  <rect x="14" y="78" width="88" height="48" rx="6" fill="#111118"/>
+  <text x="58" y="93" font-family="Arial,sans-serif" font-size="7.5" fill="#888899" text-anchor="middle">China 5월 도매</text>
+  <text x="58" y="110" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" text-anchor="middle" font-weight="800">85,982</text>
+  <text x="58" y="121" font-family="Arial,sans-serif" font-size="7.5" fill="#aaffdd" text-anchor="middle">수출 +67.7% YoY</text>
+
+  <!-- Model 3 Efficiency -->
+  <rect x="110" y="78" width="88" height="48" rx="6" fill="#111118"/>
+  <text x="154" y="93" font-family="Arial,sans-serif" font-size="7.5" fill="#888899" text-anchor="middle">Model 3 효율</text>
+  <text x="154" y="110" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" text-anchor="middle" font-weight="800">EPA+12.5%</text>
+  <text x="154" y="121" font-family="Arial,sans-serif" font-size="7.5" fill="#aaffdd" text-anchor="middle">Edmunds 실주행 1위</text>
+
+  <!-- Cathie Robotaxi -->
+  <rect x="206" y="78" width="88" height="48" rx="6" fill="#111118"/>
+  <text x="250" y="93" font-family="Arial,sans-serif" font-size="7.5" fill="#888899" text-anchor="middle">Cathie Wood 탑승</text>
+  <text x="250" y="108" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle" font-weight="800">Robotaxi</text>
+  <text x="250" y="119" font-family="Arial,sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle" font-weight="700">Unsupervised ✓</text>
+  <text x="250" y="128" font-family="Arial,sans-serif" font-size="7.5" fill="#aaffdd" text-anchor="middle">Austin, TX "완전 안전"</text>
+
+  <!-- ARK 2030 -->
+  <rect x="302" y="78" width="86" height="48" rx="6" fill="#111118"/>
+  <text x="345" y="93" font-family="Arial,sans-serif" font-size="7.5" fill="#888899" text-anchor="middle">ARK 2030 목표</text>
+  <text x="345" y="110" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" text-anchor="middle" font-weight="800">$2,600</text>
+  <text x="345" y="121" font-family="Arial,sans-serif" font-size="7.5" fill="#aaffdd" text-anchor="middle">Bear$2K / Bull$3.1K</text>
+
+  <!-- Arrow/note -->
+  <text x="18" y="158" font-family="Arial,sans-serif" font-size="8" fill="#55aa77">▸ China 2년 최고 도매 · 모델3 EPA 초과 12.5% · Cathie 직접 탑승 확인 · ARK 2030 베이스 $2,600</text>
+
+  <!-- SPCX block -->
+  <rect x="8" y="172" width="184" height="78" rx="8" fill="#1a0f30" stroke="#c084fc" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="18" y="188" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="800">🚀 SPCX</text>
+  <text x="100" y="208" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" text-anchor="middle" font-weight="800">IPO 초과구독</text>
+  <text x="100" y="222" font-family="Arial,sans-serif" font-size="8" fill="#ddaaff" text-anchor="middle">기관 Wed 4PM 마감</text>
+  <text x="100" y="235" font-family="Arial,sans-serif" font-size="8" fill="#ddaaff" text-anchor="middle">소매 30% 배정</text>
+  <text x="100" y="246" font-family="Arial,sans-serif" font-size="7.5" fill="#c084fc" text-anchor="middle">Ron Baron $1B "평생 보유"</text>
+
+  <!-- GOOGL block -->
+  <rect x="200" y="172" width="192" height="78" rx="8" fill="#0a1a10" stroke="#4ade80" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="210" y="188" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="800">📈 GOOGL</text>
+  <text x="296" y="208" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle" font-weight="800">$4B → $220B</text>
+  <text x="296" y="222" font-family="Arial,sans-serif" font-size="8" fill="#aaffcc" text-anchor="middle">Anthropic: $3B→$135B (45x)</text>
+  <text x="296" y="235" font-family="Arial,sans-serif" font-size="8" fill="#aaffcc" text-anchor="middle">SpaceX: $0.9B→$88B (98x)</text>
+  <text x="296" y="246" font-family="Arial,sans-serif" font-size="7.5" fill="#4ade80" text-anchor="middle">비공개 자산 시총 미반영</text>
+
+  <!-- NVDA block -->
+  <rect x="8" y="256" width="384" height="90" rx="8" fill="#0a1020" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="18" y="272" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="800">🟢 NVDA</text>
+
+  <!-- $45B investments -->
+  <rect x="14" y="276" width="182" height="62" rx="6" fill="#111118"/>
+  <text x="105" y="292" font-family="Arial,sans-serif" font-size="8" fill="#888899" text-anchor="middle">Jensen Huang 전략 투자</text>
+  <text x="105" y="312" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle" font-weight="800">$45B+</text>
+  <text x="105" y="327" font-family="Arial,sans-serif" font-size="7.5" fill="#aaccff" text-anchor="middle">OpenAI $30B · Waymo $1B</text>
+  <text x="105" y="338" font-family="Arial,sans-serif" font-size="7.5" fill="#aaccff" text-anchor="middle">xAI $500M · Perplexity $500M 등</text>
+
+  <!-- SK Hynix Partnership -->
+  <rect x="204" y="276" width="182" height="62" rx="6" fill="#111118"/>
+  <text x="295" y="292" font-family="Arial,sans-serif" font-size="8" fill="#888899" text-anchor="middle">SK하이닉스 파트너십</text>
+  <text x="295" y="310" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" text-anchor="middle" font-weight="800">Multi-Year 파트너십</text>
+  <text x="295" y="325" font-family="Arial,sans-serif" font-size="7.5" fill="#aaffdd" text-anchor="middle">Very Rubin AI + HBM4 선행 공급</text>
+  <text x="295" y="338" font-family="Arial,sans-serif" font-size="7.5" fill="#aaffdd" text-anchor="middle">AI 팩토리 "차세대 산업혁명 엔진"</text>
+
+  <!-- META block -->
+  <rect x="8" y="352" width="384" height="60" rx="8" fill="#0a1a10" stroke="#4ade80" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="18" y="368" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="800">💚 META</text>
+  <text x="200" y="385" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="700">+4 GW 컴퓨팅 2026 온라인 — GOOGL 대비 저평가 논란</text>
+  <text x="200" y="400" font-family="Arial,sans-serif" font-size="8.5" fill="#aaffcc" text-anchor="middle">주가 $593 / "GOOGL이 클라우드 수익화 인정받는데 META는 왜 못 받나?"</text>
+  <text x="200" y="405" font-family="Arial,sans-serif" font-size="0" fill="none"/>
+
+  <!-- Bottom summary text -->
+  <rect x="8" y="420" width="384" height="42" rx="8" fill="#111118"/>
+  <text x="200" y="436" font-family="Arial,sans-serif" font-size="9" fill="#888899" text-anchor="middle" font-weight="600">오늘의 핵심 테마</text>
+  <text x="200" y="451" font-family="Arial,sans-serif" font-size="9" fill="#aabbcc" text-anchor="middle">TSLA 중국 반등 + Robotaxi 현실화 / SPCX IPO 초과구독 / NVDA $45B 생태계 확장</text>
+  <text x="200" y="462" font-family="Arial,sans-serif" font-size="9" fill="#aabbcc" text-anchor="middle">GOOGL $220B 비공개 자산 / META 컴퓨팅 저평가 해소 기대</text>
+
+  <text x="200" y="500" font-family="Arial,sans-serif" font-size="9" fill="#333344" text-anchor="middle">2026.06.09 | investus.kr</text>
+</svg>

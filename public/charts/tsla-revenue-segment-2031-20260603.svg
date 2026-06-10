@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#00e5a0">🚗 Tesla Revenue Segment — $375B by 2031E</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">Source: Leverage Shares / Visible Alpha · 2017→2025→2031E · AI·로봇이 성장 주도</text>
+
+  <!-- Timeline bars visualization -->
+  <rect x="30" y="68" width="480" height="300" rx="10" fill="#111827"/>
+  <text x="50" y="90" font-size="11" font-weight="700" fill="#00e5a0">매출 세그먼트 변화 (단위: $B)</text>
+
+  <!-- 2017 column -->
+  <text x="120" y="110" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">2017</text>
+  <!-- Total height for $11.8B → scale: $375B = 220px; $11.8B = 6.9px (too small) -->
+  <!-- Use log-ish scale: 2017=$11.8B=30px height, 2025=$100B=130px, 2031=$375B=220px -->
+  <!-- 2017: Automotive 82%, Energy 9%, Services 9% -->
+  <rect x="88" y="308" width="64" height="24" rx="2" fill="#dc2626" opacity="0.9"/>
+  <text x="120" y="303" font-size="8" fill="#9ca3af" text-anchor="middle">$11.8B</text>
+  <text x="120" y="318" font-size="8" fill="white" text-anchor="middle">Auto 82%</text>
+  <rect x="88" y="287" width="64" height="10" rx="2" fill="#00e5a0" opacity="0.8"/>
+  <rect x="88" y="276" width="64" height="10" rx="2" fill="#60a5fa" opacity="0.8"/>
+
+  <!-- 2025 column -->
+  <text x="260" y="110" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">2025</text>
+  <!-- $100B approx; Automotive ~70%, Energy 11% ... -->
+  <rect x="228" y="196" width="64" height="136" rx="2" fill="#dc2626" opacity="0.9"/>
+  <text x="260" y="191" font-size="8" fill="#9ca3af" text-anchor="middle">~$100B</text>
+  <text x="260" y="270" font-size="9" fill="white" text-anchor="middle">Automotive</text>
+  <rect x="228" y="166" width="64" height="28" rx="2" fill="#00e5a0" opacity="0.8"/>
+  <text x="260" y="180" font-size="8" fill="#0a0f1e" text-anchor="middle">Energy</text>
+  <rect x="228" y="145" width="64" height="19" rx="2" fill="#60a5fa" opacity="0.8"/>
+  <text x="260" y="157" font-size="8" fill="white" text-anchor="middle">Services</text>
+
+  <!-- 2031E column -->
+  <text x="430" y="110" font-size="12" font-weight="800" fill="#00e5a0" text-anchor="middle">2031E</text>
+  <!-- $375B; Auto 40%=150B, Energy 11%=41B, Services 9%=34B, Robots 16%=60B, CyberCab 24%=90B -->
+  <!-- total height 220px for $375B -->
+  <rect x="398" y="196" width="64" height="136" rx="2" fill="#dc2626" opacity="0.85"/>
+  <text x="430" y="270" font-size="9" fill="white" text-anchor="middle">Auto 40%</text>
+  <text x="430" y="283" font-size="8" fill="white" text-anchor="middle">$150B</text>
+
+  <rect x="398" y="162" width="64" height="33" rx="2" fill="#00e5a0" opacity="0.85"/>
+  <text x="430" y="182" font-size="8" fill="#0a0f1e" text-anchor="middle">Energy 11%</text>
+
+  <rect x="398" y="131" width="64" height="29" rx="2" fill="#60a5fa" opacity="0.85"/>
+  <text x="430" y="149" font-size="8" fill="white" text-anchor="middle">Services 9%</text>
+
+  <rect x="398" y="76" width="64" height="53" rx="2" fill="#a78bfa" opacity="0.9"/>
+  <text x="430" y="105" font-size="9" fill="white" text-anchor="middle">Robots 16%</text>
+
+  <rect x="398" y="43" width="64" height="31" rx="2" fill="#f59e0b" opacity="0.9"/>
+  <text x="430" y="62" font-size="8.5" fill="#0a0f1e" text-anchor="middle">CyberCab 24%</text>
+
+  <text x="430" y="38" font-size="10" font-weight="700" fill="#00e5a0" text-anchor="middle">$375B</text>
+
+  <!-- Growth arrow -->
+  <line x1="170" y1="290" x2="215" y2="180" stroke="#374151" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="310" y1="165" x2="395" y2="120" stroke="#374151" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Right panel: Key numbers -->
+  <rect x="530" y="68" width="240" height="300" rx="10" fill="#111827"/>
+  <text x="550" y="90" font-size="11" font-weight="700" fill="#00e5a0">2031E 세그먼트 상세</text>
+
+  <rect x="550" y="100" width="200" height="30" rx="5" fill="#0d1f12"/>
+  <text x="560" y="115" font-size="9" fill="#9ca3af">Automotive (40%)</text>
+  <text x="700" y="115" font-size="11" font-weight="700" fill="#dc2626" text-anchor="end">$150B</text>
+  <text x="560" y="125" font-size="8" fill="#6b7280">여전히 최대 세그먼트, 절대 규모 성장</text>
+
+  <rect x="550" y="138" width="200" height="30" rx="5" fill="#0d1f12"/>
+  <text x="560" y="153" font-size="9" fill="#9ca3af">Cybercab (24%)</text>
+  <text x="700" y="153" font-size="11" font-weight="700" fill="#f59e0b" text-anchor="end">$90B</text>
+  <text x="560" y="163" font-size="8" fill="#6b7280">로보택시 TAM 폭발적 성장</text>
+
+  <rect x="550" y="176" width="200" height="30" rx="5" fill="#0d1f12"/>
+  <text x="560" y="191" font-size="9" fill="#9ca3af">Robots (16%)</text>
+  <text x="700" y="191" font-size="11" font-weight="700" fill="#a78bfa" text-anchor="end">$60B</text>
+  <text x="560" y="201" font-size="8" fill="#6b7280">Optimus 범용 로봇 임대 수익</text>
+
+  <rect x="550" y="214" width="200" height="30" rx="5" fill="#0d1f12"/>
+  <text x="560" y="229" font-size="9" fill="#9ca3af">Energy (11%)</text>
+  <text x="700" y="229" font-size="11" font-weight="700" fill="#00e5a0" text-anchor="end">$41B</text>
+  <text x="560" y="239" font-size="8" fill="#6b7280">Megapack·Powerwall 가속</text>
+
+  <rect x="550" y="252" width="200" height="30" rx="5" fill="#0d1f12"/>
+  <text x="560" y="267" font-size="9" fill="#9ca3af">Services (9%)</text>
+  <text x="700" y="267" font-size="11" font-weight="700" fill="#60a5fa" text-anchor="end">$34B</text>
+  <text x="560" y="277" font-size="8" fill="#6b7280">FSD 구독 + 보험 + 서비스</text>
+
+  <rect x="550" y="295" width="200" height="36" rx="5" fill="#0a1500"/>
+  <text x="650" y="308" font-size="9" fill="#9ca3af" text-anchor="middle">합계</text>
+  <text x="650" y="325" font-size="18" font-weight="800" fill="#00e5a0" text-anchor="middle">$375B</text>
+
+  <!-- Bottom -->
+  <rect x="30" y="380" width="740" height="44" rx="10" fill="#0d1f12"/>
+  <text x="50" y="398" font-size="10" font-weight="700" fill="#00e5a0">핵심 투자 포인트</text>
+  <text x="50" y="415" font-size="10" fill="#9ca3af">자동차 비중 82%→40% 급감, 비자동차(AI·로봇·에너지) 60% 차지. 소프트웨어 기업 리레이팅 근거 수치화.</text>
+  <text x="680" y="415" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

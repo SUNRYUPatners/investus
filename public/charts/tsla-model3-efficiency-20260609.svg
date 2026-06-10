@@ -1,0 +1,52 @@
+<svg viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d14;border-radius:12px">
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="56" rx="12" fill="#111118"/>
+  <text x="20" y="22" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">🚗 TSLA</text>
+  <text x="20" y="40" font-family="Arial,sans-serif" font-size="13" fill="#ffffff" font-weight="700">2026 Model 3 RWD — Edmunds 실주행 효율성 1위</text>
+
+  <!-- Big number hero -->
+  <rect x="14" y="66" width="372" height="72" rx="10" fill="#0a1a12" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="200" y="88" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" text-anchor="middle" font-weight="600">EPA 대비 효율 초과</text>
+  <text x="200" y="118" font-family="Arial,sans-serif" font-size="36" fill="#00e5a0" text-anchor="middle" font-weight="900">+12.5%</text>
+  <text x="200" y="132" font-family="Arial,sans-serif" font-size="10" fill="#aaffdd" text-anchor="middle">Edmunds 실제 주행 테스트 기준</text>
+
+  <!-- Efficiency Bars -->
+  <text x="20" y="162" font-family="Arial,sans-serif" font-size="11" fill="#888899" font-weight="600">소비효율 비교 (kWh / 100 miles)</text>
+
+  <!-- Bar: Model 3 RWD 2026 -->
+  <text x="20" y="182" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">Model 3 RWD 2026 (Edmunds)</text>
+  <rect x="20" y="185" width="265" height="20" rx="4" fill="#00e5a0"/>
+  <text x="292" y="199" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">23.5</text>
+
+  <!-- Bar: EPA official -->
+  <text x="20" y="218" font-family="Arial,sans-serif" font-size="10" fill="#888899">EPA 공식 등급 (환산)</text>
+  <rect x="20" y="221" width="236" height="20" rx="4" fill="#444466"/>
+  <text x="263" y="235" font-family="Arial,sans-serif" font-size="11" fill="#888899">~26.4</text>
+
+  <!-- Bar: Hyundai IONIQ6 RWD -->
+  <text x="20" y="254" font-family="Arial,sans-serif" font-size="10" fill="#888899">Hyundai IONIQ6 RWD (참고)</text>
+  <rect x="20" y="257" width="250" height="20" rx="4" fill="#333344"/>
+  <text x="277" y="271" font-family="Arial,sans-serif" font-size="11" fill="#666677">~25.0</text>
+
+  <!-- Range stats -->
+  <text x="20" y="300" font-family="Arial,sans-serif" font-size="11" fill="#888899" font-weight="600">실제 주행거리 (Edmunds 테스트)</text>
+  <!-- Left card -->
+  <rect x="14" y="308" width="176" height="56" rx="8" fill="#161622" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="102" y="326" font-family="Arial,sans-serif" font-size="9" fill="#888899" text-anchor="middle">실제 주행거리</text>
+  <text x="102" y="347" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" text-anchor="middle" font-weight="800">282 mi</text>
+  <text x="102" y="359" font-family="Arial,sans-serif" font-size="9" fill="#aaffdd" text-anchor="middle">EPA 공식 252 mi 대비 +30 mi</text>
+
+  <!-- Right card -->
+  <rect x="210" y="308" width="176" height="56" rx="8" fill="#161622" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="298" y="326" font-family="Arial,sans-serif" font-size="9" fill="#888899" text-anchor="middle">mi/kWh 효율</text>
+  <text x="298" y="347" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" text-anchor="middle" font-weight="800">4.47</text>
+  <text x="298" y="359" font-family="Arial,sans-serif" font-size="9" fill="#aaccff" text-anchor="middle">업계 최고 수준 (4년 이하 EV 중)</text>
+
+  <!-- Insight -->
+  <rect x="14" y="374" width="372" height="50" rx="8" fill="#0a1a12" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="28" y="392" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">📌 Edmunds 결론</text>
+  <text x="28" y="408" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">"2026 Model 3 RWD — 4년 이하 EV 중 실주행 효율성 1위"</text>
+  <text x="28" y="420" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">배터리 크기보다 효율이 중요하다는 걸 증명 (6/8/2026)</text>
+
+  <text x="200" y="438" font-family="Arial,sans-serif" font-size="9" fill="#333344" text-anchor="middle">2026.06.09 | investus.kr</text>
+</svg>

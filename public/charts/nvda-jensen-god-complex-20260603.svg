@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="380" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="14" font-weight="700" fill="#60a5fa">🔵 Jensen Huang — AI 종말론 정면 반박 · 'God Complex' 비판</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">Sam Altman·Dario Amodei 비판 · "AI가 일자리를 파괴한다"는 주장을 ridiculous라 일축</text>
+
+  <!-- Debate visual -->
+  <rect x="30" y="68" width="360" height="190" rx="10" fill="#111827"/>
+  <text x="50" y="88" font-size="11" font-weight="700" fill="#ef4444">❌ AI 종말론 주장</text>
+  <text x="50" y="106" font-size="10" fill="#9ca3af">주창자</text><text x="130" y="106" font-size="10" fill="#e2e8f0">Sam Altman (OpenAI), Dario Amodei (Anthropic)</text>
+  <text x="50" y="122" font-size="10" fill="#9ca3af">주장</text><text x="130" y="122" font-size="10" fill="#e2e8f0">AI가 소프트웨어 엔지니어 등 직업 대체</text>
+  <text x="50" y="138" font-size="10" fill="#9ca3af">우려</text><text x="130" y="138" font-size="10" fill="#e2e8f0">AI = 민주주의 위협, 일자리 파괴, 사회 혼란</text>
+  <text x="50" y="154" font-size="10" fill="#9ca3af">Jensen 평가</text>
+  <text x="130" y="154" font-size="12" font-weight="800" fill="#ef4444">"God Complex"</text>
+  <text x="50" y="172" font-size="10" fill="#6b7280">• AI가 인류를 지배할 거라는 과대망상</text>
+  <text x="50" y="187" font-size="10" fill="#6b7280">• "He called ALL OF THAT ridiculous"</text>
+  <text x="50" y="202" font-size="10" fill="#6b7280">• Jensen이 공개 석상에서 Altman·Amodei 직접 비판</text>
+  <text x="50" y="218" font-size="10" fill="#6b7280">• AI 종말론 = GPU 수요 억압 내러티브에 정면 반박</text>
+
+  <!-- Jensen counter -->
+  <rect x="410" y="68" width="360" height="190" rx="10" fill="#0a1628"/>
+  <rect x="410" y="68" width="4" height="190" rx="2" fill="#60a5fa"/>
+  <text x="430" y="88" font-size="11" font-weight="700" fill="#60a5fa">✅ Jensen Huang의 반론</text>
+  <text x="430" y="106" font-size="10" fill="#9ca3af">핵심 논리</text>
+  <text x="510" y="106" font-size="10" fill="#e2e8f0">AI = 엔지니어 수요를 늘린다</text>
+  <text x="430" y="124" font-size="10" fill="#e2e8f0">"The number of software engineers is actually increasing"</text>
+  <text x="430" y="142" font-size="10" fill="#e2e8f0">"$9T 생산성 도구가 있다면 엔지니어를 더 뽑아야 한다"</text>
+
+  <!-- Logic chain -->
+  <rect x="430" y="155" width="320" height="90" rx="6" fill="#1e3a5f"/>
+  <text x="590" y="172" font-size="9" fill="#93c5fd" text-anchor="middle">AI 생산성 폭증</text>
+  <text x="590" y="184" font-size="10" fill="#60a5fa" text-anchor="middle">↓</text>
+  <text x="590" y="196" font-size="9" fill="#93c5fd" text-anchor="middle">더 많은 SW 프로젝트 가능</text>
+  <text x="590" y="208" font-size="10" fill="#60a5fa" text-anchor="middle">↓</text>
+  <text x="590" y="220" font-size="9" fill="#93c5fd" text-anchor="middle">엔지니어 수요 증가</text>
+  <text x="590" y="232" font-size="10" fill="#60a5fa" text-anchor="middle">↓</text>
+  <text x="590" y="244" font-size="9" font-weight="700" fill="#60a5fa" text-anchor="middle">GPU 인프라 수요 무한 증가</text>
+
+  <!-- Impact on NVDA -->
+  <rect x="30" y="270" width="740" height="88" rx="10" fill="#111827"/>
+  <text x="50" y="290" font-size="11" font-weight="700" fill="#60a5fa">NVDA 투자 시사점</text>
+
+  <text x="50" y="310" font-size="10" fill="#9ca3af">① AI 종말론 내러티브가 NVDA 수요 억압에 사용될 수 없음 → Jensen이 선제적으로 차단</text>
+  <text x="50" y="326" font-size="10" fill="#9ca3af">② "$9T 생산성" 논리 = FY27 이후에도 GPU 수요 지속되는 근거 → 단기 사이클 논쟁 종결</text>
+  <text x="50" y="342" font-size="10" fill="#9ca3af">③ AI CEO들 사이 내러티브 주도권 경쟁 → Jensen 승리 시 NVDA 주주 수혜</text>
+  <text x="50" y="358" font-size="10" fill="#6b7280">④ 역설: AI 도구가 엔지니어를 늘린다 → SW 프로젝트 증가 → GPU 클러스터 수요 증가 → NVDA 직접 수혜</text>
+  <text x="710" y="358" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

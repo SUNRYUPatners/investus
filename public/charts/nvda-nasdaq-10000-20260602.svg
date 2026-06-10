@@ -1,0 +1,76 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07091a"/>
+      <stop offset="100%" stop-color="#0d1022"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(96,165,250,0.4)"/>
+      <stop offset="100%" stop-color="rgba(96,165,250,0.9)"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="rgba(96,165,250,0.06)"/>
+  <text x="32" y="21" fill="rgba(96,165,250,0.7)" font-size="10" letter-spacing="2" font-weight="700">NVIDIA · NVDA · 나스닥 전망</text>
+  <text x="32" y="46" fill="white" font-size="19" font-weight="800">젠슨 황 "나스닥 10,000 간다" · AI가 소프트웨어 엔지니어를 늘린다</text>
+
+  <!-- Subtitle -->
+  <text x="32" y="78" fill="rgba(255,255,255,0.4)" font-size="11">CNBC: Nasdaq going to 10,000 · Jensen: AI로 생산성 폭증 → 소프트웨어 엔지니어 수요 증가 · 역설적 역설</text>
+
+  <!-- Nasdaq target -->
+  <rect x="32" y="96" width="340" height="110" rx="12" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1.5"/>
+  <text x="202" y="120" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="middle">나스닥 목표 지수</text>
+  <text x="202" y="168" fill="#60a5fa" font-size="58" font-weight="800" text-anchor="middle">10,000</text>
+  <text x="202" y="192" fill="rgba(96,165,250,0.5)" font-size="11" text-anchor="middle">CNBC 보도 · 젠슨 황 발언 기반</text>
+
+  <!-- Jensen quote box -->
+  <rect x="390" y="96" width="378" height="110" rx="12" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="410" y="120" fill="#c084fc" font-size="11" font-weight="700">💬 젠슨 황 핵심 발언</text>
+  <text x="410" y="142" fill="rgba(255,255,255,0.7)" font-size="10" font-style="italic">"The number of software engineers</text>
+  <text x="410" y="158" fill="rgba(255,255,255,0.7)" font-size="10" font-style="italic"> is actually increasing..."</text>
+  <text x="410" y="178" fill="rgba(255,255,255,0.45)" font-size="10">"AI가 $9조 생산성을 만들면 왜</text>
+  <text x="410" y="194" fill="rgba(255,255,255,0.45)" font-size="10"> 엔지니어를 더 안 뽑겠냐?"</text>
+
+  <!-- Paradox explanation -->
+  <text x="32" y="228" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">젠슨의 역설 — AI가 엔지니어를 대체하지 않는 이유</text>
+
+  <rect x="32" y="240" width="736" height="90" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Column 1 -->
+  <text x="72" y="262" fill="rgba(255,77,109,0.8)" font-size="11" font-weight="700" text-anchor="middle">❌ 시장 우려</text>
+  <text x="52" y="280" fill="rgba(255,255,255,0.45)" font-size="10">AI = 소프트웨어 엔지니어</text>
+  <text x="52" y="296" fill="rgba(255,255,255,0.45)" font-size="10">대체 → 수요 감소</text>
+  <text x="52" y="312" fill="rgba(255,255,255,0.45)" font-size="10">→ NVDA 수요 감소</text>
+
+  <line x1="280" y1="248" x2="280" y2="322" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Arrow -->
+  <text x="310" y="290" fill="rgba(255,255,255,0.3)" font-size="20" text-anchor="middle">→</text>
+
+  <!-- Column 2 -->
+  <text x="500" y="262" fill="#00e5a0" font-size="11" font-weight="700" text-anchor="middle">✅ 젠슨의 논리</text>
+  <text x="340" y="280" fill="rgba(255,255,255,0.7)" font-size="10">AI 1명 = $9조 생산성</text>
+  <text x="340" y="296" fill="rgba(255,255,255,0.7)" font-size="10">→ 더 많은 소프트웨어 수요</text>
+  <text x="340" y="312" fill="#60a5fa" font-size="10" font-weight="700">→ 엔지니어 수요 증가 ✓</text>
+
+  <line x1="620" y1="248" x2="620" y2="322" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Column 3 -->
+  <text x="700" y="262" fill="#60a5fa" font-size="11" font-weight="700" text-anchor="middle">NVDA 수혜</text>
+  <text x="632" y="280" fill="rgba(255,255,255,0.65)" font-size="10">AI 인프라 수요</text>
+  <text x="632" y="296" fill="rgba(255,255,255,0.65)" font-size="10">계속 성장</text>
+  <text x="632" y="312" fill="#60a5fa" font-size="10" font-weight="700">GPU 수요 ↑↑</text>
+
+  <!-- Bottom summary -->
+  <rect x="32" y="346" width="736" height="90" rx="12" fill="rgba(96,165,250,0.07)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <text x="52" y="368" fill="#60a5fa" font-size="12" font-weight="700">나스닥 10,000 시나리오가 NVDA와 연결되는 이유</text>
+
+  <rect x="52" y="378" width="2" height="48" fill="rgba(96,165,250,0.4)"/>
+  <text x="64" y="393" fill="rgba(255,255,255,0.7)" font-size="10">• 나스닥 = 기술주 집중 지수 → AI 수익화 가속 시 나스닥이 가장 먼저 반응</text>
+  <text x="64" y="409" fill="rgba(255,255,255,0.7)" font-size="10">• NVDA는 나스닥 시총 기준 상위 3위 이내 → 나스닥 10,000 = NVDA 강세 동의어</text>
+  <text x="64" y="425" fill="rgba(255,255,255,0.7)" font-size="10">• AI가 엔지니어를 늘린다 = AI 인프라(GPU·클라우드) 수요가 예상보다 훨씬 크다는 신호</text>
+
+  <text x="400" y="476" fill="rgba(255,255,255,0.2)" font-size="9" text-anchor="middle">investus.kr · 선류파트너스 · 투자 참고용, 투자 권유 아님</text>
+</svg>

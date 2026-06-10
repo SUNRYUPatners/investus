@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="400" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#00e5a0">🚗 Tesla — Norway 1위 + Cybertruck 가격 구조</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">Norway 베스트셀링 카 1위 달성 · Cybertruck Foundation/Non-Foundation 가격 공개</text>
+
+  <!-- Norway Section -->
+  <rect x="30" y="68" width="360" height="220" rx="10" fill="#111827"/>
+  <text x="50" y="90" font-size="12" font-weight="700" fill="#00e5a0">🇳🇴 Norway — 베스트셀링 카 1위</text>
+
+  <!-- Trophy visualization -->
+  <text x="170" y="150" font-size="60" text-anchor="middle">🏆</text>
+  <text x="170" y="175" font-size="18" font-weight="800" fill="#00e5a0" text-anchor="middle">#1</text>
+  <text x="170" y="193" font-size="11" fill="#e2e8f0" text-anchor="middle">BEST SELLING CAR</text>
+  <text x="170" y="208" font-size="11" fill="#e2e8f0" text-anchor="middle">IN NORWAY</text>
+
+  <text x="50" y="240" font-size="10" fill="#9ca3af">수요 상황</text>
+  <text x="140" y="240" font-size="11" font-weight="700" fill="#00e5a0">INSANE DEMAND</text>
+  <text x="50" y="258" font-size="10" fill="#9ca3af">주요 시장 중 EV 보급률 세계 최고인 노르웨이에서 1위</text>
+  <text x="50" y="274" font-size="10" fill="#6b7280">신형 Model Y + FSD 기대감 복합 효과</text>
+
+  <!-- Cybertruck Section -->
+  <rect x="410" y="68" width="360" height="220" rx="10" fill="#111827"/>
+  <text x="430" y="90" font-size="12" font-weight="700" fill="#00e5a0">⚡ Cybertruck 가격 구조</text>
+
+  <!-- Foundation Series -->
+  <rect x="430" y="102" width="320" height="64" rx="8" fill="#0d1f12"/>
+  <rect x="430" y="102" width="4" height="64" rx="2" fill="#00e5a0"/>
+  <text x="444" y="118" font-size="10" font-weight="700" fill="#00e5a0">Foundation Series</text>
+  <text x="444" y="134" font-size="22" font-weight="800" fill="#00e5a0">$64,500</text>
+  <text x="444" y="150" font-size="9" fill="#9ca3af">2025 · 2026 Model Year</text>
+  <text x="444" y="162" font-size="9" fill="#6b7280">+ 배송비 $3,200 별도</text>
+
+  <!-- Non-Foundation Series -->
+  <rect x="430" y="176" width="320" height="64" rx="8" fill="#1a1033"/>
+  <rect x="430" y="176" width="4" height="64" rx="2" fill="#c084fc"/>
+  <text x="444" y="192" font-size="10" font-weight="700" fill="#c084fc">Non-Foundation Series</text>
+  <text x="444" y="208" font-size="22" font-weight="800" fill="#c084fc">$94,800</text>
+  <text x="444" y="224" font-size="9" fill="#9ca3af">2025 · 2026 Model Year</text>
+  <text x="444" y="236" font-size="9" fill="#6b7280">+ 배송비 $3,200 별도</text>
+
+  <text x="430" y="265" font-size="9" fill="#6b7280">* $3,200 배송비는 주문 확정 후 별도 청구</text>
+  <text x="430" y="278" font-size="9" fill="#6b7280">* Foundation/Non-Foundation 사양 차이 미공개</text>
+
+  <!-- Bottom row -->
+  <rect x="30" y="300" width="740" height="80" rx="10" fill="#0d1f12"/>
+  <text x="50" y="320" font-size="11" font-weight="700" fill="#00e5a0">투자 포인트</text>
+  <text x="50" y="338" font-size="10" fill="#9ca3af">Norway 1위는 EV 최선진 시장에서 Tesla가 여전히 압도적 경쟁력 보유 증거. Cybertruck 가격 구조 공개로 수익성 가시화.</text>
+  <text x="50" y="355" font-size="10" fill="#9ca3af">Foundation Series $64,500은 Model X 대비 경쟁력 있는 가격대 → 수요 촉진 효과. 배송비 별도 구조는 마진 관리 전략.</text>
+  <text x="50" y="372" font-size="10" fill="#6b7280">Non-Foundation $94,800은 고마진 트림 → ASP 상승 효과 기대.</text>
+  <text x="710" y="372" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

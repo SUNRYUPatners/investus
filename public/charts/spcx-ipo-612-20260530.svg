@@ -1,0 +1,62 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#c084fc"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">SpaceX IPO 6/12 나스닥 · $1.5T 목표 · ZeroHedge 루머 "False"</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.30</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- IPO date -->
+  <rect x="30" y="80" width="225" height="140" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="80" width="4" height="140" rx="2" fill="#c084fc"/>
+  <text x="48" y="106" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">상장 일정</text>
+  <text x="48" y="160" font-family="Arial,sans-serif" font-size="40" fill="#c084fc" font-weight="700">6/12</text>
+  <text x="48" y="180" font-family="Arial,sans-serif" font-size="11" fill="white">나스닥 IPO 예정</text>
+  <text x="48" y="198" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">목표 기업가치 $1.5T+</text>
+  <text x="48" y="212" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">공모 규모 $1.5B · 역대 최대 IPO</text>
+
+  <!-- Musk "False" -->
+  <rect x="275" y="80" width="225" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="275" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="293" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">IPO 루머 차단</text>
+  <text x="293" y="158" font-family="Arial,sans-serif" font-size="38" fill="#00e5a0" font-weight="700">"False"</text>
+  <text x="293" y="178" font-family="Arial,sans-serif" font-size="10" fill="white">ZeroHedge 가치하락 루머</text>
+  <text x="293" y="196" font-family="Arial,sans-serif" font-size="10" fill="white">Musk 5분 만에 직접 부인</text>
+  <text x="293" y="212" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">$1.5T 목표·일정 변동 없음 확인</text>
+
+  <!-- Lock-up structure -->
+  <rect x="520" y="80" width="250" height="140" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="520" y="80" width="4" height="140" rx="2" fill="#c084fc"/>
+  <text x="538" y="106" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">락업 구조</text>
+  <text x="538" y="132" font-family="Arial,sans-serif" font-size="10" fill="white">180일 락업 · 인사이더 5%</text>
+  <text x="538" y="150" font-family="Arial,sans-serif" font-size="10" fill="#c084fc">+30% 시 추가 10% 해제</text>
+  <text x="538" y="168" font-family="Arial,sans-serif" font-size="10" fill="white">90일·133일차 각 7% 순차 해제</text>
+  <text x="538" y="186" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Goldman·JPMorgan·BofA 주관</text>
+  <text x="538" y="202" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">머스크 의결권 93.6% 유지</text>
+  <text x="538" y="214" font-family="Arial,sans-serif" font-size="9" fill="#c084fc">상장 초기 변동성 극심 → 분할 매수</text>
+
+  <!-- Key insight -->
+  <rect x="30" y="234" width="740" height="110" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="30" y="234" width="4" height="110" rx="2" fill="#c084fc"/>
+  <text x="48" y="258" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">투자 시사점</text>
+  <text x="48" y="278" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• IPO 6/12 확정 · Musk 루머 5분 만에 직접 부인 = $1.5T 밸류에이션·일정 변동 없음 공식 확인</text>
+  <text x="48" y="296" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 락업 물량 180일 소화 일정 감안 → 상장 직후 분할 매수 전략 · 90·133일차 물량 해제 타이밍 주의</text>
+  <text x="48" y="314" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 간접 투자: GOOGL(~6% 지분) · TSLA($2B 간접 노출) · ARKX·UFO ETF · Schwab·Fidelity 직접 청약</text>
+  <text x="48" y="332" font-family="Arial,sans-serif" font-size="10" fill="#c084fc">• ZeroHedge 루머 즉각 부인 = IPO 청약 흥행에 강한 자신감 표현 · 기관 수요 확인 신호</text>
+  <text x="48" y="338" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">$24B+ 정부 계약 + Starlink $1B/분기 영업이익 = S-1 재무 스토리 완성 · IPO 밸류에이션 정당화</text>
+
+  <!-- Stats row -->
+  <rect x="30" y="356" width="740" height="34" rx="6" fill="#0a0814" stroke="#c084fc" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="48" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">상장일</text>
+  <text x="110" y="378" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700">6/12 NASDAQ</text>
+  <text x="290" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">목표 기업가치</text>
+  <text x="370" y="378" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700">$1.5T+</text>
+  <text x="480" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">공모 규모</text>
+  <text x="540" y="378" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700">$1.5B</text>
+  <text x="640" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">누적 정부계약</text>
+  <text x="718" y="378" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700">$24B+</text>
+
+  <line x1="30" y1="402" x2="770" y2="402" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="418" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="418" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

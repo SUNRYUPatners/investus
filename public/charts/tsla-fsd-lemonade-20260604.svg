@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#ef4444">🍋 Tesla FSD × Lemonade — 보험료 50% 할인</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">FSD 안전 데이터 기반 보험 혁신 · 2026.06.04</text>
+
+  <!-- Big 50% -->
+  <rect x="30" y="65" width="280" height="175" rx="12" fill="#1a1a00" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="170" y="92" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">보험료 할인율</text>
+  <text x="170" y="185" font-size="100" font-weight="900" fill="white" text-anchor="middle">50%</text>
+  <text x="170" y="218" font-size="10" fill="#9ca3af" text-anchor="middle">최대 할인 (인디애나 주)</text>
+
+  <!-- How it works -->
+  <rect x="325" y="65" width="445" height="175" rx="12" fill="#111827"/>
+  <text x="548" y="92" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">할인 구조</text>
+
+  <!-- FSD miles → discount bar -->
+  <rect x="345" y="108" width="405" height="120" rx="8" fill="#0d1117"/>
+  <text x="548" y="128" font-size="9" fill="#9ca3af" text-anchor="middle">FSD 주행 마일리지 → 할인율</text>
+
+  <!-- Level 1 -->
+  <text x="355" y="150" font-size="8" fill="#6b7280">FSD 사용 낮음</text>
+  <rect x="455" y="140" width="280" height="14" rx="3" fill="#1a1a1a"/>
+  <rect x="455" y="140" width="84" height="14" rx="3" fill="#fbbf24" opacity="0.4"/>
+  <text x="742" y="151" font-size="8" fill="#9ca3af">~15%</text>
+
+  <!-- Level 2 -->
+  <text x="355" y="175" font-size="8" fill="#9ca3af">FSD 사용 보통</text>
+  <rect x="455" y="165" width="280" height="14" rx="3" fill="#1a1a1a"/>
+  <rect x="455" y="165" width="168" height="14" rx="3" fill="#fbbf24" opacity="0.6"/>
+  <text x="742" y="176" font-size="8" fill="#9ca3af">~30%</text>
+
+  <!-- Level 3 -->
+  <text x="355" y="200" font-size="8" fill="#e2e8f0">FSD 사용 많음</text>
+  <rect x="455" y="190" width="280" height="14" rx="3" fill="#1a1a1a"/>
+  <rect x="455" y="190" width="280" height="14" rx="3" fill="#fbbf24"/>
+  <text x="742" y="201" font-size="8" fill="#fbbf24" font-weight="700">50%</text>
+
+  <!-- Key stats -->
+  <rect x="30" y="255" width="740" height="90" rx="12" fill="#111827"/>
+  <text x="400" y="278" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">핵심 지표</text>
+
+  <rect x="50" y="288" width="155" height="45" rx="8" fill="#1a1a00" stroke="#fbbf24" stroke-width="1"/>
+  <text x="128" y="306" font-size="9" fill="#9ca3af" text-anchor="middle">FSD 안전성</text>
+  <text x="128" y="324" font-size="14" font-weight="800" fill="#fbbf24" text-anchor="middle">2배 안전</text>
+
+  <rect x="220" y="288" width="155" height="45" rx="8" fill="#1a1a00" stroke="#fbbf24" stroke-width="1"/>
+  <text x="298" y="306" font-size="9" fill="#9ca3af" text-anchor="middle">최대 할인</text>
+  <text x="298" y="324" font-size="14" font-weight="800" fill="white" text-anchor="middle">-50%</text>
+
+  <rect x="390" y="288" width="155" height="45" rx="8" fill="#1a1a00" stroke="#fbbf24" stroke-width="1"/>
+  <text x="468" y="306" font-size="9" fill="#9ca3af" text-anchor="middle">첫 출시 지역</text>
+  <text x="468" y="324" font-size="13" font-weight="800" fill="#e2e8f0" text-anchor="middle">인디애나 주</text>
+
+  <rect x="560" y="288" width="195" height="45" rx="8" fill="#1a1a00" stroke="#fbbf24" stroke-width="1"/>
+  <text x="658" y="306" font-size="9" fill="#9ca3af" text-anchor="middle">파트너십</text>
+  <text x="658" y="324" font-size="13" font-weight="800" fill="#fbbf24" text-anchor="middle">LMND × TSLA</text>
+
+  <!-- Lemonade logo area + quote -->
+  <rect x="30" y="360" width="360" height="55" rx="12" fill="#111827"/>
+  <!-- Lemonade pink logo hint -->
+  <circle cx="75" cy="387" r="18" fill="#ff0080" opacity="0.8"/>
+  <text x="75" y="392" font-size="16" fill="white" text-anchor="middle" font-weight="900">L</text>
+  <text x="110" y="380" font-size="11" font-weight="800" fill="#ff0080">Lemonade</text>
+  <text x="110" y="397" font-size="9" fill="#9ca3af">AI-native 보험사</text>
+  <text x="370" y="380" font-size="9" fill="#6b7280" text-anchor="end">$LMND</text>
+
+  <rect x="405" y="360" width="365" height="55" rx="12" fill="#111827"/>
+  <text x="588" y="382" font-size="9" fill="#9ca3af" text-anchor="middle">"Lemonade says FSD is twice as safe and rates</text>
+  <text x="588" y="398" font-size="9" fill="#9ca3af" text-anchor="middle">could drop 50%. More FSD miles = bigger discount."</text>
+  <text x="588" y="412" font-size="8" fill="#6b7280" text-anchor="middle">— Herbert Ong (@herbertong)</text>
+
+  <text x="770" y="430" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

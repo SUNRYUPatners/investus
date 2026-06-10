@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="450" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#ef4444">🚗 Tesla 로보택시 — Austin TX 무감독 운행</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">Unsupervised Robotaxi · 2026.06.04</text>
+
+  <!-- Austin TX Map (SVG polygon approximation) -->
+  <rect x="30" y="65" width="310" height="260" rx="12" fill="#111827"/>
+  <text x="185" y="88" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">Austin, TX — 서비스 구역</text>
+  <!-- Map background -->
+  <rect x="50" y="95" width="270" height="215" rx="8" fill="#0d1117"/>
+  <!-- Road lines (simplified) -->
+  <line x1="125" y1="95" x2="125" y2="310" stroke="#1f2937" stroke-width="1"/>
+  <line x1="200" y1="95" x2="200" y2="310" stroke="#1f2937" stroke-width="1"/>
+  <line x1="275" y1="95" x2="275" y2="310" stroke="#1f2937" stroke-width="1"/>
+  <line x1="50" y1="145" x2="320" y2="145" stroke="#1f2937" stroke-width="1"/>
+  <line x1="50" y1="200" x2="320" y2="200" stroke="#1f2937" stroke-width="1"/>
+  <line x1="50" y1="255" x2="320" y2="255" stroke="#1f2937" stroke-width="1"/>
+  <!-- Service area polygon (Austin-like shape) -->
+  <polygon points="95,108 165,98 240,105 295,125 310,170 305,225 285,270 240,295 185,305 130,295 80,265 60,210 65,155 80,120"
+           fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2"/>
+  <!-- Center dot -->
+  <circle cx="185" cy="200" r="6" fill="#ef4444"/>
+  <text x="185" y="196" font-size="8" fill="white" text-anchor="middle" font-weight="700">Austin</text>
+  <!-- Area label -->
+  <rect x="135" y="212" width="100" height="22" rx="4" fill="#ef4444" opacity="0.9"/>
+  <text x="185" y="227" font-size="10" font-weight="800" fill="white" text-anchor="middle">344 sq mi</text>
+
+  <!-- Stats -->
+  <rect x="360" y="65" width="410" height="260" rx="12" fill="#111827"/>
+  <text x="565" y="90" font-size="11" font-weight="700" fill="#ef4444" text-anchor="middle">핵심 운행 지표</text>
+
+  <!-- Big stat: 344 sq mi -->
+  <rect x="380" y="100" width="175" height="90" rx="10" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="468" y="125" font-size="10" fill="#9ca3af" text-anchor="middle">서비스 커버리지</text>
+  <text x="468" y="170" font-size="52" font-weight="900" fill="white" text-anchor="middle">344</text>
+  <text x="468" y="186" font-size="10" fill="#ef4444" text-anchor="middle">sq mi</text>
+
+  <!-- Rank -->
+  <rect x="570" y="100" width="175" height="90" rx="10" fill="#111827" stroke="#7c3aed" stroke-width="1"/>
+  <text x="658" y="125" font-size="10" fill="#9ca3af" text-anchor="middle">미국 내 순위</text>
+  <text x="658" y="170" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">#3</text>
+  <text x="658" y="186" font-size="10" fill="#9ca3af" text-anchor="middle">무감독 서비스 구역</text>
+
+  <!-- Timeline -->
+  <rect x="380" y="200" width="365" height="110" rx="10" fill="#0d1117"/>
+  <text x="563" y="222" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">서비스 현황</text>
+  <!-- Unsupervised badge -->
+  <rect x="400" y="232" width="130" height="24" rx="6" fill="#ef4444"/>
+  <text x="465" y="248" font-size="10" font-weight="800" fill="white" text-anchor="middle">UNSUPERVISED</text>
+  <rect x="545" y="232" width="180" height="24" rx="6" fill="#1a1a2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="635" y="248" font-size="9" fill="#c084fc" text-anchor="middle">출시 1년 미만 달성</text>
+
+  <text x="400" y="276" font-size="9" fill="#9ca3af">운행 반경</text>
+  <text x="565" y="276" font-size="9" font-weight="700" fill="#e2e8f0" text-anchor="middle">Austin 전역 + 주변 교외 포함</text>
+  <text x="400" y="295" font-size="9" fill="#9ca3af">서비스 시작</text>
+  <text x="565" y="295" font-size="9" font-weight="700" fill="#e2e8f0" text-anchor="middle">2025년 하반기</text>
+  <text x="400" y="314" font-size="9" fill="#9ca3af">비교 대상</text>
+  <text x="565" y="314" font-size="9" font-weight="700" fill="#e2e8f0" text-anchor="middle">Waymo SF(110 sq mi) 대비 3배+</text>
+
+  <!-- Bottom banner -->
+  <rect x="30" y="340" width="740" height="80" rx="12" fill="#111827"/>
+  <text x="400" y="365" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="400" y="385" font-size="10" fill="#9ca3af" text-anchor="middle">Austin TX는 Tesla 로보택시 글로벌 확장의 기준점 — 무감독 자율주행 규제 승인 획득 후</text>
+  <text x="400" y="401" font-size="10" fill="#9ca3af" text-anchor="middle">서비스 구역이 빠르게 확대 중. 다음 도시: San Francisco, Miami, LA 예상</text>
+  <text x="400" y="417" font-size="9" fill="#6b7280" text-anchor="middle">"Robotaxi isn't even one year old, and Tesla already has the 3rd largest unsupervised service area in the US"</text>
+
+  <text x="770" y="440" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

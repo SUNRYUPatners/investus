@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Segoe UI',Arial,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="440" fill="#0a0f1e"/>
+
+  <!-- Header accent bar -->
+  <rect x="0" y="0" width="800" height="4" fill="#00e5a0"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="68" fill="#12172e"/>
+  <text x="24" y="36" font-size="18" font-weight="700" fill="#00e5a0">Tesla 네바다 로보택시 허가 신청</text>
+  <text x="24" y="52" font-size="12" fill="#8892b0">2026.06.10 · TSLA · Las Vegas, Nevada</text>
+
+  <!-- Status Card (y:80-150) -->
+  <rect x="24" y="80" width="752" height="66" rx="10" fill="#0d2418"/>
+  <!-- Badge -->
+  <rect x="44" y="93" width="120" height="40" rx="20" fill="#00e5a0"/>
+  <text x="104" y="118" font-size="15" font-weight="800" fill="#0a0f1e" text-anchor="middle">신청 완료</text>
+  <!-- Details -->
+  <text x="190" y="108" font-size="13" font-weight="600" fill="#e2e8f0">허가 유형: 자율주행 로보택시 영업 허가</text>
+  <text x="190" y="128" font-size="12" fill="#8892b0">대상 지역: 네바다주 라스베이거스 (Las Vegas, NV)</text>
+  <text x="190" y="143" font-size="11" fill="#64748b">신청 주체: Tesla, Inc. · 차량 모델: Model 3/Y</text>
+
+  <!-- Coverage Diagram (y:165-310) -->
+  <text x="24" y="183" font-size="12" font-weight="600" fill="#8892b0">커버리지 지도</text>
+
+  <!-- Map background -->
+  <rect x="24" y="190" width="752" height="112" rx="8" fill="#0e1428"/>
+
+  <!-- Simplified US West outline - just boxes representing states -->
+  <!-- California -->
+  <rect x="80" y="210" width="120" height="80" rx="4" fill="#1a2744" stroke="#2d3f6b" stroke-width="1"/>
+  <text x="140" y="255" font-size="11" fill="#4a5568" text-anchor="middle">California</text>
+
+  <!-- Nevada - highlighted -->
+  <rect x="215" y="210" width="100" height="80" rx="4" fill="#1a3522" stroke="#00e5a0" stroke-width="2"/>
+  <text x="265" y="248" font-size="11" font-weight="600" fill="#00e5a0" text-anchor="middle">Nevada</text>
+  <!-- Las Vegas dot -->
+  <circle cx="265" cy="268" r="7" fill="#00e5a0"/>
+  <text x="296" y="272" font-size="10" font-weight="600" fill="#00e5a0">Las Vegas</text>
+
+  <!-- Arizona -->
+  <rect x="330" y="240" width="80" height="50" rx="4" fill="#1a2744" stroke="#2d3f6b" stroke-width="1"/>
+  <text x="370" y="270" font-size="10" fill="#4a5568" text-anchor="middle">Arizona</text>
+
+  <!-- Oregon (above CA) -->
+  <rect x="80" y="170" width="120" height="35" rx="4" fill="#1a2744" stroke="#2d3f6b" stroke-width="1"/>
+  <text x="140" y="191" font-size="10" fill="#4a5568" text-anchor="middle">Oregon</text>
+
+  <!-- Legend / label -->
+  <circle cx="480" cy="230" r="6" fill="#00e5a0"/>
+  <text x="494" y="234" font-size="11" fill="#00e5a0">허가 신청 도시: Las Vegas</text>
+  <rect x="478" y="248" width="12" height="12" rx="2" fill="none" stroke="#00e5a0" stroke-width="2"/>
+  <text x="494" y="259" font-size="11" fill="#00e5a0">허가 신청 주: Nevada</text>
+  <rect x="478" y="268" width="12" height="12" rx="2" fill="#1a2744" stroke="#2d3f6b" stroke-width="1"/>
+  <text x="494" y="279" font-size="11" fill="#4a5568">인접 주 (미신청)</text>
+
+  <!-- Tesla logo area -->
+  <text x="680" y="258" font-size="28" font-weight="900" fill="#00e5a0" text-anchor="middle">T</text>
+  <text x="680" y="278" font-size="11" fill="#8892b0" text-anchor="middle">Tesla</text>
+  <text x="680" y="292" font-size="11" fill="#8892b0" text-anchor="middle">Robotaxi</text>
+
+  <!-- Key Details (y:325-400) -->
+  <text x="24" y="323" font-size="12" font-weight="600" fill="#8892b0">주요 내용</text>
+
+  <!-- 3 info rows -->
+  <!-- Row 1 -->
+  <rect x="24" y="330" width="232" height="58" rx="8" fill="#1a1f35" stroke="#00e5a0" stroke-width="1"/>
+  <text x="140" y="352" font-size="11" fill="#64748b" text-anchor="middle">대상 도시</text>
+  <text x="140" y="372" font-size="14" font-weight="700" fill="#00e5a0" text-anchor="middle">Las Vegas</text>
+  <text x="140" y="384" font-size="10" fill="#64748b" text-anchor="middle">네바다주 · 허가 신청</text>
+
+  <!-- Row 2 -->
+  <rect x="284" y="330" width="232" height="58" rx="8" fill="#1a1f35" stroke="#00e5a0" stroke-width="1"/>
+  <text x="400" y="352" font-size="11" fill="#64748b" text-anchor="middle">허가 유형</text>
+  <text x="400" y="368" font-size="13" font-weight="700" fill="#00e5a0" text-anchor="middle">자율주행 택시</text>
+  <text x="400" y="384" font-size="10" fill="#64748b" text-anchor="middle">무감독 영업 허가</text>
+
+  <!-- Row 3 -->
+  <rect x="544" y="330" width="232" height="58" rx="8" fill="#1a1f35" stroke="#00e5a0" stroke-width="1"/>
+  <text x="660" y="352" font-size="11" fill="#64748b" text-anchor="middle">다음 단계</text>
+  <text x="660" y="368" font-size="13" font-weight="700" fill="#00e5a0" text-anchor="middle">주정부 심사</text>
+  <text x="660" y="384" font-size="10" fill="#64748b" text-anchor="middle">Nevada DMV 승인 대기</text>
+
+  <!-- Source -->
+  <text x="400" y="425" font-size="11" fill="#4a5568" text-anchor="middle">investus.kr</text>
+</svg>

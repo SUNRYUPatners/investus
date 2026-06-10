@@ -1,0 +1,74 @@
+<svg viewBox="0 0 400 430" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d14;border-radius:12px">
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="56" rx="12" fill="#111118"/>
+  <text x="20" y="22" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">🚗 TSLA</text>
+  <text x="20" y="40" font-family="Arial,sans-serif" font-size="13" fill="#ffffff" font-weight="700">ARK Invest — Tesla 2030 목표 주가</text>
+
+  <!-- Target range visual -->
+  <text x="200" y="78" font-family="Arial,sans-serif" font-size="10" fill="#888899" text-anchor="middle" font-weight="600">2030 Price Target Range</text>
+
+  <!-- Range bar -->
+  <rect x="40" y="88" width="320" height="28" rx="14" fill="#1a1025"/>
+  <rect x="107" y="88" width="186" height="28" rx="14" fill="#2a1840"/>
+  <rect x="173" y="88" width="54" height="28" rx="14" fill="#00e5a0" fill-opacity="0.2"/>
+  <!-- Bear marker -->
+  <circle cx="107" cy="102" r="12" fill="#c084fc" fill-opacity="0.9"/>
+  <text x="107" y="106" font-family="Arial,sans-serif" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="700">$2K</text>
+  <!-- Base marker -->
+  <circle cx="200" cy="102" r="14" fill="#00e5a0"/>
+  <text x="200" y="106" font-family="Arial,sans-serif" font-size="9" fill="#000000" text-anchor="middle" font-weight="900">$2.6K</text>
+  <!-- Bull marker -->
+  <circle cx="293" cy="102" r="12" fill="#60a5fa" fill-opacity="0.9"/>
+  <text x="293" y="106" font-family="Arial,sans-serif" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="700">$3.1K</text>
+
+  <!-- Labels below -->
+  <text x="107" y="130" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="middle">Bear</text>
+  <text x="200" y="130" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle" font-weight="700">Base ★</text>
+  <text x="293" y="130" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Bull</text>
+
+  <!-- Cards -->
+  <rect x="14" y="142" width="112" height="72" rx="8" fill="#161622" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="70" y="160" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="middle" font-weight="600">Bear Case</text>
+  <text x="70" y="184" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" text-anchor="middle" font-weight="900">$2,000</text>
+  <text x="70" y="200" font-family="Arial,sans-serif" font-size="8" fill="#ddaaff" text-anchor="middle">로보택시 지연 시나리오</text>
+  <text x="70" y="211" font-family="Arial,sans-serif" font-size="8" fill="#ddaaff" text-anchor="middle">Optimus 부진 가정</text>
+
+  <rect x="144" y="142" width="112" height="72" rx="8" fill="#0a1a12" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="200" y="160" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle" font-weight="700">Base Case ★</text>
+  <text x="200" y="184" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" text-anchor="middle" font-weight="900">$2,600</text>
+  <text x="200" y="200" font-family="Arial,sans-serif" font-size="8" fill="#aaffdd" text-anchor="middle">FSD 수익화 본격화</text>
+  <text x="200" y="211" font-family="Arial,sans-serif" font-size="8" fill="#aaffdd" text-anchor="middle">Optimus 양산 시작</text>
+
+  <rect x="274" y="142" width="112" height="72" rx="8" fill="#161622" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="330" y="160" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" font-weight="600">Bull Case</text>
+  <text x="330" y="184" font-family="Arial,sans-serif" font-size="28" fill="#60a5fa" text-anchor="middle" font-weight="900">$3,100</text>
+  <text x="330" y="200" font-family="Arial,sans-serif" font-size="8" fill="#aaccff" text-anchor="middle">로보택시 대규모 확산</text>
+  <text x="330" y="211" font-family="Arial,sans-serif" font-size="8" fill="#aaccff" text-anchor="middle">Optimus 수십만 대 판매</text>
+
+  <!-- ARK Holdings -->
+  <rect x="14" y="226" width="372" height="50" rx="8" fill="#0f1118" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="200" y="244" font-family="Arial,sans-serif" font-size="10" fill="#888899" text-anchor="middle">ARK Invest 현재 Tesla 보유</text>
+  <text x="200" y="265" font-family="Arial,sans-serif" font-size="18" fill="#c084fc" text-anchor="middle" font-weight="800">약 2.83M 주</text>
+  <text x="200" y="272" font-family="Arial,sans-serif" font-size="8" fill="#bbaadd" text-anchor="middle">(~$1.1B 추산 · ARK Innovation ETF ARKK 기준)</text>
+
+  <!-- ARK thesis -->
+  <text x="20" y="300" font-family="Arial,sans-serif" font-size="11" fill="#888899" font-weight="600">ARK 핵심 투자 테제</text>
+  <!-- Thesis items -->
+  <rect x="14" y="306" width="176" height="44" rx="6" fill="#111118" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="103" y="322" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" text-anchor="middle" font-weight="700">🤖 Optimus 로봇</text>
+  <text x="103" y="336" font-family="Arial,sans-serif" font-size="8.5" fill="#aabbcc" text-anchor="middle">10만+ 대/년 양산 → $2~5B 매출</text>
+  <text x="103" y="347" font-family="Arial,sans-serif" font-size="8.5" fill="#aabbcc" text-anchor="middle">인건비 대체 효과 $20T+ TAM</text>
+
+  <rect x="210" y="306" width="176" height="44" rx="6" fill="#111118" stroke="#c084fc" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="298" y="322" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" text-anchor="middle" font-weight="700">🚕 Robotaxi 플랫폼</text>
+  <text x="298" y="336" font-family="Arial,sans-serif" font-size="8.5" fill="#aabbcc" text-anchor="middle">Uber/Lyft 대체 → $1T+ TAM</text>
+  <text x="298" y="347" font-family="Arial,sans-serif" font-size="8.5" fill="#aabbcc" text-anchor="middle">2027+ 수익화 본격화</text>
+
+  <!-- Insight -->
+  <rect x="14" y="360" width="372" height="52" rx="8" fill="#0a1a12" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="28" y="378" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">📌 Cathie Wood 확신</text>
+  <text x="28" y="394" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">2030년 $2,600은 Robotaxi+Optimus 수익화 가정. Cathie Wood는</text>
+  <text x="28" y="408" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc">Austin Unsupervised 탑승 후 "지금 모든 게 동시에 움직이고 있다"고 언급.</text>
+
+  <text x="200" y="427" font-family="Arial,sans-serif" font-size="9" fill="#333344" text-anchor="middle">2026.06.09 | investus.kr</text>
+</svg>

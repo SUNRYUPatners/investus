@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="420" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#c084fc">🚀 SpaceX · Terafab LLC — Texas 반도체 팹 공청회</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">SpaceX 자회사 Terafab LLC · Grimes County, Texas · 2026.06.03 공청회</text>
+
+  <!-- Center: Investment Scale — the big story -->
+  <rect x="30" y="68" width="460" height="190" rx="12" fill="#1a1033"/>
+  <text x="260" y="92" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">투자 규모 비교</text>
+
+  <!-- Phase 1 -->
+  <text x="55" y="120" font-size="10" fill="#9ca3af">Phase 1</text>
+  <rect x="55" y="128" width="220" height="36" rx="6" fill="#7c3aed"/>
+  <text x="165" y="151" font-size="22" font-weight="900" fill="white" text-anchor="middle">$55B</text>
+  <text x="282" y="151" font-size="11" fill="#c084fc">초기 착공</text>
+
+  <!-- Total -->
+  <text x="55" y="190" font-size="10" fill="#9ca3af">전체 완공</text>
+  <rect x="55" y="198" width="400" height="36" rx="6" fill="#5b21b6" opacity="0.5"/>
+  <rect x="55" y="198" width="220" height="36" rx="6" fill="#7c3aed" opacity="0.7"/>
+  <text x="275" y="221" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">$119B</text>
+  <text x="464" y="221" font-size="10" fill="#9ca3af" text-anchor="end">역대 최대</text>
+
+  <text x="55" y="248" font-size="9" fill="#6b7280">미국 내 단일 반도체 투자 역대 최대 규모 · 텍사스주 재산세 감면(Tax Abatement) 협약</text>
+
+  <!-- Right panel: Key facts (visual, minimal text) -->
+  <rect x="510" y="68" width="260" height="190" rx="12" fill="#111827"/>
+  <text x="640" y="92" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">핵심 정보</text>
+
+  <!-- Who -->
+  <rect x="530" y="102" width="220" height="30" rx="6" fill="#1a1033"/>
+  <text x="540" y="115" font-size="9" fill="#9ca3af">주체</text>
+  <text x="540" y="127" font-size="10" font-weight="700" fill="#c084fc">SpaceX → Terafab LLC (자회사)</text>
+
+  <!-- Where -->
+  <rect x="530" y="138" width="220" height="30" rx="6" fill="#1a1033"/>
+  <text x="540" y="151" font-size="9" fill="#9ca3af">위치</text>
+  <text x="540" y="163" font-size="10" font-weight="700" fill="#e2e8f0">Texas · Grimes County</text>
+
+  <!-- What -->
+  <rect x="530" y="174" width="220" height="30" rx="6" fill="#1a1033"/>
+  <text x="540" y="187" font-size="9" fill="#9ca3af">시설</text>
+  <text x="540" y="199" font-size="10" font-weight="700" fill="#e2e8f0">AI 칩 · 반도체 수직통합 팹</text>
+
+  <!-- When -->
+  <rect x="530" y="210" width="220" height="38" rx="6" fill="#1a1033"/>
+  <text x="540" y="223" font-size="9" fill="#9ca3af">공청회</text>
+  <text x="540" y="237" font-size="10" font-weight="700" fill="#c084fc">2026.06.03</text>
+  <text x="540" y="250" font-size="9" fill="#6b7280">Reinvestment Zone No.1 지정 심의</text>
+
+  <!-- Bottom: Why it matters — 3 icons -->
+  <rect x="30" y="274" width="740" height="122" rx="12" fill="#111827"/>
+
+  <!-- Icon 1 -->
+  <circle cx="130" cy="316" r="32" fill="#1a1033" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="130" y="308" font-size="22" text-anchor="middle">🏭</text>
+  <text x="130" y="328" font-size="9" font-weight="700" fill="#c084fc" text-anchor="middle">반도체 자급</text>
+  <text x="130" y="342" font-size="8" fill="#6b7280" text-anchor="middle">SpaceXai 전용 칩</text>
+
+  <!-- Arrow -->
+  <polygon points="195,316 210,310 210,322" fill="#c084fc"/>
+
+  <!-- Icon 2 -->
+  <circle cx="260" cy="316" r="32" fill="#1a1033" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="260" y="308" font-size="22" text-anchor="middle">💰</text>
+  <text x="260" y="328" font-size="9" font-weight="700" fill="#c084fc" text-anchor="middle">비용 절감</text>
+  <text x="260" y="342" font-size="8" fill="#6b7280" text-anchor="middle">NVDA GPU 구매 제로</text>
+
+  <!-- Arrow -->
+  <polygon points="325,316 340,310 340,322" fill="#c084fc"/>
+
+  <!-- Icon 3 -->
+  <circle cx="390" cy="316" r="32" fill="#1a1033" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="390" y="308" font-size="22" text-anchor="middle">📈</text>
+  <text x="390" y="328" font-size="9" font-weight="700" fill="#c084fc" text-anchor="middle">IPO 밸류업</text>
+  <text x="390" y="342" font-size="8" fill="#6b7280" text-anchor="middle">$1.5T 근거 추가</text>
+
+  <!-- Right side summary -->
+  <rect x="450" y="282" width="300" height="100" rx="8" fill="#0d0020"/>
+  <text x="600" y="303" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">Terafab LLC가 뭔가요?</text>
+  <text x="465" y="322" font-size="9" fill="#9ca3af">SpaceX가 토지 매입을 위해 설립한 자회사.</text>
+  <text x="465" y="337" font-size="9" fill="#9ca3af">이미 Grimes County 3,133에이커 부지 정지 작업 중.</text>
+  <text x="465" y="352" font-size="9" fill="#c084fc">오늘 공청회 통과 시 → Zone 지정 → 착공 타임라인.</text>
+  <text x="710" y="370" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

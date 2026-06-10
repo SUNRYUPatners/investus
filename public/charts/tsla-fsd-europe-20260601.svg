@@ -1,0 +1,68 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="17" fill="white" font-weight="700">Tesla FSD 유럽 11개국 동시 출시 — 소프트웨어 수익화 글로벌 확장</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.06.01</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- 11 country count block -->
+  <rect x="30" y="80" width="220" height="150" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="30" y="80" width="4" height="150" rx="2" fill="#00e5a0"/>
+  <text x="48" y="104" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">유럽 출시 국가</text>
+  <text x="48" y="150" font-family="Arial,sans-serif" font-size="52" fill="#00e5a0" font-weight="700">11</text>
+  <text x="48" y="172" font-family="Arial,sans-serif" font-size="14" fill="white">개국 동시 출시</text>
+  <text x="48" y="192" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">북유럽·서유럽·발트해 포함</text>
+  <text x="48" y="222" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">EU 최초 FSD 동시 다국 출시</text>
+
+  <!-- Countries list -->
+  <rect x="270" y="80" width="240" height="150" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.4"/>
+  <rect x="270" y="80" width="4" height="150" rx="2" fill="#00e5a0"/>
+  <text x="288" y="104" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">출시 국가 목록</text>
+  <text x="288" y="122" font-family="Arial,sans-serif" font-size="10" fill="white">🇳🇱 네덜란드 · 🇧🇪 벨기에</text>
+  <text x="288" y="138" font-family="Arial,sans-serif" font-size="10" fill="white">🇫🇷 프랑스 · 🇳🇴 노르웨이</text>
+  <text x="288" y="154" font-family="Arial,sans-serif" font-size="10" fill="white">🇸🇪 스웨덴 · 🇦🇹 오스트리아</text>
+  <text x="288" y="170" font-family="Arial,sans-serif" font-size="10" fill="white">🇱🇹 리투아니아 · 🇱🇻 라트비아</text>
+  <text x="288" y="186" font-family="Arial,sans-serif" font-size="10" fill="white">🇪🇪 에스토니아 · 🇩🇪 독일</text>
+  <text x="288" y="202" font-family="Arial,sans-serif" font-size="10" fill="white">🇬🇧 영국</text>
+  <text x="288" y="222" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">가장 까다로운 EU 규제 통과 완료</text>
+
+  <!-- Revenue potential -->
+  <rect x="530" y="80" width="240" height="150" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="530" y="80" width="4" height="150" rx="2" fill="#00e5a0"/>
+  <text x="548" y="104" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">수익화 잠재력</text>
+  <!-- bar chart showing revenue growth -->
+  <rect x="548" y="126" width="30" height="60" rx="3" fill="#00e5a0" opacity="0.25"/>
+  <text x="548" y="196" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">현재</text>
+  <rect x="594" y="106" width="30" height="80" rx="3" fill="#00e5a0" opacity="0.55"/>
+  <text x="594" y="196" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">+EU</text>
+  <rect x="640" y="86" width="30" height="100" rx="3" fill="#00e5a0" opacity="0.85"/>
+  <text x="640" y="196" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">목표</text>
+  <text x="548" y="214" font-family="Arial,sans-serif" font-size="9" fill="white">유럽 $99/월 × 대규모 사용자</text>
+  <text x="548" y="228" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">→ 연 수억 달러 소프트웨어 매출</text>
+
+  <!-- Analysis section -->
+  <rect x="30" y="244" width="740" height="130" rx="8" fill="#060b18" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="30" y="244" width="4" height="130" rx="2" fill="#00e5a0"/>
+  <text x="48" y="266" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">투자 논리</text>
+  <text x="48" y="286" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• EU 11개국 동시 출시 = Tesla 소프트웨어 수익화의 지리적 확장 가속 · 가장 까다로운 규제 통과로 신뢰성 확인</text>
+  <text x="48" y="304" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 유럽 Tesla 누적 판매 수백만 대 → FSD 구독 전환 시장 즉시 개방 · 월 $99 구독 × 전환율 10%만 돼도 연 수억 달러</text>
+  <text x="48" y="322" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• EU 규제 통과는 EU 외 국가(일본·한국·호주 등) 연쇄 승인 신호 · 글로벌 FSD 가속화 촉매</text>
+  <text x="48" y="340" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">• Tesla = 자동차 회사 아닌 소프트웨어 플랫폼 → P/E 리레이팅 근거 · FSD 유럽 출시가 멀티플 재평가 트리거</text>
+  <text x="48" y="358" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">FSD 안전 기록: 150K마일/건 · 인간 운전자 165K 근접 · EU 데이터 축적 → 완전자율주행 글로벌 승인 가속</text>
+
+  <!-- Key stats -->
+  <rect x="30" y="388" width="740" height="50" rx="8" fill="#0a1226" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="48" y="408" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">출시 국가</text>
+  <text x="48" y="428" font-family="Arial,sans-serif" font-size="16" fill="#00e5a0" font-weight="700">11개국</text>
+  <text x="200" y="408" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">FSD 구독료</text>
+  <text x="200" y="428" font-family="Arial,sans-serif" font-size="16" fill="#00e5a0" font-weight="700">$99/월</text>
+  <text x="370" y="408" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">안전 기록</text>
+  <text x="370" y="428" font-family="Arial,sans-serif" font-size="16" fill="#00e5a0" font-weight="700">150K마일/건</text>
+  <text x="570" y="408" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">글로벌 FSD 국가</text>
+  <text x="570" y="428" font-family="Arial,sans-serif" font-size="16" fill="#00e5a0" font-weight="700">71개국+</text>
+
+  <line x1="30" y1="450" x2="770" y2="450" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="466" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="466" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

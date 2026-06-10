@@ -1,0 +1,74 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07091a"/>
+      <stop offset="100%" stop-color="#0d1022"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="rgba(0,229,160,0.06)"/>
+  <text x="32" y="21" fill="rgba(0,229,160,0.7)" font-size="10" letter-spacing="2" font-weight="700">TESLA · TSLA · 미국 자율주행</text>
+  <text x="32" y="46" fill="white" font-size="20" font-weight="800">Texas SB 2807 — 미국 최초 상업용 자율주행 법안 · Tesla 1호 인증</text>
+
+  <!-- Main stat boxes -->
+  <rect x="32" y="76" width="354" height="100" rx="12" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.3)" stroke-width="1"/>
+  <text x="52" y="103" fill="rgba(0,229,160,0.8)" font-size="11" font-weight="700">🏛️ Texas SB 2807</text>
+  <text x="52" y="128" fill="white" font-size="15" font-weight="800">미국 최초 상업용 자율주행</text>
+  <text x="52" y="148" fill="white" font-size="15" font-weight="800">규제 법안 통과</text>
+  <text x="52" y="166" fill="rgba(255,255,255,0.4)" font-size="10">2026.06.01 발효 · 텍사스 주 최초 상업 AV 규정</text>
+
+  <rect x="414" y="76" width="354" height="100" rx="12" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.3)" stroke-width="1"/>
+  <text x="434" y="103" fill="rgba(0,229,160,0.8)" font-size="11" font-weight="700">🚗 Tesla — 1호 인증 기업</text>
+  <text x="434" y="128" fill="white" font-size="15" font-weight="800">미국 최초 상업용 자율주행</text>
+  <text x="434" y="148" fill="white" font-size="15" font-weight="800">운행 인증 기업</text>
+  <text x="434" y="166" fill="rgba(255,255,255,0.4)" font-size="10">Cybercab + FSD V4 기반 · 텍사스 전 도로 적용</text>
+
+  <!-- Regulation comparison table -->
+  <text x="32" y="204" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">주별 자율주행 규제 현황</text>
+
+  <!-- Table header -->
+  <rect x="32" y="218" width="736" height="30" rx="6" fill="rgba(255,255,255,0.05)"/>
+  <text x="80" y="238" fill="rgba(255,255,255,0.4)" font-size="10" font-weight="600">주</text>
+  <text x="220" y="238" fill="rgba(255,255,255,0.4)" font-size="10" font-weight="600">규제 수준</text>
+  <text x="400" y="238" fill="rgba(255,255,255,0.4)" font-size="10" font-weight="600">허용 범위</text>
+  <text x="600" y="238" fill="rgba(255,255,255,0.4)" font-size="10" font-weight="600">상태</text>
+
+  <!-- Texas row (highlighted) -->
+  <rect x="32" y="250" width="736" height="32" rx="4" fill="rgba(0,229,160,0.1)" stroke="rgba(0,229,160,0.3)" stroke-width="1"/>
+  <text x="80" y="271" fill="white" font-size="11" font-weight="700">🤠 Texas</text>
+  <text x="220" y="271" fill="#00e5a0" font-size="11" font-weight="700">SB 2807 (신규)</text>
+  <text x="400" y="271" fill="white" font-size="11">상업 운행 완전 허용 · 무인 택시</text>
+  <rect x="600" y="255" width="80" height="22" rx="11" fill="rgba(0,229,160,0.2)"/>
+  <text x="640" y="270" fill="#00e5a0" font-size="10" font-weight="700" text-anchor="middle">1호 법안 ✓</text>
+
+  <!-- Arizona row -->
+  <rect x="32" y="285" width="736" height="28" rx="4" fill="rgba(255,255,255,0.02)"/>
+  <text x="80" y="303" fill="rgba(255,255,255,0.7)" font-size="11">🌵 Arizona</text>
+  <text x="220" y="303" fill="rgba(255,255,255,0.6)" font-size="11">기존 AV 법령</text>
+  <text x="400" y="303" fill="rgba(255,255,255,0.5)" font-size="11">비감독 자율주행 허용 (Waymo·Tesla)</text>
+  <text x="600" y="303" fill="rgba(255,255,255,0.4)" font-size="10">운행 중</text>
+
+  <!-- California row -->
+  <rect x="32" y="315" width="736" height="28" rx="4" fill="rgba(255,255,255,0.02)"/>
+  <text x="80" y="333" fill="rgba(255,255,255,0.7)" font-size="11">🌉 California</text>
+  <text x="220" y="333" fill="rgba(255,255,255,0.6)" font-size="11">DMV/CPUC 이중</text>
+  <text x="400" y="333" fill="rgba(255,255,255,0.5)" font-size="11">허가 기반 · Waymo 상업 운행 중</text>
+  <text x="600" y="333" fill="rgba(255,255,255,0.4)" font-size="10">허가 필요</text>
+
+  <!-- Other states -->
+  <rect x="32" y="345" width="736" height="28" rx="4" fill="rgba(255,255,255,0.02)"/>
+  <text x="80" y="363" fill="rgba(255,255,255,0.5)" font-size="11">나머지 47개 주</text>
+  <text x="220" y="363" fill="rgba(255,255,255,0.4)" font-size="11">연방 가이드라인만</text>
+  <text x="400" y="363" fill="rgba(255,255,255,0.3)" font-size="11">주별 개별 허가 미비</text>
+  <text x="600" y="363" fill="rgba(255,255,255,0.3)" font-size="10">미비</text>
+
+  <!-- Domino impact -->
+  <rect x="32" y="386" width="736" height="64" rx="12" fill="rgba(0,229,160,0.06)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="52" y="408" fill="#00e5a0" font-size="12" font-weight="700">🏆 텍사스 선례 → 50개 주 도미노 예상 경로</text>
+  <text x="52" y="426" fill="rgba(255,255,255,0.6)" font-size="10">현재: Texas (완료) → 플로리다·조지아·오하이오 입법 추진 예상 → 연방 AV 법안 논의 가속 → 전국 Robotaxi 시장 개방</text>
+  <text x="52" y="442" fill="rgba(255,255,255,0.4)" font-size="10">보험 시장 개방 (법적 근거 확보) → 기업 플릿 계약 → 대규모 상업 Robotaxi 운행 체계 완성</text>
+
+  <text x="400" y="476" fill="rgba(255,255,255,0.2)" font-size="9" text-anchor="middle">investus.kr · 선류파트너스 · 투자 참고용, 투자 권유 아님</text>
+</svg>

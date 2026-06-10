@@ -1,0 +1,72 @@
+<svg viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg" style="background:#0d0d14;border-radius:12px">
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="56" rx="12" fill="#111118"/>
+  <text x="20" y="22" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">🟢 NVDA</text>
+  <text x="20" y="40" font-family="Arial,sans-serif" font-size="13" fill="#ffffff" font-weight="700">SK하이닉스 × NVIDIA — 멀티이어 기술 파트너십</text>
+
+  <!-- Partnership visual -->
+  <rect x="14" y="66" width="172" height="72" rx="10" fill="#161622" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="100" y="90" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle" font-weight="700">NVIDIA</text>
+  <text x="100" y="108" font-family="Arial,sans-serif" font-size="9" fill="#aaccff" text-anchor="middle">GPU / AI 가속기</text>
+  <text x="100" y="122" font-family="Arial,sans-serif" font-size="9" fill="#aaccff" text-anchor="middle">Very Rubin AI 슈퍼컴퓨터</text>
+  <text x="100" y="133" font-family="Arial,sans-serif" font-size="9" fill="#aaccff" text-anchor="middle">RTX 8000 시리즈</text>
+
+  <!-- Arrow -->
+  <text x="200" y="106" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" text-anchor="middle">⟷</text>
+  <text x="200" y="120" font-family="Arial,sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle">Multi-Year</text>
+  <text x="200" y="131" font-family="Arial,sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle">파트너십</text>
+
+  <rect x="214" y="66" width="172" height="72" rx="10" fill="#161622" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="300" y="90" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle" font-weight="700">SK하이닉스</text>
+  <text x="300" y="108" font-family="Arial,sans-serif" font-size="9" fill="#aaffdd" text-anchor="middle">HBM4 / HBM3E</text>
+  <text x="300" y="122" font-family="Arial,sans-serif" font-size="9" fill="#aaffdd" text-anchor="middle">AI 메모리 선행 공급</text>
+  <text x="300" y="133" font-family="Arial,sans-serif" font-size="9" fill="#aaffdd" text-anchor="middle">전체 HBM 50%+ 점유</text>
+
+  <!-- Jensen Quote -->
+  <rect x="14" y="150" width="372" height="50" rx="8" fill="#0a1020" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="28" y="168" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700">" Jensen Huang "</text>
+  <text x="28" y="185" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" font-style="italic">"AI factories are the engines of the next industrial revolution,</text>
+  <text x="28" y="197" font-family="Arial,sans-serif" font-size="9.5" fill="#ccddee" font-style="italic">and advanced memory is essential to their performance."</text>
+
+  <!-- Partnership scope -->
+  <text x="20" y="222" font-family="Arial,sans-serif" font-size="11" fill="#888899" font-weight="600">파트너십 범위</text>
+  <rect x="14" y="228" width="372" height="90" rx="8" fill="#111118"/>
+
+  <rect x="22" y="236" width="170" height="36" rx="6" fill="#161622"/>
+  <text x="107" y="250" font-family="Arial,sans-serif" font-size="8.5" fill="#60a5fa" text-anchor="middle" font-weight="700">Very Rubin AI 슈퍼컴퓨터</text>
+  <text x="107" y="263" font-family="Arial,sans-serif" font-size="8" fill="#aabbcc" text-anchor="middle">차세대 AI 추론·훈련 통합 시스템</text>
+  <text x="107" y="274" font-family="Arial,sans-serif" font-size="8" fill="#aabbcc" text-anchor="middle">HBM4 최대 용량 탑재 예정</text>
+
+  <rect x="208" y="236" width="170" height="36" rx="6" fill="#161622"/>
+  <text x="293" y="250" font-family="Arial,sans-serif" font-size="8.5" fill="#00e5a0" text-anchor="middle" font-weight="700">AI 팩토리 고도화</text>
+  <text x="293" y="263" font-family="Arial,sans-serif" font-size="8" fill="#aabbcc" text-anchor="middle">완전 자율 팹 운영 타깃</text>
+  <text x="293" y="274" font-family="Arial,sans-serif" font-size="8" fill="#aabbcc" text-anchor="middle">SK하이닉스 HBM 우선 배정</text>
+
+  <text x="107" y="310" font-family="Arial,sans-serif" font-size="8" fill="#888899" text-anchor="middle">RTX 8000 + Very CPU AI 시스템 통합</text>
+  <text x="293" y="310" font-family="Arial,sans-serif" font-size="8" fill="#888899" text-anchor="middle">LPDDR5X 차세대 메모리 공동 개발</text>
+
+  <!-- Market impact -->
+  <text x="20" y="335" font-family="Arial,sans-serif" font-size="11" fill="#888899" font-weight="600">시장 영향</text>
+
+  <rect x="14" y="341" width="112" height="50" rx="8" fill="#161622" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="70" y="358" font-family="Arial,sans-serif" font-size="8.5" fill="#00e5a0" text-anchor="middle" font-weight="700">SK하이닉스</text>
+  <text x="70" y="372" font-family="Arial,sans-serif" font-size="9.5" fill="#aaffdd" text-anchor="middle">HBM 독점 공급</text>
+  <text x="70" y="384" font-family="Arial,sans-serif" font-size="9.5" fill="#aaffdd" text-anchor="middle">장기 수요 확보</text>
+
+  <rect x="144" y="341" width="112" height="50" rx="8" fill="#161622" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="200" y="358" font-family="Arial,sans-serif" font-size="8.5" fill="#60a5fa" text-anchor="middle" font-weight="700">NVIDIA</text>
+  <text x="200" y="372" font-family="Arial,sans-serif" font-size="9.5" fill="#aaccff" text-anchor="middle">메모리 공급 안정화</text>
+  <text x="200" y="384" font-family="Arial,sans-serif" font-size="9.5" fill="#aaccff" text-anchor="middle">AI 생태계 강화</text>
+
+  <rect x="274" y="341" width="112" height="50" rx="8" fill="#161622" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="330" y="358" font-family="Arial,sans-serif" font-size="8.5" fill="#c084fc" text-anchor="middle" font-weight="700">경쟁사</text>
+  <text x="330" y="372" font-family="Arial,sans-serif" font-size="9.5" fill="#ddaaff" text-anchor="middle">Micron 점유율 방어</text>
+  <text x="330" y="384" font-family="Arial,sans-serif" font-size="9.5" fill="#ddaaff" text-anchor="middle">어려움 심화</text>
+
+  <!-- Insight -->
+  <rect x="14" y="400" width="372" height="30" rx="8" fill="#0a1020" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="200" y="412" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc" text-anchor="middle">HBM 공급 부족 수년간 지속 + NVDA×SK하이닉스 멀티이어 = 장기 수혜 구조 확정</text>
+  <text x="200" y="424" font-family="Arial,sans-serif" font-size="9.5" fill="#aabbcc" text-anchor="middle">Jensen 경고 + 파트너십 = 시장 신호 명확</text>
+
+  <text x="200" y="438" font-family="Arial,sans-serif" font-size="9" fill="#333344" text-anchor="middle">2026.06.09 | investus.kr</text>
+</svg>

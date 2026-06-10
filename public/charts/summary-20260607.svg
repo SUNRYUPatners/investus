@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 570" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <rect width="800" height="570" fill="#0a0c10"/>
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00e5a0" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <!-- header -->
+  <rect width="800" height="58" fill="url(#hdr)"/>
+  <text x="30" y="26" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="2">INVESTUS DAILY BRIEF</text>
+  <text x="30" y="48" fill="white" font-size="20" font-weight="900">📋 2026.06.07 시장 한장 요약</text>
+  <text x="770" y="40" fill="rgba(255,255,255,0.3)" font-size="11" text-anchor="end">investus.kr</text>
+
+  <line x1="0" y1="58" x2="800" y2="58" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- SPCX Section -->
+  <rect x="12" y="68" width="776" height="178" rx="10" fill="#c084fc" fill-opacity="0.05" stroke="#c084fc" stroke-opacity="0.15"/>
+  <text x="28" y="90" fill="#c084fc" font-size="12" font-weight="800">🚀 SPACEX (SPCX)</text>
+
+  <!-- spcx items -->
+  <circle cx="40" cy="110" r="4" fill="#c084fc"/>
+  <text x="52" y="114" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">S-1 Amendment No.2 — Google Cloud $920M/월 (110K NVIDIA GPU, 2026.10~2029.06) 공시</text>
+
+  <circle cx="40" cy="134" r="4" fill="#c084fc"/>
+  <text x="52" y="138" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Goldman+MS 2040 매출 <tspan fill="white" font-weight="900">$3.4T</tspan> · EBITDA <tspan fill="white" font-weight="900">$2.7T</tspan> 전망</text>
+
+  <circle cx="40" cy="158" r="4" fill="#c084fc"/>
+  <text x="52" y="162" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">구글+앤트로픽 클라우드 합산 <tspan fill="white" font-weight="900">$2.07B/월</tspan> = $24.8B/년</text>
+
+  <circle cx="40" cy="182" r="4" fill="#c084fc"/>
+  <text x="52" y="186" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Ron Baron <tspan fill="white" font-weight="900">$101~$301</tspan> 목표가 · Herbert Diess "세계 최대 기업" 전망</text>
+
+  <circle cx="40" cy="206" r="4" fill="#c084fc"/>
+  <text x="52" y="210" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">마일스톤: Starship V3 (H2 2026) · 광대역V3(1,024Gbps) · AI컴퓨팅위성(2028, 100KW)</text>
+
+  <!-- TSLA section -->
+  <rect x="12" y="256" width="776" height="130" rx="10" fill="#00e5a0" fill-opacity="0.04" stroke="#00e5a0" stroke-opacity="0.12"/>
+  <text x="28" y="278" fill="#00e5a0" font-size="12" font-weight="800">🚗 TESLA (TSLA)</text>
+
+  <circle cx="40" cy="298" r="4" fill="#00e5a0"/>
+  <text x="52" y="302" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Model V — 호주 EV 월간 판매 <tspan fill="white" font-weight="900">역대 최초 1위</tspan> · 3,605대 · 포드 레인저 1,300대 앞서</text>
+
+  <circle cx="40" cy="322" r="4" fill="#00e5a0"/>
+  <text x="52" y="326" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">네바다 AV 허가 승인 — 라스베이거스 전역 + 해리리드공항 + 헨더슨공항</text>
+
+  <circle cx="40" cy="346" r="4" fill="#00e5a0"/>
+  <text x="52" y="350" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">EU 유럽 판매 공식 개시 — 핀란드·리투아니아·에스토니아 FSD 확장과 동시</text>
+
+  <!-- META + MU + Terafab -->
+  <rect x="12" y="396" width="380" height="90" rx="10" fill="#4ade80" fill-opacity="0.04" stroke="#4ade80" stroke-opacity="0.12"/>
+  <text x="28" y="418" fill="#4ade80" font-size="12" font-weight="800">💎 META</text>
+  <circle cx="40" cy="440" r="4" fill="#4ade80"/>
+  <text x="52" y="444" fill="rgba(255,255,255,0.8)" font-size="12" font-weight="600">"수십억 달러(tens of billions)" 신규 주식 발행 검토</text>
+  <circle cx="40" cy="464" r="4" fill="#4ade80"/>
+  <text x="52" y="468" fill="rgba(255,255,255,0.6)" font-size="12">AI CAPEX 확대 + Orion AR 투자 재원 마련 목적</text>
+
+  <rect x="406" y="396" width="382" height="90" rx="10" fill="#60a5fa" fill-opacity="0.04" stroke="#60a5fa" stroke-opacity="0.12"/>
+  <text x="422" y="418" fill="#60a5fa" font-size="12" font-weight="800">💽 MICRON (MU) + Terafab</text>
+  <circle cx="434" cy="440" r="4" fill="#60a5fa"/>
+  <text x="446" y="444" fill="rgba(255,255,255,0.8)" font-size="12" font-weight="600">일론 "마이크론, AI 메모리 생산능력 부족" 공개 비판</text>
+  <circle cx="434" cy="464" r="4" fill="#fb923c"/>
+  <text x="446" y="468" fill="rgba(255,255,255,0.6)" font-size="12">Terafab: 삼성 거절 → 일론 자체 반도체 공장 건설 ($30B)</text>
+
+  <!-- footer -->
+  <line x1="12" y1="498" x2="788" y2="498" stroke="#ffffff" stroke-opacity="0.05"/>
+  <text x="400" y="518" fill="rgba(255,255,255,0.2)" font-size="11" text-anchor="middle">SPCX: Google $920M/월 S-1 공시 · 구글+앤트로픽 $2.07B/월 · 2040 $3.4T · Ron Baron $301 · TSLA: 호주1위·네바다AV·EU시작 · META: 수십억달러 발행 · MU: 일론경고·Terafab</text>
+  <text x="400" y="550" fill="rgba(255,255,255,0.15)" font-size="11" text-anchor="middle">Investus Research · investus.kr · 본 자료는 투자 참고용이며 투자 결정의 책임은 투자자 본인에게 있습니다</text>
+</svg>

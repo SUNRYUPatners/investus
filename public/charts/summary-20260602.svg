@@ -1,0 +1,76 @@
+<svg width="800" height="560" viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07091a"/>
+      <stop offset="100%" stop-color="#0d1022"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="52" fill="rgba(0,229,160,0.05)"/>
+  <text x="32" y="20" fill="rgba(0,229,160,0.7)" font-size="10" letter-spacing="2" font-weight="700">INVESTUS · 선류파트너스</text>
+  <text x="32" y="42" fill="white" font-size="18" font-weight="800">2026.06.02 시장 한장 요약 — 오늘의 핵심 8대 이슈</text>
+
+  <!-- Row 1: SPCX Lockup + SPCX Anthropic -->
+  <rect x="16" y="62" width="380" height="108" rx="10" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="30" y="84" fill="#c084fc" font-size="10" font-weight="700">🚀 SPCX — S-1 Amendment 락업 조건 변경</text>
+  <text x="30" y="102" fill="white" font-size="13" font-weight="800">머스크 366일 락업 확정</text>
+  <text x="30" y="118" fill="white" font-size="13" font-weight="800">공모 직전 즉시 매도 허용 신설</text>
+  <text x="30" y="138" fill="rgba(255,255,255,0.45)" font-size="10">2027.06 락업 해제 타임라인 확정 · 인수사 커미션 제거</text>
+  <text x="30" y="154" fill="rgba(168,85,247,0.6)" font-size="10">매도 규모 미공개 주의 · IPO D-10 정상 진행 확인</text>
+
+  <rect x="404" y="62" width="380" height="108" rx="10" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="418" y="84" fill="#c084fc" font-size="10" font-weight="700">🤝 SPCX — SpaceXai × Anthropic 컴퓨트 딜</text>
+  <text x="418" y="102" fill="white" font-size="13" font-weight="800">$24B/년 결제 · 5년 누적 $53.9B</text>
+  <text x="418" y="118" fill="white" font-size="13" font-weight="800">구축 비용 $29B · 14개월 회수</text>
+  <text x="418" y="138" fill="rgba(255,255,255,0.45)" font-size="10">ARK Invest 분석 · 연 $14.4B 순수익</text>
+  <text x="418" y="154" fill="rgba(168,85,247,0.6)" font-size="10">구글 4년 → SpaceXai 12개월 구축 · 실행력 해자</text>
+
+  <!-- Row 2: GOOGL $80B + GOOGL Mag7 ATM -->
+  <rect x="16" y="180" width="380" height="108" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <text x="30" y="202" fill="#60a5fa" font-size="10" font-weight="700">🔵 GOOGL — $80B 유상증자 + 버핏 $10B 사모</text>
+  <text x="30" y="220" fill="white" font-size="13" font-weight="800">$30B 공모 + $40B ATM + 버핏 $10B</text>
+  <text x="30" y="236" fill="white" font-size="13" font-weight="800">AI 인프라 전용 역대급 조달</text>
+  <text x="30" y="256" fill="rgba(255,255,255,0.45)" font-size="10">Berkshire Class A $351.81 · Class C $348.20 진입</text>
+  <text x="30" y="272" fill="rgba(96,165,250,0.6)" font-size="10">Q3 2025부터 포지션 구축 · ATM Q3 2026 시작</text>
+
+  <rect x="404" y="180" width="380" height="108" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <text x="418" y="202" fill="#60a5fa" font-size="10" font-weight="700">🔵 GOOGL — Mag 7 ATM 수문 개방</text>
+  <text x="418" y="220" fill="white" font-size="13" font-weight="800">빅테크 자본 조달 패러다임 전환</text>
+  <text x="418" y="236" fill="white" font-size="13" font-weight="800">MSFT·AAPL·META·NVDA 도미노 예상</text>
+  <text x="418" y="256" fill="rgba(255,255,255,0.45)" font-size="10">버핏 참여 = ATM 호재 인식 변환 · AI 인프라 투자 의지</text>
+  <text x="418" y="272" fill="rgba(96,165,250,0.6)" font-size="10">강세장 분할 매도 · 주주 희석 최소화 구조</text>
+
+  <!-- Row 3: TSLA Texas + TSLA France/Grapevine -->
+  <rect x="16" y="298" width="380" height="108" rx="10" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <text x="30" y="320" fill="#00e5a0" font-size="10" font-weight="700">🚗 TSLA — Texas SB 2807 + 완전 자율 AI 시스템</text>
+  <text x="30" y="338" fill="white" font-size="13" font-weight="800">미국 첫 상업용 AV법 · Tesla 1호 인증</text>
+  <text x="30" y="354" fill="white" font-size="13" font-weight="800">AI4·AI5 칩 · 6레이어 수직통합 공개</text>
+  <text x="30" y="374" fill="rgba(255,255,255,0.45)" font-size="10">Texas → 플로리다·조지아·오하이오 도미노 · 보험 시장 개방</text>
+  <text x="30" y="390" fill="rgba(0,229,160,0.6)" font-size="10">FSD+Optimus+Cybercab 복제 불가 플랫폼 · Waymo와 격차</text>
+
+  <rect x="404" y="298" width="380" height="108" rx="10" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.25)" stroke-width="1"/>
+  <text x="418" y="320" fill="#00e5a0" font-size="10" font-weight="700">🚗 TSLA — 프랑스 +655% · FSD Grapevine 정복</text>
+  <text x="418" y="338" fill="white" font-size="13" font-weight="800">프랑스 5,448대 · 721대 → 7.5배</text>
+  <text x="418" y="354" fill="white" font-size="13" font-weight="800">4,160ft 산악 FSD 완주 · 숙련자 경악</text>
+  <text x="418" y="374" fill="rgba(255,255,255,0.45)" font-size="10">신형 Model Y + FSD 유럽 기대감 · Q2 어닝 서프라이즈 예상</text>
+  <text x="418" y="390" fill="rgba(0,229,160,0.6)" font-size="10">The Grapevine 6% 경사 완주 → 규제 승인 근거 강화</text>
+
+  <!-- Row 4: NVDA RTX Spark + NVDA Nasdaq 10000 -->
+  <rect x="16" y="416" width="380" height="108" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <text x="30" y="438" fill="#60a5fa" font-size="10" font-weight="700">🔵 NVDA — RTX Spark · 30년 만의 PC 혁명</text>
+  <text x="30" y="456" fill="white" font-size="13" font-weight="800">첫 AI PC 전용 칩 · 에이전트 24/7 로컬</text>
+  <text x="30" y="472" fill="white" font-size="13" font-weight="800">Microsoft Surface Laptop Ultra 탑재</text>
+  <text x="30" y="492" fill="rgba(255,255,255,0.45)" font-size="10">Windows 2000M대 PC 교체 사이클 시작 · 클라우드 불필요</text>
+  <text x="30" y="508" fill="rgba(96,165,250,0.6)" font-size="10">Datacenter + AI PC 두 엔진 동시 가동 → FY27 $308B 보수적</text>
+
+  <rect x="404" y="416" width="380" height="108" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  <text x="418" y="438" fill="#60a5fa" font-size="10" font-weight="700">🔵 NVDA — 나스닥 10,000 · AI 엔지니어 역설</text>
+  <text x="418" y="456" fill="white" font-size="13" font-weight="800">젠슨 황 "나스닥 10,000 간다"</text>
+  <text x="418" y="472" fill="white" font-size="13" font-weight="800">AI가 SW 엔지니어 수요를 늘린다</text>
+  <text x="418" y="492" fill="rgba(255,255,255,0.45)" font-size="10">$9조 생산성 → 더 많은 프로젝트 → 엔지니어 증가</text>
+  <text x="418" y="508" fill="rgba(96,165,250,0.6)" font-size="10">AI 인프라 수요 예상보다 훨씬 클 수 있음 · 선순환 구조</text>
+
+  <text x="400" y="550" fill="rgba(255,255,255,0.2)" font-size="9" text-anchor="middle">investus.kr · 선류파트너스 · 투자 참고용, 투자 권유 아님</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="400" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#f59e0b">🌐 세계 주식시장 $150T — 사상 첫 돌파</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">미국 $78T · 52% 비중 35년 최고 · AI 랠리 + Mag 7 주도 · Source: World Bank/WFE</text>
+
+  <!-- Growth chart -->
+  <rect x="30" y="68" width="480" height="240" rx="10" fill="#111827"/>
+  <text x="50" y="90" font-size="11" font-weight="700" fill="#f59e0b">글로벌 시가총액 성장 (1975→2026)</text>
+
+  <!-- Y axis -->
+  <text x="45" y="280" font-size="8" fill="#6b7280">$0T</text>
+  <line x1="70" y1="276" x2="490" y2="276" stroke="#1f2937" stroke-width="1"/>
+  <text x="45" y="240" font-size="8" fill="#6b7280">$50T</text>
+  <line x1="70" y1="236" x2="490" y2="236" stroke="#1f2937" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="45" y="200" font-size="8" fill="#6b7280">$100T</text>
+  <line x1="70" y1="196" x2="490" y2="196" stroke="#1f2937" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="45" y="160" font-size="8" fill="#6b7280">$150T</text>
+  <line x1="70" y1="156" x2="490" y2="156" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- Growth curve approximation -->
+  <polyline points="80,274 120,272 160,268 200,262 240,252 280,240 310,228 340,210 370,190 400,172 430,162 460,156" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+  <polygon points="80,274 120,272 160,268 200,262 240,252 280,240 310,228 340,210 370,190 400,172 430,162 460,156 460,276 80,276" fill="#f59e0b" opacity="0.1"/>
+
+  <!-- Milestone dots -->
+  <circle cx="80" cy="274" r="4" fill="#6b7280"/>
+  <text x="80" y="288" font-size="7" fill="#6b7280" text-anchor="middle">1975 $1T</text>
+  <circle cx="200" cy="262" r="4" fill="#6b7280"/>
+  <text x="200" y="276" font-size="7" fill="#6b7280" text-anchor="middle">1990</text>
+  <circle cx="310" cy="228" r="4" fill="#6b7280"/>
+  <text x="310" y="242" font-size="7" fill="#6b7280" text-anchor="middle">2000 dot-com</text>
+  <circle cx="370" cy="190" r="4" fill="#6b7280"/>
+  <text x="370" y="204" font-size="7" fill="#6b7280" text-anchor="middle">2010</text>
+  <circle cx="430" cy="162" r="4" fill="#6b7280"/>
+  <text x="430" y="176" font-size="7" fill="#6b7280" text-anchor="middle">2020</text>
+  <circle cx="460" cy="156" r="7" fill="#f59e0b"/>
+  <text x="460" y="145" font-size="9" font-weight="700" fill="#f59e0b" text-anchor="middle">$150T</text>
+  <text x="460" y="135" font-size="8" fill="#f59e0b" text-anchor="middle">Jun 2026</text>
+
+  <!-- Country breakdown -->
+  <rect x="530" y="68" width="240" height="240" rx="10" fill="#111827"/>
+  <text x="550" y="90" font-size="11" font-weight="700" fill="#f59e0b">국가별 시가총액</text>
+
+  <rect x="550" y="100" width="200" height="22" rx="4" fill="#3b82f6"/>
+  <text x="560" y="115" font-size="9" fill="white" font-weight="700">미국 $78T · 52%</text>
+  <text x="740" y="115" font-size="9" fill="white" text-anchor="end">52%</text>
+
+  <rect x="550" y="128" width="55" height="18" rx="4" fill="#ef4444" opacity="0.8"/>
+  <text x="560" y="141" font-size="8" fill="white">중국 $11T</text>
+
+  <rect x="550" y="152" width="36" height="18" rx="4" fill="#f59e0b" opacity="0.8"/>
+  <text x="560" y="165" font-size="8" fill="#0a0f1e">일본 $7T</text>
+
+  <rect x="550" y="176" width="144" height="18" rx="4" fill="#6b7280" opacity="0.8"/>
+  <text x="560" y="189" font-size="8" fill="white">기타 $54T · 36%</text>
+
+  <text x="550" y="214" font-size="10" font-weight="700" fill="#f59e0b">역대 기록</text>
+  <text x="550" y="230" font-size="9" fill="#9ca3af">미국 52% 비중 → 35년 최고</text>
+  <text x="550" y="246" font-size="9" fill="#9ca3af">1975년 이후 150배 성장</text>
+  <text x="550" y="262" font-size="9" fill="#9ca3af">Mag 7이 비중 확대 주도</text>
+  <text x="550" y="278" font-size="9" fill="#6b7280">AI 랠리 + 달러 강세 복합 효과</text>
+  <text x="550" y="296" font-size="8" fill="#4b5563">Source: World Bank/WFE/CompaniesMarketCap</text>
+
+  <!-- Bottom insight -->
+  <rect x="30" y="320" width="740" height="64" rx="10" fill="#1a1200"/>
+  <text x="50" y="340" font-size="11" font-weight="700" fill="#f59e0b">투자 시사점</text>
+  <text x="50" y="358" font-size="10" fill="#9ca3af">세계 주식시장 $150T 돌파 = AI 랠리가 글로벌 자산 가치를 사상 최초 레벨로 끌어올림. 미국 52% 집중은 Mag 7 프리미엄의 전 지구적 인정.</text>
+  <text x="50" y="375" font-size="10" fill="#9ca3af">한국 투자자 입장: 달러 자산 비중 확대 전략 지속 유효. AI 수혜 미국주식 집중 전략 장기 근거.</text>
+  <text x="710" y="375" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

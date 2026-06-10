@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="580" fill="#0a0f1e"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="64" fill="#111827"/>
+  <text x="30" y="38" font-size="13" font-weight="700" fill="#c084fc" letter-spacing="1">2026.06.04</text>
+  <text x="130" y="38" font-size="13" font-weight="700" fill="#e2e8f0">시장 한장 요약</text>
+  <text x="680" y="38" font-size="11" fill="#6b7280">investus.kr</text>
+  <text x="30" y="56" font-size="10" fill="#6b7280">SPCX $135 확정 · 6/12 상장 · TSLA xAI $269M · Austin 344sqmi · Japan +182% · Lemonade 50% · NVDA $50B · Jensen ROI · META Agent</text>
+
+  <!-- ═══ SPCX IPO (Left) ═══ -->
+  <rect x="20" y="76" width="370" height="100" rx="10" fill="#1a1033"/>
+  <rect x="20" y="76" width="4" height="100" rx="2" fill="#c084fc"/>
+  <text x="36" y="95" font-size="10" font-weight="700" fill="#c084fc">🚀 SPCX — IPO $135 최종 확정 · 6/12 NASDAQ 상장</text>
+  <!-- Big $135 -->
+  <text x="36" y="140" font-size="48" font-weight="900" fill="white">$135</text>
+  <text x="146" y="130" font-size="9" fill="#9ca3af">/주</text>
+  <!-- Side stats -->
+  <text x="200" y="112" font-size="9" fill="#9ca3af">조달액</text>
+  <text x="200" y="127" font-size="14" font-weight="800" fill="#c084fc">$74.4B</text>
+  <text x="200" y="143" font-size="9" fill="#9ca3af">기업가치</text>
+  <text x="200" y="158" font-size="14" font-weight="800" fill="white">~$1.75T</text>
+  <text x="300" y="112" font-size="9" fill="#9ca3af">상장일</text>
+  <text x="300" y="132" font-size="22" font-weight="900" fill="#c084fc">6/12</text>
+  <text x="300" y="147" font-size="8" fill="#6b7280">NASDAQ</text>
+  <!-- Voting bar -->
+  <text x="36" y="163" font-size="8" fill="#9ca3af">Class A 의결권</text>
+  <rect x="110" y="155" width="22" height="10" rx="2" fill="#6b7280"/>
+  <text x="137" y="164" font-size="8" fill="#9ca3af">11.5%</text>
+  <text x="180" y="163" font-size="8" fill="#c084fc">Class B</text>
+  <rect x="218" y="155" width="140" height="10" rx="2" fill="#7c3aed"/>
+  <text x="363" y="164" font-size="8" fill="#c084fc">88.5%</text>
+
+  <!-- ═══ SPCX Investor / META (Right) ═══ -->
+  <rect x="410" y="76" width="370" height="100" rx="10" fill="#111827"/>
+  <rect x="410" y="76" width="4" height="100" rx="2" fill="#c084fc"/>
+  <text x="426" y="95" font-size="10" font-weight="700" fill="#c084fc">🚀 Ron Baron $18B 준비 · 과잉청약 · Wedbush 통합론</text>
+  <!-- Ron Baron key stats -->
+  <rect x="426" y="104" width="155" height="58" rx="8" fill="#2d1b69"/>
+  <text x="504" y="122" font-size="9" fill="#9ca3af" text-anchor="middle">고객 준비 자산</text>
+  <text x="504" y="148" font-size="32" font-weight="900" fill="#c084fc" text-anchor="middle">$18B</text>
+  <text x="504" y="162" font-size="8" fill="#6b7280" text-anchor="middle">Ron Baron (CNBC)</text>
+  <rect x="594" y="104" width="170" height="58" rx="8" fill="#1a1033"/>
+  <text x="679" y="120" font-size="9" fill="#9ca3af" text-anchor="middle">목표가</text>
+  <text x="679" y="140" font-size="20" font-weight="800" fill="white" text-anchor="middle">$317–$320</text>
+  <text x="679" y="156" font-size="8" fill="#6b7280" text-anchor="middle">투자원금 $1.78B (2017~)</text>
+  <text x="426" y="174" font-size="9" fill="#9ca3af">Wedbush: Tesla·SpaceX·xAI = 하나의 AI 생태계 (5가지 접점)</text>
+  <rect x="426" y="158" width="50" height="6" rx="2" fill="#7c3aed" opacity="0.5"/>
+  <text x="426" y="175" font-size="0" fill="none"/><!-- placeholder -->
+
+  <!-- ═══ TSLA 파트 1: xAI Megapack + Austin ═══ -->
+  <rect x="20" y="188" width="760" height="90" rx="10" fill="#0d1f12"/>
+  <rect x="20" y="188" width="4" height="90" rx="2" fill="#00e5a0"/>
+  <text x="36" y="207" font-size="10" font-weight="700" fill="#00e5a0">🚗 TSLA — xAI Megapack $269M (SEC) · Austin 로보택시 344 sq mi</text>
+
+  <!-- xAI card -->
+  <rect x="36" y="215" width="220" height="54" rx="8" fill="#1a2a1a"/>
+  <text x="70" y="232" font-size="9" fill="#9ca3af">xAI → Tesla Megapack</text>
+  <text x="36" y="232" font-size="18" fill="#00e5a0">⚡</text>
+  <text x="70" y="254" font-size="24" font-weight="900" fill="white">$269M</text>
+  <text x="186" y="254" font-size="9" fill="#9ca3af">(4개월)</text>
+  <text x="70" y="268" font-size="8" fill="#6b7280">누계 $1B+ · xAI 슈퍼컴 전력 공급</text>
+
+  <!-- Roadmap mini: 2024→2025→2026 -->
+  <rect x="276" y="215" width="185" height="54" rx="8" fill="#1a2a1a"/>
+  <text x="284" y="230" font-size="8" fill="#6b7280">xAI 연간 매입액</text>
+  <text x="284" y="248" font-size="10" font-weight="700" fill="#9ca3af">2024  </text><text x="330" y="248" font-size="10" font-weight="700" fill="#9ca3af">$191M</text>
+  <text x="284" y="262" font-size="10" font-weight="700" fill="#9ca3af">2025  </text><text x="330" y="262" font-size="10" font-weight="700" fill="#e2e8f0">$506M</text>
+  <text x="284" y="276" font-size="10" font-weight="700" fill="#00e5a0">2026  </text><text x="330" y="276" font-size="10" font-weight="700" fill="#00e5a0">$303M↑</text>
+
+  <!-- Austin card -->
+  <rect x="481" y="215" width="280" height="54" rx="8" fill="#1a2a1a"/>
+  <!-- Map blob -->
+  <ellipse cx="510" cy="242" rx="22" ry="18" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="510" y="246" font-size="8" fill="#ef4444" text-anchor="middle" font-weight="700">TX</text>
+  <text x="540" y="229" font-size="9" fill="#9ca3af">Austin 무감독 서비스 구역</text>
+  <text x="540" y="248" font-size="26" font-weight="900" fill="white">344</text>
+  <text x="615" y="248" font-size="11" fill="#ef4444">sq mi</text>
+  <text x="540" y="264" font-size="8" fill="#9ca3af">미국 3위 · Waymo SF(110sqmi) 대비 3배</text>
+  <text x="540" y="276" font-size="8" fill="#6b7280">출시 1년 미만 달성 · Unsupervised</text>
+
+  <!-- ═══ TSLA 파트 2: Estonia + Japan + Lemonade ═══ -->
+  <rect x="20" y="290" width="760" height="88" rx="10" fill="#0d1f12"/>
+  <rect x="20" y="290" width="4" height="88" rx="2" fill="#00e5a0"/>
+  <text x="36" y="309" font-size="10" font-weight="700" fill="#00e5a0">🚗 TSLA — FSD 에스토니아 (EU 3개국) · Japan +182% · Lemonade 50%</text>
+
+  <!-- Estonia domino -->
+  <rect x="36" y="317" width="210" height="54" rx="8" fill="#1a2a1a"/>
+  <text x="46" y="332" font-size="9" fill="#9ca3af">FSD 유럽 도미노</text>
+  <text x="46" y="350" font-size="11" fill="#4ade80">🇫🇮→🇱🇹→</text>
+  <text x="116" y="355" font-size="14" font-weight="800" fill="#ef4444">🇪🇪 NOW</text>
+  <text x="46" y="370" font-size="8" fill="#6b7280">핀란드→리투아니아→에스토니아 3국</text>
+
+  <!-- Japan -->
+  <rect x="260" y="317" width="185" height="54" rx="8" fill="#1a2a1a"/>
+  <text x="270" y="332" font-size="9" fill="#9ca3af">Japan 5월 YoY</text>
+  <text x="270" y="358" font-size="30" font-weight="900" fill="#ef4444">+182%</text>
+  <text x="270" y="372" font-size="8" fill="#9ca3af">1,996대 · 분기말 역대최고 예상</text>
+
+  <!-- Lemonade -->
+  <rect x="459" y="317" width="300" height="54" rx="8" fill="#1a2a1a"/>
+  <circle cx="480" cy="344" r="14" fill="#ff0080" opacity="0.8"/>
+  <text x="480" y="349" font-size="13" fill="white" text-anchor="middle" font-weight="900">L</text>
+  <text x="502" y="333" font-size="9" fill="#9ca3af">Lemonade × Tesla FSD</text>
+  <text x="502" y="352" font-size="28" font-weight="900" fill="white">50%</text>
+  <text x="574" y="348" font-size="9" fill="#fbbf24">할인</text>
+  <text x="502" y="367" font-size="8" fill="#9ca3af">FSD 2배 안전 · 마일리지 비례 최대 50%</text>
+
+  <!-- ═══ NVDA ═══ -->
+  <rect x="20" y="390" width="490" height="86" rx="10" fill="#0a1628"/>
+  <rect x="20" y="390" width="4" height="86" rx="2" fill="#60a5fa"/>
+  <text x="36" y="409" font-size="10" font-weight="700" fill="#60a5fa">🔵 NVDA — 데이터센터 $50B SAAR · Jensen ROI "완전 실현" · Pelosi $219</text>
+
+  <!-- SAAR card -->
+  <rect x="36" y="417" width="135" height="50" rx="8" fill="#0d1628"/>
+  <text x="104" y="432" font-size="8" fill="#9ca3af" text-anchor="middle">DC 건설 SAAR</text>
+  <!-- Mini bar chart -->
+  <rect x="46" y="458" width="14" height="8" rx="1" fill="#60a5fa" opacity="0.3"/>
+  <rect x="63" y="453" width="14" height="13" rx="1" fill="#60a5fa" opacity="0.5"/>
+  <rect x="80" y="444" width="14" height="22" rx="1" fill="#60a5fa" opacity="0.7"/>
+  <rect x="97" y="431" width="14" height="35" rx="1" fill="#60a5fa"/>
+  <text x="125" y="459" font-size="8" fill="#6b7280">→</text>
+  <text x="104" y="449" font-size="16" font-weight="800" fill="#60a5fa" text-anchor="middle">$50B</text>
+  <text x="104" y="460" font-size="7" fill="#6b7280" text-anchor="middle">15년만에 17배↑</text>
+
+  <!-- Hyperscaler card -->
+  <rect x="184" y="417" width="155" height="50" rx="8" fill="#0d1628"/>
+  <text x="262" y="432" font-size="8" fill="#9ca3af" text-anchor="middle">하이퍼스케일러 CAPEX</text>
+  <text x="262" y="452" font-size="20" font-weight="900" fill="white" text-anchor="middle">$5.3T</text>
+  <text x="262" y="464" font-size="8" fill="#60a5fa" text-anchor="middle">2025~2030 누적 (4사)</text>
+
+  <!-- Jensen ROI -->
+  <rect x="352" y="417" width="148" height="50" rx="8" fill="#0d1628"/>
+  <text x="426" y="432" font-size="8" fill="#9ca3af" text-anchor="middle">Jensen Huang</text>
+  <text x="426" y="448" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">"ROI 완전 실현"</text>
+  <text x="426" y="462" font-size="8" fill="#6b7280" text-anchor="middle">비공개 행사 · 지난 6개월</text>
+  <text x="426" y="473" font-size="8" fill="#6b7280" text-anchor="middle">Immensely profitable</text>
+
+  <!-- ═══ NVDA Pelosi + META (Right) ═══ -->
+  <rect x="524" y="390" width="256" height="86" rx="10" fill="#111827"/>
+  <rect x="524" y="390" width="4" height="86" rx="2" fill="#60a5fa"/>
+  <text x="540" y="409" font-size="10" font-weight="700" fill="#60a5fa">🔵 Pelosi  🤖 META Agent</text>
+
+  <!-- Pelosi -->
+  <rect x="540" y="417" width="110" height="50" rx="8" fill="#0d1628"/>
+  <text x="595" y="432" font-size="8" fill="#9ca3af" text-anchor="middle">Pelosi NVDA 매입</text>
+  <text x="595" y="452" font-size="18" font-weight="900" fill="#c084fc" text-anchor="middle">$219</text>
+  <text x="595" y="465" font-size="8" fill="#6b7280" text-anchor="middle">규제 논의 직전</text>
+
+  <!-- META -->
+  <rect x="662" y="417" width="106" height="50" rx="8" fill="#0d1628"/>
+  <text x="715" y="432" font-size="8" fill="#4ade80" text-anchor="middle">META Business</text>
+  <text x="715" y="452" font-size="18" font-weight="900" fill="#4ade80" text-anchor="middle">3B+</text>
+  <text x="715" y="465" font-size="8" fill="#6b7280" text-anchor="middle">WA·IG·MSG 전 출시</text>
+
+  <!-- Footer key stats -->
+  <rect x="0" y="488" width="800" height="92" fill="#111827"/>
+  <text x="400" y="506" font-size="9" fill="#4b5563" text-anchor="middle">이 분석은 투자 참고용이며 투자 권유가 아닙니다 · investus.kr × SRP</text>
+
+  <rect x="22" y="514" width="108" height="52" rx="8" fill="#1a1033"/>
+  <text x="76" y="531" font-size="9" fill="#c084fc" text-anchor="middle">SPCX IPO</text>
+  <text x="76" y="549" font-size="18" font-weight="800" fill="#c084fc" text-anchor="middle">$135</text>
+  <text x="76" y="562" font-size="8" fill="#6b7280" text-anchor="middle">6/12 NASDAQ</text>
+
+  <rect x="143" y="514" width="108" height="52" rx="8" fill="#0d1f12"/>
+  <text x="197" y="531" font-size="9" fill="#00e5a0" text-anchor="middle">TSLA xAI</text>
+  <text x="197" y="549" font-size="18" font-weight="800" fill="#00e5a0" text-anchor="middle">$269M</text>
+  <text x="197" y="562" font-size="8" fill="#6b7280" text-anchor="middle">Megapack SEC</text>
+
+  <rect x="264" y="514" width="108" height="52" rx="8" fill="#0d1f12"/>
+  <text x="318" y="531" font-size="9" fill="#ef4444" text-anchor="middle">Austin 로보택시</text>
+  <text x="318" y="549" font-size="18" font-weight="800" fill="#ef4444" text-anchor="middle">344sqmi</text>
+  <text x="318" y="562" font-size="8" fill="#6b7280" text-anchor="middle">미국 3위 무감독</text>
+
+  <rect x="385" y="514" width="108" height="52" rx="8" fill="#0d1f12"/>
+  <text x="439" y="531" font-size="9" fill="#ef4444" text-anchor="middle">Japan 5월</text>
+  <text x="439" y="549" font-size="18" font-weight="800" fill="#ef4444" text-anchor="middle">+182%</text>
+  <text x="439" y="562" font-size="8" fill="#6b7280" text-anchor="middle">1,996대 역대 최고</text>
+
+  <rect x="506" y="514" width="108" height="52" rx="8" fill="#0a1628"/>
+  <text x="560" y="531" font-size="9" fill="#60a5fa" text-anchor="middle">DC 건설 SAAR</text>
+  <text x="560" y="549" font-size="18" font-weight="800" fill="#60a5fa" text-anchor="middle">$50B</text>
+  <text x="560" y="562" font-size="8" fill="#6b7280" text-anchor="middle">$5.3T 누적 투자</text>
+
+  <rect x="627" y="514" width="148" height="52" rx="8" fill="#0d1628"/>
+  <text x="701" y="531" font-size="9" fill="#4ade80" text-anchor="middle">META Business Agent</text>
+  <text x="701" y="549" font-size="18" font-weight="800" fill="#4ade80" text-anchor="middle">3B+</text>
+  <text x="701" y="562" font-size="8" fill="#6b7280" text-anchor="middle">전 플랫폼 출시</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07091a"/>
+      <stop offset="100%" stop-color="#0d1022"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="rgba(168,85,247,0.06)"/>
+  <text x="32" y="21" fill="rgba(168,85,247,0.7)" font-size="10" letter-spacing="2" font-weight="700">SPACEX · SPCX ETF</text>
+  <text x="32" y="46" fill="white" font-size="19" font-weight="800">S-1 Amendment — 머스크 락업 조건 변경 · 공모 직전 즉시 매도 허용</text>
+
+  <!-- Subtitle -->
+  <text x="32" y="78" fill="rgba(255,255,255,0.4)" font-size="11">SpaceX filed to amend extended lock-up · Elon Musk 366일 락업 · 즉시 매도 조항 신설 · 2026.06.01 SEC 제출</text>
+
+  <!-- NEW badge -->
+  <rect x="680" y="66" width="88" height="22" rx="11" fill="rgba(168,85,247,0.25)" stroke="rgba(168,85,247,0.5)" stroke-width="1"/>
+  <text x="724" y="81" fill="#c084fc" font-size="10" font-weight="700" text-anchor="middle">Amendment 신규</text>
+
+  <!-- Main change highlight -->
+  <rect x="32" y="96" width="736" height="64" rx="12" fill="rgba(168,85,247,0.1)" stroke="rgba(168,85,247,0.35)" stroke-width="1.5"/>
+  <text x="52" y="120" fill="#c084fc" font-size="12" font-weight="700">🔑 Amendment No. 1 핵심 변경 사항</text>
+  <text x="52" y="142" fill="white" font-size="13" font-weight="800">머스크 락업: 무제한 → 366일 / 공모 직전 즉시 매도 조항 신설</text>
+  <text x="52" y="156" fill="rgba(255,255,255,0.4)" font-size="10">Lock-up now 366 days after filing date · Musk may sell shares immediately prior to offering</text>
+
+  <!-- Lock-up comparison table -->
+  <text x="32" y="186" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">락업 조건 변경 전/후 비교</text>
+
+  <!-- Table header -->
+  <rect x="32" y="198" width="736" height="28" rx="6" fill="rgba(255,255,255,0.05)"/>
+  <text x="80" y="217" fill="rgba(255,255,255,0.4)" font-size="10" font-weight="600">대상</text>
+  <text x="260" y="217" fill="rgba(255,255,255,0.4)" font-size="10" font-weight="600">이전 조건</text>
+  <text x="460" y="217" fill="rgba(255,255,255,0.4)" font-size="10" font-weight="600">Amendment 후 (신규)</text>
+
+  <!-- Musk row -->
+  <rect x="32" y="228" width="736" height="32" rx="4" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="80" y="249" fill="white" font-size="11" font-weight="700">🦅 Elon Musk (지분 93.6%)</text>
+  <text x="260" y="249" fill="rgba(255,100,100,0.9)" font-size="11">무기한 / 미정</text>
+  <text x="460" y="249" fill="#c084fc" font-size="11" font-weight="700">366일 · 공모 직전 즉시 매도 허용</text>
+
+  <!-- Directors row -->
+  <rect x="32" y="262" width="736" height="28" rx="4" fill="rgba(255,255,255,0.02)"/>
+  <text x="80" y="279" fill="rgba(255,255,255,0.7)" font-size="11">임원·이사진</text>
+  <text x="260" y="279" fill="rgba(255,255,255,0.5)" font-size="11">180일</text>
+  <text x="460" y="279" fill="rgba(255,255,255,0.5)" font-size="11">180일 (변동 없음)</text>
+
+  <!-- Underwriters row -->
+  <rect x="32" y="292" width="736" height="28" rx="4" fill="rgba(255,255,255,0.02)"/>
+  <text x="80" y="309" fill="rgba(255,255,255,0.7)" font-size="11">인수사 (Goldman 등)</text>
+  <text x="260" y="309" fill="rgba(255,255,255,0.5)" font-size="11">락업 커미션 있음</text>
+  <text x="460" y="309" fill="rgba(255,255,255,0.5)" font-size="11">연장 락업분 커미션 없음 (신규)</text>
+
+  <!-- What this means -->
+  <text x="32" y="342" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">이 변경이 의미하는 것</text>
+
+  <rect x="32" y="354" width="354" height="80" rx="10" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.2)" stroke-width="1"/>
+  <text x="52" y="376" fill="#00e5a0" font-size="11" font-weight="700">✅ 투자자 관점 — 긍정</text>
+  <text x="52" y="396" fill="rgba(255,255,255,0.7)" font-size="10">• 락업 기간이 명확히 확정됨 (예측 가능)</text>
+  <text x="52" y="412" fill="rgba(255,255,255,0.7)" font-size="10">• 공모 직전 즉시 매도 = IPO 가격 안정 장치</text>
+  <text x="52" y="428" fill="rgba(255,255,255,0.7)" font-size="10">• 366일 후 물량 해제 타임라인 확보 가능</text>
+
+  <rect x="414" y="354" width="354" height="80" rx="10" fill="rgba(255,77,109,0.08)" stroke="rgba(255,77,109,0.2)" stroke-width="1"/>
+  <text x="434" y="376" fill="#ff4d6d" font-size="11" font-weight="700">⚠️ 투자자 관점 — 주의</text>
+  <text x="434" y="396" fill="rgba(255,255,255,0.7)" font-size="10">• 머스크가 공모 직전 매도 가능 (희석 요인)</text>
+  <text x="434" y="412" fill="rgba(255,255,255,0.7)" font-size="10">• 93.6% 지분 중 얼마나 매도할지 미공개</text>
+  <text x="434" y="428" fill="rgba(255,255,255,0.7)" font-size="10">• 366일 후 대규모 매도 압력 가능성</text>
+
+  <text x="400" y="476" fill="rgba(255,255,255,0.2)" font-size="9" text-anchor="middle">investus.kr · 선류파트너스 · 투자 참고용, 투자 권유 아님</text>
+</svg>

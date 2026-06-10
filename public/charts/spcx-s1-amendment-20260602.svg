@@ -1,0 +1,95 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07091a"/>
+      <stop offset="100%" stop-color="#0d1022"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="rgba(168,85,247,0.08)"/>
+  <text x="32" y="21" fill="rgba(168,85,247,0.7)" font-size="10" letter-spacing="2" font-weight="700">SPACEX IPO</text>
+  <text x="32" y="46" fill="white" font-size="20" font-weight="800">S-1 Amendment No. 1 — SEC 정식 제출 완료</text>
+  <rect x="666" y="16" width="102" height="28" rx="6" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.4)" stroke-width="1"/>
+  <text x="717" y="35" fill="#c084fc" font-size="13" font-weight="800" text-anchor="middle">D-10</text>
+
+  <!-- IPO Timeline -->
+  <text x="32" y="92" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">IPO 타임라인</text>
+
+  <!-- Timeline bar -->
+  <rect x="32" y="106" width="736" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
+  <!-- Filled portion (S-1 done = ~80%) -->
+  <rect x="32" y="106" width="590" height="6" rx="3" fill="rgba(168,85,247,0.6)"/>
+
+  <!-- Timeline milestones -->
+  <!-- S-1 Initial -->
+  <circle cx="100" cy="109" r="7" fill="#c084fc" stroke="#07091a" stroke-width="2"/>
+  <text x="100" y="134" fill="#c084fc" font-size="10" font-weight="700" text-anchor="middle">S-1 최초 제출</text>
+  <text x="100" y="147" fill="rgba(255,255,255,0.4)" font-size="9" text-anchor="middle">5월 초</text>
+
+  <!-- S-1 Amendment -->
+  <circle cx="340" cy="109" r="8" fill="#c084fc" stroke="white" stroke-width="2"/>
+  <text x="340" y="134" fill="white" font-size="10" font-weight="700" text-anchor="middle">S-1 Amendment</text>
+  <text x="340" y="147" fill="rgba(255,255,255,0.4)" font-size="9" text-anchor="middle">2026.06.01</text>
+
+  <!-- Roadshow -->
+  <circle cx="540" cy="109" r="7" fill="rgba(168,85,247,0.4)" stroke="rgba(168,85,247,0.6)" stroke-width="2"/>
+  <text x="540" y="134" fill="rgba(168,85,247,0.7)" font-size="10" font-weight="600" text-anchor="middle">로드쇼</text>
+  <text x="540" y="147" fill="rgba(255,255,255,0.4)" font-size="9" text-anchor="middle">진행 중</text>
+
+  <!-- IPO Day -->
+  <circle cx="730" cy="109" r="9" fill="rgba(255,255,255,0.1)" stroke="rgba(168,85,247,0.5)" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="730" y="134" fill="rgba(168,85,247,0.6)" font-size="10" font-weight="600" text-anchor="middle">나스닥 상장</text>
+  <text x="730" y="147" fill="rgba(255,255,255,0.4)" font-size="9" text-anchor="middle">6/12</text>
+
+  <!-- S-1 Key Details -->
+  <text x="32" y="182" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">S-1 Amendment 핵심 정보</text>
+
+  <!-- Left column -->
+  <rect x="32" y="196" width="362" height="80" rx="10" fill="rgba(168,85,247,0.07)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="52" y="220" fill="rgba(255,255,255,0.4)" font-size="10">회사명</text>
+  <text x="200" y="220" fill="white" font-size="12" font-weight="700">Space Exploration Technologies Corp.</text>
+  <text x="52" y="244" fill="rgba(255,255,255,0.4)" font-size="10">CEO</text>
+  <text x="200" y="244" fill="white" font-size="12" font-weight="700">Elon Musk · 1 Rocket Road, Starbase TX</text>
+  <text x="52" y="268" fill="rgba(255,255,255,0.4)" font-size="10">Registration No.</text>
+  <text x="200" y="268" fill="#c084fc" font-size="12" font-weight="700">333-296070</text>
+
+  <!-- Right column -->
+  <rect x="406" y="196" width="362" height="80" rx="10" fill="rgba(168,85,247,0.07)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="426" y="220" fill="rgba(255,255,255,0.4)" font-size="10">제출일</text>
+  <text x="570" y="220" fill="white" font-size="12" font-weight="700">June 1, 2026</text>
+  <text x="426" y="244" fill="rgba(255,255,255,0.4)" font-size="10">구분</text>
+  <text x="570" y="244" fill="white" font-size="12" font-weight="700">Non-accelerated filer</text>
+  <text x="426" y="268" fill="rgba(255,255,255,0.4)" font-size="10">상장 거래소</text>
+  <text x="570" y="268" fill="#c084fc" font-size="12" font-weight="700">NASDAQ</text>
+
+  <!-- IPO Numbers -->
+  <text x="32" y="308" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">IPO 핵심 수치</text>
+
+  <!-- 3 metrics -->
+  <rect x="32" y="322" width="230" height="80" rx="10" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="147" y="350" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">목표 기업가치</text>
+  <text x="147" y="382" fill="#c084fc" font-size="28" font-weight="800" text-anchor="middle">$1.5T</text>
+
+  <rect x="285" y="322" width="230" height="80" rx="10" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="400" y="350" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">공모 규모</text>
+  <text x="400" y="382" fill="#c084fc" font-size="28" font-weight="800" text-anchor="middle">$1.5B</text>
+
+  <rect x="538" y="322" width="230" height="80" rx="10" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="653" y="350" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">초과 청약 배율</text>
+  <text x="653" y="382" fill="#c084fc" font-size="28" font-weight="800" text-anchor="middle">9.3x</text>
+
+  <!-- Lock-up structure -->
+  <text x="32" y="428" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">락업 해제 일정</text>
+  <rect x="32" y="440" width="736" height="26" rx="8" fill="rgba(168,85,247,0.06)"/>
+  <!-- Segments -->
+  <rect x="32" y="440" width="200" height="26" rx="8" fill="rgba(168,85,247,0.2)"/>
+  <text x="132" y="458" fill="white" font-size="10" font-weight="700" text-anchor="middle">90일차 7% 해제 (9/10)</text>
+  <rect x="240" y="440" width="200" height="26" rx="0" fill="rgba(168,85,247,0.12)"/>
+  <text x="340" y="458" fill="rgba(255,255,255,0.6)" font-size="10" text-anchor="middle">133일차 추가 7% (10/23)</text>
+  <rect x="448" y="440" width="320" height="26" rx="0" fill="rgba(168,85,247,0.06)" stroke-right="none"/>
+  <text x="608" y="458" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">180일 전체 해제 + 주가 +30% 시 조기 10% 해제</text>
+
+  <text x="400" y="476" fill="rgba(255,255,255,0.2)" font-size="9" text-anchor="middle">investus.kr · 선류파트너스 · 투자 참고용, 투자 권유 아님</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="380" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#f59e0b">📊 ARK Venture Fund — $1B AUM 달성 마일스톤</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">SpaceX $900M→$126B (140x) · Anthropic $125B · 2022.09 출범 이후 최고치</text>
+
+  <!-- Milestone timeline -->
+  <rect x="30" y="68" width="480" height="90" rx="10" fill="#111827"/>
+  <text x="50" y="88" font-size="11" font-weight="700" fill="#f59e0b">펀드 성장 타임라인</text>
+  <!-- Timeline line -->
+  <line x1="60" y1="130" x2="490" y2="130" stroke="#374151" stroke-width="2"/>
+  <!-- Points -->
+  <circle cx="80" cy="130" r="6" fill="#f59e0b"/>
+  <text x="80" y="148" font-size="8" fill="#9ca3af" text-anchor="middle">2022.09</text>
+  <text x="80" y="115" font-size="8" fill="#f59e0b" text-anchor="middle">출범</text>
+  <circle cx="200" cy="130" r="5" fill="#6b7280"/>
+  <text x="200" y="148" font-size="8" fill="#9ca3af" text-anchor="middle">2023</text>
+  <text x="200" y="115" font-size="8" fill="#6b7280" text-anchor="middle">성장</text>
+  <circle cx="340" cy="130" r="5" fill="#6b7280"/>
+  <text x="340" y="148" font-size="8" fill="#9ca3af" text-anchor="middle">2025</text>
+  <text x="340" y="115" font-size="8" fill="#6b7280" text-anchor="middle">AI 붐</text>
+  <circle cx="460" cy="130" r="8" fill="#f59e0b"/>
+  <text x="460" y="148" font-size="8" fill="#f59e0b" text-anchor="middle">2026.06</text>
+  <text x="460" y="112" font-size="10" font-weight="800" fill="#f59e0b" text-anchor="middle">$1B AUM</text>
+
+  <!-- Portfolio Holdings -->
+  <rect x="30" y="170" width="480" height="190" rx="10" fill="#111827"/>
+  <text x="50" y="192" font-size="11" font-weight="700" fill="#f59e0b">핵심 보유 종목 현황</text>
+
+  <!-- SpaceX -->
+  <rect x="50" y="200" width="440" height="36" rx="6" fill="#1a1200"/>
+  <text x="68" y="215" font-size="10" font-weight="700" fill="#f59e0b">SpaceX</text>
+  <text x="68" y="229" font-size="9" fill="#9ca3af">투자: $900M (2015)  →  현재가치</text>
+  <text x="350" y="215" font-size="11" font-weight="800" fill="#f59e0b">$126B</text>
+  <text x="350" y="229" font-size="9" fill="#f59e0b">×140 (14,000% 수익)</text>
+
+  <!-- Anthropic -->
+  <rect x="50" y="242" width="440" height="36" rx="6" fill="#1a1200"/>
+  <text x="68" y="257" font-size="10" font-weight="700" fill="#fb923c">Anthropic</text>
+  <text x="68" y="271" font-size="9" fill="#9ca3af">Claude AI 개발사 → 현재 기업가치</text>
+  <text x="350" y="257" font-size="11" font-weight="800" fill="#fb923c">$125B</text>
+  <text x="350" y="271" font-size="9" fill="#fb923c">ARK 초기 투자 후 급등</text>
+
+  <!-- Epic Games -->
+  <rect x="50" y="284" width="440" height="30" rx="6" fill="#1a1200"/>
+  <text x="68" y="299" font-size="10" font-weight="700" fill="#fcd34d">Epic Games</text>
+  <text x="68" y="312" font-size="9" fill="#9ca3af">Fortnite·Unreal Engine 모회사 · 비상장</text>
+  <text x="350" y="305" font-size="10" fill="#fcd34d">포함</text>
+
+  <text x="50" y="348" font-size="10" font-weight="700" fill="#f59e0b">18년+ 50%+ 혼합 수익률</text>
+  <text x="200" y="348" font-size="10" fill="#9ca3af">vs 인덱스 펀드 비교 시 압도적 아웃퍼폼</text>
+
+  <!-- Right panel -->
+  <rect x="530" y="68" width="240" height="292" rx="10" fill="#111827"/>
+  <text x="550" y="88" font-size="11" font-weight="700" fill="#f59e0b">$1B AUM의 의미</text>
+
+  <rect x="550" y="98" width="200" height="50" rx="6" fill="#1a1200"/>
+  <text x="650" y="118" font-size="28" font-weight="800" fill="#f59e0b" text-anchor="middle">$1B</text>
+  <text x="650" y="138" font-size="9" fill="#9ca3af" text-anchor="middle">AUM (운용자산)</text>
+
+  <text x="550" y="162" font-size="10" fill="#9ca3af">● 비상장 벤처 펀드 최초 $1B</text>
+  <text x="550" y="178" font-size="10" fill="#9ca3af">● SpaceX 단독 자산이 $126B</text>
+  <text x="550" y="194" font-size="10" fill="#6b7280">  → 펀드 AUM의 126배</text>
+  <text x="550" y="212" font-size="10" fill="#9ca3af">● Anthropic $125B도 포함</text>
+  <text x="550" y="228" font-size="10" fill="#9ca3af">● 두 종목만 $251B+ 가치</text>
+
+  <text x="550" y="254" font-size="10" font-weight="700" fill="#f59e0b">SpaceX IPO 이후 시나리오</text>
+  <text x="550" y="270" font-size="9" fill="#9ca3af">상장 시 시총 발견 → ARK 보유분</text>
+  <text x="550" y="286" font-size="9" fill="#9ca3af">즉각적 NAV 재평가. AUM 급등.</text>
+  <text x="550" y="302" font-size="9" fill="#6b7280">IPO 기준가 vs 현재가치 차이가</text>
+  <text x="550" y="316" font-size="9" fill="#6b7280">ARK 실현 수익의 핵심 변수.</text>
+  <text x="550" y="348" font-size="9" fill="#6b7280">investus.kr</text>
+
+  <rect x="30" y="370" width="480" height="0" rx="10"/>
+  <text x="710" y="375" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

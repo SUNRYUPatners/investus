@@ -1,0 +1,82 @@
+<svg viewBox="0 0 480 430" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0900"/>
+      <stop offset="100%" stop-color="#080600"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fb923c" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="430" fill="url(#bg)"/>
+  <rect x="0" y="0" width="480" height="50" fill="#1a0e00"/>
+  <rect x="0" y="48" width="480" height="2" fill="#fb923c" opacity="0.7"/>
+  <text x="24" y="20" font-size="9" fill="#fb923c" font-weight="700" letter-spacing="2">INVESTUS REPORT</text>
+  <text x="24" y="38" font-size="14" fill="#ffffff" font-weight="700">🔶 MRVL — NVIDIA $2B 투자 발표 후 +245%</text>
+
+  <!-- Big number -->
+  <text x="240" y="138" text-anchor="middle" font-size="80" fill="#fb923c" font-weight="900" letter-spacing="-4">+245%</text>
+  <text x="240" y="163" text-anchor="middle" font-size="12" fill="#d06820" font-weight="600">NVIDIA $2B 투자 이후 66일간 성과 (+$224B 시총 증가)</text>
+
+  <!-- Timeline bar chart -->
+  <text x="24" y="190" font-size="10" fill="#c06020" font-weight="700">시총 성장 타임라인 (2026.03.31 이후)</text>
+
+  <!-- Simulated line chart area -->
+  <rect x="24" y="200" width="432" height="100" rx="8" fill="#1a0e00"/>
+
+  <!-- chart line path -->
+  <polyline points="44,285 80,280 120,270 160,255 200,240 240,225 280,215 330,202 380,210 420,213 444,208"
+    fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Area fill -->
+  <polygon points="44,285 80,280 120,270 160,255 200,240 240,225 280,215 330,202 380,210 420,213 444,208 444,295 44,295"
+    fill="#fb923c" opacity="0.12"/>
+
+  <!-- Event marker: March 31 NVIDIA $2B -->
+  <line x1="44" y1="200" x2="44" y2="295" stroke="#fb923c" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="44" y="213" text-anchor="middle" font-size="7" fill="#fb923c">3/31</text>
+  <text x="44" y="222" text-anchor="middle" font-size="7" fill="#c06020">NVIDIA</text>
+  <text x="44" y="231" text-anchor="middle" font-size="7" fill="#c06020">$2B 투자</text>
+
+  <!-- Jensen Huang quote marker -->
+  <line x1="380" y1="200" x2="380" y2="295" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+  <text x="380" y="213" text-anchor="middle" font-size="7" fill="#fbbf24">6/2</text>
+  <text x="380" y="222" text-anchor="middle" font-size="7" fill="#d09030">젠슨황</text>
+  <text x="380" y="231" text-anchor="middle" font-size="7" fill="#d09030">+65%↑</text>
+
+  <!-- Current -->
+  <line x1="444" y1="200" x2="444" y2="295" stroke="#fb923c" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="444" y="213" text-anchor="middle" font-size="7" fill="#fb923c">6/5</text>
+  <text x="444" y="222" text-anchor="middle" font-size="7" fill="#c06020">+245%</text>
+
+  <!-- Baseline -->
+  <rect x="24" y="295" width="432" height="1" fill="#fb923c" opacity="0.2"/>
+
+  <!-- Key stats -->
+  <rect x="16" y="312" width="106" height="68" rx="10" fill="#1a1000" stroke="#fb923c" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="69" y="332" text-anchor="middle" font-size="9" fill="#fb923c" font-weight="700">기간</text>
+  <text x="69" y="354" text-anchor="middle" font-size="22" fill="#fb923c" font-weight="900">66일</text>
+  <text x="69" y="370" text-anchor="middle" font-size="8" fill="#c06020">3/31 → 6/5</text>
+
+  <rect x="130" y="312" width="106" height="68" rx="10" fill="#1a1000" stroke="#fb923c" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="183" y="332" text-anchor="middle" font-size="9" fill="#fb923c" font-weight="700">현재 시총</text>
+  <text x="183" y="354" text-anchor="middle" font-size="20" fill="#fb923c" font-weight="900">$278B</text>
+  <text x="183" y="370" text-anchor="middle" font-size="8" fill="#c06020">$1T까지 3.6x 남음</text>
+
+  <rect x="244" y="312" width="106" height="68" rx="10" fill="#1a1000" stroke="#fbbf24" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="297" y="332" text-anchor="middle" font-size="9" fill="#fbbf24" font-weight="700">젠슨황 발언</text>
+  <text x="297" y="352" text-anchor="middle" font-size="10" fill="#fbbf24" font-weight="800">"다음 조 달러</text>
+  <text x="297" y="364" text-anchor="middle" font-size="10" fill="#fbbf24" font-weight="800">기업"</text>
+  <text x="297" y="376" text-anchor="middle" font-size="8" fill="#d09030">→ +65% 추가</text>
+
+  <rect x="358" y="312" width="106" height="68" rx="10" fill="#1a1000" stroke="#fb923c" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="411" y="332" text-anchor="middle" font-size="9" fill="#fb923c" font-weight="700">트리거</text>
+  <text x="411" y="350" text-anchor="middle" font-size="12" fill="#fb923c" font-weight="900">NVIDIA</text>
+  <text x="411" y="364" text-anchor="middle" font-size="10" fill="#fb923c" font-weight="800">$2B 투자</text>
+  <text x="411" y="376" text-anchor="middle" font-size="8" fill="#c06020">2026.03.31</text>
+
+  <!-- Context -->
+  <rect x="16" y="390" width="448" height="32" rx="8" fill="#100800" stroke="#fb923c" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="28" y="406" font-size="10" fill="#e08040">Marvell(MRVL) = NVIDIA $2B 투자 + 젠슨황 '조 달러 기업' 발언에 +245% · $224B 시총 증가</text>
+  <text x="28" y="418" font-size="9" fill="#806030">GPU(NVDA) + 광학 인터커넥트(MRVL) = AI 인프라 이중 수혜 구조 · $278B → $1T 3.6x</text>
+</svg>

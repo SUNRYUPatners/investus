@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0c10"/>
+  <defs>
+    <linearGradient id="org11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/><stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="pur11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c084fc"/><stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="24" width="10" height="36" rx="3" fill="url(#org11)"/>
+  <text x="50" y="42" fill="#fb923c" font-size="11" font-weight="700" letter-spacing="2">TERAFAB · 일론 반도체 공장</text>
+  <text x="50" y="58" fill="white" font-size="19" font-weight="800">로보택시·옵티머스·데이터센터용 칩 자체 생산</text>
+  <text x="700" y="44" fill="#fb923c" font-size="11" font-weight="600" text-anchor="end">2026.06.07</text>
+  <line x1="30" y1="76" x2="770" y2="76" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- why terafab -->
+  <rect x="30" y="90" width="460" height="80" rx="12" fill="#fb923c" fill-opacity="0.08" stroke="#fb923c" stroke-opacity="0.2"/>
+  <text x="50" y="114" fill="#fb923c" font-size="11" font-weight="700">Terafab 건설 배경</text>
+  <text x="50" y="140" fill="white" font-size="15" font-weight="700">"삼성이 거절했다 → 직접 짓는다"</text>
+  <text x="50" y="162" fill="rgba(255,255,255,0.5)" font-size="12">로보택시·옵티머스·데이터센터 모두 SOI 칩 필요 → 전 세계 생산량 수준</text>
+
+  <rect x="510" y="90" width="260" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="524" y="116" fill="rgba(255,255,255,0.5)" font-size="11">추정 투자 규모</text>
+  <text x="524" y="152" fill="white" font-size="32" font-weight="900">$30B</text>
+  <text x="524" y="170" fill="rgba(255,255,255,0.35)" font-size="11">반도체 공장 건설 추정액</text>
+
+  <!-- three use cases -->
+  <text x="30" y="202" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="1">Terafab 생산 칩 활용처</text>
+
+  <rect x="30" y="212" width="220" height="88" rx="10" fill="#00e5a0" fill-opacity="0.07" stroke="#00e5a0" stroke-opacity="0.2"/>
+  <text x="140" y="238" fill="#00e5a0" font-size="22" text-anchor="middle">🚕</text>
+  <text x="140" y="260" fill="white" font-size="14" font-weight="700" text-anchor="middle">로보택시</text>
+  <text x="140" y="278" fill="rgba(255,255,255,0.45)" font-size="11" text-anchor="middle">CyberCab FSD 칩</text>
+  <text x="140" y="294" fill="rgba(255,255,255,0.35)" font-size="10" text-anchor="middle">자율주행 추론 프로세서</text>
+
+  <rect x="264" y="212" width="220" height="88" rx="10" fill="#c084fc" fill-opacity="0.07" stroke="#c084fc" stroke-opacity="0.2"/>
+  <text x="374" y="238" fill="#c084fc" font-size="22" text-anchor="middle">🤖</text>
+  <text x="374" y="260" fill="white" font-size="14" font-weight="700" text-anchor="middle">옵티머스 로봇</text>
+  <text x="374" y="278" fill="rgba(255,255,255,0.45)" font-size="11" text-anchor="middle">AI 모터 제어 칩</text>
+  <text x="374" y="294" fill="rgba(255,255,255,0.35)" font-size="10" text-anchor="middle">1억대 생산 시 칩 수요 폭발</text>
+
+  <rect x="498" y="212" width="272" height="88" rx="10" fill="#60a5fa" fill-opacity="0.07" stroke="#60a5fa" stroke-opacity="0.2"/>
+  <text x="634" y="238" fill="#60a5fa" font-size="22" text-anchor="middle">🖥️</text>
+  <text x="634" y="260" fill="white" font-size="14" font-weight="700" text-anchor="middle">데이터센터</text>
+  <text x="634" y="278" fill="rgba(255,255,255,0.45)" font-size="11" text-anchor="middle">AI 추론 서버 칩</text>
+  <text x="634" y="294" fill="rgba(255,255,255,0.35)" font-size="10" text-anchor="middle">SpaceX·xAI 클라우드 인프라</text>
+
+  <!-- key quote -->
+  <rect x="30" y="322" width="740" height="58" rx="10" fill="#fb923c" fill-opacity="0.06" stroke="#fb923c" stroke-opacity="0.15"/>
+  <text x="50" y="344" fill="#fb923c" font-size="11" font-weight="700">핵심 논리 (Papù 분석)</text>
+  <text x="50" y="366" fill="rgba(255,255,255,0.7)" font-size="13">"SOI 칩이 전 세계 생산량 수준으로 필요 → 삼성 거절 → Terafab이 유일한 해답"</text>
+  <text x="50" y="382" fill="rgba(255,255,255,0.4)" font-size="12">Bloomberg: Elon이 AIPAC 관계자들과 첫 직접 회동 — Terafab 세부 논의</text>
+
+  <rect x="30" y="398" width="740" height="26" rx="6" fill="rgba(255,255,255,0.02)"/>
+  <text x="50" y="415" fill="rgba(255,255,255,0.35)" font-size="11">Terafab = SpaceX + Tesla + xAI 수직통합의 마지막 퍼즐 — 반도체 공급망 완전 내재화</text>
+  <text x="770" y="430" fill="rgba(255,255,255,0.2)" font-size="10" text-anchor="end">investus.kr</text>
+</svg>

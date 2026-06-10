@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="460" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#c084fc">🚀 SpaceX IPO — 기관·개인 수요</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">IPO 투자자 수요 분석 · 2026.06.04</text>
+
+  <!-- Ron Baron Big Card -->
+  <rect x="30" y="65" width="360" height="180" rx="12" fill="#1a1033" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="210" y="90" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">RON BARON · CNBC 인터뷰</text>
+  <!-- Big $18B -->
+  <text x="210" y="155" font-size="74" font-weight="900" fill="white" text-anchor="middle">$18B</text>
+  <text x="210" y="177" font-size="11" fill="#9ca3af" text-anchor="middle">고객 SpaceX 연동 자산</text>
+  <!-- Stats below -->
+  <rect x="50" y="192" width="155" height="36" rx="6" fill="#2d1b69"/>
+  <text x="128" y="207" font-size="9" fill="#9ca3af" text-anchor="middle">투자 원금 (2017~)</text>
+  <text x="128" y="222" font-size="14" font-weight="800" fill="#c084fc" text-anchor="middle">$1.78B</text>
+  <rect x="220" y="192" width="150" height="36" rx="6" fill="#2d1b69"/>
+  <text x="295" y="207" font-size="9" fill="#9ca3af" text-anchor="middle">목표가</text>
+  <text x="295" y="222" font-size="14" font-weight="800" fill="#00e5a0" text-anchor="middle">$317 – $320</text>
+
+  <!-- Wedbush card -->
+  <rect x="410" y="65" width="360" height="180" rx="12" fill="#111827"/>
+  <text x="590" y="90" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">Wedbush — Tesla·SpaceX 통합 생태계</text>
+  <!-- Five points visual -->
+  <circle cx="430" cy="118" r="7" fill="#7c3aed"/>
+  <text x="445" y="122" font-size="9" fill="#e2e8f0">AI 컴퓨팅 인프라 공유</text>
+  <circle cx="430" cy="140" r="7" fill="#7c3aed"/>
+  <text x="445" y="144" font-size="9" fill="#e2e8f0">제조 시너지 (기가팩토리·로켓)</text>
+  <circle cx="430" cy="162" r="7" fill="#7c3aed"/>
+  <text x="445" y="166" font-size="9" fill="#e2e8f0">자율주행 ↔ xAI 기술 교류</text>
+  <circle cx="430" cy="184" r="7" fill="#7c3aed"/>
+  <text x="445" y="188" font-size="9" fill="#e2e8f0">에너지 (Megapack ↔ Starlink)</text>
+  <circle cx="430" cy="206" r="7" fill="#5b21b6"/>
+  <text x="445" y="210" font-size="9" fill="#9ca3af">우주 인프라 연계</text>
+  <text x="590" y="238" font-size="9" fill="#9ca3af" text-anchor="middle">SpaceX 지분 ← xAI $26B 투자의 결실</text>
+
+  <!-- Oversubscription + Elon stake -->
+  <rect x="30" y="262" width="740" height="72" rx="12" fill="#111827"/>
+  <text x="400" y="284" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">IPO 핵심 숫자</text>
+  <rect x="50" y="293" width="155" height="30" rx="6" fill="#1a1033"/>
+  <text x="128" y="306" font-size="9" fill="#9ca3af" text-anchor="middle">일론 머스크 보유 지분</text>
+  <text x="128" y="319" font-size="13" font-weight="800" fill="#c084fc" text-anchor="middle">~75%</text>
+  <rect x="220" y="293" width="155" height="30" rx="6" fill="#1a1033"/>
+  <text x="298" y="306" font-size="9" fill="#9ca3af" text-anchor="middle">일론 주식 평가액</text>
+  <text x="298" y="319" font-size="13" font-weight="800" fill="white" text-anchor="middle">~$131B</text>
+  <rect x="390" y="293" width="155" height="30" rx="6" fill="#1a1033"/>
+  <text x="468" y="306" font-size="9" fill="#9ca3af" text-anchor="middle">Fidelity 기준 직전 가치</text>
+  <text x="468" y="319" font-size="13" font-weight="800" fill="#e2e8f0" text-anchor="middle">~$180B</text>
+  <rect x="560" y="293" width="195" height="30" rx="6" fill="#1a1033"/>
+  <text x="658" y="306" font-size="9" fill="#9ca3af" text-anchor="middle">IPO 공모가 기준 기업가치</text>
+  <text x="658" y="319" font-size="13" font-weight="800" fill="#00e5a0" text-anchor="middle">~$1.75T</text>
+
+  <!-- Confidence bar -->
+  <rect x="30" y="350" width="740" height="85" rx="12" fill="#111827"/>
+  <text x="400" y="372" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">투자자 신뢰도 지표</text>
+  <!-- Oversubscribed -->
+  <text x="50" y="394" font-size="9" fill="#9ca3af">과잉 청약 (수요 &gt; 공급)</text>
+  <rect x="180" y="384" width="360" height="13" rx="4" fill="#1a1033"/>
+  <rect x="180" y="384" width="320" height="13" rx="4" fill="#7c3aed"/>
+  <text x="507" y="394" font-size="9" fill="#c084fc">초과청약</text>
+  <!-- Lock-up -->
+  <text x="50" y="416" font-size="9" fill="#9ca3af">내부자 락업 기간</text>
+  <rect x="180" y="406" width="240" height="13" rx="4" fill="#1a1033"/>
+  <rect x="180" y="406" width="200" height="13" rx="4" fill="#5b21b6"/>
+  <text x="387" y="416" font-size="9" fill="#9ca3af">180일</text>
+  <!-- Ron rating -->
+  <text x="50" y="430" font-size="9" fill="#9ca3af">Ron Baron 장기 신뢰도</text>
+  <rect x="180" y="420" width="400" height="13" rx="4" fill="#1a1033"/>
+  <rect x="180" y="420" width="380" height="13" rx="4" fill="#00e5a0" opacity="0.7"/>
+  <text x="567" y="430" font-size="9" fill="#00e5a0">10~15년 장기 보유</text>
+
+  <text x="770" y="450" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

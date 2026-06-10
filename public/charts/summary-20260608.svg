@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <rect width="800" height="600" fill="#0a0c10"/>
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00e5a0" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- header -->
+  <rect width="800" height="58" fill="url(#hdr)"/>
+  <text x="30" y="26" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="2">INVESTUS DAILY BRIEF</text>
+  <text x="30" y="48" fill="white" font-size="20" font-weight="900">📋 2026.06.08 시장 한장 요약</text>
+  <text x="770" y="40" fill="rgba(255,255,255,0.3)" font-size="11" text-anchor="end">investus.kr</text>
+
+  <line x1="0" y1="58" x2="800" y2="58" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- xAI / SPCX Section -->
+  <rect x="12" y="68" width="776" height="132" rx="10" fill="#c084fc" fill-opacity="0.05" stroke="#c084fc" stroke-opacity="0.15"/>
+  <text x="28" y="90" fill="#c084fc" font-size="12" font-weight="800">🚀 SPACEX / xAI</text>
+
+  <circle cx="40" cy="110" r="4" fill="#c084fc"/>
+  <text x="52" y="114" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">xAI 데이터센터 <tspan fill="white" font-weight="900">18개월</tspan> 내 투자비 전액 회수 — Anthropic+Google 임대료 <tspan fill="white" font-weight="900">$26B/yr</tspan>, 건설비 $40B</text>
+
+  <circle cx="40" cy="134" r="4" fill="#c084fc"/>
+  <text x="52" y="138" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Ron Baron, SpaceX IPO <tspan fill="white" font-weight="900">$10억</tspan> 주문 — "평생 팔지 않겠다" · Baron Capital Group $2B 총 투자</text>
+
+  <circle cx="40" cy="158" r="4" fill="#c084fc"/>
+  <text x="52" y="162" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Jensen Huang <tspan fill="white" font-weight="900">HUGE 발표</tspan> 예정 — 내부소식통 "NVIDIA+SpaceX 파트너십 IPO 직전 공개"</text>
+
+  <circle cx="40" cy="182" r="4" fill="#c084fc"/>
+  <text x="52" y="186" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">SPCX IPO 앞두고 <tspan fill="white" font-weight="900">EXTREME VOLATILITY</tspan> 경고 · $200M ATM 프로그램 소문</text>
+
+  <!-- NVDA Section -->
+  <rect x="12" y="210" width="776" height="86" rx="10" fill="#60a5fa" fill-opacity="0.04" stroke="#60a5fa" stroke-opacity="0.12"/>
+  <text x="28" y="232" fill="#60a5fa" font-size="12" font-weight="800">🟢 NVIDIA (NVDA)</text>
+
+  <circle cx="40" cy="252" r="4" fill="#60a5fa"/>
+  <text x="52" y="256" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Jensen Huang "메모리 공급 부족, <tspan fill="white" font-weight="900">수년간 지속</tspan>" 공개 경고 — SK하이닉스 최대 수혜</text>
+
+  <circle cx="40" cy="278" r="4" fill="#60a5fa"/>
+  <text x="52" y="282" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">ASML 비공개 행사 — Tesla+SpaceX 대상 <tspan fill="white" font-weight="900">2nm 최선단 칩</tspan> AI·로봇·우주 공급 발표</text>
+
+  <!-- TSLA Section -->
+  <rect x="12" y="306" width="776" height="132" rx="10" fill="#00e5a0" fill-opacity="0.04" stroke="#00e5a0" stroke-opacity="0.12"/>
+  <text x="28" y="328" fill="#00e5a0" font-size="12" font-weight="800">🚗 TESLA (TSLA)</text>
+
+  <circle cx="40" cy="348" r="4" fill="#00e5a0"/>
+  <text x="52" y="352" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Optimus 대규모 채용 오픈 — 로봇공학 <tspan fill="white" font-weight="900">36개</tspan> + Optimus 관련 <tspan fill="white" font-weight="900">172개</tspan> = 총 208개 포지션</text>
+
+  <circle cx="40" cy="372" r="4" fill="#00e5a0"/>
+  <text x="52" y="376" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">실제 배터리 건강도 — 2024 Model 3: <tspan fill="white" font-weight="900">96.9%</tspan> · 2021 Model Y: <tspan fill="white" font-weight="900">89.5%</tspan> (40,000마일 후)</text>
+
+  <circle cx="40" cy="396" r="4" fill="#00e5a0"/>
+  <text x="52" y="400" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">JP Morgan Q1 2026 Tesla <tspan fill="white" font-weight="900">+143만주</tspan> 추가 매수 · 총 4,607만주 · 자본 유입 <tspan fill="white" font-weight="900">$5.515억</tspan></text>
+
+  <circle cx="40" cy="420" r="4" fill="#00e5a0"/>
+  <text x="52" y="424" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Tesla FSD(Supervised) 리뷰 — "거의 완전 자율주행 · 개입 없음 · 진짜 인상적"</text>
+
+  <!-- footer -->
+  <line x1="12" y1="450" x2="788" y2="450" stroke="#ffffff" stroke-opacity="0.05"/>
+  <text x="400" y="472" fill="rgba(255,255,255,0.2)" font-size="11" text-anchor="middle">xAI 18개월 회수 · Ron Baron $1B · Jensen HUGE발표 · NVDA 메모리부족 · ASML 2nm · TSLA Optimus 208개 · 배터리96.9% · JPM +143만주</text>
+  <text x="400" y="502" fill="rgba(255,255,255,0.15)" font-size="11" text-anchor="middle">Investus Research · investus.kr · 본 자료는 투자 참고용이며 투자 결정의 책임은 투자자 본인에게 있습니다</text>
+</svg>

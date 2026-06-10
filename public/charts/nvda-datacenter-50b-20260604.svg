@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="460" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#76c442">📡 NVDA — 데이터센터 투자 $50B SAAR 돌파</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">하이퍼스케일러 $5.3T 누적 투자 · 2026.06.04</text>
+
+  <!-- SAAR Chart recreation -->
+  <rect x="30" y="65" width="490" height="240" rx="12" fill="#111827"/>
+  <text x="275" y="88" font-size="11" font-weight="700" fill="#76c442" text-anchor="middle">데이터센터 민간 건설 투자 ($bn SAAR)</text>
+  <text x="275" y="102" font-size="8" fill="#6b7280" text-anchor="middle">Value of private construction put in place for data centers</text>
+
+  <!-- Chart area -->
+  <rect x="55" y="108" width="445" height="175" rx="4" fill="#0d1117"/>
+  <!-- Y axis labels -->
+  <text x="50" y="120" font-size="7" fill="#6b7280" text-anchor="end">$60B</text>
+  <text x="50" y="155" font-size="7" fill="#6b7280" text-anchor="end">$40B</text>
+  <text x="50" y="190" font-size="7" fill="#6b7280" text-anchor="end">$20B</text>
+  <text x="50" y="225" font-size="7" fill="#6b7280" text-anchor="end">$0</text>
+  <!-- Grid lines -->
+  <line x1="55" y1="120" x2="500" y2="120" stroke="#1f2937" stroke-width="0.5"/>
+  <line x1="55" y1="155" x2="500" y2="155" stroke="#1f2937" stroke-width="0.5"/>
+  <line x1="55" y1="190" x2="500" y2="190" stroke="#1f2937" stroke-width="0.5"/>
+  <!-- X axis labels -->
+  <text x="68" y="295" font-size="7" fill="#6b7280" text-anchor="middle">Apr-15</text>
+  <text x="142" y="295" font-size="7" fill="#6b7280" text-anchor="middle">Apr-17</text>
+  <text x="216" y="295" font-size="7" fill="#6b7280" text-anchor="middle">Apr-19</text>
+  <text x="290" y="295" font-size="7" fill="#6b7280" text-anchor="middle">Apr-21</text>
+  <text x="364" y="295" font-size="7" fill="#6b7280" text-anchor="middle">Apr-23</text>
+  <text x="445" y="295" font-size="7" fill="#6b7280" text-anchor="middle">Apr-25</text>
+
+  <!-- Data line - mimicking the actual chart -->
+  <!-- Flat early years 2015-2021, then hockey stick 2022-2025 -->
+  <polyline points="68,218 83,217 98,215 113,214 128,213 142,211 157,211 172,210 187,209 202,209 216,208 231,207 246,207 261,206 275,205 290,202 305,198 320,193 335,185 350,175 364,165 379,152 394,140 410,130 425,122 440,115 455,113 470,118 485,115 500,112"
+            stroke="#2563eb" stroke-width="2.5" fill="none"/>
+
+  <!-- Peak annotation -->
+  <circle cx="500" cy="112" r="5" fill="#76c442"/>
+  <rect x="440" y="90" width="70" height="22" rx="4" fill="#76c442" opacity="0.9"/>
+  <text x="475" y="105" font-size="9" font-weight="800" fill="#0a0f1e" text-anchor="middle">~$50B</text>
+  <line x1="475" y1="112" x2="475" y2="90" stroke="#76c442" stroke-width="1" stroke-dasharray="2 2"/>
+
+  <!-- Growth arrow annotation -->
+  <text x="390" y="145" font-size="8" fill="#76c442">↗ 급성장 구간</text>
+  <text x="390" y="157" font-size="7" fill="#6b7280">AI 붐 이후</text>
+
+  <!-- Right panel: $5.3T hyperscaler -->
+  <rect x="540" y="65" width="230" height="240" rx="12" fill="#111827"/>
+  <text x="655" y="90" font-size="10" font-weight="700" fill="#76c442" text-anchor="middle">하이퍼스케일러 누적 투자</text>
+  <text x="655" y="104" font-size="8" fill="#6b7280" text-anchor="middle">FY2025 – FY2030</text>
+
+  <!-- Big $5.3T -->
+  <text x="655" y="170" font-size="62" font-weight="900" fill="white" text-anchor="middle">$5.3T</text>
+  <text x="655" y="192" font-size="9" fill="#76c442" text-anchor="middle">누적 데이터센터 CAPEX</text>
+
+  <!-- 4 hyperscalers -->
+  <rect x="555" y="205" width="195" height="88" rx="8" fill="#0d1117"/>
+  <text x="653" y="222" font-size="8" fill="#9ca3af" text-anchor="middle">4대 하이퍼스케일러</text>
+  <text x="570" y="240" font-size="9" fill="#4ade80">META</text>
+  <text x="570" y="258" font-size="9" fill="#60a5fa">Microsoft</text>
+  <text x="570" y="276" font-size="9" fill="#fb923c">Amazon</text>
+  <text x="570" y="294" font-size="9" fill="#a78bfa">Alphabet</text>
+  <text x="745" y="240" font-size="9" fill="#e2e8f0" text-anchor="end">~$1.3T</text>
+  <text x="745" y="258" font-size="9" fill="#e2e8f0" text-anchor="end">~$1.5T</text>
+  <text x="745" y="276" font-size="9" fill="#e2e8f0" text-anchor="end">~$1.6T</text>
+  <text x="745" y="294" font-size="9" fill="#e2e8f0" text-anchor="end">~$0.9T</text>
+
+  <!-- Bottom stats -->
+  <rect x="30" y="320" width="740" height="110" rx="12" fill="#111827"/>
+  <text x="400" y="342" font-size="11" font-weight="700" fill="#76c442" text-anchor="middle">핵심 의미 — NVDA 수혜 구조</text>
+
+  <rect x="50" y="354" width="340" height="60" rx="8" fill="#0d1117"/>
+  <text x="220" y="372" font-size="9" fill="#9ca3af" text-anchor="middle">데이터센터 SAAR 성장률 (2015→2025)</text>
+  <text x="220" y="392" font-size="9" fill="#9ca3af" text-anchor="middle">$3B → $50B</text>
+  <rect x="60" y="400" width="20" height="5" rx="2" fill="#76c442"/>
+  <rect x="85" y="396" width="20" height="9" rx="2" fill="#76c442" opacity="0.8"/>
+  <rect x="110" y="389" width="20" height="16" rx="2" fill="#76c442" opacity="0.9"/>
+  <rect x="135" y="376" width="20" height="29" rx="2" fill="#76c442"/>
+  <text x="220" y="412" font-size="8" fill="#76c442" text-anchor="middle">약 17배 증가 (10년)</text>
+
+  <rect x="405" y="354" width="340" height="60" rx="8" fill="#0d1117"/>
+  <text x="575" y="372" font-size="9" fill="#9ca3af" text-anchor="middle">연간 실행률 기준 성장</text>
+  <text x="575" y="392" font-size="13" font-weight="800" fill="#76c442" text-anchor="middle">$2B/yr → $100B+/yr</text>
+  <text x="575" y="408" font-size="8" fill="#9ca3af" text-anchor="middle">AI 붐 이전 대비 50배+ 증가</text>
+  <text x="575" y="420" font-size="8" fill="#6b7280" text-anchor="middle">NVDA GPU 수요의 직접 원천</text>
+
+  <text x="770" y="450" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Segoe UI',Arial,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0a0f1e"/>
+
+  <!-- Header accent bar -->
+  <rect x="0" y="0" width="800" height="4" fill="#c084fc"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="68" fill="#12172e"/>
+  <text x="24" y="36" font-size="17" font-weight="700" fill="#c084fc">Starlink S-1 공개 — 구독자·매출·ARPU 추이</text>
+  <text x="24" y="52" font-size="12" fill="#8892b0">2026.06.10 · SPCX / Starlink</text>
+
+  <!-- === SUBSCRIBER BAR CHART (y:80-240) === -->
+  <text x="24" y="100" font-size="12" font-weight="600" fill="#8892b0">구독자 추이 (단위: 백만명)</text>
+
+  <!-- Chart background -->
+  <rect x="24" y="106" width="752" height="124" rx="6" fill="#0e1428"/>
+
+  <!-- Bar data: 2023=2.3M, 2024=3.6M, 2025=4.2M, 2026Q1=4.4M -->
+  <!-- Max = 4.4M → chart height = 90px, scale = 90/4.4 = ~20.45px per M -->
+  <!-- Bar base y = 106+114 = 220, bars go up -->
+  <!-- Bar width = 90px, gaps evenly spaced across 752px: 4 bars + 5 gaps -->
+  <!-- slot = 752/4 = 188px, bar center at 24 + 94, 282, 470, 658 -->
+  <!-- bar top: 2.3M=220-(2.3*20.45)=220-47=173, 3.6M=220-73.6=146.4, 4.2M=220-85.9=134.1, 4.4M=220-90=130 -->
+
+  <!-- 2023 bar: 2.3M height=47px -->
+  <rect x="68" y="173" width="80" height="47" rx="4" fill="#60a5fa" opacity="0.8"/>
+  <text x="108" y="168" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">2.3M</text>
+  <text x="108" y="222" font-size="11" fill="#8892b0" text-anchor="middle">2023</text>
+
+  <!-- 2024 bar: 3.6M height=73.6px -->
+  <rect x="256" y="146" width="80" height="74" rx="4" fill="#60a5fa" opacity="0.9"/>
+  <text x="296" y="141" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">3.6M</text>
+  <text x="296" y="222" font-size="11" fill="#8892b0" text-anchor="middle">2024</text>
+
+  <!-- 2025 bar: 4.2M height=85.9px -->
+  <rect x="444" y="134" width="80" height="86" rx="4" fill="#60a5fa"/>
+  <text x="484" y="129" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">4.2M</text>
+  <text x="484" y="222" font-size="11" fill="#8892b0" text-anchor="middle">2025</text>
+
+  <!-- 2026Q1 bar: 4.4M height=90px -->
+  <rect x="632" y="130" width="80" height="90" rx="4" fill="#93c5fd"/>
+  <text x="672" y="125" font-size="12" font-weight="700" fill="#93c5fd" text-anchor="middle">4.4M</text>
+  <text x="672" y="222" font-size="11" fill="#8892b0" text-anchor="middle">2026 Q1</text>
+
+  <!-- === ARPU LINE CHART (y:255-370) === -->
+  <text x="24" y="253" font-size="12" font-weight="600" fill="#8892b0">ARPU 추이 ($/월)</text>
+  <rect x="24" y="260" width="752" height="100" rx="6" fill="#0e1428"/>
+
+  <!-- ARPU: 2023=$99, 2025=$88, 2026Q1=$64 -->
+  <!-- Chart area: x=80-720, y=270-350 (80px height) -->
+  <!-- Scale: max=$100, scale=80/100=0.8px per $ -->
+  <!-- Points: 2023 at x=120, y=350-(99*0.8)=350-79.2=270.8≈271 -->
+  <!--         2025 at x=400, y=350-(88*0.8)=350-70.4=279.6≈280 -->
+  <!--         2026Q1 at x=680, y=350-(64*0.8)=350-51.2=298.8≈299 -->
+
+  <!-- Grid line at 0 -->
+  <line x1="80" y1="350" x2="720" y2="350" stroke="#1e2a45" stroke-width="1"/>
+  <!-- Grid line at $50 -->
+  <line x1="80" y1="310" x2="720" y2="310" stroke="#1e2a45" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="76" y="314" font-size="10" fill="#4a5568" text-anchor="end">$50</text>
+  <!-- Grid line at $100 -->
+  <line x1="80" y1="270" x2="720" y2="270" stroke="#1e2a45" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="76" y="274" font-size="10" fill="#4a5568" text-anchor="end">$100</text>
+
+  <!-- ARPU line -->
+  <polyline points="120,271 400,280 680,299" fill="none" stroke="#fb923c" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- ARPU points -->
+  <circle cx="120" cy="271" r="5" fill="#fb923c"/>
+  <circle cx="400" cy="280" r="5" fill="#fb923c"/>
+  <circle cx="680" cy="299" r="5" fill="#fb923c"/>
+
+  <!-- ARPU labels above points -->
+  <text x="120" y="263" font-size="12" font-weight="700" fill="#fb923c" text-anchor="middle">$99</text>
+  <text x="120" y="358" font-size="11" fill="#8892b0" text-anchor="middle">2023</text>
+  <text x="400" y="272" font-size="12" font-weight="700" fill="#fb923c" text-anchor="middle">$88</text>
+  <text x="400" y="358" font-size="11" fill="#8892b0" text-anchor="middle">2025</text>
+  <text x="680" y="291" font-size="12" font-weight="700" fill="#fb923c" text-anchor="middle">$64</text>
+  <text x="680" y="358" font-size="11" fill="#8892b0" text-anchor="middle">2026 Q1</text>
+
+  <!-- ARPU badge -->
+  <rect x="290" y="263" width="80" height="22" rx="4" fill="#7c2d12" opacity="0.8"/>
+  <text x="330" y="278" font-size="11" font-weight="700" fill="#fb923c" text-anchor="middle">ARPU -33%</text>
+
+  <!-- === REVENUE ROW (y:385-460) === -->
+  <text x="24" y="384" font-size="12" font-weight="600" fill="#8892b0">연간 매출 (ARR)</text>
+
+  <!-- 4 revenue boxes -->
+  <!-- Box width = 170px, gap = (752-4*170)/3 = (752-680)/3 ≈ 24px -->
+  <!-- x positions: 24, 218, 412, 606 -->
+
+  <!-- 2023 $2.75B -->
+  <rect x="24" y="390" width="170" height="65" rx="8" fill="#1a1f35" stroke="#60a5fa" stroke-width="1"/>
+  <text x="109" y="415" font-size="11" fill="#64748b" text-anchor="middle">2023</text>
+  <text x="109" y="440" font-size="20" font-weight="800" fill="#60a5fa" text-anchor="middle">$2.75B</text>
+
+  <!-- 2024 $4.83B -->
+  <rect x="214" y="390" width="170" height="65" rx="8" fill="#1a1f35" stroke="#60a5fa" stroke-width="1"/>
+  <text x="299" y="415" font-size="11" fill="#64748b" text-anchor="middle">2024</text>
+  <text x="299" y="440" font-size="20" font-weight="800" fill="#60a5fa" text-anchor="middle">$4.83B</text>
+
+  <!-- 2025 $8.09B -->
+  <rect x="404" y="390" width="170" height="65" rx="8" fill="#1a1f35" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="489" y="415" font-size="11" fill="#64748b" text-anchor="middle">2025</text>
+  <text x="489" y="440" font-size="20" font-weight="800" fill="#93c5fd" text-anchor="middle">$8.09B</text>
+
+  <!-- 2026 $10.8B annualized -->
+  <rect x="594" y="390" width="182" height="65" rx="8" fill="#1e1050" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="685" y="415" font-size="11" fill="#64748b" text-anchor="middle">2026 연환산*</text>
+  <text x="685" y="440" font-size="20" font-weight="800" fill="#c084fc" text-anchor="middle">$10.8B</text>
+
+  <!-- Source -->
+  <text x="400" y="488" font-size="11" fill="#4a5568" text-anchor="middle">investus.kr · *=연환산 추정 (Q1 기준)</text>
+</svg>

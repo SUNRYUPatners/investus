@@ -1,0 +1,72 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#60a5fa"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="17" fill="white" font-weight="700">NVIDIA — Morgan Stanley 입장 반전 · FY27 $308B(+100% YoY) · 탑픽 선정</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.06.01</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- MS reversal block -->
+  <rect x="30" y="80" width="220" height="150" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="30" y="80" width="4" height="150" rx="2" fill="#60a5fa"/>
+  <text x="48" y="104" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">Morgan Stanley</text>
+  <text x="48" y="130" font-family="Arial,sans-serif" font-size="12" fill="#ef4444" font-weight="700">❌ "과대평가"</text>
+  <text x="48" y="152" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">↓ 공개 입장 번복</text>
+  <text x="48" y="174" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">✅ "우리가 틀렸다"</text>
+  <text x="48" y="196" font-family="Arial,sans-serif" font-size="10" fill="white">탑픽(Top Pick) 공식 선정</text>
+  <text x="48" y="220" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa">"AI 사이클이 얼마나 초기인지 증명"</text>
+
+  <!-- FY27 Revenue block -->
+  <rect x="270" y="80" width="230" height="150" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="270" y="80" width="4" height="150" rx="2" fill="#60a5fa"/>
+  <text x="288" y="104" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">FY27 매출 추정</text>
+  <!-- Growth bar -->
+  <rect x="288" y="114" width="80" height="30" rx="4" fill="#60a5fa" opacity="0.3"/>
+  <text x="294" y="134" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa">FY26 ~$155B</text>
+  <rect x="288" y="150" width="160" height="36" rx="4" fill="#60a5fa" opacity="0.7"/>
+  <text x="294" y="174" font-family="Arial,sans-serif" font-size="16" fill="white" font-weight="700">FY27 $308B</text>
+  <text x="288" y="200" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700">+100% YoY ↑</text>
+  <text x="288" y="220" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">AI 서버 $108B (+100% YoY) 포함</text>
+
+  <!-- AI Cycle block -->
+  <rect x="520" y="80" width="250" height="150" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="520" y="80" width="4" height="150" rx="2" fill="#60a5fa"/>
+  <text x="538" y="104" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">AI 사이클 위치</text>
+  <!-- Timeline visualization -->
+  <line x1="538" y1="130" x2="750" y2="130" stroke="#60a5fa" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="558" cy="130" r="5" fill="#6b7280"/>
+  <text x="554" y="148" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">시작</text>
+  <circle cx="644" cy="130" r="6" fill="#60a5fa"/>
+  <text x="634" y="148" font-family="Arial,sans-serif" font-size="8" fill="#60a5fa">현재</text>
+  <circle cx="740" cy="130" r="5" fill="#6b7280" stroke="#60a5fa" stroke-width="1"/>
+  <text x="730" y="148" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">피크</text>
+  <text x="538" y="170" font-family="Arial,sans-serif" font-size="10" fill="white">MS 반전 = AI 초기 사이클 확인</text>
+  <text x="538" y="188" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">기관 컨센서스 상향 도미노 예상</text>
+  <text x="538" y="206" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">월가 탑픽 = 기관 수급 유입 시작</text>
+  <text x="538" y="220" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa">현재 진입 = AI 초기 탑승 기회</text>
+
+  <!-- Analysis section -->
+  <rect x="30" y="244" width="740" height="120" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="30" y="244" width="4" height="120" rx="2" fill="#60a5fa"/>
+  <text x="48" y="266" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">투자 논리</text>
+  <text x="48" y="286" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• Morgan Stanley 공개 입장 번복 "We got this one wrong" = AI 초기 사이클에서 월가 최대 기관이 과소평가했다는 직접 시인</text>
+  <text x="48" y="304" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• FY27 $308B 추정(+100% YoY) · AI 최적화 서버 $108B · 2년 연속 매출 2배 = 슈퍼사이클 지속 확인</text>
+  <text x="48" y="322" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 탑픽 선정 → 기관 포트폴리오 강제 편입 압력 · 월가 대형 기관 도미노 리레이팅 시작 예상</text>
+  <text x="48" y="340" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">• Blackwell Ultra B300 출하 가속 · AI PC 사이클 + Datacenter = 두 개 성장 엔진 동시 가동</text>
+  <text x="48" y="356" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">모건스탠리가 틀렸다고 인정하는 기관은 극히 드물다 → 이 번복이 얼마나 강력한 신호인지 이해해야 함</text>
+
+  <!-- Key stats -->
+  <rect x="30" y="378" width="740" height="52" rx="8" fill="#0a1226" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="48" y="398" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">FY27 총매출 추정</text>
+  <text x="48" y="418" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" font-weight="700">$308B</text>
+  <text x="220" y="398" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">AI서버 매출</text>
+  <text x="220" y="418" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" font-weight="700">$108B</text>
+  <text x="380" y="398" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">YoY 성장률</text>
+  <text x="380" y="418" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" font-weight="700">+100%</text>
+  <text x="540" y="398" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">MS 등급 변경</text>
+  <text x="540" y="418" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" font-weight="700">탑픽 ↑</text>
+
+  <line x1="30" y1="442" x2="770" y2="442" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="458" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="458" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

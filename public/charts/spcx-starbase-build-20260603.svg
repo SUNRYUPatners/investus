@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="360" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#c084fc">🚀 SpaceX Starbase Build — 로컬 AI 실행 디바이스</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">AI 모델을 로컬에서 실행하며 클라우드 데이터센터에 직접 연결 · @ShipBober 발표</text>
+
+  <!-- Architecture diagram -->
+  <rect x="30" y="68" width="480" height="200" rx="10" fill="#111827"/>
+  <text x="50" y="88" font-size="11" font-weight="700" fill="#c084fc">Starbase Build 아키텍처</text>
+
+  <!-- Device box -->
+  <rect x="60" y="100" width="160" height="80" rx="8" fill="#1a1033"/>
+  <rect x="60" y="100" width="160" height="80" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="140" y="125" font-size="10" font-weight="700" fill="#c084fc" text-anchor="middle">Starbase Build</text>
+  <text x="140" y="142" font-size="8.5" fill="#9ca3af" text-anchor="middle">로컬 AI 실행</text>
+  <text x="140" y="156" font-size="8.5" fill="#9ca3af" text-anchor="middle">엣지 추론 칩</text>
+  <text x="140" y="170" font-size="8.5" fill="#9ca3af" text-anchor="middle">자율 에이전트 상시 가동</text>
+
+  <!-- Arrow right -->
+  <line x1="220" y1="140" x2="300" y2="140" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="300,134 312,140 300,146" fill="#c084fc"/>
+  <text x="256" y="132" font-size="8" fill="#c084fc" text-anchor="middle">직접 연결</text>
+
+  <!-- Cloud box -->
+  <rect x="312" y="100" width="160" height="80" rx="8" fill="#1a1033"/>
+  <rect x="312" y="100" width="160" height="80" rx="8" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="392" y="125" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">SpaceXai</text>
+  <text x="392" y="142" font-size="8.5" fill="#9ca3af" text-anchor="middle">클라우드 데이터센터</text>
+  <text x="392" y="156" font-size="8.5" fill="#9ca3af" text-anchor="middle">Starlink 연결</text>
+  <text x="392" y="170" font-size="8.5" fill="#9ca3af" text-anchor="middle">대규모 AI 훈련</text>
+
+  <!-- Starlink connection symbol -->
+  <text x="256" y="152" font-size="8" fill="#6b7280" text-anchor="middle">Starlink</text>
+
+  <!-- vs Traditional -->
+  <text x="50" y="200" font-size="10" font-weight="700" fill="#c084fc">vs 기존 AI 디바이스</text>
+  <text x="50" y="216" font-size="9" fill="#9ca3af">기존: 모든 AI 처리 → 클라우드 → 응답 대기 → 레이턴시 높음</text>
+  <text x="50" y="230" font-size="9" fill="#c084fc">Starbase: 로컬에서 즉시 처리 → 클라우드는 보조 · 대역폭·레이턴시 최소</text>
+  <text x="50" y="246" font-size="9" fill="#9ca3af">결과: AI 에이전트가 인터넷 없이도 자율적으로 PC에서 실행</text>
+  <text x="50" y="261" font-size="8" fill="#6b7280">(NVDA RTX Spark와 유사 컨셉 — 엣지 AI 로컬 실행 트렌드)</text>
+
+  <!-- SPCX significance -->
+  <rect x="530" y="68" width="240" height="200" rx="10" fill="#1a1033"/>
+  <text x="550" y="88" font-size="11" font-weight="700" fill="#c084fc">SPCX 수혜 구조</text>
+  <text x="550" y="106" font-size="10" fill="#9ca3af">하드웨어</text>
+  <text x="650" y="106" font-size="10" fill="#c084fc">Starbase Build 디바이스</text>
+  <text x="550" y="122" font-size="10" fill="#9ca3af">소프트웨어</text>
+  <text x="650" y="122" font-size="10" fill="#c084fc">AI 에이전트 플랫폼</text>
+  <text x="550" y="138" font-size="10" fill="#9ca3af">연결</text>
+  <text x="650" y="138" font-size="10" fill="#c084fc">Starlink 위성망</text>
+  <text x="550" y="154" font-size="10" fill="#9ca3af">데이터센터</text>
+  <text x="650" y="154" font-size="10" fill="#c084fc">SpaceXai 컴퓨트</text>
+
+  <rect x="550" y="168" width="200" height="60" rx="6" fill="#0d0020"/>
+  <text x="650" y="186" font-size="9" fill="#9ca3af" text-anchor="middle">수직통합 AI 생태계</text>
+  <text x="650" y="202" font-size="9" fill="#c084fc" text-anchor="middle">디바이스 → 연결 → 컴퓨트</text>
+  <text x="650" y="218" font-size="8" fill="#6b7280" text-anchor="middle">애플 생태계 모델과 유사</text>
+
+  <text x="550" y="250" font-size="8" fill="#6b7280">IPO 이후 하드웨어 판매 수익</text>
+  <text x="550" y="264" font-size="8" fill="#6b7280">+ Starlink 구독 + SpaceXai</text>
+
+  <!-- Bottom -->
+  <rect x="30" y="280" width="740" height="60" rx="10" fill="#0d0020"/>
+  <text x="50" y="300" font-size="11" font-weight="700" fill="#c084fc">투자 포인트</text>
+  <text x="50" y="318" font-size="10" fill="#9ca3af">Starbase Build = SpaceX의 소비자 AI 디바이스 진출. Starlink 위성 연결 + SpaceXai 컴퓨트 + 로컬 AI 실행 3박자. Apple 생태계처럼 하드웨어·연결·클라우드 수직통합.</text>
+  <text x="50" y="333" font-size="10" fill="#9ca3af">엣지 AI 디바이스 시장(NVDA RTX Spark, Apple Silicon)에 SpaceX 진입 → 경쟁 격화, 시장 확대.</text>
+  <text x="710" y="333" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

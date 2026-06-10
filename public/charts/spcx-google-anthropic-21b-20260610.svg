@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="'Segoe UI',Arial,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0f1e"/>
+
+  <!-- Header accent bar -->
+  <rect x="0" y="0" width="800" height="4" fill="#c084fc"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="68" fill="#12172e"/>
+  <text x="24" y="36" font-size="17" font-weight="700" fill="#c084fc">Google·Anthropic → SpaceX AI 컴퓨트 $21.5B+</text>
+  <text x="24" y="52" font-size="12" fill="#8892b0">2026.06.10 · SPCX</text>
+
+  <!-- 3 Stat Cards (y:80-160) -->
+  <!-- Card 1 -->
+  <rect x="24" y="80" width="232" height="76" rx="10" fill="#1a1f35" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="140" y="110" font-size="26" font-weight="800" fill="#c084fc" text-anchor="middle">$21.5B+</text>
+  <text x="140" y="130" font-size="12" fill="#8892b0" text-anchor="middle">계약 규모</text>
+  <text x="140" y="148" font-size="11" fill="#64748b" text-anchor="middle">contract value</text>
+
+  <!-- Card 2 -->
+  <rect x="284" y="80" width="232" height="76" rx="10" fill="#1a1f35" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="400" y="110" font-size="28" font-weight="800" fill="#c084fc" text-anchor="middle">2개</text>
+  <text x="400" y="130" font-size="12" fill="#8892b0" text-anchor="middle">고객사</text>
+  <text x="400" y="148" font-size="11" fill="#64748b" text-anchor="middle">Google + Anthropic</text>
+
+  <!-- Card 3 -->
+  <rect x="544" y="80" width="232" height="76" rx="10" fill="#1a1f35" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="660" y="106" font-size="14" font-weight="700" fill="#c084fc" text-anchor="middle">AI 데이터센터</text>
+  <text x="660" y="126" font-size="14" font-weight="700" fill="#c084fc" text-anchor="middle">임대 구조</text>
+  <text x="660" y="148" font-size="11" fill="#64748b" text-anchor="middle">Gigafactory lease</text>
+
+  <!-- Deal Diagram (y:175-330) -->
+  <text x="24" y="197" font-size="12" font-weight="600" fill="#8892b0">계약 구조</text>
+
+  <!-- Google box -->
+  <rect x="40" y="208" width="180" height="90" rx="10" fill="#1a1f35" stroke="#4285f4" stroke-width="2"/>
+  <text x="130" y="248" font-size="18" font-weight="700" fill="#4285f4" text-anchor="middle">Google</text>
+  <text x="130" y="268" font-size="11" fill="#8892b0" text-anchor="middle">AI 인프라 임대</text>
+  <text x="130" y="285" font-size="11" fill="#64748b" text-anchor="middle">~$10B+</text>
+
+  <!-- Anthropic box -->
+  <rect x="40" y="318" width="180" height="90" rx="10" fill="#1a1f35" stroke="#f97316" stroke-width="2"/>
+  <text x="130" y="358" font-size="18" font-weight="700" fill="#f97316" text-anchor="middle">Anthropic</text>
+  <text x="130" y="378" font-size="11" fill="#8892b0" text-anchor="middle">AI 컴퓨트 임대</text>
+  <text x="130" y="395" font-size="11" fill="#64748b" text-anchor="middle">~$11.5B+</text>
+
+  <!-- Arrows -->
+  <!-- Arrow from Google to SpaceX -->
+  <line x1="220" y1="253" x2="340" y2="280" stroke="#c084fc" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="340,275 340,285 348,280" fill="#c084fc"/>
+
+  <!-- Arrow from Anthropic to SpaceX -->
+  <line x1="220" y1="363" x2="340" y2="310" stroke="#c084fc" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="340,305 340,315 348,310" fill="#c084fc"/>
+
+  <!-- Dollar flow labels -->
+  <text x="275" y="260" font-size="11" fill="#c084fc" text-anchor="middle">$</text>
+  <text x="275" y="345" font-size="11" fill="#c084fc" text-anchor="middle">$</text>
+
+  <!-- SpaceX box (center right) -->
+  <rect x="360" y="233" width="200" height="110" rx="10" fill="#1a1f35" stroke="#c084fc" stroke-width="2.5"/>
+  <text x="460" y="270" font-size="20" font-weight="800" fill="#c084fc" text-anchor="middle">SpaceX</text>
+  <text x="460" y="292" font-size="13" fill="#e2e8f0" text-anchor="middle">AI 기가팩토리</text>
+  <text x="460" y="312" font-size="12" fill="#8892b0" text-anchor="middle">Bastrop, Texas</text>
+  <text x="460" y="330" font-size="11" fill="#64748b" text-anchor="middle">1,000만 sqft</text>
+
+  <!-- Total label -->
+  <rect x="600" y="253" width="170" height="70" rx="8" fill="#2d1f4e" stroke="#c084fc" stroke-width="1"/>
+  <text x="685" y="280" font-size="13" fill="#8892b0" text-anchor="middle">총 계약 규모</text>
+  <text x="685" y="304" font-size="20" font-weight="800" fill="#c084fc" text-anchor="middle">$21.5B+</text>
+
+  <!-- Comparison Banner (y:345-420) -->
+  <rect x="24" y="345" width="752" height="70" rx="10" fill="#1a1f35" stroke="#7c3aed" stroke-width="1"/>
+  <text x="400" y="370" font-size="13" font-weight="600" fill="#c084fc" text-anchor="middle">역대 최대 AI 인프라 단일 계약  ·  SpaceX Gigafactory 임대 구조</text>
+  <text x="400" y="390" font-size="12" fill="#8892b0" text-anchor="middle">Google · Anthropic이 SpaceX Bastrop 기가팩토리 AI 컴퓨트 용량 장기 임대</text>
+  <text x="400" y="408" font-size="11" fill="#64748b" text-anchor="middle">보도 기준 · 세부 계약 조건 미공개</text>
+
+  <!-- Source -->
+  <text x="400" y="440" font-size="11" fill="#4a5568" text-anchor="middle">investus.kr</text>
+</svg>

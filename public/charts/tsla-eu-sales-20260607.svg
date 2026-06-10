@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0c10"/>
+  <defs>
+    <linearGradient id="mint9" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00e5a0"/><stop offset="100%" stop-color="#00b377"/>
+    </linearGradient>
+    <linearGradient id="blu9" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="24" width="10" height="36" rx="3" fill="url(#mint9)"/>
+  <text x="50" y="42" fill="#00e5a0" font-size="11" font-weight="700" letter-spacing="2">TESLA · 유럽 진출</text>
+  <text x="50" y="58" fill="white" font-size="19" font-weight="800">EU 유럽 판매 시작 — 글로벌 확장 가속</text>
+  <text x="700" y="44" fill="#00e5a0" font-size="11" font-weight="600" text-anchor="end">2026.06.07</text>
+  <line x1="30" y1="76" x2="770" y2="76" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- main banner -->
+  <rect x="30" y="90" width="740" height="72" rx="12" fill="#00e5a0" fill-opacity="0.1" stroke="#00e5a0" stroke-opacity="0.25"/>
+  <text x="400" y="120" fill="white" font-size="18" font-weight="800" text-anchor="middle">🇪🇺 Tesla, EU 유럽 시장 판매 공식 개시</text>
+  <text x="400" y="148" fill="#00e5a0" font-size="13" text-anchor="middle">미국 · 호주 · 중국에 이어 유럽 판매망 확장 완료</text>
+
+  <!-- eu market size -->
+  <text x="30" y="190" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="1">유럽 EV 시장 현황</text>
+
+  <rect x="30" y="200" width="220" height="80" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="140" y="230" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">EU EV 시장 규모</text>
+  <text x="140" y="260" fill="white" font-size="20" font-weight="800" text-anchor="middle">~350만대</text>
+  <text x="140" y="278" fill="rgba(255,255,255,0.35)" font-size="10" text-anchor="middle">연간 예상 (2026)</text>
+
+  <rect x="264" y="200" width="220" height="80" rx="10" fill="#60a5fa" fill-opacity="0.06" stroke="#60a5fa" stroke-opacity="0.15"/>
+  <text x="374" y="230" fill="#93c5fd" font-size="11" text-anchor="middle">Tesla 유럽 점유율 목표</text>
+  <text x="374" y="260" fill="white" font-size="20" font-weight="800" text-anchor="middle">10~15%</text>
+  <text x="374" y="278" fill="rgba(255,255,255,0.35)" font-size="10" text-anchor="middle">35~52만대 잠재력</text>
+
+  <rect x="498" y="200" width="272" height="80" rx="10" fill="#00e5a0" fill-opacity="0.07" stroke="#00e5a0" stroke-opacity="0.2"/>
+  <text x="634" y="230" fill="#00e5a0" font-size="11" font-weight="700" text-anchor="middle">FSD 유럽 확장 시너지</text>
+  <text x="634" y="260" fill="white" font-size="14" font-weight="800" text-anchor="middle">핀란드·리투아니아·에스토니아</text>
+  <text x="634" y="278" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">유럽 3개국 도미노 진행 중</text>
+
+  <!-- timeline -->
+  <text x="30" y="316" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="1">Tesla 글로벌 판매 확장 타임라인</text>
+  <rect x="30" y="326" width="740" height="56" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)"/>
+  <text x="110" y="350" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">미국</text>
+  <text x="110" y="368" fill="white" font-size="13" font-weight="700" text-anchor="middle">✅ 기존</text>
+  <line x1="200" y1="356" x2="230" y2="356" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="300" y="350" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">호주</text>
+  <text x="300" y="368" fill="#00e5a0" font-size="13" font-weight="700" text-anchor="middle">✅ 1위 달성</text>
+  <line x1="390" y1="356" x2="420" y2="356" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="490" y="350" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">일본</text>
+  <text x="490" y="368" fill="#00e5a0" font-size="13" font-weight="700" text-anchor="middle">✅ +182% YoY</text>
+  <line x1="580" y1="356" x2="610" y2="356" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="690" y="350" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">EU 유럽</text>
+  <text x="690" y="368" fill="#fbbf24" font-size="13" font-weight="700" text-anchor="middle">🆕 판매 시작</text>
+
+  <rect x="30" y="400" width="740" height="28" rx="6" fill="rgba(255,255,255,0.02)"/>
+  <text x="50" y="418" fill="rgba(255,255,255,0.35)" font-size="11">FSD 유럽 규제 승인 확대 + EU 판매 동시 개시 → 유럽 시장 모멘텀 본격화</text>
+  <text x="770" y="430" fill="rgba(255,255,255,0.2)" font-size="10" text-anchor="end">investus.kr</text>
+</svg>

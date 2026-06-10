@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0c10"/>
+  <defs>
+    <linearGradient id="pur4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c084fc"/><stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="24" width="10" height="36" rx="3" fill="url(#pur4)"/>
+  <text x="50" y="42" fill="#c084fc" font-size="11" font-weight="700" letter-spacing="2">SPACEX · MORE MILESTONES AHEAD</text>
+  <text x="50" y="58" fill="white" font-size="19" font-weight="800">기술 로드맵 공식 발표 — 2026~2028</text>
+  <text x="700" y="44" fill="#c084fc" font-size="11" font-weight="600" text-anchor="end">2026.06.07</text>
+  <line x1="30" y1="76" x2="770" y2="76" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- 5 milestone cards -->
+  <!-- Starship V3 -->
+  <rect x="30" y="92" width="136" height="160" rx="10" fill="#c084fc" fill-opacity="0.08" stroke="#c084fc" stroke-opacity="0.25"/>
+  <text x="98" y="118" fill="#c084fc" font-size="10" font-weight="700" text-anchor="middle">STARSHIP V3</text>
+  <text x="98" y="152" fill="white" font-size="18" font-weight="900" text-anchor="middle">H2 2026</text>
+  <line x1="48" y1="162" x2="148" y2="162" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="98" y="182" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">페이로드</text>
+  <text x="98" y="200" fill="white" font-size="16" font-weight="800" text-anchor="middle">100t</text>
+  <text x="98" y="216" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">per launch</text>
+  <text x="98" y="240" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">궤도 수송 시작</text>
+
+  <!-- Broadband V3 -->
+  <rect x="178" y="92" width="136" height="160" rx="10" fill="#60a5fa" fill-opacity="0.08" stroke="#60a5fa" stroke-opacity="0.2"/>
+  <text x="246" y="118" fill="#60a5fa" font-size="10" font-weight="700" text-anchor="middle">광대역 V3 위성</text>
+  <text x="246" y="152" fill="white" font-size="18" font-weight="900" text-anchor="middle">H2 2026</text>
+  <line x1="196" y1="162" x2="296" y2="162" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="246" y="182" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">위성당 속도</text>
+  <text x="246" y="200" fill="white" font-size="16" font-weight="800" text-anchor="middle">1,024</text>
+  <text x="246" y="216" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">Gbps/위성</text>
+  <text x="246" y="240" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">스타십에 탑재</text>
+
+  <!-- Mobile V2 -->
+  <rect x="326" y="92" width="136" height="160" rx="10" fill="#4ade80" fill-opacity="0.08" stroke="#4ade80" stroke-opacity="0.2"/>
+  <text x="394" y="118" fill="#4ade80" font-size="10" font-weight="700" text-anchor="middle">모바일 V2 위성</text>
+  <text x="394" y="152" fill="white" font-size="18" font-weight="900" text-anchor="middle">2027</text>
+  <line x1="344" y1="162" x2="444" y2="162" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="394" y="182" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">통신 규격</text>
+  <text x="394" y="200" fill="white" font-size="16" font-weight="800" text-anchor="middle">5G</text>
+  <text x="394" y="216" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">음성+데이터</text>
+  <text x="394" y="240" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">스타십 배치</text>
+
+  <!-- Terrestrial -->
+  <rect x="474" y="92" width="136" height="160" rx="10" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-opacity="0.2"/>
+  <text x="542" y="111" fill="#f59e0b" font-size="10" font-weight="700" text-anchor="middle">지상</text>
+  <text x="542" y="125" fill="#f59e0b" font-size="10" font-weight="700" text-anchor="middle">AI 컴퓨팅</text>
+  <text x="542" y="152" fill="white" font-size="18" font-weight="900" text-anchor="middle">진행중</text>
+  <line x1="492" y1="162" x2="592" y2="162" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="542" y="182" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">Colossus II</text>
+  <text x="542" y="200" fill="white" font-size="13" font-weight="800" text-anchor="middle">400MW+</text>
+  <text x="542" y="218" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle">220K+ GB300</text>
+  <text x="542" y="236" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">추가 증설</text>
+
+  <!-- AI Compute Satellite -->
+  <rect x="622" y="92" width="148" height="160" rx="10" fill="#fb923c" fill-opacity="0.08" stroke="#fb923c" stroke-opacity="0.2"/>
+  <text x="696" y="111" fill="#fb923c" font-size="10" font-weight="700" text-anchor="middle">AI 컴퓨팅</text>
+  <text x="696" y="125" fill="#fb923c" font-size="10" font-weight="700" text-anchor="middle">위성</text>
+  <text x="696" y="152" fill="white" font-size="18" font-weight="900" text-anchor="middle">2028</text>
+  <line x1="640" y1="162" x2="752" y2="162" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="696" y="182" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="middle">AI 컴퓨팅 파워</text>
+  <text x="696" y="200" fill="white" font-size="13" font-weight="800" text-anchor="middle">100KW</text>
+  <text x="696" y="218" fill="rgba(255,255,255,0.5)" font-size="10" text-anchor="middle">per metric ton</text>
+  <text x="696" y="236" fill="rgba(255,255,255,0.4)" font-size="10" text-anchor="middle">스타십 배치</text>
+
+  <!-- timeline bar -->
+  <rect x="30" y="278" width="740" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+  <rect x="30" y="278" width="280" height="6" rx="3" fill="#c084fc"/>
+  <text x="98" y="300" fill="#c084fc" font-size="10" text-anchor="middle">2026 H2</text>
+  <rect x="326" y="278" width="136" height="6" fill="#4ade80"/>
+  <text x="394" y="300" fill="#4ade80" font-size="10" text-anchor="middle">2027</text>
+  <rect x="622" y="278" width="148" height="6" rx="3" fill="#fb923c"/>
+  <text x="696" y="300" fill="#fb923c" font-size="10" text-anchor="middle">2028</text>
+
+  <!-- summary boxes -->
+  <rect x="30" y="318" width="350" height="76" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="50" y="342" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="700">핵심 메시지</text>
+  <text x="50" y="362" fill="white" font-size="13" font-weight="600">H2 2026: 스타십 V3 + 광대역 V3 동시 출격</text>
+  <text x="50" y="382" fill="rgba(255,255,255,0.5)" font-size="12">지상 컴퓨팅(400MW+) + 위성 AI 컴퓨팅(2028)</text>
+
+  <rect x="400" y="318" width="370" height="76" rx="8" fill="#c084fc" fill-opacity="0.05" stroke="#c084fc" stroke-opacity="0.12"/>
+  <text x="420" y="342" fill="#c084fc" font-size="11" font-weight="700">SpaceX = 지상+위성 AI 컴퓨팅 복합체</text>
+  <text x="420" y="362" fill="rgba(255,255,255,0.6)" font-size="12">AWS·Azure 도달 불가 → SpaceX 독점 영역</text>
+  <text x="420" y="382" fill="rgba(255,255,255,0.4)" font-size="12">유일한 수직통합 우주 AI 인프라 기업</text>
+
+  <text x="400" y="430" fill="rgba(255,255,255,0.2)" font-size="10" text-anchor="middle">Investus · investus.kr</text>
+</svg>

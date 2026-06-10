@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#c084fc">🚀 SpaceX IPO — 최종 공모가 확정</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">Space Exploration Technologies Corp · SEC 최종 공시 · 2026.06.04</text>
+
+  <!-- BIG PRICE CENTER -->
+  <rect x="30" y="65" width="290" height="170" rx="12" fill="#1a1033" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="175" y="93" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">공모가 (최종 확정)</text>
+  <text x="175" y="160" font-size="76" font-weight="900" fill="white" text-anchor="middle">$135</text>
+  <text x="175" y="183" font-size="11" fill="#9ca3af" text-anchor="middle">per share</text>
+  <text x="175" y="225" font-size="10" fill="#6b7280" text-anchor="middle">555,555,555주 공모</text>
+
+  <!-- June 12 card -->
+  <rect x="335" y="65" width="200" height="82" rx="12" fill="#111827"/>
+  <text x="435" y="90" font-size="10" font-weight="700" fill="#c084fc" text-anchor="middle">상장일</text>
+  <text x="435" y="132" font-size="48" font-weight="900" fill="#c084fc" text-anchor="middle">6/12</text>
+  <text x="435" y="144" font-size="8" fill="#6b7280" text-anchor="middle">NASDAQ 거래 시작</text>
+
+  <!-- Proceeds card -->
+  <rect x="550" y="65" width="220" height="82" rx="12" fill="#111827"/>
+  <text x="660" y="90" font-size="10" font-weight="700" fill="#c084fc" text-anchor="middle">순 조달액</text>
+  <text x="660" y="130" font-size="38" font-weight="900" fill="white" text-anchor="middle">$74.4B</text>
+  <text x="660" y="144" font-size="8" fill="#6b7280" text-anchor="middle">초과배정 행사 시 $85.7B</text>
+
+  <!-- Use of proceeds horizontal bars -->
+  <rect x="335" y="160" width="435" height="75" rx="12" fill="#111827"/>
+  <text x="555" y="180" font-size="10" font-weight="700" fill="#c084fc" text-anchor="middle">공모금 사용처</text>
+  <text x="345" y="200" font-size="9" fill="#9ca3af">AI 컴퓨트 인프라</text>
+  <rect x="460" y="191" width="145" height="11" rx="3" fill="#7c3aed"/>
+  <text x="612" y="201" font-size="8" fill="#c084fc">40%</text>
+  <text x="345" y="216" font-size="9" fill="#9ca3af">발사체 인프라 확장</text>
+  <rect x="460" y="207" width="91" height="11" rx="3" fill="#5b21b6"/>
+  <text x="557" y="217" font-size="8" fill="#9ca3af">25%</text>
+  <text x="345" y="232" font-size="9" fill="#9ca3af">위성 스타링크 확장</text>
+  <rect x="460" y="223" width="73" height="11" rx="3" fill="#4c1d95"/>
+  <text x="539" y="233" font-size="8" fill="#9ca3af">20%</text>
+
+  <!-- Voting structure -->
+  <rect x="30" y="250" width="740" height="100" rx="12" fill="#111827"/>
+  <text x="400" y="274" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">의결권 구조 (이중 주식)</text>
+
+  <!-- Class A bar -->
+  <rect x="50" y="284" width="310" height="52" rx="8" fill="#1a1033"/>
+  <text x="65" y="304" font-size="10" fill="#9ca3af">Class A · 공모주 · 1주=1표</text>
+  <rect x="65" y="312" width="46" height="12" rx="3" fill="#6b7280"/>
+  <text x="118" y="322" font-size="10" fill="#e2e8f0">의결권 11.5%</text>
+  <text x="350" y="322" font-size="22" font-weight="900" fill="#e2e8f0" text-anchor="end">11.5%</text>
+
+  <!-- Class B bar -->
+  <rect x="375" y="284" width="380" height="52" rx="8" fill="#2d1b69"/>
+  <text x="390" y="304" font-size="10" fill="#c084fc">Class B · 내부자 · 1주=10표</text>
+  <rect x="390" y="312" width="354" height="12" rx="3" fill="#7c3aed"/>
+  <text x="744" y="322" font-size="22" font-weight="900" fill="#c084fc" text-anchor="end">88.5%</text>
+
+  <!-- Bottom key stats -->
+  <rect x="30" y="365" width="740" height="55" rx="12" fill="#111827"/>
+  <rect x="50" y="378" width="155" height="30" rx="6" fill="#1a1033"/>
+  <text x="128" y="391" font-size="9" fill="#9ca3af" text-anchor="middle">Class A 유통주식</text>
+  <text x="128" y="403" font-size="12" font-weight="700" fill="#e2e8f0" text-anchor="middle">7.38B주</text>
+  <rect x="220" y="378" width="155" height="30" rx="6" fill="#1a1033"/>
+  <text x="298" y="391" font-size="9" fill="#9ca3af" text-anchor="middle">Class B 주식</text>
+  <text x="298" y="403" font-size="12" font-weight="700" fill="#c084fc" text-anchor="middle">5.70B주</text>
+  <rect x="390" y="378" width="155" height="30" rx="6" fill="#1a1033"/>
+  <text x="468" y="391" font-size="9" fill="#9ca3af" text-anchor="middle">기업가치 추정</text>
+  <text x="468" y="403" font-size="12" font-weight="700" fill="#00e5a0" text-anchor="middle">~$1.75T</text>
+  <rect x="560" y="378" width="195" height="30" rx="6" fill="#1a1033"/>
+  <text x="658" y="391" font-size="9" fill="#9ca3af" text-anchor="middle">초과배정 옵션</text>
+  <text x="658" y="403" font-size="11" font-weight="700" fill="#e2e8f0" text-anchor="middle">+83.3M주 추가</text>
+  <text x="770" y="415" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

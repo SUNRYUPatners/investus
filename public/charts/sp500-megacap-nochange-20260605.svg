@@ -1,0 +1,81 @@
+<svg viewBox="0 0 480 430" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0514"/>
+      <stop offset="100%" stop-color="#06030e"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="430" fill="url(#bg)"/>
+  <rect x="0" y="0" width="480" height="50" fill="#110a20"/>
+  <rect x="0" y="48" width="480" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="24" y="20" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="2">INVESTUS REPORT</text>
+  <text x="24" y="38" font-size="14" fill="#ffffff" font-weight="700">📊 SPCX — S&amp;P 500 편입 유력 · 기준 확인</text>
+
+  <!-- Main visual: S&P 500 inclusion path -->
+  <rect x="16" y="62" width="448" height="90" rx="12" fill="#120820" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="16" y="62" width="448" height="4" rx="2" fill="#c084fc" opacity="0.7"/>
+
+  <text x="240" y="90" text-anchor="middle" font-size="12" fill="#c084fc" font-weight="700">SpaceX S&amp;P 500 편입 경로</text>
+
+  <!-- Timeline tiles -->
+  <rect x="28" y="102" width="80" height="36" rx="8" fill="#1e1030" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.6"/>
+  <text x="68" y="117" text-anchor="middle" font-size="9" fill="#c084fc" font-weight="700">6/12 IPO</text>
+  <text x="68" y="130" text-anchor="middle" font-size="8" fill="#9060c0">NASDAQ 상장</text>
+
+  <text x="124" y="122" text-anchor="middle" font-size="14" fill="#c084fc">→</text>
+
+  <rect x="140" y="102" width="96" height="36" rx="8" fill="#1e1030" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.6"/>
+  <text x="188" y="117" text-anchor="middle" font-size="9" fill="#c084fc" font-weight="700">12개월 대기</text>
+  <text x="188" y="130" text-anchor="middle" font-size="8" fill="#9060c0">또는 MegaCap 예외</text>
+
+  <text x="252" y="122" text-anchor="middle" font-size="14" fill="#c084fc">→</text>
+
+  <rect x="264" y="102" width="96" height="36" rx="8" fill="#2a1040" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.8"/>
+  <text x="312" y="117" text-anchor="middle" font-size="9" fill="#fbbf24" font-weight="700">S&amp;P 500 편입</text>
+  <text x="312" y="130" text-anchor="middle" font-size="8" fill="#d0a020">2027.06+ 예상</text>
+
+  <text x="376" y="122" text-anchor="middle" font-size="14" fill="#fbbf24">→</text>
+
+  <rect x="388" y="102" width="72" height="36" rx="8" fill="#2a1040" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.8"/>
+  <text x="424" y="117" text-anchor="middle" font-size="9" fill="#fbbf24" font-weight="700">패시브 자금</text>
+  <text x="424" y="130" text-anchor="middle" font-size="8" fill="#d0a020">$300B~$500B</text>
+
+  <!-- S&P DJI confirmed -->
+  <rect x="16" y="164" width="448" height="52" rx="10" fill="#0e0618" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="28" y="182" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="1">S&amp;P DJI 공식 확인 (2026.06.04) — 편입 기준 변경 없음</text>
+  <rect x="28" y="190" width="80" height="18" rx="4" fill="#1e1030"/>
+  <text x="68" y="203" text-anchor="middle" font-size="8" fill="#a080d0">IPO 대기 12개월</text>
+  <rect x="116" y="190" width="80" height="18" rx="4" fill="#1e1030"/>
+  <text x="156" y="203" text-anchor="middle" font-size="8" fill="#a080d0">IWF 0.10 이상</text>
+  <rect x="204" y="190" width="96" height="18" rx="4" fill="#1e1030"/>
+  <text x="252" y="203" text-anchor="middle" font-size="8" fill="#a080d0">MegaCap 수익성 예외</text>
+  <text x="312" y="203" font-size="9" fill="#fbbf24" font-weight="700">→ SpaceX에 유리</text>
+
+  <!-- 3 stat tiles -->
+  <rect x="16" y="228" width="138" height="78" rx="10" fill="#0e0618" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="85" y="252" text-anchor="middle" font-size="22">🚀</text>
+  <text x="85" y="272" text-anchor="middle" font-size="10" fill="#c084fc" font-weight="700">시총 $1.75T</text>
+  <text x="85" y="286" text-anchor="middle" font-size="9" fill="#9060c0">S&amp;P 500 상위 5위권</text>
+  <text x="85" y="298" text-anchor="middle" font-size="8" fill="#604090">즉시 진입 예상</text>
+
+  <rect x="162" y="228" width="156" height="78" rx="10" fill="#0e0618" stroke="#fbbf24" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="240" y="249" text-anchor="middle" font-size="10" fill="#fbbf24" font-weight="700">패시브 강제 유입</text>
+  <text x="240" y="270" text-anchor="middle" font-size="26" fill="#fbbf24" font-weight="900">$300B+</text>
+  <text x="240" y="285" text-anchor="middle" font-size="9" fill="#d0a020">S&amp;P 500 ETF AUM $10T+</text>
+  <text x="240" y="298" text-anchor="middle" font-size="8" fill="#907020">SPCX 예상 비중 3~5%</text>
+
+  <rect x="326" y="228" width="138" height="78" rx="10" fill="#0e0618" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="395" y="252" text-anchor="middle" font-size="22">✅</text>
+  <text x="395" y="272" text-anchor="middle" font-size="10" fill="#c084fc" font-weight="700">수익성 충족</text>
+  <text x="395" y="286" text-anchor="middle" font-size="9" fill="#9060c0">Starlink $1B+/분기</text>
+  <text x="395" y="298" text-anchor="middle" font-size="8" fill="#604090">MegaCap 예외 가능</text>
+
+  <!-- Summary -->
+  <rect x="16" y="318" width="448" height="100" rx="10" fill="#080412" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="28" y="336" font-size="9" fill="#c084fc" font-weight="700" letter-spacing="1">투자 포인트</text>
+  <text x="28" y="352" font-size="10" fill="#b080e0">• S&amp;P DJI '변경 없음' = SpaceX 편입 기준 그대로 유지 · 패시브 자금 경로 확보</text>
+  <text x="28" y="368" font-size="10" fill="#b080e0">• IPO 후 MegaCap 예외 조항 적용 시 12개월 이전 조기 편입 가능</text>
+  <text x="28" y="384" font-size="10" fill="#b080e0">• 편입 확정 시 S&amp;P 500 패시브 ETF $300B~$500B 강제 매수 트리거</text>
+  <text x="28" y="400" font-size="10" fill="#b080e0">• 시총 $1.75T → 즉시 S&amp;P 500 상위 5위권 · AAPL·MSFT와 같은 반열</text>
+  <text x="28" y="414" font-size="9" fill="#705090">• 기관 선취매: 편입 발표 전 수십억 달러 선행 매수 패턴 예상</text>
+</svg>

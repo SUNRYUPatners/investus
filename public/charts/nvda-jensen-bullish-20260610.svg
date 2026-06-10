@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Segoe UI',Arial,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="440" fill="#0a0f1e"/>
+
+  <!-- Header y:0-68 -->
+  <rect x="0" y="0" width="800" height="68" fill="#0d1528"/>
+  <rect x="0" y="0" width="6" height="68" fill="#60a5fa"/>
+  <text x="24" y="36" font-size="20" font-weight="700" fill="#60a5fa">젠슨 황 CEO — AI 인프라 전환 아직 초기</text>
+  <text x="24" y="54" font-size="12" fill="#94a3b8">NVIDIA · AI Infrastructure · 2026</text>
+
+  <!-- Quote box y:80-165 -->
+  <rect x="40" y="80" width="720" height="85" rx="12" fill="#0d1a2b" stroke="#60a5fa" stroke-width="1.5"/>
+  <!-- decorative quote mark -->
+  <text x="68" y="130" font-size="60" fill="#1e3a5f" font-weight="900">"</text>
+  <text x="400" y="123" font-size="26" font-weight="800" fill="#60a5fa" text-anchor="middle">주가 하락 = 매수 기회</text>
+  <text x="400" y="152" font-size="12" fill="#94a3b8" text-anchor="middle">— Jensen Huang, NVIDIA CEO</text>
+
+  <!-- AI Infra Phase Diagram y:180-300 -->
+  <text x="400" y="196" font-size="12" fill="#64748b" text-anchor="middle">AI 인프라 전환 단계</text>
+
+  <!-- Progress bar track -->
+  <rect x="60" y="220" width="680" height="18" rx="9" fill="#1e293b"/>
+  <!-- Filled 30% -->
+  <rect x="60" y="220" width="204" height="18" rx="9" fill="#60a5fa"/>
+
+  <!-- Left label -->
+  <text x="60" y="255" font-size="11" fill="#94a3b8">AI 시작</text>
+  <text x="60" y="268" font-size="10" fill="#475569">(2022)</text>
+
+  <!-- Current position marker at 30% = x:264 -->
+  <line x1="264" y1="210" x2="264" y2="248" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,2"/>
+  <rect x="220" y="248" width="120" height="26" rx="6" fill="#1a1400" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="280" y="264" font-size="11" font-weight="700" fill="#f59e0b" text-anchor="middle">현재 위치 (2026)</text>
+
+  <!-- Right label -->
+  <text x="740" y="255" font-size="11" fill="#94a3b8" text-anchor="end">AI 성숙기</text>
+  <text x="740" y="268" font-size="10" fill="#475569" text-anchor="end">(2030+)</text>
+
+  <!-- 3 Key Stats y:315-385 -->
+  <text x="400" y="308" font-size="12" fill="#64748b" text-anchor="middle">핵심 지표</text>
+
+  <!-- Stat 1 -->
+  <rect x="40" y="315" width="218" height="68" rx="10" fill="#0d1a2b" stroke="#60a5fa" stroke-width="1"/>
+  <text x="149" y="338" font-size="11" fill="#94a3b8" text-anchor="middle">수주잔고</text>
+  <text x="149" y="360" font-size="16" font-weight="700" fill="#60a5fa" text-anchor="middle">H1 2027까지</text>
+  <text x="149" y="376" font-size="11" fill="#64748b" text-anchor="middle">확보 완료</text>
+
+  <!-- Stat 2 -->
+  <rect x="291" y="315" width="218" height="68" rx="10" fill="#0d1a2b" stroke="#60a5fa" stroke-width="1"/>
+  <text x="400" y="338" font-size="11" fill="#94a3b8" text-anchor="middle">데이터센터 CAPEX</text>
+  <text x="400" y="360" font-size="16" font-weight="700" fill="#60a5fa" text-anchor="middle">$2,250억+</text>
+  <text x="400" y="376" font-size="11" fill="#64748b" text-anchor="middle">빅3 합산 (구글·MS·AWS)</text>
+
+  <!-- Stat 3 -->
+  <rect x="542" y="315" width="218" height="68" rx="10" fill="#0d1a2b" stroke="#60a5fa" stroke-width="1"/>
+  <text x="651" y="338" font-size="11" fill="#94a3b8" text-anchor="middle">NVDA 시장 점유율</text>
+  <text x="651" y="360" font-size="16" font-weight="700" fill="#60a5fa" text-anchor="middle">80%+</text>
+  <text x="651" y="376" font-size="11" fill="#64748b" text-anchor="middle">AI 가속기 시장</text>
+
+  <!-- Source -->
+  <text x="400" y="425" font-size="11" fill="#475569" text-anchor="middle">investus.kr</text>
+</svg>

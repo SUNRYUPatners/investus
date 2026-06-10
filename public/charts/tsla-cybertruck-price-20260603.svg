@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="420" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="14" font-weight="700" fill="#00e5a0">⚡ Tesla Cybertruck — 중고 직접판매 시작 · Foundation $64,500</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">Tesla 공식 중고 인벤토리 직판 · Foundation/Non-Foundation 2 트림 구조 · 배송비 $3,200 별도</text>
+
+  <!-- Price Cards: Foundation -->
+  <rect x="30" y="68" width="350" height="180" rx="10" fill="#0d1f12"/>
+  <rect x="30" y="68" width="350" height="6" rx="3" fill="#00e5a0"/>
+  <text x="205" y="107" font-size="12" font-weight="700" fill="#00e5a0" text-anchor="middle">Foundation Series</text>
+  <text x="205" y="148" font-size="52" font-weight="900" fill="#00e5a0" text-anchor="middle">$64,500</text>
+  <text x="205" y="170" font-size="10" fill="#9ca3af" text-anchor="middle">+ 배송비 $3,200 → 실구매가 $67,700</text>
+  <text x="205" y="188" font-size="9" fill="#6b7280" text-anchor="middle">2025·2026 Model Year · ~2,268마일 주행</text>
+  <text x="205" y="218" font-size="9" fill="#9ca3af" text-anchor="middle">초기 예약 지지자 전용 트림</text>
+  <text x="205" y="234" font-size="9" fill="#6b7280" text-anchor="middle">Model X($79K~) 보다 저렴한 진입가</text>
+
+  <!-- Price Cards: Non-Foundation -->
+  <rect x="420" y="68" width="350" height="180" rx="10" fill="#1a1033"/>
+  <rect x="420" y="68" width="350" height="6" rx="3" fill="#c084fc"/>
+  <text x="595" y="107" font-size="12" font-weight="700" fill="#c084fc" text-anchor="middle">Non-Foundation Series</text>
+  <text x="595" y="148" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">$94,800</text>
+  <text x="595" y="170" font-size="10" fill="#9ca3af" text-anchor="middle">+ 배송비 $3,200 → 실구매가 $98,000</text>
+  <text x="595" y="188" font-size="9" fill="#6b7280" text-anchor="middle">2025·2026 Model Year</text>
+  <text x="595" y="218" font-size="9" fill="#9ca3af" text-anchor="middle">일반 구매 가능 고마진 트림</text>
+  <text x="595" y="234" font-size="9" fill="#6b7280" text-anchor="middle">Rivian R1T($67K~) 대비 프리미엄</text>
+
+  <!-- ASP Analysis -->
+  <rect x="30" y="262" width="360" height="90" rx="10" fill="#111827"/>
+  <text x="50" y="282" font-size="11" font-weight="700" fill="#e2e8f0">ASP(평균 판매가) 시뮬레이션</text>
+
+  <!-- ASP bar -->
+  <text x="50" y="302" font-size="9" fill="#9ca3af">Foundation 50% : Non-Foundation 50% 믹스</text>
+  <rect x="50" y="308" width="210" height="14" rx="3" fill="#374151"/>
+  <rect x="50" y="308" width="105" height="14" rx="3" fill="#00e5a0" opacity="0.7"/>
+  <text x="265" y="319" font-size="10" font-weight="700" fill="#e2e8f0">ASP ~$79,650</text>
+
+  <text x="50" y="340" font-size="9" fill="#9ca3af">Non-Foundation 70% 비중 시 ASP ~$84,000 → 마진율 개선</text>
+
+  <!-- Competitor Comparison -->
+  <rect x="410" y="262" width="360" height="90" rx="10" fill="#111827"/>
+  <text x="430" y="282" font-size="11" font-weight="700" fill="#e2e8f0">경쟁 픽업 가격 비교</text>
+  <text x="430" y="302" font-size="10" fill="#9ca3af">Cybertruck Foundation</text>
+  <text x="740" y="302" font-size="11" font-weight="800" fill="#00e5a0" text-anchor="end">$64,500</text>
+  <rect x="430" y="306" width="270" height="8" rx="2" fill="#00e5a0" opacity="0.8"/>
+
+  <text x="430" y="325" font-size="10" fill="#9ca3af">Rivian R1T</text>
+  <text x="740" y="325" font-size="10" fill="#9ca3af" text-anchor="end">$67,000~</text>
+  <rect x="430" y="329" width="180" height="8" rx="2" fill="#374151"/>
+
+  <text x="430" y="348" font-size="10" fill="#9ca3af">Ford F-150 Lightning</text>
+  <text x="740" y="348" font-size="10" fill="#6b7280" text-anchor="end">$56,000~</text>
+  <rect x="430" y="352" width="140" height="8" rx="2" fill="#1f2937"/>
+
+  <!-- Bottom -->
+  <rect x="30" y="366" width="740" height="34" rx="8" fill="#0d1f12"/>
+  <text x="50" y="382" font-size="10" fill="#9ca3af">Foundation $64.5K 직판 = 수요 저변 확대 · Non-Foundation $94.8K 고마진 믹스 → 전체 ASP $80K 근방 · Cybertruck 마진율 핵심 변수.</text>
+  <text x="710" y="395" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

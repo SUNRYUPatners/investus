@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="420" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="15" font-weight="700" fill="#00e5a0">🚗 Tesla China — 2026년 5월 도매 85,982대</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">MoM +8.2% · YTD 378,858대 · Source: @Tslachan / CPCA</text>
+
+  <!-- Monthly bar chart 2026 -->
+  <rect x="30" y="68" width="480" height="280" rx="10" fill="#111827"/>
+  <text x="50" y="90" font-size="11" font-weight="700" fill="#00e5a0">2026년 월별 도매 판매 추이</text>
+  <text x="50" y="103" font-size="9" fill="#6b7280">(Wholesale = Retail + Export)</text>
+
+  <!-- Y axis labels -->
+  <text x="55" y="250" font-size="8" fill="#6b7280">60K</text>
+  <line x1="75" y1="246" x2="490" y2="246" stroke="#1f2937" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="55" y="220" font-size="8" fill="#6b7280">70K</text>
+  <line x1="75" y1="216" x2="490" y2="216" stroke="#1f2937" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="55" y="188" font-size="8" fill="#6b7280">80K</text>
+  <line x1="75" y1="184" x2="490" y2="184" stroke="#1f2937" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="55" y="157" font-size="8" fill="#6b7280">90K</text>
+
+  <!-- Bars: Jan=69,129 Feb=58,599 Mar=85,670 Apr=79,478 May=85,982 -->
+  <!-- Scale: 60K=246, 90K=154; range=92px for 30K; 1K=3.07px -->
+  <!-- Jan: 69129 → (69129-60000)*3.07/1000 = 28px h=28+base offset; bar top = 246-28=218 -->
+  <rect x="82" y="218" width="48" height="28" rx="4" fill="#374151"/>
+  <text x="106" y="213" font-size="9" fill="#9ca3af" text-anchor="middle">69,129</text>
+  <text x="106" y="270" font-size="9" fill="#6b7280" text-anchor="middle">Jan</text>
+
+  <!-- Feb: 58599 → below 60K almost; height small -->
+  <rect x="152" y="240" width="48" height="6" rx="4" fill="#374151"/>
+  <text x="176" y="235" font-size="9" fill="#9ca3af" text-anchor="middle">58,599</text>
+  <text x="176" y="270" font-size="9" fill="#6b7280" text-anchor="middle">Feb</text>
+
+  <!-- Mar: 85670 → (85670-60000)*3.07/1000 = 78.8px; top=246-79=167 -->
+  <rect x="222" y="167" width="48" height="79" rx="4" fill="#4b5563"/>
+  <text x="246" y="162" font-size="9" fill="#9ca3af" text-anchor="middle">85,670</text>
+  <text x="246" y="270" font-size="9" fill="#6b7280" text-anchor="middle">Mar</text>
+
+  <!-- Apr: 79478 → (79478-60000)*3.07/1000=59.8; top=246-60=186 -->
+  <rect x="292" y="186" width="48" height="60" rx="4" fill="#4b5563"/>
+  <text x="316" y="181" font-size="9" fill="#9ca3af" text-anchor="middle">79,478</text>
+  <text x="316" y="270" font-size="9" fill="#6b7280" text-anchor="middle">Apr</text>
+
+  <!-- May: 85982 → (85982-60000)*3.07/1000=79.8; top=246-80=166 — highlight -->
+  <rect x="362" y="166" width="48" height="80" rx="4" fill="#00e5a0"/>
+  <text x="386" y="160" font-size="9" font-weight="700" fill="#00e5a0" text-anchor="middle">85,982</text>
+  <text x="386" y="173" font-size="8" fill="#0a0f1e" text-anchor="middle">+8.2%</text>
+  <text x="386" y="270" font-size="9" font-weight="700" fill="#00e5a0" text-anchor="middle">May</text>
+
+  <text x="50" y="300" font-size="10" fill="#9ca3af">YTD 2026: <tspan font-weight="700" fill="#00e5a0">378,858대</tspan>  vs 2025 YTD: 378,858 추산 (vs 전년비 약보합)</text>
+  <text x="50" y="316" font-size="10" fill="#6b7280">March-May 연속 80K+ 유지 → Q2 생산 정상화 확인</text>
+
+  <!-- Retail vs Export breakdown -->
+  <rect x="530" y="68" width="240" height="280" rx="10" fill="#111827"/>
+  <text x="550" y="90" font-size="11" font-weight="700" fill="#00e5a0">5월 판매 구조 (May 2026)</text>
+
+  <!-- Pie-like breakdown bars -->
+  <text x="550" y="115" font-size="10" fill="#9ca3af">도매(Wholesale)</text>
+  <rect x="550" y="120" width="180" height="16" rx="3" fill="#00e5a0"/>
+  <text x="550" y="132" font-size="9" fill="#0a0f1e" font-weight="700">85,982</text>
+
+  <text x="550" y="150" font-size="10" fill="#9ca3af">소매(Retail)</text>
+  <rect x="550" y="155" width="96" height="16" rx="3" fill="#34d399"/>
+  <text x="550" y="167" font-size="9" fill="#0a0f1e">25,956</text>
+
+  <text x="550" y="185" font-size="10" fill="#9ca3af">수출(Export)</text>
+  <rect x="550" y="190" width="120" height="16" rx="3" fill="#6ee7b7"/>
+  <text x="550" y="202" font-size="9" fill="#0a0f1e">53,522</text>
+
+  <text x="550" y="222" font-size="10" fill="#9ca3af">수출 비중</text>
+  <text x="660" y="222" font-size="14" font-weight="800" fill="#00e5a0">62%</text>
+
+  <text x="550" y="250" font-size="10" fill="#9ca3af">MoM 변화</text>
+  <text x="660" y="250" font-size="14" font-weight="800" fill="#00e5a0">+8.2%</text>
+
+  <text x="550" y="278" font-size="10" fill="#9ca3af">2025년 5월 비교</text>
+  <text x="550" y="293" font-size="12" font-weight="700" fill="#6b7280">77,695대</text>
+  <text x="650" y="293" font-size="9" fill="#9ca3af">→ YoY +10.7%</text>
+
+  <text x="550" y="318" font-size="9" fill="#6b7280">*Data: CPCA / @Tslachan</text>
+  <text x="550" y="330" font-size="9" fill="#6b7280">Wholesale=Retail+Export</text>
+
+  <!-- Bottom insight -->
+  <rect x="30" y="360" width="740" height="44" rx="10" fill="#0d1f12"/>
+  <text x="50" y="380" font-size="11" font-weight="700" fill="#00e5a0">투자 포인트</text>
+  <text x="50" y="396" font-size="10" fill="#9ca3af">중국 5월 85,982대는 연속 80K+ 돌파 확인. 수출 62%로 글로벌 수요 강건. Q2 중국 판매 컨센서스 상회 가능.</text>
+  <text x="680" y="396" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 570" width="800" height="570">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0f1e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="headerGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d2d2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0f1e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="570" fill="#0a0f1e"/>
+
+  <!-- ── HEADER (y:0-65) ── -->
+  <rect x="0" y="0" width="800" height="65" fill="url(#headerGrad2)"/>
+  <rect x="0" y="0" width="5" height="65" fill="#34d399"/>
+  <text x="24" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#34d399">📋 6/10 시장 한장 요약</text>
+  <text x="24" y="53" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#6ee7b7">2026.06.10 핵심 10개 이슈 · SpaceX · Tesla · NVDA · 중국 AI · OpenAI · JPMorgan</text>
+
+  <!-- ── ROW 1: SpaceX (y:78-178, h=100) ── -->
+  <rect x="30" y="78" width="740" height="100" rx="8" fill="#0f172a" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="30" y="78" width="4" height="100" rx="2" fill="#a855f7"/>
+  <!-- Section label -->
+  <text x="46" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c084fc">🚀 SpaceX · SPCX</text>
+  <!-- Divider line -->
+  <line x1="46" y1="106" x2="762" y2="106" stroke="#2d1b69" stroke-width="0.5"/>
+  <!-- Bullet 1 (y:108 + 12*0.35 ≈ 112) -->
+  <text x="52" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• AI 기가팩토리 착공 — Bastrop TX, 1,000에이커·1천만sqft</text>
+  <!-- Bullet 2 (y:128 + adjusted) -->
+  <text x="52" y="140" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• Google·Anthropic $21.5B+ AI 컴퓨트 계약 체결</text>
+  <!-- Bullet 3 (y:148 + adjusted) -->
+  <text x="52" y="160" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• Starlink S-1: 4.4M 구독자, 연매출 $10.8B (ARPU -33%)</text>
+
+  <!-- ── ROW 2: Tesla (y:192-292, h=100) ── -->
+  <rect x="30" y="192" width="740" height="100" rx="8" fill="#0a1a12" stroke="#059669" stroke-width="1.5"/>
+  <rect x="30" y="192" width="4" height="100" rx="2" fill="#34d399"/>
+  <!-- Section label -->
+  <text x="46" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#34d399">🚗 Tesla · TSLA</text>
+  <!-- Divider line -->
+  <line x1="46" y1="220" x2="762" y2="220" stroke="#064e3b" stroke-width="0.5"/>
+  <!-- Bullet 1 -->
+  <text x="52" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• 네바다 로보택시 허가 신청 (라스베이거스 운행 목표)</text>
+  <!-- Bullet 2 -->
+  <text x="52" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• FSD 네덜란드 — 수동 운전 대비 충돌 3.5x 감소</text>
+  <!-- Bullet 3 -->
+  <text x="52" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• Semi EU 대량 출시 준비 (BD 채용 진행 중)</text>
+
+  <!-- ── ROW 3: NVDA + China (y:306-386, h=80) — 2 side-by-side ── -->
+
+  <!-- Left card: NVDA (x:30, w:360) -->
+  <rect x="30" y="306" width="360" height="80" rx="8" fill="#0f1a2e" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="30" y="306" width="4" height="80" rx="2" fill="#60a5fa"/>
+  <!-- Title -->
+  <text x="46" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa">🔵 NVDA · 젠슨 황</text>
+  <!-- Body line 1 (y:330 adjusted) -->
+  <text x="46" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• 주가 조정 = 매수 기회 강조</text>
+  <!-- Body line 2 (y:352 adjusted) -->
+  <text x="46" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#93c5fd">• AI 인프라 전환 아직 초기 단계</text>
+
+  <!-- Right card: China AI (x:410, w:360) -->
+  <rect x="410" y="306" width="360" height="80" rx="8" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="410" y="306" width="4" height="80" rx="2" fill="#f87171"/>
+  <!-- Title -->
+  <text x="426" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#f87171">🌏 중국 AI 국가 프로젝트</text>
+  <!-- Body line 1 -->
+  <text x="426" y="346" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• $2,950억 국가 AI 투자 (2028년까지)</text>
+  <!-- Body line 2 -->
+  <text x="426" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#fca5a5">• 2028년 80% 국산화 목표</text>
+
+  <!-- ── ROW 4: OpenAI + JPM (y:400-470, h=70) — 2 side-by-side ── -->
+
+  <!-- Left card: OpenAI (x:30, w:360) -->
+  <rect x="30" y="400" width="360" height="70" rx="8" fill="#1a1000" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="30" y="400" width="4" height="70" rx="2" fill="#fbbf24"/>
+  <!-- Title -->
+  <text x="46" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#fbbf24">🤖 OpenAI</text>
+  <!-- Body line 1 (y:424 + line offset) -->
+  <text x="46" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• IPO 확률 급등 신호 포착</text>
+  <!-- Body line 2 -->
+  <text x="46" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#fde68a">• $750억+ 밸류에이션 컨센서스</text>
+
+  <!-- Right card: JPMorgan (x:410, w:360) -->
+  <rect x="410" y="400" width="360" height="70" rx="8" fill="#0a0f1e" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="410" y="400" width="4" height="70" rx="2" fill="#3b82f6"/>
+  <!-- Title -->
+  <text x="426" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa">🏦 JPMorgan</text>
+  <!-- Body line 1 -->
+  <text x="426" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#e2e8f0">• 장시간 AI 에이전트 배포 계획</text>
+  <!-- Body line 2 -->
+  <text x="426" y="458" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#93c5fd">• 수시간 독립 업무처리 에이전트</text>
+
+  <!-- ── FOOTER (y:484-550) ── -->
+  <!-- Separator line -->
+  <line x1="30" y1="490" x2="770" y2="490" stroke="#34d399" stroke-width="1" opacity="0.4"/>
+  <text x="400" y="514" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6ee7b7" text-anchor="middle">Today's Report · investus.kr · 2026.06.10</text>
+  <text x="400" y="534" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#475569" text-anchor="middle">본 자료는 투자 참고용이며 투자 권유가 아닙니다 · 실제 투자 결정은 본인 판단으로 진행하세요</text>
+
+</svg>

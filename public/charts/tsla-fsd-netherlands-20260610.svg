@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="'Segoe UI',Arial,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="480" fill="#0a0f1e"/>
+
+  <!-- Header accent bar -->
+  <rect x="0" y="0" width="800" height="4" fill="#00e5a0"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="68" fill="#12172e"/>
+  <text x="24" y="36" font-size="17" font-weight="700" fill="#00e5a0">FSD Supervised 네덜란드 — 수동 대비 안전성</text>
+  <text x="24" y="52" font-size="12" fill="#8892b0">2026.06.10 · TSLA · Tesla Europe Middle East Africa</text>
+
+  <!-- Big Number (y:80-155) -->
+  <rect x="24" y="80" width="752" height="72" rx="10" fill="#0d2418"/>
+  <text x="150" y="133" font-size="60" font-weight="900" fill="#00e5a0" text-anchor="middle">3.5x</text>
+  <text x="460" y="108" font-size="14" font-weight="600" fill="#e2e8f0" text-anchor="middle">수동 주행 대비 충돌 감소</text>
+  <text x="460" y="128" font-size="12" fill="#8892b0" text-anchor="middle">FSD Supervised가 수동 운전보다 3.5배 더 안전</text>
+  <text x="460" y="146" font-size="11" fill="#64748b" text-anchor="middle">최근 2개월 네덜란드 플릿 데이터 기준</text>
+
+  <!-- Horizontal Bar Chart label -->
+  <text x="24" y="172" font-size="12" font-weight="600" fill="#8892b0">항목별 안전성 배율 (수동 대비)</text>
+
+  <!-- Bar chart: label (left) + bar (middle) + multiplier (right) -->
+  <!-- Label area: x=24-190 (width=166) -->
+  <!-- Bar start: x=195, max bar = 400px (at 14.9x) -->
+  <!-- Scale: 400/14.9 = 26.845 px per x -->
+  <!-- Multiplier label at x=bar_end + 8 -->
+  <!-- Row y positions: 180, 220, 260, 300, 340 -->
+  <!-- Bar height: 28px, centered at row y, so rect y = row_y - 14 -->
+
+  <!-- Row 1: 부상 사고 14.9x — bar=400px -->
+  <text x="185" y="198" font-size="12" fill="#e2e8f0" text-anchor="end">부상 사고</text>
+  <rect x="195" y="180" width="400" height="28" rx="4" fill="#00e5a0" opacity="0.9"/>
+  <text x="603" y="199" font-size="13" font-weight="700" fill="#00e5a0" text-anchor="start">14.9x</text>
+
+  <!-- Row 2: 에어백 8.8x — bar=8.8*26.845=236.2px -->
+  <text x="185" y="238" font-size="12" fill="#e2e8f0" text-anchor="end">에어백 전개</text>
+  <rect x="195" y="220" width="236" height="28" rx="4" fill="#00c98a" opacity="0.85"/>
+  <text x="439" y="239" font-size="13" font-weight="700" fill="#00c98a" text-anchor="start">8.8x</text>
+
+  <!-- Row 3: 측면충격 7.3x — bar=7.3*26.845=196px -->
+  <text x="185" y="278" font-size="12" fill="#e2e8f0" text-anchor="end">측면 충격</text>
+  <rect x="195" y="260" width="196" height="28" rx="4" fill="#00b37a" opacity="0.8"/>
+  <text x="399" y="279" font-size="13" font-weight="700" fill="#00b37a" text-anchor="start">7.3x</text>
+
+  <!-- Row 4: 후방충격 4.0x — bar=4.0*26.845=107.4px -->
+  <text x="185" y="318" font-size="12" fill="#e2e8f0" text-anchor="end">후방 충격</text>
+  <rect x="195" y="300" width="107" height="28" rx="4" fill="#059669" opacity="0.8"/>
+  <text x="310" y="319" font-size="13" font-weight="700" fill="#059669" text-anchor="start">4.0x</text>
+
+  <!-- Row 5: 충돌 3.5x — highlighted — bar=3.5*26.845=93.96≈94px -->
+  <text x="185" y="358" font-size="12" font-weight="700" fill="#00e5a0" text-anchor="end">전체 충돌</text>
+  <rect x="195" y="340" width="94" height="28" rx="4" fill="#00e5a0"/>
+  <text x="297" y="359" font-size="13" font-weight="800" fill="#00e5a0" text-anchor="start">3.5x</text>
+  <!-- Highlighted ring -->
+  <rect x="192" y="337" width="100" height="34" rx="6" fill="none" stroke="#00e5a0" stroke-width="2" opacity="0.6"/>
+
+  <!-- Context Banner (y:385-455) -->
+  <rect x="24" y="385" width="752" height="68" rx="10" fill="#0d2418" stroke="#00e5a0" stroke-width="1"/>
+  <text x="400" y="410" font-size="13" font-weight="600" fill="#00e5a0" text-anchor="middle">출처: Tesla Europe Middle East Africa · 최근 2개월 네덜란드 플릿 데이터</text>
+  <text x="400" y="430" font-size="12" fill="#8892b0" text-anchor="middle">FSD Supervised v13 기반 · 충돌 3.5x · 부상 14.9x · 에어백 8.8x 감소</text>
+  <text x="400" y="448" font-size="11" fill="#64748b" text-anchor="middle">수동 운전 동일 기간 데이터와 비교</text>
+
+  <!-- Source -->
+  <text x="400" y="472" font-size="11" fill="#4a5568" text-anchor="middle">investus.kr</text>
+</svg>

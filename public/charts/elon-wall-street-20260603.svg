@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="'Segoe UI',Arial,sans-serif">
+  <rect width="800" height="340" fill="#0a0f1e"/>
+  <rect x="0" y="0" width="800" height="52" fill="#111827"/>
+  <text x="30" y="32" font-size="14" font-weight="700" fill="#c084fc">⚡ Elon Musk vs Wall Street — 은행 수수료 전쟁</text>
+  <text x="30" y="47" font-size="10" fill="#6b7280">$75B 모금 시 은행 2% 수수료 = $1.5B · Elon 요구 0.75% = $562.5M · 차액 $937.5M</text>
+
+  <!-- Fee comparison -->
+  <rect x="30" y="68" width="460" height="180" rx="10" fill="#111827"/>
+  <text x="50" y="90" font-size="11" font-weight="700" fill="#c084fc">수수료 구조 비교 ($75B 모금 가정)</text>
+
+  <!-- Wall Street bar -->
+  <text x="50" y="115" font-size="10" fill="#9ca3af">월가 표준 수수료 2%</text>
+  <rect x="50" y="120" width="360" height="28" rx="4" fill="#ef4444" opacity="0.7"/>
+  <text x="220" y="138" font-size="11" font-weight="700" fill="white" text-anchor="middle">$1,500,000,000</text>
+  <text x="415" y="138" font-size="10" fill="#ef4444">$1.5B</text>
+
+  <!-- Elon's ask bar -->
+  <text x="50" y="165" font-size="10" fill="#9ca3af">Elon 요구 수수료 0.75%</text>
+  <rect x="50" y="170" width="135" height="28" rx="4" fill="#c084fc" opacity="0.8"/>
+  <text x="120" y="188" font-size="9" font-weight="700" fill="white" text-anchor="middle">$562.5M</text>
+  <text x="200" y="188" font-size="10" fill="#c084fc">0.75%</text>
+
+  <!-- Savings -->
+  <rect x="50" y="212" width="420" height="26" rx="4" fill="#0d1f12"/>
+  <text x="60" y="229" font-size="10" fill="#9ca3af">절감액 (차액)</text>
+  <text x="200" y="229" font-size="13" font-weight="800" fill="#00e5a0">$937,500,000</text>
+  <text x="390" y="229" font-size="10" fill="#00e5a0">~$1B 절감</text>
+
+  <!-- Context -->
+  <rect x="510" y="68" width="260" height="180" rx="10" fill="#111827"/>
+  <text x="530" y="88" font-size="11" font-weight="700" fill="#c084fc">배경 맥락</text>
+
+  <text x="530" y="108" font-size="10" fill="#9ca3af">모금 규모</text>
+  <text x="640" y="108" font-size="12" font-weight="800" fill="#c084fc">$75B</text>
+
+  <text x="530" y="126" font-size="10" fill="#9ca3af">시기</text>
+  <text x="640" y="126" font-size="10" fill="#e2e8f0">SpaceX IPO 전후</text>
+
+  <text x="530" y="144" font-size="10" fill="#9ca3af">맥락</text>
+  <text x="530" y="158" font-size="9" fill="#9ca3af">월가가 모금 프로세스 관리에</text>
+  <text x="530" y="172" font-size="9" fill="#9ca3af">2% 수수료 요구</text>
+  <text x="530" y="188" font-size="9" fill="#c084fc">Elon: "0.75%로 내려라"</text>
+  <text x="530" y="204" font-size="9" fill="#9ca3af">→ 수수료 구조 재협상 압박</text>
+  <text x="530" y="222" font-size="9" fill="#6b7280">은행들: 협상 진행 중</text>
+
+  <!-- Analysis -->
+  <rect x="30" y="260" width="740" height="64" rx="10" fill="#1a1033"/>
+  <text x="50" y="280" font-size="11" font-weight="700" fill="#c084fc">투자 시사점</text>
+  <text x="50" y="298" font-size="10" fill="#9ca3af">Elon이 월가 수수료 구조에 공개 도전. SpaceX IPO 승인 과정에서 은행 의존도 최소화 전략. 성공 시 IPO 비용 절감 = 순 조달액 증가 = SPCX 주주 수혜.</text>
+  <text x="50" y="315" font-size="10" fill="#9ca3af">실패 시에도 협상력 확보 효과. Elon의 Wall Street 관계 재정립 시도 — 장기적으로 금융 구조 변화 가능성.</text>
+  <text x="710" y="315" font-size="9" fill="#6b7280">investus.kr</text>
+</svg>

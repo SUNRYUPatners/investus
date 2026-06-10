@@ -1,0 +1,53 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#60a5fa"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Amazon CEO "AI는 3년 전 AWS" — 대부분이 장기 사이클을 놓친다</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.30</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- CEO quote -->
+  <rect x="30" y="80" width="370" height="140" rx="8" fill="#050d1a" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="80" width="4" height="140" rx="2" fill="#60a5fa"/>
+  <text x="48" y="104" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">Andy Jassy 발언</text>
+  <text x="48" y="130" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700">"AI is where AWS was</text>
+  <text x="48" y="150" font-family="Arial,sans-serif" font-size="14" fill="white" font-weight="700">three years ago"</text>
+  <text x="48" y="170" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">— Amazon CEO, 2026.05.30</text>
+  <text x="48" y="190" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">대부분 운영자가 장기 사이클을 놓친다</text>
+  <text x="48" y="210" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">정상 사이클 초기 진입 시점 · 장기 인프라 보유 논리</text>
+
+  <!-- AWS growth trajectory -->
+  <rect x="420" y="80" width="350" height="140" rx="8" fill="#050d1a" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="420" y="80" width="4" height="140" rx="2" fill="#60a5fa"/>
+  <text x="438" y="104" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">AWS 성장 궤적</text>
+  <text x="438" y="140" font-family="Arial,sans-serif" font-size="30" fill="#60a5fa" font-weight="700">$35B → $110B</text>
+  <text x="438" y="160" font-family="Arial,sans-serif" font-size="10" fill="white">3년 만에 3배 성장</text>
+  <text x="438" y="178" font-family="Arial,sans-serif" font-size="10" fill="white">AI도 동일 궤적이면 현재 × 3배</text>
+  <text x="438" y="196" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Anthropic ARR $45B · AWS AI 마진 +2.1bps</text>
+  <text x="438" y="212" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa">AWS AI 마진 개선 = 분기 EPS 상향 핵심 드라이버</text>
+
+  <!-- AMZN positioning -->
+  <rect x="30" y="234" width="740" height="100" rx="8" fill="#050d1a" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="30" y="234" width="4" height="100" rx="2" fill="#60a5fa"/>
+  <text x="48" y="256" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">Amazon AI 포지셔닝 — 최대 수혜 구조</text>
+  <text x="48" y="276" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• Anthropic 최대 투자자($4B+) · Claude API = AWS Bedrock 핵심 · Anthropic ARR $45B 성장 직결</text>
+  <text x="48" y="294" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• AWS 독점 배포 + New Carlisle 1.9GW DC = AI 인프라 장기 잠금 효과 · 경쟁사 5년+ 추격 불가</text>
+  <text x="48" y="312" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">AMZN = AI 인프라 장기 수혜 1순위 · AWS AI 마진 개선이 분기 EPS 상승 핵심 드라이버</text>
+  <text x="48" y="326" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Andy Jassy: "대부분 운영자가 정상 사이클 초기를 놓친다" — 지금이 그 시점</text>
+
+  <line x1="30" y1="346" x2="770" y2="346" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Key stats row -->
+  <text x="48" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">AWS ARR</text>
+  <text x="48" y="384" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700">$110B+</text>
+  <text x="200" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Anthropic 투자</text>
+  <text x="200" y="384" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700">$4B+</text>
+  <text x="350" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Anthropic ARR</text>
+  <text x="350" y="384" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700">$45B</text>
+  <text x="500" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">New Carlisle DC</text>
+  <text x="500" y="384" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700">1.9GW</text>
+
+  <line x1="30" y1="400" x2="770" y2="400" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="416" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="416" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

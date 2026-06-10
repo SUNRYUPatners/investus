@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0c10"/>
+  <defs>
+    <linearGradient id="mint7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00e5a0"/><stop offset="100%" stop-color="#00b377"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="24" width="10" height="36" rx="3" fill="url(#mint7)"/>
+  <text x="50" y="42" fill="#00e5a0" font-size="11" font-weight="700" letter-spacing="2">TESLA · 호주 판매 신기록</text>
+  <text x="50" y="58" fill="white" font-size="19" font-weight="800">Model V — 호주 EV 월간 판매 1위 최초 달성</text>
+  <text x="700" y="44" fill="#00e5a0" font-size="11" font-weight="600" text-anchor="end">2026.06.07</text>
+  <line x1="30" y1="76" x2="770" y2="76" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- trophy banner -->
+  <rect x="30" y="90" width="740" height="72" rx="12" fill="#00e5a0" fill-opacity="0.1" stroke="#00e5a0" stroke-opacity="0.3"/>
+  <text x="400" y="122" fill="white" font-size="14" font-weight="700" text-anchor="middle">🏆 TESLA IS FIRST EV TO TOP AUSTRALIA'S MONTHLY SALES CHART 🏆</text>
+  <text x="400" y="148" fill="#00e5a0" font-size="20" font-weight="900" text-anchor="middle">Tesla Model V — 역대 최초로 EV가 전체 차량 판매 1위</text>
+
+  <!-- comparison bars -->
+  <text x="30" y="196" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="1">2026년 5월 호주 판매량 순위</text>
+
+  <!-- #1 Tesla -->
+  <rect x="30" y="208" width="600" height="46" rx="6" fill="url(#mint7)" fill-opacity="0.8"/>
+  <text x="50" y="228" fill="#0a0c10" font-size="11" font-weight="700">#1 Tesla Model V</text>
+  <text x="50" y="246" fill="#0a0c10" font-size="22" font-weight="900">3,605대</text>
+  <text x="650" y="238" fill="#00e5a0" font-size="14" font-weight="800">🥇 1위</text>
+
+  <!-- #2 Ford Ranger -->
+  <rect x="30" y="262" width="355" height="42" rx="6" fill="rgba(255,255,255,0.08)"/>
+  <text x="50" y="279" fill="rgba(255,255,255,0.6)" font-size="11">#2 Ford Ranger (기존 1위)</text>
+  <text x="50" y="297" fill="rgba(255,255,255,0.8)" font-size="20" font-weight="700">2,305대</text>
+  <text x="400" y="288" fill="rgba(255,255,255,0.3)" font-size="12">🥈 2위</text>
+
+  <!-- gap -->
+  <rect x="30" y="316" width="740" height="50" rx="8" fill="#00e5a0" fill-opacity="0.06" stroke="#00e5a0" stroke-opacity="0.15"/>
+  <text x="50" y="338" fill="#00e5a0" font-size="11" font-weight="700">Tesla Model V의 리드</text>
+  <text x="50" y="358" fill="white" font-size="20" font-weight="800">+1,300대 이상 앞서</text>
+  <text x="400" y="350" fill="rgba(255,255,255,0.4)" font-size="12" text-anchor="middle">포드 레인저 대비 56% 더 많이 팔림</text>
+
+  <!-- context -->
+  <rect x="30" y="382" width="740" height="38" rx="8" fill="rgba(255,255,255,0.03)"/>
+  <text x="50" y="400" fill="rgba(255,255,255,0.5)" font-size="12">이전까지 EV가 호주 전체 차량 판매 1위를 차지한 적은 없었음 — Tesla Model V가 역사를 씀</text>
+  <text x="50" y="416" fill="rgba(255,255,255,0.3)" font-size="11">호주는 일본차·픽업 강세 시장 → Tesla가 도요타·포드 제치고 1위 = 글로벌 EV 전환 신호</text>
+
+  <text x="770" y="430" fill="rgba(255,255,255,0.2)" font-size="10" text-anchor="end">investus.kr</text>
+</svg>

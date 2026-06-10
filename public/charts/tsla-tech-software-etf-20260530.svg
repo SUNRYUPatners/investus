@@ -1,0 +1,61 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · 시장분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Tech-Software ETF 5월 +27% — 2012년 이후 월간 최고 성과</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.30</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- 5월 수익률 -->
+  <rect x="30" y="80" width="220" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="48" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">5월 ETF 수익률</text>
+  <text x="48" y="158" font-family="Arial,sans-serif" font-size="48" fill="#00e5a0" font-weight="700">+27%</text>
+  <text x="48" y="178" font-family="Arial,sans-serif" font-size="10" fill="white">iShares 북미 Tech-Software ETF</text>
+  <text x="48" y="196" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">2012년 10월 이후 월간 최고</text>
+  <text x="48" y="210" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">이전 최고 2020년 +18% 초과</text>
+
+  <!-- ETF 현재가 -->
+  <rect x="270" y="80" width="220" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="270" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="288" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">ETF 현재가</text>
+  <text x="288" y="152" font-family="Arial,sans-serif" font-size="34" fill="#00e5a0" font-weight="700">$101.66</text>
+  <text x="288" y="172" font-family="Arial,sans-serif" font-size="10" fill="white">52주 고점 갱신 중</text>
+  <text x="288" y="190" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">TSLA·MSFT·ORCL 등 핵심 비중</text>
+  <text x="288" y="206" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">14년 만의 월간 신고점 경신</text>
+
+  <!-- 섹터 의미 -->
+  <rect x="510" y="80" width="260" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="510" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="528" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">10년 월간 순위</text>
+  <text x="528" y="148" font-family="Arial,sans-serif" font-size="22" fill="white" font-weight="700">#1 since 2012</text>
+  <text x="528" y="168" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">TSLA 소프트웨어 기업 재평가 신호</text>
+  <text x="528" y="186" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">FSD·Robotaxi 마진 반영 시작</text>
+  <text x="528" y="202" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">EV 기업 PER → 소프트웨어 PER 전환</text>
+  <text x="528" y="214" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">멀티플 확장 3~5배 여지 존재</text>
+
+  <!-- Key insight -->
+  <rect x="30" y="234" width="740" height="110" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="30" y="234" width="4" height="110" rx="2" fill="#00e5a0"/>
+  <text x="48" y="258" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">투자 시사점</text>
+  <text x="48" y="278" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• Tech-Software ETF +27% = 시장이 Tesla를 자동차에서 소프트웨어 기업으로 재평가하기 시작한 신호</text>
+  <text x="48" y="296" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• FSD 71개국 확대·Cybercab 수익화 본격화 시 소프트웨어 마진이 추가 멀티플 확장 재료로 작용</text>
+  <text x="48" y="314" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• EV 제조사 PER 10배 vs 소프트웨어 기업 PER 30~50배 — 리레이팅 사이클 초입이면 업사이드 큼</text>
+  <text x="48" y="332" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">• FSD 71개국 발표와 ETF +27%가 같은 날 나온 건 우연 아님 — 시장이 동시에 읽기 시작한 것</text>
+  <text x="48" y="338" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">MSFT Copilot+ · ORCL 클라우드 계약 급증 · TSLA FSD 마진 반영 — 섹터 전체 리레이팅 국면</text>
+
+  <!-- Stats row -->
+  <rect x="30" y="356" width="740" height="34" rx="6" fill="#050e08" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="48" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">5월 수익률</text>
+  <text x="130" y="378" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">+27%</text>
+  <text x="230" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">ETF 현재가</text>
+  <text x="310" y="378" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">$101.66</text>
+  <text x="420" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">월간 순위</text>
+  <text x="490" y="378" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">#1 since 2012</text>
+  <text x="660" y="375" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">기간</text>
+  <text x="690" y="378" font-family="Arial,sans-serif" font-size="13" fill="#6b7280" font-weight="700">14년 만</text>
+
+  <line x1="30" y1="402" x2="770" y2="402" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="418" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="418" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

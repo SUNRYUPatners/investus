@@ -1,0 +1,89 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#c084fc"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="17" fill="white" font-weight="700">SpaceX × Tesla 합병 가능성 — 결합 기업가치 $20T+ · SPCX ETF 직접 수혜</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.06.01</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- SpaceX block -->
+  <rect x="30" y="80" width="210" height="150" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="30" y="80" width="4" height="150" rx="2" fill="#c084fc"/>
+  <text x="48" y="104" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">SpaceX</text>
+  <text x="48" y="130" font-family="Arial,sans-serif" font-size="30" fill="#c084fc" font-weight="700">$1.5T</text>
+  <text x="48" y="150" font-family="Arial,sans-serif" font-size="10" fill="white">현재 기업가치</text>
+  <text x="48" y="166" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">IPO 6/12 · Starlink $1B/분기 영업익</text>
+  <text x="48" y="182" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Space Force 계약 $24B+ 확보</text>
+  <text x="48" y="196" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">초과청약 9.3배 · 수요 $14B+</text>
+  <text x="48" y="220" font-family="Arial,sans-serif" font-size="8" fill="#c084fc">발사·Starlink·우주군 삼각 수익</text>
+
+  <!-- Plus sign -->
+  <text x="253" y="165" font-family="Arial,sans-serif" font-size="36" fill="#6b7280" font-weight="700" text-anchor="middle">+</text>
+
+  <!-- Tesla block -->
+  <rect x="270" y="80" width="210" height="150" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="270" y="80" width="4" height="150" rx="2" fill="#00e5a0"/>
+  <text x="288" y="104" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tesla</text>
+  <text x="288" y="130" font-family="Arial,sans-serif" font-size="30" fill="#00e5a0" font-weight="700">$1.2T</text>
+  <text x="288" y="150" font-family="Arial,sans-serif" font-size="10" fill="white">현재 시가총액</text>
+  <text x="288" y="166" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">FSD 71개국 · Cybercab 700대</text>
+  <text x="288" y="182" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Optimus 로봇 · Megapack</text>
+  <text x="288" y="196" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">IPO 384x 상승 · 소프트웨어 전환</text>
+  <text x="288" y="220" font-family="Arial,sans-serif" font-size="8" fill="#00e5a0">AI·에너지·모빌리티 삼각 수익</text>
+
+  <!-- Equals + result block -->
+  <text x="493" y="165" font-family="Arial,sans-serif" font-size="36" fill="#6b7280" font-weight="700" text-anchor="middle">=</text>
+
+  <rect x="510" y="80" width="260" height="150" rx="8" fill="#14091a" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.9"/>
+  <rect x="510" y="80" width="4" height="150" rx="2" fill="#c084fc"/>
+  <text x="528" y="104" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">합병 결합 시</text>
+  <text x="528" y="134" font-family="Arial,sans-serif" font-size="30" fill="white" font-weight="700">$20T+</text>
+  <text x="528" y="152" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">목표 기업가치 시나리오</text>
+  <text x="528" y="168" font-family="Arial,sans-serif" font-size="9" fill="#e5e7eb">이사회 4명 중복 · 전략적 시너지 확인</text>
+  <text x="528" y="184" font-family="Arial,sans-serif" font-size="9" fill="#e5e7eb">Bitcoin $20B+ 보유 예상</text>
+  <text x="528" y="200" font-family="Arial,sans-serif" font-size="9" fill="#e5e7eb">Starlink + FSD = 모빌리티 통신 독점</text>
+  <text x="528" y="220" font-family="Arial,sans-serif" font-size="9" fill="#c084fc">세계 최대 AI·우주·에너지 복합 기업</text>
+
+  <!-- Synergy block -->
+  <rect x="30" y="244" width="740" height="130" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3"/>
+  <rect x="30" y="244" width="4" height="130" rx="2" fill="#c084fc"/>
+  <text x="48" y="266" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">합병 시 시너지 분석</text>
+
+  <!-- Synergy items -->
+  <rect x="48" y="278" width="160" height="50" rx="6" fill="#1a1028" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="68" y="296" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="700">🛰️ 통신+모빌리티</text>
+  <text x="68" y="310" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Starlink 위성 + FSD 차량</text>
+  <text x="68" y="322" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">항상 연결된 자율주행</text>
+
+  <rect x="224" y="278" width="160" height="50" rx="6" fill="#1a1028" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="244" y="296" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="700">🤖 AI 플랫폼</text>
+  <text x="244" y="310" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">FSD AI + SpaceX 컴퓨팅</text>
+  <text x="244" y="322" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Optimus + 로켓 AI 결합</text>
+
+  <rect x="400" y="278" width="160" height="50" rx="6" fill="#1a1028" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="420" y="296" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="700">⚡ 에너지 인프라</text>
+  <text x="420" y="310" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Megapack + 우주 태양광</text>
+  <text x="420" y="322" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">에너지 자급 생태계</text>
+
+  <rect x="576" y="278" width="180" height="50" rx="6" fill="#1a1028" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.4"/>
+  <text x="596" y="296" font-family="Arial,sans-serif" font-size="9" fill="#c084fc" font-weight="700">₿ 비트코인 포지션</text>
+  <text x="596" y="310" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">결합 Bitcoin $20B+ 보유</text>
+  <text x="596" y="322" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">디지털 자산 저장 구조</text>
+
+  <text x="48" y="362" font-family="Arial,sans-serif" font-size="9" fill="#c084fc">SPCX ETF = SpaceX IPO 직전 직접 노출 유일 상품 · 합병 시나리오 현실화되면 최고 수혜</text>
+
+  <!-- Key stats row -->
+  <rect x="30" y="388" width="740" height="60" rx="8" fill="#0a1226" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="48" y="410" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">SpaceX 기업가치</text>
+  <text x="48" y="430" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700">$1.5T</text>
+  <text x="220" y="410" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">이사회 겹치는 인원</text>
+  <text x="220" y="430" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700">4명</text>
+  <text x="380" y="410" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">합병 시 Bitcoin 보유</text>
+  <text x="380" y="430" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700">$20B+</text>
+  <text x="560" y="410" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">SpaceX IPO D-day</text>
+  <text x="560" y="430" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700">6/12 나스닥</text>
+
+  <line x1="30" y1="460" x2="770" y2="460" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="476" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="476" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

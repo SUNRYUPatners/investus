@@ -1,0 +1,101 @@
+<svg width="800" height="710" viewBox="0 0 800 710" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="710" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · DAILY BRIEF</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="20" fill="white" font-weight="700">5/30 오늘의 핵심 8가지</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.30</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Row 1 Left: NVDA AI PC (blue) -->
+  <rect x="30" y="76" width="358" height="120" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="76" width="4" height="120" rx="2" fill="#60a5fa"/>
+  <text x="48" y="100" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">NVIDIA x Microsoft AI PC 새 시대</text>
+  <text x="48" y="130" font-family="Arial,sans-serif" font-size="28" fill="#60a5fa" font-weight="700">2,000M</text>
+  <text x="48" y="148" font-family="Arial,sans-serif" font-size="10" fill="white">Windows 노트북 AI PC 전환 TAM</text>
+  <text x="48" y="162" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Gaming → Edge Computing 공식 재편 · 6/1 Compute 이벤트</text>
+  <text x="48" y="176" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">"It is safe to upgrade now" — Jensen Huang</text>
+  <text x="48" y="190" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa">NVRK 아키텍처 6/1 공개 · AI PC 교체 사이클 시작</text>
+
+  <!-- Row 1 Right: Tesla FSD 71 (mint) -->
+  <rect x="412" y="76" width="358" height="120" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="412" y="76" width="4" height="120" rx="2" fill="#00e5a0"/>
+  <text x="430" y="100" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tesla FSD 71개국 공식 지원 · Arizona 승인</text>
+  <text x="430" y="130" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" font-weight="700">71개국</text>
+  <text x="430" y="148" font-family="Arial,sans-serif" font-size="10" fill="white">FSD 전 세계 확대 · Arizona 비감독 자율주행 승인</text>
+  <text x="430" y="162" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">150K마일/건 사고율 · 인간 운전자 165K 근접</text>
+  <text x="430" y="176" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">EU 80만 대 FSD 전환 시 $640M~$800M 소프트웨어 매출</text>
+  <text x="430" y="190" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">50개 주 순차 승인 사이클 시작 신호</text>
+
+  <!-- Row 2 Left: Tech-Software ETF +27% (mint) -->
+  <rect x="30" y="206" width="358" height="120" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="206" width="4" height="120" rx="2" fill="#00e5a0"/>
+  <text x="48" y="230" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tech-Software ETF 5월 +27%</text>
+  <text x="48" y="264" font-family="Arial,sans-serif" font-size="32" fill="#00e5a0" font-weight="700">+27%</text>
+  <text x="48" y="282" font-family="Arial,sans-serif" font-size="10" fill="white">2012년 이후 월간 최고 성과</text>
+  <text x="48" y="296" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">AI·소프트웨어 멀티플 확장 본격화</text>
+  <text x="48" y="310" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">테슬라 소프트웨어 기업 재분류 흐름 동시 확인</text>
+  <text x="48" y="320" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">섹터 리레이팅 가속 · AI 멀티플 확장 진입 신호</text>
+
+  <!-- Row 2 Right: Cybercab 700대 (mint) -->
+  <rect x="412" y="206" width="358" height="120" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="412" y="206" width="4" height="120" rx="2" fill="#00e5a0"/>
+  <text x="430" y="230" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tesla Cybercab 700대 플릿 · Austin 운행 개시</text>
+  <text x="430" y="264" font-family="Arial,sans-serif" font-size="32" fill="#00e5a0" font-weight="700">700대</text>
+  <text x="430" y="282" font-family="Arial,sans-serif" font-size="10" fill="white">Austin 자율주행 개시 · 39대 비감독 운행</text>
+  <text x="430" y="296" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">기가텍사스→도로 직행 사이클 완성 · 경쟁사 압도</text>
+  <text x="430" y="310" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">100대 비감독 달성이 다음 리레이팅 포인트</text>
+  <text x="430" y="320" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">로보택시 수익화 임박 · FSD→Cybercab 전환 가속</text>
+
+  <!-- Row 3 Left: Model Y 138 MPGe (mint) -->
+  <rect x="30" y="336" width="358" height="120" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="336" width="4" height="120" rx="2" fill="#00e5a0"/>
+  <text x="48" y="360" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">Tesla Model Y 138 MPGe — 역사상 최고효율 SUV</text>
+  <text x="48" y="394" font-family="Arial,sans-serif" font-size="32" fill="#00e5a0" font-weight="700">138 MPGe</text>
+  <text x="48" y="412" font-family="Arial,sans-serif" font-size="10" fill="white">EPA 공식 인증 · $39,990 · 역대 전기 SUV 1위</text>
+  <text x="48" y="426" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">$0.025/마일 vs 가솔린 SUV $0.12~0.15/마일</text>
+  <text x="48" y="440" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">연간 $3,000~5,000 절감 · 연 10만 마일 로보택시 기준 $9,500</text>
+  <text x="48" y="450" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">Cybercab 165Wh/mi → $0.020/마일 · 로보택시 구조적 해자</text>
+
+  <!-- Row 3 Right: SpaceX IPO 6/12 (purple) -->
+  <rect x="412" y="336" width="358" height="120" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="412" y="336" width="4" height="120" rx="2" fill="#c084fc"/>
+  <text x="430" y="360" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">SpaceX IPO 6/12 · Musk "False" 루머 차단</text>
+  <text x="430" y="394" font-family="Arial,sans-serif" font-size="32" fill="#c084fc" font-weight="700">6/12</text>
+  <text x="430" y="412" font-family="Arial,sans-serif" font-size="10" fill="white">나스닥 상장 · 기업가치 $1.5T 목표</text>
+  <text x="430" y="426" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">ZeroHedge 루머 → Musk 5분 만에 "False" 직접 부인</text>
+  <text x="430" y="440" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">IPO 일정·밸류에이션 변동 없음 · 청약 흥행 자신감 확인</text>
+  <text x="430" y="450" font-family="Arial,sans-serif" font-size="9" fill="#c084fc">$24B+ 정부 계약 수익 확보 · IPO 수익 가시성 최고</text>
+
+  <!-- Row 4 Left: Space Force $4.16B (purple) -->
+  <rect x="30" y="466" width="358" height="120" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="466" width="4" height="120" rx="2" fill="#c084fc"/>
+  <text x="48" y="490" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">Space Force $4.16B SB-AMTI 계약</text>
+  <text x="48" y="526" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" font-weight="700">$4.16B</text>
+  <text x="48" y="544" font-family="Arial,sans-serif" font-size="10" fill="white">Starlink 위성 기반 공중 이동 표적 감시</text>
+  <text x="48" y="558" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">누적 정부 계약 $24B+ · NSSL·NASA·NRO 포함</text>
+  <text x="48" y="572" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">극초음속 무기·미사일 추적 · 전 세계 실시간 감시</text>
+  <text x="48" y="582" font-family="Arial,sans-serif" font-size="9" fill="#c084fc">국방 AI + 우주 인프라 이중 포지셔닝 확인</text>
+
+  <!-- Row 4 Right: Amazon CEO AI=AWS (blue) -->
+  <rect x="412" y="466" width="358" height="120" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="412" y="466" width="4" height="120" rx="2" fill="#60a5fa"/>
+  <text x="430" y="490" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">Amazon CEO "AI는 3년 전 AWS"</text>
+  <text x="430" y="522" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" font-weight="700">$35B → $110B</text>
+  <text x="430" y="540" font-family="Arial,sans-serif" font-size="10" fill="white">AWS 3년 만에 3배 성장 · AI 동일 궤적 예상</text>
+  <text x="430" y="554" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Anthropic ARR $45B · AWS Bedrock 핵심 · 마진 +2.1bps</text>
+  <text x="430" y="568" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">New Carlisle 1.9GW DC · AI 인프라 장기 잠금 효과</text>
+  <text x="430" y="582" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa">AMZN = AI 인프라 장기 수혜 1순위</text>
+
+  <!-- Footer insight -->
+  <rect x="30" y="596" width="740" height="78" rx="8" fill="#060b18" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="30" y="596" width="4" height="78" rx="2" fill="#00e5a0"/>
+  <text x="48" y="618" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">핵심 투자 포인트</text>
+  <text x="48" y="636" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">NVDA AI PC 2000M TAM · TSLA FSD 71개국+Cybercab 700대+138 MPGe = 소프트웨어·로보택시 수익화 가속</text>
+  <text x="48" y="652" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">Tech-Software ETF +27% · SpaceX IPO 6/12+Space Force $4.16B · AMZN CEO AI=AWS 초기 패턴</text>
+  <text x="48" y="666" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">오늘의 핵심 8대 이슈 — 각 종목별 세부 리포트를 확인하세요</text>
+
+  <line x1="30" y1="684" x2="770" y2="684" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="700" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="700" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

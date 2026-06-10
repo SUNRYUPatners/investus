@@ -1,0 +1,61 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="430" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#c084fc"/>
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Space Force $4.16B SB-AMTI — SpaceX 우주 기반 공중 표적 감시</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.30</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Contract amount -->
+  <rect x="30" y="80" width="225" height="140" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="80" width="4" height="140" rx="2" fill="#c084fc"/>
+  <text x="48" y="104" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">SB-AMTI 계약</text>
+  <text x="48" y="152" font-family="Arial,sans-serif" font-size="30" fill="#c084fc" font-weight="700">$4.16B</text>
+  <text x="48" y="170" font-family="Arial,sans-serif" font-size="11" fill="white">Space Force OTA 계약</text>
+  <text x="48" y="188" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">우주 기반 공중 이동 표적 감시</text>
+  <text x="48" y="204" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Starlink 위성군 기반 구축</text>
+
+  <!-- Cumulative contracts -->
+  <rect x="275" y="80" width="225" height="140" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="275" y="80" width="4" height="140" rx="2" fill="#c084fc"/>
+  <text x="293" y="104" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">누적 정부 계약</text>
+  <text x="293" y="148" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" font-weight="700">$24B+</text>
+  <text x="293" y="168" font-family="Arial,sans-serif" font-size="10" fill="white">IPO 직전 수익 가시성 최고</text>
+  <text x="293" y="186" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">NSSL $11.5B · NASA $4.93B</text>
+  <text x="293" y="202" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">SB-AMTI $4.16B · NRO $1.8B+</text>
+
+  <!-- System features -->
+  <rect x="520" y="80" width="250" height="140" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="520" y="80" width="4" height="140" rx="2" fill="#c084fc"/>
+  <text x="538" y="104" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">SB-AMTI 시스템</text>
+  <text x="538" y="128" font-family="Arial,sans-serif" font-size="10" fill="white">전 세계 실시간 항공 위협 감시</text>
+  <text x="538" y="146" font-family="Arial,sans-serif" font-size="10" fill="white">극초음속 무기·미사일 추적</text>
+  <text x="538" y="164" font-family="Arial,sans-serif" font-size="10" fill="#c084fc">Starlink 6,000+ 위성 활용</text>
+  <text x="538" y="182" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">지상 레이더 대비 커버리지 극대화</text>
+  <text x="538" y="200" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">국방 AI 인프라 기업 포지셔닝</text>
+
+  <!-- Key insight -->
+  <rect x="30" y="234" width="740" height="100" rx="8" fill="#0d0a1a" stroke="#c084fc" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="30" y="234" width="4" height="100" rx="2" fill="#c084fc"/>
+  <text x="48" y="256" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700">투자 시사점</text>
+  <text x="48" y="276" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• $24B+ 정부 계약 + Starlink $1B/분기 영업이익 = S-1 재무 스토리 완성 · IPO 밸류에이션 정당화</text>
+  <text x="48" y="294" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• Space Force 계약 반복 수주 = 정부 신뢰 기반 안정적 수익 구조 확인 · IPO 전 수익 가시성 극대화</text>
+  <text x="48" y="312" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 국방 AI + 우주 인프라 이중 포지셔닝 → SpaceX를 발사 기업 이상의 복합 국방 플랫폼으로 재평가</text>
+  <text x="48" y="326" font-family="Arial,sans-serif" font-size="9" fill="#c084fc">동일 Starlink 위성으로 민간 인터넷 + 군사 감시 동시 수익화 — ARPU 이중 구조 · 경쟁사 없음</text>
+
+  <line x1="30" y1="346" x2="770" y2="346" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Key stats row -->
+  <text x="48" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">SB-AMTI 계약</text>
+  <text x="48" y="384" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700">$4.16B</text>
+  <text x="200" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">누적 정부 계약</text>
+  <text x="200" y="384" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700">$24B+</text>
+  <text x="360" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Starlink 위성</text>
+  <text x="360" y="384" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700">6,000+</text>
+  <text x="510" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">IPO 목표 기업가치</text>
+  <text x="510" y="384" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700">$1.5T</text>
+
+  <line x1="30" y1="400" x2="770" y2="400" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="416" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="416" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

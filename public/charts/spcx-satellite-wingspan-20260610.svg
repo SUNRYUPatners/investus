@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grayGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4b5563;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b7280;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a0a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0f1e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#065f46;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#0a0f1e"/>
+
+  <!-- Header area (y:0-68) -->
+  <rect x="0" y="0" width="800" height="68" fill="url(#headerGrad)"/>
+  <rect x="0" y="0" width="5" height="68" fill="#c084fc"/>
+  <!-- Header title -->
+  <text x="24" y="28" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#c084fc">SpaceX 위성 날개 229ft — 보잉 747 초과</text>
+  <!-- Header subtitle -->
+  <text x="24" y="52" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#94a3b8">배포 시 날개폭 비교 · 역대 최대 상업 위성 기록 · 약 70m 폭</text>
+
+  <!-- ── COMPARISON AREA (y:80-205) ── -->
+
+  <!-- Dimension arrow line at y:100, from x=150 to x=700 -->
+  <line x1="150" y1="100" x2="700" y2="100" stroke="#475569" stroke-width="1" stroke-dasharray="4,3"/>
+  <polygon points="150,96 150,104 142,100" fill="#475569"/>
+  <polygon points="700,96 700,104 708,100" fill="#475569"/>
+  <text x="420" y="95" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">← 최대 날개폭 비교 기준선 →</text>
+
+  <!-- Bar 1: SpaceX 위성 229ft (y:120, height=28) -->
+  <!-- Left label, text-anchor end, centered on bar: y = 120 + 28/2 + 12*0.35 = 120+14+4.2 = 138 -->
+  <text x="145" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#e2e8f0" text-anchor="end">SpaceX 위성</text>
+  <!-- Bar from x=150 to x=700 (229ft → full scale) -->
+  <rect x="150" y="120" width="550" height="28" rx="4" fill="url(#purpleGrad)"/>
+  <!-- Right value label: x = 700 + 8, y centered = 138 -->
+  <text x="708" y="138" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#c084fc">229 ft</text>
+
+  <!-- Bar 2: Boeing 747 224.4ft (y:165, height=28) -->
+  <!-- Scale: 224.4/229 * 550 = 538.6 ≈ 539px wide, end x = 150+539 = 689 -->
+  <text x="145" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#e2e8f0" text-anchor="end">보잉 747</text>
+  <!-- Bar from x=150 to x=686 -->
+  <rect x="150" y="165" width="536" height="28" rx="4" fill="url(#grayGrad)"/>
+  <!-- Right value label -->
+  <text x="694" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af">224.4 ft</text>
+
+  <!-- Scale note below bars (y:206) -->
+  <text x="400" y="206" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">배포 시 날개 폭 기준 · 1ft ≈ 0.3m → SpaceX: 약 70m · Boeing 747: 약 68.4m</text>
+
+  <!-- ── COMPARISON CARDS (y:218-308) ── -->
+
+  <!-- Card 1: SpaceX 위성 (x:50, w:220, h:80) y:218-298 -->
+  <rect x="50" y="218" width="220" height="80" rx="8" fill="#1a0a2e" stroke="#7c3aed" stroke-width="1.5"/>
+  <!-- Large number: y = 218 + 30 + 18*0.35 = 218+30+6.3 = 254 -->
+  <text x="160" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#c084fc" text-anchor="middle">229 ft</text>
+  <!-- Label: y = 254 + 20 = 274 -->
+  <text x="160" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">SpaceX 위성 (배포 시)</text>
+
+  <!-- Card 2: Boeing 747 (x:290, w:220, h:80) y:218-298 -->
+  <rect x="290" y="218" width="220" height="80" rx="8" fill="#111827" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="400" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#9ca3af" text-anchor="middle">224.4 ft</text>
+  <text x="400" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Boeing 747 날개폭</text>
+
+  <!-- Card 3: SpaceX 우위 (x:530, w:220, h:80) y:218-298 -->
+  <rect x="530" y="218" width="220" height="80" rx="8" fill="#022c22" stroke="#059669" stroke-width="1.5"/>
+  <text x="640" y="254" font-family="'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#34d399" text-anchor="middle">+4.6 ft</text>
+  <text x="640" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6ee7b7" text-anchor="middle">SpaceX 우위</text>
+
+  <!-- ── CONTEXT NOTE (y:318-380) ── -->
+  <rect x="50" y="318" width="700" height="62" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <!-- Icon / accent -->
+  <rect x="50" y="318" width="4" height="62" rx="2" fill="#c084fc"/>
+  <!-- Context text lines -->
+  <text x="68" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#94a3b8">역대 배포 최대 위성 기록 · AI 처리 + 통신 위성 동시 탑재 구조 · 미 우주군 SDA 위성망 연계</text>
+  <text x="68" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#94a3b8">SpaceX 독자 위성버스 기술 · 재사용 Falcon 9 발사 · 저궤도 LEO 배치 설계</text>
+  <text x="68" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#64748b">* 배포 전 접힌 상태는 훨씬 소형 · 날개폭은 태양광 패널 완전 전개 시 기준</text>
+
+  <!-- Source / Footer -->
+  <text x="400" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#475569" text-anchor="middle">investus.kr · 2026.06.10</text>
+
+</svg>

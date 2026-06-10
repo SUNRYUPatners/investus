@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" font-family="'Segoe UI',Arial,sans-serif">
+  <!-- Background -->
+  <rect width="800" height="430" fill="#0a0f1e"/>
+
+  <!-- Header y:0-68 -->
+  <rect x="0" y="0" width="800" height="68" fill="#0d1528"/>
+  <rect x="0" y="0" width="6" height="68" fill="#60a5fa"/>
+  <text x="24" y="36" font-size="20" font-weight="700" fill="#60a5fa">JPMorgan — 장시간 자율 AI 에이전트 배포</text>
+  <text x="24" y="54" font-size="12" fill="#94a3b8">JPMorgan Chase · AI Agents · Autonomous Finance · 2026</text>
+
+  <!-- Evolution Timeline y:80-210 -->
+  <text x="400" y="96" font-size="12" fill="#64748b" text-anchor="middle">AI 에이전트 진화 단계</text>
+
+  <!-- Timeline line -->
+  <line x1="80" y1="145" x2="720" y2="145" stroke="#334155" stroke-width="2"/>
+
+  <!-- Stage 1 — x:100 -->
+  <rect x="40" y="118" width="160" height="54" rx="10" fill="#0d1a2b" stroke="#475569" stroke-width="1.5"/>
+  <text x="120" y="140" font-size="12" font-weight="700" fill="#94a3b8" text-anchor="middle">기존 AI</text>
+  <text x="120" y="158" font-size="18" font-weight="800" fill="#64748b" text-anchor="middle">수초</text>
+  <text x="120" y="173" font-size="10" fill="#475569" text-anchor="middle">단순 Q&amp;A 처리</text>
+
+  <!-- Arrow 1→2 -->
+  <defs>
+    <marker id="arrowFwd" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <line x1="200" y1="145" x2="300" y2="145" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrowFwd)"/>
+
+  <!-- Stage 2 — x:350 -->
+  <rect x="300" y="118" width="160" height="54" rx="10" fill="#0d1a2b" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="380" y="140" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">현재 에이전트</text>
+  <text x="380" y="158" font-size="18" font-weight="800" fill="#60a5fa" text-anchor="middle">수분</text>
+  <text x="380" y="173" font-size="10" fill="#64748b" text-anchor="middle">분석 보고 자동화</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="460" y1="145" x2="550" y2="145" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrowFwd)"/>
+
+  <!-- Stage 3 — x:620 highlighted -->
+  <rect x="550" y="110" width="180" height="70" rx="10" fill="#0d2240" stroke="#60a5fa" stroke-width="2.5"/>
+  <rect x="550" y="110" width="180" height="8" rx="5" fill="#60a5fa"/>
+  <text x="640" y="140" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">2026 배포 예정</text>
+  <text x="640" y="160" font-size="20" font-weight="900" fill="#00e5a0" text-anchor="middle">수시간</text>
+  <text x="640" y="177" font-size="10" fill="#94a3b8" text-anchor="middle">독립 업무처리 가능</text>
+
+  <!-- Sub-labels below boxes -->
+  <text x="120" y="195" font-size="10" fill="#475569" text-anchor="middle">보조 역할</text>
+  <text x="380" y="195" font-size="10" fill="#60a5fa" text-anchor="middle">반자율 에이전트</text>
+  <text x="640" y="195" font-size="10" fill="#00e5a0" text-anchor="middle">완전 자율 에이전트</text>
+
+  <!-- Capability Comparison y:225-340 -->
+  <text x="400" y="222" font-size="12" fill="#64748b" text-anchor="middle">역량 비교표</text>
+
+  <!-- Column headers -->
+  <text x="80" y="243" font-size="11" font-weight="700" fill="#94a3b8">역량</text>
+  <text x="300" y="243" font-size="11" font-weight="700" fill="#475569" text-anchor="middle">기존 AI</text>
+  <text x="490" y="243" font-size="11" font-weight="700" fill="#60a5fa" text-anchor="middle">현재 에이전트</text>
+  <text x="670" y="243" font-size="11" font-weight="700" fill="#00e5a0" text-anchor="middle">2026 배포</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="250" x2="760" y2="250" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Row 1: 작업 지속시간 y≈268 -->
+  <rect x="40" y="255" width="720" height="26" rx="4" fill="#0d1528"/>
+  <text x="80" y="272" font-size="11" fill="#94a3b8">작업 지속시간</text>
+  <text x="300" y="272" font-size="11" fill="#64748b" text-anchor="middle">수초</text>
+  <text x="490" y="272" font-size="11" fill="#60a5fa" text-anchor="middle">수분</text>
+  <text x="670" y="272" font-size="11" font-weight="700" fill="#00e5a0" text-anchor="middle">수시간</text>
+
+  <!-- Row 2: 자율성 y≈296 -->
+  <rect x="40" y="285" width="720" height="26" rx="4" fill="#0a0f1e"/>
+  <text x="80" y="302" font-size="11" fill="#94a3b8">자율성 수준</text>
+  <text x="300" y="302" font-size="11" fill="#64748b" text-anchor="middle">보조</text>
+  <text x="490" y="302" font-size="11" fill="#60a5fa" text-anchor="middle">반자율</text>
+  <text x="670" y="302" font-size="11" font-weight="700" fill="#00e5a0" text-anchor="middle">완전자율</text>
+
+  <!-- Row 3: Use case y≈326 -->
+  <rect x="40" y="315" width="720" height="26" rx="4" fill="#0d1528"/>
+  <text x="80" y="332" font-size="11" fill="#94a3b8">주요 역할</text>
+  <text x="300" y="332" font-size="11" fill="#64748b" text-anchor="middle">Q&amp;A</text>
+  <text x="490" y="332" font-size="11" fill="#60a5fa" text-anchor="middle">분석 보고</text>
+  <text x="670" y="332" font-size="11" font-weight="700" fill="#00e5a0" text-anchor="middle">독립 업무처리</text>
+
+  <!-- Impact note y:355-405 -->
+  <rect x="40" y="353" width="720" height="52" rx="10" fill="#0d2240" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="400" y="374" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">금융 업무 자동화 본격화</text>
+  <text x="400" y="396" font-size="12" fill="#94a3b8" text-anchor="middle">대형 은행 AI 도입 경쟁 가속 · JPMorgan 선도 포지션 강화</text>
+
+  <!-- Source -->
+  <text x="400" y="420" font-size="11" fill="#475569" text-anchor="middle">investus.kr</text>
+</svg>

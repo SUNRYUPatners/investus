@@ -1,0 +1,69 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#07091a"/>
+  <rect x="0" y="0" width="800" height="3" fill="#00e5a0"/>
+
+  <text x="30" y="30" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" letter-spacing="2">INVESTUS · 종목분석</text>
+  <text x="30" y="54" font-family="Arial,sans-serif" font-size="18" fill="white" font-weight="700">Tesla Cybercab 700대 플릿 · 39대 비감독 · Austin 자율주행 상업 시작</text>
+  <text x="770" y="54" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2026.05.30</text>
+  <line x1="30" y1="66" x2="770" y2="66" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Total fleet -->
+  <rect x="30" y="80" width="170" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="30" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="48" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">총 플릿</text>
+  <text x="48" y="158" font-family="Arial,sans-serif" font-size="46" fill="#00e5a0" font-weight="700">700</text>
+  <text x="48" y="178" font-family="Arial,sans-serif" font-size="10" fill="white">추적 차량 수</text>
+  <text x="48" y="196" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">전체 Cybercab 기준</text>
+  <text x="48" y="210" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">기가텍사스 생산 직행</text>
+
+  <!-- Unsupervised -->
+  <rect x="216" y="80" width="170" height="140" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="216" y="80" width="4" height="140" rx="2" fill="#00e5a0"/>
+  <text x="234" y="106" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">비감독 자율</text>
+  <text x="234" y="158" font-family="Arial,sans-serif" font-size="46" fill="#00e5a0" font-weight="700">39</text>
+  <text x="234" y="178" font-family="Arial,sans-serif" font-size="10" fill="white">Unsupervised FSD</text>
+  <text x="234" y="196" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Austin 비감독 시작</text>
+  <text x="234" y="210" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">경쟁사 진입 불가 수준</text>
+
+  <!-- Regional breakdown -->
+  <rect x="402" y="80" width="368" height="140" rx="8" fill="#060b18" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.3"/>
+  <rect x="402" y="80" width="4" height="140" rx="2" fill="#60a5fa"/>
+  <text x="420" y="106" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" font-weight="700">지역별 분포</text>
+  <text x="420" y="132" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Bay Area</text>
+  <text x="740" y="136" font-family="Arial,sans-serif" font-size="24" fill="#60a5fa" font-weight="700" text-anchor="end">581</text>
+  <text x="420" y="158" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Austin</text>
+  <text x="740" y="162" font-family="Arial,sans-serif" font-size="24" fill="#fb923c" font-weight="700" text-anchor="end">104</text>
+  <text x="420" y="182" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Dallas / Houston</text>
+  <text x="740" y="186" font-family="Arial,sans-serif" font-size="18" fill="#6b7280" font-weight="700" text-anchor="end">7 / 8</text>
+  <text x="420" y="206" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">Unsupervised 확인</text>
+  <text x="740" y="210" font-family="Arial,sans-serif" font-size="18" fill="#00e5a0" font-weight="700" text-anchor="end">39</text>
+
+  <!-- Austin launch block -->
+  <rect x="30" y="234" width="358" height="90" rx="8" fill="#060b18" stroke="#fb923c" stroke-width="1.2" stroke-opacity="0.4"/>
+  <rect x="30" y="234" width="4" height="90" rx="2" fill="#fb923c"/>
+  <text x="48" y="258" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="700">Austin 자율주행 상업 운행 개시</text>
+  <text x="48" y="280" font-family="Arial,sans-serif" font-size="10" fill="white">Cybercab 비감독 상업 운행 공식 시작</text>
+  <text x="48" y="298" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Ashok Elluswamy(자율주행 디렉터) 직접 확인</text>
+  <text x="48" y="314" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">기가텍사스 생산 라인에서 직접 도로로 출발</text>
+
+  <!-- Robotaxi economics -->
+  <rect x="412" y="234" width="358" height="90" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="412" y="234" width="4" height="90" rx="2" fill="#00e5a0"/>
+  <text x="430" y="258" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">로보택시 경제성</text>
+  <text x="430" y="278" font-family="Arial,sans-serif" font-size="10" fill="white">운행 비용 $0.05~0.07/마일 · 예상 요금 $0.20~0.30</text>
+  <text x="430" y="296" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">드라이버 비용 제로 → 마진 60~80%</text>
+  <text x="430" y="312" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">차량당 연 $13,000~25,000 순수익 가능</text>
+
+  <!-- Key insight -->
+  <rect x="30" y="338" width="740" height="100" rx="8" fill="#071208" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.2"/>
+  <rect x="30" y="338" width="4" height="100" rx="2" fill="#00e5a0"/>
+  <text x="48" y="362" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700">투자 시사점</text>
+  <text x="48" y="382" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 700대 플릿 중 39대 비감독 — Waymo 총 비감독 플릿보다 많음 · 생산 속도 경쟁을 압도하는 구조</text>
+  <text x="48" y="400" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb">• 기가텍사스→도로 직행 사이클 완성 = 플릿 확장 속도 가속 · 100대 비감독 달성이 다음 리레이팅 포인트</text>
+  <text x="48" y="418" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">• 700대 × $20,000/년(보수 추정) = $14M/년 → 10,000대 달성 시 $200M/년 · 100,000대 시 $2B/년</text>
+  <text x="48" y="430" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">Waymo 차량 대당 $150,000+ vs Cybercab $30,000 미만 — 생산 원가 5배 차이가 플릿 확장 속도 결정</text>
+
+  <line x1="30" y1="450" x2="770" y2="450" stroke="#1e2330" stroke-width="1"/>
+  <text x="30" y="466" font-family="Arial,sans-serif" font-size="9" fill="#6b7280">투자 참고용. 투자 판단 및 결과에 대한 책임은 투자자 본인에게 있습니다.</text>
+  <text x="770" y="466" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" text-anchor="end" font-weight="600">INVESTUS · SUNRYU Partners CIO</text>
+</svg>

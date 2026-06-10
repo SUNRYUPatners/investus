@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" style="background:#0a0c10;font-family:'Helvetica Neue',Arial,sans-serif">
+  <rect width="800" height="440" fill="#0a0c10"/>
+  <defs>
+    <linearGradient id="mint8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00e5a0"/><stop offset="100%" stop-color="#00b377"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="24" width="10" height="36" rx="3" fill="url(#mint8)"/>
+  <text x="50" y="42" fill="#00e5a0" font-size="11" font-weight="700" letter-spacing="2">TESLA · 자율주행 허가</text>
+  <text x="50" y="58" fill="white" font-size="19" font-weight="800">네바다 AV 허가 승인 — 라스베이거스 전역 + 공항 2곳</text>
+  <text x="700" y="44" fill="#00e5a0" font-size="11" font-weight="600" text-anchor="end">2026.06.07</text>
+  <line x1="30" y1="76" x2="770" y2="76" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- permit granted banner -->
+  <rect x="30" y="90" width="740" height="60" rx="12" fill="#00e5a0" fill-opacity="0.12" stroke="#00e5a0" stroke-opacity="0.3"/>
+  <text x="400" y="116" fill="white" font-size="16" font-weight="700" text-anchor="middle">✅ NEVADA AV PERMIT — GRANTED</text>
+  <text x="400" y="140" fill="#00e5a0" font-size="13" text-anchor="middle">Tesla 자율주행 차량 허가 승인 · Clark County (라스베이거스 광역권)</text>
+
+  <!-- coverage areas -->
+  <text x="30" y="182" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="1">허가 구역</text>
+
+  <rect x="30" y="192" width="225" height="88" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="142" y="220" fill="rgba(255,255,255,0.5)" font-size="11" text-anchor="middle">Clark County</text>
+  <text x="142" y="244" fill="white" font-size="14" font-weight="700" text-anchor="middle">라스베이거스 광역</text>
+  <text x="142" y="266" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="middle">도심 + 교외 전역</text>
+
+  <rect x="270" y="192" width="225" height="88" rx="10" fill="#00e5a0" fill-opacity="0.06" stroke="#00e5a0" stroke-opacity="0.2"/>
+  <text x="382" y="220" fill="#00e5a0" font-size="11" text-anchor="middle">✈️ 해리 리드 국제공항</text>
+  <text x="382" y="244" fill="white" font-size="13" font-weight="700" text-anchor="middle">Harry Reid</text>
+  <text x="382" y="266" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="middle">International Airport</text>
+
+  <rect x="510" y="192" width="260" height="88" rx="10" fill="#00e5a0" fill-opacity="0.06" stroke="#00e5a0" stroke-opacity="0.2"/>
+  <text x="640" y="220" fill="#00e5a0" font-size="11" text-anchor="middle">✈️ 헨더슨 공항</text>
+  <text x="640" y="244" fill="white" font-size="13" font-weight="700" text-anchor="middle">Henderson</text>
+  <text x="640" y="266" fill="rgba(255,255,255,0.4)" font-size="11" text-anchor="middle">Executive Airport</text>
+
+  <!-- significance -->
+  <text x="30" y="308" fill="rgba(255,255,255,0.4)" font-size="11" font-weight="700" letter-spacing="1">의미</text>
+
+  <rect x="30" y="318" width="350" height="72" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+  <text x="50" y="340" fill="rgba(255,255,255,0.7)" font-size="12" font-weight="600">공항 포함 = 고난도 환경 승인</text>
+  <text x="50" y="360" fill="rgba(255,255,255,0.5)" font-size="12">복잡한 교통 + 항공기 이동 + 보안 구역</text>
+  <text x="50" y="380" fill="rgba(255,255,255,0.4)" font-size="11">자율주행 신뢰도 최고 수준 인정</text>
+
+  <rect x="400" y="318" width="370" height="72" rx="8" fill="#00e5a0" fill-opacity="0.05" stroke="#00e5a0" stroke-opacity="0.12"/>
+  <text x="420" y="340" fill="#00e5a0" font-size="12" font-weight="700">Texas Austin 344 sq mi에 이어</text>
+  <text x="420" y="360" fill="rgba(255,255,255,0.6)" font-size="12">Nevada도 무감독 AV 공식 승인</text>
+  <text x="420" y="380" fill="rgba(255,255,255,0.4)" font-size="11">2026년 말 전국 확장 시나리오 강화</text>
+
+  <!-- footer note -->
+  <rect x="30" y="406" width="740" height="24" rx="6" fill="rgba(255,255,255,0.02)"/>
+  <text x="50" y="422" fill="rgba(255,255,255,0.3)" font-size="11">네바다 DOT AV 허가 신청 → 즉시 승인 · FSD V13 기반 · 안전 운전자 불필요</text>
+  <text x="770" y="430" fill="rgba(255,255,255,0.2)" font-size="10" text-anchor="end">investus.kr</text>
+</svg>

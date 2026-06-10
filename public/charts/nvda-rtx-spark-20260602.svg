@@ -1,0 +1,56 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07091a"/>
+      <stop offset="100%" stop-color="#0d1022"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="60" fill="rgba(96,165,250,0.06)"/>
+  <text x="32" y="21" fill="rgba(96,165,250,0.7)" font-size="10" letter-spacing="2" font-weight="700">NVIDIA · NVDA · AI PC</text>
+  <text x="32" y="46" fill="white" font-size="19" font-weight="800">RTX Spark — 30년 만의 PC 혁명 · NVIDIA 최초 AI PC 전용 칩 · 노트북이 바뀐다</text>
+
+  <!-- Subtitle -->
+  <text x="32" y="78" fill="rgba(255,255,255,0.4)" font-size="11">"The laptop hasn't changed in 30 years. NVIDIA just changed it." · Microsoft Surface Laptop Ultra 탑재 · 에이전트 24/7 로컬 실행</text>
+
+  <!-- Main headline stat -->
+  <rect x="32" y="94" width="736" height="52" rx="12" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.3)" stroke-width="1.5"/>
+  <text x="400" y="118" fill="white" font-size="22" font-weight="800" text-anchor="middle">"The laptop hasn't changed in 30 years. NVIDIA just changed it."</text>
+  <text x="400" y="136" fill="rgba(96,165,250,0.7)" font-size="11" text-anchor="middle">NVIDIA RTX Spark 발표 — AI PC 전용 최초 NVDA 칩 · 소비자 시장 진입</text>
+
+  <!-- Before / After comparison -->
+  <text x="32" y="170" fill="rgba(255,255,255,0.5)" font-size="11" font-weight="600" letter-spacing="1">PC 패러다임 전환 — 이전 vs 이후</text>
+
+  <!-- Before column -->
+  <rect x="32" y="182" width="354" height="160" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="209" y="206" fill="rgba(255,255,255,0.35)" font-size="12" font-weight="700" text-anchor="middle">⬛ 이전 30년 (전통 PC)</text>
+  <text x="52" y="230" fill="rgba(255,255,255,0.4)" font-size="10">• CPU 중심 아키텍처 — 범용 연산</text>
+  <text x="52" y="248" fill="rgba(255,255,255,0.4)" font-size="10">• AI 작업 = 클라우드 의존 (인터넷 필수)</text>
+  <text x="52" y="266" fill="rgba(255,255,255,0.4)" font-size="10">• 배터리 소모 크고 느린 AI 응답</text>
+  <text x="52" y="284" fill="rgba(255,255,255,0.4)" font-size="10">• 개인정보 클라우드 업로드 필요</text>
+  <text x="52" y="302" fill="rgba(255,255,255,0.4)" font-size="10">• 에이전트 24/7 실행 불가능</text>
+  <text x="52" y="320" fill="rgba(255,255,255,0.35)" font-size="10">Intel NPU · AMD AI — 부분적 AI 가속만</text>
+
+  <!-- After column -->
+  <rect x="398" y="182" width="370" height="160" rx="12" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+  <text x="583" y="206" fill="#60a5fa" font-size="12" font-weight="700" text-anchor="middle">🔵 RTX Spark 이후</text>
+  <text x="418" y="230" fill="rgba(255,255,255,0.75)" font-size="10">• GPU AI 전용 아키텍처 — 로컬 AI 추론</text>
+  <text x="418" y="248" fill="rgba(255,255,255,0.75)" font-size="10">• AI 작업 = 오프라인 완전 실행 (클라우드 불필요)</text>
+  <text x="418" y="266" fill="rgba(255,255,255,0.75)" font-size="10">• 저전력 고속 추론 — 배터리 효율 최적화</text>
+  <text x="418" y="284" fill="rgba(255,255,255,0.75)" font-size="10">• 개인정보 기기 내 처리 — 프라이버시 보장</text>
+  <text x="418" y="302" fill="#60a5fa" font-size="10" font-weight="700">• AI 에이전트 24/7 로컬 상시 실행 ✓</text>
+  <text x="418" y="320" fill="rgba(96,165,250,0.7)" font-size="10">Microsoft Surface Laptop Ultra 1호 탑재</text>
+
+  <!-- TAM impact -->
+  <rect x="32" y="356" width="736" height="80" rx="12" fill="rgba(96,165,250,0.06)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+  <text x="52" y="378" fill="#60a5fa" font-size="11" font-weight="700">시장 임팩트 — TAM 재산정</text>
+
+  <rect x="52" y="390" width="2" height="36" fill="rgba(96,165,250,0.4)"/>
+  <text x="64" y="405" fill="rgba(255,255,255,0.7)" font-size="10">• Windows PC TAM 2,000M대 → AI PC 전환 사이클 = NVDA Gaming GPU 교체와 동급 이벤트</text>
+  <text x="64" y="421" fill="rgba(255,255,255,0.7)" font-size="10">• AI PC 마진 기존 Gaming GPU보다 높을 것 — 기업+개인 소비자 동시 수요 · 교체 주기 3~5년</text>
+  <text x="64" y="427" fill="rgba(255,255,255,0.35)" font-size="9">Datacenter AI + AI PC Edge = NVDA 두 개 성장 엔진 동시 가동</text>
+
+  <text x="400" y="476" fill="rgba(255,255,255,0.2)" font-size="9" text-anchor="middle">investus.kr · 선류파트너스 · 투자 참고용, 투자 권유 아님</text>
+</svg>
