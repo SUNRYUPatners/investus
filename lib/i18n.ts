@@ -161,12 +161,12 @@ const ko = {
           { label: "Investus 사용법",          sub: "처음 왔다면 여기서 시작하세요" },
           { label: "Investus 소개",            sub: "미국주식 투자 플랫폼" },
           { label: "버전 정보",                sub: "업데이트 이력" },
-          { label: "투자 기초·대가 전략 학습", sub: "주식 기초 · 투자 대가들의 전략" },
         ],
       },
       {
         title: "서비스",
         items: [
+          { label: "투자 기초·대가 전략 학습", sub: "투자 기본 지식 공부방" },
           { label: "공지사항",         sub: "주요 공시 · 서비스 고지" },
           { label: "알림 설정",         sub: "장시작 · 리포트 · 댓글 알림" },
           { label: "피드백 보내기",     sub: "서비스 개선에 도움주세요" },
@@ -548,12 +548,12 @@ const en: typeof ko = {
           { label: "How to use Investus",   sub: "Start here if it's your first time" },
           { label: "About Investus",        sub: "US Stock Investment Platform" },
           { label: "Version",               sub: "Update history" },
-          { label: "Study — Investing Basics", sub: "Basics · Masters' strategies" },
         ],
       },
       {
         title: "Services",
         items: [
+          { label: "Study — Investing Basics", sub: "Investment basics & masters' strategies" },
           { label: "Notice",             sub: "Updates & service announcements" },
           { label: "Notifications",      sub: "Market open · Reports · Comments" },
           { label: "Send Feedback",      sub: "Help us improve the service" },

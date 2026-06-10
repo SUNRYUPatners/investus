@@ -34,8 +34,8 @@ export default async function HomePage() {
             {/* 내 보유종목 (포트폴리오에 종목이 있을 때만 표시) */}
             <PortfolioWidget />
 
-            {/* 내 포트폴리오 AI 분석 — 오늘 등락 이유 요약 */}
-            <HomeAIInsight />
+            {/* 내 포트폴리오 AI 분석 — 데스크톱 전용 위치 (모바일은 Futures Map 아래) */}
+            <div className="hidden lg:block"><HomeAIInsight /></div>
 
             {/* 관심종목 */}
             <WatchlistSection />
@@ -56,6 +56,11 @@ export default async function HomePage() {
             {/* 광고 — 리포트 아래 */}
             <section className="px-4 lg:hidden pt-3">
               <AdFitBanner />
+            </section>
+
+            {/* 시장종합분석 AI — 모바일: Futures Map 아래 */}
+            <section className="px-4 lg:hidden pt-4">
+              <HomeAIInsight />
             </section>
 
             {/* 광고 · 시장심리 · 버핏지수 — 모바일 전용 */}

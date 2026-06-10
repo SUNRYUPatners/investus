@@ -943,13 +943,13 @@ export default function MorePage() {
   const [showFeedback, setShowFeedback] = useState(false);
 
   const MENU_EMOJIS = [
-    ["📖", "📊", "🔖", "📚"],
-    ["📢", "🔔", "💌", "❓"],
+    ["📖", "📊", "🔖"],
+    ["📚", "📢", "🔔", "💌", "❓"],
     ["📄", "🔒", "⚠️"],
   ];
   const MENU_HREFS = [
-    ["/more/guide", "/more/about", "/more/version", "/study"],
-    ["/more/notices", "/more/notifications", undefined, "/more/faq"],
+    ["/more/guide", "/more/about", "/more/version"],
+    ["/study", "/more/notices", "/more/notifications", undefined, "/more/faq"],
     ["/more/terms", "/more/privacy", "/more/disclaimer"],
   ];
 

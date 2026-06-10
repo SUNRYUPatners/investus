@@ -481,6 +481,13 @@ function AskAI({ symbol }: { symbol: string }) {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
+function computeDefaultSymbol(): string {
+  if (MOCK_POSTS.length === 0) return "AAPL";
+  return MOCK_POSTS.reduce((best, post) =>
+    post.createdAt > best.createdAt ? post : best
+  ).symbol;
+}
+
 type VerifyMode    = "none" | "upload" | "broker" | "broker-notice";
 type MainTab       = "discussion" | "creator" | "analyst";
 type AnalystStatus  = "none" | "approved" | "rejected";
@@ -493,7 +500,7 @@ export default function WallPage() {
   const t  = useLocale();
   const w  = t.wall;
   const [mainTab, setMainTab]             = useState<MainTab>("discussion");
-  const [selected, setSelected]           = useState("SPCX");
+  const [selected, setSelected]           = useState(computeDefaultSymbol);
   const [liked, setLiked]                 = useState<Set<number>>(new Set());
   const [showVerify, setShowVerify]       = useState(false);
   const [verifyMode, setVerifyMode]       = useState<VerifyMode>("none");

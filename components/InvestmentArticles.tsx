@@ -1,69 +1,290 @@
 "use client";
 
-import Link from "next/link";
-import { BookOpen, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
-const SECTIONS = [
+type Article = { emoji: string; title: string; desc: string; body: string };
+
+const BASICS: Article[] = [
   {
-    badge:   "투자 기초 지식",
-    title:   "주식이란 무엇인가? 완전 기초부터",
-    desc:    "주식의 개념부터 주주의 권리까지, 투자를 처음 접하는 분을 위한 가장 기본적인 설명입니다.",
-    count:   22,
-    color:   "var(--mint)",
-    anchor:  "#basics",
+    emoji: "📈",
+    title: "주식이란 무엇인가? 완전 기초부터",
+    desc:  "주식의 개념부터 주주의 권리까지, 투자를 처음 접하는 분을 위한 가장 기본적인 설명입니다.",
+    body:  "주식(Stock)은 기업의 소유권을 작게 나눈 단위입니다. 기업이 자금을 조달하기 위해 주식을 발행하면, 이를 매수한 투자자는 해당 기업의 부분 소유자(주주)가 됩니다. 주주는 기업의 이익 분배(배당)를 받을 권리와, 주주총회에서 의결권을 행사할 권리를 갖습니다.\n\n주가는 수요와 공급에 의해 실시간으로 결정됩니다. 기업의 실적이 좋거나 미래 성장 기대가 높아지면 주가가 올라가고, 반대의 경우 내려갑니다. 투자자는 주가 상승에 따른 시세차익과 배당수익으로 수익을 얻을 수 있습니다.",
   },
   {
-    badge:   "투자 대가 전략",
-    title:   "워렌 버핏의 투자 원칙: 60년을 관통하는 7가지 지혜",
-    desc:    "버크셔 해서웨이 주주서한과 버핏의 연설에서 추린, 세상에서 가장 검증된 투자 원칙을 정리합니다.",
-    count:   9,
-    color:   "#f59e0b",
-    anchor:  "#masters",
+    emoji: "🇺🇸",
+    title: "S&P 500 완벽 이해: 미국 증시의 척도",
+    desc:  "S&P 500이 단순한 지수를 넘어 미국 경제 전체의 건강을 나타내는 이유를 알아봅니다.",
+    body:  "S&P 500은 미국을 대표하는 500개 대형 상장기업의 주가를 시가총액 가중 방식으로 집계한 지수입니다. 애플, 마이크로소프트, 아마존 등 미국 경제를 이끄는 핵심 기업들이 포함되어 있으며, 미국 주식시장 전체 시가총액의 약 80%를 커버합니다.\n\n역사적으로 S&P 500은 연평균 약 10%의 수익률을 기록했습니다. 개별 종목보다 분산 투자 효과가 있어 장기 투자의 기준점으로 널리 사용됩니다. VOO, SPY 같은 ETF를 통해 S&P 500 전체에 간편하게 투자할 수 있습니다.",
+  },
+  {
+    emoji: "🗺️",
+    title: "선물 지도(Futures Map) 읽는 법: 장 시작 전 시장 예측",
+    desc:  "나스닥·S&P·다우 선물이 무엇인지, 심야 선물 움직임으로 다음 날 증시를 어떻게 예측하는지 설명합니다.",
+    body:  "선물(Futures)은 미래의 특정 시점에 정해진 가격으로 자산을 사고팔기로 계약하는 금융상품입니다. 주식시장이 닫혀 있는 야간에도 선물 시장은 거래되기 때문에, 투자자들은 다음 날 장 시작 전 시장 분위기를 파악하는 데 선물 지수를 활용합니다.\n\n나스닥 선물이 +1% 이상이면 기술주 강세, S&P 500 선물이 -0.5% 이하면 전반적 약세 출발 가능성이 높습니다. 단, 선물 방향이 반드시 당일 장 마감 방향과 일치하지는 않습니다.",
+  },
+  {
+    emoji: "📊",
+    title: "매크로 경제 핵심 지표 완전 정복",
+    desc:  "GDP, CPI, PCE, 실업률, PMI 등 주식시장에 직접 영향을 주는 핵심 경제지표를 정리합니다.",
+    body:  "GDP(국내총생산): 한 나라의 경제 규모와 성장률을 나타냅니다. GDP 성장이 예상보다 강하면 주식시장에 호재, 침체 우려 시 악재입니다.\n\nCPI(소비자물가지수) & PCE: 인플레이션을 측정합니다. 연준은 PCE를 선호 지표로 사용하며, 인플레이션이 높으면 금리 인상 → 주식 하락 압력이 생깁니다.\n\n실업률: 노동시장 건강을 나타냅니다. PMI(구매관리자지수): 50 이상이면 경기 확장, 50 미만이면 수축을 의미합니다.",
+  },
+  {
+    emoji: "🏦",
+    title: "FOMC와 연준(Fed) 완전 이해: 금리가 왜 중요한가",
+    desc:  "연방공개시장위원회(FOMC) 회의가 무엇이고, 금리 결정이 주식시장에 어떤 영향을 미치는지 핵심을 정리합니다.",
+    body:  "연준(Federal Reserve, Fed)은 미국의 중앙은행입니다. FOMC(연방공개시장위원회)는 연 8회 회의를 열어 기준금리를 결정합니다. 이 금리가 미국뿐 아니라 전 세계 금융시장에 영향을 미칩니다.\n\n금리 인상 → 대출 비용 증가 → 기업 이익 감소 → 주가 하락 압력. 금리 인하 → 자금 조달 쉬워짐 → 기업 성장 기대 → 주가 상승 요인. 특히 기술주(성장주)는 금리에 매우 민감합니다.",
+  },
+  {
+    emoji: "💵",
+    title: "채권과 금리의 기초: 10년물 국채와 역수익률 곡선",
+    desc:  "채권 가격과 금리의 역관계, 10년물 국채가 왜 주식시장의 나침반이 되는지 설명합니다.",
+    body:  "채권(Bond)은 정부나 기업이 돈을 빌리면서 발행하는 차용증입니다. 채권 가격과 금리는 반대로 움직입니다. 금리가 오르면 기존 채권의 가치가 떨어지고, 금리가 내리면 올라갑니다.\n\n미국 10년물 국채 수익률은 '무위험 수익률'의 기준으로 사용됩니다. 10년물 수익률이 오르면 주식의 상대적 매력이 줄어들어 주가 하락 압력이 생깁니다. 역수익률 곡선(2년물 > 10년물)은 역사적으로 경기침체를 예고하는 신호로 알려져 있습니다.",
+  },
+  {
+    emoji: "📅",
+    title: "실적 시즌(어닝 시즌) 완전 정복: EPS·가이던스·컨센서스",
+    desc:  "분기마다 돌아오는 어닝 시즌에서 투자자가 꼭 확인해야 할 핵심 지표와 해석법을 설명합니다.",
+    body:  "어닝 시즌은 기업들이 분기 실적을 발표하는 기간입니다(1·4·7·10월). 주요 확인 지표:\n\nEPS(주당순이익): 순이익 ÷ 발행주식수. 컨센서스(애널리스트 예상 평균) 대비 초과 달성 여부가 중요합니다. 가이던스: 기업이 다음 분기/연도 실적 전망을 발표하는 것. 현재 실적보다 미래 가이던스가 주가에 더 큰 영향을 미치는 경우가 많습니다.",
+  },
+  {
+    emoji: "💰",
+    title: "기업 가치평가 핵심 지표: PER·PBR·EV/EBITDA",
+    desc:  "주식이 비싼지 싼지 판단하는 핵심 밸류에이션 지표들을 초보자도 이해하기 쉽게 설명합니다.",
+    body:  "PER(주가수익비율) = 주가 ÷ EPS. PER이 낮으면 상대적으로 저평가, 높으면 성장 기대가 반영된 것입니다. 동종 업계 평균과 비교하는 것이 중요합니다.\n\nPBR(주가순자산비율) = 주가 ÷ BPS(주당순자산). PBR 1 이하는 장부가치보다 싸게 거래되는 것을 의미합니다.\n\nEV/EBITDA: 기업 전체 가치(EV)를 영업 현금흐름(EBITDA)으로 나눈 값. 부채 규모가 다른 기업을 비교할 때 유용합니다.",
+  },
+  {
+    emoji: "😨",
+    title: "공포·탐욕지수(Fear & Greed Index) 활용법",
+    desc:  "시장 심리를 수치화한 공포·탐욕지수를 투자 타이밍에 활용하는 실전 방법을 설명합니다.",
+    body:  "공포·탐욕지수는 CNN Money가 만든 지표로 0(극단적 공포)~100(극단적 탐욕) 사이 값으로 시장 심리를 표현합니다. 7가지 지표(변동성, 모멘텀, 수요-공급, 안전자산 수요 등)를 종합해 계산합니다.\n\n투자 활용법: 극단적 공포(0~25) 구간은 역발상적으로 좋은 매수 기회일 수 있습니다. 극단적 탐욕(75~100) 구간은 과열 신호로 주의가 필요합니다.",
+  },
+  {
+    emoji: "📏",
+    title: "버핏지수로 시장 거품 측정하기",
+    desc:  "주식 시장 전체 시가총액을 GDP로 나눈 버핏지수의 의미와 해석 방법을 알아봅니다.",
+    body:  "버핏지수 = 미국 주식시장 전체 시가총액 ÷ 미국 GDP × 100(%). 워렌 버핏이 2001년 포춘 인터뷰에서 '가장 좋아하는 주식 밸류에이션 지표'라고 언급하면서 이름이 붙었습니다.\n\n해석 기준: 75% 이하 = 저평가, 75~90% = 적정, 90~115% = 약간 고평가, 115% 이상 = 과열. 이 지표는 장기 사이클 분석에 유용하지만, 단기 매매 신호로 사용하기는 어렵습니다.",
+  },
+  {
+    emoji: "🔄",
+    title: "달러코스트 평균법(DCA): 타이밍 없이 이기는 전략",
+    desc:  "시장 타이밍을 맞추지 않아도 장기적으로 수익을 낼 수 있는 정액 분할 매수 전략을 설명합니다.",
+    body:  "DCA(Dollar Cost Averaging)는 특정 종목 또는 ETF를 일정 주기(매월, 매주)에 일정 금액씩 꾸준히 매수하는 방법입니다. 주가가 쌀 때는 더 많은 주수를, 비쌀 때는 더 적은 주수를 사게 되어 평균 매수가를 낮추는 효과가 있습니다.\n\nDCA의 장점: 시장 타이밍을 맞출 필요가 없습니다. 감정적 의사결정을 줄일 수 있습니다. 장기적으로 복리 효과를 극대화할 수 있습니다.",
+  },
+  {
+    emoji: "🚀",
+    title: "미국 주식 투자 시작하기: 완전 초보 가이드",
+    desc:  "증권사 선택부터 첫 종목 매수까지, 미국 주식 투자의 실전 단계를 차례로 안내합니다.",
+    body:  "1단계: 증권사 선택. 한국 투자자는 키움증권, 미래에셋, NH투자증권 등 국내 증권사를 통해 미국 주식에 투자할 수 있습니다. 수수료와 환전 비용을 비교하세요.\n\n2단계: 계좌 개설 & 달러 환전. 미국 주식은 달러(USD)로 거래됩니다.\n\n3단계: 첫 매수. 처음에는 S&P 500 ETF(VOO, SPY)나 대형 우량주(AAPL, MSFT)로 시작하는 것을 권장합니다.",
+  },
+  {
+    emoji: "🏗️",
+    title: "미국 주식 11개 섹터 한눈에 이해하기",
+    desc:  "S&P 500을 구성하는 11개 주요 섹터의 특성과 경기 사이클에서의 역할을 설명합니다.",
+    body:  "S&P 500은 GICS 기준 11개 섹터로 분류됩니다. 주요 섹터:\n\n정보기술(IT): AAPL, MSFT, NVDA — 성장 국면에서 강함. 헬스케어: JNJ, LLY — 경기 방어적 성격. 금융: JPM, BAC — 금리 인상 시 수혜. 에너지: XOM, CVX — 유가와 연동. 소비재(필수): 식음료, 생활용품 — 경기침체 방어주.",
+  },
+  {
+    emoji: "💸",
+    title: "배당주 투자 완전 기초: 배당수익률·배당귀족·DRIP",
+    desc:  "매달 현금이 들어오는 배당주 투자의 핵심 개념과 미국 배당귀족 종목 활용법을 설명합니다.",
+    body:  "배당수익률 = 연간 배당금 ÷ 주가 × 100(%). 4%면 주가 $100 기준 연간 $4 배당을 받는다는 의미입니다. 미국 주식은 보통 분기(3개월)마다 배당을 지급합니다.\n\n배당귀족(Dividend Aristocrats): S&P 500 기업 중 25년 이상 연속 배당을 인상한 기업 그룹입니다. JNJ, KO, PG, MMM 등이 포함됩니다. DRIP(배당 재투자 프로그램): 배당금으로 추가 주식을 자동 매수하는 방법으로 복리 효과를 극대화합니다.",
+  },
+  {
+    emoji: "📉",
+    title: "기술적 분석 기초: 차트 읽는 법과 핵심 지표",
+    desc:  "이동평균선·RSI·MACD·지지와 저항선 등 미국 주식 차트 분석의 핵심 도구를 초보자 눈높이로 설명합니다.",
+    body:  "이동평균선(MA): 일정 기간의 평균 주가를 나타내는 선. 50일선과 200일선이 가장 많이 사용됩니다. 50일선이 200일선을 상향 돌파하면 '골든크로스(매수 신호)', 하향 이탈하면 '데드크로스(매도 신호)'라고 합니다.\n\nRSI(상대강도지수): 0~100 범위로 과매수(70 이상)/과매도(30 이하) 상태를 판단합니다. MACD: 단기·장기 이동평균선의 차이로 추세 전환을 포착합니다.",
+  },
+  {
+    emoji: "💱",
+    title: "환율과 달러가 미국 주식에 미치는 영향",
+    desc:  "원달러 환율, 달러인덱스(DXY)가 미국 주식 투자 수익률과 기업 실적에 어떤 영향을 주는지 설명합니다.",
+    body:  "한국 투자자는 달러로 미국 주식을 사기 때문에 환율 변동이 실질 수익률에 영향을 줍니다. 원화 약세(달러 강세) 시: 환전 비용이 증가하지만, 달러 자산의 원화 환산 가치는 높아집니다.\n\nDXY(달러인덱스): 달러의 상대 강도를 나타내는 지수. DXY가 강세면 신흥국 자금이 미국으로 유입, 약세면 위험 자산 선호 경향이 있습니다.",
+  },
+  {
+    emoji: "📦",
+    title: "ETF 완전 정복: 종류·선택 기준·주의사항",
+    desc:  "인덱스·섹터·테마·레버리지 ETF의 차이와 내 포트폴리오에 맞는 ETF를 고르는 기준을 설명합니다.",
+    body:  "ETF(Exchange Traded Fund)는 주식처럼 거래소에서 실시간 매매 가능한 펀드입니다. 종류:\n\n인덱스 ETF: S&P 500(VOO, SPY), 나스닥100(QQQ) 추종. 장기 투자의 핵심. 섹터 ETF: XLK(IT), XLF(금융) 등 특정 업종에 집중. 레버리지/인버스 ETF: TQQQ(3배 레버리지) 등 — 단기 트레이딩용, 장기 보유 비적합.\n\n선택 기준: 수수료율(낮을수록 좋음), 운용 자산 규모(AUM), 추적 오차율을 확인하세요.",
+  },
+  {
+    emoji: "🏷️",
+    title: "자사주 매입·주식 분할·배당의 진짜 의미",
+    desc:  "주가에 영향을 주는 자사주 매입(Buyback), 주식 분할(Stock Split), 특별 배당의 개념과 투자자가 봐야 할 신호를 설명합니다.",
+    body:  "자사주 매입(Buyback): 기업이 자기 주식을 직접 매수하는 것. 유통 주식 수를 줄여 EPS를 높이고 주주 가치를 높입니다. 경영진이 주가가 저평가됐다고 판단할 때 실시하는 경향이 있습니다.\n\n주식 분할(Stock Split): 예를 들어 10:1 분할이면 $1,000짜리 주식 1주가 $100짜리 10주로 바뀝니다. 총 시가총액은 동일하지만 접근성이 높아집니다.",
+  },
+  {
+    emoji: "🎰",
+    title: "옵션 기초: 콜·풋·IV·만기일 쉽게 이해하기",
+    desc:  "미국 주식에서 자주 등장하는 옵션(콜·풋)의 기본 개념과 개인 투자자가 알아야 할 핵심 용어를 설명합니다.",
+    body:  "옵션은 정해진 가격(행사가)에 주식을 사거나 팔 수 있는 권리를 거래하는 파생상품입니다.\n\n콜옵션(Call): 주식을 행사가에 살 수 있는 권리. 주가 상승 시 수익. 풋옵션(Put): 주식을 행사가에 팔 수 있는 권리. 주가 하락 시 수익. IV(내재 변동성): 실적 발표 전 IV가 급등하는 현상(IV Crush)에 주의하세요. 옵션 거래는 레버리지 특성상 초보자에게 매우 위험합니다.",
   },
 ];
 
+const MASTERS: Article[] = [
+  {
+    emoji: "🦉",
+    title: "워렌 버핏의 투자 원칙: 60년을 관통하는 7가지 지혜",
+    desc:  "버크셔 해서웨이 주주서한과 버핏의 연설에서 추린, 세상에서 가장 검증된 투자 원칙을 정리합니다.",
+    body:  "1. 이해하는 사업에만 투자하라(능력 범위, Circle of Competence). 2. 훌륭한 경영진을 찾아라 — 정직함과 능력을 함께 갖춘 CEO. 3. 적정 가격에 훌륭한 기업을 사라 — '훌륭한 기업을 공정한 가격에'가 '평범한 기업을 저렴한 가격에'보다 낫다. 4. 장기 보유 — '영원히 보유할 주식만 사라.' 5. 시장 하락을 두려워 말라 — 공포가 지배할 때 탐욕을 가져라. 6. 배당과 자사주 매입으로 주주 가치를 높이는 기업을 선호하라. 7. 부채가 적고 자기자본이익률(ROE)이 높은 기업을 찾아라.",
+  },
+  {
+    emoji: "🎯",
+    title: "피터 린치의 10루타 전략: 일상에서 찾는 10배 종목",
+    desc:  "마젤란 펀드를 13년간 29배 불린 피터 린치가 일상에서 종목을 발굴하고 언제 사고파는지 설명합니다.",
+    body:  "린치의 핵심 원칙: '직접 쓰는 제품을 만드는 회사에 투자하라.' 소비자로서 먼저 좋은 회사를 발견하고, 나중에 투자자로 확인하라는 뜻입니다.\n\n종목 분류: Slow Growers(완만 성장주), Stalwarts(대형 안정주), Fast Growers(고성장주), Cyclicals(경기 민감주), Turnarounds(회생주), Asset Plays(자산주). '10루터(10-bagger)'는 10배 수익 종목을 뜻합니다.",
+  },
+  {
+    emoji: "🧠",
+    title: "찰리 멍거의 다학제적 투자 사고법",
+    desc:  "버크셔 해서웨이 부회장 찰리 멍거가 말한 정신 모델(Mental Models), 역발상, 심리 편향 극복법을 정리합니다.",
+    body:  "멍거는 '격자형 사고(Latticework of Mental Models)'를 강조했습니다. 투자를 잘 하려면 단순히 금융 지식만이 아니라 심리학, 역사, 물리학, 생물학 등 다양한 학문의 원리를 연결해서 생각해야 한다는 것입니다.\n\n핵심 원칙: 1. 역으로 생각하라(Invert) — '어떻게 성공할까?'보다 '어떻게 실패를 피할까?'를 먼저 생각. 2. 인간 심리 편향을 경계하라. 3. 좋은 기업을 기다리며 집중 투자하라.",
+  },
+  {
+    emoji: "📚",
+    title: "존 보글의 인덱스 투자 철학: 단순함이 이긴다",
+    desc:  "뱅가드 창업자이자 인덱스 펀드의 아버지 존 보글이 평생 강조한 저비용 장기 인덱스 투자의 원칙을 정리합니다.",
+    body:  "보글의 핵심 메시지: '시장을 이길 수 없다면, 시장 자체를 소유하라.' 대부분의 액티브 펀드 매니저들이 장기적으로 인덱스 펀드를 이기지 못하며, 그 이유는 비용 때문입니다.\n\n'비용이 이긴다(Costs Matter)': 수수료 1%가 30년 후 운용 자산의 25%를 갉아먹습니다. '아무것도 하지 말고 그냥 있어라(Don't just do something, stand there)' — 잦은 매매가 수익을 갉아먹는다는 조언입니다.",
+  },
+  {
+    emoji: "♾️",
+    title: "복리의 마법: 시간이 가장 큰 자산인 이유",
+    desc:  "아인슈타인이 '세계 8번째 불가사의'라고 부른 복리의 원리와 장기 투자에서 시간이 왜 핵심인지 설명합니다.",
+    body:  "복리(Compound Interest)는 이자에 이자가 붙는 효과입니다. 연 10% 수익률 기준: 10년 후 원금의 2.6배, 20년 후 6.7배, 30년 후 17.4배, 40년 후 45.3배가 됩니다.\n\n투자 시작 시점이 결정적입니다. 복리의 핵심: '시간 × 일관성 × 수익률.' 버핏 자산의 95%는 65세 이후에 쌓였습니다 — 복리가 뒤로 갈수록 폭발적으로 커지기 때문입니다.",
+  },
+  {
+    emoji: "🎨",
+    title: "포트폴리오 구성의 기초: 분산투자와 리밸런싱",
+    desc:  "달걀을 한 바구니에 담지 마라는 원칙을 실제 포트폴리오에 적용하는 구체적인 방법을 설명합니다.",
+    body:  "분산투자는 서로 상관관계가 낮은 자산에 나눠 투자해 전체 포트폴리오의 변동성을 줄이는 전략입니다.\n\n기초 포트폴리오 예시: 성장형 — 주식 80% + 채권 20%. 안정형 — 주식 60% + 채권 30% + 현금 10%. 리밸런싱: 목표 비중에서 벗어난 자산을 원래 비중으로 되돌리는 작업. 연 1~2회 실시하는 것이 일반적입니다.",
+  },
+  {
+    emoji: "✅",
+    title: "대가들이 말하는 좋은 주식 선별 기준 10가지",
+    desc:  "버핏·린치·멍거·보글이 공통으로 강조한 우량주 선별 핵심 기준을 하나의 체크리스트로 정리합니다.",
+    body:  "1. 강력한 경쟁 해자(Moat) — 브랜드, 특허, 네트워크 효과.\n2. 일관된 이익 성장 — 최소 5~10년간 EPS 증가 추세.\n3. 높은 자기자본이익률(ROE) — 15% 이상이 이상적.\n4. 낮은 부채비율 — 장기부채/자기자본 50% 이하.\n5. 자유현금흐름(FCF) 창출.\n6. 주주 친화적 경영진 — 자사주 매입, 배당 증가 이력.\n7. 합리적인 밸류에이션.\n8. 이해 가능한 사업 모델.\n9. 강력한 브랜드 인지도.\n10. 장기 성장 산업에 위치.",
+  },
+  {
+    emoji: "🔍",
+    title: "벤저민 그레이엄의 가치투자: 안전마진의 원칙",
+    desc:  "워렌 버핏의 스승 벤저민 그레이엄이 창안한 가치투자와 '안전마진' 개념을 초보자 눈높이로 설명합니다.",
+    body:  "그레이엄은 주식을 '사업의 소유권'으로 보고, 내재 가치(Intrinsic Value)보다 충분히 낮은 가격에 살 때만 매수하라고 했습니다. 이 차이를 '안전마진(Margin of Safety)'이라고 합니다.\n\n핵심 원칙: 시장을 '미스터 마켓'이라 불렀습니다 — 매일 감정적으로 가격을 제시하는 조울증 환자 같은 존재. 현명한 투자자는 미스터 마켓의 감정에 흔들리지 않고 내재 가치에 집중합니다.",
+  },
+  {
+    emoji: "🌱",
+    title: "필립 피셔의 성장주 투자: 스커틀버트와 15가지 원칙",
+    desc:  "성장주 투자의 선구자 필립 피셔가 수십 년간 정제한 우수 성장 기업 발굴법과 체크리스트를 설명합니다.",
+    body:  "피셔는 그레이엄의 정량 분석과 달리 기업의 질적 특성에 집중했습니다. '스커틀버트(Scuttlebutt)' 방법: 고객, 경쟁사, 납품업체, 전직 직원 등을 직접 인터뷰해 기업의 실제 모습을 파악하는 것입니다.\n\n15가지 원칙 중 핵심: 1. 매출 성장 잠재력이 수년간 지속될 제품/서비스가 있는가? 2. R&D 투자가 충분한가? 3. 경영진의 정직성과 능력은? 버핏은 자신을 '85% 그레이엄, 15% 피셔'라고 표현했습니다.",
+  },
+  {
+    emoji: "🌊",
+    title: "레이 달리오의 올웨더 포트폴리오: 모든 경제 환경에서 살아남기",
+    desc:  "세계 최대 헤지펀드 브리지워터 창업자 레이 달리오가 설계한 '어떤 경제 환경에서도 무너지지 않는' 포트폴리오를 설명합니다.",
+    body:  "달리오는 경제 환경을 4가지로 분류했습니다: 성장 상승·하강 × 인플레이션 상승·하강. 각 환경에서 잘 수행하는 자산을 균형 있게 배분하면 어떤 환경에서도 큰 손실 없이 장기 성장할 수 있다는 개념입니다.\n\n올웨더 배분: 주식 30% + 장기국채 40% + 중기국채 15% + 금 7.5% + 원자재 7.5%. 1926~2013년 기준 연평균 9.7% 수익, 최대 손실 -3.93%를 기록했습니다.",
+  },
+  {
+    emoji: "⏰",
+    title: "하워드 막스의 시장 사이클 이론: 어디에 서 있는지 알기",
+    desc:  "오크트리 캐피털 창업자 하워드 막스가 강조하는 시장 사이클 인식과 역발상 투자의 핵심을 설명합니다.",
+    body:  "막스는 '가장 중요한 것(The Most Important Thing)'에서 시장이 항상 사이클을 따른다고 말합니다. 투자자들의 탐욕과 공포가 반복하면서 주식이 과열과 침체를 반복합니다.\n\n실무 원칙: '지금 우리가 어디에 있는지' 알아야 합니다. 가격이 좋을 때 공격적으로, 나쁠 때 방어적으로. 시장이 낙관적일 때 위험을 더 느끼고, 비관적일 때 기회를 찾아라.",
+  },
+  {
+    emoji: "🧭",
+    title: "장기 투자 마인드셋: 대가들이 공통으로 강조하는 것",
+    desc:  "버핏·린치·멍거·보글이 수십 년간 반복해서 강조한 장기 투자자의 핵심 마인드셋을 정리합니다.",
+    body:  "모든 투자 대가들이 공통으로 강조하는 것:\n\n1. 인내심: '주식시장은 참을성 없는 사람의 돈을 참을성 있는 사람에게 이전하는 장치다.' — 버핏. 2. 단순함: 복잡한 전략보다 단순하고 검증된 방법이 더 효과적입니다. 3. 감정 통제: 시장 하락 시 공황 매도는 최악의 실수입니다. 4. 지속적 학습: 모든 대가들은 평생 독서와 공부를 멈추지 않았습니다. 5. 장기 관점: '10년 이상 보유하지 않을 주식이라면 10분도 보유하지 마라.'",
+  },
+];
+
+const SECTIONS = [
+  { id: "basics",  badge: "투자 기초 지식",  color: "var(--mint)", articles: BASICS  },
+  { id: "masters", badge: "투자 대가 전략",  color: "#f59e0b",     articles: MASTERS },
+];
+
+function ArticleItem({ article, color }: { article: Article; color: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="rounded-xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full text-left flex items-start gap-3 p-3.5 active:opacity-80 transition-opacity"
+        style={{ background: "var(--card)" }}
+      >
+        <span className="text-2xl flex-shrink-0 leading-none mt-0.5">{article.emoji}</span>
+        <div className="flex-1 min-w-0">
+          <p className="text-[13px] font-bold leading-snug" style={{ color: "var(--text)" }}>
+            {article.title}
+          </p>
+          <p className="text-[11px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
+            {article.desc}
+          </p>
+        </div>
+        {open
+          ? <ChevronUp  className="w-4 h-4 flex-shrink-0 mt-1 opacity-50" style={{ color: "var(--muted)" }} />
+          : <ChevronDown className="w-4 h-4 flex-shrink-0 mt-1 opacity-50" style={{ color: "var(--muted)" }} />
+        }
+      </button>
+      {open && (
+        <div
+          className="px-4 pb-4 pt-3 text-[12px] leading-relaxed whitespace-pre-line"
+          style={{ background: "var(--card)", color: "var(--text)", borderTop: "1px solid var(--border)" }}
+        >
+          {article.body}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SectionBlock({ id, badge, color, articles }: typeof SECTIONS[number]) {
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? articles : articles.slice(0, 1);
+
+  return (
+    <div>
+      <div className="flex items-center gap-2 mb-3">
+        <span
+          className="inline-block text-[10px] font-bold px-2.5 py-1 rounded-full"
+          style={{ background: `${color}18`, color }}
+        >
+          {badge}
+        </span>
+      </div>
+      <div className="flex flex-col gap-2">
+        {visible.map((article, i) => (
+          <ArticleItem key={i} article={article} color={color} />
+        ))}
+      </div>
+      {!expanded && articles.length > 1 && (
+        <button
+          onClick={() => setExpanded(true)}
+          className="mt-2 w-full py-2.5 rounded-xl text-[12px] font-semibold flex items-center justify-center gap-1.5 active:opacity-80 transition-opacity"
+          style={{ background: `${color}10`, color, border: `1px solid ${color}30` }}
+        >
+          <ChevronDown className="w-3.5 h-3.5" />
+          더보기 ({articles.length - 1}개 글 더 보기)
+        </button>
+      )}
+      {expanded && (
+        <button
+          onClick={() => setExpanded(false)}
+          className="mt-2 w-full py-2.5 rounded-xl text-[12px] font-semibold flex items-center justify-center gap-1.5 active:opacity-80 transition-opacity"
+          style={{ background: `${color}10`, color, border: `1px solid ${color}30` }}
+        >
+          <ChevronUp className="w-3.5 h-3.5" />
+          접기
+        </button>
+      )}
+    </div>
+  );
+}
+
 export function InvestmentArticles() {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-6">
       {SECTIONS.map((s) => (
-        <Link
-          key={s.badge}
-          href={`/study${s.anchor}`}
-          style={{ textDecoration: "none" }}
-        >
-          <div
-            className="rounded-2xl border p-4 flex gap-3 active:opacity-80 transition-opacity"
-            style={{ background: "var(--card)", borderColor: "var(--border)" }}
-          >
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-              style={{ background: `${s.color}18` }}
-            >
-              <BookOpen className="w-5 h-5" style={{ color: s.color }} />
-            </div>
-
-            <div className="flex-1 min-w-0">
-              <span
-                className="inline-block text-[9px] font-bold px-2 py-0.5 rounded-full mb-1.5"
-                style={{ background: `${s.color}18`, color: s.color }}
-              >
-                {s.badge}
-              </span>
-              <p className="text-[13px] font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
-                {s.title}
-              </p>
-              <p className="text-[11px] leading-snug mb-2" style={{ color: "var(--muted)" }}>
-                {s.desc}
-              </p>
-              <div className="flex items-center gap-1">
-                <span className="text-[11px] font-semibold" style={{ color: s.color }}>
-                  더보기 ({s.count}개 글)
-                </span>
-                <ChevronRight className="w-3 h-3" style={{ color: s.color }} />
-              </div>
-            </div>
-          </div>
-        </Link>
+        <SectionBlock key={s.id} {...s} />
       ))}
     </div>
   );

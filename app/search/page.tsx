@@ -9,6 +9,7 @@ import { TickerTape } from "@/components/TickerTape";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { GuruHoldings } from "@/components/GuruHoldings";
 import { AdFitBanner } from "@/components/AdFitBanner";
+import { NewsSection } from "@/components/NewsSection";
 import { Star } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
 const UP   = "#10b981";
@@ -246,6 +247,11 @@ export default function SearchPage() {
               </div>
             ) : (
               <div className="flex flex-col gap-6">
+                {/* 시장 뉴스 — 모바일 최상단 */}
+                <div className="lg:hidden">
+                  <NewsSection />
+                </div>
+
                 {/* 투자 대가 13F — 모바일에서만 여기 */}
                 <div className="lg:hidden">
                   <GuruHoldings />
@@ -254,6 +260,11 @@ export default function SearchPage() {
                 {/* 광고 — 모바일 전용 */}
                 <div className="lg:hidden">
                   <AdFitBanner />
+                </div>
+
+                {/* 시장 뉴스 — 데스크톱: 추천주식 위 */}
+                <div className="hidden lg:block">
+                  <NewsSection />
                 </div>
 
                 {/* Investus 추천주식 */}
