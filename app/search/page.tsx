@@ -11,8 +11,6 @@ import { GuruHoldings } from "@/components/GuruHoldings";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { Star } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
-import { NewsSection } from "@/components/NewsSection";
-
 const UP   = "#10b981";
 const DOWN = "#ef4444";
 
@@ -304,10 +302,6 @@ export default function SearchPage() {
                   </div>
                 </div>
 
-                {/* 시장 뉴스 */}
-                <div>
-                  <NewsSection />
-                </div>
               </div>
             )}
           </div>

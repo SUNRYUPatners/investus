@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { ReportFeed } from "@/components/ReportFeed";
 import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
+import { InvestmentArticles } from "@/components/InvestmentArticles";
 import Link from "next/link";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { getLocale } from "@/lib/getLocale";
@@ -47,41 +48,6 @@ export default async function InsightPage() {
     </Link>
   );
 
-  /* ── 공부방 배너 (재사용) ── */
-  const StudyBanner = (
-    <Link
-      href="/study"
-      className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
-      style={{ borderColor: "rgba(96,165,250,0.3)" }}
-    >
-      <div
-        className="relative px-5 py-5 flex items-center gap-4"
-        style={{ background: "linear-gradient(135deg, #0d1525 0%, #0a0c10 60%, #101520 100%)" }}
-      >
-        <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(circle at 80% 50%, rgba(96,165,250,0.08) 0%, transparent 60%)" }} />
-        <div className="relative w-[68px] h-[68px] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg"
-          style={{ background: "linear-gradient(145deg, #0d1c30, #071018)", border: "1px solid rgba(96,165,250,0.4)", boxShadow: "0 8px 24px rgba(96,165,250,0.15)" }}>
-          <span className="text-3xl">📚</span>
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-2"
-            style={{ background: "rgba(96,165,250,0.15)", color: "#60a5fa" }}>
-            ✦ 투자 기초 공부
-          </div>
-          <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>공부방 — 투자 기초·대가 전략</p>
-          <p className="text-[11px] mb-2.5" style={{ color: "var(--muted)" }}>S&P500·FOMC·ETF부터 버핏·달리오 원칙까지</p>
-          <div className="flex items-center justify-between">
-            <p className="text-xs" style={{ color: "#60a5fa" }}>추천 도서 · 투자 인사이트</p>
-            <span className="text-[11px] font-bold px-3 py-1.5 rounded-full"
-              style={{ background: "linear-gradient(135deg, #1d4ed8, #3b82f6)", color: "#fff" }}>
-              보러가기 →
-            </span>
-          </div>
-        </div>
-      </div>
-    </Link>
-  );
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
@@ -94,7 +60,7 @@ export default async function InsightPage() {
           <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
         </div>
         <section className="px-4 mb-6">{EduBanner}</section>
-        <section className="px-4 mb-6">{StudyBanner}</section>
+        <section className="px-4 mb-6"><InvestmentArticles /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6"><ReportFeed /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
@@ -131,7 +97,7 @@ export default async function InsightPage() {
           {/* 배너 — 항상 보임, 절대 클리핑 안 됨 */}
           <div className="flex flex-col gap-5 flex-shrink-0">
             {EduBanner}
-            {StudyBanner}
+            <InvestmentArticles />
           </div>
 
           {/* 나머지 — 남은 공간 내 스크롤 */}

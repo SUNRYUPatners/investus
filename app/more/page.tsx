@@ -943,12 +943,12 @@ export default function MorePage() {
   const [showFeedback, setShowFeedback] = useState(false);
 
   const MENU_EMOJIS = [
-    ["📖", "📊", "🔖"],
+    ["📖", "📊", "🔖", "📚"],
     ["📢", "🔔", "💌", "❓"],
     ["📄", "🔒", "⚠️"],
   ];
   const MENU_HREFS = [
-    ["/more/guide", "/more/about", "/more/version"],
+    ["/more/guide", "/more/about", "/more/version", "/study"],
     ["/more/notices", "/more/notifications", undefined, "/more/faq"],
     ["/more/terms", "/more/privacy", "/more/disclaimer"],
   ];
@@ -998,34 +998,6 @@ export default function MorePage() {
           <div>
             {/* Profile — top left on desktop */}
             <AuthSection />
-
-            {/* 공부방 배너 */}
-            <Link href="/study" style={{ textDecoration: "none" }}>
-              <div
-                className="rounded-2xl overflow-hidden border mb-6 active:opacity-90 transition-opacity"
-                style={{ borderColor: "rgba(96,165,250,0.3)" }}
-              >
-                <div
-                  className="relative px-5 py-4 flex items-center gap-4"
-                  style={{ background: "linear-gradient(135deg, #0d1525 0%, #0a0c10 60%, #101520 100%)" }}
-                >
-                  <div className="absolute inset-0 pointer-events-none"
-                    style={{ background: "radial-gradient(circle at 80% 50%, rgba(96,165,250,0.08) 0%, transparent 60%)" }} />
-                  <div className="relative w-12 h-12 rounded-2xl flex-shrink-0 flex items-center justify-center"
-                    style={{ background: "linear-gradient(145deg, #0d1c30, #071018)", border: "1px solid rgba(96,165,250,0.4)" }}>
-                    <span className="text-2xl">📚</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>공부방 — 투자 기초·대가 전략</p>
-                    <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>S&P500·FOMC·ETF부터 버핏·달리오 원칙까지</p>
-                  </div>
-                  <span className="text-[11px] font-bold px-3 py-1.5 rounded-full flex-shrink-0"
-                    style={{ background: "linear-gradient(135deg, #1d4ed8, #3b82f6)", color: "#fff" }}>
-                    보러가기 →
-                  </span>
-                </div>
-              </div>
-            </Link>
 
             {/* Mobile: creator + brand card here */}
             <div className="lg:hidden">

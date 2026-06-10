@@ -493,7 +493,7 @@ export default function WallPage() {
   const t  = useLocale();
   const w  = t.wall;
   const [mainTab, setMainTab]             = useState<MainTab>("discussion");
-  const [selected, setSelected]           = useState("NVDA");
+  const [selected, setSelected]           = useState("SPCX");
   const [liked, setLiked]                 = useState<Set<number>>(new Set());
   const [showVerify, setShowVerify]       = useState(false);
   const [verifyMode, setVerifyMode]       = useState<VerifyMode>("none");
@@ -1456,7 +1456,7 @@ export default function WallPage() {
             <AdFitBanner />
 
             {/* ── 시상대 포디움 ── */}
-            <div
+            {CREATORS.length >= 3 && <div
               className="rounded-2xl border overflow-hidden mt-5 mb-4"
               style={{ background: "var(--card)", borderColor: "var(--border)" }}
             >
@@ -1554,7 +1554,7 @@ export default function WallPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div>}
 
             <div className="flex items-center justify-between mb-2 mt-2">
               <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{w.creatorTitle}</h2>

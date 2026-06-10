@@ -158,9 +158,10 @@ const ko = {
       {
         title: "앱 정보",
         items: [
-          { label: "Investus 사용법", sub: "처음 왔다면 여기서 시작하세요" },
-          { label: "Investus 소개",   sub: "미국주식 투자 플랫폼" },
-          { label: "버전 정보",         sub: "업데이트 이력" },
+          { label: "Investus 사용법",          sub: "처음 왔다면 여기서 시작하세요" },
+          { label: "Investus 소개",            sub: "미국주식 투자 플랫폼" },
+          { label: "버전 정보",                sub: "업데이트 이력" },
+          { label: "투자 기초·대가 전략 학습", sub: "주식 기초 · 투자 대가들의 전략" },
         ],
       },
       {
@@ -544,9 +545,10 @@ const en: typeof ko = {
       {
         title: "App Info",
         items: [
-          { label: "How to use Investus", sub: "Start here if it's your first time" },
-          { label: "About Investus",   sub: "US Stock Investment Platform" },
-          { label: "Version",          sub: "Update history" },
+          { label: "How to use Investus",   sub: "Start here if it's your first time" },
+          { label: "About Investus",        sub: "US Stock Investment Platform" },
+          { label: "Version",               sub: "Update history" },
+          { label: "Study — Investing Basics", sub: "Basics · Masters' strategies" },
         ],
       },
       {
