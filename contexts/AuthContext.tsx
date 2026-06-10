@@ -138,7 +138,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const loginWithOAuth = async (provider: "google" | "kakao") => {
     await getSupabase().auth.signInWithOAuth({
       provider,
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`,
+        ...(provider === "kakao" && { scopes: "profile_image profile_nickname" }),
+      },
     });
   };
 

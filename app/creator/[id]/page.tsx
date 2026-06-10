@@ -4,6 +4,7 @@ import { use, useState } from "react";
 import Link from "next/link";
 import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard } from "lucide-react";
 import { Header } from "@/components/Header";
+import { AdGateModal } from "@/components/AdGateModal";
 import { getCreator, contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
 
 const ACCOUNT = { bank: "카카오뱅크", number: "3333-22-2070396", holder: "류현우" };
@@ -353,7 +354,28 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
 }
 
 function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; locked: boolean; onUnlock: () => void }) {
+  const [showGate, setShowGate] = useState(false);
+  const [opened, setOpened] = useState(false);
+
+  function handleOpen() {
+    if (opened) return;
+    setShowGate(true);
+  }
+
+  function handleConfirm() {
+    setShowGate(false);
+    setOpened(true);
+  }
+
   return (
+    <>
+    {showGate && (
+      <AdGateModal
+        title={content.title}
+        onConfirm={handleConfirm}
+        onClose={() => setShowGate(false)}
+      />
+    )}
     <div className="rounded-2xl border overflow-hidden"
       style={{ background: "var(--card)", borderColor: locked ? "rgba(99,102,241,0.2)" : "var(--border)" }}>
       <div className="p-4">
@@ -406,9 +428,26 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
             <span className="flex items-center gap-0.5 text-[10px]" style={{ color: "var(--muted)" }}>
               <Eye className="w-3 h-3" />{content.viewCount.toLocaleString()}
             </span>
+            {!locked && content.type === "book" && (
+              opened ? (
+                <span className="text-[10px] px-2 py-0.5 rounded-lg font-semibold"
+                  style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+                  ✓ 열람 완료
+                </span>
+              ) : (
+                <button
+                  onClick={handleOpen}
+                  className="text-[10px] px-2.5 py-1 rounded-lg font-bold transition-opacity hover:opacity-80 active:scale-95"
+                  style={{ background: "rgba(192,132,252,0.15)", color: "rgba(192,132,252,0.95)", border: "1px solid rgba(192,132,252,0.25)" }}
+                >
+                  읽기
+                </button>
+              )
+            )}
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

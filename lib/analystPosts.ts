@@ -17,6 +17,73 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-06-10 신규 ─────────────────────────────────────────────────────
+  {
+    id: -46,
+    alias: "여의도 매 #17",
+    symbol: "SPCX",
+    content:
+      "SpaceX Bastrop 기가팩토리 + Google·Anthropic $21.5B 계약 세트가 포인트임. 임차인 확정 전에 기가팩토리 짓는 게 아니라 계약 먼저 따고 짓는 구조임. 이게 IRR 계산이 완전히 다른 거임. Starlink S-1 연매출 $10.8B에 AI 임대 연 $4B+ 더하면 SpaceX 연매출 $15B+ 구조가 되는 거고 IPO 기업가치 $500B 논의가 시작될 수 있는 재료임. 지금 $350B은 Starlink 기준으로도 낮은 거임.",
+    likes: 203,
+    comments: 4,
+    created_at: new Date(Date.now() - 1000 * 60 * 7).toISOString(),
+    liked: false,
+  },
+  {
+    id: -45,
+    alias: "판교 황소 #31",
+    symbol: "TSLA",
+    content:
+      "오늘 테슬라 뉴스 3개가 다 중요함. 네덜란드 FSD 데이터가 제일 큰 거임. 수동 대비 충돌 3.5배 감소는 수치가 아니라 규제 해제 논거임. EU 규제 기관이 이 데이터 보면 FSD Supervised 안 풀어줄 이유가 없고 독일·프랑스까지 열리면 FSD 구독 수익이 유럽에서 터지는 거임. 네바다 허가 + 텍사스 VIN 8대는 로보택시 확장 실행력 확인이고 Semi EU는 세 번째 수익축이 형성되는 거임. 오늘이 테슬라 투자자한테 좋은 날임.",
+    likes: 178,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 14).toISOString(),
+    liked: false,
+  },
+  {
+    id: -44,
+    alias: "강남 독수리 #52",
+    symbol: "NVDA",
+    content:
+      "젠슨 황이 '매수 기회'라고 직접 말한 거 처음임. 그분이 원래 주가 관련 발언 안 하는데 수주잔고 H1 2027 확보 상태에서 이 말 한 거임. Apple+Google+NVDA AI 클라우드 연합 구도도 NVDA한테는 어차피 양쪽에 GPU 납품하는 구조라 무조건 수혜임. Intel 2028칩 발주는 공급 다변화 포인트인데 Intel 파운드리 살리는 데도 기여해서 CHIPS법 수혜 구조임. 조정 오면 분할 매수 관점.",
+    likes: 156,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 21).toISOString(),
+    liked: false,
+  },
+  {
+    id: -43,
+    alias: "서초 매 #64",
+    symbol: null,
+    content:
+      "중국 $2,950억 AI 프로젝트가 NVDA한테 위협이지만 전체 맥락은 AI 인프라 수요가 전세계적으로 폭발한다는 증거임. 미국 빅3 CAPEX $2,250억 + 중국 $2,950억이면 글로벌 AI 인프라 투자 규모가 $5T+ 방향으로 가는 거임. OpenAI IPO 확률 급등 + JPMorgan AI 에이전트 배포까지 더하면 AI 슈퍼사이클 논리가 더 강해지는 날임. AI 섹터 전체 롱 포지션 유지 의견.",
+    likes: 134,
+    comments: 2,
+    created_at: new Date(Date.now() - 1000 * 60 * 33).toISOString(),
+    liked: false,
+  },
+  {
+    id: -42,
+    alias: "을지로 사자 #77",
+    symbol: "TSLA",
+    content:
+      "Starlink S-1 ARPU -33%를 네거티브로 보는 시각이 있는데 틀린 거임. 총매출이 $2.75B에서 $10.8B(연환산)으로 4배 증가한 거임. ARPU 하락은 저가 플랜 출시 + 신흥국 시장 확장의 결과이고 B2B 파이프라인(30개+ 통신사, 항공 38개사)이 성숙하면 ARPU는 반등함. 지금 $10.8B 연매출에 PSR 10배 적용하면 Starlink 단독 $108B임. SpaceX 전체 $350B 안에 이게 들어있는 거임.",
+    likes: 147,
+    comments: 3,
+    created_at: new Date(Date.now() - 1000 * 60 * 48).toISOString(),
+    liked: false,
+  },
+  {
+    id: -41,
+    alias: "광화문 늑대 #69",
+    symbol: "TSLA",
+    content:
+      "Semi EU 이 타이밍에 BD 채용하는 건 2027년 대량 출시 준비임. EU 탄소 규제 2030년 상용차 CO₂ 45% 감축 의무면 구조적으로 전기 트럭 강제 수요가 생기는 거임. Class 8 디젤 대비 에너지 비용 70% 절감 + 500마일+ 항속은 EU 물류사 입장에서 TCO 계산하면 무조건 Tesla Semi임. Daimler eActros가 최대 경쟁자인데 Megacharger 네트워크 없는 약점이 있음. EU 상용 트럭 30만 대 시장에서 점유율 10%만 해도 연 3만 대임.",
+    likes: 162,
+    comments: 4,
+    created_at: new Date(Date.now() - 1000 * 60 * 61).toISOString(),
+    liked: false,
+  },
   // ── 2026-05-29 신규 ─────────────────────────────────────────────────────
   {
     id: -40,
@@ -464,6 +531,37 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-46]: [
+    { alias: "을지로 사자 #77", content: "Starlink S-1 연매출 $10.8B에 AI 임대 연 $4B+ 더하면 $15B+ 수익 구조임. IPO 전에 이걸 공개했다는 게 기업가치 정당화 작업이기도 하죠.", created_at: new Date(Date.now() - 1000 * 60 * 4).toISOString() },
+    { alias: "서초 매 #64", content: "기가팩토리 완공 전에 임차인 확정된 구조는 IRR 계산이 완전히 달라지죠. 리스크가 거의 없는 개발 프로젝트임.", created_at: new Date(Date.now() - 1000 * 60 * 2).toISOString() },
+    { alias: "광화문 늑대 #69", content: "Google이 Azure 대신 SpaceX 선택한 것 자체가 Microsoft한테 압박이에요. AI 인프라 경쟁이 이제 클라우드 넘어서 물리 인프라로 가는 거임.", created_at: new Date(Date.now() - 1000 * 30).toISOString() },
+    { alias: "여의도 매 #17", content: "동의함. $500B 논의는 Bastrop 가동 후 첫 분기 수익 공개되면 바로 나올 거임.", created_at: new Date(Date.now() - 1000 * 10).toISOString() },
+  ],
+  [-45]: [
+    { alias: "여의도 매 #17", content: "네덜란드 데이터가 EU 규제 해제 논거로 쓰인다는 시각 동의임. 부상 14.9배 감소를 규제 기관이 무시하기 어렵죠.", created_at: new Date(Date.now() - 1000 * 60 * 10).toISOString() },
+    { alias: "강남 독수리 #52", content: "Semi EU + 로보택시 + FSD 세 개 축이 동시에 움직이는 분기가 언제 오느냐가 관건이에요. 2027년에 다 열리면 밸류에이션 리레이팅 폭이 클 것 같음.", created_at: new Date(Date.now() - 1000 * 60 * 5).toISOString() },
+    { alias: "을지로 사자 #77", content: "덴마크 이어 네덜란드 데이터까지 나오면 다음은 독일임. 독일 인가 나오는 순간이 유럽 FSD 수익화 기점이 될 거임.", created_at: new Date(Date.now() - 1000 * 60 * 1).toISOString() },
+  ],
+  [-44]: [
+    { alias: "판교 황소 #31", content: "젠슨 황 발언 + 수주잔고 H1 2027 확보 세트가 포인트임. 발언 혼자면 홍보인데 수주잔고로 뒷받침되니 신뢰할 수 있음.", created_at: new Date(Date.now() - 1000 * 60 * 15).toISOString() },
+    { alias: "서초 매 #64", content: "AI 클라우드 Apple+Google+NVDA vs MSFT 구도에서 NVDA는 양쪽에 납품하니까 시장이 어떻게 재편되든 수혜임. 전쟁 중 무기상 포지션.", created_at: new Date(Date.now() - 1000 * 60 * 8).toISOString() },
+    { alias: "광화문 늑대 #69", content: "Intel 발주는 장기적으로 NVDA 공급망 리스크 관리임. TSMC 대만 리스크 헤지하는 게 맞는 방향.", created_at: new Date(Date.now() - 1000 * 60 * 2).toISOString() },
+  ],
+  [-43]: [
+    { alias: "강남 독수리 #52", content: "미국 $2,250억 + 중국 $2,950억이면 글로벌 AI 인프라 투자가 $5T+ 방향임. NVDA 수요 이야기가 아직 끝나지 않은 거임.", created_at: new Date(Date.now() - 1000 * 60 * 28).toISOString() },
+    { alias: "여의도 매 #17", content: "JPMorgan AI 에이전트 배포 계획이 조용히 중요한 뉴스임. 금융 대형사들이 본격 AI화되면 인퍼런스 GPU 수요가 또 한 번 터지는 거임.", created_at: new Date(Date.now() - 1000 * 60 * 12).toISOString() },
+  ],
+  [-42]: [
+    { alias: "여의도 매 #17", content: "ARPU 분석 정확함. 볼륨 성장이 ARPU 하락을 완전 상쇄하는 구조임. B2B 믹스가 올라가면 ARPU 반등 + 볼륨 유지라는 이상적인 조합이 가능함.", created_at: new Date(Date.now() - 1000 * 60 * 40).toISOString() },
+    { alias: "판교 황소 #31", content: "Starlink 단독 $108B이면 SpaceX 전체 $350B의 30%인데 로켓 발사, AI 임대, 기타 사업까지 더하면 $350B은 진짜 저평가임.", created_at: new Date(Date.now() - 1000 * 60 * 22).toISOString() },
+    { alias: "서초 매 #64", content: "30개+ 통신사 실 과금 구조가 핵심임. 통신사들이 Starlink 재판매하면 구독자당 수익이 직접 B2C보다 낮아도 볼륨이 폭발함.", created_at: new Date(Date.now() - 1000 * 60 * 8).toISOString() },
+  ],
+  [-41]: [
+    { alias: "여의도 매 #17", content: "EU 탄소 규제 2030년 45% 감축 의무가 핵심임. 이게 강제 수요 창출임. 물류사들 선택이 아니라 의무가 되는 거임.", created_at: new Date(Date.now() - 1000 * 60 * 55).toISOString() },
+    { alias: "강남 독수리 #52", content: "Megacharger 네트워크 없으면 경쟁사 전기 트럭이 장거리 운행에 한계가 있죠. Tesla Semi + Megacharger 세트가 진짜 해자임.", created_at: new Date(Date.now() - 1000 * 60 * 38).toISOString() },
+    { alias: "판교 황소 #31", content: "EU 30만 대 시장 10% = 3만 대/년임. Tesla Semi 평균 ASP $200K 가정하면 연 $6B 매출 포텐셜임. 이게 열리는 게 언제냐가 포인트.", created_at: new Date(Date.now() - 1000 * 60 * 18).toISOString() },
+    { alias: "서초 매 #64", content: "BD 채용 후 물류사 파일럿 계약 → 대량 출시까지 18~24개월이라 2027~2028년 타임라인이 현실적임. 지금 포지션 쌓는 타이밍.", created_at: new Date(Date.now() - 1000 * 60 * 5).toISOString() },
+  ],
   [-40]: [
     {
       alias: "강남 독수리 #52",

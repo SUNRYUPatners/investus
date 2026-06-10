@@ -8,9 +8,10 @@ import { Header } from "@/components/Header";
 import { TickerTape } from "@/components/TickerTape";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { GuruHoldings } from "@/components/GuruHoldings";
-import { AdBanner } from "@/components/AdBanner";
+import { AdFitBanner } from "@/components/AdFitBanner";
 import { Star } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
+import { NewsSection } from "@/components/NewsSection";
 
 const UP   = "#10b981";
 const DOWN = "#ef4444";
@@ -222,17 +223,20 @@ export default function SearchPage() {
                   {t.search.results(results.length)}
                 </p>
                 {results.length > 0 ? (
-                  <div className="flex flex-col gap-2">
-                    {results.map(({ stock, hasLivePrice }) => (
-                      <StockRow
-                        key={stock.symbol}
-                        stock={stock}
-                        hasLivePrice={hasLivePrice}
-                        inWatchlist={list.includes(stock.symbol)}
-                        onToggle={() => toggle(stock.symbol)}
-                      />
-                    ))}
-                  </div>
+                  <>
+                    <div className="flex flex-col gap-2">
+                      {results.map(({ stock, hasLivePrice }) => (
+                        <StockRow
+                          key={stock.symbol}
+                          stock={stock}
+                          hasLivePrice={hasLivePrice}
+                          inWatchlist={list.includes(stock.symbol)}
+                          onToggle={() => toggle(stock.symbol)}
+                        />
+                      ))}
+                    </div>
+                    <div className="mt-4"><AdFitBanner /></div>
+                  </>
                 ) : (
                   <div className="flex flex-col items-center justify-center py-16 gap-3">
                     <Search className="w-10 h-10 opacity-20" style={{ color: "var(--muted)" }} />
@@ -251,7 +255,7 @@ export default function SearchPage() {
 
                 {/* 광고 — 모바일 전용 */}
                 <div className="lg:hidden">
-                  <AdBanner format="auto" />
+                  <AdFitBanner />
                 </div>
 
                 {/* Investus 추천주식 */}
@@ -298,6 +302,11 @@ export default function SearchPage() {
                       />
                     ))}
                   </div>
+                </div>
+
+                {/* 시장 뉴스 */}
+                <div>
+                  <NewsSection />
                 </div>
               </div>
             )}

@@ -13,7 +13,7 @@ import type { NewsItem } from "@/lib/api";
 import { SEED_REPORTS, REPORT_TICKERS, CATEGORY_STYLE, CATEGORY_EMOJI } from "@/lib/reports";
 import type { Report } from "@/lib/reports";
 import { isMarketOpen as checkMarketOpen } from "@/lib/marketHours";
-import { AdBanner } from "@/components/AdBanner";
+import { AdFitBanner } from "@/components/AdFitBanner";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -569,7 +569,7 @@ export default function StockPage({
 
             {/* 광고 — 지표와 리포트 사이 */}
             <div className="mx-4 lg:mx-0 mb-4">
-              <AdBanner format="auto" />
+              <AdFitBanner />
             </div>
 
             {/* 리포트 — 지표 바로 아래 (모바일 + 데스크탑 공통) */}
@@ -577,7 +577,12 @@ export default function StockPage({
 
             {/* 광고 — 리포트와 뉴스 사이 (모바일) */}
             <div className="lg:hidden mx-4 mb-4">
-              <AdBanner format="auto" />
+              <AdFitBanner />
+            </div>
+
+            {/* 광고 — 뉴스 아래 (모바일) */}
+            <div className="lg:hidden mx-4 mb-4">
+              <AdFitBanner />
             </div>
 
             {/* 뉴스 — 모바일 전용 */}
@@ -606,11 +611,15 @@ export default function StockPage({
                 </div>
               )}
             </div>
+            {/* 광고 — 페이지 맨 아래 (모바일) */}
+            <div className="lg:hidden mx-4 mb-4">
+              <AdFitBanner />
+            </div>
           </div>
 
           {/* ── 오른쪽 사이드바 — 홈탭과 동일한 구조 ── */}
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
-            <AdBanner format="auto" />
+            <AdFitBanner />
             <div
               className="rounded-2xl border p-4"
               style={{ background: "var(--card)", borderColor: "var(--border)" }}

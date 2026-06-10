@@ -14,7 +14,7 @@ import { usePortfolio } from "@/hooks/usePortfolio";
 import { mockQuotes } from "@/lib/api";
 import type { Holding } from "@/lib/api";
 import { useLocaleCode } from "@/contexts/LocaleContext";
-import { AdBanner } from "@/components/AdBanner";
+import { AdFitBanner } from "@/components/AdFitBanner";
 import { PortfolioAI } from "@/components/PortfolioAI";
 
 // ── Types & Constants ─────────────────────────────────────────────────────────
@@ -1045,7 +1045,7 @@ export default function PortfolioPage() {
 
           {/* Ad — above holdings */}
           <div className="mb-4">
-            <AdBanner format="auto" />
+            <AdFitBanner />
           </div>
 
           {/* Holdings or empty state */}
@@ -1095,7 +1095,7 @@ export default function PortfolioPage() {
                   />
                   {/* Ad after every 3rd holding */}
                   {(i + 1) % 3 === 0 && i < holdings.length - 1 && (
-                    <AdBanner key={`ad-${i}`} format="auto" />
+                    <AdFitBanner key={`ad-${i}`} />
                   )}
                 </>
               ))}
@@ -1127,8 +1127,12 @@ export default function PortfolioPage() {
             </div>
           )}
           {/* Ad */}
-          <div className="order-3 mb-5">
-            <AdBanner format="auto" />
+          <div className="order-3 mb-3">
+            <AdFitBanner />
+          </div>
+          {/* Ad bottom */}
+          <div className="order-4 mb-5">
+            <AdFitBanner />
           </div>
         </div>
       </main>

@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { ChevronRight, LogOut, User, Mail, Lock, Eye, EyeOff, Pencil, X, Send, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
-import { AdBanner } from "@/components/AdBanner";
+import { AdFitBanner } from "@/components/AdFitBanner";
 import { useForm, ValidationError } from "@formspree/react";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 
@@ -999,6 +999,34 @@ export default function MorePage() {
             {/* Profile — top left on desktop */}
             <AuthSection />
 
+            {/* 공부방 배너 */}
+            <Link href="/study" style={{ textDecoration: "none" }}>
+              <div
+                className="rounded-2xl overflow-hidden border mb-6 active:opacity-90 transition-opacity"
+                style={{ borderColor: "rgba(96,165,250,0.3)" }}
+              >
+                <div
+                  className="relative px-5 py-4 flex items-center gap-4"
+                  style={{ background: "linear-gradient(135deg, #0d1525 0%, #0a0c10 60%, #101520 100%)" }}
+                >
+                  <div className="absolute inset-0 pointer-events-none"
+                    style={{ background: "radial-gradient(circle at 80% 50%, rgba(96,165,250,0.08) 0%, transparent 60%)" }} />
+                  <div className="relative w-12 h-12 rounded-2xl flex-shrink-0 flex items-center justify-center"
+                    style={{ background: "linear-gradient(145deg, #0d1c30, #071018)", border: "1px solid rgba(96,165,250,0.4)" }}>
+                    <span className="text-2xl">📚</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>공부방 — 투자 기초·대가 전략</p>
+                    <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>S&P500·FOMC·ETF부터 버핏·달리오 원칙까지</p>
+                  </div>
+                  <span className="text-[11px] font-bold px-3 py-1.5 rounded-full flex-shrink-0"
+                    style={{ background: "linear-gradient(135deg, #1d4ed8, #3b82f6)", color: "#fff" }}>
+                    보러가기 →
+                  </span>
+                </div>
+              </div>
+            </Link>
+
             {/* Mobile: creator + brand card here */}
             <div className="lg:hidden">
               <CreatorSection />
@@ -1015,7 +1043,7 @@ export default function MorePage() {
             </div>
 
             <div className="lg:hidden">
-              <AdBanner format="auto" />
+              <AdFitBanner />
             </div>
 
             {/* Menu sections — 앱정보 + 고객지원 (법적고지는 right sidebar에) */}
@@ -1041,7 +1069,7 @@ export default function MorePage() {
 
               {/* 광고 — 메뉴 섹션 사이 (모바일) */}
               <div className="lg:hidden">
-                <AdBanner format="auto" />
+                <AdFitBanner />
               </div>
 
               {/* 법적고지 — mobile only (on desktop it's in right sidebar) */}
@@ -1066,6 +1094,11 @@ export default function MorePage() {
             {/* 모바일에서만 InstallSection 표시 — 데스크탑은 사이드바 */}
             <div className="lg:hidden">
               <InstallSection />
+            </div>
+
+            {/* 광고 — 설치 안내 아래 (모바일) */}
+            <div className="lg:hidden mt-2">
+              <AdFitBanner />
             </div>
 
             <LocaleToggle />
@@ -1126,7 +1159,7 @@ export default function MorePage() {
             </div>
 
             {/* 4. 광고 */}
-            <AdBanner format="auto" />
+            <AdFitBanner />
 
             {/* 5. 즐겨찾기 / 앱 설치 */}
             <div className="-mt-1">

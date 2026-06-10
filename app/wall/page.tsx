@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, Users, TrendingUp, Send, X, EyeOff, FileCheck, Heart, Pencil, Check } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CreatorCard } from "@/components/CreatorCard";
-import { AdBanner } from "@/components/AdBanner";
+import { AdFitBanner } from "@/components/AdFitBanner";
 import { useAuth } from "@/hooks/useAuth";
 import { getSupabase } from "@/lib/supabase";
 import { CREATORS } from "@/lib/creators";
@@ -1200,7 +1200,7 @@ export default function WallPage() {
             </div>
 
             <div className="px-4">
-              <AdBanner format="auto" />
+              <AdFitBanner />
 
               {/* Posts */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-4">
@@ -1211,13 +1211,16 @@ export default function WallPage() {
                     <p className="text-xs" style={{ color: "var(--muted)" }}>{w.emptyPostsSub}</p>
                   </div>
                 ) : (
-                  posts.map((post) => {
+                  posts.flatMap((post, idx) => {
                     // Look up the real post to check ownership and get realId for delete
                     const realId   = post.id >= 100000 ? post.id - 100000 : null;
                     const realPost = realId != null ? realPosts.find((r) => r.id === realId) : null;
                     const isOwn    = !!realPost && realPost.is_mine;
                     const isEditing = editingPostId === realId;
-                    return (
+                    const adAfter = (idx + 1) % 4 === 0 ? (
+                      <div key={`ad-disc-${idx}`} className="col-span-full my-1"><AdFitBanner /></div>
+                    ) : null;
+                    return [
                     <article key={post.id} className="rounded-2xl p-4 border"
                       style={{ background: "var(--card)", borderColor: "var(--border)" }}>
                       <div className="flex items-center gap-2 mb-2">
@@ -1356,15 +1359,16 @@ export default function WallPage() {
                           )}
                         </div>
                       )}
-                    </article>
-                  );})
+                    </article>,
+                    ...(adAfter ? [adAfter] : []),
+                    ];})
                 )}
               </div>
 
               {/* 광고 — 포스트 목록 아래 */}
               {posts.length > 0 && (
                 <div className="mt-4">
-                  <AdBanner format="auto" />
+                  <AdFitBanner />
                 </div>
               )}
             </div>
@@ -1449,7 +1453,7 @@ export default function WallPage() {
               </div>
             </div>
 
-            <AdBanner format="auto" />
+            <AdFitBanner />
 
             {/* ── 시상대 포디움 ── */}
             <div
@@ -1718,7 +1722,7 @@ export default function WallPage() {
 
             {/* 광고 — 애널 헤더와 포스트 피드 사이 */}
             <div className="mb-4">
-              <AdBanner format="auto" />
+              <AdFitBanner />
             </div>
 
             {/* Posts feed */}
@@ -1849,6 +1853,8 @@ export default function WallPage() {
                 ))}
               </div>
             )}
+            {/* 광고 — 애널 피드 아래 */}
+            <div className="mt-4"><AdFitBanner /></div>
           </div>
         )}
       </main>

@@ -2,16 +2,16 @@ import type { NextConfig } from "next";
 
 const CSP = [
   "default-src 'self'",
-  // scripts: Next.js inline scripts + Vercel analytics + Google AdSense
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagservices.com",
+  // scripts: Next.js inline scripts + Vercel analytics + Kakao AdFit
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://t1.kakaocdn.net https://adfit.kakao.com",
   // styles: Tailwind inline styles + emotion
   "style-src 'self' 'unsafe-inline'",
   // images: data URIs + YouTube + Unsplash + news thumbnails (various CDNs) + book covers
   "img-src 'self' data: blob: https:",
   // media: YouTube embeds
   "media-src 'self'",
-  // frames: YouTube player + Google AdSense
-  "frame-src https://www.youtube.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com",
+  // frames: YouTube player + Kakao AdFit
+  "frame-src https://www.youtube.com https://adfit.kakao.com https://t1.kakaocdn.net",
   // connect: all API sources used by the app
   [
     "connect-src 'self'",
@@ -29,9 +29,9 @@ const CSP = [
     "https://accounts.google.com",
     "https://kauth.kakao.com",
     "https://kapi.kakao.com",
-    "https://*.googlesyndication.com",
-    "https://*.doubleclick.net",
-    "https://www.google.com",
+    "https://*.kakaocdn.net",
+    "https://adfit.kakao.com",
+    "https://*.kakao.com",
   ].join(" "),
   "font-src 'self' data:",
   "object-src 'none'",
@@ -52,6 +52,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   turbopack: {},
+  serverExternalPackages: ["@napi-rs/canvas"],
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },

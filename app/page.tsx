@@ -5,7 +5,7 @@ import { NewsSection } from "@/components/NewsSection";
 import { FearGreedWidget } from "@/components/FearGreedWidget";
 import { BuffettWidget } from "@/components/BuffettWidget";
 import { WatchlistSection } from "@/components/WatchlistSection";
-import { AdBanner } from "@/components/AdBanner";
+import { AdFitBanner } from "@/components/AdFitBanner";
 import { ReportFeed } from "@/components/ReportFeed";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
@@ -42,7 +42,7 @@ export default async function HomePage() {
 
             {/* 광고 — 관심종목과 시장 데이터 사이 */}
             <section className="px-4 lg:px-0 pt-4">
-              <AdBanner format="auto" />
+              <AdFitBanner />
             </section>
 
             {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures (실시간) */}
@@ -53,9 +53,14 @@ export default async function HomePage() {
               <ReportFeed />
             </section>
 
+            {/* 광고 — 리포트 아래 */}
+            <section className="px-4 lg:hidden pt-3">
+              <AdFitBanner />
+            </section>
+
             {/* 광고 · 시장심리 · 버핏지수 — 모바일 전용 */}
             <section className="px-4 lg:hidden pt-5">
-              <AdBanner format="auto" />
+              <AdFitBanner />
             </section>
             <section className="px-4 lg:hidden pt-4">
               <FearGreedWidget locale={locale} />
@@ -65,14 +70,18 @@ export default async function HomePage() {
             </section>
 
             {/* 시장 뉴스 */}
-            <section className="px-4 lg:hidden pt-4 pb-2">
+            <section className="px-4 lg:hidden pt-4">
               <NewsSection />
+            </section>
+            {/* 광고 — 뉴스 아래 */}
+            <section className="px-4 lg:hidden pt-3 pb-2">
+              <AdFitBanner />
             </section>
           </div>
 
           {/* ── 오른쪽 컬럼 (데스크톱 전용, sticky) ── */}
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
-            <AdBanner format="auto" />
+            <AdFitBanner />
             <FearGreedWidget locale={locale} />
             <BuffettWidget locale={locale} />
             <NewsSection />
