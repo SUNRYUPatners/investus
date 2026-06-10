@@ -130,9 +130,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Kakao AdFit — head에 직접 삽입해야 심사봇이 인식 */}
+        {/* Kakao AdFit SDK — 공식 가이드 방식: 프로토콜 상대 URL, type 명시, async */}
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src="https://t1.kakaocdn.net/kas/static/ba.min.js" async />
+        <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async />
       </head>
       <body style={{ background: "var(--bg)" }}>
         {/* iOS PWA: prevent rubber-band overscroll at bottom revealing content under nav */}
