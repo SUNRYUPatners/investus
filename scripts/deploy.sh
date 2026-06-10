@@ -33,6 +33,12 @@ step() { echo -e "\n${YELLOW}[$1/4]${NC} $2"; }
 ok()   { echo -e "${GREEN}✓${NC} $1"; }
 fail() { echo -e "${RED}✗ $1${NC}"; exit 1; }
 
+# ── 0-A. 미커밋 변경사항 차단 ────────────────────────────────────────────────
+if ! git diff --quiet || ! git diff --cached --quiet; then
+  fail "미커밋 변경사항이 있습니다. 먼저 git add + git commit 후 배포하세요."
+fi
+ok "워킹트리 clean"
+
 # ── 0. SW 캐시 키 갱신 (배포마다 새 타임스탬프 → 모든 브라우저 SW 업데이트 강제) ─
 NEW_TS=$(node -e "process.stdout.write(String(Date.now()))")
 sed -i '' "s/investus-v[0-9]*/investus-v${NEW_TS}/" public/sw.js
@@ -91,7 +97,15 @@ fi
 echo -e "\n${GREEN}🎉 배포 완료!${NC}"
 echo -e "   URL: ${DEPLOY_URL}"
 
-# ── 5. 리포트 알림 발송 (--notify 플래그 있을 때만) ──────────────────────────
+# ── 5. GitHub 자동 푸시 (항상 — 코드 유실 방지) ─────────────────────────────
+echo -e "\n${YELLOW}[GitHub 동기화]${NC} 현재 코드 GitHub에 푸시..."
+if git push origin main 2>&1; then
+  ok "GitHub main 브랜치 동기화 완료 — 코드 유실 없음"
+else
+  echo -e "${YELLOW}⚠ GitHub 푸시 실패 — 수동으로 git push origin main 실행 필요${NC}"
+fi
+
+# ── 6. 리포트 알림 발송 (--notify 플래그 있을 때만) ──────────────────────────
 if [ "$SEND_NOTIFY" = "true" ]; then
   echo -e "\n${YELLOW}[5/5]${NC} 리포트 알림 발송 중..."
   NOTIFY_RESULT=$(curl -s -X POST "https://www.investus.kr/api/push/notify" \
