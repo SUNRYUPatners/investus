@@ -508,6 +508,7 @@ export default function WallPage() {
   const [uploading, setUploading]         = useState(false);
   const [uploadErr, setUploadErr]         = useState("");
   const [hasCreatorProfile, setHasCreatorProfile] = useState(false);
+  const [apiCreators, setApiCreators] = useState<{ id: string; nickname: string; avatar: string; bio: string; annual_return?: number; follower_count?: number; tags?: string[] }[]>([]);
   const [expandedWallComments, setExpandedWallComments] = useState<Set<number>>(new Set());
   const [wallComments, setWallComments]       = useState<Record<number, CommentWithReplies[]>>({});
   const [wallCommentInput, setWallCommentInput] = useState<Record<number, string>>({});
@@ -608,6 +609,11 @@ export default function WallPage() {
       const c = localStorage.getItem("investus_my_creator");
       setHasCreatorProfile(!!c);
     } catch {}
+    // Fetch approved creators from Supabase API
+    fetch("/api/creator/list")
+      .then((r) => r.json())
+      .then((data) => { if (Array.isArray(data)) setApiCreators(data); })
+      .catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -959,14 +965,27 @@ export default function WallPage() {
   const posts = [...realAsPost, ...MOCK_POSTS.filter((p) => p.symbol === selected)]
     .sort((a, b) => b.createdAt - a.createdAt);
 
-  const sortedCreators = [...CREATORS].sort((a, b) => {
+  const mappedCreators: import("@/lib/creators").Creator[] = apiCreators.map((d) => ({
+    id: d.id,
+    nickname: d.nickname,
+    avatar: d.avatar,
+    coverGradient: "linear-gradient(135deg,#0d0d0d,#1a1a2e)",
+    bio: d.bio,
+    tags: d.tags ?? [],
+    isVerified: true,
+    accountBroker: "",
+    inceptionDate: "2025-01",
+    annualReturn: d.annual_return ?? 0,
+    totalReturn: d.annual_return ?? 0,
+    followerCount: d.follower_count ?? 0,
+    portfolio: [],
+    contents: [],
+  }));
+  const sortedCreators = [...mappedCreators].sort((a, b) => {
     if (creatorSort === "return")      return b.annualReturn - a.annualReturn;
     if (creatorSort === "subscribers") return b.followerCount - a.followerCount;
     if (creatorSort === "newest")      return b.inceptionDate.localeCompare(a.inceptionDate);
-    // popular: sort by total engagement (followerCount weight + content views)
-    const scoreA = a.followerCount * 10 + a.contents.reduce((s, c) => s + c.viewCount, 0) / 100;
-    const scoreB = b.followerCount * 10 + b.contents.reduce((s, c) => s + c.viewCount, 0) / 100;
-    return scoreB - scoreA;
+    return b.followerCount * 10 - a.followerCount * 10;
   });
 
   const toggleLike = (id: number) => {
@@ -1463,7 +1482,7 @@ export default function WallPage() {
             <AdFitBanner />
 
             {/* ── 시상대 포디움 ── */}
-            {CREATORS.length >= 3 && <div
+            {apiCreators.length >= 3 && <div
               className="rounded-2xl border overflow-hidden mt-5 mb-4"
               style={{ background: "var(--card)", borderColor: "var(--border)" }}
             >
@@ -1481,14 +1500,14 @@ export default function WallPage() {
                     className="text-[9px] font-bold text-center leading-tight mb-0.5 px-0.5 break-words w-full"
                     style={{ color: "var(--text)" }}
                   >
-                    {CREATORS[1].nickname}
+                    {sortedCreators[1]?.nickname}
                   </p>
                   <div className="flex items-center justify-center gap-1 mb-1.5">
                     <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
-                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[1].annualReturn}%</span>
+                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{sortedCreators[1]?.annualReturn ?? 0}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#C0C0C0" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#C0C0C0" }}>{w.subscribers(CREATORS[1].followerCount)}</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#C0C0C0" }}>{w.subscribers(sortedCreators[1]?.followerCount ?? 0)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-base"
@@ -1510,14 +1529,14 @@ export default function WallPage() {
                     className="text-[10px] font-bold text-center leading-tight mb-0.5 px-0.5 break-words w-full"
                     style={{ color: "var(--text)" }}
                   >
-                    {CREATORS[0].nickname}
+                    {sortedCreators[0]?.nickname}
                   </p>
                   <div className="flex items-center justify-center gap-1 mb-1.5">
                     <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
-                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[0].annualReturn}%</span>
+                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{sortedCreators[0]?.annualReturn ?? 0}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#FFD700" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#FFD700" }}>{w.subscribers(CREATORS[0].followerCount)}</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#FFD700" }}>{w.subscribers(sortedCreators[0]?.followerCount ?? 0)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-xl"
@@ -1539,14 +1558,14 @@ export default function WallPage() {
                     className="text-[9px] font-bold text-center leading-tight mb-0.5 px-0.5 break-words w-full"
                     style={{ color: "var(--text)" }}
                   >
-                    {CREATORS[2].nickname}
+                    {sortedCreators[2]?.nickname}
                   </p>
                   <div className="flex items-center justify-center gap-1 mb-1.5">
                     <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
-                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{CREATORS[2].annualReturn}%</span>
+                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{sortedCreators[2]?.annualReturn ?? 0}%</span>
                     <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
                     <Users className="w-2.5 h-2.5" style={{ color: "#CD7F32" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#CD7F32" }}>{w.subscribers(CREATORS[2].followerCount)}</span>
+                    <span className="text-[8px] font-mono-num" style={{ color: "#CD7F32" }}>{w.subscribers(sortedCreators[2]?.followerCount ?? 0)}</span>
                   </div>
                   <div
                     className="w-full rounded-t-xl flex items-center justify-center font-black text-base"
@@ -1565,7 +1584,7 @@ export default function WallPage() {
 
             <div className="flex items-center justify-between mb-2 mt-2">
               <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{w.creatorTitle}</h2>
-              <span className="text-[10px]" style={{ color: "var(--muted)" }}>{w.creatorCount(CREATORS.length)}</span>
+              <span className="text-[10px]" style={{ color: "var(--muted)" }}>{w.creatorCount(apiCreators.length)}</span>
             </div>
 
             {/* 정렬 필터 */}
