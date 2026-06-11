@@ -396,25 +396,32 @@ export async function GET(req: NextRequest) {
       } else {
         result.postId = post.id;
 
-        const commentText = await generateComment(content, symbol, apiKey, commentAlias);
-        if (commentText) {
-          const commentSeed = `${botComment}_${symbol}_${today}`;
+        // 댓글 2~3개 생성 (각각 다른 닉네임·시각)
+        const commentCount = 2 + Math.floor(Math.random() * 2); // 2 or 3
+        let insertedComments = 0;
+        for (let ci = 0; ci < commentCount; ci++) {
+          const cAlias = pickAlias(aliasSeed, 7 + ci * 5);
+          const commentText = await generateComment(content, symbol, apiKey, cAlias);
+          if (!commentText) continue;
+          const cSeed = `${botComment}_${symbol}_${today}_${ci}`;
           const { data: comment } = await db
             .from("wall_comments")
             .insert({
               post_id: post.id,
-              user_id: botComment,
-              nickname: makeAnonNick(commentSeed),
+              user_id: `${botComment}_${ci}`,
+              nickname: makeAnonNick(cSeed),
               content: commentText,
               parent_id: null,
             })
             .select("id")
             .single();
-
           if (comment) {
-            result.commentId = comment.id;
-            await db.from("wall_posts").update({ comments: 1 }).eq("id", post.id);
+            if (ci === 0) result.commentId = comment.id;
+            insertedComments++;
           }
+        }
+        if (insertedComments > 0) {
+          await db.from("wall_posts").update({ comments: insertedComments }).eq("id", post.id);
         }
       }
     }

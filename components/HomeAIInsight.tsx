@@ -33,10 +33,13 @@ function todayET(): string {
 }
 
 // ─── localStorage helpers ────────────────────────────────────────────────────
-function intradayCountKey() { return `home_ai_intra_${todayET()}`; }
+function intradayCountKey()              { return `home_ai_intra_${todayET()}`; }
+function closeCacheKey(date: string)     { return `home_ai_close_${date}`; }
 
-function readIntradayCount(): number        { try { return parseInt(localStorage.getItem(intradayCountKey()) ?? "0", 10); } catch { return 0; } }
-function bumpIntradayCount(): number        { const n = readIntradayCount() + 1; try { localStorage.setItem(intradayCountKey(), String(n)); } catch { /* ignore */ } return n; }
+function readIntradayCount(): number     { try { return parseInt(localStorage.getItem(intradayCountKey()) ?? "0", 10); } catch { return 0; } }
+function bumpIntradayCount(): number     { const n = readIntradayCount() + 1; try { localStorage.setItem(intradayCountKey(), String(n)); } catch { /* ignore */ } return n; }
+function readCloseCache(date: string)    { try { return localStorage.getItem(closeCacheKey(date)) ?? null; } catch { return null; } }
+function writeCloseCache(date: string, text: string) { try { localStorage.setItem(closeCacheKey(date), text); } catch { /* ignore */ } }
 
 export function HomeAIInsight() {
   const router = useRouter();
@@ -91,16 +94,25 @@ export function HomeAIInsight() {
     return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
 
-  // Auto-fetch post-close: triggers when marketOpen → false OR when prices first arrive after close
+  // Auto-fetch post-close: load cache first, only fetch if no cached result
   useEffect(() => {
     if (marketOpen) return;                            // still open — wait
     if (quotes.length === 0 || holdings.length === 0) return; // no price data yet
     const day = lastMarketCloseDate();
     if (fetchedForDay.current === day) return;         // already fetched this session
-    setDisplayAnswer(null);
-    setAnalysisDate("");
     fetchedForDay.current = day;
-    runAnalysis(false);
+
+    // Use cached analysis if available (persists across page refreshes)
+    const cached = readCloseCache(day);
+    if (cached) {
+      setDisplayAnswer(cached);
+      setAnalysisDate(day);
+      setExpanded(true);
+      return;
+    }
+
+    // No cache — run fresh analysis and save result
+    runAnalysis(false, day);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [marketOpen, quotes.length]);
 
@@ -121,7 +133,7 @@ export function HomeAIInsight() {
     return { holdings: enriched, totalValue, totalCost, totalPnlPct, usdkrw };
   }
 
-  async function runAnalysis(isIntraday: boolean) {
+  async function runAnalysis(isIntraday: boolean, closeDay?: string) {
     if (loading || holdings.length === 0 || quotes.length === 0) return;
     setLoading(true);
     try {
@@ -142,7 +154,9 @@ export function HomeAIInsight() {
           const n = bumpIntradayCount();
           setIntradayUsed(n);
         } else {
-          setAnalysisDate(lastMarketCloseDate());
+          const day = closeDay ?? lastMarketCloseDate();
+          setAnalysisDate(day);
+          writeCloseCache(day, a); // 캐시 저장 — 새로고침해도 재분석 안 함
         }
         setExpanded(true);
       }
