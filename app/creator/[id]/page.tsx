@@ -1,11 +1,11 @@
 "use client";
 
-import { use, useState } from "react";
+import { use, useState, useEffect } from "react";
 import Link from "next/link";
 import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard } from "lucide-react";
 import { Header } from "@/components/Header";
 import { AdGateModal } from "@/components/AdGateModal";
-import { getCreator, contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
+import { contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
 
 const ACCOUNT = { bank: "카카오뱅크", number: "3333-22-2070396", holder: "류현우" };
 
@@ -41,13 +41,74 @@ function saveSubscribed(creatorId: string, val: boolean) {
 
 export default function CreatorProfilePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
-  const creator: Creator | undefined = getCreator(id);
+  const [creator, setCreator] = useState<Creator | null>(null);
+  const [apiContents, setApiContents] = useState<CreatorContent[]>([]);
+  const [loading, setLoading] = useState(true);
   const [contentTab, setContentTab] = useState<ContentType | "all">("all");
   const [isSubscribed, setIsSubscribed] = useState<boolean>(() => {
     if (typeof window === "undefined") return false;
     return loadSubscribed(id);
   });
   const [showSubModal, setShowSubModal] = useState(false);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        // 1. Try Supabase API (approved creators)
+        const res = await fetch(`/api/creator/list?id=${encodeURIComponent(id)}`);
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          const d = data[0];
+          const mapped: Creator = {
+            id: d.phone ?? id,
+            nickname:      d.nickname ?? id,
+            avatar:        d.avatar ?? "🦁",
+            coverGradient: "linear-gradient(135deg,#0d0d0d,#1a1a2e)",
+            bio:           d.bio ?? "",
+            tags:          d.tags ?? [],
+            isVerified:    true,
+            accountBroker: d.broker ?? "",
+            inceptionDate: (d.submitted_at ?? "2025-01-01").slice(0, 7),
+            annualReturn:  d.annual_return ?? 0,
+            totalReturn:   d.annual_return ?? 0,
+            followerCount: 0,
+            subscriptionEnabled: d.subscription_enabled ?? false,
+            subscriptionPrice: d.subscription_price ?? undefined,
+            portfolio: d.top_holdings ?? [],
+            contents: [],
+          };
+          setCreator(mapped);
+          // Fetch contents separately
+          const cRes = await fetch(`/api/creator/contents?id=${encodeURIComponent(id)}`);
+          const cData = await cRes.json();
+          setApiContents(Array.isArray(cData) ? cData : []);
+        } else {
+          // 2. Fallback: check localStorage (own profile)
+          try {
+            const raw = localStorage.getItem("investus_my_creator");
+            if (raw) {
+              const p = JSON.parse(raw);
+              if (p && (p.id === id || p.email === id)) {
+                setCreator({ ...p, contents: [] });
+                const cRaw = localStorage.getItem("investus_creator_contents");
+                setApiContents(cRaw ? JSON.parse(cRaw) : []);
+              }
+            }
+          } catch { /* ignore */ }
+        }
+      } catch { /* ignore */ }
+      setLoading(false);
+    }
+    load();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "var(--bg)" }}>
+        <div className="w-6 h-6 rounded-full border-2 border-t-transparent animate-spin" style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
+      </div>
+    );
+  }
 
   if (!creator) {
     return (
@@ -61,10 +122,11 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
     );
   }
 
-  const years = Math.floor((Date.now() - new Date(creator.inceptionDate).getTime()) / (365.25 * 24 * 3600 * 1000));
+  const allContents = [...(creator.contents ?? []), ...apiContents];
+  const years = Math.floor((Date.now() - new Date(creator.inceptionDate + "-01").getTime()) / (365.25 * 24 * 3600 * 1000));
   const filteredContents = contentTab === "all"
-    ? creator.contents
-    : creator.contents.filter((c) => c.type === contentTab);
+    ? allContents
+    : allContents.filter((c) => c.type === contentTab);
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>

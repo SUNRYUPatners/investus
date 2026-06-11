@@ -86,6 +86,10 @@ export default async function InsightPage() {
             <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
             <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
           </div>
+          {/* 투자 기초·대가 전략 글 — 리포트 위 */}
+          <div className="mb-8">
+            <InvestmentArticles />
+          </div>
           <ReportFeed />
         </div>
 
@@ -97,7 +101,6 @@ export default async function InsightPage() {
           {/* 배너 — 항상 보임, 절대 클리핑 안 됨 */}
           <div className="flex flex-col gap-5 flex-shrink-0">
             {EduBanner}
-            <InvestmentArticles />
           </div>
 
           {/* 나머지 — 남은 공간 내 스크롤 */}
