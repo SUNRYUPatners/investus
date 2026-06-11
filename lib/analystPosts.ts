@@ -15,9 +15,11 @@ export type AnalystMockComment = {
   created_at: string;
 };
 
+const _an = Date.now();
+
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
-  // ── 2026-06-11 신규 ─────────────────────────────────────────────────────
+  // ── 최신 ─────────────────────────────────────────────────────────────────
   {
     id: -50,
     alias: "여의도 매 #17",
@@ -26,7 +28,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
       "SpaceX IPO D-1 정리임. 핵심 3가지: 1) $1.75T = 12개 방산기업 합산 초과 + $411B. 2) 3대 신용평가사 투자등급 = 연기금·보험사 자금 진입 가능. 3) Starlink $10.8B + AI 임대 $4B+ + TeraFab $11B 칩공장 = 수익 다각화 완성 구조임. 공모가 $25~30에 555M주 공모인데 수요가 쏟아질 거임. 내일 상장가 $35+ 열어도 놀랍지 않음.",
     likes: 248,
     comments: 4,
-    created_at: "2026-06-11T08:00:00.000Z",
+    created_at: new Date(_an - 5 * 60_000).toISOString(),
     liked: false,
   },
   {
@@ -37,7 +39,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
       "오늘 Tesla 뉴스가 또 풀 세트임. Piper Sandler가 '자율주행 문제 해결'이라고 공식 선언 + 레이팅에 Autonomy 추가. 덴마크·벨기에 FSD 동시 승인. 텍사스 로보택시 89대. 누적 FSD 170B 마일. 이 네 가지가 다 하루에 나온 거임. Potter가 '시장이 심각하게 저평가 중'이라고 한 것도 포인트임. FSD 구독 수익 밸류에이션 모델이 Wall St 커버리지에 들어가면 목표가 리레이팅 폭이 큼.",
     likes: 221,
     comments: 4,
-    created_at: "2026-06-11T08:15:00.000Z",
+    created_at: new Date(_an - 20 * 60_000).toISOString(),
     liked: false,
   },
   {
@@ -48,7 +50,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
       "Starship 발사 효율 데이터가 S-1에서 나왔다는 게 중요함. 10 Starship = 23 Falcon 9 용량이라는 게 Starship 전환 시 비용 구조가 얼마나 개선되는지를 수치로 보여주는 거임. 완전 재사용 달성하면 발사 비용이 Falcon 9의 1/10 이하로 떨어지는 게 목표임. 여기다 TeraFab $11B 칩공장까지 가면 SpaceX는 로켓·인터넷·AI·반도체 수직계열화 완성임. $1.75T도 이 관점에서 보면 미래 가치 대비 싼 거임.",
     likes: 187,
     comments: 3,
-    created_at: "2026-06-11T08:30:00.000Z",
+    created_at: new Date(_an - 35 * 60_000).toISOString(),
     liked: false,
   },
   {
@@ -59,7 +61,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
       "CPI 2.9% + 이란 긴장 + 유가 $90 + SpaceX IPO가 동시에 터진 날임. 단기 변수는 있지만 구조적 관점에서 AI 슈퍼사이클은 유지임. CPI 2.9%는 금리 인하 기대를 죽이지만 AI 인프라 투자 사이클은 금리와 무관하게 진행 중임. 하이퍼스케일러들이 CAPEX를 줄인다는 신호가 없음. SpaceX IPO 내일인데 이란 리스크보다 $1.75T 스토리가 훨씬 크다고 봄. 관망보다 IPO 수요 참여 의견.",
     likes: 163,
     comments: 3,
-    created_at: "2026-06-11T08:45:00.000Z",
+    created_at: new Date(_an - 50 * 60_000).toISOString(),
     liked: false,
   },
   // ── 2026-06-10 신규 ─────────────────────────────────────────────────────

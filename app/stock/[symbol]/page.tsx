@@ -196,23 +196,15 @@ function getDateKey(r: Report): string {
 }
 
 function StockReports({ symbol, className = "" }: { symbol: string; className?: string }) {
-  const [showOlder, setShowOlder] = useState(false);
-
-  const reports: Report[] = SEED_REPORTS.filter(
-    (r) =>
-      REPORT_TICKERS[r.id]?.includes(symbol) &&
-      !r.subject?.includes("한장 요약"),
-  );
+  const reports: Report[] = SEED_REPORTS
+    .filter(
+      (r) =>
+        REPORT_TICKERS[r.id]?.includes(symbol) &&
+        !r.subject?.includes("한장 요약"),
+    )
+    .sort((a, b) => getDateKey(b).localeCompare(getDateKey(a)));
 
   if (reports.length === 0) return null;
-
-  const latestDateKey = reports.reduce((max, r) => {
-    const d = getDateKey(r);
-    return d > max ? d : max;
-  }, "");
-
-  const latestGroup = reports.filter((r) => getDateKey(r) === latestDateKey);
-  const olderGroup  = reports.filter((r) => getDateKey(r) < latestDateKey);
 
   return (
     <div className={className}>
@@ -223,26 +215,7 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
         Investus 리포트
       </h2>
       <div className="flex flex-col gap-3">
-        {/* 최신 날짜 리포트 — 항상 표시 */}
-        {latestGroup.map((r) => <ReportCard key={r.id} r={r} />)}
-
-        {/* 이전 날짜 리포트 — 더보기 토글 */}
-        {olderGroup.length > 0 && (
-          <>
-            {!showOlder ? (
-              <button
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"
-                style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}
-                onClick={() => setShowOlder(true)}
-              >
-                이전 리포트 더보기 ({olderGroup.length}개)
-                <ChevronDown className="w-4 h-4" />
-              </button>
-            ) : (
-              olderGroup.map((r) => <ReportCard key={r.id} r={r} />)
-            )}
-          </>
-        )}
+        {reports.map((r) => <ReportCard key={r.id} r={r} />)}
       </div>
     </div>
   );

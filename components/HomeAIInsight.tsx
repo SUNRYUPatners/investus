@@ -150,6 +150,7 @@ export function HomeAIInsight() {
       const d = await res.json() as { answer?: string; error?: string };
       // 에러 응답이면 캐시하지 않고 null 유지
       if (d.error || !d.answer || d.answer.length < 30) {
+        if (!isIntraday) fetchedForDay.current = ""; // allow retry on next refresh
         setDisplayAnswer("__error__");
         setExpanded(true);
         return;
@@ -166,6 +167,7 @@ export function HomeAIInsight() {
       }
       setExpanded(true);
     } catch {
+      if (!isIntraday) fetchedForDay.current = ""; // allow retry on next refresh
       setDisplayAnswer("__error__");
       setExpanded(true);
     } finally {

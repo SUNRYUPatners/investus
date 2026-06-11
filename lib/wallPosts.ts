@@ -26,9 +26,10 @@ export type Comment = {
   likes:        number;
 };
 
-const T11J = 1781132400000; // 2026-06-11 08:00 KST
-const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T11J;   // 마지막 게시글 업데이트 기준 (NEW 배지용)
+const _now = Date.now();
+const T11J = _now;                        // 오늘 포스트 = 방금~48분 전
+const T10J = _now - 24 * 3600_000;        // 어제
+export const LATEST_UPDATE = T11J;        // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
