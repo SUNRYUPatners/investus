@@ -27,9 +27,10 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T11J = _now;                        // 오늘 포스트 = 방금~48분 전
-const T10J = _now - 24 * 3600_000;        // 어제
-export const LATEST_UPDATE = T11J;        // NEW 배지 기준
+const T12J = _now;                        // 오늘(6/12) 포스트
+const T11J = _now - 24 * 3600_000;        // 어제(6/11)
+const T10J = _now - 48 * 3600_000;        // 그저께(6/10)
+export const LATEST_UPDATE = T12J;        // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -48,6 +49,47 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-12 — SpaceX IPO 상장 $135/$167 / BlackRock $50B / 직원 4000+ 백만장자 /
+  //              Tesla Amundi $1.24B / FSD EU / Cybertruck AWD / 메가팩 호주 /
+  //              NVDA 반도체 $110.5B / Oracle RPO $638B / 이란 공습 취소
+  // ════════════════════════════════════════════════════════════════════════
+
+  // SPCX — IPO 상장일 ───────────────────────────────────────────────────
+  { id: 210, symbol: "SPCX", nickname: "익명_7391", holdingLabel: "관심종목",
+    content: "드디어 SpaceX 상장일이에요. 공모가 $135 확정에 Hyperliquid 선물이 $167까지 올라가 있다는 게 진짜 대단하네요. +23.7%면 역대급 IPO 첫날 프리미엄이에요. BlackRock이 $50B+ 주문 넣었다는 것도 확인됐고 머스크 본인이 개인 자금으로 직접 참여한다는 것도 나왔어요. 이 정도면 나스닥 개장 첫날 $160 이상 열리는 거 아닌가요. 역사적인 날입니다.",
+    createdAt: T12J - 5*60_000, likes: 312, comments: 4 },
+  { id: 211, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
+    content: "직원 4,000명 이상 백만장자 탄생이라는 게 진짜 어마어마해요. Google IPO가 1,000명, Meta가 1,500명이었는데 SpaceX가 4,000명이라니... 11년간 146배 오른 기업가치가 임직원들한테 그대로 돌아가는 거잖아요. 그 분들이 이제 텍사스·캘리포니아 부동산 사고 또 다른 스타트업에 투자하면 선순환이 시작되는 거죠. 우주 산업 생태계가 폭발할 것 같아요.",
+    createdAt: T12J - 18*60_000, likes: 248, comments: 3 },
+  { id: 212, symbol: "SPCX", nickname: "익명_5193", holdingLabel: "관심종목",
+    content: "머스크가 ASML 행사에서 기조연설 한다는 거 IPO 당일이라는 게 포인트예요. EUV 노광기 독점 기업 무대에서 TeraFab 칩공장 얘기 나올 것 같은데 ASML 장비 수요 창출로 연결될 수 있잖아요. SpaceX IPO + 반도체 수직계열화 선언 + ASML 협력 암시가 같은 날 나오는 거면... 오늘 진짜 뭔가 큰 날인 것 같아요.",
+    createdAt: T12J - 32*60_000, likes: 189, comments: 3 },
+
+  // TSLA — Amundi / FSD EU ──────────────────────────────────────────────
+  { id: 213, symbol: "TSLA", nickname: "익명_4827", holdingLabel: "150주 보유",
+    content: "Amundi가 Q1에 테슬라 $1.24B 추가 매수했다는 게 엄청난 신호예요. 유럽에서 가장 큰 자산운용사가 머스크 리스크 때문에 비중 줄였던 것 복원한 거잖아요. 여기다 FSD EU 전면 승인 임박 소식까지 나오면서 유럽 기관들이 테슬라 다시 보기 시작한 것 같아요. Amundi가 사면 프랑스·독일·네덜란드 연기금들도 따라 들어오는 게 전형적인 패턴이에요.",
+    createdAt: T12J - 12*60_000, likes: 276, comments: 4 },
+  { id: 214, symbol: "TSLA", nickname: "익명_8312", holdingLabel: "90주 보유",
+    content: "FSD EU 전면 승인 임박이 진짜 숨겨진 핵폭탄이에요. 덴마크 ROW 조항이 적용되면 EU 27개국 자동 확산인데 유럽 테슬라 100만 대+에서 구독 10%만 전환돼도 연 $1.2B이잖아요. 50% 전환이면 $6B인데 이건 순수 소프트웨어 수익이에요. 마진율이 90% 이상인 구독 수익이 연 $6B 추가되면 테슬라 밸류에이션이 완전히 달라지는 거죠.",
+    createdAt: T12J - 26*60_000, likes: 234, comments: 4 },
+  { id: 215, symbol: "TSLA", nickname: "익명_6491", holdingLabel: "60주 보유",
+    content: "사이버트럭 Dual Motor AWD $59,990 배달 시작됐네요. RWD $49,990과 Cyberbeast $100K 사이 빈 자리를 채우는 볼륨 모델이 드디어 나온 거예요. 318마일에 4.1초면 포드 F-150 Lightning보다 $15,000 싸고 성능은 더 좋아요. 메가팩 호주 100MW도 완공됐고 오늘 테슬라 뉴스가 또 풀세트예요.",
+    createdAt: T12J - 40*60_000, likes: 198, comments: 3 },
+
+  // NVDA / ORCL ────────────────────────────────────────────────────────
+  { id: 216, symbol: "NVDA", nickname: "익명_3918", holdingLabel: "35주 보유",
+    content: "SIA 반도체 월매출 $110.5B이 진짜 충격이에요. 4월 하나가 $110B이면 연환산이 $1.3T인데 2년 전 전체 반도체 시장이 $530B이었거든요. 2년 만에 2.5배 성장한 거잖아요. 이게 다 AI 가속기 수요인데 NVDA가 60%+ 점유하고 있으니 NVDA 혼자 $780B+ 연매출이라는 계산이 나와요. CoWoS 2H26 양산 전환이 마진 개선 촉매이고 Feynman 채택까지 나왔으니 내년까지 로드맵이 완성된 거예요.",
+    createdAt: T12J - 8*60_000, likes: 267, comments: 4 },
+  { id: 217, symbol: "ORCL", nickname: "익명_7284", holdingLabel: "25주 보유",
+    content: "오라클 RPO $638B이 나왔는데 이게 2023년 8월 $64.9B에서 34개월 만에 9.8배 성장한 거예요. CAGR 129.5%라는 게 말이 안 되는 숫자인데 AI 클라우드 수주가 폭발적으로 증가하면 가능한 거죠. AWS·Azure랑 AI 클라우드 3강 구도가 완성됐고 OCI 가격이 경쟁사보다 30~50% 싸다는 게 계속 수주로 이어지는 것 같아요. RPO가 미래 수익 선행지표라는 걸 생각하면 오라클 실적 전망이 엄청 좋아 보여요.",
+    createdAt: T12J - 22*60_000, likes: 223, comments: 3 },
+
+  // 매크로 — 이란 공습 취소 ───────────────────────────────────────────
+  { id: 218, symbol: "SPCX", nickname: "익명_9143", holdingLabel: "관심종목",
+    content: "이란 공습 취소됐다는 게 IPO에 최고 타이밍이에요. 어제 유가 $90 올라갔을 때 시장 불안했는데 오늘 핵합의 협상 재개하면서 풀리는 거잖아요. 유가 $85로 내려가고 CPI 압력 줄면 금리 인하 기대도 다시 살아나는 거니까 주식 시장 전반에 좋은 환경이에요. SpaceX IPO 당일에 지정학 리스크까지 해소되는 진짜 완벽한 타이밍이네요.",
+    createdAt: T12J - 46*60_000, likes: 176, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-11 — SpaceX IPO D-1 / $1.75T / 신용등급 / Starship / TeraFab /
@@ -884,6 +926,57 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-12 신규 ──────────────────────────────────────────────────────
+  210: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "관심종목", content: "$135 확정이고 선물이 $167이면 나스닥 첫날 $150~160 사이 열리지 않을까요. 역대 대형 IPO들 보면 선물 대비 10~15% 할인 열리는 경우 많았거든요.", createdAt: T12J - m(4), likes: 67 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "BlackRock $50B 넣었다는 거 진짜 어마어마해요. 공모 물량이 $75B인데 BlackRock 혼자 $50B 넣은 거면 초과 청약이 당연한 거죠.", createdAt: T12J - m(2), likes: 53 },
+    { id: 3, nickname: "익명_8473", holdingLabel: "관심종목", content: "SpaceX IPO + 이란 공습 취소 + NVDA 반도체 $110.5B 신기록이 같은 날 나온다는 게 진짜 오늘 시장 너무 좋을 것 같아요.", createdAt: T12J - m(1), likes: 44 },
+    { id: 4, nickname: "익명_2918", holdingLabel: "관심종목", content: "5-for-1 분할 후 $135면 분할 전 기준 $675인데 그게 $1.75T 기업가치랑 맞는지 계산해보면... IPO 후 S&P 500 편입 시 자동 매수 유입이 추가 촉매가 될 것 같아요.", createdAt: T12J + m(1), likes: 36 },
+  ],
+  211: [
+    { id: 1, nickname: "익명_5284", holdingLabel: "관심종목", content: "4,000명이 순식간에 백만장자가 되면 텍사스 부동산은 또 올라가겠네요. 오스틴·휴스턴 집값 영향 받을 것 같아요.", createdAt: T12J - m(17), likes: 48 },
+    { id: 2, nickname: "익명_9182", holdingLabel: "관심종목", content: "11년 동안 SpaceX 다닌 사람들이 이제 쉬어도 되는 거잖아요. 능력 있는 분들이 새 회사 세우면 우주 스타트업 생태계에 엄청난 자금이 풀리는 거예요.", createdAt: T12J - m(8), likes: 37 },
+    { id: 3, nickname: "익명_4729", holdingLabel: "관심종목", content: "Google IPO 이후 1,000명 백만장자들이 Stanford 근처에서 엄청난 스타트업 생태계 만들었잖아요. SpaceX IPO 4,000명이면 텍사스에서 그 이상이 될 수 있겠어요.", createdAt: T12J - m(3), likes: 29 },
+  ],
+  212: [
+    { id: 1, nickname: "익명_7391", holdingLabel: "관심종목", content: "IPO 당일에 세계 반도체 핵심 기업 무대에 선다는 것 자체가 메시지예요. TeraFab 얘기 나오면 ASML 주가도 반응할 것 같아요.", createdAt: T12J - m(30), likes: 41 },
+    { id: 2, nickname: "익명_3849", holdingLabel: "관심종목", content: "ASML EUV 장비가 TeraFab 들어가면 ASML한테도 큰 수주잖아요. 머스크가 ASML 무대에 서는 건 그냥 연설이 아니라 협업 신호일 수 있죠.", createdAt: T12J - m(15), likes: 33 },
+    { id: 3, nickname: "익명_6192", holdingLabel: "관심종목", content: "SpaceX + Tesla + xAI 세 회사 칩 수요가 TeraFab 하나에 모인다는 거 스케일이 다른 거예요. TSMC 의존도 줄이면 지정학 리스크 헤지되고 원가도 장기적으로 낮아지겠죠.", createdAt: T12J - m(5), likes: 25 },
+  ],
+  213: [
+    { id: 1, nickname: "익명_4192", holdingLabel: "80주 보유", content: "Amundi $1.24B이면 그 규모에서 유럽 최대인데 이게 다른 유럽 기관투자자들한테 신호가 되는 거잖아요. Norges Bank나 ABP 같은 유럽 연기금들 테슬라 비중 늘리는 게 시작될 수 있어요.", createdAt: T12J - m(10), likes: 58 },
+    { id: 2, nickname: "익명_8374", holdingLabel: "45주 보유", content: "머스크 리스크가 완화됐다는 게 핵심이에요. 유럽 ESG 기준에서 테슬라를 빼는 이유가 머스크 거버넌스 이슈였는데 Amundi가 다시 사면 그 이슈가 공식적으로 해소됐다는 신호죠.", createdAt: T12J - m(4), likes: 44 },
+    { id: 3, nickname: "익명_2839", holdingLabel: "20주 보유", content: "Q1 $1.24B 추가 매수면 분기 단위로 이 정도씩 사는 거잖아요. 연간 $5B 수준의 유럽 기관 자금이 테슬라로 들어오는 추세가 시작되는 건지도 모르겠어요.", createdAt: T12J + m(2), likes: 36 },
+    { id: 4, nickname: "익명_7193", holdingLabel: "120주 보유", content: "FSD EU 전면 승인까지 나오면 유럽에서 테슬라가 단순 EV가 아니라 AI 구독 서비스 사업자가 되는 거예요. 밸류에이션 재평가가 유럽에서 시작될 것 같아요.", createdAt: T12J + m(5), likes: 28 },
+  ],
+  214: [
+    { id: 1, nickname: "익명_5382", holdingLabel: "65주 보유", content: "ROW 6개월 조항이 핵심이에요. 덴마크가 이미 승인됐으니 6개월 내에 EU 27개국으로 확산되는 게 법적 절차가 되는 거잖아요. 독일·프랑스가 막을 이유가 없어요.", createdAt: T12J - m(24), likes: 72 },
+    { id: 2, nickname: "익명_9284", holdingLabel: "30주 보유", content: "유럽 FSD 구독 10%면 $1.2B인데 마진이 90% 이상이에요. 차량 마진 5~10%랑 다른 거예요. 이게 테슬라의 진짜 이익 레버리지예요.", createdAt: T12J - m(11), likes: 54 },
+    { id: 3, nickname: "익명_3748", holdingLabel: "50주 보유", content: "벨기에 장관이 '100% 자율주행'이라고 한 거 정말 충격이었어요. 정부 관료가 그런 말을 공식적으로 한다는 건 법적 책임을 지겠다는 거잖아요. 이제 진짜 시작인 것 같아요.", createdAt: T12J - m(3), likes: 43 },
+    { id: 4, nickname: "익명_6192", holdingLabel: "175주 보유", content: "EU 승인 후 한국 규제기관도 따라서 볼 것 같아요. 네덜란드 충돌 3.5배 감소 데이터가 있으면 어느 나라도 거부하기 어렵죠.", createdAt: T12J + m(3), likes: 35 },
+  ],
+  215: [
+    { id: 1, nickname: "익명_7284", holdingLabel: "40주 보유", content: "포드 F-150 Lightning이 $74,995인데 사이버트럭 AWD가 $59,990이면 $15,000 싸고 주행거리도 비슷해요. 픽업트럭 시장에서 가격 경쟁력이 생긴 거예요.", createdAt: T12J - m(38), likes: 47 },
+    { id: 2, nickname: "익명_3912", holdingLabel: "15주 보유", content: "메가팩 호주 100MW도 완공됐다는 게 에너지 사업 글로벌 확장이 계속 되고 있다는 거예요. 에너지 마진이 자동차 마진보다 높아진 게 유지되면 테슬라 이익 구조가 완전히 바뀌는 거죠.", createdAt: T12J - m(22), likes: 36 },
+    { id: 3, nickname: "익명_8472", holdingLabel: "85주 보유", content: "AWD 배달 시작되면 수십만 예약자들이 기다리고 있는 거잖아요. 2021년부터 기다린 분들이 드디어 받는 거예요. 볼륨 증가 + 수익화 동시에 진행되는 거죠.", createdAt: T12J - m(8), likes: 29 },
+  ],
+  216: [
+    { id: 1, nickname: "익명_4821", holdingLabel: "28주 보유", content: "$110.5B 월매출이면 연환산 $1.3T예요. 2년 전 전체 반도체 시장이 $530B이었는데 그게 이제 월 단위 숫자예요. AI 칩 슈퍼사이클이 진짜라는 게 매달 확인되고 있는 거죠.", createdAt: T12J - m(6), likes: 64 },
+    { id: 2, nickname: "익명_7393", holdingLabel: "12주 보유", content: "CoWoS 2H26 양산이 NVDA 마진 개선 촉매예요. 패키징 비용 낮아지면 같은 GPU를 더 낮은 원가로 만들 수 있는 거니까요. 수익성 개선이 하반기부터 나타날 수 있어요.", createdAt: T12J - m(2), likes: 48 },
+    { id: 3, nickname: "익명_2847", holdingLabel: "50주 보유", content: "Feynman 칩까지 이미 초기 채택 단계라는 게 2028년까지 로드맵이 이미 있다는 거잖아요. 젠슨 황이 1~2년 후 얘기가 아니라 5년 후 얘기를 지금 하는 거예요.", createdAt: T12J + m(1), likes: 39 },
+    { id: 4, nickname: "익명_9183", holdingLabel: "8주 보유", content: "반도체 $110.5B은 NVDA만이 아니라 SK하이닉스, TSMC, ASML 전부 수혜받는 거예요. AI 인프라 투자 사이클이 공급망 전체를 끌어올리고 있는 거죠.", createdAt: T12J + m(4), likes: 31 },
+  ],
+  217: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "18주 보유", content: "RPO $638B이면 이미 계약된 미래 수익이잖아요. 오라클 향후 3~5년 매출이 사실상 확정된 거예요. 이 정도 visibility면 밸류에이션 프리미엄 받을 자격이 충분하죠.", createdAt: T12J - m(20), likes: 53 },
+    { id: 2, nickname: "익명_3748", holdingLabel: "10주 보유", content: "OCI가 AWS·Azure보다 30~50% 싸다는 게 진짜 수주 폭발의 이유예요. 같은 성능이면 당연히 싼 걸 쓰는 거죠. 오라클 레거시 DB 고객들이 AI로 전환할 때 OCI 선택하는 게 자연스러운 경로고요.", createdAt: T12J - m(8), likes: 41 },
+    { id: 3, nickname: "익명_8374", holdingLabel: "30주 보유", content: "CAGR 129.5%가 지속 가능하지는 않겠지만 수주가 이미 $638B이니 향후 3~4년 매출이 확보된 거예요. 현 PER 기준 비싸 보여도 RPO 기준으로는 저평가 논쟁이 생길 수 있어요.", createdAt: T12J - m(2), likes: 33 },
+  ],
+  218: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "관심종목", content: "이란 공습 취소가 SpaceX IPO 날 나왔다는 타이밍이 너무 좋아요. 어제 지정학 리스크로 불안했는데 오늘 해소되면서 시장 분위기가 완전히 달라졌네요.", createdAt: T12J - m(44), likes: 45 },
+    { id: 2, nickname: "익명_7384", holdingLabel: "관심종목", content: "유가 $90에서 $85로 내려오면 6월 CPI가 3% 이하로 유지될 수 있어요. 그러면 연준 금리 인하 기대도 살아나고 성장주 할인율 낮아지는 거니까 NVDA·TSLA 모두 좋은 거죠.", createdAt: T12J - m(28), likes: 36 },
+    { id: 3, nickname: "익명_2947", holdingLabel: "관심종목", content: "트럼프 스타일이 강경-협상 번갈아가는 패턴이잖아요. 어제 강경 발언 → 오늘 협상 재개. 최종 타결까지 몇 달 걸리겠지만 방향은 협상으로 가는 것 같아요.", createdAt: T12J - m(12), likes: 28 },
+  ],
+
   // ── 2026-06-11 신규 ──────────────────────────────────────────────────────
   190: [
     { id: 1, nickname: "익명_4827", holdingLabel: "관심종목", content: "5-for-1 분할 후 $25~30이면 일반 투자자 진입 장벽 완전히 낮춘 거예요. 공모주 신청하고 싶은데 한국에서 어떻게 참여해야 할지가 고민이에요.", createdAt: T11J - m(9), likes: 34 },

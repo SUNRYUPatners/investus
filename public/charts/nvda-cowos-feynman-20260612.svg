@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#60a5fa" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="bold">NVDA · 종목분석</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">CoWoS 2H26 양산 전환 · Feynman 칩 초기 채택</text>
+
+  <!-- Header boxes -->
+  <rect x="24" y="80" width="200" height="88" rx="12" fill="#0d1520" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="124" y="108" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">CoWoS 전환 시기</text>
+  <text x="124" y="138" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle" font-weight="bold">2H 2026</text>
+  <text x="124" y="160" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">대규모 양산 시작</text>
+
+  <rect x="240" y="80" width="216" height="88" rx="12" fill="#111318"/>
+  <text x="348" y="108" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Feynman 칩</text>
+  <text x="348" y="138" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle" font-weight="bold">초기 채택</text>
+  <text x="348" y="160" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">차세대 초대형 AI칩</text>
+
+  <!-- What is CoWoS -->
+  <text x="24" y="192" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ CoWoS 패키징이란?</text>
+
+  <rect x="24" y="204" width="432" height="60" rx="10" fill="#111318"/>
+  <text x="40" y="224" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" font-weight="bold">Chip-on-Wafer-on-Substrate (TSMC 개발)</text>
+  <text x="40" y="242" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">• 여러 칩(GPU + HBM)을 하나의 패키지로 초집적</text>
+  <text x="40" y="258" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">• 칩 간 통신 속도 3~5배 향상 · 에너지 효율 극대화</text>
+
+  <!-- Feynman chip -->
+  <text x="24" y="288" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Feynman 칩 — 다음 세대 AI 가속기</text>
+
+  <rect x="24" y="300" width="204" height="56" rx="10" fill="#0d1520"/>
+  <text x="126" y="322" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">예상 출시</text>
+  <text x="126" y="344" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle" font-weight="bold">2027~2028</text>
+
+  <rect x="244" y="300" width="212" height="56" rx="10" fill="#0d1520"/>
+  <text x="350" y="322" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">포지션</text>
+  <text x="350" y="344" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle" font-weight="bold">Rubin 후속</text>
+
+  <!-- Impact -->
+  <text x="24" y="378" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 초대형 AI 칩 실현</text>
+
+  <rect x="24" y="390" width="432" height="48" rx="10" fill="#111318"/>
+  <text x="40" y="410" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" font-weight="bold">CoWoS + Feynman = 이전 불가능한 크기의 AI 칩</text>
+  <text x="40" y="428" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">단일 칩에 수십억 트랜지스터 + 수 테라바이트 대역폭 → 초거대 AI 모델 실행</text>
+
+  <text x="240" y="456" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">TSMC CoWoS 수혜: SK하이닉스(HBM) · TSMC(패키징) · NVDA(설계)</text>
+  <text x="240" y="472" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.12 · Investus · 투자 참고용</text>
+</svg>

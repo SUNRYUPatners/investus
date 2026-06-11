@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#60a5fa" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="bold">NVDA · 섹터 · 반도체</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">글로벌 반도체 월매출 $110.5B 신기록</text>
+
+  <!-- Main number -->
+  <rect x="24" y="80" width="432" height="80" rx="14" fill="#0d1520" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="240" y="110" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">SIA 집계 · 2026년 4월 글로벌 반도체 월매출</text>
+  <text x="240" y="148" font-family="Arial,sans-serif" font-size="38" fill="#60a5fa" text-anchor="middle" font-weight="bold">$110.5B</text>
+
+  <!-- Growth indicators -->
+  <rect x="24" y="178" width="204" height="70" rx="12" fill="#111318"/>
+  <text x="126" y="202" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">전년 동기 대비</text>
+  <text x="126" y="232" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" text-anchor="middle" font-weight="bold">+93.9%</text>
+  <text x="126" y="244" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">YoY (4월 2025 대비)</text>
+
+  <rect x="244" y="178" width="212" height="70" rx="12" fill="#111318"/>
+  <text x="350" y="202" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">전월 대비</text>
+  <text x="350" y="232" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" text-anchor="middle" font-weight="bold">+11.0%</text>
+  <text x="350" y="244" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">MoM (3월 2026 대비)</text>
+
+  <!-- Monthly trend bar chart -->
+  <text x="24" y="272" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 월별 반도체 매출 추이 (2026년)</text>
+
+  <!-- Bar chart labels -->
+  <text x="56" y="380" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">1월</text>
+  <text x="120" y="380" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2월</text>
+  <text x="184" y="380" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">3월</text>
+  <text x="248" y="380" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">4월</text>
+  <!-- Bar values (approximated) -->
+  <text x="56" y="305" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">$82B</text>
+  <text x="120" y="299" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">$87B</text>
+  <text x="184" y="295" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">$99.5B</text>
+  <text x="248" y="290" font-family="Arial,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" font-weight="bold">$110.5B</text>
+
+  <rect x="32" y="308" width="48" height="70" rx="4" fill="rgba(96,165,250,0.3)"/>
+  <rect x="96" y="302" width="48" height="76" rx="4" fill="rgba(96,165,250,0.4)"/>
+  <rect x="160" y="298" width="48" height="80" rx="4" fill="rgba(96,165,250,0.55)"/>
+  <rect x="224" y="292" width="48" height="86" rx="4" fill="#60a5fa" opacity="0.85"/>
+
+  <!-- SIA source and note -->
+  <text x="316" y="296" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">SIA 데이터 기준</text>
+  <text x="316" y="312" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">(Semiconductor</text>
+  <text x="316" y="328" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Industry Assoc.)</text>
+  <text x="316" y="352" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI칩 수요 주도</text>
+  <text x="316" y="368" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">NVDA HBM 공급</text>
+
+  <rect x="24" y="392" width="432" height="36" rx="10" fill="#111318"/>
+  <text x="240" y="408" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">수혜 기업: NVDA(AI GPU) · AVGO(네트워킹) · SK하이닉스(HBM)</text>
+  <text x="240" y="424" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2026년 반도체 시장 연간 $1.3T 돌파 전망</text>
+
+  <text x="240" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">출처: SIA (Semiconductor Industry Association) · 2026.06 발표</text>
+  <text x="240" y="470" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.12 · Investus · 투자 참고용</text>
+</svg>

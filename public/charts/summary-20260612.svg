@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580">
+  <rect width="480" height="580" fill="#0a0c10"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#c084fc" opacity="0.3"/>
+  <text x="240" y="22" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle" font-weight="bold">📋 INVESTUS 시장 한장 요약</text>
+  <text x="240" y="42" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" text-anchor="middle" font-weight="bold">2026년 6월 12일 (금)</text>
+
+  <!-- ① SPCX IPO 상장 -->
+  <rect x="12" y="64" width="456" height="82" rx="10" fill="#1a1020" stroke="#c084fc" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="12" y="64" width="4" height="82" rx="2" fill="#c084fc"/>
+  <text x="28" y="84" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">🚀 SPCX · SpaceX IPO 역사적 상장</text>
+  <text x="28" y="103" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">공모가 $135 확정 → 선물 $167.07 (+23.7%)</text>
+  <text x="28" y="120" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">555M주 · 나스닥 상장 · BlackRock $50B+ 매수</text>
+  <text x="28" y="136" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">직원 4,000+ 백만장자 탄생 · 머스크 본인 자금 직접 참여</text>
+
+  <!-- ② TSLA -->
+  <rect x="12" y="154" width="456" height="100" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="12" y="154" width="4" height="100" rx="2" fill="#00e5a0"/>
+  <text x="28" y="174" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">🚗 TSLA · Tesla 5대 호재</text>
+  <text x="28" y="193" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">① Amundi(유럽 최대 자산운용) Q1 테슬라 <tspan font-weight="bold">$1.24B 추가매수</tspan></text>
+  <text x="28" y="210" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">② FSD 유럽 전면 승인 임박 — EU Commission 심사 진행</text>
+  <text x="28" y="227" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">③ Cybertruck Dual Motor AWD <tspan font-weight="bold">$59,990</tspan> 미국 첫 배달</text>
+  <text x="28" y="244" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">④ 메가팩 100MW 호주 NSW 완공 · ⑤ 요코하마 Autopilot 채용</text>
+
+  <!-- ③ NVDA -->
+  <rect x="12" y="262" width="456" height="82" rx="10" fill="#0d1520" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="12" y="262" width="4" height="82" rx="2" fill="#60a5fa"/>
+  <text x="28" y="282" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="bold">🔵 NVDA · 반도체 슈퍼사이클 신기록</text>
+  <text x="28" y="301" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">글로벌 반도체 월매출 $110.5B — +93.9% YoY 역대 최고</text>
+  <text x="28" y="318" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">SIA 집계 2026년 4월 · CoWoS 2H26 대량생산 전환 · Feynman 칩 초기 채택</text>
+  <text x="28" y="334" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">NVDA·SK하이닉스·TSMC 공급망 전반 수혜</text>
+
+  <!-- ④ ORCL -->
+  <rect x="12" y="352" width="456" height="66" rx="10" fill="#200a0a" stroke="#ef4444" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="12" y="352" width="4" height="66" rx="2" fill="#ef4444"/>
+  <text x="28" y="372" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" font-weight="bold">🔴 ORCL · Oracle</text>
+  <text x="28" y="391" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">RPO $638B 돌파 — 34개월 CAGR +129.5%</text>
+  <text x="28" y="408" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Aug'23 $64.9B → May'26 $638B · OCI AI 클라우드 수주 폭발</text>
+
+  <!-- ⑤ Macro -->
+  <rect x="12" y="426" width="456" height="82" rx="10" fill="#1a0c00" stroke="#fb923c" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="12" y="426" width="4" height="82" rx="2" fill="#fb923c"/>
+  <text x="28" y="446" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="bold">🌐 매크로 · 지정학</text>
+  <text x="28" y="465" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">트럼프 이란 공습 취소 선언 · 핵합의 타결 진행</text>
+  <text x="28" y="482" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">미·이스라엘·사우디 등 승인 → 유가 하락 기대 · CPI 완화 가능성</text>
+  <text x="28" y="498" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">머스크 "범용 로봇이 다음 빅 플랫폼" — Optimus 수년 내 실용화 선언</text>
+
+  <!-- Footer -->
+  <rect x="12" y="518" width="456" height="28" rx="8" fill="#111318"/>
+  <text x="240" y="535" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">오늘의 키워드: SPCX IPO $135→$167 · TSLA Amundi $1.24B · NVDA $110.5B · ORCL RPO $638B</text>
+
+  <text x="240" y="568" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.12 · Investus · 투자 참고용 · 투자 권유 아님</text>
+</svg>

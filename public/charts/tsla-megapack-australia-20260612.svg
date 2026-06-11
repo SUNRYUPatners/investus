@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#00e5a0" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">TSLA · 종목분석</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">Tesla 메가팩 100MW 배터리 호주 NSW 완공</text>
+
+  <!-- Main stats -->
+  <rect x="24" y="80" width="204" height="90" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="126" y="108" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">설비 용량</text>
+  <text x="126" y="145" font-family="Arial,sans-serif" font-size="40" fill="#00e5a0" text-anchor="middle" font-weight="bold">100MW</text>
+  <text x="126" y="163" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">그리드 연계 배터리</text>
+
+  <rect x="244" y="80" width="212" height="90" rx="12" fill="#111318"/>
+  <text x="350" y="100" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">위치</text>
+  <text x="350" y="122" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle" font-weight="bold">호주 NSW</text>
+  <text x="350" y="142" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">뉴사우스웨일스주</text>
+  <text x="350" y="162" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2026.06.12 완공 확인</text>
+
+  <!-- Details -->
+  <text x="24" y="196" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 메가팩 시스템 스펙</text>
+
+  <rect x="24" y="208" width="136" height="60" rx="8" fill="#111318"/>
+  <text x="92" y="228" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">전력 용량</text>
+  <text x="92" y="252" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" text-anchor="middle" font-weight="bold">100 MW</text>
+  <text x="92" y="264" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">메가와트</text>
+
+  <rect x="172" y="208" width="136" height="60" rx="8" fill="#111318"/>
+  <text x="240" y="228" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">저장 용량</text>
+  <text x="240" y="252" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" text-anchor="middle" font-weight="bold">200 MWh</text>
+  <text x="240" y="264" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">메가와트시</text>
+
+  <rect x="320" y="208" width="136" height="60" rx="8" fill="#111318"/>
+  <text x="388" y="228" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">가구 공급</text>
+  <text x="388" y="252" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" text-anchor="middle" font-weight="bold">~11만</text>
+  <text x="388" y="264" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">가구 2시간 공급</text>
+
+  <!-- Business impact -->
+  <text x="24" y="294" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Tesla 에너지 사업 현황</text>
+
+  <rect x="24" y="306" width="432" height="48" rx="10" fill="#111318"/>
+  <text x="40" y="326" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">2025년 메가팩 설치 용량: 11.8 GWh (+178% YoY)</text>
+  <text x="40" y="346" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">에너지 사업 매출 2025년 $6.4B · 영업이익률 24.6% (차량 능가)</text>
+
+  <!-- Global projects -->
+  <text x="24" y="374" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 주요 메가팩 완공 이력</text>
+
+  <rect x="24" y="386" width="432" height="28" rx="6" fill="#111318"/>
+  <text x="40" y="404" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">캘리포니아 Moss Landing 182.5 MW → 텍사스 → 하와이 → 호주 NSW</text>
+
+  <!-- Revenue context -->
+  <rect x="24" y="420" width="432" height="36" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="240" y="436" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">메가팩 1대 = 약 $1.6M · 100MW = 약 $250M+ 프로젝트 규모</text>
+  <text x="240" y="452" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">에너지 저장 시장: 2030년 $450B 예상 — Tesla 시장점유율 40%+</text>
+
+  <text x="240" y="472" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.12 · Investus · 투자 참고용</text>
+</svg>

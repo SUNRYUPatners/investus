@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX · 종목분석</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">BlackRock $50B+ SPCX 매수 주문</text>
+
+  <!-- Main number -->
+  <rect x="24" y="80" width="432" height="90" rx="14" fill="#0d1520" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="240" y="116" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">BlackRock 매수 주문 규모</text>
+  <text x="240" y="155" font-family="Arial,sans-serif" font-size="40" fill="#60a5fa" text-anchor="middle" font-weight="bold">$50B+</text>
+
+  <!-- Comparison bar chart -->
+  <text x="24" y="198" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 주요 기관투자자 매수 주문 (추정)</text>
+
+  <!-- BlackRock -->
+  <text x="24" y="222" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">BlackRock</text>
+  <rect x="130" y="210" width="270" height="22" rx="5" fill="rgba(96,165,250,0.25)"/>
+  <rect x="130" y="210" width="270" height="22" rx="5" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+  <text x="408" y="226" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="bold">$50B+</text>
+
+  <!-- Vanguard -->
+  <text x="24" y="254" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Vanguard</text>
+  <rect x="130" y="242" width="162" height="22" rx="5" fill="rgba(192,132,252,0.2)"/>
+  <text x="300" y="258" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="bold">~$30B</text>
+
+  <!-- Fidelity -->
+  <text x="24" y="286" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Fidelity</text>
+  <rect x="130" y="274" width="108" height="22" rx="5" fill="rgba(0,229,160,0.15)"/>
+  <text x="246" y="290" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="bold">~$20B</text>
+
+  <!-- Context cards -->
+  <text x="24" y="324" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ BlackRock이 SPCX를 사야 하는 이유</text>
+
+  <rect x="24" y="336" width="204" height="66" rx="10" fill="#111318"/>
+  <text x="126" y="356" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">AUM (운용자산)</text>
+  <text x="126" y="378" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" text-anchor="middle" font-weight="bold">$11.6T</text>
+  <text x="126" y="396" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">세계 최대 자산운용사</text>
+
+  <rect x="240" y="336" width="216" height="66" rx="10" fill="#111318"/>
+  <text x="348" y="356" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">SPCX 비중(가정)</text>
+  <text x="348" y="378" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" text-anchor="middle" font-weight="bold">0.43%</text>
+  <text x="348" y="396" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">AUM 대비 $50B의 비중</text>
+
+  <!-- Note -->
+  <rect x="24" y="418" width="432" height="38" rx="10" fill="#111318"/>
+  <text x="240" y="434" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">S&amp;P 500 편입 시 패시브 펀드 강제 매수 — 수십 조 달러 수요 예정</text>
+  <text x="240" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">편입 기준: 시총·유동성·수익성 충족 후 통상 1~2분기 내</text>
+
+  <text x="240" y="472" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.12 · Investus · 투자 참고용</text>
+</svg>

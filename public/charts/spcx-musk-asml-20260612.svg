@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX · 종목분석</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">일론 머스크 ASML 행사 기조연설 예정</text>
+
+  <!-- Event box -->
+  <rect x="24" y="80" width="432" height="80" rx="12" fill="#1a1020" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="40" y="106" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">행사명</text>
+  <text x="40" y="128" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="bold">ASML Technology Summit 2026</text>
+  <text x="40" y="150" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">네덜란드 벨트호벤 · 반도체·AI·혁신 기술 글로벌 컨퍼런스</text>
+
+  <!-- Topics -->
+  <text x="24" y="188" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 머스크 연설 예상 주제</text>
+
+  <rect x="24" y="200" width="136" height="70" rx="10" fill="#111318"/>
+  <text x="92" y="224" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">🤖</text>
+  <text x="92" y="248" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" text-anchor="middle" font-weight="bold">AI 미래</text>
+  <text x="92" y="264" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">xAI·Grok</text>
+
+  <rect x="172" y="200" width="136" height="70" rx="10" fill="#111318"/>
+  <text x="240" y="224" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">🔵</text>
+  <text x="240" y="248" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle" font-weight="bold">반도체 혁신</text>
+  <text x="240" y="264" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">TeraFab·칩</text>
+
+  <rect x="320" y="200" width="136" height="70" rx="10" fill="#111318"/>
+  <text x="388" y="224" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">🚀</text>
+  <text x="388" y="248" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" text-anchor="middle" font-weight="bold">우주·기술</text>
+  <text x="388" y="264" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Starship·SpaceX</text>
+
+  <!-- Why it matters -->
+  <text x="24" y="298" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 왜 중요한가</text>
+
+  <rect x="24" y="310" width="432" height="44" rx="10" fill="#111318"/>
+  <text x="40" y="330" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">IPO 당일 기조연설 — 투자자 심리 극대화</text>
+  <text x="40" y="348" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">ASML: EUV 노광기 독점 공급 · 반도체 패권 핵심 기업</text>
+
+  <rect x="24" y="362" width="432" height="44" rx="10" fill="#111318"/>
+  <text x="40" y="382" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">ASML + SpaceX 협업 가능성 암시</text>
+  <text x="40" y="400" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">TeraFab $11B 칩공장 → ASML EUV 장비 수요 창출 가능</text>
+
+  <!-- ASML info -->
+  <rect x="24" y="418" width="432" height="38" rx="10" fill="#0d1520" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="240" y="434" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">ASML: 시총 약 $300B · EUV 노광기 세계 독점 · 반도체 생산 핵심 장비</text>
+  <text x="240" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">머스크의 ASML 무대 등장 = 반도체 수직계열화 의지 재확인</text>
+
+  <text x="240" y="472" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.12 · Investus · 투자 참고용</text>
+</svg>

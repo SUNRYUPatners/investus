@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#00e5a0" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">TSLA · 종목분석</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">Amundi, Q1 테슬라 $1.24B 추가매수</text>
+
+  <!-- Main number -->
+  <rect x="24" y="80" width="432" height="90" rx="14" fill="#0d1f14" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="240" y="114" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Amundi 2026 Q1 TSLA 추가매수</text>
+  <text x="240" y="155" font-family="Arial,sans-serif" font-size="40" fill="#00e5a0" text-anchor="middle" font-weight="bold">+$1.24B</text>
+  <text x="240" y="178" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">유럽 최대 자산운용사 · 글로벌 7위 Tesla 보유</text>
+
+  <!-- Stats -->
+  <text x="24" y="198" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Amundi 보유 현황</text>
+
+  <rect x="24" y="210" width="136" height="64" rx="10" fill="#111318"/>
+  <text x="92" y="232" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">추가 매수</text>
+  <text x="92" y="258" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" text-anchor="middle" font-weight="bold">$1.24B</text>
+  <text x="92" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Q1 2026</text>
+
+  <rect x="172" y="210" width="136" height="64" rx="10" fill="#111318"/>
+  <text x="240" y="232" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">보유 순위</text>
+  <text x="240" y="258" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" text-anchor="middle" font-weight="bold">글로벌 7위</text>
+  <text x="240" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">TSLA 주주</text>
+
+  <rect x="320" y="210" width="136" height="64" rx="10" fill="#111318"/>
+  <text x="388" y="232" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Amundi AUM</text>
+  <text x="388" y="258" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" text-anchor="middle" font-weight="bold">$2.2T</text>
+  <text x="388" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">유럽 최대</text>
+
+  <!-- Context -->
+  <text x="24" y="302" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 왜 의미있나</text>
+
+  <rect x="24" y="314" width="432" height="44" rx="10" fill="#111318"/>
+  <text x="40" y="334" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">유럽 ESG 제한 완화 → Tesla 재편입</text>
+  <text x="40" y="352" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">ESG 리스크 우려로 축소했던 Tesla 비중을 Q1에 대규모 복원</text>
+
+  <rect x="24" y="366" width="432" height="44" rx="10" fill="#111318"/>
+  <text x="40" y="386" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">유럽 기관 '머스크 리스크' 완화 신호</text>
+  <text x="40" y="404" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Amundi 매수 → 유럽 연기금 TSLA 재진입의 선행 지표</text>
+
+  <!-- Top holders -->
+  <rect x="24" y="418" width="432" height="38" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="240" y="434" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">TSLA 주요 기관 보유자 (글로벌): Vanguard 1위 · BlackRock 2위 · State Street 3위</text>
+  <text x="240" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Amundi 7위 진입은 유럽 최대 기관의 비중 복원 신호</text>
+
+  <text x="240" y="472" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.12 · Investus · 투자 참고용</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#00e5a0" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">TSLA · 종목분석</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">FSD 유럽 전면 승인 임박 — EU Commission 심사 중</text>
+
+  <!-- Status ladder -->
+  <text x="24" y="90" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ EU FSD 승인 현황</text>
+
+  <!-- Netherlands -->
+  <rect x="24" y="102" width="432" height="38" rx="8" fill="rgba(0,229,160,0.12)" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="44" y="117" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">🇳🇱</text>
+  <text x="70" y="117" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="bold">네덜란드</text>
+  <text x="70" y="133" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">FSD Supervised 실데이터 공개 — 충돌 3.5배↓ 부상 14.9배↓</text>
+  <text x="440" y="125" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" text-anchor="end" font-weight="bold">✓ 완료</text>
+
+  <!-- Denmark -->
+  <rect x="24" y="148" width="432" height="38" rx="8" fill="rgba(0,229,160,0.12)" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="44" y="163" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">🇩🇰</text>
+  <text x="70" y="163" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="bold">덴마크</text>
+  <text x="70" y="179" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">FSD Supervised 공식 운행 허가</text>
+  <text x="440" y="171" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" text-anchor="end" font-weight="bold">✓ 완료</text>
+
+  <!-- Belgium -->
+  <rect x="24" y="194" width="432" height="38" rx="8" fill="rgba(0,229,160,0.12)" stroke="#00e5a0" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="44" y="209" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">🇧🇪</text>
+  <text x="70" y="209" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="bold">벨기에</text>
+  <text x="70" y="225" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">'기능적으로 100% 자율주행' 공인</text>
+  <text x="440" y="217" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" text-anchor="end" font-weight="bold">✓ 완료</text>
+
+  <!-- EU Commission -->
+  <rect x="24" y="240" width="432" height="38" rx="8" fill="rgba(251,191,36,0.1)" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="44" y="255" font-family="Arial,sans-serif" font-size="11" fill="#fbbf24">🇪🇺</text>
+  <text x="70" y="255" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="bold">EU Commission (전체)</text>
+  <text x="70" y="271" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">덴마크 승인 후 ROW 6개월 내 자동 무효화 조항 검토 중</text>
+  <text x="440" y="263" font-family="Arial,sans-serif" font-size="11" fill="#fbbf24" text-anchor="end" font-weight="bold">⏳ 임박</text>
+
+  <!-- Germany France pending -->
+  <rect x="24" y="286" width="432" height="38" rx="8" fill="rgba(107,114,128,0.1)" stroke="#6b7280" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="40" y="305" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" font-weight="bold">🇩🇪 독일 · 🇫🇷 프랑스 · 🇪🇸 스페인</text>
+  <text x="40" y="319" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">소형 국가 선례 확인 후 순차 검토 예정</text>
+  <text x="440" y="305" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">⏳ 대기</text>
+
+  <!-- Revenue potential -->
+  <text x="24" y="350" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 유럽 FSD 수익화 시나리오</text>
+
+  <rect x="24" y="362" width="204" height="64" rx="10" fill="#111318"/>
+  <text x="126" y="384" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">유럽 Tesla 보유</text>
+  <text x="126" y="408" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" text-anchor="middle" font-weight="bold">100만+ 대</text>
+  <text x="126" y="424" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">FSD 구독 전환 대상</text>
+
+  <rect x="244" y="362" width="212" height="64" rx="10" fill="#111318"/>
+  <text x="350" y="384" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">구독 10% 전환 시</text>
+  <text x="350" y="408" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" text-anchor="middle" font-weight="bold">연 $1.2B+</text>
+  <text x="350" y="424" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">순수 소프트웨어 수익</text>
+
+  <text x="240" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">EU 전면 승인 시 50% 전환 → 연 $6B+ 예상</text>
+  <text x="240" y="472" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.12 · Investus · 투자 참고용</text>
+</svg>

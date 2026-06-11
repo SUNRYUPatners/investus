@@ -19,7 +19,63 @@ const _an = Date.now();
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
-  // ── 최신 ─────────────────────────────────────────────────────────────────
+  // ── 2026-06-12 신규 ──────────────────────────────────────────────────────
+  {
+    id: -57,
+    alias: "여의도 매 #17",
+    symbol: "SPCX",
+    content:
+      "SpaceX IPO 상장일 핵심 정리임. 공모가 $135 확정, Hyperliquid 선물 $167 (+23.7%). BlackRock $50B+ 주문, 직원 4,000+ 백만장자 탄생, 머스크 개인 자금 직접 참여. 3대 신용평가사 투자등급 = 연기금 $15T+ 진입 가능. ASML 기조연설도 예정. $135→$167 선물 프리미엄은 시장이 $2T+ 밸류를 이미 가격에 반영 중이라는 신호임. 나스닥 개장가 $150~160 예상.",
+    likes: 387,
+    comments: 4,
+    created_at: new Date(_an - 3 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -56,
+    alias: "판교 황소 #31",
+    symbol: "TSLA",
+    content:
+      "오늘 테슬라 5대 호재 세트임. 1) Amundi $1.24B 추가매수 (유럽 최대, 머스크 리스크 공식 해소). 2) FSD EU 전면 승인 임박 (덴마크 ROW 조항 = 27개국 자동 확산). 3) Cybertruck AWD $59,990 배달 시작. 4) 메가팩 호주 100MW 완공. 5) 요코하마 Autopilot 채용. 유럽 100만 대 FSD 구독 10% 전환 시 연 $1.2B 순수 소프트웨어 수익임. 이게 테슬라 다음 밸류 레이팅 촉매임.",
+    likes: 342,
+    comments: 4,
+    created_at: new Date(_an - 14 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -55,
+    alias: "강남 독수리 #52",
+    symbol: "NVDA",
+    content:
+      "SIA 반도체 월매출 $110.5B 신기록 + CoWoS 2H26 양산 전환 + Feynman 칩 초기 채택 세트임. $110.5B = 연환산 $1.3T로 AI 칩 슈퍼사이클이 월 단위로 신고가 경신 중. CoWoS 양산 전환이 NVDA 마진 개선 직접 촉매임. Feynman 초기 채택은 2028년까지 로드맵 가시화. SK하이닉스·TSMC·ASML 공급망 전체 수혜 구조 유지됨.",
+    likes: 298,
+    comments: 3,
+    created_at: new Date(_an - 28 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -54,
+    alias: "서초 매 #64",
+    symbol: "ORCL",
+    content:
+      "Oracle RPO $638B이 진짜 충격적임. 2023년 8월 $64.9B → 2026년 5월 $638B. 34개월 CAGR 129.5%. RPO는 이미 계약된 미래 매출이라 향후 3~5년 Oracle 수익이 사실상 확정된 거임. OCI가 AWS·Azure보다 30~50% 싸다는 게 수주 폭발의 핵심 이유임. AI 클라우드 3강 구도에서 Oracle이 완전히 자리잡은 거임.",
+    likes: 264,
+    comments: 3,
+    created_at: new Date(_an - 42 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -53,
+    alias: "여의도 매 #17",
+    symbol: null,
+    content:
+      "오늘 매크로 2개 포인트임. 1) 이란 공습 취소 + 핵합의 타결 진행 = 유가 $90→$85 하락 기대 + CPI 완화 가능성 + 연준 금리 인하 기대 복원. 2) 머스크 '범용 로봇이 다음 빅 플랫폼' 선언 = Optimus 수년 내 실용화 + TAM $10T+. 이란 리스크 해소 + AI 로봇 메가트렌드 확인 = 성장주 전반에 긍정적 환경. SpaceX IPO 당일에 모든 퍼즐이 맞아떨어지는 날임.",
+    likes: 231,
+    comments: 3,
+    created_at: new Date(_an - 55 * 60_000).toISOString(),
+    liked: false,
+  },
+  // ── 2026-06-11 최신 ──────────────────────────────────────────────────────
   {
     id: -50,
     alias: "여의도 매 #17",
@@ -578,6 +634,36 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-06-12 신규 ──────────────────────────────────────────────────────
+  [-57]: [
+    { alias: "판교 황소 #31", content: "선물 $167이면 기업가치 기준으로 이미 $2.2T 수준이에요. 나스닥 개장 첫날 선물 대비 10% 할인 열려도 $150+ 이면 충분히 성공적인 IPO임.", created_at: new Date(_an - 2 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "S&P 500 편입 기준 충족 여부가 다음 촉매임. 편입되면 인덱스 펀드 수십 조 달러 강제 매수 발생. BlackRock $50B 주문은 그 선제 포지셔닝임.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+    { alias: "서초 매 #64", content: "직원 4,000명 백만장자 탄생이 미디어 화제성 극대화. IPO 날 개인투자자 관심 폭발 = 수요 추가 확인.", created_at: new Date(_an - 30 * 1000).toISOString() },
+    { alias: "을지로 사자 #77", content: "머스크 ASML 기조연설이 IPO 당일이라는 타이밍 절묘함. 반도체 수직계열화 선언 = 장기 EPS 성장 스토리 강화.", created_at: new Date(_an - 10 * 1000).toISOString() },
+  ],
+  [-56]: [
+    { alias: "여의도 매 #17", content: "Amundi $1.24B가 트리거임. 유럽 기관들 ESG 위원회 재심사 시작됐다는 신호임. Norges Bank(노르웨이 국부펀드)도 비중 복원 검토 중일 거임.", created_at: new Date(_an - 12 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "EU ROW 조항으로 FSD 27개국 자동 확산이면 100만 대 FSD 구독 수익화가 올해 안에 시작될 수 있음. 이게 TSLA 밸류 재평가 촉매.", created_at: new Date(_an - 7 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Cybertruck AWD $59,990은 포드 F-150 Lightning보다 $15,000 싸고 성능 우위임. 픽업트럭 시장 점유율 확대 + 에너지 마진 24.6% 유지 = 이익 레버리지 극대화.", created_at: new Date(_an - 3 * 60_000).toISOString() },
+    { alias: "광화문 늑대 #69", content: "메가팩 호주 100MW 완공이 에너지 사업 글로벌 확장 가속 신호임. 에너지 영업이익률 > 자동차인 구조가 유지되면 테슬라 이익 믹스가 구조적으로 개선됨.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+  ],
+  [-55]: [
+    { alias: "판교 황소 #31", content: "$110.5B 월매출 = AI 칩 슈퍼사이클 아직 가속 중이라는 확인임. 전월 대비 +11% MoM도 계절성 아닌 구조적 수요임.", created_at: new Date(_an - 25 * 60_000).toISOString() },
+    { alias: "서초 매 #64", content: "CoWoS 양산 전환 시 NVDA 원가 개선됨. 같은 GPU를 더 낮은 비용으로 만들어 마진율이 올라가는 거임. 2H26 실적 개선 촉매.", created_at: new Date(_an - 18 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Feynman = 2028년 칩 세대 이름임. 이미 초기 채택 논의가 시작됐다는 건 NVDA 로드맵이 5년 이상 시야에서 이미 확보됐다는 거임.", created_at: new Date(_an - 10 * 60_000).toISOString() },
+  ],
+  [-54]: [
+    { alias: "판교 황소 #31", content: "RPO $638B = Oracle 향후 5년 매출 이미 확보된 거임. 연간 매출 $100B+이 기정사실화된 거죠. 현 PER 40x가 오히려 저평가일 수 있음.", created_at: new Date(_an - 39 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "OCI가 AWS·Azure보다 싼 이유가 Oracle 레거시 DB와의 통합 번들링 때문임. 기존 Oracle DB 고객들은 AI 전환 시 OCI가 자연스러운 선택임.", created_at: new Date(_an - 30 * 60_000).toISOString() },
+    { alias: "여의도 매 #17", content: "NVDA와 OCI 독점 GB200 클러스터 배포 계약이 핵심 경쟁력임. NVDA가 OCI를 선택한 것 자체가 신뢰 인증임.", created_at: new Date(_an - 22 * 60_000).toISOString() },
+  ],
+  [-53]: [
+    { alias: "판교 황소 #31", content: "이란 공습 취소 + 핵합의 진행이 오늘 시장 상승 반전 트리거임. 유가 $85로 내려가면 6월 CPI 3% 이하 유지 가능 = 연준 인하 기대 복원임.", created_at: new Date(_an - 52 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "머스크 로봇 빅 플랫폼 선언이 TSLA 장기 뷰를 강화함. Optimus가 공장 내 이미 작업 중이라는 팩트가 이 선언을 뒷받침함.", created_at: new Date(_an - 45 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "SpaceX IPO + 이란 리스크 해소 + 반도체 신기록 + Oracle RPO 폭발이 모두 같은 날임. 이런 날은 드물다. 모멘텀 투자 관점에서 최고의 날임.", created_at: new Date(_an - 38 * 60_000).toISOString() },
+  ],
+
+  // ── 2026-06-11 최신 ──────────────────────────────────────────────────────
   [-50]: [
     { alias: "판교 황소 #31", content: "3대 신용평가사 투자등급이면 패시브 펀드도 편입 기준 맞추는 거임. IPO 후 패시브 자금 유입 속도가 핵심임.", created_at: "2026-06-11T08:03:00.000Z" },
     { alias: "강남 독수리 #52", content: "Starlink + AI 임대 + TeraFab 삼각편대가 완성되면 $1.75T는 시작점임. 2028년 기가팩토리 가동 후 밸류에이션 재논의.", created_at: "2026-06-11T08:06:00.000Z" },
