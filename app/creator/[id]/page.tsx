@@ -88,7 +88,14 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
             const raw = localStorage.getItem("investus_my_creator");
             if (raw) {
               const p = JSON.parse(raw);
-              if (p && (p.id === id || p.email === id)) {
+              // Match by stored id, stored email, or case-insensitive comparison
+              const idLower = id.toLowerCase();
+              const match = p && (
+                p.id === id || p.email === id ||
+                (p.id && p.id.toLowerCase() === idLower) ||
+                (p.email && p.email.toLowerCase() === idLower)
+              );
+              if (match) {
                 setCreator({ ...p, contents: [] });
                 const cRaw = localStorage.getItem("investus_creator_contents");
                 setApiContents(cRaw ? JSON.parse(cRaw) : []);
@@ -111,10 +118,18 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
   }
 
   if (!creator) {
+    const hasLocalCreator = typeof window !== "undefined" && !!localStorage.getItem("investus_my_creator");
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4" style={{ background: "var(--bg)" }}>
         <span className="text-4xl">🔍</span>
         <p className="text-sm" style={{ color: "var(--muted)" }}>투자클럽을 찾을 수 없습니다</p>
+        {hasLocalCreator && (
+          <Link href="/creator/dashboard"
+            className="text-xs px-4 py-2 rounded-xl font-bold"
+            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.3)" }}>
+            내 투자클럽 대시보드로 →
+          </Link>
+        )}
         <Link href="/wall" className="text-xs px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
           돌아가기
         </Link>

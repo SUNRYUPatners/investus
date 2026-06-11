@@ -336,6 +336,14 @@ export default function CreatorDashboardPage() {
                 <Plus className="w-4 h-4" />새 콘텐츠 작성
               </button>
             )}
+            <button
+              onClick={handleCancelApplication}
+              disabled={cancelling}
+              className="w-full mt-2 py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 active:opacity-70 transition-opacity disabled:opacity-40"
+              style={{ background: "rgba(239,68,68,0.08)", color: "#ef4444", border: "1px solid rgba(239,68,68,0.2)" }}>
+              <Trash2 className="w-3 h-3" />
+              {cancelling ? "삭제 중…" : "투자클럽 삭제 및 재생성"}
+            </button>
           </div>
         </div>
 

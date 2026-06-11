@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { Send, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
-import { useLocale } from "@/contexts/LocaleContext";
+import { AdGateModal } from "@/components/AdGateModal";
 
 type LiveQ = { symbol: string; price: number; changePercent: number };
 
@@ -28,7 +27,11 @@ const DAILY_KEY = () => {
   const d = new Date();
   return `pf_ai_count_${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 };
-const DAILY_LIMIT = 10;
+const AD_BONUS_KEY = () => {
+  const d = new Date();
+  return `pf_ai_ad_bonus_${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+};
+const FREE_LIMIT = 3;
 
 export function PortfolioAI({
   holdings,
@@ -39,21 +42,22 @@ export function PortfolioAI({
   liveMap:  Record<string, LiveQ>;
   usdkrw:   number;
 }) {
-  const router = useRouter();
-  const { wall: w } = useLocale();
-  const [messages,  setMessages]  = useState<Message[]>([]);
-  const [input,     setInput]     = useState("");
-  const [loading,   setLoading]   = useState(false);
-  const [count,     setCount]     = useState(0);
-  const [collapsed, setCollapsed] = useState(false);
+  const [messages,   setMessages]   = useState<Message[]>([]);
+  const [input,      setInput]      = useState("");
+  const [loading,    setLoading]    = useState(false);
+  const [count,      setCount]      = useState(0);
+  const [adBonus,    setAdBonus]    = useState(0);
+  const [showAdGate, setShowAdGate] = useState(false);
+  const [collapsed,  setCollapsed]  = useState(false);
   const inputRef   = useRef<HTMLInputElement>(null);
   const chatRef    = useRef<HTMLDivElement>(null);
-  const autoAsked  = useRef(false);
 
   useEffect(() => {
     try {
       const v = localStorage.getItem(DAILY_KEY());
       setCount(v ? parseInt(v, 10) : 0);
+      const b = localStorage.getItem(AD_BONUS_KEY());
+      setAdBonus(b ? parseInt(b, 10) : 0);
     } catch {}
   }, []);
 
@@ -64,17 +68,9 @@ export function PortfolioAI({
     }
   }, [messages, loading]);
 
-  // 최초 로드 시 오늘 포트폴리오 자동 분석
-  useEffect(() => {
-    if (autoAsked.current || messages.length > 0 || holdings.length === 0) return;
-    if (Object.keys(liveMap).length === 0) return;
-    autoAsked.current = true;
-    ask("오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지 분석해줘", { fetchNews: true });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [Object.keys(liveMap).length]);
-
-  const limitReached = count >= DAILY_LIMIT;
-  const remaining    = DAILY_LIMIT - count;
+  const effectiveLimit = FREE_LIMIT + adBonus;
+  const limitReached   = count >= effectiveLimit;
+  const remaining      = effectiveLimit - count;
 
   function buildCtx() {
     const totalValue  = holdings.reduce((s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0);
@@ -215,24 +211,27 @@ export function PortfolioAI({
               )}
             </div>
 
-          {/* 한도 도달 — 종토방과 동일한 구독 카드 */}
+          {/* 한도 도달 — 광고 시청으로 1회 추가 */}
           {limitReached ? (
-            <div className="px-4 py-6 flex flex-col items-center gap-3 text-center flex-shrink-0">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
-                style={{ background: "rgba(0,229,160,0.08)" }}>⏰</div>
-              <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{w.aiLimitTitle}</p>
-              <p className="text-[11px]" style={{ color: "var(--muted)" }}>{w.aiLimitSub}</p>
-              <div className="w-full rounded-2xl p-4 border mt-1"
-                style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
-                <p className="text-xs font-bold mb-1" style={{ color: "var(--mint)" }}>{w.aiSubLabel}</p>
-                <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>{w.aiSubDesc}</p>
-                <button
-                  onClick={() => router.push("/more")}
-                  className="w-full py-2.5 rounded-xl text-sm font-bold text-black"
-                  style={{ background: "var(--mint)" }}>
-                  {w.aiSubscribe}
-                </button>
+            <div className="px-4 py-5 flex flex-col items-center gap-3 text-center flex-shrink-0 border-t"
+              style={{ borderColor: "rgba(0,229,160,0.1)" }}>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl"
+                style={{ background: "rgba(0,229,160,0.08)" }}>🎬</div>
+              <div>
+                <p className="text-sm font-bold mb-0.5" style={{ color: "var(--text)" }}>
+                  오늘 무료 분석 {FREE_LIMIT}회 소진
+                </p>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+                  광고 1개 시청하면 1회 추가 이용 가능해요
+                </p>
               </div>
+              <button
+                onClick={() => setShowAdGate(true)}
+                className="w-full py-2.5 rounded-xl text-sm font-bold transition-opacity active:opacity-80"
+                style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.3)" }}>
+                광고 시청하고 1회 추가 →
+              </button>
+              <p className="text-[9px]" style={{ color: "var(--muted)" }}>투자 참고용 · 투자 권유 아님</p>
             </div>
           ) : (
             <div className="px-4 py-3 border-t flex-shrink-0" style={{ borderColor: "rgba(0,229,160,0.1)" }}>
@@ -260,6 +259,21 @@ export function PortfolioAI({
             </div>
           )}
         </div>
+      )}
+
+      {showAdGate && (
+        <AdGateModal
+          title="AI 투자비서 추가 이용"
+          headerText="무료 이용권 추가"
+          confirmText="분석하기"
+          onConfirm={() => {
+            const newBonus = adBonus + 1;
+            setAdBonus(newBonus);
+            try { localStorage.setItem(AD_BONUS_KEY(), String(newBonus)); } catch {}
+            setShowAdGate(false);
+          }}
+          onClose={() => setShowAdGate(false)}
+        />
       )}
     </div>
   );

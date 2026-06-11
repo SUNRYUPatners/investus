@@ -9,11 +9,13 @@ const WAIT_SEC = 5;
 
 interface AdGateModalProps {
   title: string;
+  headerText?: string;
+  confirmText?: string;
   onConfirm: () => void;
   onClose: () => void;
 }
 
-export function AdGateModal({ title, onConfirm, onClose }: AdGateModalProps) {
+export function AdGateModal({ title, headerText = "전자책 무료 열람", confirmText = "전자책 열기", onConfirm, onClose }: AdGateModalProps) {
   const [remaining, setRemaining] = useState(WAIT_SEC);
   const [ready, setReady] = useState(false);
   const confirmed = useRef(false);
@@ -50,7 +52,7 @@ export function AdGateModal({ title, onConfirm, onClose }: AdGateModalProps) {
         <div className="flex items-center justify-between px-4 pt-4 pb-3">
           <div>
             <p className="text-xs font-semibold" style={{ color: "var(--muted)" }}>
-              전자책 무료 열람
+              {headerText}
             </p>
             <p className="text-sm font-bold mt-0.5 truncate max-w-[220px]" style={{ color: "var(--text)" }}>
               {title}
@@ -93,7 +95,7 @@ export function AdGateModal({ title, onConfirm, onClose }: AdGateModalProps) {
               border:     ready ? "1px solid rgba(192,132,252,0.3)" : "1px solid rgba(255,255,255,0.06)",
             }}
           >
-            {ready ? "전자책 열기" : `${remaining}초 후 열기`}
+            {ready ? confirmText : `${remaining}초 후 열기`}
           </button>
         </div>
       </div>
