@@ -89,32 +89,57 @@ export default function CreatorDashboardPage() {
   const [eSubPrice,         setESubPrice]         = useState(9900);
 
   useEffect(() => {
-    if (!authLoaded) return; // localStorage 로드 대기
+    if (!authLoaded) return;
     if (!user) { router.replace("/more"); return; }
-    const c = loadCreator();
-    if (!c) { router.replace("/creator/setup"); return; }
-    setCreator(c);
-    setContents(loadContents());
-    setENickname(c.nickname);
-    setEBio(c.bio);
-    setEAvatar(c.avatar);
-    setETags(c.tags);
-    setESubEnabled(c.subscriptionEnabled ?? false);
-    setESubPrice(c.subscriptionPrice ?? 9900);
 
-    // Sync approval status from server
-    if (c.status !== "approved") {
-      fetch(`/api/admin/verifications?phone=${encodeURIComponent(user.email)}`)
-        .then((r) => r.json())
-        .then(({ status }) => {
-          if (status === "approved") {
-            const updated = { ...c, status: "approved" as const };
-            saveCreator(updated);
-            setCreator(updated);
-          }
-        })
-        .catch(() => {});
+    const local = loadCreator();
+
+    if (local) {
+      setCreator(local);
+      setContents(loadContents());
+      setENickname(local.nickname);
+      setEBio(local.bio);
+      setEAvatar(local.avatar);
+      setETags(local.tags);
+      setESubEnabled(local.subscriptionEnabled ?? false);
+      setESubPrice(local.subscriptionPrice ?? 9900);
     }
+
+    // 항상 서버에서 최신 상태 동기화 (localStorage 없을 때도 복원)
+    fetch(`/api/creator/list?id=${encodeURIComponent(user.email)}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (!Array.isArray(data) || data.length === 0) {
+          if (!local) router.replace("/creator/setup");
+          return;
+        }
+        const d = data[0];
+        const restored: MyCreator = {
+          id:                  d.phone ?? user.email,
+          nickname:            d.nickname ?? "",
+          avatar:              d.avatar ?? "🦁",
+          bio:                 d.bio ?? "",
+          tags:                d.tags ?? [],
+          broker:              d.broker ?? "",
+          portfolio:           d.top_holdings ?? [],
+          status:              (d.status ?? "pending") as "pending" | "approved",
+          createdAt:           (d.submitted_at ?? new Date().toISOString()).slice(0, 10),
+          subscriptionEnabled: d.subscription_enabled ?? false,
+          subscriptionPrice:   d.subscription_price ?? 9900,
+        };
+        saveCreator(restored);
+        setCreator(restored);
+        if (!local) {
+          setENickname(restored.nickname);
+          setEBio(restored.bio);
+          setEAvatar(restored.avatar);
+          setETags(restored.tags);
+          setESubEnabled(restored.subscriptionEnabled ?? false);
+          setESubPrice(restored.subscriptionPrice ?? 9900);
+          setContents(loadContents());
+        }
+      })
+      .catch(() => { if (!local) router.replace("/creator/setup"); });
   }, [authLoaded, user, router]);
 
   // auth 로딩 중이면 빈 화면 대신 로딩 표시

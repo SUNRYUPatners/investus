@@ -508,7 +508,7 @@ export default function WallPage() {
   const [uploading, setUploading]         = useState(false);
   const [uploadErr, setUploadErr]         = useState("");
   const [hasCreatorProfile, setHasCreatorProfile] = useState(false);
-  const [apiCreators, setApiCreators] = useState<{ id: string; nickname: string; avatar: string; bio: string; annual_return?: number; follower_count?: number; tags?: string[] }[]>([]);
+  const [apiCreators, setApiCreators] = useState<{ id: string; phone?: string; nickname: string; avatar: string; bio: string; annual_return?: number; follower_count?: number; tags?: string[] }[]>([]);
   const [expandedWallComments, setExpandedWallComments] = useState<Set<number>>(new Set());
   const [wallComments, setWallComments]       = useState<Record<number, CommentWithReplies[]>>({});
   const [wallCommentInput, setWallCommentInput] = useState<Record<number, string>>({});
@@ -966,7 +966,7 @@ export default function WallPage() {
     .sort((a, b) => b.createdAt - a.createdAt);
 
   const mappedCreators: import("@/lib/creators").Creator[] = apiCreators.map((d) => ({
-    id: d.id,
+    id: d.phone ?? d.id,   // phone = email = lookup key for /creator/[id]
     nickname: d.nickname,
     avatar: d.avatar,
     coverGradient: "linear-gradient(135deg,#0d0d0d,#1a1a2e)",
