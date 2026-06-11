@@ -3,15 +3,15 @@ import type { NextConfig } from "next";
 const CSP = [
   "default-src 'self'",
   // scripts: Next.js inline scripts + Vercel analytics + Kakao AdFit
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://t1.kakaocdn.net https://adfit.kakao.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.kakaocdn.net https://*.kakao.com https://*.daumcdn.net",
   // styles: Tailwind inline styles + emotion
   "style-src 'self' 'unsafe-inline'",
   // images: data URIs + YouTube + Unsplash + news thumbnails (various CDNs) + book covers
   "img-src 'self' data: blob: https:",
   // media: YouTube embeds
   "media-src 'self'",
-  // frames: YouTube player + Kakao AdFit
-  "frame-src https://www.youtube.com https://adfit.kakao.com https://t1.kakaocdn.net",
+  // frames: YouTube player + Kakao AdFit (adfit uses if.kakao.com, daumcdn.net iframes)
+  "frame-src https://www.youtube.com https://*.kakao.com https://*.kakaocdn.net https://*.daumcdn.net",
   // connect: all API sources used by the app
   [
     "connect-src 'self'",

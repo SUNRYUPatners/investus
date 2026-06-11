@@ -166,7 +166,6 @@ const ko = {
       {
         title: "서비스",
         items: [
-          { label: "투자 기초·대가 전략 학습", sub: "투자 기본 지식 공부방" },
           { label: "공지사항",         sub: "주요 공시 · 서비스 고지" },
           { label: "알림 설정",         sub: "장시작 · 리포트 · 댓글 알림" },
           { label: "피드백 보내기",     sub: "서비스 개선에 도움주세요" },
@@ -281,7 +280,7 @@ const ko = {
     ],
     analystPrivacyNote: "단, 미공개 중요정보(MNPI) 공유는 자본시장법 위반입니다. 개인 의견만 작성해주세요.",
     analystEmpty:        "아직 애널들은이 없습니다.",
-    analystPlaceholder:  "공개석상에서 못했던 말, 여기서 솔직하게 (10~1000자)",
+    analystPlaceholder:  "공개석상에서 못했던 말, 여기서 털어놔 (10~1000자)",
     analystCertified:    "인증 애널리스트",
     anonBadge:     "익명 · 보유 인증",
     verified:      "보유 인증",
@@ -553,7 +552,6 @@ const en: typeof ko = {
       {
         title: "Services",
         items: [
-          { label: "Study — Investing Basics", sub: "Investment basics & masters' strategies" },
           { label: "Notice",             sub: "Updates & service announcements" },
           { label: "Notifications",      sub: "Market open · Reports · Comments" },
           { label: "Send Feedback",      sub: "Help us improve the service" },

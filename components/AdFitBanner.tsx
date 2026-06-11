@@ -24,12 +24,15 @@ export function AdFitBanner({
   className = "",
 }: AdFitBannerProps) {
   useEffect(() => {
-    // 스크립트는 layout.tsx <head>에 정적으로 설치됨
-    // SPA 라우팅 후 새로 마운트된 ins 요소를 adfit이 처리하도록 트리거
-    const timer = setTimeout(() => {
-      try { window.adfit?.run(); } catch { /* ignore */ }
-    }, 300);
-    return () => clearTimeout(timer);
+    let attempts = 0;
+    const poll = () => {
+      if (window.adfit) {
+        try { window.adfit.run(); } catch { /* ignore */ }
+        return;
+      }
+      if (++attempts < 30) setTimeout(poll, 300); // 최대 9초 대기
+    };
+    poll();
   }, []);
 
   return (
