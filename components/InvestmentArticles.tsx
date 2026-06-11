@@ -1,656 +1,716 @@
 "use client";
 
-import { useState, type ReactElement } from "react";
+import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-
-const M = "#00e5a0";   // mint
-const G = "#d4af37";   // gold
-const R = "#ef4444";   // red
-const B = "#60a5fa";   // blue
-const T = "#e2e8f0";   // text
-const L = "#9ca3af";   // light/muted
-const D = "#2d3748";   // dark border
+import { AdFitBanner } from "@/components/AdFitBanner";
 
 type Article = {
   emoji: string;
   title: string;
   desc: string;
   body: string;
-  svg?: () => ReactElement;
 };
-
-// ── BASICS SVGs ──────────────────────────────────────────────────
-
-const SvgStock = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="20" fontSize="9" fill={L}>회사</text>
-    <rect x="14" y="26" width="60" height="70" rx="6" fill="none" stroke={D} strokeWidth="1.5"/>
-    <rect x="22" y="34" width="12" height="10" rx="2" fill={B} opacity=".6"/>
-    <rect x="38" y="34" width="12" height="10" rx="2" fill={B} opacity=".6"/>
-    <rect x="22" y="50" width="12" height="10" rx="2" fill={B} opacity=".4"/>
-    <rect x="38" y="50" width="12" height="10" rx="2" fill={B} opacity=".4"/>
-    <rect x="28" y="72" width="18" height="24" rx="2" fill={D}/>
-    <text x="44" y="62" fontSize="18" fill={L} textAnchor="middle">→</text>
-    <text x="14" y="105" fontSize="8" fill={L}>주식 발행</text>
-    {/* Pie chart */}
-    <circle cx="190" cy="58" r="40" fill="none" stroke={D} strokeWidth="1"/>
-    <path d="M190,58 L190,18 A40,40,0,0,1,224.6,78 Z" fill={M} opacity=".7"/>
-    <path d="M190,58 L224.6,78 A40,40,0,0,1,162.9,93.5 Z" fill={G} opacity=".7"/>
-    <path d="M190,58 L162.9,93.5 A40,40,0,0,1,190,18 Z" fill={B} opacity=".7"/>
-    <text x="208" y="52" fontSize="8" fill={T}>A 40%</text>
-    <text x="206" y="90" fontSize="8" fill={T}>B 35%</text>
-    <text x="152" y="62" fontSize="8" fill={T}>C 25%</text>
-    <text x="190" y="106" fontSize="8" fill={L} textAnchor="middle">주주 소유 구조</text>
-  </svg>
-);
-
-const SvgSP500 = () => {
-  const data = [18,26,-6,28,16,-5,30,26,-18,24];
-  const years = ["15","16","17","18","19","20","21","22","23","24"];
-  return (
-    <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-      <line x1="20" y1="85" x2="268" y2="85" stroke={D} strokeWidth="1"/>
-      {data.map((v,i)=>{
-        const x = 28 + i*24;
-        const pos = v>=0;
-        const h = Math.abs(v)*1.5;
-        const y = pos ? 85-h : 85;
-        return <g key={i}>
-          <rect x={x} y={y} width="16" height={h} rx="2" fill={pos?M:R} opacity=".8"/>
-          <text x={x+8} y="98" fontSize="7" fill={L} textAnchor="middle">{years[i]}</text>
-        </g>;
-      })}
-      <text x="20" y="14" fontSize="9" fill={T} fontWeight="bold">S&amp;P 500 연간 수익률</text>
-      <rect x="180" y="6" width="8" height="8" rx="1" fill={M} opacity=".8"/>
-      <text x="192" y="14" fontSize="8" fill={L}>양(+)</text>
-      <rect x="218" y="6" width="8" height="8" rx="1" fill={R} opacity=".8"/>
-      <text x="230" y="14" fontSize="8" fill={L}>음(−)</text>
-      <text x="20" y="108" fontSize="8" fill={M}>연평균 +10% (역사적)</text>
-    </svg>
-  );
-};
-
-const SvgFutures = () => (
-  <svg viewBox="0 0 280 100" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <line x1="14" y1="55" x2="266" y2="55" stroke={D} strokeWidth="1.5"/>
-    {[{x:14,label:"오전 9:30",sub:"장 시작"},{x:80,label:"오후 4:00",sub:"장 마감"},{x:160,label:"심야 선물",sub:"거래중"},{x:240,label:"다음날",sub:"장 시작"}].map((p,i)=>(
-      <g key={i}>
-        <circle cx={p.x} cy="55" r="5" fill={i===2?G:M} opacity=".9"/>
-        <text x={p.x} y="44" fontSize="8" fill={T} textAnchor="middle">{p.label}</text>
-        <text x={p.x} y="72" fontSize="7" fill={L} textAnchor="middle">{p.sub}</text>
-      </g>
-    ))}
-    <text x="100" y="38" fontSize="7" fill={R}>장 마감 후</text>
-    <path d="M118,50 L152,50" stroke={G} strokeWidth="1.5" strokeDasharray="3,2" markerEnd="url(#arr)"/>
-    <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill={G}/></marker></defs>
-    <text x="120" y="47" fontSize="7" fill={G}>선물로 예측</text>
-    <text x="14" y="95" fontSize="8" fill={L}>나스닥 선물 +1% → 기술주 강세 예측 가능</text>
-  </svg>
-);
-
-const SvgMacro = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    {[
-      {x:14,label:"GDP",val:"↑ 2.8%",color:M,sub:"경제성장"},
-      {x:84,label:"CPI",val:"↑ 3.2%",color:R,sub:"인플레이션"},
-      {x:154,label:"실업률",val:"4.1%",color:B,sub:"노동시장"},
-      {x:214,label:"PMI",val:"52.1",color:G,sub:"경기확장"},
-    ].map((d,i)=>(
-      <g key={i}>
-        <rect x={d.x} y="20" width="56" height="72" rx="8" fill="none" stroke={d.color} strokeWidth="1" opacity=".4"/>
-        <text x={d.x+28} y="38" fontSize="9" fill={d.color} textAnchor="middle" fontWeight="bold">{d.label}</text>
-        <text x={d.x+28} y="58" fontSize="13" fill={d.color} textAnchor="middle" fontWeight="bold">{d.val}</text>
-        <text x={d.x+28} y="80" fontSize="7" fill={L} textAnchor="middle">{d.sub}</text>
-      </g>
-    ))}
-    <text x="14" y="105" fontSize="8" fill={L}>주식시장에 직접 영향을 주는 핵심 지표</text>
-  </svg>
-);
-
-const SvgFOMC = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <rect x="100" y="16" width="80" height="30" rx="6" fill="none" stroke={G} strokeWidth="1.5"/>
-    <text x="140" y="36" fontSize="10" fill={G} textAnchor="middle" fontWeight="bold">FOMC 결정</text>
-    {/* Rate up */}
-    <path d="M100,46 L50,70" stroke={R} strokeWidth="1.5"/>
-    <rect x="10" y="70" width="78" height="28" rx="5" fill="none" stroke={R} strokeWidth="1"/>
-    <text x="49" y="83" fontSize="8" fill={R} textAnchor="middle">금리 인상 ↑</text>
-    <text x="49" y="93" fontSize="7" fill={L} textAnchor="middle">주가 하락 압력</text>
-    {/* Rate down */}
-    <path d="M180,46 L230,70" stroke={M} strokeWidth="1.5"/>
-    <rect x="192" y="70" width="78" height="28" rx="5" fill="none" stroke={M} strokeWidth="1"/>
-    <text x="231" y="83" fontSize="8" fill={M} textAnchor="middle">금리 인하 ↓</text>
-    <text x="231" y="93" fontSize="7" fill={L} textAnchor="middle">주가 상승 요인</text>
-    <text x="14" y="108" fontSize="8" fill={L}>연 8회 FOMC 회의 — 전 세계 금융시장에 영향</text>
-  </svg>
-);
-
-const SvgBond = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <line x1="30" y1="90" x2="260" y2="90" stroke={D} strokeWidth="1"/>
-    <line x1="30" y1="20" x2="30" y2="90" stroke={D} strokeWidth="1"/>
-    {["2yr","5yr","10yr","30yr"].map((l,i)=>(
-      <text key={i} x={60+i*60} y="102" fontSize="8" fill={L} textAnchor="middle">{l}</text>
-    ))}
-    <text x="16" y="92" fontSize="7" fill={L} textAnchor="end">수익률</text>
-    {/* Normal curve */}
-    <polyline points="60,75 120,60 180,45 240,32" fill="none" stroke={M} strokeWidth="2"/>
-    <text x="244" y="32" fontSize="8" fill={M}>정상</text>
-    {/* Inverted curve */}
-    <polyline points="60,45 120,55 180,65 240,78" fill="none" stroke={R} strokeWidth="2" strokeDasharray="4,2"/>
-    <text x="244" y="78" fontSize="8" fill={R}>역전</text>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">수익률 곡선(Yield Curve)</text>
-    <text x="14" y="108" fontSize="8" fill={R}>역전(2yr&gt;10yr) → 경기침체 전조 신호</text>
-  </svg>
-);
-
-const SvgEarnings = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">분기별 EPS 비교</text>
-    {[{q:"Q1",exp:2.1,act:2.4},{q:"Q2",exp:2.3,act:2.2},{q:"Q3",exp:2.5,act:2.9},{q:"Q4",exp:2.8,act:3.1}].map((d,i)=>{
-      const x=30+i*60;
-      const eh=d.exp*18; const ah=d.act*18;
-      return <g key={i}>
-        <rect x={x} y={90-eh} width="16" height={eh} rx="2" fill={B} opacity=".5"/>
-        <rect x={x+18} y={90-ah} width="16" height={ah} rx="2" fill={d.act>=d.exp?M:R} opacity=".8"/>
-        <text x={x+17} y="102" fontSize="8" fill={L} textAnchor="middle">{d.q}</text>
-      </g>;
-    })}
-    <line x1="14" y1="90" x2="266" y2="90" stroke={D} strokeWidth="1"/>
-    <rect x="160" y="6" width="8" height="8" rx="1" fill={B} opacity=".5"/>
-    <text x="172" y="14" fontSize="8" fill={L}>컨센서스</text>
-    <rect x="218" y="6" width="8" height="8" rx="1" fill={M} opacity=".8"/>
-    <text x="230" y="14" fontSize="8" fill={L}>실제</text>
-    <text x="14" y="108" fontSize="8" fill={M}>실제 EPS &gt; 컨센서스 = 어닝 서프라이즈</text>
-  </svg>
-);
-
-const SvgValuation = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">PER 밸류에이션 비교</text>
-    {[{label:"PER 12",sub:"저평가",color:M,h:45},{label:"PER 25",sub:"적정",color:G,h:65},{label:"PER 45",sub:"고평가",color:R,h:88}].map((d,i)=>(
-      <g key={i}>
-        <rect x={26+i*84} y={90-d.h} width="60" height={d.h} rx="4" fill={d.color} opacity=".25"/>
-        <rect x={26+i*84} y={90-d.h} width="60" height="4" rx="2" fill={d.color} opacity=".8"/>
-        <text x={56+i*84} y={90-d.h-6} fontSize="10" fill={d.color} textAnchor="middle" fontWeight="bold">{d.label}</text>
-        <text x={56+i*84} y="102" fontSize="8" fill={L} textAnchor="middle">{d.sub}</text>
-      </g>
-    ))}
-    <line x1="14" y1="90" x2="266" y2="90" stroke={D} strokeWidth="1"/>
-    <text x="14" y="108" fontSize="8" fill={L}>동종 업계 평균 PER과 비교하는 것이 중요</text>
-  </svg>
-);
-
-const SvgFearGreed = () => (
-  <svg viewBox="0 0 280 130" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="140" y="16" fontSize="9" fill={T} fontWeight="bold" textAnchor="middle">공포·탐욕지수 (0–100)</text>
-    {/* Gauge arcs */}
-    <path d="M60,105 A80,80,0,0,1,220,105" fill="none" stroke={R} strokeWidth="14" opacity=".5"/>
-    <path d="M100,44 A80,80,0,0,1,220,105" fill="none" stroke={G} strokeWidth="14" opacity=".5"/>
-    <path d="M165,28 A80,80,0,0,1,220,105" fill="none" stroke={M} strokeWidth="14" opacity=".5"/>
-    {/* Labels */}
-    <text x="44" y="118" fontSize="8" fill={R} textAnchor="middle">공포</text>
-    <text x="140" y="28" fontSize="8" fill={G} textAnchor="middle">중립</text>
-    <text x="238" y="98" fontSize="8" fill={M} textAnchor="middle">탐욕</text>
-    {/* Needle at ~72 (탐욕) */}
-    <line x1="140" y1="105" x2="198" y2="52" stroke={T} strokeWidth="2.5" strokeLinecap="round"/>
-    <circle cx="140" cy="105" r="5" fill={T}/>
-    <text x="140" y="122" fontSize="10" fill={G} textAnchor="middle" fontWeight="bold">72 · 탐욕</text>
-    <text x="56" y="128" fontSize="8" fill={L}>0</text>
-    <text x="130" y="128" fontSize="8" fill={L}>50</text>
-    <text x="224" y="128" fontSize="8" fill={L}>100</text>
-  </svg>
-);
-
-const SvgBuffett = () => (
-  <svg viewBox="0 0 280 100" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">버핏지수 = 시총 ÷ GDP × 100</text>
-    {[{label:"75% 이하",sub:"저평가",color:M,w:120},{label:"75–90%",sub:"적정",color:G,w:160},{label:"90–115%",sub:"고평가",color:"#f59e0b",w:200},{label:"115% 이상",sub:"과열",color:R,w:250}].map((d,i)=>(
-      <g key={i}>
-        <rect x="80" y={22+i*16} width={d.w-80} height="12" rx="3" fill={d.color} opacity={i===2?".9":".4"}/>
-        {i===2 && <rect x="80" y={22+i*16} width={d.w-80} height="12" rx="3" fill="none" stroke={d.color} strokeWidth="1.5"/>}
-        <text x="76" y={32+i*16} fontSize="7" fill={d.color} textAnchor="end">{d.label}</text>
-        <text x={d.w+4} y={32+i*16} fontSize="7" fill={L}>{d.sub}</text>
-      </g>
-    ))}
-    <text x="14" y="98" fontSize="8" fill={L}>현재 미국 버핏지수 ≈ 190% (2024년 기준)</text>
-  </svg>
-);
-
-const SvgDCA = () => {
-  const prices=[100,90,85,110,95,120,105,115,130,125];
-  const avg=105;
-  return (
-    <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-      <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">달러코스트 평균법 (매월 정액 투자)</text>
-      <line x1="20" y1="90" x2="268" y2="90" stroke={D} strokeWidth="1"/>
-      {prices.map((p,i)=>{
-        const x=28+i*24; const h=(p-60)*0.7; const y=90-h;
-        return <g key={i}>
-          <rect x={x} y={y} width="16" height={h} rx="2" fill={B} opacity=".4"/>
-          <text x={x+8} y="100" fontSize="6" fill={L} textAnchor="middle">{i+1}월</text>
-        </g>;
-      })}
-      {/* Average line */}
-      <line x1="20" y1={90-(avg-60)*0.7} x2="268" y2={90-(avg-60)*0.7} stroke={M} strokeWidth="1.5" strokeDasharray="4,2"/>
-      <text x="22" y={86-(avg-60)*0.7} fontSize="8" fill={M}>평균매수가 $105</text>
-    </svg>
-  );
-};
-
-const SvgStart = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">미국 주식 투자 3단계</text>
-    {[{n:"1",label:"증권사 계좌 개설",color:B,x:14,y:75},{n:"2",label:"달러 환전",color:M,x:100,y:55},{n:"3",label:"ETF / 우량주 매수",color:G,x:186,y:35}].map((s,i)=>(
-      <g key={i}>
-        <rect x={s.x} y={s.y} width="78" height="28" rx="6" fill="none" stroke={s.color} strokeWidth="1.5" opacity=".7"/>
-        <circle cx={s.x+12} cy={s.y+14} r="9" fill={s.color} opacity=".8"/>
-        <text x={s.x+12} y={s.y+18} fontSize="9" fill="#000" textAnchor="middle" fontWeight="bold">{s.n}</text>
-        <text x={s.x+48} y={s.y+11} fontSize="8" fill={T} textAnchor="middle">{s.label}</text>
-        {i<2 && <path d={`M${s.x+78},${s.y+14} L${s.x+100},${s.y-6}`} stroke={L} strokeWidth="1" strokeDasharray="3,2"/>}
-      </g>
-    ))}
-    <text x="14" y="108" fontSize="8" fill={L}>추천 첫 매수: VOO, SPY (S&amp;P 500 ETF)</text>
-  </svg>
-);
-
-const SvgSectors = () => {
-  const sectors=[{n:"IT",c:M,a:28.5},{n:"헬스",c:B,a:12},{n:"금융",c:G,a:13.3},{n:"소비재",c:"#a78bfa",a:10.7},{n:"산업",c:"#f59e0b",a:8.5},{n:"기타",c:L,a:27}];
-  let cum=0;
-  const cx=80, cy=62, r=44;
-  return (
-    <svg viewBox="0 0 280 118" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-      <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">S&amp;P 500 — 11개 주요 섹터</text>
-      {sectors.map((s,i)=>{
-        const start=cum; cum+=s.a/100*360;
-        const a1=start*Math.PI/180, a2=cum*Math.PI/180;
-        const x1=cx+r*Math.cos(a1-Math.PI/2), y1=cy+r*Math.sin(a1-Math.PI/2);
-        const x2=cx+r*Math.cos(a2-Math.PI/2), y2=cy+r*Math.sin(a2-Math.PI/2);
-        const lg=s.a>18?1:0;
-        return <path key={i} d={`M${cx},${cy} L${x1},${y1} A${r},${r},0,${lg},1,${x2},${y2} Z`} fill={s.c} opacity=".75"/>;
-      })}
-      {sectors.map((s,i)=>(
-        <g key={i}>
-          <rect x="150" y={8+i*18} width="10" height="10" rx="2" fill={s.c} opacity=".75"/>
-          <text x="164" y={17+i*18} fontSize="8" fill={T}>{s.n} {s.a}%</text>
-        </g>
-      ))}
-    </svg>
-  );
-};
-
-const SvgDividend = () => (
-  <svg viewBox="0 0 280 100" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">분기 배당 지급 구조</text>
-    <line x1="20" y1="55" x2="260" y2="55" stroke={D} strokeWidth="1.5"/>
-    {[{x:50,q:"Q1 3월"},{x:110,q:"Q2 6월"},{x:170,q:"Q3 9월"},{x:230,q:"Q4 12월"}].map((d,i)=>(
-      <g key={i}>
-        <circle cx={d.x} cy="55" r="6" fill={M} opacity=".8"/>
-        <text x={d.x} y="45" fontSize="7" fill={M} textAnchor="middle">$</text>
-        <text x={d.x} y="70" fontSize="7" fill={L} textAnchor="middle">{d.q}</text>
-        <path d={`M${d.x},49 L${d.x},38`} stroke={M} strokeWidth="1.5"/>
-        <text x={d.x} y="32" fontSize="8" fill={M} textAnchor="middle">배당</text>
-      </g>
-    ))}
-    <text x="14" y="92" fontSize="8" fill={L}>배당귀족: 25년 이상 연속 배당 증가 기업</text>
-    <text x="14" y="100" fontSize="8" fill={G}>DRIP: 배당금으로 추가 주식 자동 매수 → 복리</text>
-  </svg>
-);
-
-const SvgTA = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="12" fontSize="9" fill={T} fontWeight="bold">기술적 분석 핵심 지표</text>
-    <line x1="14" y1="95" x2="266" y2="95" stroke={D} strokeWidth="1"/>
-    {/* Candlesticks */}
-    {[[30,60,72,55],[50,55,68,50],[60,58,65,72],[58,72,80,68],[62,68,75,70],[68,70,82,65],[72,65,80,76],[70,76,88,72]].map(([o,c,h,l],i)=>{
-      const x=28+i*28; const scale=0.7; const base=95;
-      const oy=base-o*scale, cy2=base-c*scale, hy=base-h*scale, ly=base-l*scale;
-      const top=Math.min(oy,cy2), bot=Math.max(oy,cy2);
-      return <g key={i}>
-        <line x1={x+6} y1={hy} x2={x+6} y2={ly} stroke={c>o?M:R} strokeWidth="1.2"/>
-        <rect x={x} y={top} width="12" height={Math.max(2,bot-top)} rx="1" fill={c>o?M:R} opacity=".8"/>
-      </g>;
-    })}
-    {/* MA lines */}
-    <polyline points="28,62 56,58 84,53 112,49 140,47 168,44 196,41 224,38" fill="none" stroke={G} strokeWidth="1.5"/>
-    <polyline points="28,66 56,64 84,60 112,56 140,53 168,50 196,47 224,44" fill="none" stroke={B} strokeWidth="1.5" strokeDasharray="3,2"/>
-    <text x="228" y="38" fontSize="7" fill={G}>50일</text>
-    <text x="228" y="46" fontSize="7" fill={B}>200일</text>
-    <text x="14" y="107" fontSize="8" fill={M}>골든크로스: 50일선이 200일선 상향 돌파 → 매수 신호</text>
-  </svg>
-);
-
-const SvgFX = () => (
-  <svg viewBox="0 0 280 100" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">환율 영향 구조</text>
-    <rect x="20" y="30" width="70" height="38" rx="8" fill="none" stroke={M} strokeWidth="1.5"/>
-    <text x="55" y="54" fontSize="11" fill={M} textAnchor="middle" fontWeight="bold">KRW</text>
-    <rect x="190" y="30" width="70" height="38" rx="8" fill="none" stroke={G} strokeWidth="1.5"/>
-    <text x="225" y="54" fontSize="11" fill={G} textAnchor="middle" fontWeight="bold">USD</text>
-    <path d="M92,44 L188,44" stroke={T} strokeWidth="1.5" markerEnd="url(#a2)"/>
-    <path d="M188,56 L92,56" stroke={T} strokeWidth="1.5" markerEnd="url(#a3)"/>
-    <defs>
-      <marker id="a2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill={T}/></marker>
-      <marker id="a3" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill={T}/></marker>
-    </defs>
-    <text x="140" y="40" fontSize="7" fill={L} textAnchor="middle">환전</text>
-    <text x="140" y="64" fontSize="7" fill={L} textAnchor="middle">수익 실현</text>
-    <text x="14" y="85" fontSize="8" fill={R}>원화 약세(달러↑) → 환차익 발생</text>
-    <text x="14" y="96" fontSize="8" fill={M}>원화 강세(달러↓) → 환차손 주의</text>
-  </svg>
-);
-
-const SvgETF = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">ETF = 여러 주식을 한 바구니에</text>
-    {/* Basket */}
-    <path d="M60,90 Q60,38 140,38 Q220,38 220,90 Z" fill="none" stroke={G} strokeWidth="2"/>
-    <line x1="60" y1="90" x2="220" y2="90" stroke={G} strokeWidth="2"/>
-    {/* handle */}
-    <path d="M100,38 Q140,18 180,38" fill="none" stroke={G} strokeWidth="2"/>
-    {/* Stock labels inside */}
-    {[{t:"AAPL",x:90,y:60},{t:"MSFT",x:130,y:55},{t:"NVDA",x:165,y:60},{t:"AMZN",x:105,y:76},{t:"GOOG",x:148,y:78}].map((s,i)=>(
-      <g key={i}>
-        <rect x={s.x-14} y={s.y-9} width="28" height="14" rx="3" fill={M} opacity=".15" stroke={M} strokeWidth=".5"/>
-        <text x={s.x} y={s.y} fontSize="7" fill={M} textAnchor="middle" fontWeight="bold">{s.t}</text>
-      </g>
-    ))}
-    <text x="14" y="104" fontSize="8" fill={L}>VOO·SPY(S&amp;P500), QQQ(나스닥) — 낮은 수수료, 분산 효과</text>
-  </svg>
-);
-
-const SvgBuyback = () => (
-  <svg viewBox="0 0 280 100" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">자사주 매입 효과</text>
-    {/* Before */}
-    <text x="60" y="30" fontSize="8" fill={L} textAnchor="middle">매입 전</text>
-    {[0,1,2,3,4,5,6,7,8].map(i=>(
-      <circle key={i} cx={22+(i%3)*24} cy={40+Math.floor(i/3)*20} r="8" fill={B} opacity=".4" stroke={B} strokeWidth=".5"/>
-    ))}
-    <text x="60" y="95" fontSize="7" fill={L} textAnchor="middle">EPS: $2.0</text>
-    {/* Arrow */}
-    <text x="116" y="58" fontSize="20" fill={G} textAnchor="middle">→</text>
-    <text x="116" y="74" fontSize="8" fill={G} textAnchor="middle">자사주 매입</text>
-    {/* After */}
-    <text x="200" y="30" fontSize="8" fill={L} textAnchor="middle">매입 후</text>
-    {[0,1,2,3,4,5].map(i=>(
-      <circle key={i} cx={162+(i%3)*24} cy={40+Math.floor(i/3)*20} r="8" fill={M} opacity=".5" stroke={M} strokeWidth=".5"/>
-    ))}
-    <text x="200" y="95" fontSize="8" fill={M} textAnchor="middle" fontWeight="bold">EPS: $3.0 ↑</text>
-    <text x="14" y="107" fontSize="7" fill={L}>주식수 감소 → EPS 증가 → 주주 가치 상승</text>
-  </svg>
-);
-
-const SvgOptions = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="12" fontSize="9" fill={T} fontWeight="bold">콜(Call) · 풋(Put) 수익 구조</text>
-    <line x1="20" y1="65" x2="260" y2="65" stroke={D} strokeWidth="1"/>
-    <line x1="140" y1="20" x2="140" y2="100" stroke={D} strokeWidth="1" strokeDasharray="3,2"/>
-    <text x="140" y="108" fontSize="8" fill={L} textAnchor="middle">행사가</text>
-    {/* Call option */}
-    <polyline points="20,73 140,73 260,20" fill="none" stroke={M} strokeWidth="2"/>
-    <text x="250" y="18" fontSize="8" fill={M}>콜 ↑</text>
-    {/* Put option */}
-    <polyline points="20,20 140,73 260,73" fill="none" stroke={R} strokeWidth="2" strokeDasharray="4,2"/>
-    <text x="14" y="18" fontSize="8" fill={R}>풋 ↑</text>
-    <text x="20" y="55" fontSize="7" fill={M}>수익</text>
-    <text x="20" y="80" fontSize="7" fill={R}>손실</text>
-    <text x="14" y="107" fontSize="8" fill={L}>콜: 주가 상승 시 수익 / 풋: 주가 하락 시 수익</text>
-  </svg>
-);
-
-// ── MASTERS SVGs ─────────────────────────────────────────────────
-
-const SvgBuffettPrinciples = () => (
-  <svg viewBox="0 0 280 140" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={G} fontWeight="bold">워렌 버핏의 핵심 원칙</text>
-    {["이해하는 사업에만 투자하라","훌륭한 경영진을 찾아라","적정 가격에 좋은 기업 매수","장기 보유 — 영원히 보유할 주식만","시장 하락을 두려워 말라","높은 ROE, 낮은 부채 선호","배당·자사주 매입 주주친화 기업"].map((p,i)=>(
-      <g key={i}>
-        <circle cx="24" cy={28+i*16} r="5" fill={G} opacity=".7"/>
-        <text x="30" y={32+i*16} fontSize="8" fill={T}>{p}</text>
-      </g>
-    ))}
-    <text x="14" y="138" fontSize="8" fill={L}>버크셔 해서웨이 60년 연평균 +19.8%</text>
-  </svg>
-);
-
-const SvgLynch = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={M} fontWeight="bold">피터 린치 — 10루터(10-Bagger) 전략</text>
-    <line x1="20" y1="90" x2="260" y2="90" stroke={D} strokeWidth="1"/>
-    <line x1="20" y1="20" x2="20" y2="90" stroke={D} strokeWidth="1"/>
-    {["1x","2x","5x","10x"].map((l,i)=>(
-      <text key={i} x="16" y={88-i*22} fontSize="7" fill={L} textAnchor="end">{l}</text>
-    ))}
-    <polyline points="20,88 50,82 80,75 110,66 140,58 170,45 200,36 230,26 260,18" fill="none" stroke={M} strokeWidth="2.5"/>
-    <circle cx="260" cy="18" r="5" fill={M}/>
-    <text x="248" y="14" fontSize="9" fill={M} fontWeight="bold">10x!</text>
-    <text x="20" y="45" fontSize="8" fill={G}>일상에서 먼저 발견 → 투자자로 확인</text>
-    <text x="14" y="106" fontSize="8" fill={L}>마젤란 펀드 13년 운용 → +2,900% (연 29%)</text>
-  </svg>
-);
-
-const SvgMunger = () => (
-  <svg viewBox="0 0 280 120" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={B} fontWeight="bold">찰리 멍거 — 격자형 정신 모델</text>
-    <circle cx="140" cy="70" r="22" fill="none" stroke={B} strokeWidth="2"/>
-    <text x="140" y="67" fontSize="8" fill={B} textAnchor="middle">투자</text>
-    <text x="140" y="77" fontSize="8" fill={B} textAnchor="middle">결정</text>
-    {[{x:60,y:30,l:"심리학"},{x:220,y:30,l:"역사학"},{x:30,y:80,l:"수학"},{x:250,y:80,l:"물리학"},{x:80,y:115,l:"경제학"},{x:200,y:115,l:"생물학"}].map((n,i)=>(
-      <g key={i}>
-        <line x1={n.x} y1={n.y} x2={140} y2={70} stroke={B} strokeWidth="1" opacity=".4"/>
-        <rect x={n.x-20} y={n.y-9} width="40" height="16" rx="4" fill={B} opacity=".15" stroke={B} strokeWidth=".8"/>
-        <text x={n.x} y={n.y+3} fontSize="8" fill={B} textAnchor="middle">{n.l}</text>
-      </g>
-    ))}
-  </svg>
-);
-
-const SvgBogle = () => (
-  <svg viewBox="0 0 280 110" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={M} fontWeight="bold">존 보글 — 비용이 수익을 갉아먹는다</text>
-    <text x="14" y="28" fontSize="8" fill={L}>30년 후 $10,000 투자 결과</text>
-    {[{label:"인덱스 ETF",fee:"연 0.05%",val:"$174,494",color:M,h:70},{label:"액티브 펀드",fee:"연 1.50%",val:"$117,614",color:R,h:47}].map((d,i)=>(
-      <g key={i}>
-        <rect x={40+i*120} y={90-d.h} width="80" height={d.h} rx="4" fill={d.color} opacity=".25"/>
-        <rect x={40+i*120} y={90-d.h} width="80" height="4" rx="2" fill={d.color} opacity=".9"/>
-        <text x={80+i*120} y={90-d.h-8} fontSize="9" fill={d.color} textAnchor="middle" fontWeight="bold">{d.val}</text>
-        <text x={80+i*120} y="102" fontSize="8" fill={L} textAnchor="middle">{d.label}</text>
-        <text x={80+i*120} y="110" fontSize="7" fill={d.color} textAnchor="middle">{d.fee}</text>
-      </g>
-    ))}
-    <line x1="14" y1="90" x2="266" y2="90" stroke={D} strokeWidth="1"/>
-  </svg>
-);
-
-const SvgCompound = () => (
-  <svg viewBox="0 0 280 115" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={G} fontWeight="bold">복리의 마법 — 연 10% 수익률 기준</text>
-    <line x1="30" y1="95" x2="266" y2="95" stroke={D} strokeWidth="1"/>
-    <line x1="30" y1="20" x2="30" y2="95" stroke={D} strokeWidth="1"/>
-    {["1x","2.6x","6.7x","17.4x","45x"].map((l,i)=>(
-      <text key={i} x="26" y={95-i*16} fontSize="6" fill={L} textAnchor="end">{l}</text>
-    ))}
-    <polyline points="30,93 88,89 146,82 204,67 262,30" fill="none" stroke={G} strokeWidth="2.5"/>
-    <path d="M30,95 L88,89 L146,82 L204,67 L262,30 L262,95 Z" fill={G} opacity=".08"/>
-    {[[88,89,"10년\n2.6x"],[146,82,"20년\n6.7x"],[204,67,"30년\n17.4x"],[262,30,"40년\n45x"]].map(([x,y,l],i)=>(
-      <g key={i}>
-        <circle cx={x as number} cy={y as number} r="4" fill={G}/>
-        <text x={(x as number)+4} y={(y as number)-6} fontSize="7" fill={G}>{(l as string).split("\n")[0]}</text>
-        <text x={(x as number)+4} y={(y as number)+6} fontSize="7" fill={G} fontWeight="bold">{(l as string).split("\n")[1]}</text>
-      </g>
-    ))}
-    <text x="14" y="112" fontSize="8" fill={L}>버핏 자산의 95%는 65세 이후에 쌓임 — 복리의 후폭풍</text>
-  </svg>
-);
-
-const SvgPortfolio = () => {
-  const assets=[{n:"주식",p:60,c:M},{n:"장기채권",p:20,c:B},{n:"중기채권",p:10,c:G},{n:"금",p:7.5,c:G},{n:"원자재",p:2.5,c:L}];
-  let cum=0;
-  return (
-    <svg viewBox="0 0 280 115" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-      <text x="14" y="14" fontSize="9" fill={T} fontWeight="bold">분산 투자 — 자산 배분 예시</text>
-      {assets.map((a,i)=>{
-        const start=cum; cum+=a.p/100*360;
-        const a1=(start-90)*Math.PI/180, a2=(cum-90)*Math.PI/180;
-        const cx=80, cy=65, r=42;
-        const x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
-        const x2=cx+r*Math.cos(a2), y2=cy+r*Math.sin(a2);
-        return <path key={i} d={`M${cx},${cy} L${x1},${y1} A${r},${r},0,${a.p>50?1:0},1,${x2},${y2} Z`} fill={a.c} opacity=".7"/>;
-      })}
-      {assets.map((a,i)=>(
-        <g key={i}>
-          <rect x="150" y={10+i*19} width="10" height="10" rx="2" fill={a.c} opacity=".7"/>
-          <text x="164" y={19+i*19} fontSize="8" fill={T}>{a.n} {a.p}%</text>
-        </g>
-      ))}
-      <text x="14" y="110" fontSize="8" fill={L}>연 1~2회 리밸런싱으로 목표 비중 유지</text>
-    </svg>
-  );
-};
-
-const SvgChecklist = () => (
-  <svg viewBox="0 0 280 135" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={G} fontWeight="bold">우량주 선별 10가지 기준</text>
-    {["강력한 경쟁 해자 (Moat)","일관된 EPS 성장 (5~10년)","높은 ROE (15% 이상)","낮은 부채비율 (50% 이하)","자유현금흐름(FCF) 창출","주주친화 경영진","합리적 밸류에이션","이해 가능한 사업 모델","강력한 브랜드 인지도","장기 성장 산업 위치"].map((c,i)=>(
-      <g key={i}>
-        <circle cx="22" cy={27+i*10} r="4" fill={M} opacity=".8"/>
-        <path d={`M20,${27+i*10} L22,${29+i*10} L25,${25+i*10}`} fill="none" stroke="#000" strokeWidth="1.2"/>
-        <text x="30" y={30+i*10} fontSize="7.5" fill={T}>{c}</text>
-      </g>
-    ))}
-  </svg>
-);
-
-const SvgGraham = () => (
-  <svg viewBox="0 0 280 100" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={B} fontWeight="bold">그레이엄 — 안전마진(Margin of Safety)</text>
-    <text x="140" y="30" fontSize="9" fill={L} textAnchor="middle">내재가치</text>
-    <rect x="60" y="34" width="160" height="22" rx="4" fill={B} opacity=".25" stroke={B} strokeWidth="1"/>
-    <text x="140" y="50" fontSize="10" fill={B} textAnchor="middle" fontWeight="bold">$100</text>
-    <text x="140" y="66" fontSize="9" fill={L} textAnchor="middle">매수 기준가 (안전마진 30%)</text>
-    <rect x="82" y="70" width="116" height="18" rx="4" fill={M} opacity=".3" stroke={M} strokeWidth="1"/>
-    <text x="140" y="83" fontSize="10" fill={M} textAnchor="middle" fontWeight="bold">$70</text>
-    <text x="14" y="98" fontSize="8" fill={L}>내재가치보다 30% 이상 낮을 때만 매수 → 손실 방어</text>
-  </svg>
-);
-
-const SvgFisher = () => (
-  <svg viewBox="0 0 280 115" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={M} fontWeight="bold">필립 피셔 — 스커틀버트 방법</text>
-    <rect x="110" y="45" width="60" height="28" rx="8" fill={M} opacity=".2" stroke={M} strokeWidth="1.5"/>
-    <text x="140" y="63" fontSize="9" fill={M} textAnchor="middle" fontWeight="bold">기업</text>
-    {[{x:30,y:30,l:"고객"},{x:220,y:30,l:"경쟁사"},{x:20,y:85,l:"납품업체"},{x:220,y:85,l:"전직직원"},{x:120,y:12,l:"R&D 투자"},{x:140,y:105,l:"성장 잠재력"}].map((n,i)=>(
-      <g key={i}>
-        <line x1={n.x+20} y1={n.y+8} x2="140" y2="59" stroke={M} strokeWidth="1" opacity=".3"/>
-        <rect x={n.x} y={n.y} width="40" height="16" rx="4" fill="none" stroke={M} strokeWidth=".8" opacity=".6"/>
-        <text x={n.x+20} y={n.y+10} fontSize="7.5" fill={L} textAnchor="middle">{n.l}</text>
-      </g>
-    ))}
-  </svg>
-);
-
-const SvgAllWeather = () => (
-  <svg viewBox="0 0 280 120" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={B} fontWeight="bold">레이 달리오 — 올웨더 포트폴리오</text>
-    <line x1="140" y1="24" x2="140" y2="108" stroke={D} strokeWidth="1"/>
-    <line x1="20" y1="66" x2="260" y2="66" stroke={D} strokeWidth="1"/>
-    <text x="80" y="22" fontSize="8" fill={M} textAnchor="middle">성장↑</text>
-    <text x="200" y="22" fontSize="8" fill={R} textAnchor="middle">인플레↑</text>
-    <text x="80" y="114" fontSize="8" fill={R} textAnchor="middle">성장↓</text>
-    <text x="200" y="114" fontSize="8" fill={B} textAnchor="middle">인플레↓</text>
-    {[{x:24,y:28,w:110,h:34,c:M,t:"주식 30%"},{x:146,y:28,w:110,h:34,c:R,t:"원자재 7.5%\n금 7.5%"},{x:24,y:70,w:110,h:34,c:R,t:"장기채 40%"},{x:146,y:70,w:110,h:34,c:B,t:"중기채 15%"}].map((d,i)=>(
-      <g key={i}>
-        <rect x={d.x} y={d.y} width={d.w} height={d.h} rx="4" fill={d.c} opacity=".1" stroke={d.c} strokeWidth=".8"/>
-        {d.t.split("\n").map((line,j)=>(
-          <text key={j} x={d.x+d.w/2} y={d.y+d.h/2-3+j*12} fontSize="8" fill={d.c} textAnchor="middle">{line}</text>
-        ))}
-      </g>
-    ))}
-  </svg>
-);
-
-const SvgCycle = () => (
-  <svg viewBox="0 0 280 115" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={G} fontWeight="bold">하워드 막스 — 시장 사이클</text>
-    <line x1="20" y1="65" x2="266" y2="65" stroke={D} strokeWidth="1"/>
-    <path d="M20,65 Q60,20 100,65 Q140,110 180,65 Q220,20 260,65" fill="none" stroke={G} strokeWidth="2"/>
-    <circle cx="100" cy="65" r="5" fill={R}/>
-    <circle cx="180" cy="65" r="5" fill={M}/>
-    <text x="100" y="30" fontSize="8" fill={R} textAnchor="middle">탐욕 정점</text>
-    <text x="100" y="42" fontSize="8" fill={R} textAnchor="middle">과열 → 매도</text>
-    <text x="180" y="100" fontSize="8" fill={M} textAnchor="middle">공포 저점</text>
-    <text x="180" y="110" fontSize="8" fill={M} textAnchor="middle">침체 → 매수</text>
-    <text x="14" y="82" fontSize="7" fill={L}>낙관적일 때 위험↑</text>
-    <text x="190" y="82" fontSize="7" fill={L}>비관적일 때 기회↑</text>
-    <text x="14" y="112" fontSize="8" fill={G}>핵심: "지금 우리가 사이클의 어디에 있는가?"</text>
-  </svg>
-);
-
-const SvgMindset = () => (
-  <svg viewBox="0 0 280 115" className="w-full mb-3 rounded-xl" style={{background:"rgba(255,255,255,0.03)"}}>
-    <text x="14" y="14" fontSize="9" fill={M} fontWeight="bold">장기 투자 — 대가들의 공통 원칙</text>
-    {/* Mountain */}
-    <path d="M20,95 L80,50 L110,65 L150,20 L190,60 L220,45 L260,95 Z" fill="none" stroke={D} strokeWidth="1.5"/>
-    <path d="M20,95 L80,50 L110,65 L150,20 L190,60 L220,45 L260,95" fill="none" stroke={M} strokeWidth="2.5" opacity=".6"/>
-    {/* Path milestones */}
-    {[{x:80,y:50,l:"인내"},{x:110,y:65,l:"단순함"},{x:150,y:20,l:"목표"},{x:220,y:45,l:"감정통제"}].map((p,i)=>(
-      <g key={i}>
-        <circle cx={p.x} cy={p.y} r="5" fill={M}/>
-        <text x={p.x} y={p.y-8} fontSize="7.5" fill={M} textAnchor="middle">{p.l}</text>
-      </g>
-    ))}
-    <text x="14" y="110" fontSize="8" fill={L}>"10년 보유 못 할 주식이면 10분도 보유 말라" — 버핏</text>
-  </svg>
-);
 
 // ── Article data ──────────────────────────────────────────────────
 
 const BASICS: Article[] = [
-  { emoji:"📈", title:"주식이란 무엇인가? 완전 기초부터", desc:"주식의 개념부터 주주의 권리까지, 투자를 처음 접하는 분을 위한 가장 기본적인 설명입니다.", svg: SvgStock, body:"주식(Stock)은 기업의 소유권을 작게 나눈 단위입니다. 기업이 자금을 조달하기 위해 주식을 발행하면, 이를 매수한 투자자는 해당 기업의 부분 소유자(주주)가 됩니다. 주주는 기업의 이익 분배(배당)를 받을 권리와, 주주총회에서 의결권을 행사할 권리를 갖습니다.\n\n주가는 수요와 공급에 의해 실시간으로 결정됩니다. 기업의 실적이 좋거나 미래 성장 기대가 높아지면 주가가 올라가고, 반대의 경우 내려갑니다. 투자자는 주가 상승에 따른 시세차익과 배당수익으로 수익을 얻을 수 있습니다." },
-  { emoji:"🇺🇸", title:"S&P 500 완벽 이해: 미국 증시의 척도", desc:"S&P 500이 단순한 지수를 넘어 미국 경제 전체의 건강을 나타내는 이유를 알아봅니다.", svg: SvgSP500, body:"S&P 500은 미국을 대표하는 500개 대형 상장기업의 주가를 시가총액 가중 방식으로 집계한 지수입니다. 애플, 마이크로소프트, 아마존 등 미국 경제를 이끄는 핵심 기업들이 포함되어 있으며, 미국 주식시장 전체 시가총액의 약 80%를 커버합니다.\n\n역사적으로 S&P 500은 연평균 약 10%의 수익률을 기록했습니다. 개별 종목보다 분산 투자 효과가 있어 장기 투자의 기준점으로 널리 사용됩니다. VOO, SPY 같은 ETF를 통해 S&P 500 전체에 간편하게 투자할 수 있습니다." },
-  { emoji:"🗺️", title:"선물 지도(Futures Map) 읽는 법: 장 시작 전 시장 예측", desc:"나스닥·S&P·다우 선물이 무엇인지, 심야 선물 움직임으로 다음 날 증시를 어떻게 예측하는지 설명합니다.", svg: SvgFutures, body:"선물(Futures)은 미래의 특정 시점에 정해진 가격으로 자산을 사고팔기로 계약하는 금융상품입니다. 주식시장이 닫혀 있는 야간에도 선물 시장은 거래되기 때문에, 투자자들은 다음 날 장 시작 전 시장 분위기를 파악하는 데 선물 지수를 활용합니다.\n\n나스닥 선물이 +1% 이상이면 기술주 강세, S&P 500 선물이 -0.5% 이하면 전반적 약세 출발 가능성이 높습니다. 단, 선물 방향이 반드시 당일 장 마감 방향과 일치하지는 않습니다." },
-  { emoji:"📊", title:"매크로 경제 핵심 지표 완전 정복", desc:"GDP, CPI, PCE, 실업률, PMI 등 주식시장에 직접 영향을 주는 핵심 경제지표를 정리합니다.", svg: SvgMacro, body:"GDP(국내총생산): 한 나라의 경제 규모와 성장률을 나타냅니다. GDP 성장이 예상보다 강하면 주식시장에 호재, 침체 우려 시 악재입니다.\n\nCPI(소비자물가지수) & PCE: 인플레이션을 측정합니다. 연준은 PCE를 선호 지표로 사용하며, 인플레이션이 높으면 금리 인상 → 주식 하락 압력이 생깁니다.\n\n실업률: 노동시장 건강을 나타냅니다. PMI(구매관리자지수): 50 이상이면 경기 확장, 50 미만이면 수축을 의미합니다." },
-  { emoji:"🏦", title:"FOMC와 연준(Fed) 완전 이해: 금리가 왜 중요한가", desc:"연방공개시장위원회(FOMC) 회의가 무엇이고, 금리 결정이 주식시장에 어떤 영향을 미치는지 핵심을 정리합니다.", svg: SvgFOMC, body:"연준(Federal Reserve, Fed)은 미국의 중앙은행입니다. FOMC(연방공개시장위원회)는 연 8회 회의를 열어 기준금리를 결정합니다. 이 금리가 미국뿐 아니라 전 세계 금융시장에 영향을 미칩니다.\n\n금리 인상 → 대출 비용 증가 → 기업 이익 감소 → 주가 하락 압력. 금리 인하 → 자금 조달 쉬워짐 → 기업 성장 기대 → 주가 상승 요인. 특히 기술주(성장주)는 금리에 매우 민감합니다." },
-  { emoji:"💵", title:"채권과 금리의 기초: 10년물 국채와 역수익률 곡선", desc:"채권 가격과 금리의 역관계, 10년물 국채가 왜 주식시장의 나침반이 되는지 설명합니다.", svg: SvgBond, body:"채권(Bond)은 정부나 기업이 돈을 빌리면서 발행하는 차용증입니다. 채권 가격과 금리는 반대로 움직입니다. 금리가 오르면 기존 채권의 가치가 떨어지고, 금리가 내리면 올라갑니다.\n\n미국 10년물 국채 수익률은 '무위험 수익률'의 기준으로 사용됩니다. 10년물 수익률이 오르면 주식의 상대적 매력이 줄어들어 주가 하락 압력이 생깁니다. 역수익률 곡선(2년물 > 10년물)은 역사적으로 경기침체를 예고하는 신호로 알려져 있습니다." },
-  { emoji:"📅", title:"실적 시즌(어닝 시즌) 완전 정복: EPS·가이던스·컨센서스", desc:"분기마다 돌아오는 어닝 시즌에서 투자자가 꼭 확인해야 할 핵심 지표와 해석법을 설명합니다.", svg: SvgEarnings, body:"어닝 시즌은 기업들이 분기 실적을 발표하는 기간입니다(1·4·7·10월). 주요 확인 지표:\n\nEPS(주당순이익): 순이익 ÷ 발행주식수. 컨센서스(애널리스트 예상 평균) 대비 초과 달성 여부가 중요합니다. 가이던스: 기업이 다음 분기/연도 실적 전망을 발표하는 것. 현재 실적보다 미래 가이던스가 주가에 더 큰 영향을 미치는 경우가 많습니다." },
-  { emoji:"💰", title:"기업 가치평가 핵심 지표: PER·PBR·EV/EBITDA", desc:"주식이 비싼지 싼지 판단하는 핵심 밸류에이션 지표들을 초보자도 이해하기 쉽게 설명합니다.", svg: SvgValuation, body:"PER(주가수익비율) = 주가 ÷ EPS. PER이 낮으면 상대적으로 저평가, 높으면 성장 기대가 반영된 것입니다. 동종 업계 평균과 비교하는 것이 중요합니다.\n\nPBR(주가순자산비율) = 주가 ÷ BPS(주당순자산). PBR 1 이하는 장부가치보다 싸게 거래되는 것을 의미합니다.\n\nEV/EBITDA: 기업 전체 가치(EV)를 영업 현금흐름(EBITDA)으로 나눈 값. 부채 규모가 다른 기업을 비교할 때 유용합니다." },
-  { emoji:"😨", title:"공포·탐욕지수(Fear & Greed Index) 활용법", desc:"시장 심리를 수치화한 공포·탐욕지수를 투자 타이밍에 활용하는 실전 방법을 설명합니다.", svg: SvgFearGreed, body:"공포·탐욕지수는 CNN Money가 만든 지표로 0(극단적 공포)~100(극단적 탐욕) 사이 값으로 시장 심리를 표현합니다. 7가지 지표(변동성, 모멘텀, 수요-공급, 안전자산 수요 등)를 종합해 계산합니다.\n\n투자 활용법: 극단적 공포(0~25) 구간은 역발상적으로 좋은 매수 기회일 수 있습니다. 극단적 탐욕(75~100) 구간은 과열 신호로 주의가 필요합니다." },
-  { emoji:"📏", title:"버핏지수로 시장 거품 측정하기", desc:"주식 시장 전체 시가총액을 GDP로 나눈 버핏지수의 의미와 해석 방법을 알아봅니다.", svg: SvgBuffett, body:"버핏지수 = 미국 주식시장 전체 시가총액 ÷ 미국 GDP × 100(%). 워렌 버핏이 2001년 포춘 인터뷰에서 '가장 좋아하는 주식 밸류에이션 지표'라고 언급하면서 이름이 붙었습니다.\n\n해석 기준: 75% 이하 = 저평가, 75~90% = 적정, 90~115% = 약간 고평가, 115% 이상 = 과열. 이 지표는 장기 사이클 분석에 유용하지만, 단기 매매 신호로 사용하기는 어렵습니다." },
-  { emoji:"🔄", title:"달러코스트 평균법(DCA): 타이밍 없이 이기는 전략", desc:"시장 타이밍을 맞추지 않아도 장기적으로 수익을 낼 수 있는 정액 분할 매수 전략을 설명합니다.", svg: SvgDCA, body:"DCA(Dollar Cost Averaging)는 특정 종목 또는 ETF를 일정 주기(매월, 매주)에 일정 금액씩 꾸준히 매수하는 방법입니다. 주가가 쌀 때는 더 많은 주수를, 비쌀 때는 더 적은 주수를 사게 되어 평균 매수가를 낮추는 효과가 있습니다.\n\nDCA의 장점: 시장 타이밍을 맞출 필요가 없습니다. 감정적 의사결정을 줄일 수 있습니다. 장기적으로 복리 효과를 극대화할 수 있습니다." },
-  { emoji:"🚀", title:"미국 주식 투자 시작하기: 완전 초보 가이드", desc:"증권사 선택부터 첫 종목 매수까지, 미국 주식 투자의 실전 단계를 차례로 안내합니다.", svg: SvgStart, body:"1단계: 증권사 선택. 한국 투자자는 키움증권, 미래에셋, NH투자증권 등 국내 증권사를 통해 미국 주식에 투자할 수 있습니다. 수수료와 환전 비용을 비교하세요.\n\n2단계: 계좌 개설 & 달러 환전. 미국 주식은 달러(USD)로 거래됩니다.\n\n3단계: 첫 매수. 처음에는 S&P 500 ETF(VOO, SPY)나 대형 우량주(AAPL, MSFT)로 시작하는 것을 권장합니다." },
-  { emoji:"🏗️", title:"미국 주식 11개 섹터 한눈에 이해하기", desc:"S&P 500을 구성하는 11개 주요 섹터의 특성과 경기 사이클에서의 역할을 설명합니다.", svg: SvgSectors, body:"S&P 500은 GICS 기준 11개 섹터로 분류됩니다. 주요 섹터:\n\n정보기술(IT): AAPL, MSFT, NVDA — 성장 국면에서 강함. 헬스케어: JNJ, LLY — 경기 방어적 성격. 금융: JPM, BAC — 금리 인상 시 수혜. 에너지: XOM, CVX — 유가와 연동. 소비재(필수): 식음료, 생활용품 — 경기침체 방어주." },
-  { emoji:"💸", title:"배당주 투자 완전 기초: 배당수익률·배당귀족·DRIP", desc:"매달 현금이 들어오는 배당주 투자의 핵심 개념과 미국 배당귀족 종목 활용법을 설명합니다.", svg: SvgDividend, body:"배당수익률 = 연간 배당금 ÷ 주가 × 100(%). 4%면 주가 $100 기준 연간 $4 배당을 받는다는 의미입니다. 미국 주식은 보통 분기(3개월)마다 배당을 지급합니다.\n\n배당귀족(Dividend Aristocrats): S&P 500 기업 중 25년 이상 연속 배당을 인상한 기업 그룹입니다. JNJ, KO, PG, MMM 등이 포함됩니다. DRIP(배당 재투자 프로그램): 배당금으로 추가 주식을 자동 매수하는 방법으로 복리 효과를 극대화합니다." },
-  { emoji:"📉", title:"기술적 분석 기초: 차트 읽는 법과 핵심 지표", desc:"이동평균선·RSI·MACD·지지와 저항선 등 미국 주식 차트 분석의 핵심 도구를 초보자 눈높이로 설명합니다.", svg: SvgTA, body:"이동평균선(MA): 일정 기간의 평균 주가를 나타내는 선. 50일선과 200일선이 가장 많이 사용됩니다. 50일선이 200일선을 상향 돌파하면 '골든크로스(매수 신호)', 하향 이탈하면 '데드크로스(매도 신호)'라고 합니다.\n\nRSI(상대강도지수): 0~100 범위로 과매수(70 이상)/과매도(30 이하) 상태를 판단합니다. MACD: 단기·장기 이동평균선의 차이로 추세 전환을 포착합니다." },
-  { emoji:"💱", title:"환율과 달러가 미국 주식에 미치는 영향", desc:"원달러 환율, 달러인덱스(DXY)가 미국 주식 투자 수익률과 기업 실적에 어떤 영향을 주는지 설명합니다.", svg: SvgFX, body:"한국 투자자는 달러로 미국 주식을 사기 때문에 환율 변동이 실질 수익률에 영향을 줍니다. 원화 약세(달러 강세) 시: 환전 비용이 증가하지만, 달러 자산의 원화 환산 가치는 높아집니다.\n\nDXY(달러인덱스): 달러의 상대 강도를 나타내는 지수. DXY가 강세면 신흥국 자금이 미국으로 유입, 약세면 위험 자산 선호 경향이 있습니다." },
-  { emoji:"📦", title:"ETF 완전 정복: 종류·선택 기준·주의사항", desc:"인덱스·섹터·테마·레버리지 ETF의 차이와 내 포트폴리오에 맞는 ETF를 고르는 기준을 설명합니다.", svg: SvgETF, body:"ETF(Exchange Traded Fund)는 주식처럼 거래소에서 실시간 매매 가능한 펀드입니다. 종류:\n\n인덱스 ETF: S&P 500(VOO, SPY), 나스닥100(QQQ) 추종. 장기 투자의 핵심. 섹터 ETF: XLK(IT), XLF(금융) 등 특정 업종에 집중. 레버리지/인버스 ETF: TQQQ(3배 레버리지) 등 — 단기 트레이딩용, 장기 보유 비적합.\n\n선택 기준: 수수료율(낮을수록 좋음), 운용 자산 규모(AUM), 추적 오차율을 확인하세요." },
-  { emoji:"🏷️", title:"자사주 매입·주식 분할·배당의 진짜 의미", desc:"주가에 영향을 주는 자사주 매입(Buyback), 주식 분할(Stock Split), 특별 배당의 개념과 투자자가 봐야 할 신호를 설명합니다.", svg: SvgBuyback, body:"자사주 매입(Buyback): 기업이 자기 주식을 직접 매수하는 것. 유통 주식 수를 줄여 EPS를 높이고 주주 가치를 높입니다. 경영진이 주가가 저평가됐다고 판단할 때 실시하는 경향이 있습니다.\n\n주식 분할(Stock Split): 예를 들어 10:1 분할이면 $1,000짜리 주식 1주가 $100짜리 10주로 바뀝니다. 총 시가총액은 동일하지만 접근성이 높아집니다." },
-  { emoji:"🎰", title:"옵션 기초: 콜·풋·IV·만기일 쉽게 이해하기", desc:"미국 주식에서 자주 등장하는 옵션(콜·풋)의 기본 개념과 개인 투자자가 알아야 할 핵심 용어를 설명합니다.", svg: SvgOptions, body:"옵션은 정해진 가격(행사가)에 주식을 사거나 팔 수 있는 권리를 거래하는 파생상품입니다.\n\n콜옵션(Call): 주식을 행사가에 살 수 있는 권리. 주가 상승 시 수익. 풋옵션(Put): 주식을 행사가에 팔 수 있는 권리. 주가 하락 시 수익. IV(내재 변동성): 실적 발표 전 IV가 급등하는 현상(IV Crush)에 주의하세요. 옵션 거래는 레버리지 특성상 초보자에게 매우 위험합니다." },
+  {
+    emoji: "📈",
+    title: "주식이란 무엇인가? 완전 기초부터",
+    desc: "주식의 개념부터 주주의 권리까지, 투자를 처음 접하는 분을 위한 가장 기본적인 설명입니다.",
+    body: `주식(Stock)은 기업의 소유권을 작게 나눈 조각입니다. 예를 들어 삼성전자가 주식 100주를 발행했다면, 1주를 가진 사람은 삼성전자의 1% 소유자가 되는 것과 같아요.
+
+기업은 왜 주식을 팔까요? 사업을 키우려면 돈이 필요합니다. 은행 대출 대신 주식을 발행해서 많은 사람들로부터 투자를 받는 것이죠. 이렇게 하면 이자 부담 없이 큰 자금을 조달할 수 있습니다.
+
+주주(주식 보유자)는 두 가지 방식으로 수익을 냅니다:
+• 시세차익: 주가가 오르면 비싸게 팔아서 차익 실현
+• 배당금: 기업이 이익을 내면 그 일부를 주주에게 현금으로 분배
+
+주가는 수요와 공급으로 결정됩니다. 그 회사를 사고 싶어하는 사람이 많을수록 주가는 올라가고, 팔려는 사람이 많으면 내려갑니다. 기업 실적, 뉴스, 경제 상황이 모두 영향을 줍니다.
+
+처음에는 개별 기업 주식보다 S&P 500 ETF처럼 500개 기업을 한꺼번에 담은 상품으로 시작하는 것이 훨씬 안전합니다.`,
+  },
+  {
+    emoji: "🇺🇸",
+    title: "S&P 500 완벽 이해: 미국 증시의 척도",
+    desc: "S&P 500이 단순한 지수를 넘어 미국 경제 전체의 건강을 나타내는 이유를 알아봅니다.",
+    body: `S&P 500은 미국을 대표하는 500개 대형 상장기업을 묶어 만든 지수입니다. 애플, 마이크로소프트, 아마존, 엔비디아 같은 회사들이 포함되어 있어요. 미국 주식시장 전체 시가총액의 약 80%를 커버합니다.
+
+왜 중요할까요? 미국 경제가 잘 돌아가면 이 500개 기업의 주가도 오르고, 지수도 올라갑니다. 그래서 S&P 500을 "미국 경제의 체온계"라고 부릅니다.
+
+역사적 수익률이 놀랍습니다. 1928년부터 지금까지 연평균 약 +10%의 수익률을 기록했습니다. 중간에 닷컴버블, 금융위기, 코로나 폭락이 있었지만, 장기적으로는 항상 회복하고 신고점을 찍었습니다.
+
+투자 방법은 매우 쉽습니다. VOO, SPY 같은 ETF를 사면 S&P 500 전체에 투자하는 것과 같습니다. 단 하나의 ETF로 애플, 구글, 마이크로소프트 등 500개 기업에 분산 투자되는 셈이죠.
+
+장기 투자의 기본 원칙: 매달 일정 금액씩 꾸준히 매수하면(DCA 전략), 타이밍을 맞추지 않아도 장기적으로 좋은 성과를 낼 수 있습니다.`,
+  },
+  {
+    emoji: "🗺️",
+    title: "선물 지도(Futures Map) 읽는 법: 장 시작 전 시장 예측",
+    desc: "나스닥·S&P·다우 선물이 무엇인지, 심야 선물 움직임으로 다음 날 증시를 어떻게 예측하는지 설명합니다.",
+    body: `선물(Futures)은 "미래의 특정 시점에 정해진 가격으로 사고팔겠다"는 계약입니다. 주식시장이 문을 닫아도 선물 시장은 계속 거래되기 때문에, 한국 시간 오전에도 미국 증시 방향을 미리 알 수 있습니다.
+
+선물을 보는 방법: 미국 증시가 열리기 전 "나스닥 선물 +1.2%"라는 뉴스가 나오면, 그날 나스닥이 강세로 출발할 가능성이 높다는 뜻입니다. 반대로 "-0.8%"면 약세 출발 신호입니다.
+
+3대 선물 지수:
+• 나스닥 100 선물(NQ) → 기술주(애플, 구글, 엔비디아 등) 방향
+• S&P 500 선물(ES) → 미국 전체 시장 방향
+• 다우 선물(YM) → 전통 대형주 방향
+
+주의사항: 선물이 +1%여도 장 중에 뉴스나 경제 지표 발표에 따라 방향이 바뀔 수 있습니다. 선물은 "오늘 시장의 첫 분위기"를 보는 지표이지, 마감 방향을 보장하지 않습니다.
+
+실전 활용: 큰 경제 지표 발표일(CPI, 고용지수, FOMC 결과 등) 전후로 선물 움직임이 특히 크게 나타납니다. 이때 갑작스러운 급등락에 당황하지 않으려면 선물 확인 습관을 들여두는 게 좋습니다.`,
+  },
+  {
+    emoji: "📊",
+    title: "매크로 경제 핵심 지표 완전 정복",
+    desc: "GDP, CPI, PCE, 실업률, PMI 등 주식시장에 직접 영향을 주는 핵심 경제지표를 정리합니다.",
+    body: `주식시장은 경제와 연결되어 있습니다. 경제가 좋으면 기업 실적도 좋고 주가도 오릅니다. 그래서 주요 경제지표를 이해하면 시장의 흐름을 더 잘 파악할 수 있습니다.
+
+GDP(국내총생산): 한 나라에서 만들어진 모든 상품과 서비스의 총 가치입니다. GDP가 예상보다 높게 나오면 경제가 잘 돌아가고 있다는 뜻 → 주식에 호재. 반대로 2분기 연속 마이너스이면 "경기침체" 선언됩니다.
+
+CPI(소비자물가지수): 우리 생활에서 사는 물건들의 가격 변화를 측정합니다. 쉽게 말해 "물가가 얼마나 올랐는가"입니다. CPI가 너무 높으면(인플레이션) 연준이 금리를 올립니다 → 주식 하락 압력.
+
+실업률: 일자리를 구하지 못한 사람의 비율. 실업률이 낮으면 사람들이 돈을 많이 쓰고 경제가 활발합니다. 단, 실업률이 너무 낮으면 연준이 경기 과열을 우려해 금리를 올릴 수 있습니다.
+
+PMI(구매관리자지수): 기업들의 구매 담당자를 대상으로 한 설문. 50 이상이면 경기 확장, 50 미만이면 수축을 의미합니다. 제조업 PMI와 서비스업 PMI 두 가지가 있습니다.
+
+PCE: 연준이 가장 중요하게 보는 물가 지표. CPI보다 더 넓은 범위를 측정합니다. 연준 목표치는 +2%입니다.`,
+  },
+  {
+    emoji: "🏦",
+    title: "FOMC와 연준(Fed) 완전 이해: 금리가 왜 중요한가",
+    desc: "연방공개시장위원회(FOMC) 회의가 무엇이고, 금리 결정이 주식시장에 어떤 영향을 미치는지 핵심을 정리합니다.",
+    body: `연준(Federal Reserve, Fed)은 미국의 중앙은행입니다. 우리나라로 치면 한국은행과 같은 역할이에요. FOMC(연방공개시장위원회)는 연 8회 회의를 열어 기준금리를 결정합니다.
+
+금리란 돈을 빌릴 때 내는 이자율입니다. 이 금리 하나가 전 세계 금융시장에 거대한 영향을 미칩니다.
+
+금리 인상 시나리오:
+연준이 금리를 올림 → 대출 이자 증가 → 기업 부담 증가 → 이익 감소 예상 → 주가 하락 압력
+특히 미래 성장에 베팅하는 성장주(기술주)가 금리에 가장 민감합니다.
+
+금리 인하 시나리오:
+연준이 금리를 내림 → 돈 빌리기 쉬워짐 → 기업 투자 증가 → 경제 성장 기대 → 주가 상승 요인
+금리 인하 기대감만으로도 주식시장이 크게 오르는 경우가 많습니다.
+
+FOMC 회의 일정 확인하기: 투자자라면 FOMC 회의일을 캘린더에 표시해두는 게 좋습니다. 회의 결과 발표 전후로 시장 변동성이 크게 높아지기 때문입니다. 금리 결정뿐 아니라 의장의 발언 한 마디 한 마디가 시장에 큰 영향을 줍니다.`,
+  },
+  {
+    emoji: "💵",
+    title: "채권과 금리의 기초: 10년물 국채와 역수익률 곡선",
+    desc: "채권 가격과 금리의 역관계, 10년물 국채가 왜 주식시장의 나침반이 되는지 설명합니다.",
+    body: `채권(Bond)은 "내가 돈을 빌려줄게, 이자 줘" 하는 차용증입니다. 정부나 기업이 발행하고, 투자자가 삽니다. 채권 투자자는 이자(쿠폰)를 받다가 만기에 원금을 돌려받습니다.
+
+채권 가격과 금리는 시소 관계입니다. 금리가 올라가면 채권 가격은 내려가고, 금리가 내려가면 채권 가격은 올라갑니다. 이게 왜 그럴까요? 새로 나온 채권이 더 높은 이자를 주면, 기존에 이자가 낮은 채권은 덜 매력적이 되어 가격이 떨어지는 것입니다.
+
+미국 10년물 국채: 모든 투자자들이 가장 주목하는 채권입니다. 10년물 수익률이 "무위험 수익률"의 기준이 됩니다. 10년물 수익률이 5%라면, 굳이 위험한 주식 투자를 할 이유가 줄어들어 주가 하락 압력이 생깁니다.
+
+역수익률 곡선(Inverted Yield Curve): 보통은 장기 금리(10년물)가 단기 금리(2년물)보다 높습니다. 그런데 2년물 > 10년물이 되는 역전 현상이 발생하면 경기침체의 전조 신호로 알려져 있습니다. 실제로 최근 50년간 경기침체 전에는 거의 항상 이 역전이 먼저 나타났습니다.
+
+투자 활용법: 10년물 수익률이 빠르게 오르면 성장주에서 빠져나와 가치주나 배당주로 옮기는 전략이 유효합니다.`,
+  },
+  {
+    emoji: "📅",
+    title: "실적 시즌(어닝 시즌) 완전 정복: EPS·가이던스·컨센서스",
+    desc: "분기마다 돌아오는 어닝 시즌에서 투자자가 꼭 확인해야 할 핵심 지표와 해석법을 설명합니다.",
+    body: `어닝 시즌은 기업들이 3개월(분기) 성적표를 공개하는 시간입니다. 1월, 4월, 7월, 10월 초에 시작됩니다. 이 기간에 주가 변동이 특히 큽니다.
+
+EPS(주당순이익): 기업이 번 순이익을 총 주식 수로 나눈 값입니다. 예를 들어 순이익 100억원, 주식 10억 주라면 EPS = 10원. EPS가 높을수록, 그리고 지난 분기보다 많이 올랐을수록 좋은 신호입니다.
+
+컨센서스(Consensus): 여러 증권사 애널리스트들의 예상치 평균입니다. "컨센서스 EPS $2.50"이라면, 전문가들이 평균적으로 $2.50를 예상한다는 뜻입니다.
+
+어닝 서프라이즈: 실제 EPS가 컨센서스를 넘어서면 "어닝 서프라이즈"라고 합니다. 이때 주가가 급등하는 경우가 많습니다. 반대로 예상을 밑돌면 "어닝 쇼크"로 주가가 급락할 수 있습니다.
+
+가이던스(Guidance): 기업이 다음 분기/연도 실적 전망을 스스로 발표하는 것입니다. 가이던스가 현재 실적보다 더 중요할 때가 많습니다. 이번 분기 실적은 좋았어도 다음 분기 전망이 나쁘면 주가는 떨어질 수 있습니다.
+
+실전 팁: 어닝 시즌에는 보유 종목의 실적 발표일을 꼭 확인하세요. 실적 발표 전후로 5~10%의 주가 변동은 흔한 일입니다.`,
+  },
+  {
+    emoji: "💰",
+    title: "기업 가치평가 핵심 지표: PER·PBR·EV/EBITDA",
+    desc: "주식이 비싼지 싼지 판단하는 핵심 밸류에이션 지표들을 초보자도 이해하기 쉽게 설명합니다.",
+    body: `주식이 지금 비싼지, 싼지 어떻게 알 수 있을까요? 단순히 주가가 $200이라고 비싼 게 아닙니다. 기업이 얼마나 돈을 버는지, 자산이 얼마인지를 함께 봐야 합니다.
+
+PER(주가수익비율) = 주가 ÷ EPS
+가장 많이 쓰는 밸류에이션 지표입니다. "내 투자금을 몇 년 만에 수익으로 회수할 수 있나"를 나타냅니다. PER 20이면 20년치 이익에 해당하는 가격에 산 것입니다.
+• PER 15 이하 → 상대적 저평가 신호
+• PER 25~30 → 성장주에서는 적정
+• PER 50+ → 고성장 기대가 반영된 고평가
+
+중요: PER은 같은 업종끼리 비교해야 합니다. 기술주와 은행주의 PER을 직접 비교하면 의미가 없습니다.
+
+PBR(주가순자산비율) = 주가 ÷ 주당순자산
+기업이 가진 자산(건물, 현금, 장비 등)에 비해 주가가 얼마인지 봅니다. PBR 1.0이면 자산 가치 그대로 사는 것. 1.0 미만이면 이론상 "청산해도 이익"인 초저평가 수준입니다.
+
+EV/EBITDA: 빚도 포함한 기업 전체 가치를 영업현금흐름으로 나눈 값입니다. 부채 규모가 다른 기업들을 공평하게 비교할 때 유용합니다. 인수합병(M&A) 시 가장 많이 활용하는 지표입니다.`,
+  },
+  {
+    emoji: "😨",
+    title: "공포·탐욕지수(Fear & Greed Index) 활용법",
+    desc: "시장 심리를 수치화한 공포·탐욕지수를 투자 타이밍에 활용하는 실전 방법을 설명합니다.",
+    body: `주식시장은 결국 사람들의 심리로 움직입니다. 공포·탐욕지수(Fear & Greed Index)는 CNN이 만든 지표로, 지금 시장 참여자들의 심리 상태를 0~100 숫자로 표현합니다.
+
+점수 해석:
+• 0~25: 극도의 공포 → 모두가 겁에 질려 팔고 있는 상태
+• 26~45: 공포
+• 46~54: 중립
+• 55~74: 탐욕
+• 75~100: 극도의 탐욕 → 모두가 흥분해서 사고 있는 상태
+
+역발상 투자의 핵심 도구입니다. 워렌 버핏은 "남들이 탐욕스러울 때 두려워하고, 남들이 두려워할 때 탐욕스러워져라"고 했습니다. 즉:
+• 지수가 10~20 구간(극도 공포)일 때 → 역사적으로 좋은 매수 타이밍
+• 지수가 80~90 구간(극도 탐욕)일 때 → 과열 주의, 리스크 관리 필요
+
+7가지 측정 항목: 주가 모멘텀, 주가 강도, 주가 폭, 풋/콜 옵션 비율, 정크본드 수요, 시장 변동성(VIX), 안전자산 수요를 종합해서 계산합니다.
+
+매일 체크하는 좋은 습관: 투자 결정 전에 공포·탐욕지수를 확인하면 감정적 판단을 줄이는 데 도움이 됩니다.`,
+  },
+  {
+    emoji: "📏",
+    title: "버핏지수로 시장 거품 측정하기",
+    desc: "주식 시장 전체 시가총액을 GDP로 나눈 버핏지수의 의미와 해석 방법을 알아봅니다.",
+    body: `버핏지수 = 미국 전체 주식시장 시가총액 ÷ 미국 GDP × 100
+
+쉽게 설명하면: "미국 기업들의 총 주식 가치가 미국 경제 규모의 몇 %인가"입니다. 워렌 버핏이 2001년 포춘 인터뷰에서 "내가 가장 좋아하는 단 하나의 밸류에이션 지표"라고 말하면서 이 이름이 붙었습니다.
+
+해석 기준:
+• 75% 이하 → 주식시장 저평가, 매수 기회
+• 75~90% → 적정 수준
+• 90~115% → 다소 고평가
+• 115% 이상 → 과열 경고
+• 200% 이상 → 역사적 극단적 과열
+
+2024년 기준 미국 버핏지수는 약 190~200%대입니다. 역사적으로 매우 높은 수준이지만, AI 혁명·빅테크 초고성장 등 구조적 변화로 인해 전통적 기준보다 높은 수준이 정당화될 수 있다는 시각도 있습니다.
+
+장기 사이클 판단 도구: 이 지표는 단기 매매 신호가 아니라 "지금 시장 전체가 역사적으로 비싼 편인가, 싼 편인가"를 판단하는 장기 투자 참고 지표입니다. 지수가 높다고 해서 바로 폭락하는 것은 아닙니다.`,
+  },
+  {
+    emoji: "🔄",
+    title: "달러코스트 평균법(DCA): 타이밍 없이 이기는 전략",
+    desc: "시장 타이밍을 맞추지 않아도 장기적으로 수익을 낼 수 있는 정액 분할 매수 전략을 설명합니다.",
+    body: `DCA(Dollar Cost Averaging, 달러코스트 평균법)는 매달 혹은 매주 일정 금액씩 꾸준히 투자하는 방법입니다. "언제 사야 제일 싸게 살 수 있을까?"를 고민할 필요 없이, 그냥 정해진 날짜에 정해진 금액만 삽니다.
+
+왜 효과적일까요?
+주가가 쌀 때(하락장): 같은 돈으로 더 많은 주수를 살 수 있습니다.
+주가가 비쌀 때(상승장): 적은 주수를 사게 됩니다.
+결과적으로 평균 매수 가격이 자연스럽게 낮아지는 효과가 생깁니다.
+
+예시: 매달 100만원씩 VOO(S&P 500 ETF) 매수
+• 1월: 주가 500달러 → 약 2주 매수
+• 2월: 주가 400달러(하락) → 약 2.5주 매수
+• 3월: 주가 450달러 → 약 2.2주 매수
+평균 매수 가격: (500+400+450)/3 = 450달러이지만, 실제 평균 단가는 더 낮아집니다.
+
+감정적 투자를 막아줍니다. "지금 너무 올랐다", "이제 더 떨어질 것 같다" 같은 감정적 판단 없이 기계적으로 투자하기 때문에 인간의 심리적 실수를 크게 줄입니다.
+
+워렌 버핏도 추천: 버핏은 일반 투자자에게 "S&P 500 인덱스 펀드에 매달 일정 금액 투자"를 가장 좋은 투자 방법으로 반복해서 권유했습니다.`,
+  },
+  {
+    emoji: "🚀",
+    title: "미국 주식 투자 시작하기: 완전 초보 가이드",
+    desc: "증권사 선택부터 첫 종목 매수까지, 미국 주식 투자의 실전 단계를 차례로 안내합니다.",
+    body: `미국 주식 투자는 생각보다 간단합니다. 한국에서도 스마트폰만 있으면 됩니다. 단계별로 따라오세요.
+
+1단계: 증권사 선택
+• 키움증권(영웅문): 가장 많이 쓰는 MTS, 수수료 저렴
+• 미래에셋증권: 영어 주식 접근 편리
+• 토스증권: 소수점 매수 가능, 초보자 친화적
+수수료와 환전 스프레드(환전 수수료)를 꼭 비교하세요.
+
+2단계: 계좌 개설 + 달러 환전
+앱에서 해외주식 계좌를 신청하고, 원화를 달러로 환전합니다. 환율 우대 이벤트를 활용하면 환전 비용을 줄일 수 있습니다.
+
+3단계: 첫 종목 선택
+처음에는 개별 종목보다 ETF를 강력히 추천합니다.
+• VOO 또는 SPY: S&P 500 추종, 가장 안전한 시작
+• QQQ: 나스닥 100 추종, IT 성장주 위주
+• VTI: 미국 전체 주식시장 투자
+
+4단계: 세금 이해
+해외 주식으로 연 250만원 초과 수익 시 양도소득세 22%가 부과됩니다. 단, 연말에 손실 종목을 팔아 이익을 줄이는 "절세 매도"를 잘 활용하세요.
+
+시작이 반입니다. 처음에는 소액으로 시작해 시장에 익숙해지는 것이 가장 중요합니다.`,
+  },
+  {
+    emoji: "🏗️",
+    title: "미국 주식 11개 섹터 한눈에 이해하기",
+    desc: "S&P 500을 구성하는 11개 주요 섹터의 특성과 경기 사이클에서의 역할을 설명합니다.",
+    body: `S&P 500은 11개의 섹터(업종)로 나뉩니다. 경기 상황에 따라 잘 되는 섹터와 못 되는 섹터가 다릅니다. 이를 알면 포트폴리오를 더 현명하게 구성할 수 있습니다.
+
+4대 핵심 섹터:
+• 정보기술(IT, 28%): AAPL, MSFT, NVDA. 금리 하락기에 강하고 경제 성장기에 주도주
+• 헬스케어(13%): JNJ, LLY, UNH. 경기 방어적. 불황에도 사람들은 약을 삽니다
+• 금융(13%): JPM, BAC. 금리 인상기에 수혜. 예대마진이 커지기 때문
+• 임의소비재(11%): AMZN, TSLA. 경기 좋을 때 강하고 불황에 약함
+
+경기 방어 섹터(불황에도 강한 곳):
+• 필수소비재: 식음료, 생활용품(먹고 살아야 하니까)
+• 유틸리티: 전기, 수도, 가스(필수 서비스)
+• 헬스케어: 아파도 병원은 가야 하니까
+
+경기 민감 섹터(경기 좋을 때 강한 곳):
+• IT, 임의소비재, 에너지, 금융, 산업재
+
+섹터 ETF 활용: XLK(IT), XLF(금융), XLV(헬스케어), XLE(에너지) 등 섹터별 ETF를 사면 특정 업종 전체에 분산 투자할 수 있습니다.`,
+  },
+  {
+    emoji: "💸",
+    title: "배당주 투자 완전 기초: 배당수익률·배당귀족·DRIP",
+    desc: "매달 현금이 들어오는 배당주 투자의 핵심 개념과 미국 배당귀족 종목 활용법을 설명합니다.",
+    body: `배당(Dividend)은 기업이 번 이익의 일부를 주주에게 현금으로 나눠주는 것입니다. 마치 예금이자처럼, 주식을 가지고 있으면 정기적으로 돈이 들어옵니다.
+
+배당수익률 = 연간 배당금 ÷ 주가 × 100
+예시: 주가 $100, 연간 배당 $4 → 배당수익률 4%
+미국 주식은 보통 3개월(분기)마다 배당을 지급합니다. 일부 기업은 매달 지급하기도 합니다.
+
+배당귀족(Dividend Aristocrats): S&P 500 기업 중 25년 이상 연속으로 배당을 증가시킨 기업들입니다. 경기 침체에도 배당을 줄이지 않았다는 것은 그만큼 안정적인 사업 모델을 가졌다는 증거입니다.
+대표 종목: JNJ(존슨앤드존슨), KO(코카콜라), PG(프록터앤갬블), MMM(3M), ABBV(애브비)
+
+DRIP(배당 재투자 프로그램): 받은 배당금으로 자동으로 같은 주식을 추가 매수하는 방법입니다. 배당이 주식을 낳고, 그 주식이 또 배당을 낳는 복리 효과가 발생합니다. 30~40년 장기 투자에서 엄청난 차이를 만듭니다.
+
+배당주 투자의 함정: 배당수익률이 지나치게 높으면(8% 이상) 오히려 위험 신호일 수 있습니다. 기업 상황이 나빠져 주가가 급락했거나, 곧 배당을 삭감할 가능성이 있기 때문입니다.`,
+  },
+  {
+    emoji: "📉",
+    title: "기술적 분석 기초: 차트 읽는 법과 핵심 지표",
+    desc: "이동평균선·RSI·MACD·지지와 저항선 등 미국 주식 차트 분석의 핵심 도구를 초보자 눈높이로 설명합니다.",
+    body: `기술적 분석은 과거 주가와 거래량 데이터로 앞으로의 주가 방향을 예측하는 방법입니다. 모든 정보는 이미 주가에 반영되어 있다는 가정 하에 차트 패턴을 분석합니다.
+
+이동평균선(Moving Average, MA):
+일정 기간의 평균 주가를 연결한 선입니다. 주가의 "큰 흐름"을 보여줍니다.
+• 50일선(단기 추세): 위에 있으면 단기 상승 추세
+• 200일선(장기 추세): 위에 있으면 장기 상승 추세
+• 골든크로스: 50일선이 200일선을 아래에서 위로 돌파 → 매수 신호
+• 데드크로스: 50일선이 200일선을 위에서 아래로 이탈 → 매도 신호
+
+RSI(상대강도지수, 0~100):
+주가가 과매수 상태인지, 과매도 상태인지 측정합니다.
+• 70 이상 → 과매수 상태, 단기 하락 주의
+• 30 이하 → 과매도 상태, 반등 가능성
+
+지지선과 저항선:
+• 지지선: 주가가 하락하다 멈추는 가격대 (바닥)
+• 저항선: 주가가 상승하다 막히는 가격대 (천장)
+한번 저항선을 돌파하면 그 가격대가 새로운 지지선이 됩니다.
+
+주의: 기술적 분석은 100% 맞는 게 아닙니다. 기업의 펀더멘털(실적, 재무)과 함께 활용할 때 효과가 극대화됩니다.`,
+  },
+  {
+    emoji: "💱",
+    title: "환율과 달러가 미국 주식에 미치는 영향",
+    desc: "원달러 환율, 달러인덱스(DXY)가 미국 주식 투자 수익률과 기업 실적에 어떤 영향을 주는지 설명합니다.",
+    body: `한국 투자자가 미국 주식을 살 때는 원화를 달러로 바꿔야 합니다. 이 환율 변동이 실제 수익률에 큰 영향을 줍니다.
+
+환율이 수익에 미치는 영향 (예시):
+주가 변화 없이 달러가 10% 강해지면(원화 약세)
+→ 달러 자산의 원화 환산 가치가 10% 상승 = 추가 수익
+
+반대로 달러가 10% 약해지면(원화 강세)
+→ 주가가 올라도 환전하면 수익이 줄어드는 "환차손" 발생
+
+원화 약세(달러 강세)가 유리한 이유: 최근 미국 주식 투자를 많이 한 한국 투자자들 입장에서는, 달러가 강해질수록 원화 기준 수익률이 올라갑니다.
+
+DXY(달러인덱스): 달러 대비 유로, 엔, 파운드 등 6개 주요 통화의 상대 강도입니다. DXY가 오르면 달러 강세로 신흥국 자금이 미국으로 몰리는 경향이 있습니다.
+
+실전 팁:
+• 장기 투자라면 환율 변동에 너무 신경 쓰지 않아도 됩니다. 장기적으로는 주가 상승이 환율 변동보다 큽니다.
+• 단기 매매라면 환율 방향을 함께 체크하는 것이 좋습니다.
+• 환율 우대 이벤트를 활용하면 환전 비용을 아낄 수 있습니다.`,
+  },
+  {
+    emoji: "📦",
+    title: "ETF 완전 정복: 종류·선택 기준·주의사항",
+    desc: "인덱스·섹터·테마·레버리지 ETF의 차이와 내 포트폴리오에 맞는 ETF를 고르는 기준을 설명합니다.",
+    body: `ETF(상장지수펀드)는 여러 주식을 한 바구니에 담아 만든 상품입니다. 주식처럼 실시간으로 사고팔 수 있으면서도, 펀드처럼 분산 투자 효과가 있습니다. 처음 미국 주식을 시작한다면 ETF부터 배우세요.
+
+ETF 4대 종류:
+
+1. 인덱스 ETF (초보자 최추천)
+VOO, SPY → S&P 500 추종
+QQQ → 나스닥 100 추종
+VTI → 미국 전체 시장 추종
+수수료가 연 0.03~0.2%로 매우 저렴합니다.
+
+2. 섹터 ETF
+특정 업종 전체에 투자합니다.
+XLK(IT), XLV(헬스케어), XLE(에너지), XLF(금융)
+
+3. 테마 ETF
+AI, 반도체, 클린에너지, 로보틱스 등 특정 테마 기업들을 모아놓습니다.
+ARKK(혁신기업), SMH(반도체), BOTZ(로봇)
+
+4. 레버리지/인버스 ETF (초보자 금지)
+TQQQ: 나스닥 3배 레버리지 → 나스닥이 1% 오르면 약 3% 상승
+SQQQ: 나스닥 3배 인버스 → 나스닥 하락에 베팅
+장기 보유하면 복리 손실로 원금이 녹아내립니다. 절대 장기 투자에 사용 금지.
+
+ETF 선택 기준:
+운용 비용(Expense Ratio)이 낮을수록 좋습니다. 운용 자산 규모(AUM)가 클수록 안정적입니다.`,
+  },
+  {
+    emoji: "🏷️",
+    title: "자사주 매입·주식 분할·배당의 진짜 의미",
+    desc: "주가에 영향을 주는 자사주 매입(Buyback), 주식 분할(Stock Split), 특별 배당의 개념과 투자자가 봐야 할 신호를 설명합니다.",
+    body: `기업이 주주를 위해 할 수 있는 세 가지 행동이 있습니다. 각각 주가와 내 수익에 어떤 영향을 미치는지 알아봅니다.
+
+자사주 매입(Buyback):
+기업이 자기 회사 주식을 시장에서 직접 사들이는 것입니다.
+왜 할까요? 시장에 유통되는 주식 수가 줄면 → 같은 이익을 더 적은 주식으로 나누게 되어 주당순이익(EPS)이 높아집니다 → 주가에 긍정적 영향.
+또한 경영진이 "지금 우리 주가가 저평가됐다"고 생각할 때 자사주 매입을 많이 합니다 → 자신감의 신호.
+
+주식 분할(Stock Split):
+주가가 너무 비싸지면 기업이 주식을 나눕니다. 예: 애플 4:1 분할 → $500짜리 1주가 $125짜리 4주로 변환.
+총 시가총액은 같지만, 주당 가격이 낮아져 더 많은 투자자가 쉽게 살 수 있게 됩니다. 소액 투자자 접근성이 높아지면서 주가가 올라가는 경향이 있습니다.
+
+특별 배당(Special Dividend):
+보통 배당과 달리 일회성으로 지급하는 특별 배당입니다. 기업이 현금이 넘치거나 사업 매각 후 대규모 현금이 생겼을 때 지급합니다. 발표 당일 주가가 크게 오르는 경우가 많습니다.
+
+투자 시그널로 활용: 대규모 자사주 매입 발표 + 배당 증가 = 경영진의 자신감과 재무 건전성의 증거.`,
+  },
+  {
+    emoji: "🎰",
+    title: "옵션 기초: 콜·풋·IV·만기일 쉽게 이해하기",
+    desc: "미국 주식에서 자주 등장하는 옵션(콜·풋)의 기본 개념과 개인 투자자가 알아야 할 핵심 용어를 설명합니다.",
+    body: `옵션은 "정해진 가격에 주식을 사거나 팔 수 있는 권리"를 사고파는 금융 상품입니다. 주식 커뮤니티에서 자주 등장하는 용어들이라 기본 개념은 알아두면 좋습니다.
+
+콜옵션(Call Option):
+주식을 특정 가격(행사가)에 살 수 있는 권리입니다.
+예: "NVDA를 $100에 살 수 있는 권리" → 주가가 $150이 되면 콜옵션 보유자는 큰 수익.
+주가가 오를 것 같을 때 삽니다.
+
+풋옵션(Put Option):
+주식을 특정 가격에 팔 수 있는 권리입니다.
+예: "NVDA를 $100에 팔 수 있는 권리" → 주가가 $50으로 떨어지면 풋옵션 보유자는 큰 수익.
+주가가 떨어질 것 같을 때, 또는 보유 주식의 손실을 보험처럼 헤지할 때 삽니다.
+
+내재 변동성(IV, Implied Volatility):
+시장 참여자들이 "앞으로 얼마나 주가가 크게 움직일까"를 예상하는 수치입니다. 실적 발표 전 IV가 급등하고, 발표 후 급락하는 "IV 크러시" 현상에 주의해야 합니다.
+
+만기일(Expiration Date):
+옵션은 만기일이 있습니다. 만기일까지 조건이 맞지 않으면 옵션 구매에 쓴 프리미엄 전액을 잃습니다.
+
+초보자 주의: 옵션은 레버리지 효과로 수익이 크지만, 잘못하면 투자금 전액 손실도 가능합니다. 충분히 공부하고 시작하세요.`,
+  },
 ];
 
 const MASTERS: Article[] = [
-  { emoji:"🦉", title:"워렌 버핏의 투자 원칙: 60년을 관통하는 7가지 지혜", desc:"버크셔 해서웨이 주주서한과 버핏의 연설에서 추린, 세상에서 가장 검증된 투자 원칙을 정리합니다.", svg: SvgBuffettPrinciples, body:"1. 이해하는 사업에만 투자하라(능력 범위, Circle of Competence). 2. 훌륭한 경영진을 찾아라 — 정직함과 능력을 함께 갖춘 CEO. 3. 적정 가격에 훌륭한 기업을 사라 — '훌륭한 기업을 공정한 가격에'가 '평범한 기업을 저렴한 가격에'보다 낫다. 4. 장기 보유 — '영원히 보유할 주식만 사라.' 5. 시장 하락을 두려워 말라 — 공포가 지배할 때 탐욕을 가져라. 6. 배당과 자사주 매입으로 주주 가치를 높이는 기업을 선호하라. 7. 부채가 적고 자기자본이익률(ROE)이 높은 기업을 찾아라." },
-  { emoji:"🎯", title:"피터 린치의 10루타 전략: 일상에서 찾는 10배 종목", desc:"마젤란 펀드를 13년간 29배 불린 피터 린치가 일상에서 종목을 발굴하고 언제 사고파는지 설명합니다.", svg: SvgLynch, body:"린치의 핵심 원칙: '직접 쓰는 제품을 만드는 회사에 투자하라.' 소비자로서 먼저 좋은 회사를 발견하고, 나중에 투자자로 확인하라는 뜻입니다.\n\n종목 분류: Slow Growers(완만 성장주), Stalwarts(대형 안정주), Fast Growers(고성장주), Cyclicals(경기 민감주), Turnarounds(회생주), Asset Plays(자산주). '10루터(10-bagger)'는 10배 수익 종목을 뜻합니다." },
-  { emoji:"🧠", title:"찰리 멍거의 다학제적 투자 사고법", desc:"버크셔 해서웨이 부회장 찰리 멍거가 말한 정신 모델(Mental Models), 역발상, 심리 편향 극복법을 정리합니다.", svg: SvgMunger, body:"멍거는 '격자형 사고(Latticework of Mental Models)'를 강조했습니다. 투자를 잘 하려면 단순히 금융 지식만이 아니라 심리학, 역사, 물리학, 생물학 등 다양한 학문의 원리를 연결해서 생각해야 한다는 것입니다.\n\n핵심 원칙: 1. 역으로 생각하라(Invert) — '어떻게 성공할까?'보다 '어떻게 실패를 피할까?'를 먼저 생각. 2. 인간 심리 편향을 경계하라. 3. 좋은 기업을 기다리며 집중 투자하라." },
-  { emoji:"📚", title:"존 보글의 인덱스 투자 철학: 단순함이 이긴다", desc:"뱅가드 창업자이자 인덱스 펀드의 아버지 존 보글이 평생 강조한 저비용 장기 인덱스 투자의 원칙을 정리합니다.", svg: SvgBogle, body:"보글의 핵심 메시지: '시장을 이길 수 없다면, 시장 자체를 소유하라.' 대부분의 액티브 펀드 매니저들이 장기적으로 인덱스 펀드를 이기지 못하며, 그 이유는 비용 때문입니다.\n\n'비용이 이긴다(Costs Matter)': 수수료 1%가 30년 후 운용 자산의 25%를 갉아먹습니다. '아무것도 하지 말고 그냥 있어라(Don't just do something, stand there)' — 잦은 매매가 수익을 갉아먹는다는 조언입니다." },
-  { emoji:"♾️", title:"복리의 마법: 시간이 가장 큰 자산인 이유", desc:"아인슈타인이 '세계 8번째 불가사의'라고 부른 복리의 원리와 장기 투자에서 시간이 왜 핵심인지 설명합니다.", svg: SvgCompound, body:"복리(Compound Interest)는 이자에 이자가 붙는 효과입니다. 연 10% 수익률 기준: 10년 후 원금의 2.6배, 20년 후 6.7배, 30년 후 17.4배, 40년 후 45.3배가 됩니다.\n\n투자 시작 시점이 결정적입니다. 복리의 핵심: '시간 × 일관성 × 수익률.' 버핏 자산의 95%는 65세 이후에 쌓였습니다 — 복리가 뒤로 갈수록 폭발적으로 커지기 때문입니다." },
-  { emoji:"🎨", title:"포트폴리오 구성의 기초: 분산투자와 리밸런싱", desc:"달걀을 한 바구니에 담지 마라는 원칙을 실제 포트폴리오에 적용하는 구체적인 방법을 설명합니다.", svg: SvgPortfolio, body:"분산투자는 서로 상관관계가 낮은 자산에 나눠 투자해 전체 포트폴리오의 변동성을 줄이는 전략입니다.\n\n기초 포트폴리오 예시: 성장형 — 주식 80% + 채권 20%. 안정형 — 주식 60% + 채권 30% + 현금 10%. 리밸런싱: 목표 비중에서 벗어난 자산을 원래 비중으로 되돌리는 작업. 연 1~2회 실시하는 것이 일반적입니다." },
-  { emoji:"✅", title:"대가들이 말하는 좋은 주식 선별 기준 10가지", desc:"버핏·린치·멍거·보글이 공통으로 강조한 우량주 선별 핵심 기준을 하나의 체크리스트로 정리합니다.", svg: SvgChecklist, body:"1. 강력한 경쟁 해자(Moat) — 브랜드, 특허, 네트워크 효과.\n2. 일관된 이익 성장 — 최소 5~10년간 EPS 증가 추세.\n3. 높은 자기자본이익률(ROE) — 15% 이상이 이상적.\n4. 낮은 부채비율 — 장기부채/자기자본 50% 이하.\n5. 자유현금흐름(FCF) 창출.\n6. 주주 친화적 경영진 — 자사주 매입, 배당 증가 이력.\n7. 합리적인 밸류에이션.\n8. 이해 가능한 사업 모델.\n9. 강력한 브랜드 인지도.\n10. 장기 성장 산업에 위치." },
-  { emoji:"🔍", title:"벤저민 그레이엄의 가치투자: 안전마진의 원칙", desc:"워렌 버핏의 스승 벤저민 그레이엄이 창안한 가치투자와 '안전마진' 개념을 초보자 눈높이로 설명합니다.", svg: SvgGraham, body:"그레이엄은 주식을 '사업의 소유권'으로 보고, 내재 가치(Intrinsic Value)보다 충분히 낮은 가격에 살 때만 매수하라고 했습니다. 이 차이를 '안전마진(Margin of Safety)'이라고 합니다.\n\n핵심 원칙: 시장을 '미스터 마켓'이라 불렀습니다 — 매일 감정적으로 가격을 제시하는 조울증 환자 같은 존재. 현명한 투자자는 미스터 마켓의 감정에 흔들리지 않고 내재 가치에 집중합니다." },
-  { emoji:"🌱", title:"필립 피셔의 성장주 투자: 스커틀버트와 15가지 원칙", desc:"성장주 투자의 선구자 필립 피셔가 수십 년간 정제한 우수 성장 기업 발굴법과 체크리스트를 설명합니다.", svg: SvgFisher, body:"피셔는 그레이엄의 정량 분석과 달리 기업의 질적 특성에 집중했습니다. '스커틀버트(Scuttlebutt)' 방법: 고객, 경쟁사, 납품업체, 전직 직원 등을 직접 인터뷰해 기업의 실제 모습을 파악하는 것입니다.\n\n15가지 원칙 중 핵심: 1. 매출 성장 잠재력이 수년간 지속될 제품/서비스가 있는가? 2. R&D 투자가 충분한가? 3. 경영진의 정직성과 능력은? 버핏은 자신을 '85% 그레이엄, 15% 피셔'라고 표현했습니다." },
-  { emoji:"🌊", title:"레이 달리오의 올웨더 포트폴리오: 모든 경제 환경에서 살아남기", desc:"세계 최대 헤지펀드 브리지워터 창업자 레이 달리오가 설계한 '어떤 경제 환경에서도 무너지지 않는' 포트폴리오를 설명합니다.", svg: SvgAllWeather, body:"달리오는 경제 환경을 4가지로 분류했습니다: 성장 상승·하강 × 인플레이션 상승·하강. 각 환경에서 잘 수행하는 자산을 균형 있게 배분하면 어떤 환경에서도 큰 손실 없이 장기 성장할 수 있다는 개념입니다.\n\n올웨더 배분: 주식 30% + 장기국채 40% + 중기국채 15% + 금 7.5% + 원자재 7.5%. 1926~2013년 기준 연평균 9.7% 수익, 최대 손실 -3.93%를 기록했습니다." },
-  { emoji:"⏰", title:"하워드 막스의 시장 사이클 이론: 어디에 서 있는지 알기", desc:"오크트리 캐피털 창업자 하워드 막스가 강조하는 시장 사이클 인식과 역발상 투자의 핵심을 설명합니다.", svg: SvgCycle, body:"막스는 '가장 중요한 것(The Most Important Thing)'에서 시장이 항상 사이클을 따른다고 말합니다. 투자자들의 탐욕과 공포가 반복하면서 주식이 과열과 침체를 반복합니다.\n\n실무 원칙: '지금 우리가 어디에 있는지' 알아야 합니다. 가격이 좋을 때 공격적으로, 나쁠 때 방어적으로. 시장이 낙관적일 때 위험을 더 느끼고, 비관적일 때 기회를 찾아라." },
-  { emoji:"🧭", title:"장기 투자 마인드셋: 대가들이 공통으로 강조하는 것", desc:"버핏·린치·멍거·보글이 수십 년간 반복해서 강조한 장기 투자자의 핵심 마인드셋을 정리합니다.", svg: SvgMindset, body:"모든 투자 대가들이 공통으로 강조하는 것:\n\n1. 인내심: '주식시장은 참을성 없는 사람의 돈을 참을성 있는 사람에게 이전하는 장치다.' — 버핏. 2. 단순함: 복잡한 전략보다 단순하고 검증된 방법이 더 효과적입니다. 3. 감정 통제: 시장 하락 시 공황 매도는 최악의 실수입니다. 4. 지속적 학습: 모든 대가들은 평생 독서와 공부를 멈추지 않았습니다. 5. 장기 관점: '10년 이상 보유하지 않을 주식이라면 10분도 보유하지 마라.'" },
+  {
+    emoji: "🦉",
+    title: "워렌 버핏의 투자 원칙: 60년을 관통하는 7가지 지혜",
+    desc: "버크셔 해서웨이 주주서한과 버핏의 연설에서 추린, 세상에서 가장 검증된 투자 원칙을 정리합니다.",
+    body: `워렌 버핏은 1965년부터 버크셔 해서웨이를 운영하며 60년간 연평균 +19.8%의 수익률을 기록했습니다. $10,000을 1965년에 투자했다면 지금은 약 $400,000,000이 됩니다. 그의 핵심 원칙 7가지:
+
+1. 이해하는 사업에만 투자하라
+자신이 이해할 수 없는 비즈니스에는 절대 투자하지 않습니다. "내 능력 범위(Circle of Competence)" 안의 기업만 고릅니다. 그래서 버핏은 초기에 기술주를 거의 사지 않았습니다.
+
+2. 훌륭한 경영진을 찾아라
+정직하고 능력 있는 CEO가 있는 기업에 투자합니다. 경영진이 주주를 속이거나 자기 이익만 챙기는 기업은 피합니다.
+
+3. 훌륭한 기업을 공정한 가격에
+"평범한 기업을 싸게 사는 것"보다 "훌륭한 기업을 적정 가격에 사는 것"이 낫습니다.
+
+4. 영원히 보유할 주식만 사라
+"보유 기간은 영원이다"가 버핏의 명언입니다. 좋은 기업은 그냥 계속 들고 있으면 됩니다.
+
+5. 공포가 지배할 때 탐욕을 가져라
+시장이 폭락할 때 버핏은 오히려 사들입니다. 2008년 금융위기, 2020년 코로나 폭락 때도 그랬습니다.
+
+6. ROE 높고 부채 낮은 기업을 선호
+자기자본이익률(ROE) 15% 이상, 장기부채 낮은 기업이 버핏이 좋아하는 기업입니다.
+
+7. 배당과 자사주 매입으로 주주 환원
+주주에게 돈을 돌려주는 기업을 선호합니다.`,
+  },
+  {
+    emoji: "🎯",
+    title: "피터 린치의 10루타 전략: 일상에서 찾는 10배 종목",
+    desc: "마젤란 펀드를 13년간 29배 불린 피터 린치가 일상에서 종목을 발굴하고 언제 사고파는지 설명합니다.",
+    body: `피터 린치는 1977~1990년 피델리티 마젤란 펀드를 운용하며 13년간 +2,900% 수익률을 기록했습니다. 연평균 29%. 그의 핵심 철학은 "일상에서 10배 종목(10루타)을 발견하라"입니다.
+
+핵심 철학: 소비자가 투자자보다 먼저 안다
+내가 즐겨 쓰는 앱, 자주 가는 가게, 친구들이 모두 얘기하는 브랜드가 있다면 → 먼저 소비자로 좋은 회사임을 확인한 것. 그다음 재무제표로 확인하면 됩니다.
+
+린치의 6가지 종목 분류:
+• Slow Growers(완만 성장주): 연 2~4% 성장. 주로 배당 기업. 안정적이지만 큰 수익 기대 어려움
+• Stalwarts(안정 대형주): 연 10~12% 성장. 코카콜라, P&G 같은 우량주
+• Fast Growers(고성장주): 연 20~25% 성장. 10루타 가능성 높음. 린치가 가장 좋아한 종목
+• Cyclicals(경기 민감주): 경기 상승기에 빠르게 오르고, 하락기에 크게 내림
+• Turnarounds(회생주): 위기를 극복 중인 기업. 리스크 높지만 성공하면 수익도 큼
+• Asset Plays(자산주): 가진 자산에 비해 주가가 싼 기업
+
+10루타(10-Bagger) 발굴 힌트:
+• 아직 기관 투자자가 많이 모르는 소형주
+• 성장 중인데 PER이 낮은 종목 (PEG ratio < 1)
+• 특정 지역에서만 성공한 후 전국 확장 중인 기업
+
+린치의 경고: "주식시장에서 돈 잃는 가장 빠른 방법은 단기 예측을 믿는 것"`,
+  },
+  {
+    emoji: "🧠",
+    title: "찰리 멍거의 다학제적 투자 사고법",
+    desc: "버크셔 해서웨이 부회장 찰리 멍거가 말한 정신 모델(Mental Models), 역발상, 심리 편향 극복법을 정리합니다.",
+    body: `찰리 멍거는 워렌 버핏의 평생 파트너이자 버크셔 해서웨이 부회장입니다. 99세에 세상을 떠났지만, 그의 투자 철학은 버핏에게 결정적 영향을 미쳤습니다.
+
+격자형 사고(Latticework of Mental Models):
+멍거는 "한 가지 학문만 아는 사람은 망치를 든 사람과 같다. 모든 문제가 못으로 보인다"고 했습니다. 투자를 잘 하려면 경제학만이 아니라 심리학, 역사, 수학, 생물학, 물리학의 원리를 모두 연결해서 생각해야 한다는 것입니다.
+
+핵심 원칙 1: 역으로 생각하라(Invert)
+"어떻게 성공할까?" 보다 "어떻게 하면 반드시 실패할까?"를 먼저 생각합니다. 실패 요인을 제거하면 자연스럽게 성공에 가까워집니다.
+
+핵심 원칙 2: 인간 심리 편향을 경계하라
+멍거가 정리한 25가지 심리 편향 중 투자에서 가장 위험한 것들:
+• 확증 편향: 내가 원하는 정보만 찾고 믿는 것
+• 손실 회피: 손실을 피하려는 심리 때문에 오히려 더 큰 손실
+• 군중 심리: 남들이 사니까 나도 사는 것 (버블의 원인)
+• 최신성 편향: 최근 일어난 일이 앞으로도 계속될 것이라 착각
+
+핵심 원칙 3: 집중 투자, 좋은 기업을 오래 기다려라
+"투자의 비밀은 기다림이다." 좋은 기업을 좋은 가격에 살 기회를 기다리고, 산 후에는 오래 들고 있어야 합니다.`,
+  },
+  {
+    emoji: "📚",
+    title: "존 보글의 인덱스 투자 철학: 단순함이 이긴다",
+    desc: "뱅가드 창업자이자 인덱스 펀드의 아버지 존 보글이 평생 강조한 저비용 장기 인덱스 투자의 원칙을 정리합니다.",
+    body: `존 보글은 1974년 뱅가드(Vanguard)를 창업하고 세계 최초의 인덱스 펀드를 만든 인물입니다. "인덱스 펀드의 아버지"로 불립니다. 그의 철학은 단순합니다: "시장을 이기려 하지 말고, 시장 자체를 소유하라."
+
+왜 인덱스 펀드인가?
+놀라운 연구 결과: 전문 펀드 매니저의 90% 이상이 장기적으로(15년 이상) S&P 500 인덱스 펀드를 이기지 못합니다. 워런 버핏도 "내가 죽으면 아내의 자산 90%를 S&P 500 인덱스 펀드에 넣어라"고 유언장에 썼습니다.
+
+비용이 모든 것을 결정한다:
+$10,000을 30년간 연 7% 수익률로 투자 시:
+• 수수료 0% → 약 $76,122
+• 수수료 1% → 약 $57,435 (약 $18,687 차이!)
+• 수수료 2% → 약 $43,219 (약 $33,000 차이!)
+
+1%가 별것 아닌 것 같아도 30년이면 25% 이상의 수익을 수수료로 날립니다.
+
+보글의 8가지 투자 원칙:
+1. 단순하게 투자하라
+2. 장기 투자하라
+3. 비용을 최소화하라
+4. 세금을 고려하라
+5. 분산투자하라
+6. 감정을 배제하라
+7. 시장을 예측하지 마라
+8. 인내심을 가져라
+
+"아무것도 하지 말고 그냥 있어라(Don't just do something, stand there!)" — 잦은 매매가 수익을 갉아먹는다는 그의 가장 유명한 역발상 조언입니다.`,
+  },
+  {
+    emoji: "♾️",
+    title: "복리의 마법: 시간이 가장 큰 자산인 이유",
+    desc: "아인슈타인이 '세계 8번째 불가사의'라고 부른 복리의 원리와 장기 투자에서 시간이 왜 핵심인지 설명합니다.",
+    body: `아인슈타인이 "세계 8번째 불가사의"라 불렀다는 복리. 단리와 복리의 차이를 이해하면 왜 빨리 시작해야 하는지 바로 알 수 있습니다.
+
+단리 vs 복리:
+단리: 이자가 원금에만 붙습니다. $1,000 × 10% = 매년 $100씩 이자
+복리: 이자가 원금+이자 모두에 붙습니다. 이자가 이자를 낳는 것
+
+연 10% 수익률, $10,000 투자 시 복리 효과:
+• 10년 후: $25,937 (원금의 2.6배)
+• 20년 후: $67,275 (원금의 6.7배)
+• 30년 후: $174,494 (원금의 17.4배)
+• 40년 후: $452,593 (원금의 45.3배)
+
+핵심: 뒤로 갈수록 폭발적으로 커집니다. 30년에서 40년 사이 10년 동안 증가분($278,099)이 처음 30년 증가분($164,494)보다 훨씬 큽니다.
+
+워렌 버핏의 복리: 버핏은 30세에 약 $1M, 50세에 약 $300M을 가졌습니다. 그런데 현재 자산 $1,000억+의 90%가 65세 이후에 쌓였습니다. 복리의 후반 폭발 효과입니다.
+
+시작이 10년 차이 나면? 25세에 시작하면 65세에 45배, 35세에 시작하면 65세에 17배. 10년의 차이가 최종 결과를 2.6배 차이나게 합니다.
+
+결론: 복리의 핵심은 '수익률'이 아니라 '시간'입니다. 오늘 당장 시작하는 것이 최선입니다.`,
+  },
+  {
+    emoji: "🎨",
+    title: "포트폴리오 구성의 기초: 분산투자와 리밸런싱",
+    desc: "달걀을 한 바구니에 담지 마라는 원칙을 실제 포트폴리오에 적용하는 구체적인 방법을 설명합니다.",
+    body: `"달걀을 한 바구니에 담지 마라." 투자에서 가장 오래된 격언입니다. 분산투자는 서로 다르게 움직이는 자산에 나눠 투자해서 전체 포트폴리오의 손실 위험을 줄이는 전략입니다.
+
+자산 배분의 기본:
+주식과 채권은 반대로 움직이는 경향이 있습니다. 경기가 나쁠 때 주식은 떨어지지만 채권은 오르는 경우가 많습니다. 두 자산을 함께 보유하면 전체 변동성이 낮아집니다.
+
+연령별 포트폴리오 가이드라인:
+• 20~30대: 주식 80~90% + 채권 10~20% (시간이 많으니 공격적으로)
+• 40대: 주식 70% + 채권 30%
+• 50~60대: 주식 50~60% + 채권 40~50% (은퇴가 가까워질수록 안전하게)
+
+지역 분산도 중요합니다:
+미국 주식만 있으면 미국 경제에 100% 노출됩니다. VEA(유럽·아시아), VWO(신흥국) 같은 ETF를 추가하면 지역 분산이 됩니다.
+
+리밸런싱(Rebalancing):
+목표 비중에서 벗어난 자산을 원래 비중으로 되돌리는 작업입니다. 연 1~2회 실시하는 것이 일반적입니다.
+예: 목표가 주식 70%, 채권 30%인데 주식이 크게 올라 80%가 됐다면 → 주식 일부 매도, 채권 추가 매수
+
+리밸런싱의 효과: 자연스럽게 "비싼 것을 팔고 싼 것을 사는" 원칙을 실행하게 됩니다. 장기적으로 리밸런싱한 포트폴리오가 그렇지 않은 것보다 더 나은 성과를 내는 경우가 많습니다.`,
+  },
+  {
+    emoji: "✅",
+    title: "대가들이 말하는 좋은 주식 선별 기준 10가지",
+    desc: "버핏·린치·멍거·보글이 공통으로 강조한 우량주 선별 핵심 기준을 하나의 체크리스트로 정리합니다.",
+    body: `버핏, 린치, 멍거, 보글 등 투자 대가들이 공통으로 강조하는 우량주 선별 기준을 하나로 모았습니다. 종목 매수 전 이 10가지를 체크해보세요.
+
+1. 강력한 경쟁 해자(Economic Moat)
+다른 기업이 쉽게 따라할 수 없는 장벽이 있나요? 브랜드(코카콜라), 네트워크 효과(비자), 규모의 경제, 전환 비용(소프트웨어) 등이 해자의 원천입니다.
+
+2. 일관된 이익 성장 (5~10년)
+최근 반짝 실적이 아니라, 오랜 기간 꾸준히 이익이 성장해왔나요?
+
+3. 높은 ROE (15% 이상)
+자기자본으로 얼마나 효율적으로 돈을 버는지 보여줍니다.
+
+4. 낮은 부채비율 (50% 이하)
+부채가 많은 기업은 금리 인상이나 경기 침체에 취약합니다.
+
+5. 자유현금흐름(FCF) 창출
+이익은 조작 가능하지만, 현금흐름은 거짓말을 못합니다. FCF가 지속적으로 플러스인 기업을 선호합니다.
+
+6. 주주 친화적 경영진
+배당 증가, 자사주 매입, 스톡옵션 남발 금지 등 주주 입장에서 행동하는 경영진인가요?
+
+7. 합리적인 밸류에이션
+좋은 기업이라도 너무 비싸게 사면 수익이 나지 않습니다. PER을 업종 평균 및 성장률과 비교하세요.
+
+8. 이해 가능한 사업 모델
+내가 이 회사가 어떻게 돈을 버는지 남에게 설명할 수 있나요?
+
+9. 강력한 브랜드 인지도
+가격을 올려도 고객이 떠나지 않는 프리미엄 브랜드가 있나요?
+
+10. 장기 성장 산업 위치
+내가 투자하는 회사가 속한 산업 자체가 성장하고 있나요?`,
+  },
+  {
+    emoji: "🔍",
+    title: "벤저민 그레이엄의 가치투자: 안전마진의 원칙",
+    desc: "워렌 버핏의 스승 벤저민 그레이엄이 창안한 가치투자와 '안전마진' 개념을 초보자 눈높이로 설명합니다.",
+    body: `벤저민 그레이엄은 "가치투자의 아버지"로 불립니다. 워렌 버핏이 컬럼비아대에서 그의 수업을 들었고, "내 투자 인생을 바꾼 스승"이라고 했습니다. 그레이엄의 핵심 사상은 두 가지입니다.
+
+미스터 마켓(Mr. Market):
+그레이엄은 주식시장을 "미스터 마켓"이라는 사람으로 비유했습니다. 이 사람은 매일 아침 당신에게 가격을 제시합니다. 어떤 날은 기분이 좋아 비싸게 사겠다고 하고(주가 급등), 어떤 날은 우울해서 싸게라도 팔겠다고 합니다(주가 급락).
+
+현명한 투자자는 미스터 마켓의 감정에 따라 매매하지 않습니다. 기업의 진짜 가치(내재가치)를 스스로 판단하고, 미스터 마켓이 싸게 팔 때만 삽니다.
+
+안전마진(Margin of Safety):
+그레이엄의 가장 중요한 개념입니다. 계산한 내재가치보다 30% 이상 싸게 살 때만 매수합니다.
+예: 내재가치 $100인 주식 → $70 이하일 때 매수
+이 30%의 여유분이 "안전마진"입니다. 내 계산이 조금 틀려도, 예상치 못한 악재가 와도 손실을 최소화합니다.
+
+내재가치 계산법(그레이엄 공식):
+EPS × (8.5 + 2 × 연간 성장률) × 4.4 / 현재 AAA 채권 금리
+
+그레이엄의 투자 성과: 1934~1956년 컬럼비아대에서 운용한 포트폴리오 연평균 +20%. 같은 기간 S&P 500 연평균 +12.2%.`,
+  },
+  {
+    emoji: "🌱",
+    title: "필립 피셔의 성장주 투자: 스커틀버트와 15가지 원칙",
+    desc: "성장주 투자의 선구자 필립 피셔가 수십 년간 정제한 우수 성장 기업 발굴법과 체크리스트를 설명합니다.",
+    body: `필립 피셔는 1958년 출간한 "위대한 기업에 투자하라(Common Stocks and Uncommon Profits)"로 투자의 역사를 바꿨습니다. 버핏은 "나는 85% 그레이엄, 15% 피셔"라고 표현했지만, 실제로는 피셔의 영향이 훨씬 크다고 보는 시각도 있습니다.
+
+그레이엄과의 차이점:
+그레이엄은 "싸면 사라(정량 분석)"고 했지만, 피셔는 "훌륭한 기업을 발굴해서 오래 들고 있어라(정성 분석)"고 했습니다. 피셔는 모토로라 주식을 1955년에 사서 죽을 때까지 팔지 않았습니다.
+
+스커틀버트(Scuttlebutt) 방법:
+기업의 진짜 모습을 파악하기 위해 직접 발로 뛰는 방법입니다.
+• 그 기업의 고객에게 물어봐라 (제품이 정말 좋은가?)
+• 경쟁사에게 물어봐라 (그 기업을 얼마나 무서워하는가?)
+• 납품업체에게 물어봐라 (거래 조건이 공정한가?)
+• 전직 직원에게 물어봐라 (내부 문화는 어떤가?)
+
+현대에 적용하기: 직접 인터뷰가 어렵다면 리뷰 사이트(글래스도어), 커뮤니티, 유저 후기 등을 통해 간접적으로 스커틀버트를 실행할 수 있습니다.
+
+15가지 원칙 중 핵심:
+1. 앞으로도 수년간 매출 성장이 지속될 제품/서비스가 있는가?
+2. 경쟁 우위를 유지할 능력이 있는가?
+3. 경영진의 이익률 개선 의지가 있는가?
+4. R&D 투자를 충분히 하는가?
+5. 최고의 인재를 채용하고 유지하는가?`,
+  },
+  {
+    emoji: "🌊",
+    title: "레이 달리오의 올웨더 포트폴리오: 모든 경제 환경에서 살아남기",
+    desc: "세계 최대 헤지펀드 브리지워터 창업자 레이 달리오가 설계한 '어떤 경제 환경에서도 무너지지 않는' 포트폴리오를 설명합니다.",
+    body: `레이 달리오는 세계 최대 헤지펀드 브리지워터 어소시에이츠를 창업한 투자자입니다. 그의 "올웨더 포트폴리오(All Weather Portfolio)"는 어떤 경제 상황에서도 크게 손실 나지 않도록 설계된 포트폴리오입니다.
+
+4계절 경제 이론:
+달리오는 경제 환경을 계절처럼 4가지로 나눕니다.
+• 봄: 성장 상승 + 인플레이션 낮음 → 주식 강세
+• 여름: 성장 상승 + 인플레이션 높음 → 원자재, 금 강세
+• 가을: 성장 하락 + 인플레이션 높음 → 채권 강세
+• 겨울: 성장 하락 + 인플레이션 낮음 → 중기채권 강세
+
+올웨더 포트폴리오 비율:
+• 주식 30% (성장 상승기 수익)
+• 장기국채 40% (디플레이션/성장 하락기 수익)
+• 중기국채 15% (경기침체기 방어)
+• 금 7.5% (인플레이션 헤지)
+• 원자재 7.5% (인플레이션 헤지)
+
+실제 성과 (1926~2013 백테스트):
+• 연평균 수익률: +9.7%
+• 최대 손실(MDD): -3.93%
+• 수익난 해 비율: 85%
+
+단점: S&P 500만 보유한 것(연평균 약 +10%)과 수익률이 비슷하지만, 변동성은 훨씬 적습니다. 큰 손실 없이 꾸준히 수익을 원하는 투자자에게 적합합니다.`,
+  },
+  {
+    emoji: "⏰",
+    title: "하워드 막스의 시장 사이클 이론: 어디에 서 있는지 알기",
+    desc: "오크트리 캐피털 창업자 하워드 막스가 강조하는 시장 사이클 인식과 역발상 투자의 핵심을 설명합니다.",
+    body: `하워드 막스는 오크트리 캐피털(운용 자산 약 1800억 달러)의 창업자입니다. 그의 투자자 메모(Memo)는 워렌 버핏도 "항상 가장 먼저 읽는다"고 할 만큼 명성이 높습니다.
+
+막스의 핵심 질문: "지금 우리가 사이클의 어디에 있는가?"
+주식시장은 경기 사이클을 따라 상승과 하락을 반복합니다. 투자자의 심리가 이를 더 극단으로 만듭니다.
+
+사이클의 7단계 감정:
+낙관 → 흥분 → 도취 → 불안 → 부정 → 공황 → 절망 → 다시 낙관
+
+막스의 역발상 원칙:
+• 낙관적일 때(도취 구간): 위험이 높음, 보수적으로 행동하라
+• 비관적일 때(절망 구간): 기회가 많음, 공격적으로 행동하라
+
+"가격이 너무 비쌀 때 사는 것이 가장 큰 위험이다."
+
+1순위: 손실을 피하라
+막스는 "이기는 것보다 지지 않는 것이 먼저"라고 강조합니다. 큰 손실 한 번이 여러 번의 수익을 날려버립니다. -50%를 회복하려면 +100%가 필요합니다.
+
+리스크란 무엇인가:
+막스는 "리스크는 변동성이 아니다. 영구적 자본 손실의 가능성이다"라고 정의합니다. 이 관점에서 보면 일시적 주가 하락은 리스크가 아닙니다. 기업이 망하거나 사업 모델이 무너지는 것이 진짜 리스크입니다.`,
+  },
+  {
+    emoji: "🧭",
+    title: "장기 투자 마인드셋: 대가들이 공통으로 강조하는 것",
+    desc: "버핏·린치·멍거·보글이 수십 년간 반복해서 강조한 장기 투자자의 핵심 마인드셋을 정리합니다.",
+    body: `수십 년간 검증된 대가들의 공통된 조언을 모았습니다. 단순하지만, 실천하기가 어렵습니다.
+
+1. 인내심 — 가장 중요한 투자 도구
+"주식시장은 참을성 없는 사람의 돈을 참을성 있는 사람에게 이전하는 장치다." — 버핏
+대부분의 투자 실패는 좋은 주식을 너무 빨리 파는 것에서 옵니다.
+
+2. 단순하게 투자하라
+복잡한 전략, 화려한 지표, 남들 모르는 비법보다 단순한 인덱스 투자가 장기적으로 더 좋은 성과를 냅니다. "단순함은 극도로 복잡한 과정의 결과물이다." — 보글
+
+3. 감정을 통제하라
+폭락장에서 공황 매도, 급등장에서 묻지마 매수 — 이 두 가지 감정적 실수가 투자 수익의 대부분을 파괴합니다. 투자 계획을 세우고 시장 상황에 상관없이 지키세요.
+
+4. 시장을 예측하려 하지 마라
+"다음 달 시장이 오를지 내릴지 아무도 모른다." — 보글
+타이밍을 맞추려다 좋은 날 몇 개를 놓치면 장기 수익이 크게 줄어듭니다.
+
+5. 지속적으로 배워라
+버핏은 하루 5~6시간, 멍거는 평생 독서를 멈추지 않았습니다. 기업과 산업에 대한 지식이 쌓일수록 더 좋은 투자 결정을 내릴 수 있습니다.
+
+마지막으로: "10년 이상 보유하지 않을 주식이라면 10분도 보유하지 마라." — 버핏
+이 원칙 하나만 지켜도 투자 실수의 절반은 줄일 수 있습니다.`,
+  },
 ];
 
 const SECTIONS = [
-  { id: "basics",  badge: "투자 기초 지식",  color: M, articles: BASICS  },
-  { id: "masters", badge: "투자 대가 전략",  color: G, articles: MASTERS },
+  { id: "basics",  badge: "투자 기초 지식",  color: "#00e5a0", articles: BASICS  },
+  { id: "masters", badge: "투자 대가 전략",  color: "#d4af37", articles: MASTERS },
 ];
 
 function ArticleItem({ article, color }: { article: Article; color: string }) {
   const [open, setOpen] = useState(false);
-  const Svg = article.svg;
   return (
     <div className="rounded-xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>
       <button
@@ -677,7 +737,6 @@ function ArticleItem({ article, color }: { article: Article; color: string }) {
           className="px-4 pb-4 pt-3"
           style={{ background: "var(--card)", borderTop: "1px solid var(--border)" }}
         >
-          {Svg && <Svg />}
           <p className="text-[12px] leading-relaxed whitespace-pre-line" style={{ color: "var(--text)" }}>
             {article.body}
           </p>
@@ -733,9 +792,12 @@ function SectionBlock({ id, badge, color, articles }: typeof SECTIONS[number]) {
 export function InvestmentArticles() {
   return (
     <div className="flex flex-col gap-6">
-      {SECTIONS.map((s) => (
-        <SectionBlock key={s.id} {...s} />
-      ))}
+      <SectionBlock {...SECTIONS[0]} />
+      {/* 섹션 사이 광고 */}
+      <div className="rounded-xl overflow-hidden">
+        <AdFitBanner />
+      </div>
+      <SectionBlock {...SECTIONS[1]} />
     </div>
   );
 }

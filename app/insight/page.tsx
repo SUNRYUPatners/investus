@@ -59,6 +59,7 @@ export default async function InsightPage() {
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
           <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
         </div>
+        <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
         <section className="px-4 mb-6"><InvestmentArticles /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
@@ -70,12 +71,14 @@ export default async function InsightPage() {
           </h2>
           <BookCarousel />
         </section>
+        <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4">
           <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
             {t.youtube}
           </h2>
           <YoutubeChannels />
         </section>
+        <section className="px-4 mt-4"><AdFitBanner /></section>
       </main>
 
       {/* ── Desktop: 왼쪽 페이지 스크롤 + 오른쪽 sticky 사이드바 ── */}
@@ -112,12 +115,14 @@ export default async function InsightPage() {
               </h2>
               <BookCarousel />
             </section>
+            <AdFitBanner />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
                 {t.youtube}
               </h2>
               <YoutubeChannels />
             </section>
+            <AdFitBanner />
           </div>
         </aside>
       </div>
