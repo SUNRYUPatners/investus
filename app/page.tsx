@@ -34,6 +34,11 @@ export default async function HomePage() {
             {/* 내 보유종목 (포트폴리오에 종목이 있을 때만 표시) */}
             <PortfolioWidget />
 
+            {/* 오늘 포트폴리오 등락 분석 — 내 보유종목 바로 아래 */}
+            <section className="px-4 lg:px-0 pt-3">
+              <HomeAIInsight />
+            </section>
+
             {/* 관심종목 */}
             <WatchlistSection />
 
@@ -42,13 +47,8 @@ export default async function HomePage() {
               <AdFitBanner />
             </section>
 
-            {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures (실시간) */}
+            {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures · 시장종합분석 (실시간) */}
             <LiveMarket />
-
-            {/* 시장종합분석 AI — 데스크탑: Futures Map 바로 아래 / 모바일: 리포트 아래 */}
-            <section className="px-4 lg:px-0 pt-4">
-              <HomeAIInsight />
-            </section>
 
             {/* Investus 리포트 — AI 분석 아래 */}
             <section className="px-4 lg:px-0 pt-4 lg:pt-6">
