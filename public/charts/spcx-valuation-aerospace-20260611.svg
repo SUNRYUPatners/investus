@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" style="font-family:Syne,sans-serif">
+  <rect width="480" height="460" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#170a2e"/>
+  <text x="240" y="28" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="700" letter-spacing="2">SPACEX $1.75T</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">12개 항공우주·방산 기업 합산 $1.34T 초과</text>
+
+  <!-- SpaceX big bar (label) -->
+  <text x="20" y="82" fill="#c084fc" font-size="11" font-weight="700">SPACEX</text>
+  <text x="460" y="82" text-anchor="end" fill="#c084fc" font-size="11" font-weight="700">$1.75T</text>
+  <rect x="20" y="86" width="440" height="28" rx="4" fill="#c084fc"/>
+  <text x="230" y="105" text-anchor="middle" fill="#0a0c10" font-size="10" font-weight="800">IPO 목표 기업가치 = 12개 방산 합산의 131%</text>
+
+  <!-- Combined 12 bar -->
+  <text x="20" y="132" fill="#64748b" font-size="10">12개 방산합산 (Combined)</text>
+  <text x="460" y="132" text-anchor="end" fill="#94a3b8" font-size="10">$1.34T</text>
+  <rect x="20" y="136" width="336" height="20" rx="4" fill="#475569"/>
+
+  <!-- Individual bars (scaled: $1.75T = 440px, so 1px = $3.977B) -->
+  <!-- GE Aerospace $344.7B = 86.7px -->
+  <text x="20" y="170" fill="#94a3b8" font-size="9">GE Aerospace</text>
+  <text x="460" y="170" text-anchor="end" fill="#64748b" font-size="9">$344.7B</text>
+  <rect x="20" y="173" width="86" height="14" rx="3" fill="#334155"/>
+
+  <!-- Boeing $243.7B = 61.3px -->
+  <text x="20" y="197" fill="#94a3b8" font-size="9">Boeing</text>
+  <text x="460" y="197" text-anchor="end" fill="#64748b" font-size="9">$243.7B</text>
+  <rect x="20" y="200" width="61" height="14" rx="3" fill="#334155"/>
+
+  <!-- RTX $98.6B = 24.8px -->
+  <text x="20" y="224" fill="#94a3b8" font-size="9">RTX</text>
+  <text x="460" y="224" text-anchor="end" fill="#64748b" font-size="9">$98.6B</text>
+  <rect x="20" y="227" width="25" height="14" rx="3" fill="#334155"/>
+
+  <!-- GD $119.9B = 30.2px -->
+  <text x="110" y="224" fill="#94a3b8" font-size="9">General Dynamics</text>
+  <text x="460" y="224" text-anchor="end" fill="#64748b" font-size="9"/>
+  <rect x="110" y="227" width="30" height="14" rx="3" fill="#1e293b"/>
+
+  <!-- Northrop $92.6B = 23.3px -->
+  <text x="20" y="251" fill="#94a3b8" font-size="9">Northrop Grumman</text>
+  <text x="460" y="251" text-anchor="end" fill="#64748b" font-size="9">$92.6B</text>
+  <rect x="20" y="254" width="23" height="14" rx="3" fill="#334155"/>
+
+  <!-- Lockheed $243.7B? Wait, LMT wasn't in the top list -->
+  <!-- Transdigm $76.9B -->
+  <text x="20" y="278" fill="#94a3b8" font-size="9">Transdigm</text>
+  <text x="460" y="278" text-anchor="end" fill="#64748b" font-size="9">$76.9B</text>
+  <rect x="20" y="281" width="19" height="14" rx="3" fill="#334155"/>
+
+  <!-- L3Harris $69.2B -->
+  <text x="110" y="278" fill="#94a3b8" font-size="9">L3Harris · AXON · HII · Textron</text>
+  <text x="460" y="278" text-anchor="end" fill="#64748b" font-size="9">합산 $194B</text>
+  <rect x="110" y="281" width="49" height="14" rx="3" fill="#1e293b"/>
+
+  <!-- Divider -->
+  <line x1="20" y1="310" x2="460" y2="310" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Key insight -->
+  <rect x="20" y="318" width="440" height="72" rx="10" fill="#170a2e"/>
+  <text x="240" y="340" text-anchor="middle" fill="#94a3b8" font-size="10">핵심 비교</text>
+  <text x="240" y="360" text-anchor="middle" fill="#c084fc" font-size="18" font-weight="800">$1.75T vs $1.34T</text>
+  <text x="240" y="378" text-anchor="middle" fill="#e2e8f0" font-size="11">SpaceX 혼자 12개 방산기업 합산보다</text>
+  <text x="240" y="392" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">$411B (31%) 더 높은 가치</text>
+
+  <!-- Footer insight -->
+  <rect x="20" y="402" width="440" height="36" rx="8" fill="#0f1a0f"/>
+  <text x="240" y="424" text-anchor="middle" fill="#4ade80" font-size="11">미국 역대 최대 IPO 중 하나 · 2026년 6월 12일 상장</text>
+
+  <text x="240" y="453" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" style="font-family:Syne,sans-serif">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#0a1f14"/>
+  <text x="240" y="28" text-anchor="middle" fill="#00e5a0" font-size="12" font-weight="700" letter-spacing="2">TESLA 로보택시</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">텍사스 무감독(Unsupervised) 운행 현황</text>
+
+  <!-- Big number -->
+  <text x="240" y="132" text-anchor="middle" fill="#00e5a0" font-size="88" font-weight="800">89</text>
+  <text x="240" y="156" text-anchor="middle" fill="#94a3b8" font-size="13">대 운행 중 · 텍사스 오스틴</text>
+
+  <!-- Fleet specs -->
+  <rect x="20" y="170" width="204" height="66" rx="10" fill="#0a1f14"/>
+  <text x="122" y="194" text-anchor="middle" fill="#94a3b8" font-size="10">차종</text>
+  <text x="122" y="216" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="800">2026 Tesla Model Y</text>
+  <text x="122" y="230" text-anchor="middle" fill="#64748b" font-size="9">전량 Model Y (Cybercab 이전)</text>
+
+  <rect x="256" y="170" width="204" height="66" rx="10" fill="#0a1f14"/>
+  <text x="358" y="194" text-anchor="middle" fill="#94a3b8" font-size="10">운행 유형</text>
+  <text x="358" y="216" text-anchor="middle" fill="#00e5a0" font-size="14" font-weight="800">Unsupervised</text>
+  <text x="358" y="230" text-anchor="middle" fill="#64748b" font-size="9">안전 운전자 없이 완전 자율</text>
+
+  <!-- Timeline bar -->
+  <text x="20" y="258" fill="#94a3b8" font-size="10">플릿 성장 타임라인</text>
+  <!-- Background bar -->
+  <rect x="20" y="264" width="440" height="20" rx="10" fill="#1e293b"/>
+  <!-- Progress (89/100 target = 89%) -->
+  <rect x="20" y="264" width="392" height="20" rx="10" fill="#00e5a0" opacity="0.8"/>
+  <text x="416" y="279" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700">89%</text>
+  <text x="20" y="300" fill="#64748b" font-size="9">AVO 인가 (5/29)</text>
+  <text x="460" y="300" text-anchor="end" fill="#00e5a0" font-size="9">100대 목표</text>
+
+  <!-- VIN registration history -->
+  <rect x="20" y="310" width="440" height="90" rx="12" fill="#0a1f14"/>
+  <text x="240" y="330" text-anchor="middle" fill="#94a3b8" font-size="10">플릿 확장 현황</text>
+
+  <text x="36" y="352" fill="#00e5a0" font-size="11">✅  5/29 — 텍사스 AVO 인가 획득</text>
+  <text x="36" y="370" fill="#00e5a0" font-size="11">✅  6/10 — VIN 8대 추가 등록 (누적 진행)</text>
+  <text x="36" y="388" fill="#ffffff" font-size="11" font-weight="700">✅  6/11 — 89대 무감독 운행 확인</text>
+  <text x="36" y="396" fill="#64748b" font-size="9">           전량 2026 Model Y</text>
+
+  <!-- Target note -->
+  <rect x="20" y="412" width="440" height="18" rx="4" fill="#0a1f14"/>
+  <text x="240" y="425" text-anchor="middle" fill="#64748b" font-size="9">7월 오스틴 공식 상업 배포 예정 · Waymo SF 700대 대비 빠른 확장 중</text>
+
+  <text x="240" y="434" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>

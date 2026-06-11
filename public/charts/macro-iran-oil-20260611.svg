@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" style="font-family:Syne,sans-serif">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#1a0a0a"/>
+  <text x="240" y="28" text-anchor="middle" fill="#ff4d6d" font-size="12" font-weight="700" letter-spacing="2">미국-이란 갈등 심화</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">트럼프 강경 발언 → 유가 $90 급등 (+2.4%)</text>
+
+  <!-- Oil price big number -->
+  <text x="240" y="108" text-anchor="middle" fill="#ff4d6d" font-size="64" font-weight="800">$90</text>
+  <text x="240" y="128" text-anchor="middle" fill="#94a3b8" font-size="11">WTI 유가 (배럴당) · +2.4% 급등</text>
+
+  <!-- Trump quote -->
+  <rect x="20" y="144" width="440" height="74" rx="12" fill="#1a0a0a"/>
+  <rect x="20" y="144" width="440" height="4" rx="2" fill="#ff4d6d"/>
+  <text x="36" y="168" fill="#94a3b8" font-size="9">@realDonaldTrump 발언:</text>
+  <text x="36" y="184" fill="#e2e8f0" font-size="11">"이란 군대는 완전히 패배했다. 공군과 해군은</text>
+  <text x="36" y="198" fill="#e2e8f0" font-size="11">더 이상 존재하지 않는다. 협상 시간 끝났다."</text>
+  <text x="36" y="212" fill="#ff4d6d" font-size="9">— @realDonaldTrump · 2026.06.11</text>
+
+  <!-- Oil price trend -->
+  <text x="240" y="240" text-anchor="middle" fill="#94a3b8" font-size="10">WTI 유가 최근 추이 (배럴당 $)</text>
+
+  <!-- Simple line chart approximation -->
+  <polyline points="76,296 136,288 196,292 256,280 316,268 376,240 436,232"
+            fill="none" stroke="#ff4d6d" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Data points -->
+  <circle cx="76" cy="296" r="3" fill="#ff4d6d"/>
+  <circle cx="136" cy="288" r="3" fill="#ff4d6d"/>
+  <circle cx="196" cy="292" r="3" fill="#ff4d6d"/>
+  <circle cx="256" cy="280" r="3" fill="#ff4d6d"/>
+  <circle cx="316" cy="268" r="3" fill="#ff4d6d"/>
+  <circle cx="376" cy="240" r="3" fill="#ff4d6d"/>
+  <circle cx="436" cy="232" r="4" fill="#ff4d6d"/>
+
+  <!-- Price labels -->
+  <text x="76" y="310" text-anchor="middle" fill="#64748b" font-size="8">$76</text>
+  <text x="136" y="310" text-anchor="middle" fill="#64748b" font-size="8">$78</text>
+  <text x="196" y="310" text-anchor="middle" fill="#64748b" font-size="8">$77</text>
+  <text x="256" y="310" text-anchor="middle" fill="#64748b" font-size="8">$80</text>
+  <text x="316" y="310" text-anchor="middle" fill="#64748b" font-size="8">$84</text>
+  <text x="376" y="310" text-anchor="middle" fill="#94a3b8" font-size="8">$88</text>
+  <text x="436" y="310" text-anchor="middle" fill="#ff4d6d" font-size="9" font-weight="700">$90▲</text>
+
+  <text x="76" y="322" text-anchor="middle" fill="#475569" font-size="7">5/5</text>
+  <text x="436" y="322" text-anchor="middle" fill="#ff4d6d" font-size="7">6/11</text>
+
+  <!-- Axis -->
+  <line x1="70" y1="300" x2="460" y2="300" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- IPO risk note -->
+  <rect x="20" y="334" width="440" height="60" rx="12" fill="#1a0a0a"/>
+  <text x="240" y="354" text-anchor="middle" fill="#94a3b8" font-size="10">SpaceX IPO에 미치는 영향</text>
+  <text x="36" y="372" fill="#ff4d6d" font-size="11">⚠️  중동 불안 → 시장 변동성 확대 → IPO 리스크</text>
+  <text x="36" y="388" fill="#94a3b8" font-size="10">이란 협상 결렬 시 유가 $100+ 가능 — 인플레 재가속</text>
+
+  <!-- Market context -->
+  <rect x="20" y="406" width="440" height="24" rx="6" fill="#0f172a"/>
+  <text x="240" y="422" text-anchor="middle" fill="#64748b" font-size="9">S&amp;P 500 · NASDAQ 낙폭 회복 · 시장 관망세 — 2026.06.11</text>
+
+  <text x="240" y="433" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>

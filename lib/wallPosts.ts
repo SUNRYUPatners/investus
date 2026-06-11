@@ -26,8 +26,9 @@ export type Comment = {
   likes:        number;
 };
 
+const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T10J;   // 마지막 게시글 업데이트 기준 (NEW 배지용)
+export const LATEST_UPDATE = T11J;   // 마지막 게시글 업데이트 기준 (NEW 배지용)
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -46,6 +47,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-11 — SpaceX IPO D-1 / $1.75T / 신용등급 / Starship / TeraFab /
+  //              Tesla 로보택시 89대 / FSD Level4 / 덴마크·벨기에 / CPI / 이란
+  // ════════════════════════════════════════════════════════════════════════
+
+  // SPCX — IPO 6/12 확정 ─────────────────────────────────────────────────
+  { id: 190, symbol: "SPCX", nickname: "익명_3812", holdingLabel: "관심종목",
+    content: "내일 드디어 SpaceX IPO예요. $1.75T에 $25~30/주 공모가라는 게 진짜 역사적인 순간이네요. 5-for-1 주식분할까지 해서 일반 투자자들도 접근하기 좋게 만들었고, 3대 신용평가사 투자등급까지 받았다는 게 놀라워요. 연기금이랑 보험사들도 이제 살 수 있으니까 IPO 수요가 얼마나 나올지 진짜 기대됩니다.",
+    createdAt: T11J - 10*60_000, likes: 187, comments: 3 },
+  { id: 191, symbol: "SPCX", nickname: "익명_7249", holdingLabel: "관심종목",
+    content: "SpaceX $1.75T가 GE Aerospace, Boeing, RTX, Northrop 합친 것보다 더 크다는 게 진짜 말이 안 되는 숫자인데 또 맞는 말이기도 해요. 전통 방산기업들은 정부 계약 의존이고 성장률이 한자리인데 SpaceX는 로켓+Starlink+AI 인프라 세 개 성장 축이 다 돌아가고 있으니까요. IPO 전에 이 비교가 나온다는 것 자체가 밸류에이션 논거 세팅이에요.",
+    createdAt: T11J - 28*60_000, likes: 152, comments: 3 },
+
+  // SPCX — Starship 효율 / TeraFab ─────────────────────────────────────
+  { id: 192, symbol: "SPCX", nickname: "익명_5047", holdingLabel: "관심종목",
+    content: "Starship 1회에 Falcon V3 480기 탑재하고 10회가 Falcon 9 23회랑 같은 용량이라는 거 읽고 진짜 어마어마하다 싶었어요. 그리고 TeraFab $11B 반도체 칩 공장도 확인됐는데 SpaceX·Tesla·xAI가 같이 쓰는 구조면 TSMC 리스크도 헤지되고 CHIPS법 인센티브도 받는 거잖아요. 내일 IPO인데 호재가 쏟아지는 하루네요.",
+    createdAt: T11J - 16*60_000, likes: 124, comments: 2 },
+
+  // SPCX — 신용등급 ──────────────────────────────────────────────────────
+  { id: 193, symbol: "SPCX", nickname: "익명_9183", holdingLabel: "관심종목",
+    content: "3대 신용평가사 모두 투자등급이라는 게 IPO 전에 나온 게 포인트예요. S&P BBB-, 무디스 Baa3, 피치 BBB-면 미국 연기금 $15T+ 자산이 이제 SpaceX를 살 수 있는 거잖아요. 공모 수요가 장난 아닐 것 같아요. 공모가 $25~30이면 상장 첫날 30~35 가는 거 아닌가 싶기도 하고요.",
+    createdAt: T11J - 5*60_000, likes: 141, comments: 2 },
+
+  // TSLA — 로보택시 89대 ────────────────────────────────────────────────
+  { id: 194, symbol: "TSLA", nickname: "익명_6492", holdingLabel: "120주 보유",
+    content: "텍사스 무감독 로보택시 89대라는 숫자가 아직 작게 보일 수 있는데 AVO 인가 받은 게 5월 29일이에요. 2주도 안 됐는데 89대까지 올라간 거잖아요. 증가 속도가 핵심인 거고 7월 공식 배포 전에 이미 플릿이 다 깔리는 구조예요. Waymo가 7년 걸려서 700대인데 Tesla는 몇 달이면 수백 대 가겠죠.",
+    createdAt: T11J - 12*60_000, likes: 168, comments: 3 },
+  { id: 195, symbol: "TSLA", nickname: "익명_3748", holdingLabel: "80주 보유",
+    content: "Model Y 전량으로 89대 운행 중이라는 게 진짜 전략이 보여요. Cybercab이 아직 양산 초기라 대기하는 게 아니라 있는 플랫폼으로 먼저 서비스 선점하고 나중에 Cybercab으로 교체하는 거잖아요. 이렇게 하면 7월 오스틴 상업 배포 때 이미 검증된 노선 데이터가 쌓여 있는 거예요. 치밀한 전략인 것 같아요.",
+    createdAt: T11J - 34*60_000, likes: 129, comments: 3 },
+
+  // TSLA — FSD Level4 / 덴마크·벨기에 ─────────────────────────────────
+  { id: 196, symbol: "TSLA", nickname: "익명_8271", holdingLabel: "200주 보유",
+    content: "Piper Sandler가 '자율주행 문제 해결'이라고 공식 선언한 거 진짜 중요해요. 레이팅에 Autonomy를 추가했다는 게 애널리스트 커버리지 기준이 바뀌는 거잖아요. 누적 FSD 주행거리가 170B 마일이라는 것도 압도적인 데이터 해자예요. 그 위에 덴마크, 벨기에까지 유럽 승인 나왔고 네덜란드 충돌 3.5배 감소 데이터 있으니 독일·프랑스는 시간 문제인 것 같아요.",
+    createdAt: T11J - 8*60_000, likes: 198, comments: 3 },
+  { id: 197, symbol: "TSLA", nickname: "익명_4917", holdingLabel: "45주 보유",
+    content: "덴마크랑 벨기에 동시 승인이 나왔는데 벨기에 장관이 '기능적으로 100% 자율주행'이라고 했다는 게 놀라워요. 정부 관리가 그런 말 하는 게 쉬운 일이 아닌데 네덜란드 데이터가 그만큼 설득력 있었다는 거겠죠. 유럽 Tesla 보유 차량 100만 대+에서 FSD 구독 10%만 전환돼도 연 $1.2B이에요. 아직 시작도 안 한 수익원이에요.",
+    createdAt: T11J - 42*60_000, likes: 143, comments: 3 },
+
+  // 매크로 — CPI / 이란 ──────────────────────────────────────────────────
+  { id: 198, symbol: "TSLA", nickname: "익명_2847", holdingLabel: "30주 보유",
+    content: "CPI 2.9% 나왔는데 Core도 2.9%라는 게 인플레가 진짜 끈적한 거예요. 여기다 이란 갈등으로 유가 $90까지 올라가면 6월 CPI는 3% 넘을 수도 있어요. 금리 인하 기대는 다 날아갔고 오히려 인상 얘기가 나올 것 같은데... SpaceX IPO도 내일인데 시장 변동성이 크면 공모 수요에 영향이 있을 수 있겠죠.",
+    createdAt: T11J - 20*60_000, likes: 87, comments: 2 },
+  { id: 199, symbol: "SPCX", nickname: "익명_6391", holdingLabel: "관심종목",
+    content: "트럼프 이란 강경 발언이 나온 타이밍이 SpaceX IPO 하루 전이라는 게 진짜 아이러니해요. 유가 $90 가고 시장 불안한데 역대 최대 규모 IPO를 내일 한다는 거잖아요. 뭐 역대 IPO들 보면 단기 시장 상황이랑 무관하게 성공한 경우가 많긴 했어요. SpaceX의 스토리 자체가 워낙 강하니까 수요 있을 것 같아요.",
+    createdAt: T11J - 48*60_000, likes: 96, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-10 — SPCX 기가팩토리/$215억 계약 / TSLA 네바다·VIN8·FSD 네덜란드 /
@@ -835,6 +883,53 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-11 신규 ──────────────────────────────────────────────────────
+  190: [
+    { id: 1, nickname: "익명_4827", holdingLabel: "관심종목", content: "5-for-1 분할 후 $25~30이면 일반 투자자 진입 장벽 완전히 낮춘 거예요. 공모주 신청하고 싶은데 한국에서 어떻게 참여해야 할지가 고민이에요.", createdAt: T11J - m(9), likes: 34 },
+    { id: 2, nickname: "익명_7293", holdingLabel: "관심종목", content: "3대 신용평가사 투자등급이면 연기금이랑 보험사 자금이 들어올 수 있는 거잖아요. IPO 물량 소화에는 문제 없을 것 같아요.", createdAt: T11J - m(5), likes: 26 },
+    { id: 3, nickname: "익명_1847", holdingLabel: "관심종목", content: "내일 상장인데 공모가 $25~30에서 첫날 얼마까지 갈지가 진짜 궁금해요. 아람코처럼 조용히 시작할지 엄청 튈지.", createdAt: T11J - m(2), likes: 19 },
+  ],
+  191: [
+    { id: 1, nickname: "익명_5391", holdingLabel: "관심종목", content: "$1.75T가 12개 방산기업 합산보다 크다는 비교가 임팩트 있어요. GE Aerospace 혼자도 대형주인데 그 5배짜리가 내일 상장한다는 거잖아요.", createdAt: T11J - m(26), likes: 47 },
+    { id: 2, nickname: "익명_8412", holdingLabel: "관심종목", content: "Starlink $10.8B 연매출 + AI 임대 $4B+ + 발사 서비스 + TeraFab... 수익 다각화가 이 정도면 $1.75T도 여전히 저평가 논쟁이 나올 수 있어요.", createdAt: T11J - m(12), likes: 38 },
+    { id: 3, nickname: "익명_3049", holdingLabel: "관심종목", content: "머스크 제국 전체가 $3.4T+ 가치라는 게 한 개인이 만든 규모로는 인류 역사상 전례가 없는 것 같아요.", createdAt: T11J - m(4), likes: 29 },
+  ],
+  192: [
+    { id: 1, nickname: "익명_6184", holdingLabel: "관심종목", content: "Starship 10회 = Falcon 9 23회 용량이라는 게 결국 발사 비용 구조가 완전히 바뀐다는 얘기예요. 완전 재사용까지 가면 Starlink 마진이 구조적으로 개선되는 거죠.", createdAt: T11J - m(14), likes: 42 },
+    { id: 2, nickname: "익명_9273", holdingLabel: "관심종목", content: "TeraFab이 SpaceX·Tesla·xAI 세 개가 같이 쓰는 거면 비용 분담도 되고 3개 회사 칩 수요가 다 모이니 규모의 경제도 생기겠죠. TSMC 리스크 헤지까지요.", createdAt: T11J - m(5), likes: 31 },
+  ],
+  193: [
+    { id: 1, nickname: "익명_2938", holdingLabel: "관심종목", content: "BBB-가 투자등급 최저선이긴 한데 민간 우주기업이 세 기관에서 동시에 받은 게 전례가 없는 거잖아요. 기관 수요가 확인됐다는 신호예요.", createdAt: T11J - m(4), likes: 38 },
+    { id: 2, nickname: "익명_7483", holdingLabel: "관심종목", content: "채권 발행 가능해지면 SpaceX가 낮은 이자율로 대규모 자금 조달할 수 있어요. IPO 자금에 채권 발행까지 더하면 Bastrop 기가팩토리, TeraFab, Starship 동시 투자도 가능하겠죠.", createdAt: T11J - m(1), likes: 27 },
+  ],
+  194: [
+    { id: 1, nickname: "익명_5829", holdingLabel: "150주 보유", content: "AVO 인가 2주 만에 89대라는 속도가 진짜 빠른 거예요. 이 속도로 가면 7월 공식 배포 때는 200~300대는 될 것 같아요. Waymo가 SF에서 몇 년 걸린 거랑 비교가 안 되네요.", createdAt: T11J - m(10), likes: 72 },
+    { id: 2, nickname: "익명_3281", holdingLabel: "60주 보유", content: "전량 2026 Model Y라는 거 보면 Tesla가 Cybercab 대기 없이 바로 상업화 가능한 플랫폼 있다는 게 강점이에요. 경쟁사들은 전용 자율주행 차량 개발해야 하는데.", createdAt: T11J - m(5), likes: 53 },
+    { id: 3, nickname: "익명_8472", holdingLabel: "25주 보유", content: "89대는 시작이에요. 7월 오스틴 공식 배포 → 라스베이거스 허가 → 마이애미... 로보택시 TAM이 수천조인데 초기 플릿 수 지금 세는 게 나중에 웃음이 될 수 있어요.", createdAt: T11J + m(2), likes: 44 },
+  ],
+  195: [
+    { id: 1, nickname: "익명_7193", holdingLabel: "90주 보유", content: "5/29 AVO 인가 → 6/10 VIN 8대 → 6/11 89대. 불과 10일 만에 이 정도 플릿 증가면 내부적으로 이미 수백 대가 준비된 거 아닌가요. 7월 오피셜 배포 전에 선행 배치가 계속 이루어지는 것 같아요.", createdAt: T11J - m(32), likes: 61 },
+    { id: 2, nickname: "익명_4827", holdingLabel: "35주 보유", content: "라스베이거스 허가 신청이랑 텍사스 89대 운행이 동시에 진행되고 있다는 게 투자자 입장에서는 좋은 거예요. 텍사스는 수익화 시작, 네바다는 다음 시장 준비. 진짜 체계적이에요.", createdAt: T11J - m(15), likes: 47 },
+    { id: 3, nickname: "익명_2947", holdingLabel: "110주 보유", content: "Model Y 89대가 하루에 평균 10시간 운행하면서 $30/시간 수익이면 하루 $26,700, 연간 $9.7M이에요. 1,000대 되면 연 $100M+. 이게 진짜 수익화 스토리의 시작이죠.", createdAt: T11J + m(1), likes: 39 },
+  ],
+  196: [
+    { id: 1, nickname: "익명_9182", holdingLabel: "250주 보유", content: "Piper Sandler가 '자율주행 문제 해결'이라고 공식 선언하고 레이팅에 Autonomy 추가한 거 진짜 큰 뉴스예요. 이런 언어를 쓴다는 게 Wall St 커버리지가 바뀌는 신호거든요. FSD 구독 밸류에이션 모델이 이제 주류가 되는 거예요.", createdAt: T11J - m(7), likes: 89 },
+    { id: 2, nickname: "익명_6284", holdingLabel: "75주 보유", content: "누적 FSD 170B 마일이라는 게 경쟁사가 절대로 따라잡기 어려운 학습 데이터예요. Waymo는 지오펜싱 안에서만 하고 Tesla는 전세계 도로에서 학습 중이니 질도 다르고 양도 달라요.", createdAt: T11J - m(3), likes: 67 },
+    { id: 3, nickname: "익명_3827", holdingLabel: "40주 보유", content: "덴마크·벨기에 2개국이 하루에 나왔다는 것도 놀랍지만 벨기에 장관이 '100% 자율주행'이라고 직접 말한 게 EU 규제 기관들한테 미치는 영향이 있겠죠.", createdAt: T11J + m(1), likes: 54 },
+  ],
+  197: [
+    { id: 1, nickname: "익명_4827", holdingLabel: "관심종목", content: "FSD 170B 마일에 유럽 2개국 승인이면 오늘 Tesla 뉴스가 진짜 좋네요. 내일 SpaceX IPO에 묻히는 게 좀 아깝다 싶을 정도예요.", createdAt: T11J - m(40), likes: 73 },
+    { id: 2, nickname: "익명_8471", holdingLabel: "25주 보유", content: "FSD 덴마크·벨기에 다음은 독일이 핵심이에요. 독일 규제 통과하면 프랑스·스페인 줄줄이 따라오는 구조거든요. EU 최대 시장 뚫리면 유럽 FSD 구독 수익이 터지는 거예요.", createdAt: T11J - m(18), likes: 58 },
+    { id: 3, nickname: "익명_6391", holdingLabel: "60주 보유", content: "FSD Level 4 공식 인정 + 덴마크 벨기에 승인 + 89대 로보택시 운행... 테슬라 오늘 뉴스가 다 좋네요. IPO 기대감이 시장 전체에 활기를 주는 것 같아요.", createdAt: T11J - m(5), likes: 49 },
+  ],
+  198: [
+    { id: 1, nickname: "익명_3917", holdingLabel: "15주 보유", content: "CPI 2.9%에 Core도 2.9%면 연준 금리 인하 기대는 완전히 사라진 거예요. 여기다 이란 사태로 유가까지 $90이면 6월 CPI가 3%+ 갈 수 있어서 하반기 시장 전망이 복잡해졌어요.", createdAt: T11J - m(18), likes: 43 },
+    { id: 2, nickname: "익명_7284", holdingLabel: "8주 보유", content: "타이밍이 묘한 게 SpaceX IPO가 내일인데 이란 리스크랑 CPI가 같이 터졌어요. 기관들이 리스크 오프 모드 되면 IPO 수요에 영향 줄 수 있는데 SpaceX 스토리는 그냥 사야 하는 거라 문제없을 것 같기도 하고요.", createdAt: T11J - m(8), likes: 31 },
+  ],
+  199: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "관심종목", content: "트럼프 이란 발언 타이밍이 최악이에요. 내일 SpaceX IPO인데 중동 불안으로 시장 변동성 커지면... 뭐 대형 IPO는 웬만한 악재에도 통과했긴 해요. $1.75T 스토리가 워낙 강하니까요.", createdAt: T11J - m(46), likes: 51 },
+    { id: 2, nickname: "익명_8391", holdingLabel: "관심종목", content: "유가 $90이면 에너지 비용 오르는 게 결국 Starlink 위성 발사 비용에도 영향 주긴 해요. 근데 SpaceX는 자체 전력망 구축 중이라 장기적으로는 헤지가 되는 구조긴 하죠.", createdAt: T11J - m(22), likes: 37 },
+  ],
   // ── 2026-06-10 신규 ──────────────────────────────────────────────────────
   180: [
     { id: 1, nickname: "익명_8371", holdingLabel: "관심종목", content: "1천만 sqft면 진짜 상상이 안 되는 크기예요. 그것도 태양광/풍력 자체 전력이면 전기료도 거의 0에 수렴할 텐데 AI 임대 수익 마진이 얼마나 높을지...", createdAt: T10J - m(8), likes: 37 },

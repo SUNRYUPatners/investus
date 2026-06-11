@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" style="font-family:Syne,sans-serif">
+  <rect width="480" height="460" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#170a2e"/>
+  <text x="240" y="28" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="700" letter-spacing="2">STARSHIP 발사 효율</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">Starship 10회 = Falcon 9 23회 네트워크 용량</text>
+
+  <!-- Starship section -->
+  <rect x="20" y="70" width="200" height="200" rx="12" fill="#170a2e"/>
+  <text x="120" y="94" text-anchor="middle" fill="#c084fc" font-size="11" font-weight="700">STARSHIP</text>
+  <!-- Starship rocket icon (simplified) -->
+  <ellipse cx="120" cy="130" rx="18" ry="10" fill="#c084fc"/>
+  <rect x="106" y="130" width="28" height="70" rx="4" fill="#c084fc"/>
+  <polygon points="102,170 138,170 120,200" fill="#7c3aed"/>
+  <!-- Flame -->
+  <ellipse cx="120" cy="202" rx="8" ry="6" fill="#f97316" opacity="0.8"/>
+
+  <text x="120" y="230" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="700">1회 발사</text>
+  <text x="120" y="248" text-anchor="middle" fill="#c084fc" font-size="18" font-weight="800">480기</text>
+  <text x="120" y="264" text-anchor="middle" fill="#94a3b8" font-size="9">Falcon V3 위성</text>
+
+  <!-- VS -->
+  <text x="240" y="180" text-anchor="middle" fill="#475569" font-size="24" font-weight="800">VS</text>
+
+  <!-- Falcon 9 section -->
+  <rect x="260" y="70" width="200" height="200" rx="12" fill="#1e293b"/>
+  <text x="360" y="94" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="700">FALCON 9</text>
+  <!-- Multiple small Falcon 9 icons (3×3 grid) -->
+  <g fill="#475569">
+    <!-- Row 1 -->
+    <rect x="290" y="102" width="10" height="26" rx="2"/>
+    <ellipse cx="295" cy="100" rx="5" ry="3"/>
+    <rect x="314" y="102" width="10" height="26" rx="2"/>
+    <ellipse cx="319" cy="100" rx="5" ry="3"/>
+    <rect x="338" y="102" width="10" height="26" rx="2"/>
+    <ellipse cx="343" cy="100" rx="5" ry="3"/>
+    <rect x="362" y="102" width="10" height="26" rx="2"/>
+    <ellipse cx="367" cy="100" rx="5" ry="3"/>
+    <rect x="386" y="102" width="10" height="26" rx="2"/>
+    <ellipse cx="391" cy="100" rx="5" ry="3"/>
+    <!-- Row 2 -->
+    <rect x="290" y="140" width="10" height="26" rx="2"/>
+    <ellipse cx="295" cy="138" rx="5" ry="3"/>
+    <rect x="314" y="140" width="10" height="26" rx="2"/>
+    <ellipse cx="319" cy="138" rx="5" ry="3"/>
+    <rect x="338" y="140" width="10" height="26" rx="2"/>
+    <ellipse cx="343" cy="138" rx="5" ry="3"/>
+    <rect x="362" y="140" width="10" height="26" rx="2"/>
+    <ellipse cx="367" cy="138" rx="5" ry="3"/>
+    <rect x="386" y="140" width="10" height="26" rx="2"/>
+    <ellipse cx="391" cy="138" rx="5" ry="3"/>
+    <!-- Row 3 -->
+    <rect x="290" y="178" width="10" height="26" rx="2"/>
+    <ellipse cx="295" cy="176" rx="5" ry="3"/>
+    <rect x="314" y="178" width="10" height="26" rx="2"/>
+    <ellipse cx="319" cy="176" rx="5" ry="3"/>
+    <rect x="338" y="178" width="10" height="26" rx="2"/>
+    <ellipse cx="343" cy="176" rx="5" ry="3"/>
+    <rect x="362" y="178" width="10" height="26" rx="2"/>
+    <ellipse cx="367" cy="176" rx="5" ry="3"/>
+    <rect x="386" y="178" width="10" height="26" rx="2"/>
+    <ellipse cx="391" cy="176" rx="5" ry="3"/>
+  </g>
+  <text x="360" y="230" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="700">1회 발사</text>
+  <text x="360" y="248" text-anchor="middle" fill="#94a3b8" font-size="18" font-weight="800">27기</text>
+  <text x="360" y="264" text-anchor="middle" fill="#64748b" font-size="9">Starlink V2.5 위성</text>
+
+  <!-- Key equation -->
+  <rect x="20" y="284" width="440" height="64" rx="12" fill="#170a2e"/>
+  <text x="240" y="306" text-anchor="middle" fill="#94a3b8" font-size="10">네트워크 용량 비교</text>
+  <text x="240" y="330" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="800">Starship 10회 = Falcon 9 23회</text>
+  <text x="240" y="344" text-anchor="middle" fill="#c084fc" font-size="10">동일 네트워크 용량 달성 (Starlink S-1 공시)</text>
+
+  <!-- Per launch comparison -->
+  <rect x="20" y="362" width="210" height="60" rx="10" fill="#0f172a"/>
+  <text x="125" y="382" text-anchor="middle" fill="#94a3b8" font-size="10">Starship 1회</text>
+  <text x="125" y="400" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="800">1,200 Gbps</text>
+  <text x="125" y="416" text-anchor="middle" fill="#64748b" font-size="9">네트워크 용량 추가</text>
+
+  <rect x="250" y="362" width="210" height="60" rx="10" fill="#0f172a"/>
+  <text x="355" y="382" text-anchor="middle" fill="#94a3b8" font-size="10">Falcon 9 1회</text>
+  <text x="355" y="400" text-anchor="middle" fill="#64748b" font-size="14" font-weight="800">2,960 Gbps</text>
+  <text x="355" y="416" text-anchor="middle" fill="#64748b" font-size="9">네트워크 용량 추가</text>
+
+  <text x="240" y="453" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>

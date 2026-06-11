@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" style="font-family:Syne,sans-serif">
+  <rect width="480" height="460" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#0a1f14"/>
+  <text x="240" y="28" text-anchor="middle" fill="#00e5a0" font-size="12" font-weight="700" letter-spacing="2">TESLA FSD — LEVEL 4</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">Piper Sandler "자율주행 문제 해결" 공식 인정</text>
+
+  <!-- Potter quote box -->
+  <rect x="20" y="66" width="440" height="74" rx="12" fill="#0a1f14"/>
+  <rect x="20" y="66" width="440" height="4" rx="2" fill="#00e5a0"/>
+  <text x="36" y="90" fill="#e2e8f0" font-size="11">"Tesla has solved the self-driving problem."</text>
+  <text x="36" y="108" fill="#94a3b8" font-size="10">— Alex Potter · Piper Sandler 수석 애널리스트</text>
+  <text x="36" y="126" fill="#00e5a0" font-size="10">"Level 4 autonomy in most driving conditions"</text>
+  <text x="36" y="132" fill="#64748b" font-size="8">레이팅에 공식 "자율주행" 추가</text>
+
+  <!-- FSD miles bar chart -->
+  <text x="240" y="162" text-anchor="middle" fill="#94a3b8" font-size="10">Tesla 누적 FSD 주행거리 (마일)</text>
+
+  <!-- Y-axis labels -->
+  <text x="70" y="180" text-anchor="end" fill="#64748b" font-size="8">170B</text>
+  <text x="70" y="228" text-anchor="end" fill="#64748b" font-size="8">2.2B</text>
+  <text x="70" y="276" text-anchor="end" fill="#64748b" font-size="8">170M</text>
+  <text x="70" y="324" text-anchor="end" fill="#64748b" font-size="8">50M</text>
+
+  <!-- Bars (scaled logarithmically for visualization) -->
+  <!-- 2020: 6M -->
+  <rect x="82" y="330" width="36" height="8" rx="2" fill="#1e4035"/>
+  <text x="100" y="348" text-anchor="middle" fill="#64748b" font-size="8">2020</text>
+  <text x="100" y="320" text-anchor="middle" fill="#64748b" font-size="7">6M</text>
+
+  <!-- 2021: 11M -->
+  <rect x="136" y="326" width="36" height="12" rx="2" fill="#1e4035"/>
+  <text x="154" y="348" text-anchor="middle" fill="#64748b" font-size="8">2021</text>
+  <text x="154" y="318" text-anchor="middle" fill="#64748b" font-size="7">11M</text>
+
+  <!-- 2022: 19M -->
+  <rect x="190" y="320" width="36" height="18" rx="2" fill="#1e4035"/>
+  <text x="208" y="348" text-anchor="middle" fill="#64748b" font-size="8">2022</text>
+  <text x="208" y="314" text-anchor="middle" fill="#64748b" font-size="7">19M</text>
+
+  <!-- 2023: 50M -->
+  <rect x="244" y="310" width="36" height="28" rx="2" fill="#2d6b50"/>
+  <text x="262" y="348" text-anchor="middle" fill="#94a3b8" font-size="8">2023</text>
+  <text x="262" y="304" text-anchor="middle" fill="#94a3b8" font-size="7">50M</text>
+
+  <!-- 2024: 170M -->
+  <rect x="298" y="280" width="36" height="58" rx="2" fill="#2d6b50"/>
+  <text x="316" y="348" text-anchor="middle" fill="#94a3b8" font-size="8">2024</text>
+  <text x="316" y="273" text-anchor="middle" fill="#94a3b8" font-size="7">170M</text>
+
+  <!-- 2025: 2.2B -->
+  <rect x="352" y="220" width="36" height="118" rx="2" fill="#00e5a0" opacity="0.6"/>
+  <text x="370" y="348" text-anchor="middle" fill="#e2e8f0" font-size="8">2025</text>
+  <text x="370" y="214" text-anchor="middle" fill="#00e5a0" font-size="7">2.2B</text>
+
+  <!-- 2026: 170B (huge) -->
+  <rect x="406" y="172" width="36" height="166" rx="2" fill="#00e5a0"/>
+  <text x="424" y="348" text-anchor="middle" fill="#e2e8f0" font-size="8">2026</text>
+  <text x="424" y="164" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="700">170B</text>
+
+  <!-- X-axis line -->
+  <line x1="72" y1="338" x2="460" y2="338" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Key insight -->
+  <rect x="20" y="358" width="440" height="56" rx="12" fill="#0a1f14"/>
+  <text x="240" y="378" text-anchor="middle" fill="#94a3b8" font-size="10">핵심 포인트</text>
+  <text x="240" y="396" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">2020→2026 누적 주행거리 약 28,000배 성장</text>
+  <text x="240" y="408" text-anchor="middle" fill="#94a3b8" font-size="10">Potter: "시장이 FSD 기술을 심각하게 저평가 중"</text>
+
+  <text x="240" y="453" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>

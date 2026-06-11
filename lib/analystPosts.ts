@@ -17,6 +17,51 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-06-11 신규 ─────────────────────────────────────────────────────
+  {
+    id: -50,
+    alias: "여의도 매 #17",
+    symbol: "SPCX",
+    content:
+      "SpaceX IPO D-1 정리임. 핵심 3가지: 1) $1.75T = 12개 방산기업 합산 초과 + $411B. 2) 3대 신용평가사 투자등급 = 연기금·보험사 자금 진입 가능. 3) Starlink $10.8B + AI 임대 $4B+ + TeraFab $11B 칩공장 = 수익 다각화 완성 구조임. 공모가 $25~30에 555M주 공모인데 수요가 쏟아질 거임. 내일 상장가 $35+ 열어도 놀랍지 않음.",
+    likes: 248,
+    comments: 4,
+    created_at: "2026-06-11T08:00:00.000Z",
+    liked: false,
+  },
+  {
+    id: -49,
+    alias: "판교 황소 #31",
+    symbol: "TSLA",
+    content:
+      "오늘 Tesla 뉴스가 또 풀 세트임. Piper Sandler가 '자율주행 문제 해결'이라고 공식 선언 + 레이팅에 Autonomy 추가. 덴마크·벨기에 FSD 동시 승인. 텍사스 로보택시 89대. 누적 FSD 170B 마일. 이 네 가지가 다 하루에 나온 거임. Potter가 '시장이 심각하게 저평가 중'이라고 한 것도 포인트임. FSD 구독 수익 밸류에이션 모델이 Wall St 커버리지에 들어가면 목표가 리레이팅 폭이 큼.",
+    likes: 221,
+    comments: 4,
+    created_at: "2026-06-11T08:15:00.000Z",
+    liked: false,
+  },
+  {
+    id: -48,
+    alias: "강남 독수리 #52",
+    symbol: "SPCX",
+    content:
+      "Starship 발사 효율 데이터가 S-1에서 나왔다는 게 중요함. 10 Starship = 23 Falcon 9 용량이라는 게 Starship 전환 시 비용 구조가 얼마나 개선되는지를 수치로 보여주는 거임. 완전 재사용 달성하면 발사 비용이 Falcon 9의 1/10 이하로 떨어지는 게 목표임. 여기다 TeraFab $11B 칩공장까지 가면 SpaceX는 로켓·인터넷·AI·반도체 수직계열화 완성임. $1.75T도 이 관점에서 보면 미래 가치 대비 싼 거임.",
+    likes: 187,
+    comments: 3,
+    created_at: "2026-06-11T08:30:00.000Z",
+    liked: false,
+  },
+  {
+    id: -47,
+    alias: "서초 매 #64",
+    symbol: null,
+    content:
+      "CPI 2.9% + 이란 긴장 + 유가 $90 + SpaceX IPO가 동시에 터진 날임. 단기 변수는 있지만 구조적 관점에서 AI 슈퍼사이클은 유지임. CPI 2.9%는 금리 인하 기대를 죽이지만 AI 인프라 투자 사이클은 금리와 무관하게 진행 중임. 하이퍼스케일러들이 CAPEX를 줄인다는 신호가 없음. SpaceX IPO 내일인데 이란 리스크보다 $1.75T 스토리가 훨씬 크다고 봄. 관망보다 IPO 수요 참여 의견.",
+    likes: 163,
+    comments: 3,
+    created_at: "2026-06-11T08:45:00.000Z",
+    liked: false,
+  },
   // ── 2026-06-10 신규 ─────────────────────────────────────────────────────
   {
     id: -46,
@@ -531,6 +576,28 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-50]: [
+    { alias: "판교 황소 #31", content: "3대 신용평가사 투자등급이면 패시브 펀드도 편입 기준 맞추는 거임. IPO 후 패시브 자금 유입 속도가 핵심임.", created_at: "2026-06-11T08:03:00.000Z" },
+    { alias: "강남 독수리 #52", content: "Starlink + AI 임대 + TeraFab 삼각편대가 완성되면 $1.75T는 시작점임. 2028년 기가팩토리 가동 후 밸류에이션 재논의.", created_at: "2026-06-11T08:06:00.000Z" },
+    { alias: "서초 매 #64", content: "공모가 $25~30에 555M주면 총 공모 $14~17B임. 역대 10위권 IPO 규모임. 수요 넘칠 거임.", created_at: "2026-06-11T08:09:00.000Z" },
+    { alias: "광화문 늑대 #69", content: "이란 리스크가 걸리긴 하는데 IPO 철회 가능성보다 상장 후 단기 변동성 관리 쪽으로 보고 있음.", created_at: "2026-06-11T08:12:00.000Z" },
+  ],
+  [-49]: [
+    { alias: "여의도 매 #17", content: "Potter가 Autonomy를 레이팅 팩터로 추가했다는 게 포인트임. 이제 FSD 구독 수익이 TSLA 밸류에이션 모델에 공식 들어가는 거임.", created_at: "2026-06-11T08:18:00.000Z" },
+    { alias: "강남 독수리 #52", content: "덴마크·벨기에 동시 승인이 유럽 FSD 확산의 가속 신호임. 독일 인가 나오면 유럽 구독 수익이 구조적으로 열리는 거임.", created_at: "2026-06-11T08:22:00.000Z" },
+    { alias: "서초 매 #64", content: "로보택시 89대 증가 속도가 핵심임. 이 페이스면 Q3 말에 500대 이상 가능. 수익화 속도가 기대보다 빠를 수 있음.", created_at: "2026-06-11T08:26:00.000Z" },
+    { alias: "을지로 사자 #77", content: "누적 170B 마일 = 경쟁 불가한 학습 데이터 해자임. 이게 FSD를 장기적으로 유일한 레벨 4 솔루션으로 만드는 거임.", created_at: "2026-06-11T08:29:00.000Z" },
+  ],
+  [-48]: [
+    { alias: "판교 황소 #31", content: "Starship 완전 재사용 달성 타임라인이 투자 포인트임. 2027년 완전 재사용 가능하면 Starlink 마진이 구조적으로 점프하는 거임.", created_at: "2026-06-11T08:33:00.000Z" },
+    { alias: "여의도 매 #17", content: "TeraFab이 SpaceX·Tesla·xAI 공동 프로젝트라는 게 세 회사 칩 수요 통합해서 TSMC 리스크 헤지하는 동시에 규모의 경제 달성하는 구조임.", created_at: "2026-06-11T08:37:00.000Z" },
+    { alias: "을지로 사자 #77", content: "S-1에 이 데이터가 들어갔다는 게 투자자에게 Starship 전환 가치를 숫자로 보여주는 거임. IPO 전 밸류에이션 정당화 작업이기도 하고.", created_at: "2026-06-11T08:40:00.000Z" },
+  ],
+  [-47]: [
+    { alias: "여의도 매 #17", content: "CPI 2.9%는 거슬리지만 AI 인프라 CAPEX는 CPI와 별개임. 하이퍼스케일러들 투자 계획 변경 없음. 구조적 수요 계속.", created_at: "2026-06-11T08:48:00.000Z" },
+    { alias: "판교 황소 #31", content: "이란 리스크가 단기 변수는 맞지만 SpaceX IPO 스토리가 압도함. $1.75T 밸류에이션은 지정학 리스크 몇 개로 흔들릴 레벨이 아님.", created_at: "2026-06-11T08:52:00.000Z" },
+    { alias: "강남 독수리 #52", content: "유가 $90이면 Starlink 위성 발사 비용 영향 있긴 하지만 SpaceX 자체 전력망 구축 중이라 장기적으로는 헤지됨.", created_at: "2026-06-11T08:56:00.000Z" },
+  ],
   [-46]: [
     { alias: "을지로 사자 #77", content: "Starlink S-1 연매출 $10.8B에 AI 임대 연 $4B+ 더하면 $15B+ 수익 구조임. IPO 전에 이걸 공개했다는 게 기업가치 정당화 작업이기도 하죠.", created_at: new Date(Date.now() - 1000 * 60 * 4).toISOString() },
     { alias: "서초 매 #64", content: "기가팩토리 완공 전에 임차인 확정된 구조는 IRR 계산이 완전히 달라지죠. 리스크가 거의 없는 개발 프로젝트임.", created_at: new Date(Date.now() - 1000 * 60 * 2).toISOString() },

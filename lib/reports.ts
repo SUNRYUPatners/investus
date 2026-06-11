@@ -1623,6 +1623,157 @@ export const SEED_REPORTS: Report[] = [
     images:        ["/charts/jpm-ai-agents-20260610.svg"],
   },
 
+  // ══════════════════════════════════════════════════════════════════════════
+  // 2026-06-11 — SpaceX IPO D-1 / $1.75T 밸류에이션 / 신용등급 / Starship /
+  //              TeraFab $11B / Tesla 로보택시 89대 / FSD Level4 / 유럽 승인 /
+  //              CPI 2.9% / 미국-이란 유가 $90
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-141",
+    title:         "SpaceX IPO D-1 / Tesla FSD Level4 / CPI 2.9% / 유가 $90 — 6/11 한장 요약",
+    summary:       "SpaceX 내일(6/12) 역사적 IPO 상장 · Tesla FSD Level 4 공식 인정 + 유럽 2개국 승인 · Tesla 로보택시 89대 운행 · CPI 5월 2.9% 최고치 · 미국-이란 갈등 유가 $90 급등 — 2026.06.11 핵심 이슈",
+    body:          "■ 오늘의 핵심 (비주얼 요약 이미지를 확인하세요)\n\n🚀 SpaceX 내일(6/12 금) IPO 상장 — $1.75T · $25~30/주 · 5-for-1 분할 · 3대 신용평가사 투자등급\n\n📊 SpaceX $1.75T = 12개 항공우주·방산기업 합산($1.34T) 초과 +$411B\n\n🛸 SpaceX TeraFab $11B 반도체 칩 공장 텍사스 — SpaceX·Tesla·xAI 공동\n\n🛰️ Starship 1회 발사 = Falcon 9 10대분 용량 · 480기 위성 탑재\n\n🚗 Tesla 텍사스 무감독 로보택시 89대 운행 중 (Model Y 전량)\n\n🧠 Tesla FSD Level 4 공식 인정 — Piper Sandler '자율주행 문제 해결'\n\n🇩🇰🇧🇪 Tesla FSD 덴마크·벨기에 승인 — 유럽 확산 가속\n\n📈 5월 CPI 2.9% · Core 2.9% — 4월 이후 최고 · 금리 인상 확률 상승\n\n⚡ 미국-이란 갈등 심화 — 트럼프 강경 발언 · 유가 $90 (+2.4%)",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 6/11 시장 한장 요약",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:00",
+    isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260611.svg"],
+  },
+
+  {
+    id:            "seed-131",
+    title:         "SpaceX IPO 6/12 상장 확정 — 555M주·$25~30·$1.75T·5-for-1 분할",
+    summary:       "SpaceX가 내일(6월 12일 금요일) 역사적인 IPO를 단행합니다. 5-for-1 주식분할 승인 후 공모가 $25~30, 목표 기업가치 $1.75T로 555,555,555주의 Class A 보통주를 공모합니다. 3대 신용평가사에서 투자등급을 획득하며 기관 수요도 확보됐습니다.",
+    body:          "■ SpaceX IPO 핵심 조건\n\n• 상장일: 2026년 6월 12일(금요일)\n• 공모가 범위: $25~30/주 (Bloomberg, 5-for-1 분할 후)\n• 기업가치 목표: $1.75T ($1조 7,500억)\n• 공모 주식: 555,555,555주 (Class A 보통주)\n• 주식분할: 5-for-1 승인 완료\n• 공모 규모: 총 약 $14B~17B (역대 최대 수준)\n\n■ 주주 구성 (IPO 전, PitchBook 기준)\n\n• 일론 머스크: 42% (의결권 82.4%)\n• Founders Fund: 10.4%\n• Google Ventures: 7.4%\n• 기타: 40%\n\n■ 신용등급 획득\n\n• S&P: BBB- (투자등급 최저선)\n• 무디스(Moody's): Baa3\n• 피치(Fitch): BBB-\n→ 민간 우주기업 최초 3대 기관 동시 투자등급\n→ 기관투자자(연기금·보험사) 진입 가능\n\n■ 역대 최대 IPO 비교\n\n• SpaceX 공모 규모 ~$14B → 역대 10위권 진입\n• 사우디 아람코(2019) $29.4B이 역대 최대\n\n■ 결론\n\n역사적인 SpaceX IPO가 내일(6월 12일) 열립니다. $1.75T 기업가치로 상장 시 미국 시총 상위 10위권 바로 진입이 예상됩니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "🚀 SpaceX (IPO 6/12 확정)",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:02",
+    images:        ["/charts/spcx-ipo-june12-20260611.svg"],
+  },
+
+  {
+    id:            "seed-132",
+    title:         "SpaceX $1.75T — 12개 항공우주·방산 기업 합산 $1.34T 초과",
+    summary:       "SpaceX의 IPO 목표 기업가치 $1.75T는 미국 주요 항공우주·방산 기업 12개사 합산($1.34T)보다 $411B 더 높습니다. GE Aerospace, Boeing, RTX, Northrop Grumman, Lockheed Martin 등을 모두 합쳐도 SpaceX 하나를 이기지 못합니다.",
+    body:          "■ SpaceX vs 12개 항공우주·방산 기업\n\nSpaceX (IPO 목표): $1.75T\n\n12개사 합산: $1.34T\n• GE Aerospace: $344.7B\n• Boeing: $243.7B\n• General Dynamics: $119.9B\n• RTX: $98.6B\n• Northrop Grumman: $92.6B\n• Transdigm: $76.9B\n• L3Harris: $69.2B\n• Axon: $37.9B\n• Textron: $15.8B\n• HII: $11.6B\n• (외 2개사 포함)\n\n■ 핵심 비교\n\n• SpaceX > 12개사 합산 by +$411B (+31%)\n• SpaceX = GE Aerospace의 5.1배\n• SpaceX = Boeing의 7.2배\n\n■ 왜 이 비교가 의미있나\n\n• 전통 항공우주 산업 = 정부 계약 의존 · 낮은 성장률\n• SpaceX = 민간 발사·Starlink 통신·AI 인프라 동시 성장\n• 2025년까지만 해도 이 수준의 기업가치는 불가능한 논의\n\n■ Elon Musk Galaxy 전체 가치\n\n• SpaceX: $1.8T (Leverage Shares 추산)\n• Tesla: $1.6T\n• Starlink: $500B (SpaceX 내)\n• xAI: $250B\n• X: $33B\n→ 머스크 제국 총 기업가치: ~$3.4T+\n\n■ 결론\n\n한 기업가가 전통 산업 전체를 능가하는 생태계를 구축했습니다. SpaceX IPO는 우주 산업의 패러다임 전환을 숫자로 확인하는 이벤트입니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "🚀 SpaceX ($1.75T 가치)",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:03",
+    images:        ["/charts/spcx-valuation-aerospace-20260611.svg"],
+  },
+
+  {
+    id:            "seed-133",
+    title:         "SpaceX 3대 신용평가사 투자등급 획득 — 채권 발행·기관 수요 확보",
+    summary:       "SpaceX가 S&P, 무디스(Moody's), 피치(Fitch) 3대 신용평가사 모두에서 투자등급(Investment Grade)을 획득했습니다. 민간 우주기업 최초 사례로 기관투자자 진입 기반이 마련됐으며 IPO 수요를 대폭 확장시키는 계기가 됩니다.",
+    body:          "■ 신용등급 상세\n\n• S&P Global: BBB- (투자등급 최저선)\n• 무디스: Baa3 (투자등급 최저선)\n• 피치: BBB- (투자등급 최저선)\n→ 세 기관 모두 동일한 수준: 투자등급 진입\n\n■ 투자등급이 중요한 이유\n\n1) 기관투자자 진입 가능\n• 연기금·보험사 등 규정상 투자등급 이상만 매수\n• 미국 연기금 $15T+ 자산이 신규 투자 가능해짐\n\n2) 채권 시장 접근\n• 회사채 발행 → 낮은 이자율로 대규모 자본 조달\n• 로켓·위성·AI 인프라 투자 자금 확보 용이\n\n3) IPO 밸류에이션 지지\n• 기관 수요 확인 = 공모가 하단 지지\n• 상장 후 패시브 펀드 편입 일정 단축\n\n■ 등급 해석\n\n• BBB- / Baa3 = '투자등급 최저선'\n• 이 아래(BB+/Ba1)는 '투기등급(Junk)'\n• 넷플릭스, 델타항공 등도 BBB- 수준\n→ SpaceX가 주요 기업들과 동등한 신용 지위 확보\n\n■ 결론\n\n3대 신용평가사 동시 투자등급 획득은 SpaceX가 투기적 스타트업이 아닌 글로벌 기관투자자가 매수할 수 있는 정통 우량기업임을 공식 확인한 것입니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "🚀 SpaceX (투자등급 획득)",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:04",
+    images:        ["/charts/spcx-credit-rating-20260611.svg"],
+  },
+
+  {
+    id:            "seed-134",
+    title:         "SpaceX Starship 1회 발사 480기 위성 — 10회 = Falcon 9 23회 네트워크 용량",
+    summary:       "Starlink S-1 공시 데이터에 따르면 Starship 한 번 발사로 Falcon V3 위성 480기를 배치하며, 10회 Starship 발사가 23회 Falcon 9 발사와 동일한 네트워크 용량을 제공합니다. 위성 당 배치 효율이 대폭 향상됩니다.",
+    body:          "■ Starship vs Falcon 9 발사 효율 비교\n\n| 구분 | Starship | Falcon 9 |\n|---|---|---|\n| 1회 위성 수 | 480기 (V3) | 27기 (V2.5) |\n| 네트워크 용량 | 1,200 Gbps | 2,960 Gbps |\n| 위성 탑재 | 18배 더 많음 | — |\n\n■ 핵심 방정식 (Starlink S-1 공시)\n\n• Starship 10회 발사 = Falcon 9 23회 발사 네트워크 용량\n• 즉, 10/23 = 0.43배 발사 횟수로 동일 용량 달성 가능\n\n■ Starship 발사 확대의 의미\n\n1) 발사 비용 절감\n• Starship은 완전 재사용 → 발사당 비용 Falcon 9 대비 대폭 하락\n• 2027년 완전 재사용 목표 달성 시 Starlink 마진 극적 개선\n\n2) 위성망 구축 속도\n• 480기/회 × 연간 30회 발사 = 14,400기/년 배치 가능\n• Falcon 9 기준 같은 숫자 배치 = 533회 발사 필요\n\n3) LEO 커버리지 속도\n• 배치 속도 빨라질수록 글로벌 가입자 증가 속도 가속\n\n■ Starship 현황\n\n• 현재 Falcon 9이 주력 → 점진적 Starship 전환\n• Starship 완전 재사용 = Starlink 구조적 마진 개선 촉매\n\n■ 결론\n\nStarship 전환은 단순 기술 성과가 아니라 Starlink의 수익 구조를 바꾸는 핵심 동력입니다. IPO 후 투자자들이 집중해야 할 지표입니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "🚀 SpaceX (Starship 효율)",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:03",
+    images:        ["/charts/spcx-starship-capacity-20260611.svg"],
+  },
+
+  {
+    id:            "seed-135",
+    title:         "SpaceX $11B 반도체 칩 공장 텍사스 — TeraFab · SpaceX·Tesla·xAI 공동",
+    summary:       "MANA CEO Christine Fouquet가 Elon Musk의 $11B 반도체 칩 제조 콤플렉스 계획을 공식 확인했습니다. TeraFab이라 불리는 이 프로젝트는 SpaceX·Tesla·xAI가 공동 참여하는 텍사스 소재 반도체 수직계열화 프로젝트입니다.",
+    body:          "■ TeraFab 프로젝트 개요\n\n• 사업명: TeraFab\n• 규모: $11B 반도체 + 칩 제조 콤플렉스\n• 위치: 텍사스\n• 참여 기업: SpaceX + Tesla + xAI (공동 프로젝트)\n• 확인자: MANA CEO Christine Fouquet (공식 발언)\n\n■ 각 기업의 필요성\n\nSpaceX:\n• 로켓·위성·AI 컴퓨트용 칩 자급\n• NVIDIA 의존 탈피\n\nTesla:\n• FSD·도조(Dojo)·로보택시 AI 칩\n• 차량용 반도체 공급망 내재화\n\nxAI:\n• Grok 및 차세대 AI 모델 추론 칩\n• 자체 AI 인프라 확장\n\n■ 왜 이것이 중요한가\n\n1) TSMC 의존 리스크 제거\n• 대만 지정학 리스크 완전 헤지\n• CHIPS법 미국 제조 인센티브 수혜\n\n2) SpaceX Bastrop 기가팩토리(1,000에이커)와 시너지\n• 칩 공장 + 데이터센터 + 로켓 제조 통합 단지\n\n3) 비용 구조 개선\n• 3개 기업이 비용 분담 → 효율적 투자\n\n■ 결론\n\nTeraFab은 SpaceX·Tesla·xAI가 반도체 공급망을 내재화하는 선언입니다. 완성 시 머스크 생태계는 소프트웨어부터 칩까지 완전한 수직계열화를 달성합니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "🚀 SpaceX (TeraFab $11B)",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:04",
+    images:        ["/charts/spcx-terafab-chipfactory-20260611.svg"],
+  },
+
+  {
+    id:            "seed-136",
+    title:         "Tesla 텍사스 무감독 로보택시 89대 운행 중 — 전량 2026 Model Y",
+    summary:       "Tesla가 텍사스에서 무감독(Unsupervised) 로보택시 89대를 운행 중입니다. 5월 29일 AVO 인가 이후 빠른 속도로 플릿이 확장되고 있으며 전량 2026 Tesla Model Y로 구성돼 있습니다. 7월 오스틴 공식 상업 배포를 향한 카운트다운이 진행 중입니다.",
+    body:          "■ 운행 현황\n\n• 운행 대수: 89대\n• 차종: 전량 2026 Tesla Model Y\n• 운행 지역: 텍사스\n• 운행 유형: Unsupervised (무감독) — 안전 운전자 없음\n• 기준일: 2026년 6월 11일\n\n■ 플릿 확장 타임라인\n\n• 5월 29일 — 텍사스 AVO(Autonomous Vehicle Operation) 인가\n• 6월 10일 — VIN 8대 추가 등록 확인\n• 6월 11일 — 89대 무감독 운행 확인\n\n■ 왜 Cybercab이 아닌 Model Y인가\n\n• Cybercab: 대량 양산 준비 진행 중 (아직 제한적)\n• Model Y: 검증된 FSD 플랫폼 + 즉각 배포 가능\n• 전략: Model Y로 서비스 선점 → Cybercab으로 순차 교체\n\n■ Waymo 대비 비교\n\n• Waymo San Francisco: 약 700대 운행\n• Tesla Texas: 현재 89대, 7월 공식 배포 후 급증 예상\n• Tesla 강점: 플릿 확장 비용이 Waymo 대비 현저히 낮음\n  (HD맵 불필요, 하드웨어 비용 낮음)\n\n■ 결론\n\n89대는 아직 초기 숫자지만 증가 속도가 핵심입니다. 7월 오스틴 공식 배포 후 100대 → 1,000대 → 10,000대 확장 경로가 시작됩니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🚗 Tesla (로보택시 89대)",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:02",
+    images:        ["/charts/tsla-robotaxi-89-20260611.svg"],
+  },
+
+  {
+    id:            "seed-137",
+    title:         "Tesla FSD — Piper Sandler '자율주행 해결' · Level 4 인정 · 누적 170B 마일",
+    summary:       "Piper Sandler의 수석 애널리스트 Alex Potter가 Tesla FSD가 '자율주행 문제를 해결했다'고 공식 선언했습니다. 대부분의 주행 조건에서 Level 4 자율성을 인정했으며 시장이 이 기술을 심각하게 저평가하고 있다고 밝혔습니다. Tesla의 누적 FSD 주행거리는 2026년 170B 마일로 폭증했습니다.",
+    body:          "■ Piper Sandler Potter 애널리스트 발언\n\n'Tesla has solved the self-driving problem.'\n— Alex Potter, Piper Sandler 수석 애널리스트\n\n• 레이팅에 공식 '자율주행(Autonomy)' 추가\n• '대부분의 주행 조건에서 Level 4 자율성'\n• '시장이 FSD 임팩트를 심각하게 저평가 중'\n\n■ Tesla 누적 FSD 주행거리 (마일)\n\n• 2020: 6M\n• 2021: 11M\n• 2022: 19M\n• 2023: 50M\n• 2024: 170M\n• 2025: 2.2B\n• 2026: 170B\n→ 2020 대비 약 28,000배 성장\n\n■ Potter가 지목하는 촉매\n\n1) FSD 구독 데이터 공개 시작\n• 기존 비밀주의 탈피 → 투명성 제고\n• 실제 구독 전환율 공개 시 밸류에이션 재평가\n\n2) 로보택시 도시 확산\n• 오스틴 → 라스베이거스 → 추가 도시 순차 진출\n\n3) EU FSD 수익화 가시화\n• 덴마크·벨기에 승인 → 유럽 전역 확산 기대\n\n■ 결론\n\n수석 애널리스트의 '해결' 선언은 FSD 기술 성숙을 공식화하는 신호입니다. 누적 주행거리 170B 마일이 AI 학습 데이터의 해자(moat)를 의미합니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🚗 Tesla FSD (Level 4 인정)",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:03",
+    images:        ["/charts/tsla-fsd-level4-potter-20260611.svg"],
+  },
+
+  {
+    id:            "seed-138",
+    title:         "Tesla FSD 덴마크·벨기에 2개국 승인 — 유럽 확산 본격화",
+    summary:       "Tesla FSD Supervised가 덴마크와 벨기에에서 동시에 공식 승인됐습니다. 벨기에 장관 Annick De Wäcker는 '기능적으로 100% 자율주행'이라고 인정했으며 이전 네덜란드 데이터(충돌 3.5배 감소)에 이어 유럽 FSD 수익화가 본격화되고 있습니다.",
+    body:          "■ 2개국 승인 현황\n\n🇩🇰 덴마크:\n• 승인자: CEO Mads Rørvig ✓\n• 일자: 2026년 6월 11일\n• 내용: FSD Supervised 공식 운행 허가\n\n🇧🇪 벨기에 (플랑드르 지역):\n• 승인자: 장관 Annick De Wäcker\n• 일자: 2026년 6월 11일\n• 발언: '기능적으로 이 시스템은 100% 자율주행입니다'\n• 단, 운전자 법적 책임은 유지\n\n■ 유럽 FSD 현황\n\n✅ 승인 완료:\n• 네덜란드 (FSD 실데이터 공개 — 충돌 3.5배↓)\n• 덴마크 (2026.06.11)\n• 벨기에 (2026.06.11)\n\n⏳ 검토 중:\n• 독일, 프랑스, 스페인, 이탈리아\n\n■ 유럽 FSD 수익화 시나리오\n\n• 유럽 Tesla 보유 차량: ~100만 대+\n• FSD 구독료 $99/월 → 연 수익 $1.2B (구독률 10% 기준)\n• 구독률 50% → 연 수익 $6B+\n\n■ 규제 완화 가속 이유\n\n• 네덜란드 실데이터: 수동 대비 충돌 3.5배 감소\n• 부상 사고 14.9배 감소 — EU 규제 기관 설득 논거 완성\n\n■ 결론\n\n유럽 소형 국가부터 시작하는 FSD 확산은 독일·프랑스 진출의 선행 지표입니다. EU 최대 시장 개방 시 FSD 수익화가 본격화됩니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🚗 Tesla FSD (덴마크·벨기에)",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:04",
+    images:        ["/charts/tsla-fsd-europe-dk-be-20260611.svg"],
+  },
+
+  {
+    id:            "seed-139",
+    title:         "5월 CPI 2.9% — 4월 이후 최고치 · Core 2.9% · 금리 인상 확률 상승",
+    summary:       "2026년 5월 CPI가 2.9%로 4월(2.7%) 이후 최고치를 기록했습니다. 식품·에너지를 제외한 Core CPI도 2.9%로 동일 수준을 유지하며 인플레이션 재가속 우려가 확대됐습니다. 연준 금리 인상 확률이 상승하고 있습니다.",
+    body:          "■ 5월 CPI 데이터\n\n• CPI (전년 동기 대비): 2.9%\n• Core CPI (식품·에너지 제외): 2.9%\n• 전월 대비: +0.2%p 상승 (4월 2.7%)\n• 연준 목표치(2.0%)와 격차: +0.9%p\n\n■ 인플레이션 추이 (2026년)\n\n• 1월: 2.4%\n• 2월: 2.6%\n• 3월: 2.5%\n• 4월: 2.7%\n• 5월: 2.9% ← 최고치\n\n■ 연준 통화정책 함의\n\n1) 금리 인하 기대 후퇴\n• 2.9% = 금리 인하 논거 약화\n• 시장 컨센서스: 2026년 인하 횟수 축소\n\n2) 금리 인상 확률 상승\n• CPI 3%+ 도달 시 인상 논의 재개 가능성\n\n3) 유가 상승(이란 갈등) 복합 압력\n• 에너지 가격 상승 → 6월 CPI 추가 상승 우려\n\n■ 시장 영향\n\n• 채권: 금리 상승 압력 → 국채 수익률↑\n• 주식: 할인율 상승 → 성장주 밸류에이션 압박\n• 다만 S&P·NASDAQ 낙폭은 장중 회복\n\n■ 결론\n\nCPI 2.9%는 완전한 인플레이션 통제가 아직 미완성임을 보여줍니다. 이란 사태로 에너지 가격이 더 오르면 6월 CPI는 3.0% 돌파 가능성이 있습니다.",
+    category:      "매크로",
+    categoryColor: "orange",
+    subject:       "📊 CPI 2.9% 최고치",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:02",
+    images:        ["/charts/macro-cpi-may-20260611.svg"],
+  },
+
+  {
+    id:            "seed-140",
+    title:         "미국-이란 갈등 심화 — 트럼프 강경 발언 · 유가 $90 급등 (+2.4%)",
+    summary:       "트럼프 대통령이 이란 군대가 '완전히 패배했다'며 강경 발언을 내놓으며 중동 긴장이 고조됐습니다. WTI 유가는 배럴당 $90로 2.4% 급등했으며 SpaceX IPO 타이밍과 겹쳐 시장 변동성 우려가 확대됐습니다.",
+    body:          "■ 트럼프 발언 요지\n\n'이란의 공군과 해군은 더 이상 존재하지 않는다. 협상 시간은 끝났다. 이제 대가를 치를 것이다.'\n— @realDonaldTrump (2026.06.11)\n\n■ 시장 반응\n\n• WTI 유가: $90/배럴 (+2.4% 급등)\n• S&P 500: 낙폭 후 회복 (장중 바닥 탈출)\n• NASDAQ: 낙폭 회복\n• 위험 선호: 축소\n\n■ 이란 대응 시나리오\n\n리스크 수위별 유가 전망:\n• 협상 재개: $82~85 수준 복귀\n• 현 교착 유지: $88~92 박스권\n• 실질 충돌 발생: $100+ 가능성\n\n■ 미국 경제·투자 영향\n\n1) 에너지 비용 상승 → 물가 재가속\n   - 6월 CPI 3.0% 돌파 위험\n\n2) 금리 동결/인상 압력 강화\n   - 연준 매파 입장 강화 가능\n\n3) SpaceX IPO 타이밍 리스크\n   - 내일(6/12) IPO 예정인데 중동 불안 겹침\n   - 기관투자자 리스크 오프 시 IPO 수요 영향\n\n■ 결론\n\n지정학 리스크와 인플레이션이 동시에 압박하는 복합 상황입니다. SpaceX IPO 성패는 중동 긴장이 단기에 완화되는지 여부도 변수입니다.",
+    category:      "매크로",
+    categoryColor: "red",
+    subject:       "⚡ 미국-이란 · 유가 $90",
+    date:          "2026-06-11",
+    updatedAt:     "2026.06.11 08:03",
+    images:        ["/charts/macro-iran-oil-20260611.svg"],
+  },
+
 ];
 
 // 종목별 리포트 매핑 — 개별 종목 페이지에서 관련 리포트 필터링에 사용
@@ -1724,4 +1875,15 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-128": [],
   "seed-129": ["JPM"],
   "seed-130": ["TSLA", "SPCX", "NVDA"],
+  "seed-131": ["SPCX"],
+  "seed-132": ["SPCX"],
+  "seed-133": ["SPCX"],
+  "seed-134": ["SPCX"],
+  "seed-135": ["SPCX", "TSLA"],
+  "seed-136": ["TSLA"],
+  "seed-137": ["TSLA"],
+  "seed-138": ["TSLA"],
+  "seed-139": [],
+  "seed-140": [],
+  "seed-141": ["TSLA", "SPCX"],
 };

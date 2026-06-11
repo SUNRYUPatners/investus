@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" style="font-family:Syne,sans-serif">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#170a2e"/>
+  <text x="240" y="28" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="700" letter-spacing="2">SPACEX 신용등급</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">3대 신용평가사 투자등급 획득 — IPO 전 쾌거</text>
+
+  <!-- Investment Grade headline -->
+  <rect x="60" y="68" width="360" height="44" rx="12" fill="#14532d" opacity="0.9"/>
+  <text x="240" y="87" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="700">✅  투자등급 (Investment Grade)</text>
+  <text x="240" y="104" text-anchor="middle" fill="#86efac" font-size="10">S&amp;P · 무디스 · 피치 — 3개사 동시 획득</text>
+
+  <!-- Three agency boxes -->
+  <rect x="20" y="126" width="132" height="110" rx="12" fill="#0f172a"/>
+  <rect x="20" y="126" width="132" height="4" rx="2" fill="#22c55e"/>
+  <text x="86" y="158" text-anchor="middle" fill="#94a3b8" font-size="11">S&amp;P Global</text>
+  <text x="86" y="184" text-anchor="middle" fill="#22c55e" font-size="28" font-weight="800">BBB-</text>
+  <text x="86" y="202" text-anchor="middle" fill="#64748b" font-size="9">투자등급 최저선</text>
+  <text x="86" y="228" text-anchor="middle" fill="#4ade80" font-size="9">Investment Grade ✓</text>
+
+  <rect x="174" y="126" width="132" height="110" rx="12" fill="#0f172a"/>
+  <rect x="174" y="126" width="132" height="4" rx="2" fill="#22c55e"/>
+  <text x="240" y="158" text-anchor="middle" fill="#94a3b8" font-size="11">Moody's</text>
+  <text x="240" y="184" text-anchor="middle" fill="#22c55e" font-size="28" font-weight="800">Baa3</text>
+  <text x="240" y="202" text-anchor="middle" fill="#64748b" font-size="9">투자등급 최저선</text>
+  <text x="240" y="228" text-anchor="middle" fill="#4ade80" font-size="9">Investment Grade ✓</text>
+
+  <rect x="328" y="126" width="132" height="110" rx="12" fill="#0f172a"/>
+  <rect x="328" y="126" width="132" height="4" rx="2" fill="#22c55e"/>
+  <text x="394" y="158" text-anchor="middle" fill="#94a3b8" font-size="11">Fitch</text>
+  <text x="394" y="184" text-anchor="middle" fill="#22c55e" font-size="28" font-weight="800">BBB-</text>
+  <text x="394" y="202" text-anchor="middle" fill="#64748b" font-size="9">투자등급 최저선</text>
+  <text x="394" y="228" text-anchor="middle" fill="#4ade80" font-size="9">Investment Grade ✓</text>
+
+  <!-- Why it matters -->
+  <rect x="20" y="252" width="440" height="100" rx="12" fill="#170a2e"/>
+  <text x="240" y="274" text-anchor="middle" fill="#94a3b8" font-size="10">투자등급이 중요한 이유</text>
+  <text x="36" y="296" fill="#e2e8f0" font-size="11">📊  기관투자자 진입 가능 — 연기금·보험사 의무 기준</text>
+  <text x="36" y="314" fill="#e2e8f0" font-size="11">💸  채권 발행 가능 — 낮은 금리로 자본 조달</text>
+  <text x="36" y="332" fill="#e2e8f0" font-size="11">🚀  IPO 수요 확대 — 안전자산 성격 부여</text>
+  <text x="36" y="350" fill="#c084fc" font-size="11" font-weight="700">→  민간 우주기업 최초로 3대 기관 동시 획득</text>
+
+  <!-- Scale reference -->
+  <rect x="20" y="366" width="440" height="52" rx="10" fill="#0f172a"/>
+  <text x="240" y="386" text-anchor="middle" fill="#94a3b8" font-size="10">등급 기준 (BBB- 이상 = 투자등급)</text>
+  <rect x="36" y="396" width="60" height="14" rx="4" fill="#22c55e"/>
+  <text x="66" y="407" text-anchor="middle" fill="#0a0c10" font-size="8" font-weight="700">AAA~BBB-</text>
+  <text x="110" y="407" fill="#4ade80" font-size="9">투자등급</text>
+  <rect x="200" y="396" width="60" height="14" rx="4" fill="#dc2626"/>
+  <text x="230" y="407" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="700">BB+~D</text>
+  <text x="275" y="407" fill="#f87171" font-size="9">투기등급 (Junk)</text>
+
+  <text x="240" y="432" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>

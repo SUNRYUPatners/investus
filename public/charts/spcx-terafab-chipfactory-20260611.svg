@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" style="font-family:Syne,sans-serif">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#170a2e"/>
+  <text x="240" y="28" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="700" letter-spacing="2">TERAFAB · 반도체 칩 공장</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">SpaceX $11B 텍사스 반도체 제조 콤플렉스</text>
+
+  <!-- Big dollar amount -->
+  <text x="240" y="104" text-anchor="middle" fill="#ffffff" font-size="48" font-weight="800">$11B</text>
+  <text x="240" y="122" text-anchor="middle" fill="#c084fc" font-size="11">반도체 + 칩 제조 콤플렉스</text>
+
+  <!-- Location + MANA confirmation -->
+  <rect x="100" y="134" width="280" height="30" rx="15" fill="#170a2e"/>
+  <text x="240" y="154" text-anchor="middle" fill="#e2e8f0" font-size="11">📍 텍사스 · MANA CEO Christine Fouquet 확인</text>
+
+  <!-- Three partners -->
+  <text x="240" y="186" text-anchor="middle" fill="#94a3b8" font-size="10">참여 기업 (공동 프로젝트)</text>
+
+  <rect x="20" y="194" width="132" height="76" rx="12" fill="#170a2e"/>
+  <rect x="20" y="194" width="132" height="4" rx="2" fill="#c084fc"/>
+  <text x="86" y="224" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="800">SpaceX</text>
+  <text x="86" y="242" text-anchor="middle" fill="#94a3b8" font-size="9">로켓·위성 칩</text>
+  <text x="86" y="258" text-anchor="middle" fill="#64748b" font-size="9">AI 컴퓨트 자급</text>
+
+  <rect x="174" y="194" width="132" height="76" rx="12" fill="#170a2e"/>
+  <rect x="174" y="194" width="132" height="4" rx="2" fill="#00e5a0"/>
+  <text x="240" y="224" text-anchor="middle" fill="#00e5a0" font-size="14" font-weight="800">Tesla</text>
+  <text x="240" y="242" text-anchor="middle" fill="#94a3b8" font-size="9">FSD·로보택시 칩</text>
+  <text x="240" y="258" text-anchor="middle" fill="#64748b" font-size="9">자율주행 AI 칩</text>
+
+  <rect x="328" y="194" width="132" height="76" rx="12" fill="#170a2e"/>
+  <rect x="328" y="194" width="132" height="4" rx="2" fill="#f59e0b"/>
+  <text x="394" y="224" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="800">xAI</text>
+  <text x="394" y="242" text-anchor="middle" fill="#94a3b8" font-size="9">Grok·AI 모델 칩</text>
+  <text x="394" y="258" text-anchor="middle" fill="#64748b" font-size="9">LLM 추론 칩</text>
+
+  <!-- Why it matters -->
+  <rect x="20" y="284" width="440" height="100" rx="12" fill="#0f172a"/>
+  <text x="240" y="304" text-anchor="middle" fill="#94a3b8" font-size="10">TeraFab의 의미</text>
+  <text x="36" y="324" fill="#e2e8f0" font-size="11">🔧  TSMC 의존 탈피 — 미국 내 칩 자급 구조</text>
+  <text x="36" y="342" fill="#e2e8f0" font-size="11">💡  머스크 3개 기업 공동 활용 — 비용 분담</text>
+  <text x="36" y="360" fill="#e2e8f0" font-size="11">🏭  텍사스 AI 기가팩토리와 시너지 (1,000에이커)</text>
+  <text x="36" y="378" fill="#c084fc" font-size="11" font-weight="700">→  SpaceX IPO 후 자체 반도체 수직계열화</text>
+
+  <!-- Source -->
+  <rect x="20" y="398" width="440" height="30" rx="8" fill="#170a2e"/>
+  <text x="240" y="418" text-anchor="middle" fill="#64748b" font-size="10">출처: MANA CEO Christine Fouquet 공식 확인 · Elon Musk Vision</text>
+
+  <text x="240" y="432" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>

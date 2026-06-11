@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" style="font-family:Syne,sans-serif">
+  <rect width="480" height="460" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#170a2e"/>
+  <text x="240" y="28" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700" letter-spacing="3">SPACEX IPO</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">2026년 6월 12일 (금) — 미국증시 상장</text>
+
+  <!-- Big IPO date -->
+  <text x="240" y="106" text-anchor="middle" fill="#ffffff" font-size="52" font-weight="800">6월 12일</text>
+  <rect x="160" y="115" width="160" height="22" rx="11" fill="#c084fc" opacity="0.15"/>
+  <text x="240" y="130" text-anchor="middle" fill="#c084fc" font-size="11" font-weight="700">IPO DAY · 상장 확정</text>
+
+  <!-- 4 stat boxes -->
+  <rect x="20" y="148" width="204" height="78" rx="10" fill="#170a2e"/>
+  <text x="122" y="172" text-anchor="middle" fill="#94a3b8" font-size="10">기업가치 목표</text>
+  <text x="122" y="200" text-anchor="middle" fill="#c084fc" font-size="30" font-weight="800">$1.75T</text>
+  <text x="122" y="216" text-anchor="middle" fill="#64748b" font-size="9">한화 약 2,400조원</text>
+
+  <rect x="256" y="148" width="204" height="78" rx="10" fill="#170a2e"/>
+  <text x="358" y="172" text-anchor="middle" fill="#94a3b8" font-size="10">공모가 (Bloomberg)</text>
+  <text x="358" y="200" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">$25~30</text>
+  <text x="358" y="216" text-anchor="middle" fill="#64748b" font-size="9">5-for-1 분할 후 주당</text>
+
+  <rect x="20" y="238" width="204" height="78" rx="10" fill="#170a2e"/>
+  <text x="122" y="262" text-anchor="middle" fill="#94a3b8" font-size="10">주식 분할</text>
+  <text x="122" y="292" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="800">5 : 1</text>
+  <text x="122" y="308" text-anchor="middle" fill="#64748b" font-size="9">5-for-1 주식분할 승인</text>
+
+  <rect x="256" y="238" width="204" height="78" rx="10" fill="#170a2e"/>
+  <text x="358" y="262" text-anchor="middle" fill="#94a3b8" font-size="10">공모 주식</text>
+  <text x="358" y="286" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="800">555,555,555주</text>
+  <text x="358" y="302" text-anchor="middle" fill="#64748b" font-size="9">Class A 보통주</text>
+  <text x="358" y="315" text-anchor="middle" fill="#c084fc" font-size="9">총 공모 규모 ~$14B</text>
+
+  <!-- Ownership -->
+  <rect x="20" y="328" width="440" height="68" rx="10" fill="#170a2e"/>
+  <text x="240" y="348" text-anchor="middle" fill="#94a3b8" font-size="10">주주 구성 (IPO 전 · PitchBook)</text>
+  <text x="72" y="374" text-anchor="middle" fill="#e2e8f0" font-size="10">일론 머스크</text>
+  <text x="72" y="388" text-anchor="middle" fill="#c084fc" font-size="16" font-weight="800">42%</text>
+  <text x="188" y="374" text-anchor="middle" fill="#e2e8f0" font-size="10">Founders Fund</text>
+  <text x="188" y="388" text-anchor="middle" fill="#c084fc" font-size="16" font-weight="800">10.4%</text>
+  <text x="316" y="374" text-anchor="middle" fill="#e2e8f0" font-size="10">Google Ventures</text>
+  <text x="316" y="388" text-anchor="middle" fill="#c084fc" font-size="16" font-weight="800">7.4%</text>
+  <text x="428" y="374" text-anchor="middle" fill="#e2e8f0" font-size="10">기타</text>
+  <text x="428" y="388" text-anchor="middle" fill="#c084fc" font-size="16" font-weight="800">40%</text>
+
+  <!-- Credit rating badge -->
+  <rect x="20" y="408" width="440" height="36" rx="8" fill="#14532d" opacity="0.9"/>
+  <text x="240" y="430" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="700">✅  3대 신용평가사 투자등급 획득 — S&amp;P · 무디스 · 피치</text>
+
+  <text x="240" y="453" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>

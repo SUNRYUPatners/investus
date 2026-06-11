@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580" style="font-family:Syne,sans-serif">
+  <rect width="480" height="580" fill="#0a0c10"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="480" height="60" fill="#0f0f1a"/>
+  <text x="240" y="26" text-anchor="middle" fill="#00e5a0" font-size="14" font-weight="800" letter-spacing="2">📋 6/11 시장 한장 요약</text>
+  <text x="240" y="46" text-anchor="middle" fill="#94a3b8" font-size="10">SpaceX IPO D-1 · Tesla FSD Level 4 · CPI 2.9%</text>
+
+  <!-- Row 1: SpaceX IPO -->
+  <rect x="14" y="70" width="220" height="112" rx="12" fill="#170a2e"/>
+  <rect x="14" y="70" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="124" y="92" text-anchor="middle" fill="#c084fc" font-size="10" font-weight="700">🚀  SpaceX IPO</text>
+  <text x="124" y="114" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">6/12</text>
+  <text x="124" y="130" text-anchor="middle" fill="#c084fc" font-size="11">상장 확정 (내일)</text>
+  <text x="124" y="148" text-anchor="middle" fill="#94a3b8" font-size="9">$1.75T 목표 · $25~30/주</text>
+  <text x="124" y="163" text-anchor="middle" fill="#64748b" font-size="8">5-for-1 주식분할 · 555M주 공모</text>
+  <text x="124" y="175" text-anchor="middle" fill="#4ade80" font-size="8">✅  3대 신용평가사 투자등급</text>
+
+  <!-- Row 1: SpaceX Valuation -->
+  <rect x="246" y="70" width="220" height="112" rx="12" fill="#170a2e"/>
+  <rect x="246" y="70" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="356" y="92" text-anchor="middle" fill="#c084fc" font-size="10" font-weight="700">🚀  SpaceX 기업가치</text>
+  <text x="356" y="114" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="800">$1.75T</text>
+  <text x="356" y="130" text-anchor="middle" fill="#94a3b8" font-size="9">12개 방산합산 $1.34T 초과</text>
+  <text x="356" y="148" text-anchor="middle" fill="#c084fc" font-size="11">+$411B · +31%</text>
+  <text x="356" y="163" text-anchor="middle" fill="#64748b" font-size="8">GE+Boeing+RTX+Northrop 합산보다 큼</text>
+  <text x="356" y="175" text-anchor="middle" fill="#64748b" font-size="8">Musk 82.4% 의결권 보유</text>
+
+  <!-- Row 2: Tesla Robotaxi -->
+  <rect x="14" y="194" width="220" height="112" rx="12" fill="#0a1f14"/>
+  <rect x="14" y="194" width="220" height="4" rx="2" fill="#00e5a0"/>
+  <text x="124" y="216" text-anchor="middle" fill="#00e5a0" font-size="10" font-weight="700">🚗  Tesla 로보택시</text>
+  <text x="124" y="246" text-anchor="middle" fill="#ffffff" font-size="44" font-weight="800">89</text>
+  <text x="124" y="262" text-anchor="middle" fill="#94a3b8" font-size="10">대 무감독 운행 중</text>
+  <text x="124" y="278" text-anchor="middle" fill="#64748b" font-size="8">전량 2026 Model Y · 텍사스 오스틴</text>
+  <text x="124" y="298" text-anchor="middle" fill="#00e5a0" font-size="8">7월 공식 상업 배포 예정</text>
+
+  <!-- Row 2: Tesla FSD -->
+  <rect x="246" y="194" width="220" height="112" rx="12" fill="#0a1f14"/>
+  <rect x="246" y="194" width="220" height="4" rx="2" fill="#00e5a0"/>
+  <text x="356" y="216" text-anchor="middle" fill="#00e5a0" font-size="10" font-weight="700">🚗  Tesla FSD</text>
+  <text x="356" y="238" text-anchor="middle" fill="#00e5a0" font-size="18" font-weight="800">Level 4 인정</text>
+  <text x="356" y="254" text-anchor="middle" fill="#94a3b8" font-size="9">Piper Sandler "자율주행 해결"</text>
+  <text x="356" y="270" text-anchor="middle" fill="#e2e8f0" font-size="9">덴마크 · 벨기에 유럽 승인</text>
+  <text x="356" y="286" text-anchor="middle" fill="#64748b" font-size="8">누적 주행거리 170B 마일 (2026)</text>
+  <text x="356" y="298" text-anchor="middle" fill="#64748b" font-size="8">네덜란드 충돌 3.5배↓ 데이터</text>
+
+  <!-- Row 3: SpaceX Tech -->
+  <rect x="14" y="318" width="220" height="106" rx="12" fill="#170a2e"/>
+  <rect x="14" y="318" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="124" y="340" text-anchor="middle" fill="#c084fc" font-size="10" font-weight="700">🚀  SpaceX 기술</text>
+  <text x="124" y="360" text-anchor="middle" fill="#e2e8f0" font-size="11">Starship 10회 = Falcon 9 23회</text>
+  <text x="124" y="376" text-anchor="middle" fill="#64748b" font-size="9">1회 480위성 발사 · 역대 최대</text>
+  <text x="124" y="392" text-anchor="middle" fill="#e2e8f0" font-size="11">TeraFab $11B 칩공장</text>
+  <text x="124" y="408" text-anchor="middle" fill="#64748b" font-size="9">SpaceX·Tesla·xAI 공동 · 텍사스</text>
+  <text x="124" y="420" text-anchor="middle" fill="#64748b" font-size="8">MANA CEO Christine Fouquet 확인</text>
+
+  <!-- Row 3: Macro -->
+  <rect x="246" y="318" width="220" height="106" rx="12" fill="#1a0a0a"/>
+  <rect x="246" y="318" width="220" height="4" rx="2" fill="#fb923c"/>
+  <text x="356" y="340" text-anchor="middle" fill="#fb923c" font-size="10" font-weight="700">📊  매크로</text>
+  <text x="356" y="362" text-anchor="middle" fill="#fb923c" font-size="24" font-weight="800">CPI 2.9%</text>
+  <text x="356" y="378" text-anchor="middle" fill="#94a3b8" font-size="9">5월 · 4월 이후 최고 · 금리 인상 우려</text>
+  <text x="356" y="396" text-anchor="middle" fill="#ff4d6d" font-size="11">유가 $90 (+2.4%)</text>
+  <text x="356" y="412" text-anchor="middle" fill="#94a3b8" font-size="9">미국-이란 갈등 심화 · 트럼프 강경</text>
+  <text x="356" y="424" text-anchor="middle" fill="#64748b" font-size="8">S&amp;P 500 · NASDAQ 낙폭 회복</text>
+
+  <!-- Footer -->
+  <rect x="14" y="436" width="452" height="50" rx="12" fill="#0f0f1a"/>
+  <text x="240" y="456" text-anchor="middle" fill="#94a3b8" font-size="10">오늘의 핵심 메시지</text>
+  <text x="240" y="474" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">SpaceX IPO D-1 · 내일 역사적 상장</text>
+  <text x="240" y="490" text-anchor="middle" fill="#64748b" font-size="9">Tesla FSD 유럽 확산 · CPI 인플레 압박 지속</text>
+
+  <text x="240" y="570" text-anchor="middle" fill="#334155" font-size="9">investus.kr · 2026.06.11</text>
+</svg>
