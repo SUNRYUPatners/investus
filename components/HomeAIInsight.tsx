@@ -136,6 +136,7 @@ export function HomeAIInsight() {
   async function runAnalysis(isIntraday: boolean, closeDay?: string) {
     if (loading || holdings.length === 0 || quotes.length === 0) return;
     setLoading(true);
+    setDisplayAnswer(null);
     try {
       const res = await fetch("/api/portfolio-ai", {
         method:  "POST",
@@ -146,22 +147,30 @@ export function HomeAIInsight() {
           fetchNews: true,
         }),
       });
-      const d = await res.json() as { answer?: string };
-      const a = d.answer ?? null;
-      if (a) {
-        setDisplayAnswer(a);
-        if (isIntraday) {
-          const n = bumpIntradayCount();
-          setIntradayUsed(n);
-        } else {
-          const day = closeDay ?? lastMarketCloseDate();
-          setAnalysisDate(day);
-          writeCloseCache(day, a); // 캐시 저장 — 새로고침해도 재분석 안 함
-        }
+      const d = await res.json() as { answer?: string; error?: string };
+      // 에러 응답이면 캐시하지 않고 null 유지
+      if (d.error || !d.answer || d.answer.length < 30) {
+        setDisplayAnswer("__error__");
         setExpanded(true);
+        return;
       }
-    } catch { /* ignore */ }
-    finally   { setLoading(false); }
+      const a = d.answer;
+      setDisplayAnswer(a);
+      if (isIntraday) {
+        const n = bumpIntradayCount();
+        setIntradayUsed(n);
+      } else {
+        const day = closeDay ?? lastMarketCloseDate();
+        setAnalysisDate(day);
+        writeCloseCache(day, a); // 성공 결과만 캐시 — 새로고침해도 재분석 안 함
+      }
+      setExpanded(true);
+    } catch {
+      setDisplayAnswer("__error__");
+      setExpanded(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   function handleRefresh() {
@@ -213,7 +222,7 @@ export function HomeAIInsight() {
                     style={{ background: "var(--mint)", animationDelay: `${d}ms` }} />
                 ))}
               </div>
-            ) : displayAnswer ? (
+            ) : displayAnswer && displayAnswer !== "__error__" ? (
               <p className="text-[12px] leading-relaxed line-clamp-2" style={{ color: "var(--muted)" }}>
                 {displayAnswer}
               </p>
@@ -231,6 +240,15 @@ export function HomeAIInsight() {
                     <div key={d} className="w-1.5 h-1.5 rounded-full animate-bounce"
                       style={{ background: "var(--mint)", animationDelay: `${d}ms` }} />
                   ))}
+                </div>
+              ) : displayAnswer === "__error__" ? (
+                <div className="flex items-center justify-between py-1">
+                  <p className="text-[12px]" style={{ color: "var(--muted)" }}>분석 중 오류가 발생했어요.</p>
+                  <button onClick={() => runAnalysis(false, lastMarketCloseDate())}
+                    className="text-[11px] font-bold px-3 py-1 rounded-lg"
+                    style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+                    다시 시도
+                  </button>
                 </div>
               ) : displayAnswer ? (
                 <p className="text-[12px] leading-relaxed whitespace-pre-line" style={{ color: "var(--text)" }}>

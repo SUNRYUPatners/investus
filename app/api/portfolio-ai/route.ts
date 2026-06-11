@@ -107,12 +107,12 @@ ${rows}
 export async function POST(req: NextRequest) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ answer: "AI 키가 설정되지 않았습니다." }, { status: 503 });
+    return NextResponse.json({ error: "no_api_key" }, { status: 503 });
   }
 
   let body: PortfolioCtx;
   try { body = await req.json(); }
-  catch { return NextResponse.json({ answer: "잘못된 요청입니다." }, { status: 400 }); }
+  catch { return NextResponse.json({ error: "bad_request" }, { status: 400 }); }
 
   if (!body.question?.trim()) {
     return NextResponse.json({ answer: "질문을 입력해주세요." });
@@ -189,10 +189,11 @@ ${portfolioSummary}${newsSection}
       }),
     });
     const data = await res.json() as { content?: { text: string }[]; error?: { message: string } };
-    if (data.error) return NextResponse.json({ answer: "AI 응답 오류가 발생했습니다." }, { status: 500 });
-    const answer = data.content?.[0]?.text?.trim() ?? "응답을 받지 못했습니다.";
+    if (!res.ok || data.error) return NextResponse.json({ error: data.error?.message ?? "api_error" }, { status: 500 });
+    const answer = data.content?.[0]?.text?.trim();
+    if (!answer) return NextResponse.json({ error: "empty_response" }, { status: 500 });
     return NextResponse.json({ answer });
   } catch {
-    return NextResponse.json({ answer: "네트워크 오류가 발생했습니다." }, { status: 500 });
+    return NextResponse.json({ error: "network_error" }, { status: 500 });
   }
 }
