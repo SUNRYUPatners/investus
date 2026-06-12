@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard } from "lucide-react";
 import { Header } from "@/components/Header";
 import { contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
+import { getSupabase } from "@/lib/supabase";
 
 const ACCOUNT = { bank: "카카오뱅크", number: "3333-22-2070396", holder: "류현우" };
 
@@ -466,16 +467,28 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
     setLoading(true);
     setError(false);
     setImgSrc(null);
-    fetch(`/api/creator/pdf-page?path=${encodeURIComponent(content.pdfPath)}&page=${page}`)
-      .then((r) => {
-        if (!r.ok) throw new Error("fetch failed");
+
+    (async () => {
+      try {
+        const { data: { session } } = await getSupabase().auth.getSession();
+        const headers: HeadersInit = session?.access_token
+          ? { Authorization: `Bearer ${session.access_token}` }
+          : {};
+        const r = await fetch(
+          `/api/creator/pdf-page?path=${encodeURIComponent(content.pdfPath!)}&page=${page}`,
+          { headers }
+        );
+        if (!r.ok) throw new Error(`${r.status}`);
         const tp = r.headers.get("X-Total-Pages");
         if (tp) setTotalPages(parseInt(tp, 10));
-        return r.blob();
-      })
-      .then((blob) => setImgSrc(URL.createObjectURL(blob)))
-      .catch(() => setError(true))
-      .finally(() => setLoading(false));
+        const blob = await r.blob();
+        setImgSrc(URL.createObjectURL(blob));
+      } catch {
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    })();
   }, [hasPdf, content.pdfPath, page]);
 
   // revoke previous object URL to avoid memory leak
