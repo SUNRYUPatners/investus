@@ -430,18 +430,50 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
   );
 }
 
+function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClose: () => void }) {
+  const paragraphs = (content.body ?? "").split(/\n+/).filter(Boolean);
+  return (
+    <div className="fixed inset-0 z-[200] flex flex-col" style={{ background: "var(--bg)" }}>
+      {/* Header */}
+      <div className="flex items-center gap-3 px-4 py-3 border-b flex-shrink-0" style={{ borderColor: "var(--border)" }}>
+        <button onClick={onClose} className="p-1.5 rounded-lg" style={{ background: "var(--card)" }}>
+          <X className="w-4 h-4" style={{ color: "var(--text)" }} />
+        </button>
+        <div className="flex-1 min-w-0">
+          <p className="text-xs font-bold truncate" style={{ color: "var(--text)" }}>{content.title}</p>
+          <p className="text-[10px]" style={{ color: "var(--muted)" }}>전자책</p>
+        </div>
+      </div>
+      {/* Body */}
+      <div className="flex-1 overflow-y-auto px-5 py-6 max-w-2xl w-full mx-auto">
+        {paragraphs.length > 0 ? (
+          paragraphs.map((p, i) => (
+            <p key={i} className="text-sm leading-loose mb-4" style={{ color: "var(--text)" }}>
+              {p}
+            </p>
+          ))
+        ) : (
+          <p className="text-sm text-center mt-20" style={{ color: "var(--muted)" }}>내용이 없습니다.</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; locked: boolean; onUnlock: () => void }) {
   const [showGate, setShowGate] = useState(false);
   const [opened, setOpened] = useState(false);
+  const [showReader, setShowReader] = useState(false);
 
   function handleOpen() {
-    if (opened) return;
+    if (opened) { setShowReader(true); return; }
     setShowGate(true);
   }
 
   function handleConfirm() {
     setShowGate(false);
     setOpened(true);
+    setShowReader(true);
   }
 
   return (
@@ -452,6 +484,9 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
         onConfirm={handleConfirm}
         onClose={() => setShowGate(false)}
       />
+    )}
+    {showReader && content.type === "book" && (
+      <EbookReaderModal content={content} onClose={() => setShowReader(false)} />
     )}
     <div className="rounded-2xl border overflow-hidden"
       style={{ background: "var(--card)", borderColor: locked ? "rgba(99,102,241,0.2)" : "var(--border)" }}>
@@ -506,20 +541,13 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
               <Eye className="w-3 h-3" />{content.viewCount.toLocaleString()}
             </span>
             {!locked && content.type === "book" && (
-              opened ? (
-                <span className="text-[10px] px-2 py-0.5 rounded-lg font-semibold"
-                  style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
-                  ✓ 열람 완료
-                </span>
-              ) : (
-                <button
-                  onClick={handleOpen}
-                  className="text-[10px] px-2.5 py-1 rounded-lg font-bold transition-opacity hover:opacity-80 active:scale-95"
-                  style={{ background: "rgba(192,132,252,0.15)", color: "rgba(192,132,252,0.95)", border: "1px solid rgba(192,132,252,0.25)" }}
-                >
-                  읽기
-                </button>
-              )
+              <button
+                onClick={handleOpen}
+                className="text-[10px] px-2.5 py-1 rounded-lg font-bold transition-opacity hover:opacity-80 active:scale-95"
+                style={{ background: opened ? "rgba(0,229,160,0.12)" : "rgba(192,132,252,0.15)", color: opened ? "var(--mint)" : "rgba(192,132,252,0.95)", border: `1px solid ${opened ? "rgba(0,229,160,0.25)" : "rgba(192,132,252,0.25)"}` }}
+              >
+                {opened ? "다시 읽기" : "읽기"}
+              </button>
             )}
           </div>
         </div>

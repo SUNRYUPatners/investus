@@ -245,9 +245,9 @@ export default function CreatorDashboardPage() {
 
         {/* Back */}
         <div className="pt-4 pb-2">
-          <Link href="/wall" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" />종목이야기
-          </Link>
+          <button onClick={() => router.back()} className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
+            <ChevronLeft className="w-3.5 h-3.5" />뒤로가기
+          </button>
         </div>
 
         {/* ── Profile card ── */}

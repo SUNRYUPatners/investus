@@ -109,9 +109,16 @@ export async function POST(req: NextRequest) {
   };
 
   // Upsert (re-submission resets)
-  const { error } = await getSupabase()
+  let { error } = await getSupabase()
     .from("creator_verifications")
     .upsert(upsertData, { onConflict: "phone" });
+
+  // Fallback: optional columns may not exist yet — retry with base fields only
+  if (error) {
+    const baseData = { phone: phoneStr, nickname: nicknameStr, avatar: avatarStr, bio: bioStr, status, submitted_at: now,
+      ...(status === "approved" && { reviewed_at: now }) };
+    ({ error } = await getSupabase().from("creator_verifications").upsert(baseData, { onConflict: "phone" }));
+  }
 
   if (error) return NextResponse.json({ error: "저장 실패" }, { status: 500 });
 
