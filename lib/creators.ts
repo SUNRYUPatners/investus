@@ -19,6 +19,7 @@ export type CreatorContent = {
   likeCount: number
   viewCount: number
   isPremium?: boolean // requires subscription when creator.subscriptionEnabled
+  body?: string       // ebook full text content
 }
 
 export type Creator = {

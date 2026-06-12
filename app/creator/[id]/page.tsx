@@ -447,7 +447,7 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
       {/* Body */}
       <div className="flex-1 overflow-y-auto px-5 py-6 max-w-2xl w-full mx-auto">
         {paragraphs.length > 0 ? (
-          paragraphs.map((p, i) => (
+          paragraphs.map((p: string, i: number) => (
             <p key={i} className="text-sm leading-loose mb-4" style={{ color: "var(--text)" }}>
               {p}
             </p>
