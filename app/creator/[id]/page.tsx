@@ -76,7 +76,12 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
             followerCount: 0,
             subscriptionEnabled: d.subscription_enabled ?? false,
             subscriptionPrice: d.subscription_price ?? undefined,
-            portfolio: d.top_holdings ?? [],
+            portfolio: (d.top_holdings ?? []).map((h: Record<string, unknown>) => ({
+              symbol: String(h.symbol ?? ""),
+              name: String(h.name ?? ""),
+              allocation: Number(h.allocation ?? 0),
+              avgReturn: Number(h.returnPct ?? h.avgReturn ?? 0),
+            })),
             contents: [],
           };
           setCreator(mapped);

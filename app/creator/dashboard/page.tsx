@@ -16,6 +16,7 @@ type ContentType = "post" | "report" | "lecture" | "book";
 type MyContent = {
   id: string;
   type: ContentType;
+  thumbnail: string;
   title: string;
   description: string;
   body: string;
@@ -206,6 +207,7 @@ export default function CreatorDashboardPage() {
     const item: MyContent = {
       id: Date.now().toString(),
       type: wType,
+      thumbnail: TYPE_EMOJI[wType],
       title: wTitle.trim(),
       description: wDesc.trim(),
       body: wBody.trim(),

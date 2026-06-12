@@ -499,7 +499,14 @@ export default function WallPage() {
   const { user, verify } = useAuth();
   const t  = useLocale();
   const w  = t.wall;
-  const [mainTab, setMainTab]             = useState<MainTab>("discussion");
+  const [mainTab, setMainTabRaw]          = useState<MainTab>(() => {
+    if (typeof window === "undefined") return "discussion";
+    return (sessionStorage.getItem("wall_main_tab") as MainTab) || "discussion";
+  });
+  const setMainTab = (tab: MainTab) => {
+    try { sessionStorage.setItem("wall_main_tab", tab); } catch { /* ignore */ }
+    setMainTabRaw(tab);
+  };
   const [selected, setSelected]           = useState(computeDefaultSymbol);
   const [liked, setLiked]                 = useState<Set<number>>(new Set());
   const [showVerify, setShowVerify]       = useState(false);

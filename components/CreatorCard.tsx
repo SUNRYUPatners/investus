@@ -14,7 +14,7 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
   const medalColor = rank != null && rank <= 3 ? RANK_COLORS[rank - 1] : null;
 
   return (
-    <Link href={`/creator/${id}`} className="block">
+    <Link href={`/creator/${encodeURIComponent(id)}`} className="block">
       <div className="rounded-2xl border overflow-hidden transition-all active:scale-[0.98]"
         style={{ background: "var(--card)", borderColor: medal ? `${medalColor}44` : "var(--border)" }}>
         {/* Cover gradient bar */}
