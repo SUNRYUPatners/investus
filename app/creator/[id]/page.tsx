@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useState, useEffect } from "react";
+import { use, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard } from "lucide-react";
@@ -459,8 +459,12 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
   const [imgSrc, setImgSrc] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const touchRef = useRef<{ x: number; y: number } | null>(null);
   const paragraphs = (content.body ?? "").split(/\n+/).filter(Boolean);
   const hasPdf = !!content.pdfPath;
+
+  const goNext = useCallback(() => setPage(p => Math.min(totalPages || 1, p + 1)), [totalPages]);
+  const goPrev = useCallback(() => setPage(p => Math.max(1, p - 1)), []);
 
   useEffect(() => {
     if (!hasPdf || !content.pdfPath) return;
@@ -491,11 +495,43 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
     })();
   }, [hasPdf, content.pdfPath, page]);
 
-  // revoke previous object URL to avoid memory leak
   useEffect(() => {
     return () => { if (imgSrc) URL.revokeObjectURL(imgSrc); };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [imgSrc]);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touchRef.current = { x: t.clientX, y: t.clientY };
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!touchRef.current) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchRef.current.x;
+    const dy = t.clientY - touchRef.current.y;
+    touchRef.current = null;
+
+    // tap (barely moved) → left half = prev, right half = next
+    if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+      if (t.clientX > window.innerWidth / 2) goNext();
+      else goPrev();
+      return;
+    }
+    // swipe up (dy < 0) → next, swipe down (dy > 0) → prev
+    if (Math.abs(dy) > 50 && Math.abs(dy) > Math.abs(dx)) {
+      if (dy < 0) goNext();
+      else goPrev();
+    }
+  };
+
+  // desktop: click left/right half
+  const onBodyClick = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.closest("button")) return;
+    if (e.clientX > window.innerWidth / 2) goNext();
+    else goPrev();
+  };
 
   return (
     <div className="fixed inset-0 z-[200] flex flex-col" style={{ background: "var(--bg)" }}>
@@ -513,34 +549,43 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
       </div>
       {/* Body */}
       {hasPdf ? (
-        <div className="flex-1 overflow-y-auto flex flex-col items-center">
+        <div
+          className="flex-1 relative overflow-hidden flex items-center justify-center select-none"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+          onClick={onBodyClick}
+        >
           {loading ? (
-            <div className="flex-1 flex items-center justify-center w-full mt-20">
-              <div className="w-6 h-6 rounded-full border-2 animate-spin" style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
-            </div>
+            <div className="w-6 h-6 rounded-full border-2 animate-spin" style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
           ) : error ? (
-            <div className="flex-1 flex items-center justify-center w-full mt-20">
-              <p className="text-sm" style={{ color: "var(--muted)" }}>PDF를 불러올 수 없습니다.</p>
-            </div>
+            <p className="text-sm" style={{ color: "var(--muted)" }}>PDF를 불러올 수 없습니다.</p>
           ) : imgSrc ? (
-            <img src={imgSrc} alt={`${content.title} ${page}p`} className="w-full max-w-2xl" />
+            <img
+              src={imgSrc}
+              alt={`${content.title} ${page}p`}
+              className="w-full max-w-2xl max-h-full object-contain"
+              draggable={false}
+            />
           ) : null}
-          {/* Page navigation */}
-          {totalPages > 1 && (
-            <div className="flex items-center gap-4 py-4 mt-2 flex-shrink-0">
+
+          {/* 페이지 표시 + 버튼 (하단 고정) */}
+          {totalPages > 1 && !loading && (
+            <div className="absolute bottom-5 left-0 right-0 flex items-center justify-center gap-4 pointer-events-none">
               <button
-                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                onClick={(e) => { e.stopPropagation(); goPrev(); }}
                 disabled={page <= 1}
-                className="px-4 py-2 rounded-xl text-xs font-bold disabled:opacity-30 transition-opacity"
+                className="pointer-events-auto px-3 py-1.5 rounded-xl text-xs font-bold disabled:opacity-20"
                 style={{ background: "var(--card)", color: "var(--text)" }}
               >
                 ← 이전
               </button>
-              <span className="text-xs" style={{ color: "var(--muted)" }}>{page} / {totalPages}</span>
+              <span className="text-[11px] px-2.5 py-1 rounded-full pointer-events-none" style={{ background: "var(--card)", color: "var(--muted)" }}>
+                {page} / {totalPages}
+              </span>
               <button
-                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                onClick={(e) => { e.stopPropagation(); goNext(); }}
                 disabled={page >= totalPages}
-                className="px-4 py-2 rounded-xl text-xs font-bold disabled:opacity-30 transition-opacity"
+                className="pointer-events-auto px-3 py-1.5 rounded-xl text-xs font-bold disabled:opacity-20"
                 style={{ background: "var(--card)", color: "var(--text)" }}
               >
                 다음 →

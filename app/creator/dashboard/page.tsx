@@ -85,6 +85,14 @@ export default function CreatorDashboardPage() {
   const [wPdfFile,     setWPdfFile]     = useState<File | null>(null);
   const [wUploading,   setWUploading]   = useState(false);
 
+  // Content edit form
+  const [editingContent, setEditingContent] = useState<MyContent | null>(null);
+  const [ceTitle,        setCeTitle]        = useState("");
+  const [ceDesc,         setCeDesc]         = useState("");
+  const [ceBody,         setCeBody]         = useState("");
+  const [cePdfFile,      setCePdfFile]      = useState<File | null>(null);
+  const [ceUploading,    setCeUploading]    = useState(false);
+
   // Edit form
   const [eNickname,         setENickname]         = useState("");
   const [eBio,              setEBio]              = useState("");
@@ -260,6 +268,53 @@ export default function CreatorDashboardPage() {
     saveContents(next);
     setContents(next);
     syncToStorage(next);
+  };
+
+  const openContentEdit = (c: MyContent) => {
+    setEditingContent(c);
+    setCeTitle(c.title);
+    setCeDesc(c.description ?? "");
+    setCeBody(c.body ?? "");
+    setCePdfFile(null);
+  };
+
+  const handleSaveContentEdit = async () => {
+    if (!editingContent || !ceTitle.trim()) return;
+    setCeUploading(true);
+    let pdfPath = editingContent.pdfPath;
+
+    if (editingContent.type === "book" && cePdfFile) {
+      try {
+        const { data: { session } } = await getSupabase().auth.getSession();
+        const headers: HeadersInit = session?.access_token
+          ? { "Content-Type": "application/json", Authorization: `Bearer ${session.access_token}` }
+          : { "Content-Type": "application/json" };
+        const uploadRes = await fetch("/api/creator/upload-pdf", {
+          method: "POST",
+          headers,
+          body: JSON.stringify({ contentId: editingContent.id }),
+        });
+        const uploadData = await uploadRes.json() as { signedUrl?: string; path?: string };
+        if (uploadData.signedUrl && uploadData.path) {
+          await fetch(uploadData.signedUrl, { method: "PUT", body: cePdfFile, headers: { "Content-Type": "application/pdf" } });
+          pdfPath = uploadData.path;
+        }
+      } catch { /* ignore upload failure */ }
+    }
+
+    const updated: MyContent = {
+      ...editingContent,
+      title: ceTitle.trim(),
+      description: ceDesc.trim(),
+      body: ceBody.trim(),
+      pdfPath,
+    };
+    const next = contents.map((c) => c.id === updated.id ? updated : c);
+    saveContents(next);
+    setContents(next);
+    syncToStorage(next);
+    setEditingContent(null);
+    setCeUploading(false);
   };
 
   const handleSaveEdit = () => {
@@ -564,6 +619,11 @@ export default function CreatorDashboardPage() {
                       <span className="flex items-center gap-0.5 text-[10px]" style={{ color: "var(--muted)" }}>
                         <Eye className="w-3 h-3" />{c.viewCount.toLocaleString()}
                       </span>
+                      <button onClick={() => openContentEdit(c)}
+                        className="flex items-center gap-0.5 text-[10px] active:opacity-70 transition-opacity"
+                        style={{ color: "var(--mint)" }}>
+                        수정
+                      </button>
                       <button onClick={() => handleDelete(c.id)}
                         className="flex items-center gap-0.5 text-[10px] active:opacity-70 transition-opacity"
                         style={{ color: "#ef4444" }}>
@@ -669,6 +729,55 @@ export default function CreatorDashboardPage() {
                 모든 콘텐츠는 무료로 공개됩니다. 조회수 기반 광고 수익이 정산됩니다.
               </p>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Content edit modal ── */}
+      {editingContent && (
+        <div className="fixed inset-0 z-50 flex flex-col" style={{ background: "var(--bg)" }}>
+          <div className="flex items-center justify-between px-4 py-3 border-b flex-shrink-0" style={{ borderColor: "var(--border)" }}>
+            <button onClick={() => setEditingContent(null)}>
+              <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
+            </button>
+            <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>콘텐츠 수정</h2>
+            <button onClick={handleSaveContentEdit} disabled={!ceTitle.trim() || ceUploading}
+              className="text-xs font-bold px-3 py-1.5 rounded-lg disabled:opacity-40 active:opacity-70 transition-opacity"
+              style={{ background: "var(--mint)", color: "#000" }}>
+              {ceUploading ? "저장 중…" : "저장"}
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto p-4">
+            <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>제목</p>
+            <input value={ceTitle} onChange={(e) => setCeTitle(e.target.value)} maxLength={60}
+              className="w-full px-4 py-3 rounded-xl border mb-4 text-sm outline-none"
+              style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }} />
+
+            <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>한 줄 설명</p>
+            <input value={ceDesc} onChange={(e) => setCeDesc(e.target.value)} maxLength={100}
+              className="w-full px-4 py-3 rounded-xl border mb-4 text-sm outline-none"
+              style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }} />
+
+            <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>본문</p>
+            <textarea value={ceBody} onChange={(e) => setCeBody(e.target.value)} rows={8}
+              className="w-full px-4 py-3 rounded-xl border mb-4 text-sm outline-none resize-none"
+              style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }} />
+
+            {editingContent.type === "book" && (
+              <div>
+                <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>
+                  PDF 파일 교체 {editingContent.pdfPath ? "(선택 — 비워두면 기존 파일 유지)" : ""}
+                </p>
+                <label className="flex items-center gap-2 px-4 py-3 rounded-xl border cursor-pointer active:opacity-70"
+                  style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <span className="text-sm" style={{ color: cePdfFile ? "var(--mint)" : "var(--muted)" }}>
+                    {cePdfFile ? `📎 ${cePdfFile.name}` : "PDF 파일 선택"}
+                  </span>
+                  <input type="file" accept="application/pdf" className="hidden"
+                    onChange={(e) => setCePdfFile(e.target.files?.[0] ?? null)} />
+                </label>
+              </div>
+            )}
           </div>
         </div>
       )}
