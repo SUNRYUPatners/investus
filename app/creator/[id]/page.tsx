@@ -41,7 +41,9 @@ function saveSubscribed(creatorId: string, val: boolean) {
 }
 
 export default function CreatorProfilePage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+  const { id: rawId } = use(params);
+  // Next.js may or may not URL-decode dynamic segments; normalise here
+  const id = (() => { try { return decodeURIComponent(rawId); } catch { return rawId; } })();
   const router = useRouter();
   const [creator, setCreator] = useState<Creator | null>(null);
   const [apiContents, setApiContents] = useState<CreatorContent[]>([]);
