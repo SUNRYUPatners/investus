@@ -27,10 +27,11 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T12J = _now;                        // 오늘(6/12) 포스트
-const T11J = _now - 24 * 3600_000;        // 어제(6/11)
-const T10J = _now - 48 * 3600_000;        // 그저께(6/10)
-export const LATEST_UPDATE = T12J;        // NEW 배지 기준
+const T13J = _now;                        // 오늘(6/13) 포스트
+const T12J = _now - 24 * 3600_000;        // 어제(6/12)
+const T11J = _now - 48 * 3600_000;        // 그저께(6/11)
+const T10J = _now - 72 * 3600_000;        // 3일전(6/10)
+export const LATEST_UPDATE = T13J;        // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -49,6 +50,33 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-13 — SPCX 첫날 +27.91% $172.68 / 시총 $2.26T #6위 / Ron Baron $1B /
+  //              Colossus 1 Anthropic 임대 / TSLA FSD v14.3.4 / Semi 5대 /
+  //              유럽 5,100대 +22.8% / NVDA AI 100배 필요
+  // ════════════════════════════════════════════════════════════════════════
+
+  // SPCX — 상장 첫날 결과 ────────────────────────────────────────────────
+  { id: 219, symbol: "SPCX", nickname: "익명_4721", holdingLabel: "관심종목",
+    content: "SPCX 첫날 $172.68 +27.91%로 마감됐네요. 선물 $167 예상했는데 실제는 더 높게 나왔어요. $75B 역대 최대 IPO인데 첫날 이렇게 마무리되니까 진짜 역사적인 날이 맞는 것 같아요. Ron Baron이 $1B 넣고 평생 안 판다고 한 게 이제 실제 행동으로 확인됐네요. 시총 $2.26T로 글로벌 6위까지 올라간 거 보면서 SpaceX가 이미 완전히 다른 레벨에 있다는 게 실감나요.",
+    createdAt: T13J - 8*60_000, likes: 389, comments: 4 },
+  { id: 220, symbol: "SPCX", nickname: "익명_8293", holdingLabel: "관심종목",
+    content: "Colossus 1 Anthropic 임대가 진짜 영리한 결정이에요. Tesla가 연결하다 지연 생겼을 때 그냥 놀리는 게 아니라 바로 Anthropic한테 임대하는 거잖아요. SpaceX가 로켓+Starlink+AI 인프라 임대로 이미 3중 수익 구조를 완성했는데 $21.5B 계약이 올해 시작한다는 것도 놀랍고, Colossus 2·3은 자체 AI 훈련에 쓴다는 것도 전략적이에요. 이 회사가 AI 인프라 플레이어로도 포지셔닝하고 있는 게 확실해졌어요.",
+    createdAt: T13J - 25*60_000, likes: 276, comments: 3 },
+
+  // TSLA — FSD v14.3.4 / Semi ──────────────────────────────────────────
+  { id: 221, symbol: "TSLA", nickname: "익명_5841", holdingLabel: "200주 보유",
+    content: "Tesla FSD v14.3.4 MLIR 컴파일러 재작성이 생각보다 훨씬 큰 업데이트예요. 반응속도 20% 향상이 단순 수치가 아닌 이유가 이미 사람보다 2.5배 빠른데 3배로 올라가는 거잖아요. 컴파일러 재작성은 앞으로 모든 업데이트 기반이 강해지는 거라서 v15부터 나올 개선 속도가 더 빨라질 것 같아요. Semi도 5대 양산 완료에 유럽 판매까지 5,100대 +22.8%면 오늘 테슬라 뉴스도 풀세트네요.",
+    createdAt: T13J - 15*60_000, likes: 312, comments: 4 },
+  { id: 222, symbol: "TSLA", nickname: "익명_7364", holdingLabel: "100주 보유",
+    content: "유럽 5,100대 +22.8% 진짜 좋네요. 26Q2 분기 최고치인데 Bloomberg Dan Levy도 Q2 전체 배송 418,000대 상향했다는 것도 같이 나왔어요. 머스크 리스크로 유럽 수요 빠졌을 때 많이 걱정했는데 완전히 회복하고 오히려 성장하고 있잖아요. FSD EU 전면 승인 임박이랑 Semi 배송까지 더해지면 올해 하반기 테슬라 모멘텀이 진짜 강해질 것 같아요.",
+    createdAt: T13J - 38*60_000, likes: 243, comments: 3 },
+
+  // NVDA — AI 인프라 ────────────────────────────────────────────────────
+  { id: 223, symbol: "NVDA", nickname: "익명_3947", holdingLabel: "45주 보유",
+    content: "AI 데이터센터 10년 내 100배 필요하다는 게 과장처럼 들리는데 수학적으로 맞아요. 지금 10억 명 쓰는 AI를 2030년 50억 명이 하루 2시간씩 쓰면 단순 계산으로 50배 이용자 × 수십배 강도 = 충분히 100배예요. NVDA가 FY2025 $111B에서 FY2026 $200B 목표하는 게 허황된 게 아닌 거잖아요. 이 수요가 10년 계속되면 NVDA 비즈니스는 완전히 다른 레벨이 될 것 같아요.",
+    createdAt: T13J - 20*60_000, likes: 198, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-12 — SpaceX IPO 상장 $135/$167 / BlackRock $50B / 직원 4000+ 백만장자 /
@@ -926,6 +954,35 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-13 신규 ──────────────────────────────────────────────────────
+  219: [
+    { id: 1, nickname: "익명_5847", holdingLabel: "관심종목", content: "$172.68로 마감이면 선물 $167 기준 예상보다도 높게 나온 거잖아요. 기관들이 장내에서도 계속 사들인 거죠. 시총 $2.26T로 삼성이랑 아람코 다 넘어버렸어요.", createdAt: T13J - m(7), likes: 89 },
+    { id: 2, nickname: "익명_2938", holdingLabel: "관심종목", content: "Ron Baron $1B 넣고 '평생 안 판다'는 게 진짜 강력한 시그널이에요. Tesla도 오래 들고 있었는데 SpaceX도 같은 방식으로 보는 거죠.", createdAt: T13J - m(5), likes: 72 },
+    { id: 3, nickname: "익명_7492", holdingLabel: "관심종목", content: "Morgan Stanley가 안정화 운용까지 해줬는데 종가가 선물을 뚫은 거면 자연 수요가 어마어마했다는 거예요. S&P 500 편입 후가 더 기대되네요.", createdAt: T13J - m(2), likes: 58 },
+    { id: 4, nickname: "익명_8473", holdingLabel: "관심종목", content: "글로벌 #6이 됐는데 다음 목표가 Amazon $2.55T 추월이에요. Starlink 구독 성장 + AI 인프라 임대 계속되면 올해 안에 달성 가능할 것 같아요.", createdAt: T13J + m(2), likes: 44 },
+  ],
+  220: [
+    { id: 1, nickname: "익명_3914", holdingLabel: "관심종목", content: "Tesla가 연결 못 하면 Anthropic한테 바로 임대하는 거 진짜 SpaceX스럽네요. 유휴 자산이 없는 거잖아요. $21.5B 계약이면 연매출에 엄청난 기여가 될 것 같아요.", createdAt: T13J - m(23), likes: 67 },
+    { id: 2, nickname: "익명_6831", holdingLabel: "관심종목", content: "Colossus 2·3은 자체 AI용으로 유지한다는 게 SpaceX가 AI 자체 개발도 계속 한다는 거잖아요. 테슬라 완전히 독립적으로 가는 중인 것 같아요.", createdAt: T13J - m(12), likes: 51 },
+    { id: 3, nickname: "익명_9284", holdingLabel: "관심종목", content: "TeraFab $11B 투자도 계속 진행 중이라는 거 생각하면 SpaceX가 AI 칩도 자체 생산하려는 거예요. 진짜 수직계열화가 로켓부터 AI칩까지 가는 중이네요.", createdAt: T13J - m(6), likes: 39 },
+  ],
+  221: [
+    { id: 1, nickname: "익명_4729", holdingLabel: "150주 보유", content: "MLIR 컴파일러가 기반이 강해지면 v15.x 업데이트부터 변화 속도가 더 빨라지는 거예요. 지금 20% 향상됐는데 다음 컴파일러 최적화에서 또 15~20% 나올 수 있어요.", createdAt: T13J - m(13), likes: 84 },
+    { id: 2, nickname: "익명_8392", holdingLabel: "75주 보유", content: "Semi 5대 양산에 FSD v14.3.4까지 같은 날 나왔어요. 소프트웨어 + 하드웨어 동시에 진행되는 게 Tesla 강점이죠. 하반기 모멘텀 진짜 좋을 것 같아요.", createdAt: T13J - m(8), likes: 63 },
+    { id: 3, nickname: "익명_2847", holdingLabel: "30주 보유", content: "반응속도 20%가 일반 주행에서는 느끼기 어렵지만 긴급 상황에서는 생사가 갈리는 거예요. 80ms vs 100ms 차이가 크지 않아 보여도 실제 충돌 회피 성능에 직결돼요.", createdAt: T13J - m(3), likes: 47 },
+    { id: 4, nickname: "익명_5918", holdingLabel: "250주 보유", content: "유럽 5,100대 +22.8%도 나왔네요. FSD 승인 임박에 Semi 배송까지 하반기 Tesla 스토리가 완성되고 있어요. 주가 반응이 기대됩니다.", createdAt: T13J + m(1), likes: 36 },
+  ],
+  222: [
+    { id: 1, nickname: "익명_7391", holdingLabel: "80주 보유", content: "26Q2 최고치인데 이게 분기 말까지 더 올라갈 수 있어요. 모델 Y 리프레시 효과가 아직 유럽에서 계속 나오고 있거든요. Q2 전체 배송 418K 상향이 현실적으로 보여요.", createdAt: T13J - m(36), likes: 72 },
+    { id: 2, nickname: "익명_4829", holdingLabel: "45주 보유", content: "노르웨이에서 EV 점유율 90% 유지하면서 Tesla 1위 지키는 게 진짜 대단해요. 유럽 전기차 시장에서 BMW·Mercedes보다 훨씬 앞서 있다는 걸 매주 증명하고 있는 거잖아요.", createdAt: T13J - m(20), likes: 55 },
+    { id: 3, nickname: "익명_1384", holdingLabel: "120주 보유", content: "FSD EU 전면 승인 나오면 구독 수익이 폭발적으로 늘어날 텐데 이 주간 판매 회복이 그 기반을 만들고 있는 거예요. 유럽 100만 대 × FSD 구독 → 게임 체인저.", createdAt: T13J - m(8), likes: 43 },
+  ],
+  223: [
+    { id: 1, nickname: "익명_8293", holdingLabel: "28주 보유", content: "100배가 과장처럼 들려도 산수가 맞아요. 지금도 $111B인데 10년 후 100배면 $11T 데이터센터 시장이에요. NVDA 점유율 50%만 유지해도 $5.5T 연매출인데 지금 시총이 $5T이니 완전 저평가일 수 있어요.", createdAt: T13J - m(18), likes: 61 },
+    { id: 2, nickname: "익명_5847", holdingLabel: "15주 보유", content: "FY2026 $200B 목표인데 이미 FY2025에 $111B 달성했으니 +80% 성장이에요. 반도체 회사가 전년비 80% 성장하는 게 말이 안 되는데 NVDA는 이걸 매년 하고 있어요.", createdAt: T13J - m(9), likes: 48 },
+    { id: 3, nickname: "익명_2918", holdingLabel: "60주 보유", content: "AI 이용자 50억 명 도달하면 개발도상국도 포함되는데 그 인프라를 NVDA 칩이 다 지원하는 거잖아요. SpaceX Starlink가 그 연결을 담당하는 구조까지 생각하면 두 회사 시너지가 엄청나겠네요.", createdAt: T13J - m(4), likes: 37 },
+  ],
+
   // ── 2026-06-12 신규 ──────────────────────────────────────────────────────
   210: [
     { id: 1, nickname: "익명_3847", holdingLabel: "관심종목", content: "$135 확정이고 선물이 $167이면 나스닥 첫날 $150~160 사이 열리지 않을까요. 역대 대형 IPO들 보면 선물 대비 10~15% 할인 열리는 경우 많았거든요.", createdAt: T12J - m(4), likes: 67 },

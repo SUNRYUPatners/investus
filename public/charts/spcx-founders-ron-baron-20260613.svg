@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.4"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX 특집 · 기관 수요</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Founders Fund $800M · Ron Baron $1B 매수</text>
+
+  <!-- Ron Baron quote -->
+  <rect x="24" y="78" width="432" height="72" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Ron Baron (Baron Capital, $41B AUM) 발언</text>
+  <text x="40" y="120" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">"SpaceX IPO에 $1B 주문 넣었다.</text>
+  <text x="40" y="138" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold"> 평생 단 한 주도 팔 생각이 없다."</text>
+
+  <!-- Bar chart -->
+  <text x="24" y="178" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ IPO 주요 기관 투자 (확인된 금액)</text>
+
+  <!-- Founders Fund: $800M -->
+  <text x="24" y="202" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Founders Fund</text>
+  <rect x="148" y="190" width="200" height="16" rx="3" fill="#c084fc" opacity="0.9"/>
+  <text x="352" y="202" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="bold">$800M</text>
+
+  <!-- Ron Baron: $1B -->
+  <text x="24" y="228" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Ron Baron</text>
+  <rect x="148" y="216" width="250" height="16" rx="3" fill="#c084fc"/>
+  <text x="402" y="228" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="bold">$1.0B</text>
+
+  <!-- BlackRock: $50B+ (prior) -->
+  <text x="24" y="254" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">BlackRock (사전)</text>
+  <rect x="148" y="242" width="340" height="16" rx="3" fill="#60a5fa" opacity="0.5"/>
+  <text x="392" y="254" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">$50B+</text>
+
+  <!-- Founders Fund background -->
+  <text x="24" y="292" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Founders Fund 배경</text>
+  <rect x="24" y="304" width="432" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="324" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Peter Thiel 창업 — PayPal 공동창업자</text>
+  <text x="40" y="344" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 초기 Facebook, Airbnb, Lyft 투자자</text>
+  <text x="40" y="364" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• SpaceX 초기부터 투자 — 지분 10.4% 보유</text>
+  <text x="40" y="380" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">• IPO 당일 $800M 추가 투자 = 최강 확신 신호</text>
+
+  <!-- Key message -->
+  <rect x="24" y="398" width="432" height="54" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="240" y="420" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" text-anchor="middle" font-weight="bold">공모 초과 구독 → 기관 수요가 공급을 수배 초과</text>
+  <text x="240" y="440" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">IPO 첫날 종가 $172.68 (+27.91%) — 강한 수요의 직접 증거</text>
+
+  <text x="240" y="470" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · 투자 참고용</text>
+</svg>

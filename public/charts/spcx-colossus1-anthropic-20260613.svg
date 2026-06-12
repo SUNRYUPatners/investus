@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.4"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX 특집 · 데이터센터</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Colossus 1 Anthropic 임대 — AI 인프라 수익화</text>
+
+  <!-- Flow diagram -->
+  <!-- Colossus 1 box -->
+  <rect x="24" y="78" width="200" height="80" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="124" y="104" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="bold" text-anchor="middle">Colossus 1</text>
+  <text x="124" y="122" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Memphis, TN</text>
+  <text x="124" y="140" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">NVIDIA 칩 · AI 훈련 클러스터</text>
+
+  <!-- Arrow to Anthropic -->
+  <line x1="224" y1="118" x2="254" y2="118" stroke="#c084fc" stroke-width="2"/>
+  <polygon points="254,113 264,118 254,123" fill="#c084fc"/>
+
+  <!-- Anthropic box -->
+  <rect x="264" y="78" width="192" height="80" rx="12" fill="#111318" stroke="#4ade80" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="360" y="104" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold" text-anchor="middle">Anthropic</text>
+  <text x="360" y="122" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">외부 임대 → 수익</text>
+  <text x="360" y="140" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Claude AI 훈련 인프라</text>
+
+  <!-- Why label -->
+  <text x="240" y="180" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Tesla → Colossus 1 연결 시 지연 문제(latency) 발생으로 외부 수익화</text>
+
+  <!-- Details -->
+  <text x="24" y="212" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Colossus 데이터센터 구조</text>
+  <rect x="24" y="224" width="432" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="248" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Colossus 1: Memphis — Anthropic 임대 (外部 수익화)</text>
+  <text x="40" y="268" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Colossus 2 &amp; 3: SpaceX 자체 AI 훈련용 유지</text>
+  <text x="40" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">• 3개 Memphis 추가 부지 확보 — NVIDIA 칩 공급</text>
+  <text x="40" y="296" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">  (타 부지들 탈락: 지연 문제 있던 노드와의 거리 10마일 이내)</text>
+
+  <!-- Financial impact -->
+  <text x="24" y="332" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ SpaceX AI 인프라 수익</text>
+  <rect x="24" y="344" width="204" height="64" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="126" y="366" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Anthropic 계약 규모</text>
+  <text x="126" y="390" font-family="Arial,sans-serif" font-size="16" fill="#c084fc" font-weight="bold" text-anchor="middle">$21.5B</text>
+  <text x="126" y="403" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">(Google+Anthropic 합산)</text>
+
+  <rect x="244" y="344" width="212" height="64" rx="10" fill="#111318"/>
+  <text x="350" y="366" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">TeraFab 칩공장</text>
+  <text x="350" y="390" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="bold" text-anchor="middle">$11B 투자</text>
+  <text x="350" y="403" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">자체 AI 칩 생산 준비</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="420" width="432" height="42" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="240" y="438" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">SpaceX: 로켓 발사 → Starlink → AI 인프라 3중 수익 구조</text>
+  <text x="240" y="456" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">Colossus 임대 = 유휴 인프라의 즉시 현금화</text>
+
+  <text x="240" y="474" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · 투자 참고용</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#60a5fa" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="bold">NVDA · AI Infrastructure</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">AI Datacenter Needs 100x Capacity in 10 Years</text>
+
+  <rect x="24" y="78" width="432" height="64" rx="12" fill="#0c1a2e" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="240" y="100" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">AI Demand Explosion · Infrastructure Required</text>
+  <text x="240" y="128" font-family="Arial,sans-serif" font-size="28" fill="#60a5fa" font-weight="bold" text-anchor="middle">100x Datacenter Capacity Needed</text>
+
+  <text x="24" y="166" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ AI Growth Outlook (By 2030)</text>
+  <rect x="24" y="178" width="136" height="76" rx="10" fill="#111318"/>
+  <text x="92" y="202" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">AI Users</text>
+  <text x="92" y="226" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" font-weight="bold" text-anchor="middle">5B</text>
+  <text x="92" y="247" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">people by 2030</text>
+
+  <rect x="172" y="178" width="136" height="76" rx="10" fill="#111318"/>
+  <text x="240" y="202" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Capacity Needed</text>
+  <text x="240" y="226" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" font-weight="bold" text-anchor="middle">100x</text>
+  <text x="240" y="247" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">vs today's capacity</text>
+
+  <rect x="320" y="178" width="136" height="76" rx="10" fill="#111318"/>
+  <text x="388" y="202" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">AI App MAU</text>
+  <text x="388" y="226" font-family="Arial,sans-serif" font-size="18" fill="#60a5fa" font-weight="bold" text-anchor="middle">1B+</text>
+  <text x="388" y="247" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">already reached today</text>
+
+  <text x="24" y="278" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ NVDA Datacenter Revenue Growth</text>
+  <text x="24" y="302" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">FY2025 Result</text>
+  <rect x="120" y="291" width="222" height="16" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <text x="346" y="303" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">$111B</text>
+  <text x="24" y="326" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="bold">FY2026 Target</text>
+  <rect x="120" y="315" width="340" height="16" rx="3" fill="#60a5fa"/>
+  <text x="372" y="327" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="bold">$200B</text>
+
+  <text x="24" y="356" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Key Beneficiaries of AI Infrastructure Buildout</text>
+  <rect x="24" y="368" width="432" height="84" rx="10" fill="#111318"/>
+  <text x="40" y="390" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• NVDA: GPU &amp; AI chips — largest direct beneficiary</text>
+  <text x="40" y="410" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• AVGO · MRVL · AMD: AI ASICs &amp; networking</text>
+  <text x="40" y="430" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• AMZN · MSFT · GOOGL: Cloud AI infrastructure</text>
+  <text x="40" y="444" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af">• SPCX: Colossus lease revenue → emerging AI infra player</text>
+
+  <text x="240" y="468" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · For reference only</text>
+</svg>

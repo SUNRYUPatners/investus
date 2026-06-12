@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.4"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX Special · Institutional Demand</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Founders Fund $800M · Ron Baron $1B Buy</text>
+
+  <rect x="24" y="78" width="432" height="72" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Ron Baron (Baron Capital, $41B AUM)</text>
+  <text x="40" y="120" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">"I placed a $1B order for SPCX IPO shares.</text>
+  <text x="40" y="138" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold"> I am not going to sell a share in my lifetime."</text>
+
+  <text x="24" y="178" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Key Institutional Investments (Confirmed)</text>
+  <text x="24" y="202" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Founders Fund</text>
+  <rect x="148" y="190" width="200" height="16" rx="3" fill="#c084fc" opacity="0.9"/>
+  <text x="352" y="202" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="bold">$800M</text>
+
+  <text x="24" y="228" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Ron Baron</text>
+  <rect x="148" y="216" width="250" height="16" rx="3" fill="#c084fc"/>
+  <text x="402" y="228" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="bold">$1.0B</text>
+
+  <text x="24" y="254" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">BlackRock (pre-IPO)</text>
+  <rect x="148" y="242" width="340" height="16" rx="3" fill="#60a5fa" opacity="0.5"/>
+  <text x="392" y="254" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">$50B+</text>
+
+  <text x="24" y="292" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ About Founders Fund</text>
+  <rect x="24" y="304" width="432" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="324" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Founded by Peter Thiel — PayPal co-founder</text>
+  <text x="40" y="344" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Early investor in Facebook, Airbnb, Lyft</text>
+  <text x="40" y="364" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• SpaceX investor since early days — holds 10.4%</text>
+  <text x="40" y="380" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">• $800M add on IPO day = ultimate conviction signal</text>
+
+  <rect x="24" y="398" width="432" height="54" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="240" y="420" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" text-anchor="middle" font-weight="bold">IPO oversubscribed — institutional demand vastly exceeded supply</text>
+  <text x="240" y="440" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Day 1 close $172.68 (+27.91%) — direct evidence of demand</text>
+
+  <text x="240" y="470" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · For reference only</text>
+</svg>

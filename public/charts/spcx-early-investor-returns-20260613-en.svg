@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.4"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX Special · Early Investor Returns</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">D. Sacks $27M→$3.15B · Google $900M→$1.1B</text>
+
+  <rect x="24" y="78" width="432" height="96" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">David Sacks (Craft Ventures, U.S. AI Czar)</text>
+  <text x="40" y="122" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">$27,000,000 invested (2002) → $3,150,000,000 today</text>
+  <text x="40" y="148" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Original:</text>
+  <rect x="100" y="138" width="8" height="12" rx="2" fill="#9ca3af"/>
+  <text x="40" y="166" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">Current value:</text>
+  <rect x="120" y="156" width="280" height="12" rx="2" fill="#4ade80"/>
+  <text x="404" y="166" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" font-weight="bold">+11,566%</text>
+
+  <text x="24" y="200" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Investment Timeline</text>
+  <rect x="24" y="212" width="432" height="3" rx="1" fill="#374151"/>
+  <circle cx="60" cy="213" r="6" fill="#c084fc"/>
+  <text x="60" y="232" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2002</text>
+  <text x="60" y="246" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">D.Sacks</text>
+  <text x="60" y="260" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">$27M</text>
+  <circle cx="220" cy="213" r="6" fill="#4ade80"/>
+  <text x="220" y="232" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~2014</text>
+  <text x="220" y="246" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">Google</text>
+  <text x="220" y="260" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">$900M</text>
+  <circle cx="432" cy="213" r="8" fill="#c084fc"/>
+  <text x="432" y="232" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2026</text>
+  <text x="432" y="246" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">IPO</text>
+  <text x="432" y="260" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">$172/sh</text>
+
+  <text x="24" y="292" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Return Comparison</text>
+  <rect x="24" y="304" width="204" height="96" rx="10" fill="#111318"/>
+  <text x="126" y="326" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">David Sacks</text>
+  <text x="126" y="348" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">$27M → $3.15B</text>
+  <text x="126" y="374" font-family="Arial,sans-serif" font-size="22" fill="#4ade80" font-weight="bold" text-anchor="middle">+11,566%</text>
+  <text x="126" y="392" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">24yr hold · Invested 2002</text>
+
+  <rect x="244" y="304" width="212" height="96" rx="10" fill="#111318"/>
+  <text x="350" y="326" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Google</text>
+  <text x="350" y="348" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">$900M → $1.1B</text>
+  <text x="350" y="374" font-family="Arial,sans-serif" font-size="22" fill="#4ade80" font-weight="bold" text-anchor="middle">+22%</text>
+  <text x="350" y="392" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">~10yr hold · Invested 2014</text>
+
+  <rect x="24" y="414" width="432" height="48" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="240" y="434" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">SpaceX IPO created thousands of new millionaires</text>
+  <text x="240" y="452" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">4,000+ employees with stock options — all cashed out</text>
+
+  <text x="240" y="472" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · For reference only</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#00e5a0" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">TSLA · Software Update</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Tesla FSD v14.3.4 — MLIR Compiler Rewrite</text>
+
+  <rect x="24" y="78" width="432" height="70" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="240" y="102" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Key Improvement (2026.14.6.10)</text>
+  <text x="240" y="128" font-family="Arial,sans-serif" font-size="26" fill="#00e5a0" font-weight="bold" text-anchor="middle">20% Faster Reaction Time</text>
+  <text x="240" y="142" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">MLIR compiler fully rewritten → AI inference speed breakthrough</text>
+
+  <text x="24" y="174" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ v14.3.4 Key Updates</text>
+
+  <rect x="24" y="186" width="432" height="46" rx="10" fill="#111318"/>
+  <text x="40" y="206" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="bold">MLIR Compiler &amp; Runtime Full Rewrite</text>
+  <text x="40" y="224" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">20% faster reaction time · faster model iteration speed</text>
+
+  <rect x="24" y="240" width="432" height="46" rx="10" fill="#111318"/>
+  <text x="40" y="260" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">RL Training Stage Upgrade</text>
+  <text x="40" y="278" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Improved FSD performance across varied driving scenarios</text>
+
+  <rect x="24" y="294" width="432" height="46" rx="10" fill="#111318"/>
+  <text x="40" y="314" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Neural Network Vision Encoder Upgrade</text>
+  <text x="40" y="332" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Low-light · rare scenarios · 3D geometry · traffic signs</text>
+
+  <rect x="24" y="348" width="432" height="46" rx="10" fill="#111318"/>
+  <text x="40" y="368" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Lane Bias Fix · Improved Parking Accuracy</text>
+  <text x="40" y="386" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Reduced tailgating · parking spot P icon on map</text>
+
+  <rect x="24" y="406" width="432" height="48" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="240" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">MLIR = Multi-Level Intermediate Representation</text>
+  <text x="240" y="444" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Modern AI compiler architecture adopted by Google &amp; Apple</text>
+
+  <text x="240" y="470" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · For reference only</text>
+</svg>

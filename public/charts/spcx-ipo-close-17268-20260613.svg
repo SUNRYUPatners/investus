@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 500">
+  <rect width="480" height="500" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.4"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX 특집 · SpaceX 상장 첫날</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">나스닥 상장 첫날 +27.91% 종가 확정</text>
+
+  <!-- Price visual -->
+  <rect x="24" y="78" width="432" height="90" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="240" y="104" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">종가 (첫날 기준)</text>
+  <text x="240" y="140" font-family="Arial,sans-serif" font-size="38" fill="#c084fc" font-weight="bold" text-anchor="middle">$172.68</text>
+  <text x="240" y="160" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">▲ +$37.68 (+27.91%) vs 공모가 $135</text>
+
+  <!-- Key stats -->
+  <text x="24" y="196" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ IPO 핵심 수치</text>
+
+  <rect x="24" y="208" width="136" height="68" rx="10" fill="#111318"/>
+  <text x="92" y="232" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">공모가</text>
+  <text x="92" y="256" font-family="Arial,sans-serif" font-size="20" fill="#e5e7eb" font-weight="bold" text-anchor="middle">$135</text>
+  <text x="92" y="272" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Morgan Stanley 확정</text>
+
+  <rect x="172" y="208" width="136" height="68" rx="10" fill="#111318"/>
+  <text x="240" y="232" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">총 공모 규모</text>
+  <text x="240" y="256" font-family="Arial,sans-serif" font-size="20" fill="#e5e7eb" font-weight="bold" text-anchor="middle">$75B</text>
+  <text x="240" y="272" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">역사상 최대 IPO</text>
+
+  <rect x="320" y="208" width="136" height="68" rx="10" fill="#111318"/>
+  <text x="388" y="232" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">공모 주식 수</text>
+  <text x="388" y="256" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="bold" text-anchor="middle">555.6M주</text>
+  <text x="388" y="272" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Class A 보통주</text>
+
+  <!-- Bar chart -->
+  <text x="24" y="308" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 역대 IPO 첫날 수익률 비교</text>
+  <!-- Airbnb: +112.8% -->
+  <text x="24" y="330" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Airbnb (2020)</text>
+  <rect x="140" y="320" width="226" height="14" rx="3" fill="#4ade80" opacity="0.7"/>
+  <text x="370" y="332" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">+112.8%</text>
+  <!-- SpaceX: +27.91% -->
+  <text x="24" y="354" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX (2026)</text>
+  <rect x="140" y="344" width="56" height="14" rx="3" fill="#c084fc"/>
+  <text x="370" y="356" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">+27.91%</text>
+  <!-- Rivian: +53% -->
+  <text x="24" y="378" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Rivian (2021)</text>
+  <rect x="140" y="368" width="106" height="14" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <text x="370" y="380" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">+53.0%</text>
+  <!-- Alibaba: +38.1% -->
+  <text x="24" y="402" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Alibaba (2014)</text>
+  <rect x="140" y="392" width="76" height="14" rx="3" fill="#fb923c" opacity="0.7"/>
+  <text x="370" y="404" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">+38.1%</text>
+
+  <!-- Bottom banner -->
+  <rect x="24" y="420" width="432" height="52" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="240" y="440" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" text-anchor="middle" font-weight="bold">Morgan Stanley — 단독 북러너 &amp; 안정화 에이전트</text>
+  <text x="240" y="458" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">역사상 최대 IPO 기록 공식 달성 — 사우디 아람코 $29.4B 경신</text>
+
+  <text x="240" y="488" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · 투자 참고용</text>
+</svg>

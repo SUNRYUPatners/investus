@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 520">
+  <rect width="480" height="520" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.4"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX 특집 · 시가총액</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">시총 $2.26T — 상장 첫날 글로벌 6위 등극</text>
+
+  <!-- highlight box -->
+  <rect x="24" y="78" width="432" height="54" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="240" y="101" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">상장 첫날 시가총액</text>
+  <text x="240" y="122" font-family="Arial,sans-serif" font-size="18" fill="#c084fc" font-weight="bold" text-anchor="middle">$2.26T — 삼성전자 · 사우디 아람코 추월</text>
+
+  <!-- Horizontal bar chart of top companies -->
+  <text x="24" y="158" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 글로벌 시가총액 순위 (2026.06.12 기준)</text>
+
+  <!-- Max bar = NVDA $4.969T = 340px wide -->
+  <!-- NVDA -->
+  <text x="48" y="182" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">1. NVDA</text>
+  <rect x="52" y="170" width="339" height="16" rx="3" fill="#60a5fa" opacity="0.8"/>
+  <text x="396" y="182" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">$4.97T</text>
+
+  <!-- GOOG -->
+  <text x="48" y="204" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">2. GOOG</text>
+  <rect x="52" y="192" width="300" height="16" rx="3" fill="#4ade80" opacity="0.8"/>
+  <text x="356" y="204" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">$4.39T</text>
+
+  <!-- AAPL -->
+  <text x="48" y="226" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">3. AAPL</text>
+  <rect x="52" y="214" width="291" height="16" rx="3" fill="#9ca3af" opacity="0.7"/>
+  <text x="347" y="226" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">$4.26T</text>
+
+  <!-- MSFT -->
+  <text x="48" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">4. MSFT</text>
+  <rect x="52" y="236" width="197" height="16" rx="3" fill="#fb923c" opacity="0.7"/>
+  <text x="253" y="248" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">$2.88T</text>
+
+  <!-- AMZN -->
+  <text x="48" y="270" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">5. AMZN</text>
+  <rect x="52" y="258" width="174" height="16" rx="3" fill="#f59e0b" opacity="0.7"/>
+  <text x="230" y="270" font-family="Arial,sans-serif" font-size="11" fill="#f59e0b">$2.55T</text>
+
+  <!-- SPCX — HIGHLIGHTED -->
+  <rect x="24" y="278" width="432" height="24" rx="4" fill="#1a0d2e" stroke="#c084fc" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="48" y="294" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold" text-anchor="end">6. SPCX ★</text>
+  <rect x="52" y="281" width="154" height="16" rx="3" fill="#c084fc"/>
+  <text x="210" y="294" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">$2.26T</text>
+
+  <!-- TSMC -->
+  <text x="48" y="318" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">7. TSMC</text>
+  <rect x="52" y="306" width="151" height="16" rx="3" fill="#6b7280" opacity="0.6"/>
+  <text x="207" y="318" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">$2.20T</text>
+
+  <!-- AVGO -->
+  <text x="48" y="340" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">8. AVGO</text>
+  <rect x="52" y="328" width="124" height="16" rx="3" fill="#6b7280" opacity="0.5"/>
+  <text x="180" y="340" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">$1.81T</text>
+
+  <!-- TSLA -->
+  <text x="48" y="362" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">10. TSLA</text>
+  <rect x="52" y="350" width="102" height="16" rx="3" fill="#00e5a0" opacity="0.6"/>
+  <text x="158" y="362" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">$1.50T</text>
+
+  <!-- Key insight -->
+  <rect x="24" y="382" width="432" height="56" rx="10" fill="#111318"/>
+  <text x="240" y="404" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle" font-weight="bold">SpaceX — 삼성전자($1.5T) · 사우디아람코($1.75T) 모두 추월</text>
+  <text x="240" y="422" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">MSFT·AMZN 다음으로 세계에서 5번째로 큰 민간 기업 등극</text>
+  <text x="240" y="440" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">첫날 +27.91% 종가 기준 — 역사에 기록된 날</text>
+
+  <!-- stat boxes -->
+  <rect x="24" y="450" width="138" height="52" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="93" y="470" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">시총 순위</text>
+  <text x="93" y="491" font-family="Arial,sans-serif" font-size="18" fill="#c084fc" font-weight="bold" text-anchor="middle">#6위</text>
+
+  <rect x="171" y="450" width="138" height="52" rx="10" fill="#111318"/>
+  <text x="240" y="470" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">시가총액</text>
+  <text x="240" y="491" font-family="Arial,sans-serif" font-size="18" fill="#e5e7eb" font-weight="bold" text-anchor="middle">$2.26T</text>
+
+  <rect x="318" y="450" width="138" height="52" rx="10" fill="#111318"/>
+  <text x="387" y="470" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">첫날 상승률</text>
+  <text x="387" y="491" font-family="Arial,sans-serif" font-size="18" fill="#4ade80" font-weight="bold" text-anchor="middle">+27.91%</text>
+
+  <text x="240" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · 투자 참고용</text>
+</svg>

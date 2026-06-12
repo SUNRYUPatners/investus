@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.4"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX Special · Data Center</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Colossus 1 Leased to Anthropic — AI Infrastructure Monetized</text>
+
+  <rect x="24" y="78" width="200" height="80" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="124" y="104" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="bold" text-anchor="middle">Colossus 1</text>
+  <text x="124" y="122" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Memphis, TN</text>
+  <text x="124" y="140" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">NVIDIA chips · AI training cluster</text>
+
+  <line x1="224" y1="118" x2="254" y2="118" stroke="#c084fc" stroke-width="2"/>
+  <polygon points="254,113 264,118 254,123" fill="#c084fc"/>
+
+  <rect x="264" y="78" width="192" height="80" rx="12" fill="#111318" stroke="#4ade80" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="360" y="104" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold" text-anchor="middle">Anthropic</text>
+  <text x="360" y="122" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Leased → Revenue</text>
+  <text x="360" y="140" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Claude AI training infra</text>
+
+  <text x="240" y="180" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Tesla had latency issues connecting to Colossus 1 → SpaceX monetized externally</text>
+
+  <text x="24" y="212" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Colossus Data Center Structure</text>
+  <rect x="24" y="224" width="432" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="248" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Colossus 1: Memphis — Leased to Anthropic (external)</text>
+  <text x="40" y="268" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Colossus 2 &amp; 3: Remain under SpaceX for own AI</text>
+  <text x="40" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">• 3 more Memphis sites secured — NVIDIA chip clusters</text>
+  <text x="40" y="296" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">  (other sites rejected: within 10mi of latency-affected nodes)</text>
+
+  <text x="24" y="332" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ SpaceX AI Infrastructure Revenue</text>
+  <rect x="24" y="344" width="204" height="64" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="126" y="366" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Anthropic Contract</text>
+  <text x="126" y="390" font-family="Arial,sans-serif" font-size="16" fill="#c084fc" font-weight="bold" text-anchor="middle">$21.5B</text>
+  <text x="126" y="403" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">(Google + Anthropic combined)</text>
+
+  <rect x="244" y="344" width="212" height="64" rx="10" fill="#111318"/>
+  <text x="350" y="366" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">TeraFab Chip Plant</text>
+  <text x="350" y="390" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="bold" text-anchor="middle">$11B Invest</text>
+  <text x="350" y="403" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Building own AI chips</text>
+
+  <rect x="24" y="420" width="432" height="42" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="240" y="438" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">SpaceX: Rockets → Starlink → AI Infrastructure (triple revenue)</text>
+  <text x="240" y="456" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">Colossus lease = immediate monetization of idle infrastructure</text>
+
+  <text x="240" y="474" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · For reference only</text>
+</svg>

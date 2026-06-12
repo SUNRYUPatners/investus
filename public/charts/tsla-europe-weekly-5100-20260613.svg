@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#00e5a0" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">TSLA · 유럽 판매</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">유럽 주간 판매 5,100대 — 전년비 +22.8%</text>
+
+  <!-- Key stat -->
+  <rect x="24" y="78" width="432" height="64" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="240" y="100" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">2026년 6월 1~8일 주간 판매 (유럽 주요국)</text>
+  <text x="240" y="128" font-family="Arial,sans-serif" font-size="30" fill="#00e5a0" font-weight="bold" text-anchor="middle">5,100대  +22.8% YoY</text>
+
+  <!-- Context boxes -->
+  <text x="24" y="166" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 맥락 및 의미</text>
+
+  <rect x="24" y="178" width="204" height="68" rx="10" fill="#111318"/>
+  <text x="126" y="200" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">26Q2 주간 기준</text>
+  <text x="126" y="224" font-family="Arial,sans-serif" font-size="18" fill="#00e5a0" font-weight="bold" text-anchor="middle">분기 최고치</text>
+  <text x="126" y="238" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">26Q2 베스트 위크</text>
+
+  <rect x="244" y="178" width="212" height="68" rx="10" fill="#111318"/>
+  <text x="350" y="200" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">전년 동기 비교</text>
+  <text x="350" y="224" font-family="Arial,sans-serif" font-size="18" fill="#4ade80" font-weight="bold" text-anchor="middle">+22.8%</text>
+  <text x="350" y="238" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">25Q2 동일 주차 대비</text>
+
+  <!-- Bar chart of quarterly comparison -->
+  <text x="24" y="270" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 유럽 테슬라 분기별 판매 트렌드</text>
+
+  <!-- 25Q2 week1 baseline: ~4,155 (5100/1.228) -->
+  <text x="24" y="294" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">25Q2 (작년)</text>
+  <rect x="120" y="283" width="166" height="16" rx="3" fill="#9ca3af" opacity="0.5"/>
+  <text x="290" y="295" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">~4,155대</text>
+
+  <text x="24" y="318" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">26Q2 (금주) ★</text>
+  <rect x="120" y="307" width="204" height="16" rx="3" fill="#00e5a0"/>
+  <text x="328" y="319" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">5,100대</text>
+
+  <!-- Country context -->
+  <text x="24" y="350" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 주요 유럽 판매국 (포함)</text>
+  <rect x="24" y="362" width="432" height="64" rx="10" fill="#111318"/>
+  <text x="40" y="384" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">UK · 노르웨이 · 네덜란드 · 스웨덴 · 덴마크</text>
+  <text x="40" y="404" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">이탈리아 · 스페인 · 프랑스 · 체코 · 스위스 · 아이슬란드</text>
+  <text x="40" y="420" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">유럽 주요 EV 시장 기반 집계 (일부 국가 미포함)</text>
+
+  <!-- Bottom note -->
+  <rect x="24" y="440" width="432" height="22" rx="6" fill="#0d1f14" stroke="#00e5a0" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="240" y="455" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">정치적 갈등 완화 이후 유럽 수요 회복세 지속 확인</text>
+
+  <text x="240" y="472" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · 투자 참고용</text>
+</svg>

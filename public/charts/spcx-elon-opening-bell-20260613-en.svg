@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.4"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX Special · IPO Day</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Elon Musk Rings Nasdaq Bell — SPCX Trading Begins</text>
+
+  <rect x="24" y="78" width="432" height="84" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="240" y="104" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">June 12, 2026 · Nasdaq Opens</text>
+  <text x="240" y="130" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="bold" text-anchor="middle">🔔 SpaceX (SPCX) Trading Officially Begins</text>
+  <text x="240" y="152" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Elon Musk personally rings the Nasdaq opening bell</text>
+
+  <text x="24" y="188" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ IPO Day Timeline (June 12, 2026)</text>
+  <rect x="24" y="200" width="432" height="164" rx="10" fill="#111318"/>
+  <circle cx="48" cy="224" r="5" fill="#c084fc"/>
+  <text x="62" y="228" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" font-weight="bold">09:30 ET</text>
+  <text x="160" y="228" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Elon rings Nasdaq bell · SPCX first trade</text>
+  <line x1="48" y1="230" x2="48" y2="250" stroke="#374151" stroke-width="1" stroke-dasharray="3"/>
+  <circle cx="48" cy="254" r="5" fill="#60a5fa"/>
+  <text x="62" y="258" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" font-weight="bold">Open</text>
+  <text x="160" y="258" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">$135.00 (matches IPO price)</text>
+  <line x1="48" y1="260" x2="48" y2="280" stroke="#374151" stroke-width="1" stroke-dasharray="3"/>
+  <circle cx="48" cy="284" r="5" fill="#4ade80"/>
+  <text x="62" y="288" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" font-weight="bold">Intraday High</text>
+  <text x="160" y="288" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">$175.32 (~+29.8%)</text>
+  <line x1="48" y1="290" x2="48" y2="310" stroke="#374151" stroke-width="1" stroke-dasharray="3"/>
+  <circle cx="48" cy="314" r="6" fill="#c084fc"/>
+  <text x="62" y="318" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="bold">16:00 Close</text>
+  <text x="160" y="318" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="bold">$172.68 (+27.91%) ★</text>
+  <line x1="48" y1="320" x2="48" y2="356" stroke="#374151" stroke-width="1" stroke-dasharray="3"/>
+  <text x="62" y="348" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Morgan Stanley — sole bookrunner &amp; stabilization agent</text>
+
+  <rect x="24" y="378" width="432" height="72" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="40" y="400" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" font-weight="bold">■ Why This Day Is Historic</text>
+  <text x="40" y="420" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• $75B — Largest IPO in history completed</text>
+  <text x="40" y="440" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• First private space company to list on Nasdaq</text>
+  <text x="40" y="458" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">• 4,000+ SpaceX employees became millionaires simultaneously</text>
+
+  <text x="240" y="474" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · For reference only</text>
+</svg>

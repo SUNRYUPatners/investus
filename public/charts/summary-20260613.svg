@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580">
+  <rect width="480" height="580" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#c084fc" opacity="0.5"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">특집 · 시장 한장 요약</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">6/13 — SpaceX IPO 특집 · TSLA FSD · NVDA</text>
+
+  <!-- SPCX IPO first day -->
+  <rect x="24" y="78" width="432" height="88" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="bold">🚀 SPCX — 나스닥 상장 첫날</text>
+  <text x="40" y="122" font-family="Arial,sans-serif" font-size="26" fill="#c084fc" font-weight="bold">$172.68  +27.91%</text>
+  <text x="40" y="144" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">공모가 $135 | $75B 역대 최대 IPO | Morgan Stanley 주관</text>
+  <text x="40" y="158" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Founders Fund $800M · Ron Baron $1B 매수 · "평생 안 판다"</text>
+
+  <!-- SPCX market cap -->
+  <rect x="24" y="176" width="204" height="72" rx="10" fill="#111318"/>
+  <text x="40" y="198" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">SPCX 시총</text>
+  <text x="40" y="220" font-family="Arial,sans-serif" font-size="20" fill="#e5e7eb" font-weight="bold">$2.26T</text>
+  <text x="40" y="238" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">글로벌 #6 등극</text>
+
+  <!-- SPCX Colossus -->
+  <rect x="244" y="176" width="212" height="72" rx="10" fill="#111318"/>
+  <text x="260" y="198" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">Colossus 1</text>
+  <text x="260" y="220" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">Anthropic 임대</text>
+  <text x="260" y="238" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI 인프라 수익화</text>
+
+  <!-- TSLA FSD -->
+  <rect x="24" y="260" width="204" height="72" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="40" y="282" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">TSLA FSD v14.3.4</text>
+  <text x="40" y="304" font-family="Arial,sans-serif" font-size="18" fill="#e5e7eb" font-weight="bold">반응속도 +20%</text>
+  <text x="40" y="322" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">MLIR 컴파일러 재작성</text>
+
+  <!-- TSLA Semi -->
+  <rect x="244" y="260" width="212" height="72" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="260" y="282" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">TSLA Semi</text>
+  <text x="260" y="304" font-family="Arial,sans-serif" font-size="18" fill="#e5e7eb" font-weight="bold">5대 양산 완료</text>
+  <text x="260" y="322" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">500mi · 1.2MW · 2026 배송</text>
+
+  <!-- TSLA Europe -->
+  <rect x="24" y="344" width="204" height="72" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="40" y="366" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">TSLA 유럽 주간</text>
+  <text x="40" y="388" font-family="Arial,sans-serif" font-size="18" fill="#e5e7eb" font-weight="bold">5,100대</text>
+  <text x="40" y="406" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">+22.8% YoY · Q2 최고</text>
+
+  <!-- NVDA datacenter -->
+  <rect x="244" y="344" width="212" height="72" rx="10" fill="#0c1a2e" stroke="#60a5fa" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="260" y="366" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">NVDA 데이터센터</text>
+  <text x="260" y="388" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">$200B 목표</text>
+  <text x="260" y="406" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI 100배 용량 필요</text>
+
+  <!-- SPCX Shotwell / investor returns -->
+  <rect x="24" y="428" width="432" height="54" rx="10" fill="#111318"/>
+  <text x="40" y="450" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" font-weight="bold">📊 SPCX 초기 투자수익</text>
+  <text x="40" y="470" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">David Sacks: $27M (2002) → $3.15B (+11,566%)</text>
+
+  <!-- Footer -->
+  <rect x="24" y="494" width="432" height="56" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="240" y="514" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" text-anchor="middle" font-weight="bold">역사적 날 — SpaceX IPO 완성</text>
+  <text x="240" y="532" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Gwynne Shotwell: "Colossus 1 Anthropic 임대 · 임원보상 $116~$3,727"</text>
+
+  <text x="240" y="568" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · 투자 참고용</text>
+</svg>

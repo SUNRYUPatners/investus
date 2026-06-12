@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#00e5a0" opacity="0.3"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">TSLA · 테슬라 Semi</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Tesla Semi 5대 양산 완료 — 2026 배송 시작</text>
+
+  <!-- Key highlight -->
+  <rect x="24" y="78" width="432" height="64" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="240" y="102" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">2026년 6월 11일 — Proof of Production</text>
+  <text x="240" y="128" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" font-weight="bold" text-anchor="middle">신규 Tesla Semi 5대 양산 완료</text>
+
+  <!-- Truck specs -->
+  <text x="24" y="166" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ Tesla Semi 핵심 스펙</text>
+
+  <rect x="24" y="178" width="136" height="76" rx="10" fill="#111318"/>
+  <text x="92" y="202" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">항속 거리</text>
+  <text x="92" y="228" font-family="Arial,sans-serif" font-size="24" fill="#00e5a0" font-weight="bold" text-anchor="middle">500</text>
+  <text x="92" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">마일 (804km)</text>
+
+  <rect x="172" y="178" width="136" height="76" rx="10" fill="#111318"/>
+  <text x="240" y="202" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">충전 출력</text>
+  <text x="240" y="228" font-family="Arial,sans-serif" font-size="24" fill="#00e5a0" font-weight="bold" text-anchor="middle">1.2</text>
+  <text x="240" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">MW 급속충전</text>
+
+  <rect x="320" y="178" width="136" height="76" rx="10" fill="#111318"/>
+  <text x="388" y="202" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">에너지 소비</text>
+  <text x="388" y="228" font-family="Arial,sans-serif" font-size="24" fill="#00e5a0" font-weight="bold" text-anchor="middle">1.7</text>
+  <text x="388" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">kWh/마일</text>
+
+  <!-- Model variants -->
+  <text x="24" y="278" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 이번 양산 모델 구성</text>
+  <rect x="24" y="290" width="432" height="56" rx="10" fill="#111318"/>
+  <text x="40" y="312" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• 스탠다드 레인지 4대 (표준형)</text>
+  <text x="40" y="334" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• 롱 레인지 2대 (장거리형, 500마일)</text>
+
+  <!-- Deployment timeline -->
+  <text x="24" y="370" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">■ 배송·도입 일정</text>
+  <rect x="24" y="382" width="432" height="70" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="40" y="404" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 2026 Q3: 첫 상업 배송 시작</text>
+  <text x="40" y="422" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Amazon 물류 파트너십 — 전기 트럭 운영 확대</text>
+  <text x="40" y="440" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">• 기가텍사스 Semi 전용 생산라인 가동 중</text>
+
+  <text x="240" y="470" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.13 · Investus · 투자 참고용</text>
+</svg>

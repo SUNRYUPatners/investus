@@ -19,6 +19,40 @@ const _an = Date.now();
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-06-13 신규 ──────────────────────────────────────────────────────
+  {
+    id: -60,
+    alias: "여의도 매 #17",
+    symbol: "SPCX",
+    content:
+      "SPCX 상장일 결산임. 공모가 $135 → 종가 $172.68 (+27.91%). 시총 $2.26T = 글로벌 6위. 역대 최대 IPO $75B 달성. 개장가 $152에서 장중 $175.32까지 터치한 뒤 $172.68 마감. 모건스탠리·골드만·JP모건 언더라이터 세트. Founders Fund $800M + Ron Baron $1B 잠금 확약 = 팔 생각 없다는 투자자들만 있음. 시총 기준 NVDA·GOOG·AAPL·MSFT·AMZN 다음이 SpaceX임. 오늘이 역사임.",
+    likes: 412,
+    comments: 4,
+    created_at: new Date(_an - 3 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -59,
+    alias: "판교 황소 #31",
+    symbol: "TSLA",
+    content:
+      "오늘 테슬라 삼박자 동시에 터졌음. 1) FSD v14.3.4 릴리즈 — MLIR 컴파일러 리라이트로 반응 속도 20% 향상. 도로 데이터 처리 방식 근본 개선임. 2) Semi 5대 신규 제조 (6/11 확인) — 500마일, 1.2MW 충전, 1.7kWh/mi. 2026년 배송 본격화. 3) 유럽 주간 5,100대 +22.8% YoY — 26Q2 최고 기록. 소프트웨어(FSD) + 하드웨어(Semi) + 판매량(유럽) 세 가지가 동시에 긍정적인 날임.",
+    likes: 356,
+    comments: 3,
+    created_at: new Date(_an - 16 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -58,
+    alias: "강남 독수리 #52",
+    symbol: "NVDA",
+    content:
+      "오늘 NVDA 관점에서 체크할 게 두 가지임. 1) AI 데이터센터 10년 내 100배 필요 — 이게 NVDA 장기 수요 구조의 핵심 논거임. AI 사용자 2030년 50억 명, MAU 10억 이미 돌파. FY2026 타겟 $200B이 사실 보수적임. 2) SPCX Colossus 1 — Tesla 지연 이슈로 Anthropic한테 임대로 방향 바꿈. SpaceX가 AI 인프라 임대 사업 진입 확인 = NVDA 수요처 다변화. 경쟁이 아니라 수요 확장 구조임.",
+    likes: 298,
+    comments: 3,
+    created_at: new Date(_an - 29 * 60_000).toISOString(),
+    liked: false,
+  },
   // ── 2026-06-12 신규 ──────────────────────────────────────────────────────
   {
     id: -57,
@@ -634,6 +668,24 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-06-13 신규 ──────────────────────────────────────────────────────
+  [-60]: [
+    { alias: "판교 황소 #31", content: "$172.68이면 시총 $2.26T임. 나스닥 6위 편입 자체가 인덱스 패시브 자금 강제 유입 트리거임. S&P 500 편입 기준 충족 시 수십조 달러 추가 수요.", created_at: new Date(_an - 2 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "Ron Baron '내 생애 팔지 않겠다' 발언이 실제 잠금 역할 함. 공급 압력 없고 기관 수요만 있는 구조 = 주가 하방 경직성.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Elon이 직접 Opening Bell 친 게 마케팅 효과 극대화임. 개인 투자자 관심도 폭발 = 단기 수요 지속.", created_at: new Date(_an - 40 * 1000).toISOString() },
+    { alias: "서초 매 #64", content: "27.91% 첫날 상승은 이 규모 IPO에서 드문 거임. Morgan Stanley $75B 딜 성공 = 기관 수요가 얼마나 강했는지 증명.", created_at: new Date(_an - 15 * 1000).toISOString() },
+  ],
+  [-59]: [
+    { alias: "여의도 매 #17", content: "MLIR 컴파일러 리라이트가 왜 중요하냐면 이게 소프트웨어 해자임. 하드웨어 개선 없이 순수 소프트웨어로 20% 성능 향상 = 지속적 업그레이드 가치 증명.", created_at: new Date(_an - 14 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Semi 500마일 + 1.2MW 충전 세트면 EU 물류사 TCO 계산에서 디젤 트럭 대체가 경제적으로 확정됨. 2030년 EU 탄소 규제 의무 + Tesla Semi = 강제 수요.", created_at: new Date(_an - 9 * 60_000).toISOString() },
+    { alias: "광화문 늑대 #69", content: "유럽 5,100대가 26Q2 최고라는 게 인상적임. 리콜 이슈·지정학 리스크 있었던 분기에 최고치라면 기저 수요가 확인된 거임.", created_at: new Date(_an - 4 * 60_000).toISOString() },
+  ],
+  [-58]: [
+    { alias: "판교 황소 #31", content: "100배 필요 논리가 설득력 있음. 현재 전세계 AI 인프라 규모 대비 수요 성장이 이미 100배 방향으로 가고 있음. NVDA만 수혜가 아니라 전력·냉각·부동산까지 전방 산업 전체가 임.", created_at: new Date(_an - 27 * 60_000).toISOString() },
+    { alias: "서초 매 #64", content: "Colossus 1 Anthropic 임대가 SPCX 수익 다변화 첫 사례임. AI 인프라 임대 사업이 Starlink 다음 수익 축으로 성장하면 밸류에이션 추가 상향 재료.", created_at: new Date(_an - 19 * 60_000).toISOString() },
+    { alias: "여의도 매 #17", content: "FY2026 $200B 타겟 달성하면 데이터센터 사업만 PSR 10배 적용 시 $2T임. NVDA 전체 시총이 아직 저평가 구간이라는 논리.", created_at: new Date(_an - 10 * 60_000).toISOString() },
+  ],
+
   // ── 2026-06-12 신규 ──────────────────────────────────────────────────────
   [-57]: [
     { alias: "판교 황소 #31", content: "선물 $167이면 기업가치 기준으로 이미 $2.2T 수준이에요. 나스닥 개장 첫날 선물 대비 10% 할인 열려도 $150+ 이면 충분히 성공적인 IPO임.", created_at: new Date(_an - 2 * 60_000).toISOString() },
