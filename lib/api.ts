@@ -137,7 +137,7 @@ const mockIndices: IndexQuote[] = [
 const mockQuotes: Quote[] = [
   {
     symbol: "AAPL",
-    name: "Apple Inc.",
+    name: "Apple Inc. — 애플",
     price: 300.23,
     change: 2.05,
     changePercent: 0.69,
@@ -147,7 +147,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "NVDA",
-    name: "NVIDIA Corp.",
+    name: "NVIDIA Corp. — 엔비디아 반도체",
     price: 225.32,
     change: -1.71,
     changePercent: -0.75,
@@ -157,7 +157,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "TSLA",
-    name: "Tesla Inc.",
+    name: "Tesla Inc. — 테슬라 전기차",
     price: 422.24,
     change: 13.15,
     changePercent: 3.21,
@@ -167,7 +167,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "MSFT",
-    name: "Microsoft Corp.",
+    name: "Microsoft Corp. — 마이크로소프트",
     price: 421.92,
     change: 12.68,
     changePercent: 3.10,
@@ -177,7 +177,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "AMZN",
-    name: "Amazon.com Inc.",
+    name: "Amazon.com Inc. — 아마존",
     price: 264.14,
     change: -3.07,
     changePercent: -1.15,
@@ -187,7 +187,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "GOOGL",
-    name: "Alphabet Inc.",
+    name: "Alphabet Inc. — 구글 알파벳",
     price: 396.78,
     change: -4.30,
     changePercent: -1.07,
@@ -197,7 +197,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "META",
-    name: "Meta Platforms",
+    name: "Meta Platforms — 메타 페이스북 인스타그램",
     price: 614.23,
     change: -4.18,
     changePercent: -0.68,
@@ -207,7 +207,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "NFLX",
-    name: "Netflix Inc.",
+    name: "Netflix Inc. — 넷플릭스",
     price: 88.09,
     change: -0.74,
     changePercent: -0.83,
@@ -217,7 +217,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "AMD",
-    name: "Advanced Micro Dev.",
+    name: "Advanced Micro Devices — AMD 반도체",
     price: 447.58,
     change: 9.72,
     changePercent: 2.22,
@@ -227,7 +227,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "ORCL",
-    name: "Oracle Corp.",
+    name: "Oracle Corp. — 오라클",
     price: 188.16,
     change: -1.31,
     changePercent: -0.69,
@@ -238,7 +238,7 @@ const mockQuotes: Quote[] = [
   // ── Investus 추천 종목 ──
   {
     symbol: "PLTR",
-    name: "Palantir Technologies",
+    name: "Palantir Technologies — 팔란티어 AI 데이터",
     price: 137.15,
     change: 1.90,
     changePercent: 1.41,
@@ -248,7 +248,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "IBM",
-    name: "IBM Corp.",
+    name: "IBM Corp. — 아이비엠",
     price: 172.54,
     change: -1.12,
     changePercent: -0.65,
@@ -258,7 +258,7 @@ const mockQuotes: Quote[] = [
   },
   {
     symbol: "JPM",
-    name: "JPMorgan Chase",
+    name: "JPMorgan Chase — JP모건",
     price: 301.98,
     change: 6.22,
     changePercent: 2.10,

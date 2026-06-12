@@ -36,10 +36,11 @@ export function TickerTape() {
   if (quotes.length === 0) return null;
 
   const items = [...quotes, ...quotes];
+  const duration = Math.max(60, quotes.length * 2.5);
 
   return (
     <div className="overflow-hidden py-2 border-b" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-      <div className="ticker-track">
+      <div className="ticker-track" style={{ "--ticker-duration": `${duration}s` } as React.CSSProperties}>
         {items.map((q, i) => <TickerItem key={`${q.symbol}-${i}`} q={q} />)}
       </div>
     </div>
