@@ -290,7 +290,7 @@ export default function CreatorDashboardPage() {
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-28 lg:pb-10">
+      <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 lg:pb-10">
 
         {/* Back + View Public Profile */}
         <div className="pt-4 pb-2 flex items-center justify-between">

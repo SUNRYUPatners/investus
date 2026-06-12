@@ -249,7 +249,7 @@ export default function StudyPage() {
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] mx-auto lg:max-w-[860px] px-4 pb-24 lg:pb-10">
+      <main className="max-w-[480px] mx-auto lg:max-w-[860px] px-4 lg:pb-10">
         <div className="pt-5 pb-4">
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
             미국 주식 투자 기초 · 대가들의 전략 · 추천 도서

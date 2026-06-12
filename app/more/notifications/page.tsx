@@ -162,7 +162,7 @@ export default function NotificationsPage() {
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
-      <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-24 lg:pb-10">
+      <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 lg:pb-10">
         <div className="pt-4 pb-2">
           <button
             onClick={() => router.back()}

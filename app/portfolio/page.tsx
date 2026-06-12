@@ -987,7 +987,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] lg:max-w-none lg:grid lg:grid-cols-[1fr_340px] lg:gap-8 mx-auto px-4 lg:px-8 pt-5 pb-24">
+      <main className="max-w-[480px] lg:max-w-none lg:grid lg:grid-cols-[1fr_340px] lg:gap-8 mx-auto px-4 lg:px-8 pt-5">
 
         {/* ── Left ── */}
         <div>

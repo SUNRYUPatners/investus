@@ -54,7 +54,7 @@ export default async function InsightPage() {
       <Header />
 
       {/* ── Mobile ── */}
-      <main className="lg:hidden max-w-[480px] mx-auto px-0 pb-24">
+      <main className="lg:hidden max-w-[480px] mx-auto px-0">
         <div className="px-4 pt-5 pb-4">
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
           <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>

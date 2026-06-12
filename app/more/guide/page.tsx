@@ -662,7 +662,7 @@ export default function GuidePage() {
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
-      <div className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-24 pt-4">
+      <div className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pt-4">
         {/* Back */}
         <div className="mb-4">
           <Link href="/more" className="flex items-center gap-1 text-sm" style={{ color: "var(--muted)", textDecoration: "none" }}>

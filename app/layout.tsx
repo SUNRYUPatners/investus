@@ -132,19 +132,22 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
       </head>
       <body style={{ background: "var(--bg)" }}>
-        {/* iOS PWA: prevent rubber-band overscroll at bottom revealing content under nav */}
+        {/* iOS PWA: prevent rubber-band overscroll at top/bottom revealing cached content */}
         <Script id="ios-overscroll" strategy="afterInteractive">{`
           (function(){
-            var startY = 0;
+            var lastY = 0;
             document.addEventListener('touchstart', function(e){
-              startY = e.touches[0].clientY;
+              lastY = e.touches[0].clientY;
             }, { passive: true });
             document.addEventListener('touchmove', function(e){
-              if (e.touches.length !== 1) return; // ignore pinch
-              var dy = e.touches[0].clientY - startY;
-              var atBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 4;
-              // Only block downward swipe (scroll down) when already at bottom
-              if (atBottom && dy < 0) {
+              if (e.touches.length !== 1) return;
+              var currentY = e.touches[0].clientY;
+              var dy = currentY - lastY;
+              lastY = currentY;
+              var el = document.scrollingElement || document.documentElement;
+              var atTop    = el.scrollTop <= 0;
+              var atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 2;
+              if ((atTop && dy > 0) || (atBottom && dy < 0)) {
                 e.preventDefault();
               }
             }, { passive: false });
@@ -159,7 +162,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <PWAInstallPrompt />
             <div className="lg:min-h-screen">
               <DesktopSidebar />
-              <div className="lg:pl-64">
+              <div className="lg:pl-64" style={{ background: "var(--bg)" }}>
                 {children}
               </div>
             </div>

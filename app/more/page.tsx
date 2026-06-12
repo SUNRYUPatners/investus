@@ -985,7 +985,7 @@ export default function MorePage() {
       <Header />
 
       {/* ── Mobile: single column / Desktop: 2-column ── */}
-      <div className="max-w-[480px] lg:max-w-[1100px] mx-auto px-4 lg:px-8 pb-24 lg:pb-10">
+      <div className="max-w-[480px] lg:max-w-[1100px] mx-auto px-4 lg:px-8 lg:pb-10">
 
         {/* Mobile title (hidden on desktop — desktop has no separate title) */}
         <div className="pt-5 pb-5 lg:hidden">

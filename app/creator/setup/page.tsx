@@ -401,7 +401,7 @@ export default function CreatorSetupPage() {
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
-      <main className="max-w-[480px] lg:max-w-2xl mx-auto pb-24 lg:pb-10">
+      <main className="max-w-[480px] lg:max-w-2xl mx-auto lg:pb-10">
         {/* Back */}
         <div className="px-4 pt-4 pb-2">
           <Link href="/wall" className="flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>

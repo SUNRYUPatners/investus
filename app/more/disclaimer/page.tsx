@@ -50,7 +50,7 @@ export default function DisclaimerPage() {
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
-      <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-24 lg:pb-10">
+      <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 lg:pb-10">
         <div className="pt-4 pb-2">
           <Link href="/more" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
             <ChevronLeft className="w-3.5 h-3.5" /> {isKo ? "더보기" : "More"}

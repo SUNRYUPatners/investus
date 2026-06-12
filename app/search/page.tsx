@@ -218,7 +218,7 @@ export default function SearchPage() {
       <Header />
       <TickerTape />
 
-      <main className="max-w-[480px] mx-auto lg:max-w-none px-4 lg:px-8 pt-5 pb-24 lg:pb-10">
+      <main className="max-w-[480px] mx-auto lg:max-w-none px-4 lg:px-8 pt-5 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start">
 
           {/* 왼쪽: 검색 + 결과 / 인기종목 */}

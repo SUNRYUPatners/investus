@@ -506,6 +506,7 @@ export default function WallPage() {
   const setMainTab = (tab: MainTab) => {
     try { sessionStorage.setItem("wall_main_tab", tab); } catch { /* ignore */ }
     setMainTabRaw(tab);
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   };
   const [selected, setSelected]           = useState(computeDefaultSymbol);
   const [liked, setLiked]                 = useState<Set<number>>(new Set());
@@ -1125,7 +1126,7 @@ export default function WallPage() {
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] lg:max-w-7xl mx-auto pb-24 lg:pb-10">
+      <main className="max-w-[480px] lg:max-w-7xl mx-auto lg:pb-10">
         {/* Page title */}
         <div className="flex items-center justify-between px-4 pt-5 pb-3">
           <div>

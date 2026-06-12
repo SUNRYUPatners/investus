@@ -169,7 +169,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] lg:max-w-3xl mx-auto pb-24 lg:pb-10">
+      <main className="max-w-[480px] lg:max-w-3xl mx-auto lg:pb-10">
         {/* Back button */}
         <div className="px-4 pt-4 pb-2">
           <button onClick={() => router.back()} className="flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>

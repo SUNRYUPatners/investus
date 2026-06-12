@@ -374,7 +374,7 @@ export default function StockPage({
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
 
-      <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 pb-24 lg:pb-10">
+      <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10">
 
         {/* 뒤로가기 + 공유 */}
         <div className="px-4 lg:px-0 pt-4 pb-2 flex items-center justify-between">

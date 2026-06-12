@@ -76,8 +76,10 @@ a, button, [role="button"] {
 }
 
 /* ── Bottom nav safe area ── */
+/* BottomNav = 52px + safe-area-inset-bottom (~34px) = ~86px total.
+   pb-safe provides enough clearance so the last content item is fully visible above the nav. */
 .pb-safe {
-  padding-bottom: calc(env(safe-area-inset-bottom) + 8rem);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 4.5rem);
 }
 
 /* iOS PWA: permanent background fill below the nav — covers the gap that appears
@@ -96,10 +98,10 @@ a, button, [role="button"] {
   }
 }
 
-/* PWA standalone: extra buffer to cover iOS rubber-band overscroll */
+/* PWA standalone: slight extra for rubber-band comfort */
 @media (display-mode: standalone) {
   .pb-safe {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 10rem);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 5rem);
   }
 }
 

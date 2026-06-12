@@ -22,7 +22,7 @@ export default async function HomePage() {
       {/* 티커 테이프: LiveMarket이 localStorage 업데이트하면 자동 동기화 */}
       <TickerTape />
 
-      <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10 pb-24">
+      <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-2">
 
           {/* ── 왼쪽 컬럼 ── */}
