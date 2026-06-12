@@ -453,20 +453,36 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
 }
 
 function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClose: () => void }) {
-  const [pdfUrl, setPdfUrl] = useState<string | null>(null);
-  const [pdfLoading, setPdfLoading] = useState(false);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+  const [imgSrc, setImgSrc] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const paragraphs = (content.body ?? "").split(/\n+/).filter(Boolean);
   const hasPdf = !!content.pdfPath;
 
   useEffect(() => {
     if (!hasPdf || !content.pdfPath) return;
-    setPdfLoading(true);
-    fetch(`/api/creator/pdf-url?path=${encodeURIComponent(content.pdfPath)}`)
-      .then((r) => r.json())
-      .then((d: { url?: string }) => { if (d.url) setPdfUrl(d.url); })
-      .catch(() => {})
-      .finally(() => setPdfLoading(false));
-  }, [hasPdf, content.pdfPath]);
+    setLoading(true);
+    setError(false);
+    setImgSrc(null);
+    fetch(`/api/creator/pdf-page?path=${encodeURIComponent(content.pdfPath)}&page=${page}`)
+      .then((r) => {
+        if (!r.ok) throw new Error("fetch failed");
+        const tp = r.headers.get("X-Total-Pages");
+        if (tp) setTotalPages(parseInt(tp, 10));
+        return r.blob();
+      })
+      .then((blob) => setImgSrc(URL.createObjectURL(blob)))
+      .catch(() => setError(true))
+      .finally(() => setLoading(false));
+  }, [hasPdf, content.pdfPath, page]);
+
+  // revoke previous object URL to avoid memory leak
+  useEffect(() => {
+    return () => { if (imgSrc) URL.revokeObjectURL(imgSrc); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [imgSrc]);
 
   return (
     <div className="fixed inset-0 z-[200] flex flex-col" style={{ background: "var(--bg)" }}>
@@ -477,22 +493,48 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
         </button>
         <div className="flex-1 min-w-0">
           <p className="text-xs font-bold truncate" style={{ color: "var(--text)" }}>{content.title}</p>
-          <p className="text-[10px]" style={{ color: "var(--muted)" }}>전자책</p>
+          {hasPdf && totalPages > 0 && (
+            <p className="text-[10px]" style={{ color: "var(--muted)" }}>{page} / {totalPages}p</p>
+          )}
         </div>
       </div>
       {/* Body */}
       {hasPdf ? (
-        pdfLoading ? (
-          <div className="flex-1 flex items-center justify-center">
-            <div className="w-6 h-6 rounded-full border-2 animate-spin" style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
-          </div>
-        ) : pdfUrl ? (
-          <iframe src={pdfUrl} className="flex-1 w-full border-0" title={content.title} />
-        ) : (
-          <div className="flex-1 flex items-center justify-center">
-            <p className="text-sm" style={{ color: "var(--muted)" }}>PDF를 불러올 수 없습니다.</p>
-          </div>
-        )
+        <div className="flex-1 overflow-y-auto flex flex-col items-center">
+          {loading ? (
+            <div className="flex-1 flex items-center justify-center w-full mt-20">
+              <div className="w-6 h-6 rounded-full border-2 animate-spin" style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
+            </div>
+          ) : error ? (
+            <div className="flex-1 flex items-center justify-center w-full mt-20">
+              <p className="text-sm" style={{ color: "var(--muted)" }}>PDF를 불러올 수 없습니다.</p>
+            </div>
+          ) : imgSrc ? (
+            <img src={imgSrc} alt={`${content.title} ${page}p`} className="w-full max-w-2xl" />
+          ) : null}
+          {/* Page navigation */}
+          {totalPages > 1 && (
+            <div className="flex items-center gap-4 py-4 mt-2 flex-shrink-0">
+              <button
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                disabled={page <= 1}
+                className="px-4 py-2 rounded-xl text-xs font-bold disabled:opacity-30 transition-opacity"
+                style={{ background: "var(--card)", color: "var(--text)" }}
+              >
+                ← 이전
+              </button>
+              <span className="text-xs" style={{ color: "var(--muted)" }}>{page} / {totalPages}</span>
+              <button
+                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                disabled={page >= totalPages}
+                className="px-4 py-2 rounded-xl text-xs font-bold disabled:opacity-30 transition-opacity"
+                style={{ background: "var(--card)", color: "var(--text)" }}
+              >
+                다음 →
+              </button>
+            </div>
+          )}
+        </div>
       ) : (
         <div className="flex-1 overflow-y-auto px-5 py-6 max-w-2xl w-full mx-auto">
           {paragraphs.length > 0 ? (

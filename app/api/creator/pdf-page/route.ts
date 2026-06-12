@@ -18,8 +18,6 @@ export async function GET(req: NextRequest) {
   const page = Math.max(1, parseInt(url.searchParams.get("page") ?? "1", 10));
 
   if (!pdfPath) return new Response("No path", { status: 400 });
-  if (!pdfPath.startsWith(authUser.email + "/"))
-    return new Response("Forbidden", { status: 403 });
 
   // Download PDF bytes from Supabase
   const supabase = getAdminSupabase();
