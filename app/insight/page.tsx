@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { ReportFeed } from "@/components/ReportFeed";
 import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
+import { InvestmentBasics, InvestmentMasters } from "@/components/InvestmentArticles";
 import Link from "next/link";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { getLocale } from "@/lib/getLocale";
@@ -61,6 +62,10 @@ export default async function InsightPage() {
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
+        <section className="px-4 mb-6"><InvestmentBasics /></section>
+        <section className="px-4 mb-4"><AdFitBanner /></section>
+        <section className="px-4 mb-6"><InvestmentMasters /></section>
+        <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6"><ReportFeed /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">
@@ -99,6 +104,10 @@ export default async function InsightPage() {
             {EduBanner}
           </div>
           <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">
+            <AdFitBanner />
+            <InvestmentBasics />
+            <AdFitBanner />
+            <InvestmentMasters />
             <AdFitBanner />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
