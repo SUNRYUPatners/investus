@@ -169,10 +169,38 @@ export default function SearchPage() {
     };
   });
 
+  // API fallback results for queries not found locally
+  const [apiResults, setApiResults] = useState<{ symbol: string; name: string; exchange: string }[]>([]);
+  const [apiLoading, setApiLoading] = useState(false);
+
   const handleChange = (q: string) => {
     setQuery(q);
     startTransition(() => setSearchQuery(q));
+    setApiResults([]);
   };
+
+  // Fetch Yahoo Finance when local results < 3
+  useEffect(() => {
+    if (!searchQuery.trim() || searchQuery.length < 1) { setApiResults([]); return; }
+    const lq2 = searchQuery.toLowerCase();
+    const localCount = enriched.filter(({ stock }) =>
+      stock.symbol.toLowerCase().includes(lq2) || stock.name.toLowerCase().includes(lq2)
+    ).length;
+    if (localCount >= 3) { setApiResults([]); return; }
+    const timer = setTimeout(async () => {
+      setApiLoading(true);
+      try {
+        const r = await fetch(`/api/stock-search?q=${encodeURIComponent(searchQuery)}`);
+        const data = await r.json() as { symbol: string; name: string; exchange: string }[];
+        // exclude symbols already in local registry
+        const localSymbols = new Set(SYMBOL_REGISTRY.map(s => s.symbol));
+        setApiResults((Array.isArray(data) ? data : []).filter(d => !localSymbols.has(d.symbol)));
+      } catch { /* ignore */ }
+      setApiLoading(false);
+    }, 400);
+    return () => clearTimeout(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchQuery]);
 
   const lq = searchQuery.toLowerCase();
   const results = searchQuery.trim()
@@ -219,9 +247,9 @@ export default function SearchPage() {
             {showResults ? (
               <div>
                 <p className="text-xs mb-3" style={{ color: "var(--muted)" }}>
-                  {t.search.results(results.length)}
+                  {t.search.results(results.length + apiResults.length)}
                 </p>
-                {results.length > 0 ? (
+                {results.length > 0 || apiResults.length > 0 ? (
                   <>
                     <div className="flex flex-col gap-2">
                       {results.map(({ stock, hasLivePrice }) => (
@@ -233,9 +261,36 @@ export default function SearchPage() {
                           onToggle={() => toggle(stock.symbol)}
                         />
                       ))}
+                      {/* Yahoo Finance API fallback results */}
+                      {apiResults.map((r) => (
+                        <Link key={r.symbol} href={`/stock/${r.symbol}`}
+                          className="flex items-center gap-3 px-4 py-3 rounded-xl border"
+                          style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                            style={{ background: "var(--border)" }}>
+                            <span className="text-xs font-bold font-mono-num" style={{ color: "var(--text)" }}>
+                              {r.symbol.slice(0, 2)}
+                            </span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{r.symbol}</p>
+                            <p className="text-xs truncate" style={{ color: "var(--muted)" }}>{r.name}</p>
+                          </div>
+                          <span className="text-[10px] px-1.5 py-0.5 rounded" style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}>{r.exchange}</span>
+                        </Link>
+                      ))}
+                      {apiLoading && (
+                        <div className="flex justify-center py-3">
+                          <div className="w-4 h-4 rounded-full border-2 border-t-transparent animate-spin" style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
+                        </div>
+                      )}
                     </div>
                     <div className="mt-4"><AdFitBanner /></div>
                   </>
+                ) : apiLoading ? (
+                  <div className="flex justify-center py-16">
+                    <div className="w-6 h-6 rounded-full border-2 border-t-transparent animate-spin" style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
+                  </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center py-16 gap-3">
                     <Search className="w-10 h-10 opacity-20" style={{ color: "var(--muted)" }} />

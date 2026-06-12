@@ -709,30 +709,39 @@ function ArticleCard({ article }: { article: Article }) {
    EXPORTS
 ══════════════════════════════════════════════════════════════════ */
 
-export function InvestmentBasics() {
+function CollapsibleSection({ title, articles, accent }: { title: string; articles: Article[]; accent: string }) {
+  const [open, setOpen] = useState(false);
   return (
     <div>
-      <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
-        style={{ color: "var(--muted)" }}>
-        투자 기초 지식
-      </h2>
-      <div className="flex flex-col gap-2">
-        {BASICS.map(a => <ArticleCard key={a.id} article={a} />)}
-      </div>
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="w-full flex items-center justify-between mb-3 group"
+      >
+        <h2 className="text-xs font-semibold tracking-widest uppercase font-syne"
+          style={{ color: "var(--muted)" }}>
+          {title}
+        </h2>
+        <div className="flex items-center gap-1.5">
+          {!open && <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full" style={{ background: `${accent}15`, color: accent }}>{articles.length}개</span>}
+          <ChevronDown
+            className="w-4 h-4 transition-transform duration-300"
+            style={{ color: "var(--muted)", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+          />
+        </div>
+      </button>
+      {open && (
+        <div className="flex flex-col gap-2">
+          {articles.map(a => <ArticleCard key={a.id} article={a} />)}
+        </div>
+      )}
     </div>
   );
 }
 
+export function InvestmentBasics() {
+  return <CollapsibleSection title="투자 기초 지식" articles={BASICS} accent="rgba(0,229,160,0.9)" />;
+}
+
 export function InvestmentMasters() {
-  return (
-    <div>
-      <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
-        style={{ color: "var(--muted)" }}>
-        투자 대가들의 전략
-      </h2>
-      <div className="flex flex-col gap-2">
-        {MASTERS.map(a => <ArticleCard key={a.id} article={a} />)}
-      </div>
-    </div>
-  );
+  return <CollapsibleSection title="투자 대가들의 전략" articles={MASTERS} accent="rgba(212,175,55,0.9)" />;
 }

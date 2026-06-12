@@ -130,9 +130,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Kakao AdFit SDK — 공식 가이드 방식: 프로토콜 상대 URL, type 명시, async */}
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async />
       </head>
       <body style={{ background: "var(--bg)" }}>
         {/* iOS PWA: prevent rubber-band overscroll at bottom revealing content under nav */}
@@ -169,6 +166,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <BottomNav />
           </AuthProvider>
         </LocaleProvider>
+        {/* Kakao AdFit SDK — afterInteractive로 React 렌더 후 실행 보장 */}
+        <Script
+          src="https://t1.kakaocdn.net/kas/static/ba.min.js"
+          strategy="afterInteractive"
+        />
         <Analytics />
       </body>
     </html>

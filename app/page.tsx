@@ -42,13 +42,13 @@ export default async function HomePage() {
             {/* 관심종목 */}
             <WatchlistSection />
 
-            {/* 광고 — 관심종목과 시장 데이터 사이 */}
+            {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures · 시장종합분석 (실시간) */}
+            <LiveMarket />
+
+            {/* 광고 — LiveMarket 아래 (첫 광고는 스크롤 후 노출) */}
             <section className="px-4 lg:px-0 pt-4">
               <AdFitBanner />
             </section>
-
-            {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures · 시장종합분석 (실시간) */}
-            <LiveMarket />
 
             {/* Investus 리포트 — AI 분석 아래 */}
             <section className="px-4 lg:px-0 pt-4 lg:pt-6">
@@ -83,8 +83,8 @@ export default async function HomePage() {
 
           {/* ── 오른쪽 컬럼 (데스크톱 전용, sticky) ── */}
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
-            <AdFitBanner />
             <FearGreedWidget locale={locale} />
+            <AdFitBanner />
             <BuffettWidget locale={locale} />
             <NewsSection />
           </div>

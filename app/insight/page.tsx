@@ -61,12 +61,12 @@ export default async function InsightPage() {
         </div>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
+        <section className="px-4 mb-6"><ReportFeed /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6"><InvestmentBasics /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6"><InvestmentMasters /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
-        <section className="px-4 mb-6"><ReportFeed /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">
           <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
@@ -93,6 +93,10 @@ export default async function InsightPage() {
             <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
           </div>
           <ReportFeed />
+          <div className="mt-8 flex flex-col gap-6">
+            <InvestmentBasics />
+            <InvestmentMasters />
+          </div>
         </div>
 
         {/* 오른쪽 — sticky 사이드바 */}
@@ -104,10 +108,6 @@ export default async function InsightPage() {
             {EduBanner}
           </div>
           <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">
-            <AdFitBanner />
-            <InvestmentBasics />
-            <AdFitBanner />
-            <InvestmentMasters />
             <AdFitBanner />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
