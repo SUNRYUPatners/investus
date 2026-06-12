@@ -493,7 +493,7 @@ type MainTab       = "discussion" | "creator" | "analyst";
 type AnalystStatus  = "none" | "approved" | "rejected";
 type AnalystPost    = { id: number; alias: string; content: string; symbol: string | null; likes: number; comments?: number; created_at: string; liked: boolean };
 type AnalystComment = { id: number; alias: string; content: string; created_at: string };
-type CreatorSort = "popular" | "return" | "subscribers" | "newest";
+type CreatorSort = "popular" | "return" | "views" | "subscribers" | "newest";
 
 export default function WallPage() {
   const { user, verify } = useAuth();
@@ -517,6 +517,7 @@ export default function WallPage() {
   const [uploadErr, setUploadErr]         = useState("");
   const [hasCreatorProfile, setHasCreatorProfile] = useState(false);
   const [apiCreators, setApiCreators] = useState<{ id: string; phone?: string; nickname: string; avatar: string; bio: string; annual_return?: number; follower_count?: number; tags?: string[] }[]>([]);
+  const [creatorViews, setCreatorViews] = useState<Record<string, number>>({});
   const [expandedWallComments, setExpandedWallComments] = useState<Set<number>>(new Set());
   const [wallComments, setWallComments]       = useState<Record<number, CommentWithReplies[]>>({});
   const [wallCommentInput, setWallCommentInput] = useState<Record<number, string>>({});
@@ -620,7 +621,26 @@ export default function WallPage() {
     // Fetch approved creators from Supabase API
     fetch("/api/creator/list")
       .then((r) => r.json())
-      .then((data) => { if (Array.isArray(data)) setApiCreators(data); })
+      .then((data: { id: string; phone?: string; nickname: string; avatar: string; bio: string; annual_return?: number; follower_count?: number; tags?: string[] }[]) => {
+        if (!Array.isArray(data)) return;
+        setApiCreators(data);
+        // Fetch total view counts for all creators in parallel
+        Promise.all(
+          data.map(async (creator) => {
+            const id = creator.phone ?? creator.id;
+            try {
+              const res = await fetch(`/api/creator/contents?id=${encodeURIComponent(id)}`);
+              const contents = await res.json() as Array<{ viewCount?: number }>;
+              const total = Array.isArray(contents)
+                ? contents.reduce((s, c) => s + (c.viewCount ?? 0), 0)
+                : 0;
+              return [id, total] as [string, number];
+            } catch {
+              return [id, 0] as [string, number];
+            }
+          })
+        ).then((pairs) => setCreatorViews(Object.fromEntries(pairs)));
+      })
       .catch(() => {});
   }, []);
 
@@ -991,9 +1011,11 @@ export default function WallPage() {
   }));
   const sortedCreators = [...mappedCreators].sort((a, b) => {
     if (creatorSort === "return")      return b.annualReturn - a.annualReturn;
+    if (creatorSort === "views")       return (creatorViews[b.id] ?? 0) - (creatorViews[a.id] ?? 0);
     if (creatorSort === "subscribers") return b.followerCount - a.followerCount;
     if (creatorSort === "newest")      return b.inceptionDate.localeCompare(a.inceptionDate);
-    return b.followerCount * 10 - a.followerCount * 10;
+    // popular: composite — annual return weighted + views
+    return (b.annualReturn * 2 + (creatorViews[b.id] ?? 0) * 0.01) - (a.annualReturn * 2 + (creatorViews[a.id] ?? 0) * 0.01);
   });
 
   const toggleLike = (id: number) => {
@@ -1490,105 +1512,88 @@ export default function WallPage() {
             <AdFitBanner />
 
             {/* ── 시상대 포디움 ── */}
-            {apiCreators.length >= 3 && <div
-              className="rounded-2xl border overflow-hidden mt-5 mb-4"
-              style={{ background: "var(--card)", borderColor: "var(--border)" }}
-            >
-              <p
-                className="text-[10px] text-center font-semibold tracking-widest uppercase pt-4 pb-3"
-                style={{ color: "var(--muted)" }}
-              >
-                {w.creatorPodium}
-              </p>
-              <div className="flex items-end justify-center gap-2 px-5">
-                {/* 2위 — 은 */}
-                <div className="flex flex-col items-center flex-1">
-                  <span className="text-2xl mb-1">🥈</span>
-                  <p
-                    className="text-[9px] font-bold text-center leading-tight mb-0.5 px-0.5 break-words w-full"
-                    style={{ color: "var(--text)" }}
-                  >
-                    {sortedCreators[1]?.nickname}
-                  </p>
-                  <div className="flex items-center justify-center gap-1 mb-1.5">
-                    <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
-                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{sortedCreators[1]?.annualReturn ?? 0}%</span>
-                    <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
-                    <Users className="w-2.5 h-2.5" style={{ color: "#C0C0C0" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#C0C0C0" }}>{w.subscribers(sortedCreators[1]?.followerCount ?? 0)}</span>
-                  </div>
-                  <div
-                    className="w-full rounded-t-xl flex items-center justify-center font-black text-base"
-                    style={{
-                      height: 58,
-                      background: "rgba(192,192,192,0.10)",
-                      borderTop: "2px solid rgba(192,192,192,0.4)",
-                      color: "#C0C0C0",
-                    }}
-                  >
-                    2
-                  </div>
-                </div>
+            {apiCreators.length >= 1 && (() => {
+              // 포디움: 순위 순서대로 정렬된 top3 (수익률 기준)
+              const top3 = [...mappedCreators]
+                .sort((a, b) => b.annualReturn - a.annualReturn)
+                .slice(0, 3);
 
-                {/* 1위 — 금 */}
-                <div className="flex flex-col items-center flex-1">
-                  <span className="text-3xl mb-1">🥇</span>
-                  <p
-                    className="text-[10px] font-bold text-center leading-tight mb-0.5 px-0.5 break-words w-full"
-                    style={{ color: "var(--text)" }}
-                  >
-                    {sortedCreators[0]?.nickname}
-                  </p>
-                  <div className="flex items-center justify-center gap-1 mb-1.5">
-                    <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
-                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{sortedCreators[0]?.annualReturn ?? 0}%</span>
-                    <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
-                    <Users className="w-2.5 h-2.5" style={{ color: "#FFD700" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#FFD700" }}>{w.subscribers(sortedCreators[0]?.followerCount ?? 0)}</span>
-                  </div>
-                  <div
-                    className="w-full rounded-t-xl flex items-center justify-center font-black text-xl"
-                    style={{
-                      height: 84,
-                      background: "rgba(255,215,0,0.10)",
-                      borderTop: "2px solid rgba(255,215,0,0.5)",
-                      color: "#FFD700",
-                    }}
-                  >
-                    1
-                  </div>
-                </div>
+              type PodiumEntry = { medal: string; medalColor: string; height: number; textSize: string; rank: number };
+              const SLOTS: PodiumEntry[] = [
+                { medal: "🥈", medalColor: "#C0C0C0", height: 58,  textSize: "text-base", rank: 1 },
+                { medal: "🥇", medalColor: "#FFD700", height: 84,  textSize: "text-xl",   rank: 0 },
+                { medal: "🥉", medalColor: "#CD7F32", height: 42,  textSize: "text-base", rank: 2 },
+              ];
 
-                {/* 3위 — 동 */}
-                <div className="flex flex-col items-center flex-1">
-                  <span className="text-xl mb-1">🥉</span>
+              return (
+                <div
+                  className="rounded-2xl border overflow-hidden mt-5 mb-4"
+                  style={{ background: "var(--card)", borderColor: "var(--border)" }}
+                >
                   <p
-                    className="text-[9px] font-bold text-center leading-tight mb-0.5 px-0.5 break-words w-full"
-                    style={{ color: "var(--text)" }}
+                    className="text-[10px] text-center font-semibold tracking-widest uppercase pt-4 pb-3"
+                    style={{ color: "var(--muted)" }}
                   >
-                    {sortedCreators[2]?.nickname}
+                    🏆 {w.creatorPodium}
                   </p>
-                  <div className="flex items-center justify-center gap-1 mb-1.5">
-                    <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
-                    <span className="text-[8px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>+{sortedCreators[2]?.annualReturn ?? 0}%</span>
-                    <span className="text-[7px]" style={{ color: "var(--muted)" }}>/</span>
-                    <Users className="w-2.5 h-2.5" style={{ color: "#CD7F32" }} />
-                    <span className="text-[8px] font-mono-num" style={{ color: "#CD7F32" }}>{w.subscribers(sortedCreators[2]?.followerCount ?? 0)}</span>
-                  </div>
-                  <div
-                    className="w-full rounded-t-xl flex items-center justify-center font-black text-base"
-                    style={{
-                      height: 42,
-                      background: "rgba(205,127,50,0.10)",
-                      borderTop: "2px solid rgba(205,127,50,0.4)",
-                      color: "#CD7F32",
-                    }}
-                  >
-                    3
+                  <div className="flex items-end justify-center gap-2 px-5">
+                    {SLOTS.map(({ medal, medalColor, height, textSize, rank }) => {
+                      const creator = top3[rank];
+                      if (!creator) {
+                        return (
+                          <div key={rank} className="flex flex-col items-center flex-1 opacity-20">
+                            <span className="text-2xl mb-1">{medal}</span>
+                            <div
+                              className={`w-full rounded-t-xl flex items-center justify-center font-black ${textSize}`}
+                              style={{ height, background: "rgba(255,255,255,0.04)", borderTop: `2px solid rgba(255,255,255,0.1)`, color: medalColor }}
+                            >
+                              {rank + 1}
+                            </div>
+                          </div>
+                        );
+                      }
+                      const totalViews = creatorViews[creator.id] ?? 0;
+                      return (
+                        <div key={rank} className="flex flex-col items-center flex-1">
+                          <span className={`${rank === 0 ? "text-3xl" : "text-2xl"} mb-1`}>{medal}</span>
+                          <p
+                            className="text-[9px] font-bold text-center leading-tight mb-0.5 px-0.5 break-words w-full"
+                            style={{ color: "var(--text)" }}
+                          >
+                            {creator.nickname}
+                          </p>
+                          {/* 계좌 수익률 */}
+                          <div className="flex items-center justify-center gap-0.5 mb-0.5">
+                            <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
+                            <span className="text-[9px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>
+                              +{creator.annualReturn}%
+                            </span>
+                          </div>
+                          {/* 뷰수 */}
+                          <div className="flex items-center justify-center gap-0.5 mb-1.5">
+                            <span className="text-[8px]" style={{ color: "var(--muted)" }}>👁</span>
+                            <span className="text-[8px] font-mono-num" style={{ color: medalColor }}>
+                              {totalViews > 0 ? `${totalViews.toLocaleString()}뷰` : `${creator.followerCount.toLocaleString()}명`}
+                            </span>
+                          </div>
+                          <div
+                            className={`w-full rounded-t-xl flex items-center justify-center font-black ${textSize}`}
+                            style={{
+                              height,
+                              background: `${medalColor}18`,
+                              borderTop: `2px solid ${medalColor}66`,
+                              color: medalColor,
+                            }}
+                          >
+                            {rank + 1}
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
-              </div>
-            </div>}
+              );
+            })()}
 
             <div className="flex items-center justify-between mb-2 mt-2">
               <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{w.creatorTitle}</h2>
@@ -1597,7 +1602,7 @@ export default function WallPage() {
 
             {/* 정렬 필터 */}
             <div className="flex gap-1.5 mb-3 overflow-x-auto no-scrollbar pb-0.5">
-              {(["popular", "return", "subscribers", "newest"] as const).map((key) => {
+              {(["popular", "return", "views", "subscribers", "newest"] as const).map((key) => {
                 const labels = w.sortLabels;
                 const active = creatorSort === key;
                 return (
