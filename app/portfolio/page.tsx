@@ -62,12 +62,12 @@ function CurrencyToggle({ cur, onChange }: { cur: Cur; onChange: (c: Cur) => voi
         <button
           key={c}
           onClick={() => onChange(c)}
-          className="px-2.5 py-1 rounded-full text-[10px] font-bold transition-all"
+          className="px-2 py-1 rounded-full text-[10px] font-bold transition-all"
           style={cur === c
             ? { background: "var(--card)", color: "var(--text)" }
             : { color: "var(--muted)" }}
         >
-          {c === "USD" ? "$ USD" : "₩ KRW"}
+          {c === "USD" ? "$" : "₩"}
         </button>
       ))}
     </div>
@@ -1007,16 +1007,15 @@ export default function PortfolioPage() {
               <CurrencyToggle cur={cur} onChange={setCur} />
               {holdings.length > 0 && (
                 <button onClick={() => setShowImport(true)}
-                  className="flex items-center gap-1 text-xs font-bold px-3 py-2 rounded-full border"
+                  className="w-8 h-8 flex items-center justify-center rounded-full border"
                   style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }}>
                   <Camera className="w-3.5 h-3.5" />
-                  {locale === "ko" ? "수정" : "Update"}
                 </button>
               )}
               <button onClick={() => setShowAdd(true)}
-                className="flex items-center gap-1.5 text-xs font-bold px-3 py-2 rounded-full"
+                className="flex items-center gap-1 text-xs font-bold px-2.5 py-1.5 rounded-full"
                 style={{ background: "var(--mint)", color: "#000" }}>
-                <Plus className="w-3.5 h-3.5" strokeWidth={2.5} />
+                <Plus className="w-3 h-3" strokeWidth={2.5} />
                 {locale === "ko" ? "추가" : "Add"}
               </button>
             </div>
