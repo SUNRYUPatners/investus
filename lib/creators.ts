@@ -20,6 +20,8 @@ export type CreatorContent = {
   viewCount: number
   isPremium?: boolean // requires subscription when creator.subscriptionEnabled
   body?: string       // ebook full text content
+  pdfPath?: string    // Supabase Storage path for PDF (e.g. "email/contentId.pdf")
+  fileLabel?: string  // original PDF filename (display only)
 }
 
 export type Creator = {

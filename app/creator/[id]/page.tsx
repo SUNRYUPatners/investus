@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard } from "lucide-react";
 import { Header } from "@/components/Header";
-import { AdGateModal } from "@/components/AdGateModal";
 import { contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
 
 const ACCOUNT = { bank: "카카오뱅크", number: "3333-22-2070396", holder: "류현우" };
@@ -454,7 +453,21 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
 }
 
 function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClose: () => void }) {
+  const [pdfUrl, setPdfUrl] = useState<string | null>(null);
+  const [pdfLoading, setPdfLoading] = useState(false);
   const paragraphs = (content.body ?? "").split(/\n+/).filter(Boolean);
+  const hasPdf = !!content.pdfPath;
+
+  useEffect(() => {
+    if (!hasPdf || !content.pdfPath) return;
+    setPdfLoading(true);
+    fetch(`/api/creator/pdf-url?path=${encodeURIComponent(content.pdfPath)}`)
+      .then((r) => r.json())
+      .then((d: { url?: string }) => { if (d.url) setPdfUrl(d.url); })
+      .catch(() => {})
+      .finally(() => setPdfLoading(false));
+  }, [hasPdf, content.pdfPath]);
+
   return (
     <div className="fixed inset-0 z-[200] flex flex-col" style={{ background: "var(--bg)" }}>
       {/* Header */}
@@ -468,46 +481,38 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
         </div>
       </div>
       {/* Body */}
-      <div className="flex-1 overflow-y-auto px-5 py-6 max-w-2xl w-full mx-auto">
-        {paragraphs.length > 0 ? (
-          paragraphs.map((p: string, i: number) => (
-            <p key={i} className="text-sm leading-loose mb-4" style={{ color: "var(--text)" }}>
-              {p}
-            </p>
-          ))
+      {hasPdf ? (
+        pdfLoading ? (
+          <div className="flex-1 flex items-center justify-center">
+            <div className="w-6 h-6 rounded-full border-2 animate-spin" style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
+          </div>
+        ) : pdfUrl ? (
+          <iframe src={pdfUrl} className="flex-1 w-full border-0" title={content.title} />
         ) : (
-          <p className="text-sm text-center mt-20" style={{ color: "var(--muted)" }}>내용이 없습니다.</p>
-        )}
-      </div>
+          <div className="flex-1 flex items-center justify-center">
+            <p className="text-sm" style={{ color: "var(--muted)" }}>PDF를 불러올 수 없습니다.</p>
+          </div>
+        )
+      ) : (
+        <div className="flex-1 overflow-y-auto px-5 py-6 max-w-2xl w-full mx-auto">
+          {paragraphs.length > 0 ? (
+            paragraphs.map((p: string, i: number) => (
+              <p key={i} className="text-sm leading-loose mb-4" style={{ color: "var(--text)" }}>{p}</p>
+            ))
+          ) : (
+            <p className="text-sm text-center mt-20" style={{ color: "var(--muted)" }}>내용이 없습니다.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
 
 function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; locked: boolean; onUnlock: () => void }) {
-  const [showGate, setShowGate] = useState(false);
-  const [opened, setOpened] = useState(false);
   const [showReader, setShowReader] = useState(false);
-
-  function handleOpen() {
-    if (opened) { setShowReader(true); return; }
-    setShowGate(true);
-  }
-
-  function handleConfirm() {
-    setShowGate(false);
-    setOpened(true);
-    setShowReader(true);
-  }
 
   return (
     <>
-    {showGate && (
-      <AdGateModal
-        title={content.title}
-        onConfirm={handleConfirm}
-        onClose={() => setShowGate(false)}
-      />
-    )}
     {showReader && content.type === "book" && (
       <EbookReaderModal content={content} onClose={() => setShowReader(false)} />
     )}
@@ -565,11 +570,11 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
             </span>
             {!locked && content.type === "book" && (
               <button
-                onClick={handleOpen}
+                onClick={() => setShowReader(true)}
                 className="text-[10px] px-2.5 py-1 rounded-lg font-bold transition-opacity hover:opacity-80 active:scale-95"
-                style={{ background: opened ? "rgba(0,229,160,0.12)" : "rgba(192,132,252,0.15)", color: opened ? "var(--mint)" : "rgba(192,132,252,0.95)", border: `1px solid ${opened ? "rgba(0,229,160,0.25)" : "rgba(192,132,252,0.25)"}` }}
+                style={{ background: "rgba(192,132,252,0.15)", color: "rgba(192,132,252,0.95)", border: "1px solid rgba(192,132,252,0.25)" }}
               >
-                {opened ? "다시 읽기" : "읽기"}
+                읽기
               </button>
             )}
           </div>

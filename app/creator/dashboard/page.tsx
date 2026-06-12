@@ -22,6 +22,7 @@ type MyContent = {
   body: string;
   externalUrl: string;
   fileLabel: string;
+  pdfPath?: string;
   createdAt: string;
   likeCount: number;
   viewCount: number;
@@ -81,6 +82,8 @@ export default function CreatorDashboardPage() {
   const [wBody,        setWBody]        = useState("");
   const [wExternalUrl, setWExternalUrl] = useState("");
   const [wFileLabel,   setWFileLabel]   = useState("");
+  const [wPdfFile,     setWPdfFile]     = useState<File | null>(null);
+  const [wUploading,   setWUploading]   = useState(false);
 
   // Edit form
   const [eNickname,         setENickname]         = useState("");
@@ -202,10 +205,34 @@ export default function CreatorDashboardPage() {
     } catch { /* ignore — localStorage is the source of truth */ }
   };
 
-  const handleWrite = () => {
+  const handleWrite = async () => {
     if (!wTitle.trim()) return;
+    setWUploading(true);
+    const contentId = Date.now().toString();
+    let pdfPath: string | undefined;
+
+    // Upload PDF if provided
+    if (wType === "book" && wPdfFile) {
+      try {
+        const { data: { session } } = await getSupabase().auth.getSession();
+        const headers: HeadersInit = session?.access_token
+          ? { "Content-Type": "application/json", Authorization: `Bearer ${session.access_token}` }
+          : { "Content-Type": "application/json" };
+        const uploadRes = await fetch("/api/creator/upload-pdf", {
+          method: "POST",
+          headers,
+          body: JSON.stringify({ contentId }),
+        });
+        const uploadData = await uploadRes.json() as { signedUrl?: string; path?: string; error?: string };
+        if (uploadData.signedUrl && uploadData.path) {
+          await fetch(uploadData.signedUrl, { method: "PUT", body: wPdfFile, headers: { "Content-Type": "application/pdf" } });
+          pdfPath = uploadData.path;
+        }
+      } catch { /* ignore upload failure — content still saves */ }
+    }
+
     const item: MyContent = {
-      id: Date.now().toString(),
+      id: contentId,
       type: wType,
       thumbnail: TYPE_EMOJI[wType],
       title: wTitle.trim(),
@@ -213,6 +240,7 @@ export default function CreatorDashboardPage() {
       body: wBody.trim(),
       externalUrl: wExternalUrl.trim(),
       fileLabel: wFileLabel.trim(),
+      pdfPath,
       createdAt: new Date().toISOString().slice(0, 10),
       likeCount: 0,
       viewCount: 0,
@@ -223,7 +251,8 @@ export default function CreatorDashboardPage() {
     syncToStorage(next);
     setShowWrite(false);
     setWTitle(""); setWDesc(""); setWBody(""); setWType("post");
-    setWExternalUrl(""); setWFileLabel("");
+    setWExternalUrl(""); setWFileLabel(""); setWPdfFile(null);
+    setWUploading(false);
   };
 
   const handleDelete = (id: string) => {
@@ -557,10 +586,10 @@ export default function CreatorDashboardPage() {
               <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
             </button>
             <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>새 콘텐츠 작성</h2>
-            <button onClick={handleWrite} disabled={!wTitle.trim()}
+            <button onClick={handleWrite} disabled={!wTitle.trim() || wUploading}
               className="text-xs font-bold px-3 py-1.5 rounded-lg disabled:opacity-40 active:opacity-70 transition-opacity"
               style={{ background: "var(--mint)", color: "#000" }}>
-              발행
+              {wUploading ? "업로드 중…" : "발행"}
             </button>
           </div>
 
@@ -626,7 +655,7 @@ export default function CreatorDashboardPage() {
                   <input type="file" accept=".pdf,application/pdf" className="hidden"
                     onChange={(e) => {
                       const f = e.target.files?.[0];
-                      if (f) setWFileLabel(f.name);
+                      if (f) { setWFileLabel(f.name); setWPdfFile(f); }
                     }} />
                 </label>
               </>
