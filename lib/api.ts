@@ -237,14 +237,14 @@ const mockQuotes: Quote[] = [
   },
   // ── Investus 추천 종목 ──
   {
-    symbol: "PLTR",
-    name: "Palantir Technologies — 팔란티어 AI 데이터",
-    price: 137.15,
-    change: 1.90,
-    changePercent: 1.41,
-    sparkline: [132, 133, 134, 135, 135, 136, 136, 137, 137],
-    volume: "76.2M",
-    marketCap: "314.0B",
+    symbol: "SPCX",
+    name: "SpaceX — 스페이스엑스 나스닥 상장",
+    price: 172.68,
+    change: 37.68,
+    changePercent: 27.91,
+    sparkline: [135, 145, 152, 158, 162, 168, 172, 175, 172.68],
+    volume: "42.5M",
+    marketCap: "2260.0B",
   },
   {
     symbol: "IBM",
@@ -464,7 +464,7 @@ const mockNews: NewsItem[] = [
 
 // ── API Functions ──────────────────────────────────────────────────────────
 
-export const RECOMMENDED_SYMBOLS = ["GOOGL", "TSLA", "PLTR", "IBM", "JPM"];
+export const RECOMMENDED_SYMBOLS = ["GOOGL", "TSLA", "SPCX", "IBM", "JPM"];
 const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
 
 export const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [
