@@ -4,48 +4,45 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
-  ChevronLeft, ChevronRight, Plus, Trash2,
+  ChevronLeft, ChevronRight,
   ShieldCheck, CheckCircle2, Upload, Eye, EyeOff,
+  XCircle, RefreshCcw, TrendingUp, TrendingDown,
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { useAuth } from "@/hooks/useAuth";
+import { getSupabase } from "@/lib/supabase";
+import type { PortfolioAnalysis } from "@/app/api/analyze-portfolio-screenshot/route";
 
 const AVATARS = ["🦁", "🚀", "👑", "💰", "🐂", "🦅", "🎯", "💎", "🔥", "🌊", "⚡", "🧠"];
-const TAG_OPTIONS = ["가치투자", "성장주", "배당주", "ETF", "테크", "AI반도체", "장기홀딩", "단기트레이딩", "적립식", "배당성장", "현금흐름", "패시브투자"];
-const BROKERS = ["키움증권", "삼성증권", "미래에셋증권", "NH투자증권", "토스증권", "카카오페이증권", "신한투자증권", "기타"];
+const TAG_OPTIONS = [
+  "가치투자", "성장주", "배당주", "ETF", "테크", "AI반도체",
+  "장기홀딩", "단기트레이딩", "적립식", "배당성장", "현금흐름", "패시브투자",
+];
 
-type Holding = { symbol: string; name: string; allocation: number };
-type CreatorDraft = {
-  nickname: string; avatar: string; bio: string; tags: string[];
-  broker: string; portfolio: Holding[];
-};
+type Draft = { nickname: string; avatar: string; bio: string; tags: string[] };
+const EMPTY: Draft = { nickname: "", avatar: "🦁", bio: "", tags: [] };
 
-const EMPTY: CreatorDraft = {
-  nickname: "", avatar: "🦁", bio: "", tags: [],
-  broker: "", portfolio: [],
-};
-
-/* ── Inline login/signup ──────────────────────────────────── */
+/* ─── Inline login ──────────────────────────────────────────── */
 function LoginGate({ onSuccess }: { onSuccess: () => void }) {
   const { login, signup } = useAuth();
-  const [mode, setMode]         = useState<"login" | "signup">("login");
-  const [email, setEmail]       = useState("");
-  const [pw, setPw]             = useState("");
-  const [visible, setVisible]   = useState(false);
-  const [error, setError]       = useState("");
+  const [mode, setMode]   = useState<"login" | "signup">("login");
+  const [email, setEmail] = useState("");
+  const [pw, setPw]       = useState("");
+  const [vis, setVis]     = useState(false);
+  const [err, setErr]     = useState("");
   const [confirmEmail, setConfirmEmail] = useState(false);
 
   const handleLogin = async () => {
-    if (!email.includes("@")) { setError("올바른 이메일 주소를 입력해주세요."); return; }
+    if (!email.includes("@")) { setErr("올바른 이메일 주소를 입력해주세요."); return; }
     const ok = await login(email, pw);
-    if (!ok) { setError("이메일 또는 비밀번호가 올바르지 않습니다."); return; }
+    if (!ok) { setErr("이메일 또는 비밀번호가 올바르지 않습니다."); return; }
     onSuccess();
   };
   const handleSignup = async () => {
-    if (!email.includes("@")) { setError("올바른 이메일 주소를 입력해주세요."); return; }
-    if (pw.length < 6) { setError("비밀번호는 6자 이상이어야 합니다."); return; }
+    if (!email.includes("@")) { setErr("올바른 이메일 주소를 입력해주세요."); return; }
+    if (pw.length < 6) { setErr("비밀번호는 6자 이상이어야 합니다."); return; }
     const result = await signup(email, pw);
-    if (!result.ok) { setError(result.msg); return; }
+    if (!result.ok) { setErr(result.msg); return; }
     if (result.msg === "confirm_email") { setConfirmEmail(true); return; }
     onSuccess();
   };
@@ -55,19 +52,14 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
       <div className="w-full max-w-xs">
         <div className="text-center mb-8">
           <div className="text-4xl mb-3">🚀</div>
-          <h1 className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
-            투자클럽 만들기
-          </h1>
-          <p className="text-xs" style={{ color: "var(--muted)" }}>
-            로그인 후 투자클럽을 만들 수 있어요
-          </p>
+          <h1 className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>투자클럽 만들기</h1>
+          <p className="text-xs" style={{ color: "var(--muted)" }}>로그인 후 투자클럽을 만들 수 있어요</p>
         </div>
 
         <div className="rounded-2xl border p-5 flex flex-col gap-3" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-          {/* Mode toggle */}
           <div className="flex rounded-xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>
             {(["login", "signup"] as const).map((m) => (
-              <button key={m} onClick={() => { setMode(m); setError(""); }}
+              <button key={m} onClick={() => { setMode(m); setErr(""); }}
                 className="flex-1 py-2 text-xs font-bold transition-all"
                 style={mode === m ? { background: "var(--mint)", color: "#000" } : { color: "var(--muted)" }}>
                 {m === "login" ? "로그인" : "회원가입"}
@@ -87,42 +79,30 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
               </button>
             </div>
           ) : (
-          <input
-            type="email"
-            placeholder="이메일 주소"
-            value={email}
-            onChange={(e) => { setEmail(e.target.value); setError(""); }}
-            className="w-full px-4 py-3 rounded-xl text-sm outline-none"
-            style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--text)" }}
-          />
-
+            <>
+              <input type="email" placeholder="이메일 주소" value={email}
+                onChange={(e) => { setEmail(e.target.value); setErr(""); }}
+                className="w-full px-4 py-3 rounded-xl text-sm outline-none"
+                style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--text)" }} />
+              <div className="relative">
+                <input type={vis ? "text" : "password"} placeholder="비밀번호" value={pw}
+                  onChange={(e) => { setPw(e.target.value); setErr(""); }}
+                  onKeyDown={(e) => e.key === "Enter" && (mode === "login" ? handleLogin() : handleSignup())}
+                  className="w-full px-4 py-3 rounded-xl text-sm outline-none pr-10"
+                  style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--text)" }} />
+                <button onClick={() => setVis((v) => !v)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2">
+                  {vis ? <EyeOff className="w-4 h-4" style={{ color: "var(--muted)" }} /> : <Eye className="w-4 h-4" style={{ color: "var(--muted)" }} />}
+                </button>
+              </div>
+              {err && <p className="text-xs" style={{ color: "#ef4444" }}>{err}</p>}
+              <button onClick={mode === "login" ? handleLogin : handleSignup}
+                className="w-full py-3 rounded-xl text-sm font-bold"
+                style={{ background: "var(--mint)", color: "#000" }}>
+                {mode === "login" ? "로그인 후 시작하기" : "가입하고 시작하기"}
+              </button>
+            </>
           )}
-          {!confirmEmail && (
-          <div className="relative">
-            <input
-              type={visible ? "text" : "password"}
-              placeholder="비밀번호"
-              value={pw}
-              onChange={(e) => { setPw(e.target.value); setError(""); }}
-              onKeyDown={(e) => e.key === "Enter" && (mode === "login" ? handleLogin() : handleSignup())}
-              className="w-full px-4 py-3 rounded-xl text-sm outline-none pr-10"
-              style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--text)" }}
-            />
-            <button onClick={() => setVisible((v) => !v)}
-              className="absolute right-3 top-1/2 -translate-y-1/2">
-              {visible ? <EyeOff className="w-4 h-4" style={{ color: "var(--muted)" }} /> : <Eye className="w-4 h-4" style={{ color: "var(--muted)" }} />}
-            </button>
-          </div>
-          )}
-
-          {error && <p className="text-xs" style={{ color: "#ef4444" }}>{error}</p>}
-
-          {!confirmEmail && <button
-            onClick={mode === "login" ? handleLogin : handleSignup}
-            className="w-full py-3 rounded-xl text-sm font-bold"
-            style={{ background: "var(--mint)", color: "#000" }}>
-            {mode === "login" ? "로그인 후 시작하기" : "가입하고 시작하기"}
-          </button>}
         </div>
 
         <Link href="/wall" className="block text-center mt-4 text-xs" style={{ color: "var(--muted)" }}>
@@ -133,27 +113,124 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
   );
 }
 
-/* ── Main setup page ──────────────────────────────────────── */
+/* ─── Portfolio analysis result display ───────────────────── */
+function AnalysisCard({ result }: { result: Extract<PortfolioAnalysis, { approved: true }> }) {
+  const isPos = (v: number | null) => v != null && v >= 0;
+
+  return (
+    <div className="rounded-2xl border overflow-hidden" style={{ borderColor: "rgba(0,229,160,0.3)", background: "rgba(0,229,160,0.04)" }}>
+      {/* Summary */}
+      <div className="flex items-center gap-3 px-4 py-3 border-b" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+        <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: "var(--mint)" }} />
+        <div className="flex-1 min-w-0">
+          <p className="text-xs font-bold" style={{ color: "var(--mint)" }}>AI 계좌 분석 완료</p>
+          <p className="text-[10px]" style={{ color: "var(--muted)" }}>스크린샷에서 자동 추출된 정보입니다</p>
+        </div>
+        <span className="text-[10px] px-2 py-1 rounded-full font-semibold"
+          style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+          {result.currency}
+        </span>
+      </div>
+
+      {/* Key stats */}
+      <div className="grid grid-cols-3 divide-x" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+        <div className="px-3 py-3 text-center">
+          <p className="text-[9px] mb-1" style={{ color: "var(--muted)" }}>총 평가금액</p>
+          <p className="text-xs font-bold leading-snug" style={{ color: "var(--text)" }}>{result.totalValue}</p>
+        </div>
+        <div className="px-3 py-3 text-center border-l" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+          <p className="text-[9px] mb-1" style={{ color: "var(--muted)" }}>전체 수익률</p>
+          {result.totalReturnPct != null ? (
+            <p className="text-xs font-bold" style={{ color: isPos(result.totalReturnPct) ? "#00e5a0" : "#ef4444" }}>
+              {result.totalReturnPct >= 0 ? "+" : ""}{result.totalReturnPct.toFixed(1)}%
+            </p>
+          ) : (
+            <p className="text-xs" style={{ color: "var(--muted)" }}>—</p>
+          )}
+        </div>
+        <div className="px-3 py-3 text-center border-l" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+          <p className="text-[9px] mb-1" style={{ color: "var(--muted)" }}>투자 규모</p>
+          <p className="text-[11px] font-bold leading-snug" style={{ color: "var(--text)" }}>{result.scale}</p>
+        </div>
+      </div>
+
+      {/* Holdings table */}
+      {result.holdings.length > 0 && (
+        <div className="border-t" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+          <p className="text-[10px] font-semibold px-4 pt-3 pb-1" style={{ color: "var(--muted)" }}>
+            보유 종목 ({result.holdings.length}개)
+          </p>
+          <div className="divide-y" style={{ borderColor: "rgba(255,255,255,0.04)" }}>
+            {result.holdings.slice(0, 8).map((h, i) => (
+              <div key={i} className="flex items-center gap-2 px-4 py-2.5">
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-bold truncate" style={{ color: "var(--text)" }}>
+                    {h.ticker ? (
+                      <span className="font-mono">{h.ticker}</span>
+                    ) : h.name}
+                  </p>
+                  {h.ticker && <p className="text-[10px] truncate" style={{ color: "var(--muted)" }}>{h.name}</p>}
+                </div>
+                <div className="text-right shrink-0">
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>{h.value}</p>
+                </div>
+                <div className="text-right shrink-0 w-14">
+                  {h.returnPct != null ? (
+                    <div className="flex items-center justify-end gap-0.5">
+                      {h.returnPct >= 0
+                        ? <TrendingUp className="w-2.5 h-2.5" style={{ color: "#00e5a0" }} />
+                        : <TrendingDown className="w-2.5 h-2.5" style={{ color: "#ef4444" }} />}
+                      <p className="text-[11px] font-semibold"
+                        style={{ color: h.returnPct >= 0 ? "#00e5a0" : "#ef4444" }}>
+                        {h.returnPct >= 0 ? "+" : ""}{h.returnPct.toFixed(1)}%
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-[11px]" style={{ color: "var(--muted)" }}>—</p>
+                  )}
+                </div>
+                {h.allocation != null && (
+                  <div className="text-right shrink-0 w-10">
+                    <p className="text-[10px]" style={{ color: "var(--muted)" }}>
+                      {h.allocation.toFixed(1)}%
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+            {result.holdings.length > 8 && (
+              <div className="px-4 py-2">
+                <p className="text-[10px]" style={{ color: "var(--muted)" }}>
+                  +{result.holdings.length - 8}개 종목 더
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ─── Main setup page ──────────────────────────────────────── */
 export default function CreatorSetupPage() {
   const router = useRouter();
   const { user } = useAuth();
 
-  const [ready, setReady]     = useState(false);
-  const [step, setStep]       = useState(1);
-  const [draft, setDraft]     = useState<CreatorDraft>(EMPTY);
-  const [newSymbol, setNewSymbol] = useState("");
-  const [newName, setNewName]     = useState("");
-  const [newAlloc, setNewAlloc]   = useState("");
+  const [ready, setReady] = useState(false);
+  const [step, setStep]   = useState(1);
+  const [draft, setDraft] = useState<Draft>(EMPTY);
 
-  // Step 4 (verification)
-  const fileRef                         = useRef<HTMLInputElement>(null);
-  const [previewUrl, setPreviewUrl]     = useState<string | null>(null);
-  const [submitting, setSubmitting]     = useState(false);
-  const [submitted, setSubmitted]       = useState(false);
+  // Step 2 — screenshot analysis
+  const fileRef    = useRef<HTMLInputElement>(null);
+  const [previewUrl,   setPreviewUrl]   = useState<string | null>(null);
+  const [analyzing,    setAnalyzing]    = useState(false);
+  const [analysisResult, setAnalysisResult] = useState<PortfolioAnalysis | null>(null);
+  const [submitting,   setSubmitting]   = useState(false);
+  const [submitted,    setSubmitted]    = useState(false);
   const [creatorAgreed, setCreatorAgreed] = useState(false);
 
   useEffect(() => {
-    // Check if already a creator
     try {
       const existing = JSON.parse(localStorage.getItem("investus_my_creator") ?? "null");
       if (existing) { router.replace("/creator/dashboard"); return; }
@@ -162,32 +239,9 @@ export default function CreatorSetupPage() {
   }, [router]);
 
   if (!ready) return null;
+  if (!user) return <LoginGate onSuccess={() => setReady(true)} />;
 
-  // Show login gate if not authenticated
-  if (!user) {
-    return <LoginGate onSuccess={() => setReady(true)} />;
-  }
-
-  /* ── Helpers ── */
-  const totalAlloc = draft.portfolio.reduce((s, h) => s + h.allocation, 0);
-
-  const addHolding = () => {
-    const alloc = parseFloat(newAlloc);
-    if (!newSymbol || isNaN(alloc) || alloc <= 0) return;
-    setDraft((d) => ({
-      ...d,
-      portfolio: [...d.portfolio, {
-        symbol: newSymbol.toUpperCase(),
-        name: newName || newSymbol.toUpperCase(),
-        allocation: alloc,
-      }],
-    }));
-    setNewSymbol(""); setNewName(""); setNewAlloc("");
-  };
-
-  const removeHolding = (i: number) =>
-    setDraft((d) => ({ ...d, portfolio: d.portfolio.filter((_, idx) => idx !== i) }));
-
+  /* ── Toggle tag ── */
   const toggleTag = (t: string) =>
     setDraft((d) => ({
       ...d,
@@ -196,70 +250,134 @@ export default function CreatorSetupPage() {
         : d.tags.length < 5 ? [...d.tags, t] : d.tags,
     }));
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  /* ── File → auto-analyze ── */
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
+
     const reader = new FileReader();
-    reader.onload = () => setPreviewUrl(reader.result as string);
+    reader.onload = async () => {
+      const dataUrl = reader.result as string;
+      setPreviewUrl(dataUrl);
+      setAnalysisResult(null);
+      setAnalyzing(true);
+
+      const parts    = dataUrl.split(",");
+      const base64   = parts[1] ?? "";
+      const mime     = parts[0].match(/:(.*?);/)?.[1] ?? "image/jpeg";
+
+      try {
+        // Get session token for authenticated request
+        const { data: { session } } = await getSupabase().auth.getSession();
+        const headers: Record<string, string> = { "Content-Type": "application/json" };
+        if (session?.access_token) headers["Authorization"] = `Bearer ${session.access_token}`;
+
+        const res  = await fetch("/api/analyze-portfolio-screenshot", {
+          method: "POST",
+          headers,
+          body: JSON.stringify({ imageBase64: base64, mimeType: mime }),
+        });
+        const data = await res.json() as PortfolioAnalysis | { error: string };
+
+        if ("error" in data) {
+          setAnalysisResult({ approved: false, reason: (data as { error: string }).error });
+        } else {
+          setAnalysisResult(data);
+        }
+      } catch {
+        setAnalysisResult({ approved: false, reason: "네트워크 오류. 다시 시도해주세요." });
+      }
+      setAnalyzing(false);
+    };
     reader.readAsDataURL(file);
   };
 
-  // Save to localStorage then advance to step 3 (verification)
-  const finishStep2 = () => {
-    const payload = {
-      ...draft,
-      id: user.email,
-      status: "pending",
-      createdAt: new Date().toISOString(),
-    };
-    try { localStorage.setItem("investus_my_creator", JSON.stringify(payload)); } catch {}
-    setStep(3);
+  const resetFile = () => {
+    setPreviewUrl(null);
+    setAnalysisResult(null);
+    if (fileRef.current) fileRef.current.value = "";
   };
 
-  // Submit verification to API
-  const handleSubmitVerification = async () => {
+  /* ── Submit (AI-verified → auto-approve) ── */
+  const handleSubmit = async () => {
+    if (!analysisResult?.approved) return;
     setSubmitting(true);
+
+    const approved = analysisResult as Extract<PortfolioAnalysis, { approved: true }>;
+    const topHoldings = approved.holdings.slice(0, 10).map((h) => ({
+      symbol:     h.ticker ?? h.name.slice(0, 6),
+      name:       h.name,
+      allocation: h.allocation ?? 0,
+      returnPct:  h.returnPct ?? null,
+      value:      h.value,
+    }));
+
     await fetch("/api/admin/verifications", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        phone: user.email,
-        nickname: draft.nickname,
-        avatar: draft.avatar,
-        bio: draft.bio,
+        phone:           user.email,
+        nickname:        draft.nickname,
+        avatar:          draft.avatar,
+        bio:             draft.bio,
+        tags:            draft.tags,
+        annual_return:   approved.totalReturnPct,
+        portfolio_scale: approved.scale,
+        top_holdings:    topHoldings,
+        ai_approved:     true,
       }),
     }).catch(() => {});
+
+    // Persist locally for immediate dashboard access
+    try {
+      localStorage.setItem("investus_my_creator", JSON.stringify({
+        id:              user.email,
+        nickname:        draft.nickname,
+        avatar:          draft.avatar,
+        bio:             draft.bio,
+        tags:            draft.tags,
+        broker:          "스크린샷 인증",
+        portfolio:       topHoldings,
+        status:          "approved",
+        annual_return:   approved.totalReturnPct,
+        portfolio_scale: approved.scale,
+        createdAt:       new Date().toISOString(),
+      }));
+    } catch {}
+
     setSubmitting(false);
     setSubmitted(true);
   };
 
   const canNext1 = draft.nickname.trim().length >= 2 && draft.bio.trim().length >= 10 && draft.tags.length >= 1;
-  const canNext2 = draft.portfolio.length >= 1 && draft.broker.trim().length >= 2;
+  const approvedResult = analysisResult?.approved
+    ? (analysisResult as Extract<PortfolioAnalysis, { approved: true }>)
+    : null;
 
-  /* ── Done screen ── */
+  /* ── Done ── */
   if (submitted) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-6 gap-6" style={{ background: "var(--bg)" }}>
         <div className="w-20 h-20 rounded-3xl flex items-center justify-center text-4xl"
-          style={{ background: "rgba(251,191,36,0.12)" }}>
-          ⏳
+          style={{ background: "rgba(0,229,160,0.12)" }}>
+          ✅
         </div>
         <div className="text-center">
           <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "var(--text)" }}>
-            인증 신청 완료!
+            투자클럽 개설 완료!
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            {draft.nickname}님의 계좌 인증 신청이 접수되었습니다.<br />
-            관리자 검토 후 <span style={{ color: "#fbbf24" }}>1~2일 내 승인</span>됩니다.
+            {draft.nickname}님의 계좌가 AI로 인증되었습니다.<br />
+            <span style={{ color: "var(--mint)" }}>바로 활동</span>을 시작하실 수 있어요.
           </p>
         </div>
 
         <div className="w-full max-w-xs rounded-2xl border p-4" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <div className="flex items-start gap-2">
-            <ShieldCheck className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#fbbf24" }} />
+            <ShieldCheck className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "var(--mint)" }} />
             <div>
-              <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>승인 후 가능한 것들</p>
-              <ul className="text-[11px] leading-relaxed list-none flex flex-col gap-1" style={{ color: "var(--muted)" }}>
+              <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>이제 가능한 것들</p>
+              <ul className="text-[11px] leading-relaxed flex flex-col gap-1" style={{ color: "var(--muted)" }}>
                 <li>✓ 투자 분석 글 · 리포트 작성</li>
                 <li>✓ 광고 수익 정산 (조회수 기반)</li>
                 <li>✓ 포트폴리오 공개 및 팔로워 모집</li>
@@ -273,9 +391,7 @@ export default function CreatorSetupPage() {
           style={{ background: "var(--mint)", color: "#000" }}>
           내 투자클럽 보기 →
         </Link>
-        <Link href="/wall"
-          className="w-full max-w-xs py-2 text-xs text-center block"
-          style={{ color: "var(--muted)" }}>
+        <Link href="/wall" className="w-full max-w-xs py-2 text-xs text-center block" style={{ color: "var(--muted)" }}>
           종목이야기로 돌아가기
         </Link>
       </div>
@@ -295,7 +411,7 @@ export default function CreatorSetupPage() {
 
         {/* Step indicator */}
         <div className="flex items-center gap-2 px-4 py-4">
-          {[1, 2, 3].map((s) => (
+          {[1, 2].map((s) => (
             <div key={s} className="flex-1 h-1 rounded-full transition-all"
               style={{ background: s <= step ? "var(--mint)" : "var(--border)" }} />
           ))}
@@ -307,7 +423,7 @@ export default function CreatorSetupPage() {
             <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>기본 프로필 설정</h1>
             <p className="text-xs mb-4" style={{ color: "var(--muted)" }}>구독자들에게 보여질 프로필을 설정해 주세요</p>
 
-            {/* Ad revenue notice */}
+            {/* Revenue notice */}
             <div className="rounded-2xl border p-4 mb-3"
               style={{ background: "rgba(0,229,160,0.06)", borderColor: "rgba(0,229,160,0.2)" }}>
               <div className="flex items-start gap-2.5">
@@ -322,14 +438,14 @@ export default function CreatorSetupPage() {
                       · 시청자는 <span style={{ color: "var(--text)", fontWeight: 600 }}>완전 무료</span>로 모든 콘텐츠를 이용합니다.
                     </li>
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
-                      · 계좌 인증 후 승인이 완료되어야 수익화가 시작됩니다.
+                      · 계좌 스크린샷으로 <span style={{ color: "var(--text)", fontWeight: 600 }}>AI 자동 인증</span> 후 즉시 활동 가능합니다.
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* 투자자문 금지 고지 */}
+            {/* Compliance notice */}
             <div className="rounded-2xl border p-4 mb-5"
               style={{ background: "rgba(255,77,109,0.05)", borderColor: "rgba(255,77,109,0.2)" }}>
               <div className="flex items-start gap-2.5">
@@ -344,16 +460,14 @@ export default function CreatorSetupPage() {
                       · 금융위원회 미등록 상태로 <span style={{ color: "var(--text)", fontWeight: 600 }}>투자자문·일임 서비스를 제공하면 위법</span>입니다.
                     </li>
                     <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
-                      · 모든 콘텐츠는 <span style={{ color: "var(--text)", fontWeight: 600 }}>정보 제공 목적</span>으로만 작성하고, 투자 결과에 대한 책임을 지지 않음을 명시해야 합니다.
-                    </li>
-                    <li className="text-[11px] leading-snug" style={{ color: "var(--muted)" }}>
-                      · 위반 시 콘텐츠 삭제 및 채널 정지 조치가 취해질 수 있습니다.
+                      · 모든 콘텐츠는 <span style={{ color: "var(--text)", fontWeight: 600 }}>정보 제공 목적</span>으로만 작성해야 합니다.
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
+            {/* Avatar */}
             <p className="text-xs font-semibold mb-2" style={{ color: "var(--muted)" }}>아바타 선택</p>
             <div className="grid grid-cols-6 gap-2 mb-5">
               {AVATARS.map((a) => (
@@ -395,166 +509,131 @@ export default function CreatorSetupPage() {
             <button onClick={() => setStep(2)} disabled={!canNext1}
               className="w-full py-3.5 rounded-2xl text-sm font-bold text-black flex items-center justify-center gap-2 transition-opacity"
               style={{ background: "var(--mint)", opacity: canNext1 ? 1 : 0.4 }}>
-              다음 — 포트폴리오 입력 <ChevronRight className="w-4 h-4" />
+              다음 — 계좌 인증 <ChevronRight className="w-4 h-4" />
             </button>
           </div>
         )}
 
-        {/* ── Step 2: Portfolio ── */}
+        {/* ── Step 2: AI Screenshot Verification ── */}
         {step === 2 && (
           <div className="px-4">
-            <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>포트폴리오 공개</h1>
-            <p className="text-xs mb-5" style={{ color: "var(--muted)" }}>실제 보유 종목을 입력해 주세요. 나중에 수정 가능합니다.</p>
+            <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>계좌 인증</h1>
+            <p className="text-xs mb-4" style={{ color: "var(--muted)" }}>
+              증권사 앱에서 보유 종목·잔고 화면을 스크린샷하여 업로드하세요.<br />
+              AI가 자동으로 분석하여 즉시 인증합니다.
+            </p>
 
-            <p className="text-xs font-semibold mb-1.5" style={{ color: "var(--muted)" }}>증권사 선택</p>
-            <div className="flex gap-2 flex-wrap mb-4">
-              {BROKERS.map((b) => (
-                <button key={b} onClick={() => setDraft((d) => ({ ...d, broker: b }))}
-                  className="text-xs px-3 py-2 rounded-xl border transition-all"
-                  style={draft.broker === b
-                    ? { background: "var(--mint)", color: "#000", borderColor: "var(--mint)" }
-                    : { background: "var(--card)", color: "var(--muted)", borderColor: "var(--border)" }}>
-                  {b}
-                </button>
-              ))}
+            {/* How-to */}
+            <div className="rounded-2xl border p-4 mb-4"
+              style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.15)" }}>
+              <p className="text-xs font-semibold mb-2" style={{ color: "var(--mint)" }}>캡처 방법</p>
+              <ul className="text-[11px] flex flex-col gap-1.5" style={{ color: "var(--muted)" }}>
+                <li>① 증권사 앱 실행 → <strong style={{ color: "var(--text)" }}>보유종목 / 잔고 화면</strong> 이동</li>
+                <li>② 종목명, 평가금액, 수익률이 보이도록 화면 구성</li>
+                <li>③ 스크린샷을 찍어서 아래에 업로드</li>
+              </ul>
             </div>
 
-            {draft.portfolio.length > 0 && (
-              <div className="rounded-2xl border mb-3 overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                {draft.portfolio.map((h, i) => (
-                  <div key={i} className={`flex items-center gap-3 px-4 py-3 ${i < draft.portfolio.length - 1 ? "border-b" : ""}`}
-                    style={{ borderColor: "var(--border)" }}>
-                    <span className="text-xs font-bold font-mono-num flex-1" style={{ color: "var(--text)" }}>{h.symbol}</span>
-                    <span className="text-xs flex-1" style={{ color: "var(--muted)" }}>{h.name}</span>
-                    <span className="text-xs font-mono-num" style={{ color: "var(--mint)" }}>{h.allocation}%</span>
-                    <button onClick={() => removeHolding(i)}><Trash2 className="w-3.5 h-3.5" style={{ color: "var(--muted)" }} /></button>
-                  </div>
-                ))}
-                <div className="flex justify-end px-4 py-2 border-t" style={{ borderColor: "var(--border)" }}>
-                  <span className="text-[10px]" style={{ color: totalAlloc > 100 ? "#ef4444" : "var(--muted)" }}>
-                    합계 {totalAlloc.toFixed(1)}% {totalAlloc > 100 && "⚠️ 100% 초과"}
-                  </span>
+            {/* Upload / Preview */}
+            <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFileChange} />
+
+            {!previewUrl ? (
+              <button onClick={() => fileRef.current?.click()}
+                className="w-full py-10 rounded-2xl border-2 border-dashed flex flex-col items-center justify-center gap-2 mb-4 transition-opacity active:opacity-70"
+                style={{ borderColor: "var(--border)", background: "var(--card)" }}>
+                <Upload className="w-7 h-7" style={{ color: "var(--muted)" }} />
+                <span className="text-sm font-semibold" style={{ color: "var(--muted)" }}>계좌 스크린샷 업로드</span>
+                <span className="text-[11px]" style={{ color: "var(--muted)" }}>탭하여 갤러리 열기 · JPEG / PNG</span>
+              </button>
+            ) : (
+              <div className="relative mb-4 rounded-2xl overflow-hidden border"
+                style={{ borderColor: analyzing ? "var(--border)" : analysisResult?.approved ? "rgba(0,229,160,0.4)" : "rgba(239,68,68,0.4)" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={previewUrl} alt="스크린샷 미리보기" className="w-full object-contain max-h-60" />
+                <button onClick={resetFile}
+                  className="absolute top-2 right-2 text-[10px] px-2.5 py-1 rounded-lg font-semibold flex items-center gap-1"
+                  style={{ background: "rgba(0,0,0,0.65)", color: "#fff" }}>
+                  <RefreshCcw className="w-3 h-3" /> 다시 선택
+                </button>
+              </div>
+            )}
+
+            {/* Analyzing spinner */}
+            {analyzing && (
+              <div className="rounded-2xl border p-5 mb-4 flex flex-col items-center gap-3"
+                style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                <div className="w-7 h-7 rounded-full border-2 animate-spin"
+                  style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
+                <div className="text-center">
+                  <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>AI 분석 중...</p>
+                  <p className="text-[11px] mt-1" style={{ color: "var(--muted)" }}>
+                    보유 종목·수익률·투자 규모를 추출하고 있습니다
+                  </p>
                 </div>
               </div>
             )}
 
-            <div className="rounded-2xl border p-4 mb-5" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-              <p className="text-xs font-semibold mb-3" style={{ color: "var(--muted)" }}>종목 추가</p>
-              <div className="grid grid-cols-3 gap-2 mb-2">
-                <input value={newSymbol} onChange={(e) => setNewSymbol(e.target.value)} placeholder="티커 (AAPL)"
-                  className="col-span-1 px-3 py-2.5 rounded-xl border text-xs outline-none uppercase"
-                  style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} />
-                <input value={newName} onChange={(e) => setNewName(e.target.value)} placeholder="종목명"
-                  className="col-span-1 px-3 py-2.5 rounded-xl border text-xs outline-none"
-                  style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} />
-                <input value={newAlloc} onChange={(e) => setNewAlloc(e.target.value)} placeholder="비중%" type="number"
-                  className="col-span-1 px-3 py-2.5 rounded-xl border text-xs outline-none"
-                  style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} />
+            {/* Rejected result */}
+            {!analyzing && analysisResult && !analysisResult.approved && (
+              <div className="rounded-2xl border p-4 mb-4 flex items-start gap-3"
+                style={{ background: "rgba(239,68,68,0.06)", borderColor: "rgba(239,68,68,0.3)" }}>
+                <XCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "#ef4444" }} />
+                <div className="flex-1">
+                  <p className="text-xs font-bold mb-1" style={{ color: "#ef4444" }}>인증 불가</p>
+                  <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                    {(analysisResult as { approved: false; reason: string }).reason}
+                  </p>
+                  <button onClick={resetFile}
+                    className="mt-2 text-[11px] font-semibold flex items-center gap-1"
+                    style={{ color: "#ef4444" }}>
+                    <RefreshCcw className="w-3 h-3" /> 다시 업로드
+                  </button>
+                </div>
               </div>
-              <button onClick={addHolding}
-                className="w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5"
-                style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.2)" }}>
-                <Plus className="w-3.5 h-3.5" />종목 추가
-              </button>
-            </div>
-
-            <div className="flex gap-2">
-              <button onClick={() => setStep(1)} className="flex-1 py-3.5 rounded-2xl text-sm font-bold border"
-                style={{ borderColor: "var(--border)", color: "var(--muted)" }}>이전</button>
-              <button onClick={finishStep2} disabled={!canNext2}
-                className="flex-[2] py-3.5 rounded-2xl text-sm font-bold text-black flex items-center justify-center gap-2 transition-opacity"
-                style={{ background: "var(--mint)", opacity: canNext2 ? 1 : 0.4 }}>
-                다음 — 계좌 인증 <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ── Step 3: Account verification (screenshot upload) ── */}
-        {step === 3 && (
-          <div className="px-4">
-            <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>계좌 인증</h1>
-            <p className="text-xs mb-5" style={{ color: "var(--muted)" }}>
-              {draft.broker} HTS/MTS의 계좌·잔고 화면을 캡처해서 업로드해 주세요.
-            </p>
-
-            {/* Instructions */}
-            <div className="rounded-2xl border p-4 mb-4" style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.15)" }}>
-              <p className="text-xs font-semibold mb-2" style={{ color: "var(--mint)" }}>캡처 방법</p>
-              <ul className="text-[11px] flex flex-col gap-1.5" style={{ color: "var(--muted)" }}>
-                <li>① {draft.broker || "증권사"} 앱 실행 → 계좌 잔고 / 보유종목 화면</li>
-                <li>② 전화번호 뒷 4자리가 보이도록 마스킹 최소화</li>
-                <li>③ 스크린샷 찍어서 아래에 업로드</li>
-              </ul>
-            </div>
-
-            {/* Upload area */}
-            <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFileChange} />
-
-            {previewUrl ? (
-              <div className="relative mb-4 rounded-2xl overflow-hidden border" style={{ borderColor: "var(--mint)" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={previewUrl} alt="캡처 미리보기" className="w-full object-contain max-h-64" />
-                <button
-                  onClick={() => { setPreviewUrl(null); if (fileRef.current) fileRef.current.value = ""; }}
-                  className="absolute top-2 right-2 text-[10px] px-2 py-1 rounded-lg font-semibold"
-                  style={{ background: "rgba(0,0,0,0.6)", color: "#fff" }}>
-                  다시 선택
-                </button>
-              </div>
-            ) : (
-              <button
-                onClick={() => fileRef.current?.click()}
-                className="w-full py-10 rounded-2xl border-2 border-dashed flex flex-col items-center justify-center gap-2 mb-4 transition-opacity active:opacity-70"
-                style={{ borderColor: "var(--border)", background: "var(--card)" }}>
-                <Upload className="w-6 h-6" style={{ color: "var(--muted)" }} />
-                <span className="text-xs font-semibold" style={{ color: "var(--muted)" }}>캡처 이미지 업로드</span>
-                <span className="text-[10px]" style={{ color: "var(--muted)" }}>탭하여 갤러리 열기</span>
-              </button>
             )}
 
-            {/* 투자자문 금지 동의 체크박스 */}
-            <div className="rounded-xl p-3 mb-3" style={{ background: "rgba(255,77,109,0.05)", border: "1px solid rgba(255,77,109,0.2)" }}>
-              <label className="flex items-start gap-2 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={creatorAgreed}
-                  onChange={(e) => setCreatorAgreed(e.target.checked)}
-                  className="mt-0.5 flex-shrink-0"
-                />
-                <span className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                  특정 종목 매수·매도를 직접 권유하지 않고, 모든 콘텐츠는 정보 제공 목적으로만 작성하겠습니다. 금융소비자보호법상 미등록 투자자문 행위를 하지 않겠습니다.
-                </span>
-              </label>
-            </div>
+            {/* Approved result */}
+            {!analyzing && approvedResult && (
+              <div className="mb-4">
+                <AnalysisCard result={approvedResult} />
+              </div>
+            )}
 
-            {/* Notice */}
-            <div className="rounded-xl p-3 mb-5" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.15)" }}>
-              <p className="text-[11px] leading-relaxed" style={{ color: "#fbbf24" }}>
-                업로드 후 관리자가 검토합니다. 승인까지 1~2 영업일이 소요될 수 있습니다.<br />
-                승인 결과는 가입 이메일({user?.email})로 안내됩니다.
-              </p>
-            </div>
+            {/* Agreement */}
+            {approvedResult && (
+              <div className="rounded-xl p-3 mb-4"
+                style={{ background: "rgba(255,77,109,0.05)", border: "1px solid rgba(255,77,109,0.2)" }}>
+                <label className="flex items-start gap-2 cursor-pointer">
+                  <input type="checkbox" checked={creatorAgreed}
+                    onChange={(e) => setCreatorAgreed(e.target.checked)}
+                    className="mt-0.5 flex-shrink-0" />
+                  <span className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                    특정 종목 매수·매도를 직접 권유하지 않고, 모든 콘텐츠는 정보 제공 목적으로만 작성하겠습니다.
+                    금융소비자보호법상 미등록 투자자문 행위를 하지 않겠습니다.
+                  </span>
+                </label>
+              </div>
+            )}
 
+            {/* Navigation */}
             <div className="flex gap-2">
-              <button onClick={() => setStep(2)} className="flex-1 py-3.5 rounded-2xl text-sm font-bold border"
-                style={{ borderColor: "var(--border)", color: "var(--muted)" }}>이전</button>
+              <button onClick={() => setStep(1)}
+                className="flex-1 py-3.5 rounded-2xl text-sm font-bold border"
+                style={{ borderColor: "var(--border)", color: "var(--muted)" }}>
+                이전
+              </button>
               <button
-                onClick={handleSubmitVerification}
-                disabled={!previewUrl || submitting || !creatorAgreed}
+                onClick={handleSubmit}
+                disabled={!approvedResult || submitting || !creatorAgreed}
                 className="flex-[2] py-3.5 rounded-2xl text-sm font-bold text-black flex items-center justify-center gap-2 transition-opacity"
-                style={{ background: "var(--mint)", opacity: previewUrl && !submitting && creatorAgreed ? 1 : 0.4 }}>
+                style={{
+                  background: "var(--mint)",
+                  opacity: approvedResult && !submitting && creatorAgreed ? 1 : 0.4,
+                }}>
                 <CheckCircle2 className="w-4 h-4" />
-                {submitting ? "제출 중..." : "인증 신청 완료"}
+                {submitting ? "처리 중..." : "확인 및 완료"}
               </button>
             </div>
-
-            {/* Skip option */}
-            <button onClick={() => setSubmitted(true)}
-              className="w-full mt-3 py-2 text-xs text-center"
-              style={{ color: "var(--muted)" }}>
-              나중에 인증하기 (일단 채널만 만들기)
-            </button>
           </div>
         )}
       </main>

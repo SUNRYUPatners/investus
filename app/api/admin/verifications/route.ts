@@ -76,18 +76,42 @@ export async function POST(req: NextRequest) {
   try { body = await req.json(); }
   catch { return NextResponse.json({ error: "잘못된 요청" }, { status: 400 }); }
 
-  const { phone, nickname, avatar, bio } = body as Record<string, string>;
-  if (!phone) return NextResponse.json({ error: "phone required" }, { status: 400 });
-  // Size guards — prevent oversized payloads (avatar base64 etc.)
-  if (String(phone).length > 20 || String(nickname ?? "").length > 50
-      || String(bio ?? "").length > 500 || String(avatar ?? "").length > 2000) {
+  const {
+    phone, nickname, avatar, bio,
+    tags, annual_return, portfolio_scale, top_holdings,
+    ai_approved,
+  } = body as Record<string, unknown>;
+
+  const phoneStr    = String(phone ?? "");
+  const nicknameStr = String(nickname ?? "");
+  const bioStr      = String(bio ?? "");
+  const avatarStr   = String(avatar ?? "");
+
+  if (!phoneStr) return NextResponse.json({ error: "phone required" }, { status: 400 });
+  // Size guards — prevent oversized payloads
+  if (phoneStr.length > 100 || nicknameStr.length > 50
+      || bioStr.length > 500 || avatarStr.length > 2000) {
     return NextResponse.json({ error: "payload too large" }, { status: 413 });
   }
 
-  // Upsert (re-submission resets to pending)
+  // AI-verified submissions auto-approved; others go pending
+  const status = ai_approved === true ? "approved" : "pending";
+  const now = new Date().toISOString();
+
+  const upsertData: Record<string, unknown> = {
+    phone: phoneStr, nickname: nicknameStr, avatar: avatarStr, bio: bioStr,
+    status, submitted_at: now,
+    ...(status === "approved" && { reviewed_at: now }),
+    ...(Array.isArray(tags) && { tags }),
+    ...(annual_return != null && { annual_return }),
+    ...(portfolio_scale != null && { portfolio_scale }),
+    ...(top_holdings != null && { top_holdings }),
+  };
+
+  // Upsert (re-submission resets)
   const { error } = await getSupabase()
     .from("creator_verifications")
-    .upsert({ phone, nickname, avatar, bio, status: "pending", submitted_at: new Date().toISOString() }, { onConflict: "phone" });
+    .upsert(upsertData, { onConflict: "phone" });
 
   if (error) return NextResponse.json({ error: "저장 실패" }, { status: 500 });
 
@@ -97,8 +121,8 @@ export async function POST(req: NextRequest) {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
-        _subject: `[Investus] 크리에이터 인증 신청 — ${nickname}`,
-        message: `새 크리에이터 인증 신청\n\n닉네임: ${nickname}\n이메일: ${phone}\n자기소개: ${bio}\n\n승인 페이지: https://investus.kr/admin/creators`,
+        _subject: `[Investus] 크리에이터 인증 신청 — ${nicknameStr}`,
+        message: `새 크리에이터 인증 신청\n\n닉네임: ${nicknameStr}\n이메일: ${phoneStr}\n자기소개: ${bioStr}\nAI승인: ${ai_approved ? "자동승인" : "검토필요"}\n\n승인 페이지: https://investus.kr/admin/creators`,
       }),
     });
   } catch {}
