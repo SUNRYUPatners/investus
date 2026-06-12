@@ -1005,6 +1005,14 @@ export default function PortfolioPage() {
             </div>
             <div className="flex items-center gap-2">
               <CurrencyToggle cur={cur} onChange={setCur} />
+              {holdings.length > 0 && (
+                <button onClick={() => setShowImport(true)}
+                  className="flex items-center gap-1 text-xs font-bold px-3 py-2 rounded-full border"
+                  style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }}>
+                  <Camera className="w-3.5 h-3.5" />
+                  {locale === "ko" ? "수정" : "Update"}
+                </button>
+              )}
               <button onClick={() => setShowAdd(true)}
                 className="flex items-center gap-1.5 text-xs font-bold px-3 py-2 rounded-full"
                 style={{ background: "var(--mint)", color: "#000" }}>
