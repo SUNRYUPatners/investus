@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { ReportFeed } from "@/components/ReportFeed";
 import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
-import { InvestmentArticles } from "@/components/InvestmentArticles";
 import Link from "next/link";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { getLocale } from "@/lib/getLocale";
@@ -61,7 +60,6 @@ export default async function InsightPage() {
         </div>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
-        <section className="px-4 mb-6"><InvestmentArticles /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6"><ReportFeed /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
@@ -83,15 +81,11 @@ export default async function InsightPage() {
 
       {/* ── Desktop: 왼쪽 페이지 스크롤 + 오른쪽 sticky 사이드바 ── */}
       <div className="hidden lg:flex lg:gap-10 lg:px-8 lg:items-start lg:pt-2 lg:pb-10">
-        {/* 왼쪽 — 페이지와 함께 자연스럽게 스크롤 (높이 제한 없음) */}
+        {/* 왼쪽 */}
         <div className="flex-1 min-w-0 pt-5">
           <div className="pb-4">
             <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
             <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
-          </div>
-          {/* 투자 기초·대가 전략 글 — 리포트 위 */}
-          <div className="mb-8">
-            <InvestmentArticles />
           </div>
           <ReportFeed />
         </div>
@@ -101,12 +95,9 @@ export default async function InsightPage() {
           className="w-[340px] flex-shrink-0 sticky top-[57px] flex flex-col pt-5"
           style={{ maxHeight: "calc(100vh - 57px)" }}
         >
-          {/* 배너 — 항상 보임, 절대 클리핑 안 됨 */}
           <div className="flex flex-col gap-5 flex-shrink-0">
             {EduBanner}
           </div>
-
-          {/* 나머지 — 남은 공간 내 스크롤 */}
           <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">
             <AdFitBanner />
             <section>
