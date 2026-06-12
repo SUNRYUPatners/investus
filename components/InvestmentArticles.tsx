@@ -458,6 +458,172 @@ function DalioSVG() {
   );
 }
 
+function DiverSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      {/* Left: Concentrated (one stock, big) */}
+      <rect x="22" y="30" width="90" height="78" rx="6" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.2)" strokeWidth="1"/>
+      <text x="67" y="48" textAnchor="middle" fontSize="7.5" fill="rgba(239,68,68,0.7)" fontWeight="700">집중투자</text>
+      <rect x="50" y="56" width="34" height="44" rx="3" fill="rgba(239,68,68,0.4)"/>
+      <text x="67" y="83" textAnchor="middle" fontSize="9" fill="rgba(255,255,255,0.9)" fontWeight="700">TSLA</text>
+      <text x="67" y="94" textAnchor="middle" fontSize="7" fill="rgba(239,68,68,0.9)">100%</text>
+      <text x="67" y="120" textAnchor="middle" fontSize="7" fill="rgba(239,68,68,0.6)">고위험</text>
+      {/* Arrow */}
+      <text x="140" y="70" textAnchor="middle" fontSize="16" fill="rgba(255,255,255,0.2)">→</text>
+      {/* Right: Diversified */}
+      <rect x="162" y="30" width="96" height="78" rx="6" fill="rgba(0,229,160,0.06)" stroke="rgba(0,229,160,0.2)" strokeWidth="1"/>
+      <text x="210" y="48" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.8)" fontWeight="700">분산투자</text>
+      {[
+        { x:170, label:"AAPL", pct:"25%", h:28 },
+        { x:192, label:"NVDA", pct:"20%", h:22 },
+        { x:214, label:"SPY", pct:"30%", h:33 },
+        { x:236, label:"BND", pct:"15%", h:16 },
+        { x:248, label:"GLD", pct:"10%", h:11 },
+      ].map((b, i) => (
+        <g key={i}>
+          <rect x={b.x} y={100 - b.h} width="14" height={b.h} rx="2" fill={`rgba(0,229,160,${0.3 + i*0.06})`}/>
+          <text x={b.x+7} y="113" textAnchor="middle" fontSize="5.5" fill="rgba(255,255,255,0.55)">{b.label}</text>
+        </g>
+      ))}
+      <text x="210" y="120" textAnchor="middle" fontSize="7" fill="rgba(0,229,160,0.7)">저위험</text>
+    </svg>
+  );
+}
+
+function DCASVG() {
+  const pts = [
+    { x:40, y:80, price:"$80" },
+    { x:72, y:100, price:"$60" },
+    { x:104, y:60, price:"$100" },
+    { x:136, y:90, price:"$70" },
+    { x:168, y:50, price:"$110" },
+    { x:200, y:40, price:"$120" },
+    { x:232, y:30, price:"$130" },
+  ];
+  const pathD = pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x},${p.y}`).join(" ");
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      {[100,80,60,40].map(y => <line key={y} x1="32" y1={y} x2="260" y2={y} stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>)}
+      <path d={pathD} stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" fill="none"/>
+      {pts.map((p, i) => (
+        <g key={i}>
+          <circle cx={p.x} cy={p.y} r="4" fill="rgba(0,229,160,0.7)" stroke="rgba(0,229,160,0.3)" strokeWidth="1.5"/>
+          <line x1={p.x} y1={p.y+4} x2={p.x} y2="116" stroke="rgba(0,229,160,0.2)" strokeWidth="1" strokeDasharray="2,2"/>
+          <text x={p.x} y="124" textAnchor="middle" fontSize="5.5" fill="rgba(0,229,160,0.55)">{p.price}</text>
+        </g>
+      ))}
+      <line x1="32" y1="76" x2="260" y2="76" stroke="rgba(212,175,55,0.5)" strokeWidth="1" strokeDasharray="5,3"/>
+      <text x="265" y="79" fontSize="6.5" fill="rgba(212,175,55,0.8)">평균</text>
+      <text x="140" y="18" textAnchor="middle" fontSize="8" fill="rgba(0,229,160,0.7)" fontWeight="700">매월 일정금액 자동매수 (DCA)</text>
+    </svg>
+  );
+}
+
+function CompoundSVG() {
+  const compoundPts = [0,1,2,3,4,5,6,7,8,9,10].map(i => ({
+    x: 30 + i * 22,
+    yCompound: 110 - Math.pow(1.1, i) * 8,
+    ySimple:   110 - (1 + i * 0.1) * 8,
+  }));
+  const compPath = compoundPts.map((p,i) => `${i===0?"M":"L"}${p.x},${p.yCompound}`).join(" ");
+  const simpPath = compoundPts.map((p,i) => `${i===0?"M":"L"}${p.x},${p.ySimple}`).join(" ");
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      <line x1="28" y1="15" x2="28" y2="112" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
+      <line x1="28" y1="112" x2="262" y2="112" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
+      <path d={simpPath} stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" fill="none" strokeDasharray="5,3"/>
+      <path d={compPath} stroke="rgba(0,229,160,0.8)" strokeWidth="2" fill="none"/>
+      <circle cx={compoundPts[10].x} cy={compoundPts[10].yCompound} r="4" fill="rgba(0,229,160,0.9)"/>
+      <circle cx={compoundPts[10].x} cy={compoundPts[10].ySimple} r="3" fill="rgba(255,255,255,0.4)"/>
+      <text x="250" y={compoundPts[10].yCompound - 8} textAnchor="middle" fontSize="6.5" fill="rgba(0,229,160,0.9)" fontWeight="700">복리</text>
+      <text x="250" y={compoundPts[10].ySimple + 14} textAnchor="middle" fontSize="6.5" fill="rgba(255,255,255,0.4)">단리</text>
+      <text x="140" y="18" textAnchor="middle" fontSize="8" fill="rgba(212,175,55,0.8)" fontWeight="700">복리 vs 단리 — 시간이 지날수록 차이 폭발적 증가</text>
+      {["1년","3년","5년","7년","10년"].map((l,i) => (
+        <text key={l} x={30 + (i+1)*22*2} y="123" textAnchor="middle" fontSize="6" fill="rgba(255,255,255,0.3)">{l}</text>
+      ))}
+    </svg>
+  );
+}
+
+function PsychSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      {/* Emotion cycle */}
+      <path d="M30 100 Q 60 30 100 45 Q 140 60 160 40 Q 190 20 220 50 Q 240 65 258 100"
+        stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" fill="none"/>
+      {[
+        { x:30, y:100, label:"공포", sub:"매도 충동", color:"rgba(239,68,68,0.8)" },
+        { x:100, y:45, label:"흥분", sub:"FOMO 매수", color:"rgba(251,191,36,0.8)" },
+        { x:160, y:40, label:"과신", sub:"레버리지", color:"rgba(251,191,36,0.9)" },
+        { x:220, y:50, label:"불안", sub:"손절 고민", color:"rgba(239,68,68,0.6)" },
+        { x:258, y:100, label:"포기", sub:"최저점 매도", color:"rgba(239,68,68,0.9)" },
+      ].map((pt, i) => (
+        <g key={i}>
+          <circle cx={pt.x} cy={pt.y} r="5" fill={pt.color}/>
+          <text x={pt.x} y={pt.y - 10} textAnchor="middle" fontSize="7" fill={pt.color} fontWeight="700">{pt.label}</text>
+          <text x={pt.x} y={pt.y - 19} textAnchor="middle" fontSize="6" fill="rgba(255,255,255,0.4)">{pt.sub}</text>
+        </g>
+      ))}
+      <text x="140" y="120" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.7)" fontWeight="600">원칙을 세우면 감정 사이클에서 벗어날 수 있다</text>
+    </svg>
+  );
+}
+
+function TaxSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      {/* Dollar to Won */}
+      <circle cx="52" cy="55" r="28" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.3)" strokeWidth="1.5"/>
+      <text x="52" y="51" textAnchor="middle" fontSize="16" fill="rgba(34,197,94,0.9)" fontWeight="900">$</text>
+      <text x="52" y="67" textAnchor="middle" fontSize="7.5" fill="rgba(34,197,94,0.7)">달러 수익</text>
+      <text x="105" y="58" textAnchor="middle" fontSize="12" fill="rgba(255,255,255,0.2)">→</text>
+      <circle cx="152" cy="55" r="28" fill="rgba(251,191,36,0.1)" stroke="rgba(251,191,36,0.3)" strokeWidth="1.5"/>
+      <text x="152" y="51" textAnchor="middle" fontSize="14" fill="rgba(251,191,36,0.9)" fontWeight="900">₩</text>
+      <text x="152" y="67" textAnchor="middle" fontSize="7.5" fill="rgba(251,191,36,0.7)">원화 환산</text>
+      {/* Tax breakdown */}
+      <rect x="195" y="22" width="68" height="18" rx="3" fill="rgba(0,229,160,0.3)"/>
+      <text x="229" y="35" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.9)" fontWeight="700">수익 250만원 이하 비과세</text>
+      <rect x="195" y="46" width="68" height="18" rx="3" fill="rgba(239,68,68,0.35)"/>
+      <text x="229" y="59" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.9)" fontWeight="700">초과분 × 22% 양도세</text>
+      <rect x="195" y="70" width="68" height="18" rx="3" fill="rgba(99,102,241,0.3)"/>
+      <text x="229" y="83" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.9)" fontWeight="700">배당 15% 미국 원천징수</text>
+      <text x="140" y="115" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.35)">환율 상승 = 추가 수익 / 환율 하락 = 수익 감소</text>
+    </svg>
+  );
+}
+
+function RiskSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      {/* Risk/Return chart */}
+      <line x1="30" y1="15" x2="30" y2="110" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
+      <line x1="30" y1="110" x2="260" y2="110" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
+      <text x="26" y="112" textAnchor="end" fontSize="7" fill="rgba(255,255,255,0.35)">0</text>
+      <text x="140" y="124" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.35)">위험(리스크) →</text>
+      <text x="20" y="65" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.35)" transform="rotate(-90,20,65)">기대 수익률 →</text>
+      {[
+        { x:55,  y:95, r:6,  label:"현금·예금",  color:"rgba(255,255,255,0.3)" },
+        { x:90,  y:80, r:8,  label:"채권",       color:"rgba(99,102,241,0.7)" },
+        { x:130, y:65, r:10, label:"배당주",      color:"rgba(251,191,36,0.7)" },
+        { x:175, y:48, r:12, label:"성장주",      color:"rgba(0,229,160,0.8)" },
+        { x:220, y:32, r:9,  label:"레버리지",    color:"rgba(239,68,68,0.8)" },
+      ].map((a, i) => (
+        <g key={i}>
+          <circle cx={a.x} cy={a.y} r={a.r} fill={a.color}/>
+          <text x={a.x} y={a.y + a.r + 10} textAnchor="middle" fontSize="6.5" fill="rgba(255,255,255,0.65)">{a.label}</text>
+        </g>
+      ))}
+      <path d="M 45 100 Q 140 75 235 28" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none" strokeDasharray="4,3"/>
+    </svg>
+  );
+}
+
 /* ══════════════════════════════════════════════════════════════════
    ARTICLE DATA
 ══════════════════════════════════════════════════════════════════ */
@@ -577,6 +743,78 @@ const BASICS: Article[] = [
       { label: "2단계: 환전 & 달러 준비", text: "원화 → 달러로 환전이 필요합니다. 증권사 앱 내 환전 기능을 이용하거나 인터넷 뱅킹으로 환전 후 이체. 환율 스프레드(수수료)를 확인하세요. 수시로 소액씩 환전하는 것이 좋습니다." },
       { label: "3단계: 종목 선택", text: "처음엔 개별 주식보다 ETF(VOO, QQQ)가 안전합니다. 직접 종목을 고르려면 사업을 이해하고 재무제표를 확인하세요. 뉴스에 흔들려 충동 매수하지 않는 것이 핵심입니다." },
       { label: "4단계: 주문 & 세금", text: "시장가 주문(즉시 체결)보다 지정가 주문(원하는 가격 입력)을 권장합니다. 세금: 미국주식 양도소득세는 연간 250만원 초과 수익의 22%, 5월에 직접 신고해야 합니다." },
+    ],
+  },
+  {
+    id: "diversification",
+    title: "분산투자 — 리스크를 줄이는 핵심 원칙",
+    summary: "달걀을 한 바구니에 담지 말라",
+    svg: <DiverSVG />,
+    points: [
+      { label: "분산의 원리", text: "한 종목이 -50% 하락해도, 다른 자산이 상승하면 전체 포트폴리오 손실을 크게 줄일 수 있습니다. 개별 종목 리스크(비시장 리스크)는 분산으로 제거 가능합니다." },
+      { label: "섹터 분산", text: "기술주 + 금융 + 헬스케어 + 에너지 + 소비재를 골고루 보유하면, 한 섹터가 무너져도 전체 충격을 완화합니다. 같은 방향으로 움직이는 종목만 모아두면 분산 효과가 없습니다." },
+      { label: "자산군 분산", text: "주식 + 채권 + 금 + 현금을 조합하면, 주식이 급락하는 위기 시 채권·금이 방어 역할을 합니다. 2020년 코로나 폭락 때 금은 오히려 상승했습니다." },
+      { label: "ETF로 쉽게", text: "SPY(S&P500) 하나를 사면 애플·MS·엔비디아 등 500개 기업에 자동 분산됩니다. 개별 종목 공부 없이도 시장 평균 수익률을 추구할 수 있는 가장 쉬운 방법입니다." },
+    ],
+  },
+  {
+    id: "dca",
+    title: "달러 비용 평균법 (DCA) — 타이밍 대신 시간으로",
+    summary: "매달 일정 금액, 꾸준히 매수하는 전략",
+    svg: <DCASVG />,
+    points: [
+      { label: "DCA란?", text: "시장 가격에 상관없이 매달 일정 금액(예: 50만원)을 자동으로 매수하는 방법입니다. 가격이 높을 때는 적게, 가격이 낮을 때는 많이 사게 되어 자연스럽게 평균 단가를 낮춥니다." },
+      { label: "왜 효과적?", text: "\"시장 바닥을 정확히 알고 투자할 수 있다면\" 일시투자가 유리합니다. 하지만 현실에서는 불가능합니다. DCA는 '언제 살지' 고민하는 심리적 부담을 없애 줍니다." },
+      { label: "구체적 예시", text: "A주식 가격 $100일 때 $100 투자 → 1주 취득. 다음 달 가격 $50일 때 $100 투자 → 2주 취득. 총 3주를 $200에 매수, 평균단가 $66. 현재 가격 $75이면 이미 수익권." },
+      { label: "자동화 팁", text: "증권사 '정기 매수' 기능을 이용하면 자동으로 DCA가 됩니다. 매월 월급날 자동 이체 + 자동 매수 설정 → 아무 생각 없이도 장기 자산 형성이 가능합니다." },
+    ],
+  },
+  {
+    id: "compound",
+    title: "복리의 마법 — 시간이 돈을 만드는 원리",
+    summary: "아인슈타인이 '8번째 불가사의'라 부른 것",
+    svg: <CompoundSVG />,
+    points: [
+      { label: "복리 vs 단리", text: "단리: 원금 1000만원 × 연10% = 매년 100만원씩 증가 → 10년 후 2000만원. 복리: 이자가 원금에 합산되어 재투자 → 10년 후 2593만원. 차이는 작아 보이지만, 30년 후엔 1744만원 vs 17449만원." },
+      { label: "72의 법칙", text: "72 ÷ 연간수익률 = 원금이 2배 되는 기간. 연 10% 수익률이면 7.2년마다 원금이 2배. 연 6%면 12년, 연 12%면 6년. S&P500 역사적 평균 연수익률은 약 10%입니다." },
+      { label: "시간이 핵심", text: "25세에 1000만원 투자, 65세까지 40년 → 10% 복리 = 4억 5천만원. 35세에 시작하면 같은 기간 30년 → 1억 7천만원. 10년의 차이가 3배 결과를 만듭니다. 시작이 빠를수록 유리합니다." },
+      { label: "수수료의 함정", text: "복리는 수수료에도 적용됩니다. 연 수익률 10%에서 운용보수 2%를 빼면 실수익 8%. 30년 후 차이는 원금의 3배 이상. ETF는 보통 연 0.03~0.2%로 매우 저렴합니다." },
+    ],
+  },
+  {
+    id: "psychology",
+    title: "투자 심리 함정 — 돈을 잃게 만드는 뇌의 버그",
+    summary: "행동재무학이 밝혀낸 투자자의 흔한 실수",
+    svg: <PsychSVG />,
+    points: [
+      { label: "손실 회피 편향", text: "+100만원 이익보다 -100만원 손실이 심리적으로 2배 더 아프습니다(Kahneman). 때문에 손실 종목을 오래 들고, 이익 종목은 빨리 파는 '잘못된 매도 패턴'이 생깁니다. 손절의 기준을 미리 정해두세요." },
+      { label: "FOMO (상승 추격)", text: "Fear Of Missing Out — 급등한 종목 뉴스를 보며 '나만 못 탔다'는 두려움에 고점에서 매수합니다. 주식은 오르면 올수록 위험도 함께 높아집니다. 이미 오른 버스는 다음 버스를 기다리세요." },
+      { label: "확증 편향", text: "내가 산 종목의 좋은 뉴스만 눈에 들어오고, 나쁜 신호는 무시합니다. 의도적으로 반대 의견을 찾아보는 습관을 만들어야 합니다. '이 주식을 왜 팔아야 하나?'를 항상 질문하세요." },
+      { label: "해결책", text: "① 매수/매도 기준을 글로 미리 써두기 ② 포트폴리오 목표 비중 정하고 리밸런싱 ③ 하루에 한 번 이상 주가 확인하지 않기 ④ 투자 일지 작성 — 감정이 아닌 원칙으로 결정하세요." },
+    ],
+  },
+  {
+    id: "tax",
+    title: "미국주식 세금·환율 기초",
+    summary: "세후 실수익률이 진짜 수익률입니다",
+    svg: <TaxSVG />,
+    points: [
+      { label: "양도소득세", text: "해외 주식 매도 이익이 연간 250만원을 초과하면, 초과분에 22%(양도세 20% + 지방세 2%)를 납부합니다. 국내 해외 주식형 펀드·ETF(국내 상장)는 다른 세율이 적용될 수 있습니다." },
+      { label: "배당소득세", text: "미국 배당금은 미국 세법에 따라 15% 원천징수 후 지급됩니다. 한국에서 금융소득 합산(배당+이자)이 연 2000만원 초과 시 종합소득세 대상이 됩니다." },
+      { label: "환율 효과", text: "달러 강세(원/달러 환율 상승) → 달러 수익을 원화로 바꿀 때 추가 이익. 달러 약세 → 수익 감소. 예: $1000 수익, 매수 시 1200원/달러, 매도 시 1400원/달러 → +16.7% 환율 수익 추가." },
+      { label: "절세 전략", text: "① 손실 종목 연말 매도 → 이익과 손익 상계(손익통산) ② 연간 250만원 비과세 한도 활용 ③ IRP·ISA 계좌 활용 ④ 배우자 증여(10년간 6억 공제) 후 매도로 절세 가능." },
+    ],
+  },
+  {
+    id: "riskreturn",
+    title: "리스크와 수익률 — 공짜 점심은 없다",
+    summary: "높은 수익에는 반드시 높은 리스크가 따릅니다",
+    svg: <RiskSVG />,
+    points: [
+      { label: "리스크-수익 트레이드오프", text: "예금은 리스크 거의 없지만 수익률도 낮습니다. 성장주는 수익률이 높지만 변동성도 큽니다. 레버리지 ETF는 단기에 2~3배 오를 수 있지만, 같은 속도로 내려갈 수도 있습니다." },
+      { label: "변동성(Volatility)", text: "주가가 얼마나 크게 오르내리는지를 나타냅니다. 표준편차로 측정. S&P500 연간 변동성 약 15~20%, 개별 성장주는 30~60%+. 변동성이 크면 단기에 큰 손실을 볼 수 있습니다." },
+      { label: "자신의 리스크 허용도", text: "주가 -30% 하락 시 잠을 못 잔다면 공격적인 포트폴리오는 맞지 않습니다. 투자금의 일시적 절반 손실도 견딜 수 있다면 높은 기대 수익률을 추구할 수 있습니다. 자신의 허용 범위를 먼저 파악하세요." },
+      { label: "포트폴리오 구성 원칙", text: "주식 비중 = (100 - 나이)%가 전통적 기준. 20대: 주식 80%, 채권·안전자산 20%. 50대: 주식 50%, 채권 50%. 공격적 투자자는 비중을 더 높이고, 보수적이면 낮추세요." },
     ],
   },
 ];
@@ -710,28 +948,40 @@ function ArticleCard({ article }: { article: Article }) {
 ══════════════════════════════════════════════════════════════════ */
 
 function CollapsibleSection({ title, articles, accent }: { title: string; articles: Article[]; accent: string }) {
-  const [open, setOpen] = useState(false);
+  const [more, setMore] = useState(false);
   return (
     <div>
-      <button
-        onClick={() => setOpen(v => !v)}
-        className="w-full flex items-center justify-between mb-3 group"
-      >
+      <div className="flex items-center justify-between mb-3">
         <h2 className="text-xs font-semibold tracking-widest uppercase font-syne"
           style={{ color: "var(--muted)" }}>
           {title}
         </h2>
-        <div className="flex items-center gap-1.5">
-          {!open && <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full" style={{ background: `${accent}15`, color: accent }}>{articles.length}개</span>}
-          <ChevronDown
-            className="w-4 h-4 transition-transform duration-300"
-            style={{ color: "var(--muted)", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
-          />
-        </div>
-      </button>
-      {open && (
-        <div className="flex flex-col gap-2">
-          {articles.map(a => <ArticleCard key={a.id} article={a} />)}
+        <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+          style={{ background: `${accent}15`, color: accent }}>
+          {articles.length}개
+        </span>
+      </div>
+      {/* First article always visible */}
+      <ArticleCard article={articles[0]} />
+      {/* Rest: expandable */}
+      {articles.length > 1 && (
+        <div className="mt-2">
+          {more && (
+            <div className="flex flex-col gap-2 mb-2">
+              {articles.slice(1).map(a => <ArticleCard key={a.id} article={a} />)}
+            </div>
+          )}
+          <button
+            onClick={() => setMore(v => !v)}
+            className="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-[11px] font-semibold transition-opacity active:opacity-70"
+            style={{ background: `${accent}10`, color: accent, border: `1px solid ${accent}25` }}
+          >
+            {more ? "접기" : `나머지 ${articles.length - 1}개 더 보기`}
+            <ChevronDown
+              className="w-3.5 h-3.5 transition-transform duration-300"
+              style={{ transform: more ? "rotate(180deg)" : "rotate(0deg)" }}
+            />
+          </button>
         </div>
       )}
     </div>

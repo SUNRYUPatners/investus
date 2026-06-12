@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { useAuth } from "@/hooks/useAuth";
+import { getSupabase } from "@/lib/supabase";
 import {
   ChevronLeft, Plus, Pencil, ShieldCheck, Upload,
   Trash2, Eye, Heart, X, CheckCircle2,
@@ -185,6 +186,21 @@ export default function CreatorDashboardPage() {
     setUploadDone(false);
   };
 
+  const syncToStorage = async (items: MyContent[]) => {
+    try {
+      const { data: { session } } = await getSupabase().auth.getSession();
+      if (!session?.access_token) return;
+      await fetch("/api/creator/contents", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${session.access_token}`,
+        },
+        body: JSON.stringify(items),
+      });
+    } catch { /* ignore — localStorage is the source of truth */ }
+  };
+
   const handleWrite = () => {
     if (!wTitle.trim()) return;
     const item: MyContent = {
@@ -202,6 +218,7 @@ export default function CreatorDashboardPage() {
     const next = [item, ...contents];
     saveContents(next);
     setContents(next);
+    syncToStorage(next);
     setShowWrite(false);
     setWTitle(""); setWDesc(""); setWBody(""); setWType("post");
     setWExternalUrl(""); setWFileLabel("");
@@ -211,6 +228,7 @@ export default function CreatorDashboardPage() {
     const next = contents.filter((c) => c.id !== id);
     saveContents(next);
     setContents(next);
+    syncToStorage(next);
   };
 
   const handleSaveEdit = () => {
@@ -243,11 +261,20 @@ export default function CreatorDashboardPage() {
 
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-28 lg:pb-10">
 
-        {/* Back */}
-        <div className="pt-4 pb-2">
+        {/* Back + View Public Profile */}
+        <div className="pt-4 pb-2 flex items-center justify-between">
           <button onClick={() => router.back()} className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
             <ChevronLeft className="w-3.5 h-3.5" />뒤로가기
           </button>
+          {creator.status === "approved" && (
+            <Link
+              href={`/creator/${encodeURIComponent(user.email)}`}
+              className="text-[11px] font-semibold px-3 py-1.5 rounded-lg"
+              style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.2)" }}
+            >
+              내 공개 프로필 보기 →
+            </Link>
+          )}
         </div>
 
         {/* ── Profile card ── */}

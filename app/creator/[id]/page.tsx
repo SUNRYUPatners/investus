@@ -2,6 +2,7 @@
 
 import { use, useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard } from "lucide-react";
 import { Header } from "@/components/Header";
 import { AdGateModal } from "@/components/AdGateModal";
@@ -41,6 +42,7 @@ function saveSubscribed(creatorId: string, val: boolean) {
 
 export default function CreatorProfilePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
+  const router = useRouter();
   const [creator, setCreator] = useState<Creator | null>(null);
   const [apiContents, setApiContents] = useState<CreatorContent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -78,10 +80,24 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
             contents: [],
           };
           setCreator(mapped);
-          // Fetch contents separately
+          // Fetch contents from Supabase Storage
           const cRes = await fetch(`/api/creator/contents?id=${encodeURIComponent(id)}`);
           const cData = await cRes.json();
-          setApiContents(Array.isArray(cData) ? cData : []);
+          let merged: CreatorContent[] = Array.isArray(cData) ? cData : [];
+          // Merge localStorage contents for own profile (dashboard saves locally)
+          try {
+            const myRaw = localStorage.getItem("investus_my_creator");
+            const my = myRaw ? JSON.parse(myRaw) as { id?: string; email?: string } : null;
+            if (my && (my.id === id || my.email === id ||
+                my.id?.toLowerCase() === id.toLowerCase())) {
+              const local = JSON.parse(localStorage.getItem("investus_creator_contents") ?? "[]") as CreatorContent[];
+              if (Array.isArray(local) && local.length > 0) {
+                const existing = new Set(merged.map((c) => c.id));
+                merged = [...merged, ...local.filter((c) => !existing.has(c.id))];
+              }
+            }
+          } catch { /* ignore */ }
+          setApiContents(merged);
         } else {
           // 2. Fallback: check localStorage (own profile)
           try {
@@ -130,9 +146,9 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
             내 투자클럽 대시보드로 →
           </Link>
         )}
-        <Link href="/wall" className="text-xs px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
+        <button onClick={() => router.back()} className="text-xs px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
           돌아가기
-        </Link>
+        </button>
       </div>
     );
   }
@@ -150,10 +166,10 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
       <main className="max-w-[480px] lg:max-w-3xl mx-auto pb-24 lg:pb-10">
         {/* Back button */}
         <div className="px-4 pt-4 pb-2">
-          <Link href="/wall" className="flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
+          <button onClick={() => router.back()} className="flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
             <ChevronLeft className="w-4 h-4" />
-            종목이야기 / 투자클럽
-          </Link>
+            투자클럽
+          </button>
         </div>
 
         {/* Hero card */}
