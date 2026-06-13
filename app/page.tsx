@@ -45,25 +45,12 @@ export default async function HomePage() {
             {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures · 시장종합분석 (실시간) */}
             <LiveMarket />
 
-            {/* 광고 — LiveMarket 아래 (첫 광고는 스크롤 후 노출) */}
+            {/* 광고 — LiveMarket 아래 (모바일 전용) */}
             <section className="px-4 lg:px-0 pt-4">
               <AdFitBanner />
             </section>
 
-            {/* Investus 리포트 — AI 분석 아래 */}
-            <section className="px-4 lg:px-0 pt-4 lg:pt-6">
-              <ReportFeed />
-            </section>
-
-            {/* 광고 — 리포트 아래 (모바일 전용) */}
-            <section className="px-4 lg:hidden pt-3">
-              <AdFitBanner />
-            </section>
-
-            {/* 시장심리 · 버핏지수 — 모바일 전용 */}
-            <section className="px-4 lg:hidden pt-5">
-              <AdFitBanner />
-            </section>
+            {/* 공포탐욕지수 · 버핏지수 — 모바일: 리포트 위 / 데스크탑: 오른쪽 사이드바 */}
             <section className="px-4 lg:hidden pt-4">
               <FearGreedWidget locale={locale} />
             </section>
@@ -71,11 +58,27 @@ export default async function HomePage() {
               <BuffettWidget locale={locale} />
             </section>
 
-            {/* 시장 뉴스 */}
+            {/* 광고 */}
+            <section className="px-4 lg:hidden pt-4">
+              <AdFitBanner />
+            </section>
+
+            {/* 시장 뉴스 — 모바일: 리포트 바로 위 */}
             <section className="px-4 lg:hidden pt-4">
               <NewsSection />
             </section>
+
             {/* 광고 — 뉴스 아래 */}
+            <section className="px-4 lg:hidden pt-3">
+              <AdFitBanner />
+            </section>
+
+            {/* Investus 리포트 */}
+            <section className="px-4 lg:px-0 pt-4 lg:pt-6">
+              <ReportFeed />
+            </section>
+
+            {/* 광고 — 리포트 아래 (모바일 전용) */}
             <section className="px-4 lg:hidden pt-3 pb-2">
               <AdFitBanner />
             </section>
