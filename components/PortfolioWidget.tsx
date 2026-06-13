@@ -136,6 +136,9 @@ export function PortfolioWidget() {
   const totalPnl    = totalValue - totalCost;
   const totalPnlPct = totalCost > 0 ? (totalPnl / totalCost) * 100 : 0;
 
+  // Sort by current market value descending (비중순)
+  enriched.sort((a, b) => b.val - a.val);
+
   // Desktop: vertical list capped at 3 (or all if showAll)
   const DESKTOP_LIMIT = 3;
   const desktopList   = showAll ? enriched : enriched.slice(0, DESKTOP_LIMIT);
