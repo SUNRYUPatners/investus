@@ -995,3 +995,67 @@ export function InvestmentBasics() {
 export function InvestmentMasters() {
   return <CollapsibleSection title="투자 대가들의 전략" articles={MASTERS} accent="rgba(212,175,55,0.9)" />;
 }
+
+function ArticleExpanded({ article, accent }: { article: Article; accent: string }) {
+  return (
+    <div className="rounded-2xl border overflow-hidden"
+      style={{ background: "var(--card)", borderColor: `${accent}25` }}>
+      <div className="px-4 pt-4 pb-2">
+        <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>{article.title}</p>
+        <p className="text-[11px] mt-0.5 mb-3" style={{ color: "var(--muted)" }}>{article.summary}</p>
+      </div>
+      <div className="px-4 pb-5">
+        <div className="rounded-xl overflow-hidden mb-4 border"
+          style={{ borderColor: "rgba(255,255,255,0.05)" }}>
+          {article.svg}
+        </div>
+        <div className="flex flex-col gap-3">
+          {article.points.map(p => (
+            <div key={p.label}>
+              <span className="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full mb-1.5"
+                style={{ background: `${accent}15`, color: accent }}>
+                {p.label}
+              </span>
+              <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function InvestmentAllExpanded() {
+  return (
+    <div className="flex flex-col gap-8">
+      <div>
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+            투자 기초 지식
+          </h2>
+          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+            style={{ background: "rgba(0,229,160,0.1)", color: "rgba(0,229,160,0.9)" }}>
+            {BASICS.length}개
+          </span>
+        </div>
+        <div className="flex flex-col gap-3">
+          {BASICS.map(a => <ArticleExpanded key={a.id} article={a} accent="rgba(0,229,160,0.9)" />)}
+        </div>
+      </div>
+      <div>
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+            투자 대가들의 전략
+          </h2>
+          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+            style={{ background: "rgba(212,175,55,0.12)", color: "#d4af37" }}>
+            {MASTERS.length}개
+          </span>
+        </div>
+        <div className="flex flex-col gap-3">
+          {MASTERS.map(a => <ArticleExpanded key={a.id} article={a} accent="rgba(212,175,55,0.9)" />)}
+        </div>
+      </div>
+    </div>
+  );
+}

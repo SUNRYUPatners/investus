@@ -1,9 +1,9 @@
 import { Header } from "@/components/Header";
-import { InvestmentBasics } from "@/components/InvestmentArticles";
+import { InvestmentAllExpanded } from "@/components/InvestmentArticles";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
-export default function BasicsPage() {
+export default function InvestmentLearnPage() {
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
@@ -13,8 +13,16 @@ export default function BasicsPage() {
             <ChevronLeft className="w-4 h-4" />
             인사이트
           </Link>
+          <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
+            투자 기초 & 대가 전략
+          </h1>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+            핵심 투자 개념부터 전설적 투자가들의 철학까지
+          </p>
         </div>
-        <InvestmentBasics />
+        <div className="pt-4">
+          <InvestmentAllExpanded />
+        </div>
       </main>
     </div>
   );

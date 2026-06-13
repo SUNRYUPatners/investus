@@ -11,62 +11,44 @@ export default async function InsightPage() {
   const locale = await getLocale();
   const t = getT(locale).insight;
 
-  /* ── 투자 기초 지식 배너 ── */
-  const BasicsBanner = (
+  /* ── 투자 기초&대가 통합 배너 ── */
+  const LearnBanner = (
     <Link
       href="/insight/basics"
       className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
-      style={{ borderColor: "rgba(0,229,160,0.25)" }}
+      style={{ borderColor: "rgba(0,229,160,0.2)" }}
     >
       <div
         className="relative px-4 py-4 flex items-center gap-3"
-        style={{ background: "linear-gradient(135deg, #001a12 0%, #000d09 60%, #0a0c10 100%)" }}
+        style={{ background: "linear-gradient(135deg, #001a12 0%, #0d0b00 60%, #0a0c10 100%)" }}
       >
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(circle at 80% 50%, rgba(0,229,160,0.08) 0%, transparent 60%)" }} />
-        <div className="relative w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
-          style={{ background: "rgba(0,229,160,0.1)", border: "1px solid rgba(0,229,160,0.25)" }}>
-          <span className="text-2xl">📚</span>
+          style={{ background: "radial-gradient(circle at 75% 50%, rgba(212,175,55,0.07) 0%, transparent 55%)" }} />
+        <div className="relative flex gap-1.5 flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center"
+            style={{ background: "rgba(0,229,160,0.1)", border: "1px solid rgba(0,229,160,0.2)" }}>
+            <span className="text-xl">📚</span>
+          </div>
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center"
+            style={{ background: "rgba(212,175,55,0.1)", border: "1px solid rgba(212,175,55,0.2)" }}>
+            <span className="text-xl">🏆</span>
+          </div>
         </div>
         <div className="flex-1 min-w-0">
-          <div className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-1.5"
-            style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.9)" }}>
-            기초 학습
+          <div className="flex gap-1.5 mb-1.5">
+            <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.9)" }}>
+              기초 지식
+            </span>
+            <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: "rgba(212,175,55,0.12)", color: "#d4af37" }}>
+              투자 대가
+            </span>
           </div>
-          <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 기초 지식</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>주식·채권·ETF·환율 핵심 개념 정리</p>
+          <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 기초 & 대가 전략</p>
+          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>버핏·린치·달리오 등 핵심 투자 철학 전체 보기</p>
         </div>
-        <span className="text-lg flex-shrink-0" style={{ color: "rgba(0,229,160,0.6)" }}>›</span>
-      </div>
-    </Link>
-  );
-
-  /* ── 투자 대가들의 전략 배너 ── */
-  const MastersBanner = (
-    <Link
-      href="/insight/masters"
-      className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
-      style={{ borderColor: "rgba(212,175,55,0.25)" }}
-    >
-      <div
-        className="relative px-4 py-4 flex items-center gap-3"
-        style={{ background: "linear-gradient(135deg, #1c1500 0%, #0d0b00 60%, #0a0c10 100%)" }}
-      >
-        <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(circle at 80% 50%, rgba(212,175,55,0.07) 0%, transparent 60%)" }} />
-        <div className="relative w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
-          style={{ background: "rgba(212,175,55,0.1)", border: "1px solid rgba(212,175,55,0.25)" }}>
-          <span className="text-2xl">🏆</span>
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-1.5"
-            style={{ background: "rgba(212,175,55,0.12)", color: "#d4af37" }}>
-            투자 대가
-          </div>
-          <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 대가들의 전략</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>버핏·린치·달리오 등 전설의 투자 철학</p>
-        </div>
-        <span className="text-lg flex-shrink-0" style={{ color: "rgba(212,175,55,0.6)" }}>›</span>
+        <span className="text-lg flex-shrink-0" style={{ color: "var(--muted)" }}>›</span>
       </div>
     </Link>
   );
@@ -122,8 +104,7 @@ export default async function InsightPage() {
         <section className="px-4 mb-6">{EduBanner}</section>
         <section className="px-4 mb-6"><ReportFeed /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
-        <section className="px-4 mb-3">{BasicsBanner}</section>
-        <section className="px-4 mb-4">{MastersBanner}</section>
+        <section className="px-4 mb-4">{LearnBanner}</section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">
@@ -160,8 +141,7 @@ export default async function InsightPage() {
         >
           <div className="flex flex-col gap-3 flex-shrink-0">
             {EduBanner}
-            {BasicsBanner}
-            {MastersBanner}
+            {LearnBanner}
           </div>
           <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">
             <AdFitBanner />
