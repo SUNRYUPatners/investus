@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
   const prompt = `This is a screenshot from a brokerage or investment account app.
 
 Extract ALL stock holdings visible in this image. For each holding return:
-- symbol: US stock ticker (e.g. AAPL, NVDA, TSLA). Skip Korean stocks (KRX).
+- symbol: US stock ticker (e.g. AAPL, NVDA, TSLA, SPCX). SPCX is SpaceX which IPO'd on Nasdaq on June 12, 2026 — it is a valid US stock ticker. Skip Korean stocks (KRX).
 - name: company name if visible (optional)
 - shares: number of shares (can be decimal, e.g. 1.5)
 - avgCost: average purchase price IN US DOLLARS (USD). If the price shown is in Korean Won (₩ or 원 or KRW), set avgCost to null. If price is in USD ($), convert to a float number.

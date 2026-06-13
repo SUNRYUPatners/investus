@@ -8,20 +8,28 @@ import { isMarketOpen } from "@/lib/marketHours";
 export function Header() {
   const t = useLocale();
   const [time, setTime] = useState("");
+  const [date, setDate] = useState("");
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const tick = () => {
-      const t = new Date().toLocaleTimeString("en-US", {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString("en-US", {
         timeZone: "America/New_York",
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
         hour12: false,
       });
-      setTime(t);
+      const dateStr = now.toLocaleDateString("en-US", {
+        timeZone: "America/New_York",
+        month: "numeric",
+        day: "numeric",
+      });
+      setTime(timeStr);
+      setDate(dateStr);
       setOpen(isMarketOpen());
     };
     tick();
@@ -64,7 +72,7 @@ export function Header() {
                 className="text-xs font-mono-num tabular-nums"
                 style={{ color: "var(--muted)" }}
               >
-                {time} EST
+                {date} {time} EST
               </span>
               <span
                 className="text-[10px] font-semibold px-2 py-0.5 rounded-full"

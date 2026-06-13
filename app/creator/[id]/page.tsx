@@ -3,7 +3,8 @@
 import { use, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard } from "lucide-react";
+import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard, BookMarked } from "lucide-react";
+import { AdFitBanner } from "@/components/AdFitBanner";
 import { Header } from "@/components/Header";
 import { contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
 import { getSupabase } from "@/lib/supabase";
@@ -610,19 +611,58 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
 
 function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; locked: boolean; onUnlock: () => void }) {
   const [showReader, setShowReader] = useState(false);
+  const [showAdGate, setShowAdGate] = useState(false);
+  const isBook = content.type === "book";
+  // Books are always free (ad-supported); other types respect the locked flag
+  const effectiveLocked = isBook ? false : locked;
 
   return (
     <>
-    {showReader && content.type === "book" && (
+    {showReader && isBook && (
       <EbookReaderModal content={content} onClose={() => setShowReader(false)} />
     )}
+    {showAdGate && (
+      <div className="fixed inset-0 z-[300] flex items-center justify-center px-4"
+        style={{ background: "rgba(0,0,0,0.85)" }}
+        onClick={() => setShowAdGate(false)}>
+        <div className="w-full max-w-[360px] rounded-3xl p-6"
+          style={{ background: "var(--card)" }}
+          onClick={(e) => e.stopPropagation()}>
+          <div className="flex items-center justify-center w-12 h-12 rounded-2xl mx-auto mb-3"
+            style={{ background: "rgba(192,132,252,0.15)" }}>
+            <BookMarked className="w-6 h-6" style={{ color: "rgba(192,132,252,0.9)" }} />
+          </div>
+          <p className="text-sm font-bold text-center mb-1" style={{ color: "var(--text)" }}>무료로 읽기</p>
+          <p className="text-[11px] text-center mb-4" style={{ color: "var(--muted)" }}>
+            광고 시청 후 무료로 읽으실 수 있습니다
+          </p>
+          <div className="flex justify-center mb-4">
+            <AdFitBanner />
+          </div>
+          <button
+            onClick={() => { setShowAdGate(false); setShowReader(true); }}
+            className="w-full py-3 rounded-2xl text-sm font-bold mb-2 active:opacity-80 transition-opacity"
+            style={{ background: "rgba(192,132,252,0.9)", color: "#000" }}
+          >
+            계속 읽기 →
+          </button>
+          <button
+            onClick={() => setShowAdGate(false)}
+            className="w-full py-2.5 text-xs rounded-2xl"
+            style={{ color: "var(--muted)" }}
+          >
+            취소
+          </button>
+        </div>
+      </div>
+    )}
     <div className="rounded-2xl border overflow-hidden"
-      style={{ background: "var(--card)", borderColor: locked ? "rgba(99,102,241,0.2)" : "var(--border)" }}>
+      style={{ background: "var(--card)", borderColor: effectiveLocked ? "rgba(99,102,241,0.2)" : "var(--border)" }}>
       <div className="p-4">
         <div className="flex items-start gap-3">
           <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0 relative"
             style={{ background: "var(--bg)" }}>
-            {locked ? <Lock className="w-5 h-5" style={{ color: "var(--muted)" }} /> : content.thumbnail}
+            {effectiveLocked ? <Lock className="w-5 h-5" style={{ color: "var(--muted)" }} /> : content.thumbnail}
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 mb-1 flex-wrap">
@@ -631,18 +671,23 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
                 {CONTENT_ICON[content.type]}
                 <span className="ml-0.5">{contentTypeLabel(content.type)}</span>
               </span>
-              {content.isPremium && (
+              {isBook ? (
+                <span className="text-[10px] px-1.5 py-0.5 rounded-md flex items-center gap-0.5"
+                  style={{ background: "rgba(192,132,252,0.12)", color: "rgba(192,132,252,0.9)" }}>
+                  📖 무료
+                </span>
+              ) : content.isPremium && (
                 <span className="text-[10px] px-1.5 py-0.5 rounded-md"
                   style={{ background: "rgba(99,102,241,0.12)", color: "#818cf8" }}>
-                  {locked ? "🔒 구독 전용" : "✓ 구독"}
+                  {effectiveLocked ? "🔒 구독 전용" : "✓ 구독"}
                 </span>
               )}
             </div>
             <p className="text-sm font-semibold leading-snug mb-1"
-              style={{ color: locked ? "var(--muted)" : "var(--text)" }}>
+              style={{ color: effectiveLocked ? "var(--muted)" : "var(--text)" }}>
               {content.title}
             </p>
-            {locked ? (
+            {effectiveLocked ? (
               <button onClick={onUnlock}
                 className="text-[11px] font-bold underline"
                 style={{ color: "#818cf8" }}>
@@ -659,8 +704,8 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
         {/* Meta row */}
         <div className="flex items-center gap-4 mt-3 pt-3 border-t" style={{ borderColor: "var(--border)" }}>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{fmtDate(content.createdAt)}</span>
-          {!locked && content.duration && <span className="text-[10px]" style={{ color: "var(--muted)" }}>⏱ {content.duration}</span>}
-          {!locked && content.pages && <span className="text-[10px]" style={{ color: "var(--muted)" }}>📄 {content.pages}p</span>}
+          {!effectiveLocked && content.duration && <span className="text-[10px]" style={{ color: "var(--muted)" }}>⏱ {content.duration}</span>}
+          {!effectiveLocked && content.pages && <span className="text-[10px]" style={{ color: "var(--muted)" }}>📄 {content.pages}p</span>}
           <div className="ml-auto flex items-center gap-3">
             <span className="flex items-center gap-0.5 text-[10px]" style={{ color: "var(--muted)" }}>
               <Heart className="w-3 h-3" />{content.likeCount}
@@ -668,9 +713,9 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
             <span className="flex items-center gap-0.5 text-[10px]" style={{ color: "var(--muted)" }}>
               <Eye className="w-3 h-3" />{content.viewCount.toLocaleString()}
             </span>
-            {!locked && content.type === "book" && (
+            {isBook && (
               <button
-                onClick={() => setShowReader(true)}
+                onClick={() => setShowAdGate(true)}
                 className="text-[10px] px-2.5 py-1 rounded-lg font-bold transition-opacity hover:opacity-80 active:scale-95"
                 style={{ background: "rgba(192,132,252,0.15)", color: "rgba(192,132,252,0.95)", border: "1px solid rgba(192,132,252,0.25)" }}
               >
