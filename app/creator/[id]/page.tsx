@@ -278,7 +278,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
           </div>
 
           <div className="rounded-2xl border overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-            {creator.portfolio.map((h, i) => (
+            {[...creator.portfolio].sort((a, b) => b.allocation - a.allocation).map((h, i) => (
               <div key={h.symbol}
                 className={`flex items-center gap-3 px-4 py-3 ${i < creator.portfolio.length - 1 ? "border-b" : ""}`}
                 style={{ borderColor: "var(--border)" }}>

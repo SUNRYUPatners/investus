@@ -1089,7 +1089,13 @@ export default function PortfolioPage() {
             </div>
           ) : (
             <div className="flex flex-col gap-3">
-              {holdings.map((h, i) => (
+              {[...holdings]
+                .sort((a, b) => {
+                  const valA = (liveMap[a.symbol]?.price ?? a.avgCost) * a.shares;
+                  const valB = (liveMap[b.symbol]?.price ?? b.avgCost) * b.shares;
+                  return valB - valA;
+                })
+                .map((h, i) => (
                 <>
                   <HoldingCard
                     key={h.symbol}
