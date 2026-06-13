@@ -14,7 +14,7 @@ import { usePortfolio } from "@/hooks/usePortfolio";
 import { mockQuotes } from "@/lib/api";
 import type { Holding } from "@/lib/api";
 import { useLocaleCode } from "@/contexts/LocaleContext";
-import { AdFitBanner } from "@/components/AdFitBanner";
+import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { PortfolioAI } from "@/components/PortfolioAI";
 
 // ── Types & Constants ─────────────────────────────────────────────────────────
@@ -1051,6 +1051,9 @@ export default function PortfolioPage() {
           )}
 
           {/* Ad — above holdings */}
+          <div className="mb-1">
+            <AdFitStrip />
+          </div>
           <div className="mb-4">
             <AdFitBanner />
           </div>

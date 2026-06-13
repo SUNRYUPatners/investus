@@ -5,7 +5,7 @@ import { NewsSection } from "@/components/NewsSection";
 import { FearGreedWidget } from "@/components/FearGreedWidget";
 import { BuffettWidget } from "@/components/BuffettWidget";
 import { WatchlistSection } from "@/components/WatchlistSection";
-import { AdFitBanner } from "@/components/AdFitBanner";
+import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { ReportFeed } from "@/components/ReportFeed";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
@@ -54,11 +54,15 @@ export default async function HomePage() {
             <section className="px-4 lg:hidden pt-4">
               <FearGreedWidget locale={locale} />
             </section>
-            <section className="px-4 lg:hidden pt-4">
+            {/* 띠 배너 — 공포탐욕·버핏 사이 */}
+            <section className="px-4 lg:hidden pt-2">
+              <AdFitStrip />
+            </section>
+            <section className="px-4 lg:hidden pt-2">
               <BuffettWidget locale={locale} />
             </section>
 
-            {/* 광고 */}
+            {/* 대형 광고 */}
             <section className="px-4 lg:hidden pt-4">
               <AdFitBanner />
             </section>
@@ -68,9 +72,9 @@ export default async function HomePage() {
               <NewsSection />
             </section>
 
-            {/* 광고 — 뉴스 아래 */}
-            <section className="px-4 lg:hidden pt-3">
-              <AdFitBanner />
+            {/* 띠 배너 — 뉴스 아래 */}
+            <section className="px-4 lg:hidden pt-2">
+              <AdFitStrip />
             </section>
 
             {/* Investus 리포트 */}

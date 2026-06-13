@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, Users, TrendingUp, Send, X, EyeOff, FileCheck, Heart, Pencil, Check } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CreatorCard } from "@/components/CreatorCard";
-import { AdFitBanner } from "@/components/AdFitBanner";
+import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { useAuth } from "@/hooks/useAuth";
 import { getSupabase } from "@/lib/supabase";
 import { CREATORS } from "@/lib/creators";
@@ -1256,6 +1256,7 @@ export default function WallPage() {
             </div>
 
             <div className="px-4">
+              <AdFitStrip className="mb-1" />
               <AdFitBanner />
 
               {/* Posts */}

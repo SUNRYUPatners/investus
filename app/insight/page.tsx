@@ -3,7 +3,7 @@ import { ReportFeed } from "@/components/ReportFeed";
 import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
 import Link from "next/link";
-import { AdFitBanner } from "@/components/AdFitBanner";
+import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { getLocale } from "@/lib/getLocale";
 import { getT } from "@/lib/i18n";
 
@@ -105,7 +105,7 @@ export default async function InsightPage() {
         <section className="px-4 mb-6"><ReportFeed /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-4">{LearnBanner}</section>
-        <section className="px-4 mb-4"><AdFitBanner /></section>
+        <section className="px-4 mb-2"><AdFitStrip /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">
           <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
@@ -113,6 +113,7 @@ export default async function InsightPage() {
           </h2>
           <BookCarousel />
         </section>
+        <section className="px-4 mb-2"><AdFitStrip /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4">
           <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
@@ -120,7 +121,8 @@ export default async function InsightPage() {
           </h2>
           <YoutubeChannels />
         </section>
-        <section className="px-4 mt-4"><AdFitBanner /></section>
+        <section className="px-4 mt-3"><AdFitStrip /></section>
+        <section className="px-4 mt-2"><AdFitBanner /></section>
       </main>
 
       {/* ── Desktop: 왼쪽 페이지 스크롤 + 오른쪽 sticky 사이드바 ── */}
