@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { X, Camera, Check } from "lucide-react";
+import { X, Camera, Check, AlertTriangle } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { getSupabase } from "@/lib/supabase";
 
 const EMOJI_PRESETS = [
   "🦁","🐯","🦊","🐻","🐼","🐨",
@@ -34,13 +35,42 @@ function resizeImageToBase64(file: File): Promise<string> {
 }
 
 export function ProfileEditModal({ onClose }: { onClose: () => void }) {
-  const { user, updateProfile } = useAuth();
+  const { user, updateProfile, logout } = useAuth();
   const fileRef  = useRef<HTMLInputElement>(null);
 
-  const [avatar,   setAvatar]   = useState(user?.avatar ?? "");
-  const [nickname, setNickname] = useState(user?.nickname ?? "");
-  const [tab,      setTab]      = useState<"emoji" | "photo">("emoji");
-  const [saving,   setSaving]   = useState(false);
+  const [avatar,        setAvatar]        = useState(user?.avatar ?? "");
+  const [nickname,      setNickname]      = useState(user?.nickname ?? "");
+  const [tab,           setTab]           = useState<"emoji" | "photo">("emoji");
+  const [saving,        setSaving]        = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [deleting,      setDeleting]      = useState(false);
+  const [deleteError,   setDeleteError]   = useState("");
+
+  const handleDeleteAccount = async () => {
+    setDeleting(true);
+    setDeleteError("");
+    try {
+      const { data: { session } } = await getSupabase().auth.getSession();
+      const headers: HeadersInit = { "Content-Type": "application/json" };
+      if (session?.access_token) headers["Authorization"] = `Bearer ${session.access_token}`;
+      const r = await fetch("/api/auth/delete-account", { method: "DELETE", headers });
+      if (!r.ok) {
+        const d = await r.json().catch(() => ({}));
+        setDeleteError((d as { error?: string }).error ?? "오류가 발생했습니다.");
+        setDeleting(false);
+        return;
+      }
+      // Clear localStorage data
+      try {
+        ["investus_holdings", "investus_my_creator", "investus_creator_contents"].forEach((k) => localStorage.removeItem(k));
+      } catch { /* ignore */ }
+      await logout();
+      onClose();
+    } catch {
+      setDeleteError("네트워크 오류가 발생했습니다.");
+      setDeleting(false);
+    }
+  };
 
   const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -178,7 +208,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
         </div>
 
         {/* Emoji picker */}
-        <div className="px-4 mb-8">
+        <div className="px-4 mb-6">
           <label className="text-[10px] font-semibold mb-2 block" style={{ color: "var(--muted)" }}>
             아바타 이모지 선택
           </label>
@@ -218,7 +248,61 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
           </div>
         </div>
 
+        {/* 회원 탈퇴 */}
+        <div className="px-4 pb-10 border-t pt-5" style={{ borderColor: "var(--border)" }}>
+          <p className="text-[10px] mb-2" style={{ color: "var(--muted)" }}>계정 관리</p>
+          <button
+            onClick={() => setShowDeleteConfirm(true)}
+            className="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-xs font-semibold border active:opacity-70 transition-opacity"
+            style={{ borderColor: "rgba(239,68,68,0.25)", color: "#ef4444", background: "rgba(239,68,68,0.05)" }}
+          >
+            <AlertTriangle className="w-3.5 h-3.5" />
+            회원 탈퇴
+          </button>
+        </div>
+
       </div>
+
+      {/* 탈퇴 확인 다이얼로그 */}
+      {showDeleteConfirm && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center px-6"
+          style={{ background: "rgba(0,0,0,0.75)" }}
+          onClick={() => !deleting && setShowDeleteConfirm(false)}>
+          <div className="w-full max-w-[320px] rounded-3xl p-6"
+            style={{ background: "var(--card)" }}
+            onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-center w-12 h-12 rounded-2xl mx-auto mb-4"
+              style={{ background: "rgba(239,68,68,0.12)" }}>
+              <AlertTriangle className="w-6 h-6" style={{ color: "#ef4444" }} />
+            </div>
+            <h3 className="text-sm font-bold text-center mb-2" style={{ color: "var(--text)" }}>
+              정말 탈퇴하시겠어요?
+            </h3>
+            <p className="text-[11px] text-center leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
+              탈퇴하면 계정, 포트폴리오, 게시글 등 모든 데이터가 영구 삭제되며 복구할 수 없습니다.
+            </p>
+            {deleteError && (
+              <p className="text-[11px] text-center mb-3" style={{ color: "#ef4444" }}>{deleteError}</p>
+            )}
+            <button
+              onClick={handleDeleteAccount}
+              disabled={deleting}
+              className="w-full py-3 rounded-2xl text-sm font-bold mb-2 active:opacity-80 transition-opacity disabled:opacity-50"
+              style={{ background: "#ef4444", color: "#fff" }}
+            >
+              {deleting ? "탈퇴 처리 중..." : "탈퇴하기"}
+            </button>
+            <button
+              onClick={() => setShowDeleteConfirm(false)}
+              disabled={deleting}
+              className="w-full py-2.5 text-xs rounded-2xl"
+              style={{ color: "var(--muted)" }}
+            >
+              취소
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
