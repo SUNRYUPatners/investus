@@ -36,7 +36,8 @@ export function AdFitBanner({
   }, []);
 
   return (
-    <div className={`flex justify-center overflow-hidden my-2 ${className}`}>
+    <div className={`flex justify-center my-2 ${className}`}
+      style={{ filter: "brightness(0.6) saturate(0.75)" }}>
       <ins
         className="kakao_ad_area"
         style={{ display: "none" }}

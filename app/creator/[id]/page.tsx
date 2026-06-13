@@ -461,45 +461,82 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const touchRef = useRef<{ x: number; y: number } | null>(null);
+  const pageCache = useRef<Map<number, string>>(new Map());
+  const tokenRef = useRef<string | null>(null);
   const paragraphs = (content.body ?? "").split(/\n+/).filter(Boolean);
   const hasPdf = !!content.pdfPath;
 
   const goNext = useCallback(() => setPage(p => Math.min(totalPages || 1, p + 1)), [totalPages]);
   const goPrev = useCallback(() => setPage(p => Math.max(1, p - 1)), []);
 
+  // Get auth token once on mount
+  useEffect(() => {
+    (async () => {
+      const { data: { session } } = await getSupabase().auth.getSession();
+      tokenRef.current = session?.access_token ?? null;
+    })();
+  }, []);
+
+  // Core fetch — returns cached blob URL or fetches fresh
+  const fetchPage = useCallback(async (p: number): Promise<string> => {
+    const cached = pageCache.current.get(p);
+    if (cached) return cached;
+    const headers: HeadersInit = tokenRef.current
+      ? { Authorization: `Bearer ${tokenRef.current}` }
+      : {};
+    const r = await fetch(
+      `/api/creator/pdf-page?path=${encodeURIComponent(content.pdfPath!)}&page=${p}`,
+      { headers }
+    );
+    if (!r.ok) throw new Error(`${r.status}`);
+    const tp = r.headers.get("X-Total-Pages");
+    if (tp) setTotalPages(parseInt(tp, 10));
+    const blob = await r.blob();
+    const url = URL.createObjectURL(blob);
+    pageCache.current.set(p, url);
+    return url;
+  }, [content.pdfPath]);
+
+  // Load current page; show cache instantly, pre-fetch neighbours
   useEffect(() => {
     if (!hasPdf || !content.pdfPath) return;
-    setLoading(true);
-    setError(false);
-    setImgSrc(null);
 
+    const cached = pageCache.current.get(page);
+    if (cached) {
+      setImgSrc(cached);
+      setLoading(false);
+      setError(false);
+    } else {
+      setLoading(true);
+      setError(false);
+    }
+
+    let cancelled = false;
     (async () => {
       try {
-        const { data: { session } } = await getSupabase().auth.getSession();
-        const headers: HeadersInit = session?.access_token
-          ? { Authorization: `Bearer ${session.access_token}` }
-          : {};
-        const r = await fetch(
-          `/api/creator/pdf-page?path=${encodeURIComponent(content.pdfPath!)}&page=${page}`,
-          { headers }
-        );
-        if (!r.ok) throw new Error(`${r.status}`);
-        const tp = r.headers.get("X-Total-Pages");
-        if (tp) setTotalPages(parseInt(tp, 10));
-        const blob = await r.blob();
-        setImgSrc(URL.createObjectURL(blob));
+        const url = await fetchPage(page);
+        if (!cancelled) { setImgSrc(url); setLoading(false); }
       } catch {
-        setError(true);
-      } finally {
-        setLoading(false);
+        if (!cancelled) { setError(true); setLoading(false); }
+        return;
+      }
+      // Pre-fetch next & previous pages silently in background
+      if (!cancelled) {
+        [page + 1, page + 2, page - 1].forEach((p) => {
+          if (p >= 1 && (totalPages === 0 || p <= totalPages)) {
+            fetchPage(p).catch(() => {});
+          }
+        });
       }
     })();
-  }, [hasPdf, content.pdfPath, page]);
+    return () => { cancelled = true; };
+  }, [hasPdf, content.pdfPath, page, fetchPage, totalPages]);
 
+  // Revoke all blob URLs on unmount
   useEffect(() => {
-    return () => { if (imgSrc) URL.revokeObjectURL(imgSrc); };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [imgSrc]);
+    const cache = pageCache.current;
+    return () => { cache.forEach((u) => URL.revokeObjectURL(u)); cache.clear(); };
+  }, []);
 
   const onTouchStart = (e: React.TouchEvent) => {
     const t = e.touches[0];
@@ -622,37 +659,44 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
       <EbookReaderModal content={content} onClose={() => setShowReader(false)} />
     )}
     {showAdGate && (
-      <div className="fixed inset-0 z-[300] flex items-center justify-center px-4"
-        style={{ background: "rgba(0,0,0,0.85)" }}
+      <div className="fixed inset-0 z-[300] flex items-center justify-center"
+        style={{ background: "rgba(0,0,0,0.88)" }}
         onClick={() => setShowAdGate(false)}>
-        <div className="w-full max-w-[360px] rounded-3xl p-6"
+        <div className="w-full max-w-[360px] mx-4 rounded-3xl overflow-hidden"
           style={{ background: "var(--card)" }}
           onClick={(e) => e.stopPropagation()}>
-          <div className="flex items-center justify-center w-12 h-12 rounded-2xl mx-auto mb-3"
-            style={{ background: "rgba(192,132,252,0.15)" }}>
-            <BookMarked className="w-6 h-6" style={{ color: "rgba(192,132,252,0.9)" }} />
+          {/* Header */}
+          <div className="flex items-center gap-3 px-5 pt-5 pb-3">
+            <div className="flex items-center justify-center w-10 h-10 rounded-xl flex-shrink-0"
+              style={{ background: "rgba(192,132,252,0.15)" }}>
+              <BookMarked className="w-5 h-5" style={{ color: "rgba(192,132,252,0.9)" }} />
+            </div>
+            <div>
+              <p className="text-sm font-bold" style={{ color: "var(--text)" }}>무료로 읽기</p>
+              <p className="text-[11px]" style={{ color: "var(--muted)" }}>광고 시청 후 무료로 이용하실 수 있어요</p>
+            </div>
           </div>
-          <p className="text-sm font-bold text-center mb-1" style={{ color: "var(--text)" }}>무료로 읽기</p>
-          <p className="text-[11px] text-center mb-4" style={{ color: "var(--muted)" }}>
-            광고 시청 후 무료로 읽으실 수 있습니다
-          </p>
-          <div className="flex justify-center mb-4">
-            <AdFitBanner />
+          {/* Ad — full-width, no padding, dark filter */}
+          <div style={{ filter: "brightness(0.55) saturate(0.75)" }}>
+            <AdFitBanner width={320} height={100} className="!my-0" />
           </div>
-          <button
-            onClick={() => { setShowAdGate(false); setShowReader(true); }}
-            className="w-full py-3 rounded-2xl text-sm font-bold mb-2 active:opacity-80 transition-opacity"
-            style={{ background: "rgba(192,132,252,0.9)", color: "#000" }}
-          >
-            계속 읽기 →
-          </button>
-          <button
-            onClick={() => setShowAdGate(false)}
-            className="w-full py-2.5 text-xs rounded-2xl"
-            style={{ color: "var(--muted)" }}
-          >
-            취소
-          </button>
+          {/* Buttons */}
+          <div className="px-5 py-4 flex flex-col gap-2">
+            <button
+              onClick={() => { setShowAdGate(false); setShowReader(true); }}
+              className="w-full py-3 rounded-2xl text-sm font-bold active:opacity-80 transition-opacity"
+              style={{ background: "rgba(192,132,252,0.9)", color: "#000" }}
+            >
+              계속 읽기 →
+            </button>
+            <button
+              onClick={() => setShowAdGate(false)}
+              className="w-full py-2 text-xs rounded-2xl"
+              style={{ color: "var(--muted)" }}
+            >
+              취소
+            </button>
+          </div>
         </div>
       </div>
     )}
