@@ -469,14 +469,6 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
   const goNext = useCallback(() => setPage(p => Math.min(totalPages || 1, p + 1)), [totalPages]);
   const goPrev = useCallback(() => setPage(p => Math.max(1, p - 1)), []);
 
-  // Get auth token once on mount
-  useEffect(() => {
-    (async () => {
-      const { data: { session } } = await getSupabase().auth.getSession();
-      tokenRef.current = session?.access_token ?? null;
-    })();
-  }, []);
-
   // Core fetch — returns cached blob URL or fetches fresh
   const fetchPage = useCallback(async (p: number): Promise<string> => {
     const cached = pageCache.current.get(p);
@@ -497,28 +489,31 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
     return url;
   }, [content.pdfPath]);
 
-  // Load current page; show cache instantly, pre-fetch neighbours
+  // Load current page — token is fetched first to avoid race condition
   useEffect(() => {
     if (!hasPdf || !content.pdfPath) return;
 
-    const cached = pageCache.current.get(page);
-    if (cached) {
-      setImgSrc(cached);
-      setLoading(false);
-      setError(false);
-    } else {
-      setLoading(true);
-      setError(false);
-    }
-
     let cancelled = false;
     (async () => {
-      try {
-        const url = await fetchPage(page);
-        if (!cancelled) { setImgSrc(url); setLoading(false); }
-      } catch {
-        if (!cancelled) { setError(true); setLoading(false); }
-        return;
+      // Fetch token before first request (fast: reads from localStorage)
+      if (!tokenRef.current) {
+        const { data: { session } } = await getSupabase().auth.getSession();
+        if (cancelled) return;
+        tokenRef.current = session?.access_token ?? null;
+      }
+
+      const cached = pageCache.current.get(page);
+      if (cached) {
+        if (!cancelled) { setImgSrc(cached); setLoading(false); setError(false); }
+      } else {
+        if (!cancelled) { setLoading(true); setError(false); }
+        try {
+          const url = await fetchPage(page);
+          if (!cancelled) { setImgSrc(url); setLoading(false); }
+        } catch {
+          if (!cancelled) { setError(true); setLoading(false); }
+          return;
+        }
       }
       // Pre-fetch next & previous pages silently in background
       if (!cancelled) {
