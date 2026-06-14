@@ -624,6 +624,131 @@ function RiskSVG() {
   );
 }
 
+function FinancialSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      <text x="140" y="13" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.35)" fontWeight="600">3대 재무제표</text>
+      <rect x="22" y="22" width="68" height="72" rx="4" fill="rgba(0,229,160,0.12)" stroke="rgba(0,229,160,0.4)" strokeWidth="1"/>
+      <text x="56" y="37" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.9)" fontWeight="700">손익계산서</text>
+      <text x="56" y="55" textAnchor="middle" fontSize="9" fill="rgba(255,255,255,0.75)" fontWeight="700">P/L</text>
+      <text x="56" y="70" textAnchor="middle" fontSize="6.5" fill="rgba(0,229,160,0.65)">매출 · 이익</text>
+      <text x="56" y="82" textAnchor="middle" fontSize="6" fill="rgba(255,255,255,0.3)">얼마 벌었나</text>
+      <rect x="106" y="22" width="68" height="72" rx="4" fill="rgba(212,175,55,0.1)" stroke="rgba(212,175,55,0.4)" strokeWidth="1"/>
+      <text x="140" y="37" textAnchor="middle" fontSize="7.5" fill="rgba(212,175,55,0.9)" fontWeight="700">대차대조표</text>
+      <text x="140" y="55" textAnchor="middle" fontSize="9" fill="rgba(255,255,255,0.75)" fontWeight="700">B/S</text>
+      <text x="140" y="70" textAnchor="middle" fontSize="6.5" fill="rgba(212,175,55,0.65)">자산 · 부채 · 자본</text>
+      <text x="140" y="82" textAnchor="middle" fontSize="6" fill="rgba(255,255,255,0.3)">무엇을 갖고 있나</text>
+      <rect x="190" y="22" width="68" height="72" rx="4" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.4)" strokeWidth="1"/>
+      <text x="224" y="37" textAnchor="middle" fontSize="7.5" fill="rgba(96,165,250,0.9)" fontWeight="700">현금흐름표</text>
+      <text x="224" y="55" textAnchor="middle" fontSize="9" fill="rgba(255,255,255,0.75)" fontWeight="700">CF</text>
+      <text x="224" y="70" textAnchor="middle" fontSize="6.5" fill="rgba(96,165,250,0.65)">영업 · 투자 · 재무</text>
+      <text x="224" y="82" textAnchor="middle" fontSize="6" fill="rgba(255,255,255,0.3)">현금이 흐르나</text>
+      <text x="140" y="118" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.2)">셋을 함께 봐야 기업의 진짜 건강 상태가 보인다</text>
+    </svg>
+  );
+}
+
+function ValuationSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      <rect x="20" y="16" width="240" height="28" rx="5" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.5)" strokeWidth="1.5" strokeDasharray="6,3"/>
+      <text x="140" y="27" textAnchor="middle" fontSize="7" fill="rgba(0,229,160,0.8)" fontWeight="700">내재가치 (Intrinsic Value)</text>
+      <text x="140" y="40" textAnchor="middle" fontSize="11" fill="rgba(0,229,160,0.9)" fontWeight="800">$100</text>
+      <rect x="20" y="48" width="240" height="20" rx="3" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.3)" strokeWidth="1" strokeDasharray="4,3"/>
+      <text x="140" y="61" textAnchor="middle" fontSize="7.5" fill="rgba(239,68,68,0.75)" fontWeight="700">안전마진 구간 (Margin of Safety) — 30%</text>
+      <rect x="20" y="72" width="240" height="28" rx="5" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.5)" strokeWidth="1.5"/>
+      <text x="140" y="83" textAnchor="middle" fontSize="7" fill="rgba(212,175,55,0.8)" fontWeight="700">매수 가격 (Purchase Price)</text>
+      <text x="140" y="96" textAnchor="middle" fontSize="11" fill="rgba(212,175,55,0.9)" fontWeight="800">$70</text>
+      <text x="140" y="120" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.2)">내재가치보다 현저히 낮은 가격에서만 매수한다</text>
+    </svg>
+  );
+}
+
+function RebalanceSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      <text x="140" y="14" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.35)" fontWeight="600">포트폴리오 리밸런싱</text>
+      <text x="25" y="30" fontSize="7" fill="rgba(239,68,68,0.7)" fontWeight="700">리밸런싱 전 (주식 과다)</text>
+      <rect x="25" y="34" width="165" height="17" rx="3" fill="rgba(239,68,68,0.45)"/>
+      <text x="107" y="46" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.9)" fontWeight="700">주식 75%</text>
+      <rect x="192" y="34" width="63" height="17" rx="3" fill="rgba(96,165,250,0.4)"/>
+      <text x="223" y="46" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.9)" fontWeight="700">채권 25%</text>
+      <text x="140" y="72" textAnchor="middle" fontSize="9" fill="rgba(212,175,55,0.55)">↓ 리밸런싱 실행</text>
+      <text x="25" y="90" fontSize="7" fill="rgba(0,229,160,0.7)" fontWeight="700">리밸런싱 후 (목표 복원)</text>
+      <rect x="25" y="94" width="132" height="17" rx="3" fill="rgba(0,229,160,0.45)"/>
+      <text x="91" y="106" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.9)" fontWeight="700">주식 60%</text>
+      <rect x="159" y="94" width="96" height="17" rx="3" fill="rgba(96,165,250,0.4)"/>
+      <text x="207" y="106" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.9)" fontWeight="700">채권 40%</text>
+      <text x="140" y="124" textAnchor="middle" fontSize="6.5" fill="rgba(255,255,255,0.2)">목표 비중 이탈 시 연 1~2회 조정</text>
+    </svg>
+  );
+}
+
+function GrahamSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      <line x1="35" y1="15" x2="35" y2="108" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
+      <text x="30" y="20" textAnchor="end" fontSize="6.5" fill="rgba(255,255,255,0.3)">$100</text>
+      <text x="30" y="55" textAnchor="end" fontSize="6.5" fill="rgba(255,255,255,0.3)">$70</text>
+      <text x="30" y="85" textAnchor="end" fontSize="6.5" fill="rgba(255,255,255,0.3)">$50</text>
+      <line x1="35" y1="18" x2="256" y2="18" stroke="rgba(0,229,160,0.7)" strokeWidth="1.5" strokeDasharray="8,3"/>
+      <text x="260" y="21" fontSize="6.5" fill="rgba(0,229,160,0.9)" fontWeight="700">내재가치</text>
+      <rect x="35" y="18" width="221" height="36" fill="rgba(239,68,68,0.06)"/>
+      <text x="145" y="39" textAnchor="middle" fontSize="7.5" fill="rgba(239,68,68,0.6)" fontWeight="600">안전마진 30% 구간</text>
+      <line x1="35" y1="54" x2="256" y2="54" stroke="rgba(212,175,55,0.8)" strokeWidth="2"/>
+      <text x="260" y="57" fontSize="6.5" fill="rgba(212,175,55,0.9)" fontWeight="700">매수가</text>
+      <polyline points="35,75 65,62 90,79 120,54 150,70 190,48 230,65 256,42"
+        stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+      <text x="145" y="120" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.2)">미스터 마켓 — 시장가는 내재가치 주변을 등락한다</text>
+    </svg>
+  );
+}
+
+function FisherSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      {[30,55,80,105].map(y => <line key={y} x1="30" y1={y} x2="256" y2={y} stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>)}
+      <line x1="30" y1="108" x2="256" y2="108" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
+      <line x1="30" y1="15" x2="30" y2="110" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
+      {(["1년","5년","10년","20년"] as string[]).map((label, i) => (
+        <text key={label} x={58 + i * 56} y="120" textAnchor="middle" fontSize="6.5" fill="rgba(255,255,255,0.3)">{label}</text>
+      ))}
+      <polyline points="30,106 58,98 114,88 170,76 226,64"
+        stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" fill="none" strokeDasharray="5,3"/>
+      <text x="230" y="61" fontSize="6.5" fill="rgba(255,255,255,0.35)">평균</text>
+      <polyline points="30,106 58,96 114,78 170,50 226,20"
+        stroke="rgba(0,229,160,0.9)" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+      <text x="230" y="17" fontSize="6.5" fill="rgba(0,229,160,0.9)" fontWeight="700">우량성장주</text>
+      <text x="143" y="12" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.35)" fontWeight="600">피셔: 탁월한 기업을 영원히 보유하라</text>
+    </svg>
+  );
+}
+
+function RogersSVG() {
+  return (
+    <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
+      <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
+      <text x="140" y="12" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.35)" fontWeight="600">원자재 가격 사이클 (15~20년 주기)</text>
+      <line x1="25" y1="88" x2="256" y2="88" stroke="rgba(255,255,255,0.08)" strokeWidth="1"/>
+      <line x1="25" y1="20" x2="25" y2="92" stroke="rgba(255,255,255,0.08)" strokeWidth="1"/>
+      <polyline points="25,78 55,50 85,26 115,54 145,78 175,50 205,23 235,50 256,38"
+        stroke="rgba(251,146,60,0.85)" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+      <text x="55" y="104" textAnchor="middle" fontSize="6.5" fill="rgba(251,146,60,0.8)">강세장</text>
+      <text x="130" y="104" textAnchor="middle" fontSize="6.5" fill="rgba(239,68,68,0.7)">약세장</text>
+      <text x="215" y="104" textAnchor="middle" fontSize="6.5" fill="rgba(251,146,60,0.8)">강세장</text>
+      <text x="85" y="20" textAnchor="middle" fontSize="6.5" fill="rgba(251,146,60,0.65)">고점</text>
+      <text x="145" y="93" textAnchor="middle" fontSize="6.5" fill="rgba(239,68,68,0.7)">저점 (매수 기회)</text>
+      <text x="205" y="17" textAnchor="middle" fontSize="6.5" fill="rgba(251,146,60,0.65)">고점</text>
+      <text x="140" y="120" textAnchor="middle" fontSize="6.5" fill="rgba(255,255,255,0.2)">로저스: 약세장 저점에서 사서 강세장에 판다</text>
+    </svg>
+  );
+}
+
 /* ══════════════════════════════════════════════════════════════════
    ARTICLE DATA
 ══════════════════════════════════════════════════════════════════ */
@@ -817,6 +942,42 @@ const BASICS: Article[] = [
       { label: "포트폴리오 구성 원칙", text: "주식 비중 = (100 - 나이)%가 전통적 기준. 20대: 주식 80%, 채권·안전자산 20%. 50대: 주식 50%, 채권 50%. 공격적 투자자는 비중을 더 높이고, 보수적이면 낮추세요." },
     ],
   },
+  {
+    id: "financials",
+    title: "📋 재무제표 읽기",
+    summary: "기업의 건강 상태를 확인하는 3가지 필수 보고서",
+    svg: <FinancialSVG />,
+    points: [
+      { label: "3대 재무제표 개요", text: "상장 기업은 분기마다 세 가지 필수 재무보고서를 공시합니다. ① 손익계산서(P/L, Income Statement) — 기간 동안 얼마를 벌고 얼마를 썼는지 ② 대차대조표(B/S, Balance Sheet) — 특정 시점에 기업이 가진 자산·부채·자본 ③ 현금흐름표(CF, Cash Flow Statement) — 현금이 어디서 들어오고 어디로 나가는지. 셋을 함께 봐야 기업의 완전한 재무 건강 상태가 보입니다." },
+      { label: "손익계산서 핵심 지표", text: "매출(Revenue)에서 매출원가를 빼면 매출총이익, 다시 판관비를 빼면 영업이익(Operating Income), 이자·세금까지 빼면 순이익(Net Income)이 됩니다. 영업이익률(영업이익÷매출×100)이 꾸준히 높고 성장하는 기업이 좋은 투자 대상입니다. 엔비디아의 영업이익률은 55%를 상회하고, 알파벳(구글)은 약 28%를 유지합니다." },
+      { label: "현금흐름표가 진짜 중요한 이유", text: "이익(Profit)은 회계 처리 방식에 따라 부풀릴 수 있지만, 현금은 거짓말을 하지 않습니다. 영업현금흐름(Operating Cash Flow)이 순이익보다 크면 기업이 실제로 현금을 잘 창출하고 있다는 신호입니다. 자유현금흐름(FCF = 영업CF - 자본지출)은 배당 지급, 자사주 매입, 신규 투자에 쓸 수 있는 '진짜 여유 현금'입니다." },
+      { label: "어디서 확인하나", text: "미국 기업의 재무제표는 SEC EDGAR(edgar.sec.gov)에서 무료로 열람할 수 있습니다. 연간보고서(10-K)와 분기보고서(10-Q)를 확인하세요. 시각화된 형태로 보고 싶다면 Macrotrends.net, 또는 각 증권사 HTS·MTS의 재무분석 탭을 활용하면 더 쉽게 이해할 수 있습니다." },
+    ],
+  },
+  {
+    id: "valuation",
+    title: "💎 기업 가치 평가",
+    summary: "이 주식이 정말 싼지 비싼지 판단하는 법",
+    svg: <ValuationSVG />,
+    points: [
+      { label: "내재가치란?", text: "내재가치(Intrinsic Value)는 기업이 미래에 벌어들일 현금을 현재 가치로 환산한 '진짜 가격'입니다. 현재 시장가가 내재가치보다 낮으면 저평가(매수 기회), 높으면 고평가(주의)입니다. 주식 가격은 단기적으로 시장 심리에 따라 크게 흔들리지만, 장기적으로는 기업의 내재가치 방향으로 수렴하는 경향이 있습니다." },
+      { label: "DCF(할인현금흐름) 개념", text: "Discounted Cash Flow — 기업이 향후 10년간 창출할 현금을 예측한 뒤, 할인율(위험도를 반영한 이자율)로 나눠 현재 가치로 환산합니다. 핵심 공식: 내재가치 = Σ(미래 현금흐름 ÷ (1+할인율)^n). 성장률과 할인율 가정에 따라 결과가 크게 달라지므로, DCF는 정밀한 숫자보다 '가치 범위 추정'용으로 활용하는 것이 현명합니다." },
+      { label: "간편한 상대 가치 평가법", text: "DCF가 복잡하다면 같은 업종 내 경쟁사와 PER, EV/EBITDA, PSR을 비교하는 상대 평가를 활용하세요. PEG 비율(PER ÷ 연간 성장률)이 1 이하면 성장 대비 저평가 신호입니다. 예를 들어 PER 30배인 기업의 연간 성장률이 35%라면 PEG = 0.86으로, 높은 PER임에도 저평가로 해석할 수 있습니다." },
+      { label: "안전마진 원칙", text: "아무리 분석을 잘해도 미래는 불확실합니다. 그래서 벤저민 그레이엄은 내재가치보다 30~40% 낮은 가격에서만 매수하는 '안전마진' 원칙을 강조했습니다. 이 버퍼가 분석 오류, 예상치 못한 사건, 경기 침체로 인한 하방 위험을 흡수합니다. 안전마진이 클수록 손실 가능성은 줄어듭니다." },
+    ],
+  },
+  {
+    id: "rebalancing",
+    title: "⚖️ 포트폴리오 리밸런싱",
+    summary: "목표 자산 비중을 지키는 규율 있는 투자 습관",
+    svg: <RebalanceSVG />,
+    points: [
+      { label: "왜 비중이 무너지나?", text: "처음에 주식 60% + 채권 40%로 시작했더라도, 주식이 크게 오르면 자연스럽게 주식 비중이 75%로 높아집니다. 이 상태에서 주식 폭락이 찾아오면 의도했던 것보다 훨씬 큰 손실을 입게 됩니다. 리밸런싱은 이 비중을 원래 목표로 되돌려 리스크를 항상 통제하는 작업입니다." },
+      { label: "리밸런싱의 투자 효과", text: "리밸런싱은 규칙적으로 '비싼 자산을 팔고 싼 자산을 사는' 역발상 행동을 자동화합니다. 2020년 코로나 폭락 직후 주식 비중이 줄어든 포트폴리오를 리밸런싱한 투자자는 자동으로 주식 저점 매수 효과를 얻었습니다. 감정이 아닌 원칙으로 매매하게 해주는 규율 시스템입니다." },
+      { label: "언제, 어떻게 하나?", text: "① 시간 기반 — 연 1~2회 정해진 날(예: 1월과 7월)에 무조건 실행 ② 임계값 기반 — 비중이 목표에서 ±5% 이상 벗어날 때 실행. 너무 자주 하면 거래 비용과 세금이 발생해 역효과가 납니다. 장기 투자자에게는 연 1회 정기 리밸런싱만으로도 충분합니다." },
+      { label: "세금 효율적인 방법", text: "보유 자산을 매도하면 양도소득세가 발생할 수 있습니다. 이를 피하려면 ① 연간 비과세 한도(250만원) 내에서 처리하거나 ② 새로 입금하는 투자금을 비중이 낮아진 자산에 집중 투자하는 방법을 활용합니다. 이렇게 하면 매도 없이도 비중을 점진적으로 복원할 수 있어 세금 부담을 줄일 수 있습니다." },
+    ],
+  },
 ];
 
 const MASTERS: Article[] = [
@@ -890,6 +1051,42 @@ const MASTERS: Article[] = [
       { label: "올웨더 포트폴리오", text: "주식 30% + 장기국채 40% + 중단기채 15% + 금 7.5% + 원자재 7.5%. 각 자산은 경제 성장/침체, 인플레이션/디플레이션 환경에서 서로 다르게 반응해 변동성을 크게 줄입니다." },
       { label: "경제 사이클 이해", text: "달리오는 경제를 단기 사이클(5~8년)과 장기 부채 사이클(75~100년)로 설명합니다. 2008년 금융위기와 코로나 충격을 미리 예측했고, 이는 경제 구조에 대한 깊은 이해에서 나왔습니다." },
       { label: "개인 투자자를 위한 교훈", text: "① 과신하지 말 것 — 내가 틀릴 수 있다 ② 상관관계 낮은 자산을 섞어라 ③ 레버리지(빚)는 양날의 검 ④ 원칙을 문서화하고 감정적 결정을 피하라. 그의 책 《원칙》에 상세히 설명되어 있습니다." },
+    ],
+  },
+  {
+    id: "graham",
+    title: "📚 벤저민 그레이엄",
+    summary: "가치투자의 아버지 · 안전마진 · 버핏의 스승",
+    svg: <GrahamSVG />,
+    points: [
+      { label: "핵심 철학", text: "\"투자란 철저한 분석을 통해 원금의 안전과 적절한 수익을 추구하는 것이다. 이를 만족하지 않는 것은 모두 투기다.\" 1934년 출판된 《증권분석(Security Analysis)》과 1949년 《현명한 투자자(The Intelligent Investor)》는 현대 가치투자의 성경입니다. 워렌 버핏은 후자를 '투자에 관해 쓰인 책 중 최고'라고 평가했습니다." },
+      { label: "안전마진(Margin of Safety)", text: "그레이엄의 가장 핵심 원칙: 내재가치를 추정한 뒤, 반드시 그보다 상당히 낮은 가격에서만 매수합니다. 내재가치 $100인 주식이라면 $60~$70에 매수해 30~40%의 안전마진을 확보합니다. 이 버퍼가 분석 오류, 불황, 예상 밖 사건을 흡수합니다. 안전마진이 클수록 잃을 가능성이 낮아지는 것이 핵심입니다." },
+      { label: "미스터 마켓 비유", text: "그레이엄은 주식시장을 '미스터 마켓(Mr. Market)'에 비유했습니다. 매일 당신의 주식을 사거나 팔겠다며 가격을 제안하는 감정적인 파트너입니다. 기분 좋은 날엔 비싸게, 우울한 날엔 싸게 제안합니다. 투자자의 역할은 이 파트너가 비정상적으로 낮은 가격을 제안할 때만 거래하고, 고점에서는 무시하는 것입니다." },
+      { label: "방어적 투자자 기준", text: "① 기업 규모가 충분히 클 것 ② 유동비율 2 이상으로 재무 구조가 탄탄할 것 ③ 최근 20년 이상 배당 지속 지급 ④ 최근 10년간 적자 없음 ⑤ 10년간 EPS 성장률 33% 이상 ⑥ PER 15배 이하 ⑦ PBR 1.5배 이하. 이 7가지를 모두 만족하는 기업만 포트폴리오에 담는 것이 그레이엄의 방어적 투자 전략입니다." },
+    ],
+  },
+  {
+    id: "fisher",
+    title: "🌱 필립 피셔",
+    summary: "성장주 투자의 아버지 · 스커틀버트 · 탁월한 기업을 영원히",
+    svg: <FisherSVG />,
+    points: [
+      { label: "핵심 철학", text: "\"탁월한 기업을 공정한 가격에 사서 영원히 보유하라.\" 1958년 출판된 《위대한 기업에 투자하라(Common Stocks and Uncommon Profits)》는 성장주 투자의 바이블입니다. 버핏은 '나는 85%의 그레이엄과 15%의 피셔로 이루어져 있다'고 말했습니다. 그는 모토롤라 주식을 34년간 보유해 수십 배의 수익을 거뒀습니다." },
+      { label: "스커틀버트(Scuttlebutt) 조사법", text: "'소문을 모은다'는 뜻의 이 방법은 기업의 고객, 공급업체, 전직 직원, 경쟁사 직원들을 직접 인터뷰해 기업의 실제 경쟁력을 파악하는 방식입니다. 재무제표 이면의 정성적 정보(경영 문화, R&D 역량, 인재 유지력)가 장기 투자 성과를 결정한다고 믿었습니다. 오늘날에는 Glassdoor, LinkedIn, 제품 리뷰 등으로 유사하게 조사할 수 있습니다." },
+      { label: "15가지 원칙 핵심", text: "① 향후 5~10년간 매출이 크게 성장할 시장이 있는가? ② 현재 성장에 안주하지 않고 지속적으로 신제품을 개발하는가? ③ 업계 평균보다 높은 영업이익률을 꾸준히 유지하는가? ④ 우수한 R&D 투자 대비 효과를 내는가? ⑤ 탁월한 영업 조직을 갖추고 있는가? ⑥ 핵심 인재를 유지·성장시키는 시스템이 있는가?" },
+      { label: "언제 팔아야 하나", text: "피셔는 좋은 기업을 팔지 않는 것을 핵심 원칙으로 삼았습니다. 매도해야 할 경우는 단 세 가지입니다: ① 처음 매수 이유가 된 사업적 경쟁력이 본질적으로 악화됐을 때 ② 더 매력적인 기회를 발견해 포트폴리오를 교체해야 할 때 ③ 주가가 내재가치 대비 극단적으로 고평가됐을 때. '많이 올랐다'는 이유만으로는 팔면 안 됩니다." },
+    ],
+  },
+  {
+    id: "rogers",
+    title: "🌏 짐 로저스",
+    summary: "퀀텀 펀드 공동 창업 · 원자재 투자 · 글로벌 매크로",
+    svg: <RogersSVG />,
+    points: [
+      { label: "핵심 철학", text: "\"세상이 변하고 있다는 것을 알아채면 그 변화에 투자한다.\" 조지 소로스와 함께 퀀텀 펀드를 설립해 1969~1980년 10년간 4,200% 수익률을 달성했습니다. 30대에 은퇴 후 오토바이로 세계를 두 번 일주하며 직접 투자처를 탐방했고, 현재는 원자재·신흥 시장 투자의 권위자로 알려져 있습니다." },
+      { label: "원자재 사이클 투자법", text: "원자재(석유, 금, 구리, 농산물) 가격은 15~20년 주기로 강세장과 약세장이 반복됩니다. 약세장이 길어질수록 광산·에너지 기업들의 신규 투자가 줄어 공급이 부족해지고, 이것이 다음 강세장의 씨앗이 됩니다. 로저스는 원자재 약세장의 저점에서 매수해 강세장 정점 근처에서 매도하는 장기 사이클 전략을 사용합니다." },
+      { label: "공부와 직접 조사의 중요성", text: "\"대부분의 투자자들은 아무 조사도 하지 않고 투자한다. 남들보다 그 분야를 더 잘 이해할 때까지 공부하고 나서 투자하라.\" 그는 세계 일주를 직접 하며 국가와 산업을 관찰하고 투자했습니다. 아시아를 횡단한 경험에서 중국·베트남 등의 성장 가능성을 누구보다 일찌감치 확신했습니다." },
+      { label: "미래를 보는 시각", text: "로저스는 21세기는 아시아의 시대가 될 것이라 확신해 싱가포르로 이주, 두 딸에게 중국어를 가르쳤습니다. \"역사적으로 제국이 부상할 때 항상 엄청난 자원 수요가 생겼다. 아시아의 성장은 원자재 수요를 구조적으로 증가시킬 것이다.\" 장기 트렌드를 파악하고 그 흐름에 일찍 올라타는 것이 그의 핵심 전략입니다." },
     ],
   },
 ];
