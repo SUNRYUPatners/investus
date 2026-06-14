@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 430">
+  <rect width="480" height="430" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#0a0f1a"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle" font-weight="700" letter-spacing="1">🔵 NVDA · 선물 PER 역사적 저점 근접</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">현재 20.65x vs 역사적 최저 18.43x</text>
+
+  <!-- P/E chart visualization -->
+  <rect x="16" y="66" width="448" height="160" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="84" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">NVDA Forward P/E 히스토리 (Fiscal.ai)</text>
+  <!-- Chart area -->
+  <rect x="26" y="92" width="428" height="100" rx="4" fill="#0d0d12"/>
+  <!-- Historical range visualization -->
+  <text x="26" y="110" font-family="sans-serif" font-size="8" fill="#555">70x ─</text>
+  <line x1="55" y1="107" x2="454" y2="107" stroke="#222" stroke-width="0.5"/>
+  <text x="26" y="130" font-family="sans-serif" font-size="8" fill="#555">50x ─</text>
+  <line x1="55" y1="127" x2="454" y2="127" stroke="#222" stroke-width="0.5"/>
+  <text x="26" y="150" font-family="sans-serif" font-size="8" fill="#555">30x ─</text>
+  <line x1="55" y1="147" x2="454" y2="147" stroke="#222" stroke-width="0.5"/>
+  <!-- Historical low line -->
+  <line x1="55" y1="175" x2="454" y2="175" stroke="#ef4444" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="26" y="179" font-family="sans-serif" font-size="7" fill="#ef4444">18x</text>
+  <!-- Simulated P/E chart path (stylized) -->
+  <polyline points="55,130 80,120 110,95 140,95 170,100 200,107 220,107 240,140 260,145 280,148 300,155 320,155 340,150 360,148 380,172 400,170 420,168 454,170"
+    fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.8"/>
+  <!-- Current dot -->
+  <circle cx="454" cy="170" r="5" fill="#60a5fa"/>
+  <text x="436" y="165" font-family="sans-serif" font-size="8" fill="#60a5fa">20.65x</text>
+
+  <!-- Key numbers -->
+  <rect x="16" y="236" width="210" height="80" rx="10" fill="#0a0f1a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="26" y="254" font-family="sans-serif" font-size="10" font-weight="700" fill="#60a5fa">현재 선물 PER</text>
+  <text x="121" y="284" font-family="sans-serif" font-size="28" fill="#60a5fa" text-anchor="middle" font-weight="900">20.65x</text>
+  <text x="121" y="308" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">10년 최저점 18.43x에서 +12%</text>
+
+  <rect x="254" y="236" width="210" height="80" rx="10" fill="#1a0808" stroke="#ef4444" stroke-width="1"/>
+  <text x="264" y="254" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef4444">역사적 최저 PER</text>
+  <text x="359" y="284" font-family="sans-serif" font-size="28" fill="#ef4444" text-anchor="middle" font-weight="900">18.43x</text>
+  <text x="359" y="308" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">역대 최저점 (2023~2024년)</text>
+
+  <!-- Context -->
+  <rect x="16" y="326" width="448" height="72" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="344" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">밸류에이션 문맥</text>
+  <text x="26" y="361" font-family="sans-serif" font-size="10" fill="#f0f0f0">• AI 데이터센터 수요 100배 확장 예상 구간인데 PER은 역사적 저점 수준</text>
+  <text x="26" y="377" font-family="sans-serif" font-size="10" fill="#f0f0f0">• FY2026 매출 목표 $200B — PER 20.65x 기준 EPS 성장 반영 불충분 상태</text>
+  <text x="26" y="393" font-family="sans-serif" font-size="9" fill="#888">• 비교: S&amp;P500 평균 PER ~24x → NVDA가 오히려 지수 대비 저PER 구간 진입</text>
+
+  <text x="240" y="422" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

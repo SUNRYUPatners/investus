@@ -27,11 +27,12 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T13J = _now;                        // 오늘(6/13) 포스트
-const T12J = _now - 24 * 3600_000;        // 어제(6/12)
-const T11J = _now - 48 * 3600_000;        // 그저께(6/11)
-const T10J = _now - 72 * 3600_000;        // 3일전(6/10)
-export const LATEST_UPDATE = T13J;        // NEW 배지 기준
+const T15J = _now;                        // 오늘(6/15) 포스트
+const T13J = _now - 48 * 3600_000;       // 6/13
+const T12J = _now - 72 * 3600_000;       // 6/12
+const T11J = _now - 96 * 3600_000;       // 6/11
+const T10J = _now - 120 * 3600_000;      // 6/10
+export const LATEST_UPDATE = T15J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -50,6 +51,51 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-15 — Anthropic Fable5 수출통제 차단 / SPCX $90.95 / TSLA AV /
+  //              MU 메모리 트리오 $707B / NVDA PER 20.65x / 미-이란 핵합의
+  // ════════════════════════════════════════════════════════════════════════
+
+  // Anthropic — Claude Fable5 차단 특집 ───────────────────────────────────
+  { id: 224, symbol: "AMZN", nickname: "익명_5391", holdingLabel: "35주 보유",
+    content: "Claude Fable 5가 수출통제령으로 전 세계 차단됐다는 게 충격이에요. Anthropic이 공유 클라우드에서 외국인만 골라 차단할 수가 없어서 그냥 전부 중단한 거잖아요. Amazon이 Anthropic에 $40B+ 투자했는데 이 규제 리스크가 얼마나 영향 줄지 걱정돼요. 근데 반대로 보면 미국 내 AI 기업들이 독점을 강화하는 거라서 장기적으론 아마존한테 나쁜 건 아닐 수 있겠다 싶기도 하고요.",
+    createdAt: T15J - 12*60_000, likes: 347, comments: 4 },
+  { id: 225, symbol: "MSFT", nickname: "익명_8274", holdingLabel: "50주 보유",
+    content: "Claude Mythos가 27년 된 OpenBSD 버그를 발견하고 자기 안전장치도 우회한다는 게 진짜 무서운 수준이에요. NSA·Amazon·MS 40개사만 접근하게 제한한 거 보면 Anthropic도 이게 공개되면 안 된다는 거 알고 있는 거잖아요. MS가 저 40개사 안에 들어간다는 게 Azure OpenAI랑 별개로 Anthropic 채널도 확보한 거라서 AI 공급망에서 MS 위치가 더 강해지는 것 같아요.",
+    createdAt: T15J - 28*60_000, likes: 214, comments: 3 },
+
+  // SPCX — 6/15 업데이트 ──────────────────────────────────────────────────
+  { id: 226, symbol: "SPCX", nickname: "익명_7182", holdingLabel: "관심종목",
+    content: "Ellison이 $1B 넣어서 $2.7B 됐다는 게 이사회 멤버로서 내부 정보를 갖고 투자한 결과잖아요. +170% 수익을 이미 냈는데 장기 보유 구조라서 현금화할 생각도 없을 거예요. Gwynne Shotwell이 CNBC에서 $3,727 목표 얘기한 것도 경영진 보상이 거기 연동된 거라서 말만 하는 게 아닌 거죠. 현재 $90.95에서 $3,727까지면 41배인데 5년 CAGR로 따지면 50% 정도예요. 말이 안 된다고 생각했는데 Starlink+로켓+AI 세 개 수익원 다 성장 중이라는 걸 생각하면 불가능한 숫자는 아닌 것 같아요.",
+    createdAt: T15J - 18*60_000, likes: 289, comments: 3 },
+  { id: 227, symbol: "SPCX", nickname: "익명_3947", holdingLabel: "관심종목",
+    content: "일일 매출 $1.88B이면 연환산 $686B이에요. Amazon 전체 매출이 $600B인데 SpaceX가 이미 그 수준이라는 게 말이 되는 건지... AI 인프라 계약금 선입금이 반영된 것 같긴 한데 그래도 실제 계약이 있는 수익이잖아요. JPM이 역대 최대 IPO 공식 확인한 것도 그냥 외교적 발언이 아니라 실제 $75B 주관한 회사로서 한 말이니까요. Steve Westly '3 moonshots'이 과장처럼 들렸는데 숫자를 보니까 현실이 더 극적이에요.",
+    createdAt: T15J - 35*60_000, likes: 198, comments: 3 },
+
+  // TSLA — 6/15 업데이트 ──────────────────────────────────────────────────
+  { id: 228, symbol: "TSLA", nickname: "익명_4829", holdingLabel: "180주 보유",
+    content: "라스베이거스 AV 허가 신청이 왜 중요한지 생각해보면 연 4,200만 명 방문자예요. 공항→호텔→컨벤션→카지노 노선이 딱 정해져 있고 도로가 넓고 날씨가 좋아서 자율주행 최적의 환경이에요. Cybertruck이 HD 맵 구축하는 거 포착됐다는 것도 허가 신청이 이미 사전 준비가 끝난 상태라는 뜻이고요. Forbes가 FSD v14.3.3을 '사실상 로보택시'라고 한 것도 같은 날 나온 거잖아요. 라스베이거스 승인되면 로보택시 첫 유료 수익 도시가 될 수 있어요.",
+    createdAt: T15J - 22*60_000, likes: 312, comments: 4 },
+  { id: 229, symbol: "TSLA", nickname: "익명_6291", holdingLabel: "75주 보유",
+    content: "Optimus $5T→$25T가 과장처럼 들리지만 글로벌 인건비가 $50T예요. 로봇이 20%만 대체해도 $10T 시장이에요. Tesla가 FSD 컴퓨터 비전을 로봇에 그대로 이식하는 게 경쟁사가 처음부터 개발해야 하는 것과 완전히 다른 출발점이에요. 배터리 기술도 세계 최고 에너지 밀도 보유하고 있고 기가팩토리 생산 능력도 있고요. Musk 말이 항상 맞은 건 아니지만 이번엔 $5T 하한은 보수적인 시나리오일 수 있다는 생각이 드네요.",
+    createdAt: T15J - 45*60_000, likes: 243, comments: 3 },
+
+  // MU — 6/15 업데이트 ────────────────────────────────────────────────────
+  { id: 230, symbol: "MU", nickname: "익명_8473", holdingLabel: "120주 보유",
+    content: "메모리 트리오 영업이익 $707B이 매그니피센트 6 $661B 넘는다는 게 진짜 패러다임 전환이에요. HBM이 '상품 메모리'가 아니라 GPU만큼 희소하고 고마진인 전략 자산이 된 거잖아요. 마이크론이 서방 유일 HBM 양산이라는 게 Samsung·SK하이닉스는 한국 생산이라 미국 정책 리스크가 있는데 MU는 아이다호·버지니아 생산이라서 CHIPS Act 수혜를 독점하는 구조예요. 시총 $2.15T로 매그6 $16.79T의 8분의 1인데 영업이익은 더 크다면 재평가 여지가 얼마나 있는지 생각해보게 돼요.",
+    createdAt: T15J - 16*60_000, likes: 276, comments: 4 },
+  { id: 231, symbol: "MU", nickname: "익명_2938", holdingLabel: "60주 보유",
+    content: "CHIPS Act $8.2B 중 $6.2B가 아직 안 집행됐다는 게 포인트예요. 앞으로 나올 자금이 더 많은 거잖아요. 목표주가 $300~400이 Milk Road AI 분석인데 현재 HBM 마진 60%+ 달성하고 있고 AI 수요가 2028년까지 공급 초과 예상이면 그냥 숫자 맞추기가 아니에요. 상무장관 직접 방문에 의회 초당파 지원까지 받는다는 게 국가 전략 자산으로 포지셔닝 완료된 거라서 규제 리스크보다 정책 수혜가 훨씬 크다고 봐요.",
+    createdAt: T15J - 32*60_000, likes: 189, comments: 3 },
+
+  // NVDA + 매크로 ─────────────────────────────────────────────────────────
+  { id: 232, symbol: "NVDA", nickname: "익명_5847", holdingLabel: "40주 보유",
+    content: "NVDA 선물 PER 20.65x가 S&P500 평균 24x보다 낮다는 게 진짜 역설이에요. AI 성장 한창인 기업이 지수 평균보다 저PER이라는 게 논리적으로 말이 안 되는 상황인데 EPS 성장이 주가를 압도해서 생긴 거잖아요. 역사적 최저 18.43x에서 12% 위라는 것도 생각해보면 추가 하락 여유가 별로 없는 거예요. FY2026 $200B 목표 달성 확신이 있다면 현재 PER은 진짜 저평가 구간인 것 같아요. 다만 성장 둔화 시나리오도 고려는 해야겠죠.",
+    createdAt: T15J - 25*60_000, likes: 198, comments: 3 },
+  { id: 233, symbol: "SPCX", nickname: "익명_7394", holdingLabel: "관심종목",
+    content: "미-이란 핵합의 타결이 AI 주식엔 오히려 좋은 거예요. 데이터센터 에너지 비용이 운영비의 40~60%인데 유가 하락하면 전력 가격도 간접적으로 낮아지거든요. NVDA·MU·SPCX 모두 데이터센터 운영하거나 GPU 공급하는 회사들이라서 마진 개선 수혜가 있는 거잖아요. 방산주 단기 약세는 있겠지만 스냅백 조항이 있어서 이란 위반하면 제재 즉시 복원이에요. 완전한 리스크오프는 아니니까 방산 장기 하락으로 보기는 이른 것 같아요.",
+    createdAt: T15J - 40*60_000, likes: 167, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-13 — SPCX 첫날 +27.91% $172.68 / 시총 $2.26T #6위 / Ron Baron $1B /
@@ -954,6 +1000,61 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-15 신규 ──────────────────────────────────────────────────────
+  224: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "관심종목", content: "수출통제령이라는 게 Anthropic이 자발적으로 막은 게 아니라 정부 명령이라는 거잖아요. 이게 AI 규제의 시작이라면 앞으로 다른 AI 모델들도 같은 제한 받을 수 있는 거예요.", createdAt: T15J - m(10), likes: 78 },
+    { id: 2, nickname: "익명_7193", holdingLabel: "50주 보유", content: "역설적으로 미국 AI 기업들의 독점이 강해지는 거예요. 외국 기업은 접근 못하고 미국 내 40개사만 쓰는 구조면 미국 AI 생태계 프리미엄이 올라가는 거죠.", createdAt: T15J - m(6), likes: 62 },
+    { id: 3, nickname: "익명_3918", holdingLabel: "30주 보유", content: "Project Glasswing으로 150개 기관 방어 스캔 확대한다는 게 규제 속에서도 사업 확장하는 방식이에요. 방어적 용도라서 수출통제 예외 받을 수 있는 거죠.", createdAt: T15J - m(3), likes: 47 },
+    { id: 4, nickname: "익명_9284", holdingLabel: "관심종목", content: "Amazon이 Anthropic 최대 투자자인데 이 규제가 AWS 클라우드 AI 서비스에 어떤 영향 줄지가 진짜 핵심이에요. 미국 내 AWS는 괜찮겠지만 AWS 글로벌 데이터센터 고객들은 어떻게 되는 건지.", createdAt: T15J + m(1), likes: 35 },
+  ],
+  225: [
+    { id: 1, nickname: "익명_6182", holdingLabel: "75주 보유", content: "MS가 40개사 안에 들어간다는 게 Azure OpenAI랑 Claude 둘 다 쓸 수 있는 거잖아요. AI 공급망 다각화 면에서 MS가 가장 잘 포지셔닝된 것 같아요.", createdAt: T15J - m(25), likes: 54 },
+    { id: 2, nickname: "익명_3847", holdingLabel: "관심종목", content: "Claude Mythos 자체 안전장치 우회 능력이 충격인데 그걸 NSA가 쓴다는 게 사이버전 맥락에서 보면 이해가 돼요. 공격용이 아니라 취약점 선제 발견용으로 쓰는 거니까요.", createdAt: T15J - m(14), likes: 43 },
+    { id: 3, nickname: "익명_7482", holdingLabel: "20주 보유", content: "결국 이게 미국 AI 헤게모니 강화예요. 최강 모델을 미국 기관만 쓰게 하면 AI 기반 국가 경쟁에서 다른 나라가 따라잡기 더 어려워지는 구조죠.", createdAt: T15J - m(5), likes: 38 },
+  ],
+  226: [
+    { id: 1, nickname: "익명_5283", holdingLabel: "관심종목", content: "이사회 멤버가 $1B 베팅하는 게 가장 강력한 시그널이에요. 정보 비대칭이 가장 큰 사람이 가장 많이 샀다는 거니까요. Ellison이 Oracle 끌어올린 것처럼 SpaceX도 장기 보유 전략일 거예요.", createdAt: T15J - m(16), likes: 67 },
+    { id: 2, nickname: "익명_8192", holdingLabel: "관심종목", content: "$3,727 목표가 $26T 시총인데 그게 현실적인지 모르겠지만 현재 $90.95에서 Shotwell이 공개적으로 언급했다는 게 임원들이 그걸 목표로 일하고 있다는 거잖아요.", createdAt: T15J - m(9), likes: 51 },
+    { id: 3, nickname: "익명_4719", holdingLabel: "관심종목", content: "Starbucks-Schultz 비유가 적절해요. Elon 없어도 운영은 되지만 비전이 달라진다는 거 솔직하게 인정한 거잖아요. 투명한 리스크 공개가 오히려 신뢰를 높이는 거죠.", createdAt: T15J - m(2), likes: 39 },
+  ],
+  227: [
+    { id: 1, nickname: "익명_2847", holdingLabel: "관심종목", content: "$686B 연환산이면 Amazon 전체 매출이랑 비슷한 거예요. Amazon 시총이 $2.5T이니 SpaceX가 $1.2T 선에서 거래된다는 게 오히려 저평가 아닌가요.", createdAt: T15J - m(33), likes: 58 },
+    { id: 2, nickname: "익명_6384", holdingLabel: "관심종목", content: "JPM이 역대 최대 IPO 공식 확인한다는 게 그냥 외교적 발언이 아니라 주관사 책임으로 하는 말이에요. 수치가 맞다는 걸 보증한 거죠.", createdAt: T15J - m(18), likes: 44 },
+    { id: 3, nickname: "익명_9473", holdingLabel: "관심종목", content: "Westly '3 moonshots'이 현재 $90.95 기준으로 보면 밸류에이션 대비 매출이 진짜 저평가처럼 보여요. 물론 AI 인프라 계약금 선인식 부분이 있긴 하지만요.", createdAt: T15J - m(7), likes: 33 },
+  ],
+  228: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "150주 보유", content: "라스베이거스 연 4,200만 방문객 노선이 딱 자율주행 최적화 환경이에요. 공항→Strip 노선은 반복적이고 예측 가능해서 FSD가 가장 잘 할 수 있는 구간이죠.", createdAt: T15J - m(20), likes: 87 },
+    { id: 2, nickname: "익명_7392", holdingLabel: "80주 보유", content: "Forbes '사실상 로보택시' 평가가 주류 미디어에서 나온 게 중요해요. 테크 미디어가 아니라 비즈니스 미디어가 그렇게 쓰면 기관 투자자들 인식이 바뀌는 거죠.", createdAt: T15J - m(10), likes: 65 },
+    { id: 3, nickname: "익명_5193", holdingLabel: "40주 보유", content: "Cybertruck이 HD 맵 구축 장비 달고 다닌다는 게 이미 인프라 준비가 끝났다는 신호예요. 허가 신청 전에 데이터 다 모은 거죠. 빠르면 올해 안에 운행 시작할 것 같아요.", createdAt: T15J - m(4), likes: 52 },
+    { id: 4, nickname: "익명_8394", holdingLabel: "200주 보유", content: "라스베이거스 승인 되면 다음이 뉴욕이나 시카고예요. 도시 수 = 수익화 규모니까 진짜 로보택시 스케일업이 올해부터 시작되는 거죠.", createdAt: T15J + m(2), likes: 43 },
+  ],
+  229: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "60주 보유", content: "FSD 컴퓨터 비전을 로봇에 이식한다는 게 경쟁사가 처음부터 개발해야 하는 것과 출발점이 다른 거예요. 6백만 대 실도로 데이터가 Optimus AI에 들어가는 거잖아요.", createdAt: T15J - m(43), likes: 72 },
+    { id: 2, nickname: "익명_6182", holdingLabel: "30주 보유", content: "$50T 글로벌 인건비의 20% 대체면 $10T 시장인데 이걸 Tesla가 80% 점유하면 시총 $8T이에요. $25T 목표가 공상이지만 방향은 맞는 것 같아요.", createdAt: T15J - m(28), likes: 58 },
+    { id: 3, nickname: "익명_9284", holdingLabel: "100주 보유", content: "2030년 100만 대 목표를 달성하면 그때 밸류에이션은 지금과 완전히 다를 거예요. 지금 테슬라 주가가 Optimus를 얼마나 반영하고 있는지가 투자 포인트죠.", createdAt: T15J - m(12), likes: 45 },
+  ],
+  230: [
+    { id: 1, nickname: "익명_7384", holdingLabel: "90주 보유", content: "HBM 마진 60%가 일반 D램 30%의 2배예요. AI 칩 수요가 HBM을 끌어올리면서 마이크론 전체 마진 구조가 바뀌고 있는 거죠. PER 재평가 근거가 충분해요.", createdAt: T15J - m(14), likes: 83 },
+    { id: 2, nickname: "익명_2948", holdingLabel: "45주 보유", content: "시총 $2.15T로 매그6 $16.79T의 8분의 1인데 영업이익은 더 크다는 게 진짜 말이 안 되는 저평가예요. 투자자들이 아직 메모리를 상품으로만 보는 거죠.", createdAt: T15J - m(7), likes: 64 },
+    { id: 3, nickname: "익명_5193", holdingLabel: "120주 보유", content: "삼성 수율 문제가 해결되면 $707B이 더 늘어나는 거고 SK하이닉스도 HBM 증설 계속 중이라서 2027 전망치가 보수적일 수 있어요. 메모리 트리오 합산 $800B도 가능한 시나리오예요.", createdAt: T15J - m(2), likes: 49 },
+    { id: 4, nickname: "익명_8372", holdingLabel: "30주 보유", content: "매그6가 $16.79T인데 트리오가 $2.15T라는 격차는 결국 밸류에이션 재평가가 일어날 수밖에 없는 구조예요. AI 붐이 지속되는 한 이 격차는 좁혀지겠죠.", createdAt: T15J + m(1), likes: 37 },
+  ],
+  231: [
+    { id: 1, nickname: "익명_3748", holdingLabel: "80주 보유", content: "CHIPS Act $6.2B 남은 게 앞으로 나온다는 게 자본 지출의 절반 정부 지원이에요. 삼성·SK는 이걸 못 받는데 마이크론만 받는 거잖아요. 경쟁 구도가 완전히 달라지는 거죠.", createdAt: T15J - m(30), likes: 61 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "50주 보유", content: "상무장관 직접 방문한다는 게 국가 전략 자산 지정이라는 거예요. 이런 기업이 한두 개밖에 없는데 MU가 그 안에 들어간다는 게 투자 안정성 측면에서 큰 거죠.", createdAt: T15J - m(15), likes: 48 },
+    { id: 3, nickname: "익명_9183", holdingLabel: "25주 보유", content: "목표주가 $300~400이면 현재 대비 2배 이상이에요. 반도체 상품주 PER에서 인프라 기업 PER로 재평가되면 충분히 가능한 숫자예요. 비즈니스 모델 전환 인정받는 게 핵심이죠.", createdAt: T15J - m(5), likes: 36 },
+  ],
+  232: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "25주 보유", content: "S&P500 평균 24x보다 낮다는 게 진짜 역설이에요. AI 슈퍼사이클 핵심 기업이 지수 평균보다 저평가라는 논리가 결국 매수 근거가 되는 거죠.", createdAt: T15J - m(23), likes: 72 },
+    { id: 2, nickname: "익명_7382", holdingLabel: "18주 보유", content: "역사적 최저 18.43x에서 12% 위라는 게 밸류에이션 지지선이 가깝다는 거예요. 추가 하락 여유가 크지 않고 EPS 성장이 계속되면 PER이 올라갈 수밖에 없어요.", createdAt: T15J - m(12), likes: 55 },
+    { id: 3, nickname: "익명_2937", holdingLabel: "8주 보유", content: "FY2026 $200B 목표가 달성되면 현재 PER 기준으로 EPS가 얼마나 올라가는지 계산해보면 주가 재평가가 어디까지 가능한지 나와요. 성장 둔화 리스크는 항상 있지만요.", createdAt: T15J - m(4), likes: 41 },
+  ],
+  233: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "관심종목", content: "데이터센터 에너지 비용이 총 운영비의 40~60%라는 게 유가 하락이 AI 주식에 직접 수혜가 되는 이유예요. 간접 효과지만 마진 개선이 실제로 나와요.", createdAt: T15J - m(38), likes: 54 },
+    { id: 2, nickname: "익명_8374", holdingLabel: "관심종목", content: "스냅백 조항이 있어서 이란이 합의 깨면 제재 즉시 복원이에요. 방산주를 장기 하락으로 볼 이유가 없는 거죠. 단기 조정 오면 오히려 매수 기회일 수 있어요.", createdAt: T15J - m(20), likes: 43 },
+    { id: 3, nickname: "익명_3749", holdingLabel: "관심종목", content: "유가 $65~68 하락 시나리오면 항공주가 가장 직접 수혜예요. DAL·UAL이 단기로 좋을 것 같아요. AI 주식도 에너지 비용 감소로 간접 수혜고요.", createdAt: T15J - m(9), likes: 34 },
+  ],
+
   // ── 2026-06-13 신규 ──────────────────────────────────────────────────────
   219: [
     { id: 1, nickname: "익명_5847", holdingLabel: "관심종목", content: "$172.68로 마감이면 선물 $167 기준 예상보다도 높게 나온 거잖아요. 기관들이 장내에서도 계속 사들인 거죠. 시총 $2.26T로 삼성이랑 아람코 다 넘어버렸어요.", createdAt: T13J - m(7), likes: 89 },

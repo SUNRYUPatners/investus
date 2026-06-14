@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420">
+  <rect width="480" height="420" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#1a1024"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#c084fc" text-anchor="middle" font-weight="700" letter-spacing="1">🚀 SPCX · 매출 마일스톤</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">일일 매출 $1.88B 돌파 · JPM 최대 IPO 확인</text>
+
+  <!-- Revenue visualization -->
+  <rect x="16" y="66" width="448" height="100" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="1"/>
+  <text x="240" y="94" font-family="sans-serif" font-size="32" fill="#c084fc" text-anchor="middle" font-weight="900">$1.88B/일</text>
+  <text x="240" y="118" font-family="sans-serif" font-size="12" fill="#f0f0f0" text-anchor="middle">일일 매출 $18.8억 달러 돌파</text>
+  <text x="240" y="136" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">연환산: $686B+ · 현재 글로벌 6위 매출 수준</text>
+  <text x="240" y="152" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">출처: @$MU $DRAM 트위터 (Shay Bolser 게시)</text>
+
+  <!-- JPM confirmation -->
+  <rect x="16" y="176" width="448" height="72" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="194" font-family="sans-serif" font-size="10" font-weight="700" fill="#c084fc">J.P. Morgan 역대 최대 IPO 공식 확인</text>
+  <text x="26" y="212" font-family="sans-serif" font-size="10" fill="#f0f0f0">"Congratulations to the SpaceX team on this milestone."</text>
+  <text x="26" y="228" font-family="sans-serif" font-size="10" fill="#f0f0f0">"We were proud to serve as a lead bookrunner on the transaction."</text>
+  <text x="26" y="240" font-family="sans-serif" font-size="9" fill="#888">— J.P. Morgan 공식 성명 · $75B IPO 주관사 자격으로 발표</text>
+
+  <!-- Revenue sources -->
+  <rect x="16" y="258" width="448" height="100" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="276" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">매출 구성 (추정)</text>
+  <!-- Starlink -->
+  <text x="26" y="294" font-family="sans-serif" font-size="9" fill="#aaa">Starlink 구독</text>
+  <rect x="120" y="284" width="180" height="12" rx="3" fill="#c084fc" opacity="0.5"/>
+  <text x="305" y="295" font-family="sans-serif" font-size="9" fill="#aaa">$10.8B/년 ($29.6M/일)</text>
+  <!-- Rocket launches -->
+  <text x="26" y="312" font-family="sans-serif" font-size="9" fill="#aaa">로켓 발사</text>
+  <rect x="120" y="302" width="80" height="12" rx="3" fill="#c084fc" opacity="0.35"/>
+  <text x="205" y="313" font-family="sans-serif" font-size="9" fill="#aaa">$5B/년 ($13.7M/일)</text>
+  <!-- AI infra -->
+  <text x="26" y="330" font-family="sans-serif" font-size="9" fill="#aaa">AI 인프라 임대</text>
+  <rect x="120" y="320" width="200" height="12" rx="3" fill="#c084fc" opacity="0.7"/>
+  <text x="325" y="331" font-family="sans-serif" font-size="9" fill="#aaa">$21.5B 계약 (진행중)</text>
+  <!-- Total -->
+  <line x1="26" y1="342" x2="454" y2="342" stroke="#333" stroke-width="0.5"/>
+  <text x="26" y="355" font-family="sans-serif" font-size="10" fill="#c084fc" font-weight="700">다각화 완성 — 3대 수익원 모두 활성</text>
+
+  <!-- Context -->
+  <rect x="16" y="368" width="448" height="34" rx="10" fill="#100f1a" stroke="#c084fc" stroke-width="0.5"/>
+  <text x="26" y="382" font-family="sans-serif" font-size="9" fill="#f0f0f0">현재 주가 $90.95 (+1.52%) · IPO 시총 $135B → 매출 대비 PER 재평가 여지 충분</text>
+  <text x="26" y="394" font-family="sans-serif" font-size="9" fill="#888">Gwynne Shotwell: "Elon 없어도 회사 운영 가능 — 하지만 다른 방향"</text>
+
+  <text x="240" y="412" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

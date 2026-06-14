@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#0a1a14"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle" font-weight="700" letter-spacing="1">🚗 TSLA · FSD v14.3.3</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">Forbes: "사실상 로보택시로 진화 중"</text>
+
+  <!-- Forbes headline box -->
+  <rect x="16" y="66" width="448" height="54" rx="10" fill="#1a1a1f" stroke="#00e5a0" stroke-width="1"/>
+  <text x="26" y="84" font-family="sans-serif" font-size="9" fill="#888">Forbes · 2026.06.14 (Brooke Crothers)</text>
+  <text x="26" y="102" font-family="sans-serif" font-size="13" fill="#00e5a0" font-weight="800">"Tesla FSD Is Evolving Into A De Facto Robotaxi"</text>
+  <text x="26" y="114" font-family="sans-serif" font-size="9" fill="#888">2026 Tesla Model 3 Premium AWD LA 도로 직접 시승 후 작성</text>
+
+  <!-- Progress bars: FSD improvements in v14.3.3 -->
+  <rect x="16" y="130" width="448" height="130" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="148" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">FSD v14.3.3 성능 개선 (Shay Bolser 평가)</text>
+  <!-- Disengagement reduction -->
+  <text x="26" y="166" font-family="sans-serif" font-size="9" fill="#aaa">개입(Disengagement) 감소</text>
+  <rect x="26" y="170" width="360" height="10" rx="3" fill="#1f2a1f"/>
+  <rect x="26" y="170" width="324" height="10" rx="3" fill="#00e5a0" opacity="0.7"/>
+  <text x="393" y="179" font-family="sans-serif" font-size="9" fill="#00e5a0">90%</text>
+  <!-- General driving quality -->
+  <text x="26" y="196" font-family="sans-serif" font-size="9" fill="#aaa">일반 주행 품질</text>
+  <rect x="26" y="200" width="360" height="10" rx="3" fill="#1f2a1f"/>
+  <rect x="26" y="200" width="288" height="10" rx="3" fill="#00e5a0" opacity="0.7"/>
+  <text x="393" y="209" font-family="sans-serif" font-size="9" fill="#00e5a0">80%</text>
+  <!-- Human comparison -->
+  <text x="26" y="226" font-family="sans-serif" font-size="9" fill="#aaa">인간 운전자 대비 수준</text>
+  <rect x="26" y="230" width="360" height="10" rx="3" fill="#1f2a1f"/>
+  <rect x="26" y="230" width="300" height="10" rx="3" fill="#00e5a0" opacity="0.9"/>
+  <text x="393" y="239" font-family="sans-serif" font-size="9" fill="#00e5a0">83%</text>
+  <!-- Level 4 proximity -->
+  <text x="26" y="256" font-family="sans-serif" font-size="9" fill="#aaa">Level 4 자율주행 근접도</text>
+  <rect x="26" y="260" width="360" height="10" rx="3" fill="#1f2a1f"/>
+  <rect x="26" y="260" width="270" height="10" rx="3" fill="#fb923c" opacity="0.7"/>
+  <text x="393" y="269" font-family="sans-serif" font-size="9" fill="#fb923c">75%</text>
+
+  <!-- Key features -->
+  <rect x="16" y="270" width="220" height="100" rx="10" fill="#0a1a14"/>
+  <text x="26" y="288" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">주요 개선사항</text>
+  <text x="26" y="305" font-family="sans-serif" font-size="9" fill="#f0f0f0">• 좁은 2차선 도로 처리 향상</text>
+  <text x="26" y="320" font-family="sans-serif" font-size="9" fill="#f0f0f0">• 차선 편향(lane bias) 감소</text>
+  <text x="26" y="335" font-family="sans-serif" font-size="9" fill="#f0f0f0">• 목적지 도착 Pull Over</text>
+  <text x="26" y="350" font-family="sans-serif" font-size="9" fill="#f0f0f0">• Speed Profile 선택 가능</text>
+  <text x="26" y="365" font-family="sans-serif" font-size="9" fill="#888">  (Chill · Standard · Hurry)</text>
+
+  <rect x="244" y="270" width="220" height="100" rx="10" fill="#0a1a14"/>
+  <text x="254" y="288" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">cladoc 평가</text>
+  <text x="254" y="305" font-family="sans-serif" font-size="9" fill="#f0f0f0">"이미 Level 4급 ADAS 달성"</text>
+  <text x="254" y="320" font-family="sans-serif" font-size="9" fill="#f0f0f0">"인간보다 안전한 수준"</text>
+  <text x="254" y="335" font-family="sans-serif" font-size="9" fill="#aaa">"초기 사이버트럭 FSD와</text>
+  <text x="254" y="350" font-family="sans-serif" font-size="9" fill="#aaa"> 확연히 다른 품질"</text>
+  <text x="254" y="365" font-family="sans-serif" font-size="9" fill="#888">"Tesla는 이미 앞서 있다"</text>
+
+  <!-- Key insight -->
+  <rect x="16" y="380" width="448" height="42" rx="10" fill="#001a12" stroke="#00e5a0" stroke-width="0.8"/>
+  <text x="26" y="397" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">결론</text>
+  <text x="26" y="413" font-family="sans-serif" font-size="9" fill="#aaa">v14.3.3에서 "사실상 로보택시" 달성 → v14.4.3 (곧 출시 예정)이 L4 공식 인정의 마지막 관문</text>
+
+  <text x="240" y="432" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

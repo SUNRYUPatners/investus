@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420">
+  <rect width="480" height="420" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#1a1024"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#c084fc" text-anchor="middle" font-weight="700" letter-spacing="1">🚀 SPCX · Gwynne Shotwell</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">투자자들 "처음 알았다" — 24년 SpaceX 인재</text>
+
+  <!-- Shotwell profile -->
+  <rect x="16" y="66" width="448" height="96" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="1"/>
+  <circle cx="65" cy="114" r="30" fill="#2a1040" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="65" y="120" font-family="sans-serif" font-size="20" text-anchor="middle">👩‍💼</text>
+  <text x="110" y="90" font-family="sans-serif" font-size="12" fill="#f0f0f0" font-weight="700">Gwynne Shotwell</text>
+  <text x="110" y="107" font-family="sans-serif" font-size="10" fill="#c084fc">SpaceX COO · 24년 근속</text>
+  <text x="110" y="124" font-family="sans-serif" font-size="9" fill="#aaa">나사(NASA), DoD, 상업 파트너십 담당</text>
+  <text x="110" y="140" font-family="sans-serif" font-size="9" fill="#888">SpaceX 5번째 직원 (2002년 입사)</text>
+  <text x="110" y="155" font-family="sans-serif" font-size="9" fill="#888">CNBC 생방송 출연 (IPO 주간)</text>
+
+  <!-- Investor reaction -->
+  <rect x="16" y="172" width="448" height="90" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="190" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">IPO 로드쇼 투자자 반응</text>
+  <text x="26" y="210" font-family="sans-serif" font-size="11" fill="#f0f0f0" font-weight="700">"저 분이 누구인지 처음 알았어요."</text>
+  <text x="26" y="228" font-family="sans-serif" font-size="10" fill="#aaa">"제가 24년간 모신 분이에요. 정말 대단한 분이죠."</text>
+  <text x="26" y="246" font-family="sans-serif" font-size="9" fill="#888">— 투자자와 SpaceX 직원 간 대화 (로드쇼 현장 목격담)</text>
+  <text x="26" y="257" font-family="sans-serif" font-size="9" fill="#888">"She's awesome. What a journey." (투자자 평가)</text>
+
+  <!-- CNBC key points -->
+  <rect x="16" y="272" width="448" height="100" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="290" font-family="sans-serif" font-size="10" font-weight="700" fill="#c084fc">CNBC 발언 핵심 (6/13)</text>
+  <text x="26" y="308" font-family="sans-serif" font-size="10" fill="#f0f0f0">• "Elon 없어도 SpaceX는 운영 가능 — 하지만 다른 방향의 회사"</text>
+  <text x="26" y="325" font-family="sans-serif" font-size="10" fill="#f0f0f0">• 임원 보상: 주가 $116~$3,727 달성 구간 연동</text>
+  <text x="26" y="342" font-family="sans-serif" font-size="10" fill="#f0f0f0">• $3,727 목표 = 시총 ~$26T (현재 11.5배)</text>
+  <text x="26" y="358" font-family="sans-serif" font-size="9" fill="#888">• 비유: "Starbucks는 Howard Schultz 없이 운영됐지만 달라졌다"</text>
+  <text x="26" y="370" font-family="sans-serif" font-size="9" fill="#888">• 임원진 장기 보유 의지 = 단기 청산 의도 없음 공식화</text>
+
+  <text x="240" y="412" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

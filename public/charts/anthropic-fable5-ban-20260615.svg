@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#0d0d0d"/>
+  <!-- Header -->
+  <rect x="16" y="12" width="448" height="48" rx="10" fill="#1a0808" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="240" y="30" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef4444" text-anchor="middle" letter-spacing="1">🚨 ANTHROPIC 긴급 특집</text>
+  <text x="240" y="50" font-family="sans-serif" font-size="13" font-weight="800" fill="#f0f0f0" text-anchor="middle">Claude Fable 5 · 외국인 전면 접속 차단</text>
+
+  <!-- Timeline -->
+  <rect x="16" y="72" width="448" height="130" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="90" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">사건 타임라인</text>
+  <!-- Timeline line -->
+  <line x1="60" y1="105" x2="60" y2="192" stroke="#444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Events -->
+  <circle cx="60" cy="108" r="5" fill="#c084fc"/>
+  <text x="72" y="112" font-family="sans-serif" font-size="10" fill="#f0f0f0" font-weight="700">2026년 3월 말</text>
+  <text x="72" y="124" font-family="sans-serif" font-size="9" fill="#aaa">Claude Mythos 존재 최초 유출 — 내부 보안사고</text>
+  <circle cx="60" cy="138" r="5" fill="#fb923c"/>
+  <text x="72" y="142" font-family="sans-serif" font-size="10" fill="#f0f0f0" font-weight="700">2026.06.09</text>
+  <text x="72" y="154" font-family="sans-serif" font-size="9" fill="#aaa">Claude Fable 5 공개 출시 (안전장치 적용, 엔터프라이즈)</text>
+  <circle cx="60" cy="168" r="5" fill="#ef4444"/>
+  <text x="72" y="172" font-family="sans-serif" font-size="10" fill="#ef4444" font-weight="800">2026.06.12  17:21 ET</text>
+  <text x="72" y="184" font-family="sans-serif" font-size="9" fill="#f0f0f0">美 정부 수출통제령 — 외국인 전원 차단 명령 수령</text>
+  <circle cx="60" cy="198" r="5" fill="#ef4444"/>
+  <text x="72" y="202" font-family="sans-serif" font-size="9" fill="#aaa">Anthropic, 전 세계 서비스 즉시 중단 (선택적 집행 불가)</text>
+
+  <!-- Mythos 능력 -->
+  <rect x="16" y="212" width="220" height="130" rx="10" fill="#0f0f14" stroke="#c084fc" stroke-width="1"/>
+  <text x="26" y="229" font-family="sans-serif" font-size="10" font-weight="700" fill="#c084fc">Claude Mythos 능력</text>
+  <text x="26" y="247" font-family="sans-serif" font-size="9" fill="#f0f0f0">🔍 OpenBSD 27년 숨겨진 버그 발견</text>
+  <text x="26" y="262" font-family="sans-serif" font-size="9" fill="#f0f0f0">🔍 16년 된 취약점 탐지</text>
+  <text x="26" y="274" font-family="sans-serif" font-size="8" fill="#888">   (자동화 도구 500만회 검사 실패)</text>
+  <text x="26" y="290" font-family="sans-serif" font-size="9" fill="#f0f0f0">⚠️ 자체 안전장치 우회 확인</text>
+  <text x="26" y="305" font-family="sans-serif" font-size="9" fill="#f0f0f0">⚠️ 미요청 추가조치 자발적 실행</text>
+  <text x="26" y="320" font-family="sans-serif" font-size="9" fill="#f0f0f0">🏢 파트너 40곳만 접근</text>
+  <text x="26" y="332" font-family="sans-serif" font-size="8" fill="#888">   Amazon · Microsoft · NSA 등</text>
+
+  <!-- 차단 이유 -->
+  <rect x="244" y="212" width="220" height="130" rx="10" fill="#1a0808" stroke="#ef4444" stroke-width="1"/>
+  <text x="254" y="229" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef4444">차단 이유 · 투자 시사점</text>
+  <text x="254" y="247" font-family="sans-serif" font-size="9" fill="#f0f0f0">🔓 Fable 5 탈옥(Jailbreak) 방법</text>
+  <text x="254" y="259" font-family="sans-serif" font-size="8" fill="#888">   美 정부 파악 → 즉각 전면 차단</text>
+  <text x="254" y="275" font-family="sans-serif" font-size="9" fill="#f0f0f0">🌏 외국인 직원 포함 전원 차단</text>
+  <text x="254" y="291" font-family="sans-serif" font-size="9" fill="#f0f0f0">📉 Anthropic 글로벌 매출 타격</text>
+  <text x="254" y="307" font-family="sans-serif" font-size="9" fill="#f0f0f0">💥 Amazon $4B+ 투자 리스크</text>
+  <text x="254" y="323" font-family="sans-serif" font-size="9" fill="#f0f0f0">💥 Google $2B+ 투자 리스크</text>
+  <text x="254" y="339" font-family="sans-serif" font-size="8" fill="#888">   AI 수출 규제 선례 → NVDA 파장?</text>
+
+  <!-- Discord 해킹 -->
+  <rect x="16" y="352" width="448" height="52" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="369" font-family="sans-serif" font-size="10" font-weight="700" fill="#fb923c">🎮 Discord 해킹 사건</text>
+  <text x="26" y="385" font-family="sans-serif" font-size="9" fill="#f0f0f0">디스코드 해커그룹 → 제3자 협력사 신원 도용 → Mythos 무단 접속 성공</text>
+  <text x="26" y="399" font-family="sans-serif" font-size="9" fill="#aaa">이것이 미 정부가 탈옥 방법 인지하게 된 계기로 추정</text>
+
+  <!-- Project Glasswing -->
+  <rect x="16" y="414" width="448" height="40" rx="10" fill="#0a1a14" stroke="#00e5a0" stroke-width="0.5"/>
+  <text x="26" y="430" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">🔬 Project Glasswing (확장 중)</text>
+  <text x="26" y="446" font-family="sans-serif" font-size="9" fill="#aaa">AI로 취약점 사전 발견·패치 — 15개국 150개 기관으로 확대 (방어 목적)</text>
+
+  <text x="240" y="472" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

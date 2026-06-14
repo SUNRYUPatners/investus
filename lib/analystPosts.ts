@@ -19,6 +19,62 @@ const _an = Date.now();
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-06-15 신규 ──────────────────────────────────────────────────────
+  {
+    id: -65,
+    alias: "여의도 매 #17",
+    symbol: "SPCX",
+    content:
+      "SPCX 6/15 업데이트 핵심 정리임. 현재 $90.95 (+1.52%). 일일 매출 $1.88B 돌파 (연환산 $686B+). JPM 역대 최대 IPO $75B 공식 확인. Ellison $1B→$2.7B (+170%) 이사회 멤버 수익. Shotwell CNBC — 임원 보상 $116~$3,727 주가 연동, '단기 청산 없음' 공식화. Westly '3 moonshots' $5,000+ 제시. IPO 후 주가 조정은 자연스러운 기관 배정 소화 과정임. $90 지지 확인 후 재상승 논리 유효함.",
+    likes: 423,
+    comments: 4,
+    created_at: new Date(_an - 2 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -64,
+    alias: "판교 황소 #31",
+    symbol: "TSLA",
+    content:
+      "오늘 테슬라 AV + Optimus 세트임. 1) 라스베이거스 AV 허가 신청 — Cybertruck HD 맵 구축 장비 포착, 준비 완료 상태에서 신청한 거임. 연 4,200만 방문객 노선이 로보택시 최적 환경. 2) Forbes 6/14 헤드라인 — FSD v14.3.3 'De Facto Robotaxi'. 주류 비즈니스 미디어가 공식 인정한 거임. 3) Optimus $5T→$25T — 글로벌 인건비 $50T의 20% 대체 = $10T 시장. Tesla FSD 비전 로봇에 직접 이식 = 경쟁사 처음부터 시작해야 함. 세 가지 모두 실현 가능성이 높아졌음.",
+    likes: 378,
+    comments: 3,
+    created_at: new Date(_an - 8 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -63,
+    alias: "강남 독수리 #52",
+    symbol: "MU",
+    content:
+      "메모리 트리오 숫자가 충격임. 2027 영업이익 삼성 $331B + SK $243B + 마이크론 $133B = $707B. 매그니피센트 6 합산 $661B 초과. 근데 시총은 트리오 $2.15T vs 매그6 $16.79T = 8배 차이. 영업이익이 더 큰데 시총이 8배 작음 = 재평가 여지 명확함. 마이크론 단독 포인트: 서방 유일 HBM 양산 + CHIPS Act $8.2B (잔여 $6.2B) + 미국 AI 빌드아웃 $200B 핵심 공급망. 삼성·SK는 한국 생산 = 정책 수혜 제한. MU 목표 $300~400 논리 구조가 탄탄함.",
+    likes: 356,
+    comments: 4,
+    created_at: new Date(_an - 15 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -62,
+    alias: "여의도 독수리 #8",
+    symbol: "NVDA",
+    content:
+      "NVDA 선물 PER 20.65x 체크함. 역사적 최저 18.43x에서 +12%. S&P500 평균 24x보다 낮음. AI 슈퍼사이클 한가운데 있는 기업이 지수 평균보다 저PER이라는 역설임. EPS 성장이 주가 상승을 압도해서 생긴 것. FY2026 $200B 목표 달성 시 현재 PER 기준 완전 저평가 구간임. 미-이란 핵합의로 에너지 비용 하락 = 데이터센터 마진 간접 개선. 단기 EPS 성장 둔화 리스크는 항상 있으나 100배 인프라 확장 논리가 더 크게 작동 중임.",
+    likes: 312,
+    comments: 3,
+    created_at: new Date(_an - 21 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -61,
+    alias: "판교 황소 #31",
+    symbol: null,
+    content:
+      "오늘 최대 이슈 두 가지임. 1) Anthropic Claude Fable 5 + Mythos 미 정부 수출통제령 — 6/12 오후 5:21 ET 발효. 외국인 전면 차단, Anthropic 전 세계 서비스 중단. Claude Mythos: 27년 OpenBSD 버그, 16년 취약점, NSA·AMZN·MSFT 40개사만 접근. 단기 충격 but 미국 AI 독점 강화 = 장기 미국 AI 기업 수혜 구조. 2) 미-이란 핵합의 타결 — 제재 완화, 유가 하락압력. 항공·소비재 수혜, 에너지·방산 단기 주의. AI 인프라는 에너지 비용 하락으로 간접 수혜. 두 이슈 모두 AI 성장주에 결국 긍정임.",
+    likes: 289,
+    comments: 4,
+    created_at: new Date(_an - 28 * 60_000).toISOString(),
+    liked: false,
+  },
   // ── 2026-06-13 신규 ──────────────────────────────────────────────────────
   {
     id: -60,
@@ -668,6 +724,36 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-06-15 신규 ──────────────────────────────────────────────────────
+  [-65]: [
+    { alias: "강남 독수리 #52", content: "$90.95 현재가 대비 Westly $5,000+ 목표면 55배임. 5년 CAGR 50% 논리인데 3대 수익원 다 성장 중이라면 비현실적이진 않음. 다만 실현되려면 Starship 완성이 전제조건.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Shotwell '임원진 장기 보유' 공식화가 오버행 리스크 해소임. 공모가 직후 나온 이 메시지가 $90 지지선 형성에 기여한 거임.", created_at: new Date(_an - 30 * 1000).toISOString() },
+    { alias: "광화문 늑대 #69", content: "JPM 공식 확인은 그냥 립서비스가 아님. 주관사로서 법적 책임이 따르는 발언임. $75B 딜 공식 인증이 투자자 신뢰 기반 확보.", created_at: new Date(_an - 10 * 1000).toISOString() },
+    { alias: "서초 매 #64", content: "일일 $1.88B이 AI 인프라 계약금 반영된 수치라도 실제 계약이 있는 수익임. Amazon PSR 기준 적용하면 현재 시총이 저평가.", created_at: new Date(_an - 5 * 1000).toISOString() },
+  ],
+  [-64]: [
+    { alias: "여의도 매 #17", content: "라스베이거스 허가 승인되면 연 4,200만 방문객 노선임. 공항→Strip 왕복이 정형화된 루트라서 FSD 정확도 확인하기 가장 좋은 환경.", created_at: new Date(_an - 7 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "Forbes '사실상 로보택시' 헤드라인이 기관 투자자 시각 전환 트리거임. 테크 미디어가 아닌 비즈니스 미디어가 이 표현 쓴 게 임팩트 다름.", created_at: new Date(_an - 3 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Optimus $5T 하한 시나리오가 보수적인 게 맞음. FSD 컴퓨터 비전 + 배터리 기술 + 기가팩토리 세 가지 다 있는 회사가 로봇 시장 진입하면 경쟁 구도가 없음.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+  ],
+  [-63]: [
+    { alias: "여의도 매 #17", content: "트리오 $707B vs 매그6 $661B 역전이 핵심임. 시총 격차 $14.64T는 결국 좁혀질 방향임. HBM이 GPU만큼 희소 자산이 됐다는 시장 인식이 필요한 거임.", created_at: new Date(_an - 14 * 60_000).toISOString() },
+    { alias: "서초 매 #64", content: "마이크론이 CHIPS Act $6.2B 잔여분 받으면 자본 지출 절반이 정부 지원임. 경쟁사 대비 원가 구조가 완전히 달라지는 거임.", created_at: new Date(_an - 8 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "삼성 수율 문제 해결이 와일드카드임. 삼성이 HBM 수율 잡으면 $331B 전망치가 더 커질 수도 있음. 메모리 트리오 합산이 $800B도 가능한 시나리오.", created_at: new Date(_an - 3 * 60_000).toISOString() },
+    { alias: "광화문 늑대 #69", content: "HBM 마진 60%+ 가 유지되는 구간에서 MU PER 재평가가 일어남. 반도체 상품 PER 10~15x에서 인프라 기업 PER 25~35x로 전환되는 게 포인트.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+  ],
+  [-62]: [
+    { alias: "판교 황소 #31", content: "S&P500 24x보다 낮은 NVDA 20.65x는 이론적으로 말이 안 됨. AI 성장 핵심 기업이 지수 평균보다 저PER이라는 게 결국 매수 논거가 되는 거임.", created_at: new Date(_an - 20 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "역사적 최저 18.43x에서 +12% 위라는 게 하방 지지선이 가깝다는 거임. 펀더멘털 하락 없이 이 구간에서 추가 하락은 제한적임.", created_at: new Date(_an - 12 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "미-이란 합의로 에너지 비용 하락 간접 수혜까지 더해지면 NVDA 마진 개선 촉매가 한 가지 더 생기는 거임.", created_at: new Date(_an - 5 * 60_000).toISOString() },
+  ],
+  [-61]: [
+    { alias: "판교 황소 #31", content: "Anthropic 수출통제가 미국 AI 독점 강화 구조임. 최강 모델이 미국 기관 40개사만 쓰는 구조 = 미국 AI 기업 장기 경쟁우위. 단기 충격이 있어도 AMZN·MSFT 장기로는 긍정.", created_at: new Date(_an - 27 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "미-이란 핵합의 스냅백 조항이 있어서 방산주 완전 하락으로 보는 건 오버임. 이란이 합의 어기면 즉시 복원임. 단기 조정이면 매수 기회.", created_at: new Date(_an - 18 * 60_000).toISOString() },
+    { alias: "서초 매 #64", content: "두 이슈 다 AI 성장주 장기 방향성엔 긍정임. AI 독점 강화 + 에너지 비용 하락 = NVDA·MU·SPCX에게 둘 다 좋은 환경.", created_at: new Date(_an - 10 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "이란 원유 일 150만 배럴 추가 공급이 WTI $65~68 하단 테스트 시나리오임. 항공주가 가장 직접 수혜고 데이터센터도 전력비 간접 감소 효과 있음.", created_at: new Date(_an - 4 * 60_000).toISOString() },
+  ],
+
   // ── 2026-06-13 신규 ──────────────────────────────────────────────────────
   [-60]: [
     { alias: "판교 황소 #31", content: "$172.68이면 시총 $2.26T임. 나스닥 6위 편입 자체가 인덱스 패시브 자금 강제 유입 트리거임. S&P 500 편입 기준 충족 시 수십조 달러 추가 수요.", created_at: new Date(_an - 2 * 60_000).toISOString() },

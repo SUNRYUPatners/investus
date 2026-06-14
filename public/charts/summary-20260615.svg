@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580">
+  <rect width="480" height="580" fill="#0d0d0d"/>
+  <!-- Header -->
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#1a1a1f"/>
+  <text x="240" y="29" font-family="'Pretendard','Apple SD Gothic Neo',sans-serif" font-size="11" font-weight="700" fill="#888" text-anchor="middle" letter-spacing="2">📋 6/15 시장 한장 요약</text>
+  <text x="240" y="49" font-family="'Pretendard','Apple SD Gothic Neo',sans-serif" font-size="13" font-weight="800" fill="#f0f0f0" text-anchor="middle">Anthropic 차단 · SPCX · TSLA · MU · NVDA</text>
+
+  <!-- Card 1: Anthropic Fable5 차단 (RED - biggest news) -->
+  <rect x="16" y="66" width="448" height="72" rx="10" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="16" y="66" width="4" height="72" rx="2" fill="#ef4444"/>
+  <text x="32" y="84" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef4444">🚨 ANTHROPIC 특집 · 美 정부 외국인 접속 전면 차단</text>
+  <text x="32" y="100" font-family="sans-serif" font-size="11" fill="#f0f0f0">Claude Fable 5 전 세계 서비스 중단 — 6/12 수출통제령</text>
+  <text x="32" y="116" font-family="sans-serif" font-size="10" fill="#aaa">Claude Mythos: 27년 OpenBSD 버그 발견 · NSA·Amazon·MS 40개사만 접근</text>
+  <text x="432" y="107" font-family="sans-serif" font-size="18" fill="#ef4444" font-weight="900">⛔</text>
+
+  <!-- Card 2: SPCX -->
+  <rect x="16" y="148" width="220" height="90" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="1"/>
+  <text x="26" y="165" font-family="sans-serif" font-size="10" font-weight="700" fill="#c084fc">🚀 SPCX  $90.95  +1.52%</text>
+  <text x="26" y="182" font-family="sans-serif" font-size="10" fill="#f0f0f0">Ellison $1B → $2.7B (+170%)</text>
+  <text x="26" y="197" font-family="sans-serif" font-size="10" fill="#f0f0f0">매출 $1.88B/일 돌파</text>
+  <text x="26" y="212" font-family="sans-serif" font-size="9" fill="#aaa">Westly "3 moonshots" $5,000+ 목표</text>
+  <text x="26" y="227" font-family="sans-serif" font-size="9" fill="#aaa">IPO $135B+ 가치 평가 견고</text>
+
+  <!-- Card 3: TSLA -->
+  <rect x="244" y="148" width="220" height="90" rx="10" fill="#0a1a14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="254" y="165" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">🚗 TSLA  자율주행 인프라 가속</text>
+  <text x="254" y="182" font-family="sans-serif" font-size="10" fill="#f0f0f0">라스베이거스 AV 허가 신청</text>
+  <text x="254" y="197" font-family="sans-serif" font-size="10" fill="#f0f0f0">FSD v14.3.3 "사실상 로보택시"</text>
+  <text x="254" y="212" font-family="sans-serif" font-size="9" fill="#aaa">Forbes 6/14 헤드라인 장식</text>
+  <text x="254" y="227" font-family="sans-serif" font-size="9" fill="#aaa">사이버트럭 자율 인프라 포착</text>
+
+  <!-- Card 4: TSLA Optimus -->
+  <rect x="16" y="248" width="220" height="72" rx="10" fill="#0a1a14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="26" y="266" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">🤖 TSLA Optimus 밸류에이션</text>
+  <text x="26" y="283" font-family="sans-serif" font-size="12" font-weight="800" fill="#f0f0f0">$5T → $25T</text>
+  <text x="26" y="300" font-family="sans-serif" font-size="9" fill="#aaa">Musk: 로보택시가 인류 경제 재설계</text>
+  <text x="26" y="315" font-family="sans-serif" font-size="9" fill="#aaa">물리적 노동 = AI 경제 최후 병목</text>
+
+  <!-- Card 5: MU Memory Trio -->
+  <rect x="244" y="248" width="220" height="72" rx="10" fill="#0f110a" stroke="#fb923c" stroke-width="1"/>
+  <text x="254" y="266" font-family="sans-serif" font-size="10" font-weight="700" fill="#fb923c">🧠 MU  메모리 트리오 역전</text>
+  <text x="254" y="283" font-family="sans-serif" font-size="10" fill="#f0f0f0">$707B  vs  $661B (매그6)</text>
+  <text x="254" y="299" font-family="sans-serif" font-size="9" fill="#aaa">삼성+SK하이닉스+마이크론</text>
+  <text x="254" y="315" font-family="sans-serif" font-size="9" fill="#aaa">2027 영업이익 빅6 합산 초과</text>
+
+  <!-- Card 6: NVDA P/E -->
+  <rect x="16" y="330" width="448" height="66" rx="10" fill="#0a0f1a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="26" y="348" font-family="sans-serif" font-size="10" font-weight="700" fill="#60a5fa">🔵 NVDA  선물 PER 역사적 저점 근접</text>
+  <!-- PER bar -->
+  <rect x="26" y="358" width="328" height="12" rx="4" fill="#1a1f2a"/>
+  <rect x="26" y="358" width="300" height="12" rx="4" fill="#60a5fa" opacity="0.3"/>
+  <rect x="26" y="358" width="25" height="12" rx="2" fill="#ef4444" opacity="0.8"/>
+  <text x="30" y="368" font-family="sans-serif" font-size="8" fill="#fff">역사적 최저: 18.43x</text>
+  <text x="360" y="368" font-family="sans-serif" font-size="9" fill="#60a5fa" font-weight="700">현재 20.65x</text>
+  <text x="26" y="388" font-family="sans-serif" font-size="9" fill="#aaa">AI 성장 한창인데 밸류에이션은 최저점 부근 — 저평가 신호</text>
+
+  <!-- Mic/Memory detail bar chart -->
+  <rect x="16" y="406" width="448" height="84" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="422" font-family="sans-serif" font-size="9" font-weight="700" fill="#fb923c">2027 영업이익 전망 (억 달러)</text>
+  <!-- MU -->
+  <rect x="26" y="430" width="133" height="14" rx="3" fill="#fb923c" opacity="0.7"/>
+  <text x="165" y="441" font-family="sans-serif" font-size="9" fill="#f0f0f0">마이크론 $1,330B</text>
+  <!-- SK Hynix -->
+  <rect x="26" y="449" width="243" height="14" rx="3" fill="#fb923c" opacity="0.5"/>
+  <text x="275" y="460" font-family="sans-serif" font-size="9" fill="#f0f0f0">SK하이닉스 $2,430B</text>
+  <!-- Samsung -->
+  <rect x="26" y="468" width="331" height="14" rx="3" fill="#fb923c" opacity="0.9"/>
+  <text x="363" y="479" font-family="sans-serif" font-size="9" fill="#f0f0f0">삼성 $3,310B</text>
+
+  <!-- Iran + footer -->
+  <rect x="16" y="500" width="448" height="40" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="515" font-family="sans-serif" font-size="10" font-weight="700" fill="#f0f0f0">🕊️ 미-이란 핵협상 타결 — 유가 하락압력 · 방산주 단기 약세 가능</text>
+  <text x="26" y="531" font-family="sans-serif" font-size="9" fill="#888">핵 해제 · 제재 완화 · 스냅백 조건부 · 해상봉쇄 이란 준수시 해제</text>
+
+  <text x="240" y="568" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

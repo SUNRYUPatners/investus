@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 430">
+  <rect width="480" height="430" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#0a1a14"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle" font-weight="700" letter-spacing="1">🚗 TSLA · 자율주행 인프라 가속</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">라스베이거스 AV 허가 + 사이버트럭 함대 포착</text>
+
+  <!-- Main event cards -->
+  <rect x="16" y="66" width="220" height="110" rx="10" fill="#0a1a14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="26" y="84" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">📋 AV 허가 신청</text>
+  <text x="26" y="102" font-family="sans-serif" font-size="10" fill="#f0f0f0">Tesla → 네바다주 제출</text>
+  <text x="26" y="118" font-family="sans-serif" font-size="10" fill="#f0f0f0">허가 유형: AV 네트워크</text>
+  <text x="26" y="134" font-family="sans-serif" font-size="10" fill="#f0f0f0">회사 허가 (상업 운행)</text>
+  <text x="26" y="150" font-family="sans-serif" font-size="9" fill="#888">지역: 라스베이거스</text>
+  <text x="26" y="166" font-family="sans-serif" font-size="9" fill="#888">→ 로보택시 상용화 전 단계</text>
+
+  <rect x="244" y="66" width="220" height="110" rx="10" fill="#0a1a14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="254" y="84" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">🚙 사이버트럭 함대 포착</text>
+  <text x="254" y="102" font-family="sans-serif" font-size="10" fill="#f0f0f0">위치: 패트릭 레인</text>
+  <text x="254" y="118" font-family="sans-serif" font-size="10" fill="#f0f0f0">      &amp; 모하비 스트리트</text>
+  <text x="254" y="134" font-family="sans-serif" font-size="10" fill="#f0f0f0">자율주행 지원 인프라 건설 중</text>
+  <text x="254" y="150" font-family="sans-serif" font-size="9" fill="#888">FSD 테스트 함대 동시 운영</text>
+  <text x="254" y="166" font-family="sans-serif" font-size="9" fill="#888">→ 상업화 인프라 사전 준비</text>
+
+  <!-- Timeline to robotaxi -->
+  <rect x="16" y="186" width="448" height="90" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="204" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">로보택시 상용화 로드맵</text>
+  <!-- Step 1 -->
+  <rect x="26" y="214" width="88" height="48" rx="6" fill="#0a1a14" stroke="#00e5a0" stroke-width="0.8"/>
+  <text x="70" y="230" font-family="sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle" font-weight="700">Step 1</text>
+  <text x="70" y="244" font-family="sans-serif" font-size="8" fill="#f0f0f0" text-anchor="middle">AV 허가</text>
+  <text x="70" y="256" font-family="sans-serif" font-size="7" fill="#888" text-anchor="middle">신청 완료</text>
+  <text x="116" y="240" font-family="sans-serif" font-size="12" fill="#444">→</text>
+  <!-- Step 2 -->
+  <rect x="124" y="214" width="88" height="48" rx="6" fill="#0a1a14" stroke="#00e5a0" stroke-width="0.8"/>
+  <text x="168" y="230" font-family="sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle" font-weight="700">Step 2</text>
+  <text x="168" y="244" font-family="sans-serif" font-size="8" fill="#f0f0f0" text-anchor="middle">인프라 구축</text>
+  <text x="168" y="256" font-family="sans-serif" font-size="7" fill="#888" text-anchor="middle">진행 중</text>
+  <text x="214" y="240" font-family="sans-serif" font-size="12" fill="#444">→</text>
+  <!-- Step 3 -->
+  <rect x="222" y="214" width="88" height="48" rx="6" fill="#0a1a14" stroke="#888" stroke-width="0.8"/>
+  <text x="266" y="230" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle" font-weight="700">Step 3</text>
+  <text x="266" y="244" font-family="sans-serif" font-size="8" fill="#aaa" text-anchor="middle">FSD 무감독</text>
+  <text x="266" y="256" font-family="sans-serif" font-size="7" fill="#888" text-anchor="middle">규제 승인</text>
+  <text x="312" y="240" font-family="sans-serif" font-size="12" fill="#444">→</text>
+  <!-- Step 4 -->
+  <rect x="320" y="214" width="120" height="48" rx="6" fill="#001a12" stroke="#00e5a0" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="380" y="230" font-family="sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle" font-weight="700">Step 4 (목표)</text>
+  <text x="380" y="244" font-family="sans-serif" font-size="8" fill="#f0f0f0" text-anchor="middle">로보택시</text>
+  <text x="380" y="256" font-family="sans-serif" font-size="7" fill="#888" text-anchor="middle">상업 서비스</text>
+
+  <!-- FSD structured test -->
+  <rect x="16" y="286" width="448" height="68" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="304" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">FSD 구조화 테스트 프로그램 (병행)</text>
+  <text x="26" y="321" font-family="sans-serif" font-size="10" fill="#f0f0f0">• 사이버트럭 FSD v4.3.3 개발 빌드 실시간 테스트 중</text>
+  <text x="26" y="337" font-family="sans-serif" font-size="10" fill="#f0f0f0">• "로보틱 컨트롤" 메뉴 충전 중에도 활성 — 완전 자율 준비 신호</text>
+  <text x="26" y="349" font-family="sans-serif" font-size="9" fill="#888">• 사람이 주행 일부 / AI가 나머지 담당 → 데이터 수집 극대화</text>
+
+  <!-- Why it matters -->
+  <rect x="16" y="364" width="448" height="42" rx="10" fill="#100f1a" stroke="#00e5a0" stroke-width="0.5"/>
+  <text x="26" y="381" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">투자 포인트</text>
+  <text x="26" y="397" font-family="sans-serif" font-size="9" fill="#aaa">네바다 AV 허가 + 라스베이거스 인프라 = 로보택시 사전 포지셔닝 완료. 규제 승인이 마지막 관문.</text>
+
+  <text x="240" y="422" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 450">
+  <rect width="480" height="450" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#0a0f1a"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle" font-weight="700" letter-spacing="1">🏰 AI 데이터 해자 — 2026 핵심 투자 논리</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">실제 주행·로켓·궤도 데이터 = 재현 불가 경쟁우위</text>
+
+  <!-- Concept -->
+  <rect x="16" y="66" width="448" height="64" rx="10" fill="#1a1a1f" stroke="#60a5fa" stroke-width="1"/>
+  <text x="26" y="84" font-family="sans-serif" font-size="10" font-weight="700" fill="#60a5fa">AI 데이터 해자란?</text>
+  <text x="26" y="101" font-family="sans-serif" font-size="10" fill="#f0f0f0">경쟁사가 수십 년 · 수천억 달러를 써도 복제할 수 없는 독점 실세계 데이터셋</text>
+  <text x="26" y="117" font-family="sans-serif" font-size="9" fill="#888">AI 모델 성능 = 파라미터 × 데이터 품질 · 다양성 — 데이터가 진짜 진입장벽</text>
+  <text x="26" y="123" font-family="sans-serif" font-size="9" fill="#888">Claude Mythos 사례: 40개사 한정 접근 = 데이터 독점 의도적 유지</text>
+
+  <!-- Three companies -->
+  <!-- TSLA -->
+  <rect x="16" y="140" width="140" height="130" rx="10" fill="#0a1a14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="86" y="158" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0" text-anchor="middle">🚗 TSLA</text>
+  <text x="86" y="174" font-family="sans-serif" font-size="18" fill="#00e5a0" text-anchor="middle" font-weight="900">6M+</text>
+  <text x="86" y="190" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">실도로 차량</text>
+  <text x="26" y="207" font-family="sans-serif" font-size="8" fill="#aaa">• 실 주행 데이터 누적</text>
+  <text x="26" y="221" font-family="sans-serif" font-size="8" fill="#aaa">• 극단적 엣지케이스 포함</text>
+  <text x="26" y="235" font-family="sans-serif" font-size="8" fill="#aaa">• Optimus 훈련 소스</text>
+  <text x="26" y="248" font-family="sans-serif" font-size="8" fill="#888">가치: 재현 20년 이상 필요</text>
+  <text x="26" y="262" font-family="sans-serif" font-size="8" fill="#00e5a0">Robotaxi→Optimus 선순환</text>
+
+  <!-- SPCX -->
+  <rect x="170" y="140" width="140" height="130" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="1"/>
+  <text x="240" y="158" font-family="sans-serif" font-size="10" font-weight="700" fill="#c084fc" text-anchor="middle">🚀 SPCX</text>
+  <text x="240" y="174" font-family="sans-serif" font-size="18" fill="#c084fc" text-anchor="middle" font-weight="900">300+</text>
+  <text x="240" y="190" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">Falcon9 발사 누적</text>
+  <text x="180" y="207" font-family="sans-serif" font-size="8" fill="#aaa">• 재사용 로켓 실패 패턴</text>
+  <text x="180" y="221" font-family="sans-serif" font-size="8" fill="#aaa">• Starlink 7,000+ 위성</text>
+  <text x="180" y="235" font-family="sans-serif" font-size="8" fill="#aaa">• 궤도 물리학 모델 독점</text>
+  <text x="180" y="248" font-family="sans-serif" font-size="8" fill="#888">가치: 발사 시뮬레이션 불가</text>
+  <text x="180" y="262" font-family="sans-serif" font-size="8" fill="#c084fc">Starlink AI 최적화 적용중</text>
+
+  <!-- NVDA -->
+  <rect x="324" y="140" width="140" height="130" rx="10" fill="#0a0f1a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="394" y="158" font-family="sans-serif" font-size="10" font-weight="700" fill="#60a5fa" text-anchor="middle">🔵 NVDA</text>
+  <text x="394" y="174" font-family="sans-serif" font-size="18" fill="#60a5fa" text-anchor="middle" font-weight="900">40K+</text>
+  <text x="394" y="190" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">기업 AI 워크로드</text>
+  <text x="334" y="207" font-family="sans-serif" font-size="8" fill="#aaa">• GPU 사용 최적화 패턴</text>
+  <text x="334" y="221" font-family="sans-serif" font-size="8" fill="#aaa">• 실제 추론 병목 데이터</text>
+  <text x="334" y="235" font-family="sans-serif" font-size="8" fill="#aaa">• NIM 마이크로서비스 로그</text>
+  <text x="334" y="248" font-family="sans-serif" font-size="8" fill="#888">가치: 차세대 칩 설계 피드백</text>
+  <text x="334" y="262" font-family="sans-serif" font-size="8" fill="#60a5fa">하드웨어-소프트웨어 선순환</text>
+
+  <!-- Moat flywheel -->
+  <rect x="16" y="280" width="448" height="80" rx="10" fill="#1a1a1f"/>
+  <text x="240" y="298" font-family="sans-serif" font-size="10" font-weight="700" fill="#888" text-anchor="middle">데이터 해자 플라이휠</text>
+  <text x="240" y="318" font-family="sans-serif" font-size="11" fill="#f0f0f0" text-anchor="middle">더 많은 사용 → 더 많은 데이터 → 더 좋은 AI → 더 많은 사용</text>
+  <line x1="26" y1="328" x2="454" y2="328" stroke="#333" stroke-width="0.5"/>
+  <text x="26" y="344" font-family="sans-serif" font-size="9" fill="#aaa">TSLA: 주행 → FSD 개선 → 판매 ↑ → 데이터 ↑</text>
+  <text x="240" y="344" font-family="sans-serif" font-size="9" fill="#aaa">SPCX: 발사 → 정밀도 ↑ → 계약 ↑ → 발사 ↑</text>
+  <text x="26" y="354" font-family="sans-serif" font-size="9" fill="#888">NVDA: 칩 → AI 훈련 → 설계 피드백 → 차세대 칩</text>
+
+  <!-- Investment thesis -->
+  <rect x="16" y="370" width="448" height="56" rx="10" fill="#0a0f1a" stroke="#60a5fa" stroke-width="0.5"/>
+  <text x="26" y="388" font-family="sans-serif" font-size="10" font-weight="700" fill="#60a5fa">2026 투자 논리</text>
+  <text x="26" y="406" font-family="sans-serif" font-size="9" fill="#f0f0f0">• AI 데이터 해자 보유 기업 = 법규·자본으로도 복제 불가 — 장기 경쟁우위 확정</text>
+  <text x="26" y="418" font-family="sans-serif" font-size="9" fill="#888">• Claude Mythos 40개사 제한 사례: 데이터 접근 통제 = 새로운 독점 형태</text>
+
+  <text x="240" y="442" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

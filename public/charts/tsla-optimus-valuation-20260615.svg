@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#0a1a14"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#00e5a0" text-anchor="middle" font-weight="700" letter-spacing="1">🤖 TSLA · Optimus 밸류에이션 경로</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">$5조 → $25조 달러 시총 시나리오</text>
+
+  <!-- Valuation path -->
+  <rect x="16" y="66" width="448" height="110" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="84" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">Tesla 밸류에이션 경로 (Elon Musk AI Chat · FIB)</text>
+  <!-- Now -->
+  <rect x="26" y="94" width="80" height="60" rx="8" fill="#0a1a14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="66" y="114" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">현재</text>
+  <text x="66" y="130" font-family="sans-serif" font-size="13" fill="#00e5a0" text-anchor="middle" font-weight="800">$1.5T</text>
+  <text x="66" y="146" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">시가총액</text>
+  <!-- Arrow 1 -->
+  <text x="122" y="127" font-family="sans-serif" font-size="14" fill="#444">→</text>
+  <!-- Phase 1 -->
+  <rect x="140" y="94" width="80" height="60" rx="8" fill="#0a2a14" stroke="#00e5a0" stroke-width="1.2"/>
+  <text x="180" y="110" font-family="sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle">로보택시</text>
+  <text x="180" y="124" font-family="sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle">상용화</text>
+  <text x="180" y="140" font-family="sans-serif" font-size="13" fill="#00e5a0" text-anchor="middle" font-weight="800">$5T</text>
+  <text x="180" y="152" font-family="sans-serif" font-size="7" fill="#888" text-anchor="middle">Phase 1</text>
+  <!-- Arrow 2 -->
+  <text x="236" y="127" font-family="sans-serif" font-size="14" fill="#444">→</text>
+  <!-- Phase 2 -->
+  <rect x="254" y="88" width="80" height="72" rx="8" fill="#001a08" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="294" y="106" font-family="sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle">Optimus</text>
+  <text x="294" y="118" font-family="sans-serif" font-size="8" fill="#00e5a0" text-anchor="middle">대규모 양산</text>
+  <text x="294" y="136" font-family="sans-serif" font-size="16" fill="#00e5a0" text-anchor="middle" font-weight="900">$25T</text>
+  <text x="294" y="152" font-family="sans-serif" font-size="7" fill="#888" text-anchor="middle">Phase 2</text>
+  <!-- context -->
+  <rect x="352" y="94" width="100" height="60" rx="8" fill="#1a1a1f"/>
+  <text x="402" y="112" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">비교: NVDA</text>
+  <text x="402" y="128" font-family="sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">$5T</text>
+  <text x="402" y="144" font-family="sans-serif" font-size="7" fill="#888" text-anchor="middle">현재 글로벌 #1</text>
+
+  <!-- Why $25T -->
+  <rect x="16" y="186" width="448" height="100" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="204" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">$25T 근거 (Musk + Nic Cruz Patane)</text>
+  <text x="26" y="222" font-family="sans-serif" font-size="10" fill="#f0f0f0">• 자율 로봇이 새로운 $2억 신규 일자리 창출 (Musk 예측)</text>
+  <text x="26" y="239" font-family="sans-serif" font-size="10" fill="#f0f0f0">• 물리적 노동력 = 전 세계 GDP의 최대 병목 → AI가 대체</text>
+  <text x="26" y="256" font-family="sans-serif" font-size="10" fill="#f0f0f0">• Optimus = AI 경제의 핵심 컴퓨팅 엔진 (Nic Cruz Patane)</text>
+  <text x="26" y="273" font-family="sans-serif" font-size="9" fill="#888">• 현재 Optimus 생산 목표: 10만 대(2026) → 100만 대(2027) → 무제한</text>
+  <text x="26" y="286" font-family="sans-serif" font-size="9" fill="#888">• "역사상 가장 큰 인프라 투자 사이클의 핵심 컴퓨팅" — Patane</text>
+
+  <!-- TAM comparison -->
+  <rect x="16" y="296" width="448" height="80" rx="10" fill="#0a1a14"/>
+  <text x="26" y="314" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">로봇·AI TAM 비교</text>
+  <!-- bars -->
+  <text x="26" y="332" font-family="sans-serif" font-size="9" fill="#aaa">글로벌 노동시장 가치</text>
+  <rect x="180" y="322" width="260" height="12" rx="3" fill="#00e5a0" opacity="0.5"/>
+  <text x="444" y="333" font-family="sans-serif" font-size="9" fill="#00e5a0" text-anchor="end">$100T+</text>
+  <text x="26" y="352" font-family="sans-serif" font-size="9" fill="#aaa">NVDA AI칩 시장 (2030E)</text>
+  <rect x="180" y="342" width="100" height="12" rx="3" fill="#60a5fa" opacity="0.5"/>
+  <text x="284" y="353" font-family="sans-serif" font-size="9" fill="#60a5fa">~$1T</text>
+  <text x="26" y="372" font-family="sans-serif" font-size="9" fill="#aaa">Tesla 로보택시 TAM (2030E)</text>
+  <rect x="180" y="362" width="50" height="12" rx="3" fill="#00e5a0" opacity="0.8"/>
+  <text x="234" y="373" font-family="sans-serif" font-size="9" fill="#00e5a0">$5T+</text>
+
+  <!-- Quote -->
+  <rect x="16" y="386" width="448" height="36" rx="10" fill="#001a0a" stroke="#00e5a0" stroke-width="0.5"/>
+  <text x="26" y="402" font-family="sans-serif" font-size="9" fill="#f0f0f0">"Tesla는 지금 AI 경제를 위한 글로벌 인프라를 적극적으로 재설계 중" — Musk</text>
+  <text x="26" y="415" font-family="sans-serif" font-size="9" fill="#888">$5T 달성 시 글로벌 시총 1위 → $25T는 전례 없는 새로운 영역</text>
+
+  <text x="240" y="432" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

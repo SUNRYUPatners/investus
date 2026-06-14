@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#1a1410"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle" font-weight="700" letter-spacing="1">🕊️ 미-이란 핵합의 타결 · 시장 영향</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">유가 하락압력 · 방산주 단기 약세 경고</text>
+
+  <!-- Deal summary -->
+  <rect x="16" y="66" width="448" height="80" rx="10" fill="#1a1a1f" stroke="#fbbf24" stroke-width="1"/>
+  <text x="26" y="84" font-family="sans-serif" font-size="10" font-weight="700" fill="#fbbf24">합의 핵심 조건 (6/15 확인)</text>
+  <text x="26" y="102" font-family="sans-serif" font-size="10" fill="#f0f0f0">• 이란 핵 농축 한도 합의 — 3.67% 상한 복귀</text>
+  <text x="26" y="118" font-family="sans-serif" font-size="10" fill="#f0f0f0">• 美 對이란 제재 단계적 완화 (석유 수출 포함)</text>
+  <text x="26" y="134" font-family="sans-serif" font-size="10" fill="#f0f0f0">• 스냅백(Snapback) 조항 유지 — 위반 시 즉시 복원</text>
+  <text x="26" y="141" font-family="sans-serif" font-size="9" fill="#888">• 호르무즈 해협 해상봉쇄 해제 — 이란 준수 조건부</text>
+
+  <!-- Market impact: Oil -->
+  <rect x="16" y="156" width="214" height="96" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="174" font-family="sans-serif" font-size="10" font-weight="700" fill="#fbbf24">유가 영향</text>
+  <text x="26" y="191" font-family="sans-serif" font-size="10" fill="#f0f0f0">▼ WTI 단기 하락압력</text>
+  <text x="26" y="207" font-family="sans-serif" font-size="9" fill="#aaa">이란 원유 일 150만 배럴</text>
+  <text x="26" y="223" font-family="sans-serif" font-size="9" fill="#aaa">공급 재개 시 글로벌 공급</text>
+  <text x="26" y="239" font-family="sans-serif" font-size="9" fill="#aaa">과잉 → $70 하단 테스트</text>
+  <text x="26" y="245" font-family="sans-serif" font-size="9" fill="#ef4444">XOM·CVX 단기 주의</text>
+
+  <!-- Market impact: Defense -->
+  <rect x="250" y="156" width="214" height="96" rx="10" fill="#1a1a1f"/>
+  <text x="260" y="174" font-family="sans-serif" font-size="10" font-weight="700" fill="#fbbf24">방산주 영향</text>
+  <text x="260" y="191" font-family="sans-serif" font-size="10" fill="#f0f0f0">▼ 단기 지정학 프리미엄↓</text>
+  <text x="260" y="207" font-family="sans-serif" font-size="9" fill="#aaa">LMT·RTX·NOC 단기 약세</text>
+  <text x="260" y="223" font-family="sans-serif" font-size="9" fill="#aaa">중동 긴장 완화 = 국방</text>
+  <text x="260" y="239" font-family="sans-serif" font-size="9" fill="#aaa">예산 우선순위 변화 가능</text>
+  <text x="260" y="245" font-family="sans-serif" font-size="9" fill="#60a5fa">장기 AI 방산 전환은 유지</text>
+
+  <!-- Winners / Losers -->
+  <rect x="16" y="262" width="448" height="100" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="280" font-family="sans-serif" font-size="10" font-weight="700" fill="#888">섹터별 전망</text>
+  <!-- Winners -->
+  <text x="26" y="298" font-family="sans-serif" font-size="9" fill="#00e5a0" font-weight="700">▲ 수혜</text>
+  <text x="80" y="298" font-family="sans-serif" font-size="9" fill="#f0f0f0">항공주(IAL·DAL) · 운송 · 소비재 — 유가 하락 수혜</text>
+  <text x="26" y="314" font-family="sans-serif" font-size="9" fill="#00e5a0" font-weight="700">▲ 수혜</text>
+  <text x="80" y="314" font-family="sans-serif" font-size="9" fill="#f0f0f0">AI 인프라(NVDA·MU·SPCX) — 에너지 비용 ↓ → 데이터센터 마진 ↑</text>
+  <!-- Losers -->
+  <text x="26" y="330" font-family="sans-serif" font-size="9" fill="#ef4444" font-weight="700">▼ 주의</text>
+  <text x="80" y="330" font-family="sans-serif" font-size="9" fill="#f0f0f0">에너지(XOM·CVX·SLB) — 공급 증가 우려</text>
+  <text x="26" y="346" font-family="sans-serif" font-size="9" fill="#ef4444" font-weight="700">▼ 주의</text>
+  <text x="80" y="346" font-family="sans-serif" font-size="9" fill="#f0f0f0">방산(LMT·RTX) — 중동 리스크 프리미엄 감소</text>
+  <text x="26" y="355" font-family="sans-serif" font-size="9" fill="#888">* 스냅백 조항 있어 합의 파기 리스크 잔존 → 방산 장기 하락 아님</text>
+
+  <!-- Key message -->
+  <rect x="16" y="372" width="448" height="52" rx="10" fill="#14120a" stroke="#fbbf24" stroke-width="1"/>
+  <text x="26" y="390" font-family="sans-serif" font-size="10" font-weight="700" fill="#fbbf24">투자 판단</text>
+  <text x="26" y="408" font-family="sans-serif" font-size="9" fill="#f0f0f0">• 합의 초기 = 리스크오프 해소 → 기술·AI 성장주 단기 매력 상승</text>
+  <text x="26" y="420" font-family="sans-serif" font-size="9" fill="#888">• 스냅백·이란 내부 반발 등 불확실성 잔존 — 에너지 섹터 추격 매수 자제</text>
+
+  <text x="240" y="434" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0d0d0d"/>
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#1a1024"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="10" fill="#c084fc" text-anchor="middle" font-weight="700" letter-spacing="1">🚀 SPCX · Steve Westly 이사회 분석</text>
+  <text x="240" y="48" font-family="sans-serif" font-size="13" fill="#f0f0f0" text-anchor="middle" font-weight="800">"3가지 문샷" — 장기 $5,000+/주 목표</text>
+
+  <!-- Three moonshots -->
+  <rect x="16" y="66" width="136" height="150" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="1"/>
+  <text x="84" y="88" font-family="sans-serif" font-size="20" text-anchor="middle">🛸</text>
+  <text x="84" y="108" font-family="sans-serif" font-size="10" fill="#c084fc" text-anchor="middle" font-weight="700">Moonshot 1</text>
+  <text x="84" y="124" font-family="sans-serif" font-size="10" fill="#f0f0f0" text-anchor="middle">Starlink</text>
+  <text x="84" y="140" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">글로벌 위성인터넷</text>
+  <text x="84" y="155" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">연 $10.8B+</text>
+  <text x="84" y="170" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">6M+ 구독자</text>
+  <text x="84" y="185" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">성숙 사업</text>
+  <text x="84" y="200" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">✓ 수익 확보</text>
+
+  <rect x="172" y="66" width="136" height="150" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="1"/>
+  <text x="240" y="88" font-family="sans-serif" font-size="20" text-anchor="middle">🚀</text>
+  <text x="240" y="108" font-family="sans-serif" font-size="10" fill="#c084fc" text-anchor="middle" font-weight="700">Moonshot 2</text>
+  <text x="240" y="124" font-family="sans-serif" font-size="10" fill="#f0f0f0" text-anchor="middle">로켓 발사</text>
+  <text x="240" y="140" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Falcon 9 · Starship</text>
+  <text x="240" y="155" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">연 $5B+</text>
+  <text x="240" y="170" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">NASA·DoD 계약</text>
+  <text x="240" y="185" font-family="sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">핵심 사업</text>
+  <text x="240" y="200" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">✓ 안정적</text>
+
+  <rect x="328" y="66" width="136" height="150" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="1"/>
+  <text x="396" y="88" font-family="sans-serif" font-size="20" text-anchor="middle">🤖</text>
+  <text x="396" y="108" font-family="sans-serif" font-size="10" fill="#c084fc" text-anchor="middle" font-weight="700">Moonshot 3</text>
+  <text x="396" y="124" font-family="sans-serif" font-size="10" fill="#f0f0f0" text-anchor="middle">AI 인프라</text>
+  <text x="396" y="140" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Colossus 임대</text>
+  <text x="396" y="155" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">$21.5B 계약</text>
+  <text x="396" y="170" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Anthropic·Google</text>
+  <text x="396" y="185" font-family="sans-serif" font-size="8" fill="#fb923c" text-anchor="middle">성장 사업</text>
+  <text x="396" y="200" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">↑ 빠른 성장</text>
+
+  <!-- Westly quote -->
+  <rect x="16" y="226" width="448" height="72" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="0.5"/>
+  <text x="26" y="244" font-family="sans-serif" font-size="9" fill="#888">Steve Westly (SpaceX 이사회 멤버)</text>
+  <text x="26" y="261" font-family="sans-serif" font-size="11" fill="#f0f0f0" font-weight="700">"SpaceX는 3가지 문샷이 하나로 합쳐진 기업"</text>
+  <text x="26" y="278" font-family="sans-serif" font-size="10" fill="#aaa">"최소 2개 이상의 핵심 사업이 성공하면 장기 $5,000+/주 달성 가능"</text>
+  <text x="26" y="292" font-family="sans-serif" font-size="9" fill="#aaa">"IPO 밸류에이션 $135B+ 충분히 납득 가능. 현재 주가 단기 $90~95 적정"</text>
+
+  <!-- Return target -->
+  <rect x="16" y="308" width="448" height="60" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="326" font-family="sans-serif" font-size="10" font-weight="700" fill="#c084fc">주가 목표 시나리오</text>
+  <text x="26" y="344" font-family="sans-serif" font-size="10" fill="#f0f0f0">단기: $90~95 (현재 거래 수준)</text>
+  <text x="180" y="344" font-family="sans-serif" font-size="10" fill="#f0f0f0">|  중기: $135+ (IPO 공모가 수준)</text>
+  <text x="26" y="361" font-family="sans-serif" font-size="10" fill="#f0f0f0">장기 강세론: $1,000~$1,800</text>
+  <text x="200" y="361" font-family="sans-serif" font-size="10" fill="#c084fc" font-weight="700">|  Westly 목표: $5,000+</text>
+
+  <!-- Condition -->
+  <rect x="16" y="378" width="448" height="42" rx="10" fill="#100f1a" stroke="#c084fc" stroke-width="0.5"/>
+  <text x="26" y="394" font-family="sans-serif" font-size="9" fill="#888">$5,000+ 달성 조건: Starlink 수익 유지 + 로켓 시장점유율 + AI 인프라 수익 — 3가지 중 2가지 이상 성공</text>
+  <text x="26" y="410" font-family="sans-serif" font-size="9" fill="#888">현재 3가지 모두 순항 중 → "3 moonshots in one" 테제 유효</text>
+
+  <text x="240" y="432" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>

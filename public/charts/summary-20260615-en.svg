@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580">
+  <rect width="480" height="580" fill="#0d0d0d"/>
+  <!-- Header -->
+  <rect x="16" y="12" width="448" height="44" rx="10" fill="#1a1a1f"/>
+  <text x="240" y="29" font-family="sans-serif" font-size="11" font-weight="700" fill="#888" text-anchor="middle" letter-spacing="2">📋 6/15 MARKET SNAPSHOT</text>
+  <text x="240" y="49" font-family="sans-serif" font-size="13" font-weight="800" fill="#f0f0f0" text-anchor="middle">Anthropic Banned · SPCX · TSLA · MU · NVDA</text>
+
+  <!-- Card 1: Anthropic Fable5 ban (RED - biggest news) -->
+  <rect x="16" y="66" width="448" height="72" rx="10" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="16" y="66" width="4" height="72" rx="2" fill="#ef4444"/>
+  <text x="32" y="84" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef4444">🚨 ANTHROPIC SPECIAL · US Gov Blocks Foreign Access</text>
+  <text x="32" y="100" font-family="sans-serif" font-size="11" fill="#f0f0f0">Claude Fable 5 Shut Down Worldwide — Export Control Order 6/12</text>
+  <text x="32" y="116" font-family="sans-serif" font-size="10" fill="#aaa">Claude Mythos: found 27-yr OpenBSD bug · Only 40 firms (NSA, Amazon, MS) have access</text>
+  <text x="432" y="107" font-family="sans-serif" font-size="18" fill="#ef4444" font-weight="900">⛔</text>
+
+  <!-- Card 2: SPCX -->
+  <rect x="16" y="148" width="220" height="90" rx="10" fill="#1a1024" stroke="#c084fc" stroke-width="1"/>
+  <text x="26" y="165" font-family="sans-serif" font-size="10" font-weight="700" fill="#c084fc">🚀 SPCX  $90.95  +1.52%</text>
+  <text x="26" y="182" font-family="sans-serif" font-size="10" fill="#f0f0f0">Ellison $1B → $2.7B (+170%)</text>
+  <text x="26" y="197" font-family="sans-serif" font-size="10" fill="#f0f0f0">Daily revenue crosses $1.88B</text>
+  <text x="26" y="212" font-family="sans-serif" font-size="9" fill="#aaa">Westly "3 moonshots" · $5,000+ target</text>
+  <text x="26" y="227" font-family="sans-serif" font-size="9" fill="#aaa">JPM confirms largest IPO ever at $75B</text>
+
+  <!-- Card 3: TSLA -->
+  <rect x="244" y="148" width="220" height="90" rx="10" fill="#0a1a14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="254" y="165" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">🚗 TSLA  AV Infrastructure Surge</text>
+  <text x="254" y="182" font-family="sans-serif" font-size="10" fill="#f0f0f0">Las Vegas AV permit filed</text>
+  <text x="254" y="197" font-family="sans-serif" font-size="10" fill="#f0f0f0">FSD v14.3.3 "De Facto Robotaxi"</text>
+  <text x="254" y="212" font-family="sans-serif" font-size="9" fill="#aaa">Forbes 6/14 headline</text>
+  <text x="254" y="227" font-family="sans-serif" font-size="9" fill="#aaa">Cybertruck autonomous infra spotted</text>
+
+  <!-- Card 4: TSLA Optimus -->
+  <rect x="16" y="248" width="220" height="72" rx="10" fill="#0a1a14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="26" y="266" font-family="sans-serif" font-size="10" font-weight="700" fill="#00e5a0">🤖 TSLA Optimus Valuation</text>
+  <text x="26" y="283" font-family="sans-serif" font-size="12" font-weight="800" fill="#f0f0f0">$5T → $25T</text>
+  <text x="26" y="300" font-family="sans-serif" font-size="9" fill="#aaa">Musk: Robotaxi will redesign human economy</text>
+  <text x="26" y="315" font-family="sans-serif" font-size="9" fill="#aaa">Physical labor = final bottleneck of AI economy</text>
+
+  <!-- Card 5: MU Memory Trio -->
+  <rect x="244" y="248" width="220" height="72" rx="10" fill="#0f110a" stroke="#fb923c" stroke-width="1"/>
+  <text x="254" y="266" font-family="sans-serif" font-size="10" font-weight="700" fill="#fb923c">🧠 MU  Memory Trio Overtakes</text>
+  <text x="254" y="283" font-family="sans-serif" font-size="10" fill="#f0f0f0">$707B  vs  $661B (Mag 6)</text>
+  <text x="254" y="299" font-family="sans-serif" font-size="9" fill="#aaa">Samsung + SK Hynix + Micron</text>
+  <text x="254" y="315" font-family="sans-serif" font-size="9" fill="#aaa">2027 Op. Profit exceeds Big 6 combined</text>
+
+  <!-- Card 6: NVDA P/E -->
+  <rect x="16" y="330" width="448" height="66" rx="10" fill="#0a0f1a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="26" y="348" font-family="sans-serif" font-size="10" font-weight="700" fill="#60a5fa">🔵 NVDA  Forward P/E Near Historic Low</text>
+  <!-- PER bar -->
+  <rect x="26" y="358" width="328" height="12" rx="4" fill="#1a1f2a"/>
+  <rect x="26" y="358" width="300" height="12" rx="4" fill="#60a5fa" opacity="0.3"/>
+  <rect x="26" y="358" width="25" height="12" rx="2" fill="#ef4444" opacity="0.8"/>
+  <text x="30" y="368" font-family="sans-serif" font-size="8" fill="#fff">Historic low: 18.43x</text>
+  <text x="360" y="368" font-family="sans-serif" font-size="9" fill="#60a5fa" font-weight="700">Now 20.65x</text>
+  <text x="26" y="388" font-family="sans-serif" font-size="9" fill="#aaa">AI growth peaking yet valuation near floor — undervalued signal</text>
+
+  <!-- Memory detail bar chart -->
+  <rect x="16" y="406" width="448" height="84" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="422" font-family="sans-serif" font-size="9" font-weight="700" fill="#fb923c">2027 Operating Profit Forecast (B USD)</text>
+  <!-- MU -->
+  <rect x="26" y="430" width="133" height="14" rx="3" fill="#fb923c" opacity="0.7"/>
+  <text x="165" y="441" font-family="sans-serif" font-size="9" fill="#f0f0f0">Micron $133B</text>
+  <!-- SK Hynix -->
+  <rect x="26" y="449" width="243" height="14" rx="3" fill="#fb923c" opacity="0.5"/>
+  <text x="275" y="460" font-family="sans-serif" font-size="9" fill="#f0f0f0">SK Hynix $243B</text>
+  <!-- Samsung -->
+  <rect x="26" y="468" width="331" height="14" rx="3" fill="#fb923c" opacity="0.9"/>
+  <text x="363" y="479" font-family="sans-serif" font-size="9" fill="#f0f0f0">Samsung $331B</text>
+
+  <!-- Iran + footer -->
+  <rect x="16" y="500" width="448" height="40" rx="10" fill="#1a1a1f"/>
+  <text x="26" y="515" font-family="sans-serif" font-size="10" font-weight="700" fill="#f0f0f0">🕊️ US-Iran Nuclear Deal — Oil price pressure · Defense stocks short-term weakness</text>
+  <text x="26" y="531" font-family="sans-serif" font-size="9" fill="#888">Enrichment cap · phased sanctions relief · snapback clause · Strait of Hormuz reopening</text>
+
+  <text x="240" y="568" font-family="sans-serif" font-size="9" fill="#444" text-anchor="middle">investus.kr · 2026.06.15</text>
+</svg>
