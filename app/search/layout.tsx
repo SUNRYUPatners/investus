@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://investus.kr/search" },
+  alternates: { canonical: "https://www.investus.kr/search" },
 };
 
 export default function SearchLayout({ children }: { children: React.ReactNode }) {

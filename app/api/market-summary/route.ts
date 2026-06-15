@@ -40,7 +40,7 @@ type FutureData = { symbol: string; name: string; changePercent: number; group: 
 
 async function fetchSectors(): Promise<SectorData[]> {
   try {
-    const base = process.env.NEXT_PUBLIC_APP_URL ?? "https://investus.kr";
+    const base = process.env.NEXT_PUBLIC_APP_URL ?? "https://www.investus.kr";
     const res  = await fetch(`${base}/api/sp500-prices`, { signal: AbortSignal.timeout(8000) });
     if (!res.ok) return [];
     const d = await res.json() as { sectors?: { key: string; name: string; stocks: { changePercent: number | null }[] }[] };
@@ -56,7 +56,7 @@ async function fetchSectors(): Promise<SectorData[]> {
 
 async function fetchFutures(): Promise<FutureData[]> {
   try {
-    const base = process.env.NEXT_PUBLIC_APP_URL ?? "https://investus.kr";
+    const base = process.env.NEXT_PUBLIC_APP_URL ?? "https://www.investus.kr";
     const res  = await fetch(`${base}/api/market-data`, { signal: AbortSignal.timeout(8000) });
     if (!res.ok) return [];
     const d = await res.json() as { futures?: { symbol: string; name: string; changePercent: number; group: string }[] };
