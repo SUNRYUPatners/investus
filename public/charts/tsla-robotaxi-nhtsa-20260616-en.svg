@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs><linearGradient id="bge6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f1923"/><stop offset="100%" stop-color="#0a1018"/></linearGradient></defs>
+  <rect width="600" height="440" fill="url(#bge6)" rx="16"/>
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#00e5a0" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+  <text x="600" y="36" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#475569">NHTSA Report</text>
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#f1f5f9">Robotaxi NHTSA Latest Report</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#00e5a0">1 New Incident in April — Tesla Not at Fault</text>
+  <rect x="40" y="114" width="520" height="1" fill="#1e3a2f" opacity="0.8"/>
+  <rect x="40" y="126" width="246" height="100" rx="12" fill="#0d1a26" opacity="0.9"/>
+  <text x="163" y="158" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">New April Incident</text>
+  <text x="163" y="195" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="900" fill="#00e5a0">1</text>
+  <text x="163" y="216" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">incident (Tesla NOT at fault)</text>
+  <rect x="314" y="126" width="246" height="100" rx="12" fill="#0d1a26" opacity="0.9"/>
+  <text x="437" y="158" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Cause</text>
+  <rect x="364" y="168" width="146" height="36" rx="8" fill="#00e5a0" opacity="0.15"/>
+  <rect x="364" y="168" width="146" height="36" rx="8" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.5"/>
+  <text x="437" y="192" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#00e5a0">Rear-Ended</text>
+  <text x="437" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Third-party at fault</text>
+  <text x="40" y="248" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">Incident Timeline</text>
+  <rect x="40" y="254" width="520" height="1" fill="#1e293b"/>
+  <rect x="40" y="262" width="8" height="8" rx="4" fill="#475569"/>
+  <text x="56" y="272" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">March 2026  2 rear-end incidents while stopped (prior report)</text>
+  <text x="56" y="288" font-family="Arial,sans-serif" font-size="11" fill="#475569">→ Both by other vehicles — Tesla stationary &amp; not at fault</text>
+  <rect x="40" y="302" width="8" height="8" rx="4" fill="#00e5a0"/>
+  <text x="56" y="312" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">April 2026  1 rear-end incident while stopped (new report)</text>
+  <text x="56" y="328" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">→ Pickup truck rear-ended Robotaxi — Tesla not at fault</text>
+  <rect x="40" y="350" width="520" height="52" rx="10" fill="#1e2d1e" opacity="0.8"/>
+  <text x="300" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">All 3 Incidents: Third-Party Fault — Robotaxi Not Responsible</text>
+  <text x="300" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">NHTSA transparency reporting: all incidents disclosed proactively</text>
+  <text x="300" y="425" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: NHTSA AV Incident Reporting</text>
+</svg>

@@ -27,12 +27,13 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T15J = _now;                        // 오늘(6/15) 포스트
-const T13J = _now - 48 * 3600_000;       // 6/13
-const T12J = _now - 72 * 3600_000;       // 6/12
-const T11J = _now - 96 * 3600_000;       // 6/11
-const T10J = _now - 120 * 3600_000;      // 6/10
-export const LATEST_UPDATE = T15J;       // NEW 배지 기준
+const T16J = _now;                        // 오늘(6/16) 포스트
+const T15J = _now - 24 * 3600_000;       // 6/15
+const T13J = _now - 72 * 3600_000;       // 6/13
+const T12J = _now - 96 * 3600_000;       // 6/12
+const T11J = _now - 120 * 3600_000;      // 6/11
+const T10J = _now - 144 * 3600_000;      // 6/10
+export const LATEST_UPDATE = T16J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -51,6 +52,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-16 — TSLA Cybercab EPA인증+스펙·Cybertruck·모델Y 일본 1위 /
+  //              NVDA $210B순이익전망·Google TPU→삼성→TSMC / AMD Q1 +38% /
+  //              MRVL BAM→MEXT인수 / SPCX IPO $85.7B·AI $15B·IR·쿠바 63%
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — 6/16 업데이트 ──────────────────────────────────────────────────
+  { id: 234, symbol: "TSLA", nickname: "익명_5937", holdingLabel: "120주 보유",
+    content: "Cybercab EPA 인증 + 스펙 공개 두 가지가 같은 날 나왔어요. FWD·65kWh·3.99s·416mi면 65kWh 소형 배터리로 416마일이라는 게 역사상 없던 효율이에요. 165Wh/mile이면 마일당 에너지 비용이 $0.02예요. 하루 400마일 뛰면 에너지 $8, 거기다 인건비 0이면 로보택시 한 대 하루 수익이 $100~200은 될 것 같아요. EPA 인증 난 이상 NHTSA랑 도시 허가만 남은 거고 올해 안에 오스틴 유료 서비스 보는 거 아닌가요.",
+    createdAt: T16J - 14*60_000, likes: 328, comments: 4 },
+  { id: 235, symbol: "TSLA", nickname: "익명_8291", holdingLabel: "85주 보유",
+    content: "기가텍사스 Cybertruck 150대 목격이랑 기가상하이 5월 생산량 2025 전체 최고치 갱신이 같은 날 나왔어요. 모델Y 중국산이 일본 수입차 1위까지. 오늘 테슬라 생산·판매 소식이 다 좋은 거잖아요. Cybertruck 150대는 ASP $80K 이상이라서 한 배치에 $12M+ 매출이에요. 기가상하이 생산 최고치면 Q2 인도 가이던스 상향 가능성이 있고요. 오늘 수치들 다 연결해서 보면 Q2가 진짜 강할 것 같아요.",
+    createdAt: T16J - 28*60_000, likes: 264, comments: 3 },
+
+  // NVDA — 6/16 업데이트 ──────────────────────────────────────────────────
+  { id: 236, symbol: "NVDA", nickname: "익명_4738", holdingLabel: "55주 보유",
+    content: "2025 $58B에서 2029 $210B이면 4년 만에 3.6배예요. CAGR 38%인데 이게 AI 인프라 수요 사이클이 계속된다는 전제하에 가능한 거잖아요. 현재 PER 20x가 S&P500 24x보다 낮다는 거 다시 생각해보면 2029 $210B 기준으로 현재 시총 역산해도 여전히 업사이드가 나오는 구조예요. Google이 TPU를 TSMC로 이전하는 것도 사실 NVDA한텐 좋은 게 아니지만 CUDA 생태계 전환 비용이 너무 커서 빅테크가 당장 NVDA 줄이긴 어렵죠.",
+    createdAt: T16J - 19*60_000, likes: 213, comments: 3 },
+  { id: 237, symbol: "NVDA", nickname: "익명_6284", holdingLabel: "30주 보유",
+    content: "Google 10세대 TPU를 삼성에서 TSMC로 바꿨다는 게 삼성 파운드리 입장에서 타격이에요. TSMC가 이미 NVIDIA GPU·Apple·AMD 다 소화하는데 Google TPU까지 받으면 용량 경쟁이 심해질 수 있어요. NVDA 납기에 영향 줄 가능성은 낮지만 장기적으로 빅테크가 커스텀 칩 강화하는 게 NVDA한테 좋은 방향은 아닌 거죠. 그래도 지금 당장 범용 GPU 대체할 솔루션이 없으니까 2029까지는 NVDA 독주가 맞는 것 같아요.",
+    createdAt: T16J - 36*60_000, likes: 178, comments: 3 },
+
+  // AMD — 6/16 업데이트 ───────────────────────────────────────────────────
+  { id: 238, symbol: "AMD", nickname: "익명_3849", holdingLabel: "관심종목",
+    content: "AMD Q1 데이터센터 $5.8B(+57%)가 진짜 충격이에요. 불과 1년 전만 해도 AMD DC가 $3B대였는데 이제 분기 $5.8B이라는 게 NVIDIA 독점 구도에 진짜 균열이 생기고 있는 거잖아요. 순이익 +94%라는 레버리지가 나오는 것도 매출이 고마진 DC 위주로 바뀌면서 나오는 거고요. MI300 수요가 Microsoft·Meta·OpenAI까지 가면 MI350 나올 때는 $8B+ DC 분기 가능성이 있어요.",
+    createdAt: T16J - 22*60_000, likes: 284, comments: 4 },
+  { id: 239, symbol: "AMD", nickname: "익명_7183", holdingLabel: "관심종목",
+    content: "매출 $10.3B이 예상 대비 상회라는 게 중요해요. 어닝 서프라이즈가 컨센서스 조정으로 이어지고 그게 주가 재레이팅으로 가는 거잖아요. 게이밍 -30%는 콘솔 사이클이라서 구조적 문제가 아니고 클라이언트 +23%는 PC 회복이랑 맞물린 거예요. DC +57%가 전체 실적 끌어올리는 구조가 확립된 거라면 분기마다 NVDA 대안 포지션이 강화되는 거죠. NVDA 없이 AMD로 AI 익스포져 갖는 투자자들이 늘어날 것 같아요.",
+    createdAt: T16J - 42*60_000, likes: 196, comments: 3 },
+
+  // MRVL — 6/16 업데이트 ─────────────────────────────────────────────────
+  { id: 240, symbol: "MRVL", nickname: "익명_5291", holdingLabel: "관심종목",
+    content: "MEXT 기술이 진짜면 게임체인저예요. HBM 스택 하나가 $3,000~5,000인데 플래시로 동급 성능 낸다면 데이터센터 메모리 비용이 80~90% 줄어드는 거잖아요. BAM이 Missouri DC에 수십억 투자한다고 같은 날 발표한 게 MEXT 기술 직접 적용하는 게 계획이라는 거예요. Marvell 스토리지 컨트롤러랑 MEXT 기술 결합하면 시너지가 진짜 크겠어요. 이게 상용화되면 HBM 공급사들한테 장기 위협이 될 수 있어요.",
+    createdAt: T16J - 17*60_000, likes: 241, comments: 3 },
+  { id: 241, symbol: "MRVL", nickname: "익명_9374", holdingLabel: "관심종목",
+    content: "BAM이 AI 메모리 스타트업 인수하고 AI DC 수십억 투자를 같은 날 발표한 게 수직 통합 전략이에요. 기술 확보 → 인프라 직접 적용 → 비용 절감 → 경쟁 우위. Marvell ASIC이 커스텀 칩 설계에서 강하고 스토리지 컨트롤러도 있으니까 MEXT와 결합하면 완전한 AI 메모리 솔루션이 나올 수 있어요. 삼성·SK하이닉스 HBM 사업에 장기 리스크가 될 수 있는 기술이라서 메모리 주식들도 같이 봐야 할 것 같아요.",
+    createdAt: T16J - 31*60_000, likes: 187, comments: 3 },
+
+  // SPCX — 6/16 업데이트 ─────────────────────────────────────────────────
+  { id: 242, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
+    content: "IPO $85.7B 확정이 역대 최대 기록인데 주가 $179.02면 IPO일 종가 $172.68에서 +3.7%예요. 기관들이 IPO 직후에도 계속 사들이고 있다는 거잖아요. Ron Baron이 $15B/yr AI 지출 공개하고 SpaceX IR 웹사이트도 같은 날 오픈한 게 IPO 이후 투자자 소통 체계를 갖추기 시작했다는 신호예요. Starlink 군사 통신이 쿠바 시나리오에서 수혜받는 스토리까지 나오면서 오늘 SPCX 모멘텀이 진짜 강하네요.",
+    createdAt: T16J - 11*60_000, likes: 312, comments: 4 },
+  { id: 243, symbol: "SPCX", nickname: "익명_6193", holdingLabel: "관심종목",
+    content: "쿠바 Polymarket 63%(+23pp)가 단순 예측 시장 수치가 아니라 $6M 거래된 것이어서 어느 정도 신뢰성이 있어요. 군사 행동이 현실화되면 Starlink 군사 통신이 즉시 투입되는 게 우크라이나 선례가 있고요. AI $15B/yr 지출이 연간 매출의 80% 재투자하는 공격적 구조라는 것도 Colossus 1·2·3 규모를 보면 이해가 돼요. IR 웹사이트 오픈으로 기관 투자자 접근성 높아지면 다음 분기 실적 발표 때부터 진짜 증권사 커버리지가 시작되는 거죠.",
+    createdAt: T16J - 25*60_000, likes: 258, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-15 — Anthropic Fable5 수출통제 차단 / SPCX $90.95 / TSLA AV /
@@ -1000,6 +1047,61 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-16 신규 ──────────────────────────────────────────────────────
+  234: [
+    { id: 1, nickname: "익명_8293", holdingLabel: "100주 보유", content: "EPA 인증은 판매 합법화 관문이에요. 이제 NHTSA 안전 기준이랑 도시별 허가만 남은 거고 오스틴은 이미 준비가 되어 있는 거잖아요. 2026년 하반기 유료 서비스 현실적으로 보여요.", createdAt: T16J - m(12), likes: 89 },
+    { id: 2, nickname: "익명_5192", holdingLabel: "50주 보유", content: "마일당 $0.02 에너지 비용이면 Uber Lyft 기사 수수료 $0.30~0.50 대비 완전히 다른 원가 구조예요. 로보택시가 수익화되면 Tesla 전체 밸류에이션 재평가가 시작되는 거죠.", createdAt: T16J - m(7), likes: 71 },
+    { id: 3, nickname: "익명_7394", holdingLabel: "200주 보유", content: "416마일 주행거리가 로보택시 운영에서 중요한 이유는 충전 횟수를 줄여서 가동률을 높이는 거예요. 하루 16시간 운행 중 충전 1회면 수익성 구조가 완전히 다르죠.", createdAt: T16J - m(3), likes: 58 },
+    { id: 4, nickname: "익명_3847", holdingLabel: "80주 보유", content: "FWD 단순 구동계가 제조 원가 절감에도 좋고 유지보수 비용도 낮아요. 로보택시는 총소유비용(TCO)이 핵심인데 Cybercab이 모든 지표에서 최적화된 것 같아요.", createdAt: T16J + m(1), likes: 44 },
+  ],
+  235: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "60주 보유", content: "Cybertruck 150대 한 배치가 $12M+인데 이게 주간 단위로 나오면 분기 매출 기여가 진짜 커지는 거예요. 고마진 모델 비중이 올라가면서 Tesla 마진 구조가 바뀌는 시점이에요.", createdAt: T16J - m(26), likes: 74 },
+    { id: 2, nickname: "익명_9183", holdingLabel: "40주 보유", content: "기가상하이 생산 최고치 + 모델Y 일본 1위 + Cybertruck 150대가 같은 날 나오는 게 우연이 아니에요. Q2 실적 발표 때 서프라이즈 나올 것 같아요.", createdAt: T16J - m(15), likes: 59 },
+    { id: 3, nickname: "익명_6291", holdingLabel: "30주 보유", content: "일본은 브랜드 충성도가 세계 최고인 시장이에요. 거기서 수입차 1위 했다는 게 Tesla 글로벌 브랜드 파워가 진짜라는 증거죠. EU 다음 아시아 점유율도 올라오는 거 보이네요.", createdAt: T16J - m(6), likes: 47 },
+  ],
+  236: [
+    { id: 1, nickname: "익명_3748", holdingLabel: "40주 보유", content: "2029 $210B이면 현재 주가 기준 PER 역산해봐도 업사이드가 나와요. AI 인프라 수요가 2025~2029 지속된다는 가정이 깨지지 않는 한 이 성장 경로는 유효한 거죠.", createdAt: T16J - m(17), likes: 67 },
+    { id: 2, nickname: "익명_5847", holdingLabel: "25주 보유", content: "CUDA 생태계 전환 비용이 너무 커서 Google이 TPU 강화해도 당장 NVIDIA 수요 줄이기 어려워요. 오히려 TPU 성능 개선되면 AI 전체 파이가 커지고 그게 NVDA 수요로도 이어지죠.", createdAt: T16J - m(9), likes: 52 },
+    { id: 3, nickname: "익명_2938", holdingLabel: "10주 보유", content: "$58B→$210B이 4년 CAGR 38%인데 S&P500 연 10%와 비교하면 프리미엄이 정당화돼요. 성장 둔화 리스크가 있어도 현재 PER 20x는 AI 성장 감안하면 싸다는 논리에 동의해요.", createdAt: T16J - m(3), likes: 38 },
+  ],
+  237: [
+    { id: 1, nickname: "익명_7382", holdingLabel: "20주 보유", content: "삼성 파운드리 수율 문제가 결국 Google TPU도 TSMC로 이탈시킨 거예요. 삼성 입장에서는 큰 타격인데 TSMC 독점이 더 강해지는 구조가 되는 거죠.", createdAt: T16J - m(34), likes: 56 },
+    { id: 2, nickname: "익명_9473", holdingLabel: "15주 보유", content: "커스텀 ASIC 트렌드가 강화될수록 NVIDIA 장기 시장 점유율은 조금씩 압박받는 게 맞아요. 그래도 2029까지는 CUDA 생태계 덕분에 독주 유지할 것 같고요.", createdAt: T16J - m(18), likes: 43 },
+    { id: 3, nickname: "익명_4719", holdingLabel: "35주 보유", content: "결국 TSMC만 이익이에요. NVIDIA GPU + Google TPU + Apple M4 + AMD 다 TSMC 고객이면 파운드리 독점 프리미엄이 계속 올라가는 거죠.", createdAt: T16J - m(7), likes: 35 },
+  ],
+  238: [
+    { id: 1, nickname: "익명_6384", holdingLabel: "관심종목", content: "DC +57%가 NVIDIA MI 시리즈 수요 덕분인데 빅테크들이 NVIDIA 독점 리스크 헤지로 AMD를 일부러 사주는 전략이 있는 거예요. MS·Meta·OpenAI가 AMD 쓰는 거 그런 맥락이죠.", createdAt: T16J - m(20), likes: 78 },
+    { id: 2, nickname: "익명_3847", holdingLabel: "관심종목", content: "순이익 +94%가 레버리지 단계에 들어갔다는 신호예요. 매출 증가분이 거의 다 이익으로 떨어지는 구간인데 이게 계속되면 EPS 재평가가 빠르게 오겠죠.", createdAt: T16J - m(11), likes: 62 },
+    { id: 3, nickname: "익명_8293", holdingLabel: "관심종목", content: "게이밍 -30%는 구조적 문제가 아니라 콘솔 사이클이에요. PS6·다음 세대 Xbox 나오면 반등하는 거라서 AMD 전체 실적 훼손이 아닌 거죠.", createdAt: T16J - m(5), likes: 49 },
+    { id: 4, nickname: "익명_5193", holdingLabel: "관심종목", content: "MI350 나오면 분기 DC 매출이 $8B 넘는 거 가능해요. NVIDIA 독점 시대에서 NVDA+AMD 이중 체제로 가는 게 빅테크 입장에서 원하는 그림이고 AMD가 그 수혜를 보는 거죠.", createdAt: T16J + m(1), likes: 37 },
+  ],
+  239: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "관심종목", content: "어닝 서프라이즈 → 컨센서스 조정 → 주가 재레이팅이 가장 전통적인 성장주 사이클이에요. AMD가 그 사이클을 타기 시작한 거면 지금 진입이 늦지 않았을 수 있어요.", createdAt: T16J - m(40), likes: 65 },
+    { id: 2, nickname: "익명_2847", holdingLabel: "관심종목", content: "NVDA 없이 AI 익스포져 갖는 방법으로 AMD가 점점 매력적이에요. PER도 NVDA 대비 낮고 성장 모멘텀은 비슷하게 가고 있으니까요.", createdAt: T16J - m(22), likes: 52 },
+    { id: 3, nickname: "익명_7193", holdingLabel: "관심종목", content: "클라이언트 +23%는 PC 사이클 회복 신호예요. AMD CPU가 인텔 대비 시장 점유율 계속 올라가는 중이라서 이쪽 성장도 무시할 수 없어요.", createdAt: T16J - m(10), likes: 41 },
+  ],
+  240: [
+    { id: 1, nickname: "익명_8374", holdingLabel: "관심종목", content: "HBM 스택 $3,000~5,000짜리를 플래시로 대체하면 데이터센터 메모리 원가가 혁명적으로 줄어드는 거예요. 이게 상용화되면 Marvell이 AI 메모리 인프라의 핵심이 되는 거죠.", createdAt: T16J - m(15), likes: 71 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "BAM Missouri DC 투자랑 MEXT 인수가 같은 날인 게 우연이 아니에요. MEXT 기술을 그 DC에 직접 적용하는 게 계획인 거죠. 자사 인프라로 검증되면 외부 판매로 가는 게 전형적인 패턴이에요.", createdAt: T16J - m(8), likes: 56 },
+    { id: 3, nickname: "익명_3849", holdingLabel: "관심종목", content: "삼성·SK HBM 사업에 장기 위협이에요. 아직 상용화 전이지만 기술이 검증되면 HBM 수요 성장 스토리에 의문부호가 붙는 거죠. MU 투자자들도 같이 봐야 할 것 같아요.", createdAt: T16J - m(2), likes: 44 },
+  ],
+  241: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "관심종목", content: "수직 통합 전략이 AI 인프라에서 가장 강력한 해자예요. 기술 확보 → 자체 적용 → 비용 절감 → 외부 판매 사이클이 성공하면 Marvell 비즈니스 모델 자체가 달라지는 거죠.", createdAt: T16J - m(29), likes: 59 },
+    { id: 2, nickname: "익명_7392", holdingLabel: "관심종목", content: "ASIC 설계 + 스토리지 컨트롤러 + MEXT 메모리 최적화 합치면 AI 추론 인프라 풀 스택 솔루션이에요. 데이터센터 고객 입장에서 원스톱으로 갈 수 있으면 수주 경쟁력이 완전히 달라지죠.", createdAt: T16J - m(15), likes: 47 },
+    { id: 3, nickname: "익명_9183", holdingLabel: "관심종목", content: "Missouri DC 수십억 투자는 작은 숫자가 아니에요. BAM이 AI 인프라에 진심이라는 거고 MEXT 기술이 실제로 작동한다는 확신이 있다는 거잖아요.", createdAt: T16J - m(6), likes: 36 },
+  ],
+  242: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "관심종목", content: "IPO 이후에도 $172→$179 올라가는 게 기관들이 IPO 직후 매집하는 패턴이에요. 대형 IPO는 상장 후 첫 3개월이 기관 포지션 구축 시기라서 주가 지지가 강하죠.", createdAt: T16J - m(9), likes: 87 },
+    { id: 2, nickname: "익명_3748", holdingLabel: "관심종목", content: "$15B/yr AI 지출이 매출의 80% 재투자인데 일반 기업이면 이익이 없는 구조예요. 근데 SpaceX는 Starlink 수익이 그걸 커버하면서 AI 역량도 쌓는 거라서 진짜 독특한 사업 모델이에요.", createdAt: T16J - m(5), likes: 69 },
+    { id: 3, nickname: "익명_6193", holdingLabel: "관심종목", content: "IR 웹사이트 오픈이 소소해 보이는데 기관 투자자 입장에서는 공식 커뮤니케이션 채널이 생긴 게 중요해요. 분기 실적 발표 시작되면 증권사 커버리지도 시작되는 거죠.", createdAt: T16J - m(1), likes: 52 },
+    { id: 4, nickname: "익명_8293", holdingLabel: "관심종목", content: "$85.7B = 사우디 아람코 3배가 그냥 기록 수치가 아니라 전통 에너지 패권에서 우주·AI 패권으로 자본이 이동하는 시대적 전환점이에요. 역사책에 남을 숫자예요.", createdAt: T16J + m(2), likes: 43 },
+  ],
+  243: [
+    { id: 1, nickname: "익명_2938", holdingLabel: "관심종목", content: "Polymarket $6M 거래된 게 신뢰성 있는 편이에요. 63% → 군사행동 시 Starlink 즉시 투입이 우크라이나에서 이미 검증됐으니까 SPCX 군사 계약 모멘텀이 실제로 있는 거죠.", createdAt: T16J - m(23), likes: 74 },
+    { id: 2, nickname: "익명_5847", holdingLabel: "관심종목", content: "쿠바는 플로리다에서 150km라서 Starlink 위성 집중 배치가 기술적으로 쉬운 지역이에요. 카리브해 분쟁 시나리오에서 SpaceX 군사 통신 가장 빠르게 투입 가능한 회사가 맞는 거죠.", createdAt: T16J - m(13), likes: 58 },
+    { id: 3, nickname: "익명_4738", holdingLabel: "관심종목", content: "지정학 모멘텀이 단기 촉매인 건 맞는데 과신은 금물이에요. 63% 확률이 실현될 수도 있고 아닐 수도 있으니까 Polymarket 하나만 보고 포지션 잡으면 안 되는 거죠. 기업 펀더멘탈 기반으로 접근해야 해요.", createdAt: T16J - m(4), likes: 45 },
+  ],
+
   // ── 2026-06-15 신규 ──────────────────────────────────────────────────────
   224: [
     { id: 1, nickname: "익명_4829", holdingLabel: "관심종목", content: "수출통제령이라는 게 Anthropic이 자발적으로 막은 게 아니라 정부 명령이라는 거잖아요. 이게 AI 규제의 시작이라면 앞으로 다른 AI 모델들도 같은 제한 받을 수 있는 거예요.", createdAt: T15J - m(10), likes: 78 },

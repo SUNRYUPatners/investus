@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bgsum16en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bgsum16en)" rx="16"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="26" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="#f1f5f9">6/16 Daily Market Summary</text>
+  <text x="300" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">TSLA · NVDA · AMD · MRVL · SPCX</text>
+
+  <!-- TSLA Section -->
+  <rect x="16" y="66" width="568" height="4" rx="2" fill="#00e5a0" opacity="0.5"/>
+  <rect x="16" y="70" width="46" height="20" rx="4" fill="#00e5a0" opacity="0.2"/>
+  <text x="39" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="70" y="85" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">150 Cybertrucks spotted · Cybercab EPA 416mi · Model Y Japan #1</text>
+
+  <rect x="22" y="96" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="107" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">150 Cybertrucks spotted at Giga Texas — production ramp confirmed</text>
+
+  <rect x="22" y="114" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="125" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Cybercab EPA CoC issued · Specs: FWD / 65kWh / 3.99s / 416mi EPA</text>
+
+  <rect x="22" y="132" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="143" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Model Y (made in China) #1 imported vehicle in Japan — May 2026</text>
+
+  <rect x="22" y="150" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="161" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Robotaxi NHTSA: 1 new incident (Apr) — Tesla not at fault</text>
+
+  <!-- Divider -->
+  <line x1="16" y1="178" x2="584" y2="178" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- NVDA Section -->
+  <rect x="16" y="186" width="568" height="4" rx="2" fill="#60a5fa" opacity="0.5"/>
+  <rect x="16" y="190" width="46" height="20" rx="4" fill="#60a5fa" opacity="0.2"/>
+  <text x="39" y="205" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">NVDA</text>
+  <text x="70" y="205" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Net income $210B forecast · Google TPU moves to Samsung</text>
+
+  <rect x="22" y="214" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="225" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Net income $58B(2025) → $210B(2029) — +262% over 4 years</text>
+
+  <rect x="22" y="232" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="243" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Google 10th-gen TPU: Samsung fab → TSMC full transfer</text>
+
+  <!-- Divider -->
+  <line x1="16" y1="258" x2="584" y2="258" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- AMD Section -->
+  <rect x="16" y="266" width="568" height="4" rx="2" fill="#f87171" opacity="0.5"/>
+  <rect x="16" y="270" width="46" height="20" rx="4" fill="#f87171" opacity="0.2"/>
+  <text x="39" y="285" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f87171">AMD</text>
+  <text x="70" y="285" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Q1 2026: Revenue $10.3B +38% · Data Center $5.8B +57%</text>
+
+  <rect x="22" y="294" width="3" height="14" rx="1" fill="#f87171"/>
+  <text x="30" y="305" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Revenue $10.3B +38% · Net Income $1.4B +94% YoY</text>
+
+  <rect x="22" y="312" width="3" height="14" rx="1" fill="#f87171"/>
+  <text x="30" y="323" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Data Center $5.8B +57% — MI300X surge · 56% of revenue</text>
+
+  <!-- Divider -->
+  <line x1="16" y1="338" x2="584" y2="338" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- MRVL Section -->
+  <rect x="16" y="346" width="568" height="4" rx="2" fill="#a78bfa" opacity="0.5"/>
+  <rect x="16" y="350" width="46" height="20" rx="4" fill="#a78bfa" opacity="0.2"/>
+  <text x="39" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#a78bfa">MRVL</text>
+  <text x="70" y="365" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">BAM acquires MEXT — AI memory optimization startup</text>
+
+  <rect x="22" y="374" width="3" height="14" rx="1" fill="#a78bfa"/>
+  <text x="30" y="385" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">MEXT: Flash storage at DRAM-level speed — AI memory bottleneck solved</text>
+
+  <!-- Divider -->
+  <line x1="16" y1="400" x2="584" y2="400" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- SPCX Section -->
+  <rect x="16" y="408" width="568" height="4" rx="2" fill="#c084fc" opacity="0.5"/>
+  <rect x="16" y="412" width="46" height="20" rx="4" fill="#c084fc" opacity="0.2"/>
+  <text x="39" y="427" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#c084fc">SPCX</text>
+  <text x="70" y="427" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$179.02 | IPO $85.7B confirmed · AI spend $15B/yr · Cuba 63%</text>
+
+  <rect x="22" y="436" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="447" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">SpaceX IPO total raise $85.7B — largest IPO in history confirmed</text>
+
+  <rect x="22" y="454" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="465" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Ron Baron: Musk AI compute spend $15B/yr · $1.25B/month</text>
+
+  <rect x="22" y="472" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="483" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">SpaceX IR website launched · Polymarket Cuba military 63%</text>
+
+  <!-- Footer -->
+  <rect x="0" y="558" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="558" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="584" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — 2026.06.16 Daily Market Summary</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs><linearGradient id="bge13" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f1923"/><stop offset="100%" stop-color="#0a1018"/></linearGradient></defs>
+  <rect width="600" height="440" fill="url(#bge13)" rx="16"/>
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#c084fc" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#c084fc">SPCX</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#f1f5f9">SpaceX Launches Official</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#c084fc">Investor Relations Website</text>
+  <rect x="40" y="114" width="520" height="1" fill="#2a1a40" opacity="0.8"/>
+  <rect x="80" y="126" width="440" height="130" rx="10" fill="#0d1a26" opacity="0.9"/>
+  <rect x="80" y="126" width="440" height="130" rx="10" fill="none" stroke="#c084fc" stroke-width="1.5" opacity="0.4"/>
+  <rect x="80" y="126" width="440" height="28" rx="10" fill="#1e293b"/>
+  <rect x="80" y="140" width="440" height="14" fill="#1e293b"/>
+  <rect x="96" y="134" width="280" height="14" rx="4" fill="#334155"/>
+  <text x="236" y="145" font-family="Arial,sans-serif" font-size="9" fill="#64748b">space.com/InvestorUpdates</text>
+  <text x="300" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#c084fc">SpaceX Investor Relations</text>
+  <text x="300" y="202" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Sign up to receive investor updates</text>
+  <rect x="225" y="212" width="150" height="28" rx="6" fill="#c084fc" opacity="0.3"/>
+  <rect x="225" y="212" width="150" height="28" rx="6" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.6"/>
+  <text x="300" y="231" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#c084fc">Subscribe to Updates</text>
+  <text x="40" y="284" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">What This Means for Investors</text>
+  <rect x="40" y="290" width="520" height="1" fill="#1e293b"/>
+  <rect x="40" y="298" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="310" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Official post-IPO IR channel — institutional credibility boost</text>
+  <rect x="40" y="322" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="334" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Quarterly earnings · executive statements notified in real time</text>
+  <rect x="40" y="346" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="358" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Via Sawyer Merritt — all investor updates, subscribe now</text>
+  <rect x="40" y="370" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="382" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Governance structure maturing post-IPO — transparency signal</text>
+  <rect x="40" y="398" width="520" height="26" rx="6" fill="#1a1a2e" opacity="0.8"/>
+  <text x="300" y="416" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Sawyer Merritt: "sign up to get notified of all investor related updates"</text>
+</svg>

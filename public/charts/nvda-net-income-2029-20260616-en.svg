@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs><linearGradient id="bge7" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f1923"/><stop offset="100%" stop-color="#0a1018"/></linearGradient></defs>
+  <rect width="600" height="440" fill="url(#bge7)" rx="16"/>
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#60a5fa" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa">NVDA</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#f1f5f9">Net Income $58B (2025) →</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#60a5fa">$210B (2029) Forecast</text>
+  <rect x="40" y="114" width="520" height="1" fill="#1e293b" opacity="0.8"/>
+  <text x="40" y="138" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">NVDA Net Income Forecast ($B)</text>
+  <text x="38" y="160" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#475569">210</text>
+  <text x="38" y="226" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#475569">150</text>
+  <text x="38" y="292" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#475569">90</text>
+  <text x="38" y="330" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#475569">58</text>
+  <line x1="45" y1="157" x2="565" y2="157" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="45" y1="223" x2="565" y2="223" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="45" y1="289" x2="565" y2="289" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+  <rect x="65" y="283" width="72" height="50" rx="5" fill="#60a5fa" opacity="0.5"/>
+  <text x="101" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">$58B</text>
+  <text x="101" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#64748b">2025</text>
+  <rect x="163" y="254" width="72" height="79" rx="5" fill="#60a5fa" opacity="0.6"/>
+  <text x="199" y="249" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">~$90B</text>
+  <text x="199" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#64748b">2026E</text>
+  <rect x="261" y="216" width="72" height="117" rx="5" fill="#60a5fa" opacity="0.7"/>
+  <text x="297" y="211" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">~$130B</text>
+  <text x="297" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#64748b">2027E</text>
+  <rect x="359" y="176" width="72" height="157" rx="5" fill="#60a5fa" opacity="0.8"/>
+  <text x="395" y="171" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">~$170B</text>
+  <text x="395" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#64748b">2028E</text>
+  <rect x="457" y="157" width="72" height="176" rx="5" fill="#60a5fa" opacity="0.9"/>
+  <rect x="457" y="157" width="72" height="176" rx="5" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.8"/>
+  <text x="493" y="152" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="900" fill="#60a5fa">$210B</text>
+  <text x="493" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">2029E</text>
+  <line x1="45" y1="333" x2="565" y2="333" stroke="#334155" stroke-width="1.5"/>
+  <line x1="101" y1="270" x2="493" y2="160" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <rect x="40" y="362" width="520" height="46" rx="10" fill="#1e2a3a" opacity="0.8"/>
+  <text x="300" y="381" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa">+262% Growth Forecast 2025→2029</text>
+  <text x="300" y="399" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">AI datacenter 100x expansion driving growth</text>
+  <text x="300" y="428" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">Source: Investing Visuals | Consensus Estimate</text>
+</svg>

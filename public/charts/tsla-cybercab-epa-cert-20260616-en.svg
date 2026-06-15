@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs><linearGradient id="bge4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f1923"/><stop offset="100%" stop-color="#0a1018"/></linearGradient></defs>
+  <rect width="600" height="440" fill="url(#bge4)" rx="16"/>
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#00e5a0" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+  <text x="600" y="36" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#475569">Cybercab EPA</text>
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#f1f5f9">Cybercab EPA Certificate</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#00e5a0">of Conformity — 2026 Model Year</text>
+  <rect x="40" y="114" width="520" height="1" fill="#1e3a2f" opacity="0.8"/>
+  <rect x="130" y="128" width="340" height="130" rx="14" fill="#00e5a0" opacity="0.06"/>
+  <rect x="130" y="128" width="340" height="130" rx="14" fill="none" stroke="#00e5a0" stroke-width="1.5" opacity="0.4"/>
+  <path d="M300 144 L322 154 L322 178 Q322 196 300 204 Q278 196 278 178 L278 154 Z" fill="#00e5a0" opacity="0.2"/>
+  <path d="M300 144 L322 154 L322 178 Q322 196 300 204 Q278 196 278 178 L278 154 Z" fill="none" stroke="#00e5a0" stroke-width="1.5" opacity="0.7"/>
+  <text x="300" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="900" fill="#00e5a0">EPA</text>
+  <text x="300" y="224" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">Certificate of Conformity</text>
+  <text x="300" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#64748b">Clean Air Act (42 U.S.C. 7525)</text>
+  <text x="40" y="278" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">Certificate Details</text>
+  <rect x="40" y="284" width="520" height="1" fill="#1e293b"/>
+  <rect x="40" y="292" width="246" height="44" rx="6" fill="#0d1a26" opacity="0.8"/>
+  <text x="163" y="311" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Model Year</text>
+  <text x="163" y="328" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#00e5a0">2026</text>
+  <rect x="314" y="292" width="246" height="44" rx="6" fill="#0d1a26" opacity="0.8"/>
+  <text x="437" y="311" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Effective Date</text>
+  <text x="437" y="328" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#00e5a0">05/26/2026</text>
+  <rect x="40" y="344" width="246" height="44" rx="6" fill="#0d1a26" opacity="0.8"/>
+  <text x="163" y="363" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Vehicle Type</text>
+  <text x="163" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#00e5a0">Battery Electric</text>
+  <rect x="314" y="344" width="246" height="44" rx="6" fill="#0d1a26" opacity="0.8"/>
+  <text x="437" y="363" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Tailpipe Emissions</text>
+  <text x="437" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#00e5a0">Zero Emissions</text>
+  <text x="300" y="416" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#64748b">Cybercab legally approved for US commercial sales</text>
+</svg>

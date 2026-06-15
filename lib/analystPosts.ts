@@ -19,6 +19,62 @@ const _an = Date.now();
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-06-16 신규 ──────────────────────────────────────────────────────
+  {
+    id: -70,
+    alias: "여의도 매 #17",
+    symbol: "SPCX",
+    content:
+      "SPCX 6/16 종합 정리임. IPO $85.7B 역대 최대 확정 (아람코 $29.4B의 2.9배). 현재 $179.02 — IPO일 종가 $172.68 대비 +3.7%. 기관 매집 이어지는 중. Ron Baron CNBC: AI 컴퓨팅 지출 $15B/yr, $1.25B/month (Colossus 1·2·3). SpaceX IR 웹사이트 오픈 — 분기 실적 발표 체계 구축 시작. 쿠바 군사행동 Polymarket 63%(+23pp) — Starlink 군사 통신 수혜 시나리오. 오늘 SPCX 관련 촉매가 4개임. 모두 긍정적. $179 지지 후 $190+ 가는 논리 유효함.",
+    likes: 457,
+    comments: 4,
+    created_at: new Date(_an - 2 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -69,
+    alias: "판교 황소 #31",
+    symbol: "TSLA",
+    content:
+      "오늘 테슬라 4중 세트임. 1) Cybercab EPA CoC 발급 (5/26) — 미국 도로 판매 핵심 규제 관문 통과. 스펙: FWD·65kWh·3.99s·416mi EPA. 165Wh/mile 역사상 최고 EV 효율 궤도. 마일당 에너지 $0.02 = 로보택시 원가 혁명. 2) Cybertruck 150대 기가텍사스 목격 — 고마진 $80K+ 모델 램핑업 가속 확인. 3) 모델Y 중국산 일본 수입차 1위 (5월) — 홈 텃밭에서 수입차 1위. 4) 기가상하이 5월 생산량 2025 전체 최고치 경신 — Q2 인도 서프라이즈 가능성. NHTSA 사고 1건 추가됐지만 Tesla 과실 없음. 넷 다 긍정임.",
+    likes: 398,
+    comments: 4,
+    created_at: new Date(_an - 8 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -68,
+    alias: "강남 독수리 #52",
+    symbol: "NVDA",
+    content:
+      "NVDA 2029 순이익 $210B 전망 체크임. 2025 $58B → 2026E $85B → 2027E $120B → 2028E $165B → 2029E $210B. 4년 CAGR 38%. S&P500 24x PER 대비 현재 NVDA 20x로 저평가 상태 유지 중. 오늘 Google 10세대 TPU 삼성→TSMC 전환 이슈: 단기 TSMC 용량 경합 우려 있지만 CUDA 생태계 전환 비용 때문에 NVDA 수요 직접 영향 없음. 2029 $210B 시나리오 = 현재 시총 기준 P/E 20x 유지 시 목표 시총 $4.2T. 현재 대비 업사이드 확인됨.",
+    likes: 334,
+    comments: 3,
+    created_at: new Date(_an - 14 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -67,
+    alias: "서초 매 #64",
+    symbol: "AMD",
+    content:
+      "AMD Q1 2026 어닝 서프라이즈 정리임. 매출 $10.3B (+38% YoY) — 컨센서스 상회. DC $5.8B (+57%) — AMD 역사상 분기 DC 최고 매출. 클라이언트 $2.3B (+23%). 게이밍 $0.7B (-30%) — 콘솔 사이클, 구조적 문제 아님. 순이익 $1.4B (+94%) — 레버리지 구간 진입 확인. MI300 수요: MS·Meta·OpenAI 대형 수주 반영 중. 다음 MI350 나오면 분기 DC $8B+ 가능. NVDA 독점 균열 포인트: 빅테크들 공급 다변화 전략으로 AMD 의도적 육성 중. PER 재레이팅 구간 진입 논리 유효함.",
+    likes: 312,
+    comments: 3,
+    created_at: new Date(_an - 20 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -66,
+    alias: "여의도 독수리 #8",
+    symbol: "MRVL",
+    content:
+      "BAM → MEXT 인수 + Missouri AI DC 수십억 투자 동시 발표임. MEXT 기술: 플래시 스토리지를 DRAM급 성능으로 활용. AI 추론 메모리 병목 해소. HBM 스택 $3,000~5,000 대비 플래시 원가 혁신 = 데이터센터 TCO 혁명적 절감. Marvell 시너지: ASIC 설계 + 스토리지 컨트롤러 + MEXT 메모리 최적화 = AI 추론 인프라 풀 스택 솔루션. BAM DC 자체 적용 → 검증 후 외부 판매 경로. 삼성·SK하이닉스 HBM 장기 위협 시나리오. MRVL 밸류 체인 상 수혜가 가장 직접적임.",
+    likes: 276,
+    comments: 3,
+    created_at: new Date(_an - 27 * 60_000).toISOString(),
+    liked: false,
+  },
   // ── 2026-06-15 신규 ──────────────────────────────────────────────────────
   {
     id: -65,
@@ -724,6 +780,35 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-06-16 신규 ──────────────────────────────────────────────────────
+  [-70]: [
+    { alias: "판교 황소 #31", content: "$85.7B IPO가 아람코 $29.4B의 2.9배라는 게 단순 기록이 아님. 전통 에너지 패권에서 우주·AI 패권으로 자본이 이동하는 시대 전환점임. 역사책에 남을 수치.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+    { alias: "강남 독수리 #52", content: "Polymarket 63% 군사행동 시나리오가 Starlink 군사 통신 수혜임. 우크라이나 선례 있어서 실현 가능성 있는 시나리오임. 쿠바는 플로리다에서 150km라서 기술적으로 즉시 대응 가능.", created_at: new Date(_an - 40 * 1000).toISOString() },
+    { alias: "을지로 사자 #77", content: "IR 웹사이트 오픈이 기관 투자자 접근성 첫 단계임. 분기 실적 공시 → 증권사 커버리지 → 더 많은 기관 자금 유입 사이클이 이제 시작됨.", created_at: new Date(_an - 20 * 1000).toISOString() },
+    { alias: "서초 매 #64", content: "$15B/yr AI 지출이 매출 80% 재투자인데 Starlink 수익으로 커버되는 구조임. AI 역량 내재화 + 수익 창출 동시 달성 중. 다른 회사가 못 하는 구조임.", created_at: new Date(_an - 5 * 1000).toISOString() },
+  ],
+  [-69]: [
+    { alias: "강남 독수리 #52", content: "165Wh/mile이 역사상 최고 효율임. Model Y 250Wh/mile, 아이오닉5 200Wh/mile 대비 압도적임. 65kWh 배터리로 416mi는 물리적 한계에 가까운 수준.", created_at: new Date(_an - 7 * 60_000).toISOString() },
+    { alias: "여의도 매 #17", content: "Cybertruck 150대 배치 + 기가상하이 최고치 + 모델Y 일본 1위 세트가 Q2 서프라이즈 재료임. 실적 발표 전 미리 포지션 잡는 게 맞는 타이밍.", created_at: new Date(_an - 3 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Cybercab EPA 인증이 NHTSA → 도시 허가로 이어지는 규제 사다리 첫 발임. 오스틴 허가가 나오면 로보택시 유료 서비스 올해 안에 현실임.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+    { alias: "광화문 늑대 #69", content: "NHTSA 사고 1건 Tesla 과실 없음이 안전 기록 유지 확인임. 사고율이 인간 운전 대비 낮게 유지되면 보험사 리스크 평가도 바뀌고 확장 속도 빨라짐.", created_at: new Date(_an - 15 * 1000).toISOString() },
+  ],
+  [-68]: [
+    { alias: "판교 황소 #31", content: "$58B→$210B 4년 경로가 설득력 있는 이유는 수요 기반이 이미 깔렸기 때문임. 빅테크 CAPEX가 2027년까지 연 $200B+ 유지되면 NVDA 수요는 보장된 거임.", created_at: new Date(_an - 13 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Google TPU TSMC 전환이 NVDA한테 직접 영향은 없음. CUDA 생태계 전환 비용이 수년치 GPU 구매 비용보다 크기 때문에 빅테크가 단기 NVDA 줄이긴 불가능.", created_at: new Date(_an - 7 * 60_000).toISOString() },
+    { alias: "서초 매 #64", content: "현재 PER 20x가 S&P500 24x보다 낮다는 게 계속 나오는데 결국 EPS 성장이 이 구간 벗어나게 할 것임. 재레이팅 시점이 언제냐가 포인트임.", created_at: new Date(_an - 2 * 60_000).toISOString() },
+  ],
+  [-67]: [
+    { alias: "여의도 매 #17", content: "DC +57%는 MI300 빅테크 수주가 본격 반영된 거임. MI350 나오면 이 수치가 더 올라갈 것임. NVIDIA 독점 균열 = AMD 공급 다변화 수혜 구조 확립.", created_at: new Date(_an - 19 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "순이익 +94% 레버리지가 핵심임. 매출 증가분이 거의 전부 이익으로 떨어지는 구간임. 이 구간이 계속되면 EPS 재평가 속도가 예상보다 빨라짐.", created_at: new Date(_an - 10 * 60_000).toISOString() },
+    { alias: "광화문 늑대 #69", content: "게이밍 -30%는 콘솔 사이클임. PS6 나오면 반등하는 거라서 AMD 전체 논리를 훼손하는 요인이 아님. DC 성장이 지배적인 스토리임.", created_at: new Date(_an - 3 * 60_000).toISOString() },
+  ],
+  [-66]: [
+    { alias: "판교 황소 #31", content: "HBM 스택 $3,000~5,000을 플래시로 대체하면 데이터센터 TCO 혁명임. 이게 상용화되면 HBM 공급사들 장기 사업 모델이 위협받는 거임. Marvell이 그 수혜를 가져가는 구조.", created_at: new Date(_an - 26 * 60_000).toISOString() },
+    { alias: "서초 매 #64", content: "BAM DC 자체 적용 → 검증 → 외부 판매가 전형적인 인프라 기업 확장 패턴임. Marvell ASIC + MEXT 결합이 AI 추론 인프라 풀 스택이 되면 수주 경쟁력 압도적임.", created_at: new Date(_an - 15 * 60_000).toISOString() },
+    { alias: "여의도 독수리 #8", content: "Missouri DC 수십억 투자가 이미 실행 확약임. 자기 DC에 MEXT 기술 직접 쓴다는 게 기술 신뢰성 가장 강한 증거임. 영업보다 사용이 먼저임.", created_at: new Date(_an - 6 * 60_000).toISOString() },
+  ],
+
   // ── 2026-06-15 신규 ──────────────────────────────────────────────────────
   [-65]: [
     { alias: "강남 독수리 #52", content: "$90.95 현재가 대비 Westly $5,000+ 목표면 55배임. 5년 CAGR 50% 논리인데 3대 수익원 다 성장 중이라면 비현실적이진 않음. 다만 실현되려면 Starship 완성이 전제조건.", created_at: new Date(_an - 1 * 60_000).toISOString() },

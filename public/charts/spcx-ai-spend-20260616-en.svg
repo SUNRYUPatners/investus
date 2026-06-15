@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs><linearGradient id="bge12" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f1923"/><stop offset="100%" stop-color="#0a1018"/></linearGradient></defs>
+  <rect width="600" height="440" fill="url(#bge12)" rx="16"/>
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#c084fc" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#c084fc">SPCX</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#f1f5f9">SpaceX AI Compute Spend</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#94a3b8">Ron Baron (CNBC): $15B/yr · $1.25B/month</text>
+  <rect x="40" y="114" width="520" height="1" fill="#2a1a40" opacity="0.8"/>
+  <rect x="40" y="126" width="246" height="90" rx="12" fill="#c084fc" opacity="0.08"/>
+  <rect x="40" y="126" width="246" height="90" rx="12" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.4"/>
+  <text x="163" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Annual AI Compute Spend</text>
+  <text x="163" y="192" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="900" fill="#c084fc">$15B</text>
+  <text x="163" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">per year (Ron Baron est.)</text>
+  <rect x="314" y="126" width="246" height="90" rx="12" fill="#c084fc" opacity="0.08"/>
+  <rect x="314" y="126" width="246" height="90" rx="12" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.4"/>
+  <text x="437" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Monthly AI Compute Spend</text>
+  <text x="437" y="192" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="900" fill="#c084fc">$1.25B</text>
+  <text x="437" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">per month (through May 2026)</text>
+  <text x="40" y="234" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">Monthly AI Spend ($1.25B) vs. Peers</text>
+  <rect x="40" y="240" width="520" height="1" fill="#1e293b"/>
+  <text x="40" y="262" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">SpaceX/Musk</text>
+  <rect x="165" y="250" width="330" height="20" rx="4" fill="#c084fc" opacity="0.7"/>
+  <text x="500" y="264" text-anchor="end" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#c084fc">$1.25B/mo</text>
+  <text x="40" y="290" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">Meta</text>
+  <rect x="165" y="278" width="220" height="20" rx="4" fill="#4ade80" opacity="0.5"/>
+  <text x="500" y="292" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">~$0.83B/mo</text>
+  <text x="40" y="318" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">NVDA (supplier)</text>
+  <rect x="165" y="306" width="420" height="20" rx="4" fill="#60a5fa" opacity="0.4"/>
+  <text x="500" y="320" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">demand beneficiary</text>
+  <rect x="40" y="342" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="354" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">$15B/yr = 80% of SpaceX 2025 revenue reinvested in AI</text>
+  <rect x="40" y="366" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="378" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Includes Colossus 1/2/3 AI supercomputer construction</text>
+  <rect x="40" y="390" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="402" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">AI spend level signals serious internal AI capability buildout</text>
+  <text x="300" y="428" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Ron Baron, CNBC Interview (June 2026)</text>
+</svg>

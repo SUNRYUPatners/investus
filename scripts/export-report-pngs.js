@@ -41,6 +41,23 @@ const PAIRS = [
   { ko: 'iran-deal-implications-20260615.svg',         en: null,                                             label: '미이란_핵합의',        date: '20260615' },
   { ko: 'ai-data-moat-20260615.svg',                   en: null,                                             label: 'AI_데이터해자',        date: '20260615' },
   { ko: 'summary-20260615.svg',                        en: 'summary-20260615-en.svg',                        label: '6월15일_요약',         date: '20260615' },
+
+  // ── 2026-06-16 ─────────────────────────────────────────────────────────
+  { ko: 'tsla-cybertruck-giga-texas-20260616.svg',    en: 'tsla-cybertruck-giga-texas-20260616-en.svg',    label: 'TSLA_Cybertruck150대', date: '20260616' },
+  { ko: 'tsla-modely-japan-may-20260616.svg',         en: 'tsla-modely-japan-may-20260616-en.svg',         label: 'TSLA_ModelY일본1위',   date: '20260616' },
+  { ko: 'tsla-shanghai-may-prod-20260616.svg',        en: 'tsla-shanghai-may-prod-20260616-en.svg',        label: 'TSLA_상하이생산최고',  date: '20260616' },
+  { ko: 'tsla-cybercab-epa-cert-20260616.svg',        en: 'tsla-cybercab-epa-cert-20260616-en.svg',        label: 'TSLA_CybercabEPA인증', date: '20260616' },
+  { ko: 'tsla-cybercab-epa-specs-20260616.svg',       en: 'tsla-cybercab-epa-specs-20260616-en.svg',       label: 'TSLA_CybercabEPA스펙', date: '20260616' },
+  { ko: 'tsla-robotaxi-nhtsa-20260616.svg',           en: 'tsla-robotaxi-nhtsa-20260616-en.svg',           label: 'TSLA_RobotaxiNHTSA',   date: '20260616' },
+  { ko: 'nvda-net-income-2029-20260616.svg',          en: 'nvda-net-income-2029-20260616-en.svg',          label: 'NVDA_순이익210B',      date: '20260616' },
+  { ko: 'nvda-google-samsung-tpu-20260616.svg',       en: 'nvda-google-samsung-tpu-20260616-en.svg',       label: 'NVDA_GoogleTPU',       date: '20260616' },
+  { ko: 'amd-q1-2026-20260616.svg',                   en: 'amd-q1-2026-20260616-en.svg',                   label: 'AMD_Q1실적',           date: '20260616' },
+  { ko: 'mrvl-bam-mext-20260616.svg',                 en: 'mrvl-bam-mext-20260616-en.svg',                 label: 'MRVL_BAMEXT인수',      date: '20260616' },
+  { ko: 'spcx-ipo-857b-20260616.svg',                 en: 'spcx-ipo-857b-20260616-en.svg',                 label: 'SPCX_IPO857B',         date: '20260616' },
+  { ko: 'spcx-ai-spend-20260616.svg',                 en: 'spcx-ai-spend-20260616-en.svg',                 label: 'SPCX_AI지출15B',       date: '20260616' },
+  { ko: 'spcx-ir-website-20260616.svg',               en: 'spcx-ir-website-20260616-en.svg',               label: 'SPCX_IR웹사이트',      date: '20260616' },
+  { ko: 'spcx-cuba-polymarket-20260616.svg',          en: 'spcx-cuba-polymarket-20260616-en.svg',          label: 'SPCX_쿠바Polymarket',  date: '20260616' },
+  { ko: 'summary-20260616.svg',                       en: 'summary-20260616-en.svg',                       label: '6월16일_요약',         date: '20260616' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

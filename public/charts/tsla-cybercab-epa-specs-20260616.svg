@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg5)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#00e5a0" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#f1f5f9">Cybercab EPA 문서 스펙 공개</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#94a3b8">전륜구동 · 65kWh · 0-60 3.99초 · EPA 416마일</text>
+
+  <rect x="40" y="112" width="520" height="1" fill="#1e3a2f" opacity="0.8"/>
+
+  <!-- Top 3 big numbers -->
+  <!-- Range -->
+  <rect x="40" y="122" width="162" height="84" rx="10" fill="#00e5a0" opacity="0.08"/>
+  <rect x="40" y="122" width="162" height="84" rx="10" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.3"/>
+  <text x="121" y="154" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" font-weight="900" fill="#00e5a0">416</text>
+  <text x="121" y="174" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">마일 (EPA 인증)</text>
+  <text x="121" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">Tesla 기존 공식 ~300mi</text>
+
+  <!-- 0-60 -->
+  <rect x="219" y="122" width="162" height="84" rx="10" fill="#00e5a0" opacity="0.08"/>
+  <rect x="219" y="122" width="162" height="84" rx="10" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.3"/>
+  <text x="300" y="154" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" font-weight="900" fill="#00e5a0">3.99</text>
+  <text x="300" y="174" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">초 (0→60mph)</text>
+  <text x="300" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">단일 전동모터 FWD</text>
+
+  <!-- Battery -->
+  <rect x="398" y="122" width="162" height="84" rx="10" fill="#00e5a0" opacity="0.08"/>
+  <rect x="398" y="122" width="162" height="84" rx="10" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.3"/>
+  <text x="479" y="154" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" font-weight="900" fill="#00e5a0">65</text>
+  <text x="479" y="174" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">kWh (배터리)</text>
+  <text x="479" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">구동방식: 전륜(FWD)</text>
+
+  <!-- Spec list -->
+  <text x="40" y="228" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">EPA 문서 상세 제원</text>
+  <rect x="40" y="234" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Spec rows -->
+  <text x="40" y="254" font-family="Arial,sans-serif" font-size="12" fill="#64748b">출력</text>
+  <rect x="130" y="242" width="190" height="18" rx="4" fill="#00e5a0" opacity="0.5"/>
+  <text x="530" y="254" text-anchor="end" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">250 hp</text>
+
+  <text x="40" y="278" font-family="Arial,sans-serif" font-size="12" fill="#64748b">GVWR</text>
+  <rect x="130" y="266" width="155" height="18" rx="4" fill="#00e5a0" opacity="0.4"/>
+  <text x="530" y="278" text-anchor="end" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">3,730 lbs</text>
+
+  <text x="40" y="302" font-family="Arial,sans-serif" font-size="12" fill="#64748b">모터 회전수</text>
+  <rect x="130" y="290" width="170" height="18" rx="4" fill="#00e5a0" opacity="0.45"/>
+  <text x="530" y="302" text-anchor="end" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">16,534 rpm</text>
+
+  <text x="40" y="326" font-family="Arial,sans-serif" font-size="12" fill="#64748b">구동 유닛 중량</text>
+  <rect x="130" y="314" width="120" height="18" rx="4" fill="#00e5a0" opacity="0.35"/>
+  <text x="530" y="326" text-anchor="end" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">360 lbs</text>
+
+  <text x="40" y="350" font-family="Arial,sans-serif" font-size="12" fill="#64748b">고속도로 주행거리</text>
+  <rect x="130" y="338" width="200" height="18" rx="4" fill="#00e5a0" opacity="0.55"/>
+  <text x="530" y="350" text-anchor="end" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">375 마일</text>
+
+  <!-- Note -->
+  <rect x="40" y="368" width="520" height="36" rx="8" fill="#1e2d1e" opacity="0.7"/>
+  <text x="300" y="383" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">EPA 인증 416mi &gt; Tesla 기존 공식 발표 ~300mi</text>
+  <text x="300" y="397" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">실제 주행거리는 공식 발표보다 높을 가능성</text>
+
+  <text x="300" y="432" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: EPA Certificate of Conformity, 2026.05.26 발효</text>
+</svg>

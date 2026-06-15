@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="440" fill="url(#bg6)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#00e5a0" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+  <text x="600" y="36" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#475569">NHTSA Report</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#f1f5f9">Robotaxi NHTSA 최신 보고서</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#00e5a0">4월 신규 사고 1건 — 테슬라 과실 없음</text>
+
+  <rect x="40" y="114" width="520" height="1" fill="#1e3a2f" opacity="0.8"/>
+
+  <!-- Incident count -->
+  <rect x="40" y="126" width="246" height="100" rx="12" fill="#0d1a26" opacity="0.9"/>
+  <text x="163" y="158" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">4월 신규 사고</text>
+  <text x="163" y="195" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="900" fill="#00e5a0">1</text>
+  <text x="163" y="216" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">건 (테슬라 과실 없음)</text>
+
+  <!-- Fault verdict -->
+  <rect x="314" y="126" width="246" height="100" rx="12" fill="#0d1a26" opacity="0.9"/>
+  <text x="437" y="158" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">사고 원인</text>
+  <rect x="364" y="168" width="146" height="36" rx="8" fill="#00e5a0" opacity="0.15"/>
+  <rect x="364" y="168" width="146" height="36" rx="8" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.5"/>
+  <text x="437" y="192" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#00e5a0">후방 추돌 당함</text>
+  <text x="437" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">타 차량 과실</text>
+
+  <!-- Incident timeline -->
+  <text x="40" y="248" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">사고 현황 타임라인</text>
+  <rect x="40" y="254" width="520" height="1" fill="#1e293b"/>
+
+  <!-- 3월 incidents -->
+  <rect x="40" y="262" width="8" height="8" rx="4" fill="#475569"/>
+  <text x="56" y="272" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">2026년 3월  정지 중 후방 추돌 2건 (기존 보고)</text>
+  <text x="56" y="288" font-family="Arial,sans-serif" font-size="11" fill="#475569">→ 모두 상대방 과실, 테슬라 정차 중 피해</text>
+
+  <!-- 4월 incident -->
+  <rect x="40" y="302" width="8" height="8" rx="4" fill="#00e5a0"/>
+  <text x="56" y="312" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">2026년 4월  정지 중 후방 추돌 1건 (신규 보고)</text>
+  <text x="56" y="328" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">→ 픽업 트럭이 추돌 — 테슬라 과실 없음 확인</text>
+
+  <!-- Summary box -->
+  <rect x="40" y="350" width="520" height="52" rx="10" fill="#1e2d1e" opacity="0.8"/>
+  <text x="300" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">Robotaxi 안전성 입증 — 3건 모두 타 차량 과실</text>
+  <text x="300" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">NHTSA 보고 = 투명한 사고 공개 체계, Waymo 대비 공개 기준 높음</text>
+
+  <text x="300" y="425" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: NHTSA AV Incident Reporting</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bg9" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg9)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#f87171" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f87171">AMD</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+  <text x="600" y="36" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#475569">Q1 2026 실적</text>
+
+  <!-- Title -->
+  <text x="300" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#f1f5f9">AMD Q1 2026 실적</text>
+  <text x="300" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#94a3b8">매출 $10.3B +38% · 데이터센터 $5.8B +57%</text>
+
+  <rect x="40" y="108" width="520" height="1" fill="#2a1a1a" opacity="0.8"/>
+
+  <!-- Top 4 metrics -->
+  <!-- Revenue -->
+  <rect x="40" y="118" width="120" height="72" rx="8" fill="#f87171" opacity="0.08"/>
+  <text x="100" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">매출</text>
+  <text x="100" y="164" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#f1f5f9">$10.3B</text>
+  <text x="100" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#4ade80">+38% YoY</text>
+
+  <!-- Data Center -->
+  <rect x="172" y="118" width="120" height="72" rx="8" fill="#f87171" opacity="0.1"/>
+  <rect x="172" y="118" width="120" height="72" rx="8" fill="none" stroke="#f87171" stroke-width="1" opacity="0.4"/>
+  <text x="232" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">데이터센터</text>
+  <text x="232" y="164" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#f87171">$5.8B</text>
+  <text x="232" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#4ade80">+57% YoY</text>
+
+  <!-- Gross Profit -->
+  <rect x="304" y="118" width="120" height="72" rx="8" fill="#f87171" opacity="0.08"/>
+  <text x="364" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">매출총이익</text>
+  <text x="364" y="164" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#f1f5f9">$5.4B</text>
+  <text x="364" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#4ade80">+45% YoY</text>
+
+  <!-- Net Income -->
+  <rect x="436" y="118" width="124" height="72" rx="8" fill="#f87171" opacity="0.08"/>
+  <text x="498" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">순이익</text>
+  <text x="498" y="164" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#f1f5f9">$1.4B</text>
+  <text x="498" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#4ade80">+94% YoY</text>
+
+  <!-- Segment bar chart -->
+  <text x="40" y="214" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">사업부문별 매출 ($B)</text>
+  <rect x="40" y="220" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Data Center bar -->
+  <text x="40" y="240" font-family="Arial,sans-serif" font-size="12" fill="#64748b" text-anchor="start">데이터센터</text>
+  <rect x="140" y="228" width="340" height="20" rx="4" fill="#f87171" opacity="0.8"/>
+  <text x="485" y="243" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f87171">$5.8B</text>
+  <text x="530" y="243" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">+57%</text>
+
+  <!-- Client bar -->
+  <text x="40" y="268" font-family="Arial,sans-serif" font-size="12" fill="#64748b" text-anchor="start">클라이언트</text>
+  <rect x="140" y="256" width="163" height="20" rx="4" fill="#f87171" opacity="0.55"/>
+  <text x="485" y="271" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f87171">$2.0B</text>
+  <text x="530" y="271" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">+26%</text>
+
+  <!-- Embedded bar -->
+  <text x="40" y="296" font-family="Arial,sans-serif" font-size="12" fill="#64748b" text-anchor="start">임베디드</text>
+  <rect x="140" y="284" width="82" height="20" rx="4" fill="#f87171" opacity="0.4"/>
+  <text x="485" y="299" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f87171">$0.96B</text>
+  <text x="530" y="299" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">+6%</text>
+
+  <!-- Gaming bar -->
+  <text x="40" y="324" font-family="Arial,sans-serif" font-size="12" fill="#64748b" text-anchor="start">게이밍</text>
+  <rect x="140" y="312" width="64" height="20" rx="4" fill="#f87171" opacity="0.35"/>
+  <text x="485" y="327" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f87171">$0.78B</text>
+  <text x="530" y="327" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">+11%</text>
+
+  <!-- Summary -->
+  <rect x="40" y="346" width="520" height="56" rx="10" fill="#1e1a2a" opacity="0.8"/>
+  <text x="300" y="368" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f87171">데이터센터 매출 $5.8B — AMD 매출의 56% 차지</text>
+  <text x="300" y="388" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">MI300X 수요 급증 · AI 추론 시장 점유율 확대</text>
+
+  <text x="300" y="432" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: AMD Q1 2026 Earnings Release</text>
+</svg>

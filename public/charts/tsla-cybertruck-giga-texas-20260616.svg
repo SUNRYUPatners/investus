@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="440" fill="url(#bg1)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#00e5a0" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.16</text>
+  <text x="600" y="36" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#475569">Giga Texas</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#f1f5f9">Cybertruck 기가텍사스</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#00e5a0">생산 가속화 확인</text>
+
+  <!-- Divider -->
+  <rect x="40" y="114" width="520" height="1" fill="#1e3a2f" opacity="0.8"/>
+
+  <!-- Big number -->
+  <rect x="180" y="128" width="240" height="90" rx="12" fill="#00e5a0" opacity="0.08"/>
+  <rect x="180" y="128" width="240" height="90" rx="12" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.3"/>
+  <text x="300" y="185" text-anchor="middle" font-family="Arial,sans-serif" font-size="54" font-weight="900" fill="#00e5a0">150</text>
+  <text x="300" y="207" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">대 목격 (6/16 기가텍사스)</text>
+
+  <!-- Status badge -->
+  <rect x="175" y="234" width="250" height="34" rx="8" fill="#00e5a0" opacity="0.15"/>
+  <rect x="175" y="234" width="250" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.4"/>
+  <text x="300" y="257" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#00e5a0">Production is ramping up!</text>
+
+  <!-- Key facts -->
+  <text x="40" y="298" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">핵심 포인트</text>
+  <rect x="40" y="308" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Fact rows -->
+  <rect x="40" y="320" width="4" height="18" rx="2" fill="#00e5a0"/>
+  <text x="52" y="334" font-family="Arial,sans-serif" font-size="13" fill="#e2e8f0">서부 생산 구역 150대 집결 — 테스트 트랙 근접 위치</text>
+
+  <rect x="40" y="348" width="4" height="18" rx="2" fill="#00e5a0"/>
+  <text x="52" y="362" font-family="Arial,sans-serif" font-size="13" fill="#e2e8f0">6/16 항공 촬영으로 현장 확인 완료</text>
+
+  <rect x="40" y="376" width="4" height="18" rx="2" fill="#00e5a0"/>
+  <text x="52" y="390" font-family="Arial,sans-serif" font-size="13" fill="#e2e8f0">Cybercab 양산 라인 가동 전, Cybertruck 물량 급증</text>
+
+  <rect x="40" y="404" width="4" height="18" rx="2" fill="#00e5a0"/>
+  <text x="52" y="418" font-family="Arial,sans-serif" font-size="13" fill="#e2e8f0">2026 H2 생산 모멘텀 강화 신호</text>
+</svg>
