@@ -52,11 +52,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: m
       ? [s, m.name, m.kr, `${m.kr} 주가`, `${s} 주가`, `${m.kr} 주식`, `${s} 실시간`, "미국주식", "investus"]
       : [s, `${s} 주가`, `${s} 주식`, "미국주식", "investus"],
-    alternates: { canonical: `https://www.investus.kr/stock/${s}` },
+    alternates: { canonical: `https://investus.kr/stock/${s}` },
     openGraph: {
       title,
       description,
-      url: `https://www.investus.kr/stock/${s}`,
+      url: `https://investus.kr/stock/${s}`,
       siteName: "Investus 인베스트어스",
       images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
       locale: "ko_KR",

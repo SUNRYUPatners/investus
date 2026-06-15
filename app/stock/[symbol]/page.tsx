@@ -388,7 +388,7 @@ export default function StockPage({
           <ShareButton
             title={`${upper} ${detail?.name ?? ""} 주가 | Investus`}
             text={`${upper} 실시간 주가 · 차트 · 분석 — Investus 인베스트어스`}
-            url={`https://www.investus.kr/stock/${upper}`}
+            url={`https://investus.kr/stock/${upper}`}
             size="sm"
           />
         </div>

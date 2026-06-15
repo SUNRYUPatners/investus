@@ -10,7 +10,7 @@ export async function GET() {
   }
 
   try {
-    const base = process.env.NEXT_PUBLIC_APP_URL ?? "https://www.investus.kr";
+    const base = process.env.NEXT_PUBLIC_APP_URL ?? "https://investus.kr";
     const res  = await fetch(`${base}/api/market-summary?force=1`, {
       signal: AbortSignal.timeout(50_000),
     });

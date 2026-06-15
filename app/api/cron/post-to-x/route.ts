@@ -42,7 +42,7 @@ export async function GET(req: NextRequest) {
     topReport.summary?.slice(0, 120) ?? "",
     ``,
     todayReports.length > 1 ? `+${todayReports.length - 1}개 리포트 더 보기` : "",
-    `👉 https://www.investus.kr/insight`,
+    `👉 https://investus.kr/insight`,
     ``,
     `#미국주식 #investus #주식투자 #인베스트어스`,
   ].filter(Boolean).join("\n");

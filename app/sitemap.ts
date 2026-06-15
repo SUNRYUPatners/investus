@@ -30,7 +30,7 @@ const SYMBOLS = [
 const UNIQUE = [...new Set(SYMBOLS)];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.investus.kr";
+  const base = "https://investus.kr";
   const now  = new Date();
   return [
     { url: base,                         lastModified: now, changeFrequency: "always",  priority: 1    },

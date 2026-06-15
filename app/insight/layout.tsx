@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://www.investus.kr/insight" },
+  alternates: { canonical: "https://investus.kr/insight" },
 };
 
 export default function InsightLayout({ children }: { children: React.ReactNode }) {

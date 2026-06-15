@@ -37,8 +37,8 @@ const notoSansKR = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   title: "Investus — 인베스트어스 | 미국주식 투자 플랫폼",
-  description: "인베스트어스(Investus) — 미국 주식 실시간 시세 · S&P500 · NASDAQ · DOW · 선물 · 공포탐욕지수 · 버핏지수 · 시장 분석 리포트. 선류파트너스 CIO 직접 분석.",
-  metadataBase: new URL("https://www.investus.kr"),
+  description: "인베스트어스(Investus) — 미국주식 플랫폼. 실시간 시세 · S&P500 · NASDAQ · 투자 리포트 · 공포탐욕지수 · 선류파트너스",
+  metadataBase: new URL("https://investus.kr"),
   keywords: [
     "인베스트어스", "investus", "investus.kr", "인베스트어스케이알",
     "선류파트너스", "선류 파트너스", "SUNRYU Partners",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
     description: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
-    url: "https://www.investus.kr",
+    url: "https://investus.kr",
     siteName: "Investus — 인베스트어스",
     locale: "ko_KR",
     type: "website",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     description: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
   },
   alternates: {
-    canonical: "https://www.investus.kr",
+    canonical: "https://investus.kr",
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   appleWebApp: {
@@ -94,46 +94,46 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://www.investus.kr/#website",
-      "url": "https://www.investus.kr",
+      "@id": "https://investus.kr/#website",
+      "url": "https://investus.kr",
       "name": "Investus — 인베스트어스",
       "alternateName": ["인베스트어스", "investus.kr", "인베스트어스케이알", "Investus Korea"],
       "description": "미국주식 실시간 시세 · 시장 분석 리포트 · 선류파트너스 CIO 투자 정보",
       "inLanguage": "ko-KR",
-      "publisher": { "@id": "https://www.investus.kr/#organization" },
+      "publisher": { "@id": "https://investus.kr/#organization" },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://www.investus.kr/search?q={search_term_string}",
+          "urlTemplate": "https://investus.kr/search?q={search_term_string}",
         },
         "query-input": "required name=search_term_string",
       },
     },
     {
       "@type": "Organization",
-      "@id": "https://www.investus.kr/#organization",
+      "@id": "https://investus.kr/#organization",
       "name": "Investus",
       "alternateName": ["인베스트어스", "SUNRYU Partners", "선류파트너스"],
-      "url": "https://www.investus.kr",
+      "url": "https://investus.kr",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.investus.kr/icons/icon-512.png",
+        "url": "https://investus.kr/icons/icon-512.png",
         "width": 512,
         "height": 512,
       },
       "description": "미국주식 투자 플랫폼 — 실시간 시세, 시장 분석 리포트, 투자 기초 교육",
       "foundingDate": "2024",
       "address": { "@type": "PostalAddress", "addressCountry": "KR" },
-      "sameAs": ["https://www.investus.kr", "https://investus.kr"],
+      "sameAs": ["https://investus.kr", "https://investus.kr"],
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.investus.kr/#webpage",
-      "url": "https://www.investus.kr",
+      "@id": "https://investus.kr/#webpage",
+      "url": "https://investus.kr",
       "name": "Investus — 인베스트어스 | 미국주식 투자 플랫폼",
-      "isPartOf": { "@id": "https://www.investus.kr/#website" },
-      "about": { "@id": "https://www.investus.kr/#organization" },
+      "isPartOf": { "@id": "https://investus.kr/#website" },
+      "about": { "@id": "https://investus.kr/#organization" },
       "description": "인베스트어스(Investus) — 미국 주식 실시간 시세 · S&P500 · NASDAQ · 시장 분석 리포트",
       "inLanguage": "ko-KR",
     },
