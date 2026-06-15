@@ -43,9 +43,19 @@ const PAIRS = [
   { ko: 'summary-20260615.svg',                        en: 'summary-20260615-en.svg',                        label: '6월15일_요약',         date: '20260615' },
 ];
 
+// macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생
+// SVG 텍스트에서 이모지를 제거하고 Buffer로 변환 후 렌더링
+function stripEmoji(svgStr) {
+  return svgStr
+    .replace(/[\u{1F000}-\u{1FFFF}]/gu, '')  // 일반 이모지 (🚀🧠🤖 등)
+    .replace(/[\u{2600}-\u{27BF}]/gu, '')     // 잡다한 기호 (⛔⚡⚠ 등)
+    .replace(/[\u{FE00}-\u{FE0F}]/gu, '');   // 변형 선택자 (variation selectors)
+}
+
 async function convert(svgFile, pngFile) {
   const svgPath = path.join(CHARTS_DIR, svgFile);
-  const svgContent = fs.readFileSync(svgPath);
+  const raw = fs.readFileSync(svgPath, 'utf8');
+  const svgContent = Buffer.from(stripEmoji(raw));
   await sharp(svgContent)
     .png({ quality: 100 })
     .resize({ width: 960, kernel: 'lanczos3' })
