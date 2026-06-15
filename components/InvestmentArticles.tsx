@@ -1235,8 +1235,8 @@ export function InvestmentAllExpanded() {
             {BASICS.length}개
           </span>
         </div>
-        <div className="flex flex-col gap-3">
-          {BASICS.map(a => <ArticleExpanded key={a.id} article={a} accent="rgba(0,229,160,0.9)" />)}
+        <div className="flex flex-col gap-2">
+          {BASICS.map(a => <ArticleCard key={a.id} article={a} />)}
         </div>
       </div>
       <div>
@@ -1249,8 +1249,8 @@ export function InvestmentAllExpanded() {
             {MASTERS.length}개
           </span>
         </div>
-        <div className="flex flex-col gap-3">
-          {MASTERS.map(a => <ArticleExpanded key={a.id} article={a} accent="rgba(212,175,55,0.9)" />)}
+        <div className="flex flex-col gap-2">
+          {MASTERS.map(a => <ArticleCard key={a.id} article={a} />)}
         </div>
       </div>
     </div>
