@@ -29,9 +29,9 @@ export function NewsSection({ news: initialNews }: { news?: NewsItem[] }) {
   useEffect(() => {
     if (initialNews?.length) return; // already have server data
     fetch("/api/news")
-      .then((r) => r.ok ? r.json() : null)
-      .then((d) => { if (Array.isArray(d) && d.length > 0) { setNews(d); setLoaded(true); } })
-      .catch(() => {});
+      .then((r) => r.ok ? r.json() : [])
+      .then((d) => { setNews(Array.isArray(d) ? d : []); setLoaded(true); })
+      .catch(() => setLoaded(true));
   }, [initialNews]);
 
   const visible = expanded ? news : news.slice(0, INITIAL_COUNT);

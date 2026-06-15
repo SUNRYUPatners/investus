@@ -1036,24 +1036,6 @@ export default function WallPage() {
 
   const handleWriteClick = () => {
     if (!user) return;
-
-    if (!user.isVerified) {
-      // Not verified → open verification modal
-      setVerifyMode("none");
-      setUploadDone(false);
-      setUploadErr("");
-      setShowVerify(true);
-      return;
-    }
-
-    // Check if user holds the selected stock
-    const holds = holdings.some((h) => h.symbol === selected);
-    if (!holds) {
-      setShowNoHolding(true);
-      return;
-    }
-
-    // All good → open write modal
     setWriteContent("");
     setSubmitErr("");
     setShowWrite(true);
@@ -1065,7 +1047,7 @@ export default function WallPage() {
     setSubmitErr("");
 
     const holding = holdings.find((h) => h.symbol === selected);
-    const holdingLabel = holding ? `${holding.shares}주 보유` : "보유확인";
+    const holdingLabel = holding ? `${holding.shares}주 보유` : "회원";
 
     try {
       const res  = await fetch("/api/wall-posts", {

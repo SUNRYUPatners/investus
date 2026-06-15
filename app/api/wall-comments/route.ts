@@ -56,17 +56,6 @@ export async function POST(req: NextRequest) {
   if (trimmed.length < 1)   return NextResponse.json({ error: "내용을 입력해주세요." }, { status: 400 });
   if (trimmed.length > 200) return NextResponse.json({ error: "200자 이내로 작성해주세요." }, { status: 400 });
 
-  // Verify user is approved creator (server-verified email)
-  const { data: verif } = await getSupabase()
-    .from("creator_verifications")
-    .select("status")
-    .eq("phone", authUser.email)
-    .maybeSingle();
-
-  if (verif?.status !== "approved") {
-    return NextResponse.json({ error: "인증이 필요합니다." }, { status: 403 });
-  }
-
   const { data, error } = await getSupabase()
     .from("wall_comments")
     .insert({ post_id, user_id: authUser.email, nickname: makeAnonNick(authUser.email), content: trimmed, parent_id: parent_id ?? null })

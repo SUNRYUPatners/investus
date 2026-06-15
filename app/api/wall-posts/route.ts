@@ -72,17 +72,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "게시할 수 없는 내용이 포함되어 있습니다." }, { status: 400 });
   }
 
-  // Verify user is approved creator (using server-verified email)
-  const { data: verif } = await getSupabase()
-    .from("creator_verifications")
-    .select("status")
-    .eq("phone", authUser.email)
-    .maybeSingle();
-
-  if (verif?.status !== "approved") {
-    return NextResponse.json({ error: "인증이 필요합니다." }, { status: 403 });
-  }
-
   const { data, error } = await getSupabase()
     .from("wall_posts")
     .insert({
