@@ -69,10 +69,10 @@ export const MOCK_POSTS: Post[] = [
 
   // NVDA — 6/16 업데이트 ──────────────────────────────────────────────────
   { id: 236, symbol: "NVDA", nickname: "익명_4738", holdingLabel: "55주 보유",
-    content: "2025 $58B에서 2029 $210B이면 4년 만에 3.6배예요. CAGR 38%인데 이게 AI 인프라 수요 사이클이 계속된다는 전제하에 가능한 거잖아요. 현재 PER 20x가 S&P500 24x보다 낮다는 거 다시 생각해보면 2029 $210B 기준으로 현재 시총 역산해도 여전히 업사이드가 나오는 구조예요. Google이 TPU를 TSMC로 이전하는 것도 사실 NVDA한텐 좋은 게 아니지만 CUDA 생태계 전환 비용이 너무 커서 빅테크가 당장 NVDA 줄이긴 어렵죠.",
+    content: "2025 $58B에서 2029 $210B이면 4년 만에 3.6배예요. CAGR 38%인데 이게 AI 인프라 수요 사이클이 계속된다는 전제하에 가능한 거잖아요. 현재 PER 20x가 S&P500 24x보다 낮다는 거 다시 생각해보면 2029 $210B 기준으로 현재 시총 역산해도 여전히 업사이드가 나오는 구조예요. Google이 TPU를 TSMC 아닌 삼성에서 만드는 것도 사실 NVDA한텐 나쁘지 않아요 — TSMC 용량을 Google한테 안 뺏기는 거잖아요.",
     createdAt: T16J - 19*60_000, likes: 213, comments: 3 },
   { id: 237, symbol: "NVDA", nickname: "익명_6284", holdingLabel: "30주 보유",
-    content: "Google 10세대 TPU를 삼성에서 TSMC로 바꿨다는 게 삼성 파운드리 입장에서 타격이에요. TSMC가 이미 NVIDIA GPU·Apple·AMD 다 소화하는데 Google TPU까지 받으면 용량 경쟁이 심해질 수 있어요. NVDA 납기에 영향 줄 가능성은 낮지만 장기적으로 빅테크가 커스텀 칩 강화하는 게 NVDA한테 좋은 방향은 아닌 거죠. 그래도 지금 당장 범용 GPU 대체할 솔루션이 없으니까 2029까지는 NVDA 독주가 맞는 것 같아요.",
+    content: "Google 10세대 TPU를 삼성에서 제조한다는 게 TSMC가 NVIDIA·Apple·AMD로 이미 꽉 찼다는 거예요. Google이 TSMC 못 쓰니까 삼성으로 간 거잖아요. NVDA 입장에서는 오히려 TSMC 용량 경합이 줄어드는 거라서 납기에 긍정적인 영향도 있어요. 빅테크가 커스텀 칩 강화하는 건 장기 리스크지만 CUDA 생태계 전환 비용 때문에 당장 NVDA 줄이긴 어렵죠. 2029까지는 NVDA 독주가 맞는 것 같아요.",
     createdAt: T16J - 36*60_000, likes: 178, comments: 3 },
 
   // AMD — 6/16 업데이트 ───────────────────────────────────────────────────
@@ -85,10 +85,10 @@ export const MOCK_POSTS: Post[] = [
 
   // MRVL — 6/16 업데이트 ─────────────────────────────────────────────────
   { id: 240, symbol: "MRVL", nickname: "익명_5291", holdingLabel: "관심종목",
-    content: "MEXT 기술이 진짜면 게임체인저예요. HBM 스택 하나가 $3,000~5,000인데 플래시로 동급 성능 낸다면 데이터센터 메모리 비용이 80~90% 줄어드는 거잖아요. BAM이 Missouri DC에 수십억 투자한다고 같은 날 발표한 게 MEXT 기술 직접 적용하는 게 계획이라는 거예요. Marvell 스토리지 컨트롤러랑 MEXT 기술 결합하면 시너지가 진짜 크겠어요. 이게 상용화되면 HBM 공급사들한테 장기 위협이 될 수 있어요.",
+    content: "MEXT 기술이 진짜면 게임체인저예요. HBM 스택 하나가 $3,000~5,000인데 플래시로 동급 성능 낸다면 데이터센터 메모리 비용이 80~90% 줄어드는 거잖아요. Meta가 인수한다는 게 Llama 추론 인프라 메모리 비용 직접 줄이려는 거잖아요. Meta MTIA 칩 파트너가 Marvell이라서 MEXT 기술 결합하면 시너지가 진짜 크겠어요. 이게 상용화되면 HBM 공급사들한테 장기 위협이 될 수 있어요.",
     createdAt: T16J - 17*60_000, likes: 241, comments: 3 },
   { id: 241, symbol: "MRVL", nickname: "익명_9374", holdingLabel: "관심종목",
-    content: "BAM이 AI 메모리 스타트업 인수하고 AI DC 수십억 투자를 같은 날 발표한 게 수직 통합 전략이에요. 기술 확보 → 인프라 직접 적용 → 비용 절감 → 경쟁 우위. Marvell ASIC이 커스텀 칩 설계에서 강하고 스토리지 컨트롤러도 있으니까 MEXT와 결합하면 완전한 AI 메모리 솔루션이 나올 수 있어요. 삼성·SK하이닉스 HBM 사업에 장기 리스크가 될 수 있는 기술이라서 메모리 주식들도 같이 봐야 할 것 같아요.",
+    content: "Meta가 AI 메모리 스타트업 MEXT 인수한 게 Llama 추론 비용 절감 전략이에요. 기술 확보 → 자체 인프라 적용 → 비용 절감 → 경쟁력 강화. Marvell이 Meta MTIA 커스텀 칩 설계 파트너인데 MEXT 기술까지 결합하면 완전한 AI 메모리 솔루션이 나올 수 있어요. 삼성·SK하이닉스 HBM 사업에 장기 리스크가 될 수 있는 기술이라서 메모리 주식들도 같이 봐야 할 것 같아요.",
     createdAt: T16J - 31*60_000, likes: 187, comments: 3 },
 
   // SPCX — 6/16 업데이트 ─────────────────────────────────────────────────
@@ -1061,13 +1061,13 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   ],
   236: [
     { id: 1, nickname: "익명_3748", holdingLabel: "40주 보유", content: "2029 $210B이면 현재 주가 기준 PER 역산해봐도 업사이드가 나와요. AI 인프라 수요가 2025~2029 지속된다는 가정이 깨지지 않는 한 이 성장 경로는 유효한 거죠.", createdAt: T16J - m(17), likes: 67 },
-    { id: 2, nickname: "익명_5847", holdingLabel: "25주 보유", content: "CUDA 생태계 전환 비용이 너무 커서 Google이 TPU 강화해도 당장 NVIDIA 수요 줄이기 어려워요. 오히려 TPU 성능 개선되면 AI 전체 파이가 커지고 그게 NVDA 수요로도 이어지죠.", createdAt: T16J - m(9), likes: 52 },
+    { id: 2, nickname: "익명_5847", holdingLabel: "25주 보유", content: "Google이 TSMC 못 써서 삼성으로 간 게 NVDA한테는 오히려 좋은 거예요. TSMC 용량 경합 상대가 하나 줄어드는 거니까요. CUDA 생태계 전환 비용도 커서 빅테크가 당장 NVDA 줄이긴 어렵고요.", createdAt: T16J - m(9), likes: 52 },
     { id: 3, nickname: "익명_2938", holdingLabel: "10주 보유", content: "$58B→$210B이 4년 CAGR 38%인데 S&P500 연 10%와 비교하면 프리미엄이 정당화돼요. 성장 둔화 리스크가 있어도 현재 PER 20x는 AI 성장 감안하면 싸다는 논리에 동의해요.", createdAt: T16J - m(3), likes: 38 },
   ],
   237: [
-    { id: 1, nickname: "익명_7382", holdingLabel: "20주 보유", content: "삼성 파운드리 수율 문제가 결국 Google TPU도 TSMC로 이탈시킨 거예요. 삼성 입장에서는 큰 타격인데 TSMC 독점이 더 강해지는 구조가 되는 거죠.", createdAt: T16J - m(34), likes: 56 },
+    { id: 1, nickname: "익명_7382", holdingLabel: "20주 보유", content: "TSMC가 NVDA·Apple·AMD로 꽉 찼다는 게 Google도 인정한 거예요. 삼성 파운드리 입장에서는 대형 수주 확보 기회고요. TSMC 독점이 흔들리기 시작하는 신호일 수도 있어요.", createdAt: T16J - m(34), likes: 56 },
     { id: 2, nickname: "익명_9473", holdingLabel: "15주 보유", content: "커스텀 ASIC 트렌드가 강화될수록 NVIDIA 장기 시장 점유율은 조금씩 압박받는 게 맞아요. 그래도 2029까지는 CUDA 생태계 덕분에 독주 유지할 것 같고요.", createdAt: T16J - m(18), likes: 43 },
-    { id: 3, nickname: "익명_4719", holdingLabel: "35주 보유", content: "결국 TSMC만 이익이에요. NVIDIA GPU + Google TPU + Apple M4 + AMD 다 TSMC 고객이면 파운드리 독점 프리미엄이 계속 올라가는 거죠.", createdAt: T16J - m(7), likes: 35 },
+    { id: 3, nickname: "익명_4719", holdingLabel: "35주 보유", content: "삼성이 Google TPU 수주 잡은 게 AI 파운드리 시장 재편 신호예요. TSMC 독점이 영원할 수 없는데 삼성이 그 빈틈을 파고든 거죠. 삼성전자 파운드리 실적에 긍정적인 재료예요.", createdAt: T16J - m(7), likes: 35 },
   ],
   238: [
     { id: 1, nickname: "익명_6384", holdingLabel: "관심종목", content: "DC +57%가 NVIDIA MI 시리즈 수요 덕분인데 빅테크들이 NVIDIA 독점 리스크 헤지로 AMD를 일부러 사주는 전략이 있는 거예요. MS·Meta·OpenAI가 AMD 쓰는 거 그런 맥락이죠.", createdAt: T16J - m(20), likes: 78 },
@@ -1081,14 +1081,14 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 3, nickname: "익명_7193", holdingLabel: "관심종목", content: "클라이언트 +23%는 PC 사이클 회복 신호예요. AMD CPU가 인텔 대비 시장 점유율 계속 올라가는 중이라서 이쪽 성장도 무시할 수 없어요.", createdAt: T16J - m(10), likes: 41 },
   ],
   240: [
-    { id: 1, nickname: "익명_8374", holdingLabel: "관심종목", content: "HBM 스택 $3,000~5,000짜리를 플래시로 대체하면 데이터센터 메모리 원가가 혁명적으로 줄어드는 거예요. 이게 상용화되면 Marvell이 AI 메모리 인프라의 핵심이 되는 거죠.", createdAt: T16J - m(15), likes: 71 },
-    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "BAM Missouri DC 투자랑 MEXT 인수가 같은 날인 게 우연이 아니에요. MEXT 기술을 그 DC에 직접 적용하는 게 계획인 거죠. 자사 인프라로 검증되면 외부 판매로 가는 게 전형적인 패턴이에요.", createdAt: T16J - m(8), likes: 56 },
+    { id: 1, nickname: "익명_8374", holdingLabel: "관심종목", content: "HBM 스택 $3,000~5,000짜리를 플래시로 대체하면 데이터센터 메모리 원가가 혁명적으로 줄어드는 거예요. Meta가 인수했다는 게 Llama 추론 메모리 비용 직접 줄이려는 거고 이게 상용화되면 Marvell이 그 수혜를 받는 거죠.", createdAt: T16J - m(15), likes: 71 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "Meta MTIA 칩 파트너가 Marvell이잖아요. Meta가 MEXT까지 인수하면 MTIA + MEXT 기술 결합이 자연스럽게 이뤄지는 거예요. Marvell 스토리지 컨트롤러 수요가 늘어나는 구조죠.", createdAt: T16J - m(8), likes: 56 },
     { id: 3, nickname: "익명_3849", holdingLabel: "관심종목", content: "삼성·SK HBM 사업에 장기 위협이에요. 아직 상용화 전이지만 기술이 검증되면 HBM 수요 성장 스토리에 의문부호가 붙는 거죠. MU 투자자들도 같이 봐야 할 것 같아요.", createdAt: T16J - m(2), likes: 44 },
   ],
   241: [
-    { id: 1, nickname: "익명_5192", holdingLabel: "관심종목", content: "수직 통합 전략이 AI 인프라에서 가장 강력한 해자예요. 기술 확보 → 자체 적용 → 비용 절감 → 외부 판매 사이클이 성공하면 Marvell 비즈니스 모델 자체가 달라지는 거죠.", createdAt: T16J - m(29), likes: 59 },
-    { id: 2, nickname: "익명_7392", holdingLabel: "관심종목", content: "ASIC 설계 + 스토리지 컨트롤러 + MEXT 메모리 최적화 합치면 AI 추론 인프라 풀 스택 솔루션이에요. 데이터센터 고객 입장에서 원스톱으로 갈 수 있으면 수주 경쟁력이 완전히 달라지죠.", createdAt: T16J - m(15), likes: 47 },
-    { id: 3, nickname: "익명_9183", holdingLabel: "관심종목", content: "Missouri DC 수십억 투자는 작은 숫자가 아니에요. BAM이 AI 인프라에 진심이라는 거고 MEXT 기술이 실제로 작동한다는 확신이 있다는 거잖아요.", createdAt: T16J - m(6), likes: 36 },
+    { id: 1, nickname: "익명_5192", holdingLabel: "관심종목", content: "Meta가 기술 확보 → 자체 Llama 인프라 적용 → 비용 절감 → 경쟁력 강화 사이클을 노리는 거예요. Marvell이 MTIA 파트너라는 게 이 그림에서 핵심 연결고리죠.", createdAt: T16J - m(29), likes: 59 },
+    { id: 2, nickname: "익명_7392", holdingLabel: "관심종목", content: "Meta MTIA + MEXT 플래시 메모리 최적화 결합하면 AI 추론 인프라 비용 혁명이에요. Marvell이 ASIC 설계 + 스토리지 컨트롤러 다 갖고 있으니까 풀 스택 솔루션 공급자가 되는 거죠.", createdAt: T16J - m(15), likes: 47 },
+    { id: 3, nickname: "익명_9183", holdingLabel: "관심종목", content: "Meta가 AI 메모리 스타트업 직접 인수한다는 게 그만큼 AI 추론 메모리 비용이 크다는 거예요. MEXT 기술이 검증되면 외부 판매도 가능하고 Marvell이 그 채널이 될 수 있어요.", createdAt: T16J - m(6), likes: 36 },
   ],
   242: [
     { id: 1, nickname: "익명_4829", holdingLabel: "관심종목", content: "IPO 이후에도 $172→$179 올라가는 게 기관들이 IPO 직후 매집하는 패턴이에요. 대형 IPO는 상장 후 첫 3개월이 기관 포지션 구축 시기라서 주가 지지가 강하죠.", createdAt: T16J - m(9), likes: 87 },

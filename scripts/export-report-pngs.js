@@ -52,7 +52,7 @@ const PAIRS = [
   { ko: 'nvda-net-income-2029-20260616.svg',          en: 'nvda-net-income-2029-20260616-en.svg',          label: 'NVDA_순이익210B',      date: '20260616' },
   { ko: 'nvda-google-samsung-tpu-20260616.svg',       en: 'nvda-google-samsung-tpu-20260616-en.svg',       label: 'NVDA_GoogleTPU',       date: '20260616' },
   { ko: 'amd-q1-2026-20260616.svg',                   en: 'amd-q1-2026-20260616-en.svg',                   label: 'AMD_Q1실적',           date: '20260616' },
-  { ko: 'mrvl-bam-mext-20260616.svg',                 en: 'mrvl-bam-mext-20260616-en.svg',                 label: 'MRVL_BAMEXT인수',      date: '20260616' },
+  { ko: 'mrvl-bam-mext-20260616.svg',                 en: 'mrvl-bam-mext-20260616-en.svg',                 label: 'MRVL_MetaMEXT인수',    date: '20260616' },
   { ko: 'spcx-ipo-857b-20260616.svg',                 en: 'spcx-ipo-857b-20260616-en.svg',                 label: 'SPCX_IPO857B',         date: '20260616' },
   { ko: 'spcx-ai-spend-20260616.svg',                 en: 'spcx-ai-spend-20260616-en.svg',                 label: 'SPCX_AI지출15B',       date: '20260616' },
   { ko: 'spcx-ir-website-20260616.svg',               en: 'spcx-ir-website-20260616-en.svg',               label: 'SPCX_IR웹사이트',      date: '20260616' },
@@ -85,8 +85,17 @@ async function convert(svgFile, pngFile) {
     process.exit(1);
   }
 
+  // 기본값: 오늘 날짜만 내보냄. --all 플래그로 전체 내보내기 가능
+  const exportAll = process.argv.includes('--all');
+  const today = new Date().toISOString().slice(0, 10).replace(/-/g, ''); // 'YYYYMMDD'
+  const targets = exportAll ? PAIRS : PAIRS.filter(p => p.date === today);
+
+  if (!exportAll) {
+    console.log(`오늘 날짜(${today}) 이미지만 내보내기 — 전체 내보내려면 --all 플래그 사용\n`);
+  }
+
   let ok = 0, fail = 0;
-  for (const { ko, en, label, date } of PAIRS) {
+  for (const { ko, en, label, date } of targets) {
     const koOut = path.join(REPORT_DIR, `KO_${label}_${date}.png`);
     try {
       await convert(ko, koOut);

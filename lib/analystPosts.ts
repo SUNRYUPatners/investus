@@ -47,7 +47,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "강남 독수리 #52",
     symbol: "NVDA",
     content:
-      "NVDA 2029 순이익 $210B 전망 체크임. 2025 $58B → 2026E $85B → 2027E $120B → 2028E $165B → 2029E $210B. 4년 CAGR 38%. S&P500 24x PER 대비 현재 NVDA 20x로 저평가 상태 유지 중. 오늘 Google 10세대 TPU 삼성→TSMC 전환 이슈: 단기 TSMC 용량 경합 우려 있지만 CUDA 생태계 전환 비용 때문에 NVDA 수요 직접 영향 없음. 2029 $210B 시나리오 = 현재 시총 기준 P/E 20x 유지 시 목표 시총 $4.2T. 현재 대비 업사이드 확인됨.",
+      "NVDA 2029 순이익 $210B 전망 체크임. 2025 $58B → 2026E $85B → 2027E $120B → 2028E $165B → 2029E $210B. 4년 CAGR 38%. S&P500 24x PER 대비 현재 NVDA 20x로 저평가 상태 유지 중. 오늘 Google 10세대 TPU 삼성 제조(TSMC 포화) 이슈: TSMC가 NVDA·Apple로 꽉 차서 Google이 삼성 선택한 것 = NVDA 납기 영향 오히려 줄어드는 긍정 신호. CUDA 생태계 전환 비용 때문에 NVDA 수요 직접 영향 없음. 2029 $210B 시나리오 = 현재 시총 기준 P/E 20x 유지 시 목표 시총 $4.2T. 현재 대비 업사이드 확인됨.",
     likes: 334,
     comments: 3,
     created_at: new Date(_an - 14 * 60_000).toISOString(),
@@ -69,7 +69,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "여의도 독수리 #8",
     symbol: "MRVL",
     content:
-      "BAM → MEXT 인수 + Missouri AI DC 수십억 투자 동시 발표임. MEXT 기술: 플래시 스토리지를 DRAM급 성능으로 활용. AI 추론 메모리 병목 해소. HBM 스택 $3,000~5,000 대비 플래시 원가 혁신 = 데이터센터 TCO 혁명적 절감. Marvell 시너지: ASIC 설계 + 스토리지 컨트롤러 + MEXT 메모리 최적화 = AI 추론 인프라 풀 스택 솔루션. BAM DC 자체 적용 → 검증 후 외부 판매 경로. 삼성·SK하이닉스 HBM 장기 위협 시나리오. MRVL 밸류 체인 상 수혜가 가장 직접적임.",
+      "Meta → MEXT 인수 발표임. MEXT 기술: 플래시 스토리지를 DRAM급 성능으로 활용. AI 추론 메모리 병목 해소. HBM 스택 $3,000~5,000 대비 플래시 원가 혁신 = 데이터센터 TCO 혁명적 절감. Meta 인수 동기: Llama AI 추론 메모리 비용 직접 절감. Marvell 시너지: Meta MTIA 칩 파트너 Marvell + MEXT 기술 결합 = AI 추론 인프라 풀 스택 솔루션. Meta 자체 적용 → 검증 후 외부 판매 가능성. 삼성·SK하이닉스 HBM 장기 위협 시나리오. MRVL 밸류 체인 상 수혜가 가장 직접적임.",
     likes: 276,
     comments: 3,
     created_at: new Date(_an - 27 * 60_000).toISOString(),
@@ -795,7 +795,7 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   ],
   [-68]: [
     { alias: "판교 황소 #31", content: "$58B→$210B 4년 경로가 설득력 있는 이유는 수요 기반이 이미 깔렸기 때문임. 빅테크 CAPEX가 2027년까지 연 $200B+ 유지되면 NVDA 수요는 보장된 거임.", created_at: new Date(_an - 13 * 60_000).toISOString() },
-    { alias: "을지로 사자 #77", content: "Google TPU TSMC 전환이 NVDA한테 직접 영향은 없음. CUDA 생태계 전환 비용이 수년치 GPU 구매 비용보다 크기 때문에 빅테크가 단기 NVDA 줄이긴 불가능.", created_at: new Date(_an - 7 * 60_000).toISOString() },
+    { alias: "을지로 사자 #77", content: "Google이 TSMC 못 써서 삼성으로 간 게 NVDA한테 오히려 긍정임. TSMC 용량 경합 상대가 줄어드는 거라서 납기 안정성이 높아지는 거임. CUDA 생태계 전환 비용도 커서 단기 NVDA 수요 감소 없음.", created_at: new Date(_an - 7 * 60_000).toISOString() },
     { alias: "서초 매 #64", content: "현재 PER 20x가 S&P500 24x보다 낮다는 게 계속 나오는데 결국 EPS 성장이 이 구간 벗어나게 할 것임. 재레이팅 시점이 언제냐가 포인트임.", created_at: new Date(_an - 2 * 60_000).toISOString() },
   ],
   [-67]: [
@@ -804,9 +804,9 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
     { alias: "광화문 늑대 #69", content: "게이밍 -30%는 콘솔 사이클임. PS6 나오면 반등하는 거라서 AMD 전체 논리를 훼손하는 요인이 아님. DC 성장이 지배적인 스토리임.", created_at: new Date(_an - 3 * 60_000).toISOString() },
   ],
   [-66]: [
-    { alias: "판교 황소 #31", content: "HBM 스택 $3,000~5,000을 플래시로 대체하면 데이터센터 TCO 혁명임. 이게 상용화되면 HBM 공급사들 장기 사업 모델이 위협받는 거임. Marvell이 그 수혜를 가져가는 구조.", created_at: new Date(_an - 26 * 60_000).toISOString() },
-    { alias: "서초 매 #64", content: "BAM DC 자체 적용 → 검증 → 외부 판매가 전형적인 인프라 기업 확장 패턴임. Marvell ASIC + MEXT 결합이 AI 추론 인프라 풀 스택이 되면 수주 경쟁력 압도적임.", created_at: new Date(_an - 15 * 60_000).toISOString() },
-    { alias: "여의도 독수리 #8", content: "Missouri DC 수십억 투자가 이미 실행 확약임. 자기 DC에 MEXT 기술 직접 쓴다는 게 기술 신뢰성 가장 강한 증거임. 영업보다 사용이 먼저임.", created_at: new Date(_an - 6 * 60_000).toISOString() },
+    { alias: "판교 황소 #31", content: "HBM 스택 $3,000~5,000을 플래시로 대체하면 데이터센터 TCO 혁명임. 이게 상용화되면 HBM 공급사들 장기 사업 모델이 위협받는 거임. Marvell이 Meta MTIA 파트너로서 그 수혜를 가져가는 구조.", created_at: new Date(_an - 26 * 60_000).toISOString() },
+    { alias: "서초 매 #64", content: "Meta 자체 Llama 인프라 적용 → 검증 → 외부 판매가 가능한 패턴임. Marvell ASIC + MEXT 결합이 AI 추론 인프라 풀 스택이 되면 Meta 이외 고객 수주 경쟁력도 압도적임.", created_at: new Date(_an - 15 * 60_000).toISOString() },
+    { alias: "여의도 독수리 #8", content: "Meta가 직접 인수한다는 게 기술 신뢰성의 가장 강한 증거임. 빅테크 인수 = 기술 검증 완료 신호. Marvell 입장에서는 Meta 생태계 깊숙이 들어가는 거임.", created_at: new Date(_an - 6 * 60_000).toISOString() },
   ],
 
   // ── 2026-06-15 신규 ──────────────────────────────────────────────────────

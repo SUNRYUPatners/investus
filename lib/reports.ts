@@ -2359,8 +2359,8 @@ export const SEED_REPORTS: Report[] = [
   {
     id:            "seed-199",
     title:         "TSLA Cybercab EPA인증 · NVDA $210B순이익전망 · AMD Q1 +38% · MRVL MEXT인수 · SPCX IPO $85.7B — 6/16 요약",
-    summary:       "TSLA Cybercab EPA 공식 인증(FWD·65kWh·3.99s·416mi) + Cybertruck 150대 목격 + 모델Y 일본 수입차 1위 · NVDA 2029 순이익 $210B 전망 + Google→삼성 10세대 TPU TSMC 제조 · AMD Q1 매출 $10.3B(+38%) DC $5.8B(+57%) · MRVL BAM→MEXT 인수 플래시→DRAM급 AI메모리 · SPCX IPO $85.7B 역대 최대 + AI $15B/yr + IR웹사이트 오픈 + 쿠바 Polymarket 63% — 2026.06.16 핵심",
-    body:          "■ 오늘의 핵심 (비주얼 요약 이미지를 확인하세요)\n\n🚗 TSLA Cybercab EPA 공식 인증 — FWD·65kWh·3.99s·0-60·416mi EPA·375mi 고속도로 · 역사상 최고효율 EV 궤도\n\n🚗 TSLA Cybertruck 150대 기가텍사스 목격 · 모델Y 중국산 일본 수입차 1위(5월) · 기가상하이 5월 생산 2025 전체월 최고\n\n🔵 NVDA 2029 순이익 $210B 전망($58B→$210B) · Google→삼성 10세대 TPU TSMC 전환 제조\n\n🔴 AMD Q1 2026 매출 $10.3B(+38%) · DC $5.8B(+57%) · 순이익 $1.4B(+94%) 어닝 서프라이즈\n\n🟣 MRVL BAM→MEXT 인수 — 플래시→DRAM급 AI메모리 병목 해소 기술 + Missouri AI DC 수십억 투자\n\n🚀 SPCX IPO $85.7B 역대 최대 확정($179.02) + AI 컴퓨팅 $15B/yr + IR 웹사이트 공식 오픈 + 쿠바 군사행동 Polymarket 63%(+23pp)",
+    summary:       "TSLA Cybercab EPA 공식 인증(FWD·65kWh·3.99s·416mi) + Cybertruck 150대 목격 + 모델Y 일본 수입차 1위 · NVDA 2029 순이익 $210B 전망 + Google 10세대 TPU 삼성 제조(TSMC 포화) · AMD Q1 매출 $10.3B(+38%) DC $5.8B(+57%) · MRVL Meta→MEXT 인수 플래시→DRAM급 AI메모리 · SPCX IPO $85.7B 역대 최대 + AI $15B/yr + IR웹사이트 오픈 + 쿠바 Polymarket 63% — 2026.06.16 핵심",
+    body:          "■ 오늘의 핵심 (비주얼 요약 이미지를 확인하세요)\n\n🚗 TSLA Cybercab EPA 공식 인증 — FWD·65kWh·3.99s·0-60·416mi EPA·375mi 고속도로 · 역사상 최고효율 EV 궤도\n\n🚗 TSLA Cybertruck 150대 기가텍사스 목격 · 모델Y 중국산 일본 수입차 1위(5월) · 기가상하이 5월 생산 2025 전체월 최고\n\n🔵 NVDA 2029 순이익 $210B 전망($58B→$210B) · Google 10세대 TPU 삼성 제조(TSMC 포화, 삼성 선택)\n\n🔴 AMD Q1 2026 매출 $10.3B(+38%) · DC $5.8B(+57%) · 순이익 $1.4B(+94%) 어닝 서프라이즈\n\n🟣 MRVL Meta→MEXT 인수 — 플래시→DRAM급 AI메모리 병목 해소 · Meta MTIA + Marvell 시너지\n\n🚀 SPCX IPO $85.7B 역대 최대 확정($179.02) + AI 컴퓨팅 $15B/yr + IR 웹사이트 공식 오픈 + 쿠바 군사행동 Polymarket 63%(+23pp)",
     category:      "특집",
     categoryColor: "mint",
     subject:       "📋 6/16 시장 한장 요약",
@@ -2464,9 +2464,9 @@ export const SEED_REPORTS: Report[] = [
 
   {
     id:            "seed-192",
-    title:         "Google, 10세대 TPU를 삼성이 아닌 TSMC에서 제조 — NVIDIA 수요에 간접 영향",
-    summary:       "Google이 차세대 10세대 TPU(Tensor Processing Unit) 제조를 삼성에서 TSMC로 전환한 것으로 알려졌습니다. TSMC 파운드리 수주 확대로 NVIDIA GPU와의 제조 경쟁이 심화될 수 있습니다.",
-    body:          "■ 핵심 사실\n\n• Google 10세대 TPU: 삼성 파운드리 → TSMC 전환 제조\n• TPU는 Google의 AI 학습·추론 전용 커스텀 칩\n• TSMC는 NVIDIA GPU의 주요 파운드리 파트너\n\n■ Google TPU 배경\n\n• TPU v1(2016) 이후 세대별 성능 개선 지속\n• 내부용 + Google Cloud TPU Pod 제공\n• 최신 세대: AI 학습 비용·속도 대폭 개선\n\n■ TSMC 전환 의미\n\n• 삼성 수율 이슈 + TSMC 공정 우위 → 전환 결정\n• TSMC 파운드리 수요 증가 = 설비 투자 확대 압력\n• NVIDIA, Apple, AMD, Qualcomm 모두 TSMC 고객 — 경합 심화\n\n■ NVIDIA에의 영향\n\n• 직접 경쟁: Google TPU는 AI 추론 인프라 자급 → NVIDIA GPU 수요 일부 대체\n• 간접 영향: TSMC 생산 용량 제한 시 NVIDIA GPU 납기 영향 가능성\n• 그러나 NVIDIA GPU는 범용성에서 TPU 대비 우위 유지\n\n■ 투자 시사점\n\n• 커스텀 ASIC 트렌드 확산 = NVIDIA 장기 시장 점유율 점진적 압박\n• 그러나 CUDA 생태계 전환 비용 높아 단기 영향 제한적\n• TSMC 파운드리 수요 증가 = TSM 투자자에 긍정적",
+    title:         "Google, 10세대 TPU 삼성에서 제조 — TSMC 용량 포화로 파운드리 전환",
+    summary:       "Google이 차세대 10세대 TPU(Tensor Processing Unit)를 TSMC가 아닌 삼성 파운드리에서 제조하기로 한 것으로 알려졌습니다. TSMC 생산 용량이 NVIDIA GPU·Apple 칩으로 포화 상태여서 삼성을 대안 파운드리로 선택한 것입니다.",
+    body:          "■ 핵심 사실\n\n• Google 10세대 TPU: TSMC 포화로 삼성 파운드리 선택\n• TPU는 Google의 AI 학습·추론 전용 커스텀 칩\n• TSMC는 NVIDIA GPU·Apple·AMD·Qualcomm으로 이미 용량 포화 상태\n\n■ Google TPU 배경\n\n• TPU v1(2016) 이후 세대별 성능 개선 지속\n• 내부용 + Google Cloud TPU Pod 제공\n• 최신 세대: AI 학습 비용·속도 대폭 개선\n\n■ 삼성 선택 의미\n\n• TSMC 용량 포화 = NVIDIA GPU 수요가 파운드리를 사실상 독점\n• Google이 차선책으로 삼성 파운드리 활용 — 파운드리 시장 재편 신호\n• 삼성, AI 칩 수주 확보 = 기술 격차 축소 및 수익화 기회\n\n■ NVIDIA에의 영향\n\n• 직접 경쟁: Google TPU는 AI 추론 인프라 자급 → NVIDIA GPU 수요 일부 대체\n• 긍정 측면: TSMC 용량을 Google에 뺏기지 않아 NVIDIA 납기 영향 완화\n• NVIDIA GPU는 범용성에서 TPU 대비 우위 — CUDA 생태계 전환 비용 큼\n\n■ 투자 시사점\n\n• 커스텀 ASIC 트렌드 확산 = NVIDIA 장기 시장 점유율 점진적 압박\n• 삼성 파운드리: Google TPU 수주 = AI 칩 실적 개선 첫 신호\n• TSMC: Google 물량 없이도 NVIDIA·Apple로 용량 100% 가동 중",
     category:      "종목분석",
     categoryColor: "blue",
     subject:       "🔵 NVDA·TPU",
@@ -2490,9 +2490,9 @@ export const SEED_REPORTS: Report[] = [
 
   {
     id:            "seed-194",
-    title:         "BAM, AI 메모리 최적화 스타트업 MEXT 인수 — 플래시→DRAM급 성능 기술",
-    summary:       "Brookfield Asset Management(BAM)이 AI 메모리 최적화 스타트업 MEXT를 인수했습니다. MEXT의 핵심 기술은 플래시 스토리지를 DRAM 수준의 성능으로 활용하는 것으로, Marvell(MRVL)의 ASIC·스토리지 생태계와의 시너지가 주목됩니다.",
-    body:          "■ 인수 개요\n\n• 인수자: Brookfield Asset Management (BAM)\n• 피인수자: MEXT (AI Memory Optimization Startup)\n• 분야: AI 추론 메모리 병목 해소 기술\n\n■ MEXT 핵심 기술\n\n• 플래시 스토리지 → DRAM급 성능 구현\n• AI 추론 메모리 병목 문제 해결\n• HBM 없이 데이터센터 TCO 대폭 절감\n• GPU 메모리 대역폭 병목이 AI 성능 결정 → 이를 플래시로 해소\n\n■ AI 메모리 병목 문제\n\n• 현재 AI 추론: DRAM·HBM 속도가 GPU 성능의 병목\n• HBM 1개 스택 = $3,000~$5,000 → 고비용 구조\n• MEXT 기술: 저비용 플래시로 동등 성능 → TCO 혁명적 절감\n\n■ Marvell(MRVL) 시너지\n\n• Marvell: ASIC 설계 + 스토리지 컨트롤러 + 광통신 생태계\n• MEXT의 플래시 최적화 기술 + Marvell 스토리지 컨트롤러 결합 시 강력한 솔루션\n• BAM의 AI DC 투자 인프라와 MRVL 솔루션 연계 가능성\n\n■ BAM Missouri AI DC 투자\n\n• BAM, 같은 날 Missouri 주에 수십억 달러 AI 데이터센터 투자 발표\n• MEXT 기술 → BAM DC에 직접 적용 = 수직 통합 시너지\n\n■ 투자 시사점\n\n• MRVL: MEXT 기술 상업화 시 스토리지 컨트롤러 수요 직접 수혜\n• 플래시 메모리 기술 = HBM 대안 확산 시 삼성·SK하이닉스에 위협\n• BAM AI DC 투자 확대 = 인프라 부품 공급사 전반 수혜 체인",
+    title:         "Meta, AI 메모리 최적화 스타트업 MEXT 인수 — 플래시→DRAM급 성능 기술",
+    summary:       "Meta가 AI 메모리 최적화 스타트업 MEXT를 인수했습니다. MEXT의 핵심 기술은 플래시 스토리지를 DRAM 수준의 성능으로 활용하는 것으로, Marvell(MRVL)의 ASIC·스토리지 생태계와의 시너지가 주목됩니다.",
+    body:          "■ 인수 개요\n\n• 인수자: Meta (소셜미디어·AI 기업)\n• 피인수자: MEXT (AI Memory Optimization Startup)\n• 분야: AI 추론 메모리 병목 해소 기술\n\n■ MEXT 핵심 기술\n\n• 플래시 스토리지 → DRAM급 성능 구현\n• AI 추론 메모리 병목 문제 해결\n• HBM 없이 데이터센터 TCO 대폭 절감\n• GPU 메모리 대역폭 병목이 AI 성능 결정 → 이를 플래시로 해소\n\n■ AI 메모리 병목 문제\n\n• 현재 AI 추론: DRAM·HBM 속도가 GPU 성능의 병목\n• HBM 1개 스택 = $3,000~$5,000 → 고비용 구조\n• MEXT 기술: 저비용 플래시로 동등 성능 → TCO 혁명적 절감\n\n■ Meta의 인수 동기\n\n• Meta: Llama 시리즈 AI 추론 인프라에 막대한 투자 중\n• AI 추론 메모리 비용 절감 = 직접 운영 비용 절감\n• MTIA(Meta Training and Inference Accelerator) + MEXT 기술 결합 시너지\n• Marvell이 Meta MTIA 칩 설계 파트너 — 생태계 시너지 강화\n\n■ Marvell(MRVL) 시너지\n\n• Marvell: ASIC 설계 + 스토리지 컨트롤러 + 광통신 생태계\n• MEXT의 플래시 최적화 기술 + Marvell 스토리지 컨트롤러 결합 시 강력한 솔루션\n• Meta MTIA 칩 파트너로 Marvell이 이미 협력 — MEXT 기술 통합 시 추가 수혜\n\n■ 투자 시사점\n\n• MRVL: MEXT 기술 상업화 시 스토리지 컨트롤러 수요 직접 수혜\n• 플래시 메모리 기술 = HBM 대안 확산 시 삼성·SK하이닉스에 위협\n• Meta AI 추론 인프라 비용 절감 → Llama 서비스 경쟁력 강화",
     category:      "종목분석",
     categoryColor: "purple",
     subject:       "🟣 MRVL·AI메모리",
