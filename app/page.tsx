@@ -18,6 +18,7 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
+      <h1 className="sr-only">인베스트어스(Investus) — 미국주식 투자 플랫폼 | 실시간 시세 · S&amp;P500 · NASDAQ · 투자 리포트</h1>
       <Header />
       {/* 티커 테이프: LiveMarket이 localStorage 업데이트하면 자동 동기화 */}
       <TickerTape />
