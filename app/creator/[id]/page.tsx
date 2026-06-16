@@ -7,7 +7,6 @@ import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen,
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { Header } from "@/components/Header";
 import { contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
-import { getSupabase } from "@/lib/supabase";
 
 const ACCOUNT = { bank: "카카오뱅크", number: "3333-22-2070396", holder: "류현우" };
 
@@ -462,7 +461,6 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
   const [error, setError] = useState(false);
   const touchRef = useRef<{ x: number; y: number } | null>(null);
   const pageCache = useRef<Map<number, string>>(new Map());
-  const tokenRef = useRef<string | null>(null);
   const paragraphs = (content.body ?? "").split(/\n+/).filter(Boolean);
   const hasPdf = !!content.pdfPath;
 
@@ -473,12 +471,8 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
   const fetchPage = useCallback(async (p: number): Promise<string> => {
     const cached = pageCache.current.get(p);
     if (cached) return cached;
-    const headers: HeadersInit = tokenRef.current
-      ? { Authorization: `Bearer ${tokenRef.current}` }
-      : {};
     const r = await fetch(
-      `/api/creator/pdf-page?path=${encodeURIComponent(content.pdfPath!)}&page=${p}`,
-      { headers }
+      `/api/creator/pdf-page?path=${encodeURIComponent(content.pdfPath!)}&page=${p}`
     );
     if (!r.ok) throw new Error(`${r.status}`);
     const tp = r.headers.get("X-Total-Pages");
@@ -489,19 +483,12 @@ function EbookReaderModal({ content, onClose }: { content: CreatorContent; onClo
     return url;
   }, [content.pdfPath]);
 
-  // Load current page — token is fetched first to avoid race condition
+  // Load current page
   useEffect(() => {
     if (!hasPdf || !content.pdfPath) return;
 
     let cancelled = false;
     (async () => {
-      // Fetch token before first request (fast: reads from localStorage)
-      if (!tokenRef.current) {
-        const { data: { session } } = await getSupabase().auth.getSession();
-        if (cancelled) return;
-        tokenRef.current = session?.access_token ?? null;
-      }
-
       const cached = pageCache.current.get(page);
       if (cached) {
         if (!cancelled) { setImgSrc(cached); setLoading(false); setError(false); }

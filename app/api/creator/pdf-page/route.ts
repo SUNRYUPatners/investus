@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import path from "path";
-import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
+import { getAdminSupabase } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 // Extend timeout for PDF rendering (default 300s on Vercel)
@@ -10,9 +10,6 @@ const BUCKET = "creator-pdfs";
 const SCALE = 1.8; // render quality (higher = sharper but slower)
 
 export async function GET(req: NextRequest) {
-  const authUser = await getUserFromRequest(req);
-  if (!authUser) return new Response("Unauthorized", { status: 401 });
-
   const url = new URL(req.url);
   const pdfPath = url.searchParams.get("path");
   const page = Math.max(1, parseInt(url.searchParams.get("page") ?? "1", 10));
