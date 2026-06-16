@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg9en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg9en)" rx="16"/>
+  <rect x="20" y="18" width="80" height="26" rx="6" fill="#fb923c" opacity="0.2"/>
+  <text x="60" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#fb923c">MACRO</text>
+  <text x="112" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">Jun 17, 2026 · Oil</text>
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#f1f5f9">Iran Tanker Passes Strait of Hormuz</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#fb923c">Oil Drops Below $50</text>
+  <text x="300" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">Trump "Lifts Blockade" — As Predicted</text>
+  <rect x="40" y="134" width="520" height="1" fill="#2a1000" opacity="0.8"/>
+  <rect x="40" y="148" width="4" height="16" rx="2" fill="#fb923c"/>
+  <text x="52" y="160" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Iranian tanker transits Strait of Hormuz — immediately after Trump lifts blockade</text>
+  <rect x="40" y="172" width="4" height="16" rx="2" fill="#fb923c"/>
+  <text x="52" y="184" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Trump: "It happened just as I predicted" — crude supply normalization signal</text>
+  <rect x="40" y="196" width="4" height="16" rx="2" fill="#fb923c"/>
+  <text x="52" y="208" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">WTI falls below $50 — down 44% from 2024 peak of $90</text>
+  <rect x="40" y="220" width="520" height="1" fill="#1e293b"/>
+  <text x="40" y="244" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">Market Impact</text>
+  <rect x="40" y="254" width="240" height="90" rx="10" fill="#00e5a0" opacity="0.05"/>
+  <rect x="40" y="254" width="240" height="90" rx="10" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.2"/>
+  <text x="160" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">Winners</text>
+  <text x="60" y="298" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">✓ Airlines/Transport: lower fuel costs</text>
+  <text x="60" y="316" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">✓ CPI drop → rate cut expectations</text>
+  <text x="60" y="334" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">✓ ICE vs EV competitiveness narrows</text>
+  <rect x="320" y="254" width="240" height="90" rx="10" fill="#ef4444" opacity="0.05"/>
+  <rect x="320" y="254" width="240" height="90" rx="10" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.2"/>
+  <text x="440" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#ef4444">Losers</text>
+  <text x="340" y="298" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">✗ XOM · CVX · COP energy stocks</text>
+  <text x="340" y="316" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">✗ Saudi Aramco revenue hit</text>
+  <text x="340" y="334" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">✗ Shale breakeven levels threatened</text>
+  <text x="300" y="382" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Twitter Breaking News / WTI Futures Data 2026.06.17</text>
+</svg>

@@ -58,6 +58,20 @@ const PAIRS = [
   { ko: 'spcx-ir-website-20260616.svg',               en: 'spcx-ir-website-20260616-en.svg',               label: 'SPCX_IR웹사이트',      date: '20260616' },
   { ko: 'spcx-cuba-polymarket-20260616.svg',          en: 'spcx-cuba-polymarket-20260616-en.svg',          label: 'SPCX_쿠바Polymarket',  date: '20260616' },
   { ko: 'summary-20260616.svg',                       en: 'summary-20260616-en.svg',                       label: '6월16일_요약',         date: '20260616' },
+
+  // ── 2026-06-17 ─────────────────────────────────────────────────────────
+  { ko: 'spcx-ron-baron-1b-20260617.svg',             en: 'spcx-ron-baron-1b-20260617-en.svg',             label: 'SPCX_RonBaron1B',      date: '20260617' },
+  { ko: 'spcx-cursor-9b-20260617.svg',                en: 'spcx-cursor-9b-20260617-en.svg',                label: 'SPCX_Cursor9B',        date: '20260617' },
+  { ko: 'spcx-financials-2025-20260617.svg',          en: 'spcx-financials-2025-20260617-en.svg',          label: 'SPCX_FY2025실적',      date: '20260617' },
+  { ko: 'spcx-index-inclusion-20260617.svg',          en: 'spcx-index-inclusion-20260617-en.svg',          label: 'SPCX_인덱스편입',      date: '20260617' },
+  { ko: 'tsla-ron-baron-5t-robotaxi-20260617.svg',    en: 'tsla-ron-baron-5t-robotaxi-20260617-en.svg',    label: 'TSLA_RonBaron5T로보택시', date: '20260617' },
+  { ko: 'tsla-goldman-q2-20260617.svg',               en: 'tsla-goldman-q2-20260617-en.svg',               label: 'TSLA_GoldmanQ2',       date: '20260617' },
+  { ko: 'tsla-fsd-taiwan-20260617.svg',               en: 'tsla-fsd-taiwan-20260617-en.svg',               label: 'TSLA_FSD대만',         date: '20260617' },
+  { ko: 'amd-nvda-ecosystem-20260617.svg',            en: 'amd-nvda-ecosystem-20260617-en.svg',            label: 'AMD_NVDA생태계',       date: '20260617' },
+  { ko: 'oil-iran-50b-20260617.svg',                  en: 'oil-iran-50b-20260617-en.svg',                  label: '유가_이란호르무즈',    date: '20260617' },
+  { ko: 'tsmc-amkor-partnership-20260617.svg',        en: 'tsmc-amkor-partnership-20260617-en.svg',        label: 'TSMC_AMKOR10년',       date: '20260617' },
+  { ko: 'us-market-vs-gdp-20260617.svg',              en: 'us-market-vs-gdp-20260617-en.svg',              label: '미국시장_GDP비교',     date: '20260617' },
+  { ko: 'summary-20260617.svg',                       en: 'summary-20260617-en.svg',                       label: '6월17일_요약',         date: '20260617' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

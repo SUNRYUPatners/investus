@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bg8en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bg8en)" rx="16"/>
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#f87171" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f87171">AMD</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">vs NVIDIA Ecosystem</text>
+  <text x="580" y="36" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa">NVDA</text>
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">AMD CEO: $4,499 Mac Mini Replaces</text>
+  <text x="300" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">NVIDIA Cloud AI Subscription — Live Demo</text>
+  <rect x="40" y="112" width="520" height="1" fill="#1e293b" opacity="0.8"/>
+  <rect x="40" y="122" width="245" height="200" rx="12" fill="#60a5fa" opacity="0.05"/>
+  <rect x="40" y="122" width="245" height="200" rx="12" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+  <text x="162" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa">NVIDIA Cloud</text>
+  <text x="162" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#60a5fa">$2,800</text>
+  <text x="162" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">per user / month</text>
+  <text x="162" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">$33,600/user annually</text>
+  <text x="162" y="233" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">H100 GPU cloud subscription</text>
+  <text x="162" y="251" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Recurring monthly cost</text>
+  <text x="162" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">1,000s employees = $100Ms/yr</text>
+  <text x="162" y="288" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Locked into CUDA ecosystem</text>
+  <text x="162" y="308" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#f87171">LOCK-IN STRUCTURE</text>
+  <rect x="315" y="122" width="245" height="200" rx="12" fill="#f87171" opacity="0.05"/>
+  <rect x="315" y="122" width="245" height="200" rx="12" fill="none" stroke="#f87171" stroke-width="1" opacity="0.3"/>
+  <text x="437" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f87171">AMD Local Inference</text>
+  <text x="437" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#f87171">$4,499</text>
+  <text x="437" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">one-time / Mac Mini</text>
+  <text x="437" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">= 1.6 months of cloud cost</text>
+  <text x="437" y="233" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Local AI inference on-device</text>
+  <text x="437" y="251" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Zero monthly subscription</text>
+  <text x="437" y="269" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Data never leaves the device</text>
+  <text x="437" y="287" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">AMD GPU ecosystem</text>
+  <text x="437" y="308" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">ESCAPE LOCK-IN</text>
+  <circle cx="300" cy="222" r="20" fill="#1e293b"/>
+  <text x="300" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e2e8f0">VS</text>
+  <rect x="40" y="338" width="520" height="1" fill="#1e293b"/>
+  <rect x="40" y="350" width="4" height="16" rx="2" fill="#f87171"/>
+  <text x="52" y="362" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">AMD CEO Lisa Su demoed this live at Computex 2026 — industry shock</text>
+  <rect x="40" y="376" width="4" height="16" rx="2" fill="#60a5fa"/>
+  <text x="52" y="388" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">NVIDIA ecosystem: all 3rd-party enterprise apps are built on CUDA</text>
+  <rect x="40" y="400" width="4" height="16" rx="2" fill="#00e5a0"/>
+  <text x="52" y="412" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">AMD MI300X on-prem expansion → begins eroding cloud NVIDIA subscriptions</text>
+  <text x="300" y="442" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Bull Theory / AMD Computex 2026.06.17</text>
+</svg>

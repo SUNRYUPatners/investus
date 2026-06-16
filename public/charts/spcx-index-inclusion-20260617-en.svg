@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <linearGradient id="bg4en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="500" fill="url(#bg4en)" rx="16"/>
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#c084fc" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#c084fc">SPCX</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">Post-IPO Index Inclusion</text>
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#f1f5f9">SpaceX IPO: Passive Fund Inflow Timeline</text>
+  <text x="300" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">S&amp;P500 · NASDAQ100 · Russell1000 — Trillions in Passive Buying Expected</text>
+  <rect x="40" y="112" width="520" height="1" fill="#2a1a40" opacity="0.8"/>
+  <rect x="40" y="122" width="100" height="24" rx="6" fill="#c084fc" opacity="0.2"/>
+  <text x="90" y="139" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#c084fc">Early-Mid Jul</text>
+  <rect x="148" y="122" width="10" height="24" rx="3" fill="#c084fc" opacity="0.4"/>
+  <text x="166" y="133" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">NASDAQ 100 Inclusion</text>
+  <text x="166" y="149" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$750B market cap threshold · $8B–$11B passive inflow est.</text>
+  <rect x="40" y="162" width="100" height="24" rx="6" fill="#60a5fa" opacity="0.2"/>
+  <text x="90" y="179" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#60a5fa">August</text>
+  <rect x="148" y="162" width="10" height="24" rx="3" fill="#60a5fa" opacity="0.4"/>
+  <text x="166" y="173" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">S&amp;P 500 Review</text>
+  <text x="166" y="189" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Added if profitability criteria met · S&amp;P 500 AUM $6.5T</text>
+  <rect x="40" y="202" width="100" height="24" rx="6" fill="#60a5fa" opacity="0.15"/>
+  <text x="90" y="219" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#60a5fa">September</text>
+  <rect x="148" y="202" width="10" height="24" rx="3" fill="#60a5fa" opacity="0.3"/>
+  <text x="166" y="213" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">S&amp;P 500 Quarterly Rebalance</text>
+  <text x="166" y="229" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Confirmed inclusion triggers quarterly rotation + additional passive buying</text>
+  <rect x="40" y="242" width="100" height="24" rx="6" fill="#fb923c" opacity="0.2"/>
+  <text x="90" y="259" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fb923c">Oct 12</text>
+  <rect x="148" y="242" width="10" height="24" rx="3" fill="#fb923c" opacity="0.4"/>
+  <text x="166" y="253" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Russell 1000 Quarterly Rebalance</text>
+  <text x="166" y="269" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Russell family passive fund inclusion trigger</text>
+  <rect x="40" y="282" width="100" height="24" rx="6" fill="#475569" opacity="0.4"/>
+  <text x="90" y="299" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#94a3b8">Nov–Dec</text>
+  <rect x="148" y="282" width="10" height="24" rx="3" fill="#475569" opacity="0.4"/>
+  <text x="166" y="293" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#94a3b8">Quarterly &amp; Annual Rebalancing Cycle</text>
+  <text x="166" y="309" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Ongoing weight-adjustment buying each quarter</text>
+  <rect x="40" y="322" width="520" height="1" fill="#1e293b"/>
+  <text x="40" y="346" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">Key Numbers</text>
+  <rect x="40" y="356" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="368" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">NASDAQ 100 passive AUM: ~$430B (QQQ alone $280B+)</text>
+  <rect x="40" y="380" width="4" height="16" rx="2" fill="#60a5fa"/>
+  <text x="52" y="392" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">S&amp;P 500 passive AUM: ~$6.5T — largest forced buy in history upon inclusion</text>
+  <rect x="40" y="404" width="4" height="16" rx="2" fill="#fb923c"/>
+  <text x="52" y="416" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">$3.9T indexed to US equities → SpaceX IPO becomes automatic absorption</text>
+  <rect x="40" y="428" width="4" height="16" rx="2" fill="#00e5a0"/>
+  <text x="52" y="440" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Above $1T market cap → auto top-10 NASDAQ 100 weight → max weighting</text>
+  <text x="300" y="482" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Sawyer Meriti / Index Fund Data 2026.06.17</text>
+</svg>
