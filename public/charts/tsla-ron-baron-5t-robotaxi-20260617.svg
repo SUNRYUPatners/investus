@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#bg5)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#00e5a0" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.17</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#f1f5f9">Ron Baron: Tesla 10년 내 $4~5조 기업</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">"머스크 = 레오나르도 다빈치" · 로보택시 725대 운영 중</text>
+
+  <rect x="40" y="114" width="520" height="1" fill="#00332a" opacity="0.8"/>
+
+  <!-- Baron quote box -->
+  <rect x="40" y="124" width="520" height="66" rx="12" fill="#00e5a0" opacity="0.05"/>
+  <rect x="40" y="124" width="520" height="66" rx="12" fill="none" stroke="#00e5a0" stroke-width="1" opacity="0.25"/>
+  <text x="60" y="147" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-style="italic">"Tesla could become a $4–5 trillion company within 10 years.</text>
+  <text x="60" y="165" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-style="italic"> Elon Musk is like Leonardo da Vinci — an entrepreneur, scientist,</text>
+  <text x="60" y="183" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-style="italic"> inventor, and creative genius." — Ron Baron</text>
+
+  <!-- Market cap comparison -->
+  <text x="40" y="216" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">Tesla 기업가치 시나리오</text>
+  <rect x="40" y="222" width="520" height="1" fill="#1e293b"/>
+
+  <text x="40" y="248" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">현재 시총 (2026.06)</text>
+  <rect x="200" y="236" width="110" height="18" rx="4" fill="#475569" opacity="0.5"/>
+  <text x="536" y="249" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">~$1.1T</text>
+
+  <text x="40" y="276" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">Ron Baron 목표 (10년)</text>
+  <rect x="200" y="264" width="360" height="18" rx="4" fill="#00e5a0" opacity="0.6"/>
+  <text x="536" y="277" text-anchor="end" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">$4~5T</text>
+
+  <text x="40" y="304" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">현재 대비 업사이드</text>
+  <text x="536" y="305" text-anchor="end" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#00e5a0">+4~5x</text>
+
+  <rect x="40" y="320" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Robotaxi status -->
+  <text x="40" y="344" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">로보택시 현황 (2026.06.17)</text>
+
+  <!-- 4 city boxes -->
+  <rect x="40" y="354" width="115" height="56" rx="8" fill="#1e293b" opacity="0.8"/>
+  <text x="97" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">오스틴</text>
+  <text x="97" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#e2e8f0">1st</text>
+  <text x="97" y="406" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">최초 운영 시작</text>
+
+  <rect x="163" y="354" width="115" height="56" rx="8" fill="#1e293b" opacity="0.8"/>
+  <text x="220" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">댈러스</text>
+  <text x="220" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#e2e8f0">+</text>
+  <text x="220" y="406" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">2차 도시</text>
+
+  <rect x="286" y="354" width="115" height="56" rx="8" fill="#1e293b" opacity="0.8"/>
+  <text x="343" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">휴스턴</text>
+  <text x="343" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#e2e8f0">+</text>
+  <text x="343" y="406" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">3차 도시</text>
+
+  <rect x="409" y="354" width="150" height="56" rx="8" fill="#1e293b" opacity="0.8"/>
+  <text x="484" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700">샌안토니오</text>
+  <text x="484" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#e2e8f0">+</text>
+  <text x="484" y="406" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">4차 도시</text>
+
+  <!-- Total -->
+  <rect x="40" y="420" width="520" height="30" rx="8" fill="#00e5a0" opacity="0.1"/>
+  <text x="300" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#00e5a0">총 725대 FSD Supervised 운영 중 (감독자 동승)</text>
+
+  <text x="300" y="462" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Whole Mars Catalog / Ron Baron CNBC 2026.06.17</text>
+</svg>

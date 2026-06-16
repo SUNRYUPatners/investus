@@ -19,6 +19,51 @@ const _an = Date.now();
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-06-17 신규 ──────────────────────────────────────────────────────
+  {
+    id: -74,
+    alias: "여의도 매 #17",
+    symbol: "SPCX",
+    content:
+      "6/17 SPCX 핵심 4종 세트 정리임. 1) Ron Baron Goldman 통해 $1B 직접 매수 — 'SpaceX는 세상 어떤 기업과 비교 불가, 수천억 달러 수익'. Tesla에서 10배 수익 낸 그가 동일 확신으로 베팅. 2) Cursor 개발사 Anysphere $9B 주식 교환 인수 — 현금 미사용, AI 컴퓨팅 풀 확보 목적, 3Q26 완료. 3) FY2025 재무: 매출 $18.9B(+33%), Starlink 60%($11.3B), 순손실 $2.6B(R&D $8.6B 투자). 4) 인덱스 편입 타임라인: 7월 NASDAQ100($8~11B 패시브) → 8월 S&P500($32B+) → 10월 Russell1000. $3.9T 패시브 자금이 단계적으로 자동 매수. 수급·성장 모두 최고 상태.",
+    likes: 523,
+    comments: 5,
+    created_at: new Date(_an - 3 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -73,
+    alias: "판교 황소 #31",
+    symbol: "TSLA",
+    content:
+      "6/17 테슬라 4중 세트임. 1) Ron Baron '$5T 10년 목표·머스크=다빈치' — Tesla 초기 투자자가 현재 $1.1T에서 4~5배 업사이드 확인. 2) 로보택시 725대 오스틴·댈러스·휴스턴·샌안토니오 동시 운영 중 (감독자 동승). 3) Goldman Sachs Q2 인도 42~43만 전망 — Q1 33만에서 QoQ +27%, 신형 모델Y + 기가상하이 최고생산이 드라이버. 4) FSD Supervised 대만 공식 규제 제출 SAI Level 2 분류. EU(벨기에·네덜란드)와 아시아(대만) 동시 확산 중. FSD 일회성 구매 6/30 종료 전 전환 수요 촉진. 오늘 테슬라 촉매 전부 긍정임.",
+    likes: 441,
+    comments: 4,
+    created_at: new Date(_an - 9 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -72,
+    alias: "강남 독수리 #52",
+    symbol: "AMD",
+    content:
+      "AMD CEO Lisa Su 오늘 공개 시연 임팩트 정리임. $4,499 Mac Mini로 NVIDIA 클라우드 AI 구독 대체 시연. NVIDIA 클라우드: 기업 사용자당 $2,800/월 = 연간 $33,600/인. 3년 기준 NVIDIA $100,800 vs AMD 로컬 $4,499. 절감액 $96,301/인. 기업 1,000명이면 연간 $33.6M 절감 가능한 구조임. 물론 CUDA 전환 비용·소프트웨어 생태계·스케일링 이슈가 있어서 당장 대규모 전환은 어렵지만 MI300X 온프레미스 채택 늘어나면 NVIDIA 클라우드 성장 속도에 압력이 생기는 구조임. AMD의 공세가 분기마다 거세지는 중임.",
+    likes: 312,
+    comments: 3,
+    created_at: new Date(_an - 15 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -71,
+    alias: "서초 매 #64",
+    symbol: null,
+    content:
+      "6/17 매크로 2종 정리임. 1) 유가 $50 하회: 이란 호르무즈 해협 봉쇄 해제 → 이란 유조선 통과 확인. 에너지 인플레 급감 → CPI 하락 → 연준 금리 인하 명분 강화. 에너지주(XOM·CVX) 단기 역풍, 항공·운송 수혜, 성장주·나스닥 순풍. 2) TSMC + AMKOR 10년 파트너십: 미국 내 칩 제조(TSMC 애리조나) + 어드밴스드 패키징(AMKOR 애리조나) 풀 스택 완결. CHIPS Act 정책 목표 달성 가속. NVIDIA AI칩 CoWoS 패키징 공급 안정성 확보. 미국 반도체 공급망 중국 리스크 구조적 차단. TSM·NVDA·AMKR 수혜.",
+    likes: 289,
+    comments: 3,
+    created_at: new Date(_an - 22 * 60_000).toISOString(),
+    liked: false,
+  },
   // ── 2026-06-16 신규 ──────────────────────────────────────────────────────
   {
     id: -70,

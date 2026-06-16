@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bg2)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#c084fc" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#c084fc">SPCX</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2026.06.17</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#f1f5f9">SpaceX, Anysphere(Cursor) 인수</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#c084fc">$9,000,000,000</text>
+  <text x="300" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">AI 코딩 툴 No.1 · 3분기 2026 완료 예정</text>
+
+  <rect x="40" y="134" width="520" height="1" fill="#2a1a40" opacity="0.8"/>
+
+  <!-- Deal structure -->
+  <text x="40" y="158" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">딜 구조</text>
+
+  <rect x="40" y="164" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="176" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">주식 교환 방식 (stock-based merger) — SpaceX 현금 미사용</text>
+
+  <rect x="40" y="188" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="200" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">독점규제 위반 시 $3B 브레이크업 피 — SpaceX가 지급</text>
+
+  <rect x="40" y="212" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="224" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">3분기 2026 완료 목표 — 규제 심사 진행 중</text>
+
+  <rect x="40" y="236" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Strategic rationale -->
+  <text x="40" y="260" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">전략적 의도 — 컴퓨팅 파워 확보</text>
+
+  <!-- Two boxes -->
+  <rect x="40" y="270" width="240" height="110" rx="10" fill="#1e293b" opacity="0.8"/>
+  <text x="160" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#c084fc">Anysphere (Cursor)</text>
+  <text x="160" y="312" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">AI 코딩 툴 1위</text>
+  <text x="160" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">GPU 클러스터 보유</text>
+  <text x="160" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">AI 엔지니어 인재풀</text>
+  <text x="160" y="366" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">코딩 AI 데이터 자산</text>
+
+  <rect x="320" y="270" width="240" height="110" rx="10" fill="#1e293b" opacity="0.8"/>
+  <text x="440" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#c084fc">SpaceX 시너지</text>
+  <text x="440" y="312" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">AI 컴퓨팅 $15B/yr 투자</text>
+  <text x="440" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Starship 설계 AI 자동화</text>
+  <text x="440" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Starlink 위성 SW 최적화</text>
+  <text x="440" y="366" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">GPU 컴퓨팅 풀 통합</text>
+
+  <text x="296" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="900">+</text>
+
+  <text x="300" y="442" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Reuters / Deal Filing 2026.06.17</text>
+</svg>

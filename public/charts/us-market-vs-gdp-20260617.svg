@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bg11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bg11)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="80" height="26" rx="6" fill="#60a5fa" opacity="0.2"/>
+  <text x="60" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa">매크로</text>
+  <text x="112" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">2025 GDP vs 시총 (Goldman)</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">미국 Top 10 기업 시총</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#60a5fa">= 중국 전체 주식시장 초과</text>
+
+  <rect x="40" y="114" width="520" height="1" fill="#1e293b" opacity="0.8"/>
+
+  <!-- Bar chart -->
+  <text x="40" y="138" font-family="Arial,sans-serif" font-size="11" fill="#64748b">2025 GDP / 기업 시총 (조 달러, $T)</text>
+
+  <!-- US GDP -->
+  <text x="40" y="165" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">미국 GDP</text>
+  <rect x="130" y="153" width="432" height="18" rx="4" fill="#475569" opacity="0.5"/>
+  <text x="568" y="166" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$25.3T</text>
+
+  <!-- China GDP -->
+  <text x="40" y="193" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">중국 GDP</text>
+  <rect x="130" y="181" width="306" height="18" rx="4" fill="#475569" opacity="0.4"/>
+  <text x="568" y="194" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$19.4T</text>
+
+  <!-- Top 5 US -->
+  <text x="40" y="221" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">미국 Top5 시총</text>
+  <rect x="130" y="209" width="294" height="18" rx="4" fill="#475569" opacity="0.4"/>
+  <text x="568" y="222" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$18.6T</text>
+
+  <!-- NVIDIA -->
+  <text x="40" y="249" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="700">NVIDIA</text>
+  <rect x="130" y="237" width="90" height="18" rx="4" fill="#60a5fa" opacity="0.5"/>
+  <text x="568" y="250" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">$5.0T</text>
+
+  <!-- Apple -->
+  <text x="40" y="277" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Apple</text>
+  <rect x="130" y="265" width="82" height="18" rx="4" fill="#475569" opacity="0.4"/>
+  <text x="568" y="278" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$4.6T</text>
+
+  <!-- Microsoft -->
+  <text x="40" y="305" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Microsoft</text>
+  <rect x="130" y="293" width="76" height="18" rx="4" fill="#475569" opacity="0.4"/>
+  <text x="568" y="306" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$4.4T</text>
+
+  <!-- TSLA line -->
+  <text x="40" y="333" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">Tesla</text>
+  <rect x="130" y="321" width="22" height="18" rx="4" fill="#00e5a0" opacity="0.4"/>
+  <text x="568" y="334" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">$1.1T</text>
+
+  <rect x="40" y="348" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Key insight -->
+  <rect x="40" y="362" width="4" height="16" rx="2" fill="#60a5fa"/>
+  <text x="52" y="374" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">미국 Top 5 기업 시총 $18.6T = 중국 전체 5.5T개 기업 규모 초과</text>
+
+  <rect x="40" y="388" width="4" height="16" rx="2" fill="#60a5fa"/>
+  <text x="52" y="400" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Apple + Nvidia + Microsoft + Alphabet + Amazon = 세계 2위 경제 규모</text>
+
+  <rect x="40" y="412" width="4" height="16" rx="2" fill="#00e5a0"/>
+  <text x="52" y="424" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">$3.9T 패시브 자금이 미국 지수 편입 기업 자동 흡수 → 미국 시장 지배 지속</text>
+
+  <text x="300" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Goldman Sachs Global Investment Research / IMF 2026</text>
+</svg>

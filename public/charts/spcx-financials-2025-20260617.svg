@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#bg3)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#c084fc" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#c084fc">SPCX</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">FY 2025 재무</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#f1f5f9">SpaceX 2025 전체 연간 재무</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">매출 +33% · 총이익률 49% · 순손실 지속</text>
+
+  <rect x="40" y="114" width="520" height="1" fill="#2a1a40" opacity="0.8"/>
+
+  <!-- 4 metric cards -->
+  <rect x="40" y="124" width="118" height="72" rx="10" fill="#c084fc" opacity="0.08"/>
+  <rect x="40" y="124" width="118" height="72" rx="10" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.3"/>
+  <text x="99" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">매출</text>
+  <text x="99" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#c084fc">$18.9B</text>
+  <text x="99" y="187" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">+33% YoY</text>
+
+  <rect x="168" y="124" width="118" height="72" rx="10" fill="#c084fc" opacity="0.06"/>
+  <rect x="168" y="124" width="118" height="72" rx="10" fill="none" stroke="#475569" stroke-width="1" opacity="0.4"/>
+  <text x="227" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">총이익</text>
+  <text x="227" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#e2e8f0">$9.2B</text>
+  <text x="227" y="187" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">마진 49%</text>
+
+  <rect x="296" y="124" width="118" height="72" rx="10" fill="#ef4444" opacity="0.05"/>
+  <rect x="296" y="124" width="118" height="72" rx="10" fill="none" stroke="#475569" stroke-width="1" opacity="0.4"/>
+  <text x="355" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">매출원가</text>
+  <text x="355" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#e2e8f0">$9.5B</text>
+  <text x="355" y="187" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">원가율 50%</text>
+
+  <rect x="424" y="124" width="118" height="72" rx="10" fill="#ef4444" opacity="0.08"/>
+  <rect x="424" y="124" width="118" height="72" rx="10" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.3"/>
+  <text x="483" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">순손실</text>
+  <text x="483" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#ef4444">-$2.6B</text>
+  <text x="483" y="187" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#ef4444">영업손실</text>
+
+  <!-- Revenue breakdown -->
+  <text x="40" y="222" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">매출 구성 ($18.9B)</text>
+  <rect x="40" y="228" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Starlink -->
+  <text x="40" y="254" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">Starlink</text>
+  <rect x="130" y="242" width="295" height="18" rx="4" fill="#c084fc" opacity="0.7"/>
+  <text x="432" y="254" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">$11.3B  60%</text>
+
+  <!-- Launches -->
+  <text x="40" y="282" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">발사 서비스</text>
+  <rect x="130" y="270" width="98" height="18" rx="4" fill="#475569" opacity="0.6"/>
+  <text x="432" y="282" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">$4.0B   21%</text>
+
+  <!-- Advertising -->
+  <text x="40" y="310" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">광고(X 등)</text>
+  <rect x="130" y="298" width="47" height="18" rx="4" fill="#475569" opacity="0.5"/>
+  <text x="432" y="310" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">$1.8B   10%</text>
+
+  <!-- AI Services -->
+  <text x="40" y="338" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">AI 서비스</text>
+  <rect x="130" y="326" width="47" height="18" rx="4" fill="#475569" opacity="0.4"/>
+  <text x="432" y="338" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">$1.8B    5%</text>
+
+  <!-- Why loss -->
+  <rect x="40" y="362" width="520" height="1" fill="#1e293b"/>
+  <rect x="40" y="372" width="4" height="16" rx="2" fill="#ef4444"/>
+  <text x="52" y="384" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">손실 원인: R&amp;D $8.6B + SG&amp;A $2.6B = 영업비용 $9.3B 과다</text>
+
+  <rect x="40" y="396" width="4" height="16" rx="2" fill="#c084fc"/>
+  <text x="52" y="408" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Starship 개발·Starlink 위성 증설 투자 집중 → 의도된 적자 구조</text>
+
+  <rect x="40" y="420" width="4" height="16" rx="2" fill="#00e5a0"/>
+  <text x="52" y="432" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">Starlink 매출 +33% 성장 지속 시 2027년 흑자 전환 시나리오</text>
+
+  <text x="300" y="462" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: SpaceX FY2025 Financial Data / investingvisuals.io 2026.06.17</text>
+</svg>

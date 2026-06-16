@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#bg6)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#00e5a0" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">Goldman Q2 전망</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#f1f5f9">Goldman Sachs Tesla Q2 인도 전망</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="#00e5a0">420,000 ~ 430,000</text>
+  <text x="300" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">컨센서스 상회 · 강한 Q2 기대</text>
+
+  <rect x="40" y="134" width="520" height="1" fill="#00332a" opacity="0.8"/>
+
+  <!-- Quarterly delivery trend -->
+  <text x="40" y="158" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#64748b">분기별 인도량 추이</text>
+
+  <!-- Q2 2025 -->
+  <text x="40" y="186" font-family="Arial,sans-serif" font-size="12" fill="#64748b">Q2 2025</text>
+  <rect x="130" y="174" width="154" height="18" rx="4" fill="#475569" opacity="0.4"/>
+  <text x="520" y="186" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#64748b">384,358</text>
+
+  <!-- Q3 2025 -->
+  <text x="40" y="214" font-family="Arial,sans-serif" font-size="12" fill="#64748b">Q3 2025</text>
+  <rect x="130" y="202" width="165" height="18" rx="4" fill="#475569" opacity="0.45"/>
+  <text x="520" y="214" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#64748b">462,890</text>
+
+  <!-- Q4 2025 -->
+  <text x="40" y="242" font-family="Arial,sans-serif" font-size="12" fill="#64748b">Q4 2025</text>
+  <rect x="130" y="230" width="142" height="18" rx="4" fill="#475569" opacity="0.4"/>
+  <text x="520" y="242" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#64748b">495,570</text>
+
+  <!-- Q1 2026 -->
+  <text x="40" y="270" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">Q1 2026</text>
+  <rect x="130" y="258" width="84" height="18" rx="4" fill="#475569" opacity="0.35"/>
+  <text x="520" y="270" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#94a3b8">336,681</text>
+
+  <!-- Q2 2026 Goldman -->
+  <text x="40" y="298" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">Q2 2026 (Goldman)</text>
+  <rect x="130" y="286" width="172" height="18" rx="4" fill="#00e5a0" opacity="0.7"/>
+  <text x="520" y="298" text-anchor="end" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">420,000~430,000</text>
+
+  <rect x="40" y="316" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Drivers -->
+  <rect x="40" y="326" width="4" height="16" rx="2" fill="#00e5a0"/>
+  <text x="52" y="338" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">신형 Model Y 인도 본격화 — 80,000대 보너스 주문 소화 중</text>
+
+  <rect x="40" y="350" width="4" height="16" rx="2" fill="#00e5a0"/>
+  <text x="52" y="362" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">기가 상하이 5월 생산 역대 최고 — Q2 공급 뒷받침</text>
+
+  <rect x="40" y="374" width="4" height="16" rx="2" fill="#00e5a0"/>
+  <text x="52" y="386" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">인도 서프라이즈 시 7월 실적 발표에서 마진 가이던스 상향 기대</text>
+
+  <text x="300" y="404" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Goldman Sachs Research 2026.06.17</text>
+</svg>

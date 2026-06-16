@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bg8)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="20" y="18" width="90" height="26" rx="6" fill="#f87171" opacity="0.2"/>
+  <text x="65" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f87171">AMD</text>
+  <text x="122" y="36" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">vs NVIDIA 생태계</text>
+  <text x="580" y="36" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa">NVDA</text>
+
+  <!-- Title -->
+  <text x="300" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">AMD CEO: $4,499 Mac Mini로</text>
+  <text x="300" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">NVIDIA 클라우드 AI 구독 대체 시연</text>
+
+  <rect x="40" y="112" width="520" height="1" fill="#1e293b" opacity="0.8"/>
+
+  <!-- Two column comparison -->
+  <!-- NVIDIA side -->
+  <rect x="40" y="122" width="245" height="200" rx="12" fill="#60a5fa" opacity="0.05"/>
+  <rect x="40" y="122" width="245" height="200" rx="12" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+  <text x="162" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa">NVIDIA 클라우드</text>
+
+  <text x="162" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#60a5fa">$2,800</text>
+  <text x="162" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">월 / 사용자당</text>
+  <text x="162" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">연간 $33,600/인</text>
+  <text x="162" y="233" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">H100 GPU 클라우드 구독</text>
+  <text x="162" y="251" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">매월 지속 발생 비용</text>
+  <text x="162" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">기업 수천 명 = 수억 달러/년</text>
+  <text x="162" y="288" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">CUDA 생태계 종속</text>
+  <text x="162" y="308" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#f87171">LOCK-IN 구조</text>
+
+  <!-- AMD side -->
+  <rect x="315" y="122" width="245" height="200" rx="12" fill="#f87171" opacity="0.05"/>
+  <rect x="315" y="122" width="245" height="200" rx="12" fill="none" stroke="#f87171" stroke-width="1" opacity="0.3"/>
+  <text x="437" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f87171">AMD 로컬 추론</text>
+
+  <text x="437" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#f87171">$4,499</text>
+  <text x="437" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">일회성 / Mac Mini</text>
+  <text x="437" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">= 클라우드 1.6개월치</text>
+  <text x="437" y="233" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">로컬 AI 추론 실행</text>
+  <text x="437" y="251" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">월 구독료 없음</text>
+  <text x="437" y="269" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">데이터 외부 유출 없음</text>
+  <text x="437" y="287" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#64748b">AMD GPU 생태계 활용</text>
+  <text x="437" y="308" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">LOCK-IN 탈출</text>
+
+  <!-- VS badge -->
+  <circle cx="300" cy="222" r="20" fill="#1e293b"/>
+  <text x="300" y="228" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e2e8f0">VS</text>
+
+  <rect x="40" y="338" width="520" height="1" fill="#1e293b"/>
+
+  <!-- Key insight -->
+  <rect x="40" y="350" width="4" height="16" rx="2" fill="#f87171"/>
+  <text x="52" y="362" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">AMD CEO Lisa Su, Computex 2026에서 직접 시연 — 업계 충격</text>
+
+  <rect x="40" y="376" width="4" height="16" rx="2" fill="#60a5fa"/>
+  <text x="52" y="388" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">NVIDIA 생태계: 3rd party 기업 전체 앱이 CUDA 위에 구축됨</text>
+
+  <rect x="40" y="400" width="4" height="16" rx="2" fill="#00e5a0"/>
+  <text x="52" y="412" font-family="Arial,sans-serif" font-size="12" fill="#e2e8f0">AMD MI300X의 On-Prem 확산 → 클라우드 NVIDIA 구독 잠식 시작</text>
+
+  <text x="300" y="442" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">Source: Bull Theory / AMD Computex 2026.06.17</text>
+</svg>
