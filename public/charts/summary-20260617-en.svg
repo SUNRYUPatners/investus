@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 640" width="600" height="640">
+  <defs>
+    <linearGradient id="bgsum17en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="640" fill="url(#bgsum17en)" rx="16"/>
+
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="26" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="#f1f5f9">Jun 17 Market Snapshot</text>
+  <text x="300" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">SPCX · TSLA · AMD · OIL · TSMC</text>
+
+  <!-- SPCX Section -->
+  <rect x="16" y="66" width="568" height="4" rx="2" fill="#c084fc" opacity="0.5"/>
+  <rect x="16" y="70" width="48" height="20" rx="4" fill="#c084fc" opacity="0.2"/>
+  <text x="40" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#c084fc">SPCX</text>
+  <text x="72" y="85" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Ron Baron $1B · Cursor $9B · Revenue $18.9B</text>
+
+  <rect x="22" y="96" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="107" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Ron Baron buys $1B SpaceX via Goldman — "Hundreds of billions profit"</text>
+
+  <rect x="22" y="114" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="125" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">SpaceX acquires Anysphere (Cursor) $9B stock deal — Q3 2026 close</text>
+
+  <rect x="22" y="132" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="143" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">FY2025: Revenue $18.9B (+33%) · Net loss $2.6B · Starlink 60%</text>
+
+  <rect x="22" y="150" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="161" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Post-IPO index timeline: S&amp;P500 · NASDAQ100 · Russell1000 triggers</text>
+
+  <line x1="16" y1="178" x2="584" y2="178" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- TSLA Section -->
+  <rect x="16" y="186" width="568" height="4" rx="2" fill="#00e5a0" opacity="0.5"/>
+  <rect x="16" y="190" width="48" height="20" rx="4" fill="#00e5a0" opacity="0.2"/>
+  <text x="40" y="205" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">TSLA</text>
+  <text x="72" y="205" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Baron $5T · 725 Robotaxis · Goldman Q2 420-430K · FSD Taiwan</text>
+
+  <rect x="22" y="214" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="225" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Ron Baron: Tesla $4~5T in 10 years — "Musk = Leonardo da Vinci"</text>
+
+  <rect x="22" y="232" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="243" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">725 Robotaxis running in Austin, Dallas, Houston, San Antonio</text>
+
+  <rect x="22" y="250" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="261" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Goldman Sachs Q2 delivery: 420~430K — beats consensus</text>
+
+  <rect x="22" y="268" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="279" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">FSD Supervised officially submitted for Taiwan approval — SAI Lv.2</text>
+
+  <line x1="16" y1="296" x2="584" y2="296" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- AMD Section -->
+  <rect x="16" y="304" width="568" height="4" rx="2" fill="#f87171" opacity="0.5"/>
+  <rect x="16" y="308" width="48" height="20" rx="4" fill="#f87171" opacity="0.2"/>
+  <text x="40" y="323" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f87171">AMD</text>
+  <text x="72" y="323" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$4,499 Mac Mini vs NVIDIA Cloud $2,800/month ecosystem</text>
+
+  <rect x="22" y="332" width="3" height="14" rx="1" fill="#f87171"/>
+  <text x="30" y="343" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">AMD CEO Lisa Su: $4,499 Mac Mini replaces NVIDIA cloud AI demo</text>
+
+  <rect x="22" y="350" width="3" height="14" rx="1" fill="#f87171"/>
+  <text x="30" y="361" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">NVIDIA ecosystem: $2,800/user/month — AMD eliminates fee permanently</text>
+
+  <line x1="16" y1="378" x2="584" y2="378" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Macro Section -->
+  <rect x="16" y="386" width="568" height="4" rx="2" fill="#fb923c" opacity="0.5"/>
+  <rect x="16" y="390" width="70" height="20" rx="4" fill="#fb923c" opacity="0.2"/>
+  <text x="51" y="405" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#fb923c">MACRO</text>
+  <text x="94" y="405" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Oil $50 + TSMC·AMKOR 10Y Partnership + US Market vs World GDP</text>
+
+  <rect x="22" y="414" width="3" height="14" rx="1" fill="#fb923c"/>
+  <text x="30" y="425" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Iran tanker through Strait of Hormuz — Trump lifts blockade · Oil below $50</text>
+
+  <rect x="22" y="432" width="3" height="14" rx="1" fill="#fb923c"/>
+  <text x="30" y="443" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">TSMC + AMKOR 10-year deal — US advanced packaging supply chain</text>
+
+  <rect x="22" y="450" width="3" height="14" rx="1" fill="#fb923c"/>
+  <text x="30" y="461" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">US Top 10 market cap exceeds China's entire stock market</text>
+
+  <rect x="0" y="598" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="598" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="624" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — Jun 17, 2026 Market Snapshot</text>
+</svg>
