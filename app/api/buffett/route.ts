@@ -5,6 +5,21 @@ import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
+// 다음 NYSE 장마감(4PM ET) + 1시간 버퍼까지 남은 초 반환
+// 장마감 후엔 다음날 5PM ET까지 캐시
+function secsUntilNextClose(): number {
+  const now = new Date();
+  // ET offset: EDT=-4, EST=-5. 간단히 UTC-4 고정 (EDT 기준, 오차 ±1h 허용)
+  const etMs = now.getTime() - 4 * 3600_000;
+  const et = new Date(etMs);
+  const closeHour = 17; // 5PM ET (마감 후 1h 버퍼)
+  const next = new Date(et);
+  next.setUTCHours(closeHour, 0, 0, 0);
+  if (et.getUTCHours() >= closeHour) next.setUTCDate(next.getUTCDate() + 1);
+  const secs = Math.floor((next.getTime() - et.getTime()) / 1000);
+  return Math.max(secs, 3600); // 최소 1시간
+}
+
 // CF Worker 프록시 — Vercel IP 차단 우회 (YF_PROXY_URL 설정 필수)
 const YF_PROXY = process.env.YF_PROXY_URL ?? "";
 function yfProxyFetch(url: string, init: RequestInit = {}): Promise<Response> {
@@ -122,8 +137,9 @@ export async function GET() {
     // KV에 저장 — API 실패 시 실제 마지막 값 사용 가능
     kvSetDetail(KV_KEY, data as unknown as Record<string, unknown>);
 
+    const ttl = secsUntilNextClose();
     return NextResponse.json(data, {
-      headers: { "Cache-Control": "s-maxage=600, stale-while-revalidate=3600" },
+      headers: { "Cache-Control": `s-maxage=${ttl}, stale-while-revalidate=86400` },
     });
   } catch {
     // 전체 실패 → KV에서 마지막 실제 값 사용
