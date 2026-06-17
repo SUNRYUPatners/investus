@@ -1,24 +1,36 @@
 @AGENTS.md
 
-# ⚠️ 절대 금지 명령어 (관리자 명시 승인 없이 절대 실행 불가)
+# 🚨 절대 금지 명령어 — Claude가 절대로 임의 실행 불가
 
-아래 명령어는 **관리자가 명시적으로 두 번 확인한 경우에만** 실행할 수 있다.
-Claude가 임의로 판단해서 실행하면 코드 전체가 롤백되는 참사가 발생한다.
+아래 명령어는 **관리자가 채팅에서 "확인합니다"를 세 번 명시한 경우에만** 실행할 수 있다.
+Claude가 스스로 판단해서 실행하면 코드 전체가 롤백되는 참사가 발생한다.
+"이게 더 효율적"이라는 판단으로도 절대 실행 불가.
 
 ```
-git reset --hard         ← 절대 금지
-git reset --soft         ← 관리자 승인 필요
-git push --force         ← 절대 금지 (git hook이 차단함)
+git reset --hard         ← 절대 금지 (영구 코드 유실 위험)
+git reset --soft         ← 관리자 3번 확인 필요
+git push --force         ← 절대 금지 (git hook이 차단 + GitHub 보호)
 git push -f              ← 절대 금지
-git rebase               ← 관리자 승인 필요
+git rebase               ← 관리자 3번 확인 필요
 git checkout -- .        ← 절대 금지
 git restore .            ← 절대 금지
 git clean -fd            ← 절대 금지
-git stash drop           ← 관리자 승인 필요
-vercel rollback          ← 관리자 명시 승인 두 번 필요
+git stash drop           ← 관리자 3번 확인 필요
+vercel rollback          ← 절대 금지 (관리자 3번 확인 + 별도 사유 필요)
+npx vercel deploy --prod ← deploy.sh 없이 단독 실행 절대 금지 (GitHub 미동기화로 자동 롤백 발생)
 ```
 
-위 명령어 실행 전 반드시 관리자에게 "이 명령어를 실행하면 X가 삭제됩니다. 진행하시겠습니까?" 라고 먼저 물어봐야 한다.
+## 롤백 요청 프로세스 (이것도 절대 임의 실행 불가)
+
+관리자가 롤백을 원할 경우 아래 절차를 반드시 따른다:
+1. Claude가 "어떤 커밋으로 롤백할지, 어떤 결과가 발생하는지" 먼저 설명
+2. 관리자가 "확인합니다 1" 명시
+3. Claude가 "이 작업은 되돌릴 수 없습니다. 정말 진행하시겠습니까?" 재확인
+4. 관리자가 "확인합니다 2" 명시
+5. Claude가 "최종 확인: [커밋 해시] → 롤백 실행하겠습니다" 공지
+6. 관리자가 "확인합니다 3" 명시 후에만 실행
+
+위 6단계 없이는 어떤 형태의 롤백도 실행하지 않는다.
 
 ---
 
@@ -71,9 +83,11 @@ Vercel이 어떤 이유로든 GitHub에서 재배포 트리거를 받으면 → 
 - `main` 브랜치 삭제 비허용 ✓
 
 ## Vercel 롤백 방지
-- Vercel 대시보드에서의 롤백은 기술적으로 막을 수 없음
-- 단, GitHub을 항상 최신 상태로 유지하면 롤백돼도 즉시 복구 가능
-- Vercel 롤백 버튼 클릭 전 반드시 관리자(나) 직접 승인 필요
+- **`npx vercel deploy --prod` 단독 실행 절대 금지** — GitHub 미동기화 → 나중에 GitHub push 시 자동 구버전 롤백 발생 (실제 발생한 사고)
+- **반드시 `bash scripts/deploy.sh`** — Vercel 배포 + GitHub 푸시 동시에 보장
+- Vercel 대시보드 롤백 버튼: 기술적으로 차단 불가 → 관리자가 직접 클릭하는 것이므로 관리자 책임
+- `vercel rollback` CLI: Claude가 실행하려면 위 6단계 프로세스 필수
+- GitHub이 항상 최신 = Vercel 롤백 후 `bash scripts/deploy.sh` 한 번으로 즉시 복구 가능
 
 ---
 
