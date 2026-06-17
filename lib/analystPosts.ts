@@ -19,6 +19,62 @@ const _an = Date.now();
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-06-18 신규 ──────────────────────────────────────────────────────
+  {
+    id: -79,
+    alias: "마포 수리부엉이 #28",
+    symbol: "TSLA",
+    content:
+      "네덜란드 RDW 딜 플로우 체크해봤는데 생각보다 임팩트가 크다. 1,000회 통제 테스트를 RDW가 직접 돌린 거라서 EU 표준 레퍼런스가 됐어. 독일 KBA, 프랑스 UTAC이 이걸 무시하기 어렵거든. 실무적으로는 Q3 중 독일·프랑스 신청 동시 진행 가능성 높음. EU FSD 티어1 국가 다 열리면 수익 계산이 달라져. 80만 대 × 전환율 15% × $8,000 = $960M 첫해. 구독 전환까지 붙으면 2027년부터 소프트웨어 마진이 자동차 마진 뛰어넘는 시점 나올 수 있음. 오스틴 로보택시 플릿이랑 EU FSD 승인이 동시에 진행 중이라는 게 지금 테슬라 모멘텀의 핵심이야.",
+    likes: 567,
+    comments: 5,
+    created_at: new Date(_an - 4 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -78,
+    alias: "잠실 독수리 #41",
+    symbol: "NVDA",
+    content:
+      "NVDA $25B 채권 딜 보고 한 가지 숫자가 눈에 들어왔어. 자회사 주문 $25B. 외부 투자자도 아니고 NVDA 내부 관계사들이 발행액 전체와 맞먹는 수요를 낸 거야. 이건 내부에서 NVDA 미래 현금흐름에 그만큼 확신이 있다는 신호거든. 겉보기엔 그냥 채권 발행이지만 구조를 보면 '자기 회사 부채에 자회사가 베팅한' 딜이야. PE 24x에서 연간 EPS 성장 50%+ 유지되면 PEG 0.5 수준인데 이 구간에서 이 딜 나온 거. 타이밍이 공교롭지 않아. 메모리 부족 시그널, AI 채권 딜 — 둘 다 같은 방향 가리키고 있음.",
+    likes: 489,
+    comments: 4,
+    created_at: new Date(_an - 11 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -77,
+    alias: "광화문 호랑이 #35",
+    symbol: null,
+    content:
+      "Powell 발언 다시 뜯어봤는데 포워드 가이던스 철회가 단순 불확실성 증가가 아닐 수 있어. '몇 달 후 결정'이라는 표현은 앞으로 모든 FOMC가 데이터 의존 open decision이 된다는 거거든. 이란 합의로 유가 $45~48 시나리오 현실화되면 CPI 경로가 바뀌어. 에너지 디플레이션이 CPI 0.4~0.6pp 끌어내릴 수 있고 그러면 9월 인하 명분이 살아나. -2.8% Fed Day 낙폭이 1994년 이후 최악이라는 거, 1994년 그 이후 어떻게 됐는지 봐야 해. 금리 인상 사이클 마무리 후 시장은 기록적으로 올랐어. 지금은 동결 사이클 마무리 국면이고.",
+    likes: 412,
+    comments: 4,
+    created_at: new Date(_an - 18 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -76,
+    alias: "을지로 황소 #05",
+    symbol: "MU",
+    content:
+      "Micron·SanDisk CEO 동시 경고 — 채널 체크 결과랑 딱 맞아 떨어져서 그냥 지나칠 수가 없었어. NVDA GB200 NVL72 랙 한 대에 HBM3E 1.1TB 들어가거든. 클러스터 1,000랙 기준으로 계산하면 HBM 수요가 어마어마해. 공급은? SK하이닉스가 NVDA 독점 공급 중이고 Micron이 HBM3E 양산 확대 중이지만 CoWoS 패키징 병목이 풀리는 게 선행조건이야. 리드타임 12~18개월 = 지금 주문 → 2027 H1 납품. 가격 협상 지금 일어나고 있는 거야. MU Q4 2026~Q1 2027 실적 재평가 트리거가 이미 당겨진 거고.",
+    likes: 378,
+    comments: 3,
+    created_at: new Date(_an - 25 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -75,
+    alias: "서초 늑대 #58",
+    symbol: "TSLA",
+    content:
+      "Giga Texas Optimus 공장 철골 3층 사진 봤는데, 현장 공정 속도가 예상보다 빠르다. Joe Tegtmeyer가 '3층 이상, 위로 더 보인다'고 했고 크레인 여러 대 동시 작업 중이라는 거야. 내 파트너가 기가텍사스 메인 팩토리 초기 공정 속도랑 비교했는데 오히려 빠른 수준이라고 봤어. Q4 2026 첫 생산 타임라인 지킬 수 있다는 물리적 증거가 쌓이는 중. 현재 Tesla 시총의 60%+가 Optimus + Robotaxi 미래 가치라는 분석이 많은데, 그 근거가 '말'이 아니라 '철골'로 증명되고 있어. 시장이 이 속도를 아직 다 반영 못했다고 봐.",
+    likes: 334,
+    comments: 3,
+    created_at: new Date(_an - 33 * 60_000).toISOString(),
+    liked: false,
+  },
   // ── 2026-06-17 신규 ──────────────────────────────────────────────────────
   {
     id: -74,
@@ -825,6 +881,37 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-06-18 신규 ──────────────────────────────────────────────────────
+  [-79]: [
+    { alias: "판교 황소 #31", content: "EU 80만 대 × 15% 전환 숫자가 보수적이라는 거 동의함. 네덜란드에서 이미 FSD 경험한 사람들이 주변 추천해주면 전환율이 더 빠르게 올라갈 수 있음. 소셜 루프가 생기는 거임.", created_at: new Date(_an - 3 * 60_000).toISOString() },
+    { alias: "강남 여우 #13", content: "독일 KBA가 네덜란드 테스트 결과 레퍼런스로 쓸 수 있다는 거, EU 규제 상호인정 협약 때문에 실제로 가능한 케이스임. 자체 재검증 없이 승인 나올 수 있는 법적 근거가 있어.", created_at: new Date(_an - 90 * 1000).toISOString() },
+    { alias: "마포 팔콘 #57", content: "대만 SAI Level 2 동시 신청이 아시아 루트 개척임. EU + 아시아 동시 진행이면 FSD 글로벌 롤아웃 속도가 작년과 완전히 다른 레벨임.", created_at: new Date(_an - 30 * 1000).toISOString() },
+    { alias: "광화문 곰 #52", content: "오스틴 로보택시 현황은 어때? 플릿 규모가 늘어나는 속도랑 FSD 정확도가 같이 개선되면 유료 서비스 확대 타임라인이 앞당겨질 수 있어.", created_at: new Date(_an - 10 * 1000).toISOString() },
+    { alias: "잠실 여우 #17", content: "FSD 일회성 구매 6/30 종료 전 전환 수요가 이번 RDW 승인 소식으로 유럽에서도 자극받는 거 맞음. 6월 막판 주문 스파이크 나오면 Q2 소프트웨어 수익 깜짝 놀라게 나올 수도 있어.", created_at: new Date(_an - 5 * 1000).toISOString() },
+  ],
+  [-78]: [
+    { alias: "서초 곰 #39", content: "채권 이자비용이 현금 EPS에 영향주는 게 얼마나 되는지 계산해봤어? 분기 $200~300M 이자면 $3B+ 분기 순이익 대비 무시할 수 있는 수준이긴 한데.", created_at: new Date(_an - 9 * 60_000).toISOString() },
+    { alias: "여의도 황소 #51", content: "자회사 $25B 주문이 진짜 핵심임. 외부 기관들도 아니고 NVDA 생태계 내부에서 그 수요가 나왔다는 거. 이건 AI 사이클이 NVDA 안에서 완결되는 구조임.", created_at: new Date(_an - 4 * 60_000).toISOString() },
+    { alias: "판교 사자 #22", content: "ROE 개선 포인트 맞음. 부채로 조달 → 자기자본 유지 → ROE 올라가는 재무 레버리지 구조임. 이자보다 AI 수익률 높다는 확신이 없으면 안 하는 딜이야.", created_at: new Date(_an - 60 * 1000).toISOString() },
+    { alias: "을지로 황소 #05", content: "메모리 부족이랑 세트로 읽히는 게 맞아. NVDA가 더 만들겠다고 자금 조달 = 그만큼 수요가 보장됐다는 거. 두 뉴스가 같은 날 나온 게 우연이 아님.", created_at: new Date(_an - 10 * 1000).toISOString() },
+  ],
+  [-77]: [
+    { alias: "잠실 콘도르 #53", content: "1994년 이후 랠리 데이터 봤는데, 금리 사이클 피크 후 12개월 S&P 수익률이 평균 +18%였어. 지금이 동결 피크라면 역사적 패턴상 내년 이맘때가 기대되는 거임.", created_at: new Date(_an - 16 * 60_000).toISOString() },
+    { alias: "강남 팔콘 #62", content: "이란 유가 하락 + 포워드 가이던스 철회 = 두 가지가 동시에 9월 인하 가능성 높이는 방향임. 시장이 단기 패닉했지만 2~3달 후 회고해보면 매수 기회였다는 평가 나올 것 같음.", created_at: new Date(_an - 8 * 60_000).toISOString() },
+    { alias: "마포 수리부엉이 #28", content: "포워드 가이던스 없다는 게 오히려 데이터가 좋으면 빠르게 인하할 수 있다는 거기도 해. 양날의 검인데, 이란 합의 유가 하락 + CPI 개선이면 긍정적으로 작용하는 쪽임.", created_at: new Date(_an - 2 * 60_000).toISOString() },
+    { alias: "광화문 늑대 #69", content: "VIX 스파이크 구간에 성장주 분할 매수 추가하는 거 고려 중임. 단기 변동성이 중장기 방향을 바꾸지 않는다는 전제라면 지금 레벨은 히스토리컬하게 좋은 진입점이야.", created_at: new Date(_an - 30 * 1000).toISOString() },
+  ],
+  [-76]: [
+    { alias: "판교 표범 #37", content: "CoWoS 병목이 얼마나 심각한지 TSMC 쪽 채널 확인해봤는데 2027년까지 추가 용량 확보 어렵다는 거 맞음. 그러면 HBM 가격 협상력은 공급업체 쪽이 완전히 우위야.", created_at: new Date(_an - 22 * 60_000).toISOString() },
+    { alias: "잠실 독수리 #41", content: "SK하이닉스 HBM 독점 + Micron 확대 = 구조적 공급 부족인데 수요는 계속 늘어남. 가격 사이클이 2022~2023 DRAM 하락 사이클의 정반대임. 지금 사이클이 훨씬 강도가 강한 거임.", created_at: new Date(_an - 11 * 60_000).toISOString() },
+    { alias: "여의도 콘도르 #19", content: "MU가 HBM3E 양산 확대 중이라는 거 Micron CEO가 직접 확인해줬음. SK하이닉스 독점이 조금씩 깨지는 거고 Micron 점유율 올라오면 MU 수익 레버리지가 더 커지는 구조임.", created_at: new Date(_an - 2 * 60_000).toISOString() },
+  ],
+  [-75]: [
+    { alias: "마포 팔콘 #57", content: "기가텍사스 메인 팩토리가 올라가는 속도 기억함. 당시에도 드론으로 주간 진행 상황 봤는데 예상보다 빨랐었어. 이번 Optimus 공장이 같은 속도면 Q4 2026 충분히 가능한 일정임.", created_at: new Date(_an - 30 * 60_000).toISOString() },
+    { alias: "강남 여우 #13", content: "철골 3층 위로 더 올라간다는 게 여러 층 건물이라는 거잖아. 층별 생산 라인 분리해서 로봇 조립 공정 수직화하는 구조 아닐까? 그러면 면적 대비 생산량이 일반 공장의 몇 배임.", created_at: new Date(_an - 16 * 60_000).toISOString() },
+    { alias: "을지로 황소 #05", content: "현재 Tesla 시총 60%가 Optimus + Robotaxi라는 분석 나오는데, 반대로 생각하면 차 사업만으로 $440B 밸류에이션이라는 거임. Optimus 현실화되면 지금 주가는 싼 거임.", created_at: new Date(_an - 5 * 60_000).toISOString() },
+  ],
+
   // ── 2026-06-16 신규 ──────────────────────────────────────────────────────
   [-70]: [
     { alias: "판교 황소 #31", content: "$85.7B IPO가 아람코 $29.4B의 2.9배라는 게 단순 기록이 아님. 전통 에너지 패권에서 우주·AI 패권으로 자본이 이동하는 시대 전환점임. 역사책에 남을 수치.", created_at: new Date(_an - 1 * 60_000).toISOString() },
