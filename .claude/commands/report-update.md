@@ -30,11 +30,15 @@
 - `{ ko: '파일명.svg', en: 'en파일명.svg' or null, label: '라벨', date: 'YYYYMMDD' }` 형식
 - 영어판 없으면 `en: null`
 
-### 6. PNG 내보내기 (당일 이미지만)
-- `node scripts/export-report-pngs.js` 실행 (**인수 없이** — 오늘 날짜만 자동 필터링)
-- **`--all` 플래그 절대 사용 금지** — 이전 날짜 이미지까지 전부 재내보내기되는 낭비
-- 스크립트가 오늘 UTC 날짜를 기준으로 필터링. UTC/KST 차이로 0개 출력되면 --all 대신 PAIRS date 필드를 재확인
-- `/Users/ryu-macmini/Desktop/investus/01.investus 리포트/` 에 저장 확인
+### 6. PNG 내보내기 (당일 신규 이미지만)
+
+> ⛔ **절대 금지**: `--all` 플래그 사용, 이전 날짜 PAIRS 재처리, 여러 날짜 한꺼번에 내보내기
+> ✅ **반드시**: 오늘 날짜 PAIRS만 처리 — `01.investus 리포트/` 폴더에는 오늘 새로 만든 이미지만 추가
+
+- `node scripts/export-report-pngs.js` 실행 (**인수 없이** — 오늘 UTC 날짜로 자동 필터링)
+- **`--all` 플래그 절대 사용 금지** — 이전 날짜(6/13, 6/15, 6/16...) 전부 재내보내기되는 낭비
+- 0개 출력 시 원인: UTC/KST 시차. `--all` 쓰지 말고 PAIRS의 date 필드가 오늘 KST 날짜(예: '20260618')인지 확인
+- `/Users/ryu-macmini/Desktop/investus/01.investus 리포트/` 에 **오늘 날짜 파일만** 추가됐는지 확인
 
 ### 7. 커밋 + 배포
 ```
@@ -47,6 +51,7 @@ bash scripts/deploy.sh
 - 1 리포트 = 1 주제 — 하나의 seed에 여러 주제 섞지 않는다
 - 날짜별 타임스탬프는 상대 오프셋으로 계산 (`_now - N*3600_000`)
 - 배포 전 TypeScript 오류 0개 확인 필수
+- **PNG 내보내기는 오늘 새로 만든 SVG만** — 이전 날짜 이미지 재생성 절대 금지
 
 ## 종토방(wallPosts.ts) 글 작성 규칙
 - 닉네임은 `익명_XXXX` 형식으로 4자리 숫자 무작위하게 배정
