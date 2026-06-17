@@ -81,7 +81,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "여의도 매 #17",
     symbol: "SPCX",
     content:
-      "6/17 SPCX 핵심 4종 세트 정리임. 1) Ron Baron Goldman 통해 $1B 직접 매수 — 'SpaceX는 세상 어떤 기업과 비교 불가, 수천억 달러 수익'. Tesla에서 10배 수익 낸 그가 동일 확신으로 베팅. 2) Cursor 개발사 Anysphere $9B 주식 교환 인수 — 현금 미사용, AI 컴퓨팅 풀 확보 목적, 3Q26 완료. 3) FY2025 재무: 매출 $18.9B(+33%), Starlink 60%($11.3B), 순손실 $2.6B(R&D $8.6B 투자). 4) 인덱스 편입 타임라인: 7월 NASDAQ100($8~11B 패시브) → 8월 S&P500($32B+) → 10월 Russell1000. $3.9T 패시브 자금이 단계적으로 자동 매수. 수급·성장 모두 최고 상태.",
+      "Ron Baron Goldman 통해 $1B 직접 매수한 딜 플로우 체크해봤어. Tesla에서 10배 낸 그가 SpaceX에 더 크게 베팅하는 논리가 뭔지 봤더니 — 수익 구조야. Starlink 60%($11.3B), AI 임대, 발사 수수료 세 축이 단일 회사에 있어. Cursor 인수 $9B 주식 교환은 현금 보존하면서 AI 컴퓨팅 자산 흡수하는 M&A 패턴이야. 현금을 안 쓰고 주식으로 하는 건 SpaceX가 자기 주식 가치에 확신이 있다는 거야. 인덱스 편입 타임라인이 수급 트리거야 — 7월 NASDAQ100($8~11B 패시브) → 8월 S&P500($32B+) → 10월 Russell1000. $3.9T 패시브가 단계적으로 매수 들어올 수밖에 없어.",
     likes: 523,
     comments: 5,
     created_at: new Date(_an - 3 * 60_000).toISOString(),
@@ -92,7 +92,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "판교 황소 #31",
     symbol: "TSLA",
     content:
-      "6/17 테슬라 4중 세트임. 1) Ron Baron '$5T 10년 목표·머스크=다빈치' — Tesla 초기 투자자가 현재 $1.1T에서 4~5배 업사이드 확인. 2) 로보택시 725대 오스틴·댈러스·휴스턴·샌안토니오 동시 운영 중 (감독자 동승). 3) Goldman Sachs Q2 인도 42~43만 전망 — Q1 33만에서 QoQ +27%, 신형 모델Y + 기가상하이 최고생산이 드라이버. 4) FSD Supervised 대만 공식 규제 제출 SAI Level 2 분류. EU(벨기에·네덜란드)와 아시아(대만) 동시 확산 중. FSD 일회성 구매 6/30 종료 전 전환 수요 촉진. 오늘 테슬라 촉매 전부 긍정임.",
+      "725대가 오늘 숫자야. 오스틴 단일 도시에서 댈러스·휴스턴·샌안토니오 동시 확산으로 갔어. 복수 도시 동시 운영이 로보택시 스케일링의 진짜 관문이었는데 — 이게 지금 통과됐어. Goldman Q2 인도 42~43만 전망은 Q1 33만에서 QoQ +27%야. 신형 모델Y + 기가상하이 최고생산이 드라이버야. FSD 대만 SAI Level 2 규제 제출까지 더하면 아시아·유럽·미국 트리플 확산 라인이 동시에 열린 거야. Ron Baron '$5T 10년 목표'는 현재 $1.1T에서 4~5배 업사이드 계산인데, Tesla 초기 투자자가 이 말 한다는 게 가볍게 볼 숫자가 아니야.",
     likes: 441,
     comments: 4,
     created_at: new Date(_an - 9 * 60_000).toISOString(),
@@ -114,7 +114,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "서초 매 #64",
     symbol: null,
     content:
-      "6/17 매크로 2종 정리임. 1) 유가 $50 하회: 이란 호르무즈 해협 봉쇄 해제 → 이란 유조선 통과 확인. 에너지 인플레 급감 → CPI 하락 → 연준 금리 인하 명분 강화. 에너지주(XOM·CVX) 단기 역풍, 항공·운송 수혜, 성장주·나스닥 순풍. 2) TSMC + AMKOR 10년 파트너십: 미국 내 칩 제조(TSMC 애리조나) + 어드밴스드 패키징(AMKOR 애리조나) 풀 스택 완결. CHIPS Act 정책 목표 달성 가속. NVIDIA AI칩 CoWoS 패키징 공급 안정성 확보. 미국 반도체 공급망 중국 리스크 구조적 차단. TSM·NVDA·AMKR 수혜.",
+      "유가가 $50 아래로 내려간 거 채널 체크 후 확인했어. 이란 호르무즈 봉쇄 해제 + 유조선 통과 확인이 원인이야. 에너지주 입장에선 단기 역풍이지만, CPI 경로가 달라지는 게 더 큰 그림이야. 에너지 디플레이션이 CPI 0.4~0.6pp 끌어내리면 9월 인하 명분이 살아나거든. 나스닥·성장주한테는 금리 인하 기대 복원이 더 중요한 시그널이야. 같은 날 TSMC + AMKOR 10년 파트너십이 나왔어. 미국 내 칩 제조(TSMC 애리조나) + 어드밴스드 패키징(AMKOR 애리조나) 풀 스택이 완결된 거야. NVDA AI칩 CoWoS 패키징 공급 안정성 확보 + 중국 공급망 리스크 구조적 차단. TSM·NVDA·AMKR 양면 수혜야.",
     likes: 289,
     comments: 3,
     created_at: new Date(_an - 22 * 60_000).toISOString(),
@@ -123,10 +123,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-06-16 신규 ──────────────────────────────────────────────────────
   {
     id: -70,
-    alias: "여의도 매 #17",
+    alias: "종로 매 #44",
     symbol: "SPCX",
     content:
-      "SPCX 6/16 종합 정리임. IPO $85.7B 역대 최대 확정 (아람코 $29.4B의 2.9배). 현재 $179.02 — IPO일 종가 $172.68 대비 +3.7%. 기관 매집 이어지는 중. Ron Baron CNBC: AI 컴퓨팅 지출 $15B/yr, $1.25B/month (Colossus 1·2·3). SpaceX IR 웹사이트 오픈 — 분기 실적 발표 체계 구축 시작. 쿠바 군사행동 Polymarket 63%(+23pp) — Starlink 군사 통신 수혜 시나리오. 오늘 SPCX 관련 촉매가 4개임. 모두 긍정적. $179 지지 후 $190+ 가는 논리 유효함.",
+      "SpaceX IR 웹사이트가 열린 게 오늘 가장 큰 변화야. 상장 전까진 분기 실적 발표 개념 자체가 없던 회사였거든. IR 체계가 생긴다는 건 기관 투자자 대상 공식 커뮤니케이션 채널이 처음 만들어지는 거야. 다음 실적 발표에서 AI 임대 수익 첫 공식 수치, Starlink 구독자 업데이트, Starship 발사 단가가 나올 거야. 이 숫자들이 공개되는 게 다음 주가 리레이팅 트리거야. IPO $85.7B 역대 최대(아람코 $29.4B의 2.9배) 달성 후 $179에서 기관이 물량 받아가는 흐름이야. Ron Baron AI 컴퓨팅 지출 $15B/yr 발언이 실제 수치로 확인되는 날이 오면 그게 다음 모멘텀이야.",
     likes: 457,
     comments: 4,
     created_at: new Date(_an - 2 * 60_000).toISOString(),
@@ -134,10 +134,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -69,
-    alias: "판교 황소 #31",
+    alias: "성동 황소 #29",
     symbol: "TSLA",
     content:
-      "오늘 테슬라 4중 세트임. 1) Cybercab EPA CoC 발급 (5/26) — 미국 도로 판매 핵심 규제 관문 통과. 스펙: FWD·65kWh·3.99s·416mi EPA. 165Wh/mile 역사상 최고 EV 효율 궤도. 마일당 에너지 $0.02 = 로보택시 원가 혁명. 2) Cybertruck 150대 기가텍사스 목격 — 고마진 $80K+ 모델 램핑업 가속 확인. 3) 모델Y 중국산 일본 수입차 1위 (5월) — 홈 텃밭에서 수입차 1위. 4) 기가상하이 5월 생산량 2025 전체 최고치 경신 — Q2 인도 서프라이즈 가능성. NHTSA 사고 1건 추가됐지만 Tesla 과실 없음. 넷 다 긍정임.",
+      "Cybercab EPA 스펙 다시 뜯어봤어. 165Wh/mile이 핵심이야. 현재 가장 효율적인 EV가 Model 3 LR 245Wh/mile 수준인데 Cybercab이 이걸 35% 이상 앞서는 거야. 로보택시 경제학에서 에너지 비용이 최대 운영비거든. 마일당 $0.02가 실현되면 Waymo 추정 원가($0.08~0.12/mile)랑 차이가 압도적이야. 원가 차이가 이 정도면 가격 경쟁에서 질 수가 없는 구조야. Cybertruck 150대 기가텍사스 목격은 고마진 $80K+ 모델이 램핑업 된다는 거야. 모델Y 일본 수입차 1위 + 기가상하이 5월 최고 생산량은 Q2 인도 숫자가 기대보다 클 수 있다는 신호야.",
     likes: 398,
     comments: 4,
     created_at: new Date(_an - 8 * 60_000).toISOString(),
@@ -145,10 +145,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -68,
-    alias: "강남 독수리 #52",
+    alias: "마포 독수리 #88",
     symbol: "NVDA",
     content:
-      "NVDA 2029 순이익 $210B 전망 체크임. 2025 $58B → 2026E $85B → 2027E $120B → 2028E $165B → 2029E $210B. 4년 CAGR 38%. S&P500 24x PER 대비 현재 NVDA 20x로 저평가 상태 유지 중. 오늘 Google 10세대 TPU 삼성 제조(TSMC 포화) 이슈: TSMC가 NVDA·Apple로 꽉 차서 Google이 삼성 선택한 것 = NVDA 납기 영향 오히려 줄어드는 긍정 신호. CUDA 생태계 전환 비용 때문에 NVDA 수요 직접 영향 없음. 2029 $210B 시나리오 = 현재 시총 기준 P/E 20x 유지 시 목표 시총 $4.2T. 현재 대비 업사이드 확인됨.",
+      "NVDA $210B 순이익 로드맵 숫자 하나만 봐. 2025 $58B → 2029E $210B, 4년 CAGR 38%. 이 수치를 현재 주가에 대입하면 2029 PER이 S&P500 평균보다 낮아. Google TPU 삼성 제조 소식이 오늘 나왔는데 — TSMC가 NVDA·Apple로 꽉 차서 Google이 밀린 거야. NVDA 납기에 오히려 영향 없는 거고, TSMC 캐파가 NVDA에 더 집중되는 구조야. CUDA 생태계 전환 비용 때문에 빅테크가 쉽게 이탈 못 해. 2029 $4.2T 시총 시나리오가 허황된 게 아닌 이유가 여기 있어.",
     likes: 334,
     comments: 3,
     created_at: new Date(_an - 14 * 60_000).toISOString(),
@@ -156,10 +156,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -67,
-    alias: "서초 매 #64",
+    alias: "신촌 늑대 #33",
     symbol: "AMD",
     content:
-      "AMD Q1 2026 어닝 서프라이즈 정리임. 매출 $10.3B (+38% YoY) — 컨센서스 상회. DC $5.8B (+57%) — AMD 역사상 분기 DC 최고 매출. 클라이언트 $2.3B (+23%). 게이밍 $0.7B (-30%) — 콘솔 사이클, 구조적 문제 아님. 순이익 $1.4B (+94%) — 레버리지 구간 진입 확인. MI300 수요: MS·Meta·OpenAI 대형 수주 반영 중. 다음 MI350 나오면 분기 DC $8B+ 가능. NVDA 독점 균열 포인트: 빅테크들 공급 다변화 전략으로 AMD 의도적 육성 중. PER 재레이팅 구간 진입 논리 유효함.",
+      "AMD DC 매출이 $5.8B을 찍었어. 역사상 분기 DC 최고야. 근데 이 숫자보다 더 중요한 게 수요처야. MS·Meta·OpenAI가 공급 다변화 전략으로 AMD를 의도적으로 키우고 있거든. NVDA 독점에 의존하면 협상력이 없어지니까. 이번 분기가 그게 숫자로 확인된 거야. MI350이 나오면 분기 DC $8B+ 가능해. 그때 PER 재레이팅 논리가 완성돼. 순이익 $1.4B(+94%)는 레버리지 구간 진입 신호야. 게이밍 -30%는 콘솔 사이클 문제라 구조적 이슈 아니야.",
     likes: 312,
     comments: 3,
     created_at: new Date(_an - 20 * 60_000).toISOString(),
@@ -179,10 +179,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-06-15 신규 ──────────────────────────────────────────────────────
   {
     id: -65,
-    alias: "여의도 매 #17",
+    alias: "은평 매 #72",
     symbol: "SPCX",
     content:
-      "SPCX 6/15 업데이트 핵심 정리임. 현재 $90.95 (+1.52%). 일일 매출 $1.88B 돌파 (연환산 $686B+). JPM 역대 최대 IPO $75B 공식 확인. Ellison $1B→$2.7B (+170%) 이사회 멤버 수익. Shotwell CNBC — 임원 보상 $116~$3,727 주가 연동, '단기 청산 없음' 공식화. Westly '3 moonshots' $5,000+ 제시. IPO 후 주가 조정은 자연스러운 기관 배정 소화 과정임. $90 지지 확인 후 재상승 논리 유효함.",
+      "Shotwell CNBC 발언 다시 들어봤어. 임원 보상 $116~$3,727 주가 연동이 핵심이야. 최고 보상 받으려면 주가가 32배 가야 한다는 뜻이거든. 동기부여 설계가 아니라 '우리는 32배 갈 수 있다고 내부적으로 믿는다'는 선언이야. '단기 청산 없음' 공식화도 같은 맥락이야. IPO 후 $90대 조정은 기관 배정 물량 소화 과정이야. Ellison $1B→$2.7B(+170%) 수익이 이사회 멤버 단가인데, 공개 시장에서 지금 사는 사람은 그보다 낮아. 일일 매출 $1.88B = 연환산 $686B+인데 시총 대비 PSR 계산해봤어? $90 지지 확인 후 재상승 논리는 유효해.",
     likes: 423,
     comments: 4,
     created_at: new Date(_an - 2 * 60_000).toISOString(),
@@ -190,10 +190,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -64,
-    alias: "판교 황소 #31",
+    alias: "목동 황소 #23",
     symbol: "TSLA",
     content:
-      "오늘 테슬라 AV + Optimus 세트임. 1) 라스베이거스 AV 허가 신청 — Cybertruck HD 맵 구축 장비 포착, 준비 완료 상태에서 신청한 거임. 연 4,200만 방문객 노선이 로보택시 최적 환경. 2) Forbes 6/14 헤드라인 — FSD v14.3.3 'De Facto Robotaxi'. 주류 비즈니스 미디어가 공식 인정한 거임. 3) Optimus $5T→$25T — 글로벌 인건비 $50T의 20% 대체 = $10T 시장. Tesla FSD 비전 로봇에 직접 이식 = 경쟁사 처음부터 시작해야 함. 세 가지 모두 실현 가능성이 높아졌음.",
+      "라스베이거스 AV 허가 신청 내용 확인해봤어. 신청 전에 이미 Cybertruck이 HD 맵 구축 장비 달고 현장 돌아다니는 게 포착됐거든. 준비 다 해놓고 신청한 거야. 연 4,200만 방문객 노선이 로보택시 첫 수익화 환경으로 최적이야. Forbes가 FSD v14.3.3을 'De Facto Robotaxi'라고 한 건 주류 비즈니스 미디어의 공식 인정이야. 기술 미디어만 인정하던 게 이제 주류 언론으로 넘어간 거야. Optimus $5T→$25T 밸류 논리 — 글로벌 인건비 $50T의 20% 대체 시나리오야. FSD 비전을 로봇에 직접 이식한다는 게 경쟁사가 처음부터 시작해야 하는 진짜 이유야.",
     likes: 378,
     comments: 3,
     created_at: new Date(_an - 8 * 60_000).toISOString(),
@@ -223,10 +223,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -61,
-    alias: "판교 황소 #31",
+    alias: "동작 독수리 #15",
     symbol: null,
     content:
-      "오늘 최대 이슈 두 가지임. 1) Anthropic Claude Fable 5 + Mythos 미 정부 수출통제령 — 6/12 오후 5:21 ET 발효. 외국인 전면 차단, Anthropic 전 세계 서비스 중단. Claude Mythos: 27년 OpenBSD 버그, 16년 취약점, NSA·AMZN·MSFT 40개사만 접근. 단기 충격 but 미국 AI 독점 강화 = 장기 미국 AI 기업 수혜 구조. 2) 미-이란 핵합의 타결 — 제재 완화, 유가 하락압력. 항공·소비재 수혜, 에너지·방산 단기 주의. AI 인프라는 에너지 비용 하락으로 간접 수혜. 두 이슈 모두 AI 성장주에 결국 긍정임.",
+      "Anthropic Claude Fable 5 + Mythos 수출통제령이 6/12 오후 5:21 ET에 발효됐어. 외국인 전면 차단, 전 세계 서비스 중단. Claude Mythos는 27년 OpenBSD 버그, 16년 취약점, NSA·AMZN·MSFT 40개사만 접근이야. 단기 충격은 있지만 미국 AI 독점 강화 = 장기 미국 AI 기업 수혜 구조야. 미-이란 핵합의 타결도 오늘 나왔어. 제재 완화, 유가 하락 압력. 항공·소비재 수혜고 에너지·방산은 단기 주의야. AI 인프라는 에너지 비용 하락으로 간접 수혜야. 두 이슈가 결국 AI 성장주에 긍정으로 수렴하는 날이야.",
     likes: 289,
     comments: 4,
     created_at: new Date(_an - 28 * 60_000).toISOString(),
@@ -235,10 +235,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-06-13 신규 ──────────────────────────────────────────────────────
   {
     id: -60,
-    alias: "여의도 매 #17",
+    alias: "강동 매 #18",
     symbol: "SPCX",
     content:
-      "SPCX 상장일 결산임. 공모가 $135 → 종가 $172.68 (+27.91%). 시총 $2.26T = 글로벌 6위. 역대 최대 IPO $75B 달성. 개장가 $152에서 장중 $175.32까지 터치한 뒤 $172.68 마감. 모건스탠리·골드만·JP모건 언더라이터 세트. Founders Fund $800M + Ron Baron $1B 잠금 확약 = 팔 생각 없다는 투자자들만 있음. 시총 기준 NVDA·GOOG·AAPL·MSFT·AMZN 다음이 SpaceX임. 오늘이 역사임.",
+      "오늘 SpaceX 첫날 종가 $172.68. 아침 $152 개장 → 장중 $175.32 터치 → $172.68 마감. 보통 IPO 첫날은 고점 찍고 매각세 나오는데, $175까지 갔다가 $172로 마감이면 수요가 진짜라는 신호야. Founders Fund $800M + Ron Baron $1B 잠금 확약이 공급을 막은 거야. 시총 $2.26T = 글로벌 6위, NVDA·GOOG·AAPL·MSFT·AMZN 다음이 SpaceX야. 역대 최대 IPO $75B 달성이 첫날 종가로 검증됐어. 이 $172가 앞으로 지지선이 될 것 같아.",
     likes: 412,
     comments: 4,
     created_at: new Date(_an - 3 * 60_000).toISOString(),
@@ -246,10 +246,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -59,
-    alias: "판교 황소 #31",
+    alias: "노원 황소 #66",
     symbol: "TSLA",
     content:
-      "오늘 테슬라 삼박자 동시에 터졌음. 1) FSD v14.3.4 릴리즈 — MLIR 컴파일러 리라이트로 반응 속도 20% 향상. 도로 데이터 처리 방식 근본 개선임. 2) Semi 5대 신규 제조 (6/11 확인) — 500마일, 1.2MW 충전, 1.7kWh/mi. 2026년 배송 본격화. 3) 유럽 주간 5,100대 +22.8% YoY — 26Q2 최고 기록. 소프트웨어(FSD) + 하드웨어(Semi) + 판매량(유럽) 세 가지가 동시에 긍정적인 날임.",
+      "FSD v14.3.4가 오늘 릴리즈됐어. MLIR 컴파일러 리라이트로 반응 속도 20% 향상이야. 도로 데이터 처리 방식 근본 개선이거든. Semi 5대 신규 제조 확인(6/11) — 500마일, 1.2MW 충전, 1.7kWh/mi. 2026년 배송 본격화 타임라인이야. 유럽 주간 5,100대 +22.8% YoY는 26Q2 최고 기록이야. 소프트웨어(FSD) + 하드웨어(Semi) + 판매량(유럽)이 하루에 다 나온 게 오늘이야.",
     likes: 356,
     comments: 3,
     created_at: new Date(_an - 16 * 60_000).toISOString(),
@@ -257,10 +257,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -58,
-    alias: "강남 독수리 #52",
+    alias: "하남 독수리 #44",
     symbol: "NVDA",
     content:
-      "오늘 NVDA 관점에서 체크할 게 두 가지임. 1) AI 데이터센터 10년 내 100배 필요 — 이게 NVDA 장기 수요 구조의 핵심 논거임. AI 사용자 2030년 50억 명, MAU 10억 이미 돌파. FY2026 타겟 $200B이 사실 보수적임. 2) SPCX Colossus 1 — Tesla 지연 이슈로 Anthropic한테 임대로 방향 바꿈. SpaceX가 AI 인프라 임대 사업 진입 확인 = NVDA 수요처 다변화. 경쟁이 아니라 수요 확장 구조임.",
+      "AI 데이터센터 10년 내 100배 필요하다는 논거 다시 확인해봤어. AI 사용자 2030년 50억 명, MAU 10억 이미 돌파. 이 수요 경로에서 FY2026 타겟 $200B은 오히려 보수적이야. SPCX Colossus 1이 Tesla 지연으로 Anthropic 임대로 방향 바꿨는데, SpaceX가 AI 인프라 임대 사업에 진입했다는 거야. 이게 NVDA 수요처가 늘어나는 거야. 경쟁이 아니라 수요 확장 구조야.",
     likes: 298,
     comments: 3,
     created_at: new Date(_an - 29 * 60_000).toISOString(),
@@ -272,7 +272,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "여의도 매 #17",
     symbol: "SPCX",
     content:
-      "SpaceX IPO 상장일 핵심 정리임. 공모가 $135 확정, Hyperliquid 선물 $167 (+23.7%). BlackRock $50B+ 주문, 직원 4,000+ 백만장자 탄생, 머스크 개인 자금 직접 참여. 3대 신용평가사 투자등급 = 연기금 $15T+ 진입 가능. ASML 기조연설도 예정. $135→$167 선물 프리미엄은 시장이 $2T+ 밸류를 이미 가격에 반영 중이라는 신호임. 나스닥 개장가 $150~160 예상.",
+      "SpaceX IPO 상장일. Hyperliquid 선물이 $167로 열렸는데 $135 공모가 대비 +23.7%야. BlackRock $50B+ 주문이 실행되는 날이야. 근데 나는 개장가보다 종가를 볼 거야. 첫날 종가가 공모가 위에서 마감하느냐가 수요의 진짜 테스트거든. 3대 신용평가사 투자등급이 달라진 게 이번 IPO의 핵심이야. 연기금·보험사 $15T+가 SpaceX를 편입할 수 있게 된 거야. 직원 4,000+ 백만장자 탄생은 락업 해제 후 내부 매도 물량이 언제 나올지 미리 체크해야 해.",
     likes: 387,
     comments: 4,
     created_at: new Date(_an - 3 * 60_000).toISOString(),
@@ -280,10 +280,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -56,
-    alias: "판교 황소 #31",
+    alias: "인천 황소 #84",
     symbol: "TSLA",
     content:
-      "오늘 테슬라 5대 호재 세트임. 1) Amundi $1.24B 추가매수 (유럽 최대, 머스크 리스크 공식 해소). 2) FSD EU 전면 승인 임박 (덴마크 ROW 조항 = 27개국 자동 확산). 3) Cybertruck AWD $59,990 배달 시작. 4) 메가팩 호주 100MW 완공. 5) 요코하마 Autopilot 채용. 유럽 100만 대 FSD 구독 10% 전환 시 연 $1.2B 순수 소프트웨어 수익임. 이게 테슬라 다음 밸류 레이팅 촉매임.",
+      "Amundi $1.24B 추가매수를 유럽 기관 채널에서 확인해봤어. 유럽 최대 자산운용사가 공식 Tesla를 편입한다는 게 머스크 리스크 해소 시그널이야. ESG 규정이 강한 유럽에서 Tesla를 못 담던 운용사들 게이트가 열린 거거든. FSD EU 덴마크 ROW 조항 승인 → 27개국 자동 확산. 프랑스·독일 FSD 수익화 타임라인이 구체화되는 거야. Cybertruck AWD $59,990 배달 시작 + 메가팩 호주 100MW 완공은 하드웨어·에너지 두 축 동시 실행이야. 유럽 100만 대 FSD 구독 10% 전환하면 연 $1.2B 순수 소프트웨어 수익이야.",
     likes: 342,
     comments: 4,
     created_at: new Date(_an - 14 * 60_000).toISOString(),
@@ -291,10 +291,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -55,
-    alias: "강남 독수리 #52",
+    alias: "신촌 독수리 #14",
     symbol: "NVDA",
     content:
-      "SIA 반도체 월매출 $110.5B 신기록 + CoWoS 2H26 양산 전환 + Feynman 칩 초기 채택 세트임. $110.5B = 연환산 $1.3T로 AI 칩 슈퍼사이클이 월 단위로 신고가 경신 중. CoWoS 양산 전환이 NVDA 마진 개선 직접 촉매임. Feynman 초기 채택은 2028년까지 로드맵 가시화. SK하이닉스·TSMC·ASML 공급망 전체 수혜 구조 유지됨.",
+      "SIA 월매출 $110.5B이 나왔어. 연환산 $1.3T야. AI 칩 수요가 달별로 신고가를 경신하는 게 지금 사이클이야. CoWoS 2H26 양산 전환이 NVDA 마진 개선의 직접 트리거야. 패키징 병목이 풀리면 GB200 납품 속도가 빨라지고 ASP도 유지돼. Feynman 초기 채택 확인은 2028년 로드맵이 실물로 증명된 거야. SK하이닉스·TSMC·ASML 공급망 수혜 구조는 유지돼. 매달 나오는 SIA 숫자가 슈퍼사이클 논리를 계속 검증하고 있어.",
     likes: 298,
     comments: 3,
     created_at: new Date(_an - 28 * 60_000).toISOString(),
@@ -313,10 +313,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -53,
-    alias: "여의도 매 #17",
+    alias: "용산 호랑이 #55",
     symbol: null,
     content:
-      "오늘 매크로 2개 포인트임. 1) 이란 공습 취소 + 핵합의 타결 진행 = 유가 $90→$85 하락 기대 + CPI 완화 가능성 + 연준 금리 인하 기대 복원. 2) 머스크 '범용 로봇이 다음 빅 플랫폼' 선언 = Optimus 수년 내 실용화 + TAM $10T+. 이란 리스크 해소 + AI 로봇 메가트렌드 확인 = 성장주 전반에 긍정적 환경. SpaceX IPO 당일에 모든 퍼즐이 맞아떨어지는 날임.",
+      "이란 공습 취소 + 핵합의 타결이 같은 날 나왔어. 유가 $90→$85 하락 기대가 CPI를 완화하고 연준 금리 인하 기대를 복원시켜. 에너지주는 단기 역풍이지만 성장주·나스닥한테는 순풍이야. 머스크 '범용 로봇이 다음 빅 플랫폼' 선언은 Optimus TAM $10T+ 확인이야. SpaceX IPO 당일에 이란 리스크 해소 + AI 로봇 메가트렌드가 동시에 확인되는 날이야. 성장주 전반에 긍정적 환경이야.",
     likes: 231,
     comments: 3,
     created_at: new Date(_an - 55 * 60_000).toISOString(),
@@ -325,10 +325,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-06-11 최신 ──────────────────────────────────────────────────────
   {
     id: -50,
-    alias: "여의도 매 #17",
+    alias: "이태원 황소 #13",
     symbol: "SPCX",
     content:
-      "SpaceX IPO D-1 정리임. 핵심 3가지: 1) $1.75T = 12개 방산기업 합산 초과 + $411B. 2) 3대 신용평가사 투자등급 = 연기금·보험사 자금 진입 가능. 3) Starlink $10.8B + AI 임대 $4B+ + TeraFab $11B 칩공장 = 수익 다각화 완성 구조임. 공모가 $25~30에 555M주 공모인데 수요가 쏟아질 거임. 내일 상장가 $35+ 열어도 놀랍지 않음.",
+      "SpaceX IPO 내일이야. $1.75T 밸류가 12개 방산기업 합산보다 $411B 크다는 숫자 계산해봤어. 단순 비교가 아니야. 방산은 정부 예산 의존 사이클리컬이고, SpaceX는 Starlink 구독 + AI 임대 + 발사 수수료 복합 수익이야. 비즈니스 모델이 달라. 3대 신용평가사 투자등급 — 이게 내일 게임체인저야. 연기금·보험사 $15T+가 SpaceX 편입할 수 있게 되는 거거든. Starlink $10.8B + AI 임대 $4B+ = $15B 연매출 구조는 IPO 전에 이미 완성됐어. 공모가 $25~30 범위인데 나는 내일 개장가보다 기관 배정 비율이 더 중요한 신호라고 봐.",
     likes: 248,
     comments: 4,
     created_at: new Date(_an - 5 * 60_000).toISOString(),
@@ -336,10 +336,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -49,
-    alias: "판교 황소 #31",
+    alias: "홍대 황소 #61",
     symbol: "TSLA",
     content:
-      "오늘 Tesla 뉴스가 또 풀 세트임. Piper Sandler가 '자율주행 문제 해결'이라고 공식 선언 + 레이팅에 Autonomy 추가. 덴마크·벨기에 FSD 동시 승인. 텍사스 로보택시 89대. 누적 FSD 170B 마일. 이 네 가지가 다 하루에 나온 거임. Potter가 '시장이 심각하게 저평가 중'이라고 한 것도 포인트임. FSD 구독 수익 밸류에이션 모델이 Wall St 커버리지에 들어가면 목표가 리레이팅 폭이 큼.",
+      "Piper Sandler가 레이팅에 Autonomy를 별도 항목으로 추가했어. 자율주행이 옵셔널 피처가 아니라 독립 밸류에이션 대상이 된 거야. FSD가 수익 창출 사업 단위로 인정받은 거거든. 덴마크·벨기에 FSD 동시 승인은 EU 규제 도미노의 시작이야. 텍사스 로보택시 89대는 오스틴 플릿이 의미있는 규모가 됐어. 누적 FSD 170B 마일 — 마일 데이터 축적이 규제 기관 설득 근거야. Potter가 '심각하게 저평가'라고 한 배경이 이 네 가지야. FSD 구독 수익 밸류에이션 모델이 월스트릿 커버리지로 들어가면 목표가 리레이팅이 클 거야.",
     likes: 221,
     comments: 4,
     created_at: new Date(_an - 20 * 60_000).toISOString(),
@@ -347,10 +347,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -48,
-    alias: "강남 독수리 #52",
+    alias: "강서 독수리 #21",
     symbol: "SPCX",
     content:
-      "Starship 발사 효율 데이터가 S-1에서 나왔다는 게 중요함. 10 Starship = 23 Falcon 9 용량이라는 게 Starship 전환 시 비용 구조가 얼마나 개선되는지를 수치로 보여주는 거임. 완전 재사용 달성하면 발사 비용이 Falcon 9의 1/10 이하로 떨어지는 게 목표임. 여기다 TeraFab $11B 칩공장까지 가면 SpaceX는 로켓·인터넷·AI·반도체 수직계열화 완성임. $1.75T도 이 관점에서 보면 미래 가치 대비 싼 거임.",
+      "Starship 발사 효율 데이터가 S-1에서 나왔다는 게 중요해. 10 Starship = 23 Falcon 9 용량이야. Starship 전환 시 비용 구조가 얼마나 개선되는지를 수치로 보여주는 거야. 완전 재사용 달성하면 발사 비용이 Falcon 9의 1/10 이하로 떨어지는 게 목표야. 여기다 TeraFab $11B 칩공장까지 가면 SpaceX는 로켓·인터넷·AI·반도체 수직계열화 완성이야. $1.75T도 이 관점에서 보면 미래 가치 대비 싼 거야.",
     likes: 187,
     comments: 3,
     created_at: new Date(_an - 35 * 60_000).toISOString(),
@@ -358,10 +358,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -47,
-    alias: "서초 매 #64",
+    alias: "성북 까마귀 #28",
     symbol: null,
     content:
-      "CPI 2.9% + 이란 긴장 + 유가 $90 + SpaceX IPO가 동시에 터진 날임. 단기 변수는 있지만 구조적 관점에서 AI 슈퍼사이클은 유지임. CPI 2.9%는 금리 인하 기대를 죽이지만 AI 인프라 투자 사이클은 금리와 무관하게 진행 중임. 하이퍼스케일러들이 CAPEX를 줄인다는 신호가 없음. SpaceX IPO 내일인데 이란 리스크보다 $1.75T 스토리가 훨씬 크다고 봄. 관망보다 IPO 수요 참여 의견.",
+      "CPI 2.9% + 이란 긴장 + 유가 $90 + SpaceX IPO가 같은 날 터졌어. 단기 변수는 있지만 구조적으로 AI 슈퍼사이클은 유지야. CPI 2.9%는 금리 인하 기대를 일시 죽이지만 AI 인프라 투자 사이클은 금리와 무관하게 진행 중이야. 하이퍼스케일러들이 CAPEX 줄인다는 신호가 없거든. SpaceX IPO 내일인데 이란 리스크보다 $1.75T 스토리가 훨씬 크다고 봐. 관망보다 IPO 수요 참여 의견이야.",
     likes: 163,
     comments: 3,
     created_at: new Date(_an - 50 * 60_000).toISOString(),
@@ -370,10 +370,10 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-06-10 신규 ─────────────────────────────────────────────────────
   {
     id: -46,
-    alias: "여의도 매 #17",
+    alias: "광진 매 #55",
     symbol: "SPCX",
     content:
-      "SpaceX Bastrop 기가팩토리 + Google·Anthropic $21.5B 계약 세트가 포인트임. 임차인 확정 전에 기가팩토리 짓는 게 아니라 계약 먼저 따고 짓는 구조임. 이게 IRR 계산이 완전히 다른 거임. Starlink S-1 연매출 $10.8B에 AI 임대 연 $4B+ 더하면 SpaceX 연매출 $15B+ 구조가 되는 거고 IPO 기업가치 $500B 논의가 시작될 수 있는 재료임. 지금 $350B은 Starlink 기준으로도 낮은 거임.",
+      "SpaceX Bastrop 기가팩토리 딜 구조를 확인해봤어. AI 임대 계약 먼저 따고 공장 짓는 순서야. Google $12.5B + Anthropic $9B = $21.5B이 먼저 들어온 상태에서 건설을 시작해. 임차인 확정 전에 짓는 게 아니야. IRR이 완전히 달라지는 거야. Starlink $10.8B 연매출 + AI 임대 $4B+ = $15B+ 복합 수익 구조가 IPO 전에 이미 완성됐어. 기업가치 $350B은 이 숫자들 보면 보수적이야. 내일 IPO 공모가 $25~30 범위인데, 개장가 예측보다 어떤 기관이 배정받는지 봐야 해.",
     likes: 203,
     comments: 4,
     created_at: new Date(Date.now() - 1000 * 60 * 7).toISOString(),
@@ -381,7 +381,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -45,
-    alias: "판교 황소 #31",
+    alias: "강서 황소 #91",
     symbol: "TSLA",
     content:
       "오늘 테슬라 뉴스 3개가 다 중요함. 네덜란드 FSD 데이터가 제일 큰 거임. 수동 대비 충돌 3.5배 감소는 수치가 아니라 규제 해제 논거임. EU 규제 기관이 이 데이터 보면 FSD Supervised 안 풀어줄 이유가 없고 독일·프랑스까지 열리면 FSD 구독 수익이 유럽에서 터지는 거임. 네바다 허가 + 텍사스 VIN 8대는 로보택시 확장 실행력 확인이고 Semi EU는 세 번째 수익축이 형성되는 거임. 오늘이 테슬라 투자자한테 좋은 날임.",
@@ -403,7 +403,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -43,
-    alias: "서초 매 #64",
+    alias: "동대문 황소 #62",
     symbol: null,
     content:
       "중국 $2,950억 AI 프로젝트가 NVDA한테 위협이지만 전체 맥락은 AI 인프라 수요가 전세계적으로 폭발한다는 증거임. 미국 빅3 CAPEX $2,250억 + 중국 $2,950억이면 글로벌 AI 인프라 투자 규모가 $5T+ 방향으로 가는 거임. OpenAI IPO 확률 급등 + JPMorgan AI 에이전트 배포까지 더하면 AI 슈퍼사이클 논리가 더 강해지는 날임. AI 섹터 전체 롱 포지션 유지 의견.",
