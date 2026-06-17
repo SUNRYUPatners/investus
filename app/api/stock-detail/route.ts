@@ -10,6 +10,7 @@ import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 20;
 
 // Server-side cache: 장 마감 중 무기한, 장 중 60초 TTL
 const _cache = new Map<string, { data: Record<string, unknown>; at: number }>();

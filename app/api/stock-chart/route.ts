@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { isMarketOpen } from "@/lib/marketHours";
 import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
+export const maxDuration = 25;
+
 // ── Symbol maps ───────────────────────────────────────────────────────────────
 // Futures → TwelveData ETF proxy (continuous contracts not supported on free plan)
 // Index cards (SPX/COMP/DJI) intentionally NOT mapped here — TwelveData supports
@@ -279,7 +281,7 @@ async function fetchTwelveData(symbol: string, period: string): Promise<ChartRes
   }
 
   try {
-    const res = await fetch(url); // plain fetch, no caching — use our own cache
+    const res = await fetch(url, { signal: AbortSignal.timeout(5000) }); // use our own cache
     if (!res.ok) return null;
     const json = await res.json();
     if (json.status !== "ok" || !Array.isArray(json.values) || json.values.length === 0) return null;
@@ -325,6 +327,7 @@ async function fetchFinnhubMinimalChart(symbol: string): Promise<ChartResult | n
   try {
     const res = await fetch(
       `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(fhSymbol)}&token=${token}`,
+      { signal: AbortSignal.timeout(5000) }
     );
     if (!res.ok) return null;
     const q = await res.json();

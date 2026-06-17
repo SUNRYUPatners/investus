@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { fetchBatchQuotes } from "@/lib/yahooFinance";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 20;
 
 type SectorStock = { symbol: string; name: string; weight: number };
 type SectorDef   = { key: string; name: string; stocks: SectorStock[] };

@@ -61,7 +61,7 @@ export type FinnhubNewsItem = {
 
 async function fetchOne(symbol: string, token: string): Promise<FinnhubQuote | null> {
   try {
-    const res = await fetch(`${BASE}/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`);
+    const res = await fetch(`${BASE}/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`, { signal: AbortSignal.timeout(5000) });
     if (!res.ok) return null;
     const d = await res.json();
     if (!d.c || d.c === 0) return null;
@@ -101,7 +101,7 @@ export async function fetchFinnhubRawQuote(symbol: string): Promise<FinnhubRawQu
   const token = getToken();
   if (!token) return null;
   try {
-    const res = await fetch(`${BASE}/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`);
+    const res = await fetch(`${BASE}/quote?symbol=${encodeURIComponent(symbol)}&token=${token}`, { signal: AbortSignal.timeout(5000) });
     if (!res.ok) return null;
     const d = await res.json();
     // Return data even when c=0 (market closed) as long as pc (prev close) is valid
@@ -119,7 +119,7 @@ export async function fetchFinnhubProfile(symbol: string): Promise<FinnhubProfil
   const token = getToken();
   if (!token) return null;
   try {
-    const res = await fetch(`${BASE}/stock/profile2?symbol=${encodeURIComponent(symbol)}&token=${token}`);
+    const res = await fetch(`${BASE}/stock/profile2?symbol=${encodeURIComponent(symbol)}&token=${token}`, { signal: AbortSignal.timeout(5000) });
     if (!res.ok) return null;
     const d = await res.json();
     if (!d.name) return null;
@@ -135,7 +135,7 @@ export async function fetchFinnhubMetrics(symbol: string): Promise<FinnhubMetric
   const token = getToken();
   if (!token) return null;
   try {
-    const res = await fetch(`${BASE}/stock/metric?symbol=${encodeURIComponent(symbol)}&metric=all&token=${token}`);
+    const res = await fetch(`${BASE}/stock/metric?symbol=${encodeURIComponent(symbol)}&metric=all&token=${token}`, { signal: AbortSignal.timeout(5000) });
     if (!res.ok) return null;
     const d = await res.json();
     const m = d.metric ?? {};
@@ -177,7 +177,7 @@ export async function fetchFinnhubCandles(
       `${BASE}/stock/candle` +
       `?symbol=${encodeURIComponent(symbol)}` +
       `&resolution=${resolution}&from=${from}&to=${to}&token=${token}`;
-    const res = await fetch(url);
+    const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
     if (!res.ok) return null;
     const d = await res.json();
     if (d.s === "no_data" || !d.t || d.t.length === 0) return null;
@@ -207,7 +207,7 @@ export async function fetchFinnhubMarketNews(): Promise<FinnhubNewsItem[]> {
   const token = getToken();
   if (!token) return [];
   try {
-    const res = await fetch(`${BASE}/news?category=general&minId=0&token=${token}`);
+    const res = await fetch(`${BASE}/news?category=general&minId=0&token=${token}`, { signal: AbortSignal.timeout(5000) });
     if (!res.ok) return [];
     const d = await res.json();
     return Array.isArray(d) ? d : [];
@@ -227,7 +227,8 @@ export async function fetchFinnhubCompanyNews(
   if (!token) return [];
   try {
     const res = await fetch(
-      `${BASE}/company-news?symbol=${encodeURIComponent(symbol)}&from=${fromDate}&to=${toDate}&token=${token}`
+      `${BASE}/company-news?symbol=${encodeURIComponent(symbol)}&from=${fromDate}&to=${toDate}&token=${token}`,
+      { signal: AbortSignal.timeout(5000) }
     );
     if (!res.ok) return [];
     const d = await res.json();
