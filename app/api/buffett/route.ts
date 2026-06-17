@@ -18,29 +18,29 @@ const KV_KEY = "buffett:v1";
 // S&P 500 × 9.5 ≈ Wilshire 5000 index level; calibrated via W5000_CAP_FACTOR
 async function fetchWilshire(): Promise<{ now: number; q1ago: number; y1ago: number } | null> {
   for (const base of ["https://query2.finance.yahoo.com", "https://query1.finance.yahoo.com"]) {
-    for (const range of ["2y", "1y"]) {
-      try {
-        const url = `${base}/v8/finance/chart/%5EGSPC?interval=1mo&range=${range}`;
-        const ctrl = new AbortController();
-        const timer = setTimeout(() => ctrl.abort(), 6000);
-        const res = await yfProxyFetch(url, {
-          cache: "no-store",
-          signal: ctrl.signal,
-        });
-        clearTimeout(timer);
-        if (!res.ok) throw new Error(`GSPC ${res.status}`);
-        const json = await res.json();
-        const closes: number[] = json?.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? [];
-        const valid = closes.filter((v) => v != null && isFinite(v));
-        if (valid.length < 4) throw new Error("insufficient data");
+    try {
+      // 일봉 2년치: 오늘 기준 실시간 변동 반영
+      const url = `${base}/v8/finance/chart/%5EGSPC?interval=1d&range=2y`;
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 6000);
+      const res = await yfProxyFetch(url, {
+        cache: "no-store",
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      if (!res.ok) throw new Error(`GSPC ${res.status}`);
+      const json = await res.json();
+      const closes: number[] = json?.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? [];
+      const valid = closes.filter((v) => v != null && isFinite(v));
+      if (valid.length < 60) throw new Error("insufficient data");
 
-        const scale = 9.5;
-        const now   = valid[valid.length - 1]  * scale;
-        const q1ago = (valid[valid.length - 4]  ?? valid[0]) * scale;
-        const y1ago = (valid[valid.length - 13] ?? valid[0]) * scale;
-        return { now, q1ago, y1ago };
-      } catch { continue; }
-    }
+      // 일봉 기준: 1분기 ≈ 63 거래일, 1년 ≈ 252 거래일
+      const scale = 9.5;
+      const now   = valid[valid.length - 1] * scale;
+      const q1ago = (valid[valid.length - 63]  ?? valid[0]) * scale;
+      const y1ago = (valid[valid.length - 252] ?? valid[0]) * scale;
+      return { now, q1ago, y1ago };
+    } catch { continue; }
   }
   return null;
 }
@@ -123,7 +123,7 @@ export async function GET() {
     kvSetDetail(KV_KEY, data as unknown as Record<string, unknown>);
 
     return NextResponse.json(data, {
-      headers: { "Cache-Control": "s-maxage=3600, stale-while-revalidate=86400" },
+      headers: { "Cache-Control": "s-maxage=600, stale-while-revalidate=3600" },
     });
   } catch {
     // 전체 실패 → KV에서 마지막 실제 값 사용

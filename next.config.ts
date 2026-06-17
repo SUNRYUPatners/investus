@@ -60,6 +60,17 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "*.unsplash.com" },
     ],
   },
+  async redirects() {
+    return [
+      // investus.kr → www.investus.kr (네이버/구글 크롤러 canonical 통일)
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "investus.kr" }],
+        destination: "https://www.investus.kr/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

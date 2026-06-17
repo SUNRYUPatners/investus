@@ -19,6 +19,7 @@ export default async function HomePage() {
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <h1 className="sr-only">인베스트어스(Investus) — 미국주식 투자 플랫폼 | 실시간 시세 · S&amp;P500 · NASDAQ · 투자 리포트</h1>
+      <p className="sr-only">인베스트어스는 미국주식 실시간 시세, S&amp;P500·나스닥·다우존스 지수, 공포탐욕지수, 버핏지수, 투자 리포트를 무료로 제공하는 한국어 미국주식 투자 플랫폼입니다. 선류파트너스 CIO가 매일 시장을 분석합니다.</p>
       <Header />
       {/* 티커 테이프: LiveMarket이 localStorage 업데이트하면 자동 동기화 */}
       <TickerTape />

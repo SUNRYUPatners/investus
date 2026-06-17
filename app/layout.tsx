@@ -36,8 +36,8 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "Investus — 인베스트어스 | 미국주식 투자 플랫폼",
-  description: "인베스트어스(Investus) — 미국주식 플랫폼. 실시간 시세 · S&P500 · NASDAQ · 투자 리포트 · 공포탐욕지수 · 선류파트너스",
+  title: "인베스트어스 | 미국주식 투자 플랫폼 — 실시간 시세 · 투자 리포트",
+  description: "인베스트어스(Investus) — 미국주식 실시간 시세, S&P500·NASDAQ·다우존스 지수, 투자 리포트, 공포탐욕지수, 버핏지수를 한눈에. 선류파트너스 CIO의 매일 시장 분석 리포트 제공. 미국주식 투자자를 위한 무료 플랫폼.",
   metadataBase: new URL("https://www.investus.kr"),
   keywords: [
     "인베스트어스", "investus", "investus.kr", "인베스트어스케이알",
@@ -51,18 +51,18 @@ export const metadata: Metadata = {
     "공포탐욕지수", "버핏지수", "섹터분석", "미국주식투자정보",
   ],
   openGraph: {
-    title: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
-    description: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
+    title: "인베스트어스(Investus) — 미국주식 투자 플랫폼",
+    description: "미국주식 실시간 시세, S&P500·NASDAQ 지수, 투자 리포트, 공포탐욕지수, 버핏지수를 한눈에. 선류파트너스 CIO의 매일 시장 분석 리포트 제공.",
     url: "https://www.investus.kr",
-    siteName: "Investus — 인베스트어스",
+    siteName: "인베스트어스 — Investus",
     locale: "ko_KR",
     type: "website",
-    images: [{ url: "/icons/icon-512.png", width: 512, height: 512, alt: "Investus 인베스트어스" }],
+    images: [{ url: "/icons/icon-512.png", width: 512, height: 512, alt: "인베스트어스 Investus" }],
   },
   twitter: {
     card: "summary",
-    title: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
-    description: "Investus 인베스트어스 — 미국주식 투자 플랫폼",
+    title: "인베스트어스(Investus) — 미국주식 투자 플랫폼",
+    description: "미국주식 실시간 시세, S&P500·NASDAQ 지수, 투자 리포트, 공포탐욕지수, 버핏지수를 한눈에.",
   },
   alternates: {
     canonical: "https://www.investus.kr",
