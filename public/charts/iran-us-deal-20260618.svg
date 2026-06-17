@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bgiran18" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bgiran18)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#f1f5f9">이란-미국 핵합의 오늘 서명 임박</text>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">제재 해제 · 호르무즈 원유 재개 · 유가 하락 압력</text>
+
+  <!-- Breaking badge -->
+  <rect x="16" y="68" width="80" height="22" rx="11" fill="#ef4444" opacity="0.9"/>
+  <text x="56" y="83" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">BREAKING</text>
+  <text x="108" y="83" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Axios 단독 보도 — 전자서명 시 즉시 발효</text>
+
+  <!-- Timeline -->
+  <text x="24" y="120" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#fb923c">합의 타임라인</text>
+
+  <!-- Step 1 -->
+  <circle cx="40" cy="148" r="14" fill="#1e293b" stroke="#fb923c" stroke-width="2"/>
+  <text x="40" y="152" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fb923c">1</text>
+  <text x="62" y="145" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">전자서명 완료</text>
+  <text x="62" y="162" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">MOU 서명 → 모든 제재 즉시 해제 · 호르무즈 봉쇄 철회</text>
+
+  <rect x="40" y="162" width="2" height="20" fill="#fb923c" opacity="0.4"/>
+
+  <!-- Step 2 -->
+  <circle cx="40" cy="196" r="14" fill="#1e293b" stroke="#fb923c" stroke-width="2"/>
+  <text x="40" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fb923c">2</text>
+  <text x="62" y="193" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">이란 원유 수출 재개</text>
+  <text x="62" y="210" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">일일 약 300만~400만 배럴 추가 공급 · 글로벌 시장 유입</text>
+
+  <rect x="40" y="210" width="2" height="20" fill="#fb923c" opacity="0.4"/>
+
+  <!-- Step 3 -->
+  <circle cx="40" cy="244" r="14" fill="#1e293b" stroke="#fb923c" stroke-width="2"/>
+  <text x="40" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fb923c">3</text>
+  <text x="62" y="241" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">유가 추가 하락 압력</text>
+  <text x="62" y="258" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">WTI 현재 $50 하회 → 공급 증가 시 $45~48 가능</text>
+
+  <!-- Oil price bar chart -->
+  <text x="24" y="296" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">WTI 유가 추이 (최근 3개월)</text>
+
+  <!-- Chart bars -->
+  <rect x="50" y="360" width="36" height="48" rx="3" fill="#ef4444" opacity="0.7"/>
+  <text x="68" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#fff" transform="rotate(-90,68,380)">$85</text>
+  <text x="68" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">3M전</text>
+
+  <rect x="116" y="340" width="36" height="68" rx="3" fill="#f97316" opacity="0.7"/>
+  <text x="134" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#fff" transform="rotate(-90,134,360)">$78</text>
+  <text x="134" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">2M전</text>
+
+  <rect x="182" y="320" width="36" height="88" rx="3" fill="#fb923c" opacity="0.7"/>
+  <text x="200" y="342" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#fff" transform="rotate(-90,200,342)">$65</text>
+  <text x="200" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">1M전</text>
+
+  <rect x="248" y="355" width="36" height="53" rx="3" fill="#fbbf24" opacity="0.7"/>
+  <text x="266" y="375" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#fff" transform="rotate(-90,266,375)">$55</text>
+  <text x="266" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">2W전</text>
+
+  <rect x="314" y="368" width="36" height="40" rx="3" fill="#00e5a0" opacity="0.8"/>
+  <text x="332" y="382" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#000" transform="rotate(-90,332,382)">$50↓</text>
+  <text x="332" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">현재</text>
+
+  <rect x="380" y="376" width="36" height="32" rx="3" fill="#00e5a0" opacity="0.4" stroke="#00e5a0" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="398" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" transform="rotate(-90,398,392)">$46?</text>
+  <text x="398" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">합의후</text>
+
+  <!-- Y axis labels -->
+  <text x="440" y="316" font-family="Arial,sans-serif" font-size="10" fill="#475569">$90</text>
+  <line x1="436" y1="312" x2="444" y2="312" stroke="#1e293b" stroke-width="1"/>
+  <text x="440" y="368" font-family="Arial,sans-serif" font-size="10" fill="#475569">$50</text>
+  <line x1="436" y1="364" x2="444" y2="364" stroke="#1e293b" stroke-width="1"/>
+  <text x="440" y="408" font-family="Arial,sans-serif" font-size="10" fill="#475569">$10</text>
+
+  <!-- Footer -->
+  <rect x="0" y="418" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="418" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — 이란-미국 핵합의 · 2026.06.18</text>
+</svg>

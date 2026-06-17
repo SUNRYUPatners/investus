@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 680" width="600" height="680">
+  <defs>
+    <linearGradient id="bgsum18en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="680" fill="url(#bgsum18en)" rx="16"/>
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="26" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="#f1f5f9">6/18 Market Summary</text>
+  <text x="300" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Iran Deal · Memory Shortage · NVDA · Tesla FSD · Fed · SPCX</text>
+
+  <!-- Iran Deal -->
+  <rect x="16" y="66" width="568" height="4" rx="2" fill="#fb923c" opacity="0.6"/>
+  <rect x="16" y="70" width="80" height="20" rx="4" fill="#fb923c" opacity="0.2"/>
+  <text x="56" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#fb923c">Iran Deal</text>
+  <text x="104" y="85" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Signing imminent today — sanctions lifted, Hormuz reopened</text>
+  <rect x="22" y="96" width="3" height="14" rx="1" fill="#fb923c"/>
+  <text x="30" y="107" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">U.S.-Iran nuclear deal could be signed TODAY (6/18) — all sanctions immediately lifted</text>
+  <rect x="22" y="114" width="3" height="14" rx="1" fill="#fb923c"/>
+  <text x="30" y="125" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Hormuz blockade lifted · Iran oil exports resume → downward pressure on crude</text>
+  <line x1="16" y1="142" x2="584" y2="142" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Memory -->
+  <rect x="16" y="150" width="568" height="4" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <rect x="16" y="154" width="80" height="20" rx="4" fill="#60a5fa" opacity="0.2"/>
+  <text x="56" y="169" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">Memory</text>
+  <text x="104" y="169" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Micron + SanDisk CEOs warn "memory shortage"</text>
+  <rect x="22" y="180" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="191" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Micron CEO Mehrotra: "There is a memory shortage" — SanDisk CEO echoes warning</text>
+  <rect x="22" y="198" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="209" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">HBM demand surging from NVDA AI servers → $MU · $SNDK supply cycle tightening</text>
+  <line x1="16" y1="226" x2="584" y2="226" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- NVDA -->
+  <rect x="16" y="234" width="568" height="4" rx="2" fill="#00e5a0" opacity="0.6"/>
+  <rect x="16" y="238" width="48" height="20" rx="4" fill="#00e5a0" opacity="0.2"/>
+  <text x="40" y="253" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">NVDA</text>
+  <text x="72" y="253" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$25B bond debut · subsidiaries ordered $25B more · PE 24x</text>
+  <rect x="22" y="264" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="275" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">NVIDIA's first bond in 5 years: $25B — subsidiaries placed additional $25B orders (2x)</text>
+  <rect x="22" y="282" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="293" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Forward PE now 24x — lowest adjusted PE since 2022 · undervalued vs AI growth</text>
+  <line x1="16" y1="310" x2="584" y2="310" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Tesla FSD -->
+  <rect x="16" y="318" width="568" height="4" rx="2" fill="#c084fc" opacity="0.6"/>
+  <rect x="16" y="322" width="48" height="20" rx="4" fill="#c084fc" opacity="0.2"/>
+  <text x="40" y="337" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#c084fc">TSLA</text>
+  <text x="72" y="337" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">FSD approved by EU RDW · Europe Q2 sales +20.5% YTD</text>
+  <rect x="22" y="348" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="359" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Netherlands RDW: First official EU approval for FSD Supervised · 1,000+ controlled tests</text>
+  <rect x="22" y="366" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="377" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Europe Q2 sales: 4,000 units · +20.5% YTD · Austin Robotaxi fleet active June 2026</text>
+  <line x1="16" y1="394" x2="584" y2="394" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Fed -->
+  <rect x="16" y="402" width="568" height="4" rx="2" fill="#f87171" opacity="0.6"/>
+  <rect x="16" y="406" width="48" height="20" rx="4" fill="#f87171" opacity="0.2"/>
+  <text x="40" y="421" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f87171">Fed</text>
+  <text x="72" y="421" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">12-0 hold · S&amp;P500 worst Fed Day since 1994</text>
+  <rect x="22" y="432" width="3" height="14" rx="1" fill="#f87171"/>
+  <text x="30" y="443" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Fed holds rates 12-0 unanimous — Powell drops forward guidance: "a few months ahead"</text>
+  <rect x="22" y="450" width="3" height="14" rx="1" fill="#f87171"/>
+  <text x="30" y="461" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">S&amp;P500 posts worst Fed Day performance since 1994 — uncertainty premium surges</text>
+  <line x1="16" y1="478" x2="584" y2="478" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Financials/Production -->
+  <rect x="16" y="486" width="568" height="4" rx="2" fill="#a3e635" opacity="0.6"/>
+  <rect x="16" y="490" width="80" height="20" rx="4" fill="#a3e635" opacity="0.2"/>
+  <text x="56" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#a3e635">Financials</text>
+  <text x="104" y="505" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Tesla -$590M vs SpaceX +$1.62B · Giga TX Optimus 3 floors</text>
+  <rect x="22" y="516" width="3" height="14" rx="1" fill="#a3e635"/>
+  <text x="30" y="527" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Q1 2026: SpaceX net income +$1.62B — Tesla net loss -$590M · Musk firms financially reversed</text>
+  <rect x="22" y="534" width="3" height="14" rx="1" fill="#a3e635"/>
+  <text x="30" y="545" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Giga Texas Optimus factory: 3-floor steel structure complete — targeting 10M robots/year</text>
+
+  <rect x="0" y="638" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="638" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="664" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — 2026.06.18 Market Summary</text>
+</svg>

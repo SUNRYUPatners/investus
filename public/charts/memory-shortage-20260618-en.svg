@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bgmem18en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bgmem18en)" rx="16"/>
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#f1f5f9">Micron &amp; SanDisk CEOs Warn: "Memory Shortage"</text>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">HBM · DRAM Supply Cycle Tightening</text>
+
+  <text x="24" y="86" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">CEO Statements (2026.06.18)</text>
+
+  <rect x="16" y="96" width="268" height="88" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="1" opacity="0.8"/>
+  <text x="32" y="116" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">Micron (MU)</text>
+  <text x="32" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">CEO: Sanjay Mehrotra</text>
+  <text x="32" y="150" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">"There is a memory shortage"</text>
+  <text x="32" y="168" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">HBM3E · LPDDR5X supply tightening</text>
+
+  <rect x="316" y="96" width="268" height="88" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1" opacity="0.8"/>
+  <text x="332" y="116" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#a78bfa">SanDisk (SNDK)</text>
+  <text x="332" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">CEO: David Ngo</text>
+  <text x="332" y="150" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">"Same shortage warning echoed"</text>
+  <text x="332" y="168" font-family="Arial,sans-serif" font-size="10" fill="#a78bfa">NAND · UFS inventory depleting fast</text>
+
+  <text x="24" y="212" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Why the Shortage?</text>
+  <rect x="22" y="220" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="231" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">NVDA Blackwell AI servers — GB200 NVL72 rack uses 1.1TB HBM3E per unit</text>
+  <rect x="22" y="238" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="249" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Hyperscaler capex surge — Meta, Microsoft, Google, Amazon at record investment levels</text>
+  <rect x="22" y="256" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="267" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">HBM production at full capacity — SK Hynix, Samsung, Micron all maxed out</text>
+  <rect x="22" y="274" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="285" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">12–18 month lead times — orders placed today won't ship until 2027+</text>
+
+  <text x="24" y="316" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">HBM Supply vs Demand (2024–2026E)</text>
+
+  <rect x="24" y="326" width="552" height="62" rx="8" fill="#0f172a"/>
+
+  <rect x="54" y="340" width="26" height="40" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <rect x="82" y="330" width="26" height="50" rx="3" fill="#ef4444" opacity="0.7"/>
+  <text x="80" y="394" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">2024</text>
+  <rect x="174" y="330" width="26" height="50" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <rect x="202" y="308" width="26" height="72" rx="3" fill="#ef4444" opacity="0.7"/>
+  <text x="200" y="394" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">2025</text>
+  <rect x="294" y="318" width="26" height="62" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <rect x="322" y="284" width="26" height="96" rx="3" fill="#ef4444" opacity="0.8"/>
+  <text x="320" y="394" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">2026E</text>
+
+  <text x="380" y="342" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#ef4444">▲ Demand-Supply Gap</text>
+  <text x="380" y="360" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Widening → price surge ahead</text>
+  <text x="380" y="378" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">Beneficiaries: $MU · $SNDK · $HXSL</text>
+
+  <rect x="24" y="394" width="12" height="12" rx="2" fill="#60a5fa" opacity="0.7"/>
+  <text x="40" y="404" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Supply</text>
+  <rect x="80" y="394" width="12" height="12" rx="2" fill="#ef4444" opacity="0.7"/>
+  <text x="96" y="404" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Demand</text>
+
+  <rect x="0" y="418" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="418" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — Memory Shortage Cycle · 2026.06.18</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bgnvda18" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bgnvda18)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#f1f5f9">NVIDIA $25B 첫 회사채 발행 — AI 수요 공식 확인</text>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">5년 만에 첫 채권 · 자회사 $25B 추가 주문 · Forward PE 24x</text>
+
+  <!-- Key numbers -->
+  <rect x="16" y="68" width="176" height="90" rx="10" fill="#1e293b" stroke="#00e5a0" stroke-width="1"/>
+  <text x="104" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="800" fill="#00e5a0">$25B</text>
+  <text x="104" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">회사채 발행액</text>
+  <text x="104" y="134" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">5년 만에 첫 채권 발행</text>
+
+  <rect x="212" y="68" width="176" height="90" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="1"/>
+  <text x="300" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="800" fill="#60a5fa">2x</text>
+  <text x="300" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">자회사 초과 주문</text>
+  <text x="300" y="134" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">자회사가 추가 $25B 주문</text>
+
+  <rect x="408" y="68" width="176" height="90" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1"/>
+  <text x="496" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="800" fill="#a78bfa">24x</text>
+  <text x="496" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Forward PE</text>
+  <text x="496" y="134" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">2022년 이후 최저 수준</text>
+
+  <!-- Why significant -->
+  <text x="24" y="186" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">왜 중요한가?</text>
+  <rect x="22" y="194" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="205" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">NVDA는 현금 창출 기계 — 채권 발행 없이도 분기 수십억 달러 FCF</text>
+  <rect x="22" y="212" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="223" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">자회사 $25B 추가 주문 = 수요가 공급의 2배 — AI 인프라 투자 가속 확인</text>
+  <rect x="22" y="230" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="241" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">주식 희석 없이 $25B 조달 — 기존 주주 친화적 자본 운영</text>
+  <rect x="22" y="248" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="259" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Forward PE 24x — AI 성장 감안 시 역사적 저평가 구간</text>
+
+  <!-- PE comparison chart -->
+  <text x="24" y="286" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">NVDA Adjusted PE 추이</text>
+
+  <!-- Chart area -->
+  <rect x="24" y="296" width="552" height="100" rx="8" fill="#0f172a"/>
+
+  <!-- PE line chart points: 2022=100x, 2023=60x, 2024=40x, 2025=30x, 2026=24x -->
+  <polyline points="60,316 170,336 280,346 390,351 500,358" fill="none" stroke="#00e5a0" stroke-width="2.5"/>
+  <circle cx="60" cy="316" r="4" fill="#00e5a0"/>
+  <circle cx="170" cy="336" r="4" fill="#00e5a0"/>
+  <circle cx="280" cy="346" r="4" fill="#00e5a0"/>
+  <circle cx="390" cy="351" r="4" fill="#00e5a0"/>
+  <circle cx="500" cy="358" r="5" fill="#00e5a0" stroke="#fff" stroke-width="2"/>
+
+  <text x="60" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">100x</text>
+  <text x="60" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">2022</text>
+  <text x="170" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">60x</text>
+  <text x="170" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">2023</text>
+  <text x="280" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">40x</text>
+  <text x="280" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">2024</text>
+  <text x="390" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">30x</text>
+  <text x="390" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">2025</text>
+  <text x="500" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#00e5a0">24x ★</text>
+  <text x="500" y="392" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0">2026</text>
+
+  <!-- Footer -->
+  <rect x="0" y="418" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="418" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — NVIDIA $25B 채권 · 2026.06.18</text>
+</svg>

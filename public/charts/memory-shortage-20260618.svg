@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bgmem18" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bgmem18)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#f1f5f9">Micron · SanDisk CEO "메모리 부족" 동시 경고</text>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">HBM · DRAM 공급 부족 사이클 진입 신호</text>
+
+  <!-- CEO Signals -->
+  <text x="24" y="86" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">CEO 발언 (2026.06.18)</text>
+
+  <!-- Micron box -->
+  <rect x="16" y="96" width="268" height="88" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="1" opacity="0.8"/>
+  <text x="32" y="116" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">Micron (MU)</text>
+  <text x="32" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">CEO: Sanjay Mehrotra</text>
+  <text x="32" y="150" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">"메모리 부족 상황 확인"</text>
+  <text x="32" y="168" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">HBM3E · LPDDR5X 수급 타이트</text>
+
+  <!-- SanDisk box -->
+  <rect x="316" y="96" width="268" height="88" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1" opacity="0.8"/>
+  <text x="332" y="116" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#a78bfa">SanDisk (SNDK)</text>
+  <text x="332" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">CEO: David Ngo</text>
+  <text x="332" y="150" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">"동일 공급 부족 경고"</text>
+  <text x="332" y="168" font-family="Arial,sans-serif" font-size="10" fill="#a78bfa">NAND · UFS 재고 소진 가속</text>
+
+  <!-- Why -->
+  <text x="24" y="212" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">왜 부족한가?</text>
+
+  <rect x="22" y="220" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="231" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">NVDA AI 서버 Blackwell 수요 — GB200 NVL72 랙 1개당 HBM3E 1.1TB 탑재</text>
+  <rect x="22" y="238" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="249" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">AI 데이터센터 급증 — 메타·MS·구글·아마존 설비투자 역대 최고</text>
+  <rect x="22" y="256" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="267" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">HBM 생산능력 한계 — SK하이닉스·삼성·Micron 풀캐파 운영 중</text>
+  <rect x="22" y="274" width="3" height="14" rx="1" fill="#60a5fa"/>
+  <text x="30" y="285" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">리드타임 12~18개월 — 주문 넣어도 당장 받을 수 없는 구조</text>
+
+  <!-- Supply vs Demand chart -->
+  <text x="24" y="316" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">HBM 공급 vs 수요 (2024-2026E)</text>
+
+  <!-- Bar chart -->
+  <text x="80" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">2024</text>
+  <rect x="54" y="340" width="26" height="40" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <rect x="82" y="330" width="26" height="50" rx="3" fill="#ef4444" opacity="0.7"/>
+  <text x="67" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">공급</text>
+  <text x="95" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#ef4444">수요</text>
+
+  <text x="200" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">2025</text>
+  <rect x="174" y="330" width="26" height="50" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <rect x="202" y="308" width="26" height="72" rx="3" fill="#ef4444" opacity="0.7"/>
+
+  <text x="320" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">2026E</text>
+  <rect x="294" y="318" width="26" height="62" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <rect x="322" y="284" width="26" height="96" rx="3" fill="#ef4444" opacity="0.8"/>
+
+  <!-- Gap arrow -->
+  <text x="380" y="310" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#ef4444">▲ 수요-공급 GAP</text>
+  <text x="380" y="328" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">확대 중 → 가격 상승</text>
+  <text x="380" y="346" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">수혜: $MU · $SNDK · $HXSL</text>
+
+  <!-- Legend -->
+  <rect x="24" y="384" width="12" height="12" rx="2" fill="#60a5fa" opacity="0.7"/>
+  <text x="40" y="394" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">공급</text>
+  <rect x="80" y="384" width="12" height="12" rx="2" fill="#ef4444" opacity="0.7"/>
+  <text x="96" y="394" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">수요</text>
+
+  <!-- Footer -->
+  <rect x="0" y="418" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="418" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — 메모리 부족 사이클 · 2026.06.18</text>
+</svg>

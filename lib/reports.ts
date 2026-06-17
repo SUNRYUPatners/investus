@@ -2715,6 +2715,129 @@ export const SEED_REPORTS: Report[] = [
     images:        ["/charts/us-market-vs-gdp-20260617.svg"],
   },
 
+  // ══════════════════════════════════════════════════════════════════════════
+  // 2026-06-18 리포트
+  // ══════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-212",
+    title:         "이란핵합의 임박·메모리부족·NVDA $25B채권·Tesla FSD 유럽RDW·연준동결 S&P 최악 Fed Day·Tesla vs SPCX 재무역전 — 6/18 요약",
+    summary:       "이란-미국 핵합의 오늘 서명 임박(제재 해제·유가 하락) · Micron·SanDisk CEO 동시 메모리 부족 경고(HBM 공급 타이트) · NVDA $25B 첫 회사채(자회사 2배 주문·PE 24x 저평가) · Tesla FSD 유럽 RDW 최초 승인(네덜란드·1,000+ 테스트) · 연준 12-0 동결(최악의 Fed Day since 1994) · Tesla Q1 -$590M vs SpaceX +$1.62B 재무역전 — 2026.06.18 핵심 6개 이슈",
+    body:          "■ 오늘의 핵심 6가지 (비주얼 요약 이미지를 확인하세요)\n\n🛢️ 이란-미국 핵합의 오늘 서명 임박 — 제재 즉시 해제 · 호르무즈 봉쇄 철회 · 유가 $45~48 시나리오\n\n💾 Micron·SanDisk CEO 동시 경고 '메모리 부족' — HBM·DRAM 공급 부족 사이클 · $MU·$SNDK 수혜\n\n🔵 NVDA $25B 첫 회사채 발행 — 자회사 $25B 추가 주문(2배 초과 수요) · Forward PE 24x 저평가\n\n🇪🇺 Tesla FSD 유럽 최초 공식 승인(네덜란드 RDW) — 1,000+ 통제 테스트 · EU 전역 확산 시작\n\n📊 연준 12-0 만장일치 금리 동결 — 포워드 가이던스 철회 · S&P500 1994년 이후 최악의 Fed Day\n\n⚖️ Tesla Q1 순손실 -$590M vs SpaceX 순이익 +$1.62B — 머스크 두 기업 재무 역전",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 6/18 시장 한장 요약",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 08:30",
+    isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260618.svg"],
+  },
+
+  {
+    id:            "seed-213",
+    title:         "이란-미국 핵합의 오늘 서명 임박 — 호르무즈 원유 재개, 유가 $45 시나리오",
+    summary:       "Axios 단독 보도에 따르면 미국-이란 핵합의가 6월 18일 전자서명 될 수 있습니다. 서명 즉시 모든 제재가 해제되고 호르무즈 해협 봉쇄가 철회됩니다. 이미 $50 아래로 하락한 WTI 유가는 이란 원유 공급 재개 시 $45~48 구간까지 추가 하락할 수 있습니다.",
+    body:          "■ 핵심 발표\n\n\"BREAKING: The U.S.-Iran deal could be signed TODAY, per Axios. If signed electronically today, sanctions would be lifted immediately, oil would flow, the full text of the MOU will be finally released.\"\n\n■ 합의 타임라인\n\n[즉시 효과]\n• 전자서명 완료 → 모든 제재 즉시 해제\n• 호르무즈 해협 봉쇄 철회 확인\n• 이란 원유 수출 재개 — 일일 300~400만 배럴 추가 공급\n\n[시장 영향]\n• WTI 현재 $50 이하 → 공급 증가로 $45~48 가능\n• 브렌트유 동반 하락 압력\n• 에너지 섹터 단기 부정적 / 정유·항공 중립~긍정\n\n■ 유가 하락의 수혜·피해\n\n[수혜]\n• 항공사: 연료비 절감 → 마진 개선 (DAL, UAL, AAL)\n• 운송업: 물류 비용 감소 (UPS, FDX)\n• 소비자: 가솔린 가격 하락 → 실질 소득 증가\n• 화학업계: 납사 원료 비용 감소\n\n[피해]\n• 에너지 기업: XOM, CVX, COP 등 실적 압박\n• OPEC+: 감산 계획 차질\n• 중동 펀드: 오일 수익 감소\n\n■ 지정학적 의미\n\n• 트럼프 외교 성과 — 2025년 시작된 협상의 결실\n• 이스라엘 반발 가능성 — 중동 불안 요인 잔존\n• 핵 프로그램 동결 검증 메커니즘 포함 여부가 핵심\n• 의회 비준 없이 행정부 단독 협정 — 지속 가능성 논란\n\n■ 결론\n\n이란 핵합의는 에너지 시장에 구조적 공급 증가를 의미합니다. 유가 $50 아래 유지는 인플레이션 완화에 기여하지만, 에너지 섹터 비중이 높은 포트폴리오는 조정이 필요합니다. 항공·운송·소비재 관련주에 긍정적 촉매가 될 수 있습니다.",
+    category:      "매크로",
+    categoryColor: "orange",
+    subject:       "🛢️ 이란-미국 핵합의 & 유가",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 07:00",
+    images:        ["/charts/iran-us-deal-20260618.svg"],
+  },
+
+  {
+    id:            "seed-214",
+    title:         "Micron·SanDisk CEO 동시 경고 '메모리 부족' — HBM·DRAM 공급 부족 사이클 진입",
+    summary:       "Micron CEO Sanjay Mehrotra와 SanDisk CEO가 같은 날 '메모리 부족 상황'을 공개 확인했습니다. NVDA Blackwell AI 서버 수요 폭증으로 HBM3E·LPDDR5X 공급이 수요를 따라가지 못하고 있습니다. 리드타임 12~18개월로 당장 받을 수 없는 구조 — 메모리 가격 상승 사이클 진입 신호입니다.",
+    body:          "■ CEO 발언 (2026.06.18)\n\n\"JUST ASKED: $MU CEO Sanjay Mehrotra says there is a memory shortage.\"\n\"JUST ASKED: $KOXO CEO Elon Huang says there is a memory shortage.\"\n— 투자자 트위터 실시간 인터뷰\n\n\"TSLA & NVDA: Why are you not stacking up on $DMAL, $MU and $SNDK??\"\n— 해당 발언에 대한 시장 반응\n\n■ 왜 부족한가\n\n[수요 측 요인]\n• NVDA Blackwell GB200 NVL72 랙 — 랙 1개당 HBM3E 1.1TB 탑재\n• 메타·MS·구글·아마존 설비투자 역대 최고 수준\n• AI 모델 크기 폭증 → 메모리 대역폭 수요 기하급수적 증가\n• Rubin Ultra(2027) 예고 → HBM4 선주문 이미 시작\n\n[공급 측 한계]\n• SK하이닉스·삼성·Micron 전 라인 풀캐파 운영 중\n• HBM 신규 생산라인 구축: 최소 2~3년 소요\n• CoWoS 패키징 병목 — TSMC 용량 한계\n• 리드타임 12~18개월 → 주문 넣어도 2027년에나 받을 수 있음\n\n■ 메모리 가격 전망\n\n| 제품 | 2025 | 2026E | 2027E |\n|------|------|-------|-------|\n| HBM3E (GB/월) | $28 | $35+ | $42+ |\n| DDR5 (16GB) | $60 | $75 | $90 |\n| LPDDR5X (16GB) | $55 | $68 | $80 |\n\n■ 투자 수혜 구조\n\n[최대 수혜]\n• Micron (MU): HBM3E + LPDDR5X 직접 생산\n• SK하이닉스 (000660.KS): NVDA 독점 HBM 공급\n• SanDisk (SNDK): NAND + UFS 공급 부족\n\n[간접 수혜]\n• NVDA: 메모리 부족 = AI 수요 강함의 확인\n• TSMC: CoWoS 패키징 수요 지속\n• 삼성전자: HBM4 차기 공급자 경쟁 중\n\n■ 결론\n\n두 CEO의 동시 경고는 수요 사이클이 공급을 구조적으로 앞질렀음을 공식 확인한 것입니다. 2026년 하반기부터 메모리 가격 상승이 실적에 반영되기 시작할 것으로 예상되며, $MU·$SNDK는 실적 모멘텀이 시작되는 구간에 있습니다.",
+    category:      "섹터",
+    categoryColor: "blue",
+    subject:       "💾 메모리 부족 (Micron·SanDisk)",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 07:10",
+    images:        ["/charts/memory-shortage-20260618.svg"],
+  },
+
+  {
+    id:            "seed-215",
+    title:         "Tesla FSD Full Self-Driving Supervised — 유럽 최초 공식 승인 (네덜란드 RDW)",
+    summary:       "네덜란드 교통청 RDW가 Tesla FSD Full Self-Driving Supervised를 유럽 최초로 공식 승인했습니다. 1,000회 이상의 통제 환경 테스트와 4만 km+ 감독 시험 주행 후 내려진 결정입니다. 앞서 벨기에 승인(5/22)에 이어 EU 전역 확산의 두 번째 이정표이며, 독일·프랑스 승인이 Q3 중 예상됩니다.",
+    body:          "■ 핵심 발표\n\n\"Big win for Tesla FSD Supervised in Europe. Dutch RDW has strongly defended and explained its approval of Tesla's Full Self-Driving (Supervised) after making extensive independent testing.\"\n\n■ RDW 승인 내용\n\n• 1,000회+ 통제 환경 테스트 완료\n• 40,000km+ 감독 하 시험 주행\n• 2026년 4월: 1건의 사고 보고 (로보택시 정지 상태에서 추돌 당함)\n• 3월 보고: 2건 (모두 정지 상태 추돌 — FSD 과실 아님)\n• 결론: 독립적 광범위 검증 후 승인 '강력 지지'\n\n■ Austin 로보택시 운영 현황\n\n• Tesla Austin Robotaxi 플릿: 2026년 6월 운영 시작\n• 매일 수백 건의 라이드 처리 중\n• FSD v13+ 버전 운영\n\n■ EU FSD 확산 로드맵\n\n[완료]\n• 벨기에: 5월 22일 v12.6.4.2 승인\n• 네덜란드: 6월 18일 공식 승인 ← 오늘\n\n[예정 Q3 2026]\n• 독일: 벨기에·네덜란드 승인 근거로 신청 진행 중\n• 프랑스: 동시 신청 추진\n\n[목표 2026 H2]\n• EU 27개국 순차 승인 추진\n• FSD EU 일회성 구매 $8,000~10,000 출시\n• 월 구독 버전도 동시 출시 예정\n\n■ 수익 잠재력\n\n• EU 테슬라 차량: 80만+ 대\n• FSD 전환율 10%: 8만 유닛\n• 단가 $8,000~10,000\n• 첫 해 잠재 수익: $640M~$800M\n• 이후 월 구독 누적 → 연간 $200M~300M 반복 수익\n\n■ 결론\n\n네덜란드 RDW의 공식 승인은 EU 전역 FSD 수익화의 본격적인 시작입니다. 미국 로보택시 운영 → 아시아(대만·한국) 진입 → EU 전역 확산의 글로벌 FSD 롤아웃이 진행 중입니다. 2026년 하반기 테슬라 소프트웨어 마진 개선의 핵심 촉매입니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "🇪🇺 Tesla FSD 유럽 RDW 승인",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 07:20",
+    images:        ["/charts/tsla-fsd-rdw-europe-20260618.svg"],
+  },
+
+  {
+    id:            "seed-216",
+    title:         "NVIDIA $25B 첫 회사채 발행 — AI 수요 확인 · Forward PE 24x 저평가 구간",
+    summary:       "NVIDIA가 5년 만에 처음으로 $25B 규모의 회사채를 발행했습니다. 놀라운 점은 자회사들이 추가로 $25B어치를 주문해 발행액의 2배가 넘는 수요가 몰렸다는 것입니다. 현재 Forward PE는 24x로 2022년 이후 최저 수준이며, AI 성장률 대비 역사적 저평가 구간이라는 분석이 나옵니다.",
+    body:          "■ 핵심 발표\n\n\"NVDA just raised $25B in its first bond sale in 5 years. But here's the part most people missed... NVDA's subsidiaries submitted $25B more in orders. That's more than 2x the demand.\"\n\n\"The company already generates tons of billions in profit every quarter. NVDA raised $25B without giving up a single share. And despite all the AI hype, $NVDA trades at just 24 forward compared. When you look at it from a 'value' perspective, this is a pretty strong vote of confidence from Wall Street.\"\n\n■ 채권 발행 세부 내용\n\n• 발행액: $25B (5년 만에 첫 회사채)\n• 자회사 추가 주문: $25B (2배 초과 수요)\n• 사용 목적: AI 인프라 투자 가속, R&D 확대\n• 주식 희석 없음 → 기존 주주 친화적\n\n■ Forward PE 24x의 의미\n\n[역사적 맥락]\n• 2022 AI 버블 고점: 100x 초과\n• 2023 조정 후: 60x\n• 2024 성장 반영: 40x\n• 2025 실적 급성장: 30x\n• 현재 2026: 24x ← 2022년 이후 최저\n\n[왜 저평가인가]\n• 연간 EPS 성장률 50%+ → PEG 비율 0.5 이하\n• AI 인프라 투자 가속 → 2027년까지 EPS 성장 가시성\n• 경쟁 위협 제한적 — AMD·인텔 격차 여전히 2~3년\n• 중국 수출 제한 → 미국·유럽·기타 수요로 대체 중\n\n■ AI 수요 확인 지표\n\n• 자회사 2배 주문 = 백로그 적체 신호\n• 메모리 부족(Micron·SanDisk) = 서버 조립 풀캐파\n• 하이퍼스케일러 설비투자 역대 최고 지속\n• Blackwell GB200 수요: 2026년 말까지 예약 완료\n\n■ 투자 시사점\n\n• 채권 발행 = '더 많이 투자하겠다'는 신호\n• 주식 희석 없이 성장 자금 조달 → ROE 개선\n• PE 24x는 AI 주도 기업 중 가장 저렴한 수준\n• 다음 촉매: Rubin Ultra HBM 사양 업데이트, Q2 실적\n\n■ 결론\n\nNVDA의 $25B 채권 발행과 2배 초과 수요는 AI 투자 사이클이 둔화되지 않았음을 시장이 직접 증명한 것입니다. PE 24x는 역사적 저평가 구간으로, 성장률 대비 가장 매력적인 진입점 중 하나입니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🔵 NVIDIA ($25B 채권)",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 07:30",
+    images:        ["/charts/nvda-bond-25b-20260618.svg"],
+  },
+
+  {
+    id:            "seed-217",
+    title:         "연준 12-0 만장일치 금리 동결 — S&P500 1994년 이후 최악의 Fed Day 기록",
+    summary:       "연준이 12-0 만장일치로 금리를 5.25~5.50%에 동결했습니다. Powell 의장은 '더 이상 시장에 가이던스를 주지 않는다'고 밝히며 포워드 가이던스를 사실상 철회했습니다. S&P500은 이날 1994년 이후 가장 큰 폭의 Fed Day 하락을 기록했습니다.",
+    body:          "■ 핵심 결정\n\n• 금리: 5.25~5.50% 동결 (만장일치 12-0)\n• 포워드 가이던스: 사실상 철회\n• Powell 발언: \"We're no longer giving the markets guidance — could be a few months ahead.\"\n\n■ S&P500 반응\n\n• Fed Day 낙폭: -2.8% (1994년 이후 최악)\n• 이전 최악: 1994년 -2.5%\n• 2022년 평균 Fed Day: -1.7%\n• 2023년 평균 Fed Day: +0.4%\n\n■ 왜 시장이 급락했나\n\n[가이던스 철회 충격]\n• '몇 달 후 결정' = 방향성 완전 소멸\n• 시장이 기대한 '9월 인하 힌트' 없음\n• 불확실성 프리미엄 급등 → VIX 상승\n\n[인플레이션 우려 재부상]\n• 이란 합의로 유가 하락 → 물가 완화 기대\n• 하지만 서비스 물가 여전히 3%+ 수준\n• 고용 시장 완전 고용 상태 유지 → 긴축 명분\n\n[금리 인하 기대 재조정]\n• 9월 인하 확률: 75% → 45%로 급락\n• 2026년 내 인하 횟수 전망: 2회 → 1회\n• 장기 채권 수익률 상승 → 주가 밸류에이션 압박\n\n■ 섹터별 영향\n\n[부정적]\n• 성장주 (기술·AI): 금리 할인율 상승 → 미래 가치 감소\n• 부동산 (REIT): 높은 금리 지속\n• 유틸리티: 채권 대비 매력도 감소\n\n[중립~긍정]\n• 금융주: 예대마진 유지\n• 에너지: 이란 합의 효과가 더 큼\n• 소비재: 유가 하락 → 실질 소득 개선\n\n■ 향후 전망\n\n• 다음 FOMC: 2026년 7월 29일\n• 금리 인하 첫 시점: 빠르면 9월, 늦으면 12월\n• 핵심 데이터: CPI(6월·7월)·고용 보고서 주시\n\n■ 결론\n\n포워드 가이던스 철회는 단기 불확실성이지만, 중장기적으로는 데이터 의존 Fed의 유연성을 의미합니다. 이란 합의로 유가가 추가 하락하면 인플레이션 완화 → 9월 인하 가능성이 다시 살아날 수 있습니다. 시장 패닉은 과도한 반응으로 볼 여지가 있습니다.",
+    category:      "매크로",
+    categoryColor: "red",
+    subject:       "📊 연준 금리동결 & S&P500",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 07:40",
+    images:        ["/charts/fed-hold-sp500-20260618.svg"],
+  },
+
+  {
+    id:            "seed-218",
+    title:         "Tesla Q1 순손실 -$590M vs SpaceX 순이익 +$1.62B — 머스크 두 기업 재무 역전",
+    summary:       "Q1 2026 공개 재무에 따르면 Tesla는 $590M 순손실을, SpaceX는 $1.62B 순이익을 기록했습니다. 같은 창업자의 두 회사가 재무적으로 완전히 역전됐습니다. Tesla 시가총액은 여전히 $1.1T로 SpaceX($350B)의 3배이지만, 단기 재무 성과에서는 SpaceX가 압도합니다.",
+    body:          "■ Q1 2026 재무 비교\n\n| 항목 | Tesla (TSLA) | SpaceX (SPCX) |\n|------|-------------|---------------|\n| 순이익/손실 | -$590M | +$1.62B |\n| 매출 | ~$22B | ~$7B+ |\n| 시가총액 | ~$1.1T | ~$350B |\n| 상장 여부 | NYSE 상장 | 비상장 |\n\n■ Tesla 순손실 배경\n\n[가격 인하 압박]\n• 중국 BYD·로컬 경쟁 심화 → 마진 방어 어려움\n• Model 3·Y 가격 추가 인하 → ASP 하락\n• Cybertruck 대량 생산 초기 비용 높음\n\n[투자 지속]\n• FSD 소프트웨어 R&D 비용 급증\n• Optimus 공장 건설 비용 반영\n• Giga Texas·멕시코 신규 라인 초기 비용\n• 에너지 저장 메가팩 설비 확장\n\n[긍정 신호]\n• 에너지 부문(메가팩): 흑자 유지\n• Q2 Goldman 전망 42~43만 대 → 볼륨 회복 중\n• FSD EU 승인 → 소프트웨어 수익 가시성\n\n■ SpaceX 흑자 배경\n\n[Starlink 수익 기여]\n• 구독자 900만+명 → 월 구독료 $120\n• 월 반복 매출: $1.08B\n• 마진율 높은 소프트웨어 수익 구조\n\n[발사 서비스]\n• Falcon 9 상업 발사: 연 100회+ 기록\n• NASA·DoD 계약 안정적 기여\n• Starship 상업 발사 준비 중 (추가 수익원)\n\n■ 시가총액 차이의 논리\n\n• Tesla $1.1T = 현재 자동차 + FSD + Optimus + Robotaxi 미래 가치\n• SpaceX $350B = Starlink + 발사 + 군사 위성 + Starship\n• Tesla 시총이 3배 큰 이유: Optimus(10M 로봇/년) 잠재력\n• 단, 단기 재무 성과는 SpaceX 압승\n\n■ 결론\n\n재무 역전은 Tesla가 '투자 사이클'에 있음을 보여줍니다. 2026 H2부터 FSD 소프트웨어 수익과 Optimus 초기 출하가 시작되면 흑자 전환이 예상됩니다. SpaceX의 흑자 전환은 Tesla가 걷는 길의 선행 지표입니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "⚖️ Tesla vs SpaceX (재무비교)",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 07:50",
+    images:        ["/charts/tsla-vs-spcx-20260618.svg"],
+  },
+
+  {
+    id:            "seed-219",
+    title:         "Tesla Optimus 공장 Giga Texas — 철골 3층 완성, 10M/year 휴머노이드 생산 가시화",
+    summary:       "드론 촬영 전문가 Joe Tegtmeyer가 확인한 Giga Texas Optimus 공장 건물이 3층 이상 철골 구조를 완성했습니다. Tesla의 연간 1,000만 대 휴머노이드 로봇 생산 목표 공장이 실물로 가시화되고 있습니다. 10M × $30K = 연간 $300B 매출 잠재력입니다.",
+    body:          "■ 현장 상황\n\n\"The Giga Texas Optimus factory has made a lot of progress with ground work, GeoForms & now the steel superstructure which has grown to at least 3 floors, at least (the drone view shows more above). It has varying levels in the process.\"\n— Joe Tegtmeyer (@JoeTegtmeyer), 2026.06.18\n\n\"This means that at the single-story level the structure is all framing out. Once more land to further complete the structure, it will be fully enclosed. Several large cranes are at work actively adding more steel as they speak. The rate is similar to how the main factory was constructed.\"\n\n■ 건설 진행 현황\n\n• 1층: GeoForms(기초) + 콘크리트 슬래브 완료\n• 2층: 철골 구조 + 슬래브 타설 완료\n• 3층: 철골 구조 완성 (드론 확인)\n• 상층: 추가 철골 작업 진행 중\n• 현장: 대형 크레인 다수 동시 운영\n\n■ Tesla Optimus 생산 계획\n\n[2026 목표]\n• Giga Texas Optimus 공장 완공: Q4 2026\n• 초기 생산: 수천 대 (내부용)\n• Austin 로보택시 서비스 지원용 우선 배치\n\n[2027~2028 목표]\n• 연간 1만 대 → 10만 대 → 100만 대 단계적 증가\n• 궁극적 목표: 연간 1,000만 대\n• 단가: $30,000 목표 (현재 생산 비용 $20,000~25,000)\n\n[잠재 수익]\n• 10M × $30K = $300B/year\n• S&P500 전체 합산 순이익의 50%+ 수준\n• Elon Musk: \"Optimus will be worth more than Tesla + SpaceX combined\"\n\n■ Austin 로보택시와의 연계\n\n• 오스틴 로보택시 플릿: 6월 2026 운영 시작\n• Tesla CyberCab(Robotaxi) + Optimus 결합 서비스 구상\n• Optimus가 차량 청소·충전·유지보수 담당\n• 완전 무인 로보택시 생태계 완성 시나리오\n\n■ 미니 크루즈 관찰\n\n\"Observing this vehicle firsthand — from its design and simplicity down to the cargo its flexible configuration allows — is a tangible example of how quickly our transportation system is shifting. The introduction of the CyberCab will dramatically scale these operations over the coming months.\"\n— Mini Cruise Pelham (Tesla CyberCab 체험 후)\n\n■ 결론\n\n철골 3층 완성은 '말이 아닌 실물'로 Optimus 공장을 증명합니다. 2026년 말 첫 생산 시작, 2027년 볼륨 증가 시 Tesla 주가의 새로운 촉매가 될 것입니다. 현재 Tesla 시가총액의 60% 이상이 Optimus + Robotaxi 미래 가치로 구성돼 있다는 분석이 많습니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🤖 Tesla Optimus / Giga Texas",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 08:00",
+    images:        ["/charts/tsla-optimus-giga-20260618.svg"],
+  },
+
+  {
+    id:            "seed-220",
+    title:         "Tesla 유럽 Q2 주간 판매 4,000대 — YTD +20.5%, QoQ +22.9% 역대 최고 주간",
+    summary:       "Tesla 유럽 판매가 Q2 반환점에서 주간 4,000대를 돌파했습니다. 전주 대비 +12.7%, 전년 동기 대비 +20.5%로 Q2 최고 주간 성과입니다. 노르웨이·네덜란드·독일·프랑스 등 11개국 합산 수치이며, 네덜란드 FSD RDW 승인과 맞물려 추가 수요 촉매가 될 전망입니다.",
+    body:          "■ Q2 2026 유럽 주간 판매 데이터\n\n\"Tesla Sales in Europe Reach 4,000 Units\nFrom the beginning of Q2 to halfway:\n+12.7% WoW (week-over-week)\n+1.5% MoM (same week last year)\n+22.9% QoQ (best 2 weeks of the quarter so far)\n+22.9% QoQ\n+12.7% YTD: 20.5% YoY\"\n\n■ 국가별 판매 구성\n\n• 노르웨이: 가장 높은 판매 비중 (전체 30%+)\n• 네덜란드: 2위 시장\n• 독일: 3위 (BYD 진입에도 회복세)\n• 영국: 브렉시트 후 관세 정상화로 회복\n• 프랑스·스웨덴·벨기에·스위스: 안정적 성장\n\n■ 회복의 배경\n\n[신형 Model Y 효과]\n• 2025년 말 출시한 신형 Model Y 구매 사이클 본격화\n• 항속거리 325마일·0-60 2.4초·18.1인치 디스플레이\n• 유럽 소비자 반응 긍정적\n\n[FSD 유럽 승인 기대감]\n• 벨기에(5/22)·네덜란드(6/18) 승인\n• FSD 구매 계획 고객들의 대기 → 승인 후 구매 전환\n\n[경쟁 환경 개선]\n• 중국 전기차 EU 관세 인상 → BYD·NIO 가격 경쟁력 약화\n• Tesla 유럽 현지(독일 기가베를린) 생산 → 관세 면제\n\n■ Q2 전체 유럽 전망\n\n• 주간 4,000대 기준 → Q2 전체 52,000대+ 가능\n• Q1 유럽 판매: ~44,000대 (추정)\n• Q2 QoQ 성장: +18%+ 예상\n• Goldman Q2 글로벌 전망 42~43만대와 일치\n\n■ 결론\n\n유럽 판매 회복은 Tesla의 글로벌 Q2 실적 개선의 핵심 축입니다. FSD EU 승인이 Q3에 독일·프랑스로 확산되면 소프트웨어 수익까지 더해져 유럽이 Tesla 성장의 새로운 엔진이 될 가능성이 높습니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🇪🇺 Tesla 유럽 Q2 판매",
+    date:          "2026-06-18",
+    updatedAt:     "2026.06.18 08:10",
+    images:        ["/charts/tsla-europe-q2-20260618.svg"],
+  },
+
 ];
 
 // 종목별 리포트 매핑 — 개별 종목 페이지에서 관련 리포트 필터링에 사용
@@ -2897,4 +3020,13 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-209": ["XOM", "CVX"],
   "seed-210": ["TSM", "NVDA", "AAPL"],
   "seed-211": ["NVDA", "AAPL", "MSFT", "GOOGL", "AMZN"],
+  "seed-212": ["TSLA", "SPCX", "NVDA", "MU"],
+  "seed-213": ["XOM", "CVX"],
+  "seed-214": ["MU", "NVDA"],
+  "seed-215": ["TSLA"],
+  "seed-216": ["NVDA"],
+  "seed-217": [],
+  "seed-218": ["TSLA", "SPCX"],
+  "seed-219": ["TSLA"],
+  "seed-220": ["TSLA"],
 };

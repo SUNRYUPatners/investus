@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs>
+    <linearGradient id="bgopt18" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="440" fill="url(#bgopt18)" rx="16"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#f1f5f9">Tesla Optimus 공장 — Giga Texas 3층 철골 완성</text>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">10M/year 생산 목표 · 세계 최대 휴머노이드 로봇 공장</text>
+
+  <!-- Progress visual -->
+  <text x="24" y="86" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">공장 건설 진행 상황</text>
+
+  <!-- Building cross-section visual -->
+  <rect x="180" y="96" width="240" height="12" rx="3" fill="#1e293b" stroke="#00e5a0" stroke-width="1"/>
+  <text x="172" y="107" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">3F ✓</text>
+  <text x="426" y="107" font-family="Arial,sans-serif" font-size="10" fill="#475569">철골 구조 완성</text>
+
+  <rect x="180" y="114" width="240" height="12" rx="3" fill="#1e293b" stroke="#00e5a0" stroke-width="1"/>
+  <text x="172" y="125" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">2F ✓</text>
+  <text x="426" y="125" font-family="Arial,sans-serif" font-size="10" fill="#475569">슬래브 타설 완료</text>
+
+  <rect x="180" y="132" width="240" height="12" rx="3" fill="#1e293b" stroke="#00e5a0" stroke-width="1"/>
+  <text x="172" y="143" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">1F ✓</text>
+  <text x="426" y="143" font-family="Arial,sans-serif" font-size="10" fill="#475569">GeoForms 기초 완성</text>
+
+  <rect x="180" y="150" width="240" height="12" rx="3" fill="#0f172a" stroke="#475569" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="172" y="161" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#475569">진행중</text>
+  <text x="426" y="161" font-family="Arial,sans-serif" font-size="10" fill="#475569">추가 층 공사 중</text>
+
+  <!-- Key stats -->
+  <rect x="16" y="178" width="130" height="70" rx="8" fill="#1e293b" stroke="#00e5a0" stroke-width="1"/>
+  <text x="81" y="206" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#00e5a0">10M</text>
+  <text x="81" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">연간 생산 목표</text>
+  <text x="81" y="238" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">/year Optimus</text>
+
+  <rect x="158" y="178" width="130" height="70" rx="8" fill="#1e293b" stroke="#c084fc" stroke-width="1"/>
+  <text x="223" y="206" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#c084fc">3F+</text>
+  <text x="223" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">철골 층수</text>
+  <text x="223" y="238" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">드론 촬영 확인</text>
+
+  <rect x="300" y="178" width="130" height="70" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="365" y="206" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#fbbf24">$30K</text>
+  <text x="365" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">목표 판매가</text>
+  <text x="365" y="238" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">단위당 Optimus</text>
+
+  <rect x="442" y="178" width="142" height="70" rx="8" fill="#1e293b" stroke="#fb923c" stroke-width="1"/>
+  <text x="513" y="206" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#fb923c">$300B</text>
+  <text x="513" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">연간 매출 잠재력</text>
+  <text x="513" y="238" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">10M × $30K</text>
+
+  <!-- Context -->
+  <text x="24" y="274" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">왜 Optimus가 중요한가</text>
+  <rect x="22" y="282" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="293" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Tesla 시가총액의 핵심 — 로보택시+Optimus 미래 가치가 주가의 60%+ 반영</text>
+  <rect x="22" y="300" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="311" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">공장 실물 진척 = 투자자 신뢰 → "말이 아닌 철골로 증명"</text>
+  <rect x="22" y="318" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="329" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">SpaceX보다 빠른 성장 주장 — Elon Musk "Optimus &gt; SpaceX 될 것"</text>
+  <rect x="22" y="336" width="3" height="14" rx="1" fill="#00e5a0"/>
+  <text x="30" y="347" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Austin 공장 오픈 → Giga Texas 내 전용 생산동 완공 목표 2026 Q4</text>
+
+  <!-- Joe Tegtmeyer quote -->
+  <rect x="16" y="360" width="568" height="40" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="32" y="378" font-family="Arial,sans-serif" font-size="10" font-style="italic" fill="#64748b">"철골이 최소 3층에 도달, 드론 뷰에서 위로 더 올라가는 것 확인. 이 공장은 진정한 메가 팩토리"</text>
+  <text x="32" y="393" font-family="Arial,sans-serif" font-size="9" fill="#475569">— Joe Tegtmeyer (드론 촬영 전문가, 2026.06.18)</text>
+
+  <!-- Footer -->
+  <rect x="0" y="398" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="398" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="424" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — Tesla Optimus / Giga Texas · 2026.06.18</text>
+</svg>

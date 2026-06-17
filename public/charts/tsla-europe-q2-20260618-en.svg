@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <defs>
+    <linearGradient id="bgeu18en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#bgeu18en)" rx="16"/>
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#f1f5f9">Tesla Europe Q2 Sales: 4,000 Units — YTD +20.5%</text>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Q2 Midpoint · WoW +12.7% · QoQ +22.9%</text>
+
+  <rect x="16" y="68" width="120" height="80" rx="8" fill="#1e293b" stroke="#00e5a0" stroke-width="1"/>
+  <text x="76" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="800" fill="#00e5a0">4,000</text>
+  <text x="76" y="112" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Weekly EU Sales</text>
+  <text x="76" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">11 European markets</text>
+
+  <rect x="148" y="68" width="100" height="80" rx="8" fill="#1e293b" stroke="#60a5fa" stroke-width="1"/>
+  <text x="198" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#60a5fa">+12.7%</text>
+  <text x="198" y="112" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">WoW</text>
+  <text x="198" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">week-over-week</text>
+
+  <rect x="260" y="68" width="100" height="80" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1"/>
+  <text x="310" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#a78bfa">+22.9%</text>
+  <text x="310" y="112" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">QoQ</text>
+  <text x="310" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">quarter-over-quarter</text>
+
+  <rect x="372" y="68" width="100" height="80" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="422" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" fill="#fbbf24">+20.5%</text>
+  <text x="422" y="112" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">YTD YoY</text>
+  <text x="422" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">cumulative growth</text>
+
+  <rect x="484" y="68" width="100" height="80" rx="8" fill="#1e293b" stroke="#fb923c" stroke-width="1"/>
+  <text x="534" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#fb923c">BEST</text>
+  <text x="534" y="112" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Q2 Record</text>
+  <text x="534" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">best week this quarter</text>
+
+  <text x="24" y="172" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Weekly Sales Trend (Q2 2026)</text>
+
+  <line x1="40" y1="310" x2="560" y2="310" stroke="#1e293b" stroke-width="1"/>
+
+  <rect x="60" y="280" width="44" height="30" rx="3" fill="#475569" opacity="0.7"/>
+  <text x="82" y="298" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#fff">3,250</text>
+  <text x="82" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">W1</text>
+
+  <rect x="130" y="268" width="44" height="42" rx="3" fill="#475569" opacity="0.7"/>
+  <text x="152" y="289" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#fff">3,400</text>
+  <text x="152" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">W2</text>
+
+  <rect x="200" y="255" width="44" height="55" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <text x="222" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#fff">3,550</text>
+  <text x="222" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">W3</text>
+
+  <rect x="270" y="240" width="44" height="70" rx="3" fill="#60a5fa" opacity="0.7"/>
+  <text x="292" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#fff">3,680</text>
+  <text x="292" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">W4</text>
+
+  <rect x="340" y="226" width="44" height="84" rx="3" fill="#00e5a0" opacity="0.8"/>
+  <text x="362" y="245" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#000">3,830</text>
+  <text x="362" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">W5</text>
+
+  <rect x="410" y="212" width="44" height="98" rx="3" fill="#00e5a0" opacity="0.9"/>
+  <text x="432" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#000" font-weight="700">4,000</text>
+  <text x="432" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#00e5a0" font-weight="700">W6 ★</text>
+
+  <text x="460" y="260" font-family="Arial,sans-serif" font-size="10" fill="#c084fc">FSD EU</text>
+  <text x="460" y="274" font-family="Arial,sans-serif" font-size="10" fill="#c084fc">RDW approved</text>
+  <line x1="456" y1="282" x2="456" y2="210" stroke="#c084fc" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <text x="24" y="350" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Markets: Norway · Netherlands · Germany · France · UK · Sweden · Belgium · Switzerland · Czech · Denmark · Austria</text>
+
+  <rect x="0" y="378" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="378" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="404" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — Tesla Europe Q2 Sales · 2026.06.18</text>
+</svg>

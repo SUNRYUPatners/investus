@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bgfsd18en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bgfsd18en)" rx="16"/>
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="800" fill="#f1f5f9">Tesla FSD Supervised — First EU Official Approval (RDW)</text>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">1,000+ Controlled Tests · Netherlands · EU Expansion Begins</text>
+
+  <rect x="16" y="68" width="568" height="52" rx="10" fill="#0f3460" stroke="#c084fc" stroke-width="1"/>
+  <text x="32" y="90" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#c084fc">🇳🇱 RDW (Netherlands Vehicle Authority)</text>
+  <text x="32" y="110" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">"Strongly defended FSD approval after extensive independent testing — confident in decision"</text>
+
+  <rect x="16" y="132" width="130" height="68" rx="8" fill="#1e293b" stroke="#c084fc" stroke-width="1"/>
+  <text x="81" y="162" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="800" fill="#c084fc">1,000+</text>
+  <text x="81" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Controlled Tests</text>
+
+  <rect x="158" y="132" width="130" height="68" rx="8" fill="#1e293b" stroke="#00e5a0" stroke-width="1"/>
+  <text x="223" y="162" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="800" fill="#00e5a0">40K+</text>
+  <text x="223" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Supervised Miles</text>
+
+  <rect x="300" y="132" width="130" height="68" rx="8" fill="#1e293b" stroke="#60a5fa" stroke-width="1"/>
+  <text x="365" y="162" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="800" fill="#60a5fa">June</text>
+  <text x="365" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Austin Fleet Live</text>
+
+  <rect x="442" y="132" width="142" height="68" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="513" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#fbbf24">Level 2</text>
+  <text x="513" y="176" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">EU SAI Classification</text>
+
+  <text x="24" y="226" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">EU FSD Expansion Roadmap</text>
+
+  <rect x="16" y="234" width="568" height="110" rx="10" fill="#0f172a"/>
+
+  <circle cx="70" cy="272" r="18" fill="#1e293b" stroke="#00e5a0" stroke-width="2"/>
+  <text x="70" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#00e5a0">Done</text>
+  <text x="70" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Belgium</text>
+  <text x="70" y="314" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">5/22 approved</text>
+  <rect x="92" y="270" width="56" height="2" fill="#00e5a0" opacity="0.5"/>
+
+  <circle cx="170" cy="272" r="18" fill="#1e293b" stroke="#00e5a0" stroke-width="2"/>
+  <text x="170" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#00e5a0">Done</text>
+  <text x="170" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Netherlands</text>
+  <text x="170" y="314" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">6/18 approved</text>
+  <rect x="192" y="270" width="56" height="2" fill="#60a5fa" opacity="0.5" stroke-dasharray="4,2"/>
+
+  <circle cx="270" cy="272" r="18" fill="#1e293b" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="270" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">Next</text>
+  <text x="270" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Germany</text>
+  <text x="270" y="314" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">2026 Q3</text>
+  <rect x="292" y="270" width="56" height="2" fill="#60a5fa" opacity="0.3" stroke-dasharray="4,2"/>
+
+  <circle cx="370" cy="272" r="18" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="370" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa">Next</text>
+  <text x="370" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">France</text>
+  <text x="370" y="314" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">2026 Q3</text>
+  <rect x="392" y="270" width="56" height="2" fill="#475569" opacity="0.4" stroke-dasharray="4,2"/>
+
+  <circle cx="470" cy="272" r="18" fill="#1e293b" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="470" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">TBD</text>
+  <text x="470" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">All EU</text>
+  <text x="470" y="314" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569">2026 H2</text>
+
+  <text x="24" y="374" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">EU FSD Revenue Potential</text>
+  <rect x="22" y="382" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="393" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">800K+ Tesla vehicles in EU · 10% FSD conversion = 80K units</text>
+  <rect x="22" y="400" width="3" height="14" rx="1" fill="#c084fc"/>
+  <text x="30" y="411" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">FSD EU price est. $8,000–10,000 → potential first-year revenue: $640M–$800M</text>
+
+  <rect x="0" y="418" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="418" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — Tesla FSD EU RDW Approval · 2026.06.18</text>
+</svg>

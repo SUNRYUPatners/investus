@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <linearGradient id="bgiran18en" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" fill="url(#bgiran18en)" rx="16"/>
+  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
+  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
+  <text x="300" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#f1f5f9">U.S.-Iran Nuclear Deal — Signing Imminent Today</text>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Sanctions Lifted · Hormuz Reopened · Oil Price Downside</text>
+
+  <rect x="16" y="68" width="80" height="22" rx="11" fill="#ef4444" opacity="0.9"/>
+  <text x="56" y="83" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">BREAKING</text>
+  <text x="108" y="83" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Axios exclusive — effective immediately upon e-signature</text>
+
+  <text x="24" y="120" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#fb923c">Deal Timeline</text>
+
+  <circle cx="40" cy="148" r="14" fill="#1e293b" stroke="#fb923c" stroke-width="2"/>
+  <text x="40" y="152" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fb923c">1</text>
+  <text x="62" y="145" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Electronic Signature</text>
+  <text x="62" y="162" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">MOU signed → all sanctions immediately lifted · Hormuz unblocked</text>
+  <rect x="40" y="162" width="2" height="20" fill="#fb923c" opacity="0.4"/>
+
+  <circle cx="40" cy="196" r="14" fill="#1e293b" stroke="#fb923c" stroke-width="2"/>
+  <text x="40" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fb923c">2</text>
+  <text x="62" y="193" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Iranian Oil Exports Resume</text>
+  <text x="62" y="210" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">~3–4M barrels/day additional supply entering global markets</text>
+  <rect x="40" y="210" width="2" height="20" fill="#fb923c" opacity="0.4"/>
+
+  <circle cx="40" cy="244" r="14" fill="#1e293b" stroke="#fb923c" stroke-width="2"/>
+  <text x="40" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#fb923c">3</text>
+  <text x="62" y="241" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Further Oil Price Pressure</text>
+  <text x="62" y="258" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">WTI already below $50 → supply increase could push to $45–48</text>
+
+  <text x="24" y="296" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">WTI Crude Price Trend (3 Months)</text>
+
+  <rect x="50" y="360" width="36" height="48" rx="3" fill="#ef4444" opacity="0.7"/>
+  <text x="68" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">3M ago</text>
+  <text x="68" y="355" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">$85</text>
+  <rect x="116" y="340" width="36" height="68" rx="3" fill="#f97316" opacity="0.7"/>
+  <text x="134" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">2M ago</text>
+  <text x="134" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">$78</text>
+  <rect x="182" y="320" width="36" height="88" rx="3" fill="#fb923c" opacity="0.7"/>
+  <text x="200" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">1M ago</text>
+  <text x="200" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">$65</text>
+  <rect x="248" y="355" width="36" height="53" rx="3" fill="#fbbf24" opacity="0.7"/>
+  <text x="266" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">2W ago</text>
+  <text x="266" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">$55</text>
+  <rect x="314" y="368" width="36" height="40" rx="3" fill="#00e5a0" opacity="0.8"/>
+  <text x="332" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Now</text>
+  <text x="332" y="363" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">$50↓</text>
+  <rect x="380" y="376" width="36" height="32" rx="3" fill="#00e5a0" opacity="0.4" stroke="#00e5a0" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="398" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#475569">Post-deal</text>
+  <text x="398" y="371" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0">$46?</text>
+
+  <rect x="0" y="418" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
+  <rect x="0" y="418" width="600" height="16" fill="#1e293b" opacity="0.5"/>
+  <text x="300" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — U.S.-Iran Nuclear Deal · 2026.06.18</text>
+</svg>

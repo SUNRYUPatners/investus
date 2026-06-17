@@ -72,6 +72,17 @@ const PAIRS = [
   { ko: 'tsmc-amkor-partnership-20260617.svg',        en: 'tsmc-amkor-partnership-20260617-en.svg',        label: 'TSMC_AMKOR10년',       date: '20260617' },
   { ko: 'us-market-vs-gdp-20260617.svg',              en: 'us-market-vs-gdp-20260617-en.svg',              label: '미국시장_GDP비교',     date: '20260617' },
   { ko: 'summary-20260617.svg',                       en: 'summary-20260617-en.svg',                       label: '6월17일_요약',         date: '20260617' },
+
+  // ── 2026-06-18 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260618.svg',                       en: 'summary-20260618-en.svg',                       label: '6월18일_요약',         date: '20260618' },
+  { ko: 'iran-us-deal-20260618.svg',                  en: 'iran-us-deal-20260618-en.svg',                  label: '이란핵합의_유가',      date: '20260618' },
+  { ko: 'memory-shortage-20260618.svg',               en: 'memory-shortage-20260618-en.svg',               label: '메모리부족_MU_SNDK',   date: '20260618' },
+  { ko: 'tsla-fsd-rdw-europe-20260618.svg',           en: 'tsla-fsd-rdw-europe-20260618-en.svg',           label: 'TSLA_FSD유럽RDW',     date: '20260618' },
+  { ko: 'nvda-bond-25b-20260618.svg',                 en: 'nvda-bond-25b-20260618-en.svg',                 label: 'NVDA_25B채권',         date: '20260618' },
+  { ko: 'fed-hold-sp500-20260618.svg',                en: 'fed-hold-sp500-20260618-en.svg',                label: '연준동결_SP500최악',   date: '20260618' },
+  { ko: 'tsla-vs-spcx-20260618.svg',                  en: 'tsla-vs-spcx-20260618-en.svg',                  label: 'TSLA_vs_SPCX재무',    date: '20260618' },
+  { ko: 'tsla-optimus-giga-20260618.svg',             en: 'tsla-optimus-giga-20260618-en.svg',             label: 'TSLA_Optimus3층',     date: '20260618' },
+  { ko: 'tsla-europe-q2-20260618.svg',                en: 'tsla-europe-q2-20260618-en.svg',                label: 'TSLA_유럽Q2판매',     date: '20260618' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생
