@@ -48,7 +48,8 @@ ok "SW 캐시 키 갱신: investus-v${NEW_TS}"
 step 1 "TypeScript 타입 체크..."
 TSC_OUT=$(npx tsc --noEmit 2>&1 || true)
 # .next/types는 Next.js 자동 생성 파일 — 실제 코드 오류가 아님
-REAL_ERRORS=$(echo "$TSC_OUT" | grep -v "\.next/types" || true)
+# "error TS" 포함 줄만 추출 후 .next/ 경로 제외
+REAL_ERRORS=$(echo "$TSC_OUT" | grep "error TS" | grep -v "\.next/" || true)
 if [ -z "$REAL_ERRORS" ]; then
   ok "타입 오류 없음"
 else
