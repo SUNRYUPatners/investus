@@ -6,8 +6,10 @@
 
 1. `scripts/export-report-pngs.js`의 `PAIRS` 배열에 오늘 날짜(`YYYYMMDD`) 항목이 있는지 확인한다.
 2. 없으면 먼저 추가하고 저장한다.
-3. `node scripts/export-report-pngs.js`를 실행한다.
-4. 결과를 보고한다: 성공/실패 수와 파일명 목록.
+3. `node scripts/export-report-pngs.js` **인수 없이** 실행한다 — 오늘 날짜만 자동 필터링.
+4. **`--all` 플래그 절대 사용 금지** — 이전 날짜 이미지까지 전부 재내보내기됨.
+5. UTC/KST 차이로 0개 출력 시 → `--all` 대신 PAIRS의 `date` 필드(KST 날짜)를 확인.
+6. 결과를 보고한다: 성공/실패 수와 파일명 목록.
 
 ## 출력 파일명 규칙
 

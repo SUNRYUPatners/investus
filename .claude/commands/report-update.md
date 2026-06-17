@@ -6,8 +6,8 @@
 
 ### 1. SVG 생성
 - `public/charts/` 폴더에 해당 날짜 SVG 파일 생성
-- 한국어판 필수, 영어판은 summary 등 주요 카드만
-- 파일명 규칙: `<종목>-<설명>-<YYYYMMDD>.svg` (영어판: `-en` 접미사)
+- **한국어판 + 영어판(-en suffix) 모두 필수** — 모든 차트에 KO/EN 쌍 생성
+- 파일명 규칙: `<종목>-<설명>-<YYYYMMDD>.svg` (영어판: `<종목>-<설명>-<YYYYMMDD>-en.svg`)
 - **viewBox 높이 계산 철저히** — 요소 겹침 절대 금지
 
 ### 2. lib/reports.ts — seed 추가
@@ -30,8 +30,10 @@
 - `{ ko: '파일명.svg', en: 'en파일명.svg' or null, label: '라벨', date: 'YYYYMMDD' }` 형식
 - 영어판 없으면 `en: null`
 
-### 6. PNG 내보내기
-- `node scripts/export-report-pngs.js` 실행
+### 6. PNG 내보내기 (당일 이미지만)
+- `node scripts/export-report-pngs.js` 실행 (**인수 없이** — 오늘 날짜만 자동 필터링)
+- **`--all` 플래그 절대 사용 금지** — 이전 날짜 이미지까지 전부 재내보내기되는 낭비
+- 스크립트가 오늘 UTC 날짜를 기준으로 필터링. UTC/KST 차이로 0개 출력되면 --all 대신 PAIRS date 필드를 재확인
 - `/Users/ryu-macmini/Desktop/investus/01.investus 리포트/` 에 저장 확인
 
 ### 7. 커밋 + 배포
