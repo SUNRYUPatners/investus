@@ -496,7 +496,7 @@ type AnalystComment = { id: number; alias: string; content: string; created_at: 
 type CreatorSort = "popular" | "return" | "views" | "subscribers" | "newest";
 
 export default function WallPage() {
-  const { user, verify } = useAuth();
+  const { user, verify, loginWithOAuth } = useAuth();
   const t  = useLocale();
   const w  = t.wall;
   const [mainTab, setMainTabRaw]          = useState<MainTab>(() => {
@@ -590,6 +590,7 @@ export default function WallPage() {
   };
 
   // ── Write modal state ────────────────────────────────────────────────────
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const [showWrite, setShowWrite]         = useState(false);
   const [writeContent, setWriteContent]   = useState("");
   const [submitting, setSubmitting]       = useState(false);
@@ -1035,7 +1036,7 @@ export default function WallPage() {
   }, [selected]);
 
   const handleWriteClick = () => {
-    if (!user) return;
+    if (!user) { setShowLoginModal(true); return; }
     setWriteContent("");
     setSubmitErr("");
     setShowWrite(true);
@@ -1412,31 +1413,14 @@ export default function WallPage() {
               )}
             </div>
 
-            {/* Write / Login prompt */}
-            {user ? (
-              <div className="fixed right-4" style={{ bottom: "calc(env(safe-area-inset-bottom) + 5rem)" }}>
-                <button onClick={handleWriteClick}
-                  className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-black font-bold text-2xl"
-                  style={{ background: "var(--mint)", boxShadow: "0 4px 20px rgba(0,229,160,0.4)" }}>
-                  ✏️
-                </button>
-              </div>
-            ) : (
-              <div
-                className="fixed left-0 right-0 px-4 max-w-[480px] lg:max-w-7xl mx-auto lg:bottom-6"
-                style={{ bottom: "calc(env(safe-area-inset-bottom) + 5rem)" }}
-              >
-                <div className="rounded-2xl p-4 border flex items-center gap-3"
-                  style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.2)" }}>
-                  <User className="w-5 h-5 flex-shrink-0" style={{ color: "var(--mint)" }} />
-                  <p className="flex-1 text-xs" style={{ color: "var(--muted)" }}>{w.loginToPost}</p>
-                  <Link href="/more" className="text-xs font-bold px-3 py-1.5 rounded-lg flex-shrink-0"
-                    style={{ background: "var(--mint)", color: "#000" }}>
-                    {w.login}
-                  </Link>
-                </div>
-              </div>
-            )}
+            {/* Write FAB — always visible, triggers login modal when not logged in */}
+            <div className="fixed right-4 lg:right-8" style={{ bottom: "calc(env(safe-area-inset-bottom) + 5rem)" }}>
+              <button onClick={handleWriteClick}
+                className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-black font-bold text-2xl"
+                style={{ background: "var(--mint)", boxShadow: "0 4px 20px rgba(0,229,160,0.4)" }}>
+                ✏️
+              </button>
+            </div>
           </>
         )}
 
@@ -1880,6 +1864,73 @@ export default function WallPage() {
           </div>
         )}
       </main>
+
+      {/* Login modal — shown when non-logged-in user taps Write FAB */}
+      {showLoginModal && !user && (
+        <div className="fixed inset-0 z-50 flex items-end lg:items-center justify-center"
+          style={{ background: "rgba(0,0,0,0.7)", backdropFilter: "blur(4px)" }}
+          onClick={() => setShowLoginModal(false)}>
+          <div
+            className="w-full lg:max-w-[400px] lg:rounded-3xl rounded-t-3xl p-6 pb-10 lg:pb-6"
+            style={{ background: "var(--card)" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close */}
+            <div className="flex justify-end mb-1">
+              <button onClick={() => setShowLoginModal(false)} className="p-1 rounded-full" style={{ color: "var(--muted)" }}>
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Icon + headline */}
+            <div className="flex flex-col items-center text-center mb-6">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 text-3xl"
+                style={{ background: "linear-gradient(135deg, rgba(0,229,160,0.2) 0%, rgba(0,229,160,0.06) 100%)" }}>
+                ✏️
+              </div>
+              <h2 className="text-lg font-bold mb-1.5" style={{ color: "var(--text)" }}>
+                투자 의견을 나눠보세요
+              </h2>
+              <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+                로그인하면 {selected} 종목에 대한<br />생각을 자유롭게 올릴 수 있어요.
+              </p>
+            </div>
+
+            {/* Social login buttons */}
+            <button
+              onClick={() => loginWithOAuth("google")}
+              className="w-full flex items-center justify-center gap-2.5 py-3.5 rounded-2xl border mb-3 text-sm font-semibold active:opacity-70 transition-opacity"
+              style={{ borderColor: "var(--border)", background: "var(--bg)", color: "var(--text)" }}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              </svg>
+              Google로 계속하기
+            </button>
+            <button
+              onClick={() => loginWithOAuth("kakao")}
+              className="w-full flex items-center justify-center gap-2.5 py-3.5 rounded-2xl text-sm font-semibold active:opacity-70 transition-opacity mb-4"
+              style={{ background: "#FEE500", color: "#3C1E1E" }}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#3C1E1E" d="M12 3C6.48 3 2 6.72 2 11.28c0 2.9 1.74 5.45 4.36 6.97l-.9 3.35 3.94-2.6c.83.15 1.68.23 2.6.23 5.52 0 10-3.72 10-8.28C22 6.72 17.52 3 12 3z"/>
+              </svg>
+              카카오로 계속하기
+            </button>
+
+            <p className="text-center text-[11px]" style={{ color: "var(--muted)" }}>
+              이메일 로그인은{" "}
+              <Link href="/more" className="underline" onClick={() => setShowLoginModal(false)} style={{ color: "var(--mint)" }}>
+                마이페이지
+              </Link>
+              에서 할 수 있어요.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Write modal */}
       {showWrite && user && (
