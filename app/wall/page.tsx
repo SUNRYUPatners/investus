@@ -1164,19 +1164,19 @@ export default function WallPage() {
 
         {/* Main tab switcher */}
         <div className="flex gap-1 mx-4 mb-4 p-1 rounded-2xl" style={{ background: "var(--card)" }}>
-          <button onClick={() => setMainTab("discussion")}
-            className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
-            style={mainTab === "discussion"
-              ? { background: "var(--mint)", color: "#000" }
-              : { color: "var(--muted)" }}>
-            <MessageCircle className="w-3.5 h-3.5" />{w.tabDiscussion}
-          </button>
           <button onClick={() => setMainTab("analyst")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
             style={mainTab === "analyst"
               ? { background: "#7c3aed", color: "#fff" }
               : { color: "var(--muted)" }}>
             <EyeOff className="w-3.5 h-3.5" />{w.tabAnalyst}
+          </button>
+          <button onClick={() => setMainTab("discussion")}
+            className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
+            style={mainTab === "discussion"
+              ? { background: "var(--mint)", color: "#000" }
+              : { color: "var(--muted)" }}>
+            <MessageCircle className="w-3.5 h-3.5" />{w.tabDiscussion}
           </button>
           <button onClick={() => setMainTab("creator")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"

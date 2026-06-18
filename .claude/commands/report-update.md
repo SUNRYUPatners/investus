@@ -35,6 +35,7 @@
 ### 4. lib/analystPosts.ts — 애널리스트 글/댓글 추가
 - `MOCK_ANALYST_POSTS` 배열에 새 날짜 포스트 추가 (id는 음수, 최소값-1부터)
 - `MOCK_ANALYST_COMMENTS` 맵에 댓글 추가
+- **당일 개별 리포트마다 1개씩 커버 필수** — 개별 리포트 수 = 애널 포스트 최소 수. 빠진 리포트 없이 전부 커버.
 
 ### 5. scripts/export-report-pngs.js — PAIRS 추가
 - `PAIRS` 배열에 오늘 날짜 항목 추가

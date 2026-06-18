@@ -21,6 +21,39 @@ const _an = Date.now();
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-06-18 신규 ──────────────────────────────────────────────────────
   {
+    id: -82,
+    alias: "한강 매 #11",
+    symbol: null,
+    content:
+      "이란 합의 딜 보고 한 가지 숫자가 눈에 들어왔어. 호르무즈 재개 시 이란 원유 수출 하루 180만 배럴이야. 지금 WTI $55~57 구간에서 이게 더해지면 $45~50 시나리오 충분히 현실이거든. CPI 에너지 항목이 0.4~0.6pp 끌어내려지면 연준 9월 인하 명분이 살아나. 단순히 유가 하락 이슈가 아니야 — 인플레이션 경로 자체가 바뀌는 거임. 연준이 포워드 가이던스 철회한 날 이란 합의가 나온 게 우연이 아닐 수 있어. 데이터가 바뀌면 결정이 바뀌는 환경에서, 가장 빠르게 CPI를 바꾸는 변수가 지금 나온 거임.",
+    likes: 445,
+    comments: 3,
+    created_at: new Date(_an - 2 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -81,
+    alias: "합정 황소 #27",
+    symbol: null,
+    content:
+      "SpaceX Q1 +$1.62B vs Tesla -$590M 나란히 놓고 보면 머스크 포트폴리오 자체가 역전됐어. Tesla가 오토파일럿·FSD 집중 투자로 손실 낸 거고, SpaceX는 Starlink 60% 비중 안정 수익이 버팀목이야. 근데 이게 Tesla한테 나쁜 신호만은 아님 — 단기 이익보다 FSD 모멘텀에 베팅하는 거잖아. 오늘 EU FSD 승인 + Optimus 공장 3층 + Europe Q2 +20.5% 세 개를 같이 놓고 보면, Tesla가 올해 투자한 R&D 비용이 2027 이후 수익 폭발로 전환되는 구조임. SpaceX가 지금 현금 찍을 때 Tesla는 미래 현금흐름을 사고 있는 거야.",
+    likes: 398,
+    comments: 3,
+    created_at: new Date(_an - 6 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
+    id: -80,
+    alias: "이태원 독수리 #33",
+    symbol: "TSLA",
+    content:
+      "유럽 딜 플로우 채널 체크해봤는데 Q2 YTD +20.5% 숫자가 생각보다 탄탄해. 신형 모델Y 런치 효과 + FSD 주목도 상승 + 유럽 전기차 보조금 재개 세 가지가 겹친 거임. 특히 네덜란드·독일·프랑스 빅3에서 반등이 강한데 RDW FSD 승인 뉴스 이전부터 이미 올라오고 있었어. 4,000 단위가 아직 작아 보이지만 전년 동기 대비 회복세 각도가 가파른 거야. FSD 유럽 출시 본격화되면 소프트웨어 침투율 올라가면서 유럽이 수익성 높은 시장으로 바뀌는 구조임. Q3 유럽 숫자 주목할 것.",
+    likes: 361,
+    comments: 3,
+    created_at: new Date(_an - 14 * 60_000).toISOString(),
+    liked: false,
+  },
+  {
     id: -79,
     alias: "마포 수리부엉이 #28",
     symbol: "TSLA",
@@ -882,6 +915,21 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   // ── 2026-06-18 신규 ──────────────────────────────────────────────────────
+  [-82]: [
+    { alias: "서초 늑대 #58", content: "호르무즈 하루 180만 배럴 재개 숫자 맞음. 여기에 OPEC+ 증산이 겹치면 공급 과잉 빠르게 올 수 있어. $45 이하 시나리오도 배제 못하는 상황.", created_at: new Date(_an - 90 * 1000).toISOString() },
+    { alias: "광화문 호랑이 #35", content: "CPI 에너지 항목 경로 전환이 연준한테는 명분이야. 데이터 의존이라고 했는데 데이터가 바뀌면 빠르게 움직일 수 있음. 9월보다 7월 인하 가능성도 생기는 거임.", created_at: new Date(_an - 45 * 1000).toISOString() },
+    { alias: "잠실 독수리 #41", content: "이란 합의가 깨질 리스크도 봐야 함. 국내 강경파 반발이 변수임. 중동 지정학 리스크 프리미엄 완전히 해소됐다고 보기엔 아직 이른 거임.", created_at: new Date(_an - 15 * 1000).toISOString() },
+  ],
+  [-81]: [
+    { alias: "마포 수리부엉이 #28", content: "Tesla -$590M 손실이 FSD 인프라 투자 때문이라는 게 핵심임. SpaceX처럼 현금 뽑는 단계가 아니라 아직 성장 투자 단계야. 오스틴 로보택시 수익화 시작되면 이익 전환 속도 빠를 거임.", created_at: new Date(_an - 4 * 60_000).toISOString() },
+    { alias: "을지로 황소 #05", content: "머스크 전체 포트폴리오 관점에서 SpaceX가 Tesla 손실 커버해주는 구조임. 개인 재무 관점에서 불안하지 않으니까 Tesla에 더 공격적으로 베팅할 수 있는 거야.", created_at: new Date(_an - 2 * 60_000).toISOString() },
+    { alias: "광화문 호랑이 #35", content: "2027 이후 FSD 수익화 + Optimus 판매가 본격화되면 Tesla 이익 구조 완전히 달라짐. 지금 손실은 선투자 비용이고 스케일업 완료 후 마진 폭발이 예상되는 모델이야.", created_at: new Date(_an - 30 * 1000).toISOString() },
+  ],
+  [-80]: [
+    { alias: "잠실 독수리 #41", content: "신형 모델Y 효과가 유럽에서도 확인됨. 디자인 리프레시 + FSD 주목도 올라오면서 소비자 인식 바뀌고 있음. Q3에 RDW 승인 소식까지 더해지면 반등 각도 더 가팔라질 거임.", created_at: new Date(_an - 12 * 60_000).toISOString() },
+    { alias: "서초 늑대 #58", content: "유럽 보조금 재개 국가들 리스트 보면 독일·프랑스·이탈리아가 다 포함됨. 보조금 + FSD 승인 + 신형 모델Y 트리플 드라이버가 유럽 Q3~Q4 기대치를 높이는 거임.", created_at: new Date(_an - 6 * 60_000).toISOString() },
+    { alias: "마포 수리부엉이 #28", content: "유럽 소프트웨어 침투율이 미국 대비 아직 낮아. FSD 유료 구독 전환이 올라오면 유럽 유닛당 수익성이 크게 개선되는 구조임. 단순 판매량보다 ASP 변화가 더 중요한 지표가 될 거임.", created_at: new Date(_an - 1 * 60_000).toISOString() },
+  ],
   [-79]: [
     { alias: "판교 황소 #31", content: "EU 80만 대 × 15% 전환 숫자가 보수적이라는 거 동의함. 네덜란드에서 이미 FSD 경험한 사람들이 주변 추천해주면 전환율이 더 빠르게 올라갈 수 있음. 소셜 루프가 생기는 거임.", created_at: new Date(_an - 3 * 60_000).toISOString() },
     { alias: "강남 여우 #13", content: "독일 KBA가 네덜란드 테스트 결과 레퍼런스로 쓸 수 있다는 거, EU 규제 상호인정 협약 때문에 실제로 가능한 케이스임. 자체 재검증 없이 승인 나올 수 있는 법적 근거가 있어.", created_at: new Date(_an - 90 * 1000).toISOString() },
