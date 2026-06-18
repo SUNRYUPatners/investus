@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#60a5fa" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="bold">Stock Analysis · NVDA</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">SaaS Thesis Reversal — AI Agents = More GPU Demand Not Less</text>
+
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#0c1a2e" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="104" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Market Fear vs. Jensen Huang's Counter</text>
+  <text x="240" y="132" font-family="Arial,sans-serif" font-size="20" fill="#f87171" font-weight="bold" text-anchor="middle">SaaS dies → Less GPU needed?</text>
+  <text x="240" y="156" font-family="Arial,sans-serif" font-size="20" fill="#4ade80" font-weight="bold" text-anchor="middle">WRONG → More GPU needed!</text>
+
+  <rect x="24" y="176" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Why GPU Demand Increases</text>
+  <text x="40" y="222" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Enterprises don't build own models → they deploy AI agents</text>
+  <text x="40" y="242" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">AI agents USE software tools → SW vendors need more GPU</text>
+  <text x="40" y="262" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">NVDA: Already seeing this happen in actual data</text>
+
+  <rect x="24" y="288" width="204" height="80" rx="10" fill="#1a0505"/>
+  <text x="40" y="312" font-family="Arial,sans-serif" font-size="11" fill="#f87171">SaaS Losers</text>
+  <text x="40" y="334" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">STRL · ENOVA · IQHV</text>
+  <text x="40" y="354" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Investors selling on AI fears</text>
+
+  <rect x="244" y="288" width="212" height="80" rx="10" fill="#0a1a0a"/>
+  <text x="260" y="312" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">GPU Winners</text>
+  <text x="260" y="334" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">NVDA · AMD · TSMC</text>
+  <text x="260" y="354" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Agent boom = infra boom</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.19 · Investus · For Reference Only</text>
+</svg>

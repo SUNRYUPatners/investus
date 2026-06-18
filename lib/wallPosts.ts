@@ -27,15 +27,16 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T18J = _now;                        // 오늘(6/18) 포스트
-const T17J = _now - 24 * 3600_000;       // 6/17
-const T16J = _now - 48 * 3600_000;       // 6/16
-const T15J = _now - 72 * 3600_000;       // 6/15
-const T13J = _now - 120 * 3600_000;      // 6/13
-const T12J = _now - 144 * 3600_000;      // 6/12
-const T11J = _now - 168 * 3600_000;      // 6/11
-const T10J = _now - 192 * 3600_000;      // 6/10
-export const LATEST_UPDATE = T18J;       // NEW 배지 기준
+const T19J = _now;                        // 오늘(6/19) 포스트
+const T18J = _now - 24 * 3600_000;       // 6/18
+const T17J = _now - 48 * 3600_000;       // 6/17
+const T16J = _now - 72 * 3600_000;       // 6/16
+const T15J = _now - 96 * 3600_000;       // 6/15
+const T13J = _now - 144 * 3600_000;      // 6/13
+const T12J = _now - 168 * 3600_000;      // 6/12
+const T11J = _now - 192 * 3600_000;      // 6/11
+const T10J = _now - 216 * 3600_000;      // 6/10
+export const LATEST_UPDATE = T19J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -54,6 +55,76 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-19 — FSD 보이스커맨드·OpenClass AI·아시아FSD·Megapack25K /
+  //              SPCX Baa1채권$20B·ARK5펀드·Starlink Flow·TeraFab /
+  //              AMZN PE29·AAPL가격+15%·NFLX$37.3B·INTC손실매각·NVDA·MSFT
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — 6/19 업데이트 ─────────────────────────────────────────────────
+  { id: 258, symbol: "TSLA", nickname: "익명_3719", holdingLabel: "150주 보유",
+    content: "FSD 보이스 커맨드가 3개월 내에 나온다는 게 HW3 포함이라는 게 제일 중요해요. 이전 세대 오너들도 K.I.T.T 스타일로 '어디 가고 싶어?' 말하면 FSD가 알아서 가는 시대가 오는 거잖아요. Cybertruck이 미국 20개 이상 도시에서 FSD V14 카메라 달고 포착되고 있고 뉴질랜드까지 테스트 중이에요. 스페인 6/30 승인, 한국 구독 버튼 등장 — FSD가 글로벌 동시다발로 확산되는 속도가 예상보다 훨씬 빠르네요.",
+    createdAt: T19J - 8*60_000, likes: 312, comments: 3 },
+  { id: 259, symbol: "TSLA", nickname: "익명_8246", holdingLabel: "200주 보유",
+    content: "OpenClass AI 에이전트 채용 공고 봤는데 강화학습 엔지니어 연봉 $490K예요. 물리적 옵티머스 공장 짓는 것도 대단한데 디지털 옵티머스까지 동시에 진행 중이에요. 소프트웨어 에이전트가 회사 내부 업무 자동화하고 나중엔 B2B로 팔 수 있는 구조잖아요. 일론이 AI 에이전트를 소프트웨어 도구 사용에 배포한다고 했는데 테슬라가 그 플랫폼을 만들고 있다는 게 흥미로워요. 자동차+로봇+에너지+AI 에이전트까지 가는 거잖아요.",
+    createdAt: T19J - 22*60_000, likes: 278, comments: 3 },
+
+  // SPCX — 6/19 업데이트 ────────────────────────────────────────────────
+  { id: 260, symbol: "SPCX", nickname: "익명_5183", holdingLabel: "관심종목",
+    content: "Moody's Baa1 투자등급 받고 IPO 이틀 만에 $20B 채권 발행 준비라는 게 놀라워요. 정크 바로 위 등급이긴 한데 연금·보험사 같은 기관들이 투자 가능해지는 거잖아요. Morgan Stanley·Goldman·JPMorgan이 주관사로 들어온 것도 봐요. Starlink 900만 구독자 월 $1B+ 반복 수익, Falcon 9 100회+/년 발사, NASA·DoD 장기 계약이 Moody's가 투자등급 준 근거예요. SpaceX가 스타트업 졸업하고 대기업 수준 자본 시장 접근성 확보한 거예요.",
+    createdAt: T19J - 11*60_000, likes: 445, comments: 3 },
+  { id: 261, symbol: "SPCX", nickname: "익명_9374", holdingLabel: "관심종목",
+    content: "ARK 5개 펀드 전부 편입이라는 게 정말 전례 없는 거예요. ARKX(우주방위), ARKQ(자율주행로봇), ARKW(차세대인터넷), ARKK(이노베이션)에 2023년부터 보유하던 Venture Fund까지요. Cathie Wood가 '역사상 가장 위대한 인프라 기업 중 하나'라고 했는데 Starlink × Flow 허리케인 파트너십 보니까 실제로 B2B 통신 인프라 표준이 되어가고 있어요. 허리케인 시즌 직전에 계약 발표했다는 것도 실질 수요가 즉각적이라는 신호예요.",
+    createdAt: T19J - 28*60_000, likes: 389, comments: 3 },
+
+  // AMZN — 6/19 업데이트 ────────────────────────────────────────────────
+  { id: 262, symbol: "AMZN", nickname: "익명_7429", holdingLabel: "45주 보유",
+    content: "AMZN PE 29.13x가 역대 최저라는 건데 AWS 올해 성장률이 +27%예요. PEG 비율로 따지면 29/27 = 1.07 수준이에요. 성장률 대비 이렇게 싼 AMZN은 사실 본 적이 없어요. Trainium 기반 추론 마진이 Google 다음으로 높고 AI Capex ROI가 이미 플러스라는 게 FT에 나왔어요. 고점 대비 -12% 조정 구간에서 분할로 추가하는 게 맞는 것 같아요. 광고 사업 안정성까지 보면 이 PE는 너무 싼 거예요.",
+    createdAt: T19J - 17*60_000, likes: 267, comments: 2 },
+  { id: 263, symbol: "AMZN", nickname: "익명_2638", holdingLabel: "30주 보유",
+    content: "AWS -12%면 $30 이상 빠진 거잖아요. 그런데 성장률은 +27%고 AI 투자 수익률은 이미 플러스예요. 클라우드 3위 Google이 이 구간에서 역전당한 적 있나요? 없어요. 이 구간이 기회라고 봐요. Trainium2가 NVIDIA GPU 대비 40% 저렴한 학습 비용이고 자체 칩이니까 마진도 좋아요. PE 29x에 성장 이 정도면 망설일 이유가 없어요.",
+    createdAt: T19J - 39*60_000, likes: 198, comments: 2 },
+
+  // AAPL — 6/19 업데이트 ────────────────────────────────────────────────
+  { id: 264, symbol: "AAPL", nickname: "익명_4851", holdingLabel: "60주 보유",
+    content: "팀 쿡이 '40년 커리어에서 처음'이라고 했다는 거 자체가 충격이에요. 메모리 공급 부족이 그 정도라는 건데 iPhone 18 AI 기능 탑재에 필요한 DRAM을 메타·MS·구글·아마존이 AI 학습용으로 싹 가져가고 있는 거잖아요. +15% 인상이면 iPhone 18 Pro $1,299인데 이 정도면 삼성·샤오미로 가는 사람도 있겠지만 Apple 생태계 충성도가 얼마나 센지 생각하면 수요 탄성이 낮을 거예요. 인상 성공하면 마진이 오히려 좋아지는 거죠.",
+    createdAt: T19J - 14*60_000, likes: 234, comments: 2 },
+  { id: 265, symbol: "AAPL", nickname: "익명_6917", holdingLabel: "관심종목",
+    content: "이 뉴스에서 진짜 수혜주를 찾으면 Micron이랑 SK하이닉스예요. Apple이 이렇게 메모리 달라고 줄 서는 상황이 계속되면 메모리 가격은 계속 오르는 거잖아요. AAPL 본인은 가격 인상으로 방어하는데 MU·SNDK가 직접 수혜받는 구조예요. Apple Intelligence 확대되면 iPhone당 메모리 탑재량이 계속 올라갈 거고 이건 구조적 수요 증가예요.",
+    createdAt: T19J - 33*60_000, likes: 187, comments: 2 },
+
+  // NFLX — 6/19 업데이트 ────────────────────────────────────────────────
+  { id: 266, symbol: "NFLX", nickname: "익명_3047", holdingLabel: "관심종목",
+    content: "$37.3B 자사주 매입인데 오늘 주가 $73.34에서 회사 전체를 살 수 있는 규모라고 해요. 경영진이 '지금 주가가 싸다'는 가장 직접적인 신호예요. 2월 저점 $56에 근접했는데 거기서 자사주 매입 속도를 높이면 주가 지지선이 생기는 거잖아요. 광고 요금제 성장, NFL 라이브, WWE 독점 — 수익 다변화가 되는 구간에서 자사주 매입까지 나왔어요. 장기 EPS 증가 확실한 시나리오예요.",
+    createdAt: T19J - 9*60_000, likes: 198, comments: 2 },
+  { id: 267, symbol: "NFLX", nickname: "익명_8523", holdingLabel: "25주 보유",
+    content: "넷플릭스가 한창 성장할 때 자사주 매입 잘 안 했잖아요. 이제 성숙기에 들어오면서 주주환원이 강해지는 거예요. $37.3B은 역사상 최대 규모 프로그램이고 PE 기준으로도 지금 NFLX는 꽤 싼 편이에요. K-드라마 콘텐츠가 글로벌에서 잘 나오고 있고, 게임도 추가 수익이에요. 2월 저점 $56이 바닥이었다면 지금 $73은 아직 상승 여지가 있는 거죠.",
+    createdAt: T19J - 41*60_000, likes: 156, comments: 2 },
+
+  // INTC — 6/19 업데이트 ────────────────────────────────────────────────
+  { id: 268, symbol: "INTC", nickname: "익명_5291", holdingLabel: "관심종목",
+    content: "미국 정부가 인텔 주식을 $31.04에 사서 $21.61에 팔았다는 게 -$4B 손실이에요. CHIPS Act 때 투자한 게 이렇게 됐네요. 인텔이 AI 전환에 실패한 거 시장이 이미 다 알고 있었는데 정부까지 손절하는 게 공식 포기 신호처럼 보여요. 근데 역발상으로 보면 정부가 팔았다는 게 더 떨어지기 어렵다는 신호일 수도 있어요. Intel 18A 수율 문제 해결 여부가 진짜 촉매예요.",
+    createdAt: T19J - 19*60_000, likes: 223, comments: 2 },
+  { id: 269, symbol: "INTC", nickname: "익명_1874", holdingLabel: "관심종목",
+    content: "인텔 $21.61이 106년 역사 저점 근처라고 하는데, 그만큼 바닥에서 반전 가능성도 있어요. 18A 공정이 2026 H2에 양산 성공 발표나면 지금 저점 매수한 사람들 크게 웃는 거잖아요. 정부 손절 = 포기가 아니라 정부 포트폴리오 재조정일 수도 있고요. 리스크는 있지만 18A 베팅 관점에서 소액 포지션은 나쁘지 않을 수 있어요.",
+    createdAt: T19J - 47*60_000, likes: 145, comments: 2 },
+
+  // NVDA — 6/19 업데이트 ────────────────────────────────────────────────
+  { id: 270, symbol: "NVDA", nickname: "익명_7381", holdingLabel: "80주 보유",
+    content: "젠슨 황이 SaaS 죽는다 = GPU 덜 필요 논리를 정면으로 반박한 게 이번에 나왔어요. 기업들이 자체 AI 모델 만드는 게 아니라 AI 에이전트가 소프트웨어 도구를 쓰는 거고, 그러면 SW 기업들이 AI 처리에 GPU를 더 많이 써야 한다는 논리예요. NVDA 데이터 확인한 거잖아요. 'AI 에이전트 = GPU 수요 확대'가 공식이 된 거예요. SaaS 망할까봐 NVDA 팔았던 사람들이 틀렸다는 게 젠슨이 직접 증명한 거예요.",
+    createdAt: T19J - 16*60_000, likes: 356, comments: 3 },
+  { id: 271, symbol: "NVDA", nickname: "익명_4628", holdingLabel: "120주 보유",
+    content: "STRL, ENOVA 같은 SaaS 기업들이 'AI가 소프트웨어 쓸모없게 한다'는 논리로 팔리고 있는데 그게 오히려 AI 에이전트가 그 소프트웨어를 더 많이 쓴다는 현실을 무시한 거예요. NVDA는 이미 이 패턴을 실데이터로 보고 있다고 했잖아요. GPU 수요가 줄어드는 게 아니라 에이전트 시대일수록 더 늘어나는 거예요. Forward PE 24x에 이 성장이 반영 안 된 게 저평가 이유예요.",
+    createdAt: T19J - 32*60_000, likes: 289, comments: 3 },
+
+  // MSFT — 6/19 업데이트 ────────────────────────────────────────────────
+  { id: 272, symbol: "MSFT", nickname: "익명_2954", holdingLabel: "70주 보유",
+    content: "Microsoft Commercial RPO가 +97.3% YoY로 $700B 돌파했다는 게 정말 대단한 숫자예요. RPO는 이미 계약 서명된 미래 수익이거든요. 연매출의 3배 이상이 선예약된 상태라는 건데 이 정도 실적 가시성을 가진 기업이 또 있나요? Azure AI + Copilot 기업 계약이 폭발하고 있다는 직접 증거예요. 'AI ROI 언제 나와?' 논란이 있는데 RPO $700B이 그 답이에요. 나왔어요.",
+    createdAt: T19J - 13*60_000, likes: 298, comments: 2 },
+  { id: 273, symbol: "MSFT", nickname: "익명_6839", holdingLabel: "50주 보유",
+    content: "5년 CAGR +47%인 RPO가 이번 분기 +97.3%로 가속됐다는 게 Azure Copilot 기업 계약이 임계점을 넘었다는 신호예요. Fortune 500 기업 70%가 Copilot 도입했다는 데이터가 이걸 설명해줘요. 경기 하락이 와도 3년 약정 계약이 쌓여 있으면 매출이 급락하기 어려운 구조잖아요. 기관 투자자들이 왜 MSFT를 방어적 성장주로 보는지 RPO 하나로 설명돼요.",
+    createdAt: T19J - 45*60_000, likes: 231, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-18 — 이란핵합의 서명·메모리부족 CEO 경고·NVDA $25B채권 /
@@ -1119,6 +1190,78 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-19 신규 ──────────────────────────────────────────────────────
+  258: [
+    { id: 1, nickname: "익명_4827", holdingLabel: "100주 보유", content: "한국 구독 버튼 공식 확인이 인상적이에요. 미국에서 시작해서 유럽 거치고 이제 아시아에서 동시에 터지는 거잖아요. FSD 구독 월정액이 한국에서 얼마일지 모르겠지만 200~300달러 사이면 꽤 수익이 될 것 같아요.", createdAt: T19J - 4*60_000, likes: 78 },
+    { id: 2, nickname: "익명_6391", holdingLabel: "관심종목", content: "K.I.T.T 스타일 FSD — 진짜 어릴 때 꿈꿨던 거잖아요. 나이트 라이더 보면서 저렇게 됐으면 했는데 3개월 안에 나온다는 게 현실이라는 게 아직도 신기해요. HW3 포함이라는 것도 중요해요. 기존 오너들도 업그레이드 없이 같이 간다는 거니까요.", createdAt: T19J - 11*60_000, likes: 54 },
+    { id: 3, nickname: "익명_2847", holdingLabel: "80주 보유", content: "Cybertruck FSD V14 포착이 20개 도시라는 게 대규모 배포 준비 중이라는 신호예요. 뉴질랜드까지 포착됐다는 건 글로벌 테스트가 동시다발로 진행 중이라는 거고요. 이 속도면 올해 안에 엄청 많은 나라에서 FSD 쓸 수 있을 것 같아요.", createdAt: T19J - 19*60_000, likes: 41 },
+  ],
+  259: [
+    { id: 1, nickname: "익명_5193", holdingLabel: "관심종목", content: "강화학습 엔지니어 $490K가 구글·메타 수준이에요. 테슬라가 AI 탑급 인재 싸움에 본격 뛰어든 거죠. 디지털 옵티머스가 성공하면 Tesla 내부 자동화 먼저 적용하고 나중에 기업용 AI 에이전트로 팔 수 있는 구조잖아요.", createdAt: T19J - 8*60_000, likes: 63 },
+    { id: 2, nickname: "익명_7283", holdingLabel: "200주 보유", content: "OpenClass가 인터페이스 탐색·워크플로우 자율 실행·장기 과제 처리를 다 한다는 게 일반 AI 비서와 달리 실무 에이전트 플랫폼이에요. 일론이 말한 'AI 에이전트를 소프트웨어 도구 사용에 배포'가 구체적으로 이게 되는 거잖아요.", createdAt: T19J - 24*60_000, likes: 49 },
+    { id: 3, nickname: "익명_3841", holdingLabel: "40주 보유", content: "자동차+로봇+에너지+AI 에이전트 = 테슬라 신규 수익 파이프라인이 4개예요. 자동차 마진만 보던 분석들이 틀리는 게 이런 이유예요. 2026년 하반기부터 각 파이프라인이 실적에 찍히기 시작할 거예요.", createdAt: T19J - 38*60_000, likes: 37 },
+  ],
+  260: [
+    { id: 1, nickname: "익명_8492", holdingLabel: "관심종목", content: "IPO 이틀 후에 $20B 채권 준비라는 게 엄청 빠른 속도예요. Moody's Baa1 받자마자 바로 자본 시장 접근하는 거잖아요. 연금·보험사 자금이 들어올 수 있는 문이 열린 거예요. Morgan Stanley·Goldman·JPM 주관사 콘소시엄 자체가 최고급 딜이라는 신호예요.", createdAt: T19J - 6*60_000, likes: 87 },
+    { id: 2, nickname: "익명_3751", holdingLabel: "관심종목", content: "Baa1이 정크 바로 위라서 아직 고등급은 아닌데, 신설 기업이 첫 등급부터 투자등급 받는 게 쉬운 일이 아니에요. Starlink 반복 수익 구조를 Moody's가 인정한 거예요. $20B 채권 이자가 낮아질수록 Starship 투자 가속화할 수 있어요.", createdAt: T19J - 23*60_000, likes: 63 },
+    { id: 3, nickname: "익명_6184", holdingLabel: "관심종목", content: "SpaceX가 스타트업에서 대기업으로 공식 전환한 순간이에요. 투자등급 채권 발행 = 전통적 대기업만 할 수 있는 거거든요. Starlink B2B + Flow 파트너십 + ARK 5펀드 편입까지 오늘 SPCX 뉴스가 정말 풍성해요.", createdAt: T19J - 37*60_000, likes: 48 },
+  ],
+  261: [
+    { id: 1, nickname: "익명_7291", holdingLabel: "관심종목", content: "ARK 5개 펀드 전부 SpaceX 편입은 전례가 없는 거예요. ARKX는 당연하지만 ARKQ(자율주행), ARKW(인터넷), ARKK(이노베이션)까지요. Starlink가 '차세대 인터넷 인프라'라는 게 맞는 거잖아요. 위성 직접 통신이 되면 5G 없는 지역에서도 AI 에이전트 배포가 가능해지는 거예요.", createdAt: T19J - 14*60_000, likes: 71 },
+    { id: 2, nickname: "익명_4839", holdingLabel: "관심종목", content: "2023년부터 비상장 때부터 들고 있던 ARK Venture까지 포함이에요. Cathie Wood가 '역사상 가장 위대한 인프라 기업'이라는 표현을 쓴 것 자체가 드문 일이에요. 이 정도 확신 포지션이면 IPO 이후에도 계속 매수할 것 같아요.", createdAt: T19J - 29*60_000, likes: 55 },
+    { id: 3, nickname: "익명_9184", holdingLabel: "관심종목", content: "Flow 허리케인 파트너십도 Starlink B2B 생태계 확장이에요. 허리케인 시즌 직전 계약이라서 실제 수요가 즉각 발생해요. 재난 통신 표준이 되는 게 엄청난 반복 수익원이잖아요. SPCX 오늘 종합하면 정말 많이 좋아진 날이에요.", createdAt: T19J - 44*60_000, likes: 39 },
+  ],
+  262: [
+    { id: 1, nickname: "익명_5847", holdingLabel: "40주 보유", content: "PE 29.13이 AMZN 역사상 최저라는 게 진짜 이해하기 어려울 정도로 싸요. AWS +27% 성장률에 이 밸류에이션은 PEG 1.07이에요. 사실상 가치주 수준으로 거래되는 거잖아요. 고점 -12%에서 분할 매수하는 게 맞는 것 같아요.", createdAt: T19J - 10*60_000, likes: 64 },
+    { id: 2, nickname: "익명_3927", holdingLabel: "관심종목", content: "Trainium이 NVDA 대비 40% 저렴한 학습 비용이라는 게 AWS 마진에 직접 영향을 줘요. 자체 칩으로 추론까지 하면 GPU 비용이 줄고 마진이 올라가는 구조예요. AI ROI가 플러스라는 데이터가 나왔으니 이제 투자가 수익으로 전환되는 사이클이에요.", createdAt: T19J - 31*60_000, likes: 48 },
+  ],
+  263: [
+    { id: 1, nickname: "익명_8241", holdingLabel: "30주 보유", content: "고점 $274에서 $243으로 왔는데 성장률은 유지 중이에요. 이 갭이 좁혀지는 게 시간 문제라고 봐요. Bedrock 기반 AI 에이전트 수요가 늘어날수록 AWS 매출이 직접 올라가는 구조니까요.", createdAt: T19J - 18*60_000, likes: 39 },
+    { id: 2, nickname: "익명_6493", holdingLabel: "45주 보유", content: "AMZN 광고 사업은 경기 하락에서도 ROI 좋아서 잘 버텨요. AWS + 광고 + Prime Video 광고까지 합치면 세 가지 성장 엔진이에요. PE 29x에 이걸 다 담고 있는 게 말이 안 되게 싼 거예요.", createdAt: T19J - 46*60_000, likes: 32 },
+  ],
+  264: [
+    { id: 1, nickname: "익명_7291", holdingLabel: "60주 보유", content: "팀 쿡 40년 처음이라는 발언이 충격적이에요. 스티브 잡스 시절부터 지금까지 이런 공급망 충격은 없었다는 거잖아요. +15% 인상이지만 Apple 유저들 이탈률이 낮아서 수요는 유지될 것 같아요. 오히려 마진이 좋아지는 거죠.", createdAt: T19J - 7*60_000, likes: 58 },
+    { id: 2, nickname: "익명_3817", holdingLabel: "관심종목", content: "메모리 가격 올라가면 MU·SK하이닉스가 수혜받고, Apple이 그 비용을 소비자한테 전가하는 구조예요. 공급망 위에 있는 기업들이 마진을 먹는 거죠. AAPL 보다 MU가 오히려 더 직접 수혜인 것 같아요.", createdAt: T19J - 25*60_000, likes: 43 },
+  ],
+  265: [
+    { id: 1, nickname: "익명_5382", holdingLabel: "관심종목", content: "Macs·iPads까지 동시 인상이면 Apple 전 라인업 가격 인상이에요. 소비자한테는 부담이지만 Apple 입장에서는 마진 방어예요. 9월 이전 발표 가능하다니까 분기 실적 전에 가이던스로 올리는 게 영리한 전략이네요.", createdAt: T19J - 15*60_000, likes: 36 },
+    { id: 2, nickname: "익명_9183", holdingLabel: "50주 보유", content: "Apple Intelligence 진짜로 실용적인 기능 추가되면 $1,299에도 사는 사람 많을 거예요. 에어팟 처음 나왔을 때 비싸다고 했는데 지금 다들 달고 다니잖아요. 생태계 안에 있으면 빠져나오기 어렵고요.", createdAt: T19J - 35*60_000, likes: 27 },
+  ],
+  266: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "관심종목", content: "$37.3B이면 진짜 역대급 자사주 매입이에요. 현재 주가로 계산하면 회사 전체를 살 수 있다는 게 경영진의 저평가 확신을 보여주는 거잖아요. 2월 저점 $56에서 자사주 매입 속도 높이면 주가 지지선이 만들어져요.", createdAt: T19J - 6*60_000, likes: 52 },
+    { id: 2, nickname: "익명_6284", holdingLabel: "25주 보유", content: "Netflix가 콘텐츠 투자 줄이고 자사주 매입 늘린다는 게 이제 성장 투자에서 주주환원으로 전환하는 시그널이에요. EPS 기반 장기 가치 상승 스토리예요. 광고 요금제 수익이 쌓이면서 FCF가 많아진 거고요.", createdAt: T19J - 28*60_000, likes: 38 },
+  ],
+  267: [
+    { id: 1, nickname: "익명_3841", holdingLabel: "관심종목", content: "K-드라마 콘텐츠가 글로벌에서 계속 히트 치고 있어요. 오징어게임 시즌2 반응도 좋았고요. Netflix가 한국 콘텐츠에 투자하는 게 글로벌 구독자 유지 핵심 전략이에요. 자사주 매입 + 콘텐츠 강화 = 양방향 가치 창출이에요.", createdAt: T19J - 19*60_000, likes: 29 },
+    { id: 2, nickname: "익명_7482", holdingLabel: "10주 보유", content: "$56 바닥을 찍고 $73까지 왔는데 자사주 매입 발표가 더 떨어지기 어렵게 만들어요. $73.34에서 경영진이 직접 지지선 그어주는 거잖아요. 여기서 추가 매수 검토해볼 만해요.", createdAt: T19J - 42*60_000, likes: 22 },
+  ],
+  268: [
+    { id: 1, nickname: "익명_8471", holdingLabel: "관심종목", content: "정부가 공식 손절하는 게 인텔한테 심리적 타격이 클 것 같아요. CHIPS Act 수혜 기업인데 투자한 정부도 손절하면 '진짜 어렵구나' 신호잖아요. 18A 공정 수율 발표가 진짜 마지막 기회예요. 실패하면 파운드리 사업 접어야 할 수도 있어요.", createdAt: T19J - 11*60_000, likes: 47 },
+    { id: 2, nickname: "익명_2937", holdingLabel: "관심종목", content: "반면에 정부가 팔았다 = 더 이상 나쁜 소식 없다는 신호로 볼 수도 있어요. 악재가 주가에 다 반영된 시점에서 역발상 매수라는 논리가 있는데 저는 18A 실제 수율 확인 전까지는 관망이에요.", createdAt: T19J - 36*60_000, likes: 31 },
+  ],
+  269: [
+    { id: 1, nickname: "익명_5183", holdingLabel: "관심종목", content: "Intel 106년 역사 저점이라는 게 맞는 표현인지 모르겠지만 분명히 수십 년 저점인 건 맞아요. 옛날 반도체 강자였는데 이렇게 됐다는 게 AI 전환 실패가 얼마나 치명적인지 보여주는 사례예요. 시장은 냉정해요.", createdAt: T19J - 22*60_000, likes: 38 },
+    { id: 2, nickname: "익명_9283", holdingLabel: "관심종목", content: "18A 수율 성공하면 TSMC 대안으로 미국 파운드리 공급망이 생기는 거라 그 자체로 국가 전략 자산이에요. 지금 저가에서 소액 베팅하는 사람들은 그 시나리오 보는 거예요. 고위험 고수익 베팅이에요.", createdAt: T19J - 48*60_000, likes: 25 },
+  ],
+  270: [
+    { id: 1, nickname: "익명_4739", holdingLabel: "80주 보유", content: "젠슨 황이 직접 데이터로 확인했다는 게 포인트예요. 이론이 아니라 NVDA 서버에서 실제로 AI 에이전트들이 소프트웨어 도구를 더 많이 쓰는 걸 목격한 거잖아요. 'SaaS 죽는다 = GPU 덜 필요'라는 공매도 논리가 틀렸다는 거예요.", createdAt: T19J - 9*60_000, likes: 89 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "AI 에이전트가 소프트웨어를 쓴다 = SW 기업 GPU 수요 증가라는 논리가 처음에 반직관적인데 이해하고 나면 맞아요. 클로드나 GPT가 AWS API 호출하면 AWS가 GPU 더 써야 하는 거잖아요. NVDA 수혜가 직접이에요.", createdAt: T19J - 23*60_000, likes: 67 },
+    { id: 3, nickname: "익명_3847", holdingLabel: "120주 보유", content: "SaaS 기업들 오버킬됐다는 역발상 기회가 생긴 거기도 해요. STRL, ENOVA 같은 게 AI 에이전트가 더 많이 쓰는 구조라면 지금 매도세가 기회일 수 있어요. 근데 선택적으로 봐야 해요. 완전 대체되는 단순 SW는 진짜 위험하니까요.", createdAt: T19J - 40*60_000, likes: 51 },
+  ],
+  271: [
+    { id: 1, nickname: "익명_8193", holdingLabel: "40주 보유", content: "에이전트 붐 = 인프라 붐 공식이 성립된 거잖아요. OpenAI, Anthropic, Google 에이전트들이 다 클라우드 GPU에서 돌아가는 거예요. 에이전트 수 늘어날수록 NVDA 매출이 늘어나는 구조가 자동으로 만들어져요.", createdAt: T19J - 16*60_000, likes: 71 },
+    { id: 2, nickname: "익명_5471", holdingLabel: "관심종목", content: "Forward PE 24x에 이 성장률이면 진짜 싸요. AI 사이클 초기에 성장주가 고PE로 거래됐던 거랑 비교하면 지금은 오히려 가치주 수준이에요. 젠슨 황 발언 이후에 다시 봐야 할 레벨이에요.", createdAt: T19J - 35*60_000, likes: 53 },
+    { id: 3, nickname: "익명_2948", holdingLabel: "200주 보유", content: "NVDA 오늘 뉴스 맥락에서 보면 AI 에이전트 시대가 GPU 수요를 더 늘린다 + 내일 TeraFab $250B까지 맞물리면 NVDA 위치가 더 강해지는 거예요. 공급망 장악하고 있는 한 쉽게 흔들리지 않아요.", createdAt: T19J - 52*60_000, likes: 39 },
+  ],
+  272: [
+    { id: 1, nickname: "익명_3948", holdingLabel: "70주 보유", content: "RPO +97.3%가 YoY 거의 2배예요. 분기 기준 역대 최고 성장률인데 이게 Azure AI + Copilot 계약이 폭발했다는 직접 증거예요. 미래 3년 매출이 이미 예약된 회사에 투자하는 게 얼마나 안전한지 보여줘요.", createdAt: T19J - 10*60_000, likes: 73 },
+    { id: 2, nickname: "익명_7294", holdingLabel: "관심종목", content: "$700B RPO가 연매출 $220B의 3배 이상이에요. 경기 하락이 와도 이미 서명된 계약이라 매출이 급락하기 어려워요. 방어적 성장주라는 포지셔닝이 RPO 하나로 설명되는 거예요. 기관들이 왜 MSFT를 anchor로 보는지 이해가 돼요.", createdAt: T19J - 27*60_000, likes: 55 },
+  ],
+  273: [
+    { id: 1, nickname: "익명_6283", holdingLabel: "50주 보유", content: "Fortune 500 70% Copilot 도입이면 M365 구독 + Copilot $30/월이 대부분의 대기업에서 정착된 거예요. 3년 약정 계약으로 묶여 있는 돈이 RPO에 잡히는 거고요. AI ROI 논란이 있어도 MSFT는 이미 계약으로 잠근 상태예요.", createdAt: T19J - 15*60_000, likes: 58 },
+    { id: 2, nickname: "익명_1849", holdingLabel: "관심종목", content: "5년 CAGR +47%인데 이번 분기 +97.3%로 가속됐다는 게 Copilot 기업 계약이 임계점을 넘었다는 신호예요. 기업 AI 도입 사이클이 본격화되면 MSFT가 제일 먼저, 제일 많이 먹는 구조예요. Azure + Copilot + Teams AI가 다 연결되니까요.", createdAt: T19J - 39*60_000, likes: 44 },
+  ],
+
   // ── 2026-06-18 신규 ──────────────────────────────────────────────────────
   250: [
     { id: 1, nickname: "익명_9284", holdingLabel: "50주 보유", content: "1,000회 통제 테스트가 진짜 인상적인 게 뭔지 아세요? RDW가 독립 기관이거든요. 테슬라가 아니라 규제기관이 직접 '강력 지지'한 거예요. 독일·프랑스가 이 근거 무시하기 힘들어요.", createdAt: T18J - m(5), likes: 94 },

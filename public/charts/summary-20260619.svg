@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580">
+  <rect width="480" height="580" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#00e5a0" opacity="0.5"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">특집 · 6/19 시장 한장 요약</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">FSD 아시아 · TeraFab · SPCX Baa1 · AAPL 가격</text>
+
+  <!-- Wide card: TSLA FSD Asia -->
+  <rect x="24" y="78" width="432" height="90" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">TSLA — FSD 아시아 대확장 + 보이스 커맨드 3개월 내</text>
+  <text x="40" y="128" font-family="Arial,sans-serif" font-size="26" fill="#00e5a0" font-weight="bold">한국 구독 · 스페인 6/30</text>
+  <text x="40" y="152" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">보이스 커맨드 K.I.T.T 스타일 3개월 내 | Cybertruck FSD 20개 도시 포착</text>
+
+  <!-- Row 1: SPCX Bond | TeraFab -->
+  <rect x="24" y="180" width="204" height="80" rx="10" fill="#150d2e" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="40" y="202" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">SPCX Moody's Baa1 + 채권</text>
+  <text x="40" y="228" font-family="Arial,sans-serif" font-size="24" fill="#c084fc" font-weight="bold">$20B 발행</text>
+  <text x="40" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">IPO 이틀 후 · 투자등급 획득</text>
+
+  <rect x="244" y="180" width="212" height="80" rx="10" fill="#0d1a1f" stroke="#60a5fa" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="260" y="202" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">SpaceX x xAI x Tesla 칩 공장</text>
+  <text x="260" y="228" font-family="Arial,sans-serif" font-size="24" fill="#60a5fa" font-weight="bold">TeraFab $250B</text>
+  <text x="260" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">세계 AI칩 25% 생산 목표</text>
+
+  <!-- Row 2: AAPL price | NFLX buyback -->
+  <rect x="24" y="272" width="204" height="80" rx="10" fill="#1a1005" stroke="#fb923c" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="40" y="294" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">AAPL · 팀 쿡 "40년 처음"</text>
+  <text x="40" y="320" font-family="Arial,sans-serif" font-size="22" fill="#e5e7eb" font-weight="bold">+15% 가격 인상</text>
+  <text x="40" y="340" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">메모리 부족 · iPhone 18 $1,299</text>
+
+  <rect x="244" y="272" width="212" height="80" rx="10" fill="#1a0a0a" stroke="#f87171" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="260" y="294" font-family="Arial,sans-serif" font-size="11" fill="#f87171">NFLX 자사주 매입</text>
+  <text x="260" y="320" font-family="Arial,sans-serif" font-size="24" fill="#e5e7eb" font-weight="bold">$37.3B</text>
+  <text x="260" y="340" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">2월 저점 $56 근접 · 13M주 소각</text>
+
+  <!-- Row 3: NVDA SaaS | AMZN -->
+  <rect x="24" y="364" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="386" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">NVDA · SaaS 논제 역전</text>
+  <text x="40" y="410" font-family="Arial,sans-serif" font-size="16" fill="#4ade80" font-weight="bold">AI 에이전트 = GPU↑</text>
+  <text x="40" y="430" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">SaaS 대체 아닌 GPU 수요 확대</text>
+
+  <rect x="244" y="364" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="386" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">AMZN · 최저 밸류에이션</text>
+  <text x="260" y="410" font-family="Arial,sans-serif" font-size="22" fill="#4ade80" font-weight="bold">PE 29.13x</text>
+  <text x="260" y="430" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AWS -12% 고점 대비 · 역대 최저</text>
+
+  <!-- Footer -->
+  <rect x="24" y="456" width="432" height="56" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="240" y="478" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" text-anchor="middle" font-weight="bold">오늘의 핵심 7가지</text>
+  <text x="240" y="496" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">TSLA FSD · SPCX $20B채권 · TeraFab · AAPL · NFLX · NVDA · AMZN</text>
+
+  <text x="240" y="568" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.19 · Investus · 참고용</text>
+</svg>

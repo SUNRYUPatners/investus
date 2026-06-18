@@ -83,6 +83,25 @@ const PAIRS = [
   { ko: 'tsla-vs-spcx-20260618.svg',                  en: 'tsla-vs-spcx-20260618-en.svg',                  label: 'TSLA_vs_SPCX재무',    date: '20260618' },
   { ko: 'tsla-optimus-giga-20260618.svg',             en: 'tsla-optimus-giga-20260618-en.svg',             label: 'TSLA_Optimus3층',     date: '20260618' },
   { ko: 'tsla-europe-q2-20260618.svg',                en: 'tsla-europe-q2-20260618-en.svg',                label: 'TSLA_유럽Q2판매',     date: '20260618' },
+
+  // ── 2026-06-19 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260619.svg',                       en: 'summary-20260619-en.svg',                       label: '6월19일_요약',         date: '20260619' },
+  { ko: 'tsla-fsd-voice-20260619.svg',                en: 'tsla-fsd-voice-20260619-en.svg',                label: 'TSLA_FSD보이스커맨드', date: '20260619' },
+  { ko: 'tsla-elon-form4-20260619.svg',               en: 'tsla-elon-form4-20260619-en.svg',               label: 'TSLA_Elon_Form4',      date: '20260619' },
+  { ko: 'tsla-openclass-20260619.svg',                en: 'tsla-openclass-20260619-en.svg',                label: 'TSLA_OpenClass',       date: '20260619' },
+  { ko: 'tsla-model-y-ncap-20260619.svg',             en: 'tsla-model-y-ncap-20260619-en.svg',             label: 'TSLA_ModelY_NCAP',     date: '20260619' },
+  { ko: 'tsla-fsd-asia-20260619.svg',                 en: 'tsla-fsd-asia-20260619-en.svg',                 label: 'TSLA_FSD아시아',       date: '20260619' },
+  { ko: 'tsla-megapack-25k-20260619.svg',             en: 'tsla-megapack-25k-20260619-en.svg',             label: 'TSLA_Megapack25K',     date: '20260619' },
+  { ko: 'spcx-bond-moodys-20260619.svg',              en: 'spcx-bond-moodys-20260619-en.svg',              label: 'SPCX_채권Baa1_20B',    date: '20260619' },
+  { ko: 'spcx-ark-funds-20260619.svg',                en: 'spcx-ark-funds-20260619-en.svg',                label: 'SPCX_ARK5펀드',        date: '20260619' },
+  { ko: 'spcx-starlink-flow-20260619.svg',            en: 'spcx-starlink-flow-20260619-en.svg',            label: 'SPCX_Starlink허리케인', date: '20260619' },
+  { ko: 'terafab-20260619.svg',                       en: 'terafab-20260619-en.svg',                       label: 'TeraFab_250B',         date: '20260619' },
+  { ko: 'amzn-aws-valuation-20260619.svg',            en: 'amzn-aws-valuation-20260619-en.svg',            label: 'AMZN_AWS_PE29',        date: '20260619' },
+  { ko: 'aapl-iphone-price-20260619.svg',             en: 'aapl-iphone-price-20260619-en.svg',             label: 'AAPL_iPhone가격인상',   date: '20260619' },
+  { ko: 'nflx-buyback-20260619.svg',                  en: 'nflx-buyback-20260619-en.svg',                  label: 'NFLX_37B자사주매입',   date: '20260619' },
+  { ko: 'intc-gov-sold-20260619.svg',                 en: 'intc-gov-sold-20260619-en.svg',                 label: 'INTC_정부매도손실',    date: '20260619' },
+  { ko: 'nvda-saas-thesis-20260619.svg',              en: 'nvda-saas-thesis-20260619-en.svg',              label: 'NVDA_SaaS역전',        date: '20260619' },
+  { ko: 'msft-rpo-20260619.svg',                      en: 'msft-rpo-20260619-en.svg',                      label: 'MSFT_RPO97',           date: '20260619' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

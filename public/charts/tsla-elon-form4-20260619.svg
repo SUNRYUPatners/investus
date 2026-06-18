@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#00e5a0" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">종목분석 · TSLA</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">일론 2018 스톡옵션 행사 — Form 4 SEC 공시</text>
+
+  <!-- Main stat -->
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="110" font-family="Arial,sans-serif" font-size="36" fill="#00e5a0" font-weight="bold" text-anchor="middle">304M 주</text>
+  <text x="240" y="140" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle" font-weight="bold">2018년 성과보상 스톡옵션 행사</text>
+  <text x="240" y="158" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Tesla 세금 원천징수 1,153만 주 · 과세 시점: 2028년 1월</text>
+
+  <!-- Details row -->
+  <rect x="24" y="176" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">행사 평균 단가</text>
+  <text x="40" y="226" font-family="Arial,sans-serif" font-size="28" fill="#e5e7eb" font-weight="bold">$336</text>
+  <text x="40" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">주당 원천징수 단가</text>
+
+  <rect x="244" y="176" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="200" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">거래 구조</text>
+  <text x="260" y="220" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">옵션→주식 변환</text>
+  <text x="260" y="240" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">공개시장 매도 아님</text>
+  <text x="260" y="258" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">제한적 의결권 주식 포함</text>
+
+  <!-- Tax info -->
+  <rect x="24" y="268" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="292" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">핵심 맥락</text>
+  <text x="40" y="316" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">2018년 성과보상 전환 — Tesla 공개시장 직접 매도 없음</text>
+  <text x="40" y="336" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">세금 이벤트: 2028년 1월 확정</text>
+  <text x="40" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">일론 보유 지분 희석 효과 제한적</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.19 · Investus · 참고용</text>
+</svg>

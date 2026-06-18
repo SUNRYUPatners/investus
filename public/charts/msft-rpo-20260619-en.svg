@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#4ade80" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" font-weight="bold">Stock Analysis · MSFT</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Commercial RPO +97.3% YoY — Future Contract Revenue Surpasses $700B</text>
+
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="100" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Commercial RPO (TTM) Growth</text>
+  <text x="240" y="136" font-family="Arial,sans-serif" font-size="40" fill="#4ade80" font-weight="bold" text-anchor="middle">+97.3%</text>
+  <text x="240" y="158" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Q3 2026 · All-time highest quarterly growth rate</text>
+
+  <rect x="24" y="176" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">RPO Balance</text>
+  <text x="40" y="226" font-family="Arial,sans-serif" font-size="26" fill="#e5e7eb" font-weight="bold">~$700B</text>
+  <text x="40" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Contracted future revenue</text>
+
+  <rect x="244" y="176" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="200" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">5-Year CAGR</text>
+  <text x="260" y="226" font-family="Arial,sans-serif" font-size="28" fill="#e5e7eb" font-weight="bold">+47%</text>
+  <text x="260" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Azure · M365 · Copilot growth</text>
+
+  <rect x="24" y="268" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="292" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">What RPO Means</text>
+  <text x="40" y="316" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Already-signed contracts → maximum revenue visibility</text>
+  <text x="40" y="336" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Proof of Azure AI + Copilot enterprise contract surge</text>
+  <text x="40" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">$700B RPO = 3x+ annual revenue secured in advance</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.19 · Investus · For Reference Only</text>
+</svg>
