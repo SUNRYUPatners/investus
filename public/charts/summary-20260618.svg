@@ -1,90 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 680" width="600" height="680">
-  <defs>
-    <linearGradient id="bgsum18" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0b1220"/>
-      <stop offset="100%" stop-color="#080e18"/>
-    </linearGradient>
-  </defs>
-  <rect width="600" height="680" fill="url(#bgsum18)" rx="16"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580">
+  <rect width="480" height="580" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="64" fill="#111318"/>
+  <rect x="0" y="60" width="480" height="2" fill="#00e5a0" opacity="0.5"/>
+  <text x="24" y="26" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">특집 · 시장 한장 요약</text>
+  <text x="24" y="46" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="bold">6/18 — FSD 유럽 · NVDA 채권 · 연준 · 이란합의</text>
 
-  <!-- Title bar -->
-  <rect x="0" y="0" width="600" height="56" rx="16" fill="#1e293b" opacity="0.7"/>
-  <rect x="0" y="40" width="600" height="16" fill="#1e293b" opacity="0.7"/>
-  <text x="300" y="26" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="#f1f5f9">6/18 시장 한장 요약</text>
-  <text x="300" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64748b">이란합의 · 메모리부족 · NVDA · Tesla FSD · 연준 · SPCX</text>
+  <!-- Wide card: TSLA FSD EU -->
+  <rect x="24" y="78" width="432" height="90" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="40" y="100" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">🚗 TSLA — 네덜란드 RDW, FSD 유럽 첫 공식 승인</text>
+  <text x="40" y="128" font-family="Arial,sans-serif" font-size="26" fill="#00e5a0" font-weight="bold">EU FSD 개통</text>
+  <text x="40" y="152" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">1,000회 통제 테스트 통과 | 27개국 자동 확산 구조 | 유럽 Q2 +20.5%</text>
 
-  <!-- Section 1: 이란 핵합의 -->
-  <rect x="16" y="66" width="568" height="4" rx="2" fill="#fb923c" opacity="0.6"/>
-  <rect x="16" y="70" width="70" height="20" rx="4" fill="#fb923c" opacity="0.2"/>
-  <text x="51" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#fb923c">이란합의</text>
-  <text x="94" y="85" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">오늘 서명 임박 — 제재 해제, 호르무즈 원유 재개</text>
-  <rect x="22" y="96" width="3" height="14" rx="1" fill="#fb923c"/>
-  <text x="30" y="107" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">U.S.-이란 핵합의 오늘(6/18) 전자서명 가능 — 제재 즉시 해제 예정</text>
-  <rect x="22" y="114" width="3" height="14" rx="1" fill="#fb923c"/>
-  <text x="30" y="125" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">호르무즈 봉쇄 해제 · 이란 원유 수출 재개 → 유가 추가 하락 압력</text>
+  <!-- Row 1: Optimus | NVDA $25B -->
+  <rect x="24" y="180" width="204" height="80" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="40" y="202" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">TSLA Optimus 공장</text>
+  <text x="40" y="226" font-family="Arial,sans-serif" font-size="22" fill="#e5e7eb" font-weight="bold">3층 완성</text>
+  <text x="40" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Giga TX · 연 10M대 목표</text>
 
-  <line x1="16" y1="142" x2="584" y2="142" stroke="#1e293b" stroke-width="1"/>
+  <rect x="244" y="180" width="212" height="80" rx="10" fill="#0c1a2e" stroke="#60a5fa" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="260" y="202" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">NVDA 첫 회사채</text>
+  <text x="260" y="228" font-family="Arial,sans-serif" font-size="28" fill="#60a5fa" font-weight="bold">$25B</text>
+  <text x="260" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">자회사 $25B 추가 주문</text>
 
-  <!-- Section 2: 메모리 부족 -->
-  <rect x="16" y="150" width="568" height="4" rx="2" fill="#60a5fa" opacity="0.6"/>
-  <rect x="16" y="154" width="70" height="20" rx="4" fill="#60a5fa" opacity="0.2"/>
-  <text x="51" y="169" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#60a5fa">메모리</text>
-  <text x="94" y="169" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Micron·SanDisk CEO 동시 경고 "HBM·DRAM 부족"</text>
-  <rect x="22" y="180" width="3" height="14" rx="1" fill="#60a5fa"/>
-  <text x="30" y="191" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Micron CEO "메모리 부족 상황" — SanDisk CEO도 동일 경고 동시 발표</text>
-  <rect x="22" y="198" width="3" height="14" rx="1" fill="#60a5fa"/>
-  <text x="30" y="209" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">HBM 수요 NVDA AI 서버 확장으로 급증 → $MU·$SNDK 공급 부족 사이클</text>
+  <!-- Row 2: MU HBM 부족 | 연준 동결 -->
+  <rect x="24" y="272" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="294" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">MU · SNDK CEO 동시 경고</text>
+  <text x="40" y="320" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="bold">HBM 공급 부족</text>
+  <text x="40" y="340" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI 서버 수요 급증</text>
 
-  <line x1="16" y1="226" x2="584" y2="226" stroke="#1e293b" stroke-width="1"/>
+  <rect x="244" y="272" width="212" height="80" rx="10" fill="#1f0d0d" stroke="#f87171" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="260" y="294" font-family="Arial,sans-serif" font-size="11" fill="#f87171">연준 FOMC</text>
+  <text x="260" y="320" font-family="Arial,sans-serif" font-size="24" fill="#e5e7eb" font-weight="bold">12-0 동결</text>
+  <text x="260" y="340" font-family="Arial,sans-serif" font-size="11" fill="#f87171">'94 이후 최악 Fed Day</text>
 
-  <!-- Section 3: NVDA -->
-  <rect x="16" y="234" width="568" height="4" rx="2" fill="#00e5a0" opacity="0.6"/>
-  <rect x="16" y="238" width="48" height="20" rx="4" fill="#00e5a0" opacity="0.2"/>
-  <text x="40" y="253" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#00e5a0">NVDA</text>
-  <text x="72" y="253" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">$25B 첫 회사채 — 자회사 $25B 추가 주문 · PE 24x</text>
-  <rect x="22" y="264" width="3" height="14" rx="1" fill="#00e5a0"/>
-  <text x="30" y="275" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">NVIDIA 5년 만에 첫 채권 $25B 발행 — 자회사가 추가 $25B 주문 (2배 초과)</text>
-  <rect x="22" y="282" width="3" height="14" rx="1" fill="#00e5a0"/>
-  <text x="30" y="293" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">현재 Forward PE 24x — 조정 PE 기준 2022년 이후 최저 · AI 성장 대비 저평가</text>
+  <!-- Row 3: 이란 유가 | SpaceX vs Tesla -->
+  <rect x="24" y="364" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="386" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">이란 핵합의</text>
+  <text x="40" y="412" font-family="Arial,sans-serif" font-size="24" fill="#e5e7eb" font-weight="bold">유가 $50↓</text>
+  <text x="40" y="432" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">호르무즈 재개 · CPI 완화</text>
 
-  <line x1="16" y1="310" x2="584" y2="310" stroke="#1e293b" stroke-width="1"/>
-
-  <!-- Section 4: Tesla FSD Europe -->
-  <rect x="16" y="318" width="568" height="4" rx="2" fill="#c084fc" opacity="0.6"/>
-  <rect x="16" y="322" width="48" height="20" rx="4" fill="#c084fc" opacity="0.2"/>
-  <text x="40" y="337" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#c084fc">TSLA</text>
-  <text x="72" y="337" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">FSD 유럽 RDW 공식 승인 · Q2 유럽 판매 +20.5%</text>
-  <rect x="22" y="348" width="3" height="14" rx="1" fill="#c084fc"/>
-  <text x="30" y="359" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">네덜란드 RDW, FSD Full Self-Driving 유럽 최초 공식 승인 · 1,000+ 통제 테스트</text>
-  <rect x="22" y="366" width="3" height="14" rx="1" fill="#c084fc"/>
-  <text x="30" y="377" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">유럽 Q2 판매 4,000대 +20.5% YTD · Austin 로보택시 플릿 운영 중</text>
-
-  <line x1="16" y1="394" x2="584" y2="394" stroke="#1e293b" stroke-width="1"/>
-
-  <!-- Section 5: 연준 -->
-  <rect x="16" y="402" width="568" height="4" rx="2" fill="#f87171" opacity="0.6"/>
-  <rect x="16" y="406" width="48" height="20" rx="4" fill="#f87171" opacity="0.2"/>
-  <text x="40" y="421" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#f87171">연준</text>
-  <text x="72" y="421" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">12-0 금리동결 · S&amp;P500 1994 이후 최악의 Fed Day</text>
-  <rect x="22" y="432" width="3" height="14" rx="1" fill="#f87171"/>
-  <text x="30" y="443" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">연준 만장일치 12-0 금리 동결 — Powell "몇 달 뒤 결정" 포워드 가이던스 철회</text>
-  <rect x="22" y="450" width="3" height="14" rx="1" fill="#f87171"/>
-  <text x="30" y="461" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">S&amp;P500 Fed Day 최악 낙폭(1994 이후) — 불확실성 프리미엄 반영</text>
-
-  <line x1="16" y1="478" x2="584" y2="478" stroke="#1e293b" stroke-width="1"/>
-
-  <!-- Section 6: Tesla vs SpaceX + Optimus -->
-  <rect x="16" y="486" width="568" height="4" rx="2" fill="#a3e635" opacity="0.6"/>
-  <rect x="16" y="490" width="70" height="20" rx="4" fill="#a3e635" opacity="0.2"/>
-  <text x="51" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#a3e635">재무/생산</text>
-  <text x="94" y="505" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Tesla -$590M vs SpaceX +$1.62B · Giga TX Optimus 3층</text>
-  <rect x="22" y="516" width="3" height="14" rx="1" fill="#a3e635"/>
-  <text x="30" y="527" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Q1 2026: SpaceX 순이익 +$1.62B — Tesla 순손실 -$590M · 머스크 두 기업 재무 역전</text>
-  <rect x="22" y="534" width="3" height="14" rx="1" fill="#a3e635"/>
-  <text x="30" y="545" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Giga Texas Optimus 공장: 철골 3층 완성 — 10M/year 휴머노이드 로봇 목표</text>
+  <rect x="244" y="364" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="386" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">SpaceX vs Tesla Q1 순이익</text>
+  <text x="260" y="410" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="bold">SpaceX +$1.62B</text>
+  <text x="260" y="430" font-family="Arial,sans-serif" font-size="14" fill="#f87171" font-weight="bold">Tesla  −$590M</text>
 
   <!-- Footer -->
-  <rect x="0" y="638" width="600" height="42" rx="16" fill="#1e293b" opacity="0.5"/>
-  <rect x="0" y="638" width="600" height="16" fill="#1e293b" opacity="0.5"/>
-  <text x="300" y="664" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#475569">investus.kr — 2026.06.18 시장 한장 요약</text>
+  <rect x="24" y="456" width="432" height="56" rx="10" fill="#1a0d2e" stroke="#c084fc" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="240" y="478" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" text-anchor="middle" font-weight="bold">6가지 빅 이벤트 집중된 하루</text>
+  <text x="240" y="496" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">FSD EU · NVDA채권 · HBM부족 · 연준동결 · 이란합의 · Optimus</text>
+
+  <text x="240" y="568" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.18 · Investus · 투자 참고용</text>
 </svg>
