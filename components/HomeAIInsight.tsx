@@ -35,11 +35,14 @@ function todayET(): string {
 // ─── localStorage helpers ────────────────────────────────────────────────────
 function intradayCountKey()              { return `home_ai_intra_${todayET()}`; }
 function closeCacheKey(date: string)     { return `home_ai_close_${date}`; }
+function closeRetryKey(date: string)     { return `home_ai_close_retry_${date}`; }
 
 function readIntradayCount(): number     { try { return parseInt(localStorage.getItem(intradayCountKey()) ?? "0", 10); } catch { return 0; } }
 function bumpIntradayCount(): number     { const n = readIntradayCount() + 1; try { localStorage.setItem(intradayCountKey(), String(n)); } catch { /* ignore */ } return n; }
 function readCloseCache(date: string)    { try { return localStorage.getItem(closeCacheKey(date)) ?? null; } catch { return null; } }
 function writeCloseCache(date: string, text: string) { try { localStorage.setItem(closeCacheKey(date), text); } catch { /* ignore */ } }
+function readCloseRetryUsed(date: string): boolean { try { return localStorage.getItem(closeRetryKey(date)) === "1"; } catch { return false; } }
+function markCloseRetryUsed(date: string) { try { localStorage.setItem(closeRetryKey(date), "1"); } catch { /* ignore */ } }
 
 export function HomeAIInsight() {
   const router = useRouter();
@@ -50,10 +53,12 @@ export function HomeAIInsight() {
   const [analysisDate,  setAnalysisDate]  = useState("");
   const [loading,       setLoading]       = useState(false);
   const [expanded,      setExpanded]      = useState(false);
-  const [intradayUsed,  setIntradayUsed]  = useState(0);
-  const [marketOpen,    setMarketOpen]    = useState(false);
+  const [intradayUsed,    setIntradayUsed]    = useState(0);
+  const [marketOpen,      setMarketOpen]      = useState(false);
+  const [closeRetryUsed,  setCloseRetryUsed]  = useState(false);
   // tracks the trading day we last auto-fetched for
-  const fetchedForDay = useRef("");
+  const fetchedForDay  = useRef("");
+  const analysisTimer  = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Init market status + poll every minute
   useEffect(() => {
@@ -94,27 +99,38 @@ export function HomeAIInsight() {
     return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
 
-  // Auto-fetch post-close: load cache first, only fetch if no cached result
+  // Auto-fetch post-close: wait for ALL holdings to be priced, then debounce 2s
   useEffect(() => {
-    if (marketOpen) return;                            // still open — wait
-    if (quotes.length === 0 || holdings.length === 0) return; // no price data yet
+    if (marketOpen) return;                                         // still open — wait
+    if (quotes.length === 0 || holdings.length === 0) return;      // no data yet
+    if (quotes.length < holdings.length) return;                   // not all holdings priced yet
+
     const day = lastMarketCloseDate();
-    if (fetchedForDay.current === day) return;         // already fetched this session
-    fetchedForDay.current = day;
 
     // Use cached analysis if available (persists across page refreshes)
     const cached = readCloseCache(day);
     if (cached) {
       setDisplayAnswer(cached);
       setAnalysisDate(day);
+      setCloseRetryUsed(readCloseRetryUsed(day));
       setExpanded(true);
       return;
     }
 
-    // No cache — run fresh analysis and save result
-    runAnalysis(false, day);
+    if (fetchedForDay.current === day) return;                     // already fetched this session
+
+    // Debounce: prices may still be settling — wait 2s after all holdings are priced
+    if (analysisTimer.current) clearTimeout(analysisTimer.current);
+    analysisTimer.current = setTimeout(() => {
+      if (fetchedForDay.current === day) return;
+      fetchedForDay.current = day;
+      runAnalysis(false, day);
+    }, 2000);
+    return () => {
+      if (analysisTimer.current) clearTimeout(analysisTimer.current);
+    };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [marketOpen, quotes.length]);
+  }, [marketOpen, quotes.length, holdings.length]);
 
   function buildPayload() {
     const liveMap   = Object.fromEntries(quotes.map((q) => [q.symbol, q]));
@@ -133,7 +149,7 @@ export function HomeAIInsight() {
     return { holdings: enriched, totalValue, totalCost, totalPnlPct, usdkrw };
   }
 
-  async function runAnalysis(isIntraday: boolean, closeDay?: string) {
+  async function runAnalysis(isIntraday: boolean, closeDay?: string, isCloseRetry = false) {
     if (loading || holdings.length === 0 || quotes.length === 0) return;
     setLoading(true);
     setDisplayAnswer(null);
@@ -164,6 +180,10 @@ export function HomeAIInsight() {
         const day = closeDay ?? lastMarketCloseDate();
         setAnalysisDate(day);
         writeCloseCache(day, a); // 성공 결과만 캐시 — 새로고침해도 재분석 안 함
+        if (isCloseRetry) {
+          markCloseRetryUsed(day);
+          setCloseRetryUsed(true);
+        }
       }
       setExpanded(true);
     } catch {
@@ -262,6 +282,35 @@ export function HomeAIInsight() {
                 </p>
               )}
             </div>
+
+            {/* 장마감 후 1회 재분석 버튼 — 가격 로딩 타이밍 오류 보정용 */}
+            {!marketOpen && !loading && displayAnswer && displayAnswer !== "__error__" && !closeRetryUsed && (
+              <div className="px-4 pb-3 border-t pt-2.5" style={{ borderColor: "rgba(0,229,160,0.06)" }}>
+                <button
+                  onClick={() => {
+                    const day = lastMarketCloseDate();
+                    const newDay = day;
+                    writeCloseCache(newDay, ""); // clear cached result
+                    try { localStorage.removeItem(closeCacheKey(newDay)); } catch { /* ignore */ }
+                    fetchedForDay.current = "";
+                    runAnalysis(false, newDay, true);
+                  }}
+                  disabled={loading}
+                  className="w-full flex items-center justify-between rounded-xl px-3.5 py-2 transition-opacity active:opacity-60 disabled:opacity-40"
+                  style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.12)" }}>
+                  <div className="flex items-center gap-2">
+                    <RefreshCw className="w-3 h-3" style={{ color: "var(--muted)" }} />
+                    <span className="text-[11px]" style={{ color: "var(--muted)" }}>
+                      가격이 달랐나요? 다시 분석
+                    </span>
+                  </div>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded-full"
+                    style={{ background: "rgba(255,255,255,0.05)", color: "var(--muted)" }}>
+                    1회 제공
+                  </span>
+                </button>
+              </div>
+            )}
 
             {/* 장중 재분석 버튼 — only during market hours */}
             {marketOpen && (
