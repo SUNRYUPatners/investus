@@ -499,12 +499,8 @@ export default function WallPage() {
   const { user, verify, loginWithOAuth } = useAuth();
   const t  = useLocale();
   const w  = t.wall;
-  const [mainTab, setMainTabRaw]          = useState<MainTab>(() => {
-    if (typeof window === "undefined") return "discussion";
-    return (sessionStorage.getItem("wall_main_tab") as MainTab) || "discussion";
-  });
+  const [mainTab, setMainTabRaw]          = useState<MainTab>("analyst");
   const setMainTab = (tab: MainTab) => {
-    try { sessionStorage.setItem("wall_main_tab", tab); } catch { /* ignore */ }
     setMainTabRaw(tab);
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   };
