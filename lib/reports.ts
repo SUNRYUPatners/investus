@@ -2910,15 +2910,15 @@ export const SEED_REPORTS: Report[] = [
 
   {
     id:            "seed-226",
-    title:         "Tesla FSD 아시아 대확산 — 한국 구독 공식 등장 · 스페인 6월 30일 · 추가국 일회성 6/30 종료",
-    summary:       "한국 Tesla 오너가 차량 화면에서 FSD '구독' 버튼을 확인했습니다. 월정액 구독 방식이 한국에서 공식 개시된 것으로 보입니다. 스페인은 6월 30일 FSD 승인이 예정되며, 싱가포르·대만 등 아시아 추가국도 6/30까지 일회성 구매 조건이 종료됩니다.",
-    body:          "■ 한국 FSD 구독 공식 확인\n\n\"An owner in Korea shared the attached image.\"\n\n[화면 내용]\n• 풀 셀프 드라이빙(감독형) 화면\n• '가격을 확인할 수 없습니다' 메시지 → 구독 버튼 등장\n• 버튼 텍스트: '구독' (= Subscription)\n\n→ 한국에서 FSD 월정액 구독 방식 공식 개시 확인\n\n■ 스페인 6월 30일 승인\n\n\"GOOD NEWS: Tesla is expected to be approved for selling in Spain on the 30th this June.\"\n— Ming (@VivaChinaEV)\n\n\"The Spanish government said they expected the approval to come on the 30th.\"\n— Jaime Fernández Rodríguez\n\n■ 아시아 추가국 FSD 일회성 구매 종료 (6/30)\n\n\"Tesla FSD expanding to additional Asian countries and their FSDs one-time purchases end on June 30.\"\n\n[포함 국가]\n• 싱가포르: 6월 30일 일회성 구매 종료\n• 말레이시아: 6월 30일 적용 예상\n• 대만: 기존 구독 + 일회성 마감\n• 한국: 이미 구독 방식 전환\n\n■ 글로벌 FSD 로드맵 현황 (2026.06.19)\n\n[승인 완료]\n• 미국: 모든 주 감독형 FSD · Austin 로보택시 운영 중\n• 벨기에: 5월 22일 v12.6.4.2 승인\n• 네덜란드: 6월 18일 공식 승인\n• 한국: 구독 방식 개시\n\n[곧 승인 예정]\n• 스페인: 6월 30일\n• 싱가포르·말레이시아: 6월 30일\n\n[신청 중]\n• 독일·프랑스: Q3 2026 목표\n• EU 27개국 전체: 2026 H2 목표\n\n■ 수익 임팩트\n\n• 아시아 신규 시장: 월 $99~199 구독 추가\n• 스페인 포함 EU 시장: FSD $8,000~10,000 일회성\n• 한국 구독 전환율 10%: 추가 연 $50M~100M 잠재\n\n■ 결론\n\nFSD의 아시아·유럽 동시 확산은 Tesla 소프트웨어 수익의 글로벌 본격화를 의미합니다. 2026년 하반기 FSD 매출 기여가 재무제표에 반영되기 시작할 것입니다.",
+    title:         "Tesla FSD 한국 공식 개시 — 구독 버튼 등장 · 월정액 방식 확인",
+    summary:       "한국 Tesla 오너가 차량 화면에서 FSD '구독' 버튼을 직접 확인했습니다. 월정액 구독 방식이 한국에서 공식 개시된 것으로 보입니다. 한국 도로는 FSD 난이도 최고 수준 — 한국 데이터가 아시아 FSD 품질 도약의 핵심 자산입니다.",
+    body:          "■ 한국 FSD 구독 공식 확인\n\n\"An owner in Korea shared the attached image.\"\n\n[화면 내용]\n• 풀 셀프 드라이빙(감독형) 화면\n• '가격을 확인할 수 없습니다' 메시지 → 구독 버튼 등장\n• 버튼 텍스트: '구독' (= Subscription)\n\n→ 한국에서 FSD 월정액 구독 방식 공식 개시 확인\n\n■ 한국이 FSD 핵심 시장인 이유\n\n• 복잡한 도로 + 공격적 운전 패턴 = FSD 난이도 최고 수준\n• 한국에서 통하면 아시아 어디서든 통하는 글로벌 레퍼런스\n• 한국·일본·대만 데이터 → 중국 데이터 공백 보완\n• 규제 선점 + 데이터 수집 두 가지 목표 동시 달성\n\n■ 구독 방식의 의미\n\n[월정액 vs 일회성]\n• 한국: 구독 방식 전환 → 반복 수익 구조 확립\n• 구독료: 월 $99~199 예상\n• 한국 FSD 호환 차량 ~5만 대+\n• 구독 전환율 10%: 연 $50M~100M 잠재 수익\n\n■ 글로벌 FSD 로드맵 내 한국 위상\n\n[승인 완료]\n• 미국: 모든 주 감독형 FSD · Austin 로보택시 운영 중\n• 벨기에: 5월 22일 v12.6.4.2 승인\n• 네덜란드: 6월 18일 공식 승인\n• 한국: 구독 방식 공식 개시 ✓\n\n[곧 승인 예정]\n• 스페인: 6월 30일\n• 싱가포르·말레이시아: 6월 30일\n\n[신청 중]\n• 독일·프랑스: Q3 2026 목표\n• EU 27개국 전체: 2026 H2 목표\n\n■ 결론\n\n한국 FSD 구독 개시는 아시아 FSD 확산의 첫 번째 구체적 신호입니다. 한국의 복잡한 도로 환경에서 쌓이는 FSD 데이터는 아시아 전역 FSD 품질을 한 단계 도약시킬 핵심 자산입니다.",
     category:      "종목분석",
     categoryColor: "mint",
-    subject:       "🌏 Tesla FSD 아시아·스페인 확산",
+    subject:       "🇰🇷 Tesla FSD 한국 구독 개시",
     date:          "2026-06-19",
     updatedAt:     "2026.06.19 07:40",
-    images:        ["/charts/tsla-fsd-asia-20260619.svg"],
+    images:        ["/charts/tsla-fsd-korea-20260619.svg"],
   },
 
   {
@@ -3062,6 +3062,19 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-19",
     updatedAt:     "2026.06.19 09:30",
     images:        ["/charts/msft-rpo-20260619.svg"],
+  },
+
+  {
+    id:            "seed-238",
+    title:         "Tesla FSD 스페인 6/30 승인 예정 — 아시아 추가국 일회성 구매 6/30 종료",
+    summary:       "스페인이 6월 30일 Tesla FSD 공식 승인 예정입니다. 현지 소식통 두 곳이 독립적으로 확인했습니다. 싱가포르·말레이시아·대만 등 아시아 추가국의 FSD 일회성 구매 조건도 6월 30일 종료됩니다.",
+    body:          "■ 스페인 6월 30일 FSD 승인\n\n\"GOOD NEWS: Tesla is expected to be approved for selling in Spain on the 30th this June.\"\n— Ming (@VivaChinaEV)\n\n\"The Spanish government said they expected the approval to come on the 30th.\"\n— Jaime Fernández Rodríguez\n\n→ 현지 소식통 두 곳 독립 확인 — 신뢰도 높음\n\n■ 스페인 FSD 의미\n\n• EU 5대 시장 중 하나 — 인구 4,800만, Tesla 보유 수만 대\n• 스페인 승인 → 이탈리아·포르투갈 도미노 예상\n• 남유럽 3국 시장 동시 개방 경로\n• 독일·프랑스 승인 협상에도 레퍼런스 활용\n\n■ 아시아 추가국 FSD 일회성 구매 종료 (6/30)\n\n\"Tesla FSD expanding to additional Asian countries and their FSDs one-time purchases end on June 30.\"\n\n[포함 국가]\n• 싱가포르: 6월 30일 일회성 구매 종료\n• 말레이시아: 6월 30일 적용 예상\n• 대만: 기존 구독 + 일회성 마감\n\n■ 구독 전환의 의미\n\n[일회성 → 구독 전환 이유]\n• 반복 수익 구조 확립 → 재무 예측 가능성 향상\n• 채택 장벽 낮춤 → 더 많은 오너가 시도\n• OTA 업데이트 지속 개선 → 구독 유지율 상승\n\n■ 6/30 이후 수익 임팩트\n\n• 스페인: FSD $8,000~10,000 일회성 or $99/월 구독\n• 싱가포르·대만·말레이시아: 구독 방식 전환\n• 아시아+스페인 동시 개방 → Q3 FSD 수익 가시성\n\n■ 결론\n\n6월 30일은 Tesla FSD의 유럽-아시아 동시 확산 데드라인입니다. 스페인 승인 + 아시아 구독 전환은 Tesla 소프트웨어 수익의 글로벌 본격화를 알리는 신호탄입니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🇪🇸 Tesla FSD 스페인·아시아 6/30",
+    date:          "2026-06-19",
+    updatedAt:     "2026.06.19 07:36",
+    images:        ["/charts/tsla-fsd-spain-20260619.svg"],
   },
 
 ];
@@ -3272,4 +3285,5 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-235": ["INTC"],
   "seed-236": ["NVDA"],
   "seed-237": ["MSFT"],
+  "seed-238": ["TSLA"],
 };
