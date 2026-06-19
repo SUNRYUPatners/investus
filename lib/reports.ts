@@ -3027,12 +3027,12 @@ export const SEED_REPORTS: Report[] = [
 
   {
     id:            "seed-235",
-    title:         "미국 정부 Intel 주식 -$4B 손실 매각 — $31.04 매수 → $21.61 매도",
-    summary:       "미국 정부가 Intel 주식 433.3M주를 $21.61에 매도해 약 $4B 손실을 확정했습니다. 2021년 8월 CHIPS Act 지원 당시 $31.04에 매수한 후 -30% 하락한 수준에서 매도했습니다. Intel은 현재 106년 역사상 최저 주가 근처에서 거래되고 있습니다.",
-    body:          "■ 핵심 공시\n\n\"The US Government sold -$8.99B Intel shares at $21.61.\nThey previously bought those shares at $31.04 (August 22nd, 2021).\n\nThe US Government is now up -$4B billion on its Intel shares.\n\nThose 433.3M shares are now worth $8B.\"\n\n■ 거래 세부 내용\n\n[매수]\n• 시기: 2021년 8월 22일\n• 단가: $31.04/주\n• 수량: 433.3M주\n• 총 투자액: ~$13.5B\n\n[매도]\n• 단가: $21.61/주\n• 현재 가치: ~$9.4B\n• 실현 손실: ~$4B\n• 손실률: -30.4%\n\n■ Intel 주가 하락 배경\n\n[구조적 문제]\n• AI 전환 실패: NVIDIA에 데이터센터 GPU 시장 완패\n• 파운드리 사업: TSMC·삼성 대비 기술력 후진\n• 제조 공정: Intel 18A 수율 문제 지속\n• 경영진 교체: 2024년 CEO 교체 후 방향성 혼란\n\n[Intel 현재 주가 $21.61]\n• 2024년 고점 $51.28 대비 -58%\n• 2000년 닷컴 버블 이후 역대 최저 근접\n• 'Intel은 106년 저점' — Bull Thane 분석\n\n■ 정부 매각의 신호\n\n[공식 포기 신호로 해석]\n• CHIPS Act 투자의 공개적 손실 실현\n• '미국 반도체 국산화' 전략 중 Intel 회의감\n• TSMC·삼성 파운드리 의존 불가피 시사\n\n[반론: 시장 과잉 반응?]\n• 정부 매각 = 규정상 포트폴리오 조정\n• Intel 18A 2026 H2 양산 성공 시 반전\n• 저점 매수 기회로 보는 시각도 존재\n\n■ 유가 하락과의 관계\n\n• 이란 핵합의 → 유가 하락 → CPI 완화 → Fed 인하 기대\n• 'Oil is down -39% from its 106-day high of $75, wiping out almost all of the election year premium.'\n• 에너지 비용 하락 = Intel 데이터센터 운영비 하락 → 미미한 수혜\n\n■ 결론\n\n정부의 $4B 손실 매각은 Intel의 AI 전환 실패를 공식 확인한 것입니다. Intel의 회복 여부는 18A 파운드리 공정 성공에 달려 있으며, 2026년 하반기 수율 개선 발표가 핵심 촉매가 됩니다.",
+    title:         "미국 정부 Intel ~$48B 수익 중 — $20.47 매수 → 현재 $131.61 (+542%)",
+    summary:       "미국 정부가 2025년 8월 22일 Intel 주식 433.3M주를 주당 $20.47에 ~$8.9B 투자했습니다. Intel은 현재 $131.61에 거래 중으로, 해당 지분 가치는 ~$57B로 성장했습니다. 미국 정부는 Intel 투자로 현재 ~$48B의 평가차익을 올리고 있습니다.",
+    body:          "■ 핵심 공시\n\n\"The US Government invested ~$8.9B into Intel $INTC stock for 433.3M shares at $20.47 per share back on August 22nd, 2025.\n\nIntel is currently trading at $131.61 per share.\n\nThose 433.3M shares are now worth $57B.\n\nThe US Government is now up ~$48 Billion on its Intel shares.\"\n\n■ 거래 세부 내용\n\n[매수]\n• 시기: 2025년 8월 22일\n• 단가: $20.47/주\n• 수량: 433.3M주\n• 총 투자액: ~$8.9B\n\n[현재 상황]\n• 현재 주가: $131.61\n• 현재 지분 가치: ~$57B (433.3M × $131.61)\n• 평가 수익: ~$48B\n• 수익률: +542%\n\n■ 왜 이 투자가 성공했나\n\n[CHIPS Act 전략 투자]\n• 미국 반도체 국산화 전략의 일환\n• Intel 18A 공정 양산 성공 → 파운드리 경쟁력 확보\n• 국내 반도체 생산기지 확보 = 지정학 리스크 헤지\n\n[Intel 주가 상승 동력]\n• 18A 공정 수율 개선 및 양산 돌입\n• TSMC 대안 미국 파운드리로 포지셔닝 성공\n• AI 칩 파운드리 수요 수혜\n• 빅테크 CHIPS 발주 확대\n\n■ 미국 정부 CHIPS Act 투자 성과\n\n• 투자액 ~$8.9B → 현재 가치 ~$57B\n• ~$48B 수익 = 투자금의 6.4배 회수 중\n• 미국 반도체 공급망 자립화 + 재정 수익 동시 달성\n• 'CHIPS Act 최대 성공 사례'로 기록될 수준\n\n■ Intel 현재 경쟁력\n\n[18A 공정]\n• TSMC 2nm 수준의 경쟁 공정\n• GAA (Gate-All-Around) 트랜지스터 적용\n• 인텔 Foundry Services(IFS) 주요 고객 확보\n\n[수혜 구조]\n• 미국·유럽 빅테크의 지정학 리스크 분산 수요\n• TSMC 단일 의존에서 탈피하려는 고객 수요\n• 미국 정부 계약 우선 수혜 지위\n\n■ 결론\n\n미국 정부의 Intel 투자는 CHIPS Act 역사상 최대 성공 사례가 되고 있습니다. ~$8.9B 투자로 ~$48B 수익(+542%)을 올리는 동시에 미국 반도체 공급망 자립화라는 전략 목표도 달성했습니다.",
     category:      "종목분석",
     categoryColor: "blue",
-    subject:       "🔵 Intel 미국 정부 손실 매각",
+    subject:       "🔵 Intel 미국 정부 +$48B 수익",
     date:          "2026-06-19",
     updatedAt:     "2026.06.19 09:10",
     images:        ["/charts/intc-gov-sold-20260619.svg"],
