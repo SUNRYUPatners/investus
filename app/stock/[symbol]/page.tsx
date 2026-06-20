@@ -14,6 +14,7 @@ import { SEED_REPORTS, REPORT_TICKERS, CATEGORY_STYLE, CATEGORY_EMOJI } from "@/
 import type { Report } from "@/lib/reports";
 import { isMarketOpen as checkMarketOpen } from "@/lib/marketHours";
 import { AdFitBanner } from "@/components/AdFitBanner";
+import { AnalystTargets } from "@/components/AnalystTargets";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -196,6 +197,8 @@ function getDateKey(r: Report): string {
 }
 
 function StockReports({ symbol, className = "" }: { symbol: string; className?: string }) {
+  const [showOlder, setShowOlder] = useState(false);
+
   const reports: Report[] = SEED_REPORTS
     .filter(
       (r) =>
@@ -206,6 +209,10 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
 
   if (reports.length === 0) return null;
 
+  const latestDate   = getDateKey(reports[0]);
+  const latestGroup  = reports.filter((r) => getDateKey(r) === latestDate);
+  const olderReports = reports.filter((r) => getDateKey(r) !== latestDate);
+
   return (
     <div className={className}>
       <h2
@@ -215,8 +222,35 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
         Investus 리포트
       </h2>
       <div className="flex flex-col gap-3">
-        {reports.map((r) => <ReportCard key={r.id} r={r} />)}
+        {latestGroup.map((r) => <ReportCard key={r.id} r={r} />)}
       </div>
+
+      {olderReports.length > 0 && (
+        <>
+          <button
+            onClick={() => setShowOlder((v) => !v)}
+            className="w-full flex items-center justify-center gap-1.5 text-xs py-2.5 mt-3 rounded-xl border active:opacity-60 transition-opacity"
+            style={{
+              color: "var(--muted)",
+              borderColor: "var(--border)",
+              background: "var(--card)",
+              cursor: "pointer",
+            }}
+          >
+            {showOlder ? "접기" : `이전 리포트 ${olderReports.length}개 더 보기`}
+            <ChevronDown
+              className="w-3.5 h-3.5 transition-transform"
+              style={{ transform: showOlder ? "rotate(180deg)" : "none" }}
+            />
+          </button>
+
+          {showOlder && (
+            <div className="flex flex-col gap-3 mt-3">
+              {olderReports.map((r) => <ReportCard key={r.id} r={r} />)}
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }
@@ -548,6 +582,11 @@ export default function StockPage({
             {/* 리포트 — 지표 바로 아래 (모바일 + 데스크탑 공통) */}
             <StockReports symbol={upper} className="mx-4 lg:mx-0 mb-4" />
 
+            {/* 애널리스트 의견 — 모바일 전용 (리포트 아래) */}
+            <div className="lg:hidden mx-4 mb-4">
+              <AnalystTargets symbol={upper} currentPrice={detail?.price ?? null} />
+            </div>
+
             {/* 광고 — 리포트와 뉴스 사이 (모바일) */}
             <div className="lg:hidden mx-4 mb-4">
               <AdFitBanner />
@@ -593,6 +632,7 @@ export default function StockPage({
           {/* ── 오른쪽 사이드바 — 홈탭과 동일한 구조 ── */}
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
             <AdFitBanner />
+            <AnalystTargets symbol={upper} currentPrice={detail?.price ?? null} />
             <div
               className="rounded-2xl border p-4"
               style={{ background: "var(--card)", borderColor: "var(--border)" }}
