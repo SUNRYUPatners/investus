@@ -27,16 +27,17 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T19J = _now;                        // 오늘(6/19) 포스트
-const T18J = _now - 24 * 3600_000;       // 6/18
-const T17J = _now - 48 * 3600_000;       // 6/17
-const T16J = _now - 72 * 3600_000;       // 6/16
-const T15J = _now - 96 * 3600_000;       // 6/15
-const T13J = _now - 144 * 3600_000;      // 6/13
-const T12J = _now - 168 * 3600_000;      // 6/12
-const T11J = _now - 192 * 3600_000;      // 6/11
-const T10J = _now - 216 * 3600_000;      // 6/10
-export const LATEST_UPDATE = T19J;       // NEW 배지 기준
+const T20J = _now;                        // 오늘(6/20) 포스트
+const T19J = _now - 24 * 3600_000;       // 6/19
+const T18J = _now - 48 * 3600_000;       // 6/18
+const T17J = _now - 72 * 3600_000;       // 6/17
+const T16J = _now - 96 * 3600_000;       // 6/16
+const T15J = _now - 120 * 3600_000;      // 6/15
+const T13J = _now - 168 * 3600_000;      // 6/13
+const T12J = _now - 192 * 3600_000;      // 6/12
+const T11J = _now - 216 * 3600_000;      // 6/11
+const T10J = _now - 240 * 3600_000;      // 6/10
+export const LATEST_UPDATE = T20J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -55,6 +56,66 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-20 — Cybercab EPA CoC·Liquid Armor·Cathie Wood·신용등급 /
+  //              SPCX 락업·Q1 Upmass 86%·Starlink DTS·TeraFab Giga Texas /
+  //              NVDA 추론74%·AMZN Trainium외판·AWS$137B·TomLee·이란종전
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — 6/20 업데이트 ─────────────────────────────────────────────────
+  { id: 274, symbol: "TSLA", nickname: "익명_5274", holdingLabel: "200주 보유",
+    content: "EPA가 Cybercab에 클린에어법 적합 인증서(COC) 발급했어요. 2026 모델연도, 발효일 05/26/2026, 내구수명 150,000마일이에요. EPA + NHTSA ADA 인증에 이어 COC까지 — 서류상으로는 로보택시 운행에 빠진 게 없어요. 테슬라라티가 2개월 안에 Cybercab이 로보택시 플릿에 투입될 수 있다고 한 게 더 현실적으로 들려요. Cybercab 로고도 차량에 붙기 시작했고, 기존 Model Y들이 Cybercab으로 전환되는 것도 목격되고 있어요.",
+    createdAt: T20J - 8*60_000, likes: 423, comments: 3 },
+  { id: 275, symbol: "TSLA", nickname: "익명_8372", holdingLabel: "100주 보유",
+    content: "EPA COC 발급일이 05/26인데 지금 6/20이잖아요. 거의 한 달 가까이 비공개로 있던 건데 이게 공식 발표 나오면 로보택시 타임라인이 확실해져요. Model Y가 Cybercab 라벨로 전환되는 것도 봐요. Tesla가 양산 Cybercab 나오기 전에 기존 차량으로 fleet 미리 채우는 전략인 것 같아요. 2개월 내 로보택시라는 게 빈말이 아닌 거예요.",
+    createdAt: T20J - 22*60_000, likes: 287, comments: 2 },
+  { id: 276, symbol: "TSLA", nickname: "익명_3847", holdingLabel: "50주 보유",
+    content: "Tesla가 '왜 이 부품을 더 빠르게 못 칠까?'라는 질문에서 시작해서 페인트 자체를 없애버리는 발상을 한 거잖아요. 기존 자동차 공장에서 가장 비싸고 복잡한 공정이 페인트샵인데 Tesla는 '액체 아머' 몰딩 시스템으로 필름을 성형 단계에서 입히는 구조로 전환 중이에요. 기가캐스팅이 조립 공정을 혁신했다면 이건 마감 공정을 혁신하는 거예요. 완성되면 자동차 제조 원가가 또 한 번 구조적으로 낮아지고 경쟁사들이 따라오려면 몇 년 걸릴 거예요.",
+    createdAt: T20J - 15*60_000, likes: 356, comments: 3 },
+  { id: 277, symbol: "TSLA", nickname: "익명_7291", holdingLabel: "관심종목",
+    content: "Cathie Wood ARK가 TSLA 추가로 $20M 매수했어요. 현재 주가 기준 22.6x 할인 분석이 나왔는데 Dec 2007 EPS $8.76 기준으로 역대급 저평가라는 ARK 논리예요. ARK 목표주가 $2,600 유지 중이고 이 가격에서 추가 매수한다는 게 확신이에요. ARK가 TSLA + SpaceX 동시에 들고 있는 게 머스크 생태계 전체에 베팅하는 거잖아요. 일론 머스크도 신용등급이 '터무니없이 낮다'고 했고 $40B+ 현금에 무부채 기업이 이 평가를 받는 게 맞냐는 거예요.",
+    createdAt: T20J - 32*60_000, likes: 312, comments: 2 },
+  { id: 278, symbol: "TSLA", nickname: "익명_4629", holdingLabel: "150주 보유",
+    content: "일론 머스크가 Tesla 신용등급이 'ridiculously low(터무니없이 낮다)'라고 직접 말했어요. Tesla $40B+ 현금, 부채 없음, 꾸준한 흑자예요. 신용평가사들이 자동차 기업 프레임으로 Tesla를 보는 게 문제예요. 에너지+소프트웨어+AI 기업 프리미엄을 반영하면 완전히 다른 등급이 나와요. SpaceX가 Moody's Baa1 받고 $20B 채권 발행한 게 바로 어제잖아요. Tesla도 신용등급 올라가면 같은 구조로 저비용 자본 조달이 가능해요.",
+    createdAt: T20J - 45*60_000, likes: 279, comments: 2 },
+
+  // SPCX — 6/20 업데이트 ────────────────────────────────────────────────
+  { id: 279, symbol: "SPCX", nickname: "익명_6483", holdingLabel: "관심종목",
+    content: "SpaceX IPO 락업 해제 스케줄 정리하면: IPO 직후 자유유동 4.9%. 8월 8일 11.8%로 시작해서 단계별 증가, Day 366(2027년 6월 12일)에 일론 머스크 46.1% 지분 해제 → 하루에 +46% 추가, 전체 99.5% 유동. 최종 완전 해제 2027년 9월. 이 스케줄을 알면 각 단계에서 잠재적 물량 압박을 예측할 수 있어요. Day 366 일론 락업 해제가 가장 중요한 이벤트예요. Facebook IPO처럼 기관들이 락업 해제 후에 오히려 진입하는 경우도 있으니 공포에 팔지 않는 게 중요해요.",
+    createdAt: T20J - 12*60_000, likes: 445, comments: 3 },
+  { id: 280, symbol: "SPCX", nickname: "익명_2938", holdingLabel: "관심종목",
+    content: "Bryce Tech Q1 2026 데이터: SpaceX 556,057kg / 전체 647,412kg = 86%, YoY +18%. 2위 CASC(중국)이 40,980kg인데 SpaceX가 2위보다 13.5배 많이 쏜 거예요. Steve Jurvetson이 '그래프에서 다른 기업들이 돋보기 없이 안 보인다'고 했는데 정말 그래요. 팔콘 9 재사용 경제성이 만들어내는 해자예요. Starship 상업 발사 시작되면 이 격차가 90%+ 로 더 벌어질 거예요.",
+    createdAt: T20J - 28*60_000, likes: 389, comments: 3 },
+  { id: 281, symbol: "SPCX", nickname: "익명_5827", holdingLabel: "관심종목",
+    content: "Starlink Direct-to-Cell이 이미 30개국에 연결됐고 Deutsche Telekom이 50개 유럽 국가 커버 계약을 2026년부터 시작해요. 기존 셀타워 없이 위성이 직접 스마트폰에 연결되는 거잖아요. Deutsche Telekom 같은 통신 강자가 인프라를 Starlink에 맡긴다는 게 경쟁이 아니라 인프라 레이어로 인식하기 시작한 거예요. 전 세계 22억 명 오프라인 인구 커버 가능한 시스템이에요. 기존 통신사 비즈니스 모델이 흔들리는 신호예요.",
+    createdAt: T20J - 40*60_000, likes: 318, comments: 2 },
+
+  // TeraFab — 6/20 업데이트 ────────────────────────────────────────────
+  { id: 282, symbol: "TSLA", nickname: "익명_9183", holdingLabel: "관심종목",
+    content: "Joe Tegtmeyer가 Giga Texas 근처 TeraFab 합작 AI 칩 공장 부지 드론으로 촬영했어요. SpaceX × xAI × Tesla 합작 $250B 프로젝트가 이제 실제 부지 공사 단계예요. 설계·제조·메모리·패키징·테스트를 한 지붕 아래 두는 구조로 TSMC 의존도를 없애려는 전략이에요. Giga Texas 옆이니까 Tesla 제조 인프라 + SpaceX 발사 + xAI 소프트웨어가 물리적으로 한 곳에 모이는 거예요. AI 칩 세계 25% 생산 목표가 드론 사진으로 현실이 되고 있어요.",
+    createdAt: T20J - 19*60_000, likes: 415, comments: 3 },
+
+  // NVDA — 6/20 업데이트 ───────────────────────────────────────────────
+  { id: 283, symbol: "NVDA", nickname: "익명_7483", holdingLabel: "120주 보유",
+    content: "NVDA AI 추론 시장 점유율이 Q1 2025 66%에서 Q1 2026 74%로 올랐어요. 경쟁자들이 뭘 만들어도 NVDA가 오히려 점유율을 높여가고 있어요. Q1 2026 NVDA 추론 매출 $41B, 나머지 업체 합산 $15B이에요. AMD, Intel, 커스텀 칩들이 다 합쳐서 $15B인데 NVDA 혼자 $41B이에요. '추론은 NVDA 독점 시대 끝난다'는 논리가 계속 틀린다는 게 데이터로 증명되는 거예요.",
+    createdAt: T20J - 16*60_000, likes: 498, comments: 3 },
+
+  // AMZN — 6/20 업데이트 ───────────────────────────────────────────────
+  { id: 284, symbol: "AMZN", nickname: "익명_3724", holdingLabel: "40주 보유",
+    content: "Bloomberg: Amazon이 자체 AI 칩 Trainium을 외부 기업 데이터센터에 판매 협의 중이에요. Amazon AI 책임자 Peter DeSantis가 인정했고 이미 OpenAI $5B, Anthropic $1B 약정한 상태예요. 그동안 AWS 내부용으로만 썼는데 외부에도 팔면 NVDA 경쟁자가 되는 거예요. Trainium2가 H100보다 추론 마진이 좋다는 평가도 있어요. AWS $137B TTM에 Trainium 외판 수익까지 더해지면 AMZN 반도체 사업에 새로운 레이어가 생기는 거예요.",
+    createdAt: T20J - 35*60_000, likes: 362, comments: 2 },
+  { id: 285, symbol: "AMZN", nickname: "익명_8293", holdingLabel: "30주 보유",
+    content: "AWS TTM 매출이 $137.05B이에요. 2018년 $25.66B에서 시작해서 지금까지 직선 우상향이에요. AI 클라우드 수요가 폭발하는 지금 이 성장이 더 가속되는 중이에요. Trainium2 추론 마진 업계 최고에 외부 판매까지 열리면 성장 드라이버가 하나 더 추가돼요. Amazon PE가 29.13x로 역대 최저 수준인 게 이 성장 대비 저평가라는 논리가 지금도 유효해요. $200B 넘는 게 멀지 않을 거예요.",
+    createdAt: T20J - 48*60_000, likes: 287, comments: 2 },
+
+  // 매크로 — 6/20 업데이트 ────────────────────────────────────────────
+  { id: 286, symbol: "NVDA", nickname: "익명_5129", holdingLabel: "관심종목",
+    content: "Tom Lee가 2026 시장 3단계 전망 발표했어요. 1단계(지금~여름 말): S&P 7,700~7,800까지 상승, 불장 유지. 2단계(여름 말~가을): 갑자기 베어마켓처럼 느껴지는 급락 — 실제론 불장이지만 공포에 팔기 좋은 구간이에요. 3단계(가을 이후): 강한 회복, 수십 년 중 가장 강한 기간. 주의할 건 Anthropic + OpenAI IPO 대규모 언락이 시장 매도 압력으로 작용할 수 있다는 거예요. 2단계 급락 시점에 팔지 않고 버티면 3단계에서 수익 나는 구조예요.",
+    createdAt: T20J - 26*60_000, likes: 521, comments: 3 },
+  { id: 287, symbol: "SPCX", nickname: "익명_6374", holdingLabel: "관심종목",
+    content: "이란 외무부가 '미국과 전쟁을 전자서명으로 합의해 종료했다'고 공식 발표했어요. 호르무즈 해협도 개방 상태 유지예요. Trump 대통령이 해협을 직접 통과하면서 중국에도 감사 인사 했고요. 지정학 리스크 완화 → 에너지 가격 안정 → 인플레 하락 → Fed 금리 인하 여력 → 성장주 상승이라는 거대한 도미노예요. SpaceX Starlink 중동 지역 배포 가속화 가능성도 있어요. 이게 다 맞으면 Tom Lee 3단계 시나리오랑 맞아 떨어지는 거예요.",
+    createdAt: T20J - 56*60_000, likes: 389, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-19 — FSD 보이스커맨드·OpenClass AI·아시아FSD·Megapack25K /
@@ -1190,6 +1251,72 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-20 신규 ──────────────────────────────────────────────────────
+  274: [
+    { id: 1, nickname: "익명_7284", holdingLabel: "80주 보유", content: "EPA COC가 있으면 이제 Cybercab이 모든 50개 주에서 운행 가능한 기본 조건이 충족된 거예요. 로보택시 허가는 각 주 도로교통부 관할이지만 연방 EPA 인증은 기본 중의 기본이에요.", createdAt: T20J - 4*60_000, likes: 88 },
+    { id: 2, nickname: "익명_3918", holdingLabel: "150주 보유", content: "150,000마일 내구수명이 로보택시 관점에서 중요해요. 24/7 운행하면 연간 10만 마일 이상 가능한데 최소 1.5년 완전 운행이에요. Cybercab 단가 낮춰서 fleet 공격적으로 구성할 수 있어요.", createdAt: T20J - 14*60_000, likes: 67 },
+    { id: 3, nickname: "익명_5293", holdingLabel: "관심종목", content: "COC 발급일 05/26인데 지금 6/20이잖아요. 한 달 가까이 비공개로 있었던 거예요. 공식 발표 나오면 주가 모멘텀 생길 것 같아요. 2개월이면 8월인데 여름 방학 시즌에 오스틴 로보택시 정식 서비스 론칭 가능한 거예요.", createdAt: T20J - 24*60_000, likes: 54 },
+  ],
+  275: [
+    { id: 1, nickname: "익명_2847", holdingLabel: "관심종목", content: "로보택시 vs Cybercab 라벨 혼용이 Tesla 내부에서 정리되는 과정인 것 같아요. Cybercab이 공식 상품명으로 확정된 거잖아요. 브랜딩 정리가 되면 소비자 혼란이 줄어요.", createdAt: T20J - 10*60_000, likes: 44 },
+    { id: 2, nickname: "익명_6182", holdingLabel: "관심종목", content: "Model Y를 Cybercab으로 전환하는 게 전용 Cybercab 양산 전에 기존 차량으로 fleet 채우는 전략이에요. 운영 데이터 쌓으면서 전용 차량 투입하는 단계적 접근이에요.", createdAt: T20J - 27*60_000, likes: 36 },
+  ],
+  276: [
+    { id: 1, nickname: "익명_8471", holdingLabel: "200주 보유", content: "기가캐스팅이 조립 원가 혁신했고, 이번 Liquid Armor가 도장 원가 없애면 Tesla 제조 원가가 또 한 번 구조적으로 낮아지는 거예요. 경쟁사들이 따라오려면 수 년 걸릴 거예요.", createdAt: T20J - 7*60_000, likes: 91 },
+    { id: 2, nickname: "익명_5283", holdingLabel: "관심종목", content: "전자 필름이 페인트샵을 대체하면 환경 규제 VOC 배출 이슈도 없어지는 거예요. 페인트 VOC 규제가 공장 운영 비용에 상당히 영향 줬는데 그게 통째로 없어지는 거예요.", createdAt: T20J - 18*60_000, likes: 67 },
+    { id: 3, nickname: "익명_9374", holdingLabel: "60주 보유", content: "'도장공장 없는 자동차 공장'은 Tesla 이전에 상상도 못 했어요. 이걸 실현하면 자동차 제조 패러다임이 완전히 바뀌는 거예요. 원가 경쟁력 격차가 더 벌어지는 거예요.", createdAt: T20J - 32*60_000, likes: 52 },
+  ],
+  277: [
+    { id: 1, nickname: "익명_4827", holdingLabel: "관심종목", content: "ARK가 22.6x 할인이라고 분석하는 게 EPS 기준 2007년보다 싸다는 뜻이잖아요. FSD + Optimus + Energy 다 포함하면 $2,600 목표가 불가능한 숫자도 아니에요.", createdAt: T20J - 15*60_000, likes: 73 },
+    { id: 2, nickname: "익명_7192", holdingLabel: "70주 보유", content: "Cathie Wood가 추가 매수하는 타이밍이 항상 논란이지만 결국 장기적으로 맞는 경우가 많았어요. 이 가격에서 추가 베팅한다는 게 ARK의 확신이에요.", createdAt: T20J - 29*60_000, likes: 58 },
+  ],
+  278: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "80주 보유", content: "SpaceX가 Moody's Baa1 받고 $20B 채권 발행한 게 바로 어제예요. Tesla도 신용등급 올라가면 같은 구조로 저비용 자본 조달 가능해요. $40B+ 들고 무부채 기업이 AAA급이라고 봐도 되는 거잖아요.", createdAt: T20J - 20*60_000, likes: 62 },
+    { id: 2, nickname: "익명_6391", holdingLabel: "관심종목", content: "신용평가사들이 자동차 기업 프레임으로 Tesla를 평가하는 게 문제예요. 에너지+소프트웨어+AI 기업 프리미엄을 반영하면 완전히 다른 등급이 나와야 해요.", createdAt: T20J - 38*60_000, likes: 47 },
+  ],
+  279: [
+    { id: 1, nickname: "익명_2938", holdingLabel: "관심종목", content: "Day 366에 일론 46.1%가 한꺼번에 해제되는 게 투자자 입장에서 가장 민감한 순간이에요. 이미 알고 있는 이벤트라 시장이 미리 반영하는 경향도 있어요.", createdAt: T20J - 6*60_000, likes: 97 },
+    { id: 2, nickname: "익명_5183", holdingLabel: "관심종목", content: "락업 해제 스케줄이 공개됐다는 게 투명성 측면에서 좋아요. 서프라이즈 없이 예측 가능하게 유동성이 늘어나는 구조면 시장도 적응하기 쉬워요.", createdAt: T20J - 18*60_000, likes: 68 },
+    { id: 3, nickname: "익명_8374", holdingLabel: "관심종목", content: "초기 4.9% 유동성에서 단계적으로 늘어나는 구조가 Facebook IPO와 비슷해요. Facebook이 락업 해제 후 오히려 주가 올랐던 것처럼 기관들이 기다리다가 진입할 수 있어요.", createdAt: T20J - 32*60_000, likes: 51 },
+  ],
+  280: [
+    { id: 1, nickname: "익명_6284", holdingLabel: "관심종목", content: "86%가 2위보다 13배 이상 앞서는 거잖아요. 경쟁이라고 부를 수 있는 수준이 아니에요. 팔콘 9 재사용 경제성이 만들어내는 구조적 해자예요.", createdAt: T20J - 9*60_000, likes: 84 },
+    { id: 2, nickname: "익명_4819", holdingLabel: "관심종목", content: "중국 CASC가 2위지만 40,980kg밖에 안 돼요. SpaceX 수준의 상업화는 아직 멀었다는 신호예요. Starship 완전 상업화되면 이 격차가 90%+로 더 벌어질 거예요.", createdAt: T20J - 22*60_000, likes: 61 },
+    { id: 3, nickname: "익명_2937", holdingLabel: "관심종목", content: "Q1 데이터에 Starship 상업 발사가 아직 포함 안 됐을 거예요. Starship 정식 상업 발사 시작하면 SpaceX 비율이 90%+ 로 올라갈 거예요. 이 수치가 더 커지는 거예요.", createdAt: T20J - 37*60_000, likes: 45 },
+  ],
+  281: [
+    { id: 1, nickname: "익명_7483", holdingLabel: "관심종목", content: "Deutsche Telekom이 Starlink와 협력한다는 게 통신사가 위성을 경쟁자가 아니라 인프라 레이어로 인식하기 시작한 거예요. 기존 통신사 비즈니스 모델이 흔들리는 신호예요.", createdAt: T20J - 14*60_000, likes: 73 },
+    { id: 2, nickname: "익명_3192", holdingLabel: "관심종목", content: "30개국에서 이미 연결 중인데 유럽 50개국까지 확대되면 글로벌 커버리지 사실상 완성이에요. 오지나 재난 지역 통신은 이제 Starlink가 표준이 될 거예요.", createdAt: T20J - 29*60_000, likes: 54 },
+  ],
+  282: [
+    { id: 1, nickname: "익명_5827", holdingLabel: "관심종목", content: "Tesla 기가팩토리 옆에 AI 칩 공장이 생기면 Tesla 자동차에 들어가는 FSD 칩 공급망이 자체적으로 완성되는 거예요. TSMC 의존도 제로가 될 수 있어요.", createdAt: T20J - 11*60_000, likes: 98 },
+    { id: 2, nickname: "익명_9283", holdingLabel: "관심종목", content: "SpaceX + xAI + Tesla 삼각 협력이 물리적으로 한 곳에 모인다는 게 시너지가 엄청날 거예요. AI 모델 → 칩 설계 → 제조 → 탑재까지 원스톱이에요.", createdAt: T20J - 24*60_000, likes: 75 },
+    { id: 3, nickname: "익명_3847", holdingLabel: "80주 보유", content: "$250B 프로젝트가 진짜인지 의심했는데 드론 사진 나왔어요. 부지 공사가 시작됐다는 게 이제 현실이에요. Giga Texas가 자동차+에너지+AI 칩 복합 단지가 되는 거예요.", createdAt: T20J - 40*60_000, likes: 62 },
+  ],
+  283: [
+    { id: 1, nickname: "익명_8472", holdingLabel: "200주 보유", content: "74%면 독점에 가깝잖아요. AMD+Intel+아마존+커스텀 칩 다 합쳐서 26%예요. NVDA 하드웨어 생태계가 너무 깊이 자리잡혀서 교체 비용이 천문학적이에요.", createdAt: T20J - 8*60_000, likes: 112 },
+    { id: 2, nickname: "익명_5193", holdingLabel: "80주 보유", content: "추론 시장이 학습 시장보다 훨씬 크게 성장한다는 전망인데 거기서도 74%면 진짜 수혜자예요. AI 서비스 사용자가 늘수록 추론 수요가 기하급수적으로 늘어나거든요.", createdAt: T20J - 19*60_000, likes: 87 },
+    { id: 3, nickname: "익명_2846", holdingLabel: "관심종목", content: "Q1 2025 66% → Q1 2026 74%면 경쟁사들이 커지는 속도보다 NVDA가 더 빠르게 크고 있어요. '점유율 방어'가 아니라 '점유율 확장'이에요. 이게 핵심이에요.", createdAt: T20J - 33*60_000, likes: 69 },
+  ],
+  284: [
+    { id: 1, nickname: "익명_6284", holdingLabel: "40주 보유", content: "Amazon이 Trainium 외부 판매 시작하면 데이터센터 고객들에게 선택지가 생기는 거예요. NVDA 가격 협상력이 조금이라도 낮아질 수 있어요. 경쟁이 생기는 게 고객 입장에선 좋아요.", createdAt: T20J - 16*60_000, likes: 67 },
+    { id: 2, nickname: "익명_4193", holdingLabel: "관심종목", content: "OpenAI $5B, Anthropic $1B 약정이 흥미롭잖아요. AI 모델 회사들이 NVDA 대안을 적극적으로 찾고 있다는 신호예요. Trainium이 가격 경쟁력 있으면 빠르게 점유율 가져갈 거예요.", createdAt: T20J - 30*60_000, likes: 52 },
+  ],
+  285: [
+    { id: 1, nickname: "익명_7284", holdingLabel: "30주 보유", content: "AWS가 $25.66B에서 $137B까지 6배 성장이 채 10년이 안 됐어요. AI 클라우드 수요 추가되면 $200B 넘는 게 멀지 않을 거예요. Trainium 외판까지 더해지면요.", createdAt: T20J - 22*60_000, likes: 58 },
+    { id: 2, nickname: "익명_9183", holdingLabel: "관심종목", content: "AWS가 $137B이면 Microsoft Azure + Google Cloud 합산에 근접하는 수준이에요. 클라우드 3강이 AI로 다 같이 크는 시장이에요. AMZN 저평가 논리가 여기서 나오는 거예요.", createdAt: T20J - 41*60_000, likes: 44 },
+  ],
+  286: [
+    { id: 1, nickname: "익명_3948", holdingLabel: "관심종목", content: "2단계 급락 시점에 공포에 팔지 않는 게 핵심이에요. Tom Lee가 '불장이지만 베어마켓처럼 느껴진다'고 한 게 많은 사람들이 그때 팔 거라는 뜻이에요. 그 구간이 오히려 매수 기회예요.", createdAt: T20J - 12*60_000, likes: 103 },
+    { id: 2, nickname: "익명_5729", holdingLabel: "관심종목", content: "Anthropic + OpenAI IPO 언락이 처음 들었는데 생각해보면 맞아요. VC + 직원 지분이 다 시장에 나오면 AI 섹터 전반에 영향 줄 수 있어요. 이 변수 알고 있어야 해요.", createdAt: T20J - 26*60_000, likes: 78 },
+    { id: 3, nickname: "익명_1847", holdingLabel: "관심종목", content: "3단계 강한 회복이 맞다면 지금부터 적립식 들어가는 게 최선이에요. 정확한 타이밍 맞추려다 구간 다 놓치는 것보다 꾸준히 매수하는 게 낫잖아요.", createdAt: T20J - 42*60_000, likes: 61 },
+  ],
+  287: [
+    { id: 1, nickname: "익명_8372", holdingLabel: "관심종목", content: "호르무즈 해협 개방 유지면 원유 수송 리스크 없어지는 거예요. 에너지 가격 안정 → 인플레 하락 → 금리 인하 → 성장주 상승이라는 거대한 도미노 가능성이에요.", createdAt: T20J - 18*60_000, likes: 86 },
+    { id: 2, nickname: "익명_4928", holdingLabel: "관심종목", content: "이란이 전자서명으로 합의했다는 게 공식 문서화됐다는 거라 번복하기 어려워요. Trump가 Xi에게 감사 표시한 것도 지정학 환경 개선의 신호예요.", createdAt: T20J - 32*60_000, likes: 64 },
+    { id: 3, nickname: "익명_6284", holdingLabel: "관심종목", content: "지정학 리스크 완화가 신흥국 투자 심리에도 긍정이에요. SpaceX Starlink가 중동 지역 커버 확대하는 데 있어서도 규제 환경이 나아질 수 있어요.", createdAt: T20J - 48*60_000, likes: 47 },
+  ],
+
   // ── 2026-06-19 신규 ──────────────────────────────────────────────────────
   258: [
     { id: 1, nickname: "익명_4827", holdingLabel: "100주 보유", content: "한국 구독 버튼 공식 확인이 인상적이에요. 미국에서 시작해서 유럽 거치고 이제 아시아에서 동시에 터지는 거잖아요. FSD 구독 월정액이 한국에서 얼마일지 모르겠지만 200~300달러 사이면 꽤 수익이 될 것 같아요.", createdAt: T19J - 4*60_000, likes: 78 },

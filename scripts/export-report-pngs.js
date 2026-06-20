@@ -103,6 +103,21 @@ const PAIRS = [
   { ko: 'intc-gov-sold-20260619.svg',                 en: 'intc-gov-sold-20260619-en.svg',                 label: 'INTC_정부매도손실',    date: '20260619' },
   { ko: 'nvda-saas-thesis-20260619.svg',              en: 'nvda-saas-thesis-20260619-en.svg',              label: 'NVDA_SaaS역전',        date: '20260619' },
   { ko: 'msft-rpo-20260619.svg',                      en: 'msft-rpo-20260619-en.svg',                      label: 'MSFT_RPO97',           date: '20260619' },
+  // 2026-06-20
+  { ko: 'summary-20260620.svg',                       en: 'summary-20260620-en.svg',                       label: '6월20일_요약',          date: '20260620' },
+  { ko: 'tsla-cybercab-epa-20260620.svg',             en: 'tsla-cybercab-epa-20260620-en.svg',             label: 'TSLA_CybercabEPA',     date: '20260620' },
+  { ko: 'tsla-liquid-armor-20260620.svg',             en: 'tsla-liquid-armor-20260620-en.svg',             label: 'TSLA_LiquidArmor',     date: '20260620' },
+  { ko: 'tsla-cathie-wood-20260620.svg',              en: 'tsla-cathie-wood-20260620-en.svg',              label: 'TSLA_CathieWood20M',   date: '20260620' },
+  { ko: 'tsla-credit-rating-20260620.svg',            en: 'tsla-credit-rating-20260620-en.svg',            label: 'TSLA_신용등급저평가',   date: '20260620' },
+  { ko: 'spcx-unlock-timeline-20260620.svg',          en: 'spcx-unlock-timeline-20260620-en.svg',          label: 'SPCX_락업타임라인',     date: '20260620' },
+  { ko: 'spcx-upmass-q1-20260620.svg',               en: 'spcx-upmass-q1-20260620-en.svg',               label: 'SPCX_Upmass86pct',     date: '20260620' },
+  { ko: 'spcx-starlink-dts-20260620.svg',             en: 'spcx-starlink-dts-20260620-en.svg',             label: 'SPCX_StarlinkDTS30',   date: '20260620' },
+  { ko: 'terafab-giga-texas-20260620.svg',            en: 'terafab-giga-texas-20260620-en.svg',            label: 'TeraFab_GigaTexas',    date: '20260620' },
+  { ko: 'nvda-inference-74pct-20260620.svg',          en: 'nvda-inference-74pct-20260620-en.svg',          label: 'NVDA_추론74pct',        date: '20260620' },
+  { ko: 'amzn-trainium-ext-20260620.svg',             en: 'amzn-trainium-ext-20260620-en.svg',             label: 'AMZN_Trainium외판',     date: '20260620' },
+  { ko: 'amzn-aws-137b-20260620.svg',                 en: 'amzn-aws-137b-20260620-en.svg',                 label: 'AMZN_AWS137B',         date: '20260620' },
+  { ko: 'macro-tom-lee-20260620.svg',                 en: 'macro-tom-lee-20260620-en.svg',                 label: '매크로_TomLee3단계',    date: '20260620' },
+  { ko: 'macro-iran-deal-20260620.svg',               en: 'macro-iran-deal-20260620-en.svg',               label: '매크로_이란종전',        date: '20260620' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 580">
+  <rect width="480" height="580" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#00e5a0" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">Market Analysis · 2026.06.20</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" font-weight="bold">Cybercab EPA · NVDA 74% · AMZN Trainium · SPCX Unlock · Iran Deal · Tom Lee</text>
+
+  <rect x="24" y="68" width="432" height="80" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="98" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">7 Key Events — Jun 20</text>
+  <text x="240" y="128" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" font-weight="bold" text-anchor="middle">Cybercab × TeraFab × AI Dominance × Geopolitics</text>
+
+  <rect x="24" y="162" width="204" height="108" rx="10" fill="#111318"/>
+  <text x="40" y="186" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">🚖 TSLA Cybercab</text>
+  <text x="40" y="214" font-family="Arial,sans-serif" font-size="24" fill="#e5e7eb" font-weight="bold">EPA CoC</text>
+  <text x="40" y="234" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">2026 model year confirmed</text>
+  <text x="40" y="252" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Robotaxi fleet in ~2 months</text>
+
+  <rect x="244" y="162" width="212" height="108" rx="10" fill="#111318"/>
+  <text x="260" y="186" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">📊 NVDA Inference Share</text>
+  <text x="260" y="214" font-family="Arial,sans-serif" font-size="24" fill="#60a5fa" font-weight="bold">74%</text>
+  <text x="260" y="234" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Q1 2026 $41B vs rest $15B</text>
+  <text x="260" y="252" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">66% Q1'25 → expanding</text>
+
+  <rect x="24" y="282" width="204" height="108" rx="10" fill="#111318"/>
+  <text x="40" y="306" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">🛒 AMZN Trainium</text>
+  <text x="40" y="334" font-family="Arial,sans-serif" font-size="18" fill="#fb923c" font-weight="bold">External Sales</text>
+  <text x="40" y="354" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">OpenAI $5B · Anthropic $1B</text>
+  <text x="40" y="372" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">NVDA competitor emerging</text>
+
+  <rect x="244" y="282" width="212" height="108" rx="10" fill="#111318"/>
+  <text x="260" y="306" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">🚀 SPCX Lock-up</text>
+  <text x="260" y="334" font-family="Arial,sans-serif" font-size="18" fill="#c084fc" font-weight="bold">4.9% → 100%</text>
+  <text x="260" y="354" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Musk 46.1% unlocks Day 366</text>
+  <text x="260" y="372" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Full unlock Sept 2027</text>
+
+  <rect x="24" y="402" width="204" height="108" rx="10" fill="#111318"/>
+  <text x="40" y="426" font-family="Arial,sans-serif" font-size="11" fill="#f87171">🌏 Iran War Deal</text>
+  <text x="40" y="454" font-family="Arial,sans-serif" font-size="18" fill="#f87171" font-weight="bold">E-Signed Ceasefire</text>
+  <text x="40" y="474" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Strait of Hormuz remains open</text>
+  <text x="40" y="492" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Geopolitical risk ↓</text>
+
+  <rect x="244" y="402" width="212" height="108" rx="10" fill="#111318"/>
+  <text x="260" y="426" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">📈 Tom Lee 3-Phase</text>
+  <text x="260" y="454" font-family="Arial,sans-serif" font-size="18" fill="#00e5a0" font-weight="bold">S&amp;P 7,700~7,800</text>
+  <text x="260" y="474" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Now–Summer: bull intact</text>
+  <text x="260" y="492" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Late Summer: sharp drop ⚠</text>
+
+  <text x="240" y="568" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.20 · Investus · For Reference Only</text>
+</svg>

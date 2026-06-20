@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#fb923c" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="bold">Stock Analysis · AMZN</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">AWS TTM $137B — 5.3x Growth from $25.66B in 2018</text>
+
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#1f1208" stroke="#fb923c" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="102" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Amazon Web Services Trailing Twelve Months Revenue</text>
+  <text x="240" y="136" font-family="Arial,sans-serif" font-size="40" fill="#fb923c" font-weight="bold" text-anchor="middle">$137.05B</text>
+  <text x="240" y="156" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">TTM basis · ~5.3x growth from $25.66B in 2018</text>
+
+  <rect x="24" y="176" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">Current TTM Revenue</text>
+  <text x="40" y="224" font-family="Arial,sans-serif" font-size="22" fill="#e5e7eb" font-weight="bold">$137.05B</text>
+  <text x="40" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Trailing 12-month basis</text>
+
+  <rect x="244" y="176" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="200" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">2018 Baseline</text>
+  <text x="260" y="224" font-family="Arial,sans-serif" font-size="22" fill="#e5e7eb" font-weight="bold">$25.66B</text>
+  <text x="260" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">→ 5.3x growth achieved</text>
+
+  <rect x="24" y="268" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="292" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AWS Cloud Growth Analysis</text>
+  <text x="40" y="316" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">2018 $25.66B → 2026 $137B = 5.3x in 8 years</text>
+  <text x="40" y="336" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">AI workload explosion → long-term cloud demand intact</text>
+  <text x="40" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Trainium external sales = chip + cloud dual revenue stream</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.20 · Investus · For Reference Only</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#c084fc" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">Stock Analysis · SPCX</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">SPCX Lock-up Timeline — 4.9% → Musk 46.1% → 100%</text>
+
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="102" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">SpaceX IPO Lock-up Release Structure</text>
+  <text x="240" y="136" font-family="Arial,sans-serif" font-size="30" fill="#c084fc" font-weight="bold" text-anchor="middle">4.9% → 100% Phased Unlock</text>
+  <text x="240" y="156" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Musk 46.1% eligible Day 366 · Full float by June 2027</text>
+
+  <rect x="24" y="176" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">IPO Day 1 Float</text>
+  <text x="40" y="224" font-family="Arial,sans-serif" font-size="26" fill="#e5e7eb" font-weight="bold">4.9%</text>
+  <text x="40" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Circulating supply at listing</text>
+
+  <rect x="244" y="176" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="200" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">Musk Stake</text>
+  <text x="260" y="224" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="bold">46.1% Unlock</text>
+  <text x="260" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Day 366 (June 2027)</text>
+
+  <rect x="24" y="268" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="292" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">SPCX Phased Lock-up Schedule</text>
+  <text x="40" y="316" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">IPO Day 1: 4.9% float → initial scarcity premium forms</text>
+  <text x="40" y="336" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Day 366 (2027.06~): Musk 46.1% + others unlock</text>
+  <text x="40" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Full 100% unlock = max supply shock → peak volatility window</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.20 · Investus · For Reference Only</text>
+</svg>

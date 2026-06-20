@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#fb923c" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#fb923c" font-weight="bold">종목분석 · AMZN</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">AMZN Trainium 외판 검토 — OpenAI $5B · Anthropic $1B</text>
+
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#1f1208" stroke="#fb923c" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="102" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Amazon Trainium 칩 외부 판매 검토 (Bloomberg)</text>
+  <text x="240" y="136" font-family="Arial,sans-serif" font-size="22" fill="#fb923c" font-weight="bold" text-anchor="middle">NVDA 경쟁자 등장 신호</text>
+  <text x="240" y="156" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">OpenAI $5B · Anthropic $1B 수주 논의 · AWS 외부 칩 사업 확장</text>
+
+  <rect x="24" y="176" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">OpenAI 계약 규모</text>
+  <text x="40" y="224" font-family="Arial,sans-serif" font-size="26" fill="#e5e7eb" font-weight="bold">$5B</text>
+  <text x="40" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Trainium 칩 공급 논의</text>
+
+  <rect x="244" y="176" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="200" font-family="Arial,sans-serif" font-size="11" fill="#fb923c">Anthropic 계약 규모</text>
+  <text x="260" y="224" font-family="Arial,sans-serif" font-size="26" fill="#fb923c" font-weight="bold">$1B</text>
+  <text x="260" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AWS 전략적 고객사</text>
+
+  <rect x="24" y="268" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="292" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AMZN Trainium 외판 전략 분석</text>
+  <text x="40" y="316" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">기존 내부 AWS 전용 → 외부 AI 기업 판매 전환 검토</text>
+  <text x="40" y="336" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">NVDA H100/Blackwell 공급 부족 틈새 공략 전략</text>
+  <text x="40" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">성사 시 AMZN 칩 사업 수직 통합 + 수익 다변화</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.20 · Investus · 참고용</text>
+</svg>

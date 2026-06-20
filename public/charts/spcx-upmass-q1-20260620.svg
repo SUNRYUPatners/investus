@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#c084fc" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">종목분석 · SPCX</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">SpaceX Upmass 86% 점유 — Q1 2026 556,057kg · +18% YoY</text>
+
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#1a0d2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="102" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Bryce Tech Q1 2026 Upmass 리포트</text>
+  <text x="240" y="136" font-family="Arial,sans-serif" font-size="36" fill="#c084fc" font-weight="bold" text-anchor="middle">글로벌 점유 86%</text>
+  <text x="240" y="156" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">556,057 kg / 전체 647,412 kg · 전년比 +18%</text>
+
+  <rect x="24" y="176" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">SpaceX 발사 중량</text>
+  <text x="40" y="224" font-family="Arial,sans-serif" font-size="18" fill="#e5e7eb" font-weight="bold">556,057 kg</text>
+  <text x="40" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Q1 2026 궤도 투입 중량</text>
+
+  <rect x="244" y="176" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="200" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">YoY 성장</text>
+  <text x="260" y="224" font-family="Arial,sans-serif" font-size="26" fill="#c084fc" font-weight="bold">+18%</text>
+  <text x="260" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Q1 2025 대비 증가</text>
+
+  <rect x="24" y="268" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="292" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">글로벌 발사 시장 분석 (Bryce Tech)</text>
+  <text x="40" y="316" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Q1 2026 전세계 궤도 발사 총량 647,412 kg</text>
+  <text x="40" y="336" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">SpaceX 단독 556,057 kg = 나머지 전체보다 6배 이상</text>
+  <text x="40" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Starlink·상업 위성·NASA 임무 복합 성장 지속</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.20 · Investus · 참고용</text>
+</svg>

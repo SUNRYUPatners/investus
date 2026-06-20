@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#00e5a0" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">종목분석 · TSLA</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">머스크 신용등급 "터무니없이 낮다" — 현금 $40B+ · 무부채</text>
+
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="102" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Elon Musk 신용등급 발언</text>
+  <text x="240" y="134" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" font-weight="bold" text-anchor="middle">"Ridiculously Low" Credit Rating</text>
+  <text x="240" y="156" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">현금 $40B+ · 부채 없음 · 신용평가사 과소평가 직접 비판</text>
+
+  <rect x="24" y="176" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">현금 보유</text>
+  <text x="40" y="224" font-family="Arial,sans-serif" font-size="26" fill="#e5e7eb" font-weight="bold">$40B+</text>
+  <text x="40" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">부채 없는 순현금</text>
+
+  <rect x="244" y="176" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="200" font-family="Arial,sans-serif" font-size="11" fill="#f87171">신용평가 현황</text>
+  <text x="260" y="224" font-family="Arial,sans-serif" font-size="18" fill="#f87171" font-weight="bold">저평가 지속</text>
+  <text x="260" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Musk "터무니없이 낮다" 비판</text>
+
+  <rect x="24" y="268" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="292" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">TSLA 재무 강건성</text>
+  <text x="40" y="316" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">순현금 $40B 이상 보유 · 장기 부채 실질 제로</text>
+  <text x="40" y="336" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">에너지·FSD·로보택시 고마진 사업 반영 안 된 등급</text>
+  <text x="40" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Musk, 신용평가사 직접 공개 비판 → 등급 상향 압박</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.20 · Investus · 참고용</text>
+</svg>

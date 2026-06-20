@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440">
+  <rect width="480" height="440" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#00e5a0" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="bold">Stock Analysis · TSLA</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="bold">Tesla Cybercab EPA Clean Air Act Certificate of Conformity</text>
+
+  <rect x="24" y="68" width="432" height="96" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="102" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">EPA Certificate of Conformity</text>
+  <text x="240" y="136" font-family="Arial,sans-serif" font-size="30" fill="#00e5a0" font-weight="bold" text-anchor="middle">2026 Model Year Confirmed</text>
+  <text x="240" y="156" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Effective 05/26/2026 · Full useful life 150,000 miles</text>
+
+  <rect x="24" y="176" width="204" height="80" rx="10" fill="#111318"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">Robotaxi Deployment</text>
+  <text x="40" y="224" font-family="Arial,sans-serif" font-size="22" fill="#e5e7eb" font-weight="bold">~2 Months</text>
+  <text x="40" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">EPA + NHTSA ADA certified</text>
+
+  <rect x="244" y="176" width="212" height="80" rx="10" fill="#111318"/>
+  <text x="260" y="200" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">Cybercab Branding</text>
+  <text x="260" y="224" font-family="Arial,sans-serif" font-size="18" fill="#e5e7eb" font-weight="bold">Logo Swap Begins</text>
+  <text x="260" y="246" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Model Y → Cybercab conversion</text>
+
+  <rect x="24" y="268" width="432" height="100" rx="10" fill="#111318"/>
+  <text x="40" y="292" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Cybercab Production &amp; Fleet Strategy</text>
+  <text x="40" y="316" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">EPA CoC = federal baseline met for all 50 states</text>
+  <text x="40" y="336" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Existing Model Y converted into fleet before dedicated production</text>
+  <text x="40" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">Austin robotaxi service expansion within ~2 months</text>
+
+  <text x="240" y="430" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.20 · Investus · For Reference Only</text>
+</svg>
