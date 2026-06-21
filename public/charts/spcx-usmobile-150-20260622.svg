@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · Starlink</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Starlink — US Mobile 파트너십 · 150개국 직접 서비스</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">기존 통신망 없이 스마트폰에 직접 연결 · 오지·해상 커버리지 완성</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Service highlights in 3 columns -->
+  <rect x="40" y="110" width="218" height="170" rx="8" fill="#161b22"/>
+  <rect x="40" y="110" width="218" height="4" rx="2" fill="#c084fc"/>
+  <text x="149" y="140" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">커버리지</text>
+  <text x="149" y="168" text-anchor="middle" fill="#e6edf3" font-size="28" font-weight="800">150+</text>
+  <text x="149" y="190" text-anchor="middle" fill="#e6edf3" font-size="14">국가</text>
+  <text x="149" y="216" text-anchor="middle" fill="#7d8590" font-size="11">오지·산악·해상 포함</text>
+  <text x="149" y="234" text-anchor="middle" fill="#7d8590" font-size="11">고층 빌딩 사각지대 해소</text>
+  <text x="149" y="252" text-anchor="middle" fill="#7d8590" font-size="11">이동 중에도 연결 유지</text>
+
+  <rect x="291" y="110" width="218" height="170" rx="8" fill="#161b22"/>
+  <rect x="291" y="110" width="218" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="140" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">서비스 특징</text>
+  <text x="310" y="166" fill="#e6edf3" font-size="12">기존 단말기 그대로 사용</text>
+  <text x="310" y="188" fill="#e6edf3" font-size="12">별도 장비 불필요</text>
+  <text x="310" y="210" fill="#e6edf3" font-size="12">고속·저지연 인터넷</text>
+  <text x="310" y="232" fill="#7d8590" font-size="12">Starlink router 불필요</text>
+  <text x="310" y="252" fill="#7d8590" font-size="12">US Mobile SIM 통합</text>
+  <text x="310" y="272" fill="#7d8590" font-size="12">즉시 활성화</text>
+
+  <rect x="542" y="110" width="218" height="170" rx="8" fill="#161b22"/>
+  <rect x="542" y="110" width="218" height="4" rx="2" fill="#c084fc"/>
+  <text x="651" y="140" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">요금제 구성</text>
+  <text x="562" y="166" fill="#e6edf3" font-size="12">무약정 선불 요금</text>
+  <text x="562" y="188" fill="#e6edf3" font-size="12">월 단위 유연 구독</text>
+  <text x="562" y="210" fill="#7d8590" font-size="12">100GB, 300GB, 무제한</text>
+  <text x="562" y="232" fill="#7d8590" font-size="12">3대 주요 통신사 동시 로밍</text>
+  <text x="562" y="252" fill="#7d8590" font-size="12">(AT&amp;T / T-Mobile / Verizon)</text>
+  <text x="562" y="272" fill="#7d8590" font-size="12">Starlink 추가 옵션</text>
+
+  <!-- Impact box -->
+  <rect x="40" y="296" width="720" height="100" rx="8" fill="#1c1026"/>
+  <text x="400" y="322" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Starlink DTS의 혁명적 의미</text>
+  <text x="400" y="346" text-anchor="middle" fill="#e6edf3" font-size="13">기존 통신 인프라 없이 스마트폰으로 직접 위성 수신</text>
+  <text x="400" y="368" text-anchor="middle" fill="#7d8590" font-size="12">지상 기지국 없이도 150개국 어디서나 통신 가능 — 수십억 명 사각지대 해소</text>
+  <text x="400" y="386" text-anchor="middle" fill="#7d8590" font-size="12">US Mobile 파트너십 = Starlink 구독 기반 반복 수익 확장</text>
+
+  <line x1="40" y1="408" x2="760" y2="408" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="424" text-anchor="middle" fill="#444c56" font-size="10">출처: @DogePound / US Mobile 공식 발표 · investus.kr</text>
+</svg>

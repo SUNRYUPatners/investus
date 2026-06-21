@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'SF Pro Display',Arial,sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">MEGAPOD Trademark — AI Data Center Module Infrastructure</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Tesla enters AI DC infrastructure · Supercharger → AI Power Hub</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="270" y="112" width="260" height="80" rx="10" fill="#0d2010" stroke="#00e5a0" stroke-width="2"/>
+  <text x="400" y="148" text-anchor="middle" fill="#00e5a0" font-size="26" font-weight="800">MEGAPOD</text>
+  <text x="400" y="170" text-anchor="middle" fill="#7d8590" font-size="12">Tesla USPTO Trademark Filing</text>
+
+  <line x1="400" y1="192" x2="400" y2="210" stroke="#21262d" stroke-width="1.5"/>
+  <line x1="170" y1="210" x2="630" y2="210" stroke="#21262d" stroke-width="1.5"/>
+  <line x1="170" y1="210" x2="170" y2="224" stroke="#21262d" stroke-width="1.5"/>
+  <line x1="400" y1="210" x2="400" y2="224" stroke="#21262d" stroke-width="1.5"/>
+  <line x1="630" y1="210" x2="630" y2="224" stroke="#21262d" stroke-width="1.5"/>
+
+  <rect x="60" y="224" width="220" height="90" rx="8" fill="#161b22"/>
+  <text x="170" y="252" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">AI Computing</text>
+  <text x="170" y="272" text-anchor="middle" fill="#e6edf3" font-size="12">AI inference &amp; training</text>
+  <text x="170" y="290" text-anchor="middle" fill="#7d8590" font-size="11">xAI workload integration</text>
+  <text x="170" y="306" text-anchor="middle" fill="#7d8590" font-size="11">Unified power management</text>
+
+  <rect x="290" y="224" width="220" height="90" rx="8" fill="#161b22"/>
+  <text x="400" y="252" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Scalable Networks</text>
+  <text x="400" y="272" text-anchor="middle" fill="#e6edf3" font-size="12">Modular deployment</text>
+  <text x="400" y="290" text-anchor="middle" fill="#7d8590" font-size="11">National Supercharger network</text>
+  <text x="400" y="306" text-anchor="middle" fill="#7d8590" font-size="11">Phased capacity scaling</text>
+
+  <rect x="520" y="224" width="220" height="90" rx="8" fill="#161b22"/>
+  <text x="630" y="252" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Energy Management</text>
+  <text x="630" y="272" text-anchor="middle" fill="#e6edf3" font-size="12">Megapack integration</text>
+  <text x="630" y="290" text-anchor="middle" fill="#7d8590" font-size="11">Grid stabilization</text>
+  <text x="630" y="306" text-anchor="middle" fill="#7d8590" font-size="11">Renewable energy linkage</text>
+
+  <rect x="40" y="328" width="720" height="70" rx="8" fill="#1a2a1a"/>
+  <text x="400" y="354" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Musk's Vision — Supercharger Network → AI Data Centers</text>
+  <text x="400" y="374" text-anchor="middle" fill="#e6edf3" font-size="13">Transform Tesla's Supercharger network into world's largest AI compute network</text>
+  <text x="400" y="392" text-anchor="middle" fill="#7d8590" font-size="12">MEGAPOD = modular unit bundling compute + network + energy</text>
+
+  <line x1="40" y1="412" x2="760" y2="412" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="428" text-anchor="middle" fill="#444c56" font-size="10">Source: USPTO / @FinanceFlash · investus.kr</text>
+</svg>

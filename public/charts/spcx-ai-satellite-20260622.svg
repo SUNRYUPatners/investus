@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Starlink → AI Satellite 진화 전략</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">"We Are the Only Company That Can Do This" · 궤도 컴퓨팅 허들 완전 제거</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Evolution path: Starlink V3 → AI Satellite -->
+  <!-- Stage 1 -->
+  <rect x="40" y="114" width="220" height="160" rx="8" fill="#161b22"/>
+  <rect x="40" y="114" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="150" y="144" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="700">Starlink V3</text>
+  <text x="150" y="168" text-anchor="middle" fill="#7d8590" font-size="12">제거 (Reduce &amp; Delete)</text>
+  <text x="60" y="192" fill="#7d8590" font-size="11">백홀 안테나 제거</text>
+  <text x="60" y="210" fill="#7d8590" font-size="11">대형 배터리 제거</text>
+  <text x="60" y="228" fill="#7d8590" font-size="11">모뎀 유지</text>
+  <text x="60" y="246" fill="#7d8590" font-size="11">비행 컴퓨터 유지</text>
+  <text x="60" y="264" fill="#7d8590" font-size="11">반응 추진기 유지</text>
+
+  <!-- Arrow 1 -->
+  <polygon points="270,194 290,186 290,202" fill="#c084fc"/>
+  <line x1="260" y1="194" x2="290" y2="194" stroke="#c084fc" stroke-width="2"/>
+
+  <!-- Stage 2: Starship V3 -->
+  <rect x="295" y="114" width="210" height="160" rx="8" fill="#1c1026"/>
+  <rect x="295" y="114" width="210" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="144" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="700">Starship V3</text>
+  <text x="400" y="168" text-anchor="middle" fill="#7d8590" font-size="12">추가 (Add)</text>
+  <text x="315" y="192" fill="#e6edf3" font-size="11">더 많은 태양전지판</text>
+  <text x="315" y="210" fill="#e6edf3" font-size="11">성간 레이저</text>
+  <text x="315" y="228" fill="#e6edf3" font-size="11">더 큰 방열판</text>
+  <text x="315" y="246" fill="#e6edf3" font-size="11">이온 추진기</text>
+  <text x="315" y="264" fill="#e6edf3" font-size="11">태양광 작동기</text>
+
+  <!-- Arrow 2 -->
+  <polygon points="515,194 535,186 535,202" fill="#c084fc"/>
+  <line x1="505" y1="194" x2="535" y2="194" stroke="#c084fc" stroke-width="2"/>
+
+  <!-- Stage 3: AI Satellite -->
+  <rect x="540" y="114" width="220" height="160" rx="8" fill="#2d1a3d"/>
+  <rect x="540" y="114" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="650" y="144" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="700">AI Satellite</text>
+  <text x="650" y="168" text-anchor="middle" fill="#7d8590" font-size="12">궤도 AI 컴퓨팅</text>
+  <text x="560" y="192" fill="#c084fc" font-size="11">AI 처리 온보드</text>
+  <text x="560" y="210" fill="#c084fc" font-size="11">실시간 추론 위성</text>
+  <text x="560" y="228" fill="#c084fc" font-size="11">글로벌 AI 엣지</text>
+  <text x="560" y="246" fill="#c084fc" font-size="11">지연 제로 커버리지</text>
+  <text x="560" y="264" fill="#c084fc" font-size="11">군사·민간 겸용</text>
+
+  <!-- Bottom message -->
+  <rect x="40" y="290" width="720" height="76" rx="8" fill="#1c1026"/>
+  <text x="400" y="316" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">기술적 허들 완전 제거</text>
+  <text x="400" y="338" text-anchor="middle" fill="#e6edf3" font-size="13">Starlink + Starship이 궤도 컴퓨팅의 모든 핵심 기술 장벽 제거</text>
+  <text x="400" y="358" text-anchor="middle" fill="#7d8590" font-size="12">SpaceX만이 수직 통합 로켓·위성·AI·통신을 동시에 보유한 유일 기업</text>
+
+  <line x1="40" y1="382" x2="760" y2="382" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="396" text-anchor="middle" fill="#7d8590" font-size="11">SpaceX 전략 슬라이드 공개 · "WE ARE THE ONLY COMPANY THAT CAN DO THIS"</text>
+  <text x="400" y="412" text-anchor="middle" fill="#444c56" font-size="10">출처: SpaceX 성장 전략 발표 자료 · investus.kr</text>
+</svg>

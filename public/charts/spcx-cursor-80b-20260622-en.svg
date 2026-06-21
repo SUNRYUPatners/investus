@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'SF Pro Display',Arial,sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">SpaceX Acquires Cursor for $80B All-Stock</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Largest VC-Backed Acquisition Ever · SEC Filing Confirmed Jun 18, 2026</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="280" y="108" width="240" height="80" rx="10" fill="#1c1026"/>
+  <rect x="280" y="108" width="240" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="147" text-anchor="middle" fill="#c084fc" font-size="42" font-weight="800">$80B</text>
+  <text x="400" y="177" text-anchor="middle" fill="#7d8590" font-size="12">All-stock deal (SpaceX shares)</text>
+
+  <rect x="40" y="202" width="340" height="100" rx="8" fill="#161b22"/>
+  <text x="210" y="226" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Deal Highlights</text>
+  <text x="60" y="248" fill="#e6edf3" font-size="13">Previous record</text><text x="360" y="248" text-anchor="end" fill="#7d8590" font-size="13">IBM / Red Hat  $34B</text>
+  <text x="60" y="270" fill="#e6edf3" font-size="13">Value per founder</text><text x="360" y="270" text-anchor="end" fill="#c084fc" font-size="13">~$2.7B</text>
+  <text x="60" y="292" fill="#e6edf3" font-size="13">xAI stake value</text><text x="360" y="292" text-anchor="end" fill="#c084fc" font-size="13">~$10B</text>
+
+  <rect x="420" y="202" width="340" height="100" rx="8" fill="#161b22"/>
+  <text x="590" y="226" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Structure &amp; Timeline</text>
+  <text x="440" y="248" fill="#7d8590" font-size="12">Cursor tools + enterprise data → xAI integration</text>
+  <text x="440" y="268" fill="#7d8590" font-size="12">No cash — liquidity contingent on SpaceX IPO</text>
+  <text x="440" y="288" fill="#7d8590" font-size="12">Expected to close: Q3 2026</text>
+
+  <rect x="40" y="314" width="720" height="76" rx="8" fill="#1c1026"/>
+  <text x="400" y="340" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Why Cursor Matters</text>
+  <text x="400" y="360" text-anchor="middle" fill="#e6edf3" font-size="13">Used by majority of Fortune 500 companies · Annual revenue ~$4B</text>
+  <text x="400" y="378" text-anchor="middle" fill="#7d8590" font-size="12">Millions of daily developers + enterprise codebase data → xAI competitive edge</text>
+
+  <line x1="40" y1="402" x2="760" y2="402" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="420" text-anchor="middle" fill="#444c56" font-size="11">Source: Muskmoney / Bloomberg · For informational purposes only · investus.kr</text>
+</svg>

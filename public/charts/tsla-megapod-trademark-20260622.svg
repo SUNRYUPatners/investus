@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">MEGAPOD 상표 출원 — AI 데이터센터 모듈 인프라</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Tesla의 AI DC 인프라 사업 본격 진출 · Supercharger → AI Power Hub</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- MEGAPOD box (central element) -->
+  <rect x="270" y="112" width="260" height="80" rx="10" fill="#0d2010" stroke="#00e5a0" stroke-width="2"/>
+  <text x="400" y="148" text-anchor="middle" fill="#00e5a0" font-size="26" font-weight="800">MEGAPOD</text>
+  <text x="400" y="170" text-anchor="middle" fill="#7d8590" font-size="12">Tesla USPTO 상표 출원</text>
+
+  <!-- Arrow pointing down from MEGAPOD to 3 modules -->
+  <line x1="400" y1="192" x2="400" y2="210" stroke="#21262d" stroke-width="1.5"/>
+  <line x1="170" y1="210" x2="630" y2="210" stroke="#21262d" stroke-width="1.5"/>
+  <line x1="170" y1="210" x2="170" y2="224" stroke="#21262d" stroke-width="1.5"/>
+  <line x1="400" y1="210" x2="400" y2="224" stroke="#21262d" stroke-width="1.5"/>
+  <line x1="630" y1="210" x2="630" y2="224" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- Module 1: AI Computing -->
+  <rect x="60" y="224" width="220" height="90" rx="8" fill="#161b22"/>
+  <text x="170" y="252" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">AI 컴퓨팅</text>
+  <text x="170" y="272" text-anchor="middle" fill="#e6edf3" font-size="12">AI 인퍼런스·학습</text>
+  <text x="170" y="290" text-anchor="middle" fill="#7d8590" font-size="11">xAI 워크로드 연동</text>
+  <text x="170" y="306" text-anchor="middle" fill="#7d8590" font-size="11">전력 관리 통합</text>
+
+  <!-- Module 2: Scalable Networks -->
+  <rect x="290" y="224" width="220" height="90" rx="8" fill="#161b22"/>
+  <text x="400" y="252" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">확장 네트워크</text>
+  <text x="400" y="272" text-anchor="middle" fill="#e6edf3" font-size="12">모듈식 배포</text>
+  <text x="400" y="290" text-anchor="middle" fill="#7d8590" font-size="11">전국 수퍼차저 인프라</text>
+  <text x="400" y="306" text-anchor="middle" fill="#7d8590" font-size="11">단계적 규모 확장</text>
+
+  <!-- Module 3: Power Management -->
+  <rect x="520" y="224" width="220" height="90" rx="8" fill="#161b22"/>
+  <text x="630" y="252" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">에너지 관리</text>
+  <text x="630" y="272" text-anchor="middle" fill="#e6edf3" font-size="12">Megapack 통합</text>
+  <text x="630" y="290" text-anchor="middle" fill="#7d8590" font-size="11">전력망 안정화</text>
+  <text x="630" y="306" text-anchor="middle" fill="#7d8590" font-size="11">재생에너지 연동</text>
+
+  <!-- Elon quote / context -->
+  <rect x="40" y="328" width="720" height="70" rx="8" fill="#1a2a1a"/>
+  <text x="400" y="354" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">머스크의 비전 — Supercharger → AI Data Center</text>
+  <text x="400" y="374" text-anchor="middle" fill="#e6edf3" font-size="13">Tesla 수퍼차저망을 세계 최대 AI 컴퓨팅 네트워크로 전환</text>
+  <text x="400" y="392" text-anchor="middle" fill="#7d8590" font-size="12">MEGAPOD = 컴퓨팅 + 네트워크 + 에너지를 하나로 묶는 모듈 단위</text>
+
+  <line x1="40" y1="412" x2="760" y2="412" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="428" text-anchor="middle" fill="#444c56" font-size="10">출처: USPTO / @FinanceFlash · investus.kr</text>
+</svg>

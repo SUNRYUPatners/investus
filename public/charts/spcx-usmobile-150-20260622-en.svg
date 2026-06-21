@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'SF Pro Display',Arial,sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · Starlink</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Starlink × US Mobile — Available in 150+ Countries</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Direct satellite-to-smartphone · No ground infrastructure needed</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="40" y="110" width="218" height="170" rx="8" fill="#161b22"/>
+  <rect x="40" y="110" width="218" height="4" rx="2" fill="#c084fc"/>
+  <text x="149" y="140" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Coverage</text>
+  <text x="149" y="168" text-anchor="middle" fill="#e6edf3" font-size="28" font-weight="800">150+</text>
+  <text x="149" y="190" text-anchor="middle" fill="#e6edf3" font-size="14">Countries</text>
+  <text x="149" y="216" text-anchor="middle" fill="#7d8590" font-size="11">Remote / mountain / maritime</text>
+  <text x="149" y="234" text-anchor="middle" fill="#7d8590" font-size="11">Urban dead zones eliminated</text>
+  <text x="149" y="252" text-anchor="middle" fill="#7d8590" font-size="11">Connected even in motion</text>
+
+  <rect x="291" y="110" width="218" height="170" rx="8" fill="#161b22"/>
+  <rect x="291" y="110" width="218" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="140" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Features</text>
+  <text x="310" y="166" fill="#e6edf3" font-size="12">Use your existing smartphone</text>
+  <text x="310" y="188" fill="#e6edf3" font-size="12">No additional hardware</text>
+  <text x="310" y="210" fill="#e6edf3" font-size="12">High-speed, low-latency</text>
+  <text x="310" y="232" fill="#7d8590" font-size="12">No Starlink router required</text>
+  <text x="310" y="252" fill="#7d8590" font-size="12">US Mobile SIM integration</text>
+  <text x="310" y="272" fill="#7d8590" font-size="12">Instant activation</text>
+
+  <rect x="542" y="110" width="218" height="170" rx="8" fill="#161b22"/>
+  <rect x="542" y="110" width="218" height="4" rx="2" fill="#c084fc"/>
+  <text x="651" y="140" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Plans</text>
+  <text x="562" y="166" fill="#e6edf3" font-size="12">No-contract prepaid</text>
+  <text x="562" y="188" fill="#e6edf3" font-size="12">Flexible monthly subscription</text>
+  <text x="562" y="210" fill="#7d8590" font-size="12">100GB, 300GB, Unlimited</text>
+  <text x="562" y="232" fill="#7d8590" font-size="12">Roams on all 3 major carriers</text>
+  <text x="562" y="252" fill="#7d8590" font-size="12">(AT&amp;T / T-Mobile / Verizon)</text>
+  <text x="562" y="272" fill="#7d8590" font-size="12">Starlink add-on available</text>
+
+  <rect x="40" y="296" width="720" height="100" rx="8" fill="#1c1026"/>
+  <text x="400" y="322" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Revolutionary Impact of Starlink DTS</text>
+  <text x="400" y="346" text-anchor="middle" fill="#e6edf3" font-size="13">Smartphones receive satellite signal directly — no ground station needed</text>
+  <text x="400" y="368" text-anchor="middle" fill="#7d8590" font-size="12">Eliminates dead zones for billions worldwide in 150+ countries</text>
+  <text x="400" y="386" text-anchor="middle" fill="#7d8590" font-size="12">US Mobile partnership = expanding Starlink recurring subscription revenue</text>
+
+  <line x1="40" y1="408" x2="760" y2="408" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="424" text-anchor="middle" fill="#444c56" font-size="10">Source: @DogePound / US Mobile Official · investus.kr</text>
+</svg>

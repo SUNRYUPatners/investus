@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Tesla Semi — LIDAR로 FSD 캘리브레이션 테스트</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">장거리 트럭 완전 자율주행 현실화 · 운전자 피로 제로 목표</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Main visual: truck icon + radar circles -->
+  <!-- Truck body (simplified) -->
+  <rect x="260" y="160" width="280" height="80" rx="6" fill="#1a2a1a" stroke="#00e5a0" stroke-width="2"/>
+  <text x="400" y="207" text-anchor="middle" fill="#00e5a0" font-size="18" font-weight="700">TESLA SEMI</text>
+  <!-- Wheels -->
+  <circle cx="300" cy="248" r="16" fill="#161b22" stroke="#00e5a0" stroke-width="2"/>
+  <circle cx="500" cy="248" r="16" fill="#161b22" stroke="#00e5a0" stroke-width="2"/>
+  <!-- LIDAR/radar arcs -->
+  <path d="M400,160 A100,100 0 0,1 488,212" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8"/>
+  <path d="M400,160 A140,140 0 0,1 524,230" fill="none" stroke="#c084fc" stroke-width="1" stroke-dasharray="4,6" opacity="0.5"/>
+  <path d="M400,160 A60,60 0 0,1 451,193" fill="none" stroke="#c084fc" stroke-width="2" stroke-dasharray="8,3" opacity="0.9"/>
+  <circle cx="400" cy="160" r="6" fill="#c084fc"/>
+  <text x="520" y="148" fill="#c084fc" font-size="12" font-weight="600">LIDAR</text>
+  <text x="520" y="163" fill="#7d8590" font-size="11">참조 센서 탑재</text>
+
+  <!-- Key stats -->
+  <rect x="40" y="276" width="220" height="80" rx="8" fill="#161b22"/>
+  <text x="150" y="302" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">FSD 캘리브레이션</text>
+  <text x="150" y="322" text-anchor="middle" fill="#e6edf3" font-size="13">LIDAR + 참조 센서</text>
+  <text x="150" y="342" text-anchor="middle" fill="#7d8590" font-size="12">Pure Vision FSD 정확도 향상</text>
+
+  <rect x="290" y="276" width="220" height="80" rx="8" fill="#161b22"/>
+  <text x="400" y="302" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">장거리 트럭 자율화</text>
+  <text x="400" y="322" text-anchor="middle" fill="#e6edf3" font-size="13">드라이버 피로 제로</text>
+  <text x="400" y="342" text-anchor="middle" fill="#7d8590" font-size="12">물류비 구조적 하락</text>
+
+  <rect x="540" y="276" width="220" height="80" rx="8" fill="#161b22"/>
+  <text x="650" y="302" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Semi FSD 상용화</text>
+  <text x="650" y="322" text-anchor="middle" fill="#e6edf3" font-size="13">레벨4 자율주행</text>
+  <text x="650" y="342" text-anchor="middle" fill="#7d8590" font-size="12">2026년 하반기 목표</text>
+
+  <!-- Quote -->
+  <rect x="40" y="368" width="720" height="44" rx="8" fill="#1a2a1a"/>
+  <text x="400" y="388" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">"The future is autonomous — FSD will make long haul trucking fully autonomous"</text>
+  <text x="400" y="403" text-anchor="middle" fill="#7d8590" font-size="11">completely eliminating the risks of driver fatigue</text>
+
+  <line x1="40" y1="422" x2="760" y2="422" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="436" text-anchor="middle" fill="#444c56" font-size="10">출처: @Ming / X · investus.kr</text>
+</svg>

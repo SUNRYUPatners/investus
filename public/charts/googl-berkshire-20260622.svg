@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="700">GOOGL · Google / Alphabet</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">GOOGL — 버크셔 해서웨이 5대 주식 포지션 진입</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">워런 버핏의 가치투자 기준 통과 · 기술주 중 가장 강한 밸류에이션 확신</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- BRK Top 5 holdings visualization -->
+  <text x="400" y="126" text-anchor="middle" fill="#7d8590" font-size="13">버크셔 해서웨이 주요 포지션 (2026 추정)</text>
+
+  <!-- Rank bars (horizontal) -->
+  <!-- #1 AAPL (largest) -->
+  <text x="60" y="158" fill="#7d8590" font-size="12">#1 AAPL</text>
+  <rect x="160" y="144" width="480" height="22" rx="4" fill="#7d8590" opacity="0.5"/>
+  <text x="650" y="158" fill="#7d8590" font-size="12">~45%</text>
+
+  <!-- #2 BAC -->
+  <text x="60" y="196" fill="#7d8590" font-size="12">#2 BAC</text>
+  <rect x="160" y="182" width="320" height="22" rx="4" fill="#7d8590" opacity="0.4"/>
+  <text x="490" y="196" fill="#7d8590" font-size="12">~11%</text>
+
+  <!-- #3 AMEX -->
+  <text x="60" y="234" fill="#7d8590" font-size="12">#3 AXP</text>
+  <rect x="160" y="220" width="290" height="22" rx="4" fill="#7d8590" opacity="0.35"/>
+  <text x="460" y="234" fill="#7d8590" font-size="12">~10%</text>
+
+  <!-- #4 Coca-Cola -->
+  <text x="60" y="272" fill="#7d8590" font-size="12">#4 KO</text>
+  <rect x="160" y="258" width="260" height="22" rx="4" fill="#7d8590" opacity="0.3"/>
+  <text x="430" y="272" fill="#7d8590" font-size="12">~9%</text>
+
+  <!-- #5 GOOGL (highlight) -->
+  <text x="60" y="310" fill="#4ade80" font-size="14" font-weight="700">#5 GOOGL</text>
+  <rect x="160" y="296" width="200" height="22" rx="4" fill="#4ade80" opacity="0.7"/>
+  <text x="370" y="310" fill="#4ade80" font-size="13" font-weight="700">신규 편입!</text>
+
+  <!-- Why BRK bought GOOGL -->
+  <rect x="40" y="336" width="720" height="72" rx="8" fill="#0a1a0a"/>
+  <text x="400" y="360" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">버핏이 GOOGL을 산 이유</text>
+  <text x="400" y="382" text-anchor="middle" fill="#e6edf3" font-size="13">AI 검색 독점 + YouTube + GCP 성장 → 현재 가치 견고한 복합 기업</text>
+  <text x="400" y="400" text-anchor="middle" fill="#7d8590" font-size="12">PVGO 47.8% — S&amp;P 500(55%) 대비 성장 프리미엄 낮아 = 가치투자 기준 충족</text>
+
+  <line x1="40" y1="420" x2="760" y2="420" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="434" text-anchor="middle" fill="#444c56" font-size="10">출처: @EnorJ / X · Berkshire Hathaway · investus.kr</text>
+</svg>

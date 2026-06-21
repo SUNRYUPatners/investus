@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 575" width="840" height="575" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <!-- Header -->
+  <rect x="0" y="0" width="840" height="575" rx="12" fill="#0d1117"/>
+  <text x="420" y="38" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">6/22 시장 한장 요약</text>
+  <text x="420" y="56" text-anchor="middle" fill="#7d8590" font-size="12">2026.06.22 | 오늘의 핵심 뉴스</text>
+  <line x1="40" y1="66" x2="800" y2="66" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Card 1: SPCX Cursor 인수 -->
+  <rect x="30" y="76" width="780" height="78" rx="8" fill="#1c1f26"/>
+  <rect x="30" y="76" width="5" height="78" rx="3" fill="#c084fc"/>
+  <text x="52" y="101" fill="#c084fc" font-size="13" font-weight="700">SPCX</text>
+  <text x="52" y="120" fill="#e6edf3" font-size="14" font-weight="600">Cursor AI 코딩 도구 $800억 인수 — 역대 최대 VC 인수 기록</text>
+  <text x="52" y="141" fill="#7d8590" font-size="12">SpaceX 전량 주식 교환 · 이전 최대: IBM의 Red Hat $340억 · xAI 통합 Q3 예정</text>
+  <text x="790" y="127" text-anchor="end" fill="#c084fc" font-size="24" font-weight="800">$80B</text>
+
+  <!-- Card 2: TSLA FSD 스페인 + 구독 -->
+  <rect x="30" y="162" width="780" height="78" rx="8" fill="#1c1f26"/>
+  <rect x="30" y="162" width="5" height="78" rx="3" fill="#00e5a0"/>
+  <text x="52" y="187" fill="#00e5a0" font-size="13" font-weight="700">TSLA</text>
+  <text x="52" y="206" fill="#e6edf3" font-size="14" font-weight="600">FSD 스페인 275,471km 무사고 · FSD 구독 142만 돌파</text>
+  <text x="52" y="227" fill="#7d8590" font-size="12">스페인 교통청(DGT) 공인 · Q1 1,280,000 → Q2 1,420,800 예측(+11%)</text>
+  <text x="790" y="213" text-anchor="end" fill="#00e5a0" font-size="20" font-weight="800">275K km</text>
+
+  <!-- Card 3: TSLA Optimus + MEGAPOD -->
+  <rect x="30" y="248" width="780" height="78" rx="8" fill="#1c1f26"/>
+  <rect x="30" y="248" width="5" height="78" rx="3" fill="#00e5a0"/>
+  <text x="52" y="273" fill="#00e5a0" font-size="13" font-weight="700">TSLA</text>
+  <text x="52" y="292" fill="#e6edf3" font-size="14" font-weight="600">Optimus 최종 단계 · MEGAPOD 상표 출원 · FSD+Grok 3개월 내</text>
+  <text x="52" y="313" fill="#7d8590" font-size="12">Elon: "내년 대량 생산 시작" · MEGAPOD = AI DC 인프라 모듈 · 자연어 FSD 임박</text>
+  <text x="790" y="299" text-anchor="end" fill="#00e5a0" font-size="17" font-weight="800">3종 호재</text>
+
+  <!-- Card 4: AMZN + Cloud Backlog -->
+  <rect x="30" y="334" width="780" height="78" rx="8" fill="#1c1f26"/>
+  <rect x="30" y="334" width="5" height="78" rx="3" fill="#fb923c"/>
+  <text x="52" y="359" fill="#fb923c" font-size="13" font-weight="700">AMZN</text>
+  <text x="52" y="378" fill="#e6edf3" font-size="14" font-weight="600">미국 최대 기업 등극 $717B — Walmart 13년 왕좌 탈환</text>
+  <text x="52" y="399" fill="#7d8590" font-size="12">AWS 백로그 $480B · Azure +215% · GCP $260B · 클라우드 3사 공급 부족</text>
+  <text x="790" y="385" text-anchor="end" fill="#fb923c" font-size="20" font-weight="800">$717B</text>
+
+  <!-- Card 5: MU + Nasdaq100 -->
+  <rect x="30" y="420" width="780" height="78" rx="8" fill="#1c1f26"/>
+  <rect x="30" y="420" width="5" height="78" rx="3" fill="#60a5fa"/>
+  <text x="52" y="445" fill="#60a5fa" font-size="13" font-weight="700">MU / NASDAQ</text>
+  <text x="52" y="464" fill="#e6edf3" font-size="14" font-weight="600">Micron 영업이익 2027E $157B · Nasdaq100 CRWV·RKLB·ALAB 편입</text>
+  <text x="52" y="485" fill="#7d8590" font-size="12">MU: Aug24 1,304 → Aug27E 157,198 (+120x) · Nasdaq100: $100B 제거 → $350B 추가</text>
+  <text x="790" y="471" text-anchor="end" fill="#60a5fa" font-size="18" font-weight="800">$157B E</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="510" x2="800" y2="510" stroke="#21262d" stroke-width="1"/>
+  <text x="420" y="528" text-anchor="middle" fill="#7d8590" font-size="11">SPCX · TSLA · AMZN · MU · NASDAQ100 · INTC · GOOGL · META</text>
+  <text x="420" y="545" text-anchor="middle" fill="#444c56" font-size="10">본 리포트는 투자 참고용이며 투자 결정의 책임은 본인에게 있습니다.</text>
+  <text x="420" y="562" text-anchor="middle" fill="#444c56" font-size="10">investus.kr</text>
+</svg>

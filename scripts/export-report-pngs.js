@@ -118,6 +118,26 @@ const PAIRS = [
   { ko: 'amzn-aws-137b-20260620.svg',                 en: 'amzn-aws-137b-20260620-en.svg',                 label: 'AMZN_AWS137B',         date: '20260620' },
   { ko: 'macro-tom-lee-20260620.svg',                 en: 'macro-tom-lee-20260620-en.svg',                 label: '매크로_TomLee3단계',    date: '20260620' },
   { ko: 'macro-iran-deal-20260620.svg',               en: 'macro-iran-deal-20260620-en.svg',               label: '매크로_이란종전',        date: '20260620' },
+  // ── 2026-06-22 ──────────────────────────────────────────────────────────
+  { ko: 'summary-20260622.svg',                       en: 'summary-20260622-en.svg',                       label: '6월22일_요약',           date: '20260622' },
+  { ko: 'spcx-cursor-80b-20260622.svg',               en: 'spcx-cursor-80b-20260622-en.svg',               label: 'SPCX_Cursor80B',        date: '20260622' },
+  { ko: 'tsla-fsd-semi-lidar-20260622.svg',           en: 'tsla-fsd-semi-lidar-20260622-en.svg',           label: 'TSLA_FSD_Semi_LIDAR',   date: '20260622' },
+  { ko: 'tsla-fsd-spain-275k-20260622.svg',           en: 'tsla-fsd-spain-275k-20260622-en.svg',           label: 'TSLA_FSD_Spain275K',    date: '20260622' },
+  { ko: 'tsla-fsd-subs-142m-20260622.svg',            en: 'tsla-fsd-subs-142m-20260622-en.svg',            label: 'TSLA_FSD구독142만',      date: '20260622' },
+  { ko: 'tsla-megapod-trademark-20260622.svg',        en: 'tsla-megapod-trademark-20260622-en.svg',        label: 'TSLA_MEGAPOD',          date: '20260622' },
+  { ko: 'tsla-optimus-mass-prod-20260622.svg',        en: 'tsla-optimus-mass-prod-20260622-en.svg',        label: 'TSLA_Optimus양산',       date: '20260622' },
+  { ko: 'tsla-grok-fsd-20260622.svg',                 en: 'tsla-grok-fsd-20260622-en.svg',                 label: 'TSLA_Grok_FSD',         date: '20260622' },
+  { ko: 'tsla-amazing-abundance-20260622.svg',        en: 'tsla-amazing-abundance-20260622-en.svg',        label: 'TSLA_AmazingAbundance', date: '20260622' },
+  { ko: 'spcx-spaceforce-2b-20260622.svg',            en: 'spcx-spaceforce-2b-20260622-en.svg',            label: 'SPCX_SpaceForce2.29B',  date: '20260622' },
+  { ko: 'spcx-ai-satellite-20260622.svg',             en: 'spcx-ai-satellite-20260622-en.svg',             label: 'SPCX_AI위성로드맵',      date: '20260622' },
+  { ko: 'spcx-usmobile-150-20260622.svg',             en: 'spcx-usmobile-150-20260622-en.svg',             label: 'SPCX_USMobile150국',     date: '20260622' },
+  { ko: 'nasdaq100-rebalance-20260622.svg',           en: 'nasdaq100-rebalance-20260622-en.svg',           label: 'NASDAQ100_리밸런싱',     date: '20260622' },
+  { ko: 'amzn-us1-revenue-20260622.svg',              en: 'amzn-us1-revenue-20260622-en.svg',              label: 'AMZN_미국매출1위',       date: '20260622' },
+  { ko: 'cloud-backlog-aws480b-20260622.svg',         en: 'cloud-backlog-aws480b-20260622-en.svg',         label: '클라우드_백로그',        date: '20260622' },
+  { ko: 'mu-operating-income-20260622.svg',           en: 'mu-operating-income-20260622-en.svg',           label: 'MU_영업이익급반등',      date: '20260622' },
+  { ko: 'meta-msft-pvgo-20260622.svg',                en: 'meta-msft-pvgo-20260622-en.svg',                label: 'META_MSFT_PVGO',        date: '20260622' },
+  { ko: 'googl-berkshire-20260622.svg',               en: 'googl-berkshire-20260622-en.svg',               label: 'GOOGL_버크셔5위',        date: '20260622' },
+  { ko: 'intc-ceo-strategy-20260622.svg',             en: 'intc-ceo-strategy-20260622-en.svg',             label: 'INTC_CEO전략',          date: '20260622' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생
@@ -147,7 +167,9 @@ async function convert(svgFile, pngFile) {
 
   // 기본값: 오늘 날짜만 내보냄. --all 플래그로 전체 내보내기 가능
   const exportAll = process.argv.includes('--all');
-  const today = new Date().toISOString().slice(0, 10).replace(/-/g, ''); // 'YYYYMMDD'
+  const dateArg = process.argv.find(a => /^\d{8}$/.test(a)); // 날짜 직접 지정 (e.g. 20260622)
+  const kstOffset = 9 * 60 * 60 * 1000;
+  const today = dateArg ?? new Date(Date.now() + kstOffset).toISOString().slice(0, 10).replace(/-/g, ''); // KST 'YYYYMMDD'
   const targets = exportAll ? PAIRS : PAIRS.filter(p => p.date === today);
 
   if (!exportAll) {

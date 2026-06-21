@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'SF Pro Display',Arial,sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Starlink → AI Satellite Evolution Strategy</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">"We Are the Only Company That Can Do This" · All orbital compute hurdles removed</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="40" y="114" width="220" height="160" rx="8" fill="#161b22"/>
+  <rect x="40" y="114" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="150" y="144" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="700">Starlink V3</text>
+  <text x="150" y="168" text-anchor="middle" fill="#7d8590" font-size="12">Reduce &amp; Delete</text>
+  <text x="60" y="192" fill="#7d8590" font-size="11">Backhaul antennas removed</text>
+  <text x="60" y="210" fill="#7d8590" font-size="11">Large battery removed</text>
+  <text x="60" y="228" fill="#7d8590" font-size="11">Modem kept</text>
+  <text x="60" y="246" fill="#7d8590" font-size="11">Flight computer kept</text>
+  <text x="60" y="264" fill="#7d8590" font-size="11">Reaction sheets kept</text>
+
+  <polygon points="270,194 290,186 290,202" fill="#c084fc"/>
+  <line x1="260" y1="194" x2="290" y2="194" stroke="#c084fc" stroke-width="2"/>
+
+  <rect x="295" y="114" width="210" height="160" rx="8" fill="#1c1026"/>
+  <rect x="295" y="114" width="210" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="144" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="700">Starship V3</text>
+  <text x="400" y="168" text-anchor="middle" fill="#7d8590" font-size="12">Add</text>
+  <text x="315" y="192" fill="#e6edf3" font-size="11">More solar panels</text>
+  <text x="315" y="210" fill="#e6edf3" font-size="11">Interstellate lasers</text>
+  <text x="315" y="228" fill="#e6edf3" font-size="11">Larger radiator</text>
+  <text x="315" y="246" fill="#e6edf3" font-size="11">Ion propulsion</text>
+  <text x="315" y="264" fill="#e6edf3" font-size="11">Solar actuators</text>
+
+  <polygon points="515,194 535,186 535,202" fill="#c084fc"/>
+  <line x1="505" y1="194" x2="535" y2="194" stroke="#c084fc" stroke-width="2"/>
+
+  <rect x="540" y="114" width="220" height="160" rx="8" fill="#2d1a3d"/>
+  <rect x="540" y="114" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="650" y="144" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="700">AI Satellite</text>
+  <text x="650" y="168" text-anchor="middle" fill="#7d8590" font-size="12">Orbital AI Computing</text>
+  <text x="560" y="192" fill="#c084fc" font-size="11">AI processing on-board</text>
+  <text x="560" y="210" fill="#c084fc" font-size="11">Real-time inference</text>
+  <text x="560" y="228" fill="#c084fc" font-size="11">Global AI edge network</text>
+  <text x="560" y="246" fill="#c084fc" font-size="11">Near-zero latency coverage</text>
+  <text x="560" y="264" fill="#c084fc" font-size="11">Military &amp; civil dual-use</text>
+
+  <rect x="40" y="290" width="720" height="76" rx="8" fill="#1c1026"/>
+  <text x="400" y="316" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">All Technical Hurdles Removed</text>
+  <text x="400" y="338" text-anchor="middle" fill="#e6edf3" font-size="13">Starlink + Starship removed all key technical hurdles to orbital compute</text>
+  <text x="400" y="358" text-anchor="middle" fill="#7d8590" font-size="12">SpaceX is the only company with vertically integrated rockets, satellites, AI &amp; comms</text>
+
+  <line x1="40" y1="382" x2="760" y2="382" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="396" text-anchor="middle" fill="#7d8590" font-size="11">SpaceX strategy slides released · "WE ARE THE ONLY COMPANY THAT CAN DO THIS"</text>
+  <text x="400" y="412" text-anchor="middle" fill="#444c56" font-size="10">Source: SpaceX Growth Strategy Presentation · investus.kr</text>
+</svg>

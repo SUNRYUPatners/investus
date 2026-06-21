@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="700">INTC · Intel Corporation</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Intel CEO — 5~10년 내 10배 수익, 2030-35 진면목 공개</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Dan Nimrod CEO 인터뷰 · 장기 기술 우위 2030-2035 실현 계획</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Central timeline -->
+  <!-- Quote box -->
+  <rect x="40" y="108" width="720" height="72" rx="8" fill="#0a1628"/>
+  <text x="400" y="134" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="600">"10x return potential within 5 to 10 years"</text>
+  <text x="400" y="156" text-anchor="middle" fill="#e6edf3" font-size="13">Intel CEO Daniel Nimrod · No Profits 팟캐스트 인터뷰</text>
+  <text x="400" y="172" text-anchor="middle" fill="#7d8590" font-size="12">"기술 기반에 계속 투자하면 2030~2035년 사이 잠재력이 드러날 것"</text>
+
+  <!-- 3-phase timeline -->
+  <text x="400" y="212" text-anchor="middle" fill="#7d8590" font-size="12">Intel 반등 로드맵</text>
+  <line x1="80" y1="224" x2="720" y2="224" stroke="#60a5fa" stroke-width="2"/>
+
+  <!-- Phase markers -->
+  <circle cx="140" cy="224" r="8" fill="#60a5fa" opacity="0.5"/>
+  <text x="140" y="248" text-anchor="middle" fill="#7d8590" font-size="11">2026</text>
+  <text x="140" y="262" text-anchor="middle" fill="#7d8590" font-size="11">기반 재건</text>
+
+  <circle cx="320" cy="224" r="8" fill="#60a5fa" opacity="0.7"/>
+  <text x="320" y="248" text-anchor="middle" fill="#7d8590" font-size="11">2027-29</text>
+  <text x="320" y="262" text-anchor="middle" fill="#7d8590" font-size="11">점진 회복</text>
+
+  <circle cx="520" cy="224" r="10" fill="#60a5fa"/>
+  <text x="520" y="248" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">2030-35</text>
+  <text x="520" y="264" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="700">기술 도약</text>
+
+  <circle cx="700" cy="224" r="8" fill="#60a5fa" opacity="0.4"/>
+  <text x="700" y="248" text-anchor="middle" fill="#7d8590" font-size="11">2036+</text>
+  <text x="700" y="262" text-anchor="middle" fill="#7d8590" font-size="11">성장 수확</text>
+
+  <!-- Strategy details -->
+  <rect x="40" y="280" width="340" height="110" rx="8" fill="#161b22"/>
+  <text x="210" y="308" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="600">핵심 전략</text>
+  <text x="60" y="330" fill="#7d8590" font-size="12">IBA 파운드리 사업 분리 완성</text>
+  <text x="60" y="350" fill="#7d8590" font-size="12">18A/14A 공정 개발 지속</text>
+  <text x="60" y="370" fill="#7d8590" font-size="12">AI 엣지·PC 칩 포트폴리오 강화</text>
+  <text x="60" y="388" fill="#7d8590" font-size="12">TSMC·삼성 대비 차별화 경쟁력</text>
+
+  <rect x="420" y="280" width="340" height="110" rx="8" fill="#161b22"/>
+  <text x="590" y="308" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="600">투자 시사점</text>
+  <text x="440" y="330" fill="#7d8590" font-size="12">장기 10배 잠재력 = 고위험·고수익</text>
+  <text x="440" y="350" fill="#7d8590" font-size="12">단기 실적 부진 지속 예상</text>
+  <text x="440" y="370" fill="#7d8590" font-size="12">2030년 이전 인내 필요</text>
+  <text x="440" y="388" fill="#7d8590" font-size="12">AI 파운드리 수요 선점 가능성</text>
+
+  <line x1="40" y1="404" x2="760" y2="404" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="420" text-anchor="middle" fill="#444c56" font-size="10">출처: Daniel Ramírez / @HyperTechInvest / Intel CEO No Profits 팟캐스트 · investus.kr</text>
+</svg>

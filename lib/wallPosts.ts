@@ -27,17 +27,18 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T20J = _now;                        // 오늘(6/20) 포스트
-const T19J = _now - 24 * 3600_000;       // 6/19
-const T18J = _now - 48 * 3600_000;       // 6/18
-const T17J = _now - 72 * 3600_000;       // 6/17
-const T16J = _now - 96 * 3600_000;       // 6/16
-const T15J = _now - 120 * 3600_000;      // 6/15
-const T13J = _now - 168 * 3600_000;      // 6/13
-const T12J = _now - 192 * 3600_000;      // 6/12
-const T11J = _now - 216 * 3600_000;      // 6/11
-const T10J = _now - 240 * 3600_000;      // 6/10
-export const LATEST_UPDATE = T20J;       // NEW 배지 기준
+const T22J = _now;                        // 오늘(6/22) 포스트
+const T20J = _now - 48 * 3600_000;       // 6/20
+const T19J = _now - 72 * 3600_000;       // 6/19
+const T18J = _now - 96 * 3600_000;       // 6/18
+const T17J = _now - 120 * 3600_000;      // 6/17
+const T16J = _now - 144 * 3600_000;      // 6/16
+const T15J = _now - 168 * 3600_000;      // 6/15
+const T13J = _now - 216 * 3600_000;      // 6/13
+const T12J = _now - 240 * 3600_000;      // 6/12
+const T11J = _now - 264 * 3600_000;      // 6/11
+const T10J = _now - 288 * 3600_000;      // 6/10
+export const LATEST_UPDATE = T22J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -56,6 +57,111 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-22 — SPCX Cursor $80B·TSLA FSD Semi·스페인 27.5만km·FSD 142만
+  //              MEGAPOD·Optimus·Grok+FSD·Amazing Abundance·Space Force $2.29B
+  //              AI위성·US Mobile 150개국·NASDAQ100 리밸런싱·AMZN $7170억
+  //              클라우드 백로그·MU 영업이익·META/MSFT PVGO·GOOGL 버크셔·INTC CEO
+  // ════════════════════════════════════════════════════════════════════════
+
+  // SPCX — 6/22 업데이트 ────────────────────────────────────────────────
+  { id: 288, symbol: "SPCX", nickname: "익명_3847", holdingLabel: "관심종목",
+    content: "SpaceX가 Cursor $80B에 인수한다는 게 정말 충격이에요. AI 코딩 툴 1위를 우주 기업이 가져가는 거잖아요. Starlink 통신망 위에 Cursor AI 개발 도구까지 — SpaceX가 인프라 + 소프트웨어 수직통합하는 거예요. 머스크 AI 제국이 xAI·Tesla·SpaceX를 넘어 개발자 도구까지 확장되는 거잖아요. SPCX 밸류에이션 재평가 모멘텀으로 작용할 것 같아요.",
+    createdAt: T22J - 9*60_000, likes: 487, comments: 3 },
+  { id: 289, symbol: "SPCX", nickname: "익명_7291", holdingLabel: "관심종목",
+    content: "Cursor가 개발자들 사이에서 AI 코딩 압도적 1위인데 SpaceX가 인수한다는 게 B2B SaaS 첫 진출이에요. 우주 발사 + 위성 통신 + AI 코딩 도구 — 사업 다각화가 예상외 방향으로 가는 거예요. $80B이면 구독형 반복 매출 기반이라 SpaceX 수익 구조가 더 안정적으로 바뀌는 거예요. SPCX 장기 홀딩 이유가 하나 더 생겼네요.",
+    createdAt: T22J - 24*60_000, likes: 341, comments: 2 },
+
+  // TSLA FSD Semi/Spain — 6/22 업데이트 ────────────────────────────────
+  { id: 290, symbol: "TSLA", nickname: "익명_5193", holdingLabel: "200주 보유",
+    content: "Tesla Semi에 LIDAR 달고 FSD 보정하는 게 포착됐는데, 이게 '카메라 온리'를 포기한 게 아니에요. LIDAR로 정밀 3D 지도 만들어서 카메라 AI 모델 학습 레이블링 정확도를 높이는 보정 도구로 쓰는 거예요. Semi 자율주행 상용화되면 화물 운송 $1조 시장 직접 공략이에요. 마일당 과금 모델로 바뀌면 Semi가 새로운 수익 기계가 되는 거죠.",
+    createdAt: T22J - 11*60_000, likes: 412, comments: 3 },
+  { id: 291, symbol: "TSLA", nickname: "익명_8472", holdingLabel: "100주 보유",
+    content: "스페인 DGT가 Tesla FSD 275,471km 무사고 공식 인증했어요. 지구 6.9바퀴 거리에서 사고 0건이에요. 유럽 규제 기관 최초 공식 검증이라는 게 포인트예요. 독일·프랑스·이탈리아 순차 도입의 첫 걸음이고, EU 2.5억 운전자 시장이 열리는 거예요. FSD 구독 142만에서 유럽 추가되면 얼마나 올라갈지 계산이 안 나와요.",
+    createdAt: T22J - 18*60_000, likes: 378, comments: 3 },
+
+  // TSLA FSD Subs / MEGAPOD — 6/22 업데이트 ───────────────────────────
+  { id: 292, symbol: "TSLA", nickname: "익명_2938", holdingLabel: "150주 보유",
+    content: "FSD 구독자가 Q2 2026E 142만 추산이에요. Q1 2025 50만에서 5분기 만에 3배예요. 월 $99 × 142만 = 연환산 $16.9억이고 소프트웨어 마진 80%+ 이면 영업이익 기여가 $13억+예요. Tesla가 자동차 회사에서 소프트웨어 회사로 전환되는 게 숫자로 보이기 시작하는 거예요. 유럽 DGT 인증 이후 가속될 거예요.",
+    createdAt: T22J - 14*60_000, likes: 443, comments: 3 },
+  { id: 293, symbol: "TSLA", nickname: "익명_4628", holdingLabel: "관심종목",
+    content: "MEGAPOD 상표 출원이 에너지 사업 확장 신호예요. Megapack은 대형 고정식인데 MEGAPOD는 이름에서 느껴지듯 모듈식·컨테이너형으로 더 유연한 배치가 가능한 형태 같아요. AI 데이터센터 전력 수요 폭증 시기에 이동형 ESS가 나온다는 게 타이밍 완벽해요. Tesla Energy가 자동차 사업 못지않게 커질 것 같아요.",
+    createdAt: T22J - 31*60_000, likes: 287, comments: 2 },
+
+  // TSLA Optimus / Grok+FSD — 6/22 업데이트 ───────────────────────────
+  { id: 294, symbol: "TSLA", nickname: "익명_9183", holdingLabel: "관심종목",
+    content: "Optimus 3단계 로드맵이 2025 내부 시험 → 2026 양산 → 2027 외부 판매예요. 2027년 10만 대 × $25,000 = $25억 매출 시나리오예요. 100만 대 가면 $250억이고 로봇 사업 P/S 10x 적용하면 $2,500억 추가 가치예요. 자동차+에너지+FSD 외에 로봇까지 더해지면 Tesla가 얼마짜리 회사인지 계산이 어렵네요.",
+    createdAt: T22J - 7*60_000, likes: 521, comments: 3 },
+  { id: 295, symbol: "TSLA", nickname: "익명_6291", holdingLabel: "80주 보유",
+    content: "Grok + FSD 통합이 구체화되는 거예요. FSD는 시각 인식이 강한데 언어 이해가 약했거든요. '다음 블록에서 좌회전'처럼 자연어 명령을 정밀하게 처리하는 게 Grok이 맡는 거예요. Tesla·xAI·Neuralink 생태계가 AI 언어+시각+행동을 통합하면 완전 자율주행의 마지막 퍼즐이 맞춰지는 거잖아요.",
+    createdAt: T22J - 37*60_000, likes: 318, comments: 2 },
+
+  // TSLA Amazing Abundance — 6/22 업데이트 ────────────────────────────
+  { id: 296, symbol: "TSLA", nickname: "익명_3718", holdingLabel: "50주 보유",
+    content: "Tesla가 'Amazing Abundance' 상표를 출원했어요. 에너지·노동·이동성의 풍요 — 머스크가 계속 강조해온 비전을 브랜드화한 거예요. Optimus 로봇 운영 서비스나 Cybercab 플릿 서비스, 또는 에너지 구독 서비스에 붙을 것 같아요. Tesla가 '풍요 솔루션' 기업으로 재포지셔닝하는 신호로 보여요.",
+    createdAt: T22J - 42*60_000, likes: 256, comments: 2 },
+
+  // SPCX Space Force / AI 위성 — 6/22 업데이트 ────────────────────────
+  { id: 297, symbol: "SPCX", nickname: "익명_5827", holdingLabel: "관심종목",
+    content: "SpaceX Space Force $22.9억 계약이에요. 군사용 Starlink가 전장 통신·ISR·재난 대응에 쓰이는데 저지연·암호화·재밍 저항 — LEO 위성 기반이라 복구 능력도 우수해요. 정부 계약 = 고마진 안정 반복 매출이에요. NATO 동맹국으로 계약 확산 가능성 생각하면 이게 시작이에요.",
+    createdAt: T22J - 13*60_000, likes: 398, comments: 3 },
+  { id: 298, symbol: "SPCX", nickname: "익명_8374", holdingLabel: "관심종목",
+    content: "SpaceX AI 위성 로드맵이 나왔어요. 현재 V2 → V3 테라비트 → AI 위성(온보드 AI) 3단계예요. 위성에 AI 칩 탑재해서 지상 데이터센터 없이 AI 추론하는 게 우주 클라우드 컴퓨팅이에요. AWS·Azure·GCP랑 직접 경쟁하는 새로운 전선이 열리는 거예요. 2030년 이전에 이게 현실이 된다면 SpaceX 밸류에이션 $350B도 싼 거예요.",
+    createdAt: T22J - 29*60_000, likes: 356, comments: 3 },
+
+  // Starlink US Mobile — 6/22 업데이트 ────────────────────────────────
+  { id: 299, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
+    content: "Starlink × US Mobile 파트너십으로 150개국+ 글로벌 로밍이에요. 통신사가 인프라 레이어로 Starlink를 쓴다는 게 경쟁이 아닌 공생이에요. B2B2C 모델이라 SpaceX는 마케팅 비용 없이 가입자 확보해요. 전 세계 26억 비연결 인구 시장 공략 + T-Mobile Direct-to-Cell까지 더해지면 Starlink 구독자 수가 어디까지 갈지 모르겠어요.",
+    createdAt: T22J - 46*60_000, likes: 312, comments: 2 },
+
+  // NASDAQ100 리밸런싱 — 6/22 업데이트 ────────────────────────────────
+  { id: 300, symbol: "RKLB", nickname: "익명_7483", holdingLabel: "80주 보유",
+    content: "Rocket Lab이 NASDAQ100 편입이에요! QQQ AUM이 $3,000억인데 거기서 자동 매수가 발동되는 거잖아요. 우주 섹터 최초 주요 지수 편입이라는 게 역사적인 이정표예요. CRWV·ALAB·NBIS까지 AI 인프라 3종이 동시 편입 — AI+우주+반도체 테마가 이제 주류 지수에 공식 편입됐어요.",
+    createdAt: T22J - 16*60_000, likes: 489, comments: 3 },
+  { id: 301, symbol: "RKLB", nickname: "익명_4193", holdingLabel: "60주 보유",
+    content: "NASDAQ100 편입 = 패시브 자금 자동 유입이에요. QQQ 추종 ETF들이 비중에 따라 RKLB를 반드시 사야 하는 거거든요. 소형 우주 로켓 시장 1위에 뉴트론 엔진·태양전지판 부품 사업 고성장 — 지수 편입 모멘텀과 펀더멘털이 다 좋아요. 장기 홀딩 확신이 더 생겼어요.",
+    createdAt: T22J - 38*60_000, likes: 367, comments: 2 },
+
+  // AMZN — 6/22 업데이트 ───────────────────────────────────────────────
+  { id: 302, symbol: "AMZN", nickname: "익명_3947", holdingLabel: "40주 보유",
+    content: "Amazon 2025 미국 매출 1위 $7,170억이에요. Walmart를 공식 추월한 거잖아요. 커머스+클라우드+광고 3중 수익 구조가 만든 플라이휠 효과가 완성됐다고 봐요. AWS AI 백로그 $4,800억까지 더하면 향후 3~4년 매출 가시성도 사상 최고예요. AMZN 지금 PE가 이걸 반영하기엔 너무 낮아요.",
+    createdAt: T22J - 21*60_000, likes: 423, comments: 3 },
+  { id: 303, symbol: "AMZN", nickname: "익명_6182", holdingLabel: "35주 보유",
+    content: "클라우드 백로그가 AWS $4,800억, Azure +215%, GCP $2,600억이에요. 백로그는 이미 계약 서명된 미래 매출이에요. 3~5년치가 이미 확보된 상태라는 게 어마어마한 거예요. AI 기업들이 클라우드 장기 계약을 선점하고 있는 거잖아요. 클라우드 3사가 다 같이 AI로 성장하는데 AMZN PE가 왜 이렇게 낮은지 모르겠어요.",
+    createdAt: T22J - 44*60_000, likes: 298, comments: 2 },
+
+  // MU — 6/22 업데이트 ─────────────────────────────────────────────────
+  { id: 304, symbol: "MU", nickname: "익명_8291", holdingLabel: "50주 보유",
+    content: "Micron 영업이익 $1.3B에서 $15.7B으로 추산되는 거예요. AI HBM 수요 폭증 + DRAM 업황 개선 이중 수혜가 이렇게 숫자로 나오는 거잖아요. NVDA H100·H200·B200에 HBM3E 공급하는 게 Micron인데 에너지 효율 30%+ 우위까지 있어요. HBM 시장이 커질수록 MU가 직접 먹는 구조예요.",
+    createdAt: T22J - 19*60_000, likes: 376, comments: 3 },
+  { id: 305, symbol: "MU", nickname: "익명_5374", holdingLabel: "30주 보유",
+    content: "MU EPS 2026E $8~10 추정에 지금 주가 보면 역사적 저점 PE 수준이에요. HBM 프리미엄이 아직 안 반영된 거예요. 중국 제재 리스크는 있지만 NVDA·AMD GPU 공급이 늘어날수록 HBM 수요가 비례해서 늘어나요. AI 인프라 투자 계속되는 한 MU 수익성 개선 트렌드 꺾이기 어려워요.",
+    createdAt: T22J - 41*60_000, likes: 267, comments: 2 },
+
+  // META/MSFT PVGO — 6/22 업데이트 ────────────────────────────────────
+  { id: 306, symbol: "META", nickname: "익명_9284", holdingLabel: "70주 보유",
+    content: "PVGO 분석 보니까 META 35.3%, MSFT 36%로 S&P500(55%) 대비 훨씬 낮아요. 주가의 64%+가 현재 이익으로 설명된다는 게 가치주 수준으로 평가받는 거예요. AI 성장주인데 가치주처럼 거래된다는 게 저평가 시그널이에요. Meta AI 수익화 가시화되면 PVGO가 올라가면서 주가 재평가가 오는 거예요.",
+    createdAt: T22J - 12*60_000, likes: 412, comments: 3 },
+  { id: 307, symbol: "MSFT", nickname: "익명_2847", holdingLabel: "60주 보유",
+    content: "MSFT PVGO 36%가 S&P500 55% 대비 훨씬 낮다는 게 Copilot 수익화가 아직 밸류에이션에 안 녹아든 거예요. Azure RPO $700B 돌파에 Copilot $30/월 구독 폭발 중인데 주가는 가치주 수준으로 있어요. AI ROI 논란 해소되고 수익화 본격화되면 PVGO 상승 = 주가 재평가 나와요. 지금이 기회예요.",
+    createdAt: T22J - 33*60_000, likes: 356, comments: 2 },
+
+  // GOOGL — 6/22 업데이트 ─────────────────────────────────────────────
+  { id: 308, symbol: "GOOGL", nickname: "익명_4829", holdingLabel: "30주 보유",
+    content: "버크셔 해서웨이가 GOOGL을 5대 보유 주식으로 편입했어요. 버핏이 기술주 회의론자인데 GOOGL 편입한다는 게 엄청 강력한 신호예요. PVGO 47.8%로 S&P500 대비 낮고, AI 검색 독점+YouTube+GCP 복합 수익 기반이 가치투자 기준 통과한 거예요. 버핏이 인정한 기술주 = 시장도 따라가는 경향이 있어요.",
+    createdAt: T22J - 22*60_000, likes: 478, comments: 3 },
+  { id: 309, symbol: "GOOGL", nickname: "익명_7391", holdingLabel: "25주 보유",
+    content: "버크셔 Top 5에 GOOGL 편입이 가치투자 + AI 성장의 교차점이에요. 검색 광고 독점 + YouTube + GCP 세 수익원 중 하나만 남아도 가치가 있는 회사예요. Gemini가 ChatGPT에 대항하고 TPU로 AI 인프라 비용도 낮추는 중이에요. 버핏이 사면 패시브 펀드들도 주목하는 구조예요.",
+    createdAt: T22J - 48*60_000, likes: 312, comments: 2 },
+
+  // INTC — 6/22 업데이트 ──────────────────────────────────────────────
+  { id: 310, symbol: "INTC", nickname: "익명_6284", holdingLabel: "관심종목",
+    content: "Intel CEO가 '5~10년 내 10배 수익 잠재력'을 팟캐스트에서 직접 말했어요. 2030~2035년이 진면목 드러나는 시기라고요. IBA 파운드리 분리 + 18A/14A 공정 + AI 엣지칩 전략이에요. 고위험·고수익 플레이가 맞고 단기 실적 부진 감수해야 해요. 5년+ 장기 투자자라면 지금 담는 게 기회일 수 있어요.",
+    createdAt: T22J - 26*60_000, likes: 367, comments: 3 },
+  { id: 311, symbol: "INTC", nickname: "익명_3948", holdingLabel: "관심종목",
+    content: "Intel 10배 발언이 설득력 있으려면 18A 공정 수율 잡는 게 핵심이에요. TSMC 대안 파운드리가 되려면 대형 고객 하나를 잡아야 하는데 지정학 이유로 미국 파운드리 찾는 빅테크들이 있잖아요. $131까지 온 주가가 보여주듯 이미 회복 중이에요. 2030 전까지 인내할 수 있으면 10배가 허언이 아닐 수 있어요.",
+    createdAt: T22J - 52*60_000, likes: 289, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-20 — Cybercab EPA CoC·Liquid Armor·Cathie Wood·신용등급 /
@@ -1251,6 +1357,117 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-22 신규 ──────────────────────────────────────────────────────
+  288: [
+    { id: 1, nickname: "익명_4821", holdingLabel: "관심종목", content: "Cursor 개발자들이 SpaceX 인수 소식에 어떻게 반응하는지 궁금해요. 우주 기업이 개발 도구를 가져가는 게 처음이잖아요. Starlink 인프라 위에서 Cursor가 돌아가면 오지에서도 AI 코딩이 가능해지는 거예요.", createdAt: T22J - 4*60_000, likes: 94 },
+    { id: 2, nickname: "익명_7293", holdingLabel: "관심종목", content: "$80B이 비싸 보이지만 Cursor 월 구독자 수백만에 ARR이 상당할 거예요. 인수 후 Starlink 기업 고객에게 Cursor 번들 제공하면 시너지가 엄청날 것 같아요. SaaS 반복 매출 + 위성 인프라 = 완벽한 조합이에요.", createdAt: T22J - 15*60_000, likes: 73 },
+    { id: 3, nickname: "익명_2947", holdingLabel: "관심종목", content: "머스크가 xAI Grok + Tesla FSD + SpaceX Cursor까지 AI 생태계 수직통합하는 속도가 놀라워요. 개발자 플랫폼 장악하면 기업 고객 생태계까지 확보하는 거잖아요. SPCX 장기 스토리가 더 강해지는 이벤트예요.", createdAt: T22J - 28*60_000, likes: 58 },
+  ],
+  289: [
+    { id: 1, nickname: "익명_9182", holdingLabel: "관심종목", content: "구독형 SaaS 수익이 SpaceX에 생긴다는 게 포인트예요. 로켓 발사는 발사 때마다 매출이지만 Cursor 구독은 매달 반복이에요. 수익 구조 안정성이 한 단계 올라가는 거예요.", createdAt: T22J - 11*60_000, likes: 67 },
+    { id: 2, nickname: "익명_5381", holdingLabel: "관심종목", content: "Starlink 글로벌 망 + Cursor AI 도구 = 어디서든 AI 개발 가능한 플랫폼이에요. 개발도상국 개발자들한테 진짜 혁명적인 접근성이에요. 머스크 'Amazing Abundance' 비전이 여기서도 보여요.", createdAt: T22J - 31*60_000, likes: 49 },
+  ],
+  290: [
+    { id: 1, nickname: "익명_8471", holdingLabel: "200주 보유", content: "Semi LIDAR 보정이 카메라 온리 전략을 버린 게 아니라는 설명이 맞아요. LIDAR로 라벨링 품질을 높이면 카메라 AI 모델이 더 정확해지는 거예요. 보정 도구 = 프로덕션 제품이 아닌 거죠. Tesla의 접근이 영리해요.", createdAt: T22J - 7*60_000, likes: 98 },
+    { id: 2, nickname: "익명_3182", holdingLabel: "관심종목", content: "Semi 자율주행 상용화가 되면 화물 운송 비용이 드라마틱하게 낮아져요. 트럭 기사 인건비가 운송 비용의 30~40%인데 자율주행이 대체하면 물류 전체 경제학이 바뀌는 거예요. Tesla가 이 시장 먹으면 엄청난 규모예요.", createdAt: T22J - 19*60_000, likes: 76 },
+    { id: 3, nickname: "익명_6293", holdingLabel: "150주 보유", content: "Semi FSD 상용화 = 마일당 과금 모델이에요. 트럭 한 대가 연 20만 마일 × $0.10/마일 = 연 $2만 구독료예요. 100만 대면 연 $200억 반복 매출이에요. 가능성만으로도 밸류에이션이 재평가돼야 해요.", createdAt: T22J - 34*60_000, likes: 61 },
+  ],
+  291: [
+    { id: 1, nickname: "익명_5847", holdingLabel: "100주 보유", content: "DGT 공식 인증이 나온 게 단순 테스트 통과가 아니에요. 규제 기관이 '이 시스템은 안전하다'는 도장을 찍은 거예요. 독일·프랑스 규제 기관이 이걸 무시하기 어려울 거예요. EU FSD 확산이 예상보다 빨라질 수 있어요.", createdAt: T22J - 9*60_000, likes: 104 },
+    { id: 2, nickname: "익명_2948", holdingLabel: "관심종목", content: "지구 6.9바퀴를 무사고로 돌았다는 게 직관적으로 설득력 있는 숫자예요. 일반인한테 설명할 때 이 숫자 하나로 충분해요. EU 시장 열리면 FSD 구독 142만이 빠르게 200만+ 가는 시나리오가 가능해요.", createdAt: T22J - 22*60_000, likes: 79 },
+    { id: 3, nickname: "익명_7384", holdingLabel: "50주 보유", content: "스페인 테스트가 '도시 복잡 교통 + 고속도로 + 다양한 날씨' 다 포함이에요. 단순 테스트 코스가 아닌 실제 도로라는 게 중요해요. 미국 FSD랑 같은 시스템이 유럽에서도 통한다는 게 증명된 거예요.", createdAt: T22J - 38*60_000, likes: 52 },
+  ],
+  292: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "150주 보유", content: "5분기 3배 성장이 가속되고 있어요. Q3 2026E에 150만, Q4에 175만 가는 게 불가능한 숫자가 아니에요. 유럽 DGT 인증까지 나왔으니까요. 소프트웨어 마진 80%+ 이면 이게 EPS에 직접 찍히는 거예요.", createdAt: T22J - 6*60_000, likes: 112 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "FSD 구독 = 차량 판매와 독립된 소프트웨어 매출이에요. 차를 못 팔아도 기존 차주들이 구독하면 매출이 나오는 구조예요. 경기 침체에도 FSD 구독자는 유지되는 끈끈한 매출이에요. 소프트웨어 전환이 완성되는 거예요.", createdAt: T22J - 18*60_000, likes: 87 },
+    { id: 3, nickname: "익명_1947", holdingLabel: "80주 보유", content: "로보택시 출시 전까지 142만 구독자가 쌓이는 거예요. Cybercab 출시하면 기존 FSD 구독자들이 자연스럽게 로보택시 초기 수요로 전환될 것 같아요. FSD 구독 = Cybercab 로보택시 대기자 명단이에요.", createdAt: T22J - 33*60_000, likes: 69 },
+  ],
+  293: [
+    { id: 1, nickname: "익명_8392", holdingLabel: "관심종목", content: "MEGAPOD가 데이터센터 이동형 전력 솔루션으로 쓰인다면 AI 붐 시기에 완벽한 타이밍이에요. 데이터센터 건설보다 ESS 설치가 빠르니까 급한 AI 인프라 전력 수요에 먼저 대응 가능해요.", createdAt: T22J - 14*60_000, likes: 71 },
+    { id: 2, nickname: "익명_3917", holdingLabel: "50주 보유", content: "Tesla Energy가 자동차 사업보다 고성장이에요. Megapack 수주 잔고가 몇 달치 백로그인데 MEGAPOD까지 더해지면 TAM이 폭발적으로 커지는 거예요. 에너지 사업이 2027년에 자동차 수준으로 커질 수 있어요.", createdAt: T22J - 37*60_000, likes: 54 },
+  ],
+  294: [
+    { id: 1, nickname: "익명_7284", holdingLabel: "관심종목", content: "2027년 외부 판매 시작이면 이제 1년 남은 거예요. $20,000~30,000 가격대에 제조·물류·서비스업 수요 생각하면 첫 해에도 수요 폭발할 것 같아요. 대기 명단 지금부터 만들어도 될 것 같아요.", createdAt: T22J - 4*60_000, likes: 127 },
+    { id: 2, nickname: "익명_5182", holdingLabel: "관심종목", content: "Optimus 100만 대 × $25,000 = $250억 매출에 소프트웨어 구독까지 더하면요. 로봇 사업 P/S 10x 적용 = $2,500억 추가 기업가치예요. 자동차·FSD·에너지·로봇 다 합치면 Tesla 시총이 지금 몇 배가 적당한지 계산이 안 나와요.", createdAt: T22J - 17*60_000, likes: 98 },
+    { id: 3, nickname: "익명_9283", holdingLabel: "관심종목", content: "내부 배치 먼저 하는 게 영리해요. 자기 공장에서 로봇이 일하는 영상이 나오면 마케팅 비용 없이 전 세계에 퍼지는 거잖아요. 로봇이 자동차 만드는 영상 하나가 백 번의 발표보다 설득력 있어요.", createdAt: T22J - 31*60_000, likes: 74 },
+  ],
+  295: [
+    { id: 1, nickname: "익명_4827", holdingLabel: "80주 보유", content: "Grok + FSD 통합으로 '목적지 말하면 알아서 가는' 완전 자율주행이 되는 거예요. KITT처럼요. 언어 이해 + 시각 인식 + 행동 AI 통합이 FSD 완성의 마지막 단계예요. 2026~2027년 안에 이게 현실이 될 것 같아요.", createdAt: T22J - 16*60_000, likes: 89 },
+    { id: 2, nickname: "익명_2947", holdingLabel: "관심종목", content: "Waymo는 구글 AI + 자율주행이 따로 있는데 Tesla는 Grok·Dojo·FSD가 같은 생태계예요. 데이터가 Grok에서 FSD로 흐르고 다시 학습에 활용되는 선순환이 경쟁사가 따라올 수 없는 구조예요.", createdAt: T22J - 35*60_000, likes: 67 },
+  ],
+  296: [
+    { id: 1, nickname: "익명_6284", holdingLabel: "50주 보유", content: "'Amazing Abundance'가 에너지·로봇·이동성 통합 서비스 브랜드가 된다면 Tesla가 B2C 플랫폼 기업으로 완전히 자리잡는 거예요. 자동차 회사 프레임으로 보던 분들이 이 브랜드 나오면 인식이 바뀔 것 같아요.", createdAt: T22J - 19*60_000, likes: 63 },
+    { id: 2, nickname: "익명_8374", holdingLabel: "관심종목", content: "Optimus + FSD + Megapack 묶어서 기업 고객한테 '풍요 패키지' 파는 게 가능하지 않을까요? 생산 자동화 + 물류 자율화 + 에너지 자립 한 번에 해주는 솔루션이요. B2B 엔터프라이즈 비즈니스로 가는 거예요.", createdAt: T22J - 42*60_000, likes: 47 },
+  ],
+  297: [
+    { id: 1, nickname: "익명_3947", holdingLabel: "관심종목", content: "$22.9억이 단일 계약인 게 대단해요. Space Force가 Starlink 군사용에 이정도 쓴다는 게 미군이 위성 통신 표준으로 채택했다는 거잖아요. NATO 동맹국들이 같은 시스템 원할 때 확장이 자동으로 되는 구조예요.", createdAt: T22J - 7*60_000, likes: 97 },
+    { id: 2, nickname: "익명_7182", holdingLabel: "관심종목", content: "군사용 Starlink가 저지연·암호화·재밍 저항까지 되면 기존 군사 통신 위성 대비 월등하잖아요. DoD가 계속 계약 늘리면 정부 부문 안정 매출이 $50억+/년 추정이에요. SpaceX 수익 안정성이 확보되는 거예요.", createdAt: T22J - 21*60_000, likes: 73 },
+    { id: 3, nickname: "익명_5291", holdingLabel: "관심종목", content: "상업 + 정부 + 군사 3층 수익 구조가 다 갖춰지는 거예요. 어느 하나가 흔들려도 다른 두 개로 버틸 수 있는 포트폴리오예요. SpaceX 기업가치 $350B+ 정당화 논리가 이렇게 쌓이는 거예요.", createdAt: T22J - 38*60_000, likes: 58 },
+  ],
+  298: [
+    { id: 1, nickname: "익명_8492", holdingLabel: "관심종목", content: "AI 위성이 실현되면 우주에서 AI 추론하는 시대가 오는 거예요. 지상 데이터센터가 필요 없어지는 영역이 생기는 거잖아요. AWS·Azure·GCP의 지상 클라우드와 SpaceX 우주 클라우드가 경쟁하는 시대예요. 엄청난 패러다임 전환이에요.", createdAt: T22J - 13*60_000, likes: 108 },
+    { id: 2, nickname: "익명_4728", holdingLabel: "관심종목", content: "V3 테라비트 속도만 돼도 엔터프라이즈 고객 대거 유입이에요. 거기에 AI 온보드까지 되면 Starlink가 단순 인터넷 서비스를 넘어 엣지 AI 컴퓨팅 인프라로 진화하는 거예요. ARPU가 지금의 10배도 가능한 시나리오예요.", createdAt: T22J - 27*60_000, likes: 84 },
+    { id: 3, nickname: "익명_1947", holdingLabel: "관심종목", content: "Starship이 V3 위성 대량 배치하는 비용 혁신이 이걸 가능하게 해요. 기존 발사 비용으로는 이런 위성 숫자가 불가능했는데 Starship 재사용이 게임 체인저예요. SpaceX만 할 수 있는 이유예요.", createdAt: T22J - 44*60_000, likes: 62 },
+  ],
+  299: [
+    { id: 1, nickname: "익명_6382", holdingLabel: "관심종목", content: "B2B2C 모델이라 SpaceX는 마케팅 비용 없이 US Mobile 기존 고객을 확보하는 거예요. 통신사들이 앞다퉈 Starlink 협력하려는 이유가 커버리지 격차를 메워야 하기 때문이에요. 위성이 지상 통신사 인프라 보완재가 된 거예요.", createdAt: T22J - 22*60_000, likes: 79 },
+    { id: 2, nickname: "익명_9183", holdingLabel: "관심종목", content: "150개국이면 진정한 글로벌 통신 인프라예요. 어느 나라 가도 Starlink 하나로 연결되는 시대가 오는 거잖아요. 여행자·선원·원정대 등 이동성 높은 사용자들한테 독점적 서비스예요. 구독 해지율이 낮을 수밖에 없어요.", createdAt: T22J - 48*60_000, likes: 59 },
+  ],
+  300: [
+    { id: 1, nickname: "익명_5847", holdingLabel: "80주 보유", content: "QQQ가 $3,000억 AUM이면 RKLB 비중에 따라 수억 달러 자동 매수예요. 패시브 자금 유입이 강제 매수라서 단기 주가 상승 압력이 생겨요. 지수 편입 발표부터 실제 편입일까지 모멘텀이 지속되는 패턴이에요.", createdAt: T22J - 8*60_000, likes: 116 },
+    { id: 2, nickname: "익명_3291", holdingLabel: "관심종목", content: "우주 섹터가 NASDAQ100에 편입된다는 게 우주가 이제 주류 산업이 됐다는 신호예요. RKLB·SPCX 투자자들한테 정당성 증명이에요. 다음엔 S&P500 편입도 기대할 수 있는 거잖아요.", createdAt: T22J - 22*60_000, likes: 87 },
+    { id: 3, nickname: "익명_7492", holdingLabel: "60주 보유", content: "CRWV·ALAB·NBIS까지 AI 인프라 3종과 함께 편입되는 게 AI+우주 테마의 지수 공식 인정이에요. 이 종목들이 다 같이 올라가는 환경이 만들어지는 거예요. QQQ 추종 투자자들이 강제로 사줘야 하는 구조예요.", createdAt: T22J - 39*60_000, likes: 64 },
+  ],
+  301: [
+    { id: 1, nickname: "익명_4839", holdingLabel: "60주 보유", content: "뉴트론 엔진 개발이 마무리 단계라는데 거기에 NASDAQ100 편입 모멘텀까지 더해지면 RKLB 2026 하반기가 기대돼요. Electron 성공률 97%+로 신뢰도 이미 증명됐고요.", createdAt: T22J - 17*60_000, likes: 82 },
+    { id: 2, nickname: "익명_8293", holdingLabel: "관심종목", content: "부품 사업(태양전지판·통신 장비)이 마진이 좋아요. 발사 사업만 있는 회사로 보는 사람들이 많은데 이미 다각화된 우주 부품 기업이에요. 지수 편입으로 인지도 올라가면 이 부분 재평가가 올 것 같아요.", createdAt: T22J - 41*60_000, likes: 61 },
+  ],
+  302: [
+    { id: 1, nickname: "익명_7382", holdingLabel: "40주 보유", content: "Walmart 추월이 상징적인 거지만 실질적으로 더 중요한 건 AWS+광고 사업이에요. 커머스 매출 1위 + 클라우드 1위 + 광고 3위를 한 회사가 들고 있는 게 AMZN이잖아요. 이 조합을 복제할 수 있는 회사가 없어요.", createdAt: T22J - 11*60_000, likes: 108 },
+    { id: 2, nickname: "익명_2947", holdingLabel: "관심종목", content: "플라이휠 효과가 완성됐다는 표현이 맞아요. 커머스 데이터 → 광고 타겟팅 정확도 → 광고 수익 → 프라임 투자 → 커머스 강화 → 다시 시작. 이 루프가 돌아갈수록 경쟁사가 따라오기 더 어려워져요.", createdAt: T22J - 26*60_000, likes: 82 },
+    { id: 3, nickname: "익명_5182", holdingLabel: "45주 보유", content: "$7,170억이면 한국 GDP의 절반이에요. 미국 한 기업이 이걸 달성했다는 게 스케일이 다른 거예요. AWS 백로그 $4,800억까지 더하면 3~4년 매출 가시성도 확보예요. 지금 PE가 진짜 말이 안 되게 낮아요.", createdAt: T22J - 43*60_000, likes: 67 },
+  ],
+  303: [
+    { id: 1, nickname: "익명_9284", holdingLabel: "35주 보유", content: "백로그 = 이미 계약 완료된 미래 매출이에요. AWS $4,800억이면 3~4년치가 잠긴 거예요. 경기 침체가 와도 이미 약정된 계약이 있으니까 매출이 급락하기 어려운 구조예요. 방어적 성장주로 봐야 해요.", createdAt: T22J - 18*60_000, likes: 84 },
+    { id: 2, nickname: "익명_6391", holdingLabel: "관심종목", content: "Azure +215% 백로그 성장이 OpenAI 파트너십 효과예요. Microsoft가 OpenAI 독점 공급하는 구조라 AI 수요가 다 Azure로 가는 거예요. GCP도 $2,600억인데 구글 Gemini 수요 반영이에요. 클라우드 3강 다 같이 사상 최대예요.", createdAt: T22J - 39*60_000, likes: 61 },
+  ],
+  304: [
+    { id: 1, nickname: "익명_4728", holdingLabel: "50주 보유", content: "영업이익 $1.3B에서 $15.7B은 10배 이상이에요. AI HBM이 이걸 만든 거예요. NVDA GPU 한 개에 HBM이 몇 십 개 들어가는데 GB200 Blackwell 기준 HBM3E 탑재량이 더 늘었어요. NVDA 출하 늘수록 MU 매출 자동으로 늘어나요.", createdAt: T22J - 9*60_000, likes: 94 },
+    { id: 2, nickname: "익명_8392", holdingLabel: "40주 보유", content: "Samsung·SK하이닉스·Micron 3강 체제인데 Micron이 에너지 효율 30%+ 우위 있다는 게 NVDA가 왜 Micron 쓰는지 설명이 돼요. HBM3E 양산 확대 중이라 이 우위가 점유율로 이어질 수 있어요.", createdAt: T22J - 24*60_000, likes: 72 },
+    { id: 3, nickname: "익명_2947", holdingLabel: "관심종목", content: "메모리 사이클 + HBM 수요 증가가 같은 방향이에요. 사이클 상단에서 HBM 프리미엄까지 더해지면 MU 피크 EPS가 예상보다 훨씬 높을 수 있어요. 지금 매수해서 사이클 타는 전략이 유효해요.", createdAt: T22J - 41*60_000, likes: 56 },
+  ],
+  305: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "30주 보유", content: "역사적 저점 PE에 HBM 프리미엄 미반영이면 이중 저평가예요. 중국 제재 리스크는 있지만 미국 기업 쪽 수요가 워낙 강하니까요. 시장이 MU를 여전히 구형 메모리 기업으로 보는 것 같아서 기회인 것 같아요.", createdAt: T22J - 19*60_000, likes: 69 },
+    { id: 2, nickname: "익명_5382", holdingLabel: "관심종목", content: "DRAM 가격 지표 보면 아직 상승 여력 있어요. AI 서버 DRAM 수요가 일반 PC DRAM 감소를 상쇄하고도 남는 구조예요. AI 사이클이 계속되는 한 MU 업황 개선 트렌드가 꺾이기 어려워요.", createdAt: T22J - 45*60_000, likes: 51 },
+  ],
+  306: [
+    { id: 1, nickname: "익명_8471", holdingLabel: "70주 보유", content: "PVGO 35.3%면 주가의 64.7%가 현재 이익으로 설명돼요. 성장 기대가 낮게 반영된 거잖아요. Meta AI가 매출로 찍히기 시작하면 PVGO 올라가고 주가 재평가 나오는 구조예요. 지금 사면 두 번 수익 나는 거예요.", createdAt: T22J - 5*60_000, likes: 103 },
+    { id: 2, nickname: "익명_3947", holdingLabel: "관심종목", content: "Reality Labs 연간 $150억 적자가 PVGO를 낮추는 이유예요. 그 적자가 메타버스·AI 미래에 베팅하는 건데 시장이 비관적으로 보는 거예요. 이 적자가 수익화로 전환되는 순간 주가 반응이 클 거예요.", createdAt: T22J - 18*60_000, likes: 78 },
+    { id: 3, nickname: "익명_7182", holdingLabel: "50주 보유", content: "S&P500 평균 PVGO 55%보다 낮은 성장 프리미엄에 실제 성장률은 S&P500 평균보다 높아요. 저평가 수학이 완벽하게 성립해요. META + MSFT 동시 매수가 지금 가장 좋은 기회일 것 같아요.", createdAt: T22J - 34*60_000, likes: 62 },
+  ],
+  307: [
+    { id: 1, nickname: "익명_4829", holdingLabel: "60주 보유", content: "RPO $700B + PVGO 저평가 + Copilot 수익화 가속화 — MSFT 지금 상태가 진짜 이상하게 싸요. 방어적 성장주에 AI 옵션가치까지 공짜로 담겨 있는 거잖아요. 기관들이 MSFT를 anchor로 들고 가는 이유예요.", createdAt: T22J - 14*60_000, likes: 87 },
+    { id: 2, nickname: "익명_6283", holdingLabel: "관심종목", content: "Copilot $30/월 × Fortune 500 70% 도입이면 연 수십억 달러 구독 매출이에요. PVGO가 올라가려면 이 수익이 EPS에 본격 반영돼야 하는데 2026 하반기~2027이 그 시점이에요. 지금 매수 타이밍이에요.", createdAt: T22J - 38*60_000, likes: 66 },
+  ],
+  308: [
+    { id: 1, nickname: "익명_5829", holdingLabel: "30주 보유", content: "버핏이 기술주 회의론자인데 GOOGL 편입한다는 게 진짜 강력한 신호예요. 단순 트레이딩이 아니라 가치투자 기준 통과했다는 뜻이잖아요. 버크셔 포트폴리오 추종하는 패시브 자금들이 GOOGL 비중 늘리는 효과도 있어요.", createdAt: T22J - 8*60_000, likes: 119 },
+    { id: 2, nickname: "익명_2947", holdingLabel: "관심종목", content: "AI 검색 독점+YouTube+GCP 세 수익원이 서로 강화해요. 검색이 YouTube로 이어지고 GCP가 광고 인프라 역할하고 — 버핏이 좋아하는 '해자'가 세 겹이에요. 하나 망해도 두 개 남는 구조예요.", createdAt: T22J - 22*60_000, likes: 93 },
+    { id: 3, nickname: "익명_8391", holdingLabel: "25주 보유", content: "Gemini가 GPT-4에 대항하고 TPU로 AI 비용도 낮추는 중이에요. 버핏이 사고 AI도 강화하고 있으면 GOOGL이 AI 시대에서도 살아남는 게 아니라 더 강해지는 거예요. Top 5 편입이 당연한 결론이에요.", createdAt: T22J - 39*60_000, likes: 71 },
+  ],
+  309: [
+    { id: 1, nickname: "익명_7382", holdingLabel: "25주 보유", content: "PVGO 47.8%로 S&P500 55% 대비 낮은 게 버핏이 찾는 '성장 프리미엄 안 비싼 성장주'예요. GOOGL 실제 성장률은 S&P500 평균보다 훨씬 높은데 프리미엄이 낮으니 저평가예요. 버핏이 틀린 적 별로 없잖아요.", createdAt: T22J - 16*60_000, likes: 84 },
+    { id: 2, nickname: "익명_4193", holdingLabel: "관심종목", content: "패시브 투자자들이 버크셔 포트폴리오 따라 하는 경우 많잖아요. GOOGL 편입 공개되면 그 자금들이 들어오는 부가 효과도 있어요. 펀더멘털 + 수급 모두 좋아지는 상황이에요.", createdAt: T22J - 41*60_000, likes: 63 },
+  ],
+  310: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "관심종목", content: "10배 발언이 빈말이 아닌 게 2030~2035 타임라인을 구체적으로 제시했기 때문이에요. 무책임한 낙관론이 아니라 18A/14A 공정 개발 일정이 있고 파운드리 분리가 진행 중이에요. 단기 고통 = 장기 수익 구조예요.", createdAt: T22J - 11*60_000, likes: 94 },
+    { id: 2, nickname: "익명_6291", holdingLabel: "관심종목", content: "CHIPS Act + 정부 지원 + 지정학 리스크 헤지 수요 — Intel이 유리한 환경이에요. TSMC 지정학 리스크 의식하는 빅테크가 하나라도 Intel 파운드리 계약하면 스토리가 현실이 되는 거예요.", createdAt: T22J - 25*60_000, likes: 73 },
+    { id: 3, nickname: "익명_8493", holdingLabel: "관심종목", content: "2030 이전 인내가 필요한 투자인데 그 인내의 근거가 CEO가 직접 팟캐스트에 나와서 설명하는 거예요. 투명성 측면에서 좋아요. 장기 투자자들이 중간에 흔들리지 않을 수 있는 서사를 만들어주는 거예요.", createdAt: T22J - 43*60_000, likes: 57 },
+  ],
+  311: [
+    { id: 1, nickname: "익명_2948", holdingLabel: "관심종목", content: "18A 공정 수율이 핵심이에요. TSMC도 새 공정 수율 잡는 데 시간 걸렸잖아요. Intel이 수율 문제만 해결하면 가격 경쟁력은 이미 있어요. 미국산 칩 프리미엄까지 더해지면요. 2027~2028이 가늠자예요.", createdAt: T22J - 19*60_000, likes: 78 },
+    { id: 2, nickname: "익명_5182", holdingLabel: "관심종목", content: "$131까지 온 게 이미 시장이 회복 스토리를 인정하기 시작한 거예요. 10배 발언이 현실이 되려면 CEO 임기 동안 꾸준히 실행해야 하는데 No Profits 팟캐스트 나와서 직접 소통하는 스타일이 좋은 신호예요.", createdAt: T22J - 46*60_000, likes: 59 },
+  ],
+
   // ── 2026-06-20 신규 ──────────────────────────────────────────────────────
   274: [
     { id: 1, nickname: "익명_7284", holdingLabel: "80주 보유", content: "EPA COC가 있으면 이제 Cybercab이 모든 50개 주에서 운행 가능한 기본 조건이 충족된 거예요. 로보택시 허가는 각 주 도로교통부 관할이지만 연방 EPA 인증은 기본 중의 기본이에요.", createdAt: T20J - 4*60_000, likes: 88 },

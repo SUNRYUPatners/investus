@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'SF Pro Display',Arial,sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="700">NASDAQ 100 · Rebalancing</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Nasdaq100 Rebalances — 5 Companies 3x Larger Added</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">$100B market cap removed → $350B+ added · 3.5x size replacement</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <text x="180" y="120" text-anchor="middle" fill="#ff4d6d" font-size="14" font-weight="700">OUT</text>
+  <rect x="40" y="130" width="280" height="200" rx="8" fill="#1a0810"/>
+  <text x="60" y="158" fill="#7d8590" font-size="12">Charter Comms (CHTR)</text><text x="300" y="158" text-anchor="end" fill="#ff4d6d" font-size="12">$17.48B</text>
+  <text x="60" y="180" fill="#7d8590" font-size="12">Cognizant (CTSH)</text><text x="300" y="180" text-anchor="end" fill="#ff4d6d" font-size="12">$20.71B</text>
+  <text x="60" y="202" fill="#7d8590" font-size="12">Zscaler (ZS)</text><text x="300" y="202" text-anchor="end" fill="#ff4d6d" font-size="12">$20.19B</text>
+  <text x="60" y="224" fill="#7d8590" font-size="12">Insmed (INSM)</text><text x="300" y="224" text-anchor="end" fill="#ff4d6d" font-size="12">$20.76B</text>
+  <text x="60" y="246" fill="#7d8590" font-size="12">Verisk Analytics (VRSK)</text><text x="300" y="246" text-anchor="end" fill="#ff4d6d" font-size="12">$22.77B</text>
+  <line x1="60" y1="262" x2="300" y2="262" stroke="#21262d" stroke-width="1"/>
+  <text x="60" y="282" fill="#7d8590" font-size="12">Total Mkt Cap</text><text x="300" y="282" text-anchor="end" fill="#ff4d6d" font-size="14" font-weight="700">$101.9B</text>
+  <text x="60" y="302" fill="#7d8590" font-size="11">Removed</text>
+
+  <polygon points="390,230 410,222 410,238" fill="#60a5fa"/>
+  <line x1="320" y1="230" x2="410" y2="230" stroke="#60a5fa" stroke-width="2"/>
+
+  <text x="620" y="120" text-anchor="middle" fill="#00e5a0" font-size="14" font-weight="700">IN</text>
+  <rect x="480" y="130" width="280" height="200" rx="8" fill="#0a1a12"/>
+  <text x="500" y="158" fill="#e6edf3" font-size="12">Nebius Group (NBIS)</text><text x="740" y="158" text-anchor="end" fill="#00e5a0" font-size="12">$73.41B</text>
+  <text x="500" y="180" fill="#e6edf3" font-size="12">CoreWeave (CRWV)</text><text x="740" y="180" text-anchor="end" fill="#00e5a0" font-size="12">$64.35B</text>
+  <text x="500" y="202" fill="#e6edf3" font-size="12">Astera Labs (ALAB)</text><text x="740" y="202" text-anchor="end" fill="#00e5a0" font-size="12">$71.49B</text>
+  <text x="500" y="224" fill="#e6edf3" font-size="12">Teradyne (TER)</text><text x="740" y="224" text-anchor="end" fill="#00e5a0" font-size="12">$68.55B</text>
+  <text x="500" y="246" fill="#e6edf3" font-size="12">Rocket Lab (RKLB)</text><text x="740" y="246" text-anchor="end" fill="#00e5a0" font-size="12">$76.71B</text>
+  <line x1="500" y1="262" x2="740" y2="262" stroke="#21262d" stroke-width="1"/>
+  <text x="500" y="282" fill="#e6edf3" font-size="12">Total Mkt Cap</text><text x="740" y="282" text-anchor="end" fill="#00e5a0" font-size="14" font-weight="700">$354.5B</text>
+  <text x="500" y="302" fill="#7d8590" font-size="11">Added (+3.5x replacement)</text>
+
+  <rect x="40" y="344" width="720" height="60" rx="8" fill="#161b22"/>
+  <text x="400" y="368" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="600">Large Passive Fund Inflows Expected</text>
+  <text x="400" y="390" text-anchor="middle" fill="#7d8590" font-size="12">Nasdaq100 ETFs (QQQ etc.) auto-buy on inclusion · CRWV, RKLB, ALAB top beneficiaries</text>
+
+  <line x1="40" y1="416" x2="760" y2="416" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="430" text-anchor="middle" fill="#444c56" font-size="10">Source: @Sam_Badawi / Nasdaq Official · investus.kr</text>
+</svg>

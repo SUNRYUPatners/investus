@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <!-- Header -->
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Cursor $800억 전량 주식 인수</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">역대 최대 벤처 투자 기업 인수 · 2026.06.18 증권 신고서 확인</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Central metric -->
+  <rect x="280" y="108" width="240" height="80" rx="10" fill="#1c1026"/>
+  <rect x="280" y="108" width="240" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="147" text-anchor="middle" fill="#c084fc" font-size="42" font-weight="800">$80B</text>
+  <text x="400" y="177" text-anchor="middle" fill="#7d8590" font-size="12">전량 주식 교환 (SPCX 주식)</text>
+
+  <!-- Deal highlights -->
+  <rect x="40" y="202" width="340" height="100" rx="8" fill="#161b22"/>
+  <text x="210" y="226" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">인수 주요 내용</text>
+  <text x="60" y="248" fill="#e6edf3" font-size="13">이전 최대 기록</text><text x="360" y="248" text-anchor="end" fill="#7d8590" font-size="13">IBM / Red Hat  $340억</text>
+  <text x="60" y="270" fill="#e6edf3" font-size="13">창업자 1인당 가치</text><text x="360" y="270" text-anchor="end" fill="#c084fc" font-size="13">약 $27억</text>
+  <text x="60" y="292" fill="#e6edf3" font-size="13">xAI 지분 가치</text><text x="360" y="292" text-anchor="end" fill="#c084fc" font-size="13">약 $100억</text>
+
+  <rect x="420" y="202" width="340" height="100" rx="8" fill="#161b22"/>
+  <text x="590" y="226" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">인수 배경 및 통합</text>
+  <text x="440" y="248" fill="#7d8590" font-size="12">Cursor 코딩 도구 + 기업 데이터 → xAI 통합</text>
+  <text x="440" y="268" fill="#7d8590" font-size="12">현금 없음 — SPCX IPO 이후 유동성 창출</text>
+  <text x="440" y="288" fill="#7d8590" font-size="12">거래 종결 예정: 2026년 Q3</text>
+
+  <!-- Context bar: Why Cursor matters -->
+  <rect x="40" y="314" width="720" height="76" rx="8" fill="#1c1026"/>
+  <text x="400" y="340" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">왜 Cursor가 중요한가</text>
+  <text x="400" y="360" text-anchor="middle" fill="#e6edf3" font-size="13">Fortune 500 기업 과반이 사용하는 AI 코딩 플랫폼 · 연 매출 ~$40억</text>
+  <text x="400" y="378" text-anchor="middle" fill="#7d8590" font-size="12">수백만 개발자 일상 도구 + 대규모 기업 코드베이스 데이터 → xAI 경쟁력 극대화</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="402" x2="760" y2="402" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="420" text-anchor="middle" fill="#444c56" font-size="11">출처: Muskmoney / Bloomberg · 본 리포트는 투자 참고용입니다 · investus.kr</text>
+</svg>

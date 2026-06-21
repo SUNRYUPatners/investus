@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'SF Pro Display',Arial,sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#fb923c" font-size="13" font-weight="700">AMZN · Amazon</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Amazon Becomes #1 US Company — Ends Walmart's 13-Year Streak</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">2026 revenue $717B · Rank changes 2024-2026</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <text x="60" y="130" fill="#7d8590" font-size="12">Company</text>
+  <text x="280" y="130" text-anchor="middle" fill="#7d8590" font-size="12">2024</text>
+  <text x="480" y="130" text-anchor="middle" fill="#7d8590" font-size="12">2025</text>
+  <text x="680" y="130" text-anchor="middle" fill="#7d8590" font-size="12">2026</text>
+
+  <text x="60" y="168" fill="#fb923c" font-size="14" font-weight="600">Amazon</text>
+  <rect x="230" y="150" width="100" height="26" rx="4" fill="#fb923c" opacity="0.4"/>
+  <text x="280" y="167" text-anchor="middle" fill="#e6edf3" font-size="11">$574.9B</text>
+  <rect x="430" y="150" width="110" height="26" rx="4" fill="#fb923c" opacity="0.6"/>
+  <text x="480" y="167" text-anchor="middle" fill="#e6edf3" font-size="11">$638.0B</text>
+  <rect x="630" y="150" width="120" height="26" rx="4" fill="#fb923c"/>
+  <text x="690" y="167" text-anchor="middle" fill="#0d1117" font-size="12" font-weight="700">#1 $717B</text>
+
+  <text x="60" y="212" fill="#7d8590" font-size="14">Walmart</text>
+  <rect x="230" y="194" width="120" height="26" rx="4" fill="#60a5fa" opacity="0.6"/>
+  <text x="280" y="211" text-anchor="middle" fill="#e6edf3" font-size="11">#1 $648.0B</text>
+  <rect x="430" y="194" width="115" height="26" rx="4" fill="#60a5fa" opacity="0.5"/>
+  <text x="480" y="211" text-anchor="middle" fill="#e6edf3" font-size="11">#1 $673.0B</text>
+  <rect x="630" y="194" width="108" height="26" rx="4" fill="#60a5fa" opacity="0.3"/>
+  <text x="690" y="211" text-anchor="middle" fill="#7d8590" font-size="11">#2 $693B</text>
+
+  <text x="60" y="256" fill="#7d8590" font-size="13">United Health</text>
+  <rect x="230" y="238" width="70" height="26" rx="4" fill="#7d8590" opacity="0.3"/>
+  <text x="280" y="255" text-anchor="middle" fill="#7d8590" font-size="11">#3</text>
+  <rect x="430" y="238" width="70" height="26" rx="4" fill="#7d8590" opacity="0.3"/>
+  <text x="480" y="255" text-anchor="middle" fill="#7d8590" font-size="11">#2</text>
+  <rect x="630" y="238" width="70" height="26" rx="4" fill="#7d8590" opacity="0.3"/>
+  <text x="690" y="255" text-anchor="middle" fill="#7d8590" font-size="11">#3</text>
+
+  <text x="60" y="300" fill="#7d8590" font-size="13">Apple</text>
+  <rect x="230" y="282" width="60" height="26" rx="4" fill="#7d8590" opacity="0.2"/>
+  <text x="280" y="299" text-anchor="middle" fill="#7d8590" font-size="11">#4</text>
+  <rect x="430" y="282" width="60" height="26" rx="4" fill="#7d8590" opacity="0.2"/>
+  <text x="480" y="299" text-anchor="middle" fill="#7d8590" font-size="11">#3</text>
+  <rect x="630" y="282" width="60" height="26" rx="4" fill="#7d8590" opacity="0.2"/>
+  <text x="690" y="299" text-anchor="middle" fill="#7d8590" font-size="11">#4</text>
+
+  <rect x="40" y="320" width="720" height="76" rx="8" fill="#1c120a"/>
+  <text x="400" y="348" text-anchor="middle" fill="#fb923c" font-size="13" font-weight="600">Amazon Dethrones Walmart After 13-Year Reign</text>
+  <text x="400" y="370" text-anchor="middle" fill="#e6edf3" font-size="13">2026: Amazon $717B vs Walmart $693B — Online diversification wins</text>
+  <text x="400" y="390" text-anchor="middle" fill="#7d8590" font-size="12">AWS $137B + retail + Prime + advertising portfolio composite growth</text>
+
+  <line x1="40" y1="408" x2="760" y2="408" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="424" text-anchor="middle" fill="#444c56" font-size="10">Source: Fortune 500 / NirvanAI / Visual Capitalist · investus.kr</text>
+</svg>

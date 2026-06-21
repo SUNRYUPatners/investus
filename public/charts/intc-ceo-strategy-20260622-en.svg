@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'SF Pro Display',Arial,sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="700">INTC · Intel Corporation</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Intel CEO — 10x Return in 5-10 Years, True Potential 2030-35</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">CEO Daniel Nimrod interview · Long-term tech superiority plan 2030-2035</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="40" y="108" width="720" height="72" rx="8" fill="#0a1628"/>
+  <text x="400" y="134" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="600">"10x return potential within 5 to 10 years"</text>
+  <text x="400" y="156" text-anchor="middle" fill="#e6edf3" font-size="13">Intel CEO Daniel Nimrod · No Profits Podcast Interview</text>
+  <text x="400" y="172" text-anchor="middle" fill="#7d8590" font-size="12">"People will see Intel's true potential between 2030 and 2035"</text>
+
+  <text x="400" y="212" text-anchor="middle" fill="#7d8590" font-size="12">Intel Turnaround Roadmap</text>
+  <line x1="80" y1="224" x2="720" y2="224" stroke="#60a5fa" stroke-width="2"/>
+
+  <circle cx="140" cy="224" r="8" fill="#60a5fa" opacity="0.5"/>
+  <text x="140" y="248" text-anchor="middle" fill="#7d8590" font-size="11">2026</text>
+  <text x="140" y="262" text-anchor="middle" fill="#7d8590" font-size="11">Rebuilding</text>
+
+  <circle cx="320" cy="224" r="8" fill="#60a5fa" opacity="0.7"/>
+  <text x="320" y="248" text-anchor="middle" fill="#7d8590" font-size="11">2027-29</text>
+  <text x="320" y="262" text-anchor="middle" fill="#7d8590" font-size="11">Recovery</text>
+
+  <circle cx="520" cy="224" r="10" fill="#60a5fa"/>
+  <text x="520" y="248" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">2030-35</text>
+  <text x="520" y="264" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="700">Tech Leap</text>
+
+  <circle cx="700" cy="224" r="8" fill="#60a5fa" opacity="0.4"/>
+  <text x="700" y="248" text-anchor="middle" fill="#7d8590" font-size="11">2036+</text>
+  <text x="700" y="262" text-anchor="middle" fill="#7d8590" font-size="11">Harvest</text>
+
+  <rect x="40" y="280" width="340" height="110" rx="8" fill="#161b22"/>
+  <text x="210" y="308" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="600">Core Strategy</text>
+  <text x="60" y="330" fill="#7d8590" font-size="12">IBA foundry separation completion</text>
+  <text x="60" y="350" fill="#7d8590" font-size="12">18A/14A process node development</text>
+  <text x="60" y="370" fill="#7d8590" font-size="12">AI edge &amp; PC chip portfolio expansion</text>
+  <text x="60" y="388" fill="#7d8590" font-size="12">Differentiated vs TSMC &amp; Samsung</text>
+
+  <rect x="420" y="280" width="340" height="110" rx="8" fill="#161b22"/>
+  <text x="590" y="308" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="600">Investment Implications</text>
+  <text x="440" y="330" fill="#7d8590" font-size="12">10x potential = high risk / high reward</text>
+  <text x="440" y="350" fill="#7d8590" font-size="12">Near-term earnings weakness expected</text>
+  <text x="440" y="370" fill="#7d8590" font-size="12">Patience required before 2030</text>
+  <text x="440" y="388" fill="#7d8590" font-size="12">AI foundry demand capture potential</text>
+
+  <line x1="40" y1="404" x2="760" y2="404" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="420" text-anchor="middle" fill="#444c56" font-size="10">Source: Daniel Ramirez / @HyperTechInvest / Intel CEO No Profits Podcast · investus.kr</text>
+</svg>

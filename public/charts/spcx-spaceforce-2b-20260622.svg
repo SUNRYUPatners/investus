@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">SpaceX $22.9억 우주군 계약 — 미군 핵심 인프라 지위</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Starlink → 미국 국가 안보 백본 · 우주작전 네트워크 담당</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Contract value highlight -->
+  <rect x="240" y="112" width="320" height="90" rx="10" fill="#1c1026"/>
+  <rect x="240" y="112" width="320" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="155" text-anchor="middle" fill="#c084fc" font-size="42" font-weight="800">$2.29B</text>
+  <text x="400" y="185" text-anchor="middle" fill="#7d8590" font-size="12">우주군 계약 금액 · 우주작전 네트워크 백본</text>
+
+  <!-- Contract breakdown -->
+  <rect x="40" y="216" width="340" height="120" rx="8" fill="#161b22"/>
+  <text x="210" y="244" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">계약 범위</text>
+  <text x="60" y="268" fill="#e6edf3" font-size="13">계약 종류</text><text x="360" y="268" text-anchor="end" fill="#c084fc" font-size="13">우주작전 네트워크 백본</text>
+  <text x="60" y="292" fill="#e6edf3" font-size="13">발주처</text><text x="360" y="292" text-anchor="end" fill="#7d8590" font-size="13">미국 우주군 (Space Force)</text>
+  <text x="60" y="316" fill="#e6edf3" font-size="13">서비스</text><text x="360" y="316" text-anchor="end" fill="#7d8590" font-size="13">Starlink 위성 통신 + 데이터</text>
+
+  <rect x="420" y="216" width="340" height="120" rx="8" fill="#161b22"/>
+  <text x="590" y="244" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">누적 정부 계약 현황</text>
+  <text x="440" y="268" fill="#7d8590" font-size="12">NASA Commercial Crew</text><text x="740" y="268" text-anchor="end" fill="#c084fc" font-size="12">$49.3억</text>
+  <text x="440" y="292" fill="#7d8590" font-size="12">NSSL Phase 3</text><text x="740" y="292" text-anchor="end" fill="#c084fc" font-size="12">$115억</text>
+  <text x="440" y="316" fill="#7d8590" font-size="12">Space Force 신규</text><text x="740" y="316" text-anchor="end" fill="#c084fc" font-size="12">$22.9억</text>
+
+  <!-- Key message -->
+  <rect x="40" y="350" width="720" height="58" rx="8" fill="#1c1026"/>
+  <text x="400" y="374" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">SpaceX = 미국 군사 우주 인프라의 중심</text>
+  <text x="400" y="394" text-anchor="middle" fill="#7d8590" font-size="12">Starlink를 통해 미군 핵심 데이터 전달 인프라 담당 · 세대를 넘는 의존도</text>
+
+  <line x1="40" y1="420" x2="760" y2="420" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="434" text-anchor="middle" fill="#444c56" font-size="10">출처: America News / Space Force · investus.kr</text>
+</svg>

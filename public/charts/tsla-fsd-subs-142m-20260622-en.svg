@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" style="background:#0d1117;font-family:'SF Pro Display',Arial,sans-serif">
+  <rect width="800" height="440" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla FSD</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">FSD Subscriptions Cross 1.42M — Q2 2026 Forecast</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Quarterly growth trend · @TeslaYoda analysis</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <line x1="80" y1="130" x2="740" y2="130" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="72" y="134" text-anchor="end" fill="#7d8590" font-size="10">1.4M</text>
+  <line x1="80" y1="160" x2="740" y2="160" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="72" y="164" text-anchor="end" fill="#7d8590" font-size="10">1.2M</text>
+  <line x1="80" y1="197" x2="740" y2="197" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="72" y="201" text-anchor="end" fill="#7d8590" font-size="10">1.0M</text>
+  <line x1="80" y1="237" x2="740" y2="237" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="72" y="241" text-anchor="end" fill="#7d8590" font-size="10">0.8M</text>
+  <line x1="80" y1="310" x2="740" y2="310" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="90" y="197" width="80" height="113" rx="4" fill="#00e5a0" opacity="0.5"/>
+  <text x="130" y="190" text-anchor="middle" fill="#7d8590" font-size="11">850K</text>
+  <text x="130" y="325" text-anchor="middle" fill="#7d8590" font-size="11">Q1'25</text>
+
+  <rect x="200" y="183" width="80" height="127" rx="4" fill="#00e5a0" opacity="0.6"/>
+  <text x="240" y="176" text-anchor="middle" fill="#7d8590" font-size="11">950K</text>
+  <text x="240" y="325" text-anchor="middle" fill="#7d8590" font-size="11">Q2'25</text>
+
+  <rect x="310" y="171" width="80" height="139" rx="4" fill="#00e5a0" opacity="0.7"/>
+  <text x="350" y="164" text-anchor="middle" fill="#7d8590" font-size="11">1.04M</text>
+  <text x="350" y="325" text-anchor="middle" fill="#7d8590" font-size="11">Q3'25</text>
+
+  <rect x="420" y="163" width="80" height="147" rx="4" fill="#00e5a0" opacity="0.8"/>
+  <text x="460" y="156" text-anchor="middle" fill="#7d8590" font-size="11">1.10M</text>
+  <text x="460" y="325" text-anchor="middle" fill="#7d8590" font-size="11">Q4'25</text>
+
+  <rect x="530" y="139" width="80" height="171" rx="4" fill="#00e5a0" opacity="0.9"/>
+  <text x="570" y="132" text-anchor="middle" fill="#e6edf3" font-size="11" font-weight="600">1.28M</text>
+  <text x="570" y="325" text-anchor="middle" fill="#e6edf3" font-size="11">Q1'26</text>
+
+  <rect x="640" y="121" width="80" height="189" rx="4" fill="#00e5a0" stroke="#00e5a0" stroke-width="2" stroke-dasharray="6,3" opacity="0.3"/>
+  <rect x="640" y="121" width="80" height="4" rx="2" fill="#00e5a0"/>
+  <text x="680" y="114" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="800">1.42M</text>
+  <text x="680" y="325" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="600">Q2'26E</text>
+
+  <rect x="40" y="342" width="720" height="56" rx="8" fill="#0d2010"/>
+  <text x="400" y="366" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Q2 2026 FSD Subs Forecast: 1,420,800 (+11% QoQ)</text>
+  <text x="400" y="385" text-anchor="middle" fill="#7d8590" font-size="12">Calls for quarterly public disclosure · Consistent growth trend R=0.988</text>
+
+  <line x1="40" y1="410" x2="760" y2="410" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="428" text-anchor="middle" fill="#444c56" font-size="10">Source: @TeslaYoda / FSD Subscription Tracker · investus.kr</text>
+</svg>
