@@ -155,7 +155,7 @@ async function convert(svgFile, pngFile) {
   const svgContent = Buffer.from(stripEmoji(raw));
   await sharp(svgContent)
     .png({ quality: 100 })
-    .resize({ width: 960, kernel: 'lanczos3' })
+    .resize({ width: 1440, kernel: 'lanczos3' })
     .toFile(pngFile);
 }
 
