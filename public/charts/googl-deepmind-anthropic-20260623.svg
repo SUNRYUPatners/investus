@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="700">GOOGL · Alphabet</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">DeepMind 수석 과학자 Anthropic 이직 → 주가 -6%</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">John Jumper (AlphaFold 노벨상) · AI 인재 전쟁 격화 · 수십조 시총 증발</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Price drop highlight -->
+  <rect x="40" y="112" width="340" height="100" rx="8" fill="#1a1010"/>
+  <text x="210" y="140" text-anchor="middle" fill="#f87171" font-size="13">주가 하락</text>
+  <text x="210" y="190" text-anchor="middle" fill="#f87171" font-size="52" font-weight="800">-6%</text>
+
+  <!-- Who is John Jumper -->
+  <rect x="400" y="112" width="360" height="100" rx="8" fill="#161b22"/>
+  <rect x="400" y="112" width="360" height="4" rx="2" fill="#60a5fa"/>
+  <text x="580" y="140" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="600">John Jumper</text>
+  <text x="420" y="162" fill="#e6edf3" font-size="12">AlphaFold 공동 개발자</text>
+  <text x="420" y="182" fill="#e6edf3" font-size="12">2024 노벨 화학상 수상</text>
+  <text x="420" y="200" fill="#7d8590" font-size="11">DeepMind → Anthropic 이직</text>
+
+  <!-- AI talent war context -->
+  <rect x="40" y="228" width="720" height="120" rx="8" fill="#161b22"/>
+  <rect x="40" y="228" width="720" height="4" rx="2" fill="#60a5fa"/>
+  <text x="400" y="254" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="600">AI 인재 전쟁 — 노벨 수상자도 이직하는 시대</text>
+  <text x="60" y="278" fill="#e6edf3" font-size="12">한 주에 AlphaFold 수석 + OpenAI 핵심 인력이 동시에 DeepMind 이탈</text>
+  <text x="60" y="300" fill="#e6edf3" font-size="12">인프라(GPU·데이터센터) 경쟁이 아닌 수백 명 인재 확보 경쟁</text>
+  <text x="60" y="322" fill="#7d8590" font-size="11">노벨상 수상자는 대체 불가 → 한 명 이탈 = 수십조 시총 증발 = 진정한 AI 해자(moat)</text>
+
+  <!-- Quote box -->
+  <rect x="40" y="364" width="720" height="70" rx="8" fill="#101a2a"/>
+  <text x="60" y="388" fill="#7d8590" font-size="11" font-style="italic">"수백 명의 인간들, 그리고 그들을 묶어두기 위한 치열하고 비싼 전쟁 —</text>
+  <text x="60" y="408" fill="#7d8590" font-size="11" font-style="italic"> AI 인프라를 장악하는 것이 아니라 이 사람들을 잡는 것이 진짜 moat이다."</text>
+  <text x="60" y="424" fill="#60a5fa" font-size="10">— 시장 분석가</text>
+
+  <line x1="40" y1="446" x2="760" y2="446" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="462" text-anchor="middle" fill="#444c56" font-size="10">출처: Bloomberg / X 시장 분석 · investus.kr</text>
+</svg>

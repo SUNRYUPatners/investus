@@ -138,6 +138,20 @@ const PAIRS = [
   { ko: 'meta-msft-pvgo-20260622.svg',                en: 'meta-msft-pvgo-20260622-en.svg',                label: 'META_MSFT_PVGO',        date: '20260622' },
   { ko: 'googl-berkshire-20260622.svg',               en: 'googl-berkshire-20260622-en.svg',               label: 'GOOGL_버크셔5위',        date: '20260622' },
   { ko: 'intc-ceo-strategy-20260622.svg',             en: 'intc-ceo-strategy-20260622-en.svg',             label: 'INTC_CEO전략',          date: '20260622' },
+
+  // ── 2026-06-23 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260623.svg',                       en: 'summary-20260623-en.svg',                       label: '6월23일_요약',           date: '20260623' },
+  { ko: 'spcx-credit-ratings-20260623.svg',           en: 'spcx-credit-ratings-20260623-en.svg',           label: 'SPCX_신용등급3관왕',     date: '20260623' },
+  { ko: 'spcx-cash-100b-20260623.svg',                en: 'spcx-cash-100b-20260623-en.svg',                label: 'SPCX_현금100B',          date: '20260623' },
+  { ko: 'spcx-bond-issuance-20260623.svg',            en: 'spcx-bond-issuance-20260623-en.svg',            label: 'SPCX_채권발행',          date: '20260623' },
+  { ko: 'spcx-ipo-price-20260623.svg',                en: 'spcx-ipo-price-20260623-en.svg',                label: 'SPCX_IPO주가흐름',       date: '20260623' },
+  { ko: 'spcx-colossus-reflection-20260623.svg',      en: 'spcx-colossus-reflection-20260623-en.svg',      label: 'SPCX_Colossus6.3B',      date: '20260623' },
+  { ko: 'tsla-jefferies-375-20260623.svg',            en: 'tsla-jefferies-375-20260623-en.svg',            label: 'TSLA_Jefferies375',      date: '20260623' },
+  { ko: 'tsla-q2-deliveries-384k-20260623.svg',       en: 'tsla-q2-deliveries-384k-20260623-en.svg',       label: 'TSLA_Q2인도384k',        date: '20260623' },
+  { ko: 'tsla-china-caam-q2-20260623.svg',            en: 'tsla-china-caam-q2-20260623-en.svg',            label: 'TSLA_중국CAAM',          date: '20260623' },
+  { ko: 'tsla-optimus-fremont-20260623.svg',          en: 'tsla-optimus-fremont-20260623-en.svg',          label: 'TSLA_Optimus양산',       date: '20260623' },
+  { ko: 'googl-deepmind-anthropic-20260623.svg',      en: 'googl-deepmind-anthropic-20260623-en.svg',      label: 'GOOGL_DeepMind6pct',     date: '20260623' },
+  { ko: 'msft-xbox-spinoff-20260623.svg',             en: 'msft-xbox-spinoff-20260623-en.svg',             label: 'MSFT_Xbox스핀오프',      date: '20260623' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

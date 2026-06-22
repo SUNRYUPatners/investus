@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Inaugural Bond Issuance</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">First public bond as a listed company · Bridge loan repayment + general use</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Timeline steps -->
+  <rect x="40" y="114" width="160" height="54" rx="6" fill="#1c1026"/>
+  <text x="120" y="136" text-anchor="middle" fill="#7d8590" font-size="11">Step 1</text>
+  <text x="120" y="156" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="600">SEC Advance Notice</text>
+
+  <line x1="200" y1="141" x2="248" y2="141" stroke="#c084fc" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="248,136 260,141 248,146" fill="#c084fc"/>
+
+  <rect x="260" y="114" width="160" height="54" rx="6" fill="#1c1026"/>
+  <text x="340" y="136" text-anchor="middle" fill="#7d8590" font-size="11">Step 2</text>
+  <text x="340" y="156" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="600">Credit Ratings Received</text>
+
+  <line x1="420" y1="141" x2="468" y2="141" stroke="#c084fc" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="468,136 480,141 468,146" fill="#c084fc"/>
+
+  <rect x="480" y="114" width="160" height="54" rx="6" fill="#4b2d6b"/>
+  <rect x="480" y="114" width="160" height="4" rx="2" fill="#c084fc"/>
+  <text x="560" y="136" text-anchor="middle" fill="#7d8590" font-size="11">Step 3 (Now)</text>
+  <text x="560" y="156" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="600">Bond Issued</text>
+
+  <line x1="640" y1="141" x2="688" y2="141" stroke="#444c56" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="688,136 700,141 688,146" fill="#444c56"/>
+
+  <rect x="700" y="114" width="60" height="54" rx="6" fill="#161b22"/>
+  <text x="730" y="136" text-anchor="middle" fill="#7d8590" font-size="10">Step 4</text>
+  <text x="730" y="156" text-anchor="middle" fill="#7d8590" font-size="10">Repay</text>
+
+  <!-- Bond details -->
+  <rect x="40" y="184" width="348" height="140" rx="8" fill="#161b22"/>
+  <rect x="40" y="184" width="348" height="4" rx="2" fill="#c084fc"/>
+  <text x="214" y="212" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Bond Terms</text>
+  <text x="60" y="236" fill="#e6edf3" font-size="12">Size: TBD (est. billions)</text>
+  <text x="60" y="258" fill="#e6edf3" font-size="12">Use: bridge repayment + general ops</text>
+  <text x="60" y="280" fill="#7d8590" font-size="11">BBB+ rating = strong institutional demand</text>
+  <text x="60" y="300" fill="#7d8590" font-size="11">First issuance = foundation for larger raises</text>
+
+  <rect x="412" y="184" width="348" height="140" rx="8" fill="#161b22"/>
+  <rect x="412" y="184" width="348" height="4" rx="2" fill="#c084fc"/>
+  <text x="586" y="212" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Why It Matters</text>
+  <text x="432" y="236" fill="#e6edf3" font-size="12">First IG bond by an aerospace co.</text>
+  <text x="432" y="258" fill="#e6edf3" font-size="12">Capital without equity dilution</text>
+  <text x="432" y="280" fill="#7d8590" font-size="11">Lower rate + longer maturity = better structure</text>
+  <text x="432" y="300" fill="#7d8590" font-size="11">Signals SpaceX is a mainstream issuer</text>
+
+  <!-- Bottom highlight -->
+  <rect x="40" y="340" width="720" height="60" rx="8" fill="#1c1026"/>
+  <text x="400" y="366" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Milestone as a Public Company</text>
+  <text x="400" y="388" text-anchor="middle" fill="#e6edf3" font-size="12">IG rating → Bond issued → Institutional inflow → SPCX liquidity expands</text>
+
+  <line x1="40" y1="414" x2="760" y2="414" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="430" text-anchor="middle" fill="#444c56" font-size="10">Source: SpaceX SEC filing / X Finance · investus.kr</text>
+
+  <rect x="40" y="442" width="720" height="34" rx="6" fill="#161b22"/>
+  <text x="400" y="464" text-anchor="middle" fill="#7d8590" font-size="11">Bond issuance = SpaceX fully enters traditional capital markets</text>
+</svg>

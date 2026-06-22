@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="700">MSFT · Microsoft</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Xbox Spin-off / JV / Sale Explored + Cash $103.8B</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Restructuring to focus on AI &amp; cloud · Cash $103.8B as of June 19</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="40" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="40" y="114" width="218" height="4" rx="2" fill="#4ade80"/>
+  <text x="149" y="142" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">Spin-off</text>
+  <text x="149" y="168" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">Public Co.</text>
+  <text x="149" y="190" text-anchor="middle" fill="#7d8590" font-size="11">Xbox as independent entity</text>
+  <text x="149" y="208" text-anchor="middle" fill="#7d8590" font-size="11">Shares distributed to holders</text>
+
+  <rect x="291" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="291" y="114" width="218" height="4" rx="2" fill="#4ade80"/>
+  <text x="400" y="142" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">Joint Venture</text>
+  <text x="400" y="168" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">JV Partner</text>
+  <text x="400" y="190" text-anchor="middle" fill="#7d8590" font-size="11">Co-operated with partner</text>
+  <text x="400" y="208" text-anchor="middle" fill="#7d8590" font-size="11">Shared cost &amp; operations</text>
+
+  <rect x="542" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="542" y="114" width="218" height="4" rx="2" fill="#4ade80"/>
+  <text x="651" y="142" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">Outright Sale</text>
+  <text x="651" y="168" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">Full Sale</text>
+  <text x="651" y="190" text-anchor="middle" fill="#7d8590" font-size="11">Entire Xbox business sold</text>
+  <text x="651" y="208" text-anchor="middle" fill="#7d8590" font-size="11">Maximum cash realized</text>
+
+  <rect x="40" y="240" width="348" height="120" rx="8" fill="#161b22"/>
+  <rect x="40" y="240" width="348" height="4" rx="2" fill="#4ade80"/>
+  <text x="214" y="268" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">Why Divest Xbox</text>
+  <text x="60" y="292" fill="#e6edf3" font-size="12">Reallocate capital to AI &amp; Azure</text>
+  <text x="60" y="314" fill="#e6edf3" font-size="12">Gaming growth slowing vs. AI CAGR</text>
+  <text x="60" y="334" fill="#7d8590" font-size="11">Recover Activision acquisition outlay</text>
+  <text x="60" y="352" fill="#7d8590" font-size="11">Sharpen focus on highest-growth biz</text>
+
+  <rect x="412" y="240" width="348" height="120" rx="8" fill="#0d1f14" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="586" y="268" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">Cash Position (Jun 19)</text>
+  <text x="586" y="310" text-anchor="middle" fill="#4ade80" font-size="36" font-weight="800">$103.8B</text>
+  <text x="586" y="334" text-anchor="middle" fill="#7d8590" font-size="11">Near record cash level</text>
+  <text x="586" y="352" text-anchor="middle" fill="#7d8590" font-size="11">War chest for M&amp;A &amp; AI spend</text>
+
+  <rect x="40" y="376" width="720" height="56" rx="8" fill="#1c1026"/>
+  <text x="400" y="400" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">Bull Case</text>
+  <text x="400" y="420" text-anchor="middle" fill="#e6edf3" font-size="12">Xbox exit = pure AI/Azure play · Copilot + Azure RPO $700B growth story re-rates MSFT</text>
+
+  <line x1="40" y1="444" x2="760" y2="444" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="460" text-anchor="middle" fill="#444c56" font-size="10">Source: Sawyer Merritt / Bloomberg · investus.kr</text>
+</svg>

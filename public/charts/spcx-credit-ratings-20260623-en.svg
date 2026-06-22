@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Investment Grade from All 3 Major Rating Agencies</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Moody's · Fitch · S&amp;P — First aerospace company to achieve triple IG</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- 3 rating cards -->
+  <rect x="40" y="112" width="220" height="140" rx="8" fill="#161b22"/>
+  <rect x="40" y="112" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="150" y="142" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Moody's</text>
+  <text x="150" y="186" text-anchor="middle" fill="#e6edf3" font-size="40" font-weight="800">Baa1</text>
+  <text x="150" y="214" text-anchor="middle" fill="#7d8590" font-size="12">Investment Grade</text>
+  <text x="150" y="236" text-anchor="middle" fill="#7d8590" font-size="11">Outlook: Stable</text>
+
+  <rect x="290" y="112" width="220" height="140" rx="8" fill="#161b22"/>
+  <rect x="290" y="112" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="142" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Fitch</text>
+  <text x="400" y="186" text-anchor="middle" fill="#e6edf3" font-size="40" font-weight="800">BBB+</text>
+  <text x="400" y="214" text-anchor="middle" fill="#7d8590" font-size="12">Investment Grade</text>
+  <text x="400" y="236" text-anchor="middle" fill="#7d8590" font-size="11">Outlook: Stable</text>
+
+  <rect x="540" y="112" width="220" height="140" rx="8" fill="#161b22"/>
+  <rect x="540" y="112" width="220" height="4" rx="2" fill="#c084fc"/>
+  <text x="650" y="142" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">S&amp;P Global</text>
+  <text x="650" y="186" text-anchor="middle" fill="#e6edf3" font-size="40" font-weight="800">BBB+</text>
+  <text x="650" y="214" text-anchor="middle" fill="#7d8590" font-size="12">Investment Grade</text>
+  <text x="650" y="236" text-anchor="middle" fill="#7d8590" font-size="11">Outlook: Stable</text>
+
+  <!-- Significance box -->
+  <rect x="40" y="268" width="720" height="82" rx="8" fill="#1c1026"/>
+  <text x="400" y="294" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">What Investment Grade Means</text>
+  <text x="400" y="316" text-anchor="middle" fill="#e6edf3" font-size="12">Pension funds, insurers &amp; sovereign wealth funds can now buy SPCX</text>
+  <text x="400" y="334" text-anchor="middle" fill="#7d8590" font-size="12">Lower bond issuance rate · Reduced cost of capital · Institutional credibility</text>
+
+  <!-- Impact bar -->
+  <rect x="40" y="364" width="720" height="82" rx="8" fill="#161b22"/>
+  <text x="60" y="386" fill="#e6edf3" font-size="12" font-weight="600">Capital Raising Upgrade</text>
+  <text x="60" y="408" fill="#7d8590" font-size="11">Speculative (BB): high-yield only · institutional buying restricted</text>
+  <text x="60" y="426" fill="#c084fc" font-size="11">Investment Grade (BBB+): low-rate bonds + large institutional inflows → SPCX demand surge</text>
+
+  <line x1="40" y1="458" x2="760" y2="458" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="474" text-anchor="middle" fill="#444c56" font-size="10">Source: Moody's / Fitch / S&amp;P Global · investus.kr</text>
+</svg>

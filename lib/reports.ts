@@ -3518,6 +3518,170 @@ export const SEED_REPORTS: Report[] = [
     images:        ["/charts/intc-ceo-strategy-20260622.svg"],
   },
 
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-23 — SPCX 신용등급·현금$100B·채권·IPO주가·Colossus $6.3B /
+  //              TSLA Jefferies $375·Q2 384k·중국CAAM·Optimus 7~8월 /
+  //              GOOGL DeepMind -6%·MSFT Xbox 스핀오프
+  // ════════════════════════════════════════════════════════════════════════
+
+  {
+    id:            "seed-272",
+    title:         "6/23 시장 한장 요약 — SpaceX 3관왕·TSLA Q2·GOOGL -6%",
+    summary:       "SpaceX 3대 신용평가사 투자등급 동시 획득(Baa1/BBB+/BBB+) · 현금 $100.8B · 채권 발행 · Colossus Reflection AI $6.3B 딜 · TSLA Jefferies $375 · Q2 인도 384k · 옵티머스 7~8월 양산 · GOOGL DeepMind 수석 이직 -6% · MSFT Xbox 스핀오프 검토",
+    body:          "■ 오늘의 핵심 이슈 (비주얼 요약 이미지를 확인하세요)\n\n🟣 SPCX 3대 신용평가사 투자등급 (Baa1/BBB+/BBB+) · 현금 $100.8B · 채권 첫 발행 · IPO $168 조정 · Colossus Reflection AI $6.3B\n\n🚗 TSLA Jefferies 목표주가 $375 · Q2 인도량 컨센서스 384,022대 · 중국 CAAM 유일 성장 · 옵티머스 프리몬트 7~8월 양산\n\n📉 GOOGL DeepMind 수석 John Jumper Anthropic 이직 → 주가 -6%\n\n💻 MSFT Xbox 스핀오프·JV·매각 검토 + 현금 $103.8B",
+    category:      "특집",
+    categoryColor: "mint",
+    subject:       "📋 6/23 시장 한장 요약",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:50",
+    isPinned:      true,
+    imageOnly:     true,
+    images:        ["/charts/summary-20260623.svg"],
+  },
+
+  {
+    id:            "seed-273",
+    title:         "SpaceX — Moody's·Fitch·S&P 3대 신용평가사 투자등급 동시 획득",
+    summary:       "SpaceX가 Moody's(Baa1), Fitch(BBB+), S&P(BBB+) 세 곳에서 동시에 투자적격 신용등급을 획득했습니다. 우주 기업 최초의 3관왕으로 연기금·국부펀드 등 기관 투자자 매수 조건을 충족하며 자본 조달 비용이 크게 낮아집니다.",
+    body:          "■ SpaceX 신용등급 획득 내역\n\n• Moody's: Baa1 (투자등급, BBB+ 동급)\n• Fitch: BBB+ (투자등급)\n• S&P Global: BBB+ (투자등급)\n• 전망(Outlook): 3사 모두 Stable\n\n■ 투자등급 의미\n\n[기관 투자자 접근성]\n• 연기금·보험사·국부펀드 = 투자등급 이상만 매수 가능\n• SPCX(SpaceX 관련 자산) 자동 매수 수요 유입\n• 전 세계 기관 자금이 SpaceX 채권·주식으로 유입 가능\n\n[자본 조달 비용]\n• 투기등급(BB) → 투자등급(BBB+): 연 1~2% 금리 절감\n• 수십억 달러 채권 발행 시 연 수천만 달러 이자 절감\n• 장기 채권 발행으로 재무 구조 안정화\n\n■ 왜 지금인가?\n\n• IPO 이후 공개 기업으로서 첫 번째 신용 평가\n• 채권 발행 준비 (브릿지론 상환 목적)\n• Starlink 구독 매출 + 정부 계약 증거로 신용도 입증\n\n■ SpaceX 강점 (평가사 언급)\n\n• Starlink: 글로벌 위성 인터넷 유일 스케일 사업\n• 반복 발사 수익: Falcon 9·Heavy 상업/정부 계약\n• 수직통합 인프라: 하드웨어·소프트웨어·AI 연결\n\n■ 결론\n\nSpaceX의 3관왕 투자등급은 회사 역사상 가장 중요한 금융 이정표입니다. 기관 자금 유입 조건 충족과 저비용 채권 발행 기반이 갖춰지며, SPCX 장기 투자자에게 강력한 긍정 모멘텀이 됩니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "🏆 SpaceX 3관왕 신용등급",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:50",
+    images:        ["/charts/spcx-credit-ratings-20260623.svg"],
+  },
+
+  {
+    id:            "seed-274",
+    title:         "SpaceX 현금 $34.7B → $100.8B — 6개월 만에 3배 급증",
+    summary:       "SpaceX의 현금 자산이 FY2025 말 $34.7B에서 현재 $100.8B으로 약 3배 급증했습니다. Starlink 구독 매출 성장, 정부 계약 수금, IPO 전 자본 조달이 복합 작용한 결과로, 채권 발행 없이도 주요 투자를 자체 조달할 수 있는 수준에 도달했습니다.",
+    body:          "■ 현금 자산 변화\n\n• FY2025 말: $34.7B\n• 현재(2026.06 기준): $100.8B\n• 증가액: +$66.1B (+190%)\n• 기간: 약 6개월\n\n■ 현금 급증 배경\n\n[Starlink 매출 폭발]\n• 가입자 수천만 명 → 월정액 구독 매출\n• 기업용·정부용 Starlink: 단가 대폭 높음\n• US Mobile 파트너십 등 B2B2C 확장\n\n[정부 계약 수금]\n• Space Force $22.9억 계약 (2026.06.22 체결)\n• NASA·DoD 장기 계약 수금\n• 동맹국 정부 발사 서비스\n\n[IPO 전 자본 조달]\n• SpaceX IPO 공모 proceeds\n• Pre-IPO 주식 매각 수익\n\n■ $100B 현금의 의미\n\n• Starlink V3 위성 전체 양산 비용 자체 조달 가능\n• Colossus AI 인프라 확장 무한 자금\n• M&A(Cursor $80B 인수 등) 외부 차입 불필요\n• 채권 발행은 추가 레버리지 최적화 목적\n\n■ 향후 자금 운용\n\n• 브릿지론 상환 → 장기 채권으로 대체\n• Starlink V3 · AI 위성 제작 투자\n• Colossus AI 데이터센터 확장\n• 일반 운영 자금 + M&A 여력 확보\n\n■ 결론\n\n$100B 현금 달성은 SpaceX가 기술 기업에서 글로벌 초대형 자본 기업으로 전환됐음을 의미합니다. 풍부한 현금은 경쟁사가 따라올 수 없는 투자 속도를 가능하게 합니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "💰 SpaceX 현금 $100.8B",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:51",
+    images:        ["/charts/spcx-cash-100b-20260623.svg"],
+  },
+
+  {
+    id:            "seed-275",
+    title:         "SpaceX — 공개시장 최초 채권 발행 (Inaugural Bond Issuance)",
+    summary:       "SpaceX가 상장 이후 처음으로 공개 채권을 발행했습니다. 3대 신용평가사의 투자등급 획득 직후 이루어진 첫 채권 발행으로, 브릿지론 상환과 일반 운영 자금 조달이 목적입니다. 우주 기업 최초로 투자등급 채권을 발행한 역사적 이정표입니다.",
+    body:          "■ 채권 발행 개요\n\n• 발행 주체: SpaceX (상장 법인)\n• 성격: Inaugural Bond (최초 공개 채권)\n• 자금 용도: 브릿지론 상환 + 기타 관련 비용 + 일반 운영자금\n• 신용등급: Baa1/BBB+/BBB+ (3사 투자등급)\n\n■ 채권 발행 프로세스\n\n1단계: SEC 사전 통보 제출 (Advance Notice)\n2단계: 3대 신용평가사 투자등급 획득\n3단계: 채권 발행 (현재 단계)\n4단계: 브릿지론 상환\n\n■ 왜 채권 발행인가?\n\n[주식 희석 없음]\n• 채권 = 이자 지급 후 원금 상환 → 기존 주주 희석 없음\n• 현금 $100.8B 있어도 재무 최적화 목적으로 발행\n\n[금리 이점]\n• 투자등급 BBB+ = 고금리 채권 대비 1~2% 이자 절감\n• 장기 고정 금리로 이자 비용 예측 가능\n\n■ 시장 반응 예상\n\n• 연기금·보험사 = 투자등급 채권 우선 매입\n• SpaceX 채권 수요 초과 예상 (희귀한 우주 섹터)\n• 금리 결정 시 시장 금리 대비 낮은 spread 가능\n\n■ 공개시장 기업으로서 의미\n\n• IPO → 신용등급 → 채권 발행 3단계 완성\n• 전통 금융 시장에 완전 편입된 SpaceX\n• 향후 대규모 채권(수백억 달러) 발행 기반 마련\n\n■ 결론\n\nSpaceX의 첫 채권 발행은 우주 기업이 전통 금융 시장의 주역으로 등극한 사건입니다. 기관 투자자들이 SpaceX 채권을 통해 간접 투자할 수 있는 새로운 통로가 열렸습니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "📄 SpaceX 채권 최초 발행",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:52",
+    images:        ["/charts/spcx-bond-issuance-20260623.svg"],
+  },
+
+  {
+    id:            "seed-276",
+    title:         "SpaceX IPO 주가 흐름 — 공모가 $155 → 최고 $200 → 현재 $168",
+    summary:       "SpaceX IPO 이후 10거래일간 주가가 $155(공모가) → $200(최고) → $168(현재)으로 완전한 열기-조정 사이클을 마쳤습니다. 공모 전 $100 이하로 취득한 초기 투자자는 여전히 대규모 수익이며, 공모 참여자는 소폭 플러스 상태입니다.",
+    body:          "■ SpaceX IPO 주가 흐름\n\n• 공모가: $155\n• 상장 후 최고점: ~$200\n• 현재(약 10거래일 후): ~$168\n• 공모가 대비: +8.4%\n• 최고점 대비: -16%\n\n■ 투자자 그룹별 수익 현황\n\n[Pre-IPO 초기 투자자 (sub-$100 취득)]\n• 현재 수익률: +68%+ (여전히 대규모 수익)\n• SPCX 펀드 초기 참여자 포함\n\n[IPO 공모 참여자 ($155)]\n• 현재 수익률: +8.4%\n• 추가 하락 시 손익분기점 접근 위험\n\n[최고점 매수자 ($200 근처)]\n• 현재 손실: -16%\n• 고점 추격 매수의 위험성 실증\n\n■ 조정 원인 분석\n\n• IPO 초기 과열 + 단기 차익 실현\n• 신용등급·현금 등 추가 뉴스 소화 중\n• 락업 물량 일부 해제 우려\n• 시장 전반 AI주 조정 연동\n\n■ 기술적 분석\n\n• $155~160 구간 = IPO 공모가 지지선\n• $168~170 = 현재 단기 저항/지지 구간\n• $200 재돌파 시 신고점 경신 가능\n\n■ 장기 투자 관점\n\n• SpaceX 펀더멘털 변화 없음\n• 신용등급·채권·Colossus AI 등 호재 지속\n• 단기 조정 = 장기 투자자 매수 기회론\n\n■ 결론\n\nIPO 10거래일 만에 완전한 사이클을 경험한 SpaceX 주가는 조정 후 새로운 균형점을 찾고 있습니다. 펀더멘털 기반 장기 투자자에게는 조정이 기회가 될 수 있습니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "📈 SpaceX IPO $168 조정",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:53",
+    images:        ["/charts/spcx-ipo-price-20260623.svg"],
+  },
+
+  {
+    id:            "seed-277",
+    title:         "SpaceX Colossus AI — Reflection AI와 $6.3B 컴퓨팅 계약",
+    summary:       "SpaceX의 Colossus AI 데이터센터가 Reflection AI와 월 $1억, 총 $6.38B 규모의 컴퓨팅 계약을 체결했습니다. Anthropic, Google에 이어 세 번째 주요 고객으로, NVIDIA GB300 즉시 접근권이 포함됩니다.",
+    body:          "■ 계약 개요\n\n• 고객사: Reflection AI\n• 계약 규모: ~$6.38B\n• 월 금액: $100M/월\n• 기간: 2026.07 ~ 2029년 (약 63개월)\n• 포함 내용: NVIDIA GB300 즉시 접근\n\n■ Colossus AI 고객사 현황\n\n1. Anthropic — Claude AI 모델 학습용\n2. Google (GOOGL) — Gemini 모델 학습용\n3. Reflection AI — $6.38B (신규 체결)\n\n■ Reflection AI란?\n\n• AI 추론 인프라 대규모 확장 중인 스타트업\n• $11B 매출 기반의 급성장 AI 기업\n• NVIDIA GB300 최신 GPU 확보 경쟁에서 Colossus 선택\n\n■ 왜 Colossus AI?\n\n[기술 우위]\n• NVIDIA GB300 (Blackwell Ultra) 즉시 접근 = 최신 GPU 선점\n• 전력 공급 안정성 (Starlink 백업 포함)\n• 냉각·에너지 효율 최적화\n\n[전략 우위]\n• SpaceX 전용 AI 인프라 → 외부 클라우드 대비 보안 강화\n• 장기 계약 = 안정적 처리 용량 보장\n\n■ SpaceX 수익 임팩트\n\n• 3개 고객 합산: 수십억 달러/년 반복 AI 매출\n• AWS·Azure·GCP 대비 특화 AI 컴퓨팅 플랫폼\n• Starlink → Colossus AI → 반복 수익의 세 축 완성\n\n■ 결론\n\nColossus AI의 고객사가 빅테크(Anthropic·Google)에 이어 AI 스타트업(Reflection AI)까지 확장되며, SpaceX가 AI 컴퓨팅 인프라 사업자로 확고히 자리매김하고 있습니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "🖥️ Colossus Reflection AI $6.3B",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:54",
+    images:        ["/charts/spcx-colossus-reflection-20260623.svg"],
+  },
+
+  {
+    id:            "seed-278",
+    title:         "Jefferies — TSLA 목표주가 $350 → $375 상향",
+    summary:       "Jefferies 증권이 Tesla 목표주가를 기존 $350에서 $375로 상향했습니다. Cybercab 로보택시 플릿 확장 속도, Optimus 양산 타임라인 구체화, FSD 구독자 142만 돌파가 상향 근거입니다.",
+    body:          "■ 목표주가 조정\n\n• 증권사: Jefferies\n• 기존 목표주가: $350\n• 신규 목표주가: $375 (+7.1%)\n• 투자 의견: Buy 유지\n\n■ 상향 근거\n\n[로보택시 가속]\n• Cybercab EPA CoC(적합성 인증) 완료 → 2개월 내 상용 투입\n• Austin 로보택시 플릿 확장 속도 예상 상회\n• 유료 서비스 수익화 타임라인 앞당겨짐\n\n[Optimus 타임라인 확정]\n• 7~8월 프리몬트 양산 시작 (Elon 확인)\n• 연간 1M대 목표 구체화 → 2027 외부 판매\n• 로봇 사업 밸류에이션 재평가 필요\n\n[FSD 소프트웨어 성장]\n• 구독자 142만 × $99/월 = 연환산 $17억\n• 소프트웨어 마진 80%+ → 영업이익 기여 급증\n• 스페인·유럽 인증으로 추가 구독 가속 예상\n\n■ Jefferies의 Tesla 멀티 버티컬 프레임\n\n• 자동차: 기존 핵심 — 안정적 현금흐름\n• Robotaxi(Cybercab): 고성장 플랫폼 수익\n• Optimus: 장기 최대 성장 동력\n• FSD: 고마진 소프트웨어 구독\n• Tesla Energy: MEGAPOD 등 ESS 확장\n\n■ 결론\n\nJefferies의 $375 상향은 Tesla가 자동차 회사를 넘어 AI 플랫폼 기업으로 전환하는 과정에서 밸류에이션 재평가가 정당하다는 시장의 인식 변화를 반영합니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "📊 TSLA Jefferies $375",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:55",
+    images:        ["/charts/tsla-jefferies-375-20260623.svg"],
+  },
+
+  {
+    id:            "seed-279",
+    title:         "Tesla Q2 2026 인도량 컨센서스 384,022대",
+    summary:       "시장 컨센서스는 Tesla Q2 2026 인도량을 384,022대로 추정합니다. 전 분기(Q1 2026 345,000대 추정) 대비 약 11% 회복이며, 기가상하이 생산 성장과 유럽 FSD 인증 효과가 배경입니다.",
+    body:          "■ Q2 2026 인도량 컨센서스\n\n• 시장 추정치: 384,022대\n• Q1 2026E 대비: +약 11.3%\n• Q2 2025 실적 대비: YoY 성장 전망\n\n■ 분기별 추이\n\n• Q3 2025: ~325,000대\n• Q4 2025: ~361,000대\n• Q1 2026E: ~345,000대\n• Q2 2026E: ~384,022대 (컨센서스)\n\n■ 성장 드라이버\n\n[기가상하이]\n• Model 3 5월 30,217대 (+4% YoY)\n• 유럽·동남아 수출 물량 포함\n• 생산 라인 최적화로 효율 개선\n\n[기가텍사스]\n• Cybertruck + Model Y 볼륨 유지\n• Cybercab 생산 준비 (2026 하반기)\n\n[유럽 회복]\n• 스페인 FSD DGT 인증 → 신뢰도 회복\n• 보조금 정책 안정화\n\n■ 투자자 체크포인트\n\n• 실제 발표 기준(7월 초): 384k 상회 여부\n• 기가베를린·상하이 가동률 추이\n• Cybercab 사전 주문 수치 공개 여부\n\n■ 결론\n\n384,022대 컨센서스 달성 시 Tesla 주가 단기 모멘텀이 강화됩니다. 예상 초과 달성 시 Jefferies $375 목표주가 실현 가능성이 높아집니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🚗 TSLA Q2 인도량 384k",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:56",
+    images:        ["/charts/tsla-q2-deliveries-384k-20260623.svg"],
+  },
+
+  {
+    id:            "seed-280",
+    title:         "Tesla 중국 CAAM Q2 — 상하이 30,217대 +4%, 글로벌 OEM 중 유일 성장",
+    summary:       "중국자동차공업협회(CAAM) Q2 데이터에서 Tesla는 SAIC와 함께 단 2개 브랜드만 YoY 플러스를 기록했습니다. 기가상하이 Model 3가 5월 30,217대(+4% YoY)를 달성하며 GM·Toyota·BYD 등 글로벌 OEM 전체가 하락하는 가운데 Tesla만 성장세를 유지했습니다.",
+    body:          "■ CAAM Q2 핵심 데이터\n\n• Tesla 기가상하이 5월 인도량: 30,217대\n• YoY 증감: +4%\n• 중국 시장 YoY 성장 브랜드: Tesla·SAIC 단 2개\n• 글로벌 주요 OEM: 전체 하락\n\n■ CAAM 분류 특이점\n\n• CAAM이 Tesla Model 3를 세단 카테고리로 분류\n• 세단 분류 = 비교 기준 변경 → Tesla 성장 부각\n• 기가상하이 = 국내 판매 + 유럽·동남아 수출 포함\n\n■ 경쟁사 현황\n\n• BYD: -7% YoY (가격 경쟁에도 볼륨 감소)\n• GM(별): -10% YoY (중국 시장 전략 실패)\n• Toyota: -12% YoY (EV 전환 지연)\n• SAIC: +2% (테슬라와 함께 2강)\n\n■ Tesla 성장 배경\n\n[모델 경쟁력]\n• Model 3 Ludicrous 업그레이드 버전 강세\n• FSD 중국 도입 기대감 → 구매 유인\n• Model Y 해외 수출 물량 기가상하이에서 조달\n\n[생산 효율]\n• 기가상하이 가동률 95%+ 유지\n• 배터리·부품 현지화로 원가 우위\n\n■ 결론\n\n글로벌 OEM이 중국에서 고전하는 가운데 Tesla만 성장을 유지하는 것은 브랜드 가치와 기술 경쟁력의 증거입니다. 중국 FSD 서비스 개시 시 추가 판매 가속이 예상됩니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🇨🇳 Tesla 중국 CAAM +4%",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:57",
+    images:        ["/charts/tsla-china-caam-q2-20260623.svg"],
+  },
+
+  {
+    id:            "seed-281",
+    title:         "Tesla Optimus — 프리몬트 7~8월 양산 시작, Model S/X 라인 전환 완료",
+    summary:       "Elon Musk가 Tesla Optimus 로봇의 프리몬트 공장 생산을 7~8월에 시작한다고 직접 확인했습니다. 기존 Model S/X 생산 라인을 Optimus 전용으로 전환하며, 연간 1M대 목표와 오스틴 2공장(10M대 장기 목표)도 함께 발표됐습니다.",
+    body:          "■ Optimus 양산 확정 사항\n\n• 시작 시기: 2026년 7월~8월\n• 공장: 테슬라 프리몬트 (캘리포니아)\n• 라인 전환: Former Model S/X 생산 라인\n• Elon 직접 트위터/X 확인\n\n■ 생산 목표\n\n[프리몬트]\n• 단기: 연간 수만 대\n• 장기 목표: 연간 1M대\n\n[오스틴 2공장 (추가 계획)]\n• 전용 Optimus 생산 시설\n• 장기 목표: 연간 10M대\n• 프리몬트 1M + 오스틴 합산 시 11M+/년\n\n■ 왜 Model S/X 라인인가?\n\n• Model S/X 판매량 감소 → 라인 가동률 하락\n• Optimus 수요 급증 예상 vs. 고급 세단 수요 정체\n• 기존 정밀 제조 설비 재활용 → 신규 투자 최소화\n\n■ Optimus 로드맵 (전체)\n\n2025 → Tesla 내부 작업 테스트\n2026 Q1~Q2 → 내부 배치 확대\n2026 7~8월 → 프리몬트 양산 시작\n2027 → 외부 기업 판매 개시 ($20~30k 예상)\n2030s → 오스틴 10M대/년 목표\n\n■ 재무 시나리오\n\n• 2027: 10만 대 × $25,000 = $25억\n• 2028: 50만 대 × $25,000 = $125억\n• 2030: 100만 대 × $25,000 = $250억\n• P/S 10x 적용 → $2,500억 가치 추가\n\n■ 결론\n\nOptimus 7~8월 양산 개시는 Tesla가 로봇 사업을 실제 매출로 전환하는 첫 번째 이정표입니다. 2027년 외부 판매 개시 시 Tesla의 밸류에이션 재평가가 본격화될 것입니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🤖 Tesla Optimus 7~8월 양산",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:58",
+    images:        ["/charts/tsla-optimus-fremont-20260623.svg"],
+  },
+
+  {
+    id:            "seed-282",
+    title:         "GOOGL — DeepMind 수석 과학자 Anthropic 이직, 주가 -6% 급락",
+    summary:       "Google DeepMind의 AlphaFold 공동 개발자이자 2024 노벨 화학상 수상자인 John Jumper가 Anthropic으로 이직한다고 밝혔습니다. 한 명의 노벨상 수상자 이탈이 수십 조원 시총 증발로 이어지며, AI 인재 전쟁이 GPU보다 사람을 중심으로 전개되고 있음을 보여줍니다.",
+    body:          "■ 사건 개요\n\n• 인물: John Jumper (DeepMind 수석 과학자)\n• 업적: AlphaFold 공동 개발 · 2024 노벨 화학상\n• 이동: Google DeepMind → Anthropic\n• 시장 반응: Alphabet 주가 -6% 당일 급락\n\n■ John Jumper는 누구인가?\n\n• AlphaFold: AI로 단백질 구조 예측 — 생명과학 혁명\n• 2024년 노벨 화학상 공동 수상\n• DeepMind의 핵심 AI 연구 리더십 상징\n• \"한 번에 한 명만 탄생하는\" 수준의 연구자\n\n■ 시장이 왜 이렇게 반응했나?\n\n[단 한 명이 수십조 증발]\n• Alphabet 시총: $344B+ 감소\n• 노벨상 수상자 = 대체 불가능 자산\n• \"연구 우위가 주가에 반영되어 있었다는 증거\"\n\n[같은 주 연속 이탈]\n• AlphaFold 수석 + OpenAI 핵심 인원도 이탈\n• DeepMind의 연구 리더십에 의문 제기\n\n■ AI 인재 전쟁의 새 국면\n\n[GPU·데이터센터보다 사람]\n• 인프라(GPU, 데이터센터)는 돈으로 살 수 있음\n• 수백 명의 천재 연구자는 대체 불가\n• 진짜 AI moat = 인재 보유·유지 능력\n\n[연구자가 시장을 움직이는 시대]\n• 단일 연구자 이동이 시장 이벤트로 승격\n• Anthropic의 인재 흡수력 재평가\n\n■ 투자자 시사점\n\n• GOOGL: 단기 충격, 장기 AI 경쟁력 재평가 필요\n• Anthropic: 비상장이나 간접 수혜 기대\n• 빅테크 AI 인재 리텐션 비용 증가 → 수익성 주의\n\n■ 결론\n\nJohn Jumper 이직 사건은 AI 시대의 진짜 해자가 어디에 있는지를 증명합니다. GPU·클라우드가 아닌 소수의 불가대체 인재가 기업 가치를 결정하는 시대가 왔습니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "👨‍🔬 GOOGL DeepMind -6%",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 07:59",
+    images:        ["/charts/googl-deepmind-anthropic-20260623.svg"],
+  },
+
+  {
+    id:            "seed-283",
+    title:         "Microsoft — Xbox 스핀오프·JV·매각 검토 + 현금 $103.8B",
+    summary:       "Microsoft가 Xbox 사업부의 스핀오프, 조인트 벤처, 또는 완전 매각을 검토 중이라고 보도됐습니다. AI·Azure 집중을 위한 사업 구조 재편 목적으로, 현금은 6월 19일 기준 $103.8B로 역대 최고 수준입니다.",
+    body:          "■ Xbox 구조 재편 검토 내용\n\n• 옵션 1: 스핀오프 — Xbox 독립 상장법인화\n• 옵션 2: JV — 파트너사와 공동 운영\n• 옵션 3: 완전 매각 — Xbox 사업 전부 매각\n• 배경: AI·Azure 집중을 위한 자원 재배분\n\n■ 현금 포지션\n\n• 보고 날짜: 2026.06.19\n• 현금 규모: $103.8B\n• 의미: 역대 최고 수준 · M&A·AI 투자 화약고\n\n■ Xbox 매각 이유\n\n[AI 포커스 강화]\n• Copilot 수익화 본격화 ($30/월 엔터프라이즈)\n• Azure RPO $700B 돌파 → 클라우드 성장 지속\n• 게임 사업 성장률 vs. AI CAGR 격차 확대\n\n[Activision 인수 후 전략 전환]\n• 2023년 $69B Activision 인수 → 게임 포트폴리오 최대화\n• 이제는 AI 플랫폼으로의 피봇 신호\n\n■ Xbox 잠재 인수 후보\n\n• Sony (PlayStation 경쟁사): 규제 이슈 가능\n• Amazon (게임 스트리밍 강화): 가능성 있음\n• 사모펀드: 재상장 목적\n\n■ 투자자 관점\n\n[MSFT에게 긍정적]\n• Xbox 매각 → 재원을 AI·Azure에 집중\n• PVGO 36%: Copilot 수익화 시 밸류에이션 재평가\n• $103.8B 현금: 매각 수익까지 더해지면 M&A 여력 폭발\n\n■ 결론\n\nMicrosoft의 Xbox 구조 재편 검토는 AI 시대에 게임 사업을 포기하고 완전한 AI·클라우드 기업으로 전환하겠다는 강력한 신호입니다. $103.8B 현금과 결합되면 대규모 AI 인수합병의 전조일 수 있습니다.",
+    category:      "종목분석",
+    categoryColor: "blue",
+    subject:       "🎮 MSFT Xbox 스핀오프 검토",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 08:00",
+    images:        ["/charts/msft-xbox-spinoff-20260623.svg"],
+  },
+
 ];
 
 // 종목별 리포트 매핑 — 개별 종목 페이지에서 관련 리포트 필터링에 사용
@@ -3759,4 +3923,16 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-269": ["META", "MSFT"],
   "seed-270": ["GOOGL"],
   "seed-271": ["INTC"],
+  "seed-272": ["SPCX", "TSLA", "GOOGL", "MSFT"],
+  "seed-273": ["SPCX"],
+  "seed-274": ["SPCX"],
+  "seed-275": ["SPCX"],
+  "seed-276": ["SPCX"],
+  "seed-277": ["SPCX"],
+  "seed-278": ["TSLA"],
+  "seed-279": ["TSLA"],
+  "seed-280": ["TSLA"],
+  "seed-281": ["TSLA"],
+  "seed-282": ["GOOGL"],
+  "seed-283": ["MSFT"],
 };

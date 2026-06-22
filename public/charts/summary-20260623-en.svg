@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 620">
+  <rect width="480" height="620" fill="#0a0c10"/>
+  <rect x="0" y="0" width="480" height="56" fill="#111318"/>
+  <rect x="0" y="52" width="480" height="2" fill="#c084fc" opacity="0.5"/>
+  <text x="24" y="24" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">Market Summary · 2026.06.23</text>
+  <text x="24" y="44" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" font-weight="bold">SPCX Ratings·Cash$100B·Bond·TSLA Q2·Optimus·GOOGL -6%</text>
+
+  <!-- Wide card -->
+  <rect x="24" y="68" width="432" height="80" rx="12" fill="#0d1f14" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.8"/>
+  <text x="240" y="98" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">6 Key Themes · June 23</text>
+  <text x="240" y="128" font-family="Arial,sans-serif" font-size="20" fill="#c084fc" font-weight="bold" text-anchor="middle">SpaceX Ratings × Cash $100B × Bond Issuance</text>
+
+  <!-- Card grid 3×2 -->
+  <!-- Row 1 -->
+  <rect x="24" y="162" width="204" height="112" rx="10" fill="#111318"/>
+  <text x="40" y="186" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">SPCX Credit Rating</text>
+  <text x="40" y="214" font-family="Arial,sans-serif" font-size="22" fill="#e5e7eb" font-weight="bold">Baa1/BBB+</text>
+  <text x="40" y="236" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">All 3 major agencies</text>
+  <text x="40" y="254" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Moody's · Fitch · S&amp;P</text>
+
+  <rect x="244" y="162" width="212" height="112" rx="10" fill="#111318"/>
+  <text x="260" y="186" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">SPCX Cash Position</text>
+  <text x="260" y="214" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="bold">$100.8B</text>
+  <text x="260" y="236" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">From $34.7B (FY25) — 3x+</text>
+  <text x="260" y="254" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Bond proceeds incoming</text>
+
+  <!-- Row 2 -->
+  <rect x="24" y="286" width="204" height="112" rx="10" fill="#111318"/>
+  <text x="40" y="310" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">TSLA Q2 Deliveries</text>
+  <text x="40" y="338" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" font-weight="bold">384,022</text>
+  <text x="40" y="360" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Market consensus est.</text>
+  <text x="40" y="378" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Jefferies PT $375</text>
+
+  <rect x="244" y="286" width="212" height="112" rx="10" fill="#111318"/>
+  <text x="260" y="310" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">Tesla Optimus</text>
+  <text x="260" y="338" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" font-weight="bold">Jul~Aug Start</text>
+  <text x="260" y="360" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Fremont Model S/X line</text>
+  <text x="260" y="378" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Target 1M units/year</text>
+
+  <!-- Row 3 -->
+  <rect x="24" y="410" width="204" height="112" rx="10" fill="#111318"/>
+  <text x="40" y="434" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">GOOGL DeepMind</text>
+  <text x="40" y="462" font-family="Arial,sans-serif" font-size="22" fill="#f87171" font-weight="bold">-6% Drop</text>
+  <text x="40" y="484" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Nobel scientist → Anthropic</text>
+  <text x="40" y="502" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI talent war escalates</text>
+
+  <rect x="244" y="410" width="212" height="112" rx="10" fill="#111318"/>
+  <text x="260" y="434" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">SPCX Colossus AI</text>
+  <text x="260" y="462" font-family="Arial,sans-serif" font-size="20" fill="#c084fc" font-weight="bold">$6.3B Deal</text>
+  <text x="260" y="484" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Reflection AI compute</text>
+  <text x="260" y="502" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">3rd client: Anthropic, Google</text>
+
+  <text x="240" y="608" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.23 · Investus · For reference only</text>
+</svg>

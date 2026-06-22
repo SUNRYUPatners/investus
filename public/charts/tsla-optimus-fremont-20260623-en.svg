@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla Optimus</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Fremont Production Start Jul~Aug — Model S/X Line Converted</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Elon confirmed · 1M units/year target · Austin 10M long-term plan</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Timeline -->
+  <rect x="40" y="114" width="720" height="80" rx="8" fill="#161b22"/>
+  <rect x="40" y="114" width="720" height="4" rx="2" fill="#00e5a0"/>
+
+  <circle cx="160" cy="154" r="8" fill="#444c56"/>
+  <text x="160" y="182" text-anchor="middle" fill="#7d8590" font-size="11">2025</text>
+  <text x="160" y="196" text-anchor="middle" fill="#7d8590" font-size="10">Internal tests</text>
+
+  <line x1="168" y1="154" x2="272" y2="154" stroke="#444c56" stroke-width="2"/>
+
+  <circle cx="280" cy="154" r="8" fill="#444c56"/>
+  <text x="280" y="182" text-anchor="middle" fill="#7d8590" font-size="11">Q1 2026</text>
+  <text x="280" y="196" text-anchor="middle" fill="#7d8590" font-size="10">Tesla factory</text>
+
+  <line x1="288" y1="154" x2="412" y2="154" stroke="#00e5a0" stroke-width="2"/>
+
+  <circle cx="420" cy="154" r="10" fill="#00e5a0"/>
+  <text x="420" y="182" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="700">Jul~Aug</text>
+  <text x="420" y="196" text-anchor="middle" fill="#00e5a0" font-size="10" font-weight="700">Fremont SOP</text>
+
+  <line x1="430" y1="154" x2="554" y2="154" stroke="#444c56" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <circle cx="560" cy="154" r="8" fill="#1c3d29"/>
+  <text x="560" y="182" text-anchor="middle" fill="#7d8590" font-size="11">2027</text>
+  <text x="560" y="196" text-anchor="middle" fill="#7d8590" font-size="10">External sales</text>
+
+  <line x1="568" y1="154" x2="662" y2="154" stroke="#444c56" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <circle cx="670" cy="154" r="8" fill="#1c3d29"/>
+  <text x="670" y="182" text-anchor="middle" fill="#7d8590" font-size="11">Long-term</text>
+  <text x="670" y="196" text-anchor="middle" fill="#7d8590" font-size="10">10M/year</text>
+
+  <!-- Production targets -->
+  <rect x="40" y="210" width="348" height="130" rx="8" fill="#161b22"/>
+  <rect x="40" y="210" width="348" height="4" rx="2" fill="#00e5a0"/>
+  <text x="214" y="238" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Fremont Line Conversion</text>
+  <text x="60" y="262" fill="#e6edf3" font-size="12">Former Model S/X line repurposed</text>
+  <text x="60" y="284" fill="#e6edf3" font-size="12">Target 1M units/year at Fremont</text>
+  <text x="60" y="306" fill="#7d8590" font-size="11">First production batch shipping Jul/Aug</text>
+  <text x="60" y="326" fill="#7d8590" font-size="11">Confirmed by Elon on X</text>
+
+  <rect x="412" y="210" width="348" height="130" rx="8" fill="#161b22"/>
+  <rect x="412" y="210" width="348" height="4" rx="2" fill="#00e5a0"/>
+  <text x="586" y="238" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Austin Plant 2 Plan</text>
+  <text x="432" y="262" fill="#e6edf3" font-size="12">Dedicated Optimus facility in Austin</text>
+  <text x="432" y="284" fill="#e6edf3" font-size="12">Long-term 10M units/year target</text>
+  <text x="432" y="306" fill="#7d8590" font-size="11">Fremont 1M + Austin combined</text>
+  <text x="432" y="326" fill="#7d8590" font-size="11">Robot revenue $2.5B~$250B scenario</text>
+
+  <!-- Financial impact -->
+  <rect x="40" y="356" width="720" height="78" rx="8" fill="#1c1026"/>
+  <text x="400" y="382" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Revenue Scenario</text>
+  <text x="400" y="404" text-anchor="middle" fill="#e6edf3" font-size="12">100k × $25k = $2.5B · 1M = $25B · P/S 10x → $250B+ incremental value</text>
+  <text x="400" y="422" text-anchor="middle" fill="#7d8590" font-size="11">Triggers Tesla valuation re-rate beyond automotive business</text>
+
+  <line x1="40" y1="446" x2="760" y2="446" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="462" text-anchor="middle" fill="#444c56" font-size="10">Source: Elon Musk on X · investus.kr</text>
+</svg>

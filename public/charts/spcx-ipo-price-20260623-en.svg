@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">SpaceX IPO Price Action — $155 → $200 → $168</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">IPO at $155 · High $200 · Current $168 · Full cycle in 10 sessions</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="143" x2="720" y2="143" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="197" x2="720" y2="197" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="218" x2="720" y2="218" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="310" x2="720" y2="310" stroke="#21262d" stroke-width="1"/>
+
+  <text x="70" y="147" text-anchor="end" fill="#7d8590" font-size="11">$200</text>
+  <text x="70" y="201" text-anchor="end" fill="#7d8590" font-size="11">$168</text>
+  <text x="70" y="222" text-anchor="end" fill="#7d8590" font-size="11">$155</text>
+  <text x="70" y="314" text-anchor="end" fill="#7d8590" font-size="11">$100</text>
+
+  <polyline points="200,218 380,143 560,197" fill="none" stroke="#c084fc" stroke-width="2.5"/>
+
+  <circle cx="200" cy="218" r="6" fill="#c084fc"/>
+  <circle cx="380" cy="143" r="6" fill="#f87171"/>
+  <circle cx="560" cy="197" r="6" fill="#00e5a0"/>
+
+  <text x="200" y="208" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">IPO $155</text>
+  <text x="380" y="133" text-anchor="middle" fill="#f87171" font-size="12" font-weight="700">High $200</text>
+  <text x="560" y="187" text-anchor="middle" fill="#00e5a0" font-size="12" font-weight="700">Now $168</text>
+
+  <text x="200" y="328" text-anchor="middle" fill="#7d8590" font-size="11">IPO Day</text>
+  <text x="380" y="328" text-anchor="middle" fill="#7d8590" font-size="11">Peak</text>
+  <text x="560" y="328" text-anchor="middle" fill="#7d8590" font-size="11">10 Sessions Later</text>
+
+  <rect x="40" y="346" width="220" height="64" rx="8" fill="#161b22"/>
+  <text x="150" y="368" text-anchor="middle" fill="#7d8590" font-size="11">vs IPO Price</text>
+  <text x="150" y="394" text-anchor="middle" fill="#00e5a0" font-size="20" font-weight="700">+8.4%</text>
+
+  <rect x="290" y="346" width="220" height="64" rx="8" fill="#161b22"/>
+  <text x="400" y="368" text-anchor="middle" fill="#7d8590" font-size="11">vs Peak</text>
+  <text x="400" y="394" text-anchor="middle" fill="#f87171" font-size="20" font-weight="700">-16%</text>
+
+  <rect x="540" y="346" width="220" height="64" rx="8" fill="#161b22"/>
+  <text x="650" y="368" text-anchor="middle" fill="#7d8590" font-size="11">10-session cycle</text>
+  <text x="650" y="394" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="700">Euphoria→Reset</text>
+
+  <line x1="40" y1="422" x2="760" y2="422" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="438" text-anchor="middle" fill="#444c56" font-size="10">Source: @Mohamed Al-Erian / Market data · investus.kr</text>
+
+  <rect x="40" y="450" width="720" height="30" rx="6" fill="#1c1026"/>
+  <text x="400" y="470" text-anchor="middle" fill="#c084fc" font-size="11">Pre-IPO holders (sub-$100) still massively up · $155 IPO buyers slightly positive</text>
+</svg>

@@ -27,9 +27,10 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T22J = _now;                        // 오늘(6/22) 포스트
-const T20J = _now - 48 * 3600_000;       // 6/20
-const T19J = _now - 72 * 3600_000;       // 6/19
+const T23J = _now;                        // 오늘(6/23) 포스트
+const T22J = _now - 24 * 3600_000;       // 6/22
+const T20J = _now - 72 * 3600_000;       // 6/20
+const T19J = _now - 96 * 3600_000;       // 6/19
 const T18J = _now - 96 * 3600_000;       // 6/18
 const T17J = _now - 120 * 3600_000;      // 6/17
 const T16J = _now - 144 * 3600_000;      // 6/16
@@ -38,7 +39,7 @@ const T13J = _now - 216 * 3600_000;      // 6/13
 const T12J = _now - 240 * 3600_000;      // 6/12
 const T11J = _now - 264 * 3600_000;      // 6/11
 const T10J = _now - 288 * 3600_000;      // 6/10
-export const LATEST_UPDATE = T22J;       // NEW 배지 기준
+export const LATEST_UPDATE = T23J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -57,6 +58,44 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-23 — SPCX 신용등급·현금$100B·채권·IPO$168·Colossus $6.3B /
+  //              TSLA Jefferies $375·Q2 384k·중국CAAM·Optimus 7~8월 /
+  //              GOOGL DeepMind -6%·MSFT Xbox 스핀오프
+  // ════════════════════════════════════════════════════════════════════════
+
+  // SPCX — 6/23 업데이트 ────────────────────────────────────────────────
+  { id: 312, symbol: "SPCX", nickname: "익명_5129", holdingLabel: "관심종목",
+    content: "SpaceX가 Moody's Baa1, Fitch BBB+, S&P BBB+ 3대 신용평가사 투자등급을 동시에 받았어요. 우주 기업 최초인데 이게 왜 중요하냐면 연기금·국부펀드 같은 대형 기관들이 이제 SPCX를 의무적으로 담을 수 있게 되는 거예요. 채권도 저금리로 발행 가능해지고 — SpaceX가 전통 금융 시장에 완전 편입되는 순간이에요.",
+    createdAt: T23J - 8*60_000, likes: 503, comments: 3 },
+  { id: 313, symbol: "SPCX", nickname: "익명_7823", holdingLabel: "관심종목",
+    content: "SpaceX 현금이 FY25말 $34.7B에서 지금 $100.8B이에요. 6개월에 3배예요. Starlink 구독 + Space Force 계약 + IPO 자금 조달이 동시에 맞물린 거예요. $100B 현금이면 외부 차입 없어도 Starlink V3, Colossus AI 다 자체 조달 가능한 수준이에요. 채권 발행은 추가 레버리지 최적화 목적이에요.",
+    createdAt: T23J - 22*60_000, likes: 387, comments: 2 },
+
+  // TSLA Jefferies / Q2 — 6/23 업데이트 ───────────────────────────────
+  { id: 314, symbol: "TSLA", nickname: "익명_3491", holdingLabel: "300주 보유",
+    content: "Jefferies가 TSLA 목표주가를 $350에서 $375로 올렸어요. Cybercab 로보택시 속도가 예상보다 빠르고, Optimus 7~8월 프리몬트 양산이 확정됐고, FSD 구독 142만이 근거래요. 자동차 회사가 아니라 AI 플랫폼 기업으로 재평가해야 한다는 논리인데 맞는 말이에요.",
+    createdAt: T23J - 12*60_000, likes: 429, comments: 3 },
+  { id: 315, symbol: "TSLA", nickname: "익명_6284", holdingLabel: "150주 보유",
+    content: "Q2 인도량 컨센서스가 384,022대예요. Q1 345k에서 11% 회복이에요. 상하이가 Model 3 30,217대 +4% YoY로 선두 역할 하고 있고, CAAM 데이터에서 Tesla만 BYD·GM·Toyota 다 떨어지는 시장에서 혼자 성장했어요. 7월 초 실제 발표 숫자가 384k 넘으면 단기 주가 강세 나올 거예요.",
+    createdAt: T23J - 28*60_000, likes: 356, comments: 2 },
+
+  // TSLA Optimus / China — 6/23 업데이트 ──────────────────────────────
+  { id: 316, symbol: "TSLA", nickname: "익명_8127", holdingLabel: "200주 보유",
+    content: "Tesla가 프리몬트 Model S/X 라인을 Optimus로 전환해서 7~8월 양산 시작이에요. Elon이 직접 X에 확인했어요. 연간 1M대 목표에 오스틴 2공장은 10M대 장기 목표예요. 2027년 외부 판매 시작하면 Tesla 밸류에이션 계산이 완전히 달라지는 거예요. 이제 로봇 회사예요.",
+    createdAt: T23J - 15*60_000, likes: 512, comments: 3 },
+  { id: 317, symbol: "TSLA", nickname: "익명_4956", holdingLabel: "80주 보유",
+    content: "Tesla 중국 CAAM Q2 데이터에서 BYD가 -7%, GM -10%, Toyota -12%인데 Tesla만 +4% 성장했어요. SAIC랑 Tesla만 YoY 플러스예요. 상하이 30,217대 Model 3 달성이고 유럽 수출까지 포함이에요. 중국에서 이렇게 선방하는 게 놀랍고, FSD 중국 서비스 시작되면 더 올라갈 거예요.",
+    createdAt: T23J - 35*60_000, likes: 298, comments: 2 },
+
+  // GOOGL / MSFT — 6/23 업데이트 ──────────────────────────────────────
+  { id: 318, symbol: "GOOGL", nickname: "익명_2813", holdingLabel: "50주 보유",
+    content: "DeepMind AlphaFold 만든 John Jumper가 Anthropic 간다고 하니까 구글이 하루에 -6% 났어요. 노벨상 받은 연구자 한 명 이탈이 수십조 시총 증발이에요. GPU·데이터센터가 AI 해자가 아니라 이런 사람들 몇 백 명이 진짜 해자라는 게 증명된 거예요. 구글이 인재 유지에 더 투자해야 하는데 비용이 엄청날 거예요.",
+    createdAt: T23J - 18*60_000, likes: 445, comments: 3 },
+  { id: 319, symbol: "MSFT", nickname: "익명_7344", holdingLabel: "70주 보유",
+    content: "Microsoft가 Xbox 스핀오프·JV·매각을 검토 중이에요. 현금이 6/19 기준 $103.8B이고요. Xbox 팔고 그 돈을 Copilot·Azure에 집중하겠다는 거잖아요. Azure RPO $700B, Copilot 엔터프라이즈 폭발 중인데 게임 사업이 거기에 비하면 성장률이 너무 낮죠. 이게 확정되면 MSFT 밸류에이션 재평가 나올 것 같아요.",
+    createdAt: T23J - 40*60_000, likes: 312, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-22 — SPCX Cursor $80B·TSLA FSD Semi·스페인 27.5만km·FSD 142만
@@ -1357,6 +1396,43 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-23 신규 ──────────────────────────────────────────────────────
+  312: [
+    { id: 1, nickname: "익명_8291", holdingLabel: "관심종목", content: "3개 신평사 동시 투자등급 받는 게 얼마나 대단한 건지 — 연기금이 이제 SPCX를 의무 편입할 수 있는 조건이 됐어요. 기관 자금이 수백억 달러 급으로 들어올 수 있는 문이 열린 거예요.", createdAt: T23J - 3*60_000, likes: 87 },
+    { id: 2, nickname: "익명_4712", holdingLabel: "관심종목", content: "채권 발행 금리도 투기등급보다 1~2% 낮아지는 게 수십억 달러 발행하면 연 수천만 달러 이자 절감이에요. 재무 최적화 측면에서도 엄청난 이벤트예요.", createdAt: T23J - 18*60_000, likes: 63 },
+    { id: 3, nickname: "익명_6183", holdingLabel: "관심종목", content: "Moody's Baa1이 S&P BBB+보다 한 단계 높다는 게 포인트예요. 세 곳 다 Stable outlook이니까 단기 강등 위험도 없어요. SpaceX 재무 구조가 진짜 탄탄하다는 증거죠.", createdAt: T23J - 35*60_000, likes: 52 },
+  ],
+  313: [
+    { id: 1, nickname: "익명_9341", holdingLabel: "관심종목", content: "6개월에 $66B 늘었다는 게 진짜 실감이 안 나요. Starlink 가입자가 얼마나 되는 거길래 이런 현금이 쌓이는 건지. 위성 인터넷 구독 사업의 규모를 다시 생각하게 되네요.", createdAt: T23J - 8*60_000, likes: 74 },
+    { id: 2, nickname: "익명_2847", holdingLabel: "관심종목", content: "$100B이면 Apple·Microsoft 급 현금이잖아요. SpaceX가 BigTech 재무 수준에 도달했다는 거예요. 이 현금으로 무엇을 인수할지 기대되는데 Cursor $80B 인수가 가능한 이유도 여기 있었군요.", createdAt: T23J - 29*60_000, likes: 58 },
+  ],
+  314: [
+    { id: 1, nickname: "익명_5194", holdingLabel: "200주 보유", content: "Jefferies가 $375 내면서 '멀티버티컬 AI 플랫폼'이라고 표현한 게 핵심이에요. 자동차+로보택시+로봇+FSD+에너지 각각이 독립된 성장 스토리인데 현재 주가는 이걸 다 반영 안 해요.", createdAt: T23J - 5*60_000, likes: 91 },
+    { id: 2, nickname: "익명_7182", holdingLabel: "100주 보유", content: "목표주가 상향 애널들이 계속 나오는데 이게 기관 자금 유입의 전조예요. 분석 커버리지 늘어나고 목표주가 올라가면 패시브 펀드 비중도 자연스럽게 늘어요.", createdAt: T23J - 22*60_000, likes: 67 },
+    { id: 3, nickname: "익명_3829", holdingLabel: "50주 보유", content: "FSD 구독 142만 × $99/월이면 연간 $17억이에요. 이게 마진 80%이면 영업이익 $13억이에요. 소프트웨어 회사 밸류에이션(P/E 30~40x)으로 보면 $400~$500억 가치예요. 테슬라 현재 PER에서 이 부분만 해도 주가 기여가 크네요.", createdAt: T23J - 40*60_000, likes: 49 },
+  ],
+  315: [
+    { id: 1, nickname: "익명_8473", holdingLabel: "120주 보유", content: "384k 넘으면 단기 강세, 못 미치면 단기 조정인데 저는 넘길 것 같아요. 상하이 생산 속도가 좋고 유럽도 회복 중이에요. 7월 초 발표가 진짜 중요한 카탈리스트예요.", createdAt: T23J - 12*60_000, likes: 68 },
+    { id: 2, nickname: "익명_2918", holdingLabel: "40주 보유", content: "CAAM 데이터에서 Tesla만 플러스라는 게 중국 로컬 EV 공세에도 버티는 브랜드 파워를 증명해요. FSD 중국 인증까지 나오면 볼륨이 한 단계 더 올라갈 것 같아요.", createdAt: T23J - 33*60_000, likes: 45 },
+  ],
+  316: [
+    { id: 1, nickname: "익명_6291", holdingLabel: "250주 보유", content: "프리몬트 Model S/X 라인 가동률이 낮아서 어떻게 할지 봤는데 Optimus로 전환하는 게 최선이었네요. 기존 정밀 설비 재활용이니까 신규 공장 짓는 것보다 훨씬 빨리 시작할 수 있어요.", createdAt: T23J - 6*60_000, likes: 104 },
+    { id: 2, nickname: "익명_4183", holdingLabel: "관심종목", content: "2027년 외부 판매 시작하면 Tesla 투자자들이 숫자로 볼 수 있게 되는 거예요. 로봇 사업 매출이 실적에 잡히기 시작하면 밸류에이션 계산이 완전히 달라져요. 지금이 담을 마지막 기회일 수 있어요.", createdAt: T23J - 21*60_000, likes: 82 },
+    { id: 3, nickname: "익명_9847", holdingLabel: "30주 보유", content: "오스틴 10M대/년 목표가 현실화되면 Tesla가 세계에서 가장 많이 팔리는 제품을 만드는 회사가 되는 거예요. 아이폰 연 2억대도 넘는 규모인데 — 가능하다면 완전히 다른 회사죠.", createdAt: T23J - 45*60_000, likes: 61 },
+  ],
+  317: [
+    { id: 1, nickname: "익명_3817", holdingLabel: "90주 보유", content: "BYD가 -7%인데 Tesla가 +4%면 진짜 대단한 거예요. BYD가 가격 낮추면서 볼륨 확보하는 전략인데도 Tesla한테 밀리는 거잖아요. 중국에서 프리미엄 포지션 지키는 게 장기적으로 마진 유지에 중요해요.", createdAt: T23J - 14*60_000, likes: 57 },
+    { id: 2, nickname: "익명_5921", holdingLabel: "60주 보유", content: "유럽 수출까지 포함된 수치라는 게 중요해요. 기가상하이가 중국 내수만 아니라 글로벌 공급 허브 역할이에요. 상하이 생산량이 늘어날수록 TSLA 글로벌 볼륨에 미치는 영향이 크죠.", createdAt: T23J - 38*60_000, likes: 39 },
+  ],
+  318: [
+    { id: 1, nickname: "익명_4293", holdingLabel: "30주 보유", content: "AlphaFold가 단백질 구조 예측을 풀어버린 거잖아요. 수십 년 과학 난제를 AI로 해결한 거예요. 그 사람이 구글 나간다니까 시장이 당황한 거예요. AI 연구 리더십이 흔들리면 Gemini 개발 속도도 영향받을 수밖에 없어요.", createdAt: T23J - 7*60_000, likes: 95 },
+    { id: 2, nickname: "익명_8193", holdingLabel: "20주 보유", content: "AI 모델 성능이 수백 명의 탑 연구자에 달려있다는 게 이번에 증명됐네요. 인프라는 복제 가능한데 이 사람들은 대체 불가예요. 앞으로 빅테크 AI 연구 인건비가 천문학적으로 올라갈 것 같아요.", createdAt: T23J - 26*60_000, likes: 72 },
+    { id: 3, nickname: "익명_7412", holdingLabel: "50주 보유", content: "Anthropic이 계속 최고 연구자들을 영입하네요. 비상장이지만 Claude 모델 성능이 계속 올라가는 게 이런 인재 확보 덕분이겠죠. 구글 입장에서는 엄청난 타격이에요.", createdAt: T23J - 48*60_000, likes: 54 },
+  ],
+  319: [
+    { id: 1, nickname: "익명_2847", holdingLabel: "60주 보유", content: "Xbox 팔고 Copilot Azure에 집중하겠다는 전략이 맞는 방향이에요. 게임 사업 성장률이 AI 사업이랑 비교가 안 되는데 자원 분산이 아쉬웠거든요. 이게 확정되면 MSFT 포커스가 훨씬 명확해져요.", createdAt: T23J - 16*60_000, likes: 78 },
+    { id: 2, nickname: "익명_5913", holdingLabel: "40주 보유", content: "$103.8B 현금에 Xbox 매각 수익까지 더해지면 대형 AI 인수합병 할 탄약이 엄청 생기는 거예요. OpenAI 지분 추가 투자든 다른 AI 스타트업 인수든 — MSFT가 AI에 올인하는 신호로 읽혀요.", createdAt: T23J - 42*60_000, likes: 59 },
+  ],
   // ── 2026-06-22 신규 ──────────────────────────────────────────────────────
   288: [
     { id: 1, nickname: "익명_4821", holdingLabel: "관심종목", content: "Cursor 개발자들이 SpaceX 인수 소식에 어떻게 반응하는지 궁금해요. 우주 기업이 개발 도구를 가져가는 게 처음이잖아요. Starlink 인프라 위에서 Cursor가 돌아가면 오지에서도 AI 코딩이 가능해지는 거예요.", createdAt: T22J - 4*60_000, likes: 94 },

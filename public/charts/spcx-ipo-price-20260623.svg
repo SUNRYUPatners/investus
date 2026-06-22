@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">SpaceX IPO 주가 흐름 — $155 → $200 → $168</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">공모가 $155 · 최고 $200 · 현재 $168 · 10거래일 내 완전한 사이클</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Price chart (simplified line) -->
+  <!-- y-axis: 100 at bottom (y=310), 220 at top (y=110). Range=120, scale=200/120=1.67px per $ -->
+  <!-- x positions: 80, 240, 400, 560, 700 -->
+  <!-- prices: 100 (pre), 155 (IPO), 200 (high), 168 (now) -->
+  <!-- y = 310 - (price - 100) * 200/120 -->
+  <!-- 100 → y=310, 155 → y=310-91.7=218, 200 → y=310-166.7=143, 168 → y=310-113.3=197 -->
+
+  <!-- Grid lines -->
+  <line x1="80" y1="143" x2="720" y2="143" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="197" x2="720" y2="197" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="218" x2="720" y2="218" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="310" x2="720" y2="310" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Y axis labels -->
+  <text x="70" y="147" text-anchor="end" fill="#7d8590" font-size="11">$200</text>
+  <text x="70" y="201" text-anchor="end" fill="#7d8590" font-size="11">$168</text>
+  <text x="70" y="222" text-anchor="end" fill="#7d8590" font-size="11">$155</text>
+  <text x="70" y="314" text-anchor="end" fill="#7d8590" font-size="11">$100</text>
+
+  <!-- Line: IPO → high → current -->
+  <polyline points="200,218 380,143 560,197" fill="none" stroke="#c084fc" stroke-width="2.5"/>
+
+  <!-- Dots -->
+  <circle cx="200" cy="218" r="6" fill="#c084fc"/>
+  <circle cx="380" cy="143" r="6" fill="#f87171"/>
+  <circle cx="560" cy="197" r="6" fill="#00e5a0"/>
+
+  <!-- Labels -->
+  <text x="200" y="208" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">공모가 $155</text>
+  <text x="380" y="133" text-anchor="middle" fill="#f87171" font-size="12" font-weight="700">최고 $200</text>
+  <text x="560" y="187" text-anchor="middle" fill="#00e5a0" font-size="12" font-weight="700">현재 $168</text>
+
+  <!-- X axis labels -->
+  <text x="200" y="328" text-anchor="middle" fill="#7d8590" font-size="11">IPO 당일</text>
+  <text x="380" y="328" text-anchor="middle" fill="#7d8590" font-size="11">최고점</text>
+  <text x="560" y="328" text-anchor="middle" fill="#7d8590" font-size="11">10거래일 후</text>
+
+  <!-- Stats boxes -->
+  <rect x="40" y="346" width="220" height="64" rx="8" fill="#161b22"/>
+  <text x="150" y="368" text-anchor="middle" fill="#7d8590" font-size="11">공모가 대비</text>
+  <text x="150" y="394" text-anchor="middle" fill="#00e5a0" font-size="20" font-weight="700">+8.4%</text>
+
+  <rect x="290" y="346" width="220" height="64" rx="8" fill="#161b22"/>
+  <text x="400" y="368" text-anchor="middle" fill="#7d8590" font-size="11">최고점 대비</text>
+  <text x="400" y="394" text-anchor="middle" fill="#f87171" font-size="20" font-weight="700">-16%</text>
+
+  <rect x="540" y="346" width="220" height="64" rx="8" fill="#161b22"/>
+  <text x="650" y="368" text-anchor="middle" fill="#7d8590" font-size="11">10거래일 사이클</text>
+  <text x="650" y="394" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="700">과열→조정</text>
+
+  <line x1="40" y1="422" x2="760" y2="422" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="438" text-anchor="middle" fill="#444c56" font-size="10">출처: @Mohamed Al-Erian / 시장 데이터 · investus.kr</text>
+
+  <rect x="40" y="450" width="720" height="30" rx="6" fill="#1c1026"/>
+  <text x="400" y="470" text-anchor="middle" fill="#c084fc" font-size="11">공모 전 $100 이하 취득자 여전히 대규모 수익 · $155 공모 참여자는 소폭 플러스</text>
+</svg>

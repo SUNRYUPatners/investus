@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Apple SD Gothic Neo',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="700">MSFT · Microsoft</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Xbox 스핀오프·JV·매각 검토 + 현금 $103.8B</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">AI·클라우드 집중 위한 사업 구조 재편 · 현금 $103.8B (6/19 기준)</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- 3 options -->
+  <rect x="40" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="40" y="114" width="218" height="4" rx="2" fill="#4ade80"/>
+  <text x="149" y="142" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">스핀오프</text>
+  <text x="149" y="168" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">분리 상장</text>
+  <text x="149" y="190" text-anchor="middle" fill="#7d8590" font-size="11">Xbox 독립 공개법인화</text>
+  <text x="149" y="208" text-anchor="middle" fill="#7d8590" font-size="11">MSFT 주주에 주식 배분</text>
+
+  <rect x="291" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="291" y="114" width="218" height="4" rx="2" fill="#4ade80"/>
+  <text x="400" y="142" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">조인트 벤처</text>
+  <text x="400" y="168" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">JV 파트너</text>
+  <text x="400" y="190" text-anchor="middle" fill="#7d8590" font-size="11">파트너사와 공동 운영</text>
+  <text x="400" y="208" text-anchor="middle" fill="#7d8590" font-size="11">자금·운영 부담 분담</text>
+
+  <rect x="542" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="542" y="114" width="218" height="4" rx="2" fill="#4ade80"/>
+  <text x="651" y="142" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">아웃라이트 매각</text>
+  <text x="651" y="168" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">완전 매각</text>
+  <text x="651" y="190" text-anchor="middle" fill="#7d8590" font-size="11">Xbox 사업 통째로 매각</text>
+  <text x="651" y="208" text-anchor="middle" fill="#7d8590" font-size="11">최대 현금 확보 가능</text>
+
+  <!-- Why divesting Xbox -->
+  <rect x="40" y="240" width="348" height="120" rx="8" fill="#161b22"/>
+  <rect x="40" y="240" width="348" height="4" rx="2" fill="#4ade80"/>
+  <text x="214" y="268" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">Xbox 매각 이유</text>
+  <text x="60" y="292" fill="#e6edf3" font-size="12">AI·Azure 집중 위한 자원 재배분</text>
+  <text x="60" y="314" fill="#e6edf3" font-size="12">게임 사업 성장률 둔화</text>
+  <text x="60" y="334" fill="#7d8590" font-size="11">Activision 인수 비용 회수 전략</text>
+  <text x="60" y="352" fill="#7d8590" font-size="11">고성장 AI·클라우드로 포커스 이동</text>
+
+  <!-- Cash position -->
+  <rect x="412" y="240" width="348" height="120" rx="8" fill="#0d1f14" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="586" y="268" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">현금 포지션 (6/19)</text>
+  <text x="586" y="310" text-anchor="middle" fill="#4ade80" font-size="36" font-weight="800">$103.8B</text>
+  <text x="586" y="334" text-anchor="middle" fill="#7d8590" font-size="11">역대 최고 수준 현금 보유</text>
+  <text x="586" y="352" text-anchor="middle" fill="#7d8590" font-size="11">M&amp;A·AI투자 화약고 역할</text>
+
+  <!-- Analyst take -->
+  <rect x="40" y="376" width="720" height="56" rx="8" fill="#1c1026"/>
+  <text x="400" y="400" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="600">투자자 관점</text>
+  <text x="400" y="420" text-anchor="middle" fill="#e6edf3" font-size="12">Xbox 매각 → AI·Azure 집중 선언 = Copilot·Azure RPO $700B 성장 가속 기대</text>
+
+  <line x1="40" y1="444" x2="760" y2="444" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="460" text-anchor="middle" fill="#444c56" font-size="10">출처: Sawyer Merritt / Bloomberg · investus.kr</text>
+</svg>

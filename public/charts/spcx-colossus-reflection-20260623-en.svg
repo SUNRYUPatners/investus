@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">SPCX · SpaceX Colossus AI</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Reflection AI — $6.3B Compute Deal</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">$100M/mo · Through 2029 · Immediate NVIDIA GB300 access · 3rd major client</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Deal size highlight -->
+  <rect x="40" y="112" width="720" height="80" rx="8" fill="#1c1026"/>
+  <text x="400" y="148" text-anchor="middle" fill="#c084fc" font-size="42" font-weight="800">$6.3B</text>
+  <text x="400" y="174" text-anchor="middle" fill="#7d8590" font-size="12">$100M/month × ~63 months (Jul 2026 – 2029) · Dedicated compute contract</text>
+
+  <!-- Colossus customer list -->
+  <rect x="40" y="208" width="720" height="130" rx="8" fill="#161b22"/>
+  <rect x="40" y="208" width="720" height="4" rx="2" fill="#c084fc"/>
+  <text x="400" y="234" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">Colossus AI Data Center — Client Roster</text>
+
+  <rect x="60" y="248" width="196" height="74" rx="6" fill="#0d1117"/>
+  <text x="158" y="272" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="700">Anthropic</text>
+  <text x="158" y="294" text-anchor="middle" fill="#7d8590" font-size="11">Compute deal</text>
+  <text x="158" y="310" text-anchor="middle" fill="#7d8590" font-size="11">Claude model training</text>
+
+  <rect x="302" y="248" width="196" height="74" rx="6" fill="#0d1117"/>
+  <text x="400" y="272" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="700">Google (GOOGL)</text>
+  <text x="400" y="294" text-anchor="middle" fill="#7d8590" font-size="11">Compute deal</text>
+  <text x="400" y="310" text-anchor="middle" fill="#7d8590" font-size="11">Gemini model training</text>
+
+  <rect x="544" y="248" width="196" height="74" rx="6" fill="#4b2d6b"/>
+  <rect x="544" y="248" width="196" height="4" rx="2" fill="#c084fc"/>
+  <text x="642" y="272" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="700">Reflection AI</text>
+  <text x="642" y="294" text-anchor="middle" fill="#e6edf3" font-size="11">$6.38B · NEW</text>
+  <text x="642" y="310" text-anchor="middle" fill="#7d8590" font-size="11">Immediate GB300 access</text>
+
+  <!-- What is Reflection AI -->
+  <rect x="40" y="354" width="720" height="80" rx="8" fill="#161b22"/>
+  <text x="60" y="378" fill="#e6edf3" font-size="12" font-weight="600">Who Is Reflection AI?</text>
+  <text x="60" y="400" fill="#7d8590" font-size="11">AI startup with $11B revenue base — rapidly scaling AI inference infrastructure</text>
+  <text x="60" y="420" fill="#7d8590" font-size="11">GB300 (Blackwell Ultra) first-mover advantage · SpaceX secures recurring AI revenue</text>
+
+  <line x1="40" y1="446" x2="760" y2="446" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="462" text-anchor="middle" fill="#444c56" font-size="10">Source: @evan / SpaceX filings · investus.kr</text>
+</svg>
