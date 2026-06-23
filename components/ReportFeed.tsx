@@ -304,10 +304,14 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
     setFailedImgs((prev) => new Set(prev).add(idx));
   }, []);
 
-  const effectiveImages = (lang === "en" && report.imagesEn && report.imagesEn.length > 0)
+  const isEn = lang === "en";
+  const effectiveImages = (isEn && report.imagesEn && report.imagesEn.length > 0)
     ? report.imagesEn
     : report.images;
   const hasImages = effectiveImages && effectiveImages.length > 0;
+  const displayTitle   = (isEn && report.titleEn)   ? report.titleEn   : report.title;
+  const displaySummary = (isEn && report.summaryEn) ? report.summaryEn : report.summary;
+  const displayBody    = (isEn && report.bodyEn)    ? report.bodyEn    : report.body;
 
   // 이미지 전용 리포트: 이미지만 카드에 바로 표시 (이미지 실패 시 summary로 fallback)
   if (report.imageOnly && hasImages) {
@@ -349,12 +353,12 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
               className="text-sm font-bold leading-snug mb-3"
               style={{ color: "var(--text)" }}
             >
-              {report.title}
+              {displayTitle}
             </h3>
             {allFailed ? (
               // 이미지 전부 실패 시 summary 텍스트로 폴백
               <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                {report.summary}
+                {displaySummary}
               </p>
             ) : (
               <ImageGrid
@@ -412,11 +416,11 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
             className="text-sm font-bold leading-snug flex-1 min-w-0"
             style={{ color: "var(--text)" }}
           >
-            {report.title}
+            {displayTitle}
           </h3>
           <ShareButton
-            title={report.title}
-            text={`[Investus 리포트] ${report.title}\n${report.summary?.slice(0, 80) ?? ""}`}
+            title={displayTitle}
+            text={`[Investus 리포트] ${displayTitle}\n${displaySummary?.slice(0, 80) ?? ""}`}
             url={`https://www.investus.kr/insight`}
             size="sm"
           />
@@ -433,7 +437,7 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
             overflow: open ? "visible" : "hidden",
           }}
         >
-          {report.summary}
+          {displaySummary}
         </p>
 
         {/* More button */}
@@ -485,7 +489,7 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
             </div>
           )}
 
-          {report.body.split("\n").map((line, i) => {
+          {displayBody.split("\n").map((line, i) => {
             if (line.startsWith("■")) {
               return (
                 <p key={i} className="text-xs font-bold mt-4 mb-1.5 first:mt-0"
