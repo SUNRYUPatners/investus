@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">SPCX · ARK Invest 역발상 매수</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Cathie Wood SPCX $22M 매수 — IPO 이후 -16% 조정 직후 역발상 매수</text>
+
+  <!-- Big number highlight -->
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#1a0a24" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="128" font-family="Arial,sans-serif" font-size="52" fill="#c084fc" font-weight="700" text-anchor="middle">$22,000,000+</text>
+  <text x="540" y="164" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">ARK Invest · Cathie Wood · SPCX 매수 금액</text>
+
+  <!-- Three columns -->
+  <rect x="24" y="194" width="322" height="216" rx="10" fill="#111318"/>
+  <text x="185" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">매수 배경</text>
+  <rect x="40" y="234" width="290" height="164" rx="8" fill="#1a0a24"/>
+  <text x="56" y="260" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700">SPCX 가격 흐름</text>
+  <text x="56" y="284" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• IPO 공모가: $200</text>
+  <text x="56" y="304" font-family="Arial,sans-serif" font-size="12" fill="#f87171">• IPO 이후 조정: $168 (-16%)</text>
+  <text x="56" y="324" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">• ARK 매수 시점 → 역발상</text>
+  <text x="56" y="350" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">단기 패닉 매도 이후</text>
+  <text x="56" y="368" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">기관 투자자의 냉정한 판단</text>
+  <text x="56" y="388" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">ARK는 -16%를 기회로 봤다</text>
+
+  <rect x="362" y="194" width="334" height="216" rx="10" fill="#111318"/>
+  <text x="529" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">ARK 논리</text>
+  <rect x="378" y="234" width="302" height="164" rx="8" fill="#161b22"/>
+  <text x="394" y="260" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">SpaceX 펀더멘털 이상 없음</text>
+  <text x="394" y="284" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 채권 $89B 초과 수요 → 신용 최고</text>
+  <text x="394" y="304" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Starlink 9,200만 구독자 성장 중</text>
+  <text x="394" y="324" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Colossus AI 데이터센터 가동</text>
+  <text x="394" y="344" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Starship 발사 비용 혁신 지속</text>
+  <text x="394" y="372" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">단기 가격 ≠ 장기 가치</text>
+  <text x="394" y="392" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">펀더멘털 변화 없이 가격만 하락</text>
+
+  <rect x="712" y="194" width="344" height="216" rx="10" fill="#111318"/>
+  <text x="884" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Cathie Wood 철학</text>
+  <rect x="728" y="234" width="312" height="164" rx="8" fill="#0a1528"/>
+  <text x="884" y="262" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" font-weight="700" text-anchor="middle">"공포에 사라"</text>
+  <text x="884" y="290" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Buy the fear, sell the greed</text>
+  <text x="744" y="322" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• -16% 단기 조정 = 장기 진입 기회</text>
+  <text x="744" y="342" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• ARK의 파괴적 혁신 투자 철학</text>
+  <text x="744" y="362" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 5~10년 지평선으로 판단</text>
+  <text x="744" y="382" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 기관 투자자의 장기 신뢰 신호</text>
+
+  <rect x="24" y="426" width="1032" height="68" rx="10" fill="#1a0a24" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="454" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">ARK $22M 역발상 매수 = SpaceX 장기 가치 기관 공식 확인</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">채권 흥행 + 구독자 성장 + AI 인프라 + Starship — 모든 펀더멘털 호재 지속 중</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: ARK Invest · 2026.06.24 · Investus</text>
+</svg>

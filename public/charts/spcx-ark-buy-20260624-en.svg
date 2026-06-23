@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">SPCX · ARK Invest Contrarian Buy</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Cathie Wood Buys SPCX $22M — Right After IPO -16% Drop · Contrarian Call</text>
+
+  <!-- Big number highlight -->
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#1a0a24" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="128" font-family="Arial,sans-serif" font-size="52" fill="#c084fc" font-weight="700" text-anchor="middle">$22,000,000+</text>
+  <text x="540" y="164" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">ARK Invest · Cathie Wood · SPCX Purchase Amount</text>
+
+  <!-- Three columns -->
+  <rect x="24" y="194" width="322" height="216" rx="10" fill="#111318"/>
+  <text x="185" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Buy Context</text>
+  <rect x="40" y="234" width="290" height="164" rx="8" fill="#1a0a24"/>
+  <text x="56" y="260" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700">SPCX Price Action</text>
+  <text x="56" y="284" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• IPO price: $200</text>
+  <text x="56" y="304" font-family="Arial,sans-serif" font-size="12" fill="#f87171">• Post-IPO correction: $168 (-16%)</text>
+  <text x="56" y="324" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">• ARK buys here → contrarian</text>
+  <text x="56" y="350" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">After short-term panic selling</text>
+  <text x="56" y="368" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Institutional calm judgment</text>
+  <text x="56" y="388" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">ARK saw -16% as opportunity</text>
+
+  <rect x="362" y="194" width="334" height="216" rx="10" fill="#111318"/>
+  <text x="529" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">ARK Logic</text>
+  <rect x="378" y="234" width="302" height="164" rx="8" fill="#161b22"/>
+  <text x="394" y="260" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">SpaceX Fundamentals Intact</text>
+  <text x="394" y="284" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Bond $89B demand → best-in-class credit</text>
+  <text x="394" y="304" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Starlink 92M subscribers growing</text>
+  <text x="394" y="324" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Colossus AI data center operational</text>
+  <text x="394" y="344" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Starship launch cost revolution ongoing</text>
+  <text x="394" y="372" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">Price ≠ Value in the short term</text>
+  <text x="394" y="392" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Only price dropped, not fundamentals</text>
+
+  <rect x="712" y="194" width="344" height="216" rx="10" fill="#111318"/>
+  <text x="884" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Cathie Wood Philosophy</text>
+  <rect x="728" y="234" width="312" height="164" rx="8" fill="#0a1528"/>
+  <text x="884" y="262" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" font-weight="700" text-anchor="middle">"Buy the Fear"</text>
+  <text x="884" y="290" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Sell the greed, buy the fear</text>
+  <text x="744" y="322" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• -16% short-term = long-term entry</text>
+  <text x="744" y="342" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• ARK's disruptive innovation thesis</text>
+  <text x="744" y="362" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 5–10 year investment horizon</text>
+  <text x="744" y="382" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Institutional long-term confidence signal</text>
+
+  <rect x="24" y="426" width="1032" height="68" rx="10" fill="#1a0a24" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="454" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">ARK $22M Contrarian Buy = Institutional Confirmation of SpaceX Long-term Value</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Bond oversubscription + subscriber growth + AI infra + Starship — all fundamentals intact</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: ARK Invest · 2026.06.24 · Investus</text>
+</svg>
