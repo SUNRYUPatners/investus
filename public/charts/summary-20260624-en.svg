@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 700" width="1080" height="700">
+  <rect width="1080" height="700" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">Market Summary · 2026.06.24</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600">TSLA Accident Misinformation · Q2 440K · FSD Europe · Megapack · SpaceX $89B · Grok5 · USD High</text>
+
+  <rect x="24" y="78" width="1032" height="80" rx="12" fill="#180820" stroke="#f87171" stroke-width="1.5"/>
+  <text x="540" y="108" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">6 Key Themes · June 24</text>
+  <text x="540" y="142" font-family="Arial,sans-serif" font-size="21" fill="#f87171" font-weight="700" text-anchor="middle">Legacy Media Misinformation Confirmed — Tesla Accident Was Driver Fault (100% Accelerator)</text>
+
+  <rect x="24" y="174" width="333" height="132" rx="10" fill="#180808"/>
+  <rect x="24" y="174" width="333" height="4" rx="2" fill="#f87171"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="12" fill="#f87171" font-weight="700">🚨 TSLA Accident Misinformation</text>
+  <text x="40" y="228" font-family="Arial,sans-serif" font-size="18" fill="#f87171" font-weight="700">Legacy Media = Unreliable</text>
+  <text x="40" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Driver pressed accelerator 100% = driver fault</text>
+  <text x="40" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Tesla AI VP Ashok confirmed with data</text>
+  <text x="40" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Media reported "Tesla defect" → misinformation</text>
+
+  <rect x="373" y="174" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="373" y="174" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="389" y="200" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🚗 TSLA Q2 Delivery Forecast</text>
+  <text x="389" y="234" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" font-weight="700">440,714 Cars</text>
+  <text x="389" y="256" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Kalshi prediction market · Jul 22 1pm PDT</text>
+  <text x="389" y="274" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Analyst @colaoptimist: 445K forecast</text>
+  <text x="389" y="292" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Est. $22.3B revenue · $4.05B net income</text>
+
+  <rect x="722" y="174" width="334" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="722" y="174" width="334" height="4" rx="2" fill="#00e5a0"/>
+  <text x="738" y="200" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🇪🇺 TSLA FSD Europe Finland</text>
+  <text x="738" y="228" font-family="Arial,sans-serif" font-size="19" fill="#00e5a0" font-weight="700">6th EU Country Imminent</text>
+  <text x="738" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Approved: NL · LT · EE · DK · BE</text>
+  <text x="738" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">EU registrations 2x YoY · 28,810 in May</text>
+  <text x="738" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">4 consecutive months of growth</text>
+
+  <rect x="24" y="322" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="24" y="322" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="40" y="348" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🔋 TSLA Megapack</text>
+  <text x="40" y="384" font-family="Arial,sans-serif" font-size="32" fill="#00e5a0" font-weight="700">$3.5B</text>
+  <text x="40" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">NorthPower Contract · 25GWh</text>
+  <text x="40" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Italy + UK deployment · Largest EU ESS deal</text>
+  <text x="40" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Tesla Home AI energy management in Powerwall</text>
+
+  <rect x="373" y="322" width="333" height="132" rx="10" fill="#1a0a24"/>
+  <rect x="373" y="322" width="333" height="4" rx="2" fill="#c084fc"/>
+  <text x="389" y="348" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">🚀 SpaceX Bond Demand</text>
+  <text x="389" y="384" font-family="Arial,sans-serif" font-size="32" fill="#c084fc" font-weight="700">$89B</text>
+  <text x="389" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">2.5x oversubscribed on $35B offering</text>
+  <text x="389" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">5 tranches · 2031–2056 · Investment grade</text>
+  <text x="389" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">ARK Invest bought $22M+ after -16% drop</text>
+
+  <rect x="722" y="322" width="334" height="132" rx="10" fill="#0a1528"/>
+  <rect x="722" y="322" width="334" height="4" rx="2" fill="#60a5fa"/>
+  <text x="738" y="348" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700">🤖 xAI Grok 5</text>
+  <text x="738" y="384" font-family="Arial,sans-serif" font-size="26" fill="#60a5fa" font-weight="700">10 Trillion Params</text>
+  <text x="738" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">Most capable AI model ever predicted</text>
+  <text x="738" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Currently training · Most anticipated AI launch</text>
+  <text x="738" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Massive scale jump beyond Grok 4</text>
+
+  <rect x="24" y="470" width="510" height="132" rx="10" fill="#1a1500"/>
+  <rect x="24" y="470" width="510" height="4" rx="2" fill="#fbbf24"/>
+  <text x="40" y="496" font-family="Arial,sans-serif" font-size="12" fill="#fbbf24" font-weight="700">🌐 Macro Economy</text>
+  <text x="40" y="522" font-family="Arial,sans-serif" font-size="22" fill="#fbbf24" font-weight="700">USD 13-Month High · DXY 101+</text>
+  <text x="40" y="546" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">2026 rate projection 3.8% · Oil tumbling ~$70</text>
+  <text x="40" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Kevin Warsh hawkish Fed speech → risk-off</text>
+  <text x="40" y="584" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Iran: Fully agreed to highest-level nuclear inspections (Trump)</text>
+
+  <rect x="550" y="470" width="506" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="550" y="470" width="506" height="4" rx="2" fill="#00e5a0"/>
+  <text x="566" y="496" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🤖 TSLA Optimus + SPCX Starlink</text>
+  <text x="566" y="522" font-family="Arial,sans-serif" font-size="19" fill="#00e5a0" font-weight="700">China Supply Chain · 92M Starlink Subs</text>
+  <text x="566" y="546" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">Mink Automation · Asia Optical motor partners</text>
+  <text x="566" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Starlink — world's fastest-growing subscription</text>
+  <text x="566" y="584" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Tesla DeepSeek voice assistant · Q4 2026 OTA</text>
+
+  <text x="540" y="678" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.24 · Investus · For reference only</text>
+</svg>

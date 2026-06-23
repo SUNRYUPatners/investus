@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { TrendingUp, TrendingDown, ChevronRight, Wallet, ChevronDown, ChevronUp } from "lucide-react";
 import { usePortfolio } from "@/hooks/usePortfolio";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+import { isMarketOpen } from "@/lib/marketHours";
 
 type LiveQ = { symbol: string; shortName: string; price: number; changePercent: number };
 type Cur   = "USD" | "KRW";
@@ -80,11 +81,24 @@ export function PortfolioWidget() {
 
     applyCache();
 
-    // Auto-sync whenever LiveMarket refreshes the cache
+    // Auto-sync whenever LiveMarket refreshes the cache (StorageEvent)
     const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(); };
     window.addEventListener("storage", onStorage);
 
-    return () => window.removeEventListener("storage", onStorage);
+    // Fallback poller: re-read cache every 30s (장 중) / 5분 (장 외)
+    // StorageEvent가 같은 탭에서 놓칠 경우에도 최대 30초 내 반영
+    const tick = () => applyCache();
+    const getDelay = () => {
+      try { return (isMarketOpen() ? 30 : 300) * 1000; } catch { return 60_000; }
+    };
+    let pollId: ReturnType<typeof setTimeout>;
+    const schedule = () => { pollId = setTimeout(() => { tick(); schedule(); }, getDelay()); };
+    schedule();
+
+    return () => {
+      clearTimeout(pollId);
+      window.removeEventListener("storage", onStorage);
+    };
   }, [loaded, holdings.length]);
 
   if (!loaded) return null;

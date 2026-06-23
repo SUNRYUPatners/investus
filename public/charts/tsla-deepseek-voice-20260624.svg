@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 540" width="1080" height="540">
+  <rect width="1080" height="540" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">TSLA · DeepSeek 인카 음성 어시스턴트</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Tesla × DeepSeek AI 통합 — Q4 2026 OTA 업데이트 · BYD도 동시 적용</text>
+
+  <!-- Main card -->
+  <rect x="24" y="78" width="1032" height="84" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="114" font-family="Arial,sans-serif" font-size="18" fill="#00e5a0" font-weight="700" text-anchor="middle">Robyn IntelliCar OTA — DeepSeek 파워드 음성 어시스턴트</text>
+  <text x="540" y="144" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Tesla와 BYD 모두 DeepSeek AI를 인카 보이스 어시스턴트에 통합 · Q4 2026 출시 예정</text>
+
+  <!-- Three columns -->
+  <rect x="24" y="178" width="322" height="260" rx="10" fill="#111318"/>
+  <text x="185" y="206" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">DeepSeek 통합 내용</text>
+  <rect x="40" y="218" width="290" height="204" rx="8" fill="#0d1f14"/>
+  <text x="56" y="244" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 범용 AI 대화 지원</text>
+  <text x="56" y="264" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 차량 관련 정보 서비스</text>
+  <text x="56" y="284" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 기후·미디어·날씨 제어</text>
+  <text x="56" y="304" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 내비게이션 자연어 명령</text>
+  <text x="56" y="324" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Volcano Engine 음성 엔진</text>
+  <text x="56" y="352" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="600">Q4 2026 OTA 업데이트</text>
+  <text x="56" y="372" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">소프트웨어 버전: 2026.11+</text>
+  <text x="56" y="392" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">모든 HW4 차량 지원 예정</text>
+  <text x="56" y="412" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">인터넷 연결 필요</text>
+
+  <rect x="362" y="178" width="334" height="260" rx="10" fill="#111318"/>
+  <text x="529" y="206" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">경쟁 구도 변화</text>
+  <rect x="378" y="218" width="302" height="90" rx="8" fill="#0d1f14"/>
+  <text x="529" y="246" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">Tesla 적용</text>
+  <text x="529" y="268" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">DeepSeek R3 + Volcano Engine</text>
+  <text x="529" y="288" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Model X/S/3/Y · Cybertruck 포함</text>
+  <text x="529" y="306" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">BYD 개발도 중이나 아직 미확인</text>
+
+  <rect x="378" y="318" width="302" height="90" rx="8" fill="#161b22"/>
+  <text x="529" y="344" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700" text-anchor="middle">DeepSeek 선택 이유</text>
+  <text x="394" y="366" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• GPT-4급 성능 · 저비용</text>
+  <text x="394" y="386" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 중국 시장 최적화</text>
+  <text x="394" y="406" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 오픈소스 기반 커스터마이징</text>
+
+  <rect x="712" y="178" width="344" height="260" rx="10" fill="#111318"/>
+  <text x="884" y="206" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">투자 임팩트</text>
+  <rect x="728" y="218" width="312" height="90" rx="8" fill="#1a0a24"/>
+  <text x="884" y="244" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700" text-anchor="middle">소프트웨어 수익화 가속</text>
+  <text x="744" y="268" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• AI 어시스턴트 구독 수익 잠재</text>
+  <text x="744" y="288" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 차량 소프트웨어 가치 상승</text>
+  <text x="744" y="306" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• FSD + AI 어시스턴트 결합 효과</text>
+
+  <rect x="728" y="318" width="312" height="90" rx="8" fill="#161b22"/>
+  <text x="884" y="344" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">Tesla AI 생태계</text>
+  <text x="744" y="366" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• FSD + Optimus + 음성AI</text>
+  <text x="744" y="386" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 차량이 AI 플랫폼으로 진화</text>
+  <text x="744" y="406" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 중국 경쟁사 대비 차별화</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="454" width="1032" height="62" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="480" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" font-weight="700" text-anchor="middle">Tesla 인카 AI = FSD + 음성 어시스턴트 + Optimus의 통합 플랫폼</text>
+  <text x="540" y="502" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">차량이 단순 이동수단에서 AI 인터페이스로 전환 · 소프트웨어 마진 80%+ 구독 모델</text>
+
+  <text x="540" y="530" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: TeslaZoe · Teslascope · 2026.06.24 · Investus</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 620" width="1080" height="620">
+  <rect width="1080" height="620" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#fbbf24" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700">매크로 · 2026.06.24</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">달러 13개월 최고 · 금리 3.8% · 유가 $70 하락 · 이란 핵합의</text>
+
+  <!-- Dollar section -->
+  <rect x="24" y="78" width="500" height="200" rx="10" fill="#111318"/>
+  <text x="274" y="106" font-family="Arial,sans-serif" font-size="15" fill="#fbbf24" font-weight="700" text-anchor="middle">💵 달러 인덱스 (DXY)</text>
+
+  <rect x="40" y="118" width="468" height="64" rx="8" fill="#1a1500"/>
+  <text x="274" y="146" font-family="Arial,sans-serif" font-size="32" fill="#fbbf24" font-weight="700" text-anchor="middle">DXY 101+</text>
+  <text x="274" y="172" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">13개월 만의 최고점 · 2025년 5월 이후 최고</text>
+
+  <rect x="40" y="192" width="222" height="70" rx="8" fill="#161b22"/>
+  <text x="151" y="218" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">주요 원인</text>
+  <text x="56" y="240" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• Kevin Warsh 매파 발언</text>
+  <text x="56" y="256" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• Fed 금리 전망 상향</text>
+
+  <rect x="274" y="192" width="234" height="70" rx="8" fill="#161b22"/>
+  <text x="391" y="218" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">시장 영향</text>
+  <text x="290" y="240" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 위험자산 매도 압박</text>
+  <text x="290" y="256" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 신흥국 자금 이탈</text>
+
+  <!-- Iran section -->
+  <rect x="540" y="78" width="516" height="200" rx="10" fill="#111318"/>
+  <text x="798" y="106" font-family="Arial,sans-serif" font-size="15" fill="#fbbf24" font-weight="700" text-anchor="middle">🇮🇷 이란-미국 핵협상</text>
+
+  <rect x="556" y="118" width="484" height="76" rx="8" fill="#1a1500" stroke="#fbbf24" stroke-width="1"/>
+  <text x="798" y="148" font-family="Arial,sans-serif" font-size="14" fill="#fbbf24" font-weight="700" text-anchor="middle">Trump 공식 발표</text>
+  <text x="798" y="172" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">"이란이 최고 수준의 핵사찰에</text>
+  <text x="798" y="190" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">완전하고 전면적으로 합의했다"</text>
+
+  <rect x="556" y="204" width="232" height="66" rx="8" fill="#161b22"/>
+  <text x="672" y="228" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">시장 영향</text>
+  <text x="572" y="248" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 지정학적 긴장 완화</text>
+  <text x="572" y="264" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 유가 하락 요인 추가</text>
+
+  <rect x="800" y="204" width="240" height="66" rx="8" fill="#161b22"/>
+  <text x="920" y="228" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">협상 내용</text>
+  <text x="816" y="248" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• IAEA 최고 수준 사찰</text>
+  <text x="816" y="264" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 핵 프로그램 투명성</text>
+
+  <!-- Rate section -->
+  <rect x="24" y="294" width="500" height="200" rx="10" fill="#111318"/>
+  <text x="274" y="322" font-family="Arial,sans-serif" font-size="15" fill="#fbbf24" font-weight="700" text-anchor="middle">📈 금리 전망 상향</text>
+
+  <rect x="40" y="334" width="468" height="56" rx="8" fill="#1a1500"/>
+  <text x="274" y="362" font-family="Arial,sans-serif" font-size="30" fill="#fbbf24" font-weight="700" text-anchor="middle">2026 금리 전망 3.8%</text>
+  <text x="274" y="384" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">기존 중앙값 3.4% → 3.8%로 상향 · 인플레이션 우려 반영</text>
+
+  <rect x="40" y="400" width="220" height="78" rx="8" fill="#161b22"/>
+  <text x="150" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Bull Theta 분석</text>
+  <text x="56" y="448" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• Fed 인플레 지속 우려</text>
+  <text x="56" y="466" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 금리 인하 기대 후퇴</text>
+  <text x="56" y="484" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 시장 Hawkish 전환</text>
+
+  <rect x="272" y="400" width="236" height="78" rx="8" fill="#161b22"/>
+  <text x="390" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">투자 시사점</text>
+  <text x="288" y="448" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 채권 가격 하락 압박</text>
+  <text x="288" y="466" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 성장주 밸류에이션 부담</text>
+  <text x="288" y="484" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 달러 강세 지속</text>
+
+  <!-- Oil section -->
+  <rect x="540" y="294" width="516" height="200" rx="10" fill="#111318"/>
+  <text x="798" y="322" font-family="Arial,sans-serif" font-size="15" fill="#fbbf24" font-weight="700" text-anchor="middle">🛢️ 유가 급락</text>
+
+  <rect x="556" y="334" width="484" height="56" rx="8" fill="#1a0808"/>
+  <text x="798" y="360" font-family="Arial,sans-serif" font-size="26" fill="#f87171" font-weight="700" text-anchor="middle">~$70/배럴 하락</text>
+  <text x="798" y="384" font-family="Arial,sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">Eric Dougherty: "트럼프 취임 시작가 이하로 하락"</text>
+
+  <rect x="556" y="400" width="232" height="78" rx="8" fill="#161b22"/>
+  <text x="672" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">하락 원인</text>
+  <text x="572" y="448" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 이란 핵합의 진전</text>
+  <text x="572" y="466" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• OPEC+ 증산 우려</text>
+  <text x="572" y="484" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">• 글로벌 수요 둔화</text>
+
+  <rect x="800" y="400" width="240" height="78" rx="8" fill="#161b22"/>
+  <text x="920" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">수혜/피해</text>
+  <text x="816" y="448" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0">✅ EV · 항공 · 소비자</text>
+  <text x="816" y="466" font-family="Arial,sans-serif" font-size="11" fill="#f87171">❌ XOM · CVX · 에너지주</text>
+  <text x="816" y="484" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">Tesla: 에너지 비용 절감</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="510" width="1032" height="78" rx="10" fill="#111318" stroke="#fbbf24" stroke-width="1"/>
+  <text x="540" y="538" font-family="Arial,sans-serif" font-size="15" fill="#fbbf24" font-weight="700" text-anchor="middle">복합 매크로 시나리오</text>
+  <text x="180" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">달러 강세 → 신흥국 압박</text>
+  <line x1="360" y1="522" x2="360" y2="580" stroke="#374151" stroke-width="1"/>
+  <text x="540" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">고금리 + 이란 합의 = 지정학 완화</text>
+  <line x1="720" y1="522" x2="720" y2="580" stroke="#374151" stroke-width="1"/>
+  <text x="900" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">유가 하락 = EV 경쟁력 강화</text>
+
+  <text x="540" y="612" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Bull Theta · Eric Dougherty · Trump X.com · 2026.06.24 · Investus</text>
+</svg>

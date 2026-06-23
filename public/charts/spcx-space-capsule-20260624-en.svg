@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">SPCX · Space Lab Capsule + Starship Starlink</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Independent Space Capsule Planned After CRS-33 · Starship to Achieve Starlink 100Gbps</text>
+
+  <rect x="24" y="78" width="510" height="340" rx="10" fill="#111318"/>
+  <text x="279" y="106" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">🚀 Free-Flying Space Lab Capsule</text>
+
+  <rect x="40" y="118" width="478" height="80" rx="8" fill="#1a0a24"/>
+  <text x="279" y="148" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="700" text-anchor="middle">1,000 kg Payload Capacity</text>
+  <text x="279" y="172" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">= 2,200 lbs · ISS-level research experiments possible</text>
+  <text x="279" y="192" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">SpaceX to launch following CRS-33 mission</text>
+
+  <rect x="40" y="208" width="478" height="194" rx="8" fill="#161b22"/>
+  <text x="56" y="236" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" font-weight="600">Key Features</text>
+  <text x="56" y="260" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Payload: 1,000 kg (ISS-equivalent experiments)</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Mission: In-space Manufacturing</text>
+  <text x="56" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Replaces ISS-scale research facilities</text>
+  <text x="56" y="328" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="600">Applications</text>
+  <text x="56" y="352" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• New materials development (zero-gravity synthesis)</text>
+  <text x="56" y="372" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Pharma and biotech space experiments</text>
+  <text x="56" y="392" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Commercial space station successor to ISS</text>
+
+  <rect x="550" y="78" width="506" height="340" rx="10" fill="#111318"/>
+  <text x="803" y="106" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">🛸 Starship × Starlink 100Gbps</text>
+
+  <rect x="566" y="118" width="474" height="80" rx="8" fill="#1a0a24"/>
+  <text x="803" y="148" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="700" text-anchor="middle">100 Gbps Target</text>
+  <text x="803" y="172" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Starship-launched Starlink satellites = bandwidth revolution</text>
+  <text x="803" y="192" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Massive satellite capacity vs. current Falcon 9</text>
+
+  <rect x="566" y="208" width="474" height="88" rx="8" fill="#161b22"/>
+  <text x="582" y="234" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" font-weight="600">Starship Advantages</text>
+  <text x="582" y="258" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 60x+ payload vs. Falcon 9</text>
+  <text x="582" y="278" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Drastically lower launch costs</text>
+  <text x="582" y="296" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• V3 large satellites = 100Gbps speed</text>
+
+  <rect x="566" y="306" width="474" height="100" rx="8" fill="#161b22"/>
+  <text x="582" y="332" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" font-weight="600">Business Impact</text>
+  <text x="582" y="354" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Enterprise/Gov high-speed internet = $5,000+/month</text>
+  <text x="582" y="374" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Consumer 100Gbps = beyond Netflix competition</text>
+  <text x="582" y="394" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 92M subscribers → massive ARPU increase possible</text>
+
+  <rect x="24" y="434" width="1032" height="66" rx="10" fill="#1a0a24" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="460" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">SpaceX = Space Capsule + Starlink 100Gbps + Colossus AI Triple Growth Engine</text>
+  <text x="540" y="482" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Space infrastructure + ground communications + AI computing = evolving into 21st century core infrastructure company</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: Herbert Chen · SpaceX Announcement · 2026.06.24 · Investus</text>
+</svg>

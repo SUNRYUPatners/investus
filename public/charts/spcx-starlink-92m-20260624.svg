@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 560" width="1080" height="560">
+  <rect width="1080" height="560" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">SPCX Starlink · 구독자 현황</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">9,200만 구독자 · 세계 최대 유료 구독 서비스 성장 중</text>
+
+  <!-- Main number -->
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#1a0a24" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="128" font-family="Arial,sans-serif" font-size="52" fill="#c084fc" font-weight="700" text-anchor="middle">92,000,000</text>
+  <text x="540" y="164" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Starlink 누적 구독자 · 현재 기준</text>
+
+  <!-- Subscription comparison -->
+  <rect x="24" y="194" width="540" height="270" rx="10" fill="#111318"/>
+  <text x="294" y="222" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">유료 구독 서비스 규모 비교</text>
+
+  <!-- Scale: 300M = 180px, 1M = 0.6px, base y=440 -->
+  <!-- Netflix 302M → 302*0.6=181 (cap at 180) y=440-180=260 -->
+  <rect x="44" y="260" width="60" height="180" rx="4" fill="#444c56"/>
+  <text x="74" y="452" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Netflix</text>
+  <text x="74" y="250" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">302M</text>
+
+  <!-- Spotify 260M → 260*0.6=156 y=440-156=284 -->
+  <rect x="124" y="284" width="60" height="156" rx="4" fill="#444c56"/>
+  <text x="154" y="452" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Spotify</text>
+  <text x="154" y="274" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">260M</text>
+
+  <!-- Disney/Hotstar 200M → 200*0.6=120 y=440-120=320 -->
+  <rect x="204" y="320" width="60" height="120" rx="4" fill="#444c56"/>
+  <text x="234" y="452" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Disney+</text>
+  <text x="234" y="310" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">200M</text>
+
+  <!-- iQIYI ~120M → 120*0.6=72 y=440-72=368 -->
+  <rect x="284" y="368" width="60" height="72" rx="4" fill="#444c56"/>
+  <text x="314" y="452" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">iQIYI</text>
+  <text x="314" y="358" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~120M</text>
+
+  <!-- Disney 100M → 100*0.6=60 y=440-60=380 -->
+  <rect x="364" y="380" width="60" height="60" rx="4" fill="#444c56"/>
+  <text x="394" y="452" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Disney</text>
+  <text x="394" y="370" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~100M</text>
+
+  <!-- Starlink 92M → 92*0.6=55.2 y=440-55=385 -->
+  <rect x="444" y="385" width="60" height="55" rx="4" fill="#c084fc" opacity="0.9"/>
+  <text x="474" y="452" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" font-weight="700" text-anchor="middle">Starlink</text>
+  <text x="474" y="375" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="700" text-anchor="middle">92M</text>
+
+  <line x1="34" y1="440" x2="520" y2="440" stroke="#374151" stroke-width="1"/>
+
+  <!-- Growth arrow -->
+  <line x1="474" y1="385" x2="474" y2="270" stroke="#c084fc" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="466,278 474,256 482,278" fill="#c084fc"/>
+  <text x="490" y="268" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="600">성장 예측</text>
+
+  <!-- Right: analysis -->
+  <rect x="580" y="194" width="476" height="270" rx="10" fill="#111318"/>
+  <text x="818" y="222" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">Starlink 성장 분석</text>
+
+  <rect x="596" y="234" width="444" height="72" rx="8" fill="#1a0a24"/>
+  <text x="818" y="258" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700" text-anchor="middle">세계 최대 리커링 구독 예상</text>
+  <text x="818" y="280" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Teslaconomics: "언젠가 Starlink는 세계 최대</text>
+  <text x="818" y="298" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">유료 구독 서비스가 될 것" — Elon 리트윗</text>
+
+  <rect x="596" y="316" width="214" height="80" rx="8" fill="#161b22"/>
+  <text x="703" y="338" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">월 구독료</text>
+  <text x="703" y="362" font-family="Arial,sans-serif" font-size="24" fill="#c084fc" font-weight="700" text-anchor="middle">$120+</text>
+  <text x="703" y="386" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">개인용 기준</text>
+
+  <rect x="826" y="316" width="214" height="80" rx="8" fill="#161b22"/>
+  <text x="933" y="338" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">연환산 ARR</text>
+  <text x="933" y="362" font-family="Arial,sans-serif" font-size="24" fill="#c084fc" font-weight="700" text-anchor="middle">$13B+</text>
+  <text x="933" y="386" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">92M × $120 × 12M</text>
+
+  <rect x="596" y="406" width="444" height="48" rx="8" fill="#0a1528"/>
+  <text x="818" y="428" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">拉斯維加스 Starlink 대형 광고판 등장 (Massive Billboard)</text>
+  <text x="818" y="446" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Tesla FSD 미래 = Starlink 통신 연동 · 자율주행·IoT 인프라</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="480" width="1032" height="56" rx="10" fill="#1a0a24" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="506" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">92M → 300M+ = Starlink의 목표, Netflix보다 큰 구독 제국</text>
+  <text x="540" y="526" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">SpaceX ARR $13B+ · Starship으로 위성 비용 혁신 → 구독자 기하급수 성장 예상</text>
+
+  <text x="540" y="552" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Teslaconomics · Elon Musk X · 2026.06.24 · Investus</text>
+</svg>

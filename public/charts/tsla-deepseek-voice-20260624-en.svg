@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 540" width="1080" height="540">
+  <rect width="1080" height="540" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">TSLA · DeepSeek In-Car Voice Assistant</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Tesla × DeepSeek AI Integration — Q4 2026 OTA Update · BYD Also Adopting</text>
+
+  <rect x="24" y="78" width="1032" height="84" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="114" font-family="Arial,sans-serif" font-size="18" fill="#00e5a0" font-weight="700" text-anchor="middle">Robyn IntelliCar OTA — DeepSeek-Powered Voice Assistant</text>
+  <text x="540" y="144" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Both Tesla and BYD integrating DeepSeek AI into in-car voice assistants · Q4 2026 rollout planned</text>
+
+  <rect x="24" y="178" width="322" height="260" rx="10" fill="#111318"/>
+  <text x="185" y="206" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">DeepSeek Integration</text>
+  <rect x="40" y="218" width="290" height="204" rx="8" fill="#0d1f14"/>
+  <text x="56" y="244" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• General AI conversation support</text>
+  <text x="56" y="264" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Vehicle-related info services</text>
+  <text x="56" y="284" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Climate, media, weather control</text>
+  <text x="56" y="304" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Navigation via natural language</text>
+  <text x="56" y="324" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Volcano Engine voice synthesis</text>
+  <text x="56" y="352" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="600">Q4 2026 OTA Update</text>
+  <text x="56" y="372" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Software version: 2026.11+</text>
+  <text x="56" y="392" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">All HW4 vehicles expected</text>
+  <text x="56" y="412" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Internet connection required</text>
+
+  <rect x="362" y="178" width="334" height="260" rx="10" fill="#111318"/>
+  <text x="529" y="206" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Competitive Shift</text>
+  <rect x="378" y="218" width="302" height="90" rx="8" fill="#0d1f14"/>
+  <text x="529" y="246" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">Tesla Adoption</text>
+  <text x="529" y="268" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">DeepSeek R3 + Volcano Engine</text>
+  <text x="529" y="288" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">X/S/3/Y · Cybertruck included</text>
+  <text x="529" y="306" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">BYD also developing (unconfirmed)</text>
+
+  <rect x="378" y="318" width="302" height="90" rx="8" fill="#161b22"/>
+  <text x="529" y="344" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700" text-anchor="middle">Why DeepSeek?</text>
+  <text x="394" y="366" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• GPT-4 level · low cost</text>
+  <text x="394" y="386" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Optimized for China market</text>
+  <text x="394" y="406" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Open-source for customization</text>
+
+  <rect x="712" y="178" width="344" height="260" rx="10" fill="#111318"/>
+  <text x="884" y="206" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Investment Impact</text>
+  <rect x="728" y="218" width="312" height="90" rx="8" fill="#1a0a24"/>
+  <text x="884" y="244" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700" text-anchor="middle">Software Monetization</text>
+  <text x="744" y="268" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• AI assistant subscription potential</text>
+  <text x="744" y="288" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Vehicle software value increase</text>
+  <text x="744" y="306" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• FSD + AI assistant synergy</text>
+
+  <rect x="728" y="318" width="312" height="90" rx="8" fill="#161b22"/>
+  <text x="884" y="344" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">Tesla AI Ecosystem</text>
+  <text x="744" y="366" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• FSD + Optimus + Voice AI</text>
+  <text x="744" y="386" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Car evolves into AI platform</text>
+  <text x="744" y="406" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Differentiation from China rivals</text>
+
+  <rect x="24" y="454" width="1032" height="62" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="480" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" font-weight="700" text-anchor="middle">Tesla In-Car AI = FSD + Voice Assistant + Optimus Integrated Platform</text>
+  <text x="540" y="502" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Vehicles shift from transport to AI interface · 80%+ software margin subscription model</text>
+
+  <text x="540" y="530" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: TeslaZoe · Teslascope · 2026.06.24 · Investus</text>
+</svg>

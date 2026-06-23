@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 560" width="1080" height="560">
+  <rect width="1080" height="560" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#60a5fa" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">xAI · Grok 5</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">10 Trillion Parameters in Training — Most Capable AI Model Ever · Most Anticipated Launch</text>
+
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#0a1528" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="128" font-family="Arial,sans-serif" font-size="52" fill="#60a5fa" font-weight="700" text-anchor="middle">10,000,000,000,000</text>
+  <text x="540" y="164" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Parameters (10 Trillion) — Currently in training, launch imminent</text>
+
+  <rect x="24" y="194" width="500" height="268" rx="10" fill="#111318"/>
+  <text x="274" y="222" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">AI Model Parameter Scale Comparison</text>
+
+  <rect x="60" y="401" width="60" height="33" rx="4" fill="#444c56"/>
+  <text x="90" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">GPT-4</text>
+  <text x="90" y="392" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~1.7T</text>
+
+  <rect x="150" y="395" width="60" height="39" rx="4" fill="#444c56"/>
+  <text x="180" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Claude</text>
+  <text x="180" y="386" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~2T</text>
+
+  <rect x="240" y="380" width="60" height="54" rx="4" fill="#444c56"/>
+  <text x="270" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Gemini</text>
+  <text x="270" y="371" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~2.8T</text>
+
+  <rect x="330" y="376" width="60" height="58" rx="4" fill="#3b4a6b"/>
+  <text x="360" y="450" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Grok 4</text>
+  <text x="360" y="367" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~3T</text>
+
+  <rect x="420" y="240" width="60" height="194" rx="4" fill="#60a5fa" opacity="0.9"/>
+  <text x="450" y="450" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" text-anchor="middle">Grok 5</text>
+  <text x="450" y="230" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700" text-anchor="middle">10T</text>
+
+  <line x1="50" y1="434" x2="500" y2="434" stroke="#374151" stroke-width="1"/>
+
+  <rect x="540" y="194" width="516" height="268" rx="10" fill="#111318"/>
+  <text x="798" y="222" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">Grok 5 Key Facts</text>
+
+  <rect x="556" y="236" width="484" height="62" rx="8" fill="#0a1528"/>
+  <text x="798" y="260" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700" text-anchor="middle">xAI Official Announcement</text>
+  <text x="798" y="280" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">"Grok 5 trained on up to 10 trillion parameters"</text>
+  <text x="798" y="296" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Currently training · launch approaching</text>
+
+  <rect x="556" y="308" width="230" height="80" rx="8" fill="#161b22"/>
+  <text x="671" y="332" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Scale vs Current</text>
+  <text x="671" y="360" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" font-weight="700" text-anchor="middle">3.5x–6x</text>
+  <text x="671" y="380" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">vs. largest existing model</text>
+
+  <rect x="800" y="308" width="240" height="80" rx="8" fill="#161b22"/>
+  <text x="920" y="332" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Expectation Level</text>
+  <text x="920" y="360" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" font-weight="700" text-anchor="middle">All-Time High</text>
+  <text x="920" y="380" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Most anticipated ever</text>
+
+  <rect x="556" y="398" width="484" height="52" rx="8" fill="#0d1f14"/>
+  <text x="798" y="420" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" text-anchor="middle">Valter Jal (analyst): "One of the most anticipated AI launches in history"</text>
+  <text x="798" y="440" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Massive parameter jump from Grok 4 → shifts AI competitive landscape</text>
+
+  <rect x="24" y="478" width="1032" height="60" rx="10" fill="#0a1528" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="504" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="700" text-anchor="middle">10 Trillion Parameters = A New Threshold for AI Scale</text>
+  <text x="540" y="526" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Parameters define AI capability ceiling · When Grok 5 launches, OpenAI · Anthropic · Google will all need to respond</text>
+
+  <text x="540" y="550" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: xAI official · Valter Jal · 2026.06.24 · Investus</text>
+</svg>

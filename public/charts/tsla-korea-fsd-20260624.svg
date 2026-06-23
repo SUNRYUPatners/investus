@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 500" width="1080" height="500">
+  <rect width="1080" height="500" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">TSLA · 한국 FSD 이전 프로모션</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">전세계 유일 FSD 이전 가능 시장 — 한국만 프로모션 연장 · 9월 30일까지</text>
+
+  <!-- Main highlight -->
+  <rect x="24" y="78" width="1032" height="80" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="112" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" font-weight="700" text-anchor="middle">🇰🇷 한국 = 전세계 유일 FSD 이전 프로모션 시장</text>
+  <text x="540" y="148" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">기존 FSD 라이선스를 신규 HW4+ 차량으로 무료 이전 · 2026년 9월 30일 마감</text>
+
+  <!-- Three columns -->
+  <rect x="24" y="174" width="322" height="218" rx="10" fill="#111318"/>
+  <text x="185" y="202" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">프로모션 내용</text>
+  <rect x="40" y="214" width="290" height="166" rx="8" fill="#0d1f14"/>
+  <text x="56" y="240" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 기존 FSD 구매 고객 대상</text>
+  <text x="56" y="260" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 신규 HW4+ 차량 구매 시</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• FSD 라이선스 무료 이전</text>
+  <text x="56" y="308" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700">마감: 2026. 9. 30</text>
+  <text x="56" y="330" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Tesla Korea 공식 확인</text>
+  <text x="56" y="350" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">HW4(또는 그 이상) 차량 필요</text>
+  <text x="56" y="370" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">기존 FSD 활성화 차량 보유 필요</text>
+
+  <rect x="362" y="174" width="334" height="218" rx="10" fill="#111318"/>
+  <text x="529" y="202" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">왜 한국만 가능한가</text>
+  <rect x="378" y="214" width="302" height="166" rx="8" fill="#161b22"/>
+  <text x="394" y="240" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 미국: FSD 이전 프로그램 종료</text>
+  <text x="394" y="260" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 유럽: FSD 이전 미지원</text>
+  <text x="394" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 중국: FSD 이전 없음</text>
+  <text x="394" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 일본/기타: 미지원</text>
+  <text x="378" y="328" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="600">한국 = 전세계 유일</text>
+  <text x="394" y="350" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Tesla Korea 독자 판매 전략</text>
+  <text x="394" y="370" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">한국 시장 고객 충성도 강화</text>
+
+  <rect x="712" y="174" width="344" height="218" rx="10" fill="#111318"/>
+  <text x="884" y="202" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">투자자 시사점</text>
+  <rect x="728" y="214" width="312" height="166" rx="8" fill="#0d1f14"/>
+  <text x="744" y="240" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">✅ HW4 차량 판매 촉진</text>
+  <text x="744" y="260" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">✅ FSD 구독자 수 유지</text>
+  <text x="744" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">✅ 한국 프리미엄 고객 유지</text>
+  <text x="744" y="308" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="600">신규 FSD 가격 $8,000~$15,000</text>
+  <text x="744" y="330" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">이전 혜택으로 업그레이드 유도</text>
+  <text x="744" y="350" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">HW4 전환 = 더 나은 FSD 성능</text>
+  <text x="744" y="370" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">비감독 FSD 확산 발판</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="408" width="1032" height="68" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="436" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" font-weight="700" text-anchor="middle">한국 FSD 이전 = HW4 업그레이드 사이클 가속 전략</text>
+  <text x="540" y="458" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">9월 30일 마감 전 신차 구매 수요 집중 예상 · FSD 구독자 전환율 상승 기대</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">한국 Tesla 판매량 Q3 2026 증가 가능성 · 소프트웨어 수익 유지</text>
+
+  <text x="540" y="492" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Tesla Korea 공식 발표 · Sawyer Merritt · 2026.06.24 · Investus</text>
+</svg>

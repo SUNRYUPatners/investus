@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">SPCX · 우주 실험실 캡슐 + Starship Starlink</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">CRS-33 이후 독립 우주 캡슐 계획 · Starship으로 Starlink 100Gbps 목표</text>
+
+  <!-- Two columns -->
+  <rect x="24" y="78" width="510" height="340" rx="10" fill="#111318"/>
+  <text x="279" y="106" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">🚀 자유 비행 우주 실험실 캡슐</text>
+
+  <rect x="40" y="118" width="478" height="80" rx="8" fill="#1a0a24"/>
+  <text x="279" y="148" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="700" text-anchor="middle">1,000 kg 탑재 용량</text>
+  <text x="279" y="172" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">= 2,200 lbs · 독립 우주 정거장 수준 실험 가능</text>
+  <text x="279" y="192" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">CRS-33 미션 이후 SpaceX가 발사 예정</text>
+
+  <rect x="40" y="208" width="478" height="194" rx="8" fill="#161b22"/>
+  <text x="56" y="236" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" font-weight="600">주요 특징</text>
+  <text x="56" y="260" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 탑재량: 1,000kg (ISS 수준의 실험 가능)</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 미션: 우주 내 제조(In-space Manufacturing)</text>
+  <text x="56" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• ISS 규모의 연구·실험 시설 대체</text>
+  <text x="56" y="328" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="600">활용 분야</text>
+  <text x="56" y="352" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 신소재 개발 (무중력 합성)</text>
+  <text x="56" y="372" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 제약·바이오 우주 실험</text>
+  <text x="56" y="392" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• ISS 후속 상업 우주 정거장</text>
+
+  <!-- Right: Starship Starlink -->
+  <rect x="550" y="78" width="506" height="340" rx="10" fill="#111318"/>
+  <text x="803" y="106" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">🛸 Starship × Starlink 100Gbps</text>
+
+  <rect x="566" y="118" width="474" height="80" rx="8" fill="#1a0a24"/>
+  <text x="803" y="148" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="700" text-anchor="middle">100 Gbps 목표</text>
+  <text x="803" y="172" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Starship으로 Starlink 위성 발사 = 대역폭 혁신</text>
+  <text x="803" y="192" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">현재 Falcon 9 대비 대용량 위성 탑재 가능</text>
+
+  <rect x="566" y="208" width="474" height="88" rx="8" fill="#161b22"/>
+  <text x="582" y="234" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" font-weight="600">Starship 이점</text>
+  <text x="582" y="258" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Falcon 9 대비 60배+ 탑재량</text>
+  <text x="582" y="278" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 발사 비용 대폭 절감</text>
+  <text x="582" y="296" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• V3 대형 위성 = 100Gbps 속도</text>
+
+  <rect x="566" y="306" width="474" height="100" rx="8" fill="#161b22"/>
+  <text x="582" y="332" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" font-weight="600">사업 임팩트</text>
+  <text x="582" y="354" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 기업·정부용 고속 인터넷 = 단가 $5000+/월</text>
+  <text x="582" y="374" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 개인용 100Gbps = Netflix 경쟁 초월</text>
+  <text x="582" y="394" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 92M 구독자 → ARPU 대폭 상승 가능</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="434" width="1032" height="66" rx="10" fill="#1a0a24" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="460" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">SpaceX = 우주 캡슐 + Starlink 100Gbps + Colossus AI 삼각 성장 엔진</text>
+  <text x="540" y="482" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">우주 인프라 + 지상 통신 + AI 컴퓨팅 = 21세기 핵심 인프라 기업으로 진화</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Herbert Chen · SpaceX 발표 · 2026.06.24 · Investus</text>
+</svg>

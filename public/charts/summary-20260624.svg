@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 700" width="1080" height="700">
+  <rect width="1080" height="700" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">시장분석 · 2026.06.24</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600">TSLA 사고 오보 · Q2 440K · FSD 유럽 · Megapack $3.5B · SpaceX $89B · Grok5 · 달러 최고</text>
+
+  <!-- Wide feature card -->
+  <rect x="24" y="78" width="1032" height="80" rx="12" fill="#180820" stroke="#f87171" stroke-width="1.5"/>
+  <text x="540" y="108" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">6/24 핵심</text>
+  <text x="540" y="142" font-family="Arial,sans-serif" font-size="21" fill="#f87171" font-weight="700" text-anchor="middle">레거시 미디어 오보 — 테슬라 사고 진실은 운전자 엑셀 과실, Tesla 결함 아님</text>
+
+  <!-- Row 1 -->
+  <!-- Card 1: 사고 오보 -->
+  <rect x="24" y="174" width="333" height="132" rx="10" fill="#180808"/>
+  <rect x="24" y="174" width="333" height="4" rx="2" fill="#f87171"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="12" fill="#f87171" font-weight="700">🚨 TSLA 사고 오보</text>
+  <text x="40" y="228" font-family="Arial,sans-serif" font-size="21" fill="#f87171" font-weight="700">레거시 미디어 신뢰 불가</text>
+  <text x="40" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">운전자 엑셀 100% 밟음 = 운전자 과실</text>
+  <text x="40" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Tesla AI VP Ashok 데이터로 공식 확인</text>
+  <text x="40" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">미디어는 "Tesla 결함" 오보 → 가짜 뉴스</text>
+  <text x="40" y="298" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">속도 73mph · 주거지역 · 수동 오버라이드</text>
+
+  <!-- Card 2: Q2 440K -->
+  <rect x="373" y="174" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="373" y="174" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="389" y="200" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🚗 TSLA Q2 인도 예측</text>
+  <text x="389" y="234" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" font-weight="700">440,714대</text>
+  <text x="389" y="256" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Kalshi 예측시장 · 7월 22일 1pm PDT</text>
+  <text x="389" y="274" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">애널리스트 @colaoptimist 445K 예측</text>
+  <text x="389" y="292" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">전 분기 대비 +28% 회복 전망</text>
+  <text x="389" y="298" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">$22.3B 매출 · $4.05B 순이익 예상</text>
+
+  <!-- Card 3: FSD 유럽 -->
+  <rect x="722" y="174" width="334" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="722" y="174" width="334" height="4" rx="2" fill="#00e5a0"/>
+  <text x="738" y="200" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🇪🇺 TSLA FSD 유럽 핀란드</text>
+  <text x="738" y="228" font-family="Arial,sans-serif" font-size="21" fill="#00e5a0" font-weight="700">6번째 EU 국가 승인 임박</text>
+  <text x="738" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">5개국 승인: NL · LT · EE · DK · BE</text>
+  <text x="738" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">유럽 등록 2배 · 5월 28,810대</text>
+  <text x="738" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">4개월 연속 성장 · 호주 FSD V14 도입</text>
+
+  <!-- Row 2 -->
+  <!-- Card 4: Megapack -->
+  <rect x="24" y="322" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="24" y="322" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="40" y="348" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🔋 TSLA Megapack</text>
+  <text x="40" y="384" font-family="Arial,sans-serif" font-size="32" fill="#00e5a0" font-weight="700">$3.5B</text>
+  <text x="40" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">NorthPower 계약 · 25GWh</text>
+  <text x="40" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">이탈리아 + 영국 배치 · 유럽 ESS 최대</text>
+  <text x="40" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Tesla Home AI 에너지관리 Powerwall 탑재</text>
+
+  <!-- Card 5: SpaceX 채권 -->
+  <rect x="373" y="322" width="333" height="132" rx="10" fill="#1a0a24"/>
+  <rect x="373" y="322" width="333" height="4" rx="2" fill="#c084fc"/>
+  <text x="389" y="348" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">🚀 SpaceX 채권 수요</text>
+  <text x="389" y="384" font-family="Arial,sans-serif" font-size="32" fill="#c084fc" font-weight="700">$89B</text>
+  <text x="389" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">$35B 발행에 2.5배 초과 청약</text>
+  <text x="389" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">5종 만기 · 2031~2056 · 투자등급</text>
+  <text x="389" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">ARK Invest: SPCX -16% 후 $22M 매수</text>
+
+  <!-- Card 6: Grok5 -->
+  <rect x="722" y="322" width="334" height="132" rx="10" fill="#0a1528"/>
+  <rect x="722" y="322" width="334" height="4" rx="2" fill="#60a5fa"/>
+  <text x="738" y="348" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700">🤖 xAI Grok 5</text>
+  <text x="738" y="384" font-family="Arial,sans-serif" font-size="28" fill="#60a5fa" font-weight="700">10조 파라미터</text>
+  <text x="738" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">역대 최강 AI 모델 예상</text>
+  <text x="738" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">현재 학습 중 · 가장 기대되는 AI 출시</text>
+  <text x="738" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Grok 4 이후 압도적 스케일 점프</text>
+
+  <!-- Row 3: 2 wide cards -->
+  <!-- Card 7: 거시경제 -->
+  <rect x="24" y="470" width="510" height="132" rx="10" fill="#1a1500"/>
+  <rect x="24" y="470" width="510" height="4" rx="2" fill="#fbbf24"/>
+  <text x="40" y="496" font-family="Arial,sans-serif" font-size="12" fill="#fbbf24" font-weight="700">🌐 거시경제</text>
+  <text x="40" y="522" font-family="Arial,sans-serif" font-size="22" fill="#fbbf24" font-weight="700">달러 13개월 최고 · DXY 101+</text>
+  <text x="40" y="546" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">2026 금리 전망 3.8% · 유가 $70 하락</text>
+  <text x="40" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Kevin Warsh 연준 매파 발언 → 위험자산 압박</text>
+  <text x="40" y="584" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">이란 — 최고 수준 핵사찰 전면 합의 (Trump)</text>
+
+  <!-- Card 8: Optimus + Starlink -->
+  <rect x="550" y="470" width="506" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="550" y="470" width="506" height="4" rx="2" fill="#00e5a0"/>
+  <text x="566" y="496" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🤖 TSLA Optimus + SPCX Starlink</text>
+  <text x="566" y="522" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" font-weight="700">중국 공급망 확보 · Starlink 9200만</text>
+  <text x="566" y="546" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">Mink Automation · Asia Optical 모터 파트너</text>
+  <text x="566" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Starlink 세계 최대 유료 구독 서비스 성장</text>
+  <text x="566" y="584" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Tesla DeepSeek 음성 어시스턴트 Q4 2026 OTA</text>
+
+  <text x="540" y="678" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.24 · Investus · 참고용 (투자 권유 아님)</text>
+</svg>

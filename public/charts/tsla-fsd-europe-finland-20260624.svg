@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 620" width="1080" height="620">
+  <rect width="1080" height="620" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">TSLA · FSD 유럽 확산</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">핀란드 6번째 EU 국가 승인 임박 · 유럽 등록 2배 성장 4개월 연속</text>
+
+  <!-- Left: FSD status table -->
+  <rect x="24" y="78" width="500" height="420" rx="10" fill="#111318"/>
+  <text x="274" y="106" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">유럽 FSD 승인 현황</text>
+
+  <!-- Approved countries -->
+  <rect x="40" y="118" width="468" height="46" rx="8" fill="#0d1f14"/>
+  <text x="56" y="138" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0">✅</text>
+  <text x="90" y="138" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">네덜란드 (Netherlands)</text>
+  <text x="90" y="156" font-family="Arial,sans-serif" font-size="11" fill="#6ee7b7">1번째 EU 국가 · FSD 승인 완료</text>
+
+  <rect x="40" y="172" width="468" height="46" rx="8" fill="#0d1f14"/>
+  <text x="56" y="192" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0">✅</text>
+  <text x="90" y="192" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">리투아니아 (Lithuania)</text>
+  <text x="90" y="210" font-family="Arial,sans-serif" font-size="11" fill="#6ee7b7">2번째 EU 국가 · FSD 승인 완료</text>
+
+  <rect x="40" y="226" width="468" height="46" rx="8" fill="#0d1f14"/>
+  <text x="56" y="246" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0">✅</text>
+  <text x="90" y="246" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">에스토니아 (Estonia)</text>
+  <text x="90" y="264" font-family="Arial,sans-serif" font-size="11" fill="#6ee7b7">3번째 EU 국가 · FSD 승인 완료</text>
+
+  <rect x="40" y="280" width="468" height="46" rx="8" fill="#0d1f14"/>
+  <text x="56" y="300" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0">✅</text>
+  <text x="90" y="300" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">덴마크 (Denmark)</text>
+  <text x="90" y="318" font-family="Arial,sans-serif" font-size="11" fill="#6ee7b7">4번째 EU 국가 · FSD 승인 완료</text>
+
+  <rect x="40" y="334" width="468" height="46" rx="8" fill="#0d1f14"/>
+  <text x="56" y="354" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0">✅</text>
+  <text x="90" y="354" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700">벨기에 (Belgium)</text>
+  <text x="90" y="372" font-family="Arial,sans-serif" font-size="11" fill="#6ee7b7">5번째 EU 국가 · FSD 승인 완료</text>
+
+  <!-- Finland: pending -->
+  <rect x="40" y="388" width="468" height="58" rx="8" fill="#1a2000" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="56" y="410" font-family="Arial,sans-serif" font-size="22" fill="#fbbf24">🔜</text>
+  <text x="90" y="410" font-family="Arial,sans-serif" font-size="15" fill="#fbbf24" font-weight="700">핀란드 (Finland) — 승인 임박</text>
+  <text x="90" y="430" font-family="Arial,sans-serif" font-size="11" fill="#fde68a">6번째 EU 국가 예정 · EU 전체 투표 선행 기대</text>
+  <text x="90" y="446" font-family="Arial,sans-serif" font-size="11" fill="#fde68a">JUKKA LEPPÄKOSKI: "핀란드 = FSD EU 전체 선도"</text>
+
+  <!-- Right: EU registration growth -->
+  <rect x="540" y="78" width="516" height="200" rx="10" fill="#111318"/>
+  <text x="798" y="106" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">유럽 Tesla 등록 성장</text>
+
+  <rect x="556" y="118" width="484" height="52" rx="8" fill="#0d1f14"/>
+  <text x="798" y="144" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" font-weight="700" text-anchor="middle">2배 (2x) YoY 성장</text>
+  <text x="798" y="164" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">4개월 연속 성장 · EU 시장 최초 턴어라운드</text>
+
+  <rect x="556" y="180" width="230" height="80" rx="8" fill="#161b22"/>
+  <text x="671" y="204" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">5월 등록대수</text>
+  <text x="671" y="232" font-family="Arial,sans-serif" font-size="26" fill="#00e5a0" font-weight="700" text-anchor="middle">28,810대</text>
+  <text x="671" y="252" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">전월 대비 증가</text>
+
+  <rect x="800" y="180" width="240" height="80" rx="8" fill="#161b22"/>
+  <text x="920" y="204" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">연속 성장</text>
+  <text x="920" y="232" font-family="Arial,sans-serif" font-size="26" fill="#00e5a0" font-weight="700" text-anchor="middle">4개월</text>
+  <text x="920" y="252" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">1~4월 연속 YoY+</text>
+
+  <!-- Australia FSD -->
+  <rect x="540" y="292" width="516" height="118" rx="10" fill="#111318"/>
+  <text x="798" y="320" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">🇦🇺 호주 FSD V14 — 최초 도입</text>
+  <rect x="556" y="332" width="484" height="64" rx="8" fill="#0d1f14"/>
+  <text x="798" y="356" font-family="Arial,sans-serif" font-size="14" fill="#00e5a0" font-weight="700" text-anchor="middle">Model Y L (5시터) FSD V14 세계 최초</text>
+  <text x="798" y="376" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Tesla Australia: 비감독 FSD 활성화 즉시 목표</text>
+  <text x="798" y="394" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">V14 = 최신 FSD 버전 · 처음으로 호주 배포</text>
+
+  <!-- EU vote outlook -->
+  <rect x="540" y="424" width="516" height="74" rx="10" fill="#1a0a24"/>
+  <text x="798" y="450" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="700" text-anchor="middle">🇪🇺 EU 전체 투표 전망</text>
+  <text x="798" y="470" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">핀란드 승인 → EU FTC 규제 승인 기반 강화</text>
+  <text x="798" y="490" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">회원국 다수 승인 = EU 전체 FSD 허가 가속 신호</text>
+
+  <!-- Bottom conclusion -->
+  <rect x="24" y="512" width="1032" height="78" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="540" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" font-weight="700" text-anchor="middle">Tesla FSD 유럽 확산 가속 — 규제 장벽 붕괴 중</text>
+  <text x="540" y="562" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">6개국 승인 임박 · 유럽 등록 2배 · 호주 V14 세계 최초 → 글로벌 FSD 수익화 가속</text>
+  <text x="540" y="582" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">FSD 구독 매출 급증 기대 · 소프트웨어 마진 80%+ → Tesla 수익성 재평가 트리거</text>
+
+  <text x="540" y="608" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Jukka Leppäkoski · Tesla Australia · Dillon Loomis · 2026.06.24 · Investus</text>
+</svg>

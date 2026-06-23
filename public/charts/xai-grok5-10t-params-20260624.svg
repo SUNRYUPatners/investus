@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 560" width="1080" height="560">
+  <rect width="1080" height="560" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#60a5fa" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">xAI · Grok 5</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">10조 파라미터 학습 중 — 역대 최강 AI 모델 가능성 · 가장 기대되는 AI 출시</text>
+
+  <!-- Main number -->
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#0a1528" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="128" font-family="Arial,sans-serif" font-size="52" fill="#60a5fa" font-weight="700" text-anchor="middle">10,000,000,000,000</text>
+  <text x="540" y="164" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">파라미터 (10 Trillion Parameters) — 현재 학습 진행 중</text>
+
+  <!-- Parameter comparison -->
+  <rect x="24" y="194" width="500" height="268" rx="10" fill="#111318"/>
+  <text x="274" y="222" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">AI 모델 파라미터 규모 비교</text>
+
+  <!-- Scale: 10T = 200px, 1T = 20px, 1B = 0.02px (not visible) -->
+  <!-- Base y=434, max y=240 (194px range) -->
+  <!-- GPT-4: ~1.7T → 1.7/10 * 194 = 33px tall, y=434-33=401 -->
+  <rect x="60" y="401" width="60" height="33" rx="4" fill="#444c56"/>
+  <text x="90" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">GPT-4</text>
+  <text x="90" y="392" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~1.7T</text>
+
+  <!-- Claude Opus 4: ~2T estimate → 2/10 * 194 = 39px, y=434-39=395 -->
+  <rect x="150" y="395" width="60" height="39" rx="4" fill="#444c56"/>
+  <text x="180" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Claude</text>
+  <text x="180" y="386" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~2T est</text>
+
+  <!-- Gemini Ultra: ~2.8T → 2.8/10 * 194 = 54px, y=434-54=380 -->
+  <rect x="240" y="380" width="60" height="54" rx="4" fill="#444c56"/>
+  <text x="270" y="450" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Gemini</text>
+  <text x="270" y="371" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~2.8T</text>
+
+  <!-- Grok 4: ~3T → 3/10 * 194 = 58px, y=434-58=376 -->
+  <rect x="330" y="376" width="60" height="58" rx="4" fill="#3b4a6b"/>
+  <text x="360" y="450" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Grok 4</text>
+  <text x="360" y="367" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">~3T est</text>
+
+  <!-- Grok 5: 10T → 10/10 * 194 = 194px, y=434-194=240 -->
+  <rect x="420" y="240" width="60" height="194" rx="4" fill="#60a5fa" opacity="0.9"/>
+  <text x="450" y="450" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" font-weight="700" text-anchor="middle">Grok 5</text>
+  <text x="450" y="230" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700" text-anchor="middle">10T</text>
+
+  <!-- Axis lines -->
+  <line x1="50" y1="434" x2="500" y2="434" stroke="#374151" stroke-width="1"/>
+
+  <!-- Right: Key facts -->
+  <rect x="540" y="194" width="516" height="268" rx="10" fill="#111318"/>
+  <text x="798" y="222" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">Grok 5 핵심 정보</text>
+
+  <rect x="556" y="236" width="484" height="62" rx="8" fill="#0a1528"/>
+  <text x="798" y="260" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700" text-anchor="middle">xAI 공식 발표</text>
+  <text x="798" y="280" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">"Grok 5 on up to 10 trillion parameters"</text>
+  <text x="798" y="296" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">현재 학습 진행 중 · 출시 임박</text>
+
+  <rect x="556" y="308" width="230" height="80" rx="8" fill="#161b22"/>
+  <text x="671" y="332" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">스케일 비교</text>
+  <text x="671" y="360" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" font-weight="700" text-anchor="middle">3.5x~6x</text>
+  <text x="671" y="380" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">현존 최대 모델 대비</text>
+
+  <rect x="800" y="308" width="240" height="80" rx="8" fill="#161b22"/>
+  <text x="920" y="332" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">기대 수준</text>
+  <text x="920" y="360" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" font-weight="700" text-anchor="middle">역대 최고</text>
+  <text x="920" y="380" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Most anticipated ever</text>
+
+  <rect x="556" y="398" width="484" height="52" rx="8" fill="#0d1f14"/>
+  <text x="798" y="420" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" text-anchor="middle">Valter Jal (analyst): "역사상 가장 기대되는 AI 출시 중 하나"</text>
+  <text x="798" y="440" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">xAI Grok 4 이후 압도적 파라미터 점프 → AI 경쟁 판도 변화</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="478" width="1032" height="60" rx="10" fill="#0a1528" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="504" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="700" text-anchor="middle">10조 파라미터 = AI 규모의 새로운 임계점</text>
+  <text x="540" y="526" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">파라미터 수가 AI 성능 한계를 정함 · Grok 5 출시 시 OpenAI·Anthropic·Google 모두 추격 필요</text>
+
+  <text x="540" y="550" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: xAI 공식 발표 · Valter Jal · 2026.06.24 · Investus</text>
+</svg>

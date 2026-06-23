@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 580" width="1080" height="580">
+  <rect width="1080" height="580" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">TSLA · Q2 2026 Delivery Forecast</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Kalshi Predicts 440,714 Cars — Official Announcement Jul 22, 1pm PDT</text>
+
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="138" font-family="Arial,sans-serif" font-size="48" fill="#00e5a0" font-weight="700" text-anchor="middle">440,714 Cars</text>
+  <text x="540" y="168" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Kalshi prediction market consensus · Official release Jul 22 @ 1:00pm PDT</text>
+
+  <rect x="24" y="196" width="510" height="280" rx="10" fill="#111318"/>
+  <text x="279" y="224" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Quarterly Delivery Trend</text>
+
+  <text x="44" y="264" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">450K</text>
+  <text x="44" y="306" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">380K</text>
+  <text x="44" y="348" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">325K</text>
+  <text x="44" y="390" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">290K</text>
+  <text x="44" y="432" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">250K</text>
+
+  <line x1="72" y1="258" x2="510" y2="258" stroke="#1f2937" stroke-width="1"/>
+  <line x1="72" y1="300" x2="510" y2="300" stroke="#1f2937" stroke-width="1"/>
+  <line x1="72" y1="342" x2="510" y2="342" stroke="#1f2937" stroke-width="1"/>
+  <line x1="72" y1="384" x2="510" y2="384" stroke="#1f2937" stroke-width="1"/>
+  <line x1="72" y1="426" x2="510" y2="426" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="80" y="368" width="44" height="58" rx="4" fill="#444c56"/>
+  <text x="102" y="444" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Q1'25</text>
+  <text x="102" y="358" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">336K</text>
+
+  <rect x="148" y="310" width="44" height="116" rx="4" fill="#444c56"/>
+  <text x="170" y="444" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Q2'25</text>
+  <text x="170" y="300" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">422K</text>
+
+  <rect x="216" y="376" width="44" height="50" rx="4" fill="#444c56"/>
+  <text x="238" y="444" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Q3'25</text>
+  <text x="238" y="366" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">325K</text>
+
+  <rect x="284" y="351" width="44" height="75" rx="4" fill="#444c56"/>
+  <text x="306" y="444" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Q4'25</text>
+  <text x="306" y="341" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">361K</text>
+
+  <rect x="352" y="362" width="44" height="64" rx="4" fill="#374151"/>
+  <text x="374" y="444" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Q1'26</text>
+  <text x="374" y="352" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">345K</text>
+
+  <rect x="420" y="298" width="44" height="128" rx="4" fill="#00e5a0" opacity="0.9"/>
+  <text x="442" y="444" font-family="Arial,sans-serif" font-size="10" fill="#00e5a0" font-weight="700" text-anchor="middle">Q2'26E</text>
+  <text x="442" y="288" font-family="Arial,sans-serif" font-size="11" fill="#00e5a0" font-weight="700" text-anchor="middle">440K</text>
+
+  <line x1="72" y1="426" x2="490" y2="426" stroke="#374151" stroke-width="1"/>
+
+  <rect x="550" y="196" width="506" height="280" rx="10" fill="#111318"/>
+  <text x="803" y="224" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Analyst Forecasts &amp; Financials</text>
+
+  <rect x="566" y="238" width="474" height="76" rx="8" fill="#0d1f14"/>
+  <text x="803" y="260" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" text-anchor="middle">@colaoptimist Analysis</text>
+  <text x="803" y="284" font-family="Arial,sans-serif" font-size="22" fill="#00e5a0" font-weight="700" text-anchor="middle">445,000 Car Forecast</text>
+  <text x="803" y="304" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Total revenue $22.3B · Auto net income $4.05B</text>
+
+  <rect x="566" y="326" width="226" height="76" rx="8" fill="#161b22"/>
+  <text x="679" y="350" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">GAAP Margin</text>
+  <text x="679" y="376" font-family="Arial,sans-serif" font-size="22" fill="#e5e7eb" font-weight="700" text-anchor="middle">15.75%</text>
+  <text x="679" y="394" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">ASP $45,300 basis</text>
+
+  <rect x="804" y="326" width="236" height="76" rx="8" fill="#161b22"/>
+  <text x="922" y="350" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Kalshi Market</text>
+  <text x="922" y="376" font-family="Arial,sans-serif" font-size="22" fill="#e5e7eb" font-weight="700" text-anchor="middle">440,714</text>
+  <text x="922" y="394" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Prediction market consensus</text>
+
+  <rect x="566" y="416" width="474" height="48" rx="8" fill="#0a1528"/>
+  <text x="803" y="438" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">Q2'26 Earnings: Auto margin recovery + Megapack surge expected</text>
+  <text x="803" y="456" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Lathrop full capacity · Giga Shanghai +4% YoY · Europe recovery</text>
+
+  <rect x="24" y="494" width="1032" height="62" rx="10" fill="#111318"/>
+  <text x="180" y="518" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700" text-anchor="middle">Announcement</text>
+  <text x="180" y="540" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Jul 22 @ 1pm PDT</text>
+  <line x1="336" y1="502" x2="336" y2="548" stroke="#374151" stroke-width="1"/>
+  <text x="540" y="518" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700" text-anchor="middle">Beat Signal</text>
+  <text x="540" y="540" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Above 440K = bullish</text>
+  <line x1="744" y1="502" x2="744" y2="548" stroke="#374151" stroke-width="1"/>
+  <text x="900" y="518" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700" text-anchor="middle">Miss Risk</text>
+  <text x="900" y="540" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Below 430K = downside risk</text>
+
+  <text x="540" y="572" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: Kalshi · @colaoptimist · 2026.06.24 · Investus</text>
+</svg>

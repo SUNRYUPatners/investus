@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" width="1080" height="600">
+  <rect width="1080" height="600" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">SPCX · 채권 발행 투자 수요</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">$35B 발행에 $89B 투자 수요 — 2.5배 초과 청약 · 5개 만기 채권</text>
+
+  <!-- Big numbers -->
+  <rect x="24" y="78" width="494" height="120" rx="10" fill="#1a0a24" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="271" y="112" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">투자자 수요 (총 청약액)</text>
+  <text x="271" y="164" font-family="Arial,sans-serif" font-size="52" fill="#c084fc" font-weight="700" text-anchor="middle">$89B</text>
+  <text x="271" y="190" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">기관·개인 투자자 합산 청약 총액</text>
+
+  <rect x="534" y="78" width="522" height="120" rx="10" fill="#111318"/>
+  <rect x="534" y="78" width="174" height="120" rx="10" fill="#161b22"/>
+  <text x="621" y="112" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">발행액</text>
+  <text x="621" y="152" font-family="Arial,sans-serif" font-size="32" fill="#e5e7eb" font-weight="700" text-anchor="middle">$35B</text>
+  <text x="621" y="178" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">실제 발행 규모</text>
+
+  <rect x="716" y="78" width="340" height="120" rx="0" fill="#0a1528"/>
+  <text x="886" y="112" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">초과 청약 배율</text>
+  <text x="886" y="152" font-family="Arial,sans-serif" font-size="36" fill="#60a5fa" font-weight="700" text-anchor="middle">2.5배</text>
+  <text x="886" y="178" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">투자등급 채권 역대급 수요</text>
+
+  <!-- 5 tranches table -->
+  <rect x="24" y="214" width="630" height="280" rx="10" fill="#111318"/>
+  <text x="339" y="242" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">5개 만기 채권 구조</text>
+
+  <!-- Header row -->
+  <rect x="40" y="254" width="598" height="30" rx="4" fill="#1f2937"/>
+  <text x="100" y="274" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">만기</text>
+  <text x="260" y="274" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">금액</text>
+  <text x="420" y="274" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">금리</text>
+  <text x="570" y="274" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">만기 연도</text>
+
+  <!-- Tranche 1: 2031 -->
+  <rect x="40" y="286" width="598" height="34" rx="0" fill="#161b22"/>
+  <text x="100" y="308" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="600" text-anchor="middle">5년</text>
+  <text x="260" y="308" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600" text-anchor="middle">$7.0B</text>
+  <text x="420" y="308" font-family="Arial,sans-serif" font-size="13" fill="#6ee7b7" text-anchor="middle">5.350%</text>
+  <text x="570" y="308" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2031</text>
+
+  <!-- Tranche 2: 2033 -->
+  <rect x="40" y="322" width="598" height="34" rx="0" fill="#111318"/>
+  <text x="100" y="344" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="600" text-anchor="middle">7년</text>
+  <text x="260" y="344" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600" text-anchor="middle">$6.0B</text>
+  <text x="420" y="344" font-family="Arial,sans-serif" font-size="13" fill="#6ee7b7" text-anchor="middle">5.650%</text>
+  <text x="570" y="344" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2033</text>
+
+  <!-- Tranche 3: 2036 -->
+  <rect x="40" y="358" width="598" height="34" rx="0" fill="#161b22"/>
+  <text x="100" y="380" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="600" text-anchor="middle">10년</text>
+  <text x="260" y="380" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600" text-anchor="middle">$6.0B</text>
+  <text x="420" y="380" font-family="Arial,sans-serif" font-size="13" fill="#6ee7b7" text-anchor="middle">5.875%</text>
+  <text x="570" y="380" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2036</text>
+
+  <!-- Tranche 4: 2046 -->
+  <rect x="40" y="394" width="598" height="34" rx="0" fill="#111318"/>
+  <text x="100" y="416" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="600" text-anchor="middle">20년</text>
+  <text x="260" y="416" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600" text-anchor="middle">$2.5B</text>
+  <text x="420" y="416" font-family="Arial,sans-serif" font-size="13" fill="#6ee7b7" text-anchor="middle">6.600%</text>
+  <text x="570" y="416" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2046</text>
+
+  <!-- Tranche 5: 2056 -->
+  <rect x="40" y="430" width="598" height="34" rx="0" fill="#161b22"/>
+  <text x="100" y="452" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="600" text-anchor="middle">30년</text>
+  <text x="260" y="452" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600" text-anchor="middle">$3.5B</text>
+  <text x="420" y="452" font-family="Arial,sans-serif" font-size="13" fill="#6ee7b7" text-anchor="middle">6.650%</text>
+  <text x="570" y="452" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2056</text>
+
+  <rect x="40" y="466" width="598" height="18" rx="4" fill="#1f2937"/>
+  <text x="100" y="479" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">합계</text>
+  <text x="260" y="479" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700" text-anchor="middle">$25.0B</text>
+  <text x="420" y="479" font-family="Arial,sans-serif" font-size="11" fill="#6ee7b7" text-anchor="middle">5.35~6.65%</text>
+
+  <!-- Right: context -->
+  <rect x="670" y="214" width="386" height="280" rx="10" fill="#111318"/>
+  <text x="863" y="242" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">채권 발행 배경</text>
+
+  <rect x="686" y="256" width="354" height="60" rx="8" fill="#1a0a24"/>
+  <text x="863" y="278" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700" text-anchor="middle">투자등급 최초 채권</text>
+  <text x="863" y="298" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Baa1/BBB+/BBB+ 3관왕 획득 후 발행</text>
+  <text x="863" y="314" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">6월 26일 결제 예정</text>
+
+  <rect x="686" y="326" width="354" height="88" rx="8" fill="#161b22"/>
+  <text x="686" y="350" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" font-weight="600">  자금 용도</text>
+  <text x="702" y="372" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 브릿지론 전액 상환</text>
+  <text x="702" y="392" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 관련 비용 지불</text>
+  <text x="702" y="412" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 일반 운영 자금</text>
+
+  <rect x="686" y="424" width="354" height="58" rx="8" fill="#0a1528"/>
+  <text x="863" y="448" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700" text-anchor="middle">시장 역사적 의미</text>
+  <text x="863" y="468" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">우주 기업 최초 투자등급 공개 채권</text>
+  <text x="863" y="484" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">연기금·국부펀드 매수 조건 충족</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="510" width="1032" height="64" rx="10" fill="#0a1528" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="538" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">$89B 수요 = SpaceX 채권은 이미 글로벌 기관의 필수 자산</text>
+  <text x="540" y="558" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">2.5배 초과 청약 → SpaceX 신용도 압도적 확인 · 향후 추가 채권 발행 여력 무한</text>
+
+  <text x="540" y="590" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Wall St Engine · SpaceX 8-K · 2026.06.24 · Investus</text>
+</svg>

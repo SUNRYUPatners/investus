@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 580" width="1080" height="580">
+  <rect width="1080" height="580" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">TSLA Robotaxi + ARK SpaceX Purchase</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Cumulative Paid Robotaxi Miles Surging · ARK Cathie Wood Buys SPCX $22M Contrarian</text>
+
+  <!-- Robotaxi section -->
+  <rect x="24" y="78" width="590" height="380" rx="10" fill="#111318"/>
+  <text x="319" y="106" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">Cumulative Paid Robotaxi Miles</text>
+
+  <!-- Area fill -->
+  <polygon points="40,420 80,420 140,410 200,400 260,380 320,350 380,300 440,240 500,180 560,130 580,130 580,420" fill="#00e5a0" opacity="0.1"/>
+
+  <!-- Line -->
+  <polyline points="40,420 80,420 140,410 200,400 260,380 320,350 380,300 440,240 500,180 560,130" fill="none" stroke="#00e5a0" stroke-width="3"/>
+
+  <!-- Grid lines -->
+  <line x1="40" y1="420" x2="580" y2="420" stroke="#374151" stroke-width="1"/>
+  <line x1="40" y1="366" x2="580" y2="366" stroke="#1f2937" stroke-width="1"/>
+  <line x1="40" y1="313" x2="580" y2="313" stroke="#1f2937" stroke-width="1"/>
+  <line x1="40" y1="260" x2="580" y2="260" stroke="#1f2937" stroke-width="1"/>
+  <line x1="40" y1="207" x2="580" y2="207" stroke="#1f2937" stroke-width="1"/>
+  <line x1="40" y1="130" x2="580" y2="130" stroke="#1f2937" stroke-width="1"/>
+  <line x1="40" y1="130" x2="40" y2="420" stroke="#374151" stroke-width="1"/>
+
+  <!-- Y labels -->
+  <text x="36" y="424" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="end">0</text>
+  <text x="36" y="370" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="end">125K</text>
+  <text x="36" y="317" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="end">250K</text>
+  <text x="36" y="264" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="end">375K</text>
+  <text x="36" y="211" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="end">500K</text>
+  <text x="36" y="134" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="end">600K</text>
+
+  <!-- X labels -->
+  <text x="40" y="436" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Jan'25</text>
+  <text x="120" y="436" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Mar</text>
+  <text x="200" y="436" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">May</text>
+  <text x="280" y="436" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Jul</text>
+  <text x="360" y="436" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Sep</text>
+  <text x="440" y="436" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Oct</text>
+  <text x="520" y="436" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Nov</text>
+  <text x="570" y="436" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Dec</text>
+
+  <!-- Planned cities table -->
+  <rect x="40" y="448" width="558" height="22" rx="4" fill="#1f2937"/>
+  <text x="80" y="462" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Region</text>
+  <text x="280" y="462" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">City</text>
+  <text x="480" y="462" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Status</text>
+
+  <rect x="40" y="472" width="558" height="20" rx="0" fill="#161b22"/>
+  <text x="80" y="486" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">California</text>
+  <text x="280" y="486" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">SF Bay Area</text>
+  <text x="480" y="486" font-family="Arial,sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle">Safety Driver Active</text>
+
+  <rect x="40" y="494" width="558" height="20" rx="0" fill="#111318"/>
+  <text x="80" y="508" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Texas</text>
+  <text x="280" y="508" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Austin (+ Dallas · Houston)</text>
+  <text x="480" y="508" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Ramping Unsupervised</text>
+
+  <rect x="40" y="516" width="558" height="20" rx="0" fill="#161b22"/>
+  <text x="80" y="530" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">AZ · FL · NV</text>
+  <text x="280" y="530" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Phoenix · Miami · Tampa · Las Vegas</text>
+  <text x="480" y="530" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">1H 2026 Planned</text>
+
+  <!-- ARK section -->
+  <rect x="630" y="78" width="426" height="380" rx="10" fill="#111318"/>
+  <text x="843" y="106" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">ARK Invest SPCX Contrarian Buy</text>
+
+  <rect x="646" y="118" width="394" height="80" rx="8" fill="#1a0a24"/>
+  <text x="843" y="148" font-family="Arial,sans-serif" font-size="22" fill="#c084fc" font-weight="700" text-anchor="middle">$22M+ Purchase</text>
+  <text x="843" y="172" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Cathie Wood · ARK Invest</text>
+  <text x="843" y="192" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Bought right after SPCX -16% sharp drop</text>
+
+  <rect x="646" y="210" width="394" height="80" rx="8" fill="#161b22"/>
+  <text x="843" y="234" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700" text-anchor="middle">Buy Rationale</text>
+  <text x="662" y="258" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Post-IPO $200 → $168 (-16%) correction</text>
+  <text x="662" y="278" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• ARK: Long-term conviction, ignores short-term</text>
+
+  <rect x="646" y="300" width="394" height="80" rx="8" fill="#161b22"/>
+  <text x="843" y="324" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700" text-anchor="middle">ARK Logic</text>
+  <text x="662" y="348" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• SpaceX fundamentals unchanged</text>
+  <text x="662" y="368" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Bond · credit rating · Colossus AI tailwinds intact</text>
+
+  <rect x="646" y="390" width="394" height="56" rx="8" fill="#0a1528"/>
+  <text x="843" y="416" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700" text-anchor="middle">Cathie Wood's Investment Philosophy</text>
+  <text x="843" y="436" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Buy the fear · short-term -16% is a long-term entry point</text>
+
+  <!-- Bottom -->
+  <rect x="24" y="474" width="1032" height="82" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="502" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" font-weight="700" text-anchor="middle">Tesla Robotaxi Cumulative Miles Surging = Commercialization Certainty Rising</text>
+  <text x="540" y="524" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">Austin unsupervised FSD expanding · 6 major cities planned for 1H 2026 launch</text>
+  <text x="540" y="546" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">ARK Cathie Wood contrarian buy = institutional long-term confidence in SpaceX confirmed</text>
+
+  <text x="540" y="572" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: Tesla · ARK Invest · BPOC · 2026.06.24 · Investus</text>
+</svg>
