@@ -56,6 +56,8 @@ export function HomeAIInsight() {
   const [intradayUsed,    setIntradayUsed]    = useState(0);
   const [marketOpen,      setMarketOpen]      = useState(false);
   const [closeRetryUsed,  setCloseRetryUsed]  = useState(false);
+  // true once LiveMarket writes fresh data (StorageEvent) OR cache is < 10 min old on mount
+  const [pricesFresh,     setPricesFresh]     = useState(false);
   // tracks the trading day we last auto-fetched for
   const fetchedForDay  = useRef("");
   const analysisTimer  = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -75,11 +77,12 @@ export function HomeAIInsight() {
     if (!loaded || holdings.length === 0) return;
     const syms = holdings.map((h) => h.symbol);
 
-    const applyCache = () => {
+    const applyCache = (fromEvent: boolean) => {
       try {
         const raw = localStorage.getItem("market-data-cache");
         if (!raw) return;
         const d = JSON.parse(raw) as {
+          _ts?:    number;
           quotes?:  { symbol: string; price: number; change?: number; changePercent: number }[];
           indices?: { symbol: string; value: number }[];
         };
@@ -90,20 +93,24 @@ export function HomeAIInsight() {
         }
         const krw = (d.indices ?? []).find((i) => i.symbol === "USDKRW");
         if (krw && krw.value > 100) setUsdkrw(krw.value);
+        // Mark prices as fresh: StorageEvent means LiveMarket just fetched, OR cache is < 10 min old
+        const cacheAgeMs = Date.now() - (d._ts ?? 0);
+        if (fromEvent || cacheAgeMs < 10 * 60 * 1000) setPricesFresh(true);
       } catch { /* ignore */ }
     };
 
-    applyCache();
-    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(); };
+    applyCache(false); // mount — fresh only if cache < 10 min old
+    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(true); };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
   }, [loaded, holdings.length]);
 
-  // Auto-fetch post-close: wait for ALL holdings to be priced, then debounce 2s
+  // Auto-fetch post-close: wait for fresh prices + ALL holdings priced, then debounce 2s
   useEffect(() => {
-    if (marketOpen) return;                                         // still open — wait
-    if (quotes.length === 0 || holdings.length === 0) return;      // no data yet
-    if (quotes.length < holdings.length) return;                   // not all holdings priced yet
+    if (!pricesFresh) return;                                        // wait for LiveMarket to push latest close prices
+    if (marketOpen) return;                                          // still open — wait
+    if (quotes.length === 0 || holdings.length === 0) return;       // no data yet
+    if (quotes.length < holdings.length) return;                    // not all holdings priced yet
 
     const day = lastMarketCloseDate();
 
@@ -117,7 +124,7 @@ export function HomeAIInsight() {
       return;
     }
 
-    if (fetchedForDay.current === day) return;                     // already fetched this session
+    if (fetchedForDay.current === day) return;                      // already fetched this session
 
     // Debounce: prices may still be settling — wait 2s after all holdings are priced
     if (analysisTimer.current) clearTimeout(analysisTimer.current);
@@ -130,7 +137,7 @@ export function HomeAIInsight() {
       if (analysisTimer.current) clearTimeout(analysisTimer.current);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [marketOpen, quotes.length, holdings.length]);
+  }, [pricesFresh, marketOpen, quotes.length, holdings.length]);
 
   function buildPayload() {
     const liveMap   = Object.fromEntries(quotes.map((q) => [q.symbol, q]));
