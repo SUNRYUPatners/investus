@@ -583,8 +583,19 @@ function AuthSection() {
   const [confirmEmail, setConfirmEmail] = useState(false);
   const [resetSent,    setResetSent]    = useState(false);
   const [termsAgreed,  setTermsAgreed]  = useState(false);
+  const [rememberEmail, setRememberEmail] = useState(false);
 
   const reset = () => { setEmail(""); setPw(""); setError(""); setLoading(false); setConfirmEmail(false); setResetSent(false); setTermsAgreed(false); };
+
+  // 저장된 이메일 불러오기
+  useEffect(() => {
+    if (mode === "login") {
+      try {
+        const saved = localStorage.getItem("investus_saved_email");
+        if (saved) { setEmail(saved); setRememberEmail(true); }
+      } catch { /* ignore */ }
+    }
+  }, [mode]);
 
   const handleLogin = async () => {
     if (!email.includes("@")) { setError(au.errEmail); return; }
@@ -593,6 +604,10 @@ function AuthSection() {
     const ok = await login(email, pw);
     setLoading(false);
     if (!ok) { setError(au.errLogin); return; }
+    try {
+      if (rememberEmail) localStorage.setItem("investus_saved_email", email);
+      else localStorage.removeItem("investus_saved_email");
+    } catch { /* ignore */ }
     setMode("idle");
     reset();
   };
@@ -743,7 +758,7 @@ function AuthSection() {
         ) : (
           <>
           {/* Email */}
-          <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-3"
+          <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border mb-2"
             style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
             <Mail className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
             <input
@@ -755,6 +770,19 @@ function AuthSection() {
               style={{ color: "var(--text)", fontSize: "16px" }}
             />
           </div>
+
+          {/* 아이디 저장 (login only) */}
+          {mode === "login" && (
+            <label className="flex items-center gap-2 mb-3 cursor-pointer w-fit">
+              <input
+                type="checkbox"
+                checked={rememberEmail}
+                onChange={(e) => setRememberEmail(e.target.checked)}
+                className="flex-shrink-0"
+              />
+              <span className="text-[12px]" style={{ color: "var(--muted)" }}>이메일 저장</span>
+            </label>
+          )}
 
           {/* Password (login/signup only) */}
           {mode !== "reset" && (
