@@ -154,6 +154,23 @@ const PAIRS = [
   { ko: 'msft-xbox-spinoff-20260623.svg',             en: 'msft-xbox-spinoff-20260623-en.svg',             label: 'MSFT_Xbox스핀오프',      date: '20260623' },
   { ko: 'tsla-cybercab-giga-texas-20260623.svg',      en: 'tsla-cybercab-giga-texas-20260623-en.svg',      label: 'TSLA_사이버캡기가텍사스', date: '20260623' },
   { ko: 'tsla-lathrop-megafactory-20260623.svg',      en: 'tsla-lathrop-megafactory-20260623-en.svg',      label: 'TSLA_라스롭풀캐파',      date: '20260623' },
+
+  // ── 2026-06-24 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260624.svg',                       en: 'summary-20260624-en.svg',                       label: '6월24일_요약',            date: '20260624' },
+  { ko: 'tsla-accident-media-truth-20260624.svg',     en: 'tsla-accident-media-truth-20260624-en.svg',     label: 'TSLA_사고진실',           date: '20260624' },
+  { ko: 'tsla-q2-deliveries-440k-20260624.svg',       en: 'tsla-q2-deliveries-440k-20260624-en.svg',       label: 'TSLA_Q2인도440k',         date: '20260624' },
+  { ko: 'tsla-fsd-europe-finland-20260624.svg',       en: 'tsla-fsd-europe-finland-20260624-en.svg',       label: 'TSLA_FSD유럽핀란드',      date: '20260624' },
+  { ko: 'tsla-megapack-northpower-20260624.svg',      en: 'tsla-megapack-northpower-20260624-en.svg',      label: 'TSLA_Megapack노스파워',   date: '20260624' },
+  { ko: 'spcx-bond-89b-demand-20260624.svg',          en: 'spcx-bond-89b-demand-20260624-en.svg',          label: 'SPCX_채권89B',            date: '20260624' },
+  { ko: 'xai-grok5-10t-params-20260624.svg',          en: 'xai-grok5-10t-params-20260624-en.svg',          label: 'xAI_Grok510T',            date: '20260624' },
+  { ko: 'macro-dollar-iran-20260624.svg',              en: 'macro-dollar-iran-20260624-en.svg',              label: '매크로_달러이란',          date: '20260624' },
+  { ko: 'tsla-deepseek-voice-20260624.svg',           en: 'tsla-deepseek-voice-20260624-en.svg',           label: 'TSLA_DeepSeek보이스',     date: '20260624' },
+  { ko: 'tsla-optimus-china-supply-20260624.svg',     en: 'tsla-optimus-china-supply-20260624-en.svg',     label: 'TSLA_Optimus중국공급',    date: '20260624' },
+  { ko: 'spcx-starlink-92m-20260624.svg',             en: 'spcx-starlink-92m-20260624-en.svg',             label: 'SPCX_Starlink9200만',     date: '20260624' },
+  { ko: 'tsla-korea-fsd-20260624.svg',                en: 'tsla-korea-fsd-20260624-en.svg',                label: 'TSLA_한국FSD',            date: '20260624' },
+  { ko: 'tsla-robotaxi-20260624.svg',                 en: 'tsla-robotaxi-20260624-en.svg',                 label: 'TSLA_로보택시마일',        date: '20260624' },
+  { ko: 'spcx-space-capsule-20260624.svg',            en: 'spcx-space-capsule-20260624-en.svg',            label: 'SPCX_우주캡슐',           date: '20260624' },
+  { ko: 'spcx-ark-buy-20260624.svg',                  en: 'spcx-ark-buy-20260624-en.svg',                  label: 'SPCX_ARK역발상매수',      date: '20260624' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

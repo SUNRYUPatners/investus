@@ -13,6 +13,7 @@ export type Report = {
   updatedAt?:    string;   // "2026.05.14 07:27" KST 형식
   isPinned?:     boolean;
   images?:       string[];
+  imagesEn?:     string[];  // 영문 버전 이미지
   imageOnly?:    boolean;  // 이미지만 표시, 텍스트 body 숨김
 };
 
@@ -3718,7 +3719,8 @@ export const SEED_REPORTS: Report[] = [
     updatedAt:     "2026.06.24 07:00",
     isPinned:      true,
     imageOnly:     true,
-    images:        ["/charts/summary-20260624.svg", "/charts/summary-20260624-en.svg"],
+    images:        ["/charts/summary-20260624.svg"],
+    imagesEn:      ["/charts/summary-20260624-en.svg"],
   },
 
   {
@@ -3732,7 +3734,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 07:10",
     imageOnly:     true,
-    images:        ["/charts/tsla-accident-media-truth-20260624.svg", "/charts/tsla-accident-media-truth-20260624-en.svg"],
+    images:        ["/charts/tsla-accident-media-truth-20260624.svg"],
+    imagesEn:      ["/charts/tsla-accident-media-truth-20260624-en.svg"],
   },
 
   {
@@ -3746,7 +3749,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 07:20",
     imageOnly:     true,
-    images:        ["/charts/tsla-q2-deliveries-440k-20260624.svg", "/charts/tsla-q2-deliveries-440k-20260624-en.svg"],
+    images:        ["/charts/tsla-q2-deliveries-440k-20260624.svg"],
+    imagesEn:      ["/charts/tsla-q2-deliveries-440k-20260624-en.svg"],
   },
 
   {
@@ -3760,7 +3764,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 07:30",
     imageOnly:     true,
-    images:        ["/charts/tsla-fsd-europe-finland-20260624.svg", "/charts/tsla-fsd-europe-finland-20260624-en.svg"],
+    images:        ["/charts/tsla-fsd-europe-finland-20260624.svg"],
+    imagesEn:      ["/charts/tsla-fsd-europe-finland-20260624-en.svg"],
   },
 
   {
@@ -3774,7 +3779,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 07:40",
     imageOnly:     true,
-    images:        ["/charts/tsla-megapack-northpower-20260624.svg", "/charts/tsla-megapack-northpower-20260624-en.svg"],
+    images:        ["/charts/tsla-megapack-northpower-20260624.svg"],
+    imagesEn:      ["/charts/tsla-megapack-northpower-20260624-en.svg"],
   },
 
   {
@@ -3788,7 +3794,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 07:50",
     imageOnly:     true,
-    images:        ["/charts/spcx-bond-89b-demand-20260624.svg", "/charts/spcx-bond-89b-demand-20260624-en.svg"],
+    images:        ["/charts/spcx-bond-89b-demand-20260624.svg"],
+    imagesEn:      ["/charts/spcx-bond-89b-demand-20260624-en.svg"],
   },
 
   {
@@ -3802,7 +3809,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 08:00",
     imageOnly:     true,
-    images:        ["/charts/xai-grok5-10t-params-20260624.svg", "/charts/xai-grok5-10t-params-20260624-en.svg"],
+    images:        ["/charts/xai-grok5-10t-params-20260624.svg"],
+    imagesEn:      ["/charts/xai-grok5-10t-params-20260624-en.svg"],
   },
 
   {
@@ -3816,7 +3824,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 08:10",
     imageOnly:     true,
-    images:        ["/charts/macro-dollar-iran-20260624.svg", "/charts/macro-dollar-iran-20260624-en.svg"],
+    images:        ["/charts/macro-dollar-iran-20260624.svg"],
+    imagesEn:      ["/charts/macro-dollar-iran-20260624-en.svg"],
   },
 
   {
@@ -3830,7 +3839,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 08:20",
     imageOnly:     true,
-    images:        ["/charts/tsla-deepseek-voice-20260624.svg", "/charts/tsla-deepseek-voice-20260624-en.svg"],
+    images:        ["/charts/tsla-deepseek-voice-20260624.svg"],
+    imagesEn:      ["/charts/tsla-deepseek-voice-20260624-en.svg"],
   },
 
   {
@@ -3844,7 +3854,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 08:30",
     imageOnly:     true,
-    images:        ["/charts/tsla-optimus-china-supply-20260624.svg", "/charts/tsla-optimus-china-supply-20260624-en.svg"],
+    images:        ["/charts/tsla-optimus-china-supply-20260624.svg"],
+    imagesEn:      ["/charts/tsla-optimus-china-supply-20260624-en.svg"],
   },
 
   {
@@ -3858,7 +3869,8 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 08:40",
     imageOnly:     true,
-    images:        ["/charts/spcx-starlink-92m-20260624.svg", "/charts/spcx-starlink-92m-20260624-en.svg"],
+    images:        ["/charts/spcx-starlink-92m-20260624.svg"],
+    imagesEn:      ["/charts/spcx-starlink-92m-20260624-en.svg"],
   },
 
   {
@@ -3872,21 +3884,23 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 08:50",
     imageOnly:     true,
-    images:        ["/charts/tsla-korea-fsd-20260624.svg", "/charts/tsla-korea-fsd-20260624-en.svg"],
+    images:        ["/charts/tsla-korea-fsd-20260624.svg"],
+    imagesEn:      ["/charts/tsla-korea-fsd-20260624-en.svg"],
   },
 
   {
     id:            "seed-298",
-    title:         "Tesla 로보택시 누적 유료 마일 급증 + ARK Cathie Wood SPCX $22M 역발상 매수",
-    summary:       "Tesla 로보택시의 누적 유료 주행 마일이 급격히 증가하고 있으며, 오스틴 비감독 FSD 확장이 진행 중입니다. ARK Invest의 Cathie Wood는 SPCX -16% 급락 직후 2,200만 달러를 역발상 매수했습니다.",
-    body:          "■ Tesla 로보택시 누적 유료 마일\n\n• 급격한 성장 곡선 확인\n• Jan 2025 → Dec 2025: 0 → 60만 마일+ (누적)\n• Austin 비감독 FSD 확대 중\n• 1H 2026 내 6개 도시 출시 예정\n\n■ 도시별 현황\n\n[캘리포니아 SF Bay Area]\n• Safety Driver 운행 중 (규제 제약)\n\n[텍사스 Austin]\n• 비감독 FSD 확대 진행 중 (핵심 거점)\n• Dallas, Houston 확장 예정\n\n[애리조나·플로리다·네바다]\n• Phoenix, Miami, Tampa, Las Vegas\n• 1H 2026 출시 예정\n\n■ ARK Invest $22M SPCX 역발상 매수\n\n[매수 배경]\n• SPCX IPO 이후 $200 → $168 (-16%) 조정\n• ARK: 단기 변동 무시, 장기 가치 확신\n\n[ARK 논리]\n• SpaceX 펀더멘털 변화 없음\n• 채권 흥행($89B 수요) · Colossus AI · Starlink 호재 지속\n• 기관투자자 -16%를 '진입 기회'로 판단\n\n[Cathie Wood 철학]\n'공포에 사라 · 단기 -16%는 장기 진입 기회'\n\n■ 투자 시사점\n\n로보택시 마일 급증 = 상용화 확실성 증가. ARK 역발상 매수 = 기관의 SpaceX 장기 신뢰 공식 확인. 양대 호재가 동시에 신호를 보내는 강세 타이밍.",
+    title:         "Tesla 로보택시 누적 유료 마일 급증 — Austin 비감독 FSD 확대 · 6개 도시 출시 예정",
+    summary:       "Tesla 로보택시의 누적 유료 주행 마일이 급격히 증가하고 있습니다. Austin에서 비감독 FSD 확장이 진행 중이며, Phoenix·Miami·Tampa·Las Vegas 등 6개 도시가 1H 2026 출시를 앞두고 있습니다.",
+    body:          "■ Tesla 로보택시 누적 유료 마일\n\n• 급격한 성장 곡선 확인\n• Jan 2025 → Dec 2025: 0 → 60만 마일+ (누적)\n• Austin 비감독 FSD 확대 중 (핵심 거점)\n• 1H 2026 내 6개 도시 동시 출시 예정\n\n■ 도시별 현황\n\n[캘리포니아 SF Bay Area]\n• Safety Driver 동승 운행 중 (규제 제약)\n\n[텍사스 Austin]\n• 비감독 FSD 확대 진행 중 ★ 핵심\n• Dallas, Houston 확장 예정\n\n[애리조나·플로리다·네바다]\n• Phoenix, Miami, Tampa, Las Vegas\n• 1H 2026 출시 예정\n\n■ 로보택시 상용화 의미\n\n• 누적 마일 급증 = 안전성 데이터 축적 확인\n• 비감독 → 완전 무인 → 상업 로보택시 순서\n• 각 도시 출시 = 해당 지역 FSD 규제 승인 완료\n\n■ 투자 시사점\n\n로보택시 마일 급증 = 상용화 확실성 증가. Austin 비감독 FSD 성공 → 타 도시 빠른 확산. 로보택시 플릿 확대 시 Tesla 소프트웨어 수익 폭발적 성장 가능성.",
     category:      "종목분석",
     categoryColor: "mint",
-    subject:       "🚖 TSLA 로보택시 + ARK SPCX 매수",
+    subject:       "🚖 TSLA 로보택시 누적 마일",
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 09:00",
     imageOnly:     true,
-    images:        ["/charts/tsla-robotaxi-ark-20260624.svg", "/charts/tsla-robotaxi-ark-20260624-en.svg"],
+    images:        ["/charts/tsla-robotaxi-20260624.svg"],
+    imagesEn:      ["/charts/tsla-robotaxi-20260624-en.svg"],
   },
 
   {
@@ -3900,7 +3914,23 @@ export const SEED_REPORTS: Report[] = [
     date:          "2026-06-24",
     updatedAt:     "2026.06.24 09:10",
     imageOnly:     true,
-    images:        ["/charts/spcx-space-capsule-20260624.svg", "/charts/spcx-space-capsule-20260624-en.svg"],
+    images:        ["/charts/spcx-space-capsule-20260624.svg"],
+    imagesEn:      ["/charts/spcx-space-capsule-20260624-en.svg"],
+  },
+
+  {
+    id:            "seed-300",
+    title:         "ARK Invest Cathie Wood SPCX $22M 역발상 매수 — IPO 이후 -16% 조정 직후",
+    summary:       "ARK Invest의 Cathie Wood가 SpaceX(SPCX) IPO 이후 -16% 급락 직후 2,200만 달러를 역발상 매수했습니다. SpaceX 펀더멘털 변화 없음을 확인하고 단기 공포를 장기 진입 기회로 판단한 것입니다.",
+    body:          "■ ARK Invest $22M+ SPCX 매수\n\n• 매수자: Cathie Wood · ARK Invest\n• 매수 금액: $22M+ (2,200만 달러 이상)\n• 매수 시점: SPCX IPO 이후 -16% 급락 직후\n• 전략: 역발상(Contrarian) 매수\n\n■ 매수 배경\n\n[가격 흐름]\n• SPCX IPO 공모가: $200\n• 조정 후 가격: $168 (-16%)\n• ARK 판단: 단기 패닉 매도 = 과매도\n\n[ARK의 논리]\n• SpaceX 펀더멘털 전혀 변화 없음\n• 채권 $89B 초과 수요 → 신용도 최고 수준\n• Starlink 9,200만 구독자 성장 지속\n• Colossus AI 데이터센터 가동 중\n• Starship 발사 비용 혁신 = 장기 경쟁 우위\n\n■ Cathie Wood 투자 철학\n\n'공포에 사라, 탐욕에 팔아라'\n• -16% 단기 조정 = 장기 진입 기회\n• ARK의 파괴적 혁신 5~10년 지평선 투자\n• 기관 투자자의 SpaceX 장기 신뢰 공식 확인\n\n■ 투자 시사점\n\n기관 투자자(ARK)가 조정을 매수 기회로 활용하는 것은 SpaceX 장기 가치의 강력한 확인 신호입니다. 단기 가격 변동에 흔들리지 말고 펀더멘털을 보라는 메시지입니다.",
+    category:      "종목분석",
+    categoryColor: "purple",
+    subject:       "💜 ARK SPCX $22M 역발상 매수",
+    date:          "2026-06-24",
+    updatedAt:     "2026.06.24 09:20",
+    imageOnly:     true,
+    images:        ["/charts/spcx-ark-buy-20260624.svg"],
+    imagesEn:      ["/charts/spcx-ark-buy-20260624-en.svg"],
   },
 
 ];

@@ -292,7 +292,7 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
   );
 }
 
-function ReportCard({ report }: { report: Report }) {
+function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
   const [open, setOpen]               = useState(false);
   const [failedImgs, setFailedImgs]   = useState<Set<number>>(new Set());
   const [lightbox, setLightbox]       = useState<string | null>(null);
@@ -304,11 +304,14 @@ function ReportCard({ report }: { report: Report }) {
     setFailedImgs((prev) => new Set(prev).add(idx));
   }, []);
 
-  const hasImages = report.images && report.images.length > 0;
+  const effectiveImages = (lang === "en" && report.imagesEn && report.imagesEn.length > 0)
+    ? report.imagesEn
+    : report.images;
+  const hasImages = effectiveImages && effectiveImages.length > 0;
 
   // 이미지 전용 리포트: 이미지만 카드에 바로 표시 (이미지 실패 시 summary로 fallback)
   if (report.imageOnly && hasImages) {
-    const allFailed = report.images!.every((_, i) => failedImgs.has(i));
+    const allFailed = effectiveImages!.every((_, i) => failedImgs.has(i));
     return (
       <>
         {lightbox && <ImageLightbox src={lightbox} onClose={() => setLightbox(null)} />}
@@ -355,7 +358,7 @@ function ReportCard({ report }: { report: Report }) {
               </p>
             ) : (
               <ImageGrid
-                images={report.images!}
+                images={effectiveImages!}
                 failedImgs={failedImgs}
                 onError={handleImgError}
                 onOpen={(src) => setLightbox(src)}
@@ -457,7 +460,7 @@ function ReportCard({ report }: { report: Report }) {
           {hasImages && (
             <div className="mb-4">
               <ImageGrid
-                images={report.images!}
+                images={effectiveImages!}
                 failedImgs={failedImgs}
                 onError={handleImgError}
                 onOpen={(src) => setLightbox(src)}
@@ -563,7 +566,7 @@ function DailyQuote() {
 
 // ── ReportFeed (main export) ──────────────────────────────────────────────
 
-export function ReportFeed() {
+export function ReportFeed({ lang }: { lang?: "ko" | "en" } = {}) {
   const { user } = useAuth();
   const isPro = user?.isPro === true;
   const t = useLocale();
@@ -630,7 +633,7 @@ export function ReportFeed() {
       {all.length > 0 && (
         <div className="flex flex-col gap-3">
           {/* 최신 날짜 리포트 — 항상 표시 */}
-          {latest.free.map((r) => <ReportCard key={r.id} report={r} />)}
+          {latest.free.map((r) => <ReportCard key={r.id} report={r} lang={lang} />)}
           {latest.locked.length > 0 && <LockedReportGroup reports={latest.locked} />}
 
           {/* 이전 날짜 리포트 — 더보기 토글 */}
@@ -647,7 +650,7 @@ export function ReportFeed() {
                 </button>
               ) : (
                 <>
-                  {older.free.map((r) => <ReportCard key={r.id} report={r} />)}
+                  {older.free.map((r) => <ReportCard key={r.id} report={r} lang={lang} />)}
                   {older.locked.length > 0 && <LockedReportGroup reports={older.locked} />}
                   <button
                     className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl border text-sm font-semibold transition-opacity active:opacity-60"

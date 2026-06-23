@@ -1,5 +1,5 @@
 import { Header } from "@/components/Header";
-import { ReportFeed } from "@/components/ReportFeed";
+import { InsightReportSection } from "@/components/InsightReportSection";
 import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
 import Link from "next/link";
@@ -102,7 +102,7 @@ export default async function InsightPage() {
         </div>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
-        <section className="px-4 mb-6"><ReportFeed /></section>
+        <section className="px-4 mb-6"><InsightReportSection /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-4">{LearnBanner}</section>
         <section className="px-4 mb-2"><AdFitStrip /></section>
@@ -133,7 +133,7 @@ export default async function InsightPage() {
             <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
             <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
           </div>
-          <ReportFeed />
+          <InsightReportSection />
         </div>
 
         {/* 오른쪽 — sticky 사이드바 */}
