@@ -3681,6 +3681,30 @@ export const SEED_REPORTS: Report[] = [
     updatedAt:     "2026.06.23 08:00",
     images:        ["/charts/msft-xbox-spinoff-20260623.svg"],
   },
+  {
+    id:            "seed-284",
+    title:         "Tesla — 사이버캡 기가 텍사스 테스트 트랙 약 10대 집단 주행 포착",
+    summary:       "Joe Tegtmeyer가 기가 텍사스 현장에서 약 10대의 사이버캡이 테스트 트랙을 집단 주행하는 장면을 포착했습니다. 신규 FSD 카메라가 탑재된 것이 확인되었으며, 초기 양산은 S커브 패턴으로 점진 확대될 전망입니다.",
+    body:          "■ 현장 포착 내용\n\n• 포착자: Joe Tegtmeyer (@JoeTegTmeyer)\n• 장소: 기가 텍사스 테스트 트랙\n• 대수: 약 10대 사이버캡 집단 주행\n• 날짜: 2026.06.23 (기가 텍사스 서비스 가동 1주년)\n\n■ 하드웨어 업그레이드\n\n• 신규 FSD 카메라 탑재 확인\n• 고도화된 자율주행 하드웨어 적용\n• 기존 대비 인식 정확도·안전 마진 향상 목표\n\n■ 생산 S커브 분석 (James Stephenson)\n\n• 초기 양산은 항상 느리게 시작\n• S커브 패턴으로 점진 확대가 정상 과정\n• 현재 단계: 부품 수량·정지 횟수 최적화 중\n• 다음 단계: 양산 가속 → 로보택시 서비스 상용화\n\n■ 의미\n\n[단기]\n• 사이버캡 양산 가시화 확인\n• 기가 텍사스 로보택시 서비스 준비 완료 신호\n\n[중장기]\n• FSD → 수익 창출원으로 재평가 트리거\n• Optimus·FSD·Cybercab 3각 AI 포트폴리오 완성\n• 완성차 → AI 플랫폼 밸류에이션 재적용 시나리오\n\n■ 결론\n\n약 10대의 사이버캡이 기가 텍사스 테스트 트랙을 집단 주행하는 장면은 테슬라의 로보택시 상용화가 임박했음을 보여주는 강력한 증거입니다. S커브 초입에서 포착된 이 장면은 향후 급격한 양산 가속의 전조로 해석됩니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🚖 TSLA 사이버캡 기가텍사스 테스트",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 08:00",
+    images:        ["/charts/tsla-cybercab-giga-texas-20260623.svg"],
+  },
+  {
+    id:            "seed-285",
+    title:         "Tesla — 라스롭 메가팩토리 풀 캐파 가동 확인 · Q2 에너지 실적 뒷받침",
+    summary:       "캘리포니아 라스롭 메가팩토리가 Q2 2026 기준 완전 가동에 돌입했다는 사실이 확인됐습니다. Tesla Semi와 Megapack을 동시 생산하는 이 거점의 풀 캐파 가동은 Q2 에너지 사업부 실적 서프라이즈의 근거가 됩니다.",
+    body:          "■ 라스롭 메가팩토리 현황\n\n• 상태: Full Capacity (완전 가동)\n• 확인 시점: Q2 2026\n• 위치: 캘리포니아주 라스롭(Lathrop)\n• 공장 역할: Tesla Semi 트럭 + Megapack ESS 생산 거점\n\n■ 주요 생산 품목\n\n[Tesla Semi (Class 8 전기 트럭)]\n• 북미 운송 시장 대형 트럭 전동화 담당\n• 현재 고객사 납품 본격화 단계\n\n[Megapack (대형 에너지 저장 시스템)]\n• 전력망·기업용 ESS 제품\n• 백로그 소화 가속 → 단가 유지력 높음\n\n■ Q2 실적 의미\n\n• 에너지 사업부 Megapack Q2 배송량 급증 신호\n• Tesla Semi Q2 인도량 확대 확인\n• 에너지 마진 개선 → 전사 수익성 지지\n\n■ 투자자 관점\n\n[강세 근거]\n• 에너지 세그먼트 Q2 매출 전분기 대비 성장 전망\n• 자동차 부문 둔화 우려 상쇄\n• 라스롭 풀 가동 = 에너지 서프라이즈 EPS 기여\n\n[주목 포인트]\n• 7월 초 Q2 인도량 발표와 함께 에너지 배송량 공개 예정\n• Megapack 백로그 규모 대비 소화 속도 가속 여부\n\n■ 결론\n\n라스롭 메가팩토리 풀 캐파 가동 확인은 테슬라 에너지 사업부의 Q2 어닝 서프라이즈 가능성을 높입니다. 자동차 부문 성장 둔화 우려를 에너지·서비스 고성장이 상쇄하는 수익 구조 다변화 테제의 강력한 근거가 됩니다.",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "🏭 TSLA 라스롭 풀 캐파 가동",
+    date:          "2026-06-23",
+    updatedAt:     "2026.06.23 08:00",
+    images:        ["/charts/tsla-lathrop-megafactory-20260623.svg"],
+  },
 
 ];
 
@@ -3935,4 +3959,6 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-281": ["TSLA"],
   "seed-282": ["GOOGL"],
   "seed-283": ["MSFT"],
+  "seed-284": ["TSLA"],
+  "seed-285": ["TSLA"],
 };

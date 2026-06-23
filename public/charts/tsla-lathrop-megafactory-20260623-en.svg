@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">Lathrop Megafactory at Full Capacity — Q2 Production Confirmed</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Lathrop, California · Tesla Semi + Megapack production hub · June 23</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="40" y="114" width="348" height="110" rx="8" fill="#0d1f1a" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="214" y="145" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Production Status</text>
+  <text x="214" y="183" text-anchor="middle" fill="#00e5a0" font-size="30" font-weight="800">Full Capacity</text>
+  <text x="214" y="208" text-anchor="middle" fill="#7d8590" font-size="11">Confirmed · Q2 2026</text>
+
+  <rect x="412" y="114" width="348" height="110" rx="8" fill="#161b22"/>
+  <rect x="412" y="114" width="348" height="4" rx="2" fill="#00e5a0"/>
+  <text x="586" y="142" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Key Products</text>
+  <text x="432" y="168" fill="#e6edf3" font-size="13" font-weight="600">Tesla Semi (Class 8 Electric Truck)</text>
+  <text x="432" y="185" fill="#7d8590" font-size="11">Electrifying North American freight transport</text>
+  <text x="432" y="205" fill="#e6edf3" font-size="13" font-weight="600">Megapack (Utility-scale ESS)</text>
+  <text x="432" y="222" fill="#7d8590" font-size="11">Grid-scale &amp; enterprise energy storage</text>
+
+  <rect x="40" y="240" width="720" height="90" rx="8" fill="#161b22"/>
+  <rect x="40" y="240" width="720" height="4" rx="2" fill="#00e5a0"/>
+  <text x="400" y="268" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Q2 Earnings Implication</text>
+  <text x="60" y="294" fill="#e6edf3" font-size="12">Lathrop at full capacity = confirmed signal for Tesla Energy division Megapack Q2 shipment surge</text>
+  <text x="60" y="316" fill="#7d8590" font-size="11">Simultaneous Semi + Megapack full ramp → Energy segment Q2 revenue expected to grow QoQ</text>
+
+  <rect x="40" y="346" width="720" height="90" rx="8" fill="#1c2e26"/>
+  <text x="400" y="374" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Bull Case</text>
+  <text x="400" y="400" text-anchor="middle" fill="#e6edf3" font-size="12">Energy division challenging all-time high Q2 revenue · Megapack backlog drawdown accelerates → margin surge</text>
+  <text x="400" y="420" text-anchor="middle" fill="#7d8590" font-size="11">Auto slowdown concern offset by high-growth Energy + Services → EPS upside surprise scenario</text>
+
+  <line x1="40" y1="448" x2="760" y2="448" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="464" text-anchor="middle" fill="#444c56" font-size="10">Source: Tesla IR / @TeslaZine · investus.kr</text>
+</svg>

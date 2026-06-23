@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">라스롭 메가팩토리 풀 캐파 가동 확인 — Q2 실적 뒷받침</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">캘리포니아 라스롭 공장 · Tesla Semi + Megapack 생산 거점 · 6월 23일</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="40" y="114" width="348" height="110" rx="8" fill="#0d1f1a" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="214" y="145" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">생산 상태</text>
+  <text x="214" y="183" text-anchor="middle" fill="#00e5a0" font-size="30" font-weight="800">Full Capacity</text>
+  <text x="214" y="208" text-anchor="middle" fill="#7d8590" font-size="11">완전 가동 확인 · Q2 2026</text>
+
+  <rect x="412" y="114" width="348" height="110" rx="8" fill="#161b22"/>
+  <rect x="412" y="114" width="348" height="4" rx="2" fill="#00e5a0"/>
+  <text x="586" y="142" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">주요 생산 품목</text>
+  <text x="432" y="168" fill="#e6edf3" font-size="13" font-weight="600">Tesla Semi (Class 8 전기 트럭)</text>
+  <text x="432" y="185" fill="#7d8590" font-size="11">북미 운송 시장 대형 트럭 전동화</text>
+  <text x="432" y="205" fill="#e6edf3" font-size="13" font-weight="600">Megapack (대형 ESS)</text>
+  <text x="432" y="222" fill="#7d8590" font-size="11">전력망·기업용 에너지 저장 시스템</text>
+
+  <rect x="40" y="240" width="720" height="90" rx="8" fill="#161b22"/>
+  <rect x="40" y="240" width="720" height="4" rx="2" fill="#00e5a0"/>
+  <text x="400" y="268" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Q2 실적 의미</text>
+  <text x="60" y="294" fill="#e6edf3" font-size="12">라스롭 풀 캐파 가동 = 테슬라 에너지 사업부 Megapack Q2 배송량 급증 확인 신호</text>
+  <text x="60" y="316" fill="#7d8590" font-size="11">Tesla Semi + Megapack 동시 풀 가동 → 에너지 세그먼트 Q2 매출 전분기 대비 성장 전망</text>
+
+  <rect x="40" y="346" width="720" height="90" rx="8" fill="#1c2e26"/>
+  <text x="400" y="374" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Bull Case</text>
+  <text x="400" y="400" text-anchor="middle" fill="#e6edf3" font-size="12">에너지 사업부 Q2 매출 사상 최대치 도전 · Megapack 백로그 소화 가속 → 에너지 마진 급증</text>
+  <text x="400" y="420" text-anchor="middle" fill="#7d8590" font-size="11">자동차 부문 둔화 우려 속 에너지·서비스 고성장 → 수익 다변화로 EPS 상방 서프라이즈 기대</text>
+
+  <line x1="40" y1="448" x2="760" y2="448" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="464" text-anchor="middle" fill="#444c56" font-size="10">Source: Tesla IR / @TeslaZine · investus.kr</text>
+</svg>

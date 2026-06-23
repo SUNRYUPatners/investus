@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">사이버캡 기가 텍사스 테스트 트랙 — 약 10대 집단 주행 포착</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Joe Tegtmeyer 현장 포착 · 신규 FSD 카메라 탑재 확인 · 6월 23일</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="40" y="114" width="218" height="110" rx="8" fill="#0d1f1a" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="149" y="142" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">현장 포착 대수</text>
+  <text x="149" y="190" text-anchor="middle" fill="#00e5a0" font-size="44" font-weight="800">~10대</text>
+  <text x="149" y="213" text-anchor="middle" fill="#7d8590" font-size="11">테스트 트랙 집단 주행</text>
+
+  <rect x="291" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="291" y="114" width="218" height="4" rx="2" fill="#00e5a0"/>
+  <text x="400" y="142" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">테스트 장소</text>
+  <text x="400" y="170" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">기가 텍사스</text>
+  <text x="400" y="190" text-anchor="middle" fill="#7d8590" font-size="11">Giga Texas 테스트 트랙</text>
+  <text x="400" y="208" text-anchor="middle" fill="#7d8590" font-size="11">서비스 가동 1주년</text>
+
+  <rect x="542" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="542" y="114" width="218" height="4" rx="2" fill="#00e5a0"/>
+  <text x="651" y="142" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">하드웨어 업그레이드</text>
+  <text x="651" y="168" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">신규 FSD</text>
+  <text x="651" y="190" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">카메라 탑재</text>
+  <text x="651" y="210" text-anchor="middle" fill="#7d8590" font-size="11">고도화된 자율주행 하드웨어</text>
+
+  <rect x="40" y="240" width="720" height="90" rx="8" fill="#161b22"/>
+  <rect x="40" y="240" width="720" height="4" rx="2" fill="#00e5a0"/>
+  <text x="400" y="268" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">생산 S커브 분석</text>
+  <text x="60" y="294" fill="#e6edf3" font-size="12">초기 양산은 항상 느리게 시작하여 S커브 패턴으로 확대 — 현재 저속 테스트 단계가 정상 과정</text>
+  <text x="60" y="316" fill="#7d8590" font-size="11">부품 수량·정지 횟수 최적화 → 양산 가속 → 로보택시 서비스 상용화 순서로 진행</text>
+
+  <rect x="40" y="346" width="720" height="90" rx="8" fill="#1c2e26"/>
+  <text x="400" y="374" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Bull Case</text>
+  <text x="400" y="400" text-anchor="middle" fill="#e6edf3" font-size="12">사이버캡 양산 가시화 = 테슬라 AI·로보택시 수익화 스토리 본격 점화 · FSD → 수익 창출원으로 재평가</text>
+  <text x="400" y="420" text-anchor="middle" fill="#7d8590" font-size="11">Optimus·FSD·Cybercab 3각 AI 포트폴리오 → 완성차 아닌 AI 플랫폼 밸류에이션 재적용 시나리오</text>
+
+  <line x1="40" y1="448" x2="760" y2="448" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="464" text-anchor="middle" fill="#444c56" font-size="10">Source: Joe Tegtmeyer / @JoeTegTmeyer · investus.kr</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" style="background:#0d1117;font-family:'Arial',sans-serif">
+  <rect width="800" height="490" rx="12" fill="#0d1117"/>
+  <text x="400" y="36" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="700">TSLA · Tesla</text>
+  <text x="400" y="62" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">Cybercab Pack Spotted on Giga Texas Test Track — ~10 Units</text>
+  <text x="400" y="84" text-anchor="middle" fill="#7d8590" font-size="13">Captured by Joe Tegtmeyer on-site · New FSD cameras confirmed · June 23</text>
+  <line x1="40" y1="96" x2="760" y2="96" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="40" y="114" width="218" height="110" rx="8" fill="#0d1f1a" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="149" y="142" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Units Spotted</text>
+  <text x="149" y="190" text-anchor="middle" fill="#00e5a0" font-size="44" font-weight="800">~10</text>
+  <text x="149" y="213" text-anchor="middle" fill="#7d8590" font-size="11">Cybercabs on test track</text>
+
+  <rect x="291" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="291" y="114" width="218" height="4" rx="2" fill="#00e5a0"/>
+  <text x="400" y="142" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Location</text>
+  <text x="400" y="170" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">Giga Texas</text>
+  <text x="400" y="190" text-anchor="middle" fill="#7d8590" font-size="11">Test track pack formation</text>
+  <text x="400" y="208" text-anchor="middle" fill="#7d8590" font-size="11">1-year service anniversary</text>
+
+  <rect x="542" y="114" width="218" height="110" rx="8" fill="#161b22"/>
+  <rect x="542" y="114" width="218" height="4" rx="2" fill="#00e5a0"/>
+  <text x="651" y="142" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Hardware Upgrade</text>
+  <text x="651" y="168" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">New FSD</text>
+  <text x="651" y="190" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Cameras</text>
+  <text x="651" y="210" text-anchor="middle" fill="#7d8590" font-size="11">Advanced autonomy hardware</text>
+
+  <rect x="40" y="240" width="720" height="90" rx="8" fill="#161b22"/>
+  <rect x="40" y="240" width="720" height="4" rx="2" fill="#00e5a0"/>
+  <text x="400" y="268" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">S-Curve Production Ramp</text>
+  <text x="60" y="294" fill="#e6edf3" font-size="12">Initial production always starts slow and follows an S-curve — unit count &amp; stop frequency are key early-stage metrics</text>
+  <text x="60" y="316" fill="#7d8590" font-size="11">Low-speed testing → optimize parts &amp; stops → ramp production → commercial robotaxi launch sequence</text>
+
+  <rect x="40" y="346" width="720" height="90" rx="8" fill="#1c2e26"/>
+  <text x="400" y="374" text-anchor="middle" fill="#00e5a0" font-size="13" font-weight="600">Bull Case</text>
+  <text x="400" y="400" text-anchor="middle" fill="#e6edf3" font-size="12">Cybercab production visibility = AI/robotaxi monetization story reignites · FSD re-rated from ADAS to revenue engine</text>
+  <text x="400" y="420" text-anchor="middle" fill="#7d8590" font-size="11">Optimus + FSD + Cybercab AI trifecta → EV company → AI platform valuation re-rating thesis</text>
+
+  <line x1="40" y1="448" x2="760" y2="448" stroke="#21262d" stroke-width="1"/>
+  <text x="400" y="464" text-anchor="middle" fill="#444c56" font-size="10">Source: Joe Tegtmeyer / @JoeTegTmeyer · investus.kr</text>
+</svg>

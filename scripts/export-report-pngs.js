@@ -152,6 +152,8 @@ const PAIRS = [
   { ko: 'tsla-optimus-fremont-20260623.svg',          en: 'tsla-optimus-fremont-20260623-en.svg',          label: 'TSLA_Optimus양산',       date: '20260623' },
   { ko: 'googl-deepmind-anthropic-20260623.svg',      en: 'googl-deepmind-anthropic-20260623-en.svg',      label: 'GOOGL_DeepMind6pct',     date: '20260623' },
   { ko: 'msft-xbox-spinoff-20260623.svg',             en: 'msft-xbox-spinoff-20260623-en.svg',             label: 'MSFT_Xbox스핀오프',      date: '20260623' },
+  { ko: 'tsla-cybercab-giga-texas-20260623.svg',      en: 'tsla-cybercab-giga-texas-20260623-en.svg',      label: 'TSLA_사이버캡기가텍사스', date: '20260623' },
+  { ko: 'tsla-lathrop-megafactory-20260623.svg',      en: 'tsla-lathrop-megafactory-20260623-en.svg',      label: 'TSLA_라스롭풀캐파',      date: '20260623' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

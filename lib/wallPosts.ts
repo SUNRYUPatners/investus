@@ -89,6 +89,14 @@ export const MOCK_POSTS: Post[] = [
     content: "Tesla 중국 CAAM Q2 데이터에서 BYD가 -7%, GM -10%, Toyota -12%인데 Tesla만 +4% 성장했어요. SAIC랑 Tesla만 YoY 플러스예요. 상하이 30,217대 Model 3 달성이고 유럽 수출까지 포함이에요. 중국에서 이렇게 선방하는 게 놀랍고, FSD 중국 서비스 시작되면 더 올라갈 거예요.",
     createdAt: T23J - 35*60_000, likes: 298, comments: 2 },
 
+  // TSLA Cybercab / Lathrop — 6/23 업데이트 ───────────────────────────
+  { id: 320, symbol: "TSLA", nickname: "익명_5837", holdingLabel: "180주 보유",
+    content: "Joe Tegtmeyer가 기가 텍사스 테스트 트랙에서 사이버캡 약 10대가 집단 주행하는 장면을 포착했어요. 신규 FSD 카메라도 탑재된 게 확인됐고요. 기가 텍사스 서비스 가동 1주년에 이 장면이 나왔다는 게 의미심장해요. S커브 초입이라 느리게 보여도 한번 올라가기 시작하면 빠르게 확대돼요. 로보택시 상용화 초읽기예요.",
+    createdAt: T23J - 6*60_000, likes: 478, comments: 3 },
+  { id: 321, symbol: "TSLA", nickname: "익명_2946", holdingLabel: "90주 보유",
+    content: "캘리포니아 라스롭 메가팩토리가 Q2 기준 풀 캐파 가동 들어갔다고 확인됐어요. 라스롭이 Tesla Semi랑 Megapack 동시 생산하는 거점이라서 Q2 에너지 사업부 실적에 직접 영향이에요. 자동차 부문 우려 속에서 에너지·서비스가 버텨주면 EPS 서프라이즈 가능성 있어요. 7월 초 Q2 인도 발표랑 맞물려서 눈여겨봐야 해요.",
+    createdAt: T23J - 25*60_000, likes: 334, comments: 2 },
+
   // GOOGL / MSFT — 6/23 업데이트 ──────────────────────────────────────
   { id: 318, symbol: "GOOGL", nickname: "익명_2813", holdingLabel: "50주 보유",
     content: "DeepMind AlphaFold 만든 John Jumper가 Anthropic 간다고 하니까 구글이 하루에 -6% 났어요. 노벨상 받은 연구자 한 명 이탈이 수십조 시총 증발이에요. GPU·데이터센터가 AI 해자가 아니라 이런 사람들 몇 백 명이 진짜 해자라는 게 증명된 거예요. 구글이 인재 유지에 더 투자해야 하는데 비용이 엄청날 거예요.",
@@ -1432,6 +1440,15 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   319: [
     { id: 1, nickname: "익명_2847", holdingLabel: "60주 보유", content: "Xbox 팔고 Copilot Azure에 집중하겠다는 전략이 맞는 방향이에요. 게임 사업 성장률이 AI 사업이랑 비교가 안 되는데 자원 분산이 아쉬웠거든요. 이게 확정되면 MSFT 포커스가 훨씬 명확해져요.", createdAt: T23J - 16*60_000, likes: 78 },
     { id: 2, nickname: "익명_5913", holdingLabel: "40주 보유", content: "$103.8B 현금에 Xbox 매각 수익까지 더해지면 대형 AI 인수합병 할 탄약이 엄청 생기는 거예요. OpenAI 지분 추가 투자든 다른 AI 스타트업 인수든 — MSFT가 AI에 올인하는 신호로 읽혀요.", createdAt: T23J - 42*60_000, likes: 59 },
+  ],
+  320: [
+    { id: 1, nickname: "익명_7183", holdingLabel: "220주 보유", content: "Joe Tegtmeyer가 현장에서 직접 찍은 거잖아요. 10대가 한 번에 테스트 트랙 도는 장면은 단순 테스트가 아니에요. 이 규모로 집단 주행 테스트하면 실제 서비스 시나리오 검증이에요. 로보택시 상용화 전 단계 맞아요.", createdAt: T23J - 3*60_000, likes: 112 },
+    { id: 2, nickname: "익명_4829", holdingLabel: "50주 보유", content: "기가 텍사스 서비스 가동 1주년에 이 장면 나온 게 우연이 아닌 것 같아요. 공개 테스트로 투자자·언론한테 진행 상황 보여주는 거예요. FSD 카메라 신규 버전 탑재도 확인됐으니까 하드웨어도 준비 끝이네요.", createdAt: T23J - 17*60_000, likes: 87 },
+    { id: 3, nickname: "익명_6392", holdingLabel: "관심종목", content: "S커브 초입이라는 말이 맞아요. 처음엔 느린데 어느 순간 수직 상승해요. Tesla Semi도 처음엔 느리더니 지금 라스롭 풀 캐파잖아요. 사이버캡도 그 패턴 따라갈 것 같아요.", createdAt: T23J - 38*60_000, likes: 64 },
+  ],
+  321: [
+    { id: 1, nickname: "익명_8471", holdingLabel: "130주 보유", content: "라스롭 풀 캐파면 Q2 Megapack 배송량이 전분기 대비 확실히 늘었다는 거예요. 에너지 사업 매출이 Q1에도 좋았는데 Q2는 더 나올 것 같아요. 자동차 부문 우려 때문에 에너지가 저평가되어 있는 것 같기도 하고요.", createdAt: T23J - 10*60_000, likes: 96 },
+    { id: 2, nickname: "익명_3715", holdingLabel: "70주 보유", content: "Tesla Semi 납품이 본격화되면 Semi 고객사들 충전 인프라 투자도 따라와요. Megapack이랑 같이 팔 수 있는 구조예요. 라스롭 두 제품 동시 풀 캐파는 에너지 시너지 효과가 있어요.", createdAt: T23J - 31*60_000, likes: 71 },
   ],
   // ── 2026-06-22 신규 ──────────────────────────────────────────────────────
   288: [
