@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 700" width="1080" height="700">
+  <rect width="1080" height="700" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">Market Analysis · 2026.06.25</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600">Cybercab 150+ Outside Giga Texas · FSD Finland · Starmind · NASDAQ-100 · Micron Q3</text>
+
+  <!-- Wide feature card -->
+  <rect x="24" y="78" width="1032" height="80" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="108" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">6/25 Highlight</text>
+  <text x="540" y="142" font-family="Arial,sans-serif" font-size="21" fill="#00e5a0" font-weight="700" text-anchor="middle">Cybercab First Spotted Outside Giga Texas EOL — 150+ Units, Route Expanded 1.5→2.4mi</text>
+
+  <!-- Row 1 -->
+  <rect x="24" y="174" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="24" y="174" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🚖 TSLA Cybercab Spotted Outside</text>
+  <text x="40" y="228" font-family="Arial,sans-serif" font-size="21" fill="#00e5a0" font-weight="700">150+ at Giga Texas</text>
+  <text x="40" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">First EOL exterior sighting · Route 2.4mi</text>
+  <text x="40" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Drone footage confirmed · Production ramp</text>
+  <text x="40" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Largest Cybercab fleet gathering to date</text>
+  <text x="40" y="298" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Giga Texas · EOL · Robotaxi</text>
+
+  <rect x="373" y="174" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="373" y="174" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="389" y="200" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🇫🇮 TSLA FSD Finland Traficom</text>
+  <text x="389" y="228" font-family="Arial,sans-serif" font-size="21" fill="#00e5a0" font-weight="700">6th EU Country Review</text>
+  <text x="389" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Mutual recognition via Netherlands RDW</text>
+  <text x="389" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Approval would accelerate EU expansion</text>
+  <text x="389" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">5 countries approved: NL·LT·EE·DK·BE</text>
+  <text x="389" y="298" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Traficom review started · FSD Supervised</text>
+
+  <rect x="722" y="174" width="334" height="132" rx="10" fill="#1a0a24"/>
+  <rect x="722" y="174" width="334" height="4" rx="2" fill="#c084fc"/>
+  <text x="738" y="200" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">📈 SPCX NASDAQ-100 Inclusion</text>
+  <text x="738" y="228" font-family="Arial,sans-serif" font-size="21" fill="#c084fc" font-weight="700">July 6 Official Entry</text>
+  <text x="738" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Forced passive ETF inflows</text>
+  <text x="738" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">QQQ and index funds auto-buy</text>
+  <text x="738" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Watch supply/demand shift near rebal</text>
+  <text x="738" y="298" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">NASDAQ-100 new inclusion · Effective 7/6</text>
+
+  <!-- Row 2 -->
+  <rect x="24" y="322" width="333" height="132" rx="10" fill="#1a0a24"/>
+  <rect x="24" y="322" width="333" height="4" rx="2" fill="#c084fc"/>
+  <text x="40" y="348" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">🛰️ SPCX Starmind AI Satellite</text>
+  <text x="40" y="384" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" font-weight="700">Starmind</text>
+  <text x="40" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">Elon X bio · New AI satellite brand</text>
+  <text x="40" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">AI1: 150kW compute · 70m wingspan</text>
+  <text x="40" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Liquid cooling radiators · Space AI infra</text>
+
+  <rect x="373" y="322" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="373" y="322" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="389" y="348" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🎯 TSLA ARK Additional Buy</text>
+  <text x="389" y="384" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" font-weight="700">$4,600 Target</text>
+  <text x="389" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">ARK $21.25M buy · 2026 price target</text>
+  <text x="389" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Robotaxi + FSD expansion → multi-bagger</text>
+  <text x="389" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Cathie Wood long-term conviction</text>
+
+  <rect x="722" y="322" width="334" height="132" rx="10" fill="#0a1528"/>
+  <rect x="722" y="322" width="334" height="4" rx="2" fill="#60a5fa"/>
+  <text x="738" y="348" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700">💾 Micron Q3'26 Earnings</text>
+  <text x="738" y="384" font-family="Arial,sans-serif" font-size="28" fill="#60a5fa" font-weight="700">$9.09B Revenue</text>
+  <text x="738" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">EPS $1.91 · Beat est. by +19%</text>
+  <text x="738" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Strong Q4 guidance · AI server memory</text>
+  <text x="738" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">HBM demand surge · Chip cycle recovery</text>
+
+  <!-- Row 3: 2 wide cards -->
+  <rect x="24" y="470" width="510" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="24" y="470" width="510" height="4" rx="2" fill="#00e5a0"/>
+  <text x="40" y="496" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🚗 TSLA Fleet Monetization + Robotaxi Hiring</text>
+  <text x="40" y="522" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" font-weight="700">Owner Income · Austin TX Hiring</text>
+  <text x="40" y="546" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">Tesla app fleet enroll → earn without FSD sub</text>
+  <text x="40" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Sr. Analyst Robotaxi Logistics · NA-wide deployment</text>
+  <text x="40" y="584" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Lawsuit: Arthur Singarayar Model 3 · driver fault vs defect</text>
+
+  <rect x="550" y="470" width="506" height="132" rx="10" fill="#1a0a24"/>
+  <rect x="550" y="470" width="506" height="4" rx="2" fill="#c084fc"/>
+  <text x="566" y="496" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">🚀 SPCX Renew Home + Oldendorff Ships</text>
+  <text x="566" y="522" font-family="Arial,sans-serif" font-size="20" fill="#c084fc" font-weight="700">Tesla+Sunrun+SpaceX · 50+ Ships</text>
+  <text x="566" y="546" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">16GW virtual power plant · 300M homes</text>
+  <text x="566" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Oldendorff: 50+ cargo ships Starlink-equipped</text>
+  <text x="566" y="584" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">SpaceX logistics vertical · AI1 150kW compute</text>
+
+  <text x="540" y="678" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.25 · Investus · For reference only (not investment advice)</text>
+</svg>

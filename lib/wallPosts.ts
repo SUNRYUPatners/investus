@@ -27,20 +27,21 @@ export type Comment = {
 };
 
 const _now = Date.now();
-const T24J = _now;                        // 오늘(6/24) 포스트
-const T23J = _now - 24 * 3600_000;       // 6/23
-const T22J = _now - 48 * 3600_000;       // 6/22
-const T20J = _now - 96 * 3600_000;       // 6/20
-const T19J = _now - 120 * 3600_000;      // 6/19
-const T18J = _now - 120 * 3600_000;      // 6/18
-const T17J = _now - 144 * 3600_000;      // 6/17
-const T16J = _now - 168 * 3600_000;      // 6/16
-const T15J = _now - 192 * 3600_000;      // 6/15
-const T13J = _now - 240 * 3600_000;      // 6/13
-const T12J = _now - 264 * 3600_000;      // 6/12
-const T11J = _now - 288 * 3600_000;      // 6/11
-const T10J = _now - 312 * 3600_000;      // 6/10
-export const LATEST_UPDATE = T24J;       // NEW 배지 기준
+const T25J = _now;                        // 오늘(6/25) 포스트
+const T24J = _now - 24 * 3600_000;       // 6/24
+const T23J = _now - 48 * 3600_000;       // 6/23
+const T22J = _now - 72 * 3600_000;       // 6/22
+const T20J = _now - 120 * 3600_000;      // 6/20
+const T19J = _now - 144 * 3600_000;      // 6/19
+const T18J = _now - 168 * 3600_000;      // 6/18
+const T17J = _now - 168 * 3600_000;      // 6/17
+const T16J = _now - 192 * 3600_000;      // 6/16
+const T15J = _now - 216 * 3600_000;      // 6/15
+const T13J = _now - 264 * 3600_000;      // 6/13
+const T12J = _now - 288 * 3600_000;      // 6/12
+const T11J = _now - 312 * 3600_000;      // 6/11
+const T10J = _now - 336 * 3600_000;      // 6/10
+export const LATEST_UPDATE = T25J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -59,6 +60,54 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-25 — TSLA Cybercab 150대+ 외부포착·FSD핀란드·플릿수익화·ARK $4,600·
+  //              사고소송·로보택시물류채용 / SPCX NASDAQ-100편입·Starmind·AI1위성·
+  //              Oldendorff 화물선·Renew Home / MU Micron Q3 어닝서프라이즈
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — 6/25 업데이트 ────────────────────────────────────────────────
+  { id: 336, symbol: "TSLA", nickname: "익명_6247", holdingLabel: "250주 보유",
+    content: "오늘 드론 사진으로 기가텍사스 EOL 외부에서 사이버캡 150대 이상이 포착됐어요. 이전까지는 공장 내부·주차장만 보였는데 외부 EOL 구역에서 이렇게 많은 대수가 잡힌 건 처음이에요. 출고 전 최종 단계예요. 테스트 루트도 1.5마일에서 2.4마일로 60% 늘었고 고속도로 구간도 포함됐어요. Austin 상업 서비스 출시 진짜 임박했다는 신호예요.",
+    createdAt: T25J - 8*60_000, likes: 612, comments: 3 },
+  { id: 337, symbol: "TSLA", nickname: "익명_9318", holdingLabel: "100주 보유",
+    content: "핀란드 Traficom이 FSD Supervised 공식 심사 시작했어요. 네덜란드 RDW 승인 기반 상호인증 방식이라 빠르게 통과될 가능성이 높아요. 이미 5개국 승인됐고 핀란드가 6번째가 되면 EU 전역 확산 채널이 더 강해지는 거예요. 유럽 5월 등록이 28,810대로 4개월 연속 성장 중인데 FSD 확산되면 ASP랑 마진이 같이 올라가요.",
+    createdAt: T25J - 15*60_000, likes: 478, comments: 2 },
+  { id: 338, symbol: "TSLA", nickname: "익명_2593", holdingLabel: "300주 보유",
+    content: "Tesla Fleet Network 모델이 진짜 게임체인저예요. 차주가 앱으로 시간 설정하면 자기 차가 자율주행으로 승객 태우고 수익을 내 계좌로 넣어줘요. FSD 월 구독도 불필요예요. 8시간 운행이면 월 $1,000~3,000 추정이에요. 차량 할부금 상쇄 가능한 수준이에요. 수백만 대 테슬라가 즉시 플릿이 되면 Uber·Lyft 사업 모델 자체가 날아가요.",
+    createdAt: T25J - 22*60_000, likes: 543, comments: 3 },
+  { id: 339, symbol: "TSLA", nickname: "익명_7641", holdingLabel: "180주 보유",
+    content: "ARK가 TSLA $21.25M 또 샀어요. 최근 몇 주간 지속적이에요. 목표주가 $4,600에 변함 없고요. 근거가 로보택시 수익화 + FSD 글로벌 라이선스 + Optimus 상업화 + 에너지 Megapack이에요. 4개 사업이 동시에 올라오는 S커브 변곡점이 지금이라는 거잖아요. 기관이 이렇게 지속 매수하는 건 확신이 없으면 못 해요.",
+    createdAt: T25J - 30*60_000, likes: 489, comments: 2 },
+  { id: 340, symbol: "TSLA", nickname: "익명_4102", holdingLabel: "관심종목",
+    content: "Arthur Singarayar가 Tesla Model 3 사고로 설계결함 소송을 제기했는데, Tesla AI 데이터 보면 엑셀을 100% 밟은 게 다 기록돼 있어요. 73mph 주거지역이고 수동 오버라이드 없음이에요. Ashok Elluswamy VP가 공식 확인했어요. 이런 소송이 언론에 크게 나오면 주가 흔들리는데, Tesla AI 블랙박스가 있어서 방어가 쉬운 구조예요. 유사 소송 대부분 Tesla 승소예요.",
+    createdAt: T25J - 38*60_000, likes: 327, comments: 2 },
+  { id: 341, symbol: "TSLA", nickname: "익명_8574", holdingLabel: "120주 보유",
+    content: "Tesla가 Austin TX에서 로보택시 물류 분석가를 채용하고 있어요. Sr. Analyst, Robotaxi Logistics 직함이고 북미 전역 Cybercab 배포가 범위예요. 엔지니어가 아니라 ops·물류 인력 채용이라는 게 포인트예요. 상업화 실행 단계 진입이에요. 채용 공고는 가장 신뢰할 수 있는 사업 계획 증거거든요. Austin → 텍사스 전역 → 미국 전역 순서예요.",
+    createdAt: T25J - 10*60_000, likes: 415, comments: 2 },
+
+  // SPCX — 6/25 업데이트 ────────────────────────────────────────────────
+  { id: 342, symbol: "SPCX", nickname: "익명_3847", holdingLabel: "관심종목",
+    content: "SPCX가 7월 6일 NASDAQ-100에 공식 편입돼요. QQQ 추종 ETF가 자동으로 사야 해요. Invesco QQQ AUM이 $320B이고 SPCX 비중만큼 강제 유입이에요. 리밸런싱 전부터 선행 매수가 들어오는 패턴이고 편입 후에도 구조적으로 계속 사게 돼요. 펀더멘털 무관한 기계적 수요가 생기는 거예요. S&P500 편입 시와 똑같은 패턴이에요.",
+    createdAt: T25J - 12*60_000, likes: 567, comments: 3 },
+  { id: 343, symbol: "SPCX", nickname: "익명_6192", holdingLabel: "관심종목",
+    content: "Elon X 바이오에 'Starmind'가 등장했어요. SpaceX AI 위성 성좌의 공식 브랜드명이에요. Starlink가 인터넷이면 Starmind는 AI 특화예요. AI1 위성이 1호기고 150kW 컴퓨팅에 70m 날개폭이에요. ISS 급 크기 위성이 궤도에서 AI 추론을 해요. 우주 데이터센터 개념이에요. SPCX가 단순 위성 통신 회사가 아니라 우주 AI 인프라 회사로 올라가는 거예요.",
+    createdAt: T25J - 20*60_000, likes: 634, comments: 3 },
+  { id: 344, symbol: "SPCX", nickname: "익명_1738", holdingLabel: "관심종목",
+    content: "SpaceX AI1 위성 스펙 보면 150kW 온보드 AI 컴퓨팅이에요. 기존 Starlink v4가 1kW인데 150배예요. 70m 날개폭에 액체 냉각 방열판까지 탑재예요. 이 크기의 위성을 Starship으로 저비용 대량 발사하면 지구 전역에 AI 서비스를 균등하게 제공 가능해요. 국방·정부 계약에서 독점적 위치예요. 지상 클라우드와 다르게 레이턴시도 낮아요.",
+    createdAt: T25J - 28*60_000, likes: 498, comments: 2 },
+  { id: 345, symbol: "SPCX", nickname: "익명_5264", holdingLabel: "관심종목",
+    content: "Oldendorff Carriers가 50대+ 대형 벌크선 전체에 Starlink 계약했어요. 함부르크 선사인데 철광석·석탄·곡물 수송하는 대형 화물선이에요. 선박당 연 $300K+ 계약이니까 50척이면 $15M+/yr예요. VSAT 대비 100배 빠른 속도고 선원 복지 개선에 자율항법 데이터 링크까지예요. SpaceX가 하늘이랑 바다를 동시에 장악하는 거예요.",
+    createdAt: T25J - 35*60_000, likes: 421, comments: 2 },
+  { id: 346, symbol: "SPCX", nickname: "익명_8930", holdingLabel: "관심종목",
+    content: "Renew Home 파트너십이 나왔어요. Tesla Energy + Sunrun + SpaceX 3자예요. Tesla Powerwall, Sunrun 태양광, Starlink 관제망을 묶은 거예요. 16GW 가상발전소에 3억 가정 에너지 공급이 목표예요. 재난 때 전기랑 통신이 동시에 자립이 돼요. 이 3자 조합은 경쟁사가 모방 불가해요. TSLA랑 SPCX 둘 다 수혜예요.",
+    createdAt: T25J - 18*60_000, likes: 576, comments: 3 },
+
+  // MU — 6/25 업데이트 ────────────────────────────────────────────────
+  { id: 347, symbol: "MU", nickname: "익명_4725", holdingLabel: "200주 보유",
+    content: "Micron Q3 어닝 서프라이즈예요! 매출 $9.09B(예상 $8.8B), EPS $1.91(예상 $1.60 대비 +19%). YoY +58%예요. Q4 가이던스는 $9.8B~$10.2B로 컨센서스 상회해요. AI 서버 HBM 수요가 폭발하고 있고 DRAM 가격 안정에 낸드도 반등 중이에요. 반도체 슈퍼사이클 진입 공식 선언이에요. SK하이닉스 추격도 빨라지고 있어요.",
+    createdAt: T25J - 25*60_000, likes: 723, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-24 — TSLA 사고오보·Q2 440K·FSD유럽 6개국·Megapack $35억·
@@ -1460,6 +1509,61 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-25 신규 ──────────────────────────────────────────────────────
+  336: [
+    { id: 1, nickname: "익명_5193", holdingLabel: "300주 보유", content: "EOL 외부에서 150대가 한꺼번에 잡힌 건 처음이에요. 드론이 이렇게 많이 포착됐다는 건 출고 대기 물량이 축적됐다는 거고 Austin 서비스 출시 직전이에요. 루트 2.4mi 고속도로 포함이면 최종 검증 단계 맞아요.", createdAt: T25J - 4*60_000, likes: 128 },
+    { id: 2, nickname: "익명_7429", holdingLabel: "100주 보유", content: "150대가 초기 플릿이면 Austin 서비스 시작 규모로 충분해요. Waymo 처음 시작할 때도 이 정도 규모였어요. 중요한 건 FSD V14 + 자율주행 검증 완료예요. 수익성은 규모가 커질수록 올라가요.", createdAt: T25J - 18*60_000, likes: 94 },
+    { id: 3, nickname: "익명_3842", holdingLabel: "관심종목", content: "루트 60% 확장이 핵심이에요. 도심 복잡 환경 + 고속도로 진입 = 실제 운영 조건이에요. 여기서 무사고 운행 기록 쌓이면 NHTSA 승인도 빨라지고 규제 대화가 달라져요.", createdAt: T25J - 32*60_000, likes: 76 },
+  ],
+  337: [
+    { id: 1, nickname: "익명_8472", holdingLabel: "200주 보유", content: "네덜란드 RDW 상호인증 방식이 EU 전역 빠른 확산의 비결이에요. 한 나라 심사 통과하면 다른 나라가 그 결정을 참조해서 빠르게 따라가요. 6번째, 7번째가 계속 나올 거예요.", createdAt: T25J - 9*60_000, likes: 87 },
+    { id: 2, nickname: "익명_5918", holdingLabel: "40주 보유", content: "핀란드 오너 입장에서 FSD 쓰려면 지금까지 기다려야 했는데 승인 나오면 바로 구독 전환이에요. 유럽 5개국 구독자가 생기고 있는 시점에 핀란드 더해지면 누적 구독 수치가 빠르게 올라갈 거예요.", createdAt: T25J - 26*60_000, likes: 63 },
+  ],
+  338: [
+    { id: 1, nickname: "익명_6284", holdingLabel: "350주 보유", content: "차가 돈 벌어오는 자산이 된다는 개념이 진짜 혁명이에요. 집 사면 집세 받듯이 테슬라 사면 플릿 수익 받는 모델이에요. 이게 현실화되면 테슬라 구매 의사결정이 완전히 달라져요. 수요 자체가 구조적으로 올라가요.", createdAt: T25J - 6*60_000, likes: 147 },
+    { id: 2, nickname: "익명_2947", holdingLabel: "80주 보유", content: "Uber·Lyft는 드라이버 확보가 병목인데 Tesla Fleet은 이미 수백만 대 차량이 잠재 드라이버예요. 드라이버 구하러 다닐 필요가 없어요. 이 공급 무한성이 Uber보다 규모가 커지는 이유예요.", createdAt: T25J - 23*60_000, likes: 112 },
+    { id: 3, nickname: "익명_9183", holdingLabel: "관심종목", content: "FSD 구독 없이도 수익 나는 구조면 더 많은 오너가 참여해요. 진입 장벽이 낮아지면 플릿 규모가 빠르게 커지고 Tesla 플랫폼 마진도 올라가요. 윈윈이에요.", createdAt: T25J - 40*60_000, likes: 78 },
+  ],
+  339: [
+    { id: 1, nickname: "익명_4918", holdingLabel: "120주 보유", content: "ARK가 지속 매수하는 게 시장 신뢰 신호예요. $4,600 목표가 유지한다는 건 포트폴리오에서 가장 확신 높은 포지션이라는 거예요. 기관이 이러면 개인 투자자도 방향은 맞춰가야 해요.", createdAt: T25J - 11*60_000, likes: 93 },
+    { id: 2, nickname: "익명_7341", holdingLabel: "관심종목", content: "로보택시 + Optimus + FSD + 에너지 4축이 동시에 S커브 초입이라는 게 핵심이에요. 이 네 개가 동시에 올라오는 시기는 한 번밖에 없어요. 타이밍을 잃으면 비싸게 사야 해요.", createdAt: T25J - 28*60_000, likes: 71 },
+  ],
+  340: [
+    { id: 1, nickname: "익명_3816", holdingLabel: "관심종목", content: "AI 블랙박스 데이터가 방패인 거예요. 엑셀 100% 기록이 다 남아 있으니까 설계결함 주장이 통하기 어려워요. 이 구조적 방어력이 소송 리스크를 제한해요.", createdAt: T25J - 15*60_000, likes: 69 },
+    { id: 2, nickname: "익명_6492", holdingLabel: "50주 보유", content: "언론이 '테슬라 소송'으로 헤드라인 뽑으면 단기 주가 흔들려요. 근데 실제 판결은 Tesla 유리하게 나올 가능성이 높아요. 패턴 알면 소송 뉴스 = 오히려 기회예요.", createdAt: T25J - 33*60_000, likes: 51 },
+  ],
+  341: [
+    { id: 1, nickname: "익명_7193", holdingLabel: "180주 보유", content: "물류 분석가 채용이 엔지니어 채용보다 중요한 신호예요. 실제 운영 준비 단계에 들어간 거거든요. 엔지니어는 제품 만들고 물류·ops는 배포 실행이에요. 상업화 카운트다운이에요.", createdAt: T25J - 7*60_000, likes: 104 },
+    { id: 2, nickname: "익명_5382", holdingLabel: "30주 보유", content: "북미 전역 배포 명시가 Austin 한 곳이 아니라 전국 규모 계획이라는 거예요. Phase 계획 세우고 물류 팀 먼저 구성하는 게 맞는 순서예요. 1~2년 내 미국 주요 도시 다 들어가는 로드맵이에요.", createdAt: T25J - 24*60_000, likes: 76 },
+  ],
+  342: [
+    { id: 1, nickname: "익명_8294", holdingLabel: "관심종목", content: "QQQ AUM이 $320B이에요. SPCX 비중 0.5%만 돼도 $1.6B이 강제 유입이에요. 이게 한 번에 들어오는 게 아니라 편입 전후로 분산되지만 수급 압력은 명확해요.", createdAt: T25J - 5*60_000, likes: 138 },
+    { id: 2, nickname: "익명_4729", holdingLabel: "관심종목", content: "QQQ 외에도 NASDAQ-100 추종 ETF가 수십 개예요. 전부 합치면 편입 강제 매수 규모가 상당해요. 단기 촉매로 봐도 좋지만 편입 후 구조적 보유 수요가 생기는 게 더 중요해요.", createdAt: T25J - 21*60_000, likes: 98 },
+    { id: 3, nickname: "익명_2718", holdingLabel: "관심종목", content: "S&P500 편입할 때도 편입 전 한 달이 수익률 최고였어요. 7/6 전에 선행 포지션 이미 쌓여 있는 상황이에요. 편입 당일은 오히려 '소문에 사서 뉴스에 팔아'가 나올 수도 있어요.", createdAt: T25J - 38*60_000, likes: 73 },
+  ],
+  343: [
+    { id: 1, nickname: "익명_6183", holdingLabel: "관심종목", content: "Elon 바이오 업데이트는 항상 중요한 힌트를 줘요. 'Starmind'가 공식 브랜드면 지금 우리가 AI 위성 성좌 탄생 직전을 보고 있는 거예요. 10년 후 스타민드가 우주 AWS가 될 수 있어요.", createdAt: T25J - 8*60_000, likes: 156 },
+    { id: 2, nickname: "익명_9284", holdingLabel: "관심종목", content: "Starlink가 인터넷, Starmind가 AI면 두 개 독립 수익원이에요. AI 서비스 단가는 인터넷보다 훨씬 비싸요. ARPU가 폭발적으로 올라갈 수 있는 구조예요.", createdAt: T25J - 22*60_000, likes: 119 },
+    { id: 3, nickname: "익명_3712", holdingLabel: "관심종목", content: "국방부가 위성 AI 추론에 돈을 얼마나 쓸지 생각해봐요. SpaceX가 이 분야 독점하면 정부 계약만으로도 엄청난 매출이 생겨요. SPCX 장기 홀드의 새로운 이유가 추가된 거예요.", createdAt: T25J - 37*60_000, likes: 87 },
+  ],
+  344: [
+    { id: 1, nickname: "익명_5194", holdingLabel: "관심종목", content: "150kW를 우주에서 처리한다는 게 엄청난 기술적 도전이에요. 방열판이 액체냉각이어야 할 만큼 발열이 엄청난 거예요. 이걸 상업적으로 해결하면 SpaceX만이 할 수 있는 영역이에요.", createdAt: T25J - 12*60_000, likes: 91 },
+    { id: 2, nickname: "익명_7483", holdingLabel: "관심종목", content: "ISS 날개폭 수준의 위성이 궤도에서 AI 돌리는 거예요. 냉각·전력·컴퓨팅 다 맞아야 하는데 Starship 탑재중량이 이걸 가능하게 해줘요. Falcon 9으론 못 올리는 크기예요.", createdAt: T25J - 29*60_000, likes: 74 },
+  ],
+  345: [
+    { id: 1, nickname: "익명_8294", holdingLabel: "관심종목", content: "벌크선이 50대면 작은 선사가 아니에요. 대형 선사 전체 선단이에요. 이 계약 하나로 연 $15M+인데 이런 계약이 수백 개 쌓이면 Starlink Maritime 단독으로 수조 원 사업이에요.", createdAt: T25J - 9*60_000, likes: 83 },
+    { id: 2, nickname: "익명_3718", holdingLabel: "관심종목", content: "해운사들이 VSAT 쓰다가 Starlink로 넘어오면 다시 돌아가기 어려워요. 속도 차이가 너무 커서요. 전환 후 유지율이 거의 100%인 구독 사업 모델이에요. 한번 잡으면 오래 가요.", createdAt: T25J - 26*60_000, likes: 62 },
+  ],
+  346: [
+    { id: 1, nickname: "익명_4912", holdingLabel: "관심종목", content: "Tesla + Sunrun + SpaceX 3자가 각자 잘하는 걸 결합한 거예요. 에너지 저장, 태양광, 통신 관제망 — 어느 한 회사가 다 할 수 없어요. 이 조합을 경쟁사가 만들 수 없어요.", createdAt: T25J - 11*60_000, likes: 118 },
+    { id: 2, nickname: "익명_7193", holdingLabel: "100주 보유", content: "16GW 가상발전소가 얼마나 큰지 — 원전 16기 규모예요. 이게 분산 가정 배터리로 가능하면 그리드 안정성에 혁명이에요. 정부에서 인센티브 더 줄 가능성도 높아요.", createdAt: T25J - 27*60_000, likes: 89 },
+    { id: 3, nickname: "익명_5294", holdingLabel: "관심종목", content: "재난 때 전기랑 인터넷이 동시에 끊기는데 Tesla Powerwall + Starlink가 같이 있으면 둘 다 해결돼요. 이 조합의 실용적 가치가 일반 소비자한테 직접 다가오는 거예요. 수요 구조가 탄탄해요.", createdAt: T25J - 43*60_000, likes: 67 },
+  ],
+  347: [
+    { id: 1, nickname: "익명_6483", holdingLabel: "300주 보유", content: "EPS $1.91이 예상 $1.60 대비 19% 상회가 진짜 서프라이즈예요. 매출도 그렇지만 EPS 서프라이즈가 주가 리액션 결정해요. Q4 가이던스까지 컨센서스 상회면 애널들이 목표주가 올릴 거예요.", createdAt: T25J - 14*60_000, likes: 184 },
+    { id: 2, nickname: "익명_8291", holdingLabel: "200주 보유", content: "HBM 수요가 이렇게 폭발하는 게 NVIDIA GB200 NVL72 수요 때문이에요. 서버 당 HBM 탑재량이 이전 세대 대비 3배예요. Micron이 SK하이닉스 추격하면 HBM 시장 점유율 변화가 실적 레버리지예요.", createdAt: T25J - 31*60_000, likes: 141 },
+    { id: 3, nickname: "익명_4918", holdingLabel: "관심종목", content: "반도체 슈퍼사이클 공식 확인이에요. Micron 실적이 좋으면 SK하이닉스·삼성도 좋고 NVIDIA 서버 수요도 확인되는 거예요. 반도체 섹터 전체에 호재예요.", createdAt: T25J - 48*60_000, likes: 108 },
+  ],
   // ── 2026-06-24 신규 ──────────────────────────────────────────────────────
   322: [
     { id: 1, nickname: "익명_5829", holdingLabel: "150주 보유", content: "오보에 -2% 빠지고 보고서 나오면 회복하는 패턴이 반복이에요. 이걸 알면 NTSB 보고서 대기하면서 저점 잡는 전략이 가능해요. Tesla 뉴스 리터러시가 수익률 차이를 만들어요.", createdAt: T24J - 4*60_000, likes: 73 },

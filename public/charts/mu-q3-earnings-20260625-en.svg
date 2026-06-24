@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#60a5fa" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">MU · Micron Technology Q3'26 Earnings</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Revenue $9.09B · EPS $1.91 · Strong Q4 Guidance — AI Server Memory Demand Explosion</text>
+
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#0a1528" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="270" y="120" font-family="Arial,sans-serif" font-size="36" fill="#60a5fa" font-weight="700" text-anchor="middle">$9.09B</text>
+  <text x="270" y="155" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Q3 Revenue · Beat Estimate</text>
+  <text x="540" y="120" font-family="Arial,sans-serif" font-size="36" fill="#60a5fa" font-weight="700" text-anchor="middle">$1.91</text>
+  <text x="540" y="155" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">EPS · Est. $1.60 · +19% beat</text>
+  <text x="810" y="120" font-family="Arial,sans-serif" font-size="36" fill="#00e5a0" font-weight="700" text-anchor="middle">Earnings Beat</text>
+  <text x="810" y="155" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Q4 Guidance Even Stronger</text>
+
+  <rect x="24" y="194" width="322" height="216" rx="10" fill="#111318"/>
+  <text x="185" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Q3 Earnings Detail</text>
+  <rect x="40" y="234" width="290" height="164" rx="8" fill="#0a1528"/>
+  <text x="56" y="258" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">Key Metrics</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Revenue: $9.09B (est. $8.8B)</text>
+  <text x="56" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• EPS: $1.91 (est. $1.60)</text>
+  <text x="56" y="320" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Gross margin: ~38% est.</text>
+  <text x="56" y="340" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">• YoY revenue +58% growth</text>
+  <text x="56" y="364" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI server DRAM/HBM explosion</text>
+  <text x="56" y="382" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">NAND recovery + DRAM price stable</text>
+
+  <rect x="362" y="194" width="334" height="216" rx="10" fill="#111318"/>
+  <text x="529" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Q4 Guidance</text>
+  <rect x="378" y="234" width="302" height="164" rx="8" fill="#161b22"/>
+  <text x="394" y="258" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">Q4 FY26 Outlook</text>
+  <text x="394" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Revenue guide: $9.8B–$10.2B</text>
+  <text x="394" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Above consensus estimate</text>
+  <text x="394" y="320" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• HBM supply concentrated to AI DC</text>
+  <text x="394" y="340" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• NAND price recovery expected</text>
+  <text x="394" y="366" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">Official semiconductor cycle recovery</text>
+  <text x="394" y="386" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI supercycle entry confirmed</text>
+
+  <rect x="712" y="194" width="344" height="216" rx="10" fill="#111318"/>
+  <text x="884" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">AI Memory Demand</text>
+  <rect x="728" y="234" width="312" height="164" rx="8" fill="#0a1528"/>
+  <text x="884" y="256" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" font-weight="700" text-anchor="middle">HBM Exclusive Beneficiary</text>
+  <text x="884" y="278" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Essential memory for AI servers</text>
+  <text x="744" y="306" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• H100/H200 servers use HBM3e</text>
+  <text x="744" y="326" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• GB200 NVL72: HBM demand surge</text>
+  <text x="744" y="346" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Micron HBM4 development near done</text>
+  <text x="744" y="366" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">• Closing gap on SK Hynix for #2 spot</text>
+
+  <rect x="24" y="426" width="1032" height="68" rx="10" fill="#0a1528" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="454" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="700" text-anchor="middle">Micron Q3 Earnings Beat — AI Semiconductor Supercycle Entry Officially Declared</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">HBM demand explosion + DRAM stable + NAND recovery — Q4 guide even stronger confirms upcycle</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: Micron Technology · 2026.06.25 · Investus</text>
+</svg>

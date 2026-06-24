@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 700" width="1080" height="700">
+  <rect width="1080" height="700" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">시장분석 · 2026.06.25</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" font-weight="600">Cybercab 150대+ 외부 포착 · FSD 핀란드 · Starmind · NASDAQ-100 편입 · Micron Q3 실적</text>
+
+  <!-- Wide feature card -->
+  <rect x="24" y="78" width="1032" height="80" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="108" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">6/25 핵심</text>
+  <text x="540" y="142" font-family="Arial,sans-serif" font-size="21" fill="#00e5a0" font-weight="700" text-anchor="middle">Cybercab 기가텍사스 EOL 외부 첫 목격 — 150대+ 양산 가속, 루트 1.5→2.4mi 확장</text>
+
+  <!-- Row 1 -->
+  <!-- Card 1: Cybercab -->
+  <rect x="24" y="174" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="24" y="174" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="40" y="200" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🚖 TSLA Cybercab 외부 포착</text>
+  <text x="40" y="228" font-family="Arial,sans-serif" font-size="21" fill="#00e5a0" font-weight="700">150대+ 기가텍사스</text>
+  <text x="40" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">EOL 외부 첫 확인 · 루트 2.4mi 확장</text>
+  <text x="40" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">드론 촬영 공식 목격 · 양산 가속 신호</text>
+  <text x="40" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">상반기 최대 Cybercab 집결 규모</text>
+  <text x="40" y="298" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">기가텍사스 · EOL · 무인 로보택시</text>
+
+  <!-- Card 2: FSD 핀란드 -->
+  <rect x="373" y="174" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="373" y="174" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="389" y="200" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🇫🇮 TSLA FSD 핀란드 Traficom</text>
+  <text x="389" y="228" font-family="Arial,sans-serif" font-size="21" fill="#00e5a0" font-weight="700">EU 6번째 국가 심사</text>
+  <text x="389" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">네덜란드 RDW 기반 상호인증 절차</text>
+  <text x="389" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">승인 시 EU 확산 모멘텀 가속</text>
+  <text x="389" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">기존 5개국: NL·LT·EE·DK·BE</text>
+  <text x="389" y="298" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">Traficom 심사 개시 · FSD Supervised</text>
+
+  <!-- Card 3: NASDAQ-100 -->
+  <rect x="722" y="174" width="334" height="132" rx="10" fill="#1a0a24"/>
+  <rect x="722" y="174" width="334" height="4" rx="2" fill="#c084fc"/>
+  <text x="738" y="200" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">📈 SPCX NASDAQ-100 편입</text>
+  <text x="738" y="228" font-family="Arial,sans-serif" font-size="21" fill="#c084fc" font-weight="700">7월 6일 공식 편입</text>
+  <text x="738" y="252" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">패시브 ETF 자금 강제 유입</text>
+  <text x="738" y="270" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">QQQ 등 인덱스 펀드 자동 매수</text>
+  <text x="738" y="288" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">리밸런싱 전후 수급 변화 주목</text>
+  <text x="738" y="298" font-family="Arial,sans-serif" font-size="10" fill="#6b7280">NASDAQ-100 신규 편입 · 7/6 발효</text>
+
+  <!-- Row 2 -->
+  <!-- Card 4: Starmind -->
+  <rect x="24" y="322" width="333" height="132" rx="10" fill="#1a0a24"/>
+  <rect x="24" y="322" width="333" height="4" rx="2" fill="#c084fc"/>
+  <text x="40" y="348" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">🛰️ SPCX Starmind AI 위성</text>
+  <text x="40" y="384" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" font-weight="700">Starmind</text>
+  <text x="40" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">Elon X bio · AI 위성 새 브랜드</text>
+  <text x="40" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">AI1 위성: 150kW 컴퓨트 · 70m 날개폭</text>
+  <text x="40" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">액체 냉각 방열판 · 우주 AI 인프라</text>
+
+  <!-- Card 5: ARK $4,600 -->
+  <rect x="373" y="322" width="333" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="373" y="322" width="333" height="4" rx="2" fill="#00e5a0"/>
+  <text x="389" y="348" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🎯 TSLA ARK 추가 매수</text>
+  <text x="389" y="384" font-family="Arial,sans-serif" font-size="28" fill="#00e5a0" font-weight="700">$4,600 목표가</text>
+  <text x="389" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">ARK $21.25M 추가 매수 · 2026 전망</text>
+  <text x="389" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">로보택시+FSD 확장 → 멀티배거</text>
+  <text x="389" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Cathie Wood 장기 확신 재확인</text>
+
+  <!-- Card 6: Micron -->
+  <rect x="722" y="322" width="334" height="132" rx="10" fill="#0a1528"/>
+  <rect x="722" y="322" width="334" height="4" rx="2" fill="#60a5fa"/>
+  <text x="738" y="348" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700">💾 Micron Q3'26 실적</text>
+  <text x="738" y="384" font-family="Arial,sans-serif" font-size="28" fill="#60a5fa" font-weight="700">$9.09B 매출</text>
+  <text x="738" y="406" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">EPS $1.91 · 예상 대비 +19% 상회</text>
+  <text x="738" y="426" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Q4 강한 가이던스 · AI 서버 메모리</text>
+  <text x="738" y="444" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">HBM 폭발 수요 · 반도체 업황 회복</text>
+
+  <!-- Row 3: 2 wide cards -->
+  <!-- Card 7: 플릿+로보택시채용 -->
+  <rect x="24" y="470" width="510" height="132" rx="10" fill="#0d1f14"/>
+  <rect x="24" y="470" width="510" height="4" rx="2" fill="#00e5a0"/>
+  <text x="40" y="496" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0" font-weight="700">🚗 TSLA 플릿 수익화 + 로보택시 물류 채용</text>
+  <text x="40" y="522" font-family="Arial,sans-serif" font-size="20" fill="#00e5a0" font-weight="700">차주 수익화 · Austin TX 채용</text>
+  <text x="40" y="546" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">Tesla app 플릿 등록 → FSD 없이 수익 창출</text>
+  <text x="40" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Sr. Analyst Robotaxi Logistics · 북미 배포 계획</text>
+  <text x="40" y="584" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">소송: Arthur Singarayar Model 3 · 운전자 과실 vs 설계결함</text>
+
+  <!-- Card 8: Renew Home + Oldendorff -->
+  <rect x="550" y="470" width="506" height="132" rx="10" fill="#1a0a24"/>
+  <rect x="550" y="470" width="506" height="4" rx="2" fill="#c084fc"/>
+  <text x="566" y="496" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" font-weight="700">🚀 SPCX Renew Home + Oldendorff 화물선</text>
+  <text x="566" y="522" font-family="Arial,sans-serif" font-size="20" fill="#c084fc" font-weight="700">Tesla+Sunrun+SpaceX · 50+ 화물선</text>
+  <text x="566" y="546" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">16GW 가상발전소 · 300M 가정 에너지 공급</text>
+  <text x="566" y="566" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Oldendorff: 50+ 대형 화물선 Starlink 탑재</text>
+  <text x="566" y="584" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">SpaceX 물류 수직통합 · AI1 위성 150kW 컴퓨트</text>
+
+  <text x="540" y="678" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">2026.06.25 · Investus · 참고용 (투자 권유 아님)</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#00e5a0" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">TSLA · 로보택시 물류 채용 공고</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Sr. Analyst Robotaxi Logistics · Austin TX · 북미 전역 배포 계획</text>
+
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#0d1f14" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="118" font-family="Arial,sans-serif" font-size="26" fill="#00e5a0" font-weight="700" text-anchor="middle">로보택시 물류 분석가 채용</text>
+  <text x="540" y="155" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Austin TX 기반 · 북미 전역 Cybercab 배포 운영 지원 · 상업화 가속 신호</text>
+
+  <rect x="24" y="194" width="322" height="216" rx="10" fill="#111318"/>
+  <text x="185" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">채용 공고 내용</text>
+  <rect x="40" y="234" width="290" height="164" rx="8" fill="#0d1f14"/>
+  <text x="56" y="258" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">직책 상세</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 직함: Sr. Analyst, Robotaxi Logistics</text>
+  <text x="56" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 위치: Austin, TX (본사 인근)</text>
+  <text x="56" y="320" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 업무: 로보택시 공급망 관리</text>
+  <text x="56" y="340" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">• 범위: 북미 전역 배포 계획</text>
+  <text x="56" y="364" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Cybercab 플릿 운영 최적화</text>
+  <text x="56" y="382" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">충전·정비·물류 통합 관리</text>
+
+  <rect x="362" y="194" width="334" height="216" rx="10" fill="#111318"/>
+  <text x="529" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">배포 계획 의미</text>
+  <rect x="378" y="234" width="302" height="164" rx="8" fill="#161b22"/>
+  <text x="394" y="258" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">북미 확장 타임라인</text>
+  <text x="394" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Phase 1: Austin TX (2026 상반기)</text>
+  <text x="394" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Phase 2: 텍사스 주요 도시</text>
+  <text x="394" y="320" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Phase 3: 미국 전역 (2026~2027)</text>
+  <text x="394" y="340" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 캐나다·멕시코 포함 가능성</text>
+  <text x="394" y="366" font-family="Arial,sans-serif" font-size="13" fill="#fbbf24" font-weight="700">채용 = 실제 배포 준비 증거</text>
+  <text x="394" y="386" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">인프라 구축 → 상업화 가속</text>
+
+  <rect x="712" y="194" width="344" height="216" rx="10" fill="#111318"/>
+  <text x="884" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">투자 시사점</text>
+  <rect x="728" y="234" width="312" height="164" rx="8" fill="#0d1f14"/>
+  <text x="884" y="260" font-family="Arial,sans-serif" font-size="18" fill="#00e5a0" font-weight="700" text-anchor="middle">채용이 말한다</text>
+  <text x="884" y="282" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Job postings = business intent</text>
+  <text x="744" y="312" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 물류 팀 구성 = 규모 확장 예고</text>
+  <text x="744" y="332" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 로보택시 사업 본격 조직화</text>
+  <text x="744" y="352" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 엔지니어링 뿐 아니라 ops 채용</text>
+  <text x="744" y="372" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0">• 수익화 단계 진입 임박 신호</text>
+
+  <rect x="24" y="426" width="1032" height="68" rx="10" fill="#0d1f14" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="454" font-family="Arial,sans-serif" font-size="15" fill="#00e5a0" font-weight="700" text-anchor="middle">물류 채용 = 북미 Cybercab 대규모 배포 실행 단계 진입</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Austin 출발 → 북미 전역 확장 로드맵 실행 중 — 채용 공고가 가장 신뢰할 수 있는 진행 증거</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Tesla 채용 공고 · 2026.06.25 · Investus</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#f87171" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#f87171" font-weight="700">TSLA · Model 3 사고 소송 — 운전자 과실 vs 설계결함</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Arthur Singarayar 소송 · Model 3 · 73mph · Tesla AI 데이터로 방어</text>
+
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#180808" stroke="#f87171" stroke-width="1.5"/>
+  <text x="540" y="108" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">소송 개요</text>
+  <text x="540" y="142" font-family="Arial,sans-serif" font-size="21" fill="#f87171" font-weight="700" text-anchor="middle">Arthur Singarayar — Tesla 상대 설계결함 주장 소송 제기</text>
+
+  <rect x="24" y="194" width="322" height="216" rx="10" fill="#111318"/>
+  <text x="185" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">사고 경위</text>
+  <rect x="40" y="234" width="290" height="164" rx="8" fill="#180808"/>
+  <text x="56" y="258" font-family="Arial,sans-serif" font-size="13" fill="#f87171" font-weight="700">사고 상황</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 차량: Tesla Model 3</text>
+  <text x="56" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 속도: 73mph (주거지역)</text>
+  <text x="56" y="320" font-family="Arial,sans-serif" font-size="12" fill="#f87171" font-weight="700">• 엑셀: 100% 밟힌 상태 확인</text>
+  <text x="56" y="340" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 수동 오버라이드: 없음</text>
+  <text x="56" y="364" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Tesla AI 블랙박스 데이터 기록</text>
+  <text x="56" y="382" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Ashok Elluswamy VP 공식 확인</text>
+
+  <rect x="362" y="194" width="334" height="216" rx="10" fill="#111318"/>
+  <text x="529" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">법적 쟁점</text>
+  <rect x="378" y="234" width="302" height="164" rx="8" fill="#161b22"/>
+  <text x="394" y="258" font-family="Arial,sans-serif" font-size="13" fill="#f87171" font-weight="700">원고 주장</text>
+  <text x="394" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Tesla 설계결함으로 사고 발생</text>
+  <text x="394" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 안전장치 미작동 주장</text>
+  <text x="394" y="320" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">Tesla 방어 논리</text>
+  <text x="394" y="342" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• AI 데이터: 운전자 100% 과실</text>
+  <text x="394" y="362" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 엑셀 완전 조작 · 브레이크 미사용</text>
+  <text x="394" y="382" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">유사 소송 Tesla 승소 선례 다수</text>
+
+  <rect x="712" y="194" width="344" height="216" rx="10" fill="#111318"/>
+  <text x="884" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">투자 시각</text>
+  <rect x="728" y="234" width="312" height="164" rx="8" fill="#0a1528"/>
+  <text x="884" y="258" font-family="Arial,sans-serif" font-size="16" fill="#00e5a0" font-weight="700" text-anchor="middle">데이터가 방패</text>
+  <text x="884" y="280" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">AI 기록 = 법적 최강 방어</text>
+  <text x="744" y="310" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 모든 주행 데이터 실시간 기록</text>
+  <text x="744" y="330" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 운전자 과실 소송 리스크 제한</text>
+  <text x="744" y="350" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 유사 소송 대부분 Tesla 승소</text>
+  <text x="744" y="370" font-family="Arial,sans-serif" font-size="12" fill="#00e5a0">• 미디어 오보 패턴 주의 필요</text>
+
+  <rect x="24" y="426" width="1032" height="68" rx="10" fill="#180808" stroke="#f87171" stroke-width="1"/>
+  <text x="540" y="454" font-family="Arial,sans-serif" font-size="15" fill="#f87171" font-weight="700" text-anchor="middle">운전자 엑셀 100% · 73mph = 운전자 과실 — Tesla 설계결함 아님</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">AI 블랙박스 데이터 기반 방어 · 유사 소송 Tesla 승소 선례 다수 · 미디어 과장 보도 주의</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: 법원 소장 · Tesla AI · 2026.06.25 · Investus</text>
+</svg>

@@ -171,6 +171,21 @@ const PAIRS = [
   { ko: 'tsla-robotaxi-20260624.svg',                 en: 'tsla-robotaxi-20260624-en.svg',                 label: 'TSLA_로보택시마일',        date: '20260624' },
   { ko: 'spcx-space-capsule-20260624.svg',            en: 'spcx-space-capsule-20260624-en.svg',            label: 'SPCX_우주캡슐',           date: '20260624' },
   { ko: 'spcx-ark-buy-20260624.svg',                  en: 'spcx-ark-buy-20260624-en.svg',                  label: 'SPCX_ARK역발상매수',      date: '20260624' },
+
+  // ── 2026-06-25 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260625.svg',                        en: 'summary-20260625-en.svg',                        label: '6월25일_요약',             date: '20260625' },
+  { ko: 'tsla-cybercab-giga-outside-20260625.svg',     en: 'tsla-cybercab-giga-outside-20260625-en.svg',     label: 'TSLA_Cybercab150대외부',   date: '20260625' },
+  { ko: 'tsla-fsd-finland-traficom-20260625.svg',      en: 'tsla-fsd-finland-traficom-20260625-en.svg',      label: 'TSLA_FSD핀란드Traficom',   date: '20260625' },
+  { ko: 'tsla-fleet-income-20260625.svg',              en: 'tsla-fleet-income-20260625-en.svg',              label: 'TSLA_플릿수익화',          date: '20260625' },
+  { ko: 'tsla-ark-4600-20260625.svg',                  en: 'tsla-ark-4600-20260625-en.svg',                  label: 'TSLA_ARK4600목표가',       date: '20260625' },
+  { ko: 'tsla-accident-lawsuit-20260625.svg',          en: 'tsla-accident-lawsuit-20260625-en.svg',          label: 'TSLA_사고소송',            date: '20260625' },
+  { ko: 'tsla-robotaxi-logistics-hiring-20260625.svg', en: 'tsla-robotaxi-logistics-hiring-20260625-en.svg', label: 'TSLA_로보택시물류채용',     date: '20260625' },
+  { ko: 'spcx-nasdaq100-july6-20260625.svg',           en: 'spcx-nasdaq100-july6-20260625-en.svg',           label: 'SPCX_NASDAQ100편입',       date: '20260625' },
+  { ko: 'spcx-starmind-20260625.svg',                  en: 'spcx-starmind-20260625-en.svg',                  label: 'SPCX_Starmind',            date: '20260625' },
+  { ko: 'spcx-ai1-satellite-20260625.svg',             en: 'spcx-ai1-satellite-20260625-en.svg',             label: 'SPCX_AI1위성스펙',         date: '20260625' },
+  { ko: 'spcx-oldendorff-20260625.svg',                en: 'spcx-oldendorff-20260625-en.svg',                label: 'SPCX_Oldendorff화물선',    date: '20260625' },
+  { ko: 'tsla-spcx-renew-home-20260625.svg',           en: 'tsla-spcx-renew-home-20260625-en.svg',           label: 'TSLA_SPCX_RenewHome',      date: '20260625' },
+  { ko: 'mu-q3-earnings-20260625.svg',                 en: 'mu-q3-earnings-20260625-en.svg',                 label: 'MU_Q3어닝서프라이즈',       date: '20260625' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

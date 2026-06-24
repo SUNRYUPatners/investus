@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#60a5fa" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">MU · Micron Technology Q3'26 실적 발표</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Revenue $9.09B · EPS $1.91 · Q4 강한 가이던스 — AI 서버 메모리 수요 폭발</text>
+
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#0a1528" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="270" y="120" font-family="Arial,sans-serif" font-size="36" fill="#60a5fa" font-weight="700" text-anchor="middle">$9.09B</text>
+  <text x="270" y="155" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Q3 매출 · 예상 상회</text>
+  <text x="540" y="120" font-family="Arial,sans-serif" font-size="36" fill="#60a5fa" font-weight="700" text-anchor="middle">$1.91</text>
+  <text x="540" y="155" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">EPS · 예상 $1.60 대비 +19%</text>
+  <text x="810" y="120" font-family="Arial,sans-serif" font-size="36" fill="#00e5a0" font-weight="700" text-anchor="middle">어닝 서프라이즈</text>
+  <text x="810" y="155" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Q4 가이던스 더 강함</text>
+
+  <rect x="24" y="194" width="322" height="216" rx="10" fill="#111318"/>
+  <text x="185" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Q3 실적 상세</text>
+  <rect x="40" y="234" width="290" height="164" rx="8" fill="#0a1528"/>
+  <text x="56" y="258" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">주요 지표</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 매출: $9.09B (예상 $8.8B)</text>
+  <text x="56" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• EPS: $1.91 (예상 $1.60)</text>
+  <text x="56" y="320" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 매출총이익: ~38% 예상</text>
+  <text x="56" y="340" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">• YoY 매출 +58% 성장</text>
+  <text x="56" y="364" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI 서버향 DRAM·HBM 폭발</text>
+  <text x="56" y="382" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">낸드 회복 + DRAM 가격 안정</text>
+
+  <rect x="362" y="194" width="334" height="216" rx="10" fill="#111318"/>
+  <text x="529" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Q4 가이던스</text>
+  <rect x="378" y="234" width="302" height="164" rx="8" fill="#161b22"/>
+  <text x="394" y="258" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">Q4 FY26 전망</text>
+  <text x="394" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 매출 가이던스: $9.8B~10.2B</text>
+  <text x="394" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 컨센서스 대비 상향 제시</text>
+  <text x="394" y="320" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• HBM 공급 AI 데이터센터 집중</text>
+  <text x="394" y="340" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 낸드 가격 반등 기대</text>
+  <text x="394" y="366" font-family="Arial,sans-serif" font-size="13" fill="#00e5a0" font-weight="700">반도체 업황 본격 회복 선언</text>
+  <text x="394" y="386" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">AI 슈퍼사이클 진입 확인</text>
+
+  <rect x="712" y="194" width="344" height="216" rx="10" fill="#111318"/>
+  <text x="884" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">AI 메모리 수요</text>
+  <rect x="728" y="234" width="312" height="164" rx="8" fill="#0a1528"/>
+  <text x="884" y="256" font-family="Arial,sans-serif" font-size="16" fill="#60a5fa" font-weight="700" text-anchor="middle">HBM 독점 수혜</text>
+  <text x="884" y="278" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">AI 서버 필수 메모리</text>
+  <text x="744" y="306" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• H100/H200 서버 HBM3e 채용</text>
+  <text x="744" y="326" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• GB200 NVL72: HBM 수요 급증</text>
+  <text x="744" y="346" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Micron HBM4 개발 완료 근접</text>
+  <text x="744" y="366" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">• SK하이닉스 이어 2위 추격 가속</text>
+
+  <rect x="24" y="426" width="1032" height="68" rx="10" fill="#0a1528" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="454" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="700" text-anchor="middle">Micron Q3 어닝 서프라이즈 — AI 반도체 슈퍼사이클 본격 진입 선언</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">HBM 폭발 수요 + DRAM 가격 안정 + 낸드 반등 — Q4 가이던스 더 강해 업황 회복 확인</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Micron Technology · 2026.06.25 · Investus</text>
+</svg>

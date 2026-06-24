@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">SPCX · NASDAQ-100 Official Inclusion July 6</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">Forced Passive ETF Inflows — QQQ and Index Funds Auto-Buy SPCX</text>
+
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#1a0a24" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="118" font-family="Arial,sans-serif" font-size="36" fill="#c084fc" font-weight="700" text-anchor="middle">July 6 NASDAQ-100 Inclusion</text>
+  <text x="540" y="155" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">SPCX officially joins index · Passive fund forced buying · Structural demand improvement</text>
+
+  <rect x="24" y="194" width="322" height="216" rx="10" fill="#111318"/>
+  <text x="185" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Inclusion Details</text>
+  <rect x="40" y="234" width="290" height="164" rx="8" fill="#1a0a24"/>
+  <text x="56" y="258" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">Schedule</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Announced: mid-June 2026</text>
+  <text x="56" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Effective date: July 6 (Monday)</text>
+  <text x="56" y="320" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">• Index: NASDAQ-100 official</text>
+  <text x="56" y="344" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• QQQ and trackers auto-buy</text>
+  <text x="56" y="364" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Invesco QQQ AUM ~$320B</text>
+  <text x="56" y="382" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Forced inflow proportional to SPCX weight</text>
+
+  <rect x="362" y="194" width="334" height="216" rx="10" fill="#111318"/>
+  <text x="529" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Supply/Demand Impact</text>
+  <rect x="378" y="234" width="302" height="164" rx="8" fill="#161b22"/>
+  <text x="394" y="258" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">Passive Fund Structure</text>
+  <text x="394" y="280" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Before rebal: anticipatory buying</text>
+  <text x="394" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Rebal day: forced mechanical buy</text>
+  <text x="394" y="320" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Post-inclusion: ongoing hold obligation</text>
+  <text x="394" y="344" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">Fundamental-agnostic forced demand</text>
+  <text x="394" y="366" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">No sellers competing = price pressure up</text>
+  <text x="394" y="386" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Similar pattern to S&amp;P500 inclusion trades</text>
+
+  <rect x="712" y="194" width="344" height="216" rx="10" fill="#111318"/>
+  <text x="884" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">Investment Strategy</text>
+  <rect x="728" y="234" width="312" height="164" rx="8" fill="#0a1528"/>
+  <text x="884" y="258" font-family="Arial,sans-serif" font-size="16" fill="#c084fc" font-weight="700" text-anchor="middle">Inclusion Trade Playbook</text>
+  <text x="884" y="280" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Index inclusion trade</text>
+  <text x="744" y="308" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Pre-inclusion: passive anticipatory buys</text>
+  <text x="744" y="328" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Just before 7/6: peak demand pressure</text>
+  <text x="744" y="348" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• Post-inclusion: structural buys continue</text>
+  <text x="744" y="368" font-family="Arial,sans-serif" font-size="12" fill="#c084fc">• Long-term holders benefit regardless</text>
+
+  <rect x="24" y="426" width="1032" height="68" rx="10" fill="#1a0a24" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="454" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">NASDAQ-100 7/6 Inclusion = Structural Passive Forced Inflows Confirmed</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">QQQ $320B AUM proportional auto-buy · Pre/post supply improvement · Structural long-term demand secured</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: NASDAQ · 2026.06.25 · Investus</text>
+</svg>

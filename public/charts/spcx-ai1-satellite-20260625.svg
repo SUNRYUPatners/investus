@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520">
+  <rect width="1080" height="520" fill="#0d1117"/>
+  <rect x="0" y="0" width="1080" height="64" fill="#111318"/>
+  <rect x="0" y="62" width="1080" height="2" fill="#c084fc" opacity="0.7"/>
+  <text x="28" y="26" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">SPCX · AI1 위성 스펙 공개</text>
+  <text x="28" y="50" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700">150kW 컴퓨트 · 70m 날개폭 · 액체 냉각 — 우주 AI 데이터센터</text>
+
+  <rect x="24" y="78" width="1032" height="100" rx="12" fill="#1a0a24" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="110" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" font-weight="700" text-anchor="middle">SpaceX AI1 위성 — 우주 최초 AI 전용 위성</text>
+  <text x="540" y="155" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">150kW 온보드 AI 컴퓨팅 · 70m 날개폭 · 액체 냉각 방열판 · 지상 데이터센터 대체</text>
+
+  <rect x="24" y="194" width="322" height="216" rx="10" fill="#111318"/>
+  <text x="185" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">컴퓨팅 스펙</text>
+  <rect x="40" y="234" width="290" height="164" rx="8" fill="#1a0a24"/>
+  <text x="56" y="258" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">AI 처리 능력</text>
+  <text x="56" y="280" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" font-weight="700">150kW</text>
+  <text x="56" y="306" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">온보드 AI 컴퓨팅 파워</text>
+  <text x="56" y="326" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">기존 Starlink v4: ~1kW 대비</text>
+  <text x="56" y="346" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">150배 컴퓨팅 집적도</text>
+  <text x="56" y="368" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">GPU 클러스터 우주 버전</text>
+  <text x="56" y="386" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">궤도상 실시간 AI 추론 가능</text>
+
+  <rect x="362" y="194" width="334" height="216" rx="10" fill="#111318"/>
+  <text x="529" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">물리적 스펙</text>
+  <rect x="378" y="234" width="302" height="164" rx="8" fill="#161b22"/>
+  <text x="394" y="258" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">크기 및 냉각</text>
+  <text x="394" y="280" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" font-weight="700">70m</text>
+  <text x="394" y="306" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">날개폭 (태양광 패널 어레이)</text>
+  <text x="394" y="326" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">ISS 날개폭 73m에 필적</text>
+  <text x="394" y="346" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="700">액체 냉각 방열판 탑재</text>
+  <text x="394" y="368" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">150kW 발열 처리 필수</text>
+  <text x="394" y="386" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">우주용 냉각 기술 첫 적용</text>
+
+  <rect x="712" y="194" width="344" height="216" rx="10" fill="#111318"/>
+  <text x="884" y="222" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" font-weight="700" text-anchor="middle">활용 시나리오</text>
+  <rect x="728" y="234" width="312" height="164" rx="8" fill="#0a1528"/>
+  <text x="884" y="258" font-family="Arial,sans-serif" font-size="16" fill="#c084fc" font-weight="700" text-anchor="middle">우주 AI 서비스</text>
+  <text x="884" y="280" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">지상 불필요 AI 추론</text>
+  <text x="744" y="308" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 국방: 실시간 위성 정보 분석</text>
+  <text x="744" y="328" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 해양: 선박 자율 항법 지원</text>
+  <text x="744" y="348" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">• 농업: 위성 기반 작황 분석</text>
+  <text x="744" y="368" font-family="Arial,sans-serif" font-size="12" fill="#c084fc">• AI 서비스 지구 전역 균등 제공</text>
+
+  <rect x="24" y="426" width="1032" height="68" rx="10" fill="#1a0a24" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="454" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="700" text-anchor="middle">AI1 = 150kW 우주 AI 컴퓨팅 · 지구 궤도상 데이터센터 시대 개막</text>
+  <text x="540" y="476" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">70m 날개폭 · 액체 냉각 · Starship으로 대량 배치 — 지상 클라우드 대체 우주 AI 인프라</text>
+
+  <text x="540" y="512" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: SpaceX · 2026.06.25 · Investus</text>
+</svg>
