@@ -230,14 +230,20 @@ export function SP500Heatmap() {
       }
     } catch { /* ignore */ }
 
-    fetch("/api/sp500-prices")
-      .then((r) => r.json())
-      .then((data: ApiResponse) => {
-        setSectors(data.sectors);
-        setIsLive(data.isLive);
-        try { localStorage.setItem("sp500-cache", JSON.stringify(data)); } catch { /* ignore */ }
-      })
-      .catch(() => { /* keep cached or null */ });
+    const doFetch = () => {
+      fetch("/api/sp500-prices")
+        .then((r) => r.json())
+        .then((data: ApiResponse) => {
+          setSectors(data.sectors);
+          setIsLive(data.isLive);
+          try { localStorage.setItem("sp500-cache", JSON.stringify(data)); } catch { /* ignore */ }
+        })
+        .catch(() => { /* keep cached or null */ });
+    };
+
+    doFetch();
+    const id = setInterval(doFetch, 60_000);
+    return () => clearInterval(id);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
