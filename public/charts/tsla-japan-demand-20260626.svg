@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
+    </linearGradient>
+    <linearGradient id="barUp" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#fca5a5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">TSLA · 일본 시장 폭발적 수요</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Tesla 일본 수요 폭발 — 배달센터 포화 상태</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#ef4444"/>
+  <!-- Japan circle flag -->
+  <circle cx="540" cy="260" r="180" fill="#1a1117" stroke="#ef4444" stroke-width="3"/>
+  <circle cx="540" cy="260" r="80" fill="#ef4444"/>
+  <!-- Japan text -->
+  <text x="540" y="145" font-family="Arial,sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">🇯🇵 일본 수요</text>
+  <!-- Demand arrows pointing to Japan circle -->
+  <line x1="200" y1="260" x2="355" y2="260" stroke="#ef4444" stroke-width="4"/>
+  <polygon points="355,250 370,260 355,270" fill="#ef4444"/>
+  <line x1="880" y1="260" x2="725" y2="260" stroke="#ef4444" stroke-width="4"/>
+  <polygon points="725,250 710,260 725,270" fill="#ef4444"/>
+  <line x1="540" y1="90" x2="540" y2="150" stroke="#ef4444" stroke-width="4"/>
+  <polygon points="530,150 540,168 550,150" fill="#ef4444"/>
+  <!-- Demand labels -->
+  <text x="150" y="255" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">정부</text>
+  <text x="150" y="275" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">보조금</text>
+  <text x="930" y="255" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">무료</text>
+  <text x="930" y="275" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">충전</text>
+  <!-- Demand explosion indicator -->
+  <text x="540" y="270" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">폭발</text>
+  <!-- Stats Cards -->
+  <rect x="40" y="465" width="305" height="140" rx="12" fill="#1a1117" stroke="#ef4444" stroke-width="2"/>
+  <text x="192" y="500" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">무료 슈퍼차징</text>
+  <!-- Lightning bolt icon -->
+  <polygon points="192,515 180,540 192,540 185,565 205,535 192,535" fill="#fbbf24"/>
+  <text x="192" y="590" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#fbbf24" text-anchor="middle">FREE</text>
+  <text x="192" y="595" font-family="Arial,sans-serif" font-size="1" fill="#9ca3af" text-anchor="middle"> </text>
+  <text x="192" y="595" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">슈퍼차징 무료 제공</text>
+  <rect x="388" y="465" width="305" height="140" rx="12" fill="#1a1117" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="500" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">정부 보조금</text>
+  <!-- Government icon -->
+  <rect x="510" y="515" width="60" height="40" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <polygon points="540,505 510,515 570,515" fill="#60a5fa"/>
+  <rect x="518" y="525" width="14" height="30" fill="#60a5fa" opacity="0.5"/>
+  <rect x="540" y="525" width="14" height="30" fill="#60a5fa" opacity="0.5"/>
+  <text x="540" y="585" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#60a5fa" text-anchor="middle">지원</text>
+  <text x="540" y="595" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">일본 정부 EV 보조금</text>
+  <rect x="736" y="465" width="305" height="140" rx="12" fill="#1a1117" stroke="#f87171" stroke-width="2"/>
+  <text x="888" y="500" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">배달센터 상태</text>
+  <!-- Overflow icon -->
+  <rect x="848" y="515" width="80" height="45" rx="4" fill="#374151" stroke="#f87171" stroke-width="2"/>
+  <rect x="856" y="520" width="64" height="35" rx="2" fill="#f87171" opacity="0.4"/>
+  <!-- overflow arrows -->
+  <text x="888" y="548" font-family="Arial,sans-serif" font-size="14" fill="#f87171" font-weight="bold" text-anchor="middle">포화</text>
+  <text x="888" y="585" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#f87171" text-anchor="middle">OVERLOAD</text>
+  <text x="888" y="598" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">배달 센터 주문 넘침</text>
+  <!-- Demand chart (going way up) -->
+  <text x="540" y="650" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e5e7eb" text-anchor="middle">일본 Tesla 수요 추이</text>
+  <!-- Chart background -->
+  <rect x="80" y="665" width="920" height="120" rx="8" fill="#161b22"/>
+  <!-- Demand bars going up dramatically -->
+  <rect x="120" y="745" width="70" height="30" rx="3" fill="#6b7280"/>
+  <text x="155" y="795" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">2025 Q1</text>
+  <rect x="230" y="730" width="70" height="45" rx="3" fill="#9ca3af"/>
+  <text x="265" y="795" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Q2</text>
+  <rect x="340" y="705" width="70" height="70" rx="3" fill="#ef4444" opacity="0.6"/>
+  <text x="375" y="795" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Q3</text>
+  <rect x="450" y="695" width="70" height="80" rx="3" fill="#ef4444" opacity="0.8"/>
+  <text x="485" y="795" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Q4</text>
+  <rect x="560" y="675" width="70" height="100" rx="3" fill="#ef4444"/>
+  <text x="595" y="795" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">2026 Q1</text>
+  <rect x="670" y="668" width="70" height="107" rx="3" fill="url(#barUp)"/>
+  <text x="705" y="795" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">지금</text>
+  <!-- Overflow label -->
+  <text x="850" y="710" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#f87171" text-anchor="middle">포화! →</text>
+  <!-- Trend arrow -->
+  <path d="M120 758 Q400 700 700 672" stroke="#ef4444" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+  <!-- Stats row -->
+  <rect x="40" y="810" width="305" height="90" rx="10" fill="#161b22" stroke="#ef4444" stroke-width="1"/>
+  <text x="192" y="845" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">혜택</text>
+  <text x="192" y="882" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#fbbf24" text-anchor="middle">무료 충전</text>
+  <rect x="388" y="810" width="305" height="90" rx="10" fill="#161b22" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="845" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">배달센터</text>
+  <text x="540" y="882" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#f87171" text-anchor="middle">주문 폭주</text>
+  <rect x="736" y="810" width="305" height="90" rx="10" fill="#161b22" stroke="#ef4444" stroke-width="1"/>
+  <text x="888" y="845" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">시장 지위</text>
+  <text x="888" y="882" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#4ade80" text-anchor="middle">급성장 ↑</text>
+  <!-- Footer -->
+  <rect y="925" width="1080" height="80" fill="#111318"/>
+  <rect y="925" width="1080" height="2" fill="#ef4444"/>
+  <text x="540" y="965" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Tesla 일본 — 무료 충전 + 정부 보조금으로 수요 기록 경신</text>
+  <text x="540" y="990" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · 투자 참고용</text>
+  <rect y="1020" width="1080" height="60" fill="#0d1117"/>
+  <text x="540" y="1057" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">TSLA 일본 시장 수요 폭발 → 아시아 EV 리더십 확대</text>
+</svg>

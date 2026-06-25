@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#130a1f"/>
+    </linearGradient>
+    <linearGradient id="dealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#e879f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">SPCX · 인수 합병 검토</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SpaceX의 T-Mobile 인수 가능성 ($108B 딜)</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#c084fc"/>
+  <!-- HERO: $108B -->
+  <text x="540" y="180" font-family="Arial,sans-serif" font-size="24" fill="#9ca3af" text-anchor="middle">예상 딜 규모</text>
+  <text x="540" y="330" font-family="Arial,sans-serif" font-size="140" font-weight="bold" fill="url(#dealGrad)" text-anchor="middle">$108B</text>
+  <!-- Glow -->
+  <circle cx="540" cy="280" r="200" fill="#c084fc" opacity="0.04"/>
+  <!-- Merger visual: SpaceX → T-Mobile -->
+  <rect x="40" y="380" width="340" height="140" rx="16" fill="#1a1525" stroke="#c084fc" stroke-width="2.5"/>
+  <!-- Rocket icon for SpaceX -->
+  <g transform="translate(120, 420)">
+    <ellipse cx="0" cy="0" rx="15" ry="35" fill="#c084fc" opacity="0.8"/>
+    <polygon points="0,-35 -20,-15 20,-15" fill="#c084fc"/>
+    <polygon points="-15,15 0,35 15,15" fill="#f97316" opacity="0.8"/>
+    <circle cx="0" cy="-5" r="6" fill="#0d1117"/>
+  </g>
+  <text x="220" y="435" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#c084fc" text-anchor="middle">SpaceX</text>
+  <text x="220" y="462" font-family="Arial,sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">SPCX (인수자)</text>
+  <text x="220" y="488" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" text-anchor="middle">Starlink + 통신</text>
+  <text x="220" y="510" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">우주 통신 리더</text>
+  <!-- Arrow -->
+  <rect x="405" y="430" width="140" height="60" rx="8" fill="#c084fc" opacity="0.15"/>
+  <text x="475" y="455" font-family="Arial,sans-serif" font-size="26" fill="#c084fc" text-anchor="middle">→</text>
+  <text x="475" y="478" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c084fc" text-anchor="middle">인수</text>
+  <text x="475" y="496" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">검토 중</text>
+  <!-- T-Mobile box -->
+  <rect x="570" y="380" width="470" height="140" rx="16" fill="#1a1525" stroke="#e879f9" stroke-width="2.5"/>
+  <!-- T-Mobile T icon -->
+  <rect x="620" y="405" width="60" height="8" rx="2" fill="#e879f9"/>
+  <rect x="645" y="413" width="10" height="50" rx="2" fill="#e879f9"/>
+  <text x="800" y="435" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#e879f9" text-anchor="middle">T-Mobile</text>
+  <text x="800" y="462" font-family="Arial,sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">미국 3위 이통사</text>
+  <text x="800" y="488" font-family="Arial,sans-serif" font-size="14" fill="#e879f9" text-anchor="middle">5G 네트워크</text>
+  <text x="800" y="510" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">지상 셀룰러 1위</text>
+  <!-- Impact cards -->
+  <text x="540" y="560" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#e5e7eb" text-anchor="middle">인수 시 예상 효과</text>
+  <rect x="40" y="580" width="300" height="140" rx="12" fill="#1a1525" stroke="#c084fc" stroke-width="1.5"/>
+  <!-- Satellite + tower icon -->
+  <circle cx="100" cy="625" r="20" fill="none" stroke="#c084fc" stroke-width="2"/>
+  <line x1="100" y1="605" x2="100" y2="590" stroke="#c084fc" stroke-width="2"/>
+  <line x1="90" y1="615" x2="76" y2="605" stroke="#c084fc" stroke-width="2"/>
+  <line x1="110" y1="615" x2="124" y2="605" stroke="#c084fc" stroke-width="2"/>
+  <text x="190" y="615" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c084fc" text-anchor="middle">직접 통신망</text>
+  <text x="190" y="638" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">지상+우주 통합</text>
+  <text x="190" y="658" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">완전 독립 통신</text>
+  <text x="190" y="700" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#c084fc" text-anchor="middle">독립 ↑</text>
+  <rect x="390" y="580" width="300" height="140" rx="12" fill="#1a1525" stroke="#c084fc" stroke-width="1.5"/>
+  <circle cx="450" cy="625" r="15" fill="#c084fc" opacity="0.3"/>
+  <text x="450" y="631" font-family="Arial,sans-serif" font-size="18" fill="#c084fc" text-anchor="middle">★</text>
+  <text x="540" y="615" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c084fc" text-anchor="middle">Starlink+셀룰러</text>
+  <text x="540" y="638" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">위성+지상 융합</text>
+  <text x="540" y="658" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">커버리지 극대화</text>
+  <text x="540" y="700" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#c084fc" text-anchor="middle">융합 ↑</text>
+  <rect x="740" y="580" width="300" height="140" rx="12" fill="#1a1525" stroke="#c084fc" stroke-width="1.5"/>
+  <circle cx="800" cy="625" r="15" fill="#c084fc" opacity="0.3"/>
+  <text x="800" y="631" font-family="Arial,sans-serif" font-size="18" fill="#c084fc" text-anchor="middle">🌐</text>
+  <text x="890" y="615" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c084fc" text-anchor="middle">글로벌 지배</text>
+  <text x="890" y="638" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">전 세계 통신</text>
+  <text x="890" y="658" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">시장 제패</text>
+  <text x="890" y="700" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#c084fc" text-anchor="middle">지배 ↑</text>
+  <!-- Stats row -->
+  <rect x="40" y="750" width="305" height="100" rx="10" fill="#161b22" stroke="#c084fc" stroke-width="1"/>
+  <text x="192" y="785" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">예상 딜 규모</text>
+  <text x="192" y="835" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="#c084fc" text-anchor="middle">$108B</text>
+  <rect x="388" y="750" width="305" height="100" rx="10" fill="#161b22" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="785" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">T-Mobile 가입자</text>
+  <text x="540" y="835" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="#c084fc" text-anchor="middle">110M+</text>
+  <rect x="736" y="750" width="305" height="100" rx="10" fill="#161b22" stroke="#c084fc" stroke-width="1"/>
+  <text x="888" y="785" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">가능성</text>
+  <text x="888" y="835" font-family="Arial,sans-serif" font-size="38" font-weight="bold" fill="#f59e0b" text-anchor="middle">검토 중</text>
+  <!-- Footer -->
+  <rect y="878" width="1080" height="80" fill="#111318"/>
+  <rect y="878" width="1080" height="2" fill="#c084fc"/>
+  <text x="540" y="918" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SpaceX + T-Mobile = 지구·우주 통합 통신 제국 탄생 가능성</text>
+  <text x="540" y="944" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · 투자 참고용</text>
+  <rect y="980" width="1080" height="100" fill="#0d1117"/>
+  <text x="540" y="1020" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">SPCX · T-Mobile 인수 검토 · 직접 통신망 구축 전략</text>
+  <text x="540" y="1050" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" text-anchor="middle">Starlink 위성 + T-Mobile 5G → 글로벌 통신 1위 목표</text>
+</svg>

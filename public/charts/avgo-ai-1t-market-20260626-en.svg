@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a1200"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">AVGO · Broadcom AI Infrastructure Market</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Broadcom CEO: AI Own Infra Market = $1 Trillion Opportunity</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#f59e0b"/>
+  <!-- HERO: $1T -->
+  <text x="540" y="170" font-family="Arial,sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">AI Infrastructure Total Addressable Market (TAM)</text>
+  <text x="540" y="315" font-family="Arial,sans-serif" font-size="140" font-weight="bold" fill="#f59e0b" text-anchor="middle">$1T</text>
+  <circle cx="540" cy="265" r="220" fill="#f59e0b" opacity="0.03"/>
+  <circle cx="540" cy="265" r="160" fill="#f59e0b" opacity="0.03"/>
+  <text x="540" y="362" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#e5e7eb" text-anchor="middle">AI Infrastructure TAM = $1,000,000,000,000</text>
+  <!-- AI Infrastructure Market Donut Chart -->
+  <text x="540" y="415" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#e5e7eb" text-anchor="middle">AI Infrastructure Market Composition</text>
+  <!-- Donut chart -->
+  <circle cx="300" cy="570" r="130" fill="none" stroke="#1f2937" stroke-width="40"/>
+  <!-- Custom AI Chips (AVGO) - 35% -->
+  <circle cx="300" cy="570" r="130" fill="none" stroke="#f59e0b" stroke-width="40"
+          stroke-dasharray="285 814" stroke-dashoffset="0"/>
+  <!-- Network: 25% -->
+  <circle cx="300" cy="570" r="130" fill="none" stroke="#60a5fa" stroke-width="40"
+          stroke-dasharray="204 814" stroke-dashoffset="-285"/>
+  <!-- GPU: 25% -->
+  <circle cx="300" cy="570" r="130" fill="none" stroke="#ef4444" stroke-width="40"
+          stroke-dasharray="204 814" stroke-dashoffset="-489"/>
+  <!-- Other: 15% -->
+  <circle cx="300" cy="570" r="130" fill="none" stroke="#374151" stroke-width="40"
+          stroke-dasharray="122 814" stroke-dashoffset="-693"/>
+  <!-- Center label -->
+  <circle cx="300" cy="570" r="80" fill="#161b22"/>
+  <text x="300" y="560" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" text-anchor="middle" font-weight="bold">Total</text>
+  <text x="300" y="582" font-family="Arial,sans-serif" font-size="18" fill="#f59e0b" font-weight="bold" text-anchor="middle">$1T</text>
+  <!-- Legend -->
+  <rect x="490" y="460" width="20" height="20" rx="3" fill="#f59e0b"/>
+  <text x="520" y="476" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb">Custom AI Chips (AVGO) — 35%</text>
+  <rect x="490" y="500" width="20" height="20" rx="3" fill="#60a5fa"/>
+  <text x="520" y="516" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb">Network Switches — 25%</text>
+  <rect x="490" y="540" width="20" height="20" rx="3" fill="#ef4444"/>
+  <text x="520" y="556" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb">GPU / Accelerators — 25%</text>
+  <rect x="490" y="580" width="20" height="20" rx="3" fill="#374151"/>
+  <text x="520" y="596" font-family="Arial,sans-serif" font-size="15" fill="#9ca3af">Other Infrastructure — 15%</text>
+  <!-- AVGO position highlight -->
+  <rect x="490" y="620" width="550" height="80" rx="10" fill="#1a1200" stroke="#f59e0b" stroke-width="2"/>
+  <text x="765" y="652" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">AVGO Core Position</text>
+  <text x="765" y="678" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">Custom AI Chips + Network Switches = 60% Coverage</text>
+  <!-- Stats row -->
+  <rect x="40" y="730" width="305" height="100" rx="10" fill="#161b22" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="192" y="765" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">TAM Size</text>
+  <text x="192" y="816" font-family="Arial,sans-serif" font-size="46" font-weight="bold" fill="#f59e0b" text-anchor="middle">$1T</text>
+  <rect x="388" y="730" width="305" height="100" rx="10" fill="#161b22" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="540" y="765" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">AVGO Key Areas</text>
+  <text x="540" y="800" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">Custom Chips</text>
+  <text x="540" y="825" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#f59e0b" text-anchor="middle">+ Network</text>
+  <rect x="736" y="730" width="305" height="100" rx="10" fill="#161b22" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="888" y="765" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">AI CapEx Cycle</text>
+  <text x="888" y="816" font-family="Arial,sans-serif" font-size="38" font-weight="bold" fill="#4ade80" text-anchor="middle">Benefiting ↑</text>
+  <!-- Footer quote -->
+  <rect x="40" y="858" width="1002" height="60" rx="8" fill="#161b22" stroke="#333" stroke-width="1"/>
+  <text x="540" y="882" font-family="Arial,sans-serif" font-size="15" font-style="italic" fill="#e5e7eb" text-anchor="middle">"The AI own infrastructure market is a trillion-dollar opportunity" — Broadcom CEO</text>
+  <text x="540" y="906" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Custom ASIC + Ethernet Switch = AVGO's Two AI Growth Engines</text>
+  <!-- Footer -->
+  <rect y="940" width="1080" height="80" fill="#111318"/>
+  <rect y="940" width="1080" height="2" fill="#f59e0b"/>
+  <text x="540" y="980" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">AVGO AI Infrastructure $1T TAM — Dominant in Custom Chips &amp; Networking</text>
+  <text x="540" y="1004" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · For Reference Only</text>
+  <rect y="1030" width="1080" height="50" fill="#0d1117"/>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">AVGO · AI Infrastructure $1T · Custom ASIC + Network Switches</text>
+</svg>

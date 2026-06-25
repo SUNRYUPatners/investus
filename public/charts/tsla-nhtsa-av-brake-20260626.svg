@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">NHTSA · TSLA FSD / 로보택시</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">자율주행 브레이크 페달 의무 폐지</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#ef4444"/>
+  <!-- Big headline -->
+  <text x="540" y="160" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="#4ade80" text-anchor="middle">브레이크 페달 의무 폐지</text>
+  <!-- Before / After visual -->
+  <!-- Divider line -->
+  <line x1="540" y1="190" x2="540" y2="620" stroke="#333" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="270" y="215" font-family="Arial,sans-serif" font-size="20" fill="#f87171" font-weight="bold" text-anchor="middle">BEFORE (기존)</text>
+  <text x="810" y="215" font-family="Arial,sans-serif" font-size="20" fill="#4ade80" font-weight="bold" text-anchor="middle">AFTER (변경)</text>
+  <!-- BEFORE: Car with brake pedal required -->
+  <g transform="translate(100, 240)">
+    <!-- Car body -->
+    <rect x="20" y="60" width="250" height="100" rx="12" fill="#374151" stroke="#6b7280" stroke-width="2"/>
+    <rect x="60" y="30" width="170" height="70" rx="8" fill="#4b5563" stroke="#6b7280" stroke-width="1.5"/>
+    <!-- Wheels -->
+    <circle cx="65" cy="165" r="28" fill="#1f2937" stroke="#6b7280" stroke-width="3"/>
+    <circle cx="225" cy="165" r="28" fill="#1f2937" stroke="#6b7280" stroke-width="3"/>
+    <circle cx="65" cy="165" r="12" fill="#374151"/>
+    <circle cx="225" cy="165" r="12" fill="#374151"/>
+    <!-- Headlights -->
+    <rect x="20" y="75" width="20" height="15" rx="3" fill="#fbbf24" opacity="0.6"/>
+    <rect x="250" y="75" width="20" height="15" rx="3" fill="#f87171" opacity="0.6"/>
+    <!-- Brake pedal icon -->
+    <rect x="115" y="80" width="60" height="30" rx="4" fill="#6b7280"/>
+    <rect x="130" y="65" width="30" height="25" rx="3" fill="#6b7280"/>
+    <text x="145" y="82" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb" text-anchor="middle">BRAKE</text>
+    <text x="145" y="102" font-family="Arial,sans-serif" font-size="10" fill="#e5e7eb" text-anchor="middle">PEDAL</text>
+  </g>
+  <text x="270" y="450" font-family="Arial,sans-serif" font-size="16" fill="#f87171" text-anchor="middle">브레이크 페달 필수</text>
+  <text x="270" y="475" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">운전자 개입 필요</text>
+  <!-- Red X over BEFORE -->
+  <line x1="140" y1="250" x2="400" y2="480" stroke="#f87171" stroke-width="6" opacity="0.7"/>
+  <line x1="400" y1="250" x2="140" y2="480" stroke="#f87171" stroke-width="6" opacity="0.7"/>
+  <!-- AFTER: AV no brake needed -->
+  <g transform="translate(580, 240)">
+    <!-- Car body (futuristic) -->
+    <rect x="20" y="60" width="250" height="100" rx="12" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+    <rect x="60" y="30" width="170" height="70" rx="8" fill="#166534" stroke="#4ade80" stroke-width="1.5"/>
+    <!-- Wheels -->
+    <circle cx="65" cy="165" r="28" fill="#1f2937" stroke="#4ade80" stroke-width="3"/>
+    <circle cx="225" cy="165" r="28" fill="#1f2937" stroke="#4ade80" stroke-width="3"/>
+    <circle cx="65" cy="165" r="12" fill="#374151"/>
+    <circle cx="225" cy="165" r="12" fill="#374151"/>
+    <!-- Headlights green -->
+    <rect x="20" y="75" width="20" height="15" rx="3" fill="#4ade80" opacity="0.8"/>
+    <rect x="250" y="75" width="20" height="15" rx="3" fill="#4ade80" opacity="0.8"/>
+    <!-- AV badge -->
+    <rect x="90" y="73" width="110" height="36" rx="6" fill="#4ade80"/>
+    <text x="145" y="88" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">FULLY</text>
+    <text x="145" y="102" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">AUTONOMOUS</text>
+  </g>
+  <text x="810" y="450" font-family="Arial,sans-serif" font-size="16" fill="#4ade80" text-anchor="middle">브레이크 페달 불필요</text>
+  <text x="810" y="475" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">완전 자율주행 AV 전용</text>
+  <!-- Green check over AFTER -->
+  <circle cx="810" cy="360" r="50" fill="#4ade80" opacity="0.15" stroke="#4ade80" stroke-width="2"/>
+  <text x="810" y="375" font-family="Arial,sans-serif" font-size="60" fill="#4ade80" text-anchor="middle">✓</text>
+  <!-- Impact section -->
+  <rect x="40" y="640" width="1002" height="60" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="540" y="663" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#4ade80" text-anchor="middle">NHTSA 규제 변경 → Tesla FSD 로보택시 상용화 최대 장벽 제거</text>
+  <text x="540" y="686" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">완전 자율주행 차량 인허가 절차 대폭 간소화 — Robotaxi 전국 확산 가속</text>
+  <!-- Stats row -->
+  <rect x="40" y="725" width="305" height="110" rx="10" fill="#161b22" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="192" y="760" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">규제 기관</text>
+  <text x="192" y="800" font-family="Arial,sans-serif" font-size="30" font-weight="bold" fill="#e5e7eb" text-anchor="middle">NHTSA</text>
+  <text x="192" y="825" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">美 도로교통안전국</text>
+  <rect x="388" y="725" width="305" height="110" rx="10" fill="#161b22" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="760" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">수혜 기업</text>
+  <text x="540" y="800" font-family="Arial,sans-serif" font-size="30" font-weight="bold" fill="#ef4444" text-anchor="middle">Tesla</text>
+  <text x="540" y="825" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">FSD + Robotaxi</text>
+  <rect x="736" y="725" width="305" height="110" rx="10" fill="#161b22" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="888" y="760" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">규제 변화</text>
+  <text x="888" y="800" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#4ade80" text-anchor="middle">장벽 제거</text>
+  <text x="888" y="825" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">브레이크 페달 면제</text>
+  <!-- Impact list -->
+  <rect x="40" y="860" width="1002" height="60" rx="8" fill="#161b22" stroke="#333" stroke-width="1"/>
+  <text x="540" y="882" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">주요 수혜: Tesla Cybercab · Robotaxi 전국 운행 · FSD 완전 자율화 · 규제 선점 효과</text>
+  <text x="540" y="906" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="bold" text-anchor="middle">규제 리스크 제거 → TSLA 로보택시 비즈니스 전면 가속</text>
+  <!-- Footer -->
+  <rect y="940" width="1080" height="80" fill="#111318"/>
+  <rect y="940" width="1080" height="2" fill="#ef4444"/>
+  <text x="540" y="982" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">NHTSA 브레이크 면제 — Tesla 자율주행 규제 최대 허들 해소</text>
+  <text x="540" y="1006" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · 투자 참고용</text>
+  <rect y="1030" width="1080" height="50" fill="#0d1117"/>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">TSLA FSD / Robotaxi 상용화 최대 수혜 — 규제 리스크 제거 완료</text>
+</svg>

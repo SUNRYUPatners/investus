@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T26J = 1782428400000; // 2026-06-26 08:00 KST
 const T25J = 1782342000000; // 2026-06-25 08:00 KST
 const T24J = 1782255600000; // 2026-06-24 08:00 KST
 const T23J = 1782169200000; // 2026-06-23 08:00 KST
@@ -40,7 +41,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T25J;       // NEW 배지 기준
+export const LATEST_UPDATE = T26J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -59,6 +60,57 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-26 — SPCX NASDAQ-100 공식·T-Mobile인수·천연가스파이프라인·Leopold780% /
+  //              TSLA CapEx확대·기가베를린7500·유럽2배·NHTSA브레이크면제·일본폭발 /
+  //              MU Q4 $50B역대최대 / AVGO $1T / AAPL M5+가격인상 / OpenAI IPO지연
+  // ════════════════════════════════════════════════════════════════════════
+
+  // SPCX — 6/26 업데이트 ────────────────────────────────────────────────
+  { id: 348, symbol: "SPCX", nickname: "익명_3924", holdingLabel: "관심종목",
+    content: "SpaceX 공식 인포그래픽 올라왔어요. 7월 6일 NASDAQ-100 편입 확정이에요. 448+ 로켓 발사, 7,300+ Starlink 위성, 직원 13,000+, 기업가치 $350B+. 25년 전 창업한 스타트업이 세계 최고 기술 기업 지수에 들어가는 거예요. QQQ 추종 ETF들이 이제 기계적으로 사야 하고, 리밸런싱 전 선행 매수까지 더해지면 수급이 구조적으로 바뀌는 거예요.",
+    createdAt: T26J - 5*60_000, likes: 678, comments: 3 },
+  { id: 349, symbol: "SPCX", nickname: "익명_7156", holdingLabel: "50주 보유",
+    content: "SpaceX가 T-Mobile 인수를 추진할 수 있다는 분석이 나왔어요. 규모가 $108B인데 SpaceX 현금이 $100.8B이에요. Starlink 위성 + T-Mobile 지상 셀타워 합치면 전 세계 어디서나 끊김 없는 연결이 돼요. Direct-to-Cell의 완성형이에요. 트럼프 행정부에서 규제 완화 환경이니까 가능성이 낮지 않아요. 성사되면 SPCX 기업가치 재산정해야 해요.",
+    createdAt: T26J - 12*60_000, likes: 589, comments: 3 },
+  { id: 350, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
+    content: "SpaceX가 Starship 연료용 천연가스 파이프라인을 직접 짓는대요. 다음 달 착공이에요. 지금까지 외부 공급업체한테 의존했는데 파이프라인 자체 건설로 연료 자급이 가능해져요. 발사 비용 절감 + 발사 간격 단축 + 월 발사 횟수 증가 이 세 가지가 동시에 돼요. Starlink V3 배치 가속화에도 직접 기여해요. 수직통합이 또 한 단계 올라갔어요.",
+    createdAt: T26J - 20*60_000, likes: 445, comments: 2 },
+  { id: 351, symbol: "SPCX", nickname: "익명_6382", holdingLabel: "관심종목",
+    content: "Leopold Stock Tracker 기준으로 SPCX가 Leopold Altschermer 첫 공개($250) 이후 +780%예요. $53M 기관 공개가 2025년 11월이었고 현재 $2,225+이에요. 애널리스트 목표가도 $2,225 → $2,500으로 상향됐어요. 기관이 먼저 집중 매수하고 알리면 그게 최고의 신호예요. NASDAQ-100 편입까지 더해지면 다음 레벨 목표가가 나올 수 있어요.",
+    createdAt: T26J - 28*60_000, likes: 512, comments: 2 },
+
+  // TSLA — 6/26 업데이트 ────────────────────────────────────────────────
+  { id: 352, symbol: "TSLA", nickname: "익명_5831", holdingLabel: "200주 보유",
+    content: "Elon이 오늘 Tesla 투자 대폭 확대를 공식 선언했어요. 배터리, 파워트레인, AI 소프트웨어, AI 훈련, 칩 설계 5개 영역에 'significantly higher CapEx'를 집행한대요. 단기엔 EPS 압박이 있어도 이게 3~5년 후 FSD·Robotaxi·Optimus의 기술 기반이에요. 경쟁사는 이 5개 영역을 동시에 투자할 수가 없어요. Elon 직접 발언이 확신 시그널이에요.",
+    createdAt: T26J - 8*60_000, likes: 634, comments: 3 },
+  { id: 353, symbol: "TSLA", nickname: "익명_1947", holdingLabel: "150주 보유",
+    content: "기가베를린이 주당 7,500대 목표로 1,000명을 추가 채용해요. 5월에 유럽 Tesla 판매가 2배 뛰었는데 생산이 따라가야 하니까 당연한 수순이에요. 7,500대/주면 연 390,000대예요. 유럽 수요 소화에 딱 맞는 규모예요. 채용 공고는 계획이 확정됐다는 증거예요. Q3/Q4 출하량 서프라이즈 가능성 더 커졌어요.",
+    createdAt: T26J - 15*60_000, likes: 487, comments: 2 },
+  { id: 354, symbol: "TSLA", nickname: "익명_8423", holdingLabel: "80주 보유",
+    content: "Tesla 유럽 5월 판매가 전년 동월 대비 2배예요! Model 3가 전기차 1위, Model Y가 2위예요. 28,810대 등록이고 YTD도 +12%예요. BYD가 유럽에 들어온다고 난리였는데 막상 Tesla 점유율이 올라가고 있어요. 기가베를린 신형 Model Y가 유럽 취향에 맞고 가격 경쟁력도 확보된 거예요. Q2 유럽 기여도가 클 것 같아요.",
+    createdAt: T26J - 22*60_000, likes: 561, comments: 3 },
+  { id: 355, symbol: "TSLA", nickname: "익명_3619", holdingLabel: "300주 보유",
+    content: "NHTSA가 자율주행 전용 차량 브레이크 페달 의무를 공식 폐지했어요! Cybercab 설계 자유도가 완전히 달라져요. 페달 없는 구조로 가면 원가 절감에 실내 공간 확대까지 돼요. AV Framework 5차 업데이트 내용이에요. 트럼프 행정부가 자율주행 규제 확 풀었어요. Waymo랑 Cruise도 수혜지만 사실상 Tesla Cybercab이 최대 수혜예요.",
+    createdAt: T26J - 30*60_000, likes: 723, comments: 3 },
+  { id: 356, symbol: "TSLA", nickname: "익명_7254", holdingLabel: "100주 보유",
+    content: "일본 Tesla 딜러십이 수요 폭발로 난리래요. 무료 슈퍼차징 오퍼랑 정부 보조금이 맞물렸는데 배달 센터가 포화돼서 고객들이 항구에서 직접 차를 받는다고 해요. 일본은 세계 4위 자동차 시장이에요. 여기서 Tesla 수요가 폭발하면 아시아 FSD 수익화 도미노가 시작되는 거예요. Q3 Asia-Pacific 출하량에 기여가 클 것 같아요.",
+    createdAt: T26J - 38*60_000, likes: 398, comments: 2 },
+
+  // MU/기타 — 6/26 업데이트 ─────────────────────────────────────────────
+  { id: 357, symbol: "MU", nickname: "익명_9241", holdingLabel: "300주 보유",
+    content: "Micron이 FQ4 가이던스를 $50B로 제시했어요. 역대 최대예요. 총이익률은 ~80%래요. EPS·매출·가이던스 트리플 비트예요. HBM3E 수요가 AI 서버 폭발 때문에 공급이 딸리는 상황이에요. 마진 80%면 영업이익이 $40B에요. 이게 단일 분기 수치예요. AI 메모리 슈퍼사이클 본격 진입이에요. TSLA Colossus·SPCX AI 데이터센터 수요가 살아있다는 증거기도 해요.",
+    createdAt: T26J - 18*60_000, likes: 645, comments: 3 },
+  { id: 358, symbol: "AVGO", nickname: "익명_5382", holdingLabel: "관심종목",
+    content: "Broadcom CEO가 AI 자체 인프라 시장이 $1T라고 했어요. 구글 TPU, 메타 MTIA, 애플 Neural Engine 같은 커스텀 AI 칩 + 클러스터 네트워크가 다 AVGO가 먹을 TAM이에요. NVIDIA 대안으로 하이퍼스케일들이 자체 칩으로 가는 추세인데 설계 용역을 AVGO가 다 받는 구조예요. AI 인프라 테마에서 NVDA랑 같이 최대 수혜예요.",
+    createdAt: T26J - 25*60_000, likes: 421, comments: 2 },
+  { id: 359, symbol: "AAPL", nickname: "익명_8163", holdingLabel: "관심종목",
+    content: "Apple이 엔트리급 Mac에 M5 탑재한다고 해요. AI 기능 구현 위해서래요. 근데 동시에 iPad랑 Mac 가격 인상도 발표했어요. 주가 -5% 넘게 빠졌어요. M5 성능 향상은 좋은데 가격 인상으로 수요 위축 우려가 더 큰가봐요. 관세 비용 전가 포지션인데 소비자가 수용할지가 관건이에요. 단기 조정이면 매수 기회일 수도 있어요.",
+    createdAt: T26J - 32*60_000, likes: 334, comments: 2 },
+  { id: 360, symbol: "TSLA", nickname: "익명_2748", holdingLabel: "관심종목",
+    content: "OpenAI IPO 지연 가능성이 나왔어요. SpaceX 상장 이후 시장 분위기가 바뀌었대요. 이게 의미하는 건 SpaceX IPO가 시장 기대를 다 흡수했고 OpenAI는 타이밍을 다시 재는 거예요. SPCX 입장에서는 경쟁 IPO 이벤트가 사라지는 거라 자금 집중 수혜예요. 그리고 Jalapeño 칩 공개도 있었는데 9개월 만에 Apple 도움으로 첫 AI 칩을 만들었대요.",
+    createdAt: T26J - 42*60_000, likes: 378, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-25 — TSLA Cybercab 150대+ 외부포착·FSD핀란드·플릿수익화·ARK $4,600·
@@ -1508,6 +1560,65 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-26 신규 ──────────────────────────────────────────────────────
+  348: [
+    { id: 1, nickname: "익명_4812", holdingLabel: "관심종목", content: "공식 인포그래픽이 나왔다는 게 포인트예요. SpaceX가 직접 만든 카드에 타임라인까지 넣었어요. 기업 홍보 수준이 이미 상장사 그 이상이에요. 패시브 ETF 유입 + 기관 매수 도미노 시작될 거예요.", createdAt: T26J - 2*60_000, likes: 134 },
+    { id: 2, nickname: "익명_7293", holdingLabel: "80주 보유", content: "7,300+ 위성 + $350B 기업가치가 공식 확인됐어요. QQQ가 이 숫자 보고 편입 비중 계산하면 $4.8억+ 강제 매수 나와요. 리밸런싱 전 선행 매수까지 더하면 7/6 전후로 수급이 폭발해요.", createdAt: T26J - 15*60_000, likes: 98 },
+    { id: 3, nickname: "익명_5637", holdingLabel: "관심종목", content: "25년 역사가 한 장에 담겼어요. 2002 창업부터 2026 NASDAQ-100까지. 이 스토리가 기관 IR 자료가 되면 SpaceX IPO 이후 밸류에이션 논리에 그대로 쓰여요.", createdAt: T26J - 30*60_000, likes: 72 },
+  ],
+  349: [
+    { id: 1, nickname: "익명_3841", holdingLabel: "관심종목", content: "현금 $100.8B에 T-Mobile $108B이면 현금만으로 인수 가능해요. 채권 발행 여력까지 더하면 레버리지 없이도 되는 딜이에요. DOJ만 통과하면 SpaceX가 미국 최대 통신사가 돼요.", createdAt: T26J - 8*60_000, likes: 118 },
+    { id: 2, nickname: "익명_6724", holdingLabel: "관심종목", content: "Starlink + T-Mobile 지상망 합치면 음영지역 제로예요. 위성이 커버 못 하는 실내나 지하는 셀타워가 잡아요. 완전한 커버리지 완성이에요. 이 시너지가 합쳐진 통신 서비스 요금은 프리미엄 받을 수 있어요.", createdAt: T26J - 24*60_000, likes: 87 },
+    { id: 3, nickname: "익명_9452", holdingLabel: "관심종목", content: "트럼프 행정부가 빅테크 M&A에 우호적이에요. AT&T·버라이즌 기존 과점이 흔들리는 거라 소비자 후생 논리로 승인 가능성 있어요. 보수 진영에서 SpaceX 우호적인 것도 유리해요.", createdAt: T26J - 38*60_000, likes: 63 },
+  ],
+  350: [
+    { id: 1, nickname: "익명_2819", holdingLabel: "관심종목", content: "연료 자급은 발사 비용 구조를 바꿔요. 지금 외부 공급업체 마진이 발사 비용에 포함되는데 파이프라인 완성되면 그 마진이 SpaceX로 와요. 연간 수억 달러 비용 절감 가능해요.", createdAt: T26J - 12*60_000, likes: 91 },
+    { id: 2, nickname: "익명_5413", holdingLabel: "관심종목", content: "발사 간격 단축이 핵심이에요. 연료 주입 대기 시간 없애면 같은 발사대에서 월 발사 횟수가 늘어요. Starlink V3 배치 타임라인이 당겨지면 구독자 증가 속도도 빨라져요.", createdAt: T26J - 27*60_000, likes: 68 },
+  ],
+  351: [
+    { id: 1, nickname: "익명_7634", holdingLabel: "관심종목", content: "780% 수익이면 연환산으로도 엄청난 수준이에요. $250에서 7개월 만에 $2,225 된 거잖아요. Leopold이 먼저 알고 공개한 거고, 이후 편입 + 성장 스토리가 주가를 끌어올렸어요.", createdAt: T26J - 16*60_000, likes: 103 },
+    { id: 2, nickname: "익명_3927", holdingLabel: "관심종목", content: "목표가 $2,500 상향이면 지금도 업사이드 12% 더 있어요. NASDAQ-100 편입 이후 패시브 수급 개선까지 더해지면 이 목표가도 보수적일 수 있어요.", createdAt: T26J - 34*60_000, likes: 79 },
+  ],
+  352: [
+    { id: 1, nickname: "익명_6128", holdingLabel: "350주 보유", content: "CapEx 확대가 EPS 단기 압박 요인이지만 이걸 모르는 기관이 없어요. 이미 price in 됐을 가능성 높고 실제 투자 결과물인 FSD·Optimus가 나올 때 리레이팅이 일어나요.", createdAt: T26J - 4*60_000, likes: 127 },
+    { id: 2, nickname: "익명_4592", holdingLabel: "200주 보유", content: "칩 설계 영역 투자가 주목돼요. DOJO 다음 세대가 나오면 외부 NVIDIA 의존도가 줄어요. 자체 칩 보유가 AI 훈련 비용을 낮추고 FSD 개선 사이클을 빠르게 해요.", createdAt: T26J - 20*60_000, likes: 94 },
+    { id: 3, nickname: "익명_8347", holdingLabel: "100주 보유", content: "배터리 + 파워트레인 동시 투자가 Model 2 대중화 전제예요. $25K 차 만들려면 배터리 비용이 내려가야 해요. 이 투자가 2~3년 후 대중화 가격 달성의 기반이에요.", createdAt: T26J - 36*60_000, likes: 71 },
+  ],
+  353: [
+    { id: 1, nickname: "익명_2948", holdingLabel: "120주 보유", content: "7,500대/주면 연 390,000대예요. 유럽 수요를 소화하기에 딱 맞는 규모예요. 채용 공고로 계획 확정됐고 Q3~Q4 출하량에 반영될 거예요.", createdAt: T26J - 9*60_000, likes: 86 },
+    { id: 2, nickname: "익명_7183", holdingLabel: "관심종목", content: "현지 생산이니까 EU 수입 관세 없어요. 마진 방어가 되면서 가격 경쟁력도 유지해요. BYD가 유럽 공장 짓기 전까지는 Tesla가 구조적 우위예요.", createdAt: T26J - 25*60_000, likes: 62 },
+  ],
+  354: [
+    { id: 1, nickname: "익명_5829", holdingLabel: "150주 보유", content: "유럽에서 1·2위 다 Tesla가 차지한 게 놀라워요. BYD 진입 공세에 오히려 점유율이 올라갔어요. 기가베를린 신형 Model Y 품질이 올라간 게 결정적이에요.", createdAt: T26J - 7*60_000, likes: 112 },
+    { id: 2, nickname: "익명_3614", holdingLabel: "80주 보유", content: "YTD +12%는 연간 실적으로도 확인되는 거예요. 전년 대비 성장이 지속되면 유럽 시장 점유율이 구조적으로 올라가는 거예요. Q2 서프라이즈 기대해도 될 것 같아요.", createdAt: T26J - 22*60_000, likes: 78 },
+    { id: 3, nickname: "익명_9472", holdingLabel: "관심종목", content: "Model 3 유럽 1위가 신기해요. 사실 3이 4도 아닌 지금 모델인데 이 판매량이 나온다는 건 Tesla 브랜드 자체가 강한 거예요. FSD 유럽 확산되면 ASP까지 올라가요.", createdAt: T26J - 40*60_000, likes: 54 },
+  ],
+  355: [
+    { id: 1, nickname: "익명_1847", holdingLabel: "250주 보유", content: "이게 Cybercab에 얼마나 큰 뉴스인지 모르는 사람이 많아요. 페달 없는 차 설계가 가능하면 실내 공간이 완전히 달라져요. 원가도 내려가고 승차감도 올라가요. 진짜 로보택시 전용 차가 나오는 거예요.", createdAt: T26J - 5*60_000, likes: 189 },
+    { id: 2, nickname: "익명_6392", holdingLabel: "150주 보유", content: "AV Framework 5차 업데이트가 연속 규제 완화예요. 브레이크 페달 면제 + 리어뷰 미러 면제 + 자율주행 데이터 규제 완화가 패키지로 왔어요. 로비 효과인지 정책 판단인지 결과적으로 Tesla 최대 수혜예요.", createdAt: T26J - 18*60_000, likes: 134 },
+    { id: 3, nickname: "익명_8241", holdingLabel: "관심종목", content: "Waymo도 수혜지만 Waymo 차는 이미 페달 없어요. Tesla Cybercab이 이제 공식적으로 페달 없이 설계 가능하니까 상대적 규제 장벽이 완전히 없어진 거예요.", createdAt: T26J - 32*60_000, likes: 87 },
+  ],
+  356: [
+    { id: 1, nickname: "익명_4728", holdingLabel: "관심종목", content: "일본 항구 직배송이 수요 포화 증거예요. 배달 센터 처리 능력을 초과했다는 거예요. 이 수준이면 일본 Q3 인도량이 폭발적으로 나올 거예요. Tesla 아시아 성장 재확인이에요.", createdAt: T26J - 10*60_000, likes: 94 },
+    { id: 2, nickname: "익명_2936", holdingLabel: "관심종목", content: "일본 정부 보조금 + 무료 슈퍼차징이 사실상 가격 인하 효과예요. 엔화 약세에도 실질 부담이 줄어드는 구조예요. 일본 소비자가 Toyota 대신 Tesla 선택하는 트리거로 충분해요.", createdAt: T26J - 28*60_000, likes: 67 },
+  ],
+  357: [
+    { id: 1, nickname: "익명_5847", holdingLabel: "400주 보유", content: "매출 $50B에 마진 80%면 반도체 역사에 없던 수치예요. AI 수요가 공급을 압도적으로 초과해서 가격 결정력이 완전히 Micron으로 넘어온 거예요. 2~3년 사이클 동안 이 수준 유지돼요.", createdAt: T26J - 6*60_000, likes: 167 },
+    { id: 2, nickname: "익명_3729", holdingLabel: "200주 보유", content: "트리플 비트 + 가이던스 대폭 상회면 월가 추정이 즉시 올라가요. FY27 추정이 올라가면 목표주가가 올라가고 기관 매수가 따라와요. 오늘 서프라이즈가 내일 추정 상향의 시작이에요.", createdAt: T26J - 22*60_000, likes: 123 },
+    { id: 3, nickname: "익명_8163", holdingLabel: "100주 보유", content: "HBM3E 공급 부족이 핵심이에요. AI 서버 수요는 폭발하는데 생산 확대에 시간이 걸려요. 이 공급 병목이 유지되는 동안 Micron 마진 방어가 됩니다.", createdAt: T26J - 38*60_000, likes: 89 },
+  ],
+  358: [
+    { id: 1, nickname: "익명_7294", holdingLabel: "관심종목", content: "AVGO가 XPU 설계 용역 독점하는 게 NVIDIA와 다른 베팅이에요. NVIDIA는 GPU를 팔고 AVGO는 각 회사 맞춤 칩을 설계해줘요. 고객이 AVGO를 바꾸기 어려운 구조예요. 전환 비용이 엄청나요.", createdAt: T26J - 13*60_000, likes: 89 },
+    { id: 2, nickname: "익명_4819", holdingLabel: "관심종목", content: "$1T TAM의 30% AVGO 점유면 $300B 매출 기회예요. 현재 연매출 $50B 대비 6배예요. AI 인프라 테마에서 NVDA 다음으로 가장 큰 수혜주가 AVGO예요.", createdAt: T26J - 30*60_000, likes: 64 },
+  ],
+  359: [
+    { id: 1, nickname: "익명_3924", holdingLabel: "관심종목", content: "M5 엔트리 Mac은 좋은 소식인데 가격 인상이 동반이면 수요 증가 효과를 상쇄해요. 고객 입장에서 더 비싸게 더 좋은 걸 사야 하는데 이 트레이드오프에서 수요가 얼마나 버티냐가 관건이에요.", createdAt: T26J - 17*60_000, likes: 76 },
+    { id: 2, nickname: "익명_6841", holdingLabel: "관심종목", content: "-5% 조정이 크게 느껴지지만 Apple 마진 입장에선 가격 인상이 맞는 방향이에요. 관세 비용 전가라 어쩔 수 없는 면도 있어요. 조정이 길게 안 가면 매수 기회일 수 있어요.", createdAt: T26J - 35*60_000, likes: 51 },
+  ],
+  360: [
+    { id: 1, nickname: "익명_2847", holdingLabel: "관심종목", content: "OpenAI IPO 지연이 SPCX 입장에선 호재예요. AI 투자 자금이 경쟁 IPO 없이 SPCX로 집중될 수 있어요. SpaceX가 먼저 시장을 잡은 효과예요.", createdAt: T26J - 20*60_000, likes: 83 },
+    { id: 2, nickname: "익명_5193", holdingLabel: "관심종목", content: "Jalapeño 9개월 개발이 놀라워요. 보통 AI 칩 개발에 2~3년 걸리는데 Apple 지원 받아서 속도를 냈어요. OpenAI가 칩 보유하면 추론 비용이 내려가서 서비스 마진이 올라가요.", createdAt: T26J - 38*60_000, likes: 57 },
+  ],
   // ── 2026-06-25 신규 ──────────────────────────────────────────────────────
   336: [
     { id: 1, nickname: "익명_5193", holdingLabel: "300주 보유", content: "EOL 외부에서 150대가 한꺼번에 잡힌 건 처음이에요. 드론이 이렇게 많이 포착됐다는 건 출고 대기 물량이 축적됐다는 거고 Austin 서비스 출시 직전이에요. 루트 2.4mi 고속도로 포함이면 최종 검증 단계 맞아요.", createdAt: T25J - 4*60_000, likes: 128 },

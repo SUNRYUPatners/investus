@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a1118"/>
+    </linearGradient>
+    <linearGradient id="marginBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1d4ed8"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">MU · Micron Technology Q4 Guidance</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Micron Q4 Record Guidance — Triple Beat!</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#60a5fa"/>
+  <!-- HERO: $50B -->
+  <text x="540" y="170" font-family="Arial,sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">Fiscal Q4 Revenue Guidance</text>
+  <text x="540" y="310" font-family="Arial,sans-serif" font-size="130" font-weight="bold" fill="#60a5fa" text-anchor="middle">$50B</text>
+  <text x="540" y="360" font-family="Arial,sans-serif" font-size="32" font-weight="bold" fill="#4ade80" text-anchor="middle">Record Revenue Guidance</text>
+  <!-- Triple Beat badges -->
+  <text x="540" y="410" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#e5e7eb" text-anchor="middle">All 3 Items Beat Consensus Estimates</text>
+  <!-- EPS Beat -->
+  <rect x="55" y="430" width="295" height="120" rx="14" fill="#0d3b2a" stroke="#4ade80" stroke-width="3"/>
+  <circle cx="135" cy="490" r="35" fill="#4ade80" opacity="0.2"/>
+  <text x="135" y="503" font-family="Arial,sans-serif" font-size="38" fill="#4ade80" text-anchor="middle">✓</text>
+  <text x="250" y="473" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">EPS</text>
+  <text x="250" y="498" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#e5e7eb" text-anchor="middle">BEAT</text>
+  <text x="250" y="520" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Earnings Per Share</text>
+  <text x="250" y="538" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">Beat Consensus ✓</text>
+  <!-- Revenue Beat -->
+  <rect x="393" y="430" width="295" height="120" rx="14" fill="#0d3b2a" stroke="#4ade80" stroke-width="3"/>
+  <circle cx="473" cy="490" r="35" fill="#4ade80" opacity="0.2"/>
+  <text x="473" y="503" font-family="Arial,sans-serif" font-size="38" fill="#4ade80" text-anchor="middle">✓</text>
+  <text x="588" y="473" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">Revenue</text>
+  <text x="588" y="498" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#e5e7eb" text-anchor="middle">BEAT</text>
+  <text x="588" y="520" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Top-Line Revenue</text>
+  <text x="588" y="538" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">Beat Consensus ✓</text>
+  <!-- Guidance Beat -->
+  <rect x="731" y="430" width="295" height="120" rx="14" fill="#0d3b2a" stroke="#4ade80" stroke-width="3"/>
+  <circle cx="811" cy="490" r="35" fill="#4ade80" opacity="0.2"/>
+  <text x="811" y="503" font-family="Arial,sans-serif" font-size="38" fill="#4ade80" text-anchor="middle">✓</text>
+  <text x="926" y="473" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">Guidance</text>
+  <text x="926" y="498" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#e5e7eb" text-anchor="middle">BEAT</text>
+  <text x="926" y="520" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Forward Guidance</text>
+  <text x="926" y="538" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">Record High ✓</text>
+  <!-- Gross Margin visual -->
+  <text x="540" y="595" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Gross Margin — ~80%</text>
+  <!-- Margin bar background -->
+  <rect x="60" y="615" width="960" height="60" rx="12" fill="#1f2937"/>
+  <!-- Margin fill (80%) -->
+  <rect x="60" y="615" width="768" height="60" rx="12" fill="url(#marginBar)"/>
+  <!-- Label inside -->
+  <text x="400" y="653" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">~80% Gross Margin</text>
+  <text x="870" y="653" font-family="Arial,sans-serif" font-size="16" fill="#4b5563" text-anchor="middle">20%</text>
+  <!-- Marker -->
+  <rect x="828" y="610" width="4" height="70" fill="#ffffff" opacity="0.5"/>
+  <text x="830" y="608" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">100%</text>
+  <!-- Stats row -->
+  <rect x="40" y="710" width="305" height="110" rx="10" fill="#161b22" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="192" y="745" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Gross Margin</text>
+  <text x="192" y="800" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#60a5fa" text-anchor="middle">~80%</text>
+  <rect x="388" y="710" width="305" height="110" rx="10" fill="#161b22" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="745" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">HBM3E Demand</text>
+  <text x="540" y="795" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#60a5fa" text-anchor="middle">Explosive</text>
+  <text x="540" y="815" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">AI Memory Demand Driven</text>
+  <rect x="736" y="710" width="305" height="110" rx="10" fill="#161b22" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="888" y="745" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Year-over-Year</text>
+  <text x="888" y="795" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#4ade80" text-anchor="middle">YoY ↑↑</text>
+  <text x="888" y="815" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Large YoY Growth</text>
+  <!-- HBM note -->
+  <rect x="40" y="850" width="1002" height="65" rx="8" fill="#0d2040" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="876" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">HBM3E — AI Server Memory Monopoly → Q4 Record Revenue Achieved</text>
+  <text x="540" y="901" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">NVIDIA H200/B200 HBM Supplier · Biggest AI Capex Cycle Beneficiary</text>
+  <!-- Footer -->
+  <rect y="940" width="1080" height="80" fill="#111318"/>
+  <rect y="940" width="1080" height="2" fill="#60a5fa"/>
+  <text x="540" y="980" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Micron Q4 $50B Guidance — Triple Beat · Record Revenue · 80% Margin</text>
+  <text x="540" y="1004" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · For Reference Only</text>
+  <rect y="1030" width="1080" height="50" fill="#0d1117"/>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">MU HBM3E AI Memory Demand Explosion → Q4 Record Results Expected</text>
+</svg>

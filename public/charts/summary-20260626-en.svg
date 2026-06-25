@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGrad)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS DAILY BRIEF</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#e5e7eb" text-anchor="middle">June 26 — Top News Summary</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#f97316"/>
+  <!-- Big Date -->
+  <text x="540" y="148" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="#f97316" text-anchor="middle">6.26</text>
+  <!-- 2x3 News Grid -->
+  <!-- Card 1: SPCX NASDAQ-100 -->
+  <rect x="40" y="180" width="310" height="210" rx="12" fill="#1a1525" stroke="#c084fc" stroke-width="2"/>
+  <circle cx="100" cy="235" r="28" fill="#c084fc" opacity="0.2"/>
+  <text x="100" y="241" font-family="Arial,sans-serif" font-size="28" fill="#c084fc" text-anchor="middle">★</text>
+  <text x="195" y="220" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold">SPCX</text>
+  <text x="195" y="238" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">NASDAQ-100</text>
+  <text x="195" y="258" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Official Entry</text>
+  <text x="195" y="280" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Applied July 6</text>
+  <text x="195" y="300" font-family="Arial,sans-serif" font-size="13" fill="#c084fc" font-weight="bold">7/6 ENTRY</text>
+  <!-- Card 2: Tesla CapEx -->
+  <rect x="385" y="180" width="310" height="210" rx="12" fill="#1a1117" stroke="#ef4444" stroke-width="2"/>
+  <circle cx="445" cy="235" r="28" fill="#ef4444" opacity="0.2"/>
+  <text x="445" y="243" font-family="Arial,sans-serif" font-size="30" fill="#ef4444" text-anchor="middle">↑</text>
+  <text x="540" y="218" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" font-weight="bold">TSLA</text>
+  <text x="540" y="238" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Elon CapEx</text>
+  <text x="540" y="258" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Massive Hike</text>
+  <text x="540" y="280" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Battery, AI, Chip Design</text>
+  <text x="540" y="300" font-family="Arial,sans-serif" font-size="13" fill="#ef4444" font-weight="bold">CapEx ↑↑</text>
+  <!-- Card 3: Giga Berlin -->
+  <rect x="730" y="180" width="310" height="210" rx="12" fill="#1a1117" stroke="#ef4444" stroke-width="2"/>
+  <circle cx="790" cy="235" r="28" fill="#ef4444" opacity="0.2"/>
+  <text x="790" y="243" font-family="Arial,sans-serif" font-size="22" fill="#ef4444" text-anchor="middle">🏭</text>
+  <text x="885" y="218" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" font-weight="bold">GIGA BERLIN</text>
+  <text x="885" y="238" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">7,500/Week</text>
+  <text x="885" y="258" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Production Target</text>
+  <text x="885" y="280" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">+1,000 New Hires</text>
+  <text x="885" y="300" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="bold">RAMP UP ↑</text>
+  <!-- Row 2 -->
+  <!-- Card 4: NHTSA -->
+  <rect x="40" y="425" width="310" height="210" rx="12" fill="#1a1117" stroke="#ef4444" stroke-width="2"/>
+  <circle cx="100" cy="480" r="28" fill="#ef4444" opacity="0.2"/>
+  <text x="100" y="488" font-family="Arial,sans-serif" font-size="22" fill="#ef4444" text-anchor="middle">🚗</text>
+  <text x="195" y="466" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" font-weight="bold">NHTSA · TSLA</text>
+  <text x="195" y="484" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Brake Pedal</text>
+  <text x="195" y="504" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Exemption Passed</text>
+  <text x="195" y="526" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">AV Regulatory Barrier Removed</text>
+  <text x="195" y="546" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="bold">FSD Robotaxi ✓</text>
+  <!-- Card 5: MU Q4 -->
+  <rect x="385" y="425" width="310" height="210" rx="12" fill="#11151a" stroke="#60a5fa" stroke-width="2"/>
+  <circle cx="445" cy="480" r="28" fill="#60a5fa" opacity="0.2"/>
+  <text x="445" y="488" font-family="Arial,sans-serif" font-size="24" fill="#60a5fa" text-anchor="middle">$</text>
+  <text x="540" y="464" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" font-weight="bold">MU · MICRON</text>
+  <text x="540" y="484" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Q4 $50B</text>
+  <text x="540" y="504" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Record Guidance</text>
+  <text x="540" y="526" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">~80% Gross Margin</text>
+  <text x="540" y="546" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="bold">TRIPLE BEAT ✓✓✓</text>
+  <!-- Card 6: GDP -->
+  <rect x="730" y="425" width="310" height="210" rx="12" fill="#1a1710" stroke="#f97316" stroke-width="2"/>
+  <circle cx="790" cy="480" r="28" fill="#f97316" opacity="0.2"/>
+  <text x="790" y="488" font-family="Arial,sans-serif" font-size="22" fill="#f97316" text-anchor="middle">📈</text>
+  <text x="885" y="466" font-family="Arial,sans-serif" font-size="11" fill="#f97316" font-weight="bold">MACRO</text>
+  <text x="885" y="486" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">GDP 2.1%</text>
+  <text x="885" y="506" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb">Beats Estimate</text>
+  <text x="885" y="528" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Expected 1.6% → Actual 2.1%</text>
+  <text x="885" y="548" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="bold">BEAT +0.5%p</text>
+  <!-- Key Stats Row -->
+  <rect x="40" y="670" width="305" height="100" rx="10" fill="#161b22" stroke="#333" stroke-width="1"/>
+  <text x="192" y="708" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">SPCX Entry Date</text>
+  <text x="192" y="745" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#c084fc" text-anchor="middle">7/6</text>
+  <rect x="388" y="670" width="305" height="100" rx="10" fill="#161b22" stroke="#333" stroke-width="1"/>
+  <text x="540" y="708" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">MU Q4 Guidance</text>
+  <text x="540" y="745" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#60a5fa" text-anchor="middle">$50B</text>
+  <rect x="736" y="670" width="305" height="100" rx="10" fill="#161b22" stroke="#333" stroke-width="1"/>
+  <text x="888" y="708" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">GDP Growth Rate</text>
+  <text x="888" y="745" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#4ade80" text-anchor="middle">2.1%</text>
+  <!-- Additional news strip -->
+  <rect x="40" y="798" width="1002" height="70" rx="8" fill="#161b22" stroke="#333" stroke-width="1"/>
+  <text x="540" y="828" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Also: AVGO AI $1T TAM · Apple M5 + Price Hike · OpenAI IPO Delay + Jalapeño Chip</text>
+  <text x="540" y="854" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">TSLA Japan Demand Surge · SPCX T-Mobile $108B Deal · Leopold SPCX +780%</text>
+  <!-- Footer -->
+  <rect y="900" width="1080" height="80" fill="#111318"/>
+  <rect y="900" width="1080" height="2" fill="#f97316"/>
+  <text x="540" y="942" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Key Takeaway: SPCX · TSLA · MU Triple Momentum</text>
+  <text x="540" y="968" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · For Reference Only</text>
+  <!-- Ticker strip -->
+  <rect y="980" width="1080" height="60" fill="#0d1117" stroke="#1f2937" stroke-width="1"/>
+  <text x="80" y="1015" font-family="Arial,sans-serif" font-size="14" fill="#ef4444">TSLA ↑</text>
+  <text x="200" y="1015" font-family="Arial,sans-serif" font-size="14" fill="#c084fc">SPCX ↑</text>
+  <text x="320" y="1015" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa">MU ↑</text>
+  <text x="440" y="1015" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b">AVGO ↑</text>
+  <text x="560" y="1015" font-family="Arial,sans-serif" font-size="14" fill="#94a3b8">AAPL ↓</text>
+  <text x="680" y="1015" font-family="Arial,sans-serif" font-size="14" fill="#4ade80">GDP ↑</text>
+  <text x="800" y="1015" font-family="Arial,sans-serif" font-size="14" fill="#f97316">MACRO</text>
+  <text x="920" y="1015" font-family="Arial,sans-serif" font-size="14" fill="#4ade80">BULL 🔥</text>
+</svg>

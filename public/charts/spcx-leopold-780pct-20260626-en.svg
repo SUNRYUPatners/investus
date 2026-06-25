@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a1a13"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#14532d"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">SPCX · Leopold Altschermer Investment Return</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Leopold +780% Return Since $53M Institutional Disclosure</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#c084fc"/>
+  <!-- HERO: +780% -->
+  <text x="540" y="175" font-family="Arial,sans-serif" font-size="24" fill="#9ca3af" text-anchor="middle">Cumulative Return</text>
+  <text x="540" y="325" font-family="Arial,sans-serif" font-size="130" font-weight="bold" fill="#4ade80" text-anchor="middle">+780%</text>
+  <circle cx="540" cy="265" r="220" fill="#4ade80" opacity="0.04"/>
+  <!-- Subtitle -->
+  <text x="540" y="375" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#c084fc" text-anchor="middle">Leopold Altschermer · SPCX</text>
+  <!-- Price chart: ascending line from $250 to $2,225+ -->
+  <text x="540" y="425" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Price Trajectory: $250 → $2,225+</text>
+  <!-- Chart area -->
+  <rect x="60" y="440" width="960" height="240" rx="10" fill="#161b22"/>
+  <!-- Grid lines -->
+  <line x1="60" y1="500" x2="1020" y2="500" stroke="#1f2937" stroke-width="1"/>
+  <line x1="60" y1="560" x2="1020" y2="560" stroke="#1f2937" stroke-width="1"/>
+  <line x1="60" y1="620" x2="1020" y2="620" stroke="#1f2937" stroke-width="1"/>
+  <!-- Y-axis labels -->
+  <text x="56" y="505" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">$2,000</text>
+  <text x="56" y="565" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">$1,000</text>
+  <text x="56" y="625" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="end">$250</text>
+  <!-- Price line ascending aggressively -->
+  <polyline points="90,665 200,640 310,615 400,590 470,560 550,520 640,485 730,462 820,455 920,450 1000,443"
+            fill="none" stroke="#4ade80" stroke-width="4"/>
+  <!-- Fill under line -->
+  <polygon points="90,665 200,640 310,615 400,590 470,560 550,520 640,485 730,462 820,455 920,450 1000,443 1000,670 90,670"
+           fill="url(#greenGrad)" opacity="0.2"/>
+  <!-- Start dot -->
+  <circle cx="90" cy="665" r="8" fill="#9ca3af"/>
+  <text x="90" y="685" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">$250</text>
+  <text x="90" y="698" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Nov 2025</text>
+  <!-- End dot -->
+  <circle cx="1000" cy="443" r="10" fill="#4ade80"/>
+  <text x="1000" y="432" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" font-weight="bold" text-anchor="middle">$2,225+</text>
+  <text x="1000" y="420" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">Jun 2026</text>
+  <!-- X axis labels -->
+  <text x="400" y="690" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Feb 2026</text>
+  <text x="700" y="690" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Apr 2026</text>
+  <!-- Stats row -->
+  <rect x="40" y="710" width="305" height="110" rx="10" fill="#161b22" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="192" y="745" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Entry Price (Disclosed)</text>
+  <text x="192" y="795" font-family="Arial,sans-serif" font-size="46" font-weight="bold" fill="#9ca3af" text-anchor="middle">$250</text>
+  <text x="192" y="816" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">November 2025</text>
+  <rect x="388" y="710" width="305" height="110" rx="10" fill="#161b22" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="540" y="745" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Current Price</text>
+  <text x="540" y="795" font-family="Arial,sans-serif" font-size="46" font-weight="bold" fill="#4ade80" text-anchor="middle">$2,225+</text>
+  <text x="540" y="816" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">June 2026</text>
+  <rect x="736" y="710" width="305" height="110" rx="10" fill="#161b22" stroke="#4ade80" stroke-width="2"/>
+  <text x="888" y="745" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Investment Size</text>
+  <text x="888" y="795" font-family="Arial,sans-serif" font-size="46" font-weight="bold" fill="#c084fc" text-anchor="middle">$53M</text>
+  <text x="888" y="816" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Institutional Disclosure</text>
+  <!-- Bottom message -->
+  <rect x="40" y="846" width="1002" height="60" rx="8" fill="#0a2010" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="540" y="870" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">+780% in 7 Months — SPCX Early Institutional Investor Best Return</text>
+  <text x="540" y="893" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">Period: Nov 2025 → Jun 2026 (~7 months) · Annualized Return 1,300%+</text>
+  <!-- Footer -->
+  <rect y="930" width="1080" height="80" fill="#111318"/>
+  <rect y="930" width="1080" height="2" fill="#c084fc"/>
+  <text x="540" y="970" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Leopold Altschermer SPCX +780% — Top Institutional Return Post-Disclosure</text>
+  <text x="540" y="994" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · For Reference Only</text>
+  <rect y="1030" width="1080" height="50" fill="#0d1117"/>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">SPCX $250 → $2,225+ · +780% · 7 Months · Leopold $53M Institution</text>
+</svg>

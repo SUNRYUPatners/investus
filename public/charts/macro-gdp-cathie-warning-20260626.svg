@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a0f00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">거시경제 · GDP + Cathie Wood 경고</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">GDP 2.1% 예상 상회 + Cathie 글로벌 금융위기 경고</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#f97316"/>
+  <!-- Split line -->
+  <line x1="540" y1="90" x2="540" y2="700" stroke="#333" stroke-width="2"/>
+  <!-- LEFT: GDP Beat -->
+  <rect x="0" y="80" width="540" height="3" fill="#4ade80" opacity="0.6"/>
+  <text x="270" y="145" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">📈 GDP 성장률 BEAT</text>
+  <!-- GDP Gauge visualization -->
+  <!-- Gauge background arc -->
+  <path d="M 80 380 A 190 190 0 0 1 460 380" stroke="#1f2937" stroke-width="35" fill="none"/>
+  <!-- Gauge fill (2.1%) -->
+  <path d="M 80 380 A 190 190 0 0 1 390 205" stroke="#4ade80" stroke-width="35" fill="none"/>
+  <!-- Needle -->
+  <line x1="270" y1="380" x2="385" y2="210" stroke="#e5e7eb" stroke-width="3"/>
+  <circle cx="270" cy="380" r="10" fill="#e5e7eb"/>
+  <!-- Gauge labels -->
+  <text x="75" y="410" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">0%</text>
+  <text x="270" y="190" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2%</text>
+  <text x="465" y="410" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">4%</text>
+  <!-- GDP numbers -->
+  <text x="270" y="445" font-family="Arial,sans-serif" font-size="80" font-weight="bold" fill="#4ade80" text-anchor="middle">2.1%</text>
+  <text x="270" y="490" font-family="Arial,sans-serif" font-size="18" fill="#e5e7eb" text-anchor="middle">美 Q1 GDP 최종치</text>
+  <rect x="30" y="510" width="480" height="60" rx="8" fill="#0a2010" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="270" y="537" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">컨센서스 예상 1.6%</text>
+  <text x="270" y="560" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" text-anchor="middle">실제 2.1% — +0.5%p 상회!</text>
+  <!-- Beat indicator -->
+  <rect x="30" y="584" width="480" height="55" rx="8" fill="#0a2010" stroke="#4ade80" stroke-width="1"/>
+  <text x="270" y="608" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">미국 경제 견조 확인</text>
+  <text x="270" y="628" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">소비 + 투자 탄탄 · 침체 우려 해소</text>
+  <!-- RIGHT: Cathie Warning -->
+  <rect x="540" y="80" width="540" height="3" fill="#ef4444" opacity="0.6"/>
+  <text x="810" y="145" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#f97316" text-anchor="middle">⚠️ Cathie 경고</text>
+  <!-- Warning visual -->
+  <polygon points="810,175 690,380 930,380" fill="#f97316" opacity="0.15" stroke="#f97316" stroke-width="2"/>
+  <text x="810" y="300" font-family="Arial,sans-serif" font-size="56" fill="#f97316" text-anchor="middle">⚠</text>
+  <text x="810" y="375" font-family="Arial,sans-serif" font-size="16" fill="#f97316" text-anchor="middle">경고</text>
+  <text x="810" y="438" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#f97316" text-anchor="middle">글로벌</text>
+  <text x="810" y="480" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#f97316" text-anchor="middle">금융위기</text>
+  <text x="810" y="506" font-family="Arial,sans-serif" font-size="20" fill="#e5e7eb" text-anchor="middle">80·90년대 수준 위기 경고</text>
+  <!-- Warning details -->
+  <rect x="560" y="525" width="480" height="55" rx="8" fill="#2d1500" stroke="#f97316" stroke-width="1"/>
+  <text x="800" y="552" font-family="Arial,sans-serif" font-size="15" fill="#f97316" text-anchor="middle">부채 위기 징후</text>
+  <text x="800" y="570" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">글로벌 부채 수준 위험 임계점 접근</text>
+  <rect x="560" y="590" width="480" height="55" rx="8" fill="#2d1500" stroke="#f97316" stroke-width="1"/>
+  <text x="800" y="617" font-family="Arial,sans-serif" font-size="15" fill="#f97316" text-anchor="middle">ARK 방어적 포지션</text>
+  <text x="800" y="635" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Cathie Wood 일부 포트폴리오 방어 조정</text>
+  <!-- Stats row -->
+  <rect x="40" y="718" width="220" height="110" rx="10" fill="#0a2010" stroke="#4ade80" stroke-width="2"/>
+  <text x="150" y="753" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">예상 GDP</text>
+  <text x="150" y="810" font-family="Arial,sans-serif" font-size="46" font-weight="bold" fill="#9ca3af" text-anchor="middle">1.6%</text>
+  <rect x="280" y="718" width="220" height="110" rx="10" fill="#0a2010" stroke="#4ade80" stroke-width="2"/>
+  <text x="390" y="753" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">실제 GDP</text>
+  <text x="390" y="810" font-family="Arial,sans-serif" font-size="46" font-weight="bold" fill="#4ade80" text-anchor="middle">2.1%</text>
+  <rect x="520" y="718" width="230" height="110" rx="10" fill="#0a2010" stroke="#4ade80" stroke-width="2"/>
+  <text x="635" y="753" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">상회 폭</text>
+  <text x="635" y="810" font-family="Arial,sans-serif" font-size="46" font-weight="bold" fill="#4ade80" text-anchor="middle">+0.5p</text>
+  <rect x="770" y="718" width="270" height="110" rx="10" fill="#2d1500" stroke="#f97316" stroke-width="1.5"/>
+  <text x="905" y="753" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Cathie 경고</text>
+  <text x="905" y="800" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f97316" text-anchor="middle">금융위기</text>
+  <text x="905" y="822" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">80/90년대 수준</text>
+  <!-- Summary -->
+  <rect x="40" y="856" width="1002" height="60" rx="8" fill="#161b22" stroke="#f97316" stroke-width="1"/>
+  <text x="540" y="880" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" text-anchor="middle">GDP 2.1% 긍정 + Cathie 위기 경고 — 강세·약세 신호 동시 출현</text>
+  <text x="540" y="904" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">단기 경제 견조 vs 장기 부채 위기 리스크 — 투자 시 양면 고려 필요</text>
+  <!-- Footer -->
+  <rect y="940" width="1080" height="80" fill="#111318"/>
+  <rect y="940" width="1080" height="2" fill="#f97316"/>
+  <text x="540" y="980" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">GDP 2.1% BEAT + Cathie Wood 글로벌 금융위기 경고 — 혼재 신호</text>
+  <text x="540" y="1004" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · 투자 참고용</text>
+  <rect y="1030" width="1080" height="50" fill="#0d1117"/>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="13" fill="#f97316" text-anchor="middle">거시경제 · GDP 2.1% · Cathie Wood 경고 · 80~90년대 위기 경고</text>
+</svg>

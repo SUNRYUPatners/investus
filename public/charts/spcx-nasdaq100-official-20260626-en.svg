@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#130a1f"/>
+    </linearGradient>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#c084fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">SPCX · NASDAQ-100 Official Entry</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SpaceX Officially Joins NASDAQ-100 Index</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#c084fc"/>
+  <!-- HERO: JULY 6 -->
+  <text x="540" y="240" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#9ca3af" text-anchor="middle">Official Entry Date</text>
+  <text x="540" y="380" font-family="Arial,sans-serif" font-size="130" font-weight="bold" fill="url(#heroGrad)" text-anchor="middle">JULY 6</text>
+  <!-- Stars -->
+  <circle cx="120" cy="280" r="5" fill="#c084fc" opacity="0.6"/>
+  <circle cx="960" cy="280" r="5" fill="#c084fc" opacity="0.6"/>
+  <circle cx="150" cy="370" r="3" fill="#c084fc" opacity="0.4"/>
+  <circle cx="930" cy="370" r="3" fill="#c084fc" opacity="0.4"/>
+  <circle cx="90" cy="350" r="7" fill="#c084fc" opacity="0.3"/>
+  <circle cx="990" cy="350" r="7" fill="#c084fc" opacity="0.3"/>
+  <!-- NASDAQ-100 badge -->
+  <rect x="295" y="415" width="490" height="55" rx="27" fill="#c084fc" opacity="0.15" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#c084fc" text-anchor="middle">NASDAQ-100 Index — Official Inclusion</text>
+  <!-- Stats Cards -->
+  <rect x="40" y="500" width="300" height="130" rx="12" fill="#1a1525" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="190" y="545" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Total Rocket Launches</text>
+  <text x="190" y="595" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#c084fc" text-anchor="middle">448+</text>
+  <text x="190" y="620" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Cumulative Launch Record</text>
+  <rect x="390" y="500" width="300" height="130" rx="12" fill="#1a1525" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="545" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Starlink Satellites in Orbit</text>
+  <text x="540" y="595" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#c084fc" text-anchor="middle">7,300+</text>
+  <text x="540" y="620" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Active in Orbit</text>
+  <rect x="740" y="500" width="300" height="130" rx="12" fill="#1a1525" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="890" y="545" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Private Valuation</text>
+  <text x="890" y="590" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#c084fc" text-anchor="middle">$350B+</text>
+  <text x="890" y="620" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Highest Private Valuation</text>
+  <!-- Timeline -->
+  <text x="540" y="680" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SpaceX Milestones Timeline</text>
+  <line x1="60" y1="730" x2="1020" y2="730" stroke="#c084fc" stroke-width="2" opacity="0.5"/>
+  <circle cx="100" cy="730" r="8" fill="#c084fc"/>
+  <text x="100" y="760" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">2002</text>
+  <text x="100" y="776" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Founded</text>
+  <circle cx="230" cy="730" r="8" fill="#c084fc"/>
+  <text x="230" y="760" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">2008</text>
+  <text x="230" y="776" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">First Orbit</text>
+  <circle cx="380" cy="730" r="8" fill="#c084fc"/>
+  <text x="380" y="760" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">2012</text>
+  <text x="380" y="776" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">ISS Dock</text>
+  <circle cx="530" cy="730" r="8" fill="#c084fc"/>
+  <text x="530" y="760" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">2015</text>
+  <text x="530" y="776" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Landing</text>
+  <circle cx="670" cy="730" r="8" fill="#c084fc"/>
+  <text x="670" y="760" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">2019</text>
+  <text x="670" y="776" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Starlink</text>
+  <circle cx="820" cy="730" r="8" fill="#c084fc"/>
+  <text x="820" y="760" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">2023</text>
+  <text x="820" y="776" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Starship</text>
+  <circle cx="980" cy="730" r="14" fill="#c084fc" stroke="#ffffff" stroke-width="2"/>
+  <text x="980" y="762" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" font-weight="bold" text-anchor="middle">2026</text>
+  <text x="980" y="778" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" font-weight="bold" text-anchor="middle">NDX Entry!</text>
+  <!-- Key stats row -->
+  <rect x="40" y="810" width="305" height="90" rx="10" fill="#161b22" stroke="#c084fc" stroke-width="1"/>
+  <text x="192" y="845" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Index</text>
+  <text x="192" y="885" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#c084fc" text-anchor="middle">NASDAQ-100</text>
+  <rect x="388" y="810" width="305" height="90" rx="10" fill="#161b22" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="845" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Market Impact</text>
+  <text x="540" y="885" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">Passive Fund Inflow</text>
+  <rect x="736" y="810" width="305" height="90" rx="10" fill="#161b22" stroke="#c084fc" stroke-width="1"/>
+  <text x="888" y="845" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Effective Date</text>
+  <text x="888" y="885" font-family="Arial,sans-serif" font-size="38" font-weight="bold" fill="#c084fc" text-anchor="middle">2026.7.6</text>
+  <!-- Footer -->
+  <rect y="925" width="1080" height="75" fill="#111318"/>
+  <rect y="925" width="1080" height="2" fill="#c084fc"/>
+  <text x="540" y="965" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SpaceX leads humanity to the stars — now joining NASDAQ-100 brings passive fund inflows</text>
+  <text x="540" y="990" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · For Reference Only</text>
+  <g transform="translate(1010,940) rotate(-45)">
+    <ellipse cx="0" cy="0" rx="10" ry="22" fill="#c084fc" opacity="0.5"/>
+    <polygon points="0,-22 -8,-10 8,-10" fill="#c084fc" opacity="0.7"/>
+    <polygon points="-10,10 0,22 10,10" fill="#f97316" opacity="0.5"/>
+  </g>
+</svg>

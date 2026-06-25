@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">TSLA · 유럽 판매 급증</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Tesla 유럽 5월 판매 전년 대비 2배 폭증</text>
+  <!-- Accent line -->
+  <rect y="80" width="1080" height="3" fill="#ef4444"/>
+  <!-- HERO: ×2 -->
+  <text x="540" y="160" font-family="Arial,sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">유럽 5월 판매</text>
+  <text x="540" y="320" font-family="Arial,sans-serif" font-size="160" font-weight="bold" fill="#ef4444" text-anchor="middle">×2</text>
+  <text x="540" y="375" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#4ade80" text-anchor="middle">전년 동기 대비 2배 급증</text>
+  <!-- Bar chart comparison -->
+  <text x="540" y="440" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#e5e7eb" text-anchor="middle">월간 판매 비교 (2024 5월 vs 2025 5월)</text>
+  <!-- 2024 bar -->
+  <text x="270" y="478" font-family="Arial,sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">2024년 5월</text>
+  <rect x="120" y="490" width="300" height="60" rx="8" fill="#374151"/>
+  <text x="270" y="528" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#e5e7eb" text-anchor="middle">기준치</text>
+  <!-- 2025 bar (double width) -->
+  <text x="740" y="478" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" text-anchor="middle">2025년 5월</text>
+  <rect x="480" y="490" width="560" height="60" rx="8" fill="#ef4444"/>
+  <text x="760" y="528" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">2× — 두 배 달성!</text>
+  <!-- YTD label -->
+  <text x="540" y="580" font-family="Arial,sans-serif" font-size="16" fill="#f59e0b" text-anchor="middle">YTD +12% 성장 유지</text>
+  <!-- Rankings -->
+  <text x="540" y="640" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#e5e7eb" text-anchor="middle">유럽 전기차 판매 순위 (2025년 5월)</text>
+  <!-- Gold: Model 3 -->
+  <rect x="40" y="660" width="470" height="130" rx="12" fill="#1a1117" stroke="#fbbf24" stroke-width="2.5"/>
+  <circle cx="120" cy="725" r="36" fill="#fbbf24" opacity="0.2"/>
+  <text x="120" y="736" font-family="Arial,sans-serif" font-size="42" fill="#fbbf24" text-anchor="middle">🥇</text>
+  <text x="310" y="705" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#fbbf24" text-anchor="middle">Model 3</text>
+  <text x="310" y="735" font-family="Arial,sans-serif" font-size="18" fill="#e5e7eb" text-anchor="middle">유럽 전기차 1위</text>
+  <text x="310" y="760" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">전기차 판매 왕좌 탈환</text>
+  <text x="310" y="780" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="bold" text-anchor="middle">#1 BEV Europe</text>
+  <!-- Silver: Model Y -->
+  <rect x="570" y="660" width="470" height="130" rx="12" fill="#1a1117" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="650" cy="725" r="36" fill="#9ca3af" opacity="0.15"/>
+  <text x="650" y="736" font-family="Arial,sans-serif" font-size="42" fill="#e5e7eb" text-anchor="middle">🥈</text>
+  <text x="840" y="705" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Model Y</text>
+  <text x="840" y="735" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">유럽 전기차 2위</text>
+  <text x="840" y="760" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">MoM 2위 유지</text>
+  <text x="840" y="780" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="bold" text-anchor="middle">#2 BEV Europe</text>
+  <!-- Stats row -->
+  <rect x="40" y="820" width="305" height="90" rx="10" fill="#161b22" stroke="#ef4444" stroke-width="1"/>
+  <text x="192" y="855" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">판매 성장률</text>
+  <text x="192" y="895" font-family="Arial,sans-serif" font-size="38" font-weight="bold" fill="#ef4444" text-anchor="middle">+100%</text>
+  <rect x="388" y="820" width="305" height="90" rx="10" fill="#161b22" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="855" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Model 3 순위</text>
+  <text x="540" y="895" font-family="Arial,sans-serif" font-size="38" font-weight="bold" fill="#fbbf24" text-anchor="middle">EU #1</text>
+  <rect x="736" y="820" width="305" height="90" rx="10" fill="#161b22" stroke="#ef4444" stroke-width="1"/>
+  <text x="888" y="855" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">YTD 성장</text>
+  <text x="888" y="895" font-family="Arial,sans-serif" font-size="38" font-weight="bold" fill="#4ade80" text-anchor="middle">+12%</text>
+  <!-- Footer -->
+  <rect y="940" width="1080" height="80" fill="#111318"/>
+  <rect y="940" width="1080" height="2" fill="#ef4444"/>
+  <text x="540" y="982" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Tesla 유럽 반등 확인 — Model 3·Y 유럽 BEV 시장 석권</text>
+  <text x="540" y="1006" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.26 · 투자 참고용</text>
+  <rect y="1030" width="1080" height="50" fill="#0d1117"/>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">TSLA 유럽 판매 회복 · 기가베를린 생산 증가 효과</text>
+</svg>

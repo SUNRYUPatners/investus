@@ -186,6 +186,22 @@ const PAIRS = [
   { ko: 'spcx-oldendorff-20260625.svg',                en: 'spcx-oldendorff-20260625-en.svg',                label: 'SPCX_Oldendorff화물선',    date: '20260625' },
   { ko: 'tsla-spcx-renew-home-20260625.svg',           en: 'tsla-spcx-renew-home-20260625-en.svg',           label: 'TSLA_SPCX_RenewHome',      date: '20260625' },
   { ko: 'mu-q3-earnings-20260625.svg',                 en: 'mu-q3-earnings-20260625-en.svg',                 label: 'MU_Q3어닝서프라이즈',       date: '20260625' },
+  // ── 2026-06-26 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260626.svg',                        en: 'summary-20260626-en.svg',                        label: '6월26일_요약',              date: '20260626' },
+  { ko: 'spcx-nasdaq100-official-20260626.svg',        en: 'spcx-nasdaq100-official-20260626-en.svg',        label: 'SPCX_NASDAQ100공식',        date: '20260626' },
+  { ko: 'tsla-capex-expansion-20260626.svg',           en: 'tsla-capex-expansion-20260626-en.svg',           label: 'TSLA_CapEx확대',            date: '20260626' },
+  { ko: 'tsla-giga-berlin-7500-20260626.svg',          en: 'tsla-giga-berlin-7500-20260626-en.svg',          label: 'TSLA_기가베를린7500',        date: '20260626' },
+  { ko: 'tsla-europe-sales-may-20260626.svg',          en: 'tsla-europe-sales-may-20260626-en.svg',          label: 'TSLA_유럽판매2배',           date: '20260626' },
+  { ko: 'tsla-nhtsa-av-brake-20260626.svg',            en: 'tsla-nhtsa-av-brake-20260626-en.svg',            label: 'TSLA_NHTSA브레이크면제',     date: '20260626' },
+  { ko: 'tsla-japan-demand-20260626.svg',              en: 'tsla-japan-demand-20260626-en.svg',              label: 'TSLA_일본수요폭발',          date: '20260626' },
+  { ko: 'spcx-tmobile-acquisition-20260626.svg',       en: 'spcx-tmobile-acquisition-20260626-en.svg',       label: 'SPCX_T모바일인수',          date: '20260626' },
+  { ko: 'spcx-natural-gas-pipeline-20260626.svg',      en: 'spcx-natural-gas-pipeline-20260626-en.svg',      label: 'SPCX_천연가스파이프라인',    date: '20260626' },
+  { ko: 'spcx-leopold-780pct-20260626.svg',            en: 'spcx-leopold-780pct-20260626-en.svg',            label: 'SPCX_Leopold780%',          date: '20260626' },
+  { ko: 'mu-q4-record-guidance-20260626.svg',          en: 'mu-q4-record-guidance-20260626-en.svg',          label: 'MU_Q4역대최대',             date: '20260626' },
+  { ko: 'avgo-ai-1t-market-20260626.svg',              en: 'avgo-ai-1t-market-20260626-en.svg',              label: 'AVGO_AI1조시장',            date: '20260626' },
+  { ko: 'aapl-m5-price-hike-20260626.svg',             en: 'aapl-m5-price-hike-20260626-en.svg',             label: 'AAPL_M5가격인상',           date: '20260626' },
+  { ko: 'openai-ipo-delay-20260626.svg',               en: 'openai-ipo-delay-20260626-en.svg',               label: 'OpenAI_IPO지연',            date: '20260626' },
+  { ko: 'macro-gdp-cathie-warning-20260626.svg',       en: 'macro-gdp-cathie-warning-20260626-en.svg',       label: '매크로_GDP_Cathie경고',      date: '20260626' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생
