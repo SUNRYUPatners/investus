@@ -77,8 +77,8 @@ export const MOCK_POSTS: Post[] = [
   { id: 350, symbol: "SPCX", nickname: "익명_2847", holdingLabel: "관심종목",
     content: "SpaceX가 Starship 연료용 천연가스 파이프라인을 직접 짓는대요. 다음 달 착공이에요. 지금까지 외부 공급업체한테 의존했는데 파이프라인 자체 건설로 연료 자급이 가능해져요. 발사 비용 절감 + 발사 간격 단축 + 월 발사 횟수 증가 이 세 가지가 동시에 돼요. Starlink V3 배치 가속화에도 직접 기여해요. 수직통합이 또 한 단계 올라갔어요.",
     createdAt: T26J - 20*60_000, likes: 445, comments: 2 },
-  { id: 351, symbol: "SPCX", nickname: "익명_6382", holdingLabel: "관심종목",
-    content: "Leopold Stock Tracker 기준으로 SPCX가 Leopold Altschermer 첫 공개($250) 이후 +780%예요. $53M 기관 공개가 2025년 11월이었고 현재 $2,225+이에요. 애널리스트 목표가도 $2,225 → $2,500으로 상향됐어요. 기관이 먼저 집중 매수하고 알리면 그게 최고의 신호예요. NASDAQ-100 편입까지 더해지면 다음 레벨 목표가가 나올 수 있어요.",
+  { id: 351, symbol: "SNDK", nickname: "익명_6382", holdingLabel: "관심종목",
+    content: "Leopold Stock Tracker 기준으로 SNDK(SanDisk)가 Leopold Altschermer 첫 공개($250) 이후 +780%예요. $53M 기관 공개가 2025년 11월이었고 현재 $2,225+이에요. 애널리스트 목표가도 $2,225 → $2,500으로 상향됐어요. 기관이 먼저 집중 매수하고 알리면 그게 최고의 신호예요. AI 데이터센터 NAND 수요 급증으로 SanDisk 실적 모멘텀도 가속화 중이에요.",
     createdAt: T26J - 28*60_000, likes: 512, comments: 2 },
 
   // TSLA — 6/26 업데이트 ────────────────────────────────────────────────
@@ -1576,8 +1576,8 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 2, nickname: "익명_5413", holdingLabel: "관심종목", content: "발사 간격 단축이 핵심이에요. 연료 주입 대기 시간 없애면 같은 발사대에서 월 발사 횟수가 늘어요. Starlink V3 배치 타임라인이 당겨지면 구독자 증가 속도도 빨라져요.", createdAt: T26J - 27*60_000, likes: 68 },
   ],
   351: [
-    { id: 1, nickname: "익명_7634", holdingLabel: "관심종목", content: "780% 수익이면 연환산으로도 엄청난 수준이에요. $250에서 7개월 만에 $2,225 된 거잖아요. Leopold이 먼저 알고 공개한 거고, 이후 편입 + 성장 스토리가 주가를 끌어올렸어요.", createdAt: T26J - 16*60_000, likes: 103 },
-    { id: 2, nickname: "익명_3927", holdingLabel: "관심종목", content: "목표가 $2,500 상향이면 지금도 업사이드 12% 더 있어요. NASDAQ-100 편입 이후 패시브 수급 개선까지 더해지면 이 목표가도 보수적일 수 있어요.", createdAt: T26J - 34*60_000, likes: 79 },
+    { id: 1, nickname: "익명_7634", holdingLabel: "관심종목", content: "780% 수익이면 연환산으로도 엄청난 수준이에요. $250에서 7개월 만에 $2,225 된 거잖아요. Leopold이 먼저 알고 공개한 거고, 이후 AI 스토리지 수요 + 성장 스토리가 주가를 끌어올렸어요.", createdAt: T26J - 16*60_000, likes: 103 },
+    { id: 2, nickname: "익명_3927", holdingLabel: "관심종목", content: "목표가 $2,500 상향이면 지금도 업사이드 12% 더 있어요. AI 데이터센터 NAND 수요 폭증으로 SanDisk 실적 모멘텀이 올라오면 이 목표가도 보수적일 수 있어요.", createdAt: T26J - 34*60_000, likes: 79 },
   ],
   352: [
     { id: 1, nickname: "익명_6128", holdingLabel: "350주 보유", content: "CapEx 확대가 EPS 단기 압박 요인이지만 이걸 모르는 기관이 없어요. 이미 price in 됐을 가능성 높고 실제 투자 결과물인 FSD·Optimus가 나올 때 리레이팅이 일어나요.", createdAt: T26J - 4*60_000, likes: 127 },

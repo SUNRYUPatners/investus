@@ -196,7 +196,7 @@ const PAIRS = [
   { ko: 'tsla-japan-demand-20260626.svg',              en: 'tsla-japan-demand-20260626-en.svg',              label: 'TSLA_일본수요폭발',          date: '20260626' },
   { ko: 'spcx-tmobile-acquisition-20260626.svg',       en: 'spcx-tmobile-acquisition-20260626-en.svg',       label: 'SPCX_T모바일인수',          date: '20260626' },
   { ko: 'spcx-natural-gas-pipeline-20260626.svg',      en: 'spcx-natural-gas-pipeline-20260626-en.svg',      label: 'SPCX_천연가스파이프라인',    date: '20260626' },
-  { ko: 'spcx-leopold-780pct-20260626.svg',            en: 'spcx-leopold-780pct-20260626-en.svg',            label: 'SPCX_Leopold780%',          date: '20260626' },
+  { ko: 'sndk-leopold-780pct-20260626.svg',            en: 'sndk-leopold-780pct-20260626-en.svg',            label: 'SNDK_Leopold780%',          date: '20260626' },
   { ko: 'mu-q4-record-guidance-20260626.svg',          en: 'mu-q4-record-guidance-20260626-en.svg',          label: 'MU_Q4역대최대',             date: '20260626' },
   { ko: 'avgo-ai-1t-market-20260626.svg',              en: 'avgo-ai-1t-market-20260626-en.svg',              label: 'AVGO_AI1조시장',            date: '20260626' },
   { ko: 'aapl-m5-price-hike-20260626.svg',             en: 'aapl-m5-price-hike-20260626-en.svg',             label: 'AAPL_M5가격인상',           date: '20260626' },
