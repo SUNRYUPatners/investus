@@ -33,14 +33,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.investus.kr";
   const now  = new Date();
   return [
-    { url: base,                         lastModified: now, changeFrequency: "always",  priority: 1    },
-    { url: `${base}/insight`,            lastModified: now, changeFrequency: "daily",   priority: 0.95 },
-    { url: `${base}/insight/basics`,     lastModified: now, changeFrequency: "weekly",  priority: 0.9  },
-    { url: `${base}/search`,             lastModified: now, changeFrequency: "always",  priority: 0.9  },
-    { url: `${base}/wall`,               lastModified: now, changeFrequency: "always",  priority: 0.85 },
-    { url: `${base}/portfolio`,          lastModified: now, changeFrequency: "always",  priority: 0.8  },
-    { url: `${base}/more`,               lastModified: now, changeFrequency: "monthly", priority: 0.5  },
-    { url: `${base}/more/about`,         lastModified: now, changeFrequency: "monthly", priority: 0.6  },
+    { url: base,                          lastModified: now, changeFrequency: "always",  priority: 1    },
+    { url: `${base}/insight`,             lastModified: now, changeFrequency: "daily",   priority: 0.95 },
+    { url: `${base}/insight/basics`,      lastModified: now, changeFrequency: "weekly",  priority: 0.9  },
+    { url: `${base}/insight/masters`,     lastModified: now, changeFrequency: "weekly",  priority: 0.85 },
+    { url: `${base}/search`,              lastModified: now, changeFrequency: "always",  priority: 0.9  },
+    { url: `${base}/wall`,                lastModified: now, changeFrequency: "always",  priority: 0.85 },
+    { url: `${base}/portfolio`,           lastModified: now, changeFrequency: "always",  priority: 0.8  },
+    { url: `${base}/more`,                lastModified: now, changeFrequency: "monthly", priority: 0.5  },
+    { url: `${base}/more/about`,          lastModified: now, changeFrequency: "monthly", priority: 0.7  },
+    { url: `${base}/more/guide`,          lastModified: now, changeFrequency: "monthly", priority: 0.65 },
+    { url: `${base}/more/faq`,            lastModified: now, changeFrequency: "monthly", priority: 0.65 },
+    { url: `${base}/more/privacy`,        lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
+    { url: `${base}/more/terms`,          lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
+    { url: `${base}/more/disclaimer`,     lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
     ...UNIQUE.map((sym) => ({
       url: `${base}/stock/${sym}`,
       lastModified: now,

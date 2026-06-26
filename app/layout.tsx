@@ -152,6 +152,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Google AdSense — 퍼블리셔 인증 및 자동 광고 */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1075509322890486"
+          crossOrigin="anonymous"
+        />
       </head>
       <body style={{ background: "var(--bg)" }}>
         {/* iOS PWA: prevent rubber-band overscroll at top/bottom revealing cached content */}

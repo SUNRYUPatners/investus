@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { InsightReportSection } from "@/components/InsightReportSection";
 import { YoutubeChannels } from "@/components/YoutubeChannels";
@@ -6,6 +7,16 @@ import Link from "next/link";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { getLocale } from "@/lib/getLocale";
 import { getT } from "@/lib/i18n";
+
+export const metadata: Metadata = {
+  title: "투자 인사이트 & 리포트 | 인베스트어스",
+  description: "SUNRYU Partners CIO가 직접 작성한 미국주식 시장 분석 리포트. S&P500·NASDAQ 시장 흐름 분석, 개별 종목 실적·밸류에이션 분석, 투자 기초 지식, 워렌 버핏·론 배런 등 전설적 투자가 전략을 무료로 제공합니다.",
+  openGraph: {
+    title: "투자 인사이트 & 리포트 | 인베스트어스",
+    description: "CIO 직접 작성 미국주식 분석 리포트 · 투자 기초 지식 · 투자 대가 전략",
+    type: "website",
+  },
+};
 
 export default async function InsightPage() {
   const locale = await getLocale();
@@ -96,9 +107,15 @@ export default async function InsightPage() {
 
       {/* ── Mobile ── */}
       <main className="lg:hidden max-w-[480px] mx-auto px-0">
-        <div className="px-4 pt-5 pb-4">
+        <div className="px-4 pt-5 pb-3">
           <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
-          <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
+          <p className="text-xs mt-0.5 mb-3" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
+          {/* 에디토리얼 소개 — Google 인덱싱 콘텐츠 */}
+          <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+            SUNRYU Partners CIO가 매일 직접 분석한 미국주식 투자 리포트를 무료로 제공합니다.
+            단순 뉴스 요약이 아닌, S&P500·NASDAQ 시장 흐름·섹터 분석·개별 종목 밸류에이션까지
+            투자 판단에 직결되는 핵심 분석을 담습니다.
+          </p>
         </div>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
@@ -131,7 +148,10 @@ export default async function InsightPage() {
         <div className="flex-1 min-w-0 pt-5">
           <div className="pb-4">
             <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{t.title}</h1>
-            <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
+            <p className="text-xs mt-0.5 mb-2" style={{ color: "var(--muted)" }}>{t.subtitle}</p>
+            <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+              SUNRYU Partners CIO가 매일 직접 분석한 미국주식 투자 리포트. S&P500·NASDAQ 시장 흐름·섹터 분석·개별 종목 밸류에이션까지 투자 판단에 직결되는 핵심 분석을 무료로 제공합니다.
+            </p>
           </div>
           <InsightReportSection />
         </div>
