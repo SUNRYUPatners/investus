@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#0d1117"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#f59e0b"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" font-weight="700">TSLA · 마케팅 전환 + 남미 확장</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f1f5f9">Tesla 광고 본격화 + 우루과이 진출 — 남미 세 번째 시장</text>
+
+  <!-- Marketing section -->
+  <rect x="28" y="108" width="500" height="440" rx="12" fill="#111318"/>
+  <text x="278" y="148" font-family="Arial,sans-serif" font-size="18" fill="#f59e0b" font-weight="700" text-anchor="middle">📢 마케팅 전략 대전환</text>
+
+  <rect x="48" y="164" width="460" height="100" rx="10" fill="#1a1200" stroke="#f59e0b" stroke-width="1"/>
+  <text x="278" y="200" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" font-weight="700" text-anchor="middle">신규 채용: Head of Paid Digital</text>
+  <text x="278" y="224" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b" font-weight="700" text-anchor="middle">Demand Generation</text>
+  <text x="278" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">부서: Tesla Energy (Energy Solar &amp; Storage)</text>
+
+  <rect x="48" y="276" width="460" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="302" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">업무 범위</text>
+  <text x="498" y="302" font-family="Arial,sans-serif" font-size="12" fill="#f1f5f9" font-weight="700" text-anchor="end">유료 검색·소셜·디스플레이 광고</text>
+  <text x="498" y="322" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">North America 전반 유료 디지털 전략</text>
+
+  <rect x="48" y="344" width="460" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="370" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">위치</text>
+  <text x="498" y="370" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">Palo Alto, California</text>
+  <text x="498" y="390" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Full-time · Req. ID 273190</text>
+
+  <rect x="48" y="412" width="460" height="72" rx="8" fill="#1a1200"/>
+  <text x="278" y="440" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">의미: Tesla가 처음으로 전통적 유료 광고</text>
+  <text x="278" y="462" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Elon Musk의 "광고 안 한다" 방침에서 전환</text>
+  <text x="278" y="480" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Tesla Energy 수요 창출 → 전체 브랜드 전략 변화 신호</text>
+
+  <!-- Uruguay section -->
+  <rect x="548" y="108" width="504" height="440" rx="12" fill="#111318"/>
+  <text x="800" y="148" font-family="Arial,sans-serif" font-size="18" fill="#60a5fa" font-weight="700" text-anchor="middle">🌎 남미 우루과이 진출</text>
+
+  <!-- Latin America expansion timeline -->
+  <rect x="568" y="164" width="464" height="80" rx="8" fill="#0f1923"/>
+  <text x="800" y="194" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">남미 진출 히스토리</text>
+  <text x="620" y="226" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">🇨🇱 칠레 (2024)</text>
+  <text x="800" y="226" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">→ 🇨🇴 콜롬비아 (2025)</text>
+  <text x="1002" y="226" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700" text-anchor="end">→ 🇺🇾 우루과이 (2026)</text>
+
+  <rect x="568" y="256" width="464" height="58" rx="8" fill="#0f1923"/>
+  <text x="588" y="282" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">규제 현황</text>
+  <text x="1022" y="282" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="700" text-anchor="end">✅ 승인 완료</text>
+  <text x="1022" y="302" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">우루과이 규제 당국 사전 승인</text>
+
+  <rect x="568" y="324" width="464" height="58" rx="8" fill="#0f1923"/>
+  <text x="588" y="350" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">공급 생산지</text>
+  <text x="1022" y="350" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">상하이 공장 (Giga Shanghai)</text>
+  <text x="1022" y="370" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">남미향 차량 상하이 생산 공급</text>
+
+  <rect x="568" y="392" width="464" height="58" rx="8" fill="#0f1923"/>
+  <text x="588" y="418" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">전략적 의미</text>
+  <text x="1022" y="418" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700" text-anchor="end">라틴 아메리카 EV 리더십</text>
+  <text x="1022" y="438" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">신흥 시장 조기 진입으로 경쟁 우위 확보</text>
+
+  <rect x="568" y="460" width="464" height="72" rx="8" fill="#0a1528"/>
+  <text x="800" y="490" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">우루과이: 남미에서 가장 높은 EV</text>
+  <text x="800" y="510" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">채택률 잠재력 보유 국가</text>
+  <text x="800" y="530" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">1인당 GDP 높음 · 친환경 에너지 정책 선도</text>
+
+  <!-- Context -->
+  <rect x="28" y="568" width="1024" height="120" rx="12" fill="#111318"/>
+  <text x="540" y="606" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">두 가지 소식의 공통 메시지</text>
+  <text x="540" y="636" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">마케팅 → Tesla Energy 수요를 유료 광고로 적극 창출 · 남미 확장 → 글로벌 시장 침투 가속화</text>
+  <text x="540" y="660" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Tesla는 더 이상 "알아서 팔리는" 전략에만 의존하지 않음 → 공격적 성장 전략으로 전환 중</text>
+  <text x="540" y="680" font-family="Arial,sans-serif" font-size="11" fill="#4b5563" text-anchor="middle">Elon Musk: "태양광은 지속 가능 에너지 미래의 핵심" — Tesla Energy 성장 가속화 선언과 맞물림</text>
+
+  <!-- Bottom insight -->
+  <rect x="28" y="708" width="1024" height="90" rx="12" fill="#1a1200"/>
+  <text x="540" y="743" font-family="Arial,sans-serif" font-size="15" fill="#f59e0b" font-weight="700" text-anchor="middle">Tesla = 자동차 + 에너지 + AI 플랫폼으로 사업 범위 급속 확장</text>
+  <text x="540" y="772" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">마케팅 투자 + 글로벌 진출 = Q3·Q4 매출 성장 드라이버 · 장기 투자 관점에서 긍정 시그널</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Tesla 채용공고 · Whole Mars Catalog · Musk Uruguay · Investus 2026.06.29</text>
+</svg>

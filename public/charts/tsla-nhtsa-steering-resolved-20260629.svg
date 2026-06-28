@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#0d1117"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#4ade80"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700">TSLA · NHTSA · 리스크 해소</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="27" font-weight="bold" fill="#f1f5f9">NHTSA 전동 조향 조사 종결 — Tesla 376,000대 리스크 해소</text>
+
+  <!-- Big resolved badge -->
+  <rect x="28" y="108" width="1024" height="150" rx="14" fill="#0a2315" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="162" font-family="Arial,sans-serif" font-size="20" fill="#4ade80" font-weight="700" text-anchor="middle">✅ 조사 공식 종결</text>
+  <text x="540" y="202" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#f1f5f9" text-anchor="middle">376,000대 조향 보조 리스크 해소</text>
+  <text x="540" y="242" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">종결일: 2026년 6월 27일 · Reuters 보도</text>
+
+  <!-- Details -->
+  <rect x="28" y="278" width="490" height="360" rx="12" fill="#111318"/>
+  <text x="273" y="314" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">조사 개요</text>
+  <rect x="48" y="328" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="354" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">조사 기관</text>
+  <text x="488" y="354" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">NHTSA</text>
+  <text x="488" y="374" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">미국 도로교통안전국</text>
+  <rect x="48" y="396" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="422" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">조사 대상</text>
+  <text x="488" y="422" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">376,000대</text>
+  <text x="488" y="442" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2023년형 Model 3 · Model Y</text>
+  <rect x="48" y="464" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="490" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">조사 원인</text>
+  <text x="488" y="490" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">조향 보조 기능 이슈</text>
+  <text x="488" y="510" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Power Steering Assist 보고 사례</text>
+  <rect x="48" y="532" width="450" height="58" rx="8" fill="#0a2315"/>
+  <text x="68" y="558" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">해결 방법</text>
+  <text x="488" y="558" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="end">소프트웨어 업데이트</text>
+  <text x="488" y="578" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">리콜 없이 OTA 업데이트로 해결</text>
+
+  <!-- Investment impact -->
+  <rect x="538" y="278" width="514" height="360" rx="12" fill="#111318"/>
+  <text x="795" y="314" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">투자 관점 시사점</text>
+  <rect x="558" y="330" width="474" height="88" rx="8" fill="#0a2315"/>
+  <text x="795" y="360" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="middle">✅ 리콜 없이 종결</text>
+  <text x="795" y="390" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">소프트웨어 업데이트만으로 해결</text>
+  <text x="795" y="410" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">비용 부담 없음 · 차량 결함 아님 확인</text>
+  <rect x="558" y="428" width="474" height="88" rx="8" fill="#0a2315"/>
+  <text x="795" y="458" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="middle">✅ 오버행 리스크 제거</text>
+  <text x="795" y="488" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">376,000대 리콜 가능성 → 0</text>
+  <text x="795" y="508" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">주가 하락 빌미 제거</text>
+  <rect x="558" y="526" width="474" height="88" rx="8" fill="#0a2315"/>
+  <text x="795" y="556" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="middle">✅ Tesla 소프트웨어 우위 재확인</text>
+  <text x="795" y="586" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">OTA 업데이트로 안전 문제 해결 가능</text>
+  <text x="795" y="606" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">기존 자동차 업체 대비 핵심 경쟁 우위</text>
+
+  <!-- Context -->
+  <rect x="28" y="658" width="1024" height="100" rx="12" fill="#111318"/>
+  <text x="540" y="692" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">Tesla의 OTA(Over-The-Air) 업데이트 능력이란?</text>
+  <text x="540" y="718" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">인터넷을 통해 차량에 원격으로 소프트웨어 업데이트 → 물리적 리콜 없이 결함 즉시 해결 가능</text>
+  <text x="540" y="742" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Toyota · Ford · GM 등 전통 자동차 업체는 동일 문제 발생 시 반드시 딜러십 방문 리콜 필요</text>
+
+  <rect x="28" y="778" width="1024" height="90" rx="12" fill="#0a2315"/>
+  <text x="540" y="813" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="700" text-anchor="middle">NHTSA 조사 종결 = 단기 악재 소멸 + Tesla 소프트웨어 DNA 입증</text>
+  <text x="540" y="842" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">376,000대 리콜 우려 해소 → Q2 실적 발표 전 불확실성 제거 완료</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: NHTSA · Reuters (2026.06.27) · Investus 2026.06.29</text>
+</svg>

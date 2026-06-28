@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a0c18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#60a5fa"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700">MSFT · Microsoft · Michael Burry Buy Alert</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#f1f5f9">Michael Burry Goes Long on MSFT — Buys Dec 2026 Call Options Near Lows</text>
+
+  <!-- Hero -->
+  <rect x="28" y="108" width="1024" height="120" rx="14" fill="#0a1528" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="148" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" text-anchor="middle">SEC Form 4 Filed: June 26, 2026</text>
+  <text x="540" y="196" font-family="Arial,sans-serif" font-size="54" font-weight="bold" fill="#f1f5f9" text-anchor="middle">$380 Call Options</text>
+  <text x="540" y="222" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Expiry: December 2026 · Strike in low $380s · Near historic lows</text>
+
+  <!-- Position details left -->
+  <rect x="28" y="248" width="490" height="380" rx="12" fill="#111318"/>
+  <text x="273" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">Position Details</text>
+
+  <rect x="48" y="300" width="450" height="58" rx="8" fill="#0a1528"/>
+  <text x="68" y="326" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Investor</text>
+  <text x="488" y="326" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="bold" text-anchor="end">Michael Burry</text>
+  <text x="488" y="348" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">The Big Short · Scion Asset Management</text>
+
+  <rect x="48" y="368" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="394" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Instrument</text>
+  <text x="488" y="394" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">Microsoft (MSFT) LEAP Call Options</text>
+  <text x="488" y="412" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Long-dated call options</text>
+
+  <rect x="48" y="436" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="462" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Strike Price</text>
+  <text x="488" y="462" font-family="Arial,sans-serif" font-size="20" fill="#4ade80" font-weight="bold" text-anchor="end">Low $380s</text>
+  <text x="488" y="480" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Near historic support level</text>
+
+  <rect x="48" y="504" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="530" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Expiration</text>
+  <text x="488" y="530" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">December 2026</text>
+  <text x="488" y="548" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">~6 months to expiry from filing date</text>
+
+  <rect x="48" y="572" width="450" height="46" rx="8" fill="#0f1923"/>
+  <text x="68" y="598" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Disclosure</text>
+  <text x="488" y="598" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">SEC Form 4 (Insider Ownership Report)</text>
+  <text x="488" y="612" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Official regulatory filing — high credibility</text>
+
+  <!-- Why MSFT right panel -->
+  <rect x="548" y="248" width="504" height="380" rx="12" fill="#111318"/>
+  <text x="800" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">Why Microsoft?</text>
+
+  <rect x="568" y="300" width="464" height="72" rx="8" fill="#0a1528"/>
+  <text x="588" y="328" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">① Azure AI Cloud — #1 market share</text>
+  <text x="588" y="352" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Exclusive OpenAI partner · Copilot across all products · Enterprise AI hub</text>
+
+  <rect x="568" y="382" width="464" height="72" rx="8" fill="#0a1528"/>
+  <text x="588" y="410" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">② Record buybacks + dividends</text>
+  <text x="588" y="434" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">$3.3B quarterly dividend · Stable FCF + max shareholder returns</text>
+
+  <rect x="568" y="464" width="464" height="72" rx="8" fill="#0a1528"/>
+  <text x="588" y="492" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">③ Contrarian buy-the-dip signal</text>
+  <text x="588" y="516" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Big Short Burry buying calls = strong bounce expected</text>
+
+  <rect x="568" y="546" width="464" height="72" rx="8" fill="#0a1528"/>
+  <text x="588" y="574" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700">④ Current price vs. $380 strike</text>
+  <text x="588" y="598" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Near-the-money strike = explosive gain if stock moves up modestly</text>
+
+  <!-- Burry track record -->
+  <rect x="28" y="648" width="490" height="190" rx="12" fill="#111318"/>
+  <text x="273" y="684" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">Burry's Notable Investment Track Record</text>
+  <text x="48" y="716" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ 2008 mortgage short → thousands % return</text>
+  <text x="48" y="740" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ Contrarian investor — goes against the crowd, then wins</text>
+  <text x="48" y="764" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">◆ 2022 TSLA short → partial loss from early exit</text>
+  <text x="48" y="788" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">◆ MSFT long: The Big Short guy now buys Big Tech</text>
+  <text x="48" y="820" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Scion Asset Management founder · Real-life Big Short protagonist</text>
+
+  <!-- Signal section -->
+  <rect x="538" y="648" width="514" height="190" rx="12" fill="#0a1528" stroke="#60a5fa" stroke-width="1"/>
+  <text x="795" y="684" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="700" text-anchor="middle">Investment Signal</text>
+  <text x="795" y="720" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#f1f5f9" text-anchor="middle">BUY SIGNAL</text>
+  <text x="795" y="758" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">Call options = bullish bet on MSFT upside</text>
+  <text x="795" y="784" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Form 4 = officially confirmed position</text>
+  <text x="795" y="810" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Burry's contrarian timing has historically signaled turning points</text>
+
+  <!-- Bottom insight -->
+  <rect x="28" y="858" width="1024" height="90" rx="12" fill="#0a1528"/>
+  <text x="540" y="893" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="700" text-anchor="middle">The Big Short's Burry Buys MSFT $380 Calls — Betting on Bounce from Lows</text>
+  <text x="540" y="922" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Azure AI + OpenAI partnership + contrarian buy = MSFT re-rating potential · Watch Dec 2026 expiry</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: SEC Form 4 (2026.06.26) · Barchart · For reference only · Investus 2026.06.29</text>
+</svg>

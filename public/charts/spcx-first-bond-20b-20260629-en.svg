@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#080d14"/>
+    </linearGradient>
+    <linearGradient id="revBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#a78bfa"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#a78bfa" font-weight="700">SPCX · SpaceX · Historic Milestone</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f1f5f9">SpaceX First-Ever Bond Issuance $20B+ — Investment Grade Rating</text>
+
+  <rect x="28" y="108" width="1024" height="140" rx="14" fill="#0f0a1f" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="152" font-family="Arial,sans-serif" font-size="16" fill="#a78bfa" text-anchor="middle">First-ever bond sale · June 20, 2026</text>
+  <text x="540" y="208" font-family="Arial,sans-serif" font-size="64" font-weight="bold" fill="#f1f5f9" text-anchor="middle">$20B+</text>
+  <text x="540" y="238" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Space Exploration Technologies Corp. Senior Notes — First bond issuance ever</text>
+
+  <rect x="28" y="268" width="490" height="360" rx="12" fill="#111318"/>
+  <text x="273" y="304" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">Bond Details</text>
+  <rect x="48" y="318" width="450" height="52" rx="8" fill="#0f0a1f"/>
+  <text x="68" y="344" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Maturity Structure</text>
+  <text x="488" y="344" font-family="Arial,sans-serif" font-size="13" fill="#a78bfa" font-weight="700" text-anchor="end">2031 ~ 2056 (up to 30 years)</text>
+  <text x="488" y="362" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Multi-tranche structure across maturities</text>
+  <rect x="48" y="380" width="450" height="52" rx="8" fill="#0f0a1f"/>
+  <text x="68" y="406" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Interest Rate Range</text>
+  <text x="488" y="406" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">4.40% ~ ~6.00%</text>
+  <text x="488" y="424" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Tiered rates by maturity</text>
+  <rect x="48" y="442" width="450" height="52" rx="8" fill="#0a2315"/>
+  <text x="68" y="468" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Credit Rating</text>
+  <text x="488" y="468" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="700" text-anchor="end">✅ Investment Grade (all 3 agencies)</text>
+  <text x="488" y="486" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">S&amp;P · Moody's · Fitch simultaneously</text>
+  <rect x="48" y="504" width="450" height="52" rx="8" fill="#0f0a1f"/>
+  <text x="68" y="530" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Oversubscription</text>
+  <text x="488" y="530" font-family="Arial,sans-serif" font-size="20" fill="#f59e0b" font-weight="bold" text-anchor="end">3.5x Oversubscribed</text>
+  <text x="488" y="548" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">One of the largest bond debuts by maturity ever</text>
+  <rect x="48" y="566" width="450" height="52" rx="8" fill="#0f0a1f"/>
+  <text x="68" y="592" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Lead Underwriters</text>
+  <text x="488" y="592" font-family="Arial,sans-serif" font-size="12" fill="#f1f5f9" font-weight="700" text-anchor="end">Goldman Sachs · Citi · JPMorgan</text>
+  <text x="488" y="610" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Morgan Stanley co-lead</text>
+
+  <rect x="548" y="268" width="504" height="360" rx="12" fill="#111318"/>
+  <text x="800" y="304" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">SpaceX Revenue Outlook ($B)</text>
+  <text x="600" y="332" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2023</text>
+  <rect x="575" y="558" width="50" height="22" rx="3" fill="#4c1d95"/>
+  <text x="600" y="552" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">$10B</text>
+  <text x="660" y="332" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2024</text>
+  <rect x="635" y="551" width="50" height="29" rx="3" fill="#4c1d95"/>
+  <text x="660" y="545" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">$14B</text>
+  <text x="720" y="332" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2025</text>
+  <rect x="695" y="542" width="50" height="38" rx="3" fill="#5b21b6"/>
+  <text x="720" y="536" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">$19B</text>
+  <text x="780" y="332" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2026E</text>
+  <rect x="755" y="504" width="50" height="76" rx="3" fill="#6d28d9"/>
+  <text x="780" y="498" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">$37B</text>
+  <text x="840" y="332" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2027E</text>
+  <rect x="815" y="440" width="50" height="140" rx="3" fill="#7c3aed"/>
+  <text x="840" y="434" font-family="Arial,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">$68B</text>
+  <text x="900" y="332" font-family="Arial,sans-serif" font-size="10" fill="#a78bfa" font-weight="700" text-anchor="middle">2028E</text>
+  <rect x="875" y="374" width="50" height="206" rx="3" fill="url(#revBar)"/>
+  <text x="900" y="368" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa" font-weight="700" text-anchor="middle">$97B</text>
+  <line x1="568" y1="580" x2="1032" y2="580" stroke="#374151" stroke-width="1"/>
+  <text x="800" y="608" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Source: @StockSavvyShay · Fiscal.ai</text>
+
+  <rect x="28" y="648" width="1024" height="110" rx="12" fill="#0f0a1f" stroke="#a78bfa" stroke-width="1"/>
+  <text x="540" y="682" font-family="Arial,sans-serif" font-size="15" fill="#a78bfa" font-weight="700" text-anchor="middle">Why This Bond Deal Matters</text>
+  <text x="540" y="710" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Private SpaceX enters public bond market → max institutional exposure + official financial recognition</text>
+  <text x="540" y="734" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Investment grade from 3 agencies = Wall Street officially recognizes SpaceX as a stable mega-corporation</text>
+  <text x="540" y="754" font-family="Arial,sans-serif" font-size="11" fill="#4b5563" text-anchor="middle">3.5x oversubscribed = overwhelming demand → SpaceX secured favorable terms</text>
+
+  <rect x="28" y="778" width="1024" height="90" rx="12" fill="#120a2a"/>
+  <text x="540" y="813" font-family="Arial,sans-serif" font-size="15" fill="#a78bfa" font-weight="700" text-anchor="middle">SpaceX first bond = funding secured to accelerate Starlink &amp; Starship</text>
+  <text x="540" y="842" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">If $97B 2028 revenue target hits, SPCX indirect investors stand to benefit enormously</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: SpaceX Registration Rights Agreement (2026.06.20) · StockSavvyShay · Fiscal.ai · Investus 2026.06.29</text>
+</svg>

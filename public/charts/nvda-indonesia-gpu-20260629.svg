@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a0f0d"/>
+    </linearGradient>
+    <linearGradient id="nvGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a34a"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#4ade80"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700">NVDA · NVIDIA · 인도네시아 AI 클라우드 계약</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#f1f5f9">NVIDIA, 인도네시아 AI 클라우드에 17만 GPU 공급 — $20B 매출 전망</text>
+
+  <!-- Hero banner -->
+  <rect x="28" y="108" width="1024" height="120" rx="14" fill="#0a2315" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="148" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">Firmus Technologies · 인도네시아 · 2026년 6월 발표</text>
+  <text x="540" y="196" font-family="Arial,sans-serif" font-size="60" font-weight="bold" fill="#f1f5f9" text-anchor="middle">170,000 GPUs</text>
+  <text x="540" y="222" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">NVIDIA GPU → 인도네시아 AI 클라우드 플랫폼 구축</text>
+
+  <!-- Deal details left panel -->
+  <rect x="28" y="248" width="490" height="380" rx="12" fill="#111318"/>
+  <text x="273" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">계약 세부 내용</text>
+
+  <rect x="48" y="300" width="450" height="58" rx="8" fill="#0a2315"/>
+  <text x="68" y="326" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">공급 GPU 수량</text>
+  <text x="488" y="326" font-family="Arial,sans-serif" font-size="20" fill="#4ade80" font-weight="bold" text-anchor="end">170,000대</text>
+  <text x="488" y="348" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">NVIDIA GPU (모델 미공개)</text>
+
+  <rect x="48" y="368" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="394" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">파트너사</text>
+  <text x="488" y="394" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">Firmus Technologies</text>
+  <text x="488" y="412" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">인도네시아 AI 클라우드 기업</text>
+
+  <rect x="48" y="436" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="462" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">배포 일정</text>
+  <text x="488" y="462" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">2027년 Q1 배포 시작</text>
+  <text x="488" y="480" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">2028년 Q1 매출 인식 시작</text>
+
+  <rect x="48" y="504" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="530" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">용도</text>
+  <text x="488" y="530" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">AI 클라우드 플랫폼</text>
+  <text x="488" y="548" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">인도네시아 국가 AI 인프라 구축</text>
+
+  <rect x="48" y="572" width="450" height="46" rx="8" fill="#0f1923"/>
+  <text x="68" y="598" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">발표일</text>
+  <text x="488" y="598" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">2026년 6월</text>
+  <text x="488" y="612" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Sam Badawi 트윗 등 복수 소스 확인</text>
+
+  <!-- Revenue projection right panel -->
+  <rect x="548" y="248" width="504" height="380" rx="12" fill="#111318"/>
+  <text x="800" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">Firmus 매출 전망</text>
+
+  <!-- Big revenue number -->
+  <rect x="568" y="300" width="464" height="140" rx="10" fill="#0a2315" stroke="#4ade80" stroke-width="1"/>
+  <text x="800" y="334" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="700" text-anchor="middle">6년간 누적 매출 목표</text>
+  <text x="800" y="386" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#4ade80" text-anchor="middle">최대 $20B</text>
+  <text x="800" y="424" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">AI 클라우드 기업으로 성장 시 달성 목표</text>
+
+  <!-- Timeline breakdown -->
+  <rect x="568" y="452" width="222" height="100" rx="8" fill="#0f1923"/>
+  <text x="679" y="480" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">배포 시작</text>
+  <text x="679" y="514" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" font-weight="bold" text-anchor="middle">2027 Q1</text>
+  <text x="679" y="542" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">GPU 설치 및 운영 개시</text>
+
+  <rect x="806" y="452" width="226" height="100" rx="8" fill="#0f1923"/>
+  <text x="919" y="480" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">매출 인식 시작</text>
+  <text x="919" y="514" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" font-weight="bold" text-anchor="middle">2028 Q1</text>
+  <text x="919" y="542" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">NVDA 매출 반영 예상 시점</text>
+
+  <!-- Context / significance -->
+  <rect x="28" y="648" width="490" height="190" rx="12" fill="#111318"/>
+  <text x="273" y="684" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">이 딜이 중요한 이유</text>
+  <text x="48" y="716" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ 동남아시아 AI 인프라 수요 실체 확인</text>
+  <text x="48" y="740" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ NVDA의 신흥국 데이터센터 공략 첫 대형 사례</text>
+  <text x="48" y="764" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ 클라우드 GPU 수요 → 지역 다각화 트렌드</text>
+  <text x="48" y="788" font-family="Arial,sans-serif" font-size="12" fill="#f87171">⚠ 배포~매출까지 최소 1.5년 리드타임</text>
+  <text x="48" y="820" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">인도네시아: 2.7억 인구, 동남아 최대 경제 대국</text>
+
+  <!-- NVDA market position -->
+  <rect x="538" y="648" width="514" height="190" rx="12" fill="#0a1528" stroke="#4ade80" stroke-width="1"/>
+  <text x="795" y="684" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="700" text-anchor="middle">NVIDIA AI GPU 시장 지위</text>
+  <text x="795" y="722" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">AI 가속 GPU 시장 점유율: ~80% 이상</text>
+  <text x="795" y="750" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">인도네시아 딜 = 새로운 시장 프론티어 개척</text>
+  <text x="795" y="778" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">CUDA 에코시스템으로 전환 비용 극히 높음</text>
+  <text x="795" y="810" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">동남아 GPU 수요: 2025~2030년 연 40%+ 성장 전망</text>
+
+  <!-- Bottom insight -->
+  <rect x="28" y="858" width="1024" height="90" rx="12" fill="#0a1528"/>
+  <text x="540" y="893" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="700" text-anchor="middle">NVIDIA 17만 GPU = 인도네시아 AI 국가 인프라 + 최대 $20B 매출 전망</text>
+  <text x="540" y="922" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">동남아 AI 붐 가속 · NVDA의 신흥국 데이터센터 수요 확보 · 2027~2028년 매출 반영 본격화</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Sam Badawi · 2026년 6월 발표 기준 · 투자 참고용 · Investus 2026.06.29</text>
+</svg>

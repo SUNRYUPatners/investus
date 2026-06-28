@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#080d14"/>
+    </linearGradient>
+    <linearGradient id="revBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#a78bfa"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#a78bfa" font-weight="700">SPCX · SpaceX · 역사적 이정표</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f1f5f9">SpaceX 역사상 첫 채권 발행 $20B+ — 투자등급 획득</text>
+
+  <!-- Hero -->
+  <rect x="28" y="108" width="1024" height="140" rx="14" fill="#0f0a1f" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="152" font-family="Arial,sans-serif" font-size="16" fill="#a78bfa" text-anchor="middle">역사상 최초 채권 발행 · 2026년 6월 20일</text>
+  <text x="540" y="208" font-family="Arial,sans-serif" font-size="64" font-weight="bold" fill="#f1f5f9" text-anchor="middle">$20B+</text>
+  <text x="540" y="238" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Space Exploration Technologies Corp. 첫 선순위 채권 발행</text>
+
+  <!-- Bond details left -->
+  <rect x="28" y="268" width="490" height="360" rx="12" fill="#111318"/>
+  <text x="273" y="304" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">채권 세부 내용</text>
+
+  <rect x="48" y="318" width="450" height="52" rx="8" fill="#0f0a1f"/>
+  <text x="68" y="344" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">만기 구조</text>
+  <text x="488" y="344" font-family="Arial,sans-serif" font-size="13" fill="#a78bfa" font-weight="700" text-anchor="end">2031 ~ 2056 (최대 30년)</text>
+  <text x="488" y="362" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">단기~장기 멀티 트란쉐 구조</text>
+
+  <rect x="48" y="380" width="450" height="52" rx="8" fill="#0f0a1f"/>
+  <text x="68" y="406" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">금리 범위</text>
+  <text x="488" y="406" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">4.40% ~ ~6.00%</text>
+  <text x="488" y="424" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">만기별 차등 금리 적용</text>
+
+  <rect x="48" y="442" width="450" height="52" rx="8" fill="#0a2315"/>
+  <text x="68" y="468" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">신용등급</text>
+  <text x="488" y="468" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="700" text-anchor="end">✅ 투자등급 (3사 모두)</text>
+  <text x="488" y="486" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">S&amp;P · Moody's · Fitch 동시 획득</text>
+
+  <rect x="48" y="504" width="450" height="52" rx="8" fill="#0f0a1f"/>
+  <text x="68" y="530" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">청약 배율</text>
+  <text x="488" y="530" font-family="Arial,sans-serif" font-size="20" fill="#f59e0b" font-weight="bold" text-anchor="end">3.5배 초과청약</text>
+  <text x="488" y="548" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">역대 최대 규모 채권 데뷔 중 하나</text>
+
+  <rect x="48" y="566" width="450" height="52" rx="8" fill="#0f0a1f"/>
+  <text x="68" y="592" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">주관사</text>
+  <text x="488" y="592" font-family="Arial,sans-serif" font-size="12" fill="#f1f5f9" font-weight="700" text-anchor="end">Goldman Sachs · Citi · JPMorgan</text>
+  <text x="488" y="610" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Morgan Stanley 공동 주관</text>
+
+  <!-- Revenue projection right -->
+  <rect x="548" y="268" width="504" height="360" rx="12" fill="#111318"/>
+  <text x="800" y="304" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">SpaceX 매출 전망 ($B)</text>
+
+  <!-- Bar chart: 2023=$10.4B, 2024=$14.0B, 2025=$18.7B, 2026E=$36.9B, 2027E=$68.3B, 2028E=$97.5B -->
+  <!-- Max height = 200px at $97.5B. Scale: 200/97.5 = 2.05px per $B -->
+  <!-- Base y = 580 -->
+  <text x="600" y="332" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2023</text>
+  <rect x="575" y="558" width="50" height="22" rx="3" fill="#4c1d95"/>
+  <text x="600" y="552" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">$10B</text>
+
+  <text x="660" y="332" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2024</text>
+  <rect x="635" y="551" width="50" height="29" rx="3" fill="#4c1d95"/>
+  <text x="660" y="545" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">$14B</text>
+
+  <text x="720" y="332" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">2025</text>
+  <rect x="695" y="542" width="50" height="38" rx="3" fill="#5b21b6"/>
+  <text x="720" y="536" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">$19B</text>
+
+  <text x="780" y="332" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2026E</text>
+  <rect x="755" y="504" width="50" height="76" rx="3" fill="#6d28d9"/>
+  <text x="780" y="498" font-family="Arial,sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">$37B</text>
+
+  <text x="840" y="332" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2027E</text>
+  <rect x="815" y="440" width="50" height="140" rx="3" fill="#7c3aed"/>
+  <text x="840" y="434" font-family="Arial,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">$68B</text>
+
+  <text x="900" y="332" font-family="Arial,sans-serif" font-size="10" fill="#a78bfa" font-weight="700" text-anchor="middle">2028E</text>
+  <rect x="875" y="374" width="50" height="206" rx="3" fill="url(#revBar)"/>
+  <text x="900" y="368" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa" font-weight="700" text-anchor="middle">$97B</text>
+
+  <line x1="568" y1="580" x2="1032" y2="580" stroke="#374151" stroke-width="1"/>
+  <text x="800" y="608" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">출처: @StockSavvyShay · Fiscal.ai</text>
+
+  <!-- Why bond matters -->
+  <rect x="28" y="648" width="1024" height="110" rx="12" fill="#0f0a1f" stroke="#a78bfa" stroke-width="1"/>
+  <text x="540" y="682" font-family="Arial,sans-serif" font-size="15" fill="#a78bfa" font-weight="700" text-anchor="middle">왜 이 채권 발행이 중요한가?</text>
+  <text x="540" y="710" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">비공개 회사 SpaceX가 공개 채권 시장 진입 → 기관투자자 노출 극대화 + 재무 구조 공식 인정</text>
+  <text x="540" y="734" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">3사 투자등급 = Wall Street이 SpaceX를 안정적 대형 기업으로 공식 인정 · 향후 IPO 포석</text>
+  <text x="540" y="754" font-family="Arial,sans-serif" font-size="11" fill="#4b5563" text-anchor="middle">3.5배 초과청약 = 수요 압도적 → 금리 조건 SpaceX에 유리하게 결정</text>
+
+  <!-- Bottom insight -->
+  <rect x="28" y="778" width="1024" height="90" rx="12" fill="#120a2a"/>
+  <text x="540" y="813" font-family="Arial,sans-serif" font-size="15" fill="#a78bfa" font-weight="700" text-anchor="middle">SpaceX 첫 채권 = Starlink·Starship 사업 가속화를 위한 자금 조달 완료</text>
+  <text x="540" y="842" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">2028년 $97B 매출 전망 실현 시 채권 투자자뿐 아니라 SPCX 간접 투자자에도 초대형 수혜</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: SpaceX Registration Rights Agreement (2026.06.20) · StockSavvyShay · Fiscal.ai · Investus 2026.06.29</text>
+</svg>

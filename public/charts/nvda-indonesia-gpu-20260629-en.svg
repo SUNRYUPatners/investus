@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a0f0d"/>
+    </linearGradient>
+    <linearGradient id="nvGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a34a"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#4ade80"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700">NVDA · NVIDIA · Indonesia AI Cloud Deal</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#f1f5f9">NVIDIA Supplies 170,000 GPUs for Indonesia AI Cloud — Up to $20B Revenue</text>
+
+  <!-- Hero banner -->
+  <rect x="28" y="108" width="1024" height="120" rx="14" fill="#0a2315" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="148" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">Firmus Technologies · Indonesia · Announced June 2026</text>
+  <text x="540" y="196" font-family="Arial,sans-serif" font-size="60" font-weight="bold" fill="#f1f5f9" text-anchor="middle">170,000 GPUs</text>
+  <text x="540" y="222" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">NVIDIA GPU → Indonesia AI cloud platform build-out</text>
+
+  <!-- Deal details left panel -->
+  <rect x="28" y="248" width="490" height="380" rx="12" fill="#111318"/>
+  <text x="273" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">Deal Details</text>
+
+  <rect x="48" y="300" width="450" height="58" rx="8" fill="#0a2315"/>
+  <text x="68" y="326" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">GPU Quantity</text>
+  <text x="488" y="326" font-family="Arial,sans-serif" font-size="20" fill="#4ade80" font-weight="bold" text-anchor="end">170,000 units</text>
+  <text x="488" y="348" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">NVIDIA GPU (model undisclosed)</text>
+
+  <rect x="48" y="368" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="394" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Partner Company</text>
+  <text x="488" y="394" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">Firmus Technologies</text>
+  <text x="488" y="412" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Indonesia AI cloud company</text>
+
+  <rect x="48" y="436" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="462" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Deployment Timeline</text>
+  <text x="488" y="462" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">Deployments starting Q1 2027</text>
+  <text x="488" y="480" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Revenue impact starting Q1 2028</text>
+
+  <rect x="48" y="504" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="530" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Use Case</text>
+  <text x="488" y="530" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">AI Cloud Platform</text>
+  <text x="488" y="548" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">National AI infrastructure for Indonesia</text>
+
+  <rect x="48" y="572" width="450" height="46" rx="8" fill="#0f1923"/>
+  <text x="68" y="598" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Announced</text>
+  <text x="488" y="598" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">June 2026</text>
+  <text x="488" y="612" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Confirmed via multiple sources incl. Sam Badawi</text>
+
+  <!-- Revenue projection right panel -->
+  <rect x="548" y="248" width="504" height="380" rx="12" fill="#111318"/>
+  <text x="800" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">Firmus Revenue Outlook</text>
+
+  <!-- Big revenue number -->
+  <rect x="568" y="300" width="464" height="140" rx="10" fill="#0a2315" stroke="#4ade80" stroke-width="1"/>
+  <text x="800" y="334" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="700" text-anchor="middle">Cumulative Revenue Target (6 years)</text>
+  <text x="800" y="386" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#4ade80" text-anchor="middle">Up to $20B</text>
+  <text x="800" y="424" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Target as a leading AI cloud company</text>
+
+  <!-- Timeline breakdown -->
+  <rect x="568" y="452" width="222" height="100" rx="8" fill="#0f1923"/>
+  <text x="679" y="480" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Deployment Starts</text>
+  <text x="679" y="514" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" font-weight="bold" text-anchor="middle">Q1 2027</text>
+  <text x="679" y="542" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">GPU installation &amp; go-live</text>
+
+  <rect x="806" y="452" width="226" height="100" rx="8" fill="#0f1923"/>
+  <text x="919" y="480" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Revenue Recognized</text>
+  <text x="919" y="514" font-family="Arial,sans-serif" font-size="20" fill="#60a5fa" font-weight="bold" text-anchor="middle">Q1 2028</text>
+  <text x="919" y="542" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Expected NVDA revenue impact</text>
+
+  <!-- Context / significance -->
+  <rect x="28" y="648" width="490" height="190" rx="12" fill="#111318"/>
+  <text x="273" y="684" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">Why This Deal Matters</text>
+  <text x="48" y="716" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ Confirms AI infra demand across Southeast Asia</text>
+  <text x="48" y="740" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ First large NVDA deal targeting emerging market DCs</text>
+  <text x="48" y="764" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ Cloud GPU demand diversifying geographically</text>
+  <text x="48" y="788" font-family="Arial,sans-serif" font-size="12" fill="#f87171">⚠ Deploy-to-revenue lead time: min 1.5 years</text>
+  <text x="48" y="820" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Indonesia: 270M population, SE Asia's largest economy</text>
+
+  <!-- NVDA market position -->
+  <rect x="538" y="648" width="514" height="190" rx="12" fill="#0a1528" stroke="#4ade80" stroke-width="1"/>
+  <text x="795" y="684" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="700" text-anchor="middle">NVIDIA AI GPU Market Position</text>
+  <text x="795" y="722" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">AI accelerator GPU market share: ~80%+</text>
+  <text x="795" y="750" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Indonesia deal = opening a new market frontier</text>
+  <text x="795" y="778" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">CUDA ecosystem creates extremely high switching costs</text>
+  <text x="795" y="810" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">SE Asia GPU demand forecast: 40%+ annual growth 2025–2030</text>
+
+  <!-- Bottom insight -->
+  <rect x="28" y="858" width="1024" height="90" rx="12" fill="#0a1528"/>
+  <text x="540" y="893" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="700" text-anchor="middle">NVIDIA 170K GPUs = Indonesia AI National Infra + Up to $20B Revenue Potential</text>
+  <text x="540" y="922" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">SE Asia AI boom accelerating · NVDA secures emerging market DC demand · Revenue reflects 2027–2028</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: Sam Badawi · Based on June 2026 announcement · For reference only · Investus 2026.06.29</text>
+</svg>

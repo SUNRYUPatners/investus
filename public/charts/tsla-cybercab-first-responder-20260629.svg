@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#e31937"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#e31937" font-weight="700">TSLA · Tesla Cybercab</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f1f5f9">공식 응급 대응 가이드 V1.0 공개 — SAE Level 4 로보택시</text>
+
+  <!-- Hero badge -->
+  <rect x="28" y="108" width="1024" height="100" rx="14" fill="#0f1923" stroke="#e31937" stroke-width="1.5"/>
+  <text x="540" y="152" font-family="Arial,sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">Tesla Cybercab First Responder Interaction Plan V1.0 · 공개일: 2026년 6월 22일</text>
+  <text x="540" y="194" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#e31937" text-anchor="middle">SAE Level 4 완전 자율주행 로보택시 — 운전자 없이 스스로 운행</text>
+
+  <!-- Spec grid -->
+  <rect x="28" y="228" width="490" height="340" rx="12" fill="#111318"/>
+  <text x="273" y="262" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">🚗 차량 제원</text>
+
+  <rect x="48" y="276" width="450" height="56" rx="8" fill="#0f1923"/>
+  <text x="68" y="306" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">차체 구성</text>
+  <text x="488" y="306" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">2도어 · 2시트 · 쿠페형</text>
+  <text x="488" y="324" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">From 2026 – Present</text>
+
+  <rect x="48" y="342" width="450" height="56" rx="8" fill="#0f1923"/>
+  <text x="68" y="372" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">배터리 시스템</text>
+  <text x="488" y="372" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700" text-anchor="end">48V Li-Ion + 400V Li-Ion</text>
+  <text x="488" y="390" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">이중 배터리 구조 (저전압 + 고전압)</text>
+
+  <rect x="48" y="408" width="450" height="56" rx="8" fill="#0f1923"/>
+  <text x="68" y="438" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">자율주행 등급</text>
+  <text x="488" y="438" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="end">SAE Level 4</text>
+  <text x="488" y="456" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">자율주행 모드 시 완전 자율 운행</text>
+
+  <rect x="48" y="474" width="450" height="56" rx="8" fill="#0f1923"/>
+  <text x="68" y="504" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">외부 마이크로폰</text>
+  <text x="488" y="504" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">운전석 + 조수석 양측 장착</text>
+  <text x="488" y="522" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">차량 외부 음향 인식 시스템</text>
+
+  <!-- Active Hood -->
+  <rect x="538" y="228" width="514" height="340" rx="12" fill="#111318"/>
+  <text x="795" y="262" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">🛡️ Active Hood (보행자 보호)</text>
+
+  <rect x="558" y="278" width="474" height="80" rx="8" fill="#0f1923"/>
+  <text x="795" y="308" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">작동 속도 범위</text>
+  <text x="795" y="342" font-family="Arial,sans-serif" font-size="30" fill="#f59e0b" font-weight="bold" text-anchor="middle">15 ~ 22 mph</text>
+  <text x="795" y="364" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">(약 24 ~ 35 km/h)</text>
+
+  <rect x="558" y="370" width="474" height="72" rx="8" fill="#0f1923"/>
+  <text x="795" y="400" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">작동 원리</text>
+  <text x="795" y="428" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">보행자 충격 감지 시 후드 후방이 자동 상승</text>
+
+  <rect x="558" y="454" width="474" height="72" rx="8" fill="#0f1923"/>
+  <text x="795" y="484" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">장착 위치</text>
+  <text x="795" y="512" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">후드 하단 파이로테크닉 액추에이터</text>
+
+  <!-- FSD display note -->
+  <rect x="28" y="586" width="1024" height="80" rx="12" fill="#0a1528" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="618" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="middle">자율주행 모드 표시: 터치스크린 좌상단 "SELF-DRIVING" 파란 글씨</text>
+  <text x="540" y="648" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">자율주행 모드 해제 시 표시 사라짐 · 스티어링휠 있으면 SAE Level 2 (엔지니어링/테스트 차량)</text>
+
+  <!-- Texas Launch -->
+  <rect x="28" y="684" width="490" height="180" rx="12" fill="#111318"/>
+  <text x="273" y="720" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">🤠 텍사스 Robotaxi 공식 출시</text>
+  <rect x="48" y="734" width="450" height="60" rx="8" fill="#0f1923"/>
+  <text x="68" y="762" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">인가 상태</text>
+  <text x="488" y="762" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="end">✅ Authorized</text>
+  <text x="488" y="782" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Tesla Robotaxi, LLC</text>
+  <rect x="48" y="804" width="450" height="44" rx="8" fill="#0f1923"/>
+  <text x="68" y="832" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">등록 차량</text>
+  <text x="488" y="832" font-family="Arial,sans-serif" font-size="20" fill="#f1f5f9" font-weight="bold" text-anchor="end">84대 Model Y (2026년식)</text>
+
+  <!-- Exit screen -->
+  <rect x="538" y="684" width="514" height="180" rx="12" fill="#111318"/>
+  <text x="795" y="720" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">📱 Robotaxi UI 화면</text>
+  <rect x="558" y="736" width="474" height="108" rx="8" fill="#0a0a0a"/>
+  <text x="795" y="778" font-family="Arial,sans-serif" font-size="18" fill="#f1f5f9" font-weight="bold" text-anchor="middle">Please exit safely</text>
+  <text x="795" y="802" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Thank you for choosing Robotaxi.</text>
+  <text x="795" y="818" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">All information will be cleared for your privacy.</text>
+
+  <!-- Bottom insight -->
+  <rect x="28" y="882" width="1024" height="90" rx="12" fill="#1a0a0e"/>
+  <text x="540" y="917" font-family="Arial,sans-serif" font-size="15" fill="#f87171" font-weight="700" text-anchor="middle">Cybercab = Tesla가 자동차 회사에서 AI 운송 플랫폼으로 전환하는 핵심 제품</text>
+  <text x="540" y="946" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">응급 가이드 공개 = 대규모 상업화 직전 단계 · SAE Level 4 = 완전 무인 운행 합법화</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: Tesla Cybercab First Responder Guide V1.0 (2026.06.22) · Texas DMV · Investus 2026.06.29</text>
+</svg>

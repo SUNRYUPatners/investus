@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#0d1117"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#f59e0b"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" font-weight="700">TSLA · Marketing Shift + LatAm Expansion</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f1f5f9">Tesla Goes Paid Advertising + Uruguay Launch — 3rd LatAm Market</text>
+
+  <rect x="28" y="108" width="500" height="440" rx="12" fill="#111318"/>
+  <text x="278" y="148" font-family="Arial,sans-serif" font-size="18" fill="#f59e0b" font-weight="700" text-anchor="middle">📢 Marketing Strategy Shift</text>
+  <rect x="48" y="164" width="460" height="100" rx="10" fill="#1a1200" stroke="#f59e0b" stroke-width="1"/>
+  <text x="278" y="200" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" font-weight="700" text-anchor="middle">New Hire: Head of Paid Digital</text>
+  <text x="278" y="224" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b" font-weight="700" text-anchor="middle">Demand Generation</text>
+  <text x="278" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Department: Tesla Energy (Solar &amp; Storage)</text>
+  <rect x="48" y="276" width="460" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="302" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Scope</text>
+  <text x="498" y="302" font-family="Arial,sans-serif" font-size="12" fill="#f1f5f9" font-weight="700" text-anchor="end">Paid search · social · display advertising</text>
+  <text x="498" y="322" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">North America paid digital strategy</text>
+  <rect x="48" y="344" width="460" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="370" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Location</text>
+  <text x="498" y="370" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">Palo Alto, California</text>
+  <text x="498" y="390" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Full-time · Req. ID 273190</text>
+  <rect x="48" y="412" width="460" height="72" rx="8" fill="#1a1200"/>
+  <text x="278" y="440" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">Significance: Tesla embracing paid advertising</text>
+  <text x="278" y="462" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Departure from Musk's "no advertising" stance</text>
+  <text x="278" y="480" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Tesla Energy demand gen signals broader brand strategy shift</text>
+
+  <rect x="548" y="108" width="504" height="440" rx="12" fill="#111318"/>
+  <text x="800" y="148" font-family="Arial,sans-serif" font-size="18" fill="#60a5fa" font-weight="700" text-anchor="middle">🌎 Uruguay Market Entry</text>
+  <rect x="568" y="164" width="464" height="80" rx="8" fill="#0f1923"/>
+  <text x="800" y="194" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Latin America Expansion Timeline</text>
+  <text x="620" y="226" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">🇨🇱 Chile (2024)</text>
+  <text x="800" y="226" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">→ 🇨🇴 Colombia (2025)</text>
+  <text x="1002" y="226" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="700" text-anchor="end">→ 🇺🇾 Uruguay (2026)</text>
+  <rect x="568" y="256" width="464" height="58" rx="8" fill="#0f1923"/>
+  <text x="588" y="282" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Regulatory Status</text>
+  <text x="1022" y="282" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" font-weight="700" text-anchor="end">✅ Approved</text>
+  <text x="1022" y="302" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Uruguayan regulators already approved</text>
+  <rect x="568" y="324" width="464" height="58" rx="8" fill="#0f1923"/>
+  <text x="588" y="350" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Supply Source</text>
+  <text x="1022" y="350" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">Giga Shanghai</text>
+  <text x="1022" y="370" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">LatAm vehicles shipped from Shanghai</text>
+  <rect x="568" y="392" width="464" height="58" rx="8" fill="#0f1923"/>
+  <text x="588" y="418" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Strategic Value</text>
+  <text x="1022" y="418" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" font-weight="700" text-anchor="end">LatAm EV Leadership</text>
+  <text x="1022" y="438" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Early mover advantage in emerging market</text>
+  <rect x="568" y="460" width="464" height="72" rx="8" fill="#0a1528"/>
+  <text x="800" y="490" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">Uruguay: highest EV adoption</text>
+  <text x="800" y="510" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">potential in South America</text>
+  <text x="800" y="530" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">High per-capita GDP · Leading clean energy policy</text>
+
+  <rect x="28" y="568" width="1024" height="120" rx="12" fill="#111318"/>
+  <text x="540" y="606" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">Shared Message Behind Both Stories</text>
+  <text x="540" y="636" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Marketing → actively drive Tesla Energy demand with paid ads · LatAm expansion → accelerate global penetration</text>
+  <text x="540" y="660" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Tesla no longer relying solely on organic demand → shifting to aggressive growth strategy</text>
+  <text x="540" y="680" font-family="Arial,sans-serif" font-size="11" fill="#4b5563" text-anchor="middle">Musk: "Solar is primary, then wind and geothermal" — Tesla Energy growth acceleration announced</text>
+
+  <rect x="28" y="708" width="1024" height="90" rx="12" fill="#1a1200"/>
+  <text x="540" y="743" font-family="Arial,sans-serif" font-size="15" fill="#f59e0b" font-weight="700" text-anchor="middle">Tesla = Auto + Energy + AI platform rapidly expanding scope</text>
+  <text x="540" y="772" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Marketing spend + global expansion = Q3/Q4 revenue growth drivers · Positive long-term investment signal</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: Tesla Job Posting · Whole Mars Catalog · Musk Uruguay · Investus 2026.06.29</text>
+</svg>

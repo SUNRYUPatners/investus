@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#100808"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#f87171"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#f87171" font-weight="700">MACRO · 기업 법인 등록 트렌드 · 역대 최대 규모</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#f1f5f9">델라웨어 대탈출 — $3.3조 시가총액 이탈 · 텍사스·네바다로 이전</text>
+
+  <!-- Hero -->
+  <rect x="28" y="108" width="1024" height="120" rx="14" fill="#1a0808" stroke="#f87171" stroke-width="2"/>
+  <text x="540" y="148" font-family="Arial,sans-serif" font-size="14" fill="#f87171" text-anchor="middle">BREAKING: 역대 최대 규모 기업 법인 등록지 이탈 · 2026년 6월</text>
+  <text x="540" y="196" font-family="Arial,sans-serif" font-size="60" font-weight="bold" fill="#f1f5f9" text-anchor="middle">$3.3T+ 이탈</text>
+  <text x="540" y="222" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">합산 시가총액 $3.3조 이상 · 7개 州로 분산 이전 · 텍사스·네바다 주도</text>
+
+  <!-- Stats left panel -->
+  <rect x="28" y="248" width="490" height="380" rx="12" fill="#111318"/>
+  <text x="273" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">이탈 현황</text>
+
+  <rect x="48" y="300" width="450" height="64" rx="8" fill="#1a0808"/>
+  <text x="68" y="328" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">이탈 합산 시가총액</text>
+  <text x="488" y="328" font-family="Arial,sans-serif" font-size="22" fill="#f87171" font-weight="bold" text-anchor="end">$3.3T 이상</text>
+  <text x="488" y="354" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">역대 최대 기록 · 계속 증가 중</text>
+
+  <rect x="48" y="374" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="400" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">이전 목적지 (이탈 주)</text>
+  <text x="488" y="400" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">7개 州 (텍사스·네바다 주도)</text>
+  <text x="488" y="418" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">텍사스 친기업 정책 + 네바다 낮은 세율 어필</text>
+
+  <rect x="48" y="442" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="468" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">주요 이탈 기업</text>
+  <text x="488" y="460" font-family="Arial,sans-serif" font-size="11" fill="#f1f5f9" font-weight="700" text-anchor="end">Tesla · SpaceX</text>
+  <text x="488" y="478" font-family="Arial,sans-serif" font-size="11" fill="#f1f5f9" font-weight="700" text-anchor="end">Trump Media &amp; Tech · Dell Technologies</text>
+  <text x="488" y="494" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="end">Nuvalent 등 다수 포함</text>
+
+  <rect x="48" y="510" width="450" height="58" rx="8" fill="#0f1923"/>
+  <text x="68" y="536" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">트렌드 시점</text>
+  <text x="488" y="536" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="700" text-anchor="end">2026년 기준 역대 최고 이탈 속도</text>
+  <text x="488" y="554" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">트럼프 재임 후 규제 환경 변화와 맞물려 가속</text>
+
+  <rect x="48" y="578" width="450" height="40" rx="8" fill="#1a0808"/>
+  <text x="278" y="604" font-family="Arial,sans-serif" font-size="12" fill="#f87171" font-weight="700" text-anchor="middle">"델라웨어에 절대 법인 등록하지 마라" — Elon Musk</text>
+
+  <!-- Why companies leave / right panel -->
+  <rect x="548" y="248" width="504" height="380" rx="12" fill="#111318"/>
+  <text x="800" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">기업들이 델라웨어를 떠나는 이유</text>
+
+  <rect x="568" y="300" width="464" height="70" rx="8" fill="#1a0808"/>
+  <text x="588" y="326" font-family="Arial,sans-serif" font-size="13" fill="#f87171" font-weight="700">① 법원 판결 리스크 증가</text>
+  <text x="588" y="348" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">델라웨어 법원, 기업 이사진·CEO 불리한 판결 빈도 증가</text>
+
+  <rect x="568" y="380" width="464" height="70" rx="8" fill="#1a0808"/>
+  <text x="588" y="406" font-family="Arial,sans-serif" font-size="13" fill="#f87171" font-weight="700">② 텍사스·네바다의 친기업 정책 매력</text>
+  <text x="588" y="428" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">세율 우위 + 규제 완화 + 법적 안정성 제공</text>
+
+  <rect x="568" y="460" width="464" height="70" rx="8" fill="#1a0808"/>
+  <text x="588" y="486" font-family="Arial,sans-serif" font-size="13" fill="#f87171" font-weight="700">③ 일론 머스크 영향력</text>
+  <text x="588" y="508" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Tesla·SpaceX 이전 후 수많은 기업 동조 → 따르는 구조</text>
+
+  <rect x="568" y="540" width="464" height="70" rx="8" fill="#1a0808"/>
+  <text x="588" y="566" font-family="Arial,sans-serif" font-size="13" fill="#f87171" font-weight="700">④ 이탈 가속화 트렌드</text>
+  <text x="588" y="588" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">2026년 이탈 규모, 전년 대비 역대 최대 폭 증가 기록</text>
+
+  <!-- Impact section -->
+  <rect x="28" y="648" width="490" height="190" rx="12" fill="#111318"/>
+  <text x="273" y="684" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">투자 관점 시사점</text>
+  <text x="48" y="716" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ 텍사스·네바다 비즈니스 환경 개선 → 기업 유치 경쟁력</text>
+  <text x="48" y="740" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ 법인세·규제 부담 낮은 주 → 기업 이익 증가 여지</text>
+  <text x="48" y="764" font-family="Arial,sans-serif" font-size="12" fill="#f87171">⚠ 델라웨어 법원 판결: 기업 지배구조 변화 가능성</text>
+  <text x="48" y="788" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">◆ 법인 등록지 이전 자체는 단기 비용 발생</text>
+  <text x="48" y="820" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">미국 기업 법적 환경 재편 → 장기 구조 변화 신호</text>
+
+  <!-- Winner states -->
+  <rect x="538" y="648" width="514" height="190" rx="12" fill="#0a1528" stroke="#4ade80" stroke-width="1"/>
+  <text x="795" y="684" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="700" text-anchor="middle">수혜 州 현황</text>
+  <text x="795" y="724" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#f1f5f9" text-anchor="middle">텍사스 · 네바다</text>
+  <text x="795" y="760" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">7개 州 중 가장 많은 기업 유치</text>
+  <text x="795" y="786" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Tesla·SpaceX 유치 효과 → 추가 기업 연쇄 이전</text>
+  <text x="795" y="812" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">친기업 정책 경쟁 가속화 → 텍사스 기업 허브화</text>
+
+  <!-- Bottom insight -->
+  <rect x="28" y="858" width="1024" height="90" rx="12" fill="#1a0808"/>
+  <text x="540" y="893" font-family="Arial,sans-serif" font-size="15" fill="#f87171" font-weight="700" text-anchor="middle">델라웨어 대탈출 — 미국 기업 법적 지형도 재편 중</text>
+  <text x="540" y="922" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">$3.3T 시가총액 이탈 · 텍사스·네바다 부상 · 미국 법인 등록 트렌드 구조적 변화 신호</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: 복수 언론 · @investingvisuals · 투자 참고용 · Investus 2026.06.29</text>
+</svg>

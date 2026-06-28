@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a0f18"/>
+    </linearGradient>
+    <linearGradient id="muBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1d4ed8"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#60a5fa"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700">MU · Micron Technology · Q2 2026</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f1f5f9">Micron 심층 분석 — 데이터센터 +651% · 공정가치 $1,520</text>
+
+  <!-- Top 4 key metrics -->
+  <rect x="28" y="108" width="240" height="120" rx="10" fill="#0a1528" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="148" y="148" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">연간 주가 수익률 (5년)</text>
+  <text x="148" y="202" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#60a5fa" text-anchor="middle">156%</text>
+
+  <rect x="284" y="108" width="240" height="120" rx="10" fill="#0a1528" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="404" y="148" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">매출 총이익률</text>
+  <text x="404" y="202" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#60a5fa" text-anchor="middle">72%</text>
+
+  <rect x="540" y="108" width="240" height="120" rx="10" fill="#0a1528" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="660" y="148" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">FCF 마진</text>
+  <text x="660" y="202" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#60a5fa" text-anchor="middle">29%</text>
+
+  <rect x="796" y="108" width="256" height="120" rx="10" fill="#0a2315" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="924" y="148" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">순현금 보유</text>
+  <text x="924" y="202" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#4ade80" text-anchor="middle">$23B</text>
+
+  <!-- Revenue growth by segment -->
+  <rect x="28" y="248" width="500" height="380" rx="12" fill="#111318"/>
+  <text x="278" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">세그먼트별 매출 성장률 (Q2 2026)</text>
+
+  <!-- Data center bar: +651% full -->
+  <text x="80" y="318" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">데이터센터</text>
+  <rect x="80" y="326" width="340" height="36" rx="6" fill="url(#muBlue)"/>
+  <text x="430" y="352" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="bold">+651%</text>
+
+  <!-- Cloud memory bar: +307% = 340*307/651 = 160px -->
+  <text x="80" y="386" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">클라우드 메모리</text>
+  <rect x="80" y="394" width="161" height="36" rx="6" fill="#1d4ed8"/>
+  <text x="251" y="420" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="bold">+307%</text>
+
+  <!-- Mobile bar: +254% = 340*254/651 = 133px -->
+  <text x="80" y="454" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">모바일</text>
+  <rect x="80" y="462" width="133" height="36" rx="6" fill="#1e3a8a"/>
+  <text x="223" y="488" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="bold">+254%</text>
+
+  <!-- Revenue growth total -->
+  <text x="80" y="522" font-family="Arial,sans-serif" font-size="12" fill="#f59e0b">전체 매출 성장률</text>
+  <rect x="80" y="530" width="220" height="36" rx="6" fill="#78350f"/>
+  <text x="310" y="556" font-family="Arial,sans-serif" font-size="15" fill="#f59e0b" font-weight="bold">+346%</text>
+
+  <!-- FCF growth -->
+  <text x="80" y="590" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">잉여현금흐름 성장률</text>
+  <rect x="80" y="598" width="340" height="36" rx="6" fill="#14532d"/>
+  <text x="430" y="624" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="bold">+951%</text>
+
+  <!-- Valuation -->
+  <rect x="548" y="248" width="504" height="380" rx="12" fill="#111318"/>
+  <text x="800" y="284" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">밸류에이션 분석</text>
+
+  <rect x="568" y="300" width="464" height="140" rx="10" fill="#0a2315" stroke="#4ade80" stroke-width="1"/>
+  <text x="800" y="334" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="middle">공정가치 A (역순할인 현금흐름)</text>
+  <text x="800" y="374" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#4ade80" text-anchor="middle">$1,520</text>
+  <text x="800" y="408" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">현재가 대비 25% 저평가</text>
+  <text x="800" y="430" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">현재가: ~$1,133 (2026.06.29 기준)</text>
+
+  <rect x="568" y="452" width="222" height="100" rx="8" fill="#0f1923"/>
+  <text x="679" y="482" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">FCF 성장 (5년)</text>
+  <text x="679" y="516" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" font-weight="bold" text-anchor="middle">40%</text>
+  <text x="679" y="542" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">연간 기대 성장률</text>
+
+  <rect x="806" y="452" width="226" height="100" rx="8" fill="#0f1923"/>
+  <text x="919" y="482" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">수익률 목표</text>
+  <text x="919" y="516" font-family="Arial,sans-serif" font-size="22" fill="#60a5fa" font-weight="bold" text-anchor="middle">15%</text>
+  <text x="919" y="542" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">달성 가능성 평가</text>
+
+  <!-- Pros cons -->
+  <rect x="28" y="648" width="490" height="190" rx="12" fill="#111318"/>
+  <text x="273" y="684" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" font-weight="700" text-anchor="middle">강점 / 리스크</text>
+  <text x="48" y="718" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ AI 빌드아웃 핵심 부품</text>
+  <text x="48" y="742" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">✅ 반도체 과점 구조 (가격 결정력)</text>
+  <text x="48" y="766" font-family="Arial,sans-serif" font-size="12" fill="#f87171">⚠ 대만 집중 리스크</text>
+  <text x="48" y="790" font-family="Arial,sans-serif" font-size="12" fill="#f87171">⚠ 메모리 사이클 변동성</text>
+  <text x="48" y="820" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">현재 메모리 사이클 초반 → 상승 여지 충분</text>
+
+  <!-- Cycle position -->
+  <rect x="538" y="648" width="514" height="190" rx="12" fill="#0a1528" stroke="#60a5fa" stroke-width="1"/>
+  <text x="795" y="684" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="700" text-anchor="middle">메모리 사이클 위치</text>
+  <text x="795" y="732" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#f1f5f9" text-anchor="middle">초기 단계</text>
+  <text x="795" y="772" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" text-anchor="middle">매출 궤적: 아직 사이클 초반</text>
+  <text x="795" y="798" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">AI 수요 + 데이터센터 급증 → 업사이클 지속</text>
+  <text x="795" y="822" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">출처: @investingvisuals</text>
+
+  <!-- Bottom insight -->
+  <rect x="28" y="858" width="1024" height="90" rx="12" fill="#0a1528"/>
+  <text x="540" y="893" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="700" text-anchor="middle">Micron = AI 메모리 수혜주 · 데이터센터 +651% · 25% 저평가</text>
+  <text x="540" y="922" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">메모리 사이클 초기 + AI 수요 폭발 = 상승 여지 충분 · 순현금 $23B = 재무 안정성 탁월</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">출처: @investingvisuals · Q2 2026 결과 기준 · 투자 참고용 · Investus 2026.06.29</text>
+</svg>

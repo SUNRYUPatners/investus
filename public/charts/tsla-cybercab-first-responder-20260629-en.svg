@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#111318"/>
+  <rect y="88" width="1080" height="3" fill="#e31937"/>
+  <text x="32" y="38" font-family="Arial,sans-serif" font-size="14" fill="#e31937" font-weight="700">TSLA · Tesla Cybercab</text>
+  <text x="32" y="72" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#f1f5f9">Official First Responder Guide V1.0 — SAE Level 4 Robotaxi</text>
+
+  <rect x="28" y="108" width="1024" height="100" rx="14" fill="#0f1923" stroke="#e31937" stroke-width="1.5"/>
+  <text x="540" y="152" font-family="Arial,sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">Tesla Cybercab First Responder Interaction Plan V1.0 · Published: June 22, 2026</text>
+  <text x="540" y="194" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#e31937" text-anchor="middle">SAE Level 4 Fully Autonomous Robotaxi — No Human Driver Required</text>
+
+  <rect x="28" y="228" width="490" height="340" rx="12" fill="#111318"/>
+  <text x="273" y="262" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">🚗 Vehicle Specs</text>
+  <rect x="48" y="276" width="450" height="56" rx="8" fill="#0f1923"/>
+  <text x="68" y="306" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Body</text>
+  <text x="488" y="306" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">2-door · 2-seat Coupe</text>
+  <text x="488" y="324" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">From 2026 – Present</text>
+  <rect x="48" y="342" width="450" height="56" rx="8" fill="#0f1923"/>
+  <text x="68" y="372" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Battery System</text>
+  <text x="488" y="372" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="700" text-anchor="end">48V Li-Ion + 400V Li-Ion</text>
+  <text x="488" y="390" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Dual battery architecture</text>
+  <rect x="48" y="408" width="450" height="56" rx="8" fill="#0f1923"/>
+  <text x="68" y="438" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Autonomy Level</text>
+  <text x="488" y="438" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="end">SAE Level 4</text>
+  <text x="488" y="456" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Full self-driving in Autonomous Mode</text>
+  <rect x="48" y="474" width="450" height="56" rx="8" fill="#0f1923"/>
+  <text x="68" y="504" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Exterior Mics</text>
+  <text x="488" y="504" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700" text-anchor="end">Driver + Passenger Side</text>
+  <text x="488" y="522" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">External audio recognition system</text>
+
+  <rect x="538" y="228" width="514" height="340" rx="12" fill="#111318"/>
+  <text x="795" y="262" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">🛡️ Active Hood (Pedestrian Protection)</text>
+  <rect x="558" y="278" width="474" height="80" rx="8" fill="#0f1923"/>
+  <text x="795" y="308" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Activation Speed Range</text>
+  <text x="795" y="342" font-family="Arial,sans-serif" font-size="30" fill="#f59e0b" font-weight="bold" text-anchor="middle">15 ~ 22 mph</text>
+  <text x="795" y="364" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">(approximately 24 ~ 35 km/h)</text>
+  <rect x="558" y="370" width="474" height="72" rx="8" fill="#0f1923"/>
+  <text x="795" y="400" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">How It Works</text>
+  <text x="795" y="428" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">Pyrotechnic actuators raise rear hood on pedestrian impact</text>
+  <rect x="558" y="454" width="474" height="72" rx="8" fill="#0f1923"/>
+  <text x="795" y="484" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Location</text>
+  <text x="795" y="512" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">Pyrotechnic actuators under the hood</text>
+
+  <rect x="28" y="586" width="1024" height="80" rx="12" fill="#0a1528" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="618" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="middle">Autonomous Mode indicator: "SELF-DRIVING" in blue on top-left of touchscreen</text>
+  <text x="540" y="648" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Steering wheel = engineering/test vehicle (SAE Level 2) · No wheel = SAE Level 4 commercial Robotaxi</text>
+
+  <rect x="28" y="684" width="490" height="180" rx="12" fill="#111318"/>
+  <text x="273" y="720" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">🤠 Texas Robotaxi — Now Live</text>
+  <rect x="48" y="734" width="450" height="60" rx="8" fill="#0f1923"/>
+  <text x="68" y="762" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Authorization Status</text>
+  <text x="488" y="762" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="700" text-anchor="end">✅ Authorized</text>
+  <text x="488" y="782" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="end">Tesla Robotaxi, LLC</text>
+  <rect x="48" y="804" width="450" height="44" rx="8" fill="#0f1923"/>
+  <text x="68" y="832" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Registered Vehicles</text>
+  <text x="488" y="832" font-family="Arial,sans-serif" font-size="20" fill="#f1f5f9" font-weight="bold" text-anchor="end">84 Model Y (2026)</text>
+
+  <rect x="538" y="684" width="514" height="180" rx="12" fill="#111318"/>
+  <text x="795" y="720" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" font-weight="700" text-anchor="middle">📱 Robotaxi Exit Screen</text>
+  <rect x="558" y="736" width="474" height="108" rx="8" fill="#0a0a0a"/>
+  <text x="795" y="778" font-family="Arial,sans-serif" font-size="18" fill="#f1f5f9" font-weight="bold" text-anchor="middle">Please exit safely</text>
+  <text x="795" y="802" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Thank you for choosing Robotaxi.</text>
+  <text x="795" y="818" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">All information will be cleared for your privacy.</text>
+
+  <rect x="28" y="882" width="1024" height="90" rx="12" fill="#1a0a0e"/>
+  <text x="540" y="917" font-family="Arial,sans-serif" font-size="15" fill="#f87171" font-weight="700" text-anchor="middle">Cybercab = Tesla's pivot from automaker to AI transportation platform</text>
+  <text x="540" y="946" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">First Responder Guide release = imminent large-scale commercialization · SAE L4 = fully driverless, legally</text>
+  <text x="540" y="1062" font-family="Arial,sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">Source: Tesla Cybercab First Responder Guide V1.0 (2026.06.22) · Texas DMV · Investus 2026.06.29</text>
+</svg>
