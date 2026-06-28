@@ -44,6 +44,21 @@ const PORTFOLIO = [
   { symbol: "GOOGL", name: "알파벳 A", ret: "수익 ✓"   },
 ];
 
+const WEEKDAY_SLOTS = [
+  { day: "월요일", time: "19:00 ~ 20:30", type: "1:1 · 그룹" },
+  { day: "화요일", time: "19:00 ~ 20:30", type: "그룹반" },
+  { day: "수요일", time: "19:00 ~ 20:30", type: "1:1 · 그룹" },
+  { day: "목요일", time: "19:00 ~ 20:30", type: "그룹반" },
+  { day: "금요일", time: "19:00 ~ 20:30", type: "1:1" },
+];
+
+const WEEKEND_SLOTS = [
+  { day: "토요일", time: "10:00 ~ 12:00", type: "오전반" },
+  { day: "토요일", time: "14:00 ~ 16:00", type: "오후반" },
+  { day: "일요일", time: "10:00 ~ 12:00", type: "오전반" },
+  { day: "일요일", time: "14:00 ~ 16:00", type: "오후반" },
+];
+
 function fmt(n: number) {
   return "₩" + n.toLocaleString("ko-KR");
 }
@@ -55,14 +70,17 @@ export default function EducationPage() {
   const ed = t.education;
   const [step, setStep]             = useState<Step>("form");
   const [openWeek, setOpenWeek]     = useState<number | null>(0);
+  const [openFaq, setOpenFaq]       = useState<number | null>(null);
   const [courseType, setCourseType] = useState("");
   const [format, setFormat]         = useState<"online" | "offline" | "">("");
-  const [name,   setName]           = useState("");
-  const [phone,  setPhone]          = useState("");
-  const [level,  setLevel]          = useState("");
-  const [amount, setAmount]         = useState("");
-  const [msg,    setMsg]            = useState("");
-  const [error,  setError]          = useState("");
+  const [name,      setName]        = useState("");
+  const [phone,     setPhone]       = useState("");
+  const [level,     setLevel]       = useState("");
+  const [amount,    setAmount]      = useState("");
+  const [ageRange,  setAgeRange]    = useState("");
+  const [timeSlot,  setTimeSlot]    = useState("");
+  const [msg,       setMsg]         = useState("");
+  const [error,     setError]       = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   const selectedCourse = COURSE_TYPES.find((c) => c.id === courseType);
@@ -75,15 +93,17 @@ export default function EducationPage() {
     if (!level)       { setError(ed.errLevel);            return; }
     setError("");
     setSubmitting(true);
-    const courseLabel = selectedCourse?.title ?? courseType;
-    const formatLabel = format === "online" ? "온라인(Zoom)" : "오프라인(대면)";
+    const courseLabel  = selectedCourse?.title ?? courseType;
+    const formatLabel  = format === "online" ? "온라인(Zoom)" : "오프라인(대면)";
+    const agePart      = ageRange  ? ` · ${ageRange}`  : "";
+    const timePart     = timeSlot  ? ` · ${timeSlot}`  : "";
     try {
       const res = await fetch("/api/edu-apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name, phone,
-          level: `[${courseLabel} · ${formatLabel}] ${level}`,
+          level: `[${courseLabel} · ${formatLabel}${agePart}${timePart}] ${level}`,
           amount, message: msg,
         }),
       });
@@ -114,10 +134,12 @@ export default function EducationPage() {
           <p className="text-xs font-semibold mb-3 font-syne" style={{ color: "var(--muted)" }}>{ed.summaryTitle}</p>
           {[
             [ed.summaryCourse, selectedCourse?.title ?? courseType],
-            ["수업 형태",        format === "online" ? "온라인 (Zoom)" : "오프라인 (대면)"],
-            [ed.summaryName,    name],
-            [ed.summaryPhone,   phone],
-            [ed.summaryLevel,   level],
+            ["수업 형태", format === "online" ? "온라인 (Zoom)" : "오프라인 (대면)"],
+            [ed.summaryName,   name],
+            [ed.summaryPhone,  phone],
+            [ed.summaryLevel,  level],
+            ...(ageRange  ? [[ed.summaryAge,      ageRange]]  : []),
+            ...(timeSlot  ? [[ed.summaryTimeSlot, timeSlot]]  : []),
             ...(selectedCourse ? [["수강료", fmt(selectedCourse.price)]] : []),
           ].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b last:border-0" style={{ borderColor: "var(--border)" }}>
@@ -195,6 +217,121 @@ export default function EducationPage() {
         <p className="text-[9px] mt-2.5 text-center" style={{ color: "var(--muted)" }}>
           ※ 전 보유 종목 수익률 100% 이상 달성 · 실계좌 스크린샷 인증
         </p>
+      </div>
+    </div>
+  );
+
+  /* ── 수업 시간표 ── */
+  const scheduleJSX = (
+    <div className="mb-6">
+      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "#d4af37" }}>
+        {ed.scheduleTitle}
+      </p>
+      <p className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
+        {ed.scheduleDesc}
+      </p>
+      <p className="text-[12px] mb-4 leading-relaxed" style={{ color: "var(--muted)" }}>
+        평일 저녁반, 토요일반, 일요일반을 모두 운영합니다. 모두 소규모로 진행되는 집중 수업이에요.
+      </p>
+
+      {/* 평일반 */}
+      <div className="mb-3">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full"
+            style={{ background: "rgba(212,175,55,0.15)", color: "#d4af37" }}>
+            📅 {ed.scheduleWeekday}
+          </span>
+          <span className="text-[11px]" style={{ color: "var(--muted)" }}>· {ed.scheduleWeekdayTime}</span>
+        </div>
+        <div className="grid grid-cols-1 gap-2">
+          {WEEKDAY_SLOTS.map((slot) => (
+            <div key={slot.day + slot.time}
+              className="flex items-center justify-between rounded-xl px-4 py-3 border"
+              style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <div className="flex items-center gap-3">
+                <span className="text-sm font-semibold w-16" style={{ color: "var(--text)" }}>{slot.day}</span>
+                <span className="text-[11px] px-2 py-0.5 rounded-full"
+                  style={{ background: "rgba(212,175,55,0.1)", color: "#d4af37" }}>{slot.type}</span>
+              </div>
+              <span className="text-[12px] font-mono" style={{ color: "var(--muted)" }}>{slot.time}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 주말반 */}
+      <div>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full"
+            style={{ background: "rgba(96,165,250,0.15)", color: "#60a5fa" }}>
+            📆 {ed.scheduleWeekend}
+          </span>
+          <span className="text-[11px]" style={{ color: "var(--muted)" }}>· {ed.scheduleWeekendTime}</span>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {WEEKEND_SLOTS.map((slot) => (
+            <div key={slot.day + slot.time}
+              className="rounded-xl px-3 py-3 border"
+              style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-[11px] font-bold mb-0.5" style={{ color: "var(--text)" }}>{slot.day}</p>
+              <p className="text-[10px] mb-1" style={{ color: "#60a5fa" }}>{slot.type}</p>
+              <p className="text-[11px] font-mono" style={{ color: "var(--muted)" }}>{slot.time}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-[10px] mt-2 text-center" style={{ color: "var(--muted)" }}>
+          ※ 반·시간대는 신청 후 정원 상황에 따라 함께 조율할 수 있어요.
+        </p>
+      </div>
+    </div>
+  );
+
+  /* ── 수업 흐름 ── */
+  const flowJSX = (
+    <div className="mb-6">
+      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "#d4af37" }}>
+        {ed.flowTitle}
+      </p>
+      <p className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
+        {ed.flowDesc}
+      </p>
+      <p className="text-[12px] mb-4 leading-relaxed" style={{ color: "var(--muted)" }}>
+        단발성 수업이 아니라, 배우고·적용하고·피드백 받는 과정이 매주 반복되는 투자 루틴입니다.
+      </p>
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        {ed.steps.map((s) => (
+          <div key={s.step} className="rounded-xl p-3.5 border"
+            style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+            <p className="text-[9px] font-bold mb-1.5 font-syne" style={{ color: "#d4af37" }}>{s.step}</p>
+            <p className="text-[12px] font-semibold mb-1" style={{ color: "var(--text)" }}>{s.title}</p>
+            <p className="text-[10px] leading-snug" style={{ color: "var(--muted)" }}>{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  /* ── 보강 제도 ── */
+  const makeupJSX = (
+    <div className="mb-6">
+      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "#d4af37" }}>
+        {ed.makeupTitle}
+      </p>
+      <p className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
+        {ed.makeupDesc}
+      </p>
+      <p className="text-[12px] mb-4 leading-relaxed" style={{ color: "var(--muted)" }}>
+        바쁘다 보면 수업에 못 오는 날도 있죠. 그래서 빠진 수업은 다른 날 다른 반의 자리에서 채울 수 있도록 보강 제도를 두고 있어요.
+      </p>
+      <div className="grid grid-cols-3 gap-2">
+        {ed.makeups.map((m) => (
+          <div key={m.num} className="rounded-xl p-3.5 border text-center"
+            style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+            <p className="text-[10px] font-bold mb-2 font-syne" style={{ color: "var(--muted)" }}>{m.num}</p>
+            <p className="text-[11px] font-semibold mb-1.5" style={{ color: "var(--text)" }}>{m.title}</p>
+            <p className="text-[10px] leading-snug" style={{ color: "var(--muted)" }}>{m.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -277,20 +414,33 @@ export default function EducationPage() {
     </div>
   );
 
+  const allFaqs = [
+    { q: "완전 초보도 들을 수 있나요?", a: "네, 가능합니다. 1주차부터 투자 기초를 다루므로 처음 시작하는 분도 환영합니다." },
+    { q: "온라인과 오프라인 차이가 있나요?", a: "커리큘럼과 내용은 동일합니다. 온라인은 Zoom으로 실시간 화상 미팅 방식으로 진행되며, 오프라인은 서울 대면 강의입니다." },
+    { q: "수업 일정은 어떻게 정하나요?", a: "신청 후 CIO와 협의하여 일정을 정합니다. 평일 저녁·주말 오전·오후 모두 가능하며 시간대도 유연하게 협의 가능합니다." },
+    { q: "강의 자료는 언제 받나요?", a: "수업 시작 전 PDF 파일로 발송됩니다. 수강 후에도 영구 보유 가능합니다." },
+    { q: "환불 규정이 어떻게 되나요?", a: "수업 시작 24시간 전까지 전액 환불 가능합니다. 시작 후에는 진행된 회차만큼 공제 후 환불됩니다." },
+    ...ed.faqPlus,
+  ];
+
   const faqJSX = (
     <div className="mb-6">
       <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>자주 묻는 질문</p>
       <div className="rounded-2xl border overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-        {[
-          { q: "완전 초보도 들을 수 있나요?", a: "네, 가능합니다. 1주차부터 투자 기초를 다루므로 처음 시작하는 분도 환영합니다." },
-          { q: "온라인과 오프라인 차이가 있나요?", a: "커리큘럼과 내용은 동일합니다. 온라인은 Zoom으로 실시간 화상 미팅 방식으로 진행되며, 오프라인은 서울 대면 강의입니다." },
-          { q: "수업 일정은 어떻게 정하나요?", a: "신청 후 CIO와 협의하여 일정을 정합니다. 주중·주말 모두 가능하며 시간대도 유연하게 협의 가능합니다." },
-          { q: "강의 자료는 언제 받나요?", a: "수업 시작 전 PDF 파일로 발송됩니다. 수강 후에도 영구 보유 가능합니다." },
-          { q: "환불 규정이 어떻게 되나요?", a: "수업 시작 24시간 전까지 전액 환불 가능합니다. 시작 후에는 진행된 회차만큼 공제 후 환불됩니다." },
-        ].map((item, i) => (
-          <div key={item.q} className="px-4 py-3.5" style={{ borderTop: i > 0 ? "1px solid var(--border)" : undefined }}>
-            <p className="text-[12px] font-semibold" style={{ color: "var(--text)" }}>Q. {item.q}</p>
-            <p className="text-[11px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>A. {item.a}</p>
+        {allFaqs.map((item, i) => (
+          <div key={item.q} style={{ borderTop: i > 0 ? "1px solid var(--border)" : undefined }}>
+            <button
+              onClick={() => setOpenFaq(openFaq === i ? null : i)}
+              className="w-full flex items-start justify-between px-4 py-3.5 text-left gap-2">
+              <p className="text-[12px] font-semibold" style={{ color: "var(--text)" }}>Q. {item.q}</p>
+              <ChevronDown className="w-4 h-4 flex-shrink-0 mt-0.5 transition-transform"
+                style={{ color: "var(--muted)", transform: openFaq === i ? "rotate(180deg)" : "none" }} />
+            </button>
+            {openFaq === i && (
+              <div className="px-4 pb-3.5">
+                <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>A. {item.a}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -386,18 +536,36 @@ export default function EducationPage() {
     <div className="mb-5">
       <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>{ed.formTitle}</p>
       <div className="flex flex-col gap-2">
+        {/* 이름 */}
         <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border"
           style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <span className="text-[11px] w-14 flex-shrink-0" style={{ color: "var(--muted)" }}>{ed.nameLbl}</span>
           <input type="text" placeholder={ed.namePH} value={name} onChange={(e) => setName(e.target.value)}
             className="flex-1 bg-transparent text-sm outline-none" style={{ color: "var(--text)" }} />
         </div>
+        {/* 이메일/연락처 */}
         <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border"
           style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <span className="text-[11px] w-14 flex-shrink-0" style={{ color: "var(--muted)" }}>{ed.phoneLbl}</span>
           <input type="tel" placeholder={ed.phonePH} value={phone} onChange={(e) => setPhone(e.target.value)}
             className="flex-1 bg-transparent text-sm outline-none" style={{ color: "var(--text)" }} />
         </div>
+        {/* 나이대 */}
+        <div>
+          <p className="text-[11px] mb-1.5 ml-1" style={{ color: "var(--muted)" }}>{ed.ageLbl}</p>
+          <div className="grid grid-cols-4 gap-1.5">
+            {ed.ages.map((a) => (
+              <button key={a} onClick={() => setAgeRange(ageRange === a ? "" : a)}
+                className="py-2.5 rounded-xl border text-xs font-medium transition-all"
+                style={ageRange === a
+                  ? { background: "rgba(212,175,55,0.18)", borderColor: "#d4af37", color: "#d4af37" }
+                  : { background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}>
+                {a}
+              </button>
+            ))}
+          </div>
+        </div>
+        {/* 투자 경력 */}
         <div>
           <p className="text-[11px] mb-1.5 ml-1" style={{ color: "var(--muted)" }}>{ed.levelLbl}</p>
           <div className="grid grid-cols-2 gap-1.5">
@@ -412,6 +580,22 @@ export default function EducationPage() {
             ))}
           </div>
         </div>
+        {/* 희망 시간대 */}
+        <div>
+          <p className="text-[11px] mb-1.5 ml-1" style={{ color: "var(--muted)" }}>{ed.timeSlotLbl}</p>
+          <div className="flex flex-col gap-1.5">
+            {ed.timeSlots.map((ts) => (
+              <button key={ts} onClick={() => setTimeSlot(timeSlot === ts ? "" : ts)}
+                className="py-2.5 rounded-xl border text-xs font-medium transition-all text-left px-3"
+                style={timeSlot === ts
+                  ? { background: "rgba(212,175,55,0.18)", borderColor: "#d4af37", color: "#d4af37" }
+                  : { background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}>
+                {ts}
+              </button>
+            ))}
+          </div>
+        </div>
+        {/* 투자 규모 */}
         <div>
           <p className="text-[11px] mb-1.5 ml-1" style={{ color: "var(--muted)" }}>{ed.amountLbl}</p>
           <div className="grid grid-cols-2 gap-1.5">
@@ -426,6 +610,7 @@ export default function EducationPage() {
             ))}
           </div>
         </div>
+        {/* 요청사항 */}
         <textarea placeholder={ed.msgPH} value={msg} onChange={(e) => setMsg(e.target.value)}
           rows={3} className="rounded-xl px-3 py-2.5 border text-sm outline-none resize-none"
           style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }} />
@@ -465,9 +650,12 @@ export default function EducationPage() {
         </Link>
         {heroJSX}
         {cioJSX}
+        {scheduleJSX}
+        {flowJSX}
+        {classMethodJSX}
+        {makeupJSX}
         {courseTypesJSX}
         {formatJSX}
-        {classMethodJSX}
         {highlightsJSX}
         {whoForJSX}
         {curriculumJSX}
@@ -485,7 +673,10 @@ export default function EducationPage() {
           </Link>
           {heroJSX}
           {cioJSX}
+          {scheduleJSX}
+          {flowJSX}
           {classMethodJSX}
+          {makeupJSX}
           {whoForJSX}
           {curriculumJSX}
           {faqJSX}
