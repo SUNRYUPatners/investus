@@ -66,15 +66,35 @@ export default async function InsightPage() {
 
   /* ── 투자교육 배너 (재사용) ── */
   const EduBanner = (
-    <Link
-      href="/education"
-      className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
-      style={{ borderColor: "rgba(212,175,55,0.3)" }}
-    >
+    <>
+      <style>{`
+        @keyframes edu-border-glow {
+          0%, 100% { box-shadow: 0 0 0 1px rgba(212,175,55,0.3), 0 0 18px rgba(212,175,55,0.08); }
+          50%       { box-shadow: 0 0 0 1px rgba(212,175,55,0.9), 0 0 32px rgba(212,175,55,0.35); }
+        }
+        @keyframes edu-sweep {
+          0%   { left: -80%; }
+          100% { left: 130%; }
+        }
+        .edu-banner-glow { animation: edu-border-glow 2.8s ease-in-out infinite; border-color: transparent !important; }
+        .edu-sweep-line {
+          position: absolute; top: 0; left: -80%;
+          width: 55%; height: 100%;
+          background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.09) 50%, transparent 100%);
+          animation: edu-sweep 3.2s ease-in-out infinite;
+          pointer-events: none;
+        }
+      `}</style>
+      <Link
+        href="/education"
+        className="block rounded-2xl overflow-hidden border edu-banner-glow active:opacity-90 transition-opacity"
+        style={{ borderColor: "rgba(212,175,55,0.3)" }}
+      >
       <div
-        className="relative px-5 py-5 flex items-center gap-4"
+        className="relative px-5 py-5 flex items-center gap-4 overflow-hidden"
         style={{ background: "linear-gradient(135deg, #1c1500 0%, #0d0b00 60%, #0a0c10 100%)" }}
       >
+        <div className="edu-sweep-line" />
         <div className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(circle at 80% 50%, rgba(212,175,55,0.1) 0%, transparent 60%)" }} />
         <div className="relative w-[68px] h-[68px] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg"
@@ -98,6 +118,7 @@ export default async function InsightPage() {
         </div>
       </div>
     </Link>
+    </>
   );
 
 
