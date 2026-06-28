@@ -24,7 +24,7 @@ const COURSE_TYPES = [
     id: "one-on-one",
     emoji: "👤",
     title: "1:1 개인 수업",
-    price: 1000000,
+    price: 500000,
     badge: "완전 맞춤형",
     badgeColor: "#60a5fa",
     desc: "CIO가 직접 1:1로 지도합니다. 내 수준과 목표에 맞는 완전 맞춤형 커리큘럼으로 가장 빠르게 성장할 수 있는 방식입니다.",
@@ -238,6 +238,80 @@ export default function EducationPage() {
           </p>
         </div>
 
+        {/* ── CIO 검증 실적 & 포트폴리오 ── */}
+        <div className="mb-6 rounded-2xl border overflow-hidden" style={{ borderColor: "rgba(212,175,55,0.3)" }}>
+          {/* CIO 프로필 */}
+          <div
+            className="px-5 py-4 border-b"
+            style={{ borderColor: "var(--border)", background: "linear-gradient(135deg, #1c1500 0%, #0a0c10 100%)" }}
+          >
+            <div className="flex items-center gap-3">
+              <div
+                className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
+                style={{ background: "rgba(212,175,55,0.15)", border: "1px solid rgba(212,175,55,0.3)" }}
+              >
+                🎯
+              </div>
+              <div>
+                <p className="text-[10px] font-bold" style={{ color: "#d4af37" }}>SUNRYU Partners CIO</p>
+                <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>류현우</p>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>미국주식 투자 전략가 · 포트폴리오 매니저</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 트랙레코드 */}
+          <div
+            className="grid grid-cols-3"
+            style={{ background: "var(--card)", borderBottom: "1px solid var(--border)" }}
+          >
+            {[
+              { value: "100%+", label: "전 종목 수익률", color: "#4ade80" },
+              { value: "0개",   label: "손실 종목",      color: "#4ade80" },
+              { value: "100%",  label: "수익 달성률",    color: "#d4af37" },
+            ].map((stat, i) => (
+              <div
+                key={stat.label}
+                className="py-4 text-center"
+                style={{ borderLeft: i > 0 ? "1px solid var(--border)" : undefined }}
+              >
+                <p className="text-xl font-bold font-syne" style={{ color: stat.color }}>{stat.value}</p>
+                <p className="text-[9px] mt-0.5" style={{ color: "var(--muted)" }}>{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* 포트폴리오 보유 종목 */}
+          <div className="px-5 py-4" style={{ background: "var(--card)" }}>
+            <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+              CIO 보유 포트폴리오 · 전 종목 수익 중
+            </p>
+            <div className="grid grid-cols-3 gap-2">
+              {[
+                { symbol: "NVDA", name: "NVIDIA" },
+                { symbol: "TSLA", name: "Tesla" },
+                { symbol: "AAPL", name: "Apple" },
+                { symbol: "META", name: "Meta" },
+                { symbol: "GOOGL", name: "Alphabet" },
+                { symbol: "AMZN", name: "Amazon" },
+              ].map((s) => (
+                <div
+                  key={s.symbol}
+                  className="rounded-xl p-2.5 border text-center"
+                  style={{ background: "var(--bg)", borderColor: "var(--border)" }}
+                >
+                  <p className="text-xs font-bold font-mono-num" style={{ color: "var(--text)" }}>{s.symbol}</p>
+                  <p className="text-[9px]" style={{ color: "var(--muted)" }}>{s.name}</p>
+                  <p className="text-[9px] font-bold mt-1" style={{ color: "#4ade80" }}>수익 ✓</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-[9px] mt-2.5 text-center" style={{ color: "var(--muted)" }}>
+              ※ 전 보유 종목 수익률 100% 이상 달성 · 브로커리지 실계좌 인증
+            </p>
+          </div>
+        </div>
+
         {/* ── 수업 유형 선택 ── */}
         <div className="mb-6">
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne"
@@ -314,6 +388,31 @@ export default function EducationPage() {
           </div>
         </div>
 
+        {/* ── 수업 방식 ── */}
+        <div className="mb-6">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            수업 방식
+          </p>
+          <div className="rounded-2xl border p-4" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+            <div className="space-y-3.5">
+              {[
+                { icon: "📖", title: "전자책 기반 커리큘럼", desc: "CIO가 직접 집필한 전자책 교재 기반으로 학습합니다. 수강 후 PDF 영구 보유 가능." },
+                { icon: "💻", title: "온라인 화상 수업 (Zoom)", desc: "시간·장소 제약 없이 편리하게 수업. 녹화본 제공으로 복습 가능. 일정 협의 가능." },
+                { icon: "📊", title: "실전 종목 분석 공개", desc: "CIO가 실제 보유하는 종목의 매수 이유·목표가·관리법까지 실시간으로 공개합니다." },
+                { icon: "💬", title: "포트폴리오 직접 피드백", desc: "수업 중 실시간 Q&A 가능. 내 포트폴리오에 대한 CIO 직접 피드백을 받을 수 있습니다." },
+              ].map((item) => (
+                <div key={item.title} className="flex gap-3">
+                  <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{item.title}</p>
+                    <p className="text-[11px] leading-relaxed mt-0.5" style={{ color: "var(--muted)" }}>{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Highlights */}
         <div className="grid grid-cols-2 gap-2 mb-6">
           {ed.highlights.map((h, i) => (
@@ -334,6 +433,32 @@ export default function EducationPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* ── 이런 분께 추천 ── */}
+        <div className="mb-6">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            이런 분께 추천합니다
+          </p>
+          <div className="rounded-2xl border overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+            {[
+              "미국주식을 시작하고 싶지만 어디서 시작해야 할지 모르는 분",
+              "손실이 무서워서 투자를 망설이고 계신 분",
+              "유튜브·블로그만 보다가 체계적인 원칙을 잡고 싶은 분",
+              "내 포트폴리오를 전문가에게 직접 점검받고 싶은 분",
+              "AI·반도체 등 미래 성장 섹터에 집중 투자하고 싶은 분",
+              "수익이 나도 왜 나는지 모르겠는 분 (재현 불가 투자 탈출)",
+            ].map((item, i) => (
+              <div
+                key={item}
+                className="flex gap-2.5 px-4 py-2.5"
+                style={{ borderTop: i > 0 ? "1px solid var(--border)" : undefined }}
+              >
+                <span className="text-sm flex-shrink-0">✅</span>
+                <p className="text-[12px] leading-snug" style={{ color: "var(--muted)" }}>{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Curriculum */}
@@ -381,6 +506,31 @@ export default function EducationPage() {
                     ))}
                   </div>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── FAQ ── */}
+        <div className="mb-6">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            자주 묻는 질문
+          </p>
+          <div className="rounded-2xl border overflow-hidden" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+            {[
+              { q: "완전 초보도 들을 수 있나요?", a: "네, 가능합니다. 1주차부터 투자 기초를 다루므로 처음 시작하는 분도 환영합니다." },
+              { q: "수업 일정은 어떻게 정하나요?", a: "신청 후 CIO와 협의하여 일정을 정합니다. 주중·주말 모두 가능하며 시간대도 유연하게 협의 가능합니다." },
+              { q: "전자책은 언제 받나요?", a: "수업 시작 전 PDF 파일로 발송됩니다. 수강 후에도 영구 보유 가능합니다." },
+              { q: "환불 규정이 어떻게 되나요?", a: "수업 시작 24시간 전까지 전액 환불 가능합니다. 시작 후에는 진행된 회차만큼 공제 후 환불됩니다." },
+              { q: "수업 녹화본을 받을 수 있나요?", a: "네, 모든 수업은 녹화되어 제공됩니다. 반복 학습 및 복습에 활용하세요." },
+            ].map((item, i) => (
+              <div
+                key={item.q}
+                className="px-4 py-3.5"
+                style={{ borderTop: i > 0 ? "1px solid var(--border)" : undefined }}
+              >
+                <p className="text-[12px] font-semibold" style={{ color: "var(--text)" }}>Q. {item.q}</p>
+                <p className="text-[11px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>A. {item.a}</p>
               </div>
             ))}
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 type ChartPoint = { ts: number; close: number };
 
@@ -31,6 +32,7 @@ function fmtPrice(p: number): string {
 export function MiniChartPopup({ symbol, name, price, changePercent, anchorX, anchorY, onClose }: Props) {
   const [points, setPoints] = useState<ChartPoint[] | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
+  const router  = useRouter();
   const pos   = changePercent >= 0;
   const color = pos ? UP : DOWN;
 
@@ -88,7 +90,7 @@ export function MiniChartPopup({ symbol, name, price, changePercent, anchorX, an
   return (
     <div
       ref={cardRef}
-      className="fixed z-50 rounded-xl border shadow-2xl"
+      className="fixed z-50 rounded-xl border shadow-2xl cursor-pointer"
       style={{
         left,
         top,
@@ -97,6 +99,7 @@ export function MiniChartPopup({ symbol, name, price, changePercent, anchorX, an
         borderColor: "var(--border)",
         padding: "12px 16px",
       }}
+      onClick={() => router.push(`/stock/${symbol}`)}
       onMouseLeave={onClose}
     >
       {/* Header */}
@@ -150,7 +153,7 @@ export function MiniChartPopup({ symbol, name, price, changePercent, anchorX, an
       )}
 
       <p className="text-[9px] mt-1.5" style={{ color: "var(--muted)" }}>
-        10년 차트
+        10년 차트 · 탭하면 종목 페이지로 →
       </p>
     </div>
   );
