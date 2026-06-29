@@ -293,7 +293,7 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
 }
 
 function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
-  const [open, setOpen]               = useState(false);
+  const [open, setOpen]               = useState(report.category === "시장분석");
   const [failedImgs, setFailedImgs]   = useState<Set<number>>(new Set());
   const [lightbox, setLightbox]       = useState<string | null>(null);
   const t     = useLocale();
