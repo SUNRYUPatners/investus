@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="28" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS DAILY BRIEF</text>
+  <text x="540" y="61" font-family="Arial,sans-serif" font-size="27" font-weight="bold" fill="#e5e7eb" text-anchor="middle">June 29 — Top News Summary</text>
+  <rect y="80" width="1080" height="3" fill="#f97316"/>
+
+  <!-- Date badge -->
+  <rect x="415" y="93" width="250" height="52" rx="26" fill="#f97316" opacity="0.12"/>
+  <rect x="417" y="95" width="246" height="48" rx="24" fill="none" stroke="#f97316" stroke-width="1.5"/>
+  <text x="540" y="129" font-family="Arial,sans-serif" font-size="27" font-weight="bold" fill="#f97316" text-anchor="middle">2026. 06. 29</text>
+
+  <!-- Row 1 Cards -->
+  <!-- Card 1: SPCX Bond -->
+  <rect x="30" y="163" width="320" height="230" rx="14" fill="#1a1525" stroke="#c084fc" stroke-width="2"/>
+  <text x="190" y="191" font-family="Arial,sans-serif" font-size="14" fill="#c084fc" font-weight="bold" text-anchor="middle">SPCX · SpaceX</text>
+  <text x="190" y="238" font-family="Arial,sans-serif" font-size="30" fill="#c084fc" text-anchor="middle">🚀</text>
+  <text x="190" y="278" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">First-Ever Bond</text>
+  <text x="190" y="303" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">$20B+ Raised</text>
+  <text x="190" y="335" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">3.5x oversubscribed · Inv. Grade</text>
+  <text x="190" y="362" font-family="Arial,sans-serif" font-size="15" fill="#c084fc" font-weight="bold" text-anchor="middle">HISTORIC BOND ★</text>
+
+  <!-- Card 2: TSLA Q2 Consensus -->
+  <rect x="380" y="163" width="320" height="230" rx="14" fill="#1a1117" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="191" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" font-weight="bold" text-anchor="middle">TSLA · Q2 Consensus</text>
+  <text x="540" y="240" font-family="Arial,sans-serif" font-size="30" fill="#ef4444" text-anchor="middle">🚗</text>
+  <text x="540" y="278" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">405,024 Units</text>
+  <text x="540" y="303" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">QoQ +13.1%</text>
+  <text x="540" y="335" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Energy 13.8GWh · 1.65M annual</text>
+  <text x="540" y="362" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="bold" text-anchor="middle">ROBOTAXI 84 UNITS ✓</text>
+
+  <!-- Card 3: MU Deep Dive -->
+  <rect x="730" y="163" width="320" height="230" rx="14" fill="#11151a" stroke="#60a5fa" stroke-width="2"/>
+  <text x="890" y="191" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="bold" text-anchor="middle">MU · MICRON</text>
+  <text x="890" y="240" font-family="Arial,sans-serif" font-size="30" fill="#60a5fa" text-anchor="middle">💾</text>
+  <text x="890" y="278" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">DC +651%</text>
+  <text x="890" y="303" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">FV $1,520</text>
+  <text x="890" y="335" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">FCF +951% · Net Cash $23B</text>
+  <text x="890" y="362" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="bold" text-anchor="middle">25% UNDERVALUED ↑</text>
+
+  <!-- Row 2 Cards -->
+  <!-- Card 4: NVDA Indonesia -->
+  <rect x="30" y="418" width="320" height="230" rx="14" fill="#0d1f14" stroke="#4ade80" stroke-width="2"/>
+  <text x="190" y="446" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="bold" text-anchor="middle">NVDA · Indonesia</text>
+  <text x="190" y="493" font-family="Arial,sans-serif" font-size="30" fill="#4ade80" text-anchor="middle">🟢</text>
+  <text x="190" y="536" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">170K GPUs</text>
+  <text x="190" y="561" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">$20B Revenue</text>
+  <text x="190" y="593" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Firmus Tech · Deploy Q1 2027</text>
+  <text x="190" y="617" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="bold" text-anchor="middle">SE ASIA AI FRONTIER ✓</text>
+
+  <!-- Card 5: Cybercab Guide -->
+  <rect x="380" y="418" width="320" height="230" rx="14" fill="#1a1117" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="446" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" font-weight="bold" text-anchor="middle">TSLA · Cybercab</text>
+  <text x="540" y="493" font-family="Arial,sans-serif" font-size="30" fill="#ef4444" text-anchor="middle">🤖</text>
+  <text x="540" y="536" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">First Responder</text>
+  <text x="540" y="561" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Guide V1.0</text>
+  <text x="540" y="593" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">SAE L4 · 48V+400V Dual Battery</text>
+  <text x="540" y="617" font-family="Arial,sans-serif" font-size="15" fill="#ef4444" font-weight="bold" text-anchor="middle">COMMERCIALIZE ★</text>
+
+  <!-- Card 6: Delaware Exodus -->
+  <rect x="730" y="418" width="320" height="230" rx="14" fill="#1a0808" stroke="#f87171" stroke-width="2"/>
+  <text x="890" y="446" font-family="Arial,sans-serif" font-size="14" fill="#f87171" font-weight="bold" text-anchor="middle">MACRO · Delaware</text>
+  <text x="890" y="493" font-family="Arial,sans-serif" font-size="30" fill="#f87171" text-anchor="middle">📉</text>
+  <text x="890" y="536" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">$3.3T Exodus</text>
+  <text x="890" y="561" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">All-Time Record</text>
+  <text x="890" y="593" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">TSLA·SPCX·DELL relocated</text>
+  <text x="890" y="617" font-family="Arial,sans-serif" font-size="15" fill="#f59e0b" font-weight="bold" text-anchor="middle">TEXAS · NEVADA ↑</text>
+
+  <!-- Key Stats Row -->
+  <rect x="30" y="663" width="320" height="105" rx="12" fill="#161b22" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="190" y="697" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">SpaceX Bond Issuance</text>
+  <text x="190" y="745" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#c084fc" text-anchor="middle">$20B+</text>
+
+  <rect x="380" y="663" width="320" height="105" rx="12" fill="#161b22" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="697" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">MU Data Center Growth</text>
+  <text x="540" y="745" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#60a5fa" text-anchor="middle">+651%</text>
+
+  <rect x="730" y="663" width="320" height="105" rx="12" fill="#161b22" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="890" y="697" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">NVIDIA GPU Supply</text>
+  <text x="890" y="745" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#4ade80" text-anchor="middle">170K</text>
+
+  <!-- Additional News -->
+  <rect x="30" y="783" width="1020" height="82" rx="10" fill="#161b22" stroke="#2d3748" stroke-width="1"/>
+  <text x="55" y="810" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">MORE ▸</text>
+  <text x="135" y="810" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">NHTSA Steering Closed</text>
+  <text x="385" y="810" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">TSLA Uruguay Entry</text>
+  <text x="600" y="810" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">TSLA Paid Ads Shift</text>
+  <text x="800" y="810" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa">MSFT Burry $380 Calls</text>
+  <text x="55" y="846" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">MORE ▸</text>
+  <text x="135" y="846" font-family="Arial,sans-serif" font-size="14" fill="#4ade80">376K OTA Resolved</text>
+  <text x="380" y="846" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b">Tesla 3rd LatAm Market</text>
+  <text x="630" y="846" font-family="Arial,sans-serif" font-size="14" fill="#c084fc">SpaceX 3-Agency Inv. Grade</text>
+
+  <!-- Footer -->
+  <rect y="880" width="1080" height="78" fill="#111318"/>
+  <rect y="880" width="1080" height="2" fill="#f97316"/>
+  <text x="540" y="922" font-family="Arial,sans-serif" font-size="19" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Today's Key: SPCX Bond · MU +651% · NVDA Indonesia</text>
+  <text x="540" y="950" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.29 · For Reference Only</text>
+
+  <!-- Ticker Strip -->
+  <rect y="960" width="1080" height="60" fill="#0d1117"/>
+  <text x="60" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">TSLA ↑</text>
+  <text x="190" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#c084fc">SPCX ↑</text>
+  <text x="330" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">MU ↑</text>
+  <text x="450" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#4ade80">NVDA ↑</text>
+  <text x="590" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">MSFT ↑</text>
+  <text x="720" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f87171">MACRO ▲</text>
+  <text x="870" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f97316">BULL 🔥</text>
+
+  <!-- Bottom fill -->
+  <rect y="1020" width="1080" height="60" fill="#0d1117"/>
+  <text x="540" y="1057" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">SPCX $20B · TSLA 405K · MU +651% · NVDA 170K · Delaware $3.3T Exodus 🔥</text>
+</svg>

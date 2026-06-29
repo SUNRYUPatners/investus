@@ -4578,6 +4578,22 @@ export const SEED_REPORTS: Report[] = [
     images:        ["/charts/macro-delaware-exodus-20260629.svg"],
     imagesEn:      ["/charts/macro-delaware-exodus-20260629-en.svg"],
   },
+  {
+    id:            "seed-338",
+    title:         "6월 29일 뉴스 한장 요약 — SPCX $20B · TSLA Q2 405K · MU +651%",
+    summary:       "SpaceX 역사상 첫 채권 $20B 조달, Tesla Q2 컨센서스 405,024대, Micron 데이터센터 +651%, NVIDIA 인도네시아 17만GPU, 델라웨어 $3.3T 대탈출까지 6월 29일 핵심 뉴스를 한장으로 요약합니다.",
+    body:          "■ 오늘의 핵심 6대 뉴스\n\n1. SPCX SpaceX 역대 첫 채권 $20B+ 조달\n   - 3.5배 초과청약 · S&P·Moody's·Fitch 3사 투자등급\n   - Goldman/Citi/JPMorgan/Morgan Stanley 주관\n\n2. TSLA Q2 2026 인도량 컨센서스 405,024대\n   - Q1 대비 +13.1% QoQ · 에너지 스토리지 13.8GWh\n   - Texas Robotaxi LLC 84대 Model Y 운용 중\n\n3. MU Micron 데이터센터 매출 +651%\n   - 공정가치 $1,520 (현재가 대비 25% 저평가)\n   - FCF +951% · 순현금 $23B\n\n4. NVDA 인도네시아 AI 클라우드 17만 GPU 공급\n   - Firmus Technologies · 2027Q1 배포 · $20B 매출 목표\n\n5. Tesla Cybercab 퍼스트리스폰더 가이드 V1.0 공개\n   - SAE Level 4 · 48V+400V 듀얼 배터리\n\n6. 매크로: 델라웨어 기업 대탈출 $3.3T+\n   - Tesla·SpaceX·Dell 등 7개 주로 이전\n   - 텍사스·네바다 주도 수혜\n\n■ 추가 뉴스\n• NHTSA 스티어링 조사 종결 (376K OTA 해결)\n• TSLA 우루과이 진출 (남미 3번째)\n• TSLA 유료광고 전환 (Tesla Energy)\n• MSFT Michael Burry $380 콜옵션 매수",
+    titleEn:       "June 29 Top News Summary — SPCX $20B · TSLA Q2 405K · MU +651%",
+    summaryEn:     "SpaceX's historic first-ever $20B bond, Tesla Q2 consensus 405,024 units, Micron data center +651%, NVIDIA Indonesia 170K GPUs, and the $3.3T Delaware exodus — all of June 29's top news in one chart.",
+    bodyEn:        "■ Today's Top 6 Stories\n\n1. SPCX SpaceX First-Ever Bond $20B+\n   - 3.5x oversubscribed · S&P/Moody's/Fitch investment grade\n   - Goldman/Citi/JPMorgan/Morgan Stanley underwriters\n\n2. TSLA Q2 2026 Delivery Consensus 405,024 Units\n   - +13.1% QoQ vs Q1 · Energy storage 13.8 GWh\n   - Texas Robotaxi LLC operating 84 Model Y units\n\n3. MU Micron Data Center Revenue +651%\n   - Fair value $1,520 (25% undervalued vs current)\n   - FCF +951% · Net cash $23B\n\n4. NVDA Indonesia AI Cloud 170K GPU Deal\n   - Firmus Technologies · Deploy Q1 2027 · $20B revenue target\n\n5. Tesla Cybercab First Responder Guide V1.0 Released\n   - SAE Level 4 · 48V+400V dual battery system\n\n6. Macro: Delaware Corporate Exodus $3.3T+\n   - Tesla, SpaceX, Dell among those relocating to 7 states\n   - Texas and Nevada as top beneficiaries\n\n■ Additional News\n• NHTSA steering probe closed (376K OTA resolved)\n• TSLA Uruguay entry (3rd LatAm market)\n• TSLA paid advertising shift (Tesla Energy)\n• MSFT Michael Burry buys $380 call options",
+    category:      "시장분석",
+    categoryColor: "orange",
+    subject:       "📰 6/29 뉴스 한장요약",
+    date:          "2026-06-29",
+    updatedAt:     "2026.06.29 09:00",
+    images:        ["/charts/summary-20260629.svg"],
+    imagesEn:      ["/charts/summary-20260629-en.svg"],
+  },
 
 ];
 
