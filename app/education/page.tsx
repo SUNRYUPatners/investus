@@ -21,7 +21,7 @@ const COURSE_TYPES = [
     price: 500000,
     badge: "완전 맞춤형",
     desc: "CIO가 직접 1:1로 지도합니다. 내 수준과 목표에 맞는 완전 맞춤형 커리큘럼으로 가장 빠르게 성장할 수 있는 방식입니다.",
-    details: ["완전 맞춤 커리큘럼", "일정 유연하게 협의", "CIO 직접 지도", "빠른 실력 향상"],
+    details: ["완전 맞춤 커리큘럼", "90분 집중 수업", "CIO 직접 지도", "일정 유연 협의"],
     detailColor: "#60a5fa",
   },
   {
@@ -419,7 +419,7 @@ export default function EducationPage() {
     { q: "온라인과 오프라인 차이가 있나요?", a: "커리큘럼과 내용은 동일합니다. 온라인은 Zoom으로 실시간 화상 미팅 방식으로 진행되며, 오프라인은 서울 대면 강의입니다." },
     { q: "수업 일정은 어떻게 정하나요?", a: "신청 후 CIO와 협의하여 일정을 정합니다. 평일 저녁·주말 오전·오후 모두 가능하며 시간대도 유연하게 협의 가능합니다." },
     { q: "강의 자료는 언제 받나요?", a: "수업 시작 전 PDF 파일로 발송됩니다. 수강 후에도 영구 보유 가능합니다." },
-    { q: "환불 규정이 어떻게 되나요?", a: "수업 시작 24시간 전까지 전액 환불 가능합니다. 시작 후에는 진행된 회차만큼 공제 후 환불됩니다." },
+    { q: "환불 규정이 어떻게 되나요?", a: "수업 시작 전까지 전액 환불 가능합니다. 수업이 시작되면 환불이 불가합니다." },
     ...ed.faqPlus,
   ];
 
@@ -620,6 +620,14 @@ export default function EducationPage() {
 
   const submitJSX = (
     <>
+      {/* 환불 정책 안내 */}
+      <div className="rounded-xl px-4 py-3 mb-4 border"
+        style={{ background: "rgba(239,68,68,0.06)", borderColor: "rgba(239,68,68,0.25)" }}>
+        <p className="text-[11px] font-semibold mb-0.5" style={{ color: "#ef4444" }}>⚠ 환불 규정</p>
+        <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+          수업 시작 전까지 전액 환불 가능합니다. <strong style={{ color: "#ef4444" }}>수업이 시작되면 환불이 불가합니다.</strong>
+        </p>
+      </div>
       {error && <p className="text-xs mb-4 text-center" style={{ color: "#ef4444" }}>{error}</p>}
       <button onClick={handleSubmit} disabled={submitting}
         className="w-full py-4 rounded-2xl text-base font-bold active:opacity-80 transition-opacity disabled:opacity-60"
@@ -648,18 +656,28 @@ export default function EducationPage() {
         <Link href="/insight" className="inline-flex items-center gap-1 text-xs mb-5" style={{ color: "var(--muted)" }}>
           <ChevronLeft className="w-3.5 h-3.5" /> {ed.back}
         </Link>
+
+        {/* 소개 섹션 */}
         {heroJSX}
         {cioJSX}
+        {highlightsJSX}
         {scheduleJSX}
         {flowJSX}
         {classMethodJSX}
         {makeupJSX}
-        {courseTypesJSX}
-        {formatJSX}
-        {highlightsJSX}
         {whoForJSX}
         {curriculumJSX}
         {faqJSX}
+
+        {/* 수강 신청 섹션 */}
+        <div className="mt-2 mb-4 flex items-center gap-3">
+          <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
+          <span className="text-[11px] font-bold tracking-widest font-syne px-3 py-1 rounded-full"
+            style={{ background: "rgba(212,175,55,0.12)", color: "#d4af37" }}>수강 신청</span>
+          <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
+        </div>
+        {courseTypesJSX}
+        {formatJSX}
         {formJSX}
         {submitJSX}
       </main>
@@ -673,6 +691,7 @@ export default function EducationPage() {
           </Link>
           {heroJSX}
           {cioJSX}
+          {highlightsJSX}
           {scheduleJSX}
           {flowJSX}
           {classMethodJSX}
@@ -690,7 +709,6 @@ export default function EducationPage() {
           <div className="overflow-y-auto no-scrollbar flex-1 pb-4">
             {courseTypesJSX}
             {formatJSX}
-            {highlightsJSX}
             {formJSX}
             {submitJSX}
           </div>
