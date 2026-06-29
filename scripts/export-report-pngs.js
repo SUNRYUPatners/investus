@@ -202,6 +202,18 @@ const PAIRS = [
   { ko: 'aapl-m5-price-hike-20260626.svg',             en: 'aapl-m5-price-hike-20260626-en.svg',             label: 'AAPL_M5가격인상',           date: '20260626' },
   { ko: 'openai-ipo-delay-20260626.svg',               en: 'openai-ipo-delay-20260626-en.svg',               label: 'OpenAI_IPO지연',            date: '20260626' },
   { ko: 'macro-gdp-cathie-warning-20260626.svg',       en: 'macro-gdp-cathie-warning-20260626-en.svg',       label: '매크로_GDP_Cathie경고',      date: '20260626' },
+
+  // ── 2026-06-29 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260629.svg',                        en: 'summary-20260629-en.svg',                        label: '6월29일_요약',               date: '20260629' },
+  { ko: 'tsla-q2-delivery-consensus-20260629.svg',     en: 'tsla-q2-delivery-consensus-20260629-en.svg',     label: 'TSLA_Q2인도컨센서스',        date: '20260629' },
+  { ko: 'tsla-cybercab-first-responder-20260629.svg',  en: 'tsla-cybercab-first-responder-20260629-en.svg',  label: 'TSLA_Cybercab퍼스트리스폰더', date: '20260629' },
+  { ko: 'tsla-nhtsa-steering-resolved-20260629.svg',   en: 'tsla-nhtsa-steering-resolved-20260629-en.svg',   label: 'TSLA_NHTSA스티어링종결',     date: '20260629' },
+  { ko: 'tsla-marketing-uruguay-20260629.svg',         en: 'tsla-marketing-uruguay-20260629-en.svg',         label: 'TSLA_광고우루과이',           date: '20260629' },
+  { ko: 'spcx-first-bond-20b-20260629.svg',            en: 'spcx-first-bond-20b-20260629-en.svg',            label: 'SPCX_첫채권20B',             date: '20260629' },
+  { ko: 'mu-deepdive-datacenter-20260629.svg',         en: 'mu-deepdive-datacenter-20260629-en.svg',         label: 'MU_데이터센터651pct',         date: '20260629' },
+  { ko: 'nvda-indonesia-gpu-20260629.svg',             en: 'nvda-indonesia-gpu-20260629-en.svg',             label: 'NVDA_인도네시아17만GPU',      date: '20260629' },
+  { ko: 'msft-burry-long-20260629.svg',                en: 'msft-burry-long-20260629-en.svg',                label: 'MSFT_버리콜옵션',             date: '20260629' },
+  { ko: 'macro-delaware-exodus-20260629.svg',          en: 'macro-delaware-exodus-20260629-en.svg',          label: '매크로_델라웨어탈출',          date: '20260629' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생
