@@ -214,6 +214,17 @@ const PAIRS = [
   { ko: 'nvda-indonesia-gpu-20260629.svg',             en: 'nvda-indonesia-gpu-20260629-en.svg',             label: 'NVDA_인도네시아17만GPU',      date: '20260629' },
   { ko: 'msft-burry-long-20260629.svg',                en: 'msft-burry-long-20260629-en.svg',                label: 'MSFT_버리콜옵션',             date: '20260629' },
   { ko: 'macro-delaware-exodus-20260629.svg',          en: 'macro-delaware-exodus-20260629-en.svg',          label: '매크로_델라웨어탈출',          date: '20260629' },
+
+  // ── 2026-06-30 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260630.svg',                      en: 'summary-20260630-en.svg',                      label: '6월30일_요약',               date: '20260630' },
+  { ko: 'tsla-fsd-v14-lite-20260630.svg',            en: 'tsla-fsd-v14-lite-20260630-en.svg',            label: 'TSLA_FSDV14Lite',            date: '20260630' },
+  { ko: 'tsla-cybercab-texas-cav-20260630.svg',      en: 'tsla-cybercab-texas-cav-20260630-en.svg',      label: 'TSLA_CybercabTexasCAV',      date: '20260630' },
+  { ko: 'tsla-optimus-july8-20260630.svg',           en: 'tsla-optimus-july8-20260630-en.svg',           label: 'TSLA_Optimus7월8일',          date: '20260630' },
+  { ko: 'spcx-falcon9-60-starlink-20260630.svg',     en: 'spcx-falcon9-60-starlink-20260630-en.svg',     label: 'SPCX_Falcon9_60Starlink',    date: '20260630' },
+  { ko: 'nvda-hbm-micron-sp500-20260630.svg',        en: 'nvda-hbm-micron-sp500-20260630-en.svg',        label: 'NVDA_HBM_MU_SP500',          date: '20260630' },
+  { ko: 'meta-claude-limits-20260630.svg',           en: 'meta-claude-limits-20260630-en.svg',           label: 'META_Claude제한',             date: '20260630' },
+  { ko: 'aapl-china-chip-20260630.svg',              en: 'aapl-china-chip-20260630-en.svg',              label: 'AAPL_중국칩10B',              date: '20260630' },
+  { ko: 'macro-congress-msft-vw-20260630.svg',       en: 'macro-congress-msft-vw-20260630-en.svg',       label: '매크로_MSFT의회VW해고',        date: '20260630' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0c10"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+
+  <rect width="1080" height="90" fill="#0d1117"/>
+  <text x="540" y="32" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="70" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">AAPL · Seeks Trump Approval for $10B China Chips</text>
+  <rect y="90" width="1080" height="3" fill="#a78bfa"/>
+
+  <rect x="30" y="108" width="160" height="36" rx="18" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="110" y="131" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#a78bfa" text-anchor="middle">2026. 06. 30</text>
+  <rect x="210" y="108" width="150" height="36" rx="18" fill="rgba(167,139,250,0.08)"/>
+  <text x="285" y="131" font-family="Arial,sans-serif" font-size="12" fill="#a78bfa" text-anchor="middle">Stock Analysis · AAPL</text>
+
+  <rect x="30" y="162" width="1020" height="170" rx="20" fill="#1a1025" stroke="#a78bfa" stroke-width="2"/>
+  <text x="55" y="202" font-family="Arial,sans-serif" font-size="13" fill="#a78bfa" font-weight="bold">🍎 AAPL · Financial Times Exclusive</text>
+  <text x="55" y="238" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb">Apple is officially seeking Trump administration clearance to purchase chips</text>
+  <text x="55" y="266" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb">from Chinese CATI (chip manufacturer) — approximately $10B in value</text>
+  <text x="55" y="302" font-family="Arial,sans-serif" font-size="13" fill="#ef4444">⚠ Issue: CATI flagged for Chinese military ties — restricted by US export controls</text>
+  <text x="55" y="322" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">Source: Financial Times</text>
+
+  <rect x="30" y="352" width="310" height="200" rx="16" fill="#1a1025" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="185" y="386" font-family="Arial,sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle" font-weight="bold">📦 Deal Size</text>
+  <text x="185" y="448" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#a78bfa" text-anchor="middle">$10B</text>
+  <text x="185" y="488" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">Chip Purchase Value</text>
+  <text x="185" y="514" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">CATI Chinese chipmaker</text>
+  <text x="185" y="538" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">PENDING APPROVAL</text>
+
+  <rect x="360" y="352" width="310" height="200" rx="16" fill="#1a0808" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="515" y="386" font-family="Arial,sans-serif" font-size="13" fill="#ef4444" text-anchor="middle" font-weight="bold">⚠ Risk Factor</text>
+  <text x="515" y="428" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb" text-anchor="middle">CATI</text>
+  <text x="515" y="458" font-family="Arial,sans-serif" font-size="15" fill="#ef4444" text-anchor="middle">Military Ties</text>
+  <text x="515" y="490" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">US export-restricted entity</text>
+  <text x="515" y="516" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Denial = supply chain crisis</text>
+  <text x="515" y="540" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">HIGH RISK ⚠</text>
+
+  <rect x="690" y="352" width="360" height="200" rx="16" fill="#0f1a0f" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="870" y="386" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle" font-weight="bold">✓ Context</text>
+  <text x="870" y="428" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">AI chip demand surge</text>
+  <text x="870" y="458" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">→ Supply diversification</text>
+  <text x="870" y="488" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Reduce TSMC dependence</text>
+  <text x="870" y="514" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Cost reduction motive</text>
+  <text x="870" y="538" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">SUPPLY DIVERSIFY</text>
+
+  <rect x="30" y="572" width="1020" height="190" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="55" y="604" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">SCENARIO ANALYSIS</text>
+  <line x1="55" y1="614" x2="1050" y2="614" stroke="#1e2028" stroke-width="1"/>
+
+  <text x="70" y="648" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="bold">✓ Approved:</text>
+  <text x="210" y="648" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">AAPL chip cost reduction + AI device competitiveness improves → bullish</text>
+
+  <text x="70" y="682" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" font-weight="bold">✗ Denied:</text>
+  <text x="210" y="682" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Supply constraints → near-term shortage + AI iPhone launch could delay</text>
+
+  <text x="70" y="716" font-family="Arial,sans-serif" font-size="14" fill="#a78bfa" font-weight="bold">→ Implication:</text>
+  <text x="225" y="716" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Apple's China dependency dilemma resurfaces amid US-China chip war</text>
+
+  <text x="70" y="750" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">※ S&amp;P 500 weight 7.5%→6.19% falling + this issue → short-term uncertainty rising</text>
+
+  <rect y="780" width="1080" height="2" fill="#a78bfa"/>
+  <rect y="782" width="1080" height="78" fill="#0d1117"/>
+  <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">$10B China Chip Approval Sought — Apple's Dilemma in US-China Chip War</text>
+  <text x="540" y="850" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · For Reference Only</text>
+
+  <rect y="860" width="1080" height="60" fill="#0a0c10"/>
+  <text x="60" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#a78bfa">AAPL</text>
+  <text x="150" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#a78bfa">$10B CHIPS</text>
+  <text x="290" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">MILITARY TIES</text>
+  <text x="480" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#9ca3af">PENDING</text>
+  <text x="610" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#9ca3af">S&amp;P 6.2%</text>
+  <text x="760" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">US-CHINA ⚠</text>
+
+  <rect y="920" width="1080" height="160" fill="#0a0c10"/>
+  <text x="540" y="960" font-family="Arial,sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle">AAPL $10B China Chips · CATI Military Risk · Trump Approval Pending · S&amp;P 6.2% ⚠</text>
+</svg>

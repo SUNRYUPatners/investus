@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Header -->
+  <rect width="1080" height="80" fill="#111318"/>
+  <text x="540" y="28" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS DAILY BRIEF</text>
+  <text x="540" y="61" font-family="Arial,sans-serif" font-size="27" font-weight="bold" fill="#e5e7eb" text-anchor="middle">June 30 — Top News Summary</text>
+  <rect y="80" width="1080" height="3" fill="#f97316"/>
+
+  <!-- Date badge -->
+  <rect x="415" y="93" width="250" height="52" rx="26" fill="#f97316" opacity="0.12"/>
+  <rect x="417" y="95" width="246" height="48" rx="24" fill="none" stroke="#f97316" stroke-width="1.5"/>
+  <text x="540" y="129" font-family="Arial,sans-serif" font-size="27" font-weight="bold" fill="#f97316" text-anchor="middle">2026. 06. 30</text>
+
+  <!-- Row 1 Cards -->
+  <rect x="30" y="163" width="320" height="230" rx="14" fill="#0f1a0f" stroke="#4ade80" stroke-width="2"/>
+  <text x="190" y="191" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="bold" text-anchor="middle">TSLA · FSD V14 Lite</text>
+  <text x="190" y="238" font-family="Arial,sans-serif" font-size="30" fill="#4ade80" text-anchor="middle">🚗</text>
+  <text x="190" y="278" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">4M HW3 Vehicles</text>
+  <text x="190" y="303" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Free Upgrade</text>
+  <text x="190" y="335" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Texas "Drive" Official · Used $27K</text>
+  <text x="190" y="362" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="bold" text-anchor="middle">MASS ROLLOUT ★</text>
+
+  <rect x="380" y="163" width="320" height="230" rx="14" fill="#1a0808" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="191" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" font-weight="bold" text-anchor="middle">TSLA · Cybercab CAV</text>
+  <text x="540" y="240" font-family="Arial,sans-serif" font-size="30" fill="#ef4444" text-anchor="middle">🚖</text>
+  <text x="540" y="278" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Texas DPS</text>
+  <text x="540" y="303" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">84 Units Listed</text>
+  <text x="540" y="335" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">SAE L4 · First Responder Manual</text>
+  <text x="540" y="362" font-family="Arial,sans-serif" font-size="15" fill="#ef4444" font-weight="bold" text-anchor="middle">COMMERCIAL MILESTONE ★</text>
+
+  <rect x="730" y="163" width="320" height="230" rx="14" fill="#0a1520" stroke="#60a5fa" stroke-width="2"/>
+  <text x="890" y="191" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="bold" text-anchor="middle">SPCX · SpaceX</text>
+  <text x="890" y="240" font-family="Arial,sans-serif" font-size="30" fill="#60a5fa" text-anchor="middle">🚀</text>
+  <text x="890" y="278" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Falcon9 Launch #60</text>
+  <text x="890" y="303" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">2x in 10 Hours</text>
+  <text x="890" y="335" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Starlink 10,722 · Nasdaq 7/8</text>
+  <text x="890" y="362" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa" font-weight="bold" text-anchor="middle">UNRIVALED RECORD ↑</text>
+
+  <!-- Row 2 Cards -->
+  <rect x="30" y="418" width="320" height="230" rx="14" fill="#0f1a0f" stroke="#4ade80" stroke-width="2"/>
+  <text x="190" y="446" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" font-weight="bold" text-anchor="middle">NVDA · HBM Monopoly</text>
+  <text x="190" y="493" font-family="Arial,sans-serif" font-size="30" fill="#4ade80" text-anchor="middle">💾</text>
+  <text x="190" y="536" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SK Hynix 62%</text>
+  <text x="190" y="561" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">MU S&amp;P 10%</text>
+  <text x="190" y="593" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">3-co monopoly · AAPL 6.2%↓</text>
+  <text x="190" y="617" font-family="Arial,sans-serif" font-size="15" fill="#4ade80" font-weight="bold" text-anchor="middle">AI CHIP WINNERS ↑</text>
+
+  <rect x="380" y="418" width="320" height="230" rx="14" fill="#1a0e00" stroke="#f97316" stroke-width="2"/>
+  <text x="540" y="446" font-family="Arial,sans-serif" font-size="14" fill="#f97316" font-weight="bold" text-anchor="middle">META · Claude Limits</text>
+  <text x="540" y="493" font-family="Arial,sans-serif" font-size="30" fill="#f97316" text-anchor="middle">🤖</text>
+  <text x="540" y="536" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Output -30%</text>
+  <text x="540" y="561" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Internal Docs</text>
+  <text x="540" y="593" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Distillation Fear · Google Cap↓</text>
+  <text x="540" y="617" font-family="Arial,sans-serif" font-size="15" fill="#f97316" font-weight="bold" text-anchor="middle">IP WAR BEGINS ⚠</text>
+
+  <rect x="730" y="418" width="320" height="230" rx="14" fill="#111318" stroke="#f59e0b" stroke-width="2"/>
+  <text x="890" y="446" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" font-weight="bold" text-anchor="middle">MACRO · MSFT VW</text>
+  <text x="890" y="493" font-family="Arial,sans-serif" font-size="30" fill="#f59e0b" text-anchor="middle">🏛️</text>
+  <text x="890" y="536" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">8 Congress Buy</text>
+  <text x="890" y="561" font-family="Arial,sans-serif" font-size="21" font-weight="bold" fill="#e5e7eb" text-anchor="middle">VW Cuts 100K</text>
+  <text x="890" y="593" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Pelosi · $376 · AV ends</text>
+  <text x="890" y="617" font-family="Arial,sans-serif" font-size="15" fill="#f59e0b" font-weight="bold" text-anchor="middle">WINNERS vs LOSERS ↑</text>
+
+  <!-- Key Stats Row -->
+  <rect x="30" y="663" width="320" height="105" rx="12" fill="#161b22" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="190" y="697" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">HW3 FSD V14 Upgrade</text>
+  <text x="190" y="745" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#4ade80" text-anchor="middle">4M+</text>
+
+  <rect x="380" y="663" width="320" height="105" rx="12" fill="#161b22" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="697" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Active Starlink Satellites</text>
+  <text x="540" y="745" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#60a5fa" text-anchor="middle">10,722</text>
+
+  <rect x="730" y="663" width="320" height="105" rx="12" fill="#161b22" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="890" y="697" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">VW Job Cuts</text>
+  <text x="890" y="745" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#ef4444" text-anchor="middle">100K</text>
+
+  <!-- Additional News -->
+  <rect x="30" y="783" width="1020" height="82" rx="10" fill="#161b22" stroke="#2d3748" stroke-width="1"/>
+  <text x="55" y="810" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">MORE ▸</text>
+  <text x="135" y="810" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">TSLA Optimus July 8</text>
+  <text x="360" y="810" font-family="Arial,sans-serif" font-size="14" fill="#a78bfa">AAPL China Chips $10B</text>
+  <text x="580" y="810" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Cybercab Giga Houston</text>
+  <text x="810" y="810" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa">SPCX Nasdaq 100 7/8</text>
+  <text x="55" y="846" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold">MORE ▸</text>
+  <text x="135" y="846" font-family="Arial,sans-serif" font-size="14" fill="#4ade80">MU S&amp;P500 10% Weight</text>
+  <text x="390" y="846" font-family="Arial,sans-serif" font-size="14" fill="#f97316">META Amazon Cost Up</text>
+  <text x="620" y="846" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af">Leveraged ETF All-Time High</text>
+
+  <!-- Footer -->
+  <rect y="880" width="1080" height="78" fill="#111318"/>
+  <rect y="880" width="1080" height="2" fill="#f97316"/>
+  <text x="540" y="922" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Key: FSD V14 4M · Cybercab 84 · Falcon9 #60 · VW 100K Collapse</text>
+  <text x="540" y="950" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · For Reference Only</text>
+
+  <!-- Ticker Strip -->
+  <rect y="960" width="1080" height="60" fill="#0d1117"/>
+  <text x="60" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#4ade80">TSLA ↑</text>
+  <text x="180" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">SPCX ↑</text>
+  <text x="310" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#4ade80">NVDA ↑</text>
+  <text x="430" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">MU ↑</text>
+  <text x="520" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">MSFT ↑</text>
+  <text x="650" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">VW ↓</text>
+  <text x="740" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f97316">META ⚠</text>
+  <text x="870" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f97316">BULL 🔥</text>
+
+  <!-- Bottom fill -->
+  <rect y="1020" width="1080" height="60" fill="#0d1117"/>
+  <text x="540" y="1057" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">FSD V14 4M · Cybercab 84 · Falcon9 #60 · HBM Monopoly · VW 100K Collapse 🔥</text>
+</svg>
