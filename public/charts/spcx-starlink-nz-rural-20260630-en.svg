@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0c10"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="90" fill="#0d1117"/>
+  <text x="540" y="32" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="70" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SPCX · Starlink Dominates NZ Rural — Market Share 19%→27%</text>
+  <rect y="90" width="1080" height="3" fill="#60a5fa"/>
+  <rect x="30" y="108" width="160" height="36" rx="18" fill="rgba(96,165,250,0.12)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="110" y="131" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#60a5fa" text-anchor="middle">2026. 06. 30</text>
+  <rect x="210" y="108" width="160" height="36" rx="18" fill="rgba(96,165,250,0.08)"/>
+  <text x="290" y="131" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">Stock Analysis · SPCX</text>
+
+  <rect x="30" y="162" width="490" height="380" rx="16" fill="#111318" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="275" y="198" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="bold" text-anchor="middle">New Zealand Rural ISP Market Share</text>
+  <line x1="55" y1="208" x2="495" y2="208" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="270" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Before</text>
+  <rect x="130" y="250" width="152" height="36" rx="6" fill="#374151"/>
+  <text x="295" y="274" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#9ca3af">19%</text>
+  <text x="80" y="330" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa">Now</text>
+  <rect x="130" y="310" width="216" height="36" rx="6" fill="#1e4070"/>
+  <text x="360" y="334" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#60a5fa">27%</text>
+  <text x="275" y="390" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#60a5fa" text-anchor="middle">+8%p</text>
+  <text x="275" y="420" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">Rural ISP Market Share Gain</text>
+  <text x="55" y="458" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• Subscribers: 80,000 → 85,000</text>
+  <text x="55" y="482" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• Islands, remote areas, farms with no legacy coverage</text>
+  <text x="55" y="506" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• Where fiber can't go, Starlink monopolizes</text>
+  <text x="275" y="528" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">RURAL DOMINATION</text>
+
+  <rect x="560" y="162" width="490" height="380" rx="16" fill="#0a1520" stroke="#34d399" stroke-width="1.5"/>
+  <text x="805" y="198" font-family="Arial,sans-serif" font-size="14" fill="#34d399" font-weight="bold" text-anchor="middle">Starlink Connection = Property Value Rise</text>
+  <line x1="585" y1="208" x2="1025" y2="208" stroke="#1a2a1a" stroke-width="1"/>
+  <text x="805" y="262" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#34d399" text-anchor="middle">$50K</text>
+  <text x="805" y="294" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Avg rural property price before</text>
+  <text x="805" y="336" font-family="Arial,sans-serif" font-size="24" fill="#34d399" text-anchor="middle">↓</text>
+  <text x="805" y="382" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#34d399" text-anchor="middle">$85K</text>
+  <text x="805" y="414" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">Avg rural property price after Starlink</text>
+  <text x="585" y="458" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• Rural land without internet → value surges with Starlink</text>
+  <text x="585" y="482" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• Remote work enabled = urban-to-rural migration accelerates</text>
+  <text x="585" y="506" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• "Satellite internet winning where fiber simply can't go"</text>
+  <text x="805" y="528" font-family="Arial,sans-serif" font-size="11" fill="#34d399" text-anchor="middle">SATELLITE WINS WHERE FIBER CANT GO</text>
+
+  <rect x="30" y="562" width="1020" height="200" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="55" y="594" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">INVESTMENT THESIS</text>
+  <line x1="55" y1="604" x2="1050" y2="604" stroke="#1e2028" stroke-width="1"/>
+  <text x="70" y="638" font-family="Arial,sans-serif" font-size="15" fill="#34d399">✓</text>
+  <text x="96" y="638" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Rural ISP = blue ocean — legacy telecom physically cannot compete in these areas</text>
+  <text x="70" y="670" font-family="Arial,sans-serif" font-size="15" fill="#34d399">✓</text>
+  <text x="96" y="670" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Subscriber growth directly flows into Starlink revenue → SpaceX profitability accelerates</text>
+  <text x="70" y="702" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">●</text>
+  <text x="96" y="702" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">NZ is the template — same pattern repeating across Africa, SE Asia, LatAm rural = infinite TAM</text>
+  <text x="70" y="734" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">●</text>
+  <text x="96" y="734" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Satellite cost advantage over fiber capex → accelerating adoption in developing markets</text>
+
+  <rect y="780" width="1080" height="2" fill="#60a5fa"/>
+  <rect y="782" width="1080" height="78" fill="#0d1117"/>
+  <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Starlink NZ Rural 19%→27% · 85,000 Subscribers · Property Value Surge</text>
+  <text x="540" y="850" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · For Reference Only</text>
+</svg>

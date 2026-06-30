@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0c10"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="90" fill="#0d1117"/>
+  <text x="540" y="32" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="70" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SPCX · Starlink 뉴질랜드 농촌 점령 — 시장 점유율 19%→27%</text>
+  <rect y="90" width="1080" height="3" fill="#60a5fa"/>
+  <rect x="30" y="108" width="160" height="36" rx="18" fill="rgba(96,165,250,0.12)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="110" y="131" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#60a5fa" text-anchor="middle">2026. 06. 30</text>
+  <rect x="210" y="108" width="160" height="36" rx="18" fill="rgba(96,165,250,0.08)"/>
+  <text x="290" y="131" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">종목분석 · SPCX</text>
+
+  <!-- Bar chart: Market Share -->
+  <rect x="30" y="162" width="490" height="380" rx="16" fill="#111318" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="275" y="198" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="bold" text-anchor="middle">뉴질랜드 농촌 ISP 시장 점유율</text>
+  <line x1="55" y1="208" x2="495" y2="208" stroke="#1e2028" stroke-width="1"/>
+
+  <!-- bar before -->
+  <text x="80" y="270" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">이전</text>
+  <rect x="130" y="250" width="152" height="36" rx="6" fill="#1e2028"/>
+  <rect x="130" y="250" width="152" height="36" rx="6" fill="#374151"/>
+  <text x="295" y="274" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#9ca3af">19%</text>
+
+  <!-- bar after -->
+  <text x="80" y="330" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa">현재</text>
+  <rect x="130" y="310" width="216" height="36" rx="6" fill="#1e4070"/>
+  <text x="360" y="334" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#60a5fa">27%</text>
+
+  <text x="275" y="390" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#60a5fa" text-anchor="middle">+8%p</text>
+  <text x="275" y="420" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">농촌 ISP 시장 점유율 상승</text>
+
+  <text x="55" y="458" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• 구독자 수: 80,000 → 85,000명</text>
+  <text x="55" y="482" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• 섬·오지·농장 등 기존 인프라 불가 지역 커버</text>
+  <text x="55" y="506" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• 광케이블이 닿지 않는 곳에서 Starlink가 독점</text>
+  <text x="275" y="528" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">RURAL DOMINATION</text>
+
+  <!-- Property value impact -->
+  <rect x="560" y="162" width="490" height="380" rx="16" fill="#0a1520" stroke="#34d399" stroke-width="1.5"/>
+  <text x="805" y="198" font-family="Arial,sans-serif" font-size="14" fill="#34d399" font-weight="bold" text-anchor="middle">Starlink 연결 = 부동산 가치 상승</text>
+  <line x1="585" y1="208" x2="1025" y2="208" stroke="#1a2a1a" stroke-width="1"/>
+
+  <text x="805" y="262" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#34d399" text-anchor="middle">$50K</text>
+  <text x="805" y="294" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">이전 농촌 평균 부동산 가격</text>
+
+  <text x="805" y="336" font-family="Arial,sans-serif" font-size="24" fill="#34d399" text-anchor="middle">↓</text>
+
+  <text x="805" y="382" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#34d399" text-anchor="middle">$85K</text>
+  <text x="805" y="414" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">Starlink 설치 후 평균 부동산 가격</text>
+
+  <text x="585" y="458" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• 인터넷 없는 농촌 부동산 → Starlink 연결 시 가치 급등</text>
+  <text x="585" y="482" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• 원격 근무 가능 = 도시 인구 농촌 이동 촉진</text>
+  <text x="585" y="506" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">• "위성 인터넷이 광케이블 불가 지역 점령"</text>
+  <text x="805" y="528" font-family="Arial,sans-serif" font-size="11" fill="#34d399" text-anchor="middle">SATELLITE WINS WHERE FIBER CANT GO</text>
+
+  <!-- Investment takeaway -->
+  <rect x="30" y="562" width="1020" height="200" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="55" y="594" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">투자 시사점</text>
+  <line x1="55" y1="604" x2="1050" y2="604" stroke="#1e2028" stroke-width="1"/>
+  <text x="70" y="638" font-family="Arial,sans-serif" font-size="15" fill="#34d399">✓</text>
+  <text x="96" y="638" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">농촌 ISP 시장은 블루오션 — 기존 통신사 진입 불가 지역에서 Starlink 독점 구조</text>
+  <text x="70" y="670" font-family="Arial,sans-serif" font-size="15" fill="#34d399">✓</text>
+  <text x="96" y="670" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">구독자 수 증가 = Starlink 매출 직접 반영 → SpaceX 수익성 개선 가속</text>
+  <text x="70" y="702" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">●</text>
+  <text x="96" y="702" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">NZ는 샘플 — 동일 패턴이 아프리카·동남아·남미 농촌에서 반복될 TAM 무한대</text>
+  <text x="70" y="734" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">●</text>
+  <text x="96" y="734" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">광케이블 인프라 투자 대비 위성 연결 비용 우위 → 개발도상국 채택 가속화</text>
+
+  <rect y="780" width="1080" height="2" fill="#60a5fa"/>
+  <rect y="782" width="1080" height="78" fill="#0d1117"/>
+  <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Starlink NZ 농촌 19%→27% · 구독자 85,000명 · 부동산 가치 상승</text>
+  <text x="540" y="850" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · 투자 참고용</text>
+</svg>

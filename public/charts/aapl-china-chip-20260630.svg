@@ -69,15 +69,4 @@
   <rect y="782" width="1080" height="78" fill="#0d1117"/>
   <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">$10B 중국 칩 승인 요청 — 미·중 반도체 갈등 속 Apple 딜레마</text>
   <text x="540" y="850" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · 투자 참고용</text>
-
-  <rect y="860" width="1080" height="60" fill="#0a0c10"/>
-  <text x="60" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#a78bfa">AAPL</text>
-  <text x="150" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#a78bfa">$10B 칩</text>
-  <text x="280" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">CATI 군연계</text>
-  <text x="460" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#9ca3af">승인 대기중</text>
-  <text x="630" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#9ca3af">S&amp;P 6.2%</text>
-  <text x="780" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">미중갈등 ⚠</text>
-
-  <rect y="920" width="1080" height="160" fill="#0a0c10"/>
-  <text x="540" y="960" font-family="Arial,sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle">AAPL $10B 중국 칩 · CATI 군연계 리스크 · 트럼프 승인 대기 · S&amp;P 6.2% ⚠</text>
 </svg>

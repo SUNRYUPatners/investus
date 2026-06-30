@@ -98,19 +98,4 @@
   <rect y="880" width="1080" height="2" fill="#f97316"/>
   <text x="540" y="922" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Key: FSD V14 4M · Cybercab 84 · Falcon9 #60 · VW 100K Collapse</text>
   <text x="540" y="950" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · For Reference Only</text>
-
-  <!-- Ticker Strip -->
-  <rect y="960" width="1080" height="60" fill="#0d1117"/>
-  <text x="60" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#4ade80">TSLA ↑</text>
-  <text x="180" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">SPCX ↑</text>
-  <text x="310" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#4ade80">NVDA ↑</text>
-  <text x="430" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">MU ↑</text>
-  <text x="520" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">MSFT ↑</text>
-  <text x="650" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">VW ↓</text>
-  <text x="740" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f97316">META ⚠</text>
-  <text x="870" y="998" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f97316">BULL 🔥</text>
-
-  <!-- Bottom fill -->
-  <rect y="1020" width="1080" height="60" fill="#0d1117"/>
-  <text x="540" y="1057" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">FSD V14 4M · Cybercab 84 · Falcon9 #60 · HBM Monopoly · VW 100K Collapse 🔥</text>
 </svg>

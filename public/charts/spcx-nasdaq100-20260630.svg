@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0c10"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="90" fill="#0d1117"/>
+  <text x="540" y="32" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="70" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SPCX · Nasdaq 100 편입 예정 — 7월 8일</text>
+  <rect y="90" width="1080" height="3" fill="#f59e0b"/>
+  <rect x="30" y="108" width="160" height="36" rx="18" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="110" y="131" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">2026. 06. 30</text>
+  <rect x="210" y="108" width="160" height="36" rx="18" fill="rgba(245,158,11,0.08)"/>
+  <text x="290" y="131" font-family="Arial,sans-serif" font-size="12" fill="#f59e0b" text-anchor="middle">종목분석 · SPCX</text>
+
+  <!-- Main big stat -->
+  <rect x="30" y="162" width="1020" height="200" rx="20" fill="#1a1500" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="210" font-family="Arial,sans-serif" font-size="16" fill="#f59e0b" font-weight="bold" text-anchor="middle">SPCX · Nasdaq 100 신규 편입</text>
+  <text x="540" y="300" font-family="Arial,sans-serif" font-size="96" font-weight="bold" fill="#f59e0b" text-anchor="middle">7/8</text>
+  <text x="540" y="340" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">Nasdaq 100 공식 편입 예정일</text>
+  <text x="540" y="356" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">패시브 펀드 강제 매수 개시</text>
+
+  <!-- Two info cards -->
+  <rect x="30" y="382" width="490" height="260" rx="16" fill="#111318" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="275" y="418" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" font-weight="bold" text-anchor="middle">편입 조건 충족</text>
+  <line x1="55" y1="428" x2="495" y2="428" stroke="#2a2000" stroke-width="1"/>
+  <text x="55" y="464" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• 투자등급 신용평가: S&amp;P · Moody's · Fitch 3사</text>
+  <text x="55" y="492" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• $20B+ 채권 발행 (Goldman · Citi · JPM · MS 주관)</text>
+  <text x="55" y="520" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• 시총 요건 충족 — Nasdaq 기준 통과</text>
+  <text x="55" y="548" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• SpaceX 재무 공시 강화 (채권 발행 조건)</text>
+  <text x="275" y="584" font-family="Arial,sans-serif" font-size="11" fill="#f59e0b" text-anchor="middle">ALL CRITERIA MET</text>
+  <text x="275" y="626" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">3.5x 초과청약 — 월스트릿 전폭 지지</text>
+
+  <rect x="560" y="382" width="490" height="260" rx="16" fill="#0a1520" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="805" y="418" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" font-weight="bold" text-anchor="middle">편입 효과</text>
+  <line x1="585" y1="428" x2="1025" y2="428" stroke="#1a2030" stroke-width="1"/>
+  <text x="580" y="464" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• ETF 패시브 펀드 강제 매수 발동</text>
+  <text x="580" y="492" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• QQQ 등 Nasdaq 100 추종 ETF 자동 편입</text>
+  <text x="580" y="520" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• SPCX ETF 직접 수혜 — 보유 비중 급등</text>
+  <text x="580" y="548" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">• 기관투자자 접근성 대폭 향상</text>
+  <text x="805" y="584" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">FORCED BUY EVENT</text>
+  <text x="805" y="626" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">수십억 달러 규모 자동 매수 예상</text>
+
+  <!-- Takeaway -->
+  <rect x="30" y="662" width="1020" height="110" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="55" y="694" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">투자 시사점</text>
+  <line x1="55" y1="704" x2="1050" y2="704" stroke="#1e2028" stroke-width="1"/>
+  <text x="70" y="736" font-family="Arial,sans-serif" font-size="15" fill="#f59e0b">●</text>
+  <text x="96" y="736" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Nasdaq 100 편입 = SpaceX가 전통 빅테크와 같은 수준의 기관 자금 접근성 확보</text>
+  <text x="70" y="762" font-family="Arial,sans-serif" font-size="15" fill="#f59e0b">●</text>
+  <text x="96" y="762" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">SPCX ETF 보유자는 편입 효과 자동 수혜 — 7/8 이후 추가 상승 모멘텀 기대</text>
+
+  <rect y="780" width="1080" height="2" fill="#f59e0b"/>
+  <rect y="782" width="1080" height="78" fill="#0d1117"/>
+  <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SPCX Nasdaq 100 편입 7/8 — 패시브 펀드 강제 매수 · SpaceX 기관 접근성 확보</text>
+  <text x="540" y="850" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · 투자 참고용</text>
+</svg>

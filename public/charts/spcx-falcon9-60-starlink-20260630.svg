@@ -9,7 +9,7 @@
 
   <rect width="1080" height="90" fill="#0d1117"/>
   <text x="540" y="32" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
-  <text x="540" y="70" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SPCX · Falcon9 60번째 + Starlink 10,706기</text>
+  <text x="540" y="70" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SPCX · Falcon9 2026년 60번째 발사 — 10시간 내 2회 연속</text>
   <rect y="90" width="1080" height="3" fill="#60a5fa"/>
 
   <rect x="30" y="108" width="160" height="36" rx="18" fill="rgba(96,165,250,0.12)" stroke="#60a5fa" stroke-width="1.5"/>
@@ -18,65 +18,61 @@
   <text x="280" y="131" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">종목분석 · SPCX</text>
 
   <!-- 3 Hero Stats -->
-  <rect x="30" y="162" width="310" height="180" rx="16" fill="#0a1520" stroke="#60a5fa" stroke-width="2"/>
-  <text x="185" y="198" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2026년 Falcon 9 발사 횟수</text>
-  <text x="185" y="280" font-family="Arial,sans-serif" font-size="88" font-weight="bold" fill="#60a5fa" text-anchor="middle">60</text>
-  <text x="185" y="324" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">번째 발사 달성</text>
+  <rect x="30" y="162" width="320" height="190" rx="16" fill="#0a1520" stroke="#60a5fa" stroke-width="2"/>
+  <text x="190" y="200" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2026년 Falcon 9 발사 횟수</text>
+  <text x="190" y="290" font-family="Arial,sans-serif" font-size="96" font-weight="bold" fill="#60a5fa" text-anchor="middle">60</text>
+  <text x="190" y="336" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">번째 발사 달성</text>
 
-  <rect x="360" y="162" width="310" height="180" rx="16" fill="#0a1520" stroke="#60a5fa" stroke-width="2"/>
-  <text x="515" y="198" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">10시간 내 연속 발사</text>
-  <text x="515" y="272" font-family="Arial,sans-serif" font-size="68" font-weight="bold" fill="#60a5fa" text-anchor="middle">2회</text>
-  <text x="515" y="312" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">연속 발사 성공</text>
-  <text x="515" y="334" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">재사용 로켓 최강 효율</text>
+  <rect x="375" y="162" width="320" height="190" rx="16" fill="#0a1520" stroke="#60a5fa" stroke-width="2"/>
+  <text x="535" y="200" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">10시간 내 연속 발사</text>
+  <text x="535" y="284" font-family="Arial,sans-serif" font-size="76" font-weight="bold" fill="#60a5fa" text-anchor="middle">2회</text>
+  <text x="535" y="326" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">연속 발사 성공</text>
+  <text x="535" y="346" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">재사용 로켓 최강 효율</text>
 
-  <rect x="690" y="162" width="360" height="180" rx="16" fill="#0a1520" stroke="#34d399" stroke-width="2"/>
-  <text x="870" y="198" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">운용 중 Starlink 위성</text>
-  <text x="870" y="264" font-family="Arial,sans-serif" font-size="54" font-weight="bold" fill="#34d399" text-anchor="middle">10,722</text>
-  <text x="870" y="298" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">6개월 내 10,706기 발사</text>
-  <text x="870" y="322" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">SpaceX만의 리그</text>
-  <text x="870" y="342" font-family="Arial,sans-serif" font-size="11" fill="#34d399" text-anchor="middle">ITS OWN LEAGUE ★</text>
+  <rect x="720" y="162" width="330" height="190" rx="16" fill="#0a1520" stroke="#34d399" stroke-width="2"/>
+  <text x="885" y="200" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">운용 중 Starlink 위성</text>
+  <text x="885" y="272" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#34d399" text-anchor="middle">10,722</text>
+  <text x="885" y="306" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb" text-anchor="middle">6개월 내 1,600기+ 추가</text>
+  <text x="885" y="330" font-family="Arial,sans-serif" font-size="11" fill="#34d399" text-anchor="middle">ITS OWN LEAGUE</text>
+  <text x="885" y="348" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">SpaceX만의 리그</text>
 
-  <!-- Starlink bar chart visual -->
-  <rect x="30" y="362" width="1020" height="240" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
-  <text x="55" y="394" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">STARLINK 글로벌 커버리지 임팩트</text>
-  <line x1="55" y1="404" x2="1050" y2="404" stroke="#1e2028" stroke-width="1"/>
+  <!-- Record Launch Cadence -->
+  <rect x="30" y="372" width="1020" height="200" rx="16" fill="#111318" stroke="#60a5fa" stroke-width="1"/>
+  <text x="55" y="404" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">발사 기록 의미</text>
+  <line x1="55" y1="414" x2="1050" y2="414" stroke="#1e2028" stroke-width="1"/>
 
-  <text x="70" y="438" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">📡</text>
-  <text x="100" y="438" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">뉴질랜드 농촌 ISP: 시장점유율 19% → 27% 급등 (Starlink 확장 효과)</text>
+  <text x="70" y="450" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">●</text>
+  <text x="96" y="450" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">60번째 = 연간 120회 발사 페이스 — 세계 어느 우주기업도 따라올 수 없는 밀도</text>
 
-  <text x="70" y="470" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">📡</text>
-  <text x="100" y="470" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">농촌 평균 가격 $50,000 → $85,000 상승 — Starlink 인프라 가치 입증</text>
+  <text x="70" y="484" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">●</text>
+  <text x="96" y="484" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">10시간 내 2회 연속 발사 = 발사대 회전율 세계 최고 수준 입증</text>
 
-  <text x="70" y="502" font-family="Arial,sans-serif" font-size="15" fill="#34d399">🚀</text>
-  <text x="100" y="502" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">60번째 Falcon 9 = 연간 120회 발사 페이스 (전례 없는 발사 밀도)</text>
+  <text x="70" y="518" font-family="Arial,sans-serif" font-size="15" fill="#34d399">●</text>
+  <text x="96" y="518" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Starlink 10,722기 운용 = 글로벌 위성 인터넷 독점적 인프라 구축 중</text>
 
-  <text x="70" y="534" font-family="Arial,sans-serif" font-size="15" fill="#34d399">🚀</text>
-  <text x="100" y="534" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">1,600기+ Starlink 위성 추가 발사 — 커버리지 빈틈 계속 채움</text>
+  <text x="70" y="552" font-family="Arial,sans-serif" font-size="15" fill="#34d399">●</text>
+  <text x="96" y="552" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">6개월 만에 1,600기+ 추가 — 커버리지 공백 계속 채워나가는 중</text>
 
-  <text x="70" y="566" font-family="Arial,sans-serif" font-size="15" fill="#f59e0b">💰</text>
-  <text x="100" y="566" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Nasdaq 100 편입 예정 (7월 8일) — $25B+ 투자 완료, 투자등급 신용</text>
+  <text x="70" y="560" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">※ 6/29 역대 첫 채권 $20B+ 조달 이후 잇따른 호재 — SpaceX 독주 궤도 확고</text>
 
-  <text x="70" y="590" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">※ 6/29 역대 첫 채권 $20B+ 조달 완료 이후 잇따른 호재 — SpaceX 궤도 진입</text>
+  <!-- Investment takeaway -->
+  <rect x="30" y="592" width="1020" height="170" rx="16" fill="#0a1520" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="55" y="624" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" font-weight="bold" letter-spacing="2">투자 시사점</text>
+  <line x1="55" y1="634" x2="1050" y2="634" stroke="#1a2030" stroke-width="1"/>
 
-  <!-- Nasdaq 100 callout -->
-  <rect x="30" y="622" width="1020" height="140" rx="16" fill="#1a1500" stroke="#f59e0b" stroke-width="1.5"/>
-  <text x="55" y="656" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b" font-weight="bold">🔔 NASDAQ 100 편입 예정</text>
-  <text x="55" y="690" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">$100B+ 투자등급 신용평가 + Nasdaq 100 신규 편입 → 패시브 펀드 강제 매수</text>
-  <text x="55" y="716" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Goldman Sachs · Citi · JPMorgan · Morgan Stanley 인수 지원 → 월스트릿 전폭 지지</text>
-  <text x="55" y="742" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">SPCX ETF 보유자 직접 수혜 — 최대 보유 종목 가치 직결</text>
+  <text x="70" y="668" font-family="Arial,sans-serif" font-size="15" fill="#34d399">✓</text>
+  <text x="96" y="668" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">발사 → Starlink 확장 → 구독 매출 → 재투자 선순환 구조 완성</text>
+
+  <text x="70" y="700" font-family="Arial,sans-serif" font-size="15" fill="#34d399">✓</text>
+  <text x="96" y="700" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">경쟁자(ULA·RocketLab·Ariane) 합산보다 많은 연간 발사 횟수 → 원가 우위 극대화</text>
+
+  <text x="70" y="732" font-family="Arial,sans-serif" font-size="15" fill="#60a5fa">●</text>
+  <text x="96" y="732" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">SPCX ETF 직접 수혜 — 재사용·발사빈도 모두 경쟁자 대비 압도</text>
+
+  <text x="70" y="752" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">※ "SpaceX is in its own league" — 업계 전문가 일치된 평가</text>
 
   <rect y="780" width="1080" height="2" fill="#60a5fa"/>
   <rect y="782" width="1080" height="78" fill="#0d1117"/>
-  <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Falcon9 60번째 + Starlink 10,722기 + Nasdaq 100 편입 — SpaceX 독주</text>
+  <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Falcon9 60번째 + 10시간 2회 + Starlink 10,722기 — SpaceX 독주 지속</text>
   <text x="540" y="850" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · 투자 참고용</text>
-
-  <rect y="860" width="1080" height="60" fill="#0a0c10"/>
-  <text x="60" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">SPCX ↑</text>
-  <text x="180" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">FALCON9 #60</text>
-  <text x="360" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#34d399">STARLINK 10,722</text>
-  <text x="590" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">NASDAQ 100</text>
-  <text x="760" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#60a5fa">10H 2 LAUNCH</text>
-
-  <rect y="920" width="1080" height="160" fill="#0a0c10"/>
-  <text x="540" y="960" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle">Falcon9 60번째 · 10시간 2발사 · Starlink 10,722기 · Nasdaq 100 편입 7/8 🚀</text>
 </svg>

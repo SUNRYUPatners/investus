@@ -63,15 +63,4 @@
   <rect y="782" width="1080" height="78" fill="#0d1117"/>
   <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Cybercab, Texas 법적 자율주행차로 공식 인정 — 상용화 기반 완성</text>
   <text x="540" y="850" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · 투자 참고용</text>
-
-  <!-- Ticker -->
-  <rect y="860" width="1080" height="60" fill="#0a0c10"/>
-  <text x="60" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">TSLA ↑</text>
-  <text x="180" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#9ca3af">CYBERCAB CAV</text>
-  <text x="380" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444">TEXAS 84대</text>
-  <text x="540" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#34d399">SAE L4 공식</text>
-  <text x="720" y="898" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">DPS 등재 ★</text>
-
-  <rect y="920" width="1080" height="160" fill="#0a0c10"/>
-  <text x="540" y="960" font-family="Arial,sans-serif" font-size="13" fill="#ef4444" text-anchor="middle">Cybercab 84대 Texas DPS 공식 등재 · SAE L4 인정 · 상용화 규제 허들 돌파 🚖</text>
 </svg>

@@ -225,6 +225,10 @@ const PAIRS = [
   { ko: 'meta-claude-limits-20260630.svg',           en: 'meta-claude-limits-20260630-en.svg',           label: 'META_Claude제한',             date: '20260630' },
   { ko: 'aapl-china-chip-20260630.svg',              en: 'aapl-china-chip-20260630-en.svg',              label: 'AAPL_중국칩10B',              date: '20260630' },
   { ko: 'macro-congress-msft-vw-20260630.svg',       en: 'macro-congress-msft-vw-20260630-en.svg',       label: '매크로_MSFT의회VW해고',        date: '20260630' },
+  { ko: 'spcx-starlink-nz-rural-20260630.svg',      en: 'spcx-starlink-nz-rural-20260630-en.svg',      label: 'SPCX_Starlink뉴질랜드농촌',   date: '20260630' },
+  { ko: 'spcx-nasdaq100-20260630.svg',               en: 'spcx-nasdaq100-20260630-en.svg',               label: 'SPCX_Nasdaq100_7월8일',        date: '20260630' },
+  { ko: 'macro-congress-msft-20260630.svg',          en: 'macro-congress-msft-20260630-en.svg',          label: '매크로_의회MSFT매수',           date: '20260630' },
+  { ko: 'macro-vw-layoffs-20260630.svg',             en: 'macro-vw-layoffs-20260630-en.svg',             label: '매크로_VW10만해고',             date: '20260630' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0c10"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="90" fill="#0d1117"/>
+  <text x="540" y="32" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="70" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">매크로 · VW 독일 10만명 해고 + 자율주행 파트너십 전면 종료</text>
+  <rect y="90" width="1080" height="3" fill="#ef4444"/>
+  <rect x="30" y="108" width="160" height="36" rx="18" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="110" y="131" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">2026. 06. 30</text>
+  <rect x="210" y="108" width="130" height="36" rx="18" fill="rgba(239,68,68,0.08)"/>
+  <text x="275" y="131" font-family="Arial,sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">매크로 · VW</text>
+
+  <!-- Hero -->
+  <rect x="30" y="162" width="1020" height="190" rx="20" fill="#1a0808" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="206" font-family="Arial,sans-serif" font-size="15" fill="#ef4444" font-weight="bold" text-anchor="middle">VW 독일 구조조정 발표</text>
+  <text x="540" y="294" font-family="Arial,sans-serif" font-size="80" font-weight="bold" fill="#ef4444" text-anchor="middle">100,000</text>
+  <text x="540" y="330" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">독일 내 해고 발표 + 공장 최대 4곳 폐쇄</text>
+  <text x="540" y="348" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">FSD V14 발표 4시간 후 결정 — 타이밍이 모든 것을 설명한다</text>
+
+  <!-- Two cards -->
+  <rect x="30" y="372" width="490" height="290" rx="16" fill="#1a0808" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="275" y="408" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" font-weight="bold" text-anchor="middle">자율주행 파트너십 전면 종료</text>
+  <line x1="55" y1="418" x2="495" y2="418" stroke="#2d1515" stroke-width="1"/>
+  <text x="55" y="454" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">• 자율주행 공급업체 파트너십 완전 종료</text>
+  <text x="55" y="484" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">• VW 공식 발표: "경쟁력 없음 인정"</text>
+  <text x="55" y="514" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">• 자체 AV 기술 없이 시장 진입 불가 확인</text>
+  <text x="55" y="544" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">• Tesla FSD V14 발표 직후 결정 — 우연 아님</text>
+  <text x="55" y="574" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">→ 유럽 전통 완성차 EV 전환 실패의 단적인 예</text>
+  <text x="275" y="640" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">LEGACY AUTO CRISIS</text>
+
+  <rect x="560" y="372" width="490" height="290" rx="16" fill="#111318" stroke="#ef4444" stroke-width="1"/>
+  <text x="805" y="408" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" font-weight="bold" text-anchor="middle">투자자 시사점</text>
+  <line x1="585" y1="418" x2="1025" y2="418" stroke="#1e2028" stroke-width="1"/>
+  <text x="580" y="454" font-family="Arial,sans-serif" font-size="15" fill="#4ade80">✓</text>
+  <text x="606" y="454" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">TSLA 경쟁 우위 더욱 확대</text>
+  <text x="580" y="484" font-family="Arial,sans-serif" font-size="15" fill="#4ade80">✓</text>
+  <text x="606" y="484" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">유럽 AV 시장 진입 선점 — VW 탈락</text>
+  <text x="580" y="514" font-family="Arial,sans-serif" font-size="15" fill="#ef4444">⚠</text>
+  <text x="606" y="514" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">독일 10만 실직 → 유럽 소비 위축 우려</text>
+  <text x="580" y="544" font-family="Arial,sans-serif" font-size="15" fill="#ef4444">⚠</text>
+  <text x="606" y="544" font-family="Arial,sans-serif" font-size="13" fill="#e5e7eb">전통 완성차 공급망 붕괴 도미노 가능성</text>
+  <text x="580" y="574" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">자체 AV 기술 없는 OEM = 구조적 소멸 경로</text>
+  <text x="805" y="640" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">TSLA MOAT CONFIRMED</text>
+
+  <!-- One more fact -->
+  <rect x="30" y="682" width="1020" height="90" rx="14" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="55" y="716" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">독점 AV 기술이 없는 전통 OEM은 자율주행 전환에서 구조적으로 탈락</text>
+  <text x="55" y="744" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">VW의 선택: 100K 해고 + AV 포기 = 생존을 위한 원가 절감으로 후퇴 — 성장이 아닌 수축</text>
+  <text x="55" y="762" font-family="Arial,sans-serif" font-size="12" fill="#ef4444">LEGACY AUTO COLLAPSE ↓</text>
+
+  <rect y="780" width="1080" height="2" fill="#ef4444"/>
+  <rect y="782" width="1080" height="78" fill="#0d1117"/>
+  <text x="540" y="824" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">VW 10만 해고 + AV 파트너십 종료 — 유럽 전통차 붕괴 · TSLA 해자 확인</text>
+  <text x="540" y="850" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.06.30 · 투자 참고용</text>
+</svg>
