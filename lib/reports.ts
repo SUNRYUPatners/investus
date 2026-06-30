@@ -4735,6 +4735,7 @@ export const SEED_REPORTS: Report[] = [
     category:      "시장분석",
     categoryColor: "orange",
     subject:       "📰 6/30 뉴스 한장요약",
+    isPinned:      true,
     date:          "2026-06-30",
     updatedAt:     "2026.06.30 08:00",
     images:        ["/charts/summary-20260630.svg"],

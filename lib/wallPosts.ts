@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T30J = 1782774000000; // 2026-06-30 08:00 KST
 const T26J = 1782428400000; // 2026-06-26 08:00 KST
 const T25J = 1782342000000; // 2026-06-25 08:00 KST
 const T24J = 1782255600000; // 2026-06-24 08:00 KST
@@ -41,7 +42,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T26J;       // NEW 배지 기준
+export const LATEST_UPDATE = T30J;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -60,6 +61,77 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-06-30 — TSLA FSD V14 Lite HW3 400만·Cybercab Texas DPS 84대·Optimus 7/8 /
+  //              SPCX Falcon9 60번째·Nasdaq100 편입·NVDA HBM 3사독점 /
+  //              META Claude 30% 제한·AAPL CATI 칩 $10B·MSFT 의회 8인·VW 10만 해고
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — FSD V14 Lite ────────────────────────────────────────────────
+  { id: 361, symbol: "TSLA", nickname: "익명_4819", holdingLabel: "300주 보유",
+    content: "FSD V14 Lite이 HW3 400만대에 무료 배포된다고. 이게 얼마나 큰지 알아? HW3 차들은 원래 V14 못 받을 거라고 했는데 갑자기 무료야. 중고 Model 3에 FSD 포함해서 $27K 이하. 경쟁차가 이 가격에 이 기능 못 따라와. Optimus 수익화 전에 FSD 구독이 이미 게임 체인저가 되는 거야.",
+    createdAt: T30J - 3*60_000, likes: 712, comments: 3 },
+  { id: 362, symbol: "TSLA", nickname: "익명_7341", holdingLabel: "150주 보유",
+    content: "Texas에서 'Self-Driving'이 공식 명칭 'Drive'로 바뀐 거 보고 확신이 생겼어요. 이건 규제 승인이 실질적으로 완료됐다는 신호예요. 텍사스 → 다른 주 순서로 확산되고 FSD 구독자 폭발할 것 같아요. V14이 무료로 풀리면 체험자 → 구독 전환 퍼널이 본격화되는 거잖아요.",
+    createdAt: T30J - 10*60_000, likes: 584, comments: 2 },
+
+  // TSLA — Cybercab Texas DPS ──────────────────────────────────────────
+  { id: 363, symbol: "TSLA", nickname: "익명_2937", holdingLabel: "200주 보유",
+    content: "Cybercab 84대가 Texas DPS 공식 CAV 등록됐다는 거 어제 확인했어. SAE L4 자율주행차로 법적 인정이야. First Responder 매뉴얼까지 완비됐다는 건 비상 상황 대응 체계도 다 갖춰진 거야. 상용 로보택시 서비스 시작 전 마지막 관문이 이미 통과된 거 아닌가 싶어.",
+    createdAt: T30J - 7*60_000, likes: 648, comments: 3 },
+  { id: 364, symbol: "TSLA", nickname: "익명_8502", holdingLabel: "500주 보유",
+    content: "84대 공식 등록이 중요한 이유는 숫자가 아니에요. 텍사스 DPS가 SAE L4로 인정했다는 법적 선례가 생긴 거예요. 이 선례가 다른 주에 확산되는 속도가 핵심이에요. 한 주에서 L4 승인 → 다른 주 따라서 승인하는 패턴이 나오면 Robotaxi 전국 확장 타임라인이 확 당겨져요.",
+    createdAt: T30J - 18*60_000, likes: 521, comments: 2 },
+
+  // TSLA — Optimus 7/8 ─────────────────────────────────────────────────
+  { id: 365, symbol: "TSLA", nickname: "익명_6184", holdingLabel: "관심종목",
+    content: "Optimus 7/8 Texas 발표가 진짜인지 아직 반신반의인데. Elon이 직접 텍사스에서 발표한다고 예고한 거 맞아요. 로봇 시연이면 주가 단기 모멘텀 확실히 있을 거고, 만약 실제 양산 타임라인 공개하면 Robotics TAM 재산정 들어가요. 7월 8일 주목해야 해요.",
+    createdAt: T30J - 14*60_000, likes: 489, comments: 2 },
+
+  // SPCX — Falcon9 60번째 발사 ─────────────────────────────────────────
+  { id: 366, symbol: "SPCX", nickname: "익명_3745", holdingLabel: "관심종목",
+    content: "Falcon9이 오늘 2026년 60번째 발사를 했어. 10시간 내에 2발이야. 연간 60회면 역대 최고 속도고 아직 6개월 남았어. Starlink 위성도 10,722기야. 이 숫자가 경쟁사 위성보다 10배 이상인 거 알지? 네트워크 효과가 이미 승패를 갈랐어.",
+    createdAt: T30J - 6*60_000, likes: 578, comments: 2 },
+
+  // SPCX — Nasdaq 100 편입 ─────────────────────────────────────────────
+  { id: 367, symbol: "SPCX", nickname: "익명_9213", holdingLabel: "100주 보유",
+    content: "SPCX 7/8 Nasdaq 100 편입이 오늘 공식 확정이에요. QQQ ETF가 강제로 편입해야 하는 거잖아요. QQQ AUM $320B인데 SPCX 비중 추정치 곱하면 수억 달러 규모 기계적 매수예요. 편입 전날까지 선행 매수도 있을 거고. 7월 8일 전까지가 기회예요.",
+    createdAt: T30J - 11*60_000, likes: 631, comments: 3 },
+
+  // NVDA — HBM 3사 독점 + MU S&P500 ───────────────────────────────────
+  { id: 368, symbol: "NVDA", nickname: "익명_1574", holdingLabel: "50주 보유",
+    content: "NVDA HBM 공급망이 SK하이닉스 62%, MU 23%, Samsung 17%로 3사 독점이야. 근데 MU가 S&P500에서 비중 10%까지 올라갔어. AAPL이 6.2%로 내려간 상황에. AI 반도체 수요가 얼마나 폭발적인지 지수 비중이 증명하는 거야. NVDA 블랙웰 공급이 수요를 못 쫓아가는 구조는 계속이야.",
+    createdAt: T30J - 8*60_000, likes: 553, comments: 2 },
+  { id: 369, symbol: "NVDA", nickname: "익명_6847", holdingLabel: "30주 보유",
+    content: "MU가 AAPL보다 S&P 비중 높아진 거 보고 진짜 시대가 바뀌었다 싶었어요. HBM이 AI 가속기 핵심이고 NVDA B200·B100이 HBM3e 없으면 못 만들어요. SK하이닉스 62% 점유가 공급 병목이고 그 병목이 NVDA 프리미엄 유지시켜요. 데이터센터 사이클 2027년까지 이어진다는 뷰 유효해요.",
+    createdAt: T30J - 22*60_000, likes: 418, comments: 2 },
+
+  // META — Claude 30% 제한 ─────────────────────────────────────────────
+  { id: 370, symbol: "META", nickname: "익명_4381", holdingLabel: "80주 보유",
+    content: "Meta 내부 문서 유출됐어. Claude랑 Codex 아웃풋 30% 제한했다는 거야. 이유가 모델 증류야. Meta가 Anthropic한테 질문하면 그 데이터로 Anthropic이 Claude 학습시켜. IP 유출 방지라고. 그래서 Amazon-Anthropic 재협상도 진행 중. AI 업계 IP 전쟁 본격화야.",
+    createdAt: T30J - 15*60_000, likes: 467, comments: 2 },
+  { id: 371, symbol: "META", nickname: "익명_7623", holdingLabel: "관심종목",
+    content: "Claude 사용 제한 소식 보고 META Llama 강화가 더 빨라지겠구나 싶었어요. 외부 AI API 의존하면 IP 리스크니까 자체 LLM 키울 수밖에 없어요. 이게 META AI R&D 지출 확대의 근거예요. 자체 LLM 있는 MSFT·GOOGL·META가 중장기 구조적 우위예요.",
+    createdAt: T30J - 28*60_000, likes: 341, comments: 2 },
+
+  // AAPL — China CATI 칩 ───────────────────────────────────────────────
+  { id: 372, symbol: "AAPL", nickname: "익명_5219", holdingLabel: "관심종목",
+    content: "Apple이 트럼프 행정부에 중국 CATI 칩 $10B 구매 승인 요청한다는 FT 보도야. CATI는 중국군 연계 의혹 기업이라 미국 수출 제한 대상인데 Apple이 직접 로비하는 거야. 승인되면 비용 절감 + AI iPhone 원가 경쟁력, 거부되면 공급 차질. 결과에 따라 단기 방향이 갈려.",
+    createdAt: T30J - 20*60_000, likes: 389, comments: 2 },
+
+  // MSFT — 의회 8인 매수 ───────────────────────────────────────────────
+  { id: 373, symbol: "MSFT", nickname: "익명_8347", holdingLabel: "관심종목",
+    content: "Pelosi 포함 의회 의원 8명이 올해 MSFT 매수했어. AI 규제 직접 입안하는 상무위원회·과학위원회·교통위원회 소속이야. 8명 다 손실 없고 전원 수익 중. 이들이 MSFT 보유하면서 AI 법 쓰는 구조야. 규제 완화 방향으로 갈 가능성이 높다는 거지.",
+    createdAt: T30J - 17*60_000, likes: 445, comments: 2 },
+
+  // VW — 10만명 해고 ───────────────────────────────────────────────────
+  { id: 374, symbol: "TSLA", nickname: "익명_2961", holdingLabel: "400주 보유",
+    content: "VW이 독일에서 10만명 해고하고 자율주행 파트너십 전면 종료했어. '경쟁력 없음' 공식 인정이야. FSD V14 발표 4시간 후에 결정한 거 보면 Tesla 때문에 접은 거 맞아. 유럽 AV 시장 경쟁자가 하나씩 사라지는 거고 Tesla 해자는 더 두꺼워지는 거야.",
+    createdAt: T30J - 5*60_000, likes: 589, comments: 3 },
+  { id: 375, symbol: "TSLA", nickname: "익명_6038", holdingLabel: "250주 보유",
+    content: "VW 10만명 해고 뉴스 보고 충격이었어요. 자체 AV 기술 없이는 생존 불가라는 걸 VW 스스로 인정한 거잖아요. 독일 10만명 실직이니 유럽 소비에도 영향 있겠고. 공급망 도미노가 문제예요. Bosch·Continental 등 부품사 연쇄 구조조정 나올 수 있어요.",
+    createdAt: T30J - 25*60_000, likes: 423, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-26 — SPCX NASDAQ-100 공식·T-Mobile인수·천연가스파이프라인·Leopold780% /
@@ -1560,6 +1632,72 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-06-30 신규 ──────────────────────────────────────────────────────
+  361: [
+    { id: 1, nickname: "익명_7182", holdingLabel: "200주 보유", content: "HW3에 무료 V14이라는 게 진짜인지 확인하고 싶었는데 공식 발표 맞아요. 400만대 오너들이 갑자기 FSD 체험자가 되는 거잖아요. 체험 → 구독 전환율이 10%만 되어도 구독 수 40만 추가예요.", createdAt: T30J - 1*60_000, likes: 156 },
+    { id: 2, nickname: "익명_3847", holdingLabel: "100주 보유", content: "중고 Model 3에 FSD 포함 $27K이 킬러 포인트예요. 경쟁 차 대비 자율주행 기능 포함 가격이 이미 압도적인데 여기서 더 내려가는 거잖아요. 유럽·아시아 수요 폭발 기대해요.", createdAt: T30J - 8*60_000, likes: 112 },
+    { id: 3, nickname: "익명_9214", holdingLabel: "80주 보유", content: "V14 Lite라도 HW3이 경험하면 V14 Full 보고 싶어지잖아요. HW4 업그레이드 수요 발생 or FSD 구독 전환, 어느 쪽이든 Tesla 수익이에요.", createdAt: T30J - 20*60_000, likes: 89 },
+  ],
+  362: [
+    { id: 1, nickname: "익명_4582", holdingLabel: "관심종목", content: "Texas 'Drive' 명칭 변경이 핵심이에요. 규제 언어가 바뀐다는 건 운전자 책임에서 시스템 책임으로 전환되는 거예요. 법적 프레임이 바뀌면 보험사들도 FSD 전용 상품 내놓기 시작해요.", createdAt: T30J - 6*60_000, likes: 103 },
+    { id: 2, nickname: "익명_8263", holdingLabel: "300주 보유", content: "텍사스에서 됐으면 플로리다·애리조나가 다음이에요. 미국 남부 주들이 규제 완화에 빠른데 이 패턴이 반복되면 1년 안에 10개 주 이상이에요.", createdAt: T30J - 22*60_000, likes: 78 },
+  ],
+  363: [
+    { id: 1, nickname: "익명_5917", holdingLabel: "150주 보유", content: "SAE L4 법적 인정이 가장 중요한 포인트예요. L4는 운전자 개입 불필요 수준이잖아요. 텍사스 DPS가 그 수준을 공식 인정한 거예요. 이 선례가 연방 규제로 이어지면 전국 확산이에요.", createdAt: T30J - 4*60_000, likes: 167 },
+    { id: 2, nickname: "익명_2748", holdingLabel: "관심종목", content: "First Responder 매뉴얼 완비가 의외로 중요해요. 사고 시 구조대가 어떻게 대응해야 하는지 프로토콜 확립됐다는 거잖아요. 상용화 전 마지막 안전 관문이 열린 거예요.", createdAt: T30J - 15*60_000, likes: 134 },
+    { id: 3, nickname: "익명_6419", holdingLabel: "400주 보유", content: "84대가 작아보여도 법적 선례로 1,000대, 10,000대로 스케일 업 허가 받는 건 훨씬 빨라요. 첫 84대가 핵심이에요.", createdAt: T30J - 30*60_000, likes: 91 },
+  ],
+  364: [
+    { id: 1, nickname: "익명_3182", holdingLabel: "200주 보유", content: "다른 주에서 L4 선례 요청이 들어오면 텍사스 DPS 결정이 기준이 돼요. 연방 NHTSA도 이 선례 무시 못 해요. 규제 도미노가 Tesla 방향으로 가는 거예요.", createdAt: T30J - 12*60_000, likes: 118 },
+    { id: 2, nickname: "익명_8631", holdingLabel: "관심종목", content: "NHTSA 승인 없이도 주 단위로 L4 허가 나오는 패턴이 미국 규제의 묘미예요. 주마다 다른 규제가 Tesla한테는 오히려 유리해요. 빠른 주에서 먼저 상용화하고 실적 보여주면 나머지 주도 열려요.", createdAt: T30J - 28*60_000, likes: 83 },
+  ],
+  365: [
+    { id: 1, nickname: "익명_7413", holdingLabel: "100주 보유", content: "Optimus 발표가 7/8이면 SPCX Nasdaq 100 편입일이랑 같아요. 테슬라 + SpaceX 동시 이벤트야. 7월 8일이 큰 날이 될 것 같아요.", createdAt: T30J - 10*60_000, likes: 145 },
+    { id: 2, nickname: "익명_2956", holdingLabel: "관심종목", content: "로봇 시연이면 주가 스파이크 단기 가능. 양산 타임라인 공개하면 밸류에이션 재산정 중기. 7/8 전 포지션 준비하는 게 맞는 것 같아요.", createdAt: T30J - 25*60_000, likes: 107 },
+  ],
+  366: [
+    { id: 1, nickname: "익명_4827", holdingLabel: "관심종목", content: "10시간 내 2발 발사가 진짜 믿기지 않아요. 로켓 재사용 + 발사 준비 사이클이 이 수준까지 왔다는 거예요. 항공기처럼 운영되는 거잖아요. 발사 비용이 계속 내려가는 구조예요.", createdAt: T30J - 5*60_000, likes: 183 },
+    { id: 2, nickname: "익명_6391", holdingLabel: "80주 보유", content: "Starlink 10,722기면 경쟁 위성 전체보다 많아요. 네트워크 규모가 이미 승부를 결정했고 구독 수익이 내년부터 폭발적으로 늘 거예요. 7/8 Nasdaq 100 편입이랑 겹쳐요.", createdAt: T30J - 18*60_000, likes: 142 },
+  ],
+  367: [
+    { id: 1, nickname: "익명_5182", holdingLabel: "200주 보유", content: "편입 발효일 7/8 전날까지 선행 매수가 들어와요. 기관들이 리밸런싱 전 미리 사는 패턴이에요. 이 수급이 SPCX 가격 지지해주고 편입 이후에도 패시브 자금이 계속 들어와요.", createdAt: T30J - 7*60_000, likes: 198 },
+    { id: 2, nickname: "익명_8374", holdingLabel: "관심종목", content: "QQQ AUM $320B에 SPCX 비중 0.2%만 잡아도 $6.4억이에요. 다른 Nasdaq 100 추종 ETF까지 합치면 수십억 달러야. 이 강제 매수가 일주일 안에 집중돼요.", createdAt: T30J - 22*60_000, likes: 156 },
+    { id: 3, nickname: "익명_2941", holdingLabel: "50주 보유", content: "Nasdaq 100 편입이면 기관 투자 가능 범위도 늘어요. 인덱스 편입이 안 된 종목은 일부 펀드가 아예 못 사요. 편입 후 기관 접근성 확대 = 유동성 개선 = 변동성 안정화예요.", createdAt: T30J - 38*60_000, likes: 112 },
+  ],
+  368: [
+    { id: 1, nickname: "익명_3819", holdingLabel: "30주 보유", content: "SK하이닉스 62% 점유율이 공급 병목이에요. 삼성이 HBM 수율 문제 해결 못 하면 2027년까지 이 구도 안 바뀌어요. NVDA 블랙웰 출하량이 제한되는 이유가 HBM이고, 그게 단기 공급 부족 → 프리미엄 유지예요.", createdAt: T30J - 9*60_000, likes: 134 },
+    { id: 2, nickname: "익명_7462", holdingLabel: "20주 보유", content: "MU가 AAPL보다 S&P 비중 높아진 게 시대 변화를 보여줘요. 5년 전 스마트폰 회사가 1위였는데 이제 AI 반도체 회사가 그 자리예요. 이 흐름은 2027년 이전에 안 바뀌어요.", createdAt: T30J - 24*60_000, likes: 98 },
+  ],
+  369: [
+    { id: 1, nickname: "익명_4918", holdingLabel: "15주 보유", content: "HBM 독점 구도에서 MU가 23%인데 이게 삼성 17%보다 높아요. 수율 문제 있는 삼성 밀어내고 MU가 올라온 거잖아요. MU 입장에선 점유율 확대 기회예요.", createdAt: T30J - 16*60_000, likes: 87 },
+    { id: 2, nickname: "익명_6254", holdingLabel: "10주 보유", content: "데이터센터 CAPEX 사이클이 2027년까지 이어진다는 주요 증권사 전망이 맞으면 NVDA·MU 둘 다 올해 안에 더 갈 여지 있어요.", createdAt: T30J - 32*60_000, likes: 64 },
+  ],
+  370: [
+    { id: 1, nickname: "익명_5831", holdingLabel: "60주 보유", content: "모델 증류가 왜 IP 침해인지 이제야 이해됐어요. Meta가 물어본 질문 패턴을 Anthropic이 학습하면 Meta의 AI 전략이 경쟁사에 노출되는 거잖아요. 대기업들이 외부 AI API 줄이는 이유가 이거예요.", createdAt: T30J - 13*60_000, likes: 112 },
+    { id: 2, nickname: "익명_2947", holdingLabel: "관심종목", content: "이 뉴스로 Llama 투자 가속화 확실해졌어요. Meta가 자체 LLM 없으면 매번 이런 리스크가 생기니까요. META 주가에는 오히려 장기 긍정적으로 봐요. 자체 AI 역량 확보가 빨라지는 거잖아요.", createdAt: T30J - 26*60_000, likes: 89 },
+  ],
+  371: [
+    { id: 1, nickname: "익명_8341", holdingLabel: "40주 보유", content: "외부 AI API 의존 줄이고 자체 LLM 강화 → 이게 모든 빅테크의 방향이에요. 자체 LLM이 없는 회사가 외부 API 써야 하는데 IP 리스크까지 감수해야 해요. 자체 AI = 해자예요.", createdAt: T30J - 20*60_000, likes: 76 },
+    { id: 2, nickname: "익명_6173", holdingLabel: "관심종목", content: "Amazon-Anthropic 재협상이 동시에 진행 중이라는 게 흥미로워요. AI 공급망 비용이 올라가는 중이고 이 비용을 자체 AI로 대체하는 회사가 마진 방어가 돼요.", createdAt: T30J - 35*60_000, likes: 58 },
+  ],
+  372: [
+    { id: 1, nickname: "익명_3482", holdingLabel: "관심종목", content: "트럼프 행정부가 승인해줄 수도 있어요. 기술 경쟁력이 중요한 시대에 Apple이 저렴한 칩 쓰게 해주는 게 미국 소비자한테 유리하다는 논리로 접근할 수 있어요. 결과 나오면 단기 방향 갈려요.", createdAt: T30J - 18*60_000, likes: 98 },
+    { id: 2, nickname: "익명_7281", holdingLabel: "관심종목", content: "거부되면 NVDA·TSMC 수혜예요. Apple이 미국산 칩으로 돌아와야 하니까요. 승인되면 AAPL 단기 긍정이지만 지정학 리스크 상수로 남아요. 이 결과 모니터링 필수예요.", createdAt: T30J - 30*60_000, likes: 71 },
+  ],
+  373: [
+    { id: 1, nickname: "익명_5192", holdingLabel: "관심종목", content: "Pelosi 포함 8인이 AI 규제 위원회 소속이라는 게 핵심이에요. 이 사람들이 법 쓸 때 본인이 보유한 MSFT 주가도 생각하겠죠. AI 규제가 MSFT에 유리한 방향으로 설계될 가능성이 높아요.", createdAt: T30J - 14*60_000, likes: 134 },
+    { id: 2, nickname: "익명_8924", holdingLabel: "관심종목", content: "의회 스마트 머니 팔로우가 실제로 수익이 났어요. Pelosi 포트폴리오 추종 전략이 S&P 이기는 경우가 많다는 연구도 있고요. MSFT $376에 진입한 8인 전원 수익 중이라는 게 신호예요.", createdAt: T30J - 28*60_000, likes: 107 },
+  ],
+  374: [
+    { id: 1, nickname: "익명_4271", holdingLabel: "200주 보유", content: "FSD V14 발표 4시간 후에 VW이 AV 포기 선언한 타이밍이 의도적인지 아닌지 모르겠지만 메시지는 명확해요. Tesla가 무서워서 접은 거예요. 유럽 자율주행 시장은 Tesla 독주 확정이에요.", createdAt: T30J - 2*60_000, likes: 167 },
+    { id: 2, nickname: "익명_7831", holdingLabel: "150주 보유", content: "10만명이면 독일 경제에도 충격이에요. VW 협력사까지 포함하면 30~50만명 영향권인데 유럽 소비 위축이 우려돼요. 매크로 리스크 변수로 체크해야 해요.", createdAt: T30J - 18*60_000, likes: 134 },
+    { id: 3, nickname: "익명_2614", holdingLabel: "관심종목", content: "AV 파트너십 전면 종료가 핵심이에요. 외부 파트너로도 못 따라가겠다는 거잖아요. 자체 AV 기술 없는 OEM의 미래예요. 현대도 지금 열심히 투자하는 이유가 이거예요.", createdAt: T30J - 32*60_000, likes: 98 },
+  ],
+  375: [
+    { id: 1, nickname: "익명_3841", holdingLabel: "100주 보유", content: "Bosch·Continental·ZF 같은 전통 부품사들이 VW 물량에 의존했는데 이게 줄면 공급망 도미노가 와요. 유럽 산업 전반에 악영향이고 Tesla 유럽 점유율은 반사이익이에요.", createdAt: T30J - 22*60_000, likes: 112 },
+    { id: 2, nickname: "익명_6491", holdingLabel: "관심종목", content: "유럽 정부 보조금으로 VW 살려야 한다는 압박이 올 거예요. 근데 구조적으로 AV 없이는 미래가 없어요. 보조금이 시간을 사는 건지, 회생 기반이 되는 건지가 관건이에요.", createdAt: T30J - 38*60_000, likes: 84 },
+  ],
+
   // ── 2026-06-26 신규 ──────────────────────────────────────────────────────
   348: [
     { id: 1, nickname: "익명_4812", holdingLabel: "관심종목", content: "공식 인포그래픽이 나왔다는 게 포인트예요. SpaceX가 직접 만든 카드에 타임라인까지 넣었어요. 기업 홍보 수준이 이미 상장사 그 이상이에요. 패시브 ETF 유입 + 기관 매수 도미노 시작될 거예요.", createdAt: T26J - 2*60_000, likes: 134 },
