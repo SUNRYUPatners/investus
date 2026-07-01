@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient></defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Ackman · Amazon $AMZN 저평가 주목</text>
+  <rect y="88" width="1080" height="3" fill="#f59e0b"/>
+  <rect x="30" y="106" width="150" height="34" rx="17" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="105" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">2026. 07. 01</text>
+
+  <rect x="60" y="155" width="960" height="130" rx="18" fill="#1a1000" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="195" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Bill Ackman(Pershing Square) — Amazon 역대 최저 PER 포착</text>
+  <text x="540" y="248" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#f59e0b" text-anchor="middle">$AMZN 역대 최저 PER</text>
+  <text x="540" y="278" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Ackman이 꼽은 "지금이 매수 타이밍"</text>
+
+  <!-- PER comparison chart -->
+  <rect x="60" y="308" width="460" height="260" rx="16" fill="#111318" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="290" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">PER 히스토리</text>
+  <!-- bars -->
+  <rect x="100" y="440" width="60" height="80" rx="4" fill="#6b7280" opacity="0.6"/>
+  <text x="130" y="435" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">60x</text>
+  <text x="130" y="535" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2021</text>
+  <rect x="180" y="400" width="60" height="120" rx="4" fill="#6b7280" opacity="0.7"/>
+  <text x="210" y="395" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">90x</text>
+  <text x="210" y="535" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2022</text>
+  <rect x="260" y="430" width="60" height="90" rx="4" fill="#60a5fa" opacity="0.7"/>
+  <text x="290" y="425" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">65x</text>
+  <text x="290" y="535" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2023</text>
+  <rect x="340" y="450" width="60" height="70" rx="4" fill="#4ade80" opacity="0.7"/>
+  <text x="370" y="445" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">50x</text>
+  <text x="370" y="535" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2024</text>
+  <rect x="420" y="480" width="60" height="40" rx="4" fill="#f59e0b"/>
+  <text x="450" y="475" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">30x</text>
+  <text x="450" y="535" font-family="Arial,sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle">2026 NOW</text>
+  <text x="290" y="560" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">↓ 역대 최저 PER = 가치투자 기회</text>
+
+  <!-- Ackman thesis -->
+  <rect x="560" y="308" width="460" height="260" rx="16" fill="#1a1000" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="790" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">ACKMAN 투자 근거</text>
+  <text x="790" y="378" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#f59e0b" text-anchor="middle">AWS 클라우드 독주</text>
+  <text x="790" y="406" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">AWS 글로벌 점유율 1위 유지</text>
+  <text x="790" y="432" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">AI 인프라 투자 수혜</text>
+  <text x="790" y="458" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">광고 수익 고성장 지속</text>
+  <text x="790" y="484" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">잉여현금흐름 $50B+ 예상</text>
+  <text x="790" y="516" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">PER 30x = 역사적 저평가</text>
+  <text x="790" y="546" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Ackman 대규모 포지션 구축 중</text>
+
+  <!-- Amazon fundamentals -->
+  <rect x="60" y="590" width="960" height="230" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="622" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">AMAZON 핵심 사업부 현황</text>
+  <line x1="80" y1="632" x2="1000" y2="632" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="662" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">AWS: $108B 연매출 · 영업이익률 37% · AI 클라우드 수요 급증</text>
+  <text x="80" y="690" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">광고: $55B+ · Amazon Ads 급성장 · 구글·메타 다음 광고 플랫폼</text>
+  <text x="80" y="718" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">이커머스: 글로벌 1위 · Prime 2억+ 회원 · 배송 네트워크 자체 구축 완성</text>
+  <text x="80" y="746" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b">Ackman 논리: PER 30x는 AWS 단독 가치도 안 된다 → 이커머스·광고는 공짜</text>
+  <text x="80" y="774" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">현재 주가: ~$220 · Ackman 목표가: $280+ (12개월)</text>
+  <text x="80" y="800" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">Pershing Square 운용자산 $100B+ · AMZN 최대 포지션 중 하나</text>
+
+  <rect y="832" width="1080" height="2" fill="#f59e0b"/>
+  <rect y="834" width="1080" height="246" fill="#0d1117"/>
+  <text x="540" y="880" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Ackman "Amazon PER 30x = 역대 최저 저평가, 지금 사야 한다"</text>
+  <text x="540" y="908" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+  <rect y="932" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="955" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">AMZN · ACKMAN · AWS · 저평가</text>
+</svg>

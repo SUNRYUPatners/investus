@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#1a0f00"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#ea580c"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1c1008;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <circle cx="900" cy="250" r="280" fill="#f97316" opacity="0.04"/>
+  <circle cx="150" cy="800" r="220" fill="#f97316" opacity="0.04"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1080" height="90" fill="#f97316" opacity="0.1"/>
+  <rect x="0" y="88" width="1080" height="2" fill="#f97316" opacity="0.6"/>
+  <text x="54" y="52" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#f97316" letter-spacing="4">INVESTUS DAILY REPORT</text>
+  <rect x="870" y="26" width="160" height="36" rx="18" fill="#f97316" opacity="0.2"/>
+  <rect x="870" y="26" width="160" height="36" rx="18" fill="none" stroke="#f97316" stroke-width="1.5"/>
+  <text x="950" y="49" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#f97316" text-anchor="middle">2026.07.01</text>
+
+  <!-- Title -->
+  <text x="54" y="150" font-family="Arial,sans-serif" font-size="42" font-weight="900" fill="#ffffff">FIGURE AI</text>
+  <text x="54" y="196" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#f97316">3세대 인형 로봇 BMW 공장 배치</text>
+
+  <!-- REAL FACTORY badge -->
+  <rect x="54" y="218" width="330" height="40" rx="10" fill="#f97316"/>
+  <text x="219" y="244" font-family="Arial,sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">REAL FACTORY DEPLOYMENT</text>
+
+  <!-- Robot + Factory visual -->
+  <rect x="54" y="284" width="460" height="320" rx="16" fill="url(#cardGrad)" stroke="#f97316" stroke-width="2"/>
+  <!-- Robot icon large -->
+  <text x="284" y="440" font-family="Arial,sans-serif" font-size="120" text-anchor="middle" filter="url(#glow)">🤖</text>
+  <text x="284" y="508" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#f97316" text-anchor="middle">FIGURE 03</text>
+  <text x="284" y="535" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">3세대 인형 로봇</text>
+  <text x="284" y="555" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">실제 인간 작업 수행</text>
+  <text x="284" y="580" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">CEO Sam Abdank 발표</text>
+
+  <!-- Factory icon -->
+  <rect x="566" y="284" width="460" height="320" rx="16" fill="url(#cardGrad)" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="796" y="440" font-family="Arial,sans-serif" font-size="100" text-anchor="middle">🏭</text>
+  <text x="796" y="508" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">BMW FACTORY</text>
+  <text x="796" y="535" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">제조업 AI 자동화</text>
+  <text x="796" y="555" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">본격화 이정표</text>
+  <text x="796" y="580" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">실제 양산 공장 투입</text>
+
+  <!-- Generation timeline -->
+  <text x="540" y="652" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" text-anchor="middle" letter-spacing="2">세대별 진화 타임라인</text>
+
+  <!-- Gen 1 -->
+  <rect x="54" y="674" width="280" height="100" rx="12" fill="#1c1008" stroke="#f97316" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="194" y="710" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="#9ca3af" text-anchor="middle">GEN 1</text>
+  <text x="194" y="740" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">기초 이족 보행</text>
+  <text x="194" y="760" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">연구 단계</text>
+
+  <!-- Arrow -->
+  <text x="398" y="730" font-family="Arial,sans-serif" font-size="24" text-anchor="middle" fill="#f97316">→</text>
+
+  <!-- Gen 2 -->
+  <rect x="420" y="674" width="240" height="100" rx="12" fill="#1c1008" stroke="#f97316" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="540" y="710" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="#fb923c" text-anchor="middle">GEN 2</text>
+  <text x="540" y="740" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">작업 능력 향상</text>
+  <text x="540" y="760" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">파일럿 테스트</text>
+
+  <!-- Arrow -->
+  <text x="714" y="730" font-family="Arial,sans-serif" font-size="24" text-anchor="middle" fill="#f97316">→</text>
+
+  <!-- Gen 3 highlighted -->
+  <rect x="730" y="665" width="296" height="120" rx="12" fill="#f97316"/>
+  <text x="878" y="706" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">GEN 3</text>
+  <text x="878" y="733" font-family="Arial,sans-serif" font-size="12" fill="#ffedd5" text-anchor="middle">실제 BMW 공장 투입</text>
+  <text x="878" y="753" font-family="Arial,sans-serif" font-size="12" fill="#ffedd5" text-anchor="middle">인간 작업 대체 중</text>
+  <text x="878" y="773" font-family="Arial,sans-serif" font-size="11" fill="#fde68a" text-anchor="middle">▲ NOW LIVE</text>
+
+  <!-- Footer -->
+  <rect x="0" y="990" width="1080" height="90" fill="#f97316" opacity="0.1"/>
+  <rect x="0" y="990" width="1080" height="2" fill="#f97316" opacity="0.5"/>
+  <text x="540" y="1030" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#f97316" text-anchor="middle">제조업 AI 자동화 이정표 · 인형 로봇이 실제 양산 공장에서 작업 중</text>
+  <text x="540" y="1058" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+</svg>

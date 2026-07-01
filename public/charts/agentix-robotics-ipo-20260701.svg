@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient></defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Agentix · 로보틱스 AI 스타트업 IPO</text>
+  <rect y="88" width="1080" height="3" fill="#a78bfa"/>
+  <rect x="30" y="106" width="140" height="34" rx="17" fill="#7f1d1d" stroke="#ef4444" stroke-width="2"/>
+  <text x="100" y="128" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">IPO 신청</text>
+  <rect x="190" y="106" width="150" height="34" rx="17" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="265" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">2026. 07. 01</text>
+
+  <rect x="60" y="155" width="960" height="130" rx="18" fill="#130a20" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="195" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Agentix Robotics — 차세대 AI 로봇 스타트업 나스닥 IPO 신청</text>
+  <text x="540" y="248" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#a78bfa" text-anchor="middle">밸류 $4.5B</text>
+  <text x="540" y="278" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">로보틱스 AI + LLM 결합 · 산업용 자율로봇 플랫폼</text>
+
+  <!-- IPO details left -->
+  <rect x="60" y="308" width="460" height="260" rx="16" fill="#111318" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="290" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">IPO 상세</text>
+  <text x="290" y="378" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#a78bfa" text-anchor="middle">공모 규모: $500M</text>
+  <text x="290" y="410" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">주관사: Goldman Sachs · Morgan Stanley</text>
+  <text x="290" y="438" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">나스닥 상장 신청: 티커 AGTX</text>
+  <text x="290" y="466" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb" text-anchor="middle">예상 공모가: $22~$26</text>
+  <text x="290" y="494" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">기존 투자자: Sequoia · a16z</text>
+  <text x="290" y="522" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">2026년 최대 로봇 AI IPO</text>
+  <text x="290" y="552" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">수요예측 3배 초과</text>
+
+  <!-- Tech details right -->
+  <rect x="560" y="308" width="460" height="260" rx="16" fill="#130a20" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="790" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">핵심 기술</text>
+  <text x="790" y="378" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#a78bfa" text-anchor="middle">AgentOS 플랫폼</text>
+  <text x="790" y="406" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">LLM 기반 로봇 제어 시스템</text>
+  <text x="790" y="432" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Vision-Language-Action 모델</text>
+  <text x="790" y="458" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">산업용 로봇 → AI 업그레이드</text>
+  <text x="790" y="484" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">고객사: Toyota · Foxconn · BMW</text>
+  <text x="790" y="512" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b" text-anchor="middle">ARR: $120M · YoY +280%</text>
+  <text x="790" y="548" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Tesla Optimus 직접 경쟁 상대</text>
+
+  <!-- Market context -->
+  <rect x="60" y="590" width="960" height="240" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="622" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">로보틱스 AI 시장 전망</text>
+  <line x1="80" y1="632" x2="1000" y2="632" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="662" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">글로벌 산업용 로봇 시장: 2026년 $260B → 2030년 $550B (연 21% 성장)</text>
+  <text x="80" y="690" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">AI 로봇 소프트웨어: 하드웨어보다 마진 높음 · SaaS 구독 모델</text>
+  <text x="80" y="718" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">경쟁사: Figure AI(비상장) · 1X Technologies · Boston Dynamics</text>
+  <text x="80" y="746" font-family="Arial,sans-serif" font-size="13" fill="#a78bfa">Agentix 차별화: 기존 산업로봇에 AI 레이어 추가 → CAPEX 절감</text>
+  <text x="80" y="774" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">리스크: 아직 영업이익 적자 · 고객 농도 집중(상위 3개사 60%)</text>
+  <text x="80" y="800" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">IPO 날짜: 2026년 7월 중순 예정 · 상장 후 락업 180일</text>
+
+  <rect y="842" width="1080" height="2" fill="#a78bfa"/>
+  <rect y="844" width="1080" height="236" fill="#0d1117"/>
+  <text x="540" y="890" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Agentix IPO $4.5B — 로봇 AI 플랫폼, 2026년 최대 기술 IPO</text>
+  <text x="540" y="918" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+  <rect y="942" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="965" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">AGTX · IPO · 로보틱스 · AI플랫폼</text>
+</svg>

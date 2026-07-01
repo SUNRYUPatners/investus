@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+    <linearGradient id="redBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="4" fill="url(#redBlue)"/>
+
+  <!-- Header -->
+  <rect x="40" y="24" width="1000" height="90" rx="12" fill="#161b22" opacity="0.9"/>
+  <text x="60" y="58" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="#60a5fa" letter-spacing="4">INVESTUS DAILY REPORT</text>
+  <text x="60" y="100" font-family="Arial Black, sans-serif" font-size="26" font-weight="900" fill="white">TSLA · Cybercab Interior Revealed</text>
+  <rect x="880" y="38" width="148" height="34" rx="17" fill="#60a5fa" opacity="0.9"/>
+  <text x="954" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">2026.07.01</text>
+
+  <!-- Screen comparison -->
+  <rect x="40" y="135" width="1000" height="300" rx="16" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+  <text x="540" y="165" font-family="Arial Black, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle" letter-spacing="2">SCREEN SIZE COMPARISON</text>
+
+  <rect x="80" y="185" width="180" height="210" rx="10" fill="url(#screenGrad)" stroke="#374151" stroke-width="2"/>
+  <rect x="90" y="195" width="160" height="100" rx="6" fill="#0f172a"/>
+  <rect x="95" y="200" width="150" height="8" rx="2" fill="#374151"/>
+  <rect x="95" y="214" width="120" height="6" rx="2" fill="#374151"/>
+  <rect x="95" y="224" width="100" height="6" rx="2" fill="#374151"/>
+  <circle cx="170" cy="260" r="20" fill="#1e3a5f" stroke="#374151" stroke-width="1"/>
+  <text x="170" y="266" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">MAP</text>
+  <text x="170" y="325" font-family="Arial Black, sans-serif" font-size="28" fill="#9ca3af" text-anchor="middle" font-weight="900">15.4"</text>
+  <text x="170" y="355" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">Model 3</text>
+  <text x="170" y="374" font-family="Arial, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Previous Gen</text>
+
+  <text x="330" y="300" font-family="Arial Black, sans-serif" font-size="32" fill="#374151" text-anchor="middle" font-weight="900">VS</text>
+
+  <rect x="390" y="175" width="350" height="260" rx="12" fill="url(#screenGrad)" stroke="#60a5fa" stroke-width="3" filter="url(#glow)"/>
+  <rect x="405" y="188" width="320" height="180" rx="8" fill="#0a0f1a"/>
+  <rect x="415" y="198" width="200" height="110" rx="4" fill="#111827"/>
+  <polygon points="480,240 480,270 510,255" fill="#ef4444"/>
+  <rect x="625" y="198" width="85" height="15" rx="3" fill="#1e3a5f"/>
+  <rect x="625" y="220" width="75" height="10" rx="3" fill="#1e3a5f"/>
+  <rect x="625" y="236" width="65" height="10" rx="3" fill="#1e3a5f"/>
+  <rect x="625" y="252" width="85" height="10" rx="3" fill="#1e3a5f"/>
+  <rect x="415" y="318" width="130" height="40" rx="4" fill="#1e3a5f"/>
+  <text x="480" y="344" font-family="Arial, sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">Google Maps</text>
+  <rect x="555" y="318" width="130" height="40" rx="4" fill="#1e293b"/>
+  <text x="620" y="344" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">YouTube</text>
+  <text x="565" y="435" font-family="Arial Black, sans-serif" font-size="36" fill="#60a5fa" text-anchor="middle" font-weight="900" filter="url(#glow)">~27"</text>
+  <text x="565" y="415" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Cybercab</text>
+
+  <line x1="280" y1="380" x2="395" y2="380" stroke="#374151" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="336" y="395" font-family="Arial, sans-serif" font-size="11" fill="#22c55e" text-anchor="middle">+75%</text>
+
+  <rect x="780" y="175" width="240" height="260" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="900" y="208" font-family="Arial Black, sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle" letter-spacing="2">SPECS</text>
+  <rect x="795" y="220" width="210" height="32" rx="6" fill="#1e293b"/>
+  <text x="810" y="241" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">Screen</text>
+  <text x="995" y="241" font-family="Arial Black, sans-serif" font-size="14" fill="#60a5fa" text-anchor="end" font-weight="700">~27"</text>
+  <rect x="795" y="258" width="210" height="32" rx="6" fill="#1e293b"/>
+  <text x="810" y="279" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">Wheel/Pedals</text>
+  <text x="995" y="279" font-family="Arial Black, sans-serif" font-size="14" fill="#ef4444" text-anchor="end" font-weight="700">None</text>
+  <rect x="795" y="296" width="210" height="32" rx="6" fill="#1e293b"/>
+  <text x="810" y="317" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">System</text>
+  <text x="995" y="317" font-family="Arial Black, sans-serif" font-size="14" fill="#22c55e" text-anchor="end" font-weight="700">48V</text>
+  <rect x="795" y="334" width="210" height="32" rx="6" fill="#1e293b"/>
+  <text x="810" y="355" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">Drivetrain</text>
+  <text x="995" y="355" font-family="Arial Black, sans-serif" font-size="14" fill="#9ca3af" text-anchor="end" font-weight="700">FWD</text>
+  <rect x="795" y="372" width="210" height="32" rx="6" fill="#1e293b"/>
+  <text x="810" y="393" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">Weight</text>
+  <text x="995" y="393" font-family="Arial Black, sans-serif" font-size="14" fill="#9ca3af" text-anchor="end" font-weight="700">2,150 lbs</text>
+
+  <!-- Feature cards -->
+  <text x="60" y="470" font-family="Arial Black, sans-serif" font-size="16" fill="#9ca3af" font-weight="700" letter-spacing="2">INTERIOR KEY FEATURES</text>
+
+  <rect x="40" y="488" width="230" height="120" rx="14" fill="url(#cardGrad)" stroke="#ef4444" stroke-width="1"/>
+  <text x="155" y="525" font-family="Arial, sans-serif" font-size="32" text-anchor="middle">🚫</text>
+  <text x="155" y="558" font-family="Arial Black, sans-serif" font-size="14" fill="#ef4444" text-anchor="middle" font-weight="700">No Wheel / Pedals</text>
+  <text x="155" y="578" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Fully Autonomous Design</text>
+  <text x="155" y="598" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Purpose-built AV</text>
+
+  <rect x="286" y="488" width="230" height="120" rx="14" fill="url(#cardGrad)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="401" y="520" font-family="Arial Black, sans-serif" font-size="28" fill="#60a5fa" text-anchor="middle" font-weight="900">~27"</text>
+  <text x="401" y="548" font-family="Arial Black, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="700">Large Touchscreen</text>
+  <text x="401" y="568" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">vs 15.4" (Model 3)</text>
+  <text x="401" y="595" font-family="Arial, sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">+75% Bigger</text>
+
+  <rect x="532" y="488" width="230" height="120" rx="14" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1"/>
+  <text x="647" y="525" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">📺</text>
+  <text x="647" y="555" font-family="Arial Black, sans-serif" font-size="13" fill="#a855f7" text-anchor="middle" font-weight="700">Streaming</text>
+  <text x="647" y="575" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Movies · YouTube · Maps</text>
+  <text x="647" y="595" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">In-ride Entertainment</text>
+
+  <rect x="778" y="488" width="262" height="120" rx="14" fill="url(#cardGrad)" stroke="#22c55e" stroke-width="1"/>
+  <text x="909" y="520" font-family="Arial Black, sans-serif" font-size="28" fill="#22c55e" text-anchor="middle" font-weight="900">300mi</text>
+  <text x="909" y="548" font-family="Arial Black, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="700">Estimated Range</text>
+  <text x="909" y="568" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">~483 km</text>
+  <text x="909" y="595" font-family="Arial, sans-serif" font-size="11" fill="#22c55e" text-anchor="middle">Single Charge</text>
+
+  <!-- Vehicle cross section -->
+  <rect x="40" y="630" width="1000" height="280" rx="16" fill="#0a0f1a" stroke="#1e293b" stroke-width="1"/>
+  <text x="60" y="660" font-family="Arial Black, sans-serif" font-size="15" fill="#9ca3af" letter-spacing="2">CYBERCAB CROSS SECTION</text>
+  <path d="M 200,730 Q 540,680 880,730" fill="none" stroke="#374151" stroke-width="3"/>
+  <path d="M 240,730 Q 400,695 560,720" fill="#0f172a" stroke="#4b5563" stroke-width="2" opacity="0.8"/>
+  <path d="M 560,720 Q 720,695 840,730" fill="#0f172a" stroke="#4b5563" stroke-width="2" opacity="0.8"/>
+  <rect x="160" y="730" width="760" height="80" rx="8" fill="#1e293b"/>
+  <circle cx="280" cy="810" r="40" fill="#111827" stroke="#374151" stroke-width="3"/>
+  <circle cx="280" cy="810" r="22" fill="#1e293b" stroke="#4b5563" stroke-width="2"/>
+  <circle cx="800" cy="810" r="40" fill="#111827" stroke="#374151" stroke-width="3"/>
+  <circle cx="800" cy="810" r="22" fill="#1e293b" stroke="#4b5563" stroke-width="2"/>
+  <rect x="380" y="700" width="200" height="110" rx="6" fill="#0f172a" stroke="#60a5fa" stroke-width="2" filter="url(#glow)"/>
+  <text x="480" y="755" font-family="Arial Black, sans-serif" font-size="14" fill="#60a5fa" text-anchor="middle">~27" SCREEN</text>
+  <text x="480" y="778" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Infotainment</text>
+  <text x="180" y="770" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">No Wheel</text>
+  <text x="180" y="782" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">No Pedals</text>
+  <text x="850" y="745" font-family="Arial, sans-serif" font-size="11" fill="#22c55e">FWD</text>
+  <text x="850" y="758" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af">2,150 lbs</text>
+  <text x="850" y="771" font-family="Arial, sans-serif" font-size="11" fill="#60a5fa">48V System</text>
+  <text x="850" y="784" font-family="Arial, sans-serif" font-size="11" fill="#22c55e">300mi Range</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1044" width="1080" height="36" fill="#0f172a"/>
+  <text x="540" y="1068" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">~27" screen, no wheel/pedals, 300mi range — Cybercab interior innovation unveiled · INVESTUS · 2026.07.01 · For reference only</text>
+</svg>

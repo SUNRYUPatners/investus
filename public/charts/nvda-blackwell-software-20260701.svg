@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#1d4ed8"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="blueGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#93c5fd"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <circle cx="900" cy="250" r="280" fill="#60a5fa" opacity="0.04"/>
+  <circle cx="150" cy="800" r="220" fill="#3b82f6" opacity="0.04"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1080" height="90" fill="#60a5fa" opacity="0.09"/>
+  <rect x="0" y="88" width="1080" height="2" fill="#60a5fa" opacity="0.6"/>
+  <text x="54" y="52" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#60a5fa" letter-spacing="4">INVESTUS DAILY REPORT</text>
+  <rect x="870" y="26" width="160" height="36" rx="18" fill="#60a5fa" opacity="0.15"/>
+  <rect x="870" y="26" width="160" height="36" rx="18" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="950" y="49" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">2026.07.01</text>
+
+  <!-- Title -->
+  <text x="54" y="150" font-family="Arial,sans-serif" font-size="42" font-weight="900" fill="#ffffff">NVIDIA BLACKWELL</text>
+  <text x="54" y="198" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#60a5fa">소프트웨어 최적화 발표 · 전 레이어 성능 향상</text>
+  <rect x="54" y="218" width="90" height="30" rx="6" fill="#60a5fa" opacity="0.2"/>
+  <text x="99" y="238" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#60a5fa" text-anchor="middle">$NVDA</text>
+
+  <!-- Chip icon area -->
+  <rect x="54" y="268" width="340" height="320" rx="16" fill="#0a1628" stroke="#60a5fa" stroke-width="2"/>
+  <!-- Chip graphic -->
+  <rect x="134" y="318" width="180" height="180" rx="12" fill="#60a5fa" opacity="0.15" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="154" y="338" width="140" height="140" rx="8" fill="#60a5fa" opacity="0.1"/>
+  <!-- Chip pins -->
+  <rect x="104" y="350" width="30" height="8" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <rect x="104" y="375" width="30" height="8" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <rect x="104" y="400" width="30" height="8" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <rect x="104" y="425" width="30" height="8" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <rect x="314" y="350" width="30" height="8" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <rect x="314" y="375" width="30" height="8" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <rect x="314" y="400" width="30" height="8" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <rect x="314" y="425" width="30" height="8" rx="2" fill="#60a5fa" opacity="0.6"/>
+  <text x="224" y="415" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="middle" filter="url(#glow)">GB200</text>
+  <text x="224" y="440" font-family="Arial,sans-serif" font-size="13" fill="#93c5fd" text-anchor="middle">BLACKWELL</text>
+  <text x="224" y="565" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">GPU 아키텍처</text>
+
+  <!-- DeepSeek performance improvement -->
+  <rect x="430" y="268" width="596" height="320" rx="16" fill="#0a1628" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="728" y="310" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle" letter-spacing="2">DeepSeek-R1 성능 개선</text>
+
+  <!-- Bar chart: before vs after -->
+  <!-- Before bar -->
+  <rect x="530" y="418" width="90" height="130" rx="6" fill="#374151"/>
+  <text x="575" y="408" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">이전</text>
+  <text x="575" y="565" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Baseline</text>
+
+  <!-- After bar -->
+  <rect x="700" y="348" width="90" height="200" rx="6" fill="url(#blueGrad)"/>
+  <text x="745" y="338" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#60a5fa" text-anchor="middle">+14~18%</text>
+  <text x="745" y="565" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">최적화 후</text>
+
+  <!-- percentage badge -->
+  <rect x="860" y="380" width="130" height="64" rx="10" fill="#60a5fa"/>
+  <text x="925" y="406" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">PERF GAIN</text>
+  <text x="925" y="433" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">+18%</text>
+
+  <!-- Optimization layers -->
+  <text x="540" y="636" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" text-anchor="middle" letter-spacing="2">최적화 레이어 스택</text>
+
+  <!-- Layer bars -->
+  <rect x="54" y="658" width="972" height="52" rx="10" fill="#0a1628" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.8"/>
+  <text x="540" y="690" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#60a5fa" text-anchor="middle">SOFTWARE / ALGORITHMS</text>
+
+  <rect x="54" y="724" width="972" height="52" rx="10" fill="#0a1628" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.6"/>
+  <text x="540" y="756" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#93c5fd" text-anchor="middle">CUDA / LIBRARIES</text>
+
+  <rect x="54" y="790" width="972" height="52" rx="10" fill="#0a1628" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="822" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#bfdbfe" text-anchor="middle">NETWORKING / INFINIBAND</text>
+
+  <rect x="54" y="856" width="972" height="52" rx="10" fill="#0a1628" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="540" y="888" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#dbeafe" text-anchor="middle">HARDWARE / BLACKWELL GPU</text>
+
+  <!-- Footer -->
+  <rect x="0" y="990" width="1080" height="90" fill="#60a5fa" opacity="0.09"/>
+  <rect x="0" y="990" width="1080" height="2" fill="#60a5fa" opacity="0.5"/>
+  <text x="540" y="1030" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#60a5fa" text-anchor="middle">소프트웨어·CUDA·네트워킹·하드웨어 전 레이어 최적화 · DeepSeek-R1 +14~18% 성능 향상</text>
+  <text x="540" y="1058" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+</svg>

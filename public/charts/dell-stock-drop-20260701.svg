@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient></defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Dell $DELL 주가 급락 분석</text>
+  <rect y="88" width="1080" height="3" fill="#ef4444"/>
+  <rect x="30" y="106" width="150" height="34" rx="17" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="105" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">2026. 07. 01</text>
+
+  <rect x="60" y="155" width="960" height="130" rx="18" fill="#1a0000" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="195" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Dell Technologies — 실적 경고 후 주가 급락</text>
+  <text x="540" y="248" font-family="Arial,sans-serif" font-size="64" font-weight="bold" fill="#ef4444" text-anchor="middle">-18%</text>
+  <text x="540" y="278" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">가이던스 하향 · PC 수요 부진 · 마진 압박</text>
+
+  <!-- Price chart visual -->
+  <rect x="60" y="308" width="460" height="260" rx="16" fill="#111318" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="290" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">DELL 주가 흐름</text>
+  <!-- simplified line chart going down -->
+  <polyline points="100,380 160,375 220,370 280,390 320,385 360,420 400,450 460,490" fill="none" stroke="#ef4444" stroke-width="3"/>
+  <circle cx="460" cy="490" r="6" fill="#ef4444"/>
+  <text x="475" y="494" font-family="Arial,sans-serif" font-size="12" fill="#ef4444">-18%</text>
+  <text x="105" y="380" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">$145</text>
+  <text x="105" y="494" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">$119</text>
+  <line x1="90" y1="380" x2="480" y2="380" stroke="#1e2028" stroke-width="1" stroke-dasharray="4"/>
+  <text x="290" y="545" font-family="Arial,sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">52주 신저가 근접 중</text>
+  <text x="290" y="563" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">가이던스 발표 후 하루 만에 -18%</text>
+
+  <!-- Drop causes -->
+  <rect x="560" y="308" width="460" height="260" rx="16" fill="#1a0000" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="790" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">급락 원인 분석</text>
+  <text x="790" y="376" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">1. PC 수요 부진 장기화</text>
+  <text x="790" y="402" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">기업 PC 교체 수요 지연</text>
+  <text x="790" y="430" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">2. ISG 마진 압박</text>
+  <text x="790" y="456" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">AI 서버 원가 상승 · 가격경쟁</text>
+  <text x="790" y="484" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">3. 가이던스 하향</text>
+  <text x="790" y="510" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">FY2027 매출 전망 하향 조정</text>
+  <text x="790" y="546" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">AI 서버 모멘텀으로 상쇄 기대했으나 부족</text>
+
+  <!-- Dell business -->
+  <rect x="60" y="590" width="960" height="240" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="622" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">DELL 사업부 현황</text>
+  <line x1="80" y1="632" x2="1000" y2="632" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="662" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">ISG(서버/스토리지): AI 서버 수요 증가 중 · NVIDIA GPU 서버 판매 호조</text>
+  <text x="80" y="690" font-family="Arial,sans-serif" font-size="14" fill="#ef4444">CSG(PC): 기업 PC 수요 회복 지연 · 마진 하락 압박</text>
+  <text x="80" y="718" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">총 매출: $92B(FY2026) · AI 서버 수주잔고 $9B+</text>
+  <text x="80" y="746" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b">관전포인트: AI 서버 성장이 PC 부진 얼마나 상쇄하느냐</text>
+  <text x="80" y="774" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">현재 PER 약 14x → 저평가 vs 성장 둔화 우려 공존</text>
+  <text x="80" y="800" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">반등 포인트: AI 인프라 사이클 지속 시 ISG가 전사 성장 견인 가능</text>
+
+  <rect y="842" width="1080" height="2" fill="#ef4444"/>
+  <rect y="844" width="1080" height="236" fill="#0d1117"/>
+  <text x="540" y="890" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Dell -18% 급락 — PC 부진 + 가이던스 쇼크, AI 서버 구원투수 될까</text>
+  <text x="540" y="918" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+  <rect y="942" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="965" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">DELL · PC · AI서버 · 가이던스</text>
+</svg>

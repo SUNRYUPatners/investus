@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+    <linearGradient id="redBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="4" fill="url(#redBlue)"/>
+
+  <!-- Header -->
+  <rect x="40" y="24" width="1000" height="90" rx="12" fill="#161b22" opacity="0.9"/>
+  <text x="60" y="58" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="#60a5fa" letter-spacing="4">INVESTUS DAILY REPORT</text>
+  <text x="60" y="100" font-family="Arial Black, sans-serif" font-size="26" font-weight="900" fill="white">TSLA · Q2 배송 컨센서스</text>
+  <rect x="880" y="38" width="148" height="34" rx="17" fill="#60a5fa" opacity="0.9"/>
+  <text x="954" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">2026.07.01</text>
+
+  <!-- Consensus avg badge -->
+  <rect x="40" y="135" width="1000" height="90" rx="14" fill="url(#cardGrad)" stroke="#60a5fa" stroke-width="2"/>
+  <text x="200" y="185" font-family="Arial Black, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">8개 기관</text>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Wall Street Consensus</text>
+  <line x1="330" y1="150" x2="330" y2="215" stroke="#1e293b" stroke-width="1"/>
+  <text x="540" y="178" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="#60a5fa" text-anchor="middle" filter="url(#glow)">~416,000</text>
+  <text x="540" y="210" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Q2 2026 컨센서스 평균</text>
+  <line x1="750" y1="150" x2="750" y2="215" stroke="#1e293b" stroke-width="1"/>
+  <text x="890" y="178" font-family="Arial Black, sans-serif" font-size="18" fill="#22c55e" text-anchor="middle">2026 Q2</text>
+  <text x="890" y="200" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">배송 예상</text>
+
+  <!-- Chart title -->
+  <text x="60" y="268" font-family="Arial Black, sans-serif" font-size="15" fill="#9ca3af" font-weight="700" letter-spacing="2">기관별 Q2 배송 전망 (단위: 대)</text>
+
+  <!-- Bar chart - 8 institutions -->
+  <!-- Scale: max 426017, chart width ~680px, starting x=280 -->
+  <!-- Bar height 55px, gap 10px, starting y=285 -->
+
+  <!-- GLJ Research: 426,017 -->
+  <rect x="50" y="285" width="215" height="52" rx="6" fill="#0f172a"/>
+  <text x="240" y="319" font-family="Arial Black, sans-serif" font-size="15" fill="white" text-anchor="end">GLJ Research</text>
+  <rect x="265" y="289" width="686" height="44" rx="6" fill="#ef4444" opacity="0.2"/>
+  <rect x="265" y="289" width="686" height="44" rx="6" fill="#ef4444"/>
+  <text x="963" y="317" font-family="Arial Black, sans-serif" font-size="16" fill="white" font-weight="900" text-anchor="end">426,017</text>
+  <rect x="265" y="330" width="686" height="3" rx="1" fill="#ef4444" opacity="0.4"/>
+
+  <!-- JPMorgan: 420,000 -->
+  <rect x="50" y="345" width="215" height="52" rx="6" fill="#0f172a"/>
+  <text x="240" y="379" font-family="Arial Black, sans-serif" font-size="15" fill="white" text-anchor="end">JPMorgan</text>
+  <rect x="265" y="349" width="677" height="44" rx="6" fill="#60a5fa" opacity="0.2"/>
+  <rect x="265" y="349" width="677" height="44" rx="6" fill="#3b82f6"/>
+  <text x="954" y="377" font-family="Arial Black, sans-serif" font-size="16" fill="white" font-weight="900" text-anchor="end">420,000</text>
+
+  <!-- Goldman Sachs: 420,000 -->
+  <rect x="50" y="405" width="215" height="52" rx="6" fill="#0f172a"/>
+  <text x="240" y="439" font-family="Arial Black, sans-serif" font-size="15" fill="white" text-anchor="end">Goldman Sachs</text>
+  <rect x="265" y="409" width="677" height="44" rx="6" fill="#3b82f6" opacity="0.85"/>
+  <text x="954" y="437" font-family="Arial Black, sans-serif" font-size="16" fill="white" font-weight="900" text-anchor="end">420,000</text>
+
+  <!-- Barclays: 418,000 -->
+  <rect x="50" y="465" width="215" height="52" rx="6" fill="#0f172a"/>
+  <text x="240" y="499" font-family="Arial Black, sans-serif" font-size="15" fill="white" text-anchor="end">Barclays</text>
+  <rect x="265" y="469" width="673" height="44" rx="6" fill="#2563eb" opacity="0.85"/>
+  <text x="950" y="497" font-family="Arial Black, sans-serif" font-size="16" fill="white" font-weight="900" text-anchor="end">418,000</text>
+
+  <!-- Morgan Stanley: 413,000 -->
+  <rect x="50" y="525" width="215" height="52" rx="6" fill="#0f172a"/>
+  <text x="240" y="559" font-family="Arial Black, sans-serif" font-size="15" fill="white" text-anchor="end">Morgan Stanley</text>
+  <rect x="265" y="529" width="665" height="44" rx="6" fill="#1d4ed8" opacity="0.9"/>
+  <text x="942" y="557" font-family="Arial Black, sans-serif" font-size="16" fill="white" font-weight="900" text-anchor="end">413,000</text>
+
+  <!-- RBC Capital: 405,000 -->
+  <rect x="50" y="585" width="215" height="52" rx="6" fill="#0f172a"/>
+  <text x="240" y="619" font-family="Arial Black, sans-serif" font-size="15" fill="white" text-anchor="end">RBC Capital</text>
+  <rect x="265" y="589" width="653" height="44" rx="6" fill="#1e40af" opacity="0.9"/>
+  <text x="930" y="617" font-family="Arial Black, sans-serif" font-size="16" fill="white" font-weight="900" text-anchor="end">405,000</text>
+
+  <!-- UBS: 405,000 -->
+  <rect x="50" y="645" width="215" height="52" rx="6" fill="#0f172a"/>
+  <text x="240" y="679" font-family="Arial Black, sans-serif" font-size="15" fill="white" text-anchor="end">UBS</text>
+  <rect x="265" y="649" width="653" height="44" rx="6" fill="#1e3a8a" opacity="0.9"/>
+  <text x="930" y="677" font-family="Arial Black, sans-serif" font-size="16" fill="white" font-weight="900" text-anchor="end">405,000</text>
+
+  <!-- Baird: 392,900 (lowest) -->
+  <rect x="50" y="705" width="215" height="52" rx="6" fill="#0f172a"/>
+  <text x="240" y="739" font-family="Arial Black, sans-serif" font-size="15" fill="#9ca3af" text-anchor="end">Baird</text>
+  <rect x="265" y="709" width="633" height="44" rx="6" fill="#374151" opacity="0.9"/>
+  <text x="910" y="737" font-family="Arial Black, sans-serif" font-size="16" fill="#9ca3af" font-weight="900" text-anchor="end">392,900</text>
+  <text x="265" y="765" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">최저 전망</text>
+
+  <!-- Consensus line -->
+  <line x1="940" y1="275" x2="940" y2="765" stroke="#60a5fa" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
+  <rect x="910" y="755" width="110" height="22" rx="11" fill="#60a5fa"/>
+  <text x="965" y="771" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="700" text-anchor="middle">컨센서스 ~416K</text>
+
+  <!-- X-axis labels -->
+  <text x="265" y="780" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">380K</text>
+  <text x="490" y="780" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">400K</text>
+  <text x="715" y="780" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">420K</text>
+  <text x="940" y="780" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">440K</text>
+
+  <!-- Summary cards -->
+  <rect x="40" y="800" width="320" height="90" rx="12" fill="url(#cardGrad)" stroke="#ef4444" stroke-width="1"/>
+  <text x="200" y="835" font-family="Arial Black, sans-serif" font-size="22" fill="#ef4444" text-anchor="middle" font-weight="900">426,017</text>
+  <text x="200" y="858" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">최고 전망 (GLJ Research)</text>
+  <text x="200" y="878" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Highest Estimate</text>
+
+  <rect x="380" y="800" width="320" height="90" rx="12" fill="url(#cardGrad)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="835" font-family="Arial Black, sans-serif" font-size="22" fill="#60a5fa" text-anchor="middle" font-weight="900">~416,000</text>
+  <text x="540" y="858" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">컨센서스 평균 (8개 기관)</text>
+  <text x="540" y="878" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Consensus Average</text>
+
+  <rect x="720" y="800" width="320" height="90" rx="12" fill="url(#cardGrad)" stroke="#374151" stroke-width="1"/>
+  <text x="880" y="835" font-family="Arial Black, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle" font-weight="900">392,900</text>
+  <text x="880" y="858" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">최저 전망 (Baird)</text>
+  <text x="880" y="878" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Lowest Estimate</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1044" width="1080" height="36" fill="#0f172a"/>
+  <text x="540" y="1068" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">8개 기관 컨센서스 ~416,000대 — GLJ 426K 최고, Baird 392K 최저 · INVESTUS · 2026.07.01 · 투자 참고용</text>
+</svg>

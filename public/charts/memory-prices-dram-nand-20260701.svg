@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient></defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">메모리 가격 동향 · DRAM/NAND 전망</text>
+  <rect y="88" width="1080" height="3" fill="#60a5fa"/>
+  <rect x="30" y="106" width="150" height="34" rx="17" fill="rgba(96,165,250,0.12)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="105" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#60a5fa" text-anchor="middle">2026. 07. 01</text>
+
+  <rect x="60" y="155" width="960" height="130" rx="18" fill="#0a1520" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="195" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">DRAM/NAND 가격 사이클 — AI 수요 회복 vs 공급 과잉 우려</text>
+  <text x="540" y="248" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#60a5fa" text-anchor="middle">HBM 품귀 · 일반 DRAM 약세</text>
+  <text x="540" y="278" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">SK하이닉스 · 마이크론 · 삼성 수혜 차별화</text>
+
+  <!-- DRAM price chart -->
+  <rect x="60" y="308" width="460" height="260" rx="16" fill="#111318" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="290" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">DRAM 가격 추이 (DDR5 8Gb)</text>
+  <polyline points="100,480 150,460 200,430 250,410 300,400 350,380 400,370 450,360" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="460" y="358" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">HBM↑</text>
+  <polyline points="100,400 150,410 200,430 250,450 300,460 350,470 400,475 450,480" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="460" y="484" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">DDR4↓</text>
+  <line x1="90" y1="430" x2="480" y2="430" stroke="#1e2028" stroke-width="1" stroke-dasharray="4"/>
+  <text x="290" y="545" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">HBM 공급부족 vs 일반 DRAM 과잉 공존</text>
+  <text x="290" y="562" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">AI 서버용 HBM3E → 품귀 지속</text>
+
+  <!-- NAND/company cards -->
+  <rect x="560" y="308" width="460" height="260" rx="16" fill="#0a1520" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="790" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">수혜 종목 분석</text>
+  <!-- SK Hynix -->
+  <rect x="580" y="356" width="200" height="60" rx="8" fill="#0d2a0d" stroke="#4ade80" stroke-width="1"/>
+  <text x="680" y="380" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#4ade80" text-anchor="middle">SK하이닉스 (000660)</text>
+  <text x="680" y="402" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">HBM 1위 · NVIDIA 독점공급</text>
+  <!-- Micron -->
+  <rect x="800" y="356" width="200" height="60" rx="8" fill="#0d1a2a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="900" y="380" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#60a5fa" text-anchor="middle">Micron (MU)</text>
+  <text x="900" y="402" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">HBM 2위 추격 · 데이터센터</text>
+  <!-- Samsung -->
+  <rect x="580" y="430" width="200" height="60" rx="8" fill="#1a1a0d" stroke="#f59e0b" stroke-width="1"/>
+  <text x="680" y="454" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">삼성전자 (005930)</text>
+  <text x="680" y="476" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">NAND 1위 · HBM 열위</text>
+  <text x="790" y="520" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">NAND 공급과잉 우려 지속</text>
+  <text x="790" y="546" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">PC·스마트폰 NAND 수요 부진</text>
+
+  <!-- Market data -->
+  <rect x="60" y="590" width="960" height="240" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="622" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">메모리 시장 핵심 지표</text>
+  <line x1="80" y1="632" x2="1000" y2="632" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="662" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">HBM3E: AI 서버 수요 폭증 · 2026년 공급부족 지속 예상 · 마진 50%+</text>
+  <text x="80" y="690" font-family="Arial,sans-serif" font-size="14" fill="#ef4444">DDR4/DDR5 PC용: 공급과잉 · 가격 하락 추세 · 2Q26 소폭 회복</text>
+  <text x="80" y="718" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">NAND (QLC): 스마트폰·PC 수요 개선 신호 미약 · 가격 횡보</text>
+  <text x="80" y="746" font-family="Arial,sans-serif" font-size="13" fill="#60a5fa">투자 포인트: HBM 노출 높은 SK하이닉스·마이크론이 삼성보다 유리</text>
+  <text x="80" y="774" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">NVIDIA GB200/GB300 출하 → HBM3E 수요 2027까지 타이트</text>
+  <text x="80" y="800" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">MU 목표가 상향: $160 (하나증권) · 상반기 HBM 매출 $5B+ 예상</text>
+
+  <rect y="842" width="1080" height="2" fill="#60a5fa"/>
+  <rect y="844" width="1080" height="236" fill="#0d1117"/>
+  <text x="540" y="890" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">메모리 양극화 — HBM 품귀 vs NAND 과잉, 수혜주는?</text>
+  <text x="540" y="918" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+  <rect y="942" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="965" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">DRAM · NAND · HBM · 메모리사이클</text>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080c12"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1e12"/>
+      <stop offset="100%" style="stop-color:#0a1510"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">TSLA · Terafab Key Hires</text>
+  <rect y="88" width="1080" height="3" fill="#60a5fa"/>
+  <!-- Date badge -->
+  <rect x="30" y="106" width="150" height="34" rx="17" fill="rgba(96,165,250,0.12)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="105" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#60a5fa" text-anchor="middle">2026. 07. 01</text>
+  <rect x="200" y="106" width="130" height="34" rx="17" fill="rgba(96,165,250,0.08)"/>
+  <text x="265" y="128" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">Stock Analysis · TSLA</text>
+
+  <!-- Hero label -->
+  <text x="540" y="182" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle" letter-spacing="2">TERA FAB — TESLA'S IN-HOUSE SEMICONDUCTOR FACILITY</text>
+
+  <!-- Flow diagram: Intel → Gary Jiang → Tesla Terafab -->
+  <!-- Intel box -->
+  <rect x="60" y="210" width="240" height="130" rx="16" fill="#111827" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="180" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">FROM</text>
+  <text x="180" y="276" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#60a5fa" text-anchor="middle">INTEL</text>
+  <text x="180" y="300" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">18A Process Node</text>
+  <text x="180" y="320" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Factory Manager</text>
+
+  <!-- Arrow -->
+  <rect x="320" y="265" width="100" height="8" rx="4" fill="url(#arrowGrad)"/>
+  <polygon points="418,257 438,269 418,281" fill="#60a5fa"/>
+
+  <!-- Tesla Terafab box -->
+  <rect x="448" y="210" width="240" height="130" rx="16" fill="#0f1a10" stroke="#4ade80" stroke-width="2"/>
+  <text x="568" y="248" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">TO</text>
+  <text x="568" y="276" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">TESLA TERAFAB</text>
+  <text x="568" y="300" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Gary Jiang</text>
+  <text x="568" y="320" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Director (Jun 2026–)</text>
+
+  <!-- Intel 18A chip icon (simplified) -->
+  <rect x="790" y="215" width="230" height="120" rx="14" fill="#111827" stroke="#6b7280" stroke-width="1"/>
+  <text x="905" y="255" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">INTEL 18A NODE</text>
+  <rect x="840" y="268" width="130" height="40" rx="6" fill="#1e2a3a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="905" y="293" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#60a5fa" text-anchor="middle">18Å Process</text>
+  <text x="905" y="320" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Intel's most advanced node</text>
+
+  <!-- Lara Park hire -->
+  <rect x="60" y="368" width="960" height="100" rx="16" fill="#0f1520" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="80" y="404" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">NEXT HIRE:</text>
+  <text x="200" y="404" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e5e7eb">Lara Park  —  Semiconductor Manufacturing Director</text>
+  <text x="80" y="435" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">7+ years at Tesla · Chip manufacturing · Supply chain optimization</text>
+  <text x="860" y="420" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">+2</text>
+  <text x="860" y="445" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Key Hires</text>
+
+  <!-- What Terafab means -->
+  <rect x="60" y="490" width="960" height="220" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="522" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">WHY TERAFAB MATTERS</text>
+  <line x1="80" y1="532" x2="1000" y2="532" stroke="#1e2028" stroke-width="1"/>
+
+  <rect x="80" y="548" width="260" height="130" rx="12" fill="#0d1520" stroke="#60a5fa" stroke-width="1"/>
+  <text x="210" y="580" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Capability</text>
+  <text x="210" y="610" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#60a5fa" text-anchor="middle">Own Chip Fab</text>
+  <text x="210" y="635" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Tesla designs &amp; manufactures</text>
+  <text x="210" y="654" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">its own AI chips</text>
+  <text x="210" y="672" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">FSD / Dojo / Optimus chips</text>
+
+  <rect x="380" y="548" width="260" height="130" rx="12" fill="#0d1520" stroke="#4ade80" stroke-width="1"/>
+  <text x="510" y="580" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Strategic Value</text>
+  <text x="510" y="610" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">Supply Chain</text>
+  <text x="510" y="635" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">No TSMC dependency</text>
+  <text x="510" y="654" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">for critical AI chips</text>
+  <text x="510" y="672" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">Geopolitical hedge</text>
+
+  <rect x="680" y="548" width="260" height="130" rx="12" fill="#0d1520" stroke="#ef4444" stroke-width="1"/>
+  <text x="810" y="580" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Cost Edge</text>
+  <text x="810" y="610" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ef4444" text-anchor="middle">Vertical</text>
+  <text x="810" y="635" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ef4444" text-anchor="middle">Integration</text>
+  <text x="810" y="660" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Lower chip cost → higher</text>
+  <text x="810" y="678" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">AI profit margin</text>
+
+  <!-- Footer -->
+  <rect y="728" width="1080" height="2" fill="#60a5fa"/>
+  <rect y="730" width="1080" height="350" fill="#0d1117"/>
+  <text x="540" y="780" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Intel's 18A Expert Now Leads Tesla's In-House Chip Factory</text>
+  <text x="540" y="810" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · For investment reference only</text>
+
+  <!-- Ticker strip -->
+  <rect y="840" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="863" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">TSLA · TERAFAB · AI CHIPS · VERTICAL INTEGRATION</text>
+</svg>

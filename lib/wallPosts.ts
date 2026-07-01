@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T1JL = 1782860400000; // 2026-07-01 08:00 KST
 const T30J = 1782774000000; // 2026-06-30 08:00 KST
 const T26J = 1782428400000; // 2026-06-26 08:00 KST
 const T25J = 1782342000000; // 2026-06-25 08:00 KST
@@ -42,7 +43,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T30J;       // NEW 배지 기준
+export const LATEST_UPDATE = T1JL;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -61,6 +62,65 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-01 — TSLA Q2 480K·CyberCab Austin·FSD v46·Optimus·Semi /
+  //              SPCX Iridium $8B·Memphis / NVDA Blackwell / NKE Q4 /
+  //              Burry ADBE·Ackman AMZN·Dell -18%·Agentix IPO
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — Q2 납품 480K ────────────────────────────────────────────────
+  { id: 401, symbol: "TSLA", nickname: "익명_2841", holdingLabel: "500주 보유",
+    content: "480K 나왔다. 컨센서스 475K 뚫었어. 야간에 주가 쏠 거 같은데 내일 장 열리면 어떻게 될지 기대된다. 연간 200만대 페이스로 보면 7월 실적 발표에서 가이던스 상향 가능성도 있고. CyberCab 효과 반영되기 전인데 이미 이 정도면 나쁘지 않지.",
+    createdAt: T1JL + 10*60_000, likes: 1243, comments: 4 },
+  { id: 402, symbol: "TSLA", nickname: "익명_5573", holdingLabel: "200주 보유",
+    content: "Q2 480K 컨펌됐고 이제 시장이 Q3 전망에 집중할 것 같아요. CyberCab 오스틴 테스트 영상이랑 FSD 비감독 전국 확대 발표 타이밍이 완전 딱 맞았어요. 하반기 기대감 선반영 사이클 시작되는 것 같은데 개인적으로 $300 가기 전에 더 모아야겠다 싶어요.",
+    createdAt: T1JL + 25*60_000, likes: 867, comments: 3 },
+  { id: 403, symbol: "TSLA", nickname: "익명_9102", holdingLabel: "1000주 보유",
+    content: "솔직히 480K가 아니라 490K 기대했는데 살짝 아쉽긴 해. 그래도 컨센 상회니까 주가엔 플러스. 중국이 문제인데 상하이 판매가 얼마나 나왔냐에 따라 해석이 달라질 것 같아. BYD 공세에 중국 점유율 유지했으면 그게 진짜 서프라이즈.",
+    createdAt: T1JL + 45*60_000, likes: 534, comments: 2 },
+  { id: 404, symbol: "TSLA", nickname: "익명_3367", holdingLabel: "50주 보유",
+    content: "FSD v46 들어보니 야간 주행이 진짜 달라진 것 같더라. 비 오는 날 합류 구간에서 개입 한 번도 안 했다고. 예전엔 항상 불안했는데. 이게 v46이면 v47, v48 되면 어떻게 되는 거야? CyberCab 출시 전에 이미 완성형이 되어버릴 것 같은데.",
+    createdAt: T1JL + 1*3600_000, likes: 421, comments: 2 },
+
+  // TSLA — Optimus ────────────────────────────────────────────────────
+  { id: 405, symbol: "TSLA", nickname: "익명_7788", holdingLabel: "300주 보유",
+    content: "옵티머스 와인잔 드는 거 봤어요? 진짜 미쳤다. 작년에 블록 쌓는 거 보고 '아직 멀었다' 했는데 지금은 달걀도 집는다고. +180% 정밀도 개선이면 반년 만에 이게 가능한 거잖아요. 공장에서 전자 부품 조립에 쓸 수 있는 수준이 됐을 것 같아요.",
+    createdAt: T1JL + 1*3600_000 + 15*60_000, likes: 923, comments: 3 },
+  { id: 406, symbol: "TSLA", nickname: "익명_1129", holdingLabel: "100주 보유",
+    content: "Optimus 1만대 목표 2026년 말이라는데 월 500~600대 속도면 딱 맞네. 기가텍사스 안에서 부품 운반 1200대 가동 중이라고 하는데 이게 양산 전 실전 테스트잖아. 외판 시작되면 주당 수익에 기여하는 시점이 오는 거고 그게 진짜 밸류에이션 변화 트리거야.",
+    createdAt: T1JL + 2*3600_000, likes: 677, comments: 2 },
+
+  // SPCX — Iridium 인수 ─────────────────────────────────────────────
+  { id: 407, symbol: "SPCX", nickname: "익명_4451", holdingLabel: "200주 보유",
+    content: "Iridium 인수 소식 들었어? $8B인데 이건 그냥 기업 M&A가 아니야. 설계-제조-운영 수직통합이 완성되는 거야. 그동안 스페이스X가 위성 쏘아 올리는 건 했는데 운영 수익 모델이 약했잖아. Iridium이 군사·항공·해양 B2B 구독 $850M 매출이거든. 이게 반복 수익으로 붙는 거야.",
+    createdAt: T1JL + 30*60_000, likes: 1456, comments: 4 },
+  { id: 408, symbol: "SPCX", nickname: "익명_6634", holdingLabel: "500주 보유",
+    content: "Iridium 위성 66기가 극지방까지 커버한다는 게 핵심이에요. Starlink는 극지방 약한데 Iridium은 전 지구 커버에요. 군사용으로 이미 검증된 네트워크에 SpaceX 기술력이 붙으면 국방부 계약 대폭 확대 가능해요. $8B 투자가 3~4년 내 회수 가능한 구조예요.",
+    createdAt: T1JL + 50*60_000, likes: 1089, comments: 3 },
+
+  // NVDA ─────────────────────────────────────────────────────────────
+  { id: 409, symbol: "NVDA", nickname: "익명_3318", holdingLabel: "150주 보유",
+    content: "NVDA Blackwell 소프트웨어 ARR이 $2.5B이라고요? 하드웨어만 보던 사람들 이제 SW 수익도 봐야 해요. NIM API 쓰는 개발자 300만 명이면 CUDA처럼 생태계 락인이 되는 거거든요. GPU 경쟁사 나와도 소프트웨어 이미 다 CUDA 기반이니 갈아타기 어렵잖아요.",
+    createdAt: T1JL + 1*3600_000, likes: 789, comments: 3 },
+  { id: 410, symbol: "NVDA", nickname: "익명_8821", holdingLabel: "80주 보유",
+    content: "Azure GB800 + Claude 3.7 조합이라니. MS가 OpenAI 의존도 줄이려고 Anthropic 이중화 하는 건데 이게 NVDA한테는 GB800 대량 수요 확인이야. 10만 GPU 클러스터면 규모가 H100 시대 첫 메가클러스터급이잖아. 수주 가시성이 확실해졌어.",
+    createdAt: T1JL + 2*3600_000 + 30*60_000, likes: 634, comments: 2 },
+
+  // NKE ──────────────────────────────────────────────────────────────
+  { id: 411, symbol: "NKE", nickname: "익명_5529", holdingLabel: "관심종목",
+    content: "나이키 실적 생각보다 괜찮게 나왔네요. 중국 +15%면 회복 신호 맞고 Jordan이 +22%는 진짜 강한 거예요. PER 28배라 비싸 보이는데 실적 턴어라운드가 확인되면 재평가 가능하죠. EPS $1.04 나온 거 보면 애널들 예상 다 틀린 거잖아요. 어닝 서프라이즈 효과는 좀 있을 것 같아요.",
+    createdAt: T1JL + 3*3600_000, likes: 445, comments: 2 },
+
+  // AMZN — Ackman ────────────────────────────────────────────────────
+  { id: 412, symbol: "AMZN", nickname: "익명_2267", holdingLabel: "30주 보유",
+    content: "Ackman이 아마존 PER 30배가 역대 최저라고 하는 거 진짜야? 예전에 90배까지 갔다가 30배까지 내려온 거잖아. AWS만 따로 상장하면 $280B 가치인데 현재 시총이 $2.3T면 이커머스+광고 $1.5T 이상을 PER 30배에 사는 셈이라는 논리가 맞네. Ackman이 $2B 들어갔다는 거 보면 확신이 있는 거겠지.",
+    createdAt: T1JL + 4*3600_000, likes: 567, comments: 2 },
+
+  // DELL ─────────────────────────────────────────────────────────────
+  { id: 413, symbol: "DELL", nickname: "익명_9910", holdingLabel: "관심종목",
+    content: "Dell -18%면 공포 매도 구간이긴 한데... PER 14배면 싸긴 해요. 근데 PC 사이클이 언제 돌아오냐가 문제인 거죠. AI 서버 수주잔고 $9B 있다는데 이게 마진이 얼마나 나오냐가 핵심이에요. HP도 비슷한 상황인데 Dell이 AI 서버 비중은 더 높으니까 일단 지켜보고 있어요.",
+    createdAt: T1JL + 3*3600_000 + 30*60_000, likes: 334, comments: 1 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-06-30 — TSLA FSD V14 Lite HW3 400만·Cybercab Texas DPS 84대·Optimus 7/8 /
@@ -1632,6 +1692,66 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-01 신규 ──────────────────────────────────────────────────────
+  401: [
+    { id: 1, nickname: "익명_6612", holdingLabel: "200주 보유", content: "중국 판매분이 얼마나 포함됐냐가 핵심이에요. 상하이 수출이 살아났으면 Q3도 기대해볼 만한데. BYD랑 직접 비교했을 때 ASP 유지했으면 진짜 서프라이즈예요.", createdAt: T1JL + 15*60_000, likes: 234 },
+    { id: 2, nickname: "익명_3341", holdingLabel: "50주 보유", content: "컨센 상회인데 주가 반응 미지근하면 매수 기회인 거죠. 시장이 이미 기대치를 더 높게 잡은 게 아니라면요.", createdAt: T1JL + 20*60_000, likes: 156 },
+    { id: 3, nickname: "익명_8854", holdingLabel: "관심종목", content: "480K면 연간 페이스 190만대예요. CyberCab 더해지면 200만대 달성 충분히 가능해요. 7월 실적 발표에서 연간 가이던스 상향이 나올 것 같아요.", createdAt: T1JL + 35*60_000, likes: 189 },
+    { id: 4, nickname: "익명_7723", holdingLabel: "1000주 보유", content: "옵티머스 외판 시작되는 시점이 진짜 밸류에이션 점프 구간이에요. 그 전까지 납품 숫자로 판단하는 거고. 480K는 합격점.", createdAt: T1JL + 50*60_000, likes: 312 },
+  ],
+  402: [
+    { id: 1, nickname: "익명_4419", holdingLabel: "300주 보유", content: "FSD 비감독 전국 확대 타이밍이 Q2 납품 발표랑 같이 나온 건 완전 전략적이에요. 모멘텀을 겹쳐 쌓는 거잖아요.", createdAt: T1JL + 30*60_000, likes: 167 },
+    { id: 2, nickname: "익명_2256", holdingLabel: "80주 보유", content: "$300 목표가 전 더 담을지 말지 고민인데 이 뉴스들 보면 $320도 가능하겠다 싶어요.", createdAt: T1JL + 40*60_000, likes: 134 },
+    { id: 3, nickname: "익명_9981", holdingLabel: "관심종목", content: "CyberCab 오스틴 영상이 진짜 압도적이었어요. 비 오는 야간에 개입 제로면 이미 상업 운영 가능한 수준이잖아요.", createdAt: T1JL + 55*60_000, likes: 201 },
+  ],
+  403: [
+    { id: 1, nickname: "익명_5582", holdingLabel: "500주 보유", content: "중국 점유율 유지가 핵심이에요. BYD가 공격적으로 가격 내리는데 테슬라가 ASP 지켰으면 대단한 거예요.", createdAt: T1JL + 50*60_000, likes: 145 },
+    { id: 2, nickname: "익명_3317", holdingLabel: "200주 보유", content: "490K 기대했다가 480K라 실망한 사람들이 팔면 그게 매수 기회죠.", createdAt: T1JL + 1*3600_000, likes: 178 },
+  ],
+  404: [
+    { id: 1, nickname: "익명_6671", holdingLabel: "100주 보유", content: "v46 → v47 → v48 발전 속도가 GPT-3→4→5보다 빠를 것 같아요. AI 학습 데이터는 도로 주행이니까 매 버전 기하급수적으로 나아지죠.", createdAt: T1JL + 1*3600_000 + 10*60_000, likes: 223 },
+    { id: 2, nickname: "익명_8832", holdingLabel: "관심종목", content: "비 오는 야간 합류 구간이 FSD 마지막 난관이었는데 그게 해결됐으면 진짜 마지막 단계예요.", createdAt: T1JL + 1*3600_000 + 25*60_000, likes: 189 },
+  ],
+  405: [
+    { id: 1, nickname: "익명_4413", holdingLabel: "200주 보유", content: "전자 부품 조립 가능해졌으면 애플·삼성 스마트폰 조립 라인에도 투입 가능한 거예요. B2B 고객층이 자동차 넘어 전자제품까지 확장돼요.", createdAt: T1JL + 1*3600_000 + 20*60_000, likes: 334 },
+    { id: 2, nickname: "익명_7723", holdingLabel: "500주 보유", content: "가정용은 얼마나 걸릴까요? 청소·설거지·빨래 이런 거 까지 하려면 아직 멀었겠지만 방향은 맞아요.", createdAt: T1JL + 1*3600_000 + 35*60_000, likes: 267 },
+    { id: 3, nickname: "익명_2291", holdingLabel: "관심종목", content: "+180% 정밀도 개선이 반년 만에 가능한 게 놀라운 거예요. 이 속도면 내년 이맘때 어떤 수준이 될지.", createdAt: T1JL + 1*3600_000 + 50*60_000, likes: 198 },
+  ],
+  406: [
+    { id: 1, nickname: "익명_5529", holdingLabel: "150주 보유", content: "외판 가격 $20K~$25K면 이익 내기 어렵지 않을까요? 첫 해는 마케팅 투자로 보고 2년차부터 수익화하는 구조일 것 같아요.", createdAt: T1JL + 2*3600_000 + 15*60_000, likes: 145 },
+    { id: 2, nickname: "익명_8847", holdingLabel: "300주 보유", content: "1만 대 달성 공식 발표 나오면 그게 주가 촉매예요. 아직 목표 달성 전이니까 긴 호흡으로 보는 게 맞아요.", createdAt: T1JL + 2*3600_000 + 30*60_000, likes: 189 },
+  ],
+  407: [
+    { id: 1, nickname: "익명_3349", holdingLabel: "100주 보유", content: "Iridium이 군사 위성통신 분야에서 40년 넘게 입증된 회사예요. SpaceX가 기술력 + 브랜드 신뢰도까지 사는 거예요. $8B이 비싸 보이지 않아요.", createdAt: T1JL + 40*60_000, likes: 445 },
+    { id: 2, nickname: "익명_6618", holdingLabel: "관심종목", content: "B2B 구독 매출 $850M이 반복 수익이라는 게 핵심이에요. 발사 서비스는 수주 기반이라 변동성 있는데 구독은 안정적이잖아요. 밸류에이션 다시 계산해야 할 것 같아요.", createdAt: T1JL + 55*60_000, likes: 378 },
+    { id: 3, nickname: "익명_1124", holdingLabel: "500주 보유", content: "Starlink + Iridium 조합이면 극지방 연구소, 선박, 잠수함까지 커버해요. 이미 없는 곳이 없는 통신 인프라예요. 이게 국방부랑 장기 계약 맺는 기반이 되는 거죠.", createdAt: T1JL + 1*3600_000 + 10*60_000, likes: 312 },
+    { id: 4, nickname: "익명_8843", holdingLabel: "200주 보유", content: "수직통합 완성이라는 게 프리미엄 멀티플 받는 이유가 돼요. TSLA처럼 스페이스X도 이제 '그냥 우주 기업'이 아니라 '우주 OS' 기업이 되는 거예요.", createdAt: T1JL + 1*3600_000 + 30*60_000, likes: 289 },
+  ],
+  408: [
+    { id: 1, nickname: "익명_5527", holdingLabel: "300주 보유", content: "극지방 커버리지가 항공사·해운사한테 얼마나 중요한지 모르는 분들 많아요. 북극 항로 이용하는 화물선들 통신이 다 Iridium이에요. 이게 SpaceX 손에 들어온 거예요.", createdAt: T1JL + 1*3600_000, likes: 356 },
+    { id: 2, nickname: "익명_7741", holdingLabel: "관심종목", content: "$8B이면 Iridium 연 매출의 9배예요. 구독 비즈니스에 9배 멀티플은 싸다고 봐야죠. 성장 여력까지 있으니까요.", createdAt: T1JL + 1*3600_000 + 20*60_000, likes: 267 },
+    { id: 3, nickname: "익명_2298", holdingLabel: "150주 보유", content: "이 딜이 성사되면 SpaceX는 정말 이제 단순 발사 서비스 회사가 아니에요. 통신 인프라 기업이자 우주 운영 플랫폼이 되는 거예요.", createdAt: T1JL + 1*3600_000 + 45*60_000, likes: 198 },
+  ],
+  409: [
+    { id: 1, nickname: "익명_4428", holdingLabel: "50주 보유", content: "CUDA 생태계가 10년 넘게 쌓인 게 진짜 해자예요. GPU 바꾸면 소프트웨어 다 다시 짜야 하는데 누가 그러겠어요. NIM이 그 위에 API 층으로 얹히는 거니까 더 단단해지는 거죠.", createdAt: T1JL + 1*3600_000 + 5*60_000, likes: 267 },
+    { id: 2, nickname: "익명_9912", holdingLabel: "200주 보유", content: "SW ARR이 $2.5B인데 이게 HW처럼 한 번 팔고 끝이 아니라 구독이잖아요. 이익률도 훨씬 높고. NVDA가 소프트웨어 회사로 전환하는 중간 단계 같아요.", createdAt: T1JL + 1*3600_000 + 20*60_000, likes: 334 },
+    { id: 3, nickname: "익명_3361", holdingLabel: "관심종목", content: "개발자 300만 명이 NIM 쓴다는 게 진짜 무서운 숫자예요. 이들이 다 NVDA 생태계 안으로 들어오는 거니까요.", createdAt: T1JL + 1*3600_000 + 35*60_000, likes: 189 },
+  ],
+  410: [
+    { id: 1, nickname: "익명_7756", holdingLabel: "100주 보유", content: "MS가 OpenAI 의존도 줄이는 게 리스크 관리 차원에서 당연한 거예요. Claude가 코딩은 GPT4보다 낫다는 평가 많은데 Azure에서 쓸 수 있게 되는 거니까요.", createdAt: T1JL + 2*3600_000 + 40*60_000, likes: 223 },
+    { id: 2, nickname: "익명_5544", holdingLabel: "관심종목", content: "GB800 클러스터 10만 GPU면 현재 최대 규모예요. NVDA 수주 캘린더에서 MS가 이 자리 차지한 거 확인된 거죠.", createdAt: T1JL + 3*3600_000, likes: 178 },
+  ],
+  411: [
+    { id: 1, nickname: "익명_6638", holdingLabel: "100주 보유", content: "Jordan 브랜드 30주년 효과가 2분기 실적에 보이기 시작한 거예요. 하반기 프리미엄 한정판 라인이 더 나올 거니까 3분기도 기대해볼 만해요.", createdAt: T1JL + 3*3600_000 + 15*60_000, likes: 134 },
+    { id: 2, nickname: "익명_2277", holdingLabel: "관심종목", content: "중국 +15% 회복이 진짜인지 계속 확인이 필요해요. 한 분기 반등이 아니라 추세 전환인지 봐야죠. 3분기도 좋으면 그때 매수 고민해도 늦지 않을 것 같아요.", createdAt: T1JL + 3*3600_000 + 30*60_000, likes: 112 },
+  ],
+  412: [
+    { id: 1, nickname: "익명_4491", holdingLabel: "관심종목", content: "Ackman이 틀린 적도 있지만 트랙레코드 보면 대형주 저평가 잡는 건 귀신이에요. 아마존 PER 30배가 역사적 저점이면 지금이 매수 구간 맞아요.", createdAt: T1JL + 4*3600_000 + 10*60_000, likes: 198 },
+    { id: 2, nickname: "익명_8817", holdingLabel: "50주 보유", content: "AWS만 별도 상장이면 $280B이라는 논리가 설득력 있어요. 이커머스는 공짜로 가져오는 셈이니까요. 버핏 스타일 가치 투자 접근이에요.", createdAt: T1JL + 4*3600_000 + 25*60_000, likes: 156 },
+  ],
+  413: [
+    { id: 1, nickname: "익명_3382", holdingLabel: "관심종목", content: "AI 서버 마진이 PC 마진보다 낮다는 게 역설적이에요. Dell이 엔비디아 GPU 떼다가 파는 구조라 마진 제한적이거든요. ISG가 커도 수익성 개선이 제한적인 게 문제예요.", createdAt: T1JL + 3*3600_000 + 45*60_000, likes: 123 },
+  ],
   // ── 2026-06-30 신규 ──────────────────────────────────────────────────────
   361: [
     { id: 1, nickname: "익명_7182", holdingLabel: "200주 보유", content: "HW3에 무료 V14이라는 게 진짜인지 확인하고 싶었는데 공식 발표 맞아요. 400만대 오너들이 갑자기 FSD 체험자가 되는 거잖아요. 체험 → 구독 전환율이 10%만 되어도 구독 수 40만 추가예요.", createdAt: T30J - 1*60_000, likes: 156 },

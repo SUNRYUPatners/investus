@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient></defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Google $GOOGL · Sovereign AI Strategy</text>
+  <rect y="88" width="1080" height="3" fill="#34d399"/>
+  <rect x="30" y="106" width="150" height="34" rx="17" fill="rgba(52,211,153,0.12)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="105" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#34d399" text-anchor="middle">2026. 07. 01</text>
+
+  <rect x="60" y="155" width="960" height="130" rx="18" fill="#0a1a12" stroke="#34d399" stroke-width="2"/>
+  <text x="540" y="195" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Google Cloud — Government-Exclusive AI Infrastructure Export Strategy</text>
+  <text x="540" y="248" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#34d399" text-anchor="middle">Sovereign AI Contracts $25B+</text>
+  <text x="540" y="278" font-family="Arial,sans-serif" font-size="16" fill="#e5e7eb" text-anchor="middle">EU · Middle East · Asia government AI cloud deals signed</text>
+
+  <!-- Globe map visual -->
+  <rect x="60" y="308" width="460" height="260" rx="16" fill="#111318" stroke="#34d399" stroke-width="1.5"/>
+  <text x="290" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">SOVEREIGN AI CONTRACT REGIONS</text>
+  <circle cx="180" cy="430" r="50" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="2"/>
+  <text x="180" y="425" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#34d399" text-anchor="middle">EU</text>
+  <text x="180" y="445" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">$12B</text>
+  <circle cx="290" cy="400" r="40" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="2"/>
+  <text x="290" y="395" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#60a5fa" text-anchor="middle">M. East</text>
+  <text x="290" y="412" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">$8B</text>
+  <circle cx="390" cy="440" r="35" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="390" y="435" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">Asia</text>
+  <text x="390" y="450" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">$5B</text>
+  <text x="290" y="510" font-family="Arial,sans-serif" font-size="12" fill="#34d399" text-anchor="middle">Data sovereignty guaranteed</text>
+  <text x="290" y="530" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Data centers within national territory</text>
+  <text x="290" y="555" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Gemini Ultra + TPU v5 provided</text>
+
+  <!-- Google AI stack -->
+  <rect x="560" y="308" width="460" height="260" rx="16" fill="#0a1a12" stroke="#34d399" stroke-width="1.5"/>
+  <text x="790" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">GOOGLE SOVEREIGN AI PACKAGE</text>
+  <text x="790" y="375" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#34d399" text-anchor="middle">Gemini Ultra Exclusive API</text>
+  <text x="790" y="400" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Government-specific LLM fine-tuning</text>
+  <text x="790" y="428" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">TPU v5 Clusters</text>
+  <text x="790" y="452" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Dedicated hardware within territory</text>
+  <text x="790" y="480" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Workspace AI Integration</text>
+  <text x="790" y="504" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">AI-powered public sector tools</text>
+  <text x="790" y="540" font-family="Arial,sans-serif" font-size="12" fill="#34d399" text-anchor="middle">Key differentiator vs AWS/Azure</text>
+  <text x="790" y="558" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Exclusive DeepMind research access</text>
+
+  <!-- Financial impact -->
+  <rect x="60" y="590" width="960" height="240" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="622" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">GOOGLE CLOUD OUTLOOK</text>
+  <line x1="80" y1="632" x2="1000" y2="632" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="662" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Google Cloud revenue: $48B (2025) → $70B+ (2026E) · YoY +45%</text>
+  <text x="80" y="690" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Sovereign AI: Multi-year subscriptions · avg 5-year term · high margin</text>
+  <text x="80" y="718" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Gemini ad integration: AI search ad RPM +30% → protects ad revenue</text>
+  <text x="80" y="746" font-family="Arial,sans-serif" font-size="13" fill="#34d399">GOOGL = AI Search + Cloud + Sovereign AI — triple growth engine</text>
+  <text x="80" y="774" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Risk: Antitrust regulation · EU DMA · Open-source LLM competition</text>
+  <text x="80" y="800" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">P/E 22x · Target $220 → re-rating potential (20% annual EPS growth)</text>
+
+  <rect y="842" width="1080" height="2" fill="#34d399"/>
+  <rect y="842" width="1080" height="238" fill="#0d1117"/>
+  <text x="540" y="890" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Google Locks Up $25B+ in Sovereign AI — Dominating Gov't AI Infrastructure</text>
+  <text x="540" y="918" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · For investment reference only</text>
+  <rect y="942" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="965" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">GOOGL · SOVEREIGN-AI · CLOUD · GEMINI</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient></defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Ackman · Amazon $AMZN Lowest P/E Ever</text>
+  <rect y="88" width="1080" height="3" fill="#f59e0b"/>
+  <rect x="30" y="106" width="150" height="34" rx="17" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="105" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">2026. 07. 01</text>
+
+  <rect x="60" y="155" width="960" height="130" rx="18" fill="#1a1000" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="195" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Bill Ackman (Pershing Square) — Spotted Amazon at All-Time Low P/E</text>
+  <text x="540" y="248" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#f59e0b" text-anchor="middle">$AMZN ALL-TIME LOW P/E</text>
+  <text x="540" y="278" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Ackman: "This is the buying opportunity"</text>
+
+  <!-- PER comparison chart -->
+  <rect x="60" y="308" width="460" height="260" rx="16" fill="#111318" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="290" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">P/E HISTORY</text>
+  <rect x="100" y="440" width="60" height="80" rx="4" fill="#6b7280" opacity="0.6"/>
+  <text x="130" y="435" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">60x</text>
+  <text x="130" y="535" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2021</text>
+  <rect x="180" y="400" width="60" height="120" rx="4" fill="#6b7280" opacity="0.7"/>
+  <text x="210" y="395" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">90x</text>
+  <text x="210" y="535" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2022</text>
+  <rect x="260" y="430" width="60" height="90" rx="4" fill="#60a5fa" opacity="0.7"/>
+  <text x="290" y="425" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">65x</text>
+  <text x="290" y="535" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2023</text>
+  <rect x="340" y="450" width="60" height="70" rx="4" fill="#4ade80" opacity="0.7"/>
+  <text x="370" y="445" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">50x</text>
+  <text x="370" y="535" font-family="Arial,sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">2024</text>
+  <rect x="420" y="480" width="60" height="40" rx="4" fill="#f59e0b"/>
+  <text x="450" y="475" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">30x</text>
+  <text x="450" y="535" font-family="Arial,sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle">2026 NOW</text>
+  <text x="290" y="560" font-family="Arial,sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">↓ All-time low P/E = value opportunity</text>
+
+  <!-- Ackman thesis -->
+  <rect x="560" y="308" width="460" height="260" rx="16" fill="#1a1000" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="790" y="340" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="2">ACKMAN'S THESIS</text>
+  <text x="790" y="378" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#f59e0b" text-anchor="middle">AWS Cloud Dominance</text>
+  <text x="790" y="406" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">AWS #1 global cloud market share</text>
+  <text x="790" y="432" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">AI infrastructure demand surge</text>
+  <text x="790" y="458" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Advertising revenue high growth</text>
+  <text x="790" y="484" font-family="Arial,sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">Free cash flow $50B+ expected</text>
+  <text x="790" y="516" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">P/E 30x = Historic undervaluation</text>
+  <text x="790" y="546" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Pershing Square building large position</text>
+
+  <!-- Amazon fundamentals -->
+  <rect x="60" y="590" width="960" height="230" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="622" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">AMAZON CORE BUSINESS</text>
+  <line x1="80" y1="632" x2="1000" y2="632" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="662" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">AWS: $108B annual revenue · 37% operating margin · AI cloud demand surge</text>
+  <text x="80" y="690" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Advertising: $55B+ · Amazon Ads fast growth · 3rd largest ad platform globally</text>
+  <text x="80" y="718" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">E-Commerce: Global #1 · Prime 200M+ members · In-house delivery network complete</text>
+  <text x="80" y="746" font-family="Arial,sans-serif" font-size="13" fill="#f59e0b">Ackman logic: P/E 30x doesn't even cover AWS alone → e-commerce + ads are free</text>
+  <text x="80" y="774" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Current price: ~$220 · Ackman target: $280+ (12 months)</text>
+  <text x="80" y="800" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">Pershing Square AUM $100B+ · AMZN one of the largest positions</text>
+
+  <rect y="832" width="1080" height="2" fill="#f59e0b"/>
+  <rect y="834" width="1080" height="246" fill="#0d1117"/>
+  <text x="540" y="880" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Ackman: "Amazon P/E 30x = All-Time Low, Time to Buy"</text>
+  <text x="540" y="908" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · For investment reference only</text>
+  <rect y="932" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="955" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">AMZN · ACKMAN · AWS · UNDERVALUED</text>
+</svg>

@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a0a1a"/>
+    </linearGradient>
+    <linearGradient id="redBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#redBlue)"/>
+
+  <!-- BREAKING banner -->
+  <rect x="40" y="14" width="240" height="48" rx="8" fill="#ef4444"/>
+  <text x="160" y="45" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="white" text-anchor="middle" letter-spacing="3">BREAKING</text>
+
+  <!-- Header -->
+  <rect x="40" y="72" width="1000" height="80" rx="12" fill="#161b22" opacity="0.9"/>
+  <text x="60" y="102" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="#60a5fa" letter-spacing="4">INVESTUS DAILY REPORT</text>
+  <text x="60" y="140" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" fill="white">TSLA · Cybercab Austin 도로 테스트 시작</text>
+  <rect x="880" y="86" width="148" height="34" rx="17" fill="#ef4444"/>
+  <text x="954" y="108" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">2026.07.01</text>
+
+  <!-- Official quote -->
+  <rect x="40" y="170" width="1000" height="80" rx="14" fill="#1a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="60" y="204" font-family="Arial, sans-serif" font-size="18" fill="#60a5fa" font-style="italic">"First Cybercab road tests have begun in Austin!"</text>
+  <text x="60" y="233" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">— Tesla 공식 발표 · Official Tesla Announcement</text>
+
+  <!-- Austin city silhouette -->
+  <rect x="40" y="265" width="1000" height="280" rx="16" fill="#0a0f1a" stroke="#1e293b" stroke-width="1"/>
+  <!-- Sky gradient overlay -->
+  <rect x="40" y="265" width="1000" height="280" rx="16" fill="#0a0a1a" opacity="0.7"/>
+  <!-- Stars -->
+  <circle cx="100" cy="295" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="200" cy="280" r="1" fill="white" opacity="0.5"/>
+  <circle cx="350" cy="310" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="500" cy="285" r="1" fill="white" opacity="0.4"/>
+  <circle cx="650" cy="300" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="800" cy="275" r="1" fill="white" opacity="0.5"/>
+  <circle cx="950" cy="295" r="1.5" fill="white" opacity="0.7"/>
+  <!-- City buildings -->
+  <rect x="60" y="420" width="50" height="125" fill="#1e293b"/>
+  <rect x="120" y="380" width="40" height="165" fill="#1e293b"/>
+  <rect x="170" y="400" width="55" height="145" fill="#374151"/>
+  <rect x="235" y="360" width="35" height="185" fill="#1e293b"/>
+  <rect x="280" y="390" width="45" height="155" fill="#374151"/>
+  <rect x="335" y="410" width="30" height="135" fill="#1e293b"/>
+  <!-- Texas State Capitol building simplified -->
+  <rect x="420" y="350" width="80" height="195" fill="#1e293b"/>
+  <polygon points="460,335 420,380 500,380" fill="#374151"/>
+  <rect x="453" y="300" width="14" height="35" fill="#4b5563"/>
+  <!-- Right city -->
+  <rect x="680" y="395" width="45" height="150" fill="#374151"/>
+  <rect x="735" y="370" width="55" height="175" fill="#1e293b"/>
+  <rect x="800" y="400" width="40" height="145" fill="#374151"/>
+  <rect x="850" y="385" width="50" height="160" fill="#1e293b"/>
+  <rect x="910" y="410" width="35" height="135" fill="#374151"/>
+  <rect x="955" y="395" width="45" height="150" fill="#1e293b"/>
+  <!-- Road -->
+  <rect x="40" y="520" width="1000" height="25" fill="#1e293b"/>
+  <line x1="40" y1="532" x2="1040" y2="532" stroke="#374151" stroke-width="2" stroke-dasharray="50,25"/>
+  <!-- Cybercab vehicle center glow -->
+  <ellipse cx="540" cy="520" rx="140" ry="20" fill="#60a5fa" opacity="0.15" filter="url(#glow)"/>
+  <!-- Cybercab car -->
+  <rect x="440" y="484" width="200" height="50" rx="16" fill="#4b5563"/>
+  <rect x="470" y="465" width="140" height="36" rx="10" fill="#374151"/>
+  <circle cx="470" cy="534" r="18" fill="#1f2937" stroke="#60a5fa" stroke-width="2.5"/>
+  <circle cx="470" cy="534" r="8" fill="#60a5fa" opacity="0.5"/>
+  <circle cx="610" cy="534" r="18" fill="#1f2937" stroke="#60a5fa" stroke-width="2.5"/>
+  <circle cx="610" cy="534" r="8" fill="#60a5fa" opacity="0.5"/>
+  <rect x="482" y="471" width="45" height="26" rx="4" fill="#60a5fa" opacity="0.4"/>
+  <rect x="533" y="471" width="45" height="26" rx="4" fill="#60a5fa" opacity="0.4"/>
+  <!-- Headlights -->
+  <rect x="635" y="496" width="6" height="20" rx="3" fill="#fbbf24" opacity="0.8"/>
+  <text x="540" y="290" font-family="Arial Black, sans-serif" font-size="30" fill="white" text-anchor="middle" font-weight="900">AUSTIN, TX</text>
+  <text x="540" y="325" font-family="Arial, sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle">최초 양산형 Cybercab 실도로 퍼블릭 테스트</text>
+
+  <!-- ROAD TESTS BEGIN big text -->
+  <rect x="40" y="560" width="1000" height="80" rx="12" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="612" font-family="Arial Black, sans-serif" font-size="44" font-weight="900" fill="white" text-anchor="middle" filter="url(#glow)">ROAD TESTS BEGIN</text>
+
+  <!-- Timeline: Test → Commercial -->
+  <rect x="40" y="660" width="1000" height="120" rx="14" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+  <text x="60" y="690" font-family="Arial Black, sans-serif" font-size="14" fill="#9ca3af" letter-spacing="2">Robotaxi 상용화 카운트다운</text>
+  <!-- Timeline line -->
+  <line x1="100" y1="740" x2="980" y2="740" stroke="#374151" stroke-width="3"/>
+  <!-- Step 1: Testing Begins -->
+  <circle cx="140" cy="740" r="20" fill="#ef4444" stroke="#ef4444" stroke-width="2" filter="url(#glow)"/>
+  <text x="140" y="747" font-family="Arial Black, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="900">NOW</text>
+  <text x="140" y="770" font-family="Arial, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">도로 테스트</text>
+  <text x="140" y="784" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Road Tests</text>
+  <!-- Step 2: Expansion -->
+  <circle cx="380" cy="740" r="16" fill="#374151" stroke="#f97316" stroke-width="2"/>
+  <text x="380" y="747" font-family="Arial, sans-serif" font-size="10" fill="#f97316" text-anchor="middle">→</text>
+  <text x="380" y="770" font-family="Arial, sans-serif" font-size="11" fill="#f97316" text-anchor="middle">테스트 확장</text>
+  <text x="380" y="784" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Expansion</text>
+  <!-- Step 3: Safety Cert -->
+  <circle cx="620" cy="740" r="16" fill="#374151" stroke="#eab308" stroke-width="2"/>
+  <text x="620" y="747" font-family="Arial, sans-serif" font-size="10" fill="#eab308" text-anchor="middle">✓</text>
+  <text x="620" y="770" font-family="Arial, sans-serif" font-size="11" fill="#eab308" text-anchor="middle">안전 인증</text>
+  <text x="620" y="784" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Safety Cert</text>
+  <!-- Step 4: Commercial -->
+  <circle cx="860" cy="740" r="20" fill="#374151" stroke="#22c55e" stroke-width="2"/>
+  <text x="860" y="747" font-family="Arial, sans-serif" font-size="14" fill="#22c55e" text-anchor="middle">$</text>
+  <text x="860" y="770" font-family="Arial, sans-serif" font-size="11" fill="#22c55e" text-anchor="middle">상용 서비스</text>
+  <text x="860" y="784" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Robotaxi Launch</text>
+  <!-- Arrows -->
+  <polygon points="200,736 230,740 200,744" fill="#374151"/>
+  <polygon points="445,736 475,740 445,744" fill="#374151"/>
+  <polygon points="685,736 715,740 685,744" fill="#374151"/>
+
+  <!-- Stats cards -->
+  <rect x="40" y="800" width="320" height="100" rx="12" fill="url(#cardGrad)" stroke="#ef4444" stroke-width="1"/>
+  <text x="200" y="845" font-family="Arial Black, sans-serif" font-size="28" fill="#ef4444" text-anchor="middle" font-weight="900">1st</text>
+  <text x="200" y="870" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">최초 실도로 테스트</text>
+  <text x="200" y="890" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">First Public Road Test</text>
+
+  <rect x="380" y="800" width="320" height="100" rx="12" fill="url(#cardGrad)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="840" font-family="Arial Black, sans-serif" font-size="22" fill="#60a5fa" text-anchor="middle" font-weight="900">AUSTIN</text>
+  <text x="540" y="864" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Texas, USA</text>
+  <text x="540" y="884" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Test Location</text>
+
+  <rect x="720" y="800" width="320" height="100" rx="12" fill="url(#cardGrad)" stroke="#22c55e" stroke-width="1"/>
+  <text x="880" y="840" font-family="Arial Black, sans-serif" font-size="22" fill="#22c55e" text-anchor="middle" font-weight="900">2026</text>
+  <text x="880" y="864" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Robotaxi 상용화 예정</text>
+  <text x="880" y="884" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Commercial Target</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1044" width="1080" height="36" fill="#0f172a"/>
+  <text x="540" y="1068" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Austin에서 최초 Cybercab 실도로 테스트 — Robotaxi 상용화 카운트다운 시작 · INVESTUS · 2026.07.01 · 투자 참고용</text>
+</svg>

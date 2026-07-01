@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient></defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">TSLA · Optimus 70K Units/Year at Fremont</text>
+  <rect y="88" width="1080" height="3" fill="#c084fc"/>
+  <rect x="30" y="106" width="150" height="34" rx="17" fill="rgba(192,132,252,0.12)" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="105" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c084fc" text-anchor="middle">2026. 07. 01</text>
+
+  <rect x="60" y="160" width="960" height="200" rx="20" fill="#130820" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="220" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">NOMURA RESEARCH — Annual Production Target at Fremont</text>
+  <text x="540" y="308" font-family="Arial,sans-serif" font-size="96" font-weight="bold" fill="#c084fc" text-anchor="middle">70,000</text>
+  <text x="540" y="348" font-family="Arial,sans-serif" font-size="20" fill="#e5e7eb" text-anchor="middle">Units per Year</text>
+
+  <rect x="60" y="382" width="960" height="280" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="414" font-family="Arial,sans-serif" font-size="13" fill="#6b7280" font-weight="bold" letter-spacing="2">PRODUCTION RAMP PLAN</text>
+  <line x1="80" y1="424" x2="1000" y2="424" stroke="#1e2028" stroke-width="1"/>
+  <text x="140" y="446" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">2025</text>
+  <rect x="100" y="450" width="80" height="20" rx="4" fill="#c084fc" opacity="0.3"/>
+  <text x="190" y="464" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">~1,000 units</text>
+  <text x="140" y="490" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">2026 H1</text>
+  <rect x="100" y="494" width="160" height="20" rx="4" fill="#c084fc" opacity="0.5"/>
+  <text x="270" y="508" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">~10,000 units</text>
+  <text x="140" y="534" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">2026 H2</text>
+  <rect x="100" y="538" width="500" height="24" rx="4" fill="#c084fc" opacity="0.8"/>
+  <text x="610" y="555" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c084fc">~35,000 units</text>
+  <text x="140" y="582" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">2026 Target</text>
+  <rect x="100" y="586" width="840" height="28" rx="4" fill="#c084fc"/>
+  <text x="950" y="607" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#0d1117" text-anchor="middle">70,000 units</text>
+  <text x="540" y="640" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Nomura Research · Based on Tesla Fremont production plans</text>
+
+  <rect x="60" y="680" width="460" height="180" rx="16" fill="#130820" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="290" y="714" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Revenue Potential (70K × $30K)</text>
+  <text x="290" y="782" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#c084fc" text-anchor="middle">$2.1B</text>
+  <text x="290" y="818" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Optimus standalone revenue potential</text>
+  <text x="290" y="844" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">*Estimated at $30,000/unit</text>
+
+  <rect x="560" y="680" width="460" height="180" rx="16" fill="#0f1520" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="790" y="714" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Job Posting (July 1)</text>
+  <text x="790" y="748" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">Supplier Quality Engineer</text>
+  <text x="790" y="778" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Optimus · Fremont CA</text>
+  <text x="790" y="808" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Supply chain · Parts quality assurance</text>
+  <text x="790" y="834" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Mass production signal ✓</text>
+
+  <rect y="878" width="1080" height="2" fill="#c084fc"/>
+  <rect y="880" width="1080" height="200" fill="#0d1117"/>
+  <text x="540" y="926" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Optimus Mass Production Era — 70K/Year, $2.1B Revenue Potential</text>
+  <text x="540" y="954" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · For investment reference only</text>
+  <rect y="978" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="1001" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">TSLA · OPTIMUS · HUMANOID ROBOT · FREMONT</text>
+</svg>

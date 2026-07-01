@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#13102a"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:0.9"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+
+  <!-- Background decorative circles -->
+  <circle cx="900" cy="200" r="300" fill="#a855f7" opacity="0.04"/>
+  <circle cx="150" cy="800" r="250" fill="#7c3aed" opacity="0.05"/>
+
+  <!-- Header bar -->
+  <rect x="0" y="0" width="1080" height="90" fill="#a855f7" opacity="0.12"/>
+  <rect x="0" y="88" width="1080" height="2" fill="#a855f7" opacity="0.6"/>
+
+  <!-- Header text -->
+  <text x="54" y="52" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#a855f7" letter-spacing="4">INVESTUS DAILY REPORT</text>
+
+  <!-- Date badge -->
+  <rect x="870" y="26" width="160" height="36" rx="18" fill="#a855f7" opacity="0.2"/>
+  <rect x="870" y="26" width="160" height="36" rx="18" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="950" y="49" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#a855f7" text-anchor="middle">2026.07.01</text>
+
+  <!-- Title -->
+  <text x="54" y="155" font-family="Arial,sans-serif" font-size="42" font-weight="900" fill="#ffffff">ROCKET LAB</text>
+  <text x="54" y="205" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#a855f7">전략적 인수 · 우주통신 통합기업 전환</text>
+
+  <!-- Ticker badge -->
+  <rect x="54" y="224" width="90" height="30" rx="6" fill="#a855f7" opacity="0.25"/>
+  <text x="99" y="244" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#a855f7" text-anchor="middle">$RKLB</text>
+
+  <!-- TRANSFORMATION DIAGRAM -->
+  <!-- Left card: Launch Services -->
+  <rect x="54" y="290" width="280" height="340" rx="16" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Rocket icon -->
+  <text x="194" y="360" font-family="Arial,sans-serif" font-size="64" text-anchor="middle" fill="#a855f7" opacity="0.9">🚀</text>
+  <text x="194" y="408" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#a855f7" text-anchor="middle">LAUNCH</text>
+  <text x="194" y="430" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#a855f7" text-anchor="middle">SERVICES</text>
+  <text x="194" y="460" font-family="Arial,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">단발성 수익</text>
+  <text x="194" y="480" font-family="Arial,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">발사당 과금</text>
+  <text x="194" y="500" font-family="Arial,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">변동성 높음</text>
+  <!-- Label -->
+  <text x="194" y="605" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="1">BEFORE</text>
+
+  <!-- Arrow -->
+  <text x="540" y="468" font-family="Arial,sans-serif" font-size="52" text-anchor="middle" fill="#a855f7" filter="url(#glow)">→</text>
+  <!-- Acquisition label -->
+  <rect x="450" y="490" width="180" height="38" rx="8" fill="#a855f7" opacity="0.2"/>
+  <text x="540" y="514" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#a855f7" text-anchor="middle">전략적 인수</text>
+
+  <!-- Right card: Integrated Platform -->
+  <rect x="746" y="290" width="280" height="340" rx="16" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="2" stroke-opacity="0.8"/>
+  <!-- Satellite+comms icon -->
+  <text x="886" y="360" font-family="Arial,sans-serif" font-size="64" text-anchor="middle" fill="#a855f7" filter="url(#softglow)">🛰️</text>
+  <text x="886" y="408" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">SPACE COMM</text>
+  <text x="886" y="430" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">PLATFORM</text>
+  <text x="886" y="460" font-family="Arial,sans-serif" font-size="12" fill="#c4b5fd" text-anchor="middle">반복 현금흐름</text>
+  <text x="886" y="480" font-family="Arial,sans-serif" font-size="12" fill="#c4b5fd" text-anchor="middle">구독형 수익</text>
+  <text x="886" y="500" font-family="Arial,sans-serif" font-size="12" fill="#c4b5fd" text-anchor="middle">안정적 성장</text>
+  <!-- Label -->
+  <text x="886" y="605" font-family="Arial,sans-serif" font-size="11" fill="#a855f7" text-anchor="middle" letter-spacing="1" font-weight="700">AFTER</text>
+
+  <!-- Revenue model comparison -->
+  <rect x="54" y="680" width="972" height="130" rx="14" fill="#1a1025" stroke="#a855f7" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="540" y="712" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#a855f7" text-anchor="middle" letter-spacing="2">RECURRING CASH FLOW 비즈니스 모델 구축</text>
+
+  <!-- 3 benefit items -->
+  <text x="200" y="752" font-family="Arial,sans-serif" font-size="32" text-anchor="middle" fill="#a855f7">📡</text>
+  <text x="200" y="785" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e2e8f0" text-anchor="middle">통신 인프라</text>
+  <text x="200" y="800" font-family="Arial,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">수직 통합</text>
+
+  <text x="540" y="752" font-family="Arial,sans-serif" font-size="32" text-anchor="middle" fill="#a855f7">💰</text>
+  <text x="540" y="785" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e2e8f0" text-anchor="middle">안정적 수익</text>
+  <text x="540" y="800" font-family="Arial,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">반복 수익 모델</text>
+
+  <text x="880" y="752" font-family="Arial,sans-serif" font-size="32" text-anchor="middle" fill="#a855f7">🌐</text>
+  <text x="880" y="785" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e2e8f0" text-anchor="middle">글로벌 확장</text>
+  <text x="880" y="800" font-family="Arial,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">우주 통신 네트워크</text>
+
+  <!-- Dividers -->
+  <line x1="370" y1="720" x2="370" y2="795" stroke="#a855f7" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="710" y1="720" x2="710" y2="795" stroke="#a855f7" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Footer -->
+  <rect x="0" y="990" width="1080" height="90" fill="#a855f7" opacity="0.1"/>
+  <rect x="0" y="990" width="1080" height="2" fill="#a855f7" opacity="0.5"/>
+  <text x="540" y="1030" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#a855f7" text-anchor="middle">발사 서비스 → 우주 통신 통합 플랫폼 · 비즈니스 모델 패러다임 전환</text>
+  <text x="540" y="1058" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+</svg>

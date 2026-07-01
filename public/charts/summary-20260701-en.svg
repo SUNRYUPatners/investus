@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient>
+    <linearGradient id="hdr" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="33%" style="stop-color:#f97316"/><stop offset="66%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#4ade80"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="28" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="62" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#e5e7eb" text-anchor="middle">July 1, 2026 — Daily Summary</text>
+  <rect y="88" width="1080" height="4" fill="url(#hdr)"/>
+  <rect x="30" y="102" width="150" height="30" rx="15" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="105" y="122" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">35 REPORTS</text>
+
+  <!-- TSLA section -->
+  <rect x="30" y="142" width="500" height="420" rx="14" fill="#111318" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="30" y="142" width="500" height="36" rx="14" fill="#ef4444"/>
+  <rect x="30" y="160" width="500" height="18" fill="#ef4444"/>
+  <text x="280" y="166" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">TSLA — Tesla (19 Reports)</text>
+  <text x="50" y="200" font-family="Arial,sans-serif" font-size="12" fill="#ef4444">● Q2 Deliveries 480K BREAKING</text>
+  <text x="50" y="220" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● CyberCab Austin test · hiring · interior reveal</text>
+  <text x="50" y="240" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● FSD v46 update / HW3 limits / unsupervised mode</text>
+  <text x="50" y="260" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● Cathie Wood Robotaxi outlook</text>
+  <text x="50" y="280" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">● Optimus dexterity leap / 10K production target</text>
+  <text x="50" y="300" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● TeraFab new job openings</text>
+  <text x="50" y="320" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● Semi jackknife incident / energy efficiency data</text>
+  <text x="50" y="340" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● 24-hour service center launch</text>
+  <text x="50" y="360" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● Japan delivery expansion / Malaysia 15,000 units</text>
+  <text x="50" y="380" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● Megapack LFP transition / Q2 consensus</text>
+  <line x1="50" y1="400" x2="510" y2="400" stroke="#1e2028" stroke-width="1"/>
+  <text x="50" y="424" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ef4444">Key: Q2 480K beats consensus? → Biggest catalyst for July earnings</text>
+  <text x="50" y="448" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af">FSD unsupervised + Optimus mass production = valuation re-rating trigger</text>
+  <text x="50" y="470" font-family="Arial,sans-serif" font-size="12" fill="#f59e0b">CyberCab 2027 production target · Robotaxi national rollout plan</text>
+  <text x="50" y="494" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Malaysia 15K · Japan expansion → global delivery diversification</text>
+  <text x="50" y="514" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">SeaFab·TeraFab hiring → production capacity expansion signal</text>
+  <text x="50" y="545" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#ef4444">2026 TSLA consensus target: $320 (current $278)</text>
+
+  <!-- Right column -->
+  <rect x="550" y="142" width="500" height="200" rx="14" fill="#111318" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="550" y="142" width="500" height="36" rx="14" fill="#c084fc"/>
+  <rect x="550" y="160" width="500" height="18" fill="#c084fc"/>
+  <text x="800" y="166" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">SPCX — SpaceX (2 Reports)</text>
+  <text x="570" y="200" font-family="Arial,sans-serif" font-size="12" fill="#c084fc">● Iridium $8B Acquisition — Full vertical integration</text>
+  <text x="570" y="220" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">  Design → Build → Operate full stack complete</text>
+  <text x="570" y="242" font-family="Arial,sans-serif" font-size="12" fill="#c084fc">● Memphis Community $100M+ Contribution</text>
+  <text x="570" y="262" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">  Tax · jobs · environment · youth fund</text>
+  <line x1="570" y1="280" x2="1030" y2="280" stroke="#1e2028" stroke-width="1"/>
+  <text x="570" y="300" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c084fc">Iridium = B2B recurring revenue secured</text>
+  <text x="570" y="320" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Military · aviation · maritime premium contracts</text>
+
+  <rect x="550" y="354" width="500" height="208" rx="14" fill="#111318" stroke="#4ade80" stroke-width="1.5"/>
+  <rect x="550" y="354" width="500" height="36" rx="14" fill="#4ade80"/>
+  <rect x="550" y="372" width="500" height="18" fill="#4ade80"/>
+  <text x="800" y="378" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#111318" text-anchor="middle">NVDA + Others (6 Reports)</text>
+  <text x="570" y="412" font-family="Arial,sans-serif" font-size="12" fill="#4ade80">● NVDA Blackwell software ecosystem</text>
+  <text x="570" y="432" font-family="Arial,sans-serif" font-size="12" fill="#e5e7eb">● NVDA Claude 3.7 Azure GB800 cluster</text>
+  <text x="570" y="452" font-family="Arial,sans-serif" font-size="12" fill="#f97316">● NKE Q4 earnings — turnaround signal</text>
+  <text x="570" y="472" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa">● RKLB acquisition · Figure BMW · Bloom AI</text>
+  <line x1="570" y1="490" x2="1030" y2="490" stroke="#1e2028" stroke-width="1"/>
+  <text x="570" y="512" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80">NVDA: Blackwell software → post-hardware momentum</text>
+  <text x="570" y="532" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">NKE turnaround vs DELL -18% crash contrast</text>
+  <text x="570" y="549" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">Figure·RKLB·Bloom = Robot·Space·Energy AI sectors</text>
+
+  <!-- Bottom row -->
+  <rect x="30" y="574" width="240" height="195" rx="12" fill="#111318" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="150" y="600" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">Markets (2)</text>
+  <text x="50" y="626" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">● Q2 Best Quarter Ever</text>
+  <text x="50" y="646" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">  Nasdaq +18% · S&amp;P +11%</text>
+  <text x="50" y="668" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">● US Debt/GDP Warning</text>
+  <text x="50" y="688" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">  Breaks 120% threshold</text>
+  <line x1="50" y1="706" x2="250" y2="706" stroke="#1e2028" stroke-width="1"/>
+  <text x="50" y="728" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">Bullish: Q2 rally sustained</text>
+  <text x="50" y="748" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">Risk: Debt ceiling concern</text>
+
+  <rect x="290" y="574" width="240" height="195" rx="12" fill="#111318" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="410" y="600" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">IPO · Startups (2)</text>
+  <text x="310" y="626" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa">● Agentix Robotics IPO $4.5B</text>
+  <text x="310" y="646" font-family="Arial,sans-serif" font-size="11" fill="#e5e7eb">  AGTX Nasdaq filing</text>
+  <text x="310" y="668" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">● Memory DRAM/NAND Cycle</text>
+  <text x="310" y="688" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">  HBM shortage vs glut</text>
+  <line x1="310" y1="706" x2="510" y2="706" stroke="#1e2028" stroke-width="1"/>
+  <text x="310" y="728" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa">Robot AI = 2026 mega theme</text>
+  <text x="310" y="748" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa">HBM = SK Hynix · MU wins</text>
+
+  <rect x="550" y="574" width="500" height="195" rx="12" fill="#111318" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="800" y="600" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">Investor Corner (4)</text>
+  <text x="570" y="624" font-family="Arial,sans-serif" font-size="11" fill="#f59e0b">● Burry $ADBE contrarian long — -34% oversold</text>
+  <text x="570" y="644" font-family="Arial,sans-serif" font-size="11" fill="#f59e0b">● Ackman $AMZN P/E 30x all-time low</text>
+  <text x="570" y="664" font-family="Arial,sans-serif" font-size="11" fill="#ef4444">● Dell -18% crash — PC slump + guidance shock</text>
+  <text x="570" y="684" font-family="Arial,sans-serif" font-size="11" fill="#34d399">● Google Sovereign AI $25B+ contracts</text>
+  <line x1="570" y1="706" x2="1030" y2="706" stroke="#1e2028" stroke-width="1"/>
+  <text x="570" y="728" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">Key: Big money accumulating undervalued giants</text>
+  <text x="570" y="748" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">Burry + Ackman: AI fear = excessive discount</text>
+  <text x="570" y="766" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">GOOGL Sovereign AI = new cloud growth engine</text>
+
+  <!-- Footer -->
+  <rect y="784" width="1080" height="2" fill="url(#hdr)"/>
+  <rect y="786" width="1080" height="294" fill="#0d1117"/>
+  <text x="540" y="832" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Today's Top 3 Takeaways</text>
+  <rect x="60" y="848" width="960" height="100" rx="12" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="876" font-family="Arial,sans-serif" font-size="14" fill="#ef4444">1. TSLA Q2 Deliveries 480K — beats consensus? This is the July earnings catalyst to watch</text>
+  <text x="80" y="902" font-family="Arial,sans-serif" font-size="14" fill="#c084fc">2. SpaceX acquires Iridium for $8B — full vertical integration signals space industry shift</text>
+  <text x="80" y="928" font-family="Arial,sans-serif" font-size="14" fill="#f59e0b">3. Burry + Ackman contrarian buys — ADBE + AMZN deep-value amid AI fear</text>
+  <text x="540" y="968" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · For investment reference only</text>
+  <rect y="988" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="1011" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">TSLA · SPCX · NVDA · 35 REPORTS</text>
+</svg>

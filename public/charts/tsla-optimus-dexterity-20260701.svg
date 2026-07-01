@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080c12"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="88" fill="#0d1117"/>
+  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">TSLA · Optimus 손동작 시연</text>
+  <rect y="88" width="1080" height="3" fill="#c084fc"/>
+  <rect x="30" y="106" width="150" height="34" rx="17" fill="rgba(192,132,252,0.12)" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="105" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c084fc" text-anchor="middle">2026. 07. 01</text>
+  <rect x="200" y="106" width="130" height="34" rx="17" fill="rgba(192,132,252,0.08)"/>
+  <text x="265" y="128" font-family="Arial,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle">종목분석 · TSLA</text>
+
+  <text x="540" y="182" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">인간형 로봇 — 손으로 세상을 느끼다</text>
+
+  <!-- Hero: robot hand illustration (simplified SVG paths) -->
+  <rect x="60" y="200" width="960" height="160" rx="20" fill="#130820" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="252" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#c084fc" text-anchor="middle">HUMAN-LIKE</text>
+  <text x="540" y="312" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#e5e7eb" text-anchor="middle">DEXTERITY</text>
+  <text x="540" y="348" font-family="Arial,sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">Tesla Optimus · 2026년 7월 공식 시연 영상 공개</text>
+
+  <!-- 4 capability cards -->
+  <rect x="60" y="382" width="220" height="190" rx="16" fill="#1a0d28" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="170" y="418" font-family="Arial,sans-serif" font-size="30" text-anchor="middle">🤲</text>
+  <text x="170" y="452" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c084fc" text-anchor="middle">GRASPING</text>
+  <text x="170" y="478" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">다양한 물체</text>
+  <text x="170" y="498" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">정밀 파지</text>
+  <text x="170" y="520" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Force Control</text>
+  <text x="170" y="540" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">파손 없이 조작</text>
+  <text x="170" y="560" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">MASTERED ✓</text>
+
+  <rect x="300" y="382" width="220" height="190" rx="16" fill="#1a0d28" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="410" y="418" font-family="Arial,sans-serif" font-size="30" text-anchor="middle">🔧</text>
+  <text x="410" y="452" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c084fc" text-anchor="middle">HANDLING</text>
+  <text x="410" y="478" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">도구 사용</text>
+  <text x="410" y="498" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">공구·기기 조작</text>
+  <text x="410" y="520" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Adaptive Grip</text>
+  <text x="410" y="540" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">상황별 힘 조절</text>
+  <text x="410" y="560" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">DEMONSTRATED ✓</text>
+
+  <rect x="540" y="382" width="220" height="190" rx="16" fill="#1a0d28" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="650" y="418" font-family="Arial,sans-serif" font-size="30" text-anchor="middle">👁️</text>
+  <text x="650" y="452" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#c084fc" text-anchor="middle">SENSING</text>
+  <text x="650" y="478" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">촉각 + 시각</text>
+  <text x="650" y="498" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">실시간 피드백</text>
+  <text x="650" y="520" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Multi-sensor</text>
+  <text x="650" y="540" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Integration</text>
+  <text x="650" y="560" font-family="Arial,sans-serif" font-size="10" fill="#c084fc" text-anchor="middle">ACTIVE ✓</text>
+
+  <rect x="780" y="382" width="260" height="190" rx="16" fill="#1a0d28" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="910" y="418" font-family="Arial,sans-serif" font-size="30" text-anchor="middle">🌍</text>
+  <text x="910" y="452" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">REAL-WORLD</text>
+  <text x="910" y="478" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">실제 환경에서</text>
+  <text x="910" y="498" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">인간처럼 상호작용</text>
+  <text x="910" y="520" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">"Watching/interacting</text>
+  <text x="910" y="538" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">the way humans do"</text>
+  <text x="910" y="558" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">ELON'S VISION ✓</text>
+
+  <!-- Progress towards real tasks -->
+  <rect x="60" y="594" width="960" height="240" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
+  <text x="80" y="626" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">로봇 → 실제 작업 로드맵</text>
+  <line x1="80" y1="636" x2="1000" y2="636" stroke="#1e2028" stroke-width="1"/>
+
+  <!-- Timeline bar -->
+  <rect x="80" y="660" width="880" height="12" rx="6" fill="#1e2028"/>
+  <rect x="80" y="660" width="660" height="12" rx="6" fill="url(#grad2)"/>
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <text x="80" y="690" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">손동작 시연</text>
+  <text x="260" y="690" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">공장 테스트</text>
+  <text x="460" y="690" font-family="Arial,sans-serif" font-size="11" fill="#9ca3af">양산 투입</text>
+  <text x="660" y="690" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">현재</text>
+  <text x="800" y="690" font-family="Arial,sans-serif" font-size="11" fill="#6b7280">대량 판매</text>
+
+  <text x="80" y="730" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">Optimus 손은 단순한 기계팔이 아니라 감각 기반의 지능형 조작 시스템</text>
+  <text x="80" y="756" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">Nomura 리서치: 2026년 Fremont 연간 70,000대 생산 목표</text>
+  <text x="80" y="780" font-family="Arial,sans-serif" font-size="13" fill="#c084fc">각 Optimus 판매가 ~$30,000 → 연간 잠재 매출 $2.1B (70K 기준)</text>
+
+  <rect y="852" width="1080" height="2" fill="#c084fc"/>
+  <rect y="854" width="1080" height="226" fill="#0d1117"/>
+  <text x="540" y="900" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">Optimus, 인간의 손처럼 — AI 로봇 시대의 서막</text>
+  <text x="540" y="928" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+  <rect y="952" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="975" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">TSLA · OPTIMUS · 인형 로봇 · AI 자동화</text>
+</svg>
