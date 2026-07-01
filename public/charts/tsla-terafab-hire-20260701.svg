@@ -58,9 +58,9 @@
   <text x="190" y="400" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Angstrom Process</text>
   <text x="190" y="455" font-family="Arial, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">최첨단 반도체 공정</text>
 
-  <!-- Arrow -->
-  <polygon points="355,360 400,345 400,355 430,355 430,365 400,365 400,375" fill="#22c55e" opacity="0.9"/>
-  <text x="392" y="340" font-family="Arial, sans-serif" font-size="12" fill="#22c55e" text-anchor="middle">영입</text>
+  <!-- Arrow: Intel → Gary (이직/career move) -->
+  <polygon points="355,360 400,345 400,355 430,355 430,365 400,365 400,375" fill="#6b7280" opacity="0.9"/>
+  <text x="392" y="340" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">이직</text>
 
   <!-- Person 1: Gary Jiang -->
   <rect x="445" y="265" width="280" height="200" rx="16" fill="url(#cardGrad)" stroke="#22c55e" stroke-width="2"/>
@@ -75,9 +75,10 @@
   <text x="585" y="440" font-family="Arial, sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">前 Intel 18A Factory Mgr</text>
   <text x="585" y="458" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Dec 2024 ~ Jun 2026</text>
 
-  <!-- Arrow 2 -->
-  <polygon points="740,360 785,345 785,355 815,355 815,365 785,365 785,375" fill="#60a5fa" opacity="0.9"/>
-  <text x="777" y="340" font-family="Arial, sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">합류</text>
+  <!-- Arrow 2: Gary → Tesla (영입·합류 = Tesla recruited Gary) -->
+  <polygon points="740,360 785,345 785,355 815,355 815,365 785,365 785,375" fill="#22c55e" opacity="0.9"/>
+  <text x="777" y="332" font-family="Arial, sans-serif" font-size="11" fill="#22c55e" text-anchor="middle">영입</text>
+  <text x="777" y="346" font-family="Arial, sans-serif" font-size="11" fill="#22c55e" text-anchor="middle">합류</text>
 
   <!-- Person 2: Lara Park -->
   <rect x="830" y="265" width="210" height="200" rx="16" fill="url(#cardGrad)" stroke="#60a5fa" stroke-width="2"/>

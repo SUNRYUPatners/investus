@@ -1,95 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#080c12"/>
-      <stop offset="100%" style="stop-color:#0d1117"/>
-    </linearGradient>
-    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#c084fc"/>
-      <stop offset="50%" style="stop-color:#60a5fa"/>
-      <stop offset="100%" style="stop-color:#4ade80"/>
-    </linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#080c12"/><stop offset="100%" style="stop-color:#0d1117"/></linearGradient>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="50%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#4ade80"/></linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
-  <rect width="1080" height="88" fill="#0d1117"/>
-  <text x="540" y="30" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
-  <text x="540" y="68" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SPCX · Iridium $8B 인수 BREAKING</text>
-  <rect y="88" width="1080" height="3" fill="#c084fc"/>
+  <rect x="0" y="0" width="1080" height="4" fill="url(#flowGrad)"/>
 
-  <!-- BREAKING badge -->
-  <rect x="30" y="106" width="140" height="34" rx="17" fill="#7f1d1d" stroke="#ef4444" stroke-width="2"/>
-  <text x="100" y="128" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">BREAKING</text>
-  <rect x="190" y="106" width="150" height="34" rx="17" fill="rgba(192,132,252,0.12)" stroke="#c084fc" stroke-width="1.5"/>
-  <text x="265" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c084fc" text-anchor="middle">2026. 07. 01</text>
+  <text x="540" y="38" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="30" y="48" width="80" height="26" rx="13" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1"/>
+  <text x="70" y="66" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">BREAKING</text>
+  <text x="540" y="100" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#e5e7eb" text-anchor="middle">RKLB · Iridium $80억 인수</text>
+  <rect x="396" y="112" width="288" height="34" rx="17" fill="#1f2937" stroke="#374151" stroke-width="1"/>
+  <text x="540" y="134" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle" letter-spacing="2">2026.07.01</text>
 
-  <!-- Big deal amount -->
-  <rect x="60" y="158" width="960" height="180" rx="20" fill="#130820" stroke="#c084fc" stroke-width="2.5"/>
-  <text x="540" y="204" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">SpaceX(SPCX) → Iridium 인수 금액</text>
-  <text x="540" y="284" font-family="Arial,sans-serif" font-size="80" font-weight="bold" fill="#c084fc" text-anchor="middle">$8,000,000,000</text>
-  <text x="540" y="324" font-family="Arial,sans-serif" font-size="17" fill="#e5e7eb" text-anchor="middle">약 11.4조원 — 우주통신 역사상 최대 수직통합 딜</text>
+  <!-- Correction notice -->
+  <rect x="60" y="158" width="960" height="50" rx="10" fill="rgba(239,68,68,0.08)" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="188" font-family="Arial,sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">⚠ SpaceX(SPCX) 아님 — Rocket Lab(RKLB)이 인수 주체입니다</text>
 
-  <!-- Full stack flow diagram -->
-  <text x="540" y="376" font-family="Arial,sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle" letter-spacing="2">THE FULL STACK</text>
+  <!-- $8B hero -->
+  <text x="540" y="310" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#c084fc" text-anchor="middle" opacity="0.12">$8B</text>
+  <text x="540" y="310" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#c084fc" text-anchor="middle">$8B</text>
+  <text x="540" y="348" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle" letter-spacing="2">IRIDIUM 인수 금액 · 약 11.4조원</text>
 
-  <rect x="60" y="392" width="286" height="150" rx="16" fill="#1a0d28" stroke="#c084fc" stroke-width="2"/>
-  <text x="203" y="432" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#c084fc" text-anchor="middle">DESIGN</text>
-  <text x="203" y="462" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">SpaceX 로켓 설계</text>
-  <text x="203" y="484" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">위성 설계 · Starlink</text>
-  <text x="203" y="506" font-family="Arial,sans-serif" font-size="12" fill="#c084fc" text-anchor="middle">★ 이미 세계 1위</text>
-  <text x="203" y="528" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">FALCON 9 / STARSHIP</text>
+  <!-- Flow: Design → Build → Operate -->
+  <text x="540" y="396" font-family="Arial,sans-serif" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="2">수직통합 완성 — The Full Stack</text>
 
-  <!-- Arrow 1 -->
-  <rect x="354" y="456" width="64" height="10" rx="5" fill="url(#flowGrad)"/>
-  <polygon points="418,446 440,461 418,476" fill="#60a5fa"/>
+  <rect x="60" y="412" width="260" height="130" rx="14" fill="#0f172a" stroke="#c084fc" stroke-width="2"/>
+  <text x="190" y="452" font-family="Arial,sans-serif" font-size="30" text-anchor="middle">🛰️</text>
+  <text x="190" y="486" font-family="Arial Black,sans-serif" font-size="18" fill="#c084fc" text-anchor="middle" font-weight="900">DESIGN</text>
+  <text x="190" y="508" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">위성 설계</text>
+  <text x="190" y="528" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Satellite Design</text>
 
-  <rect x="448" y="392" width="188" height="150" rx="16" fill="#0a1a2a" stroke="#60a5fa" stroke-width="2"/>
-  <text x="542" y="432" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#60a5fa" text-anchor="middle">BUILD</text>
-  <text x="542" y="462" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">로켓 제조</text>
-  <text x="542" y="484" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">위성 제조</text>
-  <text x="542" y="506" font-family="Arial,sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">★ 이미 세계 1위</text>
-  <text x="542" y="528" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">HAWTHORNE FACTORY</text>
+  <text x="380" y="484" font-family="Arial,sans-serif" font-size="32" fill="#f59e0b" text-anchor="middle">→</text>
 
-  <!-- Arrow 2 -->
-  <rect x="642" y="456" width="64" height="10" rx="5" fill="url(#flowGrad)"/>
-  <polygon points="706,446 728,461 706,476" fill="#4ade80"/>
+  <rect x="410" y="412" width="260" height="130" rx="14" fill="#0f172a" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial,sans-serif" font-size="30" text-anchor="middle">🚀</text>
+  <text x="540" y="486" font-family="Arial Black,sans-serif" font-size="18" fill="#60a5fa" text-anchor="middle" font-weight="900">BUILD</text>
+  <text x="540" y="508" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">로켓 발사</text>
+  <text x="540" y="528" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Rocket Launch</text>
 
-  <rect x="734" y="392" width="286" height="150" rx="16" fill="#0a1f12" stroke="#4ade80" stroke-width="2.5"/>
-  <text x="877" y="432" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#4ade80" text-anchor="middle">OPERATE</text>
-  <text x="877" y="462" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Iridium 통신 운영</text>
-  <text x="877" y="484" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Starlink 구독 서비스</text>
-  <text x="877" y="506" font-family="Arial,sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">★ NOW COMPLETE</text>
-  <text x="877" y="528" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">RECURRING REVENUE</text>
+  <text x="730" y="484" font-family="Arial,sans-serif" font-size="32" fill="#f59e0b" text-anchor="middle">→</text>
 
-  <!-- What is Iridium -->
-  <rect x="60" y="566" width="960" height="180" rx="16" fill="#111318" stroke="#1e2028" stroke-width="1"/>
-  <text x="80" y="598" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" font-weight="bold" letter-spacing="2">IRIDIUM이란?</text>
-  <line x1="80" y1="608" x2="1000" y2="608" stroke="#1e2028" stroke-width="1"/>
-  <text x="80" y="640" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">• 저궤도(LEO) 위성 66기 운영 — 극지방 포함 전 지구 커버리지</text>
-  <text x="80" y="668" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">• B2B 구독 매출 → SpaceX 반복 수익 기반 강화</text>
-  <text x="80" y="696" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">• 군사·항공·해양 통신 시장 → 프리미엄 계약 포트폴리오</text>
-  <text x="80" y="724" font-family="Arial,sans-serif" font-size="13" fill="#c084fc">SpaceX = 이제 발사→제조→운영 모든 단계 수직통합 완성</text>
+  <rect x="760" y="412" width="260" height="130" rx="14" fill="#0f172a" stroke="#4ade80" stroke-width="2"/>
+  <text x="890" y="452" font-family="Arial,sans-serif" font-size="30" text-anchor="middle">📡</text>
+  <text x="890" y="486" font-family="Arial Black,sans-serif" font-size="18" fill="#4ade80" text-anchor="middle" font-weight="900">OPERATE</text>
+  <text x="890" y="508" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">통신망 운영</text>
+  <text x="890" y="528" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Iridium Network</text>
 
-  <!-- Impact metrics -->
-  <rect x="60" y="764" width="290" height="130" rx="14" fill="#1a0d28" stroke="#c084fc" stroke-width="1.5"/>
-  <text x="205" y="800" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">인수 금액</text>
-  <text x="205" y="846" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#c084fc" text-anchor="middle">$8B</text>
-  <text x="205" y="878" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">우주산업 최대 M&amp;A</text>
+  <!-- Iridium info -->
+  <rect x="60" y="562" width="460" height="180" rx="14" fill="#111318" stroke="#c084fc" stroke-width="1"/>
+  <text x="80" y="592" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" letter-spacing="2">IRIDIUM 이란?</text>
+  <text x="80" y="618" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">● LEO 위성 66기 — 극지방 포함 전 지구 커버</text>
+  <text x="80" y="644" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">● B2B 구독: 군사·항공·해양 통신</text>
+  <text x="80" y="670" font-family="Arial,sans-serif" font-size="14" fill="#e5e7eb">● 연매출: $850M · 영업이익률 38%</text>
+  <text x="80" y="696" font-family="Arial,sans-serif" font-size="13" fill="#c084fc">반복 수익(Recurring Cash Flow) 확보</text>
+  <text x="80" y="718" font-family="Arial,sans-serif" font-size="12" fill="#6b7280">단순 발사체 기업 → 통신 서비스 기업으로 전환</text>
+  <text x="80" y="736" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">✓ "Everything under one roof" — investing.theads.ai</text>
 
-  <rect x="390" y="764" width="290" height="130" rx="14" fill="#0a1f12" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="535" y="800" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Iridium 위성</text>
-  <text x="535" y="846" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#4ade80" text-anchor="middle">66기</text>
-  <text x="535" y="878" font-family="Arial,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">전 지구 커버리지</text>
+  <!-- Investment thesis -->
+  <rect x="560" y="562" width="460" height="180" rx="14" fill="#111318" stroke="#4ade80" stroke-width="1"/>
+  <text x="580" y="592" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" letter-spacing="2">투자 시사점</text>
+  <text x="580" y="620" font-family="Arial,sans-serif" font-size="14" fill="#4ade80">✓ 반복 수익 $850M/년 즉시 확보</text>
+  <text x="580" y="646" font-family="Arial,sans-serif" font-size="14" fill="#4ade80">✓ 설계-발사-운영 완전 수직통합</text>
+  <text x="580" y="672" font-family="Arial,sans-serif" font-size="14" fill="#4ade80">✓ RKLB 비즈니스 모델 질적 전환</text>
+  <text x="580" y="698" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af">군사·항공·해양 B2B 구독 포트폴리오</text>
+  <text x="580" y="720" font-family="Arial,sans-serif" font-size="12" fill="#6b7280">Rocket Lab = 소형 우주 생태계 풀스택</text>
+  <text x="580" y="738" font-family="Arial,sans-serif" font-size="11" fill="#c084fc">✓ 우주 통신 역사상 최대 M&amp;A급 딜</text>
 
-  <rect x="720" y="764" width="300" height="130" rx="14" fill="#0a1a2a" stroke="#60a5fa" stroke-width="1.5"/>
-  <text x="870" y="800" font-family="Arial,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">수직통합 완성</text>
-  <text x="870" y="840" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#60a5fa" text-anchor="middle">DESIGN</text>
-  <text x="870" y="862" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#60a5fa" text-anchor="middle">BUILD OPERATE</text>
-  <text x="870" y="884" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">풀스택 완성 ✓</text>
-
-  <rect y="910" width="1080" height="2" fill="#c084fc"/>
-  <rect y="912" width="1080" height="168" fill="#0d1117"/>
-  <text x="540" y="958" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e5e7eb" text-anchor="middle">SpaceX, Iridium $8B 인수 — 설계·제조·운영 수직통합 완성</text>
-  <text x="540" y="986" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
-  <rect y="1010" width="1080" height="36" fill="#111318"/>
-  <text x="540" y="1033" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">SPCX · IRIDIUM · 위성통신 · 수직통합 · M&amp;A</text>
+  <rect y="762" width="1080" height="2" fill="url(#flowGrad)"/>
+  <rect y="764" width="1080" height="316" fill="#0d1117"/>
+  <text x="540" y="810" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e5e7eb" text-anchor="middle">RKLB(Rocket Lab), Iridium $8B 인수 — 설계·발사·운영 풀스택 완성</text>
+  <text x="540" y="840" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">INVESTUS · 2026.07.01 · 투자 참고용</text>
+  <rect y="864" width="1080" height="36" fill="#111318"/>
+  <text x="540" y="887" font-family="Arial,sans-serif" font-size="12" fill="#4b5563" text-anchor="middle" letter-spacing="4">RKLB · IRIDIUM · $8B · 수직통합 · 반복수익</text>
 </svg>
