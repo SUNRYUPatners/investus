@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="rgba(74,222,128,.18)" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.02</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA · FSD AE3 — 조기 배포 시작</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Hero checkmark -->
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" filter="url(#glow)" opacity=".12">✓</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle">✓</text>
+  <text x="540" y="308" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#f9fafb" text-anchor="middle">AE3 Early Access</text>
+  <text x="540" y="356" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">AE3-early-access 고객 배포 시작</text>
+
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- 3 feature cards -->
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="456" font-family="Arial" font-size="44" text-anchor="middle">🔧</text>
+  <text x="210" y="512" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">HW+SW</text>
+  <text x="210" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Config 포함</text>
+  <text x="210" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">AE3 전용 구성</text>
+
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="456" font-family="Arial" font-size="44" text-anchor="middle">🅿️</text>
+  <text x="540" y="512" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">주차 개선</text>
+  <text x="540" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Parking Improved</text>
+  <text x="540" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">AE3 parking updates</text>
+
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="456" font-family="Arial" font-size="44" text-anchor="middle">🛡️</text>
+  <text x="870" y="512" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">안전성 ↑↑</text>
+  <text x="870" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Significantly</text>
+  <text x="870" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Improved Safety</text>
+
+  <!-- Quote -->
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle" letter-spacing="2">Ashik Bharwany 코멘트</text>
+  <text x="540" y="700" font-family="Arial" font-size="26" fill="#4ade80" text-anchor="middle">"더 중요한 것은 안전성이 크게 향상됐다"</text>
+  <text x="540" y="740" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">"more importantly significantly improved safety"</text>
+  <text x="540" y="776" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">AE3 Early Access 대상 → 전체 HW3 순차 배포 예정</text>
+
+  <!-- FSD HW3 note -->
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="856" font-family="Arial" font-size="26" fill="#4ade80" text-anchor="middle">FSD v14 Lite HW3 주차 성능 v13.8 대비 대폭 향상</text>
+  <text x="540" y="892" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">"remarkably better" — 커뮤니티 테스터 반응</text>
+
+  <text x="540" y="974" font-family="Arial" font-size="22" fill="#374151" text-anchor="middle">TSLA FSD AE3 Early Access · Parking + Safety Improved · 2026.07.02</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · TSLA RESEARCH · NOT FINANCIAL ADVICE</text>
+</svg>

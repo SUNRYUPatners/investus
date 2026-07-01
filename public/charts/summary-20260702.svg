@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+
+  <text x="540" y="52" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="96" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.07.02 한장 요약</text>
+  <line x1="80" y1="114" x2="1000" y2="114" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Story 1: TSLA Q2 D-DAY -->
+  <rect x="60" y="130" width="960" height="120" rx="14" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="130" width="8" height="120" rx="4" fill="#ef4444"/>
+  <text x="116" y="178" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444">🔴 TSLA Q2 납품 발표</text>
+  <text x="116" y="216" font-family="Arial" font-size="22" fill="#fca5a5">오늘 9:30 AM ET · WS 예상 406K~480K</text>
+  <text x="960" y="200" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#ef4444" text-anchor="middle">D-DAY</text>
+
+  <!-- Story 2: TSLA Europe -->
+  <rect x="60" y="266" width="960" height="120" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="266" width="8" height="120" rx="4" fill="#4ade80"/>
+  <text x="116" y="314" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80">🌍 TSLA 유럽 6월 판매 폭등</text>
+  <text x="116" y="352" font-family="Arial" font-size="22" fill="#9ca3af">🇫🇷 2배+ · 🇸🇪 +56% · 🇩🇰 +39% · 🇪🇸 +31% · 🇮🇹 +43%</text>
+
+  <!-- Story 3: SPCX Wedbush -->
+  <rect x="60" y="402" width="960" height="120" rx="14" fill="#0a0a14" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="402" width="8" height="120" rx="4" fill="#c084fc"/>
+  <text x="116" y="450" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc">🚀 SPCX Wedbush OUTPERFORM</text>
+  <text x="116" y="488" font-family="Arial" font-size="22" fill="#9ca3af">12개월 목표가 $150 · "Space Hyperscaler"</text>
+  <text x="970" y="460" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#c084fc" text-anchor="end">$150</text>
+
+  <!-- Story 4: Supercharger -->
+  <rect x="60" y="538" width="960" height="120" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <rect x="60" y="538" width="8" height="120" rx="4" fill="#4ade80"/>
+  <text x="116" y="586" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80">⚡ Supercharger Q2 역대 최강</text>
+  <text x="116" y="624" font-family="Arial" font-size="22" fill="#9ca3af">2 TWh · 100M+ 세션 · +30% 충전량 · &lt;0.5% 대기</text>
+  <text x="970" y="596" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#4ade80" text-anchor="end">2 TWh</text>
+
+  <!-- Story 5: META Cloud -->
+  <rect x="60" y="674" width="960" height="120" rx="14" fill="#0a0f1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="60" y="674" width="8" height="120" rx="4" fill="#60a5fa"/>
+  <text x="116" y="722" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa">☁️ META AI 클라우드 사업 진출</text>
+  <text x="116" y="760" font-family="Arial" font-size="22" fill="#9ca3af">Bloomberg · 초과 AI 컴퓨팅 판매 · $604.93 +2.8%</text>
+
+  <!-- Story 6: SPCX AI Device + Optimus -->
+  <rect x="60" y="810" width="464" height="110" rx="14" fill="#0a0a14" stroke="#c084fc" stroke-width="1"/>
+  <rect x="60" y="810" width="8" height="110" rx="4" fill="#c084fc"/>
+  <text x="112" y="854" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc">📱 SPCX AI 기기 포착</text>
+  <text x="112" y="892" font-family="Arial" font-size="18" fill="#9ca3af">xAI+Qualcomm · 초기단계</text>
+
+  <rect x="556" y="810" width="464" height="110" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <rect x="556" y="810" width="8" height="110" rx="4" fill="#4ade80"/>
+  <text x="608" y="854" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80">🤖 Optimus 생산라인 공개</text>
+  <text x="608" y="892" font-family="Arial" font-size="18" fill="#9ca3af">Fremont · 연 100만대 · 모듈형</text>
+
+  <rect x="0" y="942" width="1080" height="2" fill="url(#flow)" opacity=".5"/>
+  <text x="540" y="986" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">TSLA · SPCX · META | 오늘의 주요 이슈 10개</text>
+
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.02 · NOT FINANCIAL ADVICE</text>
+</svg>

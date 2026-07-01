@@ -265,6 +265,19 @@ const PAIRS = [
   { ko: 'googl-sovereign-ai-20260701.svg',           en: 'googl-sovereign-ai-20260701-en.svg',           label: 'GOOGL_소버린AI',              date: '20260701' },
   { ko: 'market-us-q2-best-quarter-20260701.svg',    en: 'market-us-q2-best-quarter-20260701-en.svg',    label: '시장_Q2최고분기',              date: '20260701' },
   { ko: 'market-us-debt-gdp-20260701.svg',           en: 'market-us-debt-gdp-20260701-en.svg',           label: '시장_미국부채GDP',             date: '20260701' },
+
+  // ── 2026-07-02 ─────────────────────────────────────────────────────────
+  { ko: 'tsla-supercharger-q2-20260702.svg',        en: 'tsla-supercharger-q2-20260702-en.svg',        label: 'TSLA_Supercharger_Q2',        date: '20260702' },
+  { ko: 'tsla-europe-june-20260702.svg',            en: 'tsla-europe-june-20260702-en.svg',            label: 'TSLA_유럽6월판매',            date: '20260702' },
+  { ko: 'spcx-wedbush-150-20260702.svg',            en: 'spcx-wedbush-150-20260702-en.svg',            label: 'SPCX_Wedbush150',             date: '20260702' },
+  { ko: 'spcx-ai-device-20260702.svg',              en: 'spcx-ai-device-20260702-en.svg',              label: 'SPCX_AI기기',                 date: '20260702' },
+  { ko: 'tsla-optimus-fremont-20260702.svg',        en: 'tsla-optimus-fremont-20260702-en.svg',        label: 'TSLA_Optimus생산라인',        date: '20260702' },
+  { ko: 'tsla-semi-europe-20260702.svg',            en: 'tsla-semi-europe-20260702-en.svg',            label: 'TSLA_Semi유럽',               date: '20260702' },
+  { ko: 'elon-ai-power-20260702.svg',               en: 'elon-ai-power-20260702-en.svg',               label: 'Elon_AI전력',                 date: '20260702' },
+  { ko: 'meta-cloud-ai-20260702.svg',               en: 'meta-cloud-ai-20260702-en.svg',               label: 'META_클라우드AI',              date: '20260702' },
+  { ko: 'tsla-q2-delivery-day-20260702.svg',        en: 'tsla-q2-delivery-day-20260702-en.svg',        label: 'TSLA_Q2발표DDAY',             date: '20260702' },
+  { ko: 'tsla-fsd-ae3-20260702.svg',                en: 'tsla-fsd-ae3-20260702-en.svg',                label: 'TSLA_FSD_AE3',                date: '20260702' },
+  { ko: 'summary-20260702.svg',                     en: 'summary-20260702-en.svg',                     label: '7월02일_요약',                date: '20260702' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

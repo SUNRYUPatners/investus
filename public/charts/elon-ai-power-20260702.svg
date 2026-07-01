@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1000"/></linearGradient>
+    <linearGradient id="yg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#yg)"/>
+
+  <rect x="40" y="20" width="180" height="38" rx="19" fill="rgba(245,158,11,.18)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="130" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f59e0b" text-anchor="middle">ELON MUSK</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.02</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">AI 병목 — 칩 → 전력으로 이동</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Source badge -->
+  <rect x="330" y="138" width="420" height="46" rx="23" fill="rgba(245,158,11,.1)" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="168" font-family="Arial" font-size="20" fill="#fcd34d" text-anchor="middle">🌐 WEF 다보스 · 2026.01.22</text>
+
+  <!-- Hero: lightning bolt -->
+  <text x="540" y="290" font-family="Arial" font-size="90" text-anchor="middle">⚡</text>
+  <text x="540" y="374" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#f59e0b" text-anchor="middle" filter="url(#glow)" opacity=".12">전 력</text>
+  <text x="540" y="374" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#f59e0b" text-anchor="middle">전 력</text>
+  <text x="540" y="426" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">AI의 새로운 병목 = 전력</text>
+
+  <line x1="80" y1="454" x2="1000" y2="454" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Before → After -->
+  <rect x="60" y="472" width="420" height="160" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
+  <text x="270" y="524" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">과거 AI 병목</text>
+  <text x="270" y="582" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#9ca3af" text-anchor="middle">반도체 칩</text>
+  <text x="270" y="618" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle" font-style="italic">더 이상 아님 ✕</text>
+
+  <text x="540" y="570" font-family="Arial Black,Arial" font-size="40" fill="#f59e0b" text-anchor="middle">→</text>
+
+  <rect x="600" y="472" width="420" height="160" rx="16" fill="#1a1000" stroke="#f59e0b" stroke-width="2"/>
+  <text x="810" y="524" font-family="Arial" font-size="22" fill="#f59e0b" text-anchor="middle">현재 AI 병목</text>
+  <text x="810" y="582" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#f59e0b" text-anchor="middle">전 력</text>
+  <text x="810" y="618" font-family="Arial" font-size="22" fill="#fcd34d" text-anchor="middle">Electricity ⚡</text>
+
+  <!-- Quote -->
+  <rect x="60" y="652" width="960" height="220" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="696" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle" letter-spacing="2">일론 머스크 발언 (WEF)</text>
+  <text x="540" y="742" font-family="Arial" font-size="27" fill="#fcd34d" text-anchor="middle">"칩이 아닌 전력이 AI 제한 요소"</text>
+  <text x="540" y="788" font-family="Arial" font-size="24" fill="#e5e7eb" text-anchor="middle">"켤 전력이 부족할 정도로 칩을 생산 중"</text>
+  <text x="540" y="832" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">"The limiting factor for AI is no longer the chips — it's electricity"</text>
+  <text x="540" y="860" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">World Economic Forum, Davos · January 22, 2026</text>
+
+  <text x="540" y="948" font-family="Arial" font-size="22" fill="#374151" text-anchor="middle">Elon Musk · AI Bottleneck Shift → Electricity · WEF Davos 2026.01.22</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#yg)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · MACRO RESEARCH · NOT FINANCIAL ADVICE</text>
+</svg>

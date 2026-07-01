@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="rgba(74,222,128,.18)" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.02</text>
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA · Europe June Sales Explode</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+  <rect x="392" y="134" width="296" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">BREAKING — Europe Recovery</text>
+  <rect x="80" y="196" width="920" height="130" rx="18" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="180" y="250" font-family="Arial" font-size="46" text-anchor="middle">🇫🇷</text>
+  <text x="320" y="258" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle" filter="url(#glow)">2X+</text>
+  <text x="540" y="238" font-family="Arial" font-size="28" fill="#9ca3af" text-anchor="middle" font-weight="bold">France YoY June</text>
+  <text x="540" y="296" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">More than doubled vs same period</text>
+  <rect x="80" y="344" width="192" height="170" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="176" y="398" font-family="Arial" font-size="40" text-anchor="middle">🇸🇪</text>
+  <text x="176" y="456" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">+56%</text>
+  <text x="176" y="494" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Sweden</text>
+  <rect x="292" y="344" width="192" height="170" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="388" y="398" font-family="Arial" font-size="40" text-anchor="middle">🇩🇰</text>
+  <text x="388" y="456" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">+39%</text>
+  <text x="388" y="494" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Denmark</text>
+  <rect x="504" y="344" width="192" height="170" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="600" y="398" font-family="Arial" font-size="40" text-anchor="middle">🇪🇸</text>
+  <text x="600" y="456" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">+31%</text>
+  <text x="600" y="494" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Spain</text>
+  <rect x="716" y="344" width="192" height="170" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="812" y="398" font-family="Arial" font-size="40" text-anchor="middle">🇮🇹</text>
+  <text x="812" y="456" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">+43%</text>
+  <text x="812" y="494" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Italy 2,422 units</text>
+  <rect x="80" y="534" width="460" height="130" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="130" y="580" font-family="Arial" font-size="36" text-anchor="middle">🇵🇹</text>
+  <text x="340" y="580" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#4ade80" text-anchor="middle">+43.3%</text>
+  <text x="340" y="618" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Portugal · H1 +51.3% (8,275 units)</text>
+  <text x="130" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">June</text>
+  <rect x="560" y="534" width="460" height="130" rx="16" fill="#0a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="620" y="580" font-family="Arial" font-size="36" text-anchor="middle">🇳🇴</text>
+  <text x="800" y="580" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#ef4444" text-anchor="middle">-43%</text>
+  <text x="800" y="618" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Norway — Exception</text>
+  <rect x="80" y="684" width="920" height="90" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="724" font-family="Arial" font-size="24" fill="#e5e7eb" text-anchor="middle">Q2 total deliveries expected ~+5% — Analyst forecast</text>
+  <text x="540" y="758" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Source: Walter Bloomberg · Italian MoT · ACAP (Portugal)</text>
+  <text x="540" y="870" font-family="Arial" font-size="22" fill="#374151" text-anchor="middle">TSLA Europe June 2026 · France 2X+ · Sweden +56% · Italy +43% · 2026.07.02</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · TSLA RESEARCH · NOT FINANCIAL ADVICE</text>
+</svg>
