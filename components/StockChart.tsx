@@ -214,10 +214,23 @@ export function StockChart({
   const pctFromBase = base ? (chgFromBase / base) * 100 : 0;
 
   // When not hovering, show live price from parent (same source as page header)
-  const showLive      = hover == null && livePrice != null;
-  const dispPrice     = showLive ? livePrice!                  : activePrice;
-  const dispChange    = showLive ? (liveChange    ?? chgFromBase)    : chgFromBase;
-  const dispChangePct = showLive ? (liveChangePercent ?? pctFromBase) : pctFromBase;
+  const showLive = hover == null && livePrice != null;
+  const dispPrice = showLive ? livePrice! : activePrice;
+
+  // 1D: use live 1D change from parent
+  // non-1D: compute period change from first chart point to live price
+  let dispChange: number;
+  let dispChangePct: number;
+  if (showLive && period === "1D") {
+    dispChange    = liveChange    ?? chgFromBase;
+    dispChangePct = liveChangePercent ?? pctFromBase;
+  } else if (showLive && prices[0]) {
+    dispChange    = livePrice! - prices[0];
+    dispChangePct = ((livePrice! - prices[0]) / prices[0]) * 100;
+  } else {
+    dispChange    = chgFromBase;
+    dispChangePct = pctFromBase;
+  }
 
   const isUp  = dispChangePct >= 0;
   const color = isUp ? UP : DOWN;
