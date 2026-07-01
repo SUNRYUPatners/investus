@@ -2,28 +2,12 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0d1117"/>
-      <stop offset="100%" style="stop-color:#1a0a0a"/>
+      <stop offset="100%" style="stop-color:#0c0f1a"/>
     </linearGradient>
     <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#ef4444"/>
       <stop offset="100%" style="stop-color:#dc2626"/>
     </linearGradient>
-    <linearGradient id="barConsensus" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1e40af"/>
-      <stop offset="100%" style="stop-color:#3b82f6"/>
-    </linearGradient>
-    <linearGradient id="barActual" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#dc2626"/>
-      <stop offset="100%" style="stop-color:#ef4444"/>
-    </linearGradient>
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e293b"/>
-      <stop offset="100%" style="stop-color:#0f172a"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <filter id="glowRed">
       <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
       <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -31,103 +15,49 @@
   </defs>
 
   <rect width="1080" height="1080" fill="url(#bg)"/>
-  <rect x="0" y="0" width="1080" height="6" fill="#ef4444"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="4" fill="url(#redGrad)"/>
 
-  <!-- BREAKING banner -->
-  <rect x="40" y="14" width="240" height="48" rx="8" fill="#ef4444"/>
-  <text x="160" y="45" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="white" text-anchor="middle" letter-spacing="3">BREAKING</text>
+  <!-- BREAKING badge -->
+  <rect x="40" y="14" width="200" height="40" rx="8" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="140" y="39" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#ef4444" text-anchor="middle" letter-spacing="3">BREAKING</text>
 
   <!-- Header -->
-  <rect x="40" y="72" width="1000" height="80" rx="12" fill="#161b22" opacity="0.9"/>
-  <text x="60" y="102" font-family="Arial Black, sans-serif" font-size="13" font-weight="900" fill="#ef4444" letter-spacing="4">INVESTUS DAILY REPORT</text>
-  <text x="60" y="140" font-family="Arial Black, sans-serif" font-size="26" font-weight="900" fill="white">TSLA · Q2 480K BREAKING</text>
-  <rect x="880" y="86" width="148" height="34" rx="17" fill="#ef4444"/>
-  <text x="954" y="108" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">2026.07.01</text>
+  <text x="540" y="84" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="124" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA · Q2 Deliveries Forecast — 480,000 Units</text>
+  <rect x="396" y="140" width="288" height="34" rx="17" fill="#1f2937" stroke="#374151" stroke-width="1"/>
+  <text x="540" y="162" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" text-anchor="middle" letter-spacing="2">2026.07.01</text>
 
-  <!-- Big 480K -->
-  <rect x="40" y="170" width="1000" height="200" rx="20" fill="#1a0505" stroke="#ef4444" stroke-width="3"/>
-  <text x="540" y="270" font-family="Arial Black, sans-serif" font-size="110" font-weight="900" fill="#ef4444" text-anchor="middle" filter="url(#glowRed)">480,000</text>
-  <text x="540" y="348" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">Q2 2026 Tesla Deliveries — All-Time Record</text>
+  <!-- Forecast notice -->
+  <rect x="80" y="188" width="920" height="50" rx="10" fill="rgba(239,68,68,0.08)" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="218" font-family="Arial,sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">⚠ FORECAST — Official results not yet reported</text>
 
-  <!-- BEAT badge -->
-  <rect x="40" y="390" width="480" height="90" rx="14" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="2"/>
-  <text x="280" y="430" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="#ef4444" text-anchor="middle" filter="url(#glow)">BEAT +15%</text>
-  <text x="280" y="465" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">vs Wall Street Consensus</text>
+  <!-- Big hero: 480,000 -->
+  <rect x="80" y="258" width="920" height="200" rx="20" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="370" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#ef4444" text-anchor="middle" filter="url(#glowRed)" opacity="0.15">480,000</text>
+  <text x="540" y="370" font-family="Arial Black,Arial,sans-serif" font-size="110" font-weight="900" fill="#ef4444" text-anchor="middle">480,000</text>
+  <text x="540" y="440" font-family="Arial,sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle" letter-spacing="1">Tesla Q2 2026 Delivery Forecast</text>
 
-  <!-- vs consensus -->
-  <rect x="540" y="390" width="500" height="90" rx="14" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
-  <text x="640" y="425" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Consensus</text>
-  <text x="640" y="455" font-family="Arial Black, sans-serif" font-size="24" fill="#60a5fa" font-weight="900">~416,000</text>
-  <line x1="760" y1="405" x2="760" y2="470" stroke="#374151" stroke-width="1"/>
-  <text x="870" y="425" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Beat Amount</text>
-  <text x="870" y="455" font-family="Arial Black, sans-serif" font-size="24" fill="#ef4444" font-weight="900">+64,000</text>
+  <!-- Tweet source card -->
+  <rect x="80" y="480" width="920" height="160" rx="14" fill="#111318" stroke="#374151" stroke-width="1"/>
+  <text x="100" y="514" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" letter-spacing="2">SOURCE</text>
+  <text x="100" y="544" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb">@thedWhalley · BREAKING NEWS</text>
+  <text x="100" y="574" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#f9fafb">"TESLA TO DELIVER 480,000 UNITS IN Q2"</text>
+  <text x="100" y="610" font-family="Arial,sans-serif" font-size="16" fill="#ef4444">"It's so promising."</text>
 
-  <!-- Comparison bars -->
-  <text x="60" y="520" font-family="Arial Black, sans-serif" font-size="16" fill="#9ca3af" font-weight="700" letter-spacing="2">CONSENSUS vs ACTUAL ESTIMATE</text>
-  <rect x="60" y="540" width="120" height="30" rx="6" fill="#0f172a"/>
-  <text x="170" y="562" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="end">Consensus</text>
-  <rect x="185" y="544" width="600" height="26" rx="6" fill="url(#barConsensus)"/>
-  <text x="795" y="562" font-family="Arial Black, sans-serif" font-size="15" fill="#60a5fa" font-weight="900">416,000</text>
+  <!-- Key facts only -->
+  <line x1="80" y1="664" x2="1000" y2="664" stroke="#1f2937" stroke-width="1"/>
 
-  <rect x="60" y="580" width="120" height="30" rx="6" fill="#0f172a"/>
-  <text x="170" y="602" font-family="Arial, sans-serif" font-size="14" fill="#ef4444" text-anchor="end">Actual Est.</text>
-  <rect x="185" y="584" width="693" height="26" rx="6" fill="url(#barActual)"/>
-  <text x="890" y="602" font-family="Arial Black, sans-serif" font-size="15" fill="#ef4444" font-weight="900">480,000</text>
-  <line x1="880" y1="557" x2="880" y2="607" stroke="#ef4444" stroke-width="2"/>
-  <line x1="790" y1="557" x2="880" y2="557" stroke="#ef4444" stroke-width="1"/>
-  <text x="890" y="583" font-family="Arial Black, sans-serif" font-size="14" fill="#ef4444">+64K</text>
+  <rect x="80" y="680" width="920" height="240" rx="14" fill="#0f172a" stroke="#374151" stroke-width="1"/>
+  <text x="100" y="714" font-family="Arial,sans-serif" font-size="12" fill="#6b7280" letter-spacing="2">FACT CHECK</text>
+  <text x="100" y="748" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb">● Forecasted deliveries: <tspan fill="#ef4444" font-weight="bold">480,000 units</tspan></text>
+  <text x="100" y="778" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb">● Status: <tspan fill="#f59e0b">FORECAST — not confirmed results</tspan></text>
+  <text x="100" y="808" font-family="Arial,sans-serif" font-size="15" fill="#e5e7eb">● Reaction: <tspan fill="#4ade80">"It's so promising."</tspan></text>
+  <text x="100" y="848" font-family="Arial,sans-serif" font-size="13" fill="#6b7280">* Model breakdown, consensus comparison, quarterly trend — available after official report</text>
+  <text x="100" y="872" font-family="Arial,sans-serif" font-size="12" fill="#4b5563">Actual results will be updated when Tesla Q2 Deliveries Report is released</text>
 
-  <!-- Record badge -->
-  <rect x="40" y="640" width="1000" height="80" rx="14" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
-  <text x="540" y="678" font-family="Arial Black, sans-serif" font-size="28" fill="#ef4444" text-anchor="middle" font-weight="900" filter="url(#glow)">ALL-TIME RECORD QUARTERLY DELIVERIES</text>
-  <text x="540" y="706" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Best quarter in Tesla history — 역대 최고</text>
+  <text x="540" y="954" font-family="Arial,sans-serif" font-size="14" fill="#374151" text-anchor="middle">TSLA Q2 Delivery Forecast 480K · Estimate · Pre-Official Release · 2026.07.01</text>
 
-  <!-- Stats grid -->
-  <rect x="40" y="740" width="235" height="110" rx="12" fill="url(#cardGrad)" stroke="#ef4444" stroke-width="1"/>
-  <text x="157" y="780" font-family="Arial Black, sans-serif" font-size="30" fill="#ef4444" text-anchor="middle" font-weight="900">480K</text>
-  <text x="157" y="808" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Actual Estimate</text>
-  <text x="157" y="828" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Tesla Q2 2026</text>
-  <text x="157" y="842" font-family="Arial, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">RECORD HIGH</text>
-
-  <rect x="291" y="740" width="235" height="110" rx="12" fill="url(#cardGrad)" stroke="#60a5fa" stroke-width="1"/>
-  <text x="408" y="780" font-family="Arial Black, sans-serif" font-size="30" fill="#60a5fa" text-anchor="middle" font-weight="900">416K</text>
-  <text x="408" y="808" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Street Consensus</text>
-  <text x="408" y="828" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">8 Firms Average</text>
-  <text x="408" y="842" font-family="Arial, sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">Street Estimate</text>
-
-  <rect x="542" y="740" width="235" height="110" rx="12" fill="url(#cardGrad)" stroke="#22c55e" stroke-width="1"/>
-  <text x="659" y="780" font-family="Arial Black, sans-serif" font-size="30" fill="#22c55e" text-anchor="middle" font-weight="900">+64K</text>
-  <text x="659" y="808" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Beat Amount</text>
-  <text x="659" y="828" font-family="Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Above Consensus</text>
-  <text x="659" y="842" font-family="Arial, sans-serif" font-size="10" fill="#22c55e" text-anchor="middle">+15% vs Consensus</text>
-
-  <rect x="793" y="740" width="247" height="110" rx="12" fill="#ef4444" opacity="0.9"/>
-  <text x="916" y="778" font-family="Arial Black, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="900">+15%</text>
-  <text x="916" y="806" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Beat Rate</text>
-  <text x="916" y="830" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">vs Consensus</text>
-  <text x="916" y="845" font-family="Arial, sans-serif" font-size="11" fill="white" opacity="0.8" text-anchor="middle">~416K baseline</text>
-
-  <!-- Q history -->
-  <rect x="40" y="870" width="1000" height="130" rx="14" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
-  <text x="60" y="900" font-family="Arial Black, sans-serif" font-size="14" fill="#9ca3af" letter-spacing="2">QUARTERLY DELIVERY TREND (EST.)</text>
-  <rect x="100" y="980" width="50" height="50" rx="4" fill="#1e293b"/>
-  <text x="125" y="998" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Q2'25</text>
-  <text x="125" y="1012" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">384K</text>
-  <rect x="250" y="960" width="50" height="70" rx="4" fill="#1e293b"/>
-  <text x="275" y="978" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Q3'25</text>
-  <text x="275" y="992" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">400K</text>
-  <rect x="400" y="955" width="50" height="75" rx="4" fill="#3b82f6" opacity="0.7"/>
-  <text x="425" y="973" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Q4'25</text>
-  <text x="425" y="987" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">460K</text>
-  <rect x="550" y="965" width="50" height="65" rx="4" fill="#3b82f6" opacity="0.5"/>
-  <text x="575" y="983" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Q1'26</text>
-  <text x="575" y="997" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">420K</text>
-  <rect x="700" y="910" width="60" height="120" rx="4" fill="#ef4444" filter="url(#glow)"/>
-  <text x="730" y="928" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Q2'26</text>
-  <text x="730" y="944" font-family="Arial Black, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="900">480K</text>
-  <text x="730" y="960" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">RECORD</text>
-
-  <!-- Footer -->
-  <rect x="0" y="1044" width="1080" height="36" fill="#0f172a"/>
-  <text x="540" y="1068" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Q2 480K expected — +15% above consensus, all-time record quarterly delivery · INVESTUS · 2026.07.01 · For reference only</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#redGrad)" opacity="0.4"/>
+  <text x="540" y="1073" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · TSLA RESEARCH · NOT FINANCIAL ADVICE</text>
 </svg>

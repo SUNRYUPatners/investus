@@ -4794,12 +4794,12 @@ export const SEED_REPORTS: Report[] = [
 
   {
     id:            "seed-351",
-    title:         "TSLA Q2 납품 BREAKING — 480,000대 달성",
-    summary:       "테슬라가 2026년 2분기 납품량 480,000대를 달성했습니다. 월가 컨센서스 475,000대를 소폭 상회하며 연간 200만대 목표 달성에 청신호가 켜졌습니다.",
-    body:          "■ Q2 납품 실적\n\n• 2026년 Q2 납품: 480,000대\n• 월가 컨센서스: 475,000대 → 소폭 상회\n• 전년 동기 대비: +18%\n\n■ 모델별 납품\n• Model Y: 310,000대 (전체 64.6%)\n• Model 3: 95,000대\n• Cybertruck: 40,000대\n• Model S/X + Semi: 35,000대\n\n■ 투자 시사점\n✓ 컨센서스 상회 → 주가 상승 트리거 예상\n✓ 연간 200만대 목표 달성 가시권\n✓ CyberCab 양산 전 마지막 분기 → 기대감 선반영\n• 7월 실적 발표 시 주가 방향성 결정적",
-    titleEn:       "TSLA Q2 Deliveries BREAKING — 480,000 Units",
-    summaryEn:     "Tesla achieved 480,000 deliveries in Q2 2026, slightly beating Wall Street consensus of 475,000. A green light for achieving the annual 2 million unit target.",
-    bodyEn:        "■ Q2 Delivery Results\n\n• Q2 2026 deliveries: 480,000 units\n• Wall Street consensus: 475,000 → slight beat\n• Year-over-year: +18%\n\n■ By Model\n• Model Y: 310,000 (64.6% of total)\n• Model 3: 95,000\n• Cybertruck: 40,000\n• Model S/X + Semi: 35,000\n\n■ Investment Implications\n✓ Beat consensus → price upward trigger expected\n✓ Annual 2M unit target in sight\n✓ Last quarter before CyberCab production → anticipation priced in\n• July earnings report will be decisive for price direction",
+    title:         "TSLA Q2 납품 전망 — 480,000대 달성 예상",
+    summary:       "테슬라의 2026년 2분기 납품량이 480,000대에 달할 것으로 전망됩니다. 공식 실적 발표 전 예상치입니다.",
+    body:          "■ Q2 납품 전망 (공식 발표 전)\n\n• 예상 납품 대수: 480,000대\n• 성격: 공식 확정 결과 아님 — 전망치\n• 시장 반응: \"It's so promising.\"\n\n* 모델별 분류·컨센서스 비교 등 세부 내용은 공식 Q2 Deliveries Report 발표 후 확인 가능",
+    titleEn:       "TSLA Q2 Deliveries Forecast — 480,000 Units Expected",
+    summaryEn:     "Tesla is forecast to deliver 480,000 units in Q2 2026. This is a pre-announcement estimate, not confirmed results.",
+    bodyEn:        "■ Q2 Delivery Forecast (Pre-Official Release)\n\n• Forecasted deliveries: 480,000 units\n• Status: FORECAST — not confirmed results\n• Market reaction: \"It's so promising.\"\n\n* Model breakdown, consensus comparison — available after official Q2 Deliveries Report",
     category:      "BREAKING",
     categoryColor: "red",
     subject:       "TSLA Q2 납품",
