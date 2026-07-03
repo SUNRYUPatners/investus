@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
 
-export const maxDuration = 30;
+export const maxDuration = 45;
 
 let _redis: Redis | null = null;
 function getRedis(): Redis | null {
