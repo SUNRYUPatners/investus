@@ -279,6 +279,7 @@ const PAIRS = [
   { ko: 'tsla-fsd-ae3-20260702.svg',                en: 'tsla-fsd-ae3-20260702-en.svg',                label: 'TSLA_FSD_AE3',                date: '20260702' },
   { ko: 'summary-20260702.svg',                     en: 'summary-20260702-en.svg',                     label: '7월02일_요약',                date: '20260702' },
   // 2026-07-03
+  { ko: 'tsla-yl-20260703.svg',                     en: 'tsla-yl-20260703-en.svg',                     label: 'TSLA_ModelY8인승',            date: '20260703' },
   { ko: 'tsla-q2-result-20260703.svg',              en: 'tsla-q2-result-20260703-en.svg',              label: 'TSLA_Q2결과',                 date: '20260703' },
   { ko: 'tsla-energy-q2-20260703.svg',              en: 'tsla-energy-q2-20260703-en.svg',              label: 'TSLA_에너지저장Q2',           date: '20260703' },
   { ko: 'tsla-australia-20260703.svg',              en: 'tsla-australia-20260703-en.svg',              label: 'TSLA_호주6월',                date: '20260703' },

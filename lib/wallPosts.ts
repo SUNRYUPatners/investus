@@ -111,6 +111,14 @@ export const MOCK_POSTS: Post[] = [
     content: "$25B 연간 컴퓨팅에서 $1B 올릴 때마다 EPS 20% 올라간다는 공식. 이게 맞으면 $200B CapEx는 전부 수익으로 돌아오는 구조예요. 광고 AI 최적화 성숙도가 올라갈수록 광고주들이 META 예산 더 넣는 선순환이 이미 시작됐어요. 다음 분기 실적 기대해도 될 것 같아요.",
     createdAt: T3JL + 2*3600_000 + 30*60_000, likes: 498, comments: 2 },
 
+  // TSLA — Model Y 8인승 신형 YL ────────────────────────────────────────
+  { id: 424, symbol: "TSLA", nickname: "익명_4411", holdingLabel: "600주 보유",
+    content: "Model Y 8인승 드디어 나왔네. 0→60 4.4초에 527km에 FSD+Grok AI까지 내장이면 기존 7인승 RAV4나 팰리세이드 사던 사람들한테 완전 게임체인저다. 50kW 무선충전이 전 열에 다 들어간다는 거 진짜 레벨 다름. 엘론이 Q2 발표 날 자동차 신제품까지 터뜨렸으니 7월 22일 실적 발표 전까지 상승 모멘텀 이어갈 것 같아.",
+    createdAt: T3JL + 55*60_000, likes: 1534, comments: 6 },
+  { id: 425, symbol: "TSLA", nickname: "익명_8823", holdingLabel: "200주 보유",
+    content: "1+2+3열 8인승인데 트렁크까지 된다고? 그리고 어쿠스틱 글라스에 어댑티브 댐핑까지 들어갔으면 NVH는 독일차 뺨치겠는데. Grok AI 차량 내장은 음성 비서 경쟁에서 완전 독보적인 위치 잡는 거잖아. 기존 Model Y 보유자들 트레이드인 수요도 엄청날 듯.",
+    createdAt: T3JL + 1*3600_000 + 20*60_000, likes: 876, comments: 3 },
+
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-01 — TSLA Q2 480K·CyberCab Austin·FSD v46·Optimus·Semi /
   //              SPCX Iridium $8B·Memphis / NVDA Blackwell / NKE Q4 /

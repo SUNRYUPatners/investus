@@ -5604,6 +5604,23 @@ export const SEED_REPORTS: Report[] = [
   },
 
   {
+    id:            "seed-411",
+    title:         "TSLA Model Y 8인승 신형 출시 — 0→60 4.4초, 527km, FSD+Grok AI",
+    summary:       "테슬라가 Model Y 8인승 신형 구성을 공식 출시했습니다. 1+2+3열 레이아웃, 0→60mph 4.4초, 주행거리 325마일(527km), FSD Supervised + Grok AI 내장, 50kW 무선충전 전 열 지원.",
+    body:          "■ Tesla Model Y 8인승 신형\n\n0→60 mph: 4.4초\n주행거리: 325마일 / 527km\n좌석: 1+2+3열 (총 8인승)\n\n■ 주요 신기능\n• FSD Supervised + Grok AI 차량 내장\n• 50kW 무선충전패드 전 열 (액티브 쿨링)\n• 15스피커 Tesla Audio (1·2열 좌석 내장)\n• 2·3열 사이드에어백 최적화\n• 어댑티브 댐핑 + 스태거드 타이어\n• 어쿠스틱 글라스 + 공기역학 개선\n• 대형 리어 게이트 → 후방 시야 대폭 향상\n• 전·후방 트렁크 (8인 탑승 시에도 적재 가능)\n\ninvestus.kr SRP 최고투자책임자 발행",
+    titleEn:       "TSLA Model Y 8-Seat Launch — 0→60 4.4s, 325mi, FSD+Grok AI",
+    summaryEn:     "Tesla officially launched a new 8-seat Model Y configuration. 1+2+3 row layout, 0→60mph in 4.4 sec, 325-mile (527km) range, FSD Supervised + Grok AI built-in, 50kW wireless charging for all rows.",
+    bodyEn:        "■ Tesla Model Y New 8-Seat Config\n\n0→60 mph: 4.4 sec\nRange: 325 miles / 527 km\nSeating: 1+2+3 rows (8 passengers)\n\n■ Key New Features\n• FSD Supervised + Grok AI built-in\n• 50kW wireless charging pads all rows (active cooling)\n• 15-speaker Tesla Audio (row 1 & 2 seatbacks)\n• Side airbags for rows 2 & 3 optimized\n• Adaptive damping + staggered tires\n• Acoustic glass + improved aerodynamics\n• Larger tailgate → better rear visibility\n• Front & rear trunk (fits luggage with 8 aboard)\n\ninvestus.kr SRP Chief Investment Officer",
+    category:      "종목분석",
+    categoryColor: "mint",
+    subject:       "TSLA Model Y YL",
+    date:          "2026-07-03",
+    updatedAt:     "2026.07.03 08:00",
+    images:        ["/charts/tsla-yl-20260703.svg"],
+    imagesEn:      ["/charts/tsla-yl-20260703-en.svg"],
+  },
+
+  {
     id:            "seed-397",
     title:         "TSLA Q2 공식 발표 — 납품 480,126대 신기록 +25%",
     summary:       "테슬라가 Q2 2026 공식 납품 결과를 발표했습니다. 총 납품 480,126대(+25% YoY), 생산 451,758대, 역대 최고 Q2 달성. 월가 컨센서스 406,024대 대비 +74,000대 초과.",
@@ -6203,5 +6220,6 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-407": ["META"],
   "seed-408": [],
   "seed-409": [],
+  "seed-411": ["TSLA"],
   "seed-410": ["TSLA", "MSFT", "MU", "META"],
 };
