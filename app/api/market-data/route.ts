@@ -200,15 +200,16 @@ export async function GET(req: Request) {
     }
   }
 
-  // 장 마감: 캐시가 당일(EST) 데이터이면 바로 서빙 — 날짜가 바뀌면 강제 갱신
+  // 장 마감: 4일 이내 KV 데이터면 그대로 서빙 (날짜 불문)
+  // — 금요일 종가가 토·일·월요일에도 즉시 반환 (날짜 체크로 버리던 버그 수정)
+  // — close-time cron이 장마감 직후 KV를 최신 종가로 갱신하므로 항상 최신 종가가 담겨 있음
+  const MAX_CLOSED_AGE = 4 * 24 * 60 * 60_000; // 4일 (주말 + 여유)
   if (!open && !refresh && _cache) {
-    const cacheDay = new Date(_cache.data.liveAt ?? 0).toLocaleDateString("en-US", { timeZone: "America/New_York" });
-    const today    = new Date().toLocaleDateString("en-US", { timeZone: "America/New_York" });
-    if (cacheDay === today) {
+    const dataAge = Date.now() - (_cache.data.liveAt ?? 0);
+    if (dataAge < MAX_CLOSED_AGE) {
       return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
     }
-    // 날짜가 달라졌으면 캐시 무효화 → 아래서 API 재fetch
-    _cache = null;
+    _cache = null; // 4일 초과 → 강제 갱신
   }
   // 장 중: liveAt(실제 데이터 신선도) 기준 55초 TTL
   if (!refresh && _cache) {
