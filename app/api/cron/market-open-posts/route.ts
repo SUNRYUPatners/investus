@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getAdminSupabase } from "@/lib/supabase";
 import { isNYSEHoliday } from "@/lib/marketHours";
 
-export const maxDuration = 60;
+export const maxDuration = 180;
 
 type SessionType = "open" | "midday" | "close" | "report";
 
@@ -365,69 +365,80 @@ export async function GET(req: NextRequest) {
     const analystAlias = pickAlias(aliasSeed, 14);
     const analystCommentAlias = pickAlias(aliasSeed, 21);
 
-    // ── 종토방(wall_posts) 글 ──
-    const content = await generatePost(symbol, headlines, apiKey, session, wallAlias);
-    if (!content) {
+    // ── 종토방 글 + 애널리스트 글 병렬 생성 ──
+    const [content, analystContent] = await Promise.all([
+      generatePost(symbol, headlines, apiKey, session, wallAlias),
+      generateAnalystPost(symbol, headlines, apiKey, session, analystAlias),
+    ]);
+
+    if (!content && !analystContent) {
       result.error = "generation failed";
       results.push(result);
       continue;
     }
 
-    const botSeed = `${botPost}_${symbol}_${today}`;
-    const nickname = makeAnonNick(botSeed);
+    // ── 종토방(wall_posts) 글 ──
+    if (content) {
+      const botSeed = `${botPost}_${symbol}_${today}`;
+      const nickname = makeAnonNick(botSeed);
 
-    const { data: existing } = await db
-      .from("wall_posts")
-      .select("id")
-      .eq("symbol", symbol)
-      .eq("user_id", botPost)
-      .gte("created_at", `${today}T00:00:00.000Z`)
-      .maybeSingle();
-
-    if (!existing) {
-      const { data: post, error: postErr } = await db
+      const { data: existing } = await db
         .from("wall_posts")
-        .insert({ symbol, user_id: botPost, nickname, holding_label: session, content })
         .select("id")
-        .single();
+        .eq("symbol", symbol)
+        .eq("user_id", botPost)
+        .gte("created_at", `${today}T00:00:00.000Z`)
+        .maybeSingle();
 
-      if (postErr || !post) {
-        result.error = String(postErr?.message);
-      } else {
-        result.postId = post.id;
+      if (!existing) {
+        const { data: post, error: postErr } = await db
+          .from("wall_posts")
+          .insert({ symbol, user_id: botPost, nickname, holding_label: session, content })
+          .select("id")
+          .single();
 
-        // 댓글 2~3개 생성 (각각 다른 닉네임·시각)
-        const commentCount = 2 + Math.floor(Math.random() * 2); // 2 or 3
-        let insertedComments = 0;
-        for (let ci = 0; ci < commentCount; ci++) {
-          const cAlias = pickAlias(aliasSeed, 7 + ci * 5);
-          const commentText = await generateComment(content, symbol, apiKey, cAlias);
-          if (!commentText) continue;
-          const cSeed = `${botComment}_${symbol}_${today}_${ci}`;
-          const { data: comment } = await db
-            .from("wall_comments")
-            .insert({
-              post_id: post.id,
-              user_id: `${botComment}_${ci}`,
-              nickname: makeAnonNick(cSeed),
-              content: commentText,
-              parent_id: null,
-            })
-            .select("id")
-            .single();
-          if (comment) {
-            if (ci === 0) result.commentId = comment.id;
-            insertedComments++;
+        if (postErr || !post) {
+          result.error = String(postErr?.message);
+        } else {
+          result.postId = post.id;
+
+          // 댓글 2~3개 병렬 생성
+          const commentCount = 2 + Math.floor(Math.random() * 2);
+          const commentAliases = Array.from({ length: commentCount }, (_, ci) =>
+            pickAlias(aliasSeed, 7 + ci * 5)
+          );
+          const commentTexts = await Promise.all(
+            commentAliases.map((cAlias) => generateComment(content, symbol, apiKey, cAlias))
+          );
+          let insertedComments = 0;
+          for (let ci = 0; ci < commentTexts.length; ci++) {
+            const commentText = commentTexts[ci];
+            if (!commentText) continue;
+            const cSeed = `${botComment}_${symbol}_${today}_${ci}`;
+            const { data: comment } = await db
+              .from("wall_comments")
+              .insert({
+                post_id: post.id,
+                user_id: `${botComment}_${ci}`,
+                nickname: makeAnonNick(cSeed),
+                content: commentText,
+                parent_id: null,
+              })
+              .select("id")
+              .single();
+            if (comment) {
+              if (ci === 0) result.commentId = comment.id;
+              insertedComments++;
+            }
           }
-        }
-        if (insertedComments > 0) {
-          await db.from("wall_posts").update({ comments: insertedComments }).eq("id", post.id);
+          if (insertedComments > 0) {
+            await db.from("wall_posts").update({ comments: insertedComments }).eq("id", post.id);
+          }
         }
       }
     }
 
     // ── 애널리스트 탭(analyst_posts) 글 ──
-    const analystContent = await generateAnalystPost(symbol, headlines, apiKey, session, analystAlias);
     if (analystContent) {
       const { data: existingAnalyst } = await db
         .from("analyst_posts")
