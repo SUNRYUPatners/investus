@@ -13,6 +13,7 @@
     { "path": "/api/cron/market-open-posts?session=close", "schedule": "5 21 * * 1-5" },
     { "path": "/api/cron/market-summary-close", "schedule": "10 20 * * 1-5" },
     { "path": "/api/cron/market-summary-close", "schedule": "10 21 * * 1-5" },
-    { "path": "/api/push/report-update", "schedule": "30 23 * * *" }
+    { "path": "/api/push/report-update", "schedule": "30 23 * * *" },
+    { "path": "/api/market-data", "schedule": "0 */2 * * *" }
   ]
 }

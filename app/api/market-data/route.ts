@@ -184,7 +184,7 @@ export async function GET(req: Request) {
 
   const ccHeader = open
     ? "public, s-maxage=55, stale-while-revalidate=120"
-    : "public, s-maxage=3600, stale-while-revalidate=86400";
+    : "public, s-maxage=14400, stale-while-revalidate=86400"; // 장 마감 4시간 CDN 캐시 (새벽 cold-start 방어)
 
   // ── cold start: 인메모리 없으면 즉시 KV에서 복원 ────────────────────────────
   const STALE_LIMIT = 30 * 60_000; // 장 중 30분 초과 데이터는 신뢰 불가 → API 강제 갱신

@@ -159,7 +159,7 @@ export function LiveMarket() {
       if (cached) {
         const parsed = JSON.parse(cached) as MarketData & { _ts?: number };
         const ageMs = Date.now() - (parsed._ts ?? 0);
-        const FRESH_MS = 5 * 60 * 1000; // 5분
+        const FRESH_MS = isMarketOpen() ? 5 * 60 * 1000 : 4 * 60 * 60 * 1000; // 장 중 5분, 마감 4시간
         if (ageMs < FRESH_MS && ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0)) {
           setData(parsed);
           setLoading(false);
