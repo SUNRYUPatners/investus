@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <!-- Header -->
+  <text x="540" y="52" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#4ade80" text-anchor="middle" letter-spacing="4">INVESTUS 오늘의 하이라이트</text>
+  <text x="540" y="86" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026년 7월 3일 — 주요 뉴스 총정리</text>
+  <line x1="60" y1="104" x2="1020" y2="104" stroke="#1f2937" stroke-width="1"/>
+  <!-- Top hero: TSLA Q2 -->
+  <rect x="60" y="116" width="960" height="120" rx="16" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
+  <rect x="76" y="132" width="130" height="36" rx="18" fill="#ef4444"/>
+  <text x="141" y="156" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="white" text-anchor="middle">BREAKING</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#ef4444" text-anchor="middle" filter="url(#glow)">TSLA Q2 2026 — 480,126대 납품 (+25% YoY)</text>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#fca5a5" text-anchor="middle">월가 컨센서스 406,024 대비 +74,000대 초과 · 역대 Q2 최고 기록 · 에너지 13.5 GWh</text>
+  <text x="540" y="222" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">생산 451,758 · Model 3/Y 467,762 · 호주 8,670 · 중국 89,091 (+24.4% YoY, 8개월 연속)</text>
+  <!-- Row 1 -->
+  <rect x="60" y="252" width="305" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="212" y="284" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">MSFT</text>
+  <text x="212" y="316" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Frontier 출범</text>
+  <text x="212" y="348" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">$2.5B · 6,000명 자회사</text>
+  <rect x="387" y="252" width="305" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="540" y="284" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">MU</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">트럼프 어카운트</text>
+  <text x="540" y="348" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">$250M 투자 · 당일 +9pt</text>
+  <rect x="714" y="252" width="306" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="867" y="284" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">META</text>
+  <text x="867" y="316" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Wolfe Research</text>
+  <text x="867" y="348" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2027 CapEx $200B · Outperform</text>
+  <!-- Row 2 -->
+  <rect x="60" y="388" width="305" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="212" y="420" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">매크로</text>
+  <text x="212" y="452" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">고용 +57,000</text>
+  <text x="212" y="484" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">실업률 4.2% · 예상 하회</text>
+  <rect x="387" y="388" width="305" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="540" y="420" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">시장</text>
+  <text x="540" y="452" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">다우 ATH</text>
+  <text x="540" y="484" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">나스닥↓ · IT -2.37% 로테이션</text>
+  <rect x="714" y="388" width="306" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="867" y="420" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">매크로</text>
+  <text x="867" y="452" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">가계현금 8%</text>
+  <text x="867" y="484" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">95년 최고 · 100th Pct</text>
+  <!-- Row 3 -->
+  <rect x="60" y="524" width="305" height="120" rx="14" fill="#1a0505" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="212" y="556" font-family="Arial" font-size="16" fill="#ef4444" text-anchor="middle">Ford</text>
+  <text x="212" y="588" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Q2 -10.3%</text>
+  <text x="212" y="620" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">F시리즈 차질 · EV 수요↓</text>
+  <rect x="387" y="524" width="305" height="120" rx="14" fill="#061209" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="540" y="556" font-family="Arial" font-size="16" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="588" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Optimus V3 손</text>
+  <text x="540" y="620" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">인간 수준 근접 · Gen-3 준비</text>
+  <rect x="714" y="524" width="306" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="867" y="556" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">섹터 퍼포먼스 7/2</text>
+  <text x="867" y="588" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">방어주 강세</text>
+  <text x="867" y="620" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">필수소비재 +2.39% · IT -2.37%</text>
+  <!-- Bottom bar -->
+  <rect x="60" y="662" width="960" height="72" rx="14" fill="#0f172a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="700" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">오늘의 핵심 — TSLA 역대 Q2 최고 · 다우 ATH · 테크 로테이션 본격화</text>
+  <text x="540" y="726" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Q2 Company Update: 7월 22일 오후 4:30 CT · X(트위터) 라이브</text>
+  <text x="540" y="966" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">INVESTUS Daily Summary · 2026.07.03 · 전체 14개 리포트</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.03 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

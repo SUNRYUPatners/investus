@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="rgba(74,222,128,.18)" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.03</text>
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA China June — 8 Consecutive Months Growth</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="186" font-family="Arial" font-size="60" text-anchor="middle">🇨🇳</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="100" font-weight="900" fill="#4ade80" text-anchor="middle" filter="url(#glow)" opacity=".12">+24.4%</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="100" font-weight="900" fill="#4ade80" text-anchor="middle">+24.4%</text>
+  <text x="540" y="338" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">YoY — 8 Consecutive Months of Growth</text>
+  <line x1="80" y1="368" x2="1000" y2="368" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="388" width="460" height="130" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="290" y="434" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">June Wholesale Volume</text>
+  <text x="290" y="488" font-family="Arial Black,Arial" font-size="48" font-weight="900" fill="#4ade80" text-anchor="middle">89,091 units</text>
+  <text x="290" y="514" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">6월 도매 판매</text>
+  <rect x="560" y="388" width="460" height="130" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="790" y="434" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">Consecutive Growth</text>
+  <text x="790" y="488" font-family="Arial Black,Arial" font-size="48" font-weight="900" fill="#4ade80" text-anchor="middle">8 Months</text>
+  <text x="790" y="514" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">8개월 연속</text>
+  <rect x="60" y="538" width="460" height="130" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="290" y="584" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">Q2 2026 Cumulative</text>
+  <text x="290" y="638" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#60a5fa" text-anchor="middle">254,551 units</text>
+  <text x="290" y="662" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Q2 YoY +32.77%</text>
+  <rect x="560" y="538" width="460" height="130" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="790" y="584" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">Q2 Growth Rate</text>
+  <text x="790" y="638" font-family="Arial Black,Arial" font-size="48" font-weight="900" fill="#60a5fa" text-anchor="middle">+32.77%</text>
+  <text x="790" y="662" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Quarter-over-Quarter YoY</text>
+  <rect x="60" y="688" width="960" height="90" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="730" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">8 consecutive months despite BYD competition</text>
+  <text x="540" y="762" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">China market recovery + FSD rollout momentum</text>
+  <text x="540" y="900" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">TSLA China June 2026 · 89,091 units · +24.4% YoY · 2026.07.03</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.03 · investus.kr SRP Chief Investment Officer</text>
+</svg>

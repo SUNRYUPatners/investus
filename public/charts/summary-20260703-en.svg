@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <text x="540" y="52" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#4ade80" text-anchor="middle" letter-spacing="4">INVESTUS TODAY'S HIGHLIGHTS</text>
+  <text x="540" y="86" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">July 3, 2026 — Daily Summary</text>
+  <line x1="60" y1="104" x2="1020" y2="104" stroke="#1f2937" stroke-width="1"/>
+  <!-- Top hero: TSLA Q2 -->
+  <rect x="60" y="116" width="960" height="120" rx="16" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
+  <rect x="76" y="132" width="130" height="36" rx="18" fill="#ef4444"/>
+  <text x="141" y="156" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="white" text-anchor="middle">BREAKING</text>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#ef4444" text-anchor="middle" filter="url(#glow)">TSLA Q2 2026 — 480,126 Deliveries (+25% YoY)</text>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#fca5a5" text-anchor="middle">Beat Wall St 406,024 by +74K · Best-Ever Q2 · Energy 13.5 GWh</text>
+  <text x="540" y="222" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Production 451,758 · Model 3/Y 467,762 · Australia 8,670 · China 89,091 (+24.4% YoY, 8 months)</text>
+  <!-- Row 1 -->
+  <rect x="60" y="252" width="305" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="212" y="284" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">MSFT</text>
+  <text x="212" y="316" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Frontier Launches</text>
+  <text x="212" y="348" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">$2.5B · 6,000 Employees</text>
+  <rect x="387" y="252" width="305" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="540" y="284" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">MU</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Trump Accounts</text>
+  <text x="540" y="348" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">$250M · +9pt Same Day</text>
+  <rect x="714" y="252" width="306" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="867" y="284" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">META</text>
+  <text x="867" y="316" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Wolfe Research</text>
+  <text x="867" y="348" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2027 CapEx $200B · Outperform</text>
+  <!-- Row 2 -->
+  <rect x="60" y="388" width="305" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="212" y="420" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">Macro</text>
+  <text x="212" y="452" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Jobs +57,000</text>
+  <text x="212" y="484" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Unemployment 4.2% · Miss</text>
+  <rect x="387" y="388" width="305" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="540" y="420" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">Markets</text>
+  <text x="540" y="452" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">DOW ATH</text>
+  <text x="540" y="484" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Nasdaq↓ · IT -2.37% Rotation</text>
+  <rect x="714" y="388" width="306" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="867" y="420" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">Macro</text>
+  <text x="867" y="452" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Cash at 8%</text>
+  <text x="867" y="484" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">95+ Year High · 100th Pct</text>
+  <!-- Row 3 -->
+  <rect x="60" y="524" width="305" height="120" rx="14" fill="#1a0505" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="212" y="556" font-family="Arial" font-size="16" fill="#ef4444" text-anchor="middle">Ford</text>
+  <text x="212" y="588" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Q2 -10.3%</text>
+  <text x="212" y="620" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">F-Series Issues · EV Demand↓</text>
+  <rect x="387" y="524" width="305" height="120" rx="14" fill="#061209" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="540" y="556" font-family="Arial" font-size="16" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="588" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Optimus V3 Hand</text>
+  <text x="540" y="620" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Human-Level · Gen-3 Ready</text>
+  <rect x="714" y="524" width="306" height="120" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="867" y="556" font-family="Arial" font-size="16" fill="#f97316" text-anchor="middle">Sector Perf 7/2</text>
+  <text x="867" y="588" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Defensive Rise</text>
+  <text x="867" y="620" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Staples +2.39% · IT -2.37%</text>
+  <!-- Bottom bar -->
+  <rect x="60" y="662" width="960" height="72" rx="14" fill="#0f172a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="700" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Today's Key — TSLA Best-Ever Q2 · DOW ATH · Tech Rotation Accelerates</text>
+  <text x="540" y="726" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Q2 Company Update: July 22 at 4:30 PM CT · Live on X</text>
+  <text x="540" y="966" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">INVESTUS Daily Summary · 2026.07.03 · 14 Reports Total</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.03 · investus.kr SRP Chief Investment Officer</text>
+</svg>

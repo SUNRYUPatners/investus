@@ -26,6 +26,8 @@ export type Comment = {
   likes:        number;
 };
 
+const T3JL = 1783033200000; // 2026-07-03 08:00 KST
+const T2JL = 1782946800000; // 2026-07-02 08:00 KST
 const T1JL = 1782860400000; // 2026-07-01 08:00 KST
 const T30J = 1782774000000; // 2026-06-30 08:00 KST
 const T26J = 1782428400000; // 2026-06-26 08:00 KST
@@ -43,7 +45,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T1JL;       // NEW 배지 기준
+export const LATEST_UPDATE = T3JL;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -62,6 +64,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-03 — TSLA Q2 480,126·에너지 13.5GWh·호주·중국 +24.4%·Optimus V3손 /
+  //              MSFT Frontier $2.5B·MU 트럼프 $250M·META Wolfe $200B /
+  //              미국 고용 +57K·다우 ATH·가계현금 8%·Ford -10.3%
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA — Q2 공식 결과 ──────────────────────────────────────────────
+  { id: 414, symbol: "TSLA", nickname: "익명_2178", holdingLabel: "800주 보유",
+    content: "480,126대 공식 확정! 월가 컨센 406K를 7만 4천 대나 때려잡았어. 역대 Q2 최고 기록이고 전년 대비 +25%야. 중국 89K에 호주도 8,670대 신기록. 에너지 부문 13.5GWh가 조용히 +40% YoY인데 이게 별도 사업부로 봐도 굉장한 거잖아. 7월 22일 실적 발표 때 가이던스 어떻게 나오냐가 진짜 관건이지.",
+    createdAt: T3JL + 8*60_000, likes: 1876, comments: 5 },
+  { id: 415, symbol: "TSLA", nickname: "익명_6611", holdingLabel: "300주 보유",
+    content: "공식 트윗 보자마자 매수 눌렀다. 480K에 컨센 대비 +18%면 어닝 시즌에 EPS도 기대 이상 나올 가능성 높아. 중국이 8개월 연속 성장에 +24.4% YoY 유지한 거 BYD 공세 속에서 버텨낸 거잖아. 에너지 사업 13.5GWh는 Q3에 15GWh 넘을 듯. Model 3/Y가 467,762대면 신형 효과 확실히 있는 것 같고.",
+    createdAt: T3JL + 22*60_000, likes: 1342, comments: 4 },
+
+  // TSLA — Optimus V3 손 ────────────────────────────────────────────
+  { id: 416, symbol: "TSLA", nickname: "익명_9034", holdingLabel: "500주 보유",
+    content: "Optimus V3 손 영상 봤는데 진짜 소름이야. '로봇 손처럼 안 보이고 사람 손처럼 보일 것'이라는 엔지니어 발언이 허풍이 아닌 수준이야. Gen-3 양산 준비 단계라는데 이게 공장 내부에서 부품 조립에 투입되면 다른 자동화 장비랑 차원이 달라. EV 말고 Optimus TAM 보는 시각 갖춰야 해.",
+    createdAt: T3JL + 45*60_000, likes: 987, comments: 3 },
+  { id: 417, symbol: "TSLA", nickname: "익명_4423", holdingLabel: "150주 보유",
+    content: "솔직히 납품 숫자보다 Optimus가 더 흥분되는 소식이에요. 인간 수준 손 자유도라니 이게 말이 됩니까. 작년에 블록 집었는데 지금은 달걀도 집고. 반년 만에 이 속도면 2027년에 외판 가능성 진짜 현실적이에요. 연 100만 대 목표라면 오토메이션 시장 뒤집는 거잖아요.",
+    createdAt: T3JL + 1*3600_000 + 10*60_000, likes: 723, comments: 2 },
+
+  // MSFT — Frontier ────────────────────────────────────────────────
+  { id: 418, symbol: "MSFT", nickname: "익명_8812", holdingLabel: "200주 보유",
+    content: "Microsoft Frontier $2.5B·6,000명 독립 법인. 이건 그냥 AI 부서 확장이 아니에요. 완전 독립 자회사로 기업 AI 전환 전문 조직 만든 거잖아요. 기업 대상 컨설팅+구현 서비스면 Azure 매출 당기는 세일즈 엔진이 생기는 거예요. 가이던스 또 상향 오겠다는 신호 같아요.",
+    createdAt: T3JL + 30*60_000, likes: 645, comments: 2 },
+  { id: 419, symbol: "MSFT", nickname: "익명_3391", holdingLabel: "80주 보유",
+    content: "$2.5B에 6천 명이면 평균 인당 비용이 상당한데 그만큼 고급 AI 전문 인력 모으겠다는 거죠. Azure+Copilot+GitHub 다 엮어서 기업 AI 전환 원스톱 제공. 경쟁사인 AWS, GCP도 비슷한 서비스 있지만 MSFT가 엔터프라이즈 신뢰도는 아직 1위라 고객 락인 효과가 커요.",
+    createdAt: T3JL + 1*3600_000 + 30*60_000, likes: 489, comments: 2 },
+
+  // MU — 트럼프 어카운트 ─────────────────────────────────────────────
+  { id: 420, symbol: "MU", nickname: "익명_5547", holdingLabel: "100주 보유",
+    content: "트럼프가 X에 직접 마이크론 언급하며 감사 포스팅. $250M 트럼프 어카운트 투자하고 당일 +9pt. 정치적 후광이 주가에 직접 붙는 거야. 뭐가 됐든 트럼프가 공개 칭찬하면 단기 주가 효과는 확실해. 반도체 투자 사이클에 정치 리스크 헤지까지 되는 구조가 됐네.",
+    createdAt: T3JL + 15*60_000, likes: 834, comments: 3 },
+  { id: 421, symbol: "MU", nickname: "익명_1178", holdingLabel: "60주 보유",
+    content: "마이크론이 아이들 미래 기금에 $250M 넣은 건데 트럼프가 직접 고마움 표시. 이건 단순 CSR이 아니라 정책 수혜 확보 전략이에요. HBM 수요가 NVDA 통해 폭발적인 상황에서 정치적 백도 생겼으니 미국 정부 관련 반도체 수주에서 우선 고려될 가능성 높아요.",
+    createdAt: T3JL + 2*3600_000, likes: 556, comments: 2 },
+
+  // META — Wolfe Research ──────────────────────────────────────────
+  { id: 422, symbol: "META", nickname: "익명_7763", holdingLabel: "250주 보유",
+    content: "Wolfe Research 2027 CapEx 전망 $200B, 컨센 $180B 상회. 시장이 '비용 너무 많다'고 할 수 있지만 반대로 해석하면 생성형 AI 광고 수익이 그 이상 돌아온다는 확신이야. +20% EPS 부스트 공식이 실현되면 $200B는 ROI 최고의 투자가 되는 거잖아. Outperform 유지 맞고.",
+    createdAt: T3JL + 40*60_000, likes: 712, comments: 2 },
+  { id: 423, symbol: "META", nickname: "익명_3348", holdingLabel: "120주 보유",
+    content: "$25B 연간 컴퓨팅에서 $1B 올릴 때마다 EPS 20% 올라간다는 공식. 이게 맞으면 $200B CapEx는 전부 수익으로 돌아오는 구조예요. 광고 AI 최적화 성숙도가 올라갈수록 광고주들이 META 예산 더 넣는 선순환이 이미 시작됐어요. 다음 분기 실적 기대해도 될 것 같아요.",
+    createdAt: T3JL + 2*3600_000 + 30*60_000, likes: 498, comments: 2 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-01 — TSLA Q2 480K·CyberCab Austin·FSD v46·Optimus·Semi /

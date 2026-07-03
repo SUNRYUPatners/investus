@@ -278,6 +278,21 @@ const PAIRS = [
   { ko: 'tsla-q2-delivery-day-20260702.svg',        en: 'tsla-q2-delivery-day-20260702-en.svg',        label: 'TSLA_Q2발표DDAY',             date: '20260702' },
   { ko: 'tsla-fsd-ae3-20260702.svg',                en: 'tsla-fsd-ae3-20260702-en.svg',                label: 'TSLA_FSD_AE3',                date: '20260702' },
   { ko: 'summary-20260702.svg',                     en: 'summary-20260702-en.svg',                     label: '7월02일_요약',                date: '20260702' },
+  // 2026-07-03
+  { ko: 'tsla-q2-result-20260703.svg',              en: 'tsla-q2-result-20260703-en.svg',              label: 'TSLA_Q2결과',                 date: '20260703' },
+  { ko: 'tsla-energy-q2-20260703.svg',              en: 'tsla-energy-q2-20260703-en.svg',              label: 'TSLA_에너지저장Q2',           date: '20260703' },
+  { ko: 'tsla-australia-20260703.svg',              en: 'tsla-australia-20260703-en.svg',              label: 'TSLA_호주6월',                date: '20260703' },
+  { ko: 'tsla-china-jun-20260703.svg',              en: 'tsla-china-jun-20260703-en.svg',              label: 'TSLA_중국6월',                date: '20260703' },
+  { ko: 'tsla-optimus-v3-hand-20260703.svg',        en: 'tsla-optimus-v3-hand-20260703-en.svg',        label: 'TSLA_OptimV3손',              date: '20260703' },
+  { ko: 'msft-frontier-20260703.svg',               en: 'msft-frontier-20260703-en.svg',               label: 'MSFT_Frontier',               date: '20260703' },
+  { ko: 'mu-trump-20260703.svg',                    en: 'mu-trump-20260703-en.svg',                    label: 'MU_트럼프어카운트',           date: '20260703' },
+  { ko: 'us-jobs-jun-20260703.svg',                 en: 'us-jobs-jun-20260703-en.svg',                 label: '미국_6월고용',                date: '20260703' },
+  { ko: 'tech-rotation-20260703.svg',               en: 'tech-rotation-20260703-en.svg',               label: 'AI_테크로테이션',             date: '20260703' },
+  { ko: 'us-cash-8pct-20260703.svg',                en: 'us-cash-8pct-20260703-en.svg',                label: '가계현금8pct',                date: '20260703' },
+  { ko: 'meta-wolfe-20260703.svg',                  en: 'meta-wolfe-20260703-en.svg',                  label: 'META_Wolfe200B',              date: '20260703' },
+  { ko: 'ford-q2-20260703.svg',                     en: 'ford-q2-20260703-en.svg',                     label: 'Ford_Q2판매',                 date: '20260703' },
+  { ko: 'sector-perf-20260703.svg',                 en: 'sector-perf-20260703-en.svg',                 label: '섹터퍼포먼스_0702',           date: '20260703' },
+  { ko: 'summary-20260703.svg',                     en: 'summary-20260703-en.svg',                     label: '7월03일_요약',                date: '20260703' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

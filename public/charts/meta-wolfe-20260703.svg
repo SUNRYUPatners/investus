@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#020c1a"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="120" height="38" rx="19" fill="rgba(96,165,250,.18)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="100" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#60a5fa" text-anchor="middle">META</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.03</text>
+  <text x="540" y="100" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">META — Wolfe Research 2027 CapEx $2,000억 전망</text>
+  <line x1="80" y1="118" x2="1000" y2="118" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="178" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">WOLFE RESEARCH · META PLATFORMS</text>
+  <text x="540" y="282" font-family="Arial Black,Arial" font-size="100" font-weight="900" fill="#60a5fa" text-anchor="middle" filter="url(#glow)" opacity=".12">$200B</text>
+  <text x="540" y="282" font-family="Arial Black,Arial" font-size="100" font-weight="900" fill="#60a5fa" text-anchor="middle">$200B</text>
+  <text x="540" y="332" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">2027 CapEx 전망 — 시장 컨센서스 $180B 상회</text>
+  <line x1="80" y1="360" x2="1000" y2="360" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="380" width="300" height="130" rx="16" fill="#020c1a" stroke="#60a5fa" stroke-width="2"/>
+  <text x="210" y="426" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">투자의견</text>
+  <text x="210" y="474" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#60a5fa" text-anchor="middle">Outperform</text>
+  <text x="210" y="502" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Wolfe Research</text>
+  <rect x="390" y="380" width="300" height="130" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="426" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">2027 CapEx</text>
+  <text x="540" y="474" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#60a5fa" text-anchor="middle">$200B</text>
+  <text x="540" y="502" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">vs Street $180B</text>
+  <rect x="720" y="380" width="300" height="130" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="870" y="426" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">AI EPS 부스트</text>
+  <text x="870" y="474" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#4ade80" text-anchor="middle">+20%</text>
+  <text x="870" y="502" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">$25B 연간 컴퓨팅 기준</text>
+  <rect x="60" y="530" width="960" height="110" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="574" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">생성형 AI 지배력 → EPS 큰 폭 부스트 전망</text>
+  <text x="540" y="612" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Generative AI dominance could boost EPS by ~20% for every $1B compute</text>
+  <text x="540" y="636" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">at a $25B annual rate — Wolfe Research</text>
+  <rect x="60" y="660" width="960" height="80" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="700" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">2027 CapEx $200B — 시장 컨센서스 $180B를 $20B 상회</text>
+  <text x="540" y="734" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">$20B above Street estimate · Outperform maintained</text>
+  <text x="540" y="966" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">META · Wolfe Outperform · 2027 CapEx $200B · 2026.07.03</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.03 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

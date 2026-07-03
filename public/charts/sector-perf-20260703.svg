@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0d00"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f97316"/><stop offset="100%" style="stop-color:#ea580c"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="96" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">섹터 퍼포먼스 — 2026.07.02</text>
+  <text x="540" y="126" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">All Sectors -0.53% · 오후 3:11 PM EDT 기준</text>
+  <line x1="80" y1="144" x2="1000" y2="144" stroke="#1f2937" stroke-width="1"/>
+  <!-- Sector bars - left column -->
+  <text x="170" y="186" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">상승 섹터</text>
+  <text x="870" y="186" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">하락 섹터</text>
+  <!-- Left: Green sectors -->
+  <rect x="60" y="200" width="460" height="52" rx="10" fill="#0a1a0a" stroke="#374151"/>
+  <text x="200" y="234" font-family="Arial" font-size="20" fill="#9ca3af">필수소비재 (Consumer Staples)</text>
+  <text x="490" y="234" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">+2.39%</text>
+  <rect x="60" y="262" width="460" height="52" rx="10" fill="#0a1a0a" stroke="#374151"/>
+  <text x="200" y="296" font-family="Arial" font-size="20" fill="#9ca3af">헬스케어 (Health Care)</text>
+  <text x="490" y="296" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">+2.31%</text>
+  <rect x="60" y="324" width="460" height="52" rx="10" fill="#0a1a0a" stroke="#374151"/>
+  <text x="200" y="358" font-family="Arial" font-size="20" fill="#9ca3af">유틸리티 (Utilities)</text>
+  <text x="490" y="358" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">+1.83%</text>
+  <rect x="60" y="386" width="460" height="52" rx="10" fill="#0a1a0a" stroke="#374151"/>
+  <text x="200" y="420" font-family="Arial" font-size="20" fill="#9ca3af">소재 (Materials)</text>
+  <text x="490" y="420" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">+1.17%</text>
+  <rect x="60" y="448" width="460" height="52" rx="10" fill="#0a1a0a" stroke="#374151"/>
+  <text x="200" y="482" font-family="Arial" font-size="20" fill="#9ca3af">금융 (Financials)</text>
+  <text x="490" y="482" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">+1.13%</text>
+  <rect x="60" y="510" width="460" height="52" rx="10" fill="#0a1a0a" stroke="#374151"/>
+  <text x="200" y="544" font-family="Arial" font-size="20" fill="#9ca3af">리얼에스테이트 (Real Estate)</text>
+  <text x="490" y="544" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">+0.80%</text>
+  <rect x="60" y="572" width="460" height="52" rx="10" fill="#0a1a0a" stroke="#374151"/>
+  <text x="200" y="606" font-family="Arial" font-size="20" fill="#9ca3af">에너지 (Energy)</text>
+  <text x="490" y="606" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">+0.50%</text>
+  <!-- Right: Red sectors -->
+  <rect x="560" y="200" width="460" height="52" rx="10" fill="#1a0505" stroke="#374151"/>
+  <text x="700" y="234" font-family="Arial" font-size="20" fill="#9ca3af">산업재 (Industrials)</text>
+  <text x="990" y="234" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="end">-0.31%</text>
+  <rect x="560" y="262" width="460" height="52" rx="10" fill="#1a0505" stroke="#374151"/>
+  <text x="700" y="296" font-family="Arial" font-size="20" fill="#9ca3af">커뮤니케이션 서비스</text>
+  <text x="990" y="296" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="end">-0.85%</text>
+  <rect x="560" y="324" width="460" height="52" rx="10" fill="#1a0505" stroke="#374151"/>
+  <text x="700" y="358" font-family="Arial" font-size="20" fill="#9ca3af">경기소비재 (Cons. Disc.)</text>
+  <text x="990" y="358" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="end">-0.96%</text>
+  <rect x="560" y="386" width="460" height="100" rx="10" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
+  <text x="700" y="430" font-family="Arial" font-size="20" fill="#9ca3af">정보기술 (IT)</text>
+  <text x="990" y="468" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#ef4444" text-anchor="end">-2.37%</text>
+  <!-- Summary bar -->
+  <rect x="60" y="656" width="960" height="90" rx="14" fill="#1a0d00" stroke="#f97316" stroke-width="1.5"/>
+  <text x="540" y="698" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f97316" text-anchor="middle">방어주 강세 vs IT 급락 — 뚜렷한 로테이션</text>
+  <text x="540" y="734" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Defensive sectors surging · IT sector leading declines</text>
+  <text x="540" y="966" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">Sector Performance · 07/02/2026 · All Sectors -0.53% · 2026.07.03</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.03 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>
