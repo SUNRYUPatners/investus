@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f14"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#c2410c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#orangeGrad)" rx="2"/>
+  <rect x="60" y="90" width="100" height="36" rx="8" fill="#f97316"/>
+  <text x="110" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="174" y="90" width="80" height="36" rx="8" fill="none" stroke="#f97316" stroke-width="2"/>
+  <text x="214" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f97316" text-anchor="middle">FSD법적</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a3a2a" text-anchor="end">2026.07.04</text>
+
+  <text x="540" y="185" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle" filter="url(#glow)">FSD 사고 · 텍사스 과실치사</text>
+  <text x="540" y="244" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#fdba74" text-anchor="middle" filter="url(#glow)">중범죄 기소</text>
+  <text x="540" y="290" font-family="Arial, sans-serif" font-size="20" fill="#fb923c" text-anchor="middle">Harris County DA · FSD 활성화 상태 · 정지 신호 미인식 · 운전자 기소</text>
+
+  <rect x="60" y="310" width="960" height="76" rx="12" fill="#1a0a04" stroke="#f97316" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="540" y="344" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#fdba74" text-anchor="middle">FELONY MANSLAUGHTER · Case 1970127-208 · Harris County District Attorney</text>
+  <text x="540" y="372" font-family="Arial, sans-serif" font-size="15" fill="#fb923c" text-anchor="middle">Deputy Sheriff Butler 7개항 진술서 · FSD 활성화 확인 · 브레이크 미작동</text>
+
+  <rect x="60" y="400" width="460" height="290" rx="16" fill="#1a0a04" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="290" y="442" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" text-anchor="middle">사건 개요</text>
+  <text x="290" y="470" font-family="Arial, sans-serif" font-size="14" fill="#fb923c" text-anchor="middle">텍사스 Harris County 발생</text>
+  <text x="290" y="492" font-family="Arial, sans-serif" font-size="14" fill="#fb923c" text-anchor="middle">FSD 활성화 상태로 주행 중</text>
+  <text x="290" y="514" font-family="Arial, sans-serif" font-size="13" fill="#c05a2a" text-anchor="middle">정지 신호(stop sign) 미인식</text>
+  <text x="290" y="536" font-family="Arial, sans-serif" font-size="13" fill="#c05a2a" text-anchor="middle">브레이크 페달 미압박</text>
+  <text x="290" y="558" font-family="Arial, sans-serif" font-size="13" fill="#c05a2a" text-anchor="middle">충돌 후 사망 사고 발생</text>
+  <text x="290" y="582" font-family="Arial, sans-serif" font-size="12" fill="#9a4a1a" text-anchor="middle">운전자: 중범죄 과실치사 기소</text>
+  <text x="290" y="604" font-family="Arial, sans-serif" font-size="12" fill="#9a4a1a" text-anchor="middle">Tesla 법인은 기소 대상 아님</text>
+  <text x="290" y="626" font-family="Arial, sans-serif" font-size="11" fill="#7a3a1a" text-anchor="middle">7개항 경찰 진술서 확보</text>
+  <text x="290" y="646" font-family="Arial, sans-serif" font-size="11" fill="#7a3a1a" text-anchor="middle">Deputy Sheriff Butler 서명</text>
+  <text x="290" y="666" font-family="Arial, sans-serif" font-size="11" fill="#6a2a0a" text-anchor="middle">미국 최초 FSD 관련 중범죄 사례</text>
+  <text x="290" y="682" font-family="Arial, sans-serif" font-size="10" fill="#5a2a0a" text-anchor="middle">선례 설정 가능성</text>
+
+  <rect x="560" y="400" width="460" height="290" rx="16" fill="#1a0a04" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="790" y="442" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" text-anchor="middle">투자 시사점</text>
+  <text x="790" y="470" font-family="Arial, sans-serif" font-size="14" fill="#fb923c" text-anchor="middle">운전자 기소 = Tesla 직접 책임 없음</text>
+  <text x="790" y="492" font-family="Arial, sans-serif" font-size="14" fill="#fb923c" text-anchor="middle">단기 주가 리스크 요인</text>
+  <text x="790" y="514" font-family="Arial, sans-serif" font-size="13" fill="#c05a2a" text-anchor="middle">FSD 규제 강화 압박 가능</text>
+  <text x="790" y="536" font-family="Arial, sans-serif" font-size="13" fill="#c05a2a" text-anchor="middle">NHTSA 추가 조사 가능성</text>
+  <text x="790" y="558" font-family="Arial, sans-serif" font-size="13" fill="#c05a2a" text-anchor="middle">로보택시 확장에 간접 영향</text>
+  <text x="790" y="582" font-family="Arial, sans-serif" font-size="12" fill="#9a4a1a" text-anchor="middle">FSD 책임 프레임 논쟁 재점화</text>
+  <text x="790" y="604" font-family="Arial, sans-serif" font-size="12" fill="#9a4a1a" text-anchor="middle">운전자 vs 제조사 책임 분배</text>
+  <text x="790" y="626" font-family="Arial, sans-serif" font-size="11" fill="#7a3a1a" text-anchor="middle">감독 의무 법제화 논의 촉진</text>
+  <text x="790" y="646" font-family="Arial, sans-serif" font-size="11" fill="#7a3a1a" text-anchor="middle">미국 자율주행 입법 가속화</text>
+  <text x="790" y="666" font-family="Arial, sans-serif" font-size="11" fill="#6a2a0a" text-anchor="middle">장기 산업 규제 선례</text>
+  <text x="790" y="682" font-family="Arial, sans-serif" font-size="10" fill="#5a2a0a" text-anchor="middle">Tesla 법적 방어 능력 주목</text>
+
+  <rect x="60" y="706" width="960" height="164" rx="16" fill="#120804" stroke="#f97316" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="540" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">FSD 법적 책임 구조 분석</text>
+
+  <rect x="80" y="756" width="280" height="98" rx="10" fill="#1a0a04" stroke="#f97316" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="220" y="780" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fdba74" text-anchor="middle">이번 케이스</text>
+  <text x="220" y="800" font-family="Arial, sans-serif" font-size="13" fill="#fb923c" text-anchor="middle">운전자 개인 기소</text>
+  <text x="220" y="820" font-family="Arial, sans-serif" font-size="12" fill="#9a4a1a" text-anchor="middle">Tesla 법인 면책</text>
+  <text x="220" y="838" font-family="Arial, sans-serif" font-size="11" fill="#7a3a1a" text-anchor="middle">감독 의무 위반 논리</text>
+  <text x="220" y="846" font-family="Arial, sans-serif" font-size="10" fill="#5a2a0a" text-anchor="middle">FSD = 운전 보조 한계</text>
+
+  <rect x="400" y="756" width="280" height="98" rx="10" fill="#1a0a04" stroke="#f97316" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="540" y="780" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fdba74" text-anchor="middle">규제 리스크</text>
+  <text x="540" y="800" font-family="Arial, sans-serif" font-size="13" fill="#fb923c" text-anchor="middle">NHTSA 개입 가능성</text>
+  <text x="540" y="820" font-family="Arial, sans-serif" font-size="12" fill="#9a4a1a" text-anchor="middle">FSD 사용 조건 강화</text>
+  <text x="540" y="838" font-family="Arial, sans-serif" font-size="11" fill="#7a3a1a" text-anchor="middle">감독 요건 법제화</text>
+  <text x="540" y="846" font-family="Arial, sans-serif" font-size="10" fill="#5a2a0a" text-anchor="middle">로보택시 확장 변수</text>
+
+  <rect x="720" y="756" width="280" height="98" rx="10" fill="#1a0a04" stroke="#f97316" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="860" y="780" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fdba74" text-anchor="middle">장기 영향</text>
+  <text x="860" y="800" font-family="Arial, sans-serif" font-size="13" fill="#fb923c" text-anchor="middle">자율주행 법제화 촉진</text>
+  <text x="860" y="820" font-family="Arial, sans-serif" font-size="12" fill="#9a4a1a" text-anchor="middle">전체 업계 선례</text>
+  <text x="860" y="838" font-family="Arial, sans-serif" font-size="11" fill="#7a3a1a" text-anchor="middle">책임 구조 표준화</text>
+  <text x="860" y="846" font-family="Arial, sans-serif" font-size="10" fill="#5a2a0a" text-anchor="middle">단기 불확실성 확대</text>
+
+  <rect x="60" y="884" width="960" height="58" rx="12" fill="#120804" stroke="#f97316" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="910" font-family="Arial, sans-serif" font-size="15" fill="#fb923c" text-anchor="middle">Harris County 과실치사 기소 — 운전자 책임 · Tesla 법인 미기소 · FSD 감독 의무 논쟁</text>
+  <text x="540" y="932" font-family="Arial, sans-serif" font-size="13" fill="#7a3a1a" text-anchor="middle">미 최초 FSD 중범죄 사례 · 자율주행 법제화 압박 · 단기 주가 리스크 요인</text>
+
+  <rect x="60" y="960" width="960" height="4" fill="url(#orangeGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1000" font-family="Arial, sans-serif" font-size="18" fill="#6a3a2a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

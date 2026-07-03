@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f14"/>
+      <stop offset="100%" style="stop-color:#0a0a1a"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0369a1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+  <rect x="60" y="90" width="100" height="36" rx="8" fill="#0ea5e9"/>
+  <text x="110" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">META</text>
+  <rect x="174" y="90" width="90" height="36" rx="8" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">AI Agent</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#3a5a6a" text-anchor="end">2026.07.04</text>
+
+  <text x="540" y="192" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle" filter="url(#glow)">META AI Agent</text>
+  <text x="540" y="254" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">Below Expectations</text>
+  <text x="540" y="302" font-family="Arial, sans-serif" font-size="20" fill="#38bdf8" text-anchor="middle">Zuckerberg admits 4-month AI agent development fell short</text>
+
+  <rect x="80" y="325" width="920" height="110" rx="14" fill="#0a1020" stroke="#0ea5e9" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="540" y="364" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" text-anchor="middle">"AI AGENT DEVELOPMENT IN THE LAST FOUR MONTHS</text>
+  <text x="540" y="392" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" text-anchor="middle">HAS NOT ACCELERATED IN THE WAY WE EXPECTED"</text>
+  <text x="900" y="422" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="end">— Mark Zuckerberg, Internal Town Hall</text>
+
+  <rect x="60" y="452" width="300" height="240" rx="16" fill="#0a1020" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="210" y="496" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">Context</text>
+  <text x="210" y="524" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">4 months of AI agent work</text>
+  <text x="210" y="546" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">Progress slower than expected</text>
+  <text x="210" y="568" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">Zuckerberg admitted directly</text>
+  <text x="210" y="590" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">Internal town hall disclosure</text>
+  <text x="210" y="614" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">Reflects AI competition pressure</text>
+  <text x="210" y="636" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">vs OpenAI·Google</text>
+  <text x="210" y="658" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">Internal tension signal</text>
+  <text x="210" y="676" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">Resource reallocation likely</text>
+
+  <rect x="390" y="452" width="300" height="240" rx="16" fill="#0a1020" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="540" y="496" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">Market Impact</text>
+  <text x="540" y="524" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">AI agent credibility hit</text>
+  <text x="540" y="546" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">Short-term downside pressure</text>
+  <text x="540" y="568" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">META AI strategy re-rated</text>
+  <text x="540" y="590" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">Relative underperformance</text>
+  <text x="540" y="614" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">Ads AI impact limited</text>
+  <text x="540" y="636" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">Agents ≠ ad business</text>
+  <text x="540" y="658" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">Near-term risk factor</text>
+  <text x="540" y="676" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">Monitor medium-term direction</text>
+
+  <rect x="720" y="452" width="300" height="240" rx="16" fill="#0a1020" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="870" y="496" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">Investment View</text>
+  <text x="870" y="524" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">Honest self-assessment = positive</text>
+  <text x="870" y="546" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">No overpromising from mgmt</text>
+  <text x="870" y="568" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">AI capex $60B+ maintained</text>
+  <text x="870" y="590" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">Agents: setback, not abandon</text>
+  <text x="870" y="614" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">Llama open-source on track</text>
+  <text x="870" y="636" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">WhatsApp·Messenger AI</text>
+  <text x="870" y="658" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">Ads AI growing separately</text>
+  <text x="870" y="676" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">Consider buying on dip</text>
+
+  <rect x="60" y="710" width="960" height="166" rx="16" fill="#080e1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="540" y="746" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">META AI Status Summary</text>
+
+  <rect x="80" y="760" width="420" height="100" rx="10" fill="#0a1020" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="290" y="784" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#7dd3fc" text-anchor="middle">AI Agent: Underperforming</text>
+  <text x="290" y="806" font-family="Arial, sans-serif" font-size="13" fill="#38bdf8" text-anchor="middle">4-month progress below target</text>
+  <text x="290" y="826" font-family="Arial, sans-serif" font-size="12" fill="#4a7a9a" text-anchor="middle">Relative weakness vs peers</text>
+  <text x="290" y="846" font-family="Arial, sans-serif" font-size="11" fill="#3a5a7a" text-anchor="middle">OpenAI·Google·Anthropic pressure</text>
+
+  <rect x="540" y="760" width="460" height="100" rx="10" fill="#0a1020" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="770" y="784" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#7dd3fc" text-anchor="middle">Core Business: Separate</text>
+  <text x="770" y="806" font-family="Arial, sans-serif" font-size="13" fill="#38bdf8" text-anchor="middle">Advertising AI growing well</text>
+  <text x="770" y="826" font-family="Arial, sans-serif" font-size="12" fill="#4a7a9a" text-anchor="middle">Record ad revenue in 2025</text>
+  <text x="770" y="846" font-family="Arial, sans-serif" font-size="11" fill="#3a5a7a" text-anchor="middle">Agent underperform ≠ biz underperform</text>
+
+  <rect x="60" y="892" width="960" height="58" rx="12" fill="#080e1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="918" font-family="Arial, sans-serif" font-size="15" fill="#38bdf8" text-anchor="middle">Zuckerberg admits AI agent miss → short-term risk but core ad business unaffected</text>
+  <text x="540" y="940" font-family="Arial, sans-serif" font-size="13" fill="#3a5a7a" text-anchor="middle">$60B+ capex unchanged · Llama + WhatsApp AI strategy intact · Watch near-term dip</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#blueGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#3a5a6a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

@@ -294,6 +294,17 @@ const PAIRS = [
   { ko: 'ford-q2-20260703.svg',                     en: 'ford-q2-20260703-en.svg',                     label: 'Ford_Q2판매',                 date: '20260703' },
   { ko: 'sector-perf-20260703.svg',                 en: 'sector-perf-20260703-en.svg',                 label: '섹터퍼포먼스_0702',           date: '20260703' },
   { ko: 'summary-20260703.svg',                     en: 'summary-20260703-en.svg',                     label: '7월03일_요약',                date: '20260703' },
+  // 2026-07-04
+  { ko: 'tsla-robotaxi-5cities-20260704.svg',       en: 'tsla-robotaxi-5cities-20260704-en.svg',       label: 'TSLA_로보택시5도시',          date: '20260704' },
+  { ko: 'tsla-fsd-germany-20260704.svg',            en: 'tsla-fsd-germany-20260704-en.svg',            label: 'TSLA_FSD독일',                date: '20260704' },
+  { ko: 'nvda-ai-infra-20260704.svg',               en: 'nvda-ai-infra-20260704-en.svg',               label: 'NVDA_AI인프라',               date: '20260704' },
+  { ko: 'openai-govt-stake-20260704.svg',           en: 'openai-govt-stake-20260704-en.svg',           label: 'OpenAI_정부지분5pct',         date: '20260704' },
+  { ko: 'starlink-vs-amazon-20260704.svg',          en: 'starlink-vs-amazon-20260704-en.svg',          label: 'Starlink_vs_Amazon',          date: '20260704' },
+  { ko: 'tsla-ai-200week-20260704.svg',             en: 'tsla-ai-200week-20260704-en.svg',             label: 'TSLA_AI200주',                date: '20260704' },
+  { ko: 'meta-ai-agent-20260704.svg',               en: 'meta-ai-agent-20260704-en.svg',               label: 'META_AI에이전트',             date: '20260704' },
+  { ko: 'tsla-fsd-manslaughter-20260704.svg',       en: 'tsla-fsd-manslaughter-20260704-en.svg',       label: 'TSLA_FSD기소',                date: '20260704' },
+  { ko: 'mu-burry-short-20260704.svg',              en: 'mu-burry-short-20260704-en.svg',              label: 'MU_Burry공매도',              date: '20260704' },
+  { ko: 'summary-20260704.svg',                     en: 'summary-20260704-en.svg',                     label: '7월04일_요약',                date: '20260704' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

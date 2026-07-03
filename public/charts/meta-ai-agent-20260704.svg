@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f14"/>
+      <stop offset="100%" style="stop-color:#0a0a1a"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0369a1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+  <rect x="60" y="90" width="100" height="36" rx="8" fill="#0ea5e9"/>
+  <text x="110" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">META</text>
+  <rect x="174" y="90" width="90" height="36" rx="8" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">AI에이전트</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#3a5a6a" text-anchor="end">2026.07.04</text>
+
+  <text x="540" y="192" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle" filter="url(#glow)">META AI 에이전트</text>
+  <text x="540" y="254" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">기대 미달 자인</text>
+  <text x="540" y="302" font-family="Arial, sans-serif" font-size="20" fill="#38bdf8" text-anchor="middle">Zuckerberg 사내 타운홀 발언 · 4개월 AI 에이전트 개발 부진 시인</text>
+
+  <rect x="80" y="325" width="920" height="110" rx="14" fill="#0a1020" stroke="#0ea5e9" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="540" y="364" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" text-anchor="middle">"AI AGENT DEVELOPMENT IN THE LAST FOUR MONTHS</text>
+  <text x="540" y="392" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" text-anchor="middle">HAS NOT ACCELERATED IN THE WAY WE EXPECTED"</text>
+  <text x="900" y="422" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="end">— Mark Zuckerberg, 사내 타운홀</text>
+
+  <rect x="60" y="452" width="300" height="240" rx="16" fill="#0a1020" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="210" y="496" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">발언 배경</text>
+  <text x="210" y="524" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">AI 에이전트 4개월 진행</text>
+  <text x="210" y="546" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">예상보다 느린 발전 속도</text>
+  <text x="210" y="568" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">Zuckerberg 직접 시인</text>
+  <text x="210" y="590" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">사내 타운홀 공개 발언</text>
+  <text x="210" y="614" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">AI 경쟁 압박 반영</text>
+  <text x="210" y="636" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">OpenAI·Google 대비</text>
+  <text x="210" y="658" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">내부 긴장감 표출</text>
+  <text x="210" y="676" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">자원 배분 재검토 가능성</text>
+
+  <rect x="390" y="452" width="300" height="240" rx="16" fill="#0a1020" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="540" y="496" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">시장 영향</text>
+  <text x="540" y="524" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">AI 에이전트 투자 신뢰도</text>
+  <text x="540" y="546" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">단기 하락 압박 요인</text>
+  <text x="540" y="568" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">META AI 전략 재평가</text>
+  <text x="540" y="590" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">경쟁사 대비 상대 약세</text>
+  <text x="540" y="614" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">광고 AI 영향 제한적</text>
+  <text x="540" y="636" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">에이전트 ≠ 광고 사업</text>
+  <text x="540" y="658" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">단기 리스크 요인</text>
+  <text x="540" y="676" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">중기 방향성 주시 필요</text>
+
+  <rect x="720" y="452" width="300" height="240" rx="16" fill="#0a1020" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="870" y="496" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">투자 시사점</text>
+  <text x="870" y="524" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">정직한 자기 평가 긍정적</text>
+  <text x="870" y="546" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8" text-anchor="middle">과대 포장 없는 경영진</text>
+  <text x="870" y="568" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">AI capex 지속 $60B+</text>
+  <text x="870" y="590" font-family="Arial, sans-serif" font-size="13" fill="#4a7a9a" text-anchor="middle">에이전트 장기 포기 아님</text>
+  <text x="870" y="614" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">Llama 오픈소스 전략 유지</text>
+  <text x="870" y="636" font-family="Arial, sans-serif" font-size="12" fill="#3a5a7a" text-anchor="middle">WhatsApp·Messenger AI</text>
+  <text x="870" y="658" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">광고 AI는 별개로 성장</text>
+  <text x="870" y="676" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">단기 조정 후 매수 고려</text>
+
+  <rect x="60" y="710" width="960" height="166" rx="16" fill="#080e1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="540" y="746" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">META AI 현황 요약</text>
+
+  <rect x="80" y="760" width="420" height="100" rx="10" fill="#0a1020" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="290" y="784" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#7dd3fc" text-anchor="middle">AI 에이전트 부진</text>
+  <text x="290" y="806" font-family="Arial, sans-serif" font-size="13" fill="#38bdf8" text-anchor="middle">4개월 기대 이하 발전</text>
+  <text x="290" y="826" font-family="Arial, sans-serif" font-size="12" fill="#4a7a9a" text-anchor="middle">경쟁사 대비 상대적 열위</text>
+  <text x="290" y="846" font-family="Arial, sans-serif" font-size="11" fill="#3a5a7a" text-anchor="middle">OpenAI·Google·Anthropic 압박</text>
+
+  <rect x="540" y="760" width="460" height="100" rx="10" fill="#0a1020" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="770" y="784" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#7dd3fc" text-anchor="middle">핵심 사업 영향 제한</text>
+  <text x="770" y="806" font-family="Arial, sans-serif" font-size="13" fill="#38bdf8" text-anchor="middle">광고 AI는 별도 성장 중</text>
+  <text x="770" y="826" font-family="Arial, sans-serif" font-size="12" fill="#4a7a9a" text-anchor="middle">2025년 광고 수익 최고치</text>
+  <text x="770" y="846" font-family="Arial, sans-serif" font-size="11" fill="#3a5a7a" text-anchor="middle">에이전트 부진 ≠ 사업 부진</text>
+
+  <rect x="60" y="892" width="960" height="58" rx="12" fill="#080e1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="918" font-family="Arial, sans-serif" font-size="15" fill="#38bdf8" text-anchor="middle">Zuckerberg AI 에이전트 기대 미달 인정 → 단기 리스크이나 핵심 광고 사업은 별개</text>
+  <text x="540" y="940" font-family="Arial, sans-serif" font-size="13" fill="#3a5a7a" text-anchor="middle">capex $60B+ 유지 · Llama·WhatsApp AI 방향성 변화 없음 · 단기 조정 주시</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#blueGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#3a5a6a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f14"/>
+      <stop offset="100%" style="stop-color:#0d1a12"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d68f"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+  <text x="60" y="108" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00d68f">2026.07.04</text>
+  <text x="60" y="130" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#ffffff" filter="url(#glow)">Daily Summary</text>
+  <text x="60" y="158" font-family="Arial, sans-serif" font-size="16" fill="#6a9a7a">TSLA Robotaxi 5 Cities · FSD Germany · NVDA AI Partners · OpenAI Govt Stake</text>
+
+  <!-- Card 1: TSLA Robotaxi 5 cities -->
+  <rect x="60" y="178" width="455" height="175" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="82" y="208" font-family="Arial, sans-serif" font-size="13" fill="#00d68f">🚗 TSLA Robotaxi</text>
+  <text x="82" y="238" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" filter="url(#glow)">Unsupervised — 5 Cities</text>
+  <text x="82" y="260" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a">Miami · Dallas · Houston</text>
+  <text x="82" y="280" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a">Austin · Bay Area</text>
+  <text x="82" y="305" font-family="Arial, sans-serif" font-size="13" fill="#4a8a6a">Cybercab production started in Austin</text>
+  <text x="82" y="325" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a">Model Y driverless paid service fully live</text>
+  <rect x="370" y="200" width="130" height="50" rx="8" fill="#003820" stroke="#00d68f" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="435" y="225" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#00d68f" text-anchor="middle">5</text>
+  <text x="435" y="243" font-family="Arial, sans-serif" font-size="11" fill="#6a9a7a" text-anchor="middle">cities live</text>
+
+  <!-- Card 2: TSLA FSD Germany -->
+  <rect x="565" y="178" width="455" height="175" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="587" y="208" font-family="Arial, sans-serif" font-size="13" fill="#00d68f">🇩🇪 TSLA FSD Germany</text>
+  <text x="587" y="238" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#00d68f" filter="url(#glow)">Europe's First FSD Launch</text>
+  <text x="587" y="260" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a">German MP Christian Hirte confirmed</text>
+  <text x="587" y="280" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a">"FSD coming to Germany this month"</text>
+  <text x="587" y="305" font-family="Arial, sans-serif" font-size="13" fill="#4a8a6a">First real-world FSD outside US/China</text>
+  <text x="587" y="325" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a">EU expansion signal · global FSD rollout</text>
+
+  <!-- Row 2 -->
+  <rect x="60" y="368" width="300" height="155" rx="14" fill="#0a1f2e" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="80" y="395" font-family="Arial, sans-serif" font-size="12" fill="#60a5fa">🔵 NVDA</text>
+  <text x="80" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="19" fill="#60a5fa" filter="url(#glow)">AI Infra Partnership</text>
+  <text x="80" y="442" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8">Revenue-sharing model w/ AI clouds</text>
+  <text x="80" y="462" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8">Multi-tenant AI factories at scale</text>
+  <text x="80" y="482" font-family="Arial, sans-serif" font-size="11" fill="#4a6a8a">Credit support for AI infra buildout</text>
+  <text x="80" y="502" font-family="Arial, sans-serif" font-size="11" fill="#4a6a8a">Aligning economics with partners</text>
+
+  <rect x="390" y="368" width="300" height="155" rx="14" fill="#1a0f2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="410" y="395" font-family="Arial, sans-serif" font-size="12" fill="#c084fc">🤖 OpenAI</text>
+  <text x="410" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="19" fill="#c084fc" filter="url(#glow)">5% Govt Stake Proposal</text>
+  <text x="410" y="442" font-family="Arial, sans-serif" font-size="12" fill="#a08acc">Proposes 5% to Trump admin</text>
+  <text x="410" y="462" font-family="Arial, sans-serif" font-size="12" fill="#a08acc">Sam Altman in early talks</text>
+  <text x="410" y="482" font-family="Arial, sans-serif" font-size="11" fill="#6a5a8a">Public ownership deal w/ govt support</text>
+  <text x="410" y="502" font-family="Arial, sans-serif" font-size="11" fill="#6a5a8a">New AI governance paradigm</text>
+
+  <rect x="720" y="368" width="300" height="155" rx="14" fill="#0a152e" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="740" y="395" font-family="Arial, sans-serif" font-size="12" fill="#60a5fa">🛰️ Starlink vs Amazon</text>
+  <text x="740" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="19" fill="#60a5fa" filter="url(#glow)">10,700 vs 396 Sats</text>
+  <text x="740" y="442" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8">SpaceX 27x LEO advantage</text>
+  <text x="740" y="462" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8">170K Starlink kits/week produced</text>
+  <text x="740" y="482" font-family="Arial, sans-serif" font-size="11" fill="#4a6a8a">Amazon Kuiper: only 396 in orbit</text>
+  <text x="740" y="502" font-family="Arial, sans-serif" font-size="11" fill="#4a6a8a">Dominant satellite internet position</text>
+
+  <!-- Row 3 -->
+  <rect x="60" y="538" width="300" height="130" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="80" y="563" font-family="Arial, sans-serif" font-size="12" fill="#00d68f">💡 TSLA AI Efficiency</text>
+  <text x="80" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#00d68f">"$200/week cap"</text>
+  <text x="80" y="608" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a">Tesla caps employee AI spend at $200/wk</text>
+  <text x="80" y="628" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a">Chamath: "World's best engineering co."</text>
+  <text x="80" y="650" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a">"Proves $1 above $200 is waste"</text>
+
+  <rect x="390" y="538" width="300" height="130" rx="14" fill="#2a0f0f" stroke="#fb923c" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="410" y="563" font-family="Arial, sans-serif" font-size="12" fill="#fb923c">📉 META Zuckerberg</text>
+  <text x="410" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#fb923c">"AI Agents Below Expect."</text>
+  <text x="410" y="608" font-family="Arial, sans-serif" font-size="12" fill="#e08060">"Not accelerated as expected"</text>
+  <text x="410" y="628" font-family="Arial, sans-serif" font-size="12" fill="#e08060">Internal meeting leak</text>
+  <text x="410" y="650" font-family="Arial, sans-serif" font-size="11" fill="#8a5040">$200B+ CapEx vs actual progress gap</text>
+
+  <rect x="720" y="538" width="300" height="130" rx="14" fill="#1a0a0a" stroke="#ff4d6d" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="740" y="563" font-family="Arial, sans-serif" font-size="12" fill="#ff4d6d">⚠️ Risk Signals</text>
+  <text x="740" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="19" fill="#ff4d6d">FSD + MU Risks</text>
+  <text x="740" y="608" font-family="Arial, sans-serif" font-size="12" fill="#e07080">Texas DA: FSD manslaughter case</text>
+  <text x="740" y="628" font-family="Arial, sans-serif" font-size="12" fill="#e07080">MU: Burry short at $1,051.87</text>
+  <text x="740" y="650" font-family="Arial, sans-serif" font-size="11" fill="#8a4050">Safety + semi risk emerging</text>
+
+  <!-- Stats bar -->
+  <rect x="60" y="685" width="960" height="80" rx="12" fill="#0f1e15" stroke="#00d68f" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="160" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle" filter="url(#glow)">838,100</text>
+  <text x="160" y="740" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">TSLA H1 2026</text>
+  <text x="160" y="756" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">+16% YoY</text>
+  <line x1="290" y1="695" x2="290" y2="757" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="430" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle" filter="url(#glow)">480,126</text>
+  <text x="430" y="740" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Q2 2026 Deliveries</text>
+  <text x="430" y="756" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">+25% YoY · Q2 Record</text>
+  <line x1="560" y1="695" x2="560" y2="757" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="700" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle" filter="url(#glow)">1,753,000</text>
+  <text x="700" y="740" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Trailing 12M</text>
+  <text x="700" y="756" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">+5.8% QoQ</text>
+  <line x1="830" y1="695" x2="830" y2="757" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="950" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#5aaa7a" text-anchor="middle">13.5 GWh</text>
+  <text x="950" y="740" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Energy Storage Q2</text>
+  <text x="950" y="756" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">+40% YoY</text>
+
+  <rect x="60" y="780" width="960" height="60" rx="10" fill="#0a1510" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="540" y="804" font-family="Arial, sans-serif" font-size="13" fill="#6a9a7a" text-anchor="middle">July 4 — US Independence Day · Markets Closed | TSLA H2: Cybertruck · Optimus V3 · Robotaxi National · Roadster Reveal</text>
+  <text x="540" y="826" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">Burry MU short $1,051.87 · FSD V4S→A5 confirmed · SpaceX 170K Starlink kits/week</text>
+
+  <rect x="60" y="858" width="960" height="4" fill="url(#mintGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="898" font-family="Arial, sans-serif" font-size="16" fill="#3a6a4a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+
+  <rect x="60" y="910" width="960" height="120" rx="12" fill="#0f1e15" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.15"/>
+  <text x="160" y="948" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ff4d6d" text-anchor="middle">TSLA</text>
+  <text x="160" y="970" font-family="Arial, sans-serif" font-size="14" fill="#ff4d6d" text-anchor="middle">394.21</text>
+  <text x="160" y="990" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Sell-the-news -7%</text>
+  <text x="160" y="1018" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">Beat paradox</text>
+  <line x1="280" y1="920" x2="280" y2="1022" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="400" y="948" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#c084fc" text-anchor="middle">NVDA</text>
+  <text x="400" y="970" font-family="Arial, sans-serif" font-size="14" fill="#c084fc" text-anchor="middle">AI Partners</text>
+  <text x="400" y="990" font-family="Arial, sans-serif" font-size="12" fill="#a08acc" text-anchor="middle">Rev-share model</text>
+  <text x="400" y="1018" font-family="Arial, sans-serif" font-size="11" fill="#6a5a8a" text-anchor="middle">Infra scale-up</text>
+  <line x1="520" y1="920" x2="520" y2="1022" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="640" y="948" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#60a5fa" text-anchor="middle">SPCX</text>
+  <text x="640" y="970" font-family="Arial, sans-serif" font-size="14" fill="#60a5fa" text-anchor="middle">Starlink 27x</text>
+  <text x="640" y="990" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8" text-anchor="middle">vs Amazon</text>
+  <text x="640" y="1018" font-family="Arial, sans-serif" font-size="11" fill="#4a6a8a" text-anchor="middle">Sat #1</text>
+  <line x1="760" y1="920" x2="760" y2="1022" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="880" y="948" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fb923c" text-anchor="middle">META</text>
+  <text x="880" y="970" font-family="Arial, sans-serif" font-size="14" fill="#fb923c" text-anchor="middle">AI agents</text>
+  <text x="880" y="990" font-family="Arial, sans-serif" font-size="12" fill="#e08060" text-anchor="middle">underperformed</text>
+  <text x="880" y="1018" font-family="Arial, sans-serif" font-size="11" fill="#8a5040" text-anchor="middle">Zuck internal</text>
+</svg>

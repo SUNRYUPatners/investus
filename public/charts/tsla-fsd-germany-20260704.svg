@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f14"/>
+      <stop offset="100%" style="stop-color:#0d1a12"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d68f"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+  <rect x="60" y="90" width="100" height="36" rx="8" fill="#00d68f"/>
+  <text x="110" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#0a0f14" text-anchor="middle">TSLA</text>
+  <rect x="174" y="90" width="80" height="36" rx="8" fill="none" stroke="#00d68f" stroke-width="2"/>
+  <text x="214" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#00d68f" text-anchor="middle">FSD</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#4a6f5a" text-anchor="end">2026.07.04</text>
+
+  <!-- German flag colors as accent -->
+  <rect x="880" y="88" width="140" height="14" rx="2" fill="#000000"/>
+  <rect x="880" y="102" width="140" height="14" rx="2" fill="#dd0000"/>
+  <rect x="880" y="116" width="140" height="14" rx="2" fill="#ffcc00"/>
+
+  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Tesla FSD 독일 출시</text>
+  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="58" fill="#00d68f" text-anchor="middle" filter="url(#glow)">유럽 최초 공식 확정</text>
+  <text x="540" y="306" font-family="Arial, sans-serif" font-size="22" fill="#8ab89a" text-anchor="middle">독일 의원 Christian Hirte 공식 확인 · FSD Supervised 유럽 첫 실도로</text>
+
+  <!-- Quote card -->
+  <rect x="80" y="334" width="920" height="120" rx="16" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="120" y="370" font-family="Arial, sans-serif" font-size="18" fill="#6a9a7a">"</text>
+  <text x="540" y="375" font-family="Arial, sans-serif" font-style="italic" font-size="20" fill="#8ab89a" text-anchor="middle">FSD is coming to Germany this month. It's happening.</text>
+  <text x="540" y="405" font-family="Arial, sans-serif" font-size="16" fill="#6a9a7a" text-anchor="middle">— Dalton Caldwell (Former YC Partner)</text>
+  <text x="540" y="434" font-family="Arial, sans-serif" font-size="14" fill="#4a6f5a" text-anchor="middle">독일 CDU 의원 Christian Hirte MP 직접 확인 · FSD Supervised Germany 이달 공식 출시</text>
+
+  <!-- Stats cards -->
+  <rect x="60" y="476" width="220" height="170" rx="16" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="170" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#00d68f" text-anchor="middle" filter="url(#glow)">EU</text>
+  <text x="170" y="560" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">첫 번째 국가</text>
+  <text x="170" y="582" font-family="Arial, sans-serif" font-size="13" fill="#6a9a7a" text-anchor="middle">유럽 최초</text>
+  <text x="170" y="604" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">FSD Supervised</text>
+  <text x="170" y="624" font-family="Arial, sans-serif" font-size="11" fill="#3a5a4a" text-anchor="middle">실도로 테스트 → 서비스</text>
+
+  <rect x="300" y="476" width="220" height="170" rx="16" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="410" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#00d68f" text-anchor="middle" filter="url(#glow)">V4S</text>
+  <text x="410" y="558" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">→ A5 전환</text>
+  <text x="410" y="580" font-family="Arial, sans-serif" font-size="13" fill="#6a9a7a" text-anchor="middle">FSD 버전 업그레이드</text>
+  <text x="410" y="600" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">독일 출시 최신 버전</text>
+  <text x="410" y="624" font-family="Arial, sans-serif" font-size="11" fill="#3a5a4a" text-anchor="middle">Dalton Caldwell 확인</text>
+
+  <rect x="540" y="476" width="220" height="170" rx="16" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="650" y="524" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#5aaa7a" text-anchor="middle">27개국</text>
+  <text x="650" y="550" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">EU 확산 잠재력</text>
+  <text x="650" y="572" font-family="Arial, sans-serif" font-size="13" fill="#6a9a7a" text-anchor="middle">독일 성공 → EU 전체</text>
+  <text x="650" y="594" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">프랑스·이탈리아·네덜란드</text>
+  <text x="650" y="616" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">순차 출시 예상</text>
+  <text x="650" y="636" font-family="Arial, sans-serif" font-size="11" fill="#3a5a4a" text-anchor="middle">글로벌 FSD 가속</text>
+
+  <rect x="780" y="476" width="260" height="170" rx="16" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="910" y="518" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">기존 FSD 출시국</text>
+  <text x="910" y="542" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#00d68f" text-anchor="middle">🇺🇸 미국 · 🇨🇳 중국</text>
+  <text x="910" y="566" font-family="Arial, sans-serif" font-size="14" fill="#6a9a7a" text-anchor="middle">🇰🇷 한국 (프로모션)</text>
+  <rect x="820" y="578" width="180" height="2" fill="#00d68f" fill-opacity="0.3"/>
+  <text x="910" y="600" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#5aaa7a" text-anchor="middle">🇩🇪 독일 추가!</text>
+  <text x="910" y="622" font-family="Arial, sans-serif" font-size="13" fill="#6a9a7a" text-anchor="middle">유럽 최초 → EU 규제</text>
+  <text x="910" y="642" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">글로벌 확장 이정표</text>
+
+  <!-- FSD global map visual -->
+  <rect x="60" y="668" width="960" height="180" rx="16" fill="#0a1510" stroke="#00d68f" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="540" y="700" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">FSD 글로벌 확장 현황</text>
+
+  <!-- Timeline -->
+  <line x1="120" y1="760" x2="960" y2="760" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="180" cy="760" r="8" fill="#00d68f"/>
+  <text x="180" y="782" font-family="Arial, sans-serif" font-size="13" fill="#8ab89a" text-anchor="middle">미국</text>
+  <text x="180" y="798" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">2023</text>
+  <circle cx="360" cy="760" r="8" fill="#00d68f"/>
+  <text x="360" y="782" font-family="Arial, sans-serif" font-size="13" fill="#8ab89a" text-anchor="middle">캐나다</text>
+  <text x="360" y="798" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">2024</text>
+  <circle cx="540" cy="760" r="8" fill="#00d68f"/>
+  <text x="540" y="782" font-family="Arial, sans-serif" font-size="13" fill="#8ab89a" text-anchor="middle">중국</text>
+  <text x="540" y="798" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">2025</text>
+  <circle cx="720" cy="760" r="8" fill="#00d68f"/>
+  <text x="720" y="782" font-family="Arial, sans-serif" font-size="13" fill="#8ab89a" text-anchor="middle">한국</text>
+  <text x="720" y="798" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">2026.06</text>
+  <circle cx="900" cy="760" r="10" fill="#00d68f" filter="url(#glow)"/>
+  <text x="900" y="782" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00d68f" text-anchor="middle">독일 🇩🇪</text>
+  <text x="900" y="798" font-family="Arial, sans-serif" font-size="11" fill="#5aaa7a" text-anchor="middle">2026.07 ★</text>
+
+  <text x="540" y="830" font-family="Arial, sans-serif" font-size="14" fill="#4a6f5a" text-anchor="middle">EU 규제 승인 → 유럽 27개국 연쇄 출시 가능 · FSD 구독 수익 글로벌 확대 기대</text>
+
+  <rect x="60" y="860" width="960" height="70" rx="12" fill="#0f2a1e" stroke="#00d68f" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="16" fill="#8ab89a" text-anchor="middle">투자 포인트: FSD Supervised → FSD Unsupervised 전환 시 유럽 구독 수익 폭발적 성장 기대</text>
+  <text x="540" y="912" font-family="Arial, sans-serif" font-size="14" fill="#6a9a7a" text-anchor="middle">독일 = 유럽 최대 자동차 시장 · BMW·벤츠·폭스바겐 홈 마켓에서 FSD 서비스 개시</text>
+
+  <rect x="60" y="948" width="960" height="4" fill="url(#mintGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="988" font-family="Arial, sans-serif" font-size="18" fill="#3a6a4a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

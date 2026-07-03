@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f14"/>
+      <stop offset="100%" style="stop-color:#0d1a12"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d68f"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
+  <ellipse cx="540" cy="480" rx="360" ry="220" fill="#00d68f" fill-opacity="0.03" filter="url(#softGlow)"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+  <rect x="60" y="90" width="100" height="36" rx="8" fill="#00d68f"/>
+  <text x="110" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#0a0f14" text-anchor="middle">TSLA</text>
+  <rect x="174" y="90" width="110" height="36" rx="8" fill="none" stroke="#00d68f" stroke-width="2"/>
+  <text x="229" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#00d68f" text-anchor="middle">BREAKING</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#4a6f5a" text-anchor="end">2026.07.04</text>
+
+  <text x="540" y="192" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Robotaxi Unsupervised</text>
+  <text x="540" y="252" font-family="Arial Black, Arial" font-weight="900" font-size="58" fill="#00d68f" text-anchor="middle" filter="url(#glow)">5 Cities Live Now</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="22" fill="#8ab89a" text-anchor="middle">Model Y driverless service fully operational · Cybercab production started in Austin</text>
+
+  <rect x="160" y="330" width="760" height="340" rx="20" fill="#0a1a10" stroke="#00d68f" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="540" y="365" font-family="Arial, sans-serif" font-size="14" fill="#3a6a4a" text-anchor="middle">Tesla Robotaxi Service Zones (USA)</text>
+
+  <circle cx="760" cy="600" r="28" fill="#003820" stroke="#00d68f" stroke-width="2.5"/>
+  <circle cx="760" cy="600" r="8" fill="#00d68f" filter="url(#glow)"/>
+  <text x="760" y="648" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00d68f" text-anchor="middle">Miami, FL</text>
+  <text x="760" y="665" font-family="Arial, sans-serif" font-size="11" fill="#6a9a7a" text-anchor="middle">Unsupervised Model Y</text>
+
+  <circle cx="580" cy="530" r="28" fill="#003820" stroke="#00d68f" stroke-width="2.5"/>
+  <circle cx="580" cy="530" r="8" fill="#00d68f" filter="url(#glow)"/>
+  <text x="580" y="578" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00d68f" text-anchor="middle">Dallas, TX</text>
+  <text x="580" y="595" font-family="Arial, sans-serif" font-size="11" fill="#6a9a7a" text-anchor="middle">Unsupervised Model Y</text>
+
+  <circle cx="610" cy="610" r="28" fill="#003820" stroke="#00d68f" stroke-width="2.5"/>
+  <circle cx="610" cy="610" r="8" fill="#00d68f" filter="url(#glow)"/>
+  <text x="650" y="638" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00d68f" text-anchor="middle">Houston, TX</text>
+
+  <circle cx="500" cy="580" r="32" fill="#003820" stroke="#00d68f" stroke-width="3"/>
+  <circle cx="500" cy="580" r="10" fill="#00d68f" filter="url(#glow)"/>
+  <text x="500" y="630" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00d68f" text-anchor="middle">Austin, TX ★</text>
+  <text x="500" y="647" font-family="Arial, sans-serif" font-size="11" fill="#6a9a7a" text-anchor="middle">Cybercab production started</text>
+
+  <circle cx="240" cy="470" r="28" fill="#003820" stroke="#00d68f" stroke-width="2.5"/>
+  <circle cx="240" cy="470" r="8" fill="#00d68f" filter="url(#glow)"/>
+  <text x="240" y="518" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00d68f" text-anchor="middle">Bay Area, CA</text>
+  <text x="240" y="535" font-family="Arial, sans-serif" font-size="11" fill="#6a9a7a" text-anchor="middle">Model Y Service</text>
+
+  <line x1="240" y1="470" x2="500" y2="580" stroke="#00d68f" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6,4"/>
+  <line x1="500" y1="580" x2="580" y2="530" stroke="#00d68f" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6,4"/>
+  <line x1="580" y1="530" x2="610" y2="610" stroke="#00d68f" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6,4"/>
+  <line x1="610" y1="610" x2="760" y2="600" stroke="#00d68f" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6,4"/>
+
+  <rect x="60" y="700" width="220" height="120" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="170" y="750" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#00d68f" text-anchor="middle" filter="url(#glow)">5</text>
+  <text x="170" y="776" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">Cities Live</text>
+  <text x="170" y="800" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">Simultaneous</text>
+
+  <rect x="300" y="700" width="220" height="120" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="410" y="744" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle" filter="url(#glow)">ZERO</text>
+  <text x="410" y="768" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">Safety drivers</text>
+  <text x="410" y="790" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">Fully unsupervised</text>
+  <text x="410" y="810" font-family="Arial, sans-serif" font-size="11" fill="#3a5a4a" text-anchor="middle">FSD autonomous</text>
+
+  <rect x="540" y="700" width="220" height="120" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="650" y="744" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#5aaa7a" text-anchor="middle">Cybercab</text>
+  <text x="650" y="768" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">Production: Austin</text>
+  <text x="650" y="790" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">Dedicated robotaxi</text>
+  <text x="650" y="810" font-family="Arial, sans-serif" font-size="11" fill="#3a5a4a" text-anchor="middle">165Wh/mile efficiency</text>
+
+  <rect x="780" y="700" width="260" height="120" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="910" y="730" font-family="Arial, sans-serif" font-size="13" fill="#8ab89a" text-anchor="middle">Service Vehicle</text>
+  <text x="910" y="755" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#00d68f" text-anchor="middle" filter="url(#glow)">Model Y</text>
+  <text x="910" y="778" font-family="Arial, sans-serif" font-size="13" fill="#8ab89a" text-anchor="middle">+ Cybercab (Austin)</text>
+  <text x="910" y="798" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">National expansion ahead</text>
+  <text x="910" y="816" font-family="Arial, sans-serif" font-size="11" fill="#3a5a4a" text-anchor="middle">Direct Waymo competitor</text>
+
+  <rect x="60" y="838" width="960" height="110" rx="12" fill="#0f1e15" stroke="#00d68f" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="180" y="868" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#00d68f" text-anchor="middle">Miami, FL</text>
+  <text x="180" y="886" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Unsupervised Model Y</text>
+  <text x="180" y="902" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">Paid ridehailing live</text>
+  <text x="180" y="920" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">No safety driver</text>
+  <text x="180" y="936" font-family="Arial, sans-serif" font-size="10" fill="#3a5a4a" text-anchor="middle">First unsupervised</text>
+
+  <line x1="288" y1="848" x2="288" y2="940" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <text x="420" y="868" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#00d68f" text-anchor="middle">Dallas, TX</text>
+  <text x="420" y="886" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Unsupervised Model Y</text>
+  <text x="420" y="902" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">Texas metro service</text>
+  <text x="420" y="920" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">App booking active</text>
+  <text x="420" y="936" font-family="Arial, sans-serif" font-size="10" fill="#3a5a4a" text-anchor="middle">Expansion planned</text>
+
+  <line x1="528" y1="848" x2="528" y2="940" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <text x="648" y="868" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#00d68f" text-anchor="middle">Houston, TX</text>
+  <text x="648" y="886" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Unsupervised Model Y</text>
+  <text x="648" y="902" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">With Austin simultaneous</text>
+  <text x="648" y="920" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">TX 3-city hub forming</text>
+  <text x="648" y="936" font-family="Arial, sans-serif" font-size="10" fill="#3a5a4a" text-anchor="middle">Texas cluster</text>
+
+  <line x1="768" y1="848" x2="768" y2="940" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <text x="900" y="868" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#00d68f" text-anchor="middle">Austin TX ★ · Bay Area</text>
+  <text x="900" y="886" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Cybercab production live</text>
+  <text x="900" y="902" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">Tesla HQ city</text>
+  <text x="900" y="920" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">San Jose–SF coverage</text>
+  <text x="900" y="936" font-family="Arial, sans-serif" font-size="10" fill="#3a5a4a" text-anchor="middle">Early service phase</text>
+
+  <rect x="60" y="1016" width="960" height="4" fill="url(#mintGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1055" font-family="Arial, sans-serif" font-size="18" fill="#3a6a4a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>
