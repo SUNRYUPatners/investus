@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { STATIC_US_ECO_EVENTS } from "@/lib/economicEventsStatic";
 
 export const maxDuration = 15;
 
@@ -34,53 +35,40 @@ const MAJOR_SYMBOLS = new Set([
   "ENPH","FSLR","NEE","BA","CAT","GE","INTC","MU","QCOM","AVGO","ARM","SMCI",
 ]);
 
-function getMonthBounds(year: number, month: number): { from: string; to: string } {
-  const pad = (n: number) => String(n).padStart(2, "0");
-  const lastDay = new Date(year, month, 0).getDate();
-  return {
-    from: `${year}-${pad(month)}-01`,
-    to:   `${year}-${pad(month)}-${lastDay}`,
-  };
-}
-
 export async function GET(req: Request) {
   const key = process.env.FINNHUB_API_KEY ?? "";
-  if (!key) return NextResponse.json({ error: "no_key" }, { status: 503 });
 
   const { searchParams } = new URL(req.url);
-
   let from = searchParams.get("from") ?? "";
   let to   = searchParams.get("to")   ?? "";
 
   if (!from || !to) {
     const now = new Date();
-    const bounds = getMonthBounds(now.getFullYear(), now.getMonth() + 1);
-    from = bounds.from;
-    to   = bounds.to;
+    const pad = (n: number) => String(n).padStart(2, "0");
+    const m = now.getMonth() + 1;
+    const lastDay = new Date(now.getFullYear(), m, 0).getDate();
+    from = `${now.getFullYear()}-${pad(m)}-01`;
+    to   = `${now.getFullYear()}-${pad(m)}-${lastDay}`;
   }
 
-  const [ecoRes, earnRes] = await Promise.allSettled([
-    fetch(
-      `https://finnhub.io/api/v1/calendar/economic?from=${from}&to=${to}&token=${key}`,
-      { signal: AbortSignal.timeout(8000) },
-    ),
-    fetch(
-      `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&token=${key}`,
-      { signal: AbortSignal.timeout(8000) },
-    ),
-  ]);
+  // Economic events: always use hardcoded static list (Finnhub free tier often empty)
+  const economicEvents: EconomicEvent[] = STATIC_US_ECO_EVENTS.filter(
+    (e) => e.date >= from && e.date <= to,
+  );
 
-  let economicEvents: EconomicEvent[] = [];
+  // Earnings: Finnhub (real data, filtered to major symbols)
   let earningsEvents: EarningsEvent[] = [];
-
-  if (ecoRes.status === "fulfilled" && ecoRes.value.ok) {
-    const data = await ecoRes.value.json() as { economicCalendar?: EconomicEvent[] };
-    economicEvents = (data.economicCalendar ?? []).filter((e) => e.country === "US");
-  }
-
-  if (earnRes.status === "fulfilled" && earnRes.value.ok) {
-    const data = await earnRes.value.json() as { earningsCalendar?: EarningsEvent[] };
-    earningsEvents = (data.earningsCalendar ?? []).filter((e) => MAJOR_SYMBOLS.has(e.symbol));
+  if (key) {
+    try {
+      const r = await fetch(
+        `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&token=${key}`,
+        { signal: AbortSignal.timeout(8000) },
+      );
+      if (r.ok) {
+        const data = await r.json() as { earningsCalendar?: EarningsEvent[] };
+        earningsEvents = (data.earningsCalendar ?? []).filter((e) => MAJOR_SYMBOLS.has(e.symbol));
+      }
+    } catch { /* no earnings data */ }
   }
 
   return NextResponse.json(
