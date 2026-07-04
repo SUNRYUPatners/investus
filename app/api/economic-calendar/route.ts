@@ -34,17 +34,12 @@ const MAJOR_SYMBOLS = new Set([
   "ENPH","FSLR","NEE","BA","CAT","GE","INTC","MU","QCOM","AVGO","ARM","SMCI",
 ]);
 
-function getWeekBounds(weekOffset: number): { from: string; to: string } {
-  const now = new Date();
-  const day = now.getDay();
-  const monday = new Date(now);
-  monday.setDate(now.getDate() - (day === 0 ? 6 : day - 1) + weekOffset * 7);
-  monday.setHours(0, 0, 0, 0);
-  const friday = new Date(monday);
-  friday.setDate(monday.getDate() + 4);
+function getMonthBounds(year: number, month: number): { from: string; to: string } {
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const lastDay = new Date(year, month, 0).getDate();
   return {
-    from: monday.toISOString().split("T")[0],
-    to:   friday.toISOString().split("T")[0],
+    from: `${year}-${pad(month)}-01`,
+    to:   `${year}-${pad(month)}-${lastDay}`,
   };
 }
 
@@ -53,8 +48,16 @@ export async function GET(req: Request) {
   if (!key) return NextResponse.json({ error: "no_key" }, { status: 503 });
 
   const { searchParams } = new URL(req.url);
-  const weekOffset = parseInt(searchParams.get("week") ?? "0");
-  const { from, to } = getWeekBounds(weekOffset);
+
+  let from = searchParams.get("from") ?? "";
+  let to   = searchParams.get("to")   ?? "";
+
+  if (!from || !to) {
+    const now = new Date();
+    const bounds = getMonthBounds(now.getFullYear(), now.getMonth() + 1);
+    from = bounds.from;
+    to   = bounds.to;
+  }
 
   const [ecoRes, earnRes] = await Promise.allSettled([
     fetch(

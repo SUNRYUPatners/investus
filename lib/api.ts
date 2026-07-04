@@ -483,7 +483,7 @@ const mockNews: NewsItem[] = [
 
 // ── API Functions ──────────────────────────────────────────────────────────
 
-export const RECOMMENDED_SYMBOLS = ["GOOGL", "TSLA", "SPCX", "IBM", "JPM"];
+export const RECOMMENDED_SYMBOLS = ["TSLA", "SPCX", "IBM", "JPM", "NVDA"];
 const ALL_QUOTE_SYMBOLS = mockQuotes.map((q) => q.symbol);
 
 export const INDEX_MAP: { yahoo: string; symbol: string; name: string; fullName: string; isCurrency?: boolean }[] = [
