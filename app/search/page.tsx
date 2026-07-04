@@ -10,6 +10,7 @@ import { useWatchlist } from "@/hooks/useWatchlist";
 import { GuruHoldings } from "@/components/GuruHoldings";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { NewsSection } from "@/components/NewsSection";
+import { EconomicCalendar } from "@/components/EconomicCalendar";
 import { Star } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
 const UP   = "#10b981";
@@ -317,9 +318,19 @@ export default function SearchPage() {
                   <AdFitBanner />
                 </div>
 
+                {/* 경제 캘린더 — 모바일 */}
+                <div className="lg:hidden">
+                  <EconomicCalendar />
+                </div>
+
                 {/* 시장 뉴스 — 데스크톱: 추천주식 위 */}
                 <div className="hidden lg:block">
                   <NewsSection />
+                </div>
+
+                {/* 경제 캘린더 — 데스크톱 */}
+                <div className="hidden lg:block">
+                  <EconomicCalendar />
                 </div>
 
                 {/* Investus 추천주식 */}
