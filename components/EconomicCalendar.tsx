@@ -326,7 +326,17 @@ export function EconomicCalendar() {
     try {
       const r = await fetch(`/api/economic-calendar?from=${from}&to=${to}`);
       if (!r.ok) throw new Error("failed");
-      setData(await r.json() as CalendarData);
+      const d = await r.json() as CalendarData;
+      setData(d);
+
+      // Select nearest event date on or after today (fallback: last event date in month)
+      const today = todayStr();
+      const eventDates = new Set<string>();
+      d.economicEvents.forEach(e => { const dt = (e.time ?? "").split("T")[0]; if (dt) eventDates.add(dt); });
+      d.earningsEvents.forEach(e => { if (e.date) eventDates.add(e.date); });
+      const sorted = [...eventDates].sort();
+      const nearest = sorted.find(dt => dt >= today) ?? sorted[sorted.length - 1];
+      if (nearest) setSelected(nearest);
     } catch { setData(null); }
     setLoading(false);
   }, []);
