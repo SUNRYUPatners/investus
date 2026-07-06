@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#f97316"/>
       <stop offset="100%" style="stop-color:#c2410c"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,20 +22,20 @@
   <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#f97316" text-anchor="middle">AI Infrastructure</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a3a14" text-anchor="end">2026.07.06</text>
 
-  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Hyperscaler AI Capex — All-Time Record</text>
-  <text x="540" y="252" font-family="Arial Black, Arial" font-weight="900" font-size="56" fill="#fdba74" text-anchor="middle" filter="url(#glow)">$576B → $939B</text>
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#ffffff" text-anchor="middle">Hyperscaler AI Capex — All-Time Record</text>
+  <text x="540" y="252" font-family="Arial Black, Arial" font-weight="900" font-size="56" fill="#fdba74" text-anchor="middle">$576B → $939B</text>
   <text x="540" y="298" font-family="Arial, sans-serif" font-size="20" fill="#fb923c" text-anchor="middle">2026: $576B · 2027: $939B — AI infrastructure investment explodes</text>
 
   <!-- Big stat boxes -->
   <rect x="80" y="322" width="440" height="200" rx="16" fill="#1a1000" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="300" y="374" font-family="Arial Black, Arial" font-weight="900" font-size="60" fill="#f97316" text-anchor="middle" filter="url(#glow)">$576B</text>
+  <text x="300" y="374" font-family="Arial Black, Arial" font-weight="900" font-size="60" fill="#f97316" text-anchor="middle">$576B</text>
   <text x="300" y="410" font-family="Arial, sans-serif" font-size="18" fill="#fdba74" text-anchor="middle">2026 Hyperscaler CAPEX</text>
   <text x="300" y="436" font-family="Arial, sans-serif" font-size="14" fill="#7a5a2a" text-anchor="middle">AWS + Azure + GCP + Meta combined</text>
   <text x="300" y="460" font-family="Arial, sans-serif" font-size="13" fill="#5a4a1a" text-anchor="middle">+60%+ vs prior year</text>
   <text x="300" y="500" font-family="Arial, sans-serif" font-size="12" fill="#3a3010" text-anchor="middle">AI chips · data centers · power infra</text>
 
   <rect x="560" y="322" width="440" height="200" rx="16" fill="#1a1000" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="780" y="374" font-family="Arial Black, Arial" font-weight="900" font-size="60" fill="#fdba74" text-anchor="middle" filter="url(#glow)">$939B</text>
+  <text x="780" y="374" font-family="Arial Black, Arial" font-weight="900" font-size="60" fill="#fdba74" text-anchor="middle">$939B</text>
   <text x="780" y="410" font-family="Arial, sans-serif" font-size="18" fill="#fdba74" text-anchor="middle">2027 Estimated CAPEX</text>
   <text x="780" y="436" font-family="Arial, sans-serif" font-size="14" fill="#7a5a2a" text-anchor="middle">+63% vs 2026</text>
   <text x="780" y="460" font-family="Arial, sans-serif" font-size="13" fill="#5a4a1a" text-anchor="middle">Approaching $1 trillion threshold</text>

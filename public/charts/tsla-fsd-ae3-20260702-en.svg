@@ -2,7 +2,6 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
@@ -14,7 +13,7 @@
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.02</text>
   <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA · FSD AE3 — Early Access Rolling Out</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" filter="url(#glow)" opacity=".12">✓</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">✓</text>
   <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle">✓</text>
   <text x="540" y="308" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#f9fafb" text-anchor="middle">AE3 Early Access</text>
   <text x="540" y="356" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">Rolling out to AE3-early-access customers</text>

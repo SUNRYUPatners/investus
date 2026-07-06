@@ -67,7 +67,7 @@
   <!-- $57B bar -->
   <rect x="640" y="240" width="180" height="250" rx="8" fill="url(#barTo)"/>
   <text x="730" y="228" font-family="Arial,sans-serif" font-size="14" fill="#ef4444" text-anchor="middle" font-weight="700">ROBOTAXI ERA</text>
-  <text x="730" y="460" font-family="Arial Black,sans-serif" font-size="36" font-weight="900" fill="#ef4444" text-anchor="middle" filter="url(#softGlow)">$57B</text>
+  <text x="730" y="460" font-family="Arial Black,sans-serif" font-size="36" font-weight="900" fill="#ef4444" text-anchor="middle">$57B</text>
   <text x="730" y="510" font-family="Arial,sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">Projected TAM</text>
 
   <!-- Margin Transformation -->

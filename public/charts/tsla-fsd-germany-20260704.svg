@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#00d68f"/>
       <stop offset="100%" style="stop-color:#00b377"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -31,8 +27,8 @@
   <rect x="880" y="102" width="140" height="14" rx="2" fill="#dd0000"/>
   <rect x="880" y="116" width="140" height="14" rx="2" fill="#ffcc00"/>
 
-  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Tesla FSD 독일 출시</text>
-  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="58" fill="#00d68f" text-anchor="middle" filter="url(#glow)">유럽 최초 공식 확정</text>
+  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle">Tesla FSD 독일 출시</text>
+  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="58" fill="#00d68f" text-anchor="middle">유럽 최초 공식 확정</text>
   <text x="540" y="306" font-family="Arial, sans-serif" font-size="22" fill="#8ab89a" text-anchor="middle">독일 의원 Christian Hirte 공식 확인 · FSD Supervised 유럽 첫 실도로</text>
 
   <!-- Quote card -->
@@ -44,14 +40,14 @@
 
   <!-- Stats cards -->
   <rect x="60" y="476" width="220" height="170" rx="16" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="170" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#00d68f" text-anchor="middle" filter="url(#glow)">EU</text>
+  <text x="170" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#00d68f" text-anchor="middle">EU</text>
   <text x="170" y="560" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">첫 번째 국가</text>
   <text x="170" y="582" font-family="Arial, sans-serif" font-size="13" fill="#6a9a7a" text-anchor="middle">유럽 최초</text>
   <text x="170" y="604" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">FSD Supervised</text>
   <text x="170" y="624" font-family="Arial, sans-serif" font-size="11" fill="#3a5a4a" text-anchor="middle">실도로 테스트 → 서비스</text>
 
   <rect x="300" y="476" width="220" height="170" rx="16" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="410" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#00d68f" text-anchor="middle" filter="url(#glow)">V4S</text>
+  <text x="410" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#00d68f" text-anchor="middle">V4S</text>
   <text x="410" y="558" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">→ A5 전환</text>
   <text x="410" y="580" font-family="Arial, sans-serif" font-size="13" fill="#6a9a7a" text-anchor="middle">FSD 버전 업그레이드</text>
   <text x="410" y="600" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">독일 출시 최신 버전</text>
@@ -92,7 +88,7 @@
   <circle cx="720" cy="760" r="8" fill="#00d68f"/>
   <text x="720" y="782" font-family="Arial, sans-serif" font-size="13" fill="#8ab89a" text-anchor="middle">한국</text>
   <text x="720" y="798" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">2026.06</text>
-  <circle cx="900" cy="760" r="10" fill="#00d68f" filter="url(#glow)"/>
+  <circle cx="900" cy="760" r="10" fill="#00d68f"/>
   <text x="900" y="782" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00d68f" text-anchor="middle">독일 🇩🇪</text>
   <text x="900" y="798" font-family="Arial, sans-serif" font-size="11" fill="#5aaa7a" text-anchor="middle">2026.07 ★</text>
 

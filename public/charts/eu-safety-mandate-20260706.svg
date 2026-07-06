@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#0ea5e9"/>
       <stop offset="100%" style="stop-color:#0369a1"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,8 +22,8 @@
   <text x="209" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">EU 규제</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a6a" text-anchor="end">2026.07.06</text>
 
-  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" filter="url(#glow)">EU 신차 안전 의무화 — 2026년 7월 1일 발효</text>
-  <text x="540" y="250" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">TSLA 수혜 구조</text>
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle">EU 신차 안전 의무화 — 2026년 7월 1일 발효</text>
+  <text x="540" y="250" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#7dd3fc" text-anchor="middle">TSLA 수혜 구조</text>
   <text x="540" y="298" font-family="Arial, sans-serif" font-size="19" fill="#38bdf8" text-anchor="middle">첨단 안전 기술 의무화 → 소프트웨어 중심 차량 경쟁 우위 확대</text>
 
   <!-- Mandate items -->

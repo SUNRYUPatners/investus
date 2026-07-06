@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#00d68f"/>
       <stop offset="100%" style="stop-color:#00b377"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
   <rect width="1080" height="1080" fill="url(#bg)"/>
@@ -23,14 +19,14 @@
   <!-- Header -->
   <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
   <text x="60" y="108" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00d68f">2026.07.04</text>
-  <text x="60" y="130" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#ffffff" filter="url(#glow)">오늘의 핵심 요약</text>
+  <text x="60" y="130" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#ffffff">오늘의 핵심 요약</text>
   <text x="60" y="158" font-family="Arial, sans-serif" font-size="16" fill="#6a9a7a">TSLA 로보택시 5도시 무감독 · FSD 독일 · NVDA AI 파트너십 · OpenAI 정부 지분</text>
 
   <!-- Row 1: 2 big cards -->
   <!-- Card 1: TSLA Robotaxi 5 cities -->
   <rect x="60" y="178" width="455" height="175" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.5"/>
   <text x="82" y="208" font-family="Arial, sans-serif" font-size="13" fill="#00d68f">🚗 TSLA 로보택시</text>
-  <text x="82" y="238" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#00d68f" filter="url(#glow)">무감독 5개 도시</text>
+  <text x="82" y="238" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#00d68f">무감독 5개 도시</text>
   <text x="82" y="260" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a">마이애미 · 달라스 · 휴스턴</text>
   <text x="82" y="280" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a">오스틴 · 베이 에어리어</text>
   <text x="82" y="305" font-family="Arial, sans-serif" font-size="13" fill="#4a8a6a">Cybercab 오스틴 생산 시작</text>
@@ -42,7 +38,7 @@
   <!-- Card 2: TSLA FSD Germany -->
   <rect x="565" y="178" width="455" height="175" rx="14" fill="#0f2a1e" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.5"/>
   <text x="587" y="208" font-family="Arial, sans-serif" font-size="13" fill="#00d68f">🇩🇪 TSLA FSD 독일</text>
-  <text x="587" y="238" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" filter="url(#glow)">유럽 첫 FSD 출시</text>
+  <text x="587" y="238" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f">유럽 첫 FSD 출시</text>
   <text x="587" y="260" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a">독일 의원 Christian Hirte 공식 확인</text>
   <text x="587" y="280" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a">"FSD is coming to Germany this month"</text>
   <text x="587" y="305" font-family="Arial, sans-serif" font-size="13" fill="#4a8a6a">FSD Supervised 유럽 최초 실도로</text>
@@ -52,7 +48,7 @@
   <!-- Card 3: NVDA -->
   <rect x="60" y="368" width="300" height="155" rx="14" fill="#0a1f2e" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.5"/>
   <text x="80" y="395" font-family="Arial, sans-serif" font-size="12" fill="#60a5fa">🔵 NVDA</text>
-  <text x="80" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#60a5fa" filter="url(#glow)">AI 인프라 파트너십</text>
+  <text x="80" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#60a5fa">AI 인프라 파트너십</text>
   <text x="80" y="442" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8">수익 공유 + 크레딧 지원 모델</text>
   <text x="80" y="462" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8">대규모 멀티 테넌트 AI 팩토리</text>
   <text x="80" y="482" font-family="Arial, sans-serif" font-size="11" fill="#4a6a8a">AI 클라우드 파트너와 수익 분배</text>
@@ -61,7 +57,7 @@
   <!-- Card 4: OpenAI -->
   <rect x="390" y="368" width="300" height="155" rx="14" fill="#1a0f2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.5"/>
   <text x="410" y="395" font-family="Arial, sans-serif" font-size="12" fill="#c084fc">🤖 OpenAI</text>
-  <text x="410" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#c084fc" filter="url(#glow)">정부 5% 지분 제안</text>
+  <text x="410" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#c084fc">정부 5% 지분 제안</text>
   <text x="410" y="442" font-family="Arial, sans-serif" font-size="12" fill="#a08acc">트럼프 행정부에 5% 지분 제안</text>
   <text x="410" y="462" font-family="Arial, sans-serif" font-size="12" fill="#a08acc">Sam Altman 공공 소유구조 협의</text>
   <text x="410" y="482" font-family="Arial, sans-serif" font-size="11" fill="#6a5a8a">정부 지원 + 지분 공동소유 검토</text>
@@ -70,7 +66,7 @@
   <!-- Card 5: Starlink -->
   <rect x="720" y="368" width="300" height="155" rx="14" fill="#0a152e" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.5"/>
   <text x="740" y="395" font-family="Arial, sans-serif" font-size="12" fill="#60a5fa">🛰️ Starlink vs Amazon</text>
-  <text x="740" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#60a5fa" filter="url(#glow)">10,700 vs 396기</text>
+  <text x="740" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#60a5fa">10,700 vs 396기</text>
   <text x="740" y="442" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8">SpaceX 27배 LEO 위성 우위</text>
   <text x="740" y="462" font-family="Arial, sans-serif" font-size="12" fill="#7ab0e8">키트 주 17만개 생산 중</text>
   <text x="740" y="482" font-family="Arial, sans-serif" font-size="11" fill="#4a6a8a">Amazon Kuiper 394기 차이</text>
@@ -103,19 +99,19 @@
 
   <!-- Row 4: TSLA H1 summary bar -->
   <rect x="60" y="685" width="960" height="80" rx="12" fill="#0f1e15" stroke="#00d68f" stroke-width="1" stroke-opacity="0.3"/>
-  <text x="160" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle" filter="url(#glow)">838,100</text>
+  <text x="160" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle">838,100</text>
   <text x="160" y="740" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">TSLA H1 2026 누계</text>
   <text x="160" y="756" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">+16% YoY</text>
 
   <line x1="290" y1="695" x2="290" y2="757" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.3"/>
 
-  <text x="430" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle" filter="url(#glow)">480,126</text>
+  <text x="430" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle">480,126</text>
   <text x="430" y="740" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">Q2 2026 납품</text>
   <text x="430" y="756" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">+25% YoY · 역대 Q2 최고</text>
 
   <line x1="560" y1="695" x2="560" y2="757" stroke="#00d68f" stroke-width="0.5" stroke-opacity="0.3"/>
 
-  <text x="700" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle" filter="url(#glow)">1,753,000</text>
+  <text x="700" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00d68f" text-anchor="middle">1,753,000</text>
   <text x="700" y="740" font-family="Arial, sans-serif" font-size="12" fill="#6a9a7a" text-anchor="middle">TSLA 트레일링 12M</text>
   <text x="700" y="756" font-family="Arial, sans-serif" font-size="11" fill="#4a6f5a" text-anchor="middle">+5.8% QoQ</text>
 

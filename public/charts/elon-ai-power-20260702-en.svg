@@ -2,7 +2,6 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1000"/></linearGradient>
     <linearGradient id="yg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
@@ -17,7 +16,7 @@
   <rect x="330" y="138" width="420" height="46" rx="23" fill="rgba(245,158,11,.1)" stroke="#f59e0b" stroke-width="1"/>
   <text x="540" y="168" font-family="Arial" font-size="20" fill="#fcd34d" text-anchor="middle">🌐 WEF Davos · January 22, 2026</text>
   <text x="540" y="290" font-family="Arial" font-size="90" text-anchor="middle">⚡</text>
-  <text x="540" y="374" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#f59e0b" text-anchor="middle" filter="url(#glow)" opacity=".12">POWER</text>
+  <text x="540" y="374" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#f59e0b" text-anchor="middle" opacity=".12">POWER</text>
   <text x="540" y="374" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#f59e0b" text-anchor="middle">POWER</text>
   <text x="540" y="426" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">The new bottleneck for AI = Electricity</text>
   <line x1="80" y1="454" x2="1000" y2="454" stroke="#1f2937" stroke-width="1"/>

@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#a855f7"/>
       <stop offset="100%" style="stop-color:#7c3aed"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#a855f7" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -24,13 +20,13 @@
   <text x="120" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">OpenAI</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a4a8a" text-anchor="end">2026.07.04</text>
 
-  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle" filter="url(#glow)">OpenAI 미국 정부</text>
-  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="60" fill="#c084fc" text-anchor="middle" filter="url(#glow)">5% 지분 제안</text>
+  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle">OpenAI 미국 정부</text>
+  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="60" fill="#c084fc" text-anchor="middle">5% 지분 제안</text>
   <text x="540" y="306" font-family="Arial, sans-serif" font-size="22" fill="#a08acc" text-anchor="middle">트럼프 행정부에 OpenAI 지분 5% 제안 · 공공 소유구조 검토</text>
 
   <!-- Big percentage visual -->
   <circle cx="540" cy="510" r="200" fill="#1a0f2e" stroke="#a855f7" stroke-width="2" stroke-opacity="0.4"/>
-  <text x="540" y="480" font-family="Arial Black, Arial" font-weight="900" font-size="100" fill="#c084fc" text-anchor="middle" filter="url(#glow)">5%</text>
+  <text x="540" y="480" font-family="Arial Black, Arial" font-weight="900" font-size="100" fill="#c084fc" text-anchor="middle">5%</text>
   <text x="540" y="530" font-family="Arial, sans-serif" font-size="20" fill="#a08acc" text-anchor="middle">정부 제안 지분</text>
   <text x="540" y="558" font-family="Arial, sans-serif" font-size="16" fill="#7a6a9a" text-anchor="middle">트럼프 행정부</text>
   <text x="540" y="582" font-family="Arial, sans-serif" font-size="14" fill="#5a4a7a" text-anchor="middle">Sam Altman 협의 중</text>

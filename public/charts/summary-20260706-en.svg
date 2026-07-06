@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#10b981"/>
       <stop offset="100%" style="stop-color:#059669"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#10b981" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,15 +22,15 @@
   <text x="264" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#10b981" text-anchor="middle">1-Page Brief</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a3a" text-anchor="end">2026.07.06</text>
 
-  <text x="540" y="182" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle" filter="url(#glow)">July 6, 2026 — Today's Top Investment Themes</text>
-  <text x="540" y="236" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#6ee7b7" text-anchor="middle" filter="url(#glow)">AI · Autonomy · Memory</text>
+  <text x="540" y="182" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">July 6, 2026 — Today's Top Investment Themes</text>
+  <text x="540" y="236" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#6ee7b7" text-anchor="middle">AI · Autonomy · Memory</text>
   <text x="540" y="284" font-family="Arial, sans-serif" font-size="19" fill="#34d399" text-anchor="middle">TSLA Robotaxi + FSD · NVDA China chip · SK Hynix · GOOGL · Hyperscaler capex</text>
 
   <!-- 6 topic cards in 2x3 grid -->
   <!-- Row 1 -->
   <rect x="80" y="302" width="293" height="142" rx="12" fill="#051a10" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="100" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444">TSLA BREAKING</text>
-  <text x="100" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fca5a5" filter="url(#glow)">100 Robotaxis</text>
+  <text x="100" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fca5a5">100 Robotaxis</text>
   <text x="100" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fca5a5">Unsupervised</text>
   <text x="100" y="396" font-family="Arial, sans-serif" font-size="12" fill="#9a4a4a">Cybercab Austin production test begins</text>
   <text x="100" y="414" font-family="Arial, sans-serif" font-size="12" fill="#9a4a4a">FSD v14 HW3 rollout · new cities go direct</text>
@@ -42,7 +38,7 @@
 
   <rect x="393" y="302" width="294" height="142" rx="12" fill="#051a10" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="413" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f97316">NVDA BREAKING</text>
-  <text x="413" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" filter="url(#glow)">China Chip</text>
+  <text x="413" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74">China Chip</text>
   <text x="413" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fdba74">4.7× A100</text>
   <text x="413" y="396" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">Peking Univ. 40nm · under export controls</text>
   <text x="413" y="414" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">Specialized AI task · NOT general LLM</text>
@@ -50,7 +46,7 @@
 
   <rect x="707" y="302" width="293" height="142" rx="12" fill="#051a10" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="727" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#a855f7">SK Hynix</text>
-  <text x="727" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#d8b4fe" filter="url(#glow)">DRAM 61%</text>
+  <text x="727" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#d8b4fe">DRAM 61%</text>
   <text x="727" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d8b4fe">Gross Margin</text>
   <text x="727" y="396" font-family="Arial, sans-serif" font-size="12" fill="#7a4aaa">"AI memory has become dominant"</text>
   <text x="727" y="414" font-family="Arial, sans-serif" font-size="12" fill="#7a4aaa">Japan $8.6B Hiroshima expansion</text>
@@ -59,7 +55,7 @@
   <!-- Row 2 -->
   <rect x="80" y="460" width="293" height="142" rx="12" fill="#051a10" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="100" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#0ea5e9">GOOGL</text>
-  <text x="100" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" filter="url(#glow)">2028 Profit</text>
+  <text x="100" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc">2028 Profit</text>
   <text x="100" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc">Nearly Doubles</text>
   <text x="100" y="554" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">Frontier model 100% on own TPUs</text>
   <text x="100" y="572" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">Lowest per-token cost → margin edge</text>
@@ -67,7 +63,7 @@
 
   <rect x="393" y="460" width="294" height="142" rx="12" fill="#051a10" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="413" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f97316">Hyperscalers</text>
-  <text x="413" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" filter="url(#glow)">$576B → $939B</text>
+  <text x="413" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74">$576B → $939B</text>
   <text x="413" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fdba74">AI CAPEX Surge</text>
   <text x="413" y="554" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">2026: $576B · 2027: $939B</text>
   <text x="413" y="572" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">MS + Google + Meta + Amazon combined</text>
@@ -75,7 +71,7 @@
 
   <rect x="707" y="460" width="293" height="142" rx="12" fill="#051a10" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="727" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#0ea5e9">TSLA / EU</text>
-  <text x="727" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" filter="url(#glow)">EU Safety Mandate</text>
+  <text x="727" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc">EU Safety Mandate</text>
   <text x="727" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#7dd3fc">+ US Content #1</text>
   <text x="727" y="554" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">July 1 new car safety tech required</text>
   <text x="727" y="572" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">DeSantis: FSD = real taxpayer benefit</text>

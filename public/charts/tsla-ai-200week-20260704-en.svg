@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#ef4444"/>
       <stop offset="100%" style="stop-color:#b91c1c"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,8 +22,8 @@
   <text x="214" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#ef4444" text-anchor="middle">AI Cost</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#5a3a3a" text-anchor="end">2026.07.04</text>
 
-  <text x="540" y="192" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Tesla AI Spend Cap</text>
-  <text x="540" y="254" font-family="Arial Black, Arial" font-weight="900" font-size="72" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">$200/week</text>
+  <text x="540" y="192" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle">Tesla AI Spend Cap</text>
+  <text x="540" y="254" font-family="Arial Black, Arial" font-weight="900" font-size="72" fill="#fca5a5" text-anchor="middle">$200/week</text>
   <text x="540" y="302" font-family="Arial, sans-serif" font-size="20" fill="#f87171" text-anchor="middle">Employee AI spend capped at $200/week · Validated by Chamath</text>
 
   <rect x="80" y="330" width="920" height="90" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.5"/>

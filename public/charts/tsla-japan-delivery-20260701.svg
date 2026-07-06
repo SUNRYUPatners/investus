@@ -71,7 +71,7 @@
 
   <!-- Surge indicator -->
   <text x="540" y="340" font-family="Arial,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle" letter-spacing="3">JAPAN DELIVERY BACKLOG</text>
-  <text x="540" y="400" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="#ef4444" text-anchor="middle" filter="url(#softGlow)">SURGE</text>
+  <text x="540" y="400" font-family="Arial Black,Arial,sans-serif" font-size="80" font-weight="900" fill="#ef4444" text-anchor="middle">SURGE</text>
   <text x="540" y="440" font-family="Arial,sans-serif" font-size="20" fill="#f9fafb" text-anchor="middle">대규모 신차 출고 대기 물량 포착</text>
 
   <!-- Bar chart: Q deliveries -->

@@ -2,7 +2,6 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0d00"/></linearGradient>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f97316"/><stop offset="100%" style="stop-color:#ea580c"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
@@ -11,7 +10,7 @@
   <text x="540" y="100" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">US Household Cash at 8% — Highest in 95+ Years</text>
   <line x1="80" y1="118" x2="1000" y2="118" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="178" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">HOUSEHOLD CASH % OF TOTAL FINANCIAL ASSETS</text>
-  <text x="540" y="288" font-family="Arial Black,Arial" font-size="130" font-weight="900" fill="#f97316" text-anchor="middle" filter="url(#glow)" opacity=".12">8%</text>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="130" font-weight="900" fill="#f97316" text-anchor="middle" opacity=".12">8%</text>
   <text x="540" y="288" font-family="Arial Black,Arial" font-size="130" font-weight="900" fill="#f97316" text-anchor="middle">8%</text>
   <text x="540" y="336" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">Cash as % of Total Financial Assets</text>
   <line x1="80" y1="364" x2="1000" y2="364" stroke="#1f2937" stroke-width="1"/>

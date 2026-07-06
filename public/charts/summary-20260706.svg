@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#10b981"/>
       <stop offset="100%" style="stop-color:#059669"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#10b981" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,15 +22,15 @@
   <text x="244" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#10b981" text-anchor="middle">한장요약</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a3a" text-anchor="end">2026.07.06</text>
 
-  <text x="540" y="182" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle" filter="url(#glow)">2026년 7월 6일 — 오늘의 핵심 투자 이슈</text>
-  <text x="540" y="236" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#6ee7b7" text-anchor="middle" filter="url(#glow)">AI · 자율주행 · 메모리</text>
+  <text x="540" y="182" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">2026년 7월 6일 — 오늘의 핵심 투자 이슈</text>
+  <text x="540" y="236" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#6ee7b7" text-anchor="middle">AI · 자율주행 · 메모리</text>
   <text x="540" y="284" font-family="Arial, sans-serif" font-size="19" fill="#34d399" text-anchor="middle">TSLA 로보택시·FSD · NVDA 중국칩 · SK하이닉스 · GOOGL · 하이퍼스케일러</text>
 
   <!-- 6 topic cards in 2x3 grid -->
   <!-- Row 1 -->
   <rect x="80" y="302" width="293" height="142" rx="12" fill="#051a10" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="100" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444">TSLA BREAKING</text>
-  <text x="100" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fca5a5" filter="url(#glow)">로보택시 100대</text>
+  <text x="100" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fca5a5">로보택시 100대</text>
   <text x="100" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fca5a5">비지도 운행 개시</text>
   <text x="100" y="396" font-family="Arial, sans-serif" font-size="12" fill="#9a4a4a">Cybercab 오스틴 생산 테스트</text>
   <text x="100" y="414" font-family="Arial, sans-serif" font-size="12" fill="#9a4a4a">FSD v14 HW3 배포 · 신도시 비지도</text>
@@ -42,7 +38,7 @@
 
   <rect x="393" y="302" width="294" height="142" rx="12" fill="#051a10" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="413" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f97316">NVDA BREAKING</text>
-  <text x="413" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" filter="url(#glow)">중국칩 A100</text>
+  <text x="413" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74">중국칩 A100</text>
   <text x="413" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fdba74">4.7배 성능 달성</text>
   <text x="413" y="396" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">베이징대 40nm 칩 · 수출통제 내 개발</text>
   <text x="413" y="414" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">특화 AI 태스크 기준 · 범용 대체 아님</text>
@@ -50,7 +46,7 @@
 
   <rect x="707" y="302" width="293" height="142" rx="12" fill="#051a10" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="727" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#a855f7">SK하이닉스</text>
-  <text x="727" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#d8b4fe" filter="url(#glow)">DRAM 61%</text>
+  <text x="727" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#d8b4fe">DRAM 61%</text>
   <text x="727" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d8b4fe">매출총이익률</text>
   <text x="727" y="396" font-family="Arial, sans-serif" font-size="12" fill="#7a4aaa">"AI 메모리가 지배적" 선언</text>
   <text x="727" y="414" font-family="Arial, sans-serif" font-size="12" fill="#7a4aaa">일본 히로시마 $8.6B 증설</text>
@@ -59,7 +55,7 @@
   <!-- Row 2 -->
   <rect x="80" y="460" width="293" height="142" rx="12" fill="#051a10" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="100" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#0ea5e9">GOOGL</text>
-  <text x="100" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" filter="url(#glow)">2028 순이익</text>
+  <text x="100" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc">2028 순이익</text>
   <text x="100" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc">2배 전망</text>
   <text x="100" y="554" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">TPU 자체 프론티어 모델 완전 구동</text>
   <text x="100" y="572" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">토큰당 비용 최저 → 마진 구조 확대</text>
@@ -67,7 +63,7 @@
 
   <rect x="393" y="460" width="294" height="142" rx="12" fill="#051a10" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="413" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f97316">하이퍼스케일러</text>
-  <text x="413" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" filter="url(#glow)">$576B → $939B</text>
+  <text x="413" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74">$576B → $939B</text>
   <text x="413" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fdba74">AI CAPEX 폭발</text>
   <text x="413" y="554" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">2026 $576B · 2027 $939B</text>
   <text x="413" y="572" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">MS·구글·Meta·아마존 연간 합산</text>
@@ -75,7 +71,7 @@
 
   <rect x="707" y="460" width="293" height="142" rx="12" fill="#051a10" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.7"/>
   <text x="727" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#0ea5e9">TSLA / EU</text>
-  <text x="727" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" filter="url(#glow)">EU 안전 의무화</text>
+  <text x="727" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc">EU 안전 의무화</text>
   <text x="727" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#7dd3fc">+ 미국산 #1</text>
   <text x="727" y="554" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">7/1 신차 안전 기술 전 적용</text>
   <text x="727" y="572" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">DeSantis: FSD = 납세자 혜택</text>

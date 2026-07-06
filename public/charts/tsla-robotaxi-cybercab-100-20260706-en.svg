@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#ef4444"/>
       <stop offset="100%" style="stop-color:#b91c1c"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,8 +22,8 @@
   <text x="209" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#ef4444" text-anchor="middle">BREAKING</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a2a2a" text-anchor="end">2026.07.06</text>
 
-  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Tesla Cybercab Austin Production Test</text>
-  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">100 Robotaxis Unsupervised</text>
+  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#ffffff" text-anchor="middle">Tesla Cybercab Austin Production Test</text>
+  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#fca5a5" text-anchor="middle">100 Robotaxis Unsupervised</text>
   <text x="540" y="296" font-family="Arial, sans-serif" font-size="19" fill="#f87171" text-anchor="middle">No-wheel Cybercab enters Austin test · FSD v14 rolls out to HW3 users</text>
 
   <rect x="80" y="320" width="920" height="68" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="2" stroke-opacity="0.6"/>
@@ -35,19 +31,19 @@
   <text x="540" y="376" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fca5a5" text-anchor="middle">Instead all new cities are launching unsupervised. Interesting." — Whole Mars Catalog</text>
 
   <rect x="80" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="220" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#ef4444" text-anchor="middle" filter="url(#glow)">100</text>
+  <text x="220" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#ef4444" text-anchor="middle">100</text>
   <text x="220" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">Model Y Robotaxis</text>
   <text x="220" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Commercial unsupervised ops</text>
   <text x="220" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">Austin primary deployment</text>
 
   <rect x="400" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="540" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">Cybercab</text>
+  <text x="540" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fca5a5" text-anchor="middle">Cybercab</text>
   <text x="540" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">No steering wheel / pedals</text>
   <text x="540" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Enters Austin factory testing</text>
   <text x="540" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">Lara Morley: "cool news" from Giga TX</text>
 
   <rect x="720" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="860" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">FSD v14</text>
+  <text x="860" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fca5a5" text-anchor="middle">FSD v14</text>
   <text x="860" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">Rolling out to HW3 users</text>
   <text x="860" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Much less compute vs prior</text>
   <text x="860" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">Early user feedback strong</text>

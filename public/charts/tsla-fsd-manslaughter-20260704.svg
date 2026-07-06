@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#f97316"/>
       <stop offset="100%" style="stop-color:#c2410c"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,8 +22,8 @@
   <text x="214" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f97316" text-anchor="middle">FSD법적</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a3a2a" text-anchor="end">2026.07.04</text>
 
-  <text x="540" y="185" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle" filter="url(#glow)">FSD 사고 · 텍사스 과실치사</text>
-  <text x="540" y="244" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#fdba74" text-anchor="middle" filter="url(#glow)">중범죄 기소</text>
+  <text x="540" y="185" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle">FSD 사고 · 텍사스 과실치사</text>
+  <text x="540" y="244" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#fdba74" text-anchor="middle">중범죄 기소</text>
   <text x="540" y="290" font-family="Arial, sans-serif" font-size="20" fill="#fb923c" text-anchor="middle">Harris County DA · FSD 활성화 상태 · 정지 신호 미인식 · 운전자 기소</text>
 
   <rect x="60" y="310" width="960" height="76" rx="12" fill="#1a0a04" stroke="#f97316" stroke-width="2" stroke-opacity="0.6"/>

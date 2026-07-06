@@ -16,10 +16,6 @@
       <stop offset="0%" style="stop-color:#064e3b"/>
       <stop offset="100%" style="stop-color:#022c22"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <filter id="glowRed">
       <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
       <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -38,7 +34,7 @@
 
   <!-- Level 4+ badge center -->
   <rect x="40" y="135" width="1000" height="120" rx="16" fill="url(#greenGrad)" stroke="#22c55e" stroke-width="2"/>
-  <text x="540" y="195" font-family="Arial Black, sans-serif" font-size="52" font-weight="900" fill="#22c55e" text-anchor="middle" filter="url(#glow)">LEVEL 4+</text>
+  <text x="540" y="195" font-family="Arial Black, sans-serif" font-size="52" font-weight="900" fill="#22c55e" text-anchor="middle">LEVEL 4+</text>
   <text x="540" y="238" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Tesla FSD · 진정한 완전 자율주행 달성</text>
 
   <!-- Three big cards -->
@@ -120,7 +116,7 @@
   <rect x="505" y="740" width="35" height="24" rx="3" fill="#60a5fa" opacity="0.5"/>
   <rect x="545" y="740" width="35" height="24" rx="3" fill="#60a5fa" opacity="0.5"/>
   <!-- Glowing aura -->
-  <ellipse cx="540" cy="760" rx="100" ry="10" fill="#22c55e" opacity="0.15" filter="url(#glow)"/>
+  <ellipse cx="540" cy="760" rx="100" ry="10" fill="#22c55e" opacity="0.15"/>
   <text x="540" y="680" font-family="Arial Black, sans-serif" font-size="18" fill="#22c55e" text-anchor="middle" font-weight="900">도심 도로 완전 자율주행</text>
 
   <!-- Bottom stats -->

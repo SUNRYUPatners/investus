@@ -2,7 +2,6 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0505"/></linearGradient>
     <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="100%" style="stop-color:#dc2626"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
@@ -18,7 +17,7 @@
 
   <!-- D-DAY hero -->
   <text x="540" y="240" font-family="Arial" font-size="70" text-anchor="middle">📦</text>
-  <text x="540" y="330" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#ef4444" text-anchor="middle" filter="url(#glow)" opacity=".12">D-DAY</text>
+  <text x="540" y="330" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#ef4444" text-anchor="middle" opacity=".12">D-DAY</text>
   <text x="540" y="330" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#ef4444" text-anchor="middle">D-DAY</text>
   <text x="540" y="382" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">오늘 오전 9:30 ET 이전 발표 예정</text>
 

@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#0ea5e9"/>
       <stop offset="100%" style="stop-color:#0369a1"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,8 +22,8 @@
   <text x="204" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">종목분석</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a6a" text-anchor="end">2026.07.06</text>
 
-  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" filter="url(#glow)">구글 자체 TPU로 프론티어 모델 완전 구동</text>
-  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">2028 순이익 2배 전망</text>
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle">구글 자체 TPU로 프론티어 모델 완전 구동</text>
+  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#7dd3fc" text-anchor="middle">2028 순이익 2배 전망</text>
   <text x="540" y="296" font-family="Arial, sans-serif" font-size="20" fill="#38bdf8" text-anchor="middle">토큰당 내부 비용 최저 기업이 AI 전쟁 승자 · TPU 실리콘 자급 달성</text>
 
   <!-- Quote box -->
@@ -37,19 +33,19 @@
 
   <!-- Stat boxes -->
   <rect x="80" y="408" width="280" height="160" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="220" y="460" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#0ea5e9" text-anchor="middle" filter="url(#glow)">2×</text>
+  <text x="220" y="460" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#0ea5e9" text-anchor="middle">2×</text>
   <text x="220" y="492" font-family="Arial, sans-serif" font-size="16" fill="#7dd3fc" text-anchor="middle">순이익 2028 전망</text>
   <text x="220" y="514" font-family="Arial, sans-serif" font-size="13" fill="#4a8aaa" text-anchor="middle">AI 효율화 · 광고 성장</text>
   <text x="220" y="554" font-family="Arial, sans-serif" font-size="12" fill="#2a6a8a" text-anchor="middle">현재 대비 거의 2배</text>
 
   <rect x="400" y="408" width="280" height="160" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="540" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">TPU</text>
+  <text x="540" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#7dd3fc" text-anchor="middle">TPU</text>
   <text x="540" y="488" font-family="Arial, sans-serif" font-size="16" fill="#7dd3fc" text-anchor="middle">100% 자체 실리콘</text>
   <text x="540" y="510" font-family="Arial, sans-serif" font-size="13" fill="#4a8aaa" text-anchor="middle">NVDA 의존도 탈피</text>
   <text x="540" y="554" font-family="Arial, sans-serif" font-size="12" fill="#2a6a8a" text-anchor="middle">프론티어 모델 완전 구동</text>
 
   <rect x="720" y="408" width="280" height="160" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="860" y="444" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">최저</text>
+  <text x="860" y="444" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#7dd3fc" text-anchor="middle">최저</text>
   <text x="860" y="476" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc" text-anchor="middle">토큰당 비용</text>
   <text x="860" y="498" font-family="Arial, sans-serif" font-size="13" fill="#4a8aaa" text-anchor="middle">인프라 자급 구조</text>
   <text x="860" y="554" font-family="Arial, sans-serif" font-size="12" fill="#2a6a8a" text-anchor="middle">AI 경쟁에서 구조적 우위</text>

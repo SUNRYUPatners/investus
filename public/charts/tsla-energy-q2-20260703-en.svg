@@ -2,7 +2,6 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
@@ -15,7 +14,7 @@
   <text x="540" y="102" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA Energy Storage Q2 Record</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="196" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Q2 2026 ENERGY STORAGE DEPLOYED</text>
-  <text x="540" y="310" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" filter="url(#glow)" opacity=".12">13.5</text>
+  <text x="540" y="310" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">13.5</text>
   <text x="540" y="310" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle">13.5</text>
   <text x="540" y="360" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#4ade80" text-anchor="middle">GWh</text>
   <text x="540" y="404" font-family="Arial" font-size="26" fill="#9ca3af" text-anchor="middle">vs Q2 2025 9.6 GWh · +40%+ YoY</text>

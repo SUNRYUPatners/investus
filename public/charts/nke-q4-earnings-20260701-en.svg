@@ -13,10 +13,6 @@
       <stop offset="0%" style="stop-color:#374151"/>
       <stop offset="100%" style="stop-color:#6b7280"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
   <rect width="1080" height="1080" fill="url(#bg)"/>
@@ -38,7 +34,7 @@
   <!-- HERO -->
   <rect x="54" y="272" width="460" height="200" rx="16" fill="#1a0f00" stroke="#f97316" stroke-width="2"/>
   <text x="284" y="330" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#f97316" text-anchor="middle" letter-spacing="3">NET INCOME</text>
-  <text x="284" y="415" font-family="Arial,sans-serif" font-size="80" font-weight="900" fill="#f97316" text-anchor="middle" filter="url(#glow)">$1.07B</text>
+  <text x="284" y="415" font-family="Arial,sans-serif" font-size="80" font-weight="900" fill="#f97316" text-anchor="middle">$1.07B</text>
   <text x="284" y="452" font-family="Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Net Income (Q4 FY2028)</text>
 
   <!-- 5.3x badge -->

@@ -16,10 +16,6 @@
       <stop offset="0%" style="stop-color:#064e3b"/>
       <stop offset="100%" style="stop-color:#022c22"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
   <rect width="1080" height="1080" fill="url(#bg)"/>
@@ -34,7 +30,7 @@
 
   <!-- Level 4+ badge -->
   <rect x="40" y="135" width="1000" height="120" rx="16" fill="url(#greenGrad)" stroke="#22c55e" stroke-width="2"/>
-  <text x="540" y="195" font-family="Arial Black, sans-serif" font-size="52" font-weight="900" fill="#22c55e" text-anchor="middle" filter="url(#glow)">LEVEL 4+</text>
+  <text x="540" y="195" font-family="Arial Black, sans-serif" font-size="52" font-weight="900" fill="#22c55e" text-anchor="middle">LEVEL 4+</text>
   <text x="540" y="238" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Tesla FSD · True Full Self-Driving Achieved</text>
 
   <!-- Three big cards -->
@@ -104,7 +100,7 @@
   <circle cx="590" cy="802" r="16" fill="#1f2937" stroke="#60a5fa" stroke-width="2"/>
   <rect x="505" y="740" width="35" height="24" rx="3" fill="#60a5fa" opacity="0.5"/>
   <rect x="545" y="740" width="35" height="24" rx="3" fill="#60a5fa" opacity="0.5"/>
-  <ellipse cx="540" cy="760" rx="100" ry="10" fill="#22c55e" opacity="0.15" filter="url(#glow)"/>
+  <ellipse cx="540" cy="760" rx="100" ry="10" fill="#22c55e" opacity="0.15"/>
   <text x="540" y="680" font-family="Arial Black, sans-serif" font-size="18" fill="#22c55e" text-anchor="middle" font-weight="900">Fully Autonomous Urban Driving</text>
 
   <!-- Bottom stats -->

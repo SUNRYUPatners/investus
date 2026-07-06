@@ -12,10 +12,6 @@
       <stop offset="0%" style="stop-color:#0f2a1e;stop-opacity:1"/>
       <stop offset="100%" style="stop-color:#0a1f14;stop-opacity:1"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <filter id="softGlow">
       <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
       <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -32,7 +28,7 @@
   <line x1="720" y1="0" x2="720" y2="1080" stroke="#00d68f" stroke-width="0.3" stroke-opacity="0.08"/>
 
   <!-- Glow circle behind car -->
-  <ellipse cx="540" cy="490" rx="300" ry="180" fill="#00d68f" fill-opacity="0.04" filter="url(#softGlow)"/>
+  <ellipse cx="540" cy="490" rx="300" ry="180" fill="#00d68f" fill-opacity="0.04"/>
 
   <!-- Header bar -->
   <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
@@ -49,8 +45,8 @@
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#4a6f5a" text-anchor="end">2026.07.03</text>
 
   <!-- Main title -->
-  <text x="540" y="195" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Model Y</text>
-  <text x="540" y="258" font-family="Arial Black, Arial" font-weight="900" font-size="58" fill="#00d68f" text-anchor="middle" filter="url(#glow)">8-Seat Launch</text>
+  <text x="540" y="195" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#ffffff" text-anchor="middle">Model Y</text>
+  <text x="540" y="258" font-family="Arial Black, Arial" font-weight="900" font-size="58" fill="#00d68f" text-anchor="middle">8-Seat Launch</text>
   <text x="540" y="308" font-family="Arial, sans-serif" font-size="22" fill="#8ab89a" text-anchor="middle">FSD Supervised + Grok AI Built-In · Expanded Space</text>
 
   <!-- Car silhouette (stylized SUV side view) -->
@@ -96,21 +92,21 @@
   <!-- Stats cards -->
   <!-- Card 1: 8 Seats -->
   <rect x="60" y="590" width="220" height="160" rx="16" fill="url(#cardGrad)" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="170" y="645" font-family="Arial Black, Arial" font-weight="900" font-size="56" fill="#00d68f" text-anchor="middle" filter="url(#glow)">8</text>
+  <text x="170" y="645" font-family="Arial Black, Arial" font-weight="900" font-size="56" fill="#00d68f" text-anchor="middle">8</text>
   <text x="170" y="675" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">Seats</text>
   <text x="170" y="710" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">1+2+3 row config</text>
   <text x="170" y="730" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">More headroom &amp; legroom</text>
 
   <!-- Card 2: 0-60 -->
   <rect x="300" y="590" width="220" height="160" rx="16" fill="url(#cardGrad)" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="410" y="645" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#00d68f" text-anchor="middle" filter="url(#glow)">4.4s</text>
+  <text x="410" y="645" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#00d68f" text-anchor="middle">4.4s</text>
   <text x="410" y="675" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">0 → 60 mph</text>
   <text x="410" y="710" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">Adaptive damping</text>
   <text x="410" y="730" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">Staggered tires</text>
 
   <!-- Card 3: Range -->
   <rect x="540" y="590" width="220" height="160" rx="16" fill="url(#cardGrad)" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="650" y="638" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#00d68f" text-anchor="middle" filter="url(#glow)">325 mi</text>
+  <text x="650" y="638" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#00d68f" text-anchor="middle">325 mi</text>
   <text x="650" y="668" font-family="Arial Black, Arial" font-weight="700" font-size="22" fill="#5aaa7a" text-anchor="middle">527 km</text>
   <text x="650" y="698" font-family="Arial, sans-serif" font-size="14" fill="#8ab89a" text-anchor="middle">Range</text>
   <text x="650" y="718" font-family="Arial, sans-serif" font-size="12" fill="#4a6f5a" text-anchor="middle">Improved efficiency</text>
@@ -118,7 +114,7 @@
 
   <!-- Card 4: AI/FSD -->
   <rect x="780" y="590" width="240" height="160" rx="16" fill="url(#cardGrad)" stroke="#00d68f" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="900" y="635" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#00d68f" text-anchor="middle" filter="url(#glow)">FSD</text>
+  <text x="900" y="635" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#00d68f" text-anchor="middle">FSD</text>
   <text x="900" y="660" font-family="Arial, sans-serif" font-size="13" fill="#00d68f" text-anchor="middle">Supervised</text>
   <rect x="840" y="672" width="120" height="1" fill="#00d68f" fill-opacity="0.3"/>
   <text x="900" y="695" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#5aaa7a" text-anchor="middle">Grok AI</text>

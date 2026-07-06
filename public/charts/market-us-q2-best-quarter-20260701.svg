@@ -13,10 +13,6 @@
       <stop offset="0%" style="stop-color:#15803d"/>
       <stop offset="100%" style="stop-color:#22c55e"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
   <rect width="1080" height="1080" fill="url(#bg)"/>
@@ -43,12 +39,12 @@
   <!-- Two big number cards -->
   <rect x="54" y="292" width="460" height="230" rx="16" fill="#051a0a" stroke="#4ade80" stroke-width="2.5"/>
   <text x="284" y="348" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#4ade80" text-anchor="middle" letter-spacing="3">S&amp;P 500 · Q2 2026</text>
-  <text x="284" y="455" font-family="Arial,sans-serif" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" filter="url(#glow)">+14%</text>
+  <text x="284" y="455" font-family="Arial,sans-serif" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle">+14%</text>
   <text x="284" y="500" font-family="Arial,sans-serif" font-size="13" fill="#86efac" text-anchor="middle">2019 Q1 이후 최강 분기</text>
 
   <rect x="566" y="292" width="460" height="230" rx="16" fill="#051a0a" stroke="#4ade80" stroke-width="2.5"/>
   <text x="796" y="348" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#4ade80" text-anchor="middle" letter-spacing="3">NASDAQ · Q2 2026</text>
-  <text x="796" y="455" font-family="Arial,sans-serif" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" filter="url(#glow)">+20%</text>
+  <text x="796" y="455" font-family="Arial,sans-serif" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle">+20%</text>
   <text x="796" y="500" font-family="Arial,sans-serif" font-size="13" fill="#86efac" text-anchor="middle">2022년 이후 최고 분기</text>
 
   <!-- Quarterly bar chart label -->

@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#a855f7"/>
       <stop offset="100%" style="stop-color:#7c3aed"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#a855f7" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,8 +22,8 @@
   <text x="204" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#a855f7" text-anchor="middle">종목분석</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#3a1a6a" text-anchor="end">2026.07.06</text>
 
-  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" filter="url(#glow)">SK하이닉스 DRAM 매출총이익률 61% 달성</text>
-  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="54" fill="#d8b4fe" text-anchor="middle" filter="url(#glow)">AI 메모리 주도권</text>
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle">SK하이닉스 DRAM 매출총이익률 61% 달성</text>
+  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="54" fill="#d8b4fe" text-anchor="middle">AI 메모리 주도권</text>
   <text x="540" y="296" font-family="Arial, sans-serif" font-size="20" fill="#c084fc" text-anchor="middle">Q2 2026 DRAM 총이익률 61% · "AI 메모리가 지배적" 선언</text>
 
   <!-- Quote box -->
@@ -37,19 +33,19 @@
 
   <!-- Stat boxes -->
   <rect x="80" y="408" width="280" height="160" rx="16" fill="#0a0414" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="220" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#a855f7" text-anchor="middle" filter="url(#glow)">61%</text>
+  <text x="220" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#a855f7" text-anchor="middle">61%</text>
   <text x="220" y="488" font-family="Arial, sans-serif" font-size="16" fill="#d8b4fe" text-anchor="middle">DRAM 매출총이익률</text>
   <text x="220" y="510" font-family="Arial, sans-serif" font-size="13" fill="#7a4aaa" text-anchor="middle">Q2 2026 달성</text>
   <text x="220" y="552" font-family="Arial, sans-serif" font-size="12" fill="#5a2a8a" text-anchor="middle">HBM 고마진 효과</text>
 
   <rect x="400" y="408" width="280" height="160" rx="16" fill="#0a0414" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="540" y="448" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#d8b4fe" text-anchor="middle" filter="url(#glow)">HBM</text>
+  <text x="540" y="448" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#d8b4fe" text-anchor="middle">HBM</text>
   <text x="540" y="480" font-family="Arial, sans-serif" font-size="15" fill="#d8b4fe" text-anchor="middle">AI 가속기 핵심 메모리</text>
   <text x="540" y="502" font-family="Arial, sans-serif" font-size="13" fill="#7a4aaa" text-anchor="middle">NVDA H100/B200 탑재</text>
   <text x="540" y="552" font-family="Arial, sans-serif" font-size="12" fill="#5a2a8a" text-anchor="middle">시장 점유율 50%+</text>
 
   <rect x="720" y="408" width="280" height="160" rx="16" fill="#0a0414" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6"/>
-  <text x="860" y="440" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#d8b4fe" text-anchor="middle" filter="url(#glow)">$8.6B</text>
+  <text x="860" y="440" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#d8b4fe" text-anchor="middle">$8.6B</text>
   <text x="860" y="468" font-family="Arial, sans-serif" font-size="14" fill="#d8b4fe" text-anchor="middle">일본 정부 지원</text>
   <text x="860" y="490" font-family="Arial, sans-serif" font-size="13" fill="#7a4aaa" text-anchor="middle">히로시마 공장 증설</text>
   <text x="860" y="552" font-family="Arial, sans-serif" font-size="12" fill="#5a2a8a" text-anchor="middle">마이크론 관련 투자</text>

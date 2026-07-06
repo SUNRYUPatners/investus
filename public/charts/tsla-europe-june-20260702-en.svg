@@ -2,7 +2,6 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
@@ -18,7 +17,7 @@
   <text x="540" y="162" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">BREAKING — Europe Recovery</text>
   <rect x="80" y="196" width="920" height="130" rx="18" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="180" y="250" font-family="Arial" font-size="46" text-anchor="middle">🇫🇷</text>
-  <text x="320" y="258" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle" filter="url(#glow)">2X+</text>
+  <text x="320" y="258" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">2X+</text>
   <text x="540" y="238" font-family="Arial" font-size="28" fill="#9ca3af" text-anchor="middle" font-weight="bold">France YoY June</text>
   <text x="540" y="296" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">More than doubled vs same period</text>
   <rect x="80" y="344" width="192" height="170" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>

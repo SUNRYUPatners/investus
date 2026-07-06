@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#0ea5e9"/>
       <stop offset="100%" style="stop-color:#0369a1"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,8 +22,8 @@
   <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">AI에이전트</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#3a5a6a" text-anchor="end">2026.07.04</text>
 
-  <text x="540" y="192" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle" filter="url(#glow)">META AI 에이전트</text>
-  <text x="540" y="254" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">기대 미달 자인</text>
+  <text x="540" y="192" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle">META AI 에이전트</text>
+  <text x="540" y="254" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#7dd3fc" text-anchor="middle">기대 미달 자인</text>
   <text x="540" y="302" font-family="Arial, sans-serif" font-size="20" fill="#38bdf8" text-anchor="middle">Zuckerberg 사내 타운홀 발언 · 4개월 AI 에이전트 개발 부진 시인</text>
 
   <rect x="80" y="325" width="920" height="110" rx="14" fill="#0a1020" stroke="#0ea5e9" stroke-width="2" stroke-opacity="0.6"/>

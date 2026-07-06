@@ -8,10 +8,6 @@
       <stop offset="0%" style="stop-color:#3b82f6"/>
       <stop offset="100%" style="stop-color:#1d4ed8"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <line x1="0" y1="360" x2="1080" y2="360" stroke="#3b82f6" stroke-width="0.3" stroke-opacity="0.08"/>
@@ -26,8 +22,8 @@
   <text x="214" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#3b82f6" text-anchor="middle">AI</text>
   <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#3a5a8a" text-anchor="end">2026.07.04</text>
 
-  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#ffffff" text-anchor="middle" filter="url(#glow)">NVIDIA AI 인프라 파트너십</text>
-  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#60a5fa" text-anchor="middle" filter="url(#glow)">수익 공유 모델 도입</text>
+  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#ffffff" text-anchor="middle">NVIDIA AI 인프라 파트너십</text>
+  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#60a5fa" text-anchor="middle">수익 공유 모델 도입</text>
   <text x="540" y="306" font-family="Arial, sans-serif" font-size="22" fill="#7ab0e8" text-anchor="middle">대규모 멀티 테넌트 AI 팩토리 · AI 클라우드 파트너와 수익 분배 구조</text>
 
   <!-- Headline card -->
@@ -37,7 +33,7 @@
 
   <!-- Three pillars -->
   <rect x="60" y="430" width="300" height="240" rx="16" fill="#0a1a3e" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.5"/>
-  <text x="210" y="475" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#60a5fa" text-anchor="middle" filter="url(#glow)">🏭</text>
+  <text x="210" y="475" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#60a5fa" text-anchor="middle">🏭</text>
   <text x="210" y="516" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#60a5fa" text-anchor="middle">AI 팩토리</text>
   <text x="210" y="542" font-family="Arial, sans-serif" font-size="14" fill="#7ab0e8" text-anchor="middle">대규모 멀티 테넌트</text>
   <text x="210" y="562" font-family="Arial, sans-serif" font-size="14" fill="#7ab0e8" text-anchor="middle">클라우드 배포</text>
@@ -47,7 +43,7 @@
   <text x="210" y="650" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">NVDA GPU 집약</text>
 
   <rect x="390" y="430" width="300" height="240" rx="16" fill="#0a1a3e" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.5"/>
-  <text x="540" y="475" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#60a5fa" text-anchor="middle" filter="url(#glow)">💰</text>
+  <text x="540" y="475" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#60a5fa" text-anchor="middle">💰</text>
   <text x="540" y="516" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#60a5fa" text-anchor="middle">수익 공유</text>
   <text x="540" y="542" font-family="Arial, sans-serif" font-size="14" fill="#7ab0e8" text-anchor="middle">Revenue-sharing</text>
   <text x="540" y="562" font-family="Arial, sans-serif" font-size="14" fill="#7ab0e8" text-anchor="middle">수익 창출 시 분배</text>
@@ -57,7 +53,7 @@
   <text x="540" y="650" font-family="Arial, sans-serif" font-size="11" fill="#2a4a6a" text-anchor="middle">소프트웨어 수익화</text>
 
   <rect x="720" y="430" width="300" height="240" rx="16" fill="#0a1a3e" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.5"/>
-  <text x="870" y="475" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#60a5fa" text-anchor="middle" filter="url(#glow)">🏦</text>
+  <text x="870" y="475" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#60a5fa" text-anchor="middle">🏦</text>
   <text x="870" y="516" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#60a5fa" text-anchor="middle">크레딧 지원</text>
   <text x="870" y="542" font-family="Arial, sans-serif" font-size="14" fill="#7ab0e8" text-anchor="middle">Credit-support model</text>
   <text x="870" y="562" font-family="Arial, sans-serif" font-size="14" fill="#7ab0e8" text-anchor="middle">인프라 비용 지원</text>
