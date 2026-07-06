@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0505"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#b91c1c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#ef4444"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="154" y="90" width="130" height="36" rx="8" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#ef4444" text-anchor="middle">Stock Analysis</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a2a2a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Tesla #1 American Content · DeSantis Endorses FSD</text>
+  <text x="540" y="250" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">Political Support + Made in USA</text>
+  <text x="540" y="298" font-family="Arial, sans-serif" font-size="19" fill="#f87171" text-anchor="middle">Musk: "Tesla highest % US content of any vehicle" · FSD = taxpayer benefit</text>
+
+  <!-- Quote boxes -->
+  <rect x="80" y="318" width="440" height="100" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="300" y="346" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#fca5a5" text-anchor="middle">"Teslas have the highest percentage</text>
+  <text x="300" y="366" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#fca5a5" text-anchor="middle">of American content of any vehicle."</text>
+  <text x="300" y="398" font-family="Arial, sans-serif" font-size="12" fill="#9a4a4a" text-anchor="middle">— Elon Musk</text>
+
+  <rect x="560" y="318" width="440" height="100" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="780" y="346" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#fca5a5" text-anchor="middle">"Fuel savings + FSD mishap reduction</text>
+  <text x="780" y="366" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#fca5a5" text-anchor="middle">= real taxpayer benefits."</text>
+  <text x="780" y="398" font-family="Arial, sans-serif" font-size="12" fill="#9a4a4a" text-anchor="middle">— Ron DeSantis</text>
+
+  <!-- Stat boxes -->
+  <rect x="80" y="436" width="280" height="148" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="220" y="478" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#ef4444" text-anchor="middle" filter="url(#glow)">#1</text>
+  <text x="220" y="508" font-family="Arial, sans-serif" font-size="15" fill="#fca5a5" text-anchor="middle">US Content</text>
+  <text x="220" y="528" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Highest of any vehicle</text>
+  <text x="220" y="566" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">Supports domestic jobs</text>
+
+  <rect x="400" y="436" width="280" height="148" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="540" y="468" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">FSD</text>
+  <text x="540" y="498" font-family="Arial, sans-serif" font-size="15" fill="#fca5a5" text-anchor="middle">Mishap reduction</text>
+  <text x="540" y="518" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Taxpayer cost savings</text>
+  <text x="540" y="566" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">DeSantis public support</text>
+
+  <rect x="720" y="436" width="280" height="148" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="860" y="468" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">Fuel</text>
+  <text x="860" y="496" font-family="Arial, sans-serif" font-size="15" fill="#fca5a5" text-anchor="middle">Savings argument</text>
+  <text x="860" y="516" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Gov't fleet conversion case</text>
+  <text x="860" y="566" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">DOGE efficiency link</text>
+
+  <!-- Analysis -->
+  <rect x="80" y="602" width="920" height="290" rx="16" fill="#100808" stroke="#ef4444" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="636" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fca5a5" text-anchor="middle">Political Support — Investment Implications</text>
+
+  <text x="100" y="668" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">US Content #1</text>
+  <text x="260" y="668" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Tariff environment + Buy American → minimal trade friction</text>
+  <text x="100" y="694" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">DeSantis</text>
+  <text x="260" y="694" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Governor-level FSD endorsement → political backing for regulatory approval</text>
+  <text x="100" y="720" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">Gov't Procurement</text>
+  <text x="260" y="720" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Federal/state EV fleet conversion → TSLA preferred candidate</text>
+  <text x="100" y="746" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">DOGE Link</text>
+  <text x="260" y="746" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Gov't efficiency drive → fuel + accident cost data strengthens TSLA case</text>
+  <text x="100" y="772" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">Risks</text>
+  <text x="260" y="772" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Political volatility · Musk personal brand risk · FSD incident exposure</text>
+  <text x="100" y="862" font-family="Arial, sans-serif" font-size="11" fill="#5a2a2a">* Political support + #1 US content = structural protection in tariff/regulatory environment</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#100808" stroke="#ef4444" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#f87171" text-anchor="middle">US content #1 · DeSantis: FSD = taxpayer benefit · political &amp; regulatory environment favors TSLA</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#redGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#6a2a2a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

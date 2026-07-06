@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0369a1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#bGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#0ea5e9"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="154" y="90" width="100" height="36" rx="8" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="204" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">종목분석</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a6a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="190" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#ffffff" text-anchor="middle" filter="url(#glow)">TSLA FSD 구독자 1.29M 돌파 — Q1 2026</text>
+  <text x="540" y="250" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">7/22 Q2 최대 어닝 기대</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="20" fill="#38bdf8" text-anchor="middle">전분기 대비 +17% 구독자 증가 · SPCX 목표가 $190→$230</text>
+
+  <!-- Big numbers -->
+  <rect x="80" y="322" width="440" height="200" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="300" y="380" font-family="Arial Black, Arial" font-weight="900" font-size="64" fill="#0ea5e9" text-anchor="middle" filter="url(#glow)">1.29M</text>
+  <text x="300" y="416" font-family="Arial, sans-serif" font-size="18" fill="#7dd3fc" text-anchor="middle">FSD 활성 구독자 (Q1 2026)</text>
+  <text x="300" y="442" font-family="Arial, sans-serif" font-size="14" fill="#4a8aaa" text-anchor="middle">Q4 2025: 1.10M → +17% QoQ</text>
+  <text x="300" y="466" font-family="Arial, sans-serif" font-size="13" fill="#2a6a8a" text-anchor="middle">구독료 연환산 수익 급증</text>
+  <text x="300" y="500" font-family="Arial, sans-serif" font-size="12" fill="#1a4a6a" text-anchor="middle">490K+ 차량 FSD 탑재 · 데이터 flywheel 지속</text>
+
+  <rect x="560" y="322" width="440" height="200" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="780" y="368" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">July 22</text>
+  <text x="780" y="404" font-family="Arial, sans-serif" font-size="18" fill="#7dd3fc" text-anchor="middle">Q2 2026 실적 발표일</text>
+  <text x="780" y="432" font-family="Arial, sans-serif" font-size="14" fill="#4a8aaa" text-anchor="middle">예상 매출: $39,098M</text>
+  <text x="780" y="456" font-family="Arial, sans-serif" font-size="14" fill="#4a8aaa" text-anchor="middle">예상 매출총이익: $8,578M+</text>
+  <text x="780" y="500" font-family="Arial, sans-serif" font-size="13" fill="#2a6a8a" text-anchor="middle">"수년 만에 최고 어닝" 전망</text>
+
+  <!-- Analysis table -->
+  <rect x="80" y="544" width="920" height="340" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="578" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">FSD 구독 성장 + Q2 어닝 투자 포인트</text>
+
+  <text x="100" y="612" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">FSD 구독 성장</text>
+  <text x="310" y="612" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">1.10M → 1.29M (+17% QoQ) → 향후 Q별 가속 예상</text>
+  <text x="100" y="638" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">구독 수익</text>
+  <text x="310" y="638" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">월 $99~199 × 1.29M = 연환산 $1.5B~3B 수준</text>
+  <text x="100" y="664" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">로보택시 시너지</text>
+  <text x="310" y="664" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">구독자 = 로보택시 운행 데이터 · 인프라 기반</text>
+  <text x="100" y="690" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">SPCX 목표가</text>
+  <text x="310" y="690" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">$190 → $230 상향 · 현재가 대비 +54% 업사이드</text>
+  <text x="100" y="716" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">리스크</text>
+  <text x="310" y="716" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">차량 판매 부진 · 경쟁 심화 · FSD 사고 리스크</text>
+  <text x="100" y="742" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">유럽 FSD</text>
+  <text x="310" y="742" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">1.2억 달러 EU 투자 확정 → 유럽 구독 시장 열림</text>
+  <text x="100" y="768" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">HW3 배포</text>
+  <text x="310" y="768" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">FSD v14 구형 하드웨어 확장 → TAM(총 구독 가능 차량) 확대</text>
+  <text x="100" y="852" font-family="Arial, sans-serif" font-size="11" fill="#1a4a6a">* Q2 어닝: 판매량 + FSD 수익 + 에너지 사업 동반 성장 기대</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#050f1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#38bdf8" text-anchor="middle">FSD 1.29M 구독 (+17% QoQ) · 7/22 Q2 어닝 "수년 최고" 기대 · SPCX 목표 $230</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#bGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#1a4a6a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

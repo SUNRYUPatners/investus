@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0a04"/>
+      <stop offset="100%" style="stop-color:#1a1000"/>
+    </linearGradient>
+    <linearGradient id="oGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#c2410c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#oGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#f97316"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">NVDA</text>
+  <rect x="154" y="90" width="130" height="36" rx="8" fill="none" stroke="#f97316" stroke-width="2"/>
+  <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#f97316" text-anchor="middle">Competitive Risk</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a3a14" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="190" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Chinese Chip Outperforms NVDA A100 by 4.7×</text>
+  <text x="540" y="246" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#fdba74" text-anchor="middle" filter="url(#glow)">Peking University</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="20" fill="#fb923c" text-anchor="middle">Built on 40nm inside export-restricted environment · 4.7× on specific AI tasks</text>
+
+  <rect x="80" y="320" width="920" height="68" rx="12" fill="#1a1000" stroke="#f97316" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="540" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#fdba74" text-anchor="middle">"China performs NVIDIA A100 4.7× on specific tasks —</text>
+  <text x="540" y="374" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#fdba74" text-anchor="middle">40nm chip built inside China's export-restricted environment." — Bull Theory</text>
+
+  <rect x="80" y="412" width="920" height="200" rx="16" fill="#120e04" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="540" y="444" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fdba74" text-anchor="middle">Performance Comparison — Specific AI Task (Peking Univ. Research)</text>
+
+  <text x="100" y="476" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">NVIDIA A100</text>
+  <rect x="100" y="482" width="400" height="28" rx="6" fill="#f97316" opacity="0.3"/>
+  <rect x="100" y="482" width="400" height="28" rx="6" fill="none" stroke="#f97316" stroke-width="1.5"/>
+  <text x="510" y="501" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fb923c">1.0× (baseline)</text>
+
+  <text x="100" y="530" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fdba74">China New Chip (Peking Univ.)</text>
+  <rect x="100" y="536" width="920" height="28" rx="6" fill="#f97316" opacity="0.5"/>
+  <rect x="100" y="536" width="920" height="28" rx="6" fill="none" stroke="#f97316" stroke-width="1.5"/>
+  <text x="690" y="555" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" filter="url(#glow)">4.7× ↑↑↑</text>
+
+  <text x="100" y="596" font-family="Arial, sans-serif" font-size="12" fill="#7a5a2a">* Specific real-time neural task benchmark · Not general-purpose workload</text>
+
+  <rect x="80" y="628" width="920" height="260" rx="16" fill="#120e04" stroke="#f97316" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="662" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fdba74" text-anchor="middle">NVDA Competitive Moat — Impact Assessment</text>
+
+  <text x="100" y="694" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Chip spec</text>
+  <text x="260" y="694" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">40nm process — self-manufactured under export controls (no TSMC/Samsung)</text>
+  <text x="100" y="720" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Scope</text>
+  <text x="260" y="720" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">Real-time neural specialized tasks — does NOT apply to general LLM training</text>
+  <text x="100" y="746" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Risk</text>
+  <text x="260" y="746" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">Further erosion of NVDA China market share · edge AI demand substitution</text>
+  <text x="100" y="772" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Limitation</text>
+  <text x="260" y="772" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">Cannot replace H100/B200 for general AI training &amp; inference at scale</text>
+  <text x="100" y="798" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Takeaway</text>
+  <text x="260" y="798" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">NVDA dominance in China challenged · global AI chip competition intensifying</text>
+  <text x="100" y="860" font-family="Arial, sans-serif" font-size="11" fill="#6a4a14">* Specialized-task advantage, not general replacement — NVDA H100/B200 position holds short-term</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#120e04" stroke="#f97316" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#fb923c" text-anchor="middle">Peking Univ. 40nm chip 4.7× A100 (specialized) · Under export controls · Threatens NVDA China share</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#oGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#6a3a14" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

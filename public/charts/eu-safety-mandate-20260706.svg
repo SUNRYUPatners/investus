@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0369a1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#bGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#0ea5e9"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">섹터</text>
+  <rect x="154" y="90" width="110" height="36" rx="8" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="209" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">EU 규제</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a6a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" filter="url(#glow)">EU 신차 안전 의무화 — 2026년 7월 1일 발효</text>
+  <text x="540" y="250" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">TSLA 수혜 구조</text>
+  <text x="540" y="298" font-family="Arial, sans-serif" font-size="19" fill="#38bdf8" text-anchor="middle">첨단 안전 기술 의무화 → 소프트웨어 중심 차량 경쟁 우위 확대</text>
+
+  <!-- Mandate items -->
+  <rect x="80" y="318" width="920" height="220" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="540" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" text-anchor="middle">EU 신규 의무 안전 기술 (전 신차 적용)</text>
+
+  <text x="100" y="382" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="120" y="382" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">첨단 운전자 주의분산 경고 시스템 (ADDWS)</text>
+  <text x="100" y="406" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="120" y="406" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">향상된 제동 성능 · 확장 안전 패드</text>
+  <text x="100" y="430" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="120" y="430" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">자동 긴급 제동 (AEB) — 보행자·자전거 감지</text>
+  <text x="550" y="382" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="570" y="382" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">시각 기반 탑승자 알림 시스템</text>
+  <text x="550" y="406" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="570" y="406" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">실내 카메라 (탑승자 모니터링)</text>
+  <text x="550" y="430" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="570" y="430" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Euro NCAP 점수 새 기준 적용</text>
+  <text x="100" y="500" font-family="Arial, sans-serif" font-size="12" fill="#1a4a6a">* 2026년 7월 1일부터 모든 신차 의무 적용 — 미준수 시 유럽 판매 불가</text>
+
+  <!-- Analysis -->
+  <rect x="80" y="556" width="920" height="330" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="590" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">TSLA 수혜 분석</text>
+
+  <text x="100" y="624" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">TSLA 기술 우위</text>
+  <text x="280" y="624" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">카메라·AI 기반 안전 기술 이미 내재 → 추가 비용 없이 충족</text>
+  <text x="100" y="650" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">경쟁사 부담</text>
+  <text x="280" y="650" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">레거시 OEM 대규모 소프트웨어·하드웨어 업그레이드 필요</text>
+  <text x="100" y="676" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">FSD 유럽</text>
+  <text x="280" y="676" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">EU 안전 기준 충족 → FSD 유럽 구독 출시 기반 마련</text>
+  <text x="100" y="702" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">OTA 강점</text>
+  <text x="280" y="702" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">소프트웨어 무선 업데이트 → 규제 변화 즉각 대응 가능</text>
+  <text x="100" y="728" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">Euro NCAP</text>
+  <text x="280" y="728" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">새 기준에서 TSLA 최고 점수 예상 → 유럽 브랜드 가치 상승</text>
+  <text x="100" y="754" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">리스크</text>
+  <text x="280" y="754" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">실내 카메라 개인정보 규제 · 데이터 현지화 요구</text>
+  <text x="100" y="852" font-family="Arial, sans-serif" font-size="11" fill="#1a4a6a">* EU 의무화는 TSLA의 기존 기술을 경쟁사 진입장벽으로 전환하는 구조적 모멘텀</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#050f1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#38bdf8" text-anchor="middle">EU 7/1 신차 안전 의무화 · 카메라·AI 기술 표준화 → TSLA 구조적 경쟁 우위</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#bGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#1a4a6a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

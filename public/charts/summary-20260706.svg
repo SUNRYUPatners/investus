@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020f0a"/>
+      <stop offset="100%" style="stop-color:#051a10"/>
+    </linearGradient>
+    <linearGradient id="mGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#10b981" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#10b981" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#10b981" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#10b981" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#mGrad)" rx="2"/>
+  <rect x="60" y="90" width="120" height="36" rx="8" fill="#10b981"/>
+  <text x="120" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#ffffff" text-anchor="middle">오늘의 시장</text>
+  <rect x="194" y="90" width="100" height="36" rx="8" fill="none" stroke="#10b981" stroke-width="2"/>
+  <text x="244" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#10b981" text-anchor="middle">한장요약</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a3a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="182" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle" filter="url(#glow)">2026년 7월 6일 — 오늘의 핵심 투자 이슈</text>
+  <text x="540" y="236" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#6ee7b7" text-anchor="middle" filter="url(#glow)">AI · 자율주행 · 메모리</text>
+  <text x="540" y="284" font-family="Arial, sans-serif" font-size="19" fill="#34d399" text-anchor="middle">TSLA 로보택시·FSD · NVDA 중국칩 · SK하이닉스 · GOOGL · 하이퍼스케일러</text>
+
+  <!-- 6 topic cards in 2x3 grid -->
+  <!-- Row 1 -->
+  <rect x="80" y="302" width="293" height="142" rx="12" fill="#051a10" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="100" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444">TSLA BREAKING</text>
+  <text x="100" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fca5a5" filter="url(#glow)">로보택시 100대</text>
+  <text x="100" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fca5a5">비지도 운행 개시</text>
+  <text x="100" y="396" font-family="Arial, sans-serif" font-size="12" fill="#9a4a4a">Cybercab 오스틴 생산 테스트</text>
+  <text x="100" y="414" font-family="Arial, sans-serif" font-size="12" fill="#9a4a4a">FSD v14 HW3 배포 · 신도시 비지도</text>
+  <text x="100" y="432" font-family="Arial, sans-serif" font-size="11" fill="#6a2a2a">7/22 Q2 어닝 · SPCX $230 목표</text>
+
+  <rect x="393" y="302" width="294" height="142" rx="12" fill="#051a10" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="413" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f97316">NVDA BREAKING</text>
+  <text x="413" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" filter="url(#glow)">중국칩 A100</text>
+  <text x="413" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fdba74">4.7배 성능 달성</text>
+  <text x="413" y="396" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">베이징대 40nm 칩 · 수출통제 내 개발</text>
+  <text x="413" y="414" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">특화 AI 태스크 기준 · 범용 대체 아님</text>
+  <text x="413" y="432" font-family="Arial, sans-serif" font-size="11" fill="#6a4a14">NVDA 중국 점유율 위협 · H100 단기 유지</text>
+
+  <rect x="707" y="302" width="293" height="142" rx="12" fill="#051a10" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="727" y="326" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#a855f7">SK하이닉스</text>
+  <text x="727" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#d8b4fe" filter="url(#glow)">DRAM 61%</text>
+  <text x="727" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d8b4fe">매출총이익률</text>
+  <text x="727" y="396" font-family="Arial, sans-serif" font-size="12" fill="#7a4aaa">"AI 메모리가 지배적" 선언</text>
+  <text x="727" y="414" font-family="Arial, sans-serif" font-size="12" fill="#7a4aaa">일본 히로시마 $8.6B 증설</text>
+  <text x="727" y="432" font-family="Arial, sans-serif" font-size="11" fill="#5a2a8a">HBM 고마진 · MU 수혜 선행지표</text>
+
+  <!-- Row 2 -->
+  <rect x="80" y="460" width="293" height="142" rx="12" fill="#051a10" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="100" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#0ea5e9">GOOGL</text>
+  <text x="100" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" filter="url(#glow)">2028 순이익</text>
+  <text x="100" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc">2배 전망</text>
+  <text x="100" y="554" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">TPU 자체 프론티어 모델 완전 구동</text>
+  <text x="100" y="572" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">토큰당 비용 최저 → 마진 구조 확대</text>
+  <text x="100" y="590" font-family="Arial, sans-serif" font-size="11" fill="#2a6a8a">NVDA 의존 0 유일 빅테크</text>
+
+  <rect x="393" y="460" width="294" height="142" rx="12" fill="#051a10" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="413" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f97316">하이퍼스케일러</text>
+  <text x="413" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" filter="url(#glow)">$576B → $939B</text>
+  <text x="413" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fdba74">AI CAPEX 폭발</text>
+  <text x="413" y="554" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">2026 $576B · 2027 $939B</text>
+  <text x="413" y="572" font-family="Arial, sans-serif" font-size="12" fill="#9a6a2a">MS·구글·Meta·아마존 연간 합산</text>
+  <text x="413" y="590" font-family="Arial, sans-serif" font-size="11" fill="#6a4a14">NVDA·메모리·전력 인프라 수혜</text>
+
+  <rect x="707" y="460" width="293" height="142" rx="12" fill="#051a10" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="727" y="484" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#0ea5e9">TSLA / EU</text>
+  <text x="727" y="508" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" filter="url(#glow)">EU 안전 의무화</text>
+  <text x="727" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#7dd3fc">+ 미국산 #1</text>
+  <text x="727" y="554" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">7/1 신차 안전 기술 전 적용</text>
+  <text x="727" y="572" font-family="Arial, sans-serif" font-size="12" fill="#4a8aaa">DeSantis: FSD = 납세자 혜택</text>
+  <text x="727" y="590" font-family="Arial, sans-serif" font-size="11" fill="#2a6a8a">규제·정치 환경 TSLA 유리</text>
+
+  <!-- Bottom summary -->
+  <rect x="80" y="620" width="920" height="270" rx="16" fill="#051a10" stroke="#10b981" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="655" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#6ee7b7" text-anchor="middle">오늘의 핵심 메시지</text>
+
+  <text x="100" y="690" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#34d399">AI 인프라</text>
+  <text x="240" y="690" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7">하이퍼스케일러 $576B CAPEX + NVDA 수요 · 중국 위협은 특화 영역 제한적</text>
+  <text x="100" y="716" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#34d399">자율주행</text>
+  <text x="240" y="716" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7">TSLA 100대 비지도 + Cybercab 생산 진입 · FSD v14 배포 = 수익화 가속</text>
+  <text x="100" y="742" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#34d399">메모리</text>
+  <text x="240" y="742" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7">SK하이닉스 61% DRAM 마진 · AI 메모리 지배 선언 · MU 수혜 연동</text>
+  <text x="100" y="768" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#34d399">빅테크</text>
+  <text x="240" y="768" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7">GOOGL 2028 순이익 2배 + TPU 자급 · AI 경쟁에서 비용 우위 확보</text>
+  <text x="100" y="852" font-family="Arial, sans-serif" font-size="11" fill="#1a4a3a">* AI 군비경쟁 → 인프라·칩·메모리·소프트웨어 동시 수혜 구조 · 7/22 TSLA Q2 어닝 주목</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#051a10" stroke="#10b981" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="14" fill="#34d399" text-anchor="middle">TSLA 로보100 · NVDA 中칩4.7x · SK하이닉스61% · GOOGL2×· $576B CAPEX · EU안전</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#mGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#1a4a3a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

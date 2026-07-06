@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0414"/>
+      <stop offset="100%" style="stop-color:#100820"/>
+    </linearGradient>
+    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#a855f7" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#a855f7" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#a855f7" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#a855f7" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#pGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#a855f7"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">SK하이닉스</text>
+  <rect x="154" y="90" width="100" height="36" rx="8" fill="none" stroke="#a855f7" stroke-width="2"/>
+  <text x="204" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#a855f7" text-anchor="middle">종목분석</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#3a1a6a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" filter="url(#glow)">SK하이닉스 DRAM 매출총이익률 61% 달성</text>
+  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="54" fill="#d8b4fe" text-anchor="middle" filter="url(#glow)">AI 메모리 주도권</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="20" fill="#c084fc" text-anchor="middle">Q2 2026 DRAM 총이익률 61% · "AI 메모리가 지배적" 선언</text>
+
+  <!-- Quote box -->
+  <rect x="80" y="318" width="920" height="68" rx="12" fill="#0a0414" stroke="#a855f7" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="540" y="348" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#d8b4fe" text-anchor="middle">"AI memory has become dominant."</text>
+  <text x="540" y="374" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#d8b4fe" text-anchor="middle">SK하이닉스 Q2 2026 실적 발표 코멘트 · 일본 정부 히로시마 공장 증설 $8.6B 지원</text>
+
+  <!-- Stat boxes -->
+  <rect x="80" y="408" width="280" height="160" rx="16" fill="#0a0414" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="220" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#a855f7" text-anchor="middle" filter="url(#glow)">61%</text>
+  <text x="220" y="488" font-family="Arial, sans-serif" font-size="16" fill="#d8b4fe" text-anchor="middle">DRAM 매출총이익률</text>
+  <text x="220" y="510" font-family="Arial, sans-serif" font-size="13" fill="#7a4aaa" text-anchor="middle">Q2 2026 달성</text>
+  <text x="220" y="552" font-family="Arial, sans-serif" font-size="12" fill="#5a2a8a" text-anchor="middle">HBM 고마진 효과</text>
+
+  <rect x="400" y="408" width="280" height="160" rx="16" fill="#0a0414" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="540" y="448" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#d8b4fe" text-anchor="middle" filter="url(#glow)">HBM</text>
+  <text x="540" y="480" font-family="Arial, sans-serif" font-size="15" fill="#d8b4fe" text-anchor="middle">AI 가속기 핵심 메모리</text>
+  <text x="540" y="502" font-family="Arial, sans-serif" font-size="13" fill="#7a4aaa" text-anchor="middle">NVDA H100/B200 탑재</text>
+  <text x="540" y="552" font-family="Arial, sans-serif" font-size="12" fill="#5a2a8a" text-anchor="middle">시장 점유율 50%+</text>
+
+  <rect x="720" y="408" width="280" height="160" rx="16" fill="#0a0414" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="860" y="440" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#d8b4fe" text-anchor="middle" filter="url(#glow)">$8.6B</text>
+  <text x="860" y="468" font-family="Arial, sans-serif" font-size="14" fill="#d8b4fe" text-anchor="middle">일본 정부 지원</text>
+  <text x="860" y="490" font-family="Arial, sans-serif" font-size="13" fill="#7a4aaa" text-anchor="middle">히로시마 공장 증설</text>
+  <text x="860" y="552" font-family="Arial, sans-serif" font-size="12" fill="#5a2a8a" text-anchor="middle">마이크론 관련 투자</text>
+
+  <!-- Analysis -->
+  <rect x="80" y="592" width="920" height="300" rx="16" fill="#0a0414" stroke="#a855f7" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="628" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#d8b4fe" text-anchor="middle">AI 메모리 반도체 투자 포인트</text>
+
+  <text x="100" y="662" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#c084fc">DRAM 마진</text>
+  <text x="270" y="662" font-family="Arial, sans-serif" font-size="14" fill="#d8b4fe">Q2 매출총이익률 61% → HBM 고마진 포트폴리오 효과</text>
+  <text x="100" y="688" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#c084fc">AI 메모리 지배</text>
+  <text x="270" y="688" font-family="Arial, sans-serif" font-size="14" fill="#d8b4fe">"AI 메모리가 지배적" — 일반 DRAM 대비 단가 4~5배</text>
+  <text x="100" y="714" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#c084fc">HBM 공급 확대</text>
+  <text x="270" y="714" font-family="Arial, sans-serif" font-size="14" fill="#d8b4fe">NVDA·AMD·인텔 AI 칩 수요 → HBM3E 풀가동</text>
+  <text x="100" y="740" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#c084fc">일본 지원</text>
+  <text x="270" y="740" font-family="Arial, sans-serif" font-size="14" fill="#d8b4fe">히로시마 공장 $8.6B 정부 지원 → 반도체 공급망 지정학 수혜</text>
+  <text x="100" y="766" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#c084fc">MU 비교</text>
+  <text x="270" y="766" font-family="Arial, sans-serif" font-size="14" fill="#d8b4fe">마이크론도 HBM 수혜 → SK하이닉스 성과는 섹터 전체 선행지표</text>
+  <text x="100" y="792" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#c084fc">리스크</text>
+  <text x="270" y="792" font-family="Arial, sans-serif" font-size="14" fill="#d8b4fe">DRAM 공급 과잉 · 중국 경쟁사 부상 · AI 투자 둔화 가능성</text>
+  <text x="100" y="862" font-family="Arial, sans-serif" font-size="11" fill="#3a1a6a">* AI 서버 투자 지속 = HBM 수요 직결 → 61% 마진 구조 지속 가능성 높음</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#0a0414" stroke="#a855f7" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#c084fc" text-anchor="middle">SK하이닉스 DRAM 61% 마진 · "AI 메모리 지배적" · 일본 $8.6B 히로시마 증설</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#pGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#3a1a6a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

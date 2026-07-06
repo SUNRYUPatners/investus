@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0369a1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#bGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#0ea5e9"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">Sector</text>
+  <rect x="154" y="90" width="130" height="36" rx="8" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">EU Regulation</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a6a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle" filter="url(#glow)">EU New Car Safety Mandate — Effective July 1, 2026</text>
+  <text x="540" y="250" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">TSLA Benefits</text>
+  <text x="540" y="298" font-family="Arial, sans-serif" font-size="19" fill="#38bdf8" text-anchor="middle">Advanced safety tech mandated → software-defined vehicle edge expands</text>
+
+  <!-- Mandate items -->
+  <rect x="80" y="318" width="920" height="220" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="540" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#7dd3fc" text-anchor="middle">New Mandatory Safety Tech (All New Cars)</text>
+
+  <text x="100" y="382" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="120" y="382" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Advanced Driver Distraction Warning System (ADDWS)</text>
+  <text x="100" y="406" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="120" y="406" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Better brakes · Expanded safety pads</text>
+  <text x="100" y="430" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="120" y="430" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Automated Emergency Braking — pedestrian &amp; cyclist detection</text>
+  <text x="550" y="382" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="570" y="382" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Vision-based occupant alarms</text>
+  <text x="550" y="406" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="570" y="406" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Cabin cameras (occupant monitoring)</text>
+  <text x="550" y="430" font-family="Arial, sans-serif" font-size="14" fill="#38bdf8">▶</text>
+  <text x="570" y="430" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Updated Euro NCAP scoring criteria</text>
+  <text x="100" y="500" font-family="Arial, sans-serif" font-size="12" fill="#1a4a6a">* Mandatory for all new cars sold in EU from July 1, 2026 — non-compliance = no EU sales</text>
+
+  <!-- Analysis -->
+  <rect x="80" y="556" width="920" height="330" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="590" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">TSLA Benefit Analysis</text>
+
+  <text x="100" y="624" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">TSLA Tech Edge</text>
+  <text x="270" y="624" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Camera/AI safety already built-in → meets mandate at zero extra cost</text>
+  <text x="100" y="650" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">Legacy OEM Burden</text>
+  <text x="270" y="650" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Legacy automakers need major SW/HW upgrades → higher costs</text>
+  <text x="100" y="676" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">FSD Europe</text>
+  <text x="270" y="676" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">EU safety compliance → foundation for FSD subscription launch in Europe</text>
+  <text x="100" y="702" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">OTA Advantage</text>
+  <text x="270" y="702" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">OTA software updates → TSLA adapts to regulatory changes instantly</text>
+  <text x="100" y="728" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">Euro NCAP</text>
+  <text x="270" y="728" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">TSLA expected top scores under new criteria → EU brand value boost</text>
+  <text x="100" y="754" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">Risks</text>
+  <text x="270" y="754" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Cabin camera privacy regulation · EU data localization requirements</text>
+  <text x="100" y="852" font-family="Arial, sans-serif" font-size="11" fill="#1a4a6a">* EU mandate converts TSLA's existing tech into a structural moat vs. legacy competition</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#050f1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#38bdf8" text-anchor="middle">EU 7/1 safety mandate · camera/AI tech standardized → TSLA structural competitive advantage</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#bGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#1a4a6a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

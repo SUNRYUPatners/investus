@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0a04"/>
+      <stop offset="100%" style="stop-color:#1a1000"/>
+    </linearGradient>
+    <linearGradient id="oGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#c2410c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#f97316" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#oGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#f97316"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">Macro</text>
+  <rect x="154" y="90" width="130" height="36" rx="8" fill="none" stroke="#f97316" stroke-width="2"/>
+  <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#f97316" text-anchor="middle">AI Infrastructure</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a3a14" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="188" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Hyperscaler AI Capex — All-Time Record</text>
+  <text x="540" y="252" font-family="Arial Black, Arial" font-weight="900" font-size="56" fill="#fdba74" text-anchor="middle" filter="url(#glow)">$576B → $939B</text>
+  <text x="540" y="298" font-family="Arial, sans-serif" font-size="20" fill="#fb923c" text-anchor="middle">2026: $576B · 2027: $939B — AI infrastructure investment explodes</text>
+
+  <!-- Big stat boxes -->
+  <rect x="80" y="322" width="440" height="200" rx="16" fill="#1a1000" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="300" y="374" font-family="Arial Black, Arial" font-weight="900" font-size="60" fill="#f97316" text-anchor="middle" filter="url(#glow)">$576B</text>
+  <text x="300" y="410" font-family="Arial, sans-serif" font-size="18" fill="#fdba74" text-anchor="middle">2026 Hyperscaler CAPEX</text>
+  <text x="300" y="436" font-family="Arial, sans-serif" font-size="14" fill="#7a5a2a" text-anchor="middle">AWS + Azure + GCP + Meta combined</text>
+  <text x="300" y="460" font-family="Arial, sans-serif" font-size="13" fill="#5a4a1a" text-anchor="middle">+60%+ vs prior year</text>
+  <text x="300" y="500" font-family="Arial, sans-serif" font-size="12" fill="#3a3010" text-anchor="middle">AI chips · data centers · power infra</text>
+
+  <rect x="560" y="322" width="440" height="200" rx="16" fill="#1a1000" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="780" y="374" font-family="Arial Black, Arial" font-weight="900" font-size="60" fill="#fdba74" text-anchor="middle" filter="url(#glow)">$939B</text>
+  <text x="780" y="410" font-family="Arial, sans-serif" font-size="18" fill="#fdba74" text-anchor="middle">2027 Estimated CAPEX</text>
+  <text x="780" y="436" font-family="Arial, sans-serif" font-size="14" fill="#7a5a2a" text-anchor="middle">+63% vs 2026</text>
+  <text x="780" y="460" font-family="Arial, sans-serif" font-size="13" fill="#5a4a1a" text-anchor="middle">Approaching $1 trillion threshold</text>
+  <text x="780" y="500" font-family="Arial, sans-serif" font-size="12" fill="#3a3010" text-anchor="middle">AI arms race accelerating · clean energy infra</text>
+
+  <!-- Analysis -->
+  <rect x="80" y="544" width="920" height="340" rx="16" fill="#120e04" stroke="#f97316" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="578" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fdba74" text-anchor="middle">AI Infra Explosion — Beneficiary Analysis</text>
+
+  <text x="100" y="612" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">NVDA Benefit</text>
+  <text x="260" y="612" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">Data center GPU demand direct → H100/B200 supply is the bottleneck</text>
+  <text x="100" y="638" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Power Infra</text>
+  <text x="260" y="638" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">Data center power surge → nuclear/gas/solar demand rising</text>
+  <text x="100" y="664" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Cooling</text>
+  <text x="260" y="664" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">Dense GPU clusters → liquid/immersion cooling demand exploding</text>
+  <text x="100" y="690" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Memory Benefit</text>
+  <text x="260" y="690" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">HBM + DDR5 demand rising → SK Hynix / MU direct beneficiaries</text>
+  <text x="100" y="716" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">TSLA Link</text>
+  <text x="260" y="716" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">Dojo supercomputer · in-house AI training infra → competitive edge</text>
+  <text x="100" y="742" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fb923c">Key Investors</text>
+  <text x="260" y="742" font-family="Arial, sans-serif" font-size="14" fill="#fdba74">MS $80B+ · Google $75B+ · Meta $60B+ · Amazon $100B+ annually</text>
+  <text x="100" y="852" font-family="Arial, sans-serif" font-size="11" fill="#6a4a14">* 2027 $939B = more than 2× total US manufacturing capex — largest-ever capital concentration in AI</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#120e04" stroke="#f97316" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#fb923c" text-anchor="middle">2026 $576B · 2027 $939B — Record AI infra CAPEX · NVDA / memory / power beneficiaries</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#oGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#6a3a14" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

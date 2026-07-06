@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0369a1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#0ea5e9" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#bGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#0ea5e9"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="154" y="90" width="130" height="36" rx="8" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="219" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#0ea5e9" text-anchor="middle">Stock Analysis</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#1a4a6a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="190" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" filter="url(#glow)">TSLA FSD Subscribers Hit 1.29M — Q1 2026</text>
+  <text x="540" y="250" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">July 22 Q2 Record Earnings</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="20" fill="#38bdf8" text-anchor="middle">+17% QoQ subscriber growth · SPCX target raised $190→$230</text>
+
+  <!-- Big numbers -->
+  <rect x="80" y="322" width="440" height="200" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="300" y="380" font-family="Arial Black, Arial" font-weight="900" font-size="64" fill="#0ea5e9" text-anchor="middle" filter="url(#glow)">1.29M</text>
+  <text x="300" y="416" font-family="Arial, sans-serif" font-size="18" fill="#7dd3fc" text-anchor="middle">Active FSD Subscribers (Q1 2026)</text>
+  <text x="300" y="442" font-family="Arial, sans-serif" font-size="14" fill="#4a8aaa" text-anchor="middle">Q4 2025: 1.10M → +17% QoQ</text>
+  <text x="300" y="466" font-family="Arial, sans-serif" font-size="13" fill="#2a6a8a" text-anchor="middle">Annualized subscription revenue surging</text>
+  <text x="300" y="500" font-family="Arial, sans-serif" font-size="12" fill="#1a4a6a" text-anchor="middle">490K+ FSD-enabled vehicles · data flywheel accelerating</text>
+
+  <rect x="560" y="322" width="440" height="200" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="780" y="368" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#7dd3fc" text-anchor="middle" filter="url(#glow)">July 22</text>
+  <text x="780" y="404" font-family="Arial, sans-serif" font-size="18" fill="#7dd3fc" text-anchor="middle">Q2 2026 Earnings Date</text>
+  <text x="780" y="432" font-family="Arial, sans-serif" font-size="14" fill="#4a8aaa" text-anchor="middle">Est. Revenue: $39,098M</text>
+  <text x="780" y="456" font-family="Arial, sans-serif" font-size="14" fill="#4a8aaa" text-anchor="middle">Est. Gross Profit: $8,578M+</text>
+  <text x="780" y="500" font-family="Arial, sans-serif" font-size="13" fill="#2a6a8a" text-anchor="middle">"Best earnings in years" forecast</text>
+
+  <!-- Analysis table -->
+  <rect x="80" y="544" width="920" height="340" rx="16" fill="#050f1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="578" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#7dd3fc" text-anchor="middle">FSD Subscription Growth + Q2 Earnings Investment Thesis</text>
+
+  <text x="100" y="612" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">FSD Sub Growth</text>
+  <text x="310" y="612" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">1.10M → 1.29M (+17% QoQ) → quarterly acceleration expected</text>
+  <text x="100" y="638" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">Subscription Revenue</text>
+  <text x="310" y="638" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">$99–199/mo × 1.29M = ~$1.5B–$3B annualized run rate</text>
+  <text x="100" y="664" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">Robotaxi Synergy</text>
+  <text x="310" y="664" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Subscribers = robotaxi fleet data + operating infrastructure</text>
+  <text x="100" y="690" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">SPCX Target</text>
+  <text x="310" y="690" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Raised $190 → $230 · +54% upside vs. current price</text>
+  <text x="100" y="716" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">Risks</text>
+  <text x="310" y="716" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">Vehicle sales weakness · increased competition · FSD incident risk</text>
+  <text x="100" y="742" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">Europe FSD</text>
+  <text x="310" y="742" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">$120M EU investment confirmed → European sub market opens</text>
+  <text x="100" y="768" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#38bdf8">HW3 Rollout</text>
+  <text x="310" y="768" font-family="Arial, sans-serif" font-size="14" fill="#7dd3fc">FSD v14 expanding to legacy hardware → larger TAM</text>
+  <text x="100" y="852" font-family="Arial, sans-serif" font-size="11" fill="#1a4a6a">* Q2 earnings: vehicle sales + FSD revenue + energy business growth all converging</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#050f1a" stroke="#0ea5e9" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#38bdf8" text-anchor="middle">FSD 1.29M subs (+17% QoQ) · July 22 Q2 earnings "best in years" · SPCX target $230</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#bGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#1a4a6a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

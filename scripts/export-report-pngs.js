@@ -305,6 +305,16 @@ const PAIRS = [
   { ko: 'tsla-fsd-manslaughter-20260704.svg',       en: 'tsla-fsd-manslaughter-20260704-en.svg',       label: 'TSLA_FSD기소',                date: '20260704' },
   { ko: 'mu-burry-short-20260704.svg',              en: 'mu-burry-short-20260704-en.svg',              label: 'MU_Burry공매도',              date: '20260704' },
   { ko: 'summary-20260704.svg',                     en: 'summary-20260704-en.svg',                     label: '7월04일_요약',                date: '20260704' },
+  // 2026-07-06
+  { ko: 'tsla-robotaxi-cybercab-100-20260706.svg', en: 'tsla-robotaxi-cybercab-100-20260706-en.svg', label: 'TSLA_Cybercab100비지도',      date: '20260706' },
+  { ko: 'nvda-china-chip-4x-20260706.svg',         en: 'nvda-china-chip-4x-20260706-en.svg',         label: 'NVDA_중국칩4.7배',            date: '20260706' },
+  { ko: 'tsla-fsd-129m-q2-20260706.svg',           en: 'tsla-fsd-129m-q2-20260706-en.svg',           label: 'TSLA_FSD129M_Q2',             date: '20260706' },
+  { ko: 'googl-profit-double-tpu-20260706.svg',    en: 'googl-profit-double-tpu-20260706-en.svg',    label: 'GOOGL_순이익2배_TPU',         date: '20260706' },
+  { ko: 'skhynix-dram-61pct-20260706.svg',         en: 'skhynix-dram-61pct-20260706-en.svg',         label: 'SKHynix_DRAM61pct',           date: '20260706' },
+  { ko: 'hyperscaler-capex-576b-20260706.svg',     en: 'hyperscaler-capex-576b-20260706-en.svg',     label: '하이퍼스케일러_CAPEX576B',    date: '20260706' },
+  { ko: 'eu-safety-mandate-20260706.svg',          en: 'eu-safety-mandate-20260706-en.svg',          label: 'EU_안전의무화',               date: '20260706' },
+  { ko: 'tsla-american-desantis-20260706.svg',     en: 'tsla-american-desantis-20260706-en.svg',     label: 'TSLA_미국산DeSantis',         date: '20260706' },
+  { ko: 'summary-20260706.svg',                    en: 'summary-20260706-en.svg',                    label: '7월06일_요약',                date: '20260706' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0505"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#b91c1c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#ef4444"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="154" y="90" width="110" height="36" rx="8" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="209" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#ef4444" text-anchor="middle">BREAKING</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a2a2a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Tesla Cybercab 오스틴 생산 테스트</text>
+  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">로보택시 100대 비지도 운행</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="20" fill="#f87171" text-anchor="middle">핸들·페달 없는 Cybercab 오스틴 테스트 개시 · FSD v14 HW3 배포</text>
+
+  <rect x="80" y="320" width="920" height="68" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="540" y="352" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fca5a5" text-anchor="middle">"Elon initially said new Robotaxi cities would launch with supervised FSD.</text>
+  <text x="540" y="376" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fca5a5" text-anchor="middle">Instead all new cities are launching unsupervised. Interesting." — Whole Mars Catalog</text>
+
+  <!-- 3 stat boxes -->
+  <rect x="80" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="220" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#ef4444" text-anchor="middle" filter="url(#glow)">100</text>
+  <text x="220" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">Model Y 로보택시</text>
+  <text x="220" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">무감독 상업 운행 중</text>
+  <text x="220" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">오스틴 우선 배치</text>
+
+  <rect x="400" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="540" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">Cybercab</text>
+  <text x="540" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">핸들·페달 없는 순수 로보택시</text>
+  <text x="540" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">오스틴 공장 생산 테스트 진입</text>
+  <text x="540" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">Lara Morley: "기가텍사스 쿨뉴스 예고"</text>
+
+  <rect x="720" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="860" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">FSD v14</text>
+  <text x="860" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">HW3 사용자 배포 시작</text>
+  <text x="860" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">기존 대비 컴퓨팅 대폭 감소</text>
+  <text x="860" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">초기 사용자 긍정 피드백</text>
+
+  <!-- Detail analysis -->
+  <rect x="80" y="596" width="920" height="300" rx="16" fill="#100808" stroke="#ef4444" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="632" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fca5a5" text-anchor="middle">로보택시 전략 전환 — 비지도 직행</text>
+
+  <text x="100" y="664" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">기존 계획</text>
+  <text x="300" y="664" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">신규 도시 → 지도 감독(Supervised) FSD 시작 예정</text>
+  <text x="100" y="690" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">실제 결과</text>
+  <text x="300" y="690" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">모든 신규 도시 비지도(Unsupervised) 직접 런칭</text>
+  <text x="100" y="716" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">의미</text>
+  <text x="300" y="716" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">FSD 신뢰도 임계점 돌파 · 규제 승인 확대</text>
+  <text x="100" y="742" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">FSD v14</text>
+  <text x="300" y="742" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">강력한 성능 but 컴퓨팅 비용 대폭 감소 → 수익성 개선</text>
+  <text x="100" y="768" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">Giga Texas</text>
+  <text x="300" y="768" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Lara Morley "쿨뉴스" 예고 — Cybercab 대량 생산 임박 가능성</text>
+  <text x="100" y="794" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">웨이모 비교</text>
+  <text x="300" y="794" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">소수 특화 vs TSLA 대규모 표준화 모델 → 스케일 경쟁에서 TSLA 우위</text>
+  <text x="100" y="870" font-family="Arial, sans-serif" font-size="11" fill="#5a2a2a">* 무감독 확대 = 규제 허들 해소 의미, 이익 실현 가속 가능성</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#100808" stroke="#ef4444" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#f87171" text-anchor="middle">Cybercab 오스틴 테스트 + Model Y 100대 비지도 · FSD v14 HW3 배포 · 신도시 비지도 직런칭</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#redGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#6a2a2a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>

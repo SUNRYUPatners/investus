@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0505"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#b91c1c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#ef4444" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+  <rect x="60" y="90" width="80" height="36" rx="8" fill="#ef4444"/>
+  <text x="100" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="154" y="90" width="110" height="36" rx="8" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="209" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#ef4444" text-anchor="middle">BREAKING</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#6a2a2a" text-anchor="end">2026.07.06</text>
+
+  <text x="540" y="196" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Tesla Cybercab Austin Production Test</text>
+  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">100 Robotaxis Unsupervised</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="19" fill="#f87171" text-anchor="middle">No-wheel Cybercab enters Austin test · FSD v14 rolls out to HW3 users</text>
+
+  <rect x="80" y="320" width="920" height="68" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="540" y="352" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fca5a5" text-anchor="middle">"Elon initially said new Robotaxi cities would launch with supervised FSD.</text>
+  <text x="540" y="376" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fca5a5" text-anchor="middle">Instead all new cities are launching unsupervised. Interesting." — Whole Mars Catalog</text>
+
+  <rect x="80" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="220" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#ef4444" text-anchor="middle" filter="url(#glow)">100</text>
+  <text x="220" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">Model Y Robotaxis</text>
+  <text x="220" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Commercial unsupervised ops</text>
+  <text x="220" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">Austin primary deployment</text>
+
+  <rect x="400" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="540" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">Cybercab</text>
+  <text x="540" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">No steering wheel / pedals</text>
+  <text x="540" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Enters Austin factory testing</text>
+  <text x="540" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">Lara Morley: "cool news" from Giga TX</text>
+
+  <rect x="720" y="412" width="280" height="160" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="860" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fca5a5" text-anchor="middle" filter="url(#glow)">FSD v14</text>
+  <text x="860" y="484" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">Rolling out to HW3 users</text>
+  <text x="860" y="506" font-family="Arial, sans-serif" font-size="13" fill="#9a4a4a" text-anchor="middle">Much less compute vs prior</text>
+  <text x="860" y="558" font-family="Arial, sans-serif" font-size="12" fill="#6a3a3a" text-anchor="middle">Early user feedback strong</text>
+
+  <rect x="80" y="596" width="920" height="300" rx="16" fill="#100808" stroke="#ef4444" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="540" y="632" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#fca5a5" text-anchor="middle">Strategy Shift: Unsupervised From Day One</text>
+
+  <text x="100" y="664" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">Original plan</text>
+  <text x="310" y="664" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">New cities → start with supervised FSD</text>
+  <text x="100" y="690" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">Reality</text>
+  <text x="310" y="690" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">All new cities launching fully unsupervised directly</text>
+  <text x="100" y="716" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">Implication</text>
+  <text x="310" y="716" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">FSD crossed reliability threshold · regulatory approval expanding</text>
+  <text x="100" y="742" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">FSD v14</text>
+  <text x="310" y="742" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Stronger performance with much lower compute → margin improvement</text>
+  <text x="100" y="768" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">Giga Texas</text>
+  <text x="310" y="768" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Lara Morley teased "cool news" — possible Cybercab mass production signal</text>
+  <text x="100" y="794" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#f87171">vs Waymo</text>
+  <text x="310" y="794" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5">Niche specialist vs TSLA standardized scale → TSLA scale advantage</text>
+  <text x="100" y="870" font-family="Arial, sans-serif" font-size="11" fill="#5a2a2a">* Unsupervised expansion = regulatory hurdles cleared, faster revenue realization</text>
+
+  <rect x="60" y="912" width="960" height="40" rx="12" fill="#100808" stroke="#ef4444" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="540" y="937" font-family="Arial, sans-serif" font-size="15" fill="#f87171" text-anchor="middle">Cybercab Austin test + 100 Model Y unsupervised · FSD v14 HW3 rollout · New cities skip supervised</text>
+
+  <rect x="60" y="968" width="960" height="4" fill="url(#redGrad)" rx="2" opacity="0.5"/>
+  <text x="540" y="1008" font-family="Arial, sans-serif" font-size="18" fill="#6a2a2a" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
+</svg>
