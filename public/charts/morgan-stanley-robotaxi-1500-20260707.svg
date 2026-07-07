@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="barGrad26" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="barGrad30" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="140" height="34" rx="8" fill="#1e3a5f"/>
+  <text x="130" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa" text-anchor="middle">Morgan Stanley</text>
+  <rect x="212" y="86" width="80" height="34" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="252" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#3b82f6" text-anchor="middle">TSLA</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="180" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle">Morgan Stanley — TSLA 로보택시 분석</text>
+  <text x="540" y="236" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#3b82f6" text-anchor="middle">$415 목표가 유지</text>
+  <text x="540" y="282" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Equalweight · 마이애미 서비스 개시 후 재확인</text>
+
+  <!-- fleet growth chart -->
+  <text x="540" y="330" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d1d5db" text-anchor="middle">로보택시 플릿 확장 전망</text>
+
+  <!-- bar: 2026 -->
+  <rect x="160" y="360" width="200" height="280" rx="8" fill="#0f1f2e" stroke="#1f3a5f" stroke-width="1"/>
+  <!-- fill bar for 1500 -->
+  <rect x="160" y="500" width="200" height="140" rx="8" fill="url(#barGrad26)"/>
+  <text x="260" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#3b82f6" text-anchor="middle">1,500</text>
+  <text x="260" y="664" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">2026년 말</text>
+  <text x="260" y="684" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">연내 목표</text>
+
+  <!-- arrow -->
+  <polygon points="420,500 460,480 460,520" fill="#374151"/>
+  <line x1="380" y1="500" x2="420" y2="500" stroke="#374151" stroke-width="3"/>
+
+  <!-- bar: 2030 -->
+  <rect x="540" y="360" width="380" height="280" rx="8" fill="#0d1f0d" stroke="#166534" stroke-width="1.5"/>
+  <!-- fill bar for 30000 (full) -->
+  <rect x="540" y="360" width="380" height="280" rx="8" fill="url(#barGrad30)"/>
+  <text x="730" y="510" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#ffffff" text-anchor="middle">30,000</text>
+  <text x="730" y="558" font-family="Arial, sans-serif" font-size="18" fill="#86efac" text-anchor="middle">대</text>
+  <text x="730" y="664" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#22c55e" text-anchor="middle">2030년</text>
+  <text x="730" y="684" font-family="Arial, sans-serif" font-size="13" fill="#4ade80" text-anchor="middle">20배 확장</text>
+
+  <!-- cities launch -->
+  <rect x="80" y="710" width="920" height="80" rx="14" fill="#070e1a" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.7"/>
+  <text x="540" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">연내 런칭 예정 도시</text>
+  <text x="540" y="770" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">피닉스 · 올랜도 · 오스틴 · 라스베이거스 (2026년 내)</text>
+
+  <!-- key metrics row -->
+  <rect x="80" y="812" width="200" height="90" rx="12" fill="#0f1f2e"/>
+  <text x="180" y="848" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#9ca3af" text-anchor="middle">현재 플릿</text>
+  <text x="180" y="878" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#60a5fa" text-anchor="middle">마이애미</text>
+
+  <rect x="300" y="812" width="200" height="90" rx="12" fill="#0f1f2e"/>
+  <text x="400" y="848" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#9ca3af" text-anchor="middle">가격 목표</text>
+  <text x="400" y="878" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#3b82f6" text-anchor="middle">$415</text>
+
+  <rect x="520" y="812" width="200" height="90" rx="12" fill="#0f1f2e"/>
+  <text x="620" y="848" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#9ca3af" text-anchor="middle">2027 이후</text>
+  <text x="620" y="878" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#22c55e" text-anchor="middle">대폭 확장</text>
+
+  <rect x="740" y="812" width="260" height="90" rx="12" fill="#0f1f2e"/>
+  <text x="870" y="848" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#9ca3af" text-anchor="middle">등급</text>
+  <text x="870" y="878" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#f59e0b" text-anchor="middle">Equalweight</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

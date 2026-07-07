@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#tealGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#0ea5e9"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#0ea5e9" text-anchor="middle">Accessibility</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="176" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Cybercab Blind Accessibility Testing</text>
+  <text x="540" y="238" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#0ea5e9" text-anchor="middle">National Federation</text>
+  <text x="540" y="284" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#0ea5e9" text-anchor="middle">of the Blind</text>
+  <text x="540" y="330" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Annual Convention · Austin TX · Hands-on experience</text>
+
+  <rect x="80" y="356" width="920" height="110" rx="16" fill="#071520" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="540" y="392" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#38bdf8" text-anchor="middle">National Federation of the Blind — Annual Convention, Austin TX</text>
+  <text x="540" y="420" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Blind/visually impaired customers testing Cybercab accessibility features hands-on</text>
+  <text x="540" y="448" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">No steering wheel/pedals = first proof of independent mobility for the visually impaired</text>
+
+  <rect x="80" y="490" width="204" height="140" rx="12" fill="#071520" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="182" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#38bdf8" text-anchor="middle">Braille Lettering</text>
+  <text x="182" y="562" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Interior interface</text>
+  <text x="182" y="584" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">braille support</text>
+
+  <rect x="298" y="490" width="204" height="140" rx="12" fill="#071520" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="400" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#38bdf8" text-anchor="middle">Voice Guidance</text>
+  <text x="400" y="562" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Audio alerts</text>
+  <text x="400" y="584" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">board/exit</text>
+
+  <rect x="516" y="490" width="204" height="140" rx="12" fill="#071520" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="618" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#38bdf8" text-anchor="middle">Physical Controls</text>
+  <text x="618" y="562" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Operable without</text>
+  <text x="618" y="584" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">sight</text>
+
+  <rect x="734" y="490" width="266" height="140" rx="12" fill="#071520" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="867" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#38bdf8" text-anchor="middle">Independent Boarding</text>
+  <text x="867" y="562" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Wheelchair-height</text>
+  <text x="867" y="584" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">seating transfers</text>
+
+  <rect x="80" y="652" width="920" height="100" rx="14" fill="#0a1a2e" stroke="#38bdf8" stroke-width="1"/>
+  <text x="540" y="690" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#38bdf8" text-anchor="middle">Proven Inclusion</text>
+  <text x="540" y="716" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Visually impaired customers board/exit Cybercab independently — no assistant needed</text>
+  <text x="540" y="738" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Guide dogs accommodated — braille + ample footwell space confirmed</text>
+
+  <rect x="80" y="774" width="440" height="100" rx="14" fill="#0f1f2e" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="300" y="814" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#0ea5e9" text-anchor="middle">US Visually Impaired</text>
+  <text x="300" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#38bdf8" text-anchor="middle">7M+ people</text>
+
+  <rect x="560" y="774" width="440" height="100" rx="14" fill="#0f1f2e" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="814" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">Can't Drive</text>
+  <text x="780" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#4ade80" text-anchor="middle">New Mobility Market</text>
+
+  <rect x="80" y="896" width="920" height="72" rx="14" fill="#0a1f2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="932" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">No wheel/pedals = mobility revolution for disabled — market impossible for traditional vehicles</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

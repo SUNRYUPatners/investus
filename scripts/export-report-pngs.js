@@ -315,6 +315,20 @@ const PAIRS = [
   { ko: 'eu-safety-mandate-20260706.svg',          en: 'eu-safety-mandate-20260706-en.svg',          label: 'EU_안전의무화',               date: '20260706' },
   { ko: 'tsla-american-desantis-20260706.svg',     en: 'tsla-american-desantis-20260706-en.svg',     label: 'TSLA_미국산DeSantis',         date: '20260706' },
   { ko: 'summary-20260706.svg',                    en: 'summary-20260706-en.svg',                    label: '7월06일_요약',                date: '20260706' },
+
+  // ── 2026-07-07 ─────────────────────────────────────────────────────────
+  { ko: 'tsla-japan-june-rank2-20260707.svg',      en: 'tsla-japan-june-rank2-20260707-en.svg',      label: 'TSLA_일본6월2위',        date: '20260707' },
+  { ko: 'tsla-fsd-germany-bmv-20260707.svg',       en: 'tsla-fsd-germany-bmv-20260707-en.svg',       label: 'TSLA_독일FSD_TCMV',      date: '20260707' },
+  { ko: 'tsla-cybercab-vs-waymo-20260707.svg',     en: 'tsla-cybercab-vs-waymo-20260707-en.svg',     label: 'TSLA_Cybercab_Waymo비교', date: '20260707' },
+  { ko: 'tsla-fsd-v14-la-vegas-20260707.svg',      en: 'tsla-fsd-v14-la-vegas-20260707-en.svg',      label: 'TSLA_FSDv14_LA_Vegas',   date: '20260707' },
+  { ko: 'morgan-stanley-robotaxi-1500-20260707.svg', en: 'morgan-stanley-robotaxi-1500-20260707-en.svg', label: 'MorganStanley_1500대', date: '20260707' },
+  { ko: 'tepper-appaloosa-q1-20260707.svg',        en: 'tepper-appaloosa-q1-20260707-en.svg',        label: 'Tepper_Appaloosa',       date: '20260707' },
+  { ko: 'msft-ai-layoffs-4800-20260707.svg',       en: 'msft-ai-layoffs-4800-20260707-en.svg',       label: 'MSFT_AI해고4800',        date: '20260707' },
+  { ko: 'tsla-robotaxi-neworleans-20260707.svg',   en: 'tsla-robotaxi-neworleans-20260707-en.svg',   label: 'TSLA_Robotaxi뉴올리언스', date: '20260707' },
+  { ko: 'spcx-nasdaq100-20260707.svg',             en: 'spcx-nasdaq100-20260707-en.svg',             label: 'SPCX_NASDAQ100_Optimus', date: '20260707' },
+  { ko: 'tsla-uk-2nd-brand-20260707.svg',          en: 'tsla-uk-2nd-brand-20260707-en.svg',          label: 'TSLA_영국2위',           date: '20260707' },
+  { ko: 'tsla-cybercab-blind-access-20260707.svg', en: 'tsla-cybercab-blind-access-20260707-en.svg', label: 'TSLA_시각장애인접근성',   date: '20260707' },
+  { ko: 'summary-20260707.svg',                    en: 'summary-20260707-en.svg',                    label: '7월07일_요약',           date: '20260707' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

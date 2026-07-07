@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="33%" style="stop-color:#c084fc"/>
+      <stop offset="66%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.07</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">오늘의 한장 요약</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · SPCX · MSFT · MU · Morgan Stanley</text>
+
+  <!-- item 1: Japan #2 -->
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#ef4444"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444">1. TSLA 일본 6월 판매 2위</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">3,997대 (+283% YoY) — 수입차 2위 · YTD 12,197대 (+266%)</text>
+
+  <!-- item 2: Germany FSD -->
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#3b82f6"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#3b82f6">2. 독일 교통부 FSD EU 공식 입장</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">TCMV 7월 30일 EU 전역 FSD 허용 표결 · 독일 KBA RDW·Tesla 협의 중</text>
+
+  <!-- item 3: Cybercab vs Waymo -->
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#22c55e"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#22c55e">3. Cybercab $30K vs Waymo $75K</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">가격 60% 저렴 · 동일 수익 창출에 Waymo 2.5배 필요 → 경제성 압도</text>
+
+  <!-- item 4: FSD v14 LA-Vegas -->
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#ef4444"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444">4. FSD v14 — LA → 라스베이거스 5시간 무개입</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">HW3·HW4 동일 성능 확인 · 복수 사용자 검증 · 주차·충전 포함</text>
+
+  <!-- item 5: Morgan Stanley -->
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#3b82f6"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#3b82f6">5. Morgan Stanley — TSLA 로보택시 $415 유지</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">2026년 말 1,500대 · 2030년 30,000대 · 피닉스·올랜도·오스틴·라스베이거스</text>
+
+  <!-- item 6: Robotaxi New Orleans -->
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#f59e0b"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f59e0b">6. Robotaxi 뉴올리언스 테스트 포착</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Model Y 플릿 · 리어 카메라 워셔 · 텍사스 번호판 → 상업화 임박</text>
+
+  <!-- item 7: Blind accessibility -->
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#071520" stroke="#0ea5e9" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#0ea5e9"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#0ea5e9">7. Cybercab 시각장애인 접근성 실증</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">전미 시각장애인 연맹 오스틴 대회 · 독립 탑승 확인 · 미국 700만명 신시장</text>
+
+  <!-- item 8: SPCX NASDAQ 100 -->
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">8. SPCX NASDAQ 100 공식 편입 + Optimus 중국 생산</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">QQQ 패시브 자금 자동 유입 · Dario Amodei 베이징서 Optimus 대량 생산 선언</text>
+
+  <!-- item 9: Tepper -->
+  <rect x="64" y="1030" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="64" y="1030" width="6" height="80" rx="3" fill="#f59e0b"/>
+  <text x="96" y="1066" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f59e0b">9. Tepper Appaloosa 포트폴리오 — TSLA 5.16%</text>
+  <text x="96" y="1092" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">$5.938B 헤지펀드 · AMZN 14.73%, TSM 7.56%, PLTR 3.66% AI 집중 베팅</text>
+
+  <!-- item 10: MSFT layoffs -->
+  <rect x="64" y="1126" width="952" height="80" rx="14" fill="#0a0a1e" stroke="#f87171" stroke-width="1.5"/>
+  <rect x="64" y="1126" width="6" height="80" rx="3" fill="#f87171"/>
+  <text x="96" y="1162" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171">10. Microsoft AI 구조조정 4,800명 해고 · HR 폐지</text>
+  <text x="96" y="1188" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Baird AI 재편 · 인력 전면 AI 대체 · UK Tesla 판매 2위(12,173대)</text>
+
+  <rect x="0" y="1290" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1326" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

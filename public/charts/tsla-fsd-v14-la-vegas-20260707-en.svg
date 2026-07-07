@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#ef4444"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="80" height="34" rx="8" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="192" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">FSD v14</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="180" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">FSD v14 — Full Self-Driving</text>
+  <text x="540" y="234" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#ef4444" text-anchor="middle">LA → Las Vegas</text>
+  <text x="540" y="282" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">5 hours · Zero interventions · Parking &amp; charging included</text>
+
+  <rect x="80" y="310" width="920" height="100" rx="16" fill="#0a1a2e" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="160" cy="360" r="20" fill="#1e40af"/>
+  <text x="160" y="367" font-family="Arial Black, Arial" font-weight="900" font-size="10" fill="#ffffff" text-anchor="middle">LA</text>
+  <line x1="180" y1="360" x2="900" y2="360" stroke="url(#roadGrad)" stroke-width="4" stroke-dasharray="20,8"/>
+  <polygon points="550,352 570,360 550,368" fill="#ef4444"/>
+  <polygon points="730,352 750,360 730,368" fill="#ef4444"/>
+  <circle cx="920" cy="360" r="20" fill="#ef4444"/>
+  <text x="920" y="355" font-family="Arial Black, Arial" font-weight="900" font-size="8" fill="#ffffff" text-anchor="middle">LAS</text>
+  <text x="920" y="367" font-family="Arial Black, Arial" font-weight="900" font-size="8" fill="#ffffff" text-anchor="middle">VEGAS</text>
+
+  <rect x="80" y="432" width="280" height="180" rx="16" fill="#0f1f2e" stroke="#ef4444" stroke-width="2"/>
+  <text x="220" y="478" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ef4444" text-anchor="middle">Interventions</text>
+  <text x="220" y="548" font-family="Arial Black, Arial" font-weight="900" font-size="86" fill="#ef4444" text-anchor="middle">0</text>
+  <text x="220" y="588" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">times</text>
+
+  <rect x="400" y="432" width="280" height="180" rx="16" fill="#0f1f2e" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="478" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f59e0b" text-anchor="middle">Total Drive Time</text>
+  <text x="540" y="548" font-family="Arial Black, Arial" font-weight="900" font-size="86" fill="#f59e0b" text-anchor="middle">5h</text>
+  <text x="540" y="588" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">full FSD</text>
+
+  <rect x="720" y="432" width="280" height="180" rx="16" fill="#0f1f2e" stroke="#22c55e" stroke-width="2"/>
+  <text x="860" y="478" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">Hardware</text>
+  <text x="860" y="538" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#22c55e" text-anchor="middle">HW3</text>
+  <text x="860" y="574" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#22c55e" text-anchor="middle">+ HW4</text>
+  <text x="860" y="600" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Legacy works perfectly</text>
+
+  <rect x="80" y="634" width="920" height="100" rx="16" fill="#0d1f0d" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="540" y="672" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#22c55e" text-anchor="middle">HW3 Verified — Same performance as HW4</text>
+  <text x="540" y="700" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Nic Cruz Patane: "HW3 Model Y drives identically to HW4 cars"</text>
+  <text x="540" y="722" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Every claim FSD would never work on HW3 proven completely wrong</text>
+
+  <rect x="80" y="756" width="920" height="100" rx="16" fill="#0a1f2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Investment Thesis</text>
+  <text x="540" y="820" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">All HW3 vehicles become FSD revenue targets → subscriber base expands dramatically</text>
+  <text x="540" y="842" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">FSD v14 crossed reliability threshold — long-distance zero-intervention driving normalized</text>
+
+  <rect x="80" y="878" width="430" height="58" rx="12" fill="#0f1f2e"/>
+  <text x="295" y="904" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ef4444" text-anchor="middle">LA → Vegas Complete</text>
+  <text x="295" y="924" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Parking · charging · unpacking all included</text>
+
+  <rect x="570" y="878" width="430" height="58" rx="12" fill="#0f1f2e"/>
+  <text x="785" y="904" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#f59e0b" text-anchor="middle">Diane Confirmed Same</text>
+  <text x="785" y="924" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Multiple independent users verified</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

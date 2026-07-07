@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#080f1a"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="100" height="34" rx="8" fill="#3b82f6"/>
+  <text x="110" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">BREAKING</text>
+  <rect x="172" y="86" width="110" height="34" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#3b82f6" text-anchor="middle">FSD 유럽</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <!-- title -->
+  <text x="540" y="180" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">독일 교통부 FSD 공식 입장 발표</text>
+  <text x="540" y="234" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#3b82f6" text-anchor="middle">TCMV 7월 30일</text>
+  <text x="540" y="280" font-family="Arial, sans-serif" font-size="18" fill="#93c5fd" text-anchor="middle">EU 전역 FSD 승인 여부 표결 예정</text>
+
+  <!-- timeline flow -->
+  <!-- Step 1 -->
+  <rect x="80" y="310" width="920" height="76" rx="14" fill="#0a1a2e" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="80" y="310" width="6" height="76" rx="3" fill="#3b82f6"/>
+  <text x="108" y="344" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">2026.05.05</text>
+  <text x="108" y="368" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db">네덜란드 RDW, EU 이사회에 FSD Supervised 잠정 EU 형식승인 통보 (EU 규정 2018/858 제39조)</text>
+
+  <!-- Step 2 -->
+  <rect x="80" y="402" width="920" height="76" rx="14" fill="#0a1a2e" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="80" y="402" width="6" height="76" rx="3" fill="#22c55e"/>
+  <text x="108" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#4ade80">2026.06.30</text>
+  <text x="108" y="460" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db">TCMV 회의에서 RDW 부여 승인 내용 공식 논의 완료</text>
+
+  <!-- Step 3 — upcoming -->
+  <rect x="80" y="494" width="920" height="76" rx="14" fill="#0d1f0d" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="80" y="494" width="6" height="76" rx="3" fill="#f59e0b"/>
+  <text x="108" y="528" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#fbbf24">예정 (7월 말)</text>
+  <text x="108" y="552" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db">다음 TCMV 회의 — FSD Supervised 허용 여부 표결</text>
+
+  <!-- German KBA box -->
+  <rect x="80" y="594" width="920" height="96" rx="14" fill="#070e1a" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.7"/>
+  <text x="540" y="630" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">독일 연방교통부(BMV) · KBA 공식 답변</text>
+  <text x="540" y="658" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">KBA는 현재 RDW·Tesla와 협의 중이며, 기술개방·안전 중심 원칙 하에 검토 진행 중</text>
+  <text x="540" y="680" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">독일 최종 입장은 향후 TCMV 회의에서 공식 발표 예정</text>
+
+  <!-- insight strip -->
+  <rect x="80" y="714" width="920" height="100" rx="14" fill="#0a1f2e" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="540" y="752" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#22c55e" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="780" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">EU 표결 통과 시 → FSD 전 유럽 상업 서비스 즉시 가능</text>
+  <text x="540" y="800" font-family="Arial, sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">독일 교통부가 공식 문서로 인정 = 규제 리스크 대폭 감소</text>
+
+  <!-- 3 icons row -->
+  <rect x="80" y="838" width="280" height="70" rx="12" fill="#0f1f2e"/>
+  <text x="220" y="870" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa" text-anchor="middle">RDW 승인</text>
+  <text x="220" y="892" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">네덜란드 기승인</text>
+
+  <rect x="400" y="838" width="280" height="70" rx="12" fill="#0f1f2e"/>
+  <text x="540" y="870" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#f59e0b" text-anchor="middle">TCMV 표결</text>
+  <text x="540" y="892" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">7월 말 EU 전체</text>
+
+  <rect x="720" y="838" width="280" height="70" rx="12" fill="#0f1f2e"/>
+  <text x="860" y="870" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">EU 상업화</text>
+  <text x="860" y="892" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">통과 시 전면 허용</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#purpleGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#7c3aed"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MSFT</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#a78bfa" text-anchor="middle">AI Restructuring</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">Microsoft AI Restructuring</text>
+  <text x="540" y="252" font-family="Arial Black, Arial" font-weight="900" font-size="88" fill="#f87171" text-anchor="middle">4,800</text>
+  <text x="540" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#fca5a5" text-anchor="middle">Jobs Cut</text>
+  <text x="540" y="340" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Entire HR unit eliminated · Replaced by AI</text>
+
+  <rect x="80" y="374" width="920" height="110" rx="16" fill="#0a0a1e" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="540" y="412" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#a78bfa" text-anchor="middle">Context — Baird AI Restructuring</text>
+  <text x="540" y="440" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Microsoft eliminating 4,800 jobs and its own HR unit amid AI-driven restructuring</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">Full shift to AI-driven operations — long-term labor cost savings + efficiency gains</text>
+
+  <rect x="80" y="506" width="276" height="160" rx="14" fill="#0f0f1e" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="218" y="546" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#a78bfa" text-anchor="middle">Jobs Cut</text>
+  <text x="218" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#f87171" text-anchor="middle">4,800</text>
+  <text x="218" y="648" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">employees</text>
+
+  <rect x="402" y="506" width="276" height="160" rx="14" fill="#0f0f1e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="546" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fca5a5" text-anchor="middle">Unit Eliminated</text>
+  <text x="540" y="600" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#f87171" text-anchor="middle">Entire HR</text>
+  <text x="540" y="636" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Fully replaced by AI</text>
+
+  <rect x="724" y="506" width="276" height="160" rx="14" fill="#0f0f1e" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="862" y="546" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#4ade80" text-anchor="middle">Strategic Goal</text>
+  <text x="862" y="600" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#22c55e" text-anchor="middle">AI-First</text>
+  <text x="862" y="636" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Headcount → AI spend</text>
+
+  <rect x="80" y="690" width="920" height="100" rx="14" fill="#080a20" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="724" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Sector Signal</text>
+  <text x="540" y="750" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Big Tech AI restructuring accelerating — MSFT, META, GOOGL all replacing headcount</text>
+  <text x="540" y="774" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">AI software winners vs white-collar job threat intensifying</text>
+
+  <rect x="80" y="814" width="920" height="100" rx="14" fill="#0a1020" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="848" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f59e0b" text-anchor="middle">Morgan Stanley Related: Focus on AI Beneficiaries</text>
+  <text x="540" y="874" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Moving away from MSTR·BKNG·META index-trackers → AI + human-skill businesses</text>
+  <text x="540" y="896" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Portfolio strategy shift signal from Morgan Stanley</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

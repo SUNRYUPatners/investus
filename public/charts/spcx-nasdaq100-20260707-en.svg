@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#9333ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#purpleGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#7c3aed"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">SPCX</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#c084fc" text-anchor="middle">NASDAQ 100</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">SpaceX Official NASDAQ 100 Inclusion</text>
+  <text x="540" y="258" font-family="Arial Black, Arial" font-weight="900" font-size="72" fill="#c084fc" text-anchor="middle">NASDAQ</text>
+  <text x="540" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#a855f7" text-anchor="middle">100 Added</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">"This is the proudest time for a company to be added"</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">What NASDAQ 100 Inclusion Means</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Global QQQ ETF capital automatically flows into SPCX — passive fund secured</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Institutional investor eligible · Liquidity surge expected</text>
+
+  <rect x="80" y="526" width="920" height="130" rx="16" fill="#0a1a0a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="540" y="560" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#22c55e" text-anchor="middle">Optimus China Factory Mass Production Announced</text>
+  <text x="540" y="590" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Tesla Global Business President Dario Amodei at Beijing Digital Economy Conference</text>
+  <text x="540" y="618" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Optimus — official mass production to begin at China factory</text>
+  <text x="540" y="642" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">China production → cost reduction + accelerated Asia market supply</text>
+
+  <rect x="80" y="680" width="276" height="120" rx="14" fill="#0f1f2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="218" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Index Added</text>
+  <text x="218" y="770" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#c084fc" text-anchor="middle">NASDAQ</text>
+  <text x="218" y="796" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#a78bfa" text-anchor="middle">100</text>
+
+  <rect x="402" y="680" width="276" height="120" rx="14" fill="#0f1f2e" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">Optimus Production</text>
+  <text x="540" y="770" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#22c55e" text-anchor="middle">China</text>
+  <text x="540" y="796" font-family="Arial, sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">Mass production</text>
+
+  <rect x="724" y="680" width="276" height="120" rx="14" fill="#0f1f2e" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="862" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f59e0b" text-anchor="middle">Passive Flow</text>
+  <text x="862" y="770" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#f59e0b" text-anchor="middle">QQQ</text>
+  <text x="862" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fbbf24" text-anchor="middle">Auto inclusion</text>
+
+  <rect x="80" y="826" width="920" height="90" rx="14" fill="#0a1f2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">Investment Thesis</text>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">NASDAQ 100 + Optimus China simultaneously → SPCX revaluation phase begins</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

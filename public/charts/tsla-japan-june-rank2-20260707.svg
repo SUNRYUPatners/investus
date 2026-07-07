@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f87171"/>
+    </linearGradient>
+    <linearGradient id="barGray" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#374151"/>
+      <stop offset="100%" style="stop-color:#4b5563"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+
+  <!-- header bar -->
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+
+  <!-- badge row -->
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#ef4444"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">시장</text>
+  <rect x="152" y="86" width="100" height="34" rx="8" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="202" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">일본 판매</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <!-- main title -->
+  <text x="540" y="184" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle">일본 수입차 6월 판매 순위</text>
+  <text x="540" y="240" font-family="Arial Black, Arial" font-weight="900" font-size="54" fill="#ef4444" text-anchor="middle">Tesla #2</text>
+  <text x="540" y="290" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">3,997대 · 전년比 +283.3% · YTD 12,197대 (+265.8%)</text>
+
+  <!-- big stat block -->
+  <rect x="80" y="314" width="440" height="180" rx="16" fill="#0f1f2e" stroke="#ef4444" stroke-width="2"/>
+  <text x="300" y="360" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ef4444" text-anchor="middle">6월 판매 (台)</text>
+  <text x="300" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="72" fill="#ef4444" text-anchor="middle">3,997</text>
+  <text x="300" y="474" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">2025년 6월 대비</text>
+
+  <rect x="560" y="314" width="440" height="180" rx="16" fill="#0f1f2e" stroke="#f59e0b" stroke-width="2"/>
+  <text x="780" y="360" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f59e0b" text-anchor="middle">전년 대비 성장률</text>
+  <text x="780" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="72" fill="#f59e0b" text-anchor="middle">+283%</text>
+  <text x="780" y="474" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">6월 YoY 성장</text>
+
+  <!-- bar chart section -->
+  <text x="540" y="538" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d1d5db" text-anchor="middle">6월 외제차 Top 5 (수입 승용차)</text>
+
+  <!-- Row 1: Mercedes #1 -->
+  <text x="80" y="576" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#9ca3af">#1</text>
+  <text x="110" y="576" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#d1d5db">Mercedes-Benz</text>
+  <rect x="320" y="560" width="560" height="26" rx="4" fill="#1f2937"/>
+  <rect x="320" y="560" width="560" height="26" rx="4" fill="url(#barGray)"/>
+  <text x="892" y="577" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#9ca3af">4,512</text>
+
+  <!-- Row 2: Tesla #2 — highlighted -->
+  <rect x="64" y="594" width="952" height="38" rx="8" fill="#1a0a0a"/>
+  <text x="80" y="620" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444">#2</text>
+  <text x="110" y="620" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444">Tesla</text>
+  <rect x="320" y="604" width="497" height="26" rx="4" fill="url(#barGrad)"/>
+  <text x="830" y="621" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444">3,997  +283%</text>
+
+  <!-- Row 3: BMW -->
+  <text x="80" y="658" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#9ca3af">#3</text>
+  <text x="110" y="658" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#6b7280">BMW</text>
+  <rect x="320" y="642" width="420" height="26" rx="4" fill="#1f2937"/>
+  <text x="754" y="659" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">3,379</text>
+
+  <!-- Row 4: VW -->
+  <text x="80" y="700" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#9ca3af">#4</text>
+  <text x="110" y="700" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#6b7280">VW</text>
+  <rect x="320" y="684" width="415" height="26" rx="4" fill="#1f2937"/>
+  <text x="748" y="701" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">3,337</text>
+
+  <!-- Row 5: Audi -->
+  <text x="80" y="742" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#9ca3af">#5</text>
+  <text x="110" y="742" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#6b7280">Audi</text>
+  <rect x="320" y="726" width="314" height="26" rx="4" fill="#1f2937"/>
+  <text x="647" y="743" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">2,523</text>
+
+  <!-- insight box -->
+  <rect x="80" y="778" width="920" height="110" rx="16" fill="#051020" stroke="#ef4444" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="540" y="814" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444" text-anchor="middle">핵심 포인트</text>
+  <text x="540" y="842" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">메르세데스와 515대 차이 · YTD 12,197대(+266%) · 2위 굳히기</text>
+  <text x="540" y="866" font-family="Arial, sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">Source: JAIA Jun 2026</text>
+
+  <!-- footer -->
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

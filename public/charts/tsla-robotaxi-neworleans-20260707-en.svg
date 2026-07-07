@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+  <rect x="60" y="86" width="100" height="34" rx="8" fill="#ef4444"/>
+  <text x="110" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">BREAKING</text>
+  <rect x="172" y="86" width="140" height="34" rx="8" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="242" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">Robotaxi Expansion</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="180" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle">Tesla Robotaxi Spotted in New Orleans</text>
+  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#ef4444" text-anchor="middle">New Orleans</text>
+  <text x="540" y="296" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#fca5a5" text-anchor="middle">Louisiana</text>
+  <text x="540" y="340" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Model Y fleet · rear camera washers · side camera washers confirmed</text>
+
+  <rect x="80" y="374" width="440" height="170" rx="16" fill="#0f1f2e" stroke="#ef4444" stroke-width="2"/>
+  <text x="300" y="414" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#ef4444" text-anchor="middle">Evidence #1</text>
+  <text x="300" y="448" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d1d5db" text-anchor="middle">Rear Camera Washers</text>
+  <text x="300" y="480" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Not on standard Model Y</text>
+  <text x="300" y="504" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Robotaxi-exclusive hardware</text>
+  <text x="300" y="526" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Spotted on multiple vehicles</text>
+
+  <rect x="560" y="374" width="440" height="170" rx="16" fill="#0f1f2e" stroke="#f59e0b" stroke-width="2"/>
+  <text x="780" y="414" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#f59e0b" text-anchor="middle">Evidence #2</text>
+  <text x="780" y="448" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d1d5db" text-anchor="middle">Texas Manufacturer Plates</text>
+  <text x="780" y="480" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Giga Austin factory fleet</text>
+  <text x="780" y="504" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Direct factory deployment</text>
+  <text x="780" y="526" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Texas manufacturer plates</text>
+
+  <rect x="80" y="566" width="920" height="80" rx="14" fill="#070e1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="540" y="600" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#22c55e" text-anchor="middle">Robotaxi City Status</text>
+  <text x="540" y="628" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Austin (live) · Miami (live) · New Orleans (testing) → National expansion accelerating</text>
+
+  <rect x="80" y="668" width="920" height="130" rx="14" fill="#0a1f2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="704" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">What It Signals</text>
+  <text x="540" y="732" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Test sighting = 3-6 month commercial launch lead indicator</text>
+  <text x="540" y="756" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">New Orleans = dense tourism + medical demand — high-revenue market</text>
+  <text x="540" y="780" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Austin → Miami → New Orleans: small-city rapid expansion playbook confirmed</text>
+
+  <rect x="80" y="820" width="440" height="90" rx="14" fill="#0f1f2e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="300" y="856" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ef4444" text-anchor="middle">Vehicle Type</text>
+  <text x="300" y="888" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#fca5a5" text-anchor="middle">Model Y Fleet</text>
+
+  <rect x="560" y="820" width="440" height="90" rx="14" fill="#0f1f2e" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="856" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">New City Strategy</text>
+  <text x="780" y="888" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#4ade80" text-anchor="middle">Unsupervised Direct</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

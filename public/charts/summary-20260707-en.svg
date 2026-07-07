@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="33%" style="stop-color:#c084fc"/>
+      <stop offset="66%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.07</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">Daily Summary</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · SPCX · MSFT · MU · Morgan Stanley</text>
+
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#ef4444"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444">1. TSLA Japan June #2 Foreign Brand</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">3,997 units (+283% YoY) — #2 import brand · YTD 12,197 (+266%)</text>
+
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#3b82f6"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#3b82f6">2. Germany BMV Official FSD EU Position</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">TCMV vote July 30 for EU-wide FSD approval · German KBA in talks with RDW &amp; Tesla</text>
+
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#22c55e"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#22c55e">3. Cybercab $30K vs Waymo $75K</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">60% cheaper · Equal revenue requires 2.5x more Waymos → Economics dominate</text>
+
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#ef4444"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444">4. FSD v14 — LA to Las Vegas 5hr Zero Interventions</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">HW3 = HW4 performance confirmed · Multiple users verified · Parking &amp; charging included</text>
+
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#3b82f6"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#3b82f6">5. Morgan Stanley — TSLA $415 PT Reiterated</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">1,500 fleet end-2026 · 30,000 by 2030 · Phoenix · Orlando · Austin · Las Vegas</text>
+
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#f59e0b"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f59e0b">6. Robotaxi Spotted in New Orleans</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Model Y fleet · rear camera washers · Texas plates → Commercial launch imminent</text>
+
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#071520" stroke="#0ea5e9" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#0ea5e9"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#0ea5e9">7. Cybercab Blind Accessibility Proven</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">National Federation of the Blind Austin · Independent boarding confirmed · 7M+ US market</text>
+
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">8. SPCX NASDAQ 100 Official + Optimus China</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">QQQ passive inflow · Dario Amodei in Beijing announces Optimus mass production</text>
+
+  <rect x="64" y="1030" width="952" height="80" rx="14" fill="#0f1f2e" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="64" y="1030" width="6" height="80" rx="3" fill="#f59e0b"/>
+  <text x="96" y="1066" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f59e0b">9. Tepper Appaloosa Portfolio — TSLA 5.16%</text>
+  <text x="96" y="1092" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">$5.938B fund · AMZN 14.73%, TSM 7.56%, PLTR 3.66% — AI supercycle bet</text>
+
+  <rect x="64" y="1126" width="952" height="80" rx="14" fill="#0a0a1e" stroke="#f87171" stroke-width="1.5"/>
+  <rect x="64" y="1126" width="6" height="80" rx="3" fill="#f87171"/>
+  <text x="96" y="1162" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171">10. Microsoft AI Restructuring — 4,800 Cuts · HR Eliminated</text>
+  <text x="96" y="1188" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Baird AI pivot · Full headcount-to-AI shift · UK Tesla #2 brand (12,173 units)</text>
+
+  <rect x="0" y="1290" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1326" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

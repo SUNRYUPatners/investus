@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="100" height="34" rx="8" fill="#ef4444"/>
+  <text x="110" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">BREAKING</text>
+  <rect x="172" y="86" width="120" height="34" rx="8" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="232" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">Robotaxi 확장</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="180" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">Tesla Robotaxi 뉴올리언스 테스트 포착</text>
+  <text x="540" y="248" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#ef4444" text-anchor="middle">뉴올리언스</text>
+  <text x="540" y="296" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#fca5a5" text-anchor="middle">Louisiana</text>
+  <text x="540" y="340" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Model Y 플릿 · 리어 카메라 워셔 · 사이드 카메라 워셔 장착 확인</text>
+
+  <!-- evidence grid -->
+  <rect x="80" y="374" width="440" height="170" rx="16" fill="#0f1f2e" stroke="#ef4444" stroke-width="2"/>
+  <text x="300" y="414" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#ef4444" text-anchor="middle">식별 근거 #1</text>
+  <text x="300" y="448" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d1d5db" text-anchor="middle">리어 카메라 워셔</text>
+  <text x="300" y="480" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">일반 Model Y에 없는</text>
+  <text x="300" y="504" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">로보택시 전용 부품</text>
+  <text x="300" y="526" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Rear camera washers spotted</text>
+
+  <rect x="560" y="374" width="440" height="170" rx="16" fill="#0f1f2e" stroke="#f59e0b" stroke-width="2"/>
+  <text x="780" y="414" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#f59e0b" text-anchor="middle">식별 근거 #2</text>
+  <text x="780" y="448" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#d1d5db" text-anchor="middle">텍사스 제조 번호판</text>
+  <text x="780" y="480" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">기가텍사스 출고 차량</text>
+  <text x="780" y="504" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">공장 직출고 플릿</text>
+  <text x="780" y="526" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Texas manufacturer plates</text>
+
+  <!-- expansion map strip -->
+  <rect x="80" y="566" width="920" height="80" rx="14" fill="#070e1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="540" y="600" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#22c55e" text-anchor="middle">Robotaxi 확장 도시 현황</text>
+  <text x="540" y="628" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">오스틴(운행중) · 마이애미(운행중) · 뉴올리언스(테스트중) → 전국 확장 가속</text>
+
+  <!-- signal analysis -->
+  <rect x="80" y="668" width="920" height="130" rx="14" fill="#0a1f2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="704" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">뭘 의미하나</text>
+  <text x="540" y="732" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">테스트 포착 = 3~6개월 내 상업 런칭 예고 신호</text>
+  <text x="540" y="756" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">뉴올리언스 = 관광+의료 수요 집중 · 고수익 시장</text>
+  <text x="540" y="780" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">오스틴 → 마이애미 → 뉴올리언스 패턴: 중소 도시 고속 확장 모델</text>
+
+  <!-- fleet badge -->
+  <rect x="80" y="820" width="440" height="90" rx="14" fill="#0f1f2e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="300" y="856" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ef4444" text-anchor="middle">포착 차량 유형</text>
+  <text x="300" y="888" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#fca5a5" text-anchor="middle">Model Y 플릿 다수</text>
+
+  <rect x="560" y="820" width="440" height="90" rx="14" fill="#0f1f2e" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="856" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">신규 도시 전략</text>
+  <text x="780" y="888" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#4ade80" text-anchor="middle">비지도 직접 런칭</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <linearGradient id="barRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f87171"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#ef4444"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="80" height="34" rx="8" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="192" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">영국 시장</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">Tesla 영국 판매 — 2026년 Q2</text>
+  <text x="540" y="244" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#ef4444" text-anchor="middle">브랜드 2위</text>
+  <text x="540" y="294" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">12,173대 판매 · 점유율 5.7% · Model Y 세그먼트 1위</text>
+
+  <!-- 3 main stats -->
+  <rect x="80" y="326" width="280" height="190" rx="16" fill="#0f1f2e" stroke="#ef4444" stroke-width="2"/>
+  <text x="220" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ef4444" text-anchor="middle">브랜드 순위</text>
+  <text x="220" y="458" font-family="Arial Black, Arial" font-weight="900" font-size="96" fill="#ef4444" text-anchor="middle">#2</text>
+  <text x="220" y="500" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">전체 브랜드 중</text>
+
+  <rect x="400" y="326" width="280" height="190" rx="16" fill="#0f1f2e" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f59e0b" text-anchor="middle">시장 점유율</text>
+  <text x="540" y="452" font-family="Arial Black, Arial" font-weight="900" font-size="80" fill="#f59e0b" text-anchor="middle">5.7%</text>
+  <text x="540" y="500" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">영국 전체</text>
+
+  <rect x="720" y="326" width="280" height="190" rx="16" fill="#0f1f2e" stroke="#22c55e" stroke-width="2"/>
+  <text x="860" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">Model Y 세그먼트</text>
+  <text x="860" y="452" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#22c55e" text-anchor="middle">1위</text>
+  <text x="860" y="496" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#4ade80" text-anchor="middle">19%</text>
+  <text x="860" y="514" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">세그먼트 점유율</text>
+
+  <!-- sales number -->
+  <rect x="80" y="540" width="920" height="90" rx="14" fill="#0a1a0a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="540" y="578" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#22c55e" text-anchor="middle">Q2 2026 영국 판매</text>
+  <text x="540" y="616" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#22c55e" text-anchor="middle">12,173대</text>
+
+  <!-- UK chart bar visualization -->
+  <text x="540" y="668" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#d1d5db" text-anchor="middle">연도별 판매 추이 (2021~2026 Q1+Q2)</text>
+
+  <!-- chart bars (approximated from visual) -->
+  <text x="80" y="760" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">2021</text>
+  <rect x="128" y="730" width="280" height="30" rx="4" fill="#374151"/>
+  <text x="80" y="800" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">2022</text>
+  <rect x="128" y="770" width="480" height="30" rx="4" fill="#374151"/>
+  <text x="80" y="840" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">2024</text>
+  <rect x="128" y="810" width="440" height="30" rx="4" fill="#374151"/>
+  <text x="80" y="880" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">2025</text>
+  <rect x="128" y="850" width="360" height="30" rx="4" fill="#374151"/>
+  <text x="80" y="920" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ef4444">2026</text>
+  <rect x="128" y="890" width="300" height="30" rx="4" fill="url(#barRed)"/>
+  <text x="440" y="912" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ef4444">H1 ~28K 추정</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

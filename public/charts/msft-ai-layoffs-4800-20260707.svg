@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#purpleGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#7c3aed"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MSFT</text>
+  <rect x="152" y="86" width="110" height="34" rx="8" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="207" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#a78bfa" text-anchor="middle">AI 구조조정</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">Microsoft AI 구조조정</text>
+  <text x="540" y="252" font-family="Arial Black, Arial" font-weight="900" font-size="88" fill="#f87171" text-anchor="middle">4,800</text>
+  <text x="540" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#fca5a5" text-anchor="middle">명 해고</text>
+  <text x="540" y="340" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">HR 부서 전체 폐지 · AI로 대체</text>
+
+  <!-- context box -->
+  <rect x="80" y="374" width="920" height="110" rx="16" fill="#0a0a1e" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="540" y="412" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#a78bfa" text-anchor="middle">배경 — Baird AI 재편</text>
+  <text x="540" y="440" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Microsoft(Baird)가 4,800개 일자리를 없애고 자체 HR 부서도 완전 폐지</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">인력 구조를 AI 중심으로 전면 재편 — 장기 인력 비용 절감 + 효율 극대화</text>
+
+  <!-- impact flow -->
+  <rect x="80" y="506" width="276" height="160" rx="14" fill="#0f0f1e" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="218" y="546" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#a78bfa" text-anchor="middle">해고 규모</text>
+  <text x="218" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#f87171" text-anchor="middle">4,800</text>
+  <text x="218" y="648" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">명</text>
+
+  <rect x="402" y="506" width="276" height="160" rx="14" fill="#0f0f1e" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="546" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fca5a5" text-anchor="middle">폐지 부서</text>
+  <text x="540" y="600" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#f87171" text-anchor="middle">HR 전체</text>
+  <text x="540" y="636" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">AI가 완전 대체</text>
+
+  <rect x="724" y="506" width="276" height="160" rx="14" fill="#0f0f1e" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="862" y="546" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#4ade80" text-anchor="middle">전략 방향</text>
+  <text x="862" y="600" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#22c55e" text-anchor="middle">AI 집중</text>
+  <text x="862" y="636" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">인력→AI 비용 전환</text>
+
+  <!-- sector signal -->
+  <rect x="80" y="690" width="920" height="100" rx="14" fill="#080a20" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="724" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">섹터 시사점</text>
+  <text x="540" y="750" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">빅테크 AI 구조조정 본격화 — MSFT, META, GOOGL 모두 인력 AI 대체 선언</text>
+  <text x="540" y="774" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">AI 소프트웨어 기업 수혜 vs 화이트칼라 일자리 위협 심화</text>
+
+  <!-- Baird stocks moving away -->
+  <rect x="80" y="814" width="920" height="100" rx="14" fill="#0a1020" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="848" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f59e0b" text-anchor="middle">Morgan Stanley 관련: AI 재편 수혜주 주목</text>
+  <text x="540" y="874" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">MSTR·BKNG·META 등 지수 추종주 매도 → AI+휴먼 스킬 기업 선호</text>
+  <text x="540" y="896" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Morgan Stanley 포트폴리오 전략 변화 신호</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

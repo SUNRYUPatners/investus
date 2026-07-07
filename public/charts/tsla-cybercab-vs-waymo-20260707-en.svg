@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#ef4444"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">Analysis</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">Price Comparison</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="180" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle">Robotaxi Price War</text>
+  <text x="540" y="232" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#22c55e" text-anchor="middle">Cybercab $30K</text>
+  <text x="540" y="276" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Less than half of Waymo — price advantage dominates market</text>
+
+  <rect x="64" y="310" width="444" height="340" rx="20" fill="#0f1f2e" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="286" y="358" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#9ca3af" text-anchor="middle">Waymo (Jaguar I-PACE)</text>
+  <text x="286" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="68" fill="#9ca3af" text-anchor="middle">$75K</text>
+  <text x="286" y="474" font-family="Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle">vehicle cost</text>
+  <line x1="104" y1="500" x2="468" y2="500" stroke="#374151" stroke-width="1"/>
+  <text x="286" y="528" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">Multiple LiDAR sensors</text>
+  <text x="286" y="552" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">Hardware-heavy architecture</text>
+  <text x="286" y="576" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">High unit cost limits scalability</text>
+  <text x="286" y="622" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#6b7280" text-anchor="middle">Inefficient · High Cost</text>
+
+  <rect x="572" y="310" width="444" height="340" rx="20" fill="#0d1f0d" stroke="#22c55e" stroke-width="2"/>
+  <text x="794" y="358" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#22c55e" text-anchor="middle">Tesla Cybercab</text>
+  <text x="794" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="68" fill="#22c55e" text-anchor="middle">$30K</text>
+  <text x="794" y="474" font-family="Arial, sans-serif" font-size="15" fill="#4ade80" text-anchor="middle">vehicle cost (target)</text>
+  <line x1="612" y1="500" x2="976" y2="500" stroke="#166534" stroke-width="1"/>
+  <text x="794" y="528" font-family="Arial, sans-serif" font-size="14" fill="#86efac" text-anchor="middle">Camera-only + AI vision</text>
+  <text x="794" y="552" font-family="Arial, sans-serif" font-size="14" fill="#86efac" text-anchor="middle">No steering wheel or pedals</text>
+  <text x="794" y="576" font-family="Arial, sans-serif" font-size="14" fill="#86efac" text-anchor="middle">Software margin business model</text>
+  <text x="794" y="622" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">Efficient · Low Cost · Scalable</text>
+
+  <circle cx="540" cy="480" r="38" fill="#1f2937" stroke="#4b5563" stroke-width="2"/>
+  <text x="540" y="488" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#d1d5db" text-anchor="middle">VS</text>
+
+  <rect x="80" y="680" width="920" height="90" rx="16" fill="#051020" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="540" y="714" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#22c55e" text-anchor="middle">Price Difference</text>
+  <text x="540" y="750" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#22c55e" text-anchor="middle">-$45,000 (-60%)</text>
+
+  <rect x="80" y="794" width="920" height="90" rx="16" fill="#0a1f2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="828" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Market Implication</text>
+  <text x="540" y="856" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Equal revenue needs 2.5x more Waymos — Cybercab economics dominate</text>
+  <text x="540" y="875" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Wayne (Herbert3) — Cybercab Under $30,000 target confirmed</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

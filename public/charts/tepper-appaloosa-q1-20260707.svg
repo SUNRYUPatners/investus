@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#goldGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="140" height="34" rx="8" fill="#1a1000"/>
+  <text x="130" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#f59e0b" text-anchor="middle">Appaloosa Mgmt</text>
+  <rect x="212" y="86" width="120" height="34" rx="8" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="272" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f59e0b" text-anchor="middle">포트폴리오 공개</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle">David Tepper — Appaloosa 포트폴리오</text>
+  <text x="540" y="228" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#f59e0b" text-anchor="middle">$5.938B · 31종목</text>
+  <text x="540" y="272" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Q1 2026 기준 · 주요 보유 종목 공개</text>
+
+  <!-- bar chart - top holdings -->
+  <text x="540" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#d1d5db" text-anchor="middle">주요 보유 비중</text>
+
+  <!-- AMZN -->
+  <text x="80" y="352" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#f59e0b">AMZN</text>
+  <rect x="200" y="336" width="718" height="26" rx="4" fill="#f59e0b" fill-opacity="0.8"/>
+  <text x="930" y="352" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#f59e0b">14.73%</text>
+
+  <!-- TSM -->
+  <text x="80" y="392" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa">TSM</text>
+  <rect x="200" y="376" width="370" height="26" rx="4" fill="#60a5fa" fill-opacity="0.8"/>
+  <text x="582" y="392" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa">7.56%</text>
+
+  <!-- TSLA -->
+  <text x="80" y="432" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#ef4444">TSLA</text>
+  <rect x="200" y="416" width="253" height="26" rx="4" fill="#ef4444" fill-opacity="0.9"/>
+  <text x="465" y="432" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#ef4444">5.16%</text>
+
+  <!-- PLTR -->
+  <text x="80" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#a78bfa">PLTR</text>
+  <rect x="200" y="456" width="179" height="26" rx="4" fill="#a78bfa" fill-opacity="0.8"/>
+  <text x="391" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#a78bfa">3.66%</text>
+
+  <!-- Atlantia/S.Korea ETF -->
+  <text x="80" y="512" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#34d399">ATL KR</text>
+  <rect x="200" y="496" width="214" height="26" rx="4" fill="#34d399" fill-opacity="0.7"/>
+  <text x="426" y="512" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#34d399">4.38%</text>
+
+  <!-- GLW -->
+  <text x="80" y="552" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#6b7280">GLW</text>
+  <rect x="200" y="536" width="100" height="26" rx="4" fill="#6b7280" fill-opacity="0.8"/>
+  <text x="312" y="552" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#6b7280">2.04%</text>
+
+  <!-- S&P India -->
+  <text x="80" y="592" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#6b7280">SP India</text>
+  <rect x="200" y="576" width="146" height="26" rx="4" fill="#6b7280" fill-opacity="0.7"/>
+  <text x="358" y="592" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#6b7280">2.99%</text>
+
+  <!-- BABA -->
+  <text x="80" y="632" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#6b7280">BABA</text>
+  <rect x="200" y="616" width="136" height="26" rx="4" fill="#6b7280" fill-opacity="0.6"/>
+  <text x="348" y="632" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#6b7280">2.77%</text>
+
+  <!-- highlight TSLA significance -->
+  <rect x="80" y="666" width="920" height="90" rx="14" fill="#1a0808" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="702" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444" text-anchor="middle">Tepper의 TSLA 선택</text>
+  <text x="540" y="728" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">$5.938B 대형 헤지펀드에서 TSLA 5.16% 보유 — 신뢰 지표</text>
+  <text x="540" y="748" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Appaloosa는 글로벌 매크로·가치 중심 운용 — 로보택시 미래 가치 반영</text>
+
+  <!-- asset total -->
+  <rect x="80" y="778" width="430" height="90" rx="14" fill="#0f1f2e" stroke="#f59e0b" stroke-width="2"/>
+  <text x="295" y="818" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f59e0b" text-anchor="middle">총 운용 자산</text>
+  <text x="295" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#f59e0b" text-anchor="middle">$5.938B</text>
+
+  <rect x="570" y="778" width="430" height="90" rx="14" fill="#0f1f2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="785" y="818" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">보유 종목 수</text>
+  <text x="785" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#60a5fa" text-anchor="middle">31종목</text>
+
+  <!-- focus -->
+  <rect x="80" y="890" width="920" height="72" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="924" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">핵심: AI+반도체(AMZN·TSM·PLTR·TSLA) 집중 포지션 → AI 슈퍼사이클 베팅</text>
+  <text x="540" y="948" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Q1 2026 기준 · 공개 filing 기반</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>
