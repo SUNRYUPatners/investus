@@ -23,39 +23,35 @@
   <text x="540" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="50" fill="#a855f7" text-anchor="middle">100 편입</text>
   <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">"회사로서 이보다 자랑스러운 순간은 없다"</text>
 
-  <!-- significance bar -->
   <rect x="80" y="392" width="920" height="110" rx="16" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
   <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">NASDAQ 100 편입의 의미</text>
   <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">전 세계 QQQ ETF 자금이 자동으로 SPCX에 유입 — 패시브 자금 확보</text>
   <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">기관 투자자 투자 가능 자격 취득 · 유동성 급증 예상</text>
 
-  <!-- optimus china news -->
-  <rect x="80" y="526" width="920" height="130" rx="16" fill="#0a1a0a" stroke="#22c55e" stroke-width="1.5"/>
-  <text x="540" y="560" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#22c55e" text-anchor="middle">Optimus 중국 공장 대량 생산 선언</text>
-  <text x="540" y="590" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Tesla Global Business President 다리오 아모데이, 베이징 디지털경제 포럼에서 발표</text>
-  <text x="540" y="618" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Optimus — 중국 공장에서 공식 대량 생산 개시 예정</text>
-  <text x="540" y="642" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">중국 생산 → 원가 절감 + 아시아 시장 공급 가속</text>
+  <rect x="80" y="526" width="920" height="130" rx="16" fill="#0e0a1e" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">스페이스엑스 공식 발표</text>
+  <text x="540" y="596" font-family="Arial, sans-serif" font-size="16" fill="#e9d5ff" text-anchor="middle">"THIS IS THE PROUDEST TIME FOR A COMPANY</text>
+  <text x="540" y="622" font-family="Arial, sans-serif" font-size="16" fill="#e9d5ff" text-anchor="middle">TO BE ADDED TO THE NASDAQ 100"</text>
+  <text x="540" y="648" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">— SpaceX 공식 성명</text>
 
-  <!-- 3 stats -->
   <rect x="80" y="680" width="276" height="120" rx="14" fill="#0f1f2e" stroke="#c084fc" stroke-width="1.5"/>
   <text x="218" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">지수 편입</text>
   <text x="218" y="770" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#c084fc" text-anchor="middle">NASDAQ</text>
   <text x="218" y="796" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#a78bfa" text-anchor="middle">100</text>
 
-  <rect x="402" y="680" width="276" height="120" rx="14" fill="#0f1f2e" stroke="#22c55e" stroke-width="1.5"/>
-  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">Optimus 생산</text>
-  <text x="540" y="770" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#22c55e" text-anchor="middle">중국</text>
-  <text x="540" y="796" font-family="Arial, sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">공장 대량 생산</text>
+  <rect x="402" y="680" width="276" height="120" rx="14" fill="#0f1f2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">패시브 자금</text>
+  <text x="540" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#c084fc" text-anchor="middle">QQQ</text>
+  <text x="540" y="796" font-family="Arial, sans-serif" font-size="14" fill="#a78bfa" text-anchor="middle">자동 유입</text>
 
-  <rect x="724" y="680" width="276" height="120" rx="14" fill="#0f1f2e" stroke="#f59e0b" stroke-width="1.5"/>
-  <text x="862" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f59e0b" text-anchor="middle">패시브 자금</text>
-  <text x="862" y="770" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#f59e0b" text-anchor="middle">QQQ</text>
-  <text x="862" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fbbf24" text-anchor="middle">자동 편입</text>
+  <rect x="724" y="680" width="276" height="120" rx="14" fill="#0f1f2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="862" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">기관 투자</text>
+  <text x="862" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#c084fc" text-anchor="middle">적격 취득</text>
+  <text x="862" y="796" font-family="Arial, sans-serif" font-size="14" fill="#a78bfa" text-anchor="middle">기관 포트폴리오 편입</text>
 
-  <!-- insight -->
-  <rect x="80" y="826" width="920" height="90" rx="14" fill="#0a1f2e" stroke="#60a5fa" stroke-width="1"/>
-  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">투자 시사점</text>
-  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">NASDAQ 100 + Optimus 중국 동시 → SPCX 가치 재평가 구간 진입</text>
+  <rect x="80" y="826" width="920" height="90" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#c084fc" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">NASDAQ 100 편입 = QQQ 패시브 자금 + 기관 투자 자격 = 구조적 수요 완성</text>
 
   <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
   <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>

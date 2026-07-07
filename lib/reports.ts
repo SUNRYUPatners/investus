@@ -6897,7 +6897,7 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-436": ["TSLA"],
   "seed-437": ["TSLA"],
   "seed-438": ["TSLA"],
-  "seed-439": ["SPCX", "TSLA"],
+  "seed-439": ["SPCX"],
   "seed-440": ["TSLA"],
   "seed-441": ["MSFT"],
   "seed-442": ["TSLA"],
