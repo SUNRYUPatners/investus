@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0c8d4"/>
+      <stop offset="100%" style="stop-color:#8899aa"/>
+    </linearGradient>
+    <linearGradient id="stealthGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a6475"/>
+      <stop offset="100%" style="stop-color:#3a4050"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="32" rx="8" fill="#00e5a0"/>
+  <text x="100" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#040a14" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="130" height="32" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="217" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Giga Texas</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="170" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Tesla Giga Texas 신형 컬러 출하 포착</text>
+  <text x="540" y="212" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#00e5a0" text-anchor="middle">대규모 출하 진행 중</text>
+  <text x="540" y="252" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Cosmic Silver Diamond · Stealth Grey 공식 출하 단계 진입</text>
+
+  <!-- Color showcase cards -->
+  <rect x="80" y="280" width="440" height="240" rx="14" fill="#0a1520" stroke="#c0c8d4" stroke-width="2"/>
+  <rect x="100" y="300" width="400" height="80" rx="10" fill="url(#silverGrad)"/>
+  <text x="300" y="348" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#040a14" text-anchor="middle">Cosmic Silver Diamond</text>
+  <text x="300" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#c0c8d4" text-anchor="middle">프리미엄 메탈릭 컬러</text>
+  <text x="300" y="448" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">고가 수요 타깃 · ASP 상승 효과</text>
+  <text x="300" y="476" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">대량 출하 확인 ✓</text>
+  <text x="300" y="504" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#4ade80" text-anchor="middle">출하 중</text>
+
+  <rect x="560" y="280" width="440" height="240" rx="14" fill="#0a1520" stroke="#5a6475" stroke-width="2"/>
+  <rect x="580" y="300" width="400" height="80" rx="10" fill="url(#stealthGrad)"/>
+  <text x="780" y="348" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#e5e7eb" text-anchor="middle">Stealth Grey</text>
+  <text x="780" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#a0aec0" text-anchor="middle">무광 계열 컬러</text>
+  <text x="780" y="448" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">사이버트럭 트렌드 확장 · 수요 다변화</text>
+  <text x="780" y="476" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">대량 출하 확인 ✓</text>
+  <text x="780" y="504" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#4ade80" text-anchor="middle">출하 중</text>
+
+  <!-- Key stats -->
+  <rect x="80" y="544" width="284" height="110" rx="14" fill="#071520" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="222" y="582" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">출하 상태</text>
+  <text x="222" y="618" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#4ade80" text-anchor="middle">대규모</text>
+  <text x="222" y="642" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Giga Texas 풀캐파</text>
+
+  <rect x="398" y="544" width="284" height="110" rx="14" fill="#071520" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="582" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">신규 컬러 수</text>
+  <text x="540" y="618" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#4ade80" text-anchor="middle">2종</text>
+  <text x="540" y="642" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Silver + Stealth</text>
+
+  <rect x="716" y="544" width="284" height="110" rx="14" fill="#071520" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="858" y="582" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">ASP 효과</text>
+  <text x="858" y="618" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#4ade80" text-anchor="middle">상승</text>
+  <text x="858" y="642" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">프리미엄 컬러 효과</text>
+
+  <!-- Investment insight boxes -->
+  <rect x="80" y="678" width="440" height="100" rx="14" fill="#071520" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="716" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Q3 2026 영향</text>
+  <text x="300" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#4ade80" text-anchor="middle">판매량 · 수익 기대치 유지</text>
+  <text x="300" y="766" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">풀캐파 + 프리미엄 믹스 개선</text>
+
+  <rect x="560" y="678" width="440" height="100" rx="14" fill="#071520" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="716" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">Diamond Black 포함</text>
+  <text x="780" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#4ade80" text-anchor="middle">신형 컬러 동시 출하</text>
+  <text x="780" y="766" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">예상보다 빠른 출하 속도</text>
+
+  <rect x="80" y="800" width="920" height="68" rx="14" fill="#071520" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="836" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">신형 컬러 대규모 출하 = 기가텍사스 풀가동 확인 + 프리미엄 ASP 구조 강화</text>
+
+  <text x="540" y="912" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Source: Giga Texas 출하장 목격 보고 — 2026.07.07</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

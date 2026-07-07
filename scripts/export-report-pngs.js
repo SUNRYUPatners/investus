@@ -327,7 +327,13 @@ const PAIRS = [
   { ko: 'tsla-robotaxi-neworleans-20260707.svg',   en: 'tsla-robotaxi-neworleans-20260707-en.svg',   label: 'TSLA_Robotaxi뉴올리언스', date: '20260707' },
   { ko: 'spcx-nasdaq100-20260707.svg',             en: 'spcx-nasdaq100-20260707-en.svg',             label: 'SPCX_NASDAQ100_Optimus', date: '20260707' },
   { ko: 'tsla-uk-2nd-brand-20260707.svg',          en: 'tsla-uk-2nd-brand-20260707-en.svg',          label: 'TSLA_영국2위',           date: '20260707' },
-  { ko: 'tsla-cybercab-blind-access-20260707.svg', en: 'tsla-cybercab-blind-access-20260707-en.svg', label: 'TSLA_시각장애인접근성',   date: '20260707' },
+  { ko: 'tsla-cybercab-blind-access-20260707.svg',  en: 'tsla-cybercab-blind-access-20260707-en.svg',  label: 'TSLA_시각장애인접근성',  date: '20260707' },
+  { ko: 'tsla-optimus-china-mass-20260707.svg',    en: 'tsla-optimus-china-mass-20260707-en.svg',    label: 'TSLA_Optimus중국대량',   date: '20260707' },
+  { ko: 'tsla-robotaxi-austin-coverage-20260707.svg', en: 'tsla-robotaxi-austin-coverage-20260707-en.svg', label: 'TSLA_Austin히트맵', date: '20260707' },
+  { ko: 'tsla-giga-berlin-startups-20260707.svg',  en: 'tsla-giga-berlin-startups-20260707-en.svg',  label: 'TSLA_GigaBerlin스타트업', date: '20260707' },
+  { ko: 'mu-dram-ai-optimism-20260707.svg',        en: 'mu-dram-ai-optimism-20260707-en.svg',        label: 'MU_DRAM_AI낙관론',       date: '20260707' },
+  { ko: 'tsla-giga-texas-colors-20260707.svg',     en: 'tsla-giga-texas-colors-20260707-en.svg',     label: 'TSLA_기가텍사스컬러',    date: '20260707' },
+  { ko: 'ms-portfolio-shift-20260707.svg',         en: 'ms-portfolio-shift-20260707-en.svg',         label: 'MS_포트폴리오전환',      date: '20260707' },
   { ko: 'summary-20260707.svg',                    en: 'summary-20260707-en.svg',                    label: '7월07일_요약',           date: '20260707' },
 ];
 

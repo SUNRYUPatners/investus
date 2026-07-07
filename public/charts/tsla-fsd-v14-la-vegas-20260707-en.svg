@@ -18,10 +18,10 @@
   <rect x="60" y="86" width="80" height="34" rx="8" fill="#ef4444"/>
   <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
   <rect x="152" y="86" width="80" height="34" rx="8" fill="none" stroke="#ef4444" stroke-width="1.5"/>
-  <text x="192" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">FSD v14</text>
+  <text x="192" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">FSD v14 Lite</text>
   <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
 
-  <text x="540" y="180" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">FSD v14 — Full Self-Driving</text>
+  <text x="540" y="180" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">FSD v14 Lite — Full Self-Driving</text>
   <text x="540" y="234" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#ef4444" text-anchor="middle">LA → Las Vegas</text>
   <text x="540" y="282" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">5 hours · Zero interventions · Parking &amp; charging included</text>
 
@@ -59,7 +59,7 @@
   <rect x="80" y="756" width="920" height="100" rx="16" fill="#0a1f2e" stroke="#60a5fa" stroke-width="1"/>
   <text x="540" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Investment Thesis</text>
   <text x="540" y="820" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">All HW3 vehicles become FSD revenue targets → subscriber base expands dramatically</text>
-  <text x="540" y="842" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">FSD v14 crossed reliability threshold — long-distance zero-intervention driving normalized</text>
+  <text x="540" y="842" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">FSD v14 Lite crossed reliability threshold — long-distance zero-intervention driving normalized</text>
 
   <rect x="80" y="878" width="430" height="58" rx="12" fill="#0f1f2e"/>
   <text x="295" y="904" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ef4444" text-anchor="middle">LA → Vegas Complete</text>

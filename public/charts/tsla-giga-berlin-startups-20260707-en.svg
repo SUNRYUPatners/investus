@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#mintGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="32" rx="8" fill="#00e5a0"/>
+  <text x="100" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#040a14" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="120" height="32" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="212" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Manufacturing</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="170" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Giga Berlin Opens to External Startups</text>
+  <text x="540" y="216" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#00e5a0" text-anchor="middle">400K Vehicles/Year</text>
+  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#00e5a0" text-anchor="middle">Factory Ecosystem</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Innovative startups get access to Tesla Giga Berlin manufacturing environment</text>
+
+  <rect x="80" y="326" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="364" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Program Highlights</text>
+  <text x="540" y="392" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Real manufacturing experience in Europe's most advanced EV factory + apply Tesla operational innovation ideas</text>
+
+  <rect x="80" y="436" width="440" height="200" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="476" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Tesla Benefits</text>
+  <text x="300" y="508" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Absorbs external innovation</text>
+  <text x="300" y="530" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Continuous process improvement</text>
+  <text x="300" y="560" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#4ade80" text-anchor="middle">Open Innovation</text>
+  <text x="300" y="584" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Open Innovation</text>
+  <text x="300" y="612" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Fixed cost reduction</text>
+
+  <rect x="560" y="436" width="440" height="200" rx="14" fill="#071a10" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="476" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">Startup Benefits</text>
+  <text x="780" y="508" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">World-class validation</text>
+  <text x="780" y="530" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Tesla operational know-how</text>
+  <text x="780" y="560" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#4ade80" text-anchor="middle">Mfg Platform</text>
+  <text x="780" y="584" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Manufacturing Platform</text>
+  <text x="780" y="612" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">EU ecosystem collab</text>
+
+  <rect x="80" y="658" width="920" height="100" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="700" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Tesla Mfg Platform화 전략</text>
+  <text x="540" y="728" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">단순 자동차 제조사 → Mfg Platform · 외부 혁신 내재화 가속</text>
+  <text x="540" y="748" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Giga Berlin utilization maximized → fixed cost reduction + AI/robotics ecosystem</text>
+
+  <rect x="80" y="780" width="440" height="100" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Annual Production</text>
+  <text x="300" y="854" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#4ade80" text-anchor="middle">400K units</text>
+
+  <rect x="560" y="780" width="440" height="100" rx="14" fill="#071a10" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">Location</text>
+  <text x="780" y="854" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#4ade80" text-anchor="middle">Giga Berlin</text>
+
+  <rect x="80" y="900" width="920" height="68" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="936" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Tesla = Mfg Platform 진화 · 유럽 AI·로보틱스 스타트업 생태계 개방</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

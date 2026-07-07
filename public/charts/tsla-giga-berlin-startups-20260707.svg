@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#mintGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="32" rx="8" fill="#00e5a0"/>
+  <text x="100" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#040a14" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="120" height="32" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="212" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">제조 전략</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="170" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Giga Berlin 외부 스타트업 개방</text>
+  <text x="540" y="216" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#00e5a0" text-anchor="middle">연 40만대 공장</text>
+  <text x="540" y="256" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#00e5a0" text-anchor="middle">생태계 확장</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">혁신 스타트업에 Tesla Giga Berlin 제조 환경 공개 접근</text>
+
+  <rect x="80" y="326" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="364" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">프로그램 핵심</text>
+  <text x="540" y="392" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">유럽 최고 수준 EV 공장에서 실제 제조 경험 + Tesla 운영 혁신 아이디어 적용 기회</text>
+
+  <rect x="80" y="436" width="440" height="200" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="476" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Tesla 수혜</text>
+  <text x="300" y="508" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">외부 혁신 흡수</text>
+  <text x="300" y="530" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">제조 프로세스 지속 개선</text>
+  <text x="300" y="560" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#4ade80" text-anchor="middle">오픈 이노베이션</text>
+  <text x="300" y="584" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Open Innovation</text>
+  <text x="300" y="612" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">고정비 절감 효과</text>
+
+  <rect x="560" y="436" width="440" height="200" rx="14" fill="#071a10" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="476" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#22c55e" text-anchor="middle">스타트업 수혜</text>
+  <text x="780" y="508" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">세계 최고 환경 실증</text>
+  <text x="780" y="530" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Tesla 운영 노하우 접목</text>
+  <text x="780" y="560" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#4ade80" text-anchor="middle">제조 플랫폼</text>
+  <text x="780" y="584" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Manufacturing Platform</text>
+  <text x="780" y="612" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">유럽 생태계 협력</text>
+
+  <rect x="80" y="658" width="920" height="100" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="700" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Tesla 제조 플랫폼화 전략</text>
+  <text x="540" y="728" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">단순 자동차 제조사 → 제조 플랫폼 · 외부 혁신 내재화 가속</text>
+  <text x="540" y="748" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Giga Berlin 활용도 극대화 → 고정비 절감 + AI·로보틱스 생태계 구축</text>
+
+  <rect x="80" y="780" width="440" height="100" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">연간 생산 규모</text>
+  <text x="300" y="854" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#4ade80" text-anchor="middle">40만대</text>
+
+  <rect x="560" y="780" width="440" height="100" rx="14" fill="#071a10" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">위치</text>
+  <text x="780" y="854" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#4ade80" text-anchor="middle">Giga Berlin</text>
+
+  <rect x="80" y="900" width="920" height="68" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="936" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Tesla = 제조 플랫폼 진화 · 유럽 AI·로보틱스 스타트업 생태계 개방</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="100" height="32" rx="8" fill="#3b82f6"/>
+  <text x="110" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">Market</text>
+  <rect x="172" y="86" width="160" height="32" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="252" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#3b82f6" text-anchor="middle">Morgan Stanley</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="170" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Morgan Stanley Portfolio Shift</text>
+  <text x="540" y="212" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#3b82f6" text-anchor="middle">Index Trackers → AI+Human Hybrid</text>
+  <text x="540" y="252" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Selling MSTR · BKNG · META — AI Era Stock Selection Criteria Shifting</text>
+
+  <!-- Sell side -->
+  <rect x="80" y="280" width="420" height="360" rx="14" fill="#150a0a" stroke="#ef4444" stroke-width="2"/>
+  <text x="290" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#ef4444" text-anchor="middle">Selling (Index Trackers)</text>
+
+  <rect x="100" y="334" width="380" height="70" rx="8" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="290" y="362" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444" text-anchor="middle">MSTR</text>
+  <text x="290" y="384" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Bitcoin leverage — index tracker behavior</text>
+
+  <rect x="100" y="418" width="380" height="70" rx="8" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="290" y="446" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444" text-anchor="middle">BKNG</text>
+  <text x="290" y="468" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Travel booking → fully AI-automatable</text>
+
+  <rect x="100" y="502" width="380" height="70" rx="8" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="290" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444" text-anchor="middle">META</text>
+  <text x="290" y="552" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Ad algorithm → AI replacement accelerating</text>
+
+  <text x="290" y="612" font-family="Arial Black, Arial" font-weight="900" font-size="12" fill="#ef4444" text-anchor="middle">AI can execute alone → no differentiation</text>
+
+  <!-- Arrow -->
+  <text x="540" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#6b7280" text-anchor="middle">→</text>
+
+  <!-- Buy side -->
+  <rect x="580" y="280" width="420" height="360" rx="14" fill="#071520" stroke="#3b82f6" stroke-width="2"/>
+  <text x="790" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#3b82f6" text-anchor="middle">Buying (AI+Human Hybrids)</text>
+
+  <rect x="600" y="334" width="380" height="80" rx="8" fill="#071525" stroke="#3b82f6" stroke-width="1"/>
+  <text x="790" y="366" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Medical · Legal · Creative</text>
+  <text x="790" y="390" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Expert judgment still essential</text>
+
+  <rect x="600" y="430" width="380" height="80" rx="8" fill="#071525" stroke="#3b82f6" stroke-width="1"/>
+  <text x="790" y="462" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">AI + Physical Infrastructure</text>
+  <text x="790" y="486" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">TSLA · NVDA preferred structure strengthened</text>
+
+  <rect x="600" y="526" width="380" height="50" rx="8" fill="#071525" stroke="#22c55e" stroke-width="1"/>
+  <text x="790" y="557" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#4ade80" text-anchor="middle">AI-irreplaceable zones focus</text>
+
+  <text x="790" y="612" font-family="Arial Black, Arial" font-weight="900" font-size="12" fill="#3b82f6" text-anchor="middle">AI + Human = Winning Combination</text>
+
+  <!-- Insight bar -->
+  <rect x="80" y="664" width="920" height="68" rx="14" fill="#071520" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="540" y="700" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#3b82f6" text-anchor="middle">AI replacement speed exceeding expectations → preemptive portfolio rebalancing accelerating</text>
+
+  <!-- Bottom stat cards -->
+  <rect x="80" y="756" width="284" height="110" rx="14" fill="#071520" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="222" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ef4444" text-anchor="middle">Selling</text>
+  <text x="222" y="830" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#f87171" text-anchor="middle">3 Stocks</text>
+  <text x="222" y="854" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">MSTR·BKNG·META</text>
+
+  <rect x="398" y="756" width="284" height="110" rx="14" fill="#071520" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="540" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#3b82f6" text-anchor="middle">Rotation Into</text>
+  <text x="540" y="830" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#60a5fa" text-anchor="middle">AI+Human Hybrid</text>
+  <text x="540" y="854" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Irreplaceable zone focus</text>
+
+  <rect x="716" y="756" width="284" height="110" rx="14" fill="#071520" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="858" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">Beneficiaries</text>
+  <text x="858" y="830" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#4ade80" text-anchor="middle">TSLA · NVDA</text>
+  <text x="858" y="854" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Physical AI infra preferred</text>
+
+  <rect x="80" y="888" width="920" height="68" rx="14" fill="#071520" stroke="#3b82f6" stroke-width="1"/>
+  <text x="540" y="928" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#3b82f6" text-anchor="middle">Pure SW AI vulnerability rising → physical+AI hybrid company preference structure strengthening</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

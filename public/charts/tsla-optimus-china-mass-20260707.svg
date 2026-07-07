@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#mintGrad)" rx="2"/>
+
+  <!-- Header -->
+  <rect x="60" y="86" width="80" height="32" rx="8" fill="#00e5a0"/>
+  <text x="100" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#040a14" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="120" height="32" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="212" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">BREAKING</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <!-- Title -->
+  <text x="540" y="176" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla Optimus 중국 대량 생산 공식 선언</text>
+  <text x="540" y="218" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#00e5a0" text-anchor="middle">베이징 2026</text>
+  <text x="540" y="260" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#00e5a0" text-anchor="middle">디지털경제 포럼</text>
+  <text x="540" y="300" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Tesla Global Business President 공식 발표</text>
+
+  <!-- Roadmap timeline -->
+  <rect x="80" y="332" width="920" height="100" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="370" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Optimus 생산 로드맵</text>
+  <text x="200" y="400" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#4ade80" text-anchor="middle">2025</text>
+  <text x="200" y="420" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">내부 테스트</text>
+  <text x="540" y="400" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">2026 ← 지금</text>
+  <text x="540" y="420" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">중국 대량 생산 선언</text>
+  <text x="880" y="400" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#6b7280" text-anchor="middle">2027+</text>
+  <text x="880" y="420" font-family="Arial, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">외부 판매</text>
+  <!-- arrows -->
+  <line x1="270" y1="408" x2="440" y2="408" stroke="#374151" stroke-width="2"/>
+  <polygon points="440,403 452,408 440,413" fill="#374151"/>
+  <line x1="640" y1="408" x2="810" y2="408" stroke="#374151" stroke-width="2"/>
+  <polygon points="810,403 822,408 810,413" fill="#374151"/>
+
+  <!-- 3 benefit cards -->
+  <rect x="80" y="454" width="284" height="160" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="222" y="494" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">원가 절감</text>
+  <text x="222" y="520" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">중국 제조 단가</text>
+  <text x="222" y="542" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">미국 대비</text>
+  <text x="222" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">구조적 우위</text>
+  <text x="222" y="596" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Cost Advantage</text>
+
+  <rect x="398" y="454" width="284" height="160" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="494" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">아시아 공급</text>
+  <text x="540" y="520" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">물류·관세</text>
+  <text x="540" y="542" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">비용 절감</text>
+  <text x="540" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">직접 공급</text>
+  <text x="540" y="596" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Asia Direct Supply</text>
+
+  <rect x="716" y="454" width="284" height="160" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="858" y="494" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">램프업 속도</text>
+  <text x="858" y="520" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Giga Shanghai</text>
+  <text x="858" y="542" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">노하우 활용</text>
+  <text x="858" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">빠른 확장</text>
+  <text x="858" y="596" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Fast Ramp-Up</text>
+
+  <!-- Key quote -->
+  <rect x="80" y="638" width="920" height="80" rx="14" fill="#0a1a10" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="672" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#4ade80" text-anchor="middle">베이징 디지털경제 포럼 공식 발표</text>
+  <text x="540" y="700" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Optimus 중국 공장 대량 생산 공식 개시 — 2026년 내 아시아 공급 시작</text>
+
+  <!-- Investment thesis -->
+  <rect x="80" y="740" width="440" height="100" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">밸류에이션 재평가</text>
+  <text x="300" y="800" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#4ade80" text-anchor="middle">Optimus Re-Rating</text>
+  <text x="300" y="828" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">로봇 시장 진입 가속 트리거</text>
+
+  <rect x="560" y="740" width="440" height="100" rx="14" fill="#071a10" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">CAPEX 최소화</text>
+  <text x="780" y="800" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#4ade80" text-anchor="middle">기존 인프라 활용</text>
+  <text x="780" y="828" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Giga Shanghai 노하우</text>
+
+  <!-- insight bar -->
+  <rect x="80" y="862" width="920" height="68" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="898" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">중국 대량 생산 선언 = 원가 혁신 시작 + 아시아 로봇 시장 본격 개척</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

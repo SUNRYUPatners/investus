@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="32" rx="8" fill="#3b82f6"/>
+  <text x="100" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">시장</text>
+  <rect x="152" y="86" width="160" height="32" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="232" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#3b82f6" text-anchor="middle">Morgan Stanley</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="170" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Morgan Stanley 포트폴리오 전환</text>
+  <text x="540" y="212" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#3b82f6" text-anchor="middle">지수추종주 → AI+인간 융합</text>
+  <text x="540" y="252" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">MSTR · BKNG · META 매도 — AI 시대 종목 선별 기준 재편</text>
+
+  <!-- Sell side -->
+  <rect x="80" y="280" width="420" height="360" rx="14" fill="#150a0a" stroke="#ef4444" stroke-width="2"/>
+  <text x="290" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#ef4444" text-anchor="middle">매도 (지수 추종형)</text>
+
+  <rect x="100" y="334" width="380" height="70" rx="8" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="290" y="362" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444" text-anchor="middle">MSTR</text>
+  <text x="290" y="384" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">비트코인 레버리지 — 지수 추종 매매</text>
+
+  <rect x="100" y="418" width="380" height="70" rx="8" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="290" y="446" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444" text-anchor="middle">BKNG</text>
+  <text x="290" y="468" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">여행 예약 → AI 에이전트 완전 자동화</text>
+
+  <rect x="100" y="502" width="380" height="70" rx="8" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="290" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ef4444" text-anchor="middle">META</text>
+  <text x="290" y="552" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">광고 알고리즘 → AI 대체 가속</text>
+
+  <text x="290" y="612" font-family="Arial Black, Arial" font-weight="900" font-size="12" fill="#ef4444" text-anchor="middle">AI 독자 실행 → 차별화 없음</text>
+
+  <!-- Arrow -->
+  <text x="540" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#6b7280" text-anchor="middle">→</text>
+
+  <!-- Buy side -->
+  <rect x="580" y="280" width="420" height="360" rx="14" fill="#071520" stroke="#3b82f6" stroke-width="2"/>
+  <text x="790" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#3b82f6" text-anchor="middle">선호 (AI+인간 융합)</text>
+
+  <rect x="600" y="334" width="380" height="80" rx="8" fill="#071525" stroke="#3b82f6" stroke-width="1"/>
+  <text x="790" y="366" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">의료 · 법률 · 창의 분야</text>
+  <text x="790" y="390" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">전문가 판단 여전히 필수 영역</text>
+
+  <rect x="600" y="430" width="380" height="80" rx="8" fill="#071525" stroke="#3b82f6" stroke-width="1"/>
+  <text x="790" y="462" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">AI + 물리 인프라 기업</text>
+  <text x="790" y="486" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">TSLA · NVDA 선호 구조 강화</text>
+
+  <rect x="600" y="526" width="380" height="50" rx="8" fill="#071525" stroke="#22c55e" stroke-width="1"/>
+  <text x="790" y="557" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#4ade80" text-anchor="middle">AI 대체 불가 영역 집중</text>
+
+  <text x="790" y="612" font-family="Arial Black, Arial" font-weight="900" font-size="12" fill="#3b82f6" text-anchor="middle">AI + 인간 = 최강 조합</text>
+
+  <!-- Insight bar -->
+  <rect x="80" y="664" width="920" height="68" rx="14" fill="#071520" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="540" y="700" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#3b82f6" text-anchor="middle">AI 교체 속도 예상 초과 → 선제 포트폴리오 재편 가속</text>
+
+  <!-- Bottom stat cards -->
+  <rect x="80" y="756" width="284" height="110" rx="14" fill="#071520" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="222" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ef4444" text-anchor="middle">매도 종목</text>
+  <text x="222" y="830" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#f87171" text-anchor="middle">3종목</text>
+  <text x="222" y="854" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">MSTR·BKNG·META</text>
+
+  <rect x="398" y="756" width="284" height="110" rx="14" fill="#071520" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="540" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#3b82f6" text-anchor="middle">전환 방향</text>
+  <text x="540" y="830" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#60a5fa" text-anchor="middle">AI+인간 융합</text>
+  <text x="540" y="854" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">대체 불가 영역 집중</text>
+
+  <rect x="716" y="756" width="284" height="110" rx="14" fill="#071520" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="858" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">수혜 기업</text>
+  <text x="858" y="830" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#4ade80" text-anchor="middle">TSLA · NVDA</text>
+  <text x="858" y="854" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">물리 AI 인프라 선호</text>
+
+  <rect x="80" y="888" width="920" height="68" rx="14" fill="#071520" stroke="#3b82f6" stroke-width="1"/>
+  <text x="540" y="928" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#3b82f6" text-anchor="middle">순수 SW 서비스 AI 취약성 인식 증가 → 물리+AI 융합 기업 선호 구조 강화</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

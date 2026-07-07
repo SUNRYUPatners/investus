@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="32" rx="8" fill="#00e5a0"/>
+  <text x="100" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#040a14" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="120" height="32" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="212" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">BREAKING</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="176" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla Optimus China Mass Production</text>
+  <text x="540" y="218" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#00e5a0" text-anchor="middle">Officially Announced</text>
+  <text x="540" y="262" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Beijing 2026 Global Digital Economy Conference</text>
+
+  <rect x="80" y="294" width="920" height="100" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="332" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Optimus Production Roadmap</text>
+  <text x="200" y="362" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#4ade80" text-anchor="middle">2025</text>
+  <text x="200" y="380" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Internal Testing</text>
+  <text x="540" y="362" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">2026 ← Now</text>
+  <text x="540" y="380" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">China Mass Production Announced</text>
+  <text x="880" y="362" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#6b7280" text-anchor="middle">2027+</text>
+  <text x="880" y="380" font-family="Arial, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">External Sales</text>
+  <line x1="270" y1="370" x2="440" y2="370" stroke="#374151" stroke-width="2"/>
+  <polygon points="440,365 452,370 440,375" fill="#374151"/>
+  <line x1="640" y1="370" x2="810" y2="370" stroke="#374151" stroke-width="2"/>
+  <polygon points="810,365 822,370 810,375" fill="#374151"/>
+
+  <rect x="80" y="416" width="284" height="160" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="222" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Cost Reduction</text>
+  <text x="222" y="490" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">China manufacturing</text>
+  <text x="222" y="512" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">structural advantage</text>
+  <text x="222" y="540" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">vs USA</text>
+  <text x="222" y="566" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Unit Cost Advantage</text>
+
+  <rect x="398" y="416" width="284" height="160" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Asia Supply</text>
+  <text x="540" y="490" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Logistics + tariff</text>
+  <text x="540" y="512" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">cost slashed</text>
+  <text x="540" y="540" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">Direct</text>
+  <text x="540" y="566" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Asia Direct Supply</text>
+
+  <rect x="716" y="416" width="284" height="160" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="858" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Fast Ramp</text>
+  <text x="858" y="490" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Giga Shanghai</text>
+  <text x="858" y="512" font-family="Arial, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">expertise leveraged</text>
+  <text x="858" y="540" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">Quick</text>
+  <text x="858" y="566" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Fast Ramp-Up</text>
+
+  <rect x="80" y="598" width="920" height="80" rx="14" fill="#0a1a10" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="632" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#4ade80" text-anchor="middle">Official Beijing Forum Announcement</text>
+  <text x="540" y="660" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Optimus China factory mass production officially launching — Asia supply beginning 2026</text>
+
+  <rect x="80" y="700" width="440" height="100" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="738" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Valuation Re-Rating</text>
+  <text x="300" y="760" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#4ade80" text-anchor="middle">Optimus Trigger</text>
+  <text x="300" y="788" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Robotics market entry accelerating</text>
+
+  <rect x="560" y="700" width="440" height="100" rx="14" fill="#071a10" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="738" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">Minimal CAPEX</text>
+  <text x="780" y="760" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#4ade80" text-anchor="middle">Existing Infra</text>
+  <text x="780" y="788" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Giga Shanghai know-how</text>
+
+  <rect x="80" y="822" width="920" height="68" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="858" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">China mass production = cost revolution start + Asia robotics market breakthrough</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

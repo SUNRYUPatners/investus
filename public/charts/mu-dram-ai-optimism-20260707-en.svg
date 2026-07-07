@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#blueGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="32" rx="8" fill="#3b82f6"/>
+  <text x="100" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MU</text>
+  <rect x="152" y="86" width="80" height="32" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="192" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#3b82f6" text-anchor="middle">DRAM</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="170" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Memory Stocks Rebound on AI Optimism</text>
+  <text x="540" y="212" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#60a5fa" text-anchor="middle">UBS: DRAM</text>
+  <text x="540" y="254" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#60a5fa" text-anchor="middle">Undervaluation Call</text>
+  <text x="540" y="294" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">AI optimism not priced in · HBM structure invalidates traditional cycle analysis</text>
+
+  <rect x="80" y="320" width="920" height="100" rx="14" fill="#0a1020" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="540" y="358" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">HBM Margin Structure Comparison</text>
+  <rect x="120" y="376" width="300" height="30" rx="6" fill="#3b82f6"/>
+  <text x="270" y="396" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">Standard DRAM Margin: 30-40%</text>
+  <rect x="470" y="376" width="490" height="30" rx="6" fill="#60a5fa"/>
+  <text x="715" y="396" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#040a14" text-anchor="middle">SK Hynix HBM Margin: 61% (AI Memory)</text>
+
+  <rect x="80" y="440" width="284" height="200" rx="14" fill="#0a1020" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="222" y="480" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa" text-anchor="middle">SK Hynix Margin</text>
+  <text x="222" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#60a5fa" text-anchor="middle">61%</text>
+  <text x="222" y="568" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">DRAM Gross Margin</text>
+  <text x="222" y="590" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Q1 2026 record</text>
+  <text x="222" y="628" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Same structure applies to MU</text>
+
+  <rect x="398" y="440" width="284" height="200" rx="14" fill="#0a1020" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="540" y="480" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa" text-anchor="middle">UBS 분석</text>
+  <text x="540" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#60a5fa" text-anchor="middle">Under-valued</text>
+  <text x="540" y="568" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">AI optimism not priced</text>
+  <text x="540" y="590" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Undervalued</text>
+  <text x="540" y="628" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">vs actual AI demand</text>
+
+  <rect x="716" y="440" width="284" height="200" rx="14" fill="#0a1020" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="858" y="480" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa" text-anchor="middle">MU Expansion</text>
+  <text x="858" y="530" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#60a5fa" text-anchor="middle">$8.6B</text>
+  <text x="858" y="568" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Japan Hiroshima</text>
+  <text x="858" y="590" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Japan Hiroshima</text>
+  <text x="858" y="628" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Geopolitical hedge</text>
+
+  <rect x="80" y="660" width="920" height="100" rx="14" fill="#0a1020" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="698" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">Burry Short vs AI Demand</text>
+  <text x="540" y="726" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Michael Burry DRAM short position vs HBM 61% margin results — collision expected</text>
+  <text x="540" y="748" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">During AI supercycle, traditional memory cycle analysis is structurally invalid</text>
+
+  <rect x="80" y="780" width="440" height="100" rx="14" fill="#0a1020" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="300" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa" text-anchor="middle">HBM Beneficiaries</text>
+  <text x="300" y="854" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#93c5fd" text-anchor="middle">MU · SK Hynix</text>
+
+  <rect x="560" y="780" width="440" height="100" rx="14" fill="#0a1020" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="780" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">AI Memory Margin</text>
+  <text x="780" y="854" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">60%+ Structural</text>
+
+  <rect x="80" y="900" width="920" height="68" rx="14" fill="#0a1020" stroke="#3b82f6" stroke-width="1"/>
+  <text x="540" y="936" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">DRAM bearish thesis = AI demand underestimation · HBM 60%+ margins invalidate cycle analysis</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>

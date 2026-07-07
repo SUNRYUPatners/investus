@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T7JL = 1783378800000; // 2026-07-07 08:00 KST
 const T6JL = 1783292400000; // 2026-07-06 08:00 KST
 const T4JL = 1783119600000; // 2026-07-04 08:00 KST
 const T3JL = 1783033200000; // 2026-07-03 08:00 KST
@@ -47,7 +48,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T6JL;       // NEW 배지 기준
+export const LATEST_UPDATE = T7JL;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -66,6 +67,76 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-07 — TSLA FSD v14Lite LA→Vegas·Austin 로보택시 20일 데이터·
+  //              Cybercab vs Waymo·MS 1500대 예측·SPCX NASDAQ100·
+  //              MSFT AI 해고·Tepper TSLA 매수·Optimus 중국 대량생산·
+  //              MU DRAM AI 낙관론·UK 2위·기가텍사스 신형컬러
+  // ════════════════════════════════════════════════════════════════════════
+
+  // FSD v14 Lite — LA → Las Vegas ──────────────────────────────────────
+  { id: 443, symbol: "TSLA", nickname: "익명_2841", holdingLabel: "1200주 보유",
+    content: "FSD v14 Lite가 LA에서 라스베가스까지 5시간 완전 무개입. 편도 430km 고속도로+도심 복합 코스를 단 한 번도 안 잡았다는 게 진짜야. 지금까지 장거리 FSD는 '가끔 끊기지만 그래도 대단해' 수준이었는데 5시간 무개입이면 이제 다른 이야기야. HW3에도 v14 Lite 배포 시작됐다는데 400만대 차량이 다 이 수준 되면 구독 전환율 어마어마하게 올라가겠다.",
+    createdAt: T7JL + 7*60_000, likes: 2456, comments: 6 },
+  { id: 444, symbol: "TSLA", nickname: "익명_5673", holdingLabel: "380주 보유",
+    content: "어제 유튜브 영상 직접 봤는데 합류 구간·터널·교차로 전부 완벽했어. 고속도로 공사구간도 자연스럽게 차선 변경하더라. v14 Lite가 Lite면 v14 풀버전은 어떤 수준인 거야. 웨이모가 도심 한 구역 커버하는 동안 테슬라는 고속도로 장거리까지 커버. 밸류에이션 갭이 좁혀질 수밖에 없는 구조야.",
+    createdAt: T7JL + 28*60_000, likes: 1834, comments: 5 },
+
+  // Austin 로보택시 20일 히트맵 ────────────────────────────────────────
+  { id: 445, symbol: "TSLA", nickname: "익명_7192", holdingLabel: "650주 보유",
+    content: "오스틴 20일 운행 데이터 지오펜스 이탈 0건 확정. Lamar Blvd 45회, Riverside 30회, Airport Blvd 24회. 상업지구·공항 허브 집중 커버리지가 딱 수익성 극대화 노선이잖아. 웨이모가 몇 년 걸린 걸 테슬라는 20일 만에 상업화 검증 완료한 거야. 다음 도시 확장 속도 엄청나게 빠를 수밖에.",
+    createdAt: T7JL + 15*60_000, likes: 1987, comments: 4 },
+
+  // Cybercab vs Waymo ──────────────────────────────────────────────────
+  { id: 446, symbol: "TSLA", nickname: "익명_8834", holdingLabel: "900주 보유",
+    content: "Cybercab $0.25/마일 vs 웨이모 $4.00. 웨이모 대비 16배 저렴한 거야. 자율주행 기술 있어도 원가 구조가 이렇게 벌어지면 시장은 결국 싼 쪽으로 가. Cybercab은 차 자체가 FSD 서버 + 배터리로만 구성돼서 원가 절감 극한으로 밀어붙이는 설계잖아. 매일 8시간 운행 기준 20만 마일로 일반 택시 ROI 5배라는 계산도 납득돼.",
+    createdAt: T7JL + 42*60_000, likes: 2318, comments: 7 },
+
+  // Morgan Stanley 로보택시 1500대 ─────────────────────────────────────
+  { id: 447, symbol: "TSLA", nickname: "익명_3367", holdingLabel: "450주 보유",
+    content: "Morgan Stanley가 연말까지 로보택시 1,500대 예측하고 $465 목표가 유지. 지금 오스틴 20일 데이터가 검증됐으니 확장 속도가 관건이야. 뉴올리언스, 마이애미, 댈러스까지 로드맵에 있다는 거 감안하면 연말 1,500대는 보수적인 수치일 수도 있어. Cybercab 대량 생산 시작되면 이 숫자 급증할 거야.",
+    createdAt: T7JL + 55*60_000, likes: 1673, comments: 4 },
+
+  // SPCX NASDAQ 100 ────────────────────────────────────────────────────
+  { id: 448, symbol: "SPCX", nickname: "익명_6621", holdingLabel: "200주 보유",
+    content: "SPCX NASDAQ 100 공식 편입! QQQ 패시브 자금이 자동 유입되는 거잖아. NASDAQ 100 편입 기업 시총 평균이 얼마인데 스페이스엑스가 들어가는 거야. IPO 17달러 시작해서 편입까지 이 속도면 기관 수요가 얼마나 쌓여있는지 알 수 있어. 패시브 펀드들이 의무적으로 담아야 하니까 수급 자체가 달라지는 거야.",
+    createdAt: T7JL + 20*60_000, likes: 2891, comments: 8 },
+
+  // MSFT AI 해고 4800명 ─────────────────────────────────────────────────
+  { id: 449, symbol: "MSFT", nickname: "익명_4419", holdingLabel: "150주 보유",
+    content: "MSFT AI 해고 4,800명이 나쁜 소식이 아니야. 인간이 하던 반복 작업을 AI로 대체하면서 비용 구조 개선하는 거잖아. 코파일럿이 실제로 생산성 올리고 있다는 증거이고, 절감된 비용이 AI 인프라 투자로 재배분되는 거야. 단기 주가 반응 약해도 중장기 마진 개선 포인트야.",
+    createdAt: T7JL + 35*60_000, likes: 1123, comments: 3 },
+
+  // Tepper Appaloosa TSLA ───────────────────────────────────────────────
+  { id: 450, symbol: "TSLA", nickname: "익명_9978", holdingLabel: "700주 보유",
+    content: "David Tepper Appaloosa가 Q1에 TSLA 신규 포지션 잡은 거 공시 나왔어. 헤지펀드 중에서도 매크로 잘 보는 곳인데 거기서 신규 매수라는 게 의미있어. AI+로보틱스 가치 재평가 시작이라고 보는 거겠지. 기관 수요 밑에 깔리는 느낌이라 개인 투자자 입장에서도 긍정적인 신호야.",
+    createdAt: T7JL + 48*60_000, likes: 1542, comments: 3 },
+
+  // Optimus 중국 대량생산 ──────────────────────────────────────────────
+  { id: 451, symbol: "TSLA", nickname: "익명_1183", holdingLabel: "550주 보유",
+    content: "베이징 디지털경제 포럼에서 Optimus 중국 대량 생산 공식 선언. 기가 상하이 노하우 그대로 적용하면 램프업 속도가 기존 공장보다 훨씬 빠를 거야. 중국 제조 단가 미국 대비 구조적 우위라는 게 단순 인건비 차이가 아니라 공급망 전체가 거기 있다는 거잖아. 아시아 로봇 시장 직접 공략. 밸류에이션 재평가 트리거 맞아.",
+    createdAt: T7JL + 1*3600_000 + 5*60_000, likes: 2189, comments: 5 },
+
+  // MU DRAM AI 낙관론 ──────────────────────────────────────────────────
+  { id: 452, symbol: "MU", nickname: "익명_8867", holdingLabel: "280주 보유",
+    content: "UBS가 MU AI 메모리 낙관론 업그레이드했네. HBM3e 납품 확대 + 일반 DRAM도 AI 서버 수요로 업사이클 진입이라는 분석이야. SK하이닉스 61% 마진 봤으니 MU도 비슷한 구조 오면 PER 기준으로 지금이 싸다는 계산이 성립해. Burry 공매도 맞지 않는 방향이고. HBM4 전환 시점에 추가 상승 여지 있어.",
+    createdAt: T7JL + 50*60_000, likes: 1234, comments: 3 },
+
+  // TSLA 영국 2위 브랜드 ────────────────────────────────────────────────
+  { id: 453, symbol: "TSLA", nickname: "익명_3312", holdingLabel: "200주 보유",
+    content: "TSLA 영국 자동차 브랜드 2위. 재규어 랜드로버, BMW, 메르세데스 다 제치고 2위야. 유럽에서 프리미엄 브랜드 포지션 완전히 잡은 거잖아. Model Y 리프레시 효과가 EU 전역에서 나오고 있는 거야. FSD 유럽 정식 런칭 전인데 이 순위라면 런칭 후 1위 가능성도 있는 거고.",
+    createdAt: T7JL + 1*3600_000 + 20*60_000, likes: 987, comments: 2 },
+
+  // 기가텍사스 신형 컬러 ────────────────────────────────────────────────
+  { id: 454, symbol: "TSLA", nickname: "익명_7741", holdingLabel: "320주 보유",
+    content: "기가텍사스 출하장에서 Cosmic Silver Diamond랑 Stealth Grey 대량 출하 중이래. 신형 컬러 2종이 동시에 출하 단계 들어간 거야. 프리미엄 메탈릭·무광 계열은 ASP 올리는 믹스 개선 효과 있어. Model Y 리프레시 컬러 선택지 늘어나면 대기 수요 끌어오는 효과도 있고. Q3 매출·마진 기대치 유지에 긍정적인 신호야.",
+    createdAt: T7JL + 1*3600_000 + 35*60_000, likes: 876, comments: 2 },
+
+  // Morgan Stanley 포트폴리오 전환 ─────────────────────────────────────
+  { id: 455, symbol: "MSFT", nickname: "익명_5548", holdingLabel: "100주 보유",
+    content: "Morgan Stanley가 MSTR·BKNG·META 팔고 AI+인간 스킬 융합 기업으로 포트폴리오 재편한다는 게 흥미로워. BKNG·META는 AI가 완전히 대체하는 영역이라는 판단이잖아. AI 에이전트 시대에 살아남는 기업 선별 기준이 바뀌는 거야. TSLA·NVDA 같은 물리+AI 융합 기업이 수혜라는 분석인데 공감해.",
+    createdAt: T7JL + 2*3600_000, likes: 1456, comments: 4 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-03 — TSLA Q2 480,126·에너지 13.5GWh·호주·중국 +24.4%·Optimus V3손 /
@@ -1840,6 +1911,62 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-07 신규 ──────────────────────────────────────────────────────
+  443: [
+    { id: 1, nickname: "익명_4411", holdingLabel: "800주 보유", content: "5시간 무개입은 레벨 5 임박 신호예요. HW3 배포까지 완료되면 테슬라 차량 400만대가 전부 FSD v14 Lite 수준이 되는 거잖아요. 구독 전환 폭발적으로 늘어날 거예요.", createdAt: T7JL + 25*60_000, likes: 412 },
+    { id: 2, nickname: "익명_7782", holdingLabel: "관심종목", content: "라스베가스 구간이 사막 직선 고속도로라 쉽다고 할 수 있겠지만 LA 구간 도심 완료한 게 진짜 어려운 거예요. 도심 완주 영상이 설득력 있어요.", createdAt: T7JL + 50*60_000, likes: 298 },
+    { id: 3, nickname: "익명_3391", holdingLabel: "500주 보유", content: "v14 Lite가 이 수준이면 v14 Full, v15 타임라인이 앞당겨지는 거예요. 7월 22일 실적에서 FSD 구독 성장률 언급해주면 주가 크게 뛸 것 같아요.", createdAt: T7JL + 1*3600_000, likes: 367 },
+  ],
+  444: [
+    { id: 1, nickname: "익명_6623", holdingLabel: "250주 보유", content: "합류·터널·교차로 전부 자연스러웠으면 사실상 완성된 거죠. 이제 스케일이 관건이에요. 도시별 인허가 받는 속도가 롤아웃 제한 요인이 될 것 같아요.", createdAt: T7JL + 45*60_000, likes: 234 },
+    { id: 2, nickname: "익명_1156", holdingLabel: "관심종목", content: "구독 $99/월 기준 차 한 대당 연 $1,200 수익이에요. 400만 대 활성화되면 연 $48B 구독 매출이에요. 이게 테슬라 차량 판매 매출이랑 비슷한 수준이에요.", createdAt: T7JL + 1*3600_000 + 15*60_000, likes: 456 },
+  ],
+  445: [
+    { id: 1, nickname: "익명_9934", holdingLabel: "720주 보유", content: "지오펜스 이탈 0건이 핵심이에요. 안전 기록이 깨끗해야 규제 기관이 다음 도시 승인해주거든요. 오스틴 데이터로 무장해서 뉴올리언스·마이애미 인허가 빠르게 받을 수 있을 거예요.", createdAt: T7JL + 40*60_000, likes: 356 },
+    { id: 2, nickname: "익명_5511", holdingLabel: "관심종목", content: "상업지구+공항 집중 커버가 딱 타겟팅 맞아요. 비즈니스 출장객·공항 이동 수요는 요금 탄력성 낮고 반복 이용률 높으니까 단위 수익성 최고예요.", createdAt: T7JL + 1*3600_000 + 5*60_000, likes: 289 },
+  ],
+  446: [
+    { id: 1, nickname: "익명_2278", holdingLabel: "1100주 보유", content: "$0.25/마일이 가능한 건 전력비+감가상각만 있고 기사 없기 때문이에요. 웨이모는 원격 모니터링 인력 비용도 들어가서 단가 내리는 데 한계가 있어요. 구조적 원가 격차예요.", createdAt: T7JL + 1*3600_000, likes: 567 },
+    { id: 2, nickname: "익명_8854", holdingLabel: "300주 보유", content: "20만 마일 수명 계산이 보수적이에요. 배터리 교체하면 프레임은 더 오래 쓰니까요. 택시 ROI 5배면 플릿 사업자들이 Cybercab으로 전환 안 할 이유가 없어요.", createdAt: T7JL + 1*3600_000 + 30*60_000, likes: 423 },
+    { id: 3, nickname: "익명_4467", holdingLabel: "관심종목", content: "웨이모 $4/마일은 현재 가격이지 경쟁 가격 아니에요. Cybercab 본격 출시되면 웨이모도 가격 내릴 텐데 원가 구조상 저가 경쟁하면 웨이모가 지는 거예요.", createdAt: T7JL + 2*3600_000, likes: 334 },
+  ],
+  447: [
+    { id: 1, nickname: "익명_7731", holdingLabel: "600주 보유", content: "Morgan Stanley $465 목표가가 로보택시 수익 반영 전 수치라는 게 중요해요. 1,500대 운영 수익이 추가되면 목표가 상향될 여지 충분히 있어요.", createdAt: T7JL + 1*3600_000 + 20*60_000, likes: 312 },
+    { id: 2, nickname: "익명_3384", holdingLabel: "200주 보유", content: "연말 1,500대는 Cybercab 생산 속도 달려있는데 기가텍사스 풀가동 소식 보면 가능한 숫자예요. 실제로 달성하면 주가 모멘텀 강해질 거예요.", createdAt: T7JL + 1*3600_000 + 45*60_000, likes: 267 },
+  ],
+  448: [
+    { id: 1, nickname: "익명_4448", holdingLabel: "350주 보유", content: "NASDAQ 100 편입이면 단순 시총 증가가 아니라 글로벌 패시브 자금이 자동으로 들어오는 거예요. 전 세계 ETF가 QQQ 추종하는데 편입되면 수십조 원 규모 강제 매수 발생해요.", createdAt: T7JL + 35*60_000, likes: 523 },
+    { id: 2, nickname: "익명_8871", holdingLabel: "100주 보유", content: "비상장이라 정보 접근성이 낮았는데 NASDAQ 100 편입으로 분석 커버리지도 늘어날 거예요. 기관 투자 유입 구조가 완전히 달라지는 이벤트예요.", createdAt: T7JL + 55*60_000, likes: 412 },
+    { id: 3, nickname: "익명_2234", holdingLabel: "관심종목", content: "Starlink, Falcon 9 재사용, Starship 상업화까지 모두 진행 중인 회사가 NASDAQ에 있는 거잖아요. TSLA 초기보다 기회 더 클 수 있어요.", createdAt: T7JL + 1*3600_000 + 15*60_000, likes: 678 },
+  ],
+  449: [
+    { id: 1, nickname: "익명_6618", holdingLabel: "80주 보유", content: "AI 해고가 맞는 방향이에요. 반복 작업 AI로 자동화 → 비용 절감 → AI 인프라 재투자 → 더 강한 제품. 이 사이클이 Azure·Copilot에서 이미 증명되고 있어요.", createdAt: T7JL + 55*60_000, likes: 198 },
+    { id: 2, nickname: "익명_3391", holdingLabel: "50주 보유", content: "단기 주가 약하면 매수 기회예요. MSFT는 AI 전환 가장 앞선 빅테크 중 하나인데 일시적 노이즈에 빠지면 좋은 진입 포인트 나와요.", createdAt: T7JL + 1*3600_000 + 10*60_000, likes: 156 },
+  ],
+  450: [
+    { id: 1, nickname: "익명_5519", holdingLabel: "400주 보유", content: "Tepper는 단순 성장주 매수가 아니라 매크로 사이클 맞는 시점에 집중 베팅하는 사람이에요. Q1에 TSLA 신규 진입이면 로보택시 상용화 타이밍 맞다고 판단한 거예요.", createdAt: T7JL + 1*3600_000 + 5*60_000, likes: 289 },
+    { id: 2, nickname: "익명_7744", holdingLabel: "관심종목", content: "기관들이 Q1 13F 보면 TSLA 신규 진입·증량이 많이 보여요. 개인 투자자 진입 전에 기관이 먼저 쌓는 패턴이에요. 시그널이에요.", createdAt: T7JL + 1*3600_000 + 30*60_000, likes: 234 },
+  ],
+  451: [
+    { id: 1, nickname: "익명_2267", holdingLabel: "750주 보유", content: "베이징 포럼에서 공식 발표라는 게 중국 정부도 암묵적으로 지지한다는 신호예요. 기가 상하이가 EV 량프업 최단 기록인데 Optimus도 그 노하우 그대로 쓰면 진짜 빠를 거예요.", createdAt: T7JL + 1*3600_000 + 25*60_000, likes: 423 },
+    { id: 2, nickname: "익명_8823", holdingLabel: "300주 보유", content: "중국 공장이면 아시아 전체 공급망 접근성이 완전히 달라져요. 일본·한국·동남아 B2B 고객 타깃으로 Optimus 직접 공급하는 게 현실화되는 거예요.", createdAt: T7JL + 2*3600_000 + 10*60_000, likes: 356 },
+    { id: 3, nickname: "익명_1138", holdingLabel: "관심종목", content: "EV는 중국 경쟁 때문에 마진 압박 받는데 Optimus는 초기 시장이라 마진 구조 자체가 달라요. 테슬라 밸류에이션 EV 기준 아닌 로보틱스 기준으로 볼 때가 왔어요.", createdAt: T7JL + 2*3600_000 + 45*60_000, likes: 489 },
+  ],
+  452: [
+    { id: 1, nickname: "익명_9956", holdingLabel: "200주 보유", content: "UBS 업그레이드 타이밍이 HBM 사이클 초입이라는 거예요. SK하이닉스 61% 마진 발표 후에 MU 선제 업그레이드면 MU 다음 실적 미리 보는 거예요.", createdAt: T7JL + 1*3600_000 + 15*60_000, likes: 234 },
+    { id: 2, nickname: "익명_4423", holdingLabel: "150주 보유", content: "Burry 공매도 타이밍이 HBM 사이클 모른 거예요. 일반 DRAM만 보면 공매도 맞는데 HBM3e 마진 보면 완전히 다른 이야기예요.", createdAt: T7JL + 1*3600_000 + 40*60_000, likes: 178 },
+  ],
+  453: [
+    { id: 1, nickname: "익명_7712", holdingLabel: "180주 보유", content: "영국 2위가 FSD 유럽 승인도 안 된 상태에서 나온 거잖아요. FSD 정식 런칭되면 판매 더 올라가는 거예요. 리프레시 Model Y 유럽 반응 아주 좋아요.", createdAt: T7JL + 1*3600_000 + 45*60_000, likes: 189 },
+  ],
+  454: [
+    { id: 1, nickname: "익명_3348", holdingLabel: "420주 보유", content: "Cosmic Silver Diamond 실물 사진 봤는데 진짜 고급스러워요. 기존 실버보다 훨씬 고급스러운 느낌이에요. 프리미엄 가격대 유지하면서 ASP 올리는 전략 맞아요.", createdAt: T7JL + 1*3600_000 + 55*60_000, likes: 234 },
+  ],
+  455: [
+    { id: 1, nickname: "익명_8867", holdingLabel: "200주 보유", content: "AI 시대 살아남는 기업 선별 기준이 바뀌고 있어요. 단순 SW 서비스는 AI 에이전트가 대체하는데 물리 세계와 연결된 기업은 못 대체해요. TSLA가 딱 그 포지션이에요.", createdAt: T7JL + 2*3600_000 + 15*60_000, likes: 312 },
+    { id: 2, nickname: "익명_5531", holdingLabel: "관심종목", content: "MSTR·BKNG 매도라는 게 흥미로워요. Morgan Stanley가 이미 AI 대체 속도 생각보다 빠르다고 판단한 거잖아요. 포트폴리오 재편이 시장 전반으로 확산될 신호일 수 있어요.", createdAt: T7JL + 2*3600_000 + 35*60_000, likes: 267 },
+  ],
+
   // ── 2026-07-06 신규 ──────────────────────────────────────────────────────
   435: [
     { id: 1, nickname: "익명_4812", holdingLabel: "600주 보유", content: "Cybercab 생산 테스트 진입이 제일 임팩트 있어요. 아직 주가에 덜 반영된 것 같은데 대량 생산 발표 나오면 완전히 다른 레벨이에요.", createdAt: T6JL + 30*60_000, likes: 387 },

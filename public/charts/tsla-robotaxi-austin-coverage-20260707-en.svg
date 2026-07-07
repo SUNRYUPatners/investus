@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#00b377"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="5" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="32" rx="8" fill="#00e5a0"/>
+  <text x="100" y="107" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#040a14" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="130" height="32" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="217" y="107" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Robotaxi</text>
+  <text x="1020" y="107" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.07</text>
+
+  <text x="540" y="170" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Austin Robotaxi Service Coverage Heatmap</text>
+  <text x="540" y="210" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#00e5a0" text-anchor="middle">20-Day Ride Data</text>
+  <text x="540" y="250" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Zero geofence violations · Commercial + airport hub concentrated coverage</text>
+
+  <rect x="80" y="280" width="920" height="480" rx="14" fill="#071520" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Top 5 Corridors by Ride Count</text>
+
+  <rect x="120" y="340" width="760" height="52" rx="8" fill="#00e5a0"/>
+  <text x="136" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#040a14">1. Lamar Blvd</text>
+  <text x="864" y="372" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#040a14" text-anchor="end">45 rides</text>
+
+  <rect x="120" y="406" width="507" height="52" rx="8" fill="#00c780"/>
+  <text x="136" y="438" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#040a14">2. Riverside Dr</text>
+  <text x="621" y="438" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#040a14" text-anchor="end">30 rides</text>
+
+  <rect x="120" y="472" width="405" height="52" rx="8" fill="#00a866"/>
+  <text x="136" y="504" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ffffff">3. Airport Blvd</text>
+  <text x="519" y="504" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#ffffff" text-anchor="end">24 rides</text>
+
+  <rect x="120" y="538" width="287" height="52" rx="8" fill="#007a4a"/>
+  <text x="136" y="570" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ffffff">4. 1st St</text>
+  <text x="401" y="570" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#ffffff" text-anchor="end">17 rides</text>
+
+  <rect x="120" y="604" width="254" height="52" rx="8" fill="#005c37"/>
+  <text x="136" y="636" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ffffff">5. 12th St</text>
+  <text x="368" y="636" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#ffffff" text-anchor="end">15 rides</text>
+
+  <text x="540" y="718" font-family="Arial, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Source: Grant Malson, WallSt — 20-day Austin Robotaxi interaction data</text>
+
+  <rect x="80" y="782" width="284" height="110" rx="14" fill="#071520" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="222" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Violations</text>
+  <text x="222" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#4ade80" text-anchor="middle">ZERO</text>
+  <text x="222" y="880" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Zero geofence violations</text>
+
+  <rect x="398" y="782" width="284" height="110" rx="14" fill="#071520" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Data Window</text>
+  <text x="540" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#4ade80" text-anchor="middle">20 Days</text>
+  <text x="540" y="880" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Interaction Data</text>
+
+  <rect x="716" y="782" width="284" height="110" rx="14" fill="#071520" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="858" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#22c55e" text-anchor="middle">Coverage</text>
+  <text x="858" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#4ade80" text-anchor="middle">Stable</text>
+  <text x="858" y="880" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Geofence Compliant</text>
+
+  <rect x="80" y="912" width="920" height="68" rx="14" fill="#071520" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="948" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">20-day zero-violation data = Austin commercialization validated → new city expansion accelerates</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.07 · investus.kr SRP Chief Investment Officer</text>
+</svg>
