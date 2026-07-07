@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.08</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">Daily Summary</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · NVDA · SPCX · PLTR · Treasury</text>
+
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">1. NVDA Kyber Rack — Co-packed Optics Architecture</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Photonic integration in single rack · NVLink scale-up fabric · Direct optical GPU connections</text>
+
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">2. TSLA Optiwatts — AI Home Energy Management Launch</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Powerwall 3F + Solar + Grid auto-optimization · Set goal once, maximize savings</text>
+
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">3. TSLA Optimus Hiring — Palo Alto TPM Position Open</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Robotics Technical Program Manager, Electronics · Req. 276028 · Full-time</text>
+
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">4. SPCX QQQ Auto-Buy — $800B AUM ETFs Execute</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Invesco QQQ + others must buy at Monday's closing price · SPCX +1.89%</text>
+
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">5. TSLA Impact Report — FSD 8x Safer Than US Average</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">8x fewer major · 7x fewer minor · 6x fewer off-highway collisions · 11B+ miles</text>
+
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">6. TSLA Model Y — $0.77/mi vs BMW X3 $1.15 (33% cheaper)</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Impact Report p.13 · Hyundai IONIQ5 $0.85 · Toyota RAV4 $0.81 · TCO wins</text>
+
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#1a1000" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#f59e0b"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f59e0b">7. TSLA Cybercab Spotted — Austin + Fort Worth + Dallas</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Multiple north Austin sites · Fort Worth spotted · Dallas testing · commercialization near</text>
+
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">8. PLTR Q2 2026 — Revenue TTM +67.7% YoY, ~$6B</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Palantir growth accelerating · AI platform demand exploding · Govt + commercial</text>
+
+  <rect x="64" y="1030" width="952" height="80" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <rect x="64" y="1030" width="6" height="80" rx="3" fill="#f87171"/>
+  <text x="96" y="1066" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171">9. US Treasury Internal Report — AI Bubble Warning</text>
+  <text x="96" y="1092" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Similar risks to Dot-Com bubble · Public bullish vs private warning · Bessent $750B praise</text>
+
+  <rect x="64" y="1126" width="952" height="80" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="1126" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="1162" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">10. SPCX Raymond James Strong Buy — $550 Price Target</text>
+  <text x="96" y="1188" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Raymond James Strong Buy · Significant upside from current levels implied</text>
+
+  <rect x="0" y="1290" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1326" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP Chief Investment Officer</text>
+</svg>

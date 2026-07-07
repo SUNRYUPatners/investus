@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#041408"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#059669"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">임팩트 리포트</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla 임팩트 리포트 '25 — 마일당 비용</text>
+  <text x="540" y="270" font-family="Arial Black, Arial" font-weight="900" font-size="100" fill="#00e5a0" text-anchor="middle">$0.77</text>
+  <text x="540" y="322" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#10b981" text-anchor="middle">per mile · Model Y</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">임팩트 리포트 p.13 — 경쟁 SUV 대비 최저 비용</text>
+
+  <rect x="80" y="398" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="200" y="432" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#00e5a0">Tesla Model Y</text>
+  <text x="880" y="432" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00e5a0" text-anchor="end">$0.77</text>
+  <text x="200" y="462" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">임팩트 리포트 p.13</text>
+  <text x="880" y="462" font-family="Arial, sans-serif" font-size="13" fill="#6ee7b7" text-anchor="end">최저가 ✓</text>
+
+  <rect x="80" y="494" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#374151" stroke-width="1.5"/>
+  <text x="200" y="528" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#9ca3af">Hyundai IONIQ 5</text>
+  <text x="880" y="528" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#6b7280" text-anchor="end">$0.85</text>
+  <text x="200" y="558" font-family="Arial, sans-serif" font-size="14" fill="#4b5563">Model Y 대비 +10%</text>
+
+  <rect x="80" y="590" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#374151" stroke-width="1.5"/>
+  <text x="200" y="624" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#9ca3af">Toyota RAV4</text>
+  <text x="880" y="624" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#6b7280" text-anchor="end">$0.81</text>
+  <text x="200" y="654" font-family="Arial, sans-serif" font-size="14" fill="#4b5563">Model Y 대비 +5%</text>
+
+  <rect x="80" y="686" width="920" height="80" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <text x="200" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#f87171">BMW X3</text>
+  <text x="880" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#f87171" text-anchor="end">$1.15</text>
+  <text x="200" y="750" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Model Y 대비 +49%</text>
+
+  <rect x="80" y="790" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="826" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">비용 절감 효과</text>
+  <text x="540" y="856" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">BMW X3 대비 33% 저렴 · 10만 마일 기준 $38,000 절감</text>
+
+  <rect x="80" y="900" width="920" height="70" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="942" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">TCO 우위 = 브랜드 가치 + 재구매 선호도 장기 지지 요인</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

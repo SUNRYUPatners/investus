@@ -335,6 +335,23 @@ const PAIRS = [
   { ko: 'tsla-giga-texas-colors-20260707.svg',     en: 'tsla-giga-texas-colors-20260707-en.svg',     label: 'TSLA_기가텍사스컬러',    date: '20260707' },
   { ko: 'ms-portfolio-shift-20260707.svg',         en: 'ms-portfolio-shift-20260707-en.svg',         label: 'MS_포트폴리오전환',      date: '20260707' },
   { ko: 'summary-20260707.svg',                    en: 'summary-20260707-en.svg',                    label: '7월07일_요약',           date: '20260707' },
+  { ko: 'nvda-kyber-rack-20260708.svg',           en: 'nvda-kyber-rack-20260708-en.svg',           label: 'NVDA_KyberRack',         date: '20260708' },
+  { ko: 'tsla-home-energy-optiwatts-20260708.svg',en: 'tsla-home-energy-optiwatts-20260708-en.svg',label: 'TSLA_Optiwatts',         date: '20260708' },
+  { ko: 'tsla-optimus-job-20260708.svg',          en: 'tsla-optimus-job-20260708-en.svg',          label: 'TSLA_OptimusJob',        date: '20260708' },
+  { ko: 'oil-arab-light-crude-20260708.svg',      en: 'oil-arab-light-crude-20260708-en.svg',      label: 'OIL_ArabLight',          date: '20260708' },
+  { ko: 'spcx-qqq-wsj-20260708.svg',             en: 'spcx-qqq-wsj-20260708-en.svg',             label: 'SPCX_QQQ_WSJ',           date: '20260708' },
+  { ko: 'tsla-impact-cybercab-gpu-20260708.svg',  en: 'tsla-impact-cybercab-gpu-20260708-en.svg',  label: 'TSLA_CybercabGPU',       date: '20260708' },
+  { ko: 'tsla-impact-fsd-safety-20260708.svg',    en: 'tsla-impact-fsd-safety-20260708-en.svg',    label: 'TSLA_FSDSafety',         date: '20260708' },
+  { ko: 'tsla-impact-300features-20260708.svg',   en: 'tsla-impact-300features-20260708-en.svg',   label: 'TSLA_300Features',       date: '20260708' },
+  { ko: 'tsla-impact-modely-cost-20260708.svg',   en: 'tsla-impact-modely-cost-20260708-en.svg',   label: 'TSLA_ModelYCost',        date: '20260708' },
+  { ko: 'pltr-revenue-growth-20260708.svg',       en: 'pltr-revenue-growth-20260708-en.svg',       label: 'PLTR_Revenue',           date: '20260708' },
+  { ko: 'treasury-ai-bubble-20260708.svg',        en: 'treasury-ai-bubble-20260708-en.svg',        label: 'Treasury_AIBubble',      date: '20260708' },
+  { ko: 'spcx-raymond-james-550-20260708.svg',    en: 'spcx-raymond-james-550-20260708-en.svg',    label: 'SPCX_RJ550',             date: '20260708' },
+  { ko: 'tsla-cybercab-spotted-20260708.svg',     en: 'tsla-cybercab-spotted-20260708-en.svg',     label: 'TSLA_CybercabSpotted',   date: '20260708' },
+  { ko: 'tsla-cybercab-fleet-ebitda-20260708.svg',en: 'tsla-cybercab-fleet-ebitda-20260708-en.svg',label: 'TSLA_FleetEBITDA',       date: '20260708' },
+  { ko: 'anthropic-overtakes-openai-20260708.svg',en: 'anthropic-overtakes-openai-20260708-en.svg',label: 'Anthropic_OpenAI',       date: '20260708' },
+  { ko: 'tsla-megapack-global-15gw-20260708.svg', en: 'tsla-megapack-global-15gw-20260708-en.svg', label: 'TSLA_Megapack15GW',      date: '20260708' },
+  { ko: 'summary-20260708.svg',                   en: 'summary-20260708-en.svg',                   label: '7월08일_요약',            date: '20260708' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

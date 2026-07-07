@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#041408"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#059669"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Impact Report</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla Impact Report '25 — OTA Updates</text>
+  <text x="540" y="280" font-family="Arial Black, Arial" font-weight="900" font-size="110" fill="#00e5a0" text-anchor="middle">+300</text>
+  <text x="540" y="330" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#10b981" text-anchor="middle">New Features Deployed Globally</text>
+  <text x="540" y="374" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">300+ new or updated features in 2025 · Deployed to owners worldwide</text>
+
+  <rect x="80" y="406" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="444" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">OTA Recall Resolution Rate</text>
+  <text x="540" y="476" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#00e5a0" text-anchor="middle">98%</text>
+  <text x="540" y="506" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">98% of recalls in 2025 resolved through over-the-air software updates</text>
+
+  <rect x="80" y="540" width="920" height="130" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="576" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Tesla as a Software Company</text>
+  <text x="540" y="610" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">Features keep adding after delivery → vehicle value increases over time</text>
+  <text x="540" y="636" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">Recalls need no factory visit → 95% service cost eliminated</text>
+  <text x="540" y="662" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Not a durable good · Tesla = continuously improving software platform</text>
+
+  <rect x="80" y="694" width="430" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="295" y="734" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">2025 New Features</text>
+  <text x="295" y="776" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#00e5a0" text-anchor="middle">+300</text>
+  <text x="295" y="808" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">Deployed globally</text>
+
+  <rect x="570" y="694" width="430" height="120" rx="14" fill="#071a10" stroke="#10b981" stroke-width="1.5"/>
+  <text x="785" y="734" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#10b981" text-anchor="middle">OTA Recall Resolution</text>
+  <text x="785" y="776" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#10b981" text-anchor="middle">98%</text>
+  <text x="785" y="808" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">Wireless updates</text>
+
+  <rect x="80" y="840" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="876" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Investment Thesis</text>
+  <text x="540" y="902" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">OTA = service cost elimination + product value retention → industry-leading loyalty + repurchase</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP Chief Investment Officer</text>
+</svg>

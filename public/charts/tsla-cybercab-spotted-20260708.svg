@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#041408"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#059669"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">로보택시</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Cybercab 멀티 도시 동시 포착</text>
+  <text x="540" y="258" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#00e5a0" text-anchor="middle">AUSTIN</text>
+  <text x="540" y="310" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#10b981" text-anchor="middle">+ FORT WORTH + DALLAS</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">텍사스 북부 전역 Cybercab 스카우팅 — 상용화 초읽기</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">포착 현황</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">북부 오스틴 여러 운영 거점 + 포트워스 + 달라스 테스트</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">텍사스 번호판 · 공장 진출 예상 · 운행 테스트 확인</text>
+
+  <rect x="80" y="526" width="920" height="130" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">텍사스 확장 전략</text>
+  <text x="540" y="596" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">오스틴 Giga Texas 로컬 Cybercab 배차 최단 경로</text>
+  <text x="540" y="622" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">DFW 메트로 = 미국 4위 대도시권 → 고수요 로보택시 시장</text>
+  <text x="540" y="648" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">포트워스까지 반경 확대 = 텍사스 삼각지대 장악 신호</text>
+
+  <rect x="80" y="680" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="218" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">오스틴</text>
+  <text x="218" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#00e5a0" text-anchor="middle">다수 거점</text>
+  <text x="218" y="796" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">북부 전역 확인</text>
+
+  <rect x="402" y="680" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">포트워스</text>
+  <text x="540" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#00e5a0" text-anchor="middle">포착</text>
+  <text x="540" y="796" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">광역 확장</text>
+
+  <rect x="724" y="680" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="862" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">달라스</text>
+  <text x="862" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#00e5a0" text-anchor="middle">테스트</text>
+  <text x="862" y="796" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">DFW 진출</text>
+
+  <rect x="80" y="826" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">멀티 도시 동시 스카우팅 = 상용화 직전 단계 — 오스틴 발 DFW 메트로 장악 임박</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

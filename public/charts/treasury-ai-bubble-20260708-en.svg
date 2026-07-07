@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#1a0808"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f87171"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#dc2626"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MACRO</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#f87171" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f87171" text-anchor="middle">Risk Warning</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">US Treasury Internal Report Leaked</text>
+  <text x="540" y="258" font-family="Arial Black, Arial" font-weight="900" font-size="58" fill="#f87171" text-anchor="middle">AI BUBBLE</text>
+  <text x="540" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#ef4444" text-anchor="middle">WARNING</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Similar risks to Dot-Com bubble — US Treasury Internal Report</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#1a0808" stroke="#f87171" stroke-width="1.5"/>
+  <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171" text-anchor="middle">Public vs Private Mismatch</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Trump admin public: AI bullish · Treasury internal: AI bubble danger warning</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Sec. Bessent publicly praised $750B AI investment — contradicts internal warning</text>
+
+  <rect x="80" y="526" width="920" height="130" rx="16" fill="#1a0808" stroke="#f87171" stroke-width="2"/>
+  <text x="540" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171" text-anchor="middle">Internal Report Content</text>
+  <text x="540" y="596" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">AI investment bubble carries risks similar to Dot-Com collapse</text>
+  <text x="540" y="622" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">Gap between investor expectations and achievable returns</text>
+  <text x="540" y="648" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Unlike public statements, internally warning about AI investment risks</text>
+
+  <rect x="80" y="680" width="430" height="120" rx="14" fill="#1a0808" stroke="#f87171" stroke-width="1.5"/>
+  <text x="295" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f87171" text-anchor="middle">Public Stance</text>
+  <text x="295" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#f87171" text-anchor="middle">Bullish</text>
+  <text x="295" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">$750B AI praise</text>
+
+  <rect x="570" y="680" width="430" height="120" rx="14" fill="#1a0808" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="785" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ef4444" text-anchor="middle">Internal Warning</text>
+  <text x="785" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ef4444" text-anchor="middle">Dot-Com</text>
+  <text x="785" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">Bubble risk alert</text>
+
+  <rect x="80" y="826" width="920" height="90" rx="14" fill="#1a0808" stroke="#f87171" stroke-width="1"/>
+  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#f87171" text-anchor="middle">Investment Thesis</text>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Diversify AI exposure · Separate actual revenue generators from pure-hype plays</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP Chief Investment Officer</text>
+</svg>

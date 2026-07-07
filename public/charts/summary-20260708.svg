@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.08</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">오늘의 한장 요약</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · NVDA · SPCX · PLTR · Treasury</text>
+
+  <!-- item 1: NVDA Kyber -->
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">1. NVDA Kyber 랙 — Co-packed Optics 아키텍처</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">광집적 단일 랙 구현 · NVLink 스케일업 패브릭 · GPU 직접 광연결 혁신</text>
+
+  <!-- item 2: TSLA Optiwatts -->
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">2. TSLA Optiwatts — AI 홈 에너지 관리 출시</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Powerwall 3F + 태양광 + 그리드 자동 최적화 · 목표 설정만으로 요금 절감</text>
+
+  <!-- item 3: TSLA Optimus job -->
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">3. TSLA Optimus 공식 채용 — Palo Alto TPM 포지션</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">로보틱스 전자공학 TPM · Req. ID 276028 · 풀타임 정규직</text>
+
+  <!-- item 4: SPCX QQQ -->
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">4. SPCX QQQ 자동 매수 — $8000억 AUM ETF 집행</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">인베스코 QQQ 포함 월요일 종가 기준 강제 매수 · SPCX +1.89%</text>
+
+  <!-- item 5: FSD safety -->
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">5. TSLA 임팩트 리포트 — FSD 안전성 미국 평균 대비 8배</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">대형 충돌 8배·소형 충돌 7배·도로이탈 6배 감소 · 110억 마일 데이터</text>
+
+  <!-- item 6: Model Y cost -->
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">6. TSLA Model Y — 마일당 $0.77 (BMW X3 $1.15 대비 33% 저렴)</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">임팩트 리포트 p.13 · Hyundai IONIQ5 $0.85 · Toyota RAV4 $0.81 압도</text>
+
+  <!-- item 7: Cybercab spotted -->
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#1a1000" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#f59e0b"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f59e0b">7. TSLA Cybercab 오스틴·포트워스·달라스 동시 포착</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">북부 오스틴 전역 · 포트워스 포착 · 달라스 테스트 · 상용화 임박</text>
+
+  <!-- item 8: PLTR -->
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">8. PLTR Q2 2026 — 매출 TTM +67.7% YoY, ~$60억 달성</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">팔란티어 분기 성장 가속 · AI 플랫폼 수요 폭발 · 정부+민간 동반 확장</text>
+
+  <!-- item 9: Treasury AI bubble -->
+  <rect x="64" y="1030" width="952" height="80" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <rect x="64" y="1030" width="6" height="80" rx="3" fill="#f87171"/>
+  <text x="96" y="1066" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171">9. US Treasury 내부 보고서 — AI 버블 닷컴과 유사 경고</text>
+  <text x="96" y="1092" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">트럼프 정부 공개 강세 vs 재무부 내부 비밀 경고 · 베선트 $7500억 투자 칭찬</text>
+
+  <!-- item 10: SPCX Raymond James -->
+  <rect x="64" y="1126" width="952" height="80" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="1126" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="1162" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">10. SPCX Raymond James Strong Buy — 목표가 $550</text>
+  <text x="96" y="1188" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">레이먼드 제임스 강력 매수 · 현재가 대비 상당한 상승 여력 시사</text>
+
+  <rect x="0" y="1290" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1326" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

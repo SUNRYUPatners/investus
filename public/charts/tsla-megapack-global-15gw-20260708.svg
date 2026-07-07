@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#041408"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#059669"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">에너지 사업</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla Megapack 글로벌 에너지 저장 확대</text>
+  <text x="540" y="268" font-family="Arial Black, Arial" font-weight="900" font-size="90" fill="#00e5a0" text-anchor="middle">15GW</text>
+  <text x="540" y="320" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#10b981" text-anchor="middle">by 2028</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">UK · 유럽 · 호주 배터리 에너지 저장 공급 계획 — Wood Mackenzie</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Wood Mackenzie 리포트 핵심</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Tesla, 2028년까지 UK·유럽·호주 및 그 이상 15GW 이상 배터리 저장 공급 계획</text>
+  <text x="540" y="488" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Megapack 글로벌 에너지 저장 시장 주도 전략 확인</text>
+
+  <rect x="80" y="532" width="920" height="130" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">글로벌 확장 지역</text>
+  <text x="540" y="602" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">UK: 재생에너지 전환 가속 → 그리드 안정화 수요</text>
+  <text x="540" y="628" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">유럽: 에너지 안보 강화 → Megapack 전략적 자산</text>
+  <text x="540" y="654" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">호주: 재생에너지 비중 60%+ → 저장 인프라 필수</text>
+
+  <rect x="80" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="218" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">목표 공급량</text>
+  <text x="218" y="768" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#00e5a0" text-anchor="middle">15GW+</text>
+  <text x="218" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">2028년까지</text>
+
+  <rect x="402" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">주요 시장</text>
+  <text x="540" y="756" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#00e5a0" text-anchor="middle">UK + EU</text>
+  <text x="540" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">+ 호주</text>
+
+  <rect x="724" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#10b981" stroke-width="1.5"/>
+  <text x="862" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#10b981" text-anchor="middle">출처</text>
+  <text x="862" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#10b981" text-anchor="middle">Wood</text>
+  <text x="862" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">Mackenzie</text>
+
+  <rect x="80" y="830" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="866" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="892" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Tesla Energy = 두 번째 성장 엔진 확정 → EV 의존도 희석 + 에너지 인프라 기업 재평가</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

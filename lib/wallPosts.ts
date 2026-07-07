@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T8JL = 1783465200000; // 2026-07-08 08:00 KST
 const T7JL = 1783378800000; // 2026-07-07 08:00 KST
 const T6JL = 1783292400000; // 2026-07-06 08:00 KST
 const T4JL = 1783119600000; // 2026-07-04 08:00 KST
@@ -48,7 +49,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T7JL;       // NEW 배지 기준
+export const LATEST_UPDATE = T8JL;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -67,6 +68,94 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-08 — NVDA Kyber 랙·TSLA Optiwatts·Optimus 채용·아랍 라이트 할인·
+  //              SPCX QQQ 편입·Tesla 임팩트 리포트(Cybercab GPU·FSD 8배·
+  //              +300 기능·Model Y $0.77)·PLTR +67.7%·재무부 AI 버블·
+  //              SPCX RJ $550·Cybercab 오스틴/DFW·플릿 EBITDA·
+  //              Anthropic #1·Megapack 15GW
+  // ════════════════════════════════════════════════════════════════════════
+
+  // NVDA Kyber 랙 ───────────────────────────────────────────────────────
+  { id: 456, symbol: "NVDA", nickname: "익명_3821", holdingLabel: "45주 보유",
+    content: "NVDA Kyber 랙 발표 봤어? Co-packed Optics 아키텍처로 GPU를 광섬유로 직결하는 거야. 구리 케이블 대체해서 NVLink 대역폭 한계 돌파. 단일 랙·멀티 랙 구성 모두 지원한다는데 AI 클러스터 성능이 한 단계 올라가는 거잖아. 데이터센터 업그레이드 수요 폭발할 것 같음.",
+    createdAt: T8JL + 8*60_000, likes: 1876, comments: 4 },
+
+  // TSLA Optiwatts 홈 에너지 ────────────────────────────────────────────
+  { id: 457, symbol: "TSLA", nickname: "익명_6142", holdingLabel: "280주 보유",
+    content: "Tesla Optiwatts 출시됐네. AI 홈 에너지 관리 시스템인데 태양광 발전 예측+날씨+전력 요금을 AI가 분석해서 자동 최적화해줌. Powerwall 3F·태양광·그리드·Wall Connector 통합 제어. '목표 설정→AI 자동 최적화→실시간 모니터링' 3단계야. Tesla Energy가 진짜 EV+배터리+AI 완전한 홈 생태계 만들어가고 있어.",
+    createdAt: T8JL + 15*60_000, likes: 2134, comments: 5 },
+
+  // TSLA Optimus 채용 ───────────────────────────────────────────────────
+  { id: 458, symbol: "TSLA", nickname: "익명_9473", holdingLabel: "150주 보유",
+    content: "테슬라 공식 채용공고 떴음. Robotics Technical Program Manager, Electronics, Optimus 포지션. Req ID: 276028, Palo Alto CA 정규직이야. 주요 업무가 Optimus 로봇 전력 분배 시스템 디자인 주도, 고속·고전력 전자공학 엔드투엔드 협업이래. 연산·비전·펌웨어·테스트 팀 조율까지. 채용 공고 열릴 때마다 개발 단계 힌트 읽을 수 있음.",
+    createdAt: T8JL + 22*60_000, likes: 1543, comments: 3 },
+
+  // Arab Light Crude 할인 ───────────────────────────────────────────────
+  { id: 459, symbol: "XOM", nickname: "익명_5267", holdingLabel: "관심종목",
+    content: "사우디 아람코 Arab Light Crude 가격 -1.50. 2020년 이후 처음으로 마이너스 할인 구간 진입한 거야. 올해 5월 31일 고점이 +19.50이었으니까 낙폭이 엄청나네. 2020년 5월 저점이 -7.30이었는데 그 방향으로 가는 건지. OPEC+ 증산+글로벌 수요 둔화가 원인인데 에너지 인플레이션 압력 완화 → 연준 금리 인하 논거 강화되는 거잖아.",
+    createdAt: T8JL + 30*60_000, likes: 987, comments: 2 },
+
+  // SPCX QQQ 편입 ───────────────────────────────────────────────────────
+  { id: 460, symbol: "SPCX", nickname: "익명_1894", holdingLabel: "200주 보유",
+    content: "WSJ 보도 확인. SpaceX NASDAQ-100 편입 공식화됨. $8000억 AUM ETF가 월요일 종가 기준 강제 매수 집행이야. SPCX +1.89% 떴고 인베스코 QQQ 포함 전 세계 패시브 펀드 전체가 의무 매수 발동임. QQQ 보유자는 자동으로 SpaceX 노출 생기는 거고 기관 적격 투자 자격도 완성되는 거잖아. 유동성 급증 예상.",
+    createdAt: T8JL + 38*60_000, likes: 2789, comments: 7 },
+
+  // TSLA 임팩트 리포트 — Cybercab GPU ──────────────────────────────────
+  { id: 461, symbol: "TSLA", nickname: "익명_7356", holdingLabel: "520주 보유",
+    content: "Tesla 임팩트 리포트 '25 p.23 데이터가 충격적임. Cybercab 1대로 11개월 운행하면 GPU 1대 1년 가동 동안 발생한 탄소 배출량 전부 상쇄할 수 있대. AI 인프라 환경 비용을 Cybercab이 상쇄하는 구조야. Cybercab은 전기 구동이라 화석연료 배출 0인데 GPU는 연 수천 kWh 전력 쓰잖아. Tesla AI = 지구를 위한 AI 인프라. ESG 포지셔닝도 최상위야.",
+    createdAt: T8JL + 45*60_000, likes: 1678, comments: 4 },
+
+  // TSLA 임팩트 리포트 — FSD 안전성 ────────────────────────────────────
+  { id: 462, symbol: "TSLA", nickname: "익명_4031", holdingLabel: "890주 보유",
+    content: "임팩트 리포트 p.77 FSD 안전 데이터. 900만 대, 110억+ 마일 기반 통계야. 미국 국가 평균 대비 대형 충돌 8배 감소, 소형 충돌 7배 감소, 도로이탈 6배 감소. 데이터 규모가 경쟁사랑 비교 자체가 안 됨. 110억 마일 검증된 안전 데이터면 FSD 규제 승인 + 보험료 인하 협상 최강 무기잖아. 웨이모 100만 마일이랑 스케일 자체가 다른 게임임.",
+    createdAt: T8JL + 53*60_000, likes: 2345, comments: 6 },
+
+  // TSLA 임팩트 리포트 — +300 기능 ─────────────────────────────────────
+  { id: 463, symbol: "TSLA", nickname: "익명_8614", holdingLabel: "330주 보유",
+    content: "임팩트 리포트 OTA 데이터. 2025년 신규·업데이트 기능 300개 이상 전 세계 오너에게 배포. 리콜도 98%를 무선 OTA로 해결. 공장 방문 불필요하니까 서비스 비용 95% 절감이야. 차량 출고 후에도 기능 계속 추가되니까 보유 가치가 증가하는 구조. 테슬라는 자동차 아니라 지속 개선되는 소프트웨어 플랫폼임. 내구재가 아닌 거야.",
+    createdAt: T8JL + 1*3600_000 + 2*60_000, likes: 1934, comments: 5 },
+
+  // TSLA 임팩트 리포트 — Model Y 비용 ──────────────────────────────────
+  { id: 464, symbol: "TSLA", nickname: "익명_2587", holdingLabel: "410주 보유",
+    content: "임팩트 리포트 p.13 마일당 비용 비교. Model Y $0.77/마일로 경쟁 SUV 중 최저. Hyundai IONIQ 5는 $0.85, Toyota RAV4 그 이상이야. Model Y가 10%+ 저렴한 거잖아. 전기차 전환 경제성 논쟁 이걸로 종결이네. 마일당 비용 최저라는 게 공인 데이터로 나온 거야. 소비자 구매 결정 바꿀 수 있는 숫자임.",
+    createdAt: T8JL + 1*3600_000 + 12*60_000, likes: 1456, comments: 3 },
+
+  // PLTR 매출 성장 ──────────────────────────────────────────────────────
+  { id: 465, symbol: "PLTR", nickname: "익명_7923", holdingLabel: "120주 보유",
+    content: "PLTR Q2 2026 TTM 매출 ~$60억 달성. YoY 성장률 +67.7%. 성장률 가속 추세 유지 중이야. AIP(AI Platform)로 기업 AI 도입 가속화되고 있고 미국 정부 계약 확대+민간 부문 동반 급증. 데이터 분석+운영 AI = 대체 불가 엔터프라이즈 플랫폼이라는 게 증명되고 있는 거야. 연환산 기준 $6B이면 밸류에이션 재평가 받을 시점임.",
+    createdAt: T8JL + 1*3600_000 + 22*60_000, likes: 2198, comments: 5 },
+
+  // 재무부 AI 버블 경고 ────────────────────────────────────────────────
+  { id: 466, symbol: "QQQ", nickname: "익명_5148", holdingLabel: "관심종목",
+    content: "미국 재무부 내부 보고서 유출됐다는 거 봤어? AI 버블이 닷컴 붕괴랑 유사한 리스크 내포한다는 내용이야. 트럼프 정부가 공개적으로는 $7500억 AI 투자 칭찬하고 있는데 내부에서는 버블 경고 중이라는 거잖아. 베선트 재무장관 공개 발언이랑 내부 경고랑 완전 모순이야. 헤징은 해놓는 게 맞는 것 같음.",
+    createdAt: T8JL + 1*3600_000 + 33*60_000, likes: 1234, comments: 3 },
+
+  // SPCX Raymond James $550 ─────────────────────────────────────────────
+  { id: 467, symbol: "SPCX", nickname: "익명_3659", holdingLabel: "95주 보유",
+    content: "Raymond James가 SPCX Strong Buy, 목표가 $550 제시했어. NASDAQ 100 편입으로 패시브 자금 유입+기관 투자 자격 취득, SpaceX 핵심 사업(Starlink·Falcon·Starship) 성장성 반영한 거야. 현재가에서 상당한 상승 여력 있다고 봤다는 거잖아. 레이먼드 제임스가 공격적 목표가 잘 안 내는 곳인데 $550은 강한 신호야.",
+    createdAt: T8JL + 1*3600_000 + 45*60_000, likes: 2567, comments: 6 },
+
+  // TSLA Cybercab 오스틴/DFW 포착 ──────────────────────────────────────
+  { id: 468, symbol: "TSLA", nickname: "익명_8302", holdingLabel: "670주 보유",
+    content: "Cybercab이 오스틴 북부 여러 거점에서 포착됐고 포트워스, 달라스까지 텍사스 번호판 달고 테스트 중이야. 기가텍사스에서 로컬 Cybercab 배차가 최단 경로로 가능한 거고 DFW 메트로가 미국 4위 대도시권이잖아. 오스틴에서 포트워스까지 반경 확대되면 텍사스 삼각지대 장악 신호야. 상용화 초읽기 맞음.",
+    createdAt: T8JL + 2*3600_000, likes: 3124, comments: 8 },
+
+  // TSLA Cybercab 플릿 EBITDA ───────────────────────────────────────────
+  { id: 469, symbol: "TSLA", nickname: "익명_1475", holdingLabel: "1050주 보유",
+    content: "Morgan Stanley 분석 기반 3만 대 Cybercab 플릿 수익 계산. 연간 $44억 매출, EBITDA $9.14억, 마진 약 21%. 운전기사 인건비 ZERO라 원가 구조가 근본적으로 유리한 거야. 스케일 확장하면 단위 비용 추가 하락→마진 개선 지속. 3만 대 플릿이 테슬라 신규 사업 부문으로 재평가받을 근거가 여기 있어. 2030년 목표 수치인데 현실적으로 보임.",
+    createdAt: T8JL + 2*3600_000 + 15*60_000, likes: 2876, comments: 7 },
+
+  // Anthropic #1 채택률 ─────────────────────────────────────────────────
+  { id: 470, symbol: "NVDA", nickname: "익명_6038", holdingLabel: "관심종목",
+    content: "Ramp 기업 AI 지출 데이터 (2024년 5월). Anthropic이 OpenAI 추월해서 미국 기업 유료 AI 채택률 1위 됐어. OpenAI가 30.73%인데 Anthropic이 그 위야. Google은 5.65%. 모델 품질+안전성 강점이 기업 채택 우위로 이어진 거야. 기업 AI 시장 판도가 바뀌고 있는 거잖아. AI 인프라 수요 자체가 올라가면 NVDA가 제일 많이 받는 거고.",
+    createdAt: T8JL + 2*3600_000 + 30*60_000, likes: 1654, comments: 4 },
+
+  // TSLA Megapack 15GW ──────────────────────────────────────────────────
+  { id: 471, symbol: "TSLA", nickname: "익명_4916", holdingLabel: "760주 보유",
+    content: "Wood Mackenzie 리포트 핵심. Tesla가 2028년까지 UK·유럽·호주 15GW 이상 배터리 저장 공급 계획이야. UK는 재생에너지 전환 가속 → 그리드 안정화 수요, 유럽은 에너지 안보 강화 → Megapack 전략적 자산, 호주는 재생에너지 60%+ 목표 → 저장 인프라 필수. Tesla Energy가 두 번째 성장 엔진 확정인 거야. EV 의존도 희석되고 에너지 인프라 기업으로 재평가받을 거임.",
+    createdAt: T8JL + 2*3600_000 + 45*60_000, likes: 2456, comments: 6 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-07 — TSLA FSD v14Lite LA→Vegas·Austin 로보택시 20일 데이터·
@@ -1911,6 +2000,118 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-08 신규 ──────────────────────────────────────────────────────
+  456: [
+    { id: 1, nickname: "익명_2947", holdingLabel: "30주 보유", content: "Co-packed Optics가 광집적 기술로 NVLink 대역폭 한계 돌파한다는 거잖아요. 구리 케이블 대비 레이턴시가 얼마나 줄어드는지 벤치마크 나오면 데이터센터 교체 수요 폭발할 것 같아요.", createdAt: T8JL + 20*60_000, likes: 312 },
+    { id: 2, nickname: "익명_8153", holdingLabel: "관심종목", content: "랙 단위로 완전 광연결이면 AI 클러스터 구성 방식 자체가 바뀌는 거예요. 기존 인프라 업그레이드 사이클이 Kyber 중심으로 재편되면 NVDA 독점적 지위 더 강해지는 거죠.", createdAt: T8JL + 45*60_000, likes: 278 },
+    { id: 3, nickname: "익명_5614", holdingLabel: "60주 보유", content: "멀티 랙 구성까지 지원하면 하이퍼스케일러들이 전부 Kyber로 갈 거예요. AWS·Azure·Google Cloud 발주 물량 생각하면 수요 규모가 장난 아닌 거예요.", createdAt: T8JL + 1*3600_000 + 10*60_000, likes: 234 },
+    { id: 4, nickname: "익명_3281", holdingLabel: "100주 보유", content: "광섬유로 직결하면 전력 소비도 줄어들어요. 발열 감소→냉각 비용 절감→데이터센터 운영비 줄어드는 거예요. TCO 계산하면 Kyber 랙이 훨씬 유리해요.", createdAt: T8JL + 1*3600_000 + 30*60_000, likes: 189 },
+  ],
+  457: [
+    { id: 1, nickname: "익명_7436", holdingLabel: "180주 보유", content: "Optiwatts가 나오면 Tesla Energy 생태계 완성이에요. 태양광+Powerwall+차량 충전을 AI가 한 번에 최적화하면 경쟁사가 따라올 수 없는 통합 플랫폼이 되는 거예요.", createdAt: T8JL + 28*60_000, likes: 423 },
+    { id: 2, nickname: "익명_2869", holdingLabel: "관심종목", content: "전력 요금 최적화를 AI가 자동으로 해준다는 게 핵심이에요. 시간대별 요금제가 복잡한 미국에서 Optiwatts가 월 수십 달러 절감해주면 Powerwall 구매 동기가 더 강해지는 거예요.", createdAt: T8JL + 50*60_000, likes: 356 },
+    { id: 3, nickname: "익명_9142", holdingLabel: "250주 보유", content: "Wall Connector까지 통합 제어면 차량 충전 타이밍도 AI가 최적화해요. 심야 저요금 때 충전하고 낮에 태양광 자급자족. 실질적 에너지 비용 0에 가까워지는 거예요.", createdAt: T8JL + 1*3600_000 + 5*60_000, likes: 289 },
+    { id: 4, nickname: "익명_6327", holdingLabel: "320주 보유", content: "Powerwall 3F 연동이라는 게 중요해요. 3F가 기존 모델 대비 출력 훨씬 높은데 Optiwatts 최적화까지 더해지면 정전 대비 + 에너지 독립성 완전히 다른 레벨이에요.", createdAt: T8JL + 1*3600_000 + 25*60_000, likes: 234 },
+    { id: 5, nickname: "익명_4758", holdingLabel: "관심종목", content: "Tesla가 EV 회사에서 에너지 플랫폼 회사로 전환되는 게 눈에 보이는 시점이에요. Optiwatts, Megapack, Cybercab, Optimus 다 연결되면 밸류에이션 완전히 달라져요.", createdAt: T8JL + 1*3600_000 + 45*60_000, likes: 378 },
+  ],
+  458: [
+    { id: 1, nickname: "익명_1923", holdingLabel: "100주 보유", content: "전력 분배 시스템 포지션이라는 게 Optimus 개발 단계 보여주는 거예요. 전자·전력 엔지니어링 채용이면 하드웨어 완성도 높이는 단계인 거잖아요.", createdAt: T8JL + 35*60_000, likes: 267 },
+    { id: 2, nickname: "익명_7614", holdingLabel: "관심종목", content: "Palo Alto CA 정규직이면 본사 R&D 핵심 포지션이에요. 외부 계약직 아니라 정규직 채용이면 장기 프로젝트 속도 올린다는 신호예요.", createdAt: T8JL + 55*60_000, likes: 198 },
+    { id: 3, nickname: "익명_5389", holdingLabel: "200주 보유", content: "연산·비전·펌웨어·테스트 팀 조율까지 TPM이면 멀티팀 통합 관리자예요. 대규모 양산 준비 조직 구조 만드는 거잖아요. 양산 타임라인 앞당겨질 수 있어요.", createdAt: T8JL + 1*3600_000 + 15*60_000, likes: 156 },
+  ],
+  459: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "관심종목", content: "아람코가 할인 판매 들어간 게 OPEC+ 내부 균열 신호예요. 증산 합의했는데 사우디가 점유율 유지하려고 할인까지 하면 유가 하락 압력이 구조적으로 지속될 수 있어요.", createdAt: T8JL + 42*60_000, likes: 178 },
+    { id: 2, nickname: "익명_6125", holdingLabel: "관심종목", content: "에너지 인플레이션 완화면 연준 입장에서 금리 인하 명분이 하나 더 생기는 거예요. CPI 에너지 항목이 내려가면 헤드라인 인플레이션 자동으로 내려가거든요.", createdAt: T8JL + 1*3600_000 + 5*60_000, likes: 234 },
+  ],
+  460: [
+    { id: 1, nickname: "익명_8471", holdingLabel: "150주 보유", content: "QQQ 추종 ETF가 의무 매수한다는 게 포인트예요. 인베스코 QQQ 운용 AUM이 $2500억이 넘는데 그 비중만큼 SpaceX 자동 매수가 들어오는 거예요. 패시브 자금이 가장 강력한 유동성이에요.", createdAt: T8JL + 48*60_000, likes: 534 },
+    { id: 2, nickname: "익명_2936", holdingLabel: "80주 보유", content: "SPCX +1.89%가 편입 발표 당일 수치인데 실제 강제 매수 집행되는 월요일에 추가 상승 나올 거예요. 패시브 매수는 가격 불문 시장가 집행이라 단기 급등 나올 수 있어요.", createdAt: T8JL + 1*3600_000 + 10*60_000, likes: 423 },
+    { id: 3, nickname: "익명_5763", holdingLabel: "260주 보유", content: "기관 투자자 자격 취득이 더 중요한 장기 변수예요. 연기금·대학 기금이 SpaceX를 포트폴리오에 편입할 수 있게 되는 거거든요. 장기 수요 기반이 완전히 달라지는 거예요.", createdAt: T8JL + 1*3600_000 + 30*60_000, likes: 356 },
+    { id: 4, nickname: "익명_9214", holdingLabel: "관심종목", content: "WSJ 기사 나왔다는 게 메인스트림 인지도 올라가는 거예요. 개인 투자자들 SPCX 모르다가 QQQ 편입 기사 보고 유입되면 추가 수요 생기는 거죠.", createdAt: T8JL + 1*3600_000 + 50*60_000, likes: 289 },
+    { id: 5, nickname: "익명_7048", holdingLabel: "120주 보유", content: "Starlink 가입자 증가+Falcon 9 재사용+Starship 상업화 모두 진행 중인데 NASDAQ에서 거래 가능해진 거잖아요. TSLA 초기보다 기회 더 클 수 있어요.", createdAt: T8JL + 2*3600_000 + 5*60_000, likes: 467 },
+    { id: 6, nickname: "익명_4382", holdingLabel: "45주 보유", content: "편입 기준일 이후 리밸런싱까지 고려하면 수개월 동안 꾸준한 패시브 매수가 들어오는 구조예요. 단기 트레이딩 아니라 장기 포지션으로 봐야 해요.", createdAt: T8JL + 2*3600_000 + 25*60_000, likes: 312 },
+    { id: 7, nickname: "익명_1659", holdingLabel: "관심종목", content: "SpaceX 비상장 주식 접근하기 어려웠는데 SPCX로 간접 보유 가능해진 거예요. 유동성+투명성+분산 투자 가능해지는 구조 변화예요.", createdAt: T8JL + 2*3600_000 + 45*60_000, likes: 198 },
+  ],
+  461: [
+    { id: 1, nickname: "익명_3712", holdingLabel: "480주 보유", content: "11개월로 GPU 1년 탄소 상쇄한다는 게 계산이 맞으면 엄청난 마케팅 포인트예요. ESG 규제 강화되는 환경에서 Cybercab 도입이 탄소 중립에 기여한다고 어필할 수 있어요.", createdAt: T8JL + 58*60_000, likes: 312 },
+    { id: 2, nickname: "익명_6294", holdingLabel: "관심종목", content: "AI 인프라 환경 비용을 상쇄한다는 프레이밍이 똑똑해요. AI 서버 전력 소비 논란이 커지는 상황에서 Tesla가 해결책이라는 내러티브예요.", createdAt: T8JL + 1*3600_000 + 15*60_000, likes: 245 },
+    { id: 3, nickname: "익명_8437", holdingLabel: "250주 보유", content: "정부 조달·대기업 ESG 리포트에서 Cybercab 도입 근거로 쓸 수 있는 데이터예요. B2B 영업 무기로 직접 활용 가능한 수치야요.", createdAt: T8JL + 1*3600_000 + 35*60_000, likes: 189 },
+    { id: 4, nickname: "익명_5163", holdingLabel: "350주 보유", content: "탄소 크레딧 시장이랑 연결되면 Cybercab 운영 자체로 추가 수익 발생할 수 있어요. ZEV 크레딧처럼 탄소 상쇄 크레딧 판매 모델도 가능한 거예요.", createdAt: T8JL + 1*3600_000 + 55*60_000, likes: 278 },
+  ],
+  462: [
+    { id: 1, nickname: "익명_9347", holdingLabel: "720주 보유", content: "110억 마일이면 통계적으로 의미 있는 샘플이에요. 웨이모가 수백만 마일 데이터인데 스케일 자체가 다른 거예요. 규제 기관 앞에서 이 데이터 들이밀면 반박하기 어려워요.", createdAt: T8JL + 1*3600_000 + 5*60_000, likes: 456 },
+    { id: 2, nickname: "익명_2814", holdingLabel: "관심종목", content: "대형 충돌 8배 감소 데이터가 보험 회사 설득 자료로 완벽해요. 보험료 인하 협상되면 FSD 구독 경제성이 더 올라가는 선순환이에요.", createdAt: T8JL + 1*3600_000 + 25*60_000, likes: 367 },
+    { id: 3, nickname: "익명_6581", holdingLabel: "400주 보유", content: "900만 대 데이터라는 게 플릿 러닝이에요. 차량 한 대 한 대가 학습 데이터 생성하는 구조라서 경쟁사는 절대 따라잡을 수 없는 데이터 해자예요.", createdAt: T8JL + 1*3600_000 + 45*60_000, likes: 523 },
+    { id: 4, nickname: "익명_4936", holdingLabel: "580주 보유", content: "p.77 공식 데이터가 있으면 FSD 풀 자율주행 인증 요청할 때 규제 기관에 제출할 수 있어요. 안전 규제 통과를 위한 최강 무기 완성이에요.", createdAt: T8JL + 2*3600_000, likes: 289 },
+    { id: 5, nickname: "익명_1748", holdingLabel: "관심종목", content: "도로이탈 6배 감소가 실제로 가장 체감되는 수치예요. 고속도로 운전 중 갑작스러운 차선 이탈 사고가 없다는 건데 일반 운전자 대비 월등한 거예요.", createdAt: T8JL + 2*3600_000 + 20*60_000, likes: 234 },
+    { id: 6, nickname: "익명_7362", holdingLabel: "300주 보유", content: "미국 평균이 기준이면 실제로 사고 잦은 음주운전·과속 포함된 평균이에요. FSD는 그런 리스크가 없으니까 8배 감소가 오히려 보수적 수치일 수도 있어요.", createdAt: T8JL + 2*3600_000 + 40*60_000, likes: 312 },
+  ],
+  463: [
+    { id: 1, nickname: "익명_5829", holdingLabel: "230주 보유", content: "리콜 98% OTA 해결이 진짜 경쟁 우위예요. 일반 자동차 브랜드는 리콜 나면 딜러 방문 필수인데 테슬라는 자면서 업데이트 완료예요. 서비스 비용 95% 절감이 소비자한테도 브랜드 충성도 만드는 거예요.", createdAt: T8JL + 1*3600_000 + 15*60_000, likes: 345 },
+    { id: 2, nickname: "익명_8146", holdingLabel: "관심종목", content: "기능 300개 이상이면 차가 계속 좋아지는 거잖아요. 출고 2년 된 차가 출고 당시보다 기능이 많아진다는 게 자동차 업계 전례가 없어요. 보유 가치가 증가하는 자산이에요.", createdAt: T8JL + 1*3600_000 + 35*60_000, likes: 423 },
+    { id: 3, nickname: "익명_3561", holdingLabel: "160주 보유", content: "소프트웨어 플랫폼 관점에서 보면 Tesla가 애플 iPhone 같은 거예요. 하드웨어 팔고 끝이 아니라 OS 업데이트로 계속 사용자 경험 개선하는 구조예요.", createdAt: T8JL + 1*3600_000 + 55*60_000, likes: 289 },
+    { id: 4, nickname: "익명_6748", holdingLabel: "400주 보유", content: "300개 신규 기능 중 FSD 관련 업데이트가 얼마나 되는지가 중요해요. FSD 기능 비중 높으면 구독 갱신율·신규 전환율에 직접 영향 주는 거예요.", createdAt: T8JL + 2*3600_000 + 10*60_000, likes: 178 },
+    { id: 5, nickname: "익명_2394", holdingLabel: "관심종목", content: "OTA 업데이트 능력이 없는 경쟁사는 이 게임 못 따라와요. 기능 개발→OTA 배포 사이클이 빠른 테슬라가 항상 앞서가는 구조예요.", createdAt: T8JL + 2*3600_000 + 30*60_000, likes: 234 },
+  ],
+  464: [
+    { id: 1, nickname: "익명_7291", holdingLabel: "310주 보유", content: "$0.77이 공인 데이터로 나왔다는 게 포인트예요. 경쟁사 대비 10%+ 저렴하면 소비자 구매 결정에서 경제성 논쟁 종결이에요. 전기차 비싸다는 편견 깨는 데이터예요.", createdAt: T8JL + 1*3600_000 + 25*60_000, likes: 312 },
+    { id: 2, nickname: "익명_4637", holdingLabel: "관심종목", content: "마일당 비용 비교는 연료비+유지보수+보험 다 합산한 TCO예요. Model Y가 전체 TCO에서 최저라면 장기 소유 비용 관점에서 가장 합리적인 선택인 거예요.", createdAt: T8JL + 1*3600_000 + 45*60_000, likes: 267 },
+    { id: 3, nickname: "익명_9183", holdingLabel: "190주 보유", content: "IONIQ 5가 $0.85면 10% 차이인데 10만 마일 타면 $8,000 차이예요. 차량 수명 내 절감액이 구매 결정에 실질적 영향 주는 수준이에요.", createdAt: T8JL + 2*3600_000 + 5*60_000, likes: 198 },
+  ],
+  465: [
+    { id: 1, nickname: "익명_5847", holdingLabel: "80주 보유", content: "TTM $6B에 YoY +67.7%면 성장률 가속이에요. 보통 규모 커지면 성장률 둔화되는데 PLTR은 반대예요. AIP가 기업 AI 표준으로 자리잡는 속도가 예상보다 빠른 거예요.", createdAt: T8JL + 1*3600_000 + 35*60_000, likes: 389 },
+    { id: 2, nickname: "익명_2163", holdingLabel: "관심종목", content: "정부 계약 확대+민간 동반 급증이 동시에 일어나는 게 PLTR 강점이에요. 경기 침체에도 정부 계약은 유지되고 경기 호황에는 민간이 올라오는 양면 방어막이에요.", createdAt: T8JL + 1*3600_000 + 55*60_000, likes: 312 },
+    { id: 3, nickname: "익명_7438", holdingLabel: "50주 보유", content: "대체 불가 엔터프라이즈 플랫폼이라는 게 고객 이탈률이 낮다는 의미예요. PLTR 시스템 들어간 기업은 빼기 어려운 구조라 매출 가시성이 높아요.", createdAt: T8JL + 2*3600_000 + 15*60_000, likes: 245 },
+    { id: 4, nickname: "익명_9276", holdingLabel: "120주 보유", content: "$6B 연환산 매출이면 P/S 기준 재평가 받을 시점이에요. 성장률이 유지되면 2027년 $10B 가시권이고 그때 S&P500 편입 논의도 나올 수 있어요.", createdAt: T8JL + 2*3600_000 + 35*60_000, likes: 278 },
+    { id: 5, nickname: "익명_3954", holdingLabel: "관심종목", content: "AIP 플랫폼이 일반 AI 도구랑 다른 점이 실제 운영 데이터 연동이에요. CRM·ERP 데이터 다 연결해서 의사결정 지원하는 건 ChatGPT 같은 제품이 못 하는 거예요.", createdAt: T8JL + 2*3600_000 + 55*60_000, likes: 189 },
+  ],
+  466: [
+    { id: 1, nickname: "익명_6127", holdingLabel: "관심종목", content: "내부 경고랑 외부 발언이 다르다는 게 정치적으로 해석할 수도 있지만 리스크 관리 차원에선 경고 쪽이 맞아요. 닷컴 버블도 당시엔 다들 괜찮다고 했죠.", createdAt: T8JL + 1*3600_000 + 45*60_000, likes: 234 },
+    { id: 2, nickname: "익명_4382", holdingLabel: "관심종목", content: "베선트 장관이 공개적으로 AI 칭찬하는 건 정치적 필요예요. 시장 불안 없애려는 거죠. 내부 보고서가 실제 분석에 가까울 수 있어요.", createdAt: T8JL + 2*3600_000 + 10*60_000, likes: 178 },
+    { id: 3, nickname: "익명_8716", holdingLabel: "관심종목", content: "닷컴 버블과 유사하다는 표현이 구체적이네요. 기대 수익 vs 실현 가능 수익 간 괴리가 핵심인데 AI 인프라 투자 ROI가 언제 실현되는지가 관건이에요.", createdAt: T8JL + 2*3600_000 + 30*60_000, likes: 156 },
+  ],
+  467: [
+    { id: 1, nickname: "익명_1847", holdingLabel: "65주 보유", content: "레이먼드 제임스 $550이 현재가 대비 상당한 상승 여력이면 목표가 달성 타임라인이 중요해요. NASDAQ 100 편입 모멘텀 + Starlink 성장 + Starship 상업화 시점 맞물리면 빠를 수 있어요.", createdAt: T8JL + 1*3600_000 + 58*60_000, likes: 423 },
+    { id: 2, nickname: "익명_5293", holdingLabel: "110주 보유", content: "Strong Buy 등급에 $550이면 레이먼드 제임스가 상당히 강한 확신을 가진 거예요. 보통 타겟 보수적으로 잡는 편인데 이 숫자 낸 건 데이터 기반 자신감 있다는 거예요.", createdAt: T8JL + 2*3600_000 + 15*60_000, likes: 345 },
+    { id: 3, nickname: "익명_7519", holdingLabel: "관심종목", content: "패시브 자금 유입+기관 자격 취득+애널리스트 커버리지 확대 삼박자가 갖춰지는 거예요. 기관 자금 유입 구조가 완전히 달라지는 전환점이에요.", createdAt: T8JL + 2*3600_000 + 35*60_000, likes: 289 },
+    { id: 4, nickname: "익명_3148", holdingLabel: "85주 보유", content: "Starlink 매출 성장률이 유지되면 $550도 보수적일 수 있어요. 위성 인터넷 시장 독점적 지위에 Starship 재사용 비용 혁신까지 가격 책정에 반영 덜 된 게 있어요.", createdAt: T8JL + 2*3600_000 + 55*60_000, likes: 234 },
+    { id: 5, nickname: "익명_9361", holdingLabel: "50주 보유", content: "기존 SPCX 보유자한테는 큰 축하 소식이에요. 강제 매수+목표가 상향이 동시에 나오면 수급이 일방향으로 쏠리는 구간이에요.", createdAt: T8JL + 3*3600_000 + 10*60_000, likes: 178 },
+    { id: 6, nickname: "익명_6724", holdingLabel: "관심종목", content: "QQQ 편입 전후 가격 움직임 패턴이 다른 지수 편입 종목이랑 비슷하면 편입 직후 1~2주 동안 추가 상승 나오는 경우 많아요.", createdAt: T8JL + 3*3600_000 + 30*60_000, likes: 145 },
+  ],
+  468: [
+    { id: 1, nickname: "익명_2748", holdingLabel: "580주 보유", content: "포트워스·달라스까지 확장이면 텍사스 3대 도시 동시 테스트예요. 오스틴 중심으로 반경 넓히는 속도가 예상보다 빨라요. 기가텍사스 로컬 배차 최적 구조 맞아요.", createdAt: T8JL + 2*3600_000 + 12*60_000, likes: 567 },
+    { id: 2, nickname: "익명_5916", holdingLabel: "관심종목", content: "DFW 메트로가 미국 4위 대도시권인데 공항 이동 수요만 해도 엄청나요. 달라스포트워스 공항이 미국 2위 규모인데 Cybercab 공항 픽업 서비스만으로도 수익 모델 완성이에요.", createdAt: T8JL + 2*3600_000 + 32*60_000, likes: 445 },
+    { id: 3, nickname: "익명_8142", holdingLabel: "440주 보유", content: "텍사스 번호판이라는 게 로컬 차량이에요. 기가텍사스에서 직접 배차하는 운영 테스트 단계라는 거잖아요. 상업 서비스 런칭 직전 단계로 보면 돼요.", createdAt: T8JL + 2*3600_000 + 52*60_000, likes: 389 },
+    { id: 4, nickname: "익명_3574", holdingLabel: "관심종목", content: "오스틴→포트워스→달라스 삼각지대면 고속도로 연결이 완벽해요. 세 도시 연결되면 장거리 이동 포함 완전한 운영 테스트 가능해요.", createdAt: T8JL + 3*3600_000, likes: 312 },
+    { id: 5, nickname: "익명_7293", holdingLabel: "730주 보유", content: "여러 거점에서 동시 포착이면 운영 규모가 단순 테스트 수준 넘어선 거예요. 확장 속도 보면 연말까지 텍사스 주요 도시 커버 가능해 보여요.", createdAt: T8JL + 3*3600_000 + 20*60_000, likes: 456 },
+    { id: 6, nickname: "익명_1836", holdingLabel: "380주 보유", content: "Austin+DFW 동시 운영이면 기가텍사스 물류 + 도시 배차 + 장거리 연결 전략이 동시에 검증되는 거예요. 전국 확장 모델의 시험대예요.", createdAt: T8JL + 3*3600_000 + 40*60_000, likes: 298 },
+    { id: 7, nickname: "익명_9458", holdingLabel: "관심종목", content: "포착 영상·사진 돌아다니는 거 보면 회피 없이 도로에서 정상 주행해요. 테스트 티가 안 나는 수준이면 소프트웨어 성숙도 높다는 거예요.", createdAt: T8JL + 4*3600_000, likes: 234 },
+    { id: 8, nickname: "익명_5127", holdingLabel: "260주 보유", content: "텍사스가 규제 우호적 환경이라 자율주행 허가 가장 빨리 받을 수 있는 주예요. 텍사스에서 완전 상용화 확정되면 다른 주 인허가도 도미노처럼 따라올 거예요.", createdAt: T8JL + 4*3600_000 + 20*60_000, likes: 367 },
+  ],
+  469: [
+    { id: 1, nickname: "익명_4183", holdingLabel: "900주 보유", content: "3만 대에 EBITDA $9.14억이면 마진 21%가 시작이에요. 스케일 올라가면 단위 비용 내려가서 마진 30%+ 가능해요. 운전기사 비용 ZERO가 구조적 이점이에요.", createdAt: T8JL + 2*3600_000 + 27*60_000, likes: 534 },
+    { id: 2, nickname: "익명_7629", holdingLabel: "관심종목", content: "Morgan Stanley 2030년 목표가 3만 대면 이미 기관이 계산 끝낸 거예요. 달성하면 테슬라 신규 사업 부문으로 완전히 재평가되는 거잖아요. 밸류에이션 업사이드 엄청나요.", createdAt: T8JL + 2*3600_000 + 47*60_000, likes: 423 },
+    { id: 3, nickname: "익명_2847", holdingLabel: "620주 보유", content: "연 $44억 매출이면 테슬라 전체 매출의 상당 비중이에요. 에너지 부문이랑 합산하면 EV 판매 비중이 상대적으로 줄어드는 거예요. 다각화 속도가 빨라요.", createdAt: T8JL + 3*3600_000 + 5*60_000, likes: 356 },
+    { id: 4, nickname: "익명_6148", holdingLabel: "관심종목", content: "대당 연 $14.7만 매출이면 차량 구매가 대비 ROI 계산해봐야 해요. Cybercab 가격 $3만 가정하면 구매 후 2~3년이면 회수 가능한 거잖아요. 플릿 사업자들 몰릴 거예요.", createdAt: T8JL + 3*3600_000 + 25*60_000, likes: 289 },
+    { id: 5, nickname: "익명_3917", holdingLabel: "470주 보유", content: "EBITDA 마진 21%가 자동차 업계 최고 마진이에요. 기존 OEM이 7~10% 수준인데 21%면 밸류에이션 멀티플 완전히 다르게 받는 사업이에요.", createdAt: T8JL + 3*3600_000 + 45*60_000, likes: 412 },
+    { id: 6, nickname: "익명_8364", holdingLabel: "관심종목", content: "스케일 확장 시 단위 비용 추가 하락이라는 게 구체적으로 보험비·정비비·전력비 규모 경제 효과예요. 대당 비용 내려가면서 수익성 올라가는 구조예요.", createdAt: T8JL + 4*3600_000 + 5*60_000, likes: 198 },
+    { id: 7, nickname: "익명_5281", holdingLabel: "350주 보유", content: "웨이모 플릿 대비 원가 구조 비교가 핵심이에요. 웨이모는 리모트 모니터링 인력 있어서 규모 키울수록 인건비 늘어나요. Cybercab은 반대예요.", createdAt: T8JL + 4*3600_000 + 25*60_000, likes: 267 },
+  ],
+  470: [
+    { id: 1, nickname: "익명_7183", holdingLabel: "관심종목", content: "Ramp 기업 AI 지출 데이터라는 게 신뢰도 높아요. 실제 결제 데이터 기반이니까 설문 조사보다 정확해요. Anthropic 1위면 기업들이 진짜 돈 내고 쓴다는 거예요.", createdAt: T8JL + 2*3600_000 + 42*60_000, likes: 289 },
+    { id: 2, nickname: "익명_4816", holdingLabel: "관심종목", content: "OpenAI 30.73%인데 Anthropic이 그 위면 점유율 차이가 크지 않을 수 있어요. 그래도 1위 전환 자체가 AI 시장 구조 변화 신호예요. 안전성 강점이 기업 선택 기준이 되는 거예요.", createdAt: T8JL + 3*3600_000 + 2*60_000, likes: 234 },
+    { id: 3, nickname: "익명_2639", holdingLabel: "35주 보유", content: "Anthropic 1위 되면 AI 인프라 수요 증가하는 거고 최대 수혜는 NVDA예요. Anthropic 모델 돌리는 데이터센터 GPU 공급자가 NVDA잖아요.", createdAt: T8JL + 3*3600_000 + 22*60_000, likes: 178 },
+    { id: 4, nickname: "익명_9247", holdingLabel: "관심종목", content: "Google이 5.65%에 불과하다는 게 흥미로워요. 자체 AI 인프라 있어서 외부 결제 안 한다는 해석도 가능하지만 기업 AI 시장에서 Google이 밀린다는 신호이기도 해요.", createdAt: T8JL + 3*3600_000 + 42*60_000, likes: 156 },
+  ],
+  471: [
+    { id: 1, nickname: "익명_6374", holdingLabel: "640주 보유", content: "Wood Mackenzie가 보수적 에너지 리서치 기관인데 15GW+ 제시한 거면 신뢰도 높아요. 에너지 저장 시장 규모 자체가 폭발적으로 커지는 거잖아요. Megapack 최대 수혜자예요.", createdAt: T8JL + 2*3600_000 + 58*60_000, likes: 423 },
+    { id: 2, nickname: "익명_3182", holdingLabel: "관심종목", content: "UK·유럽·호주 세 시장 동시 공략이면 글로벌 전략이에요. 재생에너지 전환 속도 빠른 시장들이라 Megapack 수요 가장 급증하는 곳이에요. Tesla Energy 글로벌 확장 직접 확인되는 거예요.", createdAt: T8JL + 3*3600_000 + 18*60_000, likes: 345 },
+    { id: 3, nickname: "익명_7816", holdingLabel: "480주 보유", content: "에너지 안보 이슈로 유럽이 저장 인프라 투자 서두르는 거예요. 러시아 에너지 의존 탈피하려면 재생에너지+저장 배터리 세트가 필수인데 Megapack이 딱 맞는 솔루션이에요.", createdAt: T8JL + 3*3600_000 + 38*60_000, likes: 289 },
+    { id: 4, nickname: "익명_5491", holdingLabel: "320주 보유", content: "호주 재생에너지 60%+ 목표 달성하려면 저장 인프라 없이는 불가능해요. 호주가 태양광 자원 풍부해서 발전은 되는데 야간 저장이 관건이에요. Megapack 수요 폭발할 거예요.", createdAt: T8JL + 3*3600_000 + 58*60_000, likes: 234 },
+    { id: 5, nickname: "익명_1847", holdingLabel: "관심종목", content: "EV 판매 의존도 희석+에너지 인프라 재평가면 Tesla 멀티플이 바뀌는 거예요. 에너지 기업 P/S 배수가 자동차 기업이랑 완전히 다르니까 재평가 여력 있어요.", createdAt: T8JL + 4*3600_000 + 15*60_000, likes: 312 },
+    { id: 6, nickname: "익명_8273", holdingLabel: "550주 보유", content: "2028년까지 15GW면 매년 5GW씩 공급하는 거예요. Megapack 생산 속도가 기가네바다 확장 속도랑 맞아야 하는데 지금 추세면 달성 가능해 보여요.", createdAt: T8JL + 4*3600_000 + 35*60_000, likes: 267 },
+  ],
+
   // ── 2026-07-07 신규 ──────────────────────────────────────────────────────
   443: [
     { id: 1, nickname: "익명_4411", holdingLabel: "800주 보유", content: "5시간 무개입은 레벨 5 임박 신호예요. HW3 배포까지 완료되면 테슬라 차량 400만대가 전부 FSD v14 Lite 수준이 되는 거잖아요. 구독 전환 폭발적으로 늘어날 거예요.", createdAt: T7JL + 25*60_000, likes: 412 },

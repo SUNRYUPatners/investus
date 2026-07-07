@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#1d4ed8"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">PLTR</text>
+  <rect x="152" y="86" width="110" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="207" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">매출 성장</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Palantir Q2 2026 매출 성장</text>
+  <text x="540" y="270" font-family="Arial Black, Arial" font-weight="900" font-size="96" fill="#60a5fa" text-anchor="middle">+67.7%</text>
+  <text x="540" y="322" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#3b82f6" text-anchor="middle">YoY 성장률</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Q2 2026 TTM 매출 ~$60억 달성</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Q2 2026 핵심 지표</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">TTM 매출: ~$60억 · YoY 성장: +67.7%</text>
+  <text x="540" y="488" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">성장률 가속 추세 유지 · AI 플랫폼 수요 폭발</text>
+
+  <rect x="80" y="532" width="920" height="130" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">성장 드라이버</text>
+  <text x="540" y="602" font-family="Arial, sans-serif" font-size="16" fill="#bfdbfe" text-anchor="middle">AIP (AI Platform) — 기업 AI 도입 가속화</text>
+  <text x="540" y="628" font-family="Arial, sans-serif" font-size="16" fill="#bfdbfe" text-anchor="middle">미국 정부 계약 확대 + 민간 부문 동반 급증</text>
+  <text x="540" y="654" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">데이터 분석 + 운영 AI = 대체 불가 엔터프라이즈 플랫폼</text>
+
+  <rect x="80" y="686" width="430" height="120" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="295" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Q2 2026 TTM 매출</text>
+  <text x="295" y="770" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#60a5fa" text-anchor="middle">~$6B</text>
+  <text x="295" y="800" font-family="Arial, sans-serif" font-size="14" fill="#93c5fd" text-anchor="middle">연환산 기준</text>
+
+  <rect x="570" y="686" width="430" height="120" rx="14" fill="#0a1a2e" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="785" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#3b82f6" text-anchor="middle">YoY 성장률</text>
+  <text x="785" y="770" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#3b82f6" text-anchor="middle">+67.7%</text>
+  <text x="785" y="800" font-family="Arial, sans-serif" font-size="14" fill="#93c5fd" text-anchor="middle">전년 동기 대비</text>
+
+  <rect x="80" y="830" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="866" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="892" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">AI 플랫폼 고성장 + 정부·기업 동시 수요 = 구조적 성장 스토리 완성</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

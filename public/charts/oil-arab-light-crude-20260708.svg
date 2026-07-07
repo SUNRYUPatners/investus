@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#1a0800"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fb923c"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#orangeGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#d97706"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MACRO</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#fb923c" text-anchor="middle">원자재</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">사우디아라비아 원유 할인 판매</text>
+  <text x="540" y="258" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#fb923c" text-anchor="middle">ARAB LIGHT</text>
+  <text x="540" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#f59e0b" text-anchor="middle">CRUDE</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">사우디 아람코 — 2020년 이후 처음으로 할인 판매</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fb923c" text-anchor="middle">가격 현황 (Saudi Arabia Arab Light Crude)</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">현재: -1.50 · 2026년 5월 31일 고점: +19.50 · 평균: +1.73</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">2020년 5월 31일 저점: -7.30 — 2020년 이후 처음 마이너스 구간</text>
+
+  <rect x="80" y="526" width="920" height="130" rx="16" fill="#1a0d00" stroke="#fb923c" stroke-width="2"/>
+  <text x="540" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fb923c" text-anchor="middle">의미 분석</text>
+  <text x="540" y="596" font-family="Arial, sans-serif" font-size="16" fill="#fed7aa" text-anchor="middle">OPEC+ 증산 + 글로벌 수요 둔화 → 공급 과잉</text>
+  <text x="540" y="622" font-family="Arial, sans-serif" font-size="16" fill="#fed7aa" text-anchor="middle">사우디가 할인 판매 = 시장 점유율 방어 전략</text>
+  <text x="540" y="648" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">에너지 인플레이션 압력 완화 → 연준 금리 인하 논거 강화</text>
+
+  <rect x="80" y="680" width="276" height="120" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="218" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">현재가</text>
+  <text x="218" y="766" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#fb923c" text-anchor="middle">-1.50</text>
+  <text x="218" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fdba74" text-anchor="middle">할인 구간 진입</text>
+
+  <rect x="402" y="680" width="276" height="120" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">최고점</text>
+  <text x="540" y="766" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#f59e0b" text-anchor="middle">+19.50</text>
+  <text x="540" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fdba74" text-anchor="middle">2026.05.31</text>
+
+  <rect x="724" y="680" width="276" height="120" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="862" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">마지막 할인</text>
+  <text x="862" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#f59e0b" text-anchor="middle">2020년</text>
+  <text x="862" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fdba74" text-anchor="middle">이후 최초</text>
+
+  <rect x="80" y="826" width="920" height="90" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#fb923c" text-anchor="middle">매크로 시사점</text>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">유가 하락 = 에너지 비용 감소 → 기업 마진 개선 + 인플레이션 완화 → 증시 우호</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

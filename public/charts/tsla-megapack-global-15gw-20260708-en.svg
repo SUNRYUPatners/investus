@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#041408"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#059669"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Energy</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla Megapack Global Energy Storage Expansion</text>
+  <text x="540" y="268" font-family="Arial Black, Arial" font-weight="900" font-size="90" fill="#00e5a0" text-anchor="middle">15GW</text>
+  <text x="540" y="320" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#10b981" text-anchor="middle">by 2028</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">UK · Europe · Australia battery energy storage plan — Wood Mackenzie</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Wood Mackenzie Report Key Finding</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Tesla plans to supply 15GW+ battery energy storage across UK, Europe, Australia by 2028</text>
+  <text x="540" y="488" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Megapack confirmed as global energy storage market leader strategy</text>
+
+  <rect x="80" y="532" width="920" height="130" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Global Expansion Regions</text>
+  <text x="540" y="602" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">UK: Accelerating renewable transition → grid stabilization demand</text>
+  <text x="540" y="628" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">Europe: Energy security push → Megapack as strategic asset</text>
+  <text x="540" y="654" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Australia: 60%+ renewable target → storage infrastructure essential</text>
+
+  <rect x="80" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="218" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Target Supply</text>
+  <text x="218" y="768" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#00e5a0" text-anchor="middle">15GW+</text>
+  <text x="218" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">By 2028</text>
+
+  <rect x="402" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Key Markets</text>
+  <text x="540" y="756" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#00e5a0" text-anchor="middle">UK + EU</text>
+  <text x="540" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">+ Australia</text>
+
+  <rect x="724" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#10b981" stroke-width="1.5"/>
+  <text x="862" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#10b981" text-anchor="middle">Source</text>
+  <text x="862" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#10b981" text-anchor="middle">Wood</text>
+  <text x="862" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">Mackenzie</text>
+
+  <rect x="80" y="830" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="866" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Investment Thesis</text>
+  <text x="540" y="892" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Tesla Energy = confirmed second growth engine → EV dependency diluted + energy infra re-rating</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP Chief Investment Officer</text>
+</svg>

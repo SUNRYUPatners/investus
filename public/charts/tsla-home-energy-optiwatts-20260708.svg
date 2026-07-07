@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#041408"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#059669"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">에너지 제품</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla AI 홈 에너지 관리 출시</text>
+  <text x="540" y="258" font-family="Arial Black, Arial" font-weight="900" font-size="72" fill="#00e5a0" text-anchor="middle">OPTIWATTS</text>
+  <text x="540" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#10b981" text-anchor="middle">Tesla Home</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">"Home Energy Management, Powered by AI"</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Optiwatts 핵심 기능</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">태양광 발전 예측 + 날씨 + 전력 요금을 AI가 분석 → 자동 최적화</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Powerwall 3F · 태양광 · 그리드 · Wall Connector 통합 제어</text>
+
+  <rect x="80" y="526" width="920" height="130" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">3단계 설정</text>
+  <text x="540" y="596" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">① Set Your Goal — 목표 설정 (요금 절감 / 자급자족)</text>
+  <text x="540" y="622" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">② Maximize Your Savings — AI 자동 최적화</text>
+  <text x="540" y="648" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">③ Monitor Your System — 실시간 에너지 현황 대시보드</text>
+
+  <rect x="80" y="680" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="218" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">배터리</text>
+  <text x="218" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00e5a0" text-anchor="middle">Powerwall</text>
+  <text x="218" y="796" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">3F 모델</text>
+
+  <rect x="402" y="680" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">연동</text>
+  <text x="540" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00e5a0" text-anchor="middle">Solar</text>
+  <text x="540" y="796" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">+ Grid 통합</text>
+
+  <rect x="724" y="680" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="862" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">제어</text>
+  <text x="862" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#00e5a0" text-anchor="middle">AI Auto</text>
+  <text x="862" y="796" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">최적화</text>
+
+  <rect x="80" y="826" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Tesla Energy = EV+배터리+AI의 완전한 홈 생태계 — 경쟁사 대체 불가 플랫폼</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#041408"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#059669"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Fleet Economics</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Cybercab 30,000 Fleet Revenue Model</text>
+  <text x="540" y="268" font-family="Arial Black, Arial" font-weight="900" font-size="80" fill="#00e5a0" text-anchor="middle">$4.4B</text>
+  <text x="540" y="320" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#10b981" text-anchor="middle">Projected Annual Revenue</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">30,000 Cybercab fleet basis — based on Morgan Stanley analysis</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Morgan Stanley Analysis-Based Projection</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">30,000 Cybercabs → ~$4.4B annual revenue · EBITDA ~$914M</text>
+  <text x="540" y="488" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Morgan Stanley 2030 target 30K fleet profitability simulation</text>
+
+  <rect x="80" y="532" width="920" height="130" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Revenue Structure</text>
+  <text x="540" y="602" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">Per unit annual revenue: ~$147K · EBITDA margin: ~21%</text>
+  <text x="540" y="628" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">Zero driver labor cost → fundamentally favorable cost structure</text>
+  <text x="540" y="654" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Scale expansion → unit cost declines further → continued margin improvement</text>
+
+  <rect x="80" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="218" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Fleet Size</text>
+  <text x="218" y="768" font-family="Arial Black, Arial" font-weight="900" font-size="36" fill="#00e5a0" text-anchor="middle">30,000</text>
+  <text x="218" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">Units (2030 target)</text>
+
+  <rect x="402" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Annual Revenue</text>
+  <text x="540" y="768" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#00e5a0" text-anchor="middle">$4.4B</text>
+  <text x="540" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">Annualized</text>
+
+  <rect x="724" y="686" width="276" height="120" rx="14" fill="#071a10" stroke="#10b981" stroke-width="1.5"/>
+  <text x="862" y="726" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#10b981" text-anchor="middle">EBITDA</text>
+  <text x="862" y="768" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#10b981" text-anchor="middle">$914M</text>
+  <text x="862" y="800" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">~21% margin</text>
+
+  <rect x="80" y="830" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="866" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Investment Thesis</text>
+  <text x="540" y="892" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">30K fleet = $4.4B revenue + $914M EBITDA → Tesla re-rated as new business segment</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP Chief Investment Officer</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#041408"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#059669"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">임팩트 리포트</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla 임팩트 리포트 '25 — Cybercab vs GPU</text>
+  <text x="540" y="260" font-family="Arial Black, Arial" font-weight="900" font-size="90" fill="#00e5a0" text-anchor="middle">11</text>
+  <text x="540" y="312" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#10b981" text-anchor="middle">개월이면 충분</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Cybercab 1대 운행 = GPU 1년 가동 탄소 배출 상쇄</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">임팩트 리포트 p.23 핵심 수치</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Cybercab 1대로 11개월 운행 = GPU 1년 가동 동안 발생한 탄소 배출량 회피</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">AI 인프라의 환경 비용을 Cybercab이 상쇄 — 탈탄소화 지름길</text>
+
+  <rect x="80" y="526" width="920" height="130" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">비교 분석</text>
+  <text x="540" y="596" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">Cybercab: 전기 구동 → 화석연료 배출 0</text>
+  <text x="540" y="622" font-family="Arial, sans-serif" font-size="16" fill="#a7f3d0" text-anchor="middle">GPU 1대: 연 수천 kWh → 상당한 탄소 발생</text>
+  <text x="540" y="648" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Tesla AI = 지구를 위한 AI 인프라 — ESG 최상위 포지셔닝</text>
+
+  <rect x="80" y="680" width="430" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="295" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Cybercab 운행</text>
+  <text x="295" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#00e5a0" text-anchor="middle">11개월</text>
+  <text x="295" y="796" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">탄소 상쇄 기간</text>
+
+  <rect x="570" y="680" width="430" height="120" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="785" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">GPU 가동</text>
+  <text x="785" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#60a5fa" text-anchor="middle">12개월</text>
+  <text x="785" y="796" font-family="Arial, sans-serif" font-size="14" fill="#93c5fd" text-anchor="middle">탄소 발생량</text>
+
+  <rect x="80" y="826" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">Cybercab = AI 시대 탄소 상쇄 수단 → ESG 펀드 매수 명분 + 데이터센터 파트너십 가능</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

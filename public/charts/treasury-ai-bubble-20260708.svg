@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#1a0808"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f87171"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#dc2626"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MACRO</text>
+  <rect x="152" y="86" width="130" height="34" rx="8" fill="none" stroke="#f87171" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f87171" text-anchor="middle">리스크 경고</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">미국 재무부 내부 보고서 유출</text>
+  <text x="540" y="258" font-family="Arial Black, Arial" font-weight="900" font-size="58" fill="#f87171" text-anchor="middle">AI BUBBLE</text>
+  <text x="540" y="316" font-family="Arial Black, Arial" font-weight="900" font-size="42" fill="#ef4444" text-anchor="middle">경고</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">닷컴 버블과 유사한 리스크 — US Treasury 내부 보고서</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#1a0808" stroke="#f87171" stroke-width="1.5"/>
+  <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171" text-anchor="middle">내부 vs 외부 불일치</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">트럼프 정부 공개 발언: AI 강세 · 재무부 내부: AI 버블 위험 경고</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">베선트 재무장관: $7500억 AI 투자 공개 칭찬 — 내부 경고와 모순</text>
+
+  <rect x="80" y="526" width="920" height="130" rx="16" fill="#1a0808" stroke="#f87171" stroke-width="2"/>
+  <text x="540" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171" text-anchor="middle">내부 보고서 내용</text>
+  <text x="540" y="596" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">AI 투자 버블이 닷컴 붕괴와 유사한 리스크 내포</text>
+  <text x="540" y="622" font-family="Arial, sans-serif" font-size="16" fill="#fca5a5" text-anchor="middle">투자자 기대 vs 실현 가능 수익 간 괴리</text>
+  <text x="540" y="648" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">공개 강세 발언과 달리 사내에서는 AI 투자 위험 경고 중</text>
+
+  <rect x="80" y="680" width="430" height="120" rx="14" fill="#1a0808" stroke="#f87171" stroke-width="1.5"/>
+  <text x="295" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f87171" text-anchor="middle">공개 입장</text>
+  <text x="295" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#f87171" text-anchor="middle">강세 유지</text>
+  <text x="295" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">$7500억 AI 칭찬</text>
+
+  <rect x="570" y="680" width="430" height="120" rx="14" fill="#1a0808" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="785" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#ef4444" text-anchor="middle">내부 경고</text>
+  <text x="785" y="762" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#ef4444" text-anchor="middle">닷컴 유사</text>
+  <text x="785" y="796" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">버블 위험 경보</text>
+
+  <rect x="80" y="826" width="920" height="90" rx="14" fill="#1a0808" stroke="#f87171" stroke-width="1"/>
+  <text x="540" y="862" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#f87171" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="888" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">AI 수혜주 분산 필수 · 실제 수익 창출 기업 vs 기대만 있는 기업 선별 강화</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

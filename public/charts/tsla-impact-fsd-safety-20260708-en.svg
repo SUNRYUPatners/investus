@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#1d4ed8"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">FSD Safety</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.08</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla Impact Report '25 — FSD Safety Data</text>
+  <text x="540" y="260" font-family="Arial Black, Arial" font-weight="900" font-size="90" fill="#60a5fa" text-anchor="middle">8x</text>
+  <text x="540" y="312" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#3b82f6" text-anchor="middle">SAFER DRIVING</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">8x fewer major collisions vs US national average · p.77</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="430" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Impact Report p.77 — FSD (Supervised) Safety Data</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">~9M vehicles · 11B+ miles of data</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">FSD Supervised collision rate vs US national average</text>
+
+  <rect x="80" y="526" width="920" height="90" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="570" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#60a5fa" text-anchor="middle">Major Collisions</text>
+  <text x="540" y="606" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#bfdbfe" text-anchor="middle">8x fewer than US national average</text>
+
+  <rect x="80" y="632" width="920" height="90" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="676" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#00e5a0" text-anchor="middle">Minor Collisions</text>
+  <text x="540" y="712" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#a7f3d0" text-anchor="middle">7x fewer than US national average</text>
+
+  <rect x="80" y="738" width="920" height="90" rx="16" fill="#1a0d00" stroke="#fb923c" stroke-width="2"/>
+  <text x="540" y="782" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#fb923c" text-anchor="middle">Off-highway Collisions</text>
+  <text x="540" y="818" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#fed7aa" text-anchor="middle">6x fewer than US national average</text>
+
+  <rect x="80" y="854" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="893" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">Investment Thesis</text>
+  <text x="540" y="924" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">11B+ mile verified safety data = strongest weapon for regulatory approval + insurance pricing</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.08 · investus.kr SRP Chief Investment Officer</text>
+</svg>
