@@ -22,10 +22,10 @@ export default async function InsightPage() {
   const locale = await getLocale();
   const t = getT(locale).insight;
 
-  /* ── 투자 기초&대가 통합 배너 ── */
+  /* ── 투자 지식 허브 배너 ── */
   const LearnBanner = (
     <Link
-      href="/insight/basics"
+      href="/learn"
       className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
       style={{ borderColor: "rgba(0,229,160,0.2)" }}
     >
@@ -34,30 +34,30 @@ export default async function InsightPage() {
         style={{ background: "linear-gradient(135deg, #001a12 0%, #0d0b00 60%, #0a0c10 100%)" }}
       >
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(circle at 75% 50%, rgba(212,175,55,0.07) 0%, transparent 55%)" }} />
+          style={{ background: "radial-gradient(circle at 75% 50%, rgba(0,229,160,0.08) 0%, transparent 55%)" }} />
         <div className="relative flex gap-1.5 flex-shrink-0">
           <div className="w-10 h-10 rounded-xl flex items-center justify-center"
             style={{ background: "rgba(0,229,160,0.1)", border: "1px solid rgba(0,229,160,0.2)" }}>
-            <span className="text-xl">📚</span>
+            <span className="text-xl">🎓</span>
           </div>
           <div className="w-10 h-10 rounded-xl flex items-center justify-center"
-            style={{ background: "rgba(212,175,55,0.1)", border: "1px solid rgba(212,175,55,0.2)" }}>
-            <span className="text-xl">🏆</span>
+            style={{ background: "rgba(96,165,250,0.1)", border: "1px solid rgba(96,165,250,0.2)" }}>
+            <span className="text-xl">📖</span>
           </div>
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex gap-1.5 mb-1.5">
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.9)" }}>
-              기초 지식
+              투자 기초
             </span>
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(212,175,55,0.12)", color: "#d4af37" }}>
-              투자 대가
+              style={{ background: "rgba(96,165,250,0.12)", color: "#60a5fa" }}>
+              대가 전략
             </span>
           </div>
-          <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 기초 & 대가 전략</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>버핏·린치·달리오 등 핵심 투자 철학 전체 보기</p>
+          <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 지식 허브</p>
+          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>S&P500·공포탐욕·버핏지수·포트폴리오 전략 전체 보기</p>
         </div>
         <span className="text-lg flex-shrink-0" style={{ color: "var(--muted)" }}>›</span>
       </div>

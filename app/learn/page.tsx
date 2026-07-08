@@ -17,6 +17,16 @@ export const metadata: Metadata = {
 
 const ARTICLES = [
   {
+    href: "/insight/basics",
+    emoji: "📚",
+    title: "투자 기초 & 대가 전략",
+    desc: "주식·채권·ETF·복리 등 핵심 투자 개념부터 워런 버핏·피터 린치·레이 달리오 등 전설적 투자가들의 철학까지 한곳에서.",
+    tag: "기초+대가",
+    tagColor: "#d4af37",
+    minutes: "전체 보기",
+    featured: true,
+  },
+  {
     href: "/learn/us-stock-basics",
     emoji: "🇺🇸",
     title: "미국주식 투자 완전 입문 가이드",
@@ -93,51 +103,84 @@ export default function LearnPage() {
         <div className="flex flex-col gap-3">
           {ARTICLES.map((a) => (
             <Link key={a.href} href={a.href} style={{ textDecoration: "none" }}>
-              <div
-                className="rounded-2xl p-4 border flex items-start gap-4 active:opacity-80 transition-opacity"
-                style={{ background: "var(--card)", borderColor: "var(--border)" }}
-              >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl"
-                  style={{ background: "rgba(255,255,255,0.04)" }}>
-                  {a.emoji}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-                      style={{ background: `${a.tagColor}18`, color: a.tagColor }}>
-                      {a.tag}
-                    </span>
-                    <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-                      {a.minutes} 읽기
-                    </span>
+              {/* Featured card — 투자기초&대가전략 */}
+              {"featured" in a && a.featured ? (
+                <div
+                  className="rounded-2xl overflow-hidden border active:opacity-80 transition-opacity"
+                  style={{ background: "linear-gradient(135deg, #1a1400 0%, #0d0b00 60%, #0a0c10 100%)", borderColor: "rgba(212,175,55,0.35)" }}
+                >
+                  <div className="px-4 py-4 flex items-center gap-4">
+                    <div className="flex gap-1.5 flex-shrink-0">
+                      <div className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl"
+                        style={{ background: "rgba(212,175,55,0.12)", border: "1px solid rgba(212,175,55,0.25)" }}>
+                        {a.emoji}
+                      </div>
+                      <div className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl"
+                        style={{ background: "rgba(212,175,55,0.08)", border: "1px solid rgba(212,175,55,0.18)" }}>
+                        🏆
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-1.5 mb-1.5">
+                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-full"
+                          style={{ background: "rgba(212,175,55,0.15)", color: "#d4af37" }}>
+                          {a.tag}
+                        </span>
+                        <span className="text-[9px]" style={{ color: "var(--muted)" }}>{a.minutes}</span>
+                      </div>
+                      <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>{a.title}</p>
+                      <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{a.desc}</p>
+                    </div>
+                    <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-40" style={{ color: "#d4af37" }} />
                   </div>
-                  <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
-                    {a.title}
-                  </p>
-                  <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                    {a.desc}
-                  </p>
                 </div>
-                <ChevronRight className="w-4 h-4 flex-shrink-0 mt-1 opacity-30" style={{ color: "var(--muted)" }} />
-              </div>
+              ) : (
+                <div
+                  className="rounded-2xl p-4 border flex items-start gap-4 active:opacity-80 transition-opacity"
+                  style={{ background: "var(--card)", borderColor: "var(--border)" }}
+                >
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl"
+                    style={{ background: "rgba(255,255,255,0.04)" }}>
+                    {a.emoji}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+                        style={{ background: `${a.tagColor}18`, color: a.tagColor }}>
+                        {a.tag}
+                      </span>
+                      <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+                        {a.minutes} 읽기
+                      </span>
+                    </div>
+                    <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>
+                      {a.title}
+                    </p>
+                    <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                      {a.desc}
+                    </p>
+                  </div>
+                  <ChevronRight className="w-4 h-4 flex-shrink-0 mt-1 opacity-30" style={{ color: "var(--muted)" }} />
+                </div>
+              )}
             </Link>
           ))}
         </div>
 
         {/* Footer note */}
-        <div className="mt-8 rounded-2xl p-4 text-center border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+        <div className="mt-6 rounded-2xl p-4 text-center border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>
-            더 깊은 학습을 원하신다면
+            AI 투자비서에게 바로 물어보세요
           </p>
           <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>
-            투자 기초 지식 & 전설적 투자가 전략 페이지에서 더 많은 내용을 확인하세요
+            포트폴리오 분석, 종목 질문, 시장 해석 — 자산 탭에서 무료로 이용
           </p>
           <Link
-            href="/insight/basics"
+            href="/portfolio"
             className="inline-flex items-center gap-1 px-4 py-2 rounded-xl text-sm font-semibold"
             style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}
           >
-            투자 기초 보기 <ChevronRight className="w-4 h-4" />
+            AI 투자비서 열기 <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
       </main>
