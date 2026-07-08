@@ -23,7 +23,7 @@ const CHANNEL_CONFIGS: ChannelConfig[] = [
   { key: "yonhap", urls: ["https://www.youtube.com/@yonhapnews_economy/streams", "https://www.youtube.com/@연합뉴스경제TV/streams"], limit: 4 },
   { key: "hk",     urls: ["https://www.youtube.com/@hkglobalmarket/streams", "https://www.youtube.com/@hkglobalmarket/videos"],     limit: 4 },
   { key: "money",  urls: ["https://www.youtube.com/@moneymoneycomics/streams"],                                                    limit: 4 },
-  { key: "wepoll", urls: ["https://www.youtube.com/@wepoll_original/videos", "https://www.youtube.com/@wepoll_original/streams"],   limit: 4 },
+  { key: "wepoll", urls: ["https://www.youtube.com/@wepoll_original/streams", "https://www.youtube.com/@wepoll_original/videos"],   limit: 4 },
 ];
 
 /** Parse a lockupViewModel node (YouTube's newer layout) */
