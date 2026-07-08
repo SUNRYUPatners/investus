@@ -66,6 +66,12 @@ async function getForexRates(): Promise<ForexRates> {
     fetch("https://api.frankfurter.app/latest?from=USD&to=EUR,JPY"),
   ]);
 
+  // Frankfurter JSON을 한 번만 파싱해 EUR/JPY 모두 재사용 (clone() 호출 시 body 이미 소비 버그 방지)
+  let fxData: { rates?: { EUR?: number; JPY?: number } } | null = null;
+  if (fxLatest.status === "fulfilled" && fxLatest.value.ok) {
+    try { fxData = await fxLatest.value.json(); } catch { /* ignore */ }
+  }
+
   // KRW
   if (krwYF.status === "fulfilled" && krwYF.value && krwYF.value.price > 0) {
     out.krw     = krwYF.value.price;
@@ -81,22 +87,16 @@ async function getForexRates(): Promise<ForexRates> {
   if (eurYF.status === "fulfilled" && eurYF.value && eurYF.value.price > 0) {
     out.eurusd       = eurYF.value.price;
     out.eurusdChange = eurYF.value.changePercent;
-  } else if (fxLatest.status === "fulfilled" && fxLatest.value.ok) {
-    try {
-      const now = await fxLatest.value.json();
-      if (now?.rates?.EUR) out.eurusd = 1 / (now.rates.EUR as number);
-    } catch { /* ignore */ }
+  } else if (fxData?.rates?.EUR) {
+    out.eurusd = 1 / fxData.rates.EUR;
   }
 
   // USD/JPY — YF primary, Frankfurter fallback
   if (jpyYF.status === "fulfilled" && jpyYF.value && jpyYF.value.price > 0) {
     out.usdjpy       = jpyYF.value.price;
     out.usdjpyChange = jpyYF.value.changePercent;
-  } else if (fxLatest.status === "fulfilled" && fxLatest.value.ok) {
-    try {
-      const now = await (fxLatest.value.clone()).json();
-      if (now?.rates?.JPY) out.usdjpy = now.rates.JPY as number;
-    } catch { /* ignore */ }
+  } else if (fxData?.rates?.JPY) {
+    out.usdjpy = fxData.rates.JPY;
   }
 
   return out;
@@ -226,7 +226,11 @@ export async function GET(req: Request) {
 
   const [yfStockQuotes, fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap] = await Promise.all([
     // YF v7 batch — Yahoo Finance 앱 종가와 일치하는 정확한 가격 소스
-    fetchBatchQuotes(stockSymbols),
+    // 18s 캡: v7 실패 → v8 chunk fallback이 30s maxDuration 초과하는 것 방지
+    Promise.race([
+      fetchBatchQuotes(stockSymbols),
+      new Promise<YFQuote[]>((r) => setTimeout(() => r([]), 18_000)),
+    ]),
     // Finnhub — ETF 프록시(지수·선물용)만 사용 (주식 가격은 YF v8로 통일)
     fetchFinnhubBatch([...ETF_PROXY_SYMS]),
     getForexRates(),
