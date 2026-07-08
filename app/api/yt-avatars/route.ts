@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 
 export const revalidate = 86400; // 24h cache
+export const maxDuration = 20;
 
 const CHANNELS = [
   { key: "sbs",    url: "https://www.youtube.com/@SBSBiz2021" },
   { key: "yonhap", url: "https://www.youtube.com/@연합뉴스경제TV" },
   { key: "hk",     url: "https://www.youtube.com/@hkglobalmarket" },
   { key: "money",  url: "https://www.youtube.com/@moneymoneycomics" },
+  { key: "wepoll", url: "https://www.youtube.com/@wepoll_original" },
 ];
 
 function extractAvatar(html: string): string | null {
@@ -29,7 +31,8 @@ async function fetchAvatar(channelUrl: string): Promise<string | null> {
           "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
         "Accept-Language": "ko-KR,ko;q=0.9",
       },
-      next: { revalidate: 86400 },
+      next:   { revalidate: 86400 },
+      signal: AbortSignal.timeout(6_000),
     });
     if (!res.ok) return null;
     const html = await res.text();

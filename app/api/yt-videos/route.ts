@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 export const revalidate = 1800; // 30분 캐시
+export const maxDuration = 30;  // 5채널×2URL sequential worst-case ~16s
 
 export type YTVideo = {
   id:          string;
