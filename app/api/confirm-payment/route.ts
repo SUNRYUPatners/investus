@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 15;
+
 export async function POST(req: NextRequest) {
   try {
     const { paymentKey, orderId, amount } = await req.json();
@@ -22,6 +24,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ paymentKey, orderId, amount }),
+      signal: AbortSignal.timeout(10_000),
     });
 
     const data = await res.json();

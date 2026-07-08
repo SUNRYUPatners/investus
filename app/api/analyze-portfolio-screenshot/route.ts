@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getUserFromRequest } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 30;
 
 const SUPPORTED_TYPES = ["image/jpeg", "image/png", "image/gif", "image/webp"];
 
@@ -90,6 +91,7 @@ export async function POST(req: NextRequest) {
         "anthropic-version": "2023-06-01",
         "content-type": "application/json",
       },
+      signal: AbortSignal.timeout(25_000),
       body: JSON.stringify({
         model: "claude-sonnet-4-6",
         max_tokens: 2048,

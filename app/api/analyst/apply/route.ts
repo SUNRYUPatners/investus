@@ -56,6 +56,7 @@ JSON 형식으로만 응답 (다른 텍스트 없이):
       "anthropic-version": "2023-06-01",
       "content-type": "application/json",
     },
+    signal: AbortSignal.timeout(25_000),
     body: JSON.stringify({
       model: "claude-haiku-4-5-20251001",
       max_tokens: 200,
@@ -70,6 +71,9 @@ JSON 형식으로만 응답 (다른 텍스트 없이):
     }),
   });
 
+  if (!visionRes.ok) {
+    return NextResponse.json({ error: "AI 분석 중 오류가 발생했습니다." }, { status: 502 });
+  }
   const visionData = await visionRes.json() as { content?: { text: string }[]; error?: { message: string } };
   if (visionData.error) {
     return NextResponse.json({ error: "AI 분석 중 오류가 발생했습니다." }, { status: 500 });

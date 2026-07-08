@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { fetchFinnhubCompanyNews } from "@/lib/finnhub";
 import type { NewsItem } from "@/lib/api";
 
+export const maxDuration = 20;
+
 // ── Shared helpers (same logic as lib/api.ts) ─────────────────────────────
 
 function detectCategory(headline: string): { category: string; categoryColor: NewsItem["categoryColor"] } {

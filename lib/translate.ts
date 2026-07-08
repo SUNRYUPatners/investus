@@ -6,7 +6,7 @@ async function translateOne(text: string): Promise<string> {
   const url =
     `https://translate.googleapis.com/translate_a/single` +
     `?client=gtx&sl=en&tl=ko&dt=t&q=${encodeURIComponent(text)}`;
-  const res = await fetch(url);
+  const res = await fetch(url, { signal: AbortSignal.timeout(5_000) });
   if (!res.ok) return text;
   const data = await res.json() as unknown[][];
   // Response[0] is an array of [translated_chunk, original_chunk, ...]

@@ -191,7 +191,8 @@ async function fetchTab(url: string): Promise<YTVideo[]> {
         "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8",
         Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
       },
-      next: { revalidate: 1800 },
+      next:   { revalidate: 1800 },
+      signal: AbortSignal.timeout(8_000),
     });
     if (!res.ok) return [];
     return extractVideos(await res.text());

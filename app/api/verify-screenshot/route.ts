@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSupabase, getUserFromRequest } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 30;
 
 const SUPPORTED_TYPES = ["image/jpeg", "image/png", "image/gif", "image/webp"];
 
@@ -16,6 +17,7 @@ async function isBrokerageScreenshot(base64: string, mimeType: string): Promise<
       "anthropic-version": "2023-06-01",
       "content-type": "application/json",
     },
+    signal: AbortSignal.timeout(20_000),
     body: JSON.stringify({
       model: "claude-haiku-4-5-20251001",
       max_tokens: 10,

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getUserFromRequest } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 30;
 
 const SUPPORTED_TYPES = ["image/jpeg", "image/png", "image/gif", "image/webp"];
 
@@ -59,6 +60,7 @@ Do not include ETF or mutual funds if the ticker is unclear.`;
         "anthropic-version": "2023-06-01",
         "content-type": "application/json",
       },
+      signal: AbortSignal.timeout(25_000),
       body: JSON.stringify({
         model: "claude-opus-4-7",
         max_tokens: 1024,
