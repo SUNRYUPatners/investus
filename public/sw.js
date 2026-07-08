@@ -1,4 +1,4 @@
-const CACHE = "investus-v1783485676183";
+const CACHE = "investus-v1783491048185";
 
 self.addEventListener("install", (e) => {
   // Activate immediately — don't wait for old tabs to close
