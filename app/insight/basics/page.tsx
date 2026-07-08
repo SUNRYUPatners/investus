@@ -23,9 +23,9 @@ export default function InvestmentLearnPage() {
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
         <div className="pt-4 pb-2">
-          <Link href="/insight" className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--muted)" }}>
+          <Link href="/learn" className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--muted)" }}>
             <ChevronLeft className="w-4 h-4" />
-            인사이트
+            투자 지식 허브
           </Link>
           <h1 className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
             투자 기초 & 대가 전략
