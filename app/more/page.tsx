@@ -1006,6 +1006,7 @@ export default function MorePage() {
     { emoji: "📄", label: isKo ? "이용약관"    : "Terms",      href: "/more/terms" },
     { emoji: "🔒", label: isKo ? "개인정보"    : "Privacy",    href: "/more/privacy" },
     { emoji: "⚠️", label: isKo ? "법적고지"    : "Disclaimer", href: "/more/disclaimer" },
+    { emoji: "🎓", label: isKo ? "투자 지식 허브" : "Learn",   href: "/learn" },
   ];
 
   return (

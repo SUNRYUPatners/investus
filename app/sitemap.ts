@@ -46,6 +46,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/more/privacy`,        lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
     { url: `${base}/more/terms`,          lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
     { url: `${base}/more/disclaimer`,     lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
+    // 투자 지식 허브
+    { url: `${base}/learn`,                        lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/learn/us-stock-basics`,        lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/sp500`,                  lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/fear-greed`,             lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/buffett-indicator`,      lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/portfolio-strategy`,     lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     ...UNIQUE.map((sym) => ({
       url: `${base}/stock/${sym}`,
       lastModified: now,
