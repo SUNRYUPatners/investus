@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.09</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">오늘의 한장 요약</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · xAI · AAPL · NVDA · BO · COST · JPY</text>
+
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">1. TSLA 2040 넷제로 — 2026 운영 100% 재생에너지 전환</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">공급망·제조·사용·폐기 전 밸류체인 · 기가팩토리 베를린 이미 100% 3년째</text>
+
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">2. TSLA 배터리 재활용 — 2025년 14,000톤, 전년 대비 +20%</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">롱레인지 배터리팩 46,000개 상당 · 사내 처리 + 3자 파트너 결합</text>
+
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">3. TSLA Cybercab 설계 — 2인승, 4680 셀, 48V, Steer-by-Wire</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">90% 라이드헤일링 1~2인 근거 · 스티어링·페달·전통 컨트롤 제거로 캐빈 확장</text>
+
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">4. TSLA Robotaxi Florida 여름 대규모 런칭 — 전역 footprint 확대</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Florida = ultimate proving ground · 2026년 말 12개 주 운영 목표 (GoJo)</text>
+
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">5. Waymo 4개 도시 확장 — Denver·Las Vegas·San Diego·Culver City</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">완전 자율주행 라이드 개시 · Tesla Robotaxi와 정면 경쟁 심화</text>
+
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">6. xAI Grok 4.5 — 입력 $2/M · 출력 $6/M · 80 TPS · Opus 4.8 대비 4.5x 저렴</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">토큰 효율 4.2배 우세 (15,954 vs 67,020) · fast-model 속도 + 지능 유지</text>
+
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">7. AAPL × AVGO 다년 협약 — Fort Collins CO 시설 확장, 미국내 반도체 수십억달러 증액</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Apple 미국 제조 투자 확대 · Broadcom 커스텀 실리콘 파트너십 심화</text>
+
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#f87171"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171">8. NVDA 중국 협상 — 최상위 AI 기업 대상 한정 H200 GPU 구매 승인 요청</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">학습 칩 부족 완화 목적 · 추론은 국내 프로세서 유지 (Shay Boloor·PBOC)</text>
+
+  <rect x="64" y="1030" width="952" height="80" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="1030" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="1066" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">9. Blue Origin 자본조달 — NYT: $2.9~3.5B · 신주 발행가 $29 (Bezos 우주 스케일업)</text>
+  <text x="96" y="1092" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">SPCX 경쟁구도 확정 · 우주 자본 사이클 재점화</text>
+
+  <rect x="64" y="1126" width="474" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="1126" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="1162" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa">10. COST 6월 매출 $29.24B</text>
+  <text x="96" y="1188" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">+10.6% YoY · 디지털 +20.9%</text>
+
+  <rect x="546" y="1126" width="470" height="80" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <rect x="546" y="1126" width="6" height="80" rx="3" fill="#fb923c"/>
+  <text x="578" y="1162" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#fb923c">11. JPY 숏 포지션 2007 이후 최대</text>
+  <text x="578" y="1188" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af">헤지펀드 CFTC 순매도 극단</text>
+
+  <rect x="0" y="1290" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1326" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

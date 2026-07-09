@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f87171"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#redGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#991b1b"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">NVDA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#f87171" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#f87171" text-anchor="middle">중국 협상</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">중국, 최상위 AI 기업 대상 한정 NVDA H200 구매 승인 요청</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="92" fill="#f87171" text-anchor="middle">H200</text>
+  <text x="540" y="326" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#ef4444" text-anchor="middle">한정 수량 구매 승인 요청 (PBOC 보도)</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Shay Boloor · AI 학습 칩 부족 완화 목적</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <text x="540" y="434" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171" text-anchor="middle">요청 내용</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#fecaca" text-anchor="middle">중국 자국 최상위 AI 기업 대상 · 한정 수량 H200 GPU 구매 승인</text>
+  <text x="540" y="490" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">학습 워크로드 병목 완화 · 추론은 국내 프로세서 유지 방침</text>
+
+  <rect x="80" y="530" width="440" height="130" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <text x="300" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f87171" text-anchor="middle">구매 대상 칩</text>
+  <text x="300" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#fecaca" text-anchor="middle">NVIDIA H200</text>
+  <text x="300" y="638" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Hopper 아키텍처 최상위</text>
+  <text x="300" y="656" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">HBM3e 141GB · 4.8TB/s</text>
+
+  <rect x="560" y="530" width="440" height="130" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <text x="780" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#f87171" text-anchor="middle">중국 정책 방침</text>
+  <text x="780" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#fecaca" text-anchor="middle">추론 = 국내산</text>
+  <text x="780" y="638" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">국내 프로세서 지속 추진</text>
+  <text x="780" y="656" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">학습만 H200 병용</text>
+
+  <rect x="80" y="672" width="920" height="90" rx="16" fill="#1a0a0a" stroke="#f87171" stroke-width="2"/>
+  <text x="540" y="712" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#f87171" text-anchor="middle">시나리오</text>
+  <text x="540" y="742" font-family="Arial, sans-serif" font-size="14" fill="#fecaca" text-anchor="middle">미국이 승인 시 → NVDA 중국 매출 재개 · 승인 불가 시 → 학습 병목 지속</text>
+
+  <rect x="80" y="782" width="920" height="90" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1"/>
+  <text x="540" y="818" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#f87171" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="846" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">중국 매출 옵션 가치 부활 · 학습 GPU CUDA 해자 재확인 · 추론 시장 국산 대체 리스크 잔존</text>
+
+  <rect x="80" y="890" width="920" height="70" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1"/>
+  <text x="540" y="928" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Shay Boloor · @StockSavvyShay · PBOC via The Information</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

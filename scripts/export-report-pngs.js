@@ -352,6 +352,18 @@ const PAIRS = [
   { ko: 'anthropic-overtakes-openai-20260708.svg',en: 'anthropic-overtakes-openai-20260708-en.svg',label: 'Anthropic_OpenAI',       date: '20260708' },
   { ko: 'tsla-megapack-global-15gw-20260708.svg', en: 'tsla-megapack-global-15gw-20260708-en.svg', label: 'TSLA_Megapack15GW',      date: '20260708' },
   { ko: 'summary-20260708.svg',                   en: 'summary-20260708-en.svg',                   label: '7월08일_요약',            date: '20260708' },
+  { ko: 'tsla-impact-renewable-2040-20260709.svg',   en: 'tsla-impact-renewable-2040-20260709-en.svg',   label: 'TSLA_2040넷제로',        date: '20260709' },
+  { ko: 'tsla-impact-battery-recycling-20260709.svg',en: 'tsla-impact-battery-recycling-20260709-en.svg',label: 'TSLA_배터리재활용',      date: '20260709' },
+  { ko: 'tsla-cybercab-design-20260709.svg',         en: 'tsla-cybercab-design-20260709-en.svg',         label: 'TSLA_Cybercab설계',      date: '20260709' },
+  { ko: 'tsla-robotaxi-florida-20260709.svg',        en: 'tsla-robotaxi-florida-20260709-en.svg',        label: 'TSLA_RobotaxiFL',        date: '20260709' },
+  { ko: 'waymo-4cities-20260709.svg',                en: 'waymo-4cities-20260709-en.svg',                label: 'Waymo_4Cities',          date: '20260709' },
+  { ko: 'xai-grok45-vs-opus48-20260709.svg',         en: 'xai-grok45-vs-opus48-20260709-en.svg',         label: 'xAI_Grok45',             date: '20260709' },
+  { ko: 'aapl-broadcom-fortcollins-20260709.svg',    en: 'aapl-broadcom-fortcollins-20260709-en.svg',    label: 'AAPL_AVGO_FortCollins',  date: '20260709' },
+  { ko: 'nvda-china-yuan-100-20260709.svg',          en: 'nvda-china-yuan-100-20260709-en.svg',          label: 'NVDA_ChinaYuan',         date: '20260709' },
+  { ko: 'blueorigin-capital-raise-20260709.svg',     en: 'blueorigin-capital-raise-20260709-en.svg',     label: 'BlueOrigin_CapRaise',    date: '20260709' },
+  { ko: 'cost-june-sales-20260709.svg',              en: 'cost-june-sales-20260709-en.svg',              label: 'COST_June',              date: '20260709' },
+  { ko: 'jpy-hedge-short-2007-20260709.svg',         en: 'jpy-hedge-short-2007-20260709-en.svg',         label: 'JPY_Short2007',          date: '20260709' },
+  { ko: 'summary-20260709.svg',                      en: 'summary-20260709-en.svg',                      label: '7월09일_요약',            date: '20260709' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

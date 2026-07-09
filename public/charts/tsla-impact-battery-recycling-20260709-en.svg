@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="170" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="237" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Battery Recycling</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla 2025 Battery Recycling Milestone</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="88" fill="#00e5a0" text-anchor="middle">14,000t</text>
+  <text x="540" y="326" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#4ade80" text-anchor="middle">Battery Material Recycled in 2025</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">+20% increase vs 2024</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Equivalent Scale (Long-Range Battery Packs)</text>
+  <text x="540" y="470" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#a7f3d0" text-anchor="middle">≈ 46,000 packs</text>
+  <text x="540" y="496" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Weight-equivalent of Model Y Long Range packs</text>
+
+  <rect x="80" y="530" width="440" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">In-House Processing</text>
+  <text x="300" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#a7f3d0" text-anchor="middle">Direct Collection</text>
+  <text x="300" y="638" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Nevada recycling line in operation</text>
+
+  <rect x="560" y="530" width="440" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="780" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Third-Party Partners</text>
+  <text x="780" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#a7f3d0" text-anchor="middle">Global Network</text>
+  <text x="780" y="638" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Redwood Materials and other partners</text>
+
+  <rect x="80" y="680" width="920" height="90" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#00e5a0" text-anchor="middle">Circular Battery Economy</text>
+  <text x="540" y="750" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">Nickel · Lithium · Cobalt recovery → new cell reuse → reduced mining imports</text>
+
+  <rect x="80" y="790" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="826" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="854" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Cell cost reduction · mineral risk hedge · EU battery passport regulatory readiness</text>
+
+  <rect x="80" y="900" width="920" height="60" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="938" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Tesla 2025 Impact Report · via Sawyer Merritt</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP Chief Investment Officer</text>
+</svg>

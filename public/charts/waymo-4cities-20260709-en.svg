@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="90" height="34" rx="8" fill="#1d4ed8"/>
+  <text x="105" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">GOOGL</text>
+  <rect x="162" y="86" width="140" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="232" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">Waymo Race</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Waymo Adds 4 Cities — Tesla Robotaxi Race Intensifies</text>
+  <text x="540" y="270" font-family="Arial Black, Arial" font-weight="900" font-size="96" fill="#60a5fa" text-anchor="middle">4 Cities</text>
+  <text x="540" y="322" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#3b82f6" text-anchor="middle">Fully autonomous rides now live</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Denver · Las Vegas · San Diego · Culver City</text>
+
+  <rect x="80" y="392" width="220" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="190" y="432" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Denver</text>
+  <text x="190" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#bfdbfe" text-anchor="middle">Colorado</text>
+  <text x="190" y="500" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">New region</text>
+
+  <rect x="315" y="392" width="220" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="425" y="432" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Las Vegas</text>
+  <text x="425" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#bfdbfe" text-anchor="middle">Nevada</text>
+  <text x="425" y="500" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Tourism · nightlife</text>
+
+  <rect x="550" y="392" width="220" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="660" y="432" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">San Diego</text>
+  <text x="660" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#bfdbfe" text-anchor="middle">California</text>
+  <text x="660" y="500" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">CA expansion</text>
+
+  <rect x="785" y="392" width="215" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="892" y="432" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Culver City</text>
+  <text x="892" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#bfdbfe" text-anchor="middle">LA area</text>
+  <text x="892" y="500" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Adjacent to LA</text>
+
+  <rect x="80" y="544" width="920" height="110" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="580" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Waymo Service Model</text>
+  <text x="540" y="608" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">Autonomous mode — fully driverless rides</text>
+  <text x="540" y="634" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">HD-map based + LiDAR sensor stack · Alphabet-owned</text>
+
+  <rect x="80" y="676" width="920" height="90" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="716" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#60a5fa" text-anchor="middle">TSLA vs Waymo Positioning</text>
+  <text x="540" y="746" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">TSLA: camera-vision + massive fleet / Waymo: HD-map + LiDAR precision</text>
+
+  <rect x="80" y="786" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="820" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="848" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Two-pole AV market taking shape · regional penetration race accelerating</text>
+
+  <rect x="80" y="896" width="920" height="60" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="934" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Evan D · Waymo announcement · @Waymo</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP Chief Investment Officer</text>
+</svg>

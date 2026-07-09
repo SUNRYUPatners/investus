@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="purpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#purpGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#6b21a8"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">xAI</text>
+  <rect x="152" y="86" width="140" height="34" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="222" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#c084fc" text-anchor="middle">Grok 4.5</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Grok 4.5 — 4.5x Cheaper Than Opus 4.8 · 2x Token Efficiency</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="92" fill="#c084fc" text-anchor="middle">4.5x</text>
+  <text x="540" y="326" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#a855f7" text-anchor="middle">Cheaper vs Opus 4.8 (max)</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">80 TPS · 2x token efficiency (same SWE Bench Pro task)</text>
+
+  <rect x="80" y="398" width="440" height="110" rx="16" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="300" y="434" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Input Price</text>
+  <text x="300" y="474" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#e9d5ff" text-anchor="middle">$2 / M tokens</text>
+  <text x="300" y="500" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Deep discount vs Opus 4.8</text>
+
+  <rect x="560" y="398" width="440" height="110" rx="16" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="780" y="434" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Output Price</text>
+  <text x="780" y="474" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#e9d5ff" text-anchor="middle">$6 / M tokens</text>
+  <text x="780" y="500" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Lowest in fast-model tier</text>
+
+  <rect x="80" y="530" width="920" height="120" rx="16" fill="#0e0a1e" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Token Efficiency (SWE Bench Pro task)</text>
+  <text x="540" y="606" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#e9d5ff" text-anchor="middle">Grok 4.5: 15,954 · Opus 4.8: 67,020</text>
+  <text x="540" y="634" font-family="Arial, sans-serif" font-size="14" fill="#c4b5fd" text-anchor="middle">4.2x fewer tokens for the same task</text>
+
+  <rect x="80" y="672" width="920" height="90" rx="16" fill="#0e0a1e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="712" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Speed</text>
+  <text x="540" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#e9d5ff" text-anchor="middle">80 TPS · fast-model responsiveness</text>
+
+  <rect x="80" y="782" width="920" height="90" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="818" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#c084fc" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="846" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Triple edge: cost · speed · quality · xAI API growth · Anthropic/OpenAI price pressure</text>
+
+  <rect x="80" y="890" width="920" height="70" rx="14" fill="#0e0a1e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="928" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Elon Musk · xAI announcement</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP Chief Investment Officer</text>
+</svg>

@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T9JL = 1783551600000; // 2026-07-09 08:00 KST
 const T8JL = 1783465200000; // 2026-07-08 08:00 KST
 const T7JL = 1783378800000; // 2026-07-07 08:00 KST
 const T6JL = 1783292400000; // 2026-07-06 08:00 KST
@@ -49,7 +50,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T8JL;       // NEW 배지 기준
+export const LATEST_UPDATE = T9JL;       // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -68,6 +69,73 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-09 — TSLA 2040 넷제로·배터리 재활용 +20%·Cybercab 설계·
+  //              Robotaxi Florida·Waymo 4개 도시·xAI Grok 4.5·
+  //              AAPL×AVGO Fort Collins·NVDA 중국 위안 우회·
+  //              Blue Origin 자본조달·COST 6월 +10.6%·JPY 숏 2007 이후 최대
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA 2040 넷제로 ─────────────────────────────────────────────────────
+  { id: 472, symbol: "TSLA", nickname: "익명_2914", holdingLabel: "220주 보유",
+    content: "임팩트 리포트 진짜 크더라. 2040년 밸류체인 전체 넷제로에 2026년 자사 운영은 100% 재생에너지 전환하겠다는 거잖아. 기가팩토리 베를린은 이미 3년 연속 100% 돌리는 중이고. Tesla가 명시적으로 어렵다고 언급한 게 철강이랑 배터리 원재료 두 개인데 이게 오히려 정직하게 느껴짐. 넘 큰 그림 잡아서 좋다.",
+    createdAt: T9JL + 6*60_000, likes: 2412, comments: 5 },
+
+  // TSLA 배터리 재활용 14,000톤 ───────────────────────────────────────
+  { id: 473, symbol: "TSLA", nickname: "익명_5083", holdingLabel: "롱레인지 오너",
+    content: "배터리 재활용 14,000톤이 롱레인지 배터리팩 46,000개랑 맞먹는대. 전년 대비 +20%. 이게 왜 중요하냐면 니켈·리튬·코발트를 새로 파오는 것보다 재활용이 훨씬 싸거든. Nevada 사내 라인 + Redwood Materials 같은 파트너 결합 방식. 셀 원가 낮아지면 결국 마진 개선으로 이어지고, EU 배터리 여권 규제도 앞서갈 수 있어.",
+    createdAt: T9JL + 14*60_000, likes: 1789, comments: 4 },
+
+  // TSLA Cybercab 설계 ────────────────────────────────────────────────
+  { id: 474, symbol: "TSLA", nickname: "익명_7245", holdingLabel: "150주 보유",
+    content: "Cybercab 2인승 확정이래. 라이드헤일링 트립 90%가 1~2인이라는 데이터 근거야. 스티어링·페달·계기판 다 없애고 4680 셀 + 48V + Steer-by-Wire. 대형 그룹 필요할 땐 Model Y 자율차량이 커버하는 이원 구조. 차량 부품 수 자체가 줄어드니까 트립당 EBITDA 개선이 엄청 클 듯.",
+    createdAt: T9JL + 22*60_000, likes: 1954, comments: 5 },
+
+  // TSLA Robotaxi Florida ─────────────────────────────────────────────
+  { id: 475, symbol: "TSLA", nickname: "익명_3671", holdingLabel: "400주 보유",
+    content: "이번 여름 Robotaxi Florida 대규모 런칭한다는데 진짜 각 잡고 하는 듯. GoJo News BREAKING: Florida 전역에 걸쳐 footprint 확대 중. Tesla가 Florida를 'ultimate proving ground'라고 부른 거 의미심장. 'monster-free' blueprint가 Florida에서 성공하면 2026년 말까지 12개 주 운영이 목표라고. 로보택시 매출 곡선 진짜 가파르게 올라오겠네.",
+    createdAt: T9JL + 32*60_000, likes: 2687, comments: 6 },
+
+  // Waymo 4개 도시 ────────────────────────────────────────────────────
+  { id: 476, symbol: "GOOGL", nickname: "익명_8420", holdingLabel: "관심종목",
+    content: "Waymo가 Denver·Las Vegas·San Diego·Culver City 4개 도시에서 완전 자율주행 라이드 시작함. Tesla Robotaxi Florida 확장이랑 진짜 같은 시기에 발표된 거라 재밌음. LiDAR·HD맵 vs 카메라·비전 두 진영 경쟁이 본격화. GOOGL 관점에서는 Waymo 부문 밸류가 다시 부각될 수 있는 이벤트야.",
+    createdAt: T9JL + 42*60_000, likes: 1345, comments: 4 },
+
+  // xAI Grok 4.5 ──────────────────────────────────────────────────────
+  { id: 477, symbol: "TSLA", nickname: "익명_4519", holdingLabel: "테슬라 장기",
+    content: "Grok 4.5 스펙 공개됐는데 놀랐어. 입력 $2/M · 출력 $6/M · 80 TPS. Opus 4.8(max) 대비 4.5x 싸다는 거 자체도 크지만, SWE Bench Pro 태스크에서 토큰을 4.2배 적게 쓴다는 게 진짜 핵심. 15,954 vs 67,020. 같은 지능을 절반의 스텝으로 낸다는 얘기잖아. xAI 매출 상승·Anthropic 가격 압박 확정.",
+    createdAt: T9JL + 52*60_000, likes: 2078, comments: 5 },
+
+  // AAPL × AVGO Fort Collins ──────────────────────────────────────────
+  { id: 478, symbol: "AAPL", nickname: "익명_1836", holdingLabel: "80주 보유",
+    content: "Apple이 Broadcom이랑 새 다년 계약 공식 발표. Fort Collins Colorado 시설 확장해서 미국내 반도체 생산에 수십억 달러 더 쓰기로. AVGO 매출 가시성 강해지고, Apple은 온쇼어링 스토리 확장. 트럼프 온쇼어링 정책 수혜 라인이 자꾸 넓어지는 느낌.",
+    createdAt: T9JL + 62*60_000, likes: 1523, comments: 4 },
+
+  // AVGO 관점 ─────────────────────────────────────────────────────────
+  { id: 479, symbol: "AVGO", nickname: "익명_9037", holdingLabel: "관심종목",
+    content: "AVGO 이번 Apple 계약 소식은 상당히 크다고 봄. Broadcom은 이미 Apple에 RF 프론트엔드·전력관리 IC 공급하고 있는데, 다년 협약으로 락인 강화된 거. Fort Collins 확장 = 정치·관세 리스크 완충. Apple이 계속 미국내 파트너 확대하는 방향이면 AVGO 매출 기반이 굳어지는 셈.",
+    createdAt: T9JL + 68*60_000, likes: 987, comments: 3 },
+
+  // NVDA 중국 협상 ────────────────────────────────────────────────────
+  { id: 480, symbol: "NVDA", nickname: "익명_6552", holdingLabel: "120주 보유",
+    content: "The Information·PBOC 발 뉴스인데 Shay Boloor가 정리한 거 봤어. 중국이 미국에 자국 최상위 AI 기업들이 한정 수량의 NVDA H200 GPU를 살 수 있게 승인해 달라고 요청한 상태야. AI 학습 칩 부족을 완화하려는 목적이고, 추론 워크로드는 계속 국내 프로세서로 유지한다는 방침을 병행한대. 밸류에이션에서 지워졌던 중국 매출 옵션이 다시 살아난 흐름이야. CUDA 해자로 학습은 방어되는데 추론 시장 국산 대체 리스크는 여전.",
+    createdAt: T9JL + 78*60_000, likes: 1876, comments: 5 },
+
+  // Blue Origin 자본조달 ──────────────────────────────────────────────
+  { id: 481, symbol: "SPCX", nickname: "익명_2405", holdingLabel: "SPCX 팬",
+    content: "NYT가 Blue Origin 자본조달 스쿠프 냈네. $2.9B 기본에 최대 $3.5B까지, 주당 $29로 첫 외부 라운드 돌린다는 거야. Amazon Kuiper랑 협력 심화, New Glenn 재사용에 자금 투입. SPCX 관점에선 경쟁 확정된 거지만 오히려 우주 자본 사이클이 재점화되는 게 큼. Kuiper·달·발사 밸류체인 협력사 낙수효과 살펴보자.",
+    createdAt: T9JL + 88*60_000, likes: 1642, comments: 4 },
+
+  // COST 6월 매출 ────────────────────────────────────────────────────
+  { id: 482, symbol: "COST", nickname: "익명_3128", holdingLabel: "60주 보유",
+    content: "Costco 6월 매출 $29.24B, YoY +10.6%. 44주 누적도 $250.43B로 +10.1%. 진짜 놀라운 건 디지털 채널 +20.9% — 조정하면 +21.5%. 이커머스 카테고리에서 소비자가 오히려 강해지고 있는 걸 보여줌. 멤버십 락인 + 대량 구매 우위 = 매크로 방어. Q2 어닝 자체가 기대되는 흐름이야.",
+    createdAt: T9JL + 96*60_000, likes: 1421, comments: 4 },
+
+  // JPY 헤지펀드 숏 ───────────────────────────────────────────────────
+  { id: 483, symbol: "JPY", nickname: "익명_7712", holdingLabel: "매크로 관심",
+    content: "Bloomberg 자료 봤는데 CFTC CME 엔 헤지펀드 순포지션이 2007년 이후 최대 숏이래. 6/30 기준 -100K contracts 아래, -200K 근접. BOJ 완화 + 미일 금리차 유지가 배경. 문제는 이 정도 극단이면 항상 되돌림이 왔다는 거. 2007·2013·2024 사례가 다 그랬음. 캐리 언와인드 시 미국 성장주도 조정 리스크 크게 확대.",
+    createdAt: T9JL + 106*60_000, likes: 1198, comments: 4 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-08 — NVDA Kyber 랙·TSLA Optiwatts·Optimus 채용·아랍 라이트 할인·
@@ -2000,6 +2068,85 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-09 신규 ──────────────────────────────────────────────────────
+  472: [
+    { id: 1, nickname: "익명_3852", holdingLabel: "120주 보유", content: "2040 넷제로 목표 잡은 게 진짜 큰 그림이에요. 공급망까지 다 포함이라 배터리 원재료·철강 협력사 압박도 확대되는 거고요.", createdAt: T9JL + 25*60_000, likes: 342 },
+    { id: 2, nickname: "익명_7128", holdingLabel: "관심종목", content: "기가팩토리 베를린이 3년 연속 100% 재생에너지라는 팩트가 실행력 있음을 증명해요. 목표만 잡고 안 지키는 회사랑 확실히 다릅니다.", createdAt: T9JL + 52*60_000, likes: 267 },
+    { id: 3, nickname: "익명_9364", holdingLabel: "200주 보유", content: "'철강·배터리 원재료는 어렵다'고 명시적으로 언급한 게 오히려 신뢰 가요. 그린워싱 없이 어려운 부분 인정하고 해결책 찾는 방향이면 규제 리스크도 헤지되는 거예요.", createdAt: T9JL + 1*3600_000 + 15*60_000, likes: 234 },
+    { id: 4, nickname: "익명_5471", holdingLabel: "관심종목", content: "ESG 펀드가 Tesla를 다시 담을 수 있는 논거가 하나 더 생겼어요. Elon 정치 발언 리스크로 빠진 부분을 임팩트 리포트가 커버해주는 흐름.", createdAt: T9JL + 1*3600_000 + 40*60_000, likes: 189 },
+    { id: 5, nickname: "익명_2158", holdingLabel: "150주 보유", content: "저탄소 철강 스타트업이랑 배터리 리사이클링 파트너사가 낙수효과 봐요. TSLA만 사는 게 아니라 밸류체인 협력사도 스크리닝 필요.", createdAt: T9JL + 2*3600_000 + 5*60_000, likes: 156 },
+  ],
+  473: [
+    { id: 1, nickname: "익명_6284", holdingLabel: "100주 보유", content: "14,000톤이면 진짜 대규모예요. 롱레인지 팩 46,000개면 완성차 4~5만대 분량의 배터리 원료가 순환되는 셈이라 원가 압박에 진짜 도움 되는 규모예요.", createdAt: T9JL + 35*60_000, likes: 245 },
+    { id: 2, nickname: "익명_9137", holdingLabel: "관심종목", content: "Nevada 사내 라인 + Redwood Materials 조합이 효율적. 사내에서 프리미엄 회수 처리하고, 3자 파트너로 볼륨 확대하는 이원 전략이에요.", createdAt: T9JL + 1*3600_000 + 8*60_000, likes: 178 },
+    { id: 3, nickname: "익명_4529", holdingLabel: "80주 보유", content: "EU 배터리 여권 규정이 2027년부터 강화되는데 재활용 비율 인증이 중요해져요. Tesla가 미리 트랙 레코드 쌓는 거라 유럽 판매에도 유리해질 것.", createdAt: T9JL + 1*3600_000 + 30*60_000, likes: 156 },
+    { id: 4, nickname: "익명_8710", holdingLabel: "관심종목", content: "+20% YoY 성장률이면 재활용 자체가 성장 사업으로 진입한 거예요. Optimus·Megapack 배터리 수요 폭증에 대비한 안정적 원료 공급 축이 되겠네요.", createdAt: T9JL + 2*3600_000 + 12*60_000, likes: 189 },
+  ],
+  474: [
+    { id: 1, nickname: "익명_1836", holdingLabel: "180주 보유", content: "2인승 확정이 라이드헤일링 실제 데이터 기반이라는 게 좋아요. 90% 트립이 1~2인이면 5인승·7인승 만드는 건 낭비죠. 최적화 극단까지 밀어붙였네.", createdAt: T9JL + 45*60_000, likes: 312 },
+    { id: 2, nickname: "익명_5723", holdingLabel: "관심종목", content: "Steer-by-Wire가 안전 이슈로 논란 있었는데 Cybercab처럼 자율주행 전용이면 오히려 완벽하죠. 사람이 안 잡는 조향이면 기계적 백업이 필요 없으니까.", createdAt: T9JL + 1*3600_000 + 20*60_000, likes: 234 },
+    { id: 3, nickname: "익명_9147", holdingLabel: "300주 보유", content: "48V 아키텍처가 사실 진짜 큰 변화예요. 12V 표준을 40년 넘게 유지했는데 전선 무게 줄고 전력 손실 감소. Tesla가 자동차 산업 표준 자체를 바꾸는 중.", createdAt: T9JL + 1*3600_000 + 55*60_000, likes: 289 },
+    { id: 4, nickname: "익명_6482", holdingLabel: "관심종목", content: "부품 수 줄이면 단가만 낮아지는 게 아니라 고장 확률도 낮아져요. 로보택시 24시간 운행 시 다운타임 최소화가 핵심인데 이게 트립당 EBITDA에 직결.", createdAt: T9JL + 2*3600_000 + 22*60_000, likes: 178 },
+    { id: 5, nickname: "익명_3517", holdingLabel: "220주 보유", content: "'다른 자율주행 Tesla가 대형 그룹 커버' 부분에 주목. Model Y도 결국 무인 로보택시 편성될 거라는 얘기잖아요. 이원 플릿 전략이면 채택 속도 훨씬 빨라져요.", createdAt: T9JL + 3*3600_000 + 8*60_000, likes: 267 },
+  ],
+  475: [
+    { id: 1, nickname: "익명_8934", holdingLabel: "관심종목", content: "'ultimate proving ground' 표현이 진짜 무겁게 느껴져요. Florida = 최종 검증 지역이라는 건 여기서 통과하면 전국 확장 자신 있다는 뜻이거든요.", createdAt: T9JL + 50*60_000, likes: 378 },
+    { id: 2, nickname: "익명_2167", holdingLabel: "500주 보유", content: "Florida 전역에 걸쳐 footprint 확대라고 하는데 관광객 유동이 많은 주라 로보택시 수요 자체가 폭발적일 지역이에요. 첫 6개월 매출 기대돼요.", createdAt: T9JL + 1*3600_000 + 25*60_000, likes: 456 },
+    { id: 3, nickname: "익명_5843", holdingLabel: "관심종목", content: "12개 주 목표가 2026년 말이면 앞으로 6개월 안에 8~10개 주 추가된다는 얘기. 이 속도면 2027년 미국 전역 커버 가능하겠는데요.", createdAt: T9JL + 2*3600_000 + 5*60_000, likes: 234 },
+    { id: 4, nickname: "익명_7196", holdingLabel: "180주 보유", content: "DeSantis가 FSD·자율주행 우호적이라 Florida 골든 카드예요. Texas·Florida 두 곳에서 규제 마찰 없이 상용화 진행하면 다른 주도 압박 받을 거예요.", createdAt: T9JL + 2*3600_000 + 35*60_000, likes: 267 },
+    { id: 5, nickname: "익명_4028", holdingLabel: "관심종목", content: "이번 여름 런칭 = Q3 매출부터 반영이에요. 어닝 시점에 로보택시 매출 세그먼트가 처음으로 의미 있는 수치 나올 거고 그때 밸류에이션 재평가 갈 듯.", createdAt: T9JL + 3*3600_000 + 15*60_000, likes: 312 },
+    { id: 6, nickname: "익명_9354", holdingLabel: "240주 보유", content: "'매출 이연 없이 즉시 반영' 부분이 시장에 아직 반영이 덜 됐어요. 지역 확장 = 트립 볼륨 = P&L 즉시 반영이라 지금 사놓는 게 늦지 않다고 봅니다.", createdAt: T9JL + 4*3600_000 + 2*60_000, likes: 289 },
+  ],
+  476: [
+    { id: 1, nickname: "익명_5731", holdingLabel: "관심종목", content: "Waymo가 4개 도시 동시 발표한 건 Tesla Florida 확장 대응이에요. 지역별로 경쟁이 본격화되는 게 확실.", createdAt: T9JL + 55*60_000, likes: 178 },
+    { id: 2, nickname: "익명_8241", holdingLabel: "40주 보유", content: "GOOGL SOTP(sum-of-parts)에서 Waymo 부문이 다시 부각될 이벤트에요. 애널리스트들이 Waymo 가치 재계산 시작할 것.", createdAt: T9JL + 1*3600_000 + 18*60_000, likes: 156 },
+    { id: 3, nickname: "익명_3627", holdingLabel: "관심종목", content: "LiDAR·HD맵 방식은 특정 지역에서 정밀도 최고지만 확장 속도가 카메라 방식 대비 느려요. Tesla가 결국 이길 가능성 높아 보이지만 Waymo도 무시 못 함.", createdAt: T9JL + 2*3600_000 + 3*60_000, likes: 189 },
+    { id: 4, nickname: "익명_9418", holdingLabel: "GOOGL 보유", content: "Waymo는 안전성 검증 우선 전략이라 규제 마찰이 적어요. 오히려 관광객 많은 Las Vegas 진출이 상업적으로 크게 성공할 가능성 높음.", createdAt: T9JL + 2*3600_000 + 40*60_000, likes: 145 },
+  ],
+  477: [
+    { id: 1, nickname: "익명_4159", holdingLabel: "500주 보유", content: "Grok 4.5 스펙 진짜 미쳤어요. 4.5x 저렴 + 4.2x 토큰 효율이면 실질 비용은 20배 가까이 차이 나는 셈. xAI가 API 매출을 진짜 폭발적으로 늘릴 수 있는 조합이에요.", createdAt: T9JL + 1*3600_000 + 5*60_000, likes: 456 },
+    { id: 2, nickname: "익명_7263", holdingLabel: "관심종목", content: "80 TPS는 fast-model 대비 상급 속도예요. 코딩 에이전트·자동화 워크플로우에서 반응성이 크게 향상돼서 실무 채택이 빨라질 것.", createdAt: T9JL + 1*3600_000 + 45*60_000, likes: 234 },
+    { id: 3, nickname: "익명_2381", holdingLabel: "200주 보유", content: "Anthropic이 가격 대응해야 하는데 Opus 4.8 성능 유지하면서 가격 낮추기는 진짜 어려워요. 하이엔드 모델 시장이 새로 재편될 수도 있어요.", createdAt: T9JL + 2*3600_000 + 20*60_000, likes: 267 },
+    { id: 4, nickname: "익명_8437", holdingLabel: "관심종목", content: "Grok 4.5가 Optimus 두뇌 후보로 부각되면 TSLA 밸류에이션에도 반영될 수 있어요. xAI가 실질적으로 Musk 생태계 AI 중추라서요.", createdAt: T9JL + 3*3600_000 + 12*60_000, likes: 189 },
+    { id: 5, nickname: "익명_6519", holdingLabel: "300주 보유", content: "AI Gateway나 라우터 서비스에서 Grok 우선 채택 늘어날 거예요. 개발자 입장에서 동일 태스크에 4.5x 싸면 안 쓸 이유가 없거든요.", createdAt: T9JL + 4*3600_000, likes: 178 },
+  ],
+  478: [
+    { id: 1, nickname: "익명_5827", holdingLabel: "관심종목", content: "Fort Collins 확장이 상징적이에요. Apple이 미국 내에서 R&D·제조 파트너 확대하는 방향이 확실해졌어요.", createdAt: T9JL + 1*3600_000 + 10*60_000, likes: 234 },
+    { id: 2, nickname: "익명_3945", holdingLabel: "120주 보유", content: "다년 계약이면 매출 가시성이 크게 개선돼요. AVGO 실적 예측치가 상향 조정될 여지가 있어요.", createdAt: T9JL + 1*3600_000 + 50*60_000, likes: 178 },
+    { id: 3, nickname: "익명_6108", holdingLabel: "관심종목", content: "트럼프 온쇼어링 정책 명분에 부합해서 정치적으로도 안전한 딜이에요. Apple이 정치 리스크 완화 카드로 활용하는 것.", createdAt: T9JL + 2*3600_000 + 25*60_000, likes: 156 },
+    { id: 4, nickname: "익명_9273", holdingLabel: "AAPL 50주", content: "AI 시대에 Apple이 뒤처져 있다는 지적이 많은데 반도체 인프라 투자로 하드웨어 우위를 유지하려는 전략이에요. 온디바이스 AI 강화 방향과 일치해요.", createdAt: T9JL + 3*3600_000 + 5*60_000, likes: 145 },
+  ],
+  479: [
+    { id: 1, nickname: "익명_4726", holdingLabel: "AVGO 관심", content: "AVGO는 Apple 매출 비중이 크기 때문에 이런 다년 계약 확정이 진짜 큰 호재예요. 하이패션 시장 우려 완화할 수 있어요.", createdAt: T9JL + 1*3600_000 + 18*60_000, likes: 189 },
+    { id: 2, nickname: "익명_8153", holdingLabel: "관심종목", content: "RF 프론트엔드는 Apple이 Broadcom 대안 없이 유일하게 의존하는 부품이에요. 이 락인 관계가 확장되면 AVGO 프리미엄 밸류에이션 정당화돼요.", createdAt: T9JL + 2*3600_000 + 30*60_000, likes: 156 },
+    { id: 3, nickname: "익명_6349", holdingLabel: "80주 보유", content: "Fort Collins가 반도체 클러스터로 부상하면 지역 부동산·인프라 협력사도 낙수효과 있을 거예요. 미국 반도체 정책 수혜 라인 계속 확장 중.", createdAt: T9JL + 3*3600_000 + 15*60_000, likes: 123 },
+  ],
+  480: [
+    { id: 1, nickname: "익명_7418", holdingLabel: "80주 보유", content: "H200을 학습용으로 요청한다는 게 중요해요. 학습 워크로드에서 국산 대체가 안 되고 있다는 반증이라 CUDA 해자가 여전히 살아있다는 뜻.", createdAt: T9JL + 1*3600_000 + 25*60_000, likes: 245 },
+    { id: 2, nickname: "익명_2394", holdingLabel: "관심종목", content: "승인이 나면 NVDA 중국 매출 옵션이 부활하는 거예요. 트럼프-시진핑 협상 진전에 따라 열릴 여지가 있어서 상방 옵션 가치가 큼.", createdAt: T9JL + 2*3600_000 + 10*60_000, likes: 189 },
+    { id: 3, nickname: "익명_9628", holdingLabel: "150주 보유", content: "중국 방침이 '추론=국내 프로세서'로 명확해요. 국산 프로세서가 추론에서 성공하면 NVDA 추론 매출은 구조적으로 축소돼요. 트래킹 필수 이슈.", createdAt: T9JL + 2*3600_000 + 40*60_000, likes: 178 },
+    { id: 4, nickname: "익명_5147", holdingLabel: "관심종목", content: "H200이 요청 대상이라는 것도 흥미로워요. H100보다 상위 스펙인데 이걸 학습용으로 정면 요청한다는 건 대체재가 없다는 확실한 신호.", createdAt: T9JL + 3*3600_000 + 20*60_000, likes: 156 },
+    { id: 5, nickname: "익명_8253", holdingLabel: "200주 보유", content: "NVDA 밸류에이션에 중국 노출이 이미 대부분 지워진 상태였어요. 승인 뉴스만 나오면 상방이 크게 열릴 수 있는 이벤트.", createdAt: T9JL + 4*3600_000 + 5*60_000, likes: 234 },
+  ],
+  481: [
+    { id: 1, nickname: "익명_3618", holdingLabel: "SPCX 250주", content: "Blue Origin이 처음으로 외부 자본조달 하는 거라 우주 산업 전체가 새 국면 진입. SpaceX 프리미엄이 흔들릴 걱정보다 우주 자본 전체 파이 커지는 게 더 커요.", createdAt: T9JL + 1*3600_000 + 40*60_000, likes: 267 },
+    { id: 2, nickname: "익명_7942", holdingLabel: "관심종목", content: "$29/주 발행가 = Bezos가 지분 희석 감수하고서라도 자본 확보하겠다는 의지. Kuiper 발사 속도가 정말 급한 상황이에요.", createdAt: T9JL + 2*3600_000 + 15*60_000, likes: 189 },
+    { id: 3, nickname: "익명_5386", holdingLabel: "80주 보유", content: "Amazon Kuiper 협력 강화가 핵심 스토리예요. Amazon이 자체적으로 위성 인터넷 시장에 진입하면 Starlink 경쟁 압력 증가하는 건 사실.", createdAt: T9JL + 3*3600_000 + 10*60_000, likes: 156 },
+    { id: 4, nickname: "익명_9527", holdingLabel: "관심종목", content: "SPCX 관점에서는 오히려 우주 산업이 상대적으로 저평가돼 있다는 반증이 돼요. Blue Origin이 $29에 라운드 돌리면 SPCX 300+ 목표가 정당화 논거 강해져요.", createdAt: T9JL + 4*3600_000 + 8*60_000, likes: 234 },
+  ],
+  482: [
+    { id: 1, nickname: "익명_4382", holdingLabel: "80주 보유", content: "6월 매출 +10.6% YoY가 인상적이지만 디지털 +20.9%가 진짜 놀라운 부분이에요. Costco 회원제 이커머스 상승세가 아직 끝나지 않았음.", createdAt: T9JL + 1*3600_000 + 45*60_000, likes: 189 },
+    { id: 2, nickname: "익명_7519", holdingLabel: "관심종목", content: "44주 누적 매출도 두 자릿수 성장 유지. 매크로 불안정성에도 소비자가 Costco로 몰리는 방어 소비 패턴이 뚜렷해요.", createdAt: T9JL + 2*3600_000 + 20*60_000, likes: 145 },
+    { id: 3, nickname: "익명_2846", holdingLabel: "40주 보유", content: "가솔린·환율 조정치도 +7.0% 나오는 게 진짜 실질 성장이라는 증거. 회원제 락인이 매크로 방어 자산으로서 계속 부각되겠네요.", createdAt: T9JL + 3*3600_000 + 5*60_000, likes: 156 },
+    { id: 4, nickname: "익명_6273", holdingLabel: "관심종목", content: "Q2 어닝 예상치 상향 조정 명분 있어요. 밸류에이션 P/E 40배 넘어도 이 성장률이면 지속 가능한 수준이에요.", createdAt: T9JL + 3*3600_000 + 45*60_000, likes: 178 },
+  ],
+  483: [
+    { id: 1, nickname: "익명_9153", holdingLabel: "매크로 관심", content: "-200K contracts 근접은 진짜 심리적 극단이에요. 2007·2013·2024 다 이 근처에서 반전 나왔다는 게 통계적으로 무시 못 하는 신호.", createdAt: T9JL + 1*3600_000 + 50*60_000, likes: 178 },
+    { id: 2, nickname: "익명_4718", holdingLabel: "관심종목", content: "BOJ 개입 확률이 급격히 올라가는 구간이에요. 일본 재무성이 지금 실질 개입 카드 만지작거리는 거 확실.", createdAt: T9JL + 2*3600_000 + 25*60_000, likes: 156 },
+    { id: 3, nickname: "익명_8342", holdingLabel: "20주 보유", content: "캐리 언와인드 시 미국 성장주가 진짜 위험. AI·반도체 대형주가 일본 자금으로 가장 많이 매수됐기 때문에 되돌림이 크게 나올 수 있어요.", createdAt: T9JL + 3*3600_000 + 15*60_000, likes: 189 },
+    { id: 4, nickname: "익명_5629", holdingLabel: "매크로 관심", content: "엔 강세 시나리오에서는 닛케이도 급락할 수 있어요. 일본 수출주 위주 지수라 캐리 언와인드는 이중 압력이에요.", createdAt: T9JL + 4*3600_000 + 5*60_000, likes: 134 },
+  ],
+
   // ── 2026-07-08 신규 ──────────────────────────────────────────────────────
   456: [
     { id: 1, nickname: "익명_2947", holdingLabel: "30주 보유", content: "Co-packed Optics가 광집적 기술로 NVLink 대역폭 한계 돌파한다는 거잖아요. 구리 케이블 대비 레이턴시가 얼마나 줄어드는지 벤치마크 나오면 데이터센터 교체 수요 폭발할 것 같아요.", createdAt: T8JL + 20*60_000, likes: 312 },

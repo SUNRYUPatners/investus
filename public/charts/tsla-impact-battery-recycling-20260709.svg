@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">배터리 재활용</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla 2025 배터리 재활용 성과</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="88" fill="#00e5a0" text-anchor="middle">14,000톤</text>
+  <text x="540" y="326" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#4ade80" text-anchor="middle">2025년 재활용 배터리 소재</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">전년 2024 대비 +20% 증가</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">환산 규모 (Long-range 배터리팩 기준)</text>
+  <text x="540" y="470" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#a7f3d0" text-anchor="middle">≈ 46,000개 팩</text>
+  <text x="540" y="496" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Model Y Long Range 배터리팩 무게 환산</text>
+
+  <rect x="80" y="530" width="440" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">사내 처리 (In-house)</text>
+  <text x="300" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#a7f3d0" text-anchor="middle">직접 회수·분해</text>
+  <text x="300" y="638" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Nevada 배터리 재활용 라인 운영</text>
+
+  <rect x="560" y="530" width="440" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="780" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">3자 파트너 (Third-party)</text>
+  <text x="780" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="#a7f3d0" text-anchor="middle">글로벌 네트워크</text>
+  <text x="780" y="638" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Redwood Materials 등 협력</text>
+
+  <rect x="80" y="680" width="920" height="90" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#00e5a0" text-anchor="middle">배터리 순환 경제 (Circular Economy)</text>
+  <text x="540" y="750" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">니켈·리튬·코발트 회수 → 신형 셀 재투입 → 광물 수입 의존 저감</text>
+
+  <rect x="80" y="790" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="826" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="854" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">셀 원가 절감 · 광물 리스크 헤지 · 규제 대응력 (EU 배터리 여권) 확보</text>
+
+  <rect x="80" y="900" width="920" height="60" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="938" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Tesla 2025 Impact Report · via Sawyer Merritt</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

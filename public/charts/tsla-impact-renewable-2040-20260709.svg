@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">임팩트 리포트</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla 넷제로 로드맵 — 2040년 밸류체인 전체</text>
+  <text x="540" y="270" font-family="Arial Black, Arial" font-weight="900" font-size="96" fill="#00e5a0" text-anchor="middle">2040</text>
+  <text x="540" y="322" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#4ade80" text-anchor="middle">밸류체인 전체 넷제로 목표</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">공급망 · 제조 · 사용 · 폐기 (모든 단계 포함)</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">두 단계 목표</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">2026년: 자사 운영 (Operations) 100% 재생에너지 전환</text>
+  <text x="540" y="488" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">2040년: 밸류체인 전체 넷제로 (Scope 1·2·3)</text>
+
+  <rect x="80" y="530" width="920" height="90" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#00e5a0" text-anchor="middle">기가팩토리 베를린-브란덴부르크</text>
+  <text x="540" y="606" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#a7f3d0" text-anchor="middle">이미 100% 재생에너지 · 3년 연속</text>
+
+  <rect x="80" y="636" width="440" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="678" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">저감 가능 영역</text>
+  <text x="300" y="710" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">전기 사용 · 물류</text>
+  <text x="300" y="732" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">공정 열원 · 조립</text>
+  <text x="300" y="754" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">재생에너지 조달로 해결</text>
+
+  <rect x="560" y="636" width="440" height="130" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="780" y="678" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">난 저감 영역 (Hard to abate)</text>
+  <text x="780" y="710" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">철강 (steel)</text>
+  <text x="780" y="732" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">배터리 원재료</text>
+  <text x="780" y="754" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Tesla 명시적 언급</text>
+
+  <rect x="80" y="782" width="920" height="76" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="812" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="838" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">ESG 자금 재유입 촉발 · 재생에너지·저탄소 소재 공급망 밸류업</text>
+
+  <rect x="80" y="878" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">데이터 소스</text>
+  <text x="540" y="934" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Tesla 2025 Impact Report · July 8, 2026 · Muskonomy</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

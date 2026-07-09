@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="160" height="34" rx="8" fill="#1d4ed8"/>
+  <text x="140" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">AAPL · AVGO</text>
+  <rect x="232" y="86" width="140" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="302" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">미국 반도체</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Apple × Broadcom — Fort Collins CO 확장 다년 계약</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="82" fill="#60a5fa" text-anchor="middle">Fort Collins</text>
+  <text x="540" y="326" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#3b82f6" text-anchor="middle">Colorado 시설 대규모 확장</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">미국 내 반도체 생산 수십억 달러 규모 증액</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="434" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Apple 공식 프레스 릴리스 (2026.07.08)</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">"Apple to increase spend with Broadcom to produce billions more U.S. chips"</text>
+  <text x="540" y="490" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">New multiyear agreement includes expansion to facility in Fort Collins, Colorado</text>
+
+  <rect x="80" y="530" width="440" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="300" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Apple 관점</text>
+  <text x="300" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#bfdbfe" text-anchor="middle">미국내 제조</text>
+  <text x="300" y="638" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">공급망 리스크 헤지</text>
+  <text x="300" y="656" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">관세·정치 리스크 완충</text>
+
+  <rect x="560" y="530" width="440" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="780" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Broadcom 관점</text>
+  <text x="780" y="608" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#bfdbfe" text-anchor="middle">고객사 락인</text>
+  <text x="780" y="638" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Apple 커스텀 실리콘 파트너</text>
+  <text x="780" y="656" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">RF·전력 관리 IC 공급</text>
+
+  <rect x="80" y="672" width="920" height="90" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="712" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#60a5fa" text-anchor="middle">누적 미국 제조 투자</text>
+  <text x="540" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#bfdbfe" text-anchor="middle">$600B+ Apple US 공약 · Broadcom 신규 다년 증액</text>
+
+  <rect x="80" y="782" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="818" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="846" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">AVGO 매출 가시성 강화 · 미국내 반도체 정책 수혜 · Apple 온쇼어링 가속</text>
+
+  <rect x="80" y="890" width="920" height="70" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="928" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Apple Press Release · July 8, 2026 · via Wall St Engine</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

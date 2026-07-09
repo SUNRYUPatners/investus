@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fb923c"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#orangeGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#9a3412"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">JPY</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#fb923c" text-anchor="middle">헤지펀드 포지션</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">엔화 숏 포지션 2007 이후 최대 — 헤지펀드 극단 베어리시</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="88" fill="#fb923c" text-anchor="middle">2007</text>
+  <text x="540" y="326" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#f97316" text-anchor="middle">CFTC 이후 최다 순매도</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Bloomberg · CFTC CME 엔 레버리지 자금 순포지션</text>
+
+  <rect x="80" y="398" width="920" height="130" rx="16" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="540" y="434" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fb923c" text-anchor="middle">데이터 개요</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">CFTC 데이터: 헤지펀드 CME 엔 순포지션이 2007년 이후 가장 극단적 숏</text>
+  <text x="540" y="492" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">100K 계약 아래 · -200K contracts 근접</text>
+  <text x="540" y="518" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Data through 2026-06-30 · CFTC 발표</text>
+
+  <rect x="80" y="548" width="440" height="130" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="300" y="588" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">숏 논리</text>
+  <text x="300" y="622" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">BOJ 완화 지속</text>
+  <text x="300" y="642" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">미일 금리차 유지</text>
+  <text x="300" y="662" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">캐리 트레이드 확대</text>
+
+  <rect x="560" y="548" width="440" height="130" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="780" y="588" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">역쏠림 리스크</text>
+  <text x="780" y="622" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">BOJ 개입 뉴스</text>
+  <text x="780" y="642" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">Fed 인하 시그널</text>
+  <text x="780" y="662" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">숏 스퀴즈 발생 여지</text>
+
+  <rect x="80" y="698" width="920" height="90" rx="16" fill="#1a0d00" stroke="#fb923c" stroke-width="2"/>
+  <text x="540" y="738" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#fb923c" text-anchor="middle">역사적 참고</text>
+  <text x="540" y="768" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">2007년 이후 극단 숏 = 2007·2013·2024 사례 → 이후 급격한 엔 강세 반전 종종 발생</text>
+
+  <rect x="80" y="810" width="920" height="90" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="846" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#fb923c" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="874" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">일본 리스크 자산·닛케이 밸류 지지 · 하지만 반전 시 캐리 언와인드 리스크 큼</text>
+
+  <rect x="80" y="920" width="920" height="50" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="950" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Bloomberg · CFTC · Data through June 30, 2026</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

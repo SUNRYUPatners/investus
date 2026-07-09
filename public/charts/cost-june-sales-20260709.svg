@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#1d4ed8"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">COST</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">6월 매출</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Costco 6월 매출 $29.24B · YoY +10.6% 성장</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="86" fill="#60a5fa" text-anchor="middle">+10.6%</text>
+  <text x="540" y="326" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#3b82f6" text-anchor="middle">6월 순매출 YoY 성장률</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">2026.07.08 프레스 릴리스 · 6월 5주 회계</text>
+
+  <rect x="80" y="398" width="440" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="300" y="438" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">6월 순매출</text>
+  <text x="300" y="482" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#bfdbfe" text-anchor="middle">$29.24B</text>
+  <text x="300" y="510" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#93c5fd" text-anchor="middle">vs $26.44B (2025.06)</text>
+
+  <rect x="560" y="398" width="440" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="780" y="438" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">44주 누적 매출</text>
+  <text x="780" y="482" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#bfdbfe" text-anchor="middle">$250.43B</text>
+  <text x="780" y="510" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#93c5fd" text-anchor="middle">+10.1% YoY ($227.46B)</text>
+
+  <rect x="80" y="548" width="920" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">지역별 비교 매출 (5주)</text>
+  <text x="540" y="616" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">미국 +10.6% · 캐나다 +3.7% · 국제 +4.7%</text>
+  <text x="540" y="644" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">전사 +8.8% · 디지털 +20.9%</text>
+  <text x="540" y="670" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">가솔린·환율 조정 시 전사 +7.0% · 디지털 +21.5%</text>
+
+  <rect x="80" y="690" width="920" height="90" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="730" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#60a5fa" text-anchor="middle">주요 관찰</text>
+  <text x="540" y="760" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">디지털 +20.9% = 이커머스 카테고리 매크로 소비 우위 확인</text>
+
+  <rect x="80" y="800" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="836" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="864" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">멤버십 락인 + 디지털 채널 성장 지속 · 소비 방어주로서 상대 강세</text>
+
+  <rect x="80" y="906" width="920" height="60" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="944" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Costco Wholesale Corporation Press Release · July 8, 2026</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

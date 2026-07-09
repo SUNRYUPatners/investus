@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Impact Report</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Tesla Net-Zero Roadmap — Full Value Chain by 2040</text>
+  <text x="540" y="270" font-family="Arial Black, Arial" font-weight="900" font-size="96" fill="#00e5a0" text-anchor="middle">2040</text>
+  <text x="540" y="322" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#4ade80" text-anchor="middle">Net-Zero Across Full Value Chain</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Suppliers · Manufacturing · Product Use · End-of-Life</text>
+
+  <rect x="80" y="398" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="436" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Two-Stage Targets</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">2026: Own operations to 100% renewable electricity</text>
+  <text x="540" y="488" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db" text-anchor="middle">2040: Net-zero across full value chain (Scope 1·2·3)</text>
+
+  <rect x="80" y="530" width="920" height="90" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#00e5a0" text-anchor="middle">Gigafactory Berlin-Brandenburg</text>
+  <text x="540" y="606" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#a7f3d0" text-anchor="middle">Already 100% Renewable · 3rd Year Running</text>
+
+  <rect x="80" y="636" width="440" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="678" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Achievable Areas</text>
+  <text x="300" y="710" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">Electricity · Logistics</text>
+  <text x="300" y="732" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">Process heat · Assembly</text>
+  <text x="300" y="754" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Solved via renewable sourcing</text>
+
+  <rect x="560" y="636" width="440" height="130" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="780" y="678" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">Hard-to-Abate Areas</text>
+  <text x="780" y="710" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">Steel</text>
+  <text x="780" y="732" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">Battery raw materials</text>
+  <text x="780" y="754" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Explicitly named by Tesla</text>
+
+  <rect x="80" y="782" width="920" height="76" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="812" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="838" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">ESG fund re-inflows · renewables and low-carbon materials value chain up-cycle</text>
+
+  <rect x="80" y="878" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Source</text>
+  <text x="540" y="934" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Tesla 2025 Impact Report · July 8, 2026 · via Muskonomy</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP Chief Investment Officer</text>
+</svg>

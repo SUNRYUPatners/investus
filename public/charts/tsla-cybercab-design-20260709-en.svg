@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="140" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="222" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Cybercab</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Cybercab Design — Robotaxi Fleet Primary Vehicle</text>
+  <text x="540" y="270" font-family="Arial Black, Arial" font-weight="900" font-size="92" fill="#00e5a0" text-anchor="middle">2-Seat</text>
+  <text x="540" y="320" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#4ade80" text-anchor="middle">Autonomous-Only · Purpose-Built</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">90% of ride-hailing trips carry 1–2 people → optimal seat count</text>
+
+  <rect x="80" y="392" width="920" height="110" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="428" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Traditional Controls Removed → Cabin Space Freed</text>
+  <text x="540" y="458" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">No steering wheel · No pedals · No dashboard cluster</text>
+  <text x="540" y="482" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Reduced weight → lower opex · larger groups served by other autonomous Teslas</text>
+
+  <rect x="80" y="524" width="290" height="150" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="225" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">4680 Battery Cells</text>
+  <text x="225" y="602" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#a7f3d0" text-anchor="middle">In-House</text>
+  <text x="225" y="630" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Cost lead · supply security</text>
+  <text x="225" y="650" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Density improvements</text>
+
+  <rect x="395" y="524" width="290" height="150" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">48V Architecture</text>
+  <text x="540" y="602" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#a7f3d0" text-anchor="middle">Power Efficient</text>
+  <text x="540" y="630" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Thinner wiring · less mass</text>
+  <text x="540" y="650" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Better power delivery</text>
+
+  <rect x="710" y="524" width="290" height="150" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="855" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0" text-anchor="middle">Steer-by-Wire</text>
+  <text x="855" y="602" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#a7f3d0" text-anchor="middle">Electronic</text>
+  <text x="855" y="630" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">No mechanical column</text>
+  <text x="855" y="650" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Max packaging freedom</text>
+
+  <rect x="80" y="694" width="920" height="90" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="734" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#00e5a0" text-anchor="middle">Robotaxi Fleet Composition Strategy</text>
+  <text x="540" y="764" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">Cybercab (2-seat) as core · Model Y and others for larger groups</text>
+
+  <rect x="80" y="804" width="920" height="86" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="838" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="866" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Fewer parts · lower unit cost · improved per-trip EBITDA · greater scale-up room</text>
+
+  <rect x="80" y="910" width="920" height="60" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="948" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Sawyer Merritt · Tesla · July 8, 2026</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP Chief Investment Officer</text>
+</svg>

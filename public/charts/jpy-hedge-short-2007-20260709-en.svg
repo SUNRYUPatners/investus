@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fb923c"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#orangeGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#9a3412"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">JPY</text>
+  <rect x="152" y="86" width="170" height="34" rx="8" fill="none" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="237" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#fb923c" text-anchor="middle">Hedge Fund Positioning</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.09</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Yen Short Positions Highest Since 2007 — Hedge Funds Extreme Bearish</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="88" fill="#fb923c" text-anchor="middle">2007</text>
+  <text x="540" y="326" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#f97316" text-anchor="middle">Most bearish net short since 2007</text>
+  <text x="540" y="366" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Bloomberg · CFTC CME Japanese Yen leveraged funds net total</text>
+
+  <rect x="80" y="398" width="920" height="130" rx="16" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="540" y="434" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#fb923c" text-anchor="middle">Data Overview</text>
+  <text x="540" y="464" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">CFTC data: hedge fund net position on CME yen is most extreme short since 2007</text>
+  <text x="540" y="492" font-family="Arial, sans-serif" font-size="15" fill="#fed7aa" text-anchor="middle">Below -100K contracts · approaching -200K contracts</text>
+  <text x="540" y="518" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Data through 2026-06-30 · CFTC publication</text>
+
+  <rect x="80" y="548" width="440" height="130" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="300" y="588" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">Short Thesis</text>
+  <text x="300" y="622" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">BOJ dovish stance</text>
+  <text x="300" y="642" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">US-Japan rate gap</text>
+  <text x="300" y="662" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Carry trade expansion</text>
+
+  <rect x="560" y="548" width="440" height="130" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="780" y="588" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#fb923c" text-anchor="middle">Reversal Risk</text>
+  <text x="780" y="622" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">BOJ intervention headlines</text>
+  <text x="780" y="642" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">Fed cut signals</text>
+  <text x="780" y="662" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Short squeeze possible</text>
+
+  <rect x="80" y="698" width="920" height="90" rx="16" fill="#1a0d00" stroke="#fb923c" stroke-width="2"/>
+  <text x="540" y="738" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#fb923c" text-anchor="middle">Historical Reference</text>
+  <text x="540" y="768" font-family="Arial, sans-serif" font-size="14" fill="#fed7aa" text-anchor="middle">2007 · 2013 · 2024 extremes were often followed by sharp yen strength reversals</text>
+
+  <rect x="80" y="810" width="920" height="90" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="846" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#fb923c" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="874" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Japan risk assets and Nikkei supported · but carry unwind risk is elevated on reversal</text>
+
+  <rect x="80" y="920" width="920" height="50" rx="14" fill="#1a0d00" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="950" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Bloomberg · CFTC · Data through June 30, 2026</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.09 · investus.kr SRP Chief Investment Officer</text>
+</svg>
