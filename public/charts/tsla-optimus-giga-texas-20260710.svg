@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Optimus Factory</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.10</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">Giga Texas Optimus 공장 — 본격 가동 가속</text>
+  <text x="540" y="280" font-family="Arial Black, Arial" font-weight="900" font-size="96" fill="#00e5a0" text-anchor="middle">10M</text>
+  <text x="540" y="330" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#4ade80" text-anchor="middle">대/년 생산능력 목표</text>
+  <text x="540" y="374" font-family="Arial, sans-serif" font-size="18" fill="#9ca3af" text-anchor="middle">Giga Texas Optimus 라인 매일 빠르게 확장 중 (2027년 가동)</text>
+
+  <rect x="80" y="406" width="920" height="100" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="446" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">구조 특징</text>
+  <text x="540" y="474" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">구조물 · 설비 · 조립 라인이 매일 가시적으로 성장</text>
+  <text x="540" y="498" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">오늘 어렵던 구조가 내일 완성 — 공장 완공 속도 가파름 (Joe Taugaman 현장 관측)</text>
+
+  <rect x="80" y="522" width="440" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Optimus 활용 계획</text>
+  <text x="300" y="592" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Tesla 내부 제조 작업 우선</text>
+  <text x="300" y="616" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">외부 기업 임대 공급 2단계</text>
+  <text x="300" y="636" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">TAM: 전 세계 제조업 인력</text>
+
+  <rect x="560" y="522" width="440" height="120" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="780" y="562" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">경쟁 우위</text>
+  <text x="780" y="592" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">FSD·xAI 동일 아키텍처 공유</text>
+  <text x="780" y="616" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">자체 AI 칩·훈련 클러스터</text>
+  <text x="780" y="636" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">타사 대비 학습 비용 최소</text>
+
+  <rect x="80" y="658" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="694" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#00e5a0" text-anchor="middle">Cathie Wood (ARK) 전망</text>
+  <text x="540" y="724" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#a7f3d0" text-anchor="middle">2026년 인간 수준 작업 능력 달성 목표</text>
+
+  <rect x="80" y="754" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="792" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="820" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">10M/년 가동 시 Optimus 매출만으로도 TSLA 시총 재정의 수준 · 하드웨어+서비스 복합 수익</text>
+
+  <rect x="80" y="860" width="920" height="70" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="898" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Joe Taugaman 현장 관측 · ARK Invest Tesla Optimus 전망 (2026.07.10)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

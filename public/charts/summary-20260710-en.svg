@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1200" width="1080" height="1200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1200" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.10</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">Daily Summary</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · SPCX · MU · NVDA · META</text>
+
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">1. TSLA Optimus Giga Texas — 10M unit/yr factory accelerating</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Factory structures expanding daily · ARK: human-level task capability target 2026</text>
+
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">2. TSLA Cybercab Austin Hub — Fence Down, Launch Imminent</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">50,000 units supply capacity secured · RIM lightweight · GHG -40% vs steel</text>
+
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">3. TSLA UBS PT $364 → $442 (+21.4%) — Robotaxi Bull Case</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">UBS Strong Buy maintained · Cybercab visibility + FSD safety data reflected</text>
+
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">4. TSLA Model Y Switzerland #1 — Registrations +78.6%, Share 6.1%</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Best-selling car in all of Switzerland · European premium brand barrier broken</text>
+
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">5. SpaceX Raymond James $8,800 PT — +440% Upside</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Street High PT · Genius $93B revenue by 2030 · Kalshi: "worth more than the rest of Earth"</text>
+
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">6. Starlink 1,589 Satellites in 2026 H1 — 10x Rest of World</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Only profitable constellation · 10M+ subscribers · ~265 satellites/month pace</text>
+
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">7. Micron DRAM &amp; NAND Tight Through End of 2027</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">AI HBM demand + PC cycle recovery · ASP expansion + structural margin improvement</text>
+
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#f87171"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171">8. NVDA — Burry: "Big Tech Inflating AI Profits via Depreciation Extension"</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Meta 3yr→5yr shift · Divergent accounting policies obscure earnings quality comparison</text>
+
+  <rect x="64" y="1030" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="1030" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="1066" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">9. META 'Super Sensing' Glasses + TipRanks US 13 List Inclusion</text>
+  <text x="96" y="1092" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Audio capture with LED off · metadata AI upload · next-gen wearable AI platform</text>
+
+  <rect x="0" y="1140" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1176" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP Chief Investment Officer</text>
+</svg>

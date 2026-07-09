@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1200" width="1080" height="1200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1200" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.10</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">오늘의 한장 요약</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · SPCX · MU · NVDA · META</text>
+
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">1. TSLA Optimus Giga Texas — 10M대/년 공장 본격 가속</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">공장 구조물 매일 확장 · ARK: 2026년 인간 수준 작업 능력 목표</text>
+
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">2. TSLA Cybercab Austin — 허브 울타리 철거, 런칭 임박</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">연내 50,000대 공급 가능 확보 · RIM 경량 공법 · GHG -40%</text>
+
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">3. TSLA UBS 목표주가 $364 → $442 (+21.4%) — 로보택시 강세론</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">UBS Strong Buy 유지 · Cybercab 가시화 + FSD 안전 데이터 반영</text>
+
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">4. TSLA Model Y 스위스 베스트셀링 — 브랜드 등록 +78.6%, 점유율 6.1%</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">스위스 전체 자동차 시장 1위 · 유럽 프리미엄 브랜드 장벽 붕괴</text>
+
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">5. SpaceX Raymond James $8,800 PT — 업사이드 +440%</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">월가 최고 PT · Genius $93B 매출 전망 (2030) · Kalshi 예측: "지구 전체 가치 초과"</text>
+
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">6. Starlink 2026 상반기 위성 1,589개 배치 — 세계 합산의 10배</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">유일 흑자 성좌 · 구독 1,000만+ · 월 265개 평균 배치 속도</text>
+
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">7. Micron DRAM·NAND 수급 타이트 — 2027년 말까지 지속 전망</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">AI 학습 HBM 수요 + PC 사이클 회복 · ASP 상승 + 마진 개선 구조</text>
+
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#f87171"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#f87171">8. NVDA — Burry "빅테크 AI 칩 감가상각 연장으로 이익 부풀리기"</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Meta 3년→5년 상각 연장 · 이익 품질 비교 어렵게 만드는 회계 정책 차이</text>
+
+  <rect x="64" y="1030" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="1030" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="1066" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">9. META 'Super Sensing' 안경 + TipRanks US 13 List 편입</text>
+  <text x="96" y="1092" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">LED 오프 상태 오디오 수집 · 메타데이터 AI 업로드 · 웨어러블 AI 차세대 플랫폼</text>
+
+  <rect x="0" y="1140" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1176" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

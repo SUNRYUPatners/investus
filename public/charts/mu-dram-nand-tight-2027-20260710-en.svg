@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="60" height="34" rx="8" fill="#1e3a5f"/>
+  <text x="90" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MU</text>
+  <rect x="132" y="86" width="160" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="212" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">DRAM/NAND Outlook</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.10</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Micron — DRAM &amp; NAND Tight Through End of 2027</text>
+  <text x="540" y="290" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#60a5fa" text-anchor="middle">Through 2027</text>
+  <text x="540" y="350" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#93c5fd" text-anchor="middle">DRAM + NAND supply-demand stays tight</text>
+  <text x="540" y="394" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Micron official guidance (AI Investment Research, 2026.07.10)</text>
+
+  <rect x="80" y="424" width="920" height="100" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="462" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Micron Official Statement</text>
+  <text x="540" y="490" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">"We now expect supply-demand conditions for both DRAM</text>
+  <text x="540" y="514" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">and NAND to remain tight through end of calendar 2027."</text>
+
+  <rect x="80" y="540" width="440" height="120" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="300" y="578" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Demand Drivers</text>
+  <text x="300" y="606" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">AI training/inference HBM surge</text>
+  <text x="300" y="628" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">PC + mobile upgrade cycle</text>
+  <text x="300" y="650" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">NAND: server SSD demand robust</text>
+
+  <rect x="560" y="540" width="440" height="120" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="780" y="578" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Supply Constraints</text>
+  <text x="780" y="606" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">HBM conversion reduces DRAM supply</text>
+  <text x="780" y="628" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">New fab lead time 18-24 months</text>
+  <text x="780" y="650" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Samsung, SK Hynix aligned</text>
+
+  <rect x="80" y="676" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="712" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Cybercab Supply Confirmation</text>
+  <text x="540" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#93c5fd" text-anchor="middle">Sawyer Merrit: 50+ Cybercabs shipping (drone footage)</text>
+
+  <rect x="80" y="772" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="810" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="838" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">ASP expansion + demand pull = structurally improving margins · HBM high-margin mix rising</text>
+
+  <rect x="80" y="878" width="920" height="70" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="916" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: AI Investment Research · Micron official guidance (2026.07.10)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP Chief Investment Officer</text>
+</svg>

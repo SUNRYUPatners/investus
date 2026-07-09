@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#purpleGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#3b0764"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">SPCX</text>
+  <rect x="152" y="86" width="160" height="34" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="232" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#c084fc" text-anchor="middle">Starlink Deployment</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.10</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Starlink 2026 H1 Satellite Deployment Record</text>
+  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="96" fill="#c084fc" text-anchor="middle">1,589</text>
+  <text x="540" y="348" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#e9d5ff" text-anchor="middle">satellites deployed in 2026 H1</text>
+  <text x="540" y="392" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">10x more than the rest of the world combined — Elon Musk</text>
+
+  <rect x="80" y="422" width="920" height="90" rx="16" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="460" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Overwhelming Dominance</text>
+  <text x="540" y="488" font-family="Arial, sans-serif" font-size="15" fill="#e9d5ff" text-anchor="middle">SpaceX = 10x more satellites than all other nations combined — Musk</text>
+
+  <rect x="80" y="528" width="440" height="110" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="300" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Starlink Status</text>
+  <text x="300" y="596" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">10M+ subscribers</text>
+  <text x="300" y="620" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Only profitable constellation</text>
+  <text x="300" y="634" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Est. revenue $10.8B/yr</text>
+
+  <rect x="560" y="528" width="440" height="110" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="780" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Competition</text>
+  <text x="780" y="596" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Amazon Kuiper delayed</text>
+  <text x="780" y="620" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">China LEO target 2030</text>
+  <text x="780" y="634" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">OneWeb subscale</text>
+
+  <rect x="80" y="654" width="920" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="690" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">2026 H1 Deployment Pace</text>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#e9d5ff" text-anchor="middle">~265 satellites/month · New record vs. 2025</text>
+
+  <rect x="80" y="750" width="920" height="90" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="788" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#c084fc" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="816" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Satellites → Coverage → Subscribers → Revenue virtuous cycle · Latency/speed moat permanent</text>
+
+  <rect x="80" y="856" width="920" height="70" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="894" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: TipRanks · Elon Musk X Post · Shay Boloor (2026.07.10)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP Chief Investment Officer</text>
+</svg>

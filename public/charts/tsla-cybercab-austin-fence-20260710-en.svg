@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Cybercab Austin</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.10</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Austin Robotaxi Hub — Fence Down, Cybercab Revealed</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#00e5a0" text-anchor="middle">Fence Down</text>
+  <text x="540" y="334" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#4ade80" text-anchor="middle">Launch Imminent — Cybercab Fully Visible</text>
+  <text x="540" y="378" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Austin TX Robotaxi hub fences being removed (The Tesla Newswire)</text>
+
+  <rect x="80" y="410" width="920" height="100" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Supply Chain Confirmation</text>
+  <text x="540" y="478" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">Two sources: Tesla placed Cybercab orders 2 months in advance</text>
+  <text x="540" y="502" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Suppliers can deliver 50,000 Cybercab units by year-end</text>
+
+  <rect x="80" y="526" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Hub Status</text>
+  <text x="300" y="592" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Austin Rainey Street location</text>
+  <text x="300" y="616" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">AVO certification → VIN registration</text>
+  <text x="300" y="630" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">July deployment realistic</text>
+
+  <rect x="560" y="526" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="780" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Cybercab Design</text>
+  <text x="780" y="592" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Lightweight RIM manufacturing</text>
+  <text x="780" y="616" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">GHG -40% vs. steel-body vehicles</text>
+  <text x="780" y="630" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">No steering/pedals/instrument panel</text>
+
+  <rect x="80" y="652" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="688" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#00e5a0" text-anchor="middle">Production Ramp Plan</text>
+  <text x="540" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#a7f3d0" text-anchor="middle">50,000 units → hundreds of thousands (2027+)</text>
+
+  <rect x="80" y="748" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="786" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="814" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Fence removal = commercialization confirmed · Supply orders placed, no production bottleneck</text>
+
+  <rect x="80" y="854" width="920" height="70" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="892" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: The Tesla Newswire · 2 supply chain sources · Nic Cruz Patane (2026.07.10)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP Chief Investment Officer</text>
+</svg>

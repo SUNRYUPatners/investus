@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#1e3a5f"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">META</text>
+  <rect x="152" y="86" width="170" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="237" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">Super Sensing Glasses</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.10</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Meta — 'Super Sensing' Smart Glasses in Development</text>
+  <text x="540" y="280" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#60a5fa" text-anchor="middle">Always Sensing</text>
+  <text x="540" y="336" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#93c5fd" text-anchor="middle">Audio capture with LED off</text>
+  <text x="540" y="380" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Two sources: Meta developing 'super sensing' glasses — metadata processed by AI (The Verge)</text>
+
+  <rect x="80" y="410" width="920" height="110" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">How It Works</text>
+  <text x="540" y="478" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">Raw audio/video processed on-device; only metadata uploaded for AI queries</text>
+  <text x="540" y="502" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Recording LED stays off during 'super sensing' — only on during active photo/video capture</text>
+
+  <rect x="80" y="536" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="300" y="574" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Potential Features</text>
+  <text x="300" y="602" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">Ambient voice context awareness</text>
+  <text x="300" y="626" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">Continuous environment sensing</text>
+  <text x="300" y="640" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Always-on AI assistant</text>
+
+  <rect x="560" y="536" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="780" y="574" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Privacy Concerns</text>
+  <text x="780" y="602" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">Covert capture without LED</text>
+  <text x="780" y="626" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">Regulator attention likely</text>
+  <text x="780" y="640" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">User consent scope unclear</text>
+
+  <rect x="80" y="662" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="698" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">TipRanks US 13 List Inclusion</text>
+  <text x="540" y="728" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#93c5fd" text-anchor="middle">META added to Best Buy-Rated US Stock list</text>
+
+  <rect x="80" y="758" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="796" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="824" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Wearable AI = next hardware platform · Zuck low-cost AI + glasses = ecosystem dominance attempt</text>
+
+  <rect x="80" y="864" width="920" height="70" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="902" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: The Verge (two sources) · TipRanks US 13 List (2026.07.10)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP Chief Investment Officer</text>
+</svg>

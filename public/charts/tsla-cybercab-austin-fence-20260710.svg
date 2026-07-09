@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="150" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="227" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Cybercab Austin</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.10</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">오스틴 로보택시 허브 — 울타리 철거, Cybercab 공개</text>
+  <text x="540" y="278" font-family="Arial Black, Arial" font-weight="900" font-size="64" fill="#00e5a0" text-anchor="middle">울타리 철거</text>
+  <text x="540" y="334" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#4ade80" text-anchor="middle">런칭 임박 신호 — Cybercab 전체 외관 공개</text>
+  <text x="540" y="378" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Austin TX Robotaxi 허브 펜스 제거 중 (The Tesla Newswire)</text>
+
+  <rect x="80" y="410" width="920" height="100" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">공급망 확인</text>
+  <text x="540" y="478" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">두 소스: Tesla 부품사에 2달 전 선주문 완료</text>
+  <text x="540" y="502" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">연내 50,000대 Cybercab 공급 가능 물량 확보</text>
+
+  <rect x="80" y="526" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">허브 현황</text>
+  <text x="300" y="592" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">오스틴 Rainey Street</text>
+  <text x="300" y="616" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">AVO 인가 → VIN 등록 진행 중</text>
+  <text x="300" y="630" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">7월 배포 일정 현실적</text>
+
+  <rect x="560" y="526" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="780" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Cybercab 설계</text>
+  <text x="780" y="592" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">RIM 경량 공법 적용</text>
+  <text x="780" y="616" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">GHG 배출 철강 대비 -40%</text>
+  <text x="780" y="630" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">스티어링·페달·계기판 없음</text>
+
+  <rect x="80" y="652" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="688" font-family="Arial Black, Arial" font-weight="900" font-size="17" fill="#00e5a0" text-anchor="middle">연간 생산 확장 계획</text>
+  <text x="540" y="718" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#a7f3d0" text-anchor="middle">50,000대 → 수십만 대 (2027~)</text>
+
+  <rect x="80" y="748" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="786" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="814" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">울타리 철거 = 상업화 단계 진입 확인 · 공급망 주문 완료로 양산 병목 없음</text>
+
+  <rect x="80" y="854" width="920" height="70" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="892" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: The Tesla Newswire · 공급망 소스 2명 · Nic Cruz Patane (2026.07.10)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

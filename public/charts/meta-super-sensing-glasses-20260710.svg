@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#1e3a5f"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">META</text>
+  <rect x="152" y="86" width="170" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="237" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">Super Sensing Glasses</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.10</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Meta — 'Super Sensing' 스마트 안경 개발 중</text>
+  <text x="540" y="280" font-family="Arial Black, Arial" font-weight="900" font-size="56" fill="#60a5fa" text-anchor="middle">항시 감지</text>
+  <text x="540" y="336" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#93c5fd" text-anchor="middle">LED 오프 상태에서도 오디오 수집</text>
+  <text x="540" y="380" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">두 소스: Meta, 'super sensing' 안경 개발 중 — 메타데이터 AI 처리 (The Verge)</text>
+
+  <rect x="80" y="410" width="920" height="110" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="450" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">작동 방식</text>
+  <text x="540" y="478" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">오디오·비디오 원본은 기기 내 처리, 메타데이터만 AI 쿼리에 업로드</text>
+  <text x="540" y="502" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">녹화 LED는 오직 사진·영상 촬영 시에만 켜짐 (super sensing 중 꺼진 상태)</text>
+
+  <rect x="80" y="536" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="300" y="574" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">잠재 기능</text>
+  <text x="300" y="602" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">음성 컨텍스트 인식</text>
+  <text x="300" y="626" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">주변 환경 상시 파악</text>
+  <text x="300" y="640" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">항상-온 어시스턴트</text>
+
+  <rect x="560" y="536" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="780" y="574" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">프라이버시 쟁점</text>
+  <text x="780" y="602" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">LED 없는 상시 수집 논란</text>
+  <text x="780" y="626" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">규제 당국 주목 가능</text>
+  <text x="780" y="640" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">사용자 동의 범위 모호</text>
+
+  <rect x="80" y="662" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="698" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">TipRanks US 13 List 편입</text>
+  <text x="540" y="728" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#93c5fd" text-anchor="middle">Best Buy-rated US 주식 13선 선정 — META 포함</text>
+
+  <rect x="80" y="758" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="796" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="824" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">웨어러블 AI = 차세대 하드웨어 플랫폼 · Zuck 저가 AI 전략 + 안경 = 생태계 장악 시도</text>
+
+  <rect x="80" y="864" width="920" height="70" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="902" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: The Verge 두 소스 · TipRanks US 13 List (2026.07.10)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

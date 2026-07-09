@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T10JL = 1783638000000; // 2026-07-10 08:00 KST
 const T9JL = 1783551600000; // 2026-07-09 08:00 KST
 const T8JL = 1783465200000; // 2026-07-08 08:00 KST
 const T7JL = 1783378800000; // 2026-07-07 08:00 KST
@@ -50,7 +51,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T9JL;       // NEW 배지 기준
+export const LATEST_UPDATE = T10JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -69,6 +70,57 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-10 — TSLA Optimus Giga Texas 10M·Cybercab Austin 울타리 철거·
+  //              UBS PT $442·Switzerland Model Y #1·SPCX RJ $8,800·
+  //              Starlink 1,589기·MU DRAM/NAND 2027·Burry 감가상각·META 슈퍼센싱
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA Optimus Giga Texas ──────────────────────────────────────────────
+  { id: 484, symbol: "TSLA", nickname: "익명_3741", holdingLabel: "350주 보유",
+    content: "Giga Texas Optimus 공장 드론 영상 봤어? 진짜 매일매일 달라져. 어제 없던 구조물이 오늘 있고 라인이 점점 채워지는 게 보임. 10M대/년 목표라는데 그게 현실이 되면 TSLA 시총이 지금 논의 자체가 무의미해지는 거잖아. ARK가 2026년 인간 수준 작업 능력 달성 전망했는데 이 공장 속도 보면 허황된 얘기가 아님.",
+    createdAt: T10JL + 6*60_000, likes: 2841, comments: 4 },
+
+  // TSLA Cybercab Austin 울타리 철거 ────────────────────────────────────
+  { id: 485, symbol: "TSLA", nickname: "익명_6209", holdingLabel: "180주 보유",
+    content: "오스틴 Robotaxi 허브 펜스 철거됐어. The Tesla Newswire가 '런칭 임박 신호'라고 표현한 거 봤는데 진짜인 것 같음. 공급망 두 소스도 확인됐대 — Tesla가 2달 전에 Q4 부품 선주문 완료, 연내 50,000대 공급 가능하다는 거. RIM 경량 공법이라 GHG도 철강 대비 -40%고. 7월 배포 일정 현실화되는 거 맞지?",
+    createdAt: T10JL + 14*60_000, likes: 3127, comments: 5 },
+
+  // TSLA UBS PT $442 ─────────────────────────────────────────────────────
+  { id: 486, symbol: "TSLA", nickname: "익명_8473", holdingLabel: "120주 보유",
+    content: "UBS $442 상향 뉴스 진짜 좋은 거. $364에서 $442면 +21.4%잖아. Strong Buy 유지하면서 로보택시 모멘텀을 이번에 제대로 반영한 거 같아. 애널리스트가 한 명 올리면 나머지도 따라가는 경향 있으니까 다음 2~3주 동안 PT 상향 봄물 예상됨. 지금 들어가는 게 맞다고 봐요.",
+    createdAt: T10JL + 22*60_000, likes: 2456, comments: 4 },
+
+  // TSLA Switzerland Model Y #1 ─────────────────────────────────────────
+  { id: 487, symbol: "TSLA", nickname: "익명_5028", holdingLabel: "95주 보유",
+    content: "스위스 Model Y 1위 소식 진짜 인상적. 브랜드 등록이 YoY +78.6%인데 이게 그냥 팬덤 숫자가 아니잖아. 스위스가 BMW·Mercedes·Porsche 고향 근방 시장인데 테슬라가 1등이라는 게. 시장 점유율 6.1%가 높아 보이지 않을 수 있는데 스위스 전체 자동차 시장에서 단일 모델 1위면 완전히 다른 얘기야. 유럽 확장 기세 무서운 거 맞아요.",
+    createdAt: T10JL + 30*60_000, likes: 1987, comments: 3 },
+
+  // SPCX Raymond James $8,800 ────────────────────────────────────────────
+  { id: 488, symbol: "SPCX", nickname: "익명_2614", holdingLabel: "SPCX 장기",
+    content: "Raymond James $8,800 PT에 +440% 업사이드라는 거 봤어? 월가 PT 중 최고라는데 Genius는 2030년 매출 $93B 전망까지 냈음. 지금 $38.5B에서 두 배 넘게 성장한다는 거잖아. Starlink 독점 + Starship 경제성 조합이면 틀린 전망도 아닌 것 같아. Kalshi는 아예 'SpaceX 밸류가 지구 전체를 초과할 수 있다'는 예측까지 나왔고.",
+    createdAt: T10JL + 38*60_000, likes: 2203, comments: 4 },
+
+  // SPCX Starlink 1,589 ─────────────────────────────────────────────────
+  { id: 489, symbol: "SPCX", nickname: "익명_7391", holdingLabel: "관심종목",
+    content: "2026년 상반기에만 Starlink 1,589기 배치했다는 거 숫자 자체가 충격임. 월평균 265기인데 이건 다른 국가들 전체 합산의 10배라는 게 Musk 본인 발언. 경쟁사 Kuiper는 아직 수십 기 단계고 중국 LEO는 2030년 목표잖아. 위성 수 = 커버리지 = 구독자 선순환인데 이 격차가 커질수록 따라잡는 게 물리적으로 불가능해지는 거야.",
+    createdAt: T10JL + 46*60_000, likes: 1744, comments: 3 },
+
+  // MU DRAM/NAND ─────────────────────────────────────────────────────────
+  { id: 490, symbol: "MU", nickname: "익명_4182", holdingLabel: "55주 보유",
+    content: "Micron 공식 발언 찾아봤는데 진짜로 '2027년 말까지 DRAM·NAND 수급 타이트' 전망이야. AI HBM 수요가 일반 DRAM 공급까지 잡아먹는 구조라 공급이 늘기 어려운 상황. 팹 증설 리드타임이 18~24개월이니까 2027년 말까지는 공급 급증이 물리적으로 불가능해. ASP 올라가면 MU 마진 개선은 예정된 거나 마찬가지 아닌가요.",
+    createdAt: T10JL + 54*60_000, likes: 1539, comments: 3 },
+
+  // NVDA Burry ──────────────────────────────────────────────────────────
+  { id: 491, symbol: "NVDA", nickname: "익명_9037", holdingLabel: "관심종목",
+    content: "Burry 분석 읽어봤는데 좀 무서운 포인트 있어. Meta가 2020년 3년 상각에서 2025년 5년 상각으로 연장했는데 이게 감가비용 줄이고 이익 높이는 회계 트릭이라는 거. 근데 Amazon은 반대 방향이고. 같은 하드웨어를 쓰는데 회사마다 정책이 다르면 이익 비교가 의미가 없어지잖아. Burry가 항상 맞는 건 아니지만 이건 한 번 팩트체크 해봐야 할 것 같음.",
+    createdAt: T10JL + 62*60_000, likes: 1286, comments: 3 },
+
+  // META super sensing ──────────────────────────────────────────────────
+  { id: 492, symbol: "META", nickname: "익명_6548", holdingLabel: "40주 보유",
+    content: "Meta 슈퍼센싱 안경 소식 봤는데 솔직히 반반이에요. 기술적으로는 엄청난 거고 항상-온 AI 어시스턴트라는 컨셉 자체는 미래 방향이 맞는데. 문제는 LED 꺼진 채로 오디오 수집한다는 게 규제 리스크가 너무 커. 유럽 규제당국이 가만 있을 것 같지 않고. 그래도 TipRanks US 13 List 편입이랑 묶여서 기관들 시선은 여전히 긍정적인 것 같음.",
+    createdAt: T10JL + 70*60_000, likes: 1093, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-09 — TSLA 2040 넷제로·배터리 재활용 +20%·Cybercab 설계·
@@ -2068,6 +2120,58 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-10 신규 ──────────────────────────────────────────────────────
+  484: [
+    { id: 1, nickname: "익명_2819", holdingLabel: "200주 보유", content: "Joe Taugaman 현장 영상 보면 진짜 속도감 다름. 이 속도면 2027년 풀가동 충분히 현실적이에요.", createdAt: T10JL - m(8), likes: 47 },
+    { id: 2, nickname: "익명_5341", holdingLabel: "관심종목", content: "10M/년이면 연 매출이 얼마짜리냐... 대당 $10만이라고 해도 $1조야. 이게 반영되면 TSLA 밸류에이션 논의 자체가 달라지죠.", createdAt: T10JL - m(4), likes: 63 },
+    { id: 3, nickname: "익명_7082", holdingLabel: "90주 보유", content: "FSD + xAI 공유 아키텍처가 진짜 킬러야. 학습 비용 선형 대신 로그함수처럼 줄어드는 구조잖아.", createdAt: T10JL - m(1), likes: 29 },
+    { id: 4, nickname: "익명_3914", holdingLabel: "50주 보유", content: "ARK 인간수준 2026년 목표라는 거 너무 낙관적 아닌가요? 아무리 그래도 공장 속도는 진짜 인상적.", createdAt: T10JL + m(3), likes: 18 },
+  ],
+  485: [
+    { id: 1, nickname: "익명_8263", holdingLabel: "310주 보유", content: "울타리 철거 = 상업화 단계. 이 전환점을 놓치면 안 되는 거예요. 오스틴이 첫 발이고 다음이 전국이잖아.", createdAt: T10JL - m(6), likes: 71 },
+    { id: 2, nickname: "익명_4739", holdingLabel: "65주 보유", content: "50,000대 공급 가능이라는 확인이 중요해요. 수요는 있는데 공급 못 한다고 했는데 그 우려가 해소된 거잖아요.", createdAt: T10JL - m(3), likes: 44 },
+    { id: 3, nickname: "익명_1094", holdingLabel: "30주 보유", content: "RIM 공법이 재밌어요. 스탬핑 금형 필요 없으니까 생산 전환 속도가 훨씬 빠를 수 있어요. 원가 절감도.", createdAt: T10JL + m(2), likes: 27 },
+    { id: 4, nickname: "익명_6871", holdingLabel: "120주 보유", content: "7월 배포 현실화되면 주가가 그때부터 달리는 거 맞죠. 지금 들어가는 게 맞는 타이밍 같아요.", createdAt: T10JL + m(5), likes: 35 },
+    { id: 5, nickname: "익명_9203", holdingLabel: "관심종목", content: "GHG -40%라는 게 ESG 펀드 자금 유입 논거도 될 수 있겠네요. 규제·탄소세 관점에서도 경쟁 우위.", createdAt: T10JL + m(8), likes: 19 },
+  ],
+  486: [
+    { id: 1, nickname: "익명_3817", holdingLabel: "75주 보유", content: "UBS가 올리면 다른 데도 따라가는 경향 있잖아. 2~3주 안에 골드만이나 모건스탠리도 상향 가능성 봐요.", createdAt: T10JL - m(5), likes: 38 },
+    { id: 2, nickname: "익명_5492", holdingLabel: "40주 보유", content: "로보택시 TAM 반영이 이제 시작이라는 게 포인트. $442도 로보택시 완전 수익화 전 숫자라는 거.", createdAt: T10JL - m(2), likes: 26 },
+    { id: 3, nickname: "익명_8146", holdingLabel: "관심종목", content: "PT 상향이 개별 주식에 미치는 직접 효과보다 패시브 자금 재배분 신호로 읽히는 게 더 크다고 봐요.", createdAt: T10JL + m(3), likes: 14 },
+    { id: 4, nickname: "익명_2073", holdingLabel: "220주 보유", content: "Optimus까지 본격화되면 $442는 중간 기착지지 목표가 아닌 거 맞죠. 장기 홀딩 더 자신감 생겼어요.", createdAt: T10JL + m(6), likes: 31 },
+  ],
+  487: [
+    { id: 1, nickname: "익명_6318", holdingLabel: "85주 보유", content: "스위스가 BMW·벤츠 홈그라운드 근방인데 거기서 1등이잖아요. 유럽 고가 세그먼트 완전 장악 신호 아닌가요.", createdAt: T10JL - m(4), likes: 44 },
+    { id: 2, nickname: "익명_9041", holdingLabel: "30주 보유", content: "+78.6% 등록 증가가 말이 안 되는 숫자예요. 전기차 전환 속도가 스위스에서 이렇게 빠를 줄 몰랐어요.", createdAt: T10JL - m(1), likes: 29 },
+    { id: 3, nickname: "익명_4527", holdingLabel: "관심종목", content: "FSD 유럽 승인 전에 브랜드 1위 확보하는 게 전략적으로 완벽한 수순이에요. 승인되면 바로 구독 수익화.", createdAt: T10JL + m(4), likes: 17 },
+  ],
+  488: [
+    { id: 1, nickname: "익명_7219", holdingLabel: "SPCX 장기", content: "$8,800 목표주가에 +440% 업사이드라는 게 솔직히 처음엔 너무 낙관적이라고 생각했는데 Starlink 독점 구조 생각하면 불가능한 숫자도 아닌 것 같아요.", createdAt: T10JL - m(6), likes: 53 },
+    { id: 2, nickname: "익명_3841", holdingLabel: "관심종목", content: "Genius $93B 매출 전망이 핵심이에요. 2030년에 연 $93B이면 PE 30배만 줘도 시총 $2.7T야. 지금 프리미엄 납득되는 수준.", createdAt: T10JL - m(2), likes: 38 },
+    { id: 3, nickname: "익명_5904", holdingLabel: "SPCX 관심", content: "Kalshi 예측 흥미로운데 '지구 전체 초과'는 좀 과했지만 $1T 넘어가는 건 시간 문제라고 봐요.", createdAt: T10JL + m(3), likes: 21 },
+    { id: 4, nickname: "익명_1273", holdingLabel: "200주 보유", content: "월가 PT 중 최고라는 타이틀이 기관 참고 앵커가 되는 거잖아요. 다른 기관들도 PT 올리는 압박 받겠죠.", createdAt: T10JL + m(7), likes: 16 },
+  ],
+  489: [
+    { id: 1, nickname: "익명_8047", holdingLabel: "관심종목", content: "세계 합산의 10배라는 게 진짜 압도적인 숫자예요. 격차가 이 정도면 따라잡는 게 물리적으로 불가능한 수준이잖아요.", createdAt: T10JL - m(5), likes: 48 },
+    { id: 2, nickname: "익명_4391", holdingLabel: "SPCX 보유", content: "월 265기 배치라는 게 Kuiper 전체 배치량을 한 달에 해치우는 속도잖아요. 이게 무슨 경쟁이에요.", createdAt: T10JL - m(2), likes: 31 },
+    { id: 3, nickname: "익명_6713", holdingLabel: "관심종목", content: "구독자 1,000만 넘었다는 것도 이번에 다시 확인된 거죠? 이게 연 $10B 이상 매출 기반이잖아요.", createdAt: T10JL + m(4), likes: 19 },
+  ],
+  490: [
+    { id: 1, nickname: "익명_2941", holdingLabel: "80주 보유", content: "팹 리드타임 18~24개월이라는 게 결정적이에요. 지금 투자해도 2027년 후반에야 공급 나오는 구조라 타이트 상황이 예정된 거예요.", createdAt: T10JL - m(3), likes: 34 },
+    { id: 2, nickname: "익명_6182", holdingLabel: "35주 보유", content: "HBM이 일반 DRAM 공급 잡아먹는 구조 알고 있었는데 Micron이 공식 전망으로 2027 말까지 확인해준 거라 신뢰도 높아요.", createdAt: T10JL - m(1), likes: 22 },
+    { id: 3, nickname: "익명_9374", holdingLabel: "관심종목", content: "삼성·SK하이닉스도 비슷한 전망이면 업계 컨센서스인 거잖아요. ASP 상승 사이클 진입 확신 생겼어요.", createdAt: T10JL + m(5), likes: 15 },
+  ],
+  491: [
+    { id: 1, nickname: "익명_5082", holdingLabel: "관심종목", content: "Burry 말이 다 맞진 않지만 이번 감가상각 포인트는 진짜임. 같은 칩인데 회사마다 상각 기간이 다르면 이익 비교가 사기잖아요.", createdAt: T10JL - m(4), likes: 39 },
+    { id: 2, nickname: "익명_3716", holdingLabel: "25주 보유", content: "Meta가 3년→5년 연장한 시점이 AI 투자 붐 직전이라는 게 의심스러운 타이밍이긴 해요. 순수 회계 정책인지 이익 조정인지 모호함.", createdAt: T10JL - m(1), likes: 24 },
+    { id: 3, nickname: "익명_8493", holdingLabel: "관심종목", content: "FCF랑 Net Income 비교해서 실질 이익 검증하는 게 이래서 중요한 거구나 싶어요. 기본기를 다시 확인하게 해줘서 고마운 분석.", createdAt: T10JL + m(3), likes: 11 },
+  ],
+  492: [
+    { id: 1, nickname: "익명_7294", holdingLabel: "60주 보유", content: "기술 자체는 혁신적인데 프라이버시 이슈가 발목 잡을 것 같아요. 특히 유럽에서 GDPR 걸리면 출시 자체가 막힐 수 있어요.", createdAt: T10JL - m(3), likes: 27 },
+    { id: 2, nickname: "익명_4851", holdingLabel: "관심종목", content: "TipRanks US 13 List가 뭔지 찾아봤는데 기관 리서치 기반 최우선 Buy 선정이라는 거 신뢰도 있는 거네요. META 여전히 강세장.", createdAt: T10JL - m(1), likes: 18 },
+    { id: 3, nickname: "익명_2638", holdingLabel: "15주 보유", content: "항상-온 AI라는 컨셉 자체는 다음 하드웨어 사이클의 핵심이 맞아요. 규제 이슈를 어떻게 해결하느냐가 관건.", createdAt: T10JL + m(4), likes: 13 },
+  ],
+
   // ── 2026-07-09 신규 ──────────────────────────────────────────────────────
   472: [
     { id: 1, nickname: "익명_3852", holdingLabel: "120주 보유", content: "2040 넷제로 목표 잡은 게 진짜 큰 그림이에요. 공급망까지 다 포함이라 배터리 원재료·철강 협력사 압박도 확대되는 거고요.", createdAt: T9JL + 25*60_000, likes: 342 },

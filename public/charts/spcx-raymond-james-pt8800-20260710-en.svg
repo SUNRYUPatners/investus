@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#purpleGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#3b0764"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">SPCX</text>
+  <rect x="152" y="86" width="170" height="34" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="237" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#c084fc" text-anchor="middle">Raymond James PT</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.10</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">SpaceX — Raymond James Street High Price Target</text>
+  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="100" fill="#c084fc" text-anchor="middle">$8,800</text>
+  <text x="540" y="348" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#e9d5ff" text-anchor="middle">Strong Buy · +440% Upside</text>
+  <text x="540" y="392" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Raymond James sets Street High PT · Starlink monopoly value priced in</text>
+
+  <rect x="80" y="422" width="920" height="90" rx="16" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="460" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Genius Revenue Forecast</text>
+  <text x="540" y="488" font-family="Arial, sans-serif" font-size="15" fill="#e9d5ff" text-anchor="middle">SpaceX revenue $38.5B → $93B by 2030 · "One of the most important companies of the 21st century"</text>
+
+  <rect x="80" y="528" width="440" height="110" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="300" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Starlink Growth Driver</text>
+  <text x="300" y="596" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Only profitable satellite constellation</text>
+  <text x="300" y="620" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">4B people without internet access</text>
+  <text x="300" y="630" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">potential subscription market</text>
+
+  <rect x="560" y="528" width="440" height="110" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="780" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Starship Economics</text>
+  <text x="780" y="596" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Target: 1/10th of legacy launch cost</text>
+  <text x="780" y="620" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Cargo + passengers + lunar revenue</text>
+  <text x="780" y="630" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">NASA HLS contract secured</text>
+
+  <rect x="80" y="654" width="920" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="690" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Kalshi Prediction Market</text>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#e9d5ff" text-anchor="middle">SpaceX could be worth more "than the rest of Earth"</text>
+
+  <rect x="80" y="750" width="920" height="90" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="788" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#c084fc" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="816" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Highest published PT → institutional benchmark re-anchored upward · SPCX premium justified pre-IPO</text>
+
+  <rect x="80" y="856" width="920" height="70" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="894" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Raymond James Research · Genius Capital · Walter Bloomberg (2026.07.10)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.10 · investus.kr SRP Chief Investment Officer</text>
+</svg>
