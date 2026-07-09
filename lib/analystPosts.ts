@@ -67,7 +67,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "여의도 매 #53",
     symbol: "SPCX",
     content:
-      "Raymond James $8,800 PT — SpaceX 딜 플로우 확인했는데 이 숫자가 나온 배경이 있어. 1) Starlink 독점 가치. 위성 인터넷에서 경쟁사 없는 수익 구조. 구독자 1,000만+, 연 $10.8B 매출. 이게 계속 성장하는 구조야. 40억 명 미접속 인구가 잠재 시장. 2) Genius $93B 매출 전망(2030) — $38.5B에서 두 배 이상. Starship 재사용 완성 + Starlink 구독 가속 + AI 인프라(Google·Anthropic 계약) 복합. 3) +440% 업사이드. 이게 허황된 게 아닌 게 NASA HLS + DARPA + 국방부 계약까지 포함하면 정부 수입만으로도 상당한 규모. 4) Kalshi '지구 전체 초과' 예측은 과장이지만 $1T 밸류는 Starlink 독점만으로도 논거가 만들어짐. 5) SPCX ETF: Street High PT = 기관 앵커 재조정. 프리미엄 유지 명분 강화. BUY.",
+      "Raymond James $800 PT — SpaceX 딜 플로우 확인했는데 이 숫자가 나온 배경이 있어. 1) Starlink 독점 가치. 위성 인터넷에서 경쟁사 없는 수익 구조. 구독자 1,000만+, 연 $10.8B 매출. 이게 계속 성장하는 구조야. 40억 명 미접속 인구가 잠재 시장. 2) Genius $93B 매출 전망(2030) — $38.5B에서 두 배 이상. Starship 재사용 완성 + Starlink 구독 가속 + AI 인프라(Google·Anthropic 계약) 복합. 3) +440% 업사이드. 이게 허황된 게 아닌 게 NASA HLS + DARPA + 국방부 계약까지 포함하면 정부 수입만으로도 상당한 규모. 4) Kalshi '지구 전체 초과' 예측은 과장이지만 $1T 밸류는 Starlink 독점만으로도 논거가 만들어짐. 5) SPCX ETF: Street High PT = 기관 앵커 재조정. 프리미엄 유지 명분 강화. BUY.",
     likes: 1876,
     comments: 5,
     created_at: "2026-07-10T00:30:00.000Z",
@@ -3094,7 +3094,7 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-272]: [
     { alias: "여의도 황소 #67", content: "Genius $93B 전망 숫자의 신뢰도가 중요해. Starlink + Starship + AI 인프라 세 축이 다 성장하면 $93B이 오히려 보수적일 수 있어.", created_at: "2026-07-10T00:32:00.000Z" },
     { alias: "판교 독수리 #44", content: "AI 인프라 계약(Google·Anthropic) 추가로 SpaceX 수익 기반이 다각화됐어. 로켓+위성+AI 인프라 삼각 구조.", created_at: "2026-07-10T00:34:00.000Z" },
-    { alias: "강남 여우 #92", content: "Street High PT = 기관 앵커 재조정이야. 다른 기관들이 $6,000~$7,000대 PT를 쓰다가 $8,800이 나오면 중간값이 올라가는 효과.", created_at: "2026-07-10T00:36:00.000Z" },
+    { alias: "강남 여우 #92", content: "Street High PT = 기관 앵커 재조정이야. 다른 기관들이 $100~$200대 PT를 쓰다가 $800이 나오면 중간값이 올라가는 효과.", created_at: "2026-07-10T00:36:00.000Z" },
     { alias: "홍대 독수리 #51", content: "IPO 이전 SPCX ETF 프리미엄이 정당화되는 논거가 한 번 더 강화된 거야. 프리미엄이 줄어들 이유가 없어.", created_at: "2026-07-10T00:38:00.000Z" },
     { alias: "성수 팔콘 #38", content: "Kalshi 예측 '지구 전체 초과'는 과장이지만 $1T 논거는 Starlink 독점만으로도 충분히 만들어지는 숫자야.", created_at: "2026-07-10T00:40:00.000Z" },
   ],

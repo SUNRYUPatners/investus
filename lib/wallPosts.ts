@@ -73,7 +73,7 @@ export const MOCK_POSTS: Post[] = [
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-10 — TSLA Optimus Giga Texas 10M·Cybercab Austin 울타리 철거·
-  //              UBS PT $442·Switzerland Model Y #1·SPCX RJ $8,800·
+  //              UBS PT $442·Switzerland Model Y #1·SPCX RJ $800·
   //              Starlink 1,589기·MU DRAM/NAND 2027·Burry 감가상각·META 슈퍼센싱
   // ════════════════════════════════════════════════════════════════════════
 
@@ -99,7 +99,7 @@ export const MOCK_POSTS: Post[] = [
 
   // SPCX Raymond James $8,800 ────────────────────────────────────────────
   { id: 488, symbol: "SPCX", nickname: "익명_2614", holdingLabel: "SPCX 장기",
-    content: "Raymond James $8,800 PT에 +440% 업사이드라는 거 봤어? 월가 PT 중 최고라는데 Genius는 2030년 매출 $93B 전망까지 냈음. 지금 $38.5B에서 두 배 넘게 성장한다는 거잖아. Starlink 독점 + Starship 경제성 조합이면 틀린 전망도 아닌 것 같아. Kalshi는 아예 'SpaceX 밸류가 지구 전체를 초과할 수 있다'는 예측까지 나왔고.",
+    content: "Raymond James $800 PT에 +440% 업사이드라는 거 봤어? 월가 PT 중 최고라는데 Genius는 2030년 매출 $93B 전망까지 냈음. 지금 $38.5B에서 두 배 넘게 성장한다는 거잖아. Starlink 독점 + Starship 경제성 조합이면 틀린 전망도 아닌 것 같아. Kalshi는 아예 'SpaceX 밸류가 지구 전체를 초과할 수 있다'는 예측까지 나왔고.",
     createdAt: T10JL + 38*60_000, likes: 2203, comments: 4 },
 
   // SPCX Starlink 1,589 ─────────────────────────────────────────────────
@@ -2146,7 +2146,7 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 3, nickname: "익명_4527", holdingLabel: "관심종목", content: "FSD 유럽 승인 전에 브랜드 1위 확보하는 게 전략적으로 완벽한 수순이에요. 승인되면 바로 구독 수익화.", createdAt: T10JL + m(4), likes: 17 },
   ],
   488: [
-    { id: 1, nickname: "익명_7219", holdingLabel: "SPCX 장기", content: "$8,800 목표주가에 +440% 업사이드라는 게 솔직히 처음엔 너무 낙관적이라고 생각했는데 Starlink 독점 구조 생각하면 불가능한 숫자도 아닌 것 같아요.", createdAt: T10JL - m(6), likes: 53 },
+    { id: 1, nickname: "익명_7219", holdingLabel: "SPCX 장기", content: "$800 목표주가에 +440% 업사이드라는 게 솔직히 처음엔 너무 낙관적이라고 생각했는데 Starlink 독점 구조 생각하면 불가능한 숫자도 아닌 것 같아요.", createdAt: T10JL - m(6), likes: 53 },
     { id: 2, nickname: "익명_3841", holdingLabel: "관심종목", content: "Genius $93B 매출 전망이 핵심이에요. 2030년에 연 $93B이면 PE 30배만 줘도 시총 $2.7T야. 지금 프리미엄 납득되는 수준.", createdAt: T10JL - m(2), likes: 38 },
     { id: 3, nickname: "익명_5904", holdingLabel: "SPCX 관심", content: "Kalshi 예측 흥미로운데 '지구 전체 초과'는 좀 과했지만 $1T 넘어가는 건 시간 문제라고 봐요.", createdAt: T10JL + m(3), likes: 21 },
     { id: 4, nickname: "익명_1273", holdingLabel: "200주 보유", content: "월가 PT 중 최고라는 타이틀이 기관 참고 앵커가 되는 거잖아요. 다른 기관들도 PT 올리는 압박 받겠죠.", createdAt: T10JL + m(7), likes: 16 },
