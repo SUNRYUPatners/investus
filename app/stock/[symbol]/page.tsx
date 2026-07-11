@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { StockChart } from "@/components/StockChart";
 import { NewsCard } from "@/components/NewsCard";
-import { ChevronLeft, ChevronDown } from "lucide-react";
+import { ChevronLeft, ChevronDown, Search, X } from "lucide-react";
 import { ShareButton } from "@/components/ShareButton";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
@@ -198,8 +198,11 @@ function getDateKey(r: Report): string {
 
 function StockReports({ symbol, className = "" }: { symbol: string; className?: string }) {
   const [showOlder, setShowOlder] = useState(false);
+  const [query, setQuery]         = useState("");
+  const [searching, setSearching] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const reports: Report[] = SEED_REPORTS
+  const allReports: Report[] = SEED_REPORTS
     .filter(
       (r) =>
         REPORT_TICKERS[r.id]?.includes(symbol) &&
@@ -207,47 +210,121 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
     )
     .sort((a, b) => getDateKey(b).localeCompare(getDateKey(a)));
 
-  if (reports.length === 0) return null;
+  if (allReports.length === 0) return null;
 
-  const latestDate   = getDateKey(reports[0]);
-  const latestGroup  = reports.filter((r) => getDateKey(r) === latestDate);
-  const olderReports = reports.filter((r) => getDateKey(r) !== latestDate);
+  const q = query.trim().toLowerCase();
+  const filtered = q
+    ? allReports.filter((r) =>
+        [r.title, r.summary, r.body, r.subject, r.titleEn, r.summaryEn]
+          .filter(Boolean)
+          .some((s) => s!.toLowerCase().includes(q))
+      )
+    : allReports;
+
+  const latestDate   = getDateKey(allReports[0]);
+  const latestGroup  = filtered.filter((r) => !q && getDateKey(r) === latestDate);
+  const olderReports = filtered.filter((r) => !q && getDateKey(r) !== latestDate);
 
   return (
     <div className={className}>
-      <h2
-        className="text-xs font-semibold tracking-widest uppercase font-syne mb-3"
-        style={{ color: "var(--muted)" }}
-      >
-        Investus 리포트
-      </h2>
-      <div className="flex flex-col gap-3">
-        {latestGroup.map((r) => <ReportCard key={r.id} r={r} />)}
+      {/* 헤더 행 */}
+      <div className="flex items-center justify-between mb-3">
+        <h2
+          className="text-xs font-semibold tracking-widest uppercase font-syne"
+          style={{ color: "var(--muted)" }}
+        >
+          Investus 리포트
+        </h2>
+        <button
+          onClick={() => {
+            setSearching((v) => {
+              if (!v) setTimeout(() => inputRef.current?.focus(), 50);
+              else { setQuery(""); }
+              return !v;
+            });
+          }}
+          className="p-1.5 rounded-lg transition-colors active:opacity-60"
+          style={{
+            color: searching ? "var(--accent)" : "var(--muted)",
+            background: searching ? "color-mix(in srgb, var(--accent) 12%, transparent)" : "transparent",
+          }}
+          aria-label="리포트 검색"
+        >
+          <Search className="w-3.5 h-3.5" />
+        </button>
       </div>
 
-      {olderReports.length > 0 && (
-        <>
-          <button
-            onClick={() => setShowOlder((v) => !v)}
-            className="w-full flex items-center justify-center gap-1.5 text-xs py-2.5 mt-3 rounded-xl border active:opacity-60 transition-opacity"
-            style={{
-              color: "var(--muted)",
-              borderColor: "var(--border)",
-              background: "var(--card)",
-              cursor: "pointer",
-            }}
-          >
-            {showOlder ? "접기" : `이전 리포트 ${olderReports.length}개 더 보기`}
-            <ChevronDown
-              className="w-3.5 h-3.5 transition-transform"
-              style={{ transform: showOlder ? "rotate(180deg)" : "none" }}
-            />
-          </button>
+      {/* 검색창 */}
+      {searching && (
+        <div
+          className="flex items-center gap-2 px-3 py-2 rounded-xl mb-3 border"
+          style={{ background: "var(--card)", borderColor: "var(--border)" }}
+        >
+          <Search className="w-3.5 h-3.5 shrink-0" style={{ color: "var(--muted)" }} />
+          <input
+            ref={inputRef}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="키워드 검색 (예: FSD, 목표주가, Optimus)"
+            className="flex-1 bg-transparent text-sm outline-none placeholder:text-xs"
+            style={{ color: "var(--text)", caretColor: "var(--accent)" }}
+          />
+          {query && (
+            <button onClick={() => setQuery("")} className="shrink-0 active:opacity-60">
+              <X className="w-3.5 h-3.5" style={{ color: "var(--muted)" }} />
+            </button>
+          )}
+        </div>
+      )}
 
-          {showOlder && (
-            <div className="flex flex-col gap-3 mt-3">
-              {olderReports.map((r) => <ReportCard key={r.id} r={r} />)}
+      {/* 검색 결과 */}
+      {q ? (
+        filtered.length > 0 ? (
+          <>
+            <p className="text-xs mb-2" style={{ color: "var(--muted)" }}>
+              &ldquo;{query}&rdquo; — {filtered.length}건
+            </p>
+            <div className="flex flex-col gap-3">
+              {filtered.map((r) => <ReportCard key={r.id} r={r} />)}
             </div>
+          </>
+        ) : (
+          <p className="text-sm text-center py-6" style={{ color: "var(--muted)" }}>
+            검색 결과 없음
+          </p>
+        )
+      ) : (
+        /* 기본 뷰 (최신 + 이전) */
+        <>
+          <div className="flex flex-col gap-3">
+            {latestGroup.map((r) => <ReportCard key={r.id} r={r} />)}
+          </div>
+
+          {olderReports.length > 0 && (
+            <>
+              <button
+                onClick={() => setShowOlder((v) => !v)}
+                className="w-full flex items-center justify-center gap-1.5 text-xs py-2.5 mt-3 rounded-xl border active:opacity-60 transition-opacity"
+                style={{
+                  color: "var(--muted)",
+                  borderColor: "var(--border)",
+                  background: "var(--card)",
+                  cursor: "pointer",
+                }}
+              >
+                {showOlder ? "접기" : `이전 리포트 ${olderReports.length}개 더 보기`}
+                <ChevronDown
+                  className="w-3.5 h-3.5 transition-transform"
+                  style={{ transform: showOlder ? "rotate(180deg)" : "none" }}
+                />
+              </button>
+
+              {showOlder && (
+                <div className="flex flex-col gap-3 mt-3">
+                  {olderReports.map((r) => <ReportCard key={r.id} r={r} />)}
+                </div>
+              )}
+            </>
           )}
         </>
       )}
