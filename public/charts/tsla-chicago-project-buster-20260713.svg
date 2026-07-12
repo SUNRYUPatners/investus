@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="180" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="242" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Chicago 광고 촬영</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.13</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Tesla Chicago 광고 촬영 — "Project Buster"</text>
+  <text x="540" y="290" font-family="Arial Black, Arial" font-weight="900" font-size="80" fill="#00e5a0" text-anchor="middle">Buster</text>
+  <text x="540" y="344" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#4ade80" text-anchor="middle">7월 13일 Chicago 다운타운 + Wrigleyville</text>
+  <text x="540" y="388" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Ferris Bueller's Day Off(1986) 오마주 — 도로 통제 촬영</text>
+
+  <rect x="80" y="418" width="920" height="100" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="456" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">촬영 상세</text>
+  <text x="540" y="484" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">허가명: "Project Buster" · Wrigley Building 주변 도로 통제</text>
+  <text x="540" y="508" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">7/13(일)·7/14(월) 양일 촬영 · ChiFilmOffice 공식 허가</text>
+
+  <rect x="80" y="534" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Ferris Bueller 연결</text>
+  <text x="300" y="600" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">1986년 클래식 영화 오마주</text>
+  <text x="300" y="622" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Chicago = 상징적 자유·도심 질주</text>
+  <text x="300" y="638" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">브랜드 감성 마케팅</text>
+
+  <rect x="560" y="534" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="780" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">마케팅 맥락</text>
+  <text x="780" y="600" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Cybercab 상용화 홍보 추정</text>
+  <text x="780" y="622" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">일반 소비자 인지도 확대</text>
+  <text x="780" y="638" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">글로벌 광고 캠페인 전망</text>
+
+  <rect x="80" y="660" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="696" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">시사점</text>
+  <text x="540" y="724" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#a7f3d0" text-anchor="middle">대규모 Cybercab 마케팅 캠페인 본격화 신호</text>
+
+  <rect x="80" y="756" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="794" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="822" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">허브 오픈 + 광고 캠페인 동시 = 소비자 인지·예약 수요 점화 전략</text>
+
+  <rect x="80" y="862" width="920" height="70" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="900" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Trent 4s · ChiFilmOffice · TeslaGeek (2026.07.13)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.13 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

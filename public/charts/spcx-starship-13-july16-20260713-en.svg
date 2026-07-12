@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#purpleGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#3b0764"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">SPCX</text>
+  <rect x="152" y="86" width="180" height="34" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="242" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#c084fc" text-anchor="middle">Starship 13th Flight</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.13</text>
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Starship 13th Test Flight — Targeting July 16</text>
+  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="90" fill="#c084fc" text-anchor="middle">IFT-13</text>
+  <text x="540" y="352" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#e9d5ff" text-anchor="middle">July 16 (Thu) · Mechazilla arm catch attempt</text>
+  <text x="540" y="396" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">V2 Starlink payload · Super Heavy V2 booster validation</text>
+  <rect x="80" y="426" width="920" height="100" rx="16" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="464" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Primary Objectives</text>
+  <text x="540" y="492" font-family="Arial, sans-serif" font-size="15" fill="#e9d5ff" text-anchor="middle">Propellant transfer + launch pad tower arm catch (same as prior flight)</text>
+  <text x="540" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Multiple hardware + software modifications applied from previous flight</text>
+  <rect x="80" y="542" width="440" height="110" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="300" y="580" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Payload</text>
+  <text x="300" y="608" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">V2 Starlink satellites</text>
+  <text x="300" y="630" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Super Heavy V2 booster</text>
+  <text x="300" y="646" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Actual commercial mission</text>
+  <rect x="560" y="542" width="440" height="110" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="780" y="580" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Catch System</text>
+  <text x="780" y="608" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Mechazilla arm catch</text>
+  <text x="780" y="630" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Texas Starbase launch</text>
+  <text x="780" y="646" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">America tower arms</text>
+  <rect x="80" y="668" width="920" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="704" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Cumulative Significance</text>
+  <text x="540" y="734" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#e9d5ff" text-anchor="middle">Full reusability completion = 1/10th launch cost realized</text>
+  <rect x="80" y="764" width="920" height="90" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="802" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#c084fc" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="830" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Repeated Starship success drives launch cost collapse → SpaceX profitability structure transformation</text>
+  <rect x="80" y="870" width="920" height="70" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Sawyer Merrit (2026.07.13)</text>
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.13 · investus.kr SRP Chief Investment Officer</text>
+</svg>

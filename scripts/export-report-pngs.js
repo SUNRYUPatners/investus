@@ -374,6 +374,15 @@ const PAIRS = [
   { ko: 'nvda-burry-depreciation-20260710.svg',      en: 'nvda-burry-depreciation-20260710-en.svg',      label: 'NVDA_Burry_Depr',        date: '20260710' },
   { ko: 'meta-super-sensing-glasses-20260710.svg',   en: 'meta-super-sensing-glasses-20260710-en.svg',   label: 'META_SuperSensing',      date: '20260710' },
   { ko: 'summary-20260710.svg',                      en: 'summary-20260710-en.svg',                      label: '7월10일_요약',            date: '20260710' },
+  { ko: 'tsla-robotaxi-hub-cleaning-robot-20260713.svg',  en: 'tsla-robotaxi-hub-cleaning-robot-20260713-en.svg',  label: 'TSLA_Hub_청소로봇',    date: '20260713' },
+  { ko: 'tsla-ais-chip-samsung-tapeout-20260713.svg',     en: 'tsla-ais-chip-samsung-tapeout-20260713-en.svg',     label: 'TSLA_AIS_삼성',        date: '20260713' },
+  { ko: 'tsla-chicago-project-buster-20260713.svg',       en: 'tsla-chicago-project-buster-20260713-en.svg',       label: 'TSLA_Chicago_Buster',  date: '20260713' },
+  { ko: 'tsla-cybercab-eric-c-50rides-20260713.svg',      en: 'tsla-cybercab-eric-c-50rides-20260713-en.svg',      label: 'TSLA_EricC_50rides',   date: '20260713' },
+  { ko: 'tsla-fsd-v4-lite-hw3-20260713.svg',              en: 'tsla-fsd-v4-lite-hw3-20260713-en.svg',              label: 'TSLA_FSD_V4Lite',      date: '20260713' },
+  { ko: 'spcx-starlink-v3-20sats-20260713.svg',           en: 'spcx-starlink-v3-20sats-20260713-en.svg',           label: 'SPCX_StarV3_20sats',   date: '20260713' },
+  { ko: 'spcx-starship-13-july16-20260713.svg',           en: 'spcx-starship-13-july16-20260713-en.svg',           label: 'SPCX_Starship13',      date: '20260713' },
+  { ko: 'mu-q2-9b-july23-20260713.svg',                   en: 'mu-q2-9b-july23-20260713-en.svg',                   label: 'MU_Q2_9B',             date: '20260713' },
+  { ko: 'summary-20260713.svg',                           en: 'summary-20260713-en.svg',                           label: '7월13일_요약',          date: '20260713' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

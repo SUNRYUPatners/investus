@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+  <rect x="60" y="86" width="60" height="34" rx="8" fill="#1e3a5f"/>
+  <text x="90" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MU</text>
+  <rect x="132" y="86" width="160" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="212" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">Q2 실적 발표 예정</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.13</text>
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Micron Q2 — 매출 $9B 유출, 7월 23일 발표</text>
+  <text x="540" y="310" font-family="Arial Black, Arial" font-weight="900" font-size="120" fill="#60a5fa" text-anchor="middle">$9B</text>
+  <text x="540" y="360" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#93c5fd" text-anchor="middle">Q2 매출 유출 추정 · 발표: 7월 23일</text>
+  <text x="540" y="404" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Investing Visuals: Q2 주요 지표 일제히 개선 전망</text>
+  <rect x="80" y="434" width="920" height="100" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Q2 추정치</text>
+  <text x="540" y="500" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">매출 $9B+ · 순이익 $1B+ 전망</text>
+  <text x="540" y="524" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">DRAM·NAND·HBM 모든 핵심 지표 개선 예상</text>
+  <rect x="80" y="550" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="300" y="588" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">성장 동력</text>
+  <text x="300" y="616" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">AI HBM 수요 지속 급증</text>
+  <text x="300" y="638" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">DRAM ASP 상승 지속</text>
+  <text x="300" y="654" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">PC 업그레이드 사이클</text>
+  <rect x="560" y="550" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="780" y="588" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">경쟁 구도</text>
+  <text x="780" y="616" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">삼성·SK하이닉스 동반 강세</text>
+  <text x="780" y="638" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">업계 전반 수익성 개선</text>
+  <text x="780" y="654" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">공급 타이트 2027년까지</text>
+  <rect x="80" y="676" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="712" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">발표 일정</text>
+  <text x="540" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#93c5fd" text-anchor="middle">7월 23일 (목) Q2 실적 공식 발표</text>
+  <rect x="80" y="772" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="810" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="838" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">$9B 달성 시 컨센서스 상회 → 주가 재평가 트리거 · HBM 마진 믹스 개선 확인</text>
+  <rect x="80" y="878" width="920" height="70" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="916" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Investing Visuals (2026.07.13)</text>
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.13 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

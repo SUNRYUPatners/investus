@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5a0"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#mintGrad)" rx="2"/>
+
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
+  <rect x="152" y="86" width="160" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="232" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">Robotaxi Hub Auto</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.13</text>
+
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Austin Robotaxi Hub — Cleaning Robot Built In</text>
+  <text x="540" y="284" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#00e5a0" text-anchor="middle">Hub Self-Cleans</text>
+  <text x="540" y="340" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#4ade80" text-anchor="middle">The car drives itself. Now the hub cleans itself.</text>
+  <text x="540" y="384" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Permit TAB022052026 — cleaning robot officially listed</text>
+
+  <rect x="80" y="414" width="920" height="100" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="540" y="454" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Permit Details</text>
+  <text x="540" y="480" font-family="Arial, sans-serif" font-size="15" fill="#a7f3d0" text-anchor="middle">Permit TAB022052026 — cleaning robot, Superchargers, equipment room</text>
+  <text x="540" y="504" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Hub construction completed: March 2026 · automated cleaning designed since last year</text>
+
+  <rect x="80" y="530" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="300" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Automation Scope</text>
+  <text x="300" y="596" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Vacuum Supercharger bays</text>
+  <text x="300" y="618" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Full facility autonomous cleaning</text>
+  <text x="300" y="634" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Zero labor required</text>
+
+  <rect x="560" y="530" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <text x="780" y="568" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">Operating Model</text>
+  <text x="780" y="596" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Fully unmanned hub operation</text>
+  <text x="780" y="618" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Minimized overhead costs</text>
+  <text x="780" y="634" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Maximized per-trip EBITDA</text>
+
+  <rect x="80" y="656" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540" y="692" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0" text-anchor="middle">Broader Significance</text>
+  <text x="540" y="720" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#a7f3d0" text-anchor="middle">Vehicle auto + Hub auto = Fully autonomous robotaxi ecosystem</text>
+
+  <rect x="80" y="752" width="920" height="90" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="790" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="818" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Structural cost reduction → robotaxi margins higher than expected · Scalable hub blueprint nationwide</text>
+
+  <rect x="80" y="858" width="920" height="70" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
+  <text x="540" y="896" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Muskmoney · Sawyer Merrit · Permit TAB022052026 (2026.07.13)</text>
+
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.13 · investus.kr SRP Chief Investment Officer</text>
+</svg>

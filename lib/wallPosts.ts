@@ -26,8 +26,9 @@ export type Comment = {
   likes:        number;
 };
 
+const T13JL = 1783897200000; // 2026-07-13 08:00 KST
 const T10JL = 1783638000000; // 2026-07-10 08:00 KST
-const T9JL = 1783551600000; // 2026-07-09 08:00 KST
+const T9JL  = 1783551600000; // 2026-07-09 08:00 KST
 const T8JL = 1783465200000; // 2026-07-08 08:00 KST
 const T7JL = 1783378800000; // 2026-07-07 08:00 KST
 const T6JL = 1783292400000; // 2026-07-06 08:00 KST
@@ -51,7 +52,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T10JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T13JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -70,6 +71,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-13 — TSLA 오스틴 허브 청소로봇·AIS 칩 삼성 테이프아웃·
+  //              Chicago Project Buster·Cybercab Eric C 50회·FSD V4 Lite HW3·
+  //              Starlink V3 20기·Starship IFT-13 7/16·MU Q2 $9B
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA 오스틴 허브 청소 로봇 ────────────────────────────────────────────
+  { id: 493, symbol: "TSLA", nickname: "익명_4172", holdingLabel: "260주 보유",
+    content: "오스틴 Robotaxi 허브 청소 로봇 내장 됐다는 거 봤어? 허가서에 공식으로 박혀있음. TAB022052026에 청소 로봇, 수퍼차저, 장비실 세트로 들어가 있는 거야. 3월에 완공됐고 자동화 청소 시스템은 작년부터 설계된 거래. '차가 스스로 달리고, 이제 허브도 스스로 청소한다' — 이게 완전 무인 생태계잖아. 운영비 구조가 완전히 달라지는 거야.",
+    createdAt: T13JL + 6*60_000, likes: 2734, comments: 4 },
+
+  // TSLA AIS 칩 삼성 테이프아웃 ─────────────────────────────────────────
+  { id: 494, symbol: "TSLA", nickname: "익명_7381", holdingLabel: "120주 보유",
+    content: "삼성 파운드리 내부자 발 뉴스 진짜임. Tesla AIS 칩이 올해 4월에 테이프아웃 완료됐다는 거야. 역사상 처음으로 삼성이 Tesla 칩 설계 테이프아웃을 선도한 거고 양산은 2027년 목표. Ming-Chi Kuo도 인도에 Tesla 실리콘팀 구성 중이라고 했는데 Q4에 AI 칩 테이프아웃 또 있을 수 있다는 거잖아. NVDA 의존도 줄이는 게 진짜 현실화되고 있어.",
+    createdAt: T13JL + 14*60_000, likes: 2183, comments: 4 },
+
+  // TSLA Chicago Project Buster ─────────────────────────────────────────
+  { id: 495, symbol: "TSLA", nickname: "익명_5829", holdingLabel: "관심종목",
+    content: "Tesla가 오늘 Chicago에서 대규모 광고 찍는다는 거 ChiFilmOffice 허가서로 확인됨. 허가명이 'Project Buster'인데 Ferris Bueller's Day Off 오마주래. Wrigley Building 주변 도로 통제하고 일요일·월요일 이틀 찍는 거야. Austin 허브 오픈 직후에 이런 대형 마케팅 나온다는 게 Cybercab 대규모 홍보 시작이라는 거 아닌가? 타이밍이 너무 딱 맞아.",
+    createdAt: T13JL + 22*60_000, likes: 1956, comments: 3 },
+
+  // TSLA Cybercab Eric C 50회 ──────────────────────────────────────────
+  { id: 496, symbol: "TSLA", nickname: "익명_9043", holdingLabel: "430주 보유",
+    content: "Eric C가 며칠 만에 Cybercab 50회 타고 절대 내리기 싫었다는 거 봤어? 이 사람이 Tesla 차량·로보택시 엔지니어링 총괄 리드야. Cybercab을 가장 깊이 설계한 엔지니어가 50번 타고도 더 타고 싶다는 거잖아. '차를 가장 잘 아는 사람이 내리기 싫어한다' — 이게 제품 완성도 증명이야. 직원 탑승이 이제 막 시작됐다는 것도 포인트.",
+    createdAt: T13JL + 30*60_000, likes: 3291, comments: 5 },
+
+  // TSLA FSD V4 Lite HW3 ───────────────────────────────────────────────
+  { id: 497, symbol: "TSLA", nickname: "익명_2614", holdingLabel: "65주 보유",
+    content: "FSD V4 Lite HW3 개선폭이 진짜임. Nic Cruz Patane이 주행 거리감, 가감속 편안함, 주차장 성능 다 대폭 개선됐다고 했는데 — HW3가 HW4 연산의 15%밖에 안 된다는 걸 생각하면 믿기지 않는 수준이야. 수백만 대가 OTA로 바로 받는 거잖아. 이게 소프트웨어 플랫폼 해자라는 거야. FSD 구독 전환율도 올라가겠지.",
+    createdAt: T13JL + 38*60_000, likes: 1847, comments: 3 },
+
+  // SPCX Starlink V3 ────────────────────────────────────────────────────
+  { id: 498, symbol: "SPCX", nickname: "익명_8372", holdingLabel: "SPCX 장기",
+    content: "Starlink V3 20기 발사됐는데 V2 대비 용량이 6배래. 같은 위성 수에서 6배 처리량이면 성좌 전략 자체가 달라지는 거잖아. 추가로 6기는 히트실드 카메라 달려서 Starship 재진입 영상 분석용이고. 남아공 지상국 연결 테스트도 병행한다는데 V3 전환 완료되면 구독자당 속도 차이가 경쟁사 대비 압도적이 되는 거야.",
+    createdAt: T13JL + 46*60_000, likes: 1543, comments: 3 },
+
+  // SPCX Starship IFT-13 ───────────────────────────────────────────────
+  { id: 499, symbol: "SPCX", nickname: "익명_3917", holdingLabel: "관심종목",
+    content: "Starship 13번째 비행 7월 16일 목표야. Mechazilla 암 캐치 재도전이고 V2 Starlink 위성 + Super Heavy V2 부스터 탑재. 이전 비행 대비 하드웨어·소프트웨어 여러 수정 적용했다는데 캐치 성공하면 완전 재사용 시대가 진짜 오는 거잖아. 발사 비용 1/10 현실화되면 SPCX 밸류에이션 논의가 완전히 달라져야 해.",
+    createdAt: T13JL + 54*60_000, likes: 1729, comments: 3 },
+
+  // MU Q2 $9B ──────────────────────────────────────────────────────────
+  { id: 500, symbol: "MU", nickname: "익명_6481", holdingLabel: "75주 보유",
+    content: "MU Q2 $9B 유출 수치 봤어요. 공식 발표가 7월 23일인데 Investing Visuals가 미리 올린 거 보면 매출 $9B+, 순이익 $1B+에 DRAM·NAND·HBM 모두 개선 예상이래요. 컨센서스 상회하면 주가 재평가 트리거인데 HBM 고마진 믹스가 얼마나 올라왔는지가 핵심이겠죠. 2027년까지 수급 타이트라는 공식 가이던스랑 맞아떨어지는 숫자예요.",
+    createdAt: T13JL + 62*60_000, likes: 1384, comments: 3 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-10 — TSLA Optimus Giga Texas 10M·Cybercab Austin 울타리 철거·
@@ -2120,6 +2167,52 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-13 신규 ──────────────────────────────────────────────────────
+  493: [
+    { id: 1, nickname: "익명_5291", holdingLabel: "300주 보유", content: "완전 무인 허브 + 완전 자율 차량 조합이면 인건비 제로 운영이잖아요. 이게 전국으로 복제되면 로보택시 마진이 상상 이상일 것 같아요.", createdAt: T13JL - m(8), likes: 52 },
+    { id: 2, nickname: "익명_8304", holdingLabel: "관심종목", content: "수퍼차저까지 같은 허가서에 들어있다는 게 허브 인프라가 완전히 통합됐다는 신호죠. 다음 도시 허브도 같은 설계로 갈 것 같아요.", createdAt: T13JL - m(4), likes: 33 },
+    { id: 3, nickname: "익명_2716", holdingLabel: "55주 보유", content: "작년부터 설계됐다는 게 임시방편 아니라 처음부터 이렇게 기획된 거라는 거잖아요. 완전 무인 생태계가 처음부터 플랜이었던 거죠.", createdAt: T13JL - m(1), likes: 24 },
+    { id: 4, nickname: "익명_7038", holdingLabel: "관심종목", content: "운영비 구조가 달라지면 로보택시 수익성이 훨씬 일찍 달성되겠죠. 단순히 차량 매출이 아니라 서비스 마진이 쌓이는 구조예요.", createdAt: T13JL + m(3), likes: 18 },
+  ],
+  494: [
+    { id: 1, nickname: "익명_3847", holdingLabel: "90주 보유", content: "삼성이 TSMC 아닌데 Tesla가 삼성 선택한 거 자체가 의미 있어요. 지정학·가격·일정 종합해서 선택한 거겠죠.", createdAt: T13JL - m(6), likes: 41 },
+    { id: 2, nickname: "익명_6193", holdingLabel: "관심종목", content: "인도 팀이 Q4에 추가 테이프아웃 목표라는 게 병행 트랙이 있다는 거잖아요. 칩 내재화 속도가 예상보다 빠를 수 있어요.", createdAt: T13JL - m(3), likes: 28 },
+    { id: 3, nickname: "익명_9271", holdingLabel: "40주 보유", content: "AIS 칩 양산 2027년이면 FSD V6쯤에 바로 적용될 타이밍이에요. 추론 비용 줄어들면 FSD 구독 가격 경쟁력도 올라가고.", createdAt: T13JL + m(2), likes: 19 },
+    { id: 4, nickname: "익명_4582", holdingLabel: "15주 보유", content: "NVDA 의존도 줄인다는 게 장기적으로 엔비디아 주가에도 영향 있을 텐데... Tesla가 큰 고객이라서요.", createdAt: T13JL + m(5), likes: 12 },
+  ],
+  495: [
+    { id: 1, nickname: "익명_8037", holdingLabel: "150주 보유", content: "Ferris Bueller 오마주라는 게 진짜 귀엽고 영리해요. '인생은 빠르게 지나간다' — Cybercab 타면 그 순간을 즐기라는 메시지겠죠.", createdAt: T13JL - m(5), likes: 37 },
+    { id: 2, nickname: "익명_2914", holdingLabel: "관심종목", content: "Austin 허브 오픈 바로 다음 주에 Chicago 광고라는 타이밍이 너무 계획적이에요. 소비자 인지 → 예약 → 수요 창출 시퀀스 같아요.", createdAt: T13JL - m(2), likes: 24 },
+    { id: 3, nickname: "익명_5183", holdingLabel: "25주 보유", content: "Wrigleyville이면 야구 팬들도 보는 거잖아요. 주말 시카고는 관광객도 많고 노출 극대화 장소로 완벽한 것 같아요.", createdAt: T13JL + m(4), likes: 16 },
+  ],
+  496: [
+    { id: 1, nickname: "익명_7291", holdingLabel: "550주 보유", content: "엔지니어링 총괄이 50번 타고 더 타고 싶다는 게 최고의 제품 리뷰잖아요. 마케팅 말고 진짜 사용자 피드백.", createdAt: T13JL - m(7), likes: 83 },
+    { id: 2, nickname: "익명_3482", holdingLabel: "200주 보유", content: "Eric C가 직접 설계한 차를 직접 타고 반했다는 게 감동적이기도 해요. 개발자가 자기 제품에 반하는 거잖아요.", createdAt: T13JL - m(4), likes: 54 },
+    { id: 3, nickname: "익명_9014", holdingLabel: "80주 보유", content: "며칠 만에 50회면 하루에 10번 넘게 탄 거잖아요. 그냥 좋아서 타는 게 아니라 데이터 수집도 겸하는 거겠지만 그만큼 신뢰한다는 거죠.", createdAt: T13JL - m(1), likes: 41 },
+    { id: 4, nickname: "익명_6273", holdingLabel: "관심종목", content: "직원 탑승이 이제 막 시작됐다는 게 포인트예요. 초기 피드백이 이 정도면 소비자 출시 반응은 더 폭발적일 것 같아요.", createdAt: T13JL + m(4), likes: 29 },
+    { id: 5, nickname: "익명_1847", holdingLabel: "35주 보유", content: "Model 3 부품의 절반이라는 것도 다시 실감해요. 복잡도가 낮으니까 신뢰성도 높고 정비 비용도 낮은 거죠.", createdAt: T13JL + m(7), likes: 21 },
+  ],
+  497: [
+    { id: 1, nickname: "익명_4918", holdingLabel: "45주 보유", content: "15% 연산으로 V4 수준 달성이라는 게 소프트웨어 팀 실력이에요. 하드웨어 한계를 코드로 극복하는 거잖아요.", createdAt: T13JL - m(4), likes: 38 },
+    { id: 2, nickname: "익명_7263", holdingLabel: "110주 보유", content: "수백만 대가 OTA로 바로 받는다는 게 경쟁사가 절대 못 따라하는 거예요. 이미 도로 위에 있는 차들이 업데이트로 좋아지는 구조.", createdAt: T13JL - m(2), likes: 26 },
+    { id: 3, nickname: "익명_2841", holdingLabel: "관심종목", content: "FSD 구독료 내던 HW3 오너들이 이제 더 좋아졌으니 구독 유지 + 신규 전환도 늘겠죠. 수익성 개선 포인트예요.", createdAt: T13JL + m(3), likes: 17 },
+  ],
+  498: [
+    { id: 1, nickname: "익명_5391", holdingLabel: "SPCX 보유", content: "6배 용량이라는 게 단순한 스펙 업이 아니라 ARPU 상승 가능성이에요. 프리미엄 구독 가격 올릴 명분이 생기는 거잖아요.", createdAt: T13JL - m(5), likes: 44 },
+    { id: 2, nickname: "익명_8174", holdingLabel: "관심종목", content: "히트실드 카메라 6기가 Starship 재진입 데이터 수집이라는 게 일석이조예요. 상업 임무도 하면서 R&D도 병행하는 거잖아요.", createdAt: T13JL - m(2), likes: 29 },
+    { id: 3, nickname: "익명_3629", holdingLabel: "SPCX 장기", content: "V3 전환 완료되면 경쟁사 대비 처리량 격차가 더 벌어져요. Kuiper나 OneWeb이 용량 경쟁에서 따라오는 게 불가능해지는 거죠.", createdAt: T13JL + m(4), likes: 18 },
+  ],
+  499: [
+    { id: 1, nickname: "익명_6284", holdingLabel: "관심종목", content: "암 캐치 성공하면 진짜 역사적인 날이에요. 완전 재사용 로켓이 실제로 운영되는 첫 사례가 되는 거잖아요.", createdAt: T13JL - m(4), likes: 51 },
+    { id: 2, nickname: "익명_2917", holdingLabel: "SPCX 보유", content: "V2 Starlink 위성까지 탑재해서 실제 상업 임무라는 게 포인트예요. 테스트가 아니라 진짜 사업이 되고 있는 거죠.", createdAt: T13JL - m(1), likes: 33 },
+    { id: 3, nickname: "익명_7483", holdingLabel: "관심종목", content: "발사 비용 1/10이 되면 현재 SpaceX 매출 추정치를 다 갈아엎어야 해요. 수익성 구조가 완전히 달라지니까요.", createdAt: T13JL + m(4), likes: 22 },
+  ],
+  500: [
+    { id: 1, nickname: "익명_3841", holdingLabel: "80주 보유", content: "$9B 달성이면 컨센서스 얼마나 상회하는 건지 찾아봐야겠어요. 수치가 맞으면 7/23 발표 당일 움직임이 클 것 같아요.", createdAt: T13JL - m(3), likes: 35 },
+    { id: 2, nickname: "익명_7192", holdingLabel: "40주 보유", content: "HBM 고마진 믹스 비중이 얼마나 올라왔는지가 진짜 핵심이에요. DRAM 매출 전체보다 HBM 마진이 실적 퀄리티를 결정해요.", createdAt: T13JL - m(1), likes: 22 },
+    { id: 3, nickname: "익명_5294", holdingLabel: "관심종목", content: "순이익 $1B+이면 진짜 사이클 전환 확인이에요. 반도체 사이클 상단이 2027년까지라는 Micron 가이던스가 맞다는 거고요.", createdAt: T13JL + m(3), likes: 14 },
+  ],
+
   // ── 2026-07-10 신규 ──────────────────────────────────────────────────────
   484: [
     { id: 1, nickname: "익명_2819", holdingLabel: "200주 보유", content: "Joe Taugaman 현장 영상 보면 진짜 속도감 다름. 이 속도면 2027년 풀가동 충분히 현실적이에요.", createdAt: T10JL - m(8), likes: 47 },

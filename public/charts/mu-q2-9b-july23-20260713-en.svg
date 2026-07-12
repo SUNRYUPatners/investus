@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+  <rect x="60" y="86" width="60" height="34" rx="8" fill="#1e3a5f"/>
+  <text x="90" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">MU</text>
+  <rect x="132" y="86" width="170" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="217" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">Q2 Earnings Preview</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.13</text>
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Micron Q2 — $9B Revenue Leaked, July 23 Report</text>
+  <text x="540" y="310" font-family="Arial Black, Arial" font-weight="900" font-size="120" fill="#60a5fa" text-anchor="middle">$9B</text>
+  <text x="540" y="360" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#93c5fd" text-anchor="middle">Q2 revenue leaked estimate · Reports: July 23</text>
+  <text x="540" y="404" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">Investing Visuals: all key Q2 metrics expected to improve materially</text>
+  <rect x="80" y="434" width="920" height="100" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="472" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Q2 Estimates</text>
+  <text x="540" y="500" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">Revenue $9B+ · Net income $1B+ projected</text>
+  <text x="540" y="524" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">DRAM · NAND · HBM all key metrics expected to improve</text>
+  <rect x="80" y="550" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="300" y="588" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Growth Drivers</text>
+  <text x="300" y="616" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">AI HBM demand surge ongoing</text>
+  <text x="300" y="638" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">DRAM ASP continuing to rise</text>
+  <text x="300" y="654" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">PC upgrade cycle recovery</text>
+  <rect x="560" y="550" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="780" y="588" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">Competitive Landscape</text>
+  <text x="780" y="616" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">Samsung/SK Hynix aligned strength</text>
+  <text x="780" y="638" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">Industry-wide profitability recovery</text>
+  <text x="780" y="654" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Supply tight through 2027</text>
+  <rect x="80" y="676" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="712" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">Report Date</text>
+  <text x="540" y="742" font-family="Arial Black, Arial" font-weight="900" font-size="24" fill="#93c5fd" text-anchor="middle">Thursday, July 23 — Official Q2 Earnings Release</text>
+  <rect x="80" y="772" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="810" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="838" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">$9B beat → valuation re-rating trigger · HBM margin mix improvement confirmed</text>
+  <rect x="80" y="878" width="920" height="70" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="916" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Investing Visuals (2026.07.13)</text>
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.13 · investus.kr SRP Chief Investment Officer</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1100" width="1080" height="1100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1100" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.13</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">오늘의 한장 요약</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · SPCX · MU</text>
+
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">1. TSLA 오스틴 허브 청소 로봇 — 허가서 확인, 2026년 3월 완공</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">차가 스스로 달리고, 허브가 스스로 청소 · 무인 운영 원가 구조 확인</text>
+
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">2. TSLA AIS 칩 삼성 파운드리 테이프아웃 — 2026년 4월, 양산 2027</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">삼성 최초 Tesla 칩 테이프아웃 선도 · NVIDIA 의존도 감소 · India팀 Q4 목표</text>
+
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">3. TSLA Chicago "Project Buster" 광고 촬영 — Ferris Bueller 오마주</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">7/13 다운타운+Wrigleyville 도로 통제 · Cybercab 마케팅 캠페인 본격화</text>
+
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">4. TSLA Cybercab Eric C 50회 탑승 — "절대 내리기 싫다" (July 11)</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Tesla 차량·로보택시 엔지니어링 총괄 리드의 압도적 긍정 반응</text>
+
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">5. TSLA FSD V4 Lite HW3 대폭 개선 — HW4 연산의 15%로 달성</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">주행거리감·가감속·주차장 모두 개선 · 수백만 HW3 차량 즉시 혜택</text>
+
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">6. Starlink V3 20기 발사 — V2 대비 용량 6배, 히트실드 카메라 6기</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">남아공 지상국 연결 테스트 · Starship 재진입 영상 분석 병행</text>
+
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">7. Starship 13번째 비행 7/16 목표 — Mechazilla 암 캐치 재도전</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">V2 Starlink + Super Heavy V2 · 이전 비행 H/W·S/W 수정 적용</text>
+
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">8. MU Q2 매출 $9B 유출 추정 — 7월 23일 공식 발표</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">순이익 $1B+ · DRAM·NAND·HBM 모두 개선 · 컨센서스 상회 예상</text>
+
+  <rect x="0" y="1040" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1076" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.13 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

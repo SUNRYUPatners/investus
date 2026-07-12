@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1100" width="1080" height="1100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1100" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.13</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">Daily Summary</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · SPCX · MU</text>
+
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">1. TSLA Austin Hub Cleaning Robot — Permit confirmed, completed Mar 2026</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Car drives itself, hub cleans itself · Zero-labor operating cost structure confirmed</text>
+
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">2. TSLA AIS Chip Samsung Tape-Out — April 2026, volume 2027</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Samsung led Tesla chip tape-out for first time · NVIDIA dependency reduced · India Q4 target</text>
+
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">3. TSLA Chicago "Project Buster" Ad Shoot — Ferris Bueller homage</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Jul 13 downtown + Wrigleyville streets closed · Large-scale Cybercab marketing launch</text>
+
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">4. TSLA Cybercab Eric C 50 Rides — "Never wanted to get out" (Jul 11)</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Tesla Vehicle and Robotaxi Engineering Lead overwhelmingly positive</text>
+
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">5. TSLA FSD V4 Lite HW3 — Dramatic improvement at 15% of HW4 compute</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Lane distance, comfort, parking improved · Millions of HW3 vehicles benefit immediately</text>
+
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">6. Starlink V3 20 Sats Launched — 6x V2 capacity, 6 heat-shield cameras</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">South Africa ground station link test · Starship re-entry imagery analysis</text>
+
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">7. Starship IFT-13 Targeting July 16 — Mechazilla arm catch re-attempt</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">V2 Starlink + Super Heavy V2 · Multiple H/W and S/W modifications applied</text>
+
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">8. MU Q2 $9B Revenue Leaked — Official report July 23</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Net income $1B+ · DRAM/NAND/HBM all improved · Consensus beat expected</text>
+
+  <rect x="0" y="1040" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1076" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.13 · investus.kr SRP Chief Investment Officer</text>
+</svg>
