@@ -117,7 +117,9 @@ export default function SubscribePage() {
           </div>
           <div className="rounded-xl p-4 border mb-4" style={{ background: "rgba(255,255,255,0.02)", borderColor: "var(--border)" }}>
             <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-              입금자명에 <strong style={{ color: "var(--mint)" }}>{name}</strong> 으로 입력해 주세요.
+              입금자명에 <strong style={{ color: "var(--mint)" }}>프로필명</strong>
+              {name ? <> (<strong style={{ color: "var(--mint)" }}>{name}</strong>)</> : null}
+              을 입력해 주세요.
               확인 후 가입 이메일({user?.email})에 Pro가 연결됩니다.
             </p>
           </div>
