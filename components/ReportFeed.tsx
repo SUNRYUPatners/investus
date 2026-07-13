@@ -7,9 +7,10 @@ import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocale } from "@/contexts/LocaleContext";
 import { ShareButton } from "@/components/ShareButton";
+import { SUBSCRIPTION, isFreeReport } from "@/lib/subscription";
 
-// 토스페이먼츠 연결 전까지 false — true로 바꾸면 구독 게이팅 복활
-const SUBSCRIPTION_ENABLED = false;
+// 구독 게이팅 — lib/subscription.ts SUBSCRIPTION.enabled
+const SUBSCRIPTION_ENABLED = SUBSCRIPTION.enabled;
 
 // ── 이미지 라이트박스 (스와이프 닫기 + 핀치줌) ───────────────────────────
 function ImageLightbox({ src, onClose }: { src: string; onClose: () => void }) {
@@ -144,7 +145,6 @@ function getDateKey(r: Report): string {
 }
 
 const SHOW_WINDOW = 7 * 24 * 60 * 60 * 1000;  // 1주일 후 삭제
-const FREE_WINDOW = 24 * 60 * 60 * 1000;        // 24시간 이내 무료
 
 function parseReportTime(r: Report): number {
   const s = r.updatedAt ?? r.date ?? "";
@@ -161,11 +161,6 @@ function parseReportTime(r: Report): number {
 function isWithinWeek(r: Report): boolean {
   const t = parseReportTime(r);
   return t > 0 && Date.now() - t <= SHOW_WINDOW;
-}
-
-function isWithin24h(r: Report): boolean {
-  const t = parseReportTime(r);
-  return t > 0 && Date.now() - t <= FREE_WINDOW;
 }
 
 // ── ReportCard ────────────────────────────────────────────────────────────
@@ -281,7 +276,7 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
       {/* 구독하기 버튼 — 항상 하단에 1개만 */}
       <div className="px-4 pb-4 pt-3" style={{ borderTop: expanded ? "1px solid var(--border)" : undefined }}>
         <Link
-          href="/more"
+          href="/subscribe"
           className="w-full py-2.5 rounded-xl text-sm font-bold text-black text-center block active:opacity-80 transition-opacity"
           style={{ background: "var(--mint)" }}
         >
@@ -601,10 +596,10 @@ export function ReportFeed({ lang }: { lang?: "ko" | "en" } = {}) {
   const latestGroup = all.filter((r) => getDateKey(r) === latestDateKey);
   const olderGroup  = all.filter((r) => getDateKey(r) < latestDateKey);
 
-  // 열람 가능 vs 잠긴 리포트 분리 (구독 게이팅)
+  // 열람 가능 vs 잠긴 리포트 분리 (오늘자 무료 · 이전 날짜 Pro)
   const applyGate = (list: typeof all) => ({
-    free:   SUBSCRIPTION_ENABLED ? list.filter((r) => isPro || isWithin24h(r)) : list,
-    locked: SUBSCRIPTION_ENABLED && !isPro ? list.filter((r) => !isWithin24h(r)) : [],
+    free:   SUBSCRIPTION_ENABLED ? list.filter((r) => isPro || isFreeReport(r)) : list,
+    locked: SUBSCRIPTION_ENABLED && !isPro ? list.filter((r) => !isFreeReport(r)) : [],
   });
 
   const latest = applyGate(latestGroup);

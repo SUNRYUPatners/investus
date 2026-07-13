@@ -12,6 +12,9 @@ import { RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { SectionInfo } from "./SectionInfo";
 import { isMarketOpen } from "@/lib/marketHours";
+import { useAuth } from "@/hooks/useAuth";
+import { SUBSCRIPTION } from "@/lib/subscription";
+import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
 
@@ -70,6 +73,8 @@ function CardSkeleton() {
 export function LiveMarket() {
   const t      = useLocale();
   const locale = useLocaleCode();
+  const { user } = useAuth();
+  const picksLocked = SUBSCRIPTION.enabled && user?.isPro !== true;
   const [data, setData]       = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -214,6 +219,11 @@ export function LiveMarket() {
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
         </div>
         <div className="relative">
+          <SubscribeBlurOverlay
+            locked={picksLocked}
+            title="Investus 추천주식"
+            description={`CIO 선정 종목은 Pro 구독 후 열람할 수 있습니다. 월 ${SUBSCRIPTION.priceKrw.toLocaleString("ko-KR")}원`}
+          >
           {recScroll.canLeft && (
             <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
               style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
@@ -231,6 +241,7 @@ export function LiveMarket() {
               <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
             </div>
           )}
+          </SubscribeBlurOverlay>
         </div>
       </section>
 

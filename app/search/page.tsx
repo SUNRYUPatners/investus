@@ -13,6 +13,9 @@ import { NewsSection } from "@/components/NewsSection";
 import { EconomicCalendar } from "@/components/EconomicCalendar";
 import { Star } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
+import { useAuth } from "@/hooks/useAuth";
+import { SUBSCRIPTION } from "@/lib/subscription";
+import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
 const UP   = "#10b981";
 const DOWN = "#ef4444";
 
@@ -95,6 +98,8 @@ function StockRow({
 
 export default function SearchPage() {
   const t = useLocale();
+  const { user } = useAuth();
+  const picksLocked = SUBSCRIPTION.enabled && user?.isPro !== true;
   const [query, setQuery]     = useState("");
   const [, startTransition]   = useTransition();
   const [searchQuery, setSearchQuery] = useState("");
@@ -346,6 +351,11 @@ export default function SearchPage() {
                     <span className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>{t.search.cioPicks}</span>
                   </div>
                   <div className="flex flex-col gap-2">
+                    <SubscribeBlurOverlay
+                      locked={picksLocked}
+                      title="Investus 추천주식"
+                      description={`CIO 선정 종목은 Pro 구독 후 열람할 수 있습니다. 월 ${SUBSCRIPTION.priceKrw.toLocaleString("ko-KR")}원`}
+                    >
                     {recommendedStocks.map(({ stock, hasLivePrice }) => (
                       <StockRow
                         key={stock.symbol}
@@ -355,6 +365,7 @@ export default function SearchPage() {
                         onToggle={() => toggle(stock.symbol)}
                       />
                     ))}
+                    </SubscribeBlurOverlay>
                   </div>
                 </div>
 

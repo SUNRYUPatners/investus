@@ -15,6 +15,9 @@ import type { Report } from "@/lib/reports";
 import { isMarketOpen as checkMarketOpen } from "@/lib/marketHours";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { AnalystTargets } from "@/components/AnalystTargets";
+import { useAuth } from "@/hooks/useAuth";
+import { SUBSCRIPTION, isFreeReport, formatSubPrice } from "@/lib/subscription";
+import { SubscribeGate } from "@/components/SubscribeGate";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -201,6 +204,9 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
   const [query, setQuery]         = useState("");
   const [searching, setSearching] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const { user } = useAuth();
+  const isPro = user?.isPro === true;
+  const gateOn = SUBSCRIPTION.enabled && !isPro;
 
   const allReports: Report[] = SEED_REPORTS
     .filter(
@@ -224,6 +230,11 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
   const latestDate   = getDateKey(allReports[0]);
   const latestGroup  = filtered.filter((r) => !q && getDateKey(r) === latestDate);
   const olderReports = filtered.filter((r) => !q && getDateKey(r) !== latestDate);
+
+  // 오늘자만 무료 — 최신 그룹 중에서도 오늘이 아니면 잠금
+  const freeLatest = gateOn ? latestGroup.filter((r) => isFreeReport(r)) : latestGroup;
+  const lockedLatest = gateOn ? latestGroup.filter((r) => !isFreeReport(r)) : [];
+  const olderLocked = gateOn;
 
   return (
     <div className={className}>
@@ -285,8 +296,19 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
               &ldquo;{query}&rdquo; — {filtered.length}건
             </p>
             <div className="flex flex-col gap-3">
-              {filtered.map((r) => <ReportCard key={r.id} r={r} />)}
+              {(gateOn ? filtered.filter((r) => isFreeReport(r)) : filtered).map((r) => (
+                <ReportCard key={r.id} r={r} />
+              ))}
             </div>
+            {gateOn && filtered.some((r) => !isFreeReport(r)) && (
+              <div className="mt-3">
+                <SubscribeGate
+                  compact
+                  title={`이전 리포트 ${filtered.filter((r) => !isFreeReport(r)).length}건 잠김`}
+                  description="오늘자만 무료 · 과거 리포트는 Pro 구독 후 열람"
+                />
+              </div>
+            )}
           </>
         ) : (
           <p className="text-sm text-center py-6" style={{ color: "var(--muted)" }}>
@@ -297,32 +319,54 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
         /* 기본 뷰 (최신 + 이전) */
         <>
           <div className="flex flex-col gap-3">
-            {latestGroup.map((r) => <ReportCard key={r.id} r={r} />)}
+            {freeLatest.map((r) => <ReportCard key={r.id} r={r} />)}
           </div>
+
+          {lockedLatest.length > 0 && (
+            <div className="mt-3">
+              <SubscribeGate
+                compact
+                title={`리포트 ${lockedLatest.length}건 · Pro 전용`}
+                description="오늘자가 아닌 리포트는 구독 후 열람할 수 있습니다"
+              />
+            </div>
+          )}
 
           {olderReports.length > 0 && (
             <>
-              <button
-                onClick={() => setShowOlder((v) => !v)}
-                className="w-full flex items-center justify-center gap-1.5 text-xs py-2.5 mt-3 rounded-xl border active:opacity-60 transition-opacity"
-                style={{
-                  color: "var(--muted)",
-                  borderColor: "var(--border)",
-                  background: "var(--card)",
-                  cursor: "pointer",
-                }}
-              >
-                {showOlder ? "접기" : `이전 리포트 ${olderReports.length}개 더 보기`}
-                <ChevronDown
-                  className="w-3.5 h-3.5 transition-transform"
-                  style={{ transform: showOlder ? "rotate(180deg)" : "none" }}
-                />
-              </button>
-
-              {showOlder && (
-                <div className="flex flex-col gap-3 mt-3">
-                  {olderReports.map((r) => <ReportCard key={r.id} r={r} />)}
+              {olderLocked ? (
+                <div className="mt-3">
+                  <SubscribeGate
+                    compact
+                    title={`이전 리포트 ${olderReports.length}건`}
+                    description={`오늘자 리포트는 무료 · 과거 열람은 월 ${formatSubPrice()}`}
+                  />
                 </div>
+              ) : (
+                <>
+                  <button
+                    onClick={() => setShowOlder((v) => !v)}
+                    className="w-full flex items-center justify-center gap-1.5 text-xs py-2.5 mt-3 rounded-xl border active:opacity-60 transition-opacity"
+                    style={{
+                      color: "var(--muted)",
+                      borderColor: "var(--border)",
+                      background: "var(--card)",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {showOlder ? "접기" : `이전 리포트 ${olderReports.length}개 더 보기`}
+                    <ChevronDown
+                      className="w-3.5 h-3.5 transition-transform"
+                      style={{ transform: showOlder ? "rotate(180deg)" : "none" }}
+                    />
+                  </button>
+
+                  {showOlder && (
+                    <div className="flex flex-col gap-3 mt-3">
+                      {olderReports.map((r) => <ReportCard key={r.id} r={r} />)}
+                    </div>
+                  )}
+                </>
               )}
             </>
           )}
