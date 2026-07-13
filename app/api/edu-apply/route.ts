@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "필수 항목 누락" }, { status: 400 });
   }
 
-  if (name.trim().length > 50 || phone.trim().length > 20 || level.trim().length > 100) {
+  if (name.trim().length > 50 || phone.trim().length > 100 || level.trim().length > 250) {
     return NextResponse.json({ error: "입력값이 너무 깁니다" }, { status: 400 });
   }
   if ((amount?.trim().length ?? 0) > 100 || (message?.trim().length ?? 0) > 500) {
