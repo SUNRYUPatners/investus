@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#blueGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#1e3a5f"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">NVDA</text>
+  <rect x="152" y="86" width="200" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="252" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">HF 반도체 매수</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.14</text>
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">헤지펀드 — 미 반도체 매수 3.5년 최고</text>
+  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="80" fill="#60a5fa" text-anchor="middle">3.5yr</text>
+  <text x="540" y="352" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#93c5fd" text-anchor="middle">Semis now 10% of HF exposure</text>
+  <text x="540" y="396" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">전주 연속 최대 매도 뒤 반전 · YoY 2배</text>
+  <rect x="80" y="426" width="920" height="100" rx="16" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="464" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">포지셔닝</text>
+  <text x="540" y="492" font-family="Arial, sans-serif" font-size="15" fill="#bfdbfe" text-anchor="middle">Highest US semis purchases in 3.5 years</text>
+  <text x="540" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Follows two largest weekly sales since Jun 2024</text>
+  <rect x="80" y="542" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="300" y="580" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">비중</text>
+  <text x="300" y="608" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">10% of HF</text>
+  <text x="300" y="630" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">exposure</text>
+  <text x="300" y="646" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">2x YoY</text>
+  <rect x="560" y="542" width="440" height="110" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="780" y="580" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">vs 피크</text>
+  <text x="780" y="608" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">May peak 14%</text>
+  <text x="780" y="630" font-family="Arial, sans-serif" font-size="14" fill="#bfdbfe" text-anchor="middle">현재 10%</text>
+  <text x="780" y="646" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">below peak</text>
+  <rect x="80" y="668" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="704" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa" text-anchor="middle">핵심</text>
+  <text x="540" y="734" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#93c5fd" text-anchor="middle">3.5yr high buys · 10% exposure (vs 14% peak)</text>
+  <rect x="80" y="764" width="920" height="90" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="802" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="830" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">매도 뒤 강한 재매수 · 반도체 비중 재확대 (NVDA·TSM·AVGO)</text>
+  <rect x="80" y="870" width="920" height="70" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Kobeissi Letter · GS Prime Book (2026.07.14)</text>
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.14 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

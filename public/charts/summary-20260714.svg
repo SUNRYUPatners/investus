@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1100" width="1080" height="1100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1100" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.14</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="48" fill="#ffffff" text-anchor="middle">오늘의 한장 요약</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">TSLA · SPCX · TSM · META · NVDA</text>
+
+  <rect x="64" y="262" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="262" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="298" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">1. BofA TSLA BUY 재확인 · PT $460 — Robotaxi 밸류 ~52%</text>
+  <text x="96" y="324" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">자율사고 10.1만 마일당 1건(인간 대비 ~90%↓) · Optimus RaaS $30B · Capex $25B AI/로봇</text>
+
+  <rect x="64" y="358" width="952" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="358" width="6" height="80" rx="3" fill="#00e5a0"/>
+  <text x="96" y="394" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#00e5a0">2. Jefferies TSLA PT $400 (from $375) — Q2 딜리버리 비트</text>
+  <text x="96" y="420" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">FY2026 EBIT 추정 +4% → $6.2B · 롱휠베이스 Model Y</text>
+
+  <rect x="64" y="454" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="454" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="490" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">3. FAA Starship Flight 12 조사 종료 (7/13) — Flight 13 진행 가능</text>
+  <text x="96" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">부상·재산피해 없음 · 시정조치 4건 · 추진계통 열·엔진 알람 설정</text>
+
+  <rect x="64" y="550" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="550" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="586" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">4. SPCX $138.99 (−$6.31 / −4.34%) — 사상 최저 종가</text>
+  <text x="96" y="612" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">ATH 대비 시총 손실 약 $1.2 Trillion · Jul 13 16:11 ET</text>
+
+  <rect x="64" y="646" width="952" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="646" width="6" height="80" rx="3" fill="#c084fc"/>
+  <text x="96" y="682" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc">5. 정치인 4명 IPO 이후 SPCX 매수 · 매도 0건</text>
+  <text x="96" y="708" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">John James $15,001–$50,000 (06/12) · FCC 감독 상임위</text>
+
+  <rect x="64" y="742" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="742" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="778" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">6. TSMC Q2 기록 — 매출 ~$39.6B (+36% YoY), 컨센서스 상회</text>
+  <text x="96" y="804" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">6월 ~$13.8B · H1 2026 ~$75.0B · Est ~$39.4B</text>
+
+  <rect x="64" y="838" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="838" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="874" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">7. META Louisiana DC 최대 $50B · 최대 5GW 컴퓨트</text>
+  <text x="96" y="900" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Richland Parish · 지역 인프라 &gt;$1B</text>
+
+  <rect x="64" y="934" width="952" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="934" width="6" height="80" rx="3" fill="#60a5fa"/>
+  <text x="96" y="970" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#60a5fa">8. 헤지펀드 미 반도체 매수 3.5년 최고 — 비중 10%</text>
+  <text x="96" y="996" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">전주 연속 최대 매도 뒤 반전 · YoY 2배 · 5월 피크 14% 하회</text>
+
+  <rect x="0" y="1040" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1076" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.14 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

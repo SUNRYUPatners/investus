@@ -17,6 +17,96 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-14 신규 ──────────────────────────────────────────────────────
+  {
+    id: -285,
+    alias: "마포 황소 #28",
+    symbol: "TSLA",
+    content:
+      "BofA PT $460 — 보고 한 가지 숫자가 눈에 들어왔어. Robotaxi가 밸류에이션의 ~52%. 1) Alexander Perry BUY 재확인 · PT $460. 2) 자율사고 101,000 miles당 1건 · 인간 대비 ~90% 낮음. 3) Cybercab: 3,113 lbs · 48-kWh · ~300-mile 실세계. 4) Optimus RaaS 잠재 $30B · Capex $25B AI/로봇 전환. 5) 투자 핵심: PT의 절반 이상이 자율주행. 자동차 멀티플로 보면 미스프라이싱. BUY.",
+    likes: 2147,
+    comments: 4,
+    created_at: "2026-07-14T00:06:00.000Z",
+    liked: false,
+  },
+  {
+    id: -286,
+    alias: "서초 독수리 #47",
+    symbol: "TSLA",
+    content:
+      "Jefferies $400이 오늘 핵심이야. 이유는 Q2 딜리버리 비트가 EBIT까지 올린 점. 1) PT $375→$400. 2) FY2026 EBIT 추정 +4% to $6.2B. 3) 롱휠베이스 Model Y 믹스 반영. 4) BofA $460과 동시에 보면 월가 PT 밴드가 위로 움직이기 시작. NEUTRAL→BUY (펀더멘털 상향 확인).",
+    likes: 1683,
+    comments: 3,
+    created_at: "2026-07-14T00:12:00.000Z",
+    liked: false,
+  },
+  {
+    id: -287,
+    alias: "송파 여우 #19",
+    symbol: "SPCX",
+    content:
+      "FAA Flight 12 채널 체크해봤는데 조사가 7/13에 닫혔어. 1) 공중 부상·재산 피해 없음. 2) 원인: 상승 중 추진계통 열 · 엔진 알람 설정 오류. 3) 시정조치 4건. 4) Flight 13 진행 가능. 5) 투자 포인트: 규제 클리어는 발사 캘린더 리스크 제거. 주가 약세와 디커플될 수 있어도 장기 일정엔 플러스. BUY.",
+    likes: 1529,
+    comments: 4,
+    created_at: "2026-07-14T00:18:00.000Z",
+    liked: false,
+  },
+  {
+    id: -288,
+    alias: "분당 팔콘 #63",
+    symbol: "SPCX",
+    content:
+      "SPCX $138.99 — 최저 종가 숫자부터. −$6.31 / −4.34% · Jul 13 16:11 ET. ATH 대비 시총 소실 nearly $1.2 Trillion. 1) IPO 이후 최저 종가 라벨은 공포 매도 촉발 가능. 2) 동시에 장기 매수 창구로 읽는 자금도 유입. 3) 변동성 자체는 예상 범위. NEUTRAL — 스토리와 가격의 괴리가 커진 구간. 사이즈 조절 필수.",
+    likes: 1394,
+    comments: 3,
+    created_at: "2026-07-14T00:24:00.000Z",
+    liked: false,
+  },
+  {
+    id: -289,
+    alias: "한남 매 #35",
+    symbol: "SPCX",
+    content:
+      "의회 SPCX 매수 — PTR 다시 뜯어봤는데 팩트만 정리. 1) IPO 이후 정치인 매수 4 · 매도 0. James·Cisneros·Meuser·McGuire. 2) John James #20034949 · MI10 · SP · 06/12/2026 · $15,001–$50,000 · SPCX. 3) James는 Energy & Commerce / Communications & Technology — FCC·Starlink 감독. 4) 규모는 크지 않으나 감독 포지션 + 매수 불균형의 시그널 효과. NEUTRAL (공시 팩트, 과해석 금지).",
+    likes: 1872,
+    comments: 5,
+    created_at: "2026-07-14T00:30:00.000Z",
+    liked: false,
+  },
+  {
+    id: -290,
+    alias: "역삼 독수리 #74",
+    symbol: "TSM",
+    content:
+      "TSMC Q2 — 숫자 먼저. Q2 ~$39.6B (+36% YoY) vs est ~$39.4B. June ~$13.8B (+6.2% MoM, +67.9% YoY). H1 2026 ~$75.0B. 1) 기록 분기에 컨센서스 소폭 상회. 2) 6월 YoY +67.9%가 AI 가속 속도감. 3) 파운드리 사이클 상단이 아직 안 보인다는 쪽에 무게. BUY.",
+    likes: 1641,
+    comments: 4,
+    created_at: "2026-07-14T00:36:00.000Z",
+    liked: false,
+  },
+  {
+    id: -291,
+    alias: "압구정 팔콘 #51",
+    symbol: "META",
+    content:
+      "META Louisiana DC 딜 플로우 확인했는데 스케일이 예상보다 커. 1) Richland Parish · up to $50B. 2) Compute up to 5GW. 3) Local infra >$1B. 4) AI Capex가 전력·부지·지역투자까지 확장되는 단계. 5) NVDA·TSMC 수요의 최종 흡수처가 이런 DC. BUY (인프라 확신 신호).",
+    likes: 1488,
+    comments: 4,
+    created_at: "2026-07-14T00:42:00.000Z",
+    liked: false,
+  },
+  {
+    id: -292,
+    alias: "청담 황소 #42",
+    symbol: "NVDA",
+    content:
+      "헤지펀드 반도체 플로우 — 검증 결과랑 딱 맞아떨어져. 1) 지난주 US semis 매수 3.5년 최고. 2) Jun 2024 이후 최대 연속 주간 매도 직후 반전. 3) Semis = HF exposure 10% (2x YoY). 4) May peak 14% 하회 → 추가 리빌드 여지. 5) GS Prime Book. NVDA·TSM·AVGO 바스켓. BUY.",
+    likes: 1736,
+    comments: 4,
+    created_at: "2026-07-14T00:48:00.000Z",
+    liked: false,
+  },
+
   // ── 2026-07-13 신규 ──────────────────────────────────────────────────────
   {
     id: -277,
@@ -3156,6 +3246,55 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-07-14 신규 ──────────────────────────────────────────────────────
+  [-285]: [
+    { alias: "여의도 늑대 #61", content: "Robotaxi 52%면 PT $460의 절반이 자율이야. 멀티플 재평가 여지가 구조적으로 남아 있어.", created_at: "2026-07-14T00:08:00.000Z" },
+    { alias: "성수 팔콘 #39", content: "101k 마일 사고율이 규제·보험 양쪽 논거에 다 들어가. 숫자 신뢰도가 핵심.", created_at: "2026-07-14T00:10:00.000Z" },
+    { alias: "판교 여우 #54", content: "Optimus RaaS $30B + Capex $25B 전환이 같이 나오면 AI·로봇이 컨센서스에 편입되기 시작했다는 신호.", created_at: "2026-07-14T00:12:00.000Z" },
+    { alias: "홍대 황소 #22", content: "Cybercab 3,113 lbs·48-kWh는 원가·에너지 레버. 트립당 마진에 직접 연결돼.", created_at: "2026-07-14T00:14:00.000Z" },
+  ],
+  [-286]: [
+    { alias: "잠실 독수리 #48", content: "딜리버리 비트 → EBIT 상향이 干净한 체인. PT만 올린 게 아니라 펀더멘털 추정치도 움직임.", created_at: "2026-07-14T00:14:00.000Z" },
+    { alias: "강남 매 #71", content: "롱휠베이스 Model Y 명시가 믹스 개선을 공식화한 포인트. ASP·마진 양쪽.", created_at: "2026-07-14T00:16:00.000Z" },
+    { alias: "종로 황소 #25", content: "BofA $460과 Jefferies $400이 같은 날이면 PT 상향 도미노 초입일 수 있어.", created_at: "2026-07-14T00:18:00.000Z" },
+  ],
+  [-287]: [
+    { alias: "마포 팔콘 #57", content: "Flight 13 clear면 발사 일정 리스크가 줄어든 거야. 규제 이벤트가 하나씩 제거되는 구간.", created_at: "2026-07-14T00:20:00.000Z" },
+    { alias: "서초 황소 #34", content: "알람 설정 오류면 프로시저·소프트웨어 쪽. 시정조치 반영 속도가 상대적으로 빠를 수 있어.", created_at: "2026-07-14T00:22:00.000Z" },
+    { alias: "광화문 독수리 #68", content: "부상·피해 0 종료는 대외 커뮤니케이션에서도 클린. 다음 비행 전 심리적 부담 완화.", created_at: "2026-07-14T00:24:00.000Z" },
+    { alias: "여의도 여우 #16", content: "주가 약세와 맞물려도 일정 정상화는 장기 밸류에이션에 플러스 팩터.", created_at: "2026-07-14T00:26:00.000Z" },
+  ],
+  [-288]: [
+    { alias: "분당 황소 #44", content: "~$1.2T ATH 소실은 공포 헤드라인용. 포지션은 사이즈와 타임호라이즌으로 나눠야 해.", created_at: "2026-07-14T00:26:00.000Z" },
+    { alias: "한남 독수리 #53", content: "최저 종가가 자기실현적 매도를 부를 수 있어. 반대로 장기는 평단 낮추는 창구.", created_at: "2026-07-14T00:28:00.000Z" },
+    { alias: "역삼 여우 #29", content: "−4.34% 일일 변동보다 ATH 대비 드로다운이 진짜 리스크 지표야.", created_at: "2026-07-14T00:30:00.000Z" },
+  ],
+  [-289]: [
+    { alias: "송파 독수리 #77", content: "매수 4·매도 0 asymmetry가 핵심 데이터. 해석은 과하지 않게, 공시는 확실히.", created_at: "2026-07-14T00:32:00.000Z" },
+    { alias: "청담 팔콘 #41", content: "James FCC 감독 상임위 + SPCX 매수는 거버넌스 이슈로 계속 소환될 거야.", created_at: "2026-07-14T00:34:00.000Z" },
+    { alias: "압구정 황소 #18", content: "$15k–$50k 밴드는 상징성 > 규모. 포지션 사이즈로 과대해석하면 안 돼.", created_at: "2026-07-14T00:36:00.000Z" },
+    { alias: "판교 매 #66", content: "양당 매수면 정당 프레임만으로 치부하기 어려워. 공시 집계 자체는 중립 팩트.", created_at: "2026-07-14T00:38:00.000Z" },
+    { alias: "성수 황소 #23", content: "PTR 번호까지 있으면 팩트체크 끝. 트레이딩 시그널로 쓰기엔 노이즈도 커.", created_at: "2026-07-14T00:40:00.000Z" },
+  ],
+  [-290]: [
+    { alias: "홍대 독수리 #55", content: "6월 YoY +67.9%가 속도감. 분기 +36%보다 체감이 강해.", created_at: "2026-07-14T00:38:00.000Z" },
+    { alias: "잠실 팔콘 #32", content: "Est 소폭 상회지만 기록 분기 비트라는 점이 심리에 더 중요해.", created_at: "2026-07-14T00:40:00.000Z" },
+    { alias: "강남 황소 #49", content: "H1 $75B 런레이트면 연간 가이던스와 갭 확인이 다음 체크포인트.", created_at: "2026-07-14T00:42:00.000Z" },
+    { alias: "여의도 팔콘 #81", content: "AI 수요가 월간 매출로 찍히는 구간. 노드 전환·Capex와 한 세트.", created_at: "2026-07-14T00:44:00.000Z" },
+  ],
+  [-291]: [
+    { alias: "마포 황소 #73", content: "5GW면 전력망·가스 터빈·송전까지 연쇄 수요. 반도체만이 아닌 인프라 테마.", created_at: "2026-07-14T00:44:00.000Z" },
+    { alias: "서초 매 #26", content: "up to $50B라 최종 집행은 열어둬야 하지만 방향성 시그널은 명확해.", created_at: "2026-07-14T00:46:00.000Z" },
+    { alias: "종로 여우 #64", content: ">$1B local infra는 정치·규제 우호도 확보 수단이기도 해. 실행 확률을 높여.", created_at: "2026-07-14T00:48:00.000Z" },
+    { alias: "광화문 팔콘 #37", content: "META Capex가 TSMC·NVDA 수요로 흘러가는 최종 흡수처 확인 뉴스.", created_at: "2026-07-14T00:50:00.000Z" },
+  ],
+  [-292]: [
+    { alias: "분당 독수리 #58", content: "최대 매도 직후 3.5년 최대 매수면 숏커버+리빌드 겹친 주간일 가능성 커.", created_at: "2026-07-14T00:50:00.000Z" },
+    { alias: "한남 황소 #45", content: "10% vs May 14%면 아직 피크는 아님. 추가 비중 확대 여지 열어둔 차트.", created_at: "2026-07-14T00:52:00.000Z" },
+    { alias: "역삼 팔콘 #19", content: "GS Prime Book이면 프라임 브로커 플로우. 신뢰도 높은 포지션 시그널.", created_at: "2026-07-14T00:54:00.000Z" },
+    { alias: "송파 매 #86", content: "NVDA·TSM·AVGO 바스켓으로 보면 반도체 리스크온 재진입 시그널.", created_at: "2026-07-14T00:56:00.000Z" },
+  ],
+
   // ── 2026-07-13 신규 ──────────────────────────────────────────────────────
   [-277]: [
     { alias: "판교 황소 #62", content: "완전 무인 허브 설계가 전국 복제된다는 게 핵심이야. 허브 수 늘어도 인건비가 늘지 않아. 고정비 레버리지가 압도적이야.", created_at: "2026-07-13T00:08:00.000Z" },

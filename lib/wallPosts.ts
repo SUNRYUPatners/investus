@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T14JL = 1783983600000; // 2026-07-14 08:00 KST
 const T13JL = 1783897200000; // 2026-07-13 08:00 KST
 const T10JL = 1783638000000; // 2026-07-10 08:00 KST
 const T9JL  = 1783551600000; // 2026-07-09 08:00 KST
@@ -52,7 +53,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T13JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T14JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -71,6 +72,51 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-14 — BofA PT $460·Jefferies $400·FAA Flight12·SPCX $138.99·
+  //              의회 SPCX 매수·TSMC Q2 $39.6B·META $50B DC·HF 반도체 3.5yr
+  // ════════════════════════════════════════════════════════════════════════
+
+  // TSLA BofA PT $460 ───────────────────────────────────────────────────
+  { id: 501, symbol: "TSLA", nickname: "익명_3847", holdingLabel: "320주 보유",
+    content: "BofA가 BUY 재확인하면서 PT $460 냈는데 Robotaxi가 밸류의 52%래. 그게 핵심이야. 자율사고가 10.1만 마일당 1건이고 인간 대비 90% 낮다는 숫자도 같이 나왔고. Optimus RaaS $30B에 Capex $25B를 AI·로봇으로 돌린다는 거까지 — 이게 자동차 회사가 아니라 AI·자율 플랫폼이라는 프레임이 월가에서 더 굳어지는 느낌.",
+    createdAt: T14JL + 6*60_000, likes: 2914, comments: 4 },
+
+  // TSLA Jefferies PT $400 ─────────────────────────────────────────────
+  { id: 502, symbol: "TSLA", nickname: "익명_7621", holdingLabel: "145주 보유",
+    content: "Jefferies가 $375에서 $400으로 올렸어. Q2 딜리버리 비트 반영이고 FY2026 EBIT도 +4%해서 $6.2B로 잡았대. 롱휠베이스 Model Y가 믹스에 들어갔다는 게 포인트. BofA $460이랑 같이 보면 PT 상향 흐름이 이어지는 거잖아. 단기 모멘텀 쪽으로 봐도 괜찮다.",
+    createdAt: T14JL + 14*60_000, likes: 1876, comments: 3 },
+
+  // SPCX FAA Flight 12 ─────────────────────────────────────────────────
+  { id: 503, symbol: "SPCX", nickname: "익명_5193", holdingLabel: "SPCX 장기",
+    content: "FAA가 Flight 12 조사 어제(7/13) 종료했대. 부상·재산피해 없고, 원인으로 추진계통 열 문제랑 엔진 알람 설정 오류. 시정조치 4건이고 Flight 13 가도 된대. 주가랑 별개로 발사 스케줄 리스크가 하나 풀린 거야. 규제 클리어는 이런 종목에선 진짜 이벤트야.",
+    createdAt: T14JL + 22*60_000, likes: 2145, comments: 4 },
+
+  // SPCX ATH drawdown ──────────────────────────────────────────────────
+  { id: 504, symbol: "SPCX", nickname: "익명_9082", holdingLabel: "관심종목",
+    content: "SPCX $138.99로 마감했는데 −4.34%고 최저 종가래. ATH 대비 시총이 거의 $1.2T 날아갔다는 차트 봤어? IPO 이후 변동성이 장난 아닌데, 이런 드로우다운에서 누가 줍는지가 다음 사이클을 결정하겠지. 숫자만 보면 공포인데 장기 스토리는 별개로 봐야 함.",
+    createdAt: T14JL + 30*60_000, likes: 1632, comments: 3 },
+
+  // SPCX Congress buys ─────────────────────────────────────────────────
+  { id: 505, symbol: "SPCX", nickname: "익명_2746", holdingLabel: "80주 보유",
+    content: "정치인 4명이 IPO 이후 SPCX만 사고 판 사람은 0명이래. John James가 배우자 명의로 $15,001–$50,000 매수했고 Energy & Commerce에서 FCC 쪽도 챙기는 자리야. Starlink 규제 감독하는 사람이 산다는 게… 해석은 각자 다르겠지만 공시 숫자 자체는 확실함.",
+    createdAt: T14JL + 38*60_000, likes: 2487, comments: 5 },
+
+  // TSMC Q2 ────────────────────────────────────────────────────────────
+  { id: 506, symbol: "TSM", nickname: "익명_6418", holdingLabel: "55주 보유",
+    content: "TSMC Q2 ~$39.6B 나왔네. +36% YoY고 추정 $39.4B도 살짝 위. 6월만 ~$13.8B에 MoM +6.2%, YoY +67.9%. H1 ~$75.0B. AI 수요가 실적으로 그대로 찍히는 구간이야. 파운드리 사이클 상단이 아직 안 보인다는 쪽에 무게 두는 중.",
+    createdAt: T14JL + 46*60_000, likes: 1754, comments: 3 },
+
+  // META Louisiana ─────────────────────────────────────────────────────
+  { id: 507, symbol: "META", nickname: "익명_8359", holdingLabel: "95주 보유",
+    content: "META가 Louisiana Richland Parish에 DC를 최대 $50B까지 깐다고? 컴퓨트 최대 5GW에 지역 인프라만 >$1B. Capex 전쟁 진짜 스케일이 미쳤어. AI 인프라 경쟁이 반도체만이 아니라 전력·부지·지역 투자까지 가는 단계라는 거.",
+    createdAt: T14JL + 54*60_000, likes: 1923, comments: 4 },
+
+  // HF semis ───────────────────────────────────────────────────────────
+  { id: 508, symbol: "NVDA", nickname: "익명_4291", holdingLabel: "관심종목",
+    content: "헤지펀드가 미 반도체 매수를 3.5년 최고로 찍었대. 직전 2주가 Jun 2024 이후 최대 연속 매도였는데 그 다음 주 바로 되돌린 거. 비중이 지금은 10% — YoY 2배고 5월 피크 14%보다는 아래. GS Prime Book 차트 보면 숏커버+재매수 타이밍 잡는 느낌이 강해.",
+    createdAt: T14JL + 62*60_000, likes: 2218, comments: 4 },
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-13 — TSLA 오스틴 허브 청소로봇·AI5 칩 삼성 테이프아웃·
@@ -2167,6 +2213,54 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-14 신규 ──────────────────────────────────────────────────────
+  501: [
+    { id: 1, nickname: "익명_6182", holdingLabel: "200주 보유", content: "Robotaxi 52%면 사실상 자율주행이 PT의 절반 이상이라는 거잖아요. 자동차 멀티플로 보면 안 되는 구간이에요.", createdAt: T14JL - m(8), likes: 61 },
+    { id: 2, nickname: "익명_3057", holdingLabel: "관심종목", content: "101,000 마일당 1건이 인간 대비 90% 낮다는 숫자 신뢰되면 FSD 규제 논쟁에 유리해질 수밖에 없어요.", createdAt: T14JL - m(4), likes: 39 },
+    { id: 3, nickname: "익명_8741", holdingLabel: "90주 보유", content: "Optimus RaaS $30B이랑 Capex $25B 전환이 같이 나오니까 AI·로봇 스토리가 컨센서스에 들어가기 시작한 느낌이에요.", createdAt: T14JL - m(1), likes: 28 },
+    { id: 4, nickname: "익명_4926", holdingLabel: "40주 보유", content: "Cybercab 3,113 lbs·48-kWh·300-mile — 가벼울수록 원가·에너지 효율에서 유리하니까 트립당 마진에 직접 연결돼요.", createdAt: T14JL + m(3), likes: 17 },
+  ],
+  502: [
+    { id: 1, nickname: "익명_7318", holdingLabel: "110주 보유", content: "$375→$400이면 의미 있는 스텝업이에요. 딜리버리 비트가 EBIT까지 올린 거면 펀더멘털 반영이 시작됐다는 거죠.", createdAt: T14JL - m(5), likes: 44 },
+    { id: 2, nickname: "익명_2864", holdingLabel: "관심종목", content: "롱휠베이스 Model Y가 EBIT 상향 요인으로 명시됐다는 게 믹스 개선을 월가가 인정했다는 뜻이에요.", createdAt: T14JL - m(2), likes: 27 },
+    { id: 3, nickname: "익명_9503", holdingLabel: "70주 보유", content: "BofA $460이랑 동시에 나오니까 PT 밴드가 위로 움직이는 그림이네요. 다음 기관들도 볼 만해요.", createdAt: T14JL + m(4), likes: 19 },
+  ],
+  503: [
+    { id: 1, nickname: "익명_4127", holdingLabel: "SPCX 보유", content: "조사 종료 + Flight 13 가능이면 발사 캘린더 리스크가 줄어든 거예요. 주가랑 디커플될 수 있어도 장기엔 중요해요.", createdAt: T14JL - m(6), likes: 52 },
+    { id: 2, nickname: "익명_6839", holdingLabel: "관심종목", content: "시정조치 4건이면 하드웨어·소프트웨어 수정이 명확히 잡혔다는 거니까 다음 비행 준비도가 올라간 거죠.", createdAt: T14JL - m(3), likes: 31 },
+    { id: 3, nickname: "익명_2075", holdingLabel: "SPCX 장기", content: "부상·피해 0으로 닫힌 건 규제 커뮤니케이션 측면에서도 클린한 종료예요.", createdAt: T14JL + m(2), likes: 18 },
+    { id: 4, nickname: "익명_8194", holdingLabel: "25주 보유", content: "알람 설정 오류면 소프트웨어·프로시저 쪽 수정이라 상대적으로 빨리 반영될 수 있어요.", createdAt: T14JL + m(5), likes: 14 },
+  ],
+  504: [
+    { id: 1, nickname: "익명_5461", holdingLabel: "관심종목", content: "$1.2T 소실이면 ATH에서 얼마나 내려온 건지 충격적인데, 변동성 큰 IPO 초반이라 그런가 싶기도 해요.", createdAt: T14JL - m(4), likes: 47 },
+    { id: 2, nickname: "익명_9283", holdingLabel: "SPCX 보유", content: "최저 종가라는 라벨 자체가 공포 매도를 더 키울 수 있어요. 반대로 장기 매수 창구로 보는 사람도 많을 듯.", createdAt: T14JL - m(1), likes: 29 },
+    { id: 3, nickname: "익명_3716", holdingLabel: "관심종목", content: "−4.34% 하루 하락도 크지만 ATH 대비 드로다운이 진짜 뉴스인 거 같아요.", createdAt: T14JL + m(3), likes: 16 },
+  ],
+  505: [
+    { id: 1, nickname: "익명_1842", holdingLabel: "관심종목", content: "매수 4·매도 0이라는 asymmetry가 눈에 띄네요. 공시만으로도 이야기가 되는 데이터예요.", createdAt: T14JL - m(7), likes: 58 },
+    { id: 2, nickname: "익명_7039", holdingLabel: "60주 보유", content: "James가 FCC 관련 상임위인데 Starlink 종목을 산다는 건 해석 여지가 많아서 논란은 계속될 거예요.", createdAt: T14JL - m(4), likes: 41 },
+    { id: 3, nickname: "익명_5628", holdingLabel: "SPCX 장기", content: "$15,001–$50,000 밴드라 규모는 크지 않지만 상징성이 더 큰 거래죠.", createdAt: T14JL - m(1), likes: 33 },
+    { id: 4, nickname: "익명_2915", holdingLabel: "관심종목", content: "민주·공화 양당에서 샀다는 점도 정당 이슈로만 치부하긴 어려워요.", createdAt: T14JL + m(4), likes: 22 },
+    { id: 5, nickname: "익명_8470", holdingLabel: "35주 보유", content: "PTR 번호까지 찍혀 있으니 팩트체크는 끝난 이야기고, 포지션 사이즈만 각자 판단하면 될 듯.", createdAt: T14JL + m(7), likes: 15 },
+  ],
+  506: [
+    { id: 1, nickname: "익명_4582", holdingLabel: "40주 보유", content: "6월 YoY +67.9%면 AI 가속이 월간으로도 보이는 구간이에요. 분기 +36%랑 방향 같아요.", createdAt: T14JL - m(5), likes: 36 },
+    { id: 2, nickname: "익명_9173", holdingLabel: "관심종목", content: "Est $39.4B 대비 $39.6B면 크게 치는 비트는 아니지만 기록 분기에 비트라는 게 중요하죠.", createdAt: T14JL - m(2), likes: 24 },
+    { id: 3, nickname: "익명_2640", holdingLabel: "75주 보유", content: "H1 $75B이면 연간 런레이트 가늠이 되네요. Capex·노드 전환 스토리랑 같이 봐야겠어요.", createdAt: T14JL + m(3), likes: 18 },
+  ],
+  507: [
+    { id: 1, nickname: "익명_6294", holdingLabel: "120주 보유", content: "$50B에 5GW면 데이터센터가 아니라 전력망 이슈까지 가는 스케일이에요. 지역 인프라 $1B+도 당연해 보여요.", createdAt: T14JL - m(6), likes: 49 },
+    { id: 2, nickname: "익명_3817", holdingLabel: "관심종목", content: "AI Capex가 빅테크 공통 테마인데 META가 Louisiana에서 이렇게 크게 가는 건 신호예요.", createdAt: T14JL - m(3), likes: 32 },
+    { id: 3, nickname: "익명_7502", holdingLabel: "50주 보유", content: "반도체 수요의 최종 수요처가 이런 DC라는 걸 다시 확인하는 뉴스죠. TSMC·NVDA랑 한 세트.", createdAt: T14JL + m(2), likes: 21 },
+    { id: 4, nickname: "익명_1038", holdingLabel: "관심종목", content: "up to라는 표현이라 최종 집행 규모는 지켜봐야 하지만 방향성만으로도 임팩트 큽니다.", createdAt: T14JL + m(5), likes: 13 },
+  ],
+  508: [
+    { id: 1, nickname: "익명_5821", holdingLabel: "NVDA 보유", content: "최대 매도 직후 3.5년 최대 매수면 숏커버+리빌드가 겹친 주간이었을 가능성이 커요.", createdAt: T14JL - m(5), likes: 55 },
+    { id: 2, nickname: "익명_2469", holdingLabel: "관심종목", content: "비중 10%가 YoY 2배라는 게 인상적이에요. 피크 14%까지는 아직 여유 있다는 해석도 가능하고요.", createdAt: T14JL - m(2), likes: 34 },
+    { id: 3, nickname: "익명_8935", holdingLabel: "TSM 관심", content: "GS Prime Book이 소스면 프라임 브로커 포지션 추세라 신뢰도가 높은 편이죠.", createdAt: T14JL + m(3), likes: 20 },
+    { id: 4, nickname: "익명_4176", holdingLabel: "AVGO 보유", content: "NVDA·TSM·AVGO 바스켓으로 보면 HF 플로우가 다시 반도체로 돌아왔다는 신호로 읽혀요.", createdAt: T14JL + m(6), likes: 16 },
+  ],
+
   // ── 2026-07-13 신규 ──────────────────────────────────────────────────────
   493: [
     { id: 1, nickname: "익명_5291", holdingLabel: "300주 보유", content: "완전 무인 허브 + 완전 자율 차량 조합이면 인건비 제로 운영이잖아요. 이게 전국으로 복제되면 로보택시 마진이 상상 이상일 것 같아요.", createdAt: T13JL - m(8), likes: 52 },

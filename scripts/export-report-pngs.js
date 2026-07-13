@@ -383,6 +383,17 @@ const PAIRS = [
   { ko: 'spcx-starship-13-july16-20260713.svg',           en: 'spcx-starship-13-july16-20260713-en.svg',           label: 'SPCX_Starship13',      date: '20260713' },
   { ko: 'mu-q2-9b-july23-20260713.svg',                   en: 'mu-q2-9b-july23-20260713-en.svg',                   label: 'MU_Q2_9B',             date: '20260713' },
   { ko: 'summary-20260713.svg',                           en: 'summary-20260713-en.svg',                           label: '7월13일_요약',          date: '20260713' },
+
+  // ── 2026-07-14 ─────────────────────────────────────────────────────────
+  { ko: 'tsla-bofa-460-buy-20260714.svg',                 en: 'tsla-bofa-460-buy-20260714-en.svg',                 label: 'TSLA_BofA_460',         date: '20260714' },
+  { ko: 'tsla-jefferies-400-pt-20260714.svg',             en: 'tsla-jefferies-400-pt-20260714-en.svg',             label: 'TSLA_Jefferies_400',    date: '20260714' },
+  { ko: 'spcx-faa-flight12-closed-20260714.svg',          en: 'spcx-faa-flight12-closed-20260714-en.svg',          label: 'SPCX_FAA_F12',          date: '20260714' },
+  { ko: 'spcx-ath-12t-drawdown-20260714.svg',             en: 'spcx-ath-12t-drawdown-20260714-en.svg',             label: 'SPCX_ATH_1_2T',         date: '20260714' },
+  { ko: 'spcx-congress-buys-20260714.svg',                en: 'spcx-congress-buys-20260714-en.svg',                label: 'SPCX_Congress_Buys',    date: '20260714' },
+  { ko: 'tsmc-q2-396b-20260714.svg',                      en: 'tsmc-q2-396b-20260714-en.svg',                      label: 'TSMC_Q2_396B',          date: '20260714' },
+  { ko: 'meta-louisiana-50b-20260714.svg',                en: 'meta-louisiana-50b-20260714-en.svg',                label: 'META_LA_50B',           date: '20260714' },
+  { ko: 'semis-hf-buy-35yr-20260714.svg',                 en: 'semis-hf-buy-35yr-20260714-en.svg',                 label: 'Semis_HF_3_5yr',        date: '20260714' },
+  { ko: 'summary-20260714.svg',                           en: 'summary-20260714-en.svg',                           label: '7월14일_요약',          date: '20260714' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생

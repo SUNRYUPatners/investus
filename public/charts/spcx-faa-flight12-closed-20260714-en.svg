@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#purpleGrad)" rx="2"/>
+  <rect x="60" y="86" width="80" height="34" rx="8" fill="#3b0764"/>
+  <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">SPCX</text>
+  <rect x="152" y="86" width="200" height="34" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="252" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#c084fc" text-anchor="middle">FAA Flight 12 Closed</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.14</text>
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">FAA Closes Starship Flight 12 Probe (Jul 13)</text>
+  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="64" fill="#c084fc" text-anchor="middle">Flight 13</text>
+  <text x="540" y="352" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#e9d5ff" text-anchor="middle">Can proceed · 4 corrective actions</text>
+  <text x="540" y="396" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">No public injury or property damage</text>
+  <rect x="80" y="426" width="920" height="100" rx="16" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="540" y="464" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Root Causes</text>
+  <text x="540" y="492" font-family="Arial, sans-serif" font-size="15" fill="#e9d5ff" text-anchor="middle">Heat on propulsion during ascent</text>
+  <text x="540" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Erroneous engine alarm settings</text>
+  <rect x="80" y="542" width="440" height="110" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="300" y="580" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Investigation</text>
+  <text x="300" y="608" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Closed: July 13, 2026</text>
+  <text x="300" y="630" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Injury/damage: none</text>
+  <text x="300" y="646" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">FAA notice</text>
+  <rect x="560" y="542" width="440" height="110" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="780" y="580" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#c084fc" text-anchor="middle">Corrective Actions</text>
+  <text x="780" y="608" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Four actions required</text>
+  <text x="780" y="630" font-family="Arial, sans-serif" font-size="14" fill="#e9d5ff" text-anchor="middle">Then clear to fly</text>
+  <text x="780" y="646" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Flight 13</text>
+  <rect x="80" y="668" width="920" height="80" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="704" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#c084fc" text-anchor="middle">Next Step</text>
+  <text x="540" y="734" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#e9d5ff" text-anchor="middle">Flight 13 can proceed</text>
+  <rect x="80" y="764" width="920" height="90" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="802" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#c084fc" text-anchor="middle">Investment Implications</text>
+  <text x="540" y="830" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Regulatory clear → next flight timeline resumes</text>
+  <rect x="80" y="870" width="920" height="70" rx="14" fill="#1a0e2e" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: TESLARATI / FAA notice (2026.07.14)</text>
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.14 · investus.kr SRP Chief Investment Officer</text>
+</svg>
