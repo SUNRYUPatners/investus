@@ -13,6 +13,22 @@ export const SUBSCRIPTION = {
   },
 } as const;
 
+/** 관리자 — 구독 없이 Pro(추천주식·과거 리포트) 전부 열람 */
+export const ADMIN_EMAILS = ["sunryupatners@gmail.com"] as const;
+
+export function isAdminEmail(email?: string | null): boolean {
+  if (!email) return false;
+  return (ADMIN_EMAILS as readonly string[]).includes(email.trim().toLowerCase());
+}
+
+/** Pro 메타데이터 또는 관리자 이메일 */
+export function hasProAccess(opts: {
+  email?: string | null;
+  investusPro?: boolean;
+}): boolean {
+  return opts.investusPro === true || isAdminEmail(opts.email);
+}
+
 export function formatSubPrice(n = SUBSCRIPTION.priceKrw): string {
   return `₩${n.toLocaleString("ko-KR")}`;
 }

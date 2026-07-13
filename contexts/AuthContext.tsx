@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect } from "react";
 import { getSupabase } from "@/lib/supabase";
+import { hasProAccess } from "@/lib/subscription";
 import type { User } from "@supabase/supabase-js";
 
 export type AuthUser = {
@@ -42,7 +43,10 @@ function buildUser(u: User, isVerified = false): AuthUser {
       `투자자_${(u.email ?? "user").split("@")[0].slice(-4)}`
     ),
     isVerified,
-    isPro:      u.user_metadata?.investus_pro === true,
+    isPro: hasProAccess({
+      email: u.email,
+      investusPro: u.user_metadata?.investus_pro === true,
+    }),
     avatar,
   };
 }
