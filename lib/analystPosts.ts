@@ -34,7 +34,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "판교 독수리 #41",
     symbol: "TSLA",
     content:
-      "AIS 칩 삼성 테이프아웃 — 딜 플로우 확인했는데 이 뉴스 의미가 크다. 1) 삼성 파운드리 내부자: TSLA AIS 칩 2026년 4월 테이프아웃 완료. 2) 역사상 처음으로 삼성이 Tesla 칩 설계 테이프아웃 선도. 설계 DRC 완료, 포토마스크 최종 레이아웃 통과. 3) 양산: 2027년 목표. 4) Ming-Chi Kuo: 인도 실리콘팀 구성 중, Q4 테이프아웃 병행 트랙. 5) 투자 핵심: NVIDIA 의존도 감소 = AI 추론 비용 내재화. FSD 구독 원가 절감 + Optimus 훈련 비용 절감 복합 효과. TSMC 일극 리스크도 분산. BUY.",
+      "AI5 칩 삼성 테이프아웃 — 딜 플로우 확인했는데 이 뉴스 의미가 크다. 1) 삼성 파운드리 내부자(Shay Boloor): TSLA AI5 칩 테이프아웃 도달 · Texas fab 2nm. 2) Ming-Chi: AI5는 이미 생산 진입, 인도팀은 AI6·Dojo 3 테이프아웃 준비. 3) Whole Mars: AI5 트랜지스터 AI4 대비 ~3.5배 작음. 4) 투자 핵심: NVIDIA 의존도 감소 = AI 추론 비용 내재화. FSD·Optimus 마진 구조 개선. BUY.",
     likes: 1592,
     comments: 4,
     created_at: "2026-07-13T00:12:00.000Z",
@@ -3166,7 +3166,7 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-278]: [
     { alias: "강남 팔콘 #44", content: "삼성이 TSMC 아닌 게 지정학 리스크 분산이기도 해. 대만 리스크 헤지가 자연스럽게 들어가는 거야.", created_at: "2026-07-13T00:14:00.000Z" },
     { alias: "종로 황소 #73", content: "India 팀 Q4 테이프아웃 목표가 더 흥미해. 두 개 트랙이 동시에 돌아가는 거면 칩 내재화 속도가 예상보다 빨라.", created_at: "2026-07-13T00:16:00.000Z" },
-    { alias: "여의도 독수리 #19", content: "AIS 칩 양산 2027년이면 Optimus 양산과 타이밍이 맞아. Optimus 훈련 비용 절감 직접 연결이야.", created_at: "2026-07-13T00:18:00.000Z" },
+    { alias: "여의도 독수리 #19", content: "AI5가 2nm Texas로 가면 Optimus·클러스터 추론 단가 구조가 바뀌어. 양산 스케줄은 이후지만 방향은 명확해.", created_at: "2026-07-13T00:18:00.000Z" },
     { alias: "광화문 팔콘 #56", content: "NVIDIA 의존도 감소가 장기 마진 확장의 숨은 레버야. FSD 구독 원가가 내려갈수록 마진이 올라가는 거잖아.", created_at: "2026-07-13T00:20:00.000Z" },
   ],
   [-279]: [

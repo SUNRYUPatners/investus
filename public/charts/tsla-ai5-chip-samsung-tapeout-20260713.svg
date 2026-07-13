@@ -15,10 +15,10 @@
   <rect x="60" y="86" width="80" height="34" rx="8" fill="#065f46"/>
   <text x="100" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSLA</text>
   <rect x="152" y="86" width="160" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
-  <text x="232" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">AIS 칩 삼성 파운드리</text>
+  <text x="232" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">AI5 칩 삼성 파운드리</text>
   <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.13</text>
 
-  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Tesla AIS 칩 — 삼성 파운드리 테이프아웃 완료</text>
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">Tesla AI5 칩 — 삼성 파운드리 테이프아웃 완료</text>
   <text x="540" y="294" font-family="Arial Black, Arial" font-weight="900" font-size="64" fill="#00e5a0" text-anchor="middle">테이프아웃</text>
   <text x="540" y="348" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">삼성 파운드리 · 2026년 4월 완료</text>
   <text x="540" y="392" font-family="Arial, sans-serif" font-size="17" fill="#9ca3af" text-anchor="middle">역사상 최초로 삼성이 Tesla 칩 설계 테이프아웃 선도</text>
@@ -29,7 +29,7 @@
   <text x="540" y="514" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">품질 관리 기준 통과 → 양산 일정: 2027년</text>
 
   <rect x="80" y="538" width="440" height="110" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
-  <text x="300" y="576" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">AIS 칩 용도</text>
+  <text x="300" y="576" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">AI5 칩 용도</text>
   <text x="300" y="604" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">최적화·추론 연산 특화</text>
   <text x="300" y="626" font-family="Arial, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Robotaxi 탑재 예정</text>
   <text x="300" y="642" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">고객 차량 적용 포함</text>

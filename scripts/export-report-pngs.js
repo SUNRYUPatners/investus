@@ -375,7 +375,7 @@ const PAIRS = [
   { ko: 'meta-super-sensing-glasses-20260710.svg',   en: 'meta-super-sensing-glasses-20260710-en.svg',   label: 'META_SuperSensing',      date: '20260710' },
   { ko: 'summary-20260710.svg',                      en: 'summary-20260710-en.svg',                      label: '7월10일_요약',            date: '20260710' },
   { ko: 'tsla-robotaxi-hub-cleaning-robot-20260713.svg',  en: 'tsla-robotaxi-hub-cleaning-robot-20260713-en.svg',  label: 'TSLA_Hub_청소로봇',    date: '20260713' },
-  { ko: 'tsla-ais-chip-samsung-tapeout-20260713.svg',     en: 'tsla-ais-chip-samsung-tapeout-20260713-en.svg',     label: 'TSLA_AIS_삼성',        date: '20260713' },
+  { ko: 'tsla-ai5-chip-samsung-tapeout-20260713.svg',     en: 'tsla-ai5-chip-samsung-tapeout-20260713-en.svg',     label: 'TSLA_AI5_삼성',        date: '20260713' },
   { ko: 'tsla-chicago-project-buster-20260713.svg',       en: 'tsla-chicago-project-buster-20260713-en.svg',       label: 'TSLA_Chicago_Buster',  date: '20260713' },
   { ko: 'tsla-cybercab-eric-c-50rides-20260713.svg',      en: 'tsla-cybercab-eric-c-50rides-20260713-en.svg',      label: 'TSLA_EricC_50rides',   date: '20260713' },
   { ko: 'tsla-fsd-v4-lite-hw3-20260713.svg',              en: 'tsla-fsd-v4-lite-hw3-20260713-en.svg',              label: 'TSLA_FSD_V4Lite',      date: '20260713' },

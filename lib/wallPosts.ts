@@ -73,7 +73,7 @@ const d = (n: number) => n * 86_400_000;
 export const MOCK_POSTS: Post[] = [
 
   // ════════════════════════════════════════════════════════════════════════
-  // 2026-07-13 — TSLA 오스틴 허브 청소로봇·AIS 칩 삼성 테이프아웃·
+  // 2026-07-13 — TSLA 오스틴 허브 청소로봇·AI5 칩 삼성 테이프아웃·
   //              Chicago Project Buster·Cybercab Eric C 50회·FSD V4 Lite HW3·
   //              Starlink V3 20기·Starship IFT-13 7/16·MU Q2 $9B
   // ════════════════════════════════════════════════════════════════════════
@@ -83,9 +83,9 @@ export const MOCK_POSTS: Post[] = [
     content: "오스틴 Robotaxi 허브 청소 로봇 내장 됐다는 거 봤어? 허가서에 공식으로 박혀있음. TAB022052026에 청소 로봇, 수퍼차저, 장비실 세트로 들어가 있는 거야. 3월에 완공됐고 자동화 청소 시스템은 작년부터 설계된 거래. '차가 스스로 달리고, 이제 허브도 스스로 청소한다' — 이게 완전 무인 생태계잖아. 운영비 구조가 완전히 달라지는 거야.",
     createdAt: T13JL + 6*60_000, likes: 2734, comments: 4 },
 
-  // TSLA AIS 칩 삼성 테이프아웃 ─────────────────────────────────────────
+  // TSLA AI5 칩 삼성 테이프아웃 ─────────────────────────────────────────
   { id: 494, symbol: "TSLA", nickname: "익명_7381", holdingLabel: "120주 보유",
-    content: "삼성 파운드리 내부자 발 뉴스 진짜임. Tesla AIS 칩이 올해 4월에 테이프아웃 완료됐다는 거야. 역사상 처음으로 삼성이 Tesla 칩 설계 테이프아웃을 선도한 거고 양산은 2027년 목표. Ming-Chi Kuo도 인도에 Tesla 실리콘팀 구성 중이라고 했는데 Q4에 AI 칩 테이프아웃 또 있을 수 있다는 거잖아. NVDA 의존도 줄이는 게 진짜 현실화되고 있어.",
+    content: "삼성 파운드리 내부자 발 뉴스 진짜임. Tesla AI5 칩이 테이프아웃에 도달했고 Texas fab 2nm로 만든다는 거야. Ming-Chi도 AI5는 이미 생산 쪽이고, 인도 팀은 AI6·Dojo 3 테이프아웃 준비라고 했어. NVDA 의존도 줄이는 게 진짜 현실화되고 있어.",
     createdAt: T13JL + 14*60_000, likes: 2183, comments: 4 },
 
   // TSLA Chicago Project Buster ─────────────────────────────────────────
@@ -2177,7 +2177,7 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   494: [
     { id: 1, nickname: "익명_3847", holdingLabel: "90주 보유", content: "삼성이 TSMC 아닌데 Tesla가 삼성 선택한 거 자체가 의미 있어요. 지정학·가격·일정 종합해서 선택한 거겠죠.", createdAt: T13JL - m(6), likes: 41 },
     { id: 2, nickname: "익명_6193", holdingLabel: "관심종목", content: "인도 팀이 Q4에 추가 테이프아웃 목표라는 게 병행 트랙이 있다는 거잖아요. 칩 내재화 속도가 예상보다 빠를 수 있어요.", createdAt: T13JL - m(3), likes: 28 },
-    { id: 3, nickname: "익명_9271", holdingLabel: "40주 보유", content: "AIS 칩 양산 2027년이면 FSD V6쯤에 바로 적용될 타이밍이에요. 추론 비용 줄어들면 FSD 구독 가격 경쟁력도 올라가고.", createdAt: T13JL + m(2), likes: 19 },
+    { id: 3, nickname: "익명_9271", holdingLabel: "40주 보유", content: "AI5 칩 양산이 본격화되면 FSD·Optimus 추론 비용이 줄고 마진 구조가 개선될 여지가 있어요.", createdAt: T13JL + m(2), likes: 19 },
     { id: 4, nickname: "익명_4582", holdingLabel: "15주 보유", content: "NVDA 의존도 줄인다는 게 장기적으로 엔비디아 주가에도 영향 있을 텐데... Tesla가 큰 고객이라서요.", createdAt: T13JL + m(5), likes: 12 },
   ],
   495: [
