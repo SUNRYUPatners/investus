@@ -1,71 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1204" width="1080" height="1204">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#040a14"/>
-      <stop offset="100%" style="stop-color:#0a1020"/>
-    </linearGradient>
-    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#60a5fa"/>
-      <stop offset="33%" style="stop-color:#00e5a0"/>
-      <stop offset="66%" style="stop-color:#c084fc"/>
-      <stop offset="100%" style="stop-color:#60a5fa"/>
-    </linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="33%" style="stop-color:#00e5a0"/><stop offset="66%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#ef4444"/></linearGradient>
   </defs>
-  <rect width="1080" height="1204" fill="url(#bg)"/>
-  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
-  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.15</text>
-  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle">Daily One-Pager</text>
-  <text x="540" y="226" font-family="Arial, sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">CPI · TSLA · SPCX · GOOGL · IBM · TSM · NFLX · JPM</text>
-  
-  <rect x="64" y="250" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
-  <rect x="64" y="250" width="6" height="64" rx="3" fill="#60a5fa"/>
-  <text x="96" y="276" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">1. June CPI -0.4% — largest drop since Apr 2020 · Core 2.6%</text>
-  <text x="96" y="298" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Hassett “best in ~6 years” · S&amp;P fut +38.50 / Imp +34.16 · NASDAQ fut +403.75</text>
-  <rect x="64" y="322" width="952" height="64" rx="12" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
-  <rect x="64" y="322" width="6" height="64" rx="3" fill="#00e5a0"/>
-  <text x="96" y="348" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0">2. Chamath: SPCX 50% premium for TSLA → ~$600 · combo ~$2.25T</text>
-  <text x="96" y="370" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Ownership TSLA 55–60% / SPCX 40–45% · industrial logic + domestic cellular</text>
-  <rect x="64" y="394" width="952" height="64" rx="12" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
-  <rect x="64" y="394" width="6" height="64" rx="3" fill="#00e5a0"/>
-  <text x="96" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0">3. Robotaxi fleet 765(+4) · Barclays PT $370 · FSD EU 50M km</text>
-  <text x="96" y="442" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Unsupervised 39 ight · NL/EE/BE/LT/DK (=31M miles)</text>
-  <rect x="64" y="466" width="952" height="64" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
-  <rect x="64" y="466" width="6" height="64" rx="3" fill="#ef4444"/>
-  <text x="96" y="492" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ef4444">4. Lucid ~-41.74% · AlixPartners hired — not bankrupt yet</text>
-  <text x="96" y="514" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Overlay 3.210 · Musk Rivian/Lucid bankruptcy-path comments</text>
-  <rect x="64" y="538" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
-  <rect x="64" y="538" width="6" height="64" rx="3" fill="#60a5fa"/>
-  <text x="96" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">5. Google Steel River AR — 100% initial offtake · 1.6GW+2GWh by 2029</text>
-  <text x="96" y="586" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Full 2.5GW/2.9GWh · FSLR+LG · 315,000+ homes/yr</text>
-  <rect x="64" y="610" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
-  <rect x="64" y="610" width="6" height="64" rx="3" fill="#60a5fa"/>
-  <text x="96" y="636" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">6. IBM Q2 miss $17.2B vs $17.86B — Infra -7% · ~$65B mcap loss</text>
-  <text x="96" y="658" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Stock ~-24~-28% · CHIPS $1B · 4 pols bought, 0 sales</text>
-  <rect x="64" y="682" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
-  <rect x="64" y="682" width="6" height="64" rx="3" fill="#60a5fa"/>
-  <text x="96" y="708" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">7. TSMC TTM $140B(+31%) · advanced nodes 74% · prices +5–10%</text>
-  <text x="96" y="730" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">YTD $76.0B(+35.6%) · Street $40.0B / EPS $3.81 · $421.58(+83.83% 1Y)</text>
-  <rect x="64" y="754" width="952" height="64" rx="12" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
-  <rect x="64" y="754" width="6" height="64" rx="3" fill="#c084fc"/>
-  <text x="96" y="780" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#c084fc">8. ARK SPCX +$21M · total 3.85M sh ~$535.8M · James Quiver buy</text>
-  <text x="96" y="802" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">ARKX 8.31% · ARKQ 6% · ARKK 4.31% · ARKW 3.14%</text>
-  <rect x="64" y="826" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
-  <rect x="64" y="826" width="6" height="64" rx="3" fill="#60a5fa"/>
-  <text x="96" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">9. NFLX model $73→$169 by 2031 · EPS $3.10 · PE 23.6</text>
-  <text x="96" y="874" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Growth 13% · margins 25→30% · future PE 28 · ann 18.2% / total 131.2%</text>
-  <rect x="64" y="898" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
-  <rect x="64" y="898" width="6" height="64" rx="3" fill="#60a5fa"/>
-  <text x="96" y="924" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">10. JPM NI $16.9B · ROTCE 23% · Markets +35% · IB fees +30%</text>
-  <text x="96" y="946" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">CIB +27% · CCB +8% · AUM &gt;$5T · LT inflows $50B · tectonic risks</text>
-  <rect x="64" y="970" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
-  <rect x="64" y="970" width="6" height="64" rx="3" fill="#60a5fa"/>
-  <text x="96" y="996" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">11. SNDK Evercore PT $3,100 · upside $4,000 · spot +590%</text>
-  <text x="96" y="1018" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">5 NBMs ~$62B RPO · &gt;$11B prepayments · Leopold from ~$254</text>
-  <rect x="64" y="1042" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
-  <rect x="64" y="1042" width="6" height="64" rx="3" fill="#60a5fa"/>
-  <text x="96" y="1068" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">12. Burry AI circular financing · foreign inflows ~$900B · retail 6yr low</text>
-  <text x="96" y="1090" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">MULTI TRILLION funding loop · Apollo/Barchart · Vanda since Covid</text>
-  <rect x="0" y="1144" width="1080" height="60" fill="#020810"/>
-  <text x="540" y="1180" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.15 · investus.kr SRP Chief Investment Officer</text>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+
+  <text x="540" y="52" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="96" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.07.15 Daily Snapshot</text>
+  <text x="540" y="128" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Top 6 headlines</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="166" width="960" height="118" rx="14" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="166" width="8" height="118" rx="4" fill="#60a5fa"/>
+  <text x="116" y="214" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#60a5fa">June CPI Plunge</text>
+  <text x="116" y="254" font-family="Arial" font-size="22" fill="#9ca3af">Core 2.6% · Hassett “best in ~6 years”</text>
+  <text x="960" y="248" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#60a5fa" text-anchor="end">−0.4%</text>
+
+  <rect x="60" y="300" width="960" height="118" rx="14" fill="#0a0a14" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="300" width="8" height="118" rx="4" fill="#c084fc"/>
+  <text x="116" y="348" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc">Chamath · SPCX→TSLA Thesis</text>
+  <text x="116" y="388" font-family="Arial" font-size="22" fill="#9ca3af">50% premium · combo ~$2.25T</text>
+  <text x="960" y="382" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#c084fc" text-anchor="end">$600</text>
+
+  <rect x="60" y="434" width="960" height="118" rx="14" fill="#0a1a0a" stroke="#00e5a0" stroke-width="2"/>
+  <rect x="60" y="434" width="8" height="118" rx="4" fill="#00e5a0"/>
+  <text x="116" y="482" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#00e5a0">Tesla Robotaxi Fleet</text>
+  <text x="116" y="522" font-family="Arial" font-size="22" fill="#9ca3af">+4 · Unsupervised 39 · Austin 28</text>
+  <text x="960" y="516" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#00e5a0" text-anchor="end">765</text>
+
+  <rect x="60" y="568" width="960" height="118" rx="14" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="568" width="8" height="118" rx="4" fill="#ef4444"/>
+  <text x="116" y="616" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#ef4444">IBM Q2 Miss</text>
+  <text x="116" y="656" font-family="Arial" font-size="22" fill="#fca5a5">Rev $17.2B · ~$65B mcap ↓ · CHIPS $1B</text>
+  <text x="960" y="650" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#ef4444" text-anchor="end">−28%</text>
+
+  <rect x="60" y="702" width="464" height="130" rx="14" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="702" width="8" height="130" rx="4" fill="#60a5fa"/>
+  <text x="112" y="752" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">GOOGL Steel River</text>
+  <text x="112" y="794" font-family="Arial" font-size="20" fill="#9ca3af">100% offtake</text>
+  <text x="480" y="800" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#60a5fa" text-anchor="end">1.6GW</text>
+
+  <rect x="556" y="702" width="464" height="130" rx="14" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="556" y="702" width="8" height="130" rx="4" fill="#60a5fa"/>
+  <text x="608" y="752" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">TSMC TTM Revenue</text>
+  <text x="608" y="794" font-family="Arial" font-size="20" fill="#9ca3af">+31% YoY</text>
+  <text x="980" y="800" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#60a5fa" text-anchor="end">$140B</text>
+
+  <rect x="0" y="860" width="1080" height="2" fill="url(#flow)" opacity=".5"/>
+  <text x="540" y="910" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">More in individual reports · SPCX · NFLX · JPM · FSD…</text>
+
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.15 · NOT FINANCIAL ADVICE</text>
 </svg>
