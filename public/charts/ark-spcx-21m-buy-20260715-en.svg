@@ -40,9 +40,14 @@
   <text x="780.0" y="652" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">ARKW</text>
   <text x="780.0" y="715" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#e9d5ff" text-anchor="middle">3.14%</text>
   <text x="780.0" y="745" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">$56.7M</text>
-    <line x1="80" y1="790" x2="1000" y2="790" stroke="#1f2937" stroke-width="1"/>
+    <rect x="80" y="805" width="920" height="140" rx="16" fill="#0f172a" stroke="#374151" stroke-width="1.5"/>
+  <text x="540" y="837" font-family="Arial, sans-serif" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">KEY BACKGROUND</text>
+  <text x="540" y="874" font-family="Arial, sans-serif" font-size="23" fill="#e5e7eb" text-anchor="middle">ARKK: 2,091,225 · $291.0M · 4.31%</text>
+  <text x="540" y="910" font-family="Arial, sans-serif" font-size="23" fill="#e5e7eb" text-anchor="middle">ARKW: 407,215 · $56.7M · 3.14%</text>
 
-  <text x="540" y="820" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Source: ARK trade disclosures (2026.07.15)</text>
+  <line x1="80" y1="960" x2="1000" y2="960" stroke="#1f2937" stroke-width="1"/>
+
+  <text x="540" y="985" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Source: ARK trade disclosures (2026.07.15)</text>
   <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
   <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.15 · investus.kr SRP Chief Investment Officer</text>
 </svg>
