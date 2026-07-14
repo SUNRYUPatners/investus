@@ -8,6 +8,6 @@ alwaysApply: false
 
 1. 스킬: `.cursor/skills/investus-report-update/SKILL.md` + `.claude/commands/report-update.md`
 2. **본문**: 상세 글 + `■ 투자시사점` / `■ Investment Implications` 필수
-3. **SVG**: 7/2 스타일. **딱 한눈에 이해** — 너무 요약(숫자만)도 안 되고, 긴 글 가득도 안 됨. 숫자+라벨+한 줄 맥락. **한장요약은 핵심 5~6개만** (빽빽한 12개+ 리스트 금지)
+3. **SVG**: 7/2 스타일. **딱 한눈에 이해** — 너무 요약(숫자만)도 안 되고, 긴 글 가득도 안 됨. 숫자+라벨+한 줄 맥락. **한장요약은 핵심 5~6개만** (빽빽한 12개+ 리스트 금지). 카드 값 폰트는 34~56px로 크게 — 14~15px 금지. **SVG에 "투자 시사점/Investment Implications" 박스 절대 금지** — 시사점은 본문(body)에만.
 4. 팩트: 스크린샷 재 Read 대조. 숫자 창작 금지
 5. PNG는 오늘 date만. commit + `bash scripts/deploy.sh`

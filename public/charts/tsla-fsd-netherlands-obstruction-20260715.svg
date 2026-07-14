@@ -17,28 +17,28 @@
   <rect x="174" y="86" width="176" height="34" rx="8" fill="none" stroke="#00e5a0" stroke-width="1.5"/>
   <text x="262.0" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#00e5a0" text-anchor="middle">FSD Supervised</text>
   <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.15</text>
-  <text x="540" y="175" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle">FSD Supervised 네덜란드 — 장애물 회피 반대차선 우회</text>
-  <text x="540" y="290" font-family="Arial Black, Arial" font-weight="900" font-size="80" fill="#00e5a0" text-anchor="middle">14 KM/H</text>
-  <text x="540" y="342" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#4ade80" text-anchor="middle">Self-Driving 속도 표시</text>
-  <text x="540" y="382" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">NL · obstruction → opposite lane</text>
-  
-  <rect x="80" y="450" width="290" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
-  <text x="225.0" y="482" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">모드</text>
-  <text x="225.0" y="508" font-family="Arial, sans-serif" font-size="15" fill="#4ade80" text-anchor="middle">FSD Supervised</text>
-  <text x="225.0" y="530" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Netherlands</text>
-  <rect x="395" y="450" width="290" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
-  <text x="540.0" y="482" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">행동</text>
-  <text x="540.0" y="508" font-family="Arial, sans-serif" font-size="15" fill="#4ade80" text-anchor="middle">Opposite lane</text>
-  <text x="540.0" y="530" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">장애물 회피</text>
-  <rect x="710" y="450" width="290" height="130" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
-  <text x="855.0" y="482" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#00e5a0" text-anchor="middle">UI</text>
-  <text x="855.0" y="508" font-family="Arial, sans-serif" font-size="15" fill="#4ade80" text-anchor="middle">14 KM/H</text>
-  <text x="855.0" y="530" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">Self-Driving</text>
-  <rect x="80" y="610" width="920" height="80" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
-  <text x="540" y="642" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#00e5a0" text-anchor="middle">투자 시사점</text>
-  <text x="540" y="668" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">유럽 실도로 edge-case 학습 증거</text>
-  <rect x="80" y="705" width="920" height="56" rx="14" fill="#071a10" stroke="#00e5a0" stroke-width="1"/>
-  <text x="540" y="739" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: Tesla / Nate FSD clip (2026.07.15)</text>
+  <text x="540" y="175" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">FSD Supervised 네덜란드 — 장애물 회피 반대차선 우회</text>
+  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="116" fill="#00e5a0" text-anchor="middle">14 KM/H</text>
+  <text x="540" y="358" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#4ade80" text-anchor="middle">Self-Driving 속도 표시</text>
+  <text x="540" y="398" font-family="Arial, sans-serif" font-size="19" fill="#9ca3af" text-anchor="middle">NL · obstruction → opposite lane</text>
+
+  <line x1="80" y1="430" x2="1000" y2="430" stroke="#1f2937" stroke-width="1"/>
+
+<rect x="80" y="460" width="290" height="180" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="225.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">모드</text>
+  <text x="225.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#4ade80" text-anchor="middle">FSD Supervised</text>
+  <text x="225.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">Netherlands</text>
+  <rect x="395" y="460" width="290" height="180" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="540.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">행동</text>
+  <text x="540.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="28" fill="#4ade80" text-anchor="middle">Opposite lane</text>
+  <text x="540.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">장애물 회피</text>
+  <rect x="710" y="460" width="290" height="180" rx="16" fill="#071a10" stroke="#00e5a0" stroke-width="2"/>
+  <text x="855.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">UI</text>
+  <text x="855.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#4ade80" text-anchor="middle">14 KM/H</text>
+  <text x="855.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">Self-Driving</text>
+    <line x1="80" y1="670" x2="1000" y2="670" stroke="#1f2937" stroke-width="1"/>
+
+  <text x="540" y="700" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Source: Tesla / Nate FSD clip (2026.07.15)</text>
   <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
   <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.15 · investus.kr SRP 최고투자책임자 발행</text>
 </svg>
