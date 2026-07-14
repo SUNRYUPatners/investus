@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#93c5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="4" fill="url(#grad)" rx="2"/>
+  <rect x="60" y="86" width="70" height="34" rx="8" fill="#1e3a5f"/>
+  <text x="95.0" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">TSM</text>
+  <rect x="160" y="86" width="120" height="34" rx="8" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="220.0" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#60a5fa" text-anchor="middle">TTM REV</text>
+  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.15</text>
+  <text x="540" y="175" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle">TSMC June TTM 매출 $140B — +31% YoY · YTD $76.0B</text>
+  <text x="540" y="290" font-family="Arial Black, Arial" font-weight="900" font-size="90" fill="#60a5fa" text-anchor="middle">$140B</text>
+  <text x="540" y="342" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#93c5fd" text-anchor="middle">Trailing 12M Revenue</text>
+  <text x="540" y="382" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">+31% YoY · YTD $76.0B (+35.6%)</text>
+  
+  <rect x="80" y="450" width="290" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="225.0" y="482" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">2025</text>
+  <text x="225.0" y="508" font-family="Arial, sans-serif" font-size="15" fill="#93c5fd" text-anchor="middle">$120.3B</text>
+  <text x="225.0" y="530" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">+31.6% yoy</text>
+  <rect x="395" y="450" width="290" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540.0" y="482" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">2024</text>
+  <text x="540.0" y="508" font-family="Arial, sans-serif" font-size="15" fill="#93c5fd" text-anchor="middle">$91.4B</text>
+  <text x="540.0" y="530" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">+33.9% yoy</text>
+  <rect x="710" y="450" width="290" height="130" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="855.0" y="482" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="#60a5fa" text-anchor="middle">YTD'26</text>
+  <text x="855.0" y="508" font-family="Arial, sans-serif" font-size="15" fill="#93c5fd" text-anchor="middle">$76.0B</text>
+  <text x="855.0" y="530" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">+35.6% yoy</text>
+  <rect x="80" y="610" width="920" height="80" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="642" font-family="Arial Black, Arial" font-weight="900" font-size="15" fill="#60a5fa" text-anchor="middle">투자 시사점</text>
+  <text x="540" y="668" font-family="Arial, sans-serif" font-size="14" fill="#d1d5db" text-anchor="middle">AI 파운드리 슈퍼사이클 지속</text>
+  <rect x="80" y="705" width="920" height="56" rx="14" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="739" font-family="Arial, sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">Source: HNGrz / AJ Investment Research · filings (2026.07.15)</text>
+  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.15 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

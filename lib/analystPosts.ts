@@ -17,6 +17,382 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-15 신규 ──────────────────────────────────────────────────────
+  {
+    id: -293,
+    alias: "여의도 황소 #12",
+    symbol: "SPY",
+    content:
+      "SPY 쪽 채널 체크해봤는데 CPI -0.4%가 중심이야. 1) June CPI -0.4% — Apr 2020 이후 최대. 2) Core 2.6% YoY. 3) Hassett “best in ~6 years”. 4) S&P fut +38.50 / fair +4.34 / implied +34.16 · NASDAQ fut +403.75. 5) 투자: 디스인플레 우호이나 Core 지속성 확인. BUY(인덱스 모멘텀, 사이즈 조절).",
+    likes: 1200,
+    comments: 3,
+    created_at: "2026-07-15T00:06:00.000Z",
+    liked: false,
+  },
+  {
+    id: -294,
+    alias: "강남 독수리 #19",
+    symbol: "TSLA",
+    content:
+      "Chamath M&A 시나리오 보고 한 가지 숫자가 눈에 들어왔어. 1) 50% premium → ~$600/share. 2) 결합 ~$2.25T. 3) Ownership TSLA 55–60 / SPCX 40–45. 4) 산업 논리 + domestic cellular. 5) 공식 딜 아님 — 시나리오 앵커. NEUTRAL.",
+    likes: 1237,
+    comments: 4,
+    created_at: "2026-07-15T00:12:07.000Z",
+    liked: false,
+  },
+  {
+    id: -295,
+    alias: "서초 팔콘 #26",
+    symbol: "TSLA",
+    content:
+      "Robotaxi 765 데이터 다시 뜯어봤는데 1) +4 → fleet 765. 2) Unsupervised 39. 3) Austin 28·Dallas 5·Houston 6. 4) Tesla own/reg 102. 5) 스케일·권역 확장 지표. BUY.",
+    likes: 1274,
+    comments: 5,
+    created_at: "2026-07-15T00:18:14.000Z",
+    liked: false,
+  },
+  {
+    id: -296,
+    alias: "송파 여우 #33",
+    symbol: "LCID",
+    content:
+      "AlixPartners 검증 결과랑 딱 맞아 떨어져. 1) ~-41.74% · overlay 3.210. 2) AlixPartners 영입. 3) 아직 파산 아님. 4) Musk: Rivian/Lucid bankruptcy path. 5) 생존 리스크 재평가. SELL/avoid(신규).",
+    likes: 1311,
+    comments: 3,
+    created_at: "2026-07-15T00:24:21.000Z",
+    liked: false,
+  },
+  {
+    id: -297,
+    alias: "마포 매 #40",
+    symbol: "NVDA",
+    content:
+      "Burry 순환금융 클립/차트 봤는데 임팩트가 크네. 1) borrow→GPU→collateral→borrow. 2) MULTI TRILLION FUNDING PROMISES. 3) 수요 vs 레버리지 분리. 4) 현금흐름 가시성 체크. NEUTRAL(리스크 주시).",
+    likes: 1348,
+    comments: 4,
+    created_at: "2026-07-15T00:30:28.000Z",
+    liked: false,
+  },
+  {
+    id: -298,
+    alias: "한남 늑대 #47",
+    symbol: "GOOGL",
+    content:
+      "Steel River가 오늘 핵심이야. 이유는 1) 100% initial offtake. 2) 1.6GW+2GWh by 2029. 3) Full 2.5GW/2.9GWh. 4) FSLR+LG · 315k+ homes/yr. 5) AI 전력 실물 증거. BUY.",
+    likes: 1385,
+    comments: 5,
+    created_at: "2026-07-15T00:36:35.000Z",
+    liked: false,
+  },
+  {
+    id: -299,
+    alias: "분당 사자 #54",
+    symbol: "NVDA",
+    content:
+      "NVDA 쪽 채널 체크해봤는데 Pelosi tracker CLAIM가 중심이야. 1) Jan up to $1M. 2) 7d later H200 ban lift. 3) Feb up to $5M. 4) May 10 Chinese cos. 5) ※ CLAIM only — 음모 단정 금지. NEUTRAL.",
+    likes: 1422,
+    comments: 3,
+    created_at: "2026-07-15T00:42:42.000Z",
+    liked: false,
+  },
+  {
+    id: -300,
+    alias: "역삼 호랑이 #61",
+    symbol: "SPY",
+    content:
+      "해외 유입 ~$900B 보고 한 가지 숫자가 눈에 들어왔어. 1) Foreign US equity buying fastest on record. 2) 12m sum ~$900B (Apollo/Barchart). 3) 쏠림 + 되돌림 리스크. NEUTRAL/WATCH.",
+    likes: 1459,
+    comments: 4,
+    created_at: "2026-07-15T00:48:49.000Z",
+    liked: false,
+  },
+  {
+    id: -301,
+    alias: "압구정 황소 #68",
+    symbol: "TSLA",
+    content:
+      "Hyperion $30.33M 데이터 다시 뜯어봤는데 1) Q2 2026 $30.33M. 2) 72,118 sh. 3) avg ~$420.60. 4) 단일 기관 시그널. NEUTRAL(보조지표).",
+    likes: 1496,
+    comments: 5,
+    created_at: "2026-07-15T00:54:00.000Z",
+    liked: false,
+  },
+  {
+    id: -302,
+    alias: "청담 독수리 #75",
+    symbol: "ARKK",
+    content:
+      "Cathie QT bogeyman 검증 결과랑 딱 맞아 떨어져. 1) QT = bogeyman. 2) Fed BS $8.5T→$6.7T. 3) Warsh QT 재개 가능. 4) 유동성 공포 과잉 여부. BUY(성장 바스켓, 정책 리스크 인지).",
+    likes: 1533,
+    comments: 3,
+    created_at: "2026-07-15T00:10:07.000Z",
+    liked: false,
+  },
+  {
+    id: -303,
+    alias: "잠실 팔콘 #82",
+    symbol: "TSLA",
+    content:
+      "FSD NL obstruction 클립/차트 봤는데 임팩트가 크네. 1) FSD Supervised NL. 2) opposite lane around obstruction. 3) UI 14 KM/H Self-Driving. 4) EU edge-case 증거. BUY.",
+    likes: 1570,
+    comments: 4,
+    created_at: "2026-07-15T00:16:14.000Z",
+    liked: false,
+  },
+  {
+    id: -304,
+    alias: "성수 여우 #89",
+    symbol: "AAPL",
+    content:
+      "iPhone AI shrink가 오늘 핵심이야. 이유는 1) SV firm talks. 2) shrink models for on-device iPhone. 3) CNBC via Evan. 4) 온디바이스 차별화. BUY.",
+    likes: 1607,
+    comments: 5,
+    created_at: "2026-07-15T00:22:21.000Z",
+    liked: false,
+  },
+  {
+    id: -305,
+    alias: "판교 매 #96",
+    symbol: "TSLA",
+    content:
+      "TSLA 쪽 채널 체크해봤는데 Cybercab Miami가 중심이야. 1) Miami street testing. 2) Grayson Brulte video. 3) 지리적 확장 신호. BUY.",
+    likes: 1644,
+    comments: 3,
+    created_at: "2026-07-15T00:28:28.000Z",
+    liked: false,
+  },
+  {
+    id: -306,
+    alias: "광화문 늑대 #16",
+    symbol: "TSLA",
+    content:
+      "Antidooring 2026.20.3 보고 한 가지 숫자가 눈에 들어왔어. 1) Blind Spot Warning While Parked NEW. 2) chime + 1st press block. 3) 2nd override. 4) version 2026.20.3. 5) 안전 UX 플러스. BUY.",
+    likes: 1681,
+    comments: 4,
+    created_at: "2026-07-15T00:34:35.000Z",
+    liked: false,
+  },
+  {
+    id: -307,
+    alias: "종로 사자 #23",
+    symbol: "TSLA",
+    content:
+      "EU Robotaxi hiring 데이터 다시 뜯어봤는데 1) Berlin Electrical Design Engineer. 2) Amsterdam Vehicle SW Intern. 3) EU 상용화 선행지표. BUY.",
+    likes: 1718,
+    comments: 5,
+    created_at: "2026-07-15T00:40:42.000Z",
+    liked: false,
+  },
+  {
+    id: -308,
+    alias: "홍대 호랑이 #30",
+    symbol: "JPM",
+    content:
+      "NI $16.9B 검증 결과랑 딱 맞아 떨어져. 1) NI $16.9B · ROTCE 23% ex Visa/equity. 2) CIB +27% · Markets +35% · IB fees +30%. 3) CCB +8%. 4) AUM >$5T · LT inflows $50B. 5) tectonic plates 리스크. BUY(실적) / hedge macro.",
+    likes: 1755,
+    comments: 3,
+    created_at: "2026-07-15T00:46:49.000Z",
+    liked: false,
+  },
+  {
+    id: -309,
+    alias: "여의도 황소 #37",
+    symbol: "NFLX",
+    content:
+      "모델 $169 클립/차트 봤는데 임팩트가 크네. 1) $73.03 · EPS TTM $3.10 · PE 23.6. 2) rev start 46.89B · growth 13%. 3) margin 25→30% · future PE 28 → EPS $6.03 · $168.83. 4) ann 18.2% / total 131.2%. 5) 가정 민감. BUY(가정 가드).",
+    likes: 1792,
+    comments: 4,
+    created_at: "2026-07-15T00:52:00.000Z",
+    liked: false,
+  },
+  {
+    id: -310,
+    alias: "강남 독수리 #44",
+    symbol: "FNMA",
+    content:
+      "Burry $193B가 오늘 핵심이야. 이유는 1) $193B Treasury debt. 2) write-off → 3–4x then 6–7x. 3) else low single digits. 4) bad-loan WO $61M→$243M. 5) 바이너리 정책. SPECULATIVE.",
+    likes: 1829,
+    comments: 5,
+    created_at: "2026-07-15T00:08:07.000Z",
+    liked: false,
+  },
+  {
+    id: -311,
+    alias: "서초 팔콘 #51",
+    symbol: "MU",
+    content:
+      "MU 쪽 채널 체크해봤는데 ETF weights가 중심이야. 1) QQQ 4.79%. 2) IVV/SPY 1.72%. 3) VOO 1.68%. 4) VTI 1.50%. 5) 패시브 증폭. BUY(사이클) / vol 주의.",
+    likes: 1866,
+    comments: 3,
+    created_at: "2026-07-15T00:14:14.000Z",
+    liked: false,
+  },
+  {
+    id: -312,
+    alias: "송파 여우 #58",
+    symbol: "TSLA",
+    content:
+      "Barclays $370 보고 한 가지 숫자가 눈에 들어왔어. 1) Dan Levy PT $370 from $360. 2) Equal Weight. 3) Robotaxi/Optimus/energy · Q2 beat. 4) spot $396.18(+0.36%). 5) EW가 메시지. NEUTRAL.",
+    likes: 1903,
+    comments: 4,
+    created_at: "2026-07-15T00:20:21.000Z",
+    liked: false,
+  },
+  {
+    id: -313,
+    alias: "마포 매 #65",
+    symbol: "TSM",
+    content:
+      "TTM $140B 데이터 다시 뜯어봤는데 1) June TTM +31% to $140B. 2) YTD $76.0B(+35.6%). 3) 2019–2025 annual boxes. 4) AI 슈퍼사이클. BUY.",
+    likes: 1940,
+    comments: 5,
+    created_at: "2026-07-15T00:26:28.000Z",
+    liked: false,
+  },
+  {
+    id: -314,
+    alias: "한남 늑대 #72",
+    symbol: "TSLA",
+    content:
+      "XPENG VLA 2.0 검증 결과랑 딱 맞아 떨어져. 1) XPENG VLA 2.0 EU 2H 2026 camera-only. 2) Tesla FSD >11B miles. 3) +28M/day. 4) 데이터 해자 vs 지역 공세. BUY(TSLA) / watch XPEV.",
+    likes: 1977,
+    comments: 3,
+    created_at: "2026-07-15T00:32:35.000Z",
+    liked: false,
+  },
+  {
+    id: -315,
+    alias: "분당 사자 #79",
+    symbol: "TSLA",
+    content:
+      "Grok voice ~3mo 클립/차트 봤는데 임팩트가 크네. 1) Elon Jun 17: ~3 months. 2) parking #1 disengagement. 3) Sept→stress→wide late'26/'27는 추정. 4) 릴리즈만 추적. NEUTRAL/WATCH.",
+    likes: 2014,
+    comments: 4,
+    created_at: "2026-07-15T00:38:42.000Z",
+    liked: false,
+  },
+  {
+    id: -316,
+    alias: "역삼 호랑이 #86",
+    symbol: "SNDK",
+    content:
+      "Evercore $3100가 오늘 핵심이야. 이유는 1) PT $3,100 · upside $4,000. 2) from ~$254 → $1,754(+590%). 3) 5 NBM ~$62B RPO. 4) >$11B prepays. 5) 가시성 vs 변동성. BUY(사이즈↓).",
+    likes: 2051,
+    comments: 5,
+    created_at: "2026-07-15T00:44:49.000Z",
+    liked: false,
+  },
+  {
+    id: -317,
+    alias: "압구정 황소 #93",
+    symbol: "TSLA",
+    content:
+      "TSLA 쪽 채널 체크해봤는데 SDI ESS가 중심이야. 1) Samsung SDI first Tesla ESS via StarPlus. 2) ~3–5조 ($2–3.3B). 3) 300Ah LFP. 4) Q2 2027 ops · signed Jan. BUY(energy).",
+    likes: 2088,
+    comments: 3,
+    created_at: "2026-07-15T00:50:00.000Z",
+    liked: false,
+  },
+  {
+    id: -318,
+    alias: "청담 독수리 #13",
+    symbol: "IBM",
+    content:
+      "Q2 miss 보고 한 가지 숫자가 눈에 들어왔어. 1) $17.2B vs $17.86B. 2) +1% YoY · Infra -7%. 3) ~-24~-28% · mcap ~-$65B. 4) AI 스토리 재가격. SELL/avoid short-term.",
+    likes: 1225,
+    comments: 4,
+    created_at: "2026-07-15T00:06:07.000Z",
+    liked: false,
+  },
+  {
+    id: -319,
+    alias: "잠실 팔콘 #20",
+    symbol: "IBM",
+    content:
+      "CHIPS pols 데이터 다시 뜯어봤는데 1) 4 pols bought 2026 · 0 sales. 2) Khanna 8x · Salazar 2x May 21. 3) May 21 $1B CHIPS quantum. 4) Jul14 219.32(-24.76%). 5) PTR≠인과. NEUTRAL.",
+    likes: 1262,
+    comments: 5,
+    created_at: "2026-07-15T00:12:14.000Z",
+    liked: false,
+  },
+  {
+    id: -320,
+    alias: "성수 여우 #27",
+    symbol: "BRK.B",
+    content:
+      "Buffett 12M 검증 결과랑 딱 맞아 떨어져. 1) 12M sh ~$6B. 2) 9M Susan Fdn · 1M×3. 3) ~8년 내 전량 처분. 4) 공급·승계 내러티브. NEUTRAL.",
+    likes: 1299,
+    comments: 3,
+    created_at: "2026-07-15T00:18:21.000Z",
+    liked: false,
+  },
+  {
+    id: -321,
+    alias: "판교 매 #34",
+    symbol: "SPY",
+    content:
+      "Retail 6yr low 클립/차트 봤는데 임팩트가 크네. 1) slowest net buying 6+ years. 2) Vanda. 3) lowest since Covid. 4) 기관/해외 의존↑. NEUTRAL.",
+    likes: 1336,
+    comments: 4,
+    created_at: "2026-07-15T00:24:28.000Z",
+    liked: false,
+  },
+  {
+    id: -322,
+    alias: "광화문 늑대 #41",
+    symbol: "TSM",
+    content:
+      "Pricing 74%가 오늘 핵심이야. 이유는 1) 74% wafer rev advanced. 2) prices +5–10%. 3) Street $40.0B(+33%) · EPS $3.81(+54%). 4) $421.58(+83.83% 1Y). BUY.",
+    likes: 1373,
+    comments: 5,
+    created_at: "2026-07-15T00:30:35.000Z",
+    liked: false,
+  },
+  {
+    id: -323,
+    alias: "종로 사자 #48",
+    symbol: "SPCX",
+    content:
+      "SPCX 쪽 채널 체크해봤는데 ARK +$21M가 중심이야. 1) +$21M. 2) total 3,850,606 sh ~$535.8M. 3) ARKX 8.31% · ARKQ 6% · ARKK 4.31% · ARKW 3.14%. BUY(유동성 주의).",
+    likes: 1410,
+    comments: 3,
+    created_at: "2026-07-15T00:36:42.000Z",
+    liked: false,
+  },
+  {
+    id: -324,
+    alias: "홍대 호랑이 #55",
+    symbol: "TSLA",
+    content:
+      "FSD EU 50M km 보고 한 가지 숫자가 눈에 들어왔어. 1) >50M km (=31M miles). 2) NL/EE/BE/LT/DK. 3) 20M km ~7.5 weeks ago. BUY.",
+    likes: 1447,
+    comments: 4,
+    created_at: "2026-07-15T00:42:49.000Z",
+    liked: false,
+  },
+  {
+    id: -325,
+    alias: "여의도 황소 #62",
+    symbol: "TSLA",
+    content:
+      "FSD 14.3.5 데이터 다시 뜯어봤는데 1) first drive. 2) parking-garage→garage. 3) one tap. 4) Whole Mars. BUY.",
+    likes: 1484,
+    comments: 5,
+    created_at: "2026-07-15T00:48:00.000Z",
+    liked: false,
+  },
+  {
+    id: -326,
+    alias: "강남 독수리 #69",
+    symbol: "SPCX",
+    content:
+      "James Quiver 검증 결과랑 딱 맞아 떨어져. 1) John James SPCX purchase filed. 2) Energy & Commerce. 3) widget $136.08(-2.20%). NEUTRAL(공시 팩트).",
+    likes: 1521,
+    comments: 3,
+    created_at: "2026-07-15T00:54:07.000Z",
+    liked: false,
+  },
+
   // ── 2026-07-14 신규 ──────────────────────────────────────────────────────
   {
     id: -285,
@@ -3246,6 +3622,211 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-07-15 신규 ──────────────────────────────────────────────────────
+  [-293]: [
+    { alias: "강남 여우 #95", content: "CPI -0.4% 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:06:02.000Z" },
+    { alias: "서초 매 #84", content: "SPY 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:06:04.000Z" },
+    { alias: "송파 늑대 #73", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:06:06.000Z" }
+  ],
+  [-294]: [
+    { alias: "서초 매 #90", content: "Chamath M&A 시나리오 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:12:09.000Z" },
+    { alias: "송파 늑대 #79", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:12:11.000Z" },
+    { alias: "마포 사자 #68", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:12:13.000Z" },
+    { alias: "한남 호랑이 #57", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:12:15.000Z" }
+  ],
+  [-295]: [
+    { alias: "송파 늑대 #85", content: "Robotaxi 765 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:18:16.000Z" },
+    { alias: "마포 사자 #74", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:18:18.000Z" },
+    { alias: "한남 호랑이 #63", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:18:20.000Z" },
+    { alias: "분당 황소 #52", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:18:22.000Z" },
+    { alias: "역삼 독수리 #41", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:18:24.000Z" }
+  ],
+  [-296]: [
+    { alias: "마포 사자 #80", content: "AlixPartners 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:24:23.000Z" },
+    { alias: "한남 호랑이 #69", content: "LCID 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:24:25.000Z" },
+    { alias: "분당 황소 #58", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:24:27.000Z" }
+  ],
+  [-297]: [
+    { alias: "한남 호랑이 #75", content: "Burry 순환금융 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:30:30.000Z" },
+    { alias: "분당 황소 #64", content: "NVDA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:30:32.000Z" },
+    { alias: "역삼 독수리 #53", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:30:34.000Z" },
+    { alias: "압구정 팔콘 #42", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:30:36.000Z" }
+  ],
+  [-298]: [
+    { alias: "분당 황소 #70", content: "Steel River 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:36:37.000Z" },
+    { alias: "역삼 독수리 #59", content: "GOOGL 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:36:39.000Z" },
+    { alias: "압구정 팔콘 #48", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:36:41.000Z" },
+    { alias: "청담 여우 #37", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:36:43.000Z" },
+    { alias: "잠실 매 #26", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:36:45.000Z" }
+  ],
+  [-299]: [
+    { alias: "역삼 독수리 #65", content: "Pelosi tracker CLAIM 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:42:44.000Z" },
+    { alias: "압구정 팔콘 #54", content: "NVDA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:42:46.000Z" },
+    { alias: "청담 여우 #43", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:42:48.000Z" }
+  ],
+  [-300]: [
+    { alias: "압구정 팔콘 #60", content: "해외 유입 ~$900B 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:48:51.000Z" },
+    { alias: "청담 여우 #49", content: "SPY 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:48:53.000Z" },
+    { alias: "잠실 매 #38", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:48:55.000Z" },
+    { alias: "성수 늑대 #27", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:48:57.000Z" }
+  ],
+  [-301]: [
+    { alias: "청담 여우 #55", content: "Hyperion $30.33M 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:54:02.000Z" },
+    { alias: "잠실 매 #44", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:54:04.000Z" },
+    { alias: "성수 늑대 #33", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:54:06.000Z" },
+    { alias: "판교 사자 #22", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:54:08.000Z" },
+    { alias: "광화문 호랑이 #91", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:54:10.000Z" }
+  ],
+  [-302]: [
+    { alias: "잠실 매 #50", content: "Cathie QT bogeyman 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:10:09.000Z" },
+    { alias: "성수 늑대 #39", content: "ARKK 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:10:11.000Z" },
+    { alias: "판교 사자 #28", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:10:13.000Z" }
+  ],
+  [-303]: [
+    { alias: "성수 늑대 #45", content: "FSD NL obstruction 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:16:16.000Z" },
+    { alias: "판교 사자 #34", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:16:18.000Z" },
+    { alias: "광화문 호랑이 #23", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:16:20.000Z" },
+    { alias: "종로 황소 #92", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:16:22.000Z" }
+  ],
+  [-304]: [
+    { alias: "판교 사자 #40", content: "iPhone AI shrink 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:22:23.000Z" },
+    { alias: "광화문 호랑이 #29", content: "AAPL 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:22:25.000Z" },
+    { alias: "종로 황소 #18", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:22:27.000Z" },
+    { alias: "홍대 독수리 #87", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:22:29.000Z" },
+    { alias: "여의도 팔콘 #76", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:22:31.000Z" }
+  ],
+  [-305]: [
+    { alias: "광화문 호랑이 #35", content: "Cybercab Miami 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:28:30.000Z" },
+    { alias: "종로 황소 #24", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:28:32.000Z" },
+    { alias: "홍대 독수리 #93", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:28:34.000Z" }
+  ],
+  [-306]: [
+    { alias: "종로 황소 #30", content: "Antidooring 2026.20.3 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:34:37.000Z" },
+    { alias: "홍대 독수리 #19", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:34:39.000Z" },
+    { alias: "여의도 팔콘 #88", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:34:41.000Z" },
+    { alias: "강남 여우 #77", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:34:43.000Z" }
+  ],
+  [-307]: [
+    { alias: "홍대 독수리 #25", content: "EU Robotaxi hiring 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:40:44.000Z" },
+    { alias: "여의도 팔콘 #94", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:40:46.000Z" },
+    { alias: "강남 여우 #83", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:40:48.000Z" },
+    { alias: "서초 매 #72", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:40:50.000Z" },
+    { alias: "송파 늑대 #61", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:40:52.000Z" }
+  ],
+  [-308]: [
+    { alias: "여의도 팔콘 #20", content: "NI $16.9B 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:46:51.000Z" },
+    { alias: "강남 여우 #89", content: "JPM 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:46:53.000Z" },
+    { alias: "서초 매 #78", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:46:55.000Z" }
+  ],
+  [-309]: [
+    { alias: "서초 매 #94", content: "모델 $169 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:52:02.000Z" },
+    { alias: "송파 늑대 #83", content: "NFLX 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:52:04.000Z" },
+    { alias: "마포 사자 #72", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:52:06.000Z" },
+    { alias: "마포 사자 #62", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:52:08.000Z" }
+  ],
+  [-310]: [
+    { alias: "송파 늑대 #89", content: "Burry $193B 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:08:09.000Z" },
+    { alias: "마포 사자 #78", content: "FNMA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:08:11.000Z" },
+    { alias: "한남 호랑이 #67", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:08:13.000Z" },
+    { alias: "분당 황소 #56", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:08:15.000Z" },
+    { alias: "분당 황소 #46", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:08:17.000Z" }
+  ],
+  [-311]: [
+    { alias: "마포 사자 #84", content: "ETF weights 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:14:16.000Z" },
+    { alias: "한남 호랑이 #73", content: "MU 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:14:18.000Z" },
+    { alias: "분당 황소 #62", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:14:20.000Z" }
+  ],
+  [-312]: [
+    { alias: "한남 호랑이 #79", content: "Barclays $370 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:20:23.000Z" },
+    { alias: "분당 황소 #68", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:20:25.000Z" },
+    { alias: "역삼 독수리 #57", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:20:27.000Z" },
+    { alias: "역삼 독수리 #47", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:20:29.000Z" }
+  ],
+  [-313]: [
+    { alias: "분당 황소 #74", content: "TTM $140B 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:26:30.000Z" },
+    { alias: "역삼 독수리 #63", content: "TSM 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:26:32.000Z" },
+    { alias: "압구정 팔콘 #52", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:26:34.000Z" },
+    { alias: "청담 여우 #41", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:26:36.000Z" },
+    { alias: "청담 여우 #31", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:26:38.000Z" }
+  ],
+  [-314]: [
+    { alias: "역삼 독수리 #69", content: "XPENG VLA 2.0 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:32:37.000Z" },
+    { alias: "압구정 팔콘 #58", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:32:39.000Z" },
+    { alias: "청담 여우 #47", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:32:41.000Z" }
+  ],
+  [-315]: [
+    { alias: "압구정 팔콘 #64", content: "Grok voice ~3mo 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:38:44.000Z" },
+    { alias: "청담 여우 #53", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:38:46.000Z" },
+    { alias: "잠실 매 #42", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:38:48.000Z" },
+    { alias: "잠실 매 #32", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:38:50.000Z" }
+  ],
+  [-316]: [
+    { alias: "청담 여우 #59", content: "Evercore $3100 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:44:51.000Z" },
+    { alias: "잠실 매 #48", content: "SNDK 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:44:53.000Z" },
+    { alias: "성수 늑대 #37", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:44:55.000Z" },
+    { alias: "판교 사자 #26", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:44:57.000Z" },
+    { alias: "판교 사자 #16", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:44:59.000Z" }
+  ],
+  [-317]: [
+    { alias: "잠실 매 #54", content: "SDI ESS 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:50:02.000Z" },
+    { alias: "성수 늑대 #43", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:50:04.000Z" },
+    { alias: "판교 사자 #32", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:50:06.000Z" }
+  ],
+  [-318]: [
+    { alias: "성수 늑대 #49", content: "Q2 miss 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:06:09.000Z" },
+    { alias: "판교 사자 #38", content: "IBM 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:06:11.000Z" },
+    { alias: "광화문 호랑이 #27", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:06:13.000Z" },
+    { alias: "광화문 호랑이 #17", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:06:15.000Z" }
+  ],
+  [-319]: [
+    { alias: "판교 사자 #44", content: "CHIPS pols 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:12:16.000Z" },
+    { alias: "광화문 호랑이 #33", content: "IBM 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:12:18.000Z" },
+    { alias: "종로 황소 #22", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:12:20.000Z" },
+    { alias: "홍대 독수리 #91", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:12:22.000Z" },
+    { alias: "홍대 독수리 #81", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:12:24.000Z" }
+  ],
+  [-320]: [
+    { alias: "광화문 호랑이 #39", content: "Buffett 12M 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:18:23.000Z" },
+    { alias: "종로 황소 #28", content: "BRK.B 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:18:25.000Z" },
+    { alias: "홍대 독수리 #17", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:18:27.000Z" }
+  ],
+  [-321]: [
+    { alias: "종로 황소 #34", content: "Retail 6yr low 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:24:30.000Z" },
+    { alias: "홍대 독수리 #23", content: "SPY 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:24:32.000Z" },
+    { alias: "여의도 팔콘 #92", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:24:34.000Z" },
+    { alias: "여의도 팔콘 #82", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:24:36.000Z" }
+  ],
+  [-322]: [
+    { alias: "홍대 독수리 #29", content: "Pricing 74% 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:30:37.000Z" },
+    { alias: "여의도 팔콘 #18", content: "TSM 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:30:39.000Z" },
+    { alias: "강남 여우 #87", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:30:41.000Z" },
+    { alias: "서초 매 #76", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:30:43.000Z" },
+    { alias: "서초 매 #66", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:30:45.000Z" }
+  ],
+  [-323]: [
+    { alias: "여의도 팔콘 #24", content: "ARK +$21M 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:36:44.000Z" },
+    { alias: "강남 여우 #93", content: "SPCX 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:36:46.000Z" },
+    { alias: "서초 매 #82", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:36:48.000Z" }
+  ],
+  [-324]: [
+    { alias: "강남 여우 #19", content: "FSD EU 50M km 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:42:51.000Z" },
+    { alias: "서초 매 #88", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:42:53.000Z" },
+    { alias: "송파 늑대 #77", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:42:55.000Z" },
+    { alias: "송파 늑대 #67", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:42:57.000Z" }
+  ],
+  [-325]: [
+    { alias: "송파 늑대 #93", content: "FSD 14.3.5 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:48:02.000Z" },
+    { alias: "마포 사자 #82", content: "TSLA 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:48:04.000Z" },
+    { alias: "한남 호랑이 #71", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:48:06.000Z" },
+    { alias: "한남 호랑이 #61", content: "사이즈·타임호라이즌 먼저 정하고 해석하자.", created_at: "2026-07-15T00:48:08.000Z" },
+    { alias: "한남 호랑이 #51", content: "모멘텀만 추격하기보다 리스크 예산부터.", created_at: "2026-07-15T00:48:10.000Z" }
+  ],
+  [-326]: [
+    { alias: "마포 사자 #88", content: "James Quiver 숫자만으로도 포지션 점검 값이야.", created_at: "2026-07-15T00:54:09.000Z" },
+    { alias: "한남 호랑이 #77", content: "SPCX 쪽으로는 오늘 흐름에서 무시하기 어려운 이벤트.", created_at: "2026-07-15T00:54:11.000Z" },
+    { alias: "분당 황소 #66", content: "시사점은 펀더멘털과 내러티브를 분리하는 것.", created_at: "2026-07-15T00:54:13.000Z" }
+  ],
+
   // ── 2026-07-14 신규 ──────────────────────────────────────────────────────
   [-285]: [
     { alias: "여의도 늑대 #61", content: "Robotaxi 52%면 PT $460의 절반이 자율이야. 멀티플 재평가 여지가 구조적으로 남아 있어.", created_at: "2026-07-14T00:08:00.000Z" },

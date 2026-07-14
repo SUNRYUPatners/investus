@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1204" width="1080" height="1204">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#040a14"/>
+      <stop offset="100%" style="stop-color:#0a1020"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="33%" style="stop-color:#00e5a0"/>
+      <stop offset="66%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1204" fill="url(#bg)"/>
+  <rect x="60" y="60" width="960" height="6" fill="url(#topBar)" rx="3"/>
+  <text x="540" y="128" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#6b7280" text-anchor="middle">2026.07.15</text>
+  <text x="540" y="186" font-family="Arial Black, Arial" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle">오늘의 한장 요약</text>
+  <text x="540" y="226" font-family="Arial, sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">CPI · TSLA · SPCX · GOOGL · IBM · TSM · NFLX · JPM</text>
+  
+  <rect x="64" y="250" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="250" width="6" height="64" rx="3" fill="#60a5fa"/>
+  <text x="96" y="276" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">1. June CPI -0.4% — 2020.4 이후 최대 ↓ · Core 2.6%</text>
+  <text x="96" y="298" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Hassett “~6년 만의 최고” · S&amp;P fut +38.50 / Imp +34.16 · NASDAQ fut +403.75</text>
+  <rect x="64" y="322" width="952" height="64" rx="12" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="322" width="6" height="64" rx="3" fill="#00e5a0"/>
+  <text x="96" y="348" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0">2. Chamath: SPCX→TSLA 50% 프리미엄 시 ~$600 · 결합 ~$2.25T</text>
+  <text x="96" y="370" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Ownership TSLA 55–60% / SPCX 40–45% · 산업 논리 + domestic cellular</text>
+  <rect x="64" y="394" width="952" height="64" rx="12" fill="#071a10" stroke="#00e5a0" stroke-width="1.5"/>
+  <rect x="64" y="394" width="6" height="64" rx="3" fill="#00e5a0"/>
+  <text x="96" y="420" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#00e5a0">3. Robotaxi 플릿 765(+4) · Barclays PT $370 · FSD EU 50M km</text>
+  <text x="96" y="442" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Unsupervised 39 · Equal Weight · NL/EE/BE/LT/DK (=31M miles)</text>
+  <rect x="64" y="466" width="952" height="64" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="64" y="466" width="6" height="64" rx="3" fill="#ef4444"/>
+  <text x="96" y="492" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ef4444">4. Lucid ~-41.74% · AlixPartners 영입 — 아직 파산 아님</text>
+  <text x="96" y="514" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">오버레이 3.210 · Musk Rivian/Lucid bankruptcy path 코멘트</text>
+  <rect x="64" y="538" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="538" width="6" height="64" rx="3" fill="#60a5fa"/>
+  <text x="96" y="564" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">5. Google Steel River AR — offtake 100% · 1.6GW+2GWh by 2029</text>
+  <text x="96" y="586" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Full 2.5GW/2.9GWh · FSLR+LG · 315,000+ homes/yr</text>
+  <rect x="64" y="610" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="610" width="6" height="64" rx="3" fill="#60a5fa"/>
+  <text x="96" y="636" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">6. IBM Q2 miss $17.2B vs $17.86B — Infra -7% · ~$65B mcap↓</text>
+  <text x="96" y="658" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">주가 ~-24~-28% · CHIPS $1B · 정치인 4명 매수·매도 0</text>
+  <rect x="64" y="682" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="682" width="6" height="64" rx="3" fill="#60a5fa"/>
+  <text x="96" y="708" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">7. TSMC TTM $140B(+31%) · 첨단노드 74% · 가격 +5–10%</text>
+  <text x="96" y="730" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">YTD $76.0B(+35.6%) · Street $40.0B / EPS $3.81 · $421.58(+83.83% 1Y)</text>
+  <rect x="64" y="754" width="952" height="64" rx="12" fill="#1a0e2e" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="64" y="754" width="6" height="64" rx="3" fill="#c084fc"/>
+  <text x="96" y="780" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#c084fc">8. ARK SPCX +$21M · 총 3.85M sh ~$535.8M · James Quiver 매수</text>
+  <text x="96" y="802" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">ARKX 8.31% · ARKQ 6% · ARKK 4.31% · ARKW 3.14%</text>
+  <rect x="64" y="826" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="826" width="6" height="64" rx="3" fill="#60a5fa"/>
+  <text x="96" y="852" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">9. NFLX 모델 $73→$169 by 2031 · EPS $3.10 · PE 23.6</text>
+  <text x="96" y="874" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">성장 13% · 마진 25→30% · future PE 28 · 연 18.2% / 총 131.2%</text>
+  <rect x="64" y="898" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="898" width="6" height="64" rx="3" fill="#60a5fa"/>
+  <text x="96" y="924" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">10. JPM NI $16.9B · ROTCE 23% · Markets +35% · IB fees +30%</text>
+  <text x="96" y="946" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">CIB +27% · CCB +8% · AUM &gt;$5T · LT inflows $50B · tectonic risks</text>
+  <rect x="64" y="970" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="970" width="6" height="64" rx="3" fill="#60a5fa"/>
+  <text x="96" y="996" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">11. SNDK Evercore PT $3,100 · upside $4,000 · spot +590%</text>
+  <text x="96" y="1018" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">5 NBM ~$62B RPO · &gt;$11B prepayments · Leopold from ~$254</text>
+  <rect x="64" y="1042" width="952" height="64" rx="12" fill="#0a1a2e" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="64" y="1042" width="6" height="64" rx="3" fill="#60a5fa"/>
+  <text x="96" y="1068" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#60a5fa">12. Burry AI 순환금융 · 해외유입 ~$900B · 리테일 6yr low</text>
+  <text x="96" y="1090" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">MULTI TRILLION funding loop · Apollo/Barchart · Vanda since Covid</text>
+  <rect x="0" y="1144" width="1080" height="60" fill="#020810"/>
+  <text x="540" y="1180" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.15 · investus.kr SRP 최고투자책임자 발행</text>
+</svg>

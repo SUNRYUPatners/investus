@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T15JL = 1784070000000; // 2026-07-15 08:00 KST
 const T14JL = 1783983600000; // 2026-07-14 08:00 KST
 const T13JL = 1783897200000; // 2026-07-13 08:00 KST
 const T10JL = 1783638000000; // 2026-07-10 08:00 KST
@@ -53,7 +54,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T14JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T15JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -72,6 +73,60 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-15 — CPI -0.4%·Chamath TSLA M&A·Robotaxi 765·Lucid·GOOGL Steel River·
+  //              IBM miss·Barclays $370·FSD EU 50M·ARK SPCX·TSMC $140B·NFLX $169·JPM
+  // ════════════════════════════════════════════════════════════════════════
+
+  { id: 509, symbol: "SPY", nickname: "익명_2841", holdingLabel: "관심종목",
+    content: "CPI -0.4%면 2020년 4월 이후 최대 하락이잖아. Core도 2.6%로 내려왔고 Hassett가 6년 만의 최고 리포트랬대. S&P 선물 +38.50에 Implied +34.16, 나스닥 선물 +403.75. 디스인플레 서프라이즈인데 다음 Core가 진짜 확인이겠지.",
+    createdAt: T15JL + 6*60_000, likes: 3012, comments: 4 },
+
+  { id: 510, symbol: "TSLA", nickname: "익명_7519", holdingLabel: "280주 보유",
+    content: "Chamath가 SPCX가 TSLA에 50% 프리미엄 주면 ~$600이고 결합이 ~$2.25T라네. 지분은 TSLA 55–60 / SPCX 40–45. 공식 딜은 아닌데 산업 논리랑 domestic cellular까지 꺼낸 게 인상적임. 시나리오로만 보되 상관관계는 다시 짜야 할 듯.",
+    createdAt: T15JL + 14*60_000, likes: 2745, comments: 5 },
+
+  { id: 511, symbol: "TSLA", nickname: "익명_6032", holdingLabel: "95주 보유",
+    content: "Robotaxi 플릿 765 찍혔어. +4고 Unsupervised 39, Austin 28·Dallas 5·Houston 6. 회사 소유/등록 102. 숫자 올라가는 속도가 핵심인데 도시에 분산되는 것도 같이 봐야지.",
+    createdAt: T15JL + 22*60_000, likes: 2218, comments: 3 },
+
+  { id: 512, symbol: "SPCX", nickname: "익명_4471", holdingLabel: "SPCX 장기",
+    content: "ARK가 SPCX 또 +$21M 샀대. 합치면 3,850,606주 ~$535.8M. ARKX 8.31%, ARKQ 6%, ARKK 4.31%, ARKW 3.14%. 크로스펀드로 쌓는 거면 확신은 있어 보이는데 변동성은 그대로야.",
+    createdAt: T15JL + 30*60_000, likes: 1987, comments: 4 },
+
+  { id: 513, symbol: "TSM", nickname: "익명_9164", holdingLabel: "40주 보유",
+    content: "TSMC TTM $140B (+31%) 나왔네. YTD $76.0B(+35.6%). 첨단노드가 웨이퍼 매출 74%고 가격도 5–10% 올렸다는데 Street은 Rev $40.0B / EPS $3.81. 차트 1년 +83.83%. 프라이싱 파워가 진짜 AI 증거임.",
+    createdAt: T15JL + 38*60_000, likes: 1876, comments: 3 },
+
+  { id: 514, symbol: "IBM", nickname: "익명_3380", holdingLabel: "관심종목",
+    content: "IBM $17.2B vs $17.86B 미스에 Infra -7%. 시총 ~$65B 날아가고 주가 -24~-28%. 정치인 4명은 CHIPS $1B 전후로 사고 판 사람은 0인데, 어닝이 이런데 정책 스토리만으로는 못 버티는 구간이지.",
+    createdAt: T15JL + 46*60_000, likes: 1654, comments: 4 },
+
+  { id: 515, symbol: "NFLX", nickname: "익명_5728", holdingLabel: "55주 보유",
+    content: "NFLX 모델 봤는데 현재 $73.03에 EPS $3.10, PE 23.6. 성장 13%·마진 25→30%·exit PE 28 넣으면 EPS $6.03에 $168.83. 연 18.2%·총 131%. 2031 $169 경로인데 가정이 핵심이지 EPS를 53으로 읽으면 안 됨.",
+    createdAt: T15JL + 54*60_000, likes: 1420, comments: 3 },
+
+  { id: 516, symbol: "JPM", nickname: "익명_8095", holdingLabel: "120주 보유",
+    content: "JPM NI $16.9B에 ROTCE 23%. CIB +27%, Markets +35%, IB fees +30%. CCB +8%, AUM $5T 넘고 LT inflow $50B. Dimon은 tectonic plates 리스크 얘기도 같이 했어. 실적 강한데 매크로 경고도 같이 들은 느낌.",
+    createdAt: T15JL + 62*60_000, likes: 1733, comments: 3 },
+
+  { id: 517, symbol: "GOOGL", nickname: "익명_2617", holdingLabel: "70주 보유",
+    content: "Google가 Arkansas Steel River 초기 offtake 100%래. 2029까지 1.6GW+2GWh, 풀은 2.5GW/2.9GWh. FSLR 패널에 LG 배터리. 연간 31.5만 가구 분량. AI 전력 수요가 유틸·태양광으로 흘러가는 그림 딱이네.",
+    createdAt: T15JL + 70*60_000, likes: 1598, comments: 3 },
+
+  { id: 518, symbol: "MU", nickname: "익명_6943", holdingLabel: "85주 보유",
+    content: "MU가 QQQ에서 4.79%야. IVV/SPY 1.72%, VOO 1.68%, VTI 1.50%. 패시브 비중이 이 정도면 리밸런싱 때 양방향으로 출렁이겠다. 메모리 사이클에 ETF 수급까지 겹치는 구간.",
+    createdAt: T15JL + 78*60_000, likes: 1311, comments: 3 },
+
+  { id: 519, symbol: "SNDK", nickname: "익명_4206", holdingLabel: "관심종목",
+    content: "Evercore가 SNDK PT $3,100에 업사이드 $4,000. 작년 11월 ~$254에서 지금 $1,754(+590%). 5개 NBM RPO 최소 ~$62B에 prepay >$11B. 숫자 미쳤는데 변동성도 같이 미친 구간임.",
+    createdAt: T15JL + 86*60_000, likes: 1489, comments: 4 },
+
+  { id: 520, symbol: "TSLA", nickname: "익명_1853", holdingLabel: "150주 보유",
+    content: "Barclays Dan Levy가 PT $360→$370인데 Equal Weight 유지. Robotaxi·Optimus·energy랑 Q2 delivery beat 얘기. 위젯 $396.18(+0.36%). PT보다 위에 있는데 EW면 추가 촉매가 필요하단 거겠지. 유럽 FSD 50M km도 오늘 같이 봤음.",
+    createdAt: T15JL + 94*60_000, likes: 2105, comments: 4 },
+
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-14 — BofA PT $460·Jefferies $400·FAA Flight12·SPCX $138.99·
@@ -2214,6 +2269,73 @@ export const MOCK_POSTS: Post[] = [
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
   // ── 2026-07-14 신규 ──────────────────────────────────────────────────────
+  509: [
+    { id: 1, nickname: "익명_7311", holdingLabel: "관심종목", content: "Implied +34면 개장부터 갭업 각인데, Core 2.6%가 지속되는지가 진짜야.", createdAt: T15JL - m(8), likes: 54 },
+    { id: 2, nickname: "익명_2084", holdingLabel: "60주 보유", content: "4월 2020 이후 최대 하락이면 헤드라인 임팩트 크고, 금리 민감주부터 반응할 듯.", createdAt: T15JL - m(4), likes: 37 },
+    { id: 3, nickname: "익명_9562", holdingLabel: "SPY 보유", content: "Hassett 발언이 정책 쪽 톤이랑 맞물리면 리스크온이 하루로 안 끝날 수도.", createdAt: T15JL - m(1), likes: 22 },
+    { id: 4, nickname: "익명_4417", holdingLabel: "관심종목", content: "나스닥 선물 +400은 과할 수도 있어서 되돌림 구간도 열어둬야지.", createdAt: T15JL + m(3), likes: 15 },
+  ],
+  510: [
+    { id: 1, nickname: "익명_6820", holdingLabel: "200주 보유", content: "$600·$2.25T는 시나리오 숫자지 입찰이 아니야. 그래도 밸류 앵커로는 남음.", createdAt: T15JL - m(6), likes: 61 },
+    { id: 2, nickname: "익명_3195", holdingLabel: "관심종목", content: "55–60/40–45 지분 구조면 지배구조·희석 이슈가 먼저 떠오르네.", createdAt: T15JL - m(3), likes: 39 },
+    { id: 3, nickname: "익명_8740", holdingLabel: "TSLA 장기", content: "domestic cellular까지 붙이면 Starlink 스토리랑 연결해서 읽는 사람들 많겠다.", createdAt: T15JL + m(2), likes: 28 },
+    { id: 4, nickname: "익명_1508", holdingLabel: "40주 보유", content: "공식 딜 나오기 전엔 프리미엄 선반영은 위험해. 이벤트 드리븐만.", createdAt: T15JL + m(5), likes: 17 },
+    { id: 5, nickname: "익명_5273", holdingLabel: "SPCX 보유", content: "TSLA·SPCX 동시 보유자면 상관관계가 깨질/붙을 때 헷지 다시 짜야 함.", createdAt: T15JL + m(8), likes: 12 },
+  ],
+  511: [
+    { id: 1, nickname: "익명_3926", holdingLabel: "110주 보유", content: "765에 Unsupervised 39면 비율도 같이 트래킹해야 상용화 감이 잡혀.", createdAt: T15JL - m(5), likes: 41 },
+    { id: 2, nickname: "익명_7601", holdingLabel: "관심종목", content: "Dallas·Houston까지 숫자가 찍히면 멀티시티가 스토리가 아니라 데이터가 됨.", createdAt: T15JL - m(2), likes: 26 },
+    { id: 3, nickname: "익명_2188", holdingLabel: "75주 보유", content: "Tesla owned 102도 포인트. 자체 플릿이 버퍼 역할을 하는 거지.", createdAt: T15JL + m(4), likes: 18 },
+  ],
+  512: [
+    { id: 1, nickname: "익명_5047", holdingLabel: "SPCX 보유", content: "ARKK만 아니라 ARKX·ARKQ·ARKW까지면 테마 ETF 전반에서 담는 중.", createdAt: T15JL - m(7), likes: 48 },
+    { id: 2, nickname: "익명_8332", holdingLabel: "관심종목", content: "$535.8M이면 무시 못 할 사이즈. 다만 ARK 매수가 바닥 신호는 아니야.", createdAt: T15JL - m(3), likes: 31 },
+    { id: 3, nickname: "익명_1679", holdingLabel: "30주 보유", content: "어제 +$21M이 추가분이라며. 누적 궤적이 더 중요함.", createdAt: T15JL + m(2), likes: 19 },
+    { id: 4, nickname: "익명_9455", holdingLabel: "SPCX 장기", content: "비중 8%대 ARKX가 제일 공격적. 우주·항공 테마 확신으로 읽힘.", createdAt: T15JL + m(6), likes: 14 },
+  ],
+  513: [
+    { id: 1, nickname: "익명_2764", holdingLabel: "25주 보유", content: "TTM $140B에 YTD만 $76B면 연간 런레이트가 여전히 위로 열려 있어.", createdAt: T15JL - m(4), likes: 33 },
+    { id: 2, nickname: "익명_6118", holdingLabel: "관심종목", content: "74% 첨단노드 + 가격 인상이면 수요가 가격을 받아주는 구간이지.", createdAt: T15JL - m(1), likes: 24 },
+    { id: 3, nickname: "익명_8903", holdingLabel: "TSM 보유", content: "1년 +83%면 밸류 부담도 있지만 EPS +54%면 성장이 가격을 어느 정도 설명함.", createdAt: T15JL + m(5), likes: 16 },
+  ],
+  514: [
+    { id: 1, nickname: "익명_3540", holdingLabel: "관심종목", content: "Infra -7%가 제일 아프지. AI 스토리랑 실적이 어긋난 구간.", createdAt: T15JL - m(6), likes: 45 },
+    { id: 2, nickname: "익명_7281", holdingLabel: "IBM 소량", content: "CHIPS $1B 받기 전 정치인 매수 이슈는 나오겠지만, 오늘은 어닝이 본체야.", createdAt: T15JL - m(2), likes: 29 },
+    { id: 3, nickname: "익명_1836", holdingLabel: "관심종목", content: "~$65B 시총 증발은 신뢰 훼손. 가이던스 나오기 전엔 관망이 낫다.", createdAt: T15JL + m(3), likes: 20 },
+    { id: 4, nickname: "익명_9672", holdingLabel: "50주 보유", content: "Krishna가 서버·메모리 capex 얘기한 것도 일종의 믹스 변명으로 들림.", createdAt: T15JL + m(7), likes: 11 },
+  ],
+  515: [
+    { id: 1, nickname: "익명_4029", holdingLabel: "NFLX 보유", content: "EPS $3.10 맞제? 53으로 읽으면 모델 전체가 붕괴야. PE 23.6이 그 증거.", createdAt: T15JL - m(5), likes: 38 },
+    { id: 2, nickname: "익명_7155", holdingLabel: "관심종목", content: "마진 30%·성장 13%가 현실이면 $169는 수학적으로 나와. 경쟁이 변수.", createdAt: T15JL - m(1), likes: 25 },
+    { id: 3, nickname: "익명_2290", holdingLabel: "35주 보유", content: "광고·번들 구간에서 성장률 하향이 먼저 오는지가 관건이겠다.", createdAt: T15JL + m(4), likes: 14 },
+  ],
+  516: [
+    { id: 1, nickname: "익명_5482", holdingLabel: "JPM 보유", content: "Markets +35%에 IB fees +30%면 월가 활동이 살아 있다는 뜻이지.", createdAt: T15JL - m(4), likes: 36 },
+    { id: 2, nickname: "익명_8637", holdingLabel: "관심종목", content: "AUM $5T·inflow $50B는 AWM 스토리. 근데 tectonic plates 경고도 같이 적어둔 게 Dimon답다.", createdAt: T15JL - m(1), likes: 27 },
+    { id: 3, nickname: "익명_1904", holdingLabel: "80주 보유", content: "ROTCE 23%면 자본효율 최고 구간에 가깝지. 피크 논쟁은 남을 듯.", createdAt: T15JL + m(5), likes: 15 },
+  ],
+  517: [
+    { id: 1, nickname: "익명_6371", holdingLabel: "GOOGL 보유", content: "100% offtake면 사실상 앵커 임차인. FSLR도 같이 수혜 보겠는데.", createdAt: T15JL - m(5), likes: 34 },
+    { id: 2, nickname: "익명_2849", holdingLabel: "관심종목", content: "1.6GW+2GWh by 2029는 스케줄이 길어서 중간 마일스톤을 봐야 해.", createdAt: T15JL - m(2), likes: 21 },
+    { id: 3, nickname: "익명_9510", holdingLabel: "45주 보유", content: "AI Capex가 전력·배터리까지 내려오는 게 올해 테마의 실물 버전임.", createdAt: T15JL + m(4), likes: 13 },
+  ],
+  518: [
+    { id: 1, nickname: "익명_3107", holdingLabel: "MU 보유", content: "QQQ 4.79%면 나스닥100 움직임에 MU가 거의 레버리지로 붙어 있음.", createdAt: T15JL - m(3), likes: 29 },
+    { id: 2, nickname: "익명_7462", holdingLabel: "관심종목", content: "SPY·IVV 1.72%도 작지 않아. 패시브 리밸런스 때는 양방향 출렁임.", createdAt: T15JL + m(1), likes: 18 },
+    { id: 3, nickname: "익명_5825", holdingLabel: "60주 보유", content: "실적 시즌이랑 ETF 비중 겹치면 변동성 확대 구간 될 수 있음.", createdAt: T15JL + m(6), likes: 12 },
+  ],
+  519: [
+    { id: 1, nickname: "익명_9214", holdingLabel: "관심종목", content: "PT $3,100에 업사이드 $4,000이면 지금도 위로 본다는 건데 +590% 이후라 손이 떨림.", createdAt: T15JL - m(6), likes: 42 },
+    { id: 2, nickname: "익명_4678", holdingLabel: "SNDK 소량", content: "RPO $62B·prepay $11B면 수요 가시성은 업계 최상단급이지.", createdAt: T15JL - m(2), likes: 30 },
+    { id: 3, nickname: "익명_1385", holdingLabel: "관심종목", content: "Leopold가 $254에서 탔다면 지금도 자랑할 만하지만 신규 진입은 별개 문제.", createdAt: T15JL + m(3), likes: 19 },
+    { id: 4, nickname: "익명_6709", holdingLabel: "20주 보유", content: "메모리 사이클 고점 논쟁과 PT 괴리가 커. 사이즈 조절이 답.", createdAt: T15JL + m(7), likes: 11 },
+  ],
+  520: [
+    { id: 1, nickname: "익명_2556", holdingLabel: "TSLA 보유", content: "PT $370에 스팟 $396이면 EW 유지가 더 메시지야. 상향폭은 작음.", createdAt: T15JL - m(5), likes: 40 },
+    { id: 2, nickname: "익명_8143", holdingLabel: "관심종목", content: "유럽 FSD 50M km가 7.5주 만에 20→50이면 데이터 속도가 대단하긴 해.", createdAt: T15JL - m(2), likes: 33 },
+    { id: 3, nickname: "익명_4902", holdingLabel: "180주 보유", content: "Robotaxi·Optimus를 얘기하면서도 EW면 밸류에이션 눈높이가 아직 조심스러운 거지.", createdAt: T15JL + m(4), likes: 22 },
+    { id: 4, nickname: "익명_1067", holdingLabel: "관심종목", content: "Q2 delivery beat를 이유로 든 건 Jefferies·BofA 흐름이랑 같은 궤적.", createdAt: T15JL + m(8), likes: 14 },
+  ],
   501: [
     { id: 1, nickname: "익명_6182", holdingLabel: "200주 보유", content: "Robotaxi 52%면 사실상 자율주행이 PT의 절반 이상이라는 거잖아요. 자동차 멀티플로 보면 안 되는 구간이에요.", createdAt: T14JL - m(8), likes: 61 },
     { id: 2, nickname: "익명_3057", holdingLabel: "관심종목", content: "101,000 마일당 1건이 인간 대비 90% 낮다는 숫자 신뢰되면 FSD 규제 논쟁에 유리해질 수밖에 없어요.", createdAt: T14JL - m(4), likes: 39 },
