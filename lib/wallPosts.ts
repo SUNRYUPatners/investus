@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T16JL = 1784156400000; // 2026-07-16 08:00 KST
 const T15JL = 1784070000000; // 2026-07-15 08:00 KST
 const T14JL = 1783983600000; // 2026-07-14 08:00 KST
 const T13JL = 1783897200000; // 2026-07-13 08:00 KST
@@ -54,7 +55,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T15JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T16JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -73,6 +74,77 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+
+  // ════════════════════════════════════════════════════════════════════════
+  // 2026-07-16 — ASML 실적 서프라이즈·GOOGL 버핏지분 +34%·SPCX IPO가 하회·
+  //              Optimus 100만+1000만 라인·버핏 인플레 코멘트·BofA 현금비중 3.6%·
+  //              TSLA FSD 2026.21.100·NVDA Vera Rubin·로보택시 텍사스 수익
+  // ════════════════════════════════════════════════════════════════════════
+
+  { id: 521, symbol: "TSLA", nickname: "익명_3072", holdingLabel: "210주 보유",
+    content: "2026.21.100 업데이트로 FSD Supervised v14.2.2.6가 유럽 3차 배치한테 풀렸어. 2026.20+ 브랜치라 최신 기능 다 반영됐다는데, 유럽 쪽 배치가 이렇게 빨리 넓어지는 거 보면 국가별 확대 속도가 진짜 빨라지는 느낌.",
+    createdAt: T16JL + 6*60_000, likes: 4447, comments: 3 },
+
+  { id: 522, symbol: "TSLA", nickname: "익명_6641", holdingLabel: "480주 보유",
+    content: "머스크가 프리몬트 100만·기가텍사스 1000만 옵티머스 라인 얘기했다는 거 봤어? 이게 실현되면 역사상 최초로 자동차 규모로 휴머노이드 산업화하는 회사래. 목표치인 거 알지만 스케일 자체가 상상 이상이라 적어둔다.",
+    createdAt: T16JL + 15*60_000, likes: 4454, comments: 4 },
+
+  { id: 523, symbol: "BRK.B", nickname: "익명_1849", holdingLabel: "관심종목",
+    content: "버핏이 Fed 2% 인플레 목표도 싫다고 했대. 제로가 이상적이라며, 2%로도 물가가 35년마다 2배래. 딴 데서는 \"다들 도박하듯 투자할 때 가치 찾기 어렵다\"는 말도 했고. 두 개 합치면 지금 시장 밸류에이션에 대한 우회적 경고로 들림.",
+    createdAt: T16JL + 24*60_000, likes: 4461, comments: 3 },
+
+  { id: 524, symbol: "TSLA", nickname: "익명_5713", holdingLabel: "150주 보유",
+    content: "KBB 보고서 봤는데 테슬라 가격인하가 진짜 둔화되고 있대. 6월 평균가 -2.1%로 올해 최소 하락인데, EV 시장 전체는 -4.5%로 훨씬 크게 빠졌어. 모델Y는 업계 평균보다 낮으면서도 EV 판매 35%+ 차지한다는 거 보면 지금 가격이 오히려 경쟁력 무기가 된 느낌.",
+    createdAt: T16JL + 33*60_000, likes: 4468, comments: 3 },
+
+  { id: 525, symbol: "NVDA", nickname: "익명_4287", holdingLabel: "관심종목",
+    content: "젠슨 황이 Vera Rubin 지연설 직접 반박했어. \"이미 생산 중\"이라면서 대량 하드웨어 들어오고 있다고. CEO가 직접 나서서 지연설 잡는 거 보면 시장 불안이 꽤 컸었나 봐.",
+    createdAt: T16JL + 42*60_000, likes: 4475, comments: 3 },
+
+  { id: 526, symbol: "TSLA", nickname: "익명_8340", holdingLabel: "320주 보유",
+    content: "텍사스 로보택시 단위경제성 숫자 봤어? 모델Y 1대당 연 $700만 이상 벌 수 있는데 생산비는 $430만이래. 사이버캡 오면 이 비용의 절반도 안 된다고 하고. 초기 단계인데도 이미 페이백이 나오는 구조면 스케일업 속도가 중요해지겠다.",
+    createdAt: T16JL + 51*60_000, likes: 4482, comments: 3 },
+
+  { id: 527, symbol: "TSLA", nickname: "익명_7462", holdingLabel: "관심종목",
+    content: "모델Y가 유럽 EV 판매 1위 찍었대. YoY +68%에 5개월간 76,760대. 유럽에서 로컬·중국 브랜드들 가격전쟁 심한데도 저 정도면 브랜드력이 확실히 살아있는 거지. KBB 가격안정화 소식이랑 같이 보니까 그림이 맞춰지네.",
+    createdAt: T16JL + 60*60_000, likes: 4489, comments: 3 },
+
+  { id: 528, symbol: "EQIX", nickname: "익명_2069", holdingLabel: "관심종목",
+    content: "트럼프가 데이터센터가 미래 일자리 최대 동력이라면서 이큐닉스 최대 $100만 매입 신고했대. 현직 대통령이 특정 종목을 직접 사는 게 흔한 일은 아니라서 정책 시그널로 읽는 사람들 많더라.",
+    createdAt: T16JL + 69*60_000, likes: 4496, comments: 3 },
+
+  { id: 529, symbol: "AAPL", nickname: "익명_4756", holdingLabel: "관심종목",
+    content: "애플이 AI칩 인수하려고 은행·반도체 스타트업들이랑 접촉 중이래. 자체 M2 울트라 서버가 고급 AI 워크로드에서 한계 보여서 구글클라우드 안의 Nvidia 칩에 의존하고 있고, 차세대 칩 Baltra는 지연됐다고. 시리 개편도 이 영향받는 중이라니 생각보다 심각한 듯.",
+    createdAt: T16JL + 78*60_000, likes: 4503, comments: 3 },
+
+  { id: 530, symbol: "SPCX", nickname: "익명_6198", holdingLabel: "SPCX 장기",
+    content: "스페이스X가 결국 IPO가 $135를 뚫고 내려갔어. $133.18까지 밀렸는데 일중은 +17.25%로 크게 반등했고 YTD는 -27.77%. 초기 투자자 상당수가 지금 물려있다는 뜻인데 변동성이 진짜 크다.",
+    createdAt: T16JL + 87*60_000, likes: 4510, comments: 3 },
+
+  { id: 531, symbol: "ASML", nickname: "익명_5029", holdingLabel: "관심종목",
+    content: "ASML 어닝 대박이네. 매출 €9.33B, EPS €7.59 둘 다 컨센 상회하고 FY26 가이던스를 €36-40B에서 €43-45B로 확 올렸어. AI 수요가 끝이 없다는 표현까지 썼고, 2027년까지 EUV·DUV 캐파 30% 늘린다는 계획에 머스크랑 TeraFab 협업까지 발표함.",
+    createdAt: T16JL + 96*60_000, likes: 4517, comments: 3 },
+
+  { id: 532, symbol: "SPY", nickname: "익명_9381", holdingLabel: "관심종목",
+    content: "BofA 펀드매니저 서베이에서 현금비중이 4.1%에서 3.6%로 떨어졌대. 이번 세기 최저권이라 매도 신호(Sell Signal)가 발동됐다는데. 기관들이 이미 풀인베스트 상태라는 뜻이라 역발상으로 보면 조심스러운 시그널이야.",
+    createdAt: T16JL + 105*60_000, likes: 4524, comments: 3 },
+
+  { id: 533, symbol: "TSLA", nickname: "익명_4502", holdingLabel: "TSLA 장기",
+    content: "Whole Mars가 V14 Lite로 AI3 써서 대륙횡단 자율주행 완주했대. 5,135마일을 큰 안전 이슈 없이 갔다는데, 본인도 \"이제 더 많은 고객한테 확대할 때 아니냐\"고 물어봄. 커뮤니티 스트레스 테스트로는 꽤 인상적인 결과.",
+    createdAt: T16JL + 114*60_000, likes: 4531, comments: 3 },
+
+  { id: 534, symbol: "TSLA", nickname: "익명_1094", holdingLabel: "관심종목",
+    content: "새 설문조사에서 EV 오너 중 지금 다시 차 산다면 가솔린으로 갈아타겠다는 비율이 단 0.5%래. 99.5%가 EV 계속 선택하겠다는 거잖아. 충전 불안 같은 초기 우려가 실제로는 이탈로 안 이어진다는 걸 보여주는 데이터네.",
+    createdAt: T16JL + 123*60_000, likes: 4538, comments: 3 },
+
+  { id: 535, symbol: "GOOGL", nickname: "익명_5814", holdingLabel: "120주 보유",
+    content: "버핏이 CNBC에서 구글 투자 본인이 직접 주도했다고 밝혔대. 버크셔 $15.4B 지분 공개 이후 GOOGL이 +34% 올랐고 지금 $371.81이야. 가치투자 대명사가 빅테크에 직접 베팅했다는 게 확인되니까 신뢰도가 다르게 느껴짐.",
+    createdAt: T16JL + 132*60_000, likes: 4545, comments: 3 },
+
+  { id: 536, symbol: "AAPL", nickname: "익명_7620", holdingLabel: "관심종목",
+    content: "애플 온디바이스 AI가 중국에서 드디어 승인 났대. 알리바바가 Qwen을 iOS·iPadOS·macOS·visionOS 애플 인텔리전스에 통합한다고 발표했고. 중국은 로컬 파트너 없이는 AI 기능 자체가 막혀있었는데 이제 정식 출시 경로가 열린 거네.",
+    createdAt: T16JL + 141*60_000, likes: 4552, comments: 3 },
+
 
   // ════════════════════════════════════════════════════════════════════════
   // 2026-07-15 — CPI -0.4%·Chamath TSLA M&A·Robotaxi 765·Lucid·GOOGL Steel River·
@@ -2268,6 +2340,88 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-16 신규 ──────────────────────────────────────────────────────
+  521: [
+    { id: 1, nickname: "익명_8814", holdingLabel: "관심종목", content: "3차 배치까지 왔으면 이제 국가 수 자체를 늘리는 단계겠지.", createdAt: T16JL + 6*60_000 + m(-5), likes: 29 },
+    { id: 2, nickname: "익명_1206", holdingLabel: "TSLA 장기", content: "Supervised라고 계속 못박는 거 보면 완전자율 마케팅은 자제하는 중인 듯.", createdAt: T16JL + 6*60_000 + m(3), likes: 18 },
+    { id: 3, nickname: "익명_5390", holdingLabel: "40주 보유", content: "구독 매출 쪼끔씩 쌓이는 게 결국 누적되면 큰 그림이야.", createdAt: T16JL + 6*60_000 + m(9), likes: 11 },
+  ],
+  522: [
+    { id: 1, nickname: "익명_2957", holdingLabel: "관심종목", content: "1000만대는 목표치지 확정 캐파는 아니잖아. 착공 소식부터 확인해야지.", createdAt: T16JL + 15*60_000 + m(-6), likes: 33 },
+    { id: 2, nickname: "익명_7183", holdingLabel: "TSLA 장기", content: "그래도 방향성 자체가 로보틱스 회사로 가는 거 다시 확인시켜주는 발언이네.", createdAt: T16JL + 15*60_000 + m(4), likes: 22 },
+    { id: 3, nickname: "익명_4025", holdingLabel: "95주 보유", content: "실현 시차 크겠지만 밸류에이션 프레임 자체는 지금부터 바뀔 수 있음.", createdAt: T16JL + 15*60_000 + m(10), likes: 15 },
+    { id: 4, nickname: "익명_9368", holdingLabel: "관심종목", content: "프리몬트는 기존 공장 활용이고 텍사스는 신규니까 텍사스 쪽 착공이 진짜 신호일 듯.", createdAt: T16JL + 15*60_000 + m(17), likes: 9 },
+  ],
+  523: [
+    { id: 1, nickname: "익명_3521", holdingLabel: "SPY 보유", content: "버핏이 저럴 때마다 현금비중 늘리고 있다는 신호였지 과거에도.", createdAt: T16JL + 24*60_000 + m(-7), likes: 41 },
+    { id: 2, nickname: "익명_6270", holdingLabel: "관심종목", content: "2%에서도 세후로는 뒤처진다는 말이 진짜 현금 보유자한테 아픈 말이네.", createdAt: T16JL + 24*60_000 + m(2), likes: 26 },
+    { id: 3, nickname: "익명_8095", holdingLabel: "40주 보유", content: "도박판 발언이 밸류 부담 경고면 단기 조정 가능성도 열어둬야지.", createdAt: T16JL + 24*60_000 + m(12), likes: 17 },
+  ],
+  524: [
+    { id: 1, nickname: "익명_2648", holdingLabel: "관심종목", content: "가격인하 둔화면 다음 분기 마진 개선 기대해도 되는 거 아닌가.", createdAt: T16JL + 33*60_000 + m(-8), likes: 37 },
+    { id: 2, nickname: "익명_7902", holdingLabel: "TSLA 장기", content: "EV 시장 전체가 더 크게 빠졌다는 게 핵심. 테슬라가 가격전쟁에서 이기는 쪽이네.", createdAt: T16JL + 33*60_000 + m(5), likes: 24 },
+    { id: 3, nickname: "익명_1436", holdingLabel: "60주 보유", content: "모델Y 하나로 35%면 단일 모델 리스크도 같이 봐야 하긴 함.", createdAt: T16JL + 33*60_000 + m(14), likes: 13 },
+  ],
+  525: [
+    { id: 1, nickname: "익명_9014", holdingLabel: "NVDA 보유", content: "생산 중이라는 게 매출 인식 시점이랑은 다를 수 있으니 다음 실적 가이던스가 진짜 확인이지.", createdAt: T16JL + 42*60_000 + m(-6), likes: 31 },
+    { id: 2, nickname: "익명_3762", holdingLabel: "80주 보유", content: "CEO가 직접 반박한 거 자체가 지연설이 시장에서 꽤 퍼졌었다는 증거같음.", createdAt: T16JL + 42*60_000 + m(3), likes: 20 },
+    { id: 3, nickname: "익명_6519", holdingLabel: "관심종목", content: "대량 하드웨어 입고 얘기는 공급망 쪽에서도 확인될 거니까 지켜봐야지.", createdAt: T16JL + 42*60_000 + m(11), likes: 12 },
+  ],
+  526: [
+    { id: 1, nickname: "익명_1275", holdingLabel: "관심종목", content: "$700만이 특정 지역·특정 시점 추정치라는 거 감안해도 숫자 자체는 인상적이네.", createdAt: T16JL + 51*60_000 + m(-9), likes: 35 },
+    { id: 2, nickname: "익명_5608", holdingLabel: "TSLA 장기", content: "사이버캡 비용 절반이면 마진이 지금보다 더 벌어진다는 거잖아. 로보택시 스토리 계속 강해짐.", createdAt: T16JL + 51*60_000 + m(4), likes: 23 },
+    { id: 3, nickname: "익명_2951", holdingLabel: "70주 보유", content: "가동률·플릿 규모 확장 속도가 실제 수익성 확정하는 변수겠다.", createdAt: T16JL + 51*60_000 + m(16), likes: 14 },
+  ],
+  527: [
+    { id: 1, nickname: "익명_3810", holdingLabel: "TSLA 장기", content: "가격 안정화되는데 판매량도 늘어나는 건 수요 자체가 강하다는 뜻이지.", createdAt: T16JL + 60*60_000 + m(-5), likes: 28 },
+    { id: 2, nickname: "익명_9147", holdingLabel: "50주 보유", content: "68% YoY면 경쟁사들 성장률이랑 비교해봐야 진짜 그림이 나올 듯.", createdAt: T16JL + 60*60_000 + m(6), likes: 17 },
+    { id: 3, nickname: "익명_6284", holdingLabel: "관심종목", content: "유럽 보조금 정책 바뀌는 거 계속 체크해야 이 흐름 지속 가능성 판단됨.", createdAt: T16JL + 60*60_000 + m(13), likes: 10 },
+  ],
+  528: [
+    { id: 1, nickname: "익명_5537", holdingLabel: "40주 보유", content: "정치인 개인 매입이랑 실제 정책 변화는 별개니까 과도해석은 조심.", createdAt: T16JL + 69*60_000 + m(-4), likes: 24 },
+    { id: 2, nickname: "익명_8823", holdingLabel: "관심종목", content: "그래도 데이터센터 리츠·전력 인프라 쪽 관심 환기시키는 이벤트인 건 맞음.", createdAt: T16JL + 69*60_000 + m(5), likes: 16 },
+    { id: 3, nickname: "익명_1490", holdingLabel: "EQIX 보유", content: "주가는 -0.09%로 별 반응 없는데 상징성은 있는 뉴스네.", createdAt: T16JL + 69*60_000 + m(12), likes: 8 },
+  ],
+  529: [
+    { id: 1, nickname: "익명_7031", holdingLabel: "AAPL 보유", content: "Baltra 지연이면 온디바이스 AI 고도화 속도도 같이 늦어지는 거잖아.", createdAt: T16JL + 78*60_000 + m(-7), likes: 30 },
+    { id: 2, nickname: "익명_2384", holdingLabel: "관심종목", content: "인수 발표 나오면 관련 스타트업들 프리미엄 붙을 텐데 어디일지 궁금하네.", createdAt: T16JL + 78*60_000 + m(3), likes: 19 },
+    { id: 3, nickname: "익명_9605", holdingLabel: "30주 보유", content: "결국 Nvidia 의존을 못 벗어나는 흐름이면 애플 AI 스토리 밸류에이션엔 마이너스지.", createdAt: T16JL + 78*60_000 + m(15), likes: 12 },
+  ],
+  530: [
+    { id: 1, nickname: "익명_3742", holdingLabel: "관심종목", content: "일중 +17%면 저가매수 세력도 꽤 있다는 거네. 방향성보다 변동성 확대로 봐야할듯.", createdAt: T16JL + 87*60_000 + m(-6), likes: 27 },
+    { id: 2, nickname: "익명_8256", holdingLabel: "SPCX 보유", content: "IPO가 깨진 거 심리적으로 크지. 지지선 다시 잡히는지 봐야함.", createdAt: T16JL + 87*60_000 + m(4), likes: 20 },
+    { id: 3, nickname: "익명_1573", holdingLabel: "관심종목", content: "펀더멘털은 별개인데 주가가 아직 재평가 과정인 듯. 발사 스케줄이나 스타십 소식 나오면 반응 클 것.", createdAt: T16JL + 87*60_000 + m(11), likes: 13 },
+  ],
+  531: [
+    { id: 1, nickname: "익명_2867", holdingLabel: "ASML 보유", content: "가이던스 상향폭이 크다. AI 반도체 투자 사이클이 아직 초반이라는 증거 같음.", createdAt: T16JL + 96*60_000 + m(-8), likes: 39 },
+    { id: 2, nickname: "익명_7194", holdingLabel: "관심종목", content: "TeraFab 협업이 뭔지 구체적으로 더 나와야 할 듯. 머스크 생태계 확장이면 큰 뉴스인데.", createdAt: T16JL + 96*60_000 + m(2), likes: 25 },
+    { id: 3, nickname: "익명_4650", holdingLabel: "TSM 보유", content: "장비 캐파 늘어나면 파운드리 쪽에도 긍정적이지. 공급망 전체가 웜업되는 느낌.", createdAt: T16JL + 96*60_000 + m(13), likes: 16 },
+  ],
+  532: [
+    { id: 1, nickname: "익명_1728", holdingLabel: "SPY 보유", content: "역발상 지표긴 한데 과거에도 신호 뜨고 바로 안 빠진 적 많아서 참고만 해야지.", createdAt: T16JL + 105*60_000 + m(-5), likes: 34 },
+    { id: 2, nickname: "익명_6053", holdingLabel: "관심종목", content: "현금 없으면 추가 매수 여력도 없다는 거니까 상승 속도는 둔화될 수도.", createdAt: T16JL + 105*60_000 + m(6), likes: 22 },
+    { id: 3, nickname: "익명_3916", holdingLabel: "50주 보유", content: "헤지 비중 좀 늘려두는 게 나쁘지 않은 타이밍인 듯.", createdAt: T16JL + 105*60_000 + m(14), likes: 15 },
+  ],
+  533: [
+    { id: 1, nickname: "익명_8267", holdingLabel: "관심종목", content: "5천마일 넘게 개입 없이 갔으면 확실히 진전이지. 근데 공식 데이터는 아니니까 참고만.", createdAt: T16JL + 114*60_000 + m(-7), likes: 28 },
+    { id: 2, nickname: "익명_2530", holdingLabel: "90주 보유", content: "인플루언서 테스트가 배포 확대 여론 만드는 데 도움되긴 하네.", createdAt: T16JL + 114*60_000 + m(5), likes: 18 },
+    { id: 3, nickname: "익명_7845", holdingLabel: "관심종목", content: "실제 확대는 안전 통계·규제 기준이 결정할 거라 발표 나오는지 계속 봐야지.", createdAt: T16JL + 114*60_000 + m(12), likes: 11 },
+  ],
+  534: [
+    { id: 1, nickname: "익명_6378", holdingLabel: "TSLA 장기", content: "만족도가 이 정도면 장기 수요 기반은 확실히 견조하다는 근거가 되네.", createdAt: T16JL + 123*60_000 + m(-6), likes: 26 },
+    { id: 2, nickname: "익명_3021", holdingLabel: "관심종목", content: "표본 규모나 방법론은 좀 더 봐야겠지만 방향성 자체는 긍정적임.", createdAt: T16JL + 123*60_000 + m(4), likes: 15 },
+    { id: 3, nickname: "익명_9457", holdingLabel: "60주 보유", content: "모델Y 유럽 1위 소식이랑 같이 보면 EV 시장 구조적 성장 스토리가 더 힘 받는 느낌.", createdAt: T16JL + 123*60_000 + m(11), likes: 9 },
+  ],
+  535: [
+    { id: 1, nickname: "익명_2760", holdingLabel: "GOOGL 보유", content: "34% 이미 오른 상태니까 지금 진입은 밸류에이션 체크하고 들어가야 함.", createdAt: T16JL + 132*60_000 + m(-8), likes: 32 },
+    { id: 2, nickname: "익명_8145", holdingLabel: "관심종목", content: "버핏이 직접 주도했다는 거면 추가 매수 가능성도 열려있다고 봐야지.", createdAt: T16JL + 132*60_000 + m(3), likes: 21 },
+    { id: 3, nickname: "익명_4392", holdingLabel: "40주 보유", content: "검색+클라우드+제미나이 조합을 가치투자 관점에서도 매력적으로 봤다는 게 포인트.", createdAt: T16JL + 132*60_000 + m(16), likes: 13 },
+  ],
+  536: [
+    { id: 1, nickname: "익명_1937", holdingLabel: "AAPL 보유", content: "중국 아이폰 판매에 AI 기능 부재가 컸는데 이거로 좀 풀리겠다.", createdAt: T16JL + 141*60_000 + m(-5), likes: 29 },
+    { id: 2, nickname: "익명_6483", holdingLabel: "관심종목", content: "알리바바 클라우드·AI 사업에도 긍정적이네. 협업이 생각보다 깊게 들어가는 듯.", createdAt: T16JL + 141*60_000 + m(6), likes: 18 },
+    { id: 3, nickname: "익명_3208", holdingLabel: "20주 보유", content: "실제 출시 일정이랑 기능 범위가 중국 한정인지 글로벌 동등인지가 관전포인트.", createdAt: T16JL + 141*60_000 + m(14), likes: 10 },
+  ],
   // ── 2026-07-14 신규 ──────────────────────────────────────────────────────
   509: [
     { id: 1, nickname: "익명_7311", holdingLabel: "관심종목", content: "Implied +34면 개장부터 갭업 각인데, Core 2.6%가 지속되는지가 진짜야.", createdAt: T15JL - m(8), likes: 54 },

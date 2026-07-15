@@ -430,6 +430,25 @@ const PAIRS = [
   { ko: 'tsla-fsd-1435-first-drive-20260715.svg', en: 'tsla-fsd-1435-first-drive-20260715-en.svg', label: 'TSLA_FSD_1435', date: '20260715' },
   { ko: 'spcx-james-quiver-20260715.svg', en: 'spcx-james-quiver-20260715-en.svg', label: 'SPCX_James_Quiver', date: '20260715' },
   { ko: 'summary-20260715.svg', en: 'summary-20260715-en.svg', label: '7월15일_요약', date: '20260715' },
+
+  // ── 2026-07-16 ─────────────────────────────────────────────────────────
+  { ko: 'tsla-fsd-2026-21-100-eu-20260716.svg', en: 'tsla-fsd-2026-21-100-eu-20260716-en.svg', label: 'tsla-fsd-2026-21-100-eu', date: '20260716' },
+  { ko: 'tsla-optimus-1m-10m-lines-20260716.svg', en: 'tsla-optimus-1m-10m-lines-20260716-en.svg', label: 'tsla-optimus-1m-10m-lines', date: '20260716' },
+  { ko: 'buffett-inflation-value-comments-20260716.svg', en: 'buffett-inflation-value-comments-20260716-en.svg', label: 'buffett-inflation-value-comments', date: '20260716' },
+  { ko: 'tsla-price-cuts-winding-down-kbb-20260716.svg', en: 'tsla-price-cuts-winding-down-kbb-20260716-en.svg', label: 'tsla-price-cuts-winding-down-kbb', date: '20260716' },
+  { ko: 'nvda-jensen-vera-rubin-production-20260716.svg', en: 'nvda-jensen-vera-rubin-production-20260716-en.svg', label: 'nvda-jensen-vera-rubin-production', date: '20260716' },
+  { ko: 'tsla-robotaxi-texas-economics-20260716.svg', en: 'tsla-robotaxi-texas-economics-20260716-en.svg', label: 'tsla-robotaxi-texas-economics', date: '20260716' },
+  { ko: 'tsla-model-y-europe-bestseller-20260716.svg', en: 'tsla-model-y-europe-bestseller-20260716-en.svg', label: 'tsla-model-y-europe-bestseller', date: '20260716' },
+  { ko: 'trump-equinix-data-center-stock-20260716.svg', en: 'trump-equinix-data-center-stock-20260716-en.svg', label: 'trump-equinix-data-center-stock', date: '20260716' },
+  { ko: 'aapl-ai-chip-acquisition-hunt-20260716.svg', en: 'aapl-ai-chip-acquisition-hunt-20260716-en.svg', label: 'aapl-ai-chip-acquisition-hunt', date: '20260716' },
+  { ko: 'spcx-below-ipo-price-20260716.svg', en: 'spcx-below-ipo-price-20260716-en.svg', label: 'spcx-below-ipo-price', date: '20260716' },
+  { ko: 'asml-earnings-beat-terafab-musk-20260716.svg', en: 'asml-earnings-beat-terafab-musk-20260716-en.svg', label: 'asml-earnings-beat-terafab-musk', date: '20260716' },
+  { ko: 'bofa-fms-cash-level-sell-signal-20260716.svg', en: 'bofa-fms-cash-level-sell-signal-20260716-en.svg', label: 'bofa-fms-cash-level-sell-signal', date: '20260716' },
+  { ko: 'tsla-v14-lite-coast-to-coast-20260716.svg', en: 'tsla-v14-lite-coast-to-coast-20260716-en.svg', label: 'tsla-v14-lite-coast-to-coast', date: '20260716' },
+  { ko: 'ev-owners-switch-back-survey-20260716.svg', en: 'ev-owners-switch-back-survey-20260716-en.svg', label: 'ev-owners-switch-back-survey', date: '20260716' },
+  { ko: 'googl-buffett-berkshire-stake-34pct-20260716.svg', en: 'googl-buffett-berkshire-stake-34pct-20260716-en.svg', label: 'googl-buffett-berkshire-stake-34pct', date: '20260716' },
+  { ko: 'aapl-ondevice-ai-china-qwen-20260716.svg', en: 'aapl-ondevice-ai-china-qwen-20260716-en.svg', label: 'aapl-ondevice-ai-china-qwen', date: '20260716' },
+  { ko: 'summary-20260716.svg', en: 'summary-20260716-en.svg', label: '7월16일_요약', date: '20260716' },
 ];
 
 // macOS librsvg/Pango는 일부 이모지를 렌더링하지 못해 크래시 발생
