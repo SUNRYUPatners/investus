@@ -1,49 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#040a14"/>
-      <stop offset="100%" style="stop-color:#0a1020"/>
+      <stop offset="0%" style="stop-color:#0a0f14"/>
+      <stop offset="100%" style="stop-color:#150a20"/>
     </linearGradient>
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#c084fc"/>
-      <stop offset="100%" style="stop-color:#e9d5ff"/>
+      <stop offset="100%" style="stop-color:#9333ea"/>
     </linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#c084fc" stroke-width="0.3" stroke-opacity="0.08"/>
+
   <rect x="60" y="60" width="960" height="4" fill="url(#grad)" rx="2"/>
-  <rect x="60" y="86" width="84" height="34" rx="8" fill="#6b21a8"/>
-  <text x="102.0" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">ARKK</text>
-  <rect x="174" y="86" width="120" height="34" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
-  <text x="234.0" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#c084fc" text-anchor="middle">FED · QT</text>
-  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.15</text>
-  <text x="540" y="175" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">Cathie — QT는 bogeyman · Fed BS $8.5T→$6.7T</text>
-  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="116" fill="#c084fc" text-anchor="middle">$6.7T</text>
-  <text x="540" y="358" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#e9d5ff" text-anchor="middle">현재 Fed Balance Sheet</text>
-  <text x="540" y="398" font-family="Arial, sans-serif" font-size="19" fill="#9ca3af" text-anchor="middle">Peak $8.5T → $6.7T · QT bogeyman</text>
+  <rect x="60" y="90" width="90" height="36" rx="8" fill="#c084fc"/>
+  <text x="105" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">ARKK</text>
+  <rect x="164" y="90" width="70" height="36" rx="8" fill="none" stroke="#c084fc" stroke-width="2"/>
+  <text x="199" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#c084fc" text-anchor="middle">매크로</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#5a4a7a" text-anchor="end">2026.07.15</text>
 
-  <line x1="80" y1="430" x2="1000" y2="430" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle">Cathie — QT는 bogeyman · Fed BS $8.5T→$6.7T</text>
+  <text x="540" y="252" font-family="Arial Black, Arial" font-weight="900" font-size="54" fill="#c084fc" text-anchor="middle">Bogeyman</text>
+  <text x="540" y="296" font-family="Arial, sans-serif" font-size="20" fill="#a08acc" text-anchor="middle">Cathie: QT는 bogeyman이지 위협이 아님. Fed 대차대조표 $8.5T→$6.7T. Warsh가 이후</text>
 
-<rect x="80" y="460" width="290" height="180" rx="16" fill="#1a0e2e" stroke="#c084fc" stroke-width="2"/>
-  <text x="225.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Peak</text>
-  <text x="225.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#e9d5ff" text-anchor="middle">$8.5T</text>
-  <text x="225.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">과거 피크</text>
-  <rect x="395" y="460" width="290" height="180" rx="16" fill="#1a0e2e" stroke="#c084fc" stroke-width="2"/>
-  <text x="540.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Now</text>
-  <text x="540.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#e9d5ff" text-anchor="middle">$6.7T</text>
-  <text x="540.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">축소 후</text>
-  <rect x="710" y="460" width="290" height="180" rx="16" fill="#1a0e2e" stroke="#c084fc" stroke-width="2"/>
-  <text x="855.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Warsh</text>
-  <text x="855.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="40" fill="#e9d5ff" text-anchor="middle">QT 재개 가능</text>
-  <text x="855.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">later</text>
-    <rect x="80" y="690" width="920" height="168" rx="16" fill="#0f172a" stroke="#374151" stroke-width="1.5"/>
-  <text x="540" y="728" font-family="Arial, sans-serif" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">핵심 배경</text>
-  <text x="540" y="772" font-family="Arial, sans-serif" font-size="23" fill="#e5e7eb" text-anchor="middle">Fed BS $8.5T → $6.7T</text>
-  <text x="540" y="816" font-family="Arial, sans-serif" font-size="23" fill="#e5e7eb" text-anchor="middle">Kevin Warsh may reinstate QT later</text>
+  <rect x="60" y="336" width="960" height="84" rx="14" fill="#1a0f2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="540" y="369" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#a08acc" text-anchor="middle">Cathie: QT = bogeyman, not a threat</text>
+  <text x="540" y="398" font-family="Arial, sans-serif" font-size="15" fill="#6a5a8a" text-anchor="middle">Fed BS $8.5T → $6.7T</text>
 
-  <line x1="80" y1="878" x2="1000" y2="878" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="446" width="460" height="290" rx="16" fill="#1a0f2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="290" y="480" font-family="Arial Black, Arial" font-weight="900" font-size="19" fill="#a08acc" text-anchor="middle">핵심 사실</text>
+  
+  <text x="290" y="575.0" font-family="Arial, sans-serif" font-size="20" fill="#a08acc" text-anchor="middle">Cathie: QT = bogeyman, not a threat</text>
+  <text x="290" y="607.0" font-family="Arial, sans-serif" font-size="20" fill="#a08acc" text-anchor="middle">Fed BS $8.5T → $6.7T</text>
+  <text x="290" y="639.0" font-family="Arial, sans-serif" font-size="20" fill="#6a5a8a" text-anchor="middle">Kevin Warsh may reinstate QT later</text>
 
-  <text x="540" y="908" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Source: Cathie Wood commentary (2026.07.15)</text>
-  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
-  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.15 · investus.kr SRP 최고투자책임자 발행</text>
+  <rect x="560" y="446" width="460" height="290" rx="16" fill="#1a0f2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="790" y="480" font-family="Arial Black, Arial" font-weight="900" font-size="19" fill="#a08acc" text-anchor="middle">투자 시사점</text>
+  
+  <text x="790" y="575.0" font-family="Arial, sans-serif" font-size="20" fill="#a08acc" text-anchor="middle">성장/ARK 스타일 자산에 유동성 공포가</text>
+  <text x="790" y="607.0" font-family="Arial, sans-serif" font-size="20" fill="#a08acc" text-anchor="middle">과도했는지 재평가 촉매다.</text>
+  <text x="790" y="639.0" font-family="Arial, sans-serif" font-size="20" fill="#a08acc" text-anchor="middle">Warsh QT 재개 리스크는 남는다.</text>
+
+  <rect x="60" y="762" width="960" height="96" rx="14" fill="#1a0f2e" stroke="#c084fc" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="540" y="802" font-family="Arial, sans-serif" font-size="17" fill="#a08acc" text-anchor="middle">Cathie: QT는 bogeyman이지 위협이 아님. Fed 대차대조표 $8.5T→$6.7T. Warsh가 이후 QT를 재개할 수 있다고</text>
+  <text x="540" y="830" font-family="Arial, sans-serif" font-size="14" fill="#5a4a7a" text-anchor="middle">ARKK · 2026.07.15</text>
+
+  <rect x="60" y="898" width="960" height="4" fill="url(#grad)" rx="2" opacity="0.5"/>
+  <text x="540" y="938" font-family="Arial, sans-serif" font-size="17" fill="#5a4a7a" text-anchor="middle">investus.kr  SRP 최고투자책임자 발행</text>
 </svg>

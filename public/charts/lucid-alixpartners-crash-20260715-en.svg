@@ -1,49 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#040a14"/>
-      <stop offset="100%" style="stop-color:#0a1020"/>
+      <stop offset="0%" style="stop-color:#0a0f14"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
     </linearGradient>
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ef4444"/>
-      <stop offset="100%" style="stop-color:#f87171"/>
+      <stop offset="0%" style="stop-color:#ff4d6d"/>
+      <stop offset="100%" style="stop-color:#e11d48"/>
     </linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
+  <line x1="0" y1="360" x2="1080" y2="360" stroke="#ff4d6d" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="0" y1="720" x2="1080" y2="720" stroke="#ff4d6d" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="360" y1="0" x2="360" y2="1080" stroke="#ff4d6d" stroke-width="0.3" stroke-opacity="0.08"/>
+  <line x1="720" y1="0" x2="720" y2="1080" stroke="#ff4d6d" stroke-width="0.3" stroke-opacity="0.08"/>
+
   <rect x="60" y="60" width="960" height="4" fill="url(#grad)" rx="2"/>
-  <rect x="60" y="86" width="84" height="34" rx="8" fill="#7f1d1d"/>
-  <text x="102.0" y="109" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">LCID</text>
-  <rect x="174" y="86" width="166" height="34" rx="8" fill="none" stroke="#ef4444" stroke-width="1.5"/>
-  <text x="257.0" y="109" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#ef4444" text-anchor="middle">RESTRUCTURING</text>
-  <text x="1020" y="109" font-family="Arial, sans-serif" font-size="14" fill="#374151" text-anchor="end">2026.07.15</text>
-  <text x="540" y="175" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#ffffff" text-anchor="middle">Lucid ~-41.74% · Hires AlixPartners — Not Bankrupt Yet</text>
-  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="116" fill="#ef4444" text-anchor="middle">-41.74%</text>
-  <text x="540" y="358" font-family="Arial Black, Arial" font-weight="900" font-size="26" fill="#f87171" text-anchor="middle">Session plunge (overlay 3.210)</text>
-  <text x="540" y="398" font-family="Arial, sans-serif" font-size="19" fill="#9ca3af" text-anchor="middle">AlixPartners hired · no bankruptcy filing yet</text>
+  <rect x="60" y="90" width="90" height="36" rx="8" fill="#ff4d6d"/>
+  <text x="105" y="114" font-family="Arial Black, Arial" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">LCID</text>
+  <rect x="164" y="90" width="82.24000000000001" height="36" rx="8" fill="none" stroke="#ff4d6d" stroke-width="2"/>
+  <text x="205.12" y="114" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#ff4d6d" text-anchor="middle">BREAKING</text>
+  <text x="1020" y="114" font-family="Arial, sans-serif" font-size="16" fill="#8a4050" text-anchor="end">2026.07.15</text>
 
-  <line x1="80" y1="430" x2="1000" y2="430" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="178" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle">Lucid ~-41.74% · Hires AlixPartners — Not</text>
+  <text x="540" y="226" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle">Bankrupt Yet</text>
+  <text x="540" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="54" fill="#ff4d6d" text-anchor="middle">-41.74%</text>
+  <text x="540" y="344" font-family="Arial, sans-serif" font-size="20" fill="#e07080" text-anchor="middle">LCID ~-41.74% (overlay 3.210). Hired AlixPartners. Not bankrupt yet. Musk</text>
 
-<rect x="80" y="460" width="290" height="180" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
-  <text x="225.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Price</text>
-  <text x="225.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="52" fill="#f87171" text-anchor="middle">3.210</text>
-  <text x="225.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">~-41.74%</text>
-  <rect x="395" y="460" width="290" height="180" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
-  <text x="540.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Advisor</text>
-  <text x="540.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#f87171" text-anchor="middle">AlixPartners</text>
-  <text x="540.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">Restructuring</text>
-  <rect x="710" y="460" width="290" height="180" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
-  <text x="855.0" y="502" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af" text-anchor="middle">Status</text>
-  <text x="855.0" y="572" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="#f87171" text-anchor="middle">NOT bankrupt</text>
-  <text x="855.0" y="612" font-family="Arial, sans-serif" font-size="18" fill="#d1d5db" text-anchor="middle">No filing yet</text>
-    <rect x="80" y="690" width="920" height="168" rx="16" fill="#0f172a" stroke="#374151" stroke-width="1.5"/>
-  <text x="540" y="728" font-family="Arial, sans-serif" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">KEY BACKGROUND</text>
-  <text x="540" y="772" font-family="Arial, sans-serif" font-size="23" fill="#e5e7eb" text-anchor="middle">Not filed bankruptcy yet</text>
-  <text x="540" y="816" font-family="Arial, sans-serif" font-size="19" fill="#e5e7eb" text-anchor="middle">Musk: Rivian/Lucid tracking toward bankruptcy unless something changes</text>
+  <rect x="60" y="384" width="960" height="84" rx="14" fill="#2a0f0f" stroke="#ff4d6d" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="540" y="417" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#e07080" text-anchor="middle">LCID ~-41.74% · overlay 3.210</text>
+  <text x="540" y="446" font-family="Arial, sans-serif" font-size="15" fill="#8a5040" text-anchor="middle">Hired AlixPartners (restructuring)</text>
 
-  <line x1="80" y1="878" x2="1000" y2="878" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="494" width="460" height="290" rx="16" fill="#2a0f0f" stroke="#ff4d6d" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="290" y="528" font-family="Arial Black, Arial" font-weight="900" font-size="19" fill="#e07080" text-anchor="middle">KEY FACTS</text>
+  
+  <text x="290" y="591.0" font-family="Arial, sans-serif" font-size="20" fill="#e07080" text-anchor="middle">LCID ~-41.74% · overlay 3.210</text>
+  <text x="290" y="623.0" font-family="Arial, sans-serif" font-size="20" fill="#e07080" text-anchor="middle">Hired AlixPartners (restructuring)</text>
+  <text x="290" y="655.0" font-family="Arial, sans-serif" font-size="20" fill="#8a5040" text-anchor="middle">Not filed bankruptcy yet</text>
+  <text x="290" y="687.0" font-family="Arial, sans-serif" font-size="20" fill="#8a5040" text-anchor="middle">Musk: Rivian/Lucid tracking toward</text>
+  <text x="290" y="719.0" font-family="Arial, sans-serif" font-size="20" fill="#8a5040" text-anchor="middle">bankruptcy unless something changes</text>
 
-  <text x="540" y="908" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle">Source: market overlay · Musk comments (2026.07.15)</text>
-  <rect x="0" y="1020" width="1080" height="60" fill="#020810"/>
-  <text x="540" y="1056" font-family="Arial, sans-serif" font-size="13" fill="#374151" text-anchor="middle">INVESTUS · 2026.07.15 · investus.kr SRP Chief Investment Officer</text>
+  <rect x="560" y="494" width="460" height="290" rx="16" fill="#2a0f0f" stroke="#ff4d6d" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="790" y="528" font-family="Arial Black, Arial" font-weight="900" font-size="19" fill="#e07080" text-anchor="middle">INVESTMENT IMPLICATIONS</text>
+  
+  <text x="790" y="591.0" font-family="Arial, sans-serif" font-size="20" fill="#e07080" text-anchor="middle">An AlixPartners hire signals</text>
+  <text x="790" y="623.0" font-family="Arial, sans-serif" font-size="20" fill="#e07080" text-anchor="middle">balance-sheet stress already priced</text>
+  <text x="790" y="655.0" font-family="Arial, sans-serif" font-size="20" fill="#e07080" text-anchor="middle">in.</text>
+  <text x="790" y="687.0" font-family="Arial, sans-serif" font-size="20" fill="#e07080" text-anchor="middle">Reassess survival premium vs EV</text>
+  <text x="790" y="719.0" font-family="Arial, sans-serif" font-size="20" fill="#e07080" text-anchor="middle">peers.</text>
+
+  <rect x="60" y="810" width="960" height="96" rx="14" fill="#2a0f0f" stroke="#ff4d6d" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="540" y="850" font-family="Arial, sans-serif" font-size="17" fill="#e07080" text-anchor="middle">LCID ~-41.74% (overlay 3.210). Hired AlixPartners. Not bankrupt yet. Musk commented on</text>
+  <text x="540" y="878" font-family="Arial, sans-serif" font-size="14" fill="#7a4040" text-anchor="middle">LCID · 2026.07.15</text>
+
+  <rect x="60" y="946" width="960" height="4" fill="url(#grad)" rx="2" opacity="0.5"/>
+  <text x="540" y="986" font-family="Arial, sans-serif" font-size="17" fill="#8a4050" text-anchor="middle">investus.kr  SRP Chief Investment Officer</text>
 </svg>

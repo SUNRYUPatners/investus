@@ -7492,12 +7492,12 @@ export const SEED_REPORTS: Report[] = [
 
   {
     id:            "seed-540",
-    title:         "2026.07.15 오늘의 한장 요약 — 핵심 6가지",
-    summary:       "CPI −0.4% · Chamath TSLA~$600 · Robotaxi 765 · IBM −28% · GOOGL 1.6GW · TSMC $140B. 나머지는 개별 리포트.",
-    body:          "■ 2026.07.15 한장 핵심 6\n\n1. CPI −0.4% · Core 2.6%\n2. Chamath SPCX→TSLA 50% 프리미엄 → ~$600\n3. Robotaxi 플릿 765\n4. IBM 실적 미스 · 주가 ~−28%\n5. GOOGL Steel River 1.6GW\n6. TSMC TTM $140B (+31%)\n\n상세·추가 이슈는 개별 리포트에서 확인.\n\ninvestus.kr SRP 최고투자책임자 발행",
-    titleEn:       "Daily Snapshot 2026.07.15 — Top 6",
-    summaryEn:     "CPI −0.4% · Chamath TSLA~$600 · Robotaxi 765 · IBM −28% · GOOGL 1.6GW · TSMC $140B. More in individual reports.",
-    bodyEn:        "■ 2026.07.15 Top 6\n\n1. CPI −0.4% · Core 2.6%\n2. Chamath SPCX→TSLA 50% premium → ~$600\n3. Robotaxi fleet 765\n4. IBM miss · stock ~−28%\n5. GOOGL Steel River 1.6GW\n6. TSMC TTM $140B (+31%)\n\nDetails and other stories are in individual reports.\n\ninvestus.kr SRP Chief Investment Officer",
+    title:         "2026.07.15 오늘의 한장 요약 — IBM 실적 충격 외 핵심 9가지",
+    summary:       "BREAKING IBM Q2 미스 −28% · CPI −0.4% · Chamath TSLA~$600 · Robotaxi 765 · GOOGL 1.6GW · TSMC $140B · JPM $16.9B · NFLX $169 · SNDK $3,100 · LCID −41.74%. 나머지는 개별 리포트.",
+    body:          "■ 2026.07.15 한장 핵심\n\n🔴 BREAKING: IBM Q2 매출 $17.2B 미스 — 시총 ~$65B 증발 · 주가 ~−28%\n\n1. CPI −0.4% · Core 2.6%\n2. Chamath SPCX→TSLA 50% 프리미엄 → ~$600\n3. Robotaxi 플릿 765\n4. GOOGL Steel River 1.6GW\n5. TSMC TTM $140B (+31%)\n6. JPM NI $16.9B · ROTCE 23%\n7. NFLX 모델 $169(2031)\n8. SNDK Evercore PT $3,100\n9. LCID −41.74% · AlixPartners 영입\n\n상세·추가 이슈는 개별 리포트에서 확인.\n\ninvestus.kr SRP 최고투자책임자 발행",
+    titleEn:       "Daily Snapshot 2026.07.15 — IBM Earnings Shock + Top 9",
+    summaryEn:     "BREAKING IBM Q2 miss −28% · CPI −0.4% · Chamath TSLA~$600 · Robotaxi 765 · GOOGL 1.6GW · TSMC $140B · JPM $16.9B · NFLX $169 · SNDK $3,100 · LCID −41.74%. More in individual reports.",
+    bodyEn:        "■ 2026.07.15 Top Stories\n\n🔴 BREAKING: IBM Q2 revenue $17.2B miss — ~$65B mcap wiped out · stock ~−28%\n\n1. CPI −0.4% · Core 2.6%\n2. Chamath SPCX→TSLA 50% premium → ~$600\n3. Robotaxi fleet 765\n4. GOOGL Steel River 1.6GW\n5. TSMC TTM $140B (+31%)\n6. JPM NI $16.9B · ROTCE 23%\n7. NFLX model $169 (2031)\n8. SNDK Evercore PT $3,100\n9. LCID −41.74% · hired AlixPartners\n\nDetails and other stories are in individual reports.\n\ninvestus.kr SRP Chief Investment Officer",
     category:      "특집",
     categoryColor: "mint",
     subject:       "한장요약",

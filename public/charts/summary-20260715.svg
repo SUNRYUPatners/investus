@@ -1,62 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
-    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="33%" style="stop-color:#00e5a0"/><stop offset="66%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#ef4444"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
-  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
-
-  <text x="540" y="52" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
-  <text x="540" y="96" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.07.15 한장 요약</text>
-  <text x="540" y="128" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">오늘의 핵심 6가지</text>
-  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
-
-  <!-- 1 CPI -->
-  <rect x="60" y="166" width="960" height="118" rx="14" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
-  <rect x="60" y="166" width="8" height="118" rx="4" fill="#60a5fa"/>
-  <text x="116" y="214" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#60a5fa">CPI 6월 인플레 급락</text>
-  <text x="116" y="254" font-family="Arial" font-size="22" fill="#9ca3af">Core 2.6% · Hassett “약 6년 만의 최고”</text>
-  <text x="960" y="248" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#60a5fa" text-anchor="end">−0.4%</text>
-
-  <!-- 2 Chamath -->
-  <rect x="60" y="300" width="960" height="118" rx="14" fill="#0a0a14" stroke="#c084fc" stroke-width="2"/>
-  <rect x="60" y="300" width="8" height="118" rx="4" fill="#c084fc"/>
-  <text x="116" y="348" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc">Chamath · SPCX→TSLA 인수 논리</text>
-  <text x="116" y="388" font-family="Arial" font-size="22" fill="#9ca3af">50% 프리미엄 · 결합 시총 약 $2.25T</text>
-  <text x="960" y="382" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#c084fc" text-anchor="end">$600</text>
-
-  <!-- 3 Robotaxi -->
-  <rect x="60" y="434" width="960" height="118" rx="14" fill="#0a1a0a" stroke="#00e5a0" stroke-width="2"/>
-  <rect x="60" y="434" width="8" height="118" rx="4" fill="#00e5a0"/>
-  <text x="116" y="482" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#00e5a0">Tesla Robotaxi 플릿</text>
-  <text x="116" y="522" font-family="Arial" font-size="22" fill="#9ca3af">+4대 · Unsupervised 39 · Austin 28</text>
-  <text x="960" y="516" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#00e5a0" text-anchor="end">765</text>
-
-  <!-- 4 IBM -->
-  <rect x="60" y="568" width="960" height="118" rx="14" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
-  <rect x="60" y="568" width="8" height="118" rx="4" fill="#ef4444"/>
-  <text x="116" y="616" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#ef4444">IBM Q2 실적 미스</text>
-  <text x="116" y="656" font-family="Arial" font-size="22" fill="#fca5a5">매출 $17.2B · 시총 약 $65B↓ · CHIPS $1B</text>
-  <text x="960" y="650" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#ef4444" text-anchor="end">−28%</text>
-
-  <!-- 5 GOOGL + TSMC half -->
-  <rect x="60" y="702" width="464" height="130" rx="14" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
-  <rect x="60" y="702" width="8" height="130" rx="4" fill="#60a5fa"/>
-  <text x="112" y="752" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">GOOGL Steel River</text>
-  <text x="112" y="794" font-family="Arial" font-size="20" fill="#9ca3af">offtake 100%</text>
-  <text x="480" y="800" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#60a5fa" text-anchor="end">1.6GW</text>
-
-  <rect x="556" y="702" width="464" height="130" rx="14" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
-  <rect x="556" y="702" width="8" height="130" rx="4" fill="#60a5fa"/>
-  <text x="608" y="752" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">TSMC TTM 매출</text>
-  <text x="608" y="794" font-family="Arial" font-size="20" fill="#9ca3af">+31% YoY</text>
-  <text x="980" y="800" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#60a5fa" text-anchor="end">$140B</text>
-
-  <!-- footer note -->
-  <rect x="0" y="860" width="1080" height="2" fill="url(#flow)" opacity=".5"/>
-  <text x="540" y="910" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">나머지 소식은 개별 리포트에서 확인 · SPCX · NFLX · JPM · FSD…</text>
-
-  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
-  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.15 · NOT FINANCIAL ADVICE</text>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <!-- Header -->
+  <text x="540" y="52" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#60a5fa" text-anchor="middle" letter-spacing="4">INVESTUS 오늘의 하이라이트</text>
+  <text x="540" y="86" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026년 7월 15일 — 주요 뉴스 총정리</text>
+  <line x1="60" y1="104" x2="1020" y2="104" stroke="#1f2937" stroke-width="1"/>
+  <!-- Top hero: IBM miss -->
+  <rect x="60" y="116" width="960" height="132" rx="16" fill="#1a0505" stroke="#ef4444" stroke-width="2"/>
+  <rect x="475" y="128" width="130" height="30" rx="15" fill="#ef4444"/>
+  <text x="540" y="148" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="white" text-anchor="middle">BREAKING</text>
+  <text x="540" y="186" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">IBM Q2 매출 $17.2B 미스 — 시총 ~$65B 증발</text>
+  <text x="540" y="216" font-family="Arial" font-size="19" fill="#fca5a5" text-anchor="middle">Infra -7% · +1% YoY · Krishna: capex to servers/memory</text>
+  <text x="540" y="240" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">주가 약 -24%~-28% · 하이브리드/AI 스토리와 인프라 실적 괴리</text>
+  <!-- Row 1 -->
+  <rect x="60" y="264" width="305" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="212" y="296" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">매크로</text>
+  <text x="212" y="328" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">CPI -0.4%</text>
+  <text x="212" y="360" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2020.4월 이후 최대 하락</text>
+  <rect x="387" y="264" width="305" height="120" rx="14" fill="#061209" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="540" y="296" font-family="Arial" font-size="16" fill="#4ade80" text-anchor="middle">TSLA·SPCX</text>
+  <text x="540" y="328" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Chamath ~$600</text>
+  <text x="540" y="360" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">SPCX 50% 프리미엄 시나리오</text>
+  <rect x="714" y="264" width="306" height="120" rx="14" fill="#061209" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="867" y="296" font-family="Arial" font-size="16" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="867" y="328" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">플릿 765대</text>
+  <text x="867" y="360" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Unsupervised 39 · Austin 28</text>
+  <!-- Row 2 -->
+  <rect x="60" y="400" width="305" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="212" y="432" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">GOOGL</text>
+  <text x="212" y="464" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">1.6GW</text>
+  <text x="212" y="496" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Steel River · 2029까지 solar+ESS</text>
+  <rect x="387" y="400" width="305" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="432" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">TSM</text>
+  <text x="540" y="464" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">TTM $140B</text>
+  <text x="540" y="496" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">+31% YoY · YTD $76.0B</text>
+  <rect x="714" y="400" width="306" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="867" y="432" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">JPM</text>
+  <text x="867" y="464" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">NI $16.9B</text>
+  <text x="867" y="496" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">ROTCE 23% · Markets +35%</text>
+  <!-- Row 3 -->
+  <rect x="60" y="536" width="305" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="212" y="568" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">NFLX</text>
+  <text x="212" y="600" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">모델 $169</text>
+  <text x="212" y="632" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2031 목표가 경로 · PE 23.6</text>
+  <rect x="387" y="536" width="305" height="120" rx="14" fill="#020c1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="568" font-family="Arial" font-size="16" fill="#60a5fa" text-anchor="middle">SNDK</text>
+  <text x="540" y="600" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">PT $3,100</text>
+  <text x="540" y="632" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Evercore · 업사이드 $4,000</text>
+  <rect x="714" y="536" width="306" height="120" rx="14" fill="#1a0505" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="867" y="568" font-family="Arial" font-size="16" fill="#ef4444" text-anchor="middle">LCID</text>
+  <text x="867" y="600" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">-41.74%</text>
+  <text x="867" y="632" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">AlixPartners 구조조정 고문 영입</text>
+  <!-- Bottom bar -->
+  <rect x="60" y="674" width="960" height="72" rx="14" fill="#0f172a" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="712" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="middle">오늘의 핵심 — IBM 실적 충격 · CPI 서프라이즈 · TSLA/SPCX 이슈 다수</text>
+  <text x="540" y="738" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">상세·추가 이슈는 개별 리포트에서 확인</text>
+  <!-- Mini highlights row -->
+  <rect x="60" y="766" width="960" height="130" rx="12" fill="#0a0f1a" stroke="#374151" stroke-width="1"/>
+  <text x="180" y="804" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="middle">XPEV</text>
+  <text x="180" y="830" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">VLA 2.0 유럽</text>
+  <text x="180" y="852" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle">2H 2026 카메라온리</text>
+  <line x1="300" y1="778" x2="300" y2="884" stroke="#374151" stroke-width="1"/>
+  <text x="420" y="804" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="middle">FNMA</text>
+  <text x="420" y="830" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">$193B Treasury</text>
+  <text x="420" y="852" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle">Burry 배수 결정</text>
+  <line x1="540" y1="778" x2="540" y2="884" stroke="#374151" stroke-width="1"/>
+  <text x="660" y="804" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX</text>
+  <text x="660" y="830" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">ARK +$21M</text>
+  <text x="660" y="852" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle">누적 ~$535.8M</text>
+  <line x1="780" y1="778" x2="780" y2="884" stroke="#374151" stroke-width="1"/>
+  <text x="900" y="804" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="900" y="830" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">SDI ESS $2–3.3B</text>
+  <text x="900" y="852" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle">Q2 2027 가동</text>
+  <text x="540" y="932" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">INVESTUS Daily Summary · 2026.07.15 · 전체 34개 리포트</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · 2026.07.15 · investus.kr SRP 최고투자책임자 발행</text>
 </svg>
