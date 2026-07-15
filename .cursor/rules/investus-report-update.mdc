@@ -1,5 +1,5 @@
 ---
-description: Investus 리포트 — SVG는 7/2~7/4 실제 파일을 레퍼런스로 직접 보고 따라 만든다
+description: Investus 리포트 — SVG는 7/2·7/3 실제 파일을 레퍼런스로 직접 보고 따라 만든다 (7/4 스타일 금지)
 globs: lib/reports.ts,lib/wallPosts.ts,lib/analystPosts.ts,public/charts/**/*.svg,scripts/export-report-pngs.js,.claude/commands/report-update.md
 alwaysApply: false
 ---
@@ -8,6 +8,6 @@ alwaysApply: false
 
 1. 스킬: `.cursor/skills/investus-report-update/SKILL.md` + `.claude/commands/report-update.md`
 2. **본문**: 상세 글 + `■ 투자시사점` / `■ Investment Implications` 필수
-3. **SVG**: 세부 폰트 규칙 폐기. **`public/charts/*20260702*.svg`, `*20260703*.svg`, `*20260704*.svg`를 직접 Read해서** 그 구조·밀도·폰트 크기를 그대로 따라 만든다. "투자 시사점" 박스를 이미지에 넣는 것도 허용(7/4 예시 참고) — 단 본문에는 항상 필수로 포함.
+3. **SVG**: **`public/charts/*20260702*.svg`, `*20260703*.svg`를 직접 Read해서** 그 구조(헤더 배지 → 제목 → 글로우 이펙트 히어로 → KPI 카드 2개 → 의미/코멘트 박스 → 캡션+트레이드마크)를 그대로 따라 만든다. `*20260704*.svg`(배경 그리드 + "핵심사실/투자시사점" 2단 카드 박스) 스타일은 **금지** — 2026-07-15에 반려됨. "투자 시사점" 라벨을 이미지에 박지 말고, 맥락은 의미/코멘트 박스에 자연스러운 문장으로만 녹인다 — 단 본문에는 항상 명시적 섹션으로 필수 포함.
 4. 팩트: 스크린샷 재 Read 대조. 숫자 창작 금지
 5. PNG는 오늘 date만. commit + `bash scripts/deploy.sh`
