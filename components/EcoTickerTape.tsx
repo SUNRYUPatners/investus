@@ -135,7 +135,7 @@ export function EcoTickerTape() {
           }));
 
         // Interleave: eco first, then sprinkle earnings so the tape feels like a calendar feed
-        const merged = [...eco];
+        const merged: TapeItem[] = [...eco];
         for (let i = 0; i < earn.length; i++) {
           const insertAt = Math.min(merged.length, (i + 1) * 2);
           merged.splice(insertAt, 0, earn[i]);
