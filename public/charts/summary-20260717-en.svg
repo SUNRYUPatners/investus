@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a1a14"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#60a5fa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <text x="540" y="55" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="110" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">Daily Snapshot 2026.07.17 — Top Stories</text>
+  <text x="540" y="150" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Robotaxi · QQQ Vol · Japan AI · TSMC · SPCX AI1 · SOX</text>
+  <line x1="80" y1="170" x2="1000" y2="170" stroke="#1f2937"/>
+  
+  <rect x="60" y="200" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="200" width="8" height="82" rx="4" fill="#4ade80"/>
+  <text x="100" y="236" font-family="Arial" font-size="28">🚕</text>
+  <text x="150" y="234" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">TSLA Robotaxi TX Fleet 175</text>
+  <text x="150" y="262" font-family="Arial" font-size="16" fill="#9ca3af">+58 added · ~$10.5M ann. rev · TXDMV peers</text>
+  <rect x="60" y="295" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="295" width="8" height="82" rx="4" fill="#60a5fa"/>
+  <text x="100" y="331" font-family="Arial" font-size="28">⚡</text>
+  <text x="150" y="329" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">QQQ — ±1% in 20 of 26 days</text>
+  <text x="150" y="357" font-family="Arial" font-size="16" fill="#9ca3af">Volatility cluster seen in crisis eras</text>
+  <rect x="60" y="390" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="390" width="8" height="82" rx="4" fill="#60a5fa"/>
+  <text x="100" y="426" font-family="Arial" font-size="28">🏭</text>
+  <text x="150" y="424" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">Japan AI Factory · 27,500 Rubin</text>
+  <text x="150" y="452" font-family="Arial" font-size="16" fill="#9ca3af">13,750 Vera · 140 MW sovereign build</text>
+  <rect x="60" y="485" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="485" width="8" height="82" rx="4" fill="#60a5fa"/>
+  <text x="100" y="521" font-family="Arial" font-size="28">💎</text>
+  <text x="150" y="519" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">TSMC Q2 Beat · +40% FY26 Guide</text>
+  <text x="150" y="547" font-family="Arial" font-size="16" fill="#9ca3af">GM 67.7% · OM 60.3% · AZ +$100B</text>
+  <rect x="60" y="580" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="580" width="8" height="82" rx="4" fill="#c084fc"/>
+  <text x="100" y="616" font-family="Arial" font-size="28">🛰</text>
+  <text x="150" y="614" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">SPCX AI1 Peak ~250 kW</text>
+  <text x="150" y="642" font-family="Arial" font-size="16" fill="#9ca3af">150→250 kW · rivals Rubin NVL72</text>
+  <rect x="60" y="675" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="675" width="8" height="82" rx="4" fill="#f87171"/>
+  <text x="100" y="711" font-family="Arial" font-size="28">📉</text>
+  <text x="150" y="709" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">SOX -16% from ATH</text>
+  <text x="150" y="737" font-family="Arial" font-size="16" fill="#9ca3af">14,655 → 12,331 · technical correction</text>
+  
+  <rect x="60" y="780" width="470" height="90" rx="14" fill="#0f172a" stroke="#f472b6"/>
+  <text x="100" y="835" font-family="Arial" font-size="26">🍎</text>
+  <text x="150" y="835" font-family="Arial" font-size="20" fill="#e5e7eb">AAPL China AI · MS catalyst</text>
+  <rect x="550" y="780" width="470" height="90" rx="14" fill="#0f172a" stroke="#fbbf24"/>
+  <text x="590" y="835" font-family="Arial" font-size="26">🤝</text>
+  <text x="640" y="835" font-family="Arial" font-size="20" fill="#e5e7eb">UBER×Delivery Hero €41.50</text>
+  <text x="540" y="920" font-family="Arial" font-size="18" fill="#374151" text-anchor="middle">Jetson Thor · Kalshi Merge 69% · Semi Tour · Jensen AI Cycle · ARK CAPEX</text>
+  <text x="540" y="960" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">2026.07.17 · 한장요약</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="#4ade80" opacity=".4"/>
+  <text x="540" y="1074" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="1.5">investus.kr SRP Chief Investment Officer</text>
+</svg>

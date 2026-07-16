@@ -12,6 +12,22 @@ const REPORT_DIR = path.join(__dirname, '../01.investus 리포트');
 // Each entry: { ko, en (optional), label, date }
 // en: null if no English version exists
 const PAIRS = [
+  { ko: 'summary-20260717.svg', en: 'summary-20260717-en.svg', label: 'summary', date: '20260717' },
+  { ko: 'tsla-robotaxi-175-tx-20260717.svg', en: 'tsla-robotaxi-175-tx-20260717-en.svg', label: 'tsla-robotaxi-175-tx', date: '20260717' },
+  { ko: 'qqq-volatility-20-26-20260717.svg', en: 'qqq-volatility-20-26-20260717-en.svg', label: 'qqq-volatility-20-26', date: '20260717' },
+  { ko: 'tsla-fsd-12b-miles-20260717.svg', en: 'tsla-fsd-12b-miles-20260717-en.svg', label: 'tsla-fsd-12b-miles', date: '20260717' },
+  { ko: 'kalshi-tsla-spcx-merge-20260717.svg', en: 'kalshi-tsla-spcx-merge-20260717-en.svg', label: 'kalshi-tsla-spcx-merge', date: '20260717' },
+  { ko: 'nvda-japan-ai-factory-20260717.svg', en: 'nvda-japan-ai-factory-20260717-en.svg', label: 'nvda-japan-ai-factory', date: '20260717' },
+  { ko: 'tsm-q2-beat-2026-20260717.svg', en: 'tsm-q2-beat-2026-20260717-en.svg', label: 'tsm-q2-beat-2026', date: '20260717' },
+  { ko: 'tsm-arizona-100b-20260717.svg', en: 'tsm-arizona-100b-20260717-en.svg', label: 'tsm-arizona-100b', date: '20260717' },
+  { ko: 'tsla-semi-tour-jul-20260717.svg', en: 'tsla-semi-tour-jul-20260717-en.svg', label: 'tsla-semi-tour-jul', date: '20260717' },
+  { ko: 'nvda-jensen-ai-cycle-20260717.svg', en: 'nvda-jensen-ai-cycle-20260717-en.svg', label: 'nvda-jensen-ai-cycle', date: '20260717' },
+  { ko: 'sox-correction-16-20260717.svg', en: 'sox-correction-16-20260717-en.svg', label: 'sox-correction-16', date: '20260717' },
+  { ko: 'spcx-ai1-power-upgrade-20260717.svg', en: 'spcx-ai1-power-upgrade-20260717-en.svg', label: 'spcx-ai1-power-upgrade', date: '20260717' },
+  { ko: 'aapl-china-ai-ms-20260717.svg', en: 'aapl-china-ai-ms-20260717-en.svg', label: 'aapl-china-ai-ms', date: '20260717' },
+  { ko: 'uber-delivery-hero-20260717.svg', en: 'uber-delivery-hero-20260717-en.svg', label: 'uber-delivery-hero', date: '20260717' },
+  { ko: 'ark-ai-capex-bubble-20260717.svg', en: 'ark-ai-capex-bubble-20260717-en.svg', label: 'ark-ai-capex-bubble', date: '20260717' },
+  { ko: 'nvda-jetson-thor-20260717.svg', en: 'nvda-jetson-thor-20260717-en.svg', label: 'nvda-jetson-thor', date: '20260717' },
   // ── 2026-06-13 ─────────────────────────────────────────────────────────
   { ko: 'spcx-ipo-close-17268-20260613.svg',          en: 'spcx-ipo-close-17268-20260613-en.svg',          label: 'SPCX_IPO첫날',     date: '20260613' },
   { ko: 'spcx-market-cap-rank6-20260613.svg',          en: 'spcx-market-cap-rank6-20260613-en.svg',          label: 'SPCX_시총6위',     date: '20260613' },

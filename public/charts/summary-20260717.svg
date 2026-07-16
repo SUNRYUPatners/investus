@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a1a14"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#60a5fa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <text x="540" y="55" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="110" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.07.17 오늘의 한장 요약 — 핵심 스토리</text>
+  <text x="540" y="150" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">로보택시 · QQQ 변동성 · 일본 AI · TSMC · SPCX AI1 · SOX</text>
+  <line x1="80" y1="170" x2="1000" y2="170" stroke="#1f2937"/>
+  
+  <rect x="60" y="200" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="200" width="8" height="82" rx="4" fill="#4ade80"/>
+  <text x="100" y="236" font-family="Arial" font-size="28">🚕</text>
+  <text x="150" y="234" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">TSLA 로보택시 텍사스 175대</text>
+  <text x="150" y="262" font-family="Arial" font-size="16" fill="#9ca3af">+58 추가 · 연 수익 추정 $10.5M · TXDMV 비교</text>
+  <rect x="60" y="295" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="295" width="8" height="82" rx="4" fill="#60a5fa"/>
+  <text x="100" y="331" font-family="Arial" font-size="28">⚡</text>
+  <text x="150" y="329" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">QQQ — 26일 중 20일 ±1% 변동</text>
+  <text x="150" y="357" font-family="Arial" font-size="16" fill="#9ca3af">위기·버블기 수준 변동성 클러스터</text>
+  <rect x="60" y="390" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="390" width="8" height="82" rx="4" fill="#60a5fa"/>
+  <text x="100" y="426" font-family="Arial" font-size="28">🏭</text>
+  <text x="150" y="424" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">일본 AI 팩토리 · NVDA Rubin 27,500</text>
+  <text x="150" y="452" font-family="Arial" font-size="16" fill="#9ca3af">Vera 13,750 · 140 MW · 국가 단위 발주</text>
+  <rect x="60" y="485" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="485" width="8" height="82" rx="4" fill="#60a5fa"/>
+  <text x="100" y="521" font-family="Arial" font-size="28">💎</text>
+  <text x="150" y="519" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">TSMC Q2 비트 · 2026 +40% 가이던스</text>
+  <text x="150" y="547" font-family="Arial" font-size="16" fill="#9ca3af">GM 67.7% · OM 60.3% · 애리조나 +$100B</text>
+  <rect x="60" y="580" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="580" width="8" height="82" rx="4" fill="#c084fc"/>
+  <text x="100" y="616" font-family="Arial" font-size="28">🛰</text>
+  <text x="150" y="614" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">SPCX AI1 피크전력 ~250 kW</text>
+  <text x="150" y="642" font-family="Arial" font-size="16" fill="#9ca3af">150→250 kW · Rubin NVL72와 스펙 경쟁</text>
+  <rect x="60" y="675" width="960" height="82" rx="14" fill="#111827" stroke="#1f2937"/>
+  <rect x="60" y="675" width="8" height="82" rx="4" fill="#f87171"/>
+  <text x="100" y="711" font-family="Arial" font-size="28">📉</text>
+  <text x="150" y="709" font-family="Arial Black,Arial" font-size="24" fill="#f9fafb">SOX ATH 대비 -16% 조정</text>
+  <text x="150" y="737" font-family="Arial" font-size="16" fill="#9ca3af">14,655 → 12,331 · 기술적 조정</text>
+  
+  <rect x="60" y="780" width="470" height="90" rx="14" fill="#0f172a" stroke="#f472b6"/>
+  <text x="100" y="835" font-family="Arial" font-size="26">🍎</text>
+  <text x="150" y="835" font-family="Arial" font-size="20" fill="#e5e7eb">AAPL 중국 AI · MS 촉매</text>
+  <rect x="550" y="780" width="470" height="90" rx="14" fill="#0f172a" stroke="#fbbf24"/>
+  <text x="590" y="835" font-family="Arial" font-size="26">🤝</text>
+  <text x="640" y="835" font-family="Arial" font-size="20" fill="#e5e7eb">UBER×Delivery Hero €41.50</text>
+  <text x="540" y="920" font-family="Arial" font-size="18" fill="#374151" text-anchor="middle">Jetson Thor · Kalshi Merge 69% · Semi Tour · Jensen AI Cycle · ARK CAPEX</text>
+  <text x="540" y="960" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">2026.07.17 · 한장요약</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="#4ade80" opacity=".4"/>
+  <text x="540" y="1074" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="1.5">investus.kr SRP 최고투자책임자 발행</text>
+</svg>

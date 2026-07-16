@@ -17,6 +17,172 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-17 신규 ──────────────────────────────────────────────────────
+  {
+    id: -343,
+    alias: "여의도 수리부엉이 #11",
+    symbol: "TSLA",
+    content:
+      "텍사스 로보택시 플릿이 175까지 왔다. +58이 한 번에 찍힌 게 포인트고, Waymo 642 대비 절대량은 아직 작아도 기울기는 가팔라졌다. $10.5M 연 수익은 대당 $60k 가정 — 가동률 나오기 전엔 할인해서 보고, 플릿 확장 속도만 누적 매수 근거로 쓴다.",
+    likes: 2300,
+    comments: 3,
+    created_at: "2026-07-17T00:05:00.000Z",
+    liked: false,
+  },
+  {
+    id: -344,
+    alias: "강남 표범 #28",
+    symbol: "QQQ",
+    content:
+      "왜 지금 나스닥이 이렇게 흔들릴까? 답은 빈도다. 26거래일 중 20일이 ±1%. COVID·닷컴급 클러스터라는 말이 나와서, 방향 베팅보다 사이즈·헤지부터 재조정. 관망에 무게.",
+    likes: 2303,
+    comments: 4,
+    created_at: "2026-07-17T00:12:00.000Z",
+    liked: false,
+  },
+  {
+    id: -345,
+    alias: "서초 황소 #41",
+    symbol: "TSLA",
+    content:
+      "FSD 120억 마일 임박.\n— 글로벌 누적\n— 안전 페이지 인용\n데이터 루프는 확실한데 개입률·사고율이 같이 안 나오면 완전자율로 과대해석하지 말자. 잠정 긍정.",
+    likes: 2306,
+    comments: 5,
+    created_at: "2026-07-17T00:19:00.000Z",
+    liked: false,
+  },
+  {
+    id: -346,
+    alias: "을지로 팔콘 #07",
+    symbol: "TSLA",
+    content:
+      "Kalshi 69%. Tesla×SpaceX 2028 전 합병 확률. 예측시장이지 딜 공시가 아니다. 확률 출렁일 때마다 포지션 흔들 필요 없고, 공식 발표 전엔 시나리오 파일만 열어둔다. 중립.",
+    likes: 2309,
+    comments: 3,
+    created_at: "2026-07-17T00:26:00.000Z",
+    liked: false,
+  },
+  {
+    id: -347,
+    alias: "광화문 늑대 #53",
+    symbol: "NVDA",
+    content:
+      "일본 국가 AI 팩토리 숫자만 던져본다. Vera 13,750 / Rubin 27,500 / 140 MW. 국가 발주 스케일이라 수요 가시성은 강해 보이는데, 출하 일정이 나오기 전엔 파이프라인 신호로만. 매수 유지·추적.",
+    likes: 2312,
+    comments: 4,
+    created_at: "2026-07-17T00:33:00.000Z",
+    liked: false,
+  },
+  {
+    id: -348,
+    alias: "마포 올빼미 #66",
+    symbol: "TSM",
+    content:
+      "TSMC Q2가 그냥 비트한 게 아니라 마진까지 예뻤다. GM 67.7%, OM 60.3%, 내년 매출 +40% 코멘트. 주가 $419 근처면 이미 많이 반영됐을 수 있어 추격보단 눌림 관심. 그래도 실적 품질은 BUY 쪽.",
+    likes: 2315,
+    comments: 5,
+    created_at: "2026-07-17T00:40:00.000Z",
+    liked: false,
+  },
+  {
+    id: -349,
+    alias: "판교 사자 #19",
+    symbol: "TSM",
+    content:
+      "애리조나 +$100B에 미국 합계 $265B. 숫자가 비현실적으로 커서 오히려 감가비·램프업 리스크가 먼저 보인다. 중장기 온쇼어링 스토리는 맞는데 단기 이익으로 환산하진 말자. 중립~비중유지.",
+    likes: 2318,
+    comments: 3,
+    created_at: "2026-07-17T00:47:00.000Z",
+    liked: false,
+  },
+  {
+    id: -350,
+    alias: "잠실 여우 #34",
+    symbol: "TSLA",
+    content:
+      "Semi On Tour 일정 봤음 — 7/20-21 시카고, 7/21-23 버지니아. 양산 스펙 보여주기 투어라 인도 실적은 아니다. 그래도 상용 라인업 존재감은 남긴다. 이벤트성 매수 금지, 관심만.",
+    likes: 2321,
+    comments: 4,
+    created_at: "2026-07-17T00:54:00.000Z",
+    liked: false,
+  },
+  {
+    id: -351,
+    alias: "역삼 독수리 #72",
+    symbol: "NVDA",
+    content:
+      "젠슨 황 발언 한 줄 요약하면 “AI는 이제 시작, 사이클은 10~15년”. CEO 톤은 늘 자신감인데 SOX -16%랑 같이 보면 장기 낙관 ≠ 단기 차트. 가이던스·고객 CAPEX를 보고 판단. 추적관망.",
+    likes: 2324,
+    comments: 5,
+    created_at: "2026-07-17T00:61:00.000Z",
+    liked: false,
+  },
+  {
+    id: -352,
+    alias: "청담 매 #88",
+    symbol: "SOX",
+    content:
+      "ATH 14,655 → 지금 12,331. 딱 -16%. 기술적 조정인지 추세 전환인지는 다음 반등 고점이 말해줄 거다. 지금 구간은 신규 올인보다 분할·리스크예산 재설정. 주의.",
+    likes: 2327,
+    comments: 3,
+    created_at: "2026-07-17T00:68:00.000Z",
+    liked: false,
+  },
+  {
+    id: -353,
+    alias: "압구정 콘도르 #15",
+    symbol: "SPCX",
+    content:
+      "AI1 피크 150→250 kW, 평균 120→160. Rubin 랙(230/190, $5-9M)이랑 붙이는 비교가 핵심 프레임이다. 스펙은 화려한데 발사·양산·단위경제는 아직. 스토리 BUY, 사이즈는 작게.",
+    likes: 2330,
+    comments: 4,
+    created_at: "2026-07-17T00:75:00.000Z",
+    liked: false,
+  },
+  {
+    id: -354,
+    alias: "삼성동 표범 #42",
+    symbol: "AAPL",
+    content:
+      "모건스탠리가 중국 Apple Intelligence 승인을 촉매로 본다고? 방향은 이해되는데 승인≠출시다. 기능 범위·일정 확인 전엔 기대감만으로 추격하지 말자. 중립.",
+    likes: 2333,
+    comments: 5,
+    created_at: "2026-07-17T00:82:00.000Z",
+    liked: false,
+  },
+  {
+    id: -355,
+    alias: "논현 늑대 #59",
+    symbol: "UBER",
+    content:
+      "Uber → Delivery Hero €41.50. 99개 시장 확장 그림은 큰데, 제안 단계라 규제·자금·시너지가 전부 변수. 딜 뉴스에 휘둘리기 쉬운 구간이라 관망이 기본값.",
+    likes: 2336,
+    comments: 3,
+    created_at: "2026-07-17T00:89:00.000Z",
+    liked: false,
+  },
+  {
+    id: -356,
+    alias: "이촌 황소 #26",
+    symbol: "ARKK",
+    content:
+      "ARK 주장 — AI CAPEX가 2000년 버블 고점 돌파, 빅4 2026 >$700B, 2030 AI 시스템 ~$1.5T. 수요 확대와 과열 경고가 한 문장에 들어 있다. NVDA 주도·AMD Helios 도전 구도도 같이 체크. 비중 조절하며 보유.",
+    likes: 2339,
+    comments: 4,
+    created_at: "2026-07-17T00:96:00.000Z",
+    liked: false,
+  },
+  {
+    id: -357,
+    alias: "성수 매 #83",
+    symbol: "NVDA",
+    content:
+      "Jetson Thor T2000/T3000 나왔다. Blackwell 엣지·로봇 모듈이고 Boston Dynamics·Amazon Robotics 채택이 레퍼런스. 데이터센터랑 별개 파이프라인으로 보면 된다. 중기 옵션 — 당장 실적보단 채택 확대 추적. 매수(여유 비중).",
+    likes: 2342,
+    comments: 5,
+    created_at: "2026-07-17T00:103:00.000Z",
+    liked: false,
+  },
   // ── 2026-07-16 신규 ──────────────────────────────────────────────────────
   {
     id: -327,
@@ -3799,6 +3965,88 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-07-17 신규 ──────────────────────────────────────────────────────
+  [-343]: [
+    { alias: "여의도 매 #10", content: "+58 한 번에 들어온 게 인상적.", created_at: "2026-07-17T00:05:02.000Z" },
+    { alias: "강남 늑대 #11", content: "Waymo 격차는 인정.", created_at: "2026-07-17T00:05:04.000Z" },
+    { alias: "서초 황소 #12", content: "가동률 데이터가 다음 열쇠.", created_at: "2026-07-17T00:05:06.000Z" },
+  ],
+  [-344]: [
+    { alias: "을지로 여우 #13", content: "빈도 자체가 리스크라는 말에 동의.", created_at: "2026-07-17T00:12:02.000Z" },
+    { alias: "광화문 팔콘 #14", content: "레버리지 접은 판단 괜찮아 보임.", created_at: "2026-07-17T00:12:04.000Z" },
+    { alias: "마포 독수리 #15", content: "헤지 비중 다시 봄.", created_at: "2026-07-17T00:12:06.000Z" },
+    { alias: "판교 사자 #16", content: "방향보다 변동성 관리.", created_at: "2026-07-17T00:12:08.000Z" },
+  ],
+  [-345]: [
+    { alias: "잠실 올빼미 #17", content: "마일스톤은 좋은데 개입률이 궁금.", created_at: "2026-07-17T00:19:02.000Z" },
+    { alias: "역삼 표범 #18", content: "안전 페이지 숫자 추적하자.", created_at: "2026-07-17T00:19:04.000Z" },
+    { alias: "청담 콘도르 #19", content: "과대해석 경계 동의.", created_at: "2026-07-17T00:19:06.000Z" },
+  ],
+  [-346]: [
+    { alias: "압구정 수리부엉이 #20", content: "예측시장  Prob 흔들리지 말자.", created_at: "2026-07-17T00:26:02.000Z" },
+    { alias: "삼성동 매 #21", content: "공식 나오기 전엔 파일만.", created_at: "2026-07-17T00:26:04.000Z" },
+    { alias: "논현 늑대 #22", content: "69% 보고 추격하는 건 위험.", created_at: "2026-07-17T00:26:06.000Z" },
+  ],
+  [-347]: [
+    { alias: "이촌 황소 #23", content: "국가 발주 스케일 압도적.", created_at: "2026-07-17T00:33:02.000Z" },
+    { alias: "성수 팔콘 #24", content: "출하 일정 대기.", created_at: "2026-07-17T00:33:04.000Z" },
+    { alias: "한남 여우 #25", content: "140MW도 핵심 숫자.", created_at: "2026-07-17T00:33:06.000Z" },
+    { alias: "송파 독수리 #26", content: "파이프라인으로 보는 게 맞음.", created_at: "2026-07-17T00:33:08.000Z" },
+  ],
+  [-348]: [
+    { alias: "분당 사자 #27", content: "마진 퀄리티가 진짜 좋음.", created_at: "2026-07-17T00:40:02.000Z" },
+    { alias: "목동 올빼미 #28", content: "추격보다 눌림 대기 공감.", created_at: "2026-07-17T00:40:04.000Z" },
+    { alias: "신촌 표범 #29", content: "가이던스 +40%는 강하다.", created_at: "2026-07-17T00:40:06.000Z" },
+  ],
+  [-349]: [
+    { alias: "여의도 매 #30", content: "$265B는 감가비가 먼저 보임.", created_at: "2026-07-17T00:47:02.000Z" },
+    { alias: "강남 늑대 #31", content: "온쇼어링 스토리는 장기.", created_at: "2026-07-17T00:47:04.000Z" },
+    { alias: "서초 황소 #32", content: "단기 환산 금지 동의.", created_at: "2026-07-17T00:47:06.000Z" },
+  ],
+  [-350]: [
+    { alias: "을지로 여우 #33", content: "투어≠인도 정확히 지적.", created_at: "2026-07-17T00:54:02.000Z" },
+    { alias: "광화문 팔콘 #34", content: "상용 존재감은 플러스.", created_at: "2026-07-17T00:54:04.000Z" },
+    { alias: "마포 독수리 #35", content: "일정만 체크.", created_at: "2026-07-17T00:54:06.000Z" },
+  ],
+  [-351]: [
+    { alias: "판교 사자 #36", content: "장기 낙관과 차트 분리 좋음.", created_at: "2026-07-17T00:61:02.000Z" },
+    { alias: "잠실 올빼미 #37", content: "CAPEX 가이던스가 우선.", created_at: "2026-07-17T00:61:04.000Z" },
+    { alias: "역삼 표범 #38", content: "추적관망 동의.", created_at: "2026-07-17T00:61:06.000Z" },
+    { alias: "청담 콘도르 #39", content: "젠슨 톤은 늘 강하지.", created_at: "2026-07-17T00:61:08.000Z" },
+    { alias: "압구정 수리부엉이 #40", content: "SOX랑 같이 봐야 함.", created_at: "2026-07-17T00:61:10.000Z" },
+  ],
+  [-352]: [
+    { alias: "삼성동 매 #41", content: "-16%면 아프긴 하다.", created_at: "2026-07-17T00:68:02.000Z" },
+    { alias: "논현 늑대 #42", content: "다음 고점이 관건.", created_at: "2026-07-17T00:68:04.000Z" },
+    { alias: "이촌 황소 #43", content: "분할이 맞아 보임.", created_at: "2026-07-17T00:68:06.000Z" },
+    { alias: "성수 팔콘 #44", content: "리스크예산 재설정 중.", created_at: "2026-07-17T00:68:08.000Z" },
+  ],
+  [-353]: [
+    { alias: "한남 여우 #45", content: "스펙 비교 프레임이 흥미로움.", created_at: "2026-07-17T00:75:02.000Z" },
+    { alias: "송파 독수리 #46", content: "단위경제는 아직.", created_at: "2026-07-17T00:75:04.000Z" },
+    { alias: "분당 사자 #47", content: "사이즈 작게 동의.", created_at: "2026-07-17T00:75:06.000Z" },
+  ],
+  [-354]: [
+    { alias: "목동 올빼미 #48", content: "승인≠출시 포인트 정확.", created_at: "2026-07-17T00:82:02.000Z" },
+    { alias: "신촌 표범 #49", content: "일정 확인 후 반영.", created_at: "2026-07-17T00:82:04.000Z" },
+    { alias: "여의도 매 #50", content: "추격 자제.", created_at: "2026-07-17T00:82:06.000Z" },
+  ],
+  [-355]: [
+    { alias: "강남 늑대 #51", content: "제안 단계 강조 좋음.", created_at: "2026-07-17T00:89:02.000Z" },
+    { alias: "서초 황소 #52", content: "규제 변수가 큼.", created_at: "2026-07-17T00:89:04.000Z" },
+    { alias: "을지로 여우 #53", content: "관망이 기본.", created_at: "2026-07-17T00:89:06.000Z" },
+    { alias: "광화문 팔콘 #54", content: "99 markets 그림은 큼.", created_at: "2026-07-17T00:89:08.000Z" },
+  ],
+  [-356]: [
+    { alias: "마포 독수리 #55", content: "호재와 과열이 공존하는 문장.", created_at: "2026-07-17T00:96:02.000Z" },
+    { alias: "판교 사자 #56", content: "AMD 경쟁도 체크.", created_at: "2026-07-17T00:96:04.000Z" },
+    { alias: "잠실 올빼미 #57", content: "비중 조절하며 보유 공감.", created_at: "2026-07-17T00:96:06.000Z" },
+  ],
+  [-357]: [
+    { alias: "역삼 표범 #58", content: "엣지·로봇 파이프라인으로 분리 보는 게 맞음.", created_at: "2026-07-17T00:103:02.000Z" },
+    { alias: "청담 콘도르 #59", content: "레퍼런스 고객이 강점.", created_at: "2026-07-17T00:103:04.000Z" },
+    { alias: "압구정 수리부엉이 #60", content: "램프업 전엔 여유 비중.", created_at: "2026-07-17T00:103:06.000Z" },
+  ],
   // ── 2026-07-16 신규 ──────────────────────────────────────────────────────
   [-327]: [
     { alias: "여의도 수리부엉이 #12", content: "3차 배치까지 갔으면 확대 속도 꽤 빠른 편이네.", created_at: "2026-07-16T00:05:02.000Z" },

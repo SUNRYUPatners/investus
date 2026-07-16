@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a1a0a"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.17</text>
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Kalshi — TSLA·SPCX 2028 전 합병 확률 69%</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+  
+  <text x="540" y="196" font-family="Arial" font-size="56" text-anchor="middle">🎲</text>
+  <text x="540" y="296" font-family="Arial Black,Arial" font-size="92" font-weight="900" fill="#4ade80" text-anchor="middle">69%</text>
+  <text x="540" y="344" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Tesla와 SpaceX가 2028년 이전 합병할 확률</text>
+  <line x1="80" y1="364" x2="1000" y2="364" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="382" width="460" height="150" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="290" y="418" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">예측시장</text>
+  <text x="290" y="470" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#4ade80" text-anchor="middle">Kalshi</text>
+  <text x="290" y="508" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">확률 계약</text>
+  <rect x="560" y="382" width="460" height="150" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="790" y="418" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">기한</text>
+  <text x="790" y="470" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#4ade80" text-anchor="middle">2028前</text>
+  <text x="790" y="508" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">합병 여부</text>
+  
+  <rect x="60" y="552" width="960" height="230" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="596" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">해석 포인트</text>
+  <text x="100" y="642" font-family="Arial" font-size="24" fill="#e5e7eb">⚠ 예측시장 확률 ≠ 확정 딜 — 공식 발표 전 시나리오 앵커</text>
+<text x="100" y="684" font-family="Arial" font-size="24" fill="#e5e7eb">🔗 합병 내러티브는 TSLA·SPCX 밸류에이션 연동 리스크를 키움</text>
+  <text x="100" y="754" font-family="Arial" font-size="18" fill="#6b7280">Source: Kalshi / TheSonOfWalkley · 2026.07.16</text>
+  
+  <text x="540" y="960" font-family="Arial" font-size="21" fill="#374151" text-anchor="middle">Kalshi TSLA×SPCX Merge Odds 69% · 2026.07.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="#4ade80" opacity=".4"/>
+  <text x="540" y="1074" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="1.5">investus.kr SRP 최고투자책임자 발행</text>
+</svg>
