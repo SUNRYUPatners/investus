@@ -39,11 +39,13 @@ function getEdgeConfig(): ReturnType<typeof createClient> | null {
 
 async function ecRead<T>(key: string): Promise<T | null> {
   const ec = getEdgeConfig();
-  if (!ec) return null;
+  if (!ec) { console.error("[kv.ecRead] no edge config client (EDGE_CONFIG not set)"); return null; }
   try {
     const v = await ec.get<T>(key);
+    console.log("[kv.ecRead]", key, v == null ? "miss" : "hit");
     return v ?? null;
-  } catch {
+  } catch (e) {
+    console.error("[kv.ecRead] error", String(e));
     return null;
   }
 }
@@ -52,13 +54,16 @@ function ecWrite(key: string, value: unknown): void {
   const token  = process.env.VERCEL_API_TOKEN;
   const ecId   = process.env.EDGE_CONFIG_ID;
   const teamId = process.env.VERCEL_TEAM_ID;
-  if (!token || !ecId) return;
+  if (!token || !ecId) { console.error("[kv.ecWrite] missing token/ecId", { hasToken: !!token, hasEcId: !!ecId }); return; }
   const url = `https://api.vercel.com/v1/edge-config/${ecId}/items${teamId ? `?teamId=${teamId}` : ""}`;
   fetch(url, {
     method: "PATCH",
     headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
     body: JSON.stringify({ items: [{ operation: "upsert", key, value }] }),
-  }).catch(() => {});
+  }).then(async (r) => {
+    if (!r.ok) console.error("[kv.ecWrite] failed", r.status, await r.text().catch(() => ""));
+    else console.log("[kv.ecWrite] ok", key);
+  }).catch((e) => console.error("[kv.ecWrite] error", String(e)));
 }
 
 // ── Public types & TTL ────────────────────────────────────────────────────
