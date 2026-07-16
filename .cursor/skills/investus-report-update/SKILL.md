@@ -73,7 +73,7 @@ description: >-
 2. **7/2 SVG(메인)을 먼저 Read로 열어보고**, 애매하면 7/3(서브)도 참고해 구조를 따라 SVG KO+EN 작성 (7/4 스타일 금지)
 3. `lib/reports.ts` seed + tickers — **본문 충실 + 투자시사점**
 4. `lib/wallPosts.ts` 글/댓글 + `LATEST_UPDATE`
-5. `lib/analystPosts.ts` 개별 리포트마다 1개 이상
+5. `lib/analystPosts.ts` 개별 리포트마다 1개 이상 — **⚠️ 글 구조를 "인트로+1)2)3)4)5)+투자:+STANCE(qualifier)." 하나로 통일 금지 (2026-07-16 반려 사유). 프로즈/대시나열/Q&A/데이터먼저/회의적톤/캐주얼톤 등 최소 5~6가지 구조를 하루치 세트 안에서 섞어 쓴다. 상세 규칙은 `.claude/commands/report-update.md`의 "애널리스트 글 작성 규칙" 참고. 댓글도 티커만 바꾼 범용 템플릿 복붙 금지 — 소재별로 구체적으로 새로 쓴다.**
 6. `scripts/export-report-pngs.js` PAIRS (오늘 date만)
 7. `node scripts/export-report-pngs.js` (**`--all` 금지**)
 8. 팩트체크: 스크린샷 재 Read 후 수치 1:1 대조
