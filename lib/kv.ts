@@ -6,7 +6,12 @@
  *   2. Vercel Edge Config (EDGE_CONFIG + VERCEL_API_TOKEN + EDGE_CONFIG_ID)
  *   3. No-op (local dev — silently skipped)
  *
- * Writes use fire-and-forget so they never block the response.
+ * Writes return a Promise so callers can `await` them (e.g. inside Next.js
+ * `after()`, which keeps the serverless function alive via `waitUntil` until
+ * settled). Callers that don't care about completion can ignore the Promise —
+ * this preserves the previous fire-and-forget behavior for existing callers.
+ * IMPORTANT: without `await`/`after()`, an unawaited write can be killed
+ * mid-flight when the function freezes right after the response is sent.
  */
 
 import { Redis } from "@upstash/redis";
@@ -39,31 +44,28 @@ function getEdgeConfig(): ReturnType<typeof createClient> | null {
 
 async function ecRead<T>(key: string): Promise<T | null> {
   const ec = getEdgeConfig();
-  if (!ec) { console.error("[kv.ecRead] no edge config client (EDGE_CONFIG not set)"); return null; }
+  if (!ec) return null;
   try {
     const v = await ec.get<T>(key);
-    console.log("[kv.ecRead]", key, v == null ? "miss" : "hit");
     return v ?? null;
-  } catch (e) {
-    console.error("[kv.ecRead] error", String(e));
+  } catch {
     return null;
   }
 }
 
-function ecWrite(key: string, value: unknown): void {
+async function ecWrite(key: string, value: unknown): Promise<void> {
   const token  = process.env.VERCEL_API_TOKEN;
   const ecId   = process.env.EDGE_CONFIG_ID;
   const teamId = process.env.VERCEL_TEAM_ID;
-  if (!token || !ecId) { console.error("[kv.ecWrite] missing token/ecId", { hasToken: !!token, hasEcId: !!ecId }); return; }
+  if (!token || !ecId) return;
   const url = `https://api.vercel.com/v1/edge-config/${ecId}/items${teamId ? `?teamId=${teamId}` : ""}`;
-  fetch(url, {
-    method: "PATCH",
-    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ items: [{ operation: "upsert", key, value }] }),
-  }).then(async (r) => {
-    if (!r.ok) console.error("[kv.ecWrite] failed", r.status, await r.text().catch(() => ""));
-    else console.log("[kv.ecWrite] ok", key);
-  }).catch((e) => console.error("[kv.ecWrite] error", String(e)));
+  try {
+    await fetch(url, {
+      method: "PATCH",
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ items: [{ operation: "upsert", key, value }] }),
+    });
+  } catch {}
 }
 
 // ── Public types & TTL ────────────────────────────────────────────────────
@@ -90,13 +92,10 @@ export async function kvGetPrice(symbol: string): Promise<PriceData | null> {
   return ecRead<PriceData>(`price__${symbol}`);
 }
 
-export function kvSetPrice(symbol: string, data: PriceData): void {
+export function kvSetPrice(symbol: string, data: PriceData): Promise<void> {
   const r = getRedis();
-  if (r) {
-    r.set(`price:${symbol}`, data, { ex: PRICE_TTL }).catch(() => {});
-    return;
-  }
-  ecWrite(`price__${symbol}`, data);
+  if (r) return r.set(`price:${symbol}`, data, { ex: PRICE_TTL }).then(() => {}).catch(() => {});
+  return ecWrite(`price__${symbol}`, data);
 }
 
 export async function kvGetDetail(key: string): Promise<DetailData | null> {
@@ -107,11 +106,8 @@ export async function kvGetDetail(key: string): Promise<DetailData | null> {
   return ecRead<DetailData>(`detail__${key.replace(/[^a-zA-Z0-9_-]/g, "_")}`);
 }
 
-export function kvSetDetail(key: string, data: DetailData): void {
+export function kvSetDetail(key: string, data: DetailData): Promise<void> {
   const r = getRedis();
-  if (r) {
-    r.set(`detail:${key}`, data, { ex: PRICE_TTL }).catch(() => {});
-    return;
-  }
-  ecWrite(`detail__${key.replace(/[^a-zA-Z0-9_-]/g, "_")}`, data);
+  if (r) return r.set(`detail:${key}`, data, { ex: PRICE_TTL }).then(() => {}).catch(() => {});
+  return ecWrite(`detail__${key.replace(/[^a-zA-Z0-9_-]/g, "_")}`, data);
 }

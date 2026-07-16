@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
 export const maxDuration = 45;
@@ -129,8 +129,12 @@ export async function GET(req: Request) {
     const summary = data.content?.[0]?.text?.trim() ?? "";
     if (!summary) return NextResponse.json({ error: "empty" }, { status: 502 });
 
-    // KV 캐시 저장 — 다음 거래일 장마감 크론이 새로 덮어쓸 때까지 유지
-    kvSetDetail(CACHE_KEY, { date, summary });
+    // KV 캐시 저장 — 다음 거래일 장마감 크론이 새로 덮어쓸 때까지 유지.
+    // after()로 응답 전송 후에도 함수가 살아있게 해서(waitUntil) 쓰기가
+    // 중간에 끊기지 않고 끝까지 완료되도록 보장한다.
+    after(async () => {
+      await kvSetDetail(CACHE_KEY, { date, summary });
+    });
 
     return NextResponse.json({ summary, date, cached: false });
   } catch {
