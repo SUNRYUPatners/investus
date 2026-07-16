@@ -1,17 +1,10 @@
 import { NextResponse } from "next/server";
-import { Redis } from "@upstash/redis";
+import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
 export const maxDuration = 45;
 
-let _redis: Redis | null = null;
-function getRedis(): Redis | null {
-  if (_redis) return _redis;
-  const url   = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return null;
-  _redis = new Redis({ url, token });
-  return _redis;
-}
+const CACHE_KEY = "market-summary-latest";
+type CachedSummary = { date: string; summary: string };
 
 /** YYYY-MM-DD of the last NYSE close (ET 기준) */
 function lastTradingDay(): string {
@@ -93,15 +86,16 @@ export async function GET(req: Request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return NextResponse.json({ error: "no key" }, { status: 503 });
 
-  const force    = new URL(req.url).searchParams.get("force") === "1";
-  const date     = lastTradingDay();
-  const cacheKey = `market-summary-v1-${date}`;
-  const redis    = getRedis();
+  const force = new URL(req.url).searchParams.get("force") === "1";
+  const date  = lastTradingDay();
 
-  // 캐시 확인 (강제 갱신 시 스킵)
-  if (!force && redis) {
-    const cached = await redis.get<string>(cacheKey).catch(() => null);
-    if (cached) return NextResponse.json({ summary: cached, date, cached: true });
+  // 캐시 확인 (강제 갱신 시 스킵) — 같은 거래일이면 캐시된 요약을 그대로 반환,
+  // 장마감 크론(/api/cron/market-summary-close)이 하루 1번만 새로 생성함
+  if (!force) {
+    const cached = await kvGetDetail(CACHE_KEY) as CachedSummary | null;
+    if (cached?.date === date && cached.summary) {
+      return NextResponse.json({ summary: cached.summary, date, cached: true });
+    }
   }
 
   // 데이터 수집
@@ -135,12 +129,8 @@ export async function GET(req: Request) {
     const summary = data.content?.[0]?.text?.trim() ?? "";
     if (!summary) return NextResponse.json({ error: "empty" }, { status: 502 });
 
-    // KV 캐시 저장 (다음날 정오까지)
-    if (redis) {
-      const etNow = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
-      const secondsUntilTomorrow = (24 + 12 - (etNow.getHours() + etNow.getMinutes() / 60)) * 3600;
-      redis.set(cacheKey, summary, { ex: Math.max(3600, Math.floor(secondsUntilTomorrow)) }).catch(() => {});
-    }
+    // KV 캐시 저장 — 다음 거래일 장마감 크론이 새로 덮어쓸 때까지 유지
+    kvSetDetail(CACHE_KEY, { date, summary });
 
     return NextResponse.json({ summary, date, cached: false });
   } catch {
