@@ -23,22 +23,26 @@
 
   <line x1="80" y1="364" x2="1000" y2="364" stroke="#1f2937" stroke-width="1"/>
 
-  <rect x="60" y="382" width="460" height="150" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="290" y="418" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">EPS</text>
-  <text x="290" y="473.9" font-family="Arial Black,Arial" font-size="54" font-weight="900" fill="#4ade80" text-anchor="middle">€7.59</text>
-  <text x="290" y="508" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">컨센서스 €6.90 상회</text>
-<rect x="560" y="382" width="460" height="150" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="790" y="418" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">FY26 가이던스</text>
-  <text x="790" y="467.1" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#4ade80" text-anchor="middle">€43-45B</text>
-  <text x="790" y="508" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">이전 €36-40B서 상향</text>
+  <rect x="60" y="382" width="300" height="160" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="420" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">EPS</text>
+  <text x="210" y="462" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#4ade80" text-anchor="middle">€7.59</text>
+  <text x="210" y="522" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">컨센서스 €6.90 상회</text>
+<rect x="390" y="382" width="300" height="160" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="540" y="420" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">FY26 가이던스</text>
+  <text x="540" y="462" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#4ade80" text-anchor="middle">€43-45B</text>
+  <text x="540" y="522" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">이전 €36-40B서 상향</text>
+<rect x="720" y="382" width="300" height="160" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="870" y="420" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">캐파 확장 계획</text>
+  <text x="870" y="462" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#4ade80" text-anchor="middle">+30%</text>
+  <text x="870" y="522" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">2027년까지 EUV·DUV</text>
 
-  <rect x="60" y="552" width="960" height="234" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="596" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle" letter-spacing="2">ASML CEO 코멘트</text>
-  <text x="100" y="692" font-family="Arial" font-size="25" fill="#e5e7eb">🏭 2027년까지 EUV·DUV 캐파 30% 확대 계획</text>
-<text x="100" y="734" font-family="Arial" font-size="25" fill="#e5e7eb">🤝 일론 머스크와 'TeraFab' 프로젝트 협업</text>
-  <text x="100" y="762" font-family="Arial" font-size="19" fill="#6b7280">Source: Stock Talk (@stocktalkweekly) · 2026.07.16</text>
+  <rect x="60" y="562" width="960" height="190" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle" letter-spacing="2">ASML CEO 코멘트</text>
+  <text x="100" y="700" font-family="Arial" font-size="24" fill="#e5e7eb">🤝 일론 머스크와 'TeraFab' 프로젝트 협업 발표</text>
+  <text x="100" y="728" font-family="Arial" font-size="19" fill="#6b7280">Source: Stock Talk (@stocktalkweekly) · 2026.07.16</text>
 
   <text x="540" y="960" font-family="Arial" font-size="21" fill="#374151" text-anchor="middle">ASML · Earnings Beat + TeraFab w/ Musk · 2026.07.16</text>
+
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행</text>
 </svg>

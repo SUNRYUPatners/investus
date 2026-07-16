@@ -39,6 +39,7 @@
   <text x="100" y="762" font-family="Arial" font-size="19" fill="#6b7280">Source: Barchart · BofA Global Fund Manager Survey · 2026.07.16</text>
 
   <text x="540" y="960" font-family="Arial" font-size="21" fill="#374151" text-anchor="middle">BofA FMS · Cash 3.6% · Sell Signal · 2026.07.16</text>
+
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer</text>
 </svg>

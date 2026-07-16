@@ -16,29 +16,32 @@
   <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">구글, 버핏 지분공개 후 +34%</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
 
-  <text x="540" y="196" font-family="Arial" font-size="60" text-anchor="middle">📈</text>
-  <text x="540" y="296" font-family="Arial Black,Arial" font-size="92" font-weight="900" fill="#60a5fa" text-anchor="middle" opacity=".12">$371.81</text>
-  <text x="540" y="296" font-family="Arial Black,Arial" font-size="92" font-weight="900" fill="#60a5fa" text-anchor="middle">$371.81</text>
-  <text x="540" y="344" font-family="Arial" font-size="24" fill="#9ca3af" text-anchor="middle">구글 주가(+34.6%)</text>
+  <rect x="352.5" y="134" width="375" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="162" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">BREAKING — 버핏 지분공개 효과</text>
 
-  <line x1="80" y1="364" x2="1000" y2="364" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="278" font-family="Arial Black,Arial" font-size="118" font-weight="900" fill="#60a5fa" text-anchor="middle" opacity=".12">+34%</text>
+  <text x="540" y="278" font-family="Arial Black,Arial" font-size="118" font-weight="900" fill="#60a5fa" text-anchor="middle">+34%</text>
+  <text x="540" y="324" font-family="Arial" font-size="24" fill="#9ca3af" text-anchor="middle">구글 주가 상승률(버핏 지분공개 이후)</text>
 
-  <rect x="60" y="382" width="460" height="150" rx="16" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
-  <text x="290" y="418" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">버크셔 지분</text>
-  <text x="290" y="473.9" font-family="Arial Black,Arial" font-size="54" font-weight="900" fill="#60a5fa" text-anchor="middle">$15.4B</text>
-  <text x="290" y="508" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">공개된 지분 규모</text>
-<rect x="560" y="382" width="460" height="150" rx="16" fill="#0a0f1a" stroke="#60a5fa" stroke-width="1.5"/>
-  <text x="790" y="418" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">상승률</text>
-  <text x="790" y="473.9" font-family="Arial Black,Arial" font-size="54" font-weight="900" fill="#60a5fa" text-anchor="middle">+34%</text>
-  <text x="790" y="508" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">지분 공개 이후</text>
+  <line x1="80" y1="352" x2="1000" y2="352" stroke="#1f2937" stroke-width="1"/>
 
-  <rect x="60" y="552" width="960" height="234" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="596" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle" letter-spacing="2">의미</text>
-  <text x="100" y="692" font-family="Arial" font-size="25" fill="#e5e7eb">👴 버핏이 직접 구글 투자를 주도했다고 CNBC에 확인</text>
-<text x="100" y="734" font-family="Arial" font-size="25" fill="#e5e7eb">💰 가치투자 대명사 버핏의 빅테크 투자가 크게 적중</text>
-  <text x="100" y="762" font-family="Arial" font-size="19" fill="#6b7280">Source: Michael Burry Stock Tracker · CNBC · 2026.07.16</text>
+  <rect x="60" y="392" width="460" height="150" rx="16" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
+  <text x="290" y="428" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">구글 주가</text>
+  <text x="290" y="477.1" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#60a5fa" text-anchor="middle">$371.81</text>
+  <text x="290" y="518" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">+34.6%</text>
+<rect x="560" y="392" width="460" height="150" rx="16" fill="#0a0f1a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="790" y="428" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle">버크셔 지분</text>
+  <text x="790" y="483.9" font-family="Arial Black,Arial" font-size="54" font-weight="900" fill="#60a5fa" text-anchor="middle">$15.4B</text>
+  <text x="790" y="518" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">공개된 지분 규모</text>
+
+  <rect x="60" y="562" width="960" height="234" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="22" fill="#6b7280" text-anchor="middle" letter-spacing="2">의미</text>
+  <text x="100" y="700" font-family="Arial" font-size="25" fill="#e5e7eb">👴 버핏이 직접 구글 투자를 주도했다고 CNBC에 확인</text>
+<text x="100" y="742" font-family="Arial" font-size="25" fill="#e5e7eb">💰 가치투자 대명사 버핏의 빅테크 투자가 크게 적중</text>
+  <text x="100" y="772" font-family="Arial" font-size="19" fill="#6b7280">Source: Michael Burry Stock Tracker · CNBC · 2026.07.16</text>
 
   <text x="540" y="960" font-family="Arial" font-size="21" fill="#374151" text-anchor="middle">GOOGL · +34% Since Berkshire Stake · 2026.07.16</text>
+
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행</text>
 </svg>
