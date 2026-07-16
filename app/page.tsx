@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { TickerTape } from "@/components/TickerTape";
+import { EcoTickerTape } from "@/components/EcoTickerTape";
 import { LiveMarket } from "@/components/LiveMarket";
 import { NewsSection } from "@/components/NewsSection";
 import { FearGreedWidget } from "@/components/FearGreedWidget";
@@ -30,6 +31,7 @@ export default async function HomePage() {
       </section>
       {/* 티커 테이프: LiveMarket이 localStorage 업데이트하면 자동 동기화 */}
       <TickerTape />
+      <EcoTickerTape />
 
       <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-2">

@@ -2,22 +2,35 @@
 
 import { useState, useEffect } from "react";
 import { useLocale } from "@/contexts/LocaleContext";
+import { useAuth } from "@/hooks/useAuth";
 
 const STORAGE_KEY = "investus_onboarded";
+
+function markOnboarded() {
+  try { localStorage.setItem(STORAGE_KEY, "1"); } catch { /* ignore */ }
+}
 
 export function OnboardingModal() {
   const [visible, setVisible] = useState(false);
   const [step, setStep]       = useState(0);
   const t = useLocale();
+  const { user, loaded } = useAuth();
 
   useEffect(() => {
+    if (!loaded) return;
+    // Logged-in members already know the product — never show welcome modal
+    if (user) {
+      markOnboarded();
+      setVisible(false);
+      return;
+    }
     try {
       if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
     } catch { /* ignore */ }
-  }, []);
+  }, [loaded, user]);
 
   const finish = () => {
-    try { localStorage.setItem(STORAGE_KEY, "1"); } catch { /* ignore */ }
+    markOnboarded();
     setVisible(false);
   };
 

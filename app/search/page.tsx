@@ -6,6 +6,7 @@ import Link from "next/link";
 import { mockQuotes, type Quote, RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { Header } from "@/components/Header";
 import { TickerTape } from "@/components/TickerTape";
+import { EcoTickerTape } from "@/components/EcoTickerTape";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { GuruHoldings } from "@/components/GuruHoldings";
 import { AdFitBanner } from "@/components/AdFitBanner";
@@ -223,6 +224,7 @@ export default function SearchPage() {
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <TickerTape />
+      <EcoTickerTape />
 
       <main className="max-w-[480px] mx-auto lg:max-w-none px-4 lg:px-8 pt-5 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start">

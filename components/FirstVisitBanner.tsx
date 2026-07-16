@@ -3,28 +3,35 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { X, ChevronRight, HelpCircle } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 
-const KEY = "investus-guide-hide-until";
+/** Permanently dismissed — true first-time guests only */
+const SEEN_KEY = "investus-guide-seen";
 
-function todayStr() {
-  return new Date().toISOString().slice(0, 10); // "2026-05-21"
+function markSeen() {
+  try { localStorage.setItem(SEEN_KEY, "1"); } catch { /* ignore */ }
 }
 
 export function FirstVisitBanner() {
+  const { user, loaded } = useAuth();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (!loaded) return;
+    // Logged-in users (email signup / OAuth) are not first-time visitors
+    if (user) {
+      markSeen();
+      setVisible(false);
+      return;
+    }
     try {
-      const hideUntil = localStorage.getItem(KEY);
-      if (hideUntil !== todayStr()) setVisible(true);
+      if (!localStorage.getItem(SEEN_KEY)) setVisible(true);
     } catch { /* ignore */ }
-  }, []);
+  }, [loaded, user]);
 
-  const closeSession = () => setVisible(false);
-
-  const dismissToday = () => {
+  const dismiss = () => {
     setVisible(false);
-    try { localStorage.setItem(KEY, todayStr()); } catch { /* ignore */ }
+    markSeen();
   };
 
   if (!visible) return null;
@@ -49,23 +56,23 @@ export function FirstVisitBanner() {
           <div className="flex items-center gap-2 mt-2 flex-wrap">
             <Link
               href="/more/guide"
-              onClick={closeSession}
+              onClick={dismiss}
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-[12px] font-semibold"
               style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}
             >
               가이드 보기 <ChevronRight className="w-3.5 h-3.5" />
             </Link>
             <button
-              onClick={dismissToday}
+              onClick={dismiss}
               className="text-[11px] px-2.5 py-1.5 rounded-xl border"
               style={{ color: "var(--muted)", borderColor: "var(--border)" }}
             >
-              오늘 그만보기
+              다시 안 보기
             </button>
           </div>
         </div>
         <button
-          onClick={closeSession}
+          onClick={dismiss}
           className="flex-shrink-0 opacity-40 hover:opacity-70 transition-opacity mt-0.5"
           aria-label="닫기"
         >
