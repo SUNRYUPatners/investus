@@ -164,23 +164,13 @@ export function EcoTickerTape() {
       style={{ background: "var(--bg)", borderColor: "var(--border)" }}
       aria-label={locale === "ko" ? "경제 캘린더" : "Economic calendar"}
     >
-      <div className="flex items-center gap-0">
-        <span
-          className="flex-shrink-0 px-3 text-[10px] font-bold tracking-wide uppercase border-r"
-          style={{ color: "var(--mint)", borderColor: "var(--border)" }}
-        >
-          {locale === "ko" ? "캘린더" : "CAL"}
-        </span>
-        <div className="overflow-hidden flex-1 min-w-0">
-          <div
-            className="ticker-track"
-            style={{ "--ticker-duration": `${duration}s` } as React.CSSProperties}
-          >
-            {loop.map((item, i) => (
-              <EcoItem key={`${item.key}-${i}`} item={item} />
-            ))}
-          </div>
-        </div>
+      <div
+        className="ticker-track"
+        style={{ "--ticker-duration": `${duration}s` } as React.CSSProperties}
+      >
+        {loop.map((item, i) => (
+          <EcoItem key={`${item.key}-${i}`} item={item} />
+        ))}
       </div>
     </Link>
   );
