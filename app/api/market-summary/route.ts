@@ -1,10 +1,12 @@
-import { NextResponse, after } from "next/server";
-import { kvGetDetail, kvSetDetail } from "@/lib/kv";
+import { NextResponse } from "next/server";
+import { unstable_cache, revalidateTag } from "next/cache";
 
 export const maxDuration = 45;
 
-const CACHE_KEY = "market-summary-latest";
-type CachedSummary = { date: string; summary: string };
+type CachedSummary = { date: string; summary: string; generatedAt: number };
+
+/** L1: 같은 서버리스 인스턴스 안에서는 즉시 반환 */
+let memCache: CachedSummary | null = null;
 
 /** YYYY-MM-DD of the last NYSE close (ET 기준) */
 function lastTradingDay(): string {
@@ -82,6 +84,50 @@ ${ftLines}
 투자 권유 없이 팩트 중심으로, 증권사 리서치 요약 톤으로 작성.`;
 }
 
+/** Claude 호출 — 캐시 미스일 때만 실행됨 */
+async function generateSummary(date: string, apiKey: string): Promise<CachedSummary> {
+  const [sectors, futures] = await Promise.all([fetchSectors(), fetchFutures()]);
+  if (sectors.length === 0 && futures.length === 0) {
+    throw new Error("no data");
+  }
+
+  const prompt = buildPrompt(sectors, futures, date);
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key":         apiKey,
+      "anthropic-version": "2023-06-01",
+      "content-type":      "application/json",
+    },
+    body: JSON.stringify({
+      model:      "claude-haiku-4-5-20251001",
+      max_tokens: 400,
+      messages:   [{ role: "user", content: prompt }],
+    }),
+    signal: AbortSignal.timeout(20000),
+  });
+
+  if (!res.ok) throw new Error("claude error");
+
+  const data = await res.json() as { content?: { text: string }[] };
+  const summary = data.content?.[0]?.text?.trim() ?? "";
+  if (!summary) throw new Error("empty");
+
+  return { date, summary, generatedAt: Date.now() };
+}
+
+/**
+ * L2: Vercel Data Cache — 배포 전역으로 하루(86400s) 유지.
+ * Upstash/Edge Config 없이 동작. 날짜가 키에 포함돼서 거래일마다 1회만 Claude 호출.
+ */
+async function getCachedSummary(date: string, apiKey: string): Promise<CachedSummary> {
+  return unstable_cache(
+    async () => generateSummary(date, apiKey),
+    ["market-summary", date],
+    { revalidate: 86_400, tags: ["market-summary"] },
+  )();
+}
+
 export async function GET(req: Request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return NextResponse.json({ error: "no key" }, { status: 503 });
@@ -89,55 +135,35 @@ export async function GET(req: Request) {
   const force = new URL(req.url).searchParams.get("force") === "1";
   const date  = lastTradingDay();
 
-  // 캐시 확인 (강제 갱신 시 스킵) — 같은 거래일이면 캐시된 요약을 그대로 반환,
-  // 장마감 크론(/api/cron/market-summary-close)이 하루 1번만 새로 생성함
-  if (!force) {
-    const cached = await kvGetDetail(CACHE_KEY) as CachedSummary | null;
-    if (cached?.date === date && cached.summary) {
-      return NextResponse.json({ summary: cached.summary, date, cached: true });
-    }
+  // L1 메모리 히트 (강제 갱신 제외)
+  if (!force && memCache?.date === date && memCache.summary) {
+    return NextResponse.json({ summary: memCache.summary, date, cached: true });
   }
 
-  // 데이터 수집
-  const [sectors, futures] = await Promise.all([fetchSectors(), fetchFutures()]);
-  if (sectors.length === 0 && futures.length === 0) {
-    return NextResponse.json({ error: "no data" }, { status: 503 });
-  }
-
-  const prompt = buildPrompt(sectors, futures, date);
-
-  // Claude 호출
   try {
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "x-api-key":         apiKey,
-        "anthropic-version": "2023-06-01",
-        "content-type":      "application/json",
-      },
-      body: JSON.stringify({
-        model:      "claude-haiku-4-5-20251001",
-        max_tokens: 400,
-        messages:   [{ role: "user", content: prompt }],
-      }),
-      signal: AbortSignal.timeout(20000),
+    if (force) {
+      // 수동 강제 갱신: 캐시 무효화 후 Claude 1회 호출
+      revalidateTag("market-summary", "max");
+      const fresh = await generateSummary(date, apiKey);
+      memCache = fresh;
+      return NextResponse.json({ summary: fresh.summary, date, cached: false });
+    }
+
+    const result = await getCachedSummary(date, apiKey);
+    memCache = result;
+    // generatedAt이 수초 이전이면 Data Cache에서 읽은 것 (방금 생성이면 ~0ms 차이)
+    const cached = Date.now() - result.generatedAt > 3_000;
+    return NextResponse.json({
+      summary: result.summary,
+      date,
+      cached,
     });
-
-    if (!res.ok) return NextResponse.json({ error: "claude error" }, { status: 502 });
-
-    const data   = await res.json() as { content?: { text: string }[] };
-    const summary = data.content?.[0]?.text?.trim() ?? "";
-    if (!summary) return NextResponse.json({ error: "empty" }, { status: 502 });
-
-    // KV 캐시 저장 — 다음 거래일 장마감 크론이 새로 덮어쓸 때까지 유지.
-    // after()로 응답 전송 후에도 함수가 살아있게 해서(waitUntil) 쓰기가
-    // 중간에 끊기지 않고 끝까지 완료되도록 보장한다.
-    after(async () => {
-      await kvSetDetail(CACHE_KEY, { date, summary });
-    });
-
-    return NextResponse.json({ summary, date, cached: false });
-  } catch {
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "timeout";
+    if (msg === "no data") return NextResponse.json({ error: "no data" }, { status: 503 });
+    if (msg === "claude error" || msg === "empty") {
+      return NextResponse.json({ error: msg }, { status: 502 });
+    }
     return NextResponse.json({ error: "timeout" }, { status: 504 });
   }
 }
