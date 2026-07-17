@@ -12,6 +12,25 @@ const REPORT_DIR = path.join(__dirname, '../01.investus 리포트');
 // Each entry: { ko, en (optional), label, date }
 // en: null if no English version exists
 const PAIRS = [
+  // ── 2026-07-18 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260718.svg',                        en: 'summary-20260718-en.svg',                        label: 'summary',                    date: '20260718' },
+  { ko: 'tsla-fsd-12b-crossed-20260718.svg',           en: 'tsla-fsd-12b-crossed-20260718-en.svg',           label: 'tsla-fsd-12b-crossed',       date: '20260718' },
+  { ko: 'meta-anthropic-10b-deal-20260718.svg',        en: 'meta-anthropic-10b-deal-20260718-en.svg',        label: 'meta-anthropic-10b-deal',    date: '20260718' },
+  { ko: 'meta-aws-hire-brown-20260718.svg',            en: 'meta-aws-hire-brown-20260718-en.svg',            label: 'meta-aws-hire-brown',        date: '20260718' },
+  { ko: 'aapl-most-valuable-4t9-20260718.svg',         en: 'aapl-most-valuable-4t9-20260718-en.svg',         label: 'aapl-most-valuable-4t9',     date: '20260718' },
+  { ko: 'spcx-pentagon-datacenter-20260718.svg',       en: 'spcx-pentagon-datacenter-20260718-en.svg',       label: 'spcx-pentagon-datacenter',   date: '20260718' },
+  { ko: 'spcx-nasa-moon-pathway-20260718.svg',         en: 'spcx-nasa-moon-pathway-20260718-en.svg',         label: 'spcx-nasa-moon-pathway',     date: '20260718' },
+  { ko: 'nvda-rubin-nvl72-950kw-20260718.svg',         en: 'nvda-rubin-nvl72-950kw-20260718-en.svg',         label: 'nvda-rubin-nvl72-950kw',     date: '20260718' },
+  { ko: 'tsla-cybercab-austin-hire-20260718.svg',      en: 'tsla-cybercab-austin-hire-20260718-en.svg',      label: 'tsla-cybercab-austin-hire',  date: '20260718' },
+  { ko: 'tsla-fsd-germany-path-20260718.svg',          en: 'tsla-fsd-germany-path-20260718-en.svg',          label: 'tsla-fsd-germany-path',      date: '20260718' },
+  { ko: 'tsla-latvia-entry-20260718.svg',              en: 'tsla-latvia-entry-20260718-en.svg',              label: 'tsla-latvia-entry',          date: '20260718' },
+  { ko: 'global-ev-2m-month-20260718.svg',             en: 'global-ev-2m-month-20260718-en.svg',             label: 'global-ev-2m-month',         date: '20260718' },
+  { ko: 'nflx-q2-2026-20260718.svg',                   en: 'nflx-q2-2026-20260718-en.svg',                   label: 'nflx-q2-2026',               date: '20260718' },
+  { ko: 'sox-bear-threshold-15-20260718.svg',          en: 'sox-bear-threshold-15-20260718-en.svg',          label: 'sox-bear-threshold-15',      date: '20260718' },
+  { ko: 'msft-3y-4x-outlook-20260718.svg',             en: 'msft-3y-4x-outlook-20260718-en.svg',             label: 'msft-3y-4x-outlook',         date: '20260718' },
+  { ko: 'moritz-tsla-msft-analogy-20260718.svg',       en: 'moritz-tsla-msft-analogy-20260718-en.svg',       label: 'moritz-tsla-msft-analogy',   date: '20260718' },
+  { ko: 'cvx-iraq-mou-20260718.svg',                   en: 'cvx-iraq-mou-20260718-en.svg',                   label: 'cvx-iraq-mou',               date: '20260718' },
+  // ── 2026-07-17 ─────────────────────────────────────────────────────────
   { ko: 'summary-20260717.svg', en: 'summary-20260717-en.svg', label: 'summary', date: '20260717' },
   { ko: 'tsla-robotaxi-175-tx-20260717.svg', en: 'tsla-robotaxi-175-tx-20260717-en.svg', label: 'tsla-robotaxi-175-tx', date: '20260717' },
   { ko: 'qqq-volatility-20-26-20260717.svg', en: 'qqq-volatility-20-26-20260717-en.svg', label: 'qqq-volatility-20-26', date: '20260717' },
