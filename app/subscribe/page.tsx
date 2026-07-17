@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { ChevronLeft, CheckCircle, Copy, Lock, Star, FileText } from "lucide-react";
+import { ChevronLeft, CheckCircle, Copy, Lock, Star, FileText, CreditCard, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION, formatSubPrice } from "@/lib/subscription";
@@ -20,12 +20,65 @@ export default function SubscribePage() {
   const [step, setStep] = useState<"info" | "transfer" | "done">("info");
   const [copied, setCopied] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [payingCard, setPayingCard] = useState(false);
   const [error, setError] = useState("");
 
   const copy = () => {
     navigator.clipboard.writeText(SUBSCRIPTION.bank.number);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const startCardPay = async () => {
+    if (!user) { setError("로그인이 필요합니다."); return; }
+    const storeId    = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
+    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
+    if (!storeId || !channelKey) {
+      setError("결제 설정이 아직 준비되지 않았습니다. 계좌이체를 이용해주세요.");
+      return;
+    }
+    setError("");
+    setPayingCard(true);
+    try {
+      const PortOne = (await import("@portone/browser-sdk/v2")).default;
+      const billingIssueId = `BK-${Date.now()}-${user.id.slice(0, 8)}`;
+      const res = await PortOne.requestIssueBillingKey({
+        storeId,
+        channelKey,
+        billingKeyMethod: "CARD",
+        issueId:   billingIssueId,
+        issueName: "Investus Pro 월 구독 카드 등록",
+        customer:  { customerId: user.id, email: user.email, fullName: user.nickname || undefined },
+      });
+      if (!res || res.code) {
+        throw new Error(res?.message ?? "카드 등록이 취소되었습니다.");
+      }
+      const billingKey = res.billingKey;
+
+      const { data: { session } } = await getSupabase().auth.getSession();
+      const r = await fetch("/api/portone/issue-billing-key", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+        },
+        body: JSON.stringify({
+          billingKey,
+          planKind: "pro",
+          customerName: user.nickname || undefined,
+        }),
+      });
+      if (!r.ok) {
+        const d = await r.json().catch(() => ({}));
+        throw new Error((d as { error?: string }).error ?? "결제 실패");
+      }
+      // 성공 — 페이지 새로고침으로 Pro 상태 반영
+      window.location.href = "/subscribe";
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setPayingCard(false);
+    }
   };
 
   const startTransfer = async () => {
@@ -191,13 +244,30 @@ export default function SubscribePage() {
               />
             </div>
             {error && <p className="text-xs text-center mb-3" style={{ color: "#ef4444" }}>{error}</p>}
+
+            {/* 카드 정기결제 (권장) */}
             <button
-              onClick={startTransfer}
-              disabled={submitting}
-              className="w-full py-4 rounded-2xl text-base font-bold disabled:opacity-60"
+              onClick={startCardPay}
+              disabled={payingCard || submitting}
+              className="w-full py-4 rounded-2xl text-base font-bold disabled:opacity-60 flex items-center justify-center gap-2 mb-2"
               style={{ background: "var(--mint)", color: "#000" }}
             >
-              {submitting ? "신청 중…" : `계좌이체로 구독하기 ${formatSubPrice()}`}
+              {payingCard
+                ? <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>
+                : <><CreditCard className="w-4 h-4" />카드로 매달 자동결제 {formatSubPrice()}</>}
+            </button>
+            <p className="text-[10px] text-center mb-3" style={{ color: "var(--muted)" }}>
+              첫 결제 후 매달 자동 청구 · 언제든지 해지 가능
+            </p>
+
+            {/* 계좌이체 (대체) */}
+            <button
+              onClick={startTransfer}
+              disabled={submitting || payingCard}
+              className="w-full py-3 rounded-2xl text-xs font-semibold border disabled:opacity-60"
+              style={{ borderColor: "var(--border)", color: "var(--muted)" }}
+            >
+              {submitting ? "신청 중…" : "계좌이체로 구독하기 (수동)"}
             </button>
           </>
         )}

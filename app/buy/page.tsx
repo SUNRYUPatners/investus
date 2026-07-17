@@ -126,6 +126,7 @@ export default function BuyPage() {
   const [termsAgreed, setTermsAgreed] = useState(false);
   const [errMsg,      setErrMsg]      = useState("");
   const [loading,     setLoading]     = useState(false);
+  const [payingCard,  setPayingCard]  = useState(false);
   const [done,        setDone]        = useState(false);
 
   const handleSubmit = async () => {
@@ -145,6 +146,61 @@ export default function BuyPage() {
 
     setLoading(false);
     setDone(true);
+  };
+
+  const handleCardPay = async () => {
+    if (!name.trim())  { setErrMsg("이름을 입력해주세요."); return; }
+    if (!email.trim()) { setErrMsg("이메일을 입력해주세요 (PDF 수신용)."); return; }
+    if (!termsAgreed)  { setErrMsg("구매 조건 및 환불정책에 동의해주세요."); return; }
+
+    const storeId    = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
+    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
+    if (!storeId || !channelKey) {
+      setErrMsg("카드결제 설정이 아직 준비되지 않았습니다. 계좌이체를 이용해주세요.");
+      return;
+    }
+    setErrMsg("");
+    setPayingCard(true);
+    try {
+      const PortOne = (await import("@portone/browser-sdk/v2")).default;
+      const paymentId = `EBOOK-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+      const res = await PortOne.requestPayment({
+        storeId,
+        channelKey,
+        paymentId,
+        orderName: BOOK.title,
+        totalAmount: BOOK.price,
+        currency: "KRW",
+        payMethod: "CARD",
+        customer: { fullName: name.trim(), email: email.trim() },
+      });
+      if (!res || res.code) throw new Error(res?.message ?? "결제가 취소되었습니다.");
+
+      // 서버 검증 + 이메일 발송 트리거
+      const v = await fetch("/api/portone/confirm-payment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ paymentId, expectedAmountKrw: BOOK.price, itemKind: "ebook" }),
+      });
+      if (!v.ok) {
+        const d = await v.json().catch(() => ({}));
+        throw new Error((d as { error?: string }).error ?? "결제 검증 실패");
+      }
+      // 이메일 안내 발송 (기존 book-order 재사용)
+      try {
+        await fetch("/api/book-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: name.trim(), email: email.trim(), paid: true, paymentId }),
+        });
+      } catch { /* 알림 실패 무시 */ }
+
+      window.location.href = `/buy/success?paymentId=${paymentId}&amount=${BOOK.price}`;
+    } catch (e) {
+      setErrMsg((e as Error).message);
+    } finally {
+      setPayingCard(false);
+    }
   };
 
   if (done) return <TransferScreen name={name} email={email} />;
@@ -242,25 +298,19 @@ export default function BuyPage() {
             </div>
           </div>
 
-          {/* 카드/간편결제 — 준비중 */}
-          <div className="grid grid-cols-2 gap-2 opacity-40 pointer-events-none select-none">
-            {[
-              { icon: <CreditCard className="w-5 h-5" />, label: "신용·체크카드" },
-              { icon: <span className="text-base font-black text-[#0064FF]">toss</span>, label: "토스페이" },
-              { icon: <span className="text-lg">💛</span>, label: "카카오페이" },
-              { icon: <span className="text-base font-black text-[#03C75A]">N</span>, label: "네이버페이" },
-            ].map(({ icon, label }) => (
-              <div key={label}
-                className="flex flex-col items-center gap-1.5 py-3 rounded-2xl border relative"
-                style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                {icon}
-                <span className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</span>
-                <span className="absolute top-1.5 right-1.5 text-[8px] px-1.5 py-0.5 rounded-full font-semibold"
-                  style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}>
-                  준비중
-                </span>
-              </div>
-            ))}
+          {/* 카드/간편결제 — 포트원 통합 */}
+          <div className="flex items-center gap-3 rounded-2xl border p-4 mt-2"
+            style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "rgba(96,165,250,0.12)" }}>
+              <CreditCard className="w-5 h-5" style={{ color: "#60a5fa" }} />
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-bold" style={{ color: "var(--text)" }}>신용·체크카드</p>
+              <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+                포트원 결제 · 즉시 처리 · 카드/간편결제
+              </p>
+            </div>
           </div>
         </div>
 
@@ -286,17 +336,26 @@ export default function BuyPage() {
           <p className="text-xs mb-4 text-center" style={{ color: "#ef4444" }}>{errMsg}</p>
         )}
 
-        <button onClick={handleSubmit} disabled={loading}
-          className="w-full py-4 rounded-2xl text-base font-bold text-black active:opacity-80 transition-opacity disabled:opacity-60"
+        {/* 카드결제 (권장) */}
+        <button onClick={handleCardPay} disabled={payingCard || loading}
+          className="w-full py-4 rounded-2xl text-base font-bold text-black active:opacity-80 transition-opacity disabled:opacity-60 mb-2 flex items-center justify-center gap-2"
           style={{ background: "var(--mint)", boxShadow: "0 4px 24px rgba(0,229,160,0.3)" }}>
-          {loading
-            ? <span className="flex items-center justify-center gap-2"><Loader2 className="w-4 h-4 animate-spin" />처리중…</span>
-            : `${fmt(BOOK.price)} 계좌이체로 구매하기`}
+          {payingCard
+            ? <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>
+            : <><CreditCard className="w-4 h-4" />{fmt(BOOK.price)} 카드로 결제하기</>}
         </button>
-
-        <p className="text-[10px] text-center mt-3 leading-relaxed" style={{ color: "var(--muted)" }}>
-          입금 확인 후 PDF 다운로드 링크를 이메일로 발송해드립니다
+        <p className="text-[10px] text-center mb-3" style={{ color: "var(--muted)" }}>
+          결제 즉시 PDF 다운로드 링크 이메일 발송
         </p>
+
+        {/* 계좌이체 (대체) */}
+        <button onClick={handleSubmit} disabled={loading || payingCard}
+          className="w-full py-3 rounded-2xl text-xs font-semibold border disabled:opacity-60"
+          style={{ borderColor: "var(--border)", color: "var(--muted)" }}>
+          {loading
+            ? <span className="flex items-center justify-center gap-2"><Loader2 className="w-3.5 h-3.5 animate-spin" />처리중…</span>
+            : `계좌이체로 구매하기 (수동 확인 필요)`}
+        </button>
       </main>
     </div>
   );

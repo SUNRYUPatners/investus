@@ -3,10 +3,11 @@
 import { use, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard, BookMarked } from "lucide-react";
+import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard, BookMarked, Loader2 } from "lucide-react";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { Header } from "@/components/Header";
 import { contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
+import { getSupabase } from "@/lib/supabase";
 
 const ACCOUNT = { bank: "카카오뱅크", number: "3333-22-2070396", holder: "류현우" };
 
@@ -54,6 +55,8 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
     return loadSubscribed(id);
   });
   const [showSubModal, setShowSubModal] = useState(false);
+  const [creatorPaying, setCreatorPaying] = useState(false);
+  const [creatorPayErr, setCreatorPayErr] = useState("");
 
   useEffect(() => {
     async function load() {
@@ -433,18 +436,89 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               </div>
             </div>
 
+            {/* 카드 정기결제 (권장) */}
+            <button
+              onClick={async () => {
+                const storeId    = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
+                const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
+                if (!storeId || !channelKey) {
+                  setCreatorPayErr("카드결제 설정이 아직 준비되지 않았습니다.");
+                  return;
+                }
+                if (!creator.subscriptionPrice) {
+                  setCreatorPayErr("구독료가 설정되지 않았습니다.");
+                  return;
+                }
+                setCreatorPayErr("");
+                setCreatorPaying(true);
+                try {
+                  const { data: { session }, error: seErr } = await getSupabase().auth.getSession();
+                  if (seErr || !session?.user) throw new Error("로그인이 필요합니다.");
+                  const uid = session.user.id;
+                  const uemail = session.user.email ?? "";
+
+                  const PortOne = (await import("@portone/browser-sdk/v2")).default;
+                  const res = await PortOne.requestIssueBillingKey({
+                    storeId, channelKey,
+                    billingKeyMethod: "CARD",
+                    issueId: `CRT-BK-${Date.now()}-${uid.slice(0, 8)}`,
+                    issueName: `${creator.nickname} 크리에이터 구독 카드 등록`,
+                    customer: { customerId: uid, email: uemail },
+                  });
+                  if (!res || res.code) throw new Error(res?.message ?? "카드 등록이 취소되었습니다.");
+
+                  const r = await fetch("/api/portone/issue-billing-key", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                      Authorization: `Bearer ${session.access_token}`,
+                    },
+                    body: JSON.stringify({
+                      billingKey: res.billingKey,
+                      planKind: "creator",
+                      planRef: id,
+                      priceKrw: creator.subscriptionPrice,
+                    }),
+                  });
+                  if (!r.ok) {
+                    const d = await r.json().catch(() => ({}));
+                    throw new Error((d as { error?: string }).error ?? "결제 실패");
+                  }
+                  setIsSubscribed(true);
+                  saveSubscribed(id, true);
+                  setShowSubModal(false);
+                } catch (e) {
+                  setCreatorPayErr((e as Error).message);
+                } finally {
+                  setCreatorPaying(false);
+                }
+              }}
+              disabled={creatorPaying}
+              className="w-full py-3 rounded-2xl text-sm font-bold text-black active:opacity-80 transition-opacity mb-2 flex items-center justify-center gap-2 disabled:opacity-60"
+              style={{ background: "var(--mint)" }}>
+              {creatorPaying
+                ? <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>
+                : <><CreditCard className="w-4 h-4" />카드로 매달 자동결제 시작 →</>}
+            </button>
+
+            {/* 계좌이체 (수동) */}
             <button
               onClick={() => {
                 setIsSubscribed(true);
                 saveSubscribed(id, true);
                 setShowSubModal(false);
               }}
-              className="w-full py-4 rounded-2xl text-sm font-bold text-black active:opacity-80 transition-opacity mb-3"
-              style={{ background: "var(--mint)" }}>
-              입금 완료 — 구독 시작하기 →
+              className="w-full py-2.5 rounded-2xl text-xs font-semibold border mb-2"
+              style={{ borderColor: "var(--border)", color: "var(--muted)" }}>
+              입금 완료 — 수동 구독 시작
             </button>
+
+            {creatorPayErr && (
+              <p className="text-[10px] text-center mb-2" style={{ color: "#ef4444" }}>{creatorPayErr}</p>
+            )}
             <p className="text-[10px] text-center leading-relaxed" style={{ color: "var(--muted)" }}>
-              입금자명에 닉네임을 입력해주세요 · 확인 후 구독이 활성화됩니다
+              카드결제: 즉시 첫 결제 후 매달 자동 청구 · 언제든 해지<br/>
+              계좌이체: 입금자명에 닉네임 입력 · 관리자 확인 후 활성화
             </p>
           </div>
         </div>
