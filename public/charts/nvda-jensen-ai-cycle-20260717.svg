@@ -1,36 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a1628"/></linearGradient>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
   <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
-  
-  <rect x="40" y="20" width="110" height="38" rx="19" fill="#60a5fa30" stroke="#60a5fa" stroke-width="1.5"/>
-  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#60a5fa" text-anchor="middle">NVDA</text>
+
+  <rect x="40" y="20" width="140" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="110" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">undefined</text>
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.17</text>
-  <text x="540" y="102" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">젠슨 황 — “AI 사이클은 이제 시작”</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">젠슨 황 — "AI 사이클은 이제 시작"</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
-  
-  <rect x="390" y="150" width="300" height="44" rx="22" fill="#60a5fa33" stroke="#60a5fa"/>
-  <text x="540" y="180" font-family="Arial Black,Arial" font-size="18" fill="#60a5fa" text-anchor="middle">CEO COMMENT</text>
-  <rect x="80" y="230" width="920" height="340" rx="20" fill="#0a1628" stroke="#60a5fa" stroke-width="2"/>
-  <text x="540" y="320" font-family="Arial" font-size="48" text-anchor="middle">💬</text>
-  <text x="120" y="400" font-family="Arial" font-size="26" fill="#e5e7eb">기술 사이클은 보통 10~15년 지속된 뒤 정체한다. AI 사이클은 이제 시작이다.</text>
-  <text x="120" y="520" font-family="Arial" font-size="20" fill="#9ca3af">— Jensen Huang, NVIDIA CEO</text>
-  
-  <rect x="120" y="620" width="240" height="70" rx="35" fill="#0a1628" stroke="#60a5fa"/>
-  <text x="240" y="664" font-family="Arial Black,Arial" font-size="22" fill="#60a5fa" text-anchor="middle">10–15년</text>
-  <rect x="400" y="620" width="240" height="70" rx="35" fill="#0a1628" stroke="#60a5fa"/>
-  <text x="520" y="664" font-family="Arial Black,Arial" font-size="22" fill="#60a5fa" text-anchor="middle">초기 국면</text>
-  <rect x="680" y="620" width="240" height="70" rx="35" fill="#0a1628" stroke="#60a5fa"/>
-  <text x="800" y="664" font-family="Arial Black,Arial" font-size="22" fill="#60a5fa" text-anchor="middle">장기 수요</text>
-  <text x="100" y="760" font-family="Arial" font-size="18" fill="#6b7280">Source: Burry Tracker / NVIDIA · 2026.07.16</text>
-  
-  <text x="540" y="960" font-family="Arial" font-size="21" fill="#374151" text-anchor="middle">NVDA · Jensen AI Cycle 10–15Y · 2026.07.17</text>
-  <rect x="0" y="1060" width="1080" height="20" fill="#60a5fa" opacity=".4"/>
-  <text x="540" y="1074" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="1.5">investus.kr SRP 최고투자책임자 발행</text>
+
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">🚀</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#4ade80" text-anchor="middle">🚀</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">10–15 Y</text>
+  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">기술 사이클은 보통 10~15년 지속된 뒤 정체 · AI는 시작 단계</text>
+
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="456" font-family="Arial" font-size="44" text-anchor="middle">📈</text>
+  <text x="210" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">초기</text>
+  <text x="210" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">AI 사이클 단계</text>
+  <text x="210" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Just beginning</text>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="456" font-family="Arial" font-size="44" text-anchor="middle">⏳</text>
+  <text x="540" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">10–15Y</text>
+  <text x="540" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">통상 사이클 지속</text>
+  <text x="540" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">plateau 이전</text>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="456" font-family="Arial" font-size="44" text-anchor="middle">🏭</text>
+  <text x="870" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">인프라</text>
+  <text x="870" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">구축 초기</text>
+  <text x="870" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">GPU · DC · 전력</text>
+
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">JENSEN HUANG · NVIDIA</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">"기술 사이클은 보통 10~15년 지속된 뒤 정체한다. AI 사이클은 이제 시작이다"</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"Tech cycles typically last 10–15 years before plateauing. The AI cycle is just beginning."</text>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Source: Burry Tracker / NVIDIA · 2026.07.16</text>
+
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="854" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">CEO 코멘터리 — 밸류에이션 프리미엄 정당화 프레임</text>
+  <text x="540" y="890" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">단기 지표(수요·재고·CAPEX)로 사이클 위치 재검증 필요</text>
+
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">NVDA · Jensen AI Cycle Just Beginning · 2026.07.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -1,44 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a1a0a"/></linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
   <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
-  
-  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+
+  <rect x="40" y="20" width="140" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="110" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">undefined</text>
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.17</text>
-  <text x="540" y="102" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA 로보택시 텍사스 플릿 175대</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA 로보택시 텍사스 175대</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
-  
-  <text x="540" y="190" font-family="Arial" font-size="52" text-anchor="middle">🚕</text>
-  <text x="540" y="275" font-family="Arial Black,Arial" font-size="80" font-weight="900" fill="#4ade80" text-anchor="middle">175대</text>
-  <text x="540" y="330" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">텍사스 플릿 +58 · 연 수익 추정 $10.5M</text>
-  
-  <rect x="60" y="380" width="300" height="160" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="210" y="418" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">신규 추가</text>
-  <text x="210" y="475" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#4ade80" text-anchor="middle">+58</text>
-  <text x="210" y="515" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">TX 로보택시</text>
-  <rect x="380" y="380" width="300" height="160" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="530" y="418" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">총 플릿</text>
-  <text x="530" y="475" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#4ade80" text-anchor="middle">175</text>
-  <text x="530" y="515" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">완전무감독 추정</text>
-  <rect x="700" y="380" width="300" height="160" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="850" y="418" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">연 수익 추정</text>
-  <text x="850" y="475" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#4ade80" text-anchor="middle">$10.5M</text>
-  <text x="850" y="515" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">대당 $60k 기준</text>
-  
-  <rect x="60" y="570" width="960" height="220" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="614" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">TXDMV 등록 비교</text>
-  <text x="100" y="660" font-family="Arial" font-size="24" fill="#e5e7eb">📊 Waymo 642 · Avride 317 · Tesla 175 · Zoox 44</text>
-<text x="100" y="702" font-family="Arial" font-size="24" fill="#e5e7eb">📈 5월말~7/15 플릿 성장이 가속(하키 스틱) 구간 진입</text>
-  <text x="100" y="762" font-family="Arial" font-size="18" fill="#6b7280">Source: Cole Grinde / TXDMV · 2026.07.16</text>
-  
-  <text x="540" y="960" font-family="Arial" font-size="21" fill="#374151" text-anchor="middle">TSLA Robotaxi TX Fleet 175 · +58 · 2026.07.17</text>
-  <rect x="0" y="1060" width="1080" height="20" fill="#4ade80" opacity=".4"/>
-  <text x="540" y="1074" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="1.5">investus.kr SRP 최고투자책임자 발행</text>
+
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">🚕</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#4ade80" text-anchor="middle">🚕</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">175 · +58</text>
+  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">텍사스 완전무감독 플릿 확대 · 연 수익 추정 $10.5M</text>
+
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="456" font-family="Arial" font-size="44" text-anchor="middle">➕</text>
+  <text x="210" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">+58</text>
+  <text x="210" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">신규 추가</text>
+  <text x="210" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">TX Robotaxi</text>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="456" font-family="Arial" font-size="44" text-anchor="middle">🚕</text>
+  <text x="540" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">175</text>
+  <text x="540" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">총 플릿 규모</text>
+  <text x="540" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">unsupervised est.</text>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="456" font-family="Arial" font-size="44" text-anchor="middle">💰</text>
+  <text x="870" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">$10.5M</text>
+  <text x="870" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">연 수익 추정</text>
+  <text x="870" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">@ $60k/veh</text>
+
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">FLEET COMPARISON (2026-07-16)</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">"Waymo 642 · Avride 317 · Tesla 175 · Zoox 44"</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"Tesla Robotaxi fleet entering hockey-stick growth"</text>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Source: Cole Grinde / TXDMV · 2026.07.16</text>
+
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="854" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">5월말~7/15 플릿 성장이 하키 스틱 구간 진입</text>
+  <text x="540" y="890" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">후속 공식 발표·실적·규제 일정 추적 필요</text>
+
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">TSLA Robotaxi Texas Fleet · 175 units · 2026.07.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -1,37 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a0a"/></linearGradient>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f87171"/><stop offset="100%" style="stop-color:#ef4444"/></linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
   <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
-  
-  <rect x="40" y="20" width="110" height="38" rx="19" fill="#f8717130" stroke="#f87171" stroke-width="1.5"/>
-  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f87171" text-anchor="middle">SOX</text>
+
+  <rect x="40" y="20" width="140" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="110" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">undefined</text>
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.17</text>
-  <text x="540" y="102" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">반도체 SOX — ATH 대비 -16% 조정</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">반도체 SOX — ATH 대비 -16% 조정</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
-  
-  <rect x="80" y="180" width="380" height="280" rx="20" fill="#1a0a0a" stroke="#6b7280" stroke-width="1.5"/>
-  <text x="270" y="230" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">ATH</text>
-  <text x="270" y="320" font-family="Arial Black,Arial" font-size="48" font-weight="900" fill="#9ca3af" text-anchor="middle">14,655</text>
-  <text x="270" y="390" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">6월 고점</text>
-  <text x="540" y="320" font-family="Arial" font-size="48" fill="#f87171" text-anchor="middle">→</text>
-  <rect x="620" y="180" width="380" height="280" rx="20" fill="#1a0a0a" stroke="#f87171" stroke-width="2"/>
-  <text x="810" y="230" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">현재</text>
-  <text x="810" y="320" font-family="Arial Black,Arial" font-size="48" font-weight="900" fill="#f87171" text-anchor="middle">12,331</text>
-  <text x="810" y="390" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">일 -2.61%</text>
-  
-  <rect x="60" y="500" width="960" height="240" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="544" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">기술적 맥락</text>
-  <text x="100" y="590" font-family="Arial" font-size="24" fill="#e5e7eb">📉 기술적 조정 구간 · 베어마켓 경계선 근접</text>
-<text x="100" y="632" font-family="Arial" font-size="24" fill="#e5e7eb">⚠ AI 반도체 강세 속에서도 지수 레벨 리스크 관리 필요</text>
-  <text x="100" y="712" font-family="Arial" font-size="18" fill="#6b7280">Source: Barchart · 2026.07.15–16</text>
-  
-  <text x="540" y="960" font-family="Arial" font-size="21" fill="#374151" text-anchor="middle">SOX · -16% from ATH 14,655 → 12,331 · 2026.07.17</text>
-  <rect x="0" y="1060" width="1080" height="20" fill="#f87171" opacity=".4"/>
-  <text x="540" y="1074" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="1.5">investus.kr SRP 최고투자책임자 발행</text>
+
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">📉</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#4ade80" text-anchor="middle">📉</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">-16 %</text>
+  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">ATH 14,655 → 현재 12,331 · 기술적 조정 구간</text>
+
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="456" font-family="Arial" font-size="44" text-anchor="middle">🏔️</text>
+  <text x="210" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">14,655</text>
+  <text x="210" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">ATH (전고점)</text>
+  <text x="210" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">All-time high</text>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="456" font-family="Arial" font-size="44" text-anchor="middle">📍</text>
+  <text x="540" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">12,331</text>
+  <text x="540" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">현재 지수</text>
+  <text x="540" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Current level</text>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="456" font-family="Arial" font-size="44" text-anchor="middle">⚠️</text>
+  <text x="870" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">-16%</text>
+  <text x="870" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">ATH 대비 하락</text>
+  <text x="870" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">bear zone 근접</text>
+
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">INDEX-LEVEL RISK</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">"AI 반도체 강세 속에서도 지수 레벨 리스크 관리 필요"</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"Even in AI boom, index-level risk management matters"</text>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Source: Barchart · 2026.07.15–16</text>
+
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="854" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">기술적 조정 구간 · 베어마켓 경계선(-20%) 근접</text>
+  <text x="540" y="890" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">개별 종목 강세 vs 지수 약세 — 상관관계 재확인 필요</text>
+
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">SOX · -16% From ATH · 2026.07.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -1,41 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a1a0a"/></linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
   <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
-  
-  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+
+  <rect x="40" y="20" width="140" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="110" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">undefined</text>
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.17</text>
-  <text x="540" y="102" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA FSD — 글로벌 누적 120억 마일 임박</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA FSD — 글로벌 누적 120억 마일 임박</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
-  
-  <text x="540" y="185" font-family="Arial" font-size="52" text-anchor="middle">✅</text>
-  <text x="540" y="265" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#4ade80" text-anchor="middle">12B mi</text>
-  <text x="540" y="320" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">전 세계 FSD 누적 주행거리 120억 마일 돌파 임박</text>
-  
-  <rect x="60" y="360" width="300" height="170" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="210" y="420" font-family="Arial" font-size="36" text-anchor="middle">🌍</text>
-  <text x="210" y="465" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f9fafb" text-anchor="middle">글로벌</text>
-  <text x="210" y="500" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">전 세계 누적</text>
-  <rect x="380" y="360" width="300" height="170" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="530" y="420" font-family="Arial" font-size="36" text-anchor="middle">🛡</text>
-  <text x="530" y="465" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f9fafb" text-anchor="middle">안전 페이지</text>
-  <text x="530" y="500" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">tesla.com/fsd/safety</text>
-  <rect x="700" y="360" width="300" height="170" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="850" y="420" font-family="Arial" font-size="36" text-anchor="middle">📡</text>
-  <text x="850" y="465" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f9fafb" text-anchor="middle">데이터 루프</text>
-  <text x="850" y="500" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">학습 데이터 확대</text>
-  <rect x="60" y="560" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="100" y="620" font-family="Arial" font-size="22" fill="#e5e7eb">💬 FSD 실도로 마일스톤은 소프트웨어 신뢰도·규제 대화의 핵심 근거</text>
-  <text x="100" y="720" font-family="Arial" font-size="18" fill="#6b7280">Source: Whole Mars Catalog / Tesla · 2026.07.16</text>
-  
-  <text x="540" y="960" font-family="Arial" font-size="21" fill="#374151" text-anchor="middle">TSLA FSD · 12 Billion Miles Approaching · 2026.07.17</text>
-  <rect x="0" y="1060" width="1080" height="20" fill="#4ade80" opacity=".4"/>
-  <text x="540" y="1074" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="1.5">investus.kr SRP 최고투자책임자 발행</text>
+
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">🛣️</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#4ade80" text-anchor="middle">🛣️</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">12 B mi</text>
+  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">전 세계 FSD 누적 주행거리 120억 마일 돌파 임박</text>
+
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="456" font-family="Arial" font-size="44" text-anchor="middle">🌍</text>
+  <text x="210" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">글로벌</text>
+  <text x="210" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">전 세계 누적</text>
+  <text x="210" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">12B mi 임박</text>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="456" font-family="Arial" font-size="44" text-anchor="middle">🛡️</text>
+  <text x="540" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">안전 지표</text>
+  <text x="540" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">tesla.com/fsd/safety</text>
+  <text x="540" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">실도로 마일 근거</text>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="456" font-family="Arial" font-size="44" text-anchor="middle">📡</text>
+  <text x="870" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">데이터 루프</text>
+  <text x="870" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">학습 데이터 확대</text>
+  <text x="870" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">모델 신뢰도 강화</text>
+
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">MILESTONE NOTE</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">"FSD 실도로 마일스톤은 소프트웨어 신뢰도·규제 대화의 핵심 근거"</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"Real-world FSD miles are core evidence for trust &amp; regulation"</text>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Source: Whole Mars Catalog / Tesla · 2026.07.16</text>
+
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="854" font-family="Arial" font-size="24" fill="#4ade80" text-anchor="middle">누적 마일 증가 = 학습·규제·보험 협상 근거</text>
+  <text x="540" y="890" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">후속 안전 리포트·규제 대화 추적 필요</text>
+
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">TSLA FSD · 12B Miles Approaching · 2026.07.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>
