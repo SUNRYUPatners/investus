@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T18JL = 1784329200000; // 2026-07-18 08:00 KST
 const T17JL = 1784242800000; // 2026-07-17 08:00 KST
 const T16JL = 1784156400000; // 2026-07-16 08:00 KST
 const T15JL = 1784070000000; // 2026-07-15 08:00 KST
@@ -56,7 +57,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T17JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T18JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -75,6 +76,56 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-18 신규 ──────────────────────────────────────────────────────
+  { id: 552, symbol: "TSLA", nickname: "익명_5511", holdingLabel: "140주 보유",
+    content: "FSD 120억 마일 뚫었네. Jun 8이 11B였는데 40일 만에 +1B. 하루 3천만 마일 쌓이면 데이터 곡선이 진짜 무섭게 커진다.",
+    createdAt: T18JL + 6*60_000, likes: 4712, comments: 4 },
+  { id: 553, symbol: "META", nickname: "익명_7802", holdingLabel: "관심종목",
+    content: "메타가 Anthropic한테 컴퓨트 2년 $10B 임대라는 NYT 보도. Zuck이 진짜 클라우드 판에 발 들이는 그림이라 CAPEX 스토리도 재해석.",
+    createdAt: T18JL + 15*60_000, likes: 4718, comments: 5 },
+  { id: 554, symbol: "META", nickname: "익명_9203", holdingLabel: "60주 보유",
+    content: "AWS 20년차 Dave Brown이 메타 DC 총괄로 온다는데. 사람 뽑는 걸 보니 진심이긴 하다. 실행력 확보 시그널.",
+    createdAt: T18JL + 24*60_000, likes: 4724, comments: 3 },
+  { id: 555, symbol: "AAPL", nickname: "익명_3388", holdingLabel: "180주 보유",
+    content: "애플이 다시 시총 1위($4.92T)로 올라왔어. NVDA($4.86T) 아침에 잠깐 넘긴 정도지만 무드가 확 바뀐다. 중국 AI 승인 재료가 컸다고 봄.",
+    createdAt: T18JL + 33*60_000, likes: 4731, comments: 5 },
+  { id: 556, symbol: "SPCX", nickname: "익명_1919", holdingLabel: "관심종목",
+    content: "WSJ에서 SPCX가 미국 국방부한테 DC 컴퓨트 파는 얘기 진행중이라던데. sovereign AI 흐름이 방위 쪽으로도 확대되는 느낌.",
+    createdAt: T18JL + 42*60_000, likes: 4737, comments: 4 },
+  { id: 557, symbol: "SPCX", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "Starship 달 착륙 pathway로 NASA 재선정 소식. Artemis 지연 프레임 뒤집는 카드라 정부 계약 명분이 확 강해짐.",
+    createdAt: T18JL + 51*60_000, likes: 4744, comments: 3 },
+  { id: 558, symbol: "NVDA", nickname: "익명_6032", holdingLabel: "45주 보유",
+    content: "NVL72 Rubin 랙 평균 950kW라니. 냉각·전력 인프라 부담이 상상 이상. HVAC/전력 밸류체인도 같이 봐야 할 시점.",
+    createdAt: T18JL + 60*60_000, likes: 4751, comments: 3 },
+  { id: 559, symbol: "TSLA", nickname: "익명_8814", holdingLabel: "관심종목",
+    content: "Cybercab 오스틴에서 injection molding 감독자 뽑는다. 사출성형 라인 세팅한다는 뜻이라 양산 시나리오가 이제 실체를 가진다.",
+    createdAt: T18JL + 69*60_000, likes: 4758, comments: 4 },
+  { id: 560, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "70주 보유",
+    content: "독일 KBA 안전성 평가 중이고 7월 독립테스트한 뒤 EU 표결로 최종 결정. 벨기에·네덜란드 다음 단계라 EU 로드맵이 점점 명확해진다.",
+    createdAt: T18JL + 78*60_000, likes: 4765, comments: 3 },
+  { id: 561, symbol: "TSLA", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "라트비아 리가 직접 판매 개시. €4000 신차 보조금에 충전소 2000개 넘고 디젤 세금 인상까지. 소규모 시장이지만 이런 게 쌓이는 게 EU 전략.",
+    createdAt: T18JL + 87*60_000, likes: 4772, comments: 3 },
+  { id: 562, symbol: "TSLA", nickname: "익명_9911", holdingLabel: "22주 보유",
+    content: "글로벌 EV 월 200만대를 드디어 넘겼네. 유럽 테슬라 +37%면 리프레시된 Y가 진짜로 팔린다는 얘기고, 침투율 곡선의 변곡점.",
+    createdAt: T18JL + 96*60_000, likes: 4779, comments: 4 },
+  { id: 563, symbol: "NFLX", nickname: "익명_7043", holdingLabel: "관심종목",
+    content: "넷플릭스 Q2 매출은 미스인데 EPS는 비트에 자사주 $4.7B. 가이던스·광고매출 성장률 안 나오면 시장이 냉정하게 볼 것 같은데.",
+    createdAt: T18JL + 105*60_000, likes: 4786, comments: 4 },
+  { id: 564, symbol: "SOX", nickname: "익명_1152", holdingLabel: "ETF 소량",
+    content: "SOX가 6월 고점 대비 -15%. 개별 종목은 강해도 지수는 베어 문턱. AMD/NVDA 실적이 리커버리 트리거일 텐데 반년치 흔들림은 각오.",
+    createdAt: T18JL + 114*60_000, likes: 4793, comments: 3 },
+  { id: 565, symbol: "MSFT", nickname: "익명_4001", holdingLabel: "관심종목",
+    content: "MSFT 3년 안에 매출 ~4배 전망이라는데. 애널 코멘트일 뿐이고 가이던스 아니라 반만 걸러들었지만, Azure/Copilot/게이밍 스택 다 굴러가는 건 맞음.",
+    createdAt: T18JL + 123*60_000, likes: 4800, comments: 3 },
+  { id: 566, symbol: "TSLA", nickname: "익명_8880", holdingLabel: "관심종목",
+    content: "Moritz가 MSFT IPO $400~600M 밸류에 다들 우스꽝스럽다 했던 얘기 꺼냈네. 역사 반복이라는 프레임 좋아하지만 CF·희석은 따로 봐야지.",
+    createdAt: T18JL + 132*60_000, likes: 4807, comments: 4 },
+  { id: 567, symbol: "CVX", nickname: "익명_6272", holdingLabel: "관심종목",
+    content: "Chevron 이라크 유전 2개 MOU 서명. 트럼프 방문 후에 나온 소식이라 지정학 각도까지 결합. MOU 단계라 실제 생산 확인이 관건.",
+    createdAt: T18JL + 141*60_000, likes: 4814, comments: 3 },
+
   // ── 2026-07-17 신규 ──────────────────────────────────────────────────────
   { id: 537, symbol: "TSLA", nickname: "익명_4412", holdingLabel: "95주 보유",
     content: "텍사스 로보택시 또 +58… 175면 기울기는 무섭다. $10.5M은 추정이지 싶지만 방향은 맞다.",
@@ -2387,6 +2438,98 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-18 신규 ──────────────────────────────────────────────────────
+  552: [
+    { id: 1, nickname: "익명_2200", holdingLabel: "관심종목", content: "매일 3천만 마일이면 훈련 데이터 곡선 이길 상대가 없다.", createdAt: T18JL + 6*60_000 + m(-8), likes: 12 },
+    { id: 2, nickname: "익명_2201", holdingLabel: "관심종목", content: "안전 페이지 개입률도 함께 봐야 진짜.", createdAt: T18JL + 6*60_000 + m(-4), likes: 18 },
+    { id: 3, nickname: "익명_2202", holdingLabel: "관심종목", content: "다음 10억 마일은 30일 이내겠지.", createdAt: T18JL + 6*60_000 + m(0), likes: 24 },
+    { id: 4, nickname: "익명_2203", holdingLabel: "관심종목", content: "무감독 상용화 근거로 인용될 수치임.", createdAt: T18JL + 6*60_000 + m(4), likes: 22 },
+  ],
+  553: [
+    { id: 1, nickname: "익명_2210", holdingLabel: "관심종목", content: "메타가 컴퓨트 파는 순간 넷플릭스처럼 구조 바뀜.", createdAt: T18JL + 15*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_2211", holdingLabel: "관심종목", content: "FCF 걱정되지만 매출 다각화는 호재.", createdAt: T18JL + 15*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_2212", holdingLabel: "관심종목", content: "Anthropic이 얼마나 급하면 메타까지.", createdAt: T18JL + 15*60_000 + m(0), likes: 18 },
+    { id: 4, nickname: "익명_2213", holdingLabel: "관심종목", content: "NYT 소스라 신뢰도 높음.", createdAt: T18JL + 15*60_000 + m(4), likes: 22 },
+    { id: 5, nickname: "익명_2214", holdingLabel: "관심종목", content: "네오클라우드 진입은 큰 그림.", createdAt: T18JL + 15*60_000 + m(8), likes: 28 },
+  ],
+  554: [
+    { id: 1, nickname: "익명_2220", holdingLabel: "관심종목", content: "실행 인력 확보한 건 진짜 시그널이지.", createdAt: T18JL + 24*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2221", holdingLabel: "관심종목", content: "AWS DNA 이식되면 스피드 확 오름.", createdAt: T18JL + 24*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2222", holdingLabel: "관심종목", content: "Anthropic 딜과 짝이 딱 맞는다.", createdAt: T18JL + 24*60_000 + m(2), likes: 21 },
+  ],
+  555: [
+    { id: 1, nickname: "익명_2230", holdingLabel: "관심종목", content: "역시 결국 애플로 돈이 돈다.", createdAt: T18JL + 33*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_2231", holdingLabel: "관심종목", content: "중국 리레이팅이 핵심이지.", createdAt: T18JL + 33*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_2232", holdingLabel: "관심종목", content: "$5T 다음은 무슨 얘기가 나올까.", createdAt: T18JL + 33*60_000 + m(0), likes: 25 },
+    { id: 4, nickname: "익명_2233", holdingLabel: "관심종목", content: "장기론 서비스 매출 스택이 진짜 무기.", createdAt: T18JL + 33*60_000 + m(4), likes: 22 },
+    { id: 5, nickname: "익명_2234", holdingLabel: "관심종목", content: "NVDA랑 왔다갔다 하는 게 재미있음.", createdAt: T18JL + 33*60_000 + m(8), likes: 30 },
+  ],
+  556: [
+    { id: 1, nickname: "익명_2240", holdingLabel: "관심종목", content: "국방부 컨트랙트 진짜 되면 밸류에이션 근거가 확 생김.", createdAt: T18JL + 42*60_000 + m(-8), likes: 12 },
+    { id: 2, nickname: "익명_2241", holdingLabel: "관심종목", content: "AI1 결합 그림이 이제 그려짐.", createdAt: T18JL + 42*60_000 + m(-4), likes: 17 },
+    { id: 3, nickname: "익명_2242", holdingLabel: "관심종목", content: "정부 매출은 사이클 무디지만 안정적.", createdAt: T18JL + 42*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_2243", holdingLabel: "관심종목", content: "실 계약 규모 나올 때까지 홀드.", createdAt: T18JL + 42*60_000 + m(4), likes: 20 },
+  ],
+  557: [
+    { id: 1, nickname: "익명_2250", holdingLabel: "관심종목", content: "달 pathway는 상징성이 크다.", createdAt: T18JL + 51*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2251", holdingLabel: "관심종목", content: "Blue Origin 견제가 뒤로 밀림.", createdAt: T18JL + 51*60_000 + m(-2), likes: 18 },
+    { id: 3, nickname: "익명_2252", holdingLabel: "관심종목", content: "재사용 경제성이 다시 조명.", createdAt: T18JL + 51*60_000 + m(2), likes: 22 },
+  ],
+  558: [
+    { id: 1, nickname: "익명_2260", holdingLabel: "관심종목", content: "1MW 급 랙이라니 진짜 무섭다.", createdAt: T18JL + 60*60_000 + m(-6), likes: 13 },
+    { id: 2, nickname: "익명_2261", holdingLabel: "관심종목", content: "전력망 부담이 결국 병목.", createdAt: T18JL + 60*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2262", holdingLabel: "관심종목", content: "냉각 밸류체인 미리 봐두자.", createdAt: T18JL + 60*60_000 + m(2), likes: 24 },
+  ],
+  559: [
+    { id: 1, nickname: "익명_2270", holdingLabel: "관심종목", content: "채용공고 나온 게 오히려 진짜 신호.", createdAt: T18JL + 69*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_2271", holdingLabel: "관심종목", content: "오스틴 라인 SOP 언제쯤?", createdAt: T18JL + 69*60_000 + m(-4), likes: 19 },
+    { id: 3, nickname: "익명_2272", holdingLabel: "관심종목", content: "몰드 셋업까지 왔으면 사업화 근접.", createdAt: T18JL + 69*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_2273", holdingLabel: "관심종목", content: "적당한 기대치가 필요함.", createdAt: T18JL + 69*60_000 + m(4), likes: 21 },
+  ],
+  560: [
+    { id: 1, nickname: "익명_2280", holdingLabel: "관심종목", content: "독일 승인이면 EU 전체 다 열림.", createdAt: T18JL + 78*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_2281", holdingLabel: "관심종목", content: "KBA 통과가 관건.", createdAt: T18JL + 78*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_2282", holdingLabel: "관심종목", content: "EU 표결이 최대 리스크.", createdAt: T18JL + 78*60_000 + m(2), likes: 25 },
+  ],
+  561: [
+    { id: 1, nickname: "익명_2290", holdingLabel: "관심종목", content: "작은 시장이지만 인프라 확보 의미.", createdAt: T18JL + 87*60_000 + m(-6), likes: 12 },
+    { id: 2, nickname: "익명_2291", holdingLabel: "관심종목", content: "충전소 +77%는 인상적.", createdAt: T18JL + 87*60_000 + m(-2), likes: 17 },
+    { id: 3, nickname: "익명_2292", holdingLabel: "관심종목", content: "EV 정책 우호국 확대 트렌드.", createdAt: T18JL + 87*60_000 + m(2), likes: 22 },
+  ],
+  562: [
+    { id: 1, nickname: "익명_2300", holdingLabel: "관심종목", content: "월 200만 넘긴 게 진짜 큰 이정표.", createdAt: T18JL + 96*60_000 + m(-8), likes: 14 },
+    { id: 2, nickname: "익명_2301", holdingLabel: "관심종목", content: "유럽 Y가 이렇게 잘 나가다니.", createdAt: T18JL + 96*60_000 + m(-4), likes: 19 },
+    { id: 3, nickname: "익명_2302", holdingLabel: "관심종목", content: "미국·중국 데이터 확인 필요.", createdAt: T18JL + 96*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_2303", holdingLabel: "관심종목", content: "레거시 OEM 마진 갈리는 순간.", createdAt: T18JL + 96*60_000 + m(4), likes: 26 },
+  ],
+  563: [
+    { id: 1, nickname: "익명_2310", holdingLabel: "관심종목", content: "buyback 규모는 진짜 크다.", createdAt: T18JL + 105*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_2311", holdingLabel: "관심종목", content: "매출 미스가 마음에 걸림.", createdAt: T18JL + 105*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_2312", holdingLabel: "관심종목", content: "광고 매출 성장률이 핵심.", createdAt: T18JL + 105*60_000 + m(0), likes: 22 },
+    { id: 4, nickname: "익명_2313", holdingLabel: "관심종목", content: "게임즈 매출도 지켜보자.", createdAt: T18JL + 105*60_000 + m(4), likes: 18 },
+  ],
+  564: [
+    { id: 1, nickname: "익명_2320", holdingLabel: "관심종목", content: "-15% 아프긴 하네.", createdAt: T18JL + 114*60_000 + m(-6), likes: 12 },
+    { id: 2, nickname: "익명_2321", holdingLabel: "관심종목", content: "개별 강한데 지수만 약한 게 이상.", createdAt: T18JL + 114*60_000 + m(-2), likes: 18 },
+    { id: 3, nickname: "익명_2322", holdingLabel: "관심종목", content: "AMD 실적이 반전 카드.", createdAt: T18JL + 114*60_000 + m(2), likes: 25 },
+  ],
+  565: [
+    { id: 1, nickname: "익명_2330", holdingLabel: "관심종목", content: "가이던스 아닌 애널 코멘트라는 게 포인트.", createdAt: T18JL + 123*60_000 + m(-6), likes: 13 },
+    { id: 2, nickname: "익명_2331", holdingLabel: "관심종목", content: "Azure 성장률만 잡으면 다 됨.", createdAt: T18JL + 123*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2332", holdingLabel: "관심종목", content: "게이밍/OAI 지분 재평가도 있음.", createdAt: T18JL + 123*60_000 + m(2), likes: 22 },
+  ],
+  566: [
+    { id: 1, nickname: "익명_2340", holdingLabel: "관심종목", content: "역사 프레임은 편하지만 검증은 별개.", createdAt: T18JL + 132*60_000 + m(-8), likes: 14 },
+    { id: 2, nickname: "익명_2341", holdingLabel: "관심종목", content: "당시 회의론 인용은 항상 통함.", createdAt: T18JL + 132*60_000 + m(-4), likes: 19 },
+    { id: 3, nickname: "익명_2342", holdingLabel: "관심종목", content: "지분희석·거버넌스는 봐야 함.", createdAt: T18JL + 132*60_000 + m(0), likes: 24 },
+    { id: 4, nickname: "익명_2343", holdingLabel: "관심종목", content: "결과론적 스토리텔링 조심.", createdAt: T18JL + 132*60_000 + m(4), likes: 21 },
+  ],
+  567: [
+    { id: 1, nickname: "익명_2350", holdingLabel: "관심종목", content: "지정학 리스크 대비 노출도 커진다.", createdAt: T18JL + 141*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2351", holdingLabel: "관심종목", content: "이라크 유전 매력적이지.", createdAt: T18JL + 141*60_000 + m(-2), likes: 18 },
+    { id: 3, nickname: "익명_2352", holdingLabel: "관심종목", content: "실 계약·생산량이 확정 요건.", createdAt: T18JL + 141*60_000 + m(2), likes: 23 },
+  ],
+
   // ── 2026-07-17 신규 ──────────────────────────────────────────────────────
   537: [
     { id: 1, nickname: "익명_2000", holdingLabel: "관심종목", content: "플릿 기울기만 보면 모멘텀 확실해 보임.", createdAt: T17JL + 6*60_000 + m(-8), likes: 10 },

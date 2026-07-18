@@ -8952,6 +8952,24 @@ export const SEED_REPORTS: Report[] = [
 
 // 종목별 리포트 매핑 — 개별 종목 페이지에서 관련 리포트 필터링에 사용
 export const REPORT_TICKERS: Record<string, string[]> = {
+  // 2026-07-18
+  "seed-580": ["TSLA","META","AAPL","SPCX","NFLX","NVDA","MSFT","CVX"],
+  "seed-581": ["TSLA"],
+  "seed-582": ["META"],
+  "seed-583": ["META"],
+  "seed-584": ["AAPL","NVDA","GOOGL","MSFT","AMZN"],
+  "seed-585": ["SPCX"],
+  "seed-586": ["SPCX"],
+  "seed-587": ["NVDA","SPCX"],
+  "seed-588": ["TSLA"],
+  "seed-589": ["TSLA"],
+  "seed-590": ["TSLA"],
+  "seed-591": ["TSLA"],
+  "seed-592": ["NFLX"],
+  "seed-593": ["SOX","SMH","NVDA","AMD"],
+  "seed-594": ["MSFT"],
+  "seed-595": ["TSLA","MSFT","SPCX"],
+  "seed-596": ["CVX"],
   // 2026-07-17
   "seed-558": ["TSLA","QQQ","NVDA","TSM","SPCX","SOX","UBER"],
   "seed-559": ["TSLA"],

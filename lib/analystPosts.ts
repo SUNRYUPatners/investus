@@ -17,6 +17,184 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-18 신규 ──────────────────────────────────────────────────────
+  {
+    id: -358,
+    alias: "여의도 매 #34",
+    symbol: "TSLA",
+    content:
+      "FSD 12,002,485,572 마일이 오늘 실체가 됐다. Jun 8 11B → 이번주 12B, 하루 3천만 마일이 새로 쌓인다. 대규모 무감독 얘기를 붙일 정량 근거는 확보. 다만 개입률·사고율이 매치되어 나와야 서사가 완결된다. 매수 유지, 추적.",
+    likes: 2401,
+    comments: 4,
+    created_at: "2026-07-18T00:05:00.000Z",
+    liked: false,
+  },
+  {
+    id: -359,
+    alias: "강남 표범 #52",
+    symbol: "META",
+    content:
+      "왜 지금 메타가 Anthropic한테 $10B/2년 컴퓨트를 파는가. 이유는 두 개다 — CAPEX 사이클을 매출로 전환하고, AWS/Azure 사이 틈새로 진입한다. FCF 압박은 단기 리스크, 매출 다각화는 장기 알파. 프레임 리레이팅 감안해 매수 유지.",
+    likes: 2404,
+    comments: 5,
+    created_at: "2026-07-18T00:12:00.000Z",
+    liked: false,
+  },
+  {
+    id: -360,
+    alias: "서초 콘도르 #67",
+    symbol: "META",
+    content:
+      "Dave Brown 영입. AWS 20년차가 메타 DC 총괄로 온다는 건 실행력 확보다. 딜만 있고 조직이 부족했던 리스크를 사람 하나로 크게 줄인 그림. Anthropic 딜과 세트로 봐야 하고, 실제 DC 준공 로드맵이 다음 체크 포인트. 매수.",
+    likes: 2407,
+    comments: 3,
+    created_at: "2026-07-18T00:19:00.000Z",
+    liked: false,
+  },
+  {
+    id: -361,
+    alias: "을지로 팔콘 #45",
+    symbol: "AAPL",
+    content:
+      "AAPL $4.92T, NVDA $4.86T. 지수 위쪽 순위가 다시 바뀌었다. 어제 다뤘던 중국 Apple Intelligence 승인 재료가 리레이팅 축이라고 본다. 다만 아침 거래 스냅샷이라 지속성 확인 필요 — 마감 기준·기관 자금 흐름을 확인하면서 관망~매수.",
+    likes: 2410,
+    comments: 5,
+    created_at: "2026-07-18T00:26:00.000Z",
+    liked: false,
+  },
+  {
+    id: -362,
+    alias: "광화문 늑대 #74",
+    symbol: "SPCX",
+    content:
+      "국방부 DC 협상은 이번 사이클 최대 헤드라인 중 하나. WSJ 소스라 신뢰도 붙는다. sovereign AI 흐름의 국방 확장 시나리오가 실체가 되면 SPCX 밸류에이션 논거 자체가 바뀐다. 규모/SLA 확정 전까지는 뉴스 흐름 팔로우.",
+    likes: 2413,
+    comments: 4,
+    created_at: "2026-07-18T00:33:00.000Z",
+    liked: false,
+  },
+  {
+    id: -363,
+    alias: "마포 올빼미 #91",
+    symbol: "SPCX",
+    content:
+      "Starship이 NASA 달 pathway로 재선정. Artemis 지연 리스크가 재프레이밍되는 순간이다. Blue Origin 대비 재사용 경제성 우위가 다시 부각되고 정부 계약 명분도 강해진다. 계약 규모·일정 확인 뒤 사이즈 결정. 관심.",
+    likes: 2416,
+    comments: 3,
+    created_at: "2026-07-18T00:40:00.000Z",
+    liked: false,
+  },
+  {
+    id: -364,
+    alias: "판교 사자 #26",
+    symbol: "NVDA",
+    content:
+      "NVL72 Rubin 랙 24h 추론 평균 950 kW. 피크의 약 2/3. 이 숫자가 실 운영원가와 냉각 설비 규모를 결정한다. 지상 vs 위성 컴퓨트 비교의 앵커 지표가 되니 데이터센터·전력·냉각 밸류체인까지 같이 트래킹. 매수 유지.",
+    likes: 2419,
+    comments: 4,
+    created_at: "2026-07-18T00:47:00.000Z",
+    liked: false,
+  },
+  {
+    id: -365,
+    alias: "잠실 여우 #58",
+    symbol: "TSLA",
+    content:
+      "Cybercab 오스틴에서 injection molding Sr Supervisor 채용. 사출성형 라인 세팅 실체가 이번에 처음 잡혔다. 채용공고는 실행의 흔적이지 이벤트가 아니다. 실제 sample-line·SOP 목표가 다음 체크. 소량·장기 매수 프레임 유지.",
+    likes: 2422,
+    comments: 5,
+    created_at: "2026-07-18T00:54:00.000Z",
+    liked: false,
+  },
+  {
+    id: -366,
+    alias: "역삼 독수리 #37",
+    symbol: "TSLA",
+    content:
+      "독일 KBA 안전성 평가 진행 → 7월 독립테스트 → EU 표결 = 최종 관문. 벨기에·네덜란드 이후 정공법 로드맵이 명문화됐다. EU 표결이 프리미엄 마진 활성화의 진짜 트리거. 기다림의 옵션 가치는 상승. 매수 유지.",
+    likes: 2425,
+    comments: 3,
+    created_at: "2026-07-18T00:61:00.000Z",
+    liked: false,
+  },
+  {
+    id: -367,
+    alias: "청담 매 #82",
+    symbol: "TSLA",
+    content:
+      "라트비아 진출. 작은 시장이지만 정부 인센티브(€4k 신차·34% 활용), 충전소 +77%, 디젤 세금 인상까지 삼각 촉매. EU 전략의 한 조각이라 개별 시장 매출보다 지역 커버리지 확대의 시그널로 읽는다. 매수 유지.",
+    likes: 2428,
+    comments: 3,
+    created_at: "2026-07-18T00:68:00.000Z",
+    liked: false,
+  },
+  {
+    id: -368,
+    alias: "압구정 콘도르 #29",
+    symbol: "TSLA",
+    content:
+      "글로벌 EV 월 200만 대 최초. 유럽 테슬라 +37% YoY. 리프레시된 Model Y가 견인이고 이건 침투율 곡선 변곡점 시그널이다. 중국·미국 리테일이 뒤따라주면 컨센서스 상향 트리거. 매수.",
+    likes: 2431,
+    comments: 4,
+    created_at: "2026-07-18T00:75:00.000Z",
+    liked: false,
+  },
+  {
+    id: -369,
+    alias: "삼성동 표범 #56",
+    symbol: "NFLX",
+    content:
+      "Q2 매출 미스(YoY 23%)에 EPS 비트(YoY 11%). 사상 최대 자사주 $4.7B, 잔여 $21B. 광고형·게임즈 스택으로 미스를 상쇄하는 서사가 유효한지가 관건. 가이던스·광고 매출 성장률이 리레이팅 트리거. 관망.",
+    likes: 2434,
+    comments: 4,
+    created_at: "2026-07-18T00:82:00.000Z",
+    liked: false,
+  },
+  {
+    id: -370,
+    alias: "논현 늑대 #77",
+    symbol: "SOX",
+    content:
+      "SOX -15% (6월 ATH 대비). 베어(-20%) 문턱 근접. 개별 강세 vs 지수 약세 괴리가 점점 커지는 국면이다. AMD·NVDA 실적/가이던스가 리커버리 트리거. 신규 올인 금물, 분할·리스크예산 재설정.",
+    likes: 2437,
+    comments: 3,
+    created_at: "2026-07-18T00:89:00.000Z",
+    liked: false,
+  },
+  {
+    id: -371,
+    alias: "이촌 황소 #43",
+    symbol: "MSFT",
+    content:
+      "3년 안에 매출 ~4배 전망은 애널리스트 코멘트지 회사 가이던스 아니다. 그럼에도 런치·연결성·컴퓨트 3축이 동시에 굴러가는 건 사실. Azure/Copilot/게이밍 스택이 검증 축이고, 가이던스 확인 전엔 프레임만 보관. 매수 유지.",
+    likes: 2440,
+    comments: 3,
+    created_at: "2026-07-18T00:96:00.000Z",
+    liked: false,
+  },
+  {
+    id: -372,
+    alias: "성수 매 #21",
+    symbol: "TSLA",
+    content:
+      "Moritz 발언 프레임: MSFT IPO $400~600M 밸류에 대한 당시 회의론과 현재 TSLA/SPCX 밸류 회의론을 유비. 시간축 프레임이 편하지만 이걸로 CF·희석·거버넌스 정량 검증을 대체하지 말자. 결과론적 스토리텔링 경계. 중립.",
+    likes: 2443,
+    comments: 4,
+    created_at: "2026-07-18T00:103:00.000Z",
+    liked: false,
+  },
+  {
+    id: -373,
+    alias: "한남 여우 #93",
+    symbol: "CVX",
+    content:
+      "Chevron 이라크 유전 2개 진입 + 최대 유전 연구 + 인프라 구축 MOU. 트럼프-이라크 PM 회담 후 나온 딜이라 지정학 각도까지 결합. MOU 단계라 계약·생산량 확인 필요. 원유 스토리와 지정학이 겹치는 구간, 관망~매수.",
+    likes: 2446,
+    comments: 3,
+    created_at: "2026-07-18T00:110:00.000Z",
+    liked: false,
+  },
+
   // ── 2026-07-17 신규 ──────────────────────────────────────────────────────
   {
     id: -343,
@@ -3965,6 +4143,100 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-07-18 신규 ──────────────────────────────────────────────────────
+  [-358]: [
+    { alias: "송파 독수리 #01", content: "40일 만에 +1B는 확실히 곡선이 가팔라졌음.", created_at: "2026-07-18T00:05:02.000Z" },
+    { alias: "분당 사자 #02", content: "무감독 근거로 무리하게 쓰진 말자.", created_at: "2026-07-18T00:05:04.000Z" },
+    { alias: "목동 올빼미 #03", content: "안전 페이지 개입률이 같이 나와야 함.", created_at: "2026-07-18T00:05:06.000Z" },
+    { alias: "신촌 표범 #04", content: "데이터 곡선은 진짜 무섭다.", created_at: "2026-07-18T00:05:08.000Z" },
+  ],
+  [-359]: [
+    { alias: "여의도 매 #05", content: "네오클라우드 진입 프레임 리레이팅 큼.", created_at: "2026-07-18T00:12:02.000Z" },
+    { alias: "강남 늑대 #06", content: "FCF 압박은 시장이 어떻게 받나가 관건.", created_at: "2026-07-18T00:12:04.000Z" },
+    { alias: "서초 황소 #07", content: "매출 다각화는 장기 알파 동의.", created_at: "2026-07-18T00:12:06.000Z" },
+    { alias: "을지로 여우 #08", content: "Anthropic이 얼마나 급했으면.", created_at: "2026-07-18T00:12:08.000Z" },
+    { alias: "광화문 팔콘 #09", content: "NYT 소스라 신뢰 높음.", created_at: "2026-07-18T00:12:10.000Z" },
+  ],
+  [-360]: [
+    { alias: "마포 독수리 #10", content: "DC 준공 로드맵이 다음 체크 포인트 공감.", created_at: "2026-07-18T00:19:02.000Z" },
+    { alias: "판교 사자 #11", content: "실행력 확보는 진짜 큰 자산.", created_at: "2026-07-18T00:19:04.000Z" },
+    { alias: "잠실 올빼미 #12", content: "AWS DNA 이식은 크다.", created_at: "2026-07-18T00:19:06.000Z" },
+  ],
+  [-361]: [
+    { alias: "역삼 표범 #13", content: "리레이팅 축 정확한 진단.", created_at: "2026-07-18T00:26:02.000Z" },
+    { alias: "청담 콘도르 #14", content: "마감 기준 확인 필요 동의.", created_at: "2026-07-18T00:26:04.000Z" },
+    { alias: "압구정 수리부엉이 #15", content: "기관 자금 흐름이 진짜 관건.", created_at: "2026-07-18T00:26:06.000Z" },
+    { alias: "삼성동 매 #16", content: "$5T 다음 스토리가 궁금.", created_at: "2026-07-18T00:26:08.000Z" },
+    { alias: "논현 늑대 #17", content: "NVDA랑 왔다갔다 하는 게 흥미로움.", created_at: "2026-07-18T00:26:10.000Z" },
+  ],
+  [-362]: [
+    { alias: "이촌 황소 #18", content: "sovereign AI 방위 확장은 큰 스토리.", created_at: "2026-07-18T00:33:02.000Z" },
+    { alias: "성수 팔콘 #19", content: "WSJ 소스면 신뢰 붙긴 함.", created_at: "2026-07-18T00:33:04.000Z" },
+    { alias: "한남 여우 #20", content: "규모/SLA 확정까지 관망.", created_at: "2026-07-18T00:33:06.000Z" },
+    { alias: "송파 독수리 #21", content: "밸류에이션 논거 자체가 바뀔 수 있음.", created_at: "2026-07-18T00:33:08.000Z" },
+  ],
+  [-363]: [
+    { alias: "분당 사자 #22", content: "Artemis 재프레이밍 인정.", created_at: "2026-07-18T00:40:02.000Z" },
+    { alias: "목동 올빼미 #23", content: "재사용 경제성 우위 확실.", created_at: "2026-07-18T00:40:04.000Z" },
+    { alias: "신촌 표범 #24", content: "계약 규모 확인 필요.", created_at: "2026-07-18T00:40:06.000Z" },
+  ],
+  [-364]: [
+    { alias: "여의도 매 #25", content: "1MW 급 랙이라니 냉각 부담 큼.", created_at: "2026-07-18T00:47:02.000Z" },
+    { alias: "강남 늑대 #26", content: "전력 밸류체인 미리 봐야 함.", created_at: "2026-07-18T00:47:04.000Z" },
+    { alias: "서초 황소 #27", content: "위성 컴퓨트 비교 프레임 흥미.", created_at: "2026-07-18T00:47:06.000Z" },
+    { alias: "을지로 여우 #28", content: "밸류체인 확장 논의가 필요.", created_at: "2026-07-18T00:47:08.000Z" },
+  ],
+  [-365]: [
+    { alias: "광화문 팔콘 #29", content: "채용은 실행의 흔적 공감.", created_at: "2026-07-18T00:54:02.000Z" },
+    { alias: "마포 독수리 #30", content: "sample-line SOP 언제인지 관건.", created_at: "2026-07-18T00:54:04.000Z" },
+    { alias: "판교 사자 #31", content: "양산 실체가 처음 잡혔다는 게 큰 의미.", created_at: "2026-07-18T00:54:06.000Z" },
+    { alias: "잠실 올빼미 #32", content: "소량·장기 프레임 적절.", created_at: "2026-07-18T00:54:08.000Z" },
+    { alias: "역삼 표범 #33", content: "몰드 셋업까지 왔으면 임계 근접.", created_at: "2026-07-18T00:54:10.000Z" },
+  ],
+  [-366]: [
+    { alias: "청담 콘도르 #34", content: "표결이 진짜 마지막 관문.", created_at: "2026-07-18T00:61:02.000Z" },
+    { alias: "압구정 수리부엉이 #35", content: "옵션 가치 상승 인정.", created_at: "2026-07-18T00:61:04.000Z" },
+    { alias: "삼성동 매 #36", content: "KBA 통과가 첫 관건.", created_at: "2026-07-18T00:61:06.000Z" },
+  ],
+  [-367]: [
+    { alias: "논현 늑대 #37", content: "지역 커버리지 시그널로 읽는 게 맞음.", created_at: "2026-07-18T00:68:02.000Z" },
+    { alias: "이촌 황소 #38", content: "충전소 +77%는 인프라 안정.", created_at: "2026-07-18T00:68:04.000Z" },
+    { alias: "성수 팔콘 #39", content: "EV 정책 우호국 확대 흐름.", created_at: "2026-07-18T00:68:06.000Z" },
+  ],
+  [-368]: [
+    { alias: "한남 여우 #40", content: "변곡점 시그널 맞다고 봄.", created_at: "2026-07-18T00:75:02.000Z" },
+    { alias: "송파 독수리 #41", content: "리프레시 Y 반응 진짜 좋음.", created_at: "2026-07-18T00:75:04.000Z" },
+    { alias: "분당 사자 #42", content: "컨센서스 상향 트리거 인정.", created_at: "2026-07-18T00:75:06.000Z" },
+    { alias: "목동 올빼미 #43", content: "미국·중국 데이터가 확인 축.", created_at: "2026-07-18T00:75:08.000Z" },
+  ],
+  [-369]: [
+    { alias: "신촌 표범 #44", content: "가이던스가 진짜 결정 요소.", created_at: "2026-07-18T00:82:02.000Z" },
+    { alias: "여의도 매 #45", content: "buyback 규모는 확실히 크다.", created_at: "2026-07-18T00:82:04.000Z" },
+    { alias: "강남 늑대 #46", content: "광고 매출 성장률 봐야 함.", created_at: "2026-07-18T00:82:06.000Z" },
+    { alias: "서초 황소 #47", content: "게임즈도 트래커.", created_at: "2026-07-18T00:82:08.000Z" },
+  ],
+  [-370]: [
+    { alias: "을지로 여우 #48", content: "괴리 커진다는 진단 맞음.", created_at: "2026-07-18T00:89:02.000Z" },
+    { alias: "광화문 팔콘 #49", content: "리스크예산 재설정 필수.", created_at: "2026-07-18T00:89:04.000Z" },
+    { alias: "마포 독수리 #50", content: "AMD·NVDA 실적이 카드.", created_at: "2026-07-18T00:89:06.000Z" },
+  ],
+  [-371]: [
+    { alias: "판교 사자 #51", content: "애널 코멘트 vs 가이던스 구분 좋음.", created_at: "2026-07-18T00:96:02.000Z" },
+    { alias: "잠실 올빼미 #52", content: "Azure 성장률만 잡히면 됨.", created_at: "2026-07-18T00:96:04.000Z" },
+    { alias: "역삼 표범 #53", content: "OAI 지분 재평가도 감안.", created_at: "2026-07-18T00:96:06.000Z" },
+  ],
+  [-372]: [
+    { alias: "청담 콘도르 #54", content: "결과론적 스토리텔링 경계 동의.", created_at: "2026-07-18T00:103:02.000Z" },
+    { alias: "압구정 수리부엉이 #55", content: "시간축 프레임은 편하긴 하지.", created_at: "2026-07-18T00:103:04.000Z" },
+    { alias: "삼성동 매 #56", content: "지분희석·거버넌스 정량 필요.", created_at: "2026-07-18T00:103:06.000Z" },
+    { alias: "논현 늑대 #57", content: "중립이 정직한 결론.", created_at: "2026-07-18T00:103:08.000Z" },
+  ],
+  [-373]: [
+    { alias: "이촌 황소 #58", content: "MOU 단계는 항상 조심.", created_at: "2026-07-18T00:110:02.000Z" },
+    { alias: "성수 팔콘 #59", content: "지정학 결합이 흥미로움.", created_at: "2026-07-18T00:110:04.000Z" },
+    { alias: "한남 여우 #60", content: "실 계약·생산량이 진짜 확정 요건.", created_at: "2026-07-18T00:110:06.000Z" },
+  ],
+
   // ── 2026-07-17 신규 ──────────────────────────────────────────────────────
   [-343]: [
     { alias: "여의도 매 #10", content: "+58 한 번에 들어온 게 인상적.", created_at: "2026-07-17T00:05:02.000Z" },

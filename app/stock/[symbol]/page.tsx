@@ -15,6 +15,7 @@ import type { Report } from "@/lib/reports";
 import { isMarketOpen as checkMarketOpen } from "@/lib/marketHours";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { AnalystTargets } from "@/components/AnalystTargets";
+import { StockCommunity } from "@/components/StockCommunity";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION, isFreeReport, formatSubPrice } from "@/lib/subscription";
 import { SubscribeGate } from "@/components/SubscribeGate";
@@ -231,9 +232,19 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
   const latestGroup  = filtered.filter((r) => !q && getDateKey(r) === latestDate);
   const olderReports = filtered.filter((r) => !q && getDateKey(r) !== latestDate);
 
-  // 오늘자만 무료 — 최신 그룹 중에서도 오늘이 아니면 잠금
-  const freeLatest = gateOn ? latestGroup.filter((r) => isFreeReport(r)) : latestGroup;
-  const lockedLatest = gateOn ? latestGroup.filter((r) => !isFreeReport(r)) : [];
+  // 오늘(KST) 리포트는 항상 무료 공개 — 최신 그룹이 어제여도 오늘자가 있으면 먼저 노출
+  const todayFree = gateOn
+    ? filtered.filter((r) => !q && isFreeReport(r))
+    : [];
+  const freeLatest = gateOn
+    ? (todayFree.length > 0 ? todayFree : latestGroup.filter((r) => isFreeReport(r)))
+    : latestGroup;
+  const lockedLatest = gateOn
+    ? latestGroup.filter((r) => !isFreeReport(r) && !freeLatest.some((f) => f.id === r.id))
+    : [];
+  const olderForGate = gateOn
+    ? olderReports.filter((r) => !isFreeReport(r) && !freeLatest.some((f) => f.id === r.id))
+    : olderReports;
   const olderLocked = gateOn;
 
   return (
@@ -332,13 +343,13 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
             </div>
           )}
 
-          {olderReports.length > 0 && (
+          {olderForGate.length > 0 && (
             <>
               {olderLocked ? (
                 <div className="mt-3">
                   <SubscribeGate
                     compact
-                    title={`이전 리포트 ${olderReports.length}건`}
+                    title={`이전 리포트 ${olderForGate.length}건`}
                     description={`오늘자 리포트는 무료 · 과거 열람은 월 ${formatSubPrice()}`}
                   />
                 </div>
@@ -354,7 +365,7 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
                       cursor: "pointer",
                     }}
                   >
-                    {showOlder ? "접기" : `이전 리포트 ${olderReports.length}개 더 보기`}
+                    {showOlder ? "접기" : `이전 리포트 ${olderForGate.length}개 더 보기`}
                     <ChevronDown
                       className="w-3.5 h-3.5 transition-transform"
                       style={{ transform: showOlder ? "rotate(180deg)" : "none" }}
@@ -363,7 +374,7 @@ function StockReports({ symbol, className = "" }: { symbol: string; className?: 
 
                   {showOlder && (
                     <div className="flex flex-col gap-3 mt-3">
-                      {olderReports.map((r) => <ReportCard key={r.id} r={r} />)}
+                      {olderForGate.map((r) => <ReportCard key={r.id} r={r} />)}
                     </div>
                   )}
                 </>
@@ -707,6 +718,9 @@ export default function StockPage({
             <div className="lg:hidden mx-4 mb-4">
               <AnalystTargets symbol={upper} currentPrice={detail?.price ?? null} />
             </div>
+
+            {/* 해당 종목 애널리스트 글 + 종목토론 */}
+            <StockCommunity symbol={upper} className="mx-4 lg:mx-0 mb-4" />
 
             {/* 광고 — 리포트와 뉴스 사이 (모바일) */}
             <div className="lg:hidden mx-4 mb-4">

@@ -481,13 +481,6 @@ function AskAI({ symbol }: { symbol: string }) {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-function computeDefaultSymbol(): string {
-  if (MOCK_POSTS.length === 0) return "AAPL";
-  return MOCK_POSTS.reduce((best, post) =>
-    post.createdAt > best.createdAt ? post : best
-  ).symbol;
-}
-
 type VerifyMode    = "none" | "upload" | "broker" | "broker-notice";
 type MainTab       = "discussion" | "creator" | "analyst";
 type AnalystStatus  = "none" | "approved" | "rejected";
@@ -495,11 +488,30 @@ type AnalystPost    = { id: number; alias: string; content: string; symbol: stri
 type AnalystComment = { id: number; alias: string; content: string; created_at: string };
 type CreatorSort = "popular" | "return" | "views" | "subscribers" | "newest";
 
+function computeDefaultSymbol(): string {
+  if (typeof window !== "undefined") {
+    const q = new URLSearchParams(window.location.search).get("symbol");
+    if (q && /^[A-Za-z.]{1,10}$/.test(q)) return q.toUpperCase();
+  }
+  if (MOCK_POSTS.length === 0) return "AAPL";
+  return MOCK_POSTS.reduce((best, post) =>
+    post.createdAt > best.createdAt ? post : best
+  ).symbol;
+}
+
+function computeDefaultTab(): MainTab {
+  if (typeof window !== "undefined") {
+    const t = new URLSearchParams(window.location.search).get("tab");
+    if (t === "discussion" || t === "creator" || t === "analyst") return t;
+  }
+  return "analyst";
+}
+
 export default function WallPage() {
   const { user, verify, loginWithOAuth } = useAuth();
   const t  = useLocale();
   const w  = t.wall;
-  const [mainTab, setMainTabRaw]          = useState<MainTab>("analyst");
+  const [mainTab, setMainTabRaw]          = useState<MainTab>(computeDefaultTab);
   const setMainTab = (tab: MainTab) => {
     setMainTabRaw(tab);
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
