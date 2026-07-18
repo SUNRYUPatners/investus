@@ -22,13 +22,6 @@ export default async function HomePage() {
       <h1 className="sr-only">인베스트어스(Investus) — 미국주식 투자 플랫폼 | 실시간 시세 · S&amp;P500 · NASDAQ · 투자 리포트</h1>
       <p className="sr-only">인베스트어스는 미국주식 실시간 시세, S&amp;P500·나스닥·다우존스 지수, 공포탐욕지수, 버핏지수, 투자 리포트를 무료로 제공하는 한국어 미국주식 투자 플랫폼입니다. 선류파트너스 CIO가 매일 시장을 분석합니다.</p>
       <Header />
-      {/* 플랫폼 소개 — Google 인덱싱 콘텐츠 */}
-      <section aria-label="서비스 소개" className="max-w-[480px] mx-auto px-4 pt-3 pb-1 lg:hidden">
-        <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-          SUNRYU Partners CIO의 일일 시장 분석 리포트 · 미국주식 실시간 시세 · S&amp;P500·NASDAQ·다우존스 지수 · 공포탐욕지수 · 버핏지수를 무료로 제공합니다.
-          <span className="ml-1" style={{ color: "var(--mint)" }}>매일 아침 Investus 하나로 전날 시장을 파악하세요.</span>
-        </p>
-      </section>
       {/* 티커 테이프: LiveMarket이 localStorage 업데이트하면 자동 동기화 */}
       <TickerTape />
       <EcoTickerTape />
@@ -109,6 +102,15 @@ export default async function HomePage() {
 
         </div>
       </main>
+
+      {/* 플랫폼 소개 — 페이지 하단 (Google 인덱싱 콘텐츠) */}
+      <section aria-label="서비스 소개" className="max-w-[480px] mx-auto px-4 pt-4 pb-6 lg:hidden">
+        <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
+          SUNRYU Partners CIO의 일일 시장 분석 리포트 · 미국주식 실시간 시세 · S&amp;P500·NASDAQ·다우존스 지수 · 공포탐욕지수 · 버핏지수를 무료로 제공합니다.
+          <span className="ml-1" style={{ color: "var(--mint)" }}>매일 아침 Investus 하나로 전날 시장을 파악하세요.</span>
+        </p>
+      </section>
+
       <OnboardingModal />
     </div>
   );
