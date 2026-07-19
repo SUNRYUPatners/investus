@@ -12,6 +12,24 @@ const REPORT_DIR = path.join(__dirname, '../01.investus 리포트');
 // Each entry: { ko, en (optional), label, date }
 // en: null if no English version exists
 const PAIRS = [
+  // ── 2026-07-20 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260720.svg',                        en: 'summary-20260720-en.svg',                        label: 'summary',                    date: '20260720' },
+  { ko: 'cbrtruck-giga-texas-240-20260720.svg',        en: 'cbrtruck-giga-texas-240-20260720-en.svg',        label: 'cbrtruck-giga-texas-240',    date: '20260720' },
+  { ko: 'cbrcab-giga-texas-200-20260720.svg',          en: 'cbrcab-giga-texas-200-20260720-en.svg',          label: 'cbrcab-giga-texas-200',      date: '20260720' },
+  { ko: 'cbrcab-giga-austin-250-20260720.svg',         en: 'cbrcab-giga-austin-250-20260720-en.svg',         label: 'cbrcab-giga-austin-250',     date: '20260720' },
+  { ko: 'cbrcab-california-delivery-20260720.svg',     en: 'cbrcab-california-delivery-20260720-en.svg',     label: 'cbrcab-california-delivery', date: '20260720' },
+  { ko: 'robotaxi-fleet-770-20260720.svg',             en: 'robotaxi-fleet-770-20260720-en.svg',             label: 'robotaxi-fleet-770',         date: '20260720' },
+  { ko: 'norway-ev-98pct-modely-20260720.svg',         en: 'norway-ev-98pct-modely-20260720-en.svg',         label: 'norway-ev-98pct-modely',     date: '20260720' },
+  { ko: 'spcx-crash-shorts-6b1-20260720.svg',          en: 'spcx-crash-shorts-6b1-20260720-en.svg',          label: 'spcx-crash-shorts-6b1',      date: '20260720' },
+  { ko: 'fsd-personalization-roadmap-20260720.svg',    en: 'fsd-personalization-roadmap-20260720-en.svg',    label: 'fsd-personalization-roadmap', date: '20260720' },
+  { ko: 'tsla-physical-ai-leader-20260720.svg',        en: 'tsla-physical-ai-leader-20260720-en.svg',        label: 'tsla-physical-ai-leader',    date: '20260720' },
+  { ko: 'alibaba-qwen3-max-preview-20260720.svg',      en: 'alibaba-qwen3-max-preview-20260720-en.svg',      label: 'alibaba-qwen3-max-preview',  date: '20260720' },
+  { ko: 'meta-plus-20b-2030-20260720.svg',             en: 'meta-plus-20b-2030-20260720-en.svg',             label: 'meta-plus-20b-2030',         date: '20260720' },
+  { ko: 'spx-valuation-1800s-high-20260720.svg',       en: 'spx-valuation-1800s-high-20260720-en.svg',       label: 'spx-valuation-1800s-high',   date: '20260720' },
+  { ko: 'spx-forward-pe-20-20260720.svg',              en: 'spx-forward-pe-20-20260720-en.svg',              label: 'spx-forward-pe-20',          date: '20260720' },
+  { ko: 'nvda-jevons-paradox-20260720.svg',            en: 'nvda-jevons-paradox-20260720-en.svg',            label: 'nvda-jevons-paradox',        date: '20260720' },
+  { ko: 'buffett-google-investment-20260720.svg',      en: 'buffett-google-investment-20260720-en.svg',      label: 'buffett-google-investment',  date: '20260720' },
+  { ko: 'bofa-summer-pullback-20260720.svg',           en: 'bofa-summer-pullback-20260720-en.svg',           label: 'bofa-summer-pullback',       date: '20260720' },
   // ── 2026-07-18 ─────────────────────────────────────────────────────────
   { ko: 'summary-20260718.svg',                        en: 'summary-20260718-en.svg',                        label: 'summary',                    date: '20260718' },
   { ko: 'tsla-fsd-12b-crossed-20260718.svg',           en: 'tsla-fsd-12b-crossed-20260718-en.svg',           label: 'tsla-fsd-12b-crossed',       date: '20260718' },

@@ -17,6 +17,173 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-20 신규 ──────────────────────────────────────────────────────
+  {
+    id: -374,
+    alias: "여의도 매 #55",
+    symbol: "TSLA",
+    content:
+      "기가 텍사스 240 Cybertruck 라인업 · 기가 텍사스 200+ Cybercab · 기가 오스틴 250 Cybercab 실측. 스틸/드론샷은 강한 시각적 근거지만 최종 지표는 등록/인도다. 양산 근접 시그널은 확실히 강해졌다. 매수 유지.",
+    likes: 2451,
+    comments: 5,
+    created_at: "2026-07-20T00:05:00.000Z",
+    liked: false,
+  },
+  {
+    id: -375,
+    alias: "강남 표범 #33",
+    symbol: "TSLA",
+    content:
+      "스티어링휠 없는 Cybercab이 캘리포니아 도착. 규제 프리뷰 성격의 실도로 노출로 볼 수 있다. San Bernardino 지역 반응·안전 심사 흐름이 향후 상용 개시 시점의 결정 트리거. 옵션 가치 상승.",
+    likes: 2454,
+    comments: 4,
+    created_at: "2026-07-20T00:12:00.000Z",
+    liked: false,
+  },
+  {
+    id: -376,
+    alias: "서초 콘도르 #77",
+    symbol: "TSLA",
+    content:
+      "Robotaxi 트래킹 사이트 기준 총 770대. 하루 3대씩만 늘어도 곡선은 우상향. 대당 매출·유지비·가동률 프레임과 결합해야 진짜 정량 지표가 된다. 사이즈는 신중히 유지.",
+    likes: 2457,
+    comments: 3,
+    created_at: "2026-07-20T00:19:00.000Z",
+    liked: false,
+  },
+  {
+    id: -377,
+    alias: "을지로 팔콘 #66",
+    symbol: "TSLA",
+    content:
+      "노르웨이 신차 EV 98% · Model Y 5,686대 1위. 인센티브·충전·세제 결합의 결과인 만큼 다른 국가 확장 벤치마크로 활용. EU 확산 로드맵의 정량 앵커. 매수.",
+    likes: 2460,
+    comments: 4,
+    created_at: "2026-07-20T00:26:00.000Z",
+    liked: false,
+  },
+  {
+    id: -378,
+    alias: "광화문 늑대 #23",
+    symbol: "SPCX",
+    content:
+      "$225 → $153, IPO가 하회. 숏 비중 5% → 29%, 추정 $6.1B. 이건 위험 균형점 그 자체다. 스퀴즈 리스크와 실적 검증 사이 변동성 확대. 사이즈는 작게, 실적/일정 이벤트만 트래킹. 관망.",
+    likes: 2463,
+    comments: 5,
+    created_at: "2026-07-20T00:33:00.000Z",
+    liked: false,
+  },
+  {
+    id: -379,
+    alias: "마포 올빼미 #41",
+    symbol: "TSLA",
+    content:
+      "FSD 개인화 로드맵 예고. 개별 개입 기억 + 소유자 취향 매치. 만족도·이탈 방어 UX 카드로 유효. 다만 데이터 재활용·프라이버시 담론이 붙을 수 있어서 정책/약관 개정 흐름 병행 관찰. 매수 유지.",
+    likes: 2466,
+    comments: 4,
+    created_at: "2026-07-20T00:40:00.000Z",
+    liked: false,
+  },
+  {
+    id: -380,
+    alias: "판교 사자 #14",
+    symbol: "TSLA",
+    content:
+      "Nic Cruz Patane 인용 프레임: Tesla가 로봇+자율차를 같은 브레인으로 굴리는 유일 회사. Physical AI 서사가 밸류 확장 각도. 실제 로봇 상용 성과가 검증 지표라는 점만 놓치지 말자. 중장기 프레임 유효.",
+    likes: 2469,
+    comments: 3,
+    created_at: "2026-07-20T00:47:00.000Z",
+    liked: false,
+  },
+  {
+    id: -381,
+    alias: "잠실 여우 #89",
+    symbol: "BABA",
+    content:
+      "Alibaba Qwen 3.0 Max 프리뷰 공개. 중국 오픈모델의 성능·가격 압박이 서구 프리미엄 프레임에 지속 도전. BABA 클라우드 매출·API 채택 데이터와 결합해서 봐야 정확한 그림. 관심 확대.",
+    likes: 2472,
+    comments: 4,
+    created_at: "2026-07-20T00:54:00.000Z",
+    liked: false,
+  },
+  {
+    id: -382,
+    alias: "역삼 독수리 #48",
+    symbol: "META",
+    content:
+      "Truist가 Meta Plus 스택 2030 매출을 $20B/yr로 잡음. IG $10B, Meta AI $5.5B, FB $3.3B, WA $2B. 전체 매출의 ~5% 수준이라 아직 여지 있다. 채택률·ARPU가 재평가 트리거. 광고 외 서사 강화.",
+    likes: 2475,
+    comments: 4,
+    created_at: "2026-07-20T00:61:00.000Z",
+    liked: false,
+  },
+  {
+    id: -383,
+    alias: "청담 매 #17",
+    symbol: "SPX",
+    content:
+      "Barchart 프레임 — 미국 주식이 1800년대 이후 최고 밸류. 지수 산정·구성 변화 감안해도 극단 구간인 건 사실. 성장 서프라이즈만 유지되면 지탱, 실적 서프라이즈 실패 하나에 다중 압축 리스크. 리스크 관리 강화.",
+    likes: 2478,
+    comments: 5,
+    created_at: "2026-07-20T00:68:00.000Z",
+    liked: false,
+  },
+  {
+    id: -384,
+    alias: "압구정 콘도르 #92",
+    symbol: "SPX",
+    content:
+      "S&P 500 Forward P/E 20 재돌파. AI 프리미엄이 지탱하는 배수 확장이라 가이던스 하향 한 방에 배수 축소 리스크. 실적 시즌 지날 때까지 헤지·현금 비중 재점검이 정공법.",
+    likes: 2481,
+    comments: 3,
+    created_at: "2026-07-20T00:75:00.000Z",
+    liked: false,
+  },
+  {
+    id: -385,
+    alias: "삼성동 표범 #61",
+    symbol: "NVDA",
+    content:
+      "Jevons 역설 인용 — 저렴한 지능이 오히려 컴퓨트 수요를 폭발시킨다는 프레임. NVDA 방어 논거의 대표 서사. CUDA 잠금·CAPEX 흐름·데이터센터 발주 데이터가 실증 축. 매수 유지.",
+    likes: 2484,
+    comments: 4,
+    created_at: "2026-07-20T00:82:00.000Z",
+    liked: false,
+  },
+  {
+    id: -386,
+    alias: "논현 늑대 #38",
+    symbol: "GOOGL",
+    content:
+      "버핏이 Google을 오랜만에 본 좋은 사업이라고 이례적 강한 톤. 그 자체가 GOOGL 프레임에 무게. 다만 실제 지분 변경은 13F 확인 별도. 현재 검색/광고 구조 방어력 재평가 재료.",
+    likes: 2487,
+    comments: 3,
+    created_at: "2026-07-20T00:89:00.000Z",
+    liked: false,
+  },
+  {
+    id: -387,
+    alias: "이촌 황소 #75",
+    symbol: "SPX",
+    content:
+      "BofA 노트 — 여름 조정 후 연말 랠리 시나리오. 시나리오 노트라 확정 아니지만 포지션 사이즈·헤지 조정의 근거 프레임. 실적·유동성·지정학 변수가 결합 트리거. 리스크예산 재점검.",
+    likes: 2490,
+    comments: 3,
+    created_at: "2026-07-20T00:96:00.000Z",
+    liked: false,
+  },
+  {
+    id: -388,
+    alias: "성수 매 #52",
+    symbol: "TSLA",
+    content:
+      "Cybertruck 240·Cybercab 200/250·캘리 도착·Robotaxi 770·노르웨이 1위. 오늘 TSLA 관련 스토리가 밀집한 날. 개별로는 시각적/일회성이지만 결합하면 양산·전용 무인·플릿·EU 침투의 4각 서사. 매수 유지.",
+    likes: 2493,
+    comments: 5,
+    created_at: "2026-07-20T00:103:00.000Z",
+    liked: false,
+  },
+
   // ── 2026-07-18 신규 ──────────────────────────────────────────────────────
   {
     id: -358,
@@ -4143,6 +4310,97 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-07-20 신규 ──────────────────────────────────────────────────────
+  [-374]: [
+    { alias: "한남 여우 #61", content: "3가지 실측 결합은 확실히 무게감.", created_at: "2026-07-20T00:05:02.000Z" },
+    { alias: "송파 독수리 #62", content: "인도 데이터가 진짜 확정.", created_at: "2026-07-20T00:05:04.000Z" },
+    { alias: "분당 사자 #63", content: "물류/야드 재고 가능성도 감안.", created_at: "2026-07-20T00:05:06.000Z" },
+    { alias: "목동 올빼미 #64", content: "SOP 근접 시그널 인정.", created_at: "2026-07-20T00:05:08.000Z" },
+    { alias: "신촌 표범 #65", content: "라인업 사진 임팩트 확실.", created_at: "2026-07-20T00:05:10.000Z" },
+  ],
+  [-375]: [
+    { alias: "여의도 매 #66", content: "규제 프리뷰 프레임 좋음.", created_at: "2026-07-20T00:12:02.000Z" },
+    { alias: "강남 늑대 #67", content: "심사 결과가 진짜 최종.", created_at: "2026-07-20T00:12:04.000Z" },
+    { alias: "서초 황소 #68", content: "옵션 가치 상승 인정.", created_at: "2026-07-20T00:12:06.000Z" },
+    { alias: "을지로 여우 #69", content: "무인차 노출은 심리에도 영향.", created_at: "2026-07-20T00:12:08.000Z" },
+  ],
+  [-376]: [
+    { alias: "광화문 팔콘 #70", content: "770대 안정적 곡선.", created_at: "2026-07-20T00:19:02.000Z" },
+    { alias: "마포 독수리 #71", content: "대당 매출 프레임 필수.", created_at: "2026-07-20T00:19:04.000Z" },
+    { alias: "판교 사자 #72", content: "가동률이 진짜 관건.", created_at: "2026-07-20T00:19:06.000Z" },
+  ],
+  [-377]: [
+    { alias: "잠실 올빼미 #73", content: "98%는 벤치마크 수준.", created_at: "2026-07-20T00:26:02.000Z" },
+    { alias: "역삼 표범 #74", content: "인센티브 없이 재현 가능한가.", created_at: "2026-07-20T00:26:04.000Z" },
+    { alias: "청담 콘도르 #75", content: "EU 확산 앵커 역할.", created_at: "2026-07-20T00:26:06.000Z" },
+    { alias: "압구정 수리부엉이 #76", content: "Model Y 격차가 압도적.", created_at: "2026-07-20T00:26:08.000Z" },
+  ],
+  [-378]: [
+    { alias: "삼성동 매 #77", content: "위험 균형점 표현 정확.", created_at: "2026-07-20T00:33:02.000Z" },
+    { alias: "논현 늑대 #78", content: "스퀴즈 리스크 항상 존재.", created_at: "2026-07-20T00:33:04.000Z" },
+    { alias: "이촌 황소 #79", content: "IPO 하회 심리 무거움.", created_at: "2026-07-20T00:33:06.000Z" },
+    { alias: "성수 팔콘 #80", content: "관망이 정공법.", created_at: "2026-07-20T00:33:08.000Z" },
+    { alias: "한남 여우 #81", content: "머스크 warning 위력은 검증됨.", created_at: "2026-07-20T00:33:10.000Z" },
+  ],
+  [-379]: [
+    { alias: "송파 독수리 #82", content: "UX 차별화는 진짜 카드.", created_at: "2026-07-20T00:40:02.000Z" },
+    { alias: "분당 사자 #83", content: "프라이버시 이슈 조심.", created_at: "2026-07-20T00:40:04.000Z" },
+    { alias: "목동 올빼미 #84", content: "재구독/이탈 방어 관점 좋음.", created_at: "2026-07-20T00:40:06.000Z" },
+    { alias: "신촌 표범 #85", content: "정책/약관 흐름 봐야 함.", created_at: "2026-07-20T00:40:08.000Z" },
+  ],
+  [-380]: [
+    { alias: "여의도 매 #86", content: "Physical AI 프레임 인정.", created_at: "2026-07-20T00:47:02.000Z" },
+    { alias: "강남 늑대 #87", content: "실 상용 성과가 진짜.", created_at: "2026-07-20T00:47:04.000Z" },
+    { alias: "서초 황소 #88", content: "동일 브레인 서사 무기.", created_at: "2026-07-20T00:47:06.000Z" },
+  ],
+  [-381]: [
+    { alias: "을지로 여우 #89", content: "성능 벤치 진짜 궁금.", created_at: "2026-07-20T00:54:02.000Z" },
+    { alias: "광화문 팔콘 #90", content: "가격 압박 계속.", created_at: "2026-07-20T00:54:04.000Z" },
+    { alias: "마포 독수리 #91", content: "클라우드 채택 트래킹 필수.", created_at: "2026-07-20T00:54:06.000Z" },
+    { alias: "판교 사자 #92", content: "관심 확대 동의.", created_at: "2026-07-20T00:54:08.000Z" },
+  ],
+  [-382]: [
+    { alias: "잠실 올빼미 #93", content: "여지 남았다 표현이 정확.", created_at: "2026-07-20T00:61:02.000Z" },
+    { alias: "역삼 표범 #94", content: "채택률·ARPU 진짜 핵심.", created_at: "2026-07-20T00:61:04.000Z" },
+    { alias: "청담 콘도르 #95", content: "광고 외 서사 강화 필요.", created_at: "2026-07-20T00:61:06.000Z" },
+    { alias: "압구정 수리부엉이 #96", content: "IG Plus $10B는 관건.", created_at: "2026-07-20T00:61:08.000Z" },
+  ],
+  [-383]: [
+    { alias: "삼성동 매 #97", content: "극단 구간 인정.", created_at: "2026-07-20T00:68:02.000Z" },
+    { alias: "논현 늑대 #98", content: "다중 압축 리스크 조심.", created_at: "2026-07-20T00:68:04.000Z" },
+    { alias: "이촌 황소 #99", content: "구성 변화 감안해도 부담.", created_at: "2026-07-20T00:68:06.000Z" },
+    { alias: "성수 팔콘 #01", content: "리스크 관리 강화 동의.", created_at: "2026-07-20T00:68:08.000Z" },
+    { alias: "한남 여우 #02", content: "\"Probably Fine\" 뼈있음.", created_at: "2026-07-20T00:68:10.000Z" },
+  ],
+  [-384]: [
+    { alias: "송파 독수리 #03", content: "P/E 20 재돌파 부담.", created_at: "2026-07-20T00:75:02.000Z" },
+    { alias: "분당 사자 #04", content: "AI 프리미엄 유지가 관건.", created_at: "2026-07-20T00:75:04.000Z" },
+    { alias: "목동 올빼미 #05", content: "실적 시즌 조심.", created_at: "2026-07-20T00:75:06.000Z" },
+  ],
+  [-385]: [
+    { alias: "신촌 표범 #06", content: "Jevons 프레임 실증되면 큼.", created_at: "2026-07-20T00:82:02.000Z" },
+    { alias: "여의도 매 #07", content: "CUDA 잠금이 진짜 방어선.", created_at: "2026-07-20T00:82:04.000Z" },
+    { alias: "강남 늑대 #08", content: "CAPEX 흐름 확인 필수.", created_at: "2026-07-20T00:82:06.000Z" },
+    { alias: "서초 황소 #09", content: "데이터센터 발주 지표 트래킹.", created_at: "2026-07-20T00:82:08.000Z" },
+  ],
+  [-386]: [
+    { alias: "을지로 여우 #10", content: "이례적 톤은 무게감 있음.", created_at: "2026-07-20T00:89:02.000Z" },
+    { alias: "광화문 팔콘 #11", content: "13F 확인 필수.", created_at: "2026-07-20T00:89:04.000Z" },
+    { alias: "마포 독수리 #12", content: "GOOGL 재평가 계속.", created_at: "2026-07-20T00:89:06.000Z" },
+  ],
+  [-387]: [
+    { alias: "판교 사자 #13", content: "시나리오 노트 근거로 활용.", created_at: "2026-07-20T00:96:02.000Z" },
+    { alias: "잠실 올빼미 #14", content: "여름 조정 가능성 대비.", created_at: "2026-07-20T00:96:04.000Z" },
+    { alias: "역삼 표범 #15", content: "리스크예산 재점검 좋은 시점.", created_at: "2026-07-20T00:96:06.000Z" },
+  ],
+  [-388]: [
+    { alias: "청담 콘도르 #16", content: "4각 서사 정리 좋음.", created_at: "2026-07-20T00:103:02.000Z" },
+    { alias: "압구정 수리부엉이 #17", content: "TSLA 밀집한 날 정확한 진단.", created_at: "2026-07-20T00:103:04.000Z" },
+    { alias: "삼성동 매 #18", content: "결합 프레임이 진짜 힘.", created_at: "2026-07-20T00:103:06.000Z" },
+    { alias: "논현 늑대 #19", content: "매수 유지 결론 동의.", created_at: "2026-07-20T00:103:08.000Z" },
+    { alias: "이촌 황소 #20", content: "양산·플릿·EU 확산 트래킹.", created_at: "2026-07-20T00:103:10.000Z" },
+  ],
+
   // ── 2026-07-18 신규 ──────────────────────────────────────────────────────
   [-358]: [
     { alias: "송파 독수리 #01", content: "40일 만에 +1B는 확실히 곡선이 가팔라졌음.", created_at: "2026-07-18T00:05:02.000Z" },
