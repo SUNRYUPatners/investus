@@ -10,6 +10,8 @@ type TapeItem = {
   label: string;
   impact?: string;
   kind: "eco" | "earn";
+  /** YYYY-MM-DDTHH:mm — chronological sort only */
+  sortKey: string;
 };
 
 function pad(n: number) {
@@ -65,6 +67,13 @@ function hourLabel(hour: string, locale: string): string {
   return locale === "ko" ? "장중" : "DMH";
 }
 
+/** Earnings hour → rough UTC time so bmo/dmh/amc sort within the day */
+function earningsSortKey(date: string, hour: string): string {
+  if (hour === "bmo") return `${date}T13:00:00Z`; // ~09:00 ET
+  if (hour === "amc") return `${date}T21:00:00Z`; // ~16:00 ET
+  return `${date}T16:00:00Z`; // midday / during market
+}
+
 function EcoItem({ item }: { item: TapeItem }) {
   return (
     <span className="inline-flex items-center gap-2 px-5 border-r" style={{ borderColor: "var(--border)" }}>
@@ -104,13 +113,11 @@ export function EcoTickerTape() {
           earningsEvents?: EarningsEvent[];
         };
 
-        const eco = (data.economicEvents ?? [])
+        const eco: TapeItem[] = (data.economicEvents ?? [])
           .filter((e) => {
             const ds = (e.time ?? "").split("T")[0];
             return ds >= today && (e.impact === "high" || e.impact === "medium");
           })
-          .sort((a, b) => (a.time ?? "").localeCompare(b.time ?? ""))
-          .slice(0, 24)
           .map((e, i) => {
             const ds = (e.time ?? "").split("T")[0];
             const t = kstTime(e.time);
@@ -118,28 +125,26 @@ export function EcoTickerTape() {
               key: `eco-${ds}-${e.event}-${i}`,
               kind: "eco" as const,
               impact: e.impact,
+              sortKey: e.time || `${ds}T12:00:00Z`,
               label: `${shortDate(ds)}${t ? ` ${t}` : ""} · ${e.event}`,
             };
           });
 
-        const earn = (data.earningsEvents ?? [])
+        const earn: TapeItem[] = (data.earningsEvents ?? [])
           .filter((e) => e.date >= today)
-          .sort((a, b) => a.date.localeCompare(b.date) || a.symbol.localeCompare(b.symbol))
-          .slice(0, 16)
           .map((e, i) => ({
             key: `earn-${e.date}-${e.symbol}-${i}`,
             kind: "earn" as const,
+            sortKey: earningsSortKey(e.date, e.hour),
             label: `${shortDate(e.date)} · ${e.symbol} ${hourLabel(e.hour, locale)}${
               locale === "ko" ? " 실적" : " earnings"
             }`,
           }));
 
-        // Interleave: eco first, then sprinkle earnings so the tape feels like a calendar feed
-        const merged: TapeItem[] = [...eco];
-        for (let i = 0; i < earn.length; i++) {
-          const insertAt = Math.min(merged.length, (i + 1) * 2);
-          merged.splice(insertAt, 0, earn[i]);
-        }
+        // 실적·지표 구분 없이 날짜·시간 오름차순
+        const merged = [...eco, ...earn]
+          .sort((a, b) => a.sortKey.localeCompare(b.sortKey) || a.label.localeCompare(b.label))
+          .slice(0, 40);
 
         if (!cancelled) setItems(merged);
       } catch {
