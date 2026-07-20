@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0c1017"/></linearGradient>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#94a3b8"/><stop offset="100%" style="stop-color:#64748b"/></linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
   <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
 
-  <rect x="40" y="20" width="140" height="38" rx="19" fill="#94a3b830" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="110" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#94a3b8" text-anchor="middle">undefined</text>
+  <rect x="40" y="20" width="140" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="110" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">undefined</text>
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.21</text>
@@ -16,37 +16,37 @@
   <text x="540" y="102" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">SPCX — 개인투자자 유입 $320M/월 (1위) · Baron $10k · Timmons 매수</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
 
-  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#94a3b8" text-anchor="middle" opacity=".12">💰</text>
-  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#94a3b8" text-anchor="middle">💰</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".12">💰</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#c084fc" text-anchor="middle">💰</text>
   <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">$320 M</text>
   <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">월 개인 유입 개별종목 압도적 1위 · Ron Baron 10년 $10k 예상 · 의원 매수</text>
 
   <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
 
-  <rect x="60" y="402" width="300" height="190" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="456" font-family="Arial" font-size="44" text-anchor="middle">💰</text>
-  <text x="210" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#94a3b8" text-anchor="middle">$320 M</text>
+  <text x="210" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">$320 M</text>
   <text x="210" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">월 개인 유입</text>
   <text x="210" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">개별종목 1위 (Barchart)</text>
-  <rect x="390" y="402" width="300" height="190" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="456" font-family="Arial" font-size="44" text-anchor="middle">📈</text>
-  <text x="540" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#94a3b8" text-anchor="middle">$10 K</text>
+  <text x="540" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">$10 K</text>
   <text x="540" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Ron Baron 10년 예상</text>
   <text x="540" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Optimus 덕분</text>
-  <rect x="720" y="402" width="300" height="190" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="456" font-family="Arial" font-size="44" text-anchor="middle">🏛️</text>
-  <text x="870" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#94a3b8" text-anchor="middle">≤$250 K</text>
+  <text x="870" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">≤$250 K</text>
   <text x="870" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Rep. Timmons 매수</text>
   <text x="870" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Quiver Quantitative</text>
 
   <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">BARCHART · EVA MCMILLAN · QUIVER QUANTITATIVE</text>
-  <text x="540" y="700" font-family="Arial" font-size="24" fill="#94a3b8" text-anchor="middle">"이번 달 개인 자금이 SPCX에 $320M — 압도적 1위"</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#c084fc" text-anchor="middle">"이번 달 개인 자금이 SPCX에 $320M — 압도적 1위"</text>
   <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"Retail investors poured $320M into SPCX this month — by far the most of any single stock"</text>
   <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Source: Barchart · Eva McMillan · Quiver Quantitative · 2026.07.20</text>
 
-  <rect x="60" y="812" width="960" height="100" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="854" font-family="Arial" font-size="24" fill="#94a3b8" text-anchor="middle">하락(-44%)·숏 급증($6.1B)에도 개인 관심 유지 — 밸류 vs 헤드라인 대치</text>
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="854" font-family="Arial" font-size="24" fill="#c084fc" text-anchor="middle">하락(-44%)·숏 급증($6.1B)에도 개인 관심 유지 — 밸류 vs 헤드라인 대치</text>
   <text x="540" y="890" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">인사이더/의원 매수 흐름이 감성 지표 트리거</text>
 
   <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">SPCX · Retail $320M · Baron $10K · Timmons · 2026.07.21</text>

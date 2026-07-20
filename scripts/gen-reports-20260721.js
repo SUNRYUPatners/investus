@@ -334,8 +334,10 @@ const T = [
 
 let written = 0;
 for (const t of T) {
-  fs.writeFileSync(path.join(OUT, `${t.file}-20260721.svg`),    tpl(t.ko));
-  fs.writeFileSync(path.join(OUT, `${t.file}-20260721-en.svg`), tpl(t.en));
+  const koWith = { ...t.ko, symbol: t.symbol };
+  const enWith = { ...t.en, symbol: t.symbol };
+  fs.writeFileSync(path.join(OUT, `${t.file}-20260721.svg`),    tpl(koWith));
+  fs.writeFileSync(path.join(OUT, `${t.file}-20260721-en.svg`), tpl(enWith));
   written += 2;
 }
 console.log(`✅ ${written} SVG 파일 생성 완료 (${T.length} topics × KO/EN)`);

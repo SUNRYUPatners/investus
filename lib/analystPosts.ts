@@ -144,10 +144,21 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "삼성동 표범 #19",
     symbol: "SPCX",
     content:
-      "Barchart: 이번 달 개인 자금 SPCX 유입 $320M, 개별종목 압도적 1위. Eva McMillan(Ron Baron 인용): 10년 내 주당 $10K 예상(Optimus 덕분). Quiver: Rep. William Timmons SPCX 최대 $250K 매수 신고. -44% 낙폭·숏 $6.1B 상황에도 개인·기관 관심 유지 = 감성 지표 강함. 실적(8/4)과 Flight 13이 실제 방향을 결정. 사이즈 신중히 매수.",
+      "Barchart: 이번 달 개인 자금 SPCX 유입 $320M, 개별종목 압도적 1위. Quiver: Rep. William Timmons SPCX 최대 $250K 매수 신고. -44% 낙폭·숏 $6.1B 상황에도 개인·인사이더 관심 유지 = 감성 지표 강함. 실적(8/4)과 Flight 13이 실제 방향을 결정. 사이즈 신중히 매수.",
     likes: 44,
     comments: 4,
     created_at: "2026-07-21T00:82:00.000Z",
+    liked: false,
+  },
+  {
+    id: -405,
+    alias: "여의도 늑대 #40",
+    symbol: "TSLA",
+    content:
+      "Eva McMillan이 Ron Baron을 인용해 \"Optimus 덕분에 10년 내 주당 $10,000\"을 이야기했다. 원 트윗은 티커를 $SpaceX로 표기했지만 Optimus 자체가 Tesla 휴머노이드 프로그램이라 논거상 TSLA로 재분류하는 것이 옳다. Baron이 반복적으로 Tesla 상방 프레임에 Optimus를 앵커로 사용해온 히스토리와도 일치. 다만 확정 촉매가 아니라 장기 서사이므로 상용화 시점·양산·단위경제가 검증 축. 중장기 매수 프레임 유지.",
+    likes: 33,
+    comments: 4,
+    created_at: "2026-07-21T00:117:00.000Z",
     liked: false,
   },
   {
@@ -4555,9 +4566,15 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   ],
   [-400]: [
     { alias: "목동 올빼미 #43", content: "$320M 유입 놀라움.", created_at: "2026-07-21T00:82:02.000Z" },
-    { alias: "신촌 표범 #44", content: "Baron $10K는 장기 프레임.", created_at: "2026-07-21T00:82:04.000Z" },
+    { alias: "신촌 표범 #44", content: "감성 지표는 여전히 강함.", created_at: "2026-07-21T00:82:04.000Z" },
     { alias: "여의도 매 #45", content: "의원 매수 신호 활용.", created_at: "2026-07-21T00:82:06.000Z" },
-    { alias: "강남 늑대 #46", content: "감성 지표는 여전히 세다.", created_at: "2026-07-21T00:82:08.000Z" },
+    { alias: "강남 늑대 #46", content: "실적/발사 결과가 실제 방향 결정.", created_at: "2026-07-21T00:82:08.000Z" },
+  ],
+  [-405]: [
+    { alias: "서초 황소 #60", content: "Optimus는 TSLA 확실 — 재분류 맞음.", created_at: "2026-07-21T00:117:02.000Z" },
+    { alias: "을지로 여우 #61", content: "$10K는 확정 촉매 아니지만 프레임 앵커.", created_at: "2026-07-21T00:117:04.000Z" },
+    { alias: "광화문 팔콘 #62", content: "티커 오기는 흔한 일.", created_at: "2026-07-21T00:117:06.000Z" },
+    { alias: "마포 독수리 #63", content: "Baron 원본 인터뷰 확인 필요.", created_at: "2026-07-21T00:117:08.000Z" },
   ],
   [-401]: [
     { alias: "서초 황소 #47", content: "중국 오픈모델 채택 흐름 크다.", created_at: "2026-07-21T00:89:02.000Z" },

@@ -113,8 +113,11 @@ export const MOCK_POSTS: Post[] = [
     content: "SPCX Q2 실적 8월 4일 오후 3:30 CT audio webcast. 같은 날 이전 Starship Flight 13 발사 확률 Polymarket 88%. 이벤트 겹침이 이렇게 심한 주간은 오랜만.",
     createdAt: T21JL + 96*60_000, likes: 63, comments: 4 },
   { id: 595, symbol: "SPCX", nickname: "익명_1177", holdingLabel: "관심종목",
-    content: "-44% 낙폭에 숏 $6.1B인데 이번 달 개인 자금 유입은 SPCX 압도적 1위($320M). Baron은 10년 $10K 예상, Timmons 의원은 $250K 매수 신고. 감성은 여전히 세다.",
+    content: "-44% 낙폭에 숏 $6.1B인데 이번 달 개인 자금 유입은 SPCX 압도적 1위($320M). Timmons 의원도 최대 $250K 매수 신고했고. 감성은 여전히 세다.",
     createdAt: T21JL + 105*60_000, likes: 52, comments: 4 },
+  { id: 600, symbol: "TSLA", nickname: "익명_8811", holdingLabel: "관심종목",
+    content: "Eva McMillan이 Ron Baron 인용해서 \"Optimus 덕분에 10년 내 주당 $10,000\"이라고 올렸는데 원 트윗은 티커를 SpaceX로 잘못 표기함. Optimus가 Tesla 로봇이니 실제로는 TSLA 얘기 맞음. Baron이 항상 Tesla 상방 프레임에 Optimus 앵커 반복 사용하는 것과도 결이 맞고.",
+    createdAt: T21JL + 148*60_000, likes: 37, comments: 4 },
   { id: 596, symbol: "MSFT", nickname: "익명_5566", holdingLabel: "관심종목",
     content: "MSFT가 중국 Kimi K2 오픈모델을 Copilot용으로 Azure에 로드해 평가한다는 The Information 보도. OpenAI/Anthropic 대체 가능성 판단이라 서구 프리미엄 프레임 압박.",
     createdAt: T21JL + 114*60_000, likes: 26, comments: 3 },
@@ -2632,6 +2635,12 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 2, nickname: "익명_2751", holdingLabel: "관심종목", content: "Google 혼자 $150B+는 어마어마.", createdAt: T21JL + 141*60_000 + m(-4), likes: 20 },
     { id: 3, nickname: "익명_2752", holdingLabel: "관심종목", content: "하이퍼스케일러 집중은 옵션 축소.", createdAt: T21JL + 141*60_000 + m(0), likes: 23 },
     { id: 4, nickname: "익명_2753", holdingLabel: "관심종목", content: "중국 국가 자금 실측 어려움이 진짜 문제.", createdAt: T21JL + 141*60_000 + m(4), likes: 26 },
+  ],
+  600: [
+    { id: 1, nickname: "익명_2760", holdingLabel: "관심종목", content: "Optimus는 Tesla가 맞으니 재분류 맞다.", createdAt: T21JL + 148*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2761", holdingLabel: "관심종목", content: "$10K 예상은 롱텀 프레임이지 촉매는 아님.", createdAt: T21JL + 148*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2762", holdingLabel: "관심종목", content: "Baron 인터뷰 원본 찾아봐야지.", createdAt: T21JL + 148*60_000 + m(2), likes: 22 },
+    { id: 4, nickname: "익명_2763", holdingLabel: "관심종목", content: "티커 오기는 자주 있는 일임.", createdAt: T21JL + 148*60_000 + m(6), likes: 25 },
   ],
 
   // ── 2026-07-20 신규 ──────────────────────────────────────────────────────
