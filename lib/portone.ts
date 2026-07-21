@@ -18,13 +18,13 @@ export function getPortOne() {
   if (!secret) throw new Error("PORTONE_API_SECRET not set");
   _client = PortOneClient({
     secret,
-    storeId: process.env.PORTONE_STORE_ID,
+    storeId: process.env.PORTONE_STORE_ID ?? process.env.NEXT_PUBLIC_PORTONE_STORE_ID,
   });
   return _client;
 }
 
 export function getChannelKey(): string {
-  const key = process.env.PORTONE_CHANNEL_KEY;
+  const key = process.env.PORTONE_CHANNEL_KEY ?? process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
   if (!key) throw new Error("PORTONE_CHANNEL_KEY not set");
   return key;
 }

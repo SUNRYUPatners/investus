@@ -3,13 +3,11 @@
 import { use, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, Copy, CreditCard, BookMarked, Loader2 } from "lucide-react";
+import { ShieldCheck, TrendingUp, ChevronLeft, Heart, Eye, PlayCircle, BookOpen, FileText, MessageSquare, Lock, X, CheckCircle2, CreditCard, BookMarked, Loader2 } from "lucide-react";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { Header } from "@/components/Header";
 import { contentTypeLabel, type Creator, type CreatorContent, type ContentType } from "@/lib/creators";
 import { getSupabase } from "@/lib/supabase";
-
-const ACCOUNT = { bank: "카카오뱅크", number: "3333-22-2070396", holder: "류현우" };
 
 const CONTENT_TABS: { key: ContentType | "all"; label: string }[] = [
   { key: "all",     label: "전체" },
@@ -382,67 +380,27 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               </div>
             </div>
 
-            {/* 결제 수단 — 계좌이체 활성 */}
-            <div className="flex items-center gap-3 rounded-2xl border p-3 mb-2"
+            {/* 결제 수단 — 포트원 카드 정기결제 */}
+            <div className="flex items-center gap-3 rounded-2xl border p-3 mb-4"
               style={{ background: "var(--bg)", borderColor: "var(--mint)" }}>
-              <span className="text-lg">🏦</span>
+              <CreditCard className="w-5 h-5" style={{ color: "var(--mint)" }} />
               <div className="flex-1">
-                <p className="text-xs font-bold" style={{ color: "var(--text)" }}>계좌이체</p>
-                <p className="text-[10px]" style={{ color: "var(--muted)" }}>카카오뱅크 · 수수료 없음</p>
+                <p className="text-xs font-bold" style={{ color: "var(--text)" }}>신용·체크카드</p>
+                <p className="text-[10px]" style={{ color: "var(--muted)" }}>포트원 안전결제 · 매달 자동 청구</p>
               </div>
               <div className="w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center flex-shrink-0"
                 style={{ borderColor: "var(--mint)" }}>
                 <div className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--mint)" }} />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-1.5 mb-4 opacity-40 pointer-events-none select-none">
-              {[
-                { icon: <CreditCard className="w-4 h-4" />, label: "신용·체크카드" },
-                { icon: <span className="text-sm font-black text-[#0064FF]">toss</span>, label: "토스페이" },
-                { icon: <span className="text-base">💛</span>, label: "카카오페이" },
-                { icon: <span className="text-sm font-black text-[#03C75A]">N</span>, label: "네이버페이" },
-              ].map(({ icon, label }) => (
-                <div key={label} className="flex items-center gap-2 py-2 px-3 rounded-xl border relative"
-                  style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                  {icon}
-                  <span className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</span>
-                  <span className="absolute top-1 right-1 text-[7px] px-1 py-0.5 rounded-full"
-                    style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}>준비중</span>
-                </div>
-              ))}
-            </div>
 
-            {/* 계좌 정보 */}
-            <div className="rounded-xl border p-3 mb-4" style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
-              {[
-                { label: "은행", value: ACCOUNT.bank },
-                { label: "예금주", value: ACCOUNT.holder },
-              ].map(({ label, value }) => (
-                <div key={label} className="flex justify-between py-1 border-b" style={{ borderColor: "var(--border)" }}>
-                  <span className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</span>
-                  <span className="text-[10px] font-medium" style={{ color: "var(--text)" }}>{value}</span>
-                </div>
-              ))}
-              <div className="flex justify-between items-center py-1">
-                <span className="text-[10px]" style={{ color: "var(--muted)" }}>계좌번호</span>
-                <div className="flex items-center gap-1.5">
-                  <span className="text-[10px] font-bold font-mono" style={{ color: "var(--text)" }}>{ACCOUNT.number}</span>
-                  <button onClick={() => navigator.clipboard.writeText(ACCOUNT.number)}
-                    className="flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px]"
-                    style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}>
-                    <Copy className="w-2.5 h-2.5" />복사
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* 카드 정기결제 (권장) */}
+            {/* 카드 정기결제 */}
             <button
               onClick={async () => {
                 const storeId    = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
                 const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
                 if (!storeId || !channelKey) {
-                  setCreatorPayErr("카드결제 설정이 아직 준비되지 않았습니다.");
+                  setCreatorPayErr("결제 설정이 아직 준비되지 않았습니다. 잠시 후 다시 시도해 주세요.");
                   return;
                 }
                 if (!creator.subscriptionPrice) {
@@ -501,24 +459,11 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
                 : <><CreditCard className="w-4 h-4" />카드로 매달 자동결제 시작 →</>}
             </button>
 
-            {/* 계좌이체 (수동) */}
-            <button
-              onClick={() => {
-                setIsSubscribed(true);
-                saveSubscribed(id, true);
-                setShowSubModal(false);
-              }}
-              className="w-full py-2.5 rounded-2xl text-xs font-semibold border mb-2"
-              style={{ borderColor: "var(--border)", color: "var(--muted)" }}>
-              입금 완료 — 수동 구독 시작
-            </button>
-
             {creatorPayErr && (
               <p className="text-[10px] text-center mb-2" style={{ color: "#ef4444" }}>{creatorPayErr}</p>
             )}
             <p className="text-[10px] text-center leading-relaxed" style={{ color: "var(--muted)" }}>
-              카드결제: 즉시 첫 결제 후 매달 자동 청구 · 언제든 해지<br/>
-              계좌이체: 입금자명에 닉네임 입력 · 관리자 확인 후 활성화
+              첫 결제 후 매달 자동 청구 · 언제든 해지 가능
             </p>
           </div>
         </div>

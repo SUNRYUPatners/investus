@@ -1,16 +1,11 @@
 /** Investus Pro 구독 — 추천주식 · 이전 날짜 리포트 열람 */
 
 export const SUBSCRIPTION = {
-  /** 결제 연동 전에도 게이팅 활성화 — 입금 확인 후 investus_pro 메타데이터로 해제 */
+  /** 결제 연동 전에도 게이팅 활성화 — PortOne 결제 후 investus_pro 메타데이터로 해제 */
   enabled: true,
   priceKrw: 5900,
   periodLabel: "월",
   productName: "Investus Pro",
-  bank: {
-    bank: "카카오뱅크",
-    number: "3333-22-2070396",
-    holder: "류현우",
-  },
 } as const;
 
 /** 관리자 — 구독 없이 Pro(추천주식·과거 리포트) 전부 열람 */

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { ChevronLeft, CheckCircle, Copy, Lock, Star, FileText, CreditCard, Loader2 } from "lucide-react";
+import { ChevronLeft, CheckCircle, Lock, Star, FileText, CreditCard, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION, formatSubPrice } from "@/lib/subscription";
@@ -16,25 +16,18 @@ const BENEFITS = [
 
 export default function SubscribePage() {
   const { user, loaded } = useAuth();
-  const [name, setName] = useState("");
-  const [step, setStep] = useState<"info" | "transfer" | "done">("info");
-  const [copied, setCopied] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
   const [payingCard, setPayingCard] = useState(false);
   const [error, setError] = useState("");
 
-  const copy = () => {
-    navigator.clipboard.writeText(SUBSCRIPTION.bank.number);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   const startCardPay = async () => {
-    if (!user) { setError("로그인이 필요합니다."); return; }
-    const storeId    = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
+    if (!user) {
+      setError("로그인이 필요합니다.");
+      return;
+    }
+    const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
     const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
     if (!storeId || !channelKey) {
-      setError("결제 설정이 아직 준비되지 않았습니다. 계좌이체를 이용해주세요.");
+      setError("결제 설정이 아직 준비되지 않았습니다. 잠시 후 다시 시도해 주세요.");
       return;
     }
     setError("");
@@ -46,14 +39,17 @@ export default function SubscribePage() {
         storeId,
         channelKey,
         billingKeyMethod: "CARD",
-        issueId:   billingIssueId,
+        issueId: billingIssueId,
         issueName: "Investus Pro 월 구독 카드 등록",
-        customer:  { customerId: user.id, email: user.email, fullName: user.nickname || undefined },
+        customer: {
+          customerId: user.id,
+          email: user.email,
+          fullName: user.nickname || undefined,
+        },
       });
       if (!res || res.code) {
         throw new Error(res?.message ?? "카드 등록이 취소되었습니다.");
       }
-      const billingKey = res.billingKey;
 
       const { data: { session } } = await getSupabase().auth.getSession();
       const r = await fetch("/api/portone/issue-billing-key", {
@@ -63,7 +59,7 @@ export default function SubscribePage() {
           ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
         },
         body: JSON.stringify({
-          billingKey,
+          billingKey: res.billingKey,
           planKind: "pro",
           customerName: user.nickname || undefined,
         }),
@@ -72,51 +68,14 @@ export default function SubscribePage() {
         const d = await r.json().catch(() => ({}));
         throw new Error((d as { error?: string }).error ?? "결제 실패");
       }
-      // 성공 — 페이지 새로고침으로 Pro 상태 반영
-      window.location.href = "/subscribe";
+
+      // Pro 메타데이터가 JWT에 반영되도록 세션 갱신
+      await getSupabase().auth.refreshSession();
+      window.location.href = "/?pro=1";
     } catch (e) {
       setError((e as Error).message);
     } finally {
       setPayingCard(false);
-    }
-  };
-
-  const startTransfer = async () => {
-    if (!user) {
-      setError("구독하려면 로그인이 필요합니다. 더보기 탭에서 로그인해 주세요.");
-      return;
-    }
-    const depositor = name.trim() || user.nickname || user.email.split("@")[0];
-    if (!depositor) {
-      setError("입금자명을 입력해 주세요.");
-      return;
-    }
-    setError("");
-    setSubmitting(true);
-    try {
-      const { data: { session } } = await getSupabase().auth.getSession();
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
-        },
-        body: JSON.stringify({
-          name: depositor,
-          email: user.email,
-          userId: user.id,
-        }),
-      });
-      if (!res.ok) {
-        const d = await res.json().catch(() => ({}));
-        throw new Error((d as { error?: string }).error ?? "신청 실패");
-      }
-      setName(depositor);
-      setStep("transfer");
-    } catch (e) {
-      setError((e as Error).message);
-    } finally {
-      setSubmitting(false);
     }
   };
 
@@ -134,60 +93,6 @@ export default function SubscribePage() {
     );
   }
 
-  if (step === "transfer" || step === "done") {
-    return (
-      <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
-        <Header />
-        <main className="max-w-[480px] mx-auto px-4 pt-4 pb-12">
-          <button onClick={() => setStep("info")} className="inline-flex items-center gap-1 text-xs mb-5" style={{ color: "var(--muted)" }}>
-            <ChevronLeft className="w-3.5 h-3.5" /> 돌아가기
-          </button>
-          <div className="flex flex-col items-center gap-3 py-4 mb-4">
-            <CheckCircle className="w-10 h-10" style={{ color: "var(--mint)" }} />
-            <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>아래 계좌로 입금해 주세요</p>
-            <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
-              입금 확인 후 Pro가 활성화됩니다 (보통 수 시간 이내)
-            </p>
-          </div>
-          <div className="rounded-2xl border p-5 mb-4" style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.25)" }}>
-            <div className="flex flex-col gap-3">
-              <div className="flex justify-between"><span className="text-xs" style={{ color: "var(--muted)" }}>은행</span><span className="text-sm font-bold" style={{ color: "var(--text)" }}>{SUBSCRIPTION.bank.bank}</span></div>
-              <div className="flex justify-between"><span className="text-xs" style={{ color: "var(--muted)" }}>예금주</span><span className="text-sm font-bold" style={{ color: "var(--text)" }}>{SUBSCRIPTION.bank.holder}</span></div>
-              <div className="flex justify-between items-center">
-                <span className="text-xs" style={{ color: "var(--muted)" }}>계좌번호</span>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-bold font-mono" style={{ color: "var(--text)" }}>{SUBSCRIPTION.bank.number}</span>
-                  <button onClick={copy} className="px-2 py-1 rounded-lg text-[10px] font-semibold" style={{ background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}>
-                    {copied ? "복사됨" : "복사"}
-                  </button>
-                </div>
-              </div>
-              <div className="flex justify-between pt-2 border-t" style={{ borderColor: "var(--border)" }}>
-                <span className="text-xs" style={{ color: "var(--muted)" }}>입금액</span>
-                <span className="text-lg font-bold" style={{ color: "var(--mint)" }}>{formatSubPrice()}/{SUBSCRIPTION.periodLabel}</span>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-xl p-4 border mb-4" style={{ background: "rgba(255,255,255,0.02)", borderColor: "var(--border)" }}>
-            <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-              입금자명에 <strong style={{ color: "var(--mint)" }}>프로필명</strong>
-              {name ? <> (<strong style={{ color: "var(--mint)" }}>{name}</strong>)</> : null}
-              을 입력해 주세요.
-              확인 후 가입 이메일({user?.email})에 Pro가 연결됩니다.
-            </p>
-          </div>
-          <a
-            href={`mailto:sunryupatners@gmail.com?subject=${encodeURIComponent("Investus Pro 입금 완료")}&body=${encodeURIComponent(`입금자명: ${name}\n이메일: ${user?.email ?? ""}\n금액: ${formatSubPrice()}`)}`}
-            className="flex items-center justify-center w-full py-3 rounded-2xl text-xs font-semibold border"
-            style={{ borderColor: "var(--border)", color: "var(--muted)" }}
-          >
-            입금 완료 후 메일로 알려주기
-          </a>
-        </main>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
@@ -196,8 +101,10 @@ export default function SubscribePage() {
           <ChevronLeft className="w-3.5 h-3.5" /> 더보기
         </Link>
 
-        <div className="rounded-2xl px-5 py-6 mb-5 relative overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #001a12 0%, #0a0c10 100%)", border: "1px solid rgba(0,229,160,0.25)" }}>
+        <div
+          className="rounded-2xl px-5 py-6 mb-5 relative overflow-hidden"
+          style={{ background: "linear-gradient(135deg, #001a12 0%, #0a0c10 100%)", border: "1px solid rgba(0,229,160,0.25)" }}
+        >
           <p className="text-[10px] font-bold mb-2" style={{ color: "var(--mint)" }}>✦ {SUBSCRIPTION.productName}</p>
           <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "var(--text)" }}>
             커피값으로 시작하는<br />투자 인사이트
@@ -206,7 +113,8 @@ export default function SubscribePage() {
             추천주식 · 과거 리포트 열람을 월 {formatSubPrice()}에 이용하세요.
           </p>
           <p className="text-2xl font-bold font-syne" style={{ color: "var(--mint)" }}>
-            {formatSubPrice()}<span className="text-sm font-medium" style={{ color: "var(--muted)" }}>/{SUBSCRIPTION.periodLabel}</span>
+            {formatSubPrice()}
+            <span className="text-sm font-medium" style={{ color: "var(--muted)" }}>/{SUBSCRIPTION.periodLabel}</span>
           </p>
         </div>
 
@@ -233,47 +141,27 @@ export default function SubscribePage() {
           </div>
         ) : (
           <>
-            <div className="mb-3">
-              <p className="text-[11px] mb-1.5" style={{ color: "var(--muted)" }}>입금자명</p>
-              <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder={user.nickname || "홍길동"}
-                className="w-full rounded-xl px-3 py-3 border text-sm outline-none"
-                style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }}
-              />
-            </div>
             {error && <p className="text-xs text-center mb-3" style={{ color: "#ef4444" }}>{error}</p>}
-
-            {/* 카드 정기결제 (권장) */}
             <button
               onClick={startCardPay}
-              disabled={payingCard || submitting}
-              className="w-full py-4 rounded-2xl text-base font-bold disabled:opacity-60 flex items-center justify-center gap-2 mb-2"
+              disabled={payingCard}
+              className="w-full py-4 rounded-2xl text-base font-bold disabled:opacity-60 flex items-center justify-center gap-2"
               style={{ background: "var(--mint)", color: "#000" }}
             >
-              {payingCard
-                ? <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>
-                : <><CreditCard className="w-4 h-4" />카드로 매달 자동결제 {formatSubPrice()}</>}
+              {payingCard ? (
+                <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>
+              ) : (
+                <><CreditCard className="w-4 h-4" />카드로 매달 자동결제 {formatSubPrice()}</>
+              )}
             </button>
-            <p className="text-[10px] text-center mb-3" style={{ color: "var(--muted)" }}>
-              첫 결제 후 매달 자동 청구 · 언제든지 해지 가능
+            <p className="text-[10px] text-center mt-3" style={{ color: "var(--muted)" }}>
+              포트원 안전결제 · 첫 결제 후 매달 자동 청구 · 언제든지 해지 가능
             </p>
-
-            {/* 계좌이체 (대체) */}
-            <button
-              onClick={startTransfer}
-              disabled={submitting || payingCard}
-              className="w-full py-3 rounded-2xl text-xs font-semibold border disabled:opacity-60"
-              style={{ borderColor: "var(--border)", color: "var(--muted)" }}
-            >
-              {submitting ? "신청 중…" : "계좌이체로 구독하기 (수동)"}
-            </button>
           </>
         )}
 
         <p className="text-[10px] text-center mt-4 leading-relaxed" style={{ color: "var(--muted)" }}>
-          입금 확인 후 수동으로 Pro가 활성화됩니다. 문의: sunryupatners@gmail.com
+          문의: sunryupatners@gmail.com
           <br />본 구독은 투자 교육·정보 열람 목적이며 수익을 보장하지 않습니다.
         </p>
       </main>

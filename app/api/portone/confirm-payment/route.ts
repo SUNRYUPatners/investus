@@ -1,6 +1,6 @@
 /**
  * 일시불 결제 확인 — 전자책 등 단건 결제 후 서버 검증.
- * 브라우저 SDK로 결제 완료 → paymentId 받아서 이 엔드포인트로 전달 → 서버가 포트원 API에 최종 상태·금액 검증
+ * 로그인 사용자뿐 아니라 게스트(이메일) 결제도 허용.
  */
 import { NextRequest, NextResponse } from "next/server";
 import { getUserFromRequest, getAdminSupabase } from "@/lib/supabase";
@@ -11,21 +11,26 @@ type Body = {
   expectedAmountKrw: number;
   itemKind: "ebook" | "pro" | "creator";
   itemRef?: string;
+  customerEmail?: string;
+  customerName?: string;
 };
 
 export async function POST(req: NextRequest) {
   const user = await getUserFromRequest(req);
-  if (!user) return NextResponse.json({ error: "로그인 필요" }, { status: 401 });
 
   let body: Body;
   try { body = await req.json(); } catch { return NextResponse.json({ error: "잘못된 요청" }, { status: 400 }); }
 
-  const { paymentId, expectedAmountKrw, itemKind, itemRef } = body;
+  const { paymentId, expectedAmountKrw, itemKind, itemRef, customerEmail, customerName } = body;
   if (!paymentId || !expectedAmountKrw || !itemKind) {
     return NextResponse.json({ error: "필수 파라미터 누락" }, { status: 400 });
   }
 
-  // 포트원 API로 결제 조회 및 상태 검증
+  // 구독/크리에이터는 로그인 필수. 전자책은 게스트 허용.
+  if (itemKind !== "ebook" && !user) {
+    return NextResponse.json({ error: "로그인 필요" }, { status: 401 });
+  }
+
   const portone = getPortOne();
   let payment;
   try {
@@ -47,11 +52,10 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // 결제 로그 저장 (upsert — 웹훅이 먼저 도착했을 수 있음)
   const sb = getAdminSupabase();
   await sb.from("portone_payments").upsert({
-    user_id:     user.id,
-    user_email:  user.email,
+    user_id:     user?.id ?? null,
+    user_email:  user?.email ?? customerEmail ?? null,
     payment_id:  paymentId,
     item_kind:   itemKind,
     item_ref:    itemRef ?? null,
@@ -59,7 +63,8 @@ export async function POST(req: NextRequest) {
     status:      "paid",
     pg_provider: (payment as { channel?: { pgProvider?: string } }).channel?.pgProvider ?? null,
     paid_at:     new Date().toISOString(),
+    raw_event:   customerName ? { customerName } : null,
   }, { onConflict: "payment_id" });
 
-  return NextResponse.json({ ok: true, payment });
+  return NextResponse.json({ ok: true, paymentId, amount: paidAmount });
 }
