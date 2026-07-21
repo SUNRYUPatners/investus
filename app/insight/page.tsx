@@ -5,6 +5,7 @@ import { YoutubeChannels } from "@/components/YoutubeChannels";
 import { BookCarousel } from "@/components/BookCarousel";
 import Link from "next/link";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
+import { EbookProductSection } from "@/components/PaidProductsSection";
 import { getLocale } from "@/lib/getLocale";
 import { getT } from "@/lib/i18n";
 
@@ -140,6 +141,7 @@ export default async function InsightPage() {
         </div>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">{EduBanner}</section>
+        <section className="px-4 mb-6"><EbookProductSection /></section>
         <section className="px-4 mb-6"><InsightReportSection /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-4">{LearnBanner}</section>
@@ -185,6 +187,7 @@ export default async function InsightPage() {
           <div className="flex flex-col gap-3 flex-shrink-0">
             {EduBanner}
             {LearnBanner}
+            <EbookProductSection />
           </div>
           <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">
             <AdFitBanner />

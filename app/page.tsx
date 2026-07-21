@@ -12,7 +12,6 @@ import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
 import { HomeAIInsight } from "@/components/HomeAIInsight";
 import { FirstVisitBanner } from "@/components/FirstVisitBanner";
-import { PaidProductsSection } from "@/components/PaidProductsSection";
 import { getLocale } from "@/lib/getLocale";
 
 export default async function HomePage() {
@@ -21,7 +20,7 @@ export default async function HomePage() {
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <h1 className="sr-only">인베스트어스(Investus) — 미국주식 투자 플랫폼 | 실시간 시세 · S&amp;P500 · NASDAQ · 투자 리포트</h1>
-      <p className="sr-only">인베스트어스는 미국주식 실시간 시세, S&amp;P500·나스닥·다우존스 지수, 공포탐욕지수, 버핏지수, 투자 리포트를 무료로 제공하는 한국어 미국주식 투자 플랫폼입니다. 선류파트너스 CIO가 매일 시장을 분석합니다. Investus Pro 구독(월 5,900원·연 10% 할인)과 전자책(19,900원) 등 유료 디지털 상품을 판매합니다.</p>
+      <p className="sr-only">인베스트어스는 미국주식 실시간 시세, S&amp;P500·나스닥·다우존스 지수, 공포탐욕지수, 버핏지수, 투자 리포트를 무료로 제공하는 한국어 미국주식 투자 플랫폼입니다. 선류파트너스 CIO가 매일 시장을 분석합니다.</p>
       <Header />
       {/* 티커 테이프: LiveMarket이 localStorage 업데이트하면 자동 동기화 */}
       <TickerTape />
@@ -35,9 +34,6 @@ export default async function HomePage() {
 
             {/* 첫 방문자 가이드 배너 */}
             <FirstVisitBanner />
-
-            {/* PG·판매 상품 고지 — 주식 시세와 구분되는 실제 판매가 */}
-            <PaidProductsSection />
 
             {/* 내 보유종목 (포트폴리오에 종목이 있을 때만 표시) */}
             <PortfolioWidget />

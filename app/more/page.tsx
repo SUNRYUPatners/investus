@@ -7,6 +7,7 @@ import { ChevronRight, LogOut, User, Mail, Lock, Eye, EyeOff, Pencil, X, Send, C
 import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
 import { AdFitBanner } from "@/components/AdFitBanner";
+import { ProPricingSection } from "@/components/PaidProductsSection";
 import { useForm, ValidationError } from "@formspree/react";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 
@@ -1029,31 +1030,8 @@ export default function MorePage() {
             {/* Profile — top left on desktop */}
             <AuthSection />
 
-            {/* Investus Pro */}
-            <Link
-              href="/subscribe"
-              className="flex items-center gap-3 rounded-2xl border px-4 py-3.5 mb-4 active:opacity-80 transition-opacity"
-              style={{
-                background: "linear-gradient(135deg, #001a12 0%, #0a0c10 100%)",
-                borderColor: "rgba(0,229,160,0.3)",
-              }}
-            >
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ background: "rgba(0,229,160,0.15)" }}>
-                <Sparkles className="w-5 h-5" style={{ color: "var(--mint)" }} />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold" style={{ color: "var(--text)" }}>
-                  {isKo ? "Investus Pro 구독" : "Investus Pro"}
-                </p>
-                <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-                  {isKo
-                    ? "추천주식 · 이전 리포트 · 월 ₩5,900 · 연 10% 할인"
-                    : "Picks · past reports · ₩5,900/mo · 10% off yearly"}
-                </p>
-              </div>
-              <ChevronRight className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
-            </Link>
+            {/* Investus Pro — 가격 상세 */}
+            <ProPricingSection />
 
             {/* Mobile: creator + brand card here */}
             <div className="lg:hidden">
