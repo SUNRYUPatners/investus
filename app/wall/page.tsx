@@ -37,29 +37,19 @@ function makeAnonNick(email: string): string {
   return `익명_${String(hash % 10000).padStart(4, "0")}`;
 }
 
-function formatAbsoluteKst(ts: number): string {
-  return new Intl.DateTimeFormat("ko-KR", {
-    timeZone: "Asia/Seoul",
-    month: "numeric",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  }).format(new Date(ts));
-}
-
-/** 실제 created_at 기준 경과 시간. 24시간 이상은 작성 시각(KST)을 그대로 표시 */
+/** 실제 created_at 기준 경과 시간 (분/시간/일 전) */
 function getRelativeTime(ts: number, w: WallT): string {
   if (!Number.isFinite(ts)) return "—";
   const diff = Date.now() - ts;
-  if (diff < 0) return formatAbsoluteKst(ts);
+  if (diff < 0) return w.relativeNow;
   const secs = Math.floor(diff / 1000);
   if (secs < 60) return w.relativeNow;
   const mins = Math.floor(secs / 60);
   if (mins < 60) return w.relativeMin(mins);
   const hours = Math.floor(mins / 60);
   if (hours < 24) return w.relativeHour(hours);
-  return formatAbsoluteKst(ts);
+  const days = Math.floor(hours / 24);
+  return w.relativeDay(days);
 }
 
 type ApiComment = { id: number; post_id: number; is_mine: boolean; nickname: string; content: string; likes: number; created_at: string; parent_id?: number | null };

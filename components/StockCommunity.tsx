@@ -42,29 +42,19 @@ async function authHeaders(): Promise<HeadersInit> {
   }
 }
 
-function formatAbsoluteKst(ts: number): string {
-  return new Intl.DateTimeFormat("ko-KR", {
-    timeZone: "Asia/Seoul",
-    month: "numeric",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  }).format(new Date(ts));
-}
-
-/** 실제 created_at 기준. 24시간 이상은 작성 시각(KST) 표시 */
+/** 실제 created_at 기준 경과 시간 (분/시간/일 전) */
 function relativeTime(ts: number): string {
   if (!Number.isFinite(ts)) return "—";
   const diff = Date.now() - ts;
-  if (diff < 0) return formatAbsoluteKst(ts);
+  if (diff < 0) return "방금";
   const secs = Math.floor(diff / 1000);
   if (secs < 60) return "방금";
   const mins = Math.floor(secs / 60);
   if (mins < 60) return `${mins}분 전`;
   const hours = Math.floor(mins / 60);
   if (hours < 24) return `${hours}시간 전`;
-  return formatAbsoluteKst(ts);
+  const days = Math.floor(hours / 24);
+  return `${days}일 전`;
 }
 
 function SectionHeader({
