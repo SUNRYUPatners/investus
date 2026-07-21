@@ -71,7 +71,9 @@ export default function SubscribePage() {
   const [error, setError] = useState("");
 
   const price = planPriceKrw(period);
-  const monthlyEquiv = period === "year" ? Math.round(SUBSCRIPTION.yearlyPriceKrw / 12) : SUBSCRIPTION.priceKrw;
+  const monthlyEquiv = period === "year"
+    ? Math.round(SUBSCRIPTION.yearlyPriceKrw / 12)
+    : SUBSCRIPTION.priceKrw;
 
   const startPay = async () => {
     if (!user) {
@@ -198,7 +200,13 @@ export default function SubscribePage() {
         <div className="grid grid-cols-2 gap-2 mb-5">
           {([
             { id: "month" as const, title: "월간", price: SUBSCRIPTION.priceKrw, sub: "매월 자동결제" },
-            { id: "year" as const, title: "연간", price: SUBSCRIPTION.yearlyPriceKrw, sub: `월 ${formatSubPrice(monthlyEquiv)} · 2개월 무료` },
+            {
+              id: "year" as const,
+              title: "연간",
+              price: SUBSCRIPTION.yearlyPriceKrw,
+              listPrice: SUBSCRIPTION.yearlyListPriceKrw,
+              sub: `월 ${formatSubPrice(monthlyEquiv)} · ${SUBSCRIPTION.yearlyDiscountPercent}% 할인`,
+            },
           ]).map((p) => {
             const active = period === p.id;
             return (
@@ -216,11 +224,16 @@ export default function SubscribePage() {
                   <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{p.title}</span>
                   {p.id === "year" && (
                     <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full" style={{ background: "var(--mint)", color: "#000" }}>
-                      BEST
+                      {SUBSCRIPTION.yearlyDiscountPercent}% OFF
                     </span>
                   )}
                 </div>
                 <p className="text-lg font-bold font-syne" style={{ color: active ? "var(--mint)" : "var(--text)" }}>
+                  {"listPrice" in p && p.listPrice ? (
+                    <span className="text-[12px] font-medium line-through mr-1.5" style={{ color: "var(--muted)" }}>
+                      {formatSubPrice(p.listPrice)}
+                    </span>
+                  ) : null}
                   {formatSubPrice(p.price)}
                   <span className="text-[11px] font-medium" style={{ color: "var(--muted)" }}>/{planLabel(p.id)}</span>
                 </p>

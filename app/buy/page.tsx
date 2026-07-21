@@ -6,12 +6,13 @@ import { ChevronLeft, CreditCard, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { getSupabase } from "@/lib/supabase";
+import { EBOOK_PRODUCT } from "@/lib/products";
 
 const BOOK = {
-  title:  "절대로 잃지 말고 미래에 투자하라",
+  title:  EBOOK_PRODUCT.name,
   author: "SUNRYU Partners CIO",
-  desc:   "잃지 않는 투자의 원칙부터 미래 유망 섹터까지 — 실전 중심의 미국주식 투자 전략",
-  price:  19900,
+  desc:   EBOOK_PRODUCT.description,
+  price:  EBOOK_PRODUCT.priceKrw,
 };
 
 function fmt(n: number) {

@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocale } from "@/contexts/LocaleContext";
 import { ShareButton } from "@/components/ShareButton";
-import { SUBSCRIPTION, isFreeReport } from "@/lib/subscription";
+import { SUBSCRIPTION, isFreeReport, formatSubPrice, proPriceSummaryKo } from "@/lib/subscription";
 
 // 구독 게이팅 — lib/subscription.ts SUBSCRIPTION.enabled
 const SUBSCRIPTION_ENABLED = SUBSCRIPTION.enabled;
@@ -237,7 +237,9 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-bold leading-none mb-0.5" style={{ color: "var(--text)" }}>{t.reports.lockedCount(reports.length)}</p>
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>{t.reports.lockedDesc}</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+            유료 구독 상품 — 이전 날짜 리포트 열람 · {proPriceSummaryKo()}
+          </p>
         </div>
         <ChevronDown
           className="w-4 h-4 flex-shrink-0 transition-transform duration-200"
@@ -280,7 +282,7 @@ function LockedReportGroup({ reports }: { reports: Report[] }) {
           className="w-full py-2.5 rounded-xl text-sm font-bold text-black text-center block active:opacity-80 transition-opacity"
           style={{ background: "var(--mint)" }}
         >
-          {t.reports.subscribe}
+          {`구독하기 ${formatSubPrice()}/월 · ${formatSubPrice(SUBSCRIPTION.yearlyPriceKrw)}/년 (${SUBSCRIPTION.yearlyDiscountPercent}% 할인)`}
         </Link>
       </div>
     </div>
@@ -618,6 +620,10 @@ export function ReportFeed({ lang }: { lang?: "ko" | "en" } = {}) {
           </h2>
           <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
             {t.reports.subtitle}
+          </p>
+          <p className="text-[11px] mt-1.5 leading-relaxed" style={{ color: "var(--muted)" }}>
+            <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>
+            {" — "}오늘자 리포트 무료 · 이전 날짜 열람 {proPriceSummaryKo()}
           </p>
         </div>
         <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>

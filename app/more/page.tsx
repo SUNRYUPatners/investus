@@ -1048,8 +1048,8 @@ export default function MorePage() {
                 </p>
                 <p className="text-[11px]" style={{ color: "var(--muted)" }}>
                   {isKo
-                    ? "추천주식 · 이전 리포트 · 월 ₩5,900"
-                    : "Picks · past reports · ₩5,900/mo"}
+                    ? "추천주식 · 이전 리포트 · 월 ₩5,900 · 연 10% 할인"
+                    : "Picks · past reports · ₩5,900/mo · 10% off yearly"}
                 </p>
               </div>
               <ChevronRight className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />

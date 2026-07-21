@@ -13,7 +13,7 @@ import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { SectionInfo } from "./SectionInfo";
 import { isMarketOpen } from "@/lib/marketHours";
 import { useAuth } from "@/hooks/useAuth";
-import { SUBSCRIPTION } from "@/lib/subscription";
+import { SUBSCRIPTION, proPriceSummaryKo } from "@/lib/subscription";
 import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
@@ -207,9 +207,9 @@ export function LiveMarket() {
 
   return (
     <>
-      {/* 추천주식 */}
-      <section className="px-4 lg:px-0 pt-5">
-        <div className="flex items-center justify-between mb-3">
+      {/* 추천주식 — Pro 유료 상품 */}
+      <section className="px-4 lg:px-0 pt-5" aria-label="Investus 추천주식 유료 상품">
+        <div className="flex items-center justify-between mb-1.5">
           <div className="flex items-center gap-1.5">
             <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
             <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
@@ -218,11 +218,15 @@ export function LiveMarket() {
           </div>
           <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
         </div>
+        <p className="text-[11px] mb-3 leading-relaxed" style={{ color: "var(--muted)" }}>
+          <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>
+          {" — "}CIO 선정 추천주식 열람 · {proPriceSummaryKo()}
+        </p>
         <div className="relative">
           <SubscribeBlurOverlay
             locked={picksLocked}
             title="Investus 추천주식"
-            description={`CIO 선정 종목은 Pro 구독 후 열람할 수 있습니다. 월 ${SUBSCRIPTION.priceKrw.toLocaleString("ko-KR")}원`}
+            description={`유료 구독 상품입니다. CIO 추천주식 열람 · ${proPriceSummaryKo()}`}
           >
           {recScroll.canLeft && (
             <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"

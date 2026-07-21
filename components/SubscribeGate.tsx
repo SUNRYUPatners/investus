@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Lock } from "lucide-react";
-import { SUBSCRIPTION, formatSubPrice } from "@/lib/subscription";
+import { SUBSCRIPTION, formatSubPrice, proPriceSummaryKo } from "@/lib/subscription";
 
 type Props = {
   title: string;
@@ -37,7 +37,9 @@ export function SubscribeGate({ title, description, className = "", compact }: P
           className={`${compact ? "px-3 py-2 text-[11px] flex-shrink-0" : "w-full max-w-xs py-3 text-sm"} rounded-xl font-bold text-center active:opacity-80 transition-opacity`}
           style={{ background: "var(--mint)", color: "#000" }}
         >
-          구독하기 {formatSubPrice()}/{SUBSCRIPTION.periodLabel}
+          {compact
+            ? `구독 ${formatSubPrice()}/월`
+            : `구독하기 · ${proPriceSummaryKo()}`}
         </Link>
       </div>
     </div>
@@ -82,7 +84,7 @@ export function SubscribeBlurOverlay({
             className="inline-block w-full py-2.5 rounded-xl text-sm font-bold active:opacity-80"
             style={{ background: "var(--mint)", color: "#000" }}
           >
-            구독하기 {formatSubPrice()}/{SUBSCRIPTION.periodLabel}
+            구독하기 · {proPriceSummaryKo()}
           </Link>
         </div>
       </div>

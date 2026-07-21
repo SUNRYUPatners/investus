@@ -3,15 +3,27 @@
 export type SubPeriod = "month" | "year";
 export type SubPayMethod = "CARD" | "KAKAOPAY" | "NAVERPAY" | "TOSSPAY";
 
+const MONTHLY_KRW = 5_900;
+/** 연간 정가 = 월 × 12 */
+const YEARLY_LIST_KRW = MONTHLY_KRW * 12;
+/** 연간 결제 시 10% 할인 */
+const YEARLY_DISCOUNT_PCT = 10;
+const YEARLY_KRW = Math.round(YEARLY_LIST_KRW * (1 - YEARLY_DISCOUNT_PCT / 100));
+
 export const SUBSCRIPTION = {
   /** 결제 연동 전에도 게이팅 활성화 — PortOne 결제 후 investus_pro 메타데이터로 해제 */
   enabled: true,
   /** 월간 */
-  priceKrw: 5900,
-  /** 연간 (월 대비 약 2개월 무료 ≈ 17% 할인) */
-  yearlyPriceKrw: 59_000,
+  priceKrw: MONTHLY_KRW,
+  /** 연간 정가 (할인 전) */
+  yearlyListPriceKrw: YEARLY_LIST_KRW,
+  /** 연간 할인가 (10% 할인) */
+  yearlyPriceKrw: YEARLY_KRW,
+  yearlyDiscountPercent: YEARLY_DISCOUNT_PCT,
   periodLabel: "월",
   productName: "Investus Pro",
+  /** 구독에 포함되는 유료 서비스 (PG·상품 고지용) */
+  includes: ["Investus 추천주식 열람", "이전 날짜 리포트 열람"] as const,
 } as const;
 
 export const SUB_PAY_METHODS: {
@@ -51,6 +63,11 @@ export function planPriceKrw(period: SubPeriod): number {
 
 export function planLabel(period: SubPeriod): string {
   return period === "year" ? "연" : "월";
+}
+
+/** 홈·게이트 CTA용: 월/연 가격 한 줄 */
+export function proPriceSummaryKo(): string {
+  return `월 ${formatSubPrice(SUBSCRIPTION.priceKrw)} · 연 ${formatSubPrice(SUBSCRIPTION.yearlyPriceKrw)} (${SUBSCRIPTION.yearlyDiscountPercent}% 할인)`;
 }
 
 /** KST 기준 오늘 YYYY-MM-DD */

@@ -40,6 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/wall`,                lastModified: now, changeFrequency: "always",  priority: 0.85 },
     { url: `${base}/portfolio`,           lastModified: now, changeFrequency: "always",  priority: 0.8  },
     { url: `${base}/more`,                lastModified: now, changeFrequency: "monthly", priority: 0.5  },
+    { url: `${base}/subscribe`,           lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/buy`,                 lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/more/about`,          lastModified: now, changeFrequency: "monthly", priority: 0.7  },
     { url: `${base}/more/guide`,          lastModified: now, changeFrequency: "monthly", priority: 0.65 },
     { url: `${base}/more/faq`,            lastModified: now, changeFrequency: "monthly", priority: 0.65 },
