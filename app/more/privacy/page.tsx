@@ -24,7 +24,7 @@ const SECTIONS_KO = [
   },
   {
     title: "5. 개인정보 처리 위탁",
-    body: "서비스는 원활한 서비스 제공을 위해 아래와 같이 개인정보 처리를 위탁합니다.\n\n• Vercel Inc. (미국) — 서비스 호스팅 및 서버 운영\n• Supabase Inc. (미국) — 회원 인증 및 데이터베이스 저장\n• Upstash Inc. (미국) — 요청 횟수 제한(Rate Limiting) 처리\n• Formspree Inc. (미국) — 크리에이터 인증 신청 이메일 알림 전송 (이메일, 닉네임, 자기소개 포함)\n\n위탁 계약 시 개인정보 보호 관련 사항을 명시하고 이를 준수하도록 관리합니다.",
+    body: "서비스는 원활한 서비스 제공을 위해 아래와 같이 개인정보 처리를 위탁합니다.\n\n• Vercel Inc. (미국) — 서비스 호스팅 및 서버 운영\n• Supabase Inc. (미국) — 회원 인증 및 데이터베이스 저장\n• Upstash Inc. (미국) — 요청 횟수 제한(Rate Limiting) 처리\n• Formspree Inc. (미국) — 크리에이터 인증 신청 이메일 알림 전송 (이메일, 닉네임, 자기소개 포함)\n• 포트원 주식회사(PortOne) (대한민국) — 결제 처리(카드·간편결제), 빌링키 발급·관리\n\n위탁 계약 시 개인정보 보호 관련 사항을 명시하고 이를 준수하도록 관리합니다.",
   },
   {
     title: "6. 이용자의 권리 및 행사 방법",
@@ -71,7 +71,7 @@ const SECTIONS_EN = [
   },
   {
     title: "5. Data Processing Delegation",
-    body: "The Service delegates personal information processing to the following entities:\n\n• Vercel Inc. (USA) — Service hosting and server operations\n• Supabase Inc. (USA) — Member authentication and database storage\n• Upstash Inc. (USA) — Rate limiting\n• Formspree Inc. (USA) — Creator verification email notifications (email, nickname, self-introduction)\n\nAll entities are contractually required to comply with data protection requirements.",
+    body: "The Service delegates personal information processing to the following entities:\n\n• Vercel Inc. (USA) — Service hosting and server operations\n• Supabase Inc. (USA) — Member authentication and database storage\n• Upstash Inc. (USA) — Rate limiting\n• Formspree Inc. (USA) — Creator verification email notifications (email, nickname, self-introduction)\n• PortOne Co., Ltd. (Korea) — Payment processing (card/simple pay), billing key issuance and management\n\nAll entities are contractually required to comply with data protection requirements.",
   },
   {
     title: "6. User Rights and How to Exercise Them",

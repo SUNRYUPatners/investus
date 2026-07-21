@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/more/faq`,            lastModified: now, changeFrequency: "monthly", priority: 0.65 },
     { url: `${base}/more/privacy`,        lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
     { url: `${base}/more/terms`,          lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
+    { url: `${base}/more/refund`,         lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
     { url: `${base}/more/disclaimer`,     lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
     // 투자 지식 허브
     { url: `${base}/learn`,                        lastModified: now, changeFrequency: "monthly", priority: 0.85 },

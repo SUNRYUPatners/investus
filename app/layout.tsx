@@ -13,6 +13,7 @@ import { ReportUpdateBanner } from "@/components/ReportUpdateBanner";
 import { getLocale } from "@/lib/getLocale";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { SiteLegalFooter } from "@/components/SiteLegalFooter";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -124,7 +125,15 @@ const jsonLd = {
       },
       "description": "미국주식 투자 플랫폼 — 실시간 시세, 시장 분석 리포트, 투자 기초 교육",
       "foundingDate": "2024",
-      "address": { "@type": "PostalAddress", "addressCountry": "KR" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "마곡중앙6로 42, 7층 708호(마곡동, 사이언스타)",
+        "addressLocality": "강서구",
+        "addressRegion": "서울특별시",
+        "addressCountry": "KR",
+      },
+      "telephone": "010-3461-2916",
+      "email": "sunryupatners@gmail.com",
       "sameAs": ["https://www.investus.kr", "https://www.investus.kr"],
     },
     {
@@ -192,6 +201,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <DesktopSidebar />
               <div className="lg:pl-64" style={{ background: "var(--bg)" }}>
                 {children}
+                <SiteLegalFooter />
               </div>
             </div>
             <BottomNav />

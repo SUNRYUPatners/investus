@@ -973,12 +973,12 @@ export default function MorePage() {
   const MENU_EMOJIS = [
     ["📖", "📊", "🔖"],
     ["📢", "🔔", "💌", "❓"],
-    ["📄", "🔒", "⚠️"],
+    ["📄", "🔒", "💸", "⚠️"],
   ];
   const MENU_HREFS = [
     ["/more/guide", "/more/about", "/more/version"],
     ["/more/notices", "/more/notifications", undefined, "/more/faq"],
-    ["/more/terms", "/more/privacy", "/more/disclaimer"],
+    ["/more/terms", "/more/privacy", "/more/refund", "/more/disclaimer"],
   ];
 
   const sections: { title: string; items: MenuItem_t[] }[] = mo.sections.map((sec, si) => ({
@@ -1005,6 +1005,7 @@ export default function MorePage() {
     { emoji: "💌", label: isKo ? "피드백"      : "Feedback",   href: undefined, action: () => setShowFeedback(true) },
     { emoji: "📄", label: isKo ? "이용약관"    : "Terms",      href: "/more/terms" },
     { emoji: "🔒", label: isKo ? "개인정보"    : "Privacy",    href: "/more/privacy" },
+    { emoji: "💸", label: isKo ? "환불정책"    : "Refund",     href: "/more/refund" },
     { emoji: "⚠️", label: isKo ? "법적고지"    : "Disclaimer", href: "/more/disclaimer" },
     { emoji: "🎓", label: isKo ? "투자 지식 허브" : "Learn",   href: "/learn" },
   ];

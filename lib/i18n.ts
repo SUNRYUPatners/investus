@@ -212,6 +212,7 @@ const ko = {
         items: [
           { label: "이용약관",          sub: "" },
           { label: "개인정보처리방침",  sub: "" },
+          { label: "환불정책",          sub: "구독·전자책 청약철회 및 환불" },
           { label: "투자 유의사항",     sub: "이 앱은 투자 참고용이며 투자 권고가 아닙니다" },
         ],
       },
@@ -633,6 +634,7 @@ const en: typeof ko = {
         items: [
           { label: "Terms of Service",       sub: "" },
           { label: "Privacy Policy",         sub: "" },
+          { label: "Refund Policy",          sub: "Subscription & ebook withdrawals" },
           { label: "Investment Disclaimer",  sub: "This app is for reference only, not investment advice" },
         ],
       },

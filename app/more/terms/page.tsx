@@ -31,12 +31,12 @@ const SECTIONS_KO = [
     body: "이용자는 본 약관 및 관련 법령을 준수하여야 합니다. 이용자는 서비스가 제공하는 정보를 투자 권유로 해석하거나 이를 근거로 투자 결정을 내려서는 안 됩니다. 서비스 내 정보를 무단으로 복제·배포하거나 상업적으로 이용하는 행위는 금지됩니다.",
   },
   {
-    title: "제7조 (광고 기반 수익 모델)",
-    body: "서비스는 광고 기반으로 운영되며, 이용자에게 모든 기능을 무료로 제공합니다. AI 질문, 리포트 열람, 투자클럽 콘텐츠 이용 등에 별도 구독료가 부과되지 않습니다.\n투자클럽 크리에이터에게는 콘텐츠 조회수 기반 광고 수익이 정산됩니다. 수익 정산 기준 및 금액은 서비스 운영 정책에 따르며 사전 공지 후 변경될 수 있습니다.",
+    title: "제7조 (유료 서비스 및 결제)",
+    body: "서비스는 광고 기반 무료 기능과 함께, 선택적 유료 상품을 제공합니다.\n\n[Investus Pro 구독]\n• 월간 또는 연간 구독으로 Pro 전용 리포트·기능 등을 이용할 수 있습니다.\n• 결제는 신용·체크카드 및 간편결제(카카오페이, 네이버페이, 토스페이 등)를 통해 이루어지며, 결제는 포트원(PortOne)을 경유합니다.\n• 구독은 이용 기간 종료 시 동일 주기로 자동 갱신될 수 있으며, 이용자는 갱신 전에 해지할 수 있습니다.\n\n[전자책 등 디지털 콘텐츠]\n• 일회성 결제로 디지털 파일을 구매할 수 있으며, 결제 완료 후 즉시 제공됩니다.\n\n요금·상품 구성은 서비스 화면에 표시된 내용이 우선하며, 변경 시 사전 고지합니다. 환불·청약철회는 별도 「환불정책」(/more/refund)에 따릅니다.",
   },
   {
-    title: "제8조 (크리에이터 수익 정산)",
-    body: "투자클럽 크리에이터로 승인된 이용자는 콘텐츠 조회수에 비례한 광고 수익을 정산받을 수 있습니다.\n정산은 월 단위로 이루어지며, 최소 정산 금액 기준이 적용될 수 있습니다.\n정산을 위해서는 계좌 인증 및 본인 확인 절차가 완료되어야 합니다.\n크리에이터가 허위 정보를 게시하거나 이용약관을 위반한 경우 수익 정산이 중단될 수 있습니다.",
+    title: "제8조 (광고 및 크리에이터 수익)",
+    body: "서비스의 일부 기능은 광고 수익으로 운영될 수 있습니다.\n투자클럽 크리에이터로 승인된 이용자는 콘텐츠 조회수에 비례한 광고 수익을 정산받을 수 있습니다.\n정산은 월 단위로 이루어지며, 최소 정산 금액 기준이 적용될 수 있습니다.\n정산을 위해서는 계좌 인증 및 본인 확인 절차가 완료되어야 합니다.\n크리에이터가 허위 정보를 게시하거나 이용약관을 위반한 경우 수익 정산이 중단될 수 있습니다.",
   },
   {
     title: "제9조 (지적재산권)",
@@ -52,7 +52,7 @@ const SECTIONS_KO = [
   },
   {
     title: "부칙",
-    body: "본 약관은 2026년 5월 18일부터 시행됩니다.",
+    body: "본 약관은 2026년 5월 18일부터 시행되었습니다.\n유료 구독·결제 관련 조항은 2026년 7월 21일 개정·시행됩니다.",
   },
 ];
 
@@ -82,12 +82,12 @@ const SECTIONS_EN = [
     body: "Users must comply with this Agreement and applicable laws. Users must not interpret information provided by the Service as investment advice or make investment decisions based solely on such information. Unauthorized reproduction, distribution, or commercial use of Service content is prohibited.",
   },
   {
-    title: "Article 7 (Ad-Supported Revenue Model)",
-    body: "The Service operates on an ad-supported basis, providing all features to users free of charge. No subscription fees are charged for AI questions, report access, or Invest Club content.\nInvest Club creators receive ad revenue payouts based on content views. Payout criteria and amounts are subject to Service policies and may change with advance notice.",
+    title: "Article 7 (Paid Services and Payments)",
+    body: "The Service offers optional paid products alongside ad-supported free features.\n\n[Investus Pro]\n• Monthly or annual subscription for Pro reports and features.\n• Payments via card and simple pay (Kakao Pay, Naver Pay, Toss Pay, etc.) through PortOne.\n• Subscriptions may auto-renew; users may cancel before renewal.\n\n[Ebooks and other digital content]\n• One-time purchase with immediate digital delivery after payment.\n\nPrices shown on the Service prevail. Refunds follow the separate Refund Policy (/more/refund).",
   },
   {
-    title: "Article 8 (Creator Revenue Payouts)",
-    body: "Approved Invest Club creators may receive ad revenue proportional to content views.\nPayouts are made on a monthly basis and minimum payout thresholds may apply.\nAccount verification and identity confirmation must be completed before payouts.\nRevenue payouts may be suspended if a creator posts false information or violates these Terms.",
+    title: "Article 8 (Advertising and Creator Revenue)",
+    body: "Some features may be supported by advertising.\nApproved Invest Club creators may receive ad revenue proportional to content views.\nPayouts are monthly and minimum thresholds may apply.\nAccount verification is required before payouts.\nPayouts may be suspended for false information or Terms violations.",
   },
   {
     title: "Article 9 (Intellectual Property)",
@@ -103,7 +103,7 @@ const SECTIONS_EN = [
   },
   {
     title: "Supplementary Provisions",
-    body: "These Terms shall take effect as of May 18, 2026.",
+    body: "These Terms took effect as of May 18, 2026.\nPaid subscription and payment provisions were amended effective July 21, 2026.",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function TermsPage() {
           {isKo ? "이용약관" : "Terms of Service"}
         </h1>
         <p className="text-[11px] mb-6" style={{ color: "var(--muted)" }}>
-          {isKo ? "최종 개정일: 2026년 5월 18일" : "Last updated: May 18, 2026"}
+          {isKo ? "최종 개정일: 2026년 7월 21일" : "Last updated: July 21, 2026"}
         </p>
 
         <div className="flex flex-col gap-5">
