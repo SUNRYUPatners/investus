@@ -89,14 +89,12 @@ export async function deleteBillingKey(billingKey: string, reason: string) {
   });
 }
 
-/** 다음 청구일 계산 (KST 기준 매달 같은 일자) */
-export function nextBillingDate(from: Date = new Date()): Date {
+/** 다음 청구일 계산 (KST 기준, monthsAhead 개월 뒤 같은 일자) */
+export function nextBillingDate(from: Date = new Date(), monthsAhead = 1): Date {
   const kst = new Date(from.getTime() + 9 * 60 * 60 * 1000);
   const y = kst.getUTCFullYear();
   const m = kst.getUTCMonth();
   const d = kst.getUTCDate();
-  // 다음달 같은 일자 (28일까지는 안전, 29~31은 말일로 clamp)
-  const next = new Date(Date.UTC(y, m + 1, Math.min(d, 28), 0, 0, 0));
-  // KST → UTC 로 환산
+  const next = new Date(Date.UTC(y, m + monthsAhead, Math.min(d, 28), 0, 0, 0));
   return new Date(next.getTime() - 9 * 60 * 60 * 1000);
 }

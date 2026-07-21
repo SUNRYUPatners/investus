@@ -37,9 +37,11 @@ export async function GET(req: NextRequest) {
 
   let ok = 0, fail = 0;
   for (const sub of dueSubs) {
+    const isYearly = sub.plan_kind === "pro" && sub.plan_ref === "year";
+    const monthsAhead = isYearly ? 12 : 1;
     const paymentId = makePaymentId(sub.plan_kind === "pro" ? "PRO" : "CRT", sub.user_id);
     const orderName = sub.plan_kind === "pro"
-      ? "Investus Pro 월 구독"
+      ? `Investus Pro ${isYearly ? "연간" : "월간"} 구독`
       : `Investus 크리에이터 구독 (${sub.plan_ref ?? ""})`;
 
     try {
@@ -54,7 +56,7 @@ export async function GET(req: NextRequest) {
       await sb.from("portone_subscriptions").update({
         last_charged_at: now.toISOString(),
         last_payment_id: paymentId,
-        next_billing_at: nextBillingDate(now).toISOString(),
+        next_billing_at: nextBillingDate(now, monthsAhead).toISOString(),
         status:          "active",
       }).eq("id", sub.id);
 

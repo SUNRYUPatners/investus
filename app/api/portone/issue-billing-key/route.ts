@@ -1,20 +1,23 @@
 /**
- * 브라우저에서 PortOne 카드 등록 성공 후 호출.
+ * 브라우저에서 PortOne 빌링키 발급 성공 후 호출.
  * - billingKey를 DB에 저장
  * - 즉시 첫 회 결제 실행
  * - Pro/Creator 구독 활성화
+ * - Pro는 planPeriod(month|year) 지원
  */
 import { NextRequest, NextResponse } from "next/server";
 import { getUserFromRequest, getAdminSupabase } from "@/lib/supabase";
 import { chargeWithBillingKey, makePaymentId, nextBillingDate } from "@/lib/portone";
-import { SUBSCRIPTION } from "@/lib/subscription";
+import { planPriceKrw, type SubPeriod } from "@/lib/subscription";
 
 type Body = {
   billingKey: string;
   planKind: "pro" | "creator";
-  planRef?: string;      // creator subscription 시 creator id
-  priceKrw?: number;      // creator price 오버라이드 (없으면 Pro 기본가)
+  planPeriod?: SubPeriod; // pro only — month | year
+  planRef?: string;       // creator subscription 시 creator id
+  priceKrw?: number;      // creator price 오버라이드
   customerName?: string;
+  payMethod?: string;
 };
 
 export async function POST(req: NextRequest) {
@@ -24,7 +27,9 @@ export async function POST(req: NextRequest) {
   let body: Body;
   try { body = await req.json(); } catch { return NextResponse.json({ error: "잘못된 요청" }, { status: 400 }); }
 
-  const { billingKey, planKind, planRef, priceKrw, customerName } = body;
+  const { billingKey, planKind, planRef, priceKrw, customerName, payMethod } = body;
+  const planPeriod: SubPeriod = body.planPeriod === "year" ? "year" : "month";
+
   if (!billingKey || !planKind) {
     return NextResponse.json({ error: "billingKey/planKind 누락" }, { status: 400 });
   }
@@ -32,17 +37,22 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "creator 구독은 planRef 필요" }, { status: 400 });
   }
 
-  const amount = planKind === "pro" ? SUBSCRIPTION.priceKrw : Math.max(1, priceKrw ?? 0);
+  const amount = planKind === "pro"
+    ? planPriceKrw(planPeriod)
+    : Math.max(1, priceKrw ?? 0);
   if (planKind === "creator" && amount < 100) {
     return NextResponse.json({ error: "가격이 유효하지 않음" }, { status: 400 });
   }
 
+  const monthsAhead = planKind === "pro" && planPeriod === "year" ? 12 : 1;
+  // pro 는 plan_ref 에 period 저장 (월/연 구분 + unique 제약 호환)
+  const storedPlanRef = planKind === "pro" ? planPeriod : (planRef ?? null);
+
   const paymentId = makePaymentId(planKind === "pro" ? "PRO" : "CRT", user.id);
   const orderName = planKind === "pro"
-    ? `Investus Pro 월 구독`
+    ? `Investus Pro ${planPeriod === "year" ? "연간" : "월간"} 구독`
     : `Investus 크리에이터 구독 (${planRef})`;
 
-  // 1) 즉시 첫 회 결제
   try {
     await chargeWithBillingKey({
       billingKey,
@@ -56,10 +66,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: `첫 결제 실패: ${msg}` }, { status: 402 });
   }
 
-  // 2) 구독 레코드 upsert
   const sb = getAdminSupabase();
   const now = new Date();
-  const next = nextBillingDate(now);
+  const next = nextBillingDate(now, monthsAhead);
 
   const { data: subUp, error: subErr } = await sb
     .from("portone_subscriptions")
@@ -67,7 +76,7 @@ export async function POST(req: NextRequest) {
       user_id:         user.id,
       user_email:      user.email,
       plan_kind:       planKind,
-      plan_ref:        planRef ?? null,
+      plan_ref:        storedPlanRef,
       billing_key:     billingKey,
       status:          "active",
       price_krw:       amount,
@@ -83,24 +92,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: `구독 저장 실패: ${subErr.message}` }, { status: 500 });
   }
 
-  // 3) 결제 로그
   await sb.from("portone_payments").insert({
     user_id:         user.id,
     user_email:      user.email,
     payment_id:      paymentId,
     subscription_id: subUp?.id ?? null,
     item_kind:       planKind,
-    item_ref:        planRef ?? null,
+    item_ref:        storedPlanRef,
     amount_krw:      amount,
     status:          "paid",
+    pg_provider:     payMethod ?? null,
     paid_at:         now.toISOString(),
   });
 
-  // 4) Pro 사용자 메타데이터 활성화
   if (planKind === "pro") {
     try {
       await sb.auth.admin.updateUserById(user.id, {
-        user_metadata: { investus_pro: true },
+        user_metadata: {
+          investus_pro: true,
+          investus_pro_period: planPeriod,
+        },
       });
     } catch (e) {
       console.error("investus_pro 메타 설정 실패:", e);
@@ -111,6 +122,7 @@ export async function POST(req: NextRequest) {
     ok: true,
     paymentId,
     subscriptionId: subUp?.id,
+    planPeriod,
     nextBillingAt: next.toISOString(),
   });
 }
