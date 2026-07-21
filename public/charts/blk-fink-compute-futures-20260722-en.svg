@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#191408"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#eab308"/><stop offset="100%" style="stop-color:#ca8a04"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="140" height="38" rx="19" fill="#eab30830" stroke="#eab308" stroke-width="1.5"/>
+  <text x="110" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#eab308" text-anchor="middle">undefined</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.22</text>
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">BLK — Fink: "Compute Will Be the Next Futures Market · Next Global Financial Revolution"</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#eab308" text-anchor="middle" opacity=".12">⚡</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#eab308" text-anchor="middle">⚡</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">COMPUTE</text>
+  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Demand outrunning supply · compute set to emerge as a futures market</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#1a1408" stroke="#eab308" stroke-width="2"/>
+  <text x="210" y="456" font-family="Arial" font-size="44" text-anchor="middle">💰</text>
+  <text x="210" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#eab308" text-anchor="middle">Futures</text>
+  <text x="210" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Compute futures mkt</text>
+  <text x="210" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">next revolution</text>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#1a1408" stroke="#eab308" stroke-width="2"/>
+  <text x="540" y="456" font-family="Arial" font-size="44" text-anchor="middle">📈</text>
+  <text x="540" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#eab308" text-anchor="middle">Demand > Supply</text>
+  <text x="540" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">AI compute</text>
+  <text x="540" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">persistent mismatch</text>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#1a1408" stroke="#eab308" stroke-width="2"/>
+  <text x="870" y="456" font-family="Arial" font-size="44" text-anchor="middle">🇺🇸</text>
+  <text x="870" y="512" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#eab308" text-anchor="middle">US mkts</text>
+  <text x="870" y="548" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Capital markets fund it</text>
+  <text x="870" y="578" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">leadership retention</text>
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">ARK INVEST TRACKER · LARRY FINK</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#eab308" text-anchor="middle">"컴퓨트 선물시장 등장"</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"Compute could become a new futures market · Fink says it's the next revolution in finance"</text>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Source: Ark Invest Tracker · Larry Fink (BlackRock) · 2026.07.21</text>
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#1a1408" stroke="#eab308" stroke-width="1"/>
+  <text x="540" y="854" font-family="Arial" font-size="24" fill="#eab308" text-anchor="middle">AI compute + power shortage tied into US capital-formation story</text>
+  <text x="540" y="890" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Watch BLK compute-infra funds &amp; datacenter-credit product expansion</text>
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">BLK · Fink · Compute Futures Market · 2026.07.22</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
+</svg>

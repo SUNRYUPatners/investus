@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T22JL = 1784674800000; // 2026-07-22 08:00 KST
 const T21JL = 1784588400000; // 2026-07-21 08:00 KST
 const T20JL = 1784502000000; // 2026-07-20 08:00 KST
 const T18JL = 1784329200000; // 2026-07-18 08:00 KST
@@ -59,7 +60,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T21JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T22JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -78,6 +79,56 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-22 신규 ──────────────────────────────────────────────────────
+  { id: 601, symbol: "TSLA", nickname: "익명_3411", holdingLabel: "200주 보유",
+    content: "Q2 실적 수요일 장마감. 인도 480,126대 record에 +25% YoY까지 알려져 있는데, 진짜 관심은 Robotaxi 가이던스가 세번 연속 후퇴한 걸 어떻게 정리할지야. Robinhood 리테일 질문 4/7이 Robotaxi/Cybercab.",
+    createdAt: T22JL + 6*60_000, likes: 68, comments: 5 },
+  { id: 602, symbol: "TSLA", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "Robotaxi가 이제 7개 도시(Orlando/Miami/Tampa/Dallas 신규 Unsupervised + Austin/SF/Bay). 상반기 계획 중 5개 live, Phoenix·Vegas만 남음. Tampa/Orlando 18일만에 확장 속도 진짜 빠름.",
+    createdAt: T22JL + 15*60_000, likes: 45, comments: 4 },
+  { id: 603, symbol: "TSLA", nickname: "익명_1155", holdingLabel: "관심종목",
+    content: "Tampa FL 첫 Unsupervised Model Y robotaxi 주행 시작. Sawyer Merritt 원문 확인. 텍사스 밖 첫 unsupervised 확장이라 규제·소비자 반응이 다음 도시 진입 벤치마크.",
+    createdAt: T22JL + 24*60_000, likes: 33, comments: 3 },
+  { id: 604, symbol: "TSLA", nickname: "익명_9977", holdingLabel: "관심종목",
+    content: "2026.30 Summer Update 개많이 들어왔네. More Grok(통화·음악·climate·글로브박스), Carwalk 노래 스코어, Automatic Nav 루틴 학습, Rear Display Lock까지. 소프트웨어 차량 UX가 진짜 스텝 체인지 느낌.",
+    createdAt: T22JL + 33*60_000, likes: 72, comments: 4 },
+  { id: 605, symbol: "TSLA", nickname: "익명_5566", holdingLabel: "80주 보유",
+    content: "FSD 유럽 승인 투표 10월 8~9일 TCMV 회의로 확정. 통과시 네덜란드 인가청이 EU 전역 유효한 type approval 발부. 벨기에·독일 로드맵의 최종 게이트가 여기서 통합.",
+    createdAt: T22JL + 42*60_000, likes: 51, comments: 3 },
+  { id: 606, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "Cantor Fitzgerald가 어닝 앞두고 TSLA Overweight·$510 재확인. 상용화 후 빠른 확장 가능하다고. 어닝 콜에서 Robotaxi 로드맵을 어떻게 정리할지가 이 프레임 유지 여부의 관건.",
+    createdAt: T22JL + 51*60_000, likes: 27, comments: 3 },
+  { id: 607, symbol: "TSLA", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "xAI Grok가 곧 인도·태국·싱가폴·필리핀·말레이시아 Tesla 차량 탑재. 아시아 신흥국 데이터 파이프라인 확장. 2026.30 More Grok 확장이랑 결합되면 실 사용률 신호가 나올 것.",
+    createdAt: T22JL + 60*60_000, likes: 24, comments: 3 },
+  { id: 608, symbol: "NVDA", nickname: "익명_4433", holdingLabel: "60주 보유",
+    content: "Vera Rubin이 정식 full production 진입 (per YF). AMD Turin 대비 빠르다고 직접 비교까지. 주요 고객 이미 테스트 중. Foxconn Dojo 계약이랑 별도로 자체 이닝 강화되는 그림.",
+    createdAt: T22JL + 69*60_000, likes: 59, comments: 4 },
+  { id: 609, symbol: "NVDA", nickname: "익명_6677", holdingLabel: "관심종목",
+    content: "NVDA가 Nebius(NBIS) 22.2M 주 = 회사 ~10% 지분 공개. 인프라 파트너 지분 축적으로 수요 락인 확장하는 전략. NBIS 밸류에이션·CAPEX 계획 변화 봐야지.",
+    createdAt: T22JL + 78*60_000, likes: 38, comments: 3 },
+  { id: 610, symbol: "MU", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "BofA가 MU를 'best investment ideas'에 추가. 중국 AI 모델(Kimi K2)이 인스턴스당 ~1.4TB HBM 사용해서 HBM 부족 확대라는 논리. 어제 MSFT × Kimi K2 스토리랑 세트로 HBM 수혜 프레임 이중 강화.",
+    createdAt: T22JL + 87*60_000, likes: 42, comments: 4 },
+  { id: 611, symbol: "MSFT", nickname: "익명_9922", holdingLabel: "관심종목",
+    content: "Ogus Ekan이 MSFT가 지금 가장 안전한 mega-cap이라고. 모델은 black hole, MSFT는 컴퓨트 팔아 day-1 마진. GOOGL 대비 저평가(5% vs 27%)라는 프레임. Azure/OpenAI 지분 재평가·Copilot ARR가 검증 축.",
+    createdAt: T22JL + 96*60_000, likes: 31, comments: 3 },
+  { id: 612, symbol: "GOOGL", nickname: "익명_3355", holdingLabel: "관심종목",
+    content: "GOOGL Q3 어닝 내일. Net rev $118B(+21.3%), EPS $2.91(+25.5%) 예상. Cloud 성장률이랑 AI CAPEX outlook이 진짜 관건. MSFT 프레임이랑 병렬 비교되는 자리.",
+    createdAt: T22JL + 105*60_000, likes: 22, comments: 4 },
+  { id: 613, symbol: "SPY", nickname: "익명_7711", holdingLabel: "ETF 소량",
+    content: "BlackRock Larry Fink가 컴퓨트가 새 선물시장·차기 금융혁명이라고. 컴퓨트 수요 > 공급 지속. BLK 컴퓨트 인프라 펀드·DC 크레딧 프로덕트 확대 배경 프레임 되는 얘기.",
+    createdAt: T22JL + 114*60_000, likes: 18, comments: 3 },
+  { id: 614, symbol: "SPCX", nickname: "익명_2200", holdingLabel: "관심종목",
+    content: "싱가폴 SGX가 7/22부터 SpaceX 예치증권 상장 시작. 싱가폴 달러 거래, 현지 시간 매매. 아시아 유동성 유입 축 다각화라 미국 시간 외 익스포저 채널 신설.",
+    createdAt: T22JL + 123*60_000, likes: 44, comments: 3 },
+  { id: 615, symbol: "SPCX", nickname: "익명_8811", holdingLabel: "관심종목",
+    content: "Barchart 차트 - 개인이 SPCX 매수 중단. 어제까지 $320M 유입 1위였는데 하루 만에 반전. 실적(8/4)·Starship Flight 13 앞두고 관망 심리. SGX DR 상장이 카운터 효과 만들지 봐야.",
+    createdAt: T22JL + 132*60_000, likes: 36, comments: 4 },
+  { id: 616, symbol: "SPY", nickname: "익명_5544", holdingLabel: "관심종목",
+    content: "Kalshi가 총 마진 부채 $1.5T 사상 최고라고. 개인 레버리지 확대 사이클이라 상방·하방 다 확대되는 조건. AI 랠리에 레버리지 얹은 구간 조심해야지.",
+    createdAt: T22JL + 141*60_000, likes: 29, comments: 3 },
+
   // ── 2026-07-21 신규 ──────────────────────────────────────────────────────
   { id: 584, symbol: "TSLA", nickname: "익명_2211", holdingLabel: "180주 보유",
     content: "FSD v14 Lite가 진짜로 HW3 400만대에 wide release 예정이래. Ashok Elluswamy가 X에서 직접 확인한 거라 신뢰도 높다. AI distillation로 HW4 주행 방식 학습이라는데 오래된 차 다시 살아나는 거지.",
@@ -2543,6 +2594,96 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-22 신규 ──────────────────────────────────────────────────────
+  601: [
+    { id: 1, nickname: "익명_2800", holdingLabel: "관심종목", content: "가이던스 후퇴 정리가 진짜 관건.", createdAt: T22JL + 6*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_2801", holdingLabel: "관심종목", content: "인도 record는 이미 알려진 팩트.", createdAt: T22JL + 6*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_2802", holdingLabel: "관심종목", content: "Optimus Gen 3 ramp 코멘트 궁금.", createdAt: T22JL + 6*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_2803", holdingLabel: "관심종목", content: "2027 external sales 타임라인 필수.", createdAt: T22JL + 6*60_000 + m(4), likes: 26 },
+    { id: 5, nickname: "익명_2804", holdingLabel: "관심종목", content: "리테일 질문 세팅 흥미로움.", createdAt: T22JL + 6*60_000 + m(8), likes: 28 },
+  ],
+  602: [
+    { id: 1, nickname: "익명_2810", holdingLabel: "관심종목", content: "5개 도시 live 확인 = 실행 신뢰도 상승.", createdAt: T22JL + 15*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2811", holdingLabel: "관심종목", content: "Phoenix·Vegas만 남은 상황.", createdAt: T22JL + 15*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2812", holdingLabel: "관심종목", content: "unsupervised vs supervised 분류 흥미.", createdAt: T22JL + 15*60_000 + m(2), likes: 22 },
+    { id: 4, nickname: "익명_2813", holdingLabel: "관심종목", content: "안전 지표 후속 데이터 필수.", createdAt: T22JL + 15*60_000 + m(6), likes: 25 },
+  ],
+  603: [
+    { id: 1, nickname: "익명_2820", holdingLabel: "관심종목", content: "TX 밖 첫 unsupervised라 상징적.", createdAt: T22JL + 24*60_000 + m(-6), likes: 13 },
+    { id: 2, nickname: "익명_2821", holdingLabel: "관심종목", content: "규제·소비자 반응 벤치마크가 될 것.", createdAt: T22JL + 24*60_000 + m(-2), likes: 18 },
+    { id: 3, nickname: "익명_2822", holdingLabel: "관심종목", content: "Miami·Dallas 정식 상용 데이터 대기.", createdAt: T22JL + 24*60_000 + m(2), likes: 22 },
+  ],
+  604: [
+    { id: 1, nickname: "익명_2830", holdingLabel: "관심종목", content: "More Grok 대박, 통화까지 되네.", createdAt: T22JL + 33*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_2831", holdingLabel: "관심종목", content: "Carwalk 스코어링은 재미 요소.", createdAt: T22JL + 33*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_2832", holdingLabel: "관심종목", content: "Automatic Nav 루틴 학습이 진짜 유용할 듯.", createdAt: T22JL + 33*60_000 + m(2), likes: 24 },
+    { id: 4, nickname: "익명_2833", holdingLabel: "관심종목", content: "Rear Display Lock은 부모 필요 기능.", createdAt: T22JL + 33*60_000 + m(6), likes: 27 },
+  ],
+  605: [
+    { id: 1, nickname: "익명_2840", holdingLabel: "관심종목", content: "10월 8~9일 진짜 하이라이트 될 듯.", createdAt: T22JL + 42*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_2841", holdingLabel: "관심종목", content: "qualified majority 통과 조건 명확.", createdAt: T22JL + 42*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_2842", holdingLabel: "관심종목", content: "네덜란드 인가청 절차 최종 게이트.", createdAt: T22JL + 42*60_000 + m(2), likes: 23 },
+  ],
+  606: [
+    { id: 1, nickname: "익명_2850", holdingLabel: "관심종목", content: "재확인은 어닝 앞 애널리스트 앵커.", createdAt: T22JL + 51*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2851", holdingLabel: "관심종목", content: "$510 목표가 유지 자체가 신호.", createdAt: T22JL + 51*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2852", holdingLabel: "관심종목", content: "상용화 시점 확정 여부가 핵심.", createdAt: T22JL + 51*60_000 + m(2), likes: 22 },
+  ],
+  607: [
+    { id: 1, nickname: "익명_2860", holdingLabel: "관심종목", content: "인도 시장 진출은 상징적.", createdAt: T22JL + 60*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2861", holdingLabel: "관심종목", content: "언어 대응이 초기 채택률 결정.", createdAt: T22JL + 60*60_000 + m(-2), likes: 18 },
+    { id: 3, nickname: "익명_2862", holdingLabel: "관심종목", content: "구독 유입 축 확장 각도.", createdAt: T22JL + 60*60_000 + m(2), likes: 22 },
+  ],
+  608: [
+    { id: 1, nickname: "익명_2870", holdingLabel: "관심종목", content: "Full production 공식 진입은 촉매급.", createdAt: T22JL + 69*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_2871", holdingLabel: "관심종목", content: "AMD Turin 대비 빠르다는 직접 비교 무게감.", createdAt: T22JL + 69*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_2872", holdingLabel: "관심종목", content: "주요 고객 테스트 중 언급 큼.", createdAt: T22JL + 69*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_2873", holdingLabel: "관심종목", content: "CoWoS/HBM 밸류체인 파급.", createdAt: T22JL + 69*60_000 + m(4), likes: 26 },
+  ],
+  609: [
+    { id: 1, nickname: "익명_2880", holdingLabel: "관심종목", content: "인프라 파트너 지분 축적 전략.", createdAt: T22JL + 78*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2881", holdingLabel: "관심종목", content: "NBIS 지금 재평가 필요.", createdAt: T22JL + 78*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2882", holdingLabel: "관심종목", content: "10%면 상당한 규모.", createdAt: T22JL + 78*60_000 + m(2), likes: 22 },
+  ],
+  610: [
+    { id: 1, nickname: "익명_2890", holdingLabel: "관심종목", content: "인스턴스당 1.4TB HBM은 진짜 큼.", createdAt: T22JL + 87*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_2891", holdingLabel: "관심종목", content: "HBM 3사(SK하이닉스·삼성·MU) 다 수혜.", createdAt: T22JL + 87*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_2892", holdingLabel: "관심종목", content: "BofA 인정은 무게감.", createdAt: T22JL + 87*60_000 + m(2), likes: 23 },
+    { id: 4, nickname: "익명_2893", holdingLabel: "관심종목", content: "어제 MSFT × Kimi와 이중 서사.", createdAt: T22JL + 87*60_000 + m(6), likes: 26 },
+  ],
+  611: [
+    { id: 1, nickname: "익명_2900", holdingLabel: "관심종목", content: "\"컴퓨트 팔아 day-1 마진\" 프레임 좋다.", createdAt: T22JL + 96*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2901", holdingLabel: "관심종목", content: "모델 R&D 부담 없는 위치 매력.", createdAt: T22JL + 96*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2902", holdingLabel: "관심종목", content: "Azure 성장률 유지가 관건.", createdAt: T22JL + 96*60_000 + m(2), likes: 22 },
+  ],
+  612: [
+    { id: 1, nickname: "익명_2910", holdingLabel: "관심종목", content: "AI CAPEX outlook 진짜 관건.", createdAt: T22JL + 105*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_2911", holdingLabel: "관심종목", content: "Cloud 성장률이 프리미엄 정당화.", createdAt: T22JL + 105*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_2912", holdingLabel: "관심종목", content: "YouTube 광고도 지속성 봐야.", createdAt: T22JL + 105*60_000 + m(2), likes: 22 },
+    { id: 4, nickname: "익명_2913", holdingLabel: "관심종목", content: "MSFT랑 병렬 비교 재밌음.", createdAt: T22JL + 105*60_000 + m(6), likes: 25 },
+  ],
+  613: [
+    { id: 1, nickname: "익명_2920", holdingLabel: "관심종목", content: "컴퓨트 선물시장 진짜 되면 게임 체인저.", createdAt: T22JL + 114*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2921", holdingLabel: "관심종목", content: "규제·거래소 승인 절차 오래 걸릴 듯.", createdAt: T22JL + 114*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2922", holdingLabel: "관심종목", content: "BLK 인프라 펀드 확대 배경.", createdAt: T22JL + 114*60_000 + m(2), likes: 22 },
+  ],
+  614: [
+    { id: 1, nickname: "익명_2930", holdingLabel: "관심종목", content: "아시아 유동성 유입은 카운터 효과.", createdAt: T22JL + 123*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_2931", holdingLabel: "관심종목", content: "DR 구조 초기 프리미엄/discount 관찰.", createdAt: T22JL + 123*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_2932", holdingLabel: "관심종목", content: "싱가폴 이후 다른 아시아 국가로 확산 여부.", createdAt: T22JL + 123*60_000 + m(2), likes: 22 },
+  ],
+  615: [
+    { id: 1, nickname: "익명_2940", holdingLabel: "관심종목", content: "하루만에 흐름 반전이라니.", createdAt: T22JL + 132*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_2941", holdingLabel: "관심종목", content: "이벤트 앞 관망 심리 자연스러움.", createdAt: T22JL + 132*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_2942", holdingLabel: "관심종목", content: "실적/Flight 13이 진짜 방향 결정.", createdAt: T22JL + 132*60_000 + m(2), likes: 23 },
+    { id: 4, nickname: "익명_2943", holdingLabel: "관심종목", content: "SGX DR 상장 효과 관찰 필요.", createdAt: T22JL + 132*60_000 + m(6), likes: 26 },
+  ],
+  616: [
+    { id: 1, nickname: "익명_2950", holdingLabel: "관심종목", content: "$1.5T ATH는 진짜 부담.", createdAt: T22JL + 141*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_2951", holdingLabel: "관심종목", content: "레버리지 사이클 강제청산 리스크.", createdAt: T22JL + 141*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_2952", holdingLabel: "관심종목", content: "리스크예산 재점검 필수.", createdAt: T22JL + 141*60_000 + m(2), likes: 23 },
+  ],
+
   // ── 2026-07-21 신규 ──────────────────────────────────────────────────────
   584: [
     { id: 1, nickname: "익명_2600", holdingLabel: "관심종목", content: "HW3 재활성화 되면 진짜 구독 매출 확 오를 듯.", createdAt: T21JL + 6*60_000 + m(-8), likes: 12 },
