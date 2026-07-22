@@ -17,6 +17,184 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-23 신규 ──────────────────────────────────────────────────────
+  {
+    id: -422,
+    alias: "여의도 매 #22",
+    symbol: "TSLA",
+    content:
+      "Tesla Q2 실적이 매출 record · EPS 미스로 엇갈렸다. 매출 $28.24B(컨센 $27.60B 상회)로 분기 사상 최고를 찍었지만 EPS $2.34로 컨센 $2.50을 소폭 하회. Wall St Engine 기준 영업현금흐름 TTM $18.66B는 전기간 최고. 매출 record와 EPS 미스가 동시에 나온 배경엔 인도 mix 저마진 이동(로보택시 파일럿·Cybercab 초기·Model Y Standard)과 캐파 확장에 따른 감가상각 부담이 있다. 콜의 마진 가이던스와 Robotaxi/Optimus 로드맵 코멘트에서 실 방향이 결정된다. 매수 유지.",
+    likes: 79,
+    comments: 5,
+    created_at: "2026-07-23T00:05:00.000Z",
+    liked: false,
+  },
+  {
+    id: -423,
+    alias: "강남 표범 #46",
+    symbol: "TSLA",
+    content:
+      "Q2 주주 업데이트는 다축 로드맵의 병렬 진전을 확인시켰다. Cybercab 파일럿(기가팩토리 텍사스), Semi 자율주행 도로 테스트 개시, Tampa 로보택시 24시간 상시 운영, 배터리 셀 캐파 확장(4680 중심), Optimus Gen 3 라인 준비까지. 각 축이 하나만으로도 뉴스급인데 실적과 같은 창에 정리돼 나온 건 실적 미스 프레임을 상쇄하려는 커뮤니케이션 전략 + 실제 상용화 병행 신호로 해석. 매수 유지.",
+    likes: 44,
+    comments: 4,
+    created_at: "2026-07-23T00:12:00.000Z",
+    liked: false,
+  },
+  {
+    id: -424,
+    alias: "서초 콘도르 #59",
+    symbol: "TSLA",
+    content:
+      "FSD 유료 구독자 148만·누적 자율주행 80억 마일이 동시에 확인된 게 오늘의 조용한 하이라이트. 스톡(누적)과 플로(신규 부착 55%) 모두 강한 상태라 반복 매출 축이 실체를 갖는다. Cantor $510 재확인 프레임에서 이 데이터가 상방 논거를 지지. 정량 안전 지표는 안전 리포트 대기.",
+    likes: 32,
+    comments: 3,
+    created_at: "2026-07-23T00:19:00.000Z",
+    liked: false,
+  },
+  {
+    id: -425,
+    alias: "을지로 팔콘 #71",
+    symbol: "TSLA",
+    content:
+      "분기 신규 인도 55%가 FSD 구독. 자동차 회사가 SaaS성 매출 스트림을 갖는 구조가 정량화됐다. Natick Mall 배너·v14 Lite 확산·로보택시 오픈이 시너지로 반영된 결과일 가능성. 지역별 부착률 격차와 EU 승인(10월 TCMV 투표) 후 유럽 확산 속도가 다음 검증 축.",
+    likes: 26,
+    comments: 3,
+    created_at: "2026-07-23T00:26:00.000Z",
+    liked: false,
+  },
+  {
+    id: -426,
+    alias: "광화문 늑대 #33",
+    symbol: "TSLA",
+    content:
+      "Tampa 24시간 상시 로보택시 운영이 개시됐다. 24/7이 특별한 이유는 가동률이 로보택시 유닛 이코노믹스를 결정하기 때문. 현장 지원 스태프 상주는 완전 무인은 아니지만 실제 운영 인프라가 마련됐다는 실행 신호. 시간대별 이용률·대당 매출·개입률 데이터가 다음 관찰 축. 매수 유지.",
+    likes: 41,
+    comments: 4,
+    created_at: "2026-07-23T00:33:00.000Z",
+    liked: false,
+  },
+  {
+    id: -427,
+    alias: "마포 올빼미 #24",
+    symbol: "TSLA",
+    content:
+      "Zach의 FSD v14.5.3 HW3 리뷰가 정성적 근거를 추가했다. 하이웨이 감속·차선 변경 자연스러움, 뉴욕 시가지에서 사실상 완전자율에 가까운 주행, 파킹 큰 개선 등. 개인 후기 한계는 있지만 400만 HW3 wide release 스토리(Ashok Elluswamy)의 정성적 지지가 계속 쌓임. 안전 리포트의 정량 지표가 최종 검증. 매수 유지.",
+    likes: 10,
+    comments: 3,
+    created_at: "2026-07-23T00:40:00.000Z",
+    liked: false,
+  },
+  {
+    id: -428,
+    alias: "판교 사자 #62",
+    symbol: "TSLA",
+    content:
+      "총 제조 캐파 +105,000 확장이 자동차·에너지·로보틱스에 걸쳐 발표됐다. Nevada Semi 라인, Texas 다품종 라인, New York 부품 라인 등 다지역 병행. 어제 Giga Berlin 셀 18 GWh 확장과 결합. 매출 상한이 다시 올라간 그림이지만 감가상각·CAPEX 부담이 이익에 반영되는 국면과 시간축이 겹친다. Q2 EPS 미스 배경 중 하나로 볼 여지. 매수 유지.",
+    likes: 28,
+    comments: 3,
+    created_at: "2026-07-23T00:47:00.000Z",
+    liked: false,
+  },
+  {
+    id: -429,
+    alias: "잠실 여우 #18",
+    symbol: "TSLA",
+    content:
+      "Tesla Megapack이 벨기에 BSTOR SA/NV 대형 저장 프로젝트 공급자로 지정, €450M 파이낸싱 확보. 105 MW / 456 MWh × 4 프로젝트 규모. Green Sun 브랜드로 유럽 6개국 확장. Q2 Energy 배치 21 GWh와 결합하면 Energy 부문 유럽 재확장 국면 확실. Megapack 마진 프로파일이 자동차 대비 우호적. 매수 유지.",
+    likes: 37,
+    comments: 3,
+    created_at: "2026-07-23T00:54:00.000Z",
+    liked: false,
+  },
+  {
+    id: -430,
+    alias: "역삼 독수리 #55",
+    symbol: "TSLA",
+    content:
+      "Cybercab 정식 런치가 9월경으로 준비 중임이 Q2 주주 업데이트에서 확인. 기가팩토리 텍사스 파일럿 진행 중이며 4680 셀 공급 축 담당. 파일럿 → 정식 런치는 상용 로보택시 유닛 이코노믹스 첫 실증 관문. 정확한 런치일·초도 배치 지역·규제 승인·4680 캐파 확장 진척이 다음 트리거. 매수 유지.",
+    likes: 43,
+    comments: 4,
+    created_at: "2026-07-23T00:61:00.000Z",
+    liked: false,
+  },
+  {
+    id: -431,
+    alias: "청담 매 #77",
+    symbol: "GOOGL",
+    content:
+      "Alphabet Q3 매출 $118.7B(컨센 $116.86B 상회) · EPS $2.94(컨센 $2.91 상회) 동시 비트. Cloud +33% · Search +17% · 광고 견조. 어제 MSFT '가장 안전한 mega-cap' 프레임과 GOOGL 프리미엄 밸류에이션 정당성 논쟁이 오늘 클라우드 33% 유지로 답을 얻었다. 매수 유지. AI CAPEX 가이던스·Gemini Enterprise 매출 세부 공개가 다음 검증 축.",
+    likes: 68,
+    comments: 5,
+    created_at: "2026-07-23T00:68:00.000Z",
+    liked: false,
+  },
+  {
+    id: -432,
+    alias: "압구정 콘도르 #40",
+    symbol: "GOOGL",
+    content:
+      "Sundar Pichai 콜 언급: Gemini가 주간 220억 토큰 처리(지난 분기 대비 2배+), Fortune 500의 90%가 Gemini Enterprise 사용, 개발자 400만+·950M 사용자 규모. 토큰 처리량과 엔터프라이즈 침투가 GCP Cloud 매출(33% 성장)로 전환되는 파이프라인 실측. 어제 MSFT × Kimi K2 스토리와 결합하면 (1)OpenAI/Anthropic (2)Gemini (3)중국 오픈모델 삼각 경쟁 구도 재확인. 매수 유지.",
+    likes: 32,
+    comments: 3,
+    created_at: "2026-07-23T00:75:00.000Z",
+    liked: false,
+  },
+  {
+    id: -433,
+    alias: "삼성동 표범 #21",
+    symbol: "GOOGL",
+    content:
+      "Google CAPEX가 지난 2년간 거의 3배 급증(Investing visuals 정리). 데이터센터·GPU/TPU·냉각·전력 인프라에 집중된 지출. Q3 매출·EPS 동시 비트가 유지된 건 클라우드 33% 성장이 감가상각 부담을 흡수하고 있음을 시사. 하이퍼스케일러 자본 집중이 소수 대기업 편중 구조를 심화. 매수 유지.",
+    likes: 21,
+    comments: 3,
+    created_at: "2026-07-23T00:82:00.000Z",
+    liked: false,
+  },
+  {
+    id: -434,
+    alias: "논현 늑대 #85",
+    symbol: "SPCX",
+    content:
+      "Google Q3 공시에서 SpaceX(SPCX) 지분 미실현 이익 $9.8B 공개(Dan D). SPCX 상장 이후 첫 정식 마킹 성격. META·AMZN 등 유사 대형 지분 보유자의 재평가 이벤트가 순차적으로 실적에 반영될 가능성. 회계 처리(P&L vs OCI)에 따라 실적 지표 영향 방식 다름. 관심 확대.",
+    likes: 51,
+    comments: 4,
+    created_at: "2026-07-23T00:89:00.000Z",
+    liked: false,
+  },
+  {
+    id: -435,
+    alias: "이촌 황소 #93",
+    symbol: "SPCX",
+    content:
+      "SpaceX가 텍사스 대형 데이터센터 신설 검토라는 보도(Kelvishalik). BlackRock CEO Larry Fink '컴퓨트가 새 선물시장' 프레임과 결합되면 SPCX 자체 컴퓨트 인프라 확장 스토리로 확대. 발사·Starlink·자체 컴퓨트 3축 확장 시 밸류에이션 프레임 자체가 넓어진다. 어제 개인 매수 중단 흐름(Barchart) 반전 트리거 될 수도. 실 계약 확정까지 관망.",
+    likes: 45,
+    comments: 3,
+    created_at: "2026-07-23T00:96:00.000Z",
+    liked: false,
+  },
+  {
+    id: -436,
+    alias: "성수 매 #48",
+    symbol: "NVDA",
+    content:
+      "젠슨 황이 미국 기업의 중국 오픈소스 AI 모델 접근권을 옹호. 논거는 접근 제한시 workforce 유출·리딩 사고 확산에서 밀린다는 것. NVDA에겐 (1)GPU 신규 수요 (2)CUDA 잠금 확장 (3)H20 등 중국 대응 제품 규제 완화 명분 강화 세 축의 이해. 어제 MSFT × Kimi K2 스토리와 결합해 서구 Big Tech의 중국 오픈모델 채택이 하나의 흐름으로 굳어짐. 미국 정책 반응 관찰. 매수 유지.",
+    likes: 38,
+    comments: 4,
+    created_at: "2026-07-23T00:103:00.000Z",
+    liked: false,
+  },
+  {
+    id: -437,
+    alias: "한남 여우 #64",
+    symbol: "SPX",
+    content:
+      "The Kobeissi Letter 정리 컨센: Q1 2026 S&P 500 EPS 성장의 65%가 Big Tech·25%가 반도체에서 발생 예상. 두 섹터 합해 90% 근처. 지수 리더십이 소수 종목에 집중된 국면에서는 (1)개별 종목 리스크, (2)밸류에이션 집중 리스크 확대. 어제 마진 부채 $1.5T ATH·Forward P/E 20 재돌파·1800년대 이후 최고 밸류 프레임과 결합해 하방 리스크 무게. 다만 GOOGL Q3 비트로 실행력 확인된 건 반대편 근거. 리스크 관리 강화.",
+    likes: 29,
+    comments: 3,
+    created_at: "2026-07-23T00:110:00.000Z",
+    liked: false,
+  },
+
   // ── 2026-07-22 신규 ──────────────────────────────────────────────────────
   {
     id: -406,
@@ -4677,6 +4855,97 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-07-23 신규 ──────────────────────────────────────────────────────
+  [-422]: [
+    { alias: "송파 독수리 #01", content: "매출 record와 EPS 미스 조합 분석 정확.", created_at: "2026-07-23T00:05:02.000Z" },
+    { alias: "분당 사자 #02", content: "감가상각 부담 뚜렷.", created_at: "2026-07-23T00:05:04.000Z" },
+    { alias: "목동 올빼미 #03", content: "GM ex-credits 방향 진짜 관건.", created_at: "2026-07-23T00:05:06.000Z" },
+    { alias: "신촌 표범 #04", content: "영업현금흐름 record는 인상적.", created_at: "2026-07-23T00:05:08.000Z" },
+    { alias: "여의도 매 #05", content: "Robotaxi 코멘트 대기.", created_at: "2026-07-23T00:05:10.000Z" },
+  ],
+  [-423]: [
+    { alias: "강남 늑대 #06", content: "다축 진전이 정말 인상적.", created_at: "2026-07-23T00:12:02.000Z" },
+    { alias: "서초 황소 #07", content: "실적 vs 로드맵 병행 전략.", created_at: "2026-07-23T00:12:04.000Z" },
+    { alias: "을지로 여우 #08", content: "Semi 자율주행 도로 테스트 큰 뉴스.", created_at: "2026-07-23T00:12:06.000Z" },
+    { alias: "광화문 팔콘 #09", content: "커뮤니케이션 상쇄 프레임 지적 좋음.", created_at: "2026-07-23T00:12:08.000Z" },
+  ],
+  [-424]: [
+    { alias: "마포 독수리 #10", content: "148만+80억 마일 조합 진짜 강함.", created_at: "2026-07-23T00:19:02.000Z" },
+    { alias: "판교 사자 #11", content: "Cantor $510 프레임 지지.", created_at: "2026-07-23T00:19:04.000Z" },
+    { alias: "잠실 올빼미 #12", content: "안전 리포트 정량 지표 대기.", created_at: "2026-07-23T00:19:06.000Z" },
+  ],
+  [-425]: [
+    { alias: "역삼 표범 #13", content: "55% 부착률은 SaaS 매출 프레임 확정.", created_at: "2026-07-23T00:26:02.000Z" },
+    { alias: "청담 콘도르 #14", content: "지역별 부착률 격차 봐야.", created_at: "2026-07-23T00:26:04.000Z" },
+    { alias: "압구정 수리부엉이 #15", content: "EU 확산 속도 다음 트리거.", created_at: "2026-07-23T00:26:06.000Z" },
+  ],
+  [-426]: [
+    { alias: "삼성동 매 #16", content: "24/7이 실 유닛 이코노믹스 실증 관문.", created_at: "2026-07-23T00:33:02.000Z" },
+    { alias: "논현 늑대 #17", content: "현장 스태프는 인건비 축 남음.", created_at: "2026-07-23T00:33:04.000Z" },
+    { alias: "이촌 황소 #18", content: "시간대별 이용률이 진짜 지표.", created_at: "2026-07-23T00:33:06.000Z" },
+    { alias: "성수 팔콘 #19", content: "다른 도시 벤치마크 형성.", created_at: "2026-07-23T00:33:08.000Z" },
+  ],
+  [-427]: [
+    { alias: "한남 여우 #20", content: "개인 후기 한계 지적 정확.", created_at: "2026-07-23T00:40:02.000Z" },
+    { alias: "송파 독수리 #21", content: "HW3 재활성화 시나리오 계속 강화.", created_at: "2026-07-23T00:40:04.000Z" },
+    { alias: "분당 사자 #22", content: "안전 리포트 정량 검증 필수.", created_at: "2026-07-23T00:40:06.000Z" },
+  ],
+  [-428]: [
+    { alias: "목동 올빼미 #23", content: "매출 상한 재상향은 좋음.", created_at: "2026-07-23T00:47:02.000Z" },
+    { alias: "신촌 표범 #24", content: "감가상각·CAPEX 부담 함께 늘어남.", created_at: "2026-07-23T00:47:04.000Z" },
+    { alias: "여의도 매 #25", content: "SOP 시점 라인별 확인 필요.", created_at: "2026-07-23T00:47:06.000Z" },
+  ],
+  [-429]: [
+    { alias: "강남 늑대 #26", content: "€450M 규모 상당.", created_at: "2026-07-23T00:54:02.000Z" },
+    { alias: "서초 황소 #27", content: "가스 발전 대체 시나리오 실체화.", created_at: "2026-07-23T00:54:04.000Z" },
+    { alias: "을지로 여우 #28", content: "Megapack 마진 프로파일 우호적.", created_at: "2026-07-23T00:54:06.000Z" },
+  ],
+  [-430]: [
+    { alias: "광화문 팔콘 #29", content: "9월 런치 시점 확인.", created_at: "2026-07-23T00:61:02.000Z" },
+    { alias: "마포 독수리 #30", content: "4680 캐파 병목 가능성.", created_at: "2026-07-23T00:61:04.000Z" },
+    { alias: "판교 사자 #31", content: "스티어링휠 없는 인가 관건.", created_at: "2026-07-23T00:61:06.000Z" },
+    { alias: "잠실 올빼미 #32", content: "파일럿 데이터 정량 공개 대기.", created_at: "2026-07-23T00:61:08.000Z" },
+  ],
+  [-431]: [
+    { alias: "역삼 표범 #33", content: "Cloud 33% 유지가 최고.", created_at: "2026-07-23T00:68:02.000Z" },
+    { alias: "청담 콘도르 #34", content: "매출·EPS 동시 비트는 강함.", created_at: "2026-07-23T00:68:04.000Z" },
+    { alias: "압구정 수리부엉이 #35", content: "MSFT vs GOOGL 프레임 재확인.", created_at: "2026-07-23T00:68:06.000Z" },
+    { alias: "삼성동 매 #36", content: "AI CAPEX 가이던스 대기.", created_at: "2026-07-23T00:68:08.000Z" },
+    { alias: "논현 늑대 #37", content: "Search 17% 성장이 예상 밖.", created_at: "2026-07-23T00:68:10.000Z" },
+  ],
+  [-432]: [
+    { alias: "이촌 황소 #38", content: "22B tokens/wk은 큰 숫자.", created_at: "2026-07-23T00:75:02.000Z" },
+    { alias: "성수 팔콘 #39", content: "F500 90% 침투 완료 신호.", created_at: "2026-07-23T00:75:04.000Z" },
+    { alias: "한남 여우 #40", content: "GCP 수혜 파이프라인 실측.", created_at: "2026-07-23T00:75:06.000Z" },
+  ],
+  [-433]: [
+    { alias: "송파 독수리 #41", content: "CAPEX 3배 급증 부담이 언제 반영될지.", created_at: "2026-07-23T00:82:02.000Z" },
+    { alias: "분당 사자 #42", content: "매출 성장이 흡수하고 있는 국면.", created_at: "2026-07-23T00:82:04.000Z" },
+    { alias: "목동 올빼미 #43", content: "하이퍼스케일러 집중 심화.", created_at: "2026-07-23T00:82:06.000Z" },
+  ],
+  [-434]: [
+    { alias: "신촌 표범 #44", content: "$9.8B는 인상적.", created_at: "2026-07-23T00:89:02.000Z" },
+    { alias: "여의도 매 #45", content: "META/AMZN에서도 유사 이벤트 나올 듯.", created_at: "2026-07-23T00:89:04.000Z" },
+    { alias: "강남 늑대 #46", content: "회계 처리 방식 확인 필요.", created_at: "2026-07-23T00:89:06.000Z" },
+    { alias: "서초 황소 #47", content: "SPCX 상장 후 첫 정식 마킹.", created_at: "2026-07-23T00:89:08.000Z" },
+  ],
+  [-435]: [
+    { alias: "을지로 여우 #48", content: "3축 확장 스토리 진짜 큼.", created_at: "2026-07-23T00:96:02.000Z" },
+    { alias: "광화문 팔콘 #49", content: "Fink 프레임과 결합.", created_at: "2026-07-23T00:96:04.000Z" },
+    { alias: "마포 독수리 #50", content: "실 계약 확정까지 관망.", created_at: "2026-07-23T00:96:06.000Z" },
+  ],
+  [-436]: [
+    { alias: "판교 사자 #51", content: "젠슨 발언은 항상 NVDA 이해와 연결.", created_at: "2026-07-23T00:103:02.000Z" },
+    { alias: "잠실 올빼미 #52", content: "H20 승인 여부가 다음 촉매.", created_at: "2026-07-23T00:103:04.000Z" },
+    { alias: "역삼 표범 #53", content: "CUDA 잠금 확장 프레임.", created_at: "2026-07-23T00:103:06.000Z" },
+    { alias: "청담 콘도르 #54", content: "미국 정책 반응 관찰.", created_at: "2026-07-23T00:103:08.000Z" },
+  ],
+  [-437]: [
+    { alias: "압구정 수리부엉이 #55", content: "지수 리더십 집중은 진짜 부담.", created_at: "2026-07-23T00:110:02.000Z" },
+    { alias: "삼성동 매 #56", content: "GOOGL 실행력은 반대 근거.", created_at: "2026-07-23T00:110:04.000Z" },
+    { alias: "논현 늑대 #57", content: "리스크예산 재점검 필수.", created_at: "2026-07-23T00:110:06.000Z" },
+  ],
+
   // ── 2026-07-22 신규 ──────────────────────────────────────────────────────
   [-406]: [
     { alias: "송파 독수리 #01", content: "Robotaxi 가이던스 후퇴 정리가 진짜 관건.", created_at: "2026-07-22T00:05:02.000Z" },

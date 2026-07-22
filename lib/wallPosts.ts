@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T23JL = 1784761200000; // 2026-07-23 08:00 KST
 const T22JL = 1784674800000; // 2026-07-22 08:00 KST
 const T21JL = 1784588400000; // 2026-07-21 08:00 KST
 const T20JL = 1784502000000; // 2026-07-20 08:00 KST
@@ -60,7 +61,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T22JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T23JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -79,6 +80,56 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-23 신규 ──────────────────────────────────────────────────────
+  { id: 617, symbol: "TSLA", nickname: "익명_4422", holdingLabel: "220주 보유",
+    content: "Tesla Q2 뚜껑 열렸는데 매출은 $28.24B로 사상 최고, EPS는 $2.34로 컨센 $2.50 살짝 하회. 매출 record인데 EPS 미스면 마진 압박이 맞다는 얘기. 콜에서 GM ex-credits 방향이 진짜 관건.",
+    createdAt: T23JL + 6*60_000, likes: 82, comments: 5 },
+  { id: 618, symbol: "TSLA", nickname: "익명_9088", holdingLabel: "관심종목",
+    content: "주주 업데이트가 진짜 다축이네. Cybercab 파일럿(기가 텍사스), Semi 자율주행 도로 테스트, Robotaxi Tampa 24/7, 셀 캐파 확장, Optimus Gen 3 라인 준비까지. 실적 미스 프레임을 로드맵 진전으로 상쇄하려는 그림.",
+    createdAt: T23JL + 15*60_000, likes: 47, comments: 5 },
+  { id: 619, symbol: "TSLA", nickname: "익명_1122", holdingLabel: "150주 보유",
+    content: "FSD 유료 구독자 148만·누적 80억 마일 조합이 진짜 핵심. 스톡·플로 다 강함. Cantor $510 재확인이랑 결합하면 매수 논거 재점화.",
+    createdAt: T23JL + 24*60_000, likes: 34, comments: 4 },
+  { id: 620, symbol: "TSLA", nickname: "익명_6633", holdingLabel: "관심종목",
+    content: "신규 인도 55%가 FSD 구독. 이 부착률이면 반복 매출 스토리 완전 실체. Natick 배너·v14 Lite 확산·로보택시 오픈이 다 시너지로 반영된 결과 아닐까.",
+    createdAt: T23JL + 33*60_000, likes: 25, comments: 3 },
+  { id: 621, symbol: "TSLA", nickname: "익명_3388", holdingLabel: "관심종목",
+    content: "Tampa 24/7이 결국 나왔다. 24시간 운영은 로보택시 유닛 이코노믹스 실증의 첫 관문. 현장 스태프 상주면 완전 무인은 아니지만 실행이 진짜 이뤄지고 있단 신호.",
+    createdAt: T23JL + 42*60_000, likes: 41, comments: 4 },
+  { id: 622, symbol: "TSLA", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "Zach의 v14.5.3 리뷰가 인상적. HW3에서 뉴욕 시가지 자연스러운 주행이면 진짜 큰 진전. 개인 후기라 안전 지표는 별도 검증 필요하지만 400만 HW3 재활성화 스토리에 정성적 지원 계속 쌓임.",
+    createdAt: T23JL + 51*60_000, likes: 12, comments: 3 },
+  { id: 623, symbol: "TSLA", nickname: "익명_5511", holdingLabel: "관심종목",
+    content: "캐파 +105K 확장이 자동차·에너지·로보틱스 다 포함. 매출 상한을 다시 끌어올린 그림인데 감가상각도 함께 늘어난다는 게 EPS 미스의 원인 중 하나일 듯.",
+    createdAt: T23JL + 60*60_000, likes: 29, comments: 3 },
+  { id: 624, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "Megapack이 벨기에서 €450M 파이낸싱 확보한 대형 프로젝트 공급자로. 유럽 6개국 확장에 Green Sun 브랜드까지. Energy 부문 유럽 재확장 국면 확실.",
+    createdAt: T23JL + 69*60_000, likes: 38, comments: 3 },
+  { id: 625, symbol: "TSLA", nickname: "익명_8877", holdingLabel: "관심종목",
+    content: "Cybercab 9월 런치 준비 확인. 파일럿 → 정식 런치 넘어가는 단계가 유닛 이코노믹스 실증의 첫 관문이지. 4680 셀 캐파 확장 속도가 병목 될 수도.",
+    createdAt: T23JL + 78*60_000, likes: 44, comments: 4 },
+  { id: 626, symbol: "GOOGL", nickname: "익명_1177", holdingLabel: "80주 보유",
+    content: "Google Q3 진짜 대박. 매출 $118.7B·EPS $2.94 다 컨센 상회, 클라우드 33%·서치 17% 성장. 어제 MSFT 안전한 mega-cap 프레임이랑 대비되던 GOOGL 프리미엄이 성장률로 정당화됨.",
+    createdAt: T23JL + 87*60_000, likes: 71, comments: 5 },
+  { id: 627, symbol: "GOOGL", nickname: "익명_4400", holdingLabel: "관심종목",
+    content: "Sundar가 Gemini 주간 220억 토큰 처리, 지난 분기 대비 2배, Fortune 500의 90% 사용 언급. 토큰 처리량이 이 정도면 GCP 매출 파이프라인이 다음 분기도 강함.",
+    createdAt: T23JL + 96*60_000, likes: 33, comments: 3 },
+  { id: 628, symbol: "GOOGL", nickname: "익명_9922", holdingLabel: "관심종목",
+    content: "CAPEX 2년간 3배 늘어난 게 EPS 비트 낼 수 있는 이유. 클라우드 33% 성장이 감가상각 흡수하고 있음. 반대로 클라우드 성장 꺾이면 마진 압박 시작될 수 있음.",
+    createdAt: T23JL + 105*60_000, likes: 22, comments: 3 },
+  { id: 629, symbol: "SPCX", nickname: "익명_5544", holdingLabel: "관심종목",
+    content: "GOOGL이 SPCX 지분에서 $9.8B 미실현 이익 공개한 게 흥미로움. SPCX 상장 이후 첫 정식 마킹인데, META·AMZN에서도 유사한 재평가 이벤트 나올 듯.",
+    createdAt: T23JL + 114*60_000, likes: 55, comments: 4 },
+  { id: 630, symbol: "SPCX", nickname: "익명_6600", holdingLabel: "관심종목",
+    content: "SpaceX가 텍사스에 대형 DC 검토 보도. Fink 컴퓨트 선물시장 프레임이랑 결합되면 SPCX 자체 컴퓨트 인프라 확장 스토리로 확대. 어제 개인 매수 중단 흐름 반전 트리거 될 수도.",
+    createdAt: T23JL + 123*60_000, likes: 47, comments: 3 },
+  { id: 631, symbol: "NVDA", nickname: "익명_3355", holdingLabel: "70주 보유",
+    content: "젠슨이 미 기업 중국 오픈소스 AI 접근 옹호. 어제 MSFT × Kimi K2 스토리랑 결합되면 서구 Big Tech의 중국 오픈모델 채택이 흐름으로 굳어짐. NVDA에겐 GPU 수요·CUDA 잠금 확장 프레임.",
+    createdAt: T23JL + 132*60_000, likes: 39, comments: 4 },
+  { id: 632, symbol: "SPY", nickname: "익명_2288", holdingLabel: "ETF 소량",
+    content: "Kobeissi Letter가 정리한 컨센이 S&P 500 EPS 성장의 65%가 Big Tech·25%가 반도체라니. 지수 리더십 소수 집중 정량으로 확인된 셈. 개별 종목 하나 미스나면 지수 흔들리는 구조.",
+    createdAt: T23JL + 141*60_000, likes: 26, comments: 3 },
+
   // ── 2026-07-22 신규 ──────────────────────────────────────────────────────
   { id: 601, symbol: "TSLA", nickname: "익명_3411", holdingLabel: "200주 보유",
     content: "Q2 실적 수요일 장마감. 인도 480,126대 record에 +25% YoY까지 알려져 있는데, 진짜 관심은 Robotaxi 가이던스가 세번 연속 후퇴한 걸 어떻게 정리할지야. Robinhood 리테일 질문 4/7이 Robotaxi/Cybercab.",
@@ -2594,6 +2645,99 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-07-23 신규 ──────────────────────────────────────────────────────
+  617: [
+    { id: 1, nickname: "익명_3000", holdingLabel: "관심종목", content: "매출 record가 진짜 크다.", createdAt: T23JL + 6*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_3001", holdingLabel: "관심종목", content: "EPS 미스는 마진 이슈로 봐야지.", createdAt: T23JL + 6*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_3002", holdingLabel: "관심종목", content: "콜의 마진 가이던스가 방향 결정.", createdAt: T23JL + 6*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_3003", holdingLabel: "관심종목", content: "영업현금흐름 record는 인상적.", createdAt: T23JL + 6*60_000 + m(4), likes: 26 },
+    { id: 5, nickname: "익명_3004", holdingLabel: "관심종목", content: "Robotaxi 로드맵 코멘트 대기.", createdAt: T23JL + 6*60_000 + m(8), likes: 28 },
+  ],
+  618: [
+    { id: 1, nickname: "익명_3010", holdingLabel: "관심종목", content: "실적 vs 로드맵 병행 전략 맞다.", createdAt: T23JL + 15*60_000 + m(-8), likes: 14 },
+    { id: 2, nickname: "익명_3011", holdingLabel: "관심종목", content: "Semi 자율주행 도로 테스트가 진짜 크다.", createdAt: T23JL + 15*60_000 + m(-4), likes: 19 },
+    { id: 3, nickname: "익명_3012", holdingLabel: "관심종목", content: "4680 셀 확장 지속.", createdAt: T23JL + 15*60_000 + m(0), likes: 22 },
+    { id: 4, nickname: "익명_3013", holdingLabel: "관심종목", content: "Optimus Gen 3 SOP 언제쯤?", createdAt: T23JL + 15*60_000 + m(4), likes: 25 },
+    { id: 5, nickname: "익명_3014", holdingLabel: "관심종목", content: "다축 진전 확인은 최고.", createdAt: T23JL + 15*60_000 + m(8), likes: 27 },
+  ],
+  619: [
+    { id: 1, nickname: "익명_3020", holdingLabel: "관심종목", content: "148만 유료면 반복 매출 실체.", createdAt: T23JL + 24*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_3021", holdingLabel: "관심종목", content: "80억 마일 데이터 진짜 자산.", createdAt: T23JL + 24*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_3022", holdingLabel: "관심종목", content: "데이터 플라이휠 실측된 셈.", createdAt: T23JL + 24*60_000 + m(2), likes: 23 },
+    { id: 4, nickname: "익명_3023", holdingLabel: "관심종목", content: "안전 리포트 정량 지표 대기.", createdAt: T23JL + 24*60_000 + m(6), likes: 25 },
+  ],
+  620: [
+    { id: 1, nickname: "익명_3030", holdingLabel: "관심종목", content: "55% 부착률 대단하다.", createdAt: T23JL + 33*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_3031", holdingLabel: "관심종목", content: "커피값 프레임 진짜 효과.", createdAt: T23JL + 33*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_3032", holdingLabel: "관심종목", content: "SaaS성 매출 스트림 확장.", createdAt: T23JL + 33*60_000 + m(2), likes: 22 },
+  ],
+  621: [
+    { id: 1, nickname: "익명_3040", holdingLabel: "관심종목", content: "24/7이 진짜 큰 변곡점.", createdAt: T23JL + 42*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_3041", holdingLabel: "관심종목", content: "가동률 데이터 진짜 봐야.", createdAt: T23JL + 42*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_3042", holdingLabel: "관심종목", content: "현장 스태프는 인건비 축.", createdAt: T23JL + 42*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_3043", holdingLabel: "관심종목", content: "다른 도시 확장 벤치마크.", createdAt: T23JL + 42*60_000 + m(4), likes: 26 },
+  ],
+  622: [
+    { id: 1, nickname: "익명_3050", holdingLabel: "관심종목", content: "뉴욕 시가지에서 잘 된다면 진짜.", createdAt: T23JL + 51*60_000 + m(-6), likes: 13 },
+    { id: 2, nickname: "익명_3051", holdingLabel: "관심종목", content: "HW3 재활성화 정성 지지 계속.", createdAt: T23JL + 51*60_000 + m(-2), likes: 18 },
+    { id: 3, nickname: "익명_3052", holdingLabel: "관심종목", content: "정량 안전은 별도 검증 필요.", createdAt: T23JL + 51*60_000 + m(2), likes: 22 },
+  ],
+  623: [
+    { id: 1, nickname: "익명_3060", holdingLabel: "관심종목", content: "캐파 확장은 상한 다시 끌어올림.", createdAt: T23JL + 60*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_3061", holdingLabel: "관심종목", content: "감가상각 부담 함께 늘어남.", createdAt: T23JL + 60*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_3062", holdingLabel: "관심종목", content: "SOP 시점 라인별로 다름.", createdAt: T23JL + 60*60_000 + m(2), likes: 22 },
+  ],
+  624: [
+    { id: 1, nickname: "익명_3070", holdingLabel: "관심종목", content: "€450M 파이낸싱 규모 상당.", createdAt: T23JL + 69*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_3071", holdingLabel: "관심종목", content: "가스 발전 대체 시나리오 실체화.", createdAt: T23JL + 69*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_3072", holdingLabel: "관심종목", content: "다른 5개국 후속 계약 관찰.", createdAt: T23JL + 69*60_000 + m(2), likes: 23 },
+  ],
+  625: [
+    { id: 1, nickname: "익명_3080", holdingLabel: "관심종목", content: "9월 런치 확정 여부가 핵심.", createdAt: T23JL + 78*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_3081", holdingLabel: "관심종목", content: "파일럿 데이터 정량 공개 되나?", createdAt: T23JL + 78*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_3082", holdingLabel: "관심종목", content: "4680 셀 캐파 병목 가능성.", createdAt: T23JL + 78*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_3083", holdingLabel: "관심종목", content: "스티어링휠 없는 인가가 관건.", createdAt: T23JL + 78*60_000 + m(4), likes: 26 },
+  ],
+  626: [
+    { id: 1, nickname: "익명_3090", holdingLabel: "관심종목", content: "Cloud 33% 유지는 진짜 강함.", createdAt: T23JL + 87*60_000 + m(-8), likes: 15 },
+    { id: 2, nickname: "익명_3091", holdingLabel: "관심종목", content: "Search 17% 성장이 인상적.", createdAt: T23JL + 87*60_000 + m(-4), likes: 20 },
+    { id: 3, nickname: "익명_3092", holdingLabel: "관심종목", content: "AI가 Search 감소 안 시켰네.", createdAt: T23JL + 87*60_000 + m(0), likes: 23 },
+    { id: 4, nickname: "익명_3093", holdingLabel: "관심종목", content: "MSFT vs GOOGL 프레임 재밌음.", createdAt: T23JL + 87*60_000 + m(4), likes: 26 },
+    { id: 5, nickname: "익명_3094", holdingLabel: "관심종목", content: "AI CAPEX 가이던스 대기.", createdAt: T23JL + 87*60_000 + m(8), likes: 28 },
+  ],
+  627: [
+    { id: 1, nickname: "익명_3100", holdingLabel: "관심종목", content: "22B tokens/wk이면 GCP 수혜 확실.", createdAt: T23JL + 96*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_3101", holdingLabel: "관심종목", content: "F500 90%는 침투 완료 신호.", createdAt: T23JL + 96*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_3102", holdingLabel: "관심종목", content: "다음 분기도 강할 것.", createdAt: T23JL + 96*60_000 + m(2), likes: 22 },
+  ],
+  628: [
+    { id: 1, nickname: "익명_3110", holdingLabel: "관심종목", content: "CAPEX 3배 급증인데 EPS 비트한 게 신기.", createdAt: T23JL + 105*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_3111", holdingLabel: "관심종목", content: "매출 성장이 감가상각 흡수 중.", createdAt: T23JL + 105*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_3112", holdingLabel: "관심종목", content: "클라우드 성장 꺾이면 위험.", createdAt: T23JL + 105*60_000 + m(2), likes: 23 },
+  ],
+  629: [
+    { id: 1, nickname: "익명_3120", holdingLabel: "관심종목", content: "$9.8B는 진짜 큰 규모.", createdAt: T23JL + 114*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_3121", holdingLabel: "관심종목", content: "META/AMZN에서도 나올 듯.", createdAt: T23JL + 114*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_3122", holdingLabel: "관심종목", content: "회계 처리가 뭘까 궁금.", createdAt: T23JL + 114*60_000 + m(2), likes: 22 },
+    { id: 4, nickname: "익명_3123", holdingLabel: "관심종목", content: "GOOGL 초기 투자 결실.", createdAt: T23JL + 114*60_000 + m(6), likes: 26 },
+  ],
+  630: [
+    { id: 1, nickname: "익명_3130", holdingLabel: "관심종목", content: "텍사스 DC면 진짜 스토리 확장.", createdAt: T23JL + 123*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_3131", holdingLabel: "관심종목", content: "Fink 컴퓨트 선물시장이랑 결합.", createdAt: T23JL + 123*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_3132", holdingLabel: "관심종목", content: "실 계약 확정 대기.", createdAt: T23JL + 123*60_000 + m(2), likes: 22 },
+  ],
+  631: [
+    { id: 1, nickname: "익명_3140", holdingLabel: "관심종목", content: "젠슨 발언은 항상 NVDA 이해와 연결.", createdAt: T23JL + 132*60_000 + m(-6), likes: 14 },
+    { id: 2, nickname: "익명_3141", holdingLabel: "관심종목", content: "미국 정책 반응 관찰 필요.", createdAt: T23JL + 132*60_000 + m(-2), likes: 19 },
+    { id: 3, nickname: "익명_3142", holdingLabel: "관심종목", content: "CUDA 잠금 확장 프레임.", createdAt: T23JL + 132*60_000 + m(2), likes: 22 },
+    { id: 4, nickname: "익명_3143", holdingLabel: "관심종목", content: "H20 승인 여부가 다음 촉매.", createdAt: T23JL + 132*60_000 + m(6), likes: 25 },
+  ],
+  632: [
+    { id: 1, nickname: "익명_3150", holdingLabel: "관심종목", content: "지수 리더십 소수 집중 무섭다.", createdAt: T23JL + 141*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_3151", holdingLabel: "관심종목", content: "개별 미스 하나면 지수 흔들림.", createdAt: T23JL + 141*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_3152", holdingLabel: "관심종목", content: "포트 분산 다시 점검할 시점.", createdAt: T23JL + 141*60_000 + m(2), likes: 23 },
+  ],
+
   // ── 2026-07-22 신규 ──────────────────────────────────────────────────────
   601: [
     { id: 1, nickname: "익명_2800", holdingLabel: "관심종목", content: "가이던스 후퇴 정리가 진짜 관건.", createdAt: T22JL + 6*60_000 + m(-8), likes: 15 },
