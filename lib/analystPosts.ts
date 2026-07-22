@@ -89,7 +89,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "판교 사자 #62",
     symbol: "TSLA",
     content:
-      "총 제조 캐파 +105,000 확장이 자동차·에너지·로보틱스에 걸쳐 발표됐다. Nevada Semi 라인, Texas 다품종 라인, New York 부품 라인 등 다지역 병행. 어제 Giga Berlin 셀 18 GWh 확장과 결합. 매출 상한이 다시 올라간 그림이지만 감가상각·CAPEX 부담이 이익에 반영되는 국면과 시간축이 겹친다. Q2 EPS 미스 배경 중 하나로 볼 여지. 매수 유지.",
+      "Sawyer Merritt이 공유한 Tesla 설치 연간 캐파 차트에서 두 가지가 핵심으로 부각됐다. Cybercab이 연 125,000대 이상 Production 상태로 표기됐고, Tesla Semi가 Commissioning 단계에 진입했다는 점. 상하이 Model 3/Y가 950,000대 이상으로 최대 사이트이며, 캘리포니아 550,000·베를린 Model Y 375,000·텍사스 Model Y 250,000·Cybertruck 125,000이 뒤를 잇는다. 에너지는 캘리포니아 40 GWh Megapack·상하이 20 GWh·네바다 Powerwall 6 GWh 이상 Production, 텍사스 Megapack Commissioning. Optimus 시설은 캘리포니아·텍사스 Construction 단계. Cybercab Production·Semi Commissioning은 상용화 다음 단계 진입 신호. 매수 유지. (이전 배포의 '+105K' 표현은 스크린샷에 없는 숫자였고 이 리포트에서 정정)",
     likes: 28,
     comments: 3,
     created_at: "2026-07-23T00:47:00.000Z",
@@ -192,6 +192,17 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     likes: 29,
     comments: 3,
     created_at: "2026-07-23T00:110:00.000Z",
+    liked: false,
+  },
+  {
+    id: -438,
+    alias: "여의도 매 #77",
+    symbol: "SPCX",
+    content:
+      "ARK Invest 캐시 우드가 SpaceX와 Elon Musk에 대한 강한 강세 견해를 정리했다(DogeDesigner 인용). 다섯 가지 요지: (1) SpaceX가 세계사상 가장 중요한 기업 중 하나가 될 수 있다는 큰 그림, (2) 재사용 로켓 분야에서 약 10년 리드 확보, (3) Starlink가 통신을 글로벌 사업으로 전환 중, (4) 궤도 데이터센터와 저비용 프런티어 AI 시장을 이끌 잠재력, (5) Elon과 팀이 세계에서 가장 강력한 기술 생태계 중 하나 구축 중. 오늘 별도 리포트한 GOOGL의 SPCX 지분 $9.8B 미실현 이익, SpaceX 텍사스 대형 DC 검토 보도와 방향이 정확히 일치. 어제까지의 SPCX 이벤트(BlackRock Fink 컴퓨트 선물시장 프레임·SGX 예치증권 상장·개인 매수 중단 신호)와도 서사 결합. 캐시 우드 견해는 개인·기관 관점이며 실 실적·계약으로 검증 필요. 관심 확대.",
+    likes: 47,
+    comments: 4,
+    created_at: "2026-07-23T00:117:00.000Z",
     liked: false,
   },
 
@@ -4944,6 +4955,12 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
     { alias: "압구정 수리부엉이 #55", content: "지수 리더십 집중은 진짜 부담.", created_at: "2026-07-23T00:110:02.000Z" },
     { alias: "삼성동 매 #56", content: "GOOGL 실행력은 반대 근거.", created_at: "2026-07-23T00:110:04.000Z" },
     { alias: "논현 늑대 #57", content: "리스크예산 재점검 필수.", created_at: "2026-07-23T00:110:06.000Z" },
+  ],
+  [-438]: [
+    { alias: "이촌 황소 #58", content: "10년 리드 주장은 강한 프레임.", created_at: "2026-07-23T00:117:02.000Z" },
+    { alias: "성수 팔콘 #59", content: "GOOGL 재평가랑 방향 일치.", created_at: "2026-07-23T00:117:04.000Z" },
+    { alias: "한남 여우 #60", content: "궤도 DC + 지상 DC 스토리 확장.", created_at: "2026-07-23T00:117:06.000Z" },
+    { alias: "송파 독수리 #61", content: "실 계약·매출 데이터 검증 대기.", created_at: "2026-07-23T00:117:08.000Z" },
   ],
 
   // ── 2026-07-22 신규 ──────────────────────────────────────────────────────

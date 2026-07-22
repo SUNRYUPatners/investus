@@ -16,8 +16,8 @@
   <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">Daily Snapshot · 2026.07.23</text>
   <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
 
-  <text x="540" y="240" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">16</text>
-  <text x="540" y="240" font-family="Arial Black,Arial" font-size="70" font-weight="900" fill="#4ade80" text-anchor="middle">TOP 16</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">17</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="70" font-weight="900" fill="#4ade80" text-anchor="middle">TOP 17</text>
   <text x="540" y="298" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA Q2 print · GOOGL beat · Robotaxi 24/7</text>
   <text x="540" y="342" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">FSD 8B mi · Gemini 22B tokens · SPCX Texas DC eyed</text>
 
@@ -62,9 +62,9 @@
   <rect x="60" y="794" width="960" height="140" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="836" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">EXTRA COVERAGE</text>
   <text x="540" y="876" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">FSD v14.5.3 HW3 review · New-deliv FSD 55% · Capacity +105K · Cybercab Sept</text>
-  <text x="540" y="908" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">Megapack EU €450M · GOOGL capex 3× · Jensen on China OSS · Big Tech 65% EPS</text>
+  <text x="540" y="908" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">Megapack EU €450M · GOOGL capex 3× · Jensen on China OSS · Big Tech 65% EPS · Wood SPCX bull</text>
 
-  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">INVESTUS · TOP 16 STORIES · 2026.07.23</text>
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">INVESTUS · TOP 17 STORIES · 2026.07.23</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

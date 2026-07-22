@@ -100,7 +100,7 @@ export const MOCK_POSTS: Post[] = [
     content: "Zach의 v14.5.3 리뷰가 인상적. HW3에서 뉴욕 시가지 자연스러운 주행이면 진짜 큰 진전. 개인 후기라 안전 지표는 별도 검증 필요하지만 400만 HW3 재활성화 스토리에 정성적 지원 계속 쌓임.",
     createdAt: T23JL + 51*60_000, likes: 12, comments: 3 },
   { id: 623, symbol: "TSLA", nickname: "익명_5511", holdingLabel: "관심종목",
-    content: "캐파 +105K 확장이 자동차·에너지·로보틱스 다 포함. 매출 상한을 다시 끌어올린 그림인데 감가상각도 함께 늘어난다는 게 EPS 미스의 원인 중 하나일 듯.",
+    content: "캐파 차트 업데이트에서 Cybercab 연 125K+ Production, Semi Commissioning 진입이 진짜 핵심. 상하이 M3/Y 950K+ 규모도 대단. 매출 상한 다시 올라간 그림이지만 감가상각 부담도 함께.",
     createdAt: T23JL + 60*60_000, likes: 29, comments: 3 },
   { id: 624, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "관심종목",
     content: "Megapack이 벨기에서 €450M 파이낸싱 확보한 대형 프로젝트 공급자로. 유럽 6개국 확장에 Green Sun 브랜드까지. Energy 부문 유럽 재확장 국면 확실.",
@@ -129,6 +129,9 @@ export const MOCK_POSTS: Post[] = [
   { id: 632, symbol: "SPY", nickname: "익명_2288", holdingLabel: "ETF 소량",
     content: "Kobeissi Letter가 정리한 컨센이 S&P 500 EPS 성장의 65%가 Big Tech·25%가 반도체라니. 지수 리더십 소수 집중 정량으로 확인된 셈. 개별 종목 하나 미스나면 지수 흔들리는 구조.",
     createdAt: T23JL + 141*60_000, likes: 26, comments: 3 },
+  { id: 633, symbol: "SPCX", nickname: "익명_7733", holdingLabel: "관심종목",
+    content: "캐시 우드가 SpaceX 강세 견해 정리했네. 재사용 로켓 10년 리드·Starlink 통신 재편·궤도 데이터센터 리더 잠재력·저비용 프런티어 AI까지. 오늘 GOOGL의 SPCX $9.8B 미실현 이익·텍사스 DC 검토 보도랑 방향이 딱 맞다.",
+    createdAt: T23JL + 150*60_000, likes: 48, comments: 4 },
 
   // ── 2026-07-22 신규 ──────────────────────────────────────────────────────
   { id: 601, symbol: "TSLA", nickname: "익명_3411", holdingLabel: "200주 보유",
@@ -2736,6 +2739,12 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 1, nickname: "익명_3150", holdingLabel: "관심종목", content: "지수 리더십 소수 집중 무섭다.", createdAt: T23JL + 141*60_000 + m(-6), likes: 15 },
     { id: 2, nickname: "익명_3151", holdingLabel: "관심종목", content: "개별 미스 하나면 지수 흔들림.", createdAt: T23JL + 141*60_000 + m(-2), likes: 20 },
     { id: 3, nickname: "익명_3152", holdingLabel: "관심종목", content: "포트 분산 다시 점검할 시점.", createdAt: T23JL + 141*60_000 + m(2), likes: 23 },
+  ],
+  633: [
+    { id: 1, nickname: "익명_3160", holdingLabel: "관심종목", content: "10년 리드가 진짜라면 밸류 재조정.", createdAt: T23JL + 150*60_000 + m(-6), likes: 15 },
+    { id: 2, nickname: "익명_3161", holdingLabel: "관심종목", content: "궤도 DC + 지상 DC 결합 그림 크다.", createdAt: T23JL + 150*60_000 + m(-2), likes: 20 },
+    { id: 3, nickname: "익명_3162", holdingLabel: "관심종목", content: "GOOGL 재평가랑 방향 일치 인정.", createdAt: T23JL + 150*60_000 + m(2), likes: 23 },
+    { id: 4, nickname: "익명_3163", holdingLabel: "관심종목", content: "ARK 실 포트 비중 변화 봐야.", createdAt: T23JL + 150*60_000 + m(6), likes: 26 },
   ],
 
   // ── 2026-07-22 신규 ──────────────────────────────────────────────────────
