@@ -17,6 +17,184 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-24 신규 ──────────────────────────────────────────────────────
+  {
+    id: -490,
+    alias: "여의도 매 #22",
+    symbol: "TSLA",
+    content:
+      "Tesla Q2 세부 지표가 Charlie Bilello 정리로 다시 유포됐다. 매출 $28.4B(+24% YoY)로 record이지만 Auto GM ex-credits 15% 수준에 머물렀고 FCF TTM은 -$6.4B로 마이너스 전환. 원인은 CAPEX가 전년비 +141% 급증한 것. 매출 record + FCF 음전환 조합은 성장은 지속되지만 그 성장이 아직 이익으로 전환되지 못했다는 정확한 신호다. Robotaxi/Cybercab 유닛 이코노믹스 실증 시점이 밸류에이션의 다음 앵커. 매수 유지, 다만 마진 회복 속도가 관건.",
+    likes: 71, comments: 5, created_at: "2026-07-24T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -491,
+    alias: "강남 표범 #46",
+    symbol: "TSLA",
+    content:
+      "TSLA 다중 IB 다운그레이드 wave: Cantor $475→$445, Wolfe $480→$460, Truist $505→$460, Morgan Stanley $480→$450, Wells Fargo $470→$460. 6개 IB가 동시에 목표가를 하향한 규모는 최근 몇 분기 대비 이례적. 다만 대부분이 $445~$460 밴드로 여전히 시가 대비 상방을 시사한다는 점, Morgan Stanley $450은 어제 리포트한 Cantor $510 재확인과 대비된다는 점이 관건. 논거는 (1) Auto GM ex-credits 15% 정체, (2) FCF -$6.4B TTM의 CAPEX +141% YoY 여파, (3) Robotaxi/Cybercab 유닛 이코노믹스 미실증에 집중. 실적 회수 시점 리레이팅 국면.",
+    likes: 42, comments: 4, created_at: "2026-07-24T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -492,
+    alias: "서초 콘도르 #59",
+    symbol: "TSLA",
+    content:
+      "Nic Cruz Patane 공개: Tesla Robotaxi가 이미 FSD V15 초기 버전을 실행 중. V15는 약 100억(10B) 파라미터로 v14의 약 180억(18B) 대비 축소지만 완전한 아키텍처 개편 + 안전성 major leap. 파라미터 감소는 성능 저하가 아니라 파라미터 효율 대폭 개선으로 해석하는 게 맞다. 상용 서비스에서 실주행 학습 데이터가 이미 축적 중이라는 게 정식 고객 배포(2026 말~2027 초 예상) 이전에 프로덕션 검증이 진행되고 있다는 신호. 매수 유지.",
+    likes: 34, comments: 3, created_at: "2026-07-24T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -493,
+    alias: "을지로 팔콘 #71",
+    symbol: "TSLA",
+    content:
+      "Cole Grinde의 15+ 진행 리스트는 다운그레이드 wave의 반대편 강세 프레임이다. Cybercab in Production, Semi in Production, Robotaxi Scaling, FSD 구독자 성장, 제조 캐파, 리튬 정제, 슈퍼차징 성장, Optimus Giga factory, 배터리·셀 프로덕션, Megapack 3, 지역 슈퍼차징 DC, AI 칩까지. 애널이 마진·CAPEX 회수 시점에 초점 두는 반면 이 프레임은 실행 이니셔티브의 폭에 초점. 두 관점 모두 정당한 이해이고, 다음 분기 실적이 어느 쪽을 지지하는지가 검증 축.",
+    likes: 25, comments: 3, created_at: "2026-07-24T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -494,
+    alias: "광화문 늑대 #33",
+    symbol: "TSLA",
+    content:
+      "TOSV(Tesla Owners SV) 강세 종합: Cybertruck 프리몬트 시작(다음 Cybercab), Robotaxi 유럽 40+ 도시 확장, Bay Area +50%, S12 & S3 lite로 FSD v14가 HW3/HW4 확산, 텍사스 훈련 컴퓨트 H1에 2배(Q3/Q4 온라인), Optimus Gen 3 생산 Gen 2 대비 +20%. Cole Grinde 리스트와 겹치는 부분 있지만 정량 데이터가 더 많다. 특히 훈련 컴퓨트 2배는 FSD V15 학습 가속화의 물리적 근거.",
+    likes: 38, comments: 3, created_at: "2026-07-24T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -495,
+    alias: "마포 올빼미 #24",
+    symbol: "TSLA",
+    content:
+      "Musk가 Q2 콜에서 '이 해가 Tesla 사상 최고의 해 중 하나가 될 것'이라고 발언. 실적 미스·EPS 하향·-12% 반응이라는 시장 분위기와 정면 대비되는 CEO 톤. 이 프레임의 근거는 같은 콜에서 언급된 다축 진전(Cybertruck 프리몬트, Robotaxi 유럽 40+, 훈련 컴퓨트 2배, Optimus Gen 3 +20%). 남은 5개월에 걸쳐 이 이니셔티브들이 실적으로 전환되면 CEO 톤 지지, 아니면 실적 대비 지나친 낙관 낙인. 매수 유지.",
+    likes: 29, comments: 3, created_at: "2026-07-24T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -496,
+    alias: "종로 매 #12",
+    symbol: "TSLA",
+    content:
+      "FSD v14.3.8과 v14 Lite가 소프트웨어 업데이트 2026.20.8.11로 6번째 batch에 롤아웃. Tesla Newswire 확인. 릴리스 노트 변경 없음이라 minor tuning 위주지만 batch 6까지 도달했다는 자체가 광범위 사용자 커버리지 확장이 순차적으로 이뤄지고 있다는 신호. HW3/HW4 병행 확산.",
+    likes: 18, comments: 2, created_at: "2026-07-24T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -497,
+    alias: "여의도 매 #22",
+    symbol: "TSLA",
+    content:
+      "Musk가 카메라 있는 HW4 미만 모든 차량은 새 세대 AI 보드로 업그레이드하는 방향이라고. 어제 리포트한 v14 Lite HW3 wide release(400만 대·AI distillation) 스토리와 결합하면 소프트웨어 재활성화 + 하드웨어 업그레이드 이원 전략 그림. 구형 소유자의 FSD 접근성 확대 + Tesla의 업그레이드 매출 축 + 학습 데이터 파이프라인 확장 세 가지 효과. 프로그램 세부 발표 대기.",
+    likes: 23, comments: 2, created_at: "2026-07-24T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -498,
+    alias: "부산 갈매기 #77",
+    symbol: "TSLA",
+    content:
+      "TSLA Optimus Data Collection Operations Lead 애리조나 템피 채용. Optimus 학습 데이터 파이프라인이 실험 단계에서 상시 운영 단계로 이동하고 있다는 신호. 어제까지 리포트한 캐파 차트에서 캘리·텍사스가 생산 축이라면 애리조나는 데이터 축으로 분화되는 구조. Gen 3 준비와 시간축 겹침.",
+    likes: 15, comments: 2, created_at: "2026-07-24T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -499,
+    alias: "강남 표범 #46",
+    symbol: "TSLA",
+    content:
+      "Musk 발언 3선 정리: (1) 거대한 CAPEX 해지만 투자한 모든 것이 놀라운 회수를 만들 것이라 확신, (2) 로보택시 확장은 인간이 낼 수 있는 최대 속도지만 사고 방지가 진짜 제약, (3) 5~10년 장기 관점 유지. Q2 EPS 미스·FCF 마이너스·다운그레이드 wave·-12% 하락이라는 4중 부정 반응에 대한 3중 CEO 메시징. CAPEX 회수, 안전 우선, 장기 관점 세 축이 모두 실적 프로파일 방어 프레임. 검증은 각각 별개의 정량 지표에서.",
+    likes: 27, comments: 3, created_at: "2026-07-24T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -500,
+    alias: "서초 콘도르 #59",
+    symbol: "TSLA",
+    content:
+      "Robotaxi 확장 프레임 전환: Nic Cruz Patane가 도시별 런치 시간이 계속 압축될 것이라 언급, Gene Munster는 Ashok Elluswamy를 인용해 '결국 Robotaxi는 전 주(state) 단위로 켜질 것'이라고 전달. 도시 단위에서 주 단위로의 프레임 전환은 시장 접근성과 유닛 이코노믹스 규모의 급격한 확대를 의미. Tampa 24/7·Bay Area +50%·유럽 40+의 다음 단계 시나리오.",
+    likes: 31, comments: 3, created_at: "2026-07-24T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -501,
+    alias: "을지로 팔콘 #71",
+    symbol: "TSLA",
+    content:
+      "FSD 활성 유료 구독자 148만 재확인. 어제 신규 인도 55%+ 부착률과 결합하면 스톡(148만 활성) + 플로(신규 55%+) 모두 강한 상태. 반복 매출 파이프라인이 지속 확장 = 매출 record의 이면에 있는 '매출의 질' 개선 신호. EU 승인(10월 TCMV 투표) 이후 유럽 부착률이 다음 검증 축.",
+    likes: 22, comments: 2, created_at: "2026-07-24T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -502,
+    alias: "여의도 매 #22",
+    symbol: "SPCX",
+    content:
+      "오늘 5:45 PM ET Starbase에서 Starship V3 두번째 시험 발사. V3는 상승 단계에서 이전 이터레이션 대비 더 높은 dynamic pressure를 받도록 설계됐고 핵심 관전 포인트는 히트실드가 이 조건에서 어떻게 견디는지. 재사용 가능성 확대의 정량 근거. 발사 성공 = 캐시 우드 강세 프레임 강화 + -49% 낙폭 반전 트리거. 실패 = 반대. 오늘 오후 결과가 SPCX 방향의 실 트리거.",
+    likes: 47, comments: 4, created_at: "2026-07-24T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -503,
+    alias: "강남 표범 #46",
+    symbol: "SPCX",
+    content:
+      "SPCX가 6월 사상 최고가 대비 -49% 이상 하락한 상태(Barchart). Nearly 50% drawdown in ~2 months. 하락 배경: 상장 후 초기 급등 → IPO가 하회(-44%) → 숏 5%→29% ($6.1B est) → 개인 매수 중단(어제 리포트). 이 모든 축적된 흐름이 -49% 낙폭 배경. 오늘의 +5.3% 반등(별도 리포트)이 지속 회복인지 일회성 bounce인지는 오늘 발사 + 8/4 실적 두 축에서 결정.",
+    likes: 39, comments: 3, created_at: "2026-07-24T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -504,
+    alias: "서초 콘도르 #59",
+    symbol: "SPCX",
+    content:
+      "SPCX가 오늘 +5.3% · 시총 +$80B 반등(Stocks.News). 최근 -49% 낙폭 감안하면 상당한 하루 반등. 요인: (1) 캐시 우드 강세 견해 재확산, (2) Munster 합병 확률 90% 상향, (3) Starship V3 발사 임박, (4) 개인 매수 중단 후 기술적 반등 심리 겹침. 반등의 지속성은 오늘 발사 결과와 8월 4일 실적에서 판가름.",
+    likes: 43, comments: 4, created_at: "2026-07-24T01:43:00.000Z", liked: false,
+  },
+  {
+    id: -505,
+    alias: "광화문 늑대 #33",
+    symbol: "SPCX",
+    content:
+      "캐시 우드 강세 견해 재조명. 세 축 결합 프레임: (1) 재사용 로켓 리더십(10년 리드), (2) Starlink 통신 재편·글로벌 사업, (3) AI Infra(궤도 DC + 저비용 프런티어 AI). 이 결합에서 세계 최저 비용 프런티어 AI 모델 성장 리더십이 나온다는 게 우드의 결론. Eva McMillan·TheSonOfWalkey에서 오늘 amplify. 어제 정정 배포한 리포트가 오늘 재파급된 셈.",
+    likes: 36, comments: 3, created_at: "2026-07-24T01:50:00.000Z", liked: false,
+  },
+  {
+    id: -506,
+    alias: "을지로 팔콘 #71",
+    symbol: "SPCX",
+    content:
+      "Deepwater's Munster: TSLA·SPCX 합병 확률 이제 90%. Kalshi 69% 대비 대폭 상승, 애널 개인 견해로는 매우 높은 확신도. 최근 축적된 근거들: GOOGL Q3 공시의 SPCX $9.8B 미실현 이익(어제), 캐시 우드 강세 견해, SPCX 텍사스 대형 DC 검토(어제), TSLA Q2 콜 SPCX 관련 코멘트. 다만 실제 합병은 구조·시기·주주 승인·현금 vs 주식·반독점 규제 등 다층 리스크. Musk 자신도 명시적 발표 없음.",
+    likes: 41, comments: 3, created_at: "2026-07-24T01:57:00.000Z", liked: false,
+  },
+  {
+    id: -507,
+    alias: "마포 올빼미 #24",
+    symbol: "GOOGL",
+    content:
+      "GOOGL Q2 FCF가 상장 이후 처음으로 -$5.9B로 음전환. Charlie Bilello 정리. 최근 추이 $24.6B→$17.6B→$10.1B→-$5.9B로 한 분기 만에 급전환. 배경은 AI 인프라 CAPEX 급증. unusual_whales는 시총 -$84B 하루 감소를 별도로 정리. 매출·EPS 비트했음에도 FCF 음전환이 시장에서 부정적으로 해석된 것. 이는 어제까지 리포트한 하이퍼스케일러 지출 사이클의 첫 마진 신호 사례.",
+    likes: 35, comments: 3, created_at: "2026-07-24T02:04:00.000Z", liked: false,
+  },
+  {
+    id: -508,
+    alias: "여의도 매 #22",
+    symbol: "GOOGL",
+    content:
+      "동시에 Alphabet은 2026 CAPEX 가이던스를 $200B로 상향(Kobeissi 정리). 이 금액만으로 20년 전 Alphabet 전체 시총보다 크고 MAG 7 합계 CAPEX는 곧 $1T+ 도달. FCF 음전환 + CAPEX 상향 조합은 (1) CAPEX가 예상보다 크고 (2) FCF 회복 시점이 뒤로 밀린다는 이중 부정 신호. AI 인프라 밸류체인(엔비디아 GPU·SK하이닉스 HBM·TSMC 파운드리·DC REIT·전력 유틸리티) 수혜 지속 논거는 강화되지만 하이퍼스케일러 마진 압박이 새 리스크 축.",
+    likes: 32, comments: 3, created_at: "2026-07-24T02:11:00.000Z", liked: false,
+  },
+  {
+    id: -509,
+    alias: "부산 갈매기 #77",
+    symbol: "INTC",
+    content:
+      "Intel Q3: EPS $0.42(컨센 $0.21의 2배), 매출 $18.10B(컨센 $14.14B) 크게 비트. 그런데 주가는 Barchart 집계로 -14% 급락(13개월래 최대). 비트에도 하락은 통상 (1) Q4·2027 가이던스 실망, (2) 마진 프로파일 지속성 의구심, (3) 파운드리 구조조정 노이즈, (4) 이미 반영된 프리미엄 중 하나. 정확한 원인은 컨퍼런스 콜 코멘트·Q4 가이던스·파운드리 진척 확인 필요. 시장이 컨센 상회 자체보다 다른 지표에 집중하는 국면 사례.",
+    likes: 24, comments: 3, created_at: "2026-07-24T02:18:00.000Z", liked: false,
+  },
+  {
+    id: -510,
+    alias: "종로 매 #12",
+    symbol: "SPX",
+    content:
+      "S&P 500 기업 실적 가이던스가 애널리스트 예상을 사상 최대 폭으로 상회 중(Barchart). 컨센 상향 사이클이 다중 분기 지속. 이론상 (1) 애널 상향 재조정, (2) 지수 EPS 성장 상단 확대, (3) 밸류에이션 정당화, (4) 리스크 온 심리 강화로 이어져야 하지만 오늘 실제 반응은 다름: TSLA -12%(record 매출), GOOGL 시총 -$84B(비트+비트), INTC -14%(2배 비트). 즉 시장이 컨센 상회보다 마진·FCF·가이던스에 집중.",
+    likes: 21, comments: 2, created_at: "2026-07-24T02:25:00.000Z", liked: false,
+  },
+  {
+    id: -511,
+    alias: "강남 표범 #46",
+    symbol: "SPX",
+    content:
+      "금이 미국 국채 앞질러 세계 최대 준비자산이 됐다(Barchart). 오랜 기간 압도적 1위였던 UST가 2위로. 배경: 중앙은행(BRICs 중심) 매입 지속, 지정학 리스크 이후 달러·UST 다변화 압박, 금 가격 상승, UST 발행량 증가. 상징적 의미로 (1) 달러 기축통화 위상, (2) UST 안전자산 지위, (3) 글로벌 자본시장 구조에 대한 장기 방향성 변화 신호. 즉시 시스템 붕괴는 아니지만 조용한 이벤트.",
+    likes: 26, comments: 2, created_at: "2026-07-24T02:32:00.000Z", liked: false,
+  },
+
   // ── 2026-07-23 신규 ──────────────────────────────────────────────────────
   {
     id: -422,

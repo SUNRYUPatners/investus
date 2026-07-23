@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4285f4"/><stop offset="100%" style="stop-color:#34a853"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="#4285f430" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4285f4" text-anchor="middle">GOOGL</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.24</text>
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f9fafb" text-anchor="middle">GOOGL — Q2 FCF 첫 음전환 -$5.9B + 시총 -$84B 하락</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4285f4" text-anchor="middle" opacity=".12">💸</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#4285f4" text-anchor="middle">💸</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">−$5.9 B</text>
+  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Google이 상장 이후 처음으로 분기 FCF 음전환 · 대규모 CAPEX 여파 · 시총 하루 -$84B</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="40" text-anchor="middle">💸</text>
+  <text x="210" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4285f4" text-anchor="middle">−$5.9 B</text>
+  <text x="210" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Q2 FCF (첫 음전환)</text>
+  <text x="210" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">AI 인프라 CAPEX 급증</text>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="40" text-anchor="middle">📉</text>
+  <text x="540" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4285f4" text-anchor="middle">−$84 B</text>
+  <text x="540" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">하루 시총 감소</text>
+  <text x="540" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">unusual_whales</text>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="40" text-anchor="middle">📊</text>
+  <text x="870" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4285f4" text-anchor="middle">Q1 → Q2</text>
+  <text x="870" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">FCF 급감 추세</text>
+  <text x="870" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">$24.6B → -$5.9B</text>
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">CHARLIE BILELLO · UNUSUAL_WHALES</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#4285f4" text-anchor="middle">"Google이 공개기업 역사상 처음으로 분기 FCF가 음전환"</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"First time in Google's public history that quarterly FCF turned negative"</text>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">출처: Charlie Bilello · unusual_whales · 2026.07.23</text>
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#0a1420" stroke="#4285f4" stroke-width="1"/>
+  <text x="540" y="852" font-family="Arial" font-size="22" fill="#4285f4" text-anchor="middle">왜 중요한가: 매출·EPS 비트했지만 FCF는 CAPEX 폭증에 눌림</text>
+  <text x="540" y="886" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">앞으로 볼 것: FCF 회복 시점 · 감가상각·마진 프로파일 변화</text>
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">GOOGL · FCF -$5.9B · cap -$84B · 2026.07.24</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

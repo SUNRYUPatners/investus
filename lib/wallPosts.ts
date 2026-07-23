@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T24JL = 1784847600000; // 2026-07-24 08:00 KST
 const T23JL = 1784761200000; // 2026-07-23 08:00 KST
 const T22JL = 1784674800000; // 2026-07-22 08:00 KST
 const T21JL = 1784588400000; // 2026-07-21 08:00 KST
@@ -61,7 +62,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T23JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T24JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -80,6 +81,65 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-24 신규 ──────────────────────────────────────────────────────
+  { id: 690, symbol: "TSLA", nickname: "익명_7788", holdingLabel: "180주 보유",
+    content: "어제 record 매출 찍었는데 오늘 -12%. Cantor $475→$445, Morgan Stanley $480→$450, Truist $505→$460 wave로 하향 오는 거 보면 마진 얘기가 진짜 발목 잡음. FCF -$6.4B TTM은 CAPEX +141% YoY이면 나올 만한 숫자긴 한데 Q3 방향이 관건.",
+    createdAt: T24JL + 5*60_000, likes: 74, comments: 5 },
+  { id: 691, symbol: "TSLA", nickname: "익명_3311", holdingLabel: "관심종목",
+    content: "V15 early 이미 Robotaxi에서 돌리고 있대. Nic Cruz Patane 얘기 진짜면 이거 판이 큰데. 파라미터는 10B로 v14(18B) 대비 축소인데 오히려 아키텍처 완전 개편 + 안전성 major leap. 파라미터 효율 대박이면 엣지 배포·추론 비용 다 유리해짐.",
+    createdAt: T24JL + 14*60_000, likes: 48, comments: 4 },
+  { id: 692, symbol: "TSLA", nickname: "익명_8877", holdingLabel: "관심종목",
+    content: "TOSV 정리한 강세 리스트: Cybertruck Fremont 시작, Robotaxi 유럽 40+ 도시, Bay Area +50%, 텍사스 훈련 컴퓨트 H1 2배, Optimus Gen 3 +20%. 애널 다운그레이드랑 정면 대치되는 그림.",
+    createdAt: T24JL + 23*60_000, likes: 41, comments: 4 },
+  { id: 693, symbol: "TSLA", nickname: "익명_5522", holdingLabel: "60주 보유",
+    content: "Musk가 '이 해가 사상 최고의 해 중 하나가 될 것'이라고 발언. 실적 미스에 -12% 반응인데 CEO가 이 톤인 게 재미있음. 남은 5개월 Cybercab·V15·Optimus 실행이 이 프레임 검증.",
+    createdAt: T24JL + 32*60_000, likes: 33, comments: 3 },
+  { id: 694, symbol: "TSLA", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "Cole Grinde의 15+ 진행 리스트: Cybercab in Production, Semi in Production, Robotaxi Scaling, FSD 구독자 성장, 제조 캐파, 리튬 정제, Optimus Giga, AI 칩, Megapack 3, 지역 슈퍼차징 DC. 이 정도 다축이면 이익 회수 시점이 언제냐가 진짜 프레임.",
+    createdAt: T24JL + 41*60_000, likes: 29, comments: 3 },
+  { id: 695, symbol: "TSLA", nickname: "익명_2266", holdingLabel: "40주 보유",
+    content: "FSD v14.3.8 · v14 Lite 6번째 batch 롤아웃 도착 (2026.20.8.11). 릴리스 노트 변경 없음이라 minor tuning인 듯. 그래도 batch 6까지 온 게 실질 확산 신호.",
+    createdAt: T24JL + 50*60_000, likes: 19, comments: 2 },
+  { id: 696, symbol: "TSLA", nickname: "익명_6789", holdingLabel: "관심종목",
+    content: "Musk가 카메라 있는 HW4 미만 차량은 새 AI 보드로 업그레이드하는 방향이라고. 어제 리포트한 v14 Lite 400만 HW3 wide release랑 결합하면 소프트웨어 + 하드웨어 이원 전략 그림 나옴.",
+    createdAt: T24JL + 59*60_000, likes: 22, comments: 2 },
+  { id: 697, symbol: "TSLA", nickname: "익명_1234", holdingLabel: "관심종목",
+    content: "Optimus Data Collection 리드 Tempe AZ 채용 뜸. 캘리·텍사스는 생산, 애리조나는 데이터 파이프라인 축으로 나뉘는 구조 같음. Gen 3 준비랑 시간축 겹침.",
+    createdAt: T24JL + 68*60_000, likes: 16, comments: 2 },
+  { id: 698, symbol: "TSLA", nickname: "익명_4747", holdingLabel: "관심종목",
+    content: "Musk가 로보택시 확장에 '사고 방지가 진짜 제약'이라고 신중 톤. 인간이 낼 수 있는 최대 속도지만 아무도 다치지 않게 해야 한다는 프레임. 안전 지표가 확장 속도 결정하는 축.",
+    createdAt: T24JL + 77*60_000, likes: 25, comments: 3 },
+  { id: 699, symbol: "TSLA", nickname: "익명_5599", holdingLabel: "180주 보유",
+    content: "FSD 활성 유료 구독자 148만 재확인. 어제 55%+ 신규 부착률이랑 결합하면 스톡·플로 다 강한 상태. 매출 record의 이면에 '매출의 질' 개선 신호.",
+    createdAt: T24JL + 86*60_000, likes: 36, comments: 3 },
+  { id: 700, symbol: "SPCX", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "오늘 5:45 PM ET Starship V3 두번째 flight. 히트실드가 더 높은 dynamic pressure에서 어떻게 견디는지가 관건. 성공하면 -49% 낙폭 분위기 반전 트리거.",
+    createdAt: T24JL + 95*60_000, likes: 42, comments: 4 },
+  { id: 701, symbol: "SPCX", nickname: "익명_2199", holdingLabel: "50주 보유",
+    content: "6월 ATH 대비 -49% 낙폭 상황에서 오늘 하루 +5.3% 반등. 시총 +$80B. 개인 매수 중단 신호 이후 첫 유의미한 bounce. 지속성은 오늘 발사 결과 봐야 앎.",
+    createdAt: T24JL + 104*60_000, likes: 51, comments: 4 },
+  { id: 702, symbol: "SPCX", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "캐시 우드 강세 견해 재조명. 발사 + Starlink + AI 인프라 세 축 결합 = 세계사상 가장 중요한 기업 프레임. Eva McMillan·TheSonOfWalkey에서 amplify. 정정 배포한 어제 리포트가 오늘 다시 파급.",
+    createdAt: T24JL + 113*60_000, likes: 38, comments: 3 },
+  { id: 703, symbol: "SPCX", nickname: "익명_4400", holdingLabel: "관심종목",
+    content: "Deepwater Munster: TSLA·SPCX 합병 확률 이제 90%. Kalshi 69%에서 대폭 상승. 구조·시기·주주 승인·현금 vs 주식 아직 다 미상이라 진지한 재료보단 프레임 강화 정도.",
+    createdAt: T24JL + 122*60_000, likes: 45, comments: 4 },
+  { id: 704, symbol: "GOOGL", nickname: "익명_5511", holdingLabel: "20주 보유",
+    content: "GOOGL Q2 FCF가 상장 이후 처음으로 -$5.9B로 음전환. 최근 $24.6B→$17.6B→$10.1B→-$5.9B로 뚝뚝 떨어진 게 CAPEX 급증 여파. 시총 -$84B 하루에 빠진 게 이 신호에 대한 시장 반응.",
+    createdAt: T24JL + 131*60_000, likes: 34, comments: 3 },
+  { id: 705, symbol: "GOOGL", nickname: "익명_7722", holdingLabel: "관심종목",
+    content: "동시에 2026 CAPEX 가이던스 $200B로 상향. Kobeissi 정리에 따르면 이 금액만으로 20년 전 Alphabet 전체 시총보다 크다고. MAG 7 합계 곧 $1T+.",
+    createdAt: T24JL + 140*60_000, likes: 27, comments: 3 },
+  { id: 706, symbol: "INTC", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "INTC Q3 EPS $0.42(컨센 $0.21의 2배), 매출 $18.10B(컨센 $14.14B) 크게 비트. 그런데 주가는 -14% 13개월래 최대 낙폭. 실적 비트에 하락이면 가이던스·마진·구조조정 노이즈 중 하나.",
+    createdAt: T24JL + 149*60_000, likes: 23, comments: 3 },
+  { id: 707, symbol: "SPX", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "S&P 500 기업 가이던스가 컨센 사상 최대 폭으로 상회 중. 컨센 상향 사이클 지속. 그런데 오늘 TSLA -12%·GOOGL 시총 -$84B·INTC -14% 보면 비트 자체가 주가 반응 결정하지 않는 국면.",
+    createdAt: T24JL + 158*60_000, likes: 18, comments: 2 },
+  { id: 708, symbol: "SPX", nickname: "익명_1100", holdingLabel: "관심종목",
+    content: "금이 미국 국채 앞질러 세계 최대 준비자산이 됐다는 Barchart 정리. BRICs 매입 지속·다변화 흐름. 준비자산 구조 변화 신호. 달러·미국채 신뢰 재조명 화두.",
+    createdAt: T24JL + 167*60_000, likes: 21, comments: 2 },
+
   // ── 2026-07-23 신규 ──────────────────────────────────────────────────────
   { id: 617, symbol: "TSLA", nickname: "익명_4422", holdingLabel: "220주 보유",
     content: "Tesla Q2 뚜껑 열렸는데 매출은 $28.24B로 사상 최고, EPS는 $2.34로 컨센 $2.50 살짝 하회. 매출 record인데 EPS 미스면 마진 압박이 맞다는 얘기. 콜에서 GM ex-credits 방향이 진짜 관건.",

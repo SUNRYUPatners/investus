@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="rgba(74,222,128,.18)" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">DAILY</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.24</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.07.24 · 오늘의 한장 요약</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">22</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="70" font-weight="900" fill="#4ade80" text-anchor="middle">TOP 22</text>
+  <text x="540" y="298" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA 애널 다운그레이드 · Starship V3 발사</text>
+  <text x="540" y="342" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">GOOGL FCF 첫 음전환 · INTC 실적 비트 -14% · 합병 90%</text>
+
+  <line x1="80" y1="374" x2="1000" y2="374" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="394" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="446" font-family="Arial" font-size="40" text-anchor="middle">📉</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA −12%</text>
+  <text x="210" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">애널 다운그레이드 wave</text>
+  <text x="210" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">여러 IB 목표가 하향</text>
+
+  <rect x="390" y="394" width="300" height="180" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="446" font-family="Arial" font-size="40" text-anchor="middle">🚀</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">Starship V3</text>
+  <text x="540" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">오늘 5:45 PM ET</text>
+  <text x="540" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">두번째 시험 발사</text>
+
+  <rect x="720" y="394" width="300" height="180" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="870" y="446" font-family="Arial" font-size="40" text-anchor="middle">💸</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4285f4" text-anchor="middle">GOOGL FCF</text>
+  <text x="870" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">첫 음전환 -$5.9B</text>
+  <text x="870" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">CAPEX 폭증 여파</text>
+
+  <rect x="60" y="594" width="300" height="180" rx="16" fill="#0a1420" stroke="#0071c5" stroke-width="2"/>
+  <text x="210" y="646" font-family="Arial" font-size="40" text-anchor="middle">📊</text>
+  <text x="210" y="694" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#0071c5" text-anchor="middle">INTC −14%</text>
+  <text x="210" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Q3 비트에도 급락</text>
+  <text x="210" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">13개월래 최대 낙폭</text>
+
+  <rect x="390" y="594" width="300" height="180" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="646" font-family="Arial" font-size="40" text-anchor="middle">🤝</text>
+  <text x="540" y="694" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">합병 90%</text>
+  <text x="540" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">TSLA·SPCX 합병 확률</text>
+  <text x="540" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Deepwater Munster</text>
+
+  <rect x="720" y="594" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="646" font-family="Arial" font-size="40" text-anchor="middle">🧠</text>
+  <text x="870" y="694" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">FSD V15</text>
+  <text x="870" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Robotaxi에 이미 실행</text>
+  <text x="870" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">~10B params, 안전 개선</text>
+
+  <rect x="60" y="794" width="960" height="140" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="836" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">EXTRA COVERAGE</text>
+  <text x="540" y="874" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">Q2 세부(Bilello) · Cole Grinde 15+ · TOSV 강세 · Musk "Best Year" · v14.3.8 6th · HW3 upgrade</text>
+  <text x="540" y="902" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">Optimus 채용 · Musk 3발언 · Robotaxi 주단위 · FSD 148만 · SPCX -49%·+5.3% · Wood 재조명</text>
+  <text x="540" y="928" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">GOOGL CAPEX $200B · MAG7 $1T · SPX 가이던스 record · 금이 US 국채 초월</text>
+
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">INVESTUS · TOP 22 STORIES · 2026.07.24</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

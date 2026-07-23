@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.24</text>
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f9fafb" text-anchor="middle">SPCX Starship V3 — 두번째 발사 시도 (오늘 5:45 PM ET)</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".12">🚀</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#c084fc" text-anchor="middle">🚀</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">5:45 PM ET</text>
+  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">SpaceX Starbase에서 Starship V3 두번째 시험 발사 · Version 3의 두번째 flight</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="40" text-anchor="middle">🚀</text>
+  <text x="210" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Starship</text>
+  <text x="210" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Version 3 (V3)</text>
+  <text x="210" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">두번째 시험 발사</text>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="40" text-anchor="middle">📍</text>
+  <text x="540" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Starbase</text>
+  <text x="540" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">남부 텍사스</text>
+  <text x="540" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">발사장</text>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="40" text-anchor="middle">🕐</text>
+  <text x="870" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">5:45 PM ET</text>
+  <text x="870" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">발사 예정</text>
+  <text x="870" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">오늘 · 저녁</text>
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">EVAN S · BLOOMBERG</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#c084fc" text-anchor="middle">"Starship V3의 두번째 시험 발사가 오늘 5:45 PM ET로 잡혔다"</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"Second flight test of Starship Version 3 targeted for 5:45 PM ET today"</text>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">출처: Evan S · Bloomberg · 2026.07.23</text>
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="852" font-family="Arial" font-size="22" fill="#c084fc" text-anchor="middle">왜 중요한가: V3 두번째 발사 = 새 이터레이션의 실체 검증 단계</text>
+  <text x="540" y="886" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">앞으로 볼 것: 상단 재진입·히트실드 성능·재사용 반복성 검증</text>
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">SPCX · Starship V3 flight 2 · 2026.07.24</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
