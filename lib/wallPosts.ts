@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T25JL = 1784934000000; // 2026-07-25 08:00 KST
 const T24JL = 1784847600000; // 2026-07-24 08:00 KST
 const T23JL = 1784761200000; // 2026-07-23 08:00 KST
 const T22JL = 1784674800000; // 2026-07-22 08:00 KST
@@ -62,7 +63,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T24JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T25JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -81,6 +82,68 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-25 신규 ──────────────────────────────────────────────────────
+  { id: 709, symbol: "TSLA", nickname: "익명_5511", holdingLabel: "300주 보유",
+    content: "FSD 함대 하루 315M miles. 몇 달 전 28.8M이었으니 10배 넘게 뛴 거. 2.3초당 1000마일이라는 속도로 학습 데이터 축적. V15 학습 가속화 기대감 큼.",
+    createdAt: T25JL + 5*60_000, likes: 87, comments: 5 },
+  { id: 710, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "Robotaxi 26.6.0 코드에 Cybercab 지원 · in-trip 카운트 · 임시 스티어링 페달 검증 · wide release 시나리오 발견. 상용화 진짜 임박한 신호.",
+    createdAt: T25JL + 14*60_000, likes: 52, comments: 4 },
+  { id: 711, symbol: "TSLA", nickname: "익명_9911", holdingLabel: "80주 보유",
+    content: "Musk가 왜 Cybercab 확장이 느린지 설명함. 80억 마일 학습 데이터가 새 차대에 자동 전이 안 됨. 새 플랫폼 자체 데이터·검증 필요. 실체적 이유 있는 지연.",
+    createdAt: T25JL + 23*60_000, likes: 34, comments: 3 },
+  { id: 712, symbol: "TSLA", nickname: "익명_7733", holdingLabel: "관심종목",
+    content: "First Responder Plan v1.4가 애리조나 9지역 커버(Phoenix·Scottsdale·Mesa·Tempe 등). 원격 서비스 정지 1000ft/1시간·에어백 시 911 자동 등 문서화 진짜 세밀함. 상용 인프라 실체 진전.",
+    createdAt: T25JL + 32*60_000, likes: 28, comments: 3 },
+  { id: 713, symbol: "TSLA", nickname: "익명_6688", holdingLabel: "500주 보유",
+    content: "캐시 우드가 어제 -14% 급락일에 TSLA 16만주 담았대. 약 $51M. 4개 ETF 분산. -14% 낙폭에 매수로 대응한 대표 기관. 다운그레이드 wave 반대편.",
+    createdAt: T25JL + 41*60_000, likes: 65, comments: 5 },
+  { id: 714, symbol: "GOOGL", nickname: "익명_1177", holdingLabel: "관심종목",
+    content: "Waymo가 Uber와 8년 독점 파트너십 종료 검토. 서비스 품질·안전·규제 이견 · 2028년 오스틴·애틀랜타 독립 런치. Tesla Robotaxi와 오스틴에서 직접 경쟁.",
+    createdAt: T25JL + 50*60_000, likes: 38, comments: 3 },
+  { id: 715, symbol: "SPCX", nickname: "익명_3399", holdingLabel: "관심종목",
+    content: "SpaceX가 데이터센터 7개 이상 상급 포지션 동시 채용. Admin·Dev Lead·Memory/Storage·Cooling·Networking·Switches/Optics 등. 어제 텍사스 DC 검토 보도 실체화.",
+    createdAt: T25JL + 59*60_000, likes: 45, comments: 4 },
+  { id: 716, symbol: "SPCX", nickname: "익명_8822", holdingLabel: "관심종목",
+    content: "Bloomberg: SpaceX가 2028년 이후 Falcon 9 신규 상용 예약 중단. Starship에 All-in. 미실증 로켓에 대규모 베팅. 발사 리더십 세대 전환.",
+    createdAt: T25JL + 68*60_000, likes: 51, comments: 4 },
+  { id: 717, symbol: "SPCX", nickname: "익명_5544", holdingLabel: "관심종목",
+    content: "Starlink 10,700 위성·9M 고객·900+ 국가 vs Amazon Leo 398 위성·14 발사. Herald CEO는 1년 내 따라잡을 수 있다는데 발사 캐파 격차 감안하면 회의적.",
+    createdAt: T25JL + 77*60_000, likes: 32, comments: 3 },
+  { id: 718, symbol: "SPCX", nickname: "익명_4411", holdingLabel: "20주 보유",
+    content: "Kalshi 예측시장: TSLA·SPCX 합병 2028 이전 79%. 어제 Munster 개인 견해 90%보단 보수적. 두 개 데이터 다 참고할 축.",
+    createdAt: T25JL + 86*60_000, likes: 29, comments: 3 },
+  { id: 719, symbol: "SPCX", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "Morgan Stanley Adam Jonas: SPCX 코어 Space+Connectivity만으로 $135/share 가치. Grok·Cursor·Neocloud 옵션 별도 상방. -49% 낙폭 이후 대형 하우스 첫 매수 논거.",
+    createdAt: T25JL + 95*60_000, likes: 54, comments: 4 },
+  { id: 720, symbol: "GOOGL", nickname: "익명_6633", holdingLabel: "50주 보유",
+    content: "GOOGL이 4월 이후 두 번째로 100-DMA 아래 마감. 어제 FCF 첫 음전환·시총 -$84B 연장선. 기술 신호·재무 신호 다 부정적.",
+    createdAt: T25JL + 104*60_000, likes: 41, comments: 3 },
+  { id: 721, symbol: "GOOGL", nickname: "익명_2255", holdingLabel: "관심종목",
+    content: "GOOGL Anthropic 지분이 $8.4B로 재평가. 어제 SPCX 지분 $9.8B 미실현이랑 합치면 non-core 자산만 $18B+. 코어 사업이랑 별도로 밸류 리레이팅 근거.",
+    createdAt: T25JL + 113*60_000, likes: 26, comments: 2 },
+  { id: 722, symbol: "GOOGL", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "GOOGL이 Verizon과 $1B DC 파트너십 체결. 통신-클라우드 결합 첫 대형 딜. 하이퍼스케일러 CAPEX가 실사업으로 이어지는 구체 사례.",
+    createdAt: T25JL + 122*60_000, likes: 33, comments: 3 },
+  { id: 723, symbol: "LMT", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "LMT 실적 서프라이즈로 +16.32%. $572.62. 트럼프가 5월에 3번이나 LMT 매수했다는 트래커 얘기. 방산·지정학 리레이팅 신호 + 정치인 매수 논쟁.",
+    createdAt: T25JL + 131*60_000, likes: 47, comments: 4 },
+  { id: 724, symbol: "AMD", nickname: "익명_3311", holdingLabel: "40주 보유",
+    content: "AMD +16.94% 급등, $205.90. 애널 컨센 2028 시총 $1.6T 목표(+82% upside). NVDA 다음 AI 칩 수혜자로 자금 확산. MI400 실 수요가 관건.",
+    createdAt: T25JL + 140*60_000, likes: 62, comments: 5 },
+  { id: 725, symbol: "SPY", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "Paramount·WBD $110B 합병 freeze. 여러 주가 반독점 이유로 저지. 헐리우드 사상 최대 딜인데 규제 벽. 미디어 M&A 재편 리스크 실체.",
+    createdAt: T25JL + 149*60_000, likes: 23, comments: 2 },
+  { id: 726, symbol: "SPX", nickname: "익명_8877", holdingLabel: "관심종목",
+    content: "AI 얘기하면 캐시 우드가 우리 생애 최대 투자 기회라고. ARK 자체가 PLTR 활용·AI-native 인재 채용. 헬스케어를 가장 큰 응용으로 지목.",
+    createdAt: T25JL + 158*60_000, likes: 30, comments: 3 },
+  { id: 727, symbol: "SPX", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "매크로: 매도 심화 + 에너지 쇼크 + 무역 마찰이 hawkish Fed 굳힘. TSLA/GOOGL 조정 배경. 그래도 LMT·AMD 개별 강세는 살아있음.",
+    createdAt: T25JL + 167*60_000, likes: 19, comments: 2 },
+  { id: 728, symbol: "SPX", nickname: "익명_9922", holdingLabel: "관심종목",
+    content: "전 세계 중앙은행 금 보유 사상 최대. 어제 '금이 UST 초월' 얘기 연장선. BRICs 매입 지속·다변화 흐름. 인플레 재점화 시나리오랑 결합.",
+    createdAt: T25JL + 176*60_000, likes: 22, comments: 2 },
+
   // ── 2026-07-24 신규 ──────────────────────────────────────────────────────
   { id: 690, symbol: "TSLA", nickname: "익명_7788", holdingLabel: "180주 보유",
     content: "어제 record 매출 찍었는데 오늘 -14%(Barchart 종가 · 13개월래 최대 낙폭). Cantor $475→$445, Morgan Stanley $480→$450, Truist $505→$460 wave로 하향 오는 거 보면 마진 얘기가 진짜 발목 잡음. FCF -$6.4B TTM은 CAPEX +141% YoY이면 나올 만한 숫자긴 한데 Q3 방향이 관건.",

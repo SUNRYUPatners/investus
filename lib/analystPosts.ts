@@ -17,6 +17,108 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-25 신규 ──────────────────────────────────────────────────────
+  {
+    id: -512, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "Tesla가 오늘 Vehicle Safety Report를 대규모 개편. FSD(Supervised) 함대가 하루 315M miles로 몇 달 전 28.8M 대비 대폭 확대. 2.3초당 1000마일 축적 속도. 누적 12.6B 마일 중 도심 4.85B. 이는 (1) FSD 활성 유료 구독자 148만+의 실 사용 활발함, (2) V15 학습 데이터 파이프라인 exponential 확대, (3) 상용 로보택시의 도심 마일 확대를 정량화. 어제 캐시 우드의 -14% 급락일 $51M 매수와 함께 강세 프레임 강화. 매수 유지.",
+    likes: 76, comments: 5, created_at: "2026-07-25T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -513, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "The Tesla Newswire가 Robotaxi 앱 26.6.0에서 발견한 히든 코드가 Cybercab 상용화 임박 신호다. in-trip Cybercab 카운트·임시 스티어링/페달 검증·다이내믹스 캘리브레이션·엔티티 일반화 진전·wide release 시나리오. Musk가 별개로 왜 확장이 느린지 설명한 이유(새 차대는 자체 데이터 필요)와 결합하면 검증만 마무리되면 곧 wide release 가능. FSD 315M miles/day의 학습 데이터가 Cybercab 특화 데이터로 얼마나 빠르게 축적되는지가 다음 관찰 축.",
+    likes: 49, comments: 4, created_at: "2026-07-25T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -514, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "Musk의 Cybercab 확장 지연 설명이 오늘의 CEO 발언 하이라이트. 기존 함대 80억+ 학습 마일이 새 Cybercab 플랫폼에 자동 전이되지 않는 이유는 (1) 새 차대 다이내믹스·센서 배치·모터 응답이 다름, (2) 임시 스티어링/페달을 사용하는 검증 단계 필수, (3) generalized entities 처리를 새 플랫폼 특성에 재 캘리브레이션 필요. 이 caveat는 오늘의 FSD 315M miles/day exponential 확대에 대한 CEO의 페이스 관리 발언으로도 읽힌다.",
+    likes: 34, comments: 3, created_at: "2026-07-25T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -515, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "Tesla First Responder Interaction Plan v1.4 문서화가 상용 로보택시 인프라의 실체적 진전. SAE L4·SELF-DRIVING 스크린 표시·경찰 사이렌 자동 정지·2-way call·에어백 시 911 자동·원격 서비스 정지 1000ft/약 1시간·서면 요청 시 데이터 제공·First Responder Loop 두 번 자르면 고전압 2분 방전. 애리조나 9개 지역(Phoenix·Scottsdale·Mesa·Tempe 등) 커버리지 문서화. 실제 사고 사례에서 v1.4 실행 데이터가 신뢰성 검증 축.",
+    likes: 27, comments: 3, created_at: "2026-07-25T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -516, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "캐시 우드의 어제 -14% 급락일 대응이 오늘 확인된 매매 데이터. ARK Invest가 160,001주(약 $51M) 매수, 4개 ETF(Innovation·Autonomous·Next-Gen Internet·Space & Defense)에 분산. 한 종목 단일 세션 $51M은 ARK 최근 매수 규모 중에서도 큰 편. 어제 애널 다운그레이드 wave·-14%(13개월래 최대 낙폭)에 정면 대치하는 강세 기관 flow. 다른 기관(BlackRock·Vanguard 등)의 후속 flow와 우드의 지속 매수 여부가 다음 축.",
+    likes: 41, comments: 3, created_at: "2026-07-25T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -517, alias: "마포 올빼미 #24", symbol: "GOOGL",
+    content: "GOOGL Waymo가 Uber와의 8년 독점 파트너십 종료 검토 중. 서비스 품질·안전·규제 이견이 배경이며 2028년 오스틴·애틀랜타 독립 런치 준비. 자율주행 상용 시장이 초기 파트너십 구조에서 각 사업자 독립 운영 체제로 이행 중이라는 신호. Tesla Robotaxi는 이미 다중 도시(Austin·SF·Orlando·Miami·Tampa·Dallas)에서 라이브 상태라 Waymo가 오스틴 독립 런치하면 직접 경쟁. 서비스 품질(개입률·대기 시간·요금)이 시장 점유율 결정 축.",
+    likes: 33, comments: 3, created_at: "2026-07-25T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -518, alias: "종로 매 #12", symbol: "SPCX",
+    content: "SpaceX 데이터센터 대규모 채용 wave가 어제 텍사스 대형 DC 검토 보도의 실체화 신호. Data Center Administrator, Development Lead, Sr. Global Supply Manager(Memory/Storage · Cooling · Networking · Switches/Optics) 등 7개 이상 상급 포지션이 동시에 열렸다. 이는 (1) 캐시 우드가 오늘 재확인한 SpaceX 강세 3축(Launch · Starlink · AI Infra) 중 AI Infra 축의 물리적 준비, (2) 어제 GOOGL Q3 공시의 SPCX 지분 $9.8B 미실현과 결합된 밸류 이벤트, (3) 단발 프로젝트가 아닌 다중 DC 확장을 준비하는 그림.",
+    likes: 39, comments: 3, created_at: "2026-07-25T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -519, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "SpaceX가 2028년 이후 Falcon 9 신규 상용 예약을 거절하기 시작. Bloomberg가 미실증 Starship에 대한 Elon의 대규모 베팅으로 프레임. 리스크는 (1) Starship이 상용 시점까지 재사용·신뢰성 검증을 완료하지 못하면 발사 서비스 공백, (2) 상용 고객이 Blue Origin·Rocket Lab 등으로 이탈 가능성. 반대로 성공하면 발사 시장을 재정의하는 유일 사업자로 자리매김. 어제 Starship V3 두번째 발사 결과와 오늘 발사 캐파 전환 결정이 시간축에 겹치는 상징적 흐름.",
+    likes: 44, comments: 4, created_at: "2026-07-25T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -520, alias: "부산 갈매기 #77", symbol: "SPCX",
+    content: "SPCX vs AMZN Leo 위성 통신 시장 첫 경쟁 서사. 현재 스냅샷: Starlink 10,700 위성·9M 고객·900+ 국가·250+ 발사 vs Amazon Leo 398 위성·14 발사·상용 초기·글로벌 서비스 없음. Herald CEO는 1년 내 속도 격차 좁힐 수 있다고 주장하지만 발사 캐파(Starlink는 Falcon 9 리더십, Leo는 다른 사업자 의존)에서 SpaceX가 압도적 우위. Amazon Leo가 실제로 매년 수천 개 위성 발사할 수 있는지가 검증 축.",
+    likes: 26, comments: 3, created_at: "2026-07-25T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -521, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "TSLA·SPCX 합병 확률에 예측시장 데이터가 추가됐다. Kalshi 기준 2028 이전 합병 확률 79%로, 어제 Deepwater's Munster 개인 견해 90%보다 보수적. 예측시장이 애널보다 보수적인 이유는 시기·구조·주주 승인·규제·현금 vs 주식 등 모든 조건이 hit돼야 확률로 반영되기 때문. Musk 자신이 명시적으로 합병을 발표한 적 없어 근본 불확실성 남아있음. 79%든 90%든 두 데이터 모두 참고할 축.",
+    likes: 31, comments: 3, created_at: "2026-07-25T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -522, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "Morgan Stanley Adam Jonas의 새 노트가 SPCX -49% 낙폭 이후 대형 하우스의 첫 명시적 매수 논거. 코어 사업(Space Launch + Satellite Connectivity)만으로 ~$135/share 가치, Grok·Cursor·Neocloud는 옵션 가치로 별도 상방. SpaceX가 우주 발사·위성 연결·AI 세 영역에서 지배적 moat, 위성 발사량 기준 글로벌의 ~24%가 YTD 기록. 3중 신호(Munster 개인 견해 + Kalshi 79% + Jonas $135)가 겹치기 시작한 국면.",
+    likes: 46, comments: 4, created_at: "2026-07-25T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -523, alias: "을지로 팔콘 #71", symbol: "GOOGL",
+    content: "GOOGL이 4월 초 이후 두 번째로 100-DMA 아래에서 마감(Barchart X). 어제 Q2 FCF 첫 음전환 -$5.9B·시총 -$84B의 연장선. 기술적 지지 이탈 + 재무 리스크 반영이 겹치는 국면. 그러나 같은 날 Anthropic 지분 $8.4B 재평가·Verizon과 $1B DC 파트너십 등 밸류 이벤트도 겹침. 미시적 상방과 기술적 하방이 상충하는 국면이라 200-DMA 지지선까지 추가 조정 여부·Cloud 매출 성장률 지속성이 다음 축.",
+    likes: 29, comments: 3, created_at: "2026-07-25T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -524, alias: "광화문 늑대 #33", symbol: "GOOGL",
+    content: "GOOGL Anthropic 지분 $8.4B 재평가는 어제 SPCX 지분 $9.8B 미실현 이익에 이은 두 번째 밸류 이벤트. 합치면 non-core 자산만 $18B+. 코어 사업 밸류와 별도로 이 자산이 재평가되면 시가총액 리레이팅 근거. AI 스타트업 라운드 밸류에이션이 상승하면서 하이퍼스케일러의 지분 자산도 상방 재평가 사이클에 들어가는 신호. META·AMZN도 유사 AI 지분 재평가 발표할지가 다음 관찰 축.",
+    likes: 22, comments: 2, created_at: "2026-07-25T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -525, alias: "여의도 매 #22", symbol: "GOOGL",
+    content: "GOOGL·VZ $1B DC 파트너십은 통신사와 하이퍼스케일러의 첫 대형 결합 사례. $1B 자체는 하이퍼스케일러 CAPEX 사이클($200B+/year) 대비 작지만 통신-클라우드 결합의 정식 시작 신호로 의미. VZ 통신망(5G·엣지)과 GCP AI/Cloud의 시너지 시나리오 실체화. GOOGL은 low-latency AI 서비스 확대, VZ는 AI/Cloud 사업 개발 부담 없이 GCP 기술 활용·매출 다각화. MSFT·AWS·META가 유사 통신사 파트너십 체결할지가 파급 관찰 축.",
+    likes: 25, comments: 3, created_at: "2026-07-25T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -526, alias: "종로 매 #12", symbol: "SPY",
+    content: "캐시 우드의 오늘 AI 프레임이 자산 배분 방향을 명시. 세 축: (1) 인프라 실행(회사들이 실제로 업무 방식을 바꾸는지), (2) ARK 자체가 PLTR 활용·AI-native 젊은 인재 채용, (3) 헬스케어를 AI의 가장 큰 응용으로 지목(신약·진단·CRISPR 시너지). 오늘 GOOGL Anthropic 재평가·AMD +16.94% 급등과 정합. PLTR 매출 성장률·헬스케어 AI 종목(RXRX·TEM) 자금 유입·AI-native 채용 트렌드가 검증 축.",
+    likes: 28, comments: 3, created_at: "2026-07-25T01:43:00.000Z", liked: false,
+  },
+  {
+    id: -527, alias: "부산 갈매기 #77", symbol: "LMT",
+    content: "Lockheed Martin(LMT) 실적일 +16.32% 급등, $572.62. 최근 몇 년래 최대 규모의 실적일 상승 중 하나. Nancy Pelosi Stock Tracker가 사이드 스토리로 트럼프 5월 3회 매수 이력(5/11·5/15·5/5, 최대 $430K)을 제기. 매수 신고 지연으로 $200 벌금. 방산·지정학 리레이팅 신호 + 정치인 매수 논쟁이 결합된 스토리. STOCK Act 규정 강화 논쟁 재점화 가능성. 다른 방산주(NOC·GD·RTX·BA) 실적 반응이 다음 관찰 축.",
+    likes: 37, comments: 3, created_at: "2026-07-25T01:50:00.000Z", liked: false,
+  },
+  {
+    id: -528, alias: "강남 표범 #46", symbol: "AMD",
+    content: "AMD가 오늘 +16.94% 급등($205.90). 애널 컨센 2028 시가총액 $1.6T 목표(현재 대비 +82% upside). NVDA에 편중된 AI 칩 시장에서 대안으로 자금 확산. 논거는 (1) 하이퍼스케일러 CAPEX 사이클에 필요한 GPU/AI 액셀러레이터 다양화 수요, (2) MI300/350/400 시리즈 실 수요 확대, (3) EPYC 서버 CPU 인텔 대비 점유율 확대. 리스크는 NVDA와의 성능·소프트웨어 스택(CUDA vs ROCm) 격차·TSMC 캐파 배분 경쟁. MI350/MI400 하이퍼스케일러 계약 확대가 검증 축.",
+    likes: 55, comments: 4, created_at: "2026-07-25T01:57:00.000Z", liked: false,
+  },
+  {
+    id: -529, alias: "서초 콘도르 #59", symbol: "SPY",
+    content: "Paramount의 $110B Warner Bros Discovery 인수가 반독점 이유로 여러 주가 저지 시도. FT 인용 unusual_whales 정리. 헐리우드 사상 최대 딜이 규제 벽에 부딪힌 신호. 미디어 산업 재편의 반독점 리스크 실체화. 스트리밍 경쟁 격화·케이블 감소·콘텐츠 제작비 급증으로 M&A 압력이 컸는데 규제가 그 반대편에서 브레이크. 딜이 실패하면 각 회사가 자산 매각·다른 파트너 찾기·사업 재편으로 이어질 가능성. 다른 미디어 M&A(Comcast·NBCU 등)에도 파급.",
+    likes: 24, comments: 3, created_at: "2026-07-25T02:04:00.000Z", liked: false,
+  },
+  {
+    id: -530, alias: "을지로 팔콘 #71", symbol: "SPY",
+    content: "매크로 프레임 정리: 미 증시 매도 심화 + 에너지 쇼크 + 무역 마찰이 hawkish Fed 스탠스를 굳힘(Investing.com). Fed가 금리 인하 검토하려면 헤드라인 인플레가 진정돼야 하는데 에너지가 반대 방향. 관세 재도입·공급망 재편도 상품 가격 상방 압력. 오늘 TSLA·GOOGL 조정과 매크로 hawkish가 겹치는 국면. 하이퍼스케일러 CAPEX 사이클은 금리 상승 환경에서 자본 비용 증가를 반영해야 하는 이중 부담. 다음 CPI·FOMC 톤·에너지 가격이 검증 축.",
+    likes: 20, comments: 2, created_at: "2026-07-25T02:11:00.000Z", liked: false,
+  },
+  {
+    id: -531, alias: "마포 올빼미 #24", symbol: "SPY",
+    content: "전 세계 중앙은행이 사상 최대 규모의 금을 보유(Barchart · IMF/Bloomberg 데이터). 어제 리포트한 '금이 UST 초월' 프레임의 연장선. 배경은 (1) BRICs 중심 매입 지속, (2) 미국 러시아 자산 동결 이후 달러·UST 다변화 압박, (3) 금 가격 상승 자체가 총 가치 확대, (4) 인플레이션 헤지 수요. Fed hawkish 유지·에너지 쇼크와 결합하면 인플레 재점화 시나리오가 강화되며 금 매력 확대. 금 ETF·마이닝(GDX·NEM·GOLD) 자금 유입이 관찰 축.",
+    likes: 23, comments: 2, created_at: "2026-07-25T02:18:00.000Z", liked: false,
+  },
+
   // ── 2026-07-24 신규 ──────────────────────────────────────────────────────
   {
     id: -490,
