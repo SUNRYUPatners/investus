@@ -18,16 +18,16 @@
 
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">22</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="70" font-weight="900" fill="#4ade80" text-anchor="middle">TOP 22</text>
-  <text x="540" y="298" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA 애널 다운그레이드 · Starship V3 발사</text>
-  <text x="540" y="342" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">GOOGL FCF 첫 음전환 · INTC 실적 비트 -14% · 합병 90%</text>
+  <text x="540" y="298" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA -14% 13개월래 최대 · Starship V3 발사</text>
+  <text x="540" y="342" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">GOOGL FCF 첫 음전환 · INTC 실적 비트 +2.15% · 합병 90%</text>
 
   <line x1="80" y1="374" x2="1000" y2="374" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="394" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="446" font-family="Arial" font-size="40" text-anchor="middle">📉</text>
-  <text x="210" y="494" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA −12%</text>
-  <text x="210" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">애널 다운그레이드 wave</text>
-  <text x="210" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">여러 IB 목표가 하향</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA −14%</text>
+  <text x="210" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">13개월래 최대 낙폭</text>
+  <text x="210" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">다운그레이드 wave</text>
 
   <rect x="390" y="394" width="300" height="180" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="446" font-family="Arial" font-size="40" text-anchor="middle">🚀</text>
@@ -43,9 +43,9 @@
 
   <rect x="60" y="594" width="300" height="180" rx="16" fill="#0a1420" stroke="#0071c5" stroke-width="2"/>
   <text x="210" y="646" font-family="Arial" font-size="40" text-anchor="middle">📊</text>
-  <text x="210" y="694" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#0071c5" text-anchor="middle">INTC −14%</text>
-  <text x="210" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Q3 비트에도 급락</text>
-  <text x="210" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">13개월래 최대 낙폭</text>
+  <text x="210" y="694" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#0071c5" text-anchor="middle">INTC +2.15%</text>
+  <text x="210" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Q3 크게 비트 · 상승</text>
+  <text x="210" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">EPS/매출 2배 서프</text>
 
   <rect x="390" y="594" width="300" height="180" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="646" font-family="Arial" font-size="40" text-anchor="middle">🤝</text>
@@ -61,7 +61,7 @@
 
   <rect x="60" y="794" width="960" height="140" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="836" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">EXTRA COVERAGE</text>
-  <text x="540" y="874" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">Q2 세부(Bilello) · Cole Grinde 15+ · TOSV 강세 · Musk "Best Year" · v14.3.8 6th · HW3 upgrade</text>
+  <text x="540" y="874" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">Q2 세부(Bilello · CAPEX +141%) · Cole Grinde 15+ · TOSV 강세 · Musk "Best Year" · v14.3.8 6th</text>
   <text x="540" y="902" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">Optimus 채용 · Musk 3발언 · Robotaxi 주단위 · FSD 148만 · SPCX -49%·+5.3% · Wood 재조명</text>
   <text x="540" y="928" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">GOOGL CAPEX $200B · MAG7 $1T · SPX 가이던스 record · 금이 US 국채 초월</text>
 

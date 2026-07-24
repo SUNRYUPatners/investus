@@ -31,7 +31,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "강남 표범 #46",
     symbol: "TSLA",
     content:
-      "TSLA 다중 IB 다운그레이드 wave: Cantor $475→$445, Wolfe $480→$460, Truist $505→$460, Morgan Stanley $480→$450, Wells Fargo $470→$460. 6개 IB가 동시에 목표가를 하향한 규모는 최근 몇 분기 대비 이례적. 다만 대부분이 $445~$460 밴드로 여전히 시가 대비 상방을 시사한다는 점, Morgan Stanley $450은 어제 리포트한 Cantor $510 재확인과 대비된다는 점이 관건. 논거는 (1) Auto GM ex-credits 15% 정체, (2) FCF -$6.4B TTM의 CAPEX +141% YoY 여파, (3) Robotaxi/Cybercab 유닛 이코노믹스 미실증에 집중. 실적 회수 시점 리레이팅 국면.",
+      "TSLA 다중 IB 다운그레이드 wave: Cantor $475→$445, Wolfe $480→$460, Truist $505→$460, Morgan Stanley $480→$450, Wells Fargo $470→$460. 6개 IB가 동시에 목표가를 하향한 규모는 최근 몇 분기 대비 이례적. Ming Z가 다운그레이드 wave를 정리한 시점 주가는 -12%였고 Barchart 종가 기준으로는 -14%까지 확대되며 13개월래 최대 낙폭 기록. 다만 대부분 목표가가 $445~$460 밴드로 여전히 시가 대비 상방 시사, Morgan Stanley $450은 어제 리포트한 Cantor $510 재확인과 대비된다는 점이 관건. 논거는 (1) Auto GM ex-credits 15% 정체, (2) FCF -$6.4B TTM의 CAPEX +141% YoY 여파, (3) Robotaxi/Cybercab 유닛 이코노믹스 미실증에 집중. 실적 회수 시점 리레이팅 국면.",
     likes: 42, comments: 4, created_at: "2026-07-24T00:12:00.000Z", liked: false,
   },
   {
@@ -175,7 +175,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     alias: "부산 갈매기 #77",
     symbol: "INTC",
     content:
-      "Intel Q3: EPS $0.42(컨센 $0.21의 2배), 매출 $18.10B(컨센 $14.14B) 크게 비트. 그런데 주가는 Barchart 집계로 -14% 급락(13개월래 최대). 비트에도 하락은 통상 (1) Q4·2027 가이던스 실망, (2) 마진 프로파일 지속성 의구심, (3) 파운드리 구조조정 노이즈, (4) 이미 반영된 프리미엄 중 하나. 정확한 원인은 컨퍼런스 콜 코멘트·Q4 가이던스·파운드리 진척 확인 필요. 시장이 컨센 상회 자체보다 다른 지표에 집중하는 국면 사례.",
+      "Intel Q3: EPS $0.42(컨센 $0.21의 2배), 매출 $18.10B(컨센 $14.14B) 크게 비트. Q3 매출 가이던스도 $18.8~19.4B로 컨센 상회. 주가는 +2.15% 상승($100.10, +$2.13)으로 긍정 반응. 오랜 부진 이후 반전 신호로 시장이 해석. 근거: (1) 매출·EPS·가이던스 3박자 상회, (2) 데이터센터·파운드리 매출 개선 기대, (3) CHIPS Act·구조조정 효과 확인. 같은 날 GOOGL FCF 음전환·TSLA -14%와 대비되는 리액션은 하이퍼스케일러 CAPEX 사이클 수혜자(반도체·파운드리)로 자금 이동의 미세 신호로도 읽힘. Q4 가이던스 지속성이 다음 검증 축.",
     likes: 24, comments: 3, created_at: "2026-07-24T02:18:00.000Z", liked: false,
   },
   {

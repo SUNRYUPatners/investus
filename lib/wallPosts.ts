@@ -83,7 +83,7 @@ const d = (n: number) => n * 86_400_000;
 export const MOCK_POSTS: Post[] = [
   // ── 2026-07-24 신규 ──────────────────────────────────────────────────────
   { id: 690, symbol: "TSLA", nickname: "익명_7788", holdingLabel: "180주 보유",
-    content: "어제 record 매출 찍었는데 오늘 -12%. Cantor $475→$445, Morgan Stanley $480→$450, Truist $505→$460 wave로 하향 오는 거 보면 마진 얘기가 진짜 발목 잡음. FCF -$6.4B TTM은 CAPEX +141% YoY이면 나올 만한 숫자긴 한데 Q3 방향이 관건.",
+    content: "어제 record 매출 찍었는데 오늘 -14%(Barchart 종가 · 13개월래 최대 낙폭). Cantor $475→$445, Morgan Stanley $480→$450, Truist $505→$460 wave로 하향 오는 거 보면 마진 얘기가 진짜 발목 잡음. FCF -$6.4B TTM은 CAPEX +141% YoY이면 나올 만한 숫자긴 한데 Q3 방향이 관건.",
     createdAt: T24JL + 5*60_000, likes: 74, comments: 5 },
   { id: 691, symbol: "TSLA", nickname: "익명_3311", holdingLabel: "관심종목",
     content: "V15 early 이미 Robotaxi에서 돌리고 있대. Nic Cruz Patane 얘기 진짜면 이거 판이 큰데. 파라미터는 10B로 v14(18B) 대비 축소인데 오히려 아키텍처 완전 개편 + 안전성 major leap. 파라미터 효율 대박이면 엣지 배포·추론 비용 다 유리해짐.",
@@ -131,7 +131,7 @@ export const MOCK_POSTS: Post[] = [
     content: "동시에 2026 CAPEX 가이던스 $200B로 상향. Kobeissi 정리에 따르면 이 금액만으로 20년 전 Alphabet 전체 시총보다 크다고. MAG 7 합계 곧 $1T+.",
     createdAt: T24JL + 140*60_000, likes: 27, comments: 3 },
   { id: 706, symbol: "INTC", nickname: "익명_8833", holdingLabel: "관심종목",
-    content: "INTC Q3 EPS $0.42(컨센 $0.21의 2배), 매출 $18.10B(컨센 $14.14B) 크게 비트. 그런데 주가는 -14% 13개월래 최대 낙폭. 실적 비트에 하락이면 가이던스·마진·구조조정 노이즈 중 하나.",
+    content: "INTC Q3 EPS $0.42(컨센 $0.21의 2배), 매출 $18.10B(컨센 $14.14B) 크게 비트. Q3 가이던스도 $18.8~19.4B로 컨센 상회. 주가 +2.15%($100.10) 긍정 반응. 구조조정 효과 + 데이터센터/파운드리 개선 기대감이 결합.",
     createdAt: T24JL + 149*60_000, likes: 23, comments: 3 },
   { id: 707, symbol: "SPX", nickname: "익명_9944", holdingLabel: "관심종목",
     content: "S&P 500 기업 가이던스가 컨센 사상 최대 폭으로 상회 중. 컨센 상향 사이클 지속. 그런데 오늘 TSLA -12%·GOOGL 시총 -$84B·INTC -14% 보면 비트 자체가 주가 반응 결정하지 않는 국면.",

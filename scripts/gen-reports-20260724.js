@@ -87,17 +87,17 @@ const T=[
   source:'Source: Charlie Bilello · 2026.07.23',
   noteHead:'Why: Revenue growth with margin pressure and heavy capex',noteSub:'Watch: Auto GM recovery · normalization of CAPEX',footer:'TSLA · Q2 detail',brand:BE}},
 
-// 2. TSLA analyst downgrade wave
+// 2. TSLA analyst downgrade wave + -14% biggest 13-mo loss
 {file:'tsla-analyst-downgrade-wave',symbol:'TSLA',
- ko:{title:'TSLA — 애널리스트 대량 다운그레이드 · 목표가 하향 wave',heroIcon:'📉',heroBig:'−12 %',heroSub:'실적 발표 후 여러 IB가 동시에 목표가 하향 · 큰 폭 주가 하락',
+ ko:{title:'TSLA — 애널 다운그레이드 wave · -14% 13개월래 최대 낙폭',heroIcon:'📉',heroBig:'−14 %',heroSub:'실적 후 여러 IB가 동시에 목표가 하향 · Ming Z는 -12%, Barchart는 -14%(13개월래 최대)',
   cards:[{icon:'🏦',big:'Cantor',mid:'$475 → $445',sub:'목표가 하향'},{icon:'🏦',big:'Morgan Stan.',mid:'$480 → $450',sub:'목표가 하향'},{icon:'🏦',big:'Truist·Wells',mid:'$505/$470 → $460',sub:'다중 하향'}],
-  quoteLabel:'MING Z',quoteKo:'"Tesla 실적 후 -12% · WS 다중 다운그레이드 wave"',quoteEn:'"TSLA -12% post-earnings · wave of Wall Street downgrades"',
-  source:'출처: Ming Z · 2026.07.23',
-  noteHead:'왜 중요한가: 매출 record에도 목표가 하향 다중 = 마진·CAPEX 우려 반영',noteSub:'앞으로 볼 것: Cantor 정도 지속 유지 vs 하향 재조정',footer:'TSLA · Downgrade wave',brand:BK},
- en:{title:'TSLA — Wave of Analyst Downgrades · PT Cuts Across the Street',heroIcon:'📉',heroBig:'−12 %',heroSub:'Multiple IBs cut PTs simultaneously post-earnings · big drop',
+  quoteLabel:'BARCHART',quoteKo:'"TSLA가 14% 이상 급락 · 13개월래 최대 낙폭"',quoteEn:'"TSLA plunges more than 14% for its biggest loss in 13 months"',
+  source:'출처: Barchart · Ming Z · 2026.07.23',
+  noteHead:'왜 중요한가: 매출 record에도 다중 목표가 하향 = 마진·CAPEX 우려 반영',noteSub:'앞으로 볼 것: Cantor 지속 유지 vs 하향 재조정',footer:'TSLA · Downgrade wave',brand:BK},
+ en:{title:'TSLA — Downgrade Wave · -14% Biggest 13-Month Loss',heroIcon:'📉',heroBig:'−14 %',heroSub:'Multiple IBs cut PTs post-earnings · Ming Z noted -12%, Barchart -14% (biggest 13-month loss)',
   cards:[{icon:'🏦',big:'Cantor',mid:'$475 → $445',sub:'PT cut'},{icon:'🏦',big:'Morgan Stan.',mid:'$480 → $450',sub:'PT cut'},{icon:'🏦',big:'Truist·Wells',mid:'$505/$470 → $460',sub:'multiple cuts'}],
-  quoteLabel:'MING Z',quoteKo:'"실적 후 -12% · WS 다중 하향"',quoteEn:'"TSLA -12% post-earnings · wave of Wall Street downgrades"',
-  source:'Source: Ming Z · 2026.07.23',
+  quoteLabel:'BARCHART',quoteKo:'"TSLA -14% · 13개월래 최대 낙폭"',quoteEn:'"TSLA plunges more than 14% for its biggest loss in 13 months"',
+  source:'Source: Barchart · Ming Z · 2026.07.23',
   noteHead:'Why: PT cuts despite record revenue = margin/CAPEX concerns',noteSub:'Watch: Cantor holding vs also revising down',footer:'TSLA · Downgrade wave',brand:BE}},
 
 // 3. Cole Grinde TSLA bull frame
@@ -321,18 +321,18 @@ const T=[
   source:'Source: Charlie Bilello · unusual_whales · 2026.07.23',
   noteHead:'Why: Beat on rev/EPS but FCF crushed by exploding CAPEX',noteSub:'Watch: FCF recovery timing · margin & depreciation profile',footer:'GOOGL · FCF -$5.9B · cap -$84B',brand:BE}},
 
-// 20. INTC Q3 + -14% drop
-{file:'intc-q3-plus-14pct-drop',symbol:'INTC',
- ko:{title:'INTC Q3 — 실적 비트 · 그러나 주가 -14% 급락',heroIcon:'📊',heroBig:'−14 %',heroSub:'Intel Q3 EPS·매출 모두 컨센 상회 · 그러나 주가 -14% 대폭 하락 (13개월래 최대)',
-  cards:[{icon:'💵',big:'$18.10 B',mid:'매출 (컨센 $14.14B)',sub:'큰 폭 비트'},{icon:'📈',big:'$0.42',mid:'EPS (컨센 $0.21)',sub:'2배 비트'},{icon:'📉',big:'−14 %',mid:'주가 하락',sub:'13개월래 최대 낙폭'}],
-  quoteLabel:'UNUSUAL_WHALES · INVESTING.COM · BARCHART',quoteKo:'"Intel 실적 비트에도 -14% 급락 · 시장 반응이 냉담"',quoteEn:'"Intel beats but stock drops -14% · cool market reaction"',
-  source:'출처: unusual_whales · Investing.com · Barchart · 2026.07.23',
-  noteHead:'왜 중요한가: 실적 비트에도 하락 = 가이던스·마진·구조조정 의구심',noteSub:'앞으로 볼 것: Q4 가이던스·파운드리 사업 진척·CEO 액션',footer:'INTC · Q3 beat but −14%',brand:BK},
- en:{title:'INTC Q3 — Beats on Print but Stock Drops -14%',heroIcon:'📊',heroBig:'−14 %',heroSub:'Intel Q3 beats on EPS and revenue vs consensus · yet stock drops -14% (biggest 13-month loss)',
-  cards:[{icon:'💵',big:'$18.10 B',mid:'Rev (est $14.14B)',sub:'big beat'},{icon:'📈',big:'$0.42',mid:'EPS (est $0.21)',sub:'2× beat'},{icon:'📉',big:'−14 %',mid:'Stock drop',sub:'biggest in 13 months'}],
-  quoteLabel:'UNUSUAL_WHALES · INVESTING.COM · BARCHART',quoteKo:'"비트에도 -14% 급락"',quoteEn:'"Intel beats but stock drops -14% · cool market reaction"',
-  source:'Source: unusual_whales · Investing.com · Barchart · 2026.07.23',
-  noteHead:'Why: Beat with a big drop = guidance/margin/restructuring doubts',noteSub:'Watch: Q4 guide · foundry progress · CEO actions',footer:'INTC · Q3 beat but −14%',brand:BE}},
+// 20. INTC Q3 크게 비트 + 주가 +2.15% 상승 (정정)
+{file:'intc-q3-beat-up',symbol:'INTC',
+ ko:{title:'INTC Q3 — EPS·매출 크게 비트 · 주가 +2.15% 상승',heroIcon:'📈',heroBig:'+2.15 %',heroSub:'Intel Q3 EPS $0.42(컨센 $0.21의 2배) · 매출 $18.10B(컨센 $14.14B) · 주가 상승 반응',
+  cards:[{icon:'💵',big:'$18.10 B',mid:'매출 (컨센 $14.14B)',sub:'큰 폭 비트'},{icon:'📈',big:'$0.42',mid:'EPS (컨센 $0.21)',sub:'2배 비트'},{icon:'💹',big:'+2.15 %',mid:'INTC 주가',sub:'긍정 반응'}],
+  quoteLabel:'UNUSUAL_WHALES · INVESTING.COM',quoteKo:'"Intel Q3 EPS/매출 컨센 크게 상회 · 가이던스 Q3 매출 $18.8~19.4B"',quoteEn:'"Intel Q3 EPS and revenue crushed consensus · Q3 guide $18.8-19.4B"',
+  source:'출처: unusual_whales · Investing.com · 2026.07.23',
+  noteHead:'왜 중요한가: 반도체 사이클·파운드리 재무 정상화의 정량 신호',noteSub:'앞으로 볼 것: Q4 가이던스 지속성·파운드리 매출·CHIPS Act 활용',footer:'INTC · Q3 beat · +2.15%',brand:BK},
+ en:{title:'INTC Q3 — Big Beat on EPS/Rev · Stock Up +2.15%',heroIcon:'📈',heroBig:'+2.15 %',heroSub:'Intel Q3 EPS $0.42 (2× consensus $0.21) · Rev $18.10B (vs $14.14B) · positive stock reaction',
+  cards:[{icon:'💵',big:'$18.10 B',mid:'Rev (est $14.14B)',sub:'big beat'},{icon:'📈',big:'$0.42',mid:'EPS (est $0.21)',sub:'2× beat'},{icon:'💹',big:'+2.15 %',mid:'INTC stock',sub:'positive reaction'}],
+  quoteLabel:'UNUSUAL_WHALES · INVESTING.COM',quoteKo:'"Intel Q3 크게 비트 · Q3 매출 가이드 $18.8~19.4B"',quoteEn:'"Intel Q3 EPS and revenue crushed consensus · Q3 guide $18.8-19.4B"',
+  source:'Source: unusual_whales · Investing.com · 2026.07.23',
+  noteHead:'Why: Quantitative signal of semi cycle & foundry normalization',noteSub:'Watch: Q4 guide sustainability · foundry revenue · CHIPS Act leverage',footer:'INTC · Q3 beat · +2.15%',brand:BE}},
 
 // 21. Macro — S&P 500 guidance record
 {file:'macro-sp500-guidance-record',symbol:'MACRO',
