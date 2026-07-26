@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T27JL = 1785106800000; // 2026-07-27 08:00 KST
 const T25JL = 1784934000000; // 2026-07-25 08:00 KST
 const T24JL = 1784847600000; // 2026-07-24 08:00 KST
 const T23JL = 1784761200000; // 2026-07-23 08:00 KST
@@ -63,7 +64,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T25JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T27JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -82,6 +83,65 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-27 신규 ──────────────────────────────────────────────────────
+  { id: 729, symbol: "GOOGL", nickname: "익명_3388", holdingLabel: "관심종목",
+    content: "GOOGL이 재무제표에 SPCX 지분 fair value $94.1B로 공시. 2024 $30.1B에서 3배 재평가. 지분율 6%. 이 계산하면 SPCX 전체 밸류가 약 $1.57T급이라는 얘기. 어제까지 미실현 이익 얘기가 종합 결산 격.",
+    createdAt: T27JL + 5*60_000, likes: 82, comments: 6 },
+  { id: 730, symbol: "SPCX", nickname: "익명_5599", holdingLabel: "관심종목",
+    content: "Kalshi TSLA·SPCX 합병 1년 이내 확률이 74%로 skyrocketing. 사상 최고. Munster 90%→Kalshi 79%(2028 이전)→오늘 74%(1년 이내). 시간 좁혔는데도 확률 유지 = 시장이 합병 임박이라 봄.",
+    createdAt: T27JL + 14*60_000, likes: 65, comments: 5 },
+  { id: 731, symbol: "AVGO", nickname: "익명_7711", holdingLabel: "관심종목",
+    content: "Samsung × Broadcom이 2030년까지 $200B 반도체 공급 계약. HBM·파운드리·고급 패키징 다 포함. 사상 최대급 딜. NVDA Jensen이 오늘 HBM 압박 얘기한 것도 이 딜과 결합해서 봐야 됨.",
+    createdAt: T27JL + 23*60_000, likes: 71, comments: 5 },
+  { id: 732, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "200주 보유",
+    content: "Tesla 오늘 $313.03. Roland Pircher가 실적 이후 사상 최대 규모 손실이라고 정리. 어제 -14% 낙폭 후 반등 실패. Q3 마진 회복이 반등 트리거인데 오늘 에너지 스토리지 -20% YoY 소식은 오히려 마진 걱정 재점화.",
+    createdAt: T27JL + 32*60_000, likes: 58, comments: 5 },
+  { id: 733, symbol: "TSLA", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "2026.26 Summer Update 1% 배포 시작. Traction Control 3모드(Auto·Slippery Surface·Stuck Assist) 추가. Model 3/Y 대상. 소프트웨어로 겨울·오프로드 커버 확대하는 Tesla 특유 접근.",
+    createdAt: T27JL + 41*60_000, likes: 32, comments: 3 },
+  { id: 734, symbol: "TSLA", nickname: "익명_1155", holdingLabel: "관심종목",
+    content: "Musk가 Model X 오픈소스 계획 예고. 원조 Roadster 오픈소스 선례 인용. 신형 라인업(Cybercab·Optimus) 집중 신호이자 브랜드 자산 커뮤니티 확대 프레임.",
+    createdAt: T27JL + 50*60_000, likes: 45, comments: 4 },
+  { id: 735, symbol: "TSLA", nickname: "익명_6677", holdingLabel: "관심종목",
+    content: "Tesla 에너지 스토리지 Q2 $232.3/KWh · -20% YoY. 사상 최저. CFO가 글로벌 배터리 저장 시장 경쟁 심화 언급. Megapack 배포는 늘어도 단가 하락으로 매출 성장 상단 제약.",
+    createdAt: T27JL + 59*60_000, likes: 38, comments: 3 },
+  { id: 736, symbol: "TSLA", nickname: "익명_9922", holdingLabel: "관심종목",
+    content: "Tesla Supercharger 크로아티아 100번째 스톨. Zadar에 Megapack 결합해서 관광 성수기 전력 완충. 2025 44개·2026 72개 공약이 100개로 오버 딜리버. Rijeka·Pula 등 남은 리스트도 진행 중.",
+    createdAt: T27JL + 68*60_000, likes: 24, comments: 2 },
+  { id: 737, symbol: "GOOGL", nickname: "익명_4433", holdingLabel: "30주 보유",
+    content: "GOOGL 백로그가 $500B+로 1년 전 $100B의 5배. FCF 첫 음전환에도 매출 파이프라인은 계속 확대. AWS·Azure 대비 win rate 유지 신호. 백로그 매출 전환 속도가 관건.",
+    createdAt: T27JL + 77*60_000, likes: 41, comments: 3 },
+  { id: 738, symbol: "GOOGL", nickname: "익명_1122", holdingLabel: "관심종목",
+    content: "GOOGL 주간 -8% 하락. 100-DMA 하회에 FCF 음전환까지 겹쳐 기술·재무 다 부정. 그래도 오늘 SPCX 지분 $94.1B·백로그 $500B+·Anthropic $8.4B 등 밸류 이벤트도 계속 나옴. 팽팽함.",
+    createdAt: T27JL + 86*60_000, likes: 35, comments: 3 },
+  { id: 739, symbol: "SPCX", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "SpaceX 공식이 Starship V3 시험 발사 학습 프레임. 궤도·운영 미션 위한 신뢰성 향상. All-in Starship 결정과 결합해서 상용 페이로드 배치 준비 임박 신호.",
+    createdAt: T27JL + 95*60_000, likes: 43, comments: 4 },
+  { id: 740, symbol: "SPCX", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "FT: 중국 투자자들이 자본 통제 우회해서 오프쇼어 크립토 토큰으로 SpaceX·OpenAI 노출 취득 중. 미 AI 스타트업 수요가 자본 통제 뚫을 정도로 강함. 크립토·주식 결합 새 채널.",
+    createdAt: T27JL + 104*60_000, likes: 39, comments: 3 },
+  { id: 741, symbol: "SPY", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "Musk가 AI 10년 안에 통제 위치에 있을 가능성 크다 발언. 인간-침팬지 지능 격차 비유. xAI Grok·Optimus·Robotaxi 로드맵 배경의 장기 관점. AI 안전 규제 논쟁 재점화될 듯.",
+    createdAt: T27JL + 113*60_000, likes: 47, comments: 5 },
+  { id: 742, symbol: "SPCX", nickname: "익명_8844", holdingLabel: "관심종목",
+    content: "Musk가 Starlink 구독자에게 감사 · 다행성 문명 만드는데 기여하고 있다는 프레임. Starship V3 발사·All-in Starship 결정 시점의 CEO 감사 메시지. Starlink 수익이 Mars 임무 재투자 축.",
+    createdAt: T27JL + 122*60_000, likes: 33, comments: 3 },
+  { id: 743, symbol: "NVDA", nickname: "익명_2211", holdingLabel: "관심종목",
+    content: "Jensen이 HBM 공급망 압박 얘기. SK하이닉스·INTC·Samsung 다 병목. HBM이 GPU 성능·매출 상단 결정 병목. Samsung × AVGO $200B 딜과 결합하면 NVDA 조달 전략 재편.",
+    createdAt: T27JL + 131*60_000, likes: 52, comments: 4 },
+  { id: 744, symbol: "AAPL", nickname: "익명_9977", holdingLabel: "관심종목",
+    content: "Charlie Bilello: AAPL 연간 FCF $135B. NVDA +38%·ORCL +52% 대비 현금 창출력 부각. GOOGL FCF 첫 음전환과 대조. 시간이 지나면 결국 현금 흐름이 중요.",
+    createdAt: T27JL + 140*60_000, likes: 40, comments: 4 },
+  { id: 745, symbol: "SPY", nickname: "익명_6699", holdingLabel: "관심종목",
+    content: "BRK 현금 $317B 사상 최대. S&P 500 476개사 살 수 있는 규모. Buffett이 매수 기회 관망 중. 후계 CEO Greg Abel이 어떻게 활용할지가 관찰 축.",
+    createdAt: T27JL + 149*60_000, likes: 46, comments: 4 },
+  { id: 746, symbol: "SPX", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "이번 시즌 S&P 500 91% EPS 비트(119개사). 근데 시장 반응은 종목마다 달라. LMT +16.32%·AMD +16.94% 상승, TSLA -14%·GOOGL FCF 음전환. 비트 자체보다 마진·가이던스가 결정.",
+    createdAt: T27JL + 158*60_000, likes: 29, comments: 3 },
+  { id: 747, symbol: "SPX", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "S&P 500 숏 관심 15년래 최고. 91% EPS 비트인데 시장 포지션은 하방 대비. Divergence 극단. positive surprise 시 큰 숏 커버링 랠리 가능 · negative shock 시 큰 하락 확대.",
+    createdAt: T27JL + 167*60_000, likes: 34, comments: 3 },
+
   // ── 2026-07-25 신규 ──────────────────────────────────────────────────────
   { id: 709, symbol: "TSLA", nickname: "익명_5511", holdingLabel: "300주 보유",
     content: "FSD 함대 하루 315M miles. 몇 달 전 28.8M이었으니 10배 넘게 뛴 거. 2.3초당 1000마일이라는 속도로 학습 데이터 축적. V15 학습 가속화 기대감 큼.",

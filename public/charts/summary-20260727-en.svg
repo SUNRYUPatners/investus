@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="rgba(74,222,128,.18)" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">DAILY</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.27</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">Daily Snapshot · 2026.07.27</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">19</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="70" font-weight="900" fill="#4ade80" text-anchor="middle">TOP 19</text>
+  <text x="540" y="298" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">GOOGL SPCX $94.1B · TSLA·SPCX Merger 74%</text>
+  <text x="540" y="342" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Samsung×AVGO $200B · BRK Cash $317B · S&amp;P 91% EPS Beat</text>
+
+  <line x1="80" y1="374" x2="1000" y2="374" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="394" width="300" height="180" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="210" y="446" font-family="Arial" font-size="40" text-anchor="middle">💎</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">GOOGL SPCX 6%</text>
+  <text x="210" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">$94.1B stake disclosed</text>
+  <text x="210" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">2024 $30.1B → 3×</text>
+
+  <rect x="390" y="394" width="300" height="180" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="446" font-family="Arial" font-size="40" text-anchor="middle">🤝</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">Merger 74%</text>
+  <text x="540" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">TSLA·SPCX in 1 yr</text>
+  <text x="540" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Kalshi record high</text>
+
+  <rect x="720" y="394" width="300" height="180" rx="16" fill="#1e0808" stroke="#c62828" stroke-width="2"/>
+  <text x="870" y="446" font-family="Arial" font-size="40" text-anchor="middle">🤝</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c62828" text-anchor="middle">Samsung×AVGO</text>
+  <text x="870" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">$200B chip supply</text>
+  <text x="870" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Through 2030 · HBM</text>
+
+  <rect x="60" y="594" width="300" height="180" rx="16" fill="#0a1520" stroke="#0891b2" stroke-width="2"/>
+  <text x="210" y="646" font-family="Arial" font-size="40" text-anchor="middle">💵</text>
+  <text x="210" y="694" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#0891b2" text-anchor="middle">BRK $317B</text>
+  <text x="210" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Cash ATH</text>
+  <text x="210" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Buy 476 SPX cos</text>
+
+  <rect x="390" y="594" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="646" font-family="Arial" font-size="40" text-anchor="middle">📉</text>
+  <text x="540" y="694" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA $313</text>
+  <text x="540" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Largest post-Q2 loss</text>
+  <text x="540" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Energy $232/kWh -20%</text>
+
+  <rect x="720" y="594" width="300" height="180" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="870" y="646" font-family="Arial" font-size="40" text-anchor="middle">📊</text>
+  <text x="870" y="694" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8" text-anchor="middle">SPX 91% beat</text>
+  <text x="870" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">119 reports so far</text>
+  <text x="870" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Short interest 15-yr high</text>
+
+  <rect x="60" y="794" width="960" height="140" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="836" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">EXTRA COVERAGE</text>
+  <text x="540" y="874" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">TSLA 2026.26 Summer Update · Model X open source · Croatia 100 stalls · GOOGL backlog $500B+</text>
+  <text x="540" y="902" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">GOOGL -8% week · SPCX V3 learnings · CN crypto → SPCX/OpenAI · Musk AI in 10y · Starlink thanks</text>
+  <text x="540" y="928" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">NVDA HBM supply strain · AAPL FCF $135B frame</text>
+
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">INVESTUS · TOP 19 STORIES · 2026.07.27</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

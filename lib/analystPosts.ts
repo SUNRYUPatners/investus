@@ -17,6 +17,108 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-27 신규 ──────────────────────────────────────────────────────
+  {
+    id: -532, alias: "여의도 매 #22", symbol: "GOOGL",
+    content: "GOOGL 재무제표에 SpaceX 지분을 non-marketable equity fair value $94.1B로 공시. 2024 $30.1B에서 약 3배 재평가. GOOGL 지분율 약 6%. Whole Mars Catalog 정리. 이는 (1) GOOGL non-core 자산의 mega-cap 규모 확인, (2) SPCX 밸류 계산 시 $94.1B/6% = 약 $1.57T로 SPCX 시가총액과 대략 부합, (3) 어제까지 리포트한 지분 미실현 이익(Q3 $9.8B) 시리즈의 종합 결산. GOOGL 밸류 재평가와 SPCX 밸류 정당화 양쪽에 영향.",
+    likes: 74, comments: 5, created_at: "2026-07-27T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -533, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "Kalshi 예측시장: TSLA·SPCX 향후 1년 이내 합병 확률이 74%로 sky rocketing · 사상 최고. 최근 며칠 흐름: Munster 개인 견해 90%(특정 시나리오) → Kalshi 2028 이전 79% → 오늘 1년 이내 74%. 시간 조건을 좁혔는데도 확률이 크게 안 떨어짐 = 시장이 합병이 곧 일어난다고 판단. 촉발 이벤트는 (1) GOOGL SPCX $94.1B 재평가, (2) All-in Starship 결정, (3) Adam Jonas $135 매수 콜, (4) Musk의 Starlink 감사 프레임. 다만 Musk의 명시적 발표 없어 실체 리스크 남음.",
+    likes: 51, comments: 4, created_at: "2026-07-27T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -534, alias: "서초 콘도르 #59", symbol: "AVGO",
+    content: "Samsung × Broadcom(AVGO)이 2030년까지 $200B 반도체 공급 계약을 체결(Bull Theory). 커버 범위는 (1) HBM 메모리 - AI 서버 성능 핵심, (2) 파운드리 서비스 - 3nm/2nm 등 선단 공정, (3) 고급 패키징 - CoWoS 대체 옵션. 사상 최대급 딜이며 AI 인프라 사이클 하부 구조 규모 정량화. AVGO 커스텀 실리콘 리더십 강화·Samsung의 HBM 재기 신호. 관건은 (1) NVDA·AMD의 Samsung HBM 채택 여부·규모, (2) SK하이닉스 대응, (3) TSMC CoWoS 캐파 압박.",
+    likes: 62, comments: 5, created_at: "2026-07-27T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -535, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "Roland Pircher 정리에 따르면 TSLA가 실적 발표 이후 사상 최대 규모의 손실을 겪고 있다. 현재 주가 $313.03. 어제까지 -14% 낙폭(13개월래 최대)·다중 IB 다운그레이드 wave 후폭풍 지속. 반등 실패의 근본 원인은 (1) 마진 관련 컨센 상향 없이 다운그레이드만 확인, (2) FCF 음전환의 CAPEX 회수 시점 불확실, (3) 오늘 발표된 에너지 스토리지 $232.3/KWh -20% YoY로 마진 걱정 재점화. 반등 트리거는 Q3 마진 회복·Cybercab wide release·V15 배포 등 실체적 진전이 필요.",
+    likes: 43, comments: 4, created_at: "2026-07-27T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -536, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "Tesla 2026.26 Summer Update가 함대 첫 1%에 배포 시작(The Tesla Newswire). Model 3/Y용 신규 Traction Control 3모드: (1) Auto - 일반, (2) Slippery Surface - 빙판·젖은 노면, (3) Stuck Assist - 눈·진흙·모래 탈출. 매 주행 시작 시 Auto로 리셋. 소프트웨어만으로 하드웨어 활용성 확대하는 Tesla 특유의 접근. Model 3/Y가 세단·SUV로서 부족했던 겨울·오프로드 시나리오 커버 강화. batch 확대와 다른 국가별 규제 승인이 후속 관찰 축.",
+    likes: 27, comments: 3, created_at: "2026-07-27T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -537, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "Musk가 X에 Model X 디자인·소프트웨어 오픈소스 계획 예고. 원조 Roadster 오픈소스 선례 인용. 구체 시점·범위 미상. 해석: (1) Cybercab·Optimus 등 신형 라인업 집중과 구형 Model X 세대교체 신호, (2) 커뮤니티 기반 복원·리메이크·서드파티 활용으로 브랜드 자산 확대, (3) 서드파티 유지 생태계 활성화. 배터리·모터·제어기 특허 부분은 별도 처리 필요할 것.",
+    likes: 34, comments: 3, created_at: "2026-07-27T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -538, alias: "종로 매 #12", symbol: "TSLA",
+    content: "AI Investment Research가 정리한 Tesla CFO 발언 인용: Q2 에너지 스토리지 배포 kWh당 평균 매출 $232.3로 -20% YoY · 사상 최저. 글로벌 배터리 저장 시장 경쟁 심화가 배경. Megapack·Powerwall 배포 규모는 성장하지만 단가 하락으로 매출 성장 상단 제약. CATL·BYD 등 중국 배터리 업체가 대형 저장 시장에도 본격 진출한 신호. 셀 원가 하락 속도와 매출 단가 하락 속도의 상대 속도가 마진 방향 결정. Q3 실적에서 에너지 부문 마진 방향이 검증 축.",
+    likes: 32, comments: 3, created_at: "2026-07-27T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -539, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "Tesla가 크로아티아에 신규 3개 사이트(Gospić·Zadar Westbound·Vista Jadrana South)를 오픈하며 총 스톨 100개에 도달(Muskonomy·Tesla Charging). Zadar 사이트는 Megapack 결합. 크로아티아 해안 관광 성수기의 그리드 부담을 Megapack 저장으로 완충하는 모델. 2025 44개·2026 72개 공약을 오버 딜리버. Rijeka·Pula·Šibenik·Poreč·Korenica·Dubrovnik 등이 남은 2026 리스트. 이 모델은 그리스·이탈리아·스페인 등 다른 관광 국가에도 적용 가능한 template.",
+    likes: 21, comments: 2, created_at: "2026-07-27T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -540, alias: "부산 갈매기 #77", symbol: "GOOGL",
+    content: "GOOGL 백로그가 $500B+ 초과 · 1년 전 $100B의 5배(Evan 정리). Q2 FCF 첫 음전환·시총 -$84B에도 매출 파이프라인은 계속 확대되고 있다는 정량 증거. AWS·Azure 대비 GCP win rate 유지 신호. 백로그의 매출 전환 속도(revenue recognition)가 CAPEX $200B의 실사업 전환 실체화. 계산: $500B 백로그가 5년 계약이면 연 $100B/year 추가 파이프 = 기존 총 매출 $350B/year 대비 상당한 추가 성장 축.",
+    likes: 45, comments: 4, created_at: "2026-07-27T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -541, alias: "강남 표범 #46", symbol: "GOOGL",
+    content: "GOOGL 강세 논거(Just a Dude who lives on X 정리): AI 경쟁에서 GOOGL이 가장 잘 포지션됨 · 수십억이 매일 쓰는 제품(Search·Gmail·Maps·YouTube)에 AI 통합 · -8% 주간 하락은 매수 기회. 반대편에 100-DMA 하회·FCF 음전환 부정 신호가 있지만 백로그 $500B+·SPCX 지분 $94.1B·Anthropic $8.4B 등 밸류 이벤트도 지속. 검증 축: (1) 백로그 매출 전환 속도, (2) FCF 회복 시점, (3) 클라우드 GM 방향. -8%가 200-DMA까지 확장 vs 100-DMA 회복이 다음 방향 결정.",
+    likes: 38, comments: 4, created_at: "2026-07-27T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -542, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "SpaceX 공식 코멘트: 시험 발사에서 얻은 학습이 궤도·운영 미션 위한 Starship 신뢰성 향상에 기여할 것. All-in Starship 결정(7/25)과 결합해 3중 서사: (1) 실패도 학습 자산으로 재규정, (2) 상용 페이로드 배치 준비 명시, (3) V4/V5 개발 로드맵 안정. 오늘의 캐시 우드 강세 견해·GOOGL SPCX 6% 지분·Adam Jonas $135 매수 콜과 결합해 강세 프레임 강화. 첫 상용 Starship 페이로드 계약 발표가 다음 큰 마일스톤.",
+    likes: 40, comments: 3, created_at: "2026-07-27T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -543, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "FT가 전한 뉴스: 중국 투자자들이 오프쇼어 크립토 거래소의 토큰으로 SpaceX·OpenAI 노출을 취득. 베이징 자본 통제 우회. 구조는 (1) 토큰화된 pre-IPO 지분 상품, (2) 홍콩·싱가포르·두바이 등 오프쇼어 거래소, (3) 중국 자본 크립토 채널로 우회. 미 AI 스타트업 수요가 자본 통제를 뚫을 정도로 강함. 리스크: (1) 오프쇼어 토큰 가격이 실제 SPCX 밸류와 괴리, (2) 거래상대방 리스크, (3) SEC·SAFE 규제 리스크, (4) 환매 어려움. SpaceX·OpenAI 자체 밸류에도 간접 영향.",
+    likes: 36, comments: 3, created_at: "2026-07-27T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -544, alias: "광화문 늑대 #33", symbol: "SPY",
+    content: "Musk가 AI 10년 안에 통제 위치에 있을 가능성 크다 발언(CoinMarketCap). 인간-침팬지 지능 격차 비유 사용. 배경은 xAI Grok·Optimus·Robotaxi 로드맵과 결합된 장기 관점. 시사점: (1) AI 안전 규제 재점화, (2) 거버넌스 이슈 부상, (3) AI 안전·정렬 연구 자본 유입, (4) Musk의 이중 위치(개발 참여 + 안전 담론 주도). Reservations: 10년이라는 시점 특정은 이견 있고, 지능과 자율성이 동일 개념은 아님.",
+    likes: 47, comments: 5, created_at: "2026-07-27T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -545, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "Musk가 Starlink 구독자들에게 감사 · 다행성 문명 만들기에 기여하고 있다는 프레임(DogeDesigner 정리). Starship V3 시험 발사·All-in Starship 결정 시점의 CEO 감사 메시지. Starlink 매출 축의 서사 강화: (1) 구독료가 Starship 개발 자금줄, (2) Starship이 Mars 임무 인프라, (3) 구독자 = 다행성 문명 파트너. 실제 재무: Starlink 9M+ 구독자 · 900+ 국가 · $10B+/year · FCF 실현 단계 · Starship 개발 자금원 역할.",
+    likes: 30, comments: 3, created_at: "2026-07-27T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -546, alias: "종로 매 #12", symbol: "AVGO",
+    content: "Samsung × Broadcom $200B 딜 상세(Bull Theory). 커버 3층: (1) HBM 메모리 - HBM3E/HBM4 등, AI 서버 성능 핵심 자원, (2) 파운드리 서비스 - Broadcom 커스텀 ASIC · Samsung 3nm/2nm 선단 공정, (3) 고급 패키징 - CoWoS 대체 옵션·HBM×로직 3D 결합. 반도체 경쟁 구도 재편: HBM은 SK하이닉스 vs Samsung, 파운드리는 TSMC vs Samsung vs Intel, 패키징은 TSMC CoWoS 독점 vs Samsung 대안. AVGO는 NVDA 다음의 AI 칩 파트너로 자리매김.",
+    likes: 52, comments: 4, created_at: "2026-07-27T01:43:00.000Z", liked: false,
+  },
+  {
+    id: -547, alias: "여의도 매 #22", symbol: "NVDA",
+    content: "NVDA CEO Jensen Huang: 최근 수요 급증이 SK하이닉스·INTC·Samsung을 포함한 전체 칩 공급망을 압박(Shay Boloor 인용). HBM이 GPU 성능·매출 상단을 결정하는 병목이며 다중 벤더 조달이 필수. 왜 HBM이 병목: (1) GPU 실질 성능은 메모리 대역폭이 병목, (2) 3D 적층 고난도 공정, (3) 소수 벤더(SK하이닉스·Samsung·마이크론), (4) 대형 고객 대량 선주문. Samsung × AVGO $200B와 결합하면 HBM 배분 정치 경제 재편. 오늘의 발언은 NVDA 매출이 HBM 조달로 캡핑되고 있다는 신호 = 병목 해소되면 upside.",
+    likes: 55, comments: 5, created_at: "2026-07-27T01:50:00.000Z", liked: false,
+  },
+  {
+    id: -548, alias: "부산 갈매기 #77", symbol: "AAPL",
+    content: "Charlie Bilello: AAPL TTM FCF $135B · 같은 기간 NVDA 주가 +38%·ORCL +52%. AI CAPEX 지출과 현금 창출력의 대조 프레임. 그의 표현: 시간이 지나면 결국 현금 흐름이 중요하다는 관점. GOOGL FCF 첫 음전환과 대조. 시장이 3그룹으로 분류하기 시작: (1) 현금 창출 리더(AAPL), (2) AI CAPEX 사이클 수혜자(NVDA·ORCL·AMD), (3) CAPEX 부담 회사(GOOGL·MSFT·META·AMZN). 반론: CAPEX 사이클이 미래 매출로 전환된다면 지금 FCF 음전환은 투자로 정당화. 개별 종목 선택에서 FCF 지속성이 중요 축.",
+    likes: 42, comments: 4, created_at: "2026-07-27T01:57:00.000Z", liked: false,
+  },
+  {
+    id: -549, alias: "강남 표범 #46", symbol: "SPY",
+    content: "Berkshire Hathaway 현금 및 등가물이 $317B로 사상 최대(Barchart). S&P 500 476개사 시가총액 합에 필적. 배경: (1) 매수 기회 관망, (2) AAPL·BAC 등 매도로 현금 유입, (3) 밸류에이션 부담 인식, (4) 국채 이자 수익. 매수 여력의 정성적 의미: 위기 시 옵션·대형 인수 가능·시장 시그널·후계 CEO 자원. Buffett Indicator 관점에서 여전히 사상 최고 수준의 밸류에이션 · BRK 대기 자세가 매크로와 정합. Greg Abel의 첫 대형 매수 결정이 다음 큰 마일스톤.",
+    likes: 44, comments: 4, created_at: "2026-07-27T02:04:00.000Z", liked: false,
+  },
+  {
+    id: -550, alias: "을지로 팔콘 #71", symbol: "SPX",
+    content: "이번 시즌 S&P 500 실적 91% EPS 비트 (119개사 발표 · Wall St Engine). 컨센 상향 재조정 사이클 지속. 그러나 개별 종목 반응은 상이: TSLA record 매출인데 -14%·오늘 $313.03, GOOGL 비트인데 FCF 음전환·시총 -$84B, INTC 2배 비트·+2.15%, LMT +16.32%·AMD +16.94%. 비트 자체보다 마진·가이던스·현금 흐름·구조조정이 반응 방향 결정. 남은 대형 실적(MSFT·AMZN·META·NVDA)의 CAPEX 가이던스가 매크로 프레임 확정 축.",
+    likes: 26, comments: 3, created_at: "2026-07-27T02:11:00.000Z", liked: false,
+  },
+  {
+    id: -551, alias: "마포 올빼미 #24", symbol: "SPX",
+    content: "First Squawk: S&P 500 숏 관심이 15년래 최고 수준으로 상승. 91% EPS 비트와 대비되는 시장 포지션. 실적은 강한데 시장은 하방 대비 = 양극화 신호. 배경: 밸류에이션 부담·Fed hawkish·에너지 쇼크·무역 마찰·하이퍼스케일러 CAPEX 마진 리스크·기술적 신호. 두 방향 리스크: (1) positive surprise 시 큰 숏 커버링 랠리, (2) negative shock 시 큰 하락 확대. 오늘까지 divergence 극단 → 큰 sudden move 확률 상승. 롱·숏·관망 모두 두 방향 리스크 감수.",
+    likes: 31, comments: 3, created_at: "2026-07-27T02:18:00.000Z", liked: false,
+  },
+
   // ── 2026-07-25 신규 ──────────────────────────────────────────────────────
   {
     id: -512, alias: "여의도 매 #22", symbol: "TSLA",

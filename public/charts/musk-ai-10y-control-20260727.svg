@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0c1017"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#94a3b8"/><stop offset="100%" style="stop-color:#64748b"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="#94a3b830" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#94a3b8" text-anchor="middle">MACRO</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.24</text>
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Musk — "AI가 10년 안에 통제 위치에 있을 가능성 크다"</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#94a3b8" text-anchor="middle" opacity=".12">🤖</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#94a3b8" text-anchor="middle">🤖</text>
+  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">10 YR</text>
+  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Elon Musk: AI-인간 지능 격차가 인간-침팬지 격차보다 훨씬 크다면 침팬지가 지휘하는 상황은 상상하기 어렵다는 비유</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="190" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="40" text-anchor="middle">⏰</text>
+  <text x="210" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#94a3b8" text-anchor="middle">10년</text>
+  <text x="210" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">AI 통제 시나리오</text>
+  <text x="210" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Musk 발언</text>
+  <rect x="390" y="402" width="300" height="190" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="40" text-anchor="middle">🧠</text>
+  <text x="540" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#94a3b8" text-anchor="middle">지능 격차</text>
+  <text x="540" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">인간 vs 침팬지 비유</text>
+  <text x="540" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">AI vs 인간</text>
+  <rect x="720" y="402" width="300" height="190" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="40" text-anchor="middle">🌐</text>
+  <text x="870" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#94a3b8" text-anchor="middle">거버넌스</text>
+  <text x="870" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">AI 안전·규제 재점화</text>
+  <text x="870" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">정책 논쟁</text>
+  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">ELON MUSK · COINMARKETCAP</text>
+  <text x="540" y="700" font-family="Arial" font-size="24" fill="#94a3b8" text-anchor="middle">"AI와 인간의 격차가 인간과 침팬지 격차보다 훨씬 크다면, 침팬지가 지휘한다고 상상하기 어렵다"</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"If the difference in intelligence between AI and humans is vastly greater than between humans and chimpanzees, it's hard to imagine the chimpanzees would be in charge"</text>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">출처: CoinMarketCap · 2026.07.26</text>
+  <rect x="60" y="812" width="960" height="100" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
+  <text x="540" y="852" font-family="Arial" font-size="22" fill="#94a3b8" text-anchor="middle">왜 이 발언인가: xAI Grok·Optimus·Robotaxi 로드맵 배경에서 CEO의 장기 관점</text>
+  <text x="540" y="886" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">앞으로 볼 것: AI 안전 규제·xAI Colossus 확장·정책 논쟁 확대</text>
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">MACRO · Musk AI 10yr · 2026.07.24</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
