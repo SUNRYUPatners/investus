@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const OUT = path.join(__dirname, '..', 'public', 'charts');
-const DATE = '2026.07.24';
+const DATE = '2026.07.27';
 
 const PSYM = {
   TSLA: { fg:'#4ade80', fg2:'#22c55e', bg2:'#061209', card:'#0a1a0a' },
@@ -27,6 +27,29 @@ const PSYM = {
 function esc(s){return String(s).replace(/&(?!(amp|lt|gt|quot|apos);)/g,'&amp;').replace(/</g,'&lt;');}
 function E(o){const r={};for(const k in o)r[k]=typeof o[k]==='string'?esc(o[k]):o[k];return r;}
 function pickTitleFont(len){if(len<=30)return 30;if(len<=40)return 26;if(len<=52)return 22;return 20;}
+// 한글은 폭 2, 영문/숫자/공백은 폭 1로 계산 · 스마트 wrap
+function widthOf(s){let w=0;for(const c of String(s)){w+=(/[가-힣一-龥]/.test(c))?2:1;}return w;}
+function wrap(text,maxW,maxLines){
+  const words=String(text).split(/(\s+|·|,)/); // 공백·구분자로 분리
+  const lines=[];let cur='';
+  for(const w of words){
+    if(!w)continue;
+    const test=cur+w;
+    if(widthOf(test)<=maxW)cur=test;
+    else{if(cur.trim())lines.push(cur.trim());cur=w.trim();}
+    if(lines.length>=maxLines-1&&widthOf(cur)>maxW){
+      // 마지막 줄은 강제 자름
+      let cut='';for(const ch of cur){if(widthOf(cut+ch)<=maxW-1)cut+=ch;else break;}
+      cur=cut+'…';break;
+    }
+  }
+  if(cur.trim()&&lines.length<maxLines)lines.push(cur.trim());
+  return lines.slice(0,maxLines);
+}
+function multiline(text,x,y,maxW,maxLines,lh,attrs){
+  const lines=wrap(text,maxW,maxLines);
+  return lines.map((l,i)=>`  <text x="${x}" y="${y+i*lh}" ${attrs}>${esc(l)}</text>`).join('\n');
+}
 
 function tpl(oRaw){
   const o=E(oRaw);
@@ -37,11 +60,11 @@ function tpl(oRaw){
   const cards=oRaw.cards.map((cRaw,i)=>{
     const c=E(cRaw);const x=[60,390,720][i];
     return`
-  <rect x="${x}" y="402" width="300" height="190" rx="16" fill="${p.card}" stroke="${p.fg}" stroke-width="2"/>
-  <text x="${x+150}" y="452" font-family="Arial" font-size="40" text-anchor="middle">${c.icon}</text>
-  <text x="${x+150}" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="${p.fg}" text-anchor="middle">${c.big}</text>
-  <text x="${x+150}" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">${c.mid}</text>
-  <text x="${x+150}" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">${c.sub}</text>`;
+  <rect x="${x}" y="402" width="300" height="220" rx="16" fill="${p.card}" stroke="${p.fg}" stroke-width="2"/>
+  <text x="${x+150}" y="450" font-family="Arial" font-size="36" text-anchor="middle">${c.icon}</text>
+  <text x="${x+150}" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="${p.fg}" text-anchor="middle">${c.big}</text>
+${multiline(cRaw.mid,x+150,530,26,2,24,`font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle"`)}
+${multiline(cRaw.sub,x+150,590,28,2,22,`font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle"`)}`;
   }).join('');
   return`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
@@ -56,23 +79,23 @@ function tpl(oRaw){
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">${DATE}</text>
-  <text x="540" y="102" font-family="Arial Black,Arial" font-size="${titleFont}" font-weight="900" fill="#f9fafb" text-anchor="middle">${o.title}</text>
-  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="${p.fg}" text-anchor="middle" opacity=".12">${o.heroIcon}</text>
-  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="${p.fg}" text-anchor="middle">${o.heroIcon}</text>
-  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">${o.heroBig}</text>
-  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">${o.heroSub}</text>
-  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+${multiline(oRaw.title,540,102,52,2,titleFont+8,`font-family="Arial Black,Arial" font-size="${titleFont}" font-weight="900" fill="#f9fafb" text-anchor="middle"`)}
+  <line x1="80" y1="130" x2="1000" y2="130" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="${p.fg}" text-anchor="middle" opacity=".15">${o.heroIcon}</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="${p.fg}" text-anchor="middle">${o.heroIcon}</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">${o.heroBig}</text>
+${multiline(oRaw.heroSub,540,340,70,2,26,`font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle"`)}
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 ${cards}
-  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">${o.quoteLabel}</text>
-  <text x="540" y="700" font-family="Arial" font-size="24" fill="${p.fg}" text-anchor="middle">${o.quoteKo}</text>
-  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">${o.quoteEn}</text>
-  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">${o.source}</text>
-  <rect x="60" y="812" width="960" height="100" rx="14" fill="${p.card}" stroke="${p.fg}" stroke-width="1"/>
-  <text x="540" y="852" font-family="Arial" font-size="22" fill="${p.fg}" text-anchor="middle">${o.noteHead}</text>
-  <text x="540" y="886" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">${o.noteSub}</text>
-  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">${o.footer} · ${DATE}</text>
+  <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">${o.quoteLabel}</text>
+${multiline(oRaw.quoteKo,540,714,70,2,26,`font-family="Arial" font-size="20" fill="${p.fg}" text-anchor="middle"`)}
+${multiline(oRaw.quoteEn,540,772,80,2,24,`font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle"`)}
+  <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">${o.source}</text>
+  <rect x="60" y="850" width="960" height="110" rx="14" fill="${p.card}" stroke="${p.fg}" stroke-width="1"/>
+${multiline(oRaw.noteHead,540,884,70,2,26,`font-family="Arial" font-size="19" fill="${p.fg}" text-anchor="middle"`)}
+${multiline(oRaw.noteSub,540,930,80,2,24,`font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle"`)}
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">${o.footer} · ${DATE}</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">${o.brand}</text>
 </svg>`;

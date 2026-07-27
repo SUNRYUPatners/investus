@@ -10,39 +10,44 @@
   <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX</text>
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
-  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.24</text>
-  <text x="540" y="102" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f9fafb" text-anchor="middle">Musk — "Starlink 사용자가 다행성 문명 만들기 돕는다" 감사 발언</text>
-  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="256" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".12">🌍</text>
-  <text x="540" y="256" font-family="Arial Black,Arial" font-size="94" font-weight="900" fill="#c084fc" text-anchor="middle">🌍</text>
-  <text x="540" y="316" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">MULTIPLANETARY</text>
-  <text x="540" y="356" font-family="Arial" font-size="22" fill="#9ca3af" text-anchor="middle">Elon Musk가 Starlink 구독자들에게 감사 표명 · 문명의 미래·다행성 문명 만들기에 기여하고 있다는 프레임</text>
-  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.27</text>
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f9fafb" text-anchor="middle">Musk — "Starlink 사용자가 다행성 문명 만들기 돕는다"</text>
+  <text x="540" y="132" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f9fafb" text-anchor="middle">감사 발언</text>
+  <line x1="80" y1="130" x2="1000" y2="130" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".15">🌍</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#c084fc" text-anchor="middle">🌍</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">MULTIPLANETARY</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Elon Musk가 Starlink 구독자들에게 감사 표명 · 문명의 미래·다행성 문명</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">만들기에 기여하고 있다는 프레임</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
-  <rect x="60" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="210" y="452" font-family="Arial" font-size="40" text-anchor="middle">📡</text>
-  <text x="210" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Starlink</text>
-  <text x="210" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">구독자 감사</text>
-  <text x="210" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">수익이 우주 사업 지원</text>
-  <rect x="390" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="540" y="452" font-family="Arial" font-size="40" text-anchor="middle">🚀</text>
-  <text x="540" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">화성</text>
-  <text x="540" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Mars 임무 로드맵</text>
-  <text x="540" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">수익 재투자 근거</text>
-  <rect x="720" y="402" width="300" height="190" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="870" y="452" font-family="Arial" font-size="40" text-anchor="middle">🌌</text>
-  <text x="870" y="502" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">문명</text>
-  <text x="870" y="536" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">multiplanetary</text>
-  <text x="870" y="566" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">장기 프레임</text>
-  <rect x="60" y="612" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="656" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">ELON MUSK · DOGEDESIGNER</text>
-  <text x="540" y="700" font-family="Arial" font-size="24" fill="#c084fc" text-anchor="middle">"Starlink를 사용해주는 모든 분께 감사 · 문명의 미래를 지키고 다행성 문명에 기여하는 것"</text>
-  <text x="540" y="740" font-family="Arial" font-size="20" fill="#e5e7eb" text-anchor="middle">"Thanks to everyone who bought Starlink — you're helping secure the future of civilization and make life multiplanetary"</text>
-  <text x="540" y="776" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">출처: DogeDesigner · 2026.07.26</text>
-  <rect x="60" y="812" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="852" font-family="Arial" font-size="22" fill="#c084fc" text-anchor="middle">왜 이 시점: Starship V3 시험 발사·All-in Starship 결정 시점의 CEO 감사 메시지</text>
-  <text x="540" y="886" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">앞으로 볼 것: Starlink 매출 성장·Mars 임무 로드맵 공개 시점</text>
-  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">SPCX · Starlink multiplanetary · 2026.07.24</text>
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📡</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">Starlink</text>
+  <text x="210" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">구독자 감사</text>
+  <text x="210" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">수익이 우주 사업 지원</text>
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🚀</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">화성</text>
+  <text x="540" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Mars 임무 로드맵</text>
+  <text x="540" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">수익 재투자 근거</text>
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🌌</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">문명</text>
+  <text x="870" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">multiplanetary</text>
+  <text x="870" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">장기 프레임</text>
+  <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">ELON MUSK · DOGEDESIGNER</text>
+  <text x="540" y="714" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">"Starlink를 사용해주는 모든 분께 감사 · 문명의 미래를 지키고 다행성</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">문명에 기여하는 것"</text>
+  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">"Thanks to everyone who bought Starlink — you're helping secure the future of</text>
+  <text x="540" y="796" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">civilization and make life multiplanetary"</text>
+  <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">출처: DogeDesigner · 2026.07.26</text>
+  <rect x="60" y="850" width="960" height="110" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="884" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">왜 이 시점: Starship V3 시험 발사·All-in Starship 결정 시점의 CEO 감사</text>
+  <text x="540" y="910" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">메시지</text>
+  <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">앞으로 볼 것: Starlink 매출 성장·Mars 임무 로드맵 공개 시점</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Starlink multiplanetary · 2026.07.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>
