@@ -14,9 +14,12 @@
     { "path": "/api/cron/market-summary-close", "schedule": "10 20 * * 1-5" },
     { "path": "/api/cron/market-summary-close", "schedule": "10 21 * * 1-5" },
     { "path": "/api/push/report-update", "schedule": "30 23 * * *" },
-    { "path": "/api/market-data", "schedule": "0 22 * * *" },
-    { "path": "/api/market-data", "schedule": "20 20 * * 1-5" },
-    { "path": "/api/market-data", "schedule": "20 21 * * 1-5" },
+    { "path": "/api/cron/market-data-warm", "schedule": "20 20 * * 1-5" },
+    { "path": "/api/cron/market-data-warm", "schedule": "35 20 * * 1-5" },
+    { "path": "/api/cron/market-data-warm", "schedule": "50 20 * * 1-5" },
+    { "path": "/api/cron/market-data-warm", "schedule": "20 21 * * 1-5" },
+    { "path": "/api/cron/market-data-warm", "schedule": "35 21 * * 1-5" },
+    { "path": "/api/cron/market-data-warm", "schedule": "0 22 * * *" },
     { "path": "/api/cron/subscription-recharge", "schedule": "0 18 * * *" }
   ]
 }

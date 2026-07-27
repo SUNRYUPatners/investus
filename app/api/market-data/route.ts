@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { fetchFinnhubBatch, fetchFinnhubRawQuote, type FinnhubRawQuote } from "@/lib/finnhub";
 import { fetchBatchQuotes, fetchFutureV8, fetchQuoteV8, type YFQuote } from "@/lib/yahooFinance";
 
@@ -180,6 +180,8 @@ async function fetchCoinGecko(): Promise<Map<string, ETFQuote>> {
 export async function GET(req: Request) {
   const url     = new URL(req.url);
   const refresh = url.searchParams.has("refresh");
+  /** warm=1: 장마감 크론 — KV 쓰기를 응답 전에 await (fire-and-forget 유실 방지) */
+  const warm    = url.searchParams.has("warm");
   const open    = isMarketOpen();
 
   const ccHeader = open
@@ -207,7 +209,13 @@ export async function GET(req: Request) {
   if (!open && !refresh && _cache) {
     const dataAge = Date.now() - (_cache.data.liveAt ?? 0);
     if (dataAge < MAX_CLOSED_AGE) {
-      return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
+      return NextResponse.json(_cache.data, {
+        headers: {
+          "Cache-Control": ccHeader,
+          "X-Market-Cache": "HIT",
+          "X-Market-Quotes": String(_cache.data.quotes?.length ?? 0),
+        },
+      });
     }
     _cache = null; // 4일 초과 → 강제 갱신
   }
@@ -215,7 +223,13 @@ export async function GET(req: Request) {
   if (!refresh && _cache) {
     const dataAge = Date.now() - (_cache.data.liveAt ?? 0);
     if (dataAge < LIVE_TTL) {
-      return NextResponse.json(_cache.data, { headers: { "Cache-Control": ccHeader } });
+      return NextResponse.json(_cache.data, {
+        headers: {
+          "Cache-Control": ccHeader,
+          "X-Market-Cache": "HIT",
+          "X-Market-Quotes": String(_cache.data.quotes?.length ?? 0),
+        },
+      });
     }
   }
 
@@ -385,12 +399,20 @@ export async function GET(req: Request) {
   });
 
   const now = Date.now();
+  const priceWrites: Promise<void>[] = [];
   const quotes: Quote[] = (await Promise.all(
     mockQuotes.map(async (mock): Promise<Quote | null> => {
       // 1) YF v7 batch 결과 — Yahoo Finance 앱 종가와 일치
       const yf = yfStockMap.get(mock.symbol);
       if (yf && yf.price > 0) {
-        kvSetPrice(mock.symbol, { price: yf.price, change: yf.change, changePercent: yf.changePercent, at: now });
+        priceWrites.push(
+          kvSetPrice(mock.symbol, {
+            price: yf.price,
+            change: yf.change,
+            changePercent: yf.changePercent,
+            at: now,
+          }),
+        );
         return buildStockQuote(mock, yf);
       }
       // 2) KV persistent cache (전 거래일 종가 — YF 장애 시)
@@ -472,11 +494,28 @@ export async function GET(req: Request) {
   if (quotes.length > 0) {
     // 완전 데이터면 full TTL, 부분 데이터면 15초 후 재시도
     _cache = { data: payload, at: isComplete ? Date.now() : Date.now() - (LIVE_TTL - 15_000) };
-    // KV 저장 — 항상 저장 (전날 종가 보존, 7일 TTL, 서버재시작/콜드스타트 대비)
-    kvSetDetail(KV_MARKET_KEY, payload as unknown as Record<string, unknown>);
+
+    const persist = async () => {
+      await Promise.allSettled([
+        kvSetDetail(KV_MARKET_KEY, payload as unknown as Record<string, unknown>),
+        ...priceWrites,
+      ]);
+    };
+
+    // warm 크론: 응답 전에 KV 저장 완료 보장 (fire-and-forget 유실 방지)
+    // 일반 요청: after()로 waitUntil — 응답은 빠르게, 쓰기는 함수 freeze 전 완료
+    if (warm) {
+      await persist();
+    } else {
+      after(persist);
+    }
   }
 
   return NextResponse.json(payload, {
-    headers: { "Cache-Control": ccHeader },
+    headers: {
+      "Cache-Control": ccHeader,
+      "X-Market-Cache": warm ? "WARM" : "MISS",
+      "X-Market-Quotes": String(quotes.length),
+    },
   });
 }
