@@ -17,6 +17,88 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-28 신규 ──────────────────────────────────────────────────────
+  {
+    id: -552, alias: "여의도 매 #22", symbol: "AAPL",
+    content: "Apple이 NVIDIA를 넘어 세계에서 가장 가치 있는 상장 기업으로 복귀했다(Shay Boloor). $5T 시총 도달까지 약 $50B 남긴 상태. Boloor의 프레임: 10년 평균 ROIC 약 37%인 회사보다 신뢰할 만한 투자처는 드물다. 어제 Charlie Bilello의 AAPL 연간 FCF $135B 프레임과 정합. 시장이 AI 성장 프리미엄에서 현금 흐름 안정성 프리미엄으로 재조정되는 신호. NVDA는 반도체 밸류 닷컴 초과 경고·HBM 병목·중국 규제 등 조정 압박 · AAPL은 상대적으로 안정된 현금 창출력으로 defensive position 강화.",
+    likes: 71, comments: 5, created_at: "2026-07-28T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -553, alias: "강남 표범 #46", symbol: "GOOGL",
+    content: "Warren Buffett의 BRK가 지난달 GOOGL 주식을 약 $10B 규모로 매수(Holzenberg). GOOGL 최근 -8% 주간 낙폭·100-DMA 하회·FCF 첫 음전환 등 부정 신호 축적 구간에 dip-buying. BRK $317B ATH 현금 중 첫 명시적 활용. 지난달 매수 = 이번달 낙폭 이전 결정 · Buffett은 낙폭 이전에 이미 매수 판단. Value 관점에서 GOOGL이 Buffett 기준 넘긴 것. GOOGL의 오늘 이벤트(SPCX 지분 $94.1B·백로그 $500B+·Anthropic $8.4B·VZ $1B·Peacock 딜)와 정합.",
+    likes: 58, comments: 5, created_at: "2026-07-28T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -554, alias: "서초 콘도르 #59", symbol: "NVDA",
+    content: "OpenAI가 남부 오하이오 컬럼버스에 10 GW · $500B 규모 데이터센터 프로젝트 진행(Brian D · WSJ). Softbank $250B backstop 협상 중, NVDA가 개발자 역할. 사상 최대 단일 DC 프로젝트. 10 GW = 원자력 10기 규모. OpenAI는 investment-grade 신용 없어 NVDA·Softbank 후원이 자금 조달 핵심. 어제 NVDA Jensen의 HBM 공급망 압박 발언과 결합하면 이 프로젝트가 HBM 배분에도 영향. 부지·전력 계약 아직 완료 안 된 상태 · 리스크는 (1) OpenAI 신용, (2) Ohio 전력 확보, (3) 완공 시점.",
+    likes: 67, comments: 5, created_at: "2026-07-28T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -555, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "기가팩토리 텍사스 Cybertruck 라인이 12 column N-S grid로 확장되며 약 800피트(~150m) 근접(Joe Tegtmeyer). 남쪽으로 계속 확장 예정 · 철골 지속 도착. 프리몬트의 별개 NEW 파일럿 라인은 올해 말 온라인 예정(다른 위치). Cybercab 준비와 별개로 Cybertruck 캐파의 실체적 확장 신호. 최근 -14% 낙폭·다운그레이드 wave 등 주가 부정 반응 중이지만 실 캐파·배포는 계속 확대되는 divergence.",
+    likes: 33, comments: 3, created_at: "2026-07-28T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -556, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "Houston에서 133 Cybertrucks 발견(S.E. Robinson) · Tesla Hempstead Center 5대·fleet lot 128대. 별개로 San Antonio에도 수백 대 배치 준비 중(Dalton Brewer가 Robotaxi 확장 가능성 언급). 두 텍사스 도시에 집중 배치되는 것은 (1) 기가팩토리 텍사스 근접, (2) 텍사스 Robotaxi 확장 후보 지역(Austin 이미 라이브), (3) Cybertruck의 SUV·픽업 특성, (4) 텍사스 자율주행 규제 유연성이 배경. Robotaxi 확장 지역·상용 고객 계약 발표가 후속 관찰 축.",
+    likes: 42, comments: 4, created_at: "2026-07-28T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -557, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "Tesla China 홈페이지 Model 3 전 트림 예상 인도 시간이 이전 4-6주에서 2-4주로 단축(Ming). 상하이 Gigafactory의 상반기 부족(라인 업그레이드·Model Y refresh·부품 이슈 등)이 해소되고 정상화된 신호. Q3 인도 흐름에 긍정. 중국 EV 시장 경쟁 격화(BYD·Xpeng·NIO·Zeekr) 속에서 Tesla 대응 캐파가 정상화된 것. 중국 판매 데이터·Model Y 인도 시간·Cybertruck 중국 출시가 후속 관찰 축.",
+    likes: 26, comments: 3, created_at: "2026-07-28T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -558, alias: "종로 매 #12", symbol: "TSLA",
+    content: "Cole Grinde의 강세 프레임: Tesla가 $43B 현금·Q2 record 매출과 함께 (1) 안전 우선 Robotaxi 배포, (2) in-house 로봇 공급망, (3) 점진 캐파 확대, (4) 인프라 최대 속도 확장, (5) Cybercab 상용화 병행해야. Slow and Steady wins the war · Wall Street will come around. 최근 -14% 낙폭·다운그레이드 wave에 대한 개인 강세 프레임. 반대 관점: $43B 현금 vs FCF TTM -$6.4B의 조합은 현금 감소 방향 · Wait Street가 오는 사이 주가는 계속 하락 위험.",
+    likes: 24, comments: 3, created_at: "2026-07-28T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -559, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "Rep. Jared Moskowitz(D)가 최대 $340,000 규모의 거래 공시 · SPCX 지분 매수 포함(Nancy Pelosi Stock Tracker). 미 의회에서 SPCX를 매수한 6번째 의원. 초당적 관심 확대 신호. STOCK Act 배경으로 (1) 정치인 정보 우위 논쟁 재점화 가능성, (2) 정치인 매수 = 규제 리스크가 낮다는 신호로 해석 가능, (3) SPCX가 정치인 관심 종목이라는 브랜딩. SPCX의 정치적 위상 (NASA·국방 계약자·Starlink 국가안보·Musk 정치 위치·TSLA·SPCX 합병 논의) 상승 신호.",
+    likes: 30, comments: 3, created_at: "2026-07-28T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -560, alias: "부산 갈매기 #77", symbol: "SPCX",
+    content: "SpaceX가 Flight 13에서 히트실드 타일을 의도적으로 강한 dynamic pressure로 스트레스 테스트했으며 Elon 성공 공식 확인(Joe Hansen). 세부: (1) 이전보다 높은 가속도 의도적 적용, (2) 접착제→볼트 개선의 고압 조건 검증, (3) Flight 14 계획된 ship catch 리스크 하나 해소. 성공적 flight에도 조용히 상방 실험 축적하는 방식 · 재사용 신뢰성이 상용 페이로드 배치의 핵심. All-in Starship 결정(7/25)의 실행력 확인. Flight 14 ship catch는 booster catch에 이어 상단 vehicle까지 catch하는 완전 재사용 마일스톤.",
+    likes: 48, comments: 4, created_at: "2026-07-28T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -561, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "SpaceX가 NVIDIA와 함께 Open Secure AI Alliance 창립 멤버로 합류(DogeDesigner). 소프트웨어·AI 에이전트 보호 위한 오픈 툴 공동 개발. SPCX의 AI 인프라 위상(Neocloud·Colossus 등)·NVIDIA와의 전략 결합(GPU 파트너 → 표준 개발 파트너)·정책 대응(Musk의 AI 10년 통제 발언에서 실제 표준 개발로 이어지는 실행력)의 세 축. 반대 관점: Alliance 이름은 좋지만 표준 채택은 별개 · OpenAI·Anthropic·Google DeepMind 등 프런티어 AI 회사 참여 없으면 영향력 제한.",
+    likes: 41, comments: 4, created_at: "2026-07-28T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -562, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "Baron Capital 창립자 Ron Baron이 Compound and Friends 팟캐스트에서 극단적 강세 견해: SPCX가 IPO 대비 10~15년 안에 20~30배 상승 · $30~40T 밸류 도달 · 최소 $40T까지도 가능. 오늘 SPCX 강세 견해가 다층으로 축적됨(캐시 우드 재조명·Adam Jonas $135·NASA Admin Duffy·Moskowitz 매수·Baron 20-30배). Baron Capital이 SPCX 대주주라 자기 이해관계 있지만 실 money 걸린 심각한 판단. 반대: 10-15년 시간 축 매우 길고 불확실성 큼 · $30-40T는 현재 미국 GDP $25T 초과 규모.",
+    likes: 55, comments: 4, created_at: "2026-07-28T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -563, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "NASA Administrator Sean Duffy가 Moonshots 팟캐스트에서 SPCX에 강한 신뢰 표명(Sawyer Merritt 인용): '극단적으로 자본화된 Elon에 절대 반대하지 말라' · 달 재귀환 미션 위해 SPCX 필수 · Musk 최근 최고 창업자·엔지니어 평가. 정부 기관 최고 책임자의 명시적 SPCX 지지 = 정책·규제 리스크 완화 신호. Artemis 프로그램에서 SPCX 역할 (Starship HLS·Falcon Heavy·Starlink·Dragon) 다축 = 다른 사업자로 대체 어려운 구조. NASA-SPCX 계약 확대·갱신 발표가 후속 관찰 축.",
+    likes: 44, comments: 4, created_at: "2026-07-28T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -564, alias: "광화문 늑대 #33", symbol: "GOOGL",
+    content: "Google $GOOGL 소유 YouTube TV와 Comcast $CMCSA 소유 Peacock이 딜 체결(Evan · CNBC). Peacock 전 콘텐츠(라이브 스포츠 포함)가 내년 초부터 YouTube Premium 구독자에게 미국 시장에서 제공. Peacock 주요 콘텐츠는 NFL Sunday Night Football, Premier League, Olympics 등. GOOGL 관점: YouTube Premium 콘텐츠 매력 대폭 확대·라이브 스포츠 접근으로 넷플릭스·디즈니와 차별화·YouTube TV 구독자 유치. CMCSA 관점: Peacock 콘텐츠 유통 채널 확장·Google 유통망 활용 마케팅 비용 절감.",
+    likes: 37, comments: 3, created_at: "2026-07-28T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -565, alias: "마포 올빼미 #24", symbol: "SPX",
+    content: "Charlie Bilello: 반도체 회사들 밸류에이션이 이제 닷컴 버블 정점 초과. AI가 혁명적일 수 있지만 지불하는 가격이 여전히 중요. NVDA(P/E 30-40x)·AMD(40x+)·ARM(100x+)·TSM·AVGO 다 부담. 어제까지 매크로 시그널 축적: 7/23 EPS 성장 65% Big Tech · 7/25 Fed hawkish · 7/27 BRK $317B ATH · 숏 15년 최고. 오늘 두 개 새 경고(반도체 밸류·S&P/M2). 반대 관점: 실 매출·이익 견조·AI CAPEX 사이클 실 수요·OpenAI $500B 같은 실 프로젝트 지속. 밸류 조정은 실적 결정.",
+    likes: 35, comments: 3, created_at: "2026-07-28T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -566, alias: "종로 매 #12", symbol: "SPX",
+    content: "Barchart: S&P 500 vs M2 통화공급 비율이 이제 닷컴 버블 정점을 표시한 것과 정확히 같은 수준. 통화 조정 밸류에이션 지표에서 2000년 정점과 동일. Buffett Indicator와 유사한 매크로 지표. 오늘로 매크로 경고 4중 축적: BRK 대기·숏 15년 최고·반도체 밸류·S&P/M2. 오늘 반대 축: JPM 매수 신호·Buffett $10B GOOGL 매수·Ron Baron 20-30배 예상·AAPL #1 재역전. 대형 하우스·자산가 vs 매크로 경고 대립. BRK 대기 자세는 매크로 신호와 정합.",
+    likes: 32, comments: 3, created_at: "2026-07-28T01:43:00.000Z", liked: false,
+  },
+  {
+    id: -567, alias: "여의도 매 #22", symbol: "SPX",
+    content: "JPMorgan 전술 포지셔닝 미터가 매수 신호로 S&P 500 upside 지목(Walter Bloomberg). 논거: 낮은 채권 수익률·달러 약세·안정 Fed·강한 실적(91% EPS 비트). 리스크: 심리·포지션 lofty·미-이란 tension. 반도체 밸류 닷컴 초과·S&P/M2 정점 경고와 대조되는 대형 하우스 강세. 두 관점이 공존하는 이유: (1) 시간 지평선 차이 (매크로 vs 단기 전술), (2) 밸류 측정 방식, (3) 지수 vs 개별, (4) 리스크 성향. 시장 반응 시나리오 3가지 (강세 승·약세 승·개별 divergence) 모두 가능.",
+    likes: 38, comments: 4, created_at: "2026-07-28T01:50:00.000Z", liked: false,
+  },
+
   // ── 2026-07-27 신규 ──────────────────────────────────────────────────────
   {
     id: -532, alias: "여의도 매 #22", symbol: "GOOGL",

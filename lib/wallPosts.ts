@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T28JL = 1785193200000; // 2026-07-28 08:00 KST
 const T27JL = 1785106800000; // 2026-07-27 08:00 KST
 const T25JL = 1784934000000; // 2026-07-25 08:00 KST
 const T24JL = 1784847600000; // 2026-07-24 08:00 KST
@@ -64,7 +65,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T27JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T28JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -83,6 +84,56 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-28 신규 ──────────────────────────────────────────────────────
+  { id: 748, symbol: "AAPL", nickname: "익명_5522", holdingLabel: "100주 보유",
+    content: "AAPL이 NVDA 넘어 세계 최고 가치 재역전. $5T 시총까지 약 $50B 남음. 10년 평균 ROIC 37%. 어제 Bilello의 FCF $135B 프레임 실체화. 현금 창출력 리더십.",
+    createdAt: T28JL + 5*60_000, likes: 78, comments: 5 },
+  { id: 749, symbol: "GOOGL", nickname: "익명_3311", holdingLabel: "50주 보유",
+    content: "Buffett이 지난달 GOOGL $10B 매수함. GOOGL -8% 주간 낙폭 구간에 dip-buying. BRK $317B 대기 중 첫 명시적 활용. Value 관점에서 GOOGL이 Buffett 기준 넘긴 것.",
+    createdAt: T28JL + 14*60_000, likes: 82, comments: 6 },
+  { id: 750, symbol: "NVDA", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "OpenAI가 오하이오 10 GW · $500B DC 프로젝트. Softbank $250B backstop 협상 중. NVDA가 개발자 역할. 사상 최대 단일 DC. NVDA HBM 병목 상황에서 이 프로젝트가 GPU 공급을 다 흡수할 것.",
+    createdAt: T28JL + 23*60_000, likes: 71, comments: 5 },
+  { id: 751, symbol: "TSLA", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "기가 텍사스 Cybertruck 라인이 12 column N-S로 800피트+ 확장. Tegtmeyer 사진 관찰. 프리몬트 파일럿 라인은 별개로 올해 말 온라인. Cybertruck 캐파 실체 확대.",
+    createdAt: T28JL + 32*60_000, likes: 42, comments: 4 },
+  { id: 752, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "Houston에서 133 Cybertrucks 발견. fleet lot 128대. San Antonio에도 수백 대 배치 준비. Dalton Brewer는 Robotaxi 확장 가능성 언급. 텍사스 두 도시 집중 배치.",
+    createdAt: T28JL + 41*60_000, likes: 55, comments: 4 },
+  { id: 753, symbol: "TSLA", nickname: "익명_6699", holdingLabel: "150주 보유",
+    content: "상하이 M3 인도 시간이 4-6주에서 2-4주로 단축. 상반기 부족 해소·생산 정상화. Q3 인도 흐름 긍정. 중국 판매 반등 여부가 관건.",
+    createdAt: T28JL + 50*60_000, likes: 36, comments: 3 },
+  { id: 754, symbol: "TSLA", nickname: "익명_1155", holdingLabel: "관심종목",
+    content: "Cole Grinde: $43B 현금·Q2 record 매출 기반으로 Slow&Steady 전략 가야 함. 안전 우선 Robotaxi·in-house 로봇 공급망·점진 캐파. Wall Street will come around. 최근 -14% 낙폭에 대한 개인 강세 프레임.",
+    createdAt: T28JL + 59*60_000, likes: 29, comments: 3 },
+  { id: 755, symbol: "SPCX", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "Moskowitz(D)가 SPCX 매수. 6번째 SPCX 매수 미 의원. 최대 $340K 공시. 초당적 관심 확대. STOCK Act 논쟁 재점화 될 듯.",
+    createdAt: T28JL + 68*60_000, likes: 34, comments: 3 },
+  { id: 756, symbol: "SPCX", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "SpaceX가 Flight 13에서 히트실드 타일 스트레스 테스트 성공. 의도적 고 dynamic pressure. Elon 확인. Flight 14 ship catch 준비 리스크 하나 해소. 조용히 상방 실험 축적.",
+    createdAt: T28JL + 77*60_000, likes: 51, comments: 4 },
+  { id: 757, symbol: "SPCX", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "SpaceX가 NVIDIA와 Open Secure AI Alliance 창립 멤버 합류. 소프트웨어·AI 에이전트 보호 오픈 툴. Musk의 AI 안전 발언에 이어 실제 표준 개발 참여. NVDA와 관계 심화.",
+    createdAt: T28JL + 86*60_000, likes: 38, comments: 3 },
+  { id: 758, symbol: "SPCX", nickname: "익명_1122", holdingLabel: "관심종목",
+    content: "Ron Baron: SPCX 10-15년 안에 20-30배 · $30-40T 밸류 예상. Compound and Friends 팟캐스트. Baron Capital이 SPCX 대주주. 자기 이해관계 있지만 실 money 걸린 심각한 판단.",
+    createdAt: T28JL + 95*60_000, likes: 63, comments: 5 },
+  { id: 759, symbol: "SPCX", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "NASA Administrator Sean Duffy: '극단적으로 자본화된 Elon에 반대 말라'. NASA 달 재귀환 미션 위해 SPCX 필수. Musk를 최근 최고 창업자·엔지니어로 평가. 정부 지지 명시적.",
+    createdAt: T28JL + 104*60_000, likes: 45, comments: 4 },
+  { id: 760, symbol: "GOOGL", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "YouTube TV와 Peacock 딜 체결. Peacock 전 콘텐츠·라이브 스포츠 포함 YouTube Premium 구독자에게 내년 초부터. GOOGL 미디어 유통 파워 강화. 넷플릭스·디즈니와 차별화.",
+    createdAt: T28JL + 113*60_000, likes: 40, comments: 4 },
+  { id: 761, symbol: "SPX", nickname: "익명_2255", holdingLabel: "관심종목",
+    content: "Charlie Bilello: 반도체 밸류에이션이 이제 닷컴 버블 정점 초과. AI 혁명적이더라도 가격이 중요. NVDA·AMD·ARM 등 P/E 다 부담. BRK 대기·숏 15년 최고와 결합해 경고 시그널 다중.",
+    createdAt: T28JL + 122*60_000, likes: 47, comments: 4 },
+  { id: 762, symbol: "SPX", nickname: "익명_6688", holdingLabel: "관심종목",
+    content: "Barchart: S&P/M2 비율이 닷컴 정점과 정확히 같은 수준. 통화 대비 지수 밸류가 2000과 동일. 반도체 밸류 초과와 함께 매크로 경고 다중 축적. Fed 유동성 방향이 관건.",
+    createdAt: T28JL + 131*60_000, likes: 33, comments: 3 },
+  { id: 763, symbol: "SPX", nickname: "익명_9922", holdingLabel: "관심종목",
+    content: "JPMorgan은 반대로 매수 신호 · S&P 500 upside 지목. 낮은 채권 수익률·달러 약세·안정 Fed·강한 실적. 심리 lofty·미-이란 tension 리스크. 매크로 경고와 대형 하우스 매수 대립.",
+    createdAt: T28JL + 140*60_000, likes: 39, comments: 4 },
+
   // ── 2026-07-27 신규 ──────────────────────────────────────────────────────
   { id: 729, symbol: "GOOGL", nickname: "익명_3388", holdingLabel: "관심종목",
     content: "GOOGL이 재무제표에 SPCX 지분 fair value $94.1B로 공시. 2024 $30.1B에서 3배 재평가. 지분율 6%. 이 계산하면 SPCX 전체 밸류가 약 $1.57T급이라는 얘기. 어제까지 미실현 이익 얘기가 종합 결산 격.",
