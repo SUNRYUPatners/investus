@@ -55,10 +55,10 @@ async function saveHoldingsPayload(payload: HoldingsPayload): Promise<boolean> {
   // 1) Supabase Storage (prod-ready — no Upstash / Edge Config write token needed)
   try {
     const sb = getAdminSupabase();
-    const body = JSON.stringify(payload);
+    const bytes = Buffer.from(JSON.stringify(payload), "utf8");
     const { error } = await sb.storage
       .from(STORAGE_BUCKET)
-      .upload(STORAGE_OBJECT, body, {
+      .upload(STORAGE_OBJECT, bytes, {
         contentType: "application/json",
         upsert: true,
       });
