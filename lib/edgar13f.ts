@@ -5,6 +5,7 @@
  * - CUSIP → ticker (OpenFIGI + 로컬 캐시)
  */
 import { kvGetDetail, kvSetDetailEx } from "@/lib/kv";
+import { getAdminSupabase } from "@/lib/supabase";
 import type { Guru, Holding } from "@/lib/holdings13f";
 import { GURUS as SEED_GURUS } from "@/lib/holdings13f";
 
@@ -39,6 +40,75 @@ type FilingMeta = {
   reportDate: string;
   filerName: string;
 };
+
+type HoldingsPayload = {
+  gurus: Guru[];
+  accessions: Record<string, string>;
+  updatedAt: number;
+  source: string;
+};
+
+const STORAGE_BUCKET = "guru-cache";
+const STORAGE_OBJECT = "holdings-v1.json";
+
+async function saveHoldingsPayload(payload: HoldingsPayload): Promise<boolean> {
+  // 1) Supabase Storage (prod-ready — no Upstash / Edge Config write token needed)
+  try {
+    const sb = getAdminSupabase();
+    const body = JSON.stringify(payload);
+    const { error } = await sb.storage
+      .from(STORAGE_BUCKET)
+      .upload(STORAGE_OBJECT, body, {
+        contentType: "application/json",
+        upsert: true,
+      });
+    if (!error) return true;
+  } catch { /* fall through */ }
+
+  // 2) Supabase app_kv table (if migration applied)
+  try {
+    const sb = getAdminSupabase();
+    const { error } = await sb.from("app_kv").upsert({
+      key: KV_HOLDINGS_KEY,
+      value: payload,
+      updated_at: new Date().toISOString(),
+    });
+    if (!error) return true;
+  } catch { /* fall through */ }
+
+  // 3) Redis / Edge Config fallback
+  return kvSetDetailEx(KV_HOLDINGS_KEY, payload as unknown as Record<string, unknown>, HOLDINGS_TTL);
+}
+
+async function loadHoldingsPayload(): Promise<HoldingsPayload | null> {
+  try {
+    const sb = getAdminSupabase();
+    const { data, error } = await sb.storage.from(STORAGE_BUCKET).download(STORAGE_OBJECT);
+    if (!error && data) {
+      const text = await data.text();
+      const parsed = JSON.parse(text) as HoldingsPayload;
+      if (parsed?.gurus && Array.isArray(parsed.gurus)) return parsed;
+    }
+  } catch { /* fall through */ }
+
+  try {
+    const sb = getAdminSupabase();
+    const { data, error } = await sb
+      .from("app_kv")
+      .select("value")
+      .eq("key", KV_HOLDINGS_KEY)
+      .maybeSingle();
+    if (!error && data?.value && typeof data.value === "object") {
+      return data.value as HoldingsPayload;
+    }
+  } catch { /* fall through */ }
+
+  const raw = await kvGetDetail(KV_HOLDINGS_KEY);
+  if (raw && typeof raw === "object" && Array.isArray((raw as HoldingsPayload).gurus)) {
+    return raw as unknown as HoldingsPayload;
+  }
+  return null;
+}
 
 async function secFetch(url: string): Promise<Response> {
   return fetch(url, {
@@ -299,6 +369,8 @@ export type Update13FResult = {
   skipped: string[];
   errors: { id: string; error: string }[];
   accession: Record<string, string>;
+  kvSaved: boolean;
+  redis: boolean;
   at: string;
 };
 
@@ -309,13 +381,12 @@ export async function updateAll13FHoldings(force = false): Promise<Update13FResu
     skipped: [],
     errors: [],
     accession: {},
+    kvSaved: false,
+    redis: Boolean(process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN),
     at: new Date().toISOString(),
   };
 
-  const existing = await kvGetDetail(KV_HOLDINGS_KEY) as {
-    gurus?: Guru[];
-    accessions?: Record<string, string>;
-  } | null;
+  const existing = await loadHoldingsPayload();
 
   const accessions = { ...(existing?.accessions ?? {}) };
   const byId = new Map((existing?.gurus ?? SEED_GURUS).map((g) => [g.id, { ...g, holdings: [...g.holdings] }]));
@@ -383,23 +454,34 @@ export async function updateAll13FHoldings(force = false): Promise<Update13FResu
   const gurus = SEED_GURUS.map((seed) => byId.get(seed.id) ?? seed);
 
   if (result.updated.length > 0 || !existing?.gurus) {
-    await kvSetDetailEx(
-      KV_HOLDINGS_KEY,
-      { gurus, accessions, updatedAt: Date.now(), source: "edgar-13f" },
-      HOLDINGS_TTL,
-    );
+    const payload: HoldingsPayload = {
+      gurus,
+      accessions,
+      updatedAt: Date.now(),
+      source: "edgar-13f",
+    };
+    const saved = await saveHoldingsPayload(payload);
+    result.kvSaved = saved;
+    if (!saved) {
+      result.ok = false;
+      result.errors.push({ id: "_kv", error: "persist failed (Supabase app_kv / Upstash / Edge Config)" });
+    } else {
+      const check = await loadHoldingsPayload();
+      if (!check?.gurus?.length) {
+        result.ok = false;
+        result.kvSaved = false;
+        result.errors.push({ id: "_kv", error: "write ok but read-back empty" });
+      }
+    }
   }
 
   return result;
 }
 
 export async function getLiveGurus(): Promise<{ gurus: Guru[]; live: boolean; updatedAt: number | null }> {
-  const raw = await kvGetDetail(KV_HOLDINGS_KEY) as {
-    gurus?: Guru[];
-    updatedAt?: number;
-  } | null;
+  const raw = await loadHoldingsPayload();
   if (raw?.gurus && Array.isArray(raw.gurus) && raw.gurus.length > 0) {
-    return { gurus: raw.gurus as Guru[], live: true, updatedAt: raw.updatedAt ?? null };
+    return { gurus: raw.gurus, live: true, updatedAt: raw.updatedAt ?? null };
   }
   return { gurus: SEED_GURUS, live: false, updatedAt: null };
 }

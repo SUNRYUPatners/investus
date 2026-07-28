@@ -53,19 +53,22 @@ async function ecRead<T>(key: string): Promise<T | null> {
   }
 }
 
-async function ecWrite(key: string, value: unknown): Promise<void> {
+async function ecWrite(key: string, value: unknown): Promise<boolean> {
   const token  = process.env.VERCEL_API_TOKEN;
   const ecId   = process.env.EDGE_CONFIG_ID;
   const teamId = process.env.VERCEL_TEAM_ID;
-  if (!token || !ecId) return;
+  if (!token || !ecId) return false;
   const url = `https://api.vercel.com/v1/edge-config/${ecId}/items${teamId ? `?teamId=${teamId}` : ""}`;
   try {
-    await fetch(url, {
+    const res = await fetch(url, {
       method: "PATCH",
       headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
       body: JSON.stringify({ items: [{ operation: "upsert", key, value }] }),
     });
-  } catch {}
+    return res.ok;
+  } catch {
+    return false;
+  }
 }
 
 // ── Public types & TTL ────────────────────────────────────────────────────
@@ -92,10 +95,10 @@ export async function kvGetPrice(symbol: string): Promise<PriceData | null> {
   return ecRead<PriceData>(`price__${symbol}`);
 }
 
-export function kvSetPrice(symbol: string, data: PriceData): Promise<void> {
+export async function kvSetPrice(symbol: string, data: PriceData): Promise<void> {
   const r = getRedis();
   if (r) return r.set(`price:${symbol}`, data, { ex: PRICE_TTL }).then(() => {}).catch(() => {});
-  return ecWrite(`price__${symbol}`, data);
+  await ecWrite(`price__${symbol}`, data);
 }
 
 export async function kvGetDetail(key: string): Promise<DetailData | null> {
@@ -107,12 +110,19 @@ export async function kvGetDetail(key: string): Promise<DetailData | null> {
 }
 
 export function kvSetDetail(key: string, data: DetailData): Promise<void> {
-  return kvSetDetailEx(key, data, PRICE_TTL);
+  return kvSetDetailEx(key, data, PRICE_TTL).then(() => {});
 }
 
 /** Custom TTL (seconds). Use for quarterly data that must outlive the 7-day price TTL. */
-export function kvSetDetailEx(key: string, data: DetailData, ttlSeconds: number): Promise<void> {
+export async function kvSetDetailEx(key: string, data: DetailData, ttlSeconds: number): Promise<boolean> {
   const r = getRedis();
-  if (r) return r.set(`detail:${key}`, data, { ex: ttlSeconds }).then(() => {}).catch(() => {});
+  if (r) {
+    try {
+      await r.set(`detail:${key}`, data, { ex: ttlSeconds });
+      return true;
+    } catch {
+      /* try edge config */
+    }
+  }
   return ecWrite(`detail__${key.replace(/[^a-zA-Z0-9_-]/g, "_")}`, data);
 }

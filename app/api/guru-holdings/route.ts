@@ -11,7 +11,7 @@ export async function GET() {
       { gurus, live, updatedAt },
       {
         headers: {
-          "Cache-Control": "public, s-maxage=300, stale-while-revalidate=3600",
+          "Cache-Control": "private, no-store",
           "X-Guru-Source": live ? "kv" : "seed",
         },
       },
