@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="rgba(74,222,128,.18)" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">DAILY</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.07.29</text>
+
+  <text x="540" y="102" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#f9fafb" text-anchor="middle">Daily Snapshot · 2026.07.29</text>
+  <line x1="80" y1="120" x2="1000" y2="120" stroke="#1f2937" stroke-width="1"/>
+
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="110" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".12">19</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="70" font-weight="900" fill="#4ade80" text-anchor="middle">TOP 19</text>
+  <text x="540" y="298" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">AAPL $3.9T · SPCX -50% ATH · META×BLK $14B DC</text>
+  <text x="540" y="342" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">TSLA EU FSD 5.2× · Wood TSLA $8.8M · Tomorrow Fed + 4 prints</text>
+
+  <line x1="80" y1="374" x2="1000" y2="374" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="394" width="300" height="180" rx="16" fill="#141416" stroke="#a1a1aa" stroke-width="2"/>
+  <text x="210" y="446" font-family="Arial" font-size="40" text-anchor="middle">🏆</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a1a1aa" text-anchor="middle">AAPL $3.9T</text>
+  <text x="210" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">World's largest (NVDA +6%)</text>
+  <text x="210" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">2nd ever to reach</text>
+
+  <rect x="390" y="394" width="300" height="180" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="446" font-family="Arial" font-size="40" text-anchor="middle">📉</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX -50%</text>
+  <text x="540" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">From ATH · Record-low close</text>
+  <text x="540" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Red in 13 of 16 days</text>
+
+  <rect x="720" y="394" width="300" height="180" rx="16" fill="#0a1420" stroke="#1877f2" stroke-width="2"/>
+  <text x="870" y="446" font-family="Arial" font-size="40" text-anchor="middle">🏭</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#1877f2" text-anchor="middle">META×BLK $14B</text>
+  <text x="870" y="524" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">1 GW DC JV</text>
+  <text x="870" y="552" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">2028 · BLK 80%</text>
+
+  <rect x="60" y="594" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="646" font-family="Arial" font-size="40" text-anchor="middle">🛡️</text>
+  <text x="210" y="694" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA EU FSD 5.2×</text>
+  <text x="210" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Safer than humans</text>
+  <text x="210" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Q3 FR·DK·BE expand</text>
+
+  <rect x="390" y="594" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="646" font-family="Arial" font-size="40" text-anchor="middle">💰</text>
+  <text x="540" y="694" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Wood $8.8M</text>
+  <text x="540" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">18,730 TSLA Monday buy</text>
+  <text x="540" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">$309.22 dip continues</text>
+
+  <rect x="720" y="594" width="300" height="180" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="870" y="646" font-family="Arial" font-size="40" text-anchor="middle">🎢</text>
+  <text x="870" y="694" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">Tomorrow Fed+4</text>
+  <text x="870" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Fed 77% hold odds</text>
+  <text x="870" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">MSFT · META · QCOM · ARM</text>
+
+  <rect x="60" y="794" width="960" height="140" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="836" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">EXTRA COVERAGE</text>
+  <text x="540" y="874" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">Wood SPCX 10y lead · Starship F13 splash · TSLA Canada MY +98% · AZ 509MW+TX 140MW solar</text>
+  <text x="540" y="902" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">Unsup MY Robotaxi auto-return · Cybercab Giga TX · FR·ES wildfire free charge · FSD $6.5B+$781M ARR</text>
+  <text x="540" y="928" font-family="Arial" font-size="19" fill="#e5e7eb" text-anchor="middle">TSLA $100B rev→profit · KO Q2 beat · AMZN AI+AWS · Kuiper 3,232 · Moonshot K4 Blackwell</text>
+
+  <text x="540" y="974" font-family="Arial" font-size="20" fill="#374151" text-anchor="middle">INVESTUS · TOP 19 STORIES · 2026.07.29</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

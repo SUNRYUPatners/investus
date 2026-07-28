@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T29JL = 1785279600000; // 2026-07-29 08:00 KST
 const T28JL = 1785193200000; // 2026-07-28 08:00 KST
 const T27JL = 1785106800000; // 2026-07-27 08:00 KST
 const T25JL = 1784934000000; // 2026-07-25 08:00 KST
@@ -65,7 +66,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T28JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T29JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -84,6 +85,65 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-29 신규 ──────────────────────────────────────────────────────
+  { id: 764, symbol: "AAPL", nickname: "익명_5522", holdingLabel: "관심종목",
+    content: "AAPL $3.9T 시총 도달 · 사상 두번째 · 세계 최대 (NVDA 6% 상회) · Kobeissi 정리. 2003년 $10K 투자 시 오늘 $5.5M · 550배. 어제 $5T 임박 프레임보다는 시기 늦었지만 세계 최대 재역전 확정.",
+    createdAt: T29JL + 5*60_000, likes: 79, comments: 5 },
+  { id: 765, symbol: "SPCX", nickname: "익명_3311", holdingLabel: "20주 보유",
+    content: "SPCX 사상 최저 종가·ATH 대비 -50% 이상 하락·16일 중 13일 red. Barchart·Kalshi. 캐시 우드 10년 리드·Baron $30-40T 강세 견해와 정반대 시세. 반등 트리거 뭐가 있을까?",
+    createdAt: T29JL + 14*60_000, likes: 65, comments: 6 },
+  { id: 766, symbol: "SPCX", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "캐시 우드가 SPCX 10년 리드 재확인. 스케일 재사용성이 핵심 격차. Blue Origin 첫 착륙은 인정하지만 rebuild가 궤도 도달 실패. 시세 -50%와 프레임 극단 대립.",
+    createdAt: T29JL + 23*60_000, likes: 42, comments: 4 },
+  { id: 767, symbol: "TSLA", nickname: "익명_7788", holdingLabel: "300주 보유",
+    content: "캐시 우드가 월요일 TSLA 18,730주(~$8.8M) 매수. TSLA $309.22 종가. ARKK 기준. 지난주 -14% 급락일 $51M · 오늘 $8.8M 추가 = 지속 dip-buying.",
+    createdAt: T29JL + 32*60_000, likes: 71, comments: 5 },
+  { id: 768, symbol: "TSLA", nickname: "익명_1122", holdingLabel: "관심종목",
+    content: "TSLA 유럽 FSD Supervised 첫 안전 데이터: 사람 대비 5.2x 사고 감소. 고속도로 8.5x. Q3에 프랑스·덴마크·벨기에 확대 예정. 규제 승인 근거 확보.",
+    createdAt: T29JL + 41*60_000, likes: 53, comments: 4 },
+  { id: 769, symbol: "TSLA", nickname: "익명_6677", holdingLabel: "150주 보유",
+    content: "TSLA 캐나다 2026 Model Y 사실상 매진. RWD·AWD·Perf 인도 시간이 12월-1월로 밀림. Q2 판매 +98% YoY · 상반기 미국→베를린 공급 이전 전략 효과.",
+    createdAt: T29JL + 50*60_000, likes: 36, comments: 3 },
+  { id: 770, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "TSLA 하루에 두 건 태양광 딜. 애리조나 509 MW + 350 MW 배터리(KKR ContourGlobal Project Sterling 90% 인수 · 2028 가동) + 텍사스 140 MW. AI DC·자체 캐파 전력 확보.",
+    createdAt: T29JL + 59*60_000, likes: 41, comments: 3 },
+  { id: 771, symbol: "TSLA", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "Unsupervised Model Y Robotaxi fleet이 자율 귀환 · 각자 주차 찾기. 빨강·검정 차체에 Robotaxi 스티커. Aryan Butala 관측. Cybercab + Model Y 병렬 Robotaxi fleet 실체화.",
+    createdAt: T29JL + 68*60_000, likes: 48, comments: 4 },
+  { id: 772, symbol: "TSLA", nickname: "익명_1155", holdingLabel: "관심종목",
+    content: "Cybercab이 기가 텍사스 주변 직원 pickup·dropoff 지속. Herbert Ong. 어제 Houston 133대·SA 수백 대 Cybercab 배치와 결합해 상용 검증 단계 실체화. Robotaxi 26.6.0 코드 wide release 시나리오 정합.",
+    createdAt: T29JL + 77*60_000, likes: 33, comments: 3 },
+  { id: 773, symbol: "TSLA", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "TSLA가 프랑스·스페인 산불 지역 8/5까지 무료 슈퍼차징. 비-Tesla EV도 포함. 재난 대응·브랜드 신뢰·인프라 오픈 정책 상징.",
+    createdAt: T29JL + 86*60_000, likes: 28, comments: 3 },
+  { id: 774, symbol: "TSLA", nickname: "익명_9922", holdingLabel: "관심종목",
+    content: "Tesla FSD 라이선싱 매출 ~$6.5B · 월 구독 $781M ARR. Whole Mars Catalog. FSD가 소비자 옵션에서 B2B 라이선싱 축까지 확장. SaaS성 반복 매출.",
+    createdAt: T29JL + 95*60_000, likes: 56, comments: 4 },
+  { id: 775, symbol: "TSLA", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "Tesla가 $100B 매출 회사에서 $100B 이익 회사로 전환 중이라는 프레임. Whole Mars Catalog. 자율성·로보틱스 성장 축. Model Y·Cybercab·Optimus 3축 결합.",
+    createdAt: T29JL + 104*60_000, likes: 39, comments: 3 },
+  { id: 776, symbol: "SPCX", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "SPCX Starship 13번째 flight 로켓 극도로 부드럽게 splash · MASSIVE WIN. Jesus Watters. 어제 히트실드 스트레스 테스트 성공과 결합. Flight 14 ship catch 준비 강화.",
+    createdAt: T29JL + 113*60_000, likes: 47, comments: 4 },
+  { id: 777, symbol: "AMZN", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "AMZN AI 쇼핑 어시스턴트 사용 2배(2025) · 쇼퍼 절반 이상이 AI에 전체 구매 위임 의향. AWS 매 분기 가속(2023 이후). P/E 사상 최저. 내일 실적 발표.",
+    createdAt: T29JL + 122*60_000, likes: 34, comments: 4 },
+  { id: 778, symbol: "AMZN", nickname: "익명_5544", holdingLabel: "관심종목",
+    content: "Amazon Kuiper가 FCC에 3,232 direct-to-phone 위성 신청. Starlink와 정면 경쟁이지만 SPCX 이미 10년 앞선다는 프레임. 실행에 수년 소요.",
+    createdAt: T29JL + 131*60_000, likes: 30, comments: 3 },
+  { id: 779, symbol: "META", nickname: "익명_6688", holdingLabel: "관심종목",
+    content: "META·BLK 1 GW DC JV · 총 $14B · 루이지애나·텍사스 · 2028 가동 · BLK 80%·META 20%. 하이퍼스케일러 CAPEX 사이클에 BLK 자본 결합 새 축.",
+    createdAt: T29JL + 140*60_000, likes: 44, comments: 4 },
+  { id: 780, symbol: "KO", nickname: "익명_2255", holdingLabel: "관심종목",
+    content: "KO Q2 매출 $13.4B(+1.7% YoY 비트)·EPS $0.87(비트)·판매량 +5% YoY·마진 35.6%. FY26 가이던스 상향(유기 매출 ~5%·EPS 9-12%·FCF ~$12.4B). Buffett 대표 종목 견조.",
+    createdAt: T29JL + 149*60_000, likes: 25, comments: 3 },
+  { id: 781, symbol: "NVDA", nickname: "익명_4433", holdingLabel: "관심종목",
+    content: "중국 Moonshot AI가 Kimi K4 훈련 $1B+ 자금 조달 · K3(2.81B 파라미터)보다 훨씬 큼. 미국 수출 제한에도 중국 클라우드에서 Blackwell 활용. NVDA 매출·정치 쟁점.",
+    createdAt: T29JL + 158*60_000, likes: 38, comments: 3 },
+  { id: 782, symbol: "SPX", nickname: "익명_9977", holdingLabel: "관심종목",
+    content: "내일 Fed 유지 확률 77% + MSFT·META·QCOM·ARM 대형 실적 4개 동시. Kalshi 정리. 매크로+실적 롤러코스터. JPM bullish 확인/부인.",
+    createdAt: T29JL + 167*60_000, likes: 42, comments: 5 },
+
   // ── 2026-07-28 신규 ──────────────────────────────────────────────────────
   { id: 748, symbol: "AAPL", nickname: "익명_5522", holdingLabel: "100주 보유",
     content: "AAPL이 NVDA 넘어 세계 최고 가치 재역전. $5T 시총까지 약 $50B 남음. 10년 평균 ROIC 37%. 어제 Bilello의 FCF $135B 프레임 실체화. 현금 창출력 리더십.",

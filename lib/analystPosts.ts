@@ -17,6 +17,103 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-29 신규 ──────────────────────────────────────────────────────
+  {
+    id: -568, alias: "여의도 매 #22", symbol: "AAPL",
+    content: "The Kobeissi Letter: Apple이 사상 두번째로 $3.9T 시가총액 도달 · NVDA 6% 상회 · 세계 최대 상장 기업. 2003년 $10K → 오늘 $5.5M · 550배 수익. 어제(7/28) Shay Boloor의 $5T 임박 프레임을 실 $3.9T 도달로 정정 · 다만 세계 최대 위치 재역전은 확정. AAPL의 10년 평균 ROIC 37%·연간 FCF $135B와 결합해 현금 창출력 리더십 재확인. NVDA는 반도체 밸류 닷컴 초과·HBM 병목 등 조정 압박 · AAPL은 defensive position 강화. 시장이 AI 성장 프리미엄에서 현금 흐름 안정성 프리미엄으로 재조정되는 신호.",
+    likes: 76, comments: 5, created_at: "2026-07-29T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -569, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "SPCX가 사상 최저 종가·ATH 대비 -50% 이상 하락·최근 16일 중 13일 red(Barchart·Kalshi). 캐시 우드 10년 리드 강세 프레임 재확인·Baron $30-40T 예상·NASA Admin Duffy 강세·Moskowitz 6번째 의원 매수 등 다층 강세 견해가 축적됐지만 시세는 정반대 극단. Divergence 원인: (1) Baron/Wood 극단 강세는 10-15년 관점·단기 catalyst 부족, (2) 매크로 부담(반도체 밸류 닷컴 초과·S&P/M2 정점), (3) 개인 매수 중단, (4) Starship V4 로드맵 미완, (5) 상장 초 차익 실현. 반등 트리거 후보: Flight 14 ship catch·첫 상용 페이로드·TSLA·SPCX 합병 진전·NASA 계약 확대·매크로 완화.",
+    likes: 61, comments: 5, created_at: "2026-07-29T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -570, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "캐시 우드가 SPCX 10년 리드 재확인(Ark Invest Tracker). 스케일 재사용성이 핵심 격차 요인. SPCX가 10년 전 첫 로켓 착륙 후 궤도 재발사 성공 → 지속적 재사용 스케일 확대 = (1) 발사 비용 절감, (2) 발사 캐파 확대, (3) Starlink constellation, (4) 상용 페이로드 지배. Blue Origin은 지난해 New Glenn 첫 착륙 밀레스톤 인정 · 그러나 rebuild가 궤도 도달 실패 · 재사용 신뢰성 격차. 오늘 SPCX 사상 최저 종가·-50% ATH 시세와 대비되는 펀더멘털 강세 프레임 · 우드 논거가 옳으면 현재 시세는 진입점, 시세가 옳으면 강세 과장.",
+    likes: 41, comments: 4, created_at: "2026-07-29T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -571, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "캐시 우드의 ARK Invest가 월요일 TSLA 18,730주(약 $8.8M) 매수(Kalki). ARKK ETF 기준 · TSLA $309.22 종가. 지난주 -14% 급락일 $51M 매수(160,001주 · 4개 ETF)에 이은 dip-buying 지속. 총 약 $60M 대응 매수. TSLA 시세는 7/24 -14% → 7/27 $313.03(사상 최대 손실) → 오늘 $309.22로 추가 하락 지속. 우드가 강세 유지하는 근거: FSD 315M miles/day · Cybercab 실 배치(Houston 133+SA) · Optimus 800피트+ 확장 · 유럽 FSD 5.2x 안전 · FSD 라이선싱 $6.5B · 캐나다 MY +98%. 실체 진전과 시세 divergence.",
+    likes: 55, comments: 4, created_at: "2026-07-29T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -572, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "TSLA 유럽 Q2 FSD(Supervised) 첫 안전 데이터: 사람 대비 5.2x 사고 감소 · 고속도로 8.5x 안전(49,394 km/사고) · AEB 13.4x·보행자 제동 9.2x·차선 유지 7.1x·하드 스위브 7.6x 감소. 데이터 기간 4/10-7/28. Tesla Europe/ME + Sawyer Merritt. Q3 프랑스·덴마크·벨기에 확대 예정 · TCMV 승인 흐름 정합. FSD가 미국·중국·유럽 다지역·다플랫폼(v14.3.8·v14 Lite·V15 early) 스토리로 확대. 규제 승인 근거 확보 · 안전성 정량 데이터의 지속 축적.",
+    likes: 43, comments: 3, created_at: "2026-07-29T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -573, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "Tesla 캐나다 2026 Model Y 사실상 매진(Sawyer Merritt·TeslaZoo). RWD·AWD·Perf 인도 시간이 12월-1월로 밀림. 상반기 미국→베를린 공급 이전 전략 결과: (1) 관세 회피, (2) <$60K RWD 신규 트림, (3) Q2 판매 +98% YoY 급증. Tesla 공식 매진 발표는 없지만 인도 예정으로는 매진. 관세 대응 전략의 실체 효과 · <$60K 가격 정책 효과 · 캐나다 EV 시장 Tesla 점유율 확대. 부작용은 독일→캐나다 배송 물류 시간 증가. 다른 관세 대상 국가에도 유사 전략 적용 가능성.",
+    likes: 33, comments: 3, created_at: "2026-07-29T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -574, alias: "종로 매 #12", symbol: "TSLA",
+    content: "Tesla가 하루에 두 건 대형 태양광 딜 체결(Muskonomy·Bloomberg): (1) KKR 지원 ContourGlobal Project Sterling 애리조나 509 MW 태양광 + 350 MW 4h 배터리(총 1,400 MWh) 출력의 90% 인수·2028 가동, (2) 텍사스 140 MW 태양광 전체 출력 인수. Tesla가 (a) Megapack 판매 · (b) 태양광·저장 자체 인수 두 축 병행. 왜 지금: xAI Colossus 확장·자체 훈련 컴퓨트 필요 전력 확보·태양광 PPA 가격 유리·재생에너지 전략. Project Sterling은 태양광+4h 배터리 결합으로 24시간 안정 공급 가능 · 데이터센터에 특히 중요.",
+    likes: 37, comments: 3, created_at: "2026-07-29T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -575, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "Unsupervised Model Y Robotaxi fleet 자율 귀환 관측(Aryan Butala). 승객 운송 완료 후 각자 주차 · 빨강·검정 차체에 Robotaxi 스티커. Unsupervised는 완전 무인 · Supervised(감독자 필요)와 별개. Cybercab(신규 전용 차종) + Model Y(기존 활용) 두 축이 병렬로 상용 Robotaxi fleet 형성. FSD 315M miles/day · 유럽 5.2x 안전이 이 자율성의 기반. 반대 관점: 개인 관측 · 공식 확인 없음·실제 자율 수준 세부 미상. fleet 소유자·규모 확인 필요.",
+    likes: 45, comments: 4, created_at: "2026-07-29T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -576, alias: "부산 갈매기 #77", symbol: "TSLA",
+    content: "Tesla 직원 Cybercab pickup·dropoff이 기가 텍사스 주변에서 지속 관측(Herbert Ong). 어제 Houston 133대·SA 수백 대 Cybercab 배치 관측과 결합해 (1) 상용 배치 대기 상태, (2) 파일럿 지역 실 운영 두 축으로 진행. 직원 파일럿 의미: 통제된 사용자층으로 안전·서비스 품질 검증·실 데이터 수집·문제 발견·개선·점진 확장 로드맵. Robotaxi 26.6.0 앱 코드 wide release 시나리오와 정합 · Musk의 새 차대 자체 데이터 필요 설명(7/27)의 실 검증 단계. 직원 파일럿 → 상용 확장 시점이 관건.",
+    likes: 29, comments: 3, created_at: "2026-07-29T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -577, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "Tesla가 프랑스·스페인 산불 지역에 8/5 자정까지 무료 슈퍼차징 제공 · 비-Tesla EV도 포함(Sawyer Merritt). Ares(FR)·Málaga(ES)·Bigueros(FR) 등. 왜 이 정책이 중요: (1) 산불 재난 대응, (2) 인프라 오픈 정책 상징, (3) 브랜드 신뢰, (4) 경쟁사와 대비('가스·석유 회사가 무료 제공 드물다' Merritt 지적), (5) 유럽 확산 마케팅(비-Tesla 소유자가 슈퍼차징 UX 경험). NACS(미국)·CCS2(유럽) 표준으로 슈퍼차징 오픈 정책 지속 · 오늘의 재난 응용.",
+    likes: 24, comments: 3, created_at: "2026-07-29T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -578, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "Tesla FSD 라이선싱 매출 ~$6.5B · 월 구독 $781M ARR(Whole Mars Catalog). FSD가 소비자 옵션 → B2B 라이선싱 축 확장. 두 축: (1) B2B 라이선싱 누적 $6.5B (타 OEM · 대형 계약 + 로열티 · 회사 미공개), (2) B2C 월 구독 $781M ARR(148만+ 활성 유료). 왜 중요: 자동차 회사 → 소프트웨어 회사 이행 · 매출 다각화 · 높은 마진 · 경쟁 우위 지속. FSD가 (a) 안전성 5.2x, (b) 실주행 315M miles/day, (c) B2C 148만·$781M ARR, (d) B2B $6.5B 4축 모두 실체화. 오늘 $100B rev→profit 프레임의 핵심 축.",
+    likes: 51, comments: 4, created_at: "2026-07-29T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -579, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "Tesla가 $100B/년 매출 회사에서 $100B/년 이익 회사로 전환 중이라는 프레임(Whole Mars Catalog). 자율성·로보틱스 성장 축. 이익 축 3가지: (1) Model Y + FSD, (2) Cybercab + Robotaxi, (3) Optimus. 오늘까지 실체화된 진전: FSD 315M miles/day·148만 구독·$6.5B 라이선싱·$781M ARR·유럽 5.2x 안전 · Cybercab Houston·SA 배치·기가 텍사스 직원 파일럿 · Optimus 공장 800피트+ 확장·Tempe 채용. 세 축 모두 진행 · 시세는 별개. $100B 이익은 애플·아람코 수준의 야심찬 목표 · 실현 시간표 불확실.",
+    likes: 32, comments: 3, created_at: "2026-07-29T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -580, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "SPCX Starship 13번째 flight 로켓이 극도로 부드럽게 splash · MASSIVE WIN for Elon and SpaceX Program(Jesus Watters). 어제 히트실드 스트레스 테스트 성공 + 오늘 부드러운 splash = 재사용 신뢰성 축적. Flight 14 ship catch(booster catch에 이어 상단 vehicle까지 catch하는 완전 재사용 마일스톤) 준비 강화. 오늘 SPCX 시세는 사상 최저 종가·-50% ATH · 기술 성과와 시세 극단 divergence. Wood/Baron/NASA Admin 강세 + Flight 13 기술 성과 vs 매크로·심리 압박. Flight 14 시도 시점·V4/V5 로드맵·첫 상용 페이로드 계약이 후속 관찰 축.",
+    likes: 47, comments: 4, created_at: "2026-07-29T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -581, alias: "마포 올빼미 #24", symbol: "AMZN",
+    content: "AMZN 두 축 동시 가속(Evan·Ozzy Erken): (1) 리테일 AI - AI 쇼핑 어시스턴트 사용 2025년 2배·쇼퍼 절반 이상이 AI에 전체 구매 위임 의향, (2) AWS - 2023 이후 매 분기 가속·리테일·광고·서비스도 동반 가속·P/E 사상 최저. 하이퍼스케일러 프리미엄 대상: GOOGL FCF 첫 음전환 상황에서 AMZN 상대 매력 부각·두 축 동시 가속·매력적 밸류·내일 실적 발표. AWS 매 분기 가속은 (a) AI 인프라 수요 지속, (b) AWS 경쟁 우위 유지(Azure·GCP 대비), (c) 매출 성장 반전 이후 지속. 내일 AMZN Q2 관전 포인트: AWS 성장률·AI 매출·FCF·2027 CAPEX.",
+    likes: 40, comments: 4, created_at: "2026-07-29T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -582, alias: "종로 매 #12", symbol: "AMZN",
+    content: "Amazon Kuiper가 FCC에 3,232 direct-to-phone 위성 신청(DogeDesigner). SPCX Starlink Direct-to-Cell(T-Mobile)과 정면 경쟁. 그러나 SPCX 10년 앞선다는 프레임. Kuiper 현재: 위성 398(Starlink 10,700 대비)·발사 14(250+)·상용 초기·글로벌 없음. 오늘 3,232 신청은 (1) 별개 direct-to-phone 성좌, (2) FCC 인가 대기, (3) 실행 수년. SPCX 우위: 위성 10,700·Falcon 9 자체 발사 캐파·Direct-to-Cell 이미 상용·900+ 국가. 반대 관점: Amazon 자원(AWS·Bezos·Blue Origin) 매우 큼·direct-to-phone 초기 시장·Amazon 실행 능력 무시 못 함.",
+    likes: 28, comments: 3, created_at: "2026-07-29T01:43:00.000Z", liked: false,
+  },
+  {
+    id: -583, alias: "여의도 매 #22", symbol: "META",
+    content: "META와 BLK이 루이지애나·텍사스에 1 GW 데이터센터 JV 설립·총 개발비 ~$14B·2028 가동·BLK 80%·META 20%(Evan·Bloomberg). 특별한 구조: 통상 하이퍼스케일러가 자체 CAPEX로 짓는데 이번엔 BLK 인프라 펀드가 대주주·META는 소수 지분·CAPEX 부담 대폭 축소·위험 분산. AI DC 자본 조달 3가지 모델 대두: (1) GOOGL 자체 CAPEX(FCF 부담), (2) OpenAI 외부 backstop(Softbank $250B), (3) META×BLK 인프라 펀드 JV. META의 defensive 전략·BLK 신규 사업 축·MSFT·AMZN 유사 딜 가능성.",
+    likes: 46, comments: 4, created_at: "2026-07-29T01:50:00.000Z", liked: false,
+  },
+  {
+    id: -584, alias: "부산 갈매기 #77", symbol: "KO",
+    content: "Coca-Cola Q2 실적 비트(Evan): 매출 $13.4B(컨센 $13.16B·+1.7% YoY)·조정 EPS $0.87(컨센 $0.83)·판매량 +5% YoY·Comparable Op Margin 35.6%. FY26 가이던스 상향: 유기 매출 성장 ~5%·EPS 성장 9-12%·FCF ~$12.4B. 소비재 대형주 5각(매출·EPS·판매량·마진·가이던스) 모두 상회 · 판매량 +5%는 가격 뿐 아니라 실 소비 증가. defensive 축 재확인·91% EPS 비트 시즌 대표 사례·JPMorgan bullish 논거 지지. KO는 Berkshire Hathaway 30년+ 장기 보유·Buffett 프레임 상징. AAPL(성장) + KO(defensive) 시장 defensive 재편 두 축.",
+    likes: 26, comments: 3, created_at: "2026-07-29T01:57:00.000Z", liked: false,
+  },
+  {
+    id: -585, alias: "강남 표범 #46", symbol: "NVDA",
+    content: "중국 Moonshot AI가 Kimi K4 훈련 $1B+ 자금 조달·NVDA Blackwell 활용(Shay Boloor). K3(2.81B 파라미터)보다 훨씬 큰 K4·미국 수출 제한에도 중국 클라우드에서 접근·K3 이미 48시간 내 인프라 압도. Blackwell CN 접근 경로: (1) 수출 제한 이전 재고, (2) HK·SG·중동 우회, (3) H200 제한 이후 개조, (4) 정확 경로 일부 회색지대. NVDA에 미치는 시사: (a) CN 시장 매출 정치 리스크에도 지속·Jensen 오픈 접근 발언 정합, (b) Blackwell 수요가 미국 이외에서도 강함, (c) 수출 제한 정책 실효성 논쟁 · NVDA 매출 upside vs 다운사이드.",
+    likes: 38, comments: 3, created_at: "2026-07-29T02:04:00.000Z", liked: false,
+  },
+  {
+    id: -586, alias: "서초 콘도르 #59", symbol: "SPX",
+    content: "내일 롤러코스터 이벤트 조합(Kalshi): Fed 금리 유지 77% 확률 + MSFT·META·QCOM·ARM 4개 대형 실적 동시 발표. Fed 성명·기자회견 톤이 매크로 방향 결정 · 9월 인하 시사 여부 관건. 4개 실적: MSFT(Azure·AI·Copilot), META(광고·Reality Labs·오늘 BLK JV 세부), QCOM(모바일·자동차·AI PC), ARM(라이선싱·서버 CPU). 시나리오 매트릭스 4가지: A(Bull·Bull) 지수 상승, B(Bull·Bear) 매크로 완화에도 밸류 조정, C(Bear·Bull) 종목 divergence, D(Bear·Bear) 대형 조정. 매크로 경고(반도체 밸류·M2 정점) vs 실적 강세의 다층 대립이 내일 결판.",
+    likes: 41, comments: 4, created_at: "2026-07-29T02:11:00.000Z", liked: false,
+  },
+
   // ── 2026-07-28 신규 ──────────────────────────────────────────────────────
   {
     id: -552, alias: "여의도 매 #22", symbol: "AAPL",
