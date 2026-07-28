@@ -107,7 +107,12 @@ export async function kvGetDetail(key: string): Promise<DetailData | null> {
 }
 
 export function kvSetDetail(key: string, data: DetailData): Promise<void> {
+  return kvSetDetailEx(key, data, PRICE_TTL);
+}
+
+/** Custom TTL (seconds). Use for quarterly data that must outlive the 7-day price TTL. */
+export function kvSetDetailEx(key: string, data: DetailData, ttlSeconds: number): Promise<void> {
   const r = getRedis();
-  if (r) return r.set(`detail:${key}`, data, { ex: PRICE_TTL }).then(() => {}).catch(() => {});
+  if (r) return r.set(`detail:${key}`, data, { ex: ttlSeconds }).then(() => {}).catch(() => {});
   return ecWrite(`detail__${key.replace(/[^a-zA-Z0-9_-]/g, "_")}`, data);
 }
