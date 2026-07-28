@@ -35,12 +35,12 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -555, alias: "을지로 팔콘 #71", symbol: "TSLA",
-    content: "기가팩토리 텍사스 Cybertruck 라인이 12 column N-S grid로 확장되며 약 800피트(~150m) 근접(Joe Tegtmeyer). 남쪽으로 계속 확장 예정 · 철골 지속 도착. 프리몬트의 별개 NEW 파일럿 라인은 올해 말 온라인 예정(다른 위치). Cybercab 준비와 별개로 Cybertruck 캐파의 실체적 확장 신호. 최근 -14% 낙폭·다운그레이드 wave 등 주가 부정 반응 중이지만 실 캐파·배포는 계속 확대되는 divergence.",
+    content: "정정: 기가팩토리 텍사스의 Optimus 공장이 12 column N-S grid로 확장되며 약 800피트(~150m) 근접(Joe Tegtmeyer 원문 'Optimus factory hires at Giga Texas'). 앞선 배포에서 Cybertruck으로 잘못 attribution한 것을 정정. 지난주 시작 이후 급성장 · 남쪽으로 계속 확장 · Optimus 채용도 진행. Optimus 상용화의 실체적 진전 · 7/23 TOSV의 Optimus Gen 3 +20% · 7/24 Tempe Data Collection Ops Lead 채용과 결합해 다축 축적. 프리몬트 별개 NEW 파일럿 라인은 올해 말 온라인 예정(다른 위치·다른 대상).",
     likes: 33, comments: 3, created_at: "2026-07-28T00:26:00.000Z", liked: false,
   },
   {
     id: -556, alias: "광화문 늑대 #33", symbol: "TSLA",
-    content: "Houston에서 133 Cybertrucks 발견(S.E. Robinson) · Tesla Hempstead Center 5대·fleet lot 128대. 별개로 San Antonio에도 수백 대 배치 준비 중(Dalton Brewer가 Robotaxi 확장 가능성 언급). 두 텍사스 도시에 집중 배치되는 것은 (1) 기가팩토리 텍사스 근접, (2) 텍사스 Robotaxi 확장 후보 지역(Austin 이미 라이브), (3) Cybertruck의 SUV·픽업 특성, (4) 텍사스 자율주행 규제 유연성이 배경. Robotaxi 확장 지역·상용 고객 계약 발표가 후속 관찰 축.",
+    content: "정정: Houston에서 133 Cybercabs 발견(S.E. Robinson 원문 'Cybercabs' · Tesla Hempstead Center 5대·fleet lot 128대). 별개로 San Antonio에도 수백 대 Cybercabs 배치 준비 중(Dalton Brewer 원문 '100s of Cybercabs'). 앞선 배포에서 Cybertruck으로 잘못 attribution한 것을 정정. Cybercab이 실 상용 fleet로 배치되는 첫 대량 관측 · Robotaxi 서비스 지역 확장의 직접 신호. 7/25 Robotaxi 26.6.0 앱 코드의 Cybercab wide release 시나리오와 시간축 정합. Houston·SA Robotaxi 서비스 개시 발표·fleet 소유자 공식 확인이 후속 관찰 축.",
     likes: 42, comments: 4, created_at: "2026-07-28T00:33:00.000Z", liked: false,
   },
   {

@@ -48,10 +48,10 @@
   <text x="210" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">$30-40T 도달</text>
 
   <rect x="390" y="594" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="540" y="646" font-family="Arial" font-size="40" text-anchor="middle">🏭</text>
-  <text x="540" y="694" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Cybertruck TX</text>
+  <text x="540" y="646" font-family="Arial" font-size="40" text-anchor="middle">🚕</text>
+  <text x="540" y="694" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Cybercab TX</text>
   <text x="540" y="724" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Houston 133 · SA 수백대</text>
-  <text x="540" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Gigatx 800ft+ 확장</text>
+  <text x="540" y="752" font-family="Arial" font-size="17" fill="#6b7280" text-anchor="middle">Optimus 공장 800ft+ 별개</text>
 
   <rect x="720" y="594" width="300" height="180" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
   <text x="870" y="646" font-family="Arial" font-size="40" text-anchor="middle">⚠️</text>
