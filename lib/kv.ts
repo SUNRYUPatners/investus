@@ -1,10 +1,11 @@
 /**
- * Persistent key-value cache for price data across cold starts.
+ * Persistent key-value cache for price/detail data across cold starts.
  *
  * Backend priority:
- *   1. Upstash Redis (UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN)
- *   2. Vercel Edge Config (EDGE_CONFIG + VERCEL_API_TOKEN + EDGE_CONFIG_ID)
- *   3. No-op (local dev — silently skipped)
+ *   1. Upstash Redis (if UPSTASH_REDIS_REST_URL + TOKEN set)
+ *   2. Supabase Storage bucket `guru-cache` (prod-ready — no write-token issues)
+ *   3. Vercel Edge Config (read often works; write token frequently broken)
+ *   4. No-op (local dev — silently skipped)
  *
  * Writes return a Promise so callers can `await` them (e.g. inside Next.js
  * `after()`, which keeps the serverless function alive via `waitUntil` until
@@ -16,8 +17,9 @@
 
 import { Redis } from "@upstash/redis";
 import { createClient } from "@vercel/edge-config";
+import { getAdminSupabase } from "@/lib/supabase";
 
-// ── Upstash Redis (primary) ───────────────────────────────────────────────
+// ── Upstash Redis (primary when configured) ───────────────────────────────
 
 let _redis: Redis | null = null;
 
@@ -30,7 +32,44 @@ function getRedis(): Redis | null {
   return _redis;
 }
 
-// ── Vercel Edge Config (fallback) ─────────────────────────────────────────
+// ── Supabase Storage (prod fallback — same bucket as 13F holdings) ────────
+
+const STORAGE_BUCKET = "guru-cache";
+
+function storageObject(kind: "price" | "detail", key: string): string {
+  const safe = key.replace(/[^a-zA-Z0-9._-]/g, "_");
+  return `${kind}/${safe}.json`;
+}
+
+async function storageRead<T>(kind: "price" | "detail", key: string): Promise<T | null> {
+  try {
+    const sb = getAdminSupabase();
+    const { data, error } = await sb.storage.from(STORAGE_BUCKET).download(storageObject(kind, key));
+    if (error || !data) return null;
+    const text = await data.text();
+    return JSON.parse(text) as T;
+  } catch {
+    return null;
+  }
+}
+
+async function storageWrite(kind: "price" | "detail", key: string, value: unknown): Promise<boolean> {
+  try {
+    const sb = getAdminSupabase();
+    const bytes = Buffer.from(JSON.stringify(value), "utf8");
+    const { error } = await sb.storage
+      .from(STORAGE_BUCKET)
+      .upload(storageObject(kind, key), bytes, {
+        contentType: "application/json",
+        upsert: true,
+      });
+    return !error;
+  } catch {
+    return false;
+  }
+}
+
+// ── Vercel Edge Config (last resort) ──────────────────────────────────────
 
 let _ec: ReturnType<typeof createClient> | null = null;
 
@@ -92,12 +131,19 @@ export async function kvGetPrice(symbol: string): Promise<PriceData | null> {
   if (r) {
     try { return await r.get<PriceData>(`price:${symbol}`); } catch {}
   }
+  // Per-symbol prices are Redis/EC only — bulk home data lives in detail:market-data:v3
   return ecRead<PriceData>(`price__${symbol}`);
 }
 
 export async function kvSetPrice(symbol: string, data: PriceData): Promise<void> {
   const r = getRedis();
-  if (r) return r.set(`price:${symbol}`, data, { ex: PRICE_TTL }).then(() => {}).catch(() => {});
+  if (r) {
+    try {
+      await r.set(`price:${symbol}`, data, { ex: PRICE_TTL });
+      return;
+    } catch { /* fall through */ }
+  }
+  // Skip Supabase Storage for per-symbol writes (100+ keys / request). Edge Config best-effort.
   await ecWrite(`price__${symbol}`, data);
 }
 
@@ -106,6 +152,8 @@ export async function kvGetDetail(key: string): Promise<DetailData | null> {
   if (r) {
     try { return await r.get<DetailData>(`detail:${key}`); } catch {}
   }
+  const fromStorage = await storageRead<DetailData>("detail", key);
+  if (fromStorage) return fromStorage;
   return ecRead<DetailData>(`detail__${key.replace(/[^a-zA-Z0-9_-]/g, "_")}`);
 }
 
@@ -121,8 +169,9 @@ export async function kvSetDetailEx(key: string, data: DetailData, ttlSeconds: n
       await r.set(`detail:${key}`, data, { ex: ttlSeconds });
       return true;
     } catch {
-      /* try edge config */
+      /* try storage */
     }
   }
+  if (await storageWrite("detail", key, data)) return true;
   return ecWrite(`detail__${key.replace(/[^a-zA-Z0-9_-]/g, "_")}`, data);
 }

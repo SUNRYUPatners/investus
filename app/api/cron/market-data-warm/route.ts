@@ -1,6 +1,6 @@
 /**
- * 미국장 마감 직후 — 종가·지수·선물을 스스로 fetch해 Upstash KV에 저장.
- * 방문자가 없어도 새벽(KST) 접속 시 KV HIT로 즉시 응답되도록 워밍.
+ * 미국장 마감 직후 — 종가·지수·선물을 스스로 fetch해 Supabase Storage(KV)에 저장.
+ * 방문자가 없어도 새벽(KST) 접속 시 HIT로 즉시 응답되도록 워밍.
  *
  * Vercel Cron: 평일 20:20 / 20:35 / 21:20 UTC (+ DST 보정 21:xx)
  */

@@ -495,19 +495,21 @@ export async function GET(req: Request) {
     // 완전 데이터면 full TTL, 부분 데이터면 15초 후 재시도
     _cache = { data: payload, at: isComplete ? Date.now() : Date.now() - (LIVE_TTL - 15_000) };
 
-    const persist = async () => {
-      await Promise.allSettled([
-        kvSetDetail(KV_MARKET_KEY, payload as unknown as Record<string, unknown>),
-        ...priceWrites,
-      ]);
-    };
+    // 핵심: market-data 전체 페이로드 1건 저장 (cold start HIT용)
+    // 개별 종가(priceWrites)는 보조 — Storage에 111건 업로드하면 warm이 타임아웃날 수 있어 비동기
+    const persistCore = () =>
+      kvSetDetail(KV_MARKET_KEY, payload as unknown as Record<string, unknown>);
+    const persistPrices = () => Promise.allSettled(priceWrites);
 
-    // warm 크론: 응답 전에 KV 저장 완료 보장 (fire-and-forget 유실 방지)
+    // warm 크론: 응답 전에 핵심 페이로드 저장 완료 보장
     // 일반 요청: after()로 waitUntil — 응답은 빠르게, 쓰기는 함수 freeze 전 완료
     if (warm) {
-      await persist();
+      await persistCore();
+      after(persistPrices);
     } else {
-      after(persist);
+      after(async () => {
+        await Promise.allSettled([persistCore(), persistPrices()]);
+      });
     }
   }
 
