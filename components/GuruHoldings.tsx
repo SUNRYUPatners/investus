@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronDown, HelpCircle, X } from "lucide-react";
-import { GURUS, type Guru } from "@/lib/holdings13f";
+import { GURUS, isGuruFilingOverdue, type Guru } from "@/lib/holdings13f";
 import { useLocale } from "@/contexts/LocaleContext";
 import { SectionInfo } from "./SectionInfo";
 
@@ -18,7 +18,7 @@ const GURU_INFO: Record<string, { title: string; body: string }> = {
   },
   baron: {
     title: "론 베론",
-    body: "바론 캐피털 창업자. \"10년 이상 보유\"가 철학인 장기 성장주 투자자. 테슬라 초기 투자자로 유명. $310억 운용.",
+    body: "바론 캐피털 창업자. \"10년 이상 보유\"가 철학인 장기 성장주 투자자. 테슬라 초기 투자자로 유명. $331억 운용.",
   },
   pelosi: {
     title: "낸시 펠로시",
@@ -157,8 +157,8 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
           <p className="text-[9px] mt-0.5 font-mono-num" style={{ color: "var(--muted)" }}>
             공시 {guru.filingDate}
           </p>
-          <p className="text-[9px] font-mono-num" style={{ color: "var(--muted)" }}>
-            다음 {guru.nextFilingDate}
+          <p className="text-[9px] font-mono-num" style={{ color: isGuruFilingOverdue(guru) ? "#f59e0b" : "var(--muted)" }}>
+            {isGuruFilingOverdue(guru) ? "공시 대기 · " : "다음 "}{guru.nextFilingDate}
           </p>
         </div>
 
