@@ -20,6 +20,8 @@
     { "path": "/api/cron/market-data-warm", "schedule": "20 21 * * 1-5" },
     { "path": "/api/cron/market-data-warm", "schedule": "35 21 * * 1-5" },
     { "path": "/api/cron/market-data-warm", "schedule": "0 22 * * *" },
+    { "path": "/api/cron/13f-update", "schedule": "0 16 * * *" },
+    { "path": "/api/cron/13f-update", "schedule": "0 18 * * 1,3,5" },
     { "path": "/api/cron/subscription-recharge", "schedule": "0 18 * * *" }
   ]
 }

@@ -1,13 +1,9 @@
 /**
- * 13F / STOCK Act 공시 스냅샷
+ * 13F / STOCK Act 공시 스냅샷 (시드 / 폴백)
  *
- * 업데이트 규칙 (수동 — SEC EDGAR 기준):
- * - 13F 공시 마감: 분기 종료 후 45일 (대략 2/14, 5/15, 8/14, 11/14)
- * - 마감일±수일 내 EDGAR에서 최신 13F-HR 확인 후 GURUS 교체
- * - shares = 실제 주식 수 / 1,000 (천 주)
- * - nextFilingDate 가 지나면 UI에 "공시 대기" 표시
- *
- * 마지막 갱신: 2026-07-28 — 2026 Q1 (filed ~2026-05-15)
+ * 라이브 데이터는 SEC EDGAR 크론(`/api/cron/13f-update`)이
+ * Upstash KV(`guru-holdings:v1`)에 저장하고 `/api/guru-holdings`로 서빙한다.
+ * 이 파일의 GURUS는 KV 미스·STOCK Act(수시 공시)용 폴백이다.
  */
 export type Holding = {
   symbol:       string;

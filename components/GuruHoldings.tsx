@@ -303,6 +303,8 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
 
 export function GuruHoldings() {
   const t = useLocale();
+  const [gurus, setGurus] = useState<Guru[]>(GURUS);
+  const [live, setLive] = useState(false);
 
   // Persist open/closed state across navigation (back button restores state)
   const [openSet, setOpenSet] = useState<Set<string>>(() => {
@@ -311,6 +313,21 @@ export function GuruHoldings() {
       return new Set(JSON.parse(raw ?? "[]") as string[]);
     } catch { return new Set(); }
   });
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/guru-holdings")
+      .then((r) => r.json())
+      .then((d: { gurus?: Guru[]; live?: boolean }) => {
+        if (cancelled) return;
+        if (Array.isArray(d.gurus) && d.gurus.length > 0) {
+          setGurus(d.gurus);
+          setLive(Boolean(d.live));
+        }
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
 
   const toggle = (id: string) => {
     setOpenSet((prev) => {
@@ -331,7 +348,8 @@ export function GuruHoldings() {
             <div className="mt-2 space-y-1">
               <p>📋 분기 종료 후 <b>45일 이내</b> 공시 의무</p>
               <p>⏱️ 실제 매수 시점보다 최대 <b>3개월 늦게</b> 공개됨</p>
-              <p>❓ 각 투자대가 이름 옆 <b>?</b>를 눌러 개인 소개 확인</p>
+              <p>❓ 각 투자대가 이름 옆 <b>?</b>를 눌러 개인 설명 확인</p>
+              <p>🔄 SEC EDGAR 공시 시 <b>자동 갱신</b>{live ? " · 라이브" : ""}</p>
             </div>
           </SectionInfo>
           <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
@@ -351,7 +369,7 @@ export function GuruHoldings() {
       </div>
 
       <div className="flex flex-col gap-3">
-        {GURUS.map((guru) => (
+        {gurus.map((guru) => (
           <GuruCard
             key={guru.id}
             guru={guru}

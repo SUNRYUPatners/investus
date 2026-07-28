@@ -66,7 +66,7 @@ const ko = {
   guru: {
     sectionTitle: "13F / 투자 대가",
     subtitle:     "클릭하면 보유 종목 · 실시간 가격 확인",
-    notice:       "SEC 13F·STOCK Act 공시 기준 · 분기별 업데이트 · 현재가 Yahoo Finance 실시간",
+    notice:       "SEC 13F·STOCK Act 공시 기준 · EDGAR 자동 갱신 · 현재가 Yahoo Finance 실시간",
     colSymbol:    "종목",
     colWeight:    "비중",
     colPrice:     "현재가",
@@ -488,7 +488,7 @@ const en: typeof ko = {
   guru: {
     sectionTitle: "13F / Guru Holdings",
     subtitle:     "Click to view holdings & live prices",
-    notice:       "Based on SEC 13F & STOCK Act filings · Quarterly updates · Live prices via Yahoo Finance",
+    notice:       "Based on SEC 13F & STOCK Act filings · Auto-updated from EDGAR · Live prices via Yahoo Finance",
     colSymbol:    "Symbol",
     colWeight:    "Weight",
     colPrice:     "Price",
