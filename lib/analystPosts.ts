@@ -17,6 +17,68 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-30 신규 ──────────────────────────────────────────────────────
+  {
+    id: -587, alias: "여의도 매 #22", symbol: "MSFT",
+    content: "Microsoft Q4/FY26 실적 강세: Azure 매출이 분기 기준 사상 최초로 $100B 돌파. Microsoft 365 Copilot 유료 사용자 30M+ 도달. Azure 성장률 43% YoY로 재가속(2023 클라우드 둔화 우려 이후 매 분기 가속의 연속). 클라우드 매출 총 $155B(+76% YoY). EPS $4.34(컨센 $4.10, +5.8%)·매출 $90.10B(컨센 $87B, +18% YoY) 비트(Evan D). GOOGL FCF 첫 음전환(-$5.9B, 7/24)과 대비되는 하이퍼스케일러 강세 사례. Copilot 30M+은 Enterprise AI 통합의 실 채택 확인 · Microsoft 새 SW 매출 축. Azure 재가속은 (a) AI 워크로드 수요 지속, (b) Enterprise Copilot 확산, (c) OpenAI 파트너십 매출 반영. Mag 7 YTD -8.2%인 상황에서 오늘 실적이 반등 트리거 될지·FY26 CAPEX 가이던스 방향이 관건.",
+    likes: 71, comments: 5, created_at: "2026-07-30T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -588, alias: "강남 표범 #46", symbol: "META",
+    content: "META Q2 2026 실적 - 매출 record이지만 EPS 미스·비용 급증(Charlie Bilello·amit). 매출 $60.8B(+18~20% YoY) 사상 최고 · 광고 $59.4B(+21% YoY) · Family DAU 3.60B(+3%). 비용 $42.0B(+59% YoY 급증)·순이익 -14% YoY $15.5B·EPS $6.16(-13% YoY 컨센 $7.68 미스)·영업이익률 31%(전년 45%). Reality Labs 손실 -$4.62B · Q2 CAPEX $19.9B · FY26 CAPEX $105B+ 상향(컨센 $92B). Zuckerberg 낙관 톤 vs 시장 부정 반응. 어제 META-BLK 1GW DC JV($14B, BLK 80%/META 20%)는 META의 자체 CAPEX 부담 완화 전략 · BLK 자본이 하이퍼스케일러 CAPEX 사이클에 결합되는 새 축. 하이퍼스케일러 CAPEX 사이클 (GOOGL $200B · OpenAI $500B DC · META $105B+) 사상 최대 규모.",
+    likes: 53, comments: 4, created_at: "2026-07-30T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -589, alias: "서초 콘도르 #59", symbol: "NVDA",
+    content: "NVDA 부채 CDS(Credit Default Swap) 스프레드가 사상 최대 폭으로 상승(Barchart·Evan D). $750B 규모 AI 딜(OpenAI $500B DC·Meta $105B CAPEX·MSFT Azure 등) 확대 관련 신용 위험 재평가. 왜 급등: (1) 딜 규모 대형, (2) OpenAI investment-grade 없음·Softbank $250B backstop 필요 등 복잡 파이낸싱 구조, (3) 매출 집중 위험(OpenAI·MSFT·META·Google), (4) 반도체 밸류 닷컴 초과 → 조정 시 부채 롤오버 어려움. 밸류 프리미엄 vs 부채 위험의 divergence. 반대 관점: NVDA는 여전히 record 매출·$750B는 실 매출로 이어질 것. 시사점: (a) NVDA 채권-주식 divergence 확대 시 신용 시장이 조정 선행, (b) OpenAI 파이낸싱 성패가 검증 축, (c) CDS 상승 지속 시 NVDA 자체 부채 조달 비용 상승 → 마진 압박.",
+    likes: 67, comments: 5, created_at: "2026-07-30T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -590, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "SpaceX가 미 우주군에서 $1.6B 계약 획득 · Falcon 9 18개 발사 미션 · 군용 타겟팅 위성 배치(DogeDesigner). 어제 SPCX 사상 최저 종가·-50% ATH 시세와 대비되는 실 정부 매출. All-in Starship 결정(7/25)에도 Falcon 9은 여전히 군용·정부 계약에서 중심. 18 미션 백로그로 향후 수년 매출·발사 스케줄 확보. 어제까지 SPCX 흐름과의 결합: 캐시 우드 10년 리드·Ron Baron 20-30배·NASA Admin Duffy·Moskowitz 매수 등 다층 강세 vs -50% ATH 시세 divergence. 오늘 미 우주군 $1.6B는 정부 지지의 실체. 오늘 Pierre Ferragu의 'US needs SPCX' 프레임과 결합해 정치·국가 안보 축 재확인.",
+    likes: 46, comments: 4, created_at: "2026-07-30T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -591, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "캐시 우드가 SPCX와 TSLA를 지난 일주일 수백만 달러 규모로 지속 매수(Herbert Ong 정리). 우드는 시장이 강세장 끝이 아닌 wall of worry(불안 벽)을 오르는 중이라는 프레임 유지. 별개로 Ming이 정리한 관측: 화요일 세션에 TSLA 40,281주(약 $12.4M) 매수 · 월요일 $8.8M(18,730주)에 이은 이틀 연속. 지난 주 -14% 낙폭 이후 총 매수 $70M+. 우드 프레임의 근거: FSD 315M miles/day·Cybercab Houston·SA 배치·Optimus 800피트+ 확장·유럽 FSD 5.2x·FSD 라이선싱 $6.5B·캐나다 MY +98%·AZ 509MW+TX 140MW·오늘 호주 Novon 12번째 Megapack 등 다축 진전. 반대: 우드 규모는 TSLA 시가총액 대비 미미·다른 대형 기관 동조 없으면 시세 반전 어려움. Wall of worry vs 매크로 경고 divergence.",
+    likes: 58, comments: 5, created_at: "2026-07-30T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -592, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "Pierre Ferragu의 견해: 중국이 우주에서 공격적으로 따라오는 중 · 미국이 이기는 조건은 mass to orbit을 빠르게·저렴하게·대량으로 하는 것 · 성공적인 SPCX가 반드시 필요. 정치 리스크(민주 행정부)는 인정하지만 심각하게 보지 않음 · 국가 안보 관점에서 SPCX 필수. 어제 NASA Admin Sean Duffy 강세 발언(7/27)에 이은 정치·국가 안보 프레임. mass to orbit = 궤도까지 운반하는 질량 총량 · 재사용 발사체·낮은 발사 비용·높은 발사 빈도 3요소가 핵심 · SPCX가 압도적. 중국 우주 프로그램은 위성 발사 급증·우주 정거장·화성 탐사·Long March 재사용 개발 등 진전 · 그러나 재사용 신뢰성 격차. 이 프레임은 초당적 SPCX 지지의 근거.",
+    likes: 40, comments: 4, created_at: "2026-07-30T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -593, alias: "종로 매 #12", symbol: "UBER",
+    content: "8명 미 의회 의원(Hickenlooper·Boozman·Grassman·Armstrong·Bruening·Pelosi·Newhouse·Cohen)이 올해 UBER 매수(Nancy Pelosi Stock Tracker). 초당적(민주 4·공화 4). 주요 대형 매수: Pelosi 5월 20일 콜옵션 최대 $1M(2027년 1월 만료)·Trump 같은 날 최대 $5M. Uber는 같은 Q2에 로비 $1.25M 지출 · 정치인 매수 시점과 겹침. STOCK Act 논쟁 재점화 가능성: (1) 정보 우위 논쟁, (2) 로비-매수 상관관계, (3) 신고 지연 벌금 사례. UBER 정책 관심사(자율주행 규제·근로자 분류·국제 확장·데이터 프라이버시)가 매출·주가 직결. 반복 정치인 매수(7/23 LMT·7/28 SPCX Moskowitz·오늘 UBER) → STOCK Act 강화 법안 가능성.",
+    likes: 43, comments: 4, created_at: "2026-07-30T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -594, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "호주 Novon과 Tesla의 12번째 Megapack 배터리 프로젝트(Sawyer Merritt·Novon). 총 결합 캐파 2GW+ · Goyder 배터리 프로젝트 사이즈 두 배 확장 · 총 454MW/1,814MWh. Novon 기존 227MW/907MWh Stage 1 개발 · 이제 Stage 2까지 포함. Tesla 에너지 최근 흐름: 7/25 Q2 스토리지 $232.3/kWh -20% YoY 경쟁 심화 · 7/29 AZ 509MW+TX 140MW 태양광 두 건 · 오늘 호주 Novon 2GW+. Tesla가 (a) Megapack 판매, (b) 태양광·저장 자체 인수, (c) 국제 대형 프로젝트 다축 병행. 2GW+ 협업은 Tesla Megapack이 호주 renewable 축의 표준으로 자리매김 · 반복 고객 신뢰의 실체적 매출 전환. 반대: kWh 단가 -20% YoY 하락 상황에서 볼륨 성장이 매출 감소 상쇄 필요·CATL·BYD 호주 진출 예상.",
+    likes: 32, comments: 3, created_at: "2026-07-30T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -595, alias: "부산 갈매기 #77", symbol: "SPX",
+    content: "Ozgur Erken 매크로 프레임: 하이퍼스케일러 결합 클라우드 백로그 ~$2T · 향후 12-24개월에 50% 전환 예상 · 캐파 갱신은 훨씬 높은 가격에 · 볼륨 성장 결합해 2028+ 지속 outperform 예상. 개별 하이퍼 백로그: GOOGL $500B+ (7/27)·MSFT Azure $100B (오늘)·AMZN AWS 별도·OpenAI $500B DC 등 종합 $2T. 반대 관점: (a) 백로그 → 매출 전환 속도는 계약별 상이, (b) CAPEX 상승 vs FCF 압박(GOOGL 첫 음전환·META EPS 미스) 지속 시 이익 실현 지연, (c) 오늘 NVDA CDS 사상 최대 상승은 CAPEX 사이클 신용 리스크 신호, (d) 2028+ outperform은 3년+ 관점 · 단기 조정 리스크. 캐시 우드 wall of worry 프레임과 정합.",
+    likes: 38, comments: 4, created_at: "2026-07-30T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -596, alias: "강남 표범 #46", symbol: "SPX",
+    content: "한국 KOSPI가 -492.10(-8.17%)로 5,531.56 마감(Nancy Pelosi Stock Tracker 관측). CB(Circuit Breaker) 발동 이후 재개된 후에도 하락. 360K 마진 계좌 강제 청산 · 청산 대상 62%가 35세 미만. 하락 배경(일반적 관측): 글로벌 리스크 오프·원화 약세·삼성·SK하이닉스 조정·부동산 PF 부실·개인 마진 거래 확산. 젊은 층 62% 피해의 함의: (a) 20-30대 개인 투자 급증의 부작용, (b) 자산 손실 → 소비 위축, (c) 규제 강화 가능성. 최근 매크로 경고 축적(7/25 Fed hawkish·7/27 BRK 대기·숏 15년 최고·7/28 반도체 밸류 닷컴 초과·S&P/M2 정점·오늘 NVDA CDS 사상 최대)이 실 아시아 시장 급락으로 실체화. 미국 시가 반응·원화·엔·위안 통화 흐름·반도체 대형주 심리 파급 관건.",
+    likes: 74, comments: 5, created_at: "2026-07-30T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -597, alias: "서초 콘도르 #59", symbol: "SPX",
+    content: "Mag 7 2026 YTD 성과 divergence(Evan D): AAPL +23.1%(1위) · GOOG +9% · AMZN -4% · MSFT -8.2% · META -12.6%(최하위). NVDA·TSLA 별도. 상위 그룹(AAPL·GOOG): 현금 창출력·CAPEX 절제·Defensive 축. 하위 그룹(MSFT·META): CAPEX 급증 사이클·FCF 압박. AAPL 1위는 어제 확인된 $3.9T 세계 최대·10년 ROIC 37%·연간 FCF $135B와 정합. META -12.6% 최하위는 오늘 Q2 EPS 미스·CAPEX 상향과 정합. MSFT는 오늘 Azure 43% 재가속 확인 · 반등 트리거 될지 관건. 별개로 Whole Mars Catalog가 Mag 7이 S&P 500 대비 사상 최저 밸류에이션 근접이라는 관측 · 상대 밸류 관점의 매력. Wood wall of worry 프레임과 정합.",
+    likes: 41, comments: 4, created_at: "2026-07-30T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -598, alias: "을지로 팔콘 #71", symbol: "V",
+    content: "Visa가 인력의 약 7%(~2,000명) 감축 확정 · 주로 기술·제품 팀(Blossom). 대형 핀테크의 AI 자동화 대응·비용 구조조정 트렌드. 왜 지금: (1) AI 자동화 확산으로 코딩·QA·데이터 처리 자동화, (2) 핀테크 마진 압박(결제 수수료 인하·경쟁), (3) CAPEX vs OPEX 재편(AI 인프라 vs 인건비), (4) EPS 방어. Visa 최근 도전: 스테이블코인·크립토·BNPL·규제·AI 기반 결제. 시사점: (a) 다른 대형 핀테크(Mastercard·PayPal·AmEx) 유사 감축 확산 가능, (b) 결제 산업 AI 자동화 트렌드 강화, (c) 소프트웨어·기술 인력 시장 조정 지속, (d) Visa 마진 방어 → EPS 안정 → 주가에 방어적. Mag 7 하이퍼스케일러가 이미 각각 수천 명 감축 지속 흐름의 핀테크 확대판.",
+    likes: 26, comments: 3, created_at: "2026-07-30T01:22:00.000Z", liked: false,
+  },
+
   // ── 2026-07-29 신규 ──────────────────────────────────────────────────────
   {
     id: -568, alias: "여의도 매 #22", symbol: "AAPL",

@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T30JL = 1785366000000; // 2026-07-30 08:00 KST
 const T29JL = 1785279600000; // 2026-07-29 08:00 KST
 const T28JL = 1785193200000; // 2026-07-28 08:00 KST
 const T27JL = 1785106800000; // 2026-07-27 08:00 KST
@@ -66,7 +67,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T29JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T30JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -85,6 +86,50 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-30 신규 ──────────────────────────────────────────────────────
+  { id: 783, symbol: "MSFT", nickname: "익명_3311", holdingLabel: "관심종목",
+    content: "MSFT Q4 대박 · Azure 매출 $100B 첫 돌파 · Copilot 30M+ 유료 · Azure 43% YoY 재가속. 클라우드 매출 $155B(+76%). GOOGL FCF 음전환과 대비되는 하이퍼스케일러 강세.",
+    createdAt: T30JL + 5*60_000, likes: 74, comments: 5 },
+  { id: 784, symbol: "META", nickname: "익명_5522", holdingLabel: "관심종목",
+    content: "META Q2 매출 record $60.8B(+20%)이지만 비용 +59% 급증 · EPS $6.16(-13% 미스) · Reality Labs -$4.62B · FY26 CAPEX $105B+ 상향. 주가 부정 반응. GOOGL FCF 음전환 흐름 연장.",
+    createdAt: T30JL + 14*60_000, likes: 68, comments: 6 },
+  { id: 785, symbol: "NVDA", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "NVDA CDS 스프레드 사상 최대 상승. 부채 디폴트 대비 비용 급등 · $750B AI 딜 관련 신용 위험 재평가. 반도체 밸류 닷컴 초과 경고와 정합. 밸류 프리미엄 vs 부채 위험 divergence.",
+    createdAt: T30JL + 23*60_000, likes: 82, comments: 6 },
+  { id: 786, symbol: "SPCX", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "SPCX가 미 우주군 $1.6B 계약 · Falcon 9 18 미션 · 군용 타겟팅 위성. 어제 사상 최저 종가·-50% ATH 시세와 대비되는 실 정부 매출. All-in Starship 결정에도 Falcon 9은 여전히 정부 축.",
+    createdAt: T30JL + 32*60_000, likes: 58, comments: 4 },
+  { id: 787, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "500주 보유",
+    content: "캐시 우드가 SPCX·TSLA 매수 지속 · 시장이 wall of worry 오르는 중이라는 프레임. Herbert Ong. 어제 SPCX -50% ATH·오늘 NVDA CDS 사상 최대와 대비되는 대표 강세 프레임.",
+    createdAt: T30JL + 41*60_000, likes: 65, comments: 5 },
+  { id: 788, symbol: "TSLA", nickname: "익명_6699", holdingLabel: "관심종목",
+    content: "우드가 화요일 TSLA 40,281주(~$12.4M) 매수. 월요일 $8.8M에 이어 이틀 연속 · 지난 주 -14% 낙폭 이후 총 매수 $70M+. Ming. dip-buying 지속.",
+    createdAt: T30JL + 50*60_000, likes: 47, comments: 4 },
+  { id: 789, symbol: "SPCX", nickname: "익명_1155", holdingLabel: "관심종목",
+    content: "Pierre Ferragu: 미국이 우주에서 이기려면 SPCX가 필수 · 중국이 공격적으로 따라오는 중. mass to orbit을 빠르게·저렴하게·대량으로 하는 것이 승리 조건. 정치·국가 안보 프레임 재확인.",
+    createdAt: T30JL + 59*60_000, likes: 42, comments: 4 },
+  { id: 790, symbol: "UBER", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "8명 미 의원이 올해 UBER 매수. Pelosi 5월 20일 콜옵션 최대 $1M · Trump 같은 날 $5M · Uber Q2 로비 $1.25M. 정치인 매수 + 로비 동시 발생 · STOCK Act 논쟁 재점화.",
+    createdAt: T30JL + 68*60_000, likes: 55, comments: 5 },
+  { id: 791, symbol: "TSLA", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "호주 Novon과 12번째 Megapack 협업 · 총 결합 2GW+ · Goyder 배터리 프로젝트 두 배 확장 454MW/1,814MWh. Novon-Tesla 반복 협력의 신뢰. 호주 renewable 축 리더십.",
+    createdAt: T30JL + 77*60_000, likes: 34, comments: 3 },
+  { id: 792, symbol: "SPX", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "하이퍼스케일러 클라우드 백로그 결합 ~$2T · 12-24개월에 절반 전환 예상 · 갱신은 훨씬 높은 가격에 · 볼륨 성장 결합해 2028+ outperform 프레임. Ozgur Erken.",
+    createdAt: T30JL + 86*60_000, likes: 41, comments: 4 },
+  { id: 793, symbol: "SPX", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "한국 KOSPI -8.17%(-492.10) 5,531.56 마감. CB 발동. 360K 마진 계좌 강제 청산 · 62%가 35세 미만. 아시아 리스크 미국 시가 반응 관건.",
+    createdAt: T30JL + 95*60_000, likes: 72, comments: 6 },
+  { id: 794, symbol: "SPX", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "Mag 7 2026 YTD · AAPL +23.1% 1위 · GOOG +9% · AMZN -4% · MSFT -8.2% · META -12.6%. 하이퍼스케일러 CAPEX 부담 반영 · AAPL 현금 창출력 리더십. Evan D.",
+    createdAt: T30JL + 104*60_000, likes: 48, comments: 4 },
+  { id: 795, symbol: "SPX", nickname: "익명_2255", holdingLabel: "관심종목",
+    content: "Mag 7이 S&P 500 대비 사상 최저 밸류에이션 근접. Whole Mars Catalog. 상대 밸류 관점의 매력 부각 · 반도체 밸류 닷컴 초과 경고와 대비.",
+    createdAt: T30JL + 113*60_000, likes: 36, comments: 3 },
+  { id: 796, symbol: "V", nickname: "익명_6688", holdingLabel: "관심종목",
+    content: "Visa 7% 인력 감축 확정 · 약 2,000명 · 주로 기술·제품 팀. 대형 핀테크의 AI 자동화 대응 · 비용 구조조정 트렌드. 다른 핀테크(Mastercard·PayPal)도 유사 조정 예상.",
+    createdAt: T30JL + 122*60_000, likes: 29, comments: 3 },
+
   // ── 2026-07-29 신규 ──────────────────────────────────────────────────────
   { id: 764, symbol: "AAPL", nickname: "익명_5522", holdingLabel: "관심종목",
     content: "AAPL $3.9T 시총 도달 · 사상 두번째 · 세계 최대 (NVDA 6% 상회) · Kobeissi 정리. 2003년 $10K 투자 시 오늘 $5.5M · 550배. 어제 $5T 임박 프레임보다는 시기 늦었지만 세계 최대 재역전 확정.",
