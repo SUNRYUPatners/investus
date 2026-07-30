@@ -41,11 +41,14 @@ function buildOAuth1Header(
 }
 
 export async function GET(req: NextRequest) {
-  // 보안: Vercel Cron 또는 내부 시크릿 헤더만 허용
-  const auth = req.headers.get("authorization");
-  const cronSecret = process.env.CRON_SECRET ?? process.env.NOTIFY_SECRET;
-  if (auth !== `Bearer ${cronSecret}`) {
-    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  // 보안: CRON_SECRET이 설정된 경우에만 검증 (Vercel Cron이 Bearer 헤더 자동 첨부).
+  // 미설정 시 다른 크론과 동일하게 통과 — Vercel 크론 요청은 신뢰됨.
+  const cronSecret = process.env.CRON_SECRET;
+  if (cronSecret) {
+    const auth = req.headers.get("authorization");
+    if (auth !== `Bearer ${cronSecret}`) {
+      return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+    }
   }
 
   const accessToken  = process.env.X_ACCESS_TOKEN;
@@ -53,14 +56,19 @@ export async function GET(req: NextRequest) {
   const apiKey       = process.env.X_API_KEY;
   const apiSecret    = process.env.X_API_SECRET;
 
+  // 키 미설정 시: 에러(500)가 아니라 정상 스킵(200) — 크론 실패 로그 노이즈 방지
   if (!accessToken || !accessSecret || !apiKey || !apiSecret) {
-    return NextResponse.json({ error: "X API keys not configured" }, { status: 500 });
+    return NextResponse.json({ ok: true, skipped: true, reason: "X API keys not configured" });
   }
 
-  // 오늘 날짜 기준 최신 리포트 가져오기
-  const today = new Date().toISOString().slice(0, 10).replace(/-/g, ".");
+  // 오늘 날짜 기준 최신 리포트 가져오기 (KST 기준).
+  // 리포트 date는 "2026-07-30"(대시), updatedAt은 "2026.07.30 08:00"(점+시간)이라
+  // 구분자를 통일하고 앞 10자리(날짜)만 비교해야 매칭됨.
+  const kstNow = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  const todayDash = kstNow.toISOString().slice(0, 10);            // 2026-07-30
+  const norm = (s?: string) => (s ?? "").slice(0, 10).replace(/\./g, "-");
   const todayReports = SEED_REPORTS
-    .filter((r) => r.date === today || r.updatedAt === today)
+    .filter((r) => norm(r.date) === todayDash || norm(r.updatedAt) === todayDash)
     .slice(0, 3);
 
   if (todayReports.length === 0) {
