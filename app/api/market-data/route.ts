@@ -9,7 +9,7 @@ function yfProxyFetch(url: string, init: RequestInit = {}): Promise<Response> {
   return fetch(url, { headers: { "User-Agent": "Mozilla/5.0", Accept: "application/json" }, ...init });
 }
 import { fetchStooqFuture } from "@/lib/stooq";
-import { isMarketOpen } from "@/lib/marketHours";
+import { isMarketOpen, secondsUntilNextOpen } from "@/lib/marketHours";
 import { kvGetDetail, kvSetDetail, kvGetPrice, kvSetPrice } from "@/lib/kv";
 import {
   mockQuotes, mockFutures,
@@ -184,9 +184,17 @@ export async function GET(req: Request) {
   const warm    = url.searchParams.has("warm");
   const open    = isMarketOpen();
 
-  const ccHeader = open
-    ? "public, s-maxage=55, stale-while-revalidate=120"
-    : "public, s-maxage=14400, stale-while-revalidate=86400"; // 장 마감 4시간 CDN 캐시 (새벽 cold-start 방어)
+  // 장 마감 중 CDN 캐시는 "다음 장 시작"을 절대 넘기지 않도록 캡을 씌운다.
+  // (과거: s-maxage=14400 + swr=86400 → 장 시작 후에도 CDN이 어제 종가를 몇 시간 서빙하던 버그)
+  let ccHeader: string;
+  if (open) {
+    ccHeader = "public, s-maxage=55, stale-while-revalidate=60";
+  } else {
+    const untilOpen = secondsUntilNextOpen();
+    // 개장 60초 전에는 반드시 만료 — 개장 직후 첫 요청이 원본에서 실시간 시세를 받아옴
+    const ttl = Math.max(60, Math.min(14400, untilOpen - 60));
+    ccHeader = `public, s-maxage=${ttl}, stale-while-revalidate=${ttl}`;
+  }
 
   // ── cold start: 인메모리 없으면 즉시 KV에서 복원 ────────────────────────────
   const STALE_LIMIT = 30 * 60_000; // 장 중 30분 초과 데이터는 신뢰 불가 → API 강제 갱신

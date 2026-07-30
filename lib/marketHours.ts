@@ -65,6 +65,38 @@ export function isNYSEHoliday(date?: Date): boolean {
   return NYSE_HOLIDAYS.has(toETDateString(date));
 }
 
+/**
+ * Seconds until the next regular-session open (09:30 ET), skipping weekends
+ * and NYSE holidays. Returns 0 while the market is already open.
+ *
+ * Used to cap CDN cache TTL so a response generated after the close can never
+ * outlive the next open — otherwise the CDN keeps serving yesterday's close
+ * for hours into the new session.
+ */
+export function secondsUntilNextOpen(from?: Date): number {
+  const now = from ?? new Date();
+  if (isMarketOpen()) return 0;
+
+  // Date whose *local* fields mirror ET wall-clock, so diffs are wall-clock diffs.
+  const et = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+
+  for (let offset = 0; offset <= 8; offset++) {
+    const cand = new Date(et);
+    cand.setDate(et.getDate() + offset);
+    cand.setHours(9, 30, 0, 0);
+    if (cand.getTime() <= et.getTime()) continue;
+
+    const dow = cand.getDay();
+    if (dow === 0 || dow === 6) continue;
+
+    const ymd = `${cand.getFullYear()}-${String(cand.getMonth() + 1).padStart(2, "0")}-${String(cand.getDate()).padStart(2, "0")}`;
+    if (NYSE_HOLIDAYS.has(ymd)) continue;
+
+    return Math.max(0, Math.round((cand.getTime() - et.getTime()) / 1000));
+  }
+  return 3600;
+}
+
 /** Returns true if the US stock market is currently open (regular session). */
 export function isMarketOpen(): boolean {
   const now = new Date();

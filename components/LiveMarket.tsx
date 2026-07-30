@@ -16,7 +16,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION, proPriceSummaryKo } from "@/lib/subscription";
 import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
 
-type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[] };
+type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[]; liveAt?: number };
 
 function useScrollIndicator() {
   const ref = useRef<HTMLDivElement>(null);
@@ -85,14 +85,17 @@ export function LiveMarket() {
   // Ref so the interval always calls the latest version of doLoad
   const doLoadRef = useRef<(isRetry?: boolean) => void>(() => {});
 
-  const doLoad = (isRetry = false, retryDelay = 3000) => {
+  const doLoad = (isRetry = false, retryDelay = 3000, bustCdn = false) => {
     if (isRetry) { setLoading(true); }
 
     // 15초 타임아웃
     const controller = new AbortController();
     const timeout    = setTimeout(() => controller.abort(), 15_000);
 
-    fetch("/api/market-data", { signal: controller.signal, cache: "no-store" })
+    // bustCdn: 장 중인데 CDN이 오래된 응답을 물고 있을 때 우회용
+    const url = bustCdn ? `/api/market-data?ts=${Date.now()}` : "/api/market-data";
+
+    fetch(url, { signal: controller.signal, cache: "no-store" })
       .then((r) => {
         if (r.status === 503) throw Object.assign(new Error("retry"), { retry: true });
         if (!r.ok) throw new Error("http " + r.status);
@@ -102,6 +105,14 @@ export function LiveMarket() {
         clearTimeout(timeout);
         const hasData = (d?.quotes?.length ?? 0) > 0 || (d?.indices?.length ?? 0) > 0;
         if (!hasData) throw new Error("empty");
+
+        // 장 중인데 데이터가 10분 이상 오래됐으면 CDN 스테일 → 캐시 우회로 1회 재요청.
+        // (장 마감 캐시가 개장 후까지 서빙되어 어제 종가가 보이던 문제 방어)
+        const dataAge = Date.now() - (d.liveAt ?? 0);
+        if (!bustCdn && isMarketOpen() && dataAge > 10 * 60 * 1000) {
+          doLoad(false, retryDelay, true);
+          return;
+        }
 
         // 누락 심볼 보완: RECOMMENDED_SYMBOLS + POPULAR 중 quotes에 없는 심볼 개별 fetch
         const quoteSym = new Set(d.quotes.map((q) => q.symbol));
