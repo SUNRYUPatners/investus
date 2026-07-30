@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T31JL = 1785452400000; // 2026-07-31 08:00 KST
 const T30JL = 1785366000000; // 2026-07-30 08:00 KST
 const T29JL = 1785279600000; // 2026-07-29 08:00 KST
 const T28JL = 1785193200000; // 2026-07-28 08:00 KST
@@ -67,7 +68,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T30JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T31JL;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -86,6 +87,50 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-07-31 신규 ──────────────────────────────────────────────────────
+  { id: 797, symbol: "SPCX", nickname: "익명_5522", holdingLabel: "관심종목",
+    content: "SPCX가 미 우주군 Falcon 9 $1.8B 계약 · Vandenberg 월 1회 · 2027까지 · NSSL Phase 3 최대 task. 어제 $1.6B에 이어 이틀 만에 $3.4B 정부 매출 확보. -50% ATH 시세와 대비되는 실 계약.",
+    createdAt: T31JL + 5*60_000, likes: 68, comments: 5 },
+  { id: 798, symbol: "TSLA", nickname: "익명_3311", holdingLabel: "관심종목",
+    content: "NHTSA가 AV 정책 대개편 · L4 표준화·3년/$5M ADSDONO·단일 국가 표준·50개주 patchwork 해소. Tesla·Waymo 전면 수혜. Sean Duffy 지시.",
+    createdAt: T31JL + 14*60_000, likes: 52, comments: 4 },
+  { id: 799, symbol: "TSLA", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "Cybercab 규제 우위 확인. Zoox는 2,500대 임시 exemption(2년 제한)인데 Tesla는 self-certify로 cap 미적용·무제한 생산. Tesla 엔지니어링 리더 확인. Ming.",
+    createdAt: T31JL + 23*60_000, likes: 71, comments: 5 },
+  { id: 800, symbol: "TSLA", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "Tesla 10 million 번째 차량 · Fremont에서 Diamond Black Model Y로 제조. 2003 창립 이후 23년. 1M까지 12년·10M까지 23년 = 페이스 급가속. 다지역·다차종 결합 결과.",
+    createdAt: T31JL + 32*60_000, likes: 85, comments: 6 },
+  { id: 801, symbol: "GOOGL", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "Google Anthropic 지분 가치 Q2에 $53.4B 증가. 7/25 리포트한 $8.4B에서 훨씬 큰 규모로 재평가. AI 스타트업 밸류 사이클 확인. Evan D.",
+    createdAt: T31JL + 41*60_000, likes: 46, comments: 4 },
+  { id: 802, symbol: "AMZN", nickname: "익명_6699", holdingLabel: "관심종목",
+    content: "AMZN Q2 순이익 $62.6B(3배)·2026 CAPEX $200B → $220B 상향·2027 더 상향·수요 공급 훨씬 초과·AI 매출 $77B+·주가 +8%. 어제 예상한 AI 쇼핑+AWS 이중 축 성장 실 확인.",
+    createdAt: T31JL + 50*60_000, likes: 92, comments: 7 },
+  { id: 803, symbol: "SPX", nickname: "익명_1155", holdingLabel: "관심종목",
+    content: "Aschenbrenner Situational Awareness Fund 강제 청산. 6월까지 +439% 후 AI 대형 손실로 마진콜. Citadel이 포트폴리오 인수. SNTA·TVTX 등 큰 하락. AI 유동성 리스크.",
+    createdAt: T31JL + 59*60_000, likes: 78, comments: 6 },
+  { id: 804, symbol: "NVDA", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "Jensen: '거의 모든 Musk 프로젝트 참여 · xAI에 더 못 준 것이 유일한 후회'. NVDA-xAI 전략 결합 심화 · Grok/Colossus 확대 시사. DogeDesigner.",
+    createdAt: T31JL + 68*60_000, likes: 54, comments: 4 },
+  { id: 805, symbol: "MSFT", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "MSFT Q4 · EPS $3.65·Rev $76.4B·Cloud +27%·Azure 43%(다음 가이던스 45%)·백로그 +51%·CAPEX +60% 엔터프라이즈·클라우드 매출 90% 비프런티어. MSFT가 프런티어 랩 아닌 하이퍼스케일러로 명시.",
+    createdAt: T31JL + 77*60_000, likes: 63, comments: 5 },
+  { id: 806, symbol: "SPX", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "Michael Burry 신규 포지션 · MU $880·SOXX $208·META $600·DKNG $23 숏 · GOOGL $178·AMZN $210·Nebius 롱 · Tesla/Palantir 유지. 반도체 숏 vs 하이퍼스케일러 롱 divergence 베팅.",
+    createdAt: T31JL + 86*60_000, likes: 57, comments: 5 },
+  { id: 807, symbol: "SPCX", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "캐시 우드가 이번 주 SPCX 356,600주(~$50.2M) 매수. 월-수 3거래일 매일 매수. ARKW 229K·ARKQ 66K·ARKX 32K·ARKG 30K 분산. -50% ATH 상황에도 wall of worry 프레임 실행.",
+    createdAt: T31JL + 95*60_000, likes: 49, comments: 4 },
+  { id: 808, symbol: "SPX", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "US 기업 임원(insider) 매도가 30년래 두번째 빠른 페이스 · 클래식 red flag. Barchart. 오늘 Aschenbrenner 청산과 결합해 매크로 부담 신호 축적.",
+    createdAt: T31JL + 104*60_000, likes: 44, comments: 4 },
+  { id: 809, symbol: "TSLA", nickname: "익명_2255", holdingLabel: "관심종목",
+    content: "Tesla가 AZ Project Sterling 태양광 딜 정식 확인 · 458 MW(509 MW의 90%)·2028 가동·350 MW 4h 배터리 결합 24/7 renewable. Musk가 Global Supercharger 재생 공급 프레임 명시적 확인.",
+    createdAt: T31JL + 113*60_000, likes: 38, comments: 3 },
+  { id: 810, symbol: "GOOGL", nickname: "익명_6688", holdingLabel: "관심종목",
+    content: "GOOGL-Anthropic $15B DC 대출 · 텍사스 Hubbard · Morgan Stanley 주도 · 1.6 GW 자체 가스 발전 · Google 지불 보증. OpenAI $500B·META×BLK $14B와 다른 CAPEX 자본 조달 모델. WSJ.",
+    createdAt: T31JL + 122*60_000, likes: 55, comments: 4 },
+
   // ── 2026-07-30 신규 ──────────────────────────────────────────────────────
   { id: 783, symbol: "MSFT", nickname: "익명_3311", holdingLabel: "관심종목",
     content: "MSFT Q4 대박 · Azure 매출 $100B 첫 돌파 · Copilot 30M+ 유료 · Azure 43% YoY 재가속. 클라우드 매출 $155B(+76%). GOOGL FCF 음전환과 대비되는 하이퍼스케일러 강세.",

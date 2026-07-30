@@ -17,6 +17,78 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-07-31 신규 ──────────────────────────────────────────────────────
+  {
+    id: -599, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "SPCX가 미 우주군에서 Falcon 9 $1.8B 계약 획득(Joe Hansen). Space-Based Sensing and Targeting 포트폴리오 · Vandenberg에서 월 1회 발사 · 2027까지 · NSSL Phase 3 Lane 1 단일 최대 task order. 어제 $1.6B 계약(18 미션)에 이은 이틀 만에 $3.4B 정부 매출 확보. All-in Starship 결정에도 Falcon 9은 2027까지 정기 발사 축 · Starship이 2028+ 상용 자리잡을 때까지 브릿지 역할. -50% ATH 시세와 대비되는 실 정부 매출 · 캐시 우드 이번 주 $50.2M 매수·Baron $30-40T·Jonas $135·Duffy·Moskowitz 등 다층 강세 견해와 결합. 시세 반전 트리거 축적 가능성.",
+    likes: 68, comments: 5, created_at: "2026-07-31T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -600, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "NHTSA AV 정책 대개편(Sean Duffy 지시 · Sawyer Merritt 정리): L4 성능 표준을 SAE 산업 파트너십으로 가속·SGO 리포팅 개선·3년/$5M ADSDONO 컨소시엄으로 안전 데이터 공유·단일 국가 AV 안전 표준으로 50개주 patchwork 해소·FMVSS 개정. Tesla·Waymo·Zoox 등 전면 수혜. 자율주행 상용화 3-5년 앞당김 가능. Duffy가 우주(NASA Admin)+자율주행(NHTSA) 두 축 모두 Musk 우호적 정책 담론 주도. 실 표준 발효 시점·주별 규제 조정·L5 후속 논의가 관찰 축.",
+    likes: 47, comments: 4, created_at: "2026-07-31T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -601, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "Cybercab 규제 우위 확정(Ming 분석): NHTSA가 Zoox(Amazon 소유)에 2,500대 임시 exemption 부여했지만 2년 제한 · Tesla는 Cybercab을 기존 FMVSS 규정에 맞춰 self-certify하여 이 cap이 적용되지 않음 · Tesla 엔지니어링 리더 공식 확인 · 무제한 생산 가능. Self-certify vs exemption 접근의 차이: exemption은 대수·지역·기간 제한·확장 시 추가 승인 · self-certify는 사전 승인 불필요·규정 변경 시에도 유연. Cybercab이 기가 텍사스 파일럿·Houston·SA 배치와 결합해 실 상용 확장 준비 완료. Zoox 대비 대량 우위 확보.",
+    likes: 72, comments: 5, created_at: "2026-07-31T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -602, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "Tesla가 사상 10 million 번째 차량을 Fremont에서 공식 제조(Sawyer Merritt) · Diamond Black Model Y. 2003 창립 이후 23년 만. 1M까지 12년·10M까지 23년 = 페이스 급가속. 최근 다지역 생산 정상화(상하이 Model 3·캐나다 Model Y +98%)·Cybertruck·Cybercab 확장·FSD 라이선싱 $6.5B+구독 $781M ARR·AI/자율성 매출 다각화가 결합된 결과. 다음 마일스톤(20M) 시점이 관건 · Cybercab·Optimus 별도 카운트 여부·실 이익률 회복 시점이 관찰 축.",
+    likes: 63, comments: 5, created_at: "2026-07-31T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -603, alias: "광화문 늑대 #33", symbol: "GOOGL",
+    content: "GOOGL이 보유한 Anthropic 지분 가치가 Q2 한 분기에 약 $53.4B 증가(Evan D). 7/25 리포트한 $8.4B → 이제 훨씬 큰 규모. AI 스타트업 밸류에이션 사이클 확인 · Anthropic 최근 라운드 반영. GOOGL non-core 지분 자산 mega-cap 규모: SPCX 지분 6% $94.1B(7/27) + Anthropic 지분(오늘 +$53.4B) + Waymo·Wing 등. AI 관련 자산 대규모 재평가. 반대: 스타트업 밸류는 라운드 기반·시장 조정 시 급락 가능·Anthropic IPO 전까지 유동성 부족·오늘 Aschenbrenner 청산이 유동성 리스크 신호. 오늘 GOOGL-Anthropic $15B DC 대출 딜과 결합.",
+    likes: 41, comments: 4, created_at: "2026-07-31T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -604, alias: "마포 올빼미 #24", symbol: "AMZN",
+    content: "Amazon Q2 실적 대박(WOLF DEN·amit): 순이익 $62.6B로 3배 성장(단일 분기 사상 최대 투자 붐) · 2026 CAPEX $200B → $220B 상향·2027 더 상향 예정·수요가 공급보다 훨씬 많음·AI 매출 $77B+ 전망·주가 +8% 반등. 어제 AMZN AI 쇼핑 어시스턴트 사용 2배·AWS 매 분기 가속·P/E 사상 최저 프레임이 실적으로 확인. CAPEX $220B는 GOOGL 2026 $200B·MSFT +60% 엔터프라이즈와 유사 규모 · MAG 7 CAPEX $1T+ 진입. 시사점: 하이퍼스케일러 강세 재확인·AI ROI 스토리 시장 신뢰·AMZN Mag 7 YTD -4% 반등 시작·NVDA 매출 증가 시사. 반대: CAPEX 지속 상승이 FCF 압박·Burry SOXX 숏과 정합.",
+    likes: 85, comments: 6, created_at: "2026-07-31T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -605, alias: "종로 매 #12", symbol: "SPX",
+    content: "시장 이벤트 - Aschenbrenner Situational Awareness Fund 강제 청산(Barchart·CNBC). Leopold Aschenbrenner(전 OpenAI 리서치)의 펀드가 6월까지 +439% 수익 · 그 후 AI 관련 대형 손실로 마진콜 · 전체 공개 주식 포트폴리오 강제 청산 · Citadel이 인수. 관련 종목 큰 하락: SNTA -29.3%·TVTX -28.4%·Bldnr -27.9% 등. Citadel의 인수는 (1) 시장 스프레드 완화, (2) 위험 자산 저가 인수. 시사점: AI 관련 자산 유동성 리스크·다른 AI 헤지펀드 리스크·매크로 경고 신호(오늘 US insider 매도 30년 최고와 결합). 반대: Citadel 인수는 밸류 과도했음을 시사·AMZN·MSFT 강세 실적은 AI 사이클 지속.",
+    likes: 79, comments: 6, created_at: "2026-07-31T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -606, alias: "여의도 매 #22", symbol: "NVDA",
+    content: "Jensen Huang 발언(DogeDesigner): 'Elon Musk가 하는 거의 모든 것에 참여하고 싶다·xAI에 우리가 이미 투자자·유일한 후회는 더 많이 못 준 것·거의 모든 것을 재정 지원 또는 구매·투자 기회 감사'. NVDA-xAI 전략 심화 · Grok/Colossus 확대 시사. 하이퍼스케일러 AI 파트너십: MSFT×OpenAI·GOOGL×Anthropic·AMZN×Anthropic·NVDA×xAI. NVDA가 GPU 공급자에서 AI 회사 지분 보유자로 확장. 어제 NVDA CDS 사상 최대 상승(부채 위험) vs 오늘 Jensen xAI 확대 발언 = NVDA 두 축 대립. 반대: Jensen 발언은 개인적·실 재무 반영에 시간 소요·xAI 밸류 조정 시 하방.",
+    likes: 51, comments: 4, created_at: "2026-07-31T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -607, alias: "부산 갈매기 #77", symbol: "MSFT",
+    content: "MSFT Q4 실적 세부(Microsoft·Stock Talk·ETF Tracker): EPS $3.65(컨센 $3.66 소폭 미스)·매출 $76.4B(컨센 $76.4B)·클라우드 매출 $59.3B·클라우드 +27%·Azure 43% YoY·다음 분기 Azure 가이던스 45% YoY·Q4 백로그 +51%·CAPEX +60% 엔터프라이즈 배포·클라우드 매출 90%가 비프런티어 모델 고객. MSFT가 프런티어 랩(OpenAI 등) 아닌 하이퍼스케일러로 명시 · Nvidia 가격 결정력·오픈 웨이트·중국 프런티어 우려에 대응. FY27 두 자릿수 매출 성장 예상. 반대: EPS 소폭 미스·CAPEX 부담 지속. 어제 리포트한 Azure $100B 첫 돌파·Copilot 30M+와 결합해 종합 강세 정합.",
+    likes: 58, comments: 5, created_at: "2026-07-31T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -608, alias: "강남 표범 #46", symbol: "SPX",
+    content: "Michael Burry 신규 포지션(Michael Berry Stock Track): Micron $880·Semi ETF SOXX $208·META $600.5·DKNG $23.4 숏 · GOOGL $178·AMZN $210.5·Nebius·QuantumScape 롱 · Tesla·Palantir 유지. Divergence 베팅: 반도체 숏(어제 NVDA CDS 사상 최대 상승·반도체 밸류 닷컴 초과 경고와 정합) vs 하이퍼스케일러 롱(Buffett GOOGL $10B·오늘 AMZN 순이익 3배와 정합). Nebius(유럽 클라우드 대안) 롱·QuantumScape(배터리) 롱. Tesla·Palantir 미매도는 강세도 매수도 아닌 관망. Burry는 2008 예측으로 유명 · 그의 반도체 숏은 심리적 부담 신호. 반대: Burry 예측이 항상 맞지는 않음·AMZN·MSFT 강세는 하이퍼스케일러 롱 정확·반도체 숏은 반증.",
+    likes: 55, comments: 5, created_at: "2026-07-31T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -609, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "캐시 우드 이번 주 SPCX 매수 실 확인(Ark Invest Tracker): 월-수 3거래일 356,600주(약 $50.2M) 매수·매일 매수·4개 ETF 분산(ARKW 229,498·ARKQ 65,557·ARKX 31,762·ARKG 29,745). SPCX 현재 $112.30. 지난 주 wall of worry 프레임의 실체적 확장. SPCX 다층 강세 축적: 오늘 미 우주군 $1.8B·어제 $1.6B·Ferragu·NASA Admin·Baron·Jonas·Moskowitz 매수 vs -50% ATH 시세 divergence 극단. 반대: Wood 매수 규모($50.2M)는 시가총액 대비 미미·다른 대형 기관 flow 동조 없으면 시세 반전 어려움. 후속 매수 지속·다른 기관 flow가 관찰 축.",
+    likes: 49, comments: 4, created_at: "2026-07-31T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -610, alias: "을지로 팔콘 #71", symbol: "SPX",
+    content: "매크로 - US 기업 임원(insider) 매도가 30년래 두번째로 빠른 페이스(Barchart). 클래식 red flag · 시장 최고 정보 보유자의 매도 = 밸류 최고점 도달 시사. 오늘 매크로 시그널: Aschenbrenner Fund 강제 청산·insider 매도 30년 최고·Burry MU/SOXX 숏 · 어제 NVDA CDS 사상 최대·KOSPI -8.17% 등 매크로 부담 다층 축적. 시장 반응 시나리오 3가지: (a) 매크로 경고 실현·시장 조정, (b) 강세 실적(MSFT·AMZN)이 우세·지수 상승, (c) 개별 종목 divergence(Mag 7 내 강세·약세 지속). 반대: Insider selling은 여러 이유·항상 negative 아님·오늘 AMZN 실적은 매출 성장 지속 신호. 다음 CPI·PCE·GDP·Fed 결정이 검증 축.",
+    likes: 44, comments: 4, created_at: "2026-07-31T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -611, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "Tesla AZ Project Sterling 태양광 딜 정식 확인(Musk·Sawyer Merritt): ContourGlobal Project Sterling(509 MW 태양광 + 350 MW 4h 배터리)에서 458 MW(90%) 인수·2028 가동. Musk가 'Tesla의 Supercharger 네트워크 글로벌 재생에너지 공급 push의 일환'이라고 명시적 확인. 태양광+4h 배터리 결합 = 24/7 안정 renewable 공급. Tesla 에너지 다축: (a) Megapack 판매, (b) 태양광·저장 자체 인수, (c) Supercharger 재생 공급. 하이퍼스케일러 DC CAPEX 사이클(오늘 GOOGL-Anthropic $15B 1.6 GW 가스·어제 META×BLK 1 GW·OpenAI $500B 등)에 Tesla도 참여. 오늘 GOOGL의 1.6 GW 가스 발전과 대조되는 Tesla의 renewable 접근.",
+    likes: 38, comments: 3, created_at: "2026-07-31T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -612, alias: "마포 올빼미 #24", symbol: "GOOGL",
+    content: "GOOGL-Anthropic $15B DC 대출 딜(Sawyer Merritt·WSJ): Anthropic 파트너 DC 개발사(Feaux Data Centers)가 Morgan Stanley 주도 컨소시엄으로 $15B 대출 · 텍사스 Hubbard 대형 캠퍼스 + 1.6 GW 자체 가스 발전 · Google 지불 보증. 하이퍼스케일러 DC 자본 조달 4가지 모델 대두: (1) GOOGL 자체 CAPEX(FCF 부담), (2) OpenAI 외부 backstop(Softbank $250B), (3) META×BLK JV(BLK 80%·META 20%), (4) GOOGL-Anthropic 대출(Google 지불 보증). 각 모델이 서로 다른 리스크 분산·자본 효율성. 1.6 GW 자체 가스 발전은 그리드 독립·비용 통제·24/7 안정. Anthropic 사업 확장(오늘 Q2 지분 $53.4B 증가)의 물리 인프라 뒷받침.",
+    likes: 52, comments: 4, created_at: "2026-07-31T01:36:00.000Z", liked: false,
+  },
+
   // ── 2026-07-30 신규 ──────────────────────────────────────────────────────
   {
     id: -587, alias: "여의도 매 #22", symbol: "MSFT",
