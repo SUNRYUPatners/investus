@@ -80,7 +80,7 @@ ok "배포 URL: $DEPLOY_URL"
 step 4 "라이브 사이트 응답 체크..."
 sleep 5  # 배포 propagation 대기
 
-HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "$DEPLOY_URL")
+HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 "$DEPLOY_URL" || true)
 if [ "$HTTP_STATUS" = "200" ]; then
   ok "HTTP $HTTP_STATUS — 정상"
 else
@@ -88,7 +88,9 @@ else
 fi
 
 # 주요 API 엔드포인트 체크
-API_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "$DEPLOY_URL/api/market-data")
+# 장중에는 외부 API 조회로 20초 가까이 걸릴 수 있어 여유를 둔다.
+# curl 실패(타임아웃 등)가 set -e로 스크립트를 죽여 GitHub 푸시를 건너뛰면 안 되므로 || true.
+API_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 40 "$DEPLOY_URL/api/market-data" || true)
 if [ "$API_STATUS" = "200" ]; then
   ok "API /market-data HTTP $API_STATUS — 정상"
 else
