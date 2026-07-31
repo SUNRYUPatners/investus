@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T01AU = 1785538800000; // 2026-08-01 08:00 KST
 const T31JL = 1785452400000; // 2026-07-31 08:00 KST
 const T30JL = 1785366000000; // 2026-07-30 08:00 KST
 const T29JL = 1785279600000; // 2026-07-29 08:00 KST
@@ -68,7 +69,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T31JL;      // NEW 배지 기준
+export const LATEST_UPDATE = T01AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -87,6 +88,47 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-01 신규 ──────────────────────────────────────────────────────
+  { id: 811, symbol: "MSFT", nickname: "익명_2233", holdingLabel: "관심종목",
+    content: "MSFT 오늘 +15.85% 급등·시총 +$400B 이상 증가·Q1 강세 실적 반응·추가 $15B 자사주 매입. 어제 Azure $100B·Copilot 30M+의 실 시장 반응. Mag 7 YTD -8.2%에서 반등 시작 신호. Stocks.News.",
+    createdAt: T01AU + 5*60_000, likes: 96, comments: 8 },
+  { id: 812, symbol: "AMZN", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "AMZN Q2 세부 · Rev $180.2B(컨센 $178.5B)·EPS $2.55(컨센 $1.99, +28% 비트)·AWS $30B(+20% YoY)·Q3 가이던스 $200B+. 어제 순이익 3배·CAPEX $220B와 결합해 강세 종합. AWS 20%는 Azure 43% 대비 상대 저조 이슈. Investing visuals.",
+    createdAt: T01AU + 14*60_000, likes: 88, comments: 7 },
+  { id: 813, symbol: "SPX", nickname: "익명_8811", holdingLabel: "관심종목",
+    content: "하이퍼스케일러 4사(AMZN·META·GOOGL·MSFT) Q2 CAPEX 합계 $155B · 2024 $52.5B의 3배. META·MSFT 각 $43.4B·AMZN·GOOGL 각 $34B. AI 인프라 CAPEX 사이클 사상 최대 규모. NVDA 매출 성장 시사. Evan D.",
+    createdAt: T01AU + 23*60_000, likes: 79, comments: 6 },
+  { id: 814, symbol: "SPCX", nickname: "익명_5599", holdingLabel: "관심종목",
+    content: "SPCX 사상 최저 종가 · 6월 ATH $141.02 대비 -50% · 이번 달 -34%. 그러나 8/4 실적 앞두고 매도세 완화 조짐. 다층 강세 견해와 정부 계약에도 시세 극단 divergence 지속. Barchart.",
+    createdAt: T01AU + 32*60_000, likes: 71, comments: 6 },
+  { id: 815, symbol: "SPCX", nickname: "익명_3344", holdingLabel: "관심종목",
+    content: "Musk: '장기적으로 99.99% 컴퓨트가 우주로 이동·SpaceX가 money printer가 될 것·다른 방식으로 볼 수 없다'. SPCX 궤도 데이터센터 프레임 명시적. Ron Baron $30-40T·Wood 강세 견해 재확인. Nic Cruz Patane.",
+    createdAt: T01AU + 41*60_000, likes: 82, comments: 7 },
+  { id: 816, symbol: "TSLA", nickname: "익명_6622", holdingLabel: "관심종목",
+    content: "Musk가 WSJ의 Tesla 중국 사업 매각·SPCX 합병 준비 보도에 대해 '어떤 논의에서도 나온 적 없다·완전 fake news' 명시 부인. 상하이 지분 15% 매각도 부인. Kalshi 74% 합병 확률 프레임 재검토 필요. Sawyer Merritt.",
+    createdAt: T01AU + 50*60_000, likes: 68, comments: 6 },
+  { id: 817, symbol: "SPCX", nickname: "익명_7733", holdingLabel: "관심종목",
+    content: "SPCX Colossus에서 89개 임시 이동식 터빈을 2027까지 제거·인근 BlackRock ArcLight 신규 1.2 GW 발전소로 영구 전력 전환. xAI-SPCX 시너지·환경 규제 준수·BLK 자본 결합. Muskonomy.",
+    createdAt: T01AU + 59*60_000, likes: 54, comments: 4 },
+  { id: 818, symbol: "SPCX", nickname: "익명_9911", holdingLabel: "관심종목",
+    content: "NASA가 SpaceX Super Heavy V3 부스터 풍동 테스트 세부 공개 · Starship HLS Artemis 미션용 · NASA Ames · 1.2% 스케일 · Mach 0.2-3.5. NASA-SPCX 협업 심화 · All-in Starship 물리 근거. DogeDesigner.",
+    createdAt: T01AU + 68*60_000, likes: 61, comments: 5 },
+  { id: 819, symbol: "MSFT", nickname: "익명_1122", holdingLabel: "관심종목",
+    content: "MSFT AI 모델이 이번 주와 지난 주 사이버 공격에 이용·3개 서로 다른 조직 침입. OpenAI 유사 사례 공개 후 1주일 만. 프런티어 AI 안전 논쟁 재점화. 오늘 +$400B 강세 실적과 대비되는 리스크. unusual_whales/Bloomberg.",
+    createdAt: T01AU + 77*60_000, likes: 58, comments: 5 },
+  { id: 820, symbol: "MSFT", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "MSFT가 실적 콜에서 '클라우드 비즈니스 고객 수요가 캐파를 초과하는 상황이 지속된다' 명시적 발언. 오늘 하이퍼 CAPEX $155B와 정합·수요 견조 재확인. FY27 두 자릿수 매출 근거. Enno D.",
+    createdAt: T01AU + 86*60_000, likes: 47, comments: 4 },
+  { id: 821, symbol: "TSLA", nickname: "익명_8844", holdingLabel: "관심종목",
+    content: "Tesla Megapacks 공식: 미국 자체 생산 LFP 셀을 통합한 첫 Megapack이 고객에 출하 · Sparks Nevada 공장. 배터리 국산화·중국 의존 축소·IRA 세금 크레딧 자격. Whole Mars Catalog가 게임 체인저 프레임.",
+    createdAt: T01AU + 95*60_000, likes: 63, comments: 5 },
+  { id: 822, symbol: "SPX", nickname: "익명_2288", holdingLabel: "관심종목",
+    content: "클라우드 인프라 매출이 Q2 2026에 $142B(+43% YoY)·AWS 28%·Azure 22%·Google Cloud 15%·기타 35%. 하이퍼스케일러 CAPEX $155B 대비 매출 규모 확인 · AI 워크로드 견인. The Future Investors.",
+    createdAt: T01AU + 104*60_000, likes: 43, comments: 3 },
+  { id: 823, symbol: "SPX", nickname: "익명_4499", holdingLabel: "관심종목",
+    content: "미 재무부가 여러 은행에 금요일 일본 엔 시장 개입 가능성 통지·JPY 예금 관련 주말 홀딩용 유동성 대비 필요. 어제 KOSPI -8.17%에 이은 아시아 통화·시장 리스크. 캐리 트레이드 unwind 가능성. unusual_whales.",
+    createdAt: T01AU + 113*60_000, likes: 51, comments: 4 },
+
   // ── 2026-07-31 신규 ──────────────────────────────────────────────────────
   { id: 797, symbol: "SPCX", nickname: "익명_5522", holdingLabel: "관심종목",
     content: "SPCX가 미 우주군 Falcon 9 $1.8B 계약 · Vandenberg 월 1회 · 2027까지 · NSSL Phase 3 최대 task. 어제 $1.6B에 이어 이틀 만에 $3.4B 정부 매출 확보. -50% ATH 시세와 대비되는 실 계약.",

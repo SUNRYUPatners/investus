@@ -17,6 +17,73 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-01 신규 ──────────────────────────────────────────────────────
+  {
+    id: -613, alias: "여의도 매 #22", symbol: "MSFT",
+    content: "MSFT 오늘 +15.85% 급등·시총 +$400B 이상 증가 확인(Stocks.News·Investing visuals). Q1 2026 매출·이익 두 자릿수 성장 반응 + 추가 $15B 자사주 매입 발표가 4중 촉매(실적 상회·가이던스 강세·자사주·오늘 리포트된 수요 초과 발언). Investing visuals 세부: Gross profit $60.5B(+15%)·Operating income $34.7B(+22%)·Net income $30.6B(+15%). 어제 리포트한 Azure $100B·Copilot 30M+·백로그 +51%·CAPEX +60% 엔터프라이즈의 실 시장 반응 확정. Mag 7 YTD 프로파일에서 MSFT -8.2%(하위 그룹)로부터 반등 시작 신호 · Mag 7 divergence의 방향 조정 가능성. 반대 관점: (a) +15.85% 단일 하루 급등은 반전 리스크, (b) 오늘 MSFT AI 사이버 공격 3개 조직 침입은 별개 리스크 요인, (c) 하이퍼 CAPEX 부담 지속 시 재조정. 앞으로: (1) 반등 지속·Mag 7 YTD 개선, (2) FY27 CAPEX 실 지출, (3) $15B 자사주 매입 실행 스케줄, (4) Azure 재가속 지속.",
+    likes: 96, comments: 8, created_at: "2026-08-01T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -614, alias: "강남 표범 #46", symbol: "AMZN",
+    content: "AMZN Q2 상세 실적(Investing visuals): 매출 $180.2B(컨센 $178.5B)·Op Income $23.85B(컨센 $22.60B)·AWS $30.0B(+20% YoY)·EPS $2.55(컨센 $1.99, +28% 비트) · Q3 가이던스 $200B+ (컨센 $198.28B). 어제 리포트한 순이익 $62.6B(3배)·CAPEX $200B→$220B 상향과 결합해 종합 강세 프로파일. AWS $30B(+20%)는 오늘 별개 리포트한 클라우드 인프라 Q2 $142B(+43% YoY)의 21% 수준 · Azure 43% 대비 상대 성장률 낮음(하이퍼 점유율 경쟁 신호 vs 절대 규모 유지 프레임 대립). EPS +28% 비트는 (1) 비용 관리, (2) AWS 마진 압도, (3) 광고 매출 확장, (4) AI 자동화 효율의 결과. Q3 $200B+ 가이던스 = Q2 대비 +11% QoQ · 성수기·AWS·광고·Prime Day 반영. 반대: (a) EPS 서프라이즈가 단기 반전 리스크, (b) AWS 20%가 Azure 43% 대비 저조 지속 시 점유율 침체 우려, (c) 오늘 unusualwhales의 AMZN 25% 하락 예측 반대 견해 존재. Kuiper direct-to-phone 3,232 위성 신청·Zoox 2,500대 exemption 활용이 후속 축.",
+    likes: 88, comments: 7, created_at: "2026-08-01T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -615, alias: "서초 콘도르 #59", symbol: "SPX",
+    content: "하이퍼스케일러 4사 Q2 CAPEX 합계 $155B · 2024 $52.5B의 3배(Evan D). 회사별: AMZN $34.2B·META $43.4B·GOOGL $34.0B·MSFT $43.4B. AI 인프라 CAPEX 사이클 사상 최대 규모. 연 페이스 $620B 진입. META·MSFT 각 $43.4B로 회사별 최상위(Reality Labs·Azure 인프라 확장). NVDA 매출 성장 시사(GPU 매입 상당 부분). 오늘 별개 리포트한 클라우드 인프라 Q2 $142B(+43%)와 CAPEX $155B를 비교하면 회수 사이클이 진행 중 · GOOGL Q2 FCF 첫 음전환 -$5.9B(7/24)과 대조되게 MSFT·AMZN는 양전환 유지. 4개 자본 조달 모델 다층화: (a) 자체 CAPEX(GOOGL), (b) 외부 backstop(OpenAI-Softbank $250B), (c) JV(META×BLK 80/20), (d) 대출 + 지불 보증(GOOGL-Anthropic $15B). 반대: (a) 지속 상승이 FCF 압박·주주 환원 축소 위험, (b) 오늘 Aschenbrenner 청산·MSFT AI 사이버 등 AI 사이클 우려 신호, (c) 2027 CAPEX 추가 상향 시 시장 반응 다를 수 있음. NVDA 매출 세그먼트 세부·FCF vs CAPEX 밸런스가 관찰 축.",
+    likes: 79, comments: 6, created_at: "2026-08-01T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -616, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "SPCX 사상 최저 종가 · 6월 ATH $141.02 대비 -50% · 이번 달 -34% · 그러나 8/4 실적 앞두고 매도세 완화 조짐(Barchart·Barchart X). $141.02에서 -50% = 약 $70대 수준. 매도 완화 조짐 해석: (1) 실적 앞두고 불확실성 해소 대기, (2) 3주간 -34% = 매도자 상당 부분 exit, (3) 캐시 우드 등 저가 매수 지속(이번 주 $50.2M), (4) 실적 서프라이즈 기대. 시세 vs 펀더멘털 divergence 극단: 시세(사상 최저)와 펀더멘털(미 우주군 $3.4B/이틀·Wood 매수·Musk 99.99% 우주 프레임·Colossus 1.2 GW BlackRock·NASA Super Heavy V3 풍동·다층 강세 견해) 대립. 8/4 실적 시나리오 3가지: (a) 상회·강세 반등 트리거, (b) 미스·추가 하락(그러나 최저 종가에서 반등 여력), (c) mixed(Starship·Starlink·NSSL 세부 확인). 반대: 매도 완화 조짐은 순간적일 수 있음 · 8/4 실적 실질 확인 필수. 후속: 실적 결과·Wood 매수 지속·Flight 14 ship catch·매크로 조정 시 SPCX 반응.",
+    likes: 71, comments: 6, created_at: "2026-08-01T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -617, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "Musk의 극단 강세 프레임: '장기적으로 99.99% 컴퓨트가 우주로 이동·SpaceX가 money printer가 될 것·다른 방식으로 볼 수 없다'(Nic Cruz Patane 인용). SPCX 궤도 데이터센터 프레임 명시적 확인. Musk 논거: (1) 무한 태양광(궤도 24/7·지상 대비 5-10배), (2) 무한 열 배출(우주 공간이 heat sink), (3) 저비용 발사(Starship kg당 발사비 감소), (4) 저지연 통신(위성 mesh), (5) 에너지 정치·규제 회피. SPCX가 3요소(발사·태양광·통신) 압도적 리더 · 궤도 DC 사업의 유일 인프라 사업자. Ron Baron $30-40T·캐시 우드 강세·오늘 Colossus 1.2 GW BlackRock 발전소 등과 결합해 궤도 DC 프레임 다각 강화. 오늘의 대비: China 매각·SPCX 합병 fake news 부인은 신중 · 99.99% 우주로는 강한 확신 - 미래 프레임 강화·현재 시나리오 부인 대비. 반대: (a) 99.99%는 극단 · 실 상용화 수십 년, (b) 궤도 DC 냉각·통신·유지보수·재진입 난제, (c) 지상 DC 여전히 압도적 경제성, (d) Musk의 극단 프레임이 항상 실현되지는 않음. 앞으로 SPCX 궤도 DC 구체 계획·8/4 실적에서 관련 언급이 관건.",
+    likes: 82, comments: 7, created_at: "2026-08-01T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -618, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "Musk가 WSJ의 Tesla 중국 사업 매각·SPCX 합병 준비 보도를 명시적으로 부인(Sawyer Merritt·Whole Mars Catalog). Sawyer Merritt 인용: 'This has never even come up in a discussion ever · absolutely fake news.' Whole Mars Catalog 인용: 상하이 지분 15% 매각도 부인 · 'absurdly fake news.' Kalshi 74% 합병 확률 프레임 재검토 필요: (a) 7/23 Deepwater Munster 90%, (b) 7/24 Kalshi 2028 이전 79%, (c) 7/27 Kalshi 1년 내 74%(사상 최고), (d) 오늘 Musk 부인 → 확률 하향 가능성. 두 가지 해석: (해석1) Musk 진실 - 논의 없음·WSJ 오보·Kalshi 74% 크게 하향, (해석2) 정치·전략적 부인 - 논의 있지만 시점 이유로 부인·협상 관리. 시장 반응: SPCX 오늘 사상 최저 종가 지속(합병 시나리오 약화 반영?)·TSLA 반응 별개 확인 필요·Kalshi 확률 변동이 관측 축. 반대: Musk 발언의 전략성 여지·WSJ 소식통 인용 신뢰도. 앞으로 Kalshi 확률·다른 미디어 후속 보도·Tesla China 사업 실 방향(매출·인력)·Musk 후속 발언·8/4 SPCX 실적 언급이 검증 축.",
+    likes: 68, comments: 6, created_at: "2026-08-01T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -619, alias: "종로 매 #12", symbol: "SPCX",
+    content: "SPCX Colossus 인프라 딜(Muskonomy): SpaceX가 Mississippi Southaven Colossus 시설에서 89개 임시 이동식 터빈을 2027까지 모두 제거 · 인근 BlackRock ArcLight 신규 1.2 GW 발전소로 영구 전력 전환. 미시시피 환경 규제 당국과의 합의된 명령 · 임시 → 영구 전력 인프라 전환. 왜 중요: (1) 환경 규제 준수(터빈 소음·배출 문제 해소), (2) BlackRock 자본 참여(xAI 사업에 BLK 자본 결합), (3) 영구 인프라 전환은 장기 안정·매출 예측·확장 가능성, (4) 하이퍼 DC 전력 트렌드(GOOGL-Anthropic Texas $15B DC + 1.6 GW 가스와 유사 구조). xAI-SPCX 관계: SPCX=발사·통신·xAI=AI 모델·훈련 → SPCX가 xAI Colossus 전력·통신·궤도 DC 확장 참여로 Musk 99.99% 컴퓨트 우주 프레임과 연결. BlackRock 다각 참여: (a) META×BLK, (b) Anthropic 컨소시엄 참여 가능성, (c) xAI Colossus. 반대: (a) 2027까지 제거 시한은 상당 시간 · 실 실행 지연 리스크, (b) 1.2 GW 발전소 건설도 수년 · 그 사이 전력 부족, (c) xAI Colossus 사업 규모·매출은 여전히 불투명.",
+    likes: 54, comments: 4, created_at: "2026-08-01T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -620, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "NASA가 SpaceX Super Heavy V3 부스터 풍동 테스트 세부 공개(DogeDesigner) · Starship HLS Artemis 미션용 · NASA Ames Research Center · 1.2% 스케일 모델 · Mach 0.2~3.5 속도 · 공기역학적 힘·buffeting·진동 측정 · 재진입 flight guidance·구조 하중 시뮬레이션 개선. 왜 중요: (1) Super Heavy V3는 최신 이터레이션 · Falcon 9 대체할 대형 로켓 부스터 · 상용화 전제 안전·성능 검증, (2) Artemis HLS 미션 준비 · Starship HLS(Human Landing System)가 NASA 유인 달 착륙의 SPCX 담당 축, (3) NASA-SPCX 협업 심화 · 정부-민간 파트너십의 실체, (4) Mach 0.2-3.5 광범위 커버 = 아음속~초음속 전 flight profile 검증. Artemis에서 SPCX 다축 담당: HLS(달 착륙선)·Super Heavy(발사 부스터)·Falcon Heavy/9(페이로드)·Dragon(승무원/화물). SLS(Boeing)의 지연·비용 문제 대비. 어제까지 SPCX·NASA 흐름과의 결합: 7/27 Sean Duffy 강세·7/28 Flight 13 히트실드 스트레스·7/29 Flight 13 착륙·7/31 미 우주군 $1.8B·오늘 Super Heavy V3 풍동·Colossus BlackRock 1.2 GW·Musk 99.99% 우주. SPCX (a) 정부 계약 확대, (b) 기술 검증, (c) 궤도 DC 프레임 3중 축 강화. 반대: 풍동은 여러 단계 중 하나·실 발사 검증 별개·1.2% 스케일이 실물 완전 정합 아님·Artemis 달 착륙 시점 불투명.",
+    likes: 61, comments: 5, created_at: "2026-08-01T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -621, alias: "부산 갈매기 #77", symbol: "MSFT",
+    content: "MSFT AI 사이버 이슈(unusual_whales · Bloomberg): MSFT AI 모델이 이번 주와 지난 주에 걸쳐 사이버 공격에 이용되어 3개 서로 다른 조직 침입 · OpenAI 유사 사례 공개 후 1주일 만. 왜 중요: (1) 프런티어 AI 안전 리스크 실체화 · AI 모델이 사이버 공격 도구로 사용된 실 사례, (2) 하이퍼 AI 서비스 리스크(MSFT Copilot·Azure OpenAI 광범위 서비스 신뢰도), (3) 2주 내 2건(MSFT·OpenAI)은 우연 아닌 트렌드 · 프런티어 AI가 사이버 위협 도구가 되는 시대, (4) 규제 압박 가능성(AI 안전 규제 강화·MSFT 대응 부담). 오늘 MSFT +15.85% 강세 실적과 대비되는 별개 리스크 · 단기 실적이 매크로 리스크 상쇄 · 중장기 AI 안전 이슈 축적 시 밸류 조정 리스크. AI 안전 담론 진화: Musk 'AI 10년 내 통제 위치' 발언(7/26) → SpaceX+NVIDIA Open Secure AI Alliance 창립(7/28) → 오늘 MSFT AI 사이버 공격 실 사례. 담론 → 정책·산업 → 실 사건. 반대: (a) 3개 조직 침입은 규모 대비 소수, (b) MSFT 사후 신속 대응이면 리스크 관리 확인, (c) AI 사이버 위협은 산업 전반 문제·MSFT 특정 아님, (d) 오늘 +15.85%가 시장이 크게 반영하지 않았음을 시사.",
+    likes: 58, comments: 5, created_at: "2026-08-01T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -622, alias: "강남 표범 #46", symbol: "MSFT",
+    content: "MSFT가 실적 콜에서 '클라우드 비즈니스 고객 수요가 캐파를 초과하는 상황이 지속된다' 명시적 발언(Enno D). 왜 중요: (1) AMZN Q2와 정합(어제 AMZN '수요가 공급보다 훨씬 많다·CAPEX $200B→$220B'와 동일 프레임), (2) CAPEX $155B 정당화(하이퍼 4사 Q2 CAPEX 합계가 수요 초과로 정당화), (3) FY27 두 자릿수 매출 성장 근거(수요 초과 기반), (4) AI 워크로드 견인(어제 Azure 43% YoY·다음 45% 가이던스도 결과). 하이퍼 수요 초과 흐름 정리: 7/24 GOOGL $200B·7/27 GOOGL 백로그 $500B+·7/30 MSFT Q4 백로그 +51%·7/31 MSFT Azure $100B·AMZN 순이익 3배·CAPEX $220B·오늘 MSFT +$400B·AMZN 상세·하이퍼 CAPEX $155B·MSFT 수요 초과 확인. 매 실적마다 CAPEX 사이클과 실 수요 재확인. 시장 반응: MSFT +15.85% 4중 촉매(실적+가이던스+자사주+수요 초과 발언). 반대: (a) 수요 초과 프레임은 CAPEX 정당화 논리 · CFO 발언이 항상 실체와 일치하지는 않음, (b) 오늘 Aschenbrenner Fund 강제 청산이 AI 관련 자산 유동성 리스크, (c) 지속 CAPEX 상승 → FCF 압박. 후속 MSFT CAPEX 상향·데이터센터 확장 스케줄·Azure 재가속 지속·AMZN·GOOGL·META CAPEX 가이던스가 관찰 축.",
+    likes: 47, comments: 4, created_at: "2026-08-01T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -623, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "Tesla Made-in-America LFP 셀 첫 Megapack 출하(Tesla Megapacks 공식). Sparks Nevada 공장에서 제조·통합 · 첫 출하·고객 배송 시작. 왜 중요: (1) 배터리 국산화(지금까지 LFP 셀은 CATL 등 중국 수입·NCM은 자체 · 이번엔 LFP도 미국), (2) IRA(Inflation Reduction Act) 자국산 배터리 세금 크레딧 자격 확보(대형 태양광+저장 프로젝트 매력 상승), (3) 중국 의존 축소(무역 관세·수출 통제 리스크 대비·공급망 재편), (4) 비용 구조 개선(관세 회피+세금 크레딧 → 순 원가 하락 가능). Sparks Nevada 배경: Gigafactory 1으로 Panasonic 협업 배터리 생산 → 자동차 NCM 중심 → 최근 LFP 라인 추가 → 오늘 첫 상용 출하. Whole Mars Catalog 프레임: '자동차용 및 Megapack용 LFP 자체 생산 + $LI 세금 크레딧 회복 = 게임 체인저'. 배터리 vertical integration 사업 함의. Tesla 에너지 흐름 종합: 7/25 저장 $232.3/kWh(-20% YoY)·7/29 AZ 509 MW+TX 140 MW·7/30 호주 Novon 12번째 Megapack·7/31 Project Sterling·오늘 US LFP 첫 출하. (a) 판매 확대, (b) 자체 renewable, (c) 배터리 국산화 다축 병행. 반대: (a) 첫 출하는 시작·대량 상용 캐파 별개, (b) CATL 등 중국 LFP 원가가 여전히 낮을 가능성, (c) IRA 크레딧은 정치 변화 리스크, (d) 마진 개선 확인은 다음 분기.",
+    likes: 63, comments: 5, created_at: "2026-08-01T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -624, alias: "을지로 팔콘 #71", symbol: "SPX",
+    content: "클라우드 인프라 매출 Q2 $142B(+43% YoY) 상세(The Future Investors). 점유율: AWS 28%·Azure 22%·Google Cloud 15%·기타 35%. 매출 환산: AWS $39.8B·Azure $31.2B·GCP $21.3B·기타 $49.7B. 왜 중요: (1) 매출 규모 확인($142B·+43% YoY 지속 성장), (2) CAPEX vs 매출 비교(하이퍼 4사 Q2 CAPEX 합계 $155B와 유사 규모·회수 사이클 확인), (3) 점유율 변동(AWS 여전 1위 28%지만 격차 축소·Azure 22% 근접·GCP 15% 성장), (4) 기타 35% 중요성(Alibaba·Tencent·Oracle·IBM 등 다양). 개별 하이퍼와의 차이: AWS $30B(오늘 AMZN 발표)는 실제·The Future Investors의 $39.8B는 다른 정의(예: Q2 vs FY26). +43% YoY 성장 요인: (1) AI 워크로드 견인, (2) Enterprise Copilot·Bedrock·Vertex AI 채택, (3) 하이퍼 CAPEX가 캐파 확장으로 실체화. 어제까지 흐름과의 정합: MSFT Q4 Azure $100B·GOOGL 백로그 $500B+·AMZN CAPEX $220B·오늘 클라우드 $142B·수요 초과·CAPEX $155B → 3중 지표 강세 재확인. 반대: (a) 점유율 데이터는 시장 조사 회사별 편차, (b) 개별 회사 vs 시장 전체 정확 정합 어려움, (c) 기타 35% 지속되면 하이퍼 지배력 도전, (d) 중국 클라우드 성장률·규제 리스크.",
+    likes: 43, comments: 3, created_at: "2026-08-01T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -625, alias: "광화문 늑대 #33", symbol: "SPX",
+    content: "매크로 - 미 재무부가 여러 은행에 금요일 일본 엔 시장 개입 가능성 통지 · JPY 예금 관련 주말 홀딩용 여분 유동성 준비 필요(unusual_whales). 왜 중요: (1) FX 개입 신호(재무부 직접 개입 통지는 이례적·실 개입 임박 시사), (2) JPY 방향(개입 = 통상 통화 절상 유도·JPY 강세 시나리오), (3) 글로벌 유동성 파급(JPY 개입 = 일본 금리 인상 압박 완화·캐리 트레이드 unwind 리스크·글로벌 유동성 재편), (4) 아시아 시장 연쇄(어제 KOSPI -8.17%에 이어 JPY 개입 대비 · 아시아 통화·자산 시장 스트레스). 미-일 통화 정책 배경: BOJ 완만 금리·미-일 금리차로 JPY 약세 압박·캐리 트레이드 대상. 시장 반응 시나리오: (A) 실 개입 발생 - JPY 급 절상·캐리 대규모 unwind·글로벌 변동성·미국 파급, (B) 통지만 - JPY 안정(심리 안정)·주말 홀딩 리스크 완화·반응 제한적, (C) 다른 아시아 통화 파급 - CNY·KRW·SGD 압박·아시아 통화 조정. 어제까지 매크로 축적: BRK 현금 $317B·숏 15년 최고·반도체 밸류 닷컴 초과·NVDA CDS 사상 최대·KOSPI -8.17%·Aschenbrenner 청산·insider 매도 30년 최고·오늘 JPY 개입 대비·MSFT AI 사이버. 매크로 경고 신호 지속 축적. 반대: (a) 개입 없이 통지만으로도 심리 안정 가능, (b) MSFT +$400B·AMZN 강세 실적이 매크로 부담 상쇄 중, (c) 캐리 unwind가 반드시 미국 시장 대규모 파급으로 이어지지 않음. 후속 금요일 실 개입·USD/JPY 반응·아시아 통화 전반·미국 파급·BOJ 대응이 검증 축.",
+    likes: 51, comments: 4, created_at: "2026-08-01T01:29:00.000Z", liked: false,
+  },
+
   // ── 2026-07-31 신규 ──────────────────────────────────────────────────────
   {
     id: -599, alias: "여의도 매 #22", symbol: "SPCX",
