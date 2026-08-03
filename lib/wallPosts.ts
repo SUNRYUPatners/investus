@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T03AU = 1785711600000; // 2026-08-03 08:00 KST
 const T01AU = 1785538800000; // 2026-08-01 08:00 KST
 const T31JL = 1785452400000; // 2026-07-31 08:00 KST
 const T30JL = 1785366000000; // 2026-07-30 08:00 KST
@@ -69,7 +70,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T01AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T03AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -88,6 +89,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-03 신규 ──────────────────────────────────────────────────────
+  { id: 824, symbol: "TSLA", nickname: "익명_1122", holdingLabel: "관심종목",
+    content: "TSLA·SPCX 합병 다층 · Jimmy 두 소식통이 Tesla 프리미엄 인수 $600-$630/주 프레임·Kalshi 60%(7/27 74%→하향, Musk 8/1 부인 반영)·Limiting Factor 2027 하반기 시점. 8/1 부인에도 프레임은 유지·시점 논거 구체화.",
+    createdAt: T03AU + 5*60_000, likes: 88, comments: 7 },
+  { id: 825, symbol: "AMZN", nickname: "익명_3344", holdingLabel: "관심종목",
+    content: "AMZN이 OpenAI에 $50B 투자·5% 지분·$500B IPO 밸류 앞두고·Anthropic $16B와 결합해 세계 최대 2개 프런티어 AI 랩 지분 보유(Shay Boloor). 별개로 AMZN 매출 20% 성장 재개(In America). GOOGL의 Anthropic $53.4B 증가와 다른 축으로 프런티어 AI 지분 게임.",
+    createdAt: T03AU + 14*60_000, likes: 96, comments: 8 },
+  { id: 826, symbol: "SPCX", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "Musk: 'SPCX가 12-24개월 내에 TSLA 전체 매출에 해당하는 규모를 새로 추가할 수 있다'(Ely 인용). 8/1 '99.99% 컴퓨트 우주로·money printer' 프레임 확장 · 8/4 첫 실적 앞두고 극단 강세 발언. Baron $30-40T·Wood 강세와 결합.",
+    createdAt: T03AU + 23*60_000, likes: 82, comments: 7 },
+  { id: 827, symbol: "SPX", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "Trump가 이란 공격 취소·중동 딜 진행(Investing visuals) · 호르무즈 해협 개방 + 핵무기 없이 조건 · 8월을 7월보다 낫게 시작 신호. 지정학 완화·유가 안정 시나리오이지만 헤지 원유 강세와 divergence.",
+    createdAt: T03AU + 32*60_000, likes: 71, comments: 6 },
+  { id: 828, symbol: "SPX", nickname: "익명_9911", holdingLabel: "관심종목",
+    content: "Goldman Sachs가 이번 달 글로벌 시장에 $155B 강제 매도 경고(⚡). 어제 하이퍼 CAPEX $155B와 같은 숫자 · 리밸런싱·마진콜·모멘텀 unwind 복합 · Aschenbrenner 청산·insider 매도 30년 최고에 이어 매크로 부담 축적.",
+    createdAt: T03AU + 41*60_000, likes: 79, comments: 6 },
+  { id: 829, symbol: "TSLA", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "Cole Grinde Tesla Q2 실적 요약 · Robotaxi 월 50만 라이드 접근·연초 대비 매주 double-digit 성장·'literally exponential' · Cybercab·Semi·Cybersedan 매입 계획으로 unmanufactured miles 캐파 성장 매칭. 2026 하반기 매출 축 확대.",
+    createdAt: T03AU + 50*60_000, likes: 63, comments: 5 },
+  { id: 830, symbol: "NVDA", nickname: "익명_6677", holdingLabel: "관심종목",
+    content: "Jensen Huang: 'Elon Musk는 AI 미래·자율주행·휴머노이드 로봇 3대 축을 이끌 phenomenal position'(DogeDesigner). Tesla 대량 차량으로 세계 데이터 수집 우위·Optimus·cognitive AI 3개 영역 리더. 7/31 'xAI 더 못 준 것 유일한 후회' 지지 강화.",
+    createdAt: T03AU + 59*60_000, likes: 74, comments: 6 },
+  { id: 831, symbol: "SPCX", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "SpaceX Starship Flight 14에서 첫 upper stage(2단) tower catch 시도(Musk 확인). Flight 13 착륙 성공 후 다음 마일스톤 · 완전 재사용 로드맵 진전 · kg당 발사비 급감·궤도 DC 실 가능성 급증.",
+    createdAt: T03AU + 68*60_000, likes: 58, comments: 5 },
+  { id: 832, symbol: "TSLA", nickname: "익명_1155", holdingLabel: "관심종목",
+    content: "TSLA 상하이 기가팩토리가 400+ 중국 기업 협업·M3/MY 95% 중국 부품·2018년부터 해외 공장에도 공급(Ming/Tao Lin). 어제 US LFP Megapack 국산화에도 자동차는 중국 의존 지속 · Musk의 dual 접근(배터리 국산화 vs 자동차 중국 의존).",
+    createdAt: T03AU + 77*60_000, likes: 47, comments: 4 },
+  { id: 833, symbol: "TSLA", nickname: "익명_3311", holdingLabel: "관심종목",
+    content: "TSLA France 7월 판매 +26%·2,429대(Ming/CCFA). 2024 -30~-50% 급감 후 회복 시작·유럽 시장 반등 시그널. 반Musk 정치 배경에도 회복 = 제품·서비스 우위.",
+    createdAt: T03AU + 86*60_000, likes: 52, comments: 4 },
+  { id: 834, symbol: "TSLA", nickname: "익명_5599", holdingLabel: "관심종목",
+    content: "Tesla Supercharger 요금 7¢/kWh·하루 $3.33·미국 커피 한 잔 값 미만(Tesla 🇺🇸). EV TCO 프레임 강화·재생 에너지 결합. 오늘 헤지 원유 강세·Trump 이란 딜 여부에 따른 EV 상대 매력.",
+    createdAt: T03AU + 95*60_000, likes: 43, comments: 3 },
+  { id: 835, symbol: "SPCX", nickname: "익명_7722", holdingLabel: "관심종목",
+    content: "SPCX가 미 수십억 달러 우주 프로그램에서 중국인·중국산 부품 배제·China influence 제거(Whale Insider/Nikkei). 어제 미 우주군 $3.4B·NASA V3 풍동과 결합 · 안보·정치 축 강화. TSLA 상하이 95% 중국 부품과 대비.",
+    createdAt: T03AU + 104*60_000, likes: 61, comments: 5 },
+  { id: 836, symbol: "SPX", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "헤지펀드가 원유 강세 포지션을 3월 이후 가장 빠른 속도로 추가(Barchart). WTI·Brent flow 방향 반전 · 오늘 Trump 이란 딜(유가 하락 시그널)과 divergence · 시장 방향 혼란.",
+    createdAt: T03AU + 113*60_000, likes: 44, comments: 4 },
+  { id: 837, symbol: "SPX", nickname: "익명_2266", holdingLabel: "관심종목",
+    content: "Oracle이 매출의 50%를 CAPEX에 지출·'Oracle 미쳤다' 개인 코멘트(GURGAVN). 어제 하이퍼 4사 $155B Q2 CAPEX에 Oracle도 극단 참여 확인 · 통상 IT 10-20% 대비 극단 규모 · FCF 압박 리스크.",
+    createdAt: T03AU + 122*60_000, likes: 38, comments: 3 },
+  { id: 838, symbol: "GOOGL", nickname: "익명_4488", holdingLabel: "관심종목",
+    content: "Google Search 매출이 Amazon 1P(1st-party) 온라인 매출 사업의 약 85% 규모(Quartix). Search 하나로 AMZN 리테일 근접 규모 · AI 챗봇 위협에도 광고 매출 견조 · GOOGL 기존 강자 프레임.",
+    createdAt: T03AU + 131*60_000, likes: 55, comments: 4 },
+
   // ── 2026-08-01 신규 ──────────────────────────────────────────────────────
   { id: 811, symbol: "MSFT", nickname: "익명_2233", holdingLabel: "관심종목",
     content: "MSFT 오늘 +15.85% 급등·시총 +$400B 이상 증가·Q1 강세 실적 반응·추가 $15B 자사주 매입. 어제 Azure $100B·Copilot 30M+의 실 시장 반응. Mag 7 YTD -8.2%에서 반등 시작 신호. Stocks.News.",

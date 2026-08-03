@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-03 신규 ──────────────────────────────────────────────────────
+  {
+    id: -626, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "TSLA·SPCX 합병 다층 축적(Jimmy·Kalshi·The Limiting Factor). Jimmy가 두 소식통 근거로 Tesla 프리미엄 인수 $600-$630/주 프레임·필요 표 확보 가능·Multiple significant tailwinds가 양사 재평가 견인. Kalshi 2028 이전 합병 확률 60%(7/27 74%에서 하향·8/1 Musk 'fake news' 부인 반영). Limiting Factor는 SpaceX 상장 후 Democratic 통제가 2028년 되기 전 트리거로 2027 하반기 시점 논거·Musk도 그때까지 기다리지 않을 것. 8/1 Musk 명시 부인('This has never even come up in a discussion ever · absolutely fake news')에도 세 소스가 프레임 유지·Kalshi는 74%→60% 하향으로 부인 반영. 확률 변동: 7/23 Munster 90% → 7/24 Kalshi 79% → 7/27 Kalshi 74% → 8/1 Musk 부인 → 오늘 Kalshi 60%·Jimmy $600-$630·LF H2 2027. 확률은 하락했지만 프레임은 유지·시점 논거 구체화. 반대: Jimmy 두 소식통은 익명·Musk 명시 부인·Kalshi 60%는 하향 추세·LF 시점은 개인 논거. 앞으로 소식통 신뢰도·Kalshi 추이·Musk 후속 발언·2027 하반기 이벤트가 관찰 축.",
+    likes: 88, comments: 7, created_at: "2026-08-03T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -627, alias: "강남 표범 #46", symbol: "AMZN",
+    content: "AMZN이 OpenAI에 $50B 투자·5% 지분·$500B IPO 밸류로 IPO 앞두고(Shay Boloor). 기존 Anthropic $16B와 결합해 세계 최대 2개 프런티어 AI 랩 지분 보유·합계 $66B. 별개로 In America: AMZN 매출 20% 성장 재개. 왜 중요: (1) 프런티어 AI 지분 게임 진입 - GOOGL의 Anthropic($53.4B 증가)에 이어, (2) AWS + AI 지분 이중 축(하이퍼스케일러 중 유일), (3) OpenAI IPO $500B 밸류 5% = $25B 지분 가치, (4) MSFT-OpenAI vs AMZN-OpenAI 다른 접근(파트너십 vs 지분). AI 지분 흐름 종합: 7/25 GOOGL의 Anthropic $8.4B → 7/28 OpenAI $500B DC → 7/31 GOOGL의 Anthropic Q2 $53.4B 증가·$15B DC 대출 → 오늘 AMZN OpenAI $50B·5%. 프런티어 AI 지분 게임이 하이퍼스케일러 전면 확대. AMZN 이중 축: (a) AWS 인프라(20% 성장 재개)·(b) OpenAI+Anthropic 지분 → 지분 상승 = AMZN 자산·AWS 서비스 = 실 이익. 반대: (1) $500B 밸류는 프리미엄·조정 시 하락, (2) 실 이익은 IPO 시 실현, (3) 반경쟁 규제 리스크(두 프런티어 랩 major stake), (4) Anthropic $16B 실 매출 미미. 앞으로 OpenAI IPO 시점·AWS Bedrock/Claude 성장·반경쟁 조사·GOOGL·MSFT 대응이 관찰 축.",
+    likes: 96, comments: 8, created_at: "2026-08-03T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -628, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "Musk 극단 강세 발언(Ely 인용): 'SPCX가 12-24개월 안에 TSLA 전체 매출에 해당하는 규모의 매출을 새로 추가할 수 있다.' TSLA 연 매출 ~$100B+ 규모 참고 시 SPCX가 12-24개월 내 이 규모 추가 = 매출 폭발 시나리오. 왜 중요: (1) SPCX 매출 폭발 프레임(Starlink·NSSL·Starship·궤도 DC 4중), (2) 8/1 '99.99% 컴퓨트 우주로·SPCX money printer' 프레임 확장, (3) 8/4 첫 실적 앞두고 극단 강세 발언 = 실 데이터 자신감 or 심리 선점, (4) Ron Baron $30-40T·Wood 강세와 결합. 12-24개월 실현 시나리오 4축: Starlink direct-to-phone+국가 확대·NSSL 정부($3.4B/이틀·오늘 China 배제 우위)·Starship 상용화(오늘 Flight 14 upper catch)·궤도 DC(오늘 Colossus 1.2 GW BlackRock). 8/1 Musk 99.99% 우주 프레임과 결합해 SPCX 실 매출 축이 궤도 DC까지 확장. 반대: (1) 12-24개월 극도로 짧음, (2) TSLA 전체 매출 추가는 극단, (3) Musk 이전 예상들 delay 다수(Semi·Cybertruck·FSD), (4) 오늘 사상 최저 종가에서 심리 부양 성격 가능. SPCX 강세 축적: 7/23 Wood '가장 중요' → 7/27 Baron $30-40T → 7/29 Wood 10년 리드·-50% ATH → 7/31 미 우주군 $1.8B·Wood $50.2M → 8/1 Musk 99.99% 우주·Colossus BlackRock·NASA V3 → 오늘 Musk 12-24개월 +TSLA 매출·Flight 14 upper catch·China 배제. 앞으로 8/4 첫 실적·매출 성장률·Starlink 국가별·NSSL 추가·궤도 DC 상용화가 검증 축.",
+    likes: 82, comments: 7, created_at: "2026-08-03T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -629, alias: "을지로 팔콘 #71", symbol: "SPX",
+    content: "Trump가 이란 공격 취소·중동 딜 진행(Investing visuals 인용). 딜: 호르무즈 해협 개방 + 핵무기 없이 조건 · 8월을 7월보다 낫게 시작 신호. 왜 중요: (1) 지정학 리스크 완화, (2) 유가 안정 시나리오(호르무즈 해협 개방·세계 원유 해상 수송 20% 통과), (3) 8월 개선 신호(7월 부담 대비), (4) 핵비확산. 오늘 헤지 원유 강세와 divergence: Trump 딜=유가 하락 시그널 vs 헤지펀드 원유 강세 포지션 3월 이후 최대=유가 상승 시그널. 두 시그널 divergence = 시장 방향 불명확 · 유가 양방향 변동성 확대. 시나리오 3가지: (A) 실 개입 완화·유가 안정·매크로 개선, (B) 딜 실패·이란 갈등·유가 급등, (C) 부분 진행·혼란 지속. 매크로 흐름 종합: 7/27 BRK 현금 $317B·숏 15년 최고 → 7/29 반도체 밸류·NVDA CDS → 7/30 KOSPI -8.17% → 7/31 Aschenbrenner 청산·insider 매도 30년 최고 → 8/1 JPY 개입 대비·MSFT AI 사이버 → 오늘 Trump 이란 딜(완화)·Goldman $155B(부담)·헤지 원유(혼란). 매크로 완화·부담·혼란 다층 · 방향 불명확. 반대: (1) 협상 진행 중·실 체결 시간, (2) 이란 응답 필요, (3) 봉쇄 위협 지속 가능, (4) 8월 방향은 여러 매크로 종합. 앞으로 실 체결·이란 응답·유가 반응·이스라엘 방문·다른 지정학이 관찰 축.",
+    likes: 71, comments: 6, created_at: "2026-08-03T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -630, alias: "광화문 늑대 #33", symbol: "SPX",
+    content: "Goldman Sachs가 이번 달 글로벌 시장에 $155B 강제 매도(forced selling) 경고(⚡). 어제 하이퍼 CAPEX $155B와 같은 숫자 divergence · 리밸런싱·마진콜·모멘텀 unwind 복합 요인. 왜 중요: (1) $155B 대형 규모 = 시장 변동성·주요 자산 조정, (2) 어제 하이퍼 CAPEX $155B와 같은 숫자(흥미로운 우연), (3) 8월 시장 부담 축적(Aschenbrenner·insider 매도 30년 최고 + 오늘), (4) 강제 매도 = 심리 부담·연쇄 반응. 강제 매도 요인 3축: 리밸런싱(60/40·지수)·마진콜(레버리지 청산·Aschenbrenner 반복 가능)·모멘텀 unwind(CTA·Mag 7 YTD 부진 종목 추가 매도). 시나리오: (A) 실 매도 실현 - 8월 변동성·Mag 7 조정·SPCX 추가 하락, (B) 매도 완화 - Trump 딜·MSFT·AMZN 강세로 상쇄, (C) 부분 실현 - $50-100B·특정 섹터. 반대: (1) Goldman 경고 항상 실현 아님, (2) 어제 하이퍼 CAPEX·MSFT +$400B 강세 상쇄, (3) Trump 이란 딜 심리 개선, (4) 강제 매도는 단발성. 8월 매크로 축적 흐름: 8/1 JPY 개입 대비·MSFT AI 사이버 → 오늘 Trump 딜(완화)·Goldman $155B(부담)·헤지 원유(혼란)·Oracle CAPEX 50%. 매크로 시그널이 완화·부담·혼란 다층·방향 불명확. 앞으로 8월 실 매도 규모·리밸런싱 시점·마진콜·Fed·VIX가 검증 축.",
+    likes: 79, comments: 6, created_at: "2026-08-03T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -631, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "Cole Grinde의 Tesla Q2 실적 요약: 월 50만 라이드 접근·연초 대비 매주 double-digit 성장·Robotaxi 성장이 'literally exponential'·Cybercab·Semi·Cybersedan 매입 계획으로 unmanufactured miles 캐파 성장에 매칭. 왜 중요: (1) Robotaxi 실 매출 축 확대 - 자동차 판매 + FSD 라이선싱 + Robotaxi 이중 매출, (2) 월 50만 라이드 규모 - 초기이지만 지속 성장 시 Uber·Lyft 대비 상당, (3) 차량 종류 확대(Cybercab·Semi·Cybersedan) - 시장 세분화, (4) 캐파 성장 매칭 명시 - unmanufactured miles = 아직 생산되지 않은 마일리지 성장·수요 대비 캐파 확장. Cybercab 흐름 종합: 7/24 TX 파일럿 → 7/28 Houston 133 Cybercabs·SA 배치 → 7/29 NHTSA AV 정책 대개편(Tesla 우호) → 7/31 Cybercab self-certify 규제 우위 → 오늘 월 50만 라이드·매입 계획. Cybercab이 규제 우위+실 상용+매입 계획 3중 축. 반대: (1) 500K는 Uber(월 수천만) 대비 극소, (2) 'literally exponential'은 초기 저기저 프레임 가능, (3) Cybercab 실 인도 시점·수익화 지표 미확인, (4) Robotaxi가 자체 매출 축인지 아직 Tesla 실적에서 별도 세그먼트 아님. 앞으로 월 라이드 세부·Cybercab 배치·Robotaxi 매출·이익·Semi 상용·Cybersedan 발표가 관찰 축.",
+    likes: 63, comments: 5, created_at: "2026-08-03T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -632, alias: "종로 매 #12", symbol: "NVDA",
+    content: "Jensen Huang: 'Elon Musk는 AI 미래·자율주행·휴머노이드 로봇 3대 축을 이끌 phenomenal position에 있다'(DogeDesigner). Tesla 대량 차량으로 세계 데이터 수집 우위·Optimus·cognitive AI 3개 영역이 AI에서 가장 중요한 3대 영역·Musk 매우 낙관적·가장 중요한 AI 문제 대규모 작업. 왜 중요: (1) NVDA CEO 공식 지지 - 7/31 'xAI 더 못 준 것 유일한 후회'에 이어 3대 축 리더 프레임 공식화, (2) NVDA-Tesla·xAI 결합 강화·GPU 공급 우선순위 프레임, (3) Tesla 데이터 수집 우위 - 수백만 FSD 차량·매일 수억 마일 driving 데이터·Waymo·GM Cruise 대비 100배+, (4) 3대 축: xAI(Grok·Colossus)·Tesla 자율주행(FSD·Robotaxi)·Optimus(휴머노이드) = 향후 몇 년 AI 최중요 영역. Jensen-Musk 흐름 종합: 7/26 Musk 'AI 10년 내 통제 위치' → 7/28 SpaceX+NVIDIA Open Secure AI Alliance 창립 → 7/29 Kalshi 74% → 7/31 Jensen 'xAI 더 못 준 것 유일한 후회' → 오늘 Jensen 'Musk 3대 축 리더'. NVDA-Musk 축 다각도 강화. 3대 축 실 상용: xAI(Grok 4·5·Colossus 오늘 1.2 GW BlackRock)·Tesla 자율주행(Robotaxi 월 50만 오늘·Cybercab TX·Houston·SA)·Optimus(7/28 Optimus factory hires Giga Texas). 반대: (1) Jensen 발언은 개인적·NVDA GPU 공급 우선순위 홍보 성격, (2) '3대 축 리더' 프레임이 Musk 브랜드 강화·실체 대비 과도 가능, (3) 다른 AI 회사(OpenAI·Anthropic·Google) 강세·Musk만이 리더는 아님, (4) 휴머노이드 상용화까지 오랜 시간. 앞으로 NVDA-Tesla GPU 공급 우선순위·NVDA-xAI 지분 확대·Optimus 배치·AI 3대 축 진전이 관찰 축.",
+    likes: 74, comments: 6, created_at: "2026-08-03T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -633, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "SpaceX Starship Flight 14에서 첫 upper stage(2단) tower catch 시도(Space and Technology·Musk 확인). Flight 13 착륙 성공 후 다음 마일스톤 · 완전 재사용 로드맵 진전. 왜 중요: (1) 완전 재사용의 시작 - Booster만 회수했던 SPCX가 2단도 회수 = 100% 재사용 로켓 실현, (2) 발사비 급감 - 완전 재사용 시 kg당 $500-$1000/kg에서 $10-$50/kg로 급감 예상, (3) 궤도 DC 실 가능성 급증 - 저비용 발사 = 궤도 DC 실 상용화 · Musk 99.99% 우주 프레임 실체화, (4) 화성 유인 미션 - 저비용 재사용 = 대량 페이로드·다인 미션. Starship 흐름 종합: 7/25 All-in Starship → 7/28 Flight 13 히트실드 스트레스 → 7/29 Flight 13 착륙 → 8/1 NASA Super Heavy V3 풍동 테스트 → 오늘 Flight 14 upper catch·Musk 12-24개월 +TSLA 매출·China 배제. Starship 로드맵이 flight마다 진전. 반대: (1) 첫 시도 실패 가능·실 성공까지 여러 flight, (2) 2단 tower catch는 기술적으로 훨씬 어려움(재진입 후 정밀 제어), (3) 완전 재사용까지 이터레이션 다수, (4) 상용 kg 비용 실 감소 여러 년. 시사점: (a) 완전 재사용 실 시작 = SPCX 로켓 사업 결정적 마일스톤, (b) 저비용 발사 시대 = 우주 사업 전반 확대, (c) NASA·정부 계약 우위 강화(오늘 China 배제 + Flight 14 = 정부 신뢰), (d) 매출 실체 프레임(Musk 12-24개월 +TSLA 매출의 물리 근거). 앞으로 Flight 14 발사 시점·2단 catch 성공·실 재사용 페이스·kg당 발사비·2029 유인 화성이 관찰 축.",
+    likes: 58, comments: 5, created_at: "2026-08-03T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -634, alias: "부산 갈매기 #77", symbol: "TSLA",
+    content: "Tesla VP Tao Lin(Ming 인용): 상하이 기가팩토리가 400+ 중국 기업과 협업·2018년부터 일부는 Tesla 해외 공장에도 부품 공급·상하이 제조 M3/MY의 95%가 중국 공급망 부품. 왜 중요: (1) 어제 US LFP Megapack 국산화와 대비 - 배터리는 국산화 시작·자동차는 여전히 중국 의존 = Tesla dual structure, (2) 미-중 무역 리스크 - 관세·수출 통제·규제 변화 시 상하이 생산 급감 가능, (3) 글로벌 공급망 구조 - 중국 부품이 Tesla 해외 공장까지 확장·미-중 갈등 시 전 세계 Tesla 생산 영향, (4) 95%의 극단적 의존도·5%만 non-China·대체 어려움. 상하이 기가팩토리 배경: Tesla 최대 시설·M3/MY 주요 생산·중국 시장·유럽 수출·연 100만 대+ 캐파. 중국 공급망 활용 이유: 저비용·빠른 이터레이션·CATL LFP·BYD·Panasonic 중국·다수 중국 기계 부품. 미-중 갈등 시나리오 3가지: (A) 관세 확대 - 상하이 M3/MY 미국 수출 비용 상승·중국 시장 영향 없음, (B) 수출 통제 - 특정 부품 이동 어려움·해외 공장 부족, (C) 반도체·재료 제재 - 중국 부품 수출 제한 시 상하이 생산 급감. 어제 US LFP Megapack과 대비: 어제 Sparks Nevada 자체 LFP·첫 Megapack 출하 = 배터리 국산화 시작 · 오늘 상하이 95% 중국 부품 = 자동차 국산화 진전 미미. Tesla dual: 배터리 국산화 vs 자동차 중국 의존. 반대: (1) 95%는 상하이 M3/MY 한정·다른 공장은 다른 공급망, (2) 상하이 위치 감안 자연스러움, (3) 갈등 시나리오는 여러 방향, (4) Tao Lin 발언은 협업 프레임·리스크 강조 아님. 앞으로 미-중 무역 정책·상하이 부품 US 대체·상하이 vs 다른 공장 균형·관세 실 영향이 관찰 축.",
+    likes: 47, comments: 4, created_at: "2026-08-03T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -635, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "Tesla France 7월 판매 +26%·2,429대 회복(Ming/CCFA French Automobile Industry Association). 2024 -30~-50% 급감 후 회복 시작·유럽 시장 반등 시그널. 왜 중요: (1) 유럽 시장 회복 실체화 - 2024 반Musk 정치 배경 급감에서 반등, (2) 반Musk 배경 극복 = 제품·서비스 우위, (3) 글로벌 판매 균형 - 상하이 중국 + 유럽 회복 + 미국 = 다각 매출, (4) 7월은 성수기 아님·+26%는 실 수요 회복. Tesla 매출 흐름 종합: 7/24 NHTSA AV 정책(Tesla 우호) → 7/25 저장 Q2 $232.3/kWh·-20% YoY(경쟁) → 7/28 Robotaxi Houston 133 Cybercabs → 7/29 AZ 509+TX 140 MW 태양광 → 7/30 호주 Novon Megapack → 7/31 10 million 차량 생산·Cybercab 규제 우위 → 8/1 US LFP Megapack 첫 출하 → 오늘 France +26%·상하이 95% 중국·Robotaxi 500K/월·Supercharger 7¢. Tesla 다각 매출: 유럽 회복·상하이 지속·US 배터리 국산화·Robotaxi 확장·Supercharger 저비용. 반대: (1) 7월 한 달·2,429대는 소수, (2) 2024 대규모 하락에서 회복 = base effect·YoY 착시, (3) 다른 유럽 국가 별개 확인, (4) 반Musk 배경 미해결 시 반전. 시사점: (a) Tesla 유럽 매출 축 회복, (b) 제품·서비스 우위 = 반Musk 극복, (c) 글로벌 판매 균형, (d) 다른 유럽 국가 관찰(독일·이탈리아·영국 8월). 앞으로 유럽 다른 국가·회복 지속·반Musk 심리·유럽 EV 정책·글로벌 매출 균형이 관찰 축.",
+    likes: 52, comments: 4, created_at: "2026-08-03T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -636, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "Tesla Supercharger 요금 7¢/kWh·하루 $3.33·미국 커피 한 잔 값 미만(Tesla 🇺🇸). 왜 중요: (1) EV TCO(총 소유 비용) 프레임 강화 - 연료비 커피 값 미만 = ICE 극단 저비용, (2) 유가 상승 시 EV 상대 매력 - 오늘 헤지 원유 강세·Trump 이란 딜 여부 유가 변동 시, (3) 어제 US LFP Megapack + 저비용 Supercharger로 renewables 결합 완성, (4) Tesla 서비스 매출 축 - Supercharger는 자체 매출 · 저요금 프레임으로 채택률·이용률 확대. Tesla renewables 사이클 종합: 7/29 AZ Project Sterling 458 MW 태양광 → 7/30 호주 Novon Megapack → 7/31 Global Supercharger 재생 공급 프레임 → 8/1 US LFP Megapack 첫 출하 → 오늘 Supercharger 7¢·$3.33/일. 3중 축(태양광·저장·저비용 Supercharger) 완성. 비교 지표: ICE(25 mpg·40마일/일)=$6/일 · Tesla $3.33/일 = 55% 저비용 · 스타벅스 라떼 $5-6 · Tesla EV 하루 < 라떼. 반대: (1) 7¢/kWh는 지역별 편차·캘리포니아 등 비싸, (2) $3.33은 typical·대량 이용 시 훨씬 높음, (3) 초기 EV 구매 비용 여전히 ICE 대비 높음·TCO 여러 해 후 회수, (4) Supercharger 이용 = Tesla 인프라 의존. 시사점: (a) EV 채택 확대 논거·저비용 프레임이 EV 판매 지원, (b) Supercharger 매출 확대·저요금이 이용률 확대, (c) 유가 상승 시 EV 우위·오늘 헤지 원유 강세 시나리오에서 상대 매력, (d) Tesla 서비스 매출 축. 앞으로 EV 채택률·미국 판매·유가 변동 시 상대 매력·Supercharger 매출 세부·Non-Tesla EV Supercharger 이용이 관찰 축.",
+    likes: 43, comments: 3, created_at: "2026-08-03T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -637, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "SPCX가 미 수십억 달러 우주 프로그램에서 중국인(nationals)과 중국산 부품 배제·China influence 제거(Whale Insider·Nikkei). 지정학·안보 우려 대응. 왜 중요: (1) 미 정부 계약 우위 강화 - 오늘 SPCX 미 우주군 $3.4B 계약(이틀 만)·NASA V3 풍동과 결합해 안보·정치 축 강화, (2) 공급망 재편 - 중국 부품 대체·비용 상승 가능·공급 안정성 개선, (3) 안보 프레임 - 미 정부가 SPCX를 안보 신뢰 파트너로 지정, (4) 오늘 TSLA 상하이 400+·95% 중국 부품과 대비 - Musk의 dual 접근. China influence 제거 배경: 미 정부 우려(중국 정보 수집·부품 백도어·공급망 취약)·미 정부 정책(국방 China 배제·CFIUS 강화·IRA·CHIPS)·SPCX 대응(중국인 접근 제한·부품 대체·공급망 완전 재편). SPCX 미 정부 관계 흐름: 7/27 NASA Admin Duffy 강세 → 7/28 Flight 13 성공 → 7/30 미 우주군 $1.6B → 7/31 미 우주군 $1.8B(이틀 $3.4B)·NASA V3 풍동 → 8/1 Musk 99.99% 우주·Colossus BlackRock 1.2 GW → 오늘 China 배제·Flight 14 upper catch·Musk 12-24개월 +TSLA 매출. 안보·정치·기술 3중 축. TSLA vs SPCX 대비: TSLA(상하이 400+·95% 중국·해외 공장 공급·의존 지속) vs SPCX(완전 배제·안보 프레임·China influence 제거). Musk dual: 상용 자동차 중국 의존 vs 방위 관련 우주 China 배제. 반대: (1) 배제 조치는 이미 수년 전 진행·확인 성격, (2) 공급망 재편 비용 상승·단기 마진 부담, (3) 중국이 SPCX Starlink 반대 조치 시나리오, (4) 완전 배제 어려움·일부 부품 여전히 중국 원소. 앞으로 다른 미 방위 계약 유사·재편 실 비용·중국 대응·TSLA 상하이도 변화 시나리오가 관찰 축.",
+    likes: 61, comments: 5, created_at: "2026-08-03T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -638, alias: "광화문 늑대 #33", symbol: "SPX",
+    content: "매크로 - 헤지펀드가 원유(crude oil) 강세 포지션을 3월 이후 가장 빠른 속도로 추가(Barchart). WTI·Brent 기관 flow 방향 반전 시그널. 왜 중요: (1) 원유 강세 시그널 - 헤지펀드 원유 상승 베팅 = 유가 상승 압력, (2) 오늘 Trump 이란 딜과 divergence - Trump 딜(유가 하락) vs 헤지 강세(유가 상승) 반대 방향, (3) 매크로 시그널 방향 혼란 - 지정학 완화 vs 원유 강세 두 시그널 대립, (4) 3월 이후 최대 = 상당한 flow 반전. 강세 베팅 이유: 공급(OPEC+ 감산·러시아/이란 리스크·미 셰일 성장 둔화)·수요(하이퍼 DC 전력·여름 성수기·아시아 회복)·지정학(Trump 딜에도 갈등 가능·우크라이나·대만). Trump 딜과 대립: Trump 딜 = 호르무즈 개방·유가 하락 vs 헤지 강세 = 3월 이후 최대·유가 상승. divergence 해석: 헤지펀드는 딜 실패 or 다른 리스크 예상 · 시장이 두 시나리오 병행 대비 · 유가 양방향 변동성 확대. 매크로 부담 축적: 8/1 JPY 개입 대비 → 오늘 Trump 딜(완화) vs Goldman $155B(부담) vs 헤지 원유(혼란). 8월 매크로 시그널 완화·부담·혼란 다층. 반대: (1) 3월 이후 최대이지만 절대 규모 확인 필요, (2) 헤지 포지션은 short-term·실 매도 이어질지 미확인, (3) Trump 딜 성공 시 원유 급락·헤지 포지션 손실, (4) 여름 성수기는 계절 요인·9-10월 완화 가능. 앞으로 WTI·Brent 실 변동·OPEC+ 8월 정책·미 재고·헤지 포지션 지속·Trump 딜 실 체결이 관찰 축.",
+    likes: 44, comments: 4, created_at: "2026-08-03T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -639, alias: "마포 올빼미 #24", symbol: "SPX",
+    content: "Oracle이 매출의 50%를 CAPEX에 지출하는 상황·'Oracle 미쳤다' 개인 코멘트(GURGAVN). 왜 중요: (1) 하이퍼스케일러 CAPEX 사이클 확산 - 어제 하이퍼 4사(AMZN·META·GOOGL·MSFT) $155B Q2 CAPEX에 Oracle도 극단 참여, (2) 매출 50% 규모의 의미 - 통상 IT 기업 CAPEX 10-20%·Oracle 50%는 극단, (3) AI 인프라 참여 - Oracle이 데이터센터·클라우드 확장으로 하이퍼 게임 진입, (4) FCF 압박 리스크 - 매출 50% CAPEX = FCF 크게 감소·주주 환원 축소 가능. Oracle 배경: Enterprise SW·DB 리더·OCI(Cloud Infrastructure) 성장·하이퍼 대비 상대적 소규모·최근 OpenAI 파트너십·xAI 인프라·Nvidia GPU 대량 확보. CAPEX 확대 이유: AI 데이터센터·하이퍼 시장 도전·OpenAI 계약 서비스 인프라. 하이퍼 vs Oracle 비교: 하이퍼 4사 Q2 = AMZN $34.2B·META $43.4B·GOOGL $34.0B·MSFT $43.4B = $155B · Oracle = 매출 50%(구체 금액 별개)·규모는 작지만 비율 극단. Oracle 매출 대비 지출 극단. 반대: (1) 50%는 개인 계산·공식 확인 필요, (2) AI 매출 성장으로 정당화 가능, (3) OpenAI·xAI 실 계약이 회수 뒷받침, (4) '미쳤다' 코멘트는 개인 견해. 시사점: (a) 하이퍼 CAPEX 사이클 광범위 확산, (b) AI 인프라 수요 지속, (c) FCF 압박 리스크, (d) NVDA GPU 매출 성장 시사(Oracle 등 non-hyperscaler도 GPU 대량 매입). 앞으로 Oracle 실적·CAPEX 실 규모·AI 매출 회수·OpenAI IPO Oracle 계약·다른 non-hyperscaler CAPEX가 관찰 축.",
+    likes: 38, comments: 3, created_at: "2026-08-03T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -640, alias: "종로 매 #12", symbol: "GOOGL",
+    content: "Google Search 매출이 Amazon 1P(1st-party) 온라인 매출 사업의 약 85% 규모(Quartix). 왜 중요: (1) 광고 매출 실 규모 확인 - Google Search 매출이 AMZN 리테일 근접 = 광고가 실 리테일과 필적 규모, (2) GOOGL 기존 강자 프레임 - Search 하나로 mega-cap 사업 유지·AI 챗봇 위협에도 견조, (3) 어제 AMZN OpenAI $50B와 대비 - AMZN이 OpenAI 지분으로 AI 확장·GOOGL은 기존 Search 강자, (4) 1P 온라인 매출 = Amazon 직접 판매 상품(3P Marketplace 제외)·이 사업의 85%가 GOOGL Search. 규모 계산: Amazon 1P = 연 $250B+ 규모(참고)·오늘 리포트 AMZN Q2 $180.2B 중 상당 부분 · Google Search = ~85% × Amazon 1P = 연 $200B+·GOOGL 전체 매출 최대 세그먼트·Search Ads 주요 매출원. GOOGL 흐름 종합: 7/25 GOOGL Anthropic $8.4B → 7/27 GOOGL 백로그 $500B+·SPCX 지분 $94.1B → 7/31 Anthropic Q2 $53.4B 증가·$15B DC 대출 → 오늘 Search 85%. GOOGL 지분 자산 재평가+파트너십 확장+Search 매출 규모 확인 다각 강화. AI 챗봇 위협 재평가: 우려(정보 검색 AI 챗봇 이동·Search 광고 하락) vs 실체(Search 매출 여전히 AMZN 1P 85%·다양한 쿼리 우세·광고 인프라 규모 우위). 반대: (1) 85%는 Quartix 개인 추정·공식 확인 필요, (2) AI 챗봇 대체율 향후 5년 급증 가능, (3) Amazon 1P 매출 정의 편차, (4) Search 성장률 vs 리테일 성장률 상대 비교 필요. 시사점: (a) GOOGL Search 견조·mega-cap 유지, (b) 광고 매출 규모 확인·리테일 필적, (c) AI 챗봇 위협 재평가·우려 과도 가능, (d) 하이퍼 매출 다각화 - GOOGL Search+Cloud+Ads 3중 축. 앞으로 Search 성장률·AI 챗봇 대체·GOOGL Anthropic 파트너십·AMZN Sponsored Ads·META vs GOOGL 광고 점유율이 관찰 축.",
+    likes: 55, comments: 4, created_at: "2026-08-03T01:43:00.000Z", liked: false,
+  },
+
   // ── 2026-08-01 신규 ──────────────────────────────────────────────────────
   {
     id: -613, alias: "여의도 매 #22", symbol: "MSFT",
