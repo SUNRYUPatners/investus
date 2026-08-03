@@ -51,14 +51,33 @@ function estimatePxWidth(text, fontSize){
   return w;
 }
 
-// 폭 초과 시에만 wrap · 우선순위: (1) 절 구분자(·—) → (2) 공백 → (3) 강제 자르기
+// 폭 초과 시에만 wrap · (1) 절 구분자(·—) → (2) 공백 → (3) 문자 강제 분할
 function multilineIfOverflow(text, x, y, fontSize, maxPxWidth, maxLines, lh, attrs){
   const px = estimatePxWidth(text, fontSize);
   if(px <= maxPxWidth){
     return `  <text x="${x}" y="${y}" ${attrs}>${esc(text)}</text>`;
   }
-  // 폭 초과 → 절 구분자 기준 분리
-  const parts = String(text).split(/(\s·\s|\s—\s|·|—)/).filter(p=>p!==undefined&&p!=='');
+  // 1단계: 절 구분자로 분리
+  const rawParts = String(text).split(/(\s·\s|\s—\s|·|—)/).filter(p=>p!==undefined&&p!=='');
+  // 2단계: 각 절이 폭 초과 시 공백으로 재분할 (그래도 초과하면 문자 단위)
+  const parts = [];
+  for(const p of rawParts){
+    if(estimatePxWidth(p, fontSize) <= maxPxWidth){ parts.push(p); continue; }
+    const subs = p.split(/(\s+)/).filter(s=>s!=='');
+    for(const s of subs){
+      if(estimatePxWidth(s, fontSize) <= maxPxWidth){ parts.push(s); continue; }
+      // 초긴 단일 토큰 → 문자 단위 강제 분할
+      let tmp = s;
+      while(estimatePxWidth(tmp, fontSize) > maxPxWidth){
+        let cutAt = 1;
+        while(cutAt < tmp.length && estimatePxWidth(tmp.slice(0, cutAt+1), fontSize) <= maxPxWidth) cutAt++;
+        parts.push(tmp.slice(0, cutAt));
+        tmp = tmp.slice(cutAt);
+      }
+      if(tmp) parts.push(tmp);
+    }
+  }
+  // 3단계: 라인 조립
   const lines=[]; let cur='';
   for(const p of parts){
     const test = cur + p;
@@ -66,23 +85,18 @@ function multilineIfOverflow(text, x, y, fontSize, maxPxWidth, maxLines, lh, att
     else{
       if(cur.trim()) lines.push(cur.trim());
       cur = p.replace(/^[·—\s]+/,'').trim();
-      if(lines.length >= maxLines - 1){
-        // 마지막 줄
-        if(estimatePxWidth(cur, fontSize) > maxPxWidth){
-          // 단어 단위 자르기
-          const words = cur.split(/(\s+)/);
-          let last='';
-          for(const w of words){
-            if(estimatePxWidth(last + w, fontSize) <= maxPxWidth - fontSize) last += w;
-            else break;
-          }
-          cur = (last.trim()||cur.slice(0, Math.floor(maxPxWidth/fontSize)-1)) + '…';
-        }
-        break;
-      }
+      if(lines.length >= maxLines) break;
     }
   }
-  if(cur.trim() && lines.length < maxLines) lines.push(cur.trim());
+  if(cur.trim() && lines.length < maxLines){
+    if(estimatePxWidth(cur, fontSize) > maxPxWidth){
+      // 마지막 줄이 여전히 초과하면 잘라내고 …
+      let cutAt = 1;
+      while(cutAt < cur.length && estimatePxWidth(cur.slice(0, cutAt+1) + '…', fontSize) <= maxPxWidth) cutAt++;
+      cur = cur.slice(0, cutAt) + '…';
+    }
+    lines.push(cur);
+  }
   return lines.slice(0, maxLines).map((l,i) =>
     `  <text x="${x}" y="${y+i*lh}" ${attrs}>${esc(l)}</text>`
   ).join('\n');
@@ -129,7 +143,7 @@ ${multilineIfOverflow(oRaw.title, 540, 108, F.TITLE, MAX_W.WIDE, 2, 36, `font-fa
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="${p.fg}" text-anchor="middle" opacity=".15">${o.heroIcon}</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="${p.fg}" text-anchor="middle">${o.heroIcon}</text>
   <text x="540" y="300" font-family="Arial Black,Arial" font-size="${F.HERO_BIG}" font-weight="900" fill="#f9fafb" text-anchor="middle">${o.heroBig}</text>
-${multilineIfOverflow(oRaw.heroSub, 540, 340, F.HERO_SUB, MAX_W.WIDE, 2, 26, `font-family="Arial" font-size="${F.HERO_SUB}" fill="#9ca3af" text-anchor="middle"`)}
+${multilineIfOverflow(oRaw.heroSub, 540, 340, F.HERO_SUB, MAX_W.WIDE, 3, 26, `font-family="Arial" font-size="${F.HERO_SUB}" fill="#9ca3af" text-anchor="middle"`)}
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 ${cards}
   <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>

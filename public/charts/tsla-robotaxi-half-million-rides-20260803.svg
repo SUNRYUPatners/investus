@@ -18,7 +18,8 @@
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#4ade80" text-anchor="middle">🚕</text>
   <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">500 K/월</text>
   <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Cole Grinde의 Tesla Q2 실적 요약: 월 50만 라이드 접근·연초 대비 매주 double-digit 성장·</text>
-  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Robotaxi 성장이 "literally exponential"</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Robotaxi 성장이 "literally exponential"·Cybercab·Semi·</text>
+  <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Cybersedan 매입 계획으로 unmanufactured miles 캐파 성장에 매칭</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>

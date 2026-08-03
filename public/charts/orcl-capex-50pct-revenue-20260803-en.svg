@@ -42,7 +42,8 @@
   <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">"Oracle is now spending 50% of its entire revenue on capex · am I the only one who thinks Oracle has gone crazy"</text>
   <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Source: GURGAVN · 2026.08.02</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#1a0808" stroke="#f80000" stroke-width="1"/>
-  <text x="540" y="884" font-family="Arial" font-size="19" fill="#f80000" text-anchor="middle">Why: Confirms Oracle relative-large participation alongside yesterday's hyper-4 (AMZN/META/GOOGL/MSFT) $155B Q2 CAPEX</text>
+  <text x="540" y="884" font-family="Arial" font-size="19" fill="#f80000" text-anchor="middle">Why: Confirms Oracle relative-large participation alongside yesterday's hyper-4 (AMZN/META/GOOGL/MSFT)</text>
+  <text x="540" y="910" font-family="Arial" font-size="19" fill="#f80000" text-anchor="middle">$155B Q2 CAPEX</text>
   <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Watch: Oracle earnings · FCF pressure · other non-hyperscaler CAPEX spread</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">ORCL CAPEX 50% rev · 2026.08.03</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

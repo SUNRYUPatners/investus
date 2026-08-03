@@ -16,7 +16,8 @@
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".15">🚀</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#c084fc" text-anchor="middle">🚀</text>
   <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">+TSLA</text>
-  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Ely 인용: Elon Musk가 SPCX가 12-24개월 내에 TSLA 전체 매출에 해당하는 규모를 새로 추가할 수 있다고 발언</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Ely 인용: Elon Musk가 SPCX가 12-24개월 내에 TSLA 전체 매출에 해당하는 규모를 새로 추가할 수 있다고</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">발언 · SPCX 매출 확장 속도의 극단 프레임 · 8/1 "99.99% 컴퓨트 우주로" 프레임과 결합</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
