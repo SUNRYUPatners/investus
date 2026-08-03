@@ -39,21 +39,27 @@ function E(o){const r={};for(const k in o)r[k]=typeof o[k]==='string'?esc(o[k]):
 
 // === 새 wrap 로직 (2026-07-30~) ===
 // 폰트 고정 · 폭 초과 시에만 문맥 기반 wrap
-function estimatePxWidth(text, fontSize){
+function estimatePxWidth(text, fontSize, isBold){
+  // Arial Black(bold) 계수 상향 · 소문자·괄호 등도 상향 조정으로 실 렌더링 근사
+  const b = isBold ? 1.15 : 1.0;
   let w=0;
   for(const c of String(text)){
-    if(/[가-힣一-龥]/.test(c)) w += fontSize;
-    else if(/\s/.test(c)) w += fontSize*0.3;
-    else if(/[·—:]/.test(c)) w += fontSize*0.4;
-    else if(/[A-Z0-9]/.test(c)) w += fontSize*0.6;
-    else w += fontSize*0.5;
+    if(/[가-힣一-龥]/.test(c)) w += fontSize * b;
+    else if(/\s/.test(c)) w += fontSize * 0.32;
+    else if(/[·—:]/.test(c)) w += fontSize * 0.42;
+    else if(/[A-Z0-9]/.test(c)) w += fontSize * 0.68 * b;
+    else if(/[iljI!.,;'"`]/.test(c)) w += fontSize * 0.32 * b;
+    else if(/[mwMW]/.test(c)) w += fontSize * 0.85 * b;
+    else w += fontSize * 0.58 * b;
   }
   return w;
 }
 
 // 폭 초과 시에만 wrap · (1) 절 구분자(·—) → (2) 공백 → (3) 문자 강제 분할
 function multilineIfOverflow(text, x, y, fontSize, maxPxWidth, maxLines, lh, attrs){
-  const px = estimatePxWidth(text, fontSize);
+  const isBold = /font-weight="?(bold|[89]00)/i.test(attrs) || /Arial Black/.test(attrs);
+  const est = (t) => estimatePxWidth(t, fontSize, isBold);
+  const px = est(text);
   if(px <= maxPxWidth){
     return `  <text x="${x}" y="${y}" ${attrs}>${esc(text)}</text>`;
   }
@@ -62,15 +68,15 @@ function multilineIfOverflow(text, x, y, fontSize, maxPxWidth, maxLines, lh, att
   // 2단계: 각 절이 폭 초과 시 공백으로 재분할 (그래도 초과하면 문자 단위)
   const parts = [];
   for(const p of rawParts){
-    if(estimatePxWidth(p, fontSize) <= maxPxWidth){ parts.push(p); continue; }
+    if(est(p, fontSize) <= maxPxWidth){ parts.push(p); continue; }
     const subs = p.split(/(\s+)/).filter(s=>s!=='');
     for(const s of subs){
-      if(estimatePxWidth(s, fontSize) <= maxPxWidth){ parts.push(s); continue; }
+      if(est(s, fontSize) <= maxPxWidth){ parts.push(s); continue; }
       // 초긴 단일 토큰 → 문자 단위 강제 분할
       let tmp = s;
-      while(estimatePxWidth(tmp, fontSize) > maxPxWidth){
+      while(est(tmp, fontSize) > maxPxWidth){
         let cutAt = 1;
-        while(cutAt < tmp.length && estimatePxWidth(tmp.slice(0, cutAt+1), fontSize) <= maxPxWidth) cutAt++;
+        while(cutAt < tmp.length && est(tmp.slice(0, cutAt+1), fontSize) <= maxPxWidth) cutAt++;
         parts.push(tmp.slice(0, cutAt));
         tmp = tmp.slice(cutAt);
       }
@@ -81,7 +87,7 @@ function multilineIfOverflow(text, x, y, fontSize, maxPxWidth, maxLines, lh, att
   const lines=[]; let cur='';
   for(const p of parts){
     const test = cur + p;
-    if(estimatePxWidth(test, fontSize) <= maxPxWidth) cur = test;
+    if(est(test, fontSize) <= maxPxWidth) cur = test;
     else{
       if(cur.trim()) lines.push(cur.trim());
       cur = p.replace(/^[·—\s]+/,'').trim();
@@ -89,10 +95,10 @@ function multilineIfOverflow(text, x, y, fontSize, maxPxWidth, maxLines, lh, att
     }
   }
   if(cur.trim() && lines.length < maxLines){
-    if(estimatePxWidth(cur, fontSize) > maxPxWidth){
+    if(est(cur, fontSize) > maxPxWidth){
       // 마지막 줄이 여전히 초과하면 잘라내고 …
       let cutAt = 1;
-      while(cutAt < cur.length && estimatePxWidth(cur.slice(0, cutAt+1) + '…', fontSize) <= maxPxWidth) cutAt++;
+      while(cutAt < cur.length && est(cur.slice(0, cutAt+1) + '…', fontSize) <= maxPxWidth) cutAt++;
       cur = cur.slice(0, cutAt) + '…';
     }
     lines.push(cur);

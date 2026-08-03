@@ -38,10 +38,12 @@
   <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">GURGAVN</text>
   <text x="540" y="714" font-family="Arial" font-size="20" fill="#f80000" text-anchor="middle">"Oracle이 매출의 50%를 CAPEX에 지출 중 · Oracle 미쳤다고 생각하는 사람 나뿐인가"</text>
-  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">"Oracle is now spending 50% of its entire revenue on capex · am I the only one who thinks Oracle has gone crazy"</text>
+  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">"Oracle is now spending 50% of its entire revenue on capex ·</text>
+  <text x="540" y="796" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">am I the only one who thinks Oracle has gone crazy"</text>
   <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">출처: GURGAVN · 2026.08.02</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#1a0808" stroke="#f80000" stroke-width="1"/>
-  <text x="540" y="884" font-family="Arial" font-size="19" fill="#f80000" text-anchor="middle">왜 중요한가: 어제 하이퍼 4사(AMZN·META·GOOGL·MSFT) $155B Q2 CAPEX에 Oracle도 상대적 대규모 참여 확인</text>
+  <text x="540" y="884" font-family="Arial" font-size="19" fill="#f80000" text-anchor="middle">왜 중요한가: 어제 하이퍼 4사(AMZN·META·GOOGL·</text>
+  <text x="540" y="910" font-family="Arial" font-size="19" fill="#f80000" text-anchor="middle">MSFT) $155B Q2 CAPEX에 Oracle도 상대적 대규모 참여 확인</text>
   <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">앞으로 볼 것: Oracle 실적·FCF 압박·다른 non-hyperscaler CAPEX 확산</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">ORCL CAPEX 매출 50% · 2026.08.03</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

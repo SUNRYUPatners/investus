@@ -42,8 +42,8 @@
   <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">"Tesla Supercharger 7¢/kWh · road use ~$3.33/day · less than avg cost of a coffee in the US"</text>
   <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Source: Tesla · 2026.08.02</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="884" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">Why: Strengthens EV total-cost-of-ownership frame ·</text>
-  <text x="540" y="910" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">combines with yesterday's US LFP Megapack + today's low-cost Supercharger for renewables integration</text>
+  <text x="540" y="884" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">Why: Strengthens EV total-cost-of-ownership frame · combines with yesterday's US LFP Megapack</text>
+  <text x="540" y="910" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">+ today's low-cost Supercharger for renewables integration</text>
   <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Watch: EV adoption rates · relative attractiveness increases with fuel prices</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA Supercharger 7¢ · $3.33/day · 2026.08.03</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

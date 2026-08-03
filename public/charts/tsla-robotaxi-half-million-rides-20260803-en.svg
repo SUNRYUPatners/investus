@@ -35,7 +35,8 @@
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🚗</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">3 vehicles</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Cybercab · Semi · Cybersedan</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Cybercab · Semi ·</text>
+  <text x="870" y="550" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Cybersedan</text>
   <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">buy plan</text>
   <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">COLE GRINDE</text>

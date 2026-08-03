@@ -18,7 +18,8 @@
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#4ade80" text-anchor="middle">🇫🇷</text>
   <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">+26 %</text>
   <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Ming (per French Automobile Industry Association CCFA): Tesla France July sales +26% ·</text>
-  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2,429 vehicles · recovery starts after 2024 -30~-50% plunge · European market rebound signal</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">2,429 vehicles · recovery starts after 2024 -30~-50% plunge ·</text>
+  <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">European market rebound signal</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>

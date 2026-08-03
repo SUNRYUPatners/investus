@@ -11,14 +11,15 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.03</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">SPCX — Excludes Chinese Nationals &amp; Parts to Remove China Influence from</text>
-  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">US Space Program (Nikkei)</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">SPCX — Excludes Chinese Nationals &amp; Parts to Remove China</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Influence from US Space Program (Nikkei)</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".15">🚫</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#c084fc" text-anchor="middle">🚫</text>
   <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">CHINA OUT</text>
-  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Whale Insider (per Nikkei): SPCX moves to keep Chinese nationals and Chinese-made parts out of a large</text>
-  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">multi-billion US space program from China influence · geopolitical/security concern response</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Whale Insider (per Nikkei): SPCX moves to keep Chinese nationals and Chinese-made parts out</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">of a large multi-billion US space program from China influence ·</text>
+  <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">geopolitical/security concern response</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
@@ -39,7 +40,8 @@
   <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">WHALE INSIDER · NIKKEI</text>
   <text x="540" y="714" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">"SPCX 중국인·부품 배제·China 영향력 제거"</text>
-  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">"SPCX moves to keep Chinese nationals, parts out of a large multi-billion U.S. space program from China influence"</text>
+  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">"SPCX moves to keep Chinese nationals, parts out of a large multi-billion U.S. space program from China</text>
+  <text x="540" y="796" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">influence"</text>
   <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Source: Whale Insider · Nikkei · 2026.08.02</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="884" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">Why: Combines with yesterday's SPCX US Space Force $3.4B contract + NASA V3 wind tunnel ·</text>
