@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T04AU = 1785798000000; // 2026-08-04 08:00 KST
 const T03AU = 1785711600000; // 2026-08-03 08:00 KST
 const T01AU = 1785538800000; // 2026-08-01 08:00 KST
 const T31JL = 1785452400000; // 2026-07-31 08:00 KST
@@ -70,7 +71,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T03AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T04AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -89,6 +90,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-04 신규 ──────────────────────────────────────────────────────
+  { id: 839, symbol: "MSFT", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "MSFT가 지난 3거래일간 +25% 이상 상승·시가 $489.41(GURGAVN). 8/1 +15.85%·+$400B 시총 반등 흐름 지속 확대·Mag 7 YTD -8.2% 하위그룹에서 회복 확인·Q1 강세 실적+자사주 $15B+클라우드 수요 초과 3중 촉매.",
+    createdAt: T04AU + 5*60_000, likes: 96, comments: 8 },
+  { id: 840, symbol: "AMZN", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "Amazon이 OpenAI $50B 투자 공식 완료(Kalshi JUST IN). 어제 Shay Boloor $500B 밸류·5% 지분·IPO 앞두고 프레임이 실 딜 확정. Anthropic $16B와 결합해 세계 최대 2개 프런티어 AI 랩 지분 보유·이중 축 유일.",
+    createdAt: T04AU + 14*60_000, likes: 88, comments: 7 },
+  { id: 841, symbol: "SPX", nickname: "익명_3355", holdingLabel: "관심종목",
+    content: "Trump가 이란 지도부 'duplicitous·대화 중이지만 이란 부인'·지난 주 폭격 발언에서 180도 전환(andrewwring). 시장 반응 Oil -7%·SPY ATH 1% 근접·매크로 완화 시나리오 실체화·헤지 원유 강세와 정면 대립.",
+    createdAt: T04AU + 23*60_000, likes: 82, comments: 7 },
+  { id: 842, symbol: "TSLA", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "Tesla FSD(Supervised) 사상 최초 130억 마일 돌파(Sawyer Merritt/Tesla 공식). July 4th 120억 도달 후 1개월 만에 10억 추가·City Miles 5,017,257,687 (50억+). Waymo 220M miles 대비 60배 규모·오늘 Jensen '데이터 우위' 프레임 실체.",
+    createdAt: T04AU + 32*60_000, likes: 78, comments: 6 },
+  { id: 843, symbol: "SPCX", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "SPCX 락업 만료 8/6 시작·초기 20-25% 판매 가능·12월까지 40% 유통 확대·이미 IPO 가 아래·8/4 첫 실적 대기(Adam Bloomberg). 사상 최저 종가·-50% ATH에 매도 압박 추가·실적이 방향 결정.",
+    createdAt: T04AU + 41*60_000, likes: 71, comments: 6 },
+  { id: 844, symbol: "SPCX", nickname: "익명_6677", holdingLabel: "관심종목",
+    content: "AI Investment Research가 Musk 발언 상세: TSLA 지난 12개월 매출 $103.6B 참고치·'SPCX가 12-24개월 안에 그 규모 추가 가능'·본인이 'WILL 아닌 COULD'로 명확 구분·기대치 관리·8/3 극단 프레임 완화.",
+    createdAt: T04AU + 50*60_000, likes: 65, comments: 5 },
+  { id: 845, symbol: "TSLA", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "캐시 우드: Robotaxi 시장 $1B→$10T (5-10년)·Tesla 마진 10%→60%·2030년 Tesla가 Waymo 대비 50% 낮은 팩스. 8/3 Cole Grinde 500K/월·오늘 Ops 6개 시도 채용 확대와 정합·Wood 강세 지속.",
+    createdAt: T04AU + 59*60_000, likes: 84, comments: 7 },
+  { id: 846, symbol: "SPCX", nickname: "익명_8811", holdingLabel: "관심종목",
+    content: "International Airlines Group($IAG)가 SpaceX Starlink WiFi를 50% 장거리 항공기에 연말까지 설치(DogeDesigner). British Airways·Iberia·Aer Lingus·LEVEL 4개 항공사 그룹 rollout·Starlink Aviation 대규모 계약.",
+    createdAt: T04AU + 68*60_000, likes: 61, comments: 5 },
+  { id: 847, symbol: "TSLA", nickname: "익명_9922", holdingLabel: "관심종목",
+    content: "Tesla France 7월 registrations +86% YoY·2026 두 번째 최고월·Model 3/Y Norway 신 기록(Sawyer Merritt/Schmidt). 어제 Ming/CCFA sales +26%와 다른 기준(registrations)으로 상향·인센티브 rich 시장 하반기 급증 예상.",
+    createdAt: T04AU + 77*60_000, likes: 58, comments: 5 },
+  { id: 848, symbol: "TSLA", nickname: "익명_1133", holdingLabel: "관심종목",
+    content: "Tesla Colombia 7월 1,911대 판매·YoY +18%·BEV 시장 40% 점유·4위 브랜드·Model Y 최다·94% Model Y·6% Model 3(Roland Pircher). 신흥 시장 지배·오늘 France +86%·Norway 신 기록과 다각 회복.",
+    createdAt: T04AU + 86*60_000, likes: 47, comments: 4 },
+  { id: 849, symbol: "TSLA", nickname: "익명_2266", holdingLabel: "관심종목",
+    content: "Tesla가 Robotaxi Operations Manager를 Las Vegas·Phoenix·Austin·Dallas·Houston Fort Worth·San Antonio 6개 시도에서 채용 확대(Yolo). Texas 중심 4개 + Nevada·Arizona 신 진입·Cybercab 상용 배치 지원·Wood $10T 프레임 실체 준비.",
+    createdAt: T04AU + 95*60_000, likes: 63, comments: 5 },
+  { id: 850, symbol: "MSFT", nickname: "익명_3344", holdingLabel: "관심종목",
+    content: "MSFT가 사이버보안에 $10B 투자·Palo Alto Networks와 파트너십(Gaia). 8/1 MSFT AI 모델 사이버 공격 3개 조직 침입 이슈 실 대응·AI 안전 규제 압박 선제 대응·AI 보안 축 대규모 확대.",
+    createdAt: T04AU + 104*60_000, likes: 54, comments: 4 },
+  { id: 851, symbol: "SPX", nickname: "익명_4455", holdingLabel: "관심종목",
+    content: "헤지펀드가 지난 주 US 주식 순매수(net long)를 2020년 12월 이후 가장 빠른 속도로 확대(Barchart). 매크로 반전 시그널·MSFT +25%·Trump 이란 완화·SPY ATH 근접 종합 반응·Goldman $155B 강제 매도 경고와 정면 대립.",
+    createdAt: T04AU + 113*60_000, likes: 74, comments: 6 },
+  { id: 852, symbol: "SPCX", nickname: "익명_5588", holdingLabel: "관심종목",
+    content: "SPCX 현재 주가 implied 시가총액 $1,435B·34 거래일 연속 $1T 돌파 유지(AI Investment Research). -50% ATH·사상 최저 종가에도 mega-cap 지위 유지·Ron Baron $30-40T 대비 20-30배 상승 여력·8/4 실적 기준.",
+    createdAt: T04AU + 122*60_000, likes: 43, comments: 3 },
+  { id: 853, symbol: "SPCX", nickname: "익명_7711", holdingLabel: "관심종목",
+    content: "US 위성 인터넷 Hughesnet Chapter 11 파산·Starlink에 가입자 상실·EchoStar Q2 broadband 632K로 -59K(Sawyer Merritt/EchoStar Q2). Starlink 시장 지배 확정·오늘 IAG 계약과 결합해 SPCX Starlink 사업 실체 확대.",
+    createdAt: T04AU + 131*60_000, likes: 51, comments: 4 },
+
   // ── 2026-08-03 신규 ──────────────────────────────────────────────────────
   { id: 824, symbol: "TSLA", nickname: "익명_1122", holdingLabel: "관심종목",
     content: "TSLA·SPCX 합병 다층 · Jimmy 두 소식통이 Tesla 프리미엄 인수 $600-$630/주 프레임·Kalshi 60%(7/27 74%→하향, Musk 8/1 부인 반영)·Limiting Factor 2027 하반기 시점. 8/1 부인에도 프레임은 유지·시점 논거 구체화.",
