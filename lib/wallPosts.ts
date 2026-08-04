@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T05AU = 1785884400000; // 2026-08-05 08:00 KST
 const T04AU = 1785798000000; // 2026-08-04 08:00 KST
 const T03AU = 1785711600000; // 2026-08-03 08:00 KST
 const T01AU = 1785538800000; // 2026-08-01 08:00 KST
@@ -71,7 +72,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T04AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T05AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -90,6 +91,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-05 신규 ──────────────────────────────────────────────────────
+  { id: 854, symbol: "SPCX", nickname: "익명_2266", holdingLabel: "관심종목",
+    content: "SPCX 공식 Q2 실적 대박·Revenue +92% YoY·$10B 현금+마켓·$4.7B backlog·순손실 -$147M(작년 -$844M에서 $697M 개선)·Adjusted EBITDA +191%·Starship V3 2회 성공·$30B+ 미 정부 다년 계약. -50% ATH·락업 해제에도 실적 완결.",
+    createdAt: T05AU + 5*60_000, likes: 105, comments: 9 },
+  { id: 855, symbol: "SPCX", nickname: "익명_3377", holdingLabel: "관심종목",
+    content: "SPCX-NVIDIA Starmind AI satellite compute payload exclusive 파트너십·Rubin GPU+Vera CPU·datacenter class 우주 컴퓨트·SPCX 위성 컴퓨트 250 kW. Musk 실적 콜: 'AI 컴퓨트는 NVIDIA에 exclusive·Vera 아키텍처 최고.' 8/1 99.99% 우주 프레임 물리 실체.",
+    createdAt: T05AU + 14*60_000, likes: 92, comments: 8 },
+  { id: 856, symbol: "PLTR", nickname: "익명_4488", holdingLabel: "관심종목",
+    content: "PLTR Q2 대박·Revenue $1.94B(+63% YoY, 컨센 $1.87B)·Op Income $612M(+34%)·Net Income +225%·EPS $0.14(컨센 $0.12, +17% 비트)·US Commercial $764M·Government 강세(Investing visuals). AI 소프트웨어 매출 폭발 실체.",
+    createdAt: T05AU + 23*60_000, likes: 88, comments: 7 },
+  { id: 857, symbol: "AMD", nickname: "익명_5599", holdingLabel: "관심종목",
+    content: "AMD Q2 대박·Revenue $7.68B(+32% YoY)·EPS $1.66(컨센 $1.19, +40% 비트)·Data Center Revenue $6.78B(+107% YoY 2배)(Investing visuals). MI300/MI400 채택 확대·NVDA 대안 실체·오늘 SPCX-NVDA exclusive와 대비.",
+    createdAt: T05AU + 32*60_000, likes: 84, comments: 7 },
+  { id: 858, symbol: "TSLA", nickname: "익명_6677", holdingLabel: "관심종목",
+    content: "Tesla China 7월 배송 93,579대·+37.8% YoY·2026 최고월·9개월 연속 성장(Sawyer Merritt/CPCA). 8/3 상하이 400+ 중국 협업사·95% 부품 데이터의 실 판매 실체·글로벌 다각 회복 확인(France·Colombia·China).",
+    createdAt: T05AU + 41*60_000, likes: 78, comments: 6 },
+  { id: 859, symbol: "SPCX", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "SpaceX Starlink가 총 매출 90% 지배(2020 54%→)·Q2 subscribers 2배·connectivity revenue +64%·operating income +79%·$6B+ Starlink 계약·Falcon 9 미션 대부분 Starlink(DogeDesigner). 8/4 IAG·Hughesnet 파산과 결합.",
+    createdAt: T05AU + 50*60_000, likes: 74, comments: 6 },
+  { id: 860, symbol: "SPCX", nickname: "익명_8899", holdingLabel: "관심종목",
+    content: "SPCX Q2 AI 컴퓨트 계약 $2.32B·Anthropic $1.25B(54%)·Google $920M(40%)·Reflection $150M(6%)·연 $2.6B 페이스(DogeDesigner). Starmind exclusive NVDA 파트너십의 실 매출 실체·궤도 DC 프레임 실 매출.",
+    createdAt: T05AU + 59*60_000, likes: 82, comments: 7 },
+  { id: 861, symbol: "SPCX", nickname: "익명_9911", holdingLabel: "관심종목",
+    content: "Musk 실적 콜: 'SPCX 주식이 ~$100 근처에서 insane 매수 기회'(Kalshi) + 'Starship rapid reusability 기술 해결·데이터/시각 검사 확인·기술 장벽 없음'(Sawyer Merritt). 사상 최저 종가에서 극단 강세 발언·완전 재사용 근접.",
+    createdAt: T05AU + 68*60_000, likes: 96, comments: 8 },
+  { id: 862, symbol: "TSLA", nickname: "익명_1122", holdingLabel: "관심종목",
+    content: "Musk가 Grimes County에 $10M 조기 지불·Terafab agreement 일환·County 2026 예상 지방세 $26.5M의 40% 규모·인프라 확대(DogeDesigner). Terafab 프로젝트(신 시설) 실 진전·지역 사회 대규모 기여.",
+    createdAt: T05AU + 77*60_000, likes: 54, comments: 4 },
+  { id: 863, symbol: "TSLA", nickname: "익명_2233", holdingLabel: "관심종목",
+    content: "Tesla Netherlands·Belgium 2개월 FSD(Supervised) 무료 트라이얼 시작·Model Y 오너·10월 초 종료·데이터 flywheel 강화(Tesla Netherlands 공식). EU FSD 확대 실체·8/4 WMC 프레임 실 확장·8/3 France +86% 회복 결합.",
+    createdAt: T05AU + 86*60_000, likes: 58, comments: 5 },
+  { id: 864, symbol: "TSLA", nickname: "익명_3344", holdingLabel: "관심종목",
+    content: "Tesla Self-Driving 월 활성 사용자 150만(1-2M 추정·연 2,600만 마일 기반)·세계 인구 80억 대비 0.02%·향후 1,000배 성장 여력(Whole Mars Catalog). 8/4 FSD 130억 마일 데이터의 사용자 관점·Wood $10T 프레임 결합.",
+    createdAt: T05AU + 95*60_000, likes: 63, comments: 5 },
+  { id: 865, symbol: "AMZN", nickname: "익명_4455", holdingLabel: "관심종목",
+    content: "Amazon Jeff Bezos 15M주 매도 계획 filed·총액 ~$4.07B·1994년 7월 창립 시 설립자 stock(Evan D/Barchart). 오늘 AMZN OpenAI $50B 완료 시점에 나온 대규모 매도·insider 매도 30년 최고 흐름 지속.",
+    createdAt: T05AU + 104*60_000, likes: 47, comments: 4 },
+  { id: 866, symbol: "SPX", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "Citadel Scott Rutner '7월 sharp selloff·sector rotation이 excessive positioning을 정리·broader bull market은 유지'·AI/반도체 heavy sold·레버리지 ETF -$10B(6월 정점)·투자자는 이제 fundamentals focus 가능(Walter Bloomberg). 8/4 헤지 US 순매수 최대와 정합.",
+    createdAt: T05AU + 113*60_000, likes: 71, comments: 6 },
+  { id: 867, symbol: "AAPL", nickname: "익명_6677", holdingLabel: "관심종목",
+    content: "Apple이 OpenAI 상대 preliminary injunction+permanent supervision 청구·9개 진술서·28페이지 memorandum·전 Apple 직원 Chang Liu(8년 근무 후 OpenAI 'Member of Technical Staff' 이직)가 2000+ 페이지 Apple trade secrets 노출 주장(unusual_whales BREAKING). 하이퍼-프런티어 AI 갈등 실체.",
+    createdAt: T05AU + 122*60_000, likes: 65, comments: 5 },
+  { id: 868, symbol: "SPX", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "Oracle의 부도 리스크(CDS)가 2008 Global Financial Crisis 정점을 넘어 사상 최고·'Oracle Warning of 2008' 프레임(Barchart) + 미국이 중국 AI 데이터센터 운영 금지 초안 준비(Evan D). 8/3 Oracle CAPEX 매출 50% 우려의 실 부도 리스크·미-중 AI 갈등 확대.",
+    createdAt: T05AU + 131*60_000, likes: 51, comments: 4 },
+
   // ── 2026-08-04 신규 ──────────────────────────────────────────────────────
   { id: 839, symbol: "MSFT", nickname: "익명_1188", holdingLabel: "관심종목",
     content: "MSFT가 지난 3거래일간 +25% 이상 상승·시가 $489.41(GURGAVN). 8/1 +15.85%·+$400B 시총 반등 흐름 지속 확대·Mag 7 YTD -8.2% 하위그룹에서 회복 확인·Q1 강세 실적+자사주 $15B+클라우드 수요 초과 3중 촉매.",
