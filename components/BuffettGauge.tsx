@@ -74,7 +74,7 @@ export function BuffettGauge({ data, locale }: { data: BuffettData; locale?: Loc
           <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>현재 지수가 높을수록 시장이 과열됐다는 신호예요. 단기 예측보단 장기 관점에서 참고하세요.</p>
         </SectionInfo>
         <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
-          {data.updatedAt} · S&P500 추정
+          {data.updatedAt} 기준 · S&P500 추정
         </span>
       </div>
 

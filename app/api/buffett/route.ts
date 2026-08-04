@@ -1,24 +1,10 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import type { BuffettData } from "@/lib/api";
 import { kvGetDetail, kvSetDetail } from "@/lib/kv";
+import { isMarketOpen, secondsUntilNextOpen } from "@/lib/marketHours";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
-
-// 다음 NYSE 장마감(4PM ET) + 1시간 버퍼까지 남은 초 반환
-// 장마감 후엔 다음날 5PM ET까지 캐시
-function secsUntilNextClose(): number {
-  const now = new Date();
-  // ET offset: EDT=-4, EST=-5. 간단히 UTC-4 고정 (EDT 기준, 오차 ±1h 허용)
-  const etMs = now.getTime() - 4 * 3600_000;
-  const et = new Date(etMs);
-  const closeHour = 17; // 5PM ET (마감 후 1h 버퍼)
-  const next = new Date(et);
-  next.setUTCHours(closeHour, 0, 0, 0);
-  if (et.getUTCHours() >= closeHour) next.setUTCDate(next.getUTCDate() + 1);
-  const secs = Math.floor((next.getTime() - et.getTime()) / 1000);
-  return Math.max(secs, 3600); // 최소 1시간
-}
 
 // CF Worker 프록시 — Vercel IP 차단 우회 (YF_PROXY_URL 설정 필수)
 const YF_PROXY = process.env.YF_PROXY_URL ?? "";
@@ -29,7 +15,23 @@ function yfProxyFetch(url: string, init: RequestInit = {}): Promise<Response> {
 
 const KV_KEY = "buffett:v1";
 
-// S&P 500 monthly chart as Wilshire proxy (Wilshire 5000 not available on Yahoo Finance)
+/** Cache-Control for CDN. Open: hourly. Closed: until next open (cap 12h). */
+function cacheHeader(): string {
+  if (isMarketOpen()) {
+    // 장중: 1시간마다 갱신 — SPX 변동이 버핏지수에 반영되도록
+    return "public, s-maxage=3600, stale-while-revalidate=1800";
+  }
+  const untilOpen = secondsUntilNextOpen();
+  const ttl = Math.max(3600, Math.min(12 * 3600, untilOpen - 60));
+  return `public, s-maxage=${ttl}, stale-while-revalidate=${ttl}`;
+}
+
+/** KST calendar date YYYY-MM-DD — matches fear-greed style */
+function kstDateString(d = new Date()): string {
+  return new Date(d.getTime() + 9 * 60 * 60_000).toISOString().slice(0, 10);
+}
+
+// S&P 500 daily chart as Wilshire proxy (Wilshire 5000 not available on Yahoo Finance)
 // S&P 500 × 9.5 ≈ Wilshire 5000 index level; calibrated via W5000_CAP_FACTOR
 async function fetchWilshire(): Promise<{ now: number; q1ago: number; y1ago: number } | null> {
   for (const base of ["https://query2.finance.yahoo.com", "https://query1.finance.yahoo.com"]) {
@@ -103,7 +105,7 @@ export async function GET() {
       const kvData = await kvGetDetail(KV_KEY);
       if (kvData && (kvData as unknown as BuffettData).ratio != null) {
         return NextResponse.json(kvData, {
-          headers: { "Cache-Control": "s-maxage=1800, stale-while-revalidate=86400" },
+          headers: { "Cache-Control": "s-maxage=1800, stale-while-revalidate=3600" },
         });
       }
       return NextResponse.json(
@@ -122,24 +124,21 @@ export async function GET() {
     const mktCapT   = ((wilshire.now * W5000_CAP_FACTOR) / 1000).toFixed(1);
     const gdpT      = (gdp / 1000).toFixed(1);
 
-    const now       = new Date();
-    const quarter   = `${now.getFullYear()} Q${Math.ceil((now.getMonth() + 1) / 3)}`;
-
     const data: BuffettData = {
       ratio,
       marketCap: `~$${mktCapT}T`,
       gdp:       `~$${gdpT}T`,
       prevQuarter: prevQ,
       prevYear:    prevY,
-      updatedAt:   quarter,
+      // 공포탐욕지수와 동일하게 일자 표기 — 분기 문자열이 오래 고정돼 "안 바뀌는" 느낌을 줌
+      updatedAt:   kstDateString(),
     };
 
-    // KV에 저장 — API 실패 시 실제 마지막 값 사용 가능
-    kvSetDetail(KV_KEY, data as unknown as Record<string, unknown>);
+    // KV 저장 — 서버리스 freeze 방지를 위해 after()로 대기
+    after(() => kvSetDetail(KV_KEY, data as unknown as Record<string, unknown>));
 
-    const ttl = secsUntilNextClose();
     return NextResponse.json(data, {
-      headers: { "Cache-Control": `s-maxage=${ttl}, stale-while-revalidate=86400` },
+      headers: { "Cache-Control": cacheHeader() },
     });
   } catch {
     // 전체 실패 → KV에서 마지막 실제 값 사용
