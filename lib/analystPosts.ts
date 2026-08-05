@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-06 신규 (짧고 15개 완전 다른 톤) ──────────────────────
+  {
+    id: -671, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "실적 대박에 시세 -10%. Bull Theory 정리는 명확하다: 매출 +92%인데 CAPEX $5.4B/분기가 시장을 겁먹게 만들었다. Musk는 $1T by 2028 목표를 앞당겼는데, 정작 시장은 profit이 언제 나오냐를 묻고 있다. 락업 내일 만료가 추가 압박.",
+    likes: 92, comments: 8, created_at: "2026-08-06T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -672, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "Munster 3줄:\n① Q2 애널 예상 5배 초과\n② 연말 $10B run rate 유지 시 12월 $22B 필요\n③ 6월 $17B → +17%\n이 정도면 예외적 규모.",
+    likes: 78, comments: 6, created_at: "2026-08-06T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -673, alias: "서초 콘도르 #59", symbol: "GOOGL",
+    content: "Google 시가총액이 애플 넘어 세계 2위. 엔비디아만 남았다. Anthropic 지분 재평가·Search가 아마존 1P의 85%·Waymo·Cloud까지 다각 성장이 밀어올린 결과.",
+    likes: 71, comments: 5, created_at: "2026-08-06T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -674, alias: "을지로 팔콘 #71", symbol: "SPX",
+    content: "Trump가 'WE LOVE ELON MUSK'라고 공개 발언한 건 이례적이다. 몇 주 전만 해도 서로 등지는 분위기였는데, SPCX 정부 계약·NASA Moon base·NHTSA Cybercab 우호 정책이 배경에서 관계를 다시 붙였다.",
+    likes: 84, comments: 7, created_at: "2026-08-06T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -675, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "삼성전기·LG이노텍이 Cybercab 카메라 모듈 계약을 확정했다. 삼성은 이미 7월부터 양산 시작. 초기 20-30K대·총 $500M 추정. Robotaxi Ops 6개 시도 채용(8/5)과 맞물려 실 상용 배치가 임박했다.",
+    likes: 66, comments: 5, created_at: "2026-08-06T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -676, alias: "마포 올빼미 #24", symbol: "SPX",
+    content: "매크로 두 개 시그널이 정면 충돌 중.\n\nBurry: '1987-type 붕괴 근접·major top'\nMMF: $2.3T 사상 최고 유입\n\n둘 다 방향이 같다 — 현금이 대기하고 위험 자산에서 발을 빼는 중. 8/5 Citadel의 '재정 프레임'과는 정반대.",
+    likes: 74, comments: 6, created_at: "2026-08-06T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -677, alias: "종로 매 #12", symbol: "SPCX",
+    content: "달에 공장을 짓는다는 게 현실적으로 언제 가능할까? NASA Admin이 '스타쉽 재사용성으로 Moon base가 small city까지 확장'이라 했고, 폴리마켓은 스타쉽이 내년까지 하루 한 번 발사한다고 예상. 5년 안엔 factory 첫 삽 가능성.",
+    likes: 63, comments: 5, created_at: "2026-08-06T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -678, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "\"V·T·TMO 합쳐서 $600B/년. 우리가 상당수 고객을 뺏어올 거다\" — Gwynne Shotwell. Starlink V3는 gigabit·Mobile은 100+ 국가에서 아무 폰이나 4G. 미국 통신 3사를 상대로 실 도전이 시작됐다.",
+    likes: 87, comments: 7, created_at: "2026-08-06T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -679, alias: "부산 갈매기 #77", symbol: "SPCX",
+    content: "숫자 하나로 정리: **690K → 115K**. 2020년 Starlink 상용 이후 Viasat가 잃은 미국 broadband 가입자다. -83%. Q2에만 -15K 추가. V2 위성이 100+ Mbps를 계획 중이지만 Starlink 대비 10-20배 느리다.",
+    likes: 55, comments: 4, created_at: "2026-08-06T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -680, alias: "강남 표범 #46", symbol: "NVDA",
+    content: "Oguz Erkan의 프레임에 반박할 여지가 있을까? SPCX가 NVDA GPU exclusive를 선택한 것은, 새 hyperscalers(SBGX·CRWV·NBIS)에게도 같은 결정을 강요하는 신호다. Custom ASIC은 규모의 경제가 나오지 않는다. NVDA 20x forward P/E는 낮게 잡힌 편.",
+    likes: 79, comments: 6, created_at: "2026-08-06T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -681, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "락업 시나리오 3갈래:\n\n(A) 71.5M 상환으로 유통 압박 완화·시세 반등\n(B) 40% 유통 부담이 12월까지 지속·횡보\n(C) 실 매도 규모가 예상보다 커지면 -50% ATH 재시험\n\n내일 실 락업 만료 후 첫 주가 가장 중요.",
+    likes: 58, comments: 5, created_at: "2026-08-06T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -682, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "SPCX가 Q2에 Tesla 주식 $295M을 새로 취득했다. 지난해 datacenter용 Megapacks에는 총 $500M을 썼다. Kalshi 60% 합병 확률 프레임(8/3)이 실체적 재정 관계로 이어지는 중.",
+    likes: 61, comments: 5, created_at: "2026-08-06T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -683, alias: "광화문 늑대 #33", symbol: "GOOGL",
+    content: "Watchlist에 두 인물이 올랐다.\n\n• Demis Hassabis: DeepMind CEO → Chairman\n• Jeff Dean: 15년 만에 Google 퇴사·과학 발견 focus 신 스타트업\n\n시총이 애플을 넘긴 날 나온 인력 리스크 시그널. 새 DeepMind 리더와 Dean 스타트업 방향이 다음 관찰 포인트.",
+    likes: 68, comments: 5, created_at: "2026-08-06T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -684, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "Edmunds가 Model Y L을 '큰 3열 SUV의 compelling 대안'으로 평가했다. Adaptive 서스펜션·조용한 캐빈·프리미엄 인테리어·325 miles EPA·FSD Supervised 기본 포함. 8/5 China 93K와 오늘 삼성·LG Cybercab 계약이 함께 놓이면, TSLA 판매 축이 다층으로 벌어지는 중.",
+    likes: 52, comments: 4, created_at: "2026-08-06T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -685, alias: "종로 매 #12", symbol: "SPCX",
+    content: "Musk의 이 발언은 결국 지배구조 방어 논리로 읽힌다: \"public 회사는 분기 실적 압박 탓에 5-10년 pay-off 아이디어를 discourage한다. SPCX 목표는 지구 밖 의식 확장이다.\" 오늘 시세 -10%·락업 만료·CAPEX $5.4B 상황에서 나온 장기 비전 프레임.",
+    likes: 47, comments: 4, created_at: "2026-08-06T01:43:00.000Z", liked: false,
+  },
+
   // ── 2026-08-05 신규 ──────────────────────────────────────────────────────
   {
     id: -656, alias: "여의도 매 #22", symbol: "SPCX",

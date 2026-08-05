@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T06AU = 1785970800000; // 2026-08-06 08:00 KST
 const T05AU = 1785884400000; // 2026-08-05 08:00 KST
 const T04AU = 1785798000000; // 2026-08-04 08:00 KST
 const T03AU = 1785711600000; // 2026-08-03 08:00 KST
@@ -72,7 +73,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T05AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T06AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -91,6 +92,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-06 신규 (짧고 다양·15개 완전 다른 톤) ────────────────
+  { id: 869, symbol: "SPCX", nickname: "익명_3311", holdingLabel: "관심종목",
+    content: "어? SPCX 실적 이렇게 좋은데 왜 -10%야 ㅋㅋ CAPEX 5.4B 때문이래. 시장은 항상 profit 원해.",
+    createdAt: T06AU + 5*60_000, likes: 45, comments: 4 },
+  { id: 870, symbol: "SPCX", nickname: "익명_4422", holdingLabel: "관심종목",
+    content: "Munster가 SPCX 실적 애널 예상 5배라고 했음. 이 정도면 진짜 대박 아닌가? 근데 시장 반응은 -10%…",
+    createdAt: T06AU + 14*60_000, likes: 62, comments: 5 },
+  { id: 871, symbol: "GOOGL", nickname: "익명_5533", holdingLabel: "관심종목",
+    content: "구글이 애플 넘었다! 세계 2위 됐네. 엔비디아 다음. 원래 애플이 항상 톱이었는데 세상이 바뀌긴 바뀌었어.",
+    createdAt: T06AU + 23*60_000, likes: 78, comments: 6 },
+  { id: 872, symbol: "SPX", nickname: "익명_6644", holdingLabel: "관심종목",
+    content: "트럼프가 갑자기 'WE LOVE ELON MUSK'라고 함ㅋㅋ 며칠 전만 해도 싸우던 사이 아니었어? 정치는 정말 알 수가 없다.",
+    createdAt: T06AU + 32*60_000, likes: 91, comments: 8 },
+  { id: 873, symbol: "TSLA", nickname: "익명_7755", holdingLabel: "관심종목",
+    content: "삼성이랑 LG가 Cybercab 카메라 만든대. $500M 규모. 이제 진짜 대량 생산 시작되는듯. 삼성전기 주가 좀 보자.",
+    createdAt: T06AU + 41*60_000, likes: 54, comments: 4 },
+  { id: 874, symbol: "SPX", nickname: "익명_8866", holdingLabel: "관심종목",
+    content: "Burry 형님 또 나오심ㅋㅋ 1987 붕괴 온다고. 매번 경고하시는데 이번엔 진짜일까? MMF 2.3조에 몰려있음.",
+    createdAt: T06AU + 50*60_000, likes: 47, comments: 5 },
+  { id: 875, symbol: "SPCX", nickname: "익명_9977", holdingLabel: "관심종목",
+    content: "SPCX가 달에 공장 짓겠대. Humanoid robots 써서. 스타쉽 내년엔 하루 한 번 발사 목표라는데 이게 현실화되면 진짜 게임 체인저.",
+    createdAt: T06AU + 59*60_000, likes: 83, comments: 7 },
+  { id: 876, symbol: "SPCX", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "Starlink 이미 SPCX 매출 90%. Verizon·AT&T·TMobile 합쳐서 600B 시장 노린다는데 좀 무섭게 크네",
+    createdAt: T06AU + 68*60_000, likes: 71, comments: 6 },
+  { id: 877, symbol: "SPCX", nickname: "익명_2299", holdingLabel: "관심종목",
+    content: "Viasat 이제 115K subs밖에 안 남았음. 2020년 690K였는데. Starlink 무섭네 진짜. V2 위성 나와도 10-20배 느리다니.",
+    createdAt: T06AU + 77*60_000, likes: 38, comments: 3 },
+  { id: 878, symbol: "NVDA", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "SPCX가 엔비디아 exclusive라고 못 박음. 이거 다른 신 hyperscalers한테도 파급될듯. 20x P/E는 저평가로 봄.",
+    createdAt: T06AU + 86*60_000, likes: 66, comments: 5 },
+  { id: 879, symbol: "SPCX", nickname: "익명_4411", holdingLabel: "관심종목",
+    content: "락업 blackout에서 71.5M주 상환. free float가 4.9%→11.8%로 뻥튀기됨. 이러면 유동성 개선이라 봐야하나 매도 압박이라 봐야하나?",
+    createdAt: T06AU + 95*60_000, likes: 42, comments: 4 },
+  { id: 880, symbol: "SPCX", nickname: "익명_5522", holdingLabel: "관심종목",
+    content: "SPCX가 Q2에 Tesla 주식 $295M 샀다는데. 이건 좀 흥미로움. 상호 지분 심화하는 그림이야.",
+    createdAt: T06AU + 104*60_000, likes: 55, comments: 4 },
+  { id: 881, symbol: "GOOGL", nickname: "익명_6633", holdingLabel: "관심종목",
+    content: "DeepMind CEO가 Chairman으로 올라가고 Chief Scientist Jeff Dean은 15년 만에 퇴사. 이거 좀 걱정된다 진짜.",
+    createdAt: T06AU + 113*60_000, likes: 49, comments: 4 },
+  { id: 882, symbol: "TSLA", nickname: "익명_7744", holdingLabel: "관심종목",
+    content: "Edmunds가 Model Y L 리뷰 극찬함. 325 miles에 3열 여유롭게. 큰 SUV 대신 Model Y L 가는 사람 늘어날듯.",
+    createdAt: T06AU + 122*60_000, likes: 58, comments: 5 },
+  { id: 883, symbol: "SPCX", nickname: "익명_8855", holdingLabel: "관심종목",
+    content: "Musk: '5-10년 후에 pay-off 하는 결정 보호하려면 CEO control 있어야 함.' 화성/달 문명 계속 밀고 가는 톤. 짧게 보는 사람들한테는 답답할듯.",
+    createdAt: T06AU + 131*60_000, likes: 44, comments: 4 },
+
   // ── 2026-08-05 신규 ──────────────────────────────────────────────────────
   { id: 854, symbol: "SPCX", nickname: "익명_2266", holdingLabel: "관심종목",
     content: "SPCX 공식 Q2 실적 대박·Revenue +92% YoY·$10B 현금+마켓·$4.7B backlog·순손실 -$147M(작년 -$844M에서 $697M 개선)·Adjusted EBITDA +191%·Starship V3 2회 성공·$30B+ 미 정부 다년 계약. -50% ATH·락업 해제에도 실적 완결.",
