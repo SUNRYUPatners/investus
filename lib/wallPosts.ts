@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T07AU = 1786057200000; // 2026-08-07 08:00 KST
 const T06AU = 1785970800000; // 2026-08-06 08:00 KST
 const T05AU = 1785884400000; // 2026-08-05 08:00 KST
 const T04AU = 1785798000000; // 2026-08-04 08:00 KST
@@ -73,7 +74,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T06AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T07AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -92,6 +93,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-07 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 884, symbol: "SPCX", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "Terafab이 뭔가 했더니 SPCX+Tesla가 세계 최대 chip 공장 짓는대. 초기 $16.8B, 100M sqft 규모. Grimes County Texas에서. 이 정도면 진짜 미친 스케일이네",
+    createdAt: T07AU + 5*60_000, likes: 108, comments: 9 },
+  { id: 885, symbol: "SPCX", nickname: "익명_3355", holdingLabel: "관심종목",
+    content: "Musk 왈: '전 세계 fabs 다 합쳐도 우리 필요의 2%'... 이거 진짜야? ㅋㅋ 삼성전자한테는 개꿀이겠다",
+    createdAt: T07AU + 14*60_000, likes: 92, comments: 8 },
+  { id: 886, symbol: "TSLA", nickname: "익명_4466", holdingLabel: "관심종목",
+    content: "Tesla랑 SPCX가 처음으로 공동 성명 냈음. chip이 부족해서 자체 팹 지어야 한다고. 이 정도면 합병 얘기 또 나올 각이지",
+    createdAt: T07AU + 23*60_000, likes: 78, comments: 7 },
+  { id: 887, symbol: "SPCX", nickname: "익명_5577", holdingLabel: "관심종목",
+    content: "$1T 매출 목표를 2031→2030으로 당김. 2029도 nonzero 가능성이래. 어제 -10%인데 오늘 +6% 반등. 흐름 심상치 않아",
+    createdAt: T07AU + 32*60_000, likes: 85, comments: 8 },
+  { id: 888, symbol: "SPCX", nickname: "익명_6688", holdingLabel: "관심종목",
+    content: "락업 unlock이 $100B이나 나옴. 현재 free float의 1.4배. 이걸 시장이 소화할 수 있을까? 오늘 +6%가 첫 답",
+    createdAt: T07AU + 41*60_000, likes: 71, comments: 6 },
+  { id: 889, symbol: "SPCX", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "Bluebird 위성 3개 배치 완료! Direct-to-phone 시작이야. Verizon·AT&T·TMobile 진짜 긴장해야겠다",
+    createdAt: T07AU + 50*60_000, likes: 83, comments: 7 },
+  { id: 890, symbol: "SPCX", nickname: "익명_8811", holdingLabel: "관심종목",
+    content: "SPCX가 올해 세계 궤도 mass의 80-95%를 발사한대. 중국이 8-10%. 이 격차 진짜 미쳤네. Falcon 90% zero failure에 재사용 30+번",
+    createdAt: T07AU + 59*60_000, likes: 96, comments: 8 },
+  { id: 891, symbol: "TSLA", nickname: "익명_9922", holdingLabel: "관심종목",
+    content: "Megapack 3 공장 (Brookshire TX) 16개월 만에 착공→가동. 연 50 GWh 캐파야. Tesla 실행력 진짜 대단해",
+    createdAt: T07AU + 68*60_000, likes: 63, comments: 5 },
+  { id: 892, symbol: "SPCX", nickname: "익명_1133", holdingLabel: "관심종목",
+    content: "다음 Starship 발사에서 Starlink V3 첫 궤도 배치 + Ship catch 시도한대. 완전 재사용 실체화되는 순간이야 이거",
+    createdAt: T07AU + 77*60_000, likes: 74, comments: 6 },
+  { id: 893, symbol: "SPCX", nickname: "익명_2244", holdingLabel: "관심종목",
+    content: "SPCX가 Q2에만 Tesla Megapacks $296M 썼음. Q1이 $329M, 2025년 총 $506M. 누적 $1.1B+ 나오네. 두 회사 재정 통합 진짜 심하다",
+    createdAt: T07AU + 86*60_000, likes: 58, comments: 5 },
+  { id: 894, symbol: "SPX", nickname: "익명_3355", holdingLabel: "관심종목",
+    content: "Aschenbrenner가 다시 나왔음. $500M 신 투자한대 private company에. 7/31 강제 청산 당했었는데. AI 유동성 살짝 회복되는 느낌",
+    createdAt: T07AU + 95*60_000, likes: 47, comments: 4 },
+  { id: 895, symbol: "SPCX", nickname: "익명_4466", holdingLabel: "관심종목",
+    content: "Bill Ackman까지 SPCX 주주 됐다고 함. xAI 이미 투자자였고. 'amazing company·decent size 개인 투자'래. 대형 매니저 다 들어오는 중",
+    createdAt: T07AU + 104*60_000, likes: 89, comments: 7 },
+  { id: 896, symbol: "GOOGL", nickname: "익명_5577", holdingLabel: "관심종목",
+    content: "Alphabet이 $25B 채권 발행함. 10 tranche에 40년물 T+155. 이 정도 spread면 신용도 진짜 높은거지. AI CAPEX 지원용일듯",
+    createdAt: T07AU + 113*60_000, likes: 54, comments: 4 },
+  { id: 897, symbol: "SPX", nickname: "익명_6688", holdingLabel: "관심종목",
+    content: "미 재무부가 이번 주 $4B 자체 부채 매입한대. 시장에 유동성 공급하는거. Burry 1987 경고에도 정부는 완화 쪽",
+    createdAt: T07AU + 122*60_000, likes: 45, comments: 4 },
+  { id: 898, symbol: "SPX", nickname: "익명_7799", holdingLabel: "관심종목",
+    content: "SanDisk Q2 대박. EPS $1.28 (컨센 $0.42의 +205% 비트). Data Center 매출 $3.03B. AI 인프라 사이클 진짜 견고하네",
+    createdAt: T07AU + 131*60_000, likes: 66, comments: 5 },
+
   // ── 2026-08-06 신규 (짧고 다양·15개 완전 다른 톤) ────────────────
   { id: 869, symbol: "SPCX", nickname: "익명_3311", holdingLabel: "관심종목",
     content: "어? SPCX 실적 이렇게 좋은데 왜 -10%야 ㅋㅋ CAPEX 5.4B 때문이래. 시장은 항상 profit 원해.",

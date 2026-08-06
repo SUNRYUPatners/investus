@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-07 신규 (짧고 15개 완전 다른 톤) ──────────────────────
+  {
+    id: -686, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "SPCX·Tesla가 오늘 공동 성명으로 Terafab을 공식 발표. Grimes County TX에 세계 최대 chip 팹. 초기 $16.8B·100M sqft·1 TW+ compute 필요. 8/5 Musk +TSLA 매출·8/6 Moon factory에 이어 오늘 chip 자체 구축까지 = 우주부터 지상까지 완전 vertical integration.",
+    likes: 108, comments: 9, created_at: "2026-08-07T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -687, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "Musk 발언 요약:\n① 세계 fabs 다 합쳐도 Terafab 필요의 2%\n② 삼성 파트너십·chip 모두 구매\n③ 삼성 확장 페이스에 의존\n\n삼성전자 최대 수혜 시나리오.",
+    likes: 92, comments: 8, created_at: "2026-08-07T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -688, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "Tesla+SPCX가 처음 공식 공동 성명을 냈다. '현재·미래 글로벌 chip 생산으로 감당 불가.' 8/3 Kalshi 60% 합병 확률과 재정 관계 심화가 겹친다.",
+    likes: 78, comments: 7, created_at: "2026-08-07T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -689, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "Musk가 SPCX Q2 콜에서 $1T 매출 목표를 2031→2030으로 당겼다. '2029에 nonzero.' 8/3 12-24개월 +TSLA·8/5 Munster 5배 초과·오늘 Terafab이 이 프레임을 다층으로 확정한다.",
+    likes: 85, comments: 8, created_at: "2026-08-07T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -690, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "락업 시나리오 3갈래:\n\n(A) 오늘 +6% 지속·Wood·Baron·Ackman 매수·$130-150 회복\n(B) 부분 매도·$110 근처 지지선\n(C) 대량 매도·$100 하회\n\n이번 주 시세가 결정적.",
+    likes: 71, comments: 6, created_at: "2026-08-07T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -691, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "8/6 -10% → 오늘 +6%. 프레임 전환의 순간. CAPEX 우려 프레임이 매출 폭발 프레임에 자리를 내줬다. Terafab 발표·Ackman 주주·$1T pull-forward가 트리거.",
+    likes: 83, comments: 7, created_at: "2026-08-07T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -692, alias: "종로 매 #12", symbol: "SPCX",
+    content: "\"Direct-to-phone broadband from orbit. No ground towers required. Doing God's work.\" — Garry Tan. Bluebird 위성 3개 배치가 8/6 Shotwell 'V/T/TMO $600B 도전'의 실 하드웨어 근거가 됐다.",
+    likes: 74, comments: 6, created_at: "2026-08-07T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -693, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "숫자 하나로 정리: **80-95% vs 8-10%**. SPCX가 올해 세계 궤도 mass의 80-95%를 발사했고, 중국은 8-10%다. 10-12배 격차. Falcon 9는 90% flights zero failure·재사용 boosters 30+ times.",
+    likes: 96, comments: 8, created_at: "2026-08-07T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -694, alias: "부산 갈매기 #77", symbol: "TSLA",
+    content: "16개월 만에 착공에서 가동으로. Brookshire TX Megapack 3 공장이 연 50 GWh 캐파로 가동됐다. 8/6 SPCX $500M 계약·오늘 누적 $1.1B+ 지출 확인과 함께 Tesla Energy 매출 실체가 커지는 중.",
+    likes: 63, comments: 5, created_at: "2026-08-07T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -695, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "다음 Starship 발사는 두 마일스톤 동시 시도다. Starlink V3 위성 첫 궤도 배치 + Ship catch(2단 회수). 8/3 Flight 14·8/5 Musk 'rapid reusability 해결'이 실 확인되는 순간이 온다.",
+    likes: 74, comments: 6, created_at: "2026-08-07T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -696, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "10-Q에서 확인된 숫자: Q2 $296M + Q1 $329M + 2025 $506M = 누적 $1.1B+. 어제 초기 관측 $500M보다 2배 이상 큰 규모. Tesla-SPCX 재정 통합이 실체적으로 진행되는 중.",
+    likes: 58, comments: 5, created_at: "2026-08-07T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -697, alias: "을지로 팔콘 #71", symbol: "SPX",
+    content: "7/31에 강제 청산 당했던 Aschenbrenner가 $500M private company 투자로 돌아왔다. AI 유동성 우려 완화 시그널. 매크로 완화 프레임과 정합.",
+    likes: 47, comments: 4, created_at: "2026-08-07T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -698, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "Bill Ackman이 SPCX 주주가 됐다고 공언했다. xAI에는 이미 투자자였다. 'Decent size 개인 투자·amazing company.' 8/5 Wood·Baron 매수와 함께 대형 매니저 참여가 다층으로 축적되는 흐름.",
+    likes: 89, comments: 7, created_at: "2026-08-07T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -699, alias: "마포 올빼미 #24", symbol: "GOOGL",
+    content: "Alphabet이 $25B IG 채권을 10 tranche·최대 40년 만기로 발행한다. 40년물 pricing T+155 bps는 매우 tight — mega-cap 신용도 확인. 8/6 시가총액 AAPL 초과 #2와 결합, AI·Cloud CAPEX 지원 자본이 확보되는 중.",
+    likes: 54, comments: 4, created_at: "2026-08-07T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -700, alias: "종로 매 #12", symbol: "SPX",
+    content: "매크로 두 시그널:\n\n• 미 재무부 이번 주 $4B 자체 부채 매입 → 유동성 공급\n• SanDisk Q2 EPS +205% 비트·Data Center $3.03B → AI 사이클 견고\n\n8/6 Burry 1987 경고에도 정부는 완화·기업 실적은 강세.",
+    likes: 66, comments: 5, created_at: "2026-08-07T01:43:00.000Z", liked: false,
+  },
+
   // ── 2026-08-06 신규 (짧고 15개 완전 다른 톤) ──────────────────────
   {
     id: -671, alias: "여의도 매 #22", symbol: "SPCX",
