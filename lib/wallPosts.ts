@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T08AU = 1786143600000; // 2026-08-08 08:00 KST
 const T07AU = 1786057200000; // 2026-08-07 08:00 KST
 const T06AU = 1785970800000; // 2026-08-06 08:00 KST
 const T05AU = 1785884400000; // 2026-08-05 08:00 KST
@@ -74,7 +75,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T07AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T08AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -93,6 +94,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-08 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 899, symbol: "SPCX", nickname: "익명_3311", holdingLabel: "관심종목",
+    content: "드디어 오늘이다. SPCX 락업 8/8 첫 unlock 실행. 10월까지 20% 유통·1월엔 Elon까지 46% eligible. 이거 흡수 어떻게 될지 초긴장",
+    createdAt: T08AU + 5*60_000, likes: 96, comments: 8 },
+  { id: 900, symbol: "SPCX", nickname: "익명_4422", holdingLabel: "관심종목",
+    content: "락업 앞두고 float의 34%가 short 걸려있었대. 이거 shorts close되면 매수 압력 엄청날듯. 어제 +6%도 이 때문이야",
+    createdAt: T08AU + 14*60_000, likes: 82, comments: 7 },
+  { id: 901, symbol: "SPCX", nickname: "익명_5533", holdingLabel: "관심종목",
+    content: "JPMorgan이 SPCX 목표가 $180 쐈네. 현재 $111인데 +62% upside. Mega bank가 buy 신호 명확히 냈으니 다른 애널도 따라올 가능성",
+    createdAt: T08AU + 23*60_000, likes: 108, comments: 9 },
+  { id: 902, symbol: "GOOGL", nickname: "익명_6644", holdingLabel: "관심종목",
+    content: "구글 Q2 13-F 나왔는데 SPCX 102M주 ($100M) 신규로 잡혔음. AST SpaceMobile·Anthropic·Palantir·Cerebras까지 우주+AI 다각. Google이 실 지분 확인함",
+    createdAt: T08AU + 32*60_000, likes: 74, comments: 6 },
+  { id: 903, symbol: "SPCX", nickname: "익명_7755", holdingLabel: "관심종목",
+    content: "ARK 정리: SPCX $100B ARR 목표, 내년까지 2 large nuclear reactors 규모 compute 짓겠대. Terafab+xAI+NuScale까지. 이 정도 스케일이 진짜 가능한가",
+    createdAt: T08AU + 41*60_000, likes: 89, comments: 7 },
+  { id: 904, symbol: "SPCX", nickname: "익명_8866", holdingLabel: "관심종목",
+    content: "Musk: 'AI가 인류 위협할 확률 10-20%·내 행동이 오히려 AI 가속화한 것 같다' 정직하게 인정하네. 근데 오늘도 Terafab·궤도 DC 확장 지속함. 아이러니 ㅋㅋ",
+    createdAt: T08AU + 50*60_000, likes: 63, comments: 5 },
+  { id: 905, symbol: "SPCX", nickname: "익명_9977", holdingLabel: "관심종목",
+    content: "'quantum computing이 where AI comes from' — Musk. quantum까지 SPCX 확장 가능성 시사 발언. 궤도 DC·chip·quantum까지 compute 스택 완결 프레임인듯",
+    createdAt: T08AU + 59*60_000, likes: 51, comments: 4 },
+  { id: 906, symbol: "TSLA", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "Musk 왈: 'Terafab이 세계에서 most valuable building이 될 것.' 100M sqft·$16.8B·1 TW compute. 진짜 이 정도면 스케일이 상상 초월",
+    createdAt: T08AU + 68*60_000, likes: 78, comments: 6 },
+  { id: 907, symbol: "TSLA", nickname: "익명_2299", holdingLabel: "관심종목",
+    content: "Cathie Wood: 'Robotaxi로 Tesla 마진 10%에서 80-90%로 급증' 강조. 애널들이 재평가해야 한다고. 어제 60%였는데 오늘 80-90%로 upgrade됐네",
+    createdAt: T08AU + 77*60_000, likes: 92, comments: 8 },
+  { id: 908, symbol: "SPCX", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "Ross Gerber: 'Only SpaceX can do it.' Ackman·JPMorgan·Wood·Baron에 이어 오늘 Gerber까지. 대형 매니저·investor 다각 참여 확대",
+    createdAt: T08AU + 86*60_000, likes: 55, comments: 4 },
+  { id: 909, symbol: "TSLA", nickname: "익명_4411", holdingLabel: "관심종목",
+    content: "Tesla가 Texas Kent Bend County에 $10.1B 태양광 셀 공장 짓는대. 10,000+ 정규 직원. 8/7 Terafab에 이어 오늘 태양광까지 Texas 다각 확장 진짜 대단해",
+    createdAt: T08AU + 95*60_000, likes: 66, comments: 5 },
+  { id: 910, symbol: "TSLA", nickname: "익명_5522", holdingLabel: "관심종목",
+    content: "Optimus robot hands 생산 라인 Manufacturing Engineer 채용 시작. Hands는 로봇에서 가장 vital한 부품이지. 이거 진짜 상업 제조 임박 신호야",
+    createdAt: T08AU + 104*60_000, likes: 71, comments: 6 },
+  { id: 911, symbol: "TSLA", nickname: "익명_6633", holdingLabel: "관심종목",
+    content: "Tesla 배터리 재활용률 50%+ (니켈·코발트). 'landfill zero' 목표. 8/1 US LFP·오늘 태양광에 이어 순환 인프라 완결하네",
+    createdAt: T08AU + 113*60_000, likes: 43, comments: 3 },
+  { id: 912, symbol: "SPCX", nickname: "익명_7744", holdingLabel: "관심종목",
+    content: "Shotwell: '항공사 고객이 direct 안 타고 Starlink 있는 shorter hop 선호함. 이 pattern 이전에 없었다'는 걸 강조. 진짜 소비자 행동이 바뀌고 있는거야",
+    createdAt: T08AU + 122*60_000, likes: 58, comments: 5 },
+  { id: 913, symbol: "SPCX", nickname: "익명_8855", holdingLabel: "관심종목",
+    content: "T-Mobile CEO는 'Starlink 위협 exaggerated·보완적' 폄하했는데, Shotwell은 'V2 위성 내년 발사·2027 말 상용 시작'으로 응수. 이 대립 재미있음",
+    createdAt: T08AU + 131*60_000, likes: 47, comments: 4 },
+
   // ── 2026-08-07 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 884, symbol: "SPCX", nickname: "익명_2244", holdingLabel: "관심종목",
     content: "Terafab이 뭔가 했더니 SPCX+Tesla가 세계 최대 chip 공장 짓는대. 초기 $16.8B, 100M sqft 규모. Grimes County Texas에서. 이 정도면 진짜 미친 스케일이네",

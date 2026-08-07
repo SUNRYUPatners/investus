@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-08 신규 (짧고 15개 완전 다른 톤) ──────────────────────
+  {
+    id: -701, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "락업 첫 unlock 실행일. Evan D가 정리한 일정: 오늘 5% + 10월까지 20% + 1월 2027 Elon/Founder 46% + 9월 2027 +40%. 14개월 흐름의 첫 걸음. 이번 주 흡수 실체가 락업 이후 시세 방향을 정한다.",
+    likes: 96, comments: 8, created_at: "2026-08-08T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -702, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "숫자 하나로 정리: **34% float shorted**. 어제 $91.5M shares eligible이 free float의 1.4배·shorts 대량 close·매수 압력 유발. 8/6 -10%에서 8/7 +6% 반등의 실 근거.",
+    likes: 82, comments: 7, created_at: "2026-08-08T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -703, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "JPMorgan이 SPCX 목표가 $180으로 상향했다. 현재 $111에서 +62% upside. Mega bank가 명확히 buy 신호를 냈고, Goldman·MS·BofA도 뒤따를 가능성. Ackman(8/7)·Gerber(오늘)와 결합해 기관 flow 다각.",
+    likes: 108, comments: 9, created_at: "2026-08-08T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -704, alias: "을지로 팔콘 #71", symbol: "GOOGL",
+    content: "Google Q2 13-F 리스트:\n• SpaceX 102M주 (~$100M)\n• Planet Labs 71M\n• AST SpaceMobile 17M\n• Anthropic 15M\n• Palantir·ARM·Cerebras\n\n우주+AI 다각 지분·mega-cap이 SPCX에 실 지분 확인.",
+    likes: 74, comments: 6, created_at: "2026-08-08T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -705, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "ARK 관측이 정리하는 큰 그림은 이렇다: SPCX가 $100B ARR을 목표로, 내년까지 large nuclear reactors 2기 규모 compute를 구축하려 한다. Terafab·xAI·NuScale의 3중 확장이 8/7 Terafab $16.8B 프레임을 재정·전력·compute 축에서 완결한다.",
+    likes: 89, comments: 7, created_at: "2026-08-08T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -706, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "Musk의 아이러니. AI 종말 확률을 10-20%로 유지하면서 본인이 가속화했다고 인정한다. 그러면서도 오늘 Terafab·궤도 DC·quantum 확장은 지속. 정직한 인정과 확장 지속은 함께 갈 수 있는가?",
+    likes: 63, comments: 5, created_at: "2026-08-08T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -707, alias: "종로 매 #12", symbol: "SPCX",
+    content: "\"Quantum computing is where AI comes from.\" — Musk. 한 문장이지만 함의가 크다. SPCX compute 스택이 궤도 DC·chip을 넘어 quantum까지 확장 가능성. IBM·Google·IonQ 등과의 파트너십을 watch.",
+    likes: 51, comments: 4, created_at: "2026-08-08T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -708, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "Musk가 Terafab을 '세계에서 most valuable building'으로 프레임했다. 8/7 공식 발표 후 하루 만에 심리 upgrading. 100M sqft·$16.8B·1 TW compute의 극단 스케일이 시장에 어떻게 반영될지가 관건.",
+    likes: 78, comments: 6, created_at: "2026-08-08T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -709, alias: "부산 갈매기 #77", symbol: "TSLA",
+    content: "Wood가 프레임을 upgrading했다. 8/5 60% → 오늘 80-90%. 자동차 마진 10%에서 Robotaxi 서비스 마진 80-90%로 8배 확장. 8/5 $10T 시장·오늘 마진 상세가 결합되면 Tesla 밸류 재평가 논거가 강력해진다.",
+    likes: 92, comments: 8, created_at: "2026-08-08T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -710, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "\"Only SpaceX can do it. Starship·Optimus·Musk가 factory 짓는 능력이 investment compelling이다.\" — Ross Gerber. 오늘 하는 일이 아니라 미래에 이룰 일이 매력의 core. Ackman·Wood·Baron·JPM에 이어 다각 참여 지속.",
+    likes: 55, comments: 4, created_at: "2026-08-08T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -711, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "Tesla Kent Bend County TX $10.1B 태양광 셀 시설. Vertically integrated·미국 태양광 대안·10,000+ 정규 직원. 8/7 Terafab·Megapack 3와 결합해 Texas 다각 확장·Tesla 에너지 vertical integration 완결.",
+    likes: 66, comments: 5, created_at: "2026-08-08T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -712, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "Optimus 상업 제조가 실 진전이다. Staff Manufacturing Engineer가 robot hands 생산 라인을 위해 채용된다. Hands는 로봇의 가장 vital·complex parts. 7/28 Optimus factory hires에 이은 실 상용화 시그널.",
+    likes: 71, comments: 6, created_at: "2026-08-08T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -713, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "Tesla가 미국 배터리 재활용률 50%+ 달성했다. 니켈·코발트 회수. Landfill zero를 목표로 한다. 8/1 US LFP·오늘 태양광 $10.1B에 이어 순환 인프라가 완결되는 흐름. ESG 축·원료 안정·미국 배터리 산업 재건 삼중.",
+    likes: 43, comments: 3, created_at: "2026-08-08T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -714, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "\"항공사 고객이 direct flight 피하고 Starlink 있는 shorter hop을 선호한다. 이 pattern 이전에 없었다.\" — Shotwell. 소비자 행동 근본 변화 시그널. 8/4 IAG·8/6 Bluebird와 결합해 Starlink Aviation 실 수요 확인.",
+    likes: 58, comments: 5, created_at: "2026-08-08T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -715, alias: "종로 매 #12", symbol: "SPCX",
+    content: "T-Mobile CEO vs Shotwell 대립.\n\n• T-Mobile: 'Starlink 위협 exaggerated·complementary'\n• Shotwell: 'V2 내년 발사·2027 말 상용'\n\n2027 시장이 실체 판단 시점. 8/6 Viasat -83%·오늘 shorter hop 소비자 행동이 SPCX 편에 지지된다.",
+    likes: 47, comments: 4, created_at: "2026-08-08T01:43:00.000Z", liked: false,
+  },
+
   // ── 2026-08-07 신규 (짧고 15개 완전 다른 톤) ──────────────────────
   {
     id: -686, alias: "여의도 매 #22", symbol: "SPCX",
