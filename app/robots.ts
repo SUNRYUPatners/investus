@@ -9,7 +9,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/admin/",
           "/auth/",
-          "/creator/",
+          // /creator/[id] 공개 프로필은 색인 허용 — 대시보드/설정만 차단
+          "/creator/dashboard",
+          "/creator/setup",
           "/preview/",
           "/api/",
         ],

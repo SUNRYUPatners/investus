@@ -69,6 +69,18 @@ const nextConfig: NextConfig = {
         destination: "https://www.investus.kr/:path*",
         permanent: true,
       },
+      // 구 경로: /insight/masters → 통합본 /insight/basics (정식 308)
+      // page.tsx permanentRedirect는 soft 200을 내어 Search Console "리디렉션" 오류를 유발함
+      {
+        source: "/insight/masters",
+        destination: "/insight/basics",
+        permanent: true,
+      },
+      {
+        source: "/insight/masters/",
+        destination: "/insight/basics",
+        permanent: true,
+      },
     ];
   },
   async headers() {
