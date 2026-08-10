@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T11AU = 1786402800000; // 2026-08-11 08:00 KST
 const T10AU = 1786316400000; // 2026-08-10 08:00 KST
 const T08AU = 1786143600000; // 2026-08-08 08:00 KST
 const T07AU = 1786057200000; // 2026-08-07 08:00 KST
@@ -76,7 +77,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T10AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T11AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -95,6 +96,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-11 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 929, symbol: "NVDA", nickname: "익명_5511", holdingLabel: "관심종목",
+    content: "$500B AI 컨소시엄?? Apollo·Blackstone·BlackRock·Brookfield·Goldman·KKR이 다 모였는데... 이 정도 규모는 진짜 처음 보네",
+    createdAt: T11AU + 4*60_000, likes: 118, comments: 11 },
+  { id: 930, symbol: "SPCX", nickname: "익명_6622", holdingLabel: "관심종목",
+    content: "루프트한자에 스타링크 첫 설치. 8월 18일부터 서비스 시작. 프리미엄 유럽 항공사 도입은 처음이야",
+    createdAt: T11AU + 13*60_000, likes: 84, comments: 7 },
+  { id: 931, symbol: "TSMC", nickname: "익명_7733", holdingLabel: "관심종목",
+    content: "TSMC 7월 매출 +45% YoY... AI 반도체 수요 아직 정말 강력하네. NVIDIA·Apple·AMD 주문 다 살아있다는 뜻",
+    createdAt: T11AU + 22*60_000, likes: 92, comments: 8 },
+  { id: 932, symbol: "TSLA", nickname: "익명_8844", holdingLabel: "관심종목",
+    content: "Cybercab 로고 부착 차량이 Giga Texas에 대량 목격됨. 프로토타입 → 상업 생산 넘어간 확실한 신호",
+    createdAt: T11AU + 31*60_000, likes: 105, comments: 9 },
+  { id: 933, symbol: "GOOGL", nickname: "익명_9955", holdingLabel: "관심종목",
+    content: "구글 현금 사상 최대 $242.5B. 순현금만 $144B. 어제 채권 $25B 발행하고도 이 정도. AI CAPEX·자사주 매입 여력 극대",
+    createdAt: T11AU + 40*60_000, likes: 77, comments: 6 },
+  { id: 934, symbol: "SPCX", nickname: "익명_1166", holdingLabel: "관심종목",
+    content: "Musk 왈: '스타링크 계정 하나로 집·사무실·카페 어디서든 사용 가능'... T-Mobile CEO가 폄하한 지 3일 만에 정확 반박 프레임 냈네",
+    createdAt: T11AU + 49*60_000, likes: 88, comments: 7 },
+  { id: 935, symbol: "SPCX", nickname: "익명_2277", holdingLabel: "관심종목",
+    content: "samuel 프레임 진짜 상상 초월. AI 에이전트 트래픽이 인간 초과 → 스타링크가 AI backbone. 위성 20만 개 배치가 유일한 물리적 답이래",
+    createdAt: T11AU + 58*60_000, likes: 71, comments: 6 },
+  { id: 936, symbol: "SPCX", nickname: "익명_3388", holdingLabel: "관심종목",
+    content: "Aaron Barrett가 구체 수치 냄. 스타링크 현재 2-8 Pbps, V3 20만 위성 배치 시 100 Pbps. Musk가 직접 재확인. 이 정도면 통신사 다 이길듯",
+    createdAt: T11AU + 67*60_000, likes: 82, comments: 7 },
+  { id: 937, symbol: "SPCX", nickname: "익명_4499", holdingLabel: "관심종목",
+    content: "SPCX가 Cursor $60B에 인수?? AI 코딩 스타트업인데 이거 확정 나면 SPCX 역대 최대 딜. 다음 주 마감 예상",
+    createdAt: T11AU + 76*60_000, likes: 98, comments: 8 },
+  { id: 938, symbol: "JPY", nickname: "익명_5500", holdingLabel: "관심종목",
+    content: "일본 2년 국채 1.614% 찍음. 21년 만에 최고. BOJ 9월 인상 컨센 강함. 2024년 8월 캐리 트레이드 해체 재현 우려",
+    createdAt: T11AU + 85*60_000, likes: 63, comments: 5 },
+  { id: 939, symbol: "SPX", nickname: "익명_6611", holdingLabel: "관심종목",
+    content: "나스닥 100의 70%+가 200일 이평 위. 1년 이상 만에 최대 breadth. Mag 7만 오르는 게 아니라 다 오르는 중이야",
+    createdAt: T11AU + 94*60_000, likes: 56, comments: 4 },
+  { id: 940, symbol: "SPCX", nickname: "익명_7722", holdingLabel: "관심종목",
+    content: "Boring Company가 $2B 자금 조성함. 사업 개발 인력 대량 채용 중. 세계 도시 Loop 사업 확장 시작 신호",
+    createdAt: T11AU + 103*60_000, likes: 48, comments: 4 },
+  { id: 941, symbol: "TSLA", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "Tesla 일본 배송 네트워크 60% 확대... 요코하마·고베·간토·나고야 다 신규 오픈. 6월 4,000대·연 12,000대 넘음",
+    createdAt: T11AU + 112*60_000, likes: 68, comments: 5 },
+  { id: 942, symbol: "MSFT", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "MSFT 자체 AI 칩 Maia 300을 9월에 200만 개 생산 확대. NVIDIA 의존 축소 가속. 오늘 NVDA $500B 컨소시엄과 정반대 방향이네",
+    createdAt: T11AU + 121*60_000, likes: 74, comments: 6 },
+  { id: 943, symbol: "TSLA", nickname: "익명_1155", holdingLabel: "관심종목",
+    content: "Tesla 앱 월간 사용자 1,000만 명 돌파! Musk가 '미래에 모든 차량에 스타링크 탑재될 것'까지 언급. Tesla + SPCX 시너지 극대",
+    createdAt: T11AU + 130*60_000, likes: 112, comments: 10 },
+
   // ── 2026-08-10 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 914, symbol: "SPCX", nickname: "익명_3344", holdingLabel: "관심종목",
     content: "Terafab 100M sqft가 Pentagon 10배·Apple Park 55배래... 이 정도 스케일은 진짜 상상이 안 되는데?",

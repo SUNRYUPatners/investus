@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.11</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">SPCX — samuel "스타링크가 AI 시대 지구 주요 인터넷·</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">AI 로봇/에이전트 트래픽이 인간 초과할 것"</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".15">🌍</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#c084fc" text-anchor="middle">🌍</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">AI 시대</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">samuel의 분석: 앞으로 5년 안에 수백억에서 조 단위 AI 에이전트(디지털·로봇·자동차)가 등장하면,</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">이들에게 필요한 인터넷 통신량은 인간이 쓰는 것을 훨씬 넘어섭니다. 이 규모를 물리적으로 감당할 수 있는</text>
+  <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">회사는 Starship을 가진 SpaceX뿐입니다.</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🌍</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">AI 시대</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">인터넷 수요 폭발</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">로봇·자동차·에이전트</text>
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🚀</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">Starship 필수</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">대량 위성 발사 유일</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">다른 회사 불가</text>
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🌐</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">지구 backbone</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">AI 인프라 척추</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">스타링크 미래 역할</text>
+  <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">SAMUEL</text>
+  <text x="540" y="714" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">"AI 에이전트가 수백억~조 단위로 등장하면 이 규모의 인터넷을 물리적으로 확장할 수 있는 회사는</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">Starship을 가진 SpaceX뿐이며, 스타링크는 AI 시대의 척추가 될 것입니다."</text>
+  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">AI agents (digital, robots, cars) will need massive bandwidth · only SpaceX with Starship can physically scale</text>
+  <text x="540" y="796" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">Starlink will be backbone of AI age</text>
+  <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">출처: samuel · 2026.08.10</text>
+  <rect x="60" y="850" width="960" height="110" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="884" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">이 소식은 왜 중요한가</text>
+  <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">스타링크를 단순한 위성 인터넷 회사로 보는 게 아니라, AI 시대의 필수 인프라로 재정의하는 프레임입니다. 오늘 Aaron</text>
+  <text x="540" y="954" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Barrett의 20만 위성 배치 예상, Musk의 인간 초과 트래픽 발언과도 일치합니다.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스타링크 · AI 시대 인프라 · 2026.08.11</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

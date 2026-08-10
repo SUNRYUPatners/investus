@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-11 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
+  {
+    id: -731, alias: "여의도 매 #22", symbol: "NVDA",
+    content: "$500B. 이 숫자가 그냥 나온 게 아니라 세계 최대 6개 금융사(Apollo·Blackstone·BlackRock·Brookfield·Goldman·KKR)가 컨소시엄으로 뭉쳐서 만든 거다. 8/5 오라클 CDS 사상 최고 우려에 대한 정확한 답변이다. FT 보도.",
+    likes: 118, comments: 11, created_at: "2026-08-11T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -732, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "루프트한자 A320neo에 스타링크 설치된 사진이 오늘 처음 공개됐다. 계약 뉴스가 아니라 실 설치·8월 18일부터 승객이 진짜 쓴다는 얘기다. IAG·Bluebird에 이어 프리미엄 유럽 항공사 첫 도입이라는 게 상징적이다.",
+    likes: 84, comments: 7, created_at: "2026-08-11T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -733, alias: "서초 콘도르 #59", symbol: "MACRO",
+    content: "TSMC 7월 매출 $14.5B, 전년 대비 +45% 급증. AI 반도체 사이클이 여전 강력하다는 실체다. NVIDIA·Apple·AMD 주문이 여전 안정적이라는 뜻이고, 오늘 NVDA $500B 컨소시엄과 결합하면 AI 인프라 지속성 프레임이 다층 확인된다.",
+    likes: 92, comments: 8, created_at: "2026-08-11T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -734, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "Joe Tegtmeyer가 오늘 처음 Cybercab 로고 부착 차량을 Giga Texas 서쪽 라인에서 대량 관찰했다. 로고 없는 프로토타입에서 로고 부착 대량 라인업으로 넘어간 순간이다. 8/6 카메라 $500M·8/4 Ops 6개 도시 채용과 정확히 정합.",
+    likes: 105, comments: 9, created_at: "2026-08-11T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -735, alias: "광화문 늑대 #33", symbol: "GOOGL",
+    content: "\"Cash: $242.5B · Debt: $98.3B · Net cash: $144B.\" Qualstom이 정리한 세 줄이 구글 재무 강세 전체를 요약한다. 어제 $25B 채권 발행하고도 이 수준. AI CAPEX·자사주 매입·M&A 어디든 대규모로 갈 수 있는 여력이다.",
+    likes: 77, comments: 6, created_at: "2026-08-11T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -736, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "3일 전 T-Mobile CEO가 '스타링크 위협 과장'이라 폄하했는데, Musk가 오늘 정확히 반대 프레임을 냈다. '스타링크 계정 하나로 집·사무실·카페 어디서든 사용.' 통신사 서비스와 동등한 구조로 재정의됐다. 실 매출 프레임의 근거다.",
+    likes: 88, comments: 7, created_at: "2026-08-11T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -737, alias: "종로 매 #12", symbol: "SPCX",
+    content: "AI 에이전트가 앞으로 5년 안에 수백억~조 단위로 등장하면, 이들에게 필요한 인터넷은 인간이 쓰는 것을 훨씬 넘는다. samuel의 논리는 이 규모를 물리적으로 감당할 수 있는 회사가 Starship을 가진 SPCX뿐이라는 것이다. 스타링크가 AI 시대의 척추가 된다는 프레임이다.",
+    likes: 71, comments: 6, created_at: "2026-08-11T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -738, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "2-8 Pbps 현재 → V3 10만 개면 10 Pbps → V3+ 20만 위성이면 100 Pbps. Aaron Barrett의 계산이고 Musk가 즉시 재확인했다. 20억 명이 아직 인터넷 접근 없는 세계에서, 100배 대역폭이 의미하는 매출은 계산 자체가 어렵다.",
+    likes: 82, comments: 7, created_at: "2026-08-11T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -739, alias: "부산 갈매기 #77", symbol: "SPCX",
+    content: "SPCX가 AI 코딩 스타트업 Cursor를 $60B에 인수한다는 보도가 다음 주 마감이라는 게 진짜라면, 이건 SPCX 역대 최대 딜이다. 위성·chip·quantum에 이어 AI 소프트웨어까지 축이 완결된다. Tesla·xAI·SPCX 내부 개발이 극단 가속된다는 얘기다.",
+    likes: 98, comments: 8, created_at: "2026-08-11T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -740, alias: "강남 표범 #46", symbol: "JPY",
+    content: "일본 2년 국채 1.614%. 21년 만에 최고. 엔 개입과 유가 하락에도 수익률이 계속 오른다는 건 시장이 9월 BOJ 인상을 강력히 베팅한다는 얘기다. 2024년 8월 캐리 트레이드 해체 사례 기억하면 미국 성장주는 취약해질 수 있다.",
+    likes: 63, comments: 5, created_at: "2026-08-11T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -741, alias: "서초 콘도르 #59", symbol: "SPX",
+    content: "나스닥 100의 70%+ 종목이 200일 이평선 위에 있다. 1년 이상 만의 최대 breadth다. Mag 7만 오르는 편중 시장이 아니라 진짜 브로드 강세라는 뜻이다. 조정 리스크는 상대적으로 낮은 국면이다.",
+    likes: 56, comments: 4, created_at: "2026-08-11T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -742, alias: "을지로 팔콘 #71", symbol: "MACRO",
+    content: "Boring Company가 $2B를 조성했다는 Phil Trubey 관측이 흥미롭다. 사업 개발 인력 대량 채용 = 세계 도시에 Loop 사업을 청구할 준비 단계라는 얘기다. SPCX·Tesla·xAI·Neuralink에 이어 Boring도 성장 축으로 올라오는 그림이다.",
+    likes: 48, comments: 4, created_at: "2026-08-11T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -743, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "Tesla 일본 배송 네트워크 60% 확대. 요코하마·고베·간토·나고야 4곳이 8월-연말 순차로 오픈한다. 6월 4,000대·연 12,000대 배송. 유럽(프랑스 +86%)·중국(7월 93K)에 이어 아시아 다각 회복이 실체화되는 국면이다.",
+    likes: 68, comments: 5, created_at: "2026-08-11T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -744, alias: "마포 올빼미 #24", symbol: "MSFT",
+    content: "MSFT가 Maia 300을 9월에 2백만 개 생산 확대한다는 Shay Boloor 정리다. 오늘 NVDA $500B 컨소시엄과 정확 반대 방향이다. 하이퍼스케일러가 NVIDIA 의존 축소하고 자체 칩으로 옮겨가는 흐름이 GOOGL TPU·AMZN Trainium·META MTIA와 함께 명확해진다.",
+    likes: 74, comments: 6, created_at: "2026-08-11T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -745, alias: "종로 매 #12", symbol: "TSLA",
+    content: "Tesla 앱 월간 사용자 1,000만 명 돌파에다, Musk가 '미래에 모든 차량에 스타링크 탑재' 발언까지 오늘 겹쳤다. 자동차 회사가 아니라 소프트웨어·서비스 회사로 확장된다는 시그널이고, SPCX 시너지가 극대화된다는 뜻이다. Wood 마진 80-90% 프레임의 실 근거다.",
+    likes: 112, comments: 10, created_at: "2026-08-11T01:43:00.000Z", liked: false,
+  },
+
   // ── 2026-08-10 신규 (짧고 15개 완전 다른 톤) ──────────────────────
   {
     id: -716, alias: "여의도 매 #22", symbol: "SPCX",
