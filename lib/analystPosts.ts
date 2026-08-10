@@ -20,77 +20,77 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-08-10 신규 (짧고 15개 완전 다른 톤) ──────────────────────
   {
     id: -716, alias: "여의도 매 #22", symbol: "SPCX",
-    content: "숫자로 정리한 Terafab 100M sqft: **Giga Texas 10x·Pentagon 10x·Boeing Everett 23x·Apple Park 55x**. 8/8 Musk 'most valuable building' 프레임의 실 규모가 통계로 확인됐다. World of Statistics.",
+    content: "Pentagon 10배·Apple Park 55배. Terafab 100M sqft가 이런 규모라는 게 사실 실감이 잘 안 난다. 8/8 Musk가 'most valuable building'이라 프레임했던 게 통계로 확인된 셈. World of Statistics.",
     likes: 92, comments: 8, created_at: "2026-08-10T00:04:00.000Z", liked: false,
   },
   {
     id: -717, alias: "강남 표범 #46", symbol: "SPCX",
-    content: "V3 100X vs Wood 50X vs Musk 200X. 표현은 다르지만 결론은 같다: V2 대비 극단 상향. $200B/year 매출 계획·100K 위성 배치·직접-to-cell 통합. 8/8 $100B ARR 프레임이 오늘 더 커졌다.",
+    content: "Musk는 100X·200X를 얘기하고, Wood는 50X ASTONISHING이라 하고, ARK 원래 예상은 20X였다. 표현은 다 다르지만 방향은 하나다. V2 대비 극단 상향이 시장 공식 프레임이 됐다.",
     likes: 106, comments: 9, created_at: "2026-08-10T00:12:00.000Z", liked: false,
   },
   {
     id: -718, alias: "서초 콘도르 #59", symbol: "BRK",
-    content: "Berkshire의 오랜 침묵이 깨졌다. 14분기 만에 순매수 전환·$357.4B 현금 배치 시작. GOOGL $10B는 mega 신 포지션. Buffett가 tech·특히 Google을 선택한 게 이례적이다. 매크로 강세 시그널.",
+    content: "14분기 동안 조용하던 Buffett가 움직였다. $357B 현금 pile 배치가 시작됐고, GOOGL에 $10B mega 신 포지션이 들어갔다. Value 대명사가 tech를 산다는 것 자체가 시장 강세 시그널이다.",
     likes: 88, comments: 7, created_at: "2026-08-10T00:19:00.000Z", liked: false,
   },
   {
     id: -719, alias: "을지로 팔콘 #71", symbol: "TSLA",
-    content: "California MyFirstEV가 4일 만에 다 팔렸다. $3,500 rebate·8/3 launch·22시간 전 30% 잔여 → 오늘 0%. Tesla가 CA EV 시장에서 여전 선두라는 실 시그널·8/7 태양광 $10.1B와 결합해 사업 축 다각.",
+    content: "22시간 전만 해도 30% 남아있던 California MyFirstEV 자금이 오늘 0%가 됐다. 4일. $3,500 rebate가 이렇게 빨리 소진되는 건 Tesla가 CA EV 시장에서 여전 압도한다는 실 증거다.",
     likes: 71, comments: 6, created_at: "2026-08-10T00:26:00.000Z", liked: false,
   },
   {
     id: -720, alias: "광화문 늑대 #33", symbol: "SPCX",
-    content: "Thiel의 두 문장이 SPCX 강세 논거를 요약한다.\n\n1. \"Extremely mission-oriented\"\n2. \"SpaceX: this is the only place where we\\'re going to go to Mars.\"\n\n다른 대안이 없다는 프레임. 8/8 Gerber 'Only SPCX'와 정합.",
+    content: "\"Extremely mission-oriented. This is the only place where we're going to go to Mars.\" — Peter Thiel의 두 문장이 SPCX 강세론 전체를 요약한다. 8/8 Gerber 'Only SPCX'와도 정확히 정합한다.",
     likes: 83, comments: 7, created_at: "2026-08-10T00:33:00.000Z", liked: false,
   },
   {
     id: -721, alias: "마포 올빼미 #24", symbol: "SPCX",
-    content: "Musk 프레임이 매일 upgrade된다. 8/1 99.99% 컴퓨트 우주 → 8/3 12-24개월 +TSLA → 8/7 $1T 2030 → 8/8 $100B ARR → 오늘 Starlink만 $1T/yr. 극단 매출 축이 실체와 만나는 시점은?",
+    content: "8/1 '99.99% 컴퓨트 우주로' → 8/3 '12-24개월 +TSLA' → 8/7 '$1T 2030' → 8/8 '$100B ARR' → 오늘 'Starlink만 $1T/yr'. 열흘째 Musk 프레임이 커지고만 있다. 어디서 실체와 만날지가 관건.",
     likes: 96, comments: 8, created_at: "2026-08-10T00:40:00.000Z", liked: false,
   },
   {
     id: -722, alias: "종로 매 #12", symbol: "TSLA",
-    content: "Houston 상업 배치 임박. 7/28 133 Cybercabs · 8/4 Ops 6개 시도 채용 · 8/6 삼성/LG 카메라 $500M · 8/7 Optimus 채용 · 오늘 Model Y + Cybercab army. 서비스 개시가 코앞이다.",
+    content: "Houston lot에 Model Y Robotaxi와 Cybercab army가 서 있다. 7/28 133대에서 시작해 오늘 army 규모로 커졌다. Robotaxi 상용 서비스가 진짜 코앞이라는 얘기다.",
     likes: 66, comments: 5, created_at: "2026-08-10T00:47:00.000Z", liked: false,
   },
   {
     id: -723, alias: "여의도 매 #22", symbol: "SPX",
-    content: "Winton의 반박이 흥미롭다. 통념: open weight → frontier lab 매출 감소. 반박: open weight 공격 → enterprise가 frontier 방어 필수 → 채택 가속. AI 사이클 지속 논거로 유효.",
+    content: "Winton이 통념을 뒤집었다. Open weight가 frontier AI 랩 매출을 뺏을 거라는 예상 대신, open weight로 공격받은 enterprise가 오히려 frontier로 몰린다는 얘기다. 매출 지속 논거로 유효하다.",
     likes: 55, comments: 4, created_at: "2026-08-10T00:54:00.000Z", liked: false,
   },
   {
     id: -724, alias: "부산 갈매기 #77", symbol: "SPCX",
-    content: "혼동 해소: SPCX $1T revenue 2030 = 실 매출(annual)·cumulative 아님. Musk 명시 재확인. Aaron Barrett 계산으로는 ARR 2029/2030에 ~$300B+ 필요. 매년 100%+ 성장 프레임.",
+    content: "$1T 2030이 cumulative(누적)인지 annual(연 매출)인지 헷갈렸는데, Musk가 명시 재확인했다. Annual이다. Aaron Barrett 계산으로는 ARR 2029/2030에 ~$300B+ 필요. 매년 100%+ 성장 프레임이다.",
     likes: 74, comments: 6, created_at: "2026-08-10T01:01:00.000Z", liked: false,
   },
   {
     id: -725, alias: "강남 표범 #46", symbol: "SPCX",
-    content: "9월 13-15 All-In Summit 2026 라인업이 mega다. Shotwell (SPCX) + Jensen (NVDA) + Nadella (MSFT) + Isaacman (NASA). AI·우주 축의 핵심 리더 동시 참석·9월 catalyst 예정.",
+    content: "9월 13-15에 한자리에 모이는 라인업이 살벌하다. Shotwell (SPCX) + Jensen Huang (NVDA) + Satya Nadella (MSFT) + Jared Isaacman (NASA). AI·우주 축 핵심 4인이면 9월 catalyst가 나올 확률이 높다.",
     likes: 58, comments: 5, created_at: "2026-08-10T01:08:00.000Z", liked: false,
   },
   {
     id: -726, alias: "서초 콘도르 #59", symbol: "SPCX",
-    content: "\"People really don\\'t have a clue.\" — Musk. AI 발전 속도가 실리콘 밸리도 상상 못 한다는 프레임. 8/8 10-20% 종말 유지·오늘 속도 상향 인정. 리스크와 확장이 함께 간다.",
+    content: "\"People really don't have a clue.\" AI 발전 속도가 실리콘 밸리도 상상 못 한다는 Musk의 이 한 마디. 8/8에는 10-20% 종말 유지, 오늘은 속도 상향 인정. 리스크와 확장이 함께 간다는 프레임이다.",
     likes: 47, comments: 4, created_at: "2026-08-10T01:15:00.000Z", liked: false,
   },
   {
     id: -727, alias: "을지로 팔콘 #71", symbol: "SPCX",
-    content: "Starlink Mobile 진짜 전략: 위성 + small stations + EchoStar $19.68B spectrum. 전통 cell tower CAPEX ($100K-1M/각) → small stations ($1-10K/각). 통신사 CAPEX 프레임 파괴. 8/8 T-Mobile CEO 폄하 반박 근거.",
+    content: "전통 cell tower 하나에 $100K-1M. Starlink small stations 하나에 $1-10K. 이 격차가 통신사 CAPEX 프레임이 왜 무너지는지 설명한다. EchoStar $19.68B spectrum 인수가 지상 rights까지 커버했다.",
     likes: 63, comments: 5, created_at: "2026-08-10T01:22:00.000Z", liked: false,
   },
   {
     id: -728, alias: "광화문 늑대 #33", symbol: "GOOGL",
-    content: "Boloor의 예상: 2026 exit 시 하루 $1.3B profit·연 $470B 페이스. 8/6 AAPL 초과·8/7 $25B 채권·8/8 13-F SPCX $100M·오늘 BRK $10B 신 투자와 결합. Google이 mega-cap 강세를 다각으로 보여준다.",
+    content: "Google이 2026 exit 시 하루 $1.3B profit을 낸다면 연으로 환산해 $470B 페이스라는 Boloor의 관측이다. 8/6 AAPL 초과·8/7 $25B 채권·8/8 13-F·오늘 BRK $10B 신 투자까지 정합한다.",
     likes: 78, comments: 6, created_at: "2026-08-10T01:29:00.000Z", liked: false,
   },
   {
     id: -729, alias: "마포 올빼미 #24", symbol: "SPCX",
-    content: "락업 rolling schedule 정리:\n\n• 8/21 5%\n• 9/25 5%\n• 10/8·11/8·12/8 각 5%\n• Elon June 2027 46% (최대)\n• Sep 2027 +40% (최종)\n\n12월까지 25% 흡수 능력이 첫 시험.",
+    content: "락업이 rolling으로 풀린다. 8/21·9/25·10/8·11/8·12/8까지 매월 5%씩 유통되고, 12월까지 25%가 시장에 나온다. 진짜 이벤트는 Elon June 2027 46%. 이때 매도 여부가 시세 최대 변수다.",
     likes: 51, comments: 4, created_at: "2026-08-10T01:36:00.000Z", liked: false,
   },
   {
     id: -730, alias: "종로 매 #12", symbol: "SPCX",
-    content: "오늘 프레임 정리: Terafab 규모(Pentagon 10x) · Starlink V3 100X ($200B/yr) · BRK $357B 배치 · MyFirstEV 4일 소진 · Thiel Mars · Musk Starlink $1T/yr · 락업 세부 · Winton frontier · Boloor $1.3B/day. 매크로 완전 bull 프레임 축적.",
+    content: "하루 헤드라인이 Terafab 규모·V3 100X·BRK $357B·MyFirstEV·Thiel·Musk Starlink $1T·락업 세부·Winton·Boloor까지 이렇게 쏟아진다면, 이건 프레임이 아니라 시장이 실제로 움직이는 중이다.",
     likes: 89, comments: 7, created_at: "2026-08-10T01:43:00.000Z", liked: false,
   },
 
