@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T10AU = 1786316400000; // 2026-08-10 08:00 KST
 const T08AU = 1786143600000; // 2026-08-08 08:00 KST
 const T07AU = 1786057200000; // 2026-08-07 08:00 KST
 const T06AU = 1785970800000; // 2026-08-06 08:00 KST
@@ -75,7 +76,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T08AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T10AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -94,6 +95,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-10 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 914, symbol: "SPCX", nickname: "익명_3344", holdingLabel: "관심종목",
+    content: "Terafab 100M sqft가 Pentagon 10배·Apple Park 55배래... 이 정도 스케일은 진짜 상상이 안 되는데?",
+    createdAt: T10AU + 5*60_000, likes: 92, comments: 8 },
+  { id: 915, symbol: "SPCX", nickname: "익명_4455", holdingLabel: "관심종목",
+    content: "Starlink V3가 V2 대비 100X bandwidth라는데 Wood는 50X ASTONISHING이라 함ㅋㅋ 심지어 200X까지 가능하다고. 매출 200B/yr 계획",
+    createdAt: T10AU + 14*60_000, likes: 106, comments: 9 },
+  { id: 916, symbol: "BRK", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "Buffett가 드디어 움직임. 14분기 만에 순매수 전환·$357B 현금 배치 시작. GOOGL $10B 신규야. Buffett가 tech 사는 건 진짜 이례적",
+    createdAt: T10AU + 23*60_000, likes: 88, comments: 7 },
+  { id: 917, symbol: "TSLA", nickname: "익명_6677", holdingLabel: "관심종목",
+    content: "California MyFirstEV 자금이 4일 만에 다 소진됨. $3,500 rebate 개꿀. CA EV 수요 진짜 강력한듯",
+    createdAt: T10AU + 32*60_000, likes: 71, comments: 6 },
+  { id: 918, symbol: "SPCX", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "Peter Thiel도 SPCX 강세로 나왔음: 'mission-oriented·화성 갈 유일 곳.' Ackman·JPM·Gerber에 이어 Thiel까지. 대형 investor 다 몰려온다",
+    createdAt: T10AU + 41*60_000, likes: 83, comments: 7 },
+  { id: 919, symbol: "SPCX", nickname: "익명_8899", holdingLabel: "관심종목",
+    content: "Musk 왈: 'Starlink만으로 연 $1T 매출 가능.' 이틀 전 $100B ARR이라던 게 오늘 10배 상향됨. 프레임이 매일 커지네",
+    createdAt: T10AU + 50*60_000, likes: 96, comments: 8 },
+  { id: 920, symbol: "TSLA", nickname: "익명_1122", holdingLabel: "관심종목",
+    content: "Houston lot에 Robotaxi 대량 배치되는 중. Model Y + Cybercab army 조성. 상업 서비스 임박 신호",
+    createdAt: T10AU + 59*60_000, likes: 66, comments: 5 },
+  { id: 921, symbol: "SPX", nickname: "익명_2233", holdingLabel: "관심종목",
+    content: "ARK Winton이 재미있는 프레임 냄. Open weight models이 오히려 frontier AI 랩 채택 가속시킨대. Enterprise가 방어 위해 frontier 필요하니까",
+    createdAt: T10AU + 68*60_000, likes: 55, comments: 4 },
+  { id: 922, symbol: "SPCX", nickname: "익명_3344", holdingLabel: "관심종목",
+    content: "Musk가 '$1T 2030'을 annual이라고 명시 재확인함. Cumulative 아니래. 그럼 ARR이 2029/2030에 $300B+ 나와야 하는데 진짜 가능한가",
+    createdAt: T10AU + 77*60_000, likes: 74, comments: 6 },
+  { id: 923, symbol: "SPCX", nickname: "익명_4455", holdingLabel: "관심종목",
+    content: "9월 13-15 All-In Summit에 Shotwell·Jensen·Nadella·Isaacman 다 모임. 이 라인업 진짜 미쳤다. 뭔가 큰 발표 나올듯",
+    createdAt: T10AU + 86*60_000, likes: 58, comments: 5 },
+  { id: 924, symbol: "SPCX", nickname: "익명_5566", holdingLabel: "관심종목",
+    content: "Musk: 'AI 발전 속도가 실리콘 밸리도 상상 못 함·people really don\\'t have a clue.' AI 리스크 10-20%인데 확장은 계속하고 있음",
+    createdAt: T10AU + 95*60_000, likes: 47, comments: 4 },
+  { id: 925, symbol: "SPCX", nickname: "익명_6677", holdingLabel: "관심종목",
+    content: "Nic Cruz Patane 지적 재미있음. Starlink Mobile이 EchoStar spectrum ($19.68B 인수)로 지상 hybrid도 가능하대. 통신사 CAPEX 프레임 파괴할듯",
+    createdAt: T10AU + 104*60_000, likes: 63, comments: 5 },
+  { id: 926, symbol: "GOOGL", nickname: "익명_7788", holdingLabel: "관심종목",
+    content: "Google이 2026 exit 시 하루 $1.3B profit 생성 가능하대. 연 $470B profit. 시가총액 AAPL 초과·BRK $10B 신 투자·13-F까지 다 강세네",
+    createdAt: T10AU + 113*60_000, likes: 78, comments: 6 },
+  { id: 927, symbol: "SPCX", nickname: "익명_8899", holdingLabel: "관심종목",
+    content: "락업 일정 정리됨. 8/21·9/25·10-12월 매월 5%씩. Elon June 2027 46%가 진짜 이벤트. 이때 매도 여부가 관건",
+    createdAt: T10AU + 122*60_000, likes: 51, comments: 4 },
+  { id: 928, symbol: "SPCX", nickname: "익명_1122", holdingLabel: "관심종목",
+    content: "정리하면 오늘 다 상향 축임. V3 100X·$200B/yr·Musk Starlink $1T/yr·Terafab 100M sqft·Thiel·BRK $357B·MyFirstEV·Wood 50X ASTONISHING. 프레임 폭발",
+    createdAt: T10AU + 131*60_000, likes: 89, comments: 7 },
+
   // ── 2026-08-08 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 899, symbol: "SPCX", nickname: "익명_3311", holdingLabel: "관심종목",
     content: "드디어 오늘이다. SPCX 락업 8/8 첫 unlock 실행. 10월까지 20% 유통·1월엔 Elon까지 46% eligible. 이거 흡수 어떻게 될지 초긴장",
