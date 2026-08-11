@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="rgba(96,165,250,.18)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#60a5fa" text-anchor="middle">DAILY</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.12</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.08.12 · 오늘의 한장 요약</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#60a5fa" text-anchor="middle" opacity=".15">15</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="70" font-weight="900" fill="#60a5fa" text-anchor="middle">TOP 15</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">NVDA·SPCX 2,600억 GPU · SPCX 100 GW · MS 600달러 · Cybercab+Starlink</text>
+  <text x="540" y="342" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Optimus 100만·GOOGL Gemini 18억·Anthropic IPO·S&amp;P 500 +32%</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🤝</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="middle">NVDA·SPCX 2,600억</text>
+  <text x="210" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">10년 GPU·네트워킹 딜</text>
+  <text x="210" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Q1 2027 첫 배치</text>
+
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">⚡</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX 100 GW 목표</text>
+  <text x="540" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2027년 말 · 매출 5,000억</text>
+  <text x="540" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">현재 1.4 GW · 70배</text>
+
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🎯</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">MS 600달러 불 케이스</text>
+  <text x="870" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">SPCX Top Pick</text>
+  <text x="870" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Cursor ARR 2030년 20억</text>
+
+  <rect x="60" y="642" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="694" font-family="Arial" font-size="36" text-anchor="middle">🛰️</text>
+  <text x="210" y="738" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Cybercab+Starlink</text>
+  <text x="210" y="768" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">첫 통합 차량 출시</text>
+  <text x="210" y="796" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">차량 상시 위성 인터넷</text>
+
+  <rect x="390" y="642" width="300" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="694" font-family="Arial" font-size="36" text-anchor="middle">🤖</text>
+  <text x="540" y="738" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Optimus 100만 대</text>
+  <text x="540" y="768" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2029년 100 → 2035년 100만</text>
+  <text x="540" y="796" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">6년 · 1만배 확장</text>
+
+  <rect x="720" y="642" width="300" height="180" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="870" y="694" font-family="Arial" font-size="36" text-anchor="middle">🚀</text>
+  <text x="870" y="738" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">GOOGL Gemini 18억</text>
+  <text x="870" y="768" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">월간 사용자 · 사상 최고 성장</text>
+  <text x="870" y="796" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">14번째 10억 사용자 상품</text>
+
+  <rect x="60" y="842" width="960" height="120" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="880" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">EXTRA COVERAGE</text>
+  <text x="540" y="912" font-family="Arial" font-size="18" fill="#e5e7eb" text-anchor="middle">META Muse Glimmer 30B 오픈 · NVDA Nemotron 3.5 Lightning · TSLA 3,000 에이커 태양광 · Anthropic IPO 다음 달</text>
+  <text x="540" y="940" font-family="Arial" font-size="18" fill="#e5e7eb" text-anchor="middle">S&amp;P 500 +32% 2026 · Shiller CAPE 1929 초과 · X Trace 달 기지 · MS TSLA 로보택시 증명 · xAI Grok Bot</text>
+
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">INVESTUS · TOP 15 STORIES · 2026.08.12</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

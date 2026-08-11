@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T12AU = 1786489200000; // 2026-08-12 08:00 KST
 const T11AU = 1786402800000; // 2026-08-11 08:00 KST
 const T10AU = 1786316400000; // 2026-08-10 08:00 KST
 const T08AU = 1786143600000; // 2026-08-08 08:00 KST
@@ -77,7 +78,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T11AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T12AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -96,6 +97,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-12 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 944, symbol: "NVDA", nickname: "익명_2266", holdingLabel: "관심종목",
+    content: "NVDA + SPCX 2,600억 딜?? Q1 2027 첫 배치·10년 계약. 어제 5,000억 컨소시엄이랑 별개로 이 규모라는게 진짜 실화야",
+    createdAt: T12AU + 4*60_000, likes: 124, comments: 12 },
+  { id: 945, symbol: "SPCX", nickname: "익명_3377", holdingLabel: "관심종목",
+    content: "Musk 왈: 1.4 GW → 100 GW 2027년 말·매출 3,000-5,000억. 70배 확장이라... 이 사람이 하는 말 그대로 되면 대박이긴 한데",
+    createdAt: T12AU + 13*60_000, likes: 108, comments: 9 },
+  { id: 946, symbol: "SPCX", nickname: "익명_4488", holdingLabel: "관심종목",
+    content: "모건스탠리가 SPCX Top Pick으로 상향·불 케이스 600달러 냈어. Cursor 인수 다음 날 바로 이 반응. 기관 flow 진짜 몰리는듯",
+    createdAt: T12AU + 22*60_000, likes: 96, comments: 8 },
+  { id: 947, symbol: "TSLA", nickname: "익명_5599", holdingLabel: "관심종목",
+    content: "Optimus 2029 100대 → 2035 100만 대. 6년에 1만배. Boloor 프레임인데 이 정도면 자동차 회사가 아니라 완전 로봇 회사네",
+    createdAt: T12AU + 31*60_000, likes: 87, comments: 7 },
+  { id: 948, symbol: "META", nickname: "익명_6600", holdingLabel: "관심종목",
+    content: "메타 Muse Glimmer 30B 오픈웨이트... 재무부 장관까지 나서서 지지 성명 냈네. 정부가 오픈 AI 공식 지지한 건 이례적임",
+    createdAt: T12AU + 40*60_000, likes: 71, comments: 6 },
+  { id: 949, symbol: "NVDA", nickname: "익명_7711", holdingLabel: "관심종목",
+    content: "NVIDIA도 오픈 모델 냈어(Nemotron 3.5). Opus 4.8 대비 1/3 비용에 유사 정확도. 하드웨어 회사가 소프트웨어까지 오픈으로",
+    createdAt: T12AU + 49*60_000, likes: 68, comments: 5 },
+  { id: 950, symbol: "TSLA", nickname: "익명_8822", holdingLabel: "관심종목",
+    content: "TSLA 첫 Cybercab에 Starlink 통합 정식 탑재! 어제 Musk가 '모든 차 Starlink' 발언한 게 하루만에 실체화됐어. 진짜 빠르다",
+    createdAt: T12AU + 58*60_000, likes: 118, comments: 10 },
+  { id: 951, symbol: "TSLA", nickname: "익명_9933", holdingLabel: "관심종목",
+    content: "Fort Bend County 태양광 부지 항공 사진 첫 공개... 3,000 에이커. 실체로 확인됐네. Terafab이랑 세트로 텍사스가 진짜 인프라 중심",
+    createdAt: T12AU + 67*60_000, likes: 74, comments: 6 },
+  { id: 952, symbol: "GOOGL", nickname: "익명_1144", holdingLabel: "관심종목",
+    content: "구글 Gemini 월 18억 사용자 돌파! ChatGPT (5-7억)의 3배야. 14번째 10억 사용자 상품·구글 사상 최고 성장 속도래",
+    createdAt: T12AU + 76*60_000, likes: 132, comments: 12 },
+  { id: 953, symbol: "SPX", nickname: "익명_2255", holdingLabel: "관심종목",
+    content: "Anthropic 다음 달 상장 가능성 보도 나왔어. Google 지분 실 반영·SPCX/xAI 밸류에이션 기준점. AI 상장 사이클 시작 신호일수도",
+    createdAt: T12AU + 85*60_000, likes: 89, comments: 7 },
+  { id: 954, symbol: "SPX", nickname: "익명_3366", holdingLabel: "관심종목",
+    content: "Bilello: 2026 S&P 500 이익 +32% 성장 예상·연초 15% 예상 대비 2배. 경기 침체 없이 이 정도는 사상 처음이래. AI 사이클 유일 원인",
+    createdAt: T12AU + 94*60_000, likes: 63, comments: 5 },
+  { id: 955, symbol: "MACRO", nickname: "익명_4477", holdingLabel: "관심종목",
+    content: "Shiller CAPE 역사 2번째 최고 밸류에이션. 1929 폭락보다 훨씬 높고 닷컴만 살짝 높아. 이익 성장 vs 밸류에이션 대립 국면",
+    createdAt: T12AU + 103*60_000, likes: 57, comments: 4 },
+  { id: 956, symbol: "SPCX", nickname: "익명_5588", holdingLabel: "관심종목",
+    content: "X Trace 프레임: SPCX + Tesla가 달 첫 상업 기지 유일 조합이래. Starship 100톤·Optimus 하역·Tesla 에너지. 스토리 진짜 크네",
+    createdAt: T12AU + 112*60_000, likes: 78, comments: 6 },
+  { id: 957, symbol: "TSLA", nickname: "익명_6699", holdingLabel: "관심종목",
+    content: "MS가 SPCX엔 Top Pick·600달러 불 케이스 냈으면서 TSLA한텐 로보택시 증명하라고 요구. 같은 하우스 상반된 입장 재밌네",
+    createdAt: T12AU + 121*60_000, likes: 92, comments: 8 },
+  { id: 958, symbol: "SPCX", nickname: "익명_7700", holdingLabel: "관심종목",
+    content: "xAI Grok Bot 클라우드 자율 에이전트 팀 출시. Colossus GPU에서 2분 20초 완료. samuel의 AI backbone 프레임 실 사용 사례네",
+    createdAt: T12AU + 130*60_000, likes: 84, comments: 7 },
+
   // ── 2026-08-11 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 929, symbol: "NVDA", nickname: "익명_5511", holdingLabel: "관심종목",
     content: "$500B AI 컨소시엄?? Apollo·Blackstone·BlackRock·Brookfield·Goldman·KKR이 다 모였는데... 이 정도 규모는 진짜 처음 보네",

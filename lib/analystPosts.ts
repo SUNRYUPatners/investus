@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-12 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
+  {
+    id: -746, alias: "여의도 매 #22", symbol: "NVDA",
+    content: "$260B. 이 숫자가 컨소시엄이 아니라 NVDA-SPCX 개별 딜 하나라는 게 핵심이다. 어제 6개 금융사 $500B 컨소시엄과 별개로 이 규모라면, SPCX의 100 GW 확장에 필요한 GPU가 향후 10년 확보됐다는 얘기다. Q1 2027 첫 배치.",
+    likes: 124, comments: 12, created_at: "2026-08-12T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -747, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "\"1.4 GW today · 100 GW by end of 2027.\" Musk가 오늘 이 두 숫자를 붙여 놓았다. 70배 확장 로드맵이고, 이걸 온라인으로 만들면 매출이 연 $300B~500B라는 프레임이다. 통신 회사가 아니라 AI 컴퓨트 회사로 재정의된다.",
+    likes: 108, comments: 9, created_at: "2026-08-12T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -748, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "어제 8/11 SPCX Cursor $60B 인수 뉴스가 하루 만에 MS $600 불 케이스·Top Pick 상향으로 실체화됐다. Cursor는 이미 포춘 500의 84%와 5만 개 기업 고객을 확보한 상태다. SPCX 소속되면 매출 확장 속도가 극단으로 빨라진다.",
+    likes: 96, comments: 8, created_at: "2026-08-12T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -749, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "2029년 100대 → 2035년 100만 대. 6년에 1만배. Boloor의 Optimus 로드맵이 이 정도 극단이라면, Tesla 매출 프레임 자체가 자동차 회사에서 로봇·인프라 회사로 옮겨간다. Wood 마진 80-90% 프레임의 근거도 여기에 있다.",
+    likes: 87, comments: 7, created_at: "2026-08-12T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -750, alias: "광화문 늑대 #33", symbol: "META",
+    content: "재무부 장관이 오픈웨이트 AI를 공식 지지 성명으로 뒷받침한 건 처음이다. Meta의 Muse Glimmer 30B 공개가 그 트리거였다. 중국 DeepSeek·Qwen이 세계 AI 기반이 되어가는 상황에서 미국 정부가 이례적으로 오픈웨이트로 대응하는 신호다.",
+    likes: 71, comments: 6, created_at: "2026-08-12T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -751, alias: "마포 올빼미 #24", symbol: "NVDA",
+    content: "하드웨어 회사가 오픈 소프트웨어 모델까지 냈다. Nemotron 3.5 Lightning은 Opus 4.8 대비 1/3 비용에 유사한 정확도다. Switchyard 라우터는 단순 작업을 작은 모델로, 복잡 작업을 큰 모델로 자동 배분한다. 두 종류 모두 NVDA GPU가 필요하다.",
+    likes: 68, comments: 5, created_at: "2026-08-12T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -752, alias: "종로 매 #12", symbol: "TSLA",
+    content: "어제 Musk가 \"미래에 모든 차량 Starlink\" 발언한 게 하루 만에 실 차량으로 실체화됐다. Cybercab 첫 Starlink 통합 정식 출시. 발언에서 실 출시까지 하루 걸리는 회사는 이 세상에 하나뿐이다. Robotaxi 상용의 통신 인프라가 완성된다.",
+    likes: 118, comments: 10, created_at: "2026-08-12T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -753, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "8/7 발표 시점엔 규모만 있었던 Fort Bend County 태양광 부지가 오늘 항공 사진으로 3,000 에이커 실체 확인됐다. Terafab (100M sqft)과 이 태양광 공장이 세트로 텍사스를 미국 AI·에너지·chip 인프라의 중심지로 만드는 그림이다.",
+    likes: 74, comments: 6, created_at: "2026-08-12T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -754, alias: "부산 갈매기 #77", symbol: "GOOGL",
+    content: "Gemini 월 18억 사용자. ChatGPT (약 5-7억)의 3배 규모다. 어제 GOOGL 현금 사상 최대 $242.5B·순현금 $144B 프레임과 결합하면, 재무·매출·사용자 3중 강세가 확인된다. Buffett $10B 신규 투자의 실 근거이기도 하다.",
+    likes: 132, comments: 12, created_at: "2026-08-12T01:01:00.000Z", liked: false,
+  },
+  {
+    id: -755, alias: "강남 표범 #46", symbol: "MACRO",
+    content: "Anthropic이 다음 달 상장한다면 OpenAI 이후 첫 대형 AI 공모다. 구글이 이미 대규모 투자한 상태라 상장 시 지분 가치가 실체화되고, SPCX·xAI 등 비상장 AI 밸류에이션의 기준점이 된다. AI 상장 사이클의 개시 신호일 수 있다.",
+    likes: 89, comments: 7, created_at: "2026-08-12T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -756, alias: "서초 콘도르 #59", symbol: "SPX",
+    content: "S&P 500 이익 2026년 +32% 성장 예상. 연초 예상치 +15%의 두 배다. 이 정도 성장이 경기 침체 회복이 아닌 순수 성장 국면에서 나온 건 사상 처음이다. AI 사이클 하나가 이 격차를 만들고 있다.",
+    likes: 63, comments: 5, created_at: "2026-08-12T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -757, alias: "을지로 팔콘 #71", symbol: "MACRO",
+    content: "Shiller CAPE가 역사상 2번째 최고 밸류에이션에 도달했다. 1929 폭락 직전보다 훨씬 높고, 오직 2000 닷컴 버블만이 이보다 높았다. 오늘 Bilello의 이익 성장 +32% 프레임과 정면 대립하는 신호다. 이익이 이 밸류에이션을 정당화하는지가 관건이다.",
+    likes: 57, comments: 4, created_at: "2026-08-12T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -758, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "달 기지 그림에서 X Trace가 지목한 조합은 SPCX + Tesla였다. Starship이 100톤을 달까지 배송하고, Optimus가 화물 하역과 위험 건설을 인간 이전에 처리하며, Tesla 태양광·배터리가 달 에너지 시스템을 담당한다. 위성 통신을 넘어 행성 인프라 사업으로 재정의된다.",
+    likes: 78, comments: 6, created_at: "2026-08-12T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -759, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "같은 모건스탠리가 오늘 SPCX엔 $600 불 케이스·Top Pick을 상향해줬는데, TSLA한테는 로보택시 확장을 증명하라고 요구했다. 상반된 입장이 흥미롭다. 프레임은 강력하지만 실 상용 서비스 데이터가 아직 부족하다는 지적으로 봐야 한다.",
+    likes: 92, comments: 8, created_at: "2026-08-12T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -760, alias: "종로 매 #12", symbol: "SPCX",
+    content: "xAI가 Grok Bot이라는 클라우드 자율 에이전트 팀을 출시했다. Colossus GPU 클러스터에서 2분 20초 안에 복잡 다단계 작업을 처리한다. samuel의 AI backbone 프레임·Musk의 100 GW·NVDA $260B GPU 딜의 실 사용 사례가 오늘 첫 실체로 등장한 셈이다.",
+    likes: 84, comments: 7, created_at: "2026-08-12T01:43:00.000Z", liked: false,
+  },
+
   // ── 2026-08-11 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -731, alias: "여의도 매 #22", symbol: "NVDA",
