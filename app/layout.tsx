@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Syne, IBM_Plex_Mono, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { BottomNav } from "@/components/BottomNav";
+import { StickyAdFit } from "@/components/StickyAdFit";
 import { DesktopSidebar } from "@/components/DesktopSidebar";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
 import { PullToRefresh } from "@/components/PullToRefresh";
@@ -204,6 +205,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <SiteLegalFooter />
               </div>
             </div>
+            <StickyAdFit />
             <BottomNav />
           </AuthProvider>
         </LocaleProvider>

@@ -9,7 +9,7 @@ import { TickerTape } from "@/components/TickerTape";
 import { EcoTickerTape } from "@/components/EcoTickerTape";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { GuruHoldings } from "@/components/GuruHoldings";
-import { AdFitBanner } from "@/components/AdFitBanner";
+import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { NewsSection } from "@/components/NewsSection";
 import { EconomicCalendar } from "@/components/EconomicCalendar";
 import { Star } from "lucide-react";
@@ -315,6 +315,10 @@ export default function SearchPage() {
                   <NewsSection />
                 </div>
 
+                <div className="lg:hidden">
+                  <AdFitStrip />
+                </div>
+
                 {/* 투자 대가 13F — 모바일에서만 여기 */}
                 <div className="lg:hidden">
                   <GuruHoldings />
@@ -328,6 +332,10 @@ export default function SearchPage() {
                 {/* 경제 캘린더 — 모바일 */}
                 <div className="lg:hidden">
                   <EconomicCalendar />
+                </div>
+
+                <div className="lg:hidden">
+                  <AdFitStrip />
                 </div>
 
                 {/* 시장 뉴스 — 데스크톱: 추천주식 위 */}

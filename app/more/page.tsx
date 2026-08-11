@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { ChevronRight, LogOut, User, Mail, Lock, Eye, EyeOff, Pencil, X, Send, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
-import { AdFitBanner } from "@/components/AdFitBanner";
+import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { ProPricingSection } from "@/components/PaidProductsSection";
 import { useForm, ValidationError } from "@formspree/react";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
@@ -1049,6 +1049,7 @@ export default function MorePage() {
             </div>
 
             <div className="lg:hidden">
+              <AdFitStrip className="mb-1" />
               <AdFitBanner />
             </div>
 

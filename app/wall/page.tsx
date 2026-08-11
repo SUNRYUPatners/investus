@@ -1268,8 +1268,10 @@ export default function WallPage() {
                     const realPost = realId != null ? realPosts.find((r) => r.id === realId) : null;
                     const isOwn    = !!realPost && realPost.is_mine;
                     const isEditing = editingPostId === realId;
-                    const adAfter = (idx + 1) % 4 === 0 ? (
-                      <div key={`ad-disc-${idx}`} className="col-span-full my-1"><AdFitBanner /></div>
+                    const adAfter = (idx + 1) % 2 === 0 ? (
+                      <div key={`ad-disc-${idx}`} className="col-span-full my-1">
+                        {(idx + 1) % 4 === 0 ? <AdFitStrip /> : <AdFitBanner />}
+                      </div>
                     ) : null;
                     return [
                     <article key={post.id} className="rounded-2xl p-4 border"

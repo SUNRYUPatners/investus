@@ -49,7 +49,7 @@ export default async function HomePage() {
             {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures · 시장종합분석 (실시간) */}
             <LiveMarket />
 
-            {/* 광고 — LiveMarket 아래 (모바일 전용) */}
+            {/* 광고 — LiveMarket 아래 */}
             <section className="px-4 lg:px-0 pt-4">
               <AdFitBanner />
             </section>
@@ -67,7 +67,7 @@ export default async function HomePage() {
             </section>
 
             {/* 대형 광고 */}
-            <section className="px-4 lg:hidden pt-4">
+            <section className="px-4 pt-4">
               <AdFitBanner />
             </section>
 
@@ -77,7 +77,7 @@ export default async function HomePage() {
             </section>
 
             {/* 띠 배너 — 뉴스 아래 */}
-            <section className="px-4 lg:hidden pt-2">
+            <section className="px-4 pt-2">
               <AdFitStrip />
             </section>
 
@@ -86,8 +86,8 @@ export default async function HomePage() {
               <ReportFeed />
             </section>
 
-            {/* 광고 — 리포트 아래 (모바일 전용) */}
-            <section className="px-4 lg:hidden pt-3 pb-2">
+            {/* 광고 — 리포트 아래 */}
+            <section className="px-4 pt-3 pb-2">
               <AdFitBanner />
             </section>
           </div>

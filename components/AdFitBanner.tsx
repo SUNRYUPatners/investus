@@ -1,15 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 declare global {
   interface Window {
-    adfit?: { run: () => void };
+    /** AdFit SDK: loader function that later gains .destroy after init */
+    adfit?: ((() => void) & { destroy?: (unit: string) => void }) | {
+      destroy?: (unit: string) => void;
+      run?: () => void;
+    };
   }
 }
 
 const UNIT_ID       = "DAN-9PD1c2Nep5sIushS"; // 320×100 배너
 const STRIP_UNIT_ID = "DAN-lISrJpZ1cwV33LaK"; // 320×50  띠 배너
+const ADFIT_SRC     = "https://t1.kakaocdn.net/kas/static/ba.min.js";
 
 interface AdFitBannerProps {
   unit?: string;
@@ -18,22 +23,64 @@ interface AdFitBannerProps {
   className?: string;
 }
 
-function AdBanner({ unit, width, height, className = "" }: Required<Omit<AdFitBannerProps, "className">> & { className?: string }) {
+/** Kick AdFit for newly mounted <ins> (SPA-safe). */
+function invokeAdfit() {
+  const af = window.adfit;
+  if (!af) return;
+  try {
+    if (typeof af === "function") af();
+    else if (typeof af.run === "function") af.run();
+  } catch {
+    /* ignore */
+  }
+}
+
+function AdBanner({
+  unit,
+  width,
+  height,
+  className = "",
+}: Required<Omit<AdFitBannerProps, "className">> & { className?: string }) {
+  const wrapRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    let attempts = 0;
-    const poll = () => {
-      if (window.adfit) {
-        try { window.adfit.run(); } catch { /* ignore */ }
-        return;
+    const wrap = wrapRef.current;
+    if (!wrap) return;
+
+    // React remount: re-inject ba.min.js so AdFit scans this slot
+    const script = document.createElement("script");
+    script.src = ADFIT_SRC;
+    script.async = true;
+    script.setAttribute("charset", "utf-8");
+    wrap.appendChild(script);
+
+    // Also poke global loader (layout may have already loaded the SDK)
+    const t0 = window.setTimeout(invokeAdfit, 50);
+    const t1 = window.setTimeout(invokeAdfit, 400);
+
+    return () => {
+      window.clearTimeout(t0);
+      window.clearTimeout(t1);
+      try {
+        const af = window.adfit;
+        if (af && typeof af === "object" && typeof af.destroy === "function") {
+          af.destroy(unit);
+        } else if (typeof af === "function" && af.destroy) {
+          af.destroy(unit);
+        }
+      } catch {
+        /* ignore */
       }
-      if (++attempts < 30) setTimeout(poll, 300);
+      script.remove();
     };
-    poll();
-  }, []);
+  }, [unit]);
 
   return (
-    <div className={`flex justify-center ${className}`}
-      style={{ filter: "brightness(0.6) saturate(0.75)" }}>
+    <div
+      ref={wrapRef}
+      className={`flex justify-center overflow-hidden ${className}`}
+      style={{ minHeight: height }}
+    >
       <ins
         className="kakao_ad_area"
         style={{ display: "none" }}
@@ -45,11 +92,32 @@ function AdBanner({ unit, width, height, className = "" }: Required<Omit<AdFitBa
   );
 }
 
-export function AdFitBanner({ unit = UNIT_ID, width = 320, height = 100, className = "" }: AdFitBannerProps) {
-  return <AdBanner unit={unit} width={width} height={height} className={`my-2 ${className}`} />;
+export function AdFitBanner({
+  unit = UNIT_ID,
+  width = 320,
+  height = 100,
+  className = "",
+}: AdFitBannerProps) {
+  return (
+    <AdBanner
+      unit={unit}
+      width={width}
+      height={height}
+      className={`my-2 ${className}`}
+    />
+  );
 }
 
 /** 320×50 모바일 띠 배너 */
 export function AdFitStrip({ className = "" }: { className?: string }) {
-  return <AdBanner unit={STRIP_UNIT_ID} width={320} height={50} className={`my-1 ${className}`} />;
+  return (
+    <AdBanner
+      unit={STRIP_UNIT_ID}
+      width={320}
+      height={50}
+      className={`my-1 ${className}`}
+    />
+  );
 }
+
+export { UNIT_ID as ADFIT_BANNER_UNIT, STRIP_UNIT_ID as ADFIT_STRIP_UNIT };

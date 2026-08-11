@@ -1109,9 +1109,11 @@ export default function PortfolioPage() {
                     rate={usdkrw}
                     onDelete={() => deleteHolding(h.symbol)}
                   />
-                  {/* Ad after every 3rd holding */}
-                  {(i + 1) % 3 === 0 && i < holdings.length - 1 && (
-                    <AdFitBanner key={`ad-${i}`} />
+                  {/* Ad after every 2nd holding */}
+                  {(i + 1) % 2 === 0 && i < holdings.length - 1 && (
+                    (i + 1) % 4 === 0
+                      ? <AdFitStrip key={`ad-strip-${i}`} />
+                      : <AdFitBanner key={`ad-${i}`} />
                   )}
                 </>
               ))}
