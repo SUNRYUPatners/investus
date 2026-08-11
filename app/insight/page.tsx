@@ -177,6 +177,12 @@ export default async function InsightPage() {
             </p>
           </div>
           <InsightReportSection />
+          <div className="mt-4">
+            <AdFitStrip />
+          </div>
+          <div className="mt-3">
+            <AdFitBanner />
+          </div>
         </div>
 
         {/* 오른쪽 — sticky 사이드바 */}
@@ -191,6 +197,7 @@ export default async function InsightPage() {
           </div>
           <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">
             <AdFitBanner />
+            <AdFitStrip />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
                 {t.books}
@@ -205,6 +212,7 @@ export default async function InsightPage() {
               <YoutubeChannels />
             </section>
             <AdFitBanner />
+            <AdFitStrip />
           </div>
         </aside>
       </div>

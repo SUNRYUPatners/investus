@@ -1146,6 +1146,9 @@ export default function PortfolioPage() {
           )}
           {/* Ad */}
           <div className="order-3 mb-3">
+            <AdFitStrip />
+          </div>
+          <div className="order-3 mb-3">
             <AdFitBanner />
           </div>
           {/* Ad bottom */}

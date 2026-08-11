@@ -3,15 +3,14 @@
 import { AdFitStrip } from "@/components/AdFitBanner";
 
 /**
- * Mobile sticky strip above bottom nav — always visible while scrolling
- * so AdFit exposure is not limited to in-feed scroll position.
+ * Sticky strip always visible while scrolling.
+ * Mobile: above BottomNav (52px). Desktop: flush bottom, offset for sidebar.
  */
 export function StickyAdFit() {
   return (
     <div
-      className="lg:hidden fixed inset-x-0 z-40 flex justify-center pointer-events-auto"
+      className="fixed inset-x-0 z-40 flex justify-center pointer-events-auto lg:pl-64 bottom-[calc(52px+env(safe-area-inset-bottom,0px))] lg:bottom-[env(safe-area-inset-bottom,0px)]"
       style={{
-        bottom: "calc(52px + env(safe-area-inset-bottom, 0px))",
         background: "var(--card)",
         borderTop: "1px solid var(--border)",
         paddingTop: 4,

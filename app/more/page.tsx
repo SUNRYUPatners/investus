@@ -1048,7 +1048,7 @@ export default function MorePage() {
               </div>
             </div>
 
-            <div className="lg:hidden">
+            <div>
               <AdFitStrip className="mb-1" />
               <AdFitBanner />
             </div>
@@ -1074,8 +1074,8 @@ export default function MorePage() {
                 </div>
               ))}
 
-              {/* 광고 — 메뉴 섹션 사이 (모바일) */}
-              <div className="lg:hidden">
+              {/* 광고 — 메뉴 섹션 사이 */}
+              <div>
                 <AdFitBanner />
               </div>
 
@@ -1103,8 +1103,8 @@ export default function MorePage() {
               <InstallSection />
             </div>
 
-            {/* 광고 — 설치 안내 아래 (모바일) */}
-            <div className="lg:hidden mt-2">
+            {/* 광고 — 설치 안내 아래 */}
+            <div className="mt-2">
               <AdFitBanner />
             </div>
 
@@ -1167,6 +1167,7 @@ export default function MorePage() {
 
             {/* 4. 광고 */}
             <AdFitBanner />
+            <AdFitStrip />
 
             {/* 5. 즐겨찾기 / 앱 설치 */}
             <div className="-mt-1">

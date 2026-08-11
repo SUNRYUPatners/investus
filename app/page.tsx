@@ -58,7 +58,7 @@ export default async function HomePage() {
             <section className="px-4 lg:hidden pt-4">
               <FearGreedWidget locale={locale} />
             </section>
-            {/* 띠 배너 — 공포탐욕·버핏 사이 */}
+            {/* 띠 배너 — 공포탐욕·버핏 사이 (모바일 위젯 영역) */}
             <section className="px-4 lg:hidden pt-2">
               <AdFitStrip />
             </section>
@@ -66,7 +66,7 @@ export default async function HomePage() {
               <BuffettWidget locale={locale} />
             </section>
 
-            {/* 대형 광고 */}
+            {/* 대형 광고 — 모바일·데스크톱 */}
             <section className="px-4 pt-4">
               <AdFitBanner />
             </section>
@@ -76,7 +76,7 @@ export default async function HomePage() {
               <NewsSection />
             </section>
 
-            {/* 띠 배너 — 뉴스 아래 */}
+            {/* 띠 배너 — 뉴스 아래 / 데스크톱 본문 */}
             <section className="px-4 pt-2">
               <AdFitStrip />
             </section>
@@ -97,7 +97,9 @@ export default async function HomePage() {
             <FearGreedWidget locale={locale} />
             <AdFitBanner />
             <BuffettWidget locale={locale} />
+            <AdFitStrip />
             <NewsSection />
+            <AdFitBanner />
           </div>
 
         </div>

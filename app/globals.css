@@ -82,6 +82,13 @@ a, button, [role="button"] {
   padding-bottom: calc(env(safe-area-inset-bottom) + 7.5rem);
 }
 
+@media (min-width: 1024px) {
+  /* Desktop: no BottomNav — only StickyAdFit (~58px) */
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 4rem);
+  }
+}
+
 /* iOS PWA: permanent background fill below the nav — covers the gap that appears
    when position:fixed nav momentarily floats during scroll momentum */
 @supports (-webkit-touch-callout: none) {

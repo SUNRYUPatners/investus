@@ -315,7 +315,7 @@ export default function SearchPage() {
                   <NewsSection />
                 </div>
 
-                <div className="lg:hidden">
+                <div>
                   <AdFitStrip />
                 </div>
 
@@ -324,8 +324,7 @@ export default function SearchPage() {
                   <GuruHoldings />
                 </div>
 
-                {/* 광고 — 모바일 전용 */}
-                <div className="lg:hidden">
+                <div>
                   <AdFitBanner />
                 </div>
 
@@ -334,7 +333,7 @@ export default function SearchPage() {
                   <EconomicCalendar />
                 </div>
 
-                <div className="lg:hidden">
+                <div>
                   <AdFitStrip />
                 </div>
 
@@ -346,6 +345,10 @@ export default function SearchPage() {
                 {/* 경제 캘린더 — 데스크톱 */}
                 <div className="hidden lg:block">
                   <EconomicCalendar />
+                </div>
+
+                <div className="hidden lg:block">
+                  <AdFitBanner />
                 </div>
 
                 {/* Investus 추천주식 */}
@@ -416,6 +419,12 @@ export default function SearchPage() {
             }}
           >
             <GuruHoldings />
+            <div className="mt-4 px-1">
+              <AdFitBanner />
+            </div>
+            <div className="mt-3 px-1">
+              <AdFitStrip />
+            </div>
           </div>
 
         </div>
