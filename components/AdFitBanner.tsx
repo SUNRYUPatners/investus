@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 declare global {
   interface Window {
@@ -16,11 +16,47 @@ const UNIT_ID       = "DAN-9PD1c2Nep5sIushS"; // 320×100 배너
 const STRIP_UNIT_ID = "DAN-lISrJpZ1cwV33LaK"; // 320×50  띠 배너
 const ADFIT_SRC     = "https://t1.kakaocdn.net/kas/static/ba.min.js";
 
+/** Shared unit refcount — destroy() only when last visible slot unmounts */
+const unitRetain = new Map<string, number>();
+
+function retainUnit(unit: string) {
+  unitRetain.set(unit, (unitRetain.get(unit) ?? 0) + 1);
+}
+
+function releaseUnit(unit: string) {
+  const next = (unitRetain.get(unit) ?? 1) - 1;
+  if (next <= 0) {
+    unitRetain.delete(unit);
+    try {
+      const af = window.adfit;
+      if (af && typeof af === "object" && typeof af.destroy === "function") {
+        af.destroy(unit);
+      } else if (typeof af === "function" && af.destroy) {
+        af.destroy(unit);
+      }
+    } catch {
+      /* ignore */
+    }
+  } else {
+    unitRetain.set(unit, next);
+  }
+}
+
 interface AdFitBannerProps {
   unit?: string;
   width?: number;
   height?: number;
   className?: string;
+}
+
+function isElementCssVisible(el: HTMLElement | null): boolean {
+  let cur: HTMLElement | null = el;
+  while (cur) {
+    const s = getComputedStyle(cur);
+    if (s.display === "none" || s.visibility === "hidden") return false;
+    cur = cur.parentElement;
+  }
+  return true;
 }
 
 /** Kick AdFit for newly mounted <ins> (SPA-safe). */
@@ -42,52 +78,68 @@ function AdBanner({
   className = "",
 }: Required<Omit<AdFitBannerProps, "className">> & { className?: string }) {
   const wrapRef = useRef<HTMLDivElement>(null);
+  // Only mount <ins> when this slot is actually CSS-visible.
+  // Insight (and others) keep BOTH mobile+desktop trees in the DOM via Tailwind
+  // lg:hidden / hidden lg:flex — hidden duplicates steal AdFit fill & destroy races.
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const wrap = wrapRef.current;
     if (!wrap) return;
 
-    // React remount: re-inject ba.min.js so AdFit scans this slot
+    const sync = () => setVisible(isElementCssVisible(wrap));
+    sync();
+
+    const mq = window.matchMedia("(min-width: 1024px)");
+    mq.addEventListener("change", sync);
+    window.addEventListener("resize", sync);
+    return () => {
+      mq.removeEventListener("change", sync);
+      window.removeEventListener("resize", sync);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!visible) return;
+    const wrap = wrapRef.current;
+    if (!wrap) return;
+
+    retainUnit(unit);
+
     const script = document.createElement("script");
     script.src = ADFIT_SRC;
     script.async = true;
     script.setAttribute("charset", "utf-8");
     wrap.appendChild(script);
 
-    // Also poke global loader (layout may have already loaded the SDK)
     const t0 = window.setTimeout(invokeAdfit, 50);
     const t1 = window.setTimeout(invokeAdfit, 400);
+    const t2 = window.setTimeout(invokeAdfit, 1200);
 
     return () => {
       window.clearTimeout(t0);
       window.clearTimeout(t1);
-      try {
-        const af = window.adfit;
-        if (af && typeof af === "object" && typeof af.destroy === "function") {
-          af.destroy(unit);
-        } else if (typeof af === "function" && af.destroy) {
-          af.destroy(unit);
-        }
-      } catch {
-        /* ignore */
-      }
+      window.clearTimeout(t2);
       script.remove();
+      releaseUnit(unit);
     };
-  }, [unit]);
+  }, [visible, unit]);
 
   return (
     <div
       ref={wrapRef}
       className={`flex justify-center overflow-hidden ${className}`}
-      style={{ minHeight: height }}
+      style={{ minHeight: visible ? height : 0 }}
     >
-      <ins
-        className="kakao_ad_area"
-        style={{ display: "none" }}
-        data-ad-unit={unit}
-        data-ad-width={String(width)}
-        data-ad-height={String(height)}
-      />
+      {visible ? (
+        <ins
+          className="kakao_ad_area"
+          style={{ display: "none" }}
+          data-ad-unit={unit}
+          data-ad-width={String(width)}
+          data-ad-height={String(height)}
+        />
+      ) : null}
     </div>
   );
 }

@@ -176,6 +176,13 @@ export default async function InsightPage() {
               SUNRYU Partners CIO가 매일 직접 분석한 미국주식 투자 리포트. S&P500·NASDAQ 시장 흐름·섹터 분석·개별 종목 밸류에이션까지 투자 판단에 직결되는 핵심 분석을 무료로 제공합니다.
             </p>
           </div>
+          {/* 데스크탑: 리포트 위·눈에 보이게 광고 배치 */}
+          <div className="mb-3">
+            <AdFitBanner />
+          </div>
+          <div className="mb-4">
+            <AdFitStrip />
+          </div>
           <InsightReportSection />
           <div className="mt-4">
             <AdFitStrip />
@@ -191,20 +198,21 @@ export default async function InsightPage() {
           style={{ maxHeight: "calc(100vh - 57px)" }}
         >
           <div className="flex flex-col gap-3 flex-shrink-0">
+            <AdFitBanner />
+            <AdFitStrip />
             {EduBanner}
             {LearnBanner}
             <EbookProductSection />
           </div>
           <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">
             <AdFitBanner />
-            <AdFitStrip />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
                 {t.books}
               </h2>
               <BookCarousel />
             </section>
-            <AdFitBanner />
+            <AdFitStrip />
             <section>
               <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
                 {t.youtube}
@@ -212,7 +220,6 @@ export default async function InsightPage() {
               <YoutubeChannels />
             </section>
             <AdFitBanner />
-            <AdFitStrip />
           </div>
         </aside>
       </div>
