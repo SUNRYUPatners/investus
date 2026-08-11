@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { assertCronAuth } from "@/lib/cronAuth";
 import { SEED_REPORTS } from "@/lib/reports";
 import crypto from "crypto";
 
@@ -41,15 +42,8 @@ function buildOAuth1Header(
 }
 
 export async function GET(req: NextRequest) {
-  // 보안: CRON_SECRET이 설정된 경우에만 검증 (Vercel Cron이 Bearer 헤더 자동 첨부).
-  // 미설정 시 다른 크론과 동일하게 통과 — Vercel 크론 요청은 신뢰됨.
-  const cronSecret = process.env.CRON_SECRET;
-  if (cronSecret) {
-    const auth = req.headers.get("authorization");
-    if (auth !== `Bearer ${cronSecret}`) {
-      return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-    }
-  }
+  const denied = assertCronAuth(req);
+  if (denied) return denied;
 
   const accessToken  = process.env.X_ACCESS_TOKEN;
   const accessSecret = process.env.X_ACCESS_TOKEN_SECRET;

@@ -14,8 +14,7 @@ type Body = {
   billingKey: string;
   planKind: "pro" | "creator";
   planPeriod?: SubPeriod; // pro only — month | year
-  planRef?: string;       // creator subscription 시 creator id
-  priceKrw?: number;      // creator price 오버라이드
+  planRef?: string;       // creator subscription 시 creator id (phone)
   customerName?: string;
   payMethod?: string;
 };
@@ -27,7 +26,7 @@ export async function POST(req: NextRequest) {
   let body: Body;
   try { body = await req.json(); } catch { return NextResponse.json({ error: "잘못된 요청" }, { status: 400 }); }
 
-  const { billingKey, planKind, planRef, priceKrw, customerName, payMethod } = body;
+  const { billingKey, planKind, planRef, customerName, payMethod } = body;
   const planPeriod: SubPeriod = body.planPeriod === "year" ? "year" : "month";
 
   if (!billingKey || !planKind) {
@@ -37,11 +36,27 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "creator 구독은 planRef 필요" }, { status: 400 });
   }
 
-  const amount = planKind === "pro"
-    ? planPriceKrw(planPeriod)
-    : Math.max(1, priceKrw ?? 0);
-  if (planKind === "creator" && amount < 100) {
-    return NextResponse.json({ error: "가격이 유효하지 않음" }, { status: 400 });
+  let amount: number;
+  if (planKind === "pro") {
+    amount = planPriceKrw(planPeriod);
+  } else {
+    // creator — never trust client priceKrw; load registered price from DB
+    const sbPrice = getAdminSupabase();
+    const { data: creatorRow } = await sbPrice
+      .from("creator_verifications")
+      .select("subscription_price, subscription_enabled, status")
+      .eq("phone", planRef!)
+      .maybeSingle();
+    const registered = Number(creatorRow?.subscription_price ?? 0);
+    if (
+      creatorRow?.status !== "approved" ||
+      creatorRow?.subscription_enabled !== true ||
+      !Number.isFinite(registered) ||
+      registered < 100
+    ) {
+      return NextResponse.json({ error: "크리에이터 구독 가격이 유효하지 않음" }, { status: 400 });
+    }
+    amount = Math.round(registered);
   }
 
   const monthsAhead = planKind === "pro" && planPeriod === "year" ? 12 : 1;

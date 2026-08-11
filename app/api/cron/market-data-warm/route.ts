@@ -5,19 +5,15 @@
  * Vercel Cron: 평일 20:20 / 20:35 / 21:20 UTC (+ DST 보정 21:xx)
  */
 import { NextRequest, NextResponse } from "next/server";
+import { assertCronAuth } from "@/lib/cronAuth";
 import { isNYSEHoliday } from "@/lib/marketHours";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
-  const authSecret = process.env.CRON_SECRET;
-  if (authSecret) {
-    const auth = req.headers.get("authorization");
-    if (auth !== `Bearer ${authSecret}`) {
-      return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-    }
-  }
+  const denied = assertCronAuth(req);
+  if (denied) return denied;
 
   if (isNYSEHoliday()) {
     return NextResponse.json({ skipped: true, reason: "NYSE holiday" });

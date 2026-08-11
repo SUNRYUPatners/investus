@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import webpush from "web-push";
 
@@ -15,7 +15,20 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
 );
 
-export async function GET() {
+export async function GET(req: NextRequest) {
+  const cronSecret = process.env.CRON_SECRET?.trim();
+  const notifySecret = process.env.NOTIFY_SECRET?.trim();
+  if (!cronSecret && !notifySecret) {
+    return NextResponse.json({ error: "secret not configured" }, { status: 503 });
+  }
+  const authHeader = req.headers.get("authorization");
+  const authorized =
+    (!!cronSecret && authHeader === `Bearer ${cronSecret}`) ||
+    (!!notifySecret && req.headers.get("x-notify-secret") === notifySecret);
+  if (!authorized) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
   const { data: subs, error } = await supabase
     .from("push_subscriptions")
     .select("endpoint, p256dh, auth");

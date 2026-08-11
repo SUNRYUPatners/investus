@@ -24,10 +24,19 @@ export const BUSINESS_INFO = {
   /** 문의 이메일 */
   email:
     process.env.NEXT_PUBLIC_BIZ_EMAIL?.trim() || "sunryupatners@gmail.com",
-  /** 통신판매업 신고번호 (없으면 빈 문자열) */
+  /** 통신판매업 신고번호 (없으면 빈 문자열 — 푸터에 준비중 표기) */
   mailOrderNumber:
     process.env.NEXT_PUBLIC_BIZ_MAIL_ORDER?.trim() || "",
   /** 개인정보보호 책임자 */
   privacyOfficer:
     process.env.NEXT_PUBLIC_BIZ_PRIVACY_OFFICER?.trim() || "류현우",
+  /** 호스팅 서비스 제공자 (전자상거래법 고시) */
+  hostingProvider:
+    process.env.NEXT_PUBLIC_BIZ_HOSTING?.trim() || "Vercel Inc.",
 } as const;
+
+/** 공정거래위원회 사업자정보 조회 (사업자등록번호) */
+export function ftcBusinessCheckUrl(bizNumber: string = BUSINESS_INFO.registrationNumber): string {
+  const digits = bizNumber.replace(/\D/g, "");
+  return `https://www.ftc.go.kr/bizCommPop.do?wrkr_no=${digits}`;
+}

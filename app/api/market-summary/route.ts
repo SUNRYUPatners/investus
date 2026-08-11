@@ -132,7 +132,15 @@ export async function GET(req: Request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return NextResponse.json({ error: "no key" }, { status: 503 });
 
-  const force = new URL(req.url).searchParams.get("force") === "1";
+  const url = new URL(req.url);
+  let force = url.searchParams.get("force") === "1";
+  if (force) {
+    const secret = process.env.CRON_SECRET?.trim();
+    const auth = req.headers.get("authorization");
+    if (!secret || auth !== `Bearer ${secret}`) {
+      return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+    }
+  }
   const date  = lastTradingDay();
 
   // L1 메모리 히트 (강제 갱신 제외)
@@ -142,7 +150,7 @@ export async function GET(req: Request) {
 
   try {
     if (force) {
-      // 수동 강제 갱신: 캐시 무효화 후 Claude 1회 호출
+      // 수동 강제 갱신: 캐시 무효화 후 Claude 1회 호출 (CRON_SECRET 필요)
       revalidateTag("market-summary", "max");
       const fresh = await generateSummary(date, apiKey);
       memCache = fresh;

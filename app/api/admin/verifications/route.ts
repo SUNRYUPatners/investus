@@ -79,7 +79,6 @@ export async function POST(req: NextRequest) {
   const {
     phone, nickname, avatar, bio,
     tags, annual_return, portfolio_scale, top_holdings,
-    ai_approved,
   } = body as Record<string, unknown>;
 
   const phoneStr    = String(phone ?? "");
@@ -94,14 +93,14 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "payload too large" }, { status: 413 });
   }
 
-  // AI-verified submissions auto-approved; others go pending
-  const status = ai_approved === true ? "approved" : "pending";
+  // AI 승인 플래그는 클라이언트가 위조할 수 있으므로 무시 — 항상 pending.
+  // 승인은 관리자 PATCH 또는 별도 서버측 검증에서만.
+  const status = "pending";
   const now = new Date().toISOString();
 
   const upsertData: Record<string, unknown> = {
     phone: phoneStr, nickname: nicknameStr, avatar: avatarStr, bio: bioStr,
     status, submitted_at: now,
-    ...(status === "approved" && { reviewed_at: now }),
     ...(Array.isArray(tags) && { tags }),
     ...(annual_return != null && { annual_return }),
     ...(portfolio_scale != null && { portfolio_scale }),
@@ -115,8 +114,7 @@ export async function POST(req: NextRequest) {
 
   // Fallback: optional columns may not exist yet — retry with base fields only
   if (error) {
-    const baseData = { phone: phoneStr, nickname: nicknameStr, avatar: avatarStr, bio: bioStr, status, submitted_at: now,
-      ...(status === "approved" && { reviewed_at: now }) };
+    const baseData = { phone: phoneStr, nickname: nicknameStr, avatar: avatarStr, bio: bioStr, status, submitted_at: now };
     ({ error } = await getSupabase().from("creator_verifications").upsert(baseData, { onConflict: "phone" }));
   }
 
@@ -129,7 +127,7 @@ export async function POST(req: NextRequest) {
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
         _subject: `[Investus] 크리에이터 인증 신청 — ${nicknameStr}`,
-        message: `새 크리에이터 인증 신청\n\n닉네임: ${nicknameStr}\n이메일: ${phoneStr}\n자기소개: ${bioStr}\nAI승인: ${ai_approved ? "자동승인" : "검토필요"}\n\n승인 페이지: https://investus.kr/admin/creators`,
+        message: `새 크리에이터 인증 신청\n\n닉네임: ${nicknameStr}\n이메일: ${phoneStr}\n자기소개: ${bioStr}\n상태: 검토 대기 (관리자 승인 필요)\n\n승인 페이지: https://investus.kr/admin/creators`,
       }),
     });
   } catch {}

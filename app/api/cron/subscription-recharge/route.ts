@@ -3,6 +3,7 @@
  * 실패시 past_due 로 마킹, 사용자에겐 이메일/푸시 별도 처리.
  */
 import { NextRequest, NextResponse } from "next/server";
+import { assertCronAuth } from "@/lib/cronAuth";
 import { getAdminSupabase } from "@/lib/supabase";
 import { chargeWithBillingKey, makePaymentId, nextBillingDate } from "@/lib/portone";
 
@@ -10,14 +11,8 @@ export const maxDuration = 60;
 export const runtime = "nodejs";
 
 export async function GET(req: NextRequest) {
-  // Vercel Cron 검증 (CRON_SECRET 있으면 확인)
-  const authSecret = process.env.CRON_SECRET;
-  if (authSecret) {
-    const auth = req.headers.get("authorization");
-    if (auth !== `Bearer ${authSecret}`) {
-      return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-    }
-  }
+  const denied = assertCronAuth(req);
+  if (denied) return denied;
 
   const sb = getAdminSupabase();
   const now = new Date();

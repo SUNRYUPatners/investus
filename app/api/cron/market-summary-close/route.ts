@@ -1,9 +1,13 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { assertCronAuth } from "@/lib/cronAuth";
 import { isNYSEHoliday } from "@/lib/marketHours";
 
 export const maxDuration = 60;
 
-export async function GET() {
+export async function GET(req: NextRequest) {
+  const denied = assertCronAuth(req);
+  if (denied) return denied;
+
   // Skip on NYSE holidays
   if (isNYSEHoliday()) {
     return NextResponse.json({ skipped: true, reason: "NYSE holiday" });

@@ -106,13 +106,21 @@ export function PWAInstallPrompt() {
       {/* ── 메인 모달 ── */}
       {show && (
         <div
-          className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-4 sm:p-6"
-          style={{ background: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)" }}
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+          style={{
+            background: "rgba(0,0,0,0.75)",
+            backdropFilter: "blur(4px)",
+            paddingTop: "max(1rem, env(safe-area-inset-top))",
+            paddingBottom: "max(1rem, env(safe-area-inset-bottom))",
+          }}
           onClick={closeModal}
         >
           <div
-            className="w-full max-w-[380px] rounded-3xl overflow-hidden"
-            style={{ background: "var(--card)" }}
+            className="w-full max-w-[380px] rounded-3xl overflow-y-auto overscroll-contain"
+            style={{
+              background: "var(--card)",
+              maxHeight: "min(90dvh, 640px)",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             {isIOS ? (

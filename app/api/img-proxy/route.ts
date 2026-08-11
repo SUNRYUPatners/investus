@@ -27,8 +27,13 @@ export async function GET(req: NextRequest) {
         "Referer":    "https://finnhub.io/",
         "Accept":     "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
       },
+      redirect: "manual",
       signal: AbortSignal.timeout(6000),
     });
+    // Do not follow redirects — redirect target could be private (SSRF)
+    if (res.status >= 300 && res.status < 400) {
+      return new NextResponse(null, { status: 400 });
+    }
 
     if (!res.ok) return new NextResponse(null, { status: res.status });
 

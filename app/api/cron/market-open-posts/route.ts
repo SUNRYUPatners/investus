@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { assertCronAuth } from "@/lib/cronAuth";
 import { getAdminSupabase } from "@/lib/supabase";
 import { isNYSEHoliday } from "@/lib/marketHours";
 
@@ -313,11 +314,8 @@ const PICK_COUNT: Record<SessionType, number> = {
 };
 
 export async function GET(req: NextRequest) {
-  const auth = req.headers.get("authorization");
-  const secret = process.env.CRON_SECRET;
-  if (secret && auth !== `Bearer ${secret}`) {
-    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  }
+  const denied = assertCronAuth(req);
+  if (denied) return denied;
 
   // NYSE 휴일이면 글 생성 스킵 (Memorial Day, 독립기념일 등)
   const sessionParam = req.nextUrl.searchParams.get("session");

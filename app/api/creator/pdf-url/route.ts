@@ -1,19 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAdminSupabase } from "@/lib/supabase";
+import { assertPublishedPdfPath, CREATOR_PDF_BUCKET } from "@/lib/creatorPdf";
 
 export const dynamic = "force-dynamic";
 
-const BUCKET = "creator-pdfs";
-
-// Public endpoint — all content is free; signed URL is time-limited (1 h)
+// Signed URL only for PDFs listed in the creator's public contents.json
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const path = searchParams.get("path");
   if (!path) return NextResponse.json({ error: "path 필요" }, { status: 400 });
 
+  if (!(await assertPublishedPdfPath(path))) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
   const supabase = getAdminSupabase();
   const { data, error } = await supabase.storage
-    .from(BUCKET)
+    .from(CREATOR_PDF_BUCKET)
     .createSignedUrl(path, 3600);
 
   if (error || !data?.signedUrl) {

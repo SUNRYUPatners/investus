@@ -20,9 +20,12 @@ const supabase = createClient(
 // Vercel Cron이 Authorization: Bearer {CRON_SECRET} 헤더를 자동으로 추가
 // 수동 테스트 시: x-notify-secret 헤더로도 인증 가능
 function isAuthorized(req: NextRequest): boolean {
+  const cronSecret = process.env.CRON_SECRET?.trim();
+  const notifySecret = process.env.NOTIFY_SECRET?.trim();
+  if (!cronSecret && !notifySecret) return false;
   const authHeader = req.headers.get("authorization");
-  if (authHeader === `Bearer ${process.env.CRON_SECRET}`) return true;
-  if (req.headers.get("x-notify-secret") === process.env.NOTIFY_SECRET) return true;
+  if (cronSecret && authHeader === `Bearer ${cronSecret}`) return true;
+  if (notifySecret && req.headers.get("x-notify-secret") === notifySecret) return true;
   return false;
 }
 
@@ -38,6 +41,11 @@ function isMarketOpenWindow(): boolean {
 }
 
 export async function GET(req: NextRequest) {
+  const cronSecret = process.env.CRON_SECRET?.trim();
+  const notifySecret = process.env.NOTIFY_SECRET?.trim();
+  if (!cronSecret && !notifySecret) {
+    return NextResponse.json({ error: "secret not configured" }, { status: 503 });
+  }
   if (!isAuthorized(req)) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }

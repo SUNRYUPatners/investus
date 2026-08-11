@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BUSINESS_INFO } from "@/lib/businessInfo";
+import { BUSINESS_INFO, ftcBusinessCheckUrl } from "@/lib/businessInfo";
 
 /**
  * 전역 푸터 — PG 사전점검·전자상거래법 고시용.
@@ -16,7 +16,10 @@ export function SiteLegalFooter() {
     email,
     mailOrderNumber,
     privacyOfficer,
+    hostingProvider,
   } = BUSINESS_INFO;
+
+  const ftcUrl = ftcBusinessCheckUrl(registrationNumber);
 
   return (
     <footer
@@ -56,7 +59,18 @@ export function SiteLegalFooter() {
           </p>
           <p>대표자: {ceoName}</p>
           {registrationNumber ? (
-            <p>사업자등록번호: {registrationNumber}</p>
+            <p>
+              사업자등록번호: {registrationNumber}{" "}
+              <a
+                href={ftcUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+                style={{ color: "var(--mint)" }}
+              >
+                [사업자정보확인]
+              </a>
+            </p>
           ) : null}
           {address ? <p>사업장 주소: {address}</p> : null}
           {phone ? <p>전화번호: {phone}</p> : null}
@@ -66,7 +80,11 @@ export function SiteLegalFooter() {
               {email}
             </a>
           </p>
-          {mailOrderNumber ? <p>통신판매업 신고번호: {mailOrderNumber}</p> : null}
+          <p>
+            통신판매업 신고번호:{" "}
+            {mailOrderNumber || "신고 준비중"}
+          </p>
+          <p>호스팅 서비스 제공자: {hostingProvider}</p>
           <p>개인정보보호책임자: {privacyOfficer}</p>
         </div>
 
