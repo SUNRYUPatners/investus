@@ -32,7 +32,7 @@ export default function PortfolioStrategyPage() {
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(251,146,60,0.15)", color: "#fb923c" }}>전략</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 9분</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 16분</span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
             미국주식 포트폴리오 분산 투자 전략
@@ -231,6 +231,22 @@ export default function PortfolioStrategyPage() {
 
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              현금 비중의 역할
+            </h2>
+            <p className="text-sm leading-relaxed mb-3">
+              현금(또는 단기 달러/원화 예금)은 &ldquo;수익이 안 나는 자산&rdquo;이 아니라
+              다음 조정에서 살 수 있는 옵션입니다. 전액 투자 상태에서 급락이 오면
+              심리가 무너져 저점에 팔기 쉽습니다.
+            </p>
+            <p className="text-sm leading-relaxed">
+              입문자는 주식 80~90% + 현금 10~20%로 시작해, 극단적 탐욕 구간에서는 현금을 조금 늘리고
+              극단적 공포 구간에서는 적립액을 늘리는 식으로 조절할 수 있습니다.
+              타이밍을 &ldquo;맞추려&rdquo; 하지 말고 비중만 조금씩 움직이는 것이 핵심입니다.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
               Investus 포트폴리오 기능 활용하기
             </h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -267,13 +283,13 @@ export default function PortfolioStrategyPage() {
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
             </Link>
-            <Link href="/learn/fear-greed" style={{ textDecoration: "none" }}>
+            <Link href="/learn/sectors" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70"
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                <span className="text-xl">😱</span>
+                <span className="text-xl">🏭</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>공포탐욕지수 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>시장 심리로 투자 타이밍 잡기</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>미국 주식 11개 섹터</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>기술 쏠림을 피하는 지도</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

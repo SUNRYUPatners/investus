@@ -4,12 +4,13 @@ import { Header } from "@/components/Header";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "투자 지식 허브 — 미국주식 기초부터 심화까지 | 인베스트어스",
-  description: "미국주식 투자 초보자부터 중급자까지, Investus 투자 지식 허브에서 S&P500, 공포탐욕지수, 버핏지수, 포트폴리오 전략 등 핵심 개념을 무료로 학습하세요.",
+  title: "투자 지식 허브 — 미국주식 기초부터 ETF·세금·환율까지 | 인베스트어스",
+  description:
+    "미국주식 입문, S&P500, 나스닥, ETF, DCA, 세금, 환율, 섹터, 공포탐욕·버핏지수, 포트폴리오 전략까지 Investus가 직접 쓴 오리지널 가이드를 무료로 읽으세요.",
   alternates: { canonical: "https://www.investus.kr/learn" },
   openGraph: {
     title: "투자 지식 허브 | 인베스트어스 Investus",
-    description: "S&P500, 공포탐욕지수, 버핏지수, 포트폴리오 전략 — 미국주식 핵심 지식 무료 학습",
+    description: "미국주식 입문부터 ETF·세금·환율·섹터까지 — 오리지널 투자 지식",
     url: "https://www.investus.kr/learn",
     type: "website",
   },
@@ -30,10 +31,28 @@ const ARTICLES = [
     href: "/learn/us-stock-basics",
     emoji: "🇺🇸",
     title: "미국주식 투자 완전 입문 가이드",
-    desc: "처음 미국주식을 시작하는 투자자를 위한 A to Z. 계좌 개설부터 종목 선택까지 핵심만 정리했습니다.",
+    desc: "계좌 개설, 수수료·환율, 세금 개념, DCA, Investus 5분 루틴까지. 처음 미국주식을 시작하는 A to Z.",
     tag: "입문",
     tagColor: "#10b981",
-    minutes: "8분",
+    minutes: "18분",
+  },
+  {
+    href: "/learn/etf",
+    emoji: "📦",
+    title: "미국 ETF 완전 가이드 — SPY·VOO·QQQ",
+    desc: "상장지수펀드란 무엇인지, 운용보수·추적오차, 레버리지 함정, 코어/위성 나누는 법.",
+    tag: "ETF",
+    tagColor: "#60a5fa",
+    minutes: "18분",
+  },
+  {
+    href: "/learn/nasdaq",
+    emoji: "💻",
+    title: "나스닥 완전 가이드 — 나스닥100과 QQQ",
+    desc: "거래소·종합지수·나스닥100을 구분하고, S&P500과 왜 다르게 움직이는지 설명합니다.",
+    tag: "지수",
+    tagColor: "#38bdf8",
+    minutes: "16분",
   },
   {
     href: "/learn/sp500",
@@ -42,7 +61,43 @@ const ARTICLES = [
     desc: "미국 대형주 500개로 구성된 S&P500 지수의 구성 방식, 역사적 성과, 투자 전략을 상세히 설명합니다.",
     tag: "지수",
     tagColor: "#60a5fa",
-    minutes: "10분",
+    minutes: "16분",
+  },
+  {
+    href: "/learn/dca",
+    emoji: "📅",
+    title: "적립식 투자(DCA) 가이드",
+    desc: "매달 같은 금액으로 모으는 법. 목돈 일시 투자와의 차이, 환율, 실패하는 적립 패턴.",
+    tag: "습관",
+    tagColor: "#10b981",
+    minutes: "16분",
+  },
+  {
+    href: "/learn/us-stock-tax",
+    emoji: "🧾",
+    title: "한국 거주자 미국주식 세금·계좌",
+    desc: "양도소득·배당 원천징수·종합과세·ISA 관계를 개념으로 정리합니다. 세무 자문이 아닙니다.",
+    tag: "세금",
+    tagColor: "#f87171",
+    minutes: "18분",
+  },
+  {
+    href: "/learn/usd-krw",
+    emoji: "💱",
+    title: "환율과 미국주식 — 원/달러 수익률",
+    desc: "달러 수익률과 원화 수익률이 다른 이유, 환전 타이밍, 환헤지 vs 환노출.",
+    tag: "환율",
+    tagColor: "#f59e0b",
+    minutes: "15분",
+  },
+  {
+    href: "/learn/sectors",
+    emoji: "🏭",
+    title: "미국 주식 11개 섹터 가이드",
+    desc: "GICS 섹터별 특징과 입문자가 가장 많이 하는 기술주 쏠림을 피하는 법.",
+    tag: "섹터",
+    tagColor: "#fb923c",
+    minutes: "17분",
   },
   {
     href: "/learn/fear-greed",
@@ -51,7 +106,7 @@ const ARTICLES = [
     desc: "CNN의 공포&탐욕 지수가 무엇인지, 어떻게 계산되는지, 실전 투자에서 어떻게 활용하는지 알아봅니다.",
     tag: "심리",
     tagColor: "#f59e0b",
-    minutes: "7분",
+    minutes: "14분",
   },
   {
     href: "/learn/buffett-indicator",
@@ -60,16 +115,16 @@ const ARTICLES = [
     desc: "워런 버핏이 즐겨 쓰는 버핏지수(총 시가총액/GDP)의 의미와 해석법, 현재 시장에 적용하는 방법.",
     tag: "밸류",
     tagColor: "#c084fc",
-    minutes: "8분",
+    minutes: "14분",
   },
   {
     href: "/learn/portfolio-strategy",
     emoji: "💼",
     title: "미국주식 포트폴리오 분산 투자 전략",
-    desc: "집중 투자 vs 분산 투자, 섹터별 배분, 리밸런싱 전략까지 — 흔들리지 않는 포트폴리오 구성법.",
+    desc: "집중 투자 vs 분산 투자, 섹터별 배분, 현금 비중, 리밸런싱까지 — 흔들리지 않는 구성법.",
     tag: "전략",
     tagColor: "#fb923c",
-    minutes: "9분",
+    minutes: "16분",
   },
 ];
 
@@ -94,8 +149,8 @@ export default function LearnPage() {
             투자 지식 허브
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            미국주식 투자에 필요한 핵심 개념과 전략을 무료로 학습하세요.
-            초보자도 이해할 수 있는 쉬운 설명으로 투자 실력을 높여드립니다.
+            미국주식 투자에 필요한 핵심 개념과 전략을 Investus 편집팀이 직접 쓴 오리지널 글로 학습하세요.
+            입문·ETF·세금·환율·섹터까지 초보자도 읽을 수 있게 풀어 두었습니다.
           </p>
         </div>
 

@@ -32,7 +32,7 @@ export default function FearGreedPage() {
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(245,158,11,0.15)", color: "#f59e0b" }}>심리</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 7분</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 14분</span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
             공포탐욕지수 완전 가이드
@@ -251,6 +251,25 @@ export default function FearGreedPage() {
               단, 이것은 사후에 알 수 있는 결과입니다. 당시에는 더 내릴 것 같은 공포가 지배적이었습니다.
               그래서 &ldquo;분할 매수&rdquo;가 중요합니다.
             </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              자주 하는 오해 4가지
+            </h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["지수가 낮으면 내일 오른다", "극단적 공포는 ‘바닥 후보’이지 익일 반등 신호가 아닙니다. 공포가 더 깊어질 수 있습니다."],
+                ["지수가 높으면 당장 팔아야 한다", "탐욕 구간에서도 강세가 수개월 이어질 수 있습니다. 전량 매도보다 비중·레버리지 점검이 먼저입니다."],
+                ["이 지수만 보면 된다", "실적, 금리, 환율, 개별 기업 펀더멘털을 대체하지 않습니다. 보조 온도계입니다."],
+                ["한국 증시에도 그대로 적용된다", "CNN 지수는 미국 주식·옵션·채권 시장 데이터 기반입니다. 코스피 심리와 1:1로 같지 않습니다."],
+              ].map(([q, a]) => (
+                <div key={q} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{q}</p>
+                  <p className="text-[12px] leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section>

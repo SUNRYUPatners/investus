@@ -33,7 +33,7 @@ export default function SP500Page() {
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(96,165,250,0.15)", color: "#60a5fa" }}>지수</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 10분</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 16분</span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
             S&P500 완전 가이드
@@ -209,6 +209,40 @@ export default function SP500Page() {
             <p className="text-sm leading-relaxed mt-3">
               세 ETF 모두 S&P500 지수를 거의 동일하게 추종합니다.
               장기 투자라면 보수가 가장 낮은 VOO나 IVV를 선택하는 것이 합리적입니다.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              시가총액 가중 — 왜 상위 종목이 지수를 좌우하나
+            </h2>
+            <p className="text-sm leading-relaxed mb-3">
+              S&amp;P500은 시가총액이 큰 기업의 움직임이 지수에 더 크게 반영됩니다.
+              그래서 메가캡 기술주가 강하면 지수도 강하고, 그 소수 종목이 조정을 받으면
+              &ldquo;시장 전체&rdquo;가 약해 보일 수 있습니다. 실제로는 나머지 400여 종목이 다르게 움직일 때도 많습니다.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              이것을 &ldquo;시장 폭(breadth)&rdquo;이라고 합니다. 지수만 보고 매매하면 착시가 생깁니다.
+              Investus 홈의 섹터 히트맵은 지수 숫자 뒤에 어떤 업종이 오르내리는지 확인하는 용도입니다.
+            </p>
+            <p className="text-sm leading-relaxed">
+              동일가중(equal-weight) S&amp;P500 ETF도 있습니다. 대형주 편중을 줄이지만, 중소형 비중이 커져
+              변동성과 비용 구조가 다를 수 있습니다. 입문용 코어로는 일반 시총가중(VOO/IVV/SPY)이 더 흔합니다.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              배당 재투자와 총수익
+            </h2>
+            <p className="text-sm leading-relaxed mb-3">
+              언론에 나오는 &ldquo;S&amp;P500 연 10%&rdquo;는 대개 <strong style={{ color: "var(--text)" }}>배당을 재투자한 총수익(total return)</strong>에 가깝습니다.
+              가격 지수만 보면 숫자가 더 낮게 나옵니다. ETF를 보유하면 배당이 현금으로 들어오거나(과세 후)
+              증권사 설정에 따라 재투자될 수 있습니다.
+            </p>
+            <p className="text-sm leading-relaxed">
+              장기 성과를 비교할 때는 &ldquo;가격 수익률&rdquo;과 &ldquo;배당 포함 수익률&rdquo;을 구분하세요.
+              한국 계좌에서는 배당 원천징수·양도세가 총수익을 깎으므로, 해외 백테스트 숫자를 그대로 기대하면 안 됩니다.
             </p>
           </section>
 

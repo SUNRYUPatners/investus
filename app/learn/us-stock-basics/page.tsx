@@ -34,7 +34,7 @@ export default function UsStockBasicsPage() {
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(16,185,129,0.15)", color: "#10b981" }}>입문</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 8분</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 18분</span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
             미국주식 투자 완전 입문 가이드
@@ -215,6 +215,92 @@ export default function UsStockBasicsPage() {
             </div>
           </section>
 
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              한국에서 미국주식 계좌 여는 법
+            </h2>
+            <p className="text-sm leading-relaxed mb-3">
+              국내 증권사 앱에서 &ldquo;해외주식&rdquo; 또는 &ldquo;미국주식&rdquo; 서비스를 신청하면 됩니다.
+              별도의 미국 증권사 계좌가 꼭 필요한 것은 아닙니다. 대부분 기존 국내 계좌에 해외주식 거래 권한을
+              추가하는 방식입니다. 신분증 확인, 투자자 성향 설문, 환전(원화→달러) 약관 동의가 일반적입니다.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              수수료는 증권사마다 다릅니다. 매매 수수료(보통 0.07%~0.25%대), 환전 스프레드, 최소 환전 단위를
+              비교하세요. &ldquo;수수료 0원&rdquo; 이벤트는 기간·한도가 있는 경우가 많아 이벤트 종료 후 조건을 다시 확인해야 합니다.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              소수점 거래(1주 미만)를 지원하는 증권사도 있습니다. 고가 종목(예: 메가캡)을 소액으로 시작할 때 유용하지만,
+              의결권·배당 처리 방식이 1주 단위와 다를 수 있으니 약관을 읽으세요.
+            </p>
+            <div className="rounded-2xl p-4 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="text-xs font-bold mb-2" style={{ color: "var(--text)" }}>계좌 개설 체크리스트</p>
+              <ul className="text-sm leading-relaxed list-disc pl-5 space-y-1">
+                <li>해외주식 거래 신청 완료 여부</li>
+                <li>달러 환전 한도·우대 환율 조건</li>
+                <li>정규장 / 프리·애프터 마켓 가능 여부</li>
+                <li>양도소득 신고를 증권사가 어떻게 안내하는지</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              세금 — 한국 거주자가 꼭 알아야 할 것
+            </h2>
+            <p className="text-sm leading-relaxed mb-3">
+              미국주식 매매 차익은 국내에서 <strong style={{ color: "var(--text)" }}>양도소득세</strong> 대상입니다.
+              연간 기본공제(일반적으로 250만 원)를 넘는 순이익에 대해 세율이 적용됩니다.
+              세율·신고 기한은 세법 개정에 따라 달라질 수 있으니, 실제 신고 전에는 국세청 안내 또는 세무사 확인이 안전합니다.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              배당금은 미국에서 원천징수(일반적으로 15%, 한·미 조세조약)된 뒤 국내 계좌로 입금되는 경우가 많습니다.
+              국내에서 금융소득종합과세 대상이 될 수 있으므로, 배당 비중이 큰 포트폴리오는 연간 금융소득 합계를 따로 적어 두는 것이 좋습니다.
+            </p>
+            <p className="text-sm leading-relaxed">
+              Investus는 세무 대행을 하지 않습니다. 이 단락은 개념 안내이며, 개별 세액 계산·절세 설계는 전문가와 상의하세요.
+              더 긴 정리는 <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>미국주식 세금·계좌 가이드</Link>를 보세요.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              적립식(DCA)으로 시작하는 방법
+            </h2>
+            <p className="text-sm leading-relaxed mb-3">
+              한 번에 목돈을 넣기 부담스럽다면, 매달 같은 날 같은 금액으로 S&amp;P500 ETF를 사는
+              달러코스트애버리징(DCA)이 입문에 잘 맞습니다. 고점에 전액을 넣는 실수를 줄이고,
+              환율·시세 변동을 시간에 분산합니다.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              예시: 매달 30만 원을 VOO 또는 SPY에 12개월 적립. 어떤 달은 주가가 높아 수량이 적고,
+              어떤 달은 낮아 수량이 많아집니다. 평균 단가는 한 번에 산 경우보다 완만해지는 경우가 많습니다.
+              (항상 더 높은 수익을 보장하지는 않습니다. 강한 일방 상승장에서는 일시 목돈 투자가 유리할 수도 있습니다.)
+            </p>
+            <p className="text-sm leading-relaxed">
+              자세한 원리와 주의점은 <Link href="/learn/dca" style={{ color: "var(--mint)" }}>적립식 투자 가이드</Link>에서 다룹니다.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              Investus로 매일 5분 루틴 만들기
+            </h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm leading-relaxed">
+              <li>
+                <Link href="/" style={{ color: "var(--mint)" }}>홈</Link>에서 선물·지수·환율·공포탐욕·버핏지수를 훑습니다.
+                &ldquo;오늘 살지 말지&rdquo;보다 &ldquo;시장 온도가 어떤지&rdquo;를 먼저 봅니다.
+              </li>
+              <li>
+                <Link href="/insight" style={{ color: "var(--mint)" }}>인사이트</Link>에서 당일 리포트 핵심 문단만 읽습니다.
+                매수/매도 한 줄에만 의존하지 마세요.
+              </li>
+              <li>
+                관심 종목이 있으면 <Link href="/search" style={{ color: "var(--mint)" }}>검색</Link>으로 차트·뉴스를 확인한 뒤,
+                <Link href="/portfolio" style={{ color: "var(--mint)" }}>자산</Link>에 비중을 기록합니다.
+              </li>
+            </ol>
+          </section>
+
           {/* Disclaimer */}
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
@@ -240,13 +326,13 @@ export default function UsStockBasicsPage() {
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>
             </Link>
-            <Link href="/learn/fear-greed" style={{ textDecoration: "none" }}>
+            <Link href="/learn/etf" style={{ textDecoration: "none" }}>
               <div className="rounded-2xl p-4 border flex items-center gap-3 active:opacity-70"
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                <span className="text-xl">😱</span>
+                <span className="text-xl">📦</span>
                 <div className="flex-1">
-                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>공포탐욕지수 완전 가이드</p>
-                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>시장 심리로 투자 타이밍 잡기</p>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>미국 ETF 완전 가이드</p>
+                  <p className="text-[11px]" style={{ color: "var(--muted)" }}>SPY·VOO·QQQ 고르는 법</p>
                 </div>
                 <ChevronLeft className="w-4 h-4 rotate-180 opacity-30" style={{ color: "var(--muted)" }} />
               </div>

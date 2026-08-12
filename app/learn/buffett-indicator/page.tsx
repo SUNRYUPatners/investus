@@ -32,7 +32,7 @@ export default function BuffettIndicatorPage() {
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(192,132,252,0.15)", color: "#c084fc" }}>밸류</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 8분</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 14분</span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
             버핏지수 완전 가이드
@@ -182,6 +182,26 @@ export default function BuffettIndicatorPage() {
                 버핏 본인도 이 지표가 높아도 좋은 기업은 계속 보유했습니다.
               </p>
             </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
+              금리·이익과 함께 보는 법
+            </h2>
+            <p className="text-sm leading-relaxed mb-3">
+              버핏지수가 높아도 기업 이익(EPS)이 빠르게 늘고 금리가 안정적이면,
+              시장은 그 밸류에이션을 더 오래 유지하기도 합니다. 반대로 이익 전망이 꺾이는데
+              지수가 고공행진이면 조정의 폭이 커질 수 있습니다.
+            </p>
+            <p className="text-sm leading-relaxed mb-3">
+              실전에서는 버핏지수 하나만 보지 말고, (1) 장기 금리, (2) 기업 이익 전망,
+              (3) 공포탐욕지수(단기 심리)를 같이 봅니다. Investus 홈에서 버핏지수와 공포탐욕을
+              나란히 확인할 수 있게 한 이유입니다.
+            </p>
+            <p className="text-sm leading-relaxed">
+              &ldquo;지수가 높으니 미국주식은 하지 않는다&rdquo;는 극단도,
+              &ldquo;지수는 무시한다&rdquo;는 극단도 피하세요. 현금 비중·적립 금액을 조절하는 온도계로 쓰는 편이 낫습니다.
+            </p>
           </section>
 
           <section>

@@ -54,7 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 투자 지식 허브
     { url: `${base}/learn`,                        lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/learn/us-stock-basics`,        lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/etf`,                    lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/nasdaq`,                 lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/sp500`,                  lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/dca`,                    lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/us-stock-tax`,           lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/usd-krw`,                lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/sectors`,                lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/fear-greed`,             lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/buffett-indicator`,      lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/portfolio-strategy`,     lastModified: now, changeFrequency: "monthly", priority: 0.8  },

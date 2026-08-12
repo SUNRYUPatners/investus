@@ -102,8 +102,15 @@ export default async function UsInvestingGuidePage() {
 
                 <h2 className="text-base font-bold pt-2" style={{ color: "var(--text)" }}>6. 더 깊게 공부하기</h2>
                 <ul className="list-disc pl-5 space-y-1.5">
+                  <li><Link href="/learn" className="underline" style={{ color: "var(--mint)" }}>투자 지식 허브 전체</Link></li>
                   <li><Link href="/learn/us-stock-basics" className="underline" style={{ color: "var(--mint)" }}>미국주식 기초</Link></li>
+                  <li><Link href="/learn/etf" className="underline" style={{ color: "var(--mint)" }}>미국 ETF (SPY·VOO·QQQ)</Link></li>
+                  <li><Link href="/learn/nasdaq" className="underline" style={{ color: "var(--mint)" }}>나스닥100·QQQ</Link></li>
                   <li><Link href="/learn/sp500" className="underline" style={{ color: "var(--mint)" }}>S&amp;P500 이해하기</Link></li>
+                  <li><Link href="/learn/dca" className="underline" style={{ color: "var(--mint)" }}>적립식 투자(DCA)</Link></li>
+                  <li><Link href="/learn/us-stock-tax" className="underline" style={{ color: "var(--mint)" }}>미국주식 세금·계좌</Link></li>
+                  <li><Link href="/learn/usd-krw" className="underline" style={{ color: "var(--mint)" }}>환율과 미국주식</Link></li>
+                  <li><Link href="/learn/sectors" className="underline" style={{ color: "var(--mint)" }}>11개 섹터 가이드</Link></li>
                   <li><Link href="/learn/fear-greed" className="underline" style={{ color: "var(--mint)" }}>공포탐욕지수</Link></li>
                   <li><Link href="/learn/buffett-indicator" className="underline" style={{ color: "var(--mint)" }}>버핏지수</Link></li>
                   <li><Link href="/insight" className="underline" style={{ color: "var(--mint)" }}>일일 인사이트 리포트</Link></li>
