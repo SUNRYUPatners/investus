@@ -972,12 +972,12 @@ export default function MorePage() {
   const [showFeedback, setShowFeedback] = useState(false);
 
   const MENU_EMOJIS = [
-    ["📖", "📊", "🔖"],
+    ["📖", "📚", "📊", "✉️", "🔖"],
     ["📢", "🔔", "💌", "❓"],
     ["📄", "🔒", "💸", "⚠️"],
   ];
   const MENU_HREFS = [
-    ["/more/guide", "/more/about", "/more/version"],
+    ["/more/guide", "/more/us-investing-guide", "/more/about", "/more/contact", "/more/version"],
     ["/more/notices", "/more/notifications", undefined, "/more/faq"],
     ["/more/terms", "/more/privacy", "/more/refund", "/more/disclaimer"],
   ];
@@ -999,7 +999,9 @@ export default function MorePage() {
   // Right sidebar quick-link tiles (3×3 grid)
   const sidebarLinks = [
     { emoji: "📖", label: isKo ? "사용 가이드" : "Guide",      href: "/more/guide" },
+    { emoji: "📚", label: isKo ? "미국주식 가이드" : "US Guide", href: "/more/us-investing-guide" },
     { emoji: "📊", label: isKo ? "소개"        : "About",      href: "/more/about" },
+    { emoji: "✉️", label: isKo ? "문의·연락처" : "Contact",    href: "/more/contact" },
     { emoji: "🔖", label: isKo ? "업데이트"    : "Updates",    href: "/more/version" },
     { emoji: "📢", label: isKo ? "공지사항"    : "Notices",    href: "/more/notices" },
     { emoji: "❓", label: "FAQ",                                href: "/more/faq" },

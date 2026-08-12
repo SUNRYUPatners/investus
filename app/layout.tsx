@@ -162,6 +162,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Google AdSense site ownership / publisher verification */}
+        <meta name="google-adsense-account" content="ca-pub-1075509322890486" />
         {/* Google AdSense — 퍼블리셔 인증 및 자동 광고 */}
         <script
           async

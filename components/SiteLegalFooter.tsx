@@ -40,6 +40,10 @@ export function SiteLegalFooter() {
             개인정보처리방침
           </Link>
           <span style={{ color: "var(--border)" }} aria-hidden>|</span>
+          <Link href="/more/contact" className="hover:underline" style={{ color: "var(--text)" }}>
+            문의
+          </Link>
+          <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/refund" className="hover:underline" style={{ color: "var(--text)" }}>
             환불정책
           </Link>

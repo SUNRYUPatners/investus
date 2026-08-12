@@ -194,7 +194,9 @@ const ko = {
         title: "앱 정보",
         items: [
           { label: "Investus 사용법",          sub: "처음 왔다면 여기서 시작하세요" },
+          { label: "미국주식 초보 가이드",      sub: "계좌·ETF·리포트 읽는 법" },
           { label: "Investus 소개",            sub: "미국주식 투자 플랫폼" },
+          { label: "문의 · 연락처",            sub: "고객지원 · 광고 제휴" },
           { label: "버전 정보",                sub: "업데이트 이력" },
         ],
       },
@@ -616,7 +618,9 @@ const en: typeof ko = {
         title: "App Info",
         items: [
           { label: "How to use Investus",   sub: "Start here if it's your first time" },
+          { label: "US Stocks Starter Guide", sub: "Accounts, ETFs, reading reports" },
           { label: "About Investus",        sub: "US Stock Investment Platform" },
+          { label: "Contact",               sub: "Support · advertising partnerships" },
           { label: "Version",               sub: "Update history" },
         ],
       },
