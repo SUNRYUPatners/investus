@@ -7,7 +7,7 @@ import { LearnHubCards } from "@/components/LearnHubCards";
 export const metadata: Metadata = {
   title: "투자 지식 허브 — 미국주식·ETF·세금·밸류에이션 가이드 | 인베스트어스",
   description:
-    "미국주식 입문, ETF, 원자재·암호화폐, ISA·연금, 채권·금리, PER·배당, 재무제표, 가치투자, DCA, 세금, 환율, 섹터까지 Investus 오리지널 심화 가이드.",
+    "미국주식 입문, ETF, REITs, 옵션, 기술적 분석, 원자재·암호화폐, ISA·연금, 채권·금리, PER·배당, 재무제표, 가치투자, DCA, 세금까지 Investus 오리지널 심화 가이드.",
   alternates: { canonical: "https://www.investus.kr/learn" },
   openGraph: {
     title: "투자 지식 허브 | 인베스트어스 Investus",

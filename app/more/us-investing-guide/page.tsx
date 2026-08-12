@@ -106,6 +106,10 @@ export default async function UsInvestingGuidePage() {
                   <li><Link href="/learn/us-stock-basics" className="underline" style={{ color: "var(--mint)" }}>미국주식 입문</Link></li>
                   <li><Link href="/learn/value-investing" className="underline" style={{ color: "var(--mint)" }}>가치투자·대가 전략</Link></li>
                   <li><Link href="/learn/etf" className="underline" style={{ color: "var(--mint)" }}>미국 ETF (SPY·VOO·QQQ)</Link></li>
+                  <li><Link href="/learn/kr-us-etf" className="underline" style={{ color: "var(--mint)" }}>한국 vs 미국 ETF</Link></li>
+                  <li><Link href="/learn/reits" className="underline" style={{ color: "var(--mint)" }}>REITs 부동산 ETF</Link></li>
+                  <li><Link href="/learn/options" className="underline" style={{ color: "var(--mint)" }}>옵션 기초</Link></li>
+                  <li><Link href="/learn/technical-analysis" className="underline" style={{ color: "var(--mint)" }}>기술적 분석 입문</Link></li>
                   <li><Link href="/learn/valuation" className="underline" style={{ color: "var(--mint)" }}>PER·PBR 밸류에이션</Link></li>
                   <li><Link href="/learn/bonds" className="underline" style={{ color: "var(--mint)" }}>채권과 금리</Link></li>
                   <li><Link href="/learn/commodities" className="underline" style={{ color: "var(--mint)" }}>원자재 (금·유가)</Link></li>
