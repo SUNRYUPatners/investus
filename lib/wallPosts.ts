@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T13AU = 1786575600000; // 2026-08-13 08:00 KST
 const T12AU = 1786489200000; // 2026-08-12 08:00 KST
 const T11AU = 1786402800000; // 2026-08-11 08:00 KST
 const T10AU = 1786316400000; // 2026-08-10 08:00 KST
@@ -78,7 +79,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T12AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T13AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -97,6 +98,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-13 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 959, symbol: "SPCX", nickname: "익명_3311", holdingLabel: "관심종목",
+    content: "Musk All-Hands에서 2027년 말 15 GW 확정·9월부터 AI 매출이 다른 SpaceX 매출 초과한대. 이거 진짜 실체화되면 프레임 폭발이야",
+    createdAt: T13AU + 4*60_000, likes: 138, comments: 13 },
+  { id: 960, symbol: "SPCX", nickname: "익명_4422", holdingLabel: "관심종목",
+    content: "4-5년 안에 AI가 SPCX 가치의 99% 이상 차지·학습은 지구·추론은 우주로... Musk가 진짜 이런 말을 했다고?? 우주 데이터센터가 실체화되네",
+    createdAt: T13AU + 13*60_000, likes: 128, comments: 11 },
+  { id: 961, symbol: "GOOGL", nickname: "익명_5533", holdingLabel: "관심종목",
+    content: "구글 13F 공개 포트폴리오의 95%가 SPCX·2015년 9억 → 오늘 842억·105배 수익. 이거 헤지 펀드지 회사가 아니네",
+    createdAt: T13AU + 22*60_000, likes: 156, comments: 15 },
+  { id: 962, symbol: "GOOGL", nickname: "익명_6644", holdingLabel: "관심종목",
+    content: "구글 신고 지분 24.7배 급증 995억이래. SPCX 상장으로 942억 지분이 신고 편입된 거. Anthropic까지 상장하면 또 더 늘어남",
+    createdAt: T13AU + 31*60_000, likes: 92, comments: 8 },
+  { id: 963, symbol: "SPCX", nickname: "익명_7755", holdingLabel: "관심종목",
+    content: "SPCX 5일 만에 +40% 급등·150달러 근접. Musk All-Hands 이후 시세 반응 진짜 즉시네. 폭발적",
+    createdAt: T13AU + 40*60_000, likes: 118, comments: 10 },
+  { id: 964, symbol: "SPCX", nickname: "익명_8866", holdingLabel: "관심종목",
+    content: "Barchart 왈: Bollinger Band 2023년 10월 이후 최저·주간 볼륨 사상 최대·큰 방향성 이동 임박이래. 오늘 +40%가 그 시작이었네",
+    createdAt: T13AU + 49*60_000, likes: 84, comments: 7 },
+  { id: 965, symbol: "NVDA", nickname: "익명_9977", holdingLabel: "관심종목",
+    content: "NVDA 시가총액 오늘 이른 거래에서만 +7,000억 상승! 이게 하루 사상 최대급이래. 어제 SPCX 2,600억 딜 반응 진짜 대단",
+    createdAt: T13AU + 58*60_000, likes: 145, comments: 13 },
+  { id: 966, symbol: "SPX", nickname: "익명_1188", holdingLabel: "관심종목",
+    content: "OpenAI 상장 준비 8,520억 밸류·1조 상회 가능·근데 COO Lightcap 사임·경영진 대량 이탈 중. 성장통이 심하네",
+    createdAt: T13AU + 67*60_000, likes: 76, comments: 6 },
+  { id: 967, symbol: "SPCX", nickname: "익명_2299", holdingLabel: "관심종목",
+    content: "스타링크 모바일 사용자 1,300만 명 공식 확인. T-Mobile CEO가 위협 과장이라 했는데... 실제로는 이 정도 규모",
+    createdAt: T13AU + 76*60_000, likes: 87, comments: 7 },
+  { id: 968, symbol: "TSLA", nickname: "익명_3300", holdingLabel: "관심종목",
+    content: "Cybercab 44대 중 43대가 스티어링 휠 없어! 완전 자율 사양 대량 확인. Waymo 대비 근본적으로 다른 설계네",
+    createdAt: T13AU + 85*60_000, likes: 132, comments: 12 },
+  { id: 969, symbol: "SPCX", nickname: "익명_4411", holdingLabel: "관심종목",
+    content: "Brett Winton 우주 컴퓨트 사업 모델 계산 재미있음. 위성 하나 400만이고 AI 모델 붙이면 연 매출 350-1,200만·1년 payback·75% IRR",
+    createdAt: T13AU + 94*60_000, likes: 68, comments: 5 },
+  { id: 970, symbol: "MACRO", nickname: "익명_5522", holdingLabel: "관심종목",
+    content: "SEC가 미국 주식 24/7 블록체인 거래 허용 준비한대. 뉴욕 시간 제약 없어지고 크립토·전통 금융 통합 가속. 시장 구조 근본 변화 신호",
+    createdAt: T13AU + 103*60_000, likes: 82, comments: 7 },
+  { id: 971, symbol: "MACRO", nickname: "익명_6633", holdingLabel: "관심종목",
+    content: "Trump가 자본 이득세 감세 검토 중이래. 중간 선거 앞두고. 실행되면 시장 상승에 강력한 지지선. Bloomberg 보도",
+    createdAt: T13AU + 112*60_000, likes: 74, comments: 6 },
+  { id: 972, symbol: "SPCX", nickname: "익명_7744", holdingLabel: "관심종목",
+    content: "Musk가 All-Hands에서 SpaceX 직원 누구든 미래에 달·화성 갈 수 있다고 개인 약속함. 'You have my word'라니... 이런 회사 어디 또 있어",
+    createdAt: T13AU + 121*60_000, likes: 108, comments: 9 },
+  { id: 973, symbol: "SPCX", nickname: "익명_8855", holdingLabel: "관심종목",
+    content: "Grok 로드맵도 나옴. 4.5 출시 완료·5 곧·4.7 광범위 배포 예정. SpaceX 지식 전체로 학습된대. 다른 AI랑 근본적으로 다르네",
+    createdAt: T13AU + 130*60_000, likes: 92, comments: 8 },
+
   // ── 2026-08-12 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 944, symbol: "NVDA", nickname: "익명_2266", holdingLabel: "관심종목",
     content: "NVDA + SPCX 2,600억 딜?? Q1 2027 첫 배치·10년 계약. 어제 5,000억 컨소시엄이랑 별개로 이 규모라는게 진짜 실화야",

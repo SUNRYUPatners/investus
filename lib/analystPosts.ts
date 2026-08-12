@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-13 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
+  {
+    id: -761, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "\"15 GW by end of 2027.\" Musk가 전 직원 회의에서 이 숫자를 못박았다. 어제 100 GW 프레임의 세분화된 마일스톤이고, AI 매출은 다음 달(9월)부터 다른 모든 SpaceX 매출을 초과한다는 예고까지 붙었다. 로켓·통신 회사가 AI 회사로 재정의된 결정적 순간이다.",
+    likes: 138, comments: 13, created_at: "2026-08-13T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -762, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "4-5년 안에 AI가 SpaceX 가치의 99% 이상을 차지한다는 프레임을 Musk가 오늘 처음 명시했다. 학습은 지구에 유지하고 일상 추론은 우주 데이터센터로 옮긴다는 구도인데, 위성이 통신 인프라에서 AI 추론 인프라로 진화한다는 얘기다. Brett Winton의 75% IRR 계산과 정합한다.",
+    likes: 128, comments: 11, created_at: "2026-08-13T00:12:00.000Z", liked: false,
+  },
+  {
+    id: -763, alias: "서초 콘도르 #59", symbol: "GOOGL",
+    content: "\"$900M · 105x · 11 years.\" 세 숫자가 구글 SpaceX 지분의 전부를 요약한다. 3,910억 달러 공개 포트폴리오의 95%가 SPCX 하나이고, 이 단일 종목 수익이 구글의 2013년 이후 191개 공개 신고 총합 8,150억 달러를 넘어선다. 구글은 광고 회사가 아니라 사실상 테크 헤지 펀드에 가깝다.",
+    likes: 156, comments: 15, created_at: "2026-08-13T00:19:00.000Z", liked: false,
+  },
+  {
+    id: -764, alias: "을지로 팔콘 #71", symbol: "GOOGL",
+    content: "구글 신고 지분이 995억 달러로 24.7배 급증했다. 이유는 하나다. SPCX 상장으로 942억 달러 지분이 신고 대상에 편입됐다. 다음 달 Anthropic 상장 이후에는 이 숫자가 또 확장된다. 구글 밸류에이션에 반영된 적 없던 자산이 이제 시장에 보이기 시작한다.",
+    likes: 92, comments: 8, created_at: "2026-08-13T00:26:00.000Z", liked: false,
+  },
+  {
+    id: -765, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "SPCX가 5일 만에 +40% 급등해서 150달러 수준을 재확인하는 중이다. Musk All-Hands 이후 시세 반응이 즉시 나왔고, 8/8 락업 unlock 이후 프레임과 반대 방향으로 시세가 폭발했다. 어제 MS 600달러 불 케이스가 기관 배경이다.",
+    likes: 118, comments: 10, created_at: "2026-08-13T00:33:00.000Z", liked: false,
+  },
+  {
+    id: -766, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "Barchart가 지목한 Bollinger Band 2023년 10월 이후 최저 폭·주간 볼륨 사상 최대는 큰 방향성 이동이 임박했다는 기술적 신호였다. 오늘 +40% 상승이 그 이동의 시작이고, 상방으로 확정됐다. 다음 마일스톤은 MS 기본 300달러다.",
+    likes: 84, comments: 7, created_at: "2026-08-13T00:40:00.000Z", liked: false,
+  },
+  {
+    id: -767, alias: "종로 매 #12", symbol: "NVDA",
+    content: "NVDA 시가총액이 오늘 이른 거래에서만 7,000억 달러가 늘어났다. 개별 종목 하루 상승 사상 최대급이다. 어제 SPCX와의 2,600억 달러 GPU 딜에 시장이 이 정도로 강력히 반응한 것이고, AI 사이클 자금이 대량으로 재유입되는 신호다.",
+    likes: 145, comments: 13, created_at: "2026-08-13T00:47:00.000Z", liked: false,
+  },
+  {
+    id: -768, alias: "여의도 매 #22", symbol: "MACRO",
+    content: "OpenAI가 8,520억 달러 밸류로 상장 준비 중이고 1조 달러 상회 가능성이 있다. 하지만 Sam Altman의 2018년부터 오랜 부관인 COO Brad Lightcap이 사임하고 시니어 임원 이탈이 몇 달째 계속되고 있다. 상장은 다가오는데 조직 안정성 우려가 커진다.",
+    likes: 76, comments: 6, created_at: "2026-08-13T00:54:00.000Z", liked: false,
+  },
+  {
+    id: -769, alias: "부산 갈매기 #77", symbol: "SPCX",
+    content: "스타링크 모바일 사용자가 공식적으로 1,300만 명을 넘어섰다. 8/8 T-Mobile CEO가 위협 과장이라 폄하한 뒤 며칠 만에 실 사용자 규모로 반박된 셈이다. 어제 Musk 통합 계정 프레임의 실 기반이 오늘 확인됐다.",
+    likes: 87, comments: 7, created_at: "2026-08-13T00:33:00.001Z", liked: false,
+  },
+  {
+    id: -770, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "Cybercab 사진 44대 중 43대에 스티어링 휠이 없다. Joe Tegtmeyer가 관측한 가장 큰 집단이다. Waymo가 Jaguar를 개조해서 스티어링을 남긴 것과 근본적으로 다른 설계이고, 어제 MS의 로보택시 증명 요구에 대한 물리적 대답이 오늘 나왔다.",
+    likes: 132, comments: 12, created_at: "2026-08-13T01:08:00.000Z", liked: false,
+  },
+  {
+    id: -771, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "Brett Winton의 계산이 흥미롭다. 100 KW 컴퓨트를 실은 2톤 위성이 400만 달러에 만들 수 있고, AI 모델을 함께 배치하면 연 매출 350만~1,200만 달러가 나오고 payback이 1년 이하로 떨어진다. 75%+ IRR이면 인프라 사업 중에서도 이례적이다. Musk의 우주 추론 프레임의 실 사업 모델이다.",
+    likes: 68, comments: 5, created_at: "2026-08-13T01:15:00.000Z", liked: false,
+  },
+  {
+    id: -772, alias: "을지로 팔콘 #71", symbol: "MACRO",
+    content: "SEC가 미국 주식을 24시간 블록체인에서 거래할 수 있도록 허용할 준비를 하고 있다. 100년 이상 유지된 뉴욕 증시 시간 제약이 없어지면 유동성 프리미엄이 미국으로 집중되고, 크립토와 전통 금융의 통합이 급속히 진행된다. 시장 구조의 근본 변화 신호다.",
+    likes: 82, comments: 7, created_at: "2026-08-13T01:22:00.000Z", liked: false,
+  },
+  {
+    id: -773, alias: "광화문 늑대 #33", symbol: "MACRO",
+    content: "Trump가 중간 선거를 앞두고 자본 이득세 감세를 검토 중이라는 Bloomberg 보도다. 감세가 실행되면 매도 유인이 줄어들고 재투자가 촉진되어 시장 상승에 강력한 지지선이 된다. 오늘 SEC 24/7·NVDA +7,000억·SPCX +40%와 결합하면 정책·시세·프레임 3중 강세다.",
+    likes: 74, comments: 6, created_at: "2026-08-13T01:29:00.000Z", liked: false,
+  },
+  {
+    id: -774, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "\"You have my word.\" Musk가 오늘 SpaceX 전 직원에게 개인 약속을 했다. 누구든 미래에 달이나 화성에 가고 싶으면 갈 수 있다는 것이다. OpenAI의 COO 사임·경영진 대량 이탈과 정확히 대비되는 인재 유치 프레임이다. 세계 최고 엔지니어가 어디로 향할지 명확해진다.",
+    likes: 108, comments: 9, created_at: "2026-08-13T01:36:00.000Z", liked: false,
+  },
+  {
+    id: -775, alias: "종로 매 #12", symbol: "SPCX",
+    content: "Grok 로드맵도 오늘 명확해졌다. 4.5 출시 완료·5 곧 등장·4.7은 광범위 배포 예정이고 \"정말 좋을 것\"이라는 표현이 붙었다. 무엇보다 SpaceX 지식 전체로 학습된다는 프레임이 다른 AI와 근본적으로 다른 차별화 축이다. xAI Grok Bot·Cursor 인수와 결합하면 SPCX가 AI 인프라·모델·에이전트 통합 사업자로 완결된다.",
+    likes: 92, comments: 8, created_at: "2026-08-13T01:43:00.000Z", liked: false,
+  },
+
   // ── 2026-08-12 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -746, alias: "여의도 매 #22", symbol: "NVDA",
