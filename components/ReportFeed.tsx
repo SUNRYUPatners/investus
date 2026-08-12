@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { useLocale } from "@/contexts/LocaleContext";
 import { ShareButton } from "@/components/ShareButton";
+import { RelatedLearnLinks } from "@/components/RelatedLearnLinks";
 import { SUBSCRIPTION, isFreeReport, formatSubPrice, proPriceSummaryKo } from "@/lib/subscription";
 
 // 구독 게이팅 — lib/subscription.ts SUBSCRIPTION.enabled
@@ -511,6 +512,7 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
               </p>
             );
           })}
+          <RelatedLearnLinks title={displayTitle} summary={displaySummary} />
         </div>
       )}
     </div>

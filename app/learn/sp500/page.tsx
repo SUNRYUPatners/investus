@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "S&P500 완전 가이드 — 미국 경제의 온도계를 읽는 법 | 인베스트어스",
@@ -46,6 +47,7 @@ export default function SP500Page() {
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
 
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
@@ -266,6 +268,7 @@ export default function SP500Page() {
             ⚠️ 이 글은 교육 목적의 투자 정보로, 특정 투자 상품의 매수·매도 권유가 아닙니다.
             과거 수익률은 미래 성과를 보장하지 않으며, 모든 투자는 원금 손실의 위험이 있습니다.
           </div>
+        </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">

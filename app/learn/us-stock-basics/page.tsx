@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "미국주식 투자 완전 입문 가이드 — 처음 시작하는 투자자를 위한 A to Z | 인베스트어스",
@@ -46,6 +47,7 @@ export default function UsStockBasicsPage() {
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
 
           {/* Section 1 */}
           <section>
@@ -307,6 +309,7 @@ export default function UsStockBasicsPage() {
             ⚠️ 이 글은 교육 목적의 투자 정보로, 특정 종목의 매수·매도 권유가 아닙니다.
             투자 결과에 대한 책임은 투자자 본인에게 있으며, 모든 투자는 원금 손실의 위험이 있습니다.
           </div>
+        </LearnArticleWithAds>
         </article>
 
         {/* Next articles */}

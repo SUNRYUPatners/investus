@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "투자 심리·행동재무 가이드 — FOMO·손실 회피 | 인베스트어스",
@@ -29,6 +30,7 @@ export default function InvestingPsychologyPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>FOMO (놓칠까 두려움)</h2>
             <p className="text-sm leading-relaxed">NVDA +200% 뉴스 후 올인. 이미 대부분의 기대가 가격에 반영됐을 수 있습니다. &ldquo;이번만&rdquo;은 누적하면 레버리지·테마 집중이 됩니다.</p>
@@ -62,6 +64,7 @@ export default function InvestingPsychologyPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 투자 심리 상담·치료가 아닙니다.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

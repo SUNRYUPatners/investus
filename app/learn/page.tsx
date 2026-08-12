@@ -3,11 +3,13 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronRight } from "lucide-react";
 import { LearnHubCards } from "@/components/LearnHubCards";
+import { LEARN_ARTICLES, LEARN_SERIES } from "@/lib/learnArticles";
+import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 
 export const metadata: Metadata = {
   title: "투자 지식 허브 — 미국주식·ETF·세금·밸류에이션 가이드 | 인베스트어스",
   description:
-    "미국주식 입문, ETF, REITs, 옵션, 기술적 분석, 원자재·암호화폐, ISA·연금, 채권·금리, PER·배당, 재무제표, 가치투자, DCA, 세금까지 Investus 오리지널 심화 가이드.",
+    "미국주식 입문, ETF, REITs, 옵션, 실적시즌, ISA·연금, 매크로, 체크리스트까지 Investus 오리지널 심화 가이드.",
   alternates: { canonical: "https://www.investus.kr/learn" },
   openGraph: {
     title: "투자 지식 허브 | 인베스트어스 Investus",
@@ -36,12 +38,56 @@ export default function LearnPage() {
             투자 지식 허브
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            미국주식 투자에 필요한 개념을 Investus 편집팀이 직접 쓴 심화 가이드로 정리했습니다.
-            입문부터 원자재·암호화폐, ISA·연금, 밸류에이션·매크로·세금까지 한곳에서 읽을 수 있습니다.
+            Investus 편집팀이 쓴 심화 가이드 {LEARN_ARTICLES.length}편.
+            시리즈로 묶었으니 입문 → 세금 → 매크로 순으로 읽어도 됩니다.
           </p>
         </div>
 
-        <LearnHubCards />
+        <div className="mb-6">
+          <TodaysGuideCard />
+        </div>
+
+        <div className="mb-8 flex flex-col gap-3">
+          <p className="text-[10px] font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+            시리즈
+          </p>
+          {LEARN_SERIES.map((s) => {
+            const count = LEARN_ARTICLES.filter((a) => a.series === s.id).length;
+            return (
+              <a
+                key={s.id}
+                href={`#series-${encodeURIComponent(s.id)}`}
+                className="rounded-xl border px-4 py-3 flex items-center justify-between active:opacity-80"
+                style={{ background: "var(--card)", borderColor: "var(--border)", textDecoration: "none" }}
+              >
+                <div>
+                  <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{s.title}</p>
+                  <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>{s.blurb} · {count}편</p>
+                </div>
+                <ChevronRight className="w-4 h-4 opacity-40" style={{ color: "var(--muted)" }} />
+              </a>
+            );
+          })}
+        </div>
+
+        {LEARN_SERIES.map((s) => {
+          const articles = LEARN_ARTICLES.filter((a) => a.series === s.id);
+          if (articles.length === 0) return null;
+          return (
+            <section key={s.id} id={`series-${s.id}`} className="mb-10 scroll-mt-20">
+              <div className="mb-3">
+                <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{s.title}</h2>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>{s.blurb}</p>
+              </div>
+              <LearnHubCards articles={articles} />
+            </section>
+          );
+        })}
+
+        <div className="mt-2 mb-4">
+          <h2 className="text-sm font-bold font-syne mb-3" style={{ color: "var(--text)" }}>전체 가이드</h2>
+          <LearnHubCards />
+        </div>
 
         <div className="mt-6 rounded-2xl p-4 text-center border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>

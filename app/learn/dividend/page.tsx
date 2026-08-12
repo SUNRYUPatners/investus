@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "배당 투자 가이드 — 배당수익률·배당귀족·DRIP | 인베스트어스",
@@ -29,6 +30,7 @@ export default function DividendPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>배당수익률</h2>
             <p className="text-sm leading-relaxed">배당수익률 = 연간 배당금 ÷ 주가 × 100%. 주가 $100, 연 $4 배당이면 4%.</p>
@@ -57,6 +59,7 @@ export default function DividendPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 배당 정책은 기업 재량이며 삭감·중단 가능.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

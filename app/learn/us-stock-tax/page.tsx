@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "한국 거주자 미국주식 세금·계좌 가이드 — 양도세·배당원천징수 | 인베스트어스",
@@ -43,6 +44,7 @@ export default function UsStockTaxPage() {
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>어디에 계좌를 열까</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -154,6 +156,7 @@ export default function UsStockTaxPage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 본 페이지는 세무·법률 자문이 아닙니다. 세법 개정으로 내용이 달라질 수 있으며, 개별 상황에 대한 책임은 이용자에게 있습니다.
           </div>
+        </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">

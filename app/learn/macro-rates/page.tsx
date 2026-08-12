@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "CPI·연준(FOMC)·금리 가이드 | 인베스트어스",
@@ -29,6 +30,7 @@ export default function MacroRatesPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>CPI (소비자물가지수)</h2>
             <p className="text-sm leading-relaxed mb-2">가계가 사는 물가 basket의 변화. 인플레↑ → 연준이 금리를 올릴 압력.</p>
@@ -59,6 +61,7 @@ export default function MacroRatesPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 매크로 예측·단기 매매 권유 아님.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

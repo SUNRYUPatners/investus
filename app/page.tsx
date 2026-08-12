@@ -12,6 +12,7 @@ import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
 import { HomeAIInsight } from "@/components/HomeAIInsight";
 import { FirstVisitBanner } from "@/components/FirstVisitBanner";
+import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 import { getLocale } from "@/lib/getLocale";
 
 export default async function HomePage() {
@@ -34,6 +35,11 @@ export default async function HomePage() {
 
             {/* 첫 방문자 가이드 배너 */}
             <FirstVisitBanner />
+
+            {/* 오늘의 심화 가이드 */}
+            <section className="px-4 lg:px-0 pt-3">
+              <TodaysGuideCard locale={locale} />
+            </section>
 
             {/* 내 보유종목 (포트폴리오에 종목이 있을 때만 표시) */}
             <PortfolioWidget />

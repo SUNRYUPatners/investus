@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "미국주식 포트폴리오 분산 투자 전략 — 흔들리지 않는 포트폴리오 구성법 | 인베스트어스",
@@ -44,6 +45,7 @@ export default function PortfolioStrategyPage() {
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
 
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
@@ -265,6 +267,7 @@ export default function PortfolioStrategyPage() {
             개인의 투자 성향, 목표, 상황에 따라 최적의 구성이 다를 수 있으며,
             모든 투자는 원금 손실의 위험이 있습니다.
           </div>
+        </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">

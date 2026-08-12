@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "재무제표 읽기 — 손익·재무·현금흐름 | 인베스트어스",
@@ -29,6 +30,7 @@ export default function FinancialStatementsPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>세 장의 표</h2>
             <div className="flex flex-col gap-2">
@@ -76,6 +78,7 @@ export default function FinancialStatementsPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 회계 해석·투자 판단은 본인 책임입니다.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

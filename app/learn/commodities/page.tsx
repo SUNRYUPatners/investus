@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "원자재 투자 가이드 — 금·유가·농산물·ETF | 인베스트어스",
@@ -28,6 +29,7 @@ export default function CommoditiesPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>원자재란</h2>
             <p className="text-sm leading-relaxed mb-2">
@@ -76,6 +78,7 @@ export default function CommoditiesPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 원자재·선물 ETF는 변동성이 크며 특정 상품 권유가 아닙니다.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

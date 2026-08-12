@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "채권과 금리 — 10년물·역수익률 가이드 | 인베스트어스",
@@ -28,6 +29,7 @@ export default function BondsPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>채권이란</h2>
             <p className="text-sm leading-relaxed mb-2">국가·기업이 돈을 빌리며 발행하는 차용증. 만기까지 이자(쿠폰)와 원금 상환. 주식은 소유권, 채권은 채권.</p>
@@ -59,6 +61,7 @@ export default function BondsPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 채권도 원금 변동·신용 리스크가 있습니다.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

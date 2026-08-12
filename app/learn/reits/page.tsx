@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "REITs 부동산 ETF 가이드 — 금리·배당·VNQ | 인베스트어스",
@@ -28,6 +29,7 @@ export default function ReitsPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>REIT란</h2>
             <p className="text-sm leading-relaxed mb-2">
@@ -76,6 +78,7 @@ export default function ReitsPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 리츠·부동산 ETF 특정 종목 권유가 아닙니다.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

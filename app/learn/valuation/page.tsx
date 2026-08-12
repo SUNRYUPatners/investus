@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "PER·PBR·기업 가치 평가 가이드 | 인베스트어스",
@@ -29,6 +30,7 @@ export default function ValuationPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>PER (주가수익비율)</h2>
             <p className="text-sm leading-relaxed mb-2">PER = 주가 ÷ EPS(주당순이익). &ldquo;이익의 몇 배를 주고 사는가&rdquo;입니다.</p>
@@ -73,6 +75,7 @@ export default function ValuationPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 저PER·저PBR이 항상 매수 신호는 아닙니다.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

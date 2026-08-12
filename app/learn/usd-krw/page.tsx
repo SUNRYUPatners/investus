@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "환율과 미국주식 — 원/달러가 수익률을 바꾸는 방식 | 인베스트어스",
@@ -42,6 +43,7 @@ export default function UsdKrwPage() {
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>두 개의 수익률</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -128,6 +130,7 @@ export default function UsdKrwPage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 환율 예측·환전 타이밍 권유가 아니며 원금 손실이 가능합니다.
           </div>
+        </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">

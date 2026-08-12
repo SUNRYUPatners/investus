@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "복리와 장기 투자 — 시간이 수익을 만드는 원리 | 인베스트어스",
@@ -28,6 +29,7 @@ export default function CompoundPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>단리 vs 복리</h2>
             <p className="text-sm leading-relaxed mb-2">단리: 이자만 받고 원금 고정. 복리: 이자까지 다시 투자해 다음 기간 수익의 기준이 커짐.</p>
@@ -58,6 +60,7 @@ export default function CompoundPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 과거 수익률·복리 예시는 미래 보장 아님.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

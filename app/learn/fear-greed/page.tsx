@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "공포탐욕지수 완전 가이드 — 시장 심리로 투자 타이밍 잡기 | 인베스트어스",
@@ -45,6 +46,7 @@ export default function FearGreedPage() {
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
 
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
@@ -288,6 +290,7 @@ export default function FearGreedPage() {
             ⚠️ 공포&탐욕 지수는 참고 지표일 뿐, 특정 매수·매도 시점을 보장하지 않습니다.
             모든 투자는 원금 손실의 위험이 있으며, 투자 결정의 최종 책임은 투자자 본인에게 있습니다.
           </div>
+        </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">

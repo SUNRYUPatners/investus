@@ -30,7 +30,7 @@ const NOTIFICATIONS_KO: NotiConfig[] = [
   { key: "report_publish", emoji: "📋", label: "리포트 업데이트 알림", desc: "Investus 새 리포트·인사이트 발행 시 즉시 알림", color: "#c084fc", pushEnabled: true },
   { key: "like_comment",   emoji: "💬", label: "좋아요·댓글 알림",   desc: "내 게시글에 좋아요·댓글이 달릴 때",    color: "#fb923c" },
   { key: "new_subscriber", emoji: "⭐", label: "구독 알림",          desc: "내 크리에이터 채널 신규 구독자",       color: "#fbbf24" },
-  { key: "price_alert",    emoji: "📈", label: "가격 알림",          desc: "관심종목 목표가 도달 시 알림 (준비 중)", color: "#f472b6", comingSoon: true },
+  { key: "price_alert",    emoji: "📈", label: "가격 알림",          desc: "관심종목 목표가 도달 시 알림 — 지금 신청하면 오픈 시 우선 안내", color: "#f472b6", pushEnabled: true },
 ];
 
 const NOTIFICATIONS_EN: NotiConfig[] = [
@@ -39,7 +39,7 @@ const NOTIFICATIONS_EN: NotiConfig[] = [
   { key: "report_publish", emoji: "📋", label: "Report Update Alert", desc: "Instant alert when new Investus reports publish", color: "#c084fc", pushEnabled: true },
   { key: "like_comment",   emoji: "💬", label: "Likes & Comments",    desc: "When your posts receive likes or comments", color: "#fb923c" },
   { key: "new_subscriber", emoji: "⭐", label: "New Subscriber",      desc: "New subscriber on your creator channel",    color: "#fbbf24" },
-  { key: "price_alert",    emoji: "📈", label: "Price Alert",         desc: "Alert when watchlist reaches target price (coming soon)", color: "#f472b6", comingSoon: true },
+  { key: "price_alert",    emoji: "📈", label: "Price Alert",         desc: "Watchlist target alerts — opt in for launch notice", color: "#f472b6", pushEnabled: true },
 ];
 
 const STORAGE_KEY = "investus_notifications";
@@ -283,8 +283,8 @@ export default function NotificationsPage() {
         <div className="rounded-xl px-4 py-3 border" style={{ background: "rgba(255,255,255,0.02)", borderColor: "var(--border)" }}>
           <p className="text-[10px] leading-relaxed whitespace-pre-line" style={{ color: "var(--muted)" }}>
             {isKo
-              ? "· 알림은 브라우저 또는 PWA 앱 설치 시 수신됩니다.\n· 리포트 알림(PUSH)은 앱이 꺼져 있어도 실시간으로 전송됩니다.\n· 장시작·장마감 알림은 미국 동부 시간 기준으로 발송됩니다.\n· 가격 알림 기능은 곧 출시 예정입니다."
-              : "· Notifications are received in your browser or installed PWA.\n· Report alerts (PUSH) are delivered even when the app is closed.\n· Market open/close alerts are sent based on US Eastern Time.\n· Price alert feature is coming soon."}
+              ? "· 알림은 브라우저 또는 PWA 앱 설치 시 수신됩니다.\n· 리포트 알림(PUSH)은 앱이 꺼져 있어도 실시간으로 전송됩니다.\n· 장시작·장마감 알림은 미국 동부 시간 기준으로 발송됩니다.\n· 가격 알림은 신청해 두면 기능 오픈 시 우선 안내합니다."
+              : "· Notifications are received in your browser or installed PWA.\n· Report alerts (PUSH) are delivered even when the app is closed.\n· Market open/close alerts are sent based on US Eastern Time.\n· Opt in to price alerts to get notified when the feature launches."}
           </p>
         </div>
 

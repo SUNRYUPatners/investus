@@ -9,6 +9,7 @@ import { EbookProductSection } from "@/components/PaidProductsSection";
 import { getLocale } from "@/lib/getLocale";
 import { getT } from "@/lib/i18n";
 import { LEARN_ARTICLES } from "@/lib/learnArticles";
+import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 
 export const metadata: Metadata = {
   title: "투자 인사이트 & 리포트 | 인베스트어스",
@@ -146,6 +147,7 @@ export default async function InsightPage() {
         <section className="px-4 mb-6"><InsightReportSection /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-4">{LearnBanner}</section>
+        <section className="px-4 mb-4"><TodaysGuideCard locale={locale} /></section>
         <section className="px-4 mb-2"><AdFitStrip /></section>
         <section className="px-4 mb-4"><AdFitBanner /></section>
         <section className="px-4 mb-6">
@@ -203,6 +205,7 @@ export default async function InsightPage() {
             <AdFitStrip />
             {EduBanner}
             {LearnBanner}
+            <TodaysGuideCard locale={locale} />
             <EbookProductSection />
           </div>
           <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">

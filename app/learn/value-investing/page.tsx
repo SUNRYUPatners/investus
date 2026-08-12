@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "가치투자·대가 전략 가이드 — 버핏·그레이엄·린치·보글 | 인베스트어스",
@@ -29,6 +30,7 @@ export default function ValueInvestingPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>워런 버핏 — 좋은 기업을 합리적 가격에</h2>
             <p className="text-sm leading-relaxed">
@@ -95,6 +97,7 @@ export default function ValueInvestingPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적입니다. 과거 대가의 성과는 미래를 보장하지 않으며, 특정 종목·전략 권유가 아닙니다.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

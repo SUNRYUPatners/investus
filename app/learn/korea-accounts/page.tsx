@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "ISA·연금저축·IRP 가이드 — 한국 계좌와 미국주식 | 인베스트어스",
@@ -28,6 +29,7 @@ export default function KoreaAccountsPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>먼저 구분하기</h2>
             <ul className="list-disc pl-5 text-sm leading-relaxed space-y-1">
@@ -119,6 +121,7 @@ export default function KoreaAccountsPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적이며 세무·법률 자문이 아닙니다. 한도·세율·상품은 정책·증권사별로 다르니 개설 전 반드시 확인하세요.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

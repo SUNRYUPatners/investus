@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "선물·프리마켓 읽는 법 | 인베스트어스",
@@ -28,6 +29,7 @@ export default function FuturesPage() {
           </p>
         </div>
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>선물(Futures)이란</h2>
             <p className="text-sm leading-relaxed mb-2">미래 특정일·가격에 자산을 사고팔겠다는 계약. 지수·원유·금 등. 정규장이 닫혀도 거래되어 &ldquo;24시간 시장 기대&rdquo;를 반영.</p>
@@ -54,6 +56,7 @@ export default function FuturesPage() {
           <div className="rounded-xl p-4 text-[11px]" style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적. 선물·프리마켓 타이밍 매매 권유 아님.
           </div>
+        </LearnArticleWithAds>
         </article>
       </main>
     </div>

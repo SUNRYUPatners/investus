@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "버핏지수 완전 가이드 — 시장 고평가 여부 판단하는 법 | 인베스트어스",
@@ -44,6 +45,7 @@ export default function BuffettIndicatorPage() {
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
 
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>
@@ -220,6 +222,7 @@ export default function BuffettIndicatorPage() {
             ⚠️ 이 글은 교육 목적의 투자 정보로, 특정 매매 시점을 추천하지 않습니다.
             버핏지수는 참고 지표일 뿐이며, 모든 투자 결정의 책임은 투자자 본인에게 있습니다.
           </div>
+        </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">

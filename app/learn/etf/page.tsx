@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronLeft } from "lucide-react";
+import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 
 export const metadata: Metadata = {
   title: "미국 ETF 완전 가이드 — SPY·VOO·QQQ 차이부터 고르는 법 | 인베스트어스",
@@ -42,6 +43,7 @@ export default function EtfGuidePage() {
         </div>
 
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
+          <LearnArticleWithAds>
           <section>
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>ETF란 무엇인가</h2>
             <p className="text-sm leading-relaxed mb-3">
@@ -184,6 +186,7 @@ export default function EtfGuidePage() {
             style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", color: "rgba(251,191,36,0.8)" }}>
             ⚠️ 교육 목적 정보이며 특정 ETF 매수·매도 권유가 아닙니다. 과거 성과는 미래를 보장하지 않으며 원금 손실이 가능합니다.
           </div>
+        </LearnArticleWithAds>
         </article>
 
         <div className="mt-8">
