@@ -35,7 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: base,                          lastModified: now, changeFrequency: "always",  priority: 1    },
     { url: `${base}/insight`,             lastModified: now, changeFrequency: "daily",   priority: 0.95 },
-    { url: `${base}/insight/basics`,      lastModified: now, changeFrequency: "weekly",  priority: 0.9  },
     { url: `${base}/search`,              lastModified: now, changeFrequency: "always",  priority: 0.9  },
     { url: `${base}/wall`,                lastModified: now, changeFrequency: "always",  priority: 0.85 },
     { url: `${base}/portfolio`,           lastModified: now, changeFrequency: "always",  priority: 0.8  },
@@ -51,8 +50,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/more/terms`,          lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
     { url: `${base}/more/refund`,         lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
     { url: `${base}/more/disclaimer`,     lastModified: now, changeFrequency: "yearly",  priority: 0.4  },
-    // 투자 지식 허브
-    { url: `${base}/learn`,                        lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    // 투자 지식 허브 (기초·대가 인라인 + 심화 가이드)
+    { url: `${base}/learn`,                        lastModified: now, changeFrequency: "weekly",  priority: 0.9  },
     { url: `${base}/learn/us-stock-basics`,        lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/etf`,                    lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/nasdaq`,                 lastModified: now, changeFrequency: "monthly", priority: 0.8  },

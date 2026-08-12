@@ -58,7 +58,7 @@ export default async function InsightPage() {
             </span>
           </div>
           <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 지식 허브</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>S&P500·공포탐욕·버핏지수·포트폴리오 전략 전체 보기</p>
+          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>기초·대가 전략 · S&P500·ETF·세금 가이드 한곳에서</p>
         </div>
         <span className="text-lg flex-shrink-0" style={{ color: "var(--muted)" }}>›</span>
       </div>

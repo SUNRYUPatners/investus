@@ -2,31 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ChevronRight } from "lucide-react";
+import { InvestmentAllExpanded } from "@/components/InvestmentArticles";
 
 export const metadata: Metadata = {
-  title: "투자 지식 허브 — 미국주식 기초부터 ETF·세금·환율까지 | 인베스트어스",
+  title: "투자 지식 허브 — 기초·대가 전략부터 ETF·세금까지 | 인베스트어스",
   description:
-    "미국주식 입문, S&P500, 나스닥, ETF, DCA, 세금, 환율, 섹터, 공포탐욕·버핏지수, 포트폴리오 전략까지 Investus가 직접 쓴 오리지널 가이드를 무료로 읽으세요.",
+    "주식·채권·ETF·복리 기초와 워런 버핏·피터 린치 등 대가 전략, 미국주식 입문, S&P500, 나스닥, DCA, 세금, 환율, 섹터까지 Investus 오리지널 가이드.",
   alternates: { canonical: "https://www.investus.kr/learn" },
   openGraph: {
     title: "투자 지식 허브 | 인베스트어스 Investus",
-    description: "미국주식 입문부터 ETF·세금·환율·섹터까지 — 오리지널 투자 지식",
+    description: "투자 기초·대가 전략과 미국주식 가이드를 한 페이지에서",
     url: "https://www.investus.kr/learn",
     type: "website",
   },
 };
 
 const ARTICLES = [
-  {
-    href: "/insight/basics",
-    emoji: "📚",
-    title: "투자 기초 & 대가 전략",
-    desc: "주식·채권·ETF·복리 등 핵심 투자 개념부터 워런 버핏·피터 린치·레이 달리오 등 전설적 투자가들의 철학까지 한곳에서.",
-    tag: "기초+대가",
-    tagColor: "#d4af37",
-    minutes: "전체 보기",
-    featured: true,
-  },
   {
     href: "/learn/us-stock-basics",
     emoji: "🇺🇸",
@@ -133,14 +124,12 @@ export default function LearnPage() {
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
       <main className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
-        {/* Back */}
         <div className="pt-4 pb-2">
           <Link href="/more" className="inline-flex items-center gap-1 text-xs" style={{ color: "var(--muted)" }}>
             더보기
           </Link>
         </div>
 
-        {/* Header */}
         <div className="mb-6">
           <p className="text-[11px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "var(--mint)" }}>
             INVESTUS LEARN
@@ -149,47 +138,34 @@ export default function LearnPage() {
             투자 지식 허브
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-            미국주식 투자에 필요한 핵심 개념과 전략을 Investus 편집팀이 직접 쓴 오리지널 글로 학습하세요.
-            입문·ETF·세금·환율·섹터까지 초보자도 읽을 수 있게 풀어 두었습니다.
+            투자 기초·대가 전략부터 미국주식 입문·ETF·세금·환율까지.
+            다른 페이지로 나가지 않고 이 화면에서 바로 펼쳐 읽을 수 있습니다.
           </p>
         </div>
 
-        {/* Articles */}
-        <div className="flex flex-col gap-3">
-          {ARTICLES.map((a) => (
-            <Link key={a.href} href={a.href} style={{ textDecoration: "none" }}>
-              {/* Featured card — 투자기초&대가전략 */}
-              {"featured" in a && a.featured ? (
-                <div
-                  className="rounded-2xl overflow-hidden border active:opacity-80 transition-opacity"
-                  style={{ background: "linear-gradient(135deg, #1a1400 0%, #0d0b00 60%, #0a0c10 100%)", borderColor: "rgba(212,175,55,0.35)" }}
-                >
-                  <div className="px-4 py-4 flex items-center gap-4">
-                    <div className="flex gap-1.5 flex-shrink-0">
-                      <div className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl"
-                        style={{ background: "rgba(212,175,55,0.12)", border: "1px solid rgba(212,175,55,0.25)" }}>
-                        {a.emoji}
-                      </div>
-                      <div className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl"
-                        style={{ background: "rgba(212,175,55,0.08)", border: "1px solid rgba(212,175,55,0.18)" }}>
-                        🏆
-                      </div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-1.5 mb-1.5">
-                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-                          style={{ background: "rgba(212,175,55,0.15)", color: "#d4af37" }}>
-                          {a.tag}
-                        </span>
-                        <span className="text-[9px]" style={{ color: "var(--muted)" }}>{a.minutes}</span>
-                      </div>
-                      <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>{a.title}</p>
-                      <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{a.desc}</p>
-                    </div>
-                    <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-40" style={{ color: "#d4af37" }} />
-                  </div>
-                </div>
-              ) : (
+        {/* 투자 기초 & 대가 전략 — 인라인 (별도 진입 없음) */}
+        <section id="basics" className="mb-10 scroll-mt-20">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.95)" }}>
+              투자 기초
+            </span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+              style={{ background: "rgba(212,175,55,0.15)", color: "#d4af37" }}>
+              대가 전략
+            </span>
+          </div>
+          <InvestmentAllExpanded />
+        </section>
+
+        {/* 심화 가이드 글 목록 */}
+        <section className="mb-6">
+          <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+            심화 가이드
+          </h2>
+          <div className="flex flex-col gap-3">
+            {ARTICLES.map((a) => (
+              <Link key={a.href} href={a.href} style={{ textDecoration: "none" }}>
                 <div
                   className="rounded-2xl p-4 border flex items-start gap-4 active:opacity-80 transition-opacity"
                   style={{ background: "var(--card)", borderColor: "var(--border)" }}
@@ -217,12 +193,11 @@ export default function LearnPage() {
                   </div>
                   <ChevronRight className="w-4 h-4 flex-shrink-0 mt-1 opacity-30" style={{ color: "var(--muted)" }} />
                 </div>
-              )}
-            </Link>
-          ))}
-        </div>
+              </Link>
+            ))}
+          </div>
+        </section>
 
-        {/* Footer note */}
         <div className="mt-6 rounded-2xl p-4 text-center border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>
             AI 투자비서에게 바로 물어보세요
