@@ -89,6 +89,17 @@ a, button, [role="button"] {
   }
 }
 
+/* Sticky ad dismissed — leave room for BottomNav (mobile) only */
+html[data-sticky-ad="hidden"] .pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 3.5rem);
+}
+
+@media (min-width: 1024px) {
+  html[data-sticky-ad="hidden"] .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 1rem);
+  }
+}
+
 /* iOS PWA: permanent background fill below the nav — covers the gap that appears
    when position:fixed nav momentarily floats during scroll momentum */
 @supports (-webkit-touch-callout: none) {

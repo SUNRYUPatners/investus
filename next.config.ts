@@ -122,6 +122,16 @@ const nextConfig: NextConfig = {
         destination: "/learn",
         permanent: true,
       },
+      {
+        source: "/study",
+        destination: "/learn",
+        permanent: true,
+      },
+      {
+        source: "/study/",
+        destination: "/learn",
+        permanent: true,
+      },
     ];
   },
   async headers() {

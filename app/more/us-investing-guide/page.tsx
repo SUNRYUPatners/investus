@@ -74,7 +74,7 @@ export default async function UsInvestingGuidePage() {
                 </p>
                 <p>
                   <strong style={{ color: "var(--text)" }}>인사이트</strong> — SUNRYU Partners CIO가 작성한 일일 리포트.
-                  뉴스 요약이 아니라 시장·섹터·종목 관점의 분석 글입니다. 오늘자 리포트와 투자 기초·추천 도서·유튜브도 함께 제공합니다.
+                  뉴스 요약이 아니라 시장·섹터·종목 관점의 분석 글입니다. 오늘자 리포트와 추천 도서·유튜브도 함께 제공합니다.
                 </p>
                 <p>
                   <strong style={{ color: "var(--text)" }}>검색·종목</strong> — 티커 검색 후 차트·관련 뉴스·종토방 논의를 확인할 수 있습니다.
@@ -103,8 +103,11 @@ export default async function UsInvestingGuidePage() {
                 <h2 className="text-base font-bold pt-2" style={{ color: "var(--text)" }}>6. 더 깊게 공부하기</h2>
                 <ul className="list-disc pl-5 space-y-1.5">
                   <li><Link href="/learn" className="underline" style={{ color: "var(--mint)" }}>투자 지식 허브 전체</Link></li>
-                  <li><Link href="/learn/us-stock-basics" className="underline" style={{ color: "var(--mint)" }}>미국주식 기초</Link></li>
+                  <li><Link href="/learn/us-stock-basics" className="underline" style={{ color: "var(--mint)" }}>미국주식 입문</Link></li>
+                  <li><Link href="/learn/value-investing" className="underline" style={{ color: "var(--mint)" }}>가치투자·대가 전략</Link></li>
                   <li><Link href="/learn/etf" className="underline" style={{ color: "var(--mint)" }}>미국 ETF (SPY·VOO·QQQ)</Link></li>
+                  <li><Link href="/learn/valuation" className="underline" style={{ color: "var(--mint)" }}>PER·PBR 밸류에이션</Link></li>
+                  <li><Link href="/learn/bonds" className="underline" style={{ color: "var(--mint)" }}>채권과 금리</Link></li>
                   <li><Link href="/learn/nasdaq" className="underline" style={{ color: "var(--mint)" }}>나스닥100·QQQ</Link></li>
                   <li><Link href="/learn/sp500" className="underline" style={{ color: "var(--mint)" }}>S&amp;P500 이해하기</Link></li>
                   <li><Link href="/learn/dca" className="underline" style={{ color: "var(--mint)" }}>적립식 투자(DCA)</Link></li>

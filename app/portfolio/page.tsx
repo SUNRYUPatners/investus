@@ -16,8 +16,7 @@ import type { Holding } from "@/lib/api";
 import { useLocaleCode } from "@/contexts/LocaleContext";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { PortfolioAI } from "@/components/PortfolioAI";
-import { InvestmentAllExpanded } from "@/components/InvestmentArticles";
-import Link from "next/link";
+import { PortfolioLearnHub } from "@/components/PortfolioLearnHub";
 
 // ── Types & Constants ─────────────────────────────────────────────────────────
 
@@ -34,48 +33,6 @@ const BROKERAGES_US = [
   { name: "Fidelity", emoji: "🦅" }, { name: "Schwab", emoji: "🇺🇸" },
   { name: "Robinhood", emoji: "🏹" }, { name: "IBKR", emoji: "🌍" },
 ];
-
-// ── Portfolio learn section (basics + masters list) ───────────────────────────
-
-function PortfolioLearnSection({ locale }: { locale: string }) {
-  return (
-    <section className="mt-2 mb-8">
-      <div className="flex items-center justify-between mb-3">
-        <div>
-          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-            {locale === "ko" ? "투자 기초 & 대가 전략" : "Basics & Masters"}
-          </h2>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-            {locale === "ko"
-              ? "카드를 눌러 내용을 펼쳐 보세요 · 스크롤로 전부 볼 수 있습니다"
-              : "Tap a card to expand · scroll to browse all"}
-          </p>
-        </div>
-        <Link
-          href="/learn"
-          className="text-[11px] font-semibold flex-shrink-0"
-          style={{ color: "var(--mint)", textDecoration: "none" }}
-        >
-          {locale === "ko" ? "지식 허브 →" : "Learn hub →"}
-        </Link>
-      </div>
-      <div className="flex gap-1.5 mb-4">
-        <span className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-          style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.95)" }}>
-          {locale === "ko" ? "투자 기초" : "Basics"}
-        </span>
-        <span className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-          style={{ background: "rgba(212,175,55,0.15)", color: "#d4af37" }}>
-          {locale === "ko" ? "대가 전략" : "Masters"}
-        </span>
-      </div>
-      <InvestmentAllExpanded />
-      <div className="mt-4">
-        <AdFitStrip />
-      </div>
-    </section>
-  );
-}
 
 // ── Formatting helpers ────────────────────────────────────────────────────────
 
@@ -1024,7 +981,7 @@ export default function PortfolioPage() {
           </button>
         </div>
         <div className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
-          <PortfolioLearnSection locale={locale} />
+          <PortfolioLearnHub locale={locale} />
         </div>
       </div>
     );
@@ -1204,9 +1161,9 @@ export default function PortfolioPage() {
           </div>
         </div>
 
-        {/* 투자 기초 & 대가 전략 — 자산 탭 하단 스크롤 목록 */}
-        <div className="lg:col-span-2 order-5">
-          <PortfolioLearnSection locale={locale} />
+        {/* 투자 지식 허브 — 자산 탭 하단 */}
+        <div className="lg:col-span-2 order-5 px-4 pb-10">
+          <PortfolioLearnHub locale={locale} />
         </div>
       </main>
 

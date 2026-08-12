@@ -11,10 +11,10 @@ import { getT } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "투자 인사이트 & 리포트 | 인베스트어스",
-  description: "SUNRYU Partners CIO가 직접 작성한 미국주식 시장 분석 리포트. S&P500·NASDAQ 시장 흐름 분석, 개별 종목 실적·밸류에이션 분석, 투자 기초 지식, 워렌 버핏·론 배런 등 전설적 투자가 전략을 무료로 제공합니다.",
+  description: "SUNRYU Partners CIO가 직접 작성한 미국주식 시장 분석 리포트. S&P500·NASDAQ 시장 흐름 분석, 개별 종목 실적·밸류에이션 분석을 무료로 제공합니다.",
   openGraph: {
     title: "투자 인사이트 & 리포트 | 인베스트어스",
-    description: "CIO 직접 작성 미국주식 분석 리포트 · 투자 기초 지식 · 투자 대가 전략",
+    description: "CIO 직접 작성 미국주식 분석 리포트 · ETF·밸류에이션·세금 심화 가이드",
     type: "website",
   },
 };
@@ -50,15 +50,15 @@ export default async function InsightPage() {
           <div className="flex gap-1.5 mb-1.5">
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.9)" }}>
-              투자 기초
+              심화 가이드
             </span>
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(96,165,250,0.12)", color: "#60a5fa" }}>
-              대가 전략
+              20편
             </span>
           </div>
           <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 지식 허브</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>기초·대가 전략 · S&P500·ETF·세금 가이드 한곳에서</p>
+          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>ETF·밸류에이션·매크로·세금 가이드 한곳에서</p>
         </div>
         <span className="text-lg flex-shrink-0" style={{ color: "var(--muted)" }}>›</span>
       </div>

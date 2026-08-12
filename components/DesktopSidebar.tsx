@@ -108,8 +108,11 @@ export function DesktopSidebar() {
         })}
       </nav>
 
-      {/* Bottom: clock + market status */}
-      <div className="px-5 py-4 border-t space-y-3" style={{ borderColor: "var(--border)" }}>
+      {/* Bottom: clock + market status — stays above sticky ad (sidebar-only) */}
+      <div
+        className="px-5 py-4 border-t space-y-3 flex-shrink-0"
+        style={{ borderColor: "var(--border)" }}
+      >
         {mounted && (
           <>
             <div className="flex items-center justify-between">
