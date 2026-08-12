@@ -7,7 +7,7 @@ import { LearnHubCards } from "@/components/LearnHubCards";
 export const metadata: Metadata = {
   title: "투자 지식 허브 — 미국주식·ETF·세금·밸류에이션 가이드 | 인베스트어스",
   description:
-    "미국주식 입문, ETF, 채권·금리, PER·배당, 재무제표, 가치투자, DCA, 세금, 환율, 섹터까지 Investus 오리지널 심화 가이드.",
+    "미국주식 입문, ETF, 원자재·암호화폐, ISA·연금, 채권·금리, PER·배당, 재무제표, 가치투자, DCA, 세금, 환율, 섹터까지 Investus 오리지널 심화 가이드.",
   alternates: { canonical: "https://www.investus.kr/learn" },
   openGraph: {
     title: "투자 지식 허브 | 인베스트어스 Investus",
@@ -37,7 +37,7 @@ export default function LearnPage() {
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
             미국주식 투자에 필요한 개념을 Investus 편집팀이 직접 쓴 심화 가이드로 정리했습니다.
-            입문부터 밸류에이션·매크로·세금까지 한곳에서 읽을 수 있습니다.
+            입문부터 원자재·암호화폐, ISA·연금, 밸류에이션·매크로·세금까지 한곳에서 읽을 수 있습니다.
           </p>
         </div>
 

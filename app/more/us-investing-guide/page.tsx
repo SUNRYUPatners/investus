@@ -108,6 +108,9 @@ export default async function UsInvestingGuidePage() {
                   <li><Link href="/learn/etf" className="underline" style={{ color: "var(--mint)" }}>미국 ETF (SPY·VOO·QQQ)</Link></li>
                   <li><Link href="/learn/valuation" className="underline" style={{ color: "var(--mint)" }}>PER·PBR 밸류에이션</Link></li>
                   <li><Link href="/learn/bonds" className="underline" style={{ color: "var(--mint)" }}>채권과 금리</Link></li>
+                  <li><Link href="/learn/commodities" className="underline" style={{ color: "var(--mint)" }}>원자재 (금·유가)</Link></li>
+                  <li><Link href="/learn/crypto" className="underline" style={{ color: "var(--mint)" }}>비트코인·암호화폐</Link></li>
+                  <li><Link href="/learn/korea-accounts" className="underline" style={{ color: "var(--mint)" }}>ISA·연금저축·IRP</Link></li>
                   <li><Link href="/learn/nasdaq" className="underline" style={{ color: "var(--mint)" }}>나스닥100·QQQ</Link></li>
                   <li><Link href="/learn/sp500" className="underline" style={{ color: "var(--mint)" }}>S&amp;P500 이해하기</Link></li>
                   <li><Link href="/learn/dca" className="underline" style={{ color: "var(--mint)" }}>적립식 투자(DCA)</Link></li>

@@ -8,6 +8,7 @@ import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { EbookProductSection } from "@/components/PaidProductsSection";
 import { getLocale } from "@/lib/getLocale";
 import { getT } from "@/lib/i18n";
+import { LEARN_ARTICLES } from "@/lib/learnArticles";
 
 export const metadata: Metadata = {
   title: "투자 인사이트 & 리포트 | 인베스트어스",
@@ -54,7 +55,7 @@ export default async function InsightPage() {
             </span>
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
               style={{ background: "rgba(96,165,250,0.12)", color: "#60a5fa" }}>
-              20편
+              {LEARN_ARTICLES.length}편
             </span>
           </div>
           <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 지식 허브</p>
