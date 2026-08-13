@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T14AU = 1786662000000; // 2026-08-14 08:00 KST
 const T13AU = 1786575600000; // 2026-08-13 08:00 KST
 const T12AU = 1786489200000; // 2026-08-12 08:00 KST
 const T11AU = 1786402800000; // 2026-08-11 08:00 KST
@@ -79,7 +80,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T13AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T14AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -98,6 +99,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-14 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 974, symbol: "SPCX", nickname: "익명_4400", holdingLabel: "관심종목",
+    content: "Musk 개인이 SPCX 지분 48.4% (64억 주)라고 SEC가 공식 확인함. 상장 회사에서 개인이 절반 가까이 소유하는 건 진짜 이례적이야",
+    createdAt: T14AU + 4*60_000, likes: 142, comments: 14 },
+  { id: 975, symbol: "SPCX", nickname: "익명_5511", holdingLabel: "관심종목",
+    content: "Dan Ives 왈: SPCX 2027년까지 시총 2조 달러 도달 놀랍지 않을 것. 어제 MS 600달러 불에 이어 sell-side 강세 다층 쌓이네",
+    createdAt: T14AU + 13*60_000, likes: 118, comments: 10 },
+  { id: 976, symbol: "SPCX", nickname: "익명_6622", holdingLabel: "관심종목",
+    content: "Ron Baron이 SPCX 개인 지분 230억까지 확대했대. 2017년부터 계속 사고 있고, Starlink만 14조 밸류 예상 프레임 냈어. 진짜 강세네",
+    createdAt: T14AU + 22*60_000, likes: 102, comments: 9 },
+  { id: 977, symbol: "TSLA", nickname: "익명_7733", holdingLabel: "관심종목",
+    content: "Tesla Nevada 자율주행 회사 허가 받음! 40대 로보택시 상업 서비스 시작 가능. 예약·픽업 시스템 승인·실 매출 시작 임박",
+    createdAt: T14AU + 31*60_000, likes: 128, comments: 11 },
+  { id: 978, symbol: "TSLA", nickname: "익명_8844", holdingLabel: "관심종목",
+    content: "Tesla 상하이 팹 7월 수출 68,330대·전년 +191% 급증!! 3배 확장이야. 어제 일본 +60% 다음에 이제 중국까지 폭발",
+    createdAt: T14AU + 40*60_000, likes: 136, comments: 12 },
+  { id: 979, symbol: "TSLA", nickname: "익명_9955", holdingLabel: "관심종목",
+    content: "Cybercab Austin 무감독 배치 곧 시작! Austin 소방서 사진에서 First Responder QR 스티커 확인. 규제 승인 완료 신호야",
+    createdAt: T14AU + 49*60_000, likes: 122, comments: 10 },
+  { id: 980, symbol: "SPCX", nickname: "익명_1166", holdingLabel: "관심종목",
+    content: "Terafab 공식 착공! Joe Tegtmeyer가 드론으로 첫 촬영도 성공. 168억 초기 투자로 시작해서 사상 최고 chip 공장 만든대",
+    createdAt: T14AU + 58*60_000, likes: 108, comments: 9 },
+  { id: 981, symbol: "SPCX", nickname: "익명_2277", holdingLabel: "관심종목",
+    content: "Starship 8월 30일 발사! NASA Nancy Grace Roman 우주 망원경 통합함. 원래 일정보다 9개월 앞당김. NASA가 SPCX 신뢰 확실",
+    createdAt: T14AU + 67*60_000, likes: 89, comments: 7 },
+  { id: 982, symbol: "SPX", nickname: "익명_3388", holdingLabel: "관심종목",
+    content: "Anthropic이 10월 2조 달러 밸류로 상장 노린대! 역대 최대 데뷔 잠재. 구글이 대규모 지분 보유라 구글 자산 재평가 급속",
+    createdAt: T14AU + 76*60_000, likes: 92, comments: 8 },
+  { id: 983, symbol: "MACRO", nickname: "익명_4499", holdingLabel: "관심종목",
+    content: "Michael Burry가 5,000억 AI Enron 경고했어. Big Short 원조라 신뢰도 높은데... 이번엔 진짜일까? Tom Lee 강세랑 완전 대립",
+    createdAt: T14AU + 85*60_000, likes: 78, comments: 6 },
+  { id: 984, symbol: "SPX", nickname: "익명_5500", holdingLabel: "관심종목",
+    content: "Tom Lee 2년 안에 사상 최대 상승 예상함. insanely bullish 표현. 5일 5조 상승 확인·SPX 사상 최고 나온 상황이니 신뢰도 높네",
+    createdAt: T14AU + 94*60_000, likes: 96, comments: 8 },
+  { id: 985, symbol: "SPX", nickname: "익명_6611", holdingLabel: "관심종목",
+    content: "SPX·러셀 2000 사상 최고! 나스닥 100도 42일 만에 3만 재확인. 5일간 5조 달러 상승. CPI·PPI 완화 덕분",
+    createdAt: T14AU + 103*60_000, likes: 114, comments: 9 },
+  { id: 986, symbol: "SPCX", nickname: "익명_7722", holdingLabel: "관심종목",
+    content: "Grok 4.0 (high)이 GPQA Diamond 95%로 1위 찍음! Claude Opus 5·GPT-5.5·Gemini 모두 이김. xAI 성능 리더십 확인",
+    createdAt: T14AU + 112*60_000, likes: 86, comments: 7 },
+  { id: 987, symbol: "SPCX", nickname: "익명_8833", holdingLabel: "관심종목",
+    content: "스타링크 소비자 구독자도 1,300만 명 넘음! 어제 모바일 1,300만이랑 별개. 총 사용자 2,000만+ 규모. Ron Baron 14조 근거네",
+    createdAt: T14AU + 121*60_000, likes: 84, comments: 7 },
+  { id: 988, symbol: "MACRO", nickname: "익명_9944", holdingLabel: "관심종목",
+    content: "미국 국가 부채 39.94조 신기록·이 회계 연도 적자가 이미 지난 연도 전체 초과했대. 8월인데... Burry 경고랑 같이 매크로 리스크 확대",
+    createdAt: T14AU + 130*60_000, likes: 68, comments: 6 },
+
   // ── 2026-08-13 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 959, symbol: "SPCX", nickname: "익명_3311", holdingLabel: "관심종목",
     content: "Musk All-Hands에서 2027년 말 15 GW 확정·9월부터 AI 매출이 다른 SpaceX 매출 초과한대. 이거 진짜 실체화되면 프레임 폭발이야",
