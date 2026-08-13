@@ -45,6 +45,18 @@ export async function GET(req: NextRequest) {
       liveAt?: number;
     };
 
+    // 종가 워밍 직후 가격 알림도 한 번 체크 (Hobby: 별도 다회 크론 제한 대비)
+    let priceAlerts: unknown = null;
+    try {
+      const cronSecret = process.env.CRON_SECRET?.trim();
+      const pa = await fetch(`${base}/api/cron/price-alerts`, {
+        cache: "no-store",
+        headers: cronSecret ? { authorization: `Bearer ${cronSecret}` } : {},
+        signal: AbortSignal.timeout(25_000),
+      });
+      priceAlerts = await pa.json().catch(() => null);
+    } catch { /* ignore */ }
+
     return NextResponse.json({
       ok: true,
       quotes: data.quotes?.length ?? Number(quoteCount ?? 0),
@@ -52,6 +64,7 @@ export async function GET(req: NextRequest) {
       futures: data.futures?.length ?? 0,
       liveAt: data.liveAt ?? null,
       cache: cacheHdr,
+      priceAlerts,
     });
   } catch (e) {
     return NextResponse.json({ ok: false, error: String(e) }, { status: 500 });
