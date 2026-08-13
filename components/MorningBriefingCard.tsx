@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Lock, Sunrise } from "lucide-react";
+import { Lock, Moon } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { buildMorningBriefing } from "@/lib/morningBriefing";
 
@@ -23,7 +23,7 @@ export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
         }}
       >
         <div className="flex items-center gap-2 mb-2">
-          <Sunrise className="w-4 h-4" style={{ color: "#fbbf24" }} />
+          <Moon className="w-4 h-4" style={{ color: "#fbbf24" }} />
           <span
             className="text-[9px] font-bold px-2 py-0.5 rounded-full"
             style={{ background: "rgba(251,191,36,0.15)", color: "#fbbf24" }}
@@ -32,7 +32,7 @@ export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
           </span>
         </div>
         <p className="text-sm font-bold mb-1 leading-snug" style={{ color: "var(--text)" }}>
-          {isKo ? "매일 아침, 오늘 핵심 3줄" : "Today's 3-line market brief"}
+          {isKo ? "미국 개장 전, 오늘 핵심 3줄" : "Before the open — 3-line brief"}
         </p>
         <p className="text-[12px] leading-relaxed mb-3 line-clamp-2" style={{ color: "var(--muted)" }}>
           {briefing.headline}
@@ -60,7 +60,7 @@ export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
     >
       <div className="flex items-center justify-between gap-2 mb-2">
         <div className="flex items-center gap-2">
-          <Sunrise className="w-4 h-4" style={{ color: "#fbbf24" }} />
+          <Moon className="w-4 h-4" style={{ color: "#fbbf24" }} />
           <span
             className="text-[9px] font-bold px-2 py-0.5 rounded-full"
             style={{ background: "rgba(251,191,36,0.18)", color: "#fbbf24" }}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { ChevronLeft, CheckCircle, Lock, Star, FileText, CreditCard, Loader2, Sunrise, Bell, Sparkles } from "lucide-react";
+import { ChevronLeft, CheckCircle, Lock, Star, FileText, CreditCard, Loader2, Moon, Bell, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import {
@@ -17,7 +17,7 @@ import {
 import { getSupabase } from "@/lib/supabase";
 
 const BENEFITS = [
-  { icon: Sunrise,  title: "장전 브리핑",          desc: "매일 아침 오늘 핵심 3줄 + 관련 리포트 링크" },
+  { icon: Moon,     title: "장전 브리핑",          desc: "미국 개장 직전(평일 저녁) 오늘 핵심 3줄 + 관련 리포트" },
   { icon: Bell,     title: "내 종목 가격 알림",    desc: "목표가 돌파·하회 시 푸시 알림 (최대 10개)" },
   { icon: Sparkles, title: "포트폴리오 AI 30회",   desc: "무료 3회 → Pro는 하루 30회까지 분석" },
   { icon: Star,     title: "Investus 추천주식",    desc: "CIO 선정 종목과 실시간 시세를 열람할 수 있습니다." },

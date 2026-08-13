@@ -27,12 +27,14 @@ function isAuthorized(req: NextRequest): boolean {
   return false;
 }
 
-/** 06:20~06:40 KST 창 — DST 무관(고정 UTC+9) */
-function isMorningBriefWindow(): boolean {
+/** 21:20~21:40 KST — 미국 정규장 개장(22:30/23:30 KST) 직전 장전 창 */
+function isPreMarketBriefWindow(): boolean {
   const now = new Date();
   const kst = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Seoul" }));
+  const day = kst.getDay();
+  if (day === 0 || day === 6) return false;
   const mins = kst.getHours() * 60 + kst.getMinutes();
-  return mins >= 6 * 60 + 20 && mins <= 6 * 60 + 40;
+  return mins >= 21 * 60 + 20 && mins <= 21 * 60 + 40;
 }
 
 export async function GET(req: NextRequest) {
@@ -45,8 +47,8 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   }
 
-  if (!isMorningBriefWindow()) {
-    return NextResponse.json({ skipped: true, reason: "not morning briefing window" });
+  if (!isPreMarketBriefWindow()) {
+    return NextResponse.json({ skipped: true, reason: "not pre-market briefing window" });
   }
 
   const briefing = buildMorningBriefing();
@@ -63,7 +65,7 @@ export async function GET(req: NextRequest) {
   }
 
   const payload = JSON.stringify({
-    title:   "☀️ 장전 브리핑",
+    title:   "🌙 장전 브리핑",
     message: briefing.headline.slice(0, 120),
     url:     "/",
   });
