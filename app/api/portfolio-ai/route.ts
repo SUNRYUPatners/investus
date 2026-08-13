@@ -23,6 +23,7 @@ type PortfolioCtx = {
   question:      string;
   fetchNews?:    boolean;   // 오늘 등락 이유 질문 시 전날 뉴스 조회
   history?:      { role: "user" | "assistant"; content: string }[];
+  isPro?:        boolean;
 };
 
 // 전날(~오늘) 종목별 Finnhub 뉴스 헤드라인 조회
@@ -162,7 +163,8 @@ ${portfolioSummary}${newsSection}
 - 포트폴리오 전체 오늘 변동 방향을 첫 문장에 명확히 표현
 - 실제 수치(%, $)를 구체적으로 포함
 - 친근하고 솔직한 말투 (이모지 1~2개)
-- 마지막 면책 문구 불필요 (UI에 표시됨)`;
+- 마지막 면책 문구 불필요 (UI에 표시됨)
+${body.isPro ? "- Pro 구독자: 답변 끝에 관련 종목·테마를 한 줄로 짚어 주고 (예: 「관련: NVDA·반도체 실적 흐름」)" : ""}`;
 
   // Build conversation history
   const messages: { role: "user" | "assistant"; content: string }[] = [];

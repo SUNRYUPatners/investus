@@ -10,6 +10,7 @@ type NotiKey =
   | "market_open"
   | "market_close"
   | "report_publish"
+  | "morning_briefing"
   | "like_comment"
   | "new_subscriber"
   | "price_alert";
@@ -28,18 +29,20 @@ const NOTIFICATIONS_KO: NotiConfig[] = [
   { key: "market_open",    emoji: "🔔", label: "장 시작 알림",      desc: "미국 주식 시장 개장 (오전 10:30 KST)", color: "#10b981", pushEnabled: true },
   { key: "market_close",   emoji: "🔕", label: "장 마감 알림",      desc: "미국 주식 시장 마감 (오전 5:00 KST)",  color: "#60a5fa" },
   { key: "report_publish", emoji: "📋", label: "리포트 업데이트 알림", desc: "Investus 새 리포트·인사이트 발행 시 즉시 알림", color: "#c084fc", pushEnabled: true },
+  { key: "morning_briefing", emoji: "☀️", label: "장전 브리핑 알림", desc: "매일 아침 6:30경 오늘 핵심 브리핑 푸시 (Pro 카드)", color: "#fbbf24", pushEnabled: true },
   { key: "like_comment",   emoji: "💬", label: "좋아요·댓글 알림",   desc: "내 게시글에 좋아요·댓글이 달릴 때",    color: "#fb923c" },
   { key: "new_subscriber", emoji: "⭐", label: "구독 알림",          desc: "내 크리에이터 채널 신규 구독자",       color: "#fbbf24" },
-  { key: "price_alert",    emoji: "📈", label: "가격 알림",          desc: "관심종목 목표가 도달 시 알림 — 지금 신청하면 오픈 시 우선 안내", color: "#f472b6", pushEnabled: true },
+  { key: "price_alert",    emoji: "📈", label: "가격 알림",          desc: "자산 탭에서 목표가 설정 · 도달 시 푸시 (Pro)", color: "#f472b6", pushEnabled: true },
 ];
 
 const NOTIFICATIONS_EN: NotiConfig[] = [
   { key: "market_open",    emoji: "🔔", label: "Market Open Alert",   desc: "US stock market opens (9:30 AM ET)",        color: "#10b981", pushEnabled: true },
   { key: "market_close",   emoji: "🔕", label: "Market Close Alert",  desc: "US stock market closes (4:00 PM ET)",       color: "#60a5fa" },
   { key: "report_publish", emoji: "📋", label: "Report Update Alert", desc: "Instant alert when new Investus reports publish", color: "#c084fc", pushEnabled: true },
+  { key: "morning_briefing", emoji: "☀️", label: "Morning Briefing", desc: "Pre-market brief push around 6:30 AM KST (Pro card)", color: "#fbbf24", pushEnabled: true },
   { key: "like_comment",   emoji: "💬", label: "Likes & Comments",    desc: "When your posts receive likes or comments", color: "#fb923c" },
   { key: "new_subscriber", emoji: "⭐", label: "New Subscriber",      desc: "New subscriber on your creator channel",    color: "#fbbf24" },
-  { key: "price_alert",    emoji: "📈", label: "Price Alert",         desc: "Watchlist target alerts — opt in for launch notice", color: "#f472b6", pushEnabled: true },
+  { key: "price_alert",    emoji: "📈", label: "Price Alert",         desc: "Set targets in Portfolio · push on hit (Pro)", color: "#f472b6", pushEnabled: true },
 ];
 
 const STORAGE_KEY = "investus_notifications";
@@ -47,10 +50,11 @@ const STORAGE_KEY = "investus_notifications";
 function loadPrefs(): Record<NotiKey, boolean> {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) return { morning_briefing: true, ...JSON.parse(raw) };
   } catch { /* ignore */ }
   return {
     market_open: true, market_close: false, report_publish: true,
+    morning_briefing: true,
     like_comment: true, new_subscriber: true, price_alert: false,
   };
 }
@@ -283,8 +287,8 @@ export default function NotificationsPage() {
         <div className="rounded-xl px-4 py-3 border" style={{ background: "rgba(255,255,255,0.02)", borderColor: "var(--border)" }}>
           <p className="text-[10px] leading-relaxed whitespace-pre-line" style={{ color: "var(--muted)" }}>
             {isKo
-              ? "· 알림은 브라우저 또는 PWA 앱 설치 시 수신됩니다.\n· 리포트 알림(PUSH)은 앱이 꺼져 있어도 실시간으로 전송됩니다.\n· 장시작·장마감 알림은 미국 동부 시간 기준으로 발송됩니다.\n· 가격 알림은 신청해 두면 기능 오픈 시 우선 안내합니다."
-              : "· Notifications are received in your browser or installed PWA.\n· Report alerts (PUSH) are delivered even when the app is closed.\n· Market open/close alerts are sent based on US Eastern Time.\n· Opt in to price alerts to get notified when the feature launches."}
+              ? "· 알림은 브라우저 또는 PWA 앱 설치 시 수신됩니다.\n· 리포트·장전 브리핑 알림(PUSH)은 앱이 꺼져 있어도 전송됩니다.\n· 장시작·장마감 알림은 미국 동부 시간 기준으로 발송됩니다.\n· 가격 알림은 자산 탭에서 목표가를 설정한 뒤(Pro) 장중 체크됩니다."
+              : "· Notifications are received in your browser or installed PWA.\n· Report & morning briefing pushes work even when the app is closed.\n· Market open/close alerts follow US Eastern Time.\n· Price alerts: set targets in Portfolio (Pro); checked during the US session."}
           </p>
         </div>
 

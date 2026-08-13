@@ -17,6 +17,8 @@ import { useLocaleCode } from "@/contexts/LocaleContext";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { PortfolioAI } from "@/components/PortfolioAI";
 import { PortfolioLearnHub } from "@/components/PortfolioLearnHub";
+import { PriceAlertsPanel } from "@/components/PriceAlertsPanel";
+import { useWatchlist } from "@/hooks/useWatchlist";
 
 // ── Types & Constants ─────────────────────────────────────────────────────────
 
@@ -900,11 +902,20 @@ function BrokerageSection({ locale, onImport }: { locale: string; onImport: () =
 export default function PortfolioPage() {
   const router                          = useRouter();
   const { holdings, setHoldings, cur, setCur, loaded, isLoggedIn } = usePortfolio();
+  const { list: watchlist } = useWatchlist();
   const [liveMap, setLiveMap]       = useState<Record<string, LiveQ>>({});
   const [usdkrw, setUsdkrw]        = useState(1350);
   const [showAdd, setShowAdd]       = useState(false);
   const [showImport, setShowImport] = useState(false);
   const locale                      = useLocaleCode();
+
+  const alertSymbols = [
+    ...new Set([...holdings.map((h) => h.symbol), ...watchlist]),
+  ].filter(Boolean);
+
+  const alertLivePrices = Object.fromEntries(
+    Object.entries(liveMap).map(([k, v]) => [k, v.price]),
+  );
 
   const fetchLive = useCallback((syms: string[]) => {
     if (syms.length === 0) return;
@@ -928,14 +939,15 @@ export default function PortfolioPage() {
   }, []);
 
   useEffect(() => {
-    if (!loaded || holdings.length === 0) return;
-    const syms = holdings.map((h) => h.symbol);
+    if (!loaded) return;
+    const syms = [...new Set([...holdings.map((h) => h.symbol), ...watchlist])];
+    if (syms.length === 0) return;
     fetchLive(syms);
     const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") fetchLive(syms); };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loaded, holdings]);
+  }, [loaded, holdings, watchlist]);
 
   const addHolding    = (h: Holding) => setHoldings((p: Holding[]) => [...p.filter((x) => x.symbol !== h.symbol), h]);
   const deleteHolding = (sym: string) => setHoldings((p: Holding[]) => p.filter((x) => x.symbol !== sym));
@@ -1127,6 +1139,13 @@ export default function PortfolioPage() {
                 <Plus className="w-4 h-4" />
                 {locale === "ko" ? "종목 추가" : "Add stock"}
               </button>
+            </div>
+          )}
+
+          {/* 가격 알림 — 보유/관심 종목 기준 */}
+          {loaded && isLoggedIn && (
+            <div className="mt-5">
+              <PriceAlertsPanel symbols={alertSymbols} livePrices={alertLivePrices} />
             </div>
           )}
         </div>

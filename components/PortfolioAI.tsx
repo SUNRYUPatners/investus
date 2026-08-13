@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { Send, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
 import { AdGateModal } from "@/components/AdGateModal";
+import { useAuth } from "@/hooks/useAuth";
 
 type LiveQ = { symbol: string; price: number; changePercent: number };
 
@@ -32,6 +34,8 @@ const AD_BONUS_KEY = () => {
   return `pf_ai_ad_bonus_${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 };
 const FREE_LIMIT = 3;
+/** Pro 일일 한도 — 사실상 무제한에 가깝게 */
+const PRO_LIMIT = 30;
 
 export function PortfolioAI({
   holdings,
@@ -42,6 +46,9 @@ export function PortfolioAI({
   liveMap:  Record<string, LiveQ>;
   usdkrw:   number;
 }) {
+  const { user } = useAuth();
+  const isPro = user?.isPro === true;
+
   const [messages,   setMessages]   = useState<Message[]>([]);
   const [input,      setInput]      = useState("");
   const [loading,    setLoading]    = useState(false);
@@ -68,9 +75,10 @@ export function PortfolioAI({
     }
   }, [messages, loading]);
 
-  const effectiveLimit = FREE_LIMIT + adBonus;
+  const baseLimit = isPro ? PRO_LIMIT : FREE_LIMIT;
+  const effectiveLimit = isPro ? PRO_LIMIT : FREE_LIMIT + adBonus;
   const limitReached   = count >= effectiveLimit;
-  const remaining      = effectiveLimit - count;
+  const remaining      = Math.max(0, effectiveLimit - count);
 
   function buildCtx() {
     const totalValue  = holdings.reduce((s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0);
@@ -87,7 +95,7 @@ export function PortfolioAI({
       return { symbol: h.symbol, shares: h.shares, avgCost: h.avgCost, currentPrice: price, value, costBasis, pnlPct, dayChangePct, weightPct };
     });
 
-    return { holdings: enriched, totalValue, totalCost, totalPnlPct, usdkrw };
+    return { holdings: enriched, totalValue, totalCost, totalPnlPct, usdkrw, isPro };
   }
 
   const ask = async (q: string, opts?: { fetchNews?: boolean }) => {
@@ -138,11 +146,15 @@ export function PortfolioAI({
           <Sparkles className="w-4 h-4" style={{ color: "var(--mint)" }} />
           <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>나만의 AI 투자비서</p>
           <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
-            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>Claude</span>
+            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+            {isPro ? "Pro" : "Claude"}
+          </span>
         </div>
         <div className="flex items-center gap-2">
           {!collapsed && !limitReached && (
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>오늘 {remaining}회 남음</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>
+              {isPro ? `오늘 ${remaining}/${PRO_LIMIT}회` : `오늘 ${remaining}회 남음`}
+            </span>
           )}
           <button onClick={() => setCollapsed((v) => !v)}
             className="p-1 rounded-lg transition-opacity hover:opacity-70"
@@ -159,7 +171,9 @@ export function PortfolioAI({
           {messages.length === 0 && (
             <div className="px-4 py-3 border-b flex-shrink-0" style={{ borderColor: "rgba(0,229,160,0.08)" }}>
               <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-                내 종목·수익률·비중을 모두 알고 있어요. 지금 바로 물어보세요 💬
+                {isPro
+                  ? `내 종목·수익률·비중을 알고 있어요. Pro는 하루 ${PRO_LIMIT}회까지 이용할 수 있어요.`
+                  : `내 종목·수익률·비중을 모두 알고 있어요. 무료 ${FREE_LIMIT}회 · Pro는 하루 ${PRO_LIMIT}회.`}
               </p>
             </div>
           )}
@@ -211,26 +225,42 @@ export function PortfolioAI({
               )}
             </div>
 
-          {/* 한도 도달 — 광고 시청으로 1회 추가 */}
+          {/* 한도 도달 */}
           {limitReached ? (
             <div className="px-4 py-5 flex flex-col items-center gap-3 text-center flex-shrink-0 border-t"
               style={{ borderColor: "rgba(0,229,160,0.1)" }}>
               <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl"
-                style={{ background: "rgba(0,229,160,0.08)" }}>🎬</div>
+                style={{ background: "rgba(0,229,160,0.08)" }}>
+                {isPro ? "✦" : "🎬"}
+              </div>
               <div>
                 <p className="text-sm font-bold mb-0.5" style={{ color: "var(--text)" }}>
-                  오늘 무료 분석 {FREE_LIMIT}회 소진
+                  {isPro
+                    ? `오늘 Pro 분석 ${PRO_LIMIT}회 소진`
+                    : `오늘 무료 분석 ${baseLimit}회 소진`}
                 </p>
                 <p className="text-[11px]" style={{ color: "var(--muted)" }}>
-                  광고 1개 시청하면 1회 추가 이용 가능해요
+                  {isPro
+                    ? "내일 다시 이용할 수 있어요"
+                    : "광고 시청으로 1회 추가 · 또는 Pro로 하루 30회"}
                 </p>
               </div>
-              <button
-                onClick={() => setShowAdGate(true)}
-                className="w-full py-2.5 rounded-xl text-sm font-bold transition-opacity active:opacity-80"
-                style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.3)" }}>
-                광고 시청하고 1회 추가 →
-              </button>
+              {!isPro && (
+                <>
+                  <button
+                    onClick={() => setShowAdGate(true)}
+                    className="w-full py-2.5 rounded-xl text-sm font-bold transition-opacity active:opacity-80"
+                    style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.3)" }}>
+                    광고 시청하고 1회 추가 →
+                  </button>
+                  <Link
+                    href="/subscribe"
+                    className="w-full py-2.5 rounded-xl text-sm font-bold text-center transition-opacity active:opacity-80"
+                    style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}>
+                    Pro로 계속하기 (하루 {PRO_LIMIT}회)
+                  </Link>
+                </>
+              )}
               <p className="text-[9px]" style={{ color: "var(--muted)" }}>투자 참고용 · 투자 권유 아님</p>
             </div>
           ) : (

@@ -14,6 +14,8 @@
     { "path": "/api/cron/market-summary-close", "schedule": "10 20 * * 1-5" },
     { "path": "/api/cron/market-summary-close", "schedule": "10 21 * * 1-5" },
     { "path": "/api/push/report-update", "schedule": "30 23 * * *" },
+    { "path": "/api/push/morning-briefing", "schedule": "30 21 * * *" },
+    { "path": "/api/cron/price-alerts", "schedule": "0,30 14-20 * * 1-5" },
     { "path": "/api/cron/market-data-warm", "schedule": "20 20 * * 1-5" },
     { "path": "/api/cron/market-data-warm", "schedule": "35 20 * * 1-5" },
     { "path": "/api/cron/market-data-warm", "schedule": "50 20 * * 1-5" },

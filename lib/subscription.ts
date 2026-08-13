@@ -23,7 +23,13 @@ export const SUBSCRIPTION = {
   periodLabel: "월",
   productName: "Investus Pro",
   /** 구독에 포함되는 유료 서비스 (PG·상품 고지용) */
-  includes: ["Investus 추천주식 열람", "이전 날짜 리포트 열람"] as const,
+  includes: [
+    "Investus 추천주식 열람",
+    "이전 날짜 리포트 열람",
+    "장전 브리핑",
+    "내 종목 가격 알림",
+    "포트폴리오 AI 하루 30회",
+  ] as const,
 } as const;
 
 export const SUB_PAY_METHODS: {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { ChevronLeft, CheckCircle, Lock, Star, FileText, CreditCard, Loader2 } from "lucide-react";
+import { ChevronLeft, CheckCircle, Lock, Star, FileText, CreditCard, Loader2, Sunrise, Bell, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import {
@@ -17,9 +17,12 @@ import {
 import { getSupabase } from "@/lib/supabase";
 
 const BENEFITS = [
-  { icon: Star, title: "Investus 추천주식", desc: "CIO 선정 종목과 실시간 시세를 열람할 수 있습니다." },
-  { icon: FileText, title: "이전 날짜 리포트", desc: "오늘자 리포트는 무료, 과거 리포트 전체 열람이 가능합니다." },
-  { icon: Lock, title: "부담 없는 구독", desc: "월·연 선택 · 카카오·네이버·토스·카드로 결제" },
+  { icon: Sunrise,  title: "장전 브리핑",          desc: "매일 아침 오늘 핵심 3줄 + 관련 리포트 링크" },
+  { icon: Bell,     title: "내 종목 가격 알림",    desc: "목표가 돌파·하회 시 푸시 알림 (최대 10개)" },
+  { icon: Sparkles, title: "포트폴리오 AI 30회",   desc: "무료 3회 → Pro는 하루 30회까지 분석" },
+  { icon: Star,     title: "Investus 추천주식",    desc: "CIO 선정 종목과 실시간 시세를 열람할 수 있습니다." },
+  { icon: FileText, title: "이전 날짜 리포트",     desc: "오늘자 리포트는 무료, 과거 리포트 전체 열람이 가능합니다." },
+  { icon: Lock,     title: "부담 없는 구독",       desc: "월·연 선택 · 카카오·네이버·토스·카드로 결제" },
 ];
 
 function PayIcon({ id }: { id: SubPayMethod }) {
@@ -151,7 +154,7 @@ export default function SubscribePage() {
         <main className="max-w-[480px] mx-auto px-4 pt-10 pb-12 text-center">
           <CheckCircle className="w-12 h-12 mx-auto mb-3" style={{ color: "var(--mint)" }} />
           <p className="text-lg font-bold font-syne mb-2" style={{ color: "var(--text)" }}>이미 Pro 구독 중입니다</p>
-          <p className="text-sm mb-6" style={{ color: "var(--muted)" }}>추천주식 · 이전 리포트를 자유롭게 이용하세요.</p>
+          <p className="text-sm mb-6" style={{ color: "var(--muted)" }}>장전 브리핑 · 가격 알림 · 포트 AI · 추천주식 · 과거 리포트</p>
           <Link href="/" className="text-sm font-semibold" style={{ color: "var(--mint)" }}>홈으로 →</Link>
         </main>
       </div>
@@ -175,7 +178,7 @@ export default function SubscribePage() {
             커피값으로 시작하는<br />투자 인사이트
           </h1>
           <p className="text-[13px] leading-relaxed" style={{ color: "var(--muted)" }}>
-            추천주식 · 과거 리포트 열람을 월·연 구독으로 이용하세요.
+            장전 브리핑 · 가격 알림 · 포트 AI 30회 · 추천주식 · 과거 리포트를 월·연 구독으로 이용하세요.
           </p>
         </div>
 
