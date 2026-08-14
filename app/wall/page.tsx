@@ -179,13 +179,13 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 mb-0.5">
               <span className={`font-semibold ${isReply ? "text-[10px]" : "text-xs"}`} style={{ color: "var(--text)" }}>{c.nickname}</span>
-              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(var(--mint-rgb),0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
+              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(var(--up-rgb),0.1)", color: "var(--up)" }}>✓ {c.holdingLabel}</span>
               <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{getRelativeTime(c.createdAt, w)}</span>
             </div>
             <p className={`leading-relaxed mb-1 ${isReply ? "text-[11px]" : "text-[12px]"}`} style={{ color: "var(--text)" }}>{c.content}</p>
             <div className="flex items-center gap-3">
               <button onClick={() => toggleLike(c.id)} className="flex items-center gap-1 text-[10px]"
-                style={{ color: likedComments.has(c.id) ? "var(--mint)" : "var(--muted)" }}>
+                style={{ color: likedComments.has(c.id) ? "var(--up)" : "var(--muted)" }}>
                 <ThumbsUp className="w-3 h-3" />
                 {c.likes + (likedComments.has(c.id) ? 1 : 0)}
               </button>
@@ -226,7 +226,7 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 flex-shrink-0 border-b" style={{ borderColor: "var(--border)" }}>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
+            <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }}>
               {post.symbol}
             </span>
             <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{w.commentCount(totalCount)}</span>
@@ -241,7 +241,7 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
           <div className="flex items-center gap-2 mb-1.5">
             <div className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold" style={{ background: "var(--border)", color: "var(--muted)" }}>익</div>
             <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{post.nickname}</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded-full" style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>✓ {post.holdingLabel}</span>
+            <span className="text-[10px] px-1.5 py-0.5 rounded-full" style={{ background: "rgba(var(--up-rgb),0.1)", color: "var(--up)" }}>✓ {post.holdingLabel}</span>
           </div>
           <p className="text-[12px] leading-relaxed line-clamp-3" style={{ color: "var(--muted)" }}>{post.content}</p>
         </div>
@@ -262,7 +262,7 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
         <div className="px-4 py-3 pb-safe flex-shrink-0 border-t" style={{ borderColor: "var(--border)" }}>
           {replyTo && (
             <div className="flex items-center gap-1.5 mb-1.5 px-1">
-              <span className="text-[10px]" style={{ color: "var(--mint)" }}>↩ {replyTo.nickname}에게 답글</span>
+              <span className="text-[10px]" style={{ color: "var(--up)" }}>↩ {replyTo.nickname}에게 답글</span>
               <button onClick={() => setReplyTo(null)} className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>취소</button>
             </div>
           )}
@@ -283,15 +283,15 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
                 onClick={submitComment}
                 disabled={!input.trim() || submitting}
                 className="w-7 h-7 rounded-lg flex items-center justify-center transition-opacity disabled:opacity-30"
-                style={{ background: "var(--mint)" }}
+                style={{ background: "var(--up)" }}
               >
-                <Send className="w-3.5 h-3.5 text-black" />
+                <Send className="w-3.5 h-3.5 text-white" />
               </button>
             </div>
           ) : (
             <div className="flex items-center gap-3 py-1">
               <p className="flex-1 text-xs" style={{ color: "var(--muted)" }}>{w.loginToComment}</p>
-              <Link href="/more" onClick={onClose} className="text-xs font-bold px-3 py-1.5 rounded-lg" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
+              <Link href="/more" onClick={onClose} className="text-xs font-bold px-3 py-1.5 rounded-lg" style={{ background: "var(--up)", color: "#fff" }}>
                 {w.login}
               </Link>
             </div>
@@ -396,8 +396,8 @@ function AskAI({ symbol }: { symbol: string }) {
             <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>{w.aiSubDesc}</p>
             <button
               onClick={() => router.push("/")}
-              className="w-full py-2.5 rounded-xl text-sm font-bold text-black"
-              style={{ background: "var(--mint)" }}>
+              className="w-full py-2.5 rounded-xl text-sm font-bold"
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
               {w.aiSubscribe}
             </button>
           </div>
@@ -450,7 +450,7 @@ function AskAI({ symbol }: { symbol: string }) {
         <button onClick={handleSend} disabled={!question.trim() || loading}
           className="w-7 h-7 rounded-lg flex items-center justify-center transition-opacity disabled:opacity-30"
           style={{ background: "var(--mint)" }}>
-          <Send className="w-3.5 h-3.5 text-black" />
+          <Send className="w-3.5 h-3.5" style={{ color: "var(--on-accent)" }} />
         </button>
       </div>
 
@@ -968,14 +968,14 @@ export default function WallPage() {
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 mb-0.5">
               <span className={`font-semibold ${isReply ? "text-[10px]" : "text-xs"}`} style={{ color: "var(--text)" }}>{c.nickname}</span>
-              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(var(--mint-rgb),0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
+              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(var(--up-rgb),0.1)", color: "var(--up)" }}>✓ {c.holdingLabel}</span>
               <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{getRelativeTime(c.createdAt, w)}</span>
             </div>
             <p className={`leading-relaxed mb-1 ${isReply ? "text-[11px]" : "text-[12px]"}`} style={{ color: "var(--text)" }}>{c.content}</p>
             <div className="flex items-center gap-3">
               <button onClick={() => setWallLikedComments((prev) => { const n = new Set(prev); n.has(c.id) ? n.delete(c.id) : n.add(c.id); return n; })}
                 className="flex items-center gap-1 text-[10px]"
-                style={{ color: wallLikedComments.has(c.id) ? "var(--mint)" : "var(--muted)" }}>
+                style={{ color: wallLikedComments.has(c.id) ? "var(--up)" : "var(--muted)" }}>
                 <ThumbsUp className="w-3 h-3" />
                 {c.likes + (wallLikedComments.has(c.id) ? 1 : 0)}
               </button>
@@ -1153,20 +1153,20 @@ export default function WallPage() {
             hasCreatorProfile ? (
               <Link href="/creator/dashboard"
                 className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
-                style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
+                style={{ background: "var(--down)", color: "#fff" }}>
                 ✦ {w.creatorMyChannel}
               </Link>
             ) : (
               <Link href="/creator/setup"
                 className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
-                style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
+                style={{ background: "var(--down)", color: "#fff" }}>
                 <Sparkles className="w-3.5 h-3.5" />{w.creatorChannelBtn}
               </Link>
             )
           )}
           {mainTab === "discussion" && (
             <div className="flex items-center gap-1 text-[10px] px-2 py-1 rounded-full border"
-              style={{ borderColor: "rgba(var(--mint-rgb),0.3)", color: "var(--mint)" }}>
+              style={{ borderColor: "rgba(var(--up-rgb),0.35)", color: "var(--up)" }}>
               <Lock className="w-3 h-3" />
               {w.anonBadge}
             </div>
@@ -1178,21 +1178,21 @@ export default function WallPage() {
           <button onClick={() => setMainTab("analyst")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
             style={mainTab === "analyst"
-              ? { background: "#7c3aed", color: "#fff" }
+              ? { background: "var(--analyst)", color: "#fff" }
               : { color: "var(--muted)" }}>
             <EyeOff className="w-3.5 h-3.5" />{w.tabAnalyst}
           </button>
           <button onClick={() => setMainTab("discussion")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
             style={mainTab === "discussion"
-              ? { background: "var(--mint)", color: "var(--on-accent)" }
+              ? { background: "var(--up)", color: "#fff" }
               : { color: "var(--muted)" }}>
             <MessageCircle className="w-3.5 h-3.5" />{w.tabDiscussion}
           </button>
           <button onClick={() => setMainTab("creator")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
             style={mainTab === "creator"
-              ? { background: "var(--mint)", color: "var(--on-accent)" }
+              ? { background: "var(--down)", color: "#fff" }
               : { color: "var(--muted)" }}>
             <Users className="w-3.5 h-3.5" />{w.tabCreator}
           </button>
@@ -1202,8 +1202,8 @@ export default function WallPage() {
         {mainTab === "discussion" && (
           <>
             <div className="flex items-start gap-2 rounded-xl p-3 mx-4 mb-3 border"
-              style={{ background: "rgba(var(--mint-rgb),0.05)", borderColor: "rgba(var(--mint-rgb),0.15)" }}>
-              <ShieldCheck className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "var(--mint)" }} />
+              style={{ background: "rgba(var(--up-rgb),0.08)", borderColor: "rgba(var(--up-rgb),0.2)" }}>
+              <ShieldCheck className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "var(--up)" }} />
               <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
                 {w.notice}
               </p>
@@ -1219,25 +1219,25 @@ export default function WallPage() {
                     className="flex-shrink-0 flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl border transition-all"
                     style={{
                       position: "relative",
-                      background: active ? "var(--mint)" : "var(--card)",
-                      borderColor: active ? "var(--mint)" : "var(--border)",
+                      background: active ? "var(--up)" : "var(--card)",
+                      borderColor: active ? "var(--up)" : "var(--border)",
                     }}>
                     {hasNew && (
                       <span style={{
                         position: "absolute", top: -4, right: -4,
-                        background: "#ef4444", color: "#fff",
+                        background: "var(--down)", color: "#fff",
                         fontSize: 8, fontWeight: 800,
                         padding: "1px 4px", borderRadius: 5,
                         lineHeight: 1.5, letterSpacing: 0,
-                        boxShadow: "0 1px 4px rgba(255,77,109,0.5)",
+                        boxShadow: "0 1px 4px rgba(var(--down-rgb),0.45)",
                       }}>N</span>
                     )}
                     <span className="text-xs font-bold font-mono-num leading-none"
-                      style={{ color: active ? "#000" : "var(--text)" }}>
+                      style={{ color: active ? "#fff" : "var(--text)" }}>
                       {sym}
                     </span>
                     <span className="text-[9px] leading-none"
-                      style={{ color: active ? "rgba(0,0,0,0.6)" : "var(--muted)" }}>
+                      style={{ color: active ? "rgba(255,255,255,0.85)" : "var(--muted)" }}>
                       {w.stockNames[sym] ?? sym}
                     </span>
                   </button>
@@ -1283,7 +1283,7 @@ export default function WallPage() {
                           <div className="flex items-center gap-1.5">
                             <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{post.nickname}</span>
                             <span className="text-[10px] px-1.5 py-0.5 rounded-full"
-                              style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
+                              style={{ background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }}>
                               ✓ {post.holdingLabel}
                             </span>
                           </div>
@@ -1319,7 +1319,7 @@ export default function WallPage() {
                             rows={3}
                             autoFocus
                             className="w-full rounded-xl p-2.5 text-[13px] leading-relaxed resize-none outline-none border"
-                            style={{ background: "var(--bg)", borderColor: "rgba(var(--mint-rgb),0.35)", color: "var(--text)", fontSize: "16px" }}
+                            style={{ background: "var(--bg)", borderColor: "rgba(var(--up-rgb),0.35)", color: "var(--text)", fontSize: "16px" }}
                           />
                           <div className="flex items-center justify-between mt-1">
                             <span className="text-[10px] tabular-nums" style={{ color: editContent.length > 280 ? "#ef4444" : "var(--muted)" }}>
@@ -1332,7 +1332,7 @@ export default function WallPage() {
                               onClick={() => handleSaveEdit(realId)}
                               disabled={savingEdit || editContent.trim().length < 5}
                               className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-[11px] font-bold transition-opacity disabled:opacity-40"
-                              style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
+                              style={{ background: "var(--up)", color: "#fff" }}>
                               <Check className="w-3 h-3" />
                               {savingEdit ? "저장 중…" : "저장"}
                             </button>
@@ -1351,21 +1351,21 @@ export default function WallPage() {
                         >
                           <p className={`text-[13px] leading-relaxed ${expandedDiscussion.has(post.id) ? "" : "line-clamp-3"}`} style={{ color: "var(--text)" }}>{post.content}</p>
                           {!expandedDiscussion.has(post.id) && (
-                            <span className="text-[11px] mt-0.5 block" style={{ color: "var(--mint)", opacity: 0.7 }}>더보기</span>
+                            <span className="text-[11px] mt-0.5 block" style={{ color: "var(--up)", opacity: 0.8 }}>더보기</span>
                           )}
                         </div>
                       )}
                       <div className="flex items-center gap-4">
                         <button onClick={() => toggleLike(post.id)}
                           className="flex items-center gap-1.5 text-xs transition-colors"
-                          style={{ color: liked.has(post.id) ? "var(--mint)" : "var(--muted)" }}>
+                          style={{ color: liked.has(post.id) ? "var(--up)" : "var(--muted)" }}>
                           <ThumbsUp className="w-3.5 h-3.5" />
                           {post.likes + (liked.has(post.id) ? 1 : 0)}
                         </button>
                         <button
                           onClick={() => toggleWallComments(post.id, realId)}
                           className="flex items-center gap-1.5 text-xs active:opacity-60 transition-opacity"
-                          style={{ color: expandedWallComments.has(post.id) ? "var(--mint)" : "var(--muted)" }}>
+                          style={{ color: expandedWallComments.has(post.id) ? "var(--up)" : "var(--muted)" }}>
                           <MessageCircle className="w-3.5 h-3.5" />
                           {wallComments[post.id] !== undefined ? wallComments[post.id].length : post.comments}
                         </button>
@@ -1384,7 +1384,7 @@ export default function WallPage() {
                           )}
                           {wallReplyTo[post.id] && (
                             <div className="flex items-center gap-1.5 mb-1.5 px-1">
-                              <span className="text-[10px]" style={{ color: "var(--mint)" }}>↩ {wallReplyTo[post.id]!.nickname}에게 답글</span>
+                              <span className="text-[10px]" style={{ color: "var(--up)" }}>↩ {wallReplyTo[post.id]!.nickname}에게 답글</span>
                               <button onClick={() => setWallReplyTo((p) => ({ ...p, [post.id]: null }))} className="ml-auto text-[10px]" style={{ color: "var(--muted)" }}>취소</button>
                             </div>
                           )}
@@ -1397,13 +1397,13 @@ export default function WallPage() {
                                 placeholder={wallReplyTo[post.id] ? `${wallReplyTo[post.id]!.nickname}에게 답글...` : w.commentInput}
                                 maxLength={200}
                                 className="flex-1 text-[12px] rounded-xl px-3 py-2 border outline-none"
-                                style={{ background: "var(--bg)", borderColor: "rgba(var(--mint-rgb),0.3)", color: "var(--text)", fontSize: "16px" }}
+                                style={{ background: "var(--bg)", borderColor: "rgba(var(--up-rgb),0.3)", color: "var(--text)", fontSize: "16px" }}
                               />
                               <button
                                 onClick={() => submitWallComment(post.id, realId)}
                                 disabled={wallCommentSubmitting === post.id || !wallCommentInput[post.id]?.trim()}
                                 className="px-3 py-2 rounded-xl text-[11px] font-bold transition-opacity disabled:opacity-40"
-                                style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
+                                style={{ background: "var(--up)", color: "#fff" }}>
                                 {wallCommentSubmitting === post.id ? "..." : "전송"}
                               </button>
                             </div>
@@ -1430,7 +1430,7 @@ export default function WallPage() {
             <div className="fixed right-4 lg:right-8" style={{ bottom: "calc(env(safe-area-inset-bottom) + 5rem)" }}>
               <button onClick={handleWriteClick}
                 className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-black font-bold text-2xl"
-                style={{ background: "var(--mint)", boxShadow: "0 4px 20px rgba(var(--mint-rgb),0.4)" }}>
+                style={{ background: "var(--up)", boxShadow: "0 4px 20px rgba(var(--up-rgb),0.4)" }}>
                 ✏️
               </button>
             </div>
@@ -1445,21 +1445,21 @@ export default function WallPage() {
                 <Link href="/creator/dashboard"
                   className="rounded-2xl p-4 border flex items-center gap-4 active:opacity-80 transition-opacity"
                   style={{
-                    background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.12) 0%, rgba(var(--mint-rgb),0.03) 100%)",
-                    borderColor: "rgba(var(--mint-rgb),0.3)",
+                    background: "linear-gradient(135deg, rgba(var(--down-rgb),0.12) 0%, rgba(var(--down-rgb),0.03) 100%)",
+                    borderColor: "rgba(var(--down-rgb),0.3)",
                     textDecoration: "none",
                   }}>
                   <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-                    style={{ background: "rgba(var(--mint-rgb),0.1)" }}>✦</div>
+                    style={{ background: "rgba(var(--down-rgb),0.12)" }}>✦</div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-bold font-syne mb-0.5" style={{ color: "var(--text)" }}>{w.creatorMyChannel}</p>
                     <p className="text-[11px]" style={{ color: "var(--muted)" }}>{w.creatorMyDesc}</p>
                   </div>
-                  <span className="text-xs font-bold flex-shrink-0" style={{ color: "var(--mint)" }}>{w.creatorManage}</span>
+                  <span className="text-xs font-bold flex-shrink-0" style={{ color: "var(--down)" }}>{w.creatorManage}</span>
                 </Link>
               ) : (
                 <div className="rounded-2xl p-4 border"
-                  style={{ background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.1) 0%, rgba(var(--mint-rgb),0.03) 100%)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
+                  style={{ background: "linear-gradient(135deg, rgba(var(--down-rgb),0.1) 0%, rgba(var(--down-rgb),0.03) 100%)", borderColor: "rgba(var(--down-rgb),0.22)" }}>
                   <div className="flex items-start gap-3">
                     <span className="text-3xl">🏆</span>
                     <div>
@@ -1469,7 +1469,7 @@ export default function WallPage() {
                       </p>
                       <Link href="/creator/setup"
                         className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl"
-                        style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
+                        style={{ background: "var(--down)", color: "#fff" }}>
                         <Sparkles className="w-3.5 h-3.5" />{w.creatorBecome}
                       </Link>
                     </div>
@@ -1544,8 +1544,8 @@ export default function WallPage() {
                           </p>
                           {/* 계좌 수익률 */}
                           <div className="flex items-center justify-center gap-0.5 mb-0.5">
-                            <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
-                            <span className="text-[9px] font-mono-num font-bold" style={{ color: "var(--mint)" }}>
+                            <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--up)" }} />
+                            <span className="text-[9px] font-mono-num font-bold" style={{ color: "var(--up)" }}>
                               +{creator.annualReturn}%
                             </span>
                           </div>
@@ -1591,7 +1591,7 @@ export default function WallPage() {
                     onClick={() => setCreatorSort(key)}
                     className="flex-shrink-0 text-[11px] font-semibold px-3 py-1 rounded-full transition-all"
                     style={active
-                      ? { background: "var(--mint)", color: "var(--on-accent)" }
+                      ? { background: "var(--down)", color: "#fff" }
                       : { background: "var(--card)", color: "var(--muted)", border: "1px solid var(--border)" }
                     }
                   >
@@ -1634,11 +1634,11 @@ export default function WallPage() {
             {!user ? (
               <div className="text-center py-6 mb-4 rounded-2xl border"
                 style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-                <EyeOff className="w-8 h-8 mx-auto mb-3" style={{ color: "#7c3aed" }} />
+                <EyeOff className="w-8 h-8 mx-auto mb-3" style={{ color: "var(--analyst)" }} />
                 <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{w.analystLoginRequired}</p>
                 <p className="text-xs mb-4" style={{ color: "var(--muted)" }}>{w.analystLoginDesc}</p>
                 <Link href="/more" className="inline-block text-xs font-bold px-5 py-2 rounded-xl"
-                  style={{ background: "#7c3aed", color: "#fff" }}>
+                  style={{ background: "var(--analyst)", color: "#fff" }}>
                   {w.analystLoginBtn}
                 </Link>
               </div>
@@ -1685,7 +1685,7 @@ export default function WallPage() {
                       onClick={handleAnalystPost}
                       disabled={postingAnalyst || analystPost.trim().length < 10}
                       className="px-4 py-2 rounded-xl text-xs font-bold transition-opacity disabled:opacity-40"
-                      style={{ background: "#7c3aed", color: "#fff" }}>
+                      style={{ background: "var(--analyst)", color: "#fff" }}>
                       {postingAnalyst ? "게시 중…" : "게시"}
                     </button>
                   </div>
@@ -1748,7 +1748,7 @@ export default function WallPage() {
             {analystLoading ? (
               <div className="text-center py-12">
                 <div className="w-6 h-6 rounded-full border-2 border-t-transparent animate-spin mx-auto"
-                  style={{ borderColor: "#7c3aed", borderTopColor: "transparent" }} />
+                  style={{ borderColor: "var(--analyst)", borderTopColor: "transparent" }} />
               </div>
             ) : analystPosts.length === 0 ? (
               <div className="text-center py-12">
@@ -1898,7 +1898,7 @@ export default function WallPage() {
             {/* Icon + headline */}
             <div className="flex flex-col items-center text-center mb-6">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 text-3xl"
-                style={{ background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.2) 0%, rgba(var(--mint-rgb),0.06) 100%)" }}>
+                style={{ background: "linear-gradient(135deg, rgba(var(--up-rgb),0.2) 0%, rgba(var(--up-rgb),0.06) 100%)" }}>
                 ✏️
               </div>
               <h2 className="text-lg font-bold mb-1.5" style={{ color: "var(--text)" }}>
@@ -1936,7 +1936,7 @@ export default function WallPage() {
 
             <p className="text-center text-[11px]" style={{ color: "var(--muted)" }}>
               이메일 로그인은{" "}
-              <Link href="/more" className="underline" onClick={() => setShowLoginModal(false)} style={{ color: "var(--mint)" }}>
+              <Link href="/more" className="underline" onClick={() => setShowLoginModal(false)} style={{ color: "var(--up)" }}>
                 마이페이지
               </Link>
               에서 할 수 있어요.
@@ -1957,7 +1957,7 @@ export default function WallPage() {
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold px-2.5 py-1 rounded-full"
-                  style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
+                  style={{ background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }}>
                   {selected}
                 </span>
                 <span className="text-sm font-bold" style={{ color: "var(--text)" }}>글쓰기</span>
@@ -2001,8 +2001,8 @@ export default function WallPage() {
             <button
               onClick={handleSubmitPost}
               disabled={submitting || writeContent.trim().length < 5}
-              className="w-full py-3 rounded-2xl text-sm font-bold text-black transition-opacity disabled:opacity-40"
-              style={{ background: "var(--mint)" }}>
+              className="w-full py-3 rounded-2xl text-sm font-bold text-white transition-opacity disabled:opacity-40"
+              style={{ background: "var(--up)" }}>
               {submitting ? "게시 중…" : "게시하기"}
             </button>
           </div>
@@ -2025,8 +2025,8 @@ export default function WallPage() {
             </p>
             <button
               onClick={() => setShowNoHolding(false)}
-              className="w-full py-2.5 rounded-2xl text-sm font-bold text-black"
-              style={{ background: "var(--mint)" }}>
+              className="w-full py-2.5 rounded-2xl text-sm font-bold text-white"
+              style={{ background: "var(--up)" }}>
               확인
             </button>
           </div>
@@ -2041,7 +2041,7 @@ export default function WallPage() {
             style={{ background: "var(--card)" }}
             onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center gap-3 mb-4">
-              <ShieldCheck className="w-6 h-6" style={{ color: "var(--mint)" }} />
+              <ShieldCheck className="w-6 h-6" style={{ color: "var(--up)" }} />
               <h2 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{w.verifyTitle}</h2>
             </div>
             <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--muted)" }}>
@@ -2053,14 +2053,14 @@ export default function WallPage() {
                 <button onClick={() => setVerifyMode("upload")}
                   className="flex-1 flex flex-col items-center gap-2 py-4 rounded-2xl border"
                   style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}>
-                  <Upload className="w-5 h-5" style={{ color: "var(--mint)" }} />
+                  <Upload className="w-5 h-5" style={{ color: "var(--up)" }} />
                   <span className="text-xs font-semibold">{w.verifyCapture}</span>
                   <span className="text-[10px]" style={{ color: "var(--muted)" }}>{w.verifyCaptureDesc}</span>
                 </button>
                 <button onClick={() => setVerifyMode("broker")}
                   className="flex-1 flex flex-col items-center gap-2 py-4 rounded-2xl border"
                   style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}>
-                  <ShieldCheck className="w-5 h-5" style={{ color: "var(--mint)" }} />
+                  <ShieldCheck className="w-5 h-5" style={{ color: "var(--up)" }} />
                   <span className="text-xs font-semibold">{w.verifyBroker}</span>
                   <span className="text-[10px]" style={{ color: "var(--muted)" }}>{w.verifyBrokerDesc}</span>
                 </button>
@@ -2072,20 +2072,20 @@ export default function WallPage() {
                 <label htmlFor="screenshot-upload"
                   className="w-full flex flex-col items-center gap-3 py-8 rounded-2xl border border-dashed cursor-pointer"
                   style={{
-                    borderColor: uploading ? "var(--muted)" : "rgba(var(--mint-rgb),0.4)",
-                    background:  uploading ? "rgba(255,255,255,0.02)" : "rgba(var(--mint-rgb),0.04)",
+                    borderColor: uploading ? "var(--muted)" : "rgba(var(--up-rgb),0.4)",
+                    background:  uploading ? "rgba(255,255,255,0.02)" : "rgba(var(--up-rgb),0.06)",
                     opacity: uploading ? 0.7 : 1,
                     pointerEvents: uploading ? "none" : "auto",
                   }}>
                   {uploading
                     ? <>
                         <div className="w-8 h-8 rounded-full border-2 border-t-transparent animate-spin"
-                          style={{ borderColor: "var(--mint)", borderTopColor: "transparent" }} />
+                          style={{ borderColor: "var(--up)", borderTopColor: "transparent" }} />
                         <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>AI가 확인 중…</p>
                         <p className="text-xs" style={{ color: "var(--muted)" }}>잠시만 기다려주세요</p>
                       </>
                     : <>
-                        <Upload className="w-8 h-8" style={{ color: "var(--mint)" }} />
+                        <Upload className="w-8 h-8" style={{ color: "var(--up)" }} />
                         <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>{w.captureLabel}</p>
                         <p className="text-xs" style={{ color: "var(--muted)" }}>{w.captureDesc}</p>
                       </>
@@ -2106,8 +2106,8 @@ export default function WallPage() {
             {verifyMode === "upload" && uploadDone && (
               <div className="mb-4 flex flex-col items-center gap-3 py-6">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center"
-                  style={{ background: "rgba(var(--mint-rgb),0.15)" }}>
-                  <ShieldCheck className="w-6 h-6" style={{ color: "var(--mint)" }} />
+                  style={{ background: "rgba(var(--up-rgb),0.15)" }}>
+                  <ShieldCheck className="w-6 h-6" style={{ color: "var(--up)" }} />
                 </div>
                 <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{w.uploadDone}</p>
                 <p className="text-xs text-center" style={{ color: "var(--muted)" }}>
@@ -2115,7 +2115,7 @@ export default function WallPage() {
                 </p>
                 <button onClick={() => setShowVerify(false)}
                   className="mt-2 px-6 py-2.5 rounded-xl text-sm font-bold text-black"
-                  style={{ background: "var(--mint)" }}>
+                  style={{ background: "var(--up)" }}>
                   {w.writePost}
                 </button>
               </div>
@@ -2128,7 +2128,7 @@ export default function WallPage() {
                     className="w-full py-3.5 rounded-2xl border text-sm font-semibold flex items-center justify-between px-4 active:opacity-70 transition-opacity"
                     style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}>
                     {broker}
-                    <span className="text-xs" style={{ color: "var(--mint)" }}>{w.connect}</span>
+                    <span className="text-xs" style={{ color: "var(--up)" }}>{w.connect}</span>
                   </button>
                 ))}
                 <button onClick={() => setVerifyMode("none")} className="w-full mt-1 py-2 text-xs" style={{ color: "var(--muted)" }}>
@@ -2142,7 +2142,7 @@ export default function WallPage() {
                 <div className="flex flex-col items-center gap-3 py-6 mb-4 rounded-2xl"
                   style={{ background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)" }}>
                   <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
-                    style={{ background: "rgba(var(--mint-rgb),0.10)" }}>🔧</div>
+                    style={{ background: "rgba(var(--up-rgb),0.10)" }}>🔧</div>
                   <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>{w.brokerNoticeTitle}</p>
                   <p className="text-xs text-center leading-relaxed px-4" style={{ color: "var(--muted)" }}>
                     {w.brokerNoticeDesc}
@@ -2150,7 +2150,7 @@ export default function WallPage() {
                 </div>
                 <button onClick={() => setVerifyMode("upload")}
                   className="w-full py-3 rounded-2xl text-sm font-bold text-black mb-2 active:opacity-80 transition-opacity"
-                  style={{ background: "var(--mint)" }}>
+                  style={{ background: "var(--up)" }}>
                   {w.switchToCapture}
                 </button>
                 <button onClick={() => setVerifyMode("broker")} className="w-full py-2 text-xs" style={{ color: "var(--muted)" }}>
@@ -2197,7 +2197,7 @@ export default function WallPage() {
                   <div className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0`}
                     style={{
                       background: applyStep === step || (applyStep === "verifying" && i === 1) || (applyStep === "id" && i === 0)
-                        ? "#7c3aed" : "var(--border)",
+                        ? "var(--analyst)" : "var(--border)",
                       color: applyStep === step || (applyStep === "id" && i === 0) ? "#fff" : "var(--muted)",
                     }}>
                     {i + 1}
@@ -2213,7 +2213,7 @@ export default function WallPage() {
             {applyStep === "verifying" ? (
               <div className="flex flex-col items-center gap-4 py-8">
                 <div className="w-10 h-10 rounded-full border-2 border-t-transparent animate-spin"
-                  style={{ borderColor: "#7c3aed", borderTopColor: "transparent" }} />
+                  style={{ borderColor: "var(--analyst)", borderTopColor: "transparent" }} />
                 <p className="text-sm font-bold" style={{ color: "var(--text)" }}>AI가 인증 중…</p>
                 <p className="text-xs text-center" style={{ color: "var(--muted)" }}>이름 일치 및 문서 진위를 확인하고 있습니다</p>
               </div>
