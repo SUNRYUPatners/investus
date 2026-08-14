@@ -12,15 +12,15 @@ export function TodaysGuideCard({ locale = "ko" }: { locale?: string }) {
       href={article.href}
       className="block rounded-2xl border p-4 active:opacity-80 transition-opacity"
       style={{
-        background: "linear-gradient(135deg, rgba(0,229,160,0.06) 0%, var(--card) 55%)",
-        borderColor: "rgba(0,229,160,0.2)",
+        background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.06) 0%, var(--card) 55%)",
+        borderColor: "rgba(var(--mint-rgb),0.2)",
         textDecoration: "none",
       }}
     >
       <div className="flex items-center gap-2 mb-2">
         <span
           className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-          style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.95)" }}
+          style={{ background: "rgba(var(--mint-rgb),0.12)", color: "rgba(var(--mint-rgb),0.95)" }}
         >
           {isKo ? "오늘의 가이드" : "Today's guide"}
         </span>

@@ -26,7 +26,7 @@ export function ProPricingSection() {
       />
       <article
         className="rounded-2xl border p-4"
-        style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.28)" }}
+        style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.28)" }}
       >
         <div className="flex items-start justify-between gap-3 mb-2">
           <div>
@@ -40,7 +40,7 @@ export function ProPricingSection() {
           <Link
             href="/subscribe"
             className="flex-shrink-0 px-3 py-1.5 rounded-lg text-[11px] font-bold"
-            style={{ background: "var(--mint)", color: "#000" }}
+            style={{ background: "var(--mint)", color: "var(--on-accent)" }}
           >
             구독하기
           </Link>
@@ -67,7 +67,7 @@ export function ProPricingSection() {
           </li>
           <li
             className="flex items-center justify-between text-[12px] rounded-xl px-3 py-2"
-            style={{ background: "rgba(0,229,160,0.06)" }}
+            style={{ background: "rgba(var(--mint-rgb),0.06)" }}
             itemProp="offers"
             itemScope
             itemType="https://schema.org/Offer"
@@ -79,7 +79,7 @@ export function ProPricingSection() {
               연간 구독
               <span
                 className="ml-1.5 text-[9px] font-bold px-1.5 py-0.5 rounded-full"
-                style={{ background: "var(--mint)", color: "#000" }}
+                style={{ background: "var(--mint)", color: "var(--on-accent)" }}
               >
                 {SUBSCRIPTION.yearlyDiscountPercent}% 할인
               </span>
@@ -138,7 +138,7 @@ export function EbookProductSection() {
           <Link
             href={EBOOK_PRODUCT.href}
             className="flex-shrink-0 px-3 py-1.5 rounded-lg text-[11px] font-bold"
-            style={{ background: "var(--mint)", color: "#000" }}
+            style={{ background: "var(--mint)", color: "var(--on-accent)" }}
           >
             구매하기
           </Link>

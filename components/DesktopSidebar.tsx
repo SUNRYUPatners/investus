@@ -57,11 +57,11 @@ export function DesktopSidebar() {
         <Link href="/" className="flex items-center gap-2.5">
           <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
             style={{ background: "var(--mint)" }}>
-            <TrendingUp className="w-4.5 h-4.5 text-black" strokeWidth={2.5} />
+            <TrendingUp className="w-4.5 h-4.5" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
           </div>
           <div>
             <div className="text-base font-bold tracking-tight font-syne leading-tight"
-              style={{ color: "var(--text)" }}>
+              style={{ color: "var(--navy)" }}>
               Investus
             </div>
             <div className="text-[10px] leading-none" style={{ color: "var(--muted)" }}>
@@ -86,7 +86,7 @@ export function DesktopSidebar() {
               className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl mb-0.5 transition-all text-left"
               style={
                 isActive
-                  ? { background: "rgba(0,229,160,0.1)", color: "var(--mint)" }
+                  ? { background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }
                   : { color: "var(--muted)" }
               }
             >
@@ -125,7 +125,7 @@ export function DesktopSidebar() {
               className="w-full py-2 rounded-xl text-center text-[11px] font-bold"
               style={
                 open
-                  ? { background: "rgba(0,229,160,0.1)", color: "var(--mint)" }
+                  ? { background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }
                   : { background: "rgba(107,114,128,0.08)", color: "var(--muted)" }
               }
             >

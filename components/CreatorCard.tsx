@@ -43,7 +43,7 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
                 <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{nickname}</span>
                 {isVerified && (
                   <span className="flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded-full"
-                    style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+                    style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
                     <ShieldCheck className="w-3 h-3" />계좌인증
                   </span>
                 )}
@@ -96,7 +96,7 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold" style={{ color: "var(--mint)" }}>무료 · 광고 지원형</span>
             <span className="text-xs font-bold px-4 py-2 rounded-xl"
-              style={{ background: "var(--mint)", color: "#000" }}>
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
               프로필 보기
             </span>
           </div>

@@ -84,7 +84,7 @@ export function PWAInstallPrompt() {
         >
           <div
             className="flex items-center gap-2.5 w-full max-w-[420px] rounded-2xl px-4 py-3 cursor-pointer active:opacity-80"
-            style={{ background: "rgba(0,229,160,0.10)", border: "1px solid rgba(0,229,160,0.35)", backdropFilter: "blur(12px)" }}
+            style={{ background: "rgba(var(--mint-rgb),0.10)", border: "1px solid rgba(var(--mint-rgb),0.35)", backdropFilter: "blur(12px)" }}
             onClick={() => setShow(true)}
           >
             <span className="text-xl flex-shrink-0">📲</span>
@@ -130,7 +130,7 @@ export function PWAInstallPrompt() {
                 <div className="flex items-center gap-3 mb-5">
                   <div
                     className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl"
-                    style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}
+                    style={{ background: "rgba(var(--mint-rgb),0.12)", border: "1.5px solid rgba(var(--mint-rgb),0.25)" }}
                   >
                     📲
                   </div>
@@ -157,7 +157,7 @@ export function PWAInstallPrompt() {
                     <div key={s.step} className="flex items-start gap-3 mb-3 last:mb-0">
                       <div
                         className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold mt-0.5"
-                        style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}
+                        style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}
                       >
                         {s.step}
                       </div>
@@ -200,7 +200,7 @@ export function PWAInstallPrompt() {
                 <div className="flex items-center gap-4 mb-5">
                   <div
                     className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 text-3xl"
-                    style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}
+                    style={{ background: "rgba(var(--mint-rgb),0.12)", border: "1.5px solid rgba(var(--mint-rgb),0.25)" }}
                   >
                     📲
                   </div>

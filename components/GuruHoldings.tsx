@@ -290,7 +290,7 @@ function GuruCard({ guru, open, onToggle }: { guru: Guru; open: boolean; onToggl
               }}
               disabled={loading}
               className="text-[10px] font-semibold px-2 py-0.5 rounded disabled:opacity-40 active:opacity-70 transition-opacity"
-              style={{ color: "var(--mint)", background: "rgba(0,229,160,0.08)" }}
+              style={{ color: "var(--mint)", background: "rgba(var(--mint-rgb),0.08)" }}
             >
               {loading ? t.guru.loading : t.guru.refresh}
             </button>
@@ -360,7 +360,7 @@ export function GuruHoldings() {
 
       <div
         className="flex items-center gap-2 rounded-xl px-3 py-2 mb-3 border"
-        style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.12)" }}
+        style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.12)" }}
       >
         <span className="text-xs">📋</span>
         <p className="text-[10px] leading-relaxed" style={{ color: "var(--muted)" }}>

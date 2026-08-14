@@ -60,7 +60,7 @@ export default function PortfolioStrategyPage() {
               이런 사태를 막기 위해 존재하는 것이 분산 투자(Diversification)입니다.
               서로 다른 특성을 가진 여러 자산에 투자해서 한 자산의 폭락이 전체를 무너뜨리지 않도록 합니다.
             </p>
-            <div className="rounded-2xl p-4 border" style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+            <div className="rounded-2xl p-4 border" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
               <p className="text-xs font-semibold mb-1" style={{ color: "var(--mint)" }}>
                 분산 투자의 핵심 원리
               </p>

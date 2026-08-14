@@ -61,7 +61,7 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
             {(["login", "signup"] as const).map((m) => (
               <button key={m} onClick={() => { setMode(m); setErr(""); }}
                 className="flex-1 py-2 text-xs font-bold transition-all"
-                style={mode === m ? { background: "var(--mint)", color: "#000" } : { color: "var(--muted)" }}>
+                style={mode === m ? { background: "var(--mint)", color: "var(--on-accent)" } : { color: "var(--muted)" }}>
                 {m === "login" ? "로그인" : "회원가입"}
               </button>
             ))}
@@ -74,7 +74,7 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
                 {email}로 인증 링크를 보냈습니다.<br />링크 클릭 후 로그인해주세요.
               </p>
               <button onClick={() => { setConfirmEmail(false); setMode("login"); }}
-                className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
+                className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
                 로그인으로 이동
               </button>
             </div>
@@ -98,7 +98,7 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
               {err && <p className="text-xs" style={{ color: "#ef4444" }}>{err}</p>}
               <button onClick={mode === "login" ? handleLogin : handleSignup}
                 className="w-full py-3 rounded-xl text-sm font-bold"
-                style={{ background: "var(--mint)", color: "#000" }}>
+                style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
                 {mode === "login" ? "로그인 후 시작하기" : "가입하고 시작하기"}
               </button>
             </>
@@ -118,37 +118,37 @@ function AnalysisCard({ result }: { result: Extract<PortfolioAnalysis, { approve
   const isPos = (v: number | null) => v != null && v >= 0;
 
   return (
-    <div className="rounded-2xl border overflow-hidden" style={{ borderColor: "rgba(0,229,160,0.3)", background: "rgba(0,229,160,0.04)" }}>
+    <div className="rounded-2xl border overflow-hidden" style={{ borderColor: "rgba(var(--mint-rgb),0.3)", background: "rgba(var(--mint-rgb),0.04)" }}>
       {/* Summary */}
-      <div className="flex items-center gap-3 px-4 py-3 border-b" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+      <div className="flex items-center gap-3 px-4 py-3 border-b" style={{ borderColor: "rgba(var(--mint-rgb),0.15)" }}>
         <CheckCircle2 className="w-5 h-5 flex-shrink-0" style={{ color: "var(--mint)" }} />
         <div className="flex-1 min-w-0">
           <p className="text-xs font-bold" style={{ color: "var(--mint)" }}>AI 계좌 분석 완료</p>
           <p className="text-[10px]" style={{ color: "var(--muted)" }}>스크린샷에서 자동 추출된 정보입니다</p>
         </div>
         <span className="text-[10px] px-2 py-1 rounded-full font-semibold"
-          style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+          style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
           {result.currency}
         </span>
       </div>
 
       {/* Key stats */}
-      <div className="grid grid-cols-3 divide-x" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+      <div className="grid grid-cols-3 divide-x" style={{ borderColor: "rgba(var(--mint-rgb),0.15)" }}>
         <div className="px-3 py-3 text-center">
           <p className="text-[9px] mb-1" style={{ color: "var(--muted)" }}>총 평가금액</p>
           <p className="text-xs font-bold leading-snug" style={{ color: "var(--text)" }}>{result.totalValue}</p>
         </div>
-        <div className="px-3 py-3 text-center border-l" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+        <div className="px-3 py-3 text-center border-l" style={{ borderColor: "rgba(var(--mint-rgb),0.15)" }}>
           <p className="text-[9px] mb-1" style={{ color: "var(--muted)" }}>전체 수익률</p>
           {result.totalReturnPct != null ? (
-            <p className="text-xs font-bold" style={{ color: isPos(result.totalReturnPct) ? "#00e5a0" : "#ef4444" }}>
+            <p className="text-xs font-bold" style={{ color: isPos(result.totalReturnPct) ? "var(--mint)" : "#ef4444" }}>
               {result.totalReturnPct >= 0 ? "+" : ""}{result.totalReturnPct.toFixed(1)}%
             </p>
           ) : (
             <p className="text-xs" style={{ color: "var(--muted)" }}>—</p>
           )}
         </div>
-        <div className="px-3 py-3 text-center border-l" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+        <div className="px-3 py-3 text-center border-l" style={{ borderColor: "rgba(var(--mint-rgb),0.15)" }}>
           <p className="text-[9px] mb-1" style={{ color: "var(--muted)" }}>투자 규모</p>
           <p className="text-[11px] font-bold leading-snug" style={{ color: "var(--text)" }}>{result.scale}</p>
         </div>
@@ -156,7 +156,7 @@ function AnalysisCard({ result }: { result: Extract<PortfolioAnalysis, { approve
 
       {/* Holdings table */}
       {result.holdings.length > 0 && (
-        <div className="border-t" style={{ borderColor: "rgba(0,229,160,0.15)" }}>
+        <div className="border-t" style={{ borderColor: "rgba(var(--mint-rgb),0.15)" }}>
           <p className="text-[10px] font-semibold px-4 pt-3 pb-1" style={{ color: "var(--muted)" }}>
             보유 종목 ({result.holdings.length}개)
           </p>
@@ -178,10 +178,10 @@ function AnalysisCard({ result }: { result: Extract<PortfolioAnalysis, { approve
                   {h.returnPct != null ? (
                     <div className="flex items-center justify-end gap-0.5">
                       {h.returnPct >= 0
-                        ? <TrendingUp className="w-2.5 h-2.5" style={{ color: "#00e5a0" }} />
+                        ? <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
                         : <TrendingDown className="w-2.5 h-2.5" style={{ color: "#ef4444" }} />}
                       <p className="text-[11px] font-semibold"
-                        style={{ color: h.returnPct >= 0 ? "#00e5a0" : "#ef4444" }}>
+                        style={{ color: h.returnPct >= 0 ? "var(--mint)" : "#ef4444" }}>
                         {h.returnPct >= 0 ? "+" : ""}{h.returnPct.toFixed(1)}%
                       </p>
                     </div>
@@ -359,7 +359,7 @@ export default function CreatorSetupPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-6 gap-6" style={{ background: "var(--bg)" }}>
         <div className="w-20 h-20 rounded-3xl flex items-center justify-center text-4xl"
-          style={{ background: "rgba(0,229,160,0.12)" }}>
+          style={{ background: "rgba(var(--mint-rgb),0.12)" }}>
           ✅
         </div>
         <div className="text-center">
@@ -388,7 +388,7 @@ export default function CreatorSetupPage() {
 
         <Link href="/creator/dashboard"
           className="w-full max-w-xs py-3.5 rounded-2xl text-sm font-bold text-center block"
-          style={{ background: "var(--mint)", color: "#000" }}>
+          style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
           내 투자클럽 보기 →
         </Link>
         <Link href="/wall" className="w-full max-w-xs py-2 text-xs text-center block" style={{ color: "var(--muted)" }}>
@@ -425,7 +425,7 @@ export default function CreatorSetupPage() {
 
             {/* Revenue notice */}
             <div className="rounded-2xl border p-4 mb-3"
-              style={{ background: "rgba(0,229,160,0.06)", borderColor: "rgba(0,229,160,0.2)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.06)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
               <div className="flex items-start gap-2.5">
                 <span className="text-base flex-shrink-0">💡</span>
                 <div>
@@ -474,7 +474,7 @@ export default function CreatorSetupPage() {
                 <button key={a} onClick={() => setDraft((d) => ({ ...d, avatar: a }))}
                   className="h-10 rounded-xl flex items-center justify-center text-xl transition-all border"
                   style={draft.avatar === a
-                    ? { borderColor: "var(--mint)", background: "rgba(0,229,160,0.1)" }
+                    ? { borderColor: "var(--mint)", background: "rgba(var(--mint-rgb),0.1)" }
                     : { borderColor: "var(--border)", background: "var(--card)" }}>
                   {a}
                 </button>
@@ -499,7 +499,7 @@ export default function CreatorSetupPage() {
                 <button key={t} onClick={() => toggleTag(t)}
                   className="text-xs px-3 py-1.5 rounded-full border transition-all"
                   style={draft.tags.includes(t)
-                    ? { background: "var(--mint)", color: "#000", borderColor: "var(--mint)" }
+                    ? { background: "var(--mint)", color: "var(--on-accent)", borderColor: "var(--mint)" }
                     : { background: "var(--card)", color: "var(--muted)", borderColor: "var(--border)" }}>
                   {t}
                 </button>
@@ -525,7 +525,7 @@ export default function CreatorSetupPage() {
 
             {/* How-to */}
             <div className="rounded-2xl border p-4 mb-4"
-              style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.15)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.15)" }}>
               <p className="text-xs font-semibold mb-2" style={{ color: "var(--mint)" }}>캡처 방법</p>
               <ul className="text-[11px] flex flex-col gap-1.5" style={{ color: "var(--muted)" }}>
                 <li>① 증권사 앱 실행 → <strong style={{ color: "var(--text)" }}>보유종목 / 잔고 화면</strong> 이동</li>
@@ -547,7 +547,7 @@ export default function CreatorSetupPage() {
               </button>
             ) : (
               <div className="relative mb-4 rounded-2xl overflow-hidden border"
-                style={{ borderColor: analyzing ? "var(--border)" : analysisResult?.approved ? "rgba(0,229,160,0.4)" : "rgba(239,68,68,0.4)" }}>
+                style={{ borderColor: analyzing ? "var(--border)" : analysisResult?.approved ? "rgba(var(--mint-rgb),0.4)" : "rgba(239,68,68,0.4)" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={previewUrl} alt="스크린샷 미리보기" className="w-full object-contain max-h-60" />
                 <button onClick={resetFile}

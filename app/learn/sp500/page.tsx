@@ -126,7 +126,7 @@ export default function SP500Page() {
               2020년 코로나 충격 때 각각 -50% 이상 하락했습니다.
               하지만 매번 이전 고점을 회복하고 신고점을 경신해왔습니다.
             </p>
-            <div className="rounded-2xl p-4 border" style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+            <div className="rounded-2xl p-4 border" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
               <p className="text-xs font-semibold mb-2" style={{ color: "var(--mint)" }}>📊 핵심 통계</p>
               <div className="grid grid-cols-2 gap-3">
                 {[

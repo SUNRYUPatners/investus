@@ -11,14 +11,14 @@ function StockSVG() {
     <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
       <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
       {/* Company building */}
-      <polygon points="22,46 62,16 102,46" fill="rgba(0,229,160,0.12)" stroke="rgba(0,229,160,0.3)" strokeWidth="1.2"/>
-      <rect x="28" y="46" width="68" height="72" rx="2" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.25)" strokeWidth="1.2"/>
-      <rect x="40" y="56" width="13" height="11" rx="1.5" fill="rgba(0,229,160,0.3)"/>
-      <rect x="59" y="56" width="13" height="11" rx="1.5" fill="rgba(0,229,160,0.2)"/>
-      <rect x="40" y="73" width="13" height="11" rx="1.5" fill="rgba(0,229,160,0.25)"/>
-      <rect x="59" y="73" width="13" height="11" rx="1.5" fill="rgba(0,229,160,0.35)"/>
-      <rect x="48" y="90" width="18" height="28" rx="1.5" fill="rgba(0,229,160,0.15)"/>
-      <text x="62" y="126" textAnchor="middle" fontSize="8" fill="rgba(0,229,160,0.7)" fontWeight="700">기업</text>
+      <polygon points="22,46 62,16 102,46" fill="rgba(var(--mint-rgb),0.12)" stroke="rgba(var(--mint-rgb),0.3)" strokeWidth="1.2"/>
+      <rect x="28" y="46" width="68" height="72" rx="2" fill="rgba(var(--mint-rgb),0.07)" stroke="rgba(var(--mint-rgb),0.25)" strokeWidth="1.2"/>
+      <rect x="40" y="56" width="13" height="11" rx="1.5" fill="rgba(var(--mint-rgb),0.3)"/>
+      <rect x="59" y="56" width="13" height="11" rx="1.5" fill="rgba(var(--mint-rgb),0.2)"/>
+      <rect x="40" y="73" width="13" height="11" rx="1.5" fill="rgba(var(--mint-rgb),0.25)"/>
+      <rect x="59" y="73" width="13" height="11" rx="1.5" fill="rgba(var(--mint-rgb),0.35)"/>
+      <rect x="48" y="90" width="18" height="28" rx="1.5" fill="rgba(var(--mint-rgb),0.15)"/>
+      <text x="62" y="126" textAnchor="middle" fontSize="8" fill="rgba(var(--mint-rgb),0.7)" fontWeight="700">기업</text>
       {/* Arrow */}
       <line x1="108" y1="70" x2="136" y2="70" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeDasharray="5,3"/>
       <polygon points="134,65 142,70 134,75" fill="rgba(255,255,255,0.2)"/>
@@ -87,10 +87,10 @@ function BondSVG() {
         stroke="rgba(248,113,113,0.8)" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
       {/* Bond line - steady */}
       <polyline points="40,102 70,96 110,88 150,80 190,70 240,58"
-        stroke="rgba(0,229,160,0.8)" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+        stroke="rgba(var(--mint-rgb),0.8)" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
       {/* Labels */}
       <text x="244" y="25" fontSize="7.5" fill="rgba(248,113,113,0.9)" fontWeight="700">주식</text>
-      <text x="244" y="54" fontSize="7.5" fill="rgba(0,229,160,0.9)" fontWeight="700">채권</text>
+      <text x="244" y="54" fontSize="7.5" fill="rgba(var(--mint-rgb),0.9)" fontWeight="700">채권</text>
       <text x="140" y="12" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.5)" fontWeight="600">수익 비교 (30년)</text>
     </svg>
   );
@@ -103,8 +103,8 @@ function FuturesSVG() {
       {/* Timeline */}
       <line x1="30" y1="75" x2="250" y2="75" stroke="rgba(255,255,255,0.2)" strokeWidth="2"/>
       {/* Today */}
-      <circle cx="60" cy="75" r="8" fill="rgba(0,229,160,0.6)" stroke="rgba(0,229,160,0.9)" strokeWidth="1.5"/>
-      <text x="60" y="60" textAnchor="middle" fontSize="8" fill="rgba(0,229,160,0.9)" fontWeight="700">오늘</text>
+      <circle cx="60" cy="75" r="8" fill="rgba(var(--mint-rgb),0.6)" stroke="rgba(var(--mint-rgb),0.9)" strokeWidth="1.5"/>
+      <text x="60" y="60" textAnchor="middle" fontSize="8" fill="rgba(var(--mint-rgb),0.9)" fontWeight="700">오늘</text>
       <text x="60" y="98" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.5)">계약 체결</text>
       {/* Contract box */}
       <rect x="85" y="60" width="110" height="30" rx="5" fill="rgba(212,175,55,0.12)" stroke="rgba(212,175,55,0.4)" strokeWidth="1.2" strokeDasharray="4,2"/>
@@ -169,10 +169,10 @@ function EtfSVG() {
       {/* Individual stocks (left) */}
       <text x="55" y="14" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.4)" fontWeight="600">개별 주식</text>
       {[
-        { y:22, name:"AAPL", ret:"+2.1%", c:"rgba(0,229,160,0.5)" },
-        { y:42, name:"MSFT", ret:"+1.4%", c:"rgba(0,229,160,0.4)" },
+        { y:22, name:"AAPL", ret:"+2.1%", c:"rgba(var(--mint-rgb),0.5)" },
+        { y:42, name:"MSFT", ret:"+1.4%", c:"rgba(var(--mint-rgb),0.4)" },
         { y:62, name:"AMZN", ret:"-0.8%", c:"rgba(248,113,113,0.5)" },
-        { y:82, name:"NVDA", ret:"+5.2%", c:"rgba(0,229,160,0.6)" },
+        { y:82, name:"NVDA", ret:"+5.2%", c:"rgba(var(--mint-rgb),0.6)" },
         { y:102,name:"TSLA", ret:"-2.3%", c:"rgba(248,113,113,0.4)" },
       ].map((s, i) => (
         <g key={i}>
@@ -190,7 +190,7 @@ function EtfSVG() {
       <text x="206" y="38" textAnchor="middle" fontSize="9" fill="rgba(129,140,248,0.9)" fontWeight="800">ETF</text>
       <text x="206" y="52" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.5)">S&amp;P 500</text>
       <text x="206" y="64" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.4)">500개 기업 포함</text>
-      <text x="206" y="76" textAnchor="middle" fontSize="6.5" fill="rgba(0,229,160,0.7)">수수료 0.03%/년</text>
+      <text x="206" y="76" textAnchor="middle" fontSize="6.5" fill="rgba(var(--mint-rgb),0.7)">수수료 0.03%/년</text>
       <text x="206" y="90" textAnchor="middle" fontSize="8" fill="rgba(212,175,55,0.9)" fontWeight="700">+1.6%</text>
       <text x="206" y="104" textAnchor="middle" fontSize="6.5" fill="rgba(255,255,255,0.4)">오늘 수익률</text>
     </svg>
@@ -202,9 +202,9 @@ function PerSVG() {
     <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
       <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
       {/* PER formula */}
-      <rect x="14" y="14" width="118" height="54" rx="6" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.25)" strokeWidth="1.2"/>
-      <text x="73" y="30" textAnchor="middle" fontSize="8.5" fill="rgba(0,229,160,0.8)" fontWeight="700">PER (주가수익비율)</text>
-      <text x="73" y="46" textAnchor="middle" fontSize="11" fill="rgba(0,229,160,0.95)" fontWeight="800">주가 ÷ EPS</text>
+      <rect x="14" y="14" width="118" height="54" rx="6" fill="rgba(var(--mint-rgb),0.07)" stroke="rgba(var(--mint-rgb),0.25)" strokeWidth="1.2"/>
+      <text x="73" y="30" textAnchor="middle" fontSize="8.5" fill="rgba(var(--mint-rgb),0.8)" fontWeight="700">PER (주가수익비율)</text>
+      <text x="73" y="46" textAnchor="middle" fontSize="11" fill="rgba(var(--mint-rgb),0.95)" fontWeight="800">주가 ÷ EPS</text>
       <text x="73" y="60" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.45)">주가 ÷ 주당순이익</text>
       {/* PBR formula */}
       <rect x="148" y="14" width="118" height="54" rx="6" fill="rgba(212,175,55,0.07)" stroke="rgba(212,175,55,0.25)" strokeWidth="1.2"/>
@@ -225,14 +225,14 @@ function DividendSVG() {
     <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
       <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
       {/* Company */}
-      <rect x="14" y="30" width="60" height="70" rx="3" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.25)" strokeWidth="1.2"/>
-      <polygon points="10,30 44,8 78,30" fill="rgba(0,229,160,0.1)" stroke="rgba(0,229,160,0.2)" strokeWidth="1"/>
-      <rect x="24" y="42" width="11" height="9" rx="1" fill="rgba(0,229,160,0.25)"/>
-      <rect x="40" y="42" width="11" height="9" rx="1" fill="rgba(0,229,160,0.3)"/>
-      <rect x="24" y="56" width="11" height="9" rx="1" fill="rgba(0,229,160,0.2)"/>
-      <rect x="40" y="56" width="11" height="9" rx="1" fill="rgba(0,229,160,0.35)"/>
-      <rect x="30" y="72" width="18" height="28" rx="1" fill="rgba(0,229,160,0.15)"/>
-      <text x="44" y="108" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.65)" fontWeight="600">기업</text>
+      <rect x="14" y="30" width="60" height="70" rx="3" fill="rgba(var(--mint-rgb),0.07)" stroke="rgba(var(--mint-rgb),0.25)" strokeWidth="1.2"/>
+      <polygon points="10,30 44,8 78,30" fill="rgba(var(--mint-rgb),0.1)" stroke="rgba(var(--mint-rgb),0.2)" strokeWidth="1"/>
+      <rect x="24" y="42" width="11" height="9" rx="1" fill="rgba(var(--mint-rgb),0.25)"/>
+      <rect x="40" y="42" width="11" height="9" rx="1" fill="rgba(var(--mint-rgb),0.3)"/>
+      <rect x="24" y="56" width="11" height="9" rx="1" fill="rgba(var(--mint-rgb),0.2)"/>
+      <rect x="40" y="56" width="11" height="9" rx="1" fill="rgba(var(--mint-rgb),0.35)"/>
+      <rect x="30" y="72" width="18" height="28" rx="1" fill="rgba(var(--mint-rgb),0.15)"/>
+      <text x="44" y="108" textAnchor="middle" fontSize="7.5" fill="rgba(var(--mint-rgb),0.65)" fontWeight="600">기업</text>
       {/* Falling coins */}
       {[
         { x:108, y:36, delay:0 }, { x:128, y:46, delay:0 }, { x:120, y:26, delay:0 },
@@ -260,9 +260,9 @@ function StartSVG() {
       <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
       {/* Steps */}
       {[
-        { step:1, x:10,  y:95,  w:48, color:"rgba(0,229,160,0.5)",  icon:"🏦", label:"증권사\n계좌개설" },
-        { step:2, x:64,  y:72,  w:48, color:"rgba(0,229,160,0.55)", icon:"📝", label:"본인인증\nKYC" },
-        { step:3, x:118, y:50,  w:48, color:"rgba(0,229,160,0.6)",  icon:"💵", label:"달러\n환전" },
+        { step:1, x:10,  y:95,  w:48, color:"rgba(var(--mint-rgb),0.5)",  icon:"🏦", label:"증권사\n계좌개설" },
+        { step:2, x:64,  y:72,  w:48, color:"rgba(var(--mint-rgb),0.55)", icon:"📝", label:"본인인증\nKYC" },
+        { step:3, x:118, y:50,  w:48, color:"rgba(var(--mint-rgb),0.6)",  icon:"💵", label:"달러\n환전" },
         { step:4, x:172, y:28,  w:48, color:"rgba(212,175,55,0.6)", icon:"🔍", label:"종목\n선택" },
         { step:5, x:226, y:8,   w:44, color:"rgba(212,175,55,0.7)", icon:"✅", label:"매수\n주문" },
       ].map((s, i) => (
@@ -285,14 +285,14 @@ function BuffettSVG() {
       <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
       {/* Snowball growing */}
       <text x="140" y="14" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.4)" fontWeight="600">복리의 마법 — 시간이 쌓일수록 눈덩이처럼</text>
-      <circle cx="46" cy="95" r="10" fill="rgba(0,229,160,0.25)" stroke="rgba(0,229,160,0.4)" strokeWidth="1.5"/>
-      <text x="46" y="99" textAnchor="middle" fontSize="7" fill="rgba(0,229,160,0.8)" fontWeight="700">$1만</text>
+      <circle cx="46" cy="95" r="10" fill="rgba(var(--mint-rgb),0.25)" stroke="rgba(var(--mint-rgb),0.4)" strokeWidth="1.5"/>
+      <text x="46" y="99" textAnchor="middle" fontSize="7" fill="rgba(var(--mint-rgb),0.8)" fontWeight="700">$1만</text>
       <text x="46" y="112" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.4)">10년</text>
-      <circle cx="110" cy="85" r="18" fill="rgba(0,229,160,0.3)" stroke="rgba(0,229,160,0.5)" strokeWidth="1.5"/>
-      <text x="110" y="89" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.9)" fontWeight="700">$2.6만</text>
+      <circle cx="110" cy="85" r="18" fill="rgba(var(--mint-rgb),0.3)" stroke="rgba(var(--mint-rgb),0.5)" strokeWidth="1.5"/>
+      <text x="110" y="89" textAnchor="middle" fontSize="7.5" fill="rgba(var(--mint-rgb),0.9)" fontWeight="700">$2.6만</text>
       <text x="110" y="112" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.4)">20년</text>
-      <circle cx="180" cy="70" r="28" fill="rgba(0,229,160,0.35)" stroke="rgba(0,229,160,0.6)" strokeWidth="1.5"/>
-      <text x="180" y="74" textAnchor="middle" fontSize="8" fill="rgba(0,229,160,0.95)" fontWeight="700">$6.7만</text>
+      <circle cx="180" cy="70" r="28" fill="rgba(var(--mint-rgb),0.35)" stroke="rgba(var(--mint-rgb),0.6)" strokeWidth="1.5"/>
+      <text x="180" y="74" textAnchor="middle" fontSize="8" fill="rgba(var(--mint-rgb),0.95)" fontWeight="700">$6.7만</text>
       <text x="180" y="112" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.4)">30년</text>
       <circle cx="252" cy="48" r="38" fill="rgba(212,175,55,0.35)" stroke="rgba(212,175,55,0.7)" strokeWidth="2"/>
       <text x="252" y="44" textAnchor="middle" fontSize="8.5" fill="rgba(212,175,55,0.95)" fontWeight="800">$17.4만</text>
@@ -336,13 +336,13 @@ function LynchSVG() {
       <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
       <text x="140" y="14" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.4)" fontWeight="600">10루타 — 일상 속에서 위대한 기업을 먼저 발견하라</text>
       {/* Consumer experience */}
-      <rect x="14" y="24" width="75" height="90" rx="6" fill="rgba(0,229,160,0.07)" stroke="rgba(0,229,160,0.2)" strokeWidth="1.2"/>
+      <rect x="14" y="24" width="75" height="90" rx="6" fill="rgba(var(--mint-rgb),0.07)" stroke="rgba(var(--mint-rgb),0.2)" strokeWidth="1.2"/>
       <text x="51" y="38" textAnchor="middle" fontSize="11">🛍️</text>
-      <text x="51" y="52" textAnchor="middle" fontSize="7" fill="rgba(0,229,160,0.8)" fontWeight="700">소비자로서</text>
+      <text x="51" y="52" textAnchor="middle" fontSize="7" fill="rgba(var(--mint-rgb),0.8)" fontWeight="700">소비자로서</text>
       <text x="51" y="63" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.5)">자주 쓰는</text>
       <text x="51" y="73" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.5)">제품 발견</text>
       <text x="51" y="90" textAnchor="middle" fontSize="10">☕🍔👟</text>
-      <text x="51" y="106" textAnchor="middle" fontSize="6.5" fill="rgba(0,229,160,0.6)">스타벅스, 맥도날드...</text>
+      <text x="51" y="106" textAnchor="middle" fontSize="6.5" fill="rgba(var(--mint-rgb),0.6)">스타벅스, 맥도날드...</text>
       {/* Arrow */}
       <polygon points="94,69 106,64 106,74" fill="rgba(255,255,255,0.2)"/>
       <line x1="92" y1="69" x2="104" y2="69" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5"/>
@@ -375,13 +375,13 @@ function BogleSVG() {
       <text x="30" y="24"  textAnchor="end" fontSize="7" fill="rgba(255,255,255,0.35)">$15만</text>
       {/* Index fund line (low cost wins) */}
       <polyline points="36,102 80,92 120,78 160,58 200,38 250,22"
-        stroke="rgba(0,229,160,0.85)" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+        stroke="rgba(var(--mint-rgb),0.85)" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
       {/* Active fund line (fees drag it down) */}
       <polyline points="36,102 80,96 120,88 160,76 200,65 250,58"
         stroke="rgba(248,113,113,0.75)" strokeWidth="2" fill="none" strokeLinecap="round" strokeDasharray="6,3"/>
       {/* Labels */}
-      <rect x="152" y="20" width="94" height="14" rx="3" fill="rgba(0,229,160,0.12)"/>
-      <text x="199" y="30" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.9)" fontWeight="700">인덱스 펀드 (수수료 0.03%)</text>
+      <rect x="152" y="20" width="94" height="14" rx="3" fill="rgba(var(--mint-rgb),0.12)"/>
+      <text x="199" y="30" textAnchor="middle" fontSize="7.5" fill="rgba(var(--mint-rgb),0.9)" fontWeight="700">인덱스 펀드 (수수료 0.03%)</text>
       <rect x="152" y="56" width="94" height="14" rx="3" fill="rgba(248,113,113,0.1)"/>
       <text x="199" y="66" textAnchor="middle" fontSize="7.5" fill="rgba(248,113,113,0.9)" fontWeight="700">액티브 펀드 (수수료 1.5%)</text>
       {/* X axis labels */}
@@ -428,7 +428,7 @@ function DalioSVG() {
       <text x="140" y="14" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.4)" fontWeight="600">올웨더 포트폴리오 — 어떤 경제 환경에서도 균형</text>
       {/* Donut chart segments */}
       {/* Long bonds 40% - from top (270°) clockwise */}
-      <path d="M140 72 L140 32 A40 40 0 0 1 174.6 92 Z" fill="rgba(0,229,160,0.55)"/>
+      <path d="M140 72 L140 32 A40 40 0 0 1 174.6 92 Z" fill="rgba(var(--mint-rgb),0.55)"/>
       {/* Stocks 30% */}
       <path d="M140 72 L174.6 92 A40 40 0 0 1 110 108.7 Z" fill="rgba(129,140,248,0.6)"/>
       {/* Short/Med bonds 15% */}
@@ -443,7 +443,7 @@ function DalioSVG() {
       <text x="140" y="79" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.7)" fontWeight="700">WEATHER</text>
       {/* Legend */}
       {[
-        { color:"rgba(0,229,160,0.7)",   label:"장기국채  40%" },
+        { color:"rgba(var(--mint-rgb),0.7)",   label:"장기국채  40%" },
         { color:"rgba(129,140,248,0.7)", label:"주식        30%" },
         { color:"rgba(212,175,55,0.7)",  label:"중단기채  15%" },
         { color:"rgba(248,113,113,0.7)", label:"금           7.5%" },
@@ -472,8 +472,8 @@ function DiverSVG() {
       {/* Arrow */}
       <text x="140" y="70" textAnchor="middle" fontSize="16" fill="rgba(255,255,255,0.2)">→</text>
       {/* Right: Diversified */}
-      <rect x="162" y="30" width="96" height="78" rx="6" fill="rgba(0,229,160,0.06)" stroke="rgba(0,229,160,0.2)" strokeWidth="1"/>
-      <text x="210" y="48" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.8)" fontWeight="700">분산투자</text>
+      <rect x="162" y="30" width="96" height="78" rx="6" fill="rgba(var(--mint-rgb),0.06)" stroke="rgba(var(--mint-rgb),0.2)" strokeWidth="1"/>
+      <text x="210" y="48" textAnchor="middle" fontSize="7.5" fill="rgba(var(--mint-rgb),0.8)" fontWeight="700">분산투자</text>
       {[
         { x:170, label:"AAPL", pct:"25%", h:28 },
         { x:192, label:"NVDA", pct:"20%", h:22 },
@@ -482,11 +482,11 @@ function DiverSVG() {
         { x:248, label:"GLD", pct:"10%", h:11 },
       ].map((b, i) => (
         <g key={i}>
-          <rect x={b.x} y={100 - b.h} width="14" height={b.h} rx="2" fill={`rgba(0,229,160,${0.3 + i*0.06})`}/>
+          <rect x={b.x} y={100 - b.h} width="14" height={b.h} rx="2" fill={`rgba(var(--mint-rgb),${0.3 + i*0.06})`}/>
           <text x={b.x+7} y="113" textAnchor="middle" fontSize="5.5" fill="rgba(255,255,255,0.55)">{b.label}</text>
         </g>
       ))}
-      <text x="210" y="120" textAnchor="middle" fontSize="7" fill="rgba(0,229,160,0.7)">저위험</text>
+      <text x="210" y="120" textAnchor="middle" fontSize="7" fill="rgba(var(--mint-rgb),0.7)">저위험</text>
     </svg>
   );
 }
@@ -509,14 +509,14 @@ function DCASVG() {
       <path d={pathD} stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" fill="none"/>
       {pts.map((p, i) => (
         <g key={i}>
-          <circle cx={p.x} cy={p.y} r="4" fill="rgba(0,229,160,0.7)" stroke="rgba(0,229,160,0.3)" strokeWidth="1.5"/>
-          <line x1={p.x} y1={p.y+4} x2={p.x} y2="116" stroke="rgba(0,229,160,0.2)" strokeWidth="1" strokeDasharray="2,2"/>
-          <text x={p.x} y="124" textAnchor="middle" fontSize="5.5" fill="rgba(0,229,160,0.55)">{p.price}</text>
+          <circle cx={p.x} cy={p.y} r="4" fill="rgba(var(--mint-rgb),0.7)" stroke="rgba(var(--mint-rgb),0.3)" strokeWidth="1.5"/>
+          <line x1={p.x} y1={p.y+4} x2={p.x} y2="116" stroke="rgba(var(--mint-rgb),0.2)" strokeWidth="1" strokeDasharray="2,2"/>
+          <text x={p.x} y="124" textAnchor="middle" fontSize="5.5" fill="rgba(var(--mint-rgb),0.55)">{p.price}</text>
         </g>
       ))}
       <line x1="32" y1="76" x2="260" y2="76" stroke="rgba(212,175,55,0.5)" strokeWidth="1" strokeDasharray="5,3"/>
       <text x="265" y="79" fontSize="6.5" fill="rgba(212,175,55,0.8)">평균</text>
-      <text x="140" y="18" textAnchor="middle" fontSize="8" fill="rgba(0,229,160,0.7)" fontWeight="700">매월 일정금액 자동매수 (DCA)</text>
+      <text x="140" y="18" textAnchor="middle" fontSize="8" fill="rgba(var(--mint-rgb),0.7)" fontWeight="700">매월 일정금액 자동매수 (DCA)</text>
     </svg>
   );
 }
@@ -535,10 +535,10 @@ function CompoundSVG() {
       <line x1="28" y1="15" x2="28" y2="112" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
       <line x1="28" y1="112" x2="262" y2="112" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
       <path d={simpPath} stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" fill="none" strokeDasharray="5,3"/>
-      <path d={compPath} stroke="rgba(0,229,160,0.8)" strokeWidth="2" fill="none"/>
-      <circle cx={compoundPts[10].x} cy={compoundPts[10].yCompound} r="4" fill="rgba(0,229,160,0.9)"/>
+      <path d={compPath} stroke="rgba(var(--mint-rgb),0.8)" strokeWidth="2" fill="none"/>
+      <circle cx={compoundPts[10].x} cy={compoundPts[10].yCompound} r="4" fill="rgba(var(--mint-rgb),0.9)"/>
       <circle cx={compoundPts[10].x} cy={compoundPts[10].ySimple} r="3" fill="rgba(255,255,255,0.4)"/>
-      <text x="250" y={compoundPts[10].yCompound - 8} textAnchor="middle" fontSize="6.5" fill="rgba(0,229,160,0.9)" fontWeight="700">복리</text>
+      <text x="250" y={compoundPts[10].yCompound - 8} textAnchor="middle" fontSize="6.5" fill="rgba(var(--mint-rgb),0.9)" fontWeight="700">복리</text>
       <text x="250" y={compoundPts[10].ySimple + 14} textAnchor="middle" fontSize="6.5" fill="rgba(255,255,255,0.4)">단리</text>
       <text x="140" y="18" textAnchor="middle" fontSize="8" fill="rgba(212,175,55,0.8)" fontWeight="700">복리 vs 단리 — 시간이 지날수록 차이 폭발적 증가</text>
       {["1년","3년","5년","7년","10년"].map((l,i) => (
@@ -568,7 +568,7 @@ function PsychSVG() {
           <text x={pt.x} y={pt.y - 19} textAnchor="middle" fontSize="6" fill="rgba(255,255,255,0.4)">{pt.sub}</text>
         </g>
       ))}
-      <text x="140" y="120" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.7)" fontWeight="600">원칙을 세우면 감정 사이클에서 벗어날 수 있다</text>
+      <text x="140" y="120" textAnchor="middle" fontSize="7.5" fill="rgba(var(--mint-rgb),0.7)" fontWeight="600">원칙을 세우면 감정 사이클에서 벗어날 수 있다</text>
     </svg>
   );
 }
@@ -586,7 +586,7 @@ function TaxSVG() {
       <text x="152" y="51" textAnchor="middle" fontSize="14" fill="rgba(251,191,36,0.9)" fontWeight="900">₩</text>
       <text x="152" y="67" textAnchor="middle" fontSize="7.5" fill="rgba(251,191,36,0.7)">원화 환산</text>
       {/* Tax breakdown */}
-      <rect x="195" y="22" width="68" height="18" rx="3" fill="rgba(0,229,160,0.3)"/>
+      <rect x="195" y="22" width="68" height="18" rx="3" fill="rgba(var(--mint-rgb),0.3)"/>
       <text x="229" y="35" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.9)" fontWeight="700">수익 250만원 이하 비과세</text>
       <rect x="195" y="46" width="68" height="18" rx="3" fill="rgba(239,68,68,0.35)"/>
       <text x="229" y="59" textAnchor="middle" fontSize="7" fill="rgba(255,255,255,0.9)" fontWeight="700">초과분 × 22% 양도세</text>
@@ -611,7 +611,7 @@ function RiskSVG() {
         { x:55,  y:95, r:6,  label:"현금·예금",  color:"rgba(255,255,255,0.3)" },
         { x:90,  y:80, r:8,  label:"채권",       color:"rgba(99,102,241,0.7)" },
         { x:130, y:65, r:10, label:"배당주",      color:"rgba(251,191,36,0.7)" },
-        { x:175, y:48, r:12, label:"성장주",      color:"rgba(0,229,160,0.8)" },
+        { x:175, y:48, r:12, label:"성장주",      color:"rgba(var(--mint-rgb),0.8)" },
         { x:220, y:32, r:9,  label:"레버리지",    color:"rgba(239,68,68,0.8)" },
       ].map((a, i) => (
         <g key={i}>
@@ -629,10 +629,10 @@ function FinancialSVG() {
     <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
       <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
       <text x="140" y="13" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.35)" fontWeight="600">3대 재무제표</text>
-      <rect x="22" y="22" width="68" height="72" rx="4" fill="rgba(0,229,160,0.12)" stroke="rgba(0,229,160,0.4)" strokeWidth="1"/>
-      <text x="56" y="37" textAnchor="middle" fontSize="7.5" fill="rgba(0,229,160,0.9)" fontWeight="700">손익계산서</text>
+      <rect x="22" y="22" width="68" height="72" rx="4" fill="rgba(var(--mint-rgb),0.12)" stroke="rgba(var(--mint-rgb),0.4)" strokeWidth="1"/>
+      <text x="56" y="37" textAnchor="middle" fontSize="7.5" fill="rgba(var(--mint-rgb),0.9)" fontWeight="700">손익계산서</text>
       <text x="56" y="55" textAnchor="middle" fontSize="9" fill="rgba(255,255,255,0.75)" fontWeight="700">P/L</text>
-      <text x="56" y="70" textAnchor="middle" fontSize="6.5" fill="rgba(0,229,160,0.65)">매출 · 이익</text>
+      <text x="56" y="70" textAnchor="middle" fontSize="6.5" fill="rgba(var(--mint-rgb),0.65)">매출 · 이익</text>
       <text x="56" y="82" textAnchor="middle" fontSize="6" fill="rgba(255,255,255,0.3)">얼마 벌었나</text>
       <rect x="106" y="22" width="68" height="72" rx="4" fill="rgba(212,175,55,0.1)" stroke="rgba(212,175,55,0.4)" strokeWidth="1"/>
       <text x="140" y="37" textAnchor="middle" fontSize="7.5" fill="rgba(212,175,55,0.9)" fontWeight="700">대차대조표</text>
@@ -653,9 +653,9 @@ function ValuationSVG() {
   return (
     <svg viewBox="0 0 280 130" fill="none" className="w-full h-auto">
       <rect width="280" height="130" rx="10" fill="rgba(0,0,0,0.3)"/>
-      <rect x="20" y="16" width="240" height="28" rx="5" fill="rgba(0,229,160,0.08)" stroke="rgba(0,229,160,0.5)" strokeWidth="1.5" strokeDasharray="6,3"/>
-      <text x="140" y="27" textAnchor="middle" fontSize="7" fill="rgba(0,229,160,0.8)" fontWeight="700">내재가치 (Intrinsic Value)</text>
-      <text x="140" y="40" textAnchor="middle" fontSize="11" fill="rgba(0,229,160,0.9)" fontWeight="800">$100</text>
+      <rect x="20" y="16" width="240" height="28" rx="5" fill="rgba(var(--mint-rgb),0.08)" stroke="rgba(var(--mint-rgb),0.5)" strokeWidth="1.5" strokeDasharray="6,3"/>
+      <text x="140" y="27" textAnchor="middle" fontSize="7" fill="rgba(var(--mint-rgb),0.8)" fontWeight="700">내재가치 (Intrinsic Value)</text>
+      <text x="140" y="40" textAnchor="middle" fontSize="11" fill="rgba(var(--mint-rgb),0.9)" fontWeight="800">$100</text>
       <rect x="20" y="48" width="240" height="20" rx="3" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.3)" strokeWidth="1" strokeDasharray="4,3"/>
       <text x="140" y="61" textAnchor="middle" fontSize="7.5" fill="rgba(239,68,68,0.75)" fontWeight="700">안전마진 구간 (Margin of Safety) — 30%</text>
       <rect x="20" y="72" width="240" height="28" rx="5" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.5)" strokeWidth="1.5"/>
@@ -677,8 +677,8 @@ function RebalanceSVG() {
       <rect x="192" y="34" width="63" height="17" rx="3" fill="rgba(96,165,250,0.4)"/>
       <text x="223" y="46" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.9)" fontWeight="700">채권 25%</text>
       <text x="140" y="72" textAnchor="middle" fontSize="9" fill="rgba(212,175,55,0.55)">↓ 리밸런싱 실행</text>
-      <text x="25" y="90" fontSize="7" fill="rgba(0,229,160,0.7)" fontWeight="700">리밸런싱 후 (목표 복원)</text>
-      <rect x="25" y="94" width="132" height="17" rx="3" fill="rgba(0,229,160,0.45)"/>
+      <text x="25" y="90" fontSize="7" fill="rgba(var(--mint-rgb),0.7)" fontWeight="700">리밸런싱 후 (목표 복원)</text>
+      <rect x="25" y="94" width="132" height="17" rx="3" fill="rgba(var(--mint-rgb),0.45)"/>
       <text x="91" y="106" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.9)" fontWeight="700">주식 60%</text>
       <rect x="159" y="94" width="96" height="17" rx="3" fill="rgba(96,165,250,0.4)"/>
       <text x="207" y="106" textAnchor="middle" fontSize="7.5" fill="rgba(255,255,255,0.9)" fontWeight="700">채권 40%</text>
@@ -695,8 +695,8 @@ function GrahamSVG() {
       <text x="30" y="20" textAnchor="end" fontSize="6.5" fill="rgba(255,255,255,0.3)">$100</text>
       <text x="30" y="55" textAnchor="end" fontSize="6.5" fill="rgba(255,255,255,0.3)">$70</text>
       <text x="30" y="85" textAnchor="end" fontSize="6.5" fill="rgba(255,255,255,0.3)">$50</text>
-      <line x1="35" y1="18" x2="256" y2="18" stroke="rgba(0,229,160,0.7)" strokeWidth="1.5" strokeDasharray="8,3"/>
-      <text x="260" y="21" fontSize="6.5" fill="rgba(0,229,160,0.9)" fontWeight="700">내재가치</text>
+      <line x1="35" y1="18" x2="256" y2="18" stroke="rgba(var(--mint-rgb),0.7)" strokeWidth="1.5" strokeDasharray="8,3"/>
+      <text x="260" y="21" fontSize="6.5" fill="rgba(var(--mint-rgb),0.9)" fontWeight="700">내재가치</text>
       <rect x="35" y="18" width="221" height="36" fill="rgba(239,68,68,0.06)"/>
       <text x="145" y="39" textAnchor="middle" fontSize="7.5" fill="rgba(239,68,68,0.6)" fontWeight="600">안전마진 30% 구간</text>
       <line x1="35" y1="54" x2="256" y2="54" stroke="rgba(212,175,55,0.8)" strokeWidth="2"/>
@@ -722,8 +722,8 @@ function FisherSVG() {
         stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" fill="none" strokeDasharray="5,3"/>
       <text x="230" y="61" fontSize="6.5" fill="rgba(255,255,255,0.35)">평균</text>
       <polyline points="30,106 58,96 114,78 170,50 226,20"
-        stroke="rgba(0,229,160,0.9)" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-      <text x="230" y="17" fontSize="6.5" fill="rgba(0,229,160,0.9)" fontWeight="700">우량성장주</text>
+        stroke="rgba(var(--mint-rgb),0.9)" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+      <text x="230" y="17" fontSize="6.5" fill="rgba(var(--mint-rgb),0.9)" fontWeight="700">우량성장주</text>
       <text x="143" y="12" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.35)" fontWeight="600">피셔: 탁월한 기업을 영원히 보유하라</text>
     </svg>
   );
@@ -1186,7 +1186,7 @@ function CollapsibleSection({ title, articles, accent }: { title: string; articl
 }
 
 export function InvestmentBasics() {
-  return <CollapsibleSection title="투자 기초 지식" articles={BASICS} accent="rgba(0,229,160,0.9)" />;
+  return <CollapsibleSection title="투자 기초 지식" articles={BASICS} accent="rgba(var(--mint-rgb),0.9)" />;
 }
 
 export function InvestmentMasters() {
@@ -1231,7 +1231,7 @@ export function InvestmentAllExpanded() {
             투자 기초 지식
           </h2>
           <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-            style={{ background: "rgba(0,229,160,0.1)", color: "rgba(0,229,160,0.9)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.1)", color: "rgba(var(--mint-rgb),0.9)" }}>
             {BASICS.length}개
           </span>
         </div>

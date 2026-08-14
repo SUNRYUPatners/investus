@@ -9,6 +9,7 @@ import { PullToRefresh } from "@/components/PullToRefresh";
 import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { ThemeProvider, THEME_BOOT_SCRIPT } from "@/contexts/ThemeContext";
 import { VersionBanner } from "@/components/VersionBanner";
 import { ReportUpdateBanner } from "@/components/ReportUpdateBanner";
 import { getLocale } from "@/lib/getLocale";
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   appleWebApp: {
     capable: true,
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
     title: "Investus",
   },
   formatDetection: { telephone: false },
@@ -85,7 +86,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#10b981",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#c4a035" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0c0e" },
+  ],
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover", // env(safe-area-inset-bottom) requires this on iOS
@@ -155,9 +159,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html
       lang={locale}
+      data-theme="light"
       className={`${syne.variable} ${ibmPlexMono.variable} ${notoSansKR.variable}`}
+      suppressHydrationWarning
     >
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -193,6 +200,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             }, { passive: false });
           })();
         `}</Script>
+        <ThemeProvider>
         <LocaleProvider locale={locale}>
           <AuthProvider>
             <ServiceWorkerRegistration />
@@ -211,6 +219,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <BottomNav />
           </AuthProvider>
         </LocaleProvider>
+        </ThemeProvider>
         {/* Kakao AdFit SDK — afterInteractive로 React 렌더 후 실행 보장 */}
         <Script
           src="https://t1.kakaocdn.net/kas/static/ba.min.js"

@@ -99,7 +99,7 @@ export default function LearnPage() {
           <Link
             href="/portfolio"
             className="inline-flex items-center gap-1 px-4 py-2 rounded-xl text-sm font-semibold"
-            style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}
+            style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
           >
             AI 투자비서 열기 <ChevronRight className="w-4 h-4" />
           </Link>

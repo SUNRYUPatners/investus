@@ -128,7 +128,7 @@ function AdBanner({
   return (
     <div
       ref={wrapRef}
-      className={`flex justify-center overflow-hidden ${className}`}
+      className={`ad-slot flex justify-center overflow-hidden ${className}`}
       style={{ minHeight: visible ? height : 0 }}
     >
       {visible ? (

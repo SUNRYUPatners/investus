@@ -171,7 +171,7 @@ export function PriceAlertsPanel({
         <Link
           href="/subscribe"
           className="inline-flex items-center gap-1.5 text-[12px] font-bold px-3 py-2 rounded-xl"
-          style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}
+          style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
         >
           <Lock className="w-3.5 h-3.5" />
           Pro로 알림 설정

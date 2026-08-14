@@ -10,6 +10,7 @@ import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { ProPricingSection } from "@/components/PaidProductsSection";
 import { useForm, ValidationError } from "@formspree/react";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
+import { ThemeSettingsCard } from "@/components/ThemeSettingsCard";
 
 type MenuItem_t = { label: string; sub: string; emoji: string; href?: string; onClick?: () => void };
 
@@ -82,7 +83,7 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
             /* Success */
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="w-14 h-14 rounded-full flex items-center justify-center"
-                style={{ background: "rgba(0,229,160,0.15)" }}>
+                style={{ background: "rgba(var(--mint-rgb),0.15)" }}>
                 <CheckCircle2 className="w-7 h-7" style={{ color: "var(--mint)" }} />
               </div>
               <p className="text-base font-bold" style={{ color: "var(--text)" }}>{fb.successTitle}</p>
@@ -120,7 +121,7 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
                   <button type="button" key={c.key} onClick={() => setCategory(c.key)}
                     className="flex flex-col items-center gap-1 py-2.5 rounded-xl border transition-all active:opacity-70"
                     style={category === c.key
-                      ? { borderColor: "var(--mint)", background: "rgba(0,229,160,0.08)" }
+                      ? { borderColor: "var(--mint)", background: "rgba(var(--mint-rgb),0.08)" }
                       : { borderColor: "var(--border)", background: "var(--bg)" }}>
                     <span className="text-lg">{c.emoji}</span>
                     <span className="text-[9px] font-semibold"
@@ -205,16 +206,16 @@ function CreatorSection() {
       <Link href="/creator/dashboard" style={{ textDecoration: "none" }}>
         <div
           className="rounded-2xl p-4 mb-6 border flex items-center gap-4 active:opacity-70 transition-opacity"
-          style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.2)" }}
+          style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(var(--mint-rgb),0.2)" }}
         >
           {/* Avatar */}
           {isPhoto ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={profile.avatar} alt="creator" className="w-12 h-12 rounded-full object-cover flex-shrink-0"
-              style={{ border: "2px solid rgba(0,229,160,0.4)" }} />
+              style={{ border: "2px solid rgba(var(--mint-rgb),0.4)" }} />
           ) : (
             <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-2xl"
-              style={{ background: "rgba(0,229,160,0.12)", border: "2px solid rgba(0,229,160,0.3)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.12)", border: "2px solid rgba(var(--mint-rgb),0.3)" }}>
               {profile.avatar || <Sparkles className="w-5 h-5" style={{ color: "var(--mint)" }} />}
             </div>
           )}
@@ -243,10 +244,10 @@ function CreatorSection() {
     <Link href="/creator/setup" style={{ textDecoration: "none" }}>
       <div
         className="rounded-2xl p-4 mb-6 border flex items-center gap-4 active:opacity-70 transition-opacity"
-        style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.15)" }}
+        style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(var(--mint-rgb),0.15)" }}
       >
         <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-          style={{ background: "rgba(0,229,160,0.12)", border: "2px solid rgba(0,229,160,0.3)" }}>
+          style={{ background: "rgba(var(--mint-rgb),0.12)", border: "2px solid rgba(var(--mint-rgb),0.3)" }}>
           <Sparkles className="w-5 h-5" style={{ color: "var(--mint)" }} />
         </div>
         <div className="flex-1 min-w-0">
@@ -311,10 +312,10 @@ function InstallSection() {
         <button
           onClick={() => setShowConfirm(true)}
           className="w-full rounded-2xl p-4 border flex items-center gap-4 active:opacity-70 transition-opacity"
-          style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.3)", textAlign: "left" }}
+          style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.3)", textAlign: "left" }}
         >
           <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "rgba(0,229,160,0.12)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.12)" }}>
             <span className="text-xl">📲</span>
           </div>
           <div className="flex-1">
@@ -335,7 +336,7 @@ function InstallSection() {
               onClick={(e) => e.stopPropagation()}>
               <div className="flex flex-col items-center gap-3 mb-7">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center"
-                  style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}>
+                  style={{ background: "rgba(var(--mint-rgb),0.12)", border: "1.5px solid rgba(var(--mint-rgb),0.25)" }}>
                   <span className="text-3xl">📲</span>
                 </div>
                 <h2 className="text-base font-bold font-syne text-center" style={{ color: "var(--text)" }}>
@@ -376,10 +377,10 @@ function InstallSection() {
         <button
           onClick={() => setShowConfirm(true)}
           className="w-full rounded-2xl p-4 border flex items-center gap-4 active:opacity-70 transition-opacity"
-          style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.3)", textAlign: "left" }}
+          style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.3)", textAlign: "left" }}
         >
           <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "rgba(0,229,160,0.12)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.12)" }}>
             <span className="text-xl">📲</span>
           </div>
           <div className="flex-1">
@@ -398,7 +399,7 @@ function InstallSection() {
               {/* Header */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-11 h-11 rounded-2xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(0,229,160,0.12)", border: "1.5px solid rgba(0,229,160,0.25)" }}>
+                  style={{ background: "rgba(var(--mint-rgb),0.12)", border: "1.5px solid rgba(var(--mint-rgb),0.25)" }}>
                   <span className="text-2xl">📲</span>
                 </div>
                 <div>
@@ -418,7 +419,7 @@ function InstallSection() {
                     <span className="text-[10px] flex-1" style={{ color: "#8e8e93" }}>investus.kr</span>
                   </div>
                   <div className="relative flex-shrink-0">
-                    <div className="absolute -inset-1.5 rounded-lg animate-pulse" style={{ background: "rgba(0,229,160,0.3)" }} />
+                    <div className="absolute -inset-1.5 rounded-lg animate-pulse" style={{ background: "rgba(var(--mint-rgb),0.3)" }} />
                     <div className="relative w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "#2c2c2e" }}>
                       <span className="text-[13px] font-bold tracking-tight" style={{ color: "#10b981" }}>···</span>
                     </div>
@@ -440,7 +441,7 @@ function InstallSection() {
                 ] as [string, string, string][]).map(([step, icon, text]) => (
                   <div key={step} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold"
-                      style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+                      style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
                       {step}
                     </div>
                     <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-base"
@@ -654,16 +655,16 @@ function AuthSection() {
                 src={user.avatar}
                 alt="avatar"
                 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                style={{ border: "2px solid rgba(0,229,160,0.4)" }}
+                style={{ border: "2px solid rgba(var(--mint-rgb),0.4)" }}
               />
             ) : (
               <div
                 className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
                 style={{
                   background: user.avatar
-                    ? "rgba(0,229,160,0.12)"
+                    ? "rgba(var(--mint-rgb),0.12)"
                     : "linear-gradient(135deg,#10b981,#0d6efd)",
-                  border: "2px solid rgba(0,229,160,0.3)",
+                  border: "2px solid rgba(var(--mint-rgb),0.3)",
                   fontSize: user.avatar ? "1.75rem" : undefined,
                 }}
               >
@@ -740,7 +741,7 @@ function AuthSection() {
               {email}로 인증 링크를 보냈습니다.<br />링크를 클릭하면 자동으로 로그인됩니다.
             </p>
             <button onClick={() => { setConfirmEmail(false); setMode("login"); }}
-              className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
+              className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
               로그인으로 이동
             </button>
           </div>
@@ -752,7 +753,7 @@ function AuthSection() {
               {email}로 비밀번호 재설정 링크를 보냈습니다.<br />메일함을 확인해주세요.
             </p>
             <button onClick={() => { setResetSent(false); setMode("login"); }}
-              className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
+              className="text-xs font-bold px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
               로그인으로 이동
             </button>
           </div>
@@ -1032,6 +1033,9 @@ export default function MorePage() {
             {/* Profile — top left on desktop */}
             <AuthSection />
 
+            {/* 화면 테마 — 라이트 기본 / 다크 선택 */}
+            <ThemeSettingsCard locale={isKo ? "ko" : "en"} />
+
             {/* Investus Pro — 가격 상세 */}
             <ProPricingSection />
 
@@ -1039,10 +1043,10 @@ export default function MorePage() {
             <div className="lg:hidden">
               <CreatorSection />
               <div className="rounded-2xl p-5 mb-6 border text-center"
-                style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.15)" }}>
+                style={{ background: "linear-gradient(135deg, rgba(var(--navy-rgb),0.08), rgba(var(--mint-rgb),0.1))", borderColor: "rgba(var(--mint-rgb),0.25)" }}>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3"
                   style={{ background: "var(--mint)" }}>
-                  <TrendingUp className="w-7 h-7 text-black" strokeWidth={2.5} />
+                  <TrendingUp className="w-7 h-7" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
                 </div>
                 <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>Investus</p>
                 <p className="text-xs" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
@@ -1124,14 +1128,14 @@ export default function MorePage() {
 
             {/* 1. Investus 브랜드 카드 — 최상단 */}
             <div className="rounded-2xl p-5 border text-center"
-              style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.2)" }}>
+              style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
               <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3"
-                style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(0,229,160,0.3)" }}>
+                style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.3)" }}>
                 <TrendingUp className="w-8 h-8 text-black" strokeWidth={2.5} />
               </div>
               <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>Investus</p>
               <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
-              <p className="text-[10px] mt-2 font-mono" style={{ color: "rgba(0,229,160,0.6)" }}>investus.kr</p>
+              <p className="text-[10px] mt-2 font-mono" style={{ color: "rgba(var(--mint-rgb),0.6)" }}>investus.kr</p>
             </div>
 
             {/* 2. 크리에이터 되기 */}

@@ -39,7 +39,7 @@ export function FirstVisitBanner() {
   return (
     <div
       className="mx-4 mb-4 rounded-2xl border overflow-hidden"
-      style={{ background: "linear-gradient(135deg, rgba(0,229,160,0.08) 0%, rgba(59,130,246,0.06) 100%)", borderColor: "rgba(0,229,160,0.25)" }}
+      style={{ background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.08) 0%, rgba(59,130,246,0.06) 100%)", borderColor: "rgba(var(--mint-rgb),0.25)" }}
     >
       <div className="px-4 pt-3 pb-3 flex items-start gap-3">
         <span className="text-2xl flex-shrink-0 mt-0.5">👋</span>
@@ -58,7 +58,7 @@ export function FirstVisitBanner() {
               href="/more/guide"
               onClick={dismiss}
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-[12px] font-semibold"
-              style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}
+              style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
             >
               가이드 보기 <ChevronRight className="w-3.5 h-3.5" />
             </Link>

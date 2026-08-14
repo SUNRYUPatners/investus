@@ -16,21 +16,56 @@ vercel-toolbar,
   --font-mono: var(--font-mono);
 }
 
+/*
+  Investus theme tokens
+  - Default = light (대중·광고 친화)
+  - data-theme="dark" = 다크
+  - --mint = 골드 액센트 (기존 코드 호환용 이름 유지)
+  - --navy = 네이비 포인트
+*/
 :root {
+  color-scheme: light;
+  --bg: #f4f5f8;
+  --card: #ffffff;
+  --border: #e2e6ee;
+  --mint: #c4a035;
+  --mint-rgb: 196, 160, 53;
+  --navy: #1b2a4a;
+  --navy-rgb: 27, 42, 74;
+  --down: #dc2626;
+  --text: #121826;
+  --muted: #5c6578;
+  --muted-2: #eef0f4;
+  --on-accent: #1b2a4a;
+  --ad-surface: #ffffff;
+  --ad-border: #e8ebf0;
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --elevated: #ffffff;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
   --bg: #0b0c0e;
   --card: #14161a;
   --border: #1e2330;
-  --mint: #00e5a0;
+  --mint: #d4af37;
+  --mint-rgb: 212, 175, 55;
+  --navy: #8fa3c7;
+  --navy-rgb: 143, 163, 199;
   --down: #ef4444;
   --text: #f5f6f8;
   --muted: #b0b5bc;
   --muted-2: #252830;
+  --on-accent: #0b0c0e;
+  --ad-surface: #1a1d24;
+  --ad-border: #2a303c;
+  --header-bg: rgba(11, 12, 14, 0.92);
+  --elevated: #181b21;
 }
 
 html {
   background: var(--bg);
   overscroll-behavior-y: none;
-  /* iOS PWA: prevent rubber-band showing content under bottom nav */
   height: 100%;
 }
 
@@ -76,20 +111,16 @@ a, button, [role="button"] {
 }
 
 /* ── Bottom nav safe area ── */
-/* BottomNav 52px + StickyAdFit ~58px + safe-area.
-   pb-safe keeps last content clear of both fixed bars. */
 .pb-safe {
   padding-bottom: calc(env(safe-area-inset-bottom) + 7.5rem);
 }
 
 @media (min-width: 1024px) {
-  /* Desktop: no BottomNav — only StickyAdFit (~58px) */
   .pb-safe {
     padding-bottom: calc(env(safe-area-inset-bottom) + 4rem);
   }
 }
 
-/* Sticky ad dismissed — leave room for BottomNav (mobile) only */
 html[data-sticky-ad="hidden"] .pb-safe {
   padding-bottom: calc(env(safe-area-inset-bottom) + 3.5rem);
 }
@@ -100,8 +131,6 @@ html[data-sticky-ad="hidden"] .pb-safe {
   }
 }
 
-/* iOS PWA: permanent background fill below the nav — covers the gap that appears
-   when position:fixed nav momentarily floats during scroll momentum */
 @supports (-webkit-touch-callout: none) {
   body::after {
     content: '';
@@ -116,20 +145,17 @@ html[data-sticky-ad="hidden"] .pb-safe {
   }
 }
 
-/* PWA standalone: slight extra for rubber-band comfort */
 @media (display-mode: standalone) {
   .pb-safe {
     padding-bottom: calc(env(safe-area-inset-bottom) + 8rem);
   }
 }
 
-/* Chart axis labels: mobile 9px, desktop 11px */
 .chart-axis-label { font-size: 9px; }
 @media (min-width: 1024px) {
   .chart-axis-label { font-size: 11px; }
 }
 
-/* iOS Safari auto-zoom 방지: 입력 포커스 시 font-size < 16px → 화면 확대 제거 */
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -139,4 +165,12 @@ input[type="password"],
 textarea,
 select {
   font-size: 16px;
+}
+
+/* 광고 슬롯 — 라이트 카드로 감싸 소재 이질감 완화 */
+.ad-slot {
+  background: var(--ad-surface);
+  border: 1px solid var(--ad-border);
+  border-radius: 12px;
+  overflow: hidden;
 }

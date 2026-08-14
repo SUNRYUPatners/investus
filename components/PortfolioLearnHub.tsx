@@ -30,7 +30,7 @@ export function PortfolioLearnHub({ locale }: { locale: string }) {
       <div className="flex gap-1.5 mb-4">
         <span
           className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-          style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.95)" }}
+          style={{ background: "rgba(var(--mint-rgb),0.12)", color: "rgba(var(--mint-rgb),0.95)" }}
         >
           {isKo ? "심화 가이드" : "Guides"}
         </span>

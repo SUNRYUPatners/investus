@@ -85,13 +85,13 @@ export default function AboutPage() {
         <div className="relative rounded-3xl overflow-hidden p-6 mb-6"
           style={{ background: "linear-gradient(145deg, #0d1f18 0%, #0a0c10 50%, #0e0c1f 100%)" }}>
           <div className="absolute top-0 left-0 w-40 h-40 rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(circle, rgba(0,229,160,0.12) 0%, transparent 70%)", transform: "translate(-30%, -30%)" }} />
+            style={{ background: "radial-gradient(circle, rgba(var(--mint-rgb),0.12) 0%, transparent 70%)", transform: "translate(-30%, -30%)" }} />
           <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full pointer-events-none"
             style={{ background: "radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%)", transform: "translate(30%, 30%)" }} />
 
           <div className="relative flex items-center gap-3 mb-5">
             <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-              style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(0,229,160,0.35)" }}>
+              style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.35)" }}>
               <TrendingUp className="w-7 h-7 text-black" strokeWidth={2.5} />
             </div>
             <div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
           <div className="relative flex flex-col gap-2 mb-5">
             <div className="flex items-start gap-2">
               <span className="text-[11px] font-bold px-2 py-0.5 rounded-full flex-shrink-0 mt-0.5"
-                style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>Invest US</span>
+                style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>Invest US</span>
               <p className="text-[12px] leading-relaxed" style={{ color: "var(--text)" }}>
                 {isKo
                   ? "미국(United States)에 투자하라 — 세계에서 가장 검증된 시장"
@@ -161,7 +161,7 @@ export default function AboutPage() {
                 한 곳에 모았습니다.
               </p>
               <div className="rounded-xl p-3"
-                style={{ background: "linear-gradient(135deg, rgba(0,229,160,0.06), rgba(99,102,241,0.06))", border: "1px solid rgba(0,229,160,0.12)" }}>
+                style={{ background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.06), rgba(99,102,241,0.06))", border: "1px solid rgba(var(--mint-rgb),0.12)" }}>
                 <p className="text-[11px] font-semibold leading-relaxed" style={{ color: "var(--text)" }}>
                   "매일 Investus 하나만 봐도<br />전날 시장 전체를 파악할 수 있어야 한다."
                 </p>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                 <span style={{ color: "var(--text)", fontWeight: 600 }}> the truly essential information</span> into one place.
               </p>
               <div className="rounded-xl p-3"
-                style={{ background: "linear-gradient(135deg, rgba(0,229,160,0.06), rgba(99,102,241,0.06))", border: "1px solid rgba(0,229,160,0.12)" }}>
+                style={{ background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.06), rgba(99,102,241,0.06))", border: "1px solid rgba(var(--mint-rgb),0.12)" }}>
                 <p className="text-[11px] font-semibold leading-relaxed" style={{ color: "var(--text)" }}>
                   &quot;Checking Investus once a day should give you a complete picture of the entire previous session.&quot;
                 </p>
@@ -309,7 +309,7 @@ export default function AboutPage() {
             </div>
             <div className="ml-auto">
               <span className="text-[9px] font-semibold px-2 py-1 rounded-full"
-                style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.2)" }}>
+                style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}>
                 {isKo ? "법인 운영" : "Corporate"}
               </span>
             </div>
@@ -382,7 +382,7 @@ export default function AboutPage() {
           <div className="rounded-2xl border p-4 mb-3" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
             <div className="flex items-start gap-3">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ background: "rgba(0,229,160,0.1)", border: "1px solid rgba(0,229,160,0.2)" }}>
+                style={{ background: "rgba(var(--mint-rgb),0.1)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}>
                 <Award className="w-5 h-5" style={{ color: "var(--mint)" }} />
               </div>
               <div className="flex-1 min-w-0">
@@ -396,7 +396,7 @@ export default function AboutPage() {
                     ? "금융투자교육원 (KIFIN) · 2023년 03월 23일 · 8시간"
                     : "KIFIN (Korea Financial Investment Education Institute) · March 23, 2023 · 8 hours"}
                 </p>
-                <div className="rounded-lg px-3 py-2" style={{ background: "rgba(0,229,160,0.05)", border: "1px solid rgba(0,229,160,0.12)" }}>
+                <div className="rounded-lg px-3 py-2" style={{ background: "rgba(var(--mint-rgb),0.05)", border: "1px solid rgba(var(--mint-rgb),0.12)" }}>
                   <p className="text-[10px] font-mono" style={{ color: "var(--muted)" }}>
                     {isKo ? "수료번호 제 26066-2023-90318호" : "Certificate No. 26066-2023-90318"}
                   </p>

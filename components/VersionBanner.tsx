@@ -33,7 +33,7 @@ export function VersionBanner() {
   return (
     <div
       className="fixed top-14 left-0 right-0 z-50 flex items-center justify-between px-4 py-2.5 gap-3"
-      style={{ background: "var(--mint)", color: "#000" }}
+      style={{ background: "var(--mint)", color: "var(--on-accent)" }}
     >
       <p className="text-xs font-semibold flex-1">
         새 버전이 출시됐어요 — 최신 앱으로 업데이트하세요

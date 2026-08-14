@@ -111,7 +111,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
           onClick={handleSave}
           disabled={!nickname.trim() || saving}
           className="text-xs font-bold px-3 py-1.5 rounded-lg disabled:opacity-40 active:opacity-70 transition-opacity"
-          style={{ background: "var(--mint)", color: "#000" }}
+          style={{ background: "var(--mint)", color: "var(--on-accent)" }}
         >
           {saving ? "저장 중..." : "저장"}
         </button>
@@ -135,9 +135,9 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
                 className="w-24 h-24 rounded-full flex items-center justify-center text-4xl"
                 style={{
                   background: avatar
-                    ? "rgba(0,229,160,0.12)"
+                    ? "rgba(var(--mint-rgb),0.12)"
                     : "linear-gradient(135deg,#10b981,#0d6efd)",
-                  border: "3px solid rgba(0,229,160,0.3)",
+                  border: "3px solid rgba(var(--mint-rgb),0.3)",
                 }}
               >
                 {avatar || "👤"}
@@ -218,7 +218,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
               onClick={() => setAvatar("")}
               className="w-full aspect-square rounded-xl flex items-center justify-center border transition-all active:opacity-70"
               style={{
-                background: avatar === "" && !isPhoto ? "rgba(0,229,160,0.12)" : "var(--card)",
+                background: avatar === "" && !isPhoto ? "rgba(var(--mint-rgb),0.12)" : "var(--card)",
                 borderColor: avatar === "" && !isPhoto ? "var(--mint)" : "var(--border)",
               }}
             >
@@ -232,7 +232,7 @@ export function ProfileEditModal({ onClose }: { onClose: () => void }) {
                   onClick={() => setAvatar(em)}
                   className="w-full aspect-square rounded-xl flex items-center justify-center text-2xl border transition-all active:opacity-70 relative"
                   style={{
-                    background:  active ? "rgba(0,229,160,0.12)" : "var(--card)",
+                    background:  active ? "rgba(var(--mint-rgb),0.12)" : "var(--card)",
                     borderColor: active ? "var(--mint)"           : "var(--border)",
                   }}
                 >

@@ -356,7 +356,7 @@ export default function CreatorDashboardPage() {
             <Link
               href={`/creator/${encodeURIComponent(user.email)}`}
               className="text-[11px] font-semibold px-3 py-1.5 rounded-lg"
-              style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.2)" }}
+              style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}
             >
               내 공개 프로필 보기 →
             </Link>
@@ -383,7 +383,7 @@ export default function CreatorDashboardPage() {
                   <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>{creator.nickname}</h1>
                   {creator.status === "approved" ? (
                     <span className="flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded-full"
-                      style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+                      style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
                       <ShieldCheck className="w-3 h-3" />인증됨
                     </span>
                   ) : (
@@ -542,7 +542,7 @@ export default function CreatorDashboardPage() {
             {creator.status === "approved" && (
               <button onClick={() => setShowWrite(true)}
                 className="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1.5 rounded-lg active:opacity-70 transition-opacity"
-                style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
+                style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
                 <Plus className="w-3 h-3" />작성
               </button>
             )}
@@ -554,7 +554,7 @@ export default function CreatorDashboardPage() {
               <button key={t} onClick={() => setTab(t)}
                 className="flex-shrink-0 text-[11px] font-bold px-3 py-1.5 rounded-full border transition-all"
                 style={tab === t
-                  ? { background: "var(--mint)", color: "#000", borderColor: "var(--mint)" }
+                  ? { background: "var(--mint)", color: "var(--on-accent)", borderColor: "var(--mint)" }
                   : { background: "var(--card)", color: "var(--muted)", borderColor: "var(--border)" }}>
                 {t === "all" ? "전체" : TYPE_LABEL[t]}
               </button>
@@ -588,7 +588,7 @@ export default function CreatorDashboardPage() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-1.5 mb-1 flex-wrap">
                         <span className="text-[10px] px-1.5 py-0.5 rounded-md"
-                          style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
+                          style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
                           {TYPE_LABEL[c.type]}
                         </span>
                         {c.externalUrl && (
@@ -648,7 +648,7 @@ export default function CreatorDashboardPage() {
             <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>새 콘텐츠 작성</h2>
             <button onClick={handleWrite} disabled={!wTitle.trim() || wUploading}
               className="text-xs font-bold px-3 py-1.5 rounded-lg disabled:opacity-40 active:opacity-70 transition-opacity"
-              style={{ background: "var(--mint)", color: "#000" }}>
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
               {wUploading ? "업로드 중…" : "발행"}
             </button>
           </div>
@@ -661,7 +661,7 @@ export default function CreatorDashboardPage() {
                 <button key={t} onClick={() => setWType(t)}
                   className="flex flex-col items-center gap-1 py-3 rounded-xl border transition-all active:opacity-70"
                   style={wType === t
-                    ? { borderColor: "var(--mint)", background: "rgba(0,229,160,0.08)" }
+                    ? { borderColor: "var(--mint)", background: "rgba(var(--mint-rgb),0.08)" }
                     : { borderColor: "var(--border)", background: "var(--card)" }}>
                   <span className="text-xl">{TYPE_EMOJI[t]}</span>
                   <span className="text-[10px] font-semibold"
@@ -723,7 +723,7 @@ export default function CreatorDashboardPage() {
 
             {/* Ad model notice */}
             <div className="flex items-center gap-2 p-3 rounded-xl border"
-              style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
               <span className="text-sm">💡</span>
               <p className="text-[11px]" style={{ color: "var(--muted)" }}>
                 모든 콘텐츠는 무료로 공개됩니다. 조회수 기반 광고 수익이 정산됩니다.
@@ -743,7 +743,7 @@ export default function CreatorDashboardPage() {
             <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>콘텐츠 수정</h2>
             <button onClick={handleSaveContentEdit} disabled={!ceTitle.trim() || ceUploading}
               className="text-xs font-bold px-3 py-1.5 rounded-lg disabled:opacity-40 active:opacity-70 transition-opacity"
-              style={{ background: "var(--mint)", color: "#000" }}>
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
               {ceUploading ? "저장 중…" : "저장"}
             </button>
           </div>
@@ -792,7 +792,7 @@ export default function CreatorDashboardPage() {
             <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>프로필 수정</h2>
             <button onClick={handleSaveEdit}
               className="text-xs font-bold px-3 py-1.5 rounded-lg active:opacity-70 transition-opacity"
-              style={{ background: "var(--mint)", color: "#000" }}>
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
               저장
             </button>
           </div>
@@ -804,7 +804,7 @@ export default function CreatorDashboardPage() {
                 <button key={a} onClick={() => setEAvatar(a)}
                   className="h-10 rounded-xl flex items-center justify-center text-xl border transition-all active:opacity-70"
                   style={eAvatar === a
-                    ? { borderColor: "var(--mint)", background: "rgba(0,229,160,0.1)" }
+                    ? { borderColor: "var(--mint)", background: "rgba(var(--mint-rgb),0.1)" }
                     : { borderColor: "var(--border)", background: "var(--card)" }}>
                   {a}
                 </button>
@@ -827,7 +827,7 @@ export default function CreatorDashboardPage() {
                 <button key={t} onClick={() => toggleETag(t)}
                   className="text-xs px-3 py-1.5 rounded-full border transition-all active:opacity-70"
                   style={eTags.includes(t)
-                    ? { background: "var(--mint)", color: "#000", borderColor: "var(--mint)" }
+                    ? { background: "var(--mint)", color: "var(--on-accent)", borderColor: "var(--mint)" }
                     : { background: "var(--card)", color: "var(--muted)", borderColor: "var(--border)" }}>
                   {t}
                 </button>
@@ -864,7 +864,7 @@ export default function CreatorDashboardPage() {
                         <button key={p} onClick={() => setESubPrice(p)}
                           className="flex-1 py-2 rounded-xl text-xs font-bold border transition-all active:opacity-70"
                           style={eSubPrice === p
-                            ? { background: "var(--mint)", color: "#000", borderColor: "var(--mint)" }
+                            ? { background: "var(--mint)", color: "var(--on-accent)", borderColor: "var(--mint)" }
                             : { background: "var(--card)", color: "var(--muted)", borderColor: "var(--border)" }}>
                           ₩{p.toLocaleString()}
                         </button>
@@ -906,7 +906,7 @@ export default function CreatorDashboardPage() {
                 </p>
                 <label htmlFor="creator-verify"
                   className="w-full flex flex-col items-center gap-3 py-8 rounded-2xl border border-dashed cursor-pointer mb-4 active:opacity-70 transition-opacity"
-                  style={{ borderColor: "rgba(0,229,160,0.4)", background: "rgba(0,229,160,0.04)" }}>
+                  style={{ borderColor: "rgba(var(--mint-rgb),0.4)", background: "rgba(var(--mint-rgb),0.04)" }}>
                   <Upload className="w-8 h-8" style={{ color: "var(--mint)" }} />
                   <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>HTS/MTS 보유 화면 캡처 업로드</p>
                   <p className="text-xs" style={{ color: "var(--muted)" }}>이미지를 탭해서 첨부해 주세요</p>
@@ -920,7 +920,7 @@ export default function CreatorDashboardPage() {
             ) : (
               <div className="flex flex-col items-center gap-4 py-4">
                 <div className="w-14 h-14 rounded-full flex items-center justify-center"
-                  style={{ background: "rgba(0,229,160,0.15)" }}>
+                  style={{ background: "rgba(var(--mint-rgb),0.15)" }}>
                   <CheckCircle2 className="w-7 h-7" style={{ color: "var(--mint)" }} />
                 </div>
                 <h2 className="text-base font-bold" style={{ color: "var(--text)" }}>업로드 완료!</h2>

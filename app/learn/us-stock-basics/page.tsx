@@ -94,7 +94,7 @@ export default function UsStockBasicsPage() {
               장 전(프리마켓)과 장 후(애프터마켓) 거래도 가능하지만, 유동성이 낮아
               초보 투자자에게는 정규 시간 내 거래를 권장합니다.
             </p>
-            <div className="rounded-2xl p-4 border" style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+            <div className="rounded-2xl p-4 border" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
               <p className="text-xs font-semibold mb-1" style={{ color: "var(--mint)" }}>
                 💡 Investus 활용 팁
               </p>
@@ -131,7 +131,7 @@ export default function UsStockBasicsPage() {
                 ].map(([step, desc]) => (
                   <div key={step} className="flex gap-3 text-sm items-start">
                     <span className="font-bold flex-shrink-0 px-2 py-0.5 rounded text-[10px]"
-                      style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
+                      style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
                       {step}
                     </span>
                     <span className="leading-snug">{desc}</span>

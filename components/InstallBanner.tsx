@@ -75,7 +75,7 @@ export function InstallBanner() {
     return (
       <div
         className="fixed bottom-20 lg:bottom-6 left-4 right-4 z-40 rounded-2xl p-4 flex items-center gap-3 shadow-xl"
-        style={{ background: "var(--card)", border: "1px solid rgba(0,229,160,0.3)" }}
+        style={{ background: "var(--card)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}
       >
         <span className="text-2xl flex-shrink-0">📲</span>
         <div className="flex-1 min-w-0">
@@ -85,7 +85,7 @@ export function InstallBanner() {
         <button
           onClick={install}
           className="flex-shrink-0 text-xs font-bold px-3 py-1.5 rounded-xl"
-          style={{ background: "var(--mint)", color: "#000" }}
+          style={{ background: "var(--mint)", color: "var(--on-accent)" }}
         >
           설치
         </button>
@@ -101,7 +101,7 @@ export function InstallBanner() {
     return (
       <div
         className="fixed bottom-20 left-4 right-4 z-40 rounded-2xl p-4 shadow-xl"
-        style={{ background: "var(--card)", border: "1px solid rgba(0,229,160,0.3)" }}
+        style={{ background: "var(--card)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}
       >
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">

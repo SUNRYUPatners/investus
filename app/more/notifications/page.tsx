@@ -217,7 +217,7 @@ export default function NotificationsPage() {
 
         {granted === true && (
           <div className="rounded-xl px-3 py-2 mb-4 flex items-center gap-2"
-            style={{ background: "rgba(0,229,160,0.08)", border: "1px solid rgba(0,229,160,0.15)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.08)", border: "1px solid rgba(var(--mint-rgb),0.15)" }}>
             <span className="text-sm">✅</span>
             <p className="text-[11px]" style={{ color: "var(--mint)" }}>
               {isKo ? "브라우저 알림 권한이 허용되어 있습니다." : "Browser notification permission is granted."}
@@ -227,7 +227,7 @@ export default function NotificationsPage() {
 
         {pushStatus === "ok" && (
           <div className="rounded-xl px-3 py-2 mb-4 flex items-center gap-2"
-            style={{ background: "rgba(0,229,160,0.08)", border: "1px solid rgba(0,229,160,0.15)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.08)", border: "1px solid rgba(var(--mint-rgb),0.15)" }}>
             <span className="text-sm">📋</span>
             <p className="text-[11px]" style={{ color: "var(--mint)" }}>
               {isKo ? "리포트 업데이트 알림 구독 완료!" : "Report update notifications subscribed!"}

@@ -59,7 +59,7 @@ function PayIcon({ id }: { id: SubPayMethod }) {
   return (
     <span
       className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-      style={{ background: "rgba(0,229,160,0.12)" }}
+      style={{ background: "rgba(var(--mint-rgb),0.12)" }}
     >
       <CreditCard className="w-4 h-4" style={{ color: "var(--mint)" }} />
     </span>
@@ -171,7 +171,7 @@ export default function SubscribePage() {
 
         <div
           className="rounded-2xl px-5 py-6 mb-5 relative overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #001a12 0%, #0a0c10 100%)", border: "1px solid rgba(0,229,160,0.25)" }}
+          style={{ background: "linear-gradient(135deg, #001a12 0%, #0a0c10 100%)", border: "1px solid rgba(var(--mint-rgb),0.25)" }}
         >
           <p className="text-[10px] font-bold mb-2" style={{ color: "var(--mint)" }}>✦ {SUBSCRIPTION.productName}</p>
           <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "var(--text)" }}>
@@ -185,7 +185,7 @@ export default function SubscribePage() {
         <div className="flex flex-col gap-2 mb-5">
           {BENEFITS.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex gap-3 rounded-xl border p-3.5" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-              <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(0,229,160,0.12)" }}>
+              <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(var(--mint-rgb),0.12)" }}>
                 <Icon className="w-4 h-4" style={{ color: "var(--mint)" }} />
               </div>
               <div>
@@ -219,14 +219,14 @@ export default function SubscribePage() {
                 onClick={() => setPeriod(p.id)}
                 className="rounded-2xl border p-3.5 text-left transition-opacity"
                 style={{
-                  background: active ? "rgba(0,229,160,0.08)" : "var(--card)",
+                  background: active ? "rgba(var(--mint-rgb),0.08)" : "var(--card)",
                   borderColor: active ? "var(--mint)" : "var(--border)",
                 }}
               >
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{p.title}</span>
                   {p.id === "year" && (
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full" style={{ background: "var(--mint)", color: "#000" }}>
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
                       {SUBSCRIPTION.yearlyDiscountPercent}% OFF
                     </span>
                   )}
@@ -249,7 +249,7 @@ export default function SubscribePage() {
         {!loaded ? null : !user ? (
           <div className="rounded-xl border p-4 mb-4 text-center" style={{ borderColor: "var(--border)" }}>
             <p className="text-sm mb-3" style={{ color: "var(--muted)" }}>구독하려면 먼저 로그인해 주세요.</p>
-            <Link href="/more" className="inline-block px-4 py-2.5 rounded-xl text-sm font-bold" style={{ background: "var(--mint)", color: "#000" }}>
+            <Link href="/more" className="inline-block px-4 py-2.5 rounded-xl text-sm font-bold" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
               로그인하러 가기
             </Link>
           </div>
@@ -269,7 +269,7 @@ export default function SubscribePage() {
                     onClick={() => setPayMethod(m.id)}
                     className="flex items-center gap-3 rounded-2xl border p-3.5 text-left"
                     style={{
-                      background: active ? "rgba(0,229,160,0.08)" : "var(--card)",
+                      background: active ? "rgba(var(--mint-rgb),0.08)" : "var(--card)",
                       borderColor: active ? "var(--mint)" : "var(--border)",
                     }}
                   >
@@ -295,7 +295,7 @@ export default function SubscribePage() {
               onClick={startPay}
               disabled={paying}
               className="w-full py-4 rounded-2xl text-base font-bold disabled:opacity-60 flex items-center justify-center gap-2"
-              style={{ background: "var(--mint)", color: "#000" }}
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}
             >
               {paying ? (
                 <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>

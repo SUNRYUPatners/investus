@@ -146,7 +146,7 @@ export default function AdminCreatorsPage() {
             <button
               onClick={handleLogin}
               className="w-full py-3 rounded-xl text-sm font-bold"
-              style={{ background: "var(--mint)", color: "#000" }}
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}
             >
               로그인
             </button>
@@ -174,7 +174,7 @@ export default function AdminCreatorsPage() {
           onClick={load}
           disabled={loading}
           className="p-1.5 rounded-lg disabled:opacity-40"
-          style={{ background: "rgba(0,229,160,0.08)" }}
+          style={{ background: "rgba(var(--mint-rgb),0.08)" }}
         >
           <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} style={{ color: "var(--mint)" }} />
         </button>
@@ -204,7 +204,7 @@ export default function AdminCreatorsPage() {
               className="flex-1 py-1.5 rounded-lg text-[11px] font-semibold transition-all"
               style={
                 filter === f
-                  ? { background: "var(--mint)", color: "#000" }
+                  ? { background: "var(--mint)", color: "var(--on-accent)" }
                   : { color: "var(--muted)" }
               }
             >
@@ -230,7 +230,7 @@ export default function AdminCreatorsPage() {
               onClick={handleManual}
               disabled={acting === "manual" || !manualPhone.trim()}
               className="px-4 py-2 rounded-xl text-xs font-bold disabled:opacity-40"
-              style={{ background: "var(--mint)", color: "#000" }}
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}
             >
               승인
             </button>
@@ -301,7 +301,7 @@ export default function AdminCreatorsPage() {
                       onClick={() => act(v.phone, "approve")}
                       disabled={acting === v.phone}
                       className="flex-1 py-2 rounded-xl text-xs font-bold disabled:opacity-40 flex items-center justify-center gap-1"
-                      style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}
+                      style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}
                     >
                       <CheckCircle2 className="w-3.5 h-3.5" />
                       {acting === v.phone ? "처리 중..." : "승인"}

@@ -47,7 +47,7 @@ function bg(pct: number | null) {
   if (pct == null) return "rgba(255,255,255,0.06)";
   const t = Math.min(Math.abs(pct) / 3, 1);
   const a = 0.16 + t * 0.64;
-  return pct >= 0 ? `rgba(0,229,160,${a})` : `rgba(255,77,109,${a})`;
+  return pct >= 0 ? `rgba(var(--mint-rgb),${a})` : `rgba(255,77,109,${a})`;
 }
 
 const TILE_TEXT = "rgba(255,255,255,0.95)";

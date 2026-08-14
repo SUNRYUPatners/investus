@@ -54,7 +54,7 @@ export default function BuffettIndicatorPage() {
             <p className="text-sm leading-relaxed mb-3">
               버핏지수(Buffett Indicator)는 미국 전체 주식 시가총액을 미국 GDP(국내총생산)로 나눈 비율입니다.
             </p>
-            <div className="rounded-2xl p-4 border text-center" style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+            <div className="rounded-2xl p-4 border text-center" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
               <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--mint)" }}>
                 버핏지수 = 전체 주식 시가총액 ÷ GDP × 100
               </p>
@@ -174,7 +174,7 @@ export default function BuffettIndicatorPage() {
                 </div>
               ))}
             </div>
-            <div className="rounded-xl px-4 py-3 mt-3" style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.2)" }}>
+            <div className="rounded-xl px-4 py-3 mt-3" style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}>
               <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>
                 결론: 버핏지수는 &ldquo;단기 타이밍 도구&rdquo;가 아닙니다
               </p>

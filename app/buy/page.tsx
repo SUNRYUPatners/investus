@@ -121,8 +121,8 @@ export default function BuyPage() {
             className="w-[72px] h-[100px] rounded-xl flex-shrink-0 flex flex-col items-center justify-center gap-1 shadow-lg"
             style={{
               background: "linear-gradient(160deg, #0f2d1e, #071510)",
-              border: "1px solid rgba(0,229,160,0.3)",
-              boxShadow: "0 8px 24px rgba(0,229,160,0.15)",
+              border: "1px solid rgba(var(--mint-rgb),0.3)",
+              boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.15)",
             }}
           >
             <span className="text-2xl">📈</span>
@@ -207,7 +207,7 @@ export default function BuyPage() {
           onClick={handleCardPay}
           disabled={payingCard}
           className="w-full py-4 rounded-2xl text-base font-bold text-black active:opacity-80 transition-opacity disabled:opacity-60 flex items-center justify-center gap-2"
-          style={{ background: "var(--mint)", boxShadow: "0 4px 24px rgba(0,229,160,0.3)" }}
+          style={{ background: "var(--mint)", boxShadow: "0 4px 24px rgba(var(--mint-rgb),0.3)" }}
         >
           {payingCard ? (
             <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>

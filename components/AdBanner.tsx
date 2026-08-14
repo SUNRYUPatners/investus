@@ -47,15 +47,15 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
       : { display: "block" };
 
   return (
-    <div className="w-full my-2 rounded-xl overflow-hidden" style={{ minHeight: 72 }}>
+    <div className="ad-slot w-full my-2 overflow-hidden" style={{ minHeight: 72 }}>
       {/* 광고 미승인 중일 때 표시되는 광고 문의 배너 */}
       {!adFilled && (
         <a
           href="mailto:sunryupatners@gmail.com?subject=Investus%20광고%20문의"
-          className="flex items-center justify-between w-full px-4 py-3 rounded-xl border transition-opacity hover:opacity-80 active:opacity-60"
+          className="flex items-center justify-between w-full px-4 py-3 transition-opacity hover:opacity-80 active:opacity-60"
           style={{
-            background: "rgba(255,255,255,0.03)",
-            borderColor: "rgba(255,255,255,0.07)",
+            background: "var(--muted-2)",
+            borderBottom: "1px solid var(--ad-border)",
             textDecoration: "none",
           }}
         >
@@ -68,7 +68,7 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
             </p>
           </div>
           <span className="text-[10px] font-semibold px-2 py-1 rounded-lg flex-shrink-0 ml-3"
-            style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
             문의하기
           </span>
         </a>

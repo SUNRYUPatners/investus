@@ -110,7 +110,7 @@ export function PortfolioWidget() {
           style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
           <div className="flex items-center gap-2 px-4 py-3.5">
             <div className="w-6 h-6 rounded-lg flex items-center justify-center"
-              style={{ background: "rgba(0,229,160,0.12)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.12)" }}>
               <Wallet className="w-3 h-3" style={{ color: "var(--mint)" }} />
             </div>
             <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "내 보유종목" : "My Holdings"}</span>
@@ -125,7 +125,7 @@ export function PortfolioWidget() {
             <button
               onClick={() => router.push("/portfolio")}
               className="flex-shrink-0 text-[11px] font-bold px-3 py-1.5 rounded-xl transition-opacity active:opacity-70"
-              style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
               {isKo ? "연동하기" : "Connect"}
             </button>
           </div>
@@ -162,7 +162,7 @@ export function PortfolioWidget() {
     <div className="flex items-center justify-between px-4 pt-4 pb-2">
       <div className="flex items-center gap-2">
         <div className="w-6 h-6 rounded-lg flex items-center justify-center"
-          style={{ background: "rgba(0,229,160,0.12)" }}>
+          style={{ background: "rgba(var(--mint-rgb),0.12)" }}>
           <Wallet className="w-3 h-3" style={{ color: "var(--mint)" }} />
         </div>
         <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "내 보유종목" : "My Holdings"}</span>

@@ -50,7 +50,7 @@ export function ReportUpdateBanner() {
         }}
       >
         {/* Accent top bar */}
-        <div style={{ height: "3px", background: "linear-gradient(90deg, #60a5fa, #00e5a0)" }} />
+        <div style={{ height: "3px", background: "linear-gradient(90deg, #60a5fa, var(--mint))" }} />
 
         <div className="px-5 pt-5 pb-5">
           {/* Header row */}

@@ -124,7 +124,7 @@ export default function VersionPage() {
         {/* Current version badge */}
         <div
           className="flex items-center justify-between rounded-2xl p-4 mb-4 border"
-          style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(0,229,160,0.2)" }}
+          style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(var(--mint-rgb),0.2)" }}
         >
           <div>
             <p className="text-[10px] font-semibold" style={{ color: "var(--muted)" }}>
@@ -154,14 +154,14 @@ export default function VersionPage() {
                 <span
                   className="text-[10px] font-bold px-2 py-0.5 rounded-full font-mono-num"
                   style={v.current
-                    ? { background: "rgba(0,229,160,0.15)", color: "var(--mint)" }
+                    ? { background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }
                     : { background: "rgba(255,255,255,0.06)", color: "var(--muted)" }}
                 >
                   {v.ver}
                 </span>
                 {v.current && (
                   <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
-                    style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+                    style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
                     {isKo ? "현재" : "Current"}
                   </span>
                 )}

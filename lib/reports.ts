@@ -21,7 +21,7 @@ export type Report = {
 };
 
 export const CATEGORY_STYLE: Record<ReportColor, { bg: string; color: string }> = {
-  mint:   { bg: "rgba(0,229,160,0.12)",  color: "#00e5a0" },
+  mint:   { bg: "rgba(var(--mint-rgb),0.12)",  color: "var(--mint)" },
   blue:   { bg: "rgba(59,130,246,0.12)", color: "#60a5fa" },
   purple: { bg: "rgba(168,85,247,0.12)", color: "#c084fc" },
   orange: { bg: "rgba(249,115,22,0.12)", color: "#fb923c" },

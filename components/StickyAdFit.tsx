@@ -35,8 +35,8 @@ export function StickyAdFit() {
     <div
       className="fixed z-40 left-0 right-0 lg:left-64 flex justify-center pointer-events-auto bottom-[calc(52px+env(safe-area-inset-bottom,0px))] lg:bottom-[env(safe-area-inset-bottom,0px)]"
       style={{
-        background: "var(--card)",
-        borderTop: "1px solid var(--border)",
+        background: "var(--ad-surface)",
+        borderTop: "1px solid var(--ad-border)",
         paddingTop: 4,
         paddingBottom: 4,
       }}
@@ -49,7 +49,7 @@ export function StickyAdFit() {
           onClick={dismiss}
           className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 flex items-center justify-center rounded-full transition-opacity active:opacity-60"
           style={{
-            background: "rgba(255,255,255,0.06)",
+            background: "var(--muted-2)",
             border: "1px solid var(--border)",
             color: "var(--muted)",
           }}

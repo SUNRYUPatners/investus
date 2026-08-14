@@ -76,7 +76,7 @@ function SuccessContent() {
     <div className="min-h-screen flex flex-col items-center justify-center px-6 gap-6 pb-safe"
       style={{ background: "var(--bg)" }}>
       <div className="w-20 h-20 rounded-full flex items-center justify-center"
-        style={{ background: "rgba(0,229,160,0.15)" }}>
+        style={{ background: "rgba(var(--mint-rgb),0.15)" }}>
         <CheckCircle className="w-10 h-10" style={{ color: "var(--mint)" }} />
       </div>
 
@@ -90,7 +90,7 @@ function SuccessContent() {
       </div>
 
       <div className="w-full max-w-sm rounded-2xl border p-5 text-center"
-        style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.25)" }}>
+        style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.25)" }}>
         <p className="text-sm font-semibold mb-1" style={{ color: "var(--text)" }}>
           {BOOK_NAME}
         </p>
@@ -101,7 +101,7 @@ function SuccessContent() {
           href={BOOK_FILE}
           download={`${BOOK_NAME}.pdf`}
           className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-sm font-bold text-black"
-          style={{ background: "var(--mint)", boxShadow: "0 4px 20px rgba(0,229,160,0.3)" }}>
+          style={{ background: "var(--mint)", boxShadow: "0 4px 20px rgba(var(--mint-rgb),0.3)" }}>
           <Download className="w-4 h-4" />
           PDF 다운로드
         </a>

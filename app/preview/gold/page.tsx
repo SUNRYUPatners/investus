@@ -4,13 +4,13 @@ import { useState } from "react";
 
 // ── New palette constants ────────────────────────────────────────────────────
 const GOLD_VARS = {
-  "--bg":      "#0b0c0e",   // Rich Black (기존 #0a0c10 → 더 깊게)
-  "--card":    "#14161a",   // Charcoal (기존 #111318 → 더 세련되게)
-  "--border":  "#1e2330",   // 약간 블루-다크
-  "--mint":    "#00e5a0",   // ← 기존 민트 그대로 유지
-  "--down":    "#ef4444",   // Rose Red (기존 #ff4d6d → 차분하게)
-  "--text":    "#f5f6f8",   // Platinum White (기존 #e8eaed → 더 밝고 선명)
-  "--muted":   "#b0b5bc",   // Metallic Silver (기존 #6b7280 → 밝은 실버)
+  "--bg":      "#0b0c0e",
+  "--card":    "#14161a",
+  "--border":  "#1e2330",
+  "--mint":    "#d4af37",
+  "--down":    "#ef4444",
+  "--text":    "#f5f6f8",
+  "--muted":   "#b0b5bc",
   "--muted-2": "#252830",
 };
 
@@ -18,16 +18,16 @@ const CURRENT_VARS = {
   "--bg":      "#0a0c10",
   "--card":    "#111318",
   "--border":  "#1e2028",
-  "--mint":    "#00e5a0",
+  "--mint":    "#c4a035",
   "--down":    "#ff4d6d",
   "--text":    "#e8eaed",
   "--muted":   "#6b7280",
   "--muted-2": "#374151",
 };
 
-const UP_GOLD    = "#10b981"; // Emerald Green (상승 — 기존보다 차분)
-const UP_CURRENT = "#00e5a0"; // 기존 민트
-const DOWN       = "#ef4444"; // Rose Red
+const UP_GOLD    = "#10b981";
+const UP_CURRENT = "#c4a035";
+const DOWN       = "#ef4444";
 
 // ── Mock data ────────────────────────────────────────────────────────────────
 const INDICES = [
@@ -208,7 +208,7 @@ function ThemePanel({ vars, up, label, isGold }: {
       style={{
         ...Object.fromEntries(Object.entries(vars)) as React.CSSProperties,
         background: vars["--bg"],
-        borderColor: isGold ? "#C9A84C" : "#00e5a0",
+        borderColor: isGold ? "#C9A84C" : "var(--mint)",
         minWidth: 320,
         maxWidth: 400,
         flex: 1,
@@ -235,7 +235,7 @@ function ThemePanel({ vars, up, label, isGold }: {
             <p className="text-[10px] font-semibold tracking-wider uppercase mb-2" style={{ color: mint }}>
               NEW PALETTE
             </p>
-            <Swatch label="Mint — 포인트 유지 ✓"       hex="#00e5a0" />
+            <Swatch label="Mint — 포인트 유지 ✓"       hex="var(--mint)" />
             <Swatch label="Platinum White — 메인 텍스트" hex="#f5f6f8" />
             <Swatch label="Metallic Silver — 보조"  hex="#b0b5bc" />
             <Swatch label="Emerald Green — 상승"    hex="#10b981" />

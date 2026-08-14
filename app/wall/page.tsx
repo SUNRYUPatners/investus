@@ -179,7 +179,7 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 mb-0.5">
               <span className={`font-semibold ${isReply ? "text-[10px]" : "text-xs"}`} style={{ color: "var(--text)" }}>{c.nickname}</span>
-              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(0,229,160,0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
+              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(var(--mint-rgb),0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
               <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{getRelativeTime(c.createdAt, w)}</span>
             </div>
             <p className={`leading-relaxed mb-1 ${isReply ? "text-[11px]" : "text-[12px]"}`} style={{ color: "var(--text)" }}>{c.content}</p>
@@ -226,7 +226,7 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 flex-shrink-0 border-b" style={{ borderColor: "var(--border)" }}>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+            <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
               {post.symbol}
             </span>
             <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{w.commentCount(totalCount)}</span>
@@ -241,7 +241,7 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
           <div className="flex items-center gap-2 mb-1.5">
             <div className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold" style={{ background: "var(--border)", color: "var(--muted)" }}>익</div>
             <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{post.nickname}</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded-full" style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>✓ {post.holdingLabel}</span>
+            <span className="text-[10px] px-1.5 py-0.5 rounded-full" style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>✓ {post.holdingLabel}</span>
           </div>
           <p className="text-[12px] leading-relaxed line-clamp-3" style={{ color: "var(--muted)" }}>{post.content}</p>
         </div>
@@ -291,7 +291,7 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
           ) : (
             <div className="flex items-center gap-3 py-1">
               <p className="flex-1 text-xs" style={{ color: "var(--muted)" }}>{w.loginToComment}</p>
-              <Link href="/more" onClick={onClose} className="text-xs font-bold px-3 py-1.5 rounded-lg" style={{ background: "var(--mint)", color: "#000" }}>
+              <Link href="/more" onClick={onClose} className="text-xs font-bold px-3 py-1.5 rounded-lg" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
                 {w.login}
               </Link>
             </div>
@@ -373,25 +373,25 @@ function AskAI({ symbol }: { symbol: string }) {
   if (limitReached) {
     return (
       <div className="mb-4 rounded-2xl border overflow-hidden"
-        style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.2)" }}>
+        style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
         <div className="px-4 pt-4 pb-3 border-b"
-          style={{ borderColor: "rgba(0,229,160,0.1)", background: "rgba(0,229,160,0.03)" }}>
+          style={{ borderColor: "rgba(var(--mint-rgb),0.1)", background: "rgba(var(--mint-rgb),0.03)" }}>
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4" style={{ color: "var(--mint)" }} />
             <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
               {w.aiTitle(symbol)}
             </p>
             <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full ml-auto"
-              style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>Claude</span>
+              style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>Claude</span>
           </div>
         </div>
         <div className="px-4 py-6 flex flex-col items-center gap-3 text-center">
           <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
-            style={{ background: "rgba(0,229,160,0.08)" }}>⏰</div>
+            style={{ background: "rgba(var(--mint-rgb),0.08)" }}>⏰</div>
           <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{w.aiLimitTitle}</p>
           <p className="text-[11px]" style={{ color: "var(--muted)" }}>{w.aiLimitSub}</p>
           <div className="w-full rounded-2xl p-4 border mt-1"
-            style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
             <p className="text-xs font-bold mb-1" style={{ color: "var(--mint)" }}>{w.aiSubLabel}</p>
             <p className="text-[11px] mb-3" style={{ color: "var(--muted)" }}>{w.aiSubDesc}</p>
             <button
@@ -408,16 +408,16 @@ function AskAI({ symbol }: { symbol: string }) {
 
   return (
     <div className="mb-4 rounded-2xl border overflow-hidden"
-      style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.2)" }}>
+      style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
       <div className="px-4 pt-4 pb-3 border-b"
-        style={{ borderColor: "rgba(0,229,160,0.1)", background: "rgba(0,229,160,0.03)" }}>
+        style={{ borderColor: "rgba(var(--mint-rgb),0.1)", background: "rgba(var(--mint-rgb),0.03)" }}>
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4" style={{ color: "var(--mint)" }} />
           <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
             {w.aiTitle(symbol)}
           </p>
           <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full ml-auto"
-            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>Claude</span>
+            style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>Claude</span>
         </div>
         <div className="flex items-center justify-between mt-0.5">
           <p className="text-[11px]" style={{ color: "var(--muted)" }}>{w.aiSubtitle}</p>
@@ -457,10 +457,10 @@ function AskAI({ symbol }: { symbol: string }) {
       {(loading || answer) && (
         <div className="mx-4 mb-4 flex items-start gap-2.5">
           <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5"
-            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>✦</div>
+            style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>✦</div>
           <div className="flex-1 min-w-0">
             <div className="rounded-xl px-3 py-2.5"
-              style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.12)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.12)" }}>
               {loading ? (
                 <div className="flex gap-1.5 items-center py-1">
                   {[0, 150, 300].map((d) => (
@@ -968,7 +968,7 @@ export default function WallPage() {
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 mb-0.5">
               <span className={`font-semibold ${isReply ? "text-[10px]" : "text-xs"}`} style={{ color: "var(--text)" }}>{c.nickname}</span>
-              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(0,229,160,0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
+              <span className="text-[9px] px-1 py-0.5 rounded-full" style={{ background: "rgba(var(--mint-rgb),0.08)", color: "var(--mint)" }}>✓ {c.holdingLabel}</span>
               <span className="text-[9px] ml-auto" style={{ color: "var(--muted)" }}>{getRelativeTime(c.createdAt, w)}</span>
             </div>
             <p className={`leading-relaxed mb-1 ${isReply ? "text-[11px]" : "text-[12px]"}`} style={{ color: "var(--text)" }}>{c.content}</p>
@@ -1153,20 +1153,20 @@ export default function WallPage() {
             hasCreatorProfile ? (
               <Link href="/creator/dashboard"
                 className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
-                style={{ background: "var(--mint)", color: "#000" }}>
+                style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
                 ✦ {w.creatorMyChannel}
               </Link>
             ) : (
               <Link href="/creator/setup"
                 className="text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-1"
-                style={{ background: "var(--mint)", color: "#000" }}>
+                style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
                 <Sparkles className="w-3.5 h-3.5" />{w.creatorChannelBtn}
               </Link>
             )
           )}
           {mainTab === "discussion" && (
             <div className="flex items-center gap-1 text-[10px] px-2 py-1 rounded-full border"
-              style={{ borderColor: "rgba(0,229,160,0.3)", color: "var(--mint)" }}>
+              style={{ borderColor: "rgba(var(--mint-rgb),0.3)", color: "var(--mint)" }}>
               <Lock className="w-3 h-3" />
               {w.anonBadge}
             </div>
@@ -1185,14 +1185,14 @@ export default function WallPage() {
           <button onClick={() => setMainTab("discussion")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
             style={mainTab === "discussion"
-              ? { background: "var(--mint)", color: "#000" }
+              ? { background: "var(--mint)", color: "var(--on-accent)" }
               : { color: "var(--muted)" }}>
             <MessageCircle className="w-3.5 h-3.5" />{w.tabDiscussion}
           </button>
           <button onClick={() => setMainTab("creator")}
             className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all"
             style={mainTab === "creator"
-              ? { background: "var(--mint)", color: "#000" }
+              ? { background: "var(--mint)", color: "var(--on-accent)" }
               : { color: "var(--muted)" }}>
             <Users className="w-3.5 h-3.5" />{w.tabCreator}
           </button>
@@ -1202,7 +1202,7 @@ export default function WallPage() {
         {mainTab === "discussion" && (
           <>
             <div className="flex items-start gap-2 rounded-xl p-3 mx-4 mb-3 border"
-              style={{ background: "rgba(0,229,160,0.05)", borderColor: "rgba(0,229,160,0.15)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.05)", borderColor: "rgba(var(--mint-rgb),0.15)" }}>
               <ShieldCheck className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "var(--mint)" }} />
               <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
                 {w.notice}
@@ -1283,7 +1283,7 @@ export default function WallPage() {
                           <div className="flex items-center gap-1.5">
                             <span className="text-xs font-semibold" style={{ color: "var(--text)" }}>{post.nickname}</span>
                             <span className="text-[10px] px-1.5 py-0.5 rounded-full"
-                              style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
+                              style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
                               ✓ {post.holdingLabel}
                             </span>
                           </div>
@@ -1319,7 +1319,7 @@ export default function WallPage() {
                             rows={3}
                             autoFocus
                             className="w-full rounded-xl p-2.5 text-[13px] leading-relaxed resize-none outline-none border"
-                            style={{ background: "var(--bg)", borderColor: "rgba(0,229,160,0.35)", color: "var(--text)", fontSize: "16px" }}
+                            style={{ background: "var(--bg)", borderColor: "rgba(var(--mint-rgb),0.35)", color: "var(--text)", fontSize: "16px" }}
                           />
                           <div className="flex items-center justify-between mt-1">
                             <span className="text-[10px] tabular-nums" style={{ color: editContent.length > 280 ? "#ef4444" : "var(--muted)" }}>
@@ -1332,7 +1332,7 @@ export default function WallPage() {
                               onClick={() => handleSaveEdit(realId)}
                               disabled={savingEdit || editContent.trim().length < 5}
                               className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-[11px] font-bold transition-opacity disabled:opacity-40"
-                              style={{ background: "var(--mint)", color: "#000" }}>
+                              style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
                               <Check className="w-3 h-3" />
                               {savingEdit ? "저장 중…" : "저장"}
                             </button>
@@ -1397,13 +1397,13 @@ export default function WallPage() {
                                 placeholder={wallReplyTo[post.id] ? `${wallReplyTo[post.id]!.nickname}에게 답글...` : w.commentInput}
                                 maxLength={200}
                                 className="flex-1 text-[12px] rounded-xl px-3 py-2 border outline-none"
-                                style={{ background: "var(--bg)", borderColor: "rgba(0,229,160,0.3)", color: "var(--text)", fontSize: "16px" }}
+                                style={{ background: "var(--bg)", borderColor: "rgba(var(--mint-rgb),0.3)", color: "var(--text)", fontSize: "16px" }}
                               />
                               <button
                                 onClick={() => submitWallComment(post.id, realId)}
                                 disabled={wallCommentSubmitting === post.id || !wallCommentInput[post.id]?.trim()}
                                 className="px-3 py-2 rounded-xl text-[11px] font-bold transition-opacity disabled:opacity-40"
-                                style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+                                style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
                                 {wallCommentSubmitting === post.id ? "..." : "전송"}
                               </button>
                             </div>
@@ -1430,7 +1430,7 @@ export default function WallPage() {
             <div className="fixed right-4 lg:right-8" style={{ bottom: "calc(env(safe-area-inset-bottom) + 5rem)" }}>
               <button onClick={handleWriteClick}
                 className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-black font-bold text-2xl"
-                style={{ background: "var(--mint)", boxShadow: "0 4px 20px rgba(0,229,160,0.4)" }}>
+                style={{ background: "var(--mint)", boxShadow: "0 4px 20px rgba(var(--mint-rgb),0.4)" }}>
                 ✏️
               </button>
             </div>
@@ -1445,12 +1445,12 @@ export default function WallPage() {
                 <Link href="/creator/dashboard"
                   className="rounded-2xl p-4 border flex items-center gap-4 active:opacity-80 transition-opacity"
                   style={{
-                    background: "linear-gradient(135deg, rgba(0,229,160,0.12) 0%, rgba(0,229,160,0.03) 100%)",
-                    borderColor: "rgba(0,229,160,0.3)",
+                    background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.12) 0%, rgba(var(--mint-rgb),0.03) 100%)",
+                    borderColor: "rgba(var(--mint-rgb),0.3)",
                     textDecoration: "none",
                   }}>
                   <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-                    style={{ background: "rgba(0,229,160,0.1)" }}>✦</div>
+                    style={{ background: "rgba(var(--mint-rgb),0.1)" }}>✦</div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-bold font-syne mb-0.5" style={{ color: "var(--text)" }}>{w.creatorMyChannel}</p>
                     <p className="text-[11px]" style={{ color: "var(--muted)" }}>{w.creatorMyDesc}</p>
@@ -1459,7 +1459,7 @@ export default function WallPage() {
                 </Link>
               ) : (
                 <div className="rounded-2xl p-4 border"
-                  style={{ background: "linear-gradient(135deg, rgba(0,229,160,0.1) 0%, rgba(0,229,160,0.03) 100%)", borderColor: "rgba(0,229,160,0.2)" }}>
+                  style={{ background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.1) 0%, rgba(var(--mint-rgb),0.03) 100%)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
                   <div className="flex items-start gap-3">
                     <span className="text-3xl">🏆</span>
                     <div>
@@ -1469,7 +1469,7 @@ export default function WallPage() {
                       </p>
                       <Link href="/creator/setup"
                         className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl"
-                        style={{ background: "var(--mint)", color: "#000" }}>
+                        style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
                         <Sparkles className="w-3.5 h-3.5" />{w.creatorBecome}
                       </Link>
                     </div>
@@ -1591,7 +1591,7 @@ export default function WallPage() {
                     onClick={() => setCreatorSort(key)}
                     className="flex-shrink-0 text-[11px] font-semibold px-3 py-1 rounded-full transition-all"
                     style={active
-                      ? { background: "var(--mint)", color: "#000" }
+                      ? { background: "var(--mint)", color: "var(--on-accent)" }
                       : { background: "var(--card)", color: "var(--muted)", border: "1px solid var(--border)" }
                     }
                   >
@@ -1898,7 +1898,7 @@ export default function WallPage() {
             {/* Icon + headline */}
             <div className="flex flex-col items-center text-center mb-6">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 text-3xl"
-                style={{ background: "linear-gradient(135deg, rgba(0,229,160,0.2) 0%, rgba(0,229,160,0.06) 100%)" }}>
+                style={{ background: "linear-gradient(135deg, rgba(var(--mint-rgb),0.2) 0%, rgba(var(--mint-rgb),0.06) 100%)" }}>
                 ✏️
               </div>
               <h2 className="text-lg font-bold mb-1.5" style={{ color: "var(--text)" }}>
@@ -1957,7 +1957,7 @@ export default function WallPage() {
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold px-2.5 py-1 rounded-full"
-                  style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+                  style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
                   {selected}
                 </span>
                 <span className="text-sm font-bold" style={{ color: "var(--text)" }}>글쓰기</span>
@@ -2072,8 +2072,8 @@ export default function WallPage() {
                 <label htmlFor="screenshot-upload"
                   className="w-full flex flex-col items-center gap-3 py-8 rounded-2xl border border-dashed cursor-pointer"
                   style={{
-                    borderColor: uploading ? "var(--muted)" : "rgba(0,229,160,0.4)",
-                    background:  uploading ? "rgba(255,255,255,0.02)" : "rgba(0,229,160,0.04)",
+                    borderColor: uploading ? "var(--muted)" : "rgba(var(--mint-rgb),0.4)",
+                    background:  uploading ? "rgba(255,255,255,0.02)" : "rgba(var(--mint-rgb),0.04)",
                     opacity: uploading ? 0.7 : 1,
                     pointerEvents: uploading ? "none" : "auto",
                   }}>
@@ -2106,7 +2106,7 @@ export default function WallPage() {
             {verifyMode === "upload" && uploadDone && (
               <div className="mb-4 flex flex-col items-center gap-3 py-6">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center"
-                  style={{ background: "rgba(0,229,160,0.15)" }}>
+                  style={{ background: "rgba(var(--mint-rgb),0.15)" }}>
                   <ShieldCheck className="w-6 h-6" style={{ color: "var(--mint)" }} />
                 </div>
                 <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{w.uploadDone}</p>
@@ -2142,7 +2142,7 @@ export default function WallPage() {
                 <div className="flex flex-col items-center gap-3 py-6 mb-4 rounded-2xl"
                   style={{ background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)" }}>
                   <div className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
-                    style={{ background: "rgba(0,229,160,0.10)" }}>🔧</div>
+                    style={{ background: "rgba(var(--mint-rgb),0.10)" }}>🔧</div>
                   <p className="text-sm font-bold text-center" style={{ color: "var(--text)" }}>{w.brokerNoticeTitle}</p>
                   <p className="text-xs text-center leading-relaxed px-4" style={{ color: "var(--muted)" }}>
                     {w.brokerNoticeDesc}

@@ -150,11 +150,11 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
         {hasLocalCreator && (
           <Link href="/creator/dashboard"
             className="text-xs px-4 py-2 rounded-xl font-bold"
-            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.3)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}>
             내 투자클럽 대시보드로 →
           </Link>
         )}
-        <button onClick={() => router.back()} className="text-xs px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "#000" }}>
+        <button onClick={() => router.back()} className="text-xs px-4 py-2 rounded-xl" style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
           돌아가기
         </button>
       </div>
@@ -201,7 +201,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
                   <h1 className="text-lg font-bold font-syne" style={{ color: "var(--text)" }}>{creator.nickname}</h1>
                   {creator.isVerified && (
                     <span className="flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded-full"
-                      style={{ background: "rgba(0,229,160,0.12)", color: "var(--mint)" }}>
+                      style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
                       <ShieldCheck className="w-3 h-3" />인증
                     </span>
                   )}
@@ -244,7 +244,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
             {creator.subscriptionEnabled ? (
               isSubscribed ? (
                 <div className="w-full py-3 rounded-2xl flex items-center justify-center gap-2 border"
-                  style={{ borderColor: "rgba(0,229,160,0.25)", background: "rgba(0,229,160,0.05)" }}>
+                  style={{ borderColor: "rgba(var(--mint-rgb),0.25)", background: "rgba(var(--mint-rgb),0.05)" }}>
                   <CheckCircle2 className="w-4 h-4" style={{ color: "var(--mint)" }} />
                   <span className="text-xs font-bold" style={{ color: "var(--mint)" }}>구독 중 — 모든 콘텐츠 이용 가능</span>
                 </div>
@@ -257,7 +257,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               )
             ) : (
               <div className="w-full py-3 rounded-2xl flex flex-col items-center gap-0.5 border"
-                style={{ borderColor: "rgba(0,229,160,0.25)", background: "rgba(0,229,160,0.05)" }}>
+                style={{ borderColor: "rgba(var(--mint-rgb),0.25)", background: "rgba(var(--mint-rgb),0.05)" }}>
                 <span className="text-xs font-bold" style={{ color: "var(--mint)" }}>무료 콘텐츠 · 광고로 투자클럽을 지원합니다</span>
                 <span className="text-[10px]" style={{ color: "var(--muted)" }}>모든 콘텐츠를 무료로 이용하실 수 있습니다</span>
               </div>
@@ -320,7 +320,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               <button key={tab.key} onClick={() => setContentTab(tab.key)}
                 className="flex-shrink-0 text-xs font-bold px-3 py-1.5 rounded-full border transition-all"
                 style={contentTab === tab.key
-                  ? { background: "var(--mint)", color: "#000", borderColor: "var(--mint)" }
+                  ? { background: "var(--mint)", color: "var(--on-accent)", borderColor: "var(--mint)" }
                   : { background: "var(--card)", color: "var(--muted)", borderColor: "var(--border)" }}>
                 {tab.label}
               </button>
@@ -712,7 +712,7 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 mb-1 flex-wrap">
               <span className="text-[10px] px-1.5 py-0.5 rounded-md flex items-center gap-0.5"
-                style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}>
+                style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}>
                 {CONTENT_ICON[content.type]}
                 <span className="ml-0.5">{contentTypeLabel(content.type)}</span>
               </span>

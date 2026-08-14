@@ -218,7 +218,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                   </span>
                   <span
                     className="text-[10px] px-1.5 py-0.5 rounded-full font-mono-num"
-                    style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}
+                    style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}
                   >
                     {upper}
                   </span>
@@ -261,8 +261,8 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
             className="w-full flex items-center justify-center gap-1.5 text-xs py-2.5 mb-3 rounded-xl border"
             style={{
               color: "var(--mint)",
-              borderColor: "rgba(0,229,160,0.35)",
-              background: "rgba(0,229,160,0.06)",
+              borderColor: "rgba(var(--mint-rgb),0.35)",
+              background: "rgba(var(--mint-rgb),0.06)",
             }}
           >
             <PenLine className="w-3.5 h-3.5" />
@@ -309,7 +309,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                   disabled={submitting}
                   onClick={submitPost}
                   className="text-xs font-bold px-3 py-1.5 rounded-lg"
-                  style={{ background: "var(--mint)", color: "#000", opacity: submitting ? 0.6 : 1 }}
+                  style={{ background: "var(--mint)", color: "var(--on-accent)", opacity: submitting ? 0.6 : 1 }}
                 >
                   {submitting ? "게시 중…" : "게시"}
                 </button>
@@ -342,7 +342,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
                   </span>
                   <span
                     className="text-[10px] px-1.5 py-0.5 rounded-full"
-                    style={{ background: "rgba(0,229,160,0.1)", color: "var(--mint)" }}
+                    style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }}
                   >
                     ✓ {p.holdingLabel}
                   </span>

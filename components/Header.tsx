@@ -40,7 +40,7 @@ export function Header() {
   return (
     <header
       className="sticky top-0 z-50 border-b"
-      style={{ background: "var(--bg)", borderColor: "var(--border)" }}
+      style={{ background: "var(--header-bg)", borderColor: "var(--border)", backdropFilter: "blur(10px)" }}
     >
       <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
         {/* 로고 — 모바일만 표시 */}
@@ -49,11 +49,11 @@ export function Header() {
             className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
             style={{ background: "var(--mint)" }}
           >
-            <TrendingUp className="w-4 h-4 text-black" strokeWidth={2.5} />
+            <TrendingUp className="w-4 h-4" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
           </div>
           <span
             className="text-lg font-bold tracking-tight font-syne"
-            style={{ color: "var(--text)" }}
+            style={{ color: "var(--navy)" }}
           >
             Investus
           </span>
@@ -78,7 +78,7 @@ export function Header() {
                 className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
                 style={
                   open
-                    ? { background: "rgba(0,229,160,0.12)", color: "var(--mint)" }
+                    ? { background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }
                     : { background: "rgba(107,114,128,0.12)", color: "var(--muted)" }
                 }
               >

@@ -137,16 +137,16 @@ export function PortfolioAI({
   return (
     // 데스크탑에서 flex-col + 고정 높이로 오른쪽 바의 상당 부분을 점유
     <div className="rounded-2xl border overflow-hidden flex flex-col lg:min-h-[700px]"
-      style={{ background: "var(--card)", borderColor: "rgba(0,229,160,0.2)" }}>
+      style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
 
       {/* Header */}
       <div className="px-4 pt-4 pb-3 border-b flex-shrink-0 flex items-center justify-between"
-        style={{ borderColor: "rgba(0,229,160,0.1)", background: "rgba(0,229,160,0.03)" }}>
+        style={{ borderColor: "rgba(var(--mint-rgb),0.1)", background: "rgba(var(--mint-rgb),0.03)" }}>
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4" style={{ color: "var(--mint)" }} />
           <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>나만의 AI 투자비서</p>
           <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
-            style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>
             {isPro ? "Pro" : "Claude"}
           </span>
         </div>
@@ -169,7 +169,7 @@ export function PortfolioAI({
         <div className="flex flex-col flex-1 min-h-0">
           {/* 소개 문구 — 대화 없을 때만 */}
           {messages.length === 0 && (
-            <div className="px-4 py-3 border-b flex-shrink-0" style={{ borderColor: "rgba(0,229,160,0.08)" }}>
+            <div className="px-4 py-3 border-b flex-shrink-0" style={{ borderColor: "rgba(var(--mint-rgb),0.08)" }}>
               <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
                 {isPro
                   ? `내 종목·수익률·비중을 알고 있어요. Pro는 하루 ${PRO_LIMIT}회까지 이용할 수 있어요.`
@@ -198,12 +198,12 @@ export function PortfolioAI({
                 <div key={i} className={`flex gap-2.5 ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                   {m.role === "assistant" && (
                     <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5"
-                      style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>✦</div>
+                      style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>✦</div>
                   )}
                   <div className="max-w-[80%] rounded-2xl px-3.5 py-2.5"
                     style={m.role === "user"
-                      ? { background: "var(--mint)", color: "#000" }
-                      : { background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.12)", color: "var(--text)" }}>
+                      ? { background: "var(--mint)", color: "var(--on-accent)" }
+                      : { background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.12)", color: "var(--text)" }}>
                     <p className="text-[12px] leading-relaxed whitespace-pre-line">{m.content}</p>
                   </div>
                 </div>
@@ -211,9 +211,9 @@ export function PortfolioAI({
               {loading && (
                 <div className="flex gap-2.5 justify-start">
                   <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
-                    style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)" }}>✦</div>
+                    style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>✦</div>
                   <div className="rounded-2xl px-3.5 py-3"
-                    style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.12)" }}>
+                    style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.12)" }}>
                     <div className="flex gap-1.5 items-center">
                       {[0, 150, 300].map((d) => (
                         <div key={d} className="w-1.5 h-1.5 rounded-full animate-bounce"
@@ -228,9 +228,9 @@ export function PortfolioAI({
           {/* 한도 도달 */}
           {limitReached ? (
             <div className="px-4 py-5 flex flex-col items-center gap-3 text-center flex-shrink-0 border-t"
-              style={{ borderColor: "rgba(0,229,160,0.1)" }}>
+              style={{ borderColor: "rgba(var(--mint-rgb),0.1)" }}>
               <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl"
-                style={{ background: "rgba(0,229,160,0.08)" }}>
+                style={{ background: "rgba(var(--mint-rgb),0.08)" }}>
                 {isPro ? "✦" : "🎬"}
               </div>
               <div>
@@ -250,13 +250,13 @@ export function PortfolioAI({
                   <button
                     onClick={() => setShowAdGate(true)}
                     className="w-full py-2.5 rounded-xl text-sm font-bold transition-opacity active:opacity-80"
-                    style={{ background: "rgba(0,229,160,0.15)", color: "var(--mint)", border: "1px solid rgba(0,229,160,0.3)" }}>
+                    style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}>
                     광고 시청하고 1회 추가 →
                   </button>
                   <Link
                     href="/subscribe"
                     className="w-full py-2.5 rounded-xl text-sm font-bold text-center transition-opacity active:opacity-80"
-                    style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}>
+                    style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}>
                     Pro로 계속하기 (하루 {PRO_LIMIT}회)
                   </Link>
                 </>
@@ -264,7 +264,7 @@ export function PortfolioAI({
               <p className="text-[9px]" style={{ color: "var(--muted)" }}>투자 참고용 · 투자 권유 아님</p>
             </div>
           ) : (
-            <div className="px-4 py-3 border-t flex-shrink-0" style={{ borderColor: "rgba(0,229,160,0.1)" }}>
+            <div className="px-4 py-3 border-t flex-shrink-0" style={{ borderColor: "rgba(var(--mint-rgb),0.1)" }}>
               <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 border"
                 style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
                 <input

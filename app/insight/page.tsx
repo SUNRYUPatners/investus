@@ -30,17 +30,17 @@ export default async function InsightPage() {
     <Link
       href="/learn"
       className="block rounded-2xl overflow-hidden border active:opacity-90 transition-opacity"
-      style={{ borderColor: "rgba(0,229,160,0.2)" }}
+      style={{ borderColor: "rgba(var(--mint-rgb),0.2)" }}
     >
       <div
         className="relative px-4 py-4 flex items-center gap-3"
         style={{ background: "linear-gradient(135deg, #001a12 0%, #0d0b00 60%, #0a0c10 100%)" }}
       >
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(circle at 75% 50%, rgba(0,229,160,0.08) 0%, transparent 55%)" }} />
+          style={{ background: "radial-gradient(circle at 75% 50%, rgba(var(--mint-rgb),0.08) 0%, transparent 55%)" }} />
         <div className="relative flex gap-1.5 flex-shrink-0">
           <div className="w-10 h-10 rounded-xl flex items-center justify-center"
-            style={{ background: "rgba(0,229,160,0.1)", border: "1px solid rgba(0,229,160,0.2)" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.1)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}>
             <span className="text-xl">🎓</span>
           </div>
           <div className="w-10 h-10 rounded-xl flex items-center justify-center"
@@ -51,7 +51,7 @@ export default async function InsightPage() {
         <div className="flex-1 min-w-0">
           <div className="flex gap-1.5 mb-1.5">
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(0,229,160,0.12)", color: "rgba(0,229,160,0.9)" }}>
+              style={{ background: "rgba(var(--mint-rgb),0.12)", color: "rgba(var(--mint-rgb),0.9)" }}>
               심화 가이드
             </span>
             <span className="inline-flex items-center text-[9px] font-bold px-2 py-0.5 rounded-full"

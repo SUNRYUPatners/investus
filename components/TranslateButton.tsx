@@ -30,7 +30,7 @@ export function TranslateButton() {
               className="px-3 py-1.5 text-xs font-bold text-left transition-opacity active:opacity-60"
               style={{
                 color: lang === targetLang ? "var(--mint)" : "var(--muted)",
-                background: lang === targetLang ? "rgba(0,229,160,0.08)" : "transparent",
+                background: lang === targetLang ? "rgba(var(--mint-rgb),0.08)" : "transparent",
               }}
               onClick={() => handleLangSelect(lang)}
             >
@@ -46,8 +46,8 @@ export function TranslateButton() {
           className="text-[10px] font-bold px-1.5 py-0.5 rounded-full border"
           style={{
             color: "var(--mint)",
-            borderColor: "rgba(0,229,160,0.3)",
-            background: "rgba(0,229,160,0.08)",
+            borderColor: "rgba(var(--mint-rgb),0.3)",
+            background: "rgba(var(--mint-rgb),0.08)",
           }}
           onClick={() => setShowPicker((v) => !v)}
         >
@@ -67,8 +67,8 @@ export function TranslateButton() {
         }}
         className="flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1.5 rounded-full border transition-all active:opacity-60"
         style={{
-          background: enabled ? "rgba(0,229,160,0.12)" : "var(--bg)",
-          borderColor: enabled ? "rgba(0,229,160,0.35)" : "var(--border)",
+          background: enabled ? "rgba(var(--mint-rgb),0.12)" : "var(--bg)",
+          borderColor: enabled ? "rgba(var(--mint-rgb),0.35)" : "var(--border)",
           color: enabled ? "var(--mint)" : "var(--muted)",
         }}
         title={enabled ? "번역 끄기" : "번역하기"}

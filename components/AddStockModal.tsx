@@ -112,7 +112,7 @@ export function AddStockModal({ onClose, onAdd, existing }: Props) {
             {/* Selected stock */}
             <div
               className="flex items-center justify-between px-3 py-3 rounded-xl border"
-              style={{ background: "var(--bg)", borderColor: "rgba(0,229,160,0.3)" }}
+              style={{ background: "var(--bg)", borderColor: "rgba(var(--mint-rgb),0.3)" }}
             >
               <div>
                 <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>
@@ -175,7 +175,7 @@ export function AddStockModal({ onClose, onAdd, existing }: Props) {
               onClick={handleSubmit}
               disabled={!shares || !avgCost}
               className="w-full py-3 rounded-xl text-sm font-bold transition-opacity disabled:opacity-40"
-              style={{ background: "var(--mint)", color: "#000" }}
+              style={{ background: "var(--mint)", color: "var(--on-accent)" }}
             >
               추가하기
             </button>

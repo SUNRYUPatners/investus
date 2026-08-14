@@ -42,7 +42,7 @@ function MockCard({ label, value, pct, positive }: { label: string; value: strin
 
 function MockHeatTile({ label, pct, positive, size = 1 }: { label: string; pct: string; positive: boolean; size?: number }) {
   const a = Math.min(Math.abs(parseFloat(pct)) / 3, 1) * 0.6 + 0.2;
-  const bg = positive ? `rgba(0,229,160,${a})` : `rgba(255,77,109,${a})`;
+  const bg = positive ? `rgba(var(--mint-rgb),${a})` : `rgba(255,77,109,${a})`;
   return (
     <div className="rounded-lg p-2 flex flex-col justify-between" style={{ background: bg, flex: size, minWidth: 0 }}>
       <p className="text-[10px] font-semibold text-white">{label}</p>
@@ -65,7 +65,7 @@ function buildSections(isKo: boolean): Section[] {
               : <>The home screen is designed to give you a quick overview of the <b style={{ color: "var(--text)" }}>current state of the US stock market</b>.</>}
           </p>
           <div className="rounded-xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>
-            <div className="px-3 py-2 text-[11px] font-bold" style={{ background: "rgba(0,229,160,0.08)", color: "var(--mint)" }}>
+            <div className="px-3 py-2 text-[11px] font-bold" style={{ background: "rgba(var(--mint-rgb),0.08)", color: "var(--mint)" }}>
               {isKo ? "📌 화면 위에서 아래 순서" : "📌 Top to Bottom"}
             </div>
             <div className="px-3 py-2 space-y-2">
@@ -134,7 +134,7 @@ function buildSections(isKo: boolean): Section[] {
               </div>
             ))}
           </div>
-          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.15)" }}>
+          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.15)" }}>
             <p className="text-[11px]" style={{ color: "var(--mint)" }}>{isKo ? "💡 초보자 팁" : "💡 Beginner Tip"}</p>
             <p className="text-[11px] mt-0.5">
               {isKo
@@ -182,7 +182,7 @@ function buildSections(isKo: boolean): Section[] {
               </div>
             ))}
           </div>
-          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.15)" }}>
+          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.15)" }}>
             <p className="text-[11px]" style={{ color: "var(--mint)" }}>{isKo ? "💡 활용법" : "💡 How to Use"}</p>
             <p className="text-[11px] mt-0.5">
               {isKo
@@ -228,7 +228,7 @@ function buildSections(isKo: boolean): Section[] {
               </div>
             ))}
           </div>
-          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.15)" }}>
+          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.15)" }}>
             <p className="text-[11px]" style={{ color: "var(--mint)" }}>{isKo ? "💡 활용법" : "💡 How to Use"}</p>
             <p className="text-[11px] mt-0.5">
               {isKo
@@ -327,7 +327,7 @@ function buildSections(isKo: boolean): Section[] {
               </div>
             ))}
           </div>
-          <div className="rounded-xl px-3 py-2 mt-3" style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.15)" }}>
+          <div className="rounded-xl px-3 py-2 mt-3" style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.15)" }}>
             <p className="text-[11px]" style={{ color: "var(--mint)" }}>
               {isKo ? "💡 현재 지수가 높다면?" : "💡 If the indicator is high:"}
             </p>
@@ -427,7 +427,7 @@ function buildSections(isKo: boolean): Section[] {
               </div>
             ))}
           </div>
-          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.15)" }}>
+          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.15)" }}>
             <p className="text-[11px]" style={{ color: "var(--mint)" }}>{isKo ? "⚠️ 주의사항" : "⚠️ Important Note"}</p>
             <p className="text-[11px] mt-0.5">
               {isKo
@@ -502,7 +502,7 @@ function buildSections(isKo: boolean): Section[] {
             ))}
           </div>
 
-          <div className="rounded-xl p-3 mt-3 border" style={{ background: "rgba(0,229,160,0.04)", borderColor: "rgba(0,229,160,0.2)" }}>
+          <div className="rounded-xl p-3 mt-3 border" style={{ background: "rgba(var(--mint-rgb),0.04)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
             <p className="text-[12px] font-bold mb-2" style={{ color: "var(--mint)" }}>
               {isKo ? "✦ 나만의 AI 투자비서 (Claude)" : "✦ Your Personal AI Investment Assistant (Claude)"}
             </p>
@@ -601,7 +601,7 @@ function buildSections(isKo: boolean): Section[] {
               </div>
             ))}
           </div>
-          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(0,229,160,0.06)", border: "1px solid rgba(0,229,160,0.15)" }}>
+          <div className="rounded-xl px-3 py-2 mt-2" style={{ background: "rgba(var(--mint-rgb),0.06)", border: "1px solid rgba(var(--mint-rgb),0.15)" }}>
             <p className="text-[11px]" style={{ color: "var(--mint)" }}>
               {isKo ? "💡 투자클럽 개설 방법" : "💡 How to Open an Invest Club"}
             </p>
@@ -686,7 +686,7 @@ export default function GuidePage() {
 
         {/* Help button banner */}
         <div className="mb-5 rounded-2xl border px-4 py-3.5 flex items-start gap-3"
-          style={{ background: "rgba(0,229,160,0.06)", borderColor: "rgba(0,229,160,0.2)" }}>
+          style={{ background: "rgba(var(--mint-rgb),0.06)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
           <div className="flex-shrink-0 mt-0.5 w-6 h-6 rounded-full flex items-center justify-center"
             style={{ background: "var(--border)" }}>
             <HelpCircle className="w-3.5 h-3.5" style={{ color: "var(--muted)" }} />
@@ -754,7 +754,7 @@ export default function GuidePage() {
           </p>
           <Link href="/more/faq"
             className="inline-flex items-center gap-1 mt-3 px-4 py-2 rounded-xl text-sm font-semibold"
-            style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}>
+            style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}>
             {isKo ? "FAQ 보기" : "View FAQ"} <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
