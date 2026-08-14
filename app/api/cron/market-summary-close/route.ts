@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { assertCronAuth } from "@/lib/cronAuth";
 import { isNYSEHoliday } from "@/lib/marketHours";
+import { getOrCreatePostMarketBriefing } from "@/lib/postMarketBriefing";
 
-export const maxDuration = 60;
+export const maxDuration = 90;
 
 export async function GET(req: NextRequest) {
   const denied = assertCronAuth(req);
@@ -22,7 +23,11 @@ export async function GET(req: NextRequest) {
     });
     if (!res.ok) return NextResponse.json({ ok: false, status: res.status }, { status: 502 });
     const data = await res.json() as { date?: string; cached?: boolean };
-    return NextResponse.json({ ok: true, ...data });
+    let briefingOk = false;
+    try {
+      briefingOk = Boolean(await getOrCreatePostMarketBriefing());
+    } catch { /* push cron will retry */ }
+    return NextResponse.json({ ok: true, briefingOk, ...data });
   } catch (e) {
     return NextResponse.json({ ok: false, error: String(e) }, { status: 500 });
   }

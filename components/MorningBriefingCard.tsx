@@ -1,17 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronDown, Lock, Moon, Sun } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
-import { buildSessionBriefing } from "@/lib/morningBriefing";
+import type { SessionBriefing } from "@/lib/morningBriefing";
 
 export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
   const isKo = locale === "ko";
   const { user } = useAuth();
   const isPro = user?.isPro === true;
-  const briefing = buildSessionBriefing();
+  const [briefing, setBriefing] = useState<SessionBriefing | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/session-briefing")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { briefing?: SessionBriefing | null } | null) => {
+        if (!cancelled) setBriefing(d?.briefing ?? null);
+      })
+      .catch(() => {
+        if (!cancelled) setBriefing(null);
+      });
+    return () => { cancelled = true; };
+  }, []);
 
   if (!briefing) return null;
 
@@ -82,6 +95,11 @@ export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
           {briefing.dateKey}
         </span>
       </div>
+      {briefing.source === "session-news" && (
+        <p className="text-[10px] mb-2" style={{ color: "var(--muted)" }}>
+          {isKo ? "장중 뉴스 기반 · 테슬라·스페이스X·빅테크(M7)" : "Session news · Tesla, SpaceX, Mag7"}
+        </p>
+      )}
 
       <p className="text-sm font-bold leading-snug mb-3" style={{ color: "var(--text)" }}>
         {briefing.headline}

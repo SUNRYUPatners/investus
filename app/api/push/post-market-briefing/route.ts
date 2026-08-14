@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import webpush from "web-push";
-import { buildSessionBriefing, getBriefPhase } from "@/lib/morningBriefing";
+import { getBriefPhase } from "@/lib/morningBriefing";
+import { getOrCreatePostMarketBriefing } from "@/lib/postMarketBriefing";
 import { isNYSEHoliday } from "@/lib/marketHours";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 webpush.setVapidDetails(
   process.env.VAPID_MAILTO!,
@@ -58,9 +59,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ skipped: true, reason: "phase not post" });
   }
 
-  const briefing = buildSessionBriefing();
+  const briefing = await getOrCreatePostMarketBriefing();
   if (!briefing) {
-    return NextResponse.json({ skipped: true, reason: "no reports" });
+    return NextResponse.json({ skipped: true, reason: "no session-news briefing" });
   }
 
   const { data: subs, error } = await supabase

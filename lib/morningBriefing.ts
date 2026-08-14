@@ -11,6 +11,8 @@ export type SessionBriefing = {
   labelEn: string;
   headline: string;
   bullets: string[];
+  /** reports = CIO 일일 리포트 / session-news = 장중 뉴스 기반 장마감 브리핑 */
+  source?: "reports" | "session-news";
   reports: {
     id: string;
     title: string;
@@ -66,7 +68,7 @@ function shorten(s: string, max: number): string {
   return `${t.slice(0, max - 1)}…`;
 }
 
-/** 장전·장후 브리핑 데이터 (최신 리포트 일자 기준) */
+/** 장전 브리핑 — 최신 일자 CIO 리포트. 장마감은 getOrCreatePostMarketBriefing 사용. */
 export function buildSessionBriefing(now = new Date()): SessionBriefing | null {
   const dateKey = latestDateKey();
   if (!dateKey) return null;
@@ -106,6 +108,7 @@ export function buildSessionBriefing(now = new Date()): SessionBriefing | null {
   return {
     phase,
     dateKey,
+    source: "reports",
     labelKo: phase === "pre" ? "장전 브리핑" : "장후 브리핑",
     labelEn: phase === "pre" ? "Pre-market brief" : "After-close brief",
     headline:

@@ -37,7 +37,7 @@ export default async function HomePage() {
             {/* 첫 방문자 가이드 배너 */}
             <FirstVisitBanner />
 
-            {/* 장전 브리핑 (Pro) */}
+            {/* 장전(리포트) · 장후(장중 뉴스 M7) 브리핑 (Pro) */}
             <section className="px-4 lg:px-0 pt-3">
               <MorningBriefingCard locale={locale} />
             </section>
