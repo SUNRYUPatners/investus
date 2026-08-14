@@ -206,7 +206,10 @@ function CreatorSection() {
       <Link href="/creator/dashboard" style={{ textDecoration: "none" }}>
         <div
           className="rounded-2xl p-4 mb-6 border flex items-center gap-4 active:opacity-70 transition-opacity"
-          style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(var(--mint-rgb),0.2)" }}
+          style={{
+            background: "linear-gradient(135deg, var(--card) 0%, rgba(var(--mint-rgb),0.08) 100%)",
+            borderColor: "rgba(var(--mint-rgb),0.3)",
+          }}
         >
           {/* Avatar */}
           {isPhoto ? (
@@ -222,13 +225,13 @@ function CreatorSection() {
 
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-0.5">
-              <p className="text-sm font-bold font-syne truncate" style={{ color: "#f5f6f8" }}>{profile.nickname}</p>
+              <p className="text-sm font-bold truncate" style={{ color: "var(--navy)" }}>{profile.nickname}</p>
               <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
                 style={{ background: `${statusColor}22`, color: statusColor }}>
                 {statusLabel}
               </span>
             </div>
-            <p className="text-[11px] truncate" style={{ color: "rgba(255,255,255,0.65)" }}>{profile.bio || "내 채널을 관리하세요"}</p>
+            <p className="text-[11px] truncate" style={{ color: "var(--muted)" }}>{profile.bio || "내 채널을 관리하세요"}</p>
           </div>
 
           <div className="flex-shrink-0 flex flex-col items-center gap-1">
@@ -244,15 +247,18 @@ function CreatorSection() {
     <Link href="/creator/setup" style={{ textDecoration: "none" }}>
       <div
         className="rounded-2xl p-4 mb-6 border flex items-center gap-4 active:opacity-70 transition-opacity"
-        style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(var(--mint-rgb),0.15)" }}
+        style={{
+          background: "linear-gradient(135deg, var(--card) 0%, rgba(var(--mint-rgb),0.1) 100%)",
+          borderColor: "rgba(var(--mint-rgb),0.28)",
+        }}
       >
         <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-          style={{ background: "rgba(var(--mint-rgb),0.12)", border: "2px solid rgba(var(--mint-rgb),0.3)" }}>
+          style={{ background: "rgba(var(--mint-rgb),0.15)", border: "2px solid rgba(var(--mint-rgb),0.35)" }}>
           <Sparkles className="w-5 h-5" style={{ color: "var(--mint)" }} />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-bold font-syne" style={{ color: "#f5f6f8" }}>크리에이터 되기</p>
-          <p className="text-[11px]" style={{ color: "rgba(255,255,255,0.65)" }}>전자책, 강의, 리포트를 판매하세요</p>
+          <p className="text-sm font-bold" style={{ color: "var(--navy)" }}>크리에이터 되기</p>
+          <p className="text-[11px]" style={{ color: "var(--muted)" }}>전자책, 강의, 리포트를 판매하세요</p>
         </div>
         <ChevronRight className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
       </div>
@@ -1043,14 +1049,17 @@ export default function MorePage() {
             <div className="lg:hidden">
               <CreatorSection />
               <div className="rounded-2xl p-5 mb-6 border text-center"
-                style={{ background: "linear-gradient(135deg, rgba(var(--navy-rgb),0.08), rgba(var(--mint-rgb),0.1))", borderColor: "rgba(var(--mint-rgb),0.25)" }}>
+                style={{
+                  background: "linear-gradient(135deg, var(--card) 0%, rgba(var(--navy-rgb),0.06) 50%, rgba(var(--mint-rgb),0.1) 100%)",
+                  borderColor: "rgba(var(--mint-rgb),0.3)",
+                }}>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3"
                   style={{ background: "var(--mint)" }}>
                   <TrendingUp className="w-7 h-7" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
                 </div>
-                <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>Investus</p>
+                <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--navy)" }}>Investus</p>
                 <p className="text-xs" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
-                <p className="text-[10px] mt-1" style={{ color: "var(--muted)" }}>investus.kr</p>
+                <p className="text-[10px] mt-1 font-mono font-semibold" style={{ color: "var(--mint)" }}>investus.kr</p>
               </div>
             </div>
 
@@ -1128,14 +1137,17 @@ export default function MorePage() {
 
             {/* 1. Investus 브랜드 카드 — 최상단 */}
             <div className="rounded-2xl p-5 border text-center"
-              style={{ background: "linear-gradient(135deg,#111318,#0d1f18)", borderColor: "rgba(var(--mint-rgb),0.2)" }}>
+              style={{
+                background: "linear-gradient(135deg, var(--card) 0%, rgba(var(--navy-rgb),0.06) 50%, rgba(var(--mint-rgb),0.1) 100%)",
+                borderColor: "rgba(var(--mint-rgb),0.3)",
+              }}>
               <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3"
-                style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.3)" }}>
-                <TrendingUp className="w-8 h-8 text-black" strokeWidth={2.5} />
+                style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.25)" }}>
+                <TrendingUp className="w-8 h-8" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
               </div>
-              <p className="text-base font-bold font-syne mb-1" style={{ color: "#f5f6f8" }}>Investus</p>
-              <p className="text-[11px] leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{mo.tagline}</p>
-              <p className="text-[10px] mt-2 font-mono" style={{ color: "rgba(232,200,74,0.85)" }}>investus.kr</p>
+              <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--navy)" }}>Investus</p>
+              <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
+              <p className="text-[10px] mt-2 font-mono font-semibold" style={{ color: "var(--mint)" }}>investus.kr</p>
             </div>
 
             {/* 2. 크리에이터 되기 */}
