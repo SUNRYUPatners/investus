@@ -21,77 +21,77 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   {
     id: -776, alias: "여의도 매 #22", symbol: "SPCX",
     content: "\"6,418,547,315 · 48.4%.\" SEC가 Musk 개인 SPCX 지분을 공식 확인한 두 숫자다. 개인이 상장 대형 회사의 절반 가까이 소유하는 것은 세계에서 유일한 사례고, 어제 All-Hands 15 GW·AI 99% 프레임이 개인 자산 가치를 극대화하는 방향으로 맞춰져 있다.",
-    likes: 142, comments: 0, created_at: "2026-08-14T00:04:00.000Z", liked: false,
+    likes: 4, comments: 0, created_at: "2026-08-14T00:04:00.000Z", liked: false,
   },
   {
     id: -777, alias: "강남 표범 #46", symbol: "SPCX",
     content: "Dan Ives가 SPCX 2027년 시가총액 2조 달러 도달을 놀랍지 않을 것으로 봤다. 어제 MS 600달러 불 케이스에 이어 sell-side 강세가 다층으로 쌓이고 있다. 언론 노출 많은 Ives의 콜은 시장 심리에 큰 영향을 준다.",
-    likes: 118, comments: 0, created_at: "2026-08-14T00:12:00.000Z", liked: false,
+    likes: 14, comments: 1, created_at: "2026-08-14T00:12:00.000Z", liked: false,
   },
   {
     id: -778, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "Ron Baron이 오늘 흥미로운 프레임을 냈다. 자신의 SPCX 지분이 230억 달러 규모까지 확대됐고, Starlink 단독으로만 14조 달러 밸류에 도달할 수 있다는 것이다. 2017년부터 사서 지금까지 온 그가 이런 규모를 얘기하는 건 무게가 다르다.",
-    likes: 102, comments: 0, created_at: "2026-08-14T00:19:00.000Z", liked: false,
+    likes: 10, comments: 0, created_at: "2026-08-14T00:19:00.000Z", liked: false,
   },
   {
     id: -779, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Nevada 교통청이 Tesla에 자율주행 차량 네트워크 회사 허가를 내줬다. 최대 40대 로보택시 상업 서비스가 시작 가능해졌고, 예약·픽업 시스템도 승인됐다. MS가 며칠 전 요구한 로보택시 증명이 규제 승인이라는 형태로 오늘 나왔다.",
-    likes: 128, comments: 0, created_at: "2026-08-14T00:26:00.000Z", liked: false,
+    likes: 4, comments: 1, created_at: "2026-08-14T00:26:00.000Z", liked: false,
   },
   {
     id: -780, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "\"68,330 units · +191% YoY.\" Tesla 상하이 팹 7월 수출이 세 배로 뛰었다. 어제 일본 배송 네트워크 60% 확대에 이어 오늘 중국 수출 폭발까지 아시아 시장에서 Tesla가 다각으로 회복되고 있다. 자동차 판매 사이드도 살아있다는 얘기다.",
-    likes: 136, comments: 0, created_at: "2026-08-14T00:33:00.000Z", liked: false,
+    likes: 14, comments: 2, created_at: "2026-08-14T00:33:00.000Z", liked: false,
   },
   {
     id: -781, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "Austin 소방서 사진이 스티어링 휠 없는 Cybercab에 First Responder QR 스티커가 붙어 있다고 확인해 줬다. 어제 44대 중 43대 스티어링 없음 관측에 이어 응급 대응 시스템 통합까지 완료됐다. 무감독 상업 서비스 개시가 8월 안에 나올 수 있다.",
-    likes: 122, comments: 0, created_at: "2026-08-14T00:40:00.000Z", liked: false,
+    likes: 7, comments: 1, created_at: "2026-08-14T00:40:00.000Z", liked: false,
   },
   {
     id: -782, alias: "종로 매 #12", symbol: "SPCX",
     content: "Terafab이 공식적으로 착공됐다. 초기 168억 달러 투자로 시작하고, Joe Tegtmeyer가 드론으로 첫 촬영에 성공했다. 8/7 발표에서 시작해 규모 비교·태양광 부지 항공 사진을 거쳐 오늘 착공까지, 프레임이 실체가 되는 흐름이 완결됐다.",
-    likes: 108, comments: 0, created_at: "2026-08-14T00:47:00.000Z", liked: false,
+    likes: 3, comments: 3, created_at: "2026-08-14T00:47:00.000Z", liked: false,
   },
   {
     id: -783, alias: "여의도 매 #22", symbol: "SPCX",
     content: "NASA가 Nancy Grace Roman 우주 망원경을 SPCX 발사 하드웨어와 통합하기 시작했고, Falcon Heavy 발사가 원래 일정보다 9개월 앞당긴 8월 30일로 잡혔다. 정부 대형 과학 미션을 앞당길 정도로 SPCX 발사 신뢰성이 확립됐다.",
-    likes: 89, comments: 0, created_at: "2026-08-14T00:54:00.000Z", liked: false,
+    likes: 13, comments: 1, created_at: "2026-08-14T00:54:00.000Z", liked: false,
   },
   {
     id: -784, alias: "부산 갈매기 #77", symbol: "MACRO",
     content: "Anthropic이 10월에 2조 달러 밸류로 상장할 수 있다는 FT 보도다. 실현되면 역대 최대 주식 시장 상장 데뷔가 된다. 구글이 대규모 지분 보유 상태에서 이 정도 상장이면 구글 자산 가치가 급속 재평가되고, 어제 OpenAI 8,520억 프레임과도 겹친다.",
-    likes: 92, comments: 0, created_at: "2026-08-14T01:01:00.000Z", liked: false,
+    likes: 4, comments: 3, created_at: "2026-08-14T01:01:00.000Z", liked: false,
   },
   {
     id: -785, alias: "강남 표범 #46", symbol: "MACRO",
     content: "\"$500B AI Enron.\" Michael Burry의 오늘 경고 한 문장이다. Big Short 원조가 이 규모를 지목한다는 건 무겁게 봐야 한다. 오늘 Tom Lee 2년 사상 최대 상승 프레임과 정확히 반대 방향인데, 시장 심리가 극단으로 분열되는 국면이다.",
-    likes: 78, comments: 0, created_at: "2026-08-14T01:08:00.000Z", liked: false,
+    likes: 3, comments: 0, created_at: "2026-08-14T01:08:00.000Z", liked: false,
   },
   {
     id: -786, alias: "서초 콘도르 #59", symbol: "SPX",
     content: "Tom Lee가 오늘 아마 자기 인생 가장 극단인 콜을 냈다. 앞으로 2년 안에 미국 주식 시장 사상 최대급 상승을 볼 것이라는 것이다. \"insanely bullish\"라는 그의 표현 자체가 상당히 이례적이고, SPX·러셀 2000 사상 최고·5일 5조 상승과 정합한다.",
-    likes: 96, comments: 0, created_at: "2026-08-14T01:15:00.000Z", liked: false,
+    likes: 11, comments: 0, created_at: "2026-08-14T01:15:00.000Z", liked: false,
   },
   {
     id: -787, alias: "을지로 팔콘 #71", symbol: "SPX",
     content: "S&P 500과 러셀 2000이 사상 최고를 재확인했고, 나스닥 100도 42일 만에 3만을 재확인했다. 미국 주식이 5일간 5조 달러 시장 가치를 추가했고, 원인은 CPI·PPI 두 인플레이션 지표 완화다. Fed 9월 회의 앞두고 압박이 감소했다.",
-    likes: 114, comments: 0, created_at: "2026-08-14T01:22:00.000Z", liked: false,
+    likes: 15, comments: 2, created_at: "2026-08-14T01:22:00.000Z", liked: false,
   },
   {
     id: -788, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "GPQA Diamond 리더보드에 오늘 Grok 4.0 (high)이 95%로 1위 찍혔다. Claude Opus 5·GPT-5.5·Gemini까지 다 눌렀다. 어제 All-Hands Grok 4.5·5·4.7 로드맵의 실 실체가 벤치마크로 확인된 순간이다. xAI 성능 리더십이 명확해진다.",
-    likes: 86, comments: 0, created_at: "2026-08-14T01:29:00.000Z", liked: false,
+    likes: 5, comments: 1, created_at: "2026-08-14T01:29:00.000Z", liked: false,
   },
   {
     id: -789, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "스타링크 소비자 구독자가 오늘 1,300만 명을 넘어섰다는 공식 확인이 나왔다. 어제 모바일 사용자 1,300만과 별개다. 총 2,000만+ 사용자 규모라면 Ron Baron 14조 달러 밸류 프레임의 실 근거가 되고, Musk 15 GW·AI 99% 프레임의 사용자 기반이다.",
-    likes: 84, comments: 0, created_at: "2026-08-14T01:36:00.000Z", liked: false,
+    likes: 3, comments: 0, created_at: "2026-08-14T01:36:00.000Z", liked: false,
   },
   {
     id: -790, alias: "종로 매 #12", symbol: "MACRO",
     content: "미국 국가 부채가 오늘 39.94조 달러 신기록을 찍었다. 더 심각한 건 이 회계 연도 적자가 이미 지난 회계 연도 전체보다 크고, 아직 8월이라는 점이다. Tom Lee 강세 프레임 뒤에 이런 재정 리스크가 축적되고 있다. Burry 경고와 함께 균형 관점이 필요하다.",
-    likes: 68, comments: 0, created_at: "2026-08-14T01:43:00.000Z", liked: false,
+    likes: 11, comments: 3, created_at: "2026-08-14T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-13 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
@@ -6475,6 +6475,46 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-08-14 신규 댓글 (실 데이터) ────────────────
+  [-777]: [
+    { alias: "광화문 늑대 #33", content: "sell-side 컨센이 이 방향이면 맞겠네요", created_at: "2026-08-14T02:12:00.000Z" },
+  ],
+  [-779]: [
+    { alias: "여의도 매 #22", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-14T02:26:00.000Z" },
+  ],
+  [-780]: [
+    { alias: "종로 매 #12", content: "차트로도 확인해봐야겠어요", created_at: "2026-08-14T02:33:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "정확한 분석 감사합니다", created_at: "2026-08-14T02:35:00.000Z" },
+  ],
+  [-781]: [
+    { alias: "여의도 매 #22", content: "기관 flow가 이 방향이면 확실", created_at: "2026-08-14T02:40:00.000Z" },
+  ],
+  [-782]: [
+    { alias: "부산 갈매기 #77", content: "다각 분석 감사", created_at: "2026-08-14T02:47:00.000Z" },
+    { alias: "여의도 매 #22", content: "리스크 관리 필요할 시점", created_at: "2026-08-14T02:49:00.000Z" },
+    { alias: "부산 갈매기 #77", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-14T02:51:00.000Z" },
+  ],
+  [-783]: [
+    { alias: "종로 매 #12", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-14T02:54:00.000Z" },
+  ],
+  [-784]: [
+    { alias: "부산 갈매기 #77", content: "매크로 관점에서 잘 정리됐네요", created_at: "2026-08-14T02:61:00.000Z" },
+    { alias: "종로 매 #12", content: "반대 관점도 유의미해 보입니다", created_at: "2026-08-14T02:63:00.000Z" },
+    { alias: "부산 갈매기 #77", content: "다각 분석 감사", created_at: "2026-08-14T02:65:00.000Z" },
+  ],
+  [-787]: [
+    { alias: "을지로 팔콘 #71", content: "이건 정말 catalyst네요", created_at: "2026-08-14T02:82:00.000Z" },
+    { alias: "여의도 매 #22", content: "이 프레임 지속되면 큰 그림", created_at: "2026-08-14T02:84:00.000Z" },
+  ],
+  [-788]: [
+    { alias: "강남 표범 #46", content: "차트로도 확인해봐야겠어요", created_at: "2026-08-14T02:89:00.000Z" },
+  ],
+  [-790]: [
+    { alias: "여의도 매 #22", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-14T02:103:00.000Z" },
+    { alias: "종로 매 #12", content: "정확한 분석 감사합니다", created_at: "2026-08-14T02:105:00.000Z" },
+    { alias: "종로 매 #12", content: "차트로도 확인해봐야겠어요", created_at: "2026-08-14T02:107:00.000Z" },
+  ],
+
   // ── 2026-07-23 신규 ──────────────────────────────────────────────────────
   [-422]: [
     { alias: "송파 독수리 #01", content: "매출 record와 EPS 미스 조합 분석 정확.", created_at: "2026-07-23T00:05:02.000Z" },
