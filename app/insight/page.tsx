@@ -195,36 +195,32 @@ export default async function InsightPage() {
           </div>
         </div>
 
-        {/* 오른쪽 — sticky 사이드바 */}
+        {/* 오른쪽 — sticky + 사이드바 자체 스크롤 (배너가 뷰포트보다 길어도 휠 동작) */}
         <aside
-          className="w-[340px] flex-shrink-0 sticky top-[57px] flex flex-col pt-5"
-          style={{ maxHeight: "calc(100vh - 57px)" }}
+          className="w-[340px] flex-shrink-0 sticky top-[57px] flex flex-col gap-3 pt-5 pb-10 overflow-y-auto no-scrollbar"
+          style={{ maxHeight: "calc(100vh - 57px)", overscrollBehavior: "contain" }}
         >
-          <div className="flex flex-col gap-3 flex-shrink-0">
-            <AdFitBanner />
-            <AdFitStrip />
-            {EduBanner}
-            {LearnBanner}
-            <TodaysGuideCard locale={locale} />
-            <EbookProductSection />
-          </div>
-          <div className="flex flex-col gap-5 overflow-y-auto no-scrollbar mt-5 pb-10 flex-1 min-h-0">
-            <AdFitBanner />
-            <section>
-              <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-                {t.books}
-              </h2>
-              <BookCarousel />
-            </section>
-            <AdFitStrip />
-            <section>
-              <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-                {t.youtube}
-              </h2>
-              <YoutubeChannels />
-            </section>
-            <AdFitBanner />
-          </div>
+          <AdFitBanner />
+          <AdFitStrip />
+          {EduBanner}
+          {LearnBanner}
+          <TodaysGuideCard locale={locale} />
+          <EbookProductSection />
+          <AdFitBanner />
+          <section>
+            <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+              {t.books}
+            </h2>
+            <BookCarousel />
+          </section>
+          <AdFitStrip />
+          <section>
+            <h2 className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
+              {t.youtube}
+            </h2>
+            <YoutubeChannels />
+          </section>
+          <AdFitBanner />
         </aside>
       </div>
     </div>
