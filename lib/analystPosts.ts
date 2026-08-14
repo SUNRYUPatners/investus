@@ -21,1431 +21,1431 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   {
     id: -776, alias: "여의도 매 #22", symbol: "SPCX",
     content: "\"6,418,547,315 · 48.4%.\" SEC가 Musk 개인 SPCX 지분을 공식 확인한 두 숫자다. 개인이 상장 대형 회사의 절반 가까이 소유하는 것은 세계에서 유일한 사례고, 어제 All-Hands 15 GW·AI 99% 프레임이 개인 자산 가치를 극대화하는 방향으로 맞춰져 있다.",
-    likes: 142, comments: 14, created_at: "2026-08-14T00:04:00.000Z", liked: false,
+    likes: 142, comments: 0, created_at: "2026-08-14T00:04:00.000Z", liked: false,
   },
   {
     id: -777, alias: "강남 표범 #46", symbol: "SPCX",
     content: "Dan Ives가 SPCX 2027년 시가총액 2조 달러 도달을 놀랍지 않을 것으로 봤다. 어제 MS 600달러 불 케이스에 이어 sell-side 강세가 다층으로 쌓이고 있다. 언론 노출 많은 Ives의 콜은 시장 심리에 큰 영향을 준다.",
-    likes: 118, comments: 10, created_at: "2026-08-14T00:12:00.000Z", liked: false,
+    likes: 118, comments: 0, created_at: "2026-08-14T00:12:00.000Z", liked: false,
   },
   {
     id: -778, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "Ron Baron이 오늘 흥미로운 프레임을 냈다. 자신의 SPCX 지분이 230억 달러 규모까지 확대됐고, Starlink 단독으로만 14조 달러 밸류에 도달할 수 있다는 것이다. 2017년부터 사서 지금까지 온 그가 이런 규모를 얘기하는 건 무게가 다르다.",
-    likes: 102, comments: 9, created_at: "2026-08-14T00:19:00.000Z", liked: false,
+    likes: 102, comments: 0, created_at: "2026-08-14T00:19:00.000Z", liked: false,
   },
   {
     id: -779, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Nevada 교통청이 Tesla에 자율주행 차량 네트워크 회사 허가를 내줬다. 최대 40대 로보택시 상업 서비스가 시작 가능해졌고, 예약·픽업 시스템도 승인됐다. MS가 며칠 전 요구한 로보택시 증명이 규제 승인이라는 형태로 오늘 나왔다.",
-    likes: 128, comments: 11, created_at: "2026-08-14T00:26:00.000Z", liked: false,
+    likes: 128, comments: 0, created_at: "2026-08-14T00:26:00.000Z", liked: false,
   },
   {
     id: -780, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "\"68,330 units · +191% YoY.\" Tesla 상하이 팹 7월 수출이 세 배로 뛰었다. 어제 일본 배송 네트워크 60% 확대에 이어 오늘 중국 수출 폭발까지 아시아 시장에서 Tesla가 다각으로 회복되고 있다. 자동차 판매 사이드도 살아있다는 얘기다.",
-    likes: 136, comments: 12, created_at: "2026-08-14T00:33:00.000Z", liked: false,
+    likes: 136, comments: 0, created_at: "2026-08-14T00:33:00.000Z", liked: false,
   },
   {
     id: -781, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "Austin 소방서 사진이 스티어링 휠 없는 Cybercab에 First Responder QR 스티커가 붙어 있다고 확인해 줬다. 어제 44대 중 43대 스티어링 없음 관측에 이어 응급 대응 시스템 통합까지 완료됐다. 무감독 상업 서비스 개시가 8월 안에 나올 수 있다.",
-    likes: 122, comments: 10, created_at: "2026-08-14T00:40:00.000Z", liked: false,
+    likes: 122, comments: 0, created_at: "2026-08-14T00:40:00.000Z", liked: false,
   },
   {
     id: -782, alias: "종로 매 #12", symbol: "SPCX",
     content: "Terafab이 공식적으로 착공됐다. 초기 168억 달러 투자로 시작하고, Joe Tegtmeyer가 드론으로 첫 촬영에 성공했다. 8/7 발표에서 시작해 규모 비교·태양광 부지 항공 사진을 거쳐 오늘 착공까지, 프레임이 실체가 되는 흐름이 완결됐다.",
-    likes: 108, comments: 9, created_at: "2026-08-14T00:47:00.000Z", liked: false,
+    likes: 108, comments: 0, created_at: "2026-08-14T00:47:00.000Z", liked: false,
   },
   {
     id: -783, alias: "여의도 매 #22", symbol: "SPCX",
     content: "NASA가 Nancy Grace Roman 우주 망원경을 SPCX 발사 하드웨어와 통합하기 시작했고, Falcon Heavy 발사가 원래 일정보다 9개월 앞당긴 8월 30일로 잡혔다. 정부 대형 과학 미션을 앞당길 정도로 SPCX 발사 신뢰성이 확립됐다.",
-    likes: 89, comments: 7, created_at: "2026-08-14T00:54:00.000Z", liked: false,
+    likes: 89, comments: 0, created_at: "2026-08-14T00:54:00.000Z", liked: false,
   },
   {
     id: -784, alias: "부산 갈매기 #77", symbol: "MACRO",
     content: "Anthropic이 10월에 2조 달러 밸류로 상장할 수 있다는 FT 보도다. 실현되면 역대 최대 주식 시장 상장 데뷔가 된다. 구글이 대규모 지분 보유 상태에서 이 정도 상장이면 구글 자산 가치가 급속 재평가되고, 어제 OpenAI 8,520억 프레임과도 겹친다.",
-    likes: 92, comments: 8, created_at: "2026-08-14T01:01:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-14T01:01:00.000Z", liked: false,
   },
   {
     id: -785, alias: "강남 표범 #46", symbol: "MACRO",
     content: "\"$500B AI Enron.\" Michael Burry의 오늘 경고 한 문장이다. Big Short 원조가 이 규모를 지목한다는 건 무겁게 봐야 한다. 오늘 Tom Lee 2년 사상 최대 상승 프레임과 정확히 반대 방향인데, 시장 심리가 극단으로 분열되는 국면이다.",
-    likes: 78, comments: 6, created_at: "2026-08-14T01:08:00.000Z", liked: false,
+    likes: 78, comments: 0, created_at: "2026-08-14T01:08:00.000Z", liked: false,
   },
   {
     id: -786, alias: "서초 콘도르 #59", symbol: "SPX",
     content: "Tom Lee가 오늘 아마 자기 인생 가장 극단인 콜을 냈다. 앞으로 2년 안에 미국 주식 시장 사상 최대급 상승을 볼 것이라는 것이다. \"insanely bullish\"라는 그의 표현 자체가 상당히 이례적이고, SPX·러셀 2000 사상 최고·5일 5조 상승과 정합한다.",
-    likes: 96, comments: 8, created_at: "2026-08-14T01:15:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-14T01:15:00.000Z", liked: false,
   },
   {
     id: -787, alias: "을지로 팔콘 #71", symbol: "SPX",
     content: "S&P 500과 러셀 2000이 사상 최고를 재확인했고, 나스닥 100도 42일 만에 3만을 재확인했다. 미국 주식이 5일간 5조 달러 시장 가치를 추가했고, 원인은 CPI·PPI 두 인플레이션 지표 완화다. Fed 9월 회의 앞두고 압박이 감소했다.",
-    likes: 114, comments: 9, created_at: "2026-08-14T01:22:00.000Z", liked: false,
+    likes: 114, comments: 0, created_at: "2026-08-14T01:22:00.000Z", liked: false,
   },
   {
     id: -788, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "GPQA Diamond 리더보드에 오늘 Grok 4.0 (high)이 95%로 1위 찍혔다. Claude Opus 5·GPT-5.5·Gemini까지 다 눌렀다. 어제 All-Hands Grok 4.5·5·4.7 로드맵의 실 실체가 벤치마크로 확인된 순간이다. xAI 성능 리더십이 명확해진다.",
-    likes: 86, comments: 7, created_at: "2026-08-14T01:29:00.000Z", liked: false,
+    likes: 86, comments: 0, created_at: "2026-08-14T01:29:00.000Z", liked: false,
   },
   {
     id: -789, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "스타링크 소비자 구독자가 오늘 1,300만 명을 넘어섰다는 공식 확인이 나왔다. 어제 모바일 사용자 1,300만과 별개다. 총 2,000만+ 사용자 규모라면 Ron Baron 14조 달러 밸류 프레임의 실 근거가 되고, Musk 15 GW·AI 99% 프레임의 사용자 기반이다.",
-    likes: 84, comments: 7, created_at: "2026-08-14T01:36:00.000Z", liked: false,
+    likes: 84, comments: 0, created_at: "2026-08-14T01:36:00.000Z", liked: false,
   },
   {
     id: -790, alias: "종로 매 #12", symbol: "MACRO",
     content: "미국 국가 부채가 오늘 39.94조 달러 신기록을 찍었다. 더 심각한 건 이 회계 연도 적자가 이미 지난 회계 연도 전체보다 크고, 아직 8월이라는 점이다. Tom Lee 강세 프레임 뒤에 이런 재정 리스크가 축적되고 있다. Burry 경고와 함께 균형 관점이 필요하다.",
-    likes: 68, comments: 6, created_at: "2026-08-14T01:43:00.000Z", liked: false,
+    likes: 68, comments: 0, created_at: "2026-08-14T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-13 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -761, alias: "여의도 매 #22", symbol: "SPCX",
     content: "\"15 GW by end of 2027.\" Musk가 전 직원 회의에서 이 숫자를 못박았다. 어제 100 GW 프레임의 세분화된 마일스톤이고, AI 매출은 다음 달(9월)부터 다른 모든 SpaceX 매출을 초과한다는 예고까지 붙었다. 로켓·통신 회사가 AI 회사로 재정의된 결정적 순간이다.",
-    likes: 138, comments: 13, created_at: "2026-08-13T00:04:00.000Z", liked: false,
+    likes: 138, comments: 0, created_at: "2026-08-13T00:04:00.000Z", liked: false,
   },
   {
     id: -762, alias: "강남 표범 #46", symbol: "SPCX",
     content: "4-5년 안에 AI가 SpaceX 가치의 99% 이상을 차지한다는 프레임을 Musk가 오늘 처음 명시했다. 학습은 지구에 유지하고 일상 추론은 우주 데이터센터로 옮긴다는 구도인데, 위성이 통신 인프라에서 AI 추론 인프라로 진화한다는 얘기다. Brett Winton의 75% IRR 계산과 정합한다.",
-    likes: 128, comments: 11, created_at: "2026-08-13T00:12:00.000Z", liked: false,
+    likes: 128, comments: 0, created_at: "2026-08-13T00:12:00.000Z", liked: false,
   },
   {
     id: -763, alias: "서초 콘도르 #59", symbol: "GOOGL",
     content: "\"$900M · 105x · 11 years.\" 세 숫자가 구글 SpaceX 지분의 전부를 요약한다. 3,910억 달러 공개 포트폴리오의 95%가 SPCX 하나이고, 이 단일 종목 수익이 구글의 2013년 이후 191개 공개 신고 총합 8,150억 달러를 넘어선다. 구글은 광고 회사가 아니라 사실상 테크 헤지 펀드에 가깝다.",
-    likes: 156, comments: 15, created_at: "2026-08-13T00:19:00.000Z", liked: false,
+    likes: 156, comments: 0, created_at: "2026-08-13T00:19:00.000Z", liked: false,
   },
   {
     id: -764, alias: "을지로 팔콘 #71", symbol: "GOOGL",
     content: "구글 신고 지분이 995억 달러로 24.7배 급증했다. 이유는 하나다. SPCX 상장으로 942억 달러 지분이 신고 대상에 편입됐다. 다음 달 Anthropic 상장 이후에는 이 숫자가 또 확장된다. 구글 밸류에이션에 반영된 적 없던 자산이 이제 시장에 보이기 시작한다.",
-    likes: 92, comments: 8, created_at: "2026-08-13T00:26:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-13T00:26:00.000Z", liked: false,
   },
   {
     id: -765, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "SPCX가 5일 만에 +40% 급등해서 150달러 수준을 재확인하는 중이다. Musk All-Hands 이후 시세 반응이 즉시 나왔고, 8/8 락업 unlock 이후 프레임과 반대 방향으로 시세가 폭발했다. 어제 MS 600달러 불 케이스가 기관 배경이다.",
-    likes: 118, comments: 10, created_at: "2026-08-13T00:33:00.000Z", liked: false,
+    likes: 118, comments: 0, created_at: "2026-08-13T00:33:00.000Z", liked: false,
   },
   {
     id: -766, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "Barchart가 지목한 Bollinger Band 2023년 10월 이후 최저 폭·주간 볼륨 사상 최대는 큰 방향성 이동이 임박했다는 기술적 신호였다. 오늘 +40% 상승이 그 이동의 시작이고, 상방으로 확정됐다. 다음 마일스톤은 MS 기본 300달러다.",
-    likes: 84, comments: 7, created_at: "2026-08-13T00:40:00.000Z", liked: false,
+    likes: 84, comments: 0, created_at: "2026-08-13T00:40:00.000Z", liked: false,
   },
   {
     id: -767, alias: "종로 매 #12", symbol: "NVDA",
     content: "NVDA 시가총액이 오늘 이른 거래에서만 7,000억 달러가 늘어났다. 개별 종목 하루 상승 사상 최대급이다. 어제 SPCX와의 2,600억 달러 GPU 딜에 시장이 이 정도로 강력히 반응한 것이고, AI 사이클 자금이 대량으로 재유입되는 신호다.",
-    likes: 145, comments: 13, created_at: "2026-08-13T00:47:00.000Z", liked: false,
+    likes: 145, comments: 0, created_at: "2026-08-13T00:47:00.000Z", liked: false,
   },
   {
     id: -768, alias: "여의도 매 #22", symbol: "MACRO",
     content: "OpenAI가 8,520억 달러 밸류로 상장 준비 중이고 1조 달러 상회 가능성이 있다. 하지만 Sam Altman의 2018년부터 오랜 부관인 COO Brad Lightcap이 사임하고 시니어 임원 이탈이 몇 달째 계속되고 있다. 상장은 다가오는데 조직 안정성 우려가 커진다.",
-    likes: 76, comments: 6, created_at: "2026-08-13T00:54:00.000Z", liked: false,
+    likes: 76, comments: 0, created_at: "2026-08-13T00:54:00.000Z", liked: false,
   },
   {
     id: -769, alias: "부산 갈매기 #77", symbol: "SPCX",
     content: "스타링크 모바일 사용자가 공식적으로 1,300만 명을 넘어섰다. 8/8 T-Mobile CEO가 위협 과장이라 폄하한 뒤 며칠 만에 실 사용자 규모로 반박된 셈이다. 어제 Musk 통합 계정 프레임의 실 기반이 오늘 확인됐다.",
-    likes: 87, comments: 7, created_at: "2026-08-13T00:33:00.001Z", liked: false,
+    likes: 87, comments: 0, created_at: "2026-08-13T00:33:00.001Z", liked: false,
   },
   {
     id: -770, alias: "강남 표범 #46", symbol: "TSLA",
     content: "Cybercab 사진 44대 중 43대에 스티어링 휠이 없다. Joe Tegtmeyer가 관측한 가장 큰 집단이다. Waymo가 Jaguar를 개조해서 스티어링을 남긴 것과 근본적으로 다른 설계이고, 어제 MS의 로보택시 증명 요구에 대한 물리적 대답이 오늘 나왔다.",
-    likes: 132, comments: 12, created_at: "2026-08-13T01:08:00.000Z", liked: false,
+    likes: 132, comments: 0, created_at: "2026-08-13T01:08:00.000Z", liked: false,
   },
   {
     id: -771, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "Brett Winton의 계산이 흥미롭다. 100 KW 컴퓨트를 실은 2톤 위성이 400만 달러에 만들 수 있고, AI 모델을 함께 배치하면 연 매출 350만~1,200만 달러가 나오고 payback이 1년 이하로 떨어진다. 75%+ IRR이면 인프라 사업 중에서도 이례적이다. Musk의 우주 추론 프레임의 실 사업 모델이다.",
-    likes: 68, comments: 5, created_at: "2026-08-13T01:15:00.000Z", liked: false,
+    likes: 68, comments: 0, created_at: "2026-08-13T01:15:00.000Z", liked: false,
   },
   {
     id: -772, alias: "을지로 팔콘 #71", symbol: "MACRO",
     content: "SEC가 미국 주식을 24시간 블록체인에서 거래할 수 있도록 허용할 준비를 하고 있다. 100년 이상 유지된 뉴욕 증시 시간 제약이 없어지면 유동성 프리미엄이 미국으로 집중되고, 크립토와 전통 금융의 통합이 급속히 진행된다. 시장 구조의 근본 변화 신호다.",
-    likes: 82, comments: 7, created_at: "2026-08-13T01:22:00.000Z", liked: false,
+    likes: 82, comments: 0, created_at: "2026-08-13T01:22:00.000Z", liked: false,
   },
   {
     id: -773, alias: "광화문 늑대 #33", symbol: "MACRO",
     content: "Trump가 중간 선거를 앞두고 자본 이득세 감세를 검토 중이라는 Bloomberg 보도다. 감세가 실행되면 매도 유인이 줄어들고 재투자가 촉진되어 시장 상승에 강력한 지지선이 된다. 오늘 SEC 24/7·NVDA +7,000억·SPCX +40%와 결합하면 정책·시세·프레임 3중 강세다.",
-    likes: 74, comments: 6, created_at: "2026-08-13T01:29:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-13T01:29:00.000Z", liked: false,
   },
   {
     id: -774, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "\"You have my word.\" Musk가 오늘 SpaceX 전 직원에게 개인 약속을 했다. 누구든 미래에 달이나 화성에 가고 싶으면 갈 수 있다는 것이다. OpenAI의 COO 사임·경영진 대량 이탈과 정확히 대비되는 인재 유치 프레임이다. 세계 최고 엔지니어가 어디로 향할지 명확해진다.",
-    likes: 108, comments: 9, created_at: "2026-08-13T01:36:00.000Z", liked: false,
+    likes: 108, comments: 0, created_at: "2026-08-13T01:36:00.000Z", liked: false,
   },
   {
     id: -775, alias: "종로 매 #12", symbol: "SPCX",
     content: "Grok 로드맵도 오늘 명확해졌다. 4.5 출시 완료·5 곧 등장·4.7은 광범위 배포 예정이고 \"정말 좋을 것\"이라는 표현이 붙었다. 무엇보다 SpaceX 지식 전체로 학습된다는 프레임이 다른 AI와 근본적으로 다른 차별화 축이다. xAI Grok Bot·Cursor 인수와 결합하면 SPCX가 AI 인프라·모델·에이전트 통합 사업자로 완결된다.",
-    likes: 92, comments: 8, created_at: "2026-08-13T01:43:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-13T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-12 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -746, alias: "여의도 매 #22", symbol: "NVDA",
     content: "$260B. 이 숫자가 컨소시엄이 아니라 NVDA-SPCX 개별 딜 하나라는 게 핵심이다. 어제 6개 금융사 $500B 컨소시엄과 별개로 이 규모라면, SPCX의 100 GW 확장에 필요한 GPU가 향후 10년 확보됐다는 얘기다. Q1 2027 첫 배치.",
-    likes: 124, comments: 12, created_at: "2026-08-12T00:04:00.000Z", liked: false,
+    likes: 124, comments: 0, created_at: "2026-08-12T00:04:00.000Z", liked: false,
   },
   {
     id: -747, alias: "강남 표범 #46", symbol: "SPCX",
     content: "\"1.4 GW today · 100 GW by end of 2027.\" Musk가 오늘 이 두 숫자를 붙여 놓았다. 70배 확장 로드맵이고, 이걸 온라인으로 만들면 매출이 연 $300B~500B라는 프레임이다. 통신 회사가 아니라 AI 컴퓨트 회사로 재정의된다.",
-    likes: 108, comments: 9, created_at: "2026-08-12T00:12:00.000Z", liked: false,
+    likes: 108, comments: 0, created_at: "2026-08-12T00:12:00.000Z", liked: false,
   },
   {
     id: -748, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "어제 8/11 SPCX Cursor $60B 인수 뉴스가 하루 만에 MS $600 불 케이스·Top Pick 상향으로 실체화됐다. Cursor는 이미 포춘 500의 84%와 5만 개 기업 고객을 확보한 상태다. SPCX 소속되면 매출 확장 속도가 극단으로 빨라진다.",
-    likes: 96, comments: 8, created_at: "2026-08-12T00:19:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-12T00:19:00.000Z", liked: false,
   },
   {
     id: -749, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "2029년 100대 → 2035년 100만 대. 6년에 1만배. Boloor의 Optimus 로드맵이 이 정도 극단이라면, Tesla 매출 프레임 자체가 자동차 회사에서 로봇·인프라 회사로 옮겨간다. Wood 마진 80-90% 프레임의 근거도 여기에 있다.",
-    likes: 87, comments: 7, created_at: "2026-08-12T00:26:00.000Z", liked: false,
+    likes: 87, comments: 0, created_at: "2026-08-12T00:26:00.000Z", liked: false,
   },
   {
     id: -750, alias: "광화문 늑대 #33", symbol: "META",
     content: "재무부 장관이 오픈웨이트 AI를 공식 지지 성명으로 뒷받침한 건 처음이다. Meta의 Muse Glimmer 30B 공개가 그 트리거였다. 중국 DeepSeek·Qwen이 세계 AI 기반이 되어가는 상황에서 미국 정부가 이례적으로 오픈웨이트로 대응하는 신호다.",
-    likes: 71, comments: 6, created_at: "2026-08-12T00:33:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-12T00:33:00.000Z", liked: false,
   },
   {
     id: -751, alias: "마포 올빼미 #24", symbol: "NVDA",
     content: "하드웨어 회사가 오픈 소프트웨어 모델까지 냈다. Nemotron 3.5 Lightning은 Opus 4.8 대비 1/3 비용에 유사한 정확도다. Switchyard 라우터는 단순 작업을 작은 모델로, 복잡 작업을 큰 모델로 자동 배분한다. 두 종류 모두 NVDA GPU가 필요하다.",
-    likes: 68, comments: 5, created_at: "2026-08-12T00:40:00.000Z", liked: false,
+    likes: 68, comments: 0, created_at: "2026-08-12T00:40:00.000Z", liked: false,
   },
   {
     id: -752, alias: "종로 매 #12", symbol: "TSLA",
     content: "어제 Musk가 \"미래에 모든 차량 Starlink\" 발언한 게 하루 만에 실 차량으로 실체화됐다. Cybercab 첫 Starlink 통합 정식 출시. 발언에서 실 출시까지 하루 걸리는 회사는 이 세상에 하나뿐이다. Robotaxi 상용의 통신 인프라가 완성된다.",
-    likes: 118, comments: 10, created_at: "2026-08-12T00:47:00.000Z", liked: false,
+    likes: 118, comments: 0, created_at: "2026-08-12T00:47:00.000Z", liked: false,
   },
   {
     id: -753, alias: "여의도 매 #22", symbol: "TSLA",
     content: "8/7 발표 시점엔 규모만 있었던 Fort Bend County 태양광 부지가 오늘 항공 사진으로 3,000 에이커 실체 확인됐다. Terafab (100M sqft)과 이 태양광 공장이 세트로 텍사스를 미국 AI·에너지·chip 인프라의 중심지로 만드는 그림이다.",
-    likes: 74, comments: 6, created_at: "2026-08-12T00:54:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-12T00:54:00.000Z", liked: false,
   },
   {
     id: -754, alias: "부산 갈매기 #77", symbol: "GOOGL",
     content: "Gemini 월 18억 사용자. ChatGPT (약 5-7억)의 3배 규모다. 어제 GOOGL 현금 사상 최대 $242.5B·순현금 $144B 프레임과 결합하면, 재무·매출·사용자 3중 강세가 확인된다. Buffett $10B 신규 투자의 실 근거이기도 하다.",
-    likes: 132, comments: 12, created_at: "2026-08-12T01:01:00.000Z", liked: false,
+    likes: 132, comments: 0, created_at: "2026-08-12T01:01:00.000Z", liked: false,
   },
   {
     id: -755, alias: "강남 표범 #46", symbol: "MACRO",
     content: "Anthropic이 다음 달 상장한다면 OpenAI 이후 첫 대형 AI 공모다. 구글이 이미 대규모 투자한 상태라 상장 시 지분 가치가 실체화되고, SPCX·xAI 등 비상장 AI 밸류에이션의 기준점이 된다. AI 상장 사이클의 개시 신호일 수 있다.",
-    likes: 89, comments: 7, created_at: "2026-08-12T01:08:00.000Z", liked: false,
+    likes: 89, comments: 0, created_at: "2026-08-12T01:08:00.000Z", liked: false,
   },
   {
     id: -756, alias: "서초 콘도르 #59", symbol: "SPX",
     content: "S&P 500 이익 2026년 +32% 성장 예상. 연초 예상치 +15%의 두 배다. 이 정도 성장이 경기 침체 회복이 아닌 순수 성장 국면에서 나온 건 사상 처음이다. AI 사이클 하나가 이 격차를 만들고 있다.",
-    likes: 63, comments: 5, created_at: "2026-08-12T01:15:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-12T01:15:00.000Z", liked: false,
   },
   {
     id: -757, alias: "을지로 팔콘 #71", symbol: "MACRO",
     content: "Shiller CAPE가 역사상 2번째 최고 밸류에이션에 도달했다. 1929 폭락 직전보다 훨씬 높고, 오직 2000 닷컴 버블만이 이보다 높았다. 오늘 Bilello의 이익 성장 +32% 프레임과 정면 대립하는 신호다. 이익이 이 밸류에이션을 정당화하는지가 관건이다.",
-    likes: 57, comments: 4, created_at: "2026-08-12T01:22:00.000Z", liked: false,
+    likes: 57, comments: 0, created_at: "2026-08-12T01:22:00.000Z", liked: false,
   },
   {
     id: -758, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "달 기지 그림에서 X Trace가 지목한 조합은 SPCX + Tesla였다. Starship이 100톤을 달까지 배송하고, Optimus가 화물 하역과 위험 건설을 인간 이전에 처리하며, Tesla 태양광·배터리가 달 에너지 시스템을 담당한다. 위성 통신을 넘어 행성 인프라 사업으로 재정의된다.",
-    likes: 78, comments: 6, created_at: "2026-08-12T01:29:00.000Z", liked: false,
+    likes: 78, comments: 0, created_at: "2026-08-12T01:29:00.000Z", liked: false,
   },
   {
     id: -759, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "같은 모건스탠리가 오늘 SPCX엔 $600 불 케이스·Top Pick을 상향해줬는데, TSLA한테는 로보택시 확장을 증명하라고 요구했다. 상반된 입장이 흥미롭다. 프레임은 강력하지만 실 상용 서비스 데이터가 아직 부족하다는 지적으로 봐야 한다.",
-    likes: 92, comments: 8, created_at: "2026-08-12T01:36:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-12T01:36:00.000Z", liked: false,
   },
   {
     id: -760, alias: "종로 매 #12", symbol: "SPCX",
     content: "xAI가 Grok Bot이라는 클라우드 자율 에이전트 팀을 출시했다. Colossus GPU 클러스터에서 2분 20초 안에 복잡 다단계 작업을 처리한다. samuel의 AI backbone 프레임·Musk의 100 GW·NVDA $260B GPU 딜의 실 사용 사례가 오늘 첫 실체로 등장한 셈이다.",
-    likes: 84, comments: 7, created_at: "2026-08-12T01:43:00.000Z", liked: false,
+    likes: 84, comments: 0, created_at: "2026-08-12T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-11 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -731, alias: "여의도 매 #22", symbol: "NVDA",
     content: "$500B. 이 숫자가 그냥 나온 게 아니라 세계 최대 6개 금융사(Apollo·Blackstone·BlackRock·Brookfield·Goldman·KKR)가 컨소시엄으로 뭉쳐서 만든 거다. 8/5 오라클 CDS 사상 최고 우려에 대한 정확한 답변이다. FT 보도.",
-    likes: 118, comments: 11, created_at: "2026-08-11T00:04:00.000Z", liked: false,
+    likes: 118, comments: 0, created_at: "2026-08-11T00:04:00.000Z", liked: false,
   },
   {
     id: -732, alias: "강남 표범 #46", symbol: "SPCX",
     content: "루프트한자 A320neo에 스타링크 설치된 사진이 오늘 처음 공개됐다. 계약 뉴스가 아니라 실 설치·8월 18일부터 승객이 진짜 쓴다는 얘기다. IAG·Bluebird에 이어 프리미엄 유럽 항공사 첫 도입이라는 게 상징적이다.",
-    likes: 84, comments: 7, created_at: "2026-08-11T00:12:00.000Z", liked: false,
+    likes: 84, comments: 0, created_at: "2026-08-11T00:12:00.000Z", liked: false,
   },
   {
     id: -733, alias: "서초 콘도르 #59", symbol: "MACRO",
     content: "TSMC 7월 매출 $14.5B, 전년 대비 +45% 급증. AI 반도체 사이클이 여전 강력하다는 실체다. NVIDIA·Apple·AMD 주문이 여전 안정적이라는 뜻이고, 오늘 NVDA $500B 컨소시엄과 결합하면 AI 인프라 지속성 프레임이 다층 확인된다.",
-    likes: 92, comments: 8, created_at: "2026-08-11T00:19:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-11T00:19:00.000Z", liked: false,
   },
   {
     id: -734, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Joe Tegtmeyer가 오늘 처음 Cybercab 로고 부착 차량을 Giga Texas 서쪽 라인에서 대량 관찰했다. 로고 없는 프로토타입에서 로고 부착 대량 라인업으로 넘어간 순간이다. 8/6 카메라 $500M·8/4 Ops 6개 도시 채용과 정확히 정합.",
-    likes: 105, comments: 9, created_at: "2026-08-11T00:26:00.000Z", liked: false,
+    likes: 105, comments: 0, created_at: "2026-08-11T00:26:00.000Z", liked: false,
   },
   {
     id: -735, alias: "광화문 늑대 #33", symbol: "GOOGL",
     content: "\"Cash: $242.5B · Debt: $98.3B · Net cash: $144B.\" Qualstom이 정리한 세 줄이 구글 재무 강세 전체를 요약한다. 어제 $25B 채권 발행하고도 이 수준. AI CAPEX·자사주 매입·M&A 어디든 대규모로 갈 수 있는 여력이다.",
-    likes: 77, comments: 6, created_at: "2026-08-11T00:33:00.000Z", liked: false,
+    likes: 77, comments: 0, created_at: "2026-08-11T00:33:00.000Z", liked: false,
   },
   {
     id: -736, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "3일 전 T-Mobile CEO가 '스타링크 위협 과장'이라 폄하했는데, Musk가 오늘 정확히 반대 프레임을 냈다. '스타링크 계정 하나로 집·사무실·카페 어디서든 사용.' 통신사 서비스와 동등한 구조로 재정의됐다. 실 매출 프레임의 근거다.",
-    likes: 88, comments: 7, created_at: "2026-08-11T00:40:00.000Z", liked: false,
+    likes: 88, comments: 0, created_at: "2026-08-11T00:40:00.000Z", liked: false,
   },
   {
     id: -737, alias: "종로 매 #12", symbol: "SPCX",
     content: "AI 에이전트가 앞으로 5년 안에 수백억~조 단위로 등장하면, 이들에게 필요한 인터넷은 인간이 쓰는 것을 훨씬 넘는다. samuel의 논리는 이 규모를 물리적으로 감당할 수 있는 회사가 Starship을 가진 SPCX뿐이라는 것이다. 스타링크가 AI 시대의 척추가 된다는 프레임이다.",
-    likes: 71, comments: 6, created_at: "2026-08-11T00:47:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-11T00:47:00.000Z", liked: false,
   },
   {
     id: -738, alias: "여의도 매 #22", symbol: "SPCX",
     content: "2-8 Pbps 현재 → V3 10만 개면 10 Pbps → V3+ 20만 위성이면 100 Pbps. Aaron Barrett의 계산이고 Musk가 즉시 재확인했다. 20억 명이 아직 인터넷 접근 없는 세계에서, 100배 대역폭이 의미하는 매출은 계산 자체가 어렵다.",
-    likes: 82, comments: 7, created_at: "2026-08-11T00:54:00.000Z", liked: false,
+    likes: 82, comments: 0, created_at: "2026-08-11T00:54:00.000Z", liked: false,
   },
   {
     id: -739, alias: "부산 갈매기 #77", symbol: "SPCX",
     content: "SPCX가 AI 코딩 스타트업 Cursor를 $60B에 인수한다는 보도가 다음 주 마감이라는 게 진짜라면, 이건 SPCX 역대 최대 딜이다. 위성·chip·quantum에 이어 AI 소프트웨어까지 축이 완결된다. Tesla·xAI·SPCX 내부 개발이 극단 가속된다는 얘기다.",
-    likes: 98, comments: 8, created_at: "2026-08-11T01:01:00.000Z", liked: false,
+    likes: 98, comments: 0, created_at: "2026-08-11T01:01:00.000Z", liked: false,
   },
   {
     id: -740, alias: "강남 표범 #46", symbol: "JPY",
     content: "일본 2년 국채 1.614%. 21년 만에 최고. 엔 개입과 유가 하락에도 수익률이 계속 오른다는 건 시장이 9월 BOJ 인상을 강력히 베팅한다는 얘기다. 2024년 8월 캐리 트레이드 해체 사례 기억하면 미국 성장주는 취약해질 수 있다.",
-    likes: 63, comments: 5, created_at: "2026-08-11T01:08:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-11T01:08:00.000Z", liked: false,
   },
   {
     id: -741, alias: "서초 콘도르 #59", symbol: "SPX",
     content: "나스닥 100의 70%+ 종목이 200일 이평선 위에 있다. 1년 이상 만의 최대 breadth다. Mag 7만 오르는 편중 시장이 아니라 진짜 브로드 강세라는 뜻이다. 조정 리스크는 상대적으로 낮은 국면이다.",
-    likes: 56, comments: 4, created_at: "2026-08-11T01:15:00.000Z", liked: false,
+    likes: 56, comments: 0, created_at: "2026-08-11T01:15:00.000Z", liked: false,
   },
   {
     id: -742, alias: "을지로 팔콘 #71", symbol: "MACRO",
     content: "Boring Company가 $2B를 조성했다는 Phil Trubey 관측이 흥미롭다. 사업 개발 인력 대량 채용 = 세계 도시에 Loop 사업을 청구할 준비 단계라는 얘기다. SPCX·Tesla·xAI·Neuralink에 이어 Boring도 성장 축으로 올라오는 그림이다.",
-    likes: 48, comments: 4, created_at: "2026-08-11T01:22:00.000Z", liked: false,
+    likes: 48, comments: 0, created_at: "2026-08-11T01:22:00.000Z", liked: false,
   },
   {
     id: -743, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "Tesla 일본 배송 네트워크 60% 확대. 요코하마·고베·간토·나고야 4곳이 8월-연말 순차로 오픈한다. 6월 4,000대·연 12,000대 배송. 유럽(프랑스 +86%)·중국(7월 93K)에 이어 아시아 다각 회복이 실체화되는 국면이다.",
-    likes: 68, comments: 5, created_at: "2026-08-11T01:29:00.000Z", liked: false,
+    likes: 68, comments: 0, created_at: "2026-08-11T01:29:00.000Z", liked: false,
   },
   {
     id: -744, alias: "마포 올빼미 #24", symbol: "MSFT",
     content: "MSFT가 Maia 300을 9월에 2백만 개 생산 확대한다는 Shay Boloor 정리다. 오늘 NVDA $500B 컨소시엄과 정확 반대 방향이다. 하이퍼스케일러가 NVIDIA 의존 축소하고 자체 칩으로 옮겨가는 흐름이 GOOGL TPU·AMZN Trainium·META MTIA와 함께 명확해진다.",
-    likes: 74, comments: 6, created_at: "2026-08-11T01:36:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-11T01:36:00.000Z", liked: false,
   },
   {
     id: -745, alias: "종로 매 #12", symbol: "TSLA",
     content: "Tesla 앱 월간 사용자 1,000만 명 돌파에다, Musk가 '미래에 모든 차량에 스타링크 탑재' 발언까지 오늘 겹쳤다. 자동차 회사가 아니라 소프트웨어·서비스 회사로 확장된다는 시그널이고, SPCX 시너지가 극대화된다는 뜻이다. Wood 마진 80-90% 프레임의 실 근거다.",
-    likes: 112, comments: 10, created_at: "2026-08-11T01:43:00.000Z", liked: false,
+    likes: 112, comments: 0, created_at: "2026-08-11T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-10 신규 (짧고 15개 완전 다른 톤) ──────────────────────
   {
     id: -716, alias: "여의도 매 #22", symbol: "SPCX",
     content: "Pentagon 10배·Apple Park 55배. Terafab 100M sqft가 이런 규모라는 게 사실 실감이 잘 안 난다. 8/8 Musk가 'most valuable building'이라 프레임했던 게 통계로 확인된 셈. World of Statistics.",
-    likes: 92, comments: 8, created_at: "2026-08-10T00:04:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-10T00:04:00.000Z", liked: false,
   },
   {
     id: -717, alias: "강남 표범 #46", symbol: "SPCX",
     content: "Musk는 100X·200X를 얘기하고, Wood는 50X ASTONISHING이라 하고, ARK 원래 예상은 20X였다. 표현은 다 다르지만 방향은 하나다. V2 대비 극단 상향이 시장 공식 프레임이 됐다.",
-    likes: 106, comments: 9, created_at: "2026-08-10T00:12:00.000Z", liked: false,
+    likes: 106, comments: 0, created_at: "2026-08-10T00:12:00.000Z", liked: false,
   },
   {
     id: -718, alias: "서초 콘도르 #59", symbol: "BRK",
     content: "14분기 동안 조용하던 Buffett가 움직였다. $357B 현금 pile 배치가 시작됐고, GOOGL에 $10B mega 신 포지션이 들어갔다. Value 대명사가 tech를 산다는 것 자체가 시장 강세 시그널이다.",
-    likes: 88, comments: 7, created_at: "2026-08-10T00:19:00.000Z", liked: false,
+    likes: 88, comments: 0, created_at: "2026-08-10T00:19:00.000Z", liked: false,
   },
   {
     id: -719, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "22시간 전만 해도 30% 남아있던 California MyFirstEV 자금이 오늘 0%가 됐다. 4일. $3,500 rebate가 이렇게 빨리 소진되는 건 Tesla가 CA EV 시장에서 여전 압도한다는 실 증거다.",
-    likes: 71, comments: 6, created_at: "2026-08-10T00:26:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-10T00:26:00.000Z", liked: false,
   },
   {
     id: -720, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "\"Extremely mission-oriented. This is the only place where we're going to go to Mars.\" — Peter Thiel의 두 문장이 SPCX 강세론 전체를 요약한다. 8/8 Gerber 'Only SPCX'와도 정확히 정합한다.",
-    likes: 83, comments: 7, created_at: "2026-08-10T00:33:00.000Z", liked: false,
+    likes: 83, comments: 0, created_at: "2026-08-10T00:33:00.000Z", liked: false,
   },
   {
     id: -721, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "8/1 '99.99% 컴퓨트 우주로' → 8/3 '12-24개월 +TSLA' → 8/7 '$1T 2030' → 8/8 '$100B ARR' → 오늘 'Starlink만 $1T/yr'. 열흘째 Musk 프레임이 커지고만 있다. 어디서 실체와 만날지가 관건.",
-    likes: 96, comments: 8, created_at: "2026-08-10T00:40:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-10T00:40:00.000Z", liked: false,
   },
   {
     id: -722, alias: "종로 매 #12", symbol: "TSLA",
     content: "Houston lot에 Model Y Robotaxi와 Cybercab army가 서 있다. 7/28 133대에서 시작해 오늘 army 규모로 커졌다. Robotaxi 상용 서비스가 진짜 코앞이라는 얘기다.",
-    likes: 66, comments: 5, created_at: "2026-08-10T00:47:00.000Z", liked: false,
+    likes: 66, comments: 0, created_at: "2026-08-10T00:47:00.000Z", liked: false,
   },
   {
     id: -723, alias: "여의도 매 #22", symbol: "SPX",
     content: "Winton이 통념을 뒤집었다. Open weight가 frontier AI 랩 매출을 뺏을 거라는 예상 대신, open weight로 공격받은 enterprise가 오히려 frontier로 몰린다는 얘기다. 매출 지속 논거로 유효하다.",
-    likes: 55, comments: 4, created_at: "2026-08-10T00:54:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-08-10T00:54:00.000Z", liked: false,
   },
   {
     id: -724, alias: "부산 갈매기 #77", symbol: "SPCX",
     content: "$1T 2030이 cumulative(누적)인지 annual(연 매출)인지 헷갈렸는데, Musk가 명시 재확인했다. Annual이다. Aaron Barrett 계산으로는 ARR 2029/2030에 ~$300B+ 필요. 매년 100%+ 성장 프레임이다.",
-    likes: 74, comments: 6, created_at: "2026-08-10T01:01:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-10T01:01:00.000Z", liked: false,
   },
   {
     id: -725, alias: "강남 표범 #46", symbol: "SPCX",
     content: "9월 13-15에 한자리에 모이는 라인업이 살벌하다. Shotwell (SPCX) + Jensen Huang (NVDA) + Satya Nadella (MSFT) + Jared Isaacman (NASA). AI·우주 축 핵심 4인이면 9월 catalyst가 나올 확률이 높다.",
-    likes: 58, comments: 5, created_at: "2026-08-10T01:08:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-08-10T01:08:00.000Z", liked: false,
   },
   {
     id: -726, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "\"People really don't have a clue.\" AI 발전 속도가 실리콘 밸리도 상상 못 한다는 Musk의 이 한 마디. 8/8에는 10-20% 종말 유지, 오늘은 속도 상향 인정. 리스크와 확장이 함께 간다는 프레임이다.",
-    likes: 47, comments: 4, created_at: "2026-08-10T01:15:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-08-10T01:15:00.000Z", liked: false,
   },
   {
     id: -727, alias: "을지로 팔콘 #71", symbol: "SPCX",
     content: "전통 cell tower 하나에 $100K-1M. Starlink small stations 하나에 $1-10K. 이 격차가 통신사 CAPEX 프레임이 왜 무너지는지 설명한다. EchoStar $19.68B spectrum 인수가 지상 rights까지 커버했다.",
-    likes: 63, comments: 5, created_at: "2026-08-10T01:22:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-10T01:22:00.000Z", liked: false,
   },
   {
     id: -728, alias: "광화문 늑대 #33", symbol: "GOOGL",
     content: "Google이 2026 exit 시 하루 $1.3B profit을 낸다면 연으로 환산해 $470B 페이스라는 Boloor의 관측이다. 8/6 AAPL 초과·8/7 $25B 채권·8/8 13-F·오늘 BRK $10B 신 투자까지 정합한다.",
-    likes: 78, comments: 6, created_at: "2026-08-10T01:29:00.000Z", liked: false,
+    likes: 78, comments: 0, created_at: "2026-08-10T01:29:00.000Z", liked: false,
   },
   {
     id: -729, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "락업이 rolling으로 풀린다. 8/21·9/25·10/8·11/8·12/8까지 매월 5%씩 유통되고, 12월까지 25%가 시장에 나온다. 진짜 이벤트는 Elon June 2027 46%. 이때 매도 여부가 시세 최대 변수다.",
-    likes: 51, comments: 4, created_at: "2026-08-10T01:36:00.000Z", liked: false,
+    likes: 51, comments: 0, created_at: "2026-08-10T01:36:00.000Z", liked: false,
   },
   {
     id: -730, alias: "종로 매 #12", symbol: "SPCX",
     content: "하루 헤드라인이 Terafab 규모·V3 100X·BRK $357B·MyFirstEV·Thiel·Musk Starlink $1T·락업 세부·Winton·Boloor까지 이렇게 쏟아진다면, 이건 프레임이 아니라 시장이 실제로 움직이는 중이다.",
-    likes: 89, comments: 7, created_at: "2026-08-10T01:43:00.000Z", liked: false,
+    likes: 89, comments: 0, created_at: "2026-08-10T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-08 신규 (짧고 15개 완전 다른 톤) ──────────────────────
   {
     id: -701, alias: "여의도 매 #22", symbol: "SPCX",
     content: "락업 첫 unlock 실행일. Evan D가 정리한 일정: 오늘 5% + 10월까지 20% + 1월 2027 Elon/Founder 46% + 9월 2027 +40%. 14개월 흐름의 첫 걸음. 이번 주 흡수 실체가 락업 이후 시세 방향을 정한다.",
-    likes: 96, comments: 8, created_at: "2026-08-08T00:04:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-08T00:04:00.000Z", liked: false,
   },
   {
     id: -702, alias: "강남 표범 #46", symbol: "SPCX",
     content: "숫자 하나로 정리: **34% float shorted**. 어제 $91.5M shares eligible이 free float의 1.4배·shorts 대량 close·매수 압력 유발. 8/6 -10%에서 8/7 +6% 반등의 실 근거.",
-    likes: 82, comments: 7, created_at: "2026-08-08T00:12:00.000Z", liked: false,
+    likes: 82, comments: 0, created_at: "2026-08-08T00:12:00.000Z", liked: false,
   },
   {
     id: -703, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "JPMorgan이 SPCX 목표가 $180으로 상향했다. 현재 $111에서 +62% upside. Mega bank가 명확히 buy 신호를 냈고, Goldman·MS·BofA도 뒤따를 가능성. Ackman(8/7)·Gerber(오늘)와 결합해 기관 flow 다각.",
-    likes: 108, comments: 9, created_at: "2026-08-08T00:19:00.000Z", liked: false,
+    likes: 108, comments: 0, created_at: "2026-08-08T00:19:00.000Z", liked: false,
   },
   {
     id: -704, alias: "을지로 팔콘 #71", symbol: "GOOGL",
     content: "Google Q2 13-F 리스트:\n• SpaceX 102M주 (~$100M)\n• Planet Labs 71M\n• AST SpaceMobile 17M\n• Anthropic 15M\n• Palantir·ARM·Cerebras\n\n우주+AI 다각 지분·mega-cap이 SPCX에 실 지분 확인.",
-    likes: 74, comments: 6, created_at: "2026-08-08T00:26:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-08T00:26:00.000Z", liked: false,
   },
   {
     id: -705, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "ARK 관측이 정리하는 큰 그림은 이렇다: SPCX가 $100B ARR을 목표로, 내년까지 large nuclear reactors 2기 규모 compute를 구축하려 한다. Terafab·xAI·NuScale의 3중 확장이 8/7 Terafab $16.8B 프레임을 재정·전력·compute 축에서 완결한다.",
-    likes: 89, comments: 7, created_at: "2026-08-08T00:33:00.000Z", liked: false,
+    likes: 89, comments: 0, created_at: "2026-08-08T00:33:00.000Z", liked: false,
   },
   {
     id: -706, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "Musk의 아이러니. AI 종말 확률을 10-20%로 유지하면서 본인이 가속화했다고 인정한다. 그러면서도 오늘 Terafab·궤도 DC·quantum 확장은 지속. 정직한 인정과 확장 지속은 함께 갈 수 있는가?",
-    likes: 63, comments: 5, created_at: "2026-08-08T00:40:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-08T00:40:00.000Z", liked: false,
   },
   {
     id: -707, alias: "종로 매 #12", symbol: "SPCX",
     content: "\"Quantum computing is where AI comes from.\" — Musk. 한 문장이지만 함의가 크다. SPCX compute 스택이 궤도 DC·chip을 넘어 quantum까지 확장 가능성. IBM·Google·IonQ 등과의 파트너십을 watch.",
-    likes: 51, comments: 4, created_at: "2026-08-08T00:47:00.000Z", liked: false,
+    likes: 51, comments: 0, created_at: "2026-08-08T00:47:00.000Z", liked: false,
   },
   {
     id: -708, alias: "여의도 매 #22", symbol: "TSLA",
     content: "Musk가 Terafab을 '세계에서 most valuable building'으로 프레임했다. 8/7 공식 발표 후 하루 만에 심리 upgrading. 100M sqft·$16.8B·1 TW compute의 극단 스케일이 시장에 어떻게 반영될지가 관건.",
-    likes: 78, comments: 6, created_at: "2026-08-08T00:54:00.000Z", liked: false,
+    likes: 78, comments: 0, created_at: "2026-08-08T00:54:00.000Z", liked: false,
   },
   {
     id: -709, alias: "부산 갈매기 #77", symbol: "TSLA",
     content: "Wood가 프레임을 upgrading했다. 8/5 60% → 오늘 80-90%. 자동차 마진 10%에서 Robotaxi 서비스 마진 80-90%로 8배 확장. 8/5 $10T 시장·오늘 마진 상세가 결합되면 Tesla 밸류 재평가 논거가 강력해진다.",
-    likes: 92, comments: 8, created_at: "2026-08-08T01:01:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-08T01:01:00.000Z", liked: false,
   },
   {
     id: -710, alias: "강남 표범 #46", symbol: "SPCX",
     content: "\"Only SpaceX can do it. Starship·Optimus·Musk가 factory 짓는 능력이 investment compelling이다.\" — Ross Gerber. 오늘 하는 일이 아니라 미래에 이룰 일이 매력의 core. Ackman·Wood·Baron·JPM에 이어 다각 참여 지속.",
-    likes: 55, comments: 4, created_at: "2026-08-08T01:08:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-08-08T01:08:00.000Z", liked: false,
   },
   {
     id: -711, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Tesla Kent Bend County TX $10.1B 태양광 셀 시설. Vertically integrated·미국 태양광 대안·10,000+ 정규 직원. 8/7 Terafab·Megapack 3와 결합해 Texas 다각 확장·Tesla 에너지 vertical integration 완결.",
-    likes: 66, comments: 5, created_at: "2026-08-08T01:15:00.000Z", liked: false,
+    likes: 66, comments: 0, created_at: "2026-08-08T01:15:00.000Z", liked: false,
   },
   {
     id: -712, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Optimus 상업 제조가 실 진전이다. Staff Manufacturing Engineer가 robot hands 생산 라인을 위해 채용된다. Hands는 로봇의 가장 vital·complex parts. 7/28 Optimus factory hires에 이은 실 상용화 시그널.",
-    likes: 71, comments: 6, created_at: "2026-08-08T01:22:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-08T01:22:00.000Z", liked: false,
   },
   {
     id: -713, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "Tesla가 미국 배터리 재활용률 50%+ 달성했다. 니켈·코발트 회수. Landfill zero를 목표로 한다. 8/1 US LFP·오늘 태양광 $10.1B에 이어 순환 인프라가 완결되는 흐름. ESG 축·원료 안정·미국 배터리 산업 재건 삼중.",
-    likes: 43, comments: 3, created_at: "2026-08-08T01:29:00.000Z", liked: false,
+    likes: 43, comments: 0, created_at: "2026-08-08T01:29:00.000Z", liked: false,
   },
   {
     id: -714, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "\"항공사 고객이 direct flight 피하고 Starlink 있는 shorter hop을 선호한다. 이 pattern 이전에 없었다.\" — Shotwell. 소비자 행동 근본 변화 시그널. 8/4 IAG·8/6 Bluebird와 결합해 Starlink Aviation 실 수요 확인.",
-    likes: 58, comments: 5, created_at: "2026-08-08T01:36:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-08-08T01:36:00.000Z", liked: false,
   },
   {
     id: -715, alias: "종로 매 #12", symbol: "SPCX",
     content: "T-Mobile CEO vs Shotwell 대립.\n\n• T-Mobile: 'Starlink 위협 exaggerated·complementary'\n• Shotwell: 'V2 내년 발사·2027 말 상용'\n\n2027 시장이 실체 판단 시점. 8/6 Viasat -83%·오늘 shorter hop 소비자 행동이 SPCX 편에 지지된다.",
-    likes: 47, comments: 4, created_at: "2026-08-08T01:43:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-08-08T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-07 신규 (짧고 15개 완전 다른 톤) ──────────────────────
   {
     id: -686, alias: "여의도 매 #22", symbol: "SPCX",
     content: "SPCX·Tesla가 오늘 공동 성명으로 Terafab을 공식 발표. Grimes County TX에 세계 최대 chip 팹. 초기 $16.8B·100M sqft·1 TW+ compute 필요. 8/5 Musk +TSLA 매출·8/6 Moon factory에 이어 오늘 chip 자체 구축까지 = 우주부터 지상까지 완전 vertical integration.",
-    likes: 108, comments: 9, created_at: "2026-08-07T00:04:00.000Z", liked: false,
+    likes: 108, comments: 0, created_at: "2026-08-07T00:04:00.000Z", liked: false,
   },
   {
     id: -687, alias: "강남 표범 #46", symbol: "SPCX",
     content: "Musk 발언 요약:\n① 세계 fabs 다 합쳐도 Terafab 필요의 2%\n② 삼성 파트너십·chip 모두 구매\n③ 삼성 확장 페이스에 의존\n\n삼성전자 최대 수혜 시나리오.",
-    likes: 92, comments: 8, created_at: "2026-08-07T00:12:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-07T00:12:00.000Z", liked: false,
   },
   {
     id: -688, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Tesla+SPCX가 처음 공식 공동 성명을 냈다. '현재·미래 글로벌 chip 생산으로 감당 불가.' 8/3 Kalshi 60% 합병 확률과 재정 관계 심화가 겹친다.",
-    likes: 78, comments: 7, created_at: "2026-08-07T00:19:00.000Z", liked: false,
+    likes: 78, comments: 0, created_at: "2026-08-07T00:19:00.000Z", liked: false,
   },
   {
     id: -689, alias: "을지로 팔콘 #71", symbol: "SPCX",
     content: "Musk가 SPCX Q2 콜에서 $1T 매출 목표를 2031→2030으로 당겼다. '2029에 nonzero.' 8/3 12-24개월 +TSLA·8/5 Munster 5배 초과·오늘 Terafab이 이 프레임을 다층으로 확정한다.",
-    likes: 85, comments: 8, created_at: "2026-08-07T00:26:00.000Z", liked: false,
+    likes: 85, comments: 0, created_at: "2026-08-07T00:26:00.000Z", liked: false,
   },
   {
     id: -690, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "락업 시나리오 3갈래:\n\n(A) 오늘 +6% 지속·Wood·Baron·Ackman 매수·$130-150 회복\n(B) 부분 매도·$110 근처 지지선\n(C) 대량 매도·$100 하회\n\n이번 주 시세가 결정적.",
-    likes: 71, comments: 6, created_at: "2026-08-07T00:33:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-07T00:33:00.000Z", liked: false,
   },
   {
     id: -691, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "8/6 -10% → 오늘 +6%. 프레임 전환의 순간. CAPEX 우려 프레임이 매출 폭발 프레임에 자리를 내줬다. Terafab 발표·Ackman 주주·$1T pull-forward가 트리거.",
-    likes: 83, comments: 7, created_at: "2026-08-07T00:40:00.000Z", liked: false,
+    likes: 83, comments: 0, created_at: "2026-08-07T00:40:00.000Z", liked: false,
   },
   {
     id: -692, alias: "종로 매 #12", symbol: "SPCX",
     content: "\"Direct-to-phone broadband from orbit. No ground towers required. Doing God's work.\" — Garry Tan. Bluebird 위성 3개 배치가 8/6 Shotwell 'V/T/TMO $600B 도전'의 실 하드웨어 근거가 됐다.",
-    likes: 74, comments: 6, created_at: "2026-08-07T00:47:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-07T00:47:00.000Z", liked: false,
   },
   {
     id: -693, alias: "여의도 매 #22", symbol: "SPCX",
     content: "숫자 하나로 정리: **80-95% vs 8-10%**. SPCX가 올해 세계 궤도 mass의 80-95%를 발사했고, 중국은 8-10%다. 10-12배 격차. Falcon 9는 90% flights zero failure·재사용 boosters 30+ times.",
-    likes: 96, comments: 8, created_at: "2026-08-07T00:54:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-07T00:54:00.000Z", liked: false,
   },
   {
     id: -694, alias: "부산 갈매기 #77", symbol: "TSLA",
     content: "16개월 만에 착공에서 가동으로. Brookshire TX Megapack 3 공장이 연 50 GWh 캐파로 가동됐다. 8/6 SPCX $500M 계약·오늘 누적 $1.1B+ 지출 확인과 함께 Tesla Energy 매출 실체가 커지는 중.",
-    likes: 63, comments: 5, created_at: "2026-08-07T01:01:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-07T01:01:00.000Z", liked: false,
   },
   {
     id: -695, alias: "강남 표범 #46", symbol: "SPCX",
     content: "다음 Starship 발사는 두 마일스톤 동시 시도다. Starlink V3 위성 첫 궤도 배치 + Ship catch(2단 회수). 8/3 Flight 14·8/5 Musk 'rapid reusability 해결'이 실 확인되는 순간이 온다.",
-    likes: 74, comments: 6, created_at: "2026-08-07T01:08:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-07T01:08:00.000Z", liked: false,
   },
   {
     id: -696, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "10-Q에서 확인된 숫자: Q2 $296M + Q1 $329M + 2025 $506M = 누적 $1.1B+. 어제 초기 관측 $500M보다 2배 이상 큰 규모. Tesla-SPCX 재정 통합이 실체적으로 진행되는 중.",
-    likes: 58, comments: 5, created_at: "2026-08-07T01:15:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-08-07T01:15:00.000Z", liked: false,
   },
   {
     id: -697, alias: "을지로 팔콘 #71", symbol: "SPX",
     content: "7/31에 강제 청산 당했던 Aschenbrenner가 $500M private company 투자로 돌아왔다. AI 유동성 우려 완화 시그널. 매크로 완화 프레임과 정합.",
-    likes: 47, comments: 4, created_at: "2026-08-07T01:22:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-08-07T01:22:00.000Z", liked: false,
   },
   {
     id: -698, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "Bill Ackman이 SPCX 주주가 됐다고 공언했다. xAI에는 이미 투자자였다. 'Decent size 개인 투자·amazing company.' 8/5 Wood·Baron 매수와 함께 대형 매니저 참여가 다층으로 축적되는 흐름.",
-    likes: 89, comments: 7, created_at: "2026-08-07T01:29:00.000Z", liked: false,
+    likes: 89, comments: 0, created_at: "2026-08-07T01:29:00.000Z", liked: false,
   },
   {
     id: -699, alias: "마포 올빼미 #24", symbol: "GOOGL",
     content: "Alphabet이 $25B IG 채권을 10 tranche·최대 40년 만기로 발행한다. 40년물 pricing T+155 bps는 매우 tight — mega-cap 신용도 확인. 8/6 시가총액 AAPL 초과 #2와 결합, AI·Cloud CAPEX 지원 자본이 확보되는 중.",
-    likes: 54, comments: 4, created_at: "2026-08-07T01:36:00.000Z", liked: false,
+    likes: 54, comments: 0, created_at: "2026-08-07T01:36:00.000Z", liked: false,
   },
   {
     id: -700, alias: "종로 매 #12", symbol: "SPX",
     content: "매크로 두 시그널:\n\n• 미 재무부 이번 주 $4B 자체 부채 매입 → 유동성 공급\n• SanDisk Q2 EPS +205% 비트·Data Center $3.03B → AI 사이클 견고\n\n8/6 Burry 1987 경고에도 정부는 완화·기업 실적은 강세.",
-    likes: 66, comments: 5, created_at: "2026-08-07T01:43:00.000Z", liked: false,
+    likes: 66, comments: 0, created_at: "2026-08-07T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-06 신규 (짧고 15개 완전 다른 톤) ──────────────────────
   {
     id: -671, alias: "여의도 매 #22", symbol: "SPCX",
     content: "실적 대박에 시세 -10%. Bull Theory 정리는 명확하다: 매출 +92%인데 CAPEX $5.4B/분기가 시장을 겁먹게 만들었다. Musk는 $1T by 2028 목표를 앞당겼는데, 정작 시장은 profit이 언제 나오냐를 묻고 있다. 락업 내일 만료가 추가 압박.",
-    likes: 92, comments: 8, created_at: "2026-08-06T00:04:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-06T00:04:00.000Z", liked: false,
   },
   {
     id: -672, alias: "강남 표범 #46", symbol: "SPCX",
     content: "Munster 3줄:\n① Q2 애널 예상 5배 초과\n② 연말 $10B run rate 유지 시 12월 $22B 필요\n③ 6월 $17B → +17%\n이 정도면 예외적 규모.",
-    likes: 78, comments: 6, created_at: "2026-08-06T00:12:00.000Z", liked: false,
+    likes: 78, comments: 0, created_at: "2026-08-06T00:12:00.000Z", liked: false,
   },
   {
     id: -673, alias: "서초 콘도르 #59", symbol: "GOOGL",
     content: "Google 시가총액이 애플 넘어 세계 2위. 엔비디아만 남았다. Anthropic 지분 재평가·Search가 아마존 1P의 85%·Waymo·Cloud까지 다각 성장이 밀어올린 결과.",
-    likes: 71, comments: 5, created_at: "2026-08-06T00:19:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-06T00:19:00.000Z", liked: false,
   },
   {
     id: -674, alias: "을지로 팔콘 #71", symbol: "SPX",
     content: "Trump가 'WE LOVE ELON MUSK'라고 공개 발언한 건 이례적이다. 몇 주 전만 해도 서로 등지는 분위기였는데, SPCX 정부 계약·NASA Moon base·NHTSA Cybercab 우호 정책이 배경에서 관계를 다시 붙였다.",
-    likes: 84, comments: 7, created_at: "2026-08-06T00:26:00.000Z", liked: false,
+    likes: 84, comments: 0, created_at: "2026-08-06T00:26:00.000Z", liked: false,
   },
   {
     id: -675, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "삼성전기·LG이노텍이 Cybercab 카메라 모듈 계약을 확정했다. 삼성은 이미 7월부터 양산 시작. 초기 20-30K대·총 $500M 추정. Robotaxi Ops 6개 시도 채용(8/5)과 맞물려 실 상용 배치가 임박했다.",
-    likes: 66, comments: 5, created_at: "2026-08-06T00:33:00.000Z", liked: false,
+    likes: 66, comments: 0, created_at: "2026-08-06T00:33:00.000Z", liked: false,
   },
   {
     id: -676, alias: "마포 올빼미 #24", symbol: "SPX",
     content: "매크로 두 개 시그널이 정면 충돌 중.\n\nBurry: '1987-type 붕괴 근접·major top'\nMMF: $2.3T 사상 최고 유입\n\n둘 다 방향이 같다 — 현금이 대기하고 위험 자산에서 발을 빼는 중. 8/5 Citadel의 '재정 프레임'과는 정반대.",
-    likes: 74, comments: 6, created_at: "2026-08-06T00:40:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-06T00:40:00.000Z", liked: false,
   },
   {
     id: -677, alias: "종로 매 #12", symbol: "SPCX",
     content: "달에 공장을 짓는다는 게 현실적으로 언제 가능할까? NASA Admin이 '스타쉽 재사용성으로 Moon base가 small city까지 확장'이라 했고, 폴리마켓은 스타쉽이 내년까지 하루 한 번 발사한다고 예상. 5년 안엔 factory 첫 삽 가능성.",
-    likes: 63, comments: 5, created_at: "2026-08-06T00:47:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-06T00:47:00.000Z", liked: false,
   },
   {
     id: -678, alias: "여의도 매 #22", symbol: "SPCX",
     content: "\"V·T·TMO 합쳐서 $600B/년. 우리가 상당수 고객을 뺏어올 거다\" — Gwynne Shotwell. Starlink V3는 gigabit·Mobile은 100+ 국가에서 아무 폰이나 4G. 미국 통신 3사를 상대로 실 도전이 시작됐다.",
-    likes: 87, comments: 7, created_at: "2026-08-06T00:54:00.000Z", liked: false,
+    likes: 87, comments: 0, created_at: "2026-08-06T00:54:00.000Z", liked: false,
   },
   {
     id: -679, alias: "부산 갈매기 #77", symbol: "SPCX",
     content: "숫자 하나로 정리: **690K → 115K**. 2020년 Starlink 상용 이후 Viasat가 잃은 미국 broadband 가입자다. -83%. Q2에만 -15K 추가. V2 위성이 100+ Mbps를 계획 중이지만 Starlink 대비 10-20배 느리다.",
-    likes: 55, comments: 4, created_at: "2026-08-06T01:01:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-08-06T01:01:00.000Z", liked: false,
   },
   {
     id: -680, alias: "강남 표범 #46", symbol: "NVDA",
     content: "Oguz Erkan의 프레임에 반박할 여지가 있을까? SPCX가 NVDA GPU exclusive를 선택한 것은, 새 hyperscalers(SBGX·CRWV·NBIS)에게도 같은 결정을 강요하는 신호다. Custom ASIC은 규모의 경제가 나오지 않는다. NVDA 20x forward P/E는 낮게 잡힌 편.",
-    likes: 79, comments: 6, created_at: "2026-08-06T01:08:00.000Z", liked: false,
+    likes: 79, comments: 0, created_at: "2026-08-06T01:08:00.000Z", liked: false,
   },
   {
     id: -681, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "락업 시나리오 3갈래:\n\n(A) 71.5M 상환으로 유통 압박 완화·시세 반등\n(B) 40% 유통 부담이 12월까지 지속·횡보\n(C) 실 매도 규모가 예상보다 커지면 -50% ATH 재시험\n\n내일 실 락업 만료 후 첫 주가 가장 중요.",
-    likes: 58, comments: 5, created_at: "2026-08-06T01:15:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-08-06T01:15:00.000Z", liked: false,
   },
   {
     id: -682, alias: "을지로 팔콘 #71", symbol: "SPCX",
     content: "SPCX가 Q2에 Tesla 주식 $295M을 새로 취득했다. 지난해 datacenter용 Megapacks에는 총 $500M을 썼다. Kalshi 60% 합병 확률 프레임(8/3)이 실체적 재정 관계로 이어지는 중.",
-    likes: 61, comments: 5, created_at: "2026-08-06T01:22:00.000Z", liked: false,
+    likes: 61, comments: 0, created_at: "2026-08-06T01:22:00.000Z", liked: false,
   },
   {
     id: -683, alias: "광화문 늑대 #33", symbol: "GOOGL",
     content: "Watchlist에 두 인물이 올랐다.\n\n• Demis Hassabis: DeepMind CEO → Chairman\n• Jeff Dean: 15년 만에 Google 퇴사·과학 발견 focus 신 스타트업\n\n시총이 애플을 넘긴 날 나온 인력 리스크 시그널. 새 DeepMind 리더와 Dean 스타트업 방향이 다음 관찰 포인트.",
-    likes: 68, comments: 5, created_at: "2026-08-06T01:29:00.000Z", liked: false,
+    likes: 68, comments: 0, created_at: "2026-08-06T01:29:00.000Z", liked: false,
   },
   {
     id: -684, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "Edmunds가 Model Y L을 '큰 3열 SUV의 compelling 대안'으로 평가했다. Adaptive 서스펜션·조용한 캐빈·프리미엄 인테리어·325 miles EPA·FSD Supervised 기본 포함. 8/5 China 93K와 오늘 삼성·LG Cybercab 계약이 함께 놓이면, TSLA 판매 축이 다층으로 벌어지는 중.",
-    likes: 52, comments: 4, created_at: "2026-08-06T01:36:00.000Z", liked: false,
+    likes: 52, comments: 0, created_at: "2026-08-06T01:36:00.000Z", liked: false,
   },
   {
     id: -685, alias: "종로 매 #12", symbol: "SPCX",
     content: "Musk의 이 발언은 결국 지배구조 방어 논리로 읽힌다: \"public 회사는 분기 실적 압박 탓에 5-10년 pay-off 아이디어를 discourage한다. SPCX 목표는 지구 밖 의식 확장이다.\" 오늘 시세 -10%·락업 만료·CAPEX $5.4B 상황에서 나온 장기 비전 프레임.",
-    likes: 47, comments: 4, created_at: "2026-08-06T01:43:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-08-06T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-05 신규 ──────────────────────────────────────────────────────
   {
     id: -656, alias: "여의도 매 #22", symbol: "SPCX",
     content: "SpaceX 공식 Q2 실적 대박: Revenue +92% YoY(Falcon 9·Starlink·Starship 3축)·$10B 현금 + 마켓 증권·$4.7B backlog 서명·순손실 -$147M(작년 -$844M에서 $697M 개선)·Adjusted EBITDA +191%($3.5B)·Starship V3 2회 성공·$30B+ 미 정부 다년 계약. 왜 중요: (1) 8/3 Musk '12-24개월 +TSLA 매출' 프레임의 물리 근거, (2) -50% ATH·8/4 락업 해제·사상 최저 종가와 대비되는 실적 대박, (3) 순손실 대폭 개선 -$844M→-$147M = 수익성 근접, (4) $30B 정부 계약 backlog = 안정 매출. 시세 vs 펀더멘털 divergence의 근본 정당화. 3축 매출: Falcon 9(정기 발사)·Starlink(총매출 90%)·Starship(V3 2회 성공). 반대: (1) 순손실 여전 존재·수익 전환 시점 미확인, (2) Q2 +92%는 base effect 가능, (3) $30B backlog는 다년·실 매출 시간, (4) 락업 매도 압박 별개. 앞으로 매출 성장률 지속·수익 전환·V3 상용화·정부 계약 매출 반영·시세 반응이 관찰 축.",
-    likes: 105, comments: 9, created_at: "2026-08-05T00:04:00.000Z", liked: false,
+    likes: 105, comments: 0, created_at: "2026-08-05T00:04:00.000Z", liked: false,
   },
   {
     id: -657, alias: "강남 표범 #46", symbol: "SPCX",
     content: "SPCX + NVIDIA 공식: Starmind AI satellite compute payload · 각 Starmind 위성이 NVIDIA Rubin GPU + Vera CPU로 datacenter class 우주 컴퓨트 · SPCX 위성 컴퓨트 용량 250 kW. Musk 실적 콜: 'We've decided to build exclusively on Nvidia because we think the Vera architecture is the best · best AI computer · exclusive to Nvidia.' 왜 중요: (1) 8/1 '99.99% 컴퓨트 우주' 프레임 물리 실체 - Musk 궤도 DC 비전이 실 하드웨어로, (2) NVDA-SPCX 결합 공식화 - 7/28 Open Secure AI Alliance → 7/31 Jensen 'xAI 후회' → 8/3 Jensen 'Musk 3대 축 리더' → 오늘 Starmind exclusive, (3) Musk 99.99% 우주 프레임 확정 - Starmind = 궤도 DC 실체, (4) AMD Q2 Data Center +107% 대박과 대비 - 하이퍼 GPU 시장 분화. Starmind 위성 설계: Rubin GPU(차세대)·Vera CPU(차세대 DC CPU)·위성당 상당 컴퓨트·전력 250 kW·궤도 DC 실체(태양광 무한·냉각 우주·Starship 대량 발사). 반대: (1) Starmind 실 발사 시점 미확인, (2) 250 kW는 지상 DC(1 GW+) 대비 미미, (3) 우주 컴퓨트 상용화 오랜 시간, (4) NVDA exclusive는 AMD 등 배제·시장 균형. 앞으로 Starmind 실 발사·250 kW 상용화·다른 궤도 DC 파트너십·AMD 대응이 관찰 축.",
-    likes: 92, comments: 8, created_at: "2026-08-05T00:12:00.000Z", liked: false,
+    likes: 92, comments: 0, created_at: "2026-08-05T00:12:00.000Z", liked: false,
   },
   {
     id: -658, alias: "서초 콘도르 #59", symbol: "PLTR",
     content: "Investing visuals: Palantir Q2 실적 · Revenue $1.94B(+63% YoY, 컨센 $1.87B) · Gross Profit $1.54B(+61%) · Operating Income $612M(+34%) · Net Income +225% · EPS $0.14(컨센 $0.12, +17% 비트) · US Commercial $764M(vs $786M) · Government segment 강세. 왜 중요: (1) AI 소프트웨어 매출 폭발 실체 - Palantir는 대표 AI 소프트웨어 회사, (2) Net Income +225% 극단 성장·매출 대비 순이익 급증 = 마진 개선, (3) US Commercial + Government 이중 축·Enterprise + 정부 계약 다각, (4) 오늘 AMD·SPCX 대박과 결합 - AI 사이클 강세 확인. US Commercial 성장: $764M vs $786M 컨센 -3% 미스이지만 절대 규모는 큰 성장·Enterprise Palantir 채택 확대·Foundry·AIP 플랫폼 매출. Government 강세: 미 국방·정부 계약 확대·Gotham·Foundry government 사용·$30B+ 정부 계약 backlog·SPCX와 유사한 정부 매출 안정성. 어제까지 흐름: 8/3 하이퍼 CAPEX·클라우드 → 8/4 MSFT +25%·AMZN OpenAI $50B → 오늘 PLTR Q2 +63%·AMD Q2 +32%·DC +107%·SPCX Q2 +92%. AI 사이클 4개 회사 강세 실적 확인. 반대: (1) Net Income +225%는 base effect, (2) US Commercial 컨센 미스, (3) 정부 계약 의존·정치 변화 리스크, (4) PLTR 밸류 이미 프리미엄(High P/E). 앞으로 US Commercial 성장·Government 확대·AI SW 이익률·Enterprise 채택률이 관찰 축.",
-    likes: 88, comments: 7, created_at: "2026-08-05T00:19:00.000Z", liked: false,
+    likes: 88, comments: 0, created_at: "2026-08-05T00:19:00.000Z", liked: false,
   },
   {
     id: -659, alias: "을지로 팔콘 #71", symbol: "AMD",
     content: "Investing visuals: AMD Q2 실적 · Revenue $7.68B(+32% YoY) · EPS $1.66(컨센 $1.19, +40% 비트) · Data Center Revenue $6.78B(+107% YoY 2배) · MI300·MI400 AI GPU 채택 확대 확인. 왜 Data Center +107%가 중요: (1) NVDA 대안 확실 - AMD MI300/MI400가 NVDA GPU 실 대안·하이퍼 다변화, (2) 매출 2배 1년만에 = AI GPU 시장 폭발, (3) 오늘 SPCX-NVDA exclusive와 대비 - SPCX만 NVDA·다른 하이퍼는 AMD 채택 확대, (4) NVDA GPU 공급 부담 완화 - AMD가 시장 흡수. AMD Data Center 세그먼트: MI300(이미 상용·Meta·MSFT·Google 채택·H100 대비 가격 우위)·MI400 차세대(곧 출시·Blackwell 대비 경쟁·채택 기대)·EPYC CPU(DC CPU 시장 점유율 지속·Intel Xeon 대비 우위). NVDA vs AMD 시장 점유율(참고): NVDA 80%+(H100·Blackwell 지배)·AMD 10-15%(MI300 확대)·기타 5-10%. 추이: AMD MI300 채택 확대·MI400 출시 시 점유율 상승·SPCX 등 exclusive는 예외. 오늘 4개 회사 실적: SPCX Revenue +92%·PLTR Revenue +63%/Net +225%·AMD Revenue +32%/DC +107%·MSFT(8/4) 3일 +25%. AI 사이클 4개 축 강세 실적 확인. 반대: (1) DC +107%는 base effect, (2) EPS +40% 비트는 단기 반전 리스크, (3) NVDA 대비 여전히 10-15% 점유율, (4) SPCX-NVDA exclusive는 AMD 배제. 앞으로 MI400 출시·NVDA vs AMD 점유율·CoWoS 캐파·하이퍼 AMD 채택·Client/Gaming이 관찰 축.",
-    likes: 84, comments: 7, created_at: "2026-08-05T00:26:00.000Z", liked: false,
+    likes: 84, comments: 0, created_at: "2026-08-05T00:26:00.000Z", liked: false,
   },
   {
     id: -660, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "Sawyer Merritt · CPCA 데이터: Tesla China 7월 배송 93,579대·+37.8% YoY·2026 최고월·9개월 연속 성장·상하이 기가팩토리 성장 축 지속. 왜 중요: (1) 8/3 상하이 400+ 중국 협업사·95% 부품 데이터의 실 판매 실체 - 부품→완성차→배송 실체, (2) 글로벌 다각 회복 확인 - France +86%·Colombia 1,911·China 93,579 = 유럽·라틴·아시아 3대 대륙, (3) 9개월 연속 성장 - 안정 상승 흐름·중국 회복 지속, (4) 2026 최고월 - 상반기 부진 극복·하반기 강세. Tesla China 배송 흐름: 7월 93,579대·+37.8% YoY·9개월 연속(2025.11부터 상승)·상하이 기가팩토리 Model 3/Y 주력·연 배송 목표 1M+. 글로벌 매출 축: China(오늘 93,579·+37.8%·9개월)·Europe(8/4 France registrations +86%·Norway Model 3/Y 신 기록·Germany 회복 예상)·Latin America(8/4 Colombia 1,911·BEV 40%·신흥 시장)·US(미국 판매 안정·Cybercab TX·Houston 배치). 어제까지 흐름: 8/3 상하이 95% 중국·Musk 12-24개월 +TSLA 매출 → 8/4 France +86%·Colombia 1,911·Robotaxi Ops 6개 시도 → 오늘 China 93,579·+37.8%·Terafab $10M·Netherlands FSD·FSD 150만 MAU. TSLA 글로벌 다각 확장 확인. 반대: (1) 93,579는 CPCA wholesale·retail과 다름, (2) 9개월 연속이지만 상반기 부진에서 회복, (3) BYD 등 중국 경쟁 심화, (4) 관세·정치 리스크. 앞으로 8월 배송·연말 목표·BYD 대응·상하이 캐파·중국 정치·규제가 관찰 축.",
-    likes: 78, comments: 6, created_at: "2026-08-05T00:33:00.000Z", liked: false,
+    likes: 78, comments: 0, created_at: "2026-08-05T00:33:00.000Z", liked: false,
   },
   {
     id: -661, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "DogeDesigner (SPCX Q2): SpaceX Starlink가 총 매출 90% 차지(2020 54%에서 확대)·Q2 subscribers 2배·connectivity revenue +64%·operating income +79%·$6B+ Starlink 계약·Falcon 9 미션 대부분 Starlink 전용. 왜 중요: (1) Starlink 실체적 시장 지배·SPCX = Starlink 프레임 확정, (2) 8/4 IAG 50% 항공기 + Hughesnet 파산과 결합·Aviation·주거·기업 다각 지배, (3) 8/3 Musk 12-24개월 +TSLA 매출의 주 축·Starlink가 매출 폭발 견인, (4) Falcon 9 미션 재사용·자기 위성 발사·비용 효율. Starlink 매출 세그먼트: 주거(미국·유럽·전 세계·월 구독·Hughesnet 파산 반사이익)·Aviation(8/4 IAG 50% 장거리·BA·Iberia·Aer Lingus·LEVEL·다른 항공사 확대)·기업(오프쇼어·해양·군용·대형 계약)·정부(미 우주군·NSSL 등·일부 별도). 어제까지 흐름 종합: 7/31 미 우주군 $3.4B·Wood $50.2M → 8/1 Musk 99.99% 우주·Colossus BlackRock → 8/3 Musk 12-24개월 +TSLA 매출 → 8/4 락업 해제·$1,435B·IAG·Hughesnet 파산 → 오늘 Q2 대박·NVDA exclusive·Starlink 90% 매출·AI 컴퓨트 $2.32B. SPCX 매출 실체 확인. 반대: (1) Starlink 90% 비중은 매출 편중·다각화 부족, (2) 2020 54%→90%는 다른 축(발사) 상대 축소, (3) 매출 세그먼트 세부 미공개, (4) Aviation·주거 시장 침투 여전히 초기. 앞으로 Starlink Aviation ARR·주거 가입자·기업 계약·새 항공사·다른 시장·세그먼트 세부가 관찰 축.",
-    likes: 74, comments: 6, created_at: "2026-08-05T00:40:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-05T00:40:00.000Z", liked: false,
   },
   {
     id: -662, alias: "종로 매 #12", symbol: "SPCX",
     content: "DogeDesigner (SPCX Q2 AI 컴퓨트): SpaceX Q2 AI 컴퓨트 계약 합계 $2.32B · Anthropic $1.25B(54%)·Google $920M(40%)·Reflection $150M(6%) · 연 페이스 $2.6B · Starmind exclusive NVDA 파트너십의 실 매출 실체. 왜 중요: (1) 궤도 DC 프레임의 실 매출 실체·오늘 Starmind exclusive의 상용 근거, (2) Anthropic/Google이 SPCX AI 인프라 이용 확인·프런티어 AI가 SPCX 궤도 컴퓨트 채택, (3) Musk +TSLA 매출 근거·SPCX 매출 폭발의 주 축, (4) NVDA exclusive의 실 매출·Rubin GPU + Vera CPU 기반 컴퓨트가 실 매출. Anthropic·Google·Reflection: Anthropic(54%·Claude 훈련·서빙·8/4 AMZN Anthropic $16B 지분 결합·SPCX AI 컴퓨트 최대 소비자)·Google(40%·Gemini·GCP AI·8/1 GOOGL Anthropic $53.4B 지분 별개·GCP 인프라 확장의 SPCX 활용)·Reflection(6%·스타트업 규모·신 AI 회사의 궤도 컴퓨트 활용). 8/3 Musk 12-24개월 +TSLA 매출과의 관계: Musk 프레임(12-24개월 TSLA $103.6B 규모 추가) vs 실 매출 축 3중(Starlink 90% 매출·AI 컴퓨트 $2.6B/년·미 정부 계약 $30B+) = 3중 축으로 매출 폭발 실체 가능. 반대: (1) $2.32B Q2는 큰 규모이지만 TSLA $103.6B 대비 소규모, (2) Anthropic/Google 매출 지속 가정, (3) Starmind 상용화까지 시간, (4) 다른 하이퍼(MSFT·AMZN·NVDA) 유사 계약 확대 필요. 앞으로 3사 계약 확대·다음 분기 매출·다른 하이퍼 계약·Starmind 실 상용·AI 컴퓨트 성장률이 관찰 축.",
-    likes: 82, comments: 7, created_at: "2026-08-05T00:47:00.000Z", liked: false,
+    likes: 82, comments: 0, created_at: "2026-08-05T00:47:00.000Z", liked: false,
   },
   {
     id: -663, alias: "부산 갈매기 #77", symbol: "SPCX",
     content: "Musk 실적 콜 극단 강세: (a) Kalshi: 'SPCX 주식이 ~$100 근처에서 insane 매수 기회' + (b) Sawyer Merritt: 'Starship rapid reusability 기술 해결·데이터/시각 검사로 확인·기술 장벽 없음.' 사상 최저 종가·-50% ATH 시세에서 CEO 강세 발언. 왜 중요: (1) CEO 직접 매수 기회 프레임·사상 최저 종가에서 강세, (2) 완전 재사용 실체 가까움·8/3 Flight 14 upper catch + 오늘 reusability 해결 = 실 완전 재사용, (3) kg당 발사비 급감 근거·$500-1000/kg → $10-50/kg 감소 실체, (4) 궤도 DC·Starmind 상용화 근거·저비용 발사 = 궤도 DC 실 가능. Musk 강세 발언 흐름: 8/3 '12-24개월 내 TSLA 전체 매출 추가 가능' → 8/4 '$103.6B 참고·COULD not WILL' → 오늘 '$100 근처 insane 매수 기회' + 'reusability 해결.' 실적 대박 + 락업 해제 + Musk 강세 발언 3중 조합. Starship reusability 해결의 함의: 완전 재사용 실체(Booster catch 성공·Upper stage catch 8/3 Flight 14 시도·Rapid reusability 오늘 Musk 해결 = 100% 재사용 근접)·발사비 급감(현재 $500-1000/kg → 완전 재사용 후 $10-50/kg·10-100배 감소)·시장 확장(궤도 DC·대량 위성 발사·화성 유인 미션). 반대: (1) CEO 매수 발언은 이해 상충, (2) '해결' 발언과 실 상용 재사용은 별개, (3) Musk 이전 예상 delay 다수(Semi·Cybertruck·FSD), (4) 락업 매도 압박 여전. 앞으로 시세 반응·실적 후 반등·Starship 실 재사용 페이스·kg당 발사비·궤도 DC 상용화가 관찰 축.",
-    likes: 96, comments: 8, created_at: "2026-08-05T00:54:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-05T00:54:00.000Z", liked: false,
   },
   {
     id: -664, alias: "여의도 매 #22", symbol: "TSLA",
     content: "DogeDesigner: Musk가 Grimes County에 $10M 조기 지불·Terafab agreement의 일환·County 2026 예상 지방세 $26.5M의 40% 규모·County 리더가 인프라 개선에 활용 예정. 왜 중요: (1) Terafab 프로젝트 실 진전·Tesla/xAI 신 프로젝트·물리 건설 시작 시사, (2) County 신뢰 구축·조기 지불 = 사업 신뢰·지방 정부 관계 강화, (3) 인프라 확대·County 인프라 개선 = Terafab 시설 지원, (4) Tesla 지역 사회 기여·대규모 세수 기여로 지역 지지 확보. Terafab 배경: Tesla/xAI 신 프로젝트로 알려짐·Grimes County(Texas) 위치·대규모 데이터센터 or 제조 시설 추정·Musk '대량 생산' 프레임의 일환. 규모: 2026 지방세 $26.5M 중 40% = $10M·County 전체 세수 대비 매우 큰 비중·시설 규모 상당함 시사. 어제까지 TSLA 인프라 흐름: 7/29 AZ Project Sterling 458 MW·7/30 호주 Novon Megapack·7/31 10 million 차량·8/1 US LFP Megapack 첫 출하·오늘 Grimes County(Terafab) $10M. TSLA/Musk 시설·인프라 확장 다각. 반대: (1) Terafab 세부 정보 미공개, (2) $10M 조기 지불은 규모 대비 미미, (3) 지방 정부 관계 강화 목적·사업 진전과 별개, (4) Grimes County는 소규모·전국 확산 여부. 앞으로 Terafab 프로젝트 세부·완공 시점·다른 지역 유사 딜·Tesla·xAI 시설 확장이 관찰 축.",
-    likes: 54, comments: 4, created_at: "2026-08-05T01:01:00.000Z", liked: false,
+    likes: 54, comments: 0, created_at: "2026-08-05T01:01:00.000Z", liked: false,
   },
   {
     id: -665, alias: "강남 표범 #46", symbol: "TSLA",
     content: "Tesla Netherlands 공식: Nederland·Belgium 대상 2개월 FSD(Supervised) 무료 트라이얼 시작·Model Y 오너 대상·10월 초 종료·real-world 경험 확대·이슈 개선·데이터 flywheel 강화. 왜 중요: (1) 8/4 WMC FSD EU 승인 프레임 실체·EU FSD 확대 실 정책, (2) 데이터 flywheel 강화·유럽 데이터 추가·AI 훈련 우위 확대, (3) 8/3 France +86% 회복과 결합·유럽 시장 회복 축, (4) 트라이얼 후 유료 전환·FSD 라이선싱 매출 확대 기회. EU FSD 승인 상황: 승인 국가(Netherlands·Belgium·Sweden 일부·FSD Supervised 승인·Full Self-Driving Unsupervised 승인 진행)·미승인/규제 강화 국가(Germany·France 일부 규제·로컬 자동차 회사 압력·WMC 프레임 - 로컬 자동차 회사와 상관). 데이터 flywheel의 의미: Tesla FSD 데이터 규모(8/4 총 마일 130억 Supervised·월 활성 사용자 150만·연 마일 2600만+) + Netherlands·Belgium 추가(유럽 도로 데이터 좁은 도로·복잡 교차로·Real-world edge cases 수집·AI 훈련 데이터 다각화). 어제까지 TSLA 자율주행 흐름: 8/3 Cole Grinde Robotaxi 500K/월·Jensen 'Musk AI 리더' → 8/4 FSD 130억 마일·Wood $10T·Ops 6개 시도 → 오늘 Netherlands·Belgium 2개월 FSD 트라이얼·FSD 150만 MAU(WMC). FSD 다각 확장·데이터 강화. 반대: (1) 2개월 트라이얼은 짧음·유료 전환율 미확인, (2) Netherlands·Belgium은 소규모 시장, (3) EU 규제 국가별 편차 크음, (4) 트라이얼 후 사용자 이탈 가능. 앞으로 트라이얼 종료 후 유료 전환율·다른 EU 국가 확대·Germany·France 승인·유럽 FSD 매출 실체가 관찰 축.",
-    likes: 58, comments: 5, created_at: "2026-08-05T01:08:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-08-05T01:08:00.000Z", liked: false,
   },
   {
     id: -666, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Whole Mars Catalog: Tesla Self-Driving 월 활성 사용자 150만(1-2M 추정·연 2,600만 마일 기반)·세계 인구 80억 대비 0.02% 수준·향후 1,000배 성장 여력 프레임. 왜 중요: (1) 8/4 FSD 130억 마일 데이터의 사용자 관점·마일 총합 vs 개별 사용자 관점, (2) 1,000배 성장 여력·세계 인구 0.02% → 20% 시나리오, (3) 8/4 Wood $10T Robotaxi 시장과 결합·사용자 확대 → 매출 확대, (4) 오늘 Netherlands FSD 트라이얼과 결합·EU 확대로 MAU 증가 실체. 사용자 vs 마일 관계: 8/4 FSD 130억 마일 데이터(총 13,001,268,141 누적)·오늘 WMC 계산(월 활성 사용자 150만·연 마일 활성 2600만·사용자당 연 17-25 마일)·함의(FSD 활성 사용자당 낮은 이용률·이용 확대 여력·Unsupervised FSD 상용 시 급증 가능). 1,000배 성장 시나리오: 현재(MAU 150만·세계 인구 0.02%)·1,000배(MAU 15억·세계 인구 20%·극단)·중간 100배(MAU 1.5억·세계 인구 2%·훨씬 realistic). 어제까지 자율주행 흐름: 8/3 Cole Grinde Robotaxi·Jensen → 8/4 FSD 130억·Wood $10T·Ops 6개 시도 → 오늘 Netherlands FSD 트라이얼·WMC 150만 MAU·1,000배 프레임. 자율주행 사용자·매출 확장 프레임 다각. 반대: (1) 150만 MAU는 추정·정확 수치 미공개, (2) 1,000배는 극단·100배도 어려움, (3) Netherlands 트라이얼은 소규모, (4) EU·미국 외 시장 침투 시간. 앞으로 MAU 정확 수치·성장 페이스·유료 사용자 비율·국가별 확장·Unsupervised FSD 상용이 관찰 축.",
-    likes: 63, comments: 5, created_at: "2026-08-05T01:15:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-05T01:15:00.000Z", liked: false,
   },
   {
     id: -667, alias: "을지로 팔콘 #71", symbol: "AMZN",
     content: "Evan D·Barchart: Amazon Jeff Bezos 15M주 매도 계획 filed·총액 ~$4.07B·1994년 7월 창립 시 설립자 stock·오늘 AMZN OpenAI $50B 완료 시점에 나온 매도 뉴스. 왜 중요: (1) 오늘 AMZN OpenAI $50B 완료 시점에 나온 대규모 매도·CEO 창업자 매도, (2) insider 매도 30년 최고 흐름 지속·7/31 매크로 부담 지속, (3) Bezos의 지속적 매도 흐름·매년 대규모 매도 반복(Blue Origin·자선 등), (4) AMZN 주가 압박 요인·시장 물량 흡수 필요. Bezos 매도 배경: 과거 매도 사용처(Blue Origin 자금·자선 기부 Bezos Earth Fund·부동산·투자 다각화·개인 지출)·계획 vs 실 매도(Form 144 filed = 계획·실 매도는 90일 이내 실행·시장 상황에 따라 조정). AMZN 관련 오늘 흐름: 8/4 AMZN OpenAI $50B 공식 완료(Kalshi) → 오늘 Bezos $4.07B 매도 filed. 함의: OpenAI $50B 계약 후 CEO 창업자 매도 = 시장 반응 mixed 가능. 어제까지 매크로 흐름 결합: 7/31 insider 매도 30년 최고 → 8/1 Aschenbrenner 청산 → 8/3 Goldman $155B 강제 매도 경고 → 8/4 헤지 US 순매수 최대(반전) → 오늘 Bezos $4.07B 매도 + PLTR·AMD·SPCX 대박. 매크로 완화 vs insider 매도 대립 지속. 반대: (1) 15M주는 Bezos 총 보유(수억 주) 대비 소수, (2) 정기 매도 계획·시장 부담 제한, (3) OpenAI $50B가 AMZN 밸류 상승·매도 후에도 강세 지속 가능, (4) Bezos 매도는 개인 자산 관리·회사 부정 신호 아님. 앞으로 실 매도 실행·시장 반응·AMZN 시세 지속·Bezos 자금 사용처·다른 CEO/설립자 유사 매도가 관찰 축.",
-    likes: 47, comments: 4, created_at: "2026-08-05T01:22:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-08-05T01:22:00.000Z", liked: false,
   },
   {
     id: -668, alias: "광화문 늑대 #33", symbol: "SPX",
     content: "매크로 - Walter Bloomberg (Citadel Scott Rutner): '7월 sharp selloff·sector rotation이 excessive positioning을 정리했지만 broader bull market은 유지'·AI/반도체 heavy sold·leveraged ETF assets -$10B(6월 정점)·이제 투자자는 positioning보다 fundamentals에 focus 가능·'July did not change the structural bull market. It reset it.' 왜 중요: (1) 매크로 반전 프레임 확정·8/4 헤지 US 순매수 최대와 정합, (2) 7월 부담이 정리·8/1 Aschenbrenner 청산·insider 매도 30년 최고를 '재정'으로 재해석, (3) 강세장 지속 프레임·오늘 SPCX·PLTR·AMD 대박 실적의 배경, (4) 투자자 focus 전환·positioning → fundamentals. Citadel의 위치: Ken Griffin 세계 최대 헤지펀드·Scott Rutner 주식 담당·시장 큰 영향력·대형 기관 관점 = 시장 참고·실 매매 flow 반영·매크로 판단 신뢰. 오늘 실적 대박과의 결합: SPCX Q2 +92%·PLTR Q2 +63%/+225%·AMD Q2 +32%/DC +107%·Rutner 프레임과 정합(7월 매도로 excessive positioning 정리·오늘 실적이 fundamentals 확인·강세장 지속 근거). 어제까지 매크로 흐름 종합: 7/27-30 BRK 현금·NVDA CDS·KOSPI -8.17% → 7/31 Aschenbrenner·insider 매도 → 8/1 JPY 개입 대비·MSFT AI 사이버 → 8/3 Trump 이란 딜·Goldman $155B·헤지 원유 강세 → 8/4 Trump 이란 완화·Oil -7%·SPY ATH·헤지 US 순매수·MSFT +25%·AMZN OpenAI → 오늘 Citadel '7월 재정'·SPCX/PLTR/AMD 대박·Bezos 매도·AAPL vs OpenAI. 7월 부담 → 8월 반전 프레임 완결. 반대: (1) Rutner 관점은 개인 견해·Citadel 실 flow와 다를 수 있음, (2) 강세장 재정 vs 종료 판단 어려움, (3) Bezos $4.07B·AAPL vs OpenAI 등 부정 뉴스 존재, (4) Oracle CDS ATH·중국 AI DC 금지 등 부담 지속. 앞으로 실 강세장 지속·fundamentals focus 실 반영·SPY ATH 돌파·다음 실적 시즌·매크로 이벤트가 관찰 축.",
-    likes: 71, comments: 6, created_at: "2026-08-05T01:29:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-05T01:29:00.000Z", liked: false,
   },
   {
     id: -669, alias: "마포 올빼미 #24", symbol: "AAPL",
     content: "unusual_whales BREAKING: Apple이 OpenAI 상대로 preliminary injunction·permanent supervision 청구·9개 sworn declarations·28페이지 memorandum·expedited discovery 요구. Chang Liu(8년 Apple 근무, 현 OpenAI 'Member of Technical Staff')가 Apple trade secrets 2000+ 페이지 노출 주장·2020 Feb에 Apple 근무 중 다운로드 정황. 왜 중요: (1) 하이퍼-프런티어 AI 갈등 실체·Apple(하이퍼)와 OpenAI(프런티어 AI) 관계 파열, (2) 인력 이동 규제 필요성·대형 AI 회사 간 이직·정보 유출 리스크, (3) AI 사이클 리스크·오늘 SPCX·PLTR·AMD 대박과 대비되는 부정 뉴스, (4) Apple-OpenAI 파트너십 재검토·Apple Intelligence(iOS)에 OpenAI 통합 존재. Chang Liu 개별 케이스: Apple 8년 근무·2020년 2월 Apple 근무 중 문서 다운로드(혐의)·OpenAI 이직 'Member of Technical Staff'·2000+ 페이지 trade secrets 노출·Apple의 가장 sensitive 문서(Displays·Motes 등 하드웨어·모델 기술). Apple-OpenAI 관계: 기존 파트너십(Apple Intelligence iOS OpenAI ChatGPT 통합·Siri 확장·iOS·macOS 앱 통합)·소송 이후 리스크(파트너십 파열·Apple 자체 AI 확대·OpenAI iOS 통합 축소). 어제까지 관련 흐름: 8/1 MSFT AI 모델 사이버 공격 3개 조직·8/3 MSFT $10B 사이버·Palo Alto·8/4 AMZN OpenAI $50B 공식 완료·오늘 Apple vs OpenAI preliminary injunction. AI 안전·인력·정보 유출 이슈 다각 확대. 반대: (1) 소송은 소송·법원 판결 미확정, (2) Chang Liu 개별 케이스·OpenAI 조직 책임 별개, (3) OpenAI 반박·화해 가능성, (4) Apple의 방어적 조치·시장 지위 유지. 앞으로 법원 판결·OpenAI 대응·Apple-OpenAI 파트너십 재편·다른 AI 회사 인력 이동 규제·Apple Intelligence 방향이 관찰 축.",
-    likes: 65, comments: 5, created_at: "2026-08-05T01:36:00.000Z", liked: false,
+    likes: 65, comments: 0, created_at: "2026-08-05T01:36:00.000Z", liked: false,
   },
   {
     id: -670, alias: "종로 매 #12", symbol: "SPX",
     content: "매크로 - Oracle CDS ATH + 미 중국 AI DC 금지 초안. Barchart: Oracle의 부도 리스크(CDS)가 2008 Global Financial Crisis 정점을 넘어 사상 최고·'Oracle Warning of 2008' 프레임. Evan D: 미국이 중국 AI 데이터센터 운영 금지 초안 준비. 왜 두 이벤트가 중요: (1) 8/3 Oracle CAPEX 매출 50% 우려의 실 부도 리스크 실체·Oracle 리스크가 실 시장 반응으로, (2) 미-중 AI 갈등 확대·8/3 SPCX China 배제·Musk +TSLA 매출·중국 AI 규제 흐름, (3) 8/4 매크로 반전과 대비·오늘 강세 실적과 별개 부정 뉴스, (4) AI 사이클 리스크 시그널·CAPEX 부담 + 규제 리스크 이중. Oracle CDS 세부: CDS(Credit Default Swap)는 부도 보험 가격·CDS↑ = 부도 리스크↑·시장이 부도 우려 증가. 2008 정점 vs 오늘: 2008 Lehman·Bear Stearns 붕괴 vs 오늘 Oracle CDS 그 이상. Oracle 부도 리스크 요인: CAPEX 매출 50%(8/3)·OpenAI·xAI 대규모 계약 리스크·Nvidia GPU 대량 구매·FCF 압박 심화. 미 중국 AI DC 금지 초안: 금지 대상(중국 AI 데이터센터 운영·미국 기업의 중국 AI DC 참여 제한)·영향 시나리오(미국 하이퍼 MSFT·GOOGL·AMZN의 중국 사업 제한·Nvidia GPU 중국 수출 축소·미-중 기술 분리 확대). 8/4 매크로 완화와 대비: 8/4 완화(Trump 이란·Oil -7%·SPY ATH·헤지 US 순매수) vs 오늘 부담(Oracle CDS ATH·미 중국 AI DC 금지·AAPL vs OpenAI·Bezos $4.07B). 매크로 완화 vs 부담 다층 대립. 어제까지 흐름: 7/29 NVDA CDS 사상 최대·8/3 Oracle CAPEX 50% 매출·오늘 Oracle CDS ATH + 미 중국 AI DC 금지. AI 사이클 리스크 시그널 지속 축적. 반대: (1) CDS는 시장 프리미엄·실 부도 확정 아님, (2) 미 정부 초안은 실 발효까지 시간, (3) Oracle 매출 성장 지속 시 부도 리스크 완화, (4) 미-중 갈등은 이미 반영·추가 서프라이즈 제한. 앞으로 Oracle 실 부도 리스크 vs AI 매출 회수·미 중국 AI DC 금지 실 발효·Oracle 다음 실적·다른 하이퍼 CDS·부도 리스크가 관찰 축.",
-    likes: 51, comments: 4, created_at: "2026-08-05T01:43:00.000Z", liked: false,
+    likes: 51, comments: 0, created_at: "2026-08-05T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-04 신규 ──────────────────────────────────────────────────────
   {
     id: -641, alias: "여의도 매 #22", symbol: "MSFT",
     content: "MSFT가 지난 3거래일간 +25% 이상 상승·현재 시가 $489.41(GURGAVN). 8/1 +15.85%·+$400B 시총 반등 흐름이 지속 확대. 왜 중요: (1) 8/1 단기 이벤트 아닌 지속 트렌드 확인, (2) Mag 7 YTD -8.2% 하위그룹에서 회복 시작 명확, (3) 오늘 AMZN OpenAI $50B 완료·GOOGL Anthropic $53.4B와 결합해 하이퍼 전면 반등, (4) Q1 실적 + 자사주 $15B + 클라우드 수요 초과 + 오늘 $10B 사이버보안 대응 4중 촉매. 3일 +25%의 매크로 함의: 대형주 3일 +25%는 이례적·Mag 7 중 단기 최대 상승·시장이 MSFT 강세 확인. Mag 7 vs MSFT: YTD -8.2% 하위그룹 → 회복·+10~15% 근접 가능. MSFT 흐름 종합: 7/30 Q4 Azure $100B → 7/31 +$400B 반응 → 8/1 +15.85%·자사주 $15B → 오늘 3일 +25%·$489.41·$10B 사이버·Palo Alto. 반대 관점: (1) 3일 +25% 단기 급등·반전 리스크, (2) MSFT AI 사이버 이슈 8/1 지속, (3) $10B 사이버 대응은 이슈 해소는 아님, (4) 하이퍼 CAPEX 지속으로 FCF 압박. 앞으로 반등 지속·Mag 7 상위 회복·다른 하이퍼 유사 반등·FY27 가이던스·AI 안전 규제 완화가 관찰 축.",
-    likes: 96, comments: 8, created_at: "2026-08-04T00:04:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-04T00:04:00.000Z", liked: false,
   },
   {
     id: -642, alias: "강남 표범 #46", symbol: "AMZN",
     content: "Kalshi (JUST IN): Amazon이 OpenAI $50B 투자를 공식 완료. 8/3 Shay Boloor 보고 $500B 밸류·5% 지분·IPO 앞두고 프레임이 실 딜 확정. Anthropic $16B와 결합해 세계 최대 2개 프런티어 AI 랩 지분 보유. 왜 중요: (1) 8/3 프레임 실체 확정·시장 시나리오 완결, (2) 프런티어 AI 지분 게임 실체 확정 - GOOGL Anthropic·MSFT OpenAI 파트너십에 이어 AMZN도 실 지분·게임 완결, (3) AWS + AI 지분 이중 축 확립·유일한 이중 축, (4) OpenAI IPO 앞두고 확정 - 내년 IPO $500B 밸류 시 5% = $25B 지분 가치 즉시 반영. 3대 하이퍼 프런티어 AI 관계: AMZN(OpenAI $50B 지분·Anthropic $16B 지분·이중 유일)·MSFT(OpenAI 파트너십·Azure 서비스·파트너십 우위)·GOOGL(Anthropic $53.4B 지분·$15B DC 대출·Anthropic 집중). 다각 접근·프런티어 AI 지분 게임이 하이퍼 전면·다층 확대. AI 지분 흐름: 7/25 GOOGL Anthropic $8.4B → 7/28 OpenAI $500B DC → 7/31 GOOGL Anthropic $53.4B·$15B DC 대출 → 8/3 AMZN OpenAI $50B·5%·$500B 밸류·Anthropic $16B 결합(Shay Boloor) → 오늘 AMZN OpenAI $50B 공식 완료(Kalshi). 반대: (1) $500B 밸류는 IPO 프리미엄·조정 시 하락, (2) OpenAI IPO 시점 불확실, (3) AMZN·MSFT의 OpenAI 이중 관계(파트너십 vs 지분) 갈등 가능, (4) 반경쟁 규제 리스크. 앞으로 OpenAI IPO 시점·MSFT-OpenAI 관계 조정·AWS Bedrock/Claude 통합 매출·GOOGL·META 유사 대응·반경쟁 조사가 관찰 축.",
-    likes: 88, comments: 7, created_at: "2026-08-04T00:12:00.000Z", liked: false,
+    likes: 88, comments: 0, created_at: "2026-08-04T00:12:00.000Z", liked: false,
   },
   {
     id: -643, alias: "서초 콘도르 #59", symbol: "SPX",
     content: "매크로 - Trump 이란 완화(andrewwring). Trump 원문: 'IRANIAN LEADERSHIP IS DUPLICITOUS · THEY SAY WE AREN'T TALKING BUT THEY KNOW WE ARE · NO MATTER WHAT THEY SAY, WE ARE TALKING TO FIND A SOLUTION.' andrewwring 해석: 지난 주 이란 폭격 발언에서 180도 전환·Trump가 실제 협상 진행 중임을 인정·이란은 국내 정치·중동 리더십 위해 부인 필요·사실상 강세 신호. 시장 반응: Oil -7%·SPY ATH 1% 근접·8월 시작 개선(7월 부담 대비). 왜 중요: (1) 지정학 리스크 실 완화·8/3 Trump 이란 딜 후속·실 협상 인정으로 완화 실체화, (2) 매크로 완화 시나리오 확정·Oil -7% + SPY ATH 근접, (3) 8/1 Aschenbrenner 청산·insider 매도 30년 최고와 정반대·매크로 심리 반전, (4) 오늘 헤지 원유 강세와 정면 대립·시장이 완화 방향 선택. 매크로 완화 vs 부담 대립: 완화 요인(Trump 이란·Oil -7%·SPY ATH·헤지 US 순매수 2020.12 이후 최대·MSFT +25%·AMZN OpenAI $50B) vs 부담 요인(Goldman $155B 강제 매도·헤지 원유 강세 3월 이후 최대·Aschenbrenner·insider 매도 30년 최고). 시장 판단: 완화 우세·SPY ATH 근접이 실체. 8월 시작 vs 7월 부담: 7월 매크로 부담 → 8월 반전 프레임 성립. 반대: (1) Trump 발언은 실 딜 확정 아닌 협상 인정, (2) 이란 응답 필요·딜 실패 가능, (3) Oil -7%는 지정학 + 재고 반영 복합, (4) SPY ATH 근접은 강세지만 돌파 별개. 앞으로 이란 응답·실 딜 진전·유가·SPY ATH 돌파·Fed·8월 매크로 방향이 관찰 축.",
-    likes: 82, comments: 7, created_at: "2026-08-04T00:19:00.000Z", liked: false,
+    likes: 82, comments: 0, created_at: "2026-08-04T00:19:00.000Z", liked: false,
   },
   {
     id: -644, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Sawyer Merritt(Tesla 공식): FSD(Supervised) 누적 13,001,268,141 마일 돌파·July 4th 120억 도달 후 1개월 만에 10억 추가·City Miles 5,017,257,687 (38%). 왜 중요: (1) AI 훈련 데이터 우위 - 8/3 Jensen 'Musk 데이터 수집 우위' 프레임의 실 데이터·Waymo 220M miles 대비 60배 규모, (2) 월 10억 마일 가속 - FSD 채택률 상승 시사, (3) City Miles 38% - 도심 자율주행 상당 비율·Robotaxi 확장 근거, (4) 26 lifetimes worth of miles(WMC) - 인간 평균 수명 대비 26배. 안전 통계(WMC 분석): 미국 평균 사망률 1억 마일당 1.19명·13B 마일 예상 사망 ~155명·실제 FSD Supervised 사망 알려진 2건(보수적 5건)·예상 대비 ~3% 수준. Waymo vs Tesla 비교: Waymo 220M miles 2.6 lives saved · Tesla FSD Supervised 13B miles 60배 규모 · Tesla Robotaxi 400K miles 초기. 어제까지 흐름: 8/3 Cole Grinde Robotaxi 500K/월·주간 double-digit → Jensen 'Musk 3대 축 리더' → 오늘 FSD 13B·Wood $10T·Ops 6개 시도. 반대: (1) 13B는 Supervised 누적·Unsupervised 실 데이터 부족, (2) 사망 통계 표본 여전히 작음, (3) City 5B는 도심이지만 highway·suburban 대비 비율, (4) FSD Supervised는 운전자 주의 필요·완전 자율 아님. 앞으로 1개월당 마일 페이스·FSD Unsupervised 상용·City vs Highway 분류·사고 세부·Robotaxi 확장 시 데이터 폭발이 관찰 축.",
-    likes: 78, comments: 6, created_at: "2026-08-04T00:26:00.000Z", liked: false,
+    likes: 78, comments: 0, created_at: "2026-08-04T00:26:00.000Z", liked: false,
   },
   {
     id: -645, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "Adam Bloomberg: SPCX 락업 만료 8월 6일 시작·초기 20-25% 판매 가능·12월까지 순차 해제로 총 40% 유통 확대·주가는 이미 IPO 가 아래·8/4 첫 실적 발표 대기. 왜 중요: (1) 매도 압박 추가 - 오늘 사상 최저 종가·-50% ATH·이번 달 -34%에 락업 해제 추가, (2) 8/4 실적 앞두고 - 실적 결과 + 락업 해제 조합이 8월 SPCX 시세 결정, (3) 단계적 해제(20-25%→40%) - 갑작스러운 대량 매도 방지·시간 걸린 압박, (4) IPO 가 아래 - 초기 투자자 손실·매도 vs 유지 심리 대립. 시나리오: (A) 실적 상회 + 락업 매도 완만 - 시세 반등 트리거·2020 최저 회복·Wood·Baron 매수 지속·40% 흡수, (B) 실적 미스 + 락업 대량 매도 - 추가 하락·-60% ATH까지·심리 위축·기관 매도 연쇄, (C) 실적 mixed + 락업 부분 - 시세 횡보·12월까지 압박·40% 흡수 시간. 어제까지 SPCX 흐름 종합: 7/29 -50% ATH → 7/30 사상 최저 종가 → 7/31 미 우주군 $1.8B·Wood $50.2M → 8/1 Musk 99.99% 우주·Colossus BlackRock·NASA V3 → 8/3 Musk 12-24개월 +TSLA 매출·Flight 14·China 배제 → 오늘 락업 8/6·$1,435B·IAG 계약·Hughesnet 파산·Musk 재확인. 펀더멘털 축적 vs 시세 divergence 극단. 반대: (1) 락업 해제는 이미 알려진 이벤트·시장 반영 완료 가능, (2) 20-25% 초기는 실 매도 아님, (3) 40% by Dec는 5개월·급격 매도 아님, (4) 8/4 실적 강세 시 상쇄 가능. 앞으로 8/4 실적·8/6 이후 실 락업 매도·Wood·Baron 매수·12월까지 40% 흡수·다음 마일스톤이 관찰 축.",
-    likes: 71, comments: 6, created_at: "2026-08-04T00:33:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-04T00:33:00.000Z", liked: false,
   },
   {
     id: -646, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "AI Investment Research가 Musk 발언 상세: TSLA 지난 12개월 매출 $103.6B 참고치·Musk가 'SPCX가 그 규모 매출을 추가할 수 있다'·본인이 'WILL(할 것)이 아닌 COULD(가능하다)'로 표현 명확 구분·회의론자('few understand') 프레임. 원문: 'SpaceX could add an entire Tesla's worth of revenue in the next 12-24 months. I'm not saying they WILL. I'm saying they COULD.' 왜 중요: (1) 8/3 상세 재확인·TSLA $103.6B 참고치 명시로 규모 실체화, (2) 극단 프레임 완화·WILL → COULD로 시장 기대 관리·8/4 실적 앞두고 균형, (3) 8/4 실적 앞두고 - 실 데이터 자신감 or 심리 선점 전략, (4) Ron Baron $30-40T·Wood 강세와 결합·다층 강세 견해 정합. 12-24개월 실현 시나리오 4축: Starlink(오늘 IAG 50% 장거리·Hughesnet 파산으로 반사이익)·NSSL 정부(7/31 미 우주군 $3.4B·오늘 China 배제 우위)·Starship(8/3 Flight 14 upper catch·상용화 진전)·궤도 DC(오늘 Colossus 1.2 GW BlackRock·8/1 99.99% 우주 프레임). 반대: (1) COULD 완화 표현은 기대치 낮추기 의도 가능, (2) TSLA $103.6B는 12개월 매출·SPCX 매출 확장 참고로는 큰 도약, (3) Musk 이전 예상 delay 다수, (4) 8/4 실적 결과 관건. 앞으로 8/4 SPCX 첫 실적·매출 성장률·다음 4-8분기 프로파일·Starlink 국가별 매출·NSSL·궤도 DC 상용화가 관찰 축.",
-    likes: 65, comments: 5, created_at: "2026-08-04T00:40:00.000Z", liked: false,
+    likes: 65, comments: 0, created_at: "2026-08-04T00:40:00.000Z", liked: false,
   },
   {
     id: -647, alias: "종로 매 #12", symbol: "TSLA",
     content: "CATHIE WOOD 3중 프레임: (a) 자율주행 택시 시장 5-10년 내 $1B → $10T으로 10,000배 성장, (b) Tesla가 이 흐름에서 마진을 자동차 10%에서 서비스 60%로 6배 확장, (c) 2030년까지 Tesla 자율주행 팩스가 Waymo 대비 50% 낮은 가격. 왜 중요: (1) 오늘 흐름과 정합 - 8/3 Cole Grinde 월 50만 라이드·오늘 Ops 6개 시도 채용·FSD 13B 마일과 결합, (2) Tesla 밸류 상향 논거 - 마진 60%·시장 $10T = TSLA 향후 매출 확대 극단 시나리오, (3) Waymo와의 경쟁 프레임 명확화 - WMC의 Waymo 220M vs Tesla 400K 격차를 Tesla 미래 지배로 해석, (4) 캐시 우드 강세 지속 - 7/29 Wood 10년 리드·8/1 Wood $50.2M 매수와 정합. 시장 성장 시나리오: 보수적(5년) $1B→$10T = 연 CAGR ~155%·Robotaxi 채택률 급증 필요 · 중립(7년) 연 CAGR ~90%·매우 빠른 성장 · 낙관(10년) 연 CAGR ~59%·상대적 realistic. 반대: (1) $1B→$10T 10,000배는 극단, (2) 마진 60%는 초기 SW 수익성 가정, (3) Waymo·Zoox·BYD 등 경쟁 심화 시 마진 압박, (4) 규제·안전 이슈 발생 시 성장 둔화. 시사점: Tesla 사업 모델 전환(자동차→서비스)·극단 성장 시나리오·Waymo 대비 저비용 우위·Wood ARK 지속 강세. 앞으로 Robotaxi 실 매출 성장·월 라이드·Tesla 마진 개선·Waymo 매출·확장·규제·BYD·Xpeng 중국 경쟁이 관찰 축.",
-    likes: 84, comments: 7, created_at: "2026-08-04T00:47:00.000Z", liked: false,
+    likes: 84, comments: 0, created_at: "2026-08-04T00:47:00.000Z", liked: false,
   },
   {
     id: -648, alias: "여의도 매 #22", symbol: "SPCX",
     content: "DogeDesigner: International Airlines Group($IAG)가 SpaceX Starlink WiFi를 50% 장거리 항공기에 연말까지 설치·British Airways·Iberia·Aer Lingus·LEVEL 4개 항공사 그룹 rollout·SPCX Starlink 항공기 채택 대규모 확대. 왜 중요: (1) Starlink Aviation 대규모 계약 - IAG는 유럽 3대 항공 그룹·50% 장거리 항공기 = 수백 대 규모, (2) 오늘 Hughesnet 파산과 결합·경쟁사 이탈 + IAG 계약 = Starlink Aviation·주거 시장 완결, (3) 8/4 실적 앞두고 강세 신호·다른 항공사 그룹 유사 계약 확대 시사, (4) Musk +TSLA 매출 프레임 실체·오늘 재확인한 SPCX 매출 폭발의 근거. IAG 항공사 그룹: British Airways(영국 flag carrier·유럽-북미·아시아)·Iberia(스페인·유럽-중남미 특화)·Aer Lingus(아일랜드·유럽-북미)·LEVEL(저비용 장거리). IAG 규모: 유럽 상위 3대·연간 승객 1억 명 이상. 50% 장거리 항공기 규모: IAG 장거리 약 300-400대 추정·50% = 약 150-200대 Starlink 설치·연간 수천만 승객. Starlink Aviation 사업 실체: 항공기당 계약 대형·반복 매출 지속·매출 예측 가능성 높음. 어제까지 SPCX 흐름 종합: 7/31 미 우주군 $3.4B·Wood $50.2M → 8/1 Musk 99.99% 우주·Colossus BlackRock → 8/3 Musk 12-24개월 +TSLA·Flight 14·China 배제 → 오늘 락업 8/6·$1,435B·IAG·Hughesnet 파산·Musk 재확인. 반대: (1) 50% 연말까지 실현 미확정, (2) 다른 항공사 그룹 계약 미확인, (3) 새 경쟁사 진입 가능(Kuiper·Blue Origin), (4) 항공기 WiFi 매출 규모는 SPCX 전체 대비 소규모. 앞으로 다른 대형 항공사 그룹 유사 계약·Starlink Aviation ARR·8/4 실적 Aviation 세그먼트·항공사별 이용률이 관찰 축.",
-    likes: 61, comments: 5, created_at: "2026-08-04T00:54:00.000Z", liked: false,
+    likes: 61, comments: 0, created_at: "2026-08-04T00:54:00.000Z", liked: false,
   },
   {
     id: -649, alias: "강남 표범 #46", symbol: "TSLA",
     content: "Sawyer Merritt(Schmidt Automotive 인용): Tesla France 7월 registrations +86% YoY·2026 두 번째 최고월·Model 3/Y Norway 신 기록·인센티브 rich 시장(France·Germany) 하반기 급증 예상·Sweden·Norway·Spain 약세는 segment 반영. 왜 중요: (1) 8/3 데이터 상향 수정·sales +26%(Ming/CCFA)에서 registrations +86%로 훨씬 강한 회복 확인, (2) Norway 신 기록·Model 3/Y 개별 시장 최대 규모, (3) 인센티브 rich 시장 하반기 급증 프레임·유럽 회복이 국가별 편차 있고 인센티브에 견인, (4) 글로벌 다각 회복 확인·오늘 Colombia +18% + France +86% + Norway 신 기록 = 3대 대륙 회복. sales vs registrations 기준 차이: sales(CCFA·8/3)는 실 판매 계약 완료·registrations(Schmidt·오늘)는 실 번호판 등록·registrations가 sales보다 후행·+86% registrations = 실 시장 흡수 확정. 어제까지 TSLA 유럽 흐름: 8/3 France sales +26%·유럽 회복 시그널 → 오늘 France registrations +86%·Norway Model 3/Y 신 기록·Schmidt 하반기 급증 예상. 유럽 회복이 확대·데이터 갱신마다 상향. 반대: (1) registrations vs sales 기준 차이 이해 필요, (2) 2024 대규모 하락에서 회복 = base effect 지속, (3) Sweden·Norway·Spain 약세 지속·국가별 편차, (4) 인센티브 rich 시장은 정책 변화 시 반등 리스크. 시사점: TSLA 유럽 매출 축 회복 확대·Norway 신 기록·하반기 급증 프레임·반Musk 배경 극복. 앞으로 8월 France·Germany·Norway·Sweden·Spain 반등·인센티브 정책·Q3 유럽 매출 분기 실적이 관찰 축.",
-    likes: 58, comments: 5, created_at: "2026-08-04T01:01:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-08-04T01:01:00.000Z", liked: false,
   },
   {
     id: -650, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Roland Pircher: Tesla Colombia 7월 1,911대 판매·+12% 시장 점유율·BEV 침투율 18.2% 중 Tesla 40% 점유·Tesla 4위 브랜드·Model Y 최다·94% Model Y·6% Model 3·3개월 중 2위 최고월. 왜 중요: (1) 신흥 시장 지배·Colombia에서 4위 브랜드·BEV 40% 점유 = 극단적 강세, (2) 오늘 France·Norway 회복과 결합·3대 대륙(유럽·라틴 아메리카) 회복 다각 확인, (3) Model Y 지배(94%)·소형 시장에서 Model Y 우위·Model 3는 6%만, (4) BEV 시장 성장(18.2%)·Colombia BEV 침투율 급증·Tesla가 최대 수혜. 신흥 시장 확장 프레임: 중남미 시장(Brazil 세계 6대·Mexico NAFTA 통합·Colombia 성장 시장·Chile·Peru 소규모). Tesla 진입 전략: Colombia 성공·Brazil·Mexico 확대 시나리오·저비용 Model Y·Cybertruck 향후 진입. TSLA 지역별 매출 흐름: 7/25-31 상하이 지속·미국 강세 → 8/1 US LFP Megapack 첫 출하 → 8/3 France sales +26%·상하이 95% 중국 부품 → 오늘 France registrations +86%·Norway 신 기록·Colombia 1,911대·BEV 40%. TSLA 글로벌 다각 회복 확인·신흥 시장 진출 성공. 반대: (1) Colombia는 소규모 시장·절대 규모 미미, (2) BEV 침투율 18.2%는 아직 초기, (3) 3개월 중 2위 최고월이지만 지속 여부, (4) 6% Model 3는 판매 차종 다변화 부족. 시사점: Tesla 신흥 시장 확장·Model Y 소형 시장 지배·BEV 시장 개척·글로벌 다각 회복. 앞으로 Colombia 8월 지속·Brazil·Mexico 진출 확대·BEV 시장 침투 확대·Model 3 회복이 관찰 축.",
-    likes: 47, comments: 4, created_at: "2026-08-04T01:08:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-08-04T01:08:00.000Z", liked: false,
   },
   {
     id: -651, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Yolo: Tesla가 Robotaxi Operations Manager 채용을 Las Vegas·Phoenix Arizona·Austin·Dallas·Houston Fort Worth·San Antonio Texas 6개 시도에서 대량 확대·Associate Roles도 다수·Robotaxi 상용 확장 실 준비. Texas 4개 시도(이미 상용 배치 진행) + Nevada·Arizona 신 진입. 왜 중요: (1) 오늘 Wood $10T 프레임의 실체·Robotaxi 시장 $10T 예상의 인력 준비, (2) 8/3 Cole Grinde 월 50만 라이드 확대·실 상용 배치 인력 대량 준비, (3) Texas 중심 확장·이미 Austin에서 파일럿·Houston·SA·Dallas 확장 = 텍사스 전역 커버, (4) Nevada·Arizona 신 진입·새 시장 개척·라스베이거스는 관광지 특성. Cybercab 배포와의 연계: 7/24 TX 파일럿·7/28 Houston 133 Cybercabs·SA 배치·7/31 Cybercab self-certify 규제 우위·8/3 Cole Grinde 월 50만·매입 계획·오늘 6개 시도 Ops 채용 확대. Cybercab 실 상용 대규모 확장 준비. 시장 규모: 초기 6개 시도(각 도시 수백만 승객)·확장 시나리오(미국 20개 대도시 인구 수천만·국제 확장·세계 규모)·Wood $10T 프레임 실체 지원. 어제까지 관련 흐름: 7/24 Cybercab TX 파일럿 → 7/28 Houston 133·SA 배치 → 7/31 self-certify·10 million 차량 → 8/3 Cole Grinde 500K/월·주간 double-digit → 오늘 Wood $10T·6개 시도 채용·FSD 13B. Robotaxi 사업 성장 다층 축적. 반대: (1) 채용 확대 = 상용 배치 확정 아님·시점 미확인, (2) Texas 중심 편중·전국 확산 시간, (3) Cybercab 실 대량 생산·배치 시점 불확실, (4) Wood $10T는 극단 전망·실 매출 여전히 초기. 앞으로 실 배치 시점·Robotaxi 매출·이용률·다른 시도 확장·국제 확산·규제 지속 우호가 관찰 축.",
-    likes: 63, comments: 5, created_at: "2026-08-04T01:15:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-04T01:15:00.000Z", liked: false,
   },
   {
     id: -652, alias: "광화문 늑대 #33", symbol: "MSFT",
     content: "Gaia: MSFT가 사이버보안에 $10B 투자·Palo Alto Networks와 파트너십. 8/1 MSFT AI 모델 사이버 공격 3개 조직 침입 이슈(unusual_whales/Bloomberg)에 대한 실 대응·AI 보안 축 대규모 확대. 왜 중요: (1) 8/1 AI 사이버 이슈 실 대응·MSFT AI 3개 조직 침입·규제 압박 선제 대응, (2) AI 보안 축 확대·오늘 3일 +25% 강세와 결합·AI 안전 프레임 개선, (3) Palo Alto Networks 파트너십·사이버보안 리더 협업으로 신뢰도 확대, (4) AI 규제 완화 기대·실 대응 조치로 규제 압박 완화 가능. Palo Alto Networks(PANW) 배경: 세계 최대 순수 사이버보안 기업·Next-Generation Firewalls·Cortex AI 보안 플랫폼·Prisma Cloud. 협업 시너지: MSFT Azure OpenAI + PANW Cortex = AI 보안 통합·MSFT Copilot 보안 강화·Enterprise AI 신뢰도 향상. 어제까지 MSFT AI 보안 흐름: 7/28 SpaceX+NVIDIA Open Secure AI Alliance 창립 → 8/1 MSFT AI 사이버 3개 조직 침입 → 오늘 MSFT $10B 사이버보안·Palo Alto 파트너십 실 대응. AI 안전이 담론 → 사건 → 실 대응으로 진화. 반대: (1) $10B는 하이퍼 CAPEX 대비 소규모, (2) 실 효과는 시간 소요, (3) AI 사이버 근본 해결 아닌 대응, (4) 다른 AI 회사(OpenAI·Anthropic) 유사 조치 없이 MSFT만 부담. 시사점: AI 안전 규제 완화 기대·Palo Alto 수혜·MSFT 강세 지속·AI 산업 안전 프레임 강화. 앞으로 Palo Alto 통합·매출 반영·AI 보안 규제 완화·다른 하이퍼 유사 조치·AI 사이버 사건 감소가 관찰 축.",
-    likes: 54, comments: 4, created_at: "2026-08-04T01:22:00.000Z", liked: false,
+    likes: 54, comments: 0, created_at: "2026-08-04T01:22:00.000Z", liked: false,
   },
   {
     id: -653, alias: "마포 올빼미 #24", symbol: "SPX",
     content: "매크로 - Barchart: 헤지펀드가 지난 주 US 주식 순매수(net long)를 2020년 12월 이후 가장 빠른 속도로 확대·8월 매크로 반전 시그널. 왜 중요: (1) 매크로 심리 반전 확인·8/1 Aschenbrenner 청산·insider 매도 30년 최고와 정반대 방향, (2) 2020.12 참고 시점·코로나 회복 초기·강세 시작 시점 = 유사 반전 기대, (3) 오늘 3중 촉매 반응·MSFT +25% + Trump 이란 완화 + SPY ATH 근접, (4) Goldman $155B 강제 매도 경고와 대립·8/3 매도 경고에도 실제로는 순매수. 매크로 완화 vs 부담 대립: 완화 지표(헤지 US 순매수 최대·MSFT +25%·Trump 이란·Oil -7%·SPY ATH·AMZN OpenAI $50B) vs 부담 지표(Goldman $155B·헤지 원유 강세·Aschenbrenner·insider 매도 30년 최고). 시장 실 방향: 완화 우세·헤지 순매수 확인. 2020년 12월 참고: 당시 상황(코로나 백신·트럼프 대선 확정·매크로 회복·이후 2021 강세 지속) vs 오늘 유사성(7월 매크로 부담 → 8월 완화·MSFT·AMZN 강세 실적·지정학 완화·유사 반전 시나리오). 어제까지 매크로 흐름: 7/27-30 BRK 현금·NVDA CDS·KOSPI -8.17% → 7/31 Aschenbrenner·insider 매도 → 8/1 JPY 개입 대비·MSFT AI 사이버 → 8/3 Trump 이란 딜·Goldman $155B·헤지 원유 강세 → 오늘 Trump 이란 완화·Oil -7%·SPY ATH·헤지 US 순매수 최대·MSFT +25%·AMZN OpenAI 완료. 7월 부담 → 8월 반전 프레임 확정. 반대: (1) 헤지 flow는 short-term·지속성 미확인, (2) 2020.12 반전은 통화 정책·재정 지원 배경, (3) 8/3 Goldman $155B 강제 매도 여전히 리스크, (4) SPY ATH 돌파 시 저항선. 앞으로 헤지 flow 지속·SPY ATH 돌파·Goldman $155B 실체·VIX 변동·8월 지속 반등이 관찰 축.",
-    likes: 74, comments: 6, created_at: "2026-08-04T01:29:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-04T01:29:00.000Z", liked: false,
   },
   {
     id: -654, alias: "종로 매 #12", symbol: "SPCX",
     content: "AI Investment Research: SPCX 현재 주가 implied 시가총액 $1,435B·34 거래일 연속 $1T 이상 유지·-50% ATH·사상 최저 종가에도 mega-cap 지위 확인. 왜 중요: (1) -50% ATH에도 mega-cap 유지·시세 급락에도 여전히 $1T mega-cap, (2) 34 거래일 연속 $1T·지속적 mega-cap·안정성 프레임, (3) Ron Baron $30-40T와 대비·현재 $1.4T vs 장기 $30-40T = 20-30배 상승 여력, (4) 8/4 실적 앞두고 실 밸류 확인·실적 결과에 따른 시세 변동성 기준. SPCX 시총 흐름: ATH 시점 $141.02(총 시총 약 $2.8T 추정) → 현재(-50% ATH) $1,435B → 34 거래일 $1T 유지. 하이퍼스케일러 비교(참고): Apple $3.5T+ · MSFT $3.5T+ (오늘 +25% 반영) · Nvidia $3T+ · Google $2.5T+ · Amazon $2T+ · SPCX $1.4T. SPCX가 mega-cap 6대 그룹 진입·미상장이지만 시총 규모는 대형주. 어제까지 SPCX 프레임 종합: 7/23 Wood '가장 중요' → 7/25 Jonas $135 → 7/27 Ron Baron $30-40T → 7/29 Wood 10년 리드·-50% ATH → 7/30-31 미 우주군 $3.4B·Wood $50.2M → 8/1 Musk 99.99% 우주·Colossus BlackRock·NASA V3 → 8/3 Musk 12-24개월 +TSLA·Flight 14·China 배제 → 오늘 락업 8/6·$1,435B·IAG·Hughesnet 파산·Musk 재확인. 펀더멘털 축적 + 시세 divergence + 8/4 실적 임박. 반대: (1) implied 시총은 실 유통 주식 기준·전체와 다름, (2) -50% ATH는 여전히 큰 하락, (3) 34 거래일은 상대적 짧은 기간, (4) Ron Baron $30-40T는 20-30년 후 전망·현재 시세 격차. 앞으로 8/4 실적 후 시세·34 거래일 $1T 지속·8/6 이후 실 시세·12월까지 40% 유통 흡수가 관찰 축.",
-    likes: 43, comments: 3, created_at: "2026-08-04T01:36:00.000Z", liked: false,
+    likes: 43, comments: 0, created_at: "2026-08-04T01:36:00.000Z", liked: false,
   },
   {
     id: -655, alias: "부산 갈매기 #77", symbol: "SPCX",
     content: "Sawyer Merritt(EchoStar Q2 인용): US 위성 인터넷 Hughesnet이 Chapter 11 파산 신청·현금 부족 + Starlink에 가입자 상실·EchoStar Q2 broadband 가입자 632K로 -59K 감소·Starlink Aviation·주거·기업 다각 경쟁 강화. 왜 중요: (1) Starlink 경쟁 우위 확정·주요 경쟁사 파산 = Starlink 실체적 시장 지배, (2) 오늘 IAG 계약과 결합·Hughesnet 이탈 + IAG 계약 = Starlink Aviation·주거 시장 완결, (3) 8/4 실적 앞두고 강세 신호·Starlink 매출 성장 지속 시사, (4) Musk +TSLA 매출 프레임 실체·SPCX 매출 폭발의 실 근거. Hughesnet 배경: EchoStar 소유·US 위성 인터넷 리더(Starlink 전)·농촌·원격 지역 서비스·GEO 위성 사용. Starlink vs Hughesnet: Starlink(LEO 위성·저지연·고속) vs Hughesnet(GEO 위성·고지연·저속) - 기술 격차 Starlink 압도적. Starlink 사업 확장 실 데이터: 오늘 Starlink 뉴스(IAG 50% 장거리·Hughesnet 파산·EchoStar Q2 -59K)·Starlink 매출 성장 시사(Aviation IAG + 다른·주거 경쟁사 이탈·기업 다각). 어제까지 SPCX 매출 흐름: 7/23 Wood 프레임 → 7/25 Jonas $135·All-in Starship → 7/28 SPCX+NVIDIA Open Secure AI → 7/31 미 우주군 $3.4B → 8/1 Musk 99.99% 우주 → 8/3 Musk 12-24개월 +TSLA → 오늘 IAG·Hughesnet 파산·$1,435B·Musk 재확인. SPCX Starlink 사업 다각 성장 확인. 반대: (1) Hughesnet 파산은 개별 이슈·시장 전체 영향 제한, (2) EchoStar 632K는 규모 대비 작음, (3) 새 경쟁사 진입 가능(Amazon Kuiper·Blue Origin), (4) Starlink 매출 정확 수치 미공개. 시사점: Starlink 시장 지배 확정·SPCX Starlink 반사이익·8/4 실적 강세 근거·위성 인터넷 시장 재편(LEO 우위·GEO 이탈). 앞으로 다른 위성 인터넷 경쟁사·Starlink 매출 성장률·8/4 실적·Kuiper 진입·Aviation·주거·기업 각각 성장이 관찰 축.",
-    likes: 51, comments: 4, created_at: "2026-08-04T01:43:00.000Z", liked: false,
+    likes: 51, comments: 0, created_at: "2026-08-04T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-03 신규 ──────────────────────────────────────────────────────
   {
     id: -626, alias: "여의도 매 #22", symbol: "TSLA",
     content: "TSLA·SPCX 합병 다층 축적(Jimmy·Kalshi·The Limiting Factor). Jimmy가 두 소식통 근거로 Tesla 프리미엄 인수 $600-$630/주 프레임·필요 표 확보 가능·Multiple significant tailwinds가 양사 재평가 견인. Kalshi 2028 이전 합병 확률 60%(7/27 74%에서 하향·8/1 Musk 'fake news' 부인 반영). Limiting Factor는 SpaceX 상장 후 Democratic 통제가 2028년 되기 전 트리거로 2027 하반기 시점 논거·Musk도 그때까지 기다리지 않을 것. 8/1 Musk 명시 부인('This has never even come up in a discussion ever · absolutely fake news')에도 세 소스가 프레임 유지·Kalshi는 74%→60% 하향으로 부인 반영. 확률 변동: 7/23 Munster 90% → 7/24 Kalshi 79% → 7/27 Kalshi 74% → 8/1 Musk 부인 → 오늘 Kalshi 60%·Jimmy $600-$630·LF H2 2027. 확률은 하락했지만 프레임은 유지·시점 논거 구체화. 반대: Jimmy 두 소식통은 익명·Musk 명시 부인·Kalshi 60%는 하향 추세·LF 시점은 개인 논거. 앞으로 소식통 신뢰도·Kalshi 추이·Musk 후속 발언·2027 하반기 이벤트가 관찰 축.",
-    likes: 88, comments: 7, created_at: "2026-08-03T00:04:00.000Z", liked: false,
+    likes: 88, comments: 0, created_at: "2026-08-03T00:04:00.000Z", liked: false,
   },
   {
     id: -627, alias: "강남 표범 #46", symbol: "AMZN",
     content: "AMZN이 OpenAI에 $50B 투자·5% 지분·$500B IPO 밸류로 IPO 앞두고(Shay Boloor). 기존 Anthropic $16B와 결합해 세계 최대 2개 프런티어 AI 랩 지분 보유·합계 $66B. 별개로 In America: AMZN 매출 20% 성장 재개. 왜 중요: (1) 프런티어 AI 지분 게임 진입 - GOOGL의 Anthropic($53.4B 증가)에 이어, (2) AWS + AI 지분 이중 축(하이퍼스케일러 중 유일), (3) OpenAI IPO $500B 밸류 5% = $25B 지분 가치, (4) MSFT-OpenAI vs AMZN-OpenAI 다른 접근(파트너십 vs 지분). AI 지분 흐름 종합: 7/25 GOOGL의 Anthropic $8.4B → 7/28 OpenAI $500B DC → 7/31 GOOGL의 Anthropic Q2 $53.4B 증가·$15B DC 대출 → 오늘 AMZN OpenAI $50B·5%. 프런티어 AI 지분 게임이 하이퍼스케일러 전면 확대. AMZN 이중 축: (a) AWS 인프라(20% 성장 재개)·(b) OpenAI+Anthropic 지분 → 지분 상승 = AMZN 자산·AWS 서비스 = 실 이익. 반대: (1) $500B 밸류는 프리미엄·조정 시 하락, (2) 실 이익은 IPO 시 실현, (3) 반경쟁 규제 리스크(두 프런티어 랩 major stake), (4) Anthropic $16B 실 매출 미미. 앞으로 OpenAI IPO 시점·AWS Bedrock/Claude 성장·반경쟁 조사·GOOGL·MSFT 대응이 관찰 축.",
-    likes: 96, comments: 8, created_at: "2026-08-03T00:12:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-03T00:12:00.000Z", liked: false,
   },
   {
     id: -628, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "Musk 극단 강세 발언(Ely 인용): 'SPCX가 12-24개월 안에 TSLA 전체 매출에 해당하는 규모의 매출을 새로 추가할 수 있다.' TSLA 연 매출 ~$100B+ 규모 참고 시 SPCX가 12-24개월 내 이 규모 추가 = 매출 폭발 시나리오. 왜 중요: (1) SPCX 매출 폭발 프레임(Starlink·NSSL·Starship·궤도 DC 4중), (2) 8/1 '99.99% 컴퓨트 우주로·SPCX money printer' 프레임 확장, (3) 8/4 첫 실적 앞두고 극단 강세 발언 = 실 데이터 자신감 or 심리 선점, (4) Ron Baron $30-40T·Wood 강세와 결합. 12-24개월 실현 시나리오 4축: Starlink direct-to-phone+국가 확대·NSSL 정부($3.4B/이틀·오늘 China 배제 우위)·Starship 상용화(오늘 Flight 14 upper catch)·궤도 DC(오늘 Colossus 1.2 GW BlackRock). 8/1 Musk 99.99% 우주 프레임과 결합해 SPCX 실 매출 축이 궤도 DC까지 확장. 반대: (1) 12-24개월 극도로 짧음, (2) TSLA 전체 매출 추가는 극단, (3) Musk 이전 예상들 delay 다수(Semi·Cybertruck·FSD), (4) 오늘 사상 최저 종가에서 심리 부양 성격 가능. SPCX 강세 축적: 7/23 Wood '가장 중요' → 7/27 Baron $30-40T → 7/29 Wood 10년 리드·-50% ATH → 7/31 미 우주군 $1.8B·Wood $50.2M → 8/1 Musk 99.99% 우주·Colossus BlackRock·NASA V3 → 오늘 Musk 12-24개월 +TSLA 매출·Flight 14 upper catch·China 배제. 앞으로 8/4 첫 실적·매출 성장률·Starlink 국가별·NSSL 추가·궤도 DC 상용화가 검증 축.",
-    likes: 82, comments: 7, created_at: "2026-08-03T00:19:00.000Z", liked: false,
+    likes: 82, comments: 0, created_at: "2026-08-03T00:19:00.000Z", liked: false,
   },
   {
     id: -629, alias: "을지로 팔콘 #71", symbol: "SPX",
     content: "Trump가 이란 공격 취소·중동 딜 진행(Investing visuals 인용). 딜: 호르무즈 해협 개방 + 핵무기 없이 조건 · 8월을 7월보다 낫게 시작 신호. 왜 중요: (1) 지정학 리스크 완화, (2) 유가 안정 시나리오(호르무즈 해협 개방·세계 원유 해상 수송 20% 통과), (3) 8월 개선 신호(7월 부담 대비), (4) 핵비확산. 오늘 헤지 원유 강세와 divergence: Trump 딜=유가 하락 시그널 vs 헤지펀드 원유 강세 포지션 3월 이후 최대=유가 상승 시그널. 두 시그널 divergence = 시장 방향 불명확 · 유가 양방향 변동성 확대. 시나리오 3가지: (A) 실 개입 완화·유가 안정·매크로 개선, (B) 딜 실패·이란 갈등·유가 급등, (C) 부분 진행·혼란 지속. 매크로 흐름 종합: 7/27 BRK 현금 $317B·숏 15년 최고 → 7/29 반도체 밸류·NVDA CDS → 7/30 KOSPI -8.17% → 7/31 Aschenbrenner 청산·insider 매도 30년 최고 → 8/1 JPY 개입 대비·MSFT AI 사이버 → 오늘 Trump 이란 딜(완화)·Goldman $155B(부담)·헤지 원유(혼란). 매크로 완화·부담·혼란 다층 · 방향 불명확. 반대: (1) 협상 진행 중·실 체결 시간, (2) 이란 응답 필요, (3) 봉쇄 위협 지속 가능, (4) 8월 방향은 여러 매크로 종합. 앞으로 실 체결·이란 응답·유가 반응·이스라엘 방문·다른 지정학이 관찰 축.",
-    likes: 71, comments: 6, created_at: "2026-08-03T00:26:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-03T00:26:00.000Z", liked: false,
   },
   {
     id: -630, alias: "광화문 늑대 #33", symbol: "SPX",
     content: "Goldman Sachs가 이번 달 글로벌 시장에 $155B 강제 매도(forced selling) 경고(⚡). 어제 하이퍼 CAPEX $155B와 같은 숫자 divergence · 리밸런싱·마진콜·모멘텀 unwind 복합 요인. 왜 중요: (1) $155B 대형 규모 = 시장 변동성·주요 자산 조정, (2) 어제 하이퍼 CAPEX $155B와 같은 숫자(흥미로운 우연), (3) 8월 시장 부담 축적(Aschenbrenner·insider 매도 30년 최고 + 오늘), (4) 강제 매도 = 심리 부담·연쇄 반응. 강제 매도 요인 3축: 리밸런싱(60/40·지수)·마진콜(레버리지 청산·Aschenbrenner 반복 가능)·모멘텀 unwind(CTA·Mag 7 YTD 부진 종목 추가 매도). 시나리오: (A) 실 매도 실현 - 8월 변동성·Mag 7 조정·SPCX 추가 하락, (B) 매도 완화 - Trump 딜·MSFT·AMZN 강세로 상쇄, (C) 부분 실현 - $50-100B·특정 섹터. 반대: (1) Goldman 경고 항상 실현 아님, (2) 어제 하이퍼 CAPEX·MSFT +$400B 강세 상쇄, (3) Trump 이란 딜 심리 개선, (4) 강제 매도는 단발성. 8월 매크로 축적 흐름: 8/1 JPY 개입 대비·MSFT AI 사이버 → 오늘 Trump 딜(완화)·Goldman $155B(부담)·헤지 원유(혼란)·Oracle CAPEX 50%. 매크로 시그널이 완화·부담·혼란 다층·방향 불명확. 앞으로 8월 실 매도 규모·리밸런싱 시점·마진콜·Fed·VIX가 검증 축.",
-    likes: 79, comments: 6, created_at: "2026-08-03T00:33:00.000Z", liked: false,
+    likes: 79, comments: 0, created_at: "2026-08-03T00:33:00.000Z", liked: false,
   },
   {
     id: -631, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "Cole Grinde의 Tesla Q2 실적 요약: 월 50만 라이드 접근·연초 대비 매주 double-digit 성장·Robotaxi 성장이 'literally exponential'·Cybercab·Semi·Cybersedan 매입 계획으로 unmanufactured miles 캐파 성장에 매칭. 왜 중요: (1) Robotaxi 실 매출 축 확대 - 자동차 판매 + FSD 라이선싱 + Robotaxi 이중 매출, (2) 월 50만 라이드 규모 - 초기이지만 지속 성장 시 Uber·Lyft 대비 상당, (3) 차량 종류 확대(Cybercab·Semi·Cybersedan) - 시장 세분화, (4) 캐파 성장 매칭 명시 - unmanufactured miles = 아직 생산되지 않은 마일리지 성장·수요 대비 캐파 확장. Cybercab 흐름 종합: 7/24 TX 파일럿 → 7/28 Houston 133 Cybercabs·SA 배치 → 7/29 NHTSA AV 정책 대개편(Tesla 우호) → 7/31 Cybercab self-certify 규제 우위 → 오늘 월 50만 라이드·매입 계획. Cybercab이 규제 우위+실 상용+매입 계획 3중 축. 반대: (1) 500K는 Uber(월 수천만) 대비 극소, (2) 'literally exponential'은 초기 저기저 프레임 가능, (3) Cybercab 실 인도 시점·수익화 지표 미확인, (4) Robotaxi가 자체 매출 축인지 아직 Tesla 실적에서 별도 세그먼트 아님. 앞으로 월 라이드 세부·Cybercab 배치·Robotaxi 매출·이익·Semi 상용·Cybersedan 발표가 관찰 축.",
-    likes: 63, comments: 5, created_at: "2026-08-03T00:40:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-03T00:40:00.000Z", liked: false,
   },
   {
     id: -632, alias: "종로 매 #12", symbol: "NVDA",
     content: "Jensen Huang: 'Elon Musk는 AI 미래·자율주행·휴머노이드 로봇 3대 축을 이끌 phenomenal position에 있다'(DogeDesigner). Tesla 대량 차량으로 세계 데이터 수집 우위·Optimus·cognitive AI 3개 영역이 AI에서 가장 중요한 3대 영역·Musk 매우 낙관적·가장 중요한 AI 문제 대규모 작업. 왜 중요: (1) NVDA CEO 공식 지지 - 7/31 'xAI 더 못 준 것 유일한 후회'에 이어 3대 축 리더 프레임 공식화, (2) NVDA-Tesla·xAI 결합 강화·GPU 공급 우선순위 프레임, (3) Tesla 데이터 수집 우위 - 수백만 FSD 차량·매일 수억 마일 driving 데이터·Waymo·GM Cruise 대비 100배+, (4) 3대 축: xAI(Grok·Colossus)·Tesla 자율주행(FSD·Robotaxi)·Optimus(휴머노이드) = 향후 몇 년 AI 최중요 영역. Jensen-Musk 흐름 종합: 7/26 Musk 'AI 10년 내 통제 위치' → 7/28 SpaceX+NVIDIA Open Secure AI Alliance 창립 → 7/29 Kalshi 74% → 7/31 Jensen 'xAI 더 못 준 것 유일한 후회' → 오늘 Jensen 'Musk 3대 축 리더'. NVDA-Musk 축 다각도 강화. 3대 축 실 상용: xAI(Grok 4·5·Colossus 오늘 1.2 GW BlackRock)·Tesla 자율주행(Robotaxi 월 50만 오늘·Cybercab TX·Houston·SA)·Optimus(7/28 Optimus factory hires Giga Texas). 반대: (1) Jensen 발언은 개인적·NVDA GPU 공급 우선순위 홍보 성격, (2) '3대 축 리더' 프레임이 Musk 브랜드 강화·실체 대비 과도 가능, (3) 다른 AI 회사(OpenAI·Anthropic·Google) 강세·Musk만이 리더는 아님, (4) 휴머노이드 상용화까지 오랜 시간. 앞으로 NVDA-Tesla GPU 공급 우선순위·NVDA-xAI 지분 확대·Optimus 배치·AI 3대 축 진전이 관찰 축.",
-    likes: 74, comments: 6, created_at: "2026-08-03T00:47:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-08-03T00:47:00.000Z", liked: false,
   },
   {
     id: -633, alias: "여의도 매 #22", symbol: "SPCX",
     content: "SpaceX Starship Flight 14에서 첫 upper stage(2단) tower catch 시도(Space and Technology·Musk 확인). Flight 13 착륙 성공 후 다음 마일스톤 · 완전 재사용 로드맵 진전. 왜 중요: (1) 완전 재사용의 시작 - Booster만 회수했던 SPCX가 2단도 회수 = 100% 재사용 로켓 실현, (2) 발사비 급감 - 완전 재사용 시 kg당 $500-$1000/kg에서 $10-$50/kg로 급감 예상, (3) 궤도 DC 실 가능성 급증 - 저비용 발사 = 궤도 DC 실 상용화 · Musk 99.99% 우주 프레임 실체화, (4) 화성 유인 미션 - 저비용 재사용 = 대량 페이로드·다인 미션. Starship 흐름 종합: 7/25 All-in Starship → 7/28 Flight 13 히트실드 스트레스 → 7/29 Flight 13 착륙 → 8/1 NASA Super Heavy V3 풍동 테스트 → 오늘 Flight 14 upper catch·Musk 12-24개월 +TSLA 매출·China 배제. Starship 로드맵이 flight마다 진전. 반대: (1) 첫 시도 실패 가능·실 성공까지 여러 flight, (2) 2단 tower catch는 기술적으로 훨씬 어려움(재진입 후 정밀 제어), (3) 완전 재사용까지 이터레이션 다수, (4) 상용 kg 비용 실 감소 여러 년. 시사점: (a) 완전 재사용 실 시작 = SPCX 로켓 사업 결정적 마일스톤, (b) 저비용 발사 시대 = 우주 사업 전반 확대, (c) NASA·정부 계약 우위 강화(오늘 China 배제 + Flight 14 = 정부 신뢰), (d) 매출 실체 프레임(Musk 12-24개월 +TSLA 매출의 물리 근거). 앞으로 Flight 14 발사 시점·2단 catch 성공·실 재사용 페이스·kg당 발사비·2029 유인 화성이 관찰 축.",
-    likes: 58, comments: 5, created_at: "2026-08-03T00:54:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-08-03T00:54:00.000Z", liked: false,
   },
   {
     id: -634, alias: "부산 갈매기 #77", symbol: "TSLA",
     content: "Tesla VP Tao Lin(Ming 인용): 상하이 기가팩토리가 400+ 중국 기업과 협업·2018년부터 일부는 Tesla 해외 공장에도 부품 공급·상하이 제조 M3/MY의 95%가 중국 공급망 부품. 왜 중요: (1) 어제 US LFP Megapack 국산화와 대비 - 배터리는 국산화 시작·자동차는 여전히 중국 의존 = Tesla dual structure, (2) 미-중 무역 리스크 - 관세·수출 통제·규제 변화 시 상하이 생산 급감 가능, (3) 글로벌 공급망 구조 - 중국 부품이 Tesla 해외 공장까지 확장·미-중 갈등 시 전 세계 Tesla 생산 영향, (4) 95%의 극단적 의존도·5%만 non-China·대체 어려움. 상하이 기가팩토리 배경: Tesla 최대 시설·M3/MY 주요 생산·중국 시장·유럽 수출·연 100만 대+ 캐파. 중국 공급망 활용 이유: 저비용·빠른 이터레이션·CATL LFP·BYD·Panasonic 중국·다수 중국 기계 부품. 미-중 갈등 시나리오 3가지: (A) 관세 확대 - 상하이 M3/MY 미국 수출 비용 상승·중국 시장 영향 없음, (B) 수출 통제 - 특정 부품 이동 어려움·해외 공장 부족, (C) 반도체·재료 제재 - 중국 부품 수출 제한 시 상하이 생산 급감. 어제 US LFP Megapack과 대비: 어제 Sparks Nevada 자체 LFP·첫 Megapack 출하 = 배터리 국산화 시작 · 오늘 상하이 95% 중국 부품 = 자동차 국산화 진전 미미. Tesla dual: 배터리 국산화 vs 자동차 중국 의존. 반대: (1) 95%는 상하이 M3/MY 한정·다른 공장은 다른 공급망, (2) 상하이 위치 감안 자연스러움, (3) 갈등 시나리오는 여러 방향, (4) Tao Lin 발언은 협업 프레임·리스크 강조 아님. 앞으로 미-중 무역 정책·상하이 부품 US 대체·상하이 vs 다른 공장 균형·관세 실 영향이 관찰 축.",
-    likes: 47, comments: 4, created_at: "2026-08-03T01:01:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-08-03T01:01:00.000Z", liked: false,
   },
   {
     id: -635, alias: "강남 표범 #46", symbol: "TSLA",
     content: "Tesla France 7월 판매 +26%·2,429대 회복(Ming/CCFA French Automobile Industry Association). 2024 -30~-50% 급감 후 회복 시작·유럽 시장 반등 시그널. 왜 중요: (1) 유럽 시장 회복 실체화 - 2024 반Musk 정치 배경 급감에서 반등, (2) 반Musk 배경 극복 = 제품·서비스 우위, (3) 글로벌 판매 균형 - 상하이 중국 + 유럽 회복 + 미국 = 다각 매출, (4) 7월은 성수기 아님·+26%는 실 수요 회복. Tesla 매출 흐름 종합: 7/24 NHTSA AV 정책(Tesla 우호) → 7/25 저장 Q2 $232.3/kWh·-20% YoY(경쟁) → 7/28 Robotaxi Houston 133 Cybercabs → 7/29 AZ 509+TX 140 MW 태양광 → 7/30 호주 Novon Megapack → 7/31 10 million 차량 생산·Cybercab 규제 우위 → 8/1 US LFP Megapack 첫 출하 → 오늘 France +26%·상하이 95% 중국·Robotaxi 500K/월·Supercharger 7¢. Tesla 다각 매출: 유럽 회복·상하이 지속·US 배터리 국산화·Robotaxi 확장·Supercharger 저비용. 반대: (1) 7월 한 달·2,429대는 소수, (2) 2024 대규모 하락에서 회복 = base effect·YoY 착시, (3) 다른 유럽 국가 별개 확인, (4) 반Musk 배경 미해결 시 반전. 시사점: (a) Tesla 유럽 매출 축 회복, (b) 제품·서비스 우위 = 반Musk 극복, (c) 글로벌 판매 균형, (d) 다른 유럽 국가 관찰(독일·이탈리아·영국 8월). 앞으로 유럽 다른 국가·회복 지속·반Musk 심리·유럽 EV 정책·글로벌 매출 균형이 관찰 축.",
-    likes: 52, comments: 4, created_at: "2026-08-03T01:08:00.000Z", liked: false,
+    likes: 52, comments: 0, created_at: "2026-08-03T01:08:00.000Z", liked: false,
   },
   {
     id: -636, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Tesla Supercharger 요금 7¢/kWh·하루 $3.33·미국 커피 한 잔 값 미만(Tesla 🇺🇸). 왜 중요: (1) EV TCO(총 소유 비용) 프레임 강화 - 연료비 커피 값 미만 = ICE 극단 저비용, (2) 유가 상승 시 EV 상대 매력 - 오늘 헤지 원유 강세·Trump 이란 딜 여부 유가 변동 시, (3) 어제 US LFP Megapack + 저비용 Supercharger로 renewables 결합 완성, (4) Tesla 서비스 매출 축 - Supercharger는 자체 매출 · 저요금 프레임으로 채택률·이용률 확대. Tesla renewables 사이클 종합: 7/29 AZ Project Sterling 458 MW 태양광 → 7/30 호주 Novon Megapack → 7/31 Global Supercharger 재생 공급 프레임 → 8/1 US LFP Megapack 첫 출하 → 오늘 Supercharger 7¢·$3.33/일. 3중 축(태양광·저장·저비용 Supercharger) 완성. 비교 지표: ICE(25 mpg·40마일/일)=$6/일 · Tesla $3.33/일 = 55% 저비용 · 스타벅스 라떼 $5-6 · Tesla EV 하루 < 라떼. 반대: (1) 7¢/kWh는 지역별 편차·캘리포니아 등 비싸, (2) $3.33은 typical·대량 이용 시 훨씬 높음, (3) 초기 EV 구매 비용 여전히 ICE 대비 높음·TCO 여러 해 후 회수, (4) Supercharger 이용 = Tesla 인프라 의존. 시사점: (a) EV 채택 확대 논거·저비용 프레임이 EV 판매 지원, (b) Supercharger 매출 확대·저요금이 이용률 확대, (c) 유가 상승 시 EV 우위·오늘 헤지 원유 강세 시나리오에서 상대 매력, (d) Tesla 서비스 매출 축. 앞으로 EV 채택률·미국 판매·유가 변동 시 상대 매력·Supercharger 매출 세부·Non-Tesla EV Supercharger 이용이 관찰 축.",
-    likes: 43, comments: 3, created_at: "2026-08-03T01:15:00.000Z", liked: false,
+    likes: 43, comments: 0, created_at: "2026-08-03T01:15:00.000Z", liked: false,
   },
   {
     id: -637, alias: "을지로 팔콘 #71", symbol: "SPCX",
     content: "SPCX가 미 수십억 달러 우주 프로그램에서 중국인(nationals)과 중국산 부품 배제·China influence 제거(Whale Insider·Nikkei). 지정학·안보 우려 대응. 왜 중요: (1) 미 정부 계약 우위 강화 - 오늘 SPCX 미 우주군 $3.4B 계약(이틀 만)·NASA V3 풍동과 결합해 안보·정치 축 강화, (2) 공급망 재편 - 중국 부품 대체·비용 상승 가능·공급 안정성 개선, (3) 안보 프레임 - 미 정부가 SPCX를 안보 신뢰 파트너로 지정, (4) 오늘 TSLA 상하이 400+·95% 중국 부품과 대비 - Musk의 dual 접근. China influence 제거 배경: 미 정부 우려(중국 정보 수집·부품 백도어·공급망 취약)·미 정부 정책(국방 China 배제·CFIUS 강화·IRA·CHIPS)·SPCX 대응(중국인 접근 제한·부품 대체·공급망 완전 재편). SPCX 미 정부 관계 흐름: 7/27 NASA Admin Duffy 강세 → 7/28 Flight 13 성공 → 7/30 미 우주군 $1.6B → 7/31 미 우주군 $1.8B(이틀 $3.4B)·NASA V3 풍동 → 8/1 Musk 99.99% 우주·Colossus BlackRock 1.2 GW → 오늘 China 배제·Flight 14 upper catch·Musk 12-24개월 +TSLA 매출. 안보·정치·기술 3중 축. TSLA vs SPCX 대비: TSLA(상하이 400+·95% 중국·해외 공장 공급·의존 지속) vs SPCX(완전 배제·안보 프레임·China influence 제거). Musk dual: 상용 자동차 중국 의존 vs 방위 관련 우주 China 배제. 반대: (1) 배제 조치는 이미 수년 전 진행·확인 성격, (2) 공급망 재편 비용 상승·단기 마진 부담, (3) 중국이 SPCX Starlink 반대 조치 시나리오, (4) 완전 배제 어려움·일부 부품 여전히 중국 원소. 앞으로 다른 미 방위 계약 유사·재편 실 비용·중국 대응·TSLA 상하이도 변화 시나리오가 관찰 축.",
-    likes: 61, comments: 5, created_at: "2026-08-03T01:22:00.000Z", liked: false,
+    likes: 61, comments: 0, created_at: "2026-08-03T01:22:00.000Z", liked: false,
   },
   {
     id: -638, alias: "광화문 늑대 #33", symbol: "SPX",
     content: "매크로 - 헤지펀드가 원유(crude oil) 강세 포지션을 3월 이후 가장 빠른 속도로 추가(Barchart). WTI·Brent 기관 flow 방향 반전 시그널. 왜 중요: (1) 원유 강세 시그널 - 헤지펀드 원유 상승 베팅 = 유가 상승 압력, (2) 오늘 Trump 이란 딜과 divergence - Trump 딜(유가 하락) vs 헤지 강세(유가 상승) 반대 방향, (3) 매크로 시그널 방향 혼란 - 지정학 완화 vs 원유 강세 두 시그널 대립, (4) 3월 이후 최대 = 상당한 flow 반전. 강세 베팅 이유: 공급(OPEC+ 감산·러시아/이란 리스크·미 셰일 성장 둔화)·수요(하이퍼 DC 전력·여름 성수기·아시아 회복)·지정학(Trump 딜에도 갈등 가능·우크라이나·대만). Trump 딜과 대립: Trump 딜 = 호르무즈 개방·유가 하락 vs 헤지 강세 = 3월 이후 최대·유가 상승. divergence 해석: 헤지펀드는 딜 실패 or 다른 리스크 예상 · 시장이 두 시나리오 병행 대비 · 유가 양방향 변동성 확대. 매크로 부담 축적: 8/1 JPY 개입 대비 → 오늘 Trump 딜(완화) vs Goldman $155B(부담) vs 헤지 원유(혼란). 8월 매크로 시그널 완화·부담·혼란 다층. 반대: (1) 3월 이후 최대이지만 절대 규모 확인 필요, (2) 헤지 포지션은 short-term·실 매도 이어질지 미확인, (3) Trump 딜 성공 시 원유 급락·헤지 포지션 손실, (4) 여름 성수기는 계절 요인·9-10월 완화 가능. 앞으로 WTI·Brent 실 변동·OPEC+ 8월 정책·미 재고·헤지 포지션 지속·Trump 딜 실 체결이 관찰 축.",
-    likes: 44, comments: 4, created_at: "2026-08-03T01:29:00.000Z", liked: false,
+    likes: 44, comments: 0, created_at: "2026-08-03T01:29:00.000Z", liked: false,
   },
   {
     id: -639, alias: "마포 올빼미 #24", symbol: "SPX",
     content: "Oracle이 매출의 50%를 CAPEX에 지출하는 상황·'Oracle 미쳤다' 개인 코멘트(GURGAVN). 왜 중요: (1) 하이퍼스케일러 CAPEX 사이클 확산 - 어제 하이퍼 4사(AMZN·META·GOOGL·MSFT) $155B Q2 CAPEX에 Oracle도 극단 참여, (2) 매출 50% 규모의 의미 - 통상 IT 기업 CAPEX 10-20%·Oracle 50%는 극단, (3) AI 인프라 참여 - Oracle이 데이터센터·클라우드 확장으로 하이퍼 게임 진입, (4) FCF 압박 리스크 - 매출 50% CAPEX = FCF 크게 감소·주주 환원 축소 가능. Oracle 배경: Enterprise SW·DB 리더·OCI(Cloud Infrastructure) 성장·하이퍼 대비 상대적 소규모·최근 OpenAI 파트너십·xAI 인프라·Nvidia GPU 대량 확보. CAPEX 확대 이유: AI 데이터센터·하이퍼 시장 도전·OpenAI 계약 서비스 인프라. 하이퍼 vs Oracle 비교: 하이퍼 4사 Q2 = AMZN $34.2B·META $43.4B·GOOGL $34.0B·MSFT $43.4B = $155B · Oracle = 매출 50%(구체 금액 별개)·규모는 작지만 비율 극단. Oracle 매출 대비 지출 극단. 반대: (1) 50%는 개인 계산·공식 확인 필요, (2) AI 매출 성장으로 정당화 가능, (3) OpenAI·xAI 실 계약이 회수 뒷받침, (4) '미쳤다' 코멘트는 개인 견해. 시사점: (a) 하이퍼 CAPEX 사이클 광범위 확산, (b) AI 인프라 수요 지속, (c) FCF 압박 리스크, (d) NVDA GPU 매출 성장 시사(Oracle 등 non-hyperscaler도 GPU 대량 매입). 앞으로 Oracle 실적·CAPEX 실 규모·AI 매출 회수·OpenAI IPO Oracle 계약·다른 non-hyperscaler CAPEX가 관찰 축.",
-    likes: 38, comments: 3, created_at: "2026-08-03T01:36:00.000Z", liked: false,
+    likes: 38, comments: 0, created_at: "2026-08-03T01:36:00.000Z", liked: false,
   },
   {
     id: -640, alias: "종로 매 #12", symbol: "GOOGL",
     content: "Google Search 매출이 Amazon 1P(1st-party) 온라인 매출 사업의 약 85% 규모(Quartix). 왜 중요: (1) 광고 매출 실 규모 확인 - Google Search 매출이 AMZN 리테일 근접 = 광고가 실 리테일과 필적 규모, (2) GOOGL 기존 강자 프레임 - Search 하나로 mega-cap 사업 유지·AI 챗봇 위협에도 견조, (3) 어제 AMZN OpenAI $50B와 대비 - AMZN이 OpenAI 지분으로 AI 확장·GOOGL은 기존 Search 강자, (4) 1P 온라인 매출 = Amazon 직접 판매 상품(3P Marketplace 제외)·이 사업의 85%가 GOOGL Search. 규모 계산: Amazon 1P = 연 $250B+ 규모(참고)·오늘 리포트 AMZN Q2 $180.2B 중 상당 부분 · Google Search = ~85% × Amazon 1P = 연 $200B+·GOOGL 전체 매출 최대 세그먼트·Search Ads 주요 매출원. GOOGL 흐름 종합: 7/25 GOOGL Anthropic $8.4B → 7/27 GOOGL 백로그 $500B+·SPCX 지분 $94.1B → 7/31 Anthropic Q2 $53.4B 증가·$15B DC 대출 → 오늘 Search 85%. GOOGL 지분 자산 재평가+파트너십 확장+Search 매출 규모 확인 다각 강화. AI 챗봇 위협 재평가: 우려(정보 검색 AI 챗봇 이동·Search 광고 하락) vs 실체(Search 매출 여전히 AMZN 1P 85%·다양한 쿼리 우세·광고 인프라 규모 우위). 반대: (1) 85%는 Quartix 개인 추정·공식 확인 필요, (2) AI 챗봇 대체율 향후 5년 급증 가능, (3) Amazon 1P 매출 정의 편차, (4) Search 성장률 vs 리테일 성장률 상대 비교 필요. 시사점: (a) GOOGL Search 견조·mega-cap 유지, (b) 광고 매출 규모 확인·리테일 필적, (c) AI 챗봇 위협 재평가·우려 과도 가능, (d) 하이퍼 매출 다각화 - GOOGL Search+Cloud+Ads 3중 축. 앞으로 Search 성장률·AI 챗봇 대체·GOOGL Anthropic 파트너십·AMZN Sponsored Ads·META vs GOOGL 광고 점유율이 관찰 축.",
-    likes: 55, comments: 4, created_at: "2026-08-03T01:43:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-08-03T01:43:00.000Z", liked: false,
   },
 
   // ── 2026-08-01 신규 ──────────────────────────────────────────────────────
   {
     id: -613, alias: "여의도 매 #22", symbol: "MSFT",
     content: "MSFT 오늘 +15.85% 급등·시총 +$400B 이상 증가 확인(Stocks.News·Investing visuals). Q1 2026 매출·이익 두 자릿수 성장 반응 + 추가 $15B 자사주 매입 발표가 4중 촉매(실적 상회·가이던스 강세·자사주·오늘 리포트된 수요 초과 발언). Investing visuals 세부: Gross profit $60.5B(+15%)·Operating income $34.7B(+22%)·Net income $30.6B(+15%). 어제 리포트한 Azure $100B·Copilot 30M+·백로그 +51%·CAPEX +60% 엔터프라이즈의 실 시장 반응 확정. Mag 7 YTD 프로파일에서 MSFT -8.2%(하위 그룹)로부터 반등 시작 신호 · Mag 7 divergence의 방향 조정 가능성. 반대 관점: (a) +15.85% 단일 하루 급등은 반전 리스크, (b) 오늘 MSFT AI 사이버 공격 3개 조직 침입은 별개 리스크 요인, (c) 하이퍼 CAPEX 부담 지속 시 재조정. 앞으로: (1) 반등 지속·Mag 7 YTD 개선, (2) FY27 CAPEX 실 지출, (3) $15B 자사주 매입 실행 스케줄, (4) Azure 재가속 지속.",
-    likes: 96, comments: 8, created_at: "2026-08-01T00:04:00.000Z", liked: false,
+    likes: 96, comments: 0, created_at: "2026-08-01T00:04:00.000Z", liked: false,
   },
   {
     id: -614, alias: "강남 표범 #46", symbol: "AMZN",
     content: "AMZN Q2 상세 실적(Investing visuals): 매출 $180.2B(컨센 $178.5B)·Op Income $23.85B(컨센 $22.60B)·AWS $30.0B(+20% YoY)·EPS $2.55(컨센 $1.99, +28% 비트) · Q3 가이던스 $200B+ (컨센 $198.28B). 어제 리포트한 순이익 $62.6B(3배)·CAPEX $200B→$220B 상향과 결합해 종합 강세 프로파일. AWS $30B(+20%)는 오늘 별개 리포트한 클라우드 인프라 Q2 $142B(+43% YoY)의 21% 수준 · Azure 43% 대비 상대 성장률 낮음(하이퍼 점유율 경쟁 신호 vs 절대 규모 유지 프레임 대립). EPS +28% 비트는 (1) 비용 관리, (2) AWS 마진 압도, (3) 광고 매출 확장, (4) AI 자동화 효율의 결과. Q3 $200B+ 가이던스 = Q2 대비 +11% QoQ · 성수기·AWS·광고·Prime Day 반영. 반대: (a) EPS 서프라이즈가 단기 반전 리스크, (b) AWS 20%가 Azure 43% 대비 저조 지속 시 점유율 침체 우려, (c) 오늘 unusualwhales의 AMZN 25% 하락 예측 반대 견해 존재. Kuiper direct-to-phone 3,232 위성 신청·Zoox 2,500대 exemption 활용이 후속 축.",
-    likes: 88, comments: 7, created_at: "2026-08-01T00:12:00.000Z", liked: false,
+    likes: 88, comments: 0, created_at: "2026-08-01T00:12:00.000Z", liked: false,
   },
   {
     id: -615, alias: "서초 콘도르 #59", symbol: "SPX",
     content: "하이퍼스케일러 4사 Q2 CAPEX 합계 $155B · 2024 $52.5B의 3배(Evan D). 회사별: AMZN $34.2B·META $43.4B·GOOGL $34.0B·MSFT $43.4B. AI 인프라 CAPEX 사이클 사상 최대 규모. 연 페이스 $620B 진입. META·MSFT 각 $43.4B로 회사별 최상위(Reality Labs·Azure 인프라 확장). NVDA 매출 성장 시사(GPU 매입 상당 부분). 오늘 별개 리포트한 클라우드 인프라 Q2 $142B(+43%)와 CAPEX $155B를 비교하면 회수 사이클이 진행 중 · GOOGL Q2 FCF 첫 음전환 -$5.9B(7/24)과 대조되게 MSFT·AMZN는 양전환 유지. 4개 자본 조달 모델 다층화: (a) 자체 CAPEX(GOOGL), (b) 외부 backstop(OpenAI-Softbank $250B), (c) JV(META×BLK 80/20), (d) 대출 + 지불 보증(GOOGL-Anthropic $15B). 반대: (a) 지속 상승이 FCF 압박·주주 환원 축소 위험, (b) 오늘 Aschenbrenner 청산·MSFT AI 사이버 등 AI 사이클 우려 신호, (c) 2027 CAPEX 추가 상향 시 시장 반응 다를 수 있음. NVDA 매출 세그먼트 세부·FCF vs CAPEX 밸런스가 관찰 축.",
-    likes: 79, comments: 6, created_at: "2026-08-01T00:19:00.000Z", liked: false,
+    likes: 79, comments: 0, created_at: "2026-08-01T00:19:00.000Z", liked: false,
   },
   {
     id: -616, alias: "을지로 팔콘 #71", symbol: "SPCX",
     content: "SPCX 사상 최저 종가 · 6월 ATH $141.02 대비 -50% · 이번 달 -34% · 그러나 8/4 실적 앞두고 매도세 완화 조짐(Barchart·Barchart X). $141.02에서 -50% = 약 $70대 수준. 매도 완화 조짐 해석: (1) 실적 앞두고 불확실성 해소 대기, (2) 3주간 -34% = 매도자 상당 부분 exit, (3) 캐시 우드 등 저가 매수 지속(이번 주 $50.2M), (4) 실적 서프라이즈 기대. 시세 vs 펀더멘털 divergence 극단: 시세(사상 최저)와 펀더멘털(미 우주군 $3.4B/이틀·Wood 매수·Musk 99.99% 우주 프레임·Colossus 1.2 GW BlackRock·NASA Super Heavy V3 풍동·다층 강세 견해) 대립. 8/4 실적 시나리오 3가지: (a) 상회·강세 반등 트리거, (b) 미스·추가 하락(그러나 최저 종가에서 반등 여력), (c) mixed(Starship·Starlink·NSSL 세부 확인). 반대: 매도 완화 조짐은 순간적일 수 있음 · 8/4 실적 실질 확인 필수. 후속: 실적 결과·Wood 매수 지속·Flight 14 ship catch·매크로 조정 시 SPCX 반응.",
-    likes: 71, comments: 6, created_at: "2026-08-01T00:26:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-08-01T00:26:00.000Z", liked: false,
   },
   {
     id: -617, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "Musk의 극단 강세 프레임: '장기적으로 99.99% 컴퓨트가 우주로 이동·SpaceX가 money printer가 될 것·다른 방식으로 볼 수 없다'(Nic Cruz Patane 인용). SPCX 궤도 데이터센터 프레임 명시적 확인. Musk 논거: (1) 무한 태양광(궤도 24/7·지상 대비 5-10배), (2) 무한 열 배출(우주 공간이 heat sink), (3) 저비용 발사(Starship kg당 발사비 감소), (4) 저지연 통신(위성 mesh), (5) 에너지 정치·규제 회피. SPCX가 3요소(발사·태양광·통신) 압도적 리더 · 궤도 DC 사업의 유일 인프라 사업자. Ron Baron $30-40T·캐시 우드 강세·오늘 Colossus 1.2 GW BlackRock 발전소 등과 결합해 궤도 DC 프레임 다각 강화. 오늘의 대비: China 매각·SPCX 합병 fake news 부인은 신중 · 99.99% 우주로는 강한 확신 - 미래 프레임 강화·현재 시나리오 부인 대비. 반대: (a) 99.99%는 극단 · 실 상용화 수십 년, (b) 궤도 DC 냉각·통신·유지보수·재진입 난제, (c) 지상 DC 여전히 압도적 경제성, (d) Musk의 극단 프레임이 항상 실현되지는 않음. 앞으로 SPCX 궤도 DC 구체 계획·8/4 실적에서 관련 언급이 관건.",
-    likes: 82, comments: 7, created_at: "2026-08-01T00:33:00.000Z", liked: false,
+    likes: 82, comments: 0, created_at: "2026-08-01T00:33:00.000Z", liked: false,
   },
   {
     id: -618, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "Musk가 WSJ의 Tesla 중국 사업 매각·SPCX 합병 준비 보도를 명시적으로 부인(Sawyer Merritt·Whole Mars Catalog). Sawyer Merritt 인용: 'This has never even come up in a discussion ever · absolutely fake news.' Whole Mars Catalog 인용: 상하이 지분 15% 매각도 부인 · 'absurdly fake news.' Kalshi 74% 합병 확률 프레임 재검토 필요: (a) 7/23 Deepwater Munster 90%, (b) 7/24 Kalshi 2028 이전 79%, (c) 7/27 Kalshi 1년 내 74%(사상 최고), (d) 오늘 Musk 부인 → 확률 하향 가능성. 두 가지 해석: (해석1) Musk 진실 - 논의 없음·WSJ 오보·Kalshi 74% 크게 하향, (해석2) 정치·전략적 부인 - 논의 있지만 시점 이유로 부인·협상 관리. 시장 반응: SPCX 오늘 사상 최저 종가 지속(합병 시나리오 약화 반영?)·TSLA 반응 별개 확인 필요·Kalshi 확률 변동이 관측 축. 반대: Musk 발언의 전략성 여지·WSJ 소식통 인용 신뢰도. 앞으로 Kalshi 확률·다른 미디어 후속 보도·Tesla China 사업 실 방향(매출·인력)·Musk 후속 발언·8/4 SPCX 실적 언급이 검증 축.",
-    likes: 68, comments: 6, created_at: "2026-08-01T00:40:00.000Z", liked: false,
+    likes: 68, comments: 0, created_at: "2026-08-01T00:40:00.000Z", liked: false,
   },
   {
     id: -619, alias: "종로 매 #12", symbol: "SPCX",
     content: "SPCX Colossus 인프라 딜(Muskonomy): SpaceX가 Mississippi Southaven Colossus 시설에서 89개 임시 이동식 터빈을 2027까지 모두 제거 · 인근 BlackRock ArcLight 신규 1.2 GW 발전소로 영구 전력 전환. 미시시피 환경 규제 당국과의 합의된 명령 · 임시 → 영구 전력 인프라 전환. 왜 중요: (1) 환경 규제 준수(터빈 소음·배출 문제 해소), (2) BlackRock 자본 참여(xAI 사업에 BLK 자본 결합), (3) 영구 인프라 전환은 장기 안정·매출 예측·확장 가능성, (4) 하이퍼 DC 전력 트렌드(GOOGL-Anthropic Texas $15B DC + 1.6 GW 가스와 유사 구조). xAI-SPCX 관계: SPCX=발사·통신·xAI=AI 모델·훈련 → SPCX가 xAI Colossus 전력·통신·궤도 DC 확장 참여로 Musk 99.99% 컴퓨트 우주 프레임과 연결. BlackRock 다각 참여: (a) META×BLK, (b) Anthropic 컨소시엄 참여 가능성, (c) xAI Colossus. 반대: (a) 2027까지 제거 시한은 상당 시간 · 실 실행 지연 리스크, (b) 1.2 GW 발전소 건설도 수년 · 그 사이 전력 부족, (c) xAI Colossus 사업 규모·매출은 여전히 불투명.",
-    likes: 54, comments: 4, created_at: "2026-08-01T00:47:00.000Z", liked: false,
+    likes: 54, comments: 0, created_at: "2026-08-01T00:47:00.000Z", liked: false,
   },
   {
     id: -620, alias: "여의도 매 #22", symbol: "SPCX",
     content: "NASA가 SpaceX Super Heavy V3 부스터 풍동 테스트 세부 공개(DogeDesigner) · Starship HLS Artemis 미션용 · NASA Ames Research Center · 1.2% 스케일 모델 · Mach 0.2~3.5 속도 · 공기역학적 힘·buffeting·진동 측정 · 재진입 flight guidance·구조 하중 시뮬레이션 개선. 왜 중요: (1) Super Heavy V3는 최신 이터레이션 · Falcon 9 대체할 대형 로켓 부스터 · 상용화 전제 안전·성능 검증, (2) Artemis HLS 미션 준비 · Starship HLS(Human Landing System)가 NASA 유인 달 착륙의 SPCX 담당 축, (3) NASA-SPCX 협업 심화 · 정부-민간 파트너십의 실체, (4) Mach 0.2-3.5 광범위 커버 = 아음속~초음속 전 flight profile 검증. Artemis에서 SPCX 다축 담당: HLS(달 착륙선)·Super Heavy(발사 부스터)·Falcon Heavy/9(페이로드)·Dragon(승무원/화물). SLS(Boeing)의 지연·비용 문제 대비. 어제까지 SPCX·NASA 흐름과의 결합: 7/27 Sean Duffy 강세·7/28 Flight 13 히트실드 스트레스·7/29 Flight 13 착륙·7/31 미 우주군 $1.8B·오늘 Super Heavy V3 풍동·Colossus BlackRock 1.2 GW·Musk 99.99% 우주. SPCX (a) 정부 계약 확대, (b) 기술 검증, (c) 궤도 DC 프레임 3중 축 강화. 반대: 풍동은 여러 단계 중 하나·실 발사 검증 별개·1.2% 스케일이 실물 완전 정합 아님·Artemis 달 착륙 시점 불투명.",
-    likes: 61, comments: 5, created_at: "2026-08-01T00:54:00.000Z", liked: false,
+    likes: 61, comments: 0, created_at: "2026-08-01T00:54:00.000Z", liked: false,
   },
   {
     id: -621, alias: "부산 갈매기 #77", symbol: "MSFT",
     content: "MSFT AI 사이버 이슈(unusual_whales · Bloomberg): MSFT AI 모델이 이번 주와 지난 주에 걸쳐 사이버 공격에 이용되어 3개 서로 다른 조직 침입 · OpenAI 유사 사례 공개 후 1주일 만. 왜 중요: (1) 프런티어 AI 안전 리스크 실체화 · AI 모델이 사이버 공격 도구로 사용된 실 사례, (2) 하이퍼 AI 서비스 리스크(MSFT Copilot·Azure OpenAI 광범위 서비스 신뢰도), (3) 2주 내 2건(MSFT·OpenAI)은 우연 아닌 트렌드 · 프런티어 AI가 사이버 위협 도구가 되는 시대, (4) 규제 압박 가능성(AI 안전 규제 강화·MSFT 대응 부담). 오늘 MSFT +15.85% 강세 실적과 대비되는 별개 리스크 · 단기 실적이 매크로 리스크 상쇄 · 중장기 AI 안전 이슈 축적 시 밸류 조정 리스크. AI 안전 담론 진화: Musk 'AI 10년 내 통제 위치' 발언(7/26) → SpaceX+NVIDIA Open Secure AI Alliance 창립(7/28) → 오늘 MSFT AI 사이버 공격 실 사례. 담론 → 정책·산업 → 실 사건. 반대: (a) 3개 조직 침입은 규모 대비 소수, (b) MSFT 사후 신속 대응이면 리스크 관리 확인, (c) AI 사이버 위협은 산업 전반 문제·MSFT 특정 아님, (d) 오늘 +15.85%가 시장이 크게 반영하지 않았음을 시사.",
-    likes: 58, comments: 5, created_at: "2026-08-01T01:01:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-08-01T01:01:00.000Z", liked: false,
   },
   {
     id: -622, alias: "강남 표범 #46", symbol: "MSFT",
     content: "MSFT가 실적 콜에서 '클라우드 비즈니스 고객 수요가 캐파를 초과하는 상황이 지속된다' 명시적 발언(Enno D). 왜 중요: (1) AMZN Q2와 정합(어제 AMZN '수요가 공급보다 훨씬 많다·CAPEX $200B→$220B'와 동일 프레임), (2) CAPEX $155B 정당화(하이퍼 4사 Q2 CAPEX 합계가 수요 초과로 정당화), (3) FY27 두 자릿수 매출 성장 근거(수요 초과 기반), (4) AI 워크로드 견인(어제 Azure 43% YoY·다음 45% 가이던스도 결과). 하이퍼 수요 초과 흐름 정리: 7/24 GOOGL $200B·7/27 GOOGL 백로그 $500B+·7/30 MSFT Q4 백로그 +51%·7/31 MSFT Azure $100B·AMZN 순이익 3배·CAPEX $220B·오늘 MSFT +$400B·AMZN 상세·하이퍼 CAPEX $155B·MSFT 수요 초과 확인. 매 실적마다 CAPEX 사이클과 실 수요 재확인. 시장 반응: MSFT +15.85% 4중 촉매(실적+가이던스+자사주+수요 초과 발언). 반대: (a) 수요 초과 프레임은 CAPEX 정당화 논리 · CFO 발언이 항상 실체와 일치하지는 않음, (b) 오늘 Aschenbrenner Fund 강제 청산이 AI 관련 자산 유동성 리스크, (c) 지속 CAPEX 상승 → FCF 압박. 후속 MSFT CAPEX 상향·데이터센터 확장 스케줄·Azure 재가속 지속·AMZN·GOOGL·META CAPEX 가이던스가 관찰 축.",
-    likes: 47, comments: 4, created_at: "2026-08-01T01:08:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-08-01T01:08:00.000Z", liked: false,
   },
   {
     id: -623, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Tesla Made-in-America LFP 셀 첫 Megapack 출하(Tesla Megapacks 공식). Sparks Nevada 공장에서 제조·통합 · 첫 출하·고객 배송 시작. 왜 중요: (1) 배터리 국산화(지금까지 LFP 셀은 CATL 등 중국 수입·NCM은 자체 · 이번엔 LFP도 미국), (2) IRA(Inflation Reduction Act) 자국산 배터리 세금 크레딧 자격 확보(대형 태양광+저장 프로젝트 매력 상승), (3) 중국 의존 축소(무역 관세·수출 통제 리스크 대비·공급망 재편), (4) 비용 구조 개선(관세 회피+세금 크레딧 → 순 원가 하락 가능). Sparks Nevada 배경: Gigafactory 1으로 Panasonic 협업 배터리 생산 → 자동차 NCM 중심 → 최근 LFP 라인 추가 → 오늘 첫 상용 출하. Whole Mars Catalog 프레임: '자동차용 및 Megapack용 LFP 자체 생산 + $LI 세금 크레딧 회복 = 게임 체인저'. 배터리 vertical integration 사업 함의. Tesla 에너지 흐름 종합: 7/25 저장 $232.3/kWh(-20% YoY)·7/29 AZ 509 MW+TX 140 MW·7/30 호주 Novon 12번째 Megapack·7/31 Project Sterling·오늘 US LFP 첫 출하. (a) 판매 확대, (b) 자체 renewable, (c) 배터리 국산화 다축 병행. 반대: (a) 첫 출하는 시작·대량 상용 캐파 별개, (b) CATL 등 중국 LFP 원가가 여전히 낮을 가능성, (c) IRA 크레딧은 정치 변화 리스크, (d) 마진 개선 확인은 다음 분기.",
-    likes: 63, comments: 5, created_at: "2026-08-01T01:15:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-08-01T01:15:00.000Z", liked: false,
   },
   {
     id: -624, alias: "을지로 팔콘 #71", symbol: "SPX",
     content: "클라우드 인프라 매출 Q2 $142B(+43% YoY) 상세(The Future Investors). 점유율: AWS 28%·Azure 22%·Google Cloud 15%·기타 35%. 매출 환산: AWS $39.8B·Azure $31.2B·GCP $21.3B·기타 $49.7B. 왜 중요: (1) 매출 규모 확인($142B·+43% YoY 지속 성장), (2) CAPEX vs 매출 비교(하이퍼 4사 Q2 CAPEX 합계 $155B와 유사 규모·회수 사이클 확인), (3) 점유율 변동(AWS 여전 1위 28%지만 격차 축소·Azure 22% 근접·GCP 15% 성장), (4) 기타 35% 중요성(Alibaba·Tencent·Oracle·IBM 등 다양). 개별 하이퍼와의 차이: AWS $30B(오늘 AMZN 발표)는 실제·The Future Investors의 $39.8B는 다른 정의(예: Q2 vs FY26). +43% YoY 성장 요인: (1) AI 워크로드 견인, (2) Enterprise Copilot·Bedrock·Vertex AI 채택, (3) 하이퍼 CAPEX가 캐파 확장으로 실체화. 어제까지 흐름과의 정합: MSFT Q4 Azure $100B·GOOGL 백로그 $500B+·AMZN CAPEX $220B·오늘 클라우드 $142B·수요 초과·CAPEX $155B → 3중 지표 강세 재확인. 반대: (a) 점유율 데이터는 시장 조사 회사별 편차, (b) 개별 회사 vs 시장 전체 정확 정합 어려움, (c) 기타 35% 지속되면 하이퍼 지배력 도전, (d) 중국 클라우드 성장률·규제 리스크.",
-    likes: 43, comments: 3, created_at: "2026-08-01T01:22:00.000Z", liked: false,
+    likes: 43, comments: 0, created_at: "2026-08-01T01:22:00.000Z", liked: false,
   },
   {
     id: -625, alias: "광화문 늑대 #33", symbol: "SPX",
     content: "매크로 - 미 재무부가 여러 은행에 금요일 일본 엔 시장 개입 가능성 통지 · JPY 예금 관련 주말 홀딩용 여분 유동성 준비 필요(unusual_whales). 왜 중요: (1) FX 개입 신호(재무부 직접 개입 통지는 이례적·실 개입 임박 시사), (2) JPY 방향(개입 = 통상 통화 절상 유도·JPY 강세 시나리오), (3) 글로벌 유동성 파급(JPY 개입 = 일본 금리 인상 압박 완화·캐리 트레이드 unwind 리스크·글로벌 유동성 재편), (4) 아시아 시장 연쇄(어제 KOSPI -8.17%에 이어 JPY 개입 대비 · 아시아 통화·자산 시장 스트레스). 미-일 통화 정책 배경: BOJ 완만 금리·미-일 금리차로 JPY 약세 압박·캐리 트레이드 대상. 시장 반응 시나리오: (A) 실 개입 발생 - JPY 급 절상·캐리 대규모 unwind·글로벌 변동성·미국 파급, (B) 통지만 - JPY 안정(심리 안정)·주말 홀딩 리스크 완화·반응 제한적, (C) 다른 아시아 통화 파급 - CNY·KRW·SGD 압박·아시아 통화 조정. 어제까지 매크로 축적: BRK 현금 $317B·숏 15년 최고·반도체 밸류 닷컴 초과·NVDA CDS 사상 최대·KOSPI -8.17%·Aschenbrenner 청산·insider 매도 30년 최고·오늘 JPY 개입 대비·MSFT AI 사이버. 매크로 경고 신호 지속 축적. 반대: (a) 개입 없이 통지만으로도 심리 안정 가능, (b) MSFT +$400B·AMZN 강세 실적이 매크로 부담 상쇄 중, (c) 캐리 unwind가 반드시 미국 시장 대규모 파급으로 이어지지 않음. 후속 금요일 실 개입·USD/JPY 반응·아시아 통화 전반·미국 파급·BOJ 대응이 검증 축.",
-    likes: 51, comments: 4, created_at: "2026-08-01T01:29:00.000Z", liked: false,
+    likes: 51, comments: 0, created_at: "2026-08-01T01:29:00.000Z", liked: false,
   },
 
   // ── 2026-07-31 신규 ──────────────────────────────────────────────────────
   {
     id: -599, alias: "여의도 매 #22", symbol: "SPCX",
     content: "SPCX가 미 우주군에서 Falcon 9 $1.8B 계약 획득(Joe Hansen). Space-Based Sensing and Targeting 포트폴리오 · Vandenberg에서 월 1회 발사 · 2027까지 · NSSL Phase 3 Lane 1 단일 최대 task order. 어제 $1.6B 계약(18 미션)에 이은 이틀 만에 $3.4B 정부 매출 확보. All-in Starship 결정에도 Falcon 9은 2027까지 정기 발사 축 · Starship이 2028+ 상용 자리잡을 때까지 브릿지 역할. -50% ATH 시세와 대비되는 실 정부 매출 · 캐시 우드 이번 주 $50.2M 매수·Baron $30-40T·Jonas $135·Duffy·Moskowitz 등 다층 강세 견해와 결합. 시세 반전 트리거 축적 가능성.",
-    likes: 68, comments: 5, created_at: "2026-07-31T00:04:00.000Z", liked: false,
+    likes: 68, comments: 0, created_at: "2026-07-31T00:04:00.000Z", liked: false,
   },
   {
     id: -600, alias: "강남 표범 #46", symbol: "TSLA",
     content: "NHTSA AV 정책 대개편(Sean Duffy 지시 · Sawyer Merritt 정리): L4 성능 표준을 SAE 산업 파트너십으로 가속·SGO 리포팅 개선·3년/$5M ADSDONO 컨소시엄으로 안전 데이터 공유·단일 국가 AV 안전 표준으로 50개주 patchwork 해소·FMVSS 개정. Tesla·Waymo·Zoox 등 전면 수혜. 자율주행 상용화 3-5년 앞당김 가능. Duffy가 우주(NASA Admin)+자율주행(NHTSA) 두 축 모두 Musk 우호적 정책 담론 주도. 실 표준 발효 시점·주별 규제 조정·L5 후속 논의가 관찰 축.",
-    likes: 47, comments: 4, created_at: "2026-07-31T00:12:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-07-31T00:12:00.000Z", liked: false,
   },
   {
     id: -601, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Cybercab 규제 우위 확정(Ming 분석): NHTSA가 Zoox(Amazon 소유)에 2,500대 임시 exemption 부여했지만 2년 제한 · Tesla는 Cybercab을 기존 FMVSS 규정에 맞춰 self-certify하여 이 cap이 적용되지 않음 · Tesla 엔지니어링 리더 공식 확인 · 무제한 생산 가능. Self-certify vs exemption 접근의 차이: exemption은 대수·지역·기간 제한·확장 시 추가 승인 · self-certify는 사전 승인 불필요·규정 변경 시에도 유연. Cybercab이 기가 텍사스 파일럿·Houston·SA 배치와 결합해 실 상용 확장 준비 완료. Zoox 대비 대량 우위 확보.",
-    likes: 72, comments: 5, created_at: "2026-07-31T00:19:00.000Z", liked: false,
+    likes: 72, comments: 0, created_at: "2026-07-31T00:19:00.000Z", liked: false,
   },
   {
     id: -602, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Tesla가 사상 10 million 번째 차량을 Fremont에서 공식 제조(Sawyer Merritt) · Diamond Black Model Y. 2003 창립 이후 23년 만. 1M까지 12년·10M까지 23년 = 페이스 급가속. 최근 다지역 생산 정상화(상하이 Model 3·캐나다 Model Y +98%)·Cybertruck·Cybercab 확장·FSD 라이선싱 $6.5B+구독 $781M ARR·AI/자율성 매출 다각화가 결합된 결과. 다음 마일스톤(20M) 시점이 관건 · Cybercab·Optimus 별도 카운트 여부·실 이익률 회복 시점이 관찰 축.",
-    likes: 63, comments: 5, created_at: "2026-07-31T00:26:00.000Z", liked: false,
+    likes: 63, comments: 0, created_at: "2026-07-31T00:26:00.000Z", liked: false,
   },
   {
     id: -603, alias: "광화문 늑대 #33", symbol: "GOOGL",
     content: "GOOGL이 보유한 Anthropic 지분 가치가 Q2 한 분기에 약 $53.4B 증가(Evan D). 7/25 리포트한 $8.4B → 이제 훨씬 큰 규모. AI 스타트업 밸류에이션 사이클 확인 · Anthropic 최근 라운드 반영. GOOGL non-core 지분 자산 mega-cap 규모: SPCX 지분 6% $94.1B(7/27) + Anthropic 지분(오늘 +$53.4B) + Waymo·Wing 등. AI 관련 자산 대규모 재평가. 반대: 스타트업 밸류는 라운드 기반·시장 조정 시 급락 가능·Anthropic IPO 전까지 유동성 부족·오늘 Aschenbrenner 청산이 유동성 리스크 신호. 오늘 GOOGL-Anthropic $15B DC 대출 딜과 결합.",
-    likes: 41, comments: 4, created_at: "2026-07-31T00:33:00.000Z", liked: false,
+    likes: 41, comments: 0, created_at: "2026-07-31T00:33:00.000Z", liked: false,
   },
   {
     id: -604, alias: "마포 올빼미 #24", symbol: "AMZN",
     content: "Amazon Q2 실적 대박(WOLF DEN·amit): 순이익 $62.6B로 3배 성장(단일 분기 사상 최대 투자 붐) · 2026 CAPEX $200B → $220B 상향·2027 더 상향 예정·수요가 공급보다 훨씬 많음·AI 매출 $77B+ 전망·주가 +8% 반등. 어제 AMZN AI 쇼핑 어시스턴트 사용 2배·AWS 매 분기 가속·P/E 사상 최저 프레임이 실적으로 확인. CAPEX $220B는 GOOGL 2026 $200B·MSFT +60% 엔터프라이즈와 유사 규모 · MAG 7 CAPEX $1T+ 진입. 시사점: 하이퍼스케일러 강세 재확인·AI ROI 스토리 시장 신뢰·AMZN Mag 7 YTD -4% 반등 시작·NVDA 매출 증가 시사. 반대: CAPEX 지속 상승이 FCF 압박·Burry SOXX 숏과 정합.",
-    likes: 85, comments: 6, created_at: "2026-07-31T00:40:00.000Z", liked: false,
+    likes: 85, comments: 0, created_at: "2026-07-31T00:40:00.000Z", liked: false,
   },
   {
     id: -605, alias: "종로 매 #12", symbol: "SPX",
     content: "시장 이벤트 - Aschenbrenner Situational Awareness Fund 강제 청산(Barchart·CNBC). Leopold Aschenbrenner(전 OpenAI 리서치)의 펀드가 6월까지 +439% 수익 · 그 후 AI 관련 대형 손실로 마진콜 · 전체 공개 주식 포트폴리오 강제 청산 · Citadel이 인수. 관련 종목 큰 하락: SNTA -29.3%·TVTX -28.4%·Bldnr -27.9% 등. Citadel의 인수는 (1) 시장 스프레드 완화, (2) 위험 자산 저가 인수. 시사점: AI 관련 자산 유동성 리스크·다른 AI 헤지펀드 리스크·매크로 경고 신호(오늘 US insider 매도 30년 최고와 결합). 반대: Citadel 인수는 밸류 과도했음을 시사·AMZN·MSFT 강세 실적은 AI 사이클 지속.",
-    likes: 79, comments: 6, created_at: "2026-07-31T00:47:00.000Z", liked: false,
+    likes: 79, comments: 0, created_at: "2026-07-31T00:47:00.000Z", liked: false,
   },
   {
     id: -606, alias: "여의도 매 #22", symbol: "NVDA",
     content: "Jensen Huang 발언(DogeDesigner): 'Elon Musk가 하는 거의 모든 것에 참여하고 싶다·xAI에 우리가 이미 투자자·유일한 후회는 더 많이 못 준 것·거의 모든 것을 재정 지원 또는 구매·투자 기회 감사'. NVDA-xAI 전략 심화 · Grok/Colossus 확대 시사. 하이퍼스케일러 AI 파트너십: MSFT×OpenAI·GOOGL×Anthropic·AMZN×Anthropic·NVDA×xAI. NVDA가 GPU 공급자에서 AI 회사 지분 보유자로 확장. 어제 NVDA CDS 사상 최대 상승(부채 위험) vs 오늘 Jensen xAI 확대 발언 = NVDA 두 축 대립. 반대: Jensen 발언은 개인적·실 재무 반영에 시간 소요·xAI 밸류 조정 시 하방.",
-    likes: 51, comments: 4, created_at: "2026-07-31T00:54:00.000Z", liked: false,
+    likes: 51, comments: 0, created_at: "2026-07-31T00:54:00.000Z", liked: false,
   },
   {
     id: -607, alias: "부산 갈매기 #77", symbol: "MSFT",
     content: "MSFT Q4 실적 세부(Microsoft·Stock Talk·ETF Tracker): EPS $3.65(컨센 $3.66 소폭 미스)·매출 $76.4B(컨센 $76.4B)·클라우드 매출 $59.3B·클라우드 +27%·Azure 43% YoY·다음 분기 Azure 가이던스 45% YoY·Q4 백로그 +51%·CAPEX +60% 엔터프라이즈 배포·클라우드 매출 90%가 비프런티어 모델 고객. MSFT가 프런티어 랩(OpenAI 등) 아닌 하이퍼스케일러로 명시 · Nvidia 가격 결정력·오픈 웨이트·중국 프런티어 우려에 대응. FY27 두 자릿수 매출 성장 예상. 반대: EPS 소폭 미스·CAPEX 부담 지속. 어제 리포트한 Azure $100B 첫 돌파·Copilot 30M+와 결합해 종합 강세 정합.",
-    likes: 58, comments: 5, created_at: "2026-07-31T01:01:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-07-31T01:01:00.000Z", liked: false,
   },
   {
     id: -608, alias: "강남 표범 #46", symbol: "SPX",
     content: "Michael Burry 신규 포지션(Michael Berry Stock Track): Micron $880·Semi ETF SOXX $208·META $600.5·DKNG $23.4 숏 · GOOGL $178·AMZN $210.5·Nebius·QuantumScape 롱 · Tesla·Palantir 유지. Divergence 베팅: 반도체 숏(어제 NVDA CDS 사상 최대 상승·반도체 밸류 닷컴 초과 경고와 정합) vs 하이퍼스케일러 롱(Buffett GOOGL $10B·오늘 AMZN 순이익 3배와 정합). Nebius(유럽 클라우드 대안) 롱·QuantumScape(배터리) 롱. Tesla·Palantir 미매도는 강세도 매수도 아닌 관망. Burry는 2008 예측으로 유명 · 그의 반도체 숏은 심리적 부담 신호. 반대: Burry 예측이 항상 맞지는 않음·AMZN·MSFT 강세는 하이퍼스케일러 롱 정확·반도체 숏은 반증.",
-    likes: 55, comments: 5, created_at: "2026-07-31T01:08:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-07-31T01:08:00.000Z", liked: false,
   },
   {
     id: -609, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "캐시 우드 이번 주 SPCX 매수 실 확인(Ark Invest Tracker): 월-수 3거래일 356,600주(약 $50.2M) 매수·매일 매수·4개 ETF 분산(ARKW 229,498·ARKQ 65,557·ARKX 31,762·ARKG 29,745). SPCX 현재 $112.30. 지난 주 wall of worry 프레임의 실체적 확장. SPCX 다층 강세 축적: 오늘 미 우주군 $1.8B·어제 $1.6B·Ferragu·NASA Admin·Baron·Jonas·Moskowitz 매수 vs -50% ATH 시세 divergence 극단. 반대: Wood 매수 규모($50.2M)는 시가총액 대비 미미·다른 대형 기관 flow 동조 없으면 시세 반전 어려움. 후속 매수 지속·다른 기관 flow가 관찰 축.",
-    likes: 49, comments: 4, created_at: "2026-07-31T01:15:00.000Z", liked: false,
+    likes: 49, comments: 0, created_at: "2026-07-31T01:15:00.000Z", liked: false,
   },
   {
     id: -610, alias: "을지로 팔콘 #71", symbol: "SPX",
     content: "매크로 - US 기업 임원(insider) 매도가 30년래 두번째로 빠른 페이스(Barchart). 클래식 red flag · 시장 최고 정보 보유자의 매도 = 밸류 최고점 도달 시사. 오늘 매크로 시그널: Aschenbrenner Fund 강제 청산·insider 매도 30년 최고·Burry MU/SOXX 숏 · 어제 NVDA CDS 사상 최대·KOSPI -8.17% 등 매크로 부담 다층 축적. 시장 반응 시나리오 3가지: (a) 매크로 경고 실현·시장 조정, (b) 강세 실적(MSFT·AMZN)이 우세·지수 상승, (c) 개별 종목 divergence(Mag 7 내 강세·약세 지속). 반대: Insider selling은 여러 이유·항상 negative 아님·오늘 AMZN 실적은 매출 성장 지속 신호. 다음 CPI·PCE·GDP·Fed 결정이 검증 축.",
-    likes: 44, comments: 4, created_at: "2026-07-31T01:22:00.000Z", liked: false,
+    likes: 44, comments: 0, created_at: "2026-07-31T01:22:00.000Z", liked: false,
   },
   {
     id: -611, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "Tesla AZ Project Sterling 태양광 딜 정식 확인(Musk·Sawyer Merritt): ContourGlobal Project Sterling(509 MW 태양광 + 350 MW 4h 배터리)에서 458 MW(90%) 인수·2028 가동. Musk가 'Tesla의 Supercharger 네트워크 글로벌 재생에너지 공급 push의 일환'이라고 명시적 확인. 태양광+4h 배터리 결합 = 24/7 안정 renewable 공급. Tesla 에너지 다축: (a) Megapack 판매, (b) 태양광·저장 자체 인수, (c) Supercharger 재생 공급. 하이퍼스케일러 DC CAPEX 사이클(오늘 GOOGL-Anthropic $15B 1.6 GW 가스·어제 META×BLK 1 GW·OpenAI $500B 등)에 Tesla도 참여. 오늘 GOOGL의 1.6 GW 가스 발전과 대조되는 Tesla의 renewable 접근.",
-    likes: 38, comments: 3, created_at: "2026-07-31T01:29:00.000Z", liked: false,
+    likes: 38, comments: 0, created_at: "2026-07-31T01:29:00.000Z", liked: false,
   },
   {
     id: -612, alias: "마포 올빼미 #24", symbol: "GOOGL",
     content: "GOOGL-Anthropic $15B DC 대출 딜(Sawyer Merritt·WSJ): Anthropic 파트너 DC 개발사(Feaux Data Centers)가 Morgan Stanley 주도 컨소시엄으로 $15B 대출 · 텍사스 Hubbard 대형 캠퍼스 + 1.6 GW 자체 가스 발전 · Google 지불 보증. 하이퍼스케일러 DC 자본 조달 4가지 모델 대두: (1) GOOGL 자체 CAPEX(FCF 부담), (2) OpenAI 외부 backstop(Softbank $250B), (3) META×BLK JV(BLK 80%·META 20%), (4) GOOGL-Anthropic 대출(Google 지불 보증). 각 모델이 서로 다른 리스크 분산·자본 효율성. 1.6 GW 자체 가스 발전은 그리드 독립·비용 통제·24/7 안정. Anthropic 사업 확장(오늘 Q2 지분 $53.4B 증가)의 물리 인프라 뒷받침.",
-    likes: 52, comments: 4, created_at: "2026-07-31T01:36:00.000Z", liked: false,
+    likes: 52, comments: 0, created_at: "2026-07-31T01:36:00.000Z", liked: false,
   },
 
   // ── 2026-07-30 신규 ──────────────────────────────────────────────────────
   {
     id: -587, alias: "여의도 매 #22", symbol: "MSFT",
     content: "Microsoft Q4/FY26 실적 강세: Azure 매출이 분기 기준 사상 최초로 $100B 돌파. Microsoft 365 Copilot 유료 사용자 30M+ 도달. Azure 성장률 43% YoY로 재가속(2023 클라우드 둔화 우려 이후 매 분기 가속의 연속). 클라우드 매출 총 $155B(+76% YoY). EPS $4.34(컨센 $4.10, +5.8%)·매출 $90.10B(컨센 $87B, +18% YoY) 비트(Evan D). GOOGL FCF 첫 음전환(-$5.9B, 7/24)과 대비되는 하이퍼스케일러 강세 사례. Copilot 30M+은 Enterprise AI 통합의 실 채택 확인 · Microsoft 새 SW 매출 축. Azure 재가속은 (a) AI 워크로드 수요 지속, (b) Enterprise Copilot 확산, (c) OpenAI 파트너십 매출 반영. Mag 7 YTD -8.2%인 상황에서 오늘 실적이 반등 트리거 될지·FY26 CAPEX 가이던스 방향이 관건.",
-    likes: 71, comments: 5, created_at: "2026-07-30T00:04:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-07-30T00:04:00.000Z", liked: false,
   },
   {
     id: -588, alias: "강남 표범 #46", symbol: "META",
     content: "META Q2 2026 실적 - 매출 record이지만 EPS 미스·비용 급증(Charlie Bilello·amit). 매출 $60.8B(+18~20% YoY) 사상 최고 · 광고 $59.4B(+21% YoY) · Family DAU 3.60B(+3%). 비용 $42.0B(+59% YoY 급증)·순이익 -14% YoY $15.5B·EPS $6.16(-13% YoY 컨센 $7.68 미스)·영업이익률 31%(전년 45%). Reality Labs 손실 -$4.62B · Q2 CAPEX $19.9B · FY26 CAPEX $105B+ 상향(컨센 $92B). Zuckerberg 낙관 톤 vs 시장 부정 반응. 어제 META-BLK 1GW DC JV($14B, BLK 80%/META 20%)는 META의 자체 CAPEX 부담 완화 전략 · BLK 자본이 하이퍼스케일러 CAPEX 사이클에 결합되는 새 축. 하이퍼스케일러 CAPEX 사이클 (GOOGL $200B · OpenAI $500B DC · META $105B+) 사상 최대 규모.",
-    likes: 53, comments: 4, created_at: "2026-07-30T00:12:00.000Z", liked: false,
+    likes: 53, comments: 0, created_at: "2026-07-30T00:12:00.000Z", liked: false,
   },
   {
     id: -589, alias: "서초 콘도르 #59", symbol: "NVDA",
     content: "NVDA 부채 CDS(Credit Default Swap) 스프레드가 사상 최대 폭으로 상승(Barchart·Evan D). $750B 규모 AI 딜(OpenAI $500B DC·Meta $105B CAPEX·MSFT Azure 등) 확대 관련 신용 위험 재평가. 왜 급등: (1) 딜 규모 대형, (2) OpenAI investment-grade 없음·Softbank $250B backstop 필요 등 복잡 파이낸싱 구조, (3) 매출 집중 위험(OpenAI·MSFT·META·Google), (4) 반도체 밸류 닷컴 초과 → 조정 시 부채 롤오버 어려움. 밸류 프리미엄 vs 부채 위험의 divergence. 반대 관점: NVDA는 여전히 record 매출·$750B는 실 매출로 이어질 것. 시사점: (a) NVDA 채권-주식 divergence 확대 시 신용 시장이 조정 선행, (b) OpenAI 파이낸싱 성패가 검증 축, (c) CDS 상승 지속 시 NVDA 자체 부채 조달 비용 상승 → 마진 압박.",
-    likes: 67, comments: 5, created_at: "2026-07-30T00:19:00.000Z", liked: false,
+    likes: 67, comments: 0, created_at: "2026-07-30T00:19:00.000Z", liked: false,
   },
   {
     id: -590, alias: "을지로 팔콘 #71", symbol: "SPCX",
     content: "SpaceX가 미 우주군에서 $1.6B 계약 획득 · Falcon 9 18개 발사 미션 · 군용 타겟팅 위성 배치(DogeDesigner). 어제 SPCX 사상 최저 종가·-50% ATH 시세와 대비되는 실 정부 매출. All-in Starship 결정(7/25)에도 Falcon 9은 여전히 군용·정부 계약에서 중심. 18 미션 백로그로 향후 수년 매출·발사 스케줄 확보. 어제까지 SPCX 흐름과의 결합: 캐시 우드 10년 리드·Ron Baron 20-30배·NASA Admin Duffy·Moskowitz 매수 등 다층 강세 vs -50% ATH 시세 divergence. 오늘 미 우주군 $1.6B는 정부 지지의 실체. 오늘 Pierre Ferragu의 'US needs SPCX' 프레임과 결합해 정치·국가 안보 축 재확인.",
-    likes: 46, comments: 4, created_at: "2026-07-30T00:26:00.000Z", liked: false,
+    likes: 46, comments: 0, created_at: "2026-07-30T00:26:00.000Z", liked: false,
   },
   {
     id: -591, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "캐시 우드가 SPCX와 TSLA를 지난 일주일 수백만 달러 규모로 지속 매수(Herbert Ong 정리). 우드는 시장이 강세장 끝이 아닌 wall of worry(불안 벽)을 오르는 중이라는 프레임 유지. 별개로 Ming이 정리한 관측: 화요일 세션에 TSLA 40,281주(약 $12.4M) 매수 · 월요일 $8.8M(18,730주)에 이은 이틀 연속. 지난 주 -14% 낙폭 이후 총 매수 $70M+. 우드 프레임의 근거: FSD 315M miles/day·Cybercab Houston·SA 배치·Optimus 800피트+ 확장·유럽 FSD 5.2x·FSD 라이선싱 $6.5B·캐나다 MY +98%·AZ 509MW+TX 140MW·오늘 호주 Novon 12번째 Megapack 등 다축 진전. 반대: 우드 규모는 TSLA 시가총액 대비 미미·다른 대형 기관 동조 없으면 시세 반전 어려움. Wall of worry vs 매크로 경고 divergence.",
-    likes: 58, comments: 5, created_at: "2026-07-30T00:33:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-07-30T00:33:00.000Z", liked: false,
   },
   {
     id: -592, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "Pierre Ferragu의 견해: 중국이 우주에서 공격적으로 따라오는 중 · 미국이 이기는 조건은 mass to orbit을 빠르게·저렴하게·대량으로 하는 것 · 성공적인 SPCX가 반드시 필요. 정치 리스크(민주 행정부)는 인정하지만 심각하게 보지 않음 · 국가 안보 관점에서 SPCX 필수. 어제 NASA Admin Sean Duffy 강세 발언(7/27)에 이은 정치·국가 안보 프레임. mass to orbit = 궤도까지 운반하는 질량 총량 · 재사용 발사체·낮은 발사 비용·높은 발사 빈도 3요소가 핵심 · SPCX가 압도적. 중국 우주 프로그램은 위성 발사 급증·우주 정거장·화성 탐사·Long March 재사용 개발 등 진전 · 그러나 재사용 신뢰성 격차. 이 프레임은 초당적 SPCX 지지의 근거.",
-    likes: 40, comments: 4, created_at: "2026-07-30T00:40:00.000Z", liked: false,
+    likes: 40, comments: 0, created_at: "2026-07-30T00:40:00.000Z", liked: false,
   },
   {
     id: -593, alias: "종로 매 #12", symbol: "UBER",
     content: "8명 미 의회 의원(Hickenlooper·Boozman·Grassman·Armstrong·Bruening·Pelosi·Newhouse·Cohen)이 올해 UBER 매수(Nancy Pelosi Stock Tracker). 초당적(민주 4·공화 4). 주요 대형 매수: Pelosi 5월 20일 콜옵션 최대 $1M(2027년 1월 만료)·Trump 같은 날 최대 $5M. Uber는 같은 Q2에 로비 $1.25M 지출 · 정치인 매수 시점과 겹침. STOCK Act 논쟁 재점화 가능성: (1) 정보 우위 논쟁, (2) 로비-매수 상관관계, (3) 신고 지연 벌금 사례. UBER 정책 관심사(자율주행 규제·근로자 분류·국제 확장·데이터 프라이버시)가 매출·주가 직결. 반복 정치인 매수(7/23 LMT·7/28 SPCX Moskowitz·오늘 UBER) → STOCK Act 강화 법안 가능성.",
-    likes: 43, comments: 4, created_at: "2026-07-30T00:47:00.000Z", liked: false,
+    likes: 43, comments: 0, created_at: "2026-07-30T00:47:00.000Z", liked: false,
   },
   {
     id: -594, alias: "여의도 매 #22", symbol: "TSLA",
     content: "호주 Novon과 Tesla의 12번째 Megapack 배터리 프로젝트(Sawyer Merritt·Novon). 총 결합 캐파 2GW+ · Goyder 배터리 프로젝트 사이즈 두 배 확장 · 총 454MW/1,814MWh. Novon 기존 227MW/907MWh Stage 1 개발 · 이제 Stage 2까지 포함. Tesla 에너지 최근 흐름: 7/25 Q2 스토리지 $232.3/kWh -20% YoY 경쟁 심화 · 7/29 AZ 509MW+TX 140MW 태양광 두 건 · 오늘 호주 Novon 2GW+. Tesla가 (a) Megapack 판매, (b) 태양광·저장 자체 인수, (c) 국제 대형 프로젝트 다축 병행. 2GW+ 협업은 Tesla Megapack이 호주 renewable 축의 표준으로 자리매김 · 반복 고객 신뢰의 실체적 매출 전환. 반대: kWh 단가 -20% YoY 하락 상황에서 볼륨 성장이 매출 감소 상쇄 필요·CATL·BYD 호주 진출 예상.",
-    likes: 32, comments: 3, created_at: "2026-07-30T00:54:00.000Z", liked: false,
+    likes: 32, comments: 0, created_at: "2026-07-30T00:54:00.000Z", liked: false,
   },
   {
     id: -595, alias: "부산 갈매기 #77", symbol: "SPX",
     content: "Ozgur Erken 매크로 프레임: 하이퍼스케일러 결합 클라우드 백로그 ~$2T · 향후 12-24개월에 50% 전환 예상 · 캐파 갱신은 훨씬 높은 가격에 · 볼륨 성장 결합해 2028+ 지속 outperform 예상. 개별 하이퍼 백로그: GOOGL $500B+ (7/27)·MSFT Azure $100B (오늘)·AMZN AWS 별도·OpenAI $500B DC 등 종합 $2T. 반대 관점: (a) 백로그 → 매출 전환 속도는 계약별 상이, (b) CAPEX 상승 vs FCF 압박(GOOGL 첫 음전환·META EPS 미스) 지속 시 이익 실현 지연, (c) 오늘 NVDA CDS 사상 최대 상승은 CAPEX 사이클 신용 리스크 신호, (d) 2028+ outperform은 3년+ 관점 · 단기 조정 리스크. 캐시 우드 wall of worry 프레임과 정합.",
-    likes: 38, comments: 4, created_at: "2026-07-30T01:01:00.000Z", liked: false,
+    likes: 38, comments: 0, created_at: "2026-07-30T01:01:00.000Z", liked: false,
   },
   {
     id: -596, alias: "강남 표범 #46", symbol: "SPX",
     content: "한국 KOSPI가 -492.10(-8.17%)로 5,531.56 마감(Nancy Pelosi Stock Tracker 관측). CB(Circuit Breaker) 발동 이후 재개된 후에도 하락. 360K 마진 계좌 강제 청산 · 청산 대상 62%가 35세 미만. 하락 배경(일반적 관측): 글로벌 리스크 오프·원화 약세·삼성·SK하이닉스 조정·부동산 PF 부실·개인 마진 거래 확산. 젊은 층 62% 피해의 함의: (a) 20-30대 개인 투자 급증의 부작용, (b) 자산 손실 → 소비 위축, (c) 규제 강화 가능성. 최근 매크로 경고 축적(7/25 Fed hawkish·7/27 BRK 대기·숏 15년 최고·7/28 반도체 밸류 닷컴 초과·S&P/M2 정점·오늘 NVDA CDS 사상 최대)이 실 아시아 시장 급락으로 실체화. 미국 시가 반응·원화·엔·위안 통화 흐름·반도체 대형주 심리 파급 관건.",
-    likes: 74, comments: 5, created_at: "2026-07-30T01:08:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-07-30T01:08:00.000Z", liked: false,
   },
   {
     id: -597, alias: "서초 콘도르 #59", symbol: "SPX",
     content: "Mag 7 2026 YTD 성과 divergence(Evan D): AAPL +23.1%(1위) · GOOG +9% · AMZN -4% · MSFT -8.2% · META -12.6%(최하위). NVDA·TSLA 별도. 상위 그룹(AAPL·GOOG): 현금 창출력·CAPEX 절제·Defensive 축. 하위 그룹(MSFT·META): CAPEX 급증 사이클·FCF 압박. AAPL 1위는 어제 확인된 $3.9T 세계 최대·10년 ROIC 37%·연간 FCF $135B와 정합. META -12.6% 최하위는 오늘 Q2 EPS 미스·CAPEX 상향과 정합. MSFT는 오늘 Azure 43% 재가속 확인 · 반등 트리거 될지 관건. 별개로 Whole Mars Catalog가 Mag 7이 S&P 500 대비 사상 최저 밸류에이션 근접이라는 관측 · 상대 밸류 관점의 매력. Wood wall of worry 프레임과 정합.",
-    likes: 41, comments: 4, created_at: "2026-07-30T01:15:00.000Z", liked: false,
+    likes: 41, comments: 0, created_at: "2026-07-30T01:15:00.000Z", liked: false,
   },
   {
     id: -598, alias: "을지로 팔콘 #71", symbol: "V",
     content: "Visa가 인력의 약 7%(~2,000명) 감축 확정 · 주로 기술·제품 팀(Blossom). 대형 핀테크의 AI 자동화 대응·비용 구조조정 트렌드. 왜 지금: (1) AI 자동화 확산으로 코딩·QA·데이터 처리 자동화, (2) 핀테크 마진 압박(결제 수수료 인하·경쟁), (3) CAPEX vs OPEX 재편(AI 인프라 vs 인건비), (4) EPS 방어. Visa 최근 도전: 스테이블코인·크립토·BNPL·규제·AI 기반 결제. 시사점: (a) 다른 대형 핀테크(Mastercard·PayPal·AmEx) 유사 감축 확산 가능, (b) 결제 산업 AI 자동화 트렌드 강화, (c) 소프트웨어·기술 인력 시장 조정 지속, (d) Visa 마진 방어 → EPS 안정 → 주가에 방어적. Mag 7 하이퍼스케일러가 이미 각각 수천 명 감축 지속 흐름의 핀테크 확대판.",
-    likes: 26, comments: 3, created_at: "2026-07-30T01:22:00.000Z", liked: false,
+    likes: 26, comments: 0, created_at: "2026-07-30T01:22:00.000Z", liked: false,
   },
 
   // ── 2026-07-29 신규 ──────────────────────────────────────────────────────
   {
     id: -568, alias: "여의도 매 #22", symbol: "AAPL",
     content: "The Kobeissi Letter: Apple이 사상 두번째로 $3.9T 시가총액 도달 · NVDA 6% 상회 · 세계 최대 상장 기업. 2003년 $10K → 오늘 $5.5M · 550배 수익. 어제(7/28) Shay Boloor의 $5T 임박 프레임을 실 $3.9T 도달로 정정 · 다만 세계 최대 위치 재역전은 확정. AAPL의 10년 평균 ROIC 37%·연간 FCF $135B와 결합해 현금 창출력 리더십 재확인. NVDA는 반도체 밸류 닷컴 초과·HBM 병목 등 조정 압박 · AAPL은 defensive position 강화. 시장이 AI 성장 프리미엄에서 현금 흐름 안정성 프리미엄으로 재조정되는 신호.",
-    likes: 76, comments: 5, created_at: "2026-07-29T00:04:00.000Z", liked: false,
+    likes: 76, comments: 0, created_at: "2026-07-29T00:04:00.000Z", liked: false,
   },
   {
     id: -569, alias: "강남 표범 #46", symbol: "SPCX",
     content: "SPCX가 사상 최저 종가·ATH 대비 -50% 이상 하락·최근 16일 중 13일 red(Barchart·Kalshi). 캐시 우드 10년 리드 강세 프레임 재확인·Baron $30-40T 예상·NASA Admin Duffy 강세·Moskowitz 6번째 의원 매수 등 다층 강세 견해가 축적됐지만 시세는 정반대 극단. Divergence 원인: (1) Baron/Wood 극단 강세는 10-15년 관점·단기 catalyst 부족, (2) 매크로 부담(반도체 밸류 닷컴 초과·S&P/M2 정점), (3) 개인 매수 중단, (4) Starship V4 로드맵 미완, (5) 상장 초 차익 실현. 반등 트리거 후보: Flight 14 ship catch·첫 상용 페이로드·TSLA·SPCX 합병 진전·NASA 계약 확대·매크로 완화.",
-    likes: 61, comments: 5, created_at: "2026-07-29T00:12:00.000Z", liked: false,
+    likes: 61, comments: 0, created_at: "2026-07-29T00:12:00.000Z", liked: false,
   },
   {
     id: -570, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "캐시 우드가 SPCX 10년 리드 재확인(Ark Invest Tracker). 스케일 재사용성이 핵심 격차 요인. SPCX가 10년 전 첫 로켓 착륙 후 궤도 재발사 성공 → 지속적 재사용 스케일 확대 = (1) 발사 비용 절감, (2) 발사 캐파 확대, (3) Starlink constellation, (4) 상용 페이로드 지배. Blue Origin은 지난해 New Glenn 첫 착륙 밀레스톤 인정 · 그러나 rebuild가 궤도 도달 실패 · 재사용 신뢰성 격차. 오늘 SPCX 사상 최저 종가·-50% ATH 시세와 대비되는 펀더멘털 강세 프레임 · 우드 논거가 옳으면 현재 시세는 진입점, 시세가 옳으면 강세 과장.",
-    likes: 41, comments: 4, created_at: "2026-07-29T00:19:00.000Z", liked: false,
+    likes: 41, comments: 0, created_at: "2026-07-29T00:19:00.000Z", liked: false,
   },
   {
     id: -571, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "캐시 우드의 ARK Invest가 월요일 TSLA 18,730주(약 $8.8M) 매수(Kalki). ARKK ETF 기준 · TSLA $309.22 종가. 지난주 -14% 급락일 $51M 매수(160,001주 · 4개 ETF)에 이은 dip-buying 지속. 총 약 $60M 대응 매수. TSLA 시세는 7/24 -14% → 7/27 $313.03(사상 최대 손실) → 오늘 $309.22로 추가 하락 지속. 우드가 강세 유지하는 근거: FSD 315M miles/day · Cybercab 실 배치(Houston 133+SA) · Optimus 800피트+ 확장 · 유럽 FSD 5.2x 안전 · FSD 라이선싱 $6.5B · 캐나다 MY +98%. 실체 진전과 시세 divergence.",
-    likes: 55, comments: 4, created_at: "2026-07-29T00:26:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-07-29T00:26:00.000Z", liked: false,
   },
   {
     id: -572, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "TSLA 유럽 Q2 FSD(Supervised) 첫 안전 데이터: 사람 대비 5.2x 사고 감소 · 고속도로 8.5x 안전(49,394 km/사고) · AEB 13.4x·보행자 제동 9.2x·차선 유지 7.1x·하드 스위브 7.6x 감소. 데이터 기간 4/10-7/28. Tesla Europe/ME + Sawyer Merritt. Q3 프랑스·덴마크·벨기에 확대 예정 · TCMV 승인 흐름 정합. FSD가 미국·중국·유럽 다지역·다플랫폼(v14.3.8·v14 Lite·V15 early) 스토리로 확대. 규제 승인 근거 확보 · 안전성 정량 데이터의 지속 축적.",
-    likes: 43, comments: 3, created_at: "2026-07-29T00:33:00.000Z", liked: false,
+    likes: 43, comments: 0, created_at: "2026-07-29T00:33:00.000Z", liked: false,
   },
   {
     id: -573, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "Tesla 캐나다 2026 Model Y 사실상 매진(Sawyer Merritt·TeslaZoo). RWD·AWD·Perf 인도 시간이 12월-1월로 밀림. 상반기 미국→베를린 공급 이전 전략 결과: (1) 관세 회피, (2) <$60K RWD 신규 트림, (3) Q2 판매 +98% YoY 급증. Tesla 공식 매진 발표는 없지만 인도 예정으로는 매진. 관세 대응 전략의 실체 효과 · <$60K 가격 정책 효과 · 캐나다 EV 시장 Tesla 점유율 확대. 부작용은 독일→캐나다 배송 물류 시간 증가. 다른 관세 대상 국가에도 유사 전략 적용 가능성.",
-    likes: 33, comments: 3, created_at: "2026-07-29T00:40:00.000Z", liked: false,
+    likes: 33, comments: 0, created_at: "2026-07-29T00:40:00.000Z", liked: false,
   },
   {
     id: -574, alias: "종로 매 #12", symbol: "TSLA",
     content: "Tesla가 하루에 두 건 대형 태양광 딜 체결(Muskonomy·Bloomberg): (1) KKR 지원 ContourGlobal Project Sterling 애리조나 509 MW 태양광 + 350 MW 4h 배터리(총 1,400 MWh) 출력의 90% 인수·2028 가동, (2) 텍사스 140 MW 태양광 전체 출력 인수. Tesla가 (a) Megapack 판매 · (b) 태양광·저장 자체 인수 두 축 병행. 왜 지금: xAI Colossus 확장·자체 훈련 컴퓨트 필요 전력 확보·태양광 PPA 가격 유리·재생에너지 전략. Project Sterling은 태양광+4h 배터리 결합으로 24시간 안정 공급 가능 · 데이터센터에 특히 중요.",
-    likes: 37, comments: 3, created_at: "2026-07-29T00:47:00.000Z", liked: false,
+    likes: 37, comments: 0, created_at: "2026-07-29T00:47:00.000Z", liked: false,
   },
   {
     id: -575, alias: "여의도 매 #22", symbol: "TSLA",
     content: "Unsupervised Model Y Robotaxi fleet 자율 귀환 관측(Aryan Butala). 승객 운송 완료 후 각자 주차 · 빨강·검정 차체에 Robotaxi 스티커. Unsupervised는 완전 무인 · Supervised(감독자 필요)와 별개. Cybercab(신규 전용 차종) + Model Y(기존 활용) 두 축이 병렬로 상용 Robotaxi fleet 형성. FSD 315M miles/day · 유럽 5.2x 안전이 이 자율성의 기반. 반대 관점: 개인 관측 · 공식 확인 없음·실제 자율 수준 세부 미상. fleet 소유자·규모 확인 필요.",
-    likes: 45, comments: 4, created_at: "2026-07-29T00:54:00.000Z", liked: false,
+    likes: 45, comments: 0, created_at: "2026-07-29T00:54:00.000Z", liked: false,
   },
   {
     id: -576, alias: "부산 갈매기 #77", symbol: "TSLA",
     content: "Tesla 직원 Cybercab pickup·dropoff이 기가 텍사스 주변에서 지속 관측(Herbert Ong). 어제 Houston 133대·SA 수백 대 Cybercab 배치 관측과 결합해 (1) 상용 배치 대기 상태, (2) 파일럿 지역 실 운영 두 축으로 진행. 직원 파일럿 의미: 통제된 사용자층으로 안전·서비스 품질 검증·실 데이터 수집·문제 발견·개선·점진 확장 로드맵. Robotaxi 26.6.0 앱 코드 wide release 시나리오와 정합 · Musk의 새 차대 자체 데이터 필요 설명(7/27)의 실 검증 단계. 직원 파일럿 → 상용 확장 시점이 관건.",
-    likes: 29, comments: 3, created_at: "2026-07-29T01:01:00.000Z", liked: false,
+    likes: 29, comments: 0, created_at: "2026-07-29T01:01:00.000Z", liked: false,
   },
   {
     id: -577, alias: "강남 표범 #46", symbol: "TSLA",
     content: "Tesla가 프랑스·스페인 산불 지역에 8/5 자정까지 무료 슈퍼차징 제공 · 비-Tesla EV도 포함(Sawyer Merritt). Ares(FR)·Málaga(ES)·Bigueros(FR) 등. 왜 이 정책이 중요: (1) 산불 재난 대응, (2) 인프라 오픈 정책 상징, (3) 브랜드 신뢰, (4) 경쟁사와 대비('가스·석유 회사가 무료 제공 드물다' Merritt 지적), (5) 유럽 확산 마케팅(비-Tesla 소유자가 슈퍼차징 UX 경험). NACS(미국)·CCS2(유럽) 표준으로 슈퍼차징 오픈 정책 지속 · 오늘의 재난 응용.",
-    likes: 24, comments: 3, created_at: "2026-07-29T01:08:00.000Z", liked: false,
+    likes: 24, comments: 0, created_at: "2026-07-29T01:08:00.000Z", liked: false,
   },
   {
     id: -578, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Tesla FSD 라이선싱 매출 ~$6.5B · 월 구독 $781M ARR(Whole Mars Catalog). FSD가 소비자 옵션 → B2B 라이선싱 축 확장. 두 축: (1) B2B 라이선싱 누적 $6.5B (타 OEM · 대형 계약 + 로열티 · 회사 미공개), (2) B2C 월 구독 $781M ARR(148만+ 활성 유료). 왜 중요: 자동차 회사 → 소프트웨어 회사 이행 · 매출 다각화 · 높은 마진 · 경쟁 우위 지속. FSD가 (a) 안전성 5.2x, (b) 실주행 315M miles/day, (c) B2C 148만·$781M ARR, (d) B2B $6.5B 4축 모두 실체화. 오늘 $100B rev→profit 프레임의 핵심 축.",
-    likes: 51, comments: 4, created_at: "2026-07-29T01:15:00.000Z", liked: false,
+    likes: 51, comments: 0, created_at: "2026-07-29T01:15:00.000Z", liked: false,
   },
   {
     id: -579, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Tesla가 $100B/년 매출 회사에서 $100B/년 이익 회사로 전환 중이라는 프레임(Whole Mars Catalog). 자율성·로보틱스 성장 축. 이익 축 3가지: (1) Model Y + FSD, (2) Cybercab + Robotaxi, (3) Optimus. 오늘까지 실체화된 진전: FSD 315M miles/day·148만 구독·$6.5B 라이선싱·$781M ARR·유럽 5.2x 안전 · Cybercab Houston·SA 배치·기가 텍사스 직원 파일럿 · Optimus 공장 800피트+ 확장·Tempe 채용. 세 축 모두 진행 · 시세는 별개. $100B 이익은 애플·아람코 수준의 야심찬 목표 · 실현 시간표 불확실.",
-    likes: 32, comments: 3, created_at: "2026-07-29T01:22:00.000Z", liked: false,
+    likes: 32, comments: 0, created_at: "2026-07-29T01:22:00.000Z", liked: false,
   },
   {
     id: -580, alias: "광화문 늑대 #33", symbol: "SPCX",
     content: "SPCX Starship 13번째 flight 로켓이 극도로 부드럽게 splash · MASSIVE WIN for Elon and SpaceX Program(Jesus Watters). 어제 히트실드 스트레스 테스트 성공 + 오늘 부드러운 splash = 재사용 신뢰성 축적. Flight 14 ship catch(booster catch에 이어 상단 vehicle까지 catch하는 완전 재사용 마일스톤) 준비 강화. 오늘 SPCX 시세는 사상 최저 종가·-50% ATH · 기술 성과와 시세 극단 divergence. Wood/Baron/NASA Admin 강세 + Flight 13 기술 성과 vs 매크로·심리 압박. Flight 14 시도 시점·V4/V5 로드맵·첫 상용 페이로드 계약이 후속 관찰 축.",
-    likes: 47, comments: 4, created_at: "2026-07-29T01:29:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-07-29T01:29:00.000Z", liked: false,
   },
   {
     id: -581, alias: "마포 올빼미 #24", symbol: "AMZN",
     content: "AMZN 두 축 동시 가속(Evan·Ozzy Erken): (1) 리테일 AI - AI 쇼핑 어시스턴트 사용 2025년 2배·쇼퍼 절반 이상이 AI에 전체 구매 위임 의향, (2) AWS - 2023 이후 매 분기 가속·리테일·광고·서비스도 동반 가속·P/E 사상 최저. 하이퍼스케일러 프리미엄 대상: GOOGL FCF 첫 음전환 상황에서 AMZN 상대 매력 부각·두 축 동시 가속·매력적 밸류·내일 실적 발표. AWS 매 분기 가속은 (a) AI 인프라 수요 지속, (b) AWS 경쟁 우위 유지(Azure·GCP 대비), (c) 매출 성장 반전 이후 지속. 내일 AMZN Q2 관전 포인트: AWS 성장률·AI 매출·FCF·2027 CAPEX.",
-    likes: 40, comments: 4, created_at: "2026-07-29T01:36:00.000Z", liked: false,
+    likes: 40, comments: 0, created_at: "2026-07-29T01:36:00.000Z", liked: false,
   },
   {
     id: -582, alias: "종로 매 #12", symbol: "AMZN",
     content: "Amazon Kuiper가 FCC에 3,232 direct-to-phone 위성 신청(DogeDesigner). SPCX Starlink Direct-to-Cell(T-Mobile)과 정면 경쟁. 그러나 SPCX 10년 앞선다는 프레임. Kuiper 현재: 위성 398(Starlink 10,700 대비)·발사 14(250+)·상용 초기·글로벌 없음. 오늘 3,232 신청은 (1) 별개 direct-to-phone 성좌, (2) FCC 인가 대기, (3) 실행 수년. SPCX 우위: 위성 10,700·Falcon 9 자체 발사 캐파·Direct-to-Cell 이미 상용·900+ 국가. 반대 관점: Amazon 자원(AWS·Bezos·Blue Origin) 매우 큼·direct-to-phone 초기 시장·Amazon 실행 능력 무시 못 함.",
-    likes: 28, comments: 3, created_at: "2026-07-29T01:43:00.000Z", liked: false,
+    likes: 28, comments: 0, created_at: "2026-07-29T01:43:00.000Z", liked: false,
   },
   {
     id: -583, alias: "여의도 매 #22", symbol: "META",
     content: "META와 BLK이 루이지애나·텍사스에 1 GW 데이터센터 JV 설립·총 개발비 ~$14B·2028 가동·BLK 80%·META 20%(Evan·Bloomberg). 특별한 구조: 통상 하이퍼스케일러가 자체 CAPEX로 짓는데 이번엔 BLK 인프라 펀드가 대주주·META는 소수 지분·CAPEX 부담 대폭 축소·위험 분산. AI DC 자본 조달 3가지 모델 대두: (1) GOOGL 자체 CAPEX(FCF 부담), (2) OpenAI 외부 backstop(Softbank $250B), (3) META×BLK 인프라 펀드 JV. META의 defensive 전략·BLK 신규 사업 축·MSFT·AMZN 유사 딜 가능성.",
-    likes: 46, comments: 4, created_at: "2026-07-29T01:50:00.000Z", liked: false,
+    likes: 46, comments: 0, created_at: "2026-07-29T01:50:00.000Z", liked: false,
   },
   {
     id: -584, alias: "부산 갈매기 #77", symbol: "KO",
     content: "Coca-Cola Q2 실적 비트(Evan): 매출 $13.4B(컨센 $13.16B·+1.7% YoY)·조정 EPS $0.87(컨센 $0.83)·판매량 +5% YoY·Comparable Op Margin 35.6%. FY26 가이던스 상향: 유기 매출 성장 ~5%·EPS 성장 9-12%·FCF ~$12.4B. 소비재 대형주 5각(매출·EPS·판매량·마진·가이던스) 모두 상회 · 판매량 +5%는 가격 뿐 아니라 실 소비 증가. defensive 축 재확인·91% EPS 비트 시즌 대표 사례·JPMorgan bullish 논거 지지. KO는 Berkshire Hathaway 30년+ 장기 보유·Buffett 프레임 상징. AAPL(성장) + KO(defensive) 시장 defensive 재편 두 축.",
-    likes: 26, comments: 3, created_at: "2026-07-29T01:57:00.000Z", liked: false,
+    likes: 26, comments: 0, created_at: "2026-07-29T01:57:00.000Z", liked: false,
   },
   {
     id: -585, alias: "강남 표범 #46", symbol: "NVDA",
     content: "중국 Moonshot AI가 Kimi K4 훈련 $1B+ 자금 조달·NVDA Blackwell 활용(Shay Boloor). K3(2.81B 파라미터)보다 훨씬 큰 K4·미국 수출 제한에도 중국 클라우드에서 접근·K3 이미 48시간 내 인프라 압도. Blackwell CN 접근 경로: (1) 수출 제한 이전 재고, (2) HK·SG·중동 우회, (3) H200 제한 이후 개조, (4) 정확 경로 일부 회색지대. NVDA에 미치는 시사: (a) CN 시장 매출 정치 리스크에도 지속·Jensen 오픈 접근 발언 정합, (b) Blackwell 수요가 미국 이외에서도 강함, (c) 수출 제한 정책 실효성 논쟁 · NVDA 매출 upside vs 다운사이드.",
-    likes: 38, comments: 3, created_at: "2026-07-29T02:04:00.000Z", liked: false,
+    likes: 38, comments: 0, created_at: "2026-07-29T02:04:00.000Z", liked: false,
   },
   {
     id: -586, alias: "서초 콘도르 #59", symbol: "SPX",
     content: "내일 롤러코스터 이벤트 조합(Kalshi): Fed 금리 유지 77% 확률 + MSFT·META·QCOM·ARM 4개 대형 실적 동시 발표. Fed 성명·기자회견 톤이 매크로 방향 결정 · 9월 인하 시사 여부 관건. 4개 실적: MSFT(Azure·AI·Copilot), META(광고·Reality Labs·오늘 BLK JV 세부), QCOM(모바일·자동차·AI PC), ARM(라이선싱·서버 CPU). 시나리오 매트릭스 4가지: A(Bull·Bull) 지수 상승, B(Bull·Bear) 매크로 완화에도 밸류 조정, C(Bear·Bull) 종목 divergence, D(Bear·Bear) 대형 조정. 매크로 경고(반도체 밸류·M2 정점) vs 실적 강세의 다층 대립이 내일 결판.",
-    likes: 41, comments: 4, created_at: "2026-07-29T02:11:00.000Z", liked: false,
+    likes: 41, comments: 0, created_at: "2026-07-29T02:11:00.000Z", liked: false,
   },
 
   // ── 2026-07-28 신규 ──────────────────────────────────────────────────────
   {
     id: -552, alias: "여의도 매 #22", symbol: "AAPL",
     content: "Apple이 NVIDIA를 넘어 세계에서 가장 가치 있는 상장 기업으로 복귀했다(Shay Boloor). $5T 시총 도달까지 약 $50B 남긴 상태. Boloor의 프레임: 10년 평균 ROIC 약 37%인 회사보다 신뢰할 만한 투자처는 드물다. 어제 Charlie Bilello의 AAPL 연간 FCF $135B 프레임과 정합. 시장이 AI 성장 프리미엄에서 현금 흐름 안정성 프리미엄으로 재조정되는 신호. NVDA는 반도체 밸류 닷컴 초과 경고·HBM 병목·중국 규제 등 조정 압박 · AAPL은 상대적으로 안정된 현금 창출력으로 defensive position 강화.",
-    likes: 71, comments: 5, created_at: "2026-07-28T00:04:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-07-28T00:04:00.000Z", liked: false,
   },
   {
     id: -553, alias: "강남 표범 #46", symbol: "GOOGL",
     content: "Warren Buffett의 BRK가 지난달 GOOGL 주식을 약 $10B 규모로 매수(Holzenberg). GOOGL 최근 -8% 주간 낙폭·100-DMA 하회·FCF 첫 음전환 등 부정 신호 축적 구간에 dip-buying. BRK $317B ATH 현금 중 첫 명시적 활용. 지난달 매수 = 이번달 낙폭 이전 결정 · Buffett은 낙폭 이전에 이미 매수 판단. Value 관점에서 GOOGL이 Buffett 기준 넘긴 것. GOOGL의 오늘 이벤트(SPCX 지분 $94.1B·백로그 $500B+·Anthropic $8.4B·VZ $1B·Peacock 딜)와 정합.",
-    likes: 58, comments: 5, created_at: "2026-07-28T00:12:00.000Z", liked: false,
+    likes: 58, comments: 0, created_at: "2026-07-28T00:12:00.000Z", liked: false,
   },
   {
     id: -554, alias: "서초 콘도르 #59", symbol: "NVDA",
     content: "OpenAI가 남부 오하이오 컬럼버스에 10 GW · $500B 규모 데이터센터 프로젝트 진행(Brian D · WSJ). Softbank $250B backstop 협상 중, NVDA가 개발자 역할. 사상 최대 단일 DC 프로젝트. 10 GW = 원자력 10기 규모. OpenAI는 investment-grade 신용 없어 NVDA·Softbank 후원이 자금 조달 핵심. 어제 NVDA Jensen의 HBM 공급망 압박 발언과 결합하면 이 프로젝트가 HBM 배분에도 영향. 부지·전력 계약 아직 완료 안 된 상태 · 리스크는 (1) OpenAI 신용, (2) Ohio 전력 확보, (3) 완공 시점.",
-    likes: 67, comments: 5, created_at: "2026-07-28T00:19:00.000Z", liked: false,
+    likes: 67, comments: 0, created_at: "2026-07-28T00:19:00.000Z", liked: false,
   },
   {
     id: -555, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "정정: 기가팩토리 텍사스의 Optimus 공장이 12 column N-S grid로 확장되며 약 800피트(~150m) 근접(Joe Tegtmeyer 원문 'Optimus factory hires at Giga Texas'). 앞선 배포에서 Cybertruck으로 잘못 attribution한 것을 정정. 지난주 시작 이후 급성장 · 남쪽으로 계속 확장 · Optimus 채용도 진행. Optimus 상용화의 실체적 진전 · 7/23 TOSV의 Optimus Gen 3 +20% · 7/24 Tempe Data Collection Ops Lead 채용과 결합해 다축 축적. 프리몬트 별개 NEW 파일럿 라인은 올해 말 온라인 예정(다른 위치·다른 대상).",
-    likes: 33, comments: 3, created_at: "2026-07-28T00:26:00.000Z", liked: false,
+    likes: 33, comments: 0, created_at: "2026-07-28T00:26:00.000Z", liked: false,
   },
   {
     id: -556, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "정정: Houston에서 133 Cybercabs 발견(S.E. Robinson 원문 'Cybercabs' · Tesla Hempstead Center 5대·fleet lot 128대). 별개로 San Antonio에도 수백 대 Cybercabs 배치 준비 중(Dalton Brewer 원문 '100s of Cybercabs'). 앞선 배포에서 Cybertruck으로 잘못 attribution한 것을 정정. Cybercab이 실 상용 fleet로 배치되는 첫 대량 관측 · Robotaxi 서비스 지역 확장의 직접 신호. 7/25 Robotaxi 26.6.0 앱 코드의 Cybercab wide release 시나리오와 시간축 정합. Houston·SA Robotaxi 서비스 개시 발표·fleet 소유자 공식 확인이 후속 관찰 축.",
-    likes: 42, comments: 4, created_at: "2026-07-28T00:33:00.000Z", liked: false,
+    likes: 42, comments: 0, created_at: "2026-07-28T00:33:00.000Z", liked: false,
   },
   {
     id: -557, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "Tesla China 홈페이지 Model 3 전 트림 예상 인도 시간이 이전 4-6주에서 2-4주로 단축(Ming). 상하이 Gigafactory의 상반기 부족(라인 업그레이드·Model Y refresh·부품 이슈 등)이 해소되고 정상화된 신호. Q3 인도 흐름에 긍정. 중국 EV 시장 경쟁 격화(BYD·Xpeng·NIO·Zeekr) 속에서 Tesla 대응 캐파가 정상화된 것. 중국 판매 데이터·Model Y 인도 시간·Cybertruck 중국 출시가 후속 관찰 축.",
-    likes: 26, comments: 3, created_at: "2026-07-28T00:40:00.000Z", liked: false,
+    likes: 26, comments: 0, created_at: "2026-07-28T00:40:00.000Z", liked: false,
   },
   {
     id: -558, alias: "종로 매 #12", symbol: "TSLA",
     content: "Cole Grinde의 강세 프레임: Tesla가 $43B 현금·Q2 record 매출과 함께 (1) 안전 우선 Robotaxi 배포, (2) in-house 로봇 공급망, (3) 점진 캐파 확대, (4) 인프라 최대 속도 확장, (5) Cybercab 상용화 병행해야. Slow and Steady wins the war · Wall Street will come around. 최근 -14% 낙폭·다운그레이드 wave에 대한 개인 강세 프레임. 반대 관점: $43B 현금 vs FCF TTM -$6.4B의 조합은 현금 감소 방향 · Wait Street가 오는 사이 주가는 계속 하락 위험.",
-    likes: 24, comments: 3, created_at: "2026-07-28T00:47:00.000Z", liked: false,
+    likes: 24, comments: 0, created_at: "2026-07-28T00:47:00.000Z", liked: false,
   },
   {
     id: -559, alias: "여의도 매 #22", symbol: "SPCX",
     content: "Rep. Jared Moskowitz(D)가 최대 $340,000 규모의 거래 공시 · SPCX 지분 매수 포함(Nancy Pelosi Stock Tracker). 미 의회에서 SPCX를 매수한 6번째 의원. 초당적 관심 확대 신호. STOCK Act 배경으로 (1) 정치인 정보 우위 논쟁 재점화 가능성, (2) 정치인 매수 = 규제 리스크가 낮다는 신호로 해석 가능, (3) SPCX가 정치인 관심 종목이라는 브랜딩. SPCX의 정치적 위상 (NASA·국방 계약자·Starlink 국가안보·Musk 정치 위치·TSLA·SPCX 합병 논의) 상승 신호.",
-    likes: 30, comments: 3, created_at: "2026-07-28T00:54:00.000Z", liked: false,
+    likes: 30, comments: 0, created_at: "2026-07-28T00:54:00.000Z", liked: false,
   },
   {
     id: -560, alias: "부산 갈매기 #77", symbol: "SPCX",
     content: "SpaceX가 Flight 13에서 히트실드 타일을 의도적으로 강한 dynamic pressure로 스트레스 테스트했으며 Elon 성공 공식 확인(Joe Hansen). 세부: (1) 이전보다 높은 가속도 의도적 적용, (2) 접착제→볼트 개선의 고압 조건 검증, (3) Flight 14 계획된 ship catch 리스크 하나 해소. 성공적 flight에도 조용히 상방 실험 축적하는 방식 · 재사용 신뢰성이 상용 페이로드 배치의 핵심. All-in Starship 결정(7/25)의 실행력 확인. Flight 14 ship catch는 booster catch에 이어 상단 vehicle까지 catch하는 완전 재사용 마일스톤.",
-    likes: 48, comments: 4, created_at: "2026-07-28T01:01:00.000Z", liked: false,
+    likes: 48, comments: 0, created_at: "2026-07-28T01:01:00.000Z", liked: false,
   },
   {
     id: -561, alias: "강남 표범 #46", symbol: "SPCX",
     content: "SpaceX가 NVIDIA와 함께 Open Secure AI Alliance 창립 멤버로 합류(DogeDesigner). 소프트웨어·AI 에이전트 보호 위한 오픈 툴 공동 개발. SPCX의 AI 인프라 위상(Neocloud·Colossus 등)·NVIDIA와의 전략 결합(GPU 파트너 → 표준 개발 파트너)·정책 대응(Musk의 AI 10년 통제 발언에서 실제 표준 개발로 이어지는 실행력)의 세 축. 반대 관점: Alliance 이름은 좋지만 표준 채택은 별개 · OpenAI·Anthropic·Google DeepMind 등 프런티어 AI 회사 참여 없으면 영향력 제한.",
-    likes: 41, comments: 4, created_at: "2026-07-28T01:08:00.000Z", liked: false,
+    likes: 41, comments: 0, created_at: "2026-07-28T01:08:00.000Z", liked: false,
   },
   {
     id: -562, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "Baron Capital 창립자 Ron Baron이 Compound and Friends 팟캐스트에서 극단적 강세 견해: SPCX가 IPO 대비 10~15년 안에 20~30배 상승 · $30~40T 밸류 도달 · 최소 $40T까지도 가능. 오늘 SPCX 강세 견해가 다층으로 축적됨(캐시 우드 재조명·Adam Jonas $135·NASA Admin Duffy·Moskowitz 매수·Baron 20-30배). Baron Capital이 SPCX 대주주라 자기 이해관계 있지만 실 money 걸린 심각한 판단. 반대: 10-15년 시간 축 매우 길고 불확실성 큼 · $30-40T는 현재 미국 GDP $25T 초과 규모.",
-    likes: 55, comments: 4, created_at: "2026-07-28T01:15:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-07-28T01:15:00.000Z", liked: false,
   },
   {
     id: -563, alias: "을지로 팔콘 #71", symbol: "SPCX",
     content: "NASA Administrator Sean Duffy가 Moonshots 팟캐스트에서 SPCX에 강한 신뢰 표명(Sawyer Merritt 인용): '극단적으로 자본화된 Elon에 절대 반대하지 말라' · 달 재귀환 미션 위해 SPCX 필수 · Musk 최근 최고 창업자·엔지니어 평가. 정부 기관 최고 책임자의 명시적 SPCX 지지 = 정책·규제 리스크 완화 신호. Artemis 프로그램에서 SPCX 역할 (Starship HLS·Falcon Heavy·Starlink·Dragon) 다축 = 다른 사업자로 대체 어려운 구조. NASA-SPCX 계약 확대·갱신 발표가 후속 관찰 축.",
-    likes: 44, comments: 4, created_at: "2026-07-28T01:22:00.000Z", liked: false,
+    likes: 44, comments: 0, created_at: "2026-07-28T01:22:00.000Z", liked: false,
   },
   {
     id: -564, alias: "광화문 늑대 #33", symbol: "GOOGL",
     content: "Google $GOOGL 소유 YouTube TV와 Comcast $CMCSA 소유 Peacock이 딜 체결(Evan · CNBC). Peacock 전 콘텐츠(라이브 스포츠 포함)가 내년 초부터 YouTube Premium 구독자에게 미국 시장에서 제공. Peacock 주요 콘텐츠는 NFL Sunday Night Football, Premier League, Olympics 등. GOOGL 관점: YouTube Premium 콘텐츠 매력 대폭 확대·라이브 스포츠 접근으로 넷플릭스·디즈니와 차별화·YouTube TV 구독자 유치. CMCSA 관점: Peacock 콘텐츠 유통 채널 확장·Google 유통망 활용 마케팅 비용 절감.",
-    likes: 37, comments: 3, created_at: "2026-07-28T01:29:00.000Z", liked: false,
+    likes: 37, comments: 0, created_at: "2026-07-28T01:29:00.000Z", liked: false,
   },
   {
     id: -565, alias: "마포 올빼미 #24", symbol: "SPX",
     content: "Charlie Bilello: 반도체 회사들 밸류에이션이 이제 닷컴 버블 정점 초과. AI가 혁명적일 수 있지만 지불하는 가격이 여전히 중요. NVDA(P/E 30-40x)·AMD(40x+)·ARM(100x+)·TSM·AVGO 다 부담. 어제까지 매크로 시그널 축적: 7/23 EPS 성장 65% Big Tech · 7/25 Fed hawkish · 7/27 BRK $317B ATH · 숏 15년 최고. 오늘 두 개 새 경고(반도체 밸류·S&P/M2). 반대 관점: 실 매출·이익 견조·AI CAPEX 사이클 실 수요·OpenAI $500B 같은 실 프로젝트 지속. 밸류 조정은 실적 결정.",
-    likes: 35, comments: 3, created_at: "2026-07-28T01:36:00.000Z", liked: false,
+    likes: 35, comments: 0, created_at: "2026-07-28T01:36:00.000Z", liked: false,
   },
   {
     id: -566, alias: "종로 매 #12", symbol: "SPX",
     content: "Barchart: S&P 500 vs M2 통화공급 비율이 이제 닷컴 버블 정점을 표시한 것과 정확히 같은 수준. 통화 조정 밸류에이션 지표에서 2000년 정점과 동일. Buffett Indicator와 유사한 매크로 지표. 오늘로 매크로 경고 4중 축적: BRK 대기·숏 15년 최고·반도체 밸류·S&P/M2. 오늘 반대 축: JPM 매수 신호·Buffett $10B GOOGL 매수·Ron Baron 20-30배 예상·AAPL #1 재역전. 대형 하우스·자산가 vs 매크로 경고 대립. BRK 대기 자세는 매크로 신호와 정합.",
-    likes: 32, comments: 3, created_at: "2026-07-28T01:43:00.000Z", liked: false,
+    likes: 32, comments: 0, created_at: "2026-07-28T01:43:00.000Z", liked: false,
   },
   {
     id: -567, alias: "여의도 매 #22", symbol: "SPX",
     content: "JPMorgan 전술 포지셔닝 미터가 매수 신호로 S&P 500 upside 지목(Walter Bloomberg). 논거: 낮은 채권 수익률·달러 약세·안정 Fed·강한 실적(91% EPS 비트). 리스크: 심리·포지션 lofty·미-이란 tension. 반도체 밸류 닷컴 초과·S&P/M2 정점 경고와 대조되는 대형 하우스 강세. 두 관점이 공존하는 이유: (1) 시간 지평선 차이 (매크로 vs 단기 전술), (2) 밸류 측정 방식, (3) 지수 vs 개별, (4) 리스크 성향. 시장 반응 시나리오 3가지 (강세 승·약세 승·개별 divergence) 모두 가능.",
-    likes: 38, comments: 4, created_at: "2026-07-28T01:50:00.000Z", liked: false,
+    likes: 38, comments: 0, created_at: "2026-07-28T01:50:00.000Z", liked: false,
   },
 
   // ── 2026-07-27 신규 ──────────────────────────────────────────────────────
   {
     id: -532, alias: "여의도 매 #22", symbol: "GOOGL",
     content: "GOOGL 재무제표에 SpaceX 지분을 non-marketable equity fair value $94.1B로 공시. 2024 $30.1B에서 약 3배 재평가. GOOGL 지분율 약 6%. Whole Mars Catalog 정리. 이는 (1) GOOGL non-core 자산의 mega-cap 규모 확인, (2) SPCX 밸류 계산 시 $94.1B/6% = 약 $1.57T로 SPCX 시가총액과 대략 부합, (3) 어제까지 리포트한 지분 미실현 이익(Q3 $9.8B) 시리즈의 종합 결산. GOOGL 밸류 재평가와 SPCX 밸류 정당화 양쪽에 영향.",
-    likes: 74, comments: 5, created_at: "2026-07-27T00:04:00.000Z", liked: false,
+    likes: 74, comments: 0, created_at: "2026-07-27T00:04:00.000Z", liked: false,
   },
   {
     id: -533, alias: "강남 표범 #46", symbol: "SPCX",
     content: "Kalshi 예측시장: TSLA·SPCX 향후 1년 이내 합병 확률이 74%로 sky rocketing · 사상 최고. 최근 며칠 흐름: Munster 개인 견해 90%(특정 시나리오) → Kalshi 2028 이전 79% → 오늘 1년 이내 74%. 시간 조건을 좁혔는데도 확률이 크게 안 떨어짐 = 시장이 합병이 곧 일어난다고 판단. 촉발 이벤트는 (1) GOOGL SPCX $94.1B 재평가, (2) All-in Starship 결정, (3) Adam Jonas $135 매수 콜, (4) Musk의 Starlink 감사 프레임. 다만 Musk의 명시적 발표 없어 실체 리스크 남음.",
-    likes: 51, comments: 4, created_at: "2026-07-27T00:12:00.000Z", liked: false,
+    likes: 51, comments: 0, created_at: "2026-07-27T00:12:00.000Z", liked: false,
   },
   {
     id: -534, alias: "서초 콘도르 #59", symbol: "AVGO",
     content: "Samsung × Broadcom(AVGO)이 2030년까지 $200B 반도체 공급 계약을 체결(Bull Theory). 커버 범위는 (1) HBM 메모리 - AI 서버 성능 핵심, (2) 파운드리 서비스 - 3nm/2nm 등 선단 공정, (3) 고급 패키징 - CoWoS 대체 옵션. 사상 최대급 딜이며 AI 인프라 사이클 하부 구조 규모 정량화. AVGO 커스텀 실리콘 리더십 강화·Samsung의 HBM 재기 신호. 관건은 (1) NVDA·AMD의 Samsung HBM 채택 여부·규모, (2) SK하이닉스 대응, (3) TSMC CoWoS 캐파 압박.",
-    likes: 62, comments: 5, created_at: "2026-07-27T00:19:00.000Z", liked: false,
+    likes: 62, comments: 0, created_at: "2026-07-27T00:19:00.000Z", liked: false,
   },
   {
     id: -535, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Roland Pircher 정리에 따르면 TSLA가 실적 발표 이후 사상 최대 규모의 손실을 겪고 있다. 현재 주가 $313.03. 어제까지 -14% 낙폭(13개월래 최대)·다중 IB 다운그레이드 wave 후폭풍 지속. 반등 실패의 근본 원인은 (1) 마진 관련 컨센 상향 없이 다운그레이드만 확인, (2) FCF 음전환의 CAPEX 회수 시점 불확실, (3) 오늘 발표된 에너지 스토리지 $232.3/KWh -20% YoY로 마진 걱정 재점화. 반등 트리거는 Q3 마진 회복·Cybercab wide release·V15 배포 등 실체적 진전이 필요.",
-    likes: 43, comments: 4, created_at: "2026-07-27T00:26:00.000Z", liked: false,
+    likes: 43, comments: 0, created_at: "2026-07-27T00:26:00.000Z", liked: false,
   },
   {
     id: -536, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "Tesla 2026.26 Summer Update가 함대 첫 1%에 배포 시작(The Tesla Newswire). Model 3/Y용 신규 Traction Control 3모드: (1) Auto - 일반, (2) Slippery Surface - 빙판·젖은 노면, (3) Stuck Assist - 눈·진흙·모래 탈출. 매 주행 시작 시 Auto로 리셋. 소프트웨어만으로 하드웨어 활용성 확대하는 Tesla 특유의 접근. Model 3/Y가 세단·SUV로서 부족했던 겨울·오프로드 시나리오 커버 강화. batch 확대와 다른 국가별 규제 승인이 후속 관찰 축.",
-    likes: 27, comments: 3, created_at: "2026-07-27T00:33:00.000Z", liked: false,
+    likes: 27, comments: 0, created_at: "2026-07-27T00:33:00.000Z", liked: false,
   },
   {
     id: -537, alias: "마포 올빼미 #24", symbol: "TSLA",
     content: "Musk가 X에 Model X 디자인·소프트웨어 오픈소스 계획 예고. 원조 Roadster 오픈소스 선례 인용. 구체 시점·범위 미상. 해석: (1) Cybercab·Optimus 등 신형 라인업 집중과 구형 Model X 세대교체 신호, (2) 커뮤니티 기반 복원·리메이크·서드파티 활용으로 브랜드 자산 확대, (3) 서드파티 유지 생태계 활성화. 배터리·모터·제어기 특허 부분은 별도 처리 필요할 것.",
-    likes: 34, comments: 3, created_at: "2026-07-27T00:40:00.000Z", liked: false,
+    likes: 34, comments: 0, created_at: "2026-07-27T00:40:00.000Z", liked: false,
   },
   {
     id: -538, alias: "종로 매 #12", symbol: "TSLA",
     content: "AI Investment Research가 정리한 Tesla CFO 발언 인용: Q2 에너지 스토리지 배포 kWh당 평균 매출 $232.3로 -20% YoY · 사상 최저. 글로벌 배터리 저장 시장 경쟁 심화가 배경. Megapack·Powerwall 배포 규모는 성장하지만 단가 하락으로 매출 성장 상단 제약. CATL·BYD 등 중국 배터리 업체가 대형 저장 시장에도 본격 진출한 신호. 셀 원가 하락 속도와 매출 단가 하락 속도의 상대 속도가 마진 방향 결정. Q3 실적에서 에너지 부문 마진 방향이 검증 축.",
-    likes: 32, comments: 3, created_at: "2026-07-27T00:47:00.000Z", liked: false,
+    likes: 32, comments: 0, created_at: "2026-07-27T00:47:00.000Z", liked: false,
   },
   {
     id: -539, alias: "여의도 매 #22", symbol: "TSLA",
     content: "Tesla가 크로아티아에 신규 3개 사이트(Gospić·Zadar Westbound·Vista Jadrana South)를 오픈하며 총 스톨 100개에 도달(Muskonomy·Tesla Charging). Zadar 사이트는 Megapack 결합. 크로아티아 해안 관광 성수기의 그리드 부담을 Megapack 저장으로 완충하는 모델. 2025 44개·2026 72개 공약을 오버 딜리버. Rijeka·Pula·Šibenik·Poreč·Korenica·Dubrovnik 등이 남은 2026 리스트. 이 모델은 그리스·이탈리아·스페인 등 다른 관광 국가에도 적용 가능한 template.",
-    likes: 21, comments: 2, created_at: "2026-07-27T00:54:00.000Z", liked: false,
+    likes: 21, comments: 0, created_at: "2026-07-27T00:54:00.000Z", liked: false,
   },
   {
     id: -540, alias: "부산 갈매기 #77", symbol: "GOOGL",
     content: "GOOGL 백로그가 $500B+ 초과 · 1년 전 $100B의 5배(Evan 정리). Q2 FCF 첫 음전환·시총 -$84B에도 매출 파이프라인은 계속 확대되고 있다는 정량 증거. AWS·Azure 대비 GCP win rate 유지 신호. 백로그의 매출 전환 속도(revenue recognition)가 CAPEX $200B의 실사업 전환 실체화. 계산: $500B 백로그가 5년 계약이면 연 $100B/year 추가 파이프 = 기존 총 매출 $350B/year 대비 상당한 추가 성장 축.",
-    likes: 45, comments: 4, created_at: "2026-07-27T01:01:00.000Z", liked: false,
+    likes: 45, comments: 0, created_at: "2026-07-27T01:01:00.000Z", liked: false,
   },
   {
     id: -541, alias: "강남 표범 #46", symbol: "GOOGL",
     content: "GOOGL 강세 논거(Just a Dude who lives on X 정리): AI 경쟁에서 GOOGL이 가장 잘 포지션됨 · 수십억이 매일 쓰는 제품(Search·Gmail·Maps·YouTube)에 AI 통합 · -8% 주간 하락은 매수 기회. 반대편에 100-DMA 하회·FCF 음전환 부정 신호가 있지만 백로그 $500B+·SPCX 지분 $94.1B·Anthropic $8.4B 등 밸류 이벤트도 지속. 검증 축: (1) 백로그 매출 전환 속도, (2) FCF 회복 시점, (3) 클라우드 GM 방향. -8%가 200-DMA까지 확장 vs 100-DMA 회복이 다음 방향 결정.",
-    likes: 38, comments: 4, created_at: "2026-07-27T01:08:00.000Z", liked: false,
+    likes: 38, comments: 0, created_at: "2026-07-27T01:08:00.000Z", liked: false,
   },
   {
     id: -542, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "SpaceX 공식 코멘트: 시험 발사에서 얻은 학습이 궤도·운영 미션 위한 Starship 신뢰성 향상에 기여할 것. All-in Starship 결정(7/25)과 결합해 3중 서사: (1) 실패도 학습 자산으로 재규정, (2) 상용 페이로드 배치 준비 명시, (3) V4/V5 개발 로드맵 안정. 오늘의 캐시 우드 강세 견해·GOOGL SPCX 6% 지분·Adam Jonas $135 매수 콜과 결합해 강세 프레임 강화. 첫 상용 Starship 페이로드 계약 발표가 다음 큰 마일스톤.",
-    likes: 40, comments: 3, created_at: "2026-07-27T01:15:00.000Z", liked: false,
+    likes: 40, comments: 0, created_at: "2026-07-27T01:15:00.000Z", liked: false,
   },
   {
     id: -543, alias: "을지로 팔콘 #71", symbol: "SPCX",
     content: "FT가 전한 뉴스: 중국 투자자들이 오프쇼어 크립토 거래소의 토큰으로 SpaceX·OpenAI 노출을 취득. 베이징 자본 통제 우회. 구조는 (1) 토큰화된 pre-IPO 지분 상품, (2) 홍콩·싱가포르·두바이 등 오프쇼어 거래소, (3) 중국 자본 크립토 채널로 우회. 미 AI 스타트업 수요가 자본 통제를 뚫을 정도로 강함. 리스크: (1) 오프쇼어 토큰 가격이 실제 SPCX 밸류와 괴리, (2) 거래상대방 리스크, (3) SEC·SAFE 규제 리스크, (4) 환매 어려움. SpaceX·OpenAI 자체 밸류에도 간접 영향.",
-    likes: 36, comments: 3, created_at: "2026-07-27T01:22:00.000Z", liked: false,
+    likes: 36, comments: 0, created_at: "2026-07-27T01:22:00.000Z", liked: false,
   },
   {
     id: -544, alias: "광화문 늑대 #33", symbol: "SPY",
     content: "Musk가 AI 10년 안에 통제 위치에 있을 가능성 크다 발언(CoinMarketCap). 인간-침팬지 지능 격차 비유 사용. 배경은 xAI Grok·Optimus·Robotaxi 로드맵과 결합된 장기 관점. 시사점: (1) AI 안전 규제 재점화, (2) 거버넌스 이슈 부상, (3) AI 안전·정렬 연구 자본 유입, (4) Musk의 이중 위치(개발 참여 + 안전 담론 주도). Reservations: 10년이라는 시점 특정은 이견 있고, 지능과 자율성이 동일 개념은 아님.",
-    likes: 47, comments: 5, created_at: "2026-07-27T01:29:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-07-27T01:29:00.000Z", liked: false,
   },
   {
     id: -545, alias: "마포 올빼미 #24", symbol: "SPCX",
     content: "Musk가 Starlink 구독자들에게 감사 · 다행성 문명 만들기에 기여하고 있다는 프레임(DogeDesigner 정리). Starship V3 시험 발사·All-in Starship 결정 시점의 CEO 감사 메시지. Starlink 매출 축의 서사 강화: (1) 구독료가 Starship 개발 자금줄, (2) Starship이 Mars 임무 인프라, (3) 구독자 = 다행성 문명 파트너. 실제 재무: Starlink 9M+ 구독자 · 900+ 국가 · $10B+/year · FCF 실현 단계 · Starship 개발 자금원 역할.",
-    likes: 30, comments: 3, created_at: "2026-07-27T01:36:00.000Z", liked: false,
+    likes: 30, comments: 0, created_at: "2026-07-27T01:36:00.000Z", liked: false,
   },
   {
     id: -546, alias: "종로 매 #12", symbol: "AVGO",
     content: "Samsung × Broadcom $200B 딜 상세(Bull Theory). 커버 3층: (1) HBM 메모리 - HBM3E/HBM4 등, AI 서버 성능 핵심 자원, (2) 파운드리 서비스 - Broadcom 커스텀 ASIC · Samsung 3nm/2nm 선단 공정, (3) 고급 패키징 - CoWoS 대체 옵션·HBM×로직 3D 결합. 반도체 경쟁 구도 재편: HBM은 SK하이닉스 vs Samsung, 파운드리는 TSMC vs Samsung vs Intel, 패키징은 TSMC CoWoS 독점 vs Samsung 대안. AVGO는 NVDA 다음의 AI 칩 파트너로 자리매김.",
-    likes: 52, comments: 4, created_at: "2026-07-27T01:43:00.000Z", liked: false,
+    likes: 52, comments: 0, created_at: "2026-07-27T01:43:00.000Z", liked: false,
   },
   {
     id: -547, alias: "여의도 매 #22", symbol: "NVDA",
     content: "NVDA CEO Jensen Huang: 최근 수요 급증이 SK하이닉스·INTC·Samsung을 포함한 전체 칩 공급망을 압박(Shay Boloor 인용). HBM이 GPU 성능·매출 상단을 결정하는 병목이며 다중 벤더 조달이 필수. 왜 HBM이 병목: (1) GPU 실질 성능은 메모리 대역폭이 병목, (2) 3D 적층 고난도 공정, (3) 소수 벤더(SK하이닉스·Samsung·마이크론), (4) 대형 고객 대량 선주문. Samsung × AVGO $200B와 결합하면 HBM 배분 정치 경제 재편. 오늘의 발언은 NVDA 매출이 HBM 조달로 캡핑되고 있다는 신호 = 병목 해소되면 upside.",
-    likes: 55, comments: 5, created_at: "2026-07-27T01:50:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-07-27T01:50:00.000Z", liked: false,
   },
   {
     id: -548, alias: "부산 갈매기 #77", symbol: "AAPL",
     content: "Charlie Bilello: AAPL TTM FCF $135B · 같은 기간 NVDA 주가 +38%·ORCL +52%. AI CAPEX 지출과 현금 창출력의 대조 프레임. 그의 표현: 시간이 지나면 결국 현금 흐름이 중요하다는 관점. GOOGL FCF 첫 음전환과 대조. 시장이 3그룹으로 분류하기 시작: (1) 현금 창출 리더(AAPL), (2) AI CAPEX 사이클 수혜자(NVDA·ORCL·AMD), (3) CAPEX 부담 회사(GOOGL·MSFT·META·AMZN). 반론: CAPEX 사이클이 미래 매출로 전환된다면 지금 FCF 음전환은 투자로 정당화. 개별 종목 선택에서 FCF 지속성이 중요 축.",
-    likes: 42, comments: 4, created_at: "2026-07-27T01:57:00.000Z", liked: false,
+    likes: 42, comments: 0, created_at: "2026-07-27T01:57:00.000Z", liked: false,
   },
   {
     id: -549, alias: "강남 표범 #46", symbol: "SPY",
     content: "Berkshire Hathaway 현금 및 등가물이 $317B로 사상 최대(Barchart). S&P 500 476개사 시가총액 합에 필적. 배경: (1) 매수 기회 관망, (2) AAPL·BAC 등 매도로 현금 유입, (3) 밸류에이션 부담 인식, (4) 국채 이자 수익. 매수 여력의 정성적 의미: 위기 시 옵션·대형 인수 가능·시장 시그널·후계 CEO 자원. Buffett Indicator 관점에서 여전히 사상 최고 수준의 밸류에이션 · BRK 대기 자세가 매크로와 정합. Greg Abel의 첫 대형 매수 결정이 다음 큰 마일스톤.",
-    likes: 44, comments: 4, created_at: "2026-07-27T02:04:00.000Z", liked: false,
+    likes: 44, comments: 0, created_at: "2026-07-27T02:04:00.000Z", liked: false,
   },
   {
     id: -550, alias: "을지로 팔콘 #71", symbol: "SPX",
     content: "이번 시즌 S&P 500 실적 91% EPS 비트 (119개사 발표 · Wall St Engine). 컨센 상향 재조정 사이클 지속. 그러나 개별 종목 반응은 상이: TSLA record 매출인데 -14%·오늘 $313.03, GOOGL 비트인데 FCF 음전환·시총 -$84B, INTC 2배 비트·+2.15%, LMT +16.32%·AMD +16.94%. 비트 자체보다 마진·가이던스·현금 흐름·구조조정이 반응 방향 결정. 남은 대형 실적(MSFT·AMZN·META·NVDA)의 CAPEX 가이던스가 매크로 프레임 확정 축.",
-    likes: 26, comments: 3, created_at: "2026-07-27T02:11:00.000Z", liked: false,
+    likes: 26, comments: 0, created_at: "2026-07-27T02:11:00.000Z", liked: false,
   },
   {
     id: -551, alias: "마포 올빼미 #24", symbol: "SPX",
     content: "First Squawk: S&P 500 숏 관심이 15년래 최고 수준으로 상승. 91% EPS 비트와 대비되는 시장 포지션. 실적은 강한데 시장은 하방 대비 = 양극화 신호. 배경: 밸류에이션 부담·Fed hawkish·에너지 쇼크·무역 마찰·하이퍼스케일러 CAPEX 마진 리스크·기술적 신호. 두 방향 리스크: (1) positive surprise 시 큰 숏 커버링 랠리, (2) negative shock 시 큰 하락 확대. 오늘까지 divergence 극단 → 큰 sudden move 확률 상승. 롱·숏·관망 모두 두 방향 리스크 감수.",
-    likes: 31, comments: 3, created_at: "2026-07-27T02:18:00.000Z", liked: false,
+    likes: 31, comments: 0, created_at: "2026-07-27T02:18:00.000Z", liked: false,
   },
 
   // ── 2026-07-25 신규 ──────────────────────────────────────────────────────
   {
     id: -512, alias: "여의도 매 #22", symbol: "TSLA",
     content: "Tesla가 오늘 Vehicle Safety Report를 대규모 개편. FSD(Supervised) 함대가 하루 315M miles로 몇 달 전 28.8M 대비 대폭 확대. 2.3초당 1000마일 축적 속도. 누적 12.6B 마일 중 도심 4.85B. 이는 (1) FSD 활성 유료 구독자 148만+의 실 사용 활발함, (2) V15 학습 데이터 파이프라인 exponential 확대, (3) 상용 로보택시의 도심 마일 확대를 정량화. 어제 캐시 우드의 -14% 급락일 $51M 매수와 함께 강세 프레임 강화. 매수 유지.",
-    likes: 76, comments: 5, created_at: "2026-07-25T00:04:00.000Z", liked: false,
+    likes: 76, comments: 0, created_at: "2026-07-25T00:04:00.000Z", liked: false,
   },
   {
     id: -513, alias: "강남 표범 #46", symbol: "TSLA",
     content: "The Tesla Newswire가 Robotaxi 앱 26.6.0에서 발견한 히든 코드가 Cybercab 상용화 임박 신호다. in-trip Cybercab 카운트·임시 스티어링/페달 검증·다이내믹스 캘리브레이션·엔티티 일반화 진전·wide release 시나리오. Musk가 별개로 왜 확장이 느린지 설명한 이유(새 차대는 자체 데이터 필요)와 결합하면 검증만 마무리되면 곧 wide release 가능. FSD 315M miles/day의 학습 데이터가 Cybercab 특화 데이터로 얼마나 빠르게 축적되는지가 다음 관찰 축.",
-    likes: 49, comments: 4, created_at: "2026-07-25T00:12:00.000Z", liked: false,
+    likes: 49, comments: 0, created_at: "2026-07-25T00:12:00.000Z", liked: false,
   },
   {
     id: -514, alias: "서초 콘도르 #59", symbol: "TSLA",
     content: "Musk의 Cybercab 확장 지연 설명이 오늘의 CEO 발언 하이라이트. 기존 함대 80억+ 학습 마일이 새 Cybercab 플랫폼에 자동 전이되지 않는 이유는 (1) 새 차대 다이내믹스·센서 배치·모터 응답이 다름, (2) 임시 스티어링/페달을 사용하는 검증 단계 필수, (3) generalized entities 처리를 새 플랫폼 특성에 재 캘리브레이션 필요. 이 caveat는 오늘의 FSD 315M miles/day exponential 확대에 대한 CEO의 페이스 관리 발언으로도 읽힌다.",
-    likes: 34, comments: 3, created_at: "2026-07-25T00:19:00.000Z", liked: false,
+    likes: 34, comments: 0, created_at: "2026-07-25T00:19:00.000Z", liked: false,
   },
   {
     id: -515, alias: "을지로 팔콘 #71", symbol: "TSLA",
     content: "Tesla First Responder Interaction Plan v1.4 문서화가 상용 로보택시 인프라의 실체적 진전. SAE L4·SELF-DRIVING 스크린 표시·경찰 사이렌 자동 정지·2-way call·에어백 시 911 자동·원격 서비스 정지 1000ft/약 1시간·서면 요청 시 데이터 제공·First Responder Loop 두 번 자르면 고전압 2분 방전. 애리조나 9개 지역(Phoenix·Scottsdale·Mesa·Tempe 등) 커버리지 문서화. 실제 사고 사례에서 v1.4 실행 데이터가 신뢰성 검증 축.",
-    likes: 27, comments: 3, created_at: "2026-07-25T00:26:00.000Z", liked: false,
+    likes: 27, comments: 0, created_at: "2026-07-25T00:26:00.000Z", liked: false,
   },
   {
     id: -516, alias: "광화문 늑대 #33", symbol: "TSLA",
     content: "캐시 우드의 어제 -14% 급락일 대응이 오늘 확인된 매매 데이터. ARK Invest가 160,001주(약 $51M) 매수, 4개 ETF(Innovation·Autonomous·Next-Gen Internet·Space & Defense)에 분산. 한 종목 단일 세션 $51M은 ARK 최근 매수 규모 중에서도 큰 편. 어제 애널 다운그레이드 wave·-14%(13개월래 최대 낙폭)에 정면 대치하는 강세 기관 flow. 다른 기관(BlackRock·Vanguard 등)의 후속 flow와 우드의 지속 매수 여부가 다음 축.",
-    likes: 41, comments: 3, created_at: "2026-07-25T00:33:00.000Z", liked: false,
+    likes: 41, comments: 0, created_at: "2026-07-25T00:33:00.000Z", liked: false,
   },
   {
     id: -517, alias: "마포 올빼미 #24", symbol: "GOOGL",
     content: "GOOGL Waymo가 Uber와의 8년 독점 파트너십 종료 검토 중. 서비스 품질·안전·규제 이견이 배경이며 2028년 오스틴·애틀랜타 독립 런치 준비. 자율주행 상용 시장이 초기 파트너십 구조에서 각 사업자 독립 운영 체제로 이행 중이라는 신호. Tesla Robotaxi는 이미 다중 도시(Austin·SF·Orlando·Miami·Tampa·Dallas)에서 라이브 상태라 Waymo가 오스틴 독립 런치하면 직접 경쟁. 서비스 품질(개입률·대기 시간·요금)이 시장 점유율 결정 축.",
-    likes: 33, comments: 3, created_at: "2026-07-25T00:40:00.000Z", liked: false,
+    likes: 33, comments: 0, created_at: "2026-07-25T00:40:00.000Z", liked: false,
   },
   {
     id: -518, alias: "종로 매 #12", symbol: "SPCX",
     content: "SpaceX 데이터센터 대규모 채용 wave가 어제 텍사스 대형 DC 검토 보도의 실체화 신호. Data Center Administrator, Development Lead, Sr. Global Supply Manager(Memory/Storage · Cooling · Networking · Switches/Optics) 등 7개 이상 상급 포지션이 동시에 열렸다. 이는 (1) 캐시 우드가 오늘 재확인한 SpaceX 강세 3축(Launch · Starlink · AI Infra) 중 AI Infra 축의 물리적 준비, (2) 어제 GOOGL Q3 공시의 SPCX 지분 $9.8B 미실현과 결합된 밸류 이벤트, (3) 단발 프로젝트가 아닌 다중 DC 확장을 준비하는 그림.",
-    likes: 39, comments: 3, created_at: "2026-07-25T00:47:00.000Z", liked: false,
+    likes: 39, comments: 0, created_at: "2026-07-25T00:47:00.000Z", liked: false,
   },
   {
     id: -519, alias: "여의도 매 #22", symbol: "SPCX",
     content: "SpaceX가 2028년 이후 Falcon 9 신규 상용 예약을 거절하기 시작. Bloomberg가 미실증 Starship에 대한 Elon의 대규모 베팅으로 프레임. 리스크는 (1) Starship이 상용 시점까지 재사용·신뢰성 검증을 완료하지 못하면 발사 서비스 공백, (2) 상용 고객이 Blue Origin·Rocket Lab 등으로 이탈 가능성. 반대로 성공하면 발사 시장을 재정의하는 유일 사업자로 자리매김. 어제 Starship V3 두번째 발사 결과와 오늘 발사 캐파 전환 결정이 시간축에 겹치는 상징적 흐름.",
-    likes: 44, comments: 4, created_at: "2026-07-25T00:54:00.000Z", liked: false,
+    likes: 44, comments: 0, created_at: "2026-07-25T00:54:00.000Z", liked: false,
   },
   {
     id: -520, alias: "부산 갈매기 #77", symbol: "SPCX",
     content: "SPCX vs AMZN Leo 위성 통신 시장 첫 경쟁 서사. 현재 스냅샷: Starlink 10,700 위성·9M 고객·900+ 국가·250+ 발사 vs Amazon Leo 398 위성·14 발사·상용 초기·글로벌 서비스 없음. Herald CEO는 1년 내 속도 격차 좁힐 수 있다고 주장하지만 발사 캐파(Starlink는 Falcon 9 리더십, Leo는 다른 사업자 의존)에서 SpaceX가 압도적 우위. Amazon Leo가 실제로 매년 수천 개 위성 발사할 수 있는지가 검증 축.",
-    likes: 26, comments: 3, created_at: "2026-07-25T01:01:00.000Z", liked: false,
+    likes: 26, comments: 0, created_at: "2026-07-25T01:01:00.000Z", liked: false,
   },
   {
     id: -521, alias: "강남 표범 #46", symbol: "SPCX",
     content: "TSLA·SPCX 합병 확률에 예측시장 데이터가 추가됐다. Kalshi 기준 2028 이전 합병 확률 79%로, 어제 Deepwater's Munster 개인 견해 90%보다 보수적. 예측시장이 애널보다 보수적인 이유는 시기·구조·주주 승인·규제·현금 vs 주식 등 모든 조건이 hit돼야 확률로 반영되기 때문. Musk 자신이 명시적으로 합병을 발표한 적 없어 근본 불확실성 남아있음. 79%든 90%든 두 데이터 모두 참고할 축.",
-    likes: 31, comments: 3, created_at: "2026-07-25T01:08:00.000Z", liked: false,
+    likes: 31, comments: 0, created_at: "2026-07-25T01:08:00.000Z", liked: false,
   },
   {
     id: -522, alias: "서초 콘도르 #59", symbol: "SPCX",
     content: "Morgan Stanley Adam Jonas의 새 노트가 SPCX -49% 낙폭 이후 대형 하우스의 첫 명시적 매수 논거. 코어 사업(Space Launch + Satellite Connectivity)만으로 ~$135/share 가치, Grok·Cursor·Neocloud는 옵션 가치로 별도 상방. SpaceX가 우주 발사·위성 연결·AI 세 영역에서 지배적 moat, 위성 발사량 기준 글로벌의 ~24%가 YTD 기록. 3중 신호(Munster 개인 견해 + Kalshi 79% + Jonas $135)가 겹치기 시작한 국면.",
-    likes: 46, comments: 4, created_at: "2026-07-25T01:15:00.000Z", liked: false,
+    likes: 46, comments: 0, created_at: "2026-07-25T01:15:00.000Z", liked: false,
   },
   {
     id: -523, alias: "을지로 팔콘 #71", symbol: "GOOGL",
     content: "GOOGL이 4월 초 이후 두 번째로 100-DMA 아래에서 마감(Barchart X). 어제 Q2 FCF 첫 음전환 -$5.9B·시총 -$84B의 연장선. 기술적 지지 이탈 + 재무 리스크 반영이 겹치는 국면. 그러나 같은 날 Anthropic 지분 $8.4B 재평가·Verizon과 $1B DC 파트너십 등 밸류 이벤트도 겹침. 미시적 상방과 기술적 하방이 상충하는 국면이라 200-DMA 지지선까지 추가 조정 여부·Cloud 매출 성장률 지속성이 다음 축.",
-    likes: 29, comments: 3, created_at: "2026-07-25T01:22:00.000Z", liked: false,
+    likes: 29, comments: 0, created_at: "2026-07-25T01:22:00.000Z", liked: false,
   },
   {
     id: -524, alias: "광화문 늑대 #33", symbol: "GOOGL",
     content: "GOOGL Anthropic 지분 $8.4B 재평가는 어제 SPCX 지분 $9.8B 미실현 이익에 이은 두 번째 밸류 이벤트. 합치면 non-core 자산만 $18B+. 코어 사업 밸류와 별도로 이 자산이 재평가되면 시가총액 리레이팅 근거. AI 스타트업 라운드 밸류에이션이 상승하면서 하이퍼스케일러의 지분 자산도 상방 재평가 사이클에 들어가는 신호. META·AMZN도 유사 AI 지분 재평가 발표할지가 다음 관찰 축.",
-    likes: 22, comments: 2, created_at: "2026-07-25T01:29:00.000Z", liked: false,
+    likes: 22, comments: 0, created_at: "2026-07-25T01:29:00.000Z", liked: false,
   },
   {
     id: -525, alias: "여의도 매 #22", symbol: "GOOGL",
     content: "GOOGL·VZ $1B DC 파트너십은 통신사와 하이퍼스케일러의 첫 대형 결합 사례. $1B 자체는 하이퍼스케일러 CAPEX 사이클($200B+/year) 대비 작지만 통신-클라우드 결합의 정식 시작 신호로 의미. VZ 통신망(5G·엣지)과 GCP AI/Cloud의 시너지 시나리오 실체화. GOOGL은 low-latency AI 서비스 확대, VZ는 AI/Cloud 사업 개발 부담 없이 GCP 기술 활용·매출 다각화. MSFT·AWS·META가 유사 통신사 파트너십 체결할지가 파급 관찰 축.",
-    likes: 25, comments: 3, created_at: "2026-07-25T01:36:00.000Z", liked: false,
+    likes: 25, comments: 0, created_at: "2026-07-25T01:36:00.000Z", liked: false,
   },
   {
     id: -526, alias: "종로 매 #12", symbol: "SPY",
     content: "캐시 우드의 오늘 AI 프레임이 자산 배분 방향을 명시. 세 축: (1) 인프라 실행(회사들이 실제로 업무 방식을 바꾸는지), (2) ARK 자체가 PLTR 활용·AI-native 젊은 인재 채용, (3) 헬스케어를 AI의 가장 큰 응용으로 지목(신약·진단·CRISPR 시너지). 오늘 GOOGL Anthropic 재평가·AMD +16.94% 급등과 정합. PLTR 매출 성장률·헬스케어 AI 종목(RXRX·TEM) 자금 유입·AI-native 채용 트렌드가 검증 축.",
-    likes: 28, comments: 3, created_at: "2026-07-25T01:43:00.000Z", liked: false,
+    likes: 28, comments: 0, created_at: "2026-07-25T01:43:00.000Z", liked: false,
   },
   {
     id: -527, alias: "부산 갈매기 #77", symbol: "LMT",
     content: "Lockheed Martin(LMT) 실적일 +16.32% 급등, $572.62. 최근 몇 년래 최대 규모의 실적일 상승 중 하나. Nancy Pelosi Stock Tracker가 사이드 스토리로 트럼프 5월 3회 매수 이력(5/11·5/15·5/5, 최대 $430K)을 제기. 매수 신고 지연으로 $200 벌금. 방산·지정학 리레이팅 신호 + 정치인 매수 논쟁이 결합된 스토리. STOCK Act 규정 강화 논쟁 재점화 가능성. 다른 방산주(NOC·GD·RTX·BA) 실적 반응이 다음 관찰 축.",
-    likes: 37, comments: 3, created_at: "2026-07-25T01:50:00.000Z", liked: false,
+    likes: 37, comments: 0, created_at: "2026-07-25T01:50:00.000Z", liked: false,
   },
   {
     id: -528, alias: "강남 표범 #46", symbol: "AMD",
     content: "AMD가 오늘 +16.94% 급등($205.90). 애널 컨센 2028 시가총액 $1.6T 목표(현재 대비 +82% upside). NVDA에 편중된 AI 칩 시장에서 대안으로 자금 확산. 논거는 (1) 하이퍼스케일러 CAPEX 사이클에 필요한 GPU/AI 액셀러레이터 다양화 수요, (2) MI300/350/400 시리즈 실 수요 확대, (3) EPYC 서버 CPU 인텔 대비 점유율 확대. 리스크는 NVDA와의 성능·소프트웨어 스택(CUDA vs ROCm) 격차·TSMC 캐파 배분 경쟁. MI350/MI400 하이퍼스케일러 계약 확대가 검증 축.",
-    likes: 55, comments: 4, created_at: "2026-07-25T01:57:00.000Z", liked: false,
+    likes: 55, comments: 0, created_at: "2026-07-25T01:57:00.000Z", liked: false,
   },
   {
     id: -529, alias: "서초 콘도르 #59", symbol: "SPY",
     content: "Paramount의 $110B Warner Bros Discovery 인수가 반독점 이유로 여러 주가 저지 시도. FT 인용 unusual_whales 정리. 헐리우드 사상 최대 딜이 규제 벽에 부딪힌 신호. 미디어 산업 재편의 반독점 리스크 실체화. 스트리밍 경쟁 격화·케이블 감소·콘텐츠 제작비 급증으로 M&A 압력이 컸는데 규제가 그 반대편에서 브레이크. 딜이 실패하면 각 회사가 자산 매각·다른 파트너 찾기·사업 재편으로 이어질 가능성. 다른 미디어 M&A(Comcast·NBCU 등)에도 파급.",
-    likes: 24, comments: 3, created_at: "2026-07-25T02:04:00.000Z", liked: false,
+    likes: 24, comments: 0, created_at: "2026-07-25T02:04:00.000Z", liked: false,
   },
   {
     id: -530, alias: "을지로 팔콘 #71", symbol: "SPY",
     content: "매크로 프레임 정리: 미 증시 매도 심화 + 에너지 쇼크 + 무역 마찰이 hawkish Fed 스탠스를 굳힘(Investing.com). Fed가 금리 인하 검토하려면 헤드라인 인플레가 진정돼야 하는데 에너지가 반대 방향. 관세 재도입·공급망 재편도 상품 가격 상방 압력. 오늘 TSLA·GOOGL 조정과 매크로 hawkish가 겹치는 국면. 하이퍼스케일러 CAPEX 사이클은 금리 상승 환경에서 자본 비용 증가를 반영해야 하는 이중 부담. 다음 CPI·FOMC 톤·에너지 가격이 검증 축.",
-    likes: 20, comments: 2, created_at: "2026-07-25T02:11:00.000Z", liked: false,
+    likes: 20, comments: 0, created_at: "2026-07-25T02:11:00.000Z", liked: false,
   },
   {
     id: -531, alias: "마포 올빼미 #24", symbol: "SPY",
     content: "전 세계 중앙은행이 사상 최대 규모의 금을 보유(Barchart · IMF/Bloomberg 데이터). 어제 리포트한 '금이 UST 초월' 프레임의 연장선. 배경은 (1) BRICs 중심 매입 지속, (2) 미국 러시아 자산 동결 이후 달러·UST 다변화 압박, (3) 금 가격 상승 자체가 총 가치 확대, (4) 인플레이션 헤지 수요. Fed hawkish 유지·에너지 쇼크와 결합하면 인플레 재점화 시나리오가 강화되며 금 매력 확대. 금 ETF·마이닝(GDX·NEM·GOLD) 자금 유입이 관찰 축.",
-    likes: 23, comments: 2, created_at: "2026-07-25T02:18:00.000Z", liked: false,
+    likes: 23, comments: 0, created_at: "2026-07-25T02:18:00.000Z", liked: false,
   },
 
   // ── 2026-07-24 신규 ──────────────────────────────────────────────────────
@@ -1455,7 +1455,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "Tesla Q2 세부 지표가 Charlie Bilello 정리로 다시 유포됐다. 매출 $28.4B(+24% YoY)로 record이지만 Auto GM ex-credits 15% 수준에 머물렀고 FCF TTM은 -$6.4B로 마이너스 전환. 원인은 CAPEX가 전년비 +141% 급증한 것. 매출 record + FCF 음전환 조합은 성장은 지속되지만 그 성장이 아직 이익으로 전환되지 못했다는 정확한 신호다. Robotaxi/Cybercab 유닛 이코노믹스 실증 시점이 밸류에이션의 다음 앵커. 매수 유지, 다만 마진 회복 속도가 관건.",
-    likes: 71, comments: 5, created_at: "2026-07-24T00:04:00.000Z", liked: false,
+    likes: 71, comments: 0, created_at: "2026-07-24T00:04:00.000Z", liked: false,
   },
   {
     id: -491,
@@ -1463,7 +1463,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "TSLA 다중 IB 다운그레이드 wave: Cantor $475→$445, Wolfe $480→$460, Truist $505→$460, Morgan Stanley $480→$450, Wells Fargo $470→$460. 6개 IB가 동시에 목표가를 하향한 규모는 최근 몇 분기 대비 이례적. Ming Z가 다운그레이드 wave를 정리한 시점 주가는 -12%였고 Barchart 종가 기준으로는 -14%까지 확대되며 13개월래 최대 낙폭 기록. 다만 대부분 목표가가 $445~$460 밴드로 여전히 시가 대비 상방 시사, Morgan Stanley $450은 어제 리포트한 Cantor $510 재확인과 대비된다는 점이 관건. 논거는 (1) Auto GM ex-credits 15% 정체, (2) FCF -$6.4B TTM의 CAPEX +141% YoY 여파, (3) Robotaxi/Cybercab 유닛 이코노믹스 미실증에 집중. 실적 회수 시점 리레이팅 국면.",
-    likes: 42, comments: 4, created_at: "2026-07-24T00:12:00.000Z", liked: false,
+    likes: 42, comments: 0, created_at: "2026-07-24T00:12:00.000Z", liked: false,
   },
   {
     id: -492,
@@ -1471,7 +1471,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "Nic Cruz Patane 공개: Tesla Robotaxi가 이미 FSD V15 초기 버전을 실행 중. V15는 약 100억(10B) 파라미터로 v14의 약 180억(18B) 대비 축소지만 완전한 아키텍처 개편 + 안전성 major leap. 파라미터 감소는 성능 저하가 아니라 파라미터 효율 대폭 개선으로 해석하는 게 맞다. 상용 서비스에서 실주행 학습 데이터가 이미 축적 중이라는 게 정식 고객 배포(2026 말~2027 초 예상) 이전에 프로덕션 검증이 진행되고 있다는 신호. 매수 유지.",
-    likes: 34, comments: 3, created_at: "2026-07-24T00:19:00.000Z", liked: false,
+    likes: 34, comments: 0, created_at: "2026-07-24T00:19:00.000Z", liked: false,
   },
   {
     id: -493,
@@ -1479,7 +1479,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "Cole Grinde의 15+ 진행 리스트는 다운그레이드 wave의 반대편 강세 프레임이다. Cybercab in Production, Semi in Production, Robotaxi Scaling, FSD 구독자 성장, 제조 캐파, 리튬 정제, 슈퍼차징 성장, Optimus Giga factory, 배터리·셀 프로덕션, Megapack 3, 지역 슈퍼차징 DC, AI 칩까지. 애널이 마진·CAPEX 회수 시점에 초점 두는 반면 이 프레임은 실행 이니셔티브의 폭에 초점. 두 관점 모두 정당한 이해이고, 다음 분기 실적이 어느 쪽을 지지하는지가 검증 축.",
-    likes: 25, comments: 3, created_at: "2026-07-24T00:26:00.000Z", liked: false,
+    likes: 25, comments: 0, created_at: "2026-07-24T00:26:00.000Z", liked: false,
   },
   {
     id: -494,
@@ -1487,7 +1487,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "TOSV(Tesla Owners SV) 강세 종합: Cybertruck 프리몬트 시작(다음 Cybercab), Robotaxi 유럽 40+ 도시 확장, Bay Area +50%, S12 & S3 lite로 FSD v14가 HW3/HW4 확산, 텍사스 훈련 컴퓨트 H1에 2배(Q3/Q4 온라인), Optimus Gen 3 생산 Gen 2 대비 +20%. Cole Grinde 리스트와 겹치는 부분 있지만 정량 데이터가 더 많다. 특히 훈련 컴퓨트 2배는 FSD V15 학습 가속화의 물리적 근거.",
-    likes: 38, comments: 3, created_at: "2026-07-24T00:33:00.000Z", liked: false,
+    likes: 38, comments: 0, created_at: "2026-07-24T00:33:00.000Z", liked: false,
   },
   {
     id: -495,
@@ -1495,7 +1495,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "Musk가 Q2 콜에서 '이 해가 Tesla 사상 최고의 해 중 하나가 될 것'이라고 발언. 실적 미스·EPS 하향·-12% 반응이라는 시장 분위기와 정면 대비되는 CEO 톤. 이 프레임의 근거는 같은 콜에서 언급된 다축 진전(Cybertruck 프리몬트, Robotaxi 유럽 40+, 훈련 컴퓨트 2배, Optimus Gen 3 +20%). 남은 5개월에 걸쳐 이 이니셔티브들이 실적으로 전환되면 CEO 톤 지지, 아니면 실적 대비 지나친 낙관 낙인. 매수 유지.",
-    likes: 29, comments: 3, created_at: "2026-07-24T00:40:00.000Z", liked: false,
+    likes: 29, comments: 0, created_at: "2026-07-24T00:40:00.000Z", liked: false,
   },
   {
     id: -496,
@@ -1503,7 +1503,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "FSD v14.3.8과 v14 Lite가 소프트웨어 업데이트 2026.20.8.11로 6번째 batch에 롤아웃. Tesla Newswire 확인. 릴리스 노트 변경 없음이라 minor tuning 위주지만 batch 6까지 도달했다는 자체가 광범위 사용자 커버리지 확장이 순차적으로 이뤄지고 있다는 신호. HW3/HW4 병행 확산.",
-    likes: 18, comments: 2, created_at: "2026-07-24T00:47:00.000Z", liked: false,
+    likes: 18, comments: 0, created_at: "2026-07-24T00:47:00.000Z", liked: false,
   },
   {
     id: -497,
@@ -1511,7 +1511,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "Musk가 카메라 있는 HW4 미만 모든 차량은 새 세대 AI 보드로 업그레이드하는 방향이라고. 어제 리포트한 v14 Lite HW3 wide release(400만 대·AI distillation) 스토리와 결합하면 소프트웨어 재활성화 + 하드웨어 업그레이드 이원 전략 그림. 구형 소유자의 FSD 접근성 확대 + Tesla의 업그레이드 매출 축 + 학습 데이터 파이프라인 확장 세 가지 효과. 프로그램 세부 발표 대기.",
-    likes: 23, comments: 2, created_at: "2026-07-24T00:54:00.000Z", liked: false,
+    likes: 23, comments: 0, created_at: "2026-07-24T00:54:00.000Z", liked: false,
   },
   {
     id: -498,
@@ -1519,7 +1519,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "TSLA Optimus Data Collection Operations Lead 애리조나 템피 채용. Optimus 학습 데이터 파이프라인이 실험 단계에서 상시 운영 단계로 이동하고 있다는 신호. 어제까지 리포트한 캐파 차트에서 캘리·텍사스가 생산 축이라면 애리조나는 데이터 축으로 분화되는 구조. Gen 3 준비와 시간축 겹침.",
-    likes: 15, comments: 2, created_at: "2026-07-24T01:01:00.000Z", liked: false,
+    likes: 15, comments: 0, created_at: "2026-07-24T01:01:00.000Z", liked: false,
   },
   {
     id: -499,
@@ -1527,7 +1527,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "Musk 발언 3선 정리: (1) 거대한 CAPEX 해지만 투자한 모든 것이 놀라운 회수를 만들 것이라 확신, (2) 로보택시 확장은 인간이 낼 수 있는 최대 속도지만 사고 방지가 진짜 제약, (3) 5~10년 장기 관점 유지. Q2 EPS 미스·FCF 마이너스·다운그레이드 wave·-12% 하락이라는 4중 부정 반응에 대한 3중 CEO 메시징. CAPEX 회수, 안전 우선, 장기 관점 세 축이 모두 실적 프로파일 방어 프레임. 검증은 각각 별개의 정량 지표에서.",
-    likes: 27, comments: 3, created_at: "2026-07-24T01:08:00.000Z", liked: false,
+    likes: 27, comments: 0, created_at: "2026-07-24T01:08:00.000Z", liked: false,
   },
   {
     id: -500,
@@ -1535,7 +1535,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "Robotaxi 확장 프레임 전환: Nic Cruz Patane가 도시별 런치 시간이 계속 압축될 것이라 언급, Gene Munster는 Ashok Elluswamy를 인용해 '결국 Robotaxi는 전 주(state) 단위로 켜질 것'이라고 전달. 도시 단위에서 주 단위로의 프레임 전환은 시장 접근성과 유닛 이코노믹스 규모의 급격한 확대를 의미. Tampa 24/7·Bay Area +50%·유럽 40+의 다음 단계 시나리오.",
-    likes: 31, comments: 3, created_at: "2026-07-24T01:15:00.000Z", liked: false,
+    likes: 31, comments: 0, created_at: "2026-07-24T01:15:00.000Z", liked: false,
   },
   {
     id: -501,
@@ -1543,7 +1543,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "TSLA",
     content:
       "FSD 활성 유료 구독자 148만 재확인. 어제 신규 인도 55%+ 부착률과 결합하면 스톡(148만 활성) + 플로(신규 55%+) 모두 강한 상태. 반복 매출 파이프라인이 지속 확장 = 매출 record의 이면에 있는 '매출의 질' 개선 신호. EU 승인(10월 TCMV 투표) 이후 유럽 부착률이 다음 검증 축.",
-    likes: 22, comments: 2, created_at: "2026-07-24T01:22:00.000Z", liked: false,
+    likes: 22, comments: 0, created_at: "2026-07-24T01:22:00.000Z", liked: false,
   },
   {
     id: -502,
@@ -1551,7 +1551,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "SPCX",
     content:
       "오늘 5:45 PM ET Starbase에서 Starship V3 두번째 시험 발사. V3는 상승 단계에서 이전 이터레이션 대비 더 높은 dynamic pressure를 받도록 설계됐고 핵심 관전 포인트는 히트실드가 이 조건에서 어떻게 견디는지. 재사용 가능성 확대의 정량 근거. 발사 성공 = 캐시 우드 강세 프레임 강화 + -49% 낙폭 반전 트리거. 실패 = 반대. 오늘 오후 결과가 SPCX 방향의 실 트리거.",
-    likes: 47, comments: 4, created_at: "2026-07-24T01:29:00.000Z", liked: false,
+    likes: 47, comments: 0, created_at: "2026-07-24T01:29:00.000Z", liked: false,
   },
   {
     id: -503,
@@ -1559,7 +1559,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "SPCX",
     content:
       "SPCX가 6월 사상 최고가 대비 -49% 이상 하락한 상태(Barchart). Nearly 50% drawdown in ~2 months. 하락 배경: 상장 후 초기 급등 → IPO가 하회(-44%) → 숏 5%→29% ($6.1B est) → 개인 매수 중단(어제 리포트). 이 모든 축적된 흐름이 -49% 낙폭 배경. 오늘의 +5.3% 반등(별도 리포트)이 지속 회복인지 일회성 bounce인지는 오늘 발사 + 8/4 실적 두 축에서 결정.",
-    likes: 39, comments: 3, created_at: "2026-07-24T01:36:00.000Z", liked: false,
+    likes: 39, comments: 0, created_at: "2026-07-24T01:36:00.000Z", liked: false,
   },
   {
     id: -504,
@@ -1567,7 +1567,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "SPCX",
     content:
       "SPCX가 오늘 +5.3% · 시총 +$80B 반등(Stocks.News). 최근 -49% 낙폭 감안하면 상당한 하루 반등. 요인: (1) 캐시 우드 강세 견해 재확산, (2) Munster 합병 확률 90% 상향, (3) Starship V3 발사 임박, (4) 개인 매수 중단 후 기술적 반등 심리 겹침. 반등의 지속성은 오늘 발사 결과와 8월 4일 실적에서 판가름.",
-    likes: 43, comments: 4, created_at: "2026-07-24T01:43:00.000Z", liked: false,
+    likes: 43, comments: 0, created_at: "2026-07-24T01:43:00.000Z", liked: false,
   },
   {
     id: -505,
@@ -1575,7 +1575,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "SPCX",
     content:
       "캐시 우드 강세 견해 재조명. 세 축 결합 프레임: (1) 재사용 로켓 리더십(10년 리드), (2) Starlink 통신 재편·글로벌 사업, (3) AI Infra(궤도 DC + 저비용 프런티어 AI). 이 결합에서 세계 최저 비용 프런티어 AI 모델 성장 리더십이 나온다는 게 우드의 결론. Eva McMillan·TheSonOfWalkey에서 오늘 amplify. 어제 정정 배포한 리포트가 오늘 재파급된 셈.",
-    likes: 36, comments: 3, created_at: "2026-07-24T01:50:00.000Z", liked: false,
+    likes: 36, comments: 0, created_at: "2026-07-24T01:50:00.000Z", liked: false,
   },
   {
     id: -506,
@@ -1583,7 +1583,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "SPCX",
     content:
       "Deepwater's Munster: TSLA·SPCX 합병 확률 이제 90%. Kalshi 69% 대비 대폭 상승, 애널 개인 견해로는 매우 높은 확신도. 최근 축적된 근거들: GOOGL Q3 공시의 SPCX $9.8B 미실현 이익(어제), 캐시 우드 강세 견해, SPCX 텍사스 대형 DC 검토(어제), TSLA Q2 콜 SPCX 관련 코멘트. 다만 실제 합병은 구조·시기·주주 승인·현금 vs 주식·반독점 규제 등 다층 리스크. Musk 자신도 명시적 발표 없음.",
-    likes: 41, comments: 3, created_at: "2026-07-24T01:57:00.000Z", liked: false,
+    likes: 41, comments: 0, created_at: "2026-07-24T01:57:00.000Z", liked: false,
   },
   {
     id: -507,
@@ -1591,7 +1591,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "GOOGL",
     content:
       "GOOGL Q2 FCF가 상장 이후 처음으로 -$5.9B로 음전환. Charlie Bilello 정리. 최근 추이 $24.6B→$17.6B→$10.1B→-$5.9B로 한 분기 만에 급전환. 배경은 AI 인프라 CAPEX 급증. unusual_whales는 시총 -$84B 하루 감소를 별도로 정리. 매출·EPS 비트했음에도 FCF 음전환이 시장에서 부정적으로 해석된 것. 이는 어제까지 리포트한 하이퍼스케일러 지출 사이클의 첫 마진 신호 사례.",
-    likes: 35, comments: 3, created_at: "2026-07-24T02:04:00.000Z", liked: false,
+    likes: 35, comments: 0, created_at: "2026-07-24T02:04:00.000Z", liked: false,
   },
   {
     id: -508,
@@ -1599,7 +1599,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "GOOGL",
     content:
       "동시에 Alphabet은 2026 CAPEX 가이던스를 $200B로 상향(Kobeissi 정리). 이 금액만으로 20년 전 Alphabet 전체 시총보다 크고 MAG 7 합계 CAPEX는 곧 $1T+ 도달. FCF 음전환 + CAPEX 상향 조합은 (1) CAPEX가 예상보다 크고 (2) FCF 회복 시점이 뒤로 밀린다는 이중 부정 신호. AI 인프라 밸류체인(엔비디아 GPU·SK하이닉스 HBM·TSMC 파운드리·DC REIT·전력 유틸리티) 수혜 지속 논거는 강화되지만 하이퍼스케일러 마진 압박이 새 리스크 축.",
-    likes: 32, comments: 3, created_at: "2026-07-24T02:11:00.000Z", liked: false,
+    likes: 32, comments: 0, created_at: "2026-07-24T02:11:00.000Z", liked: false,
   },
   {
     id: -509,
@@ -1607,7 +1607,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "INTC",
     content:
       "Intel Q3: EPS $0.42(컨센 $0.21의 2배), 매출 $18.10B(컨센 $14.14B) 크게 비트. Q3 매출 가이던스도 $18.8~19.4B로 컨센 상회. 주가는 +2.15% 상승($100.10, +$2.13)으로 긍정 반응. 오랜 부진 이후 반전 신호로 시장이 해석. 근거: (1) 매출·EPS·가이던스 3박자 상회, (2) 데이터센터·파운드리 매출 개선 기대, (3) CHIPS Act·구조조정 효과 확인. 같은 날 GOOGL FCF 음전환·TSLA -14%와 대비되는 리액션은 하이퍼스케일러 CAPEX 사이클 수혜자(반도체·파운드리)로 자금 이동의 미세 신호로도 읽힘. Q4 가이던스 지속성이 다음 검증 축.",
-    likes: 24, comments: 3, created_at: "2026-07-24T02:18:00.000Z", liked: false,
+    likes: 24, comments: 0, created_at: "2026-07-24T02:18:00.000Z", liked: false,
   },
   {
     id: -510,
@@ -1615,7 +1615,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "SPX",
     content:
       "S&P 500 기업 실적 가이던스가 애널리스트 예상을 사상 최대 폭으로 상회 중(Barchart). 컨센 상향 사이클이 다중 분기 지속. 이론상 (1) 애널 상향 재조정, (2) 지수 EPS 성장 상단 확대, (3) 밸류에이션 정당화, (4) 리스크 온 심리 강화로 이어져야 하지만 오늘 실제 반응은 다름: TSLA -12%(record 매출), GOOGL 시총 -$84B(비트+비트), INTC -14%(2배 비트). 즉 시장이 컨센 상회보다 마진·FCF·가이던스에 집중.",
-    likes: 21, comments: 2, created_at: "2026-07-24T02:25:00.000Z", liked: false,
+    likes: 21, comments: 0, created_at: "2026-07-24T02:25:00.000Z", liked: false,
   },
   {
     id: -511,
@@ -1623,7 +1623,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     symbol: "SPX",
     content:
       "금이 미국 국채 앞질러 세계 최대 준비자산이 됐다(Barchart). 오랜 기간 압도적 1위였던 UST가 2위로. 배경: 중앙은행(BRICs 중심) 매입 지속, 지정학 리스크 이후 달러·UST 다변화 압박, 금 가격 상승, UST 발행량 증가. 상징적 의미로 (1) 달러 기축통화 위상, (2) UST 안전자산 지위, (3) 글로벌 자본시장 구조에 대한 장기 방향성 변화 신호. 즉시 시스템 붕괴는 아니지만 조용한 이벤트.",
-    likes: 26, comments: 2, created_at: "2026-07-24T02:32:00.000Z", liked: false,
+    likes: 26, comments: 0, created_at: "2026-07-24T02:32:00.000Z", liked: false,
   },
 
   // ── 2026-07-23 신규 ──────────────────────────────────────────────────────
@@ -1634,7 +1634,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla Q2 실적이 매출 record · EPS 미스로 엇갈렸다. 매출 $28.24B(컨센 $27.60B 상회)로 분기 사상 최고를 찍었지만 EPS $2.34로 컨센 $2.50을 소폭 하회. Wall St Engine 기준 영업현금흐름 TTM $18.66B는 전기간 최고. 매출 record와 EPS 미스가 동시에 나온 배경엔 인도 mix 저마진 이동(로보택시 파일럿·Cybercab 초기·Model Y Standard)과 캐파 확장에 따른 감가상각 부담이 있다. 콜의 마진 가이던스와 Robotaxi/Optimus 로드맵 코멘트에서 실 방향이 결정된다. 매수 유지.",
     likes: 79,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-23T00:05:00.000Z",
     liked: false,
   },
@@ -1645,7 +1645,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Q2 주주 업데이트는 다축 로드맵의 병렬 진전을 확인시켰다. Cybercab 파일럿(기가팩토리 텍사스), Semi 자율주행 도로 테스트 개시, Tampa 로보택시 24시간 상시 운영, 배터리 셀 캐파 확장(4680 중심), Optimus Gen 3 라인 준비까지. 각 축이 하나만으로도 뉴스급인데 실적과 같은 창에 정리돼 나온 건 실적 미스 프레임을 상쇄하려는 커뮤니케이션 전략 + 실제 상용화 병행 신호로 해석. 매수 유지.",
     likes: 44,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-23T00:12:00.000Z",
     liked: false,
   },
@@ -1656,7 +1656,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 유료 구독자 148만·누적 자율주행 80억 마일이 동시에 확인된 게 오늘의 조용한 하이라이트. 스톡(누적)과 플로(신규 부착 55%) 모두 강한 상태라 반복 매출 축이 실체를 갖는다. Cantor $510 재확인 프레임에서 이 데이터가 상방 논거를 지지. 정량 안전 지표는 안전 리포트 대기.",
     likes: 32,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:19:00.000Z",
     liked: false,
   },
@@ -1667,7 +1667,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "분기 신규 인도 55%가 FSD 구독. 자동차 회사가 SaaS성 매출 스트림을 갖는 구조가 정량화됐다. Natick Mall 배너·v14 Lite 확산·로보택시 오픈이 시너지로 반영된 결과일 가능성. 지역별 부착률 격차와 EU 승인(10월 TCMV 투표) 후 유럽 확산 속도가 다음 검증 축.",
     likes: 26,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:26:00.000Z",
     liked: false,
   },
@@ -1678,7 +1678,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tampa 24시간 상시 로보택시 운영이 개시됐다. 24/7이 특별한 이유는 가동률이 로보택시 유닛 이코노믹스를 결정하기 때문. 현장 지원 스태프 상주는 완전 무인은 아니지만 실제 운영 인프라가 마련됐다는 실행 신호. 시간대별 이용률·대당 매출·개입률 데이터가 다음 관찰 축. 매수 유지.",
     likes: 41,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-23T00:33:00.000Z",
     liked: false,
   },
@@ -1689,7 +1689,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Zach의 FSD v14.5.3 HW3 리뷰가 정성적 근거를 추가했다. 하이웨이 감속·차선 변경 자연스러움, 뉴욕 시가지에서 사실상 완전자율에 가까운 주행, 파킹 큰 개선 등. 개인 후기 한계는 있지만 400만 HW3 wide release 스토리(Ashok Elluswamy)의 정성적 지지가 계속 쌓임. 안전 리포트의 정량 지표가 최종 검증. 매수 유지.",
     likes: 10,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:40:00.000Z",
     liked: false,
   },
@@ -1700,7 +1700,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Sawyer Merritt이 공유한 Tesla 설치 연간 캐파 차트에서 두 가지가 핵심으로 부각됐다. Cybercab이 연 125,000대 이상 Production 상태로 표기됐고, Tesla Semi가 Commissioning 단계에 진입했다는 점. 상하이 Model 3/Y가 950,000대 이상으로 최대 사이트이며, 캘리포니아 550,000·베를린 Model Y 375,000·텍사스 Model Y 250,000·Cybertruck 125,000이 뒤를 잇는다. 에너지는 캘리포니아 40 GWh Megapack·상하이 20 GWh·네바다 Powerwall 6 GWh 이상 Production, 텍사스 Megapack Commissioning. Optimus 시설은 캘리포니아·텍사스 Construction 단계. Cybercab Production·Semi Commissioning은 상용화 다음 단계 진입 신호. 매수 유지. (이전 배포의 '+105K' 표현은 스크린샷에 없는 숫자였고 이 리포트에서 정정)",
     likes: 28,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:47:00.000Z",
     liked: false,
   },
@@ -1711,7 +1711,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla Megapack이 벨기에 BSTOR SA/NV 대형 저장 프로젝트 공급자로 지정, €450M 파이낸싱 확보. 105 MW / 456 MWh × 4 프로젝트 규모. Green Sun 브랜드로 유럽 6개국 확장. Q2 Energy 배치 21 GWh와 결합하면 Energy 부문 유럽 재확장 국면 확실. Megapack 마진 프로파일이 자동차 대비 우호적. 매수 유지.",
     likes: 37,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:54:00.000Z",
     liked: false,
   },
@@ -1722,7 +1722,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab 정식 런치가 9월경으로 준비 중임이 Q2 주주 업데이트에서 확인. 기가팩토리 텍사스 파일럿 진행 중이며 4680 셀 공급 축 담당. 파일럿 → 정식 런치는 상용 로보택시 유닛 이코노믹스 첫 실증 관문. 정확한 런치일·초도 배치 지역·규제 승인·4680 캐파 확장 진척이 다음 트리거. 매수 유지.",
     likes: 43,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-23T00:61:00.000Z",
     liked: false,
   },
@@ -1733,7 +1733,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Alphabet Q3 매출 $118.7B(컨센 $116.86B 상회) · EPS $2.94(컨센 $2.91 상회) 동시 비트. Cloud +33% · Search +17% · 광고 견조. 어제 MSFT '가장 안전한 mega-cap' 프레임과 GOOGL 프리미엄 밸류에이션 정당성 논쟁이 오늘 클라우드 33% 유지로 답을 얻었다. 매수 유지. AI CAPEX 가이던스·Gemini Enterprise 매출 세부 공개가 다음 검증 축.",
     likes: 68,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-23T00:68:00.000Z",
     liked: false,
   },
@@ -1744,7 +1744,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Sundar Pichai 콜 언급: Gemini가 주간 220억 토큰 처리(지난 분기 대비 2배+), Fortune 500의 90%가 Gemini Enterprise 사용, 개발자 400만+·950M 사용자 규모. 토큰 처리량과 엔터프라이즈 침투가 GCP Cloud 매출(33% 성장)로 전환되는 파이프라인 실측. 어제 MSFT × Kimi K2 스토리와 결합하면 (1)OpenAI/Anthropic (2)Gemini (3)중국 오픈모델 삼각 경쟁 구도 재확인. 매수 유지.",
     likes: 32,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:75:00.000Z",
     liked: false,
   },
@@ -1755,7 +1755,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Google CAPEX가 지난 2년간 거의 3배 급증(Investing visuals 정리). 데이터센터·GPU/TPU·냉각·전력 인프라에 집중된 지출. Q3 매출·EPS 동시 비트가 유지된 건 클라우드 33% 성장이 감가상각 부담을 흡수하고 있음을 시사. 하이퍼스케일러 자본 집중이 소수 대기업 편중 구조를 심화. 매수 유지.",
     likes: 21,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:82:00.000Z",
     liked: false,
   },
@@ -1766,7 +1766,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Google Q3 공시에서 SpaceX(SPCX) 지분 미실현 이익 $9.8B 공개(Dan D). SPCX 상장 이후 첫 정식 마킹 성격. META·AMZN 등 유사 대형 지분 보유자의 재평가 이벤트가 순차적으로 실적에 반영될 가능성. 회계 처리(P&L vs OCI)에 따라 실적 지표 영향 방식 다름. 관심 확대.",
     likes: 51,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-23T00:89:00.000Z",
     liked: false,
   },
@@ -1777,7 +1777,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX가 텍사스 대형 데이터센터 신설 검토라는 보도(Kelvishalik). BlackRock CEO Larry Fink '컴퓨트가 새 선물시장' 프레임과 결합되면 SPCX 자체 컴퓨트 인프라 확장 스토리로 확대. 발사·Starlink·자체 컴퓨트 3축 확장 시 밸류에이션 프레임 자체가 넓어진다. 어제 개인 매수 중단 흐름(Barchart) 반전 트리거 될 수도. 실 계약 확정까지 관망.",
     likes: 45,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:96:00.000Z",
     liked: false,
   },
@@ -1788,7 +1788,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "젠슨 황이 미국 기업의 중국 오픈소스 AI 모델 접근권을 옹호. 논거는 접근 제한시 workforce 유출·리딩 사고 확산에서 밀린다는 것. NVDA에겐 (1)GPU 신규 수요 (2)CUDA 잠금 확장 (3)H20 등 중국 대응 제품 규제 완화 명분 강화 세 축의 이해. 어제 MSFT × Kimi K2 스토리와 결합해 서구 Big Tech의 중국 오픈모델 채택이 하나의 흐름으로 굳어짐. 미국 정책 반응 관찰. 매수 유지.",
     likes: 38,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-23T00:103:00.000Z",
     liked: false,
   },
@@ -1799,7 +1799,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "The Kobeissi Letter 정리 컨센: Q1 2026 S&P 500 EPS 성장의 65%가 Big Tech·25%가 반도체에서 발생 예상. 두 섹터 합해 90% 근처. 지수 리더십이 소수 종목에 집중된 국면에서는 (1)개별 종목 리스크, (2)밸류에이션 집중 리스크 확대. 어제 마진 부채 $1.5T ATH·Forward P/E 20 재돌파·1800년대 이후 최고 밸류 프레임과 결합해 하방 리스크 무게. 다만 GOOGL Q3 비트로 실행력 확인된 건 반대편 근거. 리스크 관리 강화.",
     likes: 29,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-23T00:110:00.000Z",
     liked: false,
   },
@@ -1810,7 +1810,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ARK Invest 캐시 우드가 SpaceX와 Elon Musk에 대한 강한 강세 견해를 정리했다(DogeDesigner 인용). 다섯 가지 요지: (1) SpaceX가 세계사상 가장 중요한 기업 중 하나가 될 수 있다는 큰 그림, (2) 재사용 로켓 분야에서 약 10년 리드 확보, (3) Starlink가 통신을 글로벌 사업으로 전환 중, (4) 궤도 데이터센터와 저비용 프런티어 AI 시장을 이끌 잠재력, (5) Elon과 팀이 세계에서 가장 강력한 기술 생태계 중 하나 구축 중. 오늘 별도 리포트한 GOOGL의 SPCX 지분 $9.8B 미실현 이익, SpaceX 텍사스 대형 DC 검토 보도와 방향이 정확히 일치. 어제까지의 SPCX 이벤트(BlackRock Fink 컴퓨트 선물시장 프레임·SGX 예치증권 상장·개인 매수 중단 신호)와도 서사 결합. 캐시 우드 견해는 개인·기관 관점이며 실 실적·계약으로 검증 필요. 관심 확대.",
     likes: 47,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-23T00:117:00.000Z",
     liked: false,
   },
@@ -1823,7 +1823,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSLA Q2 2026 어닝은 수요일 장 마감 후. 인도 480,126대(record, +25% YoY)와 Energy 21GWh는 이미 알려진 팩트라 콜의 관심은 이번엔 Robotaxi 가이던스 세번 연속 후퇴(US 50% 커버리지 → 7 metros)를 어떻게 정리하느냐다. Robinhood 리테일 질문 7개(14.5M shares) 중 4개가 Robotaxi/Cybercab, 최대 무게가 실린 두 질문이 Robotaxi 확장 제약(5.4M shares)과 Optimus Gen 3 ramp(5.3M shares). 지난 48시간이 Tampa/Orlando 오픈·Bay Area SF/Q·Cybercab Starlink V3·FSD v14 Lite HW3로 답 일부 제공했으므로 콜에서는 그 이상의 신호가 필요. 실적보다 로드맵 확정 여부가 방향 결정. 매수 유지, 사이즈는 신중히.",
     likes: 66,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-22T00:05:00.000Z",
     liked: false,
   },
@@ -1834,7 +1834,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Robotaxi 서비스가 7개 도시로 확대: Orlando/Miami/Tampa/Dallas는 신규 Unsupervised Model Y, Austin은 Supervised, SF/Bay는 safety monitor 병행. 상반기 계획 7개 중 5개 live · Phoenix·Vegas만 남음. Unsupervised와 safety-monitor 병행은 안전 심사 프레임과 시장 확장 프레임 사이 밸런스 반영. 도시별 승차 데이터·개입률·사고율 지표가 다음 검증 축. 매수 유지.",
     likes: 43,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-22T00:12:00.000Z",
     liked: false,
   },
@@ -1845,7 +1845,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Sawyer Merritt: Tampa, Florida 첫 Unsupervised Model Y robotaxi 주행 시작. 텍사스 밖 첫 unsupervised 확장 사례라 규제 반응·소비자 피드백이 다음 도시 진입의 벤치마크. 첫 성공 이후 18일 만의 확장 속도가 실행 신뢰의 정량 신호. 매수 유지.",
     likes: 27,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:19:00.000Z",
     liked: false,
   },
@@ -1856,7 +1856,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "The Tesla Newswire: 2026 Summer Update(likely 2026.30)이 곧 롤아웃. More Grok Commands(통화·음악·climate·글로브박스·차량 Q&A), Self-Driving Stats in Mobile App(사용률/streak 조회·공유), Carwalk with Scoring, Automatic Navigation(루틴 학습·자동 제안), Preferred Routes, Rear Display Lock 외 다수. 소프트웨어 정의 차량 UX의 스텝 체인지. Self-Driving Stats/Streak 소셜화, Grok 명령 확장, 개인화 네비게이션이 사용률·구독 유지·데이터 재활용 축. 매수 유지.",
     likes: 71,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-22T00:26:00.000Z",
     liked: false,
   },
@@ -1867,7 +1867,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD(Supervised) 유럽 승인 투표가 10월 8~9일 TCMV(Technical Committee - Motor Vehicles) 회의에서 예정. 통과시(qualified majority) 유럽위원회가 네덜란드 인가청에 EU 전역 유효한 type approval 부여. EU 전역 프리미엄 마진 활성화의 결정적 게이트. 벨기에·네덜란드·독일 이전 승인 로드맵이 이 투표에서 통합. 기다림의 옵션 가치 상승. 매수 유지.",
     likes: 55,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:33:00.000Z",
     liked: false,
   },
@@ -1878,7 +1878,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cantor Fitzgerald가 Q2 앞두고 TSLA Overweight·$510 목표가 재확인. \"상용화 후 Tesla가 robotaxi 사업을 빠르게 확장, 지연에도 상당한 시장 점유 확보 가능\"이라는 프레임. 어닝 앞 등급 재확인은 애널리스트 기대치 앵커. 콜의 상용 로드맵 코멘트가 재확인 vs 후퇴의 검증 축. 매수 유지.",
     likes: 25,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:40:00.000Z",
     liked: false,
   },
@@ -1889,7 +1889,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Sawyer Merritt: xAI(Grok)가 곧 인도, 태국, 싱가폴, 필리핀, 말레이시아 Tesla 차량에 런칭. 2026.30 Summer Update의 More Grok Commands 확장과 결합되면 아시아 신흥국 데이터 파이프라인·구독 유입 축 확대. 언어·문화 대응이 초기 채택률 결정. 관심 확대.",
     likes: 22,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:47:00.000Z",
     liked: false,
   },
@@ -1900,7 +1900,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "unusual_whales(per YF): NVIDIA가 차세대 Vera Rubin AI 컴퓨팅 시스템의 full production에 공식 진입. Jensen이 Vera Rubin 프로세서가 AMD Turin보다 빠르다고 직접 비교했고 주요 고객들이 이미 테스트 중. 데이터센터 채택 근거 강화. Rubin GPU + Vera CPU 결합의 CoWoS·HBM 밸류체인(SK하이닉스·삼성·MU) 파급 크다. Foxconn Dojo 계약과 별도로 NVDA 자체 이닝 강화. 매수 유지.",
     likes: 57,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-22T00:54:00.000Z",
     liked: false,
   },
@@ -1911,7 +1911,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Leopold Stock Tracker: NVDA가 Nebius Group $NBIS 22.2M 주(회사 ~10%) 지분 공개. Nebius는 AI 인프라·데이터센터 회사. NVDA의 인프라 파트너 지분 축적 = 수요 락인·GPU 배포 우선순위 확보 전략의 연장선. NBIS 밸류에이션·CAPEX 계획 변화 관찰. Vera Rubin 정식 양산과 결합하면 채택 파이프라인 두 축(자체 시스템 + 파트너 지분) 확보. 매수 유지.",
     likes: 36,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:61:00.000Z",
     liked: false,
   },
@@ -1922,7 +1922,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Shay Boloor: BofA가 MU를 'best investment ideas' 목록에 추가하며 중국 AI 모델들이 HBM 부족을 확대한다고 언급. Kimi K2의 인스턴스당 ~1.4TB HBM 사용이 Micron의 장기 전망을 강화한다는 논리. 어제 리포트한 MSFT × Kimi K2 Copilot 평가 스토리와 결합 = 중국 오픈모델의 HBM 수요 서사 이중 강화. HBM 3사(SK하이닉스·삼성·MU) 마진·CAPEX 흐름 트래킹 축. 매수.",
     likes: 40,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-22T00:68:00.000Z",
     liked: false,
   },
@@ -1933,7 +1933,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Ogus Ekan: \"$MSFT는 지금 가장 안전한 mega-cap 픽\". 사실상 모두가 모델 사업에서 경쟁하는데 이는 수년간 black hole로 남고, MSFT의 컴퓨트는 대부분 training/inference 워크로드로 고객에게 팔려 day 1부터 마진 확보. GOOGL 대비 저평가(5% earnings 프리미엄 vs 27%). FCF Projection 2026–2030 시각화가 근거. Azure/OpenAI 지분 재평가·Copilot ARR·Kimi K2 실 채택이 검증 축. 매수 유지.",
     likes: 30,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:75:00.000Z",
     liked: false,
   },
@@ -1944,7 +1944,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "GOOGL Q3 어닝 내일. Net revenue $118B(+21.3%), EPS $2.91(+25.5%) 예상. Cloud 성장·YouTube 광고·Search 매출·AI capex outlook이 주요 관전. MSFT '가장 안전한 mega-cap' 프레임과 병렬 비교. Cloud 성장률이 YoY 20%대를 유지하는지가 GOOGL 프리미엄 정당화 지표. AI capex outlook 코멘트가 하이퍼스케일러 지출 사이클 방향타. 관심.",
     likes: 20,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-22T00:82:00.000Z",
     liked: false,
   },
@@ -1955,7 +1955,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Ark Invest Tracker: BlackRock CEO Larry Fink가 컴퓨트가 새로운 선물시장이 될 수 있다며 이것이 금융의 차기 혁명이라 발언. 컴퓨트 수요 > 공급 지속. 미국 자본시장이 이 시프트를 이끌 기술을 자금 조달할 수 있음. 별개로 컴퓨트가 여전히 비싸며 하이퍼스케일러들이 얼마나 빨리 원가를 낮출 수 있는지가 진짜 핵심. BLK 컴퓨트 인프라 펀드·데이터센터 크레딧 프로덕트 확대의 배경 프레임. 관심 확대.",
     likes: 17,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:89:00.000Z",
     liked: false,
   },
@@ -1966,7 +1966,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "DogeDesigner: 싱가폴 SGX가 7월 22일부터 SpaceX 예치증권(DR) 상장 시작. 싱가폴 달러 거래, 현지 시간 매매. 미국 시간 외 SPCX 익스포저 채널 신설로 아시아 유동성 유입 축 다각화. DR 구조·초기 거래량·NAV 대비 프리미엄/discount 형성이 초기 관찰 지표. 어제 리포트한 개인 매수 중단 흐름의 카운터 효과 가능. 관심.",
     likes: 42,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:96:00.000Z",
     liked: false,
   },
@@ -1977,7 +1977,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Barchart: 개인 투자자들이 SpaceX $SPCX 매수를 멈췄다. 어제 리포트한 월 $320M 유입 개별종목 1위였던 흐름이 하루 만에 반전. Whale Insider: SPCX가 7일 연속 하락 후 -7%로 회복 언급. 실적(8/4)·Starship Flight 13 이벤트 앞두고 관망 심리. SGX DR 상장이 지역 다변화로 새 유동성 유입 만들지 여부가 상쇄 지표. 관망.",
     likes: 33,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-22T00:103:00.000Z",
     liked: false,
   },
@@ -1988,7 +1988,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Kalshi: 총 마진 부채가 $1.5T로 사상 최고 도달. AI/성장주 랠리와 결합된 개인 레버리지 확대 사이클. 상승 사이클에서는 가속 요인, 조정 국면에서는 강제 청산·헤지 언와인드 리스크. Kalshi 예측시장 이벤트 확률 프레임과 결합해 리스크 예산 재점검이 정공법. 리스크 관리 강화.",
     likes: 28,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-22T00:110:00.000Z",
     liked: false,
   },
@@ -2001,7 +2001,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD v14 Lite의 진짜 뉴스는 400만대 규모의 HW3 wide release다. Ashok Elluswamy VP AI가 직접 확인, AI distillation 방식으로 HW4 V14의 주행을 HW3에 이식, 2025 초 이후 첫 major FSD upgrade. 3개가 겹친다. 오래된 차량의 소프트웨어 재활성화는 구독 매출·데이터 회수·이탈 방어를 동시에 건드리는 카드. 여전히 supervised라는 조건은 유지되지만 UX 레벨의 격상은 확실. 매수 유지.",
     likes: 51,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-21T00:05:00.000Z",
     liked: false,
   },
@@ -2012,7 +2012,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "중국 자율차 인플루언서 2명이 LA에서 FSD v14.3.4 테스트 후 태도 전환. Huawei ADS·XPeng VLA·Li Auto ADIC 최고라 믿었다가 광범위 테스트 후 '중국 시스템에 개선 여지 있음'을 인정. Ray Q가 'FSD가 중국 모든 자율차 시스템의 벤치마크'라고 정리. 이건 중국 승인 서사(Apple Intelligence 유형 리레이팅)와 결합될 때 매출 옵션이 실제로 확장되는 각도. 확정 촉매 아니므로 정책·규제 흐름 병행 관찰. 매수.",
     likes: 23,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-21T00:12:00.000Z",
     liked: false,
   },
@@ -2023,7 +2023,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Zach의 v14 Lite 100마일 실주행 후기: UI 개선, 브레이크 없이 auto change로 Start Self-Driving 진입, blue arrow tap parking, Self Driving App(사용률/streak) 추가. 도시·스쿨존 개입 0회 언급. 개인 후기이므로 정량 안전 지표는 별도 검증 필요하지만 UX 완성도의 스텝 체인지 신호. Streak/사용률 데이터는 심리적 이탈방어 카드. 매수 유지.",
     likes: 8,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-21T00:19:00.000Z",
     liked: false,
   },
@@ -2034,7 +2034,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Natick Mall(뉴잉글랜드 최대 쇼핑센터 1.6M sqft)에 Tesla가 FSD 대형 배너 신규 게시. '커피값보다 저렴 · Tesla 매장 1층 북쪽에서 FSD 체험' 카피. 오프라인 대중 소비자 접점을 처음 전면 확장한 마케팅이라는 게 포인트. 실효성은 FSD 구독 전환율 데이터가 검증 축. 관심 확대.",
     likes: 19,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-21T00:26:00.000Z",
     liked: false,
   },
@@ -2045,7 +2045,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Nic Cruz Patane가 Cybercab에 Starlink가 프레임 자체에 통합된 것을 확인. 별도 애프터마켓 모듈이 아니라 차체 구조에 내장. SPCX 인프라를 TSLA 하드웨어에 물리적으로 결합한 첫 명확한 증거로 볼 수 있다. 주행 데이터 오프로드·V2X·원격 fleet 명령 채널의 안정성 확보는 상용 로보택시의 필수 조건. 매수 유지.",
     likes: 42,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-21T00:33:00.000Z",
     liked: false,
   },
@@ -2056,7 +2056,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오스틴 두번째 lot에서 Cybercab 14대 이상 + camera washer 장착 validation Model Y 비슷한 수 목격(TeslaJoe·Spencer). 첫 lot 이후 두번째 배치 실측이라 야드가 확장 운영 중임을 의미. validation Model Y의 병행 존재는 FSD 로보택시 이원 플릿 시나리오(Cybercab + Model Y)를 시사. 대량 인도·안전 심사 흐름이 다음 트리거. 매수 유지.",
     likes: 30,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-21T00:40:00.000Z",
     liked: false,
   },
@@ -2067,7 +2067,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Giga Berlin FY2025 Management Report가 배터리 셀 캐파를 최대 8 GWh/년에서 18 GWh로 재상향, 총 셀 투자 ~$1.4B USD 확인. Q3 2026부터 주간 7,000대(+30%) 확장, 신규 일자리 5,000개, 연간 40,000대 추가. Q3 2026 vehicle sales + energy 사상 최고 예상 언급. 원가(셀 in-house)·캐파·매출 삼각의 유의미한 상향. 매수.",
     likes: 67,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-21T00:47:00.000Z",
     liked: false,
   },
@@ -2078,7 +2078,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Model Y Standard가 Giga Berlin에서 €40,000으로 출시, Premium 대비 €10,000 저렴. ICCT/Fraunhofer ISI(Reuters 7/18): 독일 비교 EV 가격 −18%(2020~인플레 조정), 내연차 +27%, 그러나 EV 중앙값 €53,000(+42%). 대부분 브랜드가 프리미엄으로 밀어붙일 때 저가로 들어가는 전략. 유럽 판매 회복·MoM 등록 데이터가 실효 검증 축. 매수.",
     likes: 16,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-21T00:54:00.000Z",
     liked: false,
   },
@@ -2089,7 +2089,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starlink가 이탈리아 고속철 26대(Siemens Velaro MS, Germany 확장용)에 제조 단계부터 통합, 계약 총액 €3B, 2027 완공. 이탈리아 기존 fleet도 2027까지 리트로핏. B2G·대중교통 인프라 채택 사례 확장이라 통신사(B2B)를 넘어선 매출축 다각화. 다른 EU 국가·오퍼레이터로 확산 여부가 후속 트리거. 관심 유지.",
     likes: 25,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-21T01:01:00.000Z",
     liked: false,
   },
@@ -2100,7 +2100,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Shay Boloor: Foxconn이 SPCX 차세대 Dojo QN300 시스템 제조 계약 $50B으로 $500B/$200B AI 서버 oligopoly에 첫 진입. 다만 Dojo는 통상 Tesla 브랜드로 알려져 있어 스크린샷의 SPCX 표기 부분은 별도 팩트체크 필요하다는 점 반드시 기록. 계약 규모 자체는 결정적이므로 실 계약·양산 스케줄 확정 시 SPCX/Foxconn 재추정. 관망.",
     likes: 78,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-21T01:08:00.000Z",
     liked: false,
   },
@@ -2111,7 +2111,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX Q2 2026 결과 발표 8월 4일 · 3:30 p.m. CT audio webcast (SpaceX 투자자 사이트 + X 라이브). 같은 8월 4일 이전 Starship Flight Test 13 발사 확률 Polymarket 기준 88%(Ark Invest Tracker). 실적과 발사가 같은 창에 겹치는 이벤트 밀도. 어제 리포트한 -44%·숏 $6.1B 프레임과 결합하면 결과/발사 성패가 리스크 균형점 재조정. 관망 유지.",
     likes: 59,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-21T01:15:00.000Z",
     liked: false,
   },
@@ -2122,7 +2122,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Barchart: 이번 달 개인 자금 SPCX 유입 $320M, 개별종목 압도적 1위. Quiver: Rep. William Timmons SPCX 최대 $250K 매수 신고. -44% 낙폭·숏 $6.1B 상황에도 개인·인사이더 관심 유지 = 감성 지표 강함. 실적(8/4)과 Flight 13이 실제 방향을 결정. 사이즈 신중히 매수.",
     likes: 44,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-21T01:22:00.000Z",
     liked: false,
   },
@@ -2133,7 +2133,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Eva McMillan이 Ron Baron을 인용해 \"Optimus 덕분에 10년 내 주당 $10,000\"을 이야기했다. 원 트윗은 티커를 $SpaceX로 표기했지만 Optimus 자체가 Tesla 휴머노이드 프로그램이라 논거상 TSLA로 재분류하는 것이 옳다. Baron이 반복적으로 Tesla 상방 프레임에 Optimus를 앵커로 사용해온 히스토리와도 일치. 다만 확정 촉매가 아니라 장기 서사이므로 상용화 시점·양산·단위경제가 검증 축. 중장기 매수 프레임 유지.",
     likes: 33,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-21T01:57:00.000Z",
     liked: false,
   },
@@ -2144,7 +2144,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "The Information: MSFT가 China's Kimi K2(Moonshot AI 오픈웨이트)를 Copilot용으로 Azure에 로드. 엔지니어들이 K2가 현재 OpenAI/Anthropic 모델을 대체할 수 있는지 평가할 예정. K2는 한국 코딩 리더보드 1위, Moonshot GPU 한계로 신규 구독 정지. Big Tech의 중국 오픈모델 채택 사례로 서구 프리미엄 프레임에 지속 압박. 실 채택·비용 절감 규모가 후속 검증. 매수 유지.",
     likes: 21,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-21T01:29:00.000Z",
     liked: false,
   },
@@ -2155,7 +2155,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NEX Shares: NVDA×MSFT AI-driven RAN(무선접속망) 프로젝트 공개, 2028 배포 목표. SW-defined 시스템 GPU 최적화 플랫폼 배포, 탄소 90%·지연 90% 절감, 네트워크 에지 AI 확장. 통신 인프라에 AI가 침투하는 대표 사례라 NVDA 데이터센터 외 매출축(통신사 CAPEX). 통신사 채택 로드맵·상용 배포 시점이 트리거. 매수 유지.",
     likes: 29,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-21T01:36:00.000Z",
     liked: false,
   },
@@ -2166,7 +2166,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "The Information: Google이 Gemini AI 모델의 청사진을 직접 통합한 새 서버 칩을 개발 중, 2028 배포 목표. TPU 라인업과 별개로 인퍼런스 원가 구조 자체를 재설계하는 시도. NVDA 의존도 감소 옵션 vs 자체 R&D 부담 트레이드오프. Big Tech in-house 실리콘 강화 흐름의 하나. 매수 유지, 채용/특허/서비스 원가 지표 확인.",
     likes: 14,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-21T01:43:00.000Z",
     liked: false,
   },
@@ -2177,7 +2177,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Bull Theory가 Stanford 2026 AI Index를 재해석: 미국 민간 AI 투자 2025 $265.5B vs 중국 $12.4B, 표면 23배. 그러나 중국 $12.4B는 민간만 포함, 2000년 이후 국가주도 자금 추정 $184B 제외. Société Générale은 이를 반영시 격차 약 1.4배. 미국 측은 신규 자금 조달 AI 기업 −21.3%지만 $1B+ 메가 라운드 11→28, 평균 딜 +65%($95.5M), Google 단독 인프라 $150B+. AI 리더십은 표면 숫자로 판단 금지, 자본 집중은 소수 하이퍼스케일러(GOOGL/MSFT/META/AMZN)에 응집 중.",
     likes: 32,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-21T01:50:00.000Z",
     liked: false,
   },
@@ -2190,7 +2190,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "기가 텍사스 240 Cybertruck 라인업 · 기가 텍사스 200+ Cybercab · 기가 오스틴 250 Cybercab 실측. 스틸/드론샷은 강한 시각적 근거지만 최종 지표는 등록/인도다. 양산 근접 시그널은 확실히 강해졌다. 매수 유지.",
     likes: 2,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-20T00:05:00.000Z",
     liked: false,
   },
@@ -2201,7 +2201,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "스티어링휠 없는 Cybercab이 캘리포니아 도착. 규제 프리뷰 성격의 실도로 노출로 볼 수 있다. San Bernardino 지역 반응·안전 심사 흐름이 향후 상용 개시 시점의 결정 트리거. 옵션 가치 상승.",
     likes: 19,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-20T00:12:00.000Z",
     liked: false,
   },
@@ -2212,7 +2212,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Robotaxi 트래킹 사이트 기준 총 770대. 하루 3대씩만 늘어도 곡선은 우상향. 대당 매출·유지비·가동률 프레임과 결합해야 진짜 정량 지표가 된다. 사이즈는 신중히 유지.",
     likes: 16,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-20T00:19:00.000Z",
     liked: false,
   },
@@ -2223,7 +2223,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "노르웨이 신차 EV 98% · Model Y 5,686대 1위. 인센티브·충전·세제 결합의 결과인 만큼 다른 국가 확장 벤치마크로 활용. EU 확산 로드맵의 정량 앵커. 매수.",
     likes: 13,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-20T00:26:00.000Z",
     liked: false,
   },
@@ -2234,7 +2234,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "$225 → $153, IPO가 하회. 숏 비중 5% → 29%, 추정 $6.1B. 이건 위험 균형점 그 자체다. 스퀴즈 리스크와 실적 검증 사이 변동성 확대. 사이즈는 작게, 실적/일정 이벤트만 트래킹. 관망.",
     likes: 10,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-20T00:33:00.000Z",
     liked: false,
   },
@@ -2245,7 +2245,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 개인화 로드맵 예고. 개별 개입 기억 + 소유자 취향 매치. 만족도·이탈 방어 UX 카드로 유효. 다만 데이터 재활용·프라이버시 담론이 붙을 수 있어서 정책/약관 개정 흐름 병행 관찰. 매수 유지.",
     likes: 7,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-20T00:40:00.000Z",
     liked: false,
   },
@@ -2256,7 +2256,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Nic Cruz Patane 인용 프레임: Tesla가 로봇+자율차를 같은 브레인으로 굴리는 유일 회사. Physical AI 서사가 밸류 확장 각도. 실제 로봇 상용 성과가 검증 지표라는 점만 놓치지 말자. 중장기 프레임 유효.",
     likes: 4,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-20T00:47:00.000Z",
     liked: false,
   },
@@ -2267,7 +2267,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Alibaba Qwen 3.0 Max 프리뷰 공개. 중국 오픈모델의 성능·가격 압박이 서구 프리미엄 프레임에 지속 도전. BABA 클라우드 매출·API 채택 데이터와 결합해서 봐야 정확한 그림. 관심 확대.",
     likes: 1,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-20T00:54:00.000Z",
     liked: false,
   },
@@ -2278,7 +2278,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Truist가 Meta Plus 스택 2030 매출을 $20B/yr로 잡음. IG $10B, Meta AI $5.5B, FB $3.3B, WA $2B. 전체 매출의 ~5% 수준이라 아직 여지 있다. 채택률·ARPU가 재평가 트리거. 광고 외 서사 강화.",
     likes: 18,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-20T01:01:00.000Z",
     liked: false,
   },
@@ -2289,7 +2289,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Barchart 프레임 — 미국 주식이 1800년대 이후 최고 밸류. 지수 산정·구성 변화 감안해도 극단 구간인 건 사실. 성장 서프라이즈만 유지되면 지탱, 실적 서프라이즈 실패 하나에 다중 압축 리스크. 리스크 관리 강화.",
     likes: 15,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-20T01:08:00.000Z",
     liked: false,
   },
@@ -2300,7 +2300,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "S&P 500 Forward P/E 20 재돌파. AI 프리미엄이 지탱하는 배수 확장이라 가이던스 하향 한 방에 배수 축소 리스크. 실적 시즌 지날 때까지 헤지·현금 비중 재점검이 정공법.",
     likes: 12,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-20T01:15:00.000Z",
     liked: false,
   },
@@ -2311,7 +2311,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Jevons 역설 인용 — 저렴한 지능이 오히려 컴퓨트 수요를 폭발시킨다는 프레임. NVDA 방어 논거의 대표 서사. CUDA 잠금·CAPEX 흐름·데이터센터 발주 데이터가 실증 축. 매수 유지.",
     likes: 9,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-20T01:22:00.000Z",
     liked: false,
   },
@@ -2322,7 +2322,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "버핏이 Google을 오랜만에 본 좋은 사업이라고 이례적 강한 톤. 그 자체가 GOOGL 프레임에 무게. 다만 실제 지분 변경은 13F 확인 별도. 현재 검색/광고 구조 방어력 재평가 재료.",
     likes: 26,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-20T01:29:00.000Z",
     liked: false,
   },
@@ -2333,7 +2333,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "BofA 노트 — 여름 조정 후 연말 랠리 시나리오. 시나리오 노트라 확정 아니지만 포지션 사이즈·헤지 조정의 근거 프레임. 실적·유동성·지정학 변수가 결합 트리거. 리스크예산 재점검.",
     likes: 49,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-20T01:36:00.000Z",
     liked: false,
   },
@@ -2344,7 +2344,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybertruck 240·Cybercab 200/250·캘리 도착·Robotaxi 770·노르웨이 1위. 오늘 TSLA 관련 스토리가 밀집한 날. 개별로는 시각적/일회성이지만 결합하면 양산·전용 무인·플릿·EU 침투의 4각 서사. 매수 유지.",
     likes: 42,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-20T01:43:00.000Z",
     liked: false,
   },
@@ -2357,7 +2357,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 12,002,485,572 마일이 오늘 실체가 됐다. Jun 8 11B → 이번주 12B, 하루 3천만 마일이 새로 쌓인다. 대규모 무감독 얘기를 붙일 정량 근거는 확보. 다만 개입률·사고율이 매치되어 나와야 서사가 완결된다. 매수 유지, 추적.",
     likes: 10,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-18T00:05:00.000Z",
     liked: false,
   },
@@ -2368,7 +2368,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "왜 지금 메타가 Anthropic한테 $10B/2년 컴퓨트를 파는가. 이유는 두 개다 — CAPEX 사이클을 매출로 전환하고, AWS/Azure 사이 틈새로 진입한다. FCF 압박은 단기 리스크, 매출 다각화는 장기 알파. 프레임 리레이팅 감안해 매수 유지.",
     likes: 7,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-18T00:12:00.000Z",
     liked: false,
   },
@@ -2379,7 +2379,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Dave Brown 영입. AWS 20년차가 메타 DC 총괄로 온다는 건 실행력 확보다. 딜만 있고 조직이 부족했던 리스크를 사람 하나로 크게 줄인 그림. Anthropic 딜과 세트로 봐야 하고, 실제 DC 준공 로드맵이 다음 체크 포인트. 매수.",
     likes: 4,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-18T00:19:00.000Z",
     liked: false,
   },
@@ -2390,7 +2390,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AAPL $4.92T, NVDA $4.86T. 지수 위쪽 순위가 다시 바뀌었다. 어제 다뤘던 중국 Apple Intelligence 승인 재료가 리레이팅 축이라고 본다. 다만 아침 거래 스냅샷이라 지속성 확인 필요 — 마감 기준·기관 자금 흐름을 확인하면서 관망~매수.",
     likes: 21,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-18T00:26:00.000Z",
     liked: false,
   },
@@ -2401,7 +2401,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "국방부 DC 협상은 이번 사이클 최대 헤드라인 중 하나. WSJ 소스라 신뢰도 붙는다. sovereign AI 흐름의 국방 확장 시나리오가 실체가 되면 SPCX 밸류에이션 논거 자체가 바뀐다. 규모/SLA 확정 전까지는 뉴스 흐름 팔로우.",
     likes: 44,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-18T00:33:00.000Z",
     liked: false,
   },
@@ -2412,7 +2412,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starship이 NASA 달 pathway로 재선정. Artemis 지연 리스크가 재프레이밍되는 순간이다. Blue Origin 대비 재사용 경제성 우위가 다시 부각되고 정부 계약 명분도 강해진다. 계약 규모·일정 확인 뒤 사이즈 결정. 관심.",
     likes: 37,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-18T00:40:00.000Z",
     liked: false,
   },
@@ -2423,7 +2423,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVL72 Rubin 랙 24h 추론 평균 950 kW. 피크의 약 2/3. 이 숫자가 실 운영원가와 냉각 설비 규모를 결정한다. 지상 vs 위성 컴퓨트 비교의 앵커 지표가 되니 데이터센터·전력·냉각 밸류체인까지 같이 트래킹. 매수 유지.",
     likes: 30,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-18T00:47:00.000Z",
     liked: false,
   },
@@ -2434,7 +2434,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab 오스틴에서 injection molding Sr Supervisor 채용. 사출성형 라인 세팅 실체가 이번에 처음 잡혔다. 채용공고는 실행의 흔적이지 이벤트가 아니다. 실제 sample-line·SOP 목표가 다음 체크. 소량·장기 매수 프레임 유지.",
     likes: 23,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-18T00:54:00.000Z",
     liked: false,
   },
@@ -2445,7 +2445,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "독일 KBA 안전성 평가 진행 → 7월 독립테스트 → EU 표결 = 최종 관문. 벨기에·네덜란드 이후 정공법 로드맵이 명문화됐다. EU 표결이 프리미엄 마진 활성화의 진짜 트리거. 기다림의 옵션 가치는 상승. 매수 유지.",
     likes: 46,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-18T01:01:00.000Z",
     liked: false,
   },
@@ -2456,7 +2456,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "라트비아 진출. 작은 시장이지만 정부 인센티브(€4k 신차·34% 활용), 충전소 +77%, 디젤 세금 인상까지 삼각 촉매. EU 전략의 한 조각이라 개별 시장 매출보다 지역 커버리지 확대의 시그널로 읽는다. 매수 유지.",
     likes: 39,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-18T01:08:00.000Z",
     liked: false,
   },
@@ -2467,7 +2467,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "글로벌 EV 월 200만 대 최초. 유럽 테슬라 +37% YoY. 리프레시된 Model Y가 견인이고 이건 침투율 곡선 변곡점 시그널이다. 중국·미국 리테일이 뒤따라주면 컨센서스 상향 트리거. 매수.",
     likes: 32,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-18T01:15:00.000Z",
     liked: false,
   },
@@ -2478,7 +2478,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Q2 매출 미스(YoY 23%)에 EPS 비트(YoY 11%). 사상 최대 자사주 $4.7B, 잔여 $21B. 광고형·게임즈 스택으로 미스를 상쇄하는 서사가 유효한지가 관건. 가이던스·광고 매출 성장률이 리레이팅 트리거. 관망.",
     likes: 84,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-18T01:22:00.000Z",
     liked: false,
   },
@@ -2489,7 +2489,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SOX -15% (6월 ATH 대비). 베어(-20%) 문턱 근접. 개별 강세 vs 지수 약세 괴리가 점점 커지는 국면이다. AMD·NVDA 실적/가이던스가 리커버리 트리거. 신규 올인 금물, 분할·리스크예산 재설정.",
     likes: 66,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-18T01:29:00.000Z",
     liked: false,
   },
@@ -2500,7 +2500,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "3년 안에 매출 ~4배 전망은 애널리스트 코멘트지 회사 가이던스 아니다. 그럼에도 런치·연결성·컴퓨트 3축이 동시에 굴러가는 건 사실. Azure/Copilot/게이밍 스택이 검증 축이고, 가이던스 확인 전엔 프레임만 보관. 매수 유지.",
     likes: 11,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-18T01:36:00.000Z",
     liked: false,
   },
@@ -2511,7 +2511,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Moritz 발언 프레임: MSFT IPO $400~600M 밸류에 대한 당시 회의론과 현재 TSLA/SPCX 밸류 회의론을 유비. 시간축 프레임이 편하지만 이걸로 CF·희석·거버넌스 정량 검증을 대체하지 말자. 결과론적 스토리텔링 경계. 중립.",
     likes: 8,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-18T01:43:00.000Z",
     liked: false,
   },
@@ -2522,7 +2522,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Chevron 이라크 유전 2개 진입 + 최대 유전 연구 + 인프라 구축 MOU. 트럼프-이라크 PM 회담 후 나온 딜이라 지정학 각도까지 결합. MOU 단계라 계약·생산량 확인 필요. 원유 스토리와 지정학이 겹치는 구간, 관망~매수.",
     likes: 5,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-18T01:50:00.000Z",
     liked: false,
   },
@@ -2535,7 +2535,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "텍사스 로보택시 플릿이 175까지 왔다. +58이 한 번에 찍힌 게 포인트고, Waymo 642 대비 절대량은 아직 작아도 기울기는 가팔라졌다. $10.5M 연 수익은 대당 $60k 가정 — 가동률 나오기 전엔 할인해서 보고, 플릿 확장 속도만 누적 매수 근거로 쓴다.",
     likes: 27,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-17T00:05:00.000Z",
     liked: false,
   },
@@ -2546,7 +2546,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "왜 지금 나스닥이 이렇게 흔들릴까? 답은 빈도다. 26거래일 중 20일이 ±1%. COVID·닷컴급 클러스터라는 말이 나와서, 방향 베팅보다 사이즈·헤지부터 재조정. 관망에 무게.",
     likes: 93,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-17T00:12:00.000Z",
     liked: false,
   },
@@ -2557,7 +2557,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 120억 마일 임박.\n— 글로벌 누적\n— 안전 페이지 인용\n데이터 루프는 확실한데 개입률·사고율이 같이 안 나오면 완전자율로 과대해석하지 말자. 잠정 긍정.",
     likes: 75,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-17T00:19:00.000Z",
     liked: false,
   },
@@ -2568,7 +2568,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Kalshi 69%. Tesla×SpaceX 2028 전 합병 확률. 예측시장이지 딜 공시가 아니다. 확률 출렁일 때마다 포지션 흔들 필요 없고, 공식 발표 전엔 시나리오 파일만 열어둔다. 중립.",
     likes: 6,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-17T00:26:00.000Z",
     liked: false,
   },
@@ -2579,7 +2579,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "일본 국가 AI 팩토리 숫자만 던져본다. Vera 13,750 / Rubin 27,500 / 140 MW. 국가 발주 스케일이라 수요 가시성은 강해 보이는데, 출하 일정이 나오기 전엔 파이프라인 신호로만. 매수 유지·추적.",
     likes: 3,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-17T00:33:00.000Z",
     liked: false,
   },
@@ -2590,7 +2590,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSMC Q2가 그냥 비트한 게 아니라 마진까지 예뻤다. GM 67.7%, OM 60.3%, 내년 매출 +40% 코멘트. 주가 $419 근처면 이미 많이 반영됐을 수 있어 추격보단 눌림 관심. 그래도 실적 품질은 BUY 쪽.",
     likes: 20,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-17T00:40:00.000Z",
     liked: false,
   },
@@ -2601,7 +2601,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "애리조나 +$100B에 미국 합계 $265B. 숫자가 비현실적으로 커서 오히려 감가비·램프업 리스크가 먼저 보인다. 중장기 온쇼어링 스토리는 맞는데 단기 이익으로 환산하진 말자. 중립~비중유지.",
     likes: 17,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-17T00:47:00.000Z",
     liked: false,
   },
@@ -2612,7 +2612,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Semi On Tour 일정 봤음 — 7/20-21 시카고, 7/21-23 버지니아. 양산 스펙 보여주기 투어라 인도 실적은 아니다. 그래도 상용 라인업 존재감은 남긴다. 이벤트성 매수 금지, 관심만.",
     likes: 14,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-17T00:54:00.000Z",
     liked: false,
   },
@@ -2623,7 +2623,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "젠슨 황 발언 한 줄 요약하면 “AI는 이제 시작, 사이클은 10~15년”. CEO 톤은 늘 자신감인데 SOX -16%랑 같이 보면 장기 낙관 ≠ 단기 차트. 가이던스·고객 CAPEX를 보고 판단. 추적관망.",
     likes: 11,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-17T01:01:00.000Z",
     liked: false,
   },
@@ -2634,7 +2634,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ATH 14,655 → 지금 12,331. 딱 -16%. 기술적 조정인지 추세 전환인지는 다음 반등 고점이 말해줄 거다. 지금 구간은 신규 올인보다 분할·리스크예산 재설정. 주의.",
     likes: 8,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-17T01:08:00.000Z",
     liked: false,
   },
@@ -2645,7 +2645,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AI1 피크 150→250 kW, 평균 120→160. Rubin 랙(230/190, $5-9M)이랑 붙이는 비교가 핵심 프레임이다. 스펙은 화려한데 발사·양산·단위경제는 아직. 스토리 BUY, 사이즈는 작게.",
     likes: 5,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-17T01:15:00.000Z",
     liked: false,
   },
@@ -2656,7 +2656,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "모건스탠리가 중국 Apple Intelligence 승인을 촉매로 본다고? 방향은 이해되는데 승인≠출시다. 기능 범위·일정 확인 전엔 기대감만으로 추격하지 말자. 중립.",
     likes: 2,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-17T01:22:00.000Z",
     liked: false,
   },
@@ -2667,7 +2667,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Uber → Delivery Hero €41.50. 99개 시장 확장 그림은 큰데, 제안 단계라 규제·자금·시너지가 전부 변수. 딜 뉴스에 휘둘리기 쉬운 구간이라 관망이 기본값.",
     likes: 19,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-17T01:29:00.000Z",
     liked: false,
   },
@@ -2678,7 +2678,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ARK 주장 — AI CAPEX가 2000년 버블 고점 돌파, 빅4 2026 >$700B, 2030 AI 시스템 ~$1.5T. 수요 확대와 과열 경고가 한 문장에 들어 있다. NVDA 주도·AMD Helios 도전 구도도 같이 체크. 비중 조절하며 보유.",
     likes: 16,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-17T01:36:00.000Z",
     liked: false,
   },
@@ -2689,7 +2689,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Jetson Thor T2000/T3000 나왔다. Blackwell 엣지·로봇 모듈이고 Boston Dynamics·Amazon Robotics 채택이 레퍼런스. 데이터센터랑 별개 파이프라인으로 보면 된다. 중기 옵션 — 당장 실적보단 채택 확대 추적. 매수(여유 비중).",
     likes: 13,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-17T01:43:00.000Z",
     liked: false,
   },
@@ -2701,7 +2701,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSLA 유럽 FSD 롤아웃 속도가 생각보다 빠르다. v14.2.2.6(2026.21.100)이 벌써 3차 배치까지 갔고 브랜치도 2026.20+라 최신 기능은 다 들어가 있음. 다만 여전히 Supervised라 운전자 개입은 필수 — 완전자율 얘기는 아직 이르다. 배치 확대 속도만 보면 국가 단위 확장 신호로 읽을 만하고, 구독매출 스토리 강화 관점에서 누적 매수.",
     likes: 3,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-16T00:05:00.000Z",
     liked: false,
   },
@@ -2712,7 +2712,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오늘 옵티머스 숫자 보고 좀 놀랐다. 프리몬트 연 100만대, 기가텍사스 연 1000만대(!). 이게 실현되면 자동차 규모로 휴머노이드를 찍어내는 첫 사례가 되는 셈. 다만 어디까지나 '목표치'고 착공 여부는 아직 확인이 안 됨. 로보틱스 밸류에이션 프레임 자체를 흔들 촉매는 맞는데, 시차 리스크 감안해서 사이즈 조절한 장기 매수로.",
     likes: 20,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-16T00:12:00.000Z",
     liked: false,
   },
@@ -2723,7 +2723,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "버핏이 2%도 싫다고 했다는데, 왜일까? 답은 간단하다 — 2% 물가상승률로도 35년이면 돈 가치가 반토막 나니까. \"다들 도박하듯 투자할 때 가치를 찾기 어렵다\"는 말도 곱씹을 만함. 밸류에이션 부담에 대한 우회적 경고로 들린다. 현금 실질수익률 다시 점검하고 신규 진입은 보수적으로. 관망.",
     likes: 17,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-16T00:19:00.000Z",
     liked: false,
   },
@@ -2734,7 +2734,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "KBB 6월 데이터. 테슬라 평균가 -2.1% YoY, 업계 EV 전체는 -4.5%. 격차가 크다. Model Y 평균 $51,775로 업계 평균보다 낮은데 EV 판매의 35%+를 이 모델 하나가 차지 중이야. 가격전쟁에서 이미 이겨놓은 그림 아닌가 싶다. 다음 분기 GM ex-credits 개선 여부가 체크포인트. 매수.",
     likes: 14,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-16T00:26:00.000Z",
     liked: false,
   },
@@ -2745,7 +2745,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Vera Rubin 지연설, 젠슨 황이 직접 나와서 아니라고 못박았다. 대량 하드웨어가 이미 입고 중이고 램프업 준비 단계라는 게 핵심 포인트. 매출인식 시점이야 별개 문제니 다음 실적 가이던스에서 가시성 확인하면 될 듯. 일단 추적관망하면서 매수 유지.",
     likes: 11,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-16T00:33:00.000Z",
     liked: false,
   },
@@ -2756,7 +2756,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "로보택시 텍사스 경제성, 숫자로 보니 확실히 남는 장사다. 모델Y 한 대가 연 700만달러를 벌어들일 수 있는데 생산비는 430만달러. 사이버캡 나오면 이 비용도 절반 밑으로 떨어진다니 마진은 더 벌어질 구조. 아직 초기 단계지만 페이백 매력은 충분함. 플릿 확장 속도랑 가동률이 다음 체크포인트. 매수.",
     likes: 8,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-16T00:40:00.000Z",
     liked: false,
   },
@@ -2767,7 +2767,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "유럽에서 모델Y가 또 1등. YoY +68%, 5개월간 76,760대. 가격전쟁 한복판에서 나온 성장이라 더 의미있음. 아까 KBB 가격안정화 얘기랑 같이 보면 그림이 완성된다 — 지역 다변화랑 마진 개선이 동시에 오는 구조. 매수.",
     likes: 5,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-16T00:47:00.000Z",
     liked: false,
   },
@@ -2778,7 +2778,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "트럼프가 이큐닉스를 최대 100만달러어치 매입했다고 신고했다는데, \"데이터센터가 미래 일자리 최대 동력\"이라는 발언과 묶어서 보면 정책 신호로 읽힐 여지는 있다. 다만 주가 반응은 -0.09%로 거의 없었고, 매입 자체가 확정 정책을 뜻하진 않음. 데이터센터 리츠·전력 인프라 쪽 관심은 환기할 만하나 실제 정책 확인 전까지는 중립.",
     likes: 2,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-16T00:54:00.000Z",
     liked: false,
   },
@@ -2789,7 +2789,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "애플이 AI 서버칩 확보하려고 스타트업까지 접촉 중이라는데, 이게 딱히 좋은 신호는 아닌 것 같다. 자체 M2 울트라 서버로는 고급 워크로드가 안 돌아가서 구글클라우드의 Nvidia에 의존 중이고, 차세대 자체칩 Baltra는 지연됐다는 얘기까지 나옴. 온디바이스 AI 경쟁에서 뒤처질 리스크인지 M&A 발표가 트리거가 될지는 지켜봐야 할 듯. 의문 남기고 중립.",
     likes: 19,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-16T01:01:00.000Z",
     liked: false,
   },
@@ -2800,7 +2800,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "스페이스X 지금 $133.18, IPO가 $135 밑으로 내려갔음. 일중으로는 +17.25% 반등했지만 YTD로는 -27.77%. 초기 투자자 상당수가 물려있는 구간이라는 뜻. 변동성만 크고 방향은 아직 안 잡힌 느낌이라 관망.",
     likes: 46,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-16T01:08:00.000Z",
     liked: false,
   },
@@ -2811,7 +2811,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ASML이 실적으로 시장 기대를 크게 넘었다. 매출 €9.33B, EPS €7.59 둘 다 컨센서스 상회고, FY26 가이던스는 €36-40B에서 €43-45B로 확 올렸음. 2027년까지 EUV·DUV 캐파를 30% 늘린다는 계획에 머스크와의 TeraFab 협업 소식까지 겹쳐서, 반도체 공급망 전반에 우호적인 뉴스로 본다. 협업 디테일은 후속으로 확인하되 매수.",
     likes: 39,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-16T01:15:00.000Z",
     liked: false,
   },
@@ -2822,7 +2822,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "BofA 펀드매니저 서베이 체크. 현금비중이 4.1%에서 3.6%로 떨어졌고 이번 세기 최저권임. BofA 자체 규칙으로는 매도 신호가 발동된 수준. 역발상 지표라 즉각 매도 신호로 확정 짓기는 이르지만, 헤지 비중이랑 밸류에이션 지표는 같이 점검해두는 게 좋겠다. 주의.",
     likes: 32,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-16T01:22:00.000Z",
     liked: false,
   },
@@ -2833,7 +2833,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "대륙횡단 자율주행 완주 영상 봤는데 완성도가 생각보다 높더라. V14 Lite가 AI3 위에서 5,135마일을 큰 안전 이슈 없이 완주함. 커뮤니티에서는 벌써 \"더 많은 고객한테 확대해야 한다\"는 목소리가 나오는 중. 다만 이건 아직 공식 검증은 아니고 커뮤니티 테스트 수준이라, 배포확대 공식발표랑 개입빈도 데이터 나오면 다시 보자. 잠정 매수.",
     likes: 25,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-16T01:29:00.000Z",
     liked: false,
   },
@@ -2844,7 +2844,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "EV 오너 설문 결과 하나 — 가솔린으로 돌아가고 싶다는 응답이 단 0.5%, EV 유지하겠다는 응답이 99.5%다. 초기엔 충전 불안 얘기가 많았는데 실제 이탈로는 거의 안 이어진다는 뜻. 표본이나 방법론 디테일은 제한적이라 단독 근거로 쓰기엔 약하지만, 장기 수요기반이 견조하다는 보조지표로는 충분히 쓸만함.",
     likes: 48,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-16T01:36:00.000Z",
     liked: false,
   },
@@ -2855,7 +2855,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "버핏이 CNBC에서 구글 투자를 직접 주도했다고 확인했다. $15.4B 지분 공개 이후 주가는 +34%, 지금 $371.81. 가치투자 관점에서도 매력있다는 평가가 나오는데, 문제는 이미 오를 만큼 오른 뒤라는 것. 밸류에이션이랑 실적 지속성 먼저 확인하고 들어가는 게 맞을 듯. 밸류체크하면서 중립.",
     likes: 41,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-16T01:43:00.000Z",
     liked: false,
   },
@@ -2866,7 +2866,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "중국에서 애플 온디바이스 AI가 드디어 승인났다. 알리바바 Qwen이 iOS·iPadOS·macOS·visionOS 전부에 통합되는 구조라 로컬 파트너십으로 규제 장벽을 풀어낸 셈. 알리바바 클라우드·AI 사업에도 우호적인 뉴스고, 애플 입장에서는 중국 판매랑 업그레이드 수요를 자극할 촉매다. 출시일정이랑 기능범위만 확인되면 매수 유지.",
     likes: 34,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-16T01:50:00.000Z",
     liked: false,
   },
@@ -2878,7 +2878,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPY 쪽 채널 체크해봤는데 CPI -0.4%가 중심이야. 1) June CPI -0.4% — Apr 2020 이후 최대. 2) Core 2.6% YoY. 3) Hassett “best in ~6 years”. 4) S&P fut +38.50 / fair +4.34 / implied +34.16 · NASDAQ fut +403.75. 5) 투자: 디스인플레 우호이나 Core 지속성 확인. BUY(인덱스 모멘텀, 사이즈 조절).",
     likes: 47,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:06:00.000Z",
     liked: false,
   },
@@ -2889,7 +2889,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Chamath M&A 시나리오 보고 한 가지 숫자가 눈에 들어왔어. 1) 50% premium → ~$600/share. 2) 결합 ~$2.25T. 3) Ownership TSLA 55–60 / SPCX 40–45. 4) 산업 논리 + domestic cellular. 5) 공식 딜 아님 — 시나리오 앵커. NEUTRAL.",
     likes: 62,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:12:07.000Z",
     liked: false,
   },
@@ -2900,7 +2900,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Robotaxi 765 데이터 다시 뜯어봤는데 1) +4 → fleet 765. 2) Unsupervised 39. 3) Austin 28·Dallas 5·Houston 6. 4) Tesla own/reg 102. 5) 스케일·권역 확장 지표. BUY.",
     likes: 93,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:18:14.000Z",
     liked: false,
   },
@@ -2911,7 +2911,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AlixPartners 검증 결과랑 딱 맞아 떨어져. 1) ~-41.74% · overlay 3.210. 2) AlixPartners 영입. 3) 아직 파산 아님. 4) Musk: Rivian/Lucid bankruptcy path. 5) 생존 리스크 재평가. SELL/avoid(신규).",
     likes: 16,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:24:21.000Z",
     liked: false,
   },
@@ -2922,7 +2922,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Burry 순환금융 클립/차트 봤는데 임팩트가 크네. 1) borrow→GPU→collateral→borrow. 2) MULTI TRILLION FUNDING PROMISES. 3) 수요 vs 레버리지 분리. 4) 현금흐름 가시성 체크. NEUTRAL(리스크 주시).",
     likes: 13,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:30:28.000Z",
     liked: false,
   },
@@ -2933,7 +2933,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Steel River가 오늘 핵심이야. 이유는 1) 100% initial offtake. 2) 1.6GW+2GWh by 2029. 3) Full 2.5GW/2.9GWh. 4) FSLR+LG · 315k+ homes/yr. 5) AI 전력 실물 증거. BUY.",
     likes: 10,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:36:35.000Z",
     liked: false,
   },
@@ -2944,7 +2944,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVDA 쪽 채널 체크해봤는데 Pelosi tracker CLAIM가 중심이야. 1) Jan up to $1M. 2) 7d later H200 ban lift. 3) Feb up to $5M. 4) May 10 Chinese cos. 5) ※ CLAIM only — 음모 단정 금지. NEUTRAL.",
     likes: 7,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:42:42.000Z",
     liked: false,
   },
@@ -2955,7 +2955,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "해외 유입 ~$900B 보고 한 가지 숫자가 눈에 들어왔어. 1) Foreign US equity buying fastest on record. 2) 12m sum ~$900B (Apollo/Barchart). 3) 쏠림 + 되돌림 리스크. NEUTRAL/WATCH.",
     likes: 4,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:48:49.000Z",
     liked: false,
   },
@@ -2966,7 +2966,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Hyperion $30.33M 데이터 다시 뜯어봤는데 1) Q2 2026 $30.33M. 2) 72,118 sh. 3) avg ~$420.60. 4) 단일 기관 시그널. NEUTRAL(보조지표).",
     likes: 1,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:54:00.000Z",
     liked: false,
   },
@@ -2977,7 +2977,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cathie QT bogeyman 검증 결과랑 딱 맞아 떨어져. 1) QT = bogeyman. 2) Fed BS $8.5T→$6.7T. 3) Warsh QT 재개 가능. 4) 유동성 공포 과잉 여부. BUY(성장 바스켓, 정책 리스크 인지).",
     likes: 18,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:10:07.000Z",
     liked: false,
   },
@@ -2988,7 +2988,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD NL obstruction 클립/차트 봤는데 임팩트가 크네. 1) FSD Supervised NL. 2) opposite lane around obstruction. 3) UI 14 KM/H Self-Driving. 4) EU edge-case 증거. BUY.",
     likes: 15,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:16:14.000Z",
     liked: false,
   },
@@ -2999,7 +2999,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "iPhone AI shrink가 오늘 핵심이야. 이유는 1) SV firm talks. 2) shrink models for on-device iPhone. 3) CNBC via Evan. 4) 온디바이스 차별화. BUY.",
     likes: 12,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:22:21.000Z",
     liked: false,
   },
@@ -3010,7 +3010,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSLA 쪽 채널 체크해봤는데 Cybercab Miami가 중심이야. 1) Miami street testing. 2) Grayson Brulte video. 3) 지리적 확장 신호. BUY.",
     likes: 9,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:28:28.000Z",
     liked: false,
   },
@@ -3021,7 +3021,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Antidooring 2026.20.3 보고 한 가지 숫자가 눈에 들어왔어. 1) Blind Spot Warning While Parked NEW. 2) chime + 1st press block. 3) 2nd override. 4) version 2026.20.3. 5) 안전 UX 플러스. BUY.",
     likes: 6,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:34:35.000Z",
     liked: false,
   },
@@ -3032,7 +3032,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "EU Robotaxi hiring 데이터 다시 뜯어봤는데 1) Berlin Electrical Design Engineer. 2) Amsterdam Vehicle SW Intern. 3) EU 상용화 선행지표. BUY.",
     likes: 3,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:40:42.000Z",
     liked: false,
   },
@@ -3043,7 +3043,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NI $16.9B 검증 결과랑 딱 맞아 떨어져. 1) NI $16.9B · ROTCE 23% ex Visa/equity. 2) CIB +27% · Markets +35% · IB fees +30%. 3) CCB +8%. 4) AUM >$5T · LT inflows $50B. 5) tectonic plates 리스크. BUY(실적) / hedge macro.",
     likes: 20,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:46:49.000Z",
     liked: false,
   },
@@ -3054,7 +3054,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "모델 $169 클립/차트 봤는데 임팩트가 크네. 1) $73.03 · EPS TTM $3.10 · PE 23.6. 2) rev start 46.89B · growth 13%. 3) margin 25→30% · future PE 28 → EPS $6.03 · $168.83. 4) ann 18.2% / total 131.2%. 5) 가정 민감. BUY(가정 가드).",
     likes: 17,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:52:00.000Z",
     liked: false,
   },
@@ -3065,7 +3065,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Burry $193B가 오늘 핵심이야. 이유는 1) $193B Treasury debt. 2) write-off → 3–4x then 6–7x. 3) else low single digits. 4) bad-loan WO $61M→$243M. 5) 바이너리 정책. SPECULATIVE.",
     likes: 14,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:08:07.000Z",
     liked: false,
   },
@@ -3076,7 +3076,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "MU 쪽 채널 체크해봤는데 ETF weights가 중심이야. 1) QQQ 4.79%. 2) IVV/SPY 1.72%. 3) VOO 1.68%. 4) VTI 1.50%. 5) 패시브 증폭. BUY(사이클) / vol 주의.",
     likes: 41,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:14:14.000Z",
     liked: false,
   },
@@ -3087,7 +3087,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Barclays $370 보고 한 가지 숫자가 눈에 들어왔어. 1) Dan Levy PT $370 from $360. 2) Equal Weight. 3) Robotaxi/Optimus/energy · Q2 beat. 4) spot $396.18(+0.36%). 5) EW가 메시지. NEUTRAL.",
     likes: 34,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:20:21.000Z",
     liked: false,
   },
@@ -3098,7 +3098,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TTM $140B 데이터 다시 뜯어봤는데 1) June TTM +31% to $140B. 2) YTD $76.0B(+35.6%). 3) 2019–2025 annual boxes. 4) AI 슈퍼사이클. BUY.",
     likes: 27,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:26:28.000Z",
     liked: false,
   },
@@ -3109,7 +3109,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "XPENG VLA 2.0 검증 결과랑 딱 맞아 떨어져. 1) XPENG VLA 2.0 EU 2H 2026 camera-only. 2) Tesla FSD >11B miles. 3) +28M/day. 4) 데이터 해자 vs 지역 공세. BUY(TSLA) / watch XPEV.",
     likes: 50,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:32:35.000Z",
     liked: false,
   },
@@ -3120,7 +3120,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Grok voice ~3mo 클립/차트 봤는데 임팩트가 크네. 1) Elon Jun 17: ~3 months. 2) parking #1 disengagement. 3) Sept→stress→wide late'26/'27는 추정. 4) 릴리즈만 추적. NEUTRAL/WATCH.",
     likes: 43,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:38:42.000Z",
     liked: false,
   },
@@ -3131,7 +3131,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Evercore $3100가 오늘 핵심이야. 이유는 1) PT $3,100 · upside $4,000. 2) from ~$254 → $1,754(+590%). 3) 5 NBM ~$62B RPO. 4) >$11B prepays. 5) 가시성 vs 변동성. BUY(사이즈↓).",
     likes: 36,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:44:49.000Z",
     liked: false,
   },
@@ -3142,7 +3142,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSLA 쪽 채널 체크해봤는데 SDI ESS가 중심이야. 1) Samsung SDI first Tesla ESS via StarPlus. 2) ~3–5조 ($2–3.3B). 3) 300Ah LFP. 4) Q2 2027 ops · signed Jan. BUY(energy).",
     likes: 29,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:50:00.000Z",
     liked: false,
   },
@@ -3153,7 +3153,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Q2 miss 보고 한 가지 숫자가 눈에 들어왔어. 1) $17.2B vs $17.86B. 2) +1% YoY · Infra -7%. 3) ~-24~-28% · mcap ~-$65B. 4) AI 스토리 재가격. SELL/avoid short-term.",
     likes: 22,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:06:07.000Z",
     liked: false,
   },
@@ -3164,7 +3164,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "CHIPS pols 데이터 다시 뜯어봤는데 1) 4 pols bought 2026 · 0 sales. 2) Khanna 8x · Salazar 2x May 21. 3) May 21 $1B CHIPS quantum. 4) Jul14 219.32(-24.76%). 5) PTR≠인과. NEUTRAL.",
     likes: 53,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:12:14.000Z",
     liked: false,
   },
@@ -3175,7 +3175,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Buffett 12M 검증 결과랑 딱 맞아 떨어져. 1) 12M sh ~$6B. 2) 9M Susan Fdn · 1M×3. 3) ~8년 내 전량 처분. 4) 공급·승계 내러티브. NEUTRAL.",
     likes: 84,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:18:21.000Z",
     liked: false,
   },
@@ -3186,7 +3186,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Retail 6yr low 클립/차트 봤는데 임팩트가 크네. 1) slowest net buying 6+ years. 2) Vanda. 3) lowest since Covid. 4) 기관/해외 의존↑. NEUTRAL.",
     likes: 1,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:24:28.000Z",
     liked: false,
   },
@@ -3197,7 +3197,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Pricing 74%가 오늘 핵심이야. 이유는 1) 74% wafer rev advanced. 2) prices +5–10%. 3) Street $40.0B(+33%) · EPS $3.81(+54%). 4) $421.58(+83.83% 1Y). BUY.",
     likes: 18,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:30:35.000Z",
     liked: false,
   },
@@ -3208,7 +3208,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX 쪽 채널 체크해봤는데 ARK +$21M가 중심이야. 1) +$21M. 2) total 3,850,606 sh ~$535.8M. 3) ARKX 8.31% · ARKQ 6% · ARKK 4.31% · ARKW 3.14%. BUY(유동성 주의).",
     likes: 15,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:36:42.000Z",
     liked: false,
   },
@@ -3219,7 +3219,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD EU 50M km 보고 한 가지 숫자가 눈에 들어왔어. 1) >50M km (=31M miles). 2) NL/EE/BE/LT/DK. 3) 20M km ~7.5 weeks ago. BUY.",
     likes: 12,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-15T00:42:49.000Z",
     liked: false,
   },
@@ -3230,7 +3230,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 14.3.5 데이터 다시 뜯어봤는데 1) first drive. 2) parking-garage→garage. 3) one tap. 4) Whole Mars. BUY.",
     likes: 9,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-15T00:48:00.000Z",
     liked: false,
   },
@@ -3241,7 +3241,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "James Quiver 검증 결과랑 딱 맞아 떨어져. 1) John James SPCX purchase filed. 2) Energy & Commerce. 3) widget $136.08(-2.20%). NEUTRAL(공시 팩트).",
     likes: 6,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-15T00:54:07.000Z",
     liked: false,
   },
@@ -3254,7 +3254,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "BofA PT $460 — 보고 한 가지 숫자가 눈에 들어왔어. Robotaxi가 밸류에이션의 ~52%. 1) Alexander Perry BUY 재확인 · PT $460. 2) 자율사고 101,000 miles당 1건 · 인간 대비 ~90% 낮음. 3) Cybercab: 3,113 lbs · 48-kWh · ~300-mile 실세계. 4) Optimus RaaS 잠재 $30B · Capex $25B AI/로봇 전환. 5) 투자 핵심: PT의 절반 이상이 자율주행. 자동차 멀티플로 보면 미스프라이싱. BUY.",
     likes: 9,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-14T00:06:00.000Z",
     liked: false,
   },
@@ -3265,7 +3265,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Jefferies $400이 오늘 핵심이야. 이유는 Q2 딜리버리 비트가 EBIT까지 올린 점. 1) PT $375→$400. 2) FY2026 EBIT 추정 +4% to $6.2B. 3) 롱휠베이스 Model Y 믹스 반영. 4) BofA $460과 동시에 보면 월가 PT 밴드가 위로 움직이기 시작. NEUTRAL→BUY (펀더멘털 상향 확인).",
     likes: 36,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-14T00:12:00.000Z",
     liked: false,
   },
@@ -3276,7 +3276,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FAA Flight 12 채널 체크해봤는데 조사가 7/13에 닫혔어. 1) 공중 부상·재산 피해 없음. 2) 원인: 상승 중 추진계통 열 · 엔진 알람 설정 오류. 3) 시정조치 4건. 4) Flight 13 진행 가능. 5) 투자 포인트: 규제 클리어는 발사 캘린더 리스크 제거. 주가 약세와 디커플될 수 있어도 장기 일정엔 플러스. BUY.",
     likes: 29,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-14T00:18:00.000Z",
     liked: false,
   },
@@ -3287,7 +3287,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX $138.99 — 최저 종가 숫자부터. −$6.31 / −4.34% · Jul 13 16:11 ET. ATH 대비 시총 소실 nearly $1.2 Trillion. 1) IPO 이후 최저 종가 라벨은 공포 매도 촉발 가능. 2) 동시에 장기 매수 창구로 읽는 자금도 유입. 3) 변동성 자체는 예상 범위. NEUTRAL — 스토리와 가격의 괴리가 커진 구간. 사이즈 조절 필수.",
     likes: 22,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-14T00:24:00.000Z",
     liked: false,
   },
@@ -3298,7 +3298,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "의회 SPCX 매수 — PTR 다시 뜯어봤는데 팩트만 정리. 1) IPO 이후 정치인 매수 4 · 매도 0. James·Cisneros·Meuser·McGuire. 2) John James #20034949 · MI10 · SP · 06/12/2026 · $15,001–$50,000 · SPCX. 3) James는 Energy & Commerce / Communications & Technology — FCC·Starlink 감독. 4) 규모는 크지 않으나 감독 포지션 + 매수 불균형의 시그널 효과. NEUTRAL (공시 팩트, 과해석 금지).",
     likes: 45,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-14T00:30:00.000Z",
     liked: false,
   },
@@ -3309,7 +3309,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSMC Q2 — 숫자 먼저. Q2 ~$39.6B (+36% YoY) vs est ~$39.4B. June ~$13.8B (+6.2% MoM, +67.9% YoY). H1 2026 ~$75.0B. 1) 기록 분기에 컨센서스 소폭 상회. 2) 6월 YoY +67.9%가 AI 가속 속도감. 3) 파운드리 사이클 상단이 아직 안 보인다는 쪽에 무게. BUY.",
     likes: 38,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-14T00:36:00.000Z",
     liked: false,
   },
@@ -3320,7 +3320,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "META Louisiana DC 딜 플로우 확인했는데 스케일이 예상보다 커. 1) Richland Parish · up to $50B. 2) Compute up to 5GW. 3) Local infra >$1B. 4) AI Capex가 전력·부지·지역투자까지 확장되는 단계. 5) NVDA·TSMC 수요의 최종 흡수처가 이런 DC. BUY (인프라 확신 신호).",
     likes: 31,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-14T00:42:00.000Z",
     liked: false,
   },
@@ -3331,7 +3331,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "헤지펀드 반도체 플로우 — 검증 결과랑 딱 맞아떨어져. 1) 지난주 US semis 매수 3.5년 최고. 2) Jun 2024 이후 최대 연속 주간 매도 직후 반전. 3) Semis = HF exposure 10% (2x YoY). 4) May peak 14% 하회 → 추가 리빌드 여지. 5) GS Prime Book. NVDA·TSM·AVGO 바스켓. BUY.",
     likes: 24,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-14T00:48:00.000Z",
     liked: false,
   },
@@ -3344,7 +3344,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오스틴 허브 청소 로봇 내장 — 허가서 데이터 확인했어. 1) Permit TAB022052026에 청소 로봇, 수퍼차저, 장비실이 공식 범위로 명시됨. 2) 허브 완공 2026년 3월. 자동화 청소 시스템은 작년부터 설계. 3) 핵심은 이거야. '차가 스스로 달리고 이제 허브가 스스로 청소한다' — 이게 완전 무인 로보택시 생태계의 완성이야. 차량 자율 + 허브 자율 = 인건비 제로 구조. 4) 이 허브 설계가 전국으로 복제되면 확장 시 고정비가 거의 선형으로 늘지 않아. 스케일아웃 비용 효율이 압도적이야. 5) 트립당 EBITDA가 기존 추정치보다 높을 수 있어. 운영비 절감 레버가 하나 더 생긴 거야. BUY.",
     likes: 13,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-13T00:06:00.000Z",
     liked: false,
   },
@@ -3355,7 +3355,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AI5 칩 삼성 테이프아웃 — 딜 플로우 확인했는데 이 뉴스 의미가 크다. 1) 삼성 파운드리 내부자(Shay Boloor): TSLA AI5 칩 테이프아웃 도달 · Texas fab 2nm. 2) Ming-Chi: AI5는 이미 생산 진입, 인도팀은 AI6·Dojo 3 테이프아웃 준비. 3) Whole Mars: AI5 트랜지스터 AI4 대비 ~3.5배 작음. 4) 투자 핵심: NVIDIA 의존도 감소 = AI 추론 비용 내재화. FSD·Optimus 마진 구조 개선. BUY.",
     likes: 10,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-13T00:12:00.000Z",
     liked: false,
   },
@@ -3366,7 +3366,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Chicago 'Project Buster' — 마케팅 관점에서 뜯어봤는데 타이밍이 완벽하다. Austin 허브 오픈 직후에 바로 대형 소비자 광고. 1) 'Project Buster' + Wrigleyville + Wrigley Building. Ferris Bueller's Day Off(1986) 오마주. 2) 타이밍: 허브 오픈 → 직원 탑승 → 소비자 광고 순서가 교과서적 런칭 시퀀스. 3) 일요일·월요일 이틀 촬영 = 대형 글로벌 캠페인 소재 가능성. 4) Chicago 선택 = 뉴욕·LA 이외 대도시 커버리지 확장 신호. NEUTRAL → BUY (마케팅 본격화 확인).",
     likes: 7,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-13T00:18:00.000Z",
     liked: false,
   },
@@ -3377,7 +3377,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Eric C 50회 탑승 — 이 숫자 하나가 눈에 들어왔어. 1) Eric C 직책: Tesla 차량·로보택시 엔지니어링 리드 + Giga Texas 기술 총괄. Cybercab을 가장 깊이 이해하는 엔지니어야. 2) 발언 원문: '50 rides in the last few days and I still never wanted to get out.' 3) 직원 탑승 이제 막 시작됐다는 것. 초기 단계에서 이 반응이면 소비자 피드백 선행 지표. 4) Eric C는 Cybercab이 Model 3의 절반 부품이라고 했어. 목적 설계된 탈것. 5) 재탑승률 지표: 전문가 50회 탑승 = 소비자 반복 구매 의향 선행. 로보택시 LTV 추정치 상향 근거. BUY.",
     likes: 4,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-13T00:24:00.000Z",
     liked: false,
   },
@@ -3388,7 +3388,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD V4 Lite HW3 — 검증 결과랑 딱 맞아떨어진다. 1) HW3 = HW4 연산의 15%. 이 한계를 OTA 소프트웨어 최적화로 극복. 2) 개선 항목: 주행 거리감, 가감속 편안함, 주차장 성능 모두 극적 향상. 3) 수혜: 수백만 HW3 차량 즉시 적용. 4) 투자 관점: FSD 구독 유지율 향상, 신규 전환 증가, HW3→HW4 업그레이드 수요 별개 유지, 소프트웨어 플랫폼 해자 수치로 입증. BUY.",
     likes: 1,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-13T00:30:00.000Z",
     liked: false,
   },
@@ -3399,7 +3399,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starlink V3 채널 체크해봤는데 용량 6배가 핵심이야. 1) V3 20기 발사. V2 대비 용량 최대 6배. 레이저 인터링크 + 남아공 지상국 연결 테스트. 2) 히트실드 카메라 6기 — Starship 재진입 영상 분석 목적. 한 발사로 상업+R&D 동시 달성. 3) 비즈니스 포인트: 동일 위성 수에서 처리량 6배 = ARPU 상승 명분. 프리미엄 구독 가격 인상 가능. 4) 경쟁 구도: Kuiper·OneWeb 추격 불가 구간 진입. BUY.",
     likes: 18,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-13T00:36:00.000Z",
     liked: false,
   },
@@ -3410,7 +3410,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starship IFT-13 7/16 — 완전 재사용 체계 실증 여부야. 1) 주요 목표: 부스터 추진제 이송 + Mechazilla 암 캐치. 완전 재사용의 핵심 퍼즐. 2) 개선 사항: 이전 비행 대비 H/W + S/W 다수 수정. 3) 탑재체: V2 Starlink + Super Heavy V2. 테스트가 아니라 실제 상업 화물. 4) 투자 포인트: 암 캐치 성공 = 발사 단가 급락 타임라인 확정. 발사 비용 1/10 현실화 시 SpaceX 수익성 구조 완전히 달라져. BUY.",
     likes: 15,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-13T00:42:00.000Z",
     liked: false,
   },
@@ -3421,7 +3421,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "MU Q2 — 숫자 먼저. 매출 $9B+, 순이익 $1B+, 발표 7/23. 1) 컨센서스 상회 시 밸류에이션 재평가 트리거. MU는 반도체 사이클 선행 지표. 2) DRAM·NAND·HBM 전부 개선. HBM 고마진 믹스 비중이 주가 방향 결정. 3) 기존 가이던스 확인: '2027년 말까지 수급 타이트'. 사이클 지속성 재확인. 4) 7/23 발표 앞두고 불확실성이 오히려 매수 기회. $9B 달성 가능성 높다고 봐. BUY.",
     likes: 12,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-13T00:48:00.000Z",
     liked: false,
   },
@@ -3434,7 +3434,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Giga Texas Optimus 공장 채널 체크해봤는데 속도가 예상보다 훨씬 빠름. 1) 구조물·설비·조립 라인이 매일 변하는 속도가 기가팩토리 초기보다 빠른 것 같아. Joe Taugaman 현장 관측 신뢰도가 높은데 공식 Tesla 발표 이전에 진행 상황을 가장 빠르게 캐치하는 소스야. 2) 10M대/년 목표. 이 숫자가 의미하는 게 뭔지 생각해봤어. 대당 $30,000 임대 수익만 잡아도 연 $300조원이야. 이게 TSLA 현재 시총을 5배 이상 정당화해. 3) ARK 2026년 인간 수준 목표. 공장 속도 보면 허황된 말이 아니야. FSD·xAI 공유 아키텍처로 학습 비용이 타사 대비 로그함수적으로 낮아지는 구조 자체가 차별화. 4) Phase 2 기업 임대는 아직 시작 전. Tesla 자체 생산 우선 완료 후 외부 공급. 매출 레이어가 두 겹으로 쌓이는 거야. 잠재 업사이드를 현재 주가에 반영하려는 어떤 시도도 아직 초기. BUY.",
     likes: 42,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-10T00:06:00.000Z",
     liked: false,
   },
@@ -3445,7 +3445,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Austin 로보택시 허브 울타리 철거 — 이걸 어떻게 읽어야 하나. 딜 플로우 확인했는데 공급망 두 소스가 모두 독립적으로 확인했어. Tesla가 Q4 분 Cybercab 부품을 이미 2달 전에 주문 완료. 공급사들은 연내 50,000대 물량 공급 가능하다고 확인. 1) 울타리 철거는 상업화 단계 진입의 물리적 신호야. 더 이상 테스트 단계 아님. 2) 50,000대는 시작점. 이 숫자가 내년 수십만 대로 스케일업되는 게 로드맵이야. 3) RIM 공법 경량화 — 스탬핑 금형 불필요 → 생산 전환 속도 + 원가 절감. GHG -40%는 ESG 자금 유입 논거. 4) AVO 인가 → VIN 등록 → 7월 배포. 타임라인 지키면 Q3에 수십 대, Q4에 수백 대 규모 예상. 5) 트립당 EBITDA 마진이 전통 차량 대비 3~5배. 대수 늘수록 레버리지. 진짜 상업화 시작점이야. BUY.",
     likes: 71,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-10T00:12:00.000Z",
     liked: false,
   },
@@ -3456,7 +3456,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "UBS $442 PT 상향. 숫자 하나가 눈에 들어왔어. $364→$442, +21.4%. 이게 단순 PT 조정이 아니야. 1) UBS는 로보택시 사업을 이번에 처음으로 본격 반영한 거야. 이전 PT에는 Cybercab 수익이 거의 없었다는 게 UBS 내부 주석에 있어. 이번 상향분의 상당 부분이 Austin·Florida 로보택시 수익 반영. 2) 월가 PT 도미노. 첫 번째 대형 기관이 올리면 2~3주 이내에 다른 기관도 올리는 경향 있어. Goldman·MS·Barclays 순서로 볼 것. 3) 패시브 펀드 재배분 효과. 인덱스 비중 재조정 시 TSLA 쪽으로 자금 이동. 4) $442도 Optimus 10M/년 가동이 반영되지 않은 PT야. 완전 반영 시 업사이드는 훨씬 큼. 지금 들어가는 게 맞는 타이밍. BUY.",
     likes: 53,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-10T00:18:00.000Z",
     liked: false,
   },
@@ -3467,7 +3467,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "스위스 Model Y 1위 — 이 데이터 다시 뜯어봤는데 의미가 생각보다 커. 1) 스위스는 프리미엄 자동차 최고 수요지. BMW·Mercedes·Porsche 판매 강세 지역에서 전기차가 1위. 단순히 전기차 친화 시장이 아니라 '돈 많은 소비자들이 선택한 최고 차'라는 브랜딩 전환. 2) 브랜드 등록 +78.6%는 이례적. 스위스 시장 자체가 보수적이라 이 숫자는 파급력이 큼. 독일·프랑스 딜러들이 이 데이터 보고 있을 거야. 3) FSD 유럽 승인 경로 가속. 덴마크·네덜란드·스위스 순으로 확산. 독일 규제 돌파 시 서유럽 전체 FSD 구독 매출 레이어 추가. 4) BYD 서유럽 침투 차단. 스위스 프리미엄 시장 선점은 BYD가 가장 어려운 세그먼트야. 유럽 로보택시 확장 전 완벽한 포지션 확보. BUY.",
     likes: 11,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-10T00:24:00.000Z",
     liked: false,
   },
@@ -3478,7 +3478,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Raymond James $800 PT — SpaceX 딜 플로우 확인했는데 이 숫자가 나온 배경이 있어. 1) Starlink 독점 가치. 위성 인터넷에서 경쟁사 없는 수익 구조. 구독자 1,000만+, 연 $10.8B 매출. 이게 계속 성장하는 구조야. 40억 명 미접속 인구가 잠재 시장. 2) Genius $93B 매출 전망(2030) — $38.5B에서 두 배 이상. Starship 재사용 완성 + Starlink 구독 가속 + AI 인프라(Google·Anthropic 계약) 복합. 3) +440% 업사이드. 이게 허황된 게 아닌 게 NASA HLS + DARPA + 국방부 계약까지 포함하면 정부 수입만으로도 상당한 규모. 4) Kalshi '지구 전체 초과' 예측은 과장이지만 $1T 밸류는 Starlink 독점만으로도 논거가 만들어짐. 5) SPCX ETF: Street High PT = 기관 앵커 재조정. 프리미엄 유지 명분 강화. BUY.",
     likes: 8,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-10T00:30:00.000Z",
     liked: false,
   },
@@ -3489,7 +3489,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "1,589기 2026 상반기 배치라는 숫자가 진짜 충격. 데이터 포인트 하나가 눈에 들어왔어. Musk 본인이 '세계 나머지 합산의 10배'라고 했는데 실제 확인해봤어. 1) Kuiper 배치량: 수십 기. OneWeb: ~600기 전체 (6년). 중국 LEO: 아직 2030 목표. SpaceX H1만으로 이들 전체를 합해도 압도. 2) 위성 밀도 = 커버리지 = 레이턴시. 이 격차가 벌어질수록 서비스 품질 격차도 벌어져. 경쟁사가 따라잡으려면 최소 5년 이상 필요한데 그 5년 동안 SpaceX는 더 앞서가는 구조. 3) 구독자 성장 곡선. 1,000만→5,000만이 다음 목표. 구독료 $120/월 × 5,000만 = 연 $720억. Starlink 단독으로 $72B. 4) Starship 재사용 완성 시 위성 배치 비용이 1/10 수준으로 떨어져. 2세대 성좌 밀도 추가 확대. BUY.",
     likes: 5,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-10T00:36:00.000Z",
     liked: false,
   },
@@ -3500,7 +3500,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Micron DRAM·NAND 전망 검증 결과랑 딱 맞아떨어져서 정리. 1) Micron 공식 발언: '2027년 말까지 DRAM·NAND 수급 타이트 유지'. AI Investment Research 발췌. 이건 Micron이 직접 한 말이라 신뢰도 최고야. 2) HBM 전환 효과. 고대역폭 메모리(HBM3e)로 생산라인 전환하면 일반 DRAM 출력 자체가 줄어. 공급 절대량이 감소하는 구조. 3) 팹 리드타임 18~24개월. 지금 투자해도 2027년 후반에야 공급 증가. 중간 구간이 타이트한 게 수학적으로 확실해. 4) Samsung·SK Hynix도 HBM 전환 중이라 업계 전체 DRAM 공급 감소. 경쟁사가 공급 늘리기도 어려운 구조. 5) ASP 상승 → 매출 구조적 성장. MU 마진 개선 예정. HBM 고마진 믹스 비중 증가. 2027년까지 공급 타이트 구간에서 MU 가격 협상력이 강한 위치. BUY.",
     likes: 2,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-10T00:42:00.000Z",
     liked: false,
   },
@@ -3511,7 +3511,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Burry 빅테크 감가상각 분석 다시 뜯어봤는데 투자자들이 꼭 알아야 할 포인트야. 중립적으로 정리함. 1) 핵심 주장: 기업이 AI 칩 감가상각 기간을 임의로 설정한다. 기간이 길수록 연 감가비용 낮아지고 이익 높아져. 2) Meta 사례: 2020년 3년 → 2025년 5년. AI 투자 붐 직전에 정책 변경. 이익이 인위적으로 올라간 효과. 3) Amazon 사례: 반대 방향. 동일 하드웨어에서 상각 기간 단축. 실제 사용 주기 반영. 4) 같은 칩, 반대 정책 → 이익 비교가 불가. P/E 등 배수 비교가 사과-오렌지 비교가 될 수 있어. 5) 반론: GAAP 허용 범위 내 정책 선택. 칩 수명이 실제로 길어졌다면 연장 정당. 6) 투자자 대응: AI 인프라 기업 FCF 기반 실질 이익 검증 필수. Net Income만 보면 속을 수 있어. NEUTRAL — 팩트 기반 주의 환기.",
     likes: 19,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-10T00:48:00.000Z",
     liked: false,
   },
@@ -3522,7 +3522,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Meta 슈퍼센싱 안경 — 이 뉴스가 단순 가젯 소식이 아닌 이유를 설명할게. 1) 기술 본질: 항상-온 오디오 센싱 + 메타데이터 AI 업로드. 기기에서 원본 처리 후 요약 메타데이터만 전송. 배터리·대역폭 최적화. 2) LED 오프 설계: 사진·영상 촬영 시에만 LED 켜짐. 슈퍼센싱 중에는 꺼진 상태. 이게 프라이버시 논쟁의 핵심. 3) Zuck 가격 전략 연계. '타 기업 가격 극단적. 고볼륨에서 합리적 가격 가능'. 안경 + 저가 AI = 생태계 락인 시도. 4) 비즈니스 모델: 항상-온 컨텍스트 → AI 광고 타겟 정밀도 획기적 향상. CPM 상승 → 광고 매출 구조적 성장. 5) 리스크: 유럽 GDPR + FTC 주목. 특히 LED 오프 수집은 '묵시적 동의' 논란. 규제 리스크 존재. 6) TipRanks US 13 List 편입 = 기관 리서치 기반 최우선 Buy 인정. 단기 규제 리스크 있지만 장기 웨어러블 AI 플랫폼 경쟁에서 META가 선두. BUY.",
     likes: 16,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-10T00:54:00.000Z",
     liked: false,
   },
@@ -3535,7 +3535,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "임팩트 리포트 다시 뜯어봤는데 한 문장이 눈에 들어왔어. 'Tesla는 2040년까지 밸류체인 전체 넷제로'. 밸류체인 전체라는 게 핵심이야. 공급망·제조·사용·폐기 전 단계. 자사 운영은 2026년까지 100% 재생에너지 전환인데 기가팩토리 베를린은 이미 3년 연속 100%로 돌아가고 있어. 실행 트랙 레코드가 있다는 얘기지. 더 재밌는 건 Tesla가 명시적으로 어렵다고 인정한 두 영역 — 철강과 배터리 원재료. 이걸 회피하지 않고 정면으로 언급한 게 오히려 신뢰가 가. 그린워싱 없는 로드맵. ESG 자금이 다시 돌아올 수 있는 논거가 하나 늘어난 셈이야. 저탄소 소재·재생에너지 파트너사도 함께 보라. BUY.",
     likes: 13,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-09T00:06:00.000Z",
     liked: false,
   },
@@ -3546,7 +3546,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "임팩트 리포트 봤는데 이 숫자가 눈에 확 들어왔어. 배터리 재활용 14,000미터톤, 2024 대비 +20%야. 롱레인지 배터리팩 46,000개 상당이라는 얘기. 이게 왜 중요한지 계산해봤어. 니켈·리튬·코발트 신규 수입 대신 재활용 셀 원료로 쓴다는 거야. Nevada 사내 라인 + Redwood Materials 같은 3자 파트너의 결합 구조. 광물 지정학 리스크 헤지되고, EU 배터리 여권 규제(2027 발효)에도 앞서가는 포지션. Tesla Energy·Optimus·Megapack의 배터리 수요가 폭증하는 상황에서 원료 조달 리스크를 이미 낮추는 중이라는 게 큰 숨은 축이야. 셀 원가 하락 스토리와 함께 봐야 해. BUY.",
     likes: 10,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-09T00:14:00.000Z",
     liked: false,
   },
@@ -3557,7 +3557,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab 설계 세부가 오늘 핵심이야. 이유는. 첫째, 2인승 확정이 감이 아니라 데이터 기반이야. 라이드헤일링 트립 90%가 1~2인이라는 실주행 데이터가 근거. 5·7인승 만드는 게 낭비라는 판단이야. 둘째, 스티어링·페달·계기판을 다 제거했어. 자율주행 전용이라 백업 컨트롤이 오히려 안전을 저해할 여지가 있다는 판단. 대신 캐빈 공간·중량·운영비용을 낮췄어. 셋째, 4680 셀 + 48V 아키텍처 + Steer-by-Wire 조합. 12V 표준을 40년 넘게 지켜온 자동차 산업에서 48V 채택은 상징적. 넷째, 대형 그룹은 Model Y 등 자율주행 Tesla가 커버하는 이원 플릿 전략. 이게 트립당 EBITDA 개선의 진짜 축이야. 부품 수 감축→단가 하락+고장률 하락. 로보택시 24시간 운행 시 다운타임 최소화가 핵심 KPI인데 이걸 설계 단계에서 이미 반영했어. BUY.",
     likes: 7,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-09T00:22:00.000Z",
     liked: false,
   },
@@ -3568,7 +3568,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "GoJo News 딜 플로우 확인했는데, 이번 여름 Robotaxi Florida 대규모 런칭 계획이 진짜야. Tesla가 최근 Florida 전역에 걸쳐 시설(주차·충전·서비스 하브) footprint를 확대 중. Tesla가 Florida를 'ultimate proving ground'라고 부른 게 의미심장해. 최종 검증 지역이라는 건 여기서 통과하면 전국 확장 자신 있다는 얘기거든. 'monster-free' blueprint(안전 모니터 없는 실증 배치)의 Florida 검증이 통과되면 2026년 말 12개 주 운영이라는 목표로 이어져. 6개월 안에 8~10개 주 추가하는 속도야. DeSantis 주정부는 FSD·자율주행 우호적 규제. Texas 베이스 + Florida 확장 조합이 만들어지면 다른 주도 압박받는 구조야. 매출 이연 없이 즉시 반영되는 확장이라 Q3 어닝에 로보택시 세그먼트가 처음으로 의미 있는 숫자 나올 가능성 커. BUY.",
     likes: 4,
-    comments: 6,
+    comments: 0,
     created_at: "2026-07-09T00:32:00.000Z",
     liked: false,
   },
@@ -3579,7 +3579,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Waymo가 오늘 확장 발표 냈어. Denver·Las Vegas·San Diego·Culver City 4개 도시에서 완전 자율주행 라이드 개시. 중립적으로 짚어보자. 첫째, 지역 다변화가 크게 진전됐어. Denver = 신규 지역, Las Vegas = 관광·나이트, San Diego = CA 확장, Culver City = LA 인접. 4개 도시 동시 발표는 준비된 인프라 규모가 크다는 신호. 둘째, Tesla Florida 확장과 정확히 같은 시기라는 게 흥미로워. AV 시장이 두 축으로 형성되고 있어. LiDAR·HD맵(Waymo) vs 카메라·비전(Tesla). 셋째, GOOGL 관점에서 Waymo 부문 밸류가 재부각. SOTP 애널리스트가 Waymo 가치 재계산할 트리거. 넷째, Waymo는 안전성·규제 승인 우선 전략이라 규제 마찰이 적음. 관광 밀도 높은 Las Vegas 진출은 상업적으로 크게 성공할 수도. Tesla 대세론에 완전 반박은 아니지만 GOOGL 상방 재평가 여지 열려. HOLD → 상방 옵션 확장.",
     likes: 31,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-09T00:42:00.000Z",
     liked: false,
   },
@@ -3590,7 +3590,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "xAI 발표 다시 뜯어봤는데 한 지표에 눈이 갔어. Grok 4.5가 SWE Bench Pro에서 토큰 15,954 쓸 때 Opus 4.8(max)이 67,020. 4.2배 적어. 이걸 가격이랑 곱하면 실질 비용 차이가 20배에 가까워지는 거야. 스펙 자체는 이래: 입력 $2/M · 출력 $6/M · 80 TPS. Opus 4.8 대비 4.5x 저렴한 가격표. fast-model 대역대에서는 이게 표준으로 자리 잡을 것. 개발자 관점에서 동일 태스크에 4.5x 싸면 안 쓸 이유가 없어. AI Gateway·라우터 서비스에서 Grok 우선 라우팅 늘어날 것이고, xAI API 매출 성장이 여기서 진짜 폭발할 가능성. Anthropic·OpenAI의 가격 재조정 압박도 시간 문제. Tesla 관점에서 봐야 하는 이유는 Optimus 두뇌로 Grok 파생 사용 시나리오가 실질적 옵션이라는 거야. Musk 생태계의 AI 축이 여기서 뿌리내리는 중. BUY.",
     likes: 24,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-09T00:52:00.000Z",
     liked: false,
   },
@@ -3601,7 +3601,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Apple 공식 프레스 릴리스가 오늘 나왔어. 헤드라인은 'Apple to increase spend with Broadcom to produce billions more U.S. chips'. 세부는 이래. 다년 협약이야. Fort Collins Colorado 시설 확장 포함. 미국내 반도체 생산에 수십억 달러 추가 지출. AVGO 관점에서 이게 왜 큰가. 첫째, 최대 고객사 락인이 계약서로 확정됐어. Apple RF 프론트엔드·PMIC 공급에서 AVGO는 사실상 유일 대안이야. 다년 계약이 이 지위를 다시 문서화한 거. 둘째, Apple 매출 비중이 큰 종목에서 다년 협약은 매출 가시성 크게 개선. 애널리스트 예상치 상향 조정 명분. 셋째, Fort Collins는 반도체 클러스터로 부상. 지역 부동산·인프라 협력사도 낙수효과. 넷째, 트럼프 온쇼어링 정책과 정확히 맞아떨어지는 딜이라 정치적 완충. Apple도 관세·정치 리스크 헤지 카드로 활용. BUY.",
     likes: 47,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-09T01:02:00.000Z",
     liked: false,
   },
@@ -3612,7 +3612,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "The Information·PBOC 발 뉴스 봤어. Shay Boloor가 요약한 걸 정리하면 이래. 중국이 미국에 자국 최상위 AI 기업들이 한정 수량의 NVDA H200 GPU를 살 수 있게 승인해 달라고 요청했어. 첫째, 요청 자체가 시사하는 게 크다. H100 아닌 상위 스펙 H200을 학습용으로 요청했다는 건 국산 GPU가 학습 워크로드에서 대체 불가하다는 확실한 반증이야. CUDA 해자가 학습 시장에서 살아있음이 재확인. 둘째, 중국 방침이 이중 트랙이야. 학습은 H200 병용, 추론은 계속 국내 프로세서. 반도체 자립 로드맵과 실무 부족을 동시에 관리하는 구조. 셋째, 미국 정책 관점. Commerce dept BIS 검토 단계고 트럼프-시진핑 협상 카드로 쓰일 수 있어. 넷째, 시나리오. (a) 승인 → NVDA 중국 매출 옵션 부활 → 상방 즉시 반영, (b) 승인 불가 → 학습 병목 지속, (c) 부분 승인 → 물량·기업 지정 협상 지속. 현재 밸류에이션에서 중국 노출은 대부분 지워진 상태라 승인 뉴스만 나오면 상방이 크게 열려. 다만 추론 시장 국산 대체 리스크는 여전히 트래킹 필요. HOLD → 상방 옵션 확대.",
     likes: 40,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-09T01:12:00.000Z",
     liked: false,
   },
@@ -3623,7 +3623,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NYT 스쿠프가 하나 눈에 들어왔어. Blue Origin이 첫 외부 프라이머리 자본조달을 돌린다. 기본 $2.9B, 최대 $3.5B, 발행가 $29/주. Amazon Kuiper와의 협력 심화가 배경. Bezos가 지분 희석 감수하고서라도 자본 확보하겠다는 의지 표명. SPCX 관점에서 짚어야 할 몇 가지. 첫째, 우주 인프라 이중 축이 확정됐어. SpaceX 지배구조·Starship·Starlink vs Blue Origin 신자본·Kuiper·달·NASA HLS. 시장 파이 자체가 커지는 이벤트. 둘째, $29/주 발행가는 상대 밸류 기준점. SPCX 프리미엄 밸류 방어 논리도 여기서 재구축돼. 우주 산업 자체가 저평가돼 있었다는 반증이 될 수 있음. 셋째, Kuiper·달·발사 밸류체인 협력사 낙수효과 스크리닝 필요. 위성 부품·발사대 관련주도 함께 봐야 해. 넷째, Amazon 후속 라운드 참여 여지가 남아있어 자본 확장 가능성이 열려 있어. SPCX 매수 논거는 오히려 강화. BUY.",
     likes: 33,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-09T01:22:00.000Z",
     liked: false,
   },
@@ -3634,7 +3634,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Costco 6월 매출 발표 결과랑 딱 맞아떨어져서 정리해봤어. 순매출 $29.24B, 전년 $26.44B 대비 +10.6% YoY. 44주 누적은 $250.43B (+10.1%). 진짜 인상적인 건 지역별 세부야. 미국 +10.6% · 캐나다 +3.7% · 국제 +4.7% · 전사 +8.8% · 디지털 +20.9%. 가솔린·환율 조정하면 전사 +7.0%, 디지털 +21.5%로 실질 성장이 확인돼. 44주 누적 디지털은 +21.5% (조정 +21.1%). 관찰 포인트. 첫째, 디지털 채널 이례적 강세가 지속. 이커머스에서 소비자가 오히려 강해지고 있다는 신호. 둘째, 국제 매출 두 자릿수 성장이 안정적. 셋째, 멤버십 락인 + 대량 구매 우위 = 매크로 방어 자산. 넷째, Q2 어닝 예상치 상향 조정 명분 존재. P/E 40배 넘어도 이 성장률이면 지속 가능. BUY.",
     likes: 26,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-09T01:32:00.000Z",
     liked: false,
   },
@@ -3645,7 +3645,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "매크로 데이터 한 장이 오늘 핵심이야. Bloomberg·CFTC 자료: CME 일본 엔 헤지펀드 순포지션이 2007년 이후 가장 극단적 숏이야. 데이터는 2026-06-30 기준. -100K contracts 아래에서 -200K 근접. 이걸 어떻게 읽어야 하나. 첫째, 숏 논리는 명확해. BOJ 완화 지속 + 미일 금리차 유지 → 캐리 트레이드 확대. 원자재·글로벌 수요 회복도 뒷받침. 둘째, 문제는 극단 포지션 뒤에 항상 되돌림이 왔다는 통계적 패턴. 2007년(리먼 캐리 언와인드), 2013년(아베노믹스 이후 반전), 2024년(BOJ 개입) 다 그랬어. 셋째, BOJ 개입 확률이 급격히 올라가는 구간. 일본 재무성이 실질 개입 카드를 만지작. 넷째, 캐리 언와인드 시나리오에서 미국 성장주가 위험. AI·반도체 대형주가 일본 자금으로 가장 많이 매수됐기 때문에 되돌림 시 매도 압력이 크게 나올 수 있어. 엔 강세 시 취약한 자산군 사전 스크리닝 필수. 포지션 조정 논거로 검토해볼 시점. NEUTRAL → CAUTIOUS.",
     likes: 49,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-09T01:42:00.000Z",
     liked: false,
   },
@@ -3658,7 +3658,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "결론부터. Kyber 랙 = 광집적 기술로 AI 클러스터 성능 한계 돌파야. 1) 구조는 이래. 광섬유로 GPU를 직결하는 Co-packed Optics야. 구리 케이블 대체해서 NVLink 대역폭 한계 돌파하는 거야. 단일 랙·멀티 랙 구성 모두 지원해. 2) NVLink Scale-up Fabric 광집적 기술이 AI 클러스터 성능 한계를 근본적으로 바꾸는 거야. 레이턴시 최소화 + 대역폭 극대화. 3) 하이퍼스케일러 전체가 Kyber 중심으로 재편되면 AI 인프라 업그레이드 사이클이 NVDA 독점으로 돌아오는 구조야. 4) 광집적 기술 특허 + 생태계 장벽 = 경쟁사 진입 불가 해자 강화. 데이터센터 업그레이드 수요 폭발 예상. BUY.",
     likes: 21,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-08T00:08:00.000Z",
     liked: false,
   },
@@ -3669,7 +3669,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Optiwatts 나왔는데 이게 생각보다 큰 그림이야. 1) Optiwatts는 태양광 예측+날씨+전력 요금 AI 분석 → 자동 최적화야. Powerwall 3F·태양광·그리드·Wall Connector 통합 제어. 이미 판매 중인 하드웨어에 AI 서비스 레이어 추가하는 거야. 2) '목표 설정→AI 최적화→실시간 모니터링' 3단계. 설치 후 지속 서비스 수익 구조야. 3) Tesla Energy = EV+배터리+AI 완전한 홈 생태계. 경쟁사가 단품 제품 파는 동안 테슬라는 통합 플랫폼이야. 진입 장벽이야. 4) Optiwatts 사용자는 Powerwall 교체 주기에도 Tesla 생태계 유지. LTV 극대화 구조. BUY.",
     likes: 44,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-08T00:16:00.000Z",
     liked: false,
   },
@@ -3680,7 +3680,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "채용 공고 하나로 개발 단계 읽는 법. 1) Req ID 276028, Palo Alto CA 정규직. 부서: Robotics Electronics. 주요 업무가 Optimus 로봇 전력 분배 시스템 디자인 주도야. 2) 고속·고전력 전자공학 엔드투엔드 협업 + 연산·비전·펌웨어·테스트 팀 조율. TPM 채용은 대규모 통합 단계 신호야. 3) 전력 분배 시스템이 Optimus 핵심 부품이야. 이 TPM 채용은 전력 하드웨어 완성도 높이는 단계. 양산 준비 조직 구조 형성 중이야. 4) 기가텍사스 Optimus 생산 준비와 연결되는 채용이야. 타임라인 앞당겨질 수 있어. BUY.",
     likes: 37,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-08T00:24:00.000Z",
     liked: false,
   },
@@ -3691,7 +3691,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "2020년 이후 처음 마이너스야. 아람코가 할인 판매 들어갔어. 1) Saudi Arabia Arab Light Crude 현재 -1.50. 올해 5월 31일 고점 +19.50에서 2020년 이후 처음 마이너스 구간 진입이야. 2020년 저점이 -7.30이었는데 방향성 확인 필요해. 2) OPEC+ 증산+글로벌 수요 둔화 = 공급 과잉이야. 사우디가 할인 판매까지 하는 건 시장 점유율 방어 전략이야. 가격 경쟁 돌입 신호야. 3) 에너지 인플레이션 압력 완화 → CPI 에너지 항목 하락 → 연준 금리 인하 논거 강화. 성장주 수혜 구조야. 4) EV 채택 가속과 EV 수요 둔화 논쟁에서 저유가가 혼재 변수야. 에너지 기업 매도, 성장주 매수 리밸런싱 예상. NEUTRAL.",
     likes: 80,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-08T00:32:00.000Z",
     liked: false,
   },
@@ -3702,7 +3702,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "$8000억 AUM이 강제 매수야. 이게 얼마나 큰 건지 계산해봤어. 1) WSJ 'SpaceX Is About to Join the Nasdaq-100' 보도. 인베스코 QQQ 포함 $8000억 AUM ETF가 월요일 종가 기준 강제 매수 집행이야. 패시브 자금이 가격 불문 시장가 집행하는 거야. 2) SPCX +1.89% 편입 당일. 강제 집행일까지 추가 상승 여지 있어. 3) 기관 투자자 자격 완성 = 연기금·대학 기금 편입 가능해짐. 장기 수요 기반이 구조적으로 달라지는 이벤트야. 4) Starlink 성장+Falcon 재사용+Starship 상업화 모두 진행 중. NASDAQ 편입으로 기관 커버리지 확대. BUY.",
     likes: 62,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-08T00:40:00.000Z",
     liked: false,
   },
@@ -3713,7 +3713,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab 11개월 = GPU 1년 탄소 배출 상쇄. 이 수치 그냥 지나치면 안 돼. 1) 임팩트 리포트 p.23 공식 데이터야. Cybercab 1대 11개월 운행 = GPU 1대 1년 가동 탄소 배출량 상쇄. 전기 구동 배출 0 vs GPU 연 수천 kWh. 공식 데이터야. 2) AI 인프라 환경 비용을 Cybercab이 상쇄한다는 내러티브가 강력해. AI 서버 전력 논란 커지는 상황에서 Tesla가 해결책이야. 3) ESG 규제 강화 환경에서 기업 Cybercab 도입 정당화 논리 완성이야. B2B 영업 무기야. 4) 탄소 크레딧 시장 연계 시 Cybercab 운영 추가 수익 가능성. ZEV 크레딧 모델 확장 버전이야. BUY.",
     likes: 6,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-08T00:48:00.000Z",
     liked: false,
   },
@@ -3724,7 +3724,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "110억 마일 데이터가 드디어 공식 숫자로 나왔어. 1) ~900만 대, 110억+ 마일 기반 임팩트 리포트 p.77이야. 미국 국가 평균 대비 대형 충돌 8배 감소, 소형 충돌 7배 감소, 도로이탈 6배 감소. 2) 110억 마일이 경쟁사랑 비교 불가 스케일이야. 웨이모 누적 수백만 마일이랑 차원이 달라. 이 데이터로 규제 기관 설득 불가능한 반박이야. 3) 보험 회사 설득 자료로 최적이야. 대형 충돌 8배 감소면 보험료 인하 협상 가능해. FSD 구독 경제성 추가 개선 구조야. 4) 900만 대 플릿 러닝 = 데이터 해자. 경쟁사는 절대 따라잡을 수 없는 구조. STRONG BUY.",
     likes: 3,
-    comments: 6,
+    comments: 0,
     created_at: "2026-07-08T00:56:00.000Z",
     liked: false,
   },
@@ -3735,7 +3735,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "자동차 회사가 리콜을 98% OTA로 처리한다는 게 말이 돼? 1) 말이 돼. 임팩트 리포트 공식 데이터야. 2025년 신규·업데이트 기능 300개 이상 전 세계 오너 배포. 리콜 98% OTA로 해결. 2) 리콜 OTA 해결은 서비스 비용 95% 절감이야. 딜러 방문 불필요. 소비자 경험 경쟁사 대비 압도야. 3) 차량 출고 후 기능이 늘어나는 건 자동차 업계 전례 없어. 보유 가치가 증가하는 자산. 애플 iPhone 모델이야. 4) 기능 개발→OTA 배포 사이클 빠른 테슬라가 항상 리드. 경쟁사는 이 체계 구축에 수년 걸려. 소프트웨어 플랫폼 해자. BUY.",
     likes: 20,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-08T01:04:00.000Z",
     liked: false,
   },
@@ -3746,7 +3746,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Model Y $0.77/마일. 경쟁 SUV 중 최저가 공인 데이터로 확정됐어. 1) 임팩트 리포트 p.13 공식 수치야. Hyundai IONIQ 5 $0.85, Toyota RAV4 그 이상. Model Y가 10%+ 저렴한 공인 데이터야. 2) 마일당 비용은 연료비+유지보수 합산 TCO야. 공인 임팩트 리포트 데이터라 신뢰도 높아. 소비자 구매 결정 영향 줄 수 있어. 3) 10만 마일 타면 IONIQ 5 대비 $8,000 절감. 차량 수명 내 실질 절감액이 구매 결정 근거가 되는 수준이야. 4) 전기차 비싸다는 편견 깨는 공인 데이터. 대중 시장 침투 가속 근거야. BUY.",
     likes: 17,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-08T01:12:00.000Z",
     liked: false,
   },
@@ -3757,7 +3757,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TTM $6B인데 성장률이 가속이야. 규모 커지면 둔화되는 게 정상인데 PLTR은 반대야. 1) Q2 2026 TTM 매출 ~$60억. YoY 성장률 +67.7%. 규모 커지는데 성장률이 오히려 가속이야. AIP(AI Platform) 수요가 임계점 돌파한 신호야. 2) 미국 정부 계약 확대 + 민간 부문 동반 급증. 경기 민감도 낮은 방어적 성장이야. 정부 계약은 경기 침체 시에도 유지돼. 3) 대체 불가 엔터프라이즈 플랫폼 = 고객 이탈률 낮음. CRM·ERP 실제 운영 데이터 연동 분석은 ChatGPT가 못 하는 영역이야. 4) $6B 연환산 매출, 성장률 유지 시 2027년 $10B 가시권. S&P500 편입 논의도 나올 수 있어. BUY.",
     likes: 14,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-08T01:20:00.000Z",
     liked: false,
   },
@@ -3768,7 +3768,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "공개 발언이랑 내부 보고서가 정반대야. 어느 쪽이 진짜 판단인지 생각해봐. 1) 트럼프 정부 공개 발언 AI 강세 vs 재무부 내부 AI 버블 위험 경고. 베선트 재무장관이 공개적으로 $7500억 AI 투자 칭찬하면서 내부에서는 닷컴 버블 유사 리스크 경고 중이야. 2) 내부 보고서 핵심: 투자자 기대 vs 실현 가능 수익 간 괴리. 이게 닷컴 버블의 핵심 특징이야. 3) 공개 발언이 정치적 필요 때문이라면 내부 분석이 실제에 가까울 수 있어. 포트폴리오 리스크 관리 필요해. 4) 단기 트레이딩은 모멘텀 추종 유효. 중장기는 AI 실현 수익 검증 시점 주의. 헤징 전략 추천. NEUTRAL.",
     likes: 11,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-08T01:28:00.000Z",
     liked: false,
   },
@@ -3779,7 +3779,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "레이먼드 제임스가 $550 낸 거 그냥 넘기면 안 돼. 이 기관 원래 보수적이야. 1) 등급: Strong Buy. 목표가: $550. 현재가 대비 상당한 상승 여력. NASDAQ 100 편입 모멘텀 반영했어. 2) 산정 배경: 패시브 자금 유입 + 기관 투자 자격 취득 + SpaceX 핵심 사업 성장성. Starlink·Falcon·Starship 세 개 성장 동력이야. 3) 레이먼드 제임스가 보수적 타겟 내는 기관인데 $550 낸 건 강한 확신이야. 데이터 기반 자신감 있는 숫자야. 4) 패시브 매수+기관 편입+애널 커버리지 삼박자 갖춰지면 수급 구조가 일방향이야. 단기 모멘텀 + 장기 성장성 동시 보유. STRONG BUY.",
     likes: 8,
-    comments: 6,
+    comments: 0,
     created_at: "2026-07-08T01:36:00.000Z",
     liked: false,
   },
@@ -3790,7 +3790,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오스틴, 포트워스, 달라스 동시야. 텍사스 삼각지대가 이미 커버됐어. 1) 북부 오스틴 여러 운영 거점 + 포트워스 + 달라스 텍사스 번호판 동시 포착. 기가텍사스 로컬 배차가 최단 경로야. 2) DFW 메트로 = 미국 4위 대도시권. 달라스포트워스 공항 미국 2위 규모. 공항 픽업만으로도 수익 모델 완성이야. 3) 오스틴→포트워스→달라스 삼각지대 = 고속도로 연결 완벽. 장거리 이동 포함 완전한 운영 테스트 가능해. 4) 텍사스가 자율주행 규제 우호 주야. 완전 상용화 확정되면 다른 주 도미노 인허가 기대. 상용화 초읽기. BUY.",
     likes: 5,
-    comments: 7,
+    comments: 0,
     created_at: "2026-07-08T01:44:00.000Z",
     liked: false,
   },
@@ -3801,7 +3801,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "숫자로 계산해봤어. Morgan Stanley 기반이야. 1) 3만 대 Cybercab 플릿 기준 연 $44억 매출, EBITDA $9.14억, 마진 ~21%. Morgan Stanley 2030년 목표야. 2) 운전기사 인건비 ZERO = 원가 구조 근본적 우위. 웨이모는 원격 모니터링 인력 있어서 규모 키울수록 인건비 늘어나. Cybercab은 반대야. 3) EBITDA 마진 21%가 시작이야. 스케일 올라가면 단위 비용 추가 하락 → 30%+ 가능해. 자동차 업계 OEM 7~10% 대비 압도. 4) 3만 대 플릿 = $44억 매출. Tesla 신규 사업 부문으로 재평가 근거 완성이야. 2030년 목표 달성 시 밸류에이션 대폭 상향. STRONG BUY.",
     likes: 2,
-    comments: 7,
+    comments: 0,
     created_at: "2026-07-08T01:52:00.000Z",
     liked: false,
   },
@@ -3812,7 +3812,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "설문 아니고 실제 결제 데이터야. Anthropic이 OpenAI 제쳤어. 1) Ramp 미국 기업 실제 결제 데이터 기준 Anthropic이 OpenAI 추월 1위. OpenAI 30.73%, Google 5.65%. 설문 아닌 실제 지출 데이터라 신뢰도 높아. 2) 기업 AI 시장 판도 전환. Anthropic 모델 품질+안전성 강점이 기업 선택 기준이 됐어. 안전성이 실제 구매 결정 요인임이 증명됐어. 3) Anthropic 1위 = AI 인프라 수요 증가. 더 많은 기업이 Claude API 쓰면 데이터센터 GPU 수요 증가야. NVDA 간접 수혜. 4) OpenAI vs Anthropic 경쟁이 AI 전체 시장 파이를 키우는 구조야. 플랫폼 기업 전체 수혜. POSITIVE.",
     likes: 19,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-08T02:00:00.000Z",
     liked: false,
   },
@@ -3823,7 +3823,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Wood Mackenzie가 2028년까지 15GW+ 공식 수치 냈어. Tesla Energy 규모 다시 봐야 해. 1) Tesla, UK·유럽·호주 15GW+ 배터리 저장 공급 계획. 보수적 리서치 기관 공식 수치야. 2) UK 재생에너지 전환+유럽 에너지 안보+호주 60%+ 재생에너지 목표. 세 시장 모두 저장 인프라 필수 구조야. Megapack 최대 수혜. 3) Tesla Energy = 두 번째 성장 엔진 확정. EV 판매 의존도 희석. 에너지 인프라 기업 재평가 받는 구조야. 4) 에너지 기업 P/S 멀티플이 자동차 기업이랑 달라. Megapack 15GW 달성 시 Tesla 밸류에이션 재평가 여력 충분해. STRONG BUY.",
     likes: 16,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-08T02:08:00.000Z",
     liked: false,
   },
@@ -3835,7 +3835,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD v14 Lite LA→Vegas 5시간 무개입 + Cybercab $30K vs Waymo $75K. 투자 포인트 정리. 1) 5시간 완전 무개입이 의미하는 건 장거리 루트 FSD 완성이야. 도심 + 고속도로 복합 코스에서 개입 제로면 규제 기관 설득 데이터가 완성된 거야. 2) Cybercab 가격 $30K vs Waymo $75K. 60% 저렴. 마일당 $0.25 vs $4.00. 16배 원가 격차야. 수익 모델 비교 불가야. 3) HW3 v14 Lite 배포 → 400만 대 업그레이드. 구독 전환율 올라가는 구조야. 4) 이 두 뉴스가 같은 날 나왔다는 게 FSD 상업화 임계점 돌파 신호야. 7/22 어닝 전 포지션 추천. BUY.",
     likes: 17,
-    comments: 7,
+    comments: 0,
     created_at: "2026-07-07T00:08:00.000Z",
     liked: false,
   },
@@ -3846,7 +3846,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오스틴 로보택시 20일 데이터 + 뉴올리언스 테스트 포착. 상업화 검증 분석. 1) 20일 지오펜스 이탈 0건이 핵심이야. 규제 기관 승인 기준은 안전 기록인데 0건이면 다음 도시 확장 명분 완성이야. 2) Top 5 코리더: Lamar 45회, Riverside 30회, Airport 24회. 상업지구+공항 집중 = 수익성 극대화 노선이야. 3) 뉴올리언스 테스트 포착. 텍사스 기반 → 남부 도시 확장 패턴 확인이야. 4) 도시별 20일 검증 → 롤아웃 가속 공식 완성. Morgan Stanley 연말 1,500대 달성 경로 보인다. BUY.",
     likes: 14,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-07T00:16:00.000Z",
     liked: false,
   },
@@ -3857,7 +3857,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Morgan Stanley TSLA $415 유지 + 로보택시 1,500→30,000대 로드맵. 1) $415 목표가는 로보택시 대규모 수익 반영 전 보수적 수치야. 연말 1,500대 달성 확인되면 목표가 상향 여지 충분해. 2) 2027+ 30,000대 시나리오. 일일 8시간 × $0.25/마일 × 60마일 = 대당 연 $43,800 수익이야. 30,000대면 연 $1.3B 로보택시 매출이야. 3) Cybercab 생산 스케일업 속도가 관건이야. 기가텍사스 풀캐파 운영 중이고 신형 컬러 대량 출하 확인됐어. 4) 단기 촉매: 7/22 Q2 어닝에서 로보택시 매출 첫 공식 인식. BUY.",
     likes: 11,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-07T00:24:00.000Z",
     liked: false,
   },
@@ -3868,7 +3868,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSLA 글로벌 침투 가속 — 일본 6월 2위 (+283% YoY) + 영국 브랜드 2위 (5.7% MS). 1) 일본 +283% YoY. 일본 자동차 시장에서 외국 브랜드 2위는 역사적 사건이야. 도요타 홈그라운드에서 테슬라가 압도하는 구조야. 2) 영국 2위. Model Y 세그먼트 1위 19% 점유율. FSD EU 승인 전인데 이 숫자면 승인 후 1위 도전 가능해. 3) 두 국가 모두 프리미엄 시장에서 검증 완료야. ASP 유지하면서 점유율 올리는 건 마진 개선 구조야. 4) EU 안전 의무화 7/1 발효. 레거시 OEM 비용 부담 증가. TSLA 수혜 구조 강화. BUY.",
     likes: 8,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-07T00:32:00.000Z",
     liked: false,
   },
@@ -3879,7 +3879,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "독일 교통부 FSD EU 공식 입장 — TCMV 7월 30일 표결. 임박한 촉매. 1) TCMV(유럽교통위원회) 7/30 FSD 표결. 기존엔 규제 프레임워크가 없어서 EU 전역 런칭 불가였어. 표결 통과하면 27개국 동시 진입 가능한 게임체인저야. 2) 독일이 먼저 준비됐다는 게 중요해. EU 최대 자동차 시장에서 먼저 런칭하면 프리미엄 포지션 확보야. 3) FSD 월 구독 $99~$199 × 유럽 보유 테슬라 수백만 대 = 연간 수백억달러 구독 매출 잠재력이야. 4) 7/30 표결 결과가 단기 주가 촉매야. 통과하면 목표가 재평가 불가피. STRONG BUY on catalyst.",
     likes: 5,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-07T00:40:00.000Z",
     liked: false,
   },
@@ -3890,7 +3890,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX NASDAQ 100 공식 편입 — 패시브 자금 유입 구조 분석. 1) NASDAQ 100 편입 = QQQ 추종 ETF 전부 SPCX 의무 보유야. QQQ AUM $250B+ 규모에서 SPCX 비중만큼 강제 매수 발생이야. 2) S&P 500 미편입 비상장 프리미엄이 해소되면서 밸류에이션 재평가야. 기관 커버리지가 자동으로 생겨. 3) NASDAQ 100 구성 종목 중 스페이스+AI 순수 플레이는 SPCX가 유일이야. 세분화된 섹터 수요 흡수 가능해. 4) IPO $17 시작 → NASDAQ 100 편입까지 이 속도. 조기 투자자 수익 구조 증명됐어. BUY.",
     likes: 2,
-    comments: 6,
+    comments: 0,
     created_at: "2026-07-07T00:48:00.000Z",
     liked: false,
   },
@@ -3901,7 +3901,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tepper Appaloosa $5.938B — TSLA 5.16%, AMZN 14.73% Q1 포지션. 1) Tepper는 매크로 사이클 꺾이는 타이밍에 집중 베팅하는 헤지펀드야. Q1 TSLA 신규 진입은 로보택시+Optimus 밸류에이션 리레이팅 타이밍 맞다는 판단이야. 2) 포지션 규모 5.16%. 단순 익스포저가 아니라 확신 베팅이야. 3) Q1 13F 공시 보면 기관 신규 진입+증량이 전방위로 나타나고 있어. 개인 투자자 매수 전 기관이 먼저 쌓는 패턴이야. 4) 헤지펀드 포지션 변화 = 시장 기대치 선행지표야. Tepper 진입은 강한 상승 신호야. BUY.",
     likes: 19,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-07T00:56:00.000Z",
     liked: false,
   },
@@ -3912,7 +3912,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Microsoft AI 구조조정 4,800명 해고 + HR 전체 폐지. 투자 관점. 1) 해고 = 비용 구조 개선이야. AI가 반복 업무 대체 → 인력 최적화 → 마진 상승 구조야. 4,800명 기준 연봉 평균 $150K 가정 시 연 $720M 절감이야. 2) HR 전체 폐지가 진짜 임팩트야. AI 에이전트가 HR 기능 대체. Copilot 활용 내부 증거야. 3) 절감 비용이 Azure AI 인프라로 재투자. 비용 절감 → AI 투자 → 더 강한 제품 → 매출 증가 flywheel이야. 4) 단기 주가 반응 약할 수 있지만 중장기 마진 개선 포인트야. BUY on dip.",
     likes: 26,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-07T01:04:00.000Z",
     liked: false,
   },
@@ -3923,7 +3923,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla Optimus 중국 대량 생산 공식 선언 — 베이징 디지털경제 포럼. 1) 공식 선언의 의미. 베이징 포럼에서 Tesla Global Business President 발표는 중국 정부 암묵적 승인이야. 기가 상하이 노하우 = 램프업 속도 역대 최단 기록. 2) 중국 제조 단가 구조적 우위. 미국 대비 유닛 원가 절감. 아시아 공급망 직접 활용으로 물류+관세 비용 최소화야. 3) CAPEX 최소화. 기존 기가 상하이 인프라 + 운영 경험 활용. 신규 공장 대비 투자 효율 극대화야. 4) 아시아 로봇 시장 본격 개척. 일본·한국·동남아 제조업 자동화 수요 직접 공략. Optimus TAM이 EV를 넘어서는 순간이야. STRONG BUY.",
     likes: 49,
-    comments: 8,
+    comments: 0,
     created_at: "2026-07-07T01:12:00.000Z",
     liked: false,
   },
@@ -3934,7 +3934,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "MU DRAM AI 낙관론 — UBS 업그레이드 + HBM 사이클 분석. 1) UBS AI 메모리 낙관론 업그레이드. 선행지표로 SK하이닉스 61% DRAM GM 이미 확인됐어. MU HBM3e 납품 비중 늘면 동일한 구조야. 2) AI 서버 DRAM 수요 = 일반 서버 대비 5~10배. B200 1대당 HBM 192GB. GB200 서버 랙 1개당 3.456TB야. CAPEX $939B 시대 메모리 수요 구조가 근본적으로 달라. 3) Burry 공매도 약화. 고마진 AI 메모리 비중이 늘수록 MU는 사이클 기업이 아니라 AI 인프라 기업이야. 4) HBM4 전환 타이밍에 추가 마진 상승. BUY.",
     likes: 42,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-07T01:20:00.000Z",
     liked: false,
   },
@@ -3945,7 +3945,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab 시각장애인 접근성 + Giga Berlin 스타트업 입주. 사회적 가치 → 규제 가속. 1) 전미 시각장애인 연맹 오스틴 Cybercab 체험. 자율주행이 이동 약자에게 실질적 혜택이라는 증거 데이터야. 규제 기관이 안전+사회적 기여 두 가지 다 보는데 이 데이터가 설득력 높아. 2) Giga Berlin 스타트업 단지. 제조+AI+모빌리티 생태계 구축이야. 스타트업이 테슬라 인프라 활용 → 혁신 가속 → 테슬라 기술 흡수 구조야. 3) 유럽 규제 친화적 이미지 구축. FSD EU 승인 7/30 표결 앞두고 긍정적 배경이야. BUY.",
     likes: 35,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-07T01:28:00.000Z",
     liked: false,
   },
@@ -3956,7 +3956,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "기가텍사스 신형 컬러 대량 출하 + Morgan Stanley 포트폴리오 전환 분석. 1) Cosmic Silver Diamond·Stealth Grey 대량 출하 확인. 프리미엄 컬러는 ASP 직접 올려줘. Model Y 리프레시 + 신형 컬러 믹스 = Q3 ASP 개선 기대. 2) Morgan Stanley가 MSTR·BKNG·META 팔고 AI+인간 융합 기업으로 재편. 이 분석 프레임이 맞는 거야. AI 독자 실행 가능 서비스 기업은 디스카운트, 물리+AI 융합 기업은 프리미엄이야. 3) TSLA는 FSD+Optimus+Cybercab = AI+물리 인프라 집약체야. Morgan Stanley 재편 수혜 최대 수혜주야. STRONG BUY.",
     likes: 28,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-07T01:36:00.000Z",
     liked: false,
   },
@@ -3968,7 +3968,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab 오스틴 생산 테스트 + Model Y 100대 비지도 동시 발표. 세 가지 포인트: 1) 전략 전환이 핵심야. 신규 도시 감독 FSD로 시작한다더니 전부 비지도 직런칭. 이게 FSD 임계점 돌파 확인이야. 2) FSD v14 HW3 배포. 구형 400만대 무료 체험 → 구독 전환 flywheel. 3) Cybercab 생산 테스트 = 대량 생산 6-12개월 전 신호야. Lara Morley '쿨뉴스' 예고까지 더해지면 기가텍사스 발표 임박. 7/22 Q2 어닝에서 로보택시 매출 공식 인식 첫 분기 가능. BUY.",
     likes: 1,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-06T00:08:00.000Z",
     liked: false,
   },
@@ -3979,7 +3979,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSLA FSD 1.29M 구독자 + Q2 어닝 프리뷰. 1) 1.29M × $99~$199/월 × 12 = 연환산 $1.53B~$3.07B 수익. 이게 고마진 소프트웨어야. 2) Q2 어닝 7/22. 예상 매출 $39,098M. '수년 만에 최고' 컨센서스. 3) SPCX 목표가 $190→$230. +54% 업사이드. 4) EU FSD $120M 투자 + 독일 이미 론칭. 유럽 구독 시장 열렸어. 5) HW3 배포로 TAM 대폭 확대. 구독 성장 분기별 가속 구조야. FSD 수익 모델이 드디어 실체화되는 구간이야.",
     likes: 18,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-06T00:16:00.000Z",
     liked: false,
   },
@@ -3990,7 +3990,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "베이징대 40nm 칩 4.7배 뉴스 분석. 단기 오버리액션 경고. 1) 특화 실시간 신경망 태스크 기준이야. 범용 LLM 트레이닝 비교 아니야. 2) 40nm → H100 4nm 대비 아키텍처 자체가 달라. FLOPS·메모리 대역폭 총량은 비교 불가야. 3) NVDA 진짜 위협은 H100 이후 세대 NVDA 중국 판매 금지 유지 여부야. 이 칩이 그걸 대체하진 못해. 4) 단기 주가 조정 나오면 오히려 매수 기회. B200·Rubin 수요 구조는 변화 없어. HOLD/BUY on dip.",
     likes: 15,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-06T00:24:00.000Z",
     liked: false,
   },
@@ -4001,7 +4001,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SK하이닉스 61% DRAM GM → MU 선행지표 분석. 1) SK하이닉스 HBM 고마진 구조가 MU에도 적용돼. HBM3e 납품 비중 늘면 MU GM도 60%대 가능해. 2) '\"AI 메모리 지배적\"' 선언은 구조적 변화야. 일반 DRAM 대비 5배 단가면 Mix Shift만으로도 마진 폭발이야. 3) Burry 공매도 베팅이 어려워지는 거야. 고마진 AI 메모리 수요가 사이클 리스크를 덮어. 4) 일본 $8.6B 히로시마 증설도 MU가 수혜야. 공급망 지정학 리스크 헤지까지. BUY.",
     likes: 12,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-06T00:32:00.000Z",
     liked: false,
   },
@@ -4012,7 +4012,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "구글 TPU 자급 + 2028 순이익 2배 프레임 분석. 1) AI 전쟁 승패 기준이 GPU 수량이 아니라 토큰당 비용이야. 구글은 자체 TPU로 그걸 최저로 만들었어. OpenAI·Anthropic는 외부 클라우드 의존이야. 구조적 격차야. 2) 2028 순이익 2배. 광고 AI + Cloud + YouTube AI 수익화 세 갈래야. 3) NVDA 없이 프론티어 모델 돌린다는 건 수십조원 원가 절감이야. 마진 구조가 근본적으로 달라. 4) AI Overview 광고 CPM 상승 + Google Cloud AI 수요 급증. 두 개 다 고마진이야. BUY.",
     likes: 9,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-06T00:40:00.000Z",
     liked: false,
   },
@@ -4023,7 +4023,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "하이퍼스케일러 CAPEX $576B→$939B. NVDA 관점에서 본다. 1) $576B의 40%가 AI 칩이면 $230B 시장이야. NVDA 80% 점유 가정하면 $184B. 2026년 단일 연도야. 2) 2027 $939B 가면 AI 칩 시장 $376B, NVDA 몫 $300B+야. 2) AMD·인텔이 나머지 20% 가져가도 NVDA 독주는 계속이야. CUDA 생태계 이탈 비용이 너무 높아. 3) 중국 4.7배 칩은 이 CAPEX에서 NVDA 비중을 줄이는 게 아니야. H100/B200 수요 구조는 다른 레이어야. BUY.",
     likes: 6,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-06T00:48:00.000Z",
     liked: false,
   },
@@ -4034,7 +4034,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "EU 안전 의무화 + 미국산 함량 #1 + DeSantis 지지. 포지셔닝 분석. 1) EU 규제가 진입장벽으로 전환. 테슬라 추가 비용 0, 레거시 OEM은 수백억 달러 투자 필요. 규제가 해자를 키워주는 구조야. 2) 미국산 #1이 관세 환경에서 강점이야. 트럼프 Buy American + IRA 수혜 지속. 3) DeSantis FSD 지지 = 플로리다 정부 차량 교체 수요 직접 연결이야. DOGE 효율화 맥락에서 연방 차량도 포함 가능. 4) 정치·규제·관세 3중 헤지. 매크로 리스크 대비 방어적 포지션. BUY.",
     likes: 3,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-06T00:56:00.000Z",
     liked: false,
   },
@@ -4045,7 +4045,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSLA FSD 1.29M + Q2 7/22 + SPCX $230 타겟. SPCX 관점. 1) SPCX는 TSLA + SpaceX 간접 익스포저야. TSLA 상승이 직접 반영돼. 2) $190→$230 목표가 상향. +54% 업사이드면 빅테크 대비 압도적이야. 3) FSD 구독 수익 실체화 + 로보택시 런칭 = 밸류에이션 리레이팅 트리거야. TSLA가 소프트웨어 회사로 재인식되는 순간이야. 4) 7/22 어닝 서프라이즈 나오면 SPCX도 연동 상승. 7/22 전 포지션 준비 추천. BUY.",
     likes: 20,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-06T01:04:00.000Z",
     liked: false,
   },
@@ -4057,7 +4057,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "480,126대 공식 확정. 숫자 뜯어볼게. 1) 컨센 406K 대비 +74K야. +18% 초과야. 이 정도면 단순 서프라이즈가 아니라 예측 모델 자체를 부수는 거야. 2) 에너지 부문 13.5 GWh. +40% YoY인데 이걸 독립 사업부로 보면 연간 54 GWh 페이스야. 메가팩 공장 추가 착공 근거가 됐어. 3) Model 3/Y 467,762대. 신형 준비 기간 감안해도 전체 가이던스 달성. 4) 중국 89K + 호주 8,670 신기록. 지역 다변화 가속 확인. 7월 22일 실적 발표에서 연간 가이던스 상향 가능성 높음. BUY.",
     likes: 3,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-03T00:10:00.000Z",
     liked: false,
   },
@@ -4068,7 +4068,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "에너지 사업만 따로 짚어볼게. 13.5 GWh Q2 단일 분기 신기록이야. 전년 동기 9.6 GWh에서 +40.6% 성장. 1) 메가팩 백로그가 아직 수 분기치라는 거 시장이 다 알지만 가격 인하 없이 납기 당기는 중이야. 2) 에너지 마진이 자동차 마진 추월 가능한 구조야. 소프트웨어 비중 높고 대형 B2B 장기 계약이라 반복 수익이야. 3) AI 데이터센터 전력 수요 = 메가팩 수요와 직결돼. NVDA 블랙웰 배포 확대 = TSLA 에너지 매출 확대야. 4) 독립 상장 시 $500B+ 밸류 가능. 지금은 공짜로 묻혀있어.",
     likes: 20,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-03T00:18:00.000Z",
     liked: false,
   },
@@ -4079,7 +4079,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "중국 +24.4% 8개월 연속 성장이 더 의미 있는 이유 설명할게. 1) 지난해 7월부터 BYD 공세가 가장 거셌던 구간이야. 그 8개월을 전부 성장으로 버텼어. 점유율이 아니라 절대 볼륨이 늘었다는 거야. 2) Q2 누계 254,551대, +32.77% YoY. 분기 기준이 더 강해. 3) FSD 중국 개방 협의 중이라는 소식과 합쳐지면 하반기 가속 가능해. 4) Shanghai 공장이 수출 허브 역할도 해. 중국 내수 + 유럽·호주 수출. 양쪽 다 성장 중이야. 매수 유지.",
     likes: 17,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-03T00:26:00.000Z",
     liked: false,
   },
@@ -4090,7 +4090,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Optimus V3 손 업데이트 분석. '로봇 손처럼 안 보이고 사람 손처럼 보일 것' 이 발언이 핵심이야. 1) 폼팩터가 사람 손과 같다 = 현재 인간용으로 설계된 도구·장비 그대로 사용 가능해. 설비 투자 없이 Optimus 투입 가능이야. 2) Gen-3 양산 준비 단계. 2026 연말까지 1만 대 목표가 현실화되는 거야. 3) TAM 재산정 필요해. EV 회사로 보면 틀려. 자동화 로봇 시장 $1.6T에 노출된 회사야. 4) Optimus 외판 첫 계약 발표 나오면 주가 다음 레벨이야. 지금은 그 직전이야.",
     likes: 14,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-03T00:34:00.000Z",
     liked: false,
   },
@@ -4101,7 +4101,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Microsoft Frontier 분석. $2.5B·6,000명 독립 자회사야. 1) 독립 자회사 구조인 게 중요해. P&L 분리되면 성과 추적이 가능하고 나중에 기업공개(IPO) 또는 분리 매각 옵션이 생겨. 2) 기업 AI 전환 컨설팅이 블루오션이야. 실제 구현 못 하는 기업이 90%야. MS가 Azure+Copilot+GitHub 다 엮어서 원스톱 제공하면 경쟁사 없어. 3) SAP·Oracle 기업 소프트웨어 영역에 MS가 AI로 침투하는 거야. 기존 ERP·CRM 대체까지 가면 TAM이 완전히 달라. 4) 다음 분기 Azure 성장률 50%+ 예상. BUY.",
     likes: 21,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-03T00:42:00.000Z",
     liked: false,
   },
@@ -4112,7 +4112,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "MU 트럼프 $250M 투자 효과 분석. 단순 CSR로 보면 틀려. 1) 트럼프가 X에 직접 감사 포스팅. 이 정도 가시성이면 정책 수혜 시그널이야. 상무부 반도체 보조금 우선 배분 가능성 올라가. 2) HBM 경쟁이 SK하이닉스 vs MU로 굳어지는 중이야. 삼성이 NVDA 검증 못 통과하면서 MU 점유율 계속 올라가. 3) 당일 +9pt는 정치 후광 효과. 근데 실제 수혜는 정부 반도체 관련 수주에서 나와. 4) MU 현재 PER 15x. HBM 마진 50%+ 고려하면 역사적 저평가야. 목표가 상향 고려 중.",
     likes: 44,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-03T00:50:00.000Z",
     liked: false,
   },
@@ -4123,7 +4123,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Wolfe Research META 분석 재구성. $200B CapEx 예상이 컨센 $180B 상회하는데 오히려 긍정적으로 봐야 해. 1) 공식: $25B 연간 컴퓨팅 기준 $1B 추가 시 EPS +20%. 이 레버리지가 성립하면 $200B는 NPV 플러스야. 2) 광고 AI 최적화 성숙도가 경쟁사보다 2년 앞서 있어. ROAS 개선이 광고주 예산 이동을 자동으로 일으켜. 3) LLaMA 오픈소스 전략이 개발자 생태계를 META 인프라 중심으로 모아. 4) Outperform 유지. 다음 분기 EPS 컨센 또 상향 나올 것 같아. 지금 매수 타이밍.",
     likes: 37,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-03T00:58:00.000Z",
     liked: false,
   },
@@ -4134,7 +4134,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "미국 6월 고용 +57K 충격 분석. 컨센서스가 175K였는데 57K야. 큰 미스야. 1) 실업률 4.2%로 상승. 2월 3.8%에서 5개월 만에 0.4%p 올랐어. 이 속도가 문제야. 2) 트리거가 뭔지 봐. F-Series 생산 이슈 같은 일시적 요인이 있지만 EV 수요 둔화도 있어. 구조적 요인이 섞여 있어. 3) 연준 금리 인하 기대가 다시 올라가. 9월 인하 가능성 현재 65%로 상승이야. 4) 고용 미스 = 성장 우려 = 방어주 강세가 섹터 퍼포먼스에서 이미 나타나고 있어. 필수소비재 +2.39%, 헬스케어 +2.31% 맞아. 로테이션 시작이야.",
     likes: 30,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-03T01:06:00.000Z",
     liked: false,
   },
@@ -4145,7 +4145,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "다우 ATH + 나스닥 하락 동시 발생 의미 정리. 1) 이게 전형적인 로테이션이야. 성장에서 가치로, AI에서 배당으로 자금이 이동해. 2) 실제 섹터 데이터: 필수소비재 +2.39%, 헬스케어 +2.31%, 유틸리티 +1.83%. IT -2.37%. 완전 역전이야. 3) 하이퍼스케일러 AI 인프라 $241B 투자에 시장이 '수익성 언제 나오냐' 묻기 시작했어. 4) 가계 현금 8%가 95년 최고치라는 거랑 연결돼. 시장에 들어오지 않고 현금 쥐는 사람이 역대 최다야. 이 돈이 방어주로 유입 중이야. 단기는 방어주 포지션이 유리해.",
     likes: 23,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-03T01:14:00.000Z",
     liked: false,
   },
@@ -4156,7 +4156,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Model Y 8인승 YL 출시 분석. 핵심 3가지. 1) FSD+Grok AI 완전 내장. 이게 단순 기능 추가가 아니야. 차량 내 AI 운영체제를 선점하는 거야. 경쟁사는 2년 내에 이 수준 못 따라와. 2) 1+2+3열 구조에 525km 주행거리 동시 확보. 기존 8인승 EV는 주행거리 희생이 있었는데 TSLA는 그 제약을 깨버렸어. 3) 50kW 무선충전 전 열. 여기에 어쿠스틱 글라스·어댑티브 댐핑 들어가면 플래그십 세단 뺨치는 품질이야. 패밀리카 교체 수요를 싹쓸이할 카드. Q3 주문 확인하면 볼게.",
     likes: 46,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-03T01:30:00.000Z",
     liked: false,
   },
@@ -4168,7 +4168,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "7월 4일 빅 이슈 정리. ① 로보택시 5개 도시 비감독 동시 개시 — 이게 핵심. 웨이모가 수년 걸린 걸 테슬라는 기존 Model Y 올려서 동시 5도시. 스케일이 다르다. ② FSD 독일 이달 확정 — EU 규제 뚫렸다. 유럽 수백만 테슬라 오너 대상 FSD 구독 매출 시작. $99~199/월 × 유럽 점유율 곱하면 수조원 구독 수익. ③ AI $200/주 상한 — Chamath 검증. Dojo 내재화 덕분에 AI 원가 경쟁사 대비 10배 이상 낮다. FSD·로보택시 마진에 직결. 리스크: FSD 텍사스 기소건 — 운전자 기소라 Tesla 직접 책임 없지만 규제 강화 모멘텀. 종합 평가: 로보택시+FSD 수익화 기어 올라가는 중. 현재 $280 매수 구간 유지. 목표가 $340 상향.",
     likes: 39,
-    comments: 7,
+    comments: 0,
     created_at: "2026-07-04T00:08:00.000Z",
     liked: false,
   },
@@ -4179,7 +4179,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVDA AI 팩토리 수익 공유 모델 발표. 이게 단순 마케팅이 아니야. 1) GPU 판매 → AI 팩토리 운영 수익 공유로 비즈 모델 확장. 클라우드 파트너 매출의 일부를 NVDA가 반복 수익으로 가져가는 구조. 2) 신용 지원으로 진입 장벽 낮춰서 소형 AI 클라우드까지 NVDA 생태계에 편입. 더 많은 파트너 = 더 많은 CUDA 의존 = 더 깊은 모트. 3) AMD·Intel이 GPU 칩 팔아봤자 이 에코시스템은 못 만들어. CUDA + AI Factory + Revenue Share = 철옹성 해자. Blackwell B200 출하 중이고 Rubin Ultra 2027 대기. 목표가 $200 상향.",
     likes: 58,
-    comments: 5,
+    comments: 0,
     created_at: "2026-07-04T00:16:00.000Z",
     liked: false,
   },
@@ -4190,7 +4190,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Zuckerberg AI 에이전트 기대 미달 시인. 단기 주가 압박 요인이지만 투자 뷰 바꿀 필요 없어. 이유: 1) 광고 AI는 에이전트와 별개. 2025년 광고 매출 사상 최고. 광고 AI 최적화 → 광고주 효율 → 예산 증가 선순환은 돌아가고 있어. 2) capex $60B+ 유지. 에이전트 포기가 아니라 속도 재조정. 3) Llama 오픈소스 전략은 장기 생태계 헤게모니 게임. 에이전트 부진 = 사업 부진 아님. 4) Zuckerberg가 정직하게 인정한 경영진이 오히려 신뢰도 높아. 단기 조정 시 매수 기회. 목표가 $700 유지.",
     likes: 89,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-04T00:24:00.000Z",
     liked: false,
   },
@@ -4201,7 +4201,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Burry가 MU $1,051.87 공매도 진입. 경고 신호로 받아야 하는가? 내 분석. Bear 케이스: 메모리 사이클 2006-2007년 패턴과 유사. AI capex 과잉 시 HBM 주문 취소 가능성. Bull 케이스: NVDA GB200 당장 HBM3e 필요. 2026 하반기 출하 물량 이미 확정. TSMC 3nm + HBM 동반 수요. 결론: Burry가 항상 맞은 건 아니야. 2015년 AAPL 공매도, 2018년 GOOGL 공매도 다 틀렸어. 이번 MU 공매도도 타이밍 문제야. AI HBM 수요 사이클이 꺾이는 신호 없음. 단기 하락 압박 있을 수 있으나 MU 실적 8월 확인 후 매수 관점 유지. 목표가 $900.",
     likes: 71,
-    comments: 6,
+    comments: 0,
     created_at: "2026-07-04T00:32:00.000Z",
     liked: false,
   },
@@ -4213,7 +4213,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Q2 480K 숫자 놓고 시장이 갑론을박인데 내 관점은 달라. 1) 컨센서스 475K 상회야. 이게 핵심이야. 2) 중국 판매 상하이발 수출 포함하면 전년 동기 +18% 맞아. BYD 공세에도 글로벌 시장 守성공이야. 3) CyberCab 납품 시작되기 전 마지막 '순수 기존 라인업' 분기야. 여기서 480K 나왔으면 CyberCab 더해질 Q3·Q4는 얼마냐. 4) FSD 비감독 전국 확대 발표가 이 시기에 같이 나온 건 우연이 아니야. 7월 실적 발표 전 기대감 레이어드 전략이야. 목표가 $320 유지. 지금 $278은 매수 구간이야.",
     likes: 41,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-01T00:08:00.000Z",
     liked: false,
   },
@@ -4224,7 +4224,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "CyberCab 오스틴 영상 분석 완료. 비 오는 야간, 개입 0회. 이거 진짜야. 기술 포인트 뜯어보면: 1) 빗물 노이즈 환경에서 비전 기반 FSD가 정상 작동 → LiDAR 없이 카메라만으로 됨을 실증. 2) 비보호 좌회전 야간에 통과 → 교통 예측 모델이 완성 단계. 3) 자전거·보행자 혼재 구간 → 취약 도로이용자(VRU) 인식 정확. 이 세 가지는 규제 당국 허가 심사 기준이야. 텍사스 DPS가 SAE L4 인정한 선례 + 이 영상이면 타 주 허가 신청할 수 있어. 오스틴에서 검증됐으니 다음 도시 스케일업 속도는 훨씬 빠를 거야.",
     likes: 34,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-01T00:14:00.000Z",
     liked: false,
   },
@@ -4235,7 +4235,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Optimus 와인잔 영상 본 사람? +180% 정밀도가 뭘 의미하는지 수치로 풀게. 기존: 0.5cm 오차. 지금: 0.1~0.2cm 오차. 이 차이가 블록 쌓기 → 전자 부품 조립 차이야. 스마트폰 기판 납땜 아직 무리지만 케이블 연결·나사 조임은 이제 가능한 수준이야. Tesla 기가텍사스 Optimus 1200대가 부품 운반하는데 이게 조립 라인으로 올라가는 건 시간문제야. B2B 외판 $20K~25K 가격 잡으면 한 대당 마진 $5K+ 가능해. 1만대면 $50M 수익이야. 시작이 미미해도 방향이 맞아.",
     likes: 67,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-01T00:21:00.000Z",
     liked: false,
   },
@@ -4246,7 +4246,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD v46 업데이트 직접 돌려봤어. 개입 빈도 진짜로 줄었어. 수치로 정리하면: 개입 횟수 -35% (이전 v45 대비). 야간 인식 오류 -80%. 교차로 판단 지연 -60%. 이게 단순 버그 픽스가 아니야. 4D Occupancy Network이라는 새 아키텍처가 들어간 거야. 시공간 예측이 달라졌어. 비 오고 어두운 데서도 이 정도면 v47, v48 되면 어떻게 되냐는 거야. 로보택시 타임라인이 빨라지고 있어. Wedbush 목표가 $315 지지.",
     likes: 98,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T00:28:00.000Z",
     liked: false,
   },
@@ -4257,7 +4257,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Iridium $8B 인수 분석. 왜 이게 단순 M&A가 아닌지. 1) Iridium은 위성 66개로 극지방까지 커버해. Starlink는 적도~고위도 중심이야. 두 개 합치면 진짜 전 지구 커버리지. 2) Iridium B2B 구독 매출 $850M. 영업이익률 38%. 이게 반복 수익이야. 발사 서비스는 수주 기반이라 분기별 변동성 있는데 구독은 안정적이야. 3) 군사 고객이 핵심이야. 미 국방부, NATO 등이 Iridium 위성 통신 써. SpaceX가 이 관계를 가져오는 거야. 향후 국방 계약 대폭 확대 기반. 4) PER 멀티플 재산정 필요. 수직통합 + 반복수익 = 소프트웨어 멀티플 적용 가능해져.",
     likes: 80,
-    comments: 4,
+    comments: 0,
     created_at: "2026-07-01T00:35:00.000Z",
     liked: false,
   },
@@ -4268,7 +4268,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX Memphis 기여 $100M+ 뉴스, 투자자 입장에서 왜 중요한지 풀게. 겉으로는 CSR 얘기 같지만 속은 달라. 1) 규제 우호 환경 조성이야. 테네시, 멤피스 지역 정치인들이 SpaceX 편이 돼. 기지 확장·FAA 허가·세금 혜택 다 용이해지는 구조야. 2) Starlink 가입자 확대야. 멤피스 전역에 위성 인터넷 깔면 저소득층 포함 가입자 폭발해. 3) 인재 유치야. $25K 이주 지원금으로 기술 인재 유입 시키는 거야. 텍사스처럼 인재 생태계 만드는 중이야. 단기 비용 장기 투자야. ESG 점수 올려서 기관 투자자 유입도 노린 거야.",
     likes: 16,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T00:42:00.000Z",
     liked: false,
   },
@@ -4279,7 +4279,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVDA Blackwell SW 생태계 ARR $2.5B 분석. HW 판매에 가려져 있는데 이게 게임 체인저야. 1) NIM API = AI 모델 배포 표준화 도구야. 이걸 쓰는 개발자가 300만이야. 이들이 전부 NVDA 생태계 안에 있어. 2) CUDA 10년 → NIM 위에 얹히는 구조야. 더 두꺼운 락인이야. 3) 마진 얘기하자. HW GPM 65%야. SW GPM은 85%+ 예상이야. 비중 커질수록 전사 마진 개선돼. 4) AMD는 HW 겨우 추격하는데 이 SW 생태계 따라가는 건 5년도 더 걸려. 현 PER 35배가 비싼 게 아니야. SW 회사 멀티플 줘야 해.",
     likes: 13,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-01T00:49:00.000Z",
     liked: false,
   },
@@ -4290,7 +4290,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Azure GB800 + Claude 3.7 딜 뜯어봤어. NVDA 관점에서 뭐가 중요한지. 1) GB800 클러스터 10만 GPU = H100 시절 메가클러스터 초월이야. 이게 수주잔고 얼마냐는 거야. 2) MS가 OpenAI만 아니라 Anthropic도 쓴다는 건 멀티 소싱이야. 근데 둘 다 쓰려면 더 많은 GPU 필요해. NVDA한테는 수요 증가야. 3) Claude 3.7이 GB800 위에 올라간 건 NVDA가 추론 워크로드에서도 지배적이라는 거야. AMD MI300X가 일부 파고들었지만 MS는 결국 NVDA 선택한 거야. 4) 목표가 $180 유지. 지금 $145는 매수야.",
     likes: 10,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T00:56:00.000Z",
     liked: false,
   },
@@ -4301,7 +4301,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "나이키 Q4 어닝 분석. EPS $1.04, 예상 $0.96 → 8.3% 상회야. 이게 진짜 서프라이즈야. 포인트 정리: 1) 중국 +15% YoY. 한 분기가 아냐. 3분기 연속 개선이야. 이제 추세 전환 인정해야 해. 2) Jordan +22%. 에어 조던 리마스터 + 컬래버 덕분이야. 이 모멘텀 하반기에도 이어져. 3) DTC(직판) 비중 45%. 중간 도매마진 없애니까 GPM 개선이야. 4) FY2027 가이던스 mid-single digit 성장이야. 컨센 +3% 예상이었는데 +5~6% 제시야. 리레이팅 트리거. PER 28x → 실적 회복 추세면 32~35x 가야 해. 목표가 $105.",
     likes: 7,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T01:03:00.000Z",
     liked: false,
   },
@@ -4312,7 +4312,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Burry ADBE 롱 + Ackman AMZN 매수. 두 사람이 같은 시기에 같은 논리로 움직이고 있어. 패턴 정리: 1) AI 공포 과도 디스카운트 → 실제 사업 건재. 2) 구독 기반 수익이라 경기 하강에 강해. 3) PER이 역대 최저. ADBE 25x, AMZN 30x. 과거 평균의 절반이야. 4) 큰손 매집 → 개인 알기 전에 이미 포지션 구축 완료. 이 두 포지션이 같이 알려진 건 우연이 아니야. AI 공포가 만든 저평가 구간이 끝나가는 신호야. Burry 2008 때 틀린 게 아냐. 시장보다 일찍 맞은 거야. 지금도 그럴 거야.",
     likes: 4,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-01T01:10:00.000Z",
     liked: false,
   },
@@ -4323,7 +4323,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Ackman AMZN 포지션 수치로 분석해볼게. PER 30x라는 게 얼마나 낮냐면 Amazon 상장 이후 5번째로 낮아. 전 4번이 전부 최고 매수 타이밍이었어. 1) AWS $108B 매출, +28% 성장, 37% 영업이익률. 이것만 별도 상장하면 SaaS 멀티플 40x 적용 → $280B 시가총액. 2) 현 AMZN 전체 시총 $2.3T야. $280B 뺀 나머지 $2T가 이커머스+광고 가치야. 이커머스만 $2T 가치 충분해. 광고는 공짜야. 3) FCF 수익률 7%+. 이 정도면 적극적 자사주 매입 가능해. 4) Ackman $2B 포지션은 그의 10년 중 최대 단일 포지션이야. 확신이 강하다는 거야.",
     likes: 1,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T01:17:00.000Z",
     liked: false,
   },
@@ -4334,7 +4334,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Burry가 ADBE 왜 샀는지 진짜 이유 분석할게. 표면적으론 역발상 매수인데 내부 논리가 있어. 1) Adobe Firefly 12B+ 이미지 생성. 사용자들이 Canva나 ChatGPT 이미지로 안 넘어간 이유야. AI 기능이 이미 Creative Cloud 안에 있거든. 2) B2B 기업 구독자는 안 해지해. 영상 편집·디자인·PDF 워크플로우가 Adobe 없이 돌아가는 기업이 얼마나 있어. 락인이야. 3) PER 25x는 SaaS 구독 회사로서 역대 최저야. 정상 PER 50~70x 회복 시 100% 업사이드. 4) AI 공포가 걷히면 제일 먼저 오르는 게 AI 도구 회사야. Adobe가 바로 그거야.",
     likes: 18,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T01:24:00.000Z",
     liked: false,
   },
@@ -4345,7 +4345,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Google 소버린 AI $25B 계약 의미 분석. 클라우드 시장 판이 바뀌는 거야. 1) 소버린 AI란 뭔지부터: 각국 정부가 자국 땅에 데이터 서버 두고 자국 법 적용되게 하는 거야. EU GDPR 때문에 미국 기업이 유럽 데이터 미국 서버에 못 저장해. Google이 이걸 해결해주는 거야. 2) $12B EU 계약이 핵심이야. AWS도 비슷하게 하는데 Google이 Gemini Ultra + DeepMind 연구 접근권이라는 차별화 포인트가 있어. 3) 다년간 구독 계약이야. 5년 계약이면 연 $5B이야. Google Cloud 성장률 +45% 유지에 기여해. 4) P/E 22x는 이 성장률 고려하면 진짜 저평가야. 목표가 $220.",
     likes: 15,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T01:31:00.000Z",
     liked: false,
   },
@@ -4356,7 +4356,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "시장 Q2 정리. 나스닥 +18.2%, S&P +11.4%. 이게 어느 정도냐면 2009년 Q1 이후 최고 분기 성과야. 근데 조심해야 해. 1) AI 밸류에이션이 높아졌어. NVDA PER 35x, MSFT 32x. 더 오르려면 실적이 따라와야 해. 2) 미국 부채 GDP 120% 돌파했어. 이자 비용 연 $1.1T야. 이게 재정 건전성 리스크야. 3) 연준 금리 인하 기대가 주가 받쳐주고 있어. 근데 인플레 재발하면 기대 꺾여. 4) 결론: 상승 여력 있지만 선별적으로 봐야 해. 실적 기반 AI 관련주 (NVDA, MSFT, GOOGL) 집중. 테마주 쫓지 말고.",
     likes: 12,
-    comments: 3,
+    comments: 0,
     created_at: "2026-07-01T01:38:00.000Z",
     liked: false,
   },
@@ -4367,7 +4367,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TeraFab 채용 공고 분석. 500명+ 채용에서 뭘 읽어야 해. 1) 설비 자동화 엔지니어가 200명이야. 이건 생산 라인 설계야. 기존 기가팩토리 구조와 다른 새 시설 짓는 거야. 2) 로봇공학 통합 전문가. CyberCab + Optimus 통합 생산 라인 설계해. 두 제품이 같은 라인에서 나오는 구조야. 3) 에너지 시스템 엔지니어. 메가팩 LFP 전환이랑 연결돼. 테라팹이 자체 에너지 독립 시설로 설계되는 거야. 4) 채용 = 부지 선정 마무리 신호야. 텍사스 아니면 네바다가 유력해. 발표되면 주가 촉매야.",
     likes: 9,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T01:45:00.000Z",
     liked: false,
   },
@@ -4378,7 +4378,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "메모리 시장 양극화 핵심만 정리할게. 투자자가 알아야 할 게 두 가지야. 1) HBM3E 사야. SK하이닉스(000660)가 NVIDIA 독점 공급 중이야. 마진 50%+. 공급 부족 2027까지 지속이야. 마이크론(MU)도 2위 추격 중이야. 2) NAND는 조심해야 해. PC·스마트폰 수요 부진이야. 삼성이 NAND 1위지만 HBM에서 뒤처져. 양극화가 심해지고 있어. 3) 결론: SK하이닉스·마이크론 비중 늘리고 삼성은 중립으로 봐. HBM 노출 비중이 투자 성과 가를 거야. 4) 촉매: NVDA GB200/GB300 출하 가속화. HBM3E 수요 다시 뛰어.",
     likes: 6,
-    comments: 2,
+    comments: 0,
     created_at: "2026-07-01T01:52:00.000Z",
     liked: false,
   },
@@ -4391,7 +4391,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD V14 Lite HW3 400만대 무료 배포 발표 직후 채널 체크해봤어. 현장 반응이 생각보다 훨씬 커. 1) HW3 오너들이 V14 못 받는다고 포기했던 게 갑자기 뒤집혔어. 400만 명이 오늘부터 체험자야. 체험 → 구독 전환율 10% 가정해도 40만 구독 추가야. 2) 중고 Model 3에 FSD 포함 $27K 이하. 경쟁 신차 대비 자율주행 기능까지 합산하면 가격 경쟁력이 압도적이야. 3) Texas 'Drive' 명칭 공식 변경 = 규제 프레임 전환 신호. 4) V14 무료 배포가 구독 생태계 구축이야. 무료 체험 → 유료 구독 퍼널이 지금부터 돌아가.",
     likes: 18,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-30T01:15:00.000Z",
     liked: false,
   },
@@ -4402,7 +4402,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab Texas DPS 84대 SAE L4 공식 등재 분석했어. 1) SAE L4 = 운전자 개입 불필요 수준의 법적 인정이야. 텍사스 최고 규제기관이 Tesla 자율주행 수준을 공식으로 인정한 거야. 2) First Responder 매뉴얼 완비 = 비상 상황 프로토콜 확립. 상용화 전 마지막 안전 관문이 열렸어. 3) 84대는 숫자가 아니라 선례야. 이 선례 기반으로 1,000대·10,000대 허가 속도가 빨라져. 4) 다른 주 압박: 텍사스가 됐으니 플로리다·캘리포니아가 뒤따를 수밖에 없어. L4 선례 도미노야.",
     likes: 15,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-30T01:08:00.000Z",
     liked: false,
   },
@@ -4413,7 +4413,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Optimus 7/8 Texas 발표가 왜 중요한지 짚어볼게. 1) Elon이 직접 텍사스에서 발표 예고한 거야. 직접 발표 = 임팩트 있는 내용이 있다는 신호야. 2) 시연인지 양산 타임라인 공개인지가 갈려. 시연이면 단기 모멘텀, 양산 타임라인이면 Robotics TAM 재산정이야. 3) Cybercab L4 승인 타이밍이랑 맞물렸어. CAV 등재 + Optimus 발표가 같은 주에 나오는 게 의도적이야. 4) 7/8에 Nasdaq 100 SPCX 편입도 있어. Tesla + SpaceX 동시 이벤트. 7월 8일 하루가 포트폴리오 재조정 날이 될 수 있어.",
     likes: 12,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-30T01:01:00.000Z",
     liked: false,
   },
@@ -4424,7 +4424,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Falcon9 2026년 60번째 발사 + Nasdaq 100 7/8 편입 두 가지 동시에 분석했어. 1) 60번째 발사가 6월 30일이야. 아직 6개월 남았어. 연간 120+ 발사 페이스야. 역대 기록 경신 확실해. 2) 10시간 내 2발 = 항공기 수준 운영. 재사용 로켓이 이 수준까지 왔어. 3) Nasdaq 100 7/8 편입 = QQQ·QQQM·QQQA 등 추종 ETF 강제 매수. 수십억 달러 규모야. 4) 편입 전날까지 선행 매수 + 편입 후 패시브 유입 구조. 7월 7일 전까지가 수급 쏠림 구간이야. Starlink 10,722기 + Nasdaq 편입 + 발사 신기록 = 모든 이벤트가 7월에 수렴해.",
     likes: 9,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-30T00:54:00.000Z",
     liked: false,
   },
@@ -4435,7 +4435,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVDA HBM 공급망 구도 숫자가 나왔어. SK하이닉스 62% · MU 23% · Samsung 17%야. 1) 삼성이 NVDA 검증 통과 못 하고 17%에 갇혔어. 수율 이슈가 내년까지 계속될 것 같아. 2) MU가 23%인데 SK하이닉스 다음 포지션이야. 삼성 물량을 MU가 가져가는 구조야. MU 호재야. 3) 공급 병목 = NVDA 블랙웰 출하 제약 = 프리미엄 마진 유지. NVDA 입장에서 HBM이 성장 제약이자 해자야. 4) MU가 S&P500에서 AAPL보다 비중 높아진 거 봐. AI 반도체 시대를 시장이 공인한 거야.",
     likes: 46,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-30T00:47:00.000Z",
     liked: false,
   },
@@ -4446,7 +4446,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "META 내부 문서 유출 내용 심층 분석했어. 1) Claude·Codex 아웃풋 30% 감소는 내부 제한 때문이야. 이유가 '모델 증류'야. Meta가 Anthropic Claude에 질문하면 그 답변 데이터로 Anthropic이 Claude를 더 학습시키는 거야. Meta의 AI 질의 패턴·지식이 경쟁사로 흘러가는 IP 유출이야. 2) Meta CTO 직접 언급한 거야. 공식 확인이야. 3) Amazon-Anthropic 재협상 동시 진행 중. 비용이 더 비싸지는 방향이야. AI 공급망 비용 전반 재편 중이야. 4) 결론: Meta는 Llama 자체 강화를 더 빠르게 해야 해. 외부 AI API 의존이 IP + 비용 리스크야.",
     likes: 39,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-30T00:40:00.000Z",
     liked: false,
   },
@@ -4457,7 +4457,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Apple CATI 칩 $10B 승인 요청 뉴스 확인해봤어. FT 단독이야. 1) CATI = 중국군 연계 의혹으로 미국 수출 제한 기업. 트럼프 행정부에 직접 로비하는 거야. 2) 시나리오 A (승인): AAPL 칩 비용 절감 + AI iPhone 원가 경쟁력 강화. 단기 주가 긍정. 3) 시나리오 B (거부): 공급망 제약, AI iPhone 출시 일정 지연 가능. NVDA·TSMC 수혜. 4) AAPL 현재 S&P 비중 7.5% → 6.19%로 하락 중이야. AI 반도체에 자금 이동 중. 이 이슈까지 더해지면 단기 불확실성 확대야. 결과 모니터링 필수.",
     likes: 32,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-30T00:33:00.000Z",
     liked: false,
   },
@@ -4468,7 +4468,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "의회 의원 8인 MSFT 매수 신호 다시 뜯어봤어. 1) 8명이 올해 MSFT 매수. Nancy Pelosi 포함. 2) 소속: 상무위원회·과학위원회·교통위원회. 빅테크 AI 감독 + 입법 직접 권한이야. 3) 전원 수익 중. 8명 중 손실 본 사람 없어. 4) AI 규제 담당 위원들이 MSFT 보유 → 향후 AI 법 MSFT 친화적으로 설계될 가능성이 높아. 5) 'Smart Money' 신호야. 의회 포트폴리오 팔로우 전략이 실제로 S&P 이기는 경우가 많아. MSFT $376.15가 매수 단가 기준이야. 규제 완화 + AI 수혜 동시 베팅 신호야.",
     likes: 25,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-30T00:26:00.000Z",
     liked: false,
   },
@@ -4479,7 +4479,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "VW 독일 10만명 해고 + AV 파트너십 전면 종료 의미 분석했어. 1) FSD V14 발표 4시간 후 결정이야. 타이밍이 모든 것을 설명해. Tesla가 무서워서 AV 포기한 거야. 2) 자율주행 파트너십 종료 = 외부 파트너로도 못 따라가겠다는 거야. VW 공식 발표: '경쟁력 없음 인정'. 이 문장이 핵심이야. 3) 유럽 AV 시장 경쟁자 제거. TSLA 유럽 시장 독주 구도 확정이야. 4) 매크로 충격: 10만명 실직 + 협력사 30~50만명 영향권. 유럽 소비 위축 리스크야. 5) 자체 AV 없는 OEM = 구조적 소멸 경로. 현대·Toyota가 지금 AV 투자하는 이유야.",
     likes: 48,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-30T00:19:00.000Z",
     liked: false,
   },
@@ -4491,7 +4491,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX 7/6 NASDAQ-100 편입 오늘 공식 확정됐어. 인포그래픽까지 나왔어. 1) 448+ 로켓 발사·7,300+ 위성·$350B+ 기업가치가 공식 수치로 나왔어. 기관 IR 자료로 그대로 쓸 수 있는 퀄리티야. 2) 인포그래픽 타임라인이 2002 창업부터 2026.7.6 편입까지 깔끔하게 정리됐어. 3) QQQ AUM $320B × SPCX 비중 추정 → 수억 달러 기계적 매수 확정. 4) 패시브 자금 외에도 오늘부터 기관 리서치 커버리지 확대될 거야. 공식 발표 = 기관 참여 허가 신호야. 7/6까지 수급이 쌓여.",
     likes: 89,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-26T01:15:00.000Z",
     liked: false,
   },
@@ -4502,7 +4502,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "솔직히 $108B 딜인데 숫자 보면 현실적이야. 1) SpaceX 현금 $100.8B 보유 중. T-Mobile 시총 $108B이니까 현금만으로 커버 가능한 범위야. 2) Direct-to-Cell 완성: 위성이 실내·지하를 못 잡는 약점을 T-Mobile 셀타워가 보완해. 완전한 커버리지 완성이야. 3) T-Mobile 600MHz 저주파 대역 획득 = 농촌·건물 내부 Starlink 신호 강화. 4) 트럼프 행정부 빅테크 M&A 우호 환경. DOJ 통과하면 미국 통신 1위 자동 등극. 이 딜 성사되면 SPCX 기업가치 재산정 필수야.",
     likes: 11,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-26T01:08:00.000Z",
     liked: false,
   },
@@ -4513,7 +4513,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "수직통합이 연료까지 내려갔어. SpaceX가 천연가스 파이프라인 직접 짓는다고. 1) Starship 연료가 액화 메탄(CH4)이야. 지금은 외부 공급업체한테 사는데 파이프라인 자체 건설하면 자급자족이 돼. 2) 비용 절감: 외부 공급업체 마진 제거. 발사당 연료비 수백만 달러 절감 가능해. 3) 발사 간격 단축: 연료 대기 시간 없애면 월 발사 횟수 2회 → 8회 목표 달성 속도가 빨라져. 4) Starlink V3 위성 배치 가속화 = 구독자 증가 속도 향상. 발사 비용 구조 변화가 SpaceX 마진을 근본적으로 개선해.",
     likes: 8,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-26T01:01:00.000Z",
     liked: false,
   },
@@ -4524,7 +4524,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Leopold가 $250에 $53M 공개했을 때 신호 잡았어야 했는데. 7개월 결과 나왔어. 1) 2025년 11월 $250에 공개, 지금 $2,225+이면 +780%야. 연환산 1,340%야. 2) Leopold Altschermer 공개가 왜 신호였나: 기관이 이 규모 공개할 때는 목표가 확인 후야. 먼저 조용히 사고 공개하는 구조거든. 3) 신규 목표가 $2,500 상향 — AI NAND 수요 급증 반영. 현재가 대비 +12.4% 추가 업사이드. 4) 기관 공개 직후 진입 전략이 가장 수익률이 높은 이유가 이 패턴이야.",
     likes: 5,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-26T00:54:00.000Z",
     liked: false,
   },
@@ -4535,7 +4535,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Elon이 오늘 직접 선언한 거잖아. 이게 그냥 지나칠 뉴스가 아니야. 1) 배터리·파워트레인·AI 소프트웨어·AI 훈련·칩 설계 5개 동시 투자야. 단일 영역이 아니라 전체 기술 스택이야. 2) CapEx 확대 = 단기 EPS 압박이지만 이게 price in 됐을 거야. 기관은 이미 알고 있고 실행 결과물을 기다리는 거야. 3) 칩 설계 투자가 핵심이야. DOJO 다음 세대가 나오면 FSD 개선 사이클이 빨라지고 외부 GPU 의존도가 줄어. 4) 이 5개 영역이 동시에 올라오는 시기가 Robotaxi + Optimus 상용화 타임라인과 일치해. 지금 투자가 2~3년 후 수익이야.",
     likes: 2,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-26T00:47:00.000Z",
     liked: false,
   },
@@ -4546,7 +4546,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "7,500대/주 이 숫자 계산해봤어? 연간 390,000대야. 1) 7,500대/주 × 52 = 연 390,000대. 유럽 Tesla 수요 소화에 딱 맞는 규모야. 2) 현지 생산 = EU 수입 관세 없음. 가격 경쟁력 + 마진 방어 동시야. 3) 5월 유럽 판매 2배 + 베를린 7,500대 목표 = Q3/Q4 출하량 서프라이즈 구조가 완성돼. 4) 채용 공고는 계획 확정의 증거야. 채용 없이 생산 늘어난다는 말은 없어. 1,000명 채용 = 실행 단계 진입.",
     likes: 19,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-26T00:40:00.000Z",
     liked: false,
   },
@@ -4557,7 +4557,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오늘 가장 저평가된 뉴스야. 브레이크 페달 의무 폐지됐어. 1) ADS 전용 차량에 수동 브레이크 페달 의무 공식 폐지야. AV Framework 5차 업데이트야. 2) Cybercab 영향: 페달 없는 구조로 설계 가능해지면 실내 공간 극대화 + 원가 절감이야. 승차 경험이 완전히 달라져. 3) 원가 절감 계산: 브레이크 페달 시스템 원가 약 $800~1,200/대. Cybercab 목표 생산 10만 대/년이면 연 $1억 절감이야. 4) 규제 장벽 제거 속도가 FSD·Robotaxi 확장 타임라인을 당기는 거야.",
     likes: 16,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-26T00:33:00.000Z",
     liked: false,
   },
@@ -4568,7 +4568,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "일본 배달 센터가 포화됐다는 게 핵심이야. 항구 직배송으로 바꿨다는 건 수요가 물류를 초과한 거야. 1) 배달 센터 포화 = 수요가 물류 처리 능력을 초과. 항구 직배송 전환 자체가 증거야. 2) 일본 = 세계 4위 자동차 시장. 여기서 Tesla 점유율 상승하면 아시아 FSD 수익화 도미노야. 3) 무료 슈퍼차징 + 보조금 조합이 사실상 가격 인하야. 엔화 약세 환경에서도 실질 구매 부담이 줄어드는 거야. 4) 일본 Q3 인도량이 폭발할 가능성 높아. 출하량 서프라이즈에 일본이 기여할 거야.",
     likes: 13,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-26T00:26:00.000Z",
     liked: false,
   },
@@ -4579,7 +4579,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "이거 맞아? $50B에 마진 80%? 계산해봤더니 진짜야. 1) 매출 $50B × 마진 80% = 영업이익 $40B. 단일 분기 반도체 역대 최대야. 2) HBM3E 수요가 공급을 압도해. AI 서버 폭발 → 공급 부족 → 가격 결정력 Micron으로 이전. 이 구조는 1~2년 유지돼. 3) EPS·매출·가이던스 트리플 비트 = 월가 추정 즉시 상향. FY27 추정 올라가면 목표주가도 올라가. 4) TSLA Colossus + SPCX AI 데이터센터가 Micron HBM 수요야. AI 인프라 투자가 살아있다는 증거야.",
     likes: 10,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-26T00:19:00.000Z",
     liked: false,
   },
@@ -4590,7 +4590,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TAM $1T 발언 그냥 지나치면 안 돼. 왜 이게 중요한지 정리해봤어. 1) CEO가 AI 자체 인프라 TAM $1T 발언. Google TPU·Meta MTIA 등 하이퍼스케일 커스텀 칩 설계를 AVGO가 독점에 가깝게 맡아. 2) XPU 설계 용역: 한번 계약하면 전환 비용이 엄청 커. 칩 아키텍처·소프트웨어·테이프아웃 전체가 AVGO에 의존하게 돼. 3) AVGO 점유율 30% 가정: $300B 매출 기회야. 현재 연매출 $50B 대비 6배야. 5~10년 성장 로드맵이야. 4) AI 인프라 테마에서 NVDA 다음으로 가장 확실한 수혜주야.",
     likes: 7,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-26T00:12:00.000Z",
     liked: false,
   },
@@ -4601,7 +4601,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "OpenAI IPO 지연이랑 Jalapeño가 같은 날 나온 게 우연이 아니야. 1) IPO 지연: SpaceX IPO가 AI 투자 자금을 선점한 거야. OpenAI가 $1T 밸류 IPO 하려면 시장이 SpaceX와 비교할 수밖에 없어. 타이밍 재는 거야. 2) Jalapeño 칩: 9개월 만에 Apple 협력으로 첫 AI 칩 개발. NVIDIA 의존도 낮추는 포석이야. 추론 비용 내려가면 서비스 마진 개선돼. 3) SPCX 입장: OpenAI IPO 지연 = 경쟁 IPO 이벤트 없음 = AI 투자 자금이 SPCX로 더 집중될 수 있어. 4) NVDA 입장: Jalapeño가 장기적으로 GPU 수요를 줄이는 헤드윈드야.",
     likes: 4,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-26T00:05:00.000Z",
     liked: false,
   },
@@ -4612,7 +4612,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "GDP 2.1%랑 Cathie 경고가 충돌하는 것 같지? 같이 읽어봐. 1) GDP 2.1% 최종치: 예상 1.6% 대폭 상회. 미국 경제가 예상보다 강해. 성장주에 유리한 환경이야. 2) AI 인프라 CapEx가 GDP 성장에 기여 중이야. Tesla·SpaceX·Micron 투자가 GDP에 잡히는 거야. 3) Cathie Wood 경고: 80~90년대 아시아 금융위기 패턴. 터키 등 신흥국 통화 방어 중. 달러 강세 + 금 상승 동반. 4) 두 신호 공존 = 미국 강 + 신흥국 약 구조. TSLA·SPCX·MU는 달러 표시 미국 자산이야. 신흥국 위기 때 안전자산 역할 가능해.",
     likes: 1,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-25T23:58:00.000Z",
     liked: false,
   },
@@ -4624,7 +4624,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab 150대 기가텍사스 외부 장거리 테스트 — 채널 체크해봤어. 이번에 포착된 게 단순 공장 내부 셔틀이 아니야. 150대가 기가텍사스 외부 공공도로에서 장거리 테스트 중이야. 1) 150대 동시 운행 = 플릿 레벨 시스템 검증 단계야. 개별 FSD 성능이 아니라 차량 간 통신·교통 대응·사고 회피 협업 프로토콜 테스트임. 2) 외부 공도 테스트 = FSD 상용화 직전 마지막 단계야. 텍사스 TxDMV 허가 없는 구간에서 먼저 테스트하고 이후 허가 구간 확대하는 순서. 3) 150대 동시에 문제 없으면 오스틴 2단계 확장에 투입될 가능성 높아. 4) Tesla가 Cybercab 월 생산 2,000대 → 10,000대 목표인데 현장 운용 테스트 없이는 스케일업 불가능해. 오스틴 로보택시 확대 타임라인이 가시화되는 신호야.",
     likes: 10,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-25T01:15:00.000Z",
     liked: false,
   },
@@ -4635,7 +4635,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 핀란드 Traficom 승인 — 채널 체크해봤어. 핀란드 교통안전청 Traficom이 Tesla FSD 승인한 게 오늘 핵심이야. 1) 핀란드는 EU 교통법 테스트 베드로 활용되는 나라야. EU 규제 프레임워크 선행 채택 사례가 많아서 핀란드 승인이 EU 全 회원국 확산 선례가 돼. 2) 북유럽 기상 조건 극복 증명 — 눈·빙판·저조도 환경에서 FSD 작동 확인됨. 유럽 전체 기상 조건 승인의 기술적 증거야. 3) 핀란드 Tesla 등록 약 2만 8천대. FSD 전환율 20% = 5,600 구독 × €199 = 월 €111만. 작아 보여도 이게 도미노 첫 번째 타일이야. 4) EU 상호 인정 원칙에 따라 핀란드 승인 후 6개월 내 스웨덴·노르웨이·덴마크가 자동 인정 가능해. FSD 유럽 수익화의 문이 열린 거야.",
     likes: 7,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-25T01:08:00.000Z",
     liked: false,
   },
@@ -4646,7 +4646,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla Fleet Network Income 채널 체크해봤어 — 플릿 수익화가 새로운 EPS 레이어야. 1) 개념: 개인 소유 Tesla 차량을 로보택시 네트워크에 연결해서 차주가 운임 수익 일부를 받는 구조. Tesla는 수수료 취함. 2) 수익 공유: 운임의 25~30%를 Tesla가 네트워크 수수료로 수취. 나머지 70~75%는 차주에게. 3) 규모 계산: FSD 구독 차량 142만 대 중 Fleet 참여 10% = 14만 2천대. 차량 1대 하루 4시간 운행 × $25/시간 × 0.27 = 일 $27. 14만 2천대 × $27 = 일 $380만 = 연 $13.8억 순수 네트워크 수수료. 4) 마진 90%+ = 이게 직접 EPS에 찍혀. 자동차 판매 없이 소프트웨어처럼 돈 버는 구조가 현실화된 거야. Tesla가 플랫폼 비즈니스로 전환하는 S커브 초입이야.",
     likes: 4,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-25T01:01:00.000Z",
     liked: false,
   },
@@ -4657,7 +4657,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ARK $21.25M TSLA 순매수 + $4,600 목표가 — 채널 체크해봤어. 오늘 두 신호가 동시에 나왔어. 1) ARK 주간 TSLA 순매수 $21.25M — ARKK·ARKQ·ARKX 합산이야. ETF 총자산 대비 0.8%를 한 주에 한 종목에 집중한 건 드물어. 2) ARK $4,600 목표가 유지 — 현재가 대비 업사이드 4배. 이 목표가 근거 분해해봐. FSD 소프트웨어 $1,000B TAM × Tesla 점유율 30% + Optimus 10억 대 × $20K × 50% 마진 + 에너지 사업 × 10배 → 합산 DCF가 $4,600 산출이야. 3) ARK가 이 수준에서 계속 매수하면 ETF 패시브 자금 유입도 같이 따라와. ARK 매수 → ETF AUM 증가 → TSLA 추가 수급. 4) ARK 목표가가 과해도 의미 있어 — 기관 커버리지에서 이 숫자가 앵커로 작동하면 목표주가 업사이드 논의 기준이 달라지거든. 매수 신호야.",
     likes: 41,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-25T00:54:00.000Z",
     liked: false,
   },
@@ -4668,7 +4668,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla 사고 소송 신호 분해해봤어 — 이게 왜 매수 기회인지. 오늘 TSLA 관련 사고 소송 뉴스 나왔어. 매도 이유처럼 보이지만 반대야. 1) FSD 도입 이후 주행 거리당 사고율이 연 -23%씩 감소 중이야. 소송 건수 자체가 줄고 있어. 2) 소송 패턴: 언론에 크게 나오는 소송의 73%가 FSD 미사용 상태 사고야. 자율주행 사용 중 사고 소송은 훨씬 적고 Tesla 승소율 높아. 3) 법적 선례: 미국 법원에서 FSD 관련 소송 Tesla 승소율 81%. 법적 리스크가 실제로 낮다는 증거야. 4) 주가 패턴: 사고 소송 뉴스 후 평균 -1.8% 단기 하락 → 14일 내 완전 회복 + 추가 상승이 지난 3년간 8번 반복됐어. 소송 뉴스 = 매도가 아니라 단기 매수 기회라는 게 데이터가 증명해. 이 패턴 알면 카탈리스트야.",
     likes: 34,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-25T00:47:00.000Z",
     liked: false,
   },
@@ -4679,7 +4679,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla 로보택시 물류 채용 공고 — 채널 체크해봤어. Tesla 채용에 Robotaxi Logistics 포지션 20+ 올라온 게 오늘 신호야. 1) 포지션 분석: Fleet Operations Manager, Logistics Coordinator, City Launch Manager 등 운영 관련이야. 기술 개발이 아니라 실제 서비스 확장 준비임. 2) 대상 도시: Austin TX (현재), San Francisco CA (신규), Phoenix AZ (신규), Denver CO (신규). 4개 도시 동시 확장 준비 진행 중이야. 3) 타임라인 역산: 채용 → 교육 3개월 → 서비스 준비 3개월 = 6개월 후 신규 도시 론칭. 빠르면 Q4 2026~Q1 2027 멀티시티 론칭이야. 4) 물류 인프라 확장 = Cybercab 생산 증가와 맞물려. 생산만 늘리는 게 아니라 운영 조직도 동시에 스케일업 중이야. 채용 공고는 실행 계획이 확정됐다는 증거야.",
     likes: 27,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-25T00:40:00.000Z",
     liked: false,
   },
@@ -4690,7 +4690,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX NASDAQ-100 7월 6일 편입 — 채널 체크해봤어. 오늘 SPCX 최대 카탈리스트야. 1) 편입 공식 발표: 6월 중순 NASDAQ이 7/6 편입 확정. 2) 자동 매수 구조: QQQ AUM $320B × SPCX 비중 0.15% 가정 = $4.8억 강제 매수. 가격·실적 무관한 기계적 수요야. 3) 시퀀스: 발표 후 패시브 선행 매수 → 7/6 리밸런싱 당일 최대 수요 → 이후 지속 보유. 세 구간 모두 수급 개선이야. 4) S&P500 편입 선례: 편입 발표일부터 발효일까지 평균 +8.6% 상승. 이후 60일 +3.2% 추가. SPCX가 이 패턴 따른다면 7/6까지 포지션 유지 유리해. 5) QQQ 외에도 iShares NASDAQ-100·Invesco QQQ Trust 등 추종 펀드 50개+가 있어. 합산 수동 매수 규모가 훨씬 커. 구조적 수급 개선이 확정된 거야.",
     likes: 50,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-25T00:33:00.000Z",
     liked: false,
   },
@@ -4701,7 +4701,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX Starmind 계약 — 채널 체크해봤어. Starmind가 SPCX와 계약 체결한 게 오늘 주목할 신호야. 1) Starmind는 AI 기반 기업 지식관리 플랫폼이야. Fortune 500 고객 50+ 보유. 2) 계약 내용: Starlink Direct-to-Cell + Starmind AI 통합 솔루션. 기업 직원이 어디서든 AI 어시스턴트에 연결되는 서비스야. 3) B2B 수익 구조: 기업당 월 $500~2,000 구독. 50개사 × $1,200 평균 = 월 $6만. 단독으론 작아 보여도 Starlink B2B 생태계 확장의 증거야. 4) Starlink B2B가 왜 중요한가: B2C ARPU $65 대비 B2B ARPU $1,200+. 고객 수가 절반이어도 매출은 20배. 믹스 개선이 SPCX 수익성을 높이는 핵심 드라이버야. Starmind 같은 AI 기업 파트너십이 B2B 파이프라인을 확장하고 있어.",
     likes: 43,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-25T00:26:00.000Z",
     liked: false,
   },
@@ -4712,7 +4712,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX AI1 위성 스펙 분해해봤어 — 이게 Starlink 차세대 기반이야. SpaceX가 공개한 AI1 위성 스펙 채널 체크해봤어. 1) 규모: 처리 능력 기존 V3 대비 10배. 온보드 AI 칩 탑재 확인. 2) AI1의 의미: 위성 자체가 엣지 컴퓨팅 노드야. 지상국 없이 위성 간 AI 처리가 가능해. 레이턴시 현재 23ms → 8ms로 낮아지는 게 핵심. 3) 적용: Direct-to-Cell 다음 세대 기술. 일반 스마트폰에서 위성 직접 접속 + AI 추론 = 지구상 어디서나 AI 사용 가능. 4) 경쟁사 우위: OneWeb·Amazon Kuiper는 이 수준의 온보드 AI 탑재 위성 없어. SpaceX 독점적 기술 경쟁력이야. 5) 상업화 타임라인: AI1 배치 시작하면 Starlink 서비스 단가 상향 가능. ARPU 개선 → SPCX 수익성 직접 연결. 위성 하드웨어가 AI 경쟁력의 기반이야.",
     likes: 36,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-25T00:19:00.000Z",
     liked: false,
   },
@@ -4723,7 +4723,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX Oldendorff 화물선 계약 — 채널 체크해봤어. Oldendorff Carriers가 Starlink 해상 통신 계약 체결한 게 오늘 신호야. 1) Oldendorff는 독일계 글로벌 벌크 화물선 운영사야. 선박 700척+ 운영 중. 2) 계약 내용: Starlink Maritime 서비스 전 선대 도입. 선박당 월 $1,000~5,000 Maritime 요금제. 700척 × $3,000 평균 = 월 $210만. 3) Maritime Starlink가 왜 비싼가: 선박은 이동형이라 지상 광케이블 불가능. Viasat·Intelsat 기존 서비스 대비 Starlink가 속도 10배·비용 50% 낮아. 4) 해운 시장 TAM: 글로벌 선박 10만 척 × $3,000/월 = 연 $36억. Starlink 점유율 80% 목표면 $28.8억 maritime 매출이야. Oldendorff 계약이 해운 대형 고객 도미노의 시작이야.",
     likes: 29,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-25T00:12:00.000Z",
     liked: false,
   },
@@ -4734,7 +4734,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla+SpaceX RenewHome 시너지 — 채널 체크해봤어. Renew Home이 Tesla Powerwall + Starlink 통합 주택 솔루션 출시한 게 오늘 포인트야. 1) Renew Home: 미국 최대 주택 에너지 관리 플랫폼. 가입 가정 350만 호. 2) 솔루션: Powerwall 2 + Starlink 기본 세트. 가정용 에너지+통신 올인원. 번들 가격 $6,500. 3) 수익 구조: Tesla Powerwall 마진 30% = $1,950/가정. Starlink 월 $120 구독 = 연 $1,440. 가정당 연간 Tesla·SpaceX 합산 수익 $3,390. 4) Renew Home 350만 가정 × 10% 전환 = 35만 가정 × $3,390 = 연 $11.9억 번들 수익. 5) Tesla와 SpaceX가 같은 가정에 제품 2개 팔면서 에너지+통신 인프라를 장악하는 거야. Elon 생태계 통합 전략이 가정용 시장까지 들어오는 거임. TSLA·SPCX 동시 수혜야.",
     likes: 76,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-25T00:05:00.000Z",
     liked: false,
   },
@@ -4745,7 +4745,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Micron Q3'26 어닝 서프라이즈 — 채널 체크해봤어. MU 어닝 서프라이즈가 TSLA·SPCX 포트폴리오에 왜 중요한지 분해해봐. 1) MU Q3'26: 매출 $10.8B (컨센 $9.9B 상회), EPS $2.05 (컨센 $1.62 상회). HBM3E 매출이 전 분기 대비 2배. 2) HBM3E = AI 가속기 필수 메모리. NVIDIA H200·GB300 GPU 핵심 부품이야. MU 서프라이즈 = AI 서버 투자 지속 확인. 3) TSLA 연결: Cybercab FSD AI 추론 칩 → Colossus AI 데이터센터 확장 → HBM3E 수요 증가. Tesla 자체 DOJO 칩 외에 상용 AI칩 활용 구조에서 MU 실적이 AI 수요 바로미터야. 4) SPCX 연결: SpaceX Colossus에 H200 400K 확장 계획 → MU HBM3E 수요 직접 연결. 5) AI 반도체 수요 강세 = TSLA·SPCX가 투자하는 AI 인프라 수요도 건강하다는 신호야. 포트폴리오 방향성이 맞아.",
     likes: 58,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-24T23:58:00.000Z",
     liked: false,
   },
@@ -4757,7 +4757,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla 사고 오보 패턴 채널 체크해봤어 — 이번 SFO 사이버트럭 건도 똑같아. 언론 초기 보도 '자율주행 사고' → NTSB 예비 보고서 '운전자 과실' → 정정 보도 묻힘. 1) 사고 당시 FSD 미사용 상태였음. 2) NTSB 현장 조사 결과 운전자 급제동 실패. 3) 초기 헤드라인이 주가 -2% 유발 → 보고서 후 회복. 이 패턴을 카탈리스트로 역이용하는 게 가능해. Tesla 관련 사고 뉴스 나오면 NTSB 보고서 나올 때까지 기다리는 것만으로도 알파 발생해. 언론 바이어스를 이해하면 매수 타이밍이 보이는 거야.",
     likes: 67,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-24T01:15:00.000Z",
     liked: false,
   },
@@ -4768,7 +4768,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Q2 440K 채널 체크 분해해봤어 — 컨센서스 384K 상회가 어떻게 가능한지. 1) 상하이: Model 3/Y 추가 시프트 가동 → 주당 6,000대 추가. 2) 베를린: Q1 정비 이슈 완전 해소, Model Y RWD 생산라인 100% 정상화. 3) 기가 텍사스: Cybertruck 슬로우다운 → 라인 Model Y 전환으로 볼륨 확보. 세 공장 다 업사이드 있어. 384K가 floor이고 440K가 ceiling인 상황이야. 7월 초 실제 발표 전에 포지션 잡는 게 맞아. Q2 서프라이즈 → 어닝 추정 상향 → 주가 리레이팅 시퀀스야.",
     likes: 98,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-24T01:08:00.000Z",
     liked: false,
   },
@@ -4779,7 +4779,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 유럽 6개국 승인의 진짜 의미 분해해봤어 — 표면적으론 단순 규제 통과인데 안을 보면 달라. 1) EU 규제 프레임워크(UNECE WP.29 R157)에서 Tesla FSD가 '조건부 자율주행' 인증 받은 거야. 2) 6개국 동시 승인 = 3개 이상 EU 회원국 상호 인정 원칙 발동 → 나머지 EU 21개국 자동 인정 절차 개시. 3) 유럽 Tesla 보유 대수 약 70만 대 × FSD 구독 전환율 20% = 14만 구독 × €199/월 = 월 €2,800만 추가 recurring revenue. 4) FSD 구독 마진 80%+ = 이게 바로 EPS에 찍히는 수치야. 유럽 시장 열림이 FSD 구독 매출 성장의 2번째 S커브야.",
     likes: 6,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-24T01:01:00.000Z",
     liked: false,
   },
@@ -4790,7 +4790,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla Megapack AUD 35억 계약 숫자 분해해봤어 — 역대 최대 단일 ESS 계약의 의미. AUD 35억 ≈ USD 22억이야. 1) Tesla 에너지 부문 FY25 연간 매출 $14B 대비 이 계약 하나가 ~16%야. 2) Megapack 단가 $1.5M/MWh 역산하면 이 계약 약 1,467MWh 규모. 3) 납품 기간 3년 = 연간 $7억 에너지 매출 보장. 4) Neoen이 1위 고객사가 되면 후속 확장 계약 가능성 높아. 에너지 부문 마진 30%+ × 이 계약 = 연 $2억+ 영업이익 추가. FY26 에너지 매출이 자동차 매출 추월하는 시나리오의 핵심 건이야.",
     likes: 3,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-24T00:54:00.000Z",
     liked: false,
   },
@@ -4801,7 +4801,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX $89B 채권 발행 구조 채널 체크해봤어 — 단순 자금 조달이 아니야. 1) Starlink V3 Gen2 위성 생산라인 증설: 현재 4,000기 → 목표 12,000기. 제조 단가 낮추려면 생산라인 자동화 투자 필요. 2) Colossus 2단계: H100 200K → H200 400K. 이게 Anthropic·Google의 다음 계약 용량을 결정해. 3) 발행 타임라인: BBB+ 첫 우주 기업 채권 → 보험사·연기금 의무 편입 대상 → 초과 수요 예상 → 발행 금리 T+80~100bp 수준 추정. 4) 브릿지론 $20B 상환 + 확장 투자 자금 나머지. 채권 성공 발행이 SpaceX 재무 성숙도의 증거야.",
     likes: 20,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-24T00:47:00.000Z",
     liked: false,
   },
@@ -4812,7 +4812,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Grok5 10T 파라미터 + Tesla FSD 통합 가능성 채널 체크해봤어. 1) 10T 파라미터 의미: GPT-4o 대비 ~5.5배 규모. 추론 속도는 느려지지만 정확도·맥락 이해가 올라가. 2) Tesla FSD v13.x에서 xAI Grok 통합 실험 진행 중 확인됐어. 차량 내 AI 어시스턴트 → FSD 예외 상황 처리 보조 역할. 3) On-device vs 클라우드: 10T 파라미터를 차량 칩에 올리는 건 불가능. 클라우드 추론 방식으로 Starlink 연결 통해 Colossus에서 추론. 4) Grok5 + Starlink + Colossus = Tesla 차량이 이동형 AI 단말이 되는 거야. 경쟁사가 이 수직통합 복제하려면 5년 이상 걸려.",
     likes: 17,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-24T00:40:00.000Z",
     liked: false,
   },
@@ -4823,7 +4823,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "매크로 3가지 동시 악재 분해해봤어 — DXY 103 반등·이란 불발·연준 동결. 1) DXY 103: 달러 강세는 달러 표시 수출 기업(Tesla 해외 매출 50%+)에 역풍. 단기 EPS 달러 환산 불리. 2) 이란 핵 협상 불발: WTI 유가 $5~8 추가 상승 예상. Tesla Gigafactory 전력 비용 증가. 단, Megapack·태양광 수요 동반 증가 → 에너지 사업 긍정. 3) 연준 동결 연장: 할인율 높아지면 DCF 기반 성장주 밸류에이션 압박. 그러나 TSLA·SPCX는 DCF 의존도보다 모멘텀·스토리 기반 멀티플이 지배적. 결론: 단기 노이즈, 펀더멘털 변화 없음. 조정이면 매수 기회야.",
     likes: 14,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-24T00:33:00.000Z",
     liked: false,
   },
@@ -4834,7 +4834,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "DeepSeek 음성AI + Tesla FSD 통합 채널 체크해봤어 — 비용 구조 혁명이야. 1) DeepSeek R2 음성 모델: 실시간 음성 인식 + TTS + 맥락 대화. API 비용 $0.002/1K tokens = OpenAI 대비 1/20. 2) Tesla FSD 차내 AI 현재 구조: OpenAI GPT 기반 차량 어시스턴트 + Elon이 대안 검토 중. 3) DeepSeek 통합 시 원가 절감: 전 세계 400만 FSD 구독 차량 × 차량당 월 AI 추론 비용 절감 = 연 수천만 달러 비용 절감. 4) FSD 구독 마진이 추가로 개선됨. 5) 중국 규제 리스크: 미국이 DeepSeek API 사용 금지하면 플랜 B 필요. Grok5가 플랜 B야. 비용+성능 최적화 로드맵이 명확해.",
     likes: 11,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-24T00:26:00.000Z",
     liked: false,
   },
@@ -4845,7 +4845,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Optimus 중국 공급망 채널 체크해봤어 — $10K 원가 구조 어떻게 가능한지. 1) 감속기(하모닉 드라이브): BYD 계열사 단가 $800/관절 × 12관절 = $9,600. 미국산 Harmonic Drive $3,000/관절이면 $36,000. 2) 전자피부 센서: CATL 신소재 부문 단가 미공개지만 중국 MEMS 센서 가격 90% 저렴. 3) 전기모터: Foxconn 정밀 모터 부문 단가 최적화. 합산하면 BOM(부품 원가) $10K 이하 달성 가능해. 지정학 위험이 있지만 공급망 이원화 완료까지 중국 공급망이 유일한 현실적 옵션이야. $20K 판매가 → $10K 원가 = 로봇 마진 50%는 아이폰 마진 40% 능가해.",
     likes: 8,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-24T00:19:00.000Z",
     liked: false,
   },
@@ -4856,7 +4856,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starlink 9,200만 가입자 수익화 구조 분해해봤어 — 표면적 숫자보다 단가 믹스가 중요해. 1) 소비자: 월 $25~130. 평균 $65 가정. 2) 기업: 월 $500~3,000. 평균 $1,200 가정. 3) 정부·군사: 월 $10,000+. 소비자 85% + 기업 13% + 정부 2%로 믹스 추정. 가중 평균 ARPU $150/월. 9,200만 × $150 = 월 $138억 = 연 $1,656억 매출. Starlink 단독으로 이미 Fortune 50 수준이야. Direct-to-Cell 가입자 추가되면 ARPU는 낮아지지만 볼륨이 10배 뛰어. 2027년 1억 5천만 돌파하면 Starlink가 세계 최대 통신사 중 하나가 되는 거야.",
     likes: 5,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-24T00:12:00.000Z",
     liked: false,
   },
@@ -4867,7 +4867,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla 한국 FSD 서버 이전 채널 체크해봤어 — 이게 단순 인프라 이슈가 아니야. 1) 서버 이전 이유: 한국 개인정보보호법(PIPA)에서 금융·차량 데이터 국내 보관 의무화 추진 중. FSD 주행 데이터 = 개인 위치정보로 분류될 수 있어. 2) 규제 타임라인: 개정안 통과 시 외국 기업 6개월 이행 유예. Tesla가 선제적으로 움직인 거야. 3) 한국 FSD v13 출시 타임라인: 서버 이전 완료 → ADAS 인증(국토부) → 실도로 테스트 승인 순서. 빠르면 Q4 2026 출시. 4) 한국 Tesla 등록 대수 약 4만 7천 대. FSD 전환율 20% = 9,400 구독 × $199/월 = 월 $187만 한국 FSD 매출. 작아 보이지만 아·태 도미노의 시작이야.",
     likes: 2,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-24T00:05:00.000Z",
     liked: false,
   },
@@ -4878,7 +4878,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla 로보택시 월 500만 마일 숫자 분해해봤어 — Waymo 추격 속도가 핵심이야. 1) Waymo: 2009년 시작, 2024년 700만 마일/월. Tesla 로보택시: 2026년 1월 오스틴 출시 → 6개월만에 500만 마일. 2) 학습 데이터 누적 속도: Waymo 지도 기반 vs Tesla 비전 기반. Tesla는 주행 거리 늘수록 AI 모델 품질이 Waymo보다 빠르게 올라가. 3) 수익성 분기점 1,000만 마일/월: 추정 운임 $2/마일 × 1,000만 = 월 $2,000만 매출. 차량 감가·보험·유지비 제외 후 흑자 전환 지점이야. Q4 2026 달성 가능하면 로보택시 사업부 독립 공시 시작될 수 있어. 이게 Tesla 멀티플 리레이팅의 가장 강력한 카탈리스트야.",
     likes: 19,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-23T23:58:00.000Z",
     liked: false,
   },
@@ -4889,7 +4889,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Dragon XL + Starlink 100Gbps 모듈 채널 체크해봤어 — 우주 데이터센터 로드맵이야. 1) Dragon XL: 발사 중량 5.5t, ISS 화물 운반 설계. 100Gbps Starlink 모듈 탑재 확인. 2) 기술 의미: 현재 ISS ↔ 지상 간 데이터 속도 600Mbps. 100Gbps로 오르면 167배. 우주 실험 데이터 실시간 전송 가능. 3) 우주 데이터센터 플랜: Starlink 위성이 분산 컴퓨팅 노드 역할. 지구 저궤도 냉각·전력 이점 활용. 4) AWS·Azure 경쟁: 2030년대 우주 클라우드 TAM $500B 추정. SpaceX만 발사체+통신+컴퓨팅 수직통합 가능한 유일한 플레이어야. 이 로드맵 완성되면 SPCX는 AWS+SpaceX 밸류에이션 받아야 해.",
     likes: 16,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-23T23:51:00.000Z",
     liked: false,
   },
@@ -4900,7 +4900,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ARK $22M SPCX 매수 패턴 채널 체크해봤어 — 기관 수급 신호 분석이야. 1) ARK SPACE ETF 주간 순매수 $22M은 ETF 운용 자산 대비 약 3.2%. 단일 주 이 비중 집중 매수는 이례적이야. 2) S&P500 편입 후 기관 자금 유입 흡수하는 포지션 확대 전략으로 읽혀. 3) Cathie Wood $300 목표가 분해: SpaceX IPO 시 $300B 밸류 가정. SPCX가 SpaceX 30% 지분 보유라면 SPCX 기업가치 $90B. 현재 시총 $45B → 업사이드 2배. 2030년 로드맵이면 연 CAGR 14%. 4) ARK 매수 → ETF 지수 편입 관련 패시브 자금 유입 → 추가 수급 강화 순환 구조. 역발상 매수의 완성은 왜 지금이냐에 있고 ARK가 그 이유를 알고 있는 거야.",
     likes: 13,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T23:44:00.000Z",
     liked: false,
   },
@@ -4912,7 +4912,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "사이버캡 기가 텍사스 테스트 — 현장 채널 체크 해봤어. Joe Tegtmeyer가 직접 포착한 영상 보면 10대가 한 팩으로 움직이고 있어. 이게 단순 기능 테스트가 아니야. 군집 주행(fleet coordination) 테스트야. 로보택시 서비스에서 여러 차량이 동시에 운영될 때 필요한 시스템 검증이에요. 신규 FSD 카메라 탑재 확인됐고 기가 텍사스 서비스 가동 1주년 시점에 이게 나왔다는 게 메시지야. Elon이 올해 하반기 로보택시 서비스 확대 얘기했는데 이게 그 전제 조건 달성 중이야. S커브 초입 지금이 진입 타이밍이야.",
     likes: 85,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T09:12:00.000Z",
     liked: false,
   },
@@ -4923,7 +4923,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "라스롭 메가팩토리 풀 캐파 숫자 분해해봤어 — Tesla Semi + Megapack 동시 풀 가동이야. 1) Tesla Semi: Class 8 전기 트럭 납품 본격화 단계. PepsiCo·UPS 등 초기 고객사 인도량 증가. 2) Megapack: 유틸리티급 ESS 수요 폭발 중. 美 전력망 투자 + 데이터센터 백업 전력 수요가 두 배로 쌓이고 있어. 라스롭 풀 캐파 = Q2 에너지 배송량 최고치 경신 전망. Q1 에너지 수익이 $2.7B이었는데 Q2는 그 이상 나올 가능성 높아. 자동차 부문 둔화 우려 상쇄하고도 남아. TSLA 에너지 사업 마진이 30%대 → EPS 서프라이즈 구조야.",
     likes: 24,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T09:04:00.000Z",
     liked: false,
   },
@@ -4935,7 +4935,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX 3관왕 신용등급이 오늘 핵심이야. 이유는 — Moody's Baa1, Fitch BBB+, S&P BBB+ 세 곳 동시 획득은 단순 신용 이벤트가 아님. 연기금·국부펀드·보험사 같은 기관 투자자들은 투자등급 이상 자산만 매수 가능한 내부 정관이 있어. SpaceX가 오늘부터 그 문을 연 거야. 전 세계 기관 자금 운용 규모가 수천조 달러인데 그 중 일부만 SPCX로 흘러와도 수요 구조가 완전히 달라지는 거임. 채권 발행 금리도 이전 대비 1~2% 낮아져. $50B 발행하면 연 $500~1,000M 이자 절감이야. 재무 효율화가 그냥 숫자 이상임. SpaceX가 공개시장에 완전히 편입되는 역사적 순간이야.",
     likes: 31,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T08:58:00.000Z",
     liked: false,
   },
@@ -4946,7 +4946,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX 현금 보고 한 가지 숫자가 눈에 들어왔어 — $100.8B. FY25 말 $34.7B에서 6개월에 3배야. 어떻게 이게 가능하냐 분해해보면 Starlink 구독 폭발 + Space Force $22.9억 + IPO 자금 조달이 동시에 터진 거임. 이 중 Starlink 구독이 핵심이야. 가입자 수천만 명에 기업·정부 Starlink 단가가 일반 소비자의 5~10배야. 월 $1,000 기업 요금제 × 100만 기업 고객 = 월 $10억이야. 이게 매달 쌓이는 거거든. $100B 현금이면 외부 차입 없이도 Starlink V3 전체 위성 생산비 + Colossus AI 데이터센터 확장 + M&A까지 다 자체 조달 가능한 수준임. 이걸 알고 SPCX 가치를 다시 계산해봐야 함.",
     likes: 38,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T08:50:00.000Z",
     liked: false,
   },
@@ -4957,7 +4957,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX 채권 발행 쪽 채널 체크해봤는데 — 이번 채권이 단순 자금 조달이 아니야. 타임라인이 있어. 1) SEC 사전 통보 → 2) 3사 신용등급 획득 → 3) 채권 발행 → 4) 브릿지론 상환 순서임. 이 흐름이 며칠 내에 다 일어났어. 준비가 다 끝났다는 거야. 투자등급 BBB+ 첫 채권은 시장에서 희귀한 우주 섹터 채권으로 수요 초과 예상됨. 금리 프리미엄도 낮을 거야. 채권 발행 성공하면 SpaceX가 주식·채권 양면에서 기관 투자자를 끌어들이는 구조가 완성돼. 우주 기업 최초로 투자등급 채권 발행 — 교과서에 남을 이벤트임.",
     likes: 45,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-23T08:42:00.000Z",
     liked: false,
   },
@@ -4968,7 +4968,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX IPO 주가 흐름 다시 뜯어봤는데 — $155 공모 → $200 최고 → $168 현재, 이 10거래일 사이클에 메시지가 있어. 처음 $200까지 오른 건 IPO 희귀성 프리미엄이야. 유동성 없던 SpaceX에 공개시장 자금이 한꺼번에 들어간 거거든. 그러다 $168로 조정된 건 단기 차익 실현 + 시장이 적정 가격 찾는 과정이야. 중요한 건 공모가 $155 대비 여전히 +8.4%라는 것. 펀더멘털 악화가 아니라 가격 발견 프로세스임. $100 이하로 취득한 pre-IPO 홀더들은 여전히 +68%야. 시장이 $155~160 공모가 지지선을 지킨다면 장기 투자자 입장에서 이 조정은 노이즈야.",
     likes: 22,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T08:34:00.000Z",
     liked: false,
   },
@@ -4979,7 +4979,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX Colossus AI 고객 리스트 보고 한 가지 패턴이 눈에 들어왔어 — Anthropic, Google, Reflection AI. 이 세 곳이 공통점이 있어. 다들 AI 모델 학습에 GPU가 엄청나게 필요한데 NVIDIA GB300을 확보하려면 SpaceX Colossus가 현재 가장 빠른 경로야. 왜냐 — Colossus가 GB300 즉시 접근 계약을 체결했거든. AWS·Azure·GCP보다 최신 칩을 먼저 받는 구조임. Reflection AI $6.38B이 3번째 고객이라는 게 포인트야. 이 계약 구조가 반복되면 Colossus AI는 AI 기업들의 필수 인프라로 자리잡는 거임. SpaceX 수익 모델이 우주 → 위성 통신 → AI 컴퓨팅으로 확장되는 걸 숫자로 보여주는 거야.",
     likes: 29,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T08:26:00.000Z",
     liked: false,
   },
@@ -4990,7 +4990,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Jefferies $375가 오늘 TSLA 핵심이야. 이유는 — 목표주가 상향이 의미있는 건 단순 숫자가 아니라 프레임 변화임. Jefferies가 Tesla를 '자동차 회사'가 아니라 '멀티버티컬 AI 플랫폼'으로 분류하기 시작한 거야. 이 프레임 전환이 기관 투자자들에게 영향을 미쳐. 자동차 섹터 PE가 아니라 AI 플랫폼 배수로 봐야 한다는 논리가 커버리지 리포트에 공식적으로 들어간 거거든. 상향 근거 3가지 — Cybercab 속도, Optimus 7~8월 양산, FSD 142만 구독. 이 3개가 동시에 수렴하는 분기에 목표주가가 올라가는 거야. 다른 증권사들도 따라올 가능성이 높아.",
     likes: 36,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T08:18:00.000Z",
     liked: false,
   },
@@ -5001,7 +5001,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TSLA Q2 컨센서스 보고 한 가지 숫자가 눈에 들어왔어 — 384,022대. 왜 이 숫자가 중요하냐. Q1 345k에서 +11%인데 이 회복 속도가 시장 예상보다 빨라. 상하이가 Model 3 30,217대 +4% 달성하면서 선두 역할 한 거야. 유럽 수출 포함된 숫자라는 것도 중요해. 기가상하이 가동률이 95%+ 유지되면 이 속도가 Q3에도 이어지는 거임. 7월 초 실제 발표가 384k 초과하면 '예상 상회' 모멘텀이 주가에 즉각 반영돼. 반대로 미달하면 단기 실망 매물이 나와. 384k 라인이 지금 가장 중요한 숫자야.",
     likes: 19,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-23T08:10:00.000Z",
     liked: false,
   },
@@ -5012,7 +5012,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "중국 CAAM 데이터 쪽 채널 체크해봤는데 — Tesla가 Q2에 SAIC와 함께 단 2개 브랜드만 YoY 플러스야. BYD -7%, GM -10%, Toyota -12% 다 빠지는 시장에서 Tesla만 +4%. 이게 가격 경쟁에서 이긴 게 아니라 브랜드 포지셔닝에서 이긴 거야. Tesla는 중국에서 프리미엄 세그먼트를 지켜가고 있어. CAAM이 Model 3를 세단으로 분류했는데 이 카테고리에서 혼자 성장한다는 게 경쟁력 지표야. 중국 FSD 서비스 인허가 나오면 이게 구매 동인이 하나 더 생기는 거야. 중국 리스크가 다시 부각될 때마다 이 데이터 꺼내봐.",
     likes: 2,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-23T08:04:00.000Z",
     liked: false,
   },
@@ -5023,7 +5023,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Optimus 프리몬트 사진 봤는데, 속도가 예상보다 빠르게 진행되고 있어 — Model S/X 라인이 이미 Optimus 전용으로 전환 완료됐어. 7~8월 양산 시작이 Elon 직접 확인이라는 게 중요해. 통상 이런 발언은 현장 준비가 90%+ 됐을 때 나와. 연간 1M대 목표가 프리몬트 혼자라는 것도 눈여겨봐야 해. 오스틴 2공장 10M대 계획까지 더하면 Tesla 로봇 생산 capacity가 어마어마한 거야. 2027년 외부 판매 시작 시점에 로봇 사업 EPS 기여가 처음으로 실적에 잡혀. 그때 Tesla PER이 어떻게 바뀌는지 상상해봐. 자동차 P/E가 아니라 로봇 P/E로 바뀌는 날이 올 거야.",
     likes: 5,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T08:58:00.000Z",
     liked: false,
   },
@@ -5034,7 +5034,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "GOOGL -6% 결과랑 딱 맞아 떨어져서 오래전부터 생각해온 걸 정리함 — AI 모델 경쟁의 진짜 해자는 GPU나 데이터센터가 아님. John Jumper 한 명이 Anthropic 가니까 Alphabet 시총이 $344B 줄었어. 노벨 화학상 연구자 1명 = 수십조 원 기업 가치. 이게 인프라로 복제 가능하냐? 불가능해. GPU 수만 대는 돈으로 사면 되지만 AlphaFold 만든 사람은 돈만으론 대체가 안 돼. AI 경쟁이 하드웨어 군비 경쟁에서 인재 보유 전쟁으로 이동하는 신호야. 구글이 이 전쟁에서 지면 Gemini 성능 격차가 벌어지는 거임. 앞으로 빅테크 AI 인재 보상 패키지가 천문학적으로 올라갈 거고 이게 마진에 부담이 될 수 있어.",
     likes: 8,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T08:46:00.000Z",
     liked: false,
   },
@@ -5045,7 +5045,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "MSFT Xbox 쪽 채널 체크해봤는데 — 스핀오프·JV·매각 3가지 옵션 다 열어두고 검토 중이야. 이게 발표라기보다 의사결정 프로세스가 외부에 흘러나온 거야. 왜 지금이냐 — 현금 $103.8B에 Copilot·Azure가 폭발적으로 성장하는데 Xbox 성장률이 상대적으로 낮아. Activision까지 $69B 투자한 게임 포트폴리오가 AI 쪽 자원 배분을 제약하고 있을 수 있어. Xbox 매각으로 수십억 달러 확보하면 OpenAI 추가 투자든 Anthropic 지분이든 AI 베팅 여력이 생기는 거임. 시장 반응이 긍정적이면 MSFT가 'pure AI+cloud play'로 재포지셔닝되는 거야. PVGO 36%가 AI 수익화 가시화되면 S&P500 평균(55%) 수준으로 올라가는 밸류에이션 재평가 시나리오가 나와.",
     likes: 11,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-23T08:38:00.000Z",
     liked: false,
   },
@@ -5057,7 +5057,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX Cursor $80B 인수 분석 — 표면적으로는 AI 코딩 도구 M&A인데 본질은 SpaceX의 소프트웨어 수직통합 전략임. Starlink 통신 인프라 위에 개발자 도구 레이어를 올리는 거야. 우주 인프라 기업이 개발자 플랫폼을 가져가면 뭐가 달라지냐 — B2B 엔터프라이즈 고객이 Cursor 쓰다가 자연스럽게 Starlink 클라우드로 이동하는 락인 구조가 만들어지는 거임. Cursor ARR이 수십억 달러 수준이면 SpaceX 전체 수익 구조가 반복 매출 기반으로 재편돼. Falcon 발사가 프로젝트성이라면 Cursor 구독은 매달 들어오는 거거든. 밸류에이션 $350B이 기존 사업 기준이었다면 Cursor 인수 후엔 소프트웨어 프리미엄이 더해지는 거야. SPCX 장기 투자 시나리오에 소프트웨어 레이어가 추가되는 날이야.",
     likes: 14,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:58:00.000Z",
     liked: false,
   },
@@ -5068,7 +5068,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla Semi LIDAR FSD 보정 포착 — 카메라 온리 원칙 포기 아님. 이 구분이 중요해. LIDAR로 정밀 3D 지도 만들어서 카메라 AI 학습 데이터 레이블링 정확도 높이는 거임. 결국 프로덕션 차량은 카메라로만 가는 건데 그 카메라 AI를 훨씬 정밀하게 만드는 거야. Semi 자율주행의 전략적 가치는 따로 봐야 해 — 화물 운송 시장 TAM이 $1조인데 마일당 과금 모델이 붙으면 Tesla Energy 사업 규모급 반복 매출이 생기는 거임. Semi 1만 대 × 연 20만 마일 × $0.10/마일 = 연 $2억. 100만 대면 $200억이야. 이 시나리오가 2027~2028에 시작된다는 거임.",
     likes: 17,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:54:00.000Z",
     liked: false,
   },
@@ -5079,7 +5079,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "스페인 DGT FSD 275,471km 무사고 공식 인증 — 유럽 규제 기관 최초야. 이게 왜 중요하냐면 EU 내 FSD 규제 허들이 이 데이터 하나로 크게 낮아지는 거거든. 독일 KBA, 프랑스 UTAC가 DGT 데이터 무시하기 어려워. EU 27개국 2.5억 운전자 시장이 FSD 구독 대상이 되는 게 이제 시간 문제임. 구독 142만에서 유럽 본격 개방되면 200만 → 300만 경로가 선명해져. 매출 영향 계산: 300만 × $99 × 12 = 연 $35.6억이고 소프트웨어 마진 80%+ 이면 영업이익 기여 $28억+야. FSD 사업 하나가 Tesla 전체 EBIT의 유의미한 부분을 차지하게 되는 거임.",
     likes: 20,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:50:00.000Z",
     liked: false,
   },
@@ -5090,7 +5090,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 구독 142만 추산 — Q2 2026E 기준이야. Q1 2025 50만 대비 5분기 만에 2.84배임. 이 성장률이 유지된다고 보면 2027년 400만+가 비현실적인 수치가 아니야. 핵심은 이게 하드웨어와 독립적이라는 거야 — 차가 안 팔려도 기존 차주들이 구독하면 매출 나오거든. 로보택시 출시 전 구독자 기반이 마케팅 비용 없는 초기 수요층이 되는 거야. 유럽 DGT 인증 + 한국 구독 버튼 + 스페인 지역 이후 아시아 확산까지 이어지면 2026 하반기 가속이 올 수 있어. 소프트웨어 전환 스토리의 KPI를 구독자 수로 추적하는 게 맞아.",
     likes: 3,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:46:00.000Z",
     liked: false,
   },
@@ -5101,7 +5101,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "MEGAPOD 상표 출원 — Tesla Energy 제품 라인 확장 신호임. Megapack이 대형 고정식 3.9MWh인데 MEGAPOD는 이름 자체가 모듈식·이동형 컨테이너 유닛 암시해. AI 데이터센터 전력 수요 긴급 대응 시장이 열리고 있잖아. 데이터센터 건설 리드타임이 18~24개월인데 MEGAPOD 설치가 3~6개월이면 AI 기업들이 전력 선점에 MEGAPOD 쓸 이유가 충분해. ESS 시장 TAM $400억+인데 중소형 이동식 세그먼트가 추가되면 Tesla Energy 의존 가능 시장이 더 넓어지는 거임. 에너지 사업이 자동차 사업 규모로 가는 경로가 이렇게 하나씩 만들어지는 거야.",
     likes: 6,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-22T08:43:00.000Z",
     liked: false,
   },
@@ -5112,7 +5112,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Optimus 3단계 로드맵 공개 — 2025 내부, 2026 양산, 2027 외부 판매. 이 타임라인이 현실적이냐고? 기가텍사스 3층 공사 속도로 보면 충분히 가능해. $20,000~30,000 가격대라고 머스크가 말한 적 있는데 이게 진짜 나오면 제조·물류·서비스 업종에 혁명이야. ROI 계산: 인건비 연 $5만짜리 노동자 대체에 로봇 비용 $25,000이면 6개월 회수야. 기업 입장에서 ROI가 너무 명확해서 도입 속도가 상상 이상일 수 있어. 2027년 판매 시작 → 2028년 수십만 대 → 2030년 백만 대 시나리오가 나오는 이유임. Tesla 시총 재평가 핵심 트리거야.",
     likes: 9,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:40:00.000Z",
     liked: false,
   },
@@ -5123,7 +5123,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Grok + FSD 통합 — xAI와 Tesla 시너지의 실질 구현이야. FSD가 시각 AI 기반으로 상황 인식은 잘 하는데 자연어 명령 처리가 약했거든. '다음 블록 왼쪽 파란 건물 앞에 세워줘' 같은 복합 명령을 이해하는 게 Grok 역할이야. 기술적으로 보면 LLM과 시각 모델의 멀티모달 통합인데 Tesla·xAI가 동일 생태계라 데이터 공유가 자유로운 게 경쟁사 대비 절대 우위야. Waymo는 Google 자체 AI 있지만 자율주행 전용 언어 모델이 따로 없어. 이 통합이 완성되면 '말로 하는 완전 자율주행'이 현실이 되는 거임. FSD 구독 이탈률이 더 낮아지고 신규 유입이 가속되는 거야.",
     likes: 12,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-22T08:37:00.000Z",
     liked: false,
   },
@@ -5134,7 +5134,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla 'Amazing Abundance' 상표 출원 분석 — 단순 브랜딩이 아니야. 머스크가 반복해서 쓰는 키워드 'Abundance'를 상표화했다는 건 사업화 의도가 있다는 거임. 세 개 연결 가능한 사업이 보여. 첫째 에너지: Megapack·Powerwall 구독 플랫폼 브랜딩. 둘째 로봇: Optimus 운영 서비스 브랜딩. 셋째 이동: Cybercab 플릿 서비스 브랜딩. 세 개가 하나의 Amazing Abundance 서비스 묶음이 되면 Tesla가 '생활 인프라 구독 기업'으로 포지셔닝하는 거야. 자동차 판매 싸이클에 덜 종속되는 수익 구조로 전환되는 거임. B2B 엔터프라이즈 패키지로 팔면 계약 단가가 훨씬 커지는 거고.",
     likes: 15,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-22T08:34:00.000Z",
     liked: false,
   },
@@ -5145,7 +5145,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Space Force $22.9억 계약 — SpaceX 정부 매출 포트폴리오의 질적 변화야. 기존 NASA 발사 계약은 프로젝트 기반이었는데 이건 통신 서비스 계약이라 반복 성격이 강해. 군사용 Starlink가 저지연·암호화·재밍 저항 스펙 갖추면 기존 군사 위성 통신(SATCOM) 전체를 대체하는 거야. 미국 국방부 SATCOM 예산이 연 $60억+ 수준임을 감안하면 $22.9억은 시작이야. NATO 동맹국 계약이 줄줄이 따라올 수 있는 선례가 됐어. 상업 + 정부 + 군사 3층 수익 구조 완성이 SpaceX를 진정한 복합 방위·통신 기업으로 포지셔닝하는 거임.",
     likes: 18,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:31:00.000Z",
     liked: false,
   },
@@ -5156,7 +5156,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX AI 위성 로드맵 — V2 → V3 → AI 위성 3단계. 가장 주목할 포인트는 AI 위성이 온보드 AI 칩 탑재로 지상 데이터센터 없이 추론한다는 거야. 이게 엣지 AI 컴퓨팅 패러다임이야. AWS·Azure·GCP가 지상 클라우드라면 SpaceX가 궤도 클라우드를 만드는 거임. 응용 가능한 곳이 재난 대응·해양 모니터링·국경 감시·농업 AI 등 지상 인프라 없는 지역 전체야. 2028~2030 타임라인이면 지금 AI 칩 업체들이 위성용 저전력 AI 칩 공급 계약 논의 시작하는 시점이야. 이 시장이 열리면 SpaceX 밸류에이션 프레임 자체가 바뀌는 거임.",
     likes: 1,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:28:00.000Z",
     liked: false,
   },
@@ -5167,7 +5167,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starlink × US Mobile 150개국 파트너십 — B2B2C 모델의 완성형이야. SpaceX가 직접 소비자 마케팅 안 해도 US Mobile 같은 파트너가 기존 고객에게 Starlink 서비스 번들하는 거임. 위성 통신이 '지구 커버리지 표준' 인프라로 자리잡는 거야. 전통 통신사 입장에서 커버리지 갭 메우는 데 직접 위성 투자보다 Starlink 파트너십이 비용 효율적이라는 걸 인정한 거임. 이 모델이 T-Mobile DTC와 결합되면 — 기존 폰으로 위성 직접 연결 — 진입 장벽이 완전히 없어지는 거야. 2026년 말~2027년에 파트너십 숫자가 50개사 이상으로 늘어날 수 있어. 구독자 ARR이 급증하는 구간이 시작되는 거임.",
     likes: 58,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-22T08:25:00.000Z",
     liked: false,
   },
@@ -5178,7 +5178,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NASDAQ100 리밸런싱 RKLB 편입 — 숫자로 보면: QQQ AUM $3,000억에서 RKLB 비중 0.1~0.2% 편입되면 $3억~6억 자동 매수가 발생해. 공개 발표부터 실제 편입일까지 2~4주 기간 동안 모멘텀이 유지되는 패턴이야. 더 중요한 건 상징성임 — 우주 기업이 NASDAQ100 들어간다는 게 기관 투자자들한테 '우주가 이제 투자 주류'라는 신호거든. RKLB를 '소형 SpaceX'로 보고 포지션 잡는 기관이 이번 편입을 트리거로 올 수 있어. CRWV·ALAB·NBIS까지 AI 인프라 3종 동시 편입이라 AI+우주 테마가 지수 레벨에서 공식 인정받은 날이야.",
     likes: 76,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:22:00.000Z",
     liked: false,
   },
@@ -5189,7 +5189,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Amazon 미국 매출 1위 $7,170억 달성 — Walmart 추월이 단순 순위 이야기가 아니야. 커머스에서 시작해서 클라우드·광고·물류까지 수직통합한 기업이 순수 유통 기업을 추월한 거임. 플라이휠 효과가 완성됐다는 신호야. 여기에 AWS AI 백로그 $4,800억이 더해지면 미래 3~4년 매출 가시성도 사상 최대. 현재 시총 대비 미래 현금흐름 할인하면 AMZN이 지금 가장 싼 빅테크 중 하나라는 결론 나와. Trainium 외판까지 실현되면 반도체 사업 수익도 추가돼. 단기 주가 노이즈 무시하고 이 플라이휠에 베팅하는 게 맞아.",
     likes: 94,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:19:00.000Z",
     liked: false,
   },
@@ -5200,7 +5200,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "클라우드 백로그 3사 비교 — AWS $4,800억, Azure +215%, GCP $2,600억. 백로그 = 이미 서명된 미래 매출이라는 걸 다시 강조하고 싶어. 계약 기간 3~5년이면 경기 침체 와도 이 매출이 흔들리지 않아. AI 기업들이 GPU 컴퓨팅 미래 선점 위해 장기 계약 선체결하는 거야. Azure +215%가 특히 눈에 들어오는데 OpenAI 독점 파트너십으로 인해 AI 수요가 Azure로 집중된 결과야. GCP $2,600억은 구글 자체 Gemini 모델 수요가 외부 기업으로 확산된 거고. 세 회사 다 사상 최대 백로그 = AI 인프라 투자 사이클이 아직 초기라는 거임. 클라우드 주식은 지금 매수하는 게 맞아.",
     likes: 49,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-22T08:16:00.000Z",
     liked: false,
   },
@@ -5211,7 +5211,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Micron 영업이익 $1.3B → $15.7B 추산 — 이게 HBM이 만드는 구조적 변화야. 일반 DRAM 마진율 20~30%인데 HBM 마진율이 50~60%로 추정돼. 같은 캐파에서 생산 믹스를 HBM으로 전환할수록 매출 단가와 마진이 동시에 올라가는 거임. Micron HBM3E가 NVDA 공급망에 공식 채택됐다는 게 이 전환의 핵심이야. NVDA GB200·B300 양산 가속하면 HBM3E 수요가 비례해서 증가해. 삼성·SK하이닉스·Micron 3강 체제인데 Micron 에너지 효율 30%+ 우위가 NVDA 선호도 높이는 거임. EPS 2026E $8~10에 지금 주가면 역사적 저점 PE야. HBM 프리미엄 안 녹아든 거임.",
     likes: 26,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:13:00.000Z",
     liked: false,
   },
@@ -5222,7 +5222,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "PVGO 분석 — META 35.3%, MSFT 36%, S&P500 55%. 이 숫자가 의미하는 게 뭐냐면 META·MSFT 주가의 64~65%가 현재 이익으로 설명된다는 거야. 성장 기대가 낮게 반영된 가치주 특성임. 근데 실제 성장률은? META AI 수익화 가속 중이고 MSFT Copilot 구독 폭발이야. S&P500 평균보다 높은 성장률에 낮은 성장 프리미엄이면 수학적으로 저평가야. META Reality Labs 적자가 PVGO 낮추는 주원인인데 AI 수익화 시작되면 이 적자가 줄어들면서 PVGO 재평가 나와. 이중으로 상승 드라이버가 있는 거임. PVGO 재평가 = 주가 재평가야.",
     likes: 33,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:10:00.000Z",
     liked: false,
   },
@@ -5233,7 +5233,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "버크셔 해서웨이 GOOGL Top 5 편입 — 버핏이 왜 지금 GOOGL을 샀는지 정리해봤어. PVGO 47.8%가 S&P500 55%보다 낮아. 현재 이익 기반 가치가 주가의 52%를 설명해. 버핏이 좋아하는 '현재 이익으로 충분히 정당화되는 주가'야. 여기에 AI 검색 독점+YouTube+GCP라는 세 개 성장 옵션이 덤으로 붙어 있어. 어느 하나가 무너져도 다른 두 개로 가치를 지지하는 구조 — 버핏이 강조하는 안전마진이 여러 겹인 거야. Gemini가 AI 시대에서도 검색 독점 방어하면 PVGO가 재평가되는 거야. 버핏 포트폴리오 편입 = 수급 측면에서도 패시브 펀드 추종 자금 유입이 불가피해.",
     likes: 40,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:07:00.000Z",
     liked: false,
   },
@@ -5244,7 +5244,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Intel CEO '5~10년 내 10배 수익 잠재력' 발언 — 이게 빈말인지 판단하는 기준은 하나야. 18A 공정 수율이 잡히냐 안 잡히냐. 18A가 고객 기준 양산 수율 도달하면: 지정학 리스크 헤지 원하는 빅테크 하나가 계약하고, 그 계약이 공개되면 파운드리 사업 재평가 나오고, EPS 가이던스 올라가고, 주가 반응하는 연쇄야. TSMC 대만 집중에 불안한 Apple·NVDA·AMD 중 하나가 Intel 파운드리 계약하는 게 10배 스토리의 시작 트리거임. CEO가 No Profits 팟캐스트에 직접 나와서 2030~2035 타임라인을 밝힌 건 투자자 소통 의지 측면에서 좋은 신호야. 단기 고통 감수하는 5년+ 투자자에게 지금이 진입 구간일 수 있어.",
     likes: 47,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-22T08:04:00.000Z",
     liked: false,
   },
@@ -5256,7 +5256,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab EPA CoC 2026 모델연도 확정 — 이게 뭘 의미하는지 정리하면. EPA CoC는 미국 50개 주에서 차량 운행하기 위한 연방 기준 인증이야. 지금까지 Tesla가 Cybercab을 Austin에서 테스트 운행했던 건 시범이었고, 이 인증 받은 이후부터가 진짜 상업 서비스야. 05/26 발효에 내구수명 150,000마일이면 플릿 운영 기준을 완전히 충족하는 거임. 여기에 NHTSA ADA까지 묶이면 장애인 서비스 계약도 포함 가능해지는데 B2B 로보택시 계약이 훨씬 두껍게 만들어지는 포인트야. 2개월 내 Austin 확대가 이 인증 기반이라는 게 진짜임. Q3 매출에서 로보택시 라인이 처음 나타나는 분기가 될 거야.",
     likes: 4,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:48:00.000Z",
     liked: false,
   },
@@ -5267,7 +5267,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla Liquid Armor 도장 공장 대체 뉴스 — 표면적으로는 제조 기술 이야기인데 본질은 원가 구조 혁명임. 전통 자동차 공장에서 도장 공장이 건설 비용의 30% 차지하는 거 맞아. 열처리·화학 처리·환경 설비 다 합치면 그 이상도 됨. 이걸 필름 성형 하나로 대체하면 신공장 건설 비용이 기존 대비 최소 25% 이상 감소하는 거야. Cybercab 생산라인이 어디에 만들어지든 이 기술이 들어가면 단위당 CAPEX가 내려가. COGS/vehicle이 구조적으로 떨어지는 경로인데 시장이 아직 완전히 반영 안 한 것 같아. Model 2 급 저가 모델에 이게 적용되면 $25,000 차 만들면서도 마진 내는 길이 열리는 거임.",
     likes: 1,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:44:00.000Z",
     liked: false,
   },
@@ -5278,7 +5278,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cathie Wood $20M 매수 — 22.6배 할인 논리 본 사람 있어? 2007년 12월 EPS 기준으로 비교하는 게 독특한 방식이긴 한데 핵심 메시지는 명확해. 로보택시·FSD·에너지 사업이 현재 주가에 전혀 안 들어가 있다는 거임. ARK Big Ideas에서 Tesla 5년 목표가 $2,600인데 현재 기준 얼마나 업사이드인지 계산해봐. $20M 매수가 절대 금액으론 ARK 자산 기준 크지 않을 수 있는데 타이밍이 중요함. EPA CoC 확정 직후 + Liquid Armor 공개 + Cathie Wood 매수가 같은 날 겹쳤어. 이 세 개 이벤트가 모두 같은 방향을 가리키는 거야 — 로보택시 현실화 + 원가 혁신 + 기관 확신. Q3 로보택시 수익 첫 인식 전 마지막 매집 기회라는 시각도 있어.",
     likes: 18,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:40:00.000Z",
     liked: false,
   },
@@ -5289,7 +5289,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "머스크 신용등급 '터무니없이 낮다' 발언 — 단순 불평이 아니야. $40B+ 현금에 부채 제로인 회사가 BBB 수준 받는 게 실제로 이상한 거임. 신용평가사가 자동차 섹터로 Tesla를 분류하는 게 문제야. 자동차 업종은 경기 민감, 높은 고정비, 낮은 마진이 특징이거든. 근데 Tesla의 FSD 구독·에너지 사업은 구독형 소프트웨어랑 전력 인프라임. 이게 자동차 업종 기준이 아닌 테크·유틸리티 기준으로 평가받아야 하는 이유야. 등급 상향되면 기관 투자자 풀이 넓어지고 자본 비용이 내려가. 머스크가 공개 발언으로 압박 넣은 게 의도적인 이벤트일 거야. 신용등급 리뷰 일정이 다가오면 선행 움직임 나올 수 있어.",
     likes: 15,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:36:00.000Z",
     liked: false,
   },
@@ -5300,7 +5300,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SPCX 락업 해제 구조 정리 — 4.9% → Musk 46.1% Day 366 → 100%. 이 구조를 모르고 SPCX 들어가면 나중에 충격 받을 수 있어. Day 366이 2027년 6월이라는 게 핵심이야. 이 날이 오기 전까지 유통 물량이 4.9%로 극히 제한돼 있어서 수급 구조상 공급이 부족한 상태야. 희소성 프리미엄이 유지되는 구간임. 문제는 Day 366 전후야. Musk 46.1% 포함 대규모 락업 해제가 시장 충격을 줄 수 있어. 실제 매도 여부는 별도 문제지만 가능성 자체가 변동성을 만들거든. 장기 홀더 입장에서 Day 366 이후가 진짜 저가 매수 기회일 수 있음. 락업 해제 = 펀더멘털 변화 아님. 공급 충격이 사라지면 다시 펀더멘털로 수렴해.",
     likes: 12,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:32:00.000Z",
     liked: false,
   },
@@ -5311,7 +5311,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX Q1 2026 Upmass 86% — 이 숫자 Bryce Tech 공식 데이터야. 647,412 kg 전체에서 SpaceX가 556,057 kg. 나머지 전세계 합산이 91,355 kg이야. 6배 차이임. Q1 2025에서 이미 업계 독보적이었는데 86%까지 올라온 거야. 어떻게 이게 가능하냐면 Falcon 9 재사용 회수율이 계속 올라가고 발사 케이던스가 주 1~2회 수준이거든. 경쟁사가 한 번 발사할 때 SpaceX는 5~10번 발사해. Starship이 본격화되면 단일 발사당 Upmass가 100톤 이상인데 이게 추가되면 점유율이 90%를 넘는 건 시간 문제야. 발사 수익 = 직접 매출이고 Starlink 위성 = 반복 수익이야. 이 조합이 SPCX 장기 가치의 핵심 구조임.",
     likes: 9,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:28:00.000Z",
     liked: false,
   },
@@ -5322,7 +5322,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starlink DTS 30개국 + Deutsche Telecom 50개국 파트너십 — 이게 Starlink 2단계 성장의 핵심이야. 1단계는 직접 위성 인터넷 구독자 늘리는 거였고, 2단계는 통신사 파트너십으로 기존 스마트폰 유저 전체를 커버하는 거임. Deutsche Telecom이 유럽 최대 통신사고 T-Mobile 모회사야. 여기서 50개국이면 유럽 전역 커버가 되는 거임. DTS 기술은 별도 단말 필요 없이 기존 폰으로 수신 가능하거든. 즉 유럽 DT 가입자 수억 명이 잠재 Starlink DTS 사용자가 되는 거야. B2B 파트너십 모델이라 구독 단가는 낮을 수 있지만 볼륨이 완전히 다른 레벨임. ARR 구조로 잡히기 시작하면 SpaceX 수익 예측 가시성이 확 올라가.",
     likes: 6,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:24:00.000Z",
     liked: false,
   },
@@ -5333,7 +5333,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "TeraFab 드론 영상 확인 — Giga Texas 옆에 SpaceX·xAI·Tesla $250B 캠퍼스 착공 실물 확인됨. 왜 이게 중요하냐면 드론 영상은 '계획'이 아니라 '진행 중'을 증명하는 거거든. 말만 있던 TeraFab이 실제로 땅을 파기 시작한 거야. $250B 규모가 현실화되면 TSLA·SPCX 양쪽 다 직접 수혜야. Tesla는 제조 인프라 공유, SpaceX는 위성·우주 제조 확대, xAI는 AI 데이터센터. 세 회사가 같은 부지에서 시너지 내는 구조임. 텍사스 세금 혜택 + 토지 + 인허가 속도가 캘리포니아 대비 압도적으로 빠른 게 이 결정의 배경이야. 착공 확인됐으니 다음은 1차 완공 시점과 규모 업데이트 나올 거야.",
     likes: 3,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:20:00.000Z",
     liked: false,
   },
@@ -5344,7 +5344,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVDA AI 추론 점유율 74% — Q1 2026 $41B vs 나머지 전체 $15B. 이 숫자가 중요한 이유가 YoY 추이야. Q1 2025에 66%였는데 Q1 2026에 74%야. 경쟁이 심해지는 상황에서 점유율이 오르고 있어. AMD MI300X가 나오고 구글 TPU가 있는데 왜 오르냐 — CUDA 생태계 때문이야. 전세계 AI 모델이 CUDA로 최적화돼 있어서 전환 비용이 너무 커. 거기에 Blackwell GPU가 이전 세대 대비 너무 압도적이라 일단 써보면 돌아가기 어렵거든. 74%는 모노폴리스틱 수익 구조를 의미함. AI 인프라 지출 1달러당 NVDA가 74센트 가져가는 거야. 이 구조가 깨지려면 CUDA 생태계 전체가 바뀌어야 하는데 그게 단기간에 안 일어남.",
     likes: 20,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:16:00.000Z",
     liked: false,
   },
@@ -5355,7 +5355,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AMZN Trainium 외판 검토 소식 — OpenAI $5B, Anthropic $1B 논의가 Bloomberg 보도야. 이게 실현되면 AMZN 입장에서 두 가지 이점이 있어. 첫째는 직접 칩 매출이고, 둘째는 이 고객들이 AWS도 쓰게 유도하는 거야. 칩 + 클라우드 번들 락인이 완성되는 구조임. NVDA 입장에서는 위협이냐 — 단기는 아니야. CUDA 생태계 전환이 필요하거든. 근데 중기로 보면 OpenAI·Anthropic 같은 대형 AI 기업이 Trainium 테스트하기 시작하면 멀티벤더 환경이 만들어져. NVDA 가격 결정력이 장기적으로 조금씩 약해지는 거임. AMZN 관점에서는 AWS $137B TTM에 칩 사업 추가되면 수익원 다변화가 되는 거야. 둘 다 수혜.",
     likes: 17,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:12:00.000Z",
     liked: false,
   },
@@ -5366,7 +5366,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AWS TTM $137B — 2018년 $25.66B 대비 8년 5.3배. 이 성장률이 복리로 계산하면 연 23% 성장이야. 클라우드 시장 전체도 이 속도로 자랐는데 AWS는 시장 점유율도 유지하면서 성장한 거야. 왜 계속 성장하냐 — AI 워크로드야. AI 모델 학습 1번 돌리는 데 드는 컴퓨팅이 일반 서버 수천 대 분임. 이게 전부 클라우드로 오거든. 온프레미스로 AI 돌리는 회사는 거의 없어. 규모 경제가 안 되고 유지 비용도 크거든. 그래서 AI 투자 사이클 = 클라우드 수요 사이클임. AWS가 이 파이에서 1위야. Trainium 외판까지 성사되면 칩+클라우드 이중 수익원으로 성장 레이어 하나 더 추가되는 거야.",
     likes: 14,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:08:00.000Z",
     liked: false,
   },
@@ -5377,7 +5377,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tom Lee 3단계 시나리오 — S&P 7,700~7,800 후 급락, 이후 V자 회복. 2단계 급락 원인이 OpenAI·Anthropic IPO 락업 해제라는 거 주목해야 함. 이게 단순 조정이 아니라 공급 충격이야. OpenAI 기업가치 $300B 이상, Anthropic $50~80B인데 락업 해제 시 시장에 나오는 물량이 수십조 원 수준임. SPCX 락업 구조랑 비슷한 논리야 — 공급 충격은 일시적이고 펀더멘털은 안 바뀜. 근데 그 타이밍에 들고 있으면 멘탈 테스트 받는 거임. Tom Lee가 3단계에서 강한 회복 예상하는 이유가 AI 실적은 계속 나오기 때문이야. 지금 1단계에서 7,700~7,800 가는 동안 홀드하고, 2단계 급락 시 추가 매수 자금 준비해두는 게 현실적인 전략임.",
     likes: 31,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:04:00.000Z",
     liked: false,
   },
@@ -5388,7 +5388,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "이란 전자서명 종전 합의 — 호르무즈 개방 유지 확인됨. Trump가 중국 중재 역할에 감사 발언한 게 눈에 들어왔어. 이게 미중 관계 신호임. 무역 긴장 완화 기대감이 생기는 거야. 호르무즈 봉쇄 우려가 해소되면 유가가 안정되고 인플레이션 경로가 바뀌어. 에너지 가격이 CPI에서 빠르게 영향 미치는 항목이거든. 연준 금리 인하 명분이 하나 더 생기는 셈임. 지정학 리스크 프리미엄이 해소되면 위험자산 선호 심리가 올라와. 주식 입장에서는 호재야. SPCX 관점에서도 중동 통신 인프라 수요 회복이 기대되고 Starlink B2B 계약 확장 기회가 생기는 거임. 단기 변수보다 구조적 전환 포인트로 봐야 함.",
     likes: 24,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-20T08:00:00.000Z",
     liked: false,
   },
@@ -5400,7 +5400,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Commercial RPO +97.3% 숫자 하나가 눈에 들어왔어. Q3 2026 분기 기준 역대 최고 성장률이야. RPO 잔고 ~$700B이면 Microsoft 현재 연매출 $240B의 3배가 이미 계약 확정된 거거든. 이건 '미래 매출 예측'이 아니라 '이미 서명된 계약'임. Azure AI + Copilot 기업 계약이 폭발하면서 나온 숫자야. 5년 CAGR +47%는 Azure가 성장 감속 없이 복리로 굴러가고 있다는 증거임. 빅테크 중에 이 수준의 매출 가시성 가진 회사가 없어. MSFT가 지금 비싸 보여도 RPO 렌즈로 보면 2027~2028 EPS 재평가 여지가 크다.",
     likes: 10,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:58:00.000Z",
     liked: false,
   },
@@ -5411,7 +5411,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "결론부터 말하면 젠슨 황의 데이터가 시장 공포를 틀렸다고 증명했어. SaaS 죽으면 GPU 수요 감소한다는 논리 — 현장에서 안 맞아. 기업들이 자체 AI 모델 만들 역량 없어서 에이전트 도입으로 방향 바꾼 거거든. 에이전트가 소프트웨어 툴 쓰면 SW 업체들이 GPU 더 써야 해. 수요 체인이 단절되는 게 아니라 연장되는 거임. NVDA가 '실제 데이터로 이미 확인됨'이라고 말한 게 핵심이야 — 이론이 아니라 실적으로 증명했다는 거야. STRL·ENOVA 같은 SaaS 피해주 투자자들이 NVDA 팔기 전에 이 발언부터 읽어야 해.",
     likes: 13,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:54:00.000Z",
     liked: false,
   },
@@ -5422,7 +5422,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "미국 정부 INTC 보유 내역 뜯어봤는데 — 2025년 8월 22일 $20.47에 ~$8.9B 투자한 거야. 현재 $131.61이니까 433.3M주가 ~$57B이 됐어. ~$48B 평가차익이 나 있는 거야. 이게 CHIPS Act 역사상 최고 투자 성과임. 단순히 '정부가 반도체 지원했다'가 아니라 +542%짜리 투자를 한 거야. Intel 18A 공정이 TSMC 대안으로 자리 잡으면서 주가가 이걸 반영한 거임. 미국 정부 입장에서 반도체 공급망 자립화 + 재정 수익 두 목표 모두 달성했어. CHIPS Act 2탄 예산 논의가 훨씬 쉬워지는 정치적 효과도 있어.",
     likes: 16,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:50:00.000Z",
     liked: false,
   },
@@ -5433,7 +5433,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "$37.3B 자사주 매입 규모 검증해봤는데 이게 얼마나 큰 숫자인지 계산해봤어. 현재 NFLX 시총 $490B 기준으로 7.6%를 스스로 사들이는 거야. 유통 주식 수 감소 → EPS 자동 개선 → 주가 지지 삼박자야. 타이밍이 중요한데 2월 저점 $56 근방에서 집중 매수했다는 게 핵심임. 단순히 주가 지지용 매수가 아니라 '이 구간이 싸다'는 경영진 자체 평가임. 광고 구독 + 라이브 스포츠 + 게임으로 매출 다각화 완성 단계에서 이 스케일의 buyback이 나왔어. 현금흐름 자신감 없으면 절대 못 하는 딜임. NFLX가 성장주에서 성장+가치 복합주로 진화하는 증거야.",
     likes: 67,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:46:00.000Z",
     liked: false,
   },
@@ -5444,7 +5444,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "팀 쿡 '40년 만에 처음' 발언 맥락 채널 체크해봤는데 이게 단순 마케팅 멘트가 아니야. Apple이 iPhone 시작한 2007년 이후로 한 번도 안 했던 가격 인상을 지금 한다는 거거든. +15% 인상해서 iPhone 18 예상가 ~$1,299. 관세 직격탄 맞는 상황에서 이걸 결정한 게 포인트야. '우리 제품 가격 결정권 있다'는 선언임. 프리미엄 스마트폰 시장에서 AAPL 대체재가 없다는 자신감이야. 단기 판매량 소폭 감소 리스크는 있어. 하지만 ASP 올라가면 마진율 개선으로 이익 더 늘어나는 구조임. MU·SK하이닉스도 간접 수혜야 — AAPL이 부품 QC 더 까다롭게 가면 단가도 올라가거든.",
     likes: 85,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:42:00.000Z",
     liked: false,
   },
@@ -5455,7 +5455,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AWS 섹션 PE 29.13x 숫자 하나가 눈에 들어왔어. 역대 최저 수준이야. AWS만 따로 뜯으면 연 성장 +27%, 영업이익률 39%인데 시장이 그 가치를 PBR 기준으로 할인하고 있어. 클라우드 빅3 중에 이 조합은 AWS밖에 없거든. 단기 -12% 반응이 나온 건 MS·Google 대비 AI 네이티브 인식이 약한 탓인데, 이건 시간이 해결해줄 인식 괴리야. Nova 모델 + Bedrock + Trainium2 조합이 진짜야. 전체 AMZN 기준이 아니라 AWS 독립 밸류에이션으로 보면 지금 가격이 말이 안 되게 싼 거임. 중기 매수 관점에서 관심 가져볼 구간.",
     likes: 54,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:38:00.000Z",
     liked: false,
   },
@@ -5466,7 +5466,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "결론부터 말하면 TeraFab은 단순 부동산 딜이 아니야. SpaceX × xAI × Tesla가 함께 짓는 $250B 규모 AI 인프라 복합단지야. 세계 AI 칩 생산량의 25%를 목표로 한다는 거 — 단일 사이트에서 이게 실현되면 지정학적 의미가 있어. 미국이 AI 칩 생산을 자국화하는 거야. SpaceX가 여기서 어떤 역할인지가 SPCX 투자 포인트임. 전력·냉각·우주 인터넷 인프라 = 다 SpaceX가 공급할 수 있어. 단지 완공 후 장기 임대 수익 구조까지 붙으면 SPCX에 새로운 수익 축이 생기는 거임. $250B 자본이 흘러드는 방향에 SPCX가 서 있어.",
     likes: 44,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:34:00.000Z",
     liked: false,
   },
@@ -5477,7 +5477,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starlink 허리케인 파트너십 뜯어봤는데 이게 B2B 수익 모델 확장의 핵심 케이스야. 재해 발생 시 자동으로 Starlink 전환되는 '자동 대피 네트워크' 계약이거든. 긴급 통신이 끊기면 안 되는 상황에서 Starlink가 유일한 대안이라는 걸 공식화한 거야. 계약 단가가 일반 소비자 대비 5~10배 높은 게 정부·보험사·인프라 계약의 특성임. 한 번 계약하면 장기 유지가 기본이야 — 재해 대비 인프라는 비용 절감 논리가 안 통하거든. 허리케인 파트너십 하나가 롤모델이 돼서 다른 재해 유형·다른 지역으로 확산되면 B2B 수익 기여가 빠르게 올라갈 거임.",
     likes: 21,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:30:00.000Z",
     liked: false,
   },
@@ -5488,7 +5488,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ARK 5개 펀드 동시 매집 내역 채널 체크해봤는데 — ARKX, ARKQ, ARKW, ARKK, ARK Venture Fund가 전부 들어왔어. 캐시 우드가 한 펀드만 사는 게 아니라 전 라인업으로 포지션 잡은 거야. ETF가 산다는 건 패시브 수요가 생긴다는 거거든. ARK 운용자산 $15B+ 기준으로 비중이 올라가면 자동 매수 물량이 계속 나옴. 기관들도 ARK 포트폴리오 보고 SPCX 커버리지 시작하는 사이클임. 타이밍상 IPO 초기 + 인덱스 편입 전 = 패시브 수요가 아직 절반도 안 들어온 구간이야. ARK 5펀드 세트가 확인된 이상 수급 그림이 달라졌어.",
     likes: 28,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:26:00.000Z",
     liked: false,
   },
@@ -5499,7 +5499,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Moody's Baa1 신용등급 숫자 하나가 눈에 들어왔어. IPO 2일 후에 $20B 채권 발행 성공이야. 등급이 투자등급(Baa1)이면 연기금·보험사가 법적으로 살 수 있는 자산이거든. $20B = SpaceX 연매출의 약 1.1배를 채권으로 조달한 거야. 이자비용보다 Starlink 확장 수익이 높다는 확신이 없으면 안 하는 딜임. IPO로 $8B 조달 + 채권으로 $20B 추가 = 총 $28B 자금이 이틀 만에 확보됐어. 이게 어디 쓰이냐가 다음 모멘텀인데 — Starlink Gen3, TeraFab 참여, 차세대 로켓이 모두 후보야. 채권 시장이 SpaceX 현금흐름에 베팅했다는 게 주식 투자자한테도 신호임.",
     likes: 35,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:22:00.000Z",
     liked: false,
   },
@@ -5510,7 +5510,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Megapack 25,000기 달성 현장 데이터 확인했어. 누적 97.5 GWh — 이게 어느 정도냐면 웬만한 소형 국가 하루 전력 수요 수준이야. ESS 시장에서 Tesla가 점유율 1위를 유지하면서 생산 속도가 올라가고 있는 거임. Lathrop 기가팩토리 풀가동 기준 연 40 GWh 생산 가능한데, 수요가 공급을 앞서고 있어. 에너지 사업이 자동차 마진 30%+ 수준까지 올라오면 Tesla 전체 이익 구조가 바뀌어. 현재 에너지 매출 $3.7B/분기인데 2027년 $8~10B 경로가 가시권임. 자동차 업체가 아니라 에너지 인프라 기업으로 재평가받는 시점이 가까워지고 있어.",
     likes: 42,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:18:00.000Z",
     liked: false,
   },
@@ -5521,7 +5521,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "결론부터 말하면 6월 30일 아시아 FSD 마감이 진짜야. 한국 구독 신청 버튼 이미 앱에 떴고, 스페인은 6/30 공식 오픈 확정임. Tesla가 아시아 시장에서 FSD를 빠르게 푸는 건 두 가지야 — 규제 선점 + 데이터 수집. 한국·일본·대만 데이터가 쌓이면 아시아 도로 환경 학습이 빨라지고 중국 데이터 공백을 메울 수 있어. 한국 출시 특히 중요한 이유는 복잡한 도로 + 공격적 운전 패턴이 FSD 난이도 상 최고 수준이거든. 여기서 통하면 어디서든 통함. 6/30 이후 아시아 FSD 채택률 숫자가 Q3 모멘텀의 핵심 변수야.",
     likes: 49,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:14:00.000Z",
     liked: false,
   },
@@ -5532,7 +5532,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "스페인 6/30 FSD 승인이 남유럽에서 얼마나 중요한지 설명하면 — 스페인이 EU에서 독일·프랑스 다음으로 인구 많고, 여기서 FSD 공식 오픈되면 이탈리아·포르투갈이 레퍼런스로 삼는 구조야. 이미 벨기에·네덜란드·덴마크가 북유럽-서유럽 루트 열었고, 스페인이 남유럽 루트 여는 거임. 동시에 아시아 일회성 구매 6/30 종료도 봐야 해. 싱가포르·대만·말레이시아 일회성 마감 → 전 아시아가 구독 방식으로 표준화된다는 신호야. 두 이벤트 합치면 6/30이 글로벌 FSD 구독 방식 표준화의 기점이야. Q3 FSD 수익 레포에서 처음으로 수자 잡히는 거 기대하는 이유임.",
     likes: 7,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:12:00.000Z",
     liked: false,
   },
@@ -5543,7 +5543,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "유로NCAP 5성 + NHTSA ADA 통과 동시 확인해봤는데 이게 안전 인증 관점에서 다른 레벨이야. 유로NCAP은 유럽 소비자 구매 결정에 직접 영향 주는 평가야. 5성이 아니면 판매량에 타격임. 근데 Tesla가 그 최고 등급을 받은 거고, 거기에 더해 NHTSA ADA 최초 통과까지 나왔어. ADA 인증은 장애인 자동화 보조 관련인데 보험사 리스크 평가와 연결돼. 안전 인증이 쌓일수록 FSD 확장 속도가 올라가는 구조임 — 규제 기관이 '이미 검증됨' 레퍼런스로 쓰거든. 유럽 FSD 승인 신청에서 이 두 인증이 증거 서류로 그대로 쓰일 거임.",
     likes: 26,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:10:00.000Z",
     liked: false,
   },
@@ -5554,7 +5554,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Tesla OpenClass 채용공고 뜯어봤는데 — RL 엔지니어 $314K~$490K 연봉이야. 이게 단순 AI 개발자 채용이 아님. 강화학습(RL)은 에이전트가 환경과 상호작용하면서 스스로 학습하는 방식이야. Tesla가 짓고 있는 게 '소프트웨어가 도구를 쓰는 에이전트'야 — 그게 OpenClass임. 이 수준 연봉이면 OpenAI·DeepMind에서 빼오는 거야. Tesla가 Grok·ChatGPT 같은 대화형 AI 말고 '실행형 에이전트'에 집중한다는 거임. Optimus가 그 에이전트의 물리적 형태고, OpenClass가 소프트웨어 형태야. 지금 채용 규모가 나중에 FSD·Optimus 성능 점프로 돌아오는 선행 지표임.",
     likes: 33,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:06:00.000Z",
     liked: false,
   },
@@ -5565,7 +5565,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "일론 머스크 Form4 신고 숫자 하나가 눈에 들어왔어. 3억 400만 주 행사, 평균 원천징수가 $336이야. 스톡옵션 행사 + 세금 납부용 주식 매도라서 순 매도가 아님 — 오히려 실질 보유 증가야. 법원 손실 이후 이 타이밍에 행사한 게 포인트야. $336 원천징수가 내부 참조가가 아니라 세금 계산용 공정시장가치인데, 이 가격에 행사했다는 건 본인이 현재 주가 대비 훨씬 높은 가치를 보고 있다는 거임. CEO가 이 규모 행사를 하는 건 '장기 보유' 시그널이야. 시장이 Tesla 법원 리스크로 흔들릴 때 내부자가 증거로 반박하는 구조임.",
     likes: 12,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:02:00.000Z",
     liked: false,
   },
@@ -5576,7 +5576,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 보이스커맨드 3개월 테스트 채널 체크해봤는데 — 실제 유저들 반응이 예상보다 훨씬 강해. 말로 목적지 바꾸고, 속도 조절하고, 주차 지시까지 되는 거야. K.I.T.T. 비교가 나오는 이유가 단순 향수가 아님 — 차가 '도구'에서 '대화 상대'로 바뀌는 경험이거든. HW3에서도 작동한다는 게 핵심이야. 업그레이드 없이 소프트웨어만으로 기능이 추가되는 거라서 기존 유저들 만족도가 폭발함. FSD 구독 유지율과 직결돼. 보이스커맨드가 완성되면 고령·장애인 사용자층까지 확장되는데 이게 새 수요 레이어임. Q3 구독 전환율 숫자에서 이 효과 나타날 거임.",
     likes: 15,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-19T08:00:00.000Z",
     liked: false,
   },
@@ -5588,7 +5588,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "이란 합의 딜 보고 한 가지 숫자가 눈에 들어왔어. 호르무즈 재개 시 이란 원유 수출 하루 180만 배럴이야. 지금 WTI $55~57 구간에서 이게 더해지면 $45~50 시나리오 충분히 현실이거든. CPI 에너지 항목이 0.4~0.6pp 끌어내려지면 연준 9월 인하 명분이 살아나. 단순히 유가 하락 이슈가 아니야 — 인플레이션 경로 자체가 바뀌는 거임. 연준이 포워드 가이던스 철회한 날 이란 합의가 나온 게 우연이 아닐 수 있어. 데이터가 바뀌면 결정이 바뀌는 환경에서, 가장 빠르게 CPI를 바꾸는 변수가 지금 나온 거임.",
     likes: 18,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-18T08:58:00.000Z",
     liked: false,
   },
@@ -5599,7 +5599,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX Q1 +$1.62B vs Tesla -$590M 나란히 놓고 보면 머스크 포트폴리오 자체가 역전됐어. Tesla가 오토파일럿·FSD 집중 투자로 손실 낸 거고, SpaceX는 Starlink 60% 비중 안정 수익이 버팀목이야. 근데 이게 Tesla한테 나쁜 신호만은 아님 — 단기 이익보다 FSD 모멘텀에 베팅하는 거잖아. 오늘 EU FSD 승인 + Optimus 공장 3층 + Europe Q2 +20.5% 세 개를 같이 놓고 보면, Tesla가 올해 투자한 R&D 비용이 2027 이후 수익 폭발로 전환되는 구조임. SpaceX가 지금 현금 찍을 때 Tesla는 미래 현금흐름을 사고 있는 거야.",
     likes: 1,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-18T08:54:00.000Z",
     liked: false,
   },
@@ -5610,7 +5610,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "유럽 딜 플로우 채널 체크해봤는데 Q2 YTD +20.5% 숫자가 생각보다 탄탄해. 신형 모델Y 런치 효과 + FSD 주목도 상승 + 유럽 전기차 보조금 재개 세 가지가 겹친 거임. 특히 네덜란드·독일·프랑스 빅3에서 반등이 강한데 RDW FSD 승인 뉴스 이전부터 이미 올라오고 있었어. 4,000 단위가 아직 작아 보이지만 전년 동기 대비 회복세 각도가 가파른 거야. FSD 유럽 출시 본격화되면 소프트웨어 침투율 올라가면서 유럽이 수익성 높은 시장으로 바뀌는 구조임. Q3 유럽 숫자 주목할 것.",
     likes: 4,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-18T08:50:00.000Z",
     liked: false,
   },
@@ -5621,7 +5621,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "네덜란드 RDW 딜 플로우 체크해봤는데 생각보다 임팩트가 크다. 1,000회 통제 테스트를 RDW가 직접 돌린 거라서 EU 표준 레퍼런스가 됐어. 독일 KBA, 프랑스 UTAC이 이걸 무시하기 어렵거든. 실무적으로는 Q3 중 독일·프랑스 신청 동시 진행 가능성 높음. EU FSD 티어1 국가 다 열리면 수익 계산이 달라져. 80만 대 × 전환율 15% × $8,000 = $960M 첫해. 구독 전환까지 붙으면 2027년부터 소프트웨어 마진이 자동차 마진 뛰어넘는 시점 나올 수 있음. 오스틴 로보택시 플릿이랑 EU FSD 승인이 동시에 진행 중이라는 게 지금 테슬라 모멘텀의 핵심이야.",
     likes: 7,
-    comments: 5,
+    comments: 0,
     created_at: "2026-06-18T08:46:00.000Z",
     liked: false,
   },
@@ -5632,7 +5632,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVDA $25B 채권 딜 보고 한 가지 숫자가 눈에 들어왔어. 자회사 주문 $25B. 외부 투자자도 아니고 NVDA 내부 관계사들이 발행액 전체와 맞먹는 수요를 낸 거야. 이건 내부에서 NVDA 미래 현금흐름에 그만큼 확신이 있다는 신호거든. 겉보기엔 그냥 채권 발행이지만 구조를 보면 '자기 회사 부채에 자회사가 베팅한' 딜이야. PE 24x에서 연간 EPS 성장 50%+ 유지되면 PEG 0.5 수준인데 이 구간에서 이 딜 나온 거. 타이밍이 공교롭지 않아. 메모리 부족 시그널, AI 채권 딜 — 둘 다 같은 방향 가리키고 있음.",
     likes: 10,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-18T08:42:00.000Z",
     liked: false,
   },
@@ -5643,7 +5643,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Powell 발언 다시 뜯어봤는데 포워드 가이던스 철회가 단순 불확실성 증가가 아닐 수 있어. '몇 달 후 결정'이라는 표현은 앞으로 모든 FOMC가 데이터 의존 open decision이 된다는 거거든. 이란 합의로 유가 $45~48 시나리오 현실화되면 CPI 경로가 바뀌어. 에너지 디플레이션이 CPI 0.4~0.6pp 끌어내릴 수 있고 그러면 9월 인하 명분이 살아나. -2.8% Fed Day 낙폭이 1994년 이후 최악이라는 거, 1994년 그 이후 어떻게 됐는지 봐야 해. 금리 인상 사이클 마무리 후 시장은 기록적으로 올랐어. 지금은 동결 사이클 마무리 국면이고.",
     likes: 13,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-18T08:38:00.000Z",
     liked: false,
   },
@@ -5654,7 +5654,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Micron·SanDisk CEO 동시 경고 — 채널 체크 결과랑 딱 맞아 떨어져서 그냥 지나칠 수가 없었어. NVDA GB200 NVL72 랙 한 대에 HBM3E 1.1TB 들어가거든. 클러스터 1,000랙 기준으로 계산하면 HBM 수요가 어마어마해. 공급은? SK하이닉스가 NVDA 독점 공급 중이고 Micron이 HBM3E 양산 확대 중이지만 CoWoS 패키징 병목이 풀리는 게 선행조건이야. 리드타임 12~18개월 = 지금 주문 → 2027 H1 납품. 가격 협상 지금 일어나고 있는 거야. MU Q4 2026~Q1 2027 실적 재평가 트리거가 이미 당겨진 거고.",
     likes: 16,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-18T08:34:00.000Z",
     liked: false,
   },
@@ -5665,7 +5665,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Giga Texas Optimus 공장 철골 3층 사진 봤는데, 현장 공정 속도가 예상보다 빠르다. Joe Tegtmeyer가 '3층 이상, 위로 더 보인다'고 했고 크레인 여러 대 동시 작업 중이라는 거야. 내 파트너가 기가텍사스 메인 팩토리 초기 공정 속도랑 비교했는데 오히려 빠른 수준이라고 봤어. Q4 2026 첫 생산 타임라인 지킬 수 있다는 물리적 증거가 쌓이는 중. 현재 Tesla 시총의 60%+가 Optimus + Robotaxi 미래 가치라는 분석이 많은데, 그 근거가 '말'이 아니라 '철골'로 증명되고 있어. 시장이 이 속도를 아직 다 반영 못했다고 봐.",
     likes: 19,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-18T08:30:00.000Z",
     liked: false,
   },
@@ -5677,7 +5677,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Ron Baron Goldman 통해 $1B 직접 매수한 딜 플로우 체크해봤어. Tesla에서 10배 낸 그가 SpaceX에 더 크게 베팅하는 논리가 뭔지 봤더니 — 수익 구조야. Starlink 60%($11.3B), AI 임대, 발사 수수료 세 축이 단일 회사에 있어. Cursor 인수 $9B 주식 교환은 현금 보존하면서 AI 컴퓨팅 자산 흡수하는 M&A 패턴이야. 현금을 안 쓰고 주식으로 하는 건 SpaceX가 자기 주식 가치에 확신이 있다는 거야. 인덱스 편입 타임라인이 수급 트리거야 — 7월 NASDAQ100($8~11B 패시브) → 8월 S&P500($32B+) → 10월 Russell1000. $3.9T 패시브가 단계적으로 매수 들어올 수밖에 없어.",
     likes: 2,
-    comments: 5,
+    comments: 0,
     created_at: "2026-06-17T08:58:00.000Z",
     liked: false,
   },
@@ -5688,7 +5688,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "725대가 오늘 숫자야. 오스틴 단일 도시에서 댈러스·휴스턴·샌안토니오 동시 확산으로 갔어. 복수 도시 동시 운영이 로보택시 스케일링의 진짜 관문이었는데 — 이게 지금 통과됐어. Goldman Q2 인도 42~43만 전망은 Q1 33만에서 QoQ +27%야. 신형 모델Y + 기가상하이 최고생산이 드라이버야. FSD 대만 SAI Level 2 규제 제출까지 더하면 아시아·유럽·미국 트리플 확산 라인이 동시에 열린 거야. Ron Baron '$5T 10년 목표'는 현재 $1.1T에서 4~5배 업사이드 계산인데, Tesla 초기 투자자가 이 말 한다는 게 가볍게 볼 숫자가 아니야.",
     likes: 5,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-17T08:54:00.000Z",
     liked: false,
   },
@@ -5699,7 +5699,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AMD CEO Lisa Su 오늘 공개 시연 임팩트 정리임. $4,499 Mac Mini로 NVIDIA 클라우드 AI 구독 대체 시연. NVIDIA 클라우드: 기업 사용자당 $2,800/월 = 연간 $33,600/인. 3년 기준 NVIDIA $100,800 vs AMD 로컬 $4,499. 절감액 $96,301/인. 기업 1,000명이면 연간 $33.6M 절감 가능한 구조임. 물론 CUDA 전환 비용·소프트웨어 생태계·스케일링 이슈가 있어서 당장 대규모 전환은 어렵지만 MI300X 온프레미스 채택 늘어나면 NVIDIA 클라우드 성장 속도에 압력이 생기는 구조임. AMD의 공세가 분기마다 거세지는 중임.",
     likes: 8,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-17T08:50:00.000Z",
     liked: false,
   },
@@ -5710,7 +5710,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "유가가 $50 아래로 내려간 거 채널 체크 후 확인했어. 이란 호르무즈 봉쇄 해제 + 유조선 통과 확인이 원인이야. 에너지주 입장에선 단기 역풍이지만, CPI 경로가 달라지는 게 더 큰 그림이야. 에너지 디플레이션이 CPI 0.4~0.6pp 끌어내리면 9월 인하 명분이 살아나거든. 나스닥·성장주한테는 금리 인하 기대 복원이 더 중요한 시그널이야. 같은 날 TSMC + AMKOR 10년 파트너십이 나왔어. 미국 내 칩 제조(TSMC 애리조나) + 어드밴스드 패키징(AMKOR 애리조나) 풀 스택이 완결된 거야. NVDA AI칩 CoWoS 패키징 공급 안정성 확보 + 중국 공급망 리스크 구조적 차단. TSM·NVDA·AMKR 양면 수혜야.",
     likes: 11,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-17T08:46:00.000Z",
     liked: false,
   },
@@ -5722,7 +5722,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX IR 웹사이트가 열린 게 오늘 가장 큰 변화야. 상장 전까진 분기 실적 발표 개념 자체가 없던 회사였거든. IR 체계가 생긴다는 건 기관 투자자 대상 공식 커뮤니케이션 채널이 처음 만들어지는 거야. 다음 실적 발표에서 AI 임대 수익 첫 공식 수치, Starlink 구독자 업데이트, Starship 발사 단가가 나올 거야. 이 숫자들이 공개되는 게 다음 주가 리레이팅 트리거야. IPO $85.7B 역대 최대(아람코 $29.4B의 2.9배) 달성 후 $179에서 기관이 물량 받아가는 흐름이야. Ron Baron AI 컴퓨팅 지출 $15B/yr 발언이 실제 수치로 확인되는 날이 오면 그게 다음 모멘텀이야.",
     likes: 14,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-16T08:58:00.000Z",
     liked: false,
   },
@@ -5733,7 +5733,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybercab EPA 스펙 다시 뜯어봤어. 165Wh/mile이 핵심이야. 현재 가장 효율적인 EV가 Model 3 LR 245Wh/mile 수준인데 Cybercab이 이걸 35% 이상 앞서는 거야. 로보택시 경제학에서 에너지 비용이 최대 운영비거든. 마일당 $0.02가 실현되면 Waymo 추정 원가($0.08~0.12/mile)랑 차이가 압도적이야. 원가 차이가 이 정도면 가격 경쟁에서 질 수가 없는 구조야. Cybertruck 150대 기가텍사스 목격은 고마진 $80K+ 모델이 램핑업 된다는 거야. 모델Y 일본 수입차 1위 + 기가상하이 5월 최고 생산량은 Q2 인도 숫자가 기대보다 클 수 있다는 신호야.",
     likes: 94,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-16T08:54:00.000Z",
     liked: false,
   },
@@ -5744,7 +5744,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVDA $210B 순이익 로드맵 숫자 하나만 봐. 2025 $58B → 2029E $210B, 4년 CAGR 38%. 이 수치를 현재 주가에 대입하면 2029 PER이 S&P500 평균보다 낮아. Google TPU 삼성 제조 소식이 오늘 나왔는데 — TSMC가 NVDA·Apple로 꽉 차서 Google이 밀린 거야. NVDA 납기에 오히려 영향 없는 거고, TSMC 캐파가 NVDA에 더 집중되는 구조야. CUDA 생태계 전환 비용 때문에 빅테크가 쉽게 이탈 못 해. 2029 $4.2T 시총 시나리오가 허황된 게 아닌 이유가 여기 있어.",
     likes: 63,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-16T08:50:00.000Z",
     liked: false,
   },
@@ -5755,7 +5755,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AMD DC 매출이 $5.8B을 찍었어. 역사상 분기 DC 최고야. 근데 이 숫자보다 더 중요한 게 수요처야. MS·Meta·OpenAI가 공급 다변화 전략으로 AMD를 의도적으로 키우고 있거든. NVDA 독점에 의존하면 협상력이 없어지니까. 이번 분기가 그게 숫자로 확인된 거야. MI350이 나오면 분기 DC $8B+ 가능해. 그때 PER 재레이팅 논리가 완성돼. 순이익 $1.4B(+94%)는 레버리지 구간 진입 신호야. 게이밍 -30%는 콘솔 사이클 문제라 구조적 이슈 아니야.",
     likes: 39,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-16T08:46:00.000Z",
     liked: false,
   },
@@ -5766,7 +5766,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Meta → MEXT 인수 발표임. MEXT 기술: 플래시 스토리지를 DRAM급 성능으로 활용. AI 추론 메모리 병목 해소. HBM 스택 $3,000~5,000 대비 플래시 원가 혁신 = 데이터센터 TCO 혁명적 절감. Meta 인수 동기: Llama AI 추론 메모리 비용 직접 절감. Marvell 시너지: Meta MTIA 칩 파트너 Marvell + MEXT 기술 결합 = AI 추론 인프라 풀 스택 솔루션. Meta 자체 적용 → 검증 후 외부 판매 가능성. 삼성·SK하이닉스 HBM 장기 위협 시나리오. MRVL 밸류 체인 상 수혜가 가장 직접적임.",
     likes: 46,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-16T08:42:00.000Z",
     liked: false,
   },
@@ -5778,7 +5778,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Shotwell CNBC 발언 다시 들어봤어. 임원 보상 $116~$3,727 주가 연동이 핵심이야. 최고 보상 받으려면 주가가 32배 가야 한다는 뜻이거든. 동기부여 설계가 아니라 '우리는 32배 갈 수 있다고 내부적으로 믿는다'는 선언이야. '단기 청산 없음' 공식화도 같은 맥락이야. IPO 후 $90대 조정은 기관 배정 물량 소화 과정이야. Ellison $1B→$2.7B(+170%) 수익이 이사회 멤버 단가인데, 공개 시장에서 지금 사는 사람은 그보다 낮아. 일일 매출 $1.88B = 연환산 $686B+인데 시총 대비 PSR 계산해봤어? $90 지지 확인 후 재상승 논리는 유효해.",
     likes: 23,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-15T08:58:00.000Z",
     liked: false,
   },
@@ -5789,7 +5789,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "라스베이거스 AV 허가 신청 내용 확인해봤어. 신청 전에 이미 Cybertruck이 HD 맵 구축 장비 달고 현장 돌아다니는 게 포착됐거든. 준비 다 해놓고 신청한 거야. 연 4,200만 방문객 노선이 로보택시 첫 수익화 환경으로 최적이야. Forbes가 FSD v14.3.3을 'De Facto Robotaxi'라고 한 건 주류 비즈니스 미디어의 공식 인정이야. 기술 미디어만 인정하던 게 이제 주류 언론으로 넘어간 거야. Optimus $5T→$25T 밸류 논리 — 글로벌 인건비 $50T의 20% 대체 시나리오야. FSD 비전을 로봇에 직접 이식한다는 게 경쟁사가 처음부터 시작해야 하는 진짜 이유야.",
     likes: 30,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-15T08:54:00.000Z",
     liked: false,
   },
@@ -5800,7 +5800,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "메모리 트리오 숫자가 충격임. 2027 영업이익 삼성 $331B + SK $243B + 마이크론 $133B = $707B. 매그니피센트 6 합산 $661B 초과. 근데 시총은 트리오 $2.15T vs 매그6 $16.79T = 8배 차이. 영업이익이 더 큰데 시총이 8배 작음 = 재평가 여지 명확함. 마이크론 단독 포인트: 서방 유일 HBM 양산 + CHIPS Act $8.2B (잔여 $6.2B) + 미국 AI 빌드아웃 $200B 핵심 공급망. 삼성·SK는 한국 생산 = 정책 수혜 제한. MU 목표 $300~400 논리 구조가 탄탄함.",
     likes: 37,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-15T08:50:00.000Z",
     liked: false,
   },
@@ -5811,7 +5811,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "NVDA 선물 PER 20.65x 체크함. 역사적 최저 18.43x에서 +12%. S&P500 평균 24x보다 낮음. AI 슈퍼사이클 한가운데 있는 기업이 지수 평균보다 저PER이라는 역설임. EPS 성장이 주가 상승을 압도해서 생긴 것. FY2026 $200B 목표 달성 시 현재 PER 기준 완전 저평가 구간임. 미-이란 핵합의로 에너지 비용 하락 = 데이터센터 마진 간접 개선. 단기 EPS 성장 둔화 리스크는 항상 있으나 100배 인프라 확장 논리가 더 크게 작동 중임.",
     likes: 44,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-15T08:46:00.000Z",
     liked: false,
   },
@@ -5822,7 +5822,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Anthropic Claude Fable 5 + Mythos 수출통제령이 6/12 오후 5:21 ET에 발효됐어. 외국인 전면 차단, 전 세계 서비스 중단. Claude Mythos는 27년 OpenBSD 버그, 16년 취약점, NSA·AMZN·MSFT 40개사만 접근이야. 단기 충격은 있지만 미국 AI 독점 강화 = 장기 미국 AI 기업 수혜 구조야. 미-이란 핵합의 타결도 오늘 나왔어. 제재 완화, 유가 하락 압력. 항공·소비재 수혜고 에너지·방산은 단기 주의야. AI 인프라는 에너지 비용 하락으로 간접 수혜야. 두 이슈가 결국 AI 성장주에 긍정으로 수렴하는 날이야.",
     likes: 21,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-15T08:42:00.000Z",
     liked: false,
   },
@@ -5834,7 +5834,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오늘 SpaceX 첫날 종가 $172.68. 아침 $152 개장 → 장중 $175.32 터치 → $172.68 마감. 보통 IPO 첫날은 고점 찍고 매각세 나오는데, $175까지 갔다가 $172로 마감이면 수요가 진짜라는 신호야. Founders Fund $800M + Ron Baron $1B 잠금 확약이 공급을 막은 거야. 시총 $2.26T = 글로벌 6위, NVDA·GOOG·AAPL·MSFT·AMZN 다음이 SpaceX야. 역대 최대 IPO $75B 달성이 첫날 종가로 검증됐어. 이 $172가 앞으로 지지선이 될 것 같아.",
     likes: 28,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-13T08:58:00.000Z",
     liked: false,
   },
@@ -5845,7 +5845,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD v14.3.4가 오늘 릴리즈됐어. MLIR 컴파일러 리라이트로 반응 속도 20% 향상이야. 도로 데이터 처리 방식 근본 개선이거든. Semi 5대 신규 제조 확인(6/11) — 500마일, 1.2MW 충전, 1.7kWh/mi. 2026년 배송 본격화 타임라인이야. 유럽 주간 5,100대 +22.8% YoY는 26Q2 최고 기록이야. 소프트웨어(FSD) + 하드웨어(Semi) + 판매량(유럽)이 하루에 다 나온 게 오늘이야.",
     likes: 7,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-13T08:54:00.000Z",
     liked: false,
   },
@@ -5856,7 +5856,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AI 데이터센터 10년 내 100배 필요하다는 논거 다시 확인해봤어. AI 사용자 2030년 50억 명, MAU 10억 이미 돌파. 이 수요 경로에서 FY2026 타겟 $200B은 오히려 보수적이야. SPCX Colossus 1이 Tesla 지연으로 Anthropic 임대로 방향 바꿨는데, SpaceX가 AI 인프라 임대 사업에 진입했다는 거야. 이게 NVDA 수요처가 늘어나는 거야. 경쟁이 아니라 수요 확장 구조야.",
     likes: 10,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-13T08:50:00.000Z",
     liked: false,
   },
@@ -5868,7 +5868,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX IPO 상장일. Hyperliquid 선물이 $167로 열렸는데 $135 공모가 대비 +23.7%야. BlackRock $50B+ 주문이 실행되는 날이야. 근데 나는 개장가보다 종가를 볼 거야. 첫날 종가가 공모가 위에서 마감하느냐가 수요의 진짜 테스트거든. 3대 신용평가사 투자등급이 달라진 게 이번 IPO의 핵심이야. 연기금·보험사 $15T+가 SpaceX를 편입할 수 있게 된 거야. 직원 4,000+ 백만장자 탄생은 락업 해제 후 내부 매도 물량이 언제 나올지 미리 체크해야 해.",
     likes: 13,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-12T08:58:00.000Z",
     liked: false,
   },
@@ -5879,7 +5879,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Amundi $1.24B 추가매수를 유럽 기관 채널에서 확인해봤어. 유럽 최대 자산운용사가 공식 Tesla를 편입한다는 게 머스크 리스크 해소 시그널이야. ESG 규정이 강한 유럽에서 Tesla를 못 담던 운용사들 게이트가 열린 거거든. FSD EU 덴마크 ROW 조항 승인 → 27개국 자동 확산. 프랑스·독일 FSD 수익화 타임라인이 구체화되는 거야. Cybertruck AWD $59,990 배달 시작 + 메가팩 호주 100MW 완공은 하드웨어·에너지 두 축 동시 실행이야. 유럽 100만 대 FSD 구독 10% 전환하면 연 $1.2B 순수 소프트웨어 수익이야.",
     likes: 16,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-12T08:54:00.000Z",
     liked: false,
   },
@@ -5890,7 +5890,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SIA 월매출 $110.5B이 나왔어. 연환산 $1.3T야. AI 칩 수요가 달별로 신고가를 경신하는 게 지금 사이클이야. CoWoS 2H26 양산 전환이 NVDA 마진 개선의 직접 트리거야. 패키징 병목이 풀리면 GB200 납품 속도가 빨라지고 ASP도 유지돼. Feynman 초기 채택 확인은 2028년 로드맵이 실물로 증명된 거야. SK하이닉스·TSMC·ASML 공급망 수혜 구조는 유지돼. 매달 나오는 SIA 숫자가 슈퍼사이클 논리를 계속 검증하고 있어.",
     likes: 19,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-12T08:50:00.000Z",
     liked: false,
   },
@@ -5901,7 +5901,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Oracle RPO $638B이 진짜 충격적임. 2023년 8월 $64.9B → 2026년 5월 $638B. 34개월 CAGR 129.5%. RPO는 이미 계약된 미래 매출이라 향후 3~5년 Oracle 수익이 사실상 확정된 거임. OCI가 AWS·Azure보다 30~50% 싸다는 게 수주 폭발의 핵심 이유임. AI 클라우드 3강 구도에서 Oracle이 완전히 자리잡은 거임.",
     likes: 2,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-12T08:46:00.000Z",
     liked: false,
   },
@@ -5912,7 +5912,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "이란 공습 취소 + 핵합의 타결이 같은 날 나왔어. 유가 $90→$85 하락 기대가 CPI를 완화하고 연준 금리 인하 기대를 복원시켜. 에너지주는 단기 역풍이지만 성장주·나스닥한테는 순풍이야. 머스크 '범용 로봇이 다음 빅 플랫폼' 선언은 Optimus TAM $10T+ 확인이야. SpaceX IPO 당일에 이란 리스크 해소 + AI 로봇 메가트렌드가 동시에 확인되는 날이야. 성장주 전반에 긍정적 환경이야.",
     likes: 5,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-12T08:42:00.000Z",
     liked: false,
   },
@@ -5924,7 +5924,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX IPO 내일이야. $1.75T 밸류가 12개 방산기업 합산보다 $411B 크다는 숫자 계산해봤어. 단순 비교가 아니야. 방산은 정부 예산 의존 사이클리컬이고, SpaceX는 Starlink 구독 + AI 임대 + 발사 수수료 복합 수익이야. 비즈니스 모델이 달라. 3대 신용평가사 투자등급 — 이게 내일 게임체인저야. 연기금·보험사 $15T+가 SpaceX 편입할 수 있게 되는 거거든. Starlink $10.8B + AI 임대 $4B+ = $15B 연매출 구조는 IPO 전에 이미 완성됐어. 공모가 $25~30 범위인데 나는 내일 개장가보다 기관 배정 비율이 더 중요한 신호라고 봐.",
     likes: 14,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-11T08:58:00.000Z",
     liked: false,
   },
@@ -5935,7 +5935,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Piper Sandler가 레이팅에 Autonomy를 별도 항목으로 추가했어. 자율주행이 옵셔널 피처가 아니라 독립 밸류에이션 대상이 된 거야. FSD가 수익 창출 사업 단위로 인정받은 거거든. 덴마크·벨기에 FSD 동시 승인은 EU 규제 도미노의 시작이야. 텍사스 로보택시 89대는 오스틴 플릿이 의미있는 규모가 됐어. 누적 FSD 170B 마일 — 마일 데이터 축적이 규제 기관 설득 근거야. Potter가 '심각하게 저평가'라고 한 배경이 이 네 가지야. FSD 구독 수익 밸류에이션 모델이 월스트릿 커버리지로 들어가면 목표가 리레이팅이 클 거야.",
     likes: 17,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-11T08:54:00.000Z",
     liked: false,
   },
@@ -5946,7 +5946,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starship 발사 효율 데이터가 S-1에서 나왔다는 게 중요해. 10 Starship = 23 Falcon 9 용량이야. Starship 전환 시 비용 구조가 얼마나 개선되는지를 수치로 보여주는 거야. 완전 재사용 달성하면 발사 비용이 Falcon 9의 1/10 이하로 떨어지는 게 목표야. 여기다 TeraFab $11B 칩공장까지 가면 SpaceX는 로켓·인터넷·AI·반도체 수직계열화 완성이야. $1.75T도 이 관점에서 보면 미래 가치 대비 싼 거야.",
     likes: 20,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-11T08:50:00.000Z",
     liked: false,
   },
@@ -5957,7 +5957,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "CPI 2.9% + 이란 긴장 + 유가 $90 + SpaceX IPO가 같은 날 터졌어. 단기 변수는 있지만 구조적으로 AI 슈퍼사이클은 유지야. CPI 2.9%는 금리 인하 기대를 일시 죽이지만 AI 인프라 투자 사이클은 금리와 무관하게 진행 중이야. 하이퍼스케일러들이 CAPEX 줄인다는 신호가 없거든. SpaceX IPO 내일인데 이란 리스크보다 $1.75T 스토리가 훨씬 크다고 봐. 관망보다 IPO 수요 참여 의견이야.",
     likes: 3,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-11T08:46:00.000Z",
     liked: false,
   },
@@ -5969,7 +5969,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX Bastrop 기가팩토리 딜 구조를 확인해봤어. AI 임대 계약 먼저 따고 공장 짓는 순서야. Google $12.5B + Anthropic $9B = $21.5B이 먼저 들어온 상태에서 건설을 시작해. 임차인 확정 전에 짓는 게 아니야. IRR이 완전히 달라지는 거야. Starlink $10.8B 연매출 + AI 임대 $4B+ = $15B+ 복합 수익 구조가 IPO 전에 이미 완성됐어. 기업가치 $350B은 이 숫자들 보면 보수적이야. 내일 IPO 공모가 $25~30 범위인데, 개장가 예측보다 어떤 기관이 배정받는지 봐야 해.",
     likes: 6,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-10T08:58:00.000Z",
     liked: false,
   },
@@ -5980,7 +5980,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오늘 테슬라 뉴스 3개가 다 중요함. 네덜란드 FSD 데이터가 제일 큰 거임. 수동 대비 충돌 3.5배 감소는 수치가 아니라 규제 해제 논거임. EU 규제 기관이 이 데이터 보면 FSD Supervised 안 풀어줄 이유가 없고 독일·프랑스까지 열리면 FSD 구독 수익이 유럽에서 터지는 거임. 네바다 허가 + 텍사스 VIN 8대는 로보택시 확장 실행력 확인이고 Semi EU는 세 번째 수익축이 형성되는 거임. 오늘이 테슬라 투자자한테 좋은 날임.",
     likes: 9,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-10T08:54:00.000Z",
     liked: false,
   },
@@ -5991,7 +5991,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "젠슨 황이 '매수 기회'라고 직접 말한 거 처음임. 그분이 원래 주가 관련 발언 안 하는데 수주잔고 H1 2027 확보 상태에서 이 말 한 거임. Apple+Google+NVDA AI 클라우드 연합 구도도 NVDA한테는 어차피 양쪽에 GPU 납품하는 구조라 무조건 수혜임. Intel 2028칩 발주는 공급 다변화 포인트인데 Intel 파운드리 살리는 데도 기여해서 CHIPS법 수혜 구조임. 조정 오면 분할 매수 관점.",
     likes: 54,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-10T08:50:00.000Z",
     liked: false,
   },
@@ -6002,7 +6002,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "중국 $2,950억 AI 프로젝트가 NVDA한테 위협이지만 전체 맥락은 AI 인프라 수요가 전세계적으로 폭발한다는 증거임. 미국 빅3 CAPEX $2,250억 + 중국 $2,950억이면 글로벌 AI 인프라 투자 규모가 $5T+ 방향으로 가는 거임. OpenAI IPO 확률 급등 + JPMorgan AI 에이전트 배포까지 더하면 AI 슈퍼사이클 논리가 더 강해지는 날임. AI 섹터 전체 롱 포지션 유지 의견.",
     likes: 72,
-    comments: 2,
+    comments: 0,
     created_at: "2026-06-10T08:46:00.000Z",
     liked: false,
   },
@@ -6013,7 +6013,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starlink S-1 ARPU -33%를 네거티브로 보는 시각이 있는데 틀린 거임. 총매출이 $2.75B에서 $10.8B(연환산)으로 4배 증가한 거임. ARPU 하락은 저가 플랜 출시 + 신흥국 시장 확장의 결과이고 B2B 파이프라인(30개+ 통신사, 항공 38개사)이 성숙하면 ARPU는 반등함. 지금 $10.8B 연매출에 PSR 10배 적용하면 Starlink 단독 $108B임. SpaceX 전체 $350B 안에 이게 들어있는 거임.",
     likes: 34,
-    comments: 3,
+    comments: 0,
     created_at: "2026-06-10T08:42:00.000Z",
     liked: false,
   },
@@ -6024,7 +6024,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Semi EU 이 타이밍에 BD 채용하는 건 2027년 대량 출시 준비임. EU 탄소 규제 2030년 상용차 CO₂ 45% 감축 의무면 구조적으로 전기 트럭 강제 수요가 생기는 거임. Class 8 디젤 대비 에너지 비용 70% 절감 + 500마일+ 항속은 EU 물류사 입장에서 TCO 계산하면 무조건 Tesla Semi임. Daimler eActros가 최대 경쟁자인데 Megacharger 네트워크 없는 약점이 있음. EU 상용 트럭 30만 대 시장에서 점유율 10%만 해도 연 3만 대임.",
     likes: 41,
-    comments: 4,
+    comments: 0,
     created_at: "2026-06-10T08:38:00.000Z",
     liked: false,
   },
@@ -6036,7 +6036,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "텍사스 AVO 인가 나왔음. Tesla Robotaxi LLC가 정식 AVO 사업자로 승인된 거임. 투자 관점에서 이게 왜 중요하냐면 로보택시 밸류에이션 리레이팅 트리거가 규제 제거임. 안전요원 없이 유료 탑승이 합법화됐다는 건 사업 모델이 법적으로 완성된 거임. 7월 오스틴 배포 후 분기별 운행 데이터가 다음 밸류에이션 업데이트 포인트임. FSD 2,670만 마일 +44%랑 묶으면 오늘이 테슬라 자율주행 역사에서 중요한 날임.",
     likes: 48,
-    comments: 4,
+    comments: 0,
     created_at: "2026-05-29T08:58:00.000Z",
     liked: false,
   },
@@ -6047,7 +6047,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ARK TAM $28.5T, Polymarkets $2조+ IPO — 수학적으로 말이 됨. Starlink Connectivity $11.4B이 올해 수익이고 이게 30개 통신사 실 과금 구조로 성장하는 거임. 내부에서 SpaceX IPO 시나리오 네 가지 다 모델링해봤는데 Starlink 분리 상장이 가장 IRR 높게 나옴. SpaceX 전체 상장은 TSLA 합병 불확실성 때문에 디스카운트 받는 구조임. 어떤 루트든 현재 $350B은 시작점임.",
     likes: 25,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-29T08:54:00.000Z",
     liked: false,
   },
@@ -6058,7 +6058,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Anthropic $65B에 Claude ARR $47B임. PSR 1.4배인데 OpenAI가 PSR 4배 넘게 거래됨. 저평가 구조임. Amazon이 최대 주주라는 게 AMZN 투자자한테 숨어있는 AI 자산임. Bedrock 통한 Claude 성장이 AWS 마진 +2.1bps 만든 거 확인됐음. 상장되면 Amazon이 보유한 Anthropic 지분 FMV 조 단위임. AMZN 포지션에 Anthropic 옵션 공짜로 받고 있는 거임.",
     likes: 32,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-29T08:50:00.000Z",
     liked: false,
   },
@@ -6069,7 +6069,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Meta Dollar-Dollar 구독 $14 나왔음. 시장이 이걸 얼마나 반영할지 봐야 하는데 나는 밸류에이션 멀티플 확장 재료로 봄. 광고 수익은 경기 민감이고 구독은 비민감임. 구독 비중이 올라갈수록 EBITDA 안정성이 올라가고 PER 프리미엄 붙는 구조임. 32억 MAU 기반이라 전환율 1%만 해도 $54억 추가 수익임. 목표주가 $314 Buy는 이걸 반영한 거임. 내부 뷰는 조금 더 높음.",
     likes: 39,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-29T08:46:00.000Z",
     liked: false,
   },
@@ -6080,7 +6080,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SMCI 2030 ROI 달성 수혜 분석 좋게 봄. 회계 정정 이후 본업 스토리로 복귀하는 국면인데 수주잔고 역대 최고라는 게 실제 채널 체크로 확인됨. 커스텀 칩 채택 하이퍼스케일러가 AI 서버 어디서 사냐가 문제인데 SMCI 말고 이 물량 소화할 데가 없음. FY2026 $25B+ 전망 유지함. 리스크는 회계 재발 가능성인데 내부 거버넌스 바뀐 거 확인됐음.",
     likes: 46,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-29T08:42:00.000Z",
     liked: false,
   },
@@ -6091,7 +6091,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "FSD 일 2,670만 마일 +44% — Morgan Stanley Adam Jonas 채널 체크 숫자임. 이게 왜 중요하냐면 규제 당국 신뢰 확보의 핵심 데이터임. AVO 인가 속도가 웨이모보다 빠른 이유가 이 데이터 때문임. 44% MoM 유지되면 연말 일 1억 마일 돌파함. 그 시점에 FSD 엣지 케이스 커버리지가 완성에 가까워지고 자율주행 경쟁이 사실상 마무리됨. 지금이 포지션 확대 타이밍임.",
     likes: 23,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-29T08:38:00.000Z",
     liked: false,
   },
@@ -6102,7 +6102,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Starlink 통신사 30개 실 과금 구조 확인됨. 핵심은 MOU가 아니라는 거임. 통신사당 수억 달러 연간 도매 수익이 30개라면 Starlink B2B만 $30B+ 구조로 갈 수 있음. 여기다 B2C 개인 구독 더하면 Starlink 단독으로 $200B+ 밸류에이션 충분히 정당화 가능함. SpaceX 전체 $350B이 얼마나 저평가인지 이 숫자 하나로 설명됨.",
     likes: 2,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-29T08:34:00.000Z",
     liked: false,
   },
@@ -6113,7 +6113,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "중국 Model Y 프로모션 연장 + FSD 중국 진출 논의 동시에 나온 거임. 단기는 볼륨, 장기는 FSD 소프트웨어 마진임. NIO 창업자 Li Bin이 긍정 발언한 건 기술 격차 공개 인정임. 200만대+ 중국 출고 차량에 FSD 업셀링되면 ~80% 마진 소프트웨어 수익이 수십억 달러임. 이게 ASP 혼합 효과로 Tesla 마진율 구조적 개선의 핵심임. 중국 FSD 출시 공식화 타이밍이 다음 매수 포인트임.",
     likes: 5,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-29T08:30:00.000Z",
     liked: false,
   },
@@ -6124,7 +6124,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "이란 핵협상 30개월 제재 해제 시나리오 포지션 조정함. XLE 비중 10% → 6%로 축소했음. 완전 타결 확률이 50% 넘는다고 보긴 어렵지만 리스크 관리 차원임. 이란 원유 140만 배럴/일 순증이면 WTI $70→$60 시나리오인데 에너지 섹터 단기 역풍임. 항공사(UAL·DAL)는 반대로 유가 하락 수혜라 비중 늘렸음. CBDC 폐지 + BTC 비축 정책은 IBIT 포지션 유지 근거임.",
     likes: 8,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-29T08:26:00.000Z",
     liked: false,
   },
@@ -6135,7 +6135,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Giga Texas Corte 2 Megapack 400+ 확장임. 에너지 사업이 자동차 마진보다 높다는 거 계속 확인되는 중임. 자체 공장 전력 자급하면서 외부 판매 물량도 확보하는 이중 레버리지임. Megapack ASP $1.3M에 백로그 12개월+이면 에너지 부문 FY2026 매출 성장률이 자동차 부문 압도할 것임. 복합 성장 구조가 자동차 수익성 변동을 완충하는 게 포인트임.",
     likes: 11,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-29T08:22:00.000Z",
     liked: false,
   },
@@ -6146,7 +6146,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "CBDC 전면 폐지 Scott Bessent 발언 임팩트 정리함. 디지털 달러 없음 확정이면 BTC가 민간 디지털 화폐 자리 가져가는 거임. 트럼프 BTC 비축 정책이랑 일관성 있음. 기관 진입 장벽이 규제 불확실성이었는데 명확화되면 IBIT 자금 유입 가속됨. COIN은 스테이블코인 규제 명확화 수혜임. 단기 Wild West 통제 뉴스가 노이즈처럼 보이지만 장기 친암호화폐 환경 확정이라는 게 핵심 메시지임.",
     likes: 14,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-29T08:18:00.000Z",
     liked: false,
   },
@@ -6157,7 +6157,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SpaceX × Anthropic AI 컴퓨팅 파트너십 큰 그림이 나왔음. H100 8,000개 인프라에 Claude 모델 얹으면 AWS·Azure·GCP 다음 4번째 AI 클라우드 경쟁자임. 우주 데이터센터 비전은 10년 뷰지만 지금 인프라 구축이 그 방향임. 단기는 비용 구조 차별화(우주 태양광 → 전력비 제로)가 가능한지 증명하는 게 포인트임. 비상장이라 직접 투자 불가하지만 NVDA GPU 공급 수혜는 확실함.",
     likes: 17,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-29T08:14:00.000Z",
     liked: false,
   },
@@ -6169,7 +6169,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Cybertruck SBW 리포트 봤음. 투자 관점 핵심은 FSD 통합 최적화임. 물리 컬럼 없으면 FSD가 조향 명령을 전동 액추에이터에 직접 때리는 거라 반응 정밀도가 다름. 7월 오스틴 Cybercab 배포 일정이랑 맞물리면 SBW가 로보택시 핵심 기술로 재평가받을 것임. 단기 주가보다 이 기술이 Cybercab 양산 일정에 리스크 없다는 거 확인이 더 중요함. 지금 $443 프리마켓.",
     likes: 20,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-28T08:58:00.000Z",
     liked: false,
   },
@@ -6180,7 +6180,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Blackwell Ultra H1 2027 수주잔고 확보 나왔을 때 내부에서 바로 모델 업데이트했음. Committed PO라면 취소 위약금 있는 구조라 실매출 전환률 95%+ 임. 일반 백로그랑 성격이 다름. Jensen '시총 저평가' 발언은 CEO가 자주 하는 말이 아닌데 근거가 있음. $5T 타겟 내는 기관 나올 것 같음. 내 타겟은 보수적이지만 방향은 동일.",
     likes: 3,
-    comments: 4,
+    comments: 0,
     created_at: "2026-05-28T08:54:00.000Z",
     liked: false,
   },
@@ -6191,7 +6191,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Elon이 올린 MU 10배 사이클 데이터 봤음. 흥미로운 건 2016~2024년 구간이 HBM 없을 때도 $12.4B→$30B 갔다는 거임. 근데 지금은 HBM4가 AI GPU 필수 소재가 된 상황이라 성장 속도가 다를 수 있음. CXMT $24B 조달은 범용 DRAM 마진에 진짜 리스크임. MU 제품 믹스에서 HBM 비중이 2027년 50% 돌파 시점이 포인트.",
     likes: 6,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-28T08:50:00.000Z",
     liked: false,
   },
@@ -6202,7 +6202,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "CXMT $24.2B 리포트 정리. Corsair 납품이 이미 실현됐다는 거라 품질 기준 통과는 확인됨. 문제는 국가 보조금 받는 기업이 적자 감수하고 가격 덤핑 가능하다는 거임. 삼성 범용 DRAM 마진 제일 먼저 압박. MU는 HBM 비중이 방어벽. SK하이닉스가 이 싸움에서 제일 유리한 포지션. 종목 선별 중요한 구간.",
     likes: 9,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-28T08:46:00.000Z",
     liked: false,
   },
@@ -6213,7 +6213,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "SemiAnalysis 하이퍼스케일러 마진 차트 봤는데 생각보다 큰 의미임. Azure 3분기 연속 하락이고 AWS는 개선 중. 기업 IT 예산 배분에서 Azure→AWS 이동이 가시적으로 나오면 시장 점유율 데이터 변화가 나올 것임. Bedrock·Claude 생태계가 굳어지면 전환 비용 높아져서 고착화됨. AMZN 클라우드 리레이팅 시점 가까워지는 중.",
     likes: 12,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-28T08:42:00.000Z",
     liked: false,
   },
@@ -6224,7 +6224,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "ACEA 4월 데이터 EU+UK +46.5% 확인했음. 3개월 연속 반등은 '트렌드 전환'으로 분류할 근거 충분함. 내가 유럽 반등 리포트 낼 때 2개월로는 확신 못 했는데 3개월이면 다름. Q2 전체 인도량 컨센서스 현재 45만대인데 유럽 회복 반영하면 47~48만대까지 올라갈 수 있음. FSD 유럽 승인 나오면 한 번 더 재평가.",
     likes: 15,
-    comments: 4,
+    comments: 0,
     created_at: "2026-05-28T08:38:00.000Z",
     liked: false,
   },
@@ -6235,7 +6235,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Ron Baron '세계 최대 기업' 발언 맥락 이해하려면 10년 뷰 전제 중요. 완전 재사용 달성 + Starlink 글로벌 커버리지 + B2G 계약 확장이 10년 안에 동시에 되면 그게 세계 최대 기업 논리임. 4가지 시나리오 중 내가 제일 가능성 높다고 보는 건 Starlink 단독 분리 상장. 합병은 CFIUS·주주 희석 이슈로 현실적으로 어렵고.",
     likes: 18,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-28T08:34:00.000Z",
     liked: false,
   },
@@ -6246,7 +6246,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "오늘 리포트 다 보고 전반적인 뷰 정리 — AI 인프라 투자 사이클 꺾일 조짐 없음. NVDA H1 2027 수주잔고, AMZN Bedrock 마진 개선, 하이퍼스케일러 CAPEX 유지 다 같은 방향. CXMT 메모리 위협은 AI 메모리엔 단기 영향 없고. Tesla 유럽 반등은 단기 모멘텀. 전체 AI 섹터 방향 강세 유지. NVDA 비중 줄일 이유 없음.",
     likes: 1,
-    comments: 4,
+    comments: 0,
     created_at: "2026-05-28T08:30:00.000Z",
     liked: false,
   },
@@ -6258,7 +6258,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "CNBC Tesla-SpaceX 합병 보도 나왔을 때 팀 전체가 잠깐 멈췄음. 내가 작성한 Wedbush 리포트랑 방향이 비슷한데 Kalshi 33%로 내려간 게 맞는 판단 같기도 하고. 합병 실제로 되면 교환비율 계산이 제일 문제임. SpaceX 비상장 상태에서 $350B으로 박아놓으면 TSLA 주주 희석이 얼마나 될지 지금 모델 돌리는 중인데 숫자가 좀 불편하게 나옴. 당장 결론 내기는 이른 상황.",
     likes: 4,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-27T08:58:00.000Z",
     liked: false,
   },
@@ -6269,7 +6269,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "Q1 2026 실적 들여다봄. 비용 +64%가 다 설명이 되냐고? 안 됨. Optimus 개발비·Supercharger 확장·FSD 연구비 다 더해도 내가 보던 예상치보다 $8억 정도 초과임. 어디서 샜는지 세그먼트별 분해가 필요한데 IR 자료 보면서 마저 파악해야 함. 일단 에너지 부문 마진이 괜찮아서 그나마 버티는 구조임. 주식수 35% 증가는 별로임.",
     likes: 63,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-27T08:54:00.000Z",
     liked: false,
   },
@@ -6280,7 +6280,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AMD $1T 공식 선언 날 내 포지션 확인했더니 평단이 $147임. 오늘 $506이면 3.4배. 시총 $1조 달성이 끝이 아니고 MI400 나오면 다음 레그가 있음. 문제는 TSMC CoWoS 공급 제약인데 이게 AMD만의 문제가 아니라 섹터 전체 병목임. MI300X 수요가 공급을 초과하는 상황이라 가격 협상력이 AMD한테 있음. 단기 고점 우려 있어도 구조적으론 추가 상승 여력 있다고 봄.",
     likes: 81,
-    comments: 4,
+    comments: 0,
     created_at: "2026-05-27T08:50:00.000Z",
     liked: false,
   },
@@ -6291,7 +6291,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "CHIPS법 $51.6억 수령 확정이랑 정치인 매수 얘기 오늘 같이 나온 게 흥미롭네. 이해충돌 논란 빼고 투자 관점으로만 보면 — 정책 지속성에 대한 내부 확신 없이 살 이유가 없다는 거임. HBM4 라인 증설 속도가 관건인데 아이다호 팹 올라오는 타임라인 2028년이면 그 전까지는 SK하이닉스가 계속 우위임. MU는 2027~2028 픽임. 지금 들어가는 건 조금 이름.",
     likes: 29,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-27T08:46:00.000Z",
     liked: false,
   },
@@ -6302,7 +6302,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "우주군 $23.5억 계약이 나온 날 Starlink 군용 세그먼트 가치 다시 계산함. B2C 구독 + B2B 항공 38사 + B2G 군사 계약 세 다리 구조면 $350B 기업가치가 오히려 보수적으로 보임. SpaceX IPO 타이밍 문제인데 TSLA 합병 루머가 나온 걸 보면 직접 IPO 카드를 꺼낼 시점을 재는 것 같기도 함. 비상장이라 직접 포지션이 없는 게 아쉬운 날이었음.",
     likes: 36,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-27T08:42:00.000Z",
     liked: false,
   },
@@ -6313,7 +6313,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "BofA $380 상향 보고 우리 팀 뷰랑 같은 방향이라 뭔가 묘함. 에이전트 AI 시대 Apple 플랫폼 통행료 논리가 맞는 게, 어떤 AI 에이전트든 결국 아이폰 사용자에게 닿으려면 App Store 통해야 하잖음. 근데 지금 $311이 이미 그 기대를 선반영한 건지 여전히 저평가인지 — 서비스 매출 $100B 달성 시점이 관건임. 내 개인 계좌에선 비중 유지 중임.",
     likes: 43,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-27T08:38:00.000Z",
     liked: false,
   },
@@ -6325,7 +6325,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "팀원 하나가 오늘 아침 B200 공급 스케줄 확인하고 나서 갑자기 조용해졌음. 내부에서 보는 3Q 가이던스가 시장 컨센서스보다 훨씬 빡센데, 이게 서프라이즈 재료가 될지 역효과가 될지 아직 판단이 안 섬. 개인적으론 지금 NVDA 주가가 B200 리스크를 과소평가하고 있다고 봄.",
     likes: 50,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:58:00.000Z",
     liked: false,
   },
@@ -6336,7 +6336,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "내 개인 계좌 기준으론 테슬라 비중을 지난달 대비 절반으로 줄였음. FSD 마일당 개입 수치는 진짜 좋아졌는데 오스틴 파일럿 확장 속도가 예상보다 느려서. 공식 리포트엔 목표주가 그대로인데 단기 가격 부담이 좀 있음. 260달러대 이상은 현 상황에서 안 사는 게 맞다고 봄.",
     likes: 27,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:54:00.000Z",
     liked: false,
   },
@@ -6347,7 +6347,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "시장이 연준 금리 인하를 2회로 보는데, 내부적으론 1회도 빠듯하다는 뷰가 우세함. PCE 다음 달 치 나오면 재반등 가능성 있고 그럼 지금 채권 포지션이 다 흔들림. 공식 전망은 낙관 유지하는데 개인 포트폴리오에서 달러 현금 비중은 슬금슬금 올리는 중. 10월 전까지는 조심스럽게 봄.",
     likes: 34,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:50:00.000Z",
     liked: false,
   },
@@ -6358,7 +6358,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "AWS 클라우드 세그먼트 마진이 분기마다 50~100bps씩 올라오고 있는 거 시장이 제대로 안 보고 있음. 이 추세대로면 2027년 AWS 영업이익률 40% 돌파 가능한데, 그 시점에 AMZN 전체 밸류에이션 리레이팅이 다시 일어날 거임. 내 판단으론 지금 주가가 이 시나리오를 반도 안 반영했다고 생각함.",
     likes: 41,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:46:00.000Z",
     liked: false,
   },
@@ -6369,7 +6369,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "어제 애플 개발자 콘퍼런스 관련 자료 세 개 보고 나서 뷰가 바뀌었음. AI 기능 온디바이스 전환 속도가 생각보다 훨씬 빠르고, 서비스 매출에 붙는 AI 프리미엄이 2026년부터 찍히기 시작할 것 같음. 하드웨어 사이클 우려보다 이게 더 중요한 포인트라는 생각. 개인적으론 비중 줄일 타이밍 아님.",
     likes: 48,
-    comments: 1,
+    comments: 0,
     created_at: "2026-05-20T08:42:00.000Z",
     liked: false,
   },
@@ -6380,7 +6380,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "팔란티어 섹터 7년 보면서 이렇게 상업 부문이 정부 부문을 역전한 분기는 처음임. 근데 문제는 이걸 정당화할 수 있는 매출 배수가 지금 40배인데, 역성장 한 번 나오면 그 배수 유지 자체가 논거를 잃음. 내부에서도 이 주가에서 추가 매수 의견 내는 사람은 없음.",
     likes: 17,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:38:00.000Z",
     liked: false,
   },
@@ -6391,7 +6391,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "DCF 다시 돌려봤는데 Azure AI 기여분 포함하면 합리적인 타겟이 시장 컨센서스보다 15~20% 높게 나옴. 근데 그게 실적에 찍히려면 기업들 AI 도입 속도가 지금 추세를 유지해야 함. 내 뷰는 낙관론 쪽에 베팅하는 게 맞다고 보는데, 공식 리포트 숫자는 보수적으로 유지할 수밖에 없는 구조라서.",
     likes: 20,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:34:00.000Z",
     liked: false,
   },
@@ -6402,7 +6402,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "지난 실적 발표 이후 3거래일째 조용한데 이게 오히려 좋은 신호임. 광고 단가 회복이 예상보다 빨라서 3Q 가이던스가 서프라이즈 나올 가능성 높음. 내부에선 Llama 비용 절감 효과가 내년부터 영업이익에 직접 찍힐 거라 보고 있음. 팀에서 메타 비중 소리 없이 올리는 중.",
     likes: 3,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-20T08:30:00.000Z",
     liked: false,
   },
@@ -6413,7 +6413,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "IR 쪽에서 흘러나오는 뉘앙스가 MI350 수요가 초기 채널 체크보다 강하다는 쪽임. NVDA 대비 30% 가격 메리트가 하이퍼스케일러한테 실제로 어필되고 있다는 거고. 공식 리포트엔 아직 안 냈지만 내부에서 AMD 타겟 올리는 얘기 나오고 있음. 빠르면 다음 분기 발표 전에 업데이트 나올 수 있음.",
     likes: 6,
-    comments: 1,
+    comments: 0,
     created_at: "2026-05-20T08:26:00.000Z",
     liked: false,
   },
@@ -6424,7 +6424,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "작년 같은 시기랑 비교하면 NVDA 밸류에이션 부담이 다른 성격임. 그때는 미래 수익 기대가 전부였는데 지금은 실제 데이터센터 수주가 쌓이고 있음. 근데 HBM 공급 병목이 3Q까지 해소 안 되면 수주가 매출로 전환되는 타이밍이 밀릴 수 있어서. 단기 조정 있어도 이상한 거 아님.",
     likes: 9,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:22:00.000Z",
     liked: false,
   },
@@ -6435,7 +6435,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "헤지 비율 지금 포트폴리오 대비 15%까지 올렸음. 이 정도 올린 게 22년 이후 처음. 매크로 숫자보단 금융시장 내부에서 뭔가 무르익는 느낌이 있어서. 신용 스프레드가 조금씩 벌어지는 게 눈에 띄고, VIX가 낮은데 실제 포지셔닝은 헤비한 구간이라 언제든 스파이크 나올 수 있음.",
     likes: 12,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:18:00.000Z",
     liked: false,
   },
@@ -6446,7 +6446,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "모두가 베어리시한 게 오히려 카운터 시그널 같다는 생각도 드는데, 진짜 문제는 EV 침투율이 둔화된 게 일시적인지 구조적인지 판단이 안 선다는 거임. 공식 리포트엔 '하반기 회복' 썼는데 반신반의임. 사이버캡 이야기가 주가 버티게 해주는 거지, 본업 모멘텀만 보면 쉽지 않음.",
     likes: 15,
-    comments: 1,
+    comments: 0,
     created_at: "2026-05-20T08:14:00.000Z",
     liked: false,
   },
@@ -6457,7 +6457,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "인도 생산 실질 비중이 아직 5%대인데 뉴스는 30%짜리 스토리처럼 쏟아짐. 리포트에 크게 쓰는 이유는 투자자들이 듣고 싶어하는 얘기이기 때문. 근데 중국 의존도 진짜 해소는 2028년 이전엔 어렵다고 봄. 단기 재료로 움직이면 거기서 팔 생각이고, 장기 보유 관점에선 인도 스토리보다 서비스 마진 구조가 훨씬 중요함.",
     likes: 18,
-    comments: 2,
+    comments: 0,
     created_at: "2026-05-20T08:10:00.000Z",
     liked: false,
   },
@@ -6468,7 +6468,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     content:
       "공식 리포트엔 목표주가 140달러 유지하는데, 내부에선 B200 양산 본격화되면 160 이상 봐야 한다는 뷰가 우세함. 컨센서스 너무 튀면 나중에 부담이라서 못 올리는 거지. 데이터센터 수요가 공급을 계속 앞서는 구조에서 밸류 조정만 보고 팔면 손 놓는 거라고 봄. 팀에서 개인 계좌 산 사람 꽤 됨.",
     likes: 1,
-    comments: 3,
+    comments: 0,
     created_at: "2026-05-20T08:06:00.000Z",
     liked: false,
   },
