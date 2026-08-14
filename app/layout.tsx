@@ -33,7 +33,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  // font-semibold(600)·font-bold(700) 없으면 브라우저가 가짜 볼드 → 한글이 깨져 보임
+  weight: ["400", "500", "600", "700"],
   variable: "--font-kr",
   display: "swap",
 });

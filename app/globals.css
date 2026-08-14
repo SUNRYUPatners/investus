@@ -82,17 +82,13 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-kr), 'Noto Sans KR', system-ui, sans-serif;
-  /* 라이트에서 antialiased만 쓰면 글자가 얇고 뿌옇게 보일 수 있음 */
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
+  /* 정식 Bold 웨이트 로드 후 antialiased — 가짜 볼드+서브픽셀이 겹치면 한글이 번져 보임 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior-y: none;
   min-height: 100%;
-}
-
-html[data-theme="dark"] body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Remove 300ms tap delay on all interactive elements */
