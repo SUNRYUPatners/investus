@@ -71,6 +71,14 @@ function invokeAdfit() {
   }
 }
 
+function isAdFilled(wrap: HTMLElement): boolean {
+  const ins = wrap.querySelector("ins.kakao_ad_area") as HTMLElement | null;
+  if (!ins) return false;
+  if (getComputedStyle(ins).display === "none") return false;
+  if (ins.querySelector("iframe")) return true;
+  return ins.offsetHeight > 0 && ins.childElementCount > 0;
+}
+
 function AdBanner({
   unit,
   width,
@@ -82,6 +90,8 @@ function AdBanner({
   // Insight (and others) keep BOTH mobile+desktop trees in the DOM via Tailwind
   // lg:hidden / hidden lg:flex — hidden duplicates steal AdFit fill & destroy races.
   const [visible, setVisible] = useState(false);
+  // null=대기, true=채움, false=미수신(슬롯 숨김) — 동일 unit 중복 시 빈 흰 카드 방지
+  const [filled, setFilled] = useState<boolean | null>(null);
 
   useEffect(() => {
     const wrap = wrapRef.current;
@@ -100,10 +110,14 @@ function AdBanner({
   }, []);
 
   useEffect(() => {
-    if (!visible) return;
+    if (!visible) {
+      setFilled(null);
+      return;
+    }
     const wrap = wrapRef.current;
     if (!wrap) return;
 
+    setFilled(null);
     retainUnit(unit);
 
     const script = document.createElement("script");
@@ -112,24 +126,51 @@ function AdBanner({
     script.setAttribute("charset", "utf-8");
     wrap.appendChild(script);
 
+    const markFilled = () => {
+      if (isAdFilled(wrap)) setFilled(true);
+    };
+
+    const mo = new MutationObserver(markFilled);
+    mo.observe(wrap, { childList: true, subtree: true, attributes: true });
+
     const t0 = window.setTimeout(invokeAdfit, 50);
     const t1 = window.setTimeout(invokeAdfit, 400);
     const t2 = window.setTimeout(invokeAdfit, 1200);
+    const checks = [600, 1200, 2000].map((ms) =>
+      window.setTimeout(markFilled, ms)
+    );
+    // AdFit은 동일 unit을 페이지에 1개만 채우는 경우가 많음 → 빈 슬롯은 접기
+    const giveUp = window.setTimeout(() => {
+      setFilled((prev) => (prev === true ? true : false));
+    }, 2800);
 
     return () => {
+      mo.disconnect();
       window.clearTimeout(t0);
       window.clearTimeout(t1);
       window.clearTimeout(t2);
+      checks.forEach((id) => window.clearTimeout(id));
+      window.clearTimeout(giveUp);
       script.remove();
       releaseUnit(unit);
     };
   }, [visible, unit]);
 
+  // 미수신이면 DOM에서 완전히 제거 (흰 빈 카드 방지)
+  if (filled === false) return null;
+
   return (
     <div
       ref={wrapRef}
       className={`ad-slot flex justify-center overflow-hidden ${className}`}
-      style={{ minHeight: visible ? height : 0 }}
+      data-filled={filled === true ? "true" : "false"}
+      style={{
+        minHeight: filled === true ? height : 0,
+        // 대기 중엔 테두리·배경 없이 — 채워진 뒤에만 카드처럼 보임
+        ...(filled !== true
+          ? { background: "transparent", borderColor: "transparent" }
+          : null),
+      }}
     >
       {visible ? (
         <ins
