@@ -1,6 +1,7 @@
 /**
- * Heatmap tile colors — Finviz-style solid greens/reds with adaptive text.
- * Avoids washed pastel + white text (low contrast on light theme).
+ * Heatmap tile colors — Finviz-style.
+ * 글자색은 항상 흰색으로 통일 (타일마다 흑/백 섞이면 헷갈림).
+ * 배경은 흰 글자가 읽히도록 채도 하한을 둔다.
  */
 export type HeatmapTileColors = {
   bg: string;
@@ -16,37 +17,30 @@ function lerp(a: number, b: number, t: number) {
   return Math.round(a + (b - a) * t);
 }
 
+const FG = "#ffffff";
+const SUB = "rgba(255,255,255,0.9)";
+
 /** ±2.5% 이상이면 최대 채도 */
 export function heatmapTile(pct: number | null | undefined): HeatmapTileColors {
   if (pct == null || Number.isNaN(pct)) {
-    return { bg: "var(--muted-2)", fg: "var(--text)", sub: "var(--muted)" };
+    return { bg: "#64748b", fg: FG, sub: SUB };
   }
 
   const t = clamp01(Math.abs(pct) / 2.5);
-  // 약한 등락도 연한 파스텔로 가지 않도록 하한
-  const s = 0.28 + t * 0.72;
+  // 흰 글자 대비용 — emerald-500→700 / red-500→700 구간만 사용
+  const s = 0.15 + t * 0.85;
 
   if (pct >= 0) {
-    // emerald-200 → emerald-700  (#a7f3d0 → #047857)
-    const r = lerp(167, 4, s);
-    const g = lerp(243, 120, s);
-    const b = lerp(208, 87, s);
-    const lightText = s >= 0.48;
-    return {
-      bg: `rgb(${r},${g},${b})`,
-      fg: lightText ? "#ffffff" : "#052e16",
-      sub: lightText ? "rgba(255,255,255,0.92)" : "rgba(5,46,22,0.78)",
-    };
+    // #22c55e → #166534
+    const r = lerp(34, 22, s);
+    const g = lerp(197, 101, s);
+    const b = lerp(94, 52, s);
+    return { bg: `rgb(${r},${g},${b})`, fg: FG, sub: SUB };
   }
 
-  // red-200 → red-700 (#fecaca → #b91c1c)
-  const r = lerp(254, 185, s);
-  const g = lerp(202, 28, s);
-  const b = lerp(202, 28, s);
-  const lightText = s >= 0.48;
-  return {
-    bg: `rgb(${r},${g},${b})`,
-    fg: lightText ? "#ffffff" : "#450a0a",
-    sub: lightText ? "rgba(255,255,255,0.92)" : "rgba(69,10,10,0.78)",
-  };
+  // #ef4444 → #991b1b
+  const r = lerp(239, 153, s);
+  const g = lerp(68, 27, s);
+  const b = lerp(68, 27, s);
+  return { bg: `rgb(${r},${g},${b})`, fg: FG, sub: SUB };
 }
