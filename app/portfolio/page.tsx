@@ -675,8 +675,8 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
         <div className="flex items-center gap-2">
           <span className="text-[11px] font-semibold font-mono-num px-2 py-0.5 rounded-full"
             style={todayPct >= 0
-              ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
-              : { background: "rgba(var(--down-rgb),0.12)", color: "var(--down)" }}>
+              ? { background: "var(--up)", color: "#fff" }
+              : { background: "var(--down)", color: "#fff" }}>
             {sgn(todayPct)}{todayPct.toFixed(2)}%
           </span>
           <button
@@ -793,8 +793,8 @@ function SummaryCard({ holdings, liveMap, cur, rate, onRefresh, locale }: {
           </span>
           <span className="text-[11px] font-mono-num font-bold px-2 py-0.5 rounded-full"
             style={dailyPnl >= 0
-              ? { background: "rgba(var(--up-rgb),0.15)", color: "var(--up)" }
-              : { background: "rgba(var(--down-rgb),0.15)", color: "var(--down)" }}>
+              ? { background: "var(--up)", color: "#fff" }
+              : { background: "var(--down)", color: "#fff" }}>
             {sgn(dailyPct)}{Math.abs(dailyPct).toFixed(2)}%
           </span>
           <span className="text-[10px]" style={{ color: "rgba(255,255,255,0.35)" }}>
