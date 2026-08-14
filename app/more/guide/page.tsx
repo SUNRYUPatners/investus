@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronRight, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+import { heatmapTile } from "@/lib/heatmapColors";
 
 type Section = { id: string; emoji: string; title: string; content: React.ReactNode };
 
@@ -41,12 +42,12 @@ function MockCard({ label, value, pct, positive }: { label: string; value: strin
 }
 
 function MockHeatTile({ label, pct, positive, size = 1 }: { label: string; pct: string; positive: boolean; size?: number }) {
-  const a = Math.min(Math.abs(parseFloat(pct)) / 3, 1) * 0.6 + 0.2;
-  const bg = positive ? `rgba(var(--up-rgb),${a})` : `rgba(var(--down-rgb),${a})`;
+  const n = parseFloat(pct) || (positive ? 1 : -1);
+  const c = heatmapTile(n);
   return (
-    <div className="rounded-lg p-2 flex flex-col justify-between" style={{ background: bg, flex: size, minWidth: 0 }}>
-      <p className="text-[10px] font-semibold text-white">{label}</p>
-      <p className="text-xs font-bold text-white font-mono-num">{pct}</p>
+    <div className="rounded-lg p-2 flex flex-col justify-between" style={{ background: c.bg, flex: size, minWidth: 0 }}>
+      <p className="text-[10px] font-bold" style={{ color: c.fg }}>{label}</p>
+      <p className="text-xs font-bold font-mono-num" style={{ color: c.fg }}>{pct}</p>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { MiniChartPopup } from "./MiniChartPopup";
 import { SectionInfo } from "./SectionInfo";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+import { heatmapTile } from "@/lib/heatmapColors";
 
 function useIsDesktop() {
   const [lg, setLg] = useState(false);
@@ -42,15 +43,6 @@ type PopupState = {
   anchorX: number;
   anchorY: number;
 };
-
-function bg(pct: number | null) {
-  if (pct == null) return "rgba(255,255,255,0.06)";
-  const t = Math.min(Math.abs(pct) / 3, 1);
-  const a = 0.16 + t * 0.64;
-  return pct >= 0 ? `rgba(var(--up-rgb),${a})` : `rgba(var(--down-rgb),${a})`;
-}
-
-const TILE_TEXT = "rgba(255,255,255,0.95)";
 
 const LAYOUT: { rowH: number; sections: { key: string; flex: number; maxStocks: number }[] }[] = [
   {
@@ -115,22 +107,24 @@ function SectorBlock({
       {/* Sector name strip */}
       <div
         className="flex items-center px-1.5 flex-shrink-0"
-        style={{ height: LABEL_H, background: "rgba(255,255,255,0.03)" }}
+        style={{ height: LABEL_H, background: "var(--muted-2)" }}
       >
-        <span className="text-[8px] font-semibold truncate" style={{ color: "var(--muted)" }}>
+        <span className="text-[9px] font-bold truncate" style={{ color: "var(--text)" }}>
           {locale === "ko" ? sector.name : (SECTOR_EN[sector.name] ?? sector.name)}
         </span>
       </div>
 
       {/* Individual stock tiles */}
       <div className="flex overflow-hidden" style={{ height: tileH, gap: "1px" }}>
-        {visibleStocks.map((s) => (
+        {visibleStocks.map((s) => {
+          const c = heatmapTile(s.changePercent);
+          return (
             <div
               key={s.symbol}
               className="flex flex-col items-start justify-between p-1.5 overflow-hidden select-none cursor-pointer transition-opacity active:opacity-80"
               style={{
                 flex: s.weight / totalW,
-                background: bg(s.changePercent),
+                background: c.bg,
                 minWidth: 0,
                 touchAction: "pan-x pan-y",
               }}
@@ -141,14 +135,14 @@ function SectorBlock({
             >
               <div className="w-full overflow-hidden">
                 <p
-                  className="text-[11px] font-semibold leading-none truncate"
-                  style={{ color: TILE_TEXT }}
+                  className="text-[11px] font-bold leading-none truncate"
+                  style={{ color: c.fg }}
                 >
                   {s.symbol}
                 </p>
                 <p
-                  className="text-[8px] leading-tight truncate mt-0.5"
-                  style={{ color: TILE_TEXT, opacity: 0.7 }}
+                  className="text-[8px] leading-tight truncate mt-0.5 font-medium"
+                  style={{ color: c.sub }}
                 >
                   {s.name}
                 </p>
@@ -156,8 +150,8 @@ function SectorBlock({
               <div className="w-full">
                 {s.price != null && (
                   <p
-                    className="text-[10px] font-mono-num tabular-nums leading-none truncate"
-                    style={{ color: TILE_TEXT, opacity: 0.85 }}
+                    className="text-[10px] font-mono-num tabular-nums leading-none truncate font-medium"
+                    style={{ color: c.sub }}
                   >
                     ${s.price >= 1000
                       ? s.price.toLocaleString("en-US", { maximumFractionDigits: 0 })
@@ -166,13 +160,14 @@ function SectorBlock({
                 )}
                 <p
                   className="text-[12px] font-bold font-mono-num tabular-nums leading-none mt-0.5"
-                  style={{ color: TILE_TEXT }}
+                  style={{ color: c.fg }}
                 >
                   {s.changePercent == null ? "—" : `${s.changePercent >= 0 ? "+" : ""}${s.changePercent.toFixed(2)}%`}
                 </p>
               </div>
             </div>
-          ))}
+          );
+        })}
       </div>
     </div>
   );
@@ -185,7 +180,7 @@ function SkeletonRow({ rowH, sections }: { rowH: number; sections: { flex: numbe
         <div
           key={i}
           className="animate-pulse"
-          style={{ flex: s.flex, background: "rgba(255,255,255,0.04)" }}
+          style={{ flex: s.flex, background: "var(--muted-2)" }}
         />
       ))}
     </div>

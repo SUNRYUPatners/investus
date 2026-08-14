@@ -6,6 +6,7 @@ import { MiniChartPopup } from "./MiniChartPopup";
 import { SectionInfo } from "./SectionInfo";
 import { useLocaleCode } from "@/contexts/LocaleContext";
 import { isMarketOpen } from "@/lib/marketHours";
+import { heatmapTile } from "@/lib/heatmapColors";
 
 function useIsDesktop() {
   const [lg, setLg] = useState(false);
@@ -17,14 +18,6 @@ function useIsDesktop() {
   }, []);
   return lg;
 }
-
-// ── Color helpers ───────────────────────────────────────────────────────────
-function bg(pct: number) {
-  const t = Math.min(Math.abs(pct) / 3, 1); // saturate at ±3 %
-  const a = 0.18 + t * 0.64;
-  return pct >= 0 ? `rgba(var(--up-rgb),${a})` : `rgba(var(--down-rgb),${a})`;
-}
-const TILE_TEXT = "rgba(255,255,255,0.95)";
 
 // ── Treemap layout config ───────────────────────────────────────────────────
 const ROWS: {
@@ -251,12 +244,13 @@ export function FuturesHeatmap({ items }: Props) {
                     if (!item) return null;
                     const pos = item.changePercent >= 0;
                     const displayName = SHORT[sym] ?? item.name;
+                    const c = heatmapTile(item.changePercent);
 
                     return (
                       <div
                         key={sym}
                         className="flex flex-col items-start justify-between p-1.5 overflow-hidden cursor-pointer select-none transition-opacity active:opacity-80"
-                        style={{ flex, background: bg(item.changePercent), minWidth: 0, touchAction: "pan-x pan-y" }}
+                        style={{ flex, background: c.bg, minWidth: 0, touchAction: "pan-x pan-y" }}
                         onClick={(e) => {
                           e.stopPropagation();
                           setPopup({
@@ -271,8 +265,8 @@ export function FuturesHeatmap({ items }: Props) {
                       >
                         {/* Name */}
                         <p
-                          className="text-[11px] font-semibold leading-tight w-full"
-                          style={{ color: TILE_TEXT, wordBreak: "break-word" }}
+                          className="text-[11px] font-bold leading-tight w-full"
+                          style={{ color: c.fg, wordBreak: "break-word" }}
                         >
                           {displayName}
                         </p>
@@ -281,13 +275,13 @@ export function FuturesHeatmap({ items }: Props) {
                         <div className="w-full">
                           <p
                             className="text-[14px] font-bold font-mono-num tabular-nums leading-none"
-                            style={{ color: TILE_TEXT }}
+                            style={{ color: c.fg }}
                           >
                             {pos ? "+" : ""}{item.changePercent.toFixed(2)}%
                           </p>
                           <p
-                            className="text-[10px] font-mono-num tabular-nums leading-none mt-0.5 truncate"
-                            style={{ color: TILE_TEXT, opacity: 0.85 }}
+                            className="text-[10px] font-mono-num tabular-nums leading-none mt-0.5 truncate font-medium"
+                            style={{ color: c.sub }}
                           >
                             {item.price < 10
                               ? item.price.toFixed(3)
