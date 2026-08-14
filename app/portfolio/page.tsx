@@ -781,7 +781,7 @@ function SummaryCard({ holdings, liveMap, cur, rate, onRefresh, locale }: {
             <RefreshCw className="w-3.5 h-3.5" strokeWidth={2} style={{ color: "rgba(var(--mint-rgb),0.5)" }} />
           </button>
         </div>
-        <p className="text-[32px] font-bold font-mono-num tabular-nums leading-none" style={{ color: "var(--text)" }}>
+        <p className="text-[32px] font-bold font-mono-num tabular-nums leading-none" style={{ color: "#f5f6f8" }}>
           {mainVal}
         </p>
         <p className="text-[11px] font-mono-num mt-0.5 mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>
@@ -805,10 +805,10 @@ function SummaryCard({ holdings, liveMap, cur, rate, onRefresh, locale }: {
         {/* Stats grid */}
         <div className="grid grid-cols-2 gap-3 pt-4 border-t" style={{ borderColor: "rgba(255,255,255,0.07)" }}>
           {[
-            { label: locale === "ko" ? "투자원금"  : "Invested",     v: fmtVal(totalCost, cur, rate, 0), c: "var(--text)" },
+            { label: locale === "ko" ? "투자원금"  : "Invested",     v: fmtVal(totalCost, cur, rate, 0), c: "#f5f6f8" },
             { label: locale === "ko" ? "총 수익률" : "Total Return",  v: `${sgn(pnlPct)}${pnlPct.toFixed(2)}%`, c: clr(pnlPct) },
             { label: locale === "ko" ? "평가손익"  : "P&L",          v: `${sgn(totalPnl)}${fmtVal(Math.abs(totalPnl), cur, rate, 0)}`, c: clr(totalPnl) },
-            { label: locale === "ko" ? "보유종목"  : "Holdings",      v: `${holdings.length}`, c: "var(--text)" },
+            { label: locale === "ko" ? "보유종목"  : "Holdings",      v: `${holdings.length}`, c: "#f5f6f8" },
           ].map(({ label, v, c }) => (
             <div key={label}>
               <p className="text-[10px] mb-1" style={{ color: "rgba(255,255,255,0.4)" }}>{label}</p>

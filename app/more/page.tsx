@@ -222,13 +222,13 @@ function CreatorSection() {
 
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-0.5">
-              <p className="text-sm font-bold font-syne truncate" style={{ color: "var(--text)" }}>{profile.nickname}</p>
+              <p className="text-sm font-bold font-syne truncate" style={{ color: "#f5f6f8" }}>{profile.nickname}</p>
               <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
                 style={{ background: `${statusColor}22`, color: statusColor }}>
                 {statusLabel}
               </span>
             </div>
-            <p className="text-[11px] truncate" style={{ color: "var(--muted)" }}>{profile.bio || "내 채널을 관리하세요"}</p>
+            <p className="text-[11px] truncate" style={{ color: "rgba(255,255,255,0.65)" }}>{profile.bio || "내 채널을 관리하세요"}</p>
           </div>
 
           <div className="flex-shrink-0 flex flex-col items-center gap-1">
@@ -251,8 +251,8 @@ function CreatorSection() {
           <Sparkles className="w-5 h-5" style={{ color: "var(--mint)" }} />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>크리에이터 되기</p>
-          <p className="text-[11px]" style={{ color: "var(--muted)" }}>전자책, 강의, 리포트를 판매하세요</p>
+          <p className="text-sm font-bold font-syne" style={{ color: "#f5f6f8" }}>크리에이터 되기</p>
+          <p className="text-[11px]" style={{ color: "rgba(255,255,255,0.65)" }}>전자책, 강의, 리포트를 판매하세요</p>
         </div>
         <ChevronRight className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
       </div>
@@ -1133,9 +1133,9 @@ export default function MorePage() {
                 style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.3)" }}>
                 <TrendingUp className="w-8 h-8 text-black" strokeWidth={2.5} />
               </div>
-              <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--text)" }}>Investus</p>
-              <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
-              <p className="text-[10px] mt-2 font-mono" style={{ color: "rgba(var(--mint-rgb),0.6)" }}>investus.kr</p>
+              <p className="text-base font-bold font-syne mb-1" style={{ color: "#f5f6f8" }}>Investus</p>
+              <p className="text-[11px] leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{mo.tagline}</p>
+              <p className="text-[10px] mt-2 font-mono" style={{ color: "rgba(232,200,74,0.85)" }}>investus.kr</p>
             </div>
 
             {/* 2. 크리에이터 되기 */}

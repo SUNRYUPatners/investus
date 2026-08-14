@@ -132,13 +132,13 @@ export default function EducationPage() {
         style={{ background: "rgba(212,175,55,0.18)", color: "#d4af37" }}>
         {ed.badge}
       </div>
-      <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "var(--text)" }}>
+      <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "#f5f6f8" }}>
         {ed.heroTitle1}<br />{ed.heroTitle2}
       </h1>
-      <p className="text-[13px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+      <p className="text-[13px] leading-relaxed mb-3" style={{ color: "rgba(255,255,255,0.75)" }}>
         {ed.heroDesc.split("\n").map((line, i) => <span key={i}>{line}{i === 0 && <br />}</span>)}
       </p>
-      <p className="text-[11px] leading-relaxed" style={{ color: "rgba(212,175,55,0.85)" }}>
+      <p className="text-[11px] leading-relaxed" style={{ color: "rgba(232,200,74,0.95)" }}>
         CIO 본인 자산이 어떻게 성장해 왔는지, 그 과정에서 쌓은 투자 원칙과 의사결정 노하우를
         교육 목적으로 전부 전달합니다. 동일·유사 수익을 보장하지 않으며, 투자 판단과 책임은 수강생 본인에게 있습니다.
       </p>
@@ -154,8 +154,8 @@ export default function EducationPage() {
             style={{ background: "rgba(212,175,55,0.15)", border: "1px solid rgba(212,175,55,0.3)" }}>🎯</div>
           <div>
             <p className="text-[10px] font-bold" style={{ color: "#d4af37" }}>SUNRYU Partners CIO</p>
-            <p className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>류현우</p>
-            <p className="text-[11px]" style={{ color: "var(--muted)" }}>미국주식 투자 전략가 · 포트폴리오 매니저</p>
+            <p className="text-base font-bold font-syne" style={{ color: "#f5f6f8" }}>류현우</p>
+            <p className="text-[11px]" style={{ color: "rgba(255,255,255,0.7)" }}>미국주식 투자 전략가 · 포트폴리오 매니저</p>
           </div>
         </div>
       </div>

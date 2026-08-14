@@ -59,10 +59,10 @@ export default async function InsightPage() {
               {LEARN_ARTICLES.length}편
             </span>
           </div>
-          <p className="text-sm font-bold leading-snug" style={{ color: "var(--text)" }}>투자 지식 허브</p>
-          <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>ETF·밸류에이션·매크로·세금 가이드 한곳에서</p>
+          <p className="text-sm font-bold leading-snug" style={{ color: "#f5f6f8" }}>투자 지식 허브</p>
+          <p className="text-[11px] mt-0.5" style={{ color: "rgba(255,255,255,0.72)" }}>ETF·밸류에이션·매크로·세금 가이드 한곳에서</p>
         </div>
-        <span className="text-lg flex-shrink-0" style={{ color: "var(--muted)" }}>›</span>
+        <span className="text-lg flex-shrink-0" style={{ color: "rgba(255,255,255,0.55)" }}>›</span>
       </div>
     </Link>
   );
@@ -109,12 +109,12 @@ export default async function InsightPage() {
             style={{ background: "rgba(212,175,55,0.18)", color: "#d4af37" }}>
             {t.exclusiveClass}
           </div>
-          <p className="text-sm font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>{t.courseTitle}</p>
-          <p className="text-[11px] mb-2.5" style={{ color: "var(--muted)" }}>{t.courseSub}</p>
+          <p className="text-sm font-bold leading-snug mb-1" style={{ color: "#f5f6f8" }}>{t.courseTitle}</p>
+          <p className="text-[11px] mb-2.5" style={{ color: "rgba(255,255,255,0.72)" }}>{t.courseSub}</p>
           <div className="flex items-center justify-between">
-            <p className="text-xs" style={{ color: "#d4af37" }}>{t.limitedSpots}</p>
+            <p className="text-xs" style={{ color: "#e8c84a" }}>{t.limitedSpots}</p>
             <span className="text-[11px] font-bold px-3 py-1.5 rounded-full"
-              style={{ background: "linear-gradient(135deg, #b8960c, #d4af37)", color: "#000" }}>
+              style={{ background: "linear-gradient(135deg, #d4af37, #f0d78c)", color: "#152238" }}>
               {t.apply}
             </span>
           </div>

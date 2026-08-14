@@ -173,11 +173,11 @@ export default function SubscribePage() {
           className="rounded-2xl px-5 py-6 mb-5 relative overflow-hidden"
           style={{ background: "linear-gradient(135deg, #001a12 0%, #0a0c10 100%)", border: "1px solid rgba(var(--mint-rgb),0.25)" }}
         >
-          <p className="text-[10px] font-bold mb-2" style={{ color: "var(--mint)" }}>✦ {SUBSCRIPTION.productName}</p>
-          <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "var(--text)" }}>
+          <p className="text-[10px] font-bold mb-2" style={{ color: "#e8c84a" }}>✦ {SUBSCRIPTION.productName}</p>
+          <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "#f5f6f8" }}>
             커피값으로 시작하는<br />투자 인사이트
           </h1>
-          <p className="text-[13px] leading-relaxed" style={{ color: "var(--muted)" }}>
+          <p className="text-[13px] leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
             장전·장후 브리핑 · 가격 알림 · 포트 AI 30회 · 추천주식 · 과거 리포트를 월·연 구독으로 이용하세요.
           </p>
         </div>
