@@ -1,38 +1,48 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { Lock, Moon } from "lucide-react";
+import { ChevronDown, Lock, Moon, Sun } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
-import { buildMorningBriefing } from "@/lib/morningBriefing";
+import { buildSessionBriefing } from "@/lib/morningBriefing";
 
 export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
   const isKo = locale === "ko";
   const { user } = useAuth();
   const isPro = user?.isPro === true;
-  const briefing = buildMorningBriefing();
+  const briefing = buildSessionBriefing();
+  const [openId, setOpenId] = useState<string | null>(null);
 
   if (!briefing) return null;
+
+  const isPre = briefing.phase === "pre";
+  const accent = isPre ? "#fbbf24" : "#60a5fa";
+  const Icon = isPre ? Moon : Sun;
+  const label = isKo ? briefing.labelKo : briefing.labelEn;
+  const teaserTitle = isKo
+    ? (isPre ? "미국 개장 전, 오늘 핵심" : "미국 장마감 후, 세션 핵심")
+    : (isPre ? "Before the open" : "After the close");
 
   if (!isPro) {
     return (
       <div
         className="rounded-2xl border p-4"
         style={{
-          background: "linear-gradient(135deg, rgba(251,191,36,0.08) 0%, var(--card) 55%)",
-          borderColor: "rgba(251,191,36,0.25)",
+          background: `linear-gradient(135deg, ${accent}14 0%, var(--card) 55%)`,
+          borderColor: `${accent}40`,
         }}
       >
         <div className="flex items-center gap-2 mb-2">
-          <Moon className="w-4 h-4" style={{ color: "#fbbf24" }} />
+          <Icon className="w-4 h-4" style={{ color: accent }} />
           <span
             className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-            style={{ background: "rgba(251,191,36,0.15)", color: "#fbbf24" }}
+            style={{ background: `${accent}26`, color: accent }}
           >
-            {isKo ? "장전 브리핑 · Pro" : "Pre-market · Pro"}
+            {label} · Pro
           </span>
         </div>
         <p className="text-sm font-bold mb-1 leading-snug" style={{ color: "var(--text)" }}>
-          {isKo ? "미국 개장 전, 오늘 핵심 3줄" : "Before the open — 3-line brief"}
+          {teaserTitle}
         </p>
         <p className="text-[12px] leading-relaxed mb-3 line-clamp-2" style={{ color: "var(--muted)" }}>
           {briefing.headline}
@@ -43,7 +53,7 @@ export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
           style={{ background: "var(--mint)", color: "#000", textDecoration: "none" }}
         >
           <Lock className="w-3.5 h-3.5" />
-          {isKo ? "Pro로 장전 브리핑 열기" : "Unlock with Pro"}
+          {isKo ? `Pro로 ${briefing.labelKo} 열기` : "Unlock with Pro"}
         </Link>
       </div>
     );
@@ -53,19 +63,19 @@ export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
     <section
       className="rounded-2xl border p-4"
       style={{
-        background: "linear-gradient(135deg, rgba(251,191,36,0.1) 0%, var(--card) 50%)",
-        borderColor: "rgba(251,191,36,0.3)",
+        background: `linear-gradient(135deg, ${accent}1a 0%, var(--card) 50%)`,
+        borderColor: `${accent}4d`,
       }}
-      aria-label={isKo ? "장전 브리핑" : "Morning briefing"}
+      aria-label={label}
     >
       <div className="flex items-center justify-between gap-2 mb-2">
         <div className="flex items-center gap-2">
-          <Moon className="w-4 h-4" style={{ color: "#fbbf24" }} />
+          <Icon className="w-4 h-4" style={{ color: accent }} />
           <span
             className="text-[9px] font-bold px-2 py-0.5 rounded-full"
-            style={{ background: "rgba(251,191,36,0.18)", color: "#fbbf24" }}
+            style={{ background: `${accent}2e`, color: accent }}
           >
-            {isKo ? "장전 브리핑" : "Pre-market brief"}
+            {label}
           </span>
         </div>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
@@ -81,33 +91,79 @@ export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
         <ul className="flex flex-col gap-1.5 mb-3">
           {briefing.bullets.map((b, i) => (
             <li key={i} className="flex gap-2 text-[12px] leading-snug" style={{ color: "var(--muted)" }}>
-              <span className="font-bold flex-shrink-0" style={{ color: "#fbbf24" }}>{i + 1}.</span>
+              <span className="font-bold flex-shrink-0" style={{ color: accent }}>{i + 1}.</span>
               <span>{b}</span>
             </li>
           ))}
         </ul>
       )}
 
+      <p className="text-[10px] mb-2" style={{ color: "var(--muted)" }}>
+        {isKo ? "항목을 누르면 요약·본문이 펼쳐집니다" : "Tap a row to expand summary & body"}
+      </p>
+
       <div className="flex flex-col gap-1.5">
-        {briefing.reportLinks.map((r) => (
-          <Link
-            key={r.id}
-            href={`/`}
-            className="block rounded-xl px-3 py-2 border transition-opacity active:opacity-80"
-            style={{
-              background: "rgba(255,255,255,0.03)",
-              borderColor: "var(--border)",
-              textDecoration: "none",
-            }}
-          >
-            <p className="text-[11px] font-semibold line-clamp-1" style={{ color: "var(--text)" }}>
-              {r.title}
-            </p>
-            <p className="text-[10px] line-clamp-1 mt-0.5" style={{ color: "var(--muted)" }}>
-              {r.summary}
-            </p>
-          </Link>
-        ))}
+        {briefing.reports.map((r) => {
+          const open = openId === r.id;
+          return (
+            <div
+              key={r.id}
+              className="rounded-xl border overflow-hidden"
+              style={{ background: "rgba(255,255,255,0.03)", borderColor: "var(--border)" }}
+            >
+              <button
+                type="button"
+                onClick={() => setOpenId(open ? null : r.id)}
+                className="w-full text-left px-3 py-2.5 flex items-start gap-2 transition-opacity active:opacity-80"
+              >
+                <div className="flex-1 min-w-0">
+                  <p className="text-[11px] font-semibold leading-snug" style={{ color: "var(--text)" }}>
+                    {r.title}
+                  </p>
+                  {!open && (
+                    <p className="text-[10px] line-clamp-2 mt-0.5" style={{ color: "var(--muted)" }}>
+                      {r.summary}
+                    </p>
+                  )}
+                </div>
+                <ChevronDown
+                  className="w-4 h-4 flex-shrink-0 mt-0.5 transition-transform"
+                  style={{
+                    color: "var(--muted)",
+                    transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                  }}
+                />
+              </button>
+              {open && (
+                <div className="px-3 pb-3 border-t" style={{ borderColor: "var(--border)" }}>
+                  <p className="text-[12px] leading-relaxed mt-2 mb-2" style={{ color: "var(--text)" }}>
+                    {r.summary}
+                  </p>
+                  {r.imageOnly && r.images?.[0] ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={r.images[0]}
+                      alt={r.title}
+                      className="w-full rounded-lg mb-2"
+                    />
+                  ) : null}
+                  {r.body ? (
+                    <div
+                      className="text-[11px] leading-relaxed whitespace-pre-line max-h-[40vh] overflow-y-auto rounded-lg p-2.5"
+                      style={{ background: "var(--bg)", color: "var(--muted)" }}
+                    >
+                      {r.body}
+                    </div>
+                  ) : !r.imageOnly ? (
+                    <p className="text-[11px]" style={{ color: "var(--muted)" }}>
+                      {isKo ? "본문이 이미지·요약 중심인 리포트입니다." : "This report is summary/image focused."}
+                    </p>
+                  ) : null}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

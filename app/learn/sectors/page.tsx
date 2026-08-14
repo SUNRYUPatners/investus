@@ -7,12 +7,12 @@ import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 export const metadata: Metadata = {
   title: "미국 주식 11개 섹터 가이드 — 경기 국면별 읽는 법 | 인베스트어스",
   description:
-    "GICS 11개 섹터(기술·헬스케어·금융·에너지 등)가 금리·경기와 어떻게 움직이는지, 입문자가 포트폴리오 쏠림을 피하는 법을 정리합니다.",
-  keywords: ["미국 주식 섹터", "GICS", "섹터 로테이션", "기술주", "헬스케어", "금융주"],
+    "GICS 11개 섹터(기술·헬스케어·금융·에너지 등)가 무엇인지, 금리·경기와 어떻게 연결되는지, 숫자로 보는 쏠림 예시와 초보 실수를 정리합니다.",
+  keywords: ["미국 주식 섹터", "GICS", "섹터 로테이션", "기술주", "헬스케어", "금융주", "분산투자"],
   alternates: { canonical: "https://www.investus.kr/learn/sectors" },
   openGraph: {
     title: "미국 주식 섹터 가이드 | 인베스트어스",
-    description: "GICS 11섹터와 포트폴리오 쏠림을 피하는 법",
+    description: "GICS 11섹터와 포트폴리오 쏠림을 피하는 법 — 완전 초보용",
     url: "https://www.investus.kr/learn/sectors",
     type: "article",
   },
@@ -45,7 +45,7 @@ export default function SectorsPage() {
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(251,146,60,0.15)", color: "#fb923c" }}>섹터</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 17분</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 24분</span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
             미국 주식 11개 섹터 가이드
@@ -60,12 +60,14 @@ export default function SectorsPage() {
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
           <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>GICS가 나누는 이유</h2>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>섹터·GICS란?</h2>
             <p className="text-sm leading-relaxed mb-3">
-              S&amp;P와 MSCI가 쓰는 GICS(Global Industry Classification Standard)는 상장 기업을
-              11개 섹터로 나눕니다. 지수·ETF·애널리스트 리포트가 같은 언어를 쓰기 위한 지도입니다.
+              <strong style={{ color: "var(--text)" }}>섹터(sector)</strong>는 &ldquo;비슷한 사업을 하는 회사끼리 묶은 큰 바구니&rdquo;입니다.
+              S&amp;P와 MSCI가 쓰는 <strong style={{ color: "var(--text)" }}>GICS</strong>(Global Industry Classification Standard)는
+              상장 기업을 11개 섹터로 나눕니다.
             </p>
             <p className="text-sm leading-relaxed">
+              왜 배우나요? 지수·ETF·애널리스트 리포트가 같은 언어를 쓰기 때문입니다.
               Investus 홈의 섹터 흐름과 리포트의 &ldquo;업종&rdquo; 문단도 이 틀을 전제로 읽으면 이해가 빠릅니다.
               완벽한 예측 도구가 아니라, <strong style={{ color: "var(--text)" }}>쏠림을 보는 체크리스트</strong>로 쓰세요.
             </p>
@@ -88,17 +90,26 @@ export default function SectorsPage() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>입문자가 가장 많이 하는 쏠림</h2>
-            <p className="text-sm leading-relaxed mb-3">
-              한국 개인 해외주식 잔고는 빅테크·반도체에 치우치는 경향이 있습니다.
-              여기에 QQQ까지 더하면 IT+커뮤니케이션+임의소비가 80%를 넘기도 합니다.
-            </p>
-            <p className="text-sm leading-relaxed mb-3">
-              S&amp;P500 ETF 하나면 11개 섹터가 시총 가중으로 들어갑니다.
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>숫자로 보는 쏠림</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>예시 (개념용)</p>
+              <p>포트폴리오 1,000만 원 중 AAPL 300 · MSFT 200 · NVDA 200 · QQQ 200 · 현금 100.</p>
+              <p>기업 수는 적지만, IT + 커뮤니케이션 + 성장 소비 비중이 쉽게 70~80%를 넘습니다.</p>
+              <p>같은 1,000만 원을 VOO(S&amp;P500 ETF) 하나로 두면 11개 섹터가 시총 가중으로 들어갑니다.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
               &ldquo;분산을 직접 설계&rdquo;하기 전에 코어를 지수 ETF로 두는 이유가 여기 있습니다.
               <Link href="/learn/sp500" style={{ color: "var(--mint)" }}>S&amp;P500</Link>
               ·<Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF</Link>
               ·<Link href="/learn/nasdaq" style={{ color: "var(--mint)" }}>나스닥</Link>을 이어서 읽으세요.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>입문자가 가장 많이 하는 쏠림</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              한국 개인 해외주식 잔고는 빅테크·반도체에 치우치는 경향이 있습니다.
+              여기에 QQQ까지 더하면 IT+커뮤니케이션+임의소비가 80%를 넘기도 합니다.
             </p>
             <p className="text-sm leading-relaxed">
               개별 기술주를 이미 많이 샀다면, 같은 방향의 섹터 ETF를 또 사는 것은 분산이 아닙니다.
@@ -125,10 +136,56 @@ export default function SectorsPage() {
               금리가 오르면 성장주(먼 미래 이익) 배수가 압박받고, 은행 순이자마진·달러 강세 이야기가 붙습니다.
               금리가 내리면 그 반대 서사가 나옵니다. 다만 실제 장에서는 실적·지정학이 서사를 덮습니다.
             </p>
-            <p className="text-sm leading-relaxed">
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p><strong style={{ color: "var(--text)" }}>금리 ↑ 때 자주 거론</strong> — 금융(순이자), 에너지(인플레·유가), 가치 성향. 성장 IT는 압박 서사.</p>
+              <p><strong style={{ color: "var(--text)" }}>금리 ↓ 때 자주 거론</strong> — IT·커뮤니케이션·장기 성장. 다만 경기 침체면 실적이 먼저 무너질 수도 있습니다.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
               Investus 홈의 금리·지수·섹터와 인사이트 리포트를 같이 보면,
               &ldquo;오늘 기술만 빠졌다&rdquo;가 금리 이슈인지 개별 실적인지 구분하기 쉽습니다.
+              배경은 <Link href="/learn/macro-rates" style={{ color: "var(--mint)" }}>금리·연준 가이드</Link>를 보세요.
             </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>코어 ETF vs 섹터 ETF</h2>
+            <p className="text-sm leading-relaxed mb-3">
+              <strong style={{ color: "var(--text)" }}>코어</strong>는 S&amp;P500처럼 11개 섹터가 섞인 지수 ETF입니다.
+              <strong style={{ color: "var(--text)" }}>섹터 ETF</strong>(예: XLK 기술, XLE 에너지)는 한 방향 베팅에 가깝습니다.
+            </p>
+            <p className="text-sm leading-relaxed">
+              입문자는 코어 80~100%로 시작하고, 확신이 있을 때만 위성 섹터를 소수로 더하는 편이 안전합니다.
+              섹터 ETF를 여러 개 사면 &ldquo;분산한 것 같지만&rdquo; 실제로는 같은 매크로에 묶일 수 있습니다.
+              상품 구조는 <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF 가이드</Link>를 참고하세요.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>초보가 자주 하는 실수</h2>
+            <div className="flex flex-col gap-3">
+              {[
+                ["종목 수 = 분산", "같은 섹터 10종목은 분산이 약합니다. 섹터 합계를 보세요."],
+                ["QQQ + 빅테크 개별주 중복", "나스닥100 상위와 겹칩니다. 비중을 합산하세요."],
+                ["뉴스 테마로 섹터 ETF 순회", "비용·세금이 쌓입니다. 코어는 고정하세요."],
+                ["방어 섹터 = 절대 안전", "유틸리티·필수소비도 금리·실적에 흔들립니다."],
+                ["히트맵만 보고 당일 매매", "하루 색깔은 소음일 수 있습니다. 규칙 우선."],
+              ].map(([t, d]) => (
+                <div key={t} className="rounded-xl p-3 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+                  <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{t}</p>
+                  <p className="text-[12px] leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 할 일</h2>
+            <ol className="list-decimal pl-5 text-sm leading-relaxed space-y-2">
+              <li>보유 종목을 IT / 그 외로만 나눠 비중(%)을 적어 보세요.</li>
+              <li>IT+커뮤니케이션이 70%를 넘으면 코어 지수 비중을 늘릴지 검토하세요.</li>
+              <li>위성은 전체의 10~20% 이내로 규칙을 정하세요.</li>
+              <li><Link href="/learn/buy-checklist" style={{ color: "var(--mint)" }}>매수 체크리스트</Link>에 &ldquo;섹터 합계&rdquo; 한 줄을 추가하세요.</li>
+            </ol>
           </section>
 
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"

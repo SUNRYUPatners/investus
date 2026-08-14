@@ -17,7 +17,7 @@ import {
 import { getSupabase } from "@/lib/supabase";
 
 const BENEFITS = [
-  { icon: Moon,     title: "장전 브리핑",          desc: "미국 개장 직전(평일 저녁) 오늘 핵심 3줄 + 관련 리포트" },
+  { icon: Moon,     title: "장전·장후 브리핑",    desc: "개장 전 장전 · 마감 후 장후 — 각각 다른 카드·푸시" },
   { icon: Bell,     title: "내 종목 가격 알림",    desc: "목표가 돌파·하회 시 푸시 알림 (최대 10개)" },
   { icon: Sparkles, title: "포트폴리오 AI 30회",   desc: "무료 3회 → Pro는 하루 30회까지 분석" },
   { icon: Star,     title: "Investus 추천주식",    desc: "CIO 선정 종목과 실시간 시세를 열람할 수 있습니다." },
@@ -154,7 +154,7 @@ export default function SubscribePage() {
         <main className="max-w-[480px] mx-auto px-4 pt-10 pb-12 text-center">
           <CheckCircle className="w-12 h-12 mx-auto mb-3" style={{ color: "var(--mint)" }} />
           <p className="text-lg font-bold font-syne mb-2" style={{ color: "var(--text)" }}>이미 Pro 구독 중입니다</p>
-          <p className="text-sm mb-6" style={{ color: "var(--muted)" }}>장전 브리핑 · 가격 알림 · 포트 AI · 추천주식 · 과거 리포트</p>
+          <p className="text-sm mb-6" style={{ color: "var(--muted)" }}>장전·장후 브리핑 · 가격 알림 · 포트 AI · 추천주식 · 과거 리포트</p>
           <Link href="/" className="text-sm font-semibold" style={{ color: "var(--mint)" }}>홈으로 →</Link>
         </main>
       </div>
@@ -178,7 +178,7 @@ export default function SubscribePage() {
             커피값으로 시작하는<br />투자 인사이트
           </h1>
           <p className="text-[13px] leading-relaxed" style={{ color: "var(--muted)" }}>
-            장전 브리핑 · 가격 알림 · 포트 AI 30회 · 추천주식 · 과거 리포트를 월·연 구독으로 이용하세요.
+            장전·장후 브리핑 · 가격 알림 · 포트 AI 30회 · 추천주식 · 과거 리포트를 월·연 구독으로 이용하세요.
           </p>
         </div>
 

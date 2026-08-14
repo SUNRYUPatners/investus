@@ -7,12 +7,12 @@ import { LearnArticleWithAds } from "@/components/LearnArticleAds";
 export const metadata: Metadata = {
   title: "적립식 투자(DCA) 가이드 — 매달 같은 금액으로 미국주식 모으기 | 인베스트어스",
   description:
-    "달러코스트애버리징(DCA)의 원리, 장단점, 목돈 일시 투자와의 차이, 한국 투자자가 환율까지 고려해 적립하는 방법과 실패 패턴을 설명합니다.",
-  keywords: ["적립식 투자", "DCA", "달러코스트애버리징", "미국주식 적립", "정액 적립"],
+    "달러코스트애버리징(DCA)의 원리, 장단점, 목돈 일시 투자와의 차이, 숫자 예시, 한국 투자자가 환율까지 고려해 적립하는 방법과 실패 패턴을 설명합니다.",
+  keywords: ["적립식 투자", "DCA", "달러코스트애버리징", "미국주식 적립", "정액 적립", "평균단가"],
   alternates: { canonical: "https://www.investus.kr/learn/dca" },
   openGraph: {
     title: "적립식 투자(DCA) 가이드 | 인베스트어스",
-    description: "매달 같은 금액으로 미국 ETF·주식을 모으는 방법과 한계",
+    description: "매달 같은 금액으로 미국 ETF·주식을 모으는 방법과 한계 — 완전 초보용",
     url: "https://www.investus.kr/learn/dca",
     type: "article",
   },
@@ -31,7 +31,7 @@ export default function DcaPage() {
         <div className="mb-6 pt-2">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(16,185,129,0.15)", color: "#10b981" }}>습관</span>
-            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 16분</span>
+            <span className="text-[10px]" style={{ color: "var(--muted)" }}>읽는 시간: 22분</span>
           </div>
           <h1 className="text-xl font-bold font-syne leading-snug mb-3" style={{ color: "var(--text)" }}>
             적립식 투자(DCA) 가이드
@@ -45,16 +45,33 @@ export default function DcaPage() {
         <article className="flex flex-col gap-6" style={{ color: "var(--muted)" }}>
           <LearnArticleWithAds>
           <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>DCA가 하는 일</h2>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>DCA란? (한 줄 정의)</h2>
             <p className="text-sm leading-relaxed mb-3">
-              Dollar-Cost Averaging은 가격이 높을 때 적게, 낮을 때 많이 사지게 만드는 정액 매수입니다.
-              평균 단가가 한 번에 전액 투입한 경우보다 완만해지는 <em>경향</em>이 있습니다.
-              항상 더 높은 수익을 보장하지는 않습니다.
+              <strong style={{ color: "var(--text)" }}>DCA(Dollar-Cost Averaging)</strong>는
+              &ldquo;정해진 주기로 같은 <em>금액</em>을 같은 자산에 넣는 것&rdquo;입니다.
+              가격이 높을 때 수량이 적게, 낮을 때 많이 사져 평균 단가가 완만해지는 <em>경향</em>이 있습니다.
             </p>
             <p className="text-sm leading-relaxed">
-              강한 상승장만 이어지면 초기에 목돈을 넣은 쪽이 유리할 수 있습니다.
+              왜 중요한가요? 강한 상승장만 이어지면 초기에 목돈을 넣은 쪽이 유리할 수 있습니다.
               DCA의 진짜 가치는 수익 극대화가 아니라 <strong style={{ color: "var(--text)" }}>실행 가능성</strong>과
               고점 올인 방지입니다. &ldquo;언제 살지&rdquo;를 매일 고민하면 결국 안 사게 되는 사람이 많습니다.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>숫자로 느끼는 평균단가</h2>
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>예시 (수수료·환율 무시, 개념용)</p>
+              <p>매달 30만 원으로 ETF를 삽니다.</p>
+              <p>1월 $100 → 약 3주 · 2월 $75 → 약 4주 · 3월 $150 → 약 2주</p>
+              <p>총 투입 90만 원, 보유 약 9주 → 평균 단가 ≈ $100.</p>
+              <p>만약 1월에 90만 원을 한 번에 $100에 샀다면 평균도 $100이지만,
+                중간에 $75에서 더 많이 담는 효과가 DCA에 있습니다. (항상 이기는 것은 아닙니다.)</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
+              가격이 계속 오르기만 하면 초기에 몰아 산 쪽이 유리합니다.
+              DCA는 &ldquo;모르는 미래를 버티는 습관&rdquo;에 가깝습니다.{" "}
+              <Link href="/learn/compound" style={{ color: "var(--mint)" }}>복리·장기 투자</Link>와 함께 보면 시간이 왜 중요한지 연결됩니다.
             </p>
           </section>
 
@@ -77,9 +94,13 @@ export default function DcaPage() {
               원화로 월급을 받고 달러 자산을 사면, 주가뿐 아니라 원/달러도 매수 단가에 들어갑니다.
               달러가 비쌀 때 같은 원화로 사는 주식 수량이 줄어듭니다. DCA는 이 환율 변동도 시간에 분산합니다.
             </p>
-            <p className="text-sm leading-relaxed">
+            <div className="rounded-2xl p-4 border space-y-2 text-sm leading-relaxed" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+              <p className="font-bold" style={{ color: "var(--text)" }}>환율 예시</p>
+              <p>매달 30만 원 환전. 환율 1,200원이면 ≈ $250, 1,500원이면 ≈ $200.</p>
+              <p>같은 원화라도 달러 수량이 달라집니다. 그래서 &ldquo;환율 떨어질 때까지 적립 중단&rdquo;은 DCA를 깨뜨립니다.</p>
+            </div>
+            <p className="text-sm leading-relaxed mt-3">
               Investus 홈에서 USD/KRW를 매일 확인하되, 하루 환율에 일희일비하며 적립을 중단하지 마세요.
-              적립을 멈추는 순간 DCA의 의미가 사라집니다.
               원화 환산 손익은 <Link href="/learn/usd-krw" style={{ color: "var(--mint)" }}>환율 가이드</Link>에서 더 다룹니다.
             </p>
           </section>
@@ -108,6 +129,8 @@ export default function DcaPage() {
             <p className="text-sm leading-relaxed">
               세금·수수료도 금액에 포함해 생각하세요. 환전 수수료가 큰 증권사면 한 달에 여러 번 쪼개 환전하는 것이
               오히려 비용을 늘릴 수 있습니다. 적립일과 환전일을 맞춰 두는 편이 낫습니다.
+              계좌 선택은 <Link href="/learn/korea-accounts" style={{ color: "var(--mint)" }}>ISA·연금</Link>·
+              <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>세금</Link>도 함께 보세요.
             </p>
           </section>
 
@@ -127,6 +150,10 @@ export default function DcaPage() {
                 </div>
               ))}
             </div>
+            <p className="text-sm leading-relaxed mt-3">
+              심리는 <Link href="/learn/investing-psychology" style={{ color: "var(--mint)" }}>투자 심리 가이드</Link>·
+              <Link href="/learn/fear-greed" style={{ color: "var(--mint)" }}>공포탐욕지수</Link>와 함께 보면 중단 유혹을 객관화하기 쉽습니다.
+            </p>
           </section>
 
           <section>
@@ -143,12 +170,14 @@ export default function DcaPage() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>관련 글</h2>
-            <p className="text-sm leading-relaxed">
-              상품 선택은 <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF 가이드</Link>,
-              세금은 <Link href="/learn/us-stock-tax" style={{ color: "var(--mint)" }}>미국주식 세금</Link>,
-              입문 전체는 <Link href="/learn/us-stock-basics" style={{ color: "var(--mint)" }}>미국주식 입문</Link>을 이어서 읽으세요.
-            </p>
+            <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>다음에 할 일</h2>
+            <ol className="list-decimal pl-5 text-sm leading-relaxed space-y-2">
+              <li>월급일 기준 적립일과 금액을 한 줄로 적으세요. (예: 매월 25일, 30만 원, VOO)</li>
+              <li>12개월 유지 가능한지 비상금과 분리해 확인하세요.</li>
+              <li>환전일을 적립일과 맞추세요.</li>
+              <li>상품은 <Link href="/learn/etf" style={{ color: "var(--mint)" }}>ETF</Link>,
+                입문은 <Link href="/learn/us-stock-basics" style={{ color: "var(--mint)" }}>미국주식 입문</Link>을 이어서 읽으세요.</li>
+            </ol>
           </section>
 
           <div className="rounded-xl p-4 text-[11px] leading-relaxed"

@@ -11,6 +11,7 @@ type NotiKey =
   | "market_close"
   | "report_publish"
   | "morning_briefing"
+  | "post_market_briefing"
   | "like_comment"
   | "new_subscriber"
   | "price_alert";
@@ -29,7 +30,8 @@ const NOTIFICATIONS_KO: NotiConfig[] = [
   { key: "market_open",    emoji: "🔔", label: "장 시작 알림",      desc: "미국 주식 시장 개장 (오전 10:30 KST)", color: "#10b981", pushEnabled: true },
   { key: "market_close",   emoji: "🔕", label: "장 마감 알림",      desc: "미국 주식 시장 마감 (오전 5:00 KST)",  color: "#60a5fa" },
   { key: "report_publish", emoji: "📋", label: "리포트 업데이트 알림", desc: "Investus 새 리포트·인사이트 발행 시 즉시 알림", color: "#c084fc", pushEnabled: true },
-  { key: "morning_briefing", emoji: "🌙", label: "장전 브리핑 알림", desc: "미국 개장 직전(평일 21:30 KST경) 핵심 브리핑 푸시 (Pro 카드)", color: "#fbbf24", pushEnabled: true },
+  { key: "morning_briefing", emoji: "🌙", label: "장전 브리핑 알림", desc: "미국 개장 직전(평일 21:30 KST경) 푸시", color: "#fbbf24", pushEnabled: true },
+  { key: "post_market_briefing", emoji: "☀️", label: "장후 브리핑 알림", desc: "미국 장마감 직후 세션 요약 푸시", color: "#60a5fa", pushEnabled: true },
   { key: "like_comment",   emoji: "💬", label: "좋아요·댓글 알림",   desc: "내 게시글에 좋아요·댓글이 달릴 때",    color: "#fb923c" },
   { key: "new_subscriber", emoji: "⭐", label: "구독 알림",          desc: "내 크리에이터 채널 신규 구독자",       color: "#fbbf24" },
   { key: "price_alert",    emoji: "📈", label: "가격 알림",          desc: "자산 탭에서 목표가 설정 · 도달 시 푸시 (Pro)", color: "#f472b6", pushEnabled: true },
@@ -39,7 +41,8 @@ const NOTIFICATIONS_EN: NotiConfig[] = [
   { key: "market_open",    emoji: "🔔", label: "Market Open Alert",   desc: "US stock market opens (9:30 AM ET)",        color: "#10b981", pushEnabled: true },
   { key: "market_close",   emoji: "🔕", label: "Market Close Alert",  desc: "US stock market closes (4:00 PM ET)",       color: "#60a5fa" },
   { key: "report_publish", emoji: "📋", label: "Report Update Alert", desc: "Instant alert when new Investus reports publish", color: "#c084fc", pushEnabled: true },
-  { key: "morning_briefing", emoji: "🌙", label: "Pre-market Briefing", desc: "Push ~9:30 PM KST weekdays, before US open (Pro card)", color: "#fbbf24", pushEnabled: true },
+  { key: "morning_briefing", emoji: "🌙", label: "Pre-market Briefing", desc: "Push ~9:30 PM KST weekdays, before US open", color: "#fbbf24", pushEnabled: true },
+  { key: "post_market_briefing", emoji: "☀️", label: "After-close Briefing", desc: "Session recap push right after US close", color: "#60a5fa", pushEnabled: true },
   { key: "like_comment",   emoji: "💬", label: "Likes & Comments",    desc: "When your posts receive likes or comments", color: "#fb923c" },
   { key: "new_subscriber", emoji: "⭐", label: "New Subscriber",      desc: "New subscriber on your creator channel",    color: "#fbbf24" },
   { key: "price_alert",    emoji: "📈", label: "Price Alert",         desc: "Set targets in Portfolio · push on hit (Pro)", color: "#f472b6", pushEnabled: true },
@@ -50,11 +53,11 @@ const STORAGE_KEY = "investus_notifications";
 function loadPrefs(): Record<NotiKey, boolean> {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return { morning_briefing: true, ...JSON.parse(raw) };
+    if (raw) return { morning_briefing: true, post_market_briefing: true, ...JSON.parse(raw) };
   } catch { /* ignore */ }
   return {
     market_open: true, market_close: false, report_publish: true,
-    morning_briefing: true,
+    morning_briefing: true, post_market_briefing: true,
     like_comment: true, new_subscriber: true, price_alert: false,
   };
 }

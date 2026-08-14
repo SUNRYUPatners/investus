@@ -26,7 +26,7 @@ export const SUBSCRIPTION = {
   includes: [
     "Investus 추천주식 열람",
     "이전 날짜 리포트 열람",
-    "장전 브리핑",
+    "장전·장후 브리핑",
     "내 종목 가격 알림",
     "포트폴리오 AI 하루 30회",
   ] as const,

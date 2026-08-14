@@ -26,7 +26,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "계좌 개설, 수수료·환율, 세금 개념, DCA, Investus 5분 루틴까지.",
     tag: "입문",
     tagColor: "#10b981",
-    minutes: "18분",
+    minutes: "22분",
     series: "입문 7일",
   },
   {
@@ -36,7 +36,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "레버리지, 타이밍, 대가 복제, 세금 등 흔한 오해.",
     tag: "입문",
     tagColor: "#f87171",
-    minutes: "15분",
+    minutes: "26분",
     series: "입문 7일",
   },
   {
@@ -46,7 +46,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "비중·밸류·세금·심리 — 사기 전에 적을 규칙.",
     tag: "습관",
     tagColor: "#10b981",
-    minutes: "14분",
+    minutes: "20분",
     series: "입문 7일",
   },
   {
@@ -56,7 +56,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "매달 같은 금액, 환율 분산, 실패하는 적립 패턴.",
     tag: "습관",
     tagColor: "#10b981",
-    minutes: "16분",
+    minutes: "22분",
     series: "입문 7일",
   },
   {
@@ -66,7 +66,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "시간이 수익을 만드는 원리, 초기·중기·후기의 차이.",
     tag: "원리",
     tagColor: "#10b981",
-    minutes: "14분",
+    minutes: "24분",
     series: "입문 7일",
   },
   {
@@ -76,7 +76,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "FOMO, 손실 회피, 공포탐욕, 규칙으로 막는 실수.",
     tag: "심리",
     tagColor: "#f59e0b",
-    minutes: "15분",
+    minutes: "22분",
     series: "입문 7일",
   },
   {
@@ -86,7 +86,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "비중·현금·섹터·리밸런싱 주기.",
     tag: "전략",
     tagColor: "#fb923c",
-    minutes: "16분",
+    minutes: "20분",
     series: "입문 7일",
   },
   {
@@ -96,7 +96,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "버핏·그레이엄·린치·보글·달리오·막스 등 전설적 투자가의 핵심 원칙.",
     tag: "철학",
     tagColor: "#d4af37",
-    minutes: "17분",
+    minutes: "24분",
     series: "분석·전략",
   },
   {
@@ -106,7 +106,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "운용보수·추적오차, 레버리지 함정, 코어/위성 나누는 법.",
     tag: "ETF",
     tagColor: "#60a5fa",
-    minutes: "18분",
+    minutes: "20분",
     series: "자산·상품",
   },
   {
@@ -116,7 +116,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "국내 상장 해외 ETF와 미국 ETF, 세금·환율·환헤지 차이.",
     tag: "ETF",
     tagColor: "#10b981",
-    minutes: "17분",
+    minutes: "23분",
     series: "자산·상품",
   },
   {
@@ -126,7 +126,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "리츠 구조, 금리·임대수익, VNQ·IYR, 포트폴리오 역할.",
     tag: "자산",
     tagColor: "#60a5fa",
-    minutes: "16분",
+    minutes: "22분",
     series: "자산·상품",
   },
   {
@@ -136,7 +136,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "콜·풋, 행사가·만기, 내재변동성. 교육용·고위험 안내.",
     tag: "파생",
     tagColor: "#a855f7",
-    minutes: "16분",
+    minutes: "22분",
     series: "자산·상품",
   },
   {
@@ -146,7 +146,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "이동평균, RSI, 지지·저항. 차트는 보조 도구로.",
     tag: "차트",
     tagColor: "#38bdf8",
-    minutes: "15분",
+    minutes: "22분",
     series: "분석·전략",
   },
   {
@@ -156,7 +156,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "미국 대형주 500개 지수의 구성, 역사적 성과, 투자 전략.",
     tag: "지수",
     tagColor: "#60a5fa",
-    minutes: "16분",
+    minutes: "20분",
     series: "자산·상품",
   },
   {
@@ -166,7 +166,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "거래소·종합지수·나스닥100 구분, S&P500과의 차이.",
     tag: "지수",
     tagColor: "#38bdf8",
-    minutes: "16분",
+    minutes: "22분",
     series: "자산·상품",
   },
   {
@@ -176,7 +176,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "주식이 비싼지 싼지 판단하는 밸류에이션 지표와 EV/EBITDA.",
     tag: "분석",
     tagColor: "#c084fc",
-    minutes: "16분",
+    minutes: "22분",
     series: "분석·전략",
   },
   {
@@ -186,7 +186,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "10-K·10-Q에서 매출·이익·부채·FCF를 어떻게 보는지.",
     tag: "분석",
     tagColor: "#a78bfa",
-    minutes: "17분",
+    minutes: "23분",
     series: "분석·전략",
   },
   {
@@ -196,7 +196,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "EPS·컨센서스·가이던스, 발표 전후 체크리스트.",
     tag: "시장",
     tagColor: "#c084fc",
-    minutes: "16분",
+    minutes: "22분",
     series: "분석·전략",
   },
   {
@@ -206,7 +206,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "SEC 13F 공시 해석과 한계. 단순 모방의 위험.",
     tag: "기관",
     tagColor: "#d4af37",
-    minutes: "15분",
+    minutes: "24분",
     series: "분석·전략",
   },
   {
@@ -216,7 +216,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "배당수익률, 배당귀족, DRIP, 미국주식 배당 세금.",
     tag: "수익",
     tagColor: "#10b981",
-    minutes: "15분",
+    minutes: "24분",
     series: "자산·상품",
   },
   {
@@ -226,7 +226,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "채권 가격과 금리의 역관계, 주식과의 역할, 대표 ETF.",
     tag: "매크로",
     tagColor: "#94a3b8",
-    minutes: "16분",
+    minutes: "22분",
     series: "매크로",
   },
   {
@@ -236,7 +236,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "금, 원유, 농산물·산업금속, GLD·DBC 등 ETF와 인플레 헤지.",
     tag: "자산",
     tagColor: "#fbbf24",
-    minutes: "16분",
+    minutes: "22분",
     series: "자산·상품",
   },
   {
@@ -246,7 +246,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "BTC·ETH, 현물 ETF(IBIT·FBTC), COIN·MSTR, 변동성·비중.",
     tag: "자산",
     tagColor: "#f97316",
-    minutes: "17분",
+    minutes: "22분",
     series: "자산·상품",
   },
   {
@@ -256,7 +256,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "인플레이션 지표, 금리 결정이 주식·채권에 미치는 영향.",
     tag: "매크로",
     tagColor: "#f59e0b",
-    minutes: "16분",
+    minutes: "22분",
     series: "매크로",
   },
   {
@@ -266,7 +266,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "CPI·FOMC·고용 발표 전후 변동성 관리.",
     tag: "매크로",
     tagColor: "#f59e0b",
-    minutes: "15분",
+    minutes: "24분",
     series: "매크로",
   },
   {
@@ -276,7 +276,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "나스닥·S&P 선물, 야간 거래, 장 시작 전 시장 온도.",
     tag: "시장",
     tagColor: "#38bdf8",
-    minutes: "14분",
+    minutes: "22분",
     series: "매크로",
   },
   {
@@ -286,7 +286,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "양도소득·배당 원천징수·종합과세 개념 (세무 자문 아님).",
     tag: "세금",
     tagColor: "#f87171",
-    minutes: "18분",
+    minutes: "24분",
     series: "세금·계좌",
   },
   {
@@ -296,7 +296,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "한국 세제혜택 계좌와 미국 ETF·주식, 비과세·세액공제 개념.",
     tag: "세금",
     tagColor: "#f87171",
-    minutes: "18분",
+    minutes: "24분",
     series: "세금·계좌",
   },
   {
@@ -306,7 +306,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "달러 vs 원화 수익률, 환헤지 vs 환노출.",
     tag: "환율",
     tagColor: "#f59e0b",
-    minutes: "15분",
+    minutes: "22분",
     series: "세금·계좌",
   },
   {
@@ -316,7 +316,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "GICS 섹터별 특징, 기술주 쏠림 피하기.",
     tag: "섹터",
     tagColor: "#fb923c",
-    minutes: "17분",
+    minutes: "24분",
     series: "분석·전략",
   },
   {
@@ -326,7 +326,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "CNN 공포·탐욕 지수 계산법과 활용 한계.",
     tag: "심리",
     tagColor: "#f59e0b",
-    minutes: "14분",
+    minutes: "20분",
     series: "매크로",
   },
   {
@@ -336,7 +336,7 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     desc: "시가총액/GDP, 고평가·저평가 맥락 읽기.",
     tag: "밸류",
     tagColor: "#c084fc",
-    minutes: "14분",
+    minutes: "18분",
     series: "분석·전략",
   },
 ];
