@@ -9,7 +9,7 @@ function TickerItem({ q }: { q: Quote }) {
     <span className="inline-flex items-center gap-2 px-5 border-r" style={{ borderColor: "var(--border)" }}>
       <span className="text-xs font-bold font-mono-num" style={{ color: "var(--text)" }}>{q.symbol}</span>
       <span className="text-xs font-mono-num tabular-nums" style={{ color: "var(--text)" }}>${q.price.toFixed(2)}</span>
-      <span className="text-xs font-mono-num tabular-nums" style={{ color: pos ? "var(--mint)" : "var(--down)" }}>
+      <span className="text-xs font-mono-num tabular-nums" style={{ color: pos ? "var(--up)" : "var(--down)" }}>
         {pos ? "▲" : "▼"} {Math.abs(q.changePercent).toFixed(2)}%
       </span>
     </span>

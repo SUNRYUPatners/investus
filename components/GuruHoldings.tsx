@@ -39,8 +39,8 @@ const BADGE: Record<string, { label: string; color: string }> = {
   "STOCK_ACT": { label: "STOCK Act", color: "#f472b6" },
 };
 
-const UP   = "#10b981";
-const DOWN = "#ef4444";
+const UP   = "var(--up)";
+const DOWN = "var(--down)";
 
 type PriceMap = Record<string, { price: number; change: number; changePercent: number }>;
 

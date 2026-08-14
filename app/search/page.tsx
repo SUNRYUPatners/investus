@@ -17,8 +17,8 @@ import { useLocale } from "@/contexts/LocaleContext";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
 import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
-const UP   = "#10b981";
-const DOWN = "#ef4444";
+const UP   = "var(--up)";
+const DOWN = "var(--down)";
 
 const POPULAR = ["AAPL", "NVDA", "TSLA", "MSFT", "AMZN", "META", "GOOGL", "AMD"];
 

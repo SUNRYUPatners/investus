@@ -22,7 +22,7 @@ function useIsDesktop() {
 function bg(pct: number) {
   const t = Math.min(Math.abs(pct) / 3, 1); // saturate at ±3 %
   const a = 0.18 + t * 0.64;
-  return pct >= 0 ? `rgba(var(--mint-rgb),${a})` : `rgba(255,77,109,${a})`;
+  return pct >= 0 ? `rgba(var(--up-rgb),${a})` : `rgba(var(--down-rgb),${a})`;
 }
 const TILE_TEXT = "rgba(255,255,255,0.95)";
 

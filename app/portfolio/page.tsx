@@ -53,7 +53,7 @@ function fmtVal(usd: number, cur: Cur, rate: number, dec = 2) {
   return cur === "KRW" ? fmtKRW(usd * rate) : fmtUSD(usd, dec);
 }
 
-function clr(v: number) { return v >= 0 ? "var(--mint)" : "#ef4444"; }
+function clr(v: number) { return v >= 0 ? "var(--up)" : "var(--down)"; }
 function sgn(v: number)  { return v >= 0 ? "+" : ""; }
 
 // ── Currency toggle pill ──────────────────────────────────────────────────────
@@ -675,8 +675,8 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
         <div className="flex items-center gap-2">
           <span className="text-[11px] font-semibold font-mono-num px-2 py-0.5 rounded-full"
             style={todayPct >= 0
-              ? { background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }
-              : { background: "rgba(255,77,109,0.12)", color: "#ef4444" }}>
+              ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
+              : { background: "rgba(var(--down-rgb),0.12)", color: "var(--down)" }}>
             {sgn(todayPct)}{todayPct.toFixed(2)}%
           </span>
           <button
@@ -716,7 +716,7 @@ function HoldingCard({ holding, live, weight, cur, rate, onDelete }: {
             손익 / 오늘 {sgn(todayAmt)}{fmtVal(Math.abs(todayAmt), cur, rate, 0)}
           </p>
           <div className="flex items-center justify-end gap-1.5">
-            {pnl >= 0 ? <TrendingUp className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} /> : <TrendingDown className="w-3.5 h-3.5" style={{ color: "#ef4444" }} />}
+            {pnl >= 0 ? <TrendingUp className="w-3.5 h-3.5" style={{ color: "var(--up)" }} /> : <TrendingDown className="w-3.5 h-3.5" style={{ color: "var(--down)" }} />}
             <p className="text-sm font-bold font-mono-num tabular-nums" style={{ color: clr(pnl) }}>
               {sgn(pnl)}{fmtVal(Math.abs(pnl), cur, rate, 0)}
             </p>
@@ -793,8 +793,8 @@ function SummaryCard({ holdings, liveMap, cur, rate, onRefresh, locale }: {
           </span>
           <span className="text-[11px] font-mono-num font-bold px-2 py-0.5 rounded-full"
             style={dailyPnl >= 0
-              ? { background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }
-              : { background: "rgba(255,77,109,0.15)", color: "#ef4444" }}>
+              ? { background: "rgba(var(--up-rgb),0.15)", color: "var(--up)" }
+              : { background: "rgba(var(--down-rgb),0.15)", color: "var(--down)" }}>
             {sgn(dailyPct)}{Math.abs(dailyPct).toFixed(2)}%
           </span>
           <span className="text-[10px]" style={{ color: "rgba(255,255,255,0.35)" }}>

@@ -1,6 +1,6 @@
-// US market convention: up = red, down = green
-const UP   = "#10b981";
-const DOWN = "#ef4444";
+// US market convention: up = green, down = red
+const UP   = "var(--up)";
+const DOWN = "var(--down)";
 
 const W = 72;
 const H = 36;

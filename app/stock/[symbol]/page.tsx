@@ -84,8 +84,8 @@ function fmtPct(v: number | null): string {
   return v == null ? "—" : (v * 100).toFixed(2) + "%";
 }
 
-const UP   = "#10b981";
-const DOWN = "#ef4444";
+const UP   = "var(--up)";
+const DOWN = "var(--down)";
 
 // Use the shared lib which includes NYSE holidays + DST
 const isMarketOpen = checkMarketOpen;

@@ -22,7 +22,7 @@ function fmtKRW(v: number) {
 function fmtVal(usd: number, cur: Cur, rate: number) {
   return cur === "KRW" ? fmtKRW(usd * rate) : fmtUSD(usd);
 }
-function clr(v: number) { return v >= 0 ? "var(--mint)" : "#ef4444"; }
+function clr(v: number) { return v >= 0 ? "var(--up)" : "var(--down)"; }
 function sgn(v: number)  { return v >= 0 ? "+" : ""; }
 
 function CurToggle({ cur, onChange }: { cur: Cur; onChange: (c: Cur) => void }) {

@@ -141,7 +141,7 @@ function AnalysisCard({ result }: { result: Extract<PortfolioAnalysis, { approve
         <div className="px-3 py-3 text-center border-l" style={{ borderColor: "rgba(var(--mint-rgb),0.15)" }}>
           <p className="text-[9px] mb-1" style={{ color: "var(--muted)" }}>전체 수익률</p>
           {result.totalReturnPct != null ? (
-            <p className="text-xs font-bold" style={{ color: isPos(result.totalReturnPct) ? "var(--mint)" : "#ef4444" }}>
+            <p className="text-xs font-bold" style={{ color: isPos(result.totalReturnPct) ? "var(--up)" : "var(--down)" }}>
               {result.totalReturnPct >= 0 ? "+" : ""}{result.totalReturnPct.toFixed(1)}%
             </p>
           ) : (
@@ -178,10 +178,10 @@ function AnalysisCard({ result }: { result: Extract<PortfolioAnalysis, { approve
                   {h.returnPct != null ? (
                     <div className="flex items-center justify-end gap-0.5">
                       {h.returnPct >= 0
-                        ? <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--mint)" }} />
-                        : <TrendingDown className="w-2.5 h-2.5" style={{ color: "#ef4444" }} />}
+                        ? <TrendingUp className="w-2.5 h-2.5" style={{ color: "var(--up)" }} />
+                        : <TrendingDown className="w-2.5 h-2.5" style={{ color: "var(--down)" }} />}
                       <p className="text-[11px] font-semibold"
-                        style={{ color: h.returnPct >= 0 ? "var(--mint)" : "#ef4444" }}>
+                        style={{ color: h.returnPct >= 0 ? "var(--up)" : "var(--down)" }}>
                         {h.returnPct >= 0 ? "+" : ""}{h.returnPct.toFixed(1)}%
                       </p>
                     </div>

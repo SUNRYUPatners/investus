@@ -6,14 +6,14 @@ import { useLocaleCode } from "@/contexts/LocaleContext";
 import { ANALYST_TARGETS, ratingGroup } from "@/lib/analystTargets";
 import type { AnalystEntry } from "@/lib/analystTargets";
 
-const BUY_COLOR  = "var(--mint)";
+const BUY_COLOR  = "var(--up)";
 const HOLD_COLOR = "#f59e0b";
-const SELL_COLOR = "#ef4444";
+const SELL_COLOR = "var(--down)";
 
 function ratingStyle(entry: AnalystEntry): { bg: string; color: string } {
   const g = ratingGroup(entry.rating);
-  if (g === "buy")  return { bg: "rgba(var(--mint-rgb),0.12)",  color: BUY_COLOR };
-  if (g === "sell") return { bg: "rgba(239,68,68,0.12)",  color: SELL_COLOR };
+  if (g === "buy")  return { bg: "rgba(var(--up-rgb),0.12)",  color: BUY_COLOR };
+  if (g === "sell") return { bg: "rgba(var(--down-rgb),0.12)",  color: SELL_COLOR };
   return { bg: "rgba(245,158,11,0.12)", color: HOLD_COLOR };
 }
 

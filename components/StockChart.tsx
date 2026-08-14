@@ -20,8 +20,8 @@ const VH    = 48;
 const GAP   = 4;
 const SVG_H = PAD.top + CH + GAP + VH + PAD.bottom;
 
-const UP   = "#10b981";
-const DOWN = "#ef4444";
+const UP   = "var(--up)";
+const DOWN = "var(--down)";
 
 function xFmt(ts: number, period: Period): string {
   const d = new Date(ts * 1000);

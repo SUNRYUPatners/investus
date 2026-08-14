@@ -262,7 +262,7 @@ export function PriceAlertsPanel({
                 <div className="flex-1 min-w-0">
                   <p className="text-[12px] font-bold" style={{ color: "var(--text)" }}>
                     {a.symbol}{" "}
-                    <span style={{ color: a.direction === "above" ? "var(--mint)" : "#ef4444" }}>
+                    <span style={{ color: a.direction === "above" ? "var(--up)" : "var(--down)" }}>
                       {a.direction === "above" ? "≥" : "≤"} ${a.target.toFixed(2)}
                     </span>
                   </p>

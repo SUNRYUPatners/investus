@@ -40,7 +40,7 @@ export function Header() {
   return (
     <header
       className="sticky top-0 z-50 border-b"
-      style={{ background: "var(--header-bg)", borderColor: "var(--border)", backdropFilter: "blur(10px)" }}
+      style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
     >
       <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
         {/* 로고 — 모바일만 표시 */}
@@ -60,7 +60,7 @@ export function Header() {
         </div>
 
         {/* 데스크톱: 사이트 타이틀 */}
-        <span className="hidden lg:block text-sm font-semibold font-syne" style={{ color: "var(--muted)" }}>
+        <span className="hidden lg:block text-sm font-semibold font-syne" style={{ color: "var(--text)" }}>
           {t.header.tagline}
         </span>
 
@@ -69,8 +69,8 @@ export function Header() {
           {mounted && (
             <>
               <span
-                className="text-xs font-mono-num tabular-nums"
-                style={{ color: "var(--muted)" }}
+                className="text-xs font-mono-num tabular-nums font-medium"
+                style={{ color: "var(--text)" }}
               >
                 {date} {time} EST
               </span>
@@ -78,7 +78,7 @@ export function Header() {
                 className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
                 style={
                   open
-                    ? { background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }
+                    ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
                     : { background: "rgba(107,114,128,0.12)", color: "var(--muted)" }
                 }
               >

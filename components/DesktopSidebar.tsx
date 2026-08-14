@@ -64,7 +64,7 @@ export function DesktopSidebar() {
               style={{ color: "var(--navy)" }}>
               Investus
             </div>
-            <div className="text-[10px] leading-none" style={{ color: "var(--muted)" }}>
+            <div className="text-[11px] font-medium leading-none mt-0.5" style={{ color: "var(--muted)" }}>
               {t.more.tagline.split(" · ")[0]}
             </div>
           </div>
@@ -86,14 +86,14 @@ export function DesktopSidebar() {
               className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl mb-0.5 transition-all text-left"
               style={
                 isActive
-                  ? { background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }
-                  : { color: "var(--muted)" }
+                  ? { background: "rgba(var(--mint-rgb),0.14)", color: "var(--navy)" }
+                  : { color: "var(--sidebar-label)" }
               }
             >
               <span className="text-lg w-6 text-center flex-shrink-0">{emoji}</span>
               <span
-                className="text-sm font-medium flex-1"
-                style={{ color: isActive ? "var(--mint)" : "var(--text)" }}
+                className="text-sm font-semibold flex-1"
+                style={{ color: isActive ? "var(--navy)" : "var(--sidebar-label)" }}
               >
                 {label}
               </span>
@@ -108,7 +108,7 @@ export function DesktopSidebar() {
         })}
       </nav>
 
-      {/* Bottom: clock + market status — stays above sticky ad (sidebar-only) */}
+      {/* Bottom: clock + market status */}
       <div
         className="px-5 py-4 border-t space-y-3 flex-shrink-0"
         style={{ borderColor: "var(--border)" }}
@@ -116,7 +116,7 @@ export function DesktopSidebar() {
         {mounted && (
           <>
             <div className="flex items-center justify-between">
-              <span className="text-xs font-mono-num tabular-nums" style={{ color: "var(--muted)" }}>
+              <span className="text-xs font-mono-num tabular-nums font-medium" style={{ color: "var(--text)" }}>
                 {time}
               </span>
               <span className="text-[10px] font-semibold" style={{ color: "var(--muted)" }}>EST</span>
@@ -125,8 +125,8 @@ export function DesktopSidebar() {
               className="w-full py-2 rounded-xl text-center text-[11px] font-bold"
               style={
                 open
-                  ? { background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)" }
-                  : { background: "rgba(107,114,128,0.08)", color: "var(--muted)" }
+                  ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
+                  : { background: "var(--muted-2)", color: "var(--muted)" }
               }
             >
               {open ? t.header.marketOpen : t.header.marketClosed}
@@ -134,8 +134,7 @@ export function DesktopSidebar() {
           </>
         )}
 
-        {/* Investus version */}
-        <p className="text-[10px] text-center" style={{ color: "var(--border)" }}>
+        <p className="text-[10px] text-center font-medium" style={{ color: "var(--muted)" }}>
           investus.kr × SRP
         </p>
       </div>

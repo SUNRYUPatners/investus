@@ -82,7 +82,7 @@ export function BottomNav() {
               }}
               className="flex-1 flex flex-col items-center justify-center gap-1 pt-1"
               style={{
-                color: isActive ? "var(--mint)" : "var(--muted)",
+                color: isActive ? "var(--mint)" : "var(--sidebar-label)",
                 touchAction: "manipulation",
                 WebkitTapHighlightColor: "transparent",
                 background: "none",

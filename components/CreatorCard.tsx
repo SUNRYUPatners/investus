@@ -65,8 +65,8 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
           {/* Stats row */}
           <div className="flex items-center gap-4 mb-3">
             <div className="flex items-center gap-1">
-              <TrendingUp className="w-3 h-3" style={{ color: "#ef4444" }} />
-              <span className="text-xs font-bold font-mono-num" style={{ color: "#ef4444" }}>
+              <TrendingUp className="w-3 h-3" style={{ color: "var(--up)" }} />
+              <span className="text-xs font-bold font-mono-num" style={{ color: "var(--up)" }}>
                 +{annualReturn}%
               </span>
               <span className="text-[10px]" style={{ color: "var(--muted)" }}>연수익률</span>
@@ -85,7 +85,7 @@ export function CreatorCard({ creator, rank }: { creator: Creator; rank?: number
               <span key={h.symbol} className="text-[10px] font-mono-num font-bold px-2 py-1 rounded-lg"
                 style={{ background: "var(--bg)", color: "var(--text)", border: "1px solid var(--border)" }}>
                 {h.symbol}
-                <span className="ml-1" style={{ color: h.avgReturn >= 0 ? "#ef4444" : "#10b981" }}>
+                <span className="ml-1" style={{ color: h.avgReturn >= 0 ? "var(--up)" : "var(--down)" }}>
                   {h.avgReturn >= 0 ? "+" : ""}{h.avgReturn}%
                 </span>
               </span>

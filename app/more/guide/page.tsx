@@ -35,14 +35,14 @@ function MockCard({ label, value, pct, positive }: { label: string; value: strin
     <div className="rounded-xl p-3 border flex-1 min-w-0" style={{ background: "var(--bg)", borderColor: "var(--border)" }}>
       <p className="text-[10px]" style={{ color: "var(--muted)" }}>{label}</p>
       <p className="text-sm font-bold font-mono-num mt-0.5" style={{ color: "var(--text)" }}>{value}</p>
-      <p className="text-xs font-bold font-mono-num" style={{ color: positive ? "#10b981" : "#ef4444" }}>{pct}</p>
+      <p className="text-xs font-bold font-mono-num" style={{ color: positive ? "var(--up)" : "var(--down)" }}>{pct}</p>
     </div>
   );
 }
 
 function MockHeatTile({ label, pct, positive, size = 1 }: { label: string; pct: string; positive: boolean; size?: number }) {
   const a = Math.min(Math.abs(parseFloat(pct)) / 3, 1) * 0.6 + 0.2;
-  const bg = positive ? `rgba(var(--mint-rgb),${a})` : `rgba(255,77,109,${a})`;
+  const bg = positive ? `rgba(var(--up-rgb),${a})` : `rgba(var(--down-rgb),${a})`;
   return (
     <div className="rounded-lg p-2 flex flex-col justify-between" style={{ background: bg, flex: size, minWidth: 0 }}>
       <p className="text-[10px] font-semibold text-white">{label}</p>
