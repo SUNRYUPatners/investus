@@ -79,7 +79,7 @@ export function SectionInfo({ title, children, side = "left" }: Props) {
 
   return (
     <div className="inline-flex items-center gap-1.5">
-      <span className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+      <span className="text-xs font-bold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
         {title}
       </span>
       <button
