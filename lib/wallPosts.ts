@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T18AU = 1787007600000; // 2026-08-18 08:00 KST
 const T14AU = 1786662000000; // 2026-08-14 08:00 KST
 const T13AU = 1786575600000; // 2026-08-13 08:00 KST
 const T12AU = 1786489200000; // 2026-08-12 08:00 KST
@@ -80,7 +81,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T14AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T18AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -99,6 +100,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-18 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 989, symbol: "SPCX", nickname: "익명_9955", holdingLabel: "관심종목",
+    content: "SPCX Musk 개인이 SPCX 지분 매수 발표 후 short seller들 22억 하루 손실. Harvard도 Tesla 최대 보유래... 기관 신뢰가 진짜 확립",
+    createdAt: T18AU + 8*60_000, likes: 8, comments: 0 },
+  { id: 990, symbol: "TSLA", nickname: "익명_1200", holdingLabel: "관심종목",
+    content: "Tesla 중국 7월 판매 93,579대·+33% 성장. Model Y가 중형 SUV 2위·수출 +191%에 이어 실 판매도 폭발",
+    createdAt: T18AU + 16*60_000, likes: 10, comments: 3 },
+  { id: 991, symbol: "GOOGL", nickname: "익명_2311", holdingLabel: "관심종목",
+    content: "알파벳이 Cursor 잡으려고 Antigravity 출시한대. 첫 해 매출 10억 목표·Austin 100명 채용. 이제 AI 코딩 격전지네",
+    createdAt: T18AU + 24*60_000, likes: 12, comments: 0 },
+  { id: 992, symbol: "SPCX", nickname: "익명_3422", holdingLabel: "관심종목",
+    content: "Cursor가 2주 만에 매출 3배 됐어! 4억 3백만 페이스. MS 슈퍼사이클이라 표현할 정도. SPCX 인수 진짜 좋은 딜",
+    createdAt: T18AU + 32*60_000, likes: 3, comments: 2 },
+  { id: 993, symbol: "SPCX", nickname: "익명_4533", holdingLabel: "관심종목",
+    content: "xAI Grok이 헬스케어 벤치마크 4위 진입. GPT-5·Kimi K3·Gemini 3.7 Flash 뒤인데 빠르게 정상 다가감",
+    createdAt: T18AU + 40*60_000, likes: 14, comments: 1 },
+  { id: 994, symbol: "SPCX", nickname: "익명_5644", holdingLabel: "관심종목",
+    content: "Starlink 몬테네그로 공식 등록됨. 유럽 시장 확장 가속화. 8/11 루프트한자 A320neo 후 계속 진전",
+    createdAt: T18AU + 48*60_000, likes: 13, comments: 0 },
+  { id: 995, symbol: "SPX", nickname: "익명_6755", holdingLabel: "관심종목",
+    content: "나스닥이 12월부터 저녁 9pm-4am 주 3일 밤 거래 도입한대. 다음 4분기 24/5 완전 지원. 시장 구조 근본 변화",
+    createdAt: T18AU + 56*60_000, likes: 13, comments: 0 },
+  { id: 996, symbol: "SPCX", nickname: "익명_7866", holdingLabel: "관심종목",
+    content: "Shay Boloor: SPCX 5년 안 4천억 달러 매출·2027 말 세계 매출 1위 될 것. 통신·컴퓨트·발사 3중 축",
+    createdAt: T18AU + 64*60_000, likes: 6, comments: 0 },
+  { id: 997, symbol: "TSLA", nickname: "익명_8977", holdingLabel: "관심종목",
+    content: "Robotaxi Model Y 200일 무사고 운행! NHTSA 데이터로 확인됨. MS의 증명 요구에 대한 강한 대답이네",
+    createdAt: T18AU + 72*60_000, likes: 15, comments: 0 },
+  { id: 998, symbol: "NVDA", nickname: "익명_1088", holdingLabel: "관심종목",
+    content: "NVDA Ohio 데이터센터 확정. SB Energy·OpenAI 파트너십·4억 2,500만 초기. 이제 하이퍼스케일러 인프라 핵심 파트너",
+    createdAt: T18AU + 80*60_000, likes: 8, comments: 0 },
+  { id: 999, symbol: "SPX", nickname: "익명_2199", holdingLabel: "관심종목",
+    content: "Evercore ISI가 S&P 500 9,000 목표 냈어! 현재 6,500 대비 30%+ 상승. Tom Lee 2년 최대 상승과 정합",
+    createdAt: T18AU + 88*60_000, likes: 7, comments: 1 },
+  { id: 1000, symbol: "SPX", nickname: "익명_3200", holdingLabel: "관심종목",
+    content: "Palantir 밸류에이션이 닷컴 프리미엄 근접. Q2 대비 100%+ 상승. Burry 경고랑 같이 경계 신호",
+    createdAt: T18AU + 96*60_000, likes: 12, comments: 0 },
+  { id: 1001, symbol: "SPX", nickname: "익명_4311", holdingLabel: "관심종목",
+    content: "Amazon Anthropic 지분 1,900억. Q2 이후 +245% 급등이네. Anthropic 상장 시 자산 재평가 대량",
+    createdAt: T18AU + 104*60_000, likes: 14, comments: 2 },
+  { id: 1002, symbol: "SPCX", nickname: "익명_5422", holdingLabel: "관심종목",
+    content: "SPCX가 SEC에 4.24조 EU 지분 신청. 시가 50%+ 규모. Shay 4천억 매출 프레임 밸류에이션 근거 강화",
+    createdAt: T18AU + 112*60_000, likes: 12, comments: 0 },
+  { id: 1003, symbol: "TSLA", nickname: "익명_6533", holdingLabel: "관심종목",
+    content: "Tesla 호주 PLUS·Grid Storage 2GW Megapack 딜! 지역 최대. Tesla 사업 다각 글로벌 확장 계속",
+    createdAt: T18AU + 120*60_000, likes: 3, comments: 1 },
+
   // ── 2026-08-14 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 974, symbol: "SPCX", nickname: "익명_4400", holdingLabel: "관심종목",
     content: "Musk 개인이 SPCX 지분 48.4% (64억 주)라고 SEC가 공식 확인함. 상장 회사에서 개인이 절반 가까이 소유하는 건 진짜 이례적이야",
@@ -3602,6 +3650,30 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-18 신규 댓글 (실 데이터) ────────────────
+  990: [
+    { id: 1, nickname: "익명_8901", holdingLabel: "관심종목", content: "이 정도 상승이면 조정 한번 올듯", createdAt: T18AU + 16*60_000 + 3*60_000, likes: 5 },
+    { id: 2, nickname: "익명_8899", holdingLabel: "관심종목", content: "이 뉴스는 처음 듣는데 팩트 맞나요", createdAt: T18AU + 16*60_000 + 6*60_000, likes: 8 },
+    { id: 3, nickname: "익명_1234", holdingLabel: "관심종목", content: "너무 낙관 아닌가", createdAt: T18AU + 16*60_000 + 9*60_000, likes: 3 },
+  ],
+  992: [
+    { id: 1, nickname: "익명_4455", holdingLabel: "관심종목", content: "차트 좋아 보이긴 하는데", createdAt: T18AU + 32*60_000 + 3*60_000, likes: 2 },
+    { id: 2, nickname: "익명_6789", holdingLabel: "관심종목", content: "언제 사는 게 좋을까", createdAt: T18AU + 32*60_000 + 6*60_000, likes: 3 },
+  ],
+  993: [
+    { id: 1, nickname: "익명_6789", holdingLabel: "관심종목", content: "이 정도 상승이면 조정 한번 올듯", createdAt: T18AU + 40*60_000 + 3*60_000, likes: 7 },
+  ],
+  999: [
+    { id: 1, nickname: "익명_2233", holdingLabel: "관심종목", content: "이 뉴스는 처음 듣는데 팩트 맞나요", createdAt: T18AU + 88*60_000 + 3*60_000, likes: 9 },
+  ],
+  1001: [
+    { id: 1, nickname: "익명_7890", holdingLabel: "관심종목", content: "언제 사는 게 좋을까", createdAt: T18AU + 104*60_000 + 3*60_000, likes: 3 },
+    { id: 2, nickname: "익명_7788", holdingLabel: "관심종목", content: "매크로 리스크는 여전하네", createdAt: T18AU + 104*60_000 + 6*60_000, likes: 6 },
+  ],
+  1003: [
+    { id: 1, nickname: "익명_3344", holdingLabel: "관심종목", content: "관심 종목에 넣어놨는데 다행이네", createdAt: T18AU + 120*60_000 + 3*60_000, likes: 4 },
+  ],
+
   // ── 2026-08-14 신규 댓글 (실 데이터) ────────────────
   975: [
     { id: 1, nickname: "익명_4567", holdingLabel: "관심종목", content: "이 뉴스는 처음 듣는데 팩트 맞나요", createdAt: T14AU + 9*60_000, likes: 4 },

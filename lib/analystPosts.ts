@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-18 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
+  {
+    id: -791, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "테슬라 공매도자가 2026년 들어서만 90억 달러 손실을 봤다. Musk 개인 지분 매수 후 하루 22억이 추가로 사라진 게 결정적이었다. Harvard가 Tesla를 개별 종목 최대 보유로 공개한 것과 함께 기관 신뢰가 실 데이터로 확립되고 있다.",
+    likes: 10, comments: 1, created_at: "2026-08-18T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -792, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "중국 7월 Tesla 판매 93,579대에 Model Y 25,158대 · +33% 성장이다. 8/14 별개 리포트의 수출 +191% 급증에 이어 실 판매까지 함께 폭발했다. 중국 EV 지배력이 두 축으로 확장되고 있다.",
+    likes: 8, comments: 2, created_at: "2026-08-18T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -793, alias: "서초 콘도르 #59", symbol: "GOOGL",
+    content: "Alphabet이 Cursor 대응해 Antigravity를 출시한다는 소식이다. 첫 해 매출 10억 달러 목표에 Austin 100명 채용까지 발표되었다. AI 코딩이 Musk-Google-MS 격전지가 되는 국면이다.",
+    likes: 4, comments: 0, created_at: "2026-08-18T00:18:00.000Z", liked: false,
+  },
+  {
+    id: -794, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "Cursor 매출이 2주 만에 3배 급증해 연 4억 3백만 달러 페이스에 도달했다. MS는 이를 슈퍼사이클 새 마일스톤으로 프레임했고, 8/12 SPCX 인수의 실 근거가 예상보다 훨씬 빨리 나오고 있다.",
+    likes: 4, comments: 2, created_at: "2026-08-18T00:25:00.000Z", liked: false,
+  },
+  {
+    id: -795, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "xAI Grok이 헬스케어·의료 벤치마크에서 4위에 올랐다. GPT-5·Kimi K3·Gemini 3.7 Flash 뒤이지만, Musk가 정상 다가감으로 표현한 도메인 특화 진전이다. general-purpose에서 특화까지 확장.",
+    likes: 15, comments: 0, created_at: "2026-08-18T00:32:00.000Z", liked: false,
+  },
+  {
+    id: -796, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "Starlink가 몬테네그로 공식 등록을 완료해 유럽 국가별 규제 승인이 계속 진행되고 있다. 8/14 소비자 1,300만·모바일 1,300만 확인 이후 실 확장이 이어지고 있다.",
+    likes: 12, comments: 3, created_at: "2026-08-18T00:39:00.000Z", liked: false,
+  },
+  {
+    id: -797, alias: "종로 매 #12", symbol: "SPX",
+    content: "NASDAQ이 12월부터 저녁 9pm-4am 주 3일 밤 거래를 도입한다. 다음 4분기 24/5 지원까지 계획된 것은 8/13 SEC 24/7 블록체인 정책과 병행되는 실 대응이다. 아시아·유럽 실시간 참여 확대.",
+    likes: 8, comments: 0, created_at: "2026-08-18T00:46:00.000Z", liked: false,
+  },
+  {
+    id: -798, alias: "부산 갈매기 #77", symbol: "SPCX",
+    content: "Shay Boloor가 SPCX 5년 안 4천억 달러 매출 · 2027 말 세계 매출 1위 프레임을 제시했다. 8/13 15 GW·8/14 Dan Ives 2조·Ron Baron 230억 프레임의 매출 실체 전망이다.",
+    likes: 15, comments: 3, created_at: "2026-08-18T00:53:00.000Z", liked: false,
+  },
+  {
+    id: -799, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "Robotaxi Model Y 함대 200일 완전 무사고 운행이 NHTSA 데이터로 공식 확인됐다. 8/14 MS의 로보택시 증명 요구에 대한 결정적 대답이며, Waymo 대비 안전 우위가 데이터로 확립된 순간이다.",
+    likes: 5, comments: 0, created_at: "2026-08-18T00:60:00.000Z", liked: false,
+  },
+  {
+    id: -800, alias: "강남 표범 #46", symbol: "NVDA",
+    content: "NVIDIA가 Ohio Campus in Pike County 20년 임대 데이터센터 딜을 확정하고 SB Energy·OpenAI 파트너십에 신규 투자자로 참여했다. 8/12 SPCX 2,600억·8/11 5,000억 컨소시엄에 이은 인프라 핵심 파트너 확립.",
+    likes: 12, comments: 0, created_at: "2026-08-18T00:67:00.000Z", liked: false,
+  },
+  {
+    id: -801, alias: "서초 콘도르 #59", symbol: "SPX",
+    content: "Evercore ISI가 S&P 500 12개월 안 9,000 상승 잠재를 제시했다. 현재 6,500 대비 30%+ 상승이며 8/14 Tom Lee 2년 사상 최대 상승 프레임과 정합한다. sell-side 초강세 다층 축적.",
+    likes: 6, comments: 1, created_at: "2026-08-18T00:74:00.000Z", liked: false,
+  },
+  {
+    id: -802, alias: "을지로 팔콘 #71", symbol: "SPX",
+    content: "Palantir 밸류에이션 프리미엄이 1999-2000 닷컴 버블 수준에 근접한다는 unusual_whales의 지적이다. Q2 대비 +100%+ 상승이 매출·이익 성장을 훨씬 앞지르는 상황이 Michael Burry AI Enron 경고와 겹친다.",
+    likes: 10, comments: 0, created_at: "2026-08-18T00:81:00.000Z", liked: false,
+  },
+  {
+    id: -803, alias: "광화문 늑대 #33", symbol: "SPX",
+    content: "Amazon Anthropic 지분이 1,900억 달러에 도달해 Q2 이후 +245% 급등했다. 8/14 Google 24.7배 신고 지분 급증과 유사한 흐름이며, Anthropic 상장 시 Amazon·Google 두 회사 자산이 극단 실체화된다.",
+    likes: 11, comments: 1, created_at: "2026-08-18T00:88:00.000Z", liked: false,
+  },
+  {
+    id: -804, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "Whole Mars Catalog가 SPCX SEC 4.24조 달러 EU 지분 신청을 정리했다. 시가 50%+ 규모이며 8/14 Musk 48.4% SEC 지분과 병행되어 SPCX 유통 시장 확장의 실 진전을 확인해 준다.",
+    likes: 6, comments: 1, created_at: "2026-08-18T00:95:00.000Z", liked: false,
+  },
+  {
+    id: -805, alias: "종로 매 #12", symbol: "TSLA",
+    content: "Tesla가 호주 PLUS·Grid Storage Australia와 2GW Megapack 배터리 저장 딜을 확정했다. 지역 사상 최대 규모이고 2027 완공 목표다. 8/11 태양광 Fort Bend·오늘 China +33%와 함께 Tesla 사업 다각 글로벌 확장 실체화.",
+    likes: 11, comments: 3, created_at: "2026-08-18T00:102:00.000Z", liked: false,
+  },
+
   // ── 2026-08-14 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -776, alias: "여의도 매 #22", symbol: "SPCX",
@@ -6475,6 +6552,43 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-08-18 신규 댓글 (실 데이터) ────────────────
+  [-791]: [
+    { alias: "서초 콘도르 #59", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-18T00:06:00.000Z" },
+  ],
+  [-792]: [
+    { alias: "서초 콘도르 #59", content: "다각 분석 감사", created_at: "2026-08-18T00:13:00.000Z" },
+    { alias: "종로 매 #12", content: "밸류에이션 여전 부담스럽긴 함", created_at: "2026-08-18T00:15:00.000Z" },
+  ],
+  [-794]: [
+    { alias: "광화문 늑대 #33", content: "이 부분은 좀 다르게 볼 수도 있을 듯", created_at: "2026-08-18T00:27:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "이건 정말 catalyst네요", created_at: "2026-08-18T00:29:00.000Z" },
+  ],
+  [-796]: [
+    { alias: "강남 표범 #46", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-18T00:41:00.000Z" },
+    { alias: "종로 매 #12", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-18T00:43:00.000Z" },
+    { alias: "을지로 팔콘 #71", content: "sell-side 컨센이 이 방향이면 맞겠네요", created_at: "2026-08-18T00:45:00.000Z" },
+  ],
+  [-798]: [
+    { alias: "광화문 늑대 #33", content: "sell-side 컨센이 이 방향이면 맞겠네요", created_at: "2026-08-18T00:55:00.000Z" },
+    { alias: "종로 매 #12", content: "이건 정말 catalyst네요", created_at: "2026-08-18T00:57:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-18T00:59:00.000Z" },
+  ],
+  [-801]: [
+    { alias: "마포 올빼미 #24", content: "다각 분석 감사", created_at: "2026-08-18T00:76:00.000Z" },
+  ],
+  [-803]: [
+    { alias: "마포 올빼미 #24", content: "매크로 관점에서 잘 정리됐네요", created_at: "2026-08-18T00:90:00.000Z" },
+  ],
+  [-804]: [
+    { alias: "마포 올빼미 #24", content: "밸류에이션 여전 부담스럽긴 함", created_at: "2026-08-18T00:97:00.000Z" },
+  ],
+  [-805]: [
+    { alias: "부산 갈매기 #77", content: "차트로도 확인해봐야겠어요", created_at: "2026-08-18T00:104:00.000Z" },
+    { alias: "마포 올빼미 #24", content: "밸류에이션 여전 부담스럽긴 함", created_at: "2026-08-18T00:106:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "다각 분석 감사", created_at: "2026-08-18T00:108:00.000Z" },
+  ],
+
   // ── 2026-08-14 신규 댓글 (실 데이터) ────────────────
   [-777]: [
     { alias: "광화문 늑대 #33", content: "sell-side 컨센이 이 방향이면 맞겠네요", created_at: "2026-08-14T02:12:00.000Z" },

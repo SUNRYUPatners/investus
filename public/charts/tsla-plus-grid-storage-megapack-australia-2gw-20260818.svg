@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.18</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">TSLA — 호주 PLUS·</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Grid Storage Australia와 2GW Megapack 배터리 저장 딜·</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".15">🔋</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#4ade80" text-anchor="middle">🔋</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">2 GW</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Ashley Louise Simon 정리에 따르면 Tesla가 호주 PLUS와 Grid Storage Australia와 2GW Megapack</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">배터리 저장 딜을 확정했습니다. 이 지역 사상 최대 규모이며 2027년까지 완공 목표, Musk 회사 그룹의</text>
+  <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">에너지 사업 다각 확장 실체화입니다.</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🔋</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">2 GW</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Megapack 배터리</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">호주 지역 최대</text>
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">📅</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">2027년</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">완공 목표</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">배포 로드맵</text>
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🇦🇺</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">호주 확장</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">PLUS·Grid Storage</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Tesla 에너지</text>
+  <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">ASHLEY LOUISE SIMON · TESLA</text>
+  <text x="540" y="714" font-family="Arial" font-size="20" fill="#4ade80" text-anchor="middle">"Tesla가 호주 PLUS·</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#4ade80" text-anchor="middle">Grid Storage Australia와 2GW Megapack 배터리 저장 딜 확정. 이 지역 사상 최대 규모·</text>
+  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">Tesla just secured its biggest Australia Megapack battery storage deal yet with a 2 GW project ·</text>
+  <text x="540" y="796" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">The area targets construction begin by 2027 and completion by 2027</text>
+  <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">출처: Ashley Louise Simon · Tesla · 2026.08.17</text>
+  <rect x="60" y="850" width="960" height="110" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="884" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">이 소식은 왜 중요한가</text>
+  <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">8/11 별개 리포트의 Tesla 태양광 Fort Bend County 3,000 에이커·오늘 별개 리포트의 Tesla 중국 판매 +33%·</text>
+  <text x="540" y="954" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">200일 무사고 로보택시에 이어 호주 에너지 저장까지·Tesla 사업 다각 글로벌 확장 실체화입니다.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · 호주 Megapack 2GW · 2026.08.18</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
