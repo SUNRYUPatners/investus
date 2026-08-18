@@ -6,7 +6,7 @@ export const maxDuration = 20;
 const CHANNELS = [
   { key: "sbs",    url: "https://www.youtube.com/@SBSBiz2021" },
   { key: "yonhap", url: "https://www.youtube.com/@연합뉴스경제TV" },
-  { key: "hk",     url: "https://www.youtube.com/@hkglobalmarket" },
+  { key: "hk",     url: "https://www.youtube.com/channel/UCWskYkV4c4S9D__rsfOl2JA" },
   { key: "money",  url: "https://www.youtube.com/@moneymoneycomics" },
   { key: "wepoll", url: "https://www.youtube.com/@wepoll_original" },
 ];

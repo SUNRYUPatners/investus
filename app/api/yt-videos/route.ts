@@ -14,15 +14,27 @@ export type YTVideo = {
 };
 
 type ChannelConfig = {
-  key:   string;
-  urls:  string[];
-  limit: number;
+  key:        string;
+  urls:       string[];
+  limit:      number;
+  channelId?: string;
 };
 
 const CHANNEL_CONFIGS: ChannelConfig[] = [
   { key: "sbs",    urls: ["https://www.youtube.com/@SBSBiz2021/streams"],                                                          limit: 4 },
   { key: "yonhap", urls: ["https://www.youtube.com/@yonhapnews_economy/streams", "https://www.youtube.com/@연합뉴스경제TV/streams"], limit: 4 },
-  { key: "hk",     urls: ["https://www.youtube.com/@hkglobalmarket/streams", "https://www.youtube.com/@hkglobalmarket/videos"],     limit: 4 },
+  {
+    key: "hk",
+    // @hkglobalmarket 는 404. 실제 핸들은 @한경글로벌마켓, ID UCWskYkV4c4S9D__rsfOl2JA
+    urls: [
+      "https://www.youtube.com/channel/UCWskYkV4c4S9D__rsfOl2JA/streams",
+      "https://www.youtube.com/channel/UCWskYkV4c4S9D__rsfOl2JA/videos",
+      "https://www.youtube.com/@한경글로벌마켓/streams",
+      "https://www.youtube.com/@한경글로벌마켓/videos",
+    ],
+    limit: 4,
+    channelId: "UCWskYkV4c4S9D__rsfOl2JA",
+  },
   { key: "money",  urls: ["https://www.youtube.com/@moneymoneycomics/streams"],                                                    limit: 4 },
   { key: "wepoll", urls: ["https://www.youtube.com/@wepoll_original/streams", "https://www.youtube.com/@wepoll_original/videos"],   limit: 4 },
 ];
@@ -203,6 +215,67 @@ async function fetchTab(url: string): Promise<YTVideo[]> {
   }
 }
 
+function decodeXml(s: string): string {
+  return s
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+}
+
+function formatPublished(iso: string): string {
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return "";
+  const d = new Date(t);
+  return `${d.getMonth() + 1}월 ${d.getDate()}일`;
+}
+
+/** YouTube 공식 Atom 피드 — HTML 스크랩이 비어도 최신 업로드는 살린다 */
+async function fetchRss(channelId: string): Promise<YTVideo[]> {
+  try {
+    const res = await fetch(
+      `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`,
+      {
+        headers: { Accept: "application/atom+xml,application/xml,text/xml" },
+        next: { revalidate: 1800 },
+        signal: AbortSignal.timeout(8_000),
+      },
+    );
+    if (!res.ok) return [];
+    const xml = await res.text();
+    const videos: YTVideo[] = [];
+    for (const entry of xml.split("<entry>").slice(1)) {
+      const id = entry.match(/<yt:videoId>([^<]+)<\/yt:videoId>/)?.[1];
+      if (!id) continue;
+      const rawTitle =
+        entry.match(/<media:title>([\s\S]*?)<\/media:title>/)?.[1] ??
+        entry.match(/<title>([\s\S]*?)<\/title>/)?.[1] ??
+        "";
+      const title = decodeXml(rawTitle).replace(/\s+/g, " ").trim();
+      const thumb =
+        entry.match(/<media:thumbnail[^>]*url="([^"]+)"/)?.[1] ??
+        `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+      const views = entry.match(/views="(\d+)"/)?.[1];
+      const published = entry.match(/<published>([^<]+)<\/published>/)?.[1] ?? "";
+      videos.push({
+        id,
+        title,
+        thumbnail: thumb,
+        viewCount: views ? `조회수 ${Number(views).toLocaleString("ko-KR")}회` : "",
+        publishedAt: formatPublished(published),
+        duration: "",
+        isLive: /LIVE|라이브/.test(title),
+      });
+      if (videos.length >= 8) break;
+    }
+    return videos;
+  } catch {
+    return [];
+  }
+}
+
 export async function GET() {
   const out: Record<string, YTVideo[]> = {};
 
@@ -212,7 +285,17 @@ export async function GET() {
       const merged: YTVideo[] = [];
 
       for (const url of ch.urls) {
+        if (merged.length >= ch.limit) break;
         for (const v of await fetchTab(url)) {
+          if (!seen.has(v.id)) {
+            seen.add(v.id);
+            merged.push(v);
+          }
+        }
+      }
+
+      if (merged.length === 0 && ch.channelId) {
+        for (const v of await fetchRss(ch.channelId)) {
           if (!seen.has(v.id)) {
             seen.add(v.id);
             merged.push(v);
