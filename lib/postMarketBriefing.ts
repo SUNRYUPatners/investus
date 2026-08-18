@@ -96,22 +96,28 @@ function dayStartUnix(dateKey: string): number {
   return Number.isFinite(t) ? Math.floor(t / 1000) : 0;
 }
 
+const LISTED_UNIVERSE = POST_MARKET_UNIVERSE.filter((u) => u.symbol !== "SPCX");
+
 async function collectSessionNews(dateKey: string): Promise<{ news: NewsLine[]; quotes: string }> {
   const from = dateKey;
   const startUnix = dayStartUnix(dateKey);
   const perSymbol = await Promise.all(
-    POST_MARKET_UNIVERSE.map(async ({ symbol }) => {
-      const items = await fetchFinnhubCompanyNews(symbol, from, dateKey);
-      return items
-        .filter((n) => n.headline)
-        .slice(0, 6)
-        .map((n) => ({
-          symbol,
-          headline: n.headline,
-          summary: (n.summary || "").slice(0, 220),
-          datetime: n.datetime,
-          source: n.source || "",
-        }));
+    LISTED_UNIVERSE.map(async ({ symbol }) => {
+      try {
+        const items = await fetchFinnhubCompanyNews(symbol, from, dateKey);
+        return items
+          .filter((n) => n.headline)
+          .slice(0, 6)
+          .map((n) => ({
+            symbol,
+            headline: n.headline,
+            summary: (n.summary || "").slice(0, 220),
+            datetime: n.datetime,
+            source: n.source || "",
+          }));
+      } catch {
+        return [] as NewsLine[];
+      }
     }),
   );
 
@@ -143,7 +149,7 @@ async function collectSessionNews(dateKey: string): Promise<{ news: NewsLine[]; 
     if (deduped.length >= 40) break;
   }
 
-  const quotes = await fetchFinnhubBatch(POST_MARKET_UNIVERSE.map((u) => u.symbol));
+  const quotes = await fetchFinnhubBatch(LISTED_UNIVERSE.map((u) => u.symbol));
   const quoteLines = POST_MARKET_UNIVERSE.map(({ symbol, name }) => {
     const q = quotes.get(symbol);
     if (!q) return `${name}(${symbol}): n/a`;
@@ -152,6 +158,45 @@ async function collectSessionNews(dateKey: string): Promise<{ news: NewsLine[]; 
   }).join("\n");
 
   return { news: deduped, quotes: quoteLines };
+}
+
+function storedFromNews(dateKey: string, news: NewsLine[]): PostMarketStored | null {
+  const items: GeneratedItem[] = [];
+  for (const { symbol } of POST_MARKET_UNIVERSE) {
+    const rows = news.filter((n) => n.symbol === symbol).slice(0, 3);
+    if (rows.length === 0) continue;
+    const top = rows[0];
+    items.push({
+      symbol,
+      title: top.headline.slice(0, 72),
+      summary: (top.summary || top.headline).slice(0, 180),
+      body: rows
+        .map((n) => `· ${n.headline}${n.summary ? `\n${n.summary}` : ""}`)
+        .join("\n\n"),
+    });
+    if (items.length >= 8) break;
+  }
+  if (items.length === 0) return null;
+  return {
+    dateKey,
+    headline: `${dateKey} 세션 · ${items[0].symbol} ${items[0].title}`.slice(0, 80),
+    items,
+    generatedAt: Date.now(),
+  };
+}
+
+async function loadRecentStored(now = new Date()): Promise<PostMarketStored | null> {
+  const et = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+  for (let back = 0; back < 10; back++) {
+    const d = new Date(et);
+    d.setDate(d.getDate() - back);
+    const dow = d.getDay();
+    const str = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    if (dow === 0 || dow === 6 || NYSE_HOLIDAYS.has(str)) continue;
+    const cached = await loadStored(str);
+    if (cached) return cached;
+  }
+  return null;
 }
 
 function extractJson(text: string): { headline: string; items: GeneratedItem[] } | null {
@@ -208,31 +253,35 @@ JSON만 출력:
 {"headline":"세션 핵심 한 줄(80자 이내)","items":[{"symbol":"TSLA","title":"짧은 제목","summary":"2문장","body":"4~6문장. 뉴스 근거."}]}
 items는 6~8개. Tesla·SpaceX를 앞에 두고 나머진 임팩트 순.`;
 
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 2200,
-      messages: [{ role: "user", content: prompt }],
-    }),
-    signal: AbortSignal.timeout(35_000),
-  });
-  if (!res.ok) return null;
-  const data = await res.json() as { content?: { text?: string }[] };
-  const text = data.content?.[0]?.text?.trim() ?? "";
-  const parsed = extractJson(text);
-  if (!parsed) return null;
-  return {
-    dateKey,
-    headline: parsed.headline,
-    items: parsed.items,
-    generatedAt: Date.now(),
-  };
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-haiku-4-5-20251001",
+        max_tokens: 2200,
+        messages: [{ role: "user", content: prompt }],
+      }),
+      signal: AbortSignal.timeout(35_000),
+    });
+    if (!res.ok) return null;
+    const data = await res.json() as { content?: { text?: string }[] };
+    const text = data.content?.[0]?.text?.trim() ?? "";
+    const parsed = extractJson(text);
+    if (!parsed) return null;
+    return {
+      dateKey,
+      headline: parsed.headline,
+      items: parsed.items,
+      generatedAt: Date.now(),
+    };
+  } catch {
+    return null;
+  }
 }
 
 export function storedToBriefing(stored: PostMarketStored): SessionBriefing {
@@ -257,20 +306,39 @@ export async function getOrCreatePostMarketBriefing(opts?: {
   force?: boolean;
   now?: Date;
 }): Promise<SessionBriefing | null> {
-  const dateKey = lastCompletedSessionDate(opts?.now);
+  const now = opts?.now ?? new Date();
+  const dateKey = lastCompletedSessionDate(now);
   if (!opts?.force) {
     const cached = await loadStored(dateKey);
     if (cached) return storedToBriefing(cached);
   }
 
+  let news: NewsLine[] = [];
+  let quotes = "";
+  try {
+    const collected = await collectSessionNews(dateKey);
+    news = collected.news;
+    quotes = collected.quotes;
+  } catch {
+    news = [];
+  }
+
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) return null;
+  if (apiKey && news.length > 0) {
+    const generated = await generateWithClaude(dateKey, news, quotes, apiKey);
+    if (generated) {
+      await saveStored(generated);
+      return storedToBriefing(generated);
+    }
+  }
 
-  const { news, quotes } = await collectSessionNews(dateKey);
-  if (news.length === 0) return null;
+  const fromNews = storedFromNews(dateKey, news);
+  if (fromNews) {
+    await saveStored(fromNews);
+    return storedToBriefing(fromNews);
+  }
 
-  const generated = await generateWithClaude(dateKey, news, quotes, apiKey);
-  if (!generated) return null;
-  await saveStored(generated);
-  return storedToBriefing(generated);
+  const recent = await loadRecentStored(now);
+  if (recent) return storedToBriefing(recent);
+  return null;
 }

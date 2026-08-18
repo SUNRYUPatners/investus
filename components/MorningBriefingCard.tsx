@@ -16,7 +16,10 @@ export function MorningBriefingCard({ locale = "ko" }: { locale?: string }) {
   useEffect(() => {
     let cancelled = false;
     fetch("/api/session-briefing")
-      .then((r) => (r.ok ? r.json() : null))
+      .then(async (r) => {
+        const d = await r.json().catch(() => null) as { briefing?: SessionBriefing | null } | null;
+        return d;
+      })
       .then((d: { briefing?: SessionBriefing | null } | null) => {
         if (!cancelled) setBriefing(d?.briefing ?? null);
       })

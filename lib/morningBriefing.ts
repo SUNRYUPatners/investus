@@ -23,29 +23,24 @@ export type SessionBriefing = {
   }[];
 };
 
-function etParts(now = new Date()) {
-  const et = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+function kstParts(now = new Date()) {
+  const kst = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Seoul" }));
   return {
-    et,
-    dow: et.getDay(),
-    mins: et.getHours() * 60 + et.getMinutes(),
+    dow: kst.getDay(),
+    mins: kst.getHours() * 60 + kst.getMinutes(),
   };
 }
 
 /**
- * 장전: 평일 08:00 ET ~ 정규장 마감 직전(및 장중) — 개장 준비·장중 참고
- * 장후: 마감 이후 ~ 다음날 08:00 ET 전, 주말·휴일
+ * 장전: 한국 평일 19:00 ~ 미국 정규장 마감(및 장중)
+ * 장후: 마감 이후 ~ 다음날 한국 19:00 전, 주말·휴일
  */
 export function getBriefPhase(now = new Date()): BriefPhase {
   if (isMarketOpen()) return "pre";
 
-  const { dow, mins } = etParts(now);
-  if (dow >= 1 && dow <= 5 && !isNYSEHoliday(now)) {
-    // 08:00–16:00 ET: 장전(개장 직전 포함). 장중은 isMarketOpen에서 이미 pre.
-    if (mins >= 8 * 60 && mins < 16 * 60) return "pre";
-    if (mins >= 16 * 60) return "post";
-    return "post"; // 00:00–08:00 — 전일 장후
-  }
+  const { dow, mins } = kstParts(now);
+  // 한국 평일 저녁 7시부터 당일 밤 미국장 장전. 휴장일은 장후 유지.
+  if (dow >= 1 && dow <= 5 && mins >= 19 * 60 && !isNYSEHoliday(now)) return "pre";
   return "post";
 }
 
