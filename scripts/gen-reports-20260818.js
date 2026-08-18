@@ -172,16 +172,16 @@ const BE='INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE';
 const T=[
 // 1. Tesla short sellers +90억 손실
 {file:'tsla-short-sellers-9b-loss-2026-elon-lawsuit',symbol:'TSLA',
- ko:{title:'TSLA — 테슬라 공매도자 2026년 들어 이미 90억 달러 손실·Musk가 하버드 자산 초과 사재기 프레임',heroIcon:'📉',heroBig:'-90억 달러',heroSub:'Kalshi Finance 정리에 따르면 테슬라 공매도자들이 2026년 들어 이미 90억 달러 이상의 미실현 손실을 봤습니다. 22억 달러 이상은 Musk 개인 지분 매수 발표 이후 하루 만에 발생한 손실이며, Harvard 대학 자산도 개별 종목에서 Tesla 지분이 가장 컸다고 공개됐습니다.',
-  cards:[{icon:'📉',big:'-90억 달러',mid:'2026년 short 손실',sub:'이미 미실현'},{icon:'⚡',big:'-22억 달러',mid:'Musk 매수 후 하루',sub:'단일 이벤트'},{icon:'🎓',big:'Harvard 1위',mid:'개별 종목 지분',sub:'Tesla 최대'}],
-  quoteLabel:'KALSHI FINANCE',quoteKo:'"테슬라 공매도자들이 2026년 들어 90억 달러 이상 손실 중이며, 22억 달러 이상은 Musk 지분 발표 이후 하루 만에 발생. Harvard 자산도 Tesla가 최대 개별 종목."',quoteEn:'JUST IN: Tesla TSLA short sellers are up $9 billion in 2026 so far · $2.2 Billion in losses today alone after Elon Musk purchased shares · Harvard is now less than 1% away from being Tesla',
+ ko:{title:'TSLA — 테슬라 공매도자 2026년 들어 이미 90억 달러 손실·Musk 매수 후 22억 하루',heroIcon:'📉',heroBig:'-90억 달러',heroSub:'Kalshi Finance 정리에 따르면 테슬라 공매도자들이 2026년 들어 이미 90억 달러 이상의 미실현 손실을 봤습니다. 22억 달러 이상은 Musk 개인 지분 매수 발표 이후 하루 만에 발생한 손실이며, Short squeeze 리스크가 실 시세 반응으로 확대되고 있는 국면입니다.',
+  cards:[{icon:'📉',big:'-90억 달러',mid:'2026년 short 손실',sub:'이미 미실현'},{icon:'⚡',big:'-22억 달러',mid:'Musk 매수 후 하루',sub:'단일 이벤트'},{icon:'🔥',big:'Squeeze 리스크',mid:'short cover 압력',sub:'매수 유발'}],
+  quoteLabel:'KALSHI FINANCE',quoteKo:'"테슬라 공매도자들이 2026년 들어 90억 달러 이상 손실 중이며, 22억 달러 이상은 Musk 지분 발표 이후 하루 만에 발생."',quoteEn:'JUST IN: Tesla TSLA short sellers are up $9 billion in 2026 so far · $2.2 Billion in losses today alone after Elon Musk purchased shares · short squeeze risk expanding',
   source:'출처: Kalshi Finance · 2026.08.17',
-  noteHead:'이 소식은 왜 중요한가',noteSub:'Musk 개인 지분 매수 이벤트가 시장에 강력한 매수 압력을 만들었고, 22억 달러 규모 단일 이벤트 손실은 short squeeze 리스크가 확대되고 있음을 뜻합니다. Harvard 등 대형 대학 자산이 Tesla를 최대 종목으로 보유한다는 실 확인은 기관 신뢰 확립 시그널입니다.',footer:'TSLA · Short -90억 달러',brand:BK},
- en:{title:'TSLA — Tesla Short Sellers Down $9B in 2026 · Musk Personal Purchase Frame · Harvard Top Stock',heroIcon:'📉',heroBig:'-$9 B',heroSub:'Per Kalshi Finance: Tesla short sellers already down $9B+ unrealized in 2026. Over $2.2B lost in single day after Musk personal share purchase. Harvard now holds Tesla as its largest single stock.',
-  cards:[{icon:'📉',big:'-$9 B',mid:'2026 short loss',sub:'Unrealized'},{icon:'⚡',big:'-$2.2 B',mid:'After Musk buy · 1 day',sub:'Single event'},{icon:'🎓',big:'Harvard #1',mid:'Individual stock',sub:'Tesla top'}],
-  quoteLabel:'KALSHI FINANCE',quoteKo:'"테슬라 공매도자 90억 손실"',quoteEn:'JUST IN: Tesla TSLA short sellers are up $9 billion in 2026 so far · $2.2 Billion in losses today alone after Elon Musk purchased shares · Harvard is now less than 1% away from being Tesla',
+  noteHead:'이 소식은 왜 중요한가',noteSub:'Musk 개인 지분 매수 이벤트가 시장에 강력한 매수 압력을 만들었고, 22억 달러 규모 단일 이벤트 손실은 short squeeze 리스크가 확대되고 있음을 뜻합니다. 대형 매니저 매수 flow가 계속 확대되는 상황에서 short cover 압력이 시세 지지선 역할을 하고 있습니다.',footer:'TSLA · Short -90억 달러',brand:BK},
+ en:{title:'TSLA — Tesla Short Sellers Down $9B in 2026 · Musk Personal Purchase Frame',heroIcon:'📉',heroBig:'-$9 B',heroSub:'Per Kalshi Finance: Tesla short sellers already down $9B+ unrealized in 2026. Over $2.2B lost in single day after Musk personal share purchase. Short squeeze risk expanding on real price reaction.',
+  cards:[{icon:'📉',big:'-$9 B',mid:'2026 short loss',sub:'Unrealized'},{icon:'⚡',big:'-$2.2 B',mid:'After Musk buy · 1 day',sub:'Single event'},{icon:'🔥',big:'Squeeze risk',mid:'short cover pressure',sub:'buy trigger'}],
+  quoteLabel:'KALSHI FINANCE',quoteKo:'"테슬라 공매도자 90억 손실"',quoteEn:'JUST IN: Tesla TSLA short sellers are up $9 billion in 2026 so far · $2.2 Billion in losses today alone after Elon Musk purchased shares · short squeeze risk expanding',
   source:'Source: Kalshi Finance · 2026.08.17',
-  noteHead:'Why this matters',noteSub:'Musk personal purchase creates strong buy pressure, $2.2B single-day event loss signals short squeeze risk expanding. Harvard et al. large university endowments holding Tesla as top single stock confirms institutional trust.',footer:'TSLA · Short -$9B',brand:BE}},
+  noteHead:'Why this matters',noteSub:'Musk personal purchase creates strong buy pressure, $2.2B single-day event loss signals short squeeze risk expanding. Large manager buy flow keeps expanding · short cover pressure serving as price support.',footer:'TSLA · Short -$9B',brand:BE}},
 
 // 2. Tesla 7월 중국 판매 +33%
 {file:'tsla-china-july-25158-mimb-suv-2nd',symbol:'TSLA',
@@ -364,6 +364,18 @@ const T=[
   quoteLabel:'ASHLEY LOUISE SIMON',quoteKo:'"Tesla 호주 Megapack 2GW"',quoteEn:'Tesla secured biggest Australia Megapack battery storage deal yet with a 2 GW project · targets completion by 2027',
   source:'Source: Ashley Louise Simon · Tesla · 2026.08.17',
   noteHead:'Why this matters',noteSub:'Following 8/11 Tesla solar Fort Bend 3,000 acres and today Tesla China sales +33% / 200-day Robotaxi zero incident, Australia energy storage · Tesla multi-axis global business expansion materializes.',footer:'TSLA · AUS Megapack 2GW',brand:BE}},
+// 16. Harvard SPCX 91% 포트폴리오
+{file:'harvard-spcx-91pct-portfolio-endowment-manager-move',symbol:'SPCX',
+ ko:{title:'SPCX — Harvard 공개 주식 포트폴리오의 91%가 SPCX·재무 관리팀이 Musk 회사로 이동',heroIcon:'🎓',heroBig:'91%',heroSub:'Polymarket Money가 전한 바에 따르면 Harvard 대학의 공개 주식 포트폴리오 중 91%가 SPCX 지분입니다. Harvard 재무 관리팀이 Musk 회사 (SpaceX)로 이동한다는 추가 정보와 함께 대학 자산 운용에서 SPCX가 절대 지배적 비중을 차지합니다.',
+  cards:[{icon:'🎓',big:'91%',mid:'Harvard 공개 포트폴리오',sub:'SPCX 지분'},{icon:'🏛️',big:'재무팀 이동',mid:'Harvard → Musk 회사',sub:'SPCX 인재 유출'},{icon:'📊',big:'개별 종목',mid:'대학 자산 지배',sub:'단일 최대'}],
+  quoteLabel:'POLYMARKET MONEY',quoteKo:'"Harvard 공개 주식 포트폴리오 91%가 SPCX. Musk의 오랜 재무 관리팀이 Harvard에서 SpaceX 팀으로 이동한다는 추가 정보와 함께."',quoteEn:'SPCX SpaceX now makes up 91% of Harvard disclosed stock portfolio · Harvard Financial Management longtime handler of Elon personal finances is joining SpaceX team',
+  source:'출처: Polymarket Money · Harvard · 2026.08.17',
+  noteHead:'이 소식은 왜 중요한가',noteSub:'8/13 별개 리포트의 Google SPCX 105배 return·95% 포트폴리오·오늘 별개 리포트의 SPCX SEC 4.24조 EU 지분 신청에 이어 Harvard 대학 자산도 SPCX가 지배적 비중이라는 실 확인·대형 대학 endowment까지 SPCX 편입이 확인되는 기관 신뢰 다층 실체화 시그널입니다.',footer:'SPCX · Harvard 91%',brand:BK},
+ en:{title:'SPCX — Harvard Disclosed Stock Portfolio 91% SPCX · Financial Management Team Moves to Musk Company',heroIcon:'🎓',heroBig:'91%',heroSub:'Per Polymarket Money: 91% of Harvard university disclosed stock portfolio is SPCX. Additional info: Harvard financial management team moving to Musk company (SpaceX). University endowment absolute dominant weighting in SPCX.',
+  cards:[{icon:'🎓',big:'91%',mid:'Harvard disclosed portfolio',sub:'SPCX stake'},{icon:'🏛️',big:'Team moves',mid:'Harvard → Musk co',sub:'SPCX talent inflow'},{icon:'📊',big:'Single stock',mid:'Endowment dominance',sub:'Largest single'}],
+  quoteLabel:'POLYMARKET MONEY',quoteKo:'"Harvard 91% SPCX"',quoteEn:'SPCX SpaceX now makes up 91% of Harvard disclosed stock portfolio · Harvard Financial Management longtime handler of Elon personal finances is joining SpaceX team',
+  source:'Source: Polymarket Money · Harvard · 2026.08.17',
+  noteHead:'Why this matters',noteSub:'Following 8/13 Google SPCX 105x return / 95% portfolio and today SPCX SEC $4.24T EU stake filing, Harvard endowment also SPCX dominant · large university endowment inclusion confirms institutional trust multi-layer materialization signal.',footer:'SPCX · Harvard 91%',brand:BE}},
 ];
 
 let n=0;
