@@ -171,7 +171,7 @@ export default function SubscribePage() {
 
         <div
           className="rounded-2xl px-5 py-6 mb-5 relative overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #001a12 0%, #0a0c10 100%)", border: "1px solid rgba(var(--mint-rgb),0.25)" }}
+          style={{ background: "linear-gradient(135deg, #10203c 0%, #0c1424 100%)", border: "1px solid rgba(var(--mint-rgb),0.25)" }}
         >
           <p className="text-[10px] font-bold mb-2" style={{ color: "#e8c84a" }}>✦ {SUBSCRIPTION.productName}</p>
           <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "#f5f6f8" }}>

@@ -7,8 +7,7 @@ export const size        = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const GOLD = "#b38f38";
-const NAVY = "#10203c";
-const INK  = "#0a0c10";
+const NAVY = "#1a365d";
 
 export default function OgImage() {
   return new ImageResponse(
@@ -59,8 +58,8 @@ export default function OgImage() {
             justifyContent: "center",
           }}>
             <svg width="58" height="58" viewBox="0 0 24 24" fill="none">
-              <polyline points="3,17 9,11 13,15 21,7" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              <polyline points="15,7 21,7 21,13" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <polyline points="3,17 9,11 13,15 21,7" stroke={NAVY} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <polyline points="15,7 21,7 21,13" stroke={NAVY} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
 

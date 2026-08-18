@@ -34,7 +34,7 @@ export default async function InsightPage() {
     >
       <div
         className="relative px-4 py-4 flex items-center gap-3"
-        style={{ background: "linear-gradient(135deg, #10203c 0%, #0a0c10 60%, #07090e 100%)" }}
+        style={{ background: "linear-gradient(135deg, #10203c 0%, #152848 60%, #0c1424 100%)" }}
       >
         <div className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(circle at 75% 50%, rgba(var(--mint-rgb),0.08) 0%, transparent 55%)" }} />
@@ -95,13 +95,13 @@ export default async function InsightPage() {
       >
       <div
         className="relative px-5 py-5 flex items-center gap-4 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #10203c 0%, #0a0c10 60%, #07090e 100%)" }}
+        style={{ background: "linear-gradient(135deg, #10203c 0%, #152848 60%, #0c1424 100%)" }}
       >
         <div className="edu-sweep-line" />
         <div className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(circle at 80% 50%, rgba(var(--mint-rgb),0.12) 0%, transparent 60%)" }} />
         <div className="relative w-[68px] h-[68px] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg"
-          style={{ background: "linear-gradient(145deg, #1a2744, #0a0c10)", border: "1px solid rgba(var(--mint-rgb),0.4)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.2)" }}>
+          style={{ background: "linear-gradient(145deg, #1a2744, #10203c)", border: "1px solid rgba(var(--mint-rgb),0.4)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.2)" }}>
           <span className="text-3xl">🎓</span>
         </div>
         <div className="flex-1 min-w-0">

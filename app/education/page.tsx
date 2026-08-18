@@ -125,7 +125,7 @@ export default function EducationPage() {
 
   const heroJSX = (
     <div className="rounded-2xl px-5 py-6 mb-6 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #10203c 0%, #0a0c10 60%, #07090e 100%)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}>
+        style={{ background: "linear-gradient(135deg, #10203c 0%, #152848 60%, #0c1424 100%)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}>
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(circle at 80% 20%, rgba(var(--mint-rgb),0.1) 0%, transparent 60%)" }} />
       <div className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-3"

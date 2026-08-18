@@ -17,10 +17,11 @@ vercel-toolbar,
 }
 
 /*
-  Investus theme tokens — 골드 × 네이비 × 잉크블랙
-  - --mint  = 앤티크 골드 (CTA·활성·로고 배경)
-  - --navy  = 옥스포드 네이비 (워드마크·강조 텍스트)
-  - --on-accent / --text = 로고 차트와 같은 잉크 블랙
+  Investus theme tokens — 포인트는 골드와 네이비만
+  - --mint       = 앤티크 골드 (CTA·활성·로고 배경)
+  - --navy       = 옥스포드 네이비 (워드마크·로고 차트·골드 위 글자)
+  - --on-accent  = 골드 위 네이비 (블랙 포인트 사용 안 함)
+  - --text       = 본문 글자 (블랙/아이보리, 포인트 아님)
   - --up / --down = 미국주식 관례 (상승 초록 · 하락 빨강)
 */
 :root {
@@ -30,18 +31,18 @@ vercel-toolbar,
   --border: #d5dbe6;
   --mint: #b38f38;
   --mint-rgb: 179, 143, 56;
-  --navy: #10203c;
-  --navy-rgb: 16, 32, 60;
+  --navy: #1a365d;
+  --navy-rgb: 26, 54, 93;
   --up: #16a34a;
   --up-rgb: 22, 163, 74;
   --down: #dc2626;
   --down-rgb: 220, 38, 38;
   --analyst: #7c3aed;
   --analyst-rgb: 124, 58, 237;
-  --text: #0a0c10;
+  --text: #12151c;
   --muted: #4e596b;
   --muted-2: #eef1f5;
-  --on-accent: #0a0c10;
+  --on-accent: #1a365d;
   --ad-surface: #ffffff;
   --ad-border: #e2e6ee;
   --header-bg: #ffffff;
@@ -51,28 +52,28 @@ vercel-toolbar,
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #07090e;
-  --card: #10141c;
-  --border: #1c2433;
+  --bg: #0c1424;
+  --card: #121c30;
+  --border: #243250;
   --mint: #d4b56a;
   --mint-rgb: 212, 181, 106;
-  --navy: #c8d0e0;
-  --navy-rgb: 200, 208, 224;
+  --navy: #d4b56a;
+  --navy-rgb: 212, 181, 106;
   --up: #22c55e;
   --up-rgb: 34, 197, 94;
   --down: #ef4444;
   --down-rgb: 239, 68, 68;
   --analyst: #8b5cf6;
   --analyst-rgb: 139, 92, 246;
-  --text: #f3f0e8;
-  --muted: #9aa3b5;
-  --muted-2: #1a2030;
-  --on-accent: #0a0c10;
-  --ad-surface: #141824;
-  --ad-border: #252c3c;
-  --header-bg: #07090e;
-  --elevated: #161b26;
-  --sidebar-label: #e6eaf2;
+  --text: #e8edf6;
+  --muted: #9aa8c0;
+  --muted-2: #1a2740;
+  --on-accent: #1a365d;
+  --ad-surface: #152036;
+  --ad-border: #2a3c5c;
+  --header-bg: #0c1424;
+  --elevated: #17243c;
+  --sidebar-label: #dce4f2;
 }
 
 html {
