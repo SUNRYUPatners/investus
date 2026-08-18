@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T19AU = 1787094000000; // 2026-08-19 08:00 KST
 const T18AU = 1787007600000; // 2026-08-18 08:00 KST
 const T14AU = 1786662000000; // 2026-08-14 08:00 KST
 const T13AU = 1786575600000; // 2026-08-13 08:00 KST
@@ -81,7 +82,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T18AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T19AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -100,6 +101,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-19 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 1004, symbol: "SPCX", nickname: "익명_1911", holdingLabel: "관심종목",
+    content: "Musk가 2035년 우주 경제 1.8조보다 훨씬 크다고 답했다는데 얼마나 클지 안 알려줌ㅋ",
+    createdAt: T19AU + 8*60_000, likes: 10, comments: 1 },
+  { id: 1005, symbol: "SPCX", nickname: "익명_2011", holdingLabel: "관심종목",
+    content: "UBS가 Starlink US 2031년까지 2,000만 가입자 예상. 2028년 60억 매출까지 정량 프레임 나왔네",
+    createdAt: T19AU + 16*60_000, likes: 13, comments: 1 },
+  { id: 1006, symbol: "TSLA", nickname: "익명_3111", holdingLabel: "관심종목",
+    content: "Joe Tegtmeyer가 Cybercab 지금까지 본 것보다 훨씬 많이 있대. Supercharger도 설치 중",
+    createdAt: T19AU + 24*60_000, likes: 4, comments: 0 },
+  { id: 1007, symbol: "SPCX", nickname: "익명_4211", holdingLabel: "관심종목",
+    content: "목요일 unlock 다음 이벤트지. 이번에도 매도 없을지",
+    createdAt: T19AU + 32*60_000, likes: 4, comments: 2 },
+  { id: 1008, symbol: "SPCX", nickname: "익명_5311", holdingLabel: "관심종목",
+    content: "SPCX 60억 filing 세부 나왔음: Musk 48.7%·GIC 27억·PIF 25억·NVIDIA 17.5억·AMD 10.5억",
+    createdAt: T19AU + 40*60_000, likes: 12, comments: 3 },
+  { id: 1009, symbol: "TSLA", nickname: "익명_6411", holdingLabel: "관심종목",
+    content: "Tesla Semi 사상 최대 계약! Amrise 500대·9월 SAMZN 인도 시작",
+    createdAt: T19AU + 48*60_000, likes: 15, comments: 3 },
+  { id: 1010, symbol: "TSLA", nickname: "익명_7511", holdingLabel: "관심종목",
+    content: "Cybercab 공개 launch 이번 달 안 Austin에서 나올 수도 있대. The Information 보도",
+    createdAt: T19AU + 56*60_000, likes: 12, comments: 0 },
+  { id: 1011, symbol: "SPX", nickname: "익명_8611", holdingLabel: "관심종목",
+    content: "Macro Charts 왈: 나스닥 short 사상 최대! 조정 신호일 수도 있고 반대로 squeeze 잠재도",
+    createdAt: T19AU + 64*60_000, likes: 6, comments: 1 },
+  { id: 1012, symbol: "SPCX", nickname: "익명_9711", holdingLabel: "관심종목",
+    content: "Terafab 총 부지 7,464 에이커(3,020 헥타르)로 나왔음. 2,000-3,000 에이커 더 필요하대",
+    createdAt: T19AU + 72*60_000, likes: 6, comments: 2 },
+  { id: 1013, symbol: "TSLA", nickname: "익명_1011", holdingLabel: "관심종목",
+    content: "Musk: 로봇은 어차피 온다·Boston Dynamics 영상 봐라·다른 회사 로봇 안전은 보장 못하지만 Tesla는 최선",
+    createdAt: T19AU + 80*60_000, likes: 3, comments: 2 },
+  { id: 1014, symbol: "SPCX", nickname: "익명_2311", holdingLabel: "관심종목",
+    content: "이탈리아 최대 은행 Intesa Sanpaolo가 SPCX 566만 주·미국 포트폴리오의 15.5% (Reuters)",
+    createdAt: T19AU + 88*60_000, likes: 13, comments: 3 },
+  { id: 1015, symbol: "SPX", nickname: "익명_3411", holdingLabel: "관심종목",
+    content: "ECB 블로그가 AI 랠리 조정 트리거 경고. 매크로 기관도 이제 경계 프레임 나옴",
+    createdAt: T19AU + 96*60_000, likes: 15, comments: 1 },
+  { id: 1016, symbol: "SPCX", nickname: "익명_4511", holdingLabel: "관심종목",
+    content: "SpaceX 24일 만에 Falcon 9 8번 발사! 궤도 발사 사이 사상 최단이래",
+    createdAt: T19AU + 104*60_000, likes: 5, comments: 1 },
+  { id: 1017, symbol: "SPCX", nickname: "익명_5611", holdingLabel: "관심종목",
+    content: "Starlink 이미 48개 항공사 파트너·7,000대+ 항공기래! Aviation 사업 규모 진짜 크네",
+    createdAt: T19AU + 112*60_000, likes: 6, comments: 2 },
+  { id: 1018, symbol: "TSLA", nickname: "익명_6711", holdingLabel: "관심종목",
+    content: "Model Y가 한국에서 최고 판매 신차래! 미국 아니라 한국. 월 약 10,000대",
+    createdAt: T19AU + 120*60_000, likes: 3, comments: 2 },
+
   // ── 2026-08-18 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 989, symbol: "SPCX", nickname: "익명_9955", holdingLabel: "관심종목",
     content: "Tesla short seller들이 2026년 이미 90억 손실. Musk 개인 지분 매수 발표 후 22억 하루 손실. 기관 신뢰 확립되고 있네",
@@ -3650,6 +3698,58 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-19 신규 댓글 (실 데이터) ────────────────
+  1004: [
+    { id: 1, nickname: "익명_5566", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T19AU + 8*60_000 + 3*60_000, likes: 5 },
+  ],
+  1005: [
+    { id: 1, nickname: "익명_6677", holdingLabel: "관심종목", content: "SPCX vs TSLA 어느 게 좋을까요", createdAt: T19AU + 16*60_000 + 3*60_000, likes: 6 },
+  ],
+  1007: [
+    { id: 1, nickname: "익명_2345", holdingLabel: "관심종목", content: "너무 낙관 아닌가", createdAt: T19AU + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_2233", holdingLabel: "관심종목", content: "이 뉴스는 처음 듣는데 팩트 맞나요", createdAt: T19AU + 32*60_000 + 6*60_000, likes: 0 },
+  ],
+  1008: [
+    { id: 1, nickname: "익명_3344", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T19AU + 40*60_000 + 3*60_000, likes: 6 },
+    { id: 2, nickname: "익명_7788", holdingLabel: "관심종목", content: "장기 보유 관점에서는 좋은 시그널", createdAt: T19AU + 40*60_000 + 6*60_000, likes: 5 },
+    { id: 3, nickname: "익명_1122", holdingLabel: "관심종목", content: "규제 이슈만 없으면 갈듯", createdAt: T19AU + 40*60_000 + 9*60_000, likes: 1 },
+  ],
+  1009: [
+    { id: 1, nickname: "익명_2345", holdingLabel: "관심종목", content: "규제 이슈만 없으면 갈듯", createdAt: T19AU + 48*60_000 + 3*60_000, likes: 6 },
+    { id: 2, nickname: "익명_1234", holdingLabel: "관심종목", content: "이 뉴스는 처음 듣는데 팩트 맞나요", createdAt: T19AU + 48*60_000 + 6*60_000, likes: 2 },
+    { id: 3, nickname: "익명_1234", holdingLabel: "관심종목", content: "장기 보유 관점에서는 좋은 시그널", createdAt: T19AU + 48*60_000 + 9*60_000, likes: 6 },
+  ],
+  1011: [
+    { id: 1, nickname: "익명_4567", holdingLabel: "관심종목", content: "이 정도면 조정 한번 오지 않을까", createdAt: T19AU + 64*60_000 + 3*60_000, likes: 7 },
+  ],
+  1012: [
+    { id: 1, nickname: "익명_3344", holdingLabel: "관심종목", content: "장기 보유 관점에서는 좋은 시그널", createdAt: T19AU + 72*60_000 + 3*60_000, likes: 5 },
+    { id: 2, nickname: "익명_8899", holdingLabel: "관심종목", content: "이거 진짜야? 대박", createdAt: T19AU + 72*60_000 + 6*60_000, likes: 8 },
+  ],
+  1013: [
+    { id: 1, nickname: "익명_4567", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T19AU + 80*60_000 + 3*60_000, likes: 8 },
+    { id: 2, nickname: "익명_4567", holdingLabel: "관심종목", content: "SPCX vs TSLA 어느 게 좋을까요", createdAt: T19AU + 80*60_000 + 6*60_000, likes: 7 },
+  ],
+  1014: [
+    { id: 1, nickname: "익명_6677", holdingLabel: "관심종목", content: "규제 이슈만 없으면 갈듯", createdAt: T19AU + 88*60_000 + 3*60_000, likes: 6 },
+    { id: 2, nickname: "익명_8901", holdingLabel: "관심종목", content: "차트 좋아 보이긴 하는데", createdAt: T19AU + 88*60_000 + 6*60_000, likes: 5 },
+    { id: 3, nickname: "익명_4455", holdingLabel: "관심종목", content: "장기 보유 관점에서는 좋은 시그널", createdAt: T19AU + 88*60_000 + 9*60_000, likes: 5 },
+  ],
+  1015: [
+    { id: 1, nickname: "익명_2233", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T19AU + 96*60_000 + 3*60_000, likes: 7 },
+  ],
+  1016: [
+    { id: 1, nickname: "익명_2345", holdingLabel: "관심종목", content: "이 정도면 조정 한번 오지 않을까", createdAt: T19AU + 104*60_000 + 3*60_000, likes: 10 },
+  ],
+  1017: [
+    { id: 1, nickname: "익명_2233", holdingLabel: "관심종목", content: "다음 실적 발표 대기", createdAt: T19AU + 112*60_000 + 3*60_000, likes: 1 },
+    { id: 2, nickname: "익명_4455", holdingLabel: "관심종목", content: "정보 감사합니다", createdAt: T19AU + 112*60_000 + 6*60_000, likes: 7 },
+  ],
+  1018: [
+    { id: 1, nickname: "익명_3456", holdingLabel: "관심종목", content: "SPCX vs TSLA 어느 게 좋을까요", createdAt: T19AU + 120*60_000 + 3*60_000, likes: 0 },
+    { id: 2, nickname: "익명_5566", holdingLabel: "관심종목", content: "관심 종목에 넣어놨는데 다행이네", createdAt: T19AU + 120*60_000 + 6*60_000, likes: 1 },
+  ],
+
   // ── 2026-08-18 신규 댓글 (실 데이터) ────────────────
   990: [
     { id: 1, nickname: "익명_8901", holdingLabel: "관심종목", content: "이 정도 상승이면 조정 한번 올듯", createdAt: T18AU + 16*60_000 + 3*60_000, likes: 5 },

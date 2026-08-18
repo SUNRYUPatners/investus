@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-19 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
+  {
+    id: -806, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "Dima Zeniuk가 원 트윗에서 우주 경제가 2035년 1.8조 달러를 넘을 것이라 예상했고, Musk는 그 값이 훨씬 클 것이라 답했다. 정성적 표현이지만 8/13 All-Hands에서의 AI 99% / 우주 추론 프레임과 정합한다.",
+    likes: 10, comments: 1, created_at: "2026-08-19T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -807, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "UBS가 Starlink US 사업의 정량 성장 프레임을 처음 명확히 제시했다. 2031년까지 2,000만 가입자·2028년까지 60억 매출·V3 위성 확장이 가속의 축이라는 세부까지 나왔다. 8/14 소비자 1,300만 규모 확인과 결합하면 방향성이 뚜렷하다.",
+    likes: 12, comments: 2, created_at: "2026-08-19T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -808, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "Joe Tegtmeyer의 Giga Texas 테스트 트랙 관측이 지금까지 본 것 중 최대 규모라고 나왔다. Supercharger가 함께 설치되고 있고 일부 차량은 해치가 열린 상태다. 해치 이유는 Joe도 \"wonder\"라고 표현했으니 아직 미확인이다.",
+    likes: 9, comments: 2, created_at: "2026-08-19T00:18:00.000Z", liked: false,
+  },
+  {
+    id: -809, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "Donald Miles가 목요일 다음 unlock 대기 상황을 반어법으로 표현했다. 아무도 팔지 않는 패턴이 반복되면 놀란 척할 수 있다고 코멘트한 것인데, 실제 매도 데이터는 별개로 확인 필요하다.",
+    likes: 12, comments: 0, created_at: "2026-08-19T00:25:00.000Z", liked: false,
+  },
+  {
+    id: -810, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "Herbert Ong이 60억 달러 새 filing을 세부까지 breakdown했다. Musk 48.7%, GIC 27억, PIF 25억, NVIDIA 17.5억, AMD 10.5억, 그리고 Sequoia·Fidelity·Vanguard·Ron Baron까지. 반도체 회사와 국부펀드·자산운용사가 동시에 참여한다는 그림이다.",
+    likes: 9, comments: 3, created_at: "2026-08-19T00:32:00.000Z", liked: false,
+  },
+  {
+    id: -811, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "Shay Boloor가 Tesla Semi 사상 최대 상용 계약을 정리했다. Amrise 500대·9월 SAMZN 인도 시작·2년 rollout이 Amrise 전기 트럭 fleet을 3배 확장한다는 프레임이다. Q3-Q4 실적에 실 매출이 반영될 시점이다.",
+    likes: 9, comments: 0, created_at: "2026-08-19T00:39:00.000Z", liked: false,
+  },
+  {
+    id: -812, alias: "종로 매 #12", symbol: "TSLA",
+    content: "The Information 보도에 따르면 Tesla가 Cybercab을 이번 달 안에 Austin에서 대중에게 launch할 계획이다. 스티어링 휠·브레이크 페달 없는 첫 차량이라는 게 결정적 특징이고, Kalshi가 사내 소식으로 전한 것과도 정합한다.",
+    likes: 7, comments: 2, created_at: "2026-08-19T00:46:00.000Z", liked: false,
+  },
+  {
+    id: -813, alias: "부산 갈매기 #77", symbol: "SPX",
+    content: "Macro Charts와 unusual_whales가 나스닥 futures short이 사상 최대라고 지적했다. 자산운용사와 헤지펀드 조합이다. 조정 우려 신호와 short squeeze 잠재 두 방향 해석이 모두 가능한 상황이다.",
+    likes: 3, comments: 3, created_at: "2026-08-19T00:53:00.000Z", liked: false,
+  },
+  {
+    id: -814, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "Joe Tegtmeyer가 Terafab 부지 세부 업데이트를 냈다. 총 7,464 에이커(3,020 헥타르)로 최종 기록 절차 중이고, 최종 사이트를 위해 2,000-3,000 에이커 추가 매입이 필요하다. Gibbons Creek Reservoir 동쪽은 이미 토지 정리가 진행 중이다.",
+    likes: 9, comments: 0, created_at: "2026-08-19T00:60:00.000Z", liked: false,
+  },
+  {
+    id: -815, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "Elonagg가 전한 Musk의 로봇 안전 발언이 개인 미션 프레임에 가깝다. Boston Dynamics 영상이 로봇 도래를 시각화하는 상황에서, 다른 회사 로봇의 안전은 보장할 수 없지만 Tesla에서는 최선을 다한다는 발언이다.",
+    likes: 5, comments: 0, created_at: "2026-08-19T00:67:00.000Z", liked: false,
+  },
+  {
+    id: -816, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "Evan D가 인용한 Reuters 보도에 따르면 이탈리아 최대 은행 Intesa Sanpaolo가 6월 30일 기준 SPCX 566만 주를 보유하고 있다. 이들의 미국 포트폴리오 단일 최대 포지션이고 총 미국 보유의 15.5% 비중이다.",
+    likes: 3, comments: 0, created_at: "2026-08-19T00:74:00.000Z", liked: false,
+  },
+  {
+    id: -817, alias: "을지로 팔콘 #71", symbol: "MACRO",
+    content: "Kalshi Finance가 인용한 ECB 블로그가 AI 랠리 조정 리스크를 공식 언급했다. Michael Burry AI Enron 경고·Shiller CAPE 밸류에이션 경고에 이어 매크로 기관까지 경계 프레임에 합류한 셈이다.",
+    likes: 7, comments: 1, created_at: "2026-08-19T00:81:00.000Z", liked: false,
+  },
+  {
+    id: -818, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "Cosmos Europa가 지난 24일 동안 SpaceX가 Falcon 9을 8번 발사했고 궤도 발사 사이 사상 최단 간격이라고 정리했다. Launch + land + refuel + launch again 사이클이 반복 가능한 운송 운영에 가까워지고 있다는 프레임이다.",
+    likes: 4, comments: 1, created_at: "2026-08-19T00:88:00.000Z", liked: false,
+  },
+  {
+    id: -819, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "zerohedge BREAKING에 따르면 Starlink가 세계 48개 항공사와 파트너십을 맺었고 7,000대 이상 항공기가 이미 장착·설치 중·계약 상태다. 8/11 루프트한자 A320neo 첫 통합 이후 규모의 정량 확인이다.",
+    likes: 14, comments: 2, created_at: "2026-08-19T00:95:00.000Z", liked: false,
+  },
+  {
+    id: -820, alias: "종로 매 #12", symbol: "TSLA",
+    content: "Sawyer Merritt이 CarConfolic Korea를 인용해 Tesla Model Y가 한국 최고 판매 신차라고 전했다. 미국 차가 한국 시장 1위라는 이례적 상황이다. 지난 몇 달 매월 약 10,000대 판매됐다는 언급이다.",
+    likes: 10, comments: 2, created_at: "2026-08-19T00:102:00.000Z", liked: false,
+  },
+
   // ── 2026-08-18 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -791, alias: "여의도 매 #22", symbol: "TSLA",
@@ -6552,6 +6629,47 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-08-19 신규 댓글 (실 데이터) ────────────────
+  [-806]: [
+    { alias: "종로 매 #12", content: "반대 관점도 유의미해 보입니다", created_at: "2026-08-19T00:06:00.000Z" },
+  ],
+  [-807]: [
+    { alias: "종로 매 #12", content: "리스크 관리 필요할 시점", created_at: "2026-08-19T00:13:00.000Z" },
+    { alias: "강남 표범 #46", content: "기관 flow가 이 방향이면 확실", created_at: "2026-08-19T00:15:00.000Z" },
+  ],
+  [-808]: [
+    { alias: "을지로 팔콘 #71", content: "기관 flow가 이 방향이면 확실", created_at: "2026-08-19T00:20:00.000Z" },
+    { alias: "종로 매 #12", content: "밸류에이션 여전 부담스럽긴 함", created_at: "2026-08-19T00:22:00.000Z" },
+  ],
+  [-810]: [
+    { alias: "마포 올빼미 #24", content: "밸류에이션 여전 부담스럽긴 함", created_at: "2026-08-19T00:34:00.000Z" },
+    { alias: "종로 매 #12", content: "매크로 관점에서 잘 정리됐네요", created_at: "2026-08-19T00:36:00.000Z" },
+    { alias: "종로 매 #12", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-19T00:38:00.000Z" },
+  ],
+  [-812]: [
+    { alias: "광화문 늑대 #33", content: "이건 정말 catalyst네요", created_at: "2026-08-19T00:48:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "장기 프레임 잘 잡혔네요", created_at: "2026-08-19T00:50:00.000Z" },
+  ],
+  [-813]: [
+    { alias: "여의도 매 #22", content: "이 프레임 지속되면 큰 그림", created_at: "2026-08-19T00:55:00.000Z" },
+    { alias: "마포 올빼미 #24", content: "다각 분석 감사", created_at: "2026-08-19T00:57:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "sell-side 컨센이 이 방향이면 맞겠네요", created_at: "2026-08-19T00:59:00.000Z" },
+  ],
+  [-817]: [
+    { alias: "종로 매 #12", content: "이 프레임 지속되면 큰 그림", created_at: "2026-08-19T00:83:00.000Z" },
+  ],
+  [-818]: [
+    { alias: "강남 표범 #46", content: "정확한 분석 감사합니다", created_at: "2026-08-19T00:90:00.000Z" },
+  ],
+  [-819]: [
+    { alias: "종로 매 #12", content: "정확한 분석 감사합니다", created_at: "2026-08-19T00:97:00.000Z" },
+    { alias: "여의도 매 #22", content: "다각 분석 감사", created_at: "2026-08-19T00:99:00.000Z" },
+  ],
+  [-820]: [
+    { alias: "여의도 매 #22", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-19T00:104:00.000Z" },
+    { alias: "부산 갈매기 #77", content: "이건 정말 catalyst네요", created_at: "2026-08-19T00:106:00.000Z" },
+  ],
+
   // ── 2026-08-18 신규 댓글 (실 데이터) ────────────────
   [-791]: [
     { alias: "서초 콘도르 #59", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-18T00:06:00.000Z" },
