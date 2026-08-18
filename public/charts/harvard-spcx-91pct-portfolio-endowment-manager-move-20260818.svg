@@ -11,44 +11,44 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.18</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">SPCX — Harvard 공개 주식 포트폴리오의 91%가 SPCX·</text>
-  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">재무 관리팀이 Musk 회사로 이동</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">SPCX — Harvard 대학 SPCX 23억 달러 지분 공개·</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">공개 미국 주식 포트폴리오 91% 차지</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#c084fc" text-anchor="middle" opacity=".15">🎓</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#c084fc" text-anchor="middle">🎓</text>
   <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">91%</text>
-  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Polymarket Money가 전한 바에 따르면 Harvard 대학의 공개 주식 포트폴리오 중 91%가 SPCX</text>
-  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">지분입니다. Harvard 재무 관리팀이 Musk 회사 (SpaceX)로 이동한다는 추가 정보와 함께 대학 자산</text>
-  <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">운용에서 SPCX가 절대 지배적 비중을 차지합니다.</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Investing.com·Polymarket Money에 따르면 Harvard 대학이 SEC에 SPCX 지분 23억 달러를 신규</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">공개했습니다. 이 SPCX 지분이 Harvard 공개 미국 주식 포트폴리오의 91%를 차지하며 다른 모든 보유 종목</text>
+  <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">합계보다 큽니다.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🎓</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">91%</text>
   <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Harvard 공개 포트폴리오</text>
-  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">SPCX 지분</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">SPCX 비중</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏛️</text>
-  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">재무팀 이동</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Harvard → Musk 회사</text>
-  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">SPCX 인재 유출</text>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">💰</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">23억 달러</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Harvard 지분 규모</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">SEC 공식 공개</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📊</text>
-  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">개별 종목</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">대학 자산 지배</text>
-  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">단일 최대</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">단일 최대</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">다른 종목 합계 초과</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">대학 endowment</text>
   <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">POLYMARKET MONEY</text>
-  <text x="540" y="714" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">"Harvard 공개 주식 포트폴리오 91%가 SPCX. Musk의 오랜 재무 관리팀이 Harvard에서 SpaceX 팀으로</text>
-  <text x="540" y="740" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">이동한다는 추가 정보와 함께."</text>
-  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">SPCX SpaceX now makes up 91% of Harvard disclosed stock portfolio ·</text>
-  <text x="540" y="796" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">Harvard Financial Management longtime handler of Elon personal finances is joining SpaceX team</text>
-  <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">출처: Polymarket Money · Harvard · 2026.08.17</text>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTING.COM · POLYMARKET MONEY</text>
+  <text x="540" y="714" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">"Harvard 대학이 SPCX 23억 달러 지분 공개·Harvard 공개 미국 주식 포트폴리오의 91%가 SPCX·</text>
+  <text x="540" y="740" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">다른 모든 보유 종목 합계보다 큼."</text>
+  <text x="540" y="772" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">HARVARD DISCLOSES $2.3B STAKE IN SPCX SPACEX, EVEN HALF ITS U.S. EQUITY PORTFOLIO ·</text>
+  <text x="540" y="796" font-family="Arial" font-size="17" fill="#e5e7eb" text-anchor="middle">SPCX makes up 91% of Harvard disclosed publicly stock portfolio</text>
+  <text x="540" y="826" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">출처: Investing.com · Polymarket Money · 2026.08.17</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="884" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">이 소식은 왜 중요한가</text>
-  <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">8/13 별개 리포트의 Google SPCX 105배 return·95% 포트폴리오·</text>
-  <text x="540" y="954" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">오늘 별개 리포트의 SPCX SEC 4.24조 EU 지분 신청에 이어 Harvard 대학 자산도 SPCX가 지배적 비중이라는 실 확인·</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Harvard 91% · 2026.08.18</text>
+  <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">8/13 별개 리포트의 Google SPCX 105배 return·95% 포트폴리오·오늘 별개 리포트의 SPCX SEC 4.24조 EU 지분 신청에</text>
+  <text x="540" y="954" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">이어 Harvard 대학 endowment도 SPCX가 공개 주식의 절대 지배 비중이라는 실 확인·</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Harvard 23억 · 2026.08.18</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

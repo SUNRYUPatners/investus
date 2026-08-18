@@ -364,18 +364,18 @@ const T=[
   quoteLabel:'ASHLEY LOUISE SIMON',quoteKo:'"Tesla 호주 Megapack 2GW"',quoteEn:'Tesla secured biggest Australia Megapack battery storage deal yet with a 2 GW project · targets completion by 2027',
   source:'Source: Ashley Louise Simon · Tesla · 2026.08.17',
   noteHead:'Why this matters',noteSub:'Following 8/11 Tesla solar Fort Bend 3,000 acres and today Tesla China sales +33% / 200-day Robotaxi zero incident, Australia energy storage · Tesla multi-axis global business expansion materializes.',footer:'TSLA · AUS Megapack 2GW',brand:BE}},
-// 16. Harvard SPCX 91% 포트폴리오
+// 16. Harvard SPCX 23억 지분 공개
 {file:'harvard-spcx-91pct-portfolio-endowment-manager-move',symbol:'SPCX',
- ko:{title:'SPCX — Harvard 공개 주식 포트폴리오의 91%가 SPCX·재무 관리팀이 Musk 회사로 이동',heroIcon:'🎓',heroBig:'91%',heroSub:'Polymarket Money가 전한 바에 따르면 Harvard 대학의 공개 주식 포트폴리오 중 91%가 SPCX 지분입니다. Harvard 재무 관리팀이 Musk 회사 (SpaceX)로 이동한다는 추가 정보와 함께 대학 자산 운용에서 SPCX가 절대 지배적 비중을 차지합니다.',
-  cards:[{icon:'🎓',big:'91%',mid:'Harvard 공개 포트폴리오',sub:'SPCX 지분'},{icon:'🏛️',big:'재무팀 이동',mid:'Harvard → Musk 회사',sub:'SPCX 인재 유출'},{icon:'📊',big:'개별 종목',mid:'대학 자산 지배',sub:'단일 최대'}],
-  quoteLabel:'POLYMARKET MONEY',quoteKo:'"Harvard 공개 주식 포트폴리오 91%가 SPCX. Musk의 오랜 재무 관리팀이 Harvard에서 SpaceX 팀으로 이동한다는 추가 정보와 함께."',quoteEn:'SPCX SpaceX now makes up 91% of Harvard disclosed stock portfolio · Harvard Financial Management longtime handler of Elon personal finances is joining SpaceX team',
-  source:'출처: Polymarket Money · Harvard · 2026.08.17',
-  noteHead:'이 소식은 왜 중요한가',noteSub:'8/13 별개 리포트의 Google SPCX 105배 return·95% 포트폴리오·오늘 별개 리포트의 SPCX SEC 4.24조 EU 지분 신청에 이어 Harvard 대학 자산도 SPCX가 지배적 비중이라는 실 확인·대형 대학 endowment까지 SPCX 편입이 확인되는 기관 신뢰 다층 실체화 시그널입니다.',footer:'SPCX · Harvard 91%',brand:BK},
- en:{title:'SPCX — Harvard Disclosed Stock Portfolio 91% SPCX · Financial Management Team Moves to Musk Company',heroIcon:'🎓',heroBig:'91%',heroSub:'Per Polymarket Money: 91% of Harvard university disclosed stock portfolio is SPCX. Additional info: Harvard financial management team moving to Musk company (SpaceX). University endowment absolute dominant weighting in SPCX.',
-  cards:[{icon:'🎓',big:'91%',mid:'Harvard disclosed portfolio',sub:'SPCX stake'},{icon:'🏛️',big:'Team moves',mid:'Harvard → Musk co',sub:'SPCX talent inflow'},{icon:'📊',big:'Single stock',mid:'Endowment dominance',sub:'Largest single'}],
-  quoteLabel:'POLYMARKET MONEY',quoteKo:'"Harvard 91% SPCX"',quoteEn:'SPCX SpaceX now makes up 91% of Harvard disclosed stock portfolio · Harvard Financial Management longtime handler of Elon personal finances is joining SpaceX team',
-  source:'Source: Polymarket Money · Harvard · 2026.08.17',
-  noteHead:'Why this matters',noteSub:'Following 8/13 Google SPCX 105x return / 95% portfolio and today SPCX SEC $4.24T EU stake filing, Harvard endowment also SPCX dominant · large university endowment inclusion confirms institutional trust multi-layer materialization signal.',footer:'SPCX · Harvard 91%',brand:BE}},
+ ko:{title:'SPCX — Harvard 대학 SPCX 23억 달러 지분 공개·공개 미국 주식 포트폴리오 91% 차지',heroIcon:'🎓',heroBig:'91%',heroSub:'Investing.com·Polymarket Money에 따르면 Harvard 대학이 SEC에 SPCX 지분 23억 달러를 신규 공개했습니다. 이 SPCX 지분이 Harvard 공개 미국 주식 포트폴리오의 91%를 차지하며 다른 모든 보유 종목 합계보다 큽니다.',
+  cards:[{icon:'🎓',big:'91%',mid:'Harvard 공개 포트폴리오',sub:'SPCX 비중'},{icon:'💰',big:'23억 달러',mid:'Harvard 지분 규모',sub:'SEC 공식 공개'},{icon:'📊',big:'단일 최대',mid:'다른 종목 합계 초과',sub:'대학 endowment'}],
+  quoteLabel:'INVESTING.COM · POLYMARKET MONEY',quoteKo:'"Harvard 대학이 SPCX 23억 달러 지분 공개·Harvard 공개 미국 주식 포트폴리오의 91%가 SPCX·다른 모든 보유 종목 합계보다 큼."',quoteEn:'HARVARD DISCLOSES $2.3B STAKE IN SPCX SPACEX, EVEN HALF ITS U.S. EQUITY PORTFOLIO · SPCX makes up 91% of Harvard disclosed publicly stock portfolio',
+  source:'출처: Investing.com · Polymarket Money · 2026.08.17',
+  noteHead:'이 소식은 왜 중요한가',noteSub:'8/13 별개 리포트의 Google SPCX 105배 return·95% 포트폴리오·오늘 별개 리포트의 SPCX SEC 4.24조 EU 지분 신청에 이어 Harvard 대학 endowment도 SPCX가 공개 주식의 절대 지배 비중이라는 실 확인·다른 대학 endowment 후속 참여 압박이 커지는 국면입니다.',footer:'SPCX · Harvard 23억',brand:BK},
+ en:{title:'SPCX — Harvard University Discloses $2.3B SPCX Stake · 91% of Disclosed US Equity Portfolio',heroIcon:'🎓',heroBig:'91%',heroSub:'Per Investing.com and Polymarket Money: Harvard University disclosed $2.3B SPCX stake to SEC. This SPCX stake makes up 91% of Harvard disclosed US equity portfolio, larger than all other holdings combined.',
+  cards:[{icon:'🎓',big:'91%',mid:'Harvard disclosed portfolio',sub:'SPCX weighting'},{icon:'💰',big:'$2.3 B',mid:'Harvard stake size',sub:'SEC official filing'},{icon:'📊',big:'Largest single',mid:'Exceeds all other holdings',sub:'Univ endowment'}],
+  quoteLabel:'INVESTING.COM · POLYMARKET MONEY',quoteKo:'"Harvard 23억 SPCX"',quoteEn:'HARVARD DISCLOSES $2.3B STAKE IN SPCX SPACEX, EVEN HALF ITS U.S. EQUITY PORTFOLIO · SPCX makes up 91% of Harvard disclosed publicly stock portfolio',
+  source:'Source: Investing.com · Polymarket Money · 2026.08.17',
+  noteHead:'Why this matters',noteSub:'Following 8/13 Google SPCX 105x return / 95% portfolio and today SPCX SEC $4.24T EU stake filing, Harvard university endowment also SPCX absolute dominant in disclosed stocks · pressure on other university endowments to follow.',footer:'SPCX · Harvard $2.3B',brand:BE}},
 ];
 
 let n=0;
