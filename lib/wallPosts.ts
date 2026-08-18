@@ -102,7 +102,7 @@ const d = (n: number) => n * 86_400_000;
 export const MOCK_POSTS: Post[] = [
   // ── 2026-08-18 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 989, symbol: "SPCX", nickname: "익명_9955", holdingLabel: "관심종목",
-    content: "SPCX Musk 개인이 SPCX 지분 매수 발표 후 short seller들 22억 하루 손실. Harvard도 Tesla 최대 보유래... 기관 신뢰가 진짜 확립",
+    content: "Tesla short seller들이 2026년 이미 90억 손실. Musk 개인 지분 매수 발표 후 22억 하루 손실. 기관 신뢰 확립되고 있네",
     createdAt: T18AU + 8*60_000, likes: 8, comments: 0 },
   { id: 990, symbol: "TSLA", nickname: "익명_1200", holdingLabel: "관심종목",
     content: "Tesla 중국 7월 판매 93,579대·+33% 성장. Model Y가 중형 SUV 2위·수출 +191%에 이어 실 판매도 폭발",

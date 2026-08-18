@@ -20,7 +20,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-08-18 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -791, alias: "여의도 매 #22", symbol: "TSLA",
-    content: "테슬라 공매도자가 2026년 들어서만 90억 달러 손실을 봤다. Musk 개인 지분 매수 후 하루 22억이 추가로 사라진 게 결정적이었다. Harvard가 Tesla를 개별 종목 최대 보유로 공개한 것과 함께 기관 신뢰가 실 데이터로 확립되고 있다.",
+    content: "테슬라 공매도자가 2026년 들어서만 90억 달러 손실을 봤다. Musk 개인 지분 매수 후 하루 22억이 추가로 사라진 게 결정적이었다. Short squeeze 리스크가 실 시세 반응으로 확대되고 있는 국면이다.",
     likes: 10, comments: 1, created_at: "2026-08-18T00:04:00.000Z", liked: false,
   },
   {
