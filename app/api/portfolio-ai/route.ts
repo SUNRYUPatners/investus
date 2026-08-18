@@ -20,6 +20,10 @@ type PortfolioCtx = {
   totalCost:     number;
   totalPnlPct:   number;
   usdkrw:        number;
+  macro?: {
+    indices?: { symbol: string; value: number; changePercent?: number }[];
+    futures?: { symbol: string; name: string; price?: number; changePercent: number; group?: string }[];
+  };
   question:      string;
   fetchNews?:    boolean;   // 오늘 등락 이유 질문 시 전날 뉴스 조회
   history?:      { role: "user" | "assistant"; content: string }[];
@@ -55,7 +59,7 @@ async function fetchYesterdayNews(symbols: string[], key: string): Promise<strin
 }
 
 function buildPortfolioSummary(ctx: PortfolioCtx): string {
-  const { holdings, totalValue, totalCost, totalPnlPct, usdkrw } = ctx;
+  const { holdings, totalValue, totalCost, totalPnlPct, usdkrw, macro } = ctx;
   const sorted = [...holdings].sort((a, b) => b.weightPct - a.weightPct);
 
   const rows = sorted.map((h) =>
@@ -105,6 +109,49 @@ ${rows}
 `.trim();
 }
 
+function buildMacroSummary(ctx: PortfolioCtx): string {
+  const indices = ctx.macro?.indices ?? [];
+  const futures = ctx.macro?.futures ?? [];
+
+  const indexLines = indices
+    .filter((i) => Number.isFinite(i.changePercent))
+    .slice(0, 6)
+    .map((i) => `- ${i.symbol}: ${(i.changePercent ?? 0) >= 0 ? "+" : ""}${(i.changePercent ?? 0).toFixed(2)}%`)
+    .join("\n");
+
+  const grouped = [
+    { label: "해외 지수", items: futures.filter((f) => f.group === "global") },
+    { label: "에너지·금속", items: futures.filter((f) => f.group === "commodities") },
+    { label: "채권·외환·농산물", items: futures.filter((f) => f.group === "bondsfx") },
+    { label: "암호화폐", items: futures.filter((f) => f.group === "crypto") },
+  ];
+
+  const futureLines = grouped
+    .map(({ label, items }) => {
+      const line = items
+        .slice(0, 5)
+        .map((f) => `${f.name}: ${f.changePercent >= 0 ? "+" : ""}${f.changePercent.toFixed(2)}%`)
+        .join(", ");
+      return line ? `- ${label}: ${line}` : "";
+    })
+    .filter(Boolean)
+    .join("\n");
+
+  if (!indexLines && !futureLines) return "";
+
+  return `
+
+[오늘 매크로 / Futures Map 환경]
+주요 지수:
+${indexLines || "- 데이터 없음"}
+
+Futures Map:
+${futureLines || "- 데이터 없음"}
+
+⚡ 핵심 규칙: 위 매크로 환경을 포트폴리오 분석에 반드시 연결할 것. 예를 들어 금리 급등/달러 강세/원유 상승/나스닥 약세 같은 흐름이 보이면 개별 종목 설명 뒤에 왜 그런 환경이 성장주·빅테크·경기민감주에 부담 또는 우호적인지 짧게 덧붙일 것.
+`.trimEnd();
+}
+
 export async function POST(req: NextRequest) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
@@ -136,6 +183,7 @@ export async function POST(req: NextRequest) {
   }
 
   const portfolioSummary = buildPortfolioSummary(body);
+  const macroSummary = buildMacroSummary(body);
   const today = new Date().toLocaleDateString("ko-KR", {
     year: "numeric", month: "long", day: "numeric", weekday: "long",
   });
@@ -143,7 +191,7 @@ export async function POST(req: NextRequest) {
   const system = `당신은 한국 서학개미(미국 주식 개인 투자자)를 위한 개인 포트폴리오 AI 비서입니다.
 오늘 날짜: ${today}
 
-${portfolioSummary}${newsSection}
+${portfolioSummary}${macroSummary ? `\n\n${macroSummary}` : ""}${newsSection}
 
 ⚡ 감정 표현 절대 규칙 (가장 중요):
 - "★ 오늘 포트폴리오 전체 변동"이 양수(+)이면 → 오늘 포트폴리오가 올랐다/상승했다/강세로 표현
@@ -154,13 +202,15 @@ ${portfolioSummary}${newsSection}
 
 역할:
 - 사용자의 실제 포트폴리오 데이터를 기반으로 맞춤형 분석과 인사이트 제공
+- Futures Map/매크로 환경을 포트폴리오와 연결해서 해석
 - 오늘 오른 종목과 내린 종목을 구체적으로 나누어 설명
 - 종목별 오늘 dayChangePct 수치를 정확히 활용해서 이유 분석
 - 투자 권유·수익 보장·매매 타이밍 제시 금지
 
 답변 규칙:
-- 한국어, 간결하게 (4~7문장)
+- 한국어, 간결하게 (5~9문장)
 - 포트폴리오 전체 오늘 변동 방향을 첫 문장에 명확히 표현
+- 둘째 또는 셋째 문장에는 반드시 오늘의 매크로/Futures Map 분위기를 한 줄로 요약
 - 실제 수치(%, $)를 구체적으로 포함
 - 친근하고 솔직한 말투 (이모지 1~2개)
 - 마지막 면책 문구 불필요 (UI에 표시됨)

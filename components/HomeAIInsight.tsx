@@ -7,6 +7,8 @@ import { NYSE_HOLIDAYS, isMarketOpen } from "@/lib/marketHours";
 import { useRouter } from "next/navigation";
 
 type LiveQ = { symbol: string; price: number; change: number; changePercent: number };
+type MacroIndex = { symbol: string; value: number; changePercent?: number };
+type MacroFuture = { symbol: string; name: string; price?: number; changePercent: number; group?: string };
 
 const INTRADAY_LIMIT = 3;
 
@@ -43,6 +45,23 @@ function readCloseCache(date: string)    { try { return localStorage.getItem(clo
 function writeCloseCache(date: string, text: string) { try { localStorage.setItem(closeCacheKey(date), text); } catch { /* ignore */ } }
 function readCloseRetryUsed(date: string): boolean { try { return localStorage.getItem(closeRetryKey(date)) === "1"; } catch { return false; } }
 function markCloseRetryUsed(date: string) { try { localStorage.setItem(closeRetryKey(date), "1"); } catch { /* ignore */ } }
+
+function readMacroSnapshot(): { indices: MacroIndex[]; futures: MacroFuture[] } {
+  try {
+    const raw = localStorage.getItem("market-data-cache");
+    if (!raw) return { indices: [], futures: [] };
+    const d = JSON.parse(raw) as {
+      indices?: MacroIndex[];
+      futures?: MacroFuture[];
+    };
+    return {
+      indices: Array.isArray(d.indices) ? d.indices : [],
+      futures: Array.isArray(d.futures) ? d.futures : [],
+    };
+  } catch {
+    return { indices: [], futures: [] };
+  }
+}
 
 export function HomeAIInsight() {
   const router = useRouter();
@@ -141,6 +160,7 @@ export function HomeAIInsight() {
 
   function buildPayload() {
     const liveMap   = Object.fromEntries(quotes.map((q) => [q.symbol, q]));
+    const macro = readMacroSnapshot();
     const totalValue = holdings.reduce((s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0);
     const totalCost  = holdings.reduce((s, h) => s + h.shares * h.avgCost, 0);
     const totalPnlPct = totalCost > 0 ? ((totalValue - totalCost) / totalCost) * 100 : 0;
@@ -153,7 +173,7 @@ export function HomeAIInsight() {
       const weightPct = totalValue > 0 ? (value / totalValue) * 100 : 0;
       return { symbol: h.symbol, shares: h.shares, avgCost: h.avgCost, currentPrice: price, value, costBasis, pnlPct, dayChangePct, weightPct };
     });
-    return { holdings: enriched, totalValue, totalCost, totalPnlPct, usdkrw };
+    return { holdings: enriched, totalValue, totalCost, totalPnlPct, usdkrw, macro };
   }
 
   async function runAnalysis(isIntraday: boolean, closeDay?: string, isCloseRetry = false) {
@@ -165,7 +185,7 @@ export function HomeAIInsight() {
         method:  "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          question: "오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지 분석해줘",
+          question: "오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지, 그리고 Futures Map 기준 매크로 환경이 내 종목들에 어떤 영향을 줬는지 같이 분석해줘",
           ...buildPayload(),
           fetchNews: true,
         }),
