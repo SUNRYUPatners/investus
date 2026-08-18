@@ -3,7 +3,7 @@ import { buildSessionBriefing, getBriefPhase, type SessionBriefing } from "@/lib
 import { getOrCreatePostMarketBriefing } from "@/lib/postMarketBriefing";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 function asPhase(briefing: SessionBriefing, phase: "pre" | "post"): SessionBriefing {
   return {

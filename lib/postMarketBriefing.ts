@@ -21,14 +21,31 @@ export const POST_MARKET_UNIVERSE = [
 
 type NewsLine = { symbol: string; headline: string; summary: string; datetime: number; source: string };
 
-type GeneratedItem = { symbol: string; title: string; summary: string; body: string };
+type GeneratedItem = {
+  symbol: string;
+  title: string;
+  summary: string;
+  body: string;
+  titleEn?: string;
+  summaryEn?: string;
+  bodyEn?: string;
+};
 
 export type PostMarketStored = {
   dateKey: string;
   headline: string;
+  headlineEn?: string;
   items: GeneratedItem[];
   generatedAt: number;
 };
+
+function hasHangul(s: string | undefined): boolean {
+  return !!s && /[가-힣]/.test(s);
+}
+
+function asText(v: unknown): string {
+  return typeof v === "string" ? v.trim() : "";
+}
 
 /** 직전 정규장 세션 날짜 (ET). 마감 전이면 전 거래일. */
 export function lastCompletedSessionDate(now = new Date()): string {
@@ -49,22 +66,99 @@ function kvKey(dateKey: string) {
   return `${KV_PREFIX}${dateKey}`;
 }
 
+function parseItem(raw: unknown): GeneratedItem | null {
+  if (!raw || typeof raw !== "object") return null;
+  const x = raw as Record<string, unknown>;
+  const symbol = asText(x.symbol).toUpperCase();
+  if (!symbol) return null;
+  const titleKo = asText(x.titleKo) || asText(x.title);
+  const titleEn = asText(x.titleEn);
+  const summaryKo = asText(x.summaryKo) || asText(x.summary);
+  const summaryEn = asText(x.summaryEn);
+  const bodyKo = asText(x.bodyKo) || asText(x.body);
+  const bodyEn = asText(x.bodyEn);
+  if (!titleKo && !titleEn) return null;
+  return {
+    symbol,
+    title: titleKo,
+    summary: summaryKo,
+    body: bodyKo,
+    titleEn: titleEn || undefined,
+    summaryEn: summaryEn || undefined,
+    bodyEn: bodyEn || undefined,
+  };
+}
+
 function asStored(raw: unknown): PostMarketStored | null {
   if (!raw || typeof raw !== "object") return null;
   const o = raw as Record<string, unknown>;
-  if (typeof o.dateKey !== "string" || typeof o.headline !== "string" || !Array.isArray(o.items)) return null;
-  const items = o.items.filter((it): it is GeneratedItem => {
-    if (!it || typeof it !== "object") return false;
-    const x = it as Record<string, unknown>;
-    return typeof x.symbol === "string" && typeof x.title === "string" && typeof x.summary === "string" && typeof x.body === "string";
-  });
-  if (!o.headline.trim() || items.length === 0) return null;
-  return {
+  if (typeof o.dateKey !== "string" || !Array.isArray(o.items)) return null;
+  const items = o.items.map(parseItem).filter((it): it is GeneratedItem => !!it);
+  const headline = asText(o.headlineKo) || asText(o.headline);
+  const headlineEn = asText(o.headlineEn);
+  if ((!headline && !headlineEn) || items.length === 0) return null;
+  return normalizeStored({
     dateKey: o.dateKey,
-    headline: o.headline,
+    headline,
+    headlineEn: headlineEn || undefined,
     items,
     generatedAt: typeof o.generatedAt === "number" ? o.generatedAt : Date.now(),
+  });
+}
+
+/** 한글 필드에 영어가 들어 있으면 EN 칸으로 옮긴다. */
+function normalizeStored(s: PostMarketStored): PostMarketStored {
+  let headline = s.headline;
+  let headlineEn = s.headlineEn || "";
+  if (headline && !hasHangul(headline)) {
+    if (!headlineEn) headlineEn = headline;
+    headline = "";
+  }
+  const items = s.items.map((it) => {
+    let title = it.title;
+    let titleEn = it.titleEn || "";
+    let summary = it.summary;
+    let summaryEn = it.summaryEn || "";
+    let body = it.body;
+    let bodyEn = it.bodyEn || "";
+    if (title && !hasHangul(title)) {
+      if (!titleEn) titleEn = title;
+      title = "";
+    }
+    if (summary && !hasHangul(summary)) {
+      if (!summaryEn) summaryEn = summary;
+      summary = "";
+    }
+    if (body && !hasHangul(body)) {
+      if (!bodyEn) bodyEn = body;
+      body = "";
+    }
+    return {
+      ...it,
+      title,
+      summary,
+      body,
+      titleEn: titleEn || undefined,
+      summaryEn: summaryEn || undefined,
+      bodyEn: bodyEn || undefined,
+    };
+  });
+  return {
+    ...s,
+    headline,
+    headlineEn: headlineEn || undefined,
+    items,
   };
+}
+
+function needsKorean(s: PostMarketStored): boolean {
+  if (!hasHangul(s.headline) && !s.items.some((it) => hasHangul(it.title))) return true;
+  return s.items.some((it) => !hasHangul(it.title) && !hasHangul(it.summary));
+}
+
+function needsEnglish(s: PostMarketStored): boolean {
+  if (!s.headlineEn?.trim() && !s.items.some((it) => it.titleEn?.trim())) return true;
+  return s.items.some((it) => !it.titleEn?.trim() && !it.summaryEn?.trim());
 }
 
 async function loadStored(dateKey: string): Promise<PostMarketStored | null> {
@@ -168,9 +262,12 @@ function storedFromNews(dateKey: string, news: NewsLine[]): PostMarketStored | n
     const top = rows[0];
     items.push({
       symbol,
-      title: top.headline.slice(0, 72),
-      summary: (top.summary || top.headline).slice(0, 180),
-      body: rows
+      title: "",
+      summary: "",
+      body: "",
+      titleEn: top.headline.slice(0, 72),
+      summaryEn: (top.summary || top.headline).slice(0, 180),
+      bodyEn: rows
         .map((n) => `· ${n.headline}${n.summary ? `\n${n.summary}` : ""}`)
         .join("\n\n"),
     });
@@ -179,7 +276,8 @@ function storedFromNews(dateKey: string, news: NewsLine[]): PostMarketStored | n
   if (items.length === 0) return null;
   return {
     dateKey,
-    headline: `${dateKey} 세션 · ${items[0].symbol} ${items[0].title}`.slice(0, 80),
+    headline: "",
+    headlineEn: `${dateKey} session · ${items[0].symbol} ${items[0].titleEn || ""}`.slice(0, 80),
     items,
     generatedAt: Date.now(),
   };
@@ -199,31 +297,119 @@ async function loadRecentStored(now = new Date()): Promise<PostMarketStored | nu
   return null;
 }
 
-function extractJson(text: string): { headline: string; items: GeneratedItem[] } | null {
+function extractJson(text: string): { headline: string; headlineEn?: string; items: GeneratedItem[] } | null {
   const m = text.match(/\{[\s\S]*\}/);
   if (!m) return null;
   try {
-    const parsed = JSON.parse(m[0]) as { headline?: unknown; items?: unknown };
-    if (typeof parsed.headline !== "string" || !Array.isArray(parsed.items)) return null;
+    const parsed = JSON.parse(m[0]) as Record<string, unknown>;
+    const headline = asText(parsed.headlineKo) || asText(parsed.headline);
+    const headlineEn = asText(parsed.headlineEn);
+    if (!Array.isArray(parsed.items)) return null;
     const items: GeneratedItem[] = [];
     for (const it of parsed.items) {
-      if (!it || typeof it !== "object") continue;
-      const x = it as Record<string, unknown>;
-      if (typeof x.symbol !== "string" || typeof x.title !== "string" || typeof x.summary !== "string" || typeof x.body !== "string") continue;
-      const symbol = x.symbol.toUpperCase().trim();
-      if (!POST_MARKET_UNIVERSE.some((u) => u.symbol === symbol)) continue;
-      items.push({
-        symbol,
-        title: x.title.trim(),
-        summary: x.summary.trim(),
-        body: x.body.trim(),
-      });
+      const row = parseItem(it);
+      if (!row) continue;
+      if (!POST_MARKET_UNIVERSE.some((u) => u.symbol === row.symbol)) continue;
+      items.push(row);
     }
-    if (!parsed.headline.trim() || items.length === 0) return null;
-    return { headline: parsed.headline.trim(), items: items.slice(0, 8) };
+    if ((!headline && !headlineEn) || items.length === 0) return null;
+    return {
+      headline,
+      headlineEn: headlineEn || undefined,
+      items: items.slice(0, 8),
+    };
   } catch {
     return null;
   }
+}
+
+function mergeLang(base: PostMarketStored, filled: { headline: string; headlineEn?: string; items: GeneratedItem[] }): PostMarketStored {
+  const bySymbol = new Map(filled.items.map((it) => [it.symbol, it]));
+  return normalizeStored({
+    ...base,
+    headline: filled.headline || base.headline,
+    headlineEn: filled.headlineEn || base.headlineEn,
+    items: base.items.map((it) => {
+      const f = bySymbol.get(it.symbol);
+      if (!f) return it;
+      return {
+        symbol: it.symbol,
+        title: f.title || it.title,
+        summary: f.summary || it.summary,
+        body: f.body || it.body,
+        titleEn: f.titleEn || it.titleEn,
+        summaryEn: f.summaryEn || it.summaryEn,
+        bodyEn: f.bodyEn || it.bodyEn,
+      };
+    }),
+  });
+}
+
+async function fillMissingLang(stored: PostMarketStored, apiKey: string): Promise<PostMarketStored> {
+  const needKo = needsKorean(stored);
+  const needEn = needsEnglish(stored);
+  if (!needKo && !needEn) return stored;
+
+  const payload = {
+    headlineKo: stored.headline,
+    headlineEn: stored.headlineEn || "",
+    items: stored.items.map((it) => ({
+      symbol: it.symbol,
+      titleKo: it.title,
+      titleEn: it.titleEn || "",
+      summaryKo: it.summary,
+      summaryEn: it.summaryEn || "",
+      bodyKo: it.body,
+      bodyEn: it.bodyEn || "",
+    })),
+  };
+
+  const prompt = `아래 장후 브리핑 JSON에서 비어 있는 언어 칸만 채워라.
+한국어는 증권사 데스크 톤. 영어는 concise US desk English.
+이미 채워진 칸은 그대로 두고, 사실·수치·종목을 바꾸거나 추가하지 마라.
+JSON만 출력.
+
+${JSON.stringify(payload)}`;
+
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-haiku-4-5-20251001",
+        max_tokens: 3500,
+        messages: [{ role: "user", content: prompt }],
+      }),
+      signal: AbortSignal.timeout(30_000),
+    });
+    if (!res.ok) return stored;
+    const data = await res.json() as { content?: { text?: string }[] };
+    const text = data.content?.[0]?.text?.trim() ?? "";
+    const parsed = extractJson(text);
+    if (!parsed) return stored;
+    return mergeLang(stored, parsed);
+  } catch {
+    return stored;
+  }
+}
+
+async function ensureBilingual(stored: PostMarketStored, apiKey?: string): Promise<PostMarketStored> {
+  const normalized = normalizeStored(stored);
+  if (!apiKey) return normalized;
+  if (!needsKorean(normalized) && !needsEnglish(normalized)) return normalized;
+  const filled = await fillMissingLang(normalized, apiKey);
+  if (
+    filled.headline !== stored.headline ||
+    filled.headlineEn !== stored.headlineEn ||
+    JSON.stringify(filled.items) !== JSON.stringify(stored.items)
+  ) {
+    await saveStored(filled);
+  }
+  return filled;
 }
 
 async function generateWithClaude(
@@ -236,12 +422,13 @@ async function generateWithClaude(
     .map((n) => `[${n.symbol}] ${n.headline}${n.summary ? ` — ${n.summary}` : ""} (${n.source})`)
     .join("\n");
 
-  const prompt = `오늘(${dateKey}) 미국 정규장 마감 후 브리핑을 작성해.
+  const prompt = `오늘(${dateKey}) 미국 정규장 마감 후 브리핑을 한국어와 영어로 동시에 작성해.
 
 우선순위: Tesla, SpaceX, Magnificent 7 (NVDA·AAPL·MSFT·GOOGL·AMZN·META).
 아래는 오늘 장중(프리마켓~마감) 실제 뉴스와 당일 등락이다. 여기에 없는 사실·수치·가이던스를 지어내지 마라.
 뉴스가 없는 종목은 생략. 비슷한 뉴스는 하나로 합쳐라.
-투자 권유·목표가·매수/매도 금지. 한국어, 증권사 데스크 톤.
+투자 권유·목표가·매수/매도 금지.
+한국어는 증권사 데스크 톤. 영어는 concise US desk English. 두 언어는 같은 사실이어야 한다.
 
 당일 등락:
 ${quotes}
@@ -250,7 +437,7 @@ ${quotes}
 ${newsBlock}
 
 JSON만 출력:
-{"headline":"세션 핵심 한 줄(80자 이내)","items":[{"symbol":"TSLA","title":"짧은 제목","summary":"2문장","body":"4~6문장. 뉴스 근거."}]}
+{"headlineKo":"세션 핵심 한 줄(80자 이내)","headlineEn":"one-line session takeaway","items":[{"symbol":"TSLA","titleKo":"짧은 제목","titleEn":"short title","summaryKo":"2문장","summaryEn":"2 sentences","bodyKo":"4~6문장. 뉴스 근거.","bodyEn":"4-6 sentences grounded in the news."}]}
 items는 6~8개. Tesla·SpaceX를 앞에 두고 나머진 임팩트 순.`;
 
   try {
@@ -263,22 +450,23 @@ items는 6~8개. Tesla·SpaceX를 앞에 두고 나머진 임팩트 순.`;
       },
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
-        max_tokens: 2200,
+        max_tokens: 4000,
         messages: [{ role: "user", content: prompt }],
       }),
-      signal: AbortSignal.timeout(35_000),
+      signal: AbortSignal.timeout(45_000),
     });
     if (!res.ok) return null;
     const data = await res.json() as { content?: { text?: string }[] };
     const text = data.content?.[0]?.text?.trim() ?? "";
     const parsed = extractJson(text);
     if (!parsed) return null;
-    return {
+    return normalizeStored({
       dateKey,
       headline: parsed.headline,
+      headlineEn: parsed.headlineEn,
       items: parsed.items,
       generatedAt: Date.now(),
-    };
+    });
   } catch {
     return null;
   }
@@ -291,13 +479,18 @@ export function storedToBriefing(stored: PostMarketStored): SessionBriefing {
     source: "session-news",
     labelKo: "장후 브리핑",
     labelEn: "After-close brief",
-    headline: stored.headline,
-    bullets: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.title}`.slice(0, 72)),
+    headline: stored.headline || stored.headlineEn || "",
+    headlineEn: stored.headlineEn || undefined,
+    bullets: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.title || it.titleEn || ""}`.slice(0, 72)),
+    bulletsEn: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.titleEn || it.title || ""}`.slice(0, 72)),
     reports: stored.items.map((it, i) => ({
       id: `pm-${stored.dateKey}-${it.symbol}-${i}`,
-      title: `${it.symbol} · ${it.title}`,
-      summary: it.summary,
-      body: it.body,
+      title: `${it.symbol} · ${it.title || it.titleEn || ""}`,
+      summary: it.summary || it.summaryEn || "",
+      body: it.body || it.bodyEn || "",
+      titleEn: it.titleEn ? `${it.symbol} · ${it.titleEn}` : undefined,
+      summaryEn: it.summaryEn,
+      bodyEn: it.bodyEn,
     })),
   };
 }
@@ -308,9 +501,10 @@ export async function getOrCreatePostMarketBriefing(opts?: {
 }): Promise<SessionBriefing | null> {
   const now = opts?.now ?? new Date();
   const dateKey = lastCompletedSessionDate(now);
+  const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!opts?.force) {
     const cached = await loadStored(dateKey);
-    if (cached) return storedToBriefing(cached);
+    if (cached) return storedToBriefing(await ensureBilingual(cached, apiKey));
   }
 
   let news: NewsLine[] = [];
@@ -323,22 +517,23 @@ export async function getOrCreatePostMarketBriefing(opts?: {
     news = [];
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
   if (apiKey && news.length > 0) {
     const generated = await generateWithClaude(dateKey, news, quotes, apiKey);
     if (generated) {
-      await saveStored(generated);
-      return storedToBriefing(generated);
+      const bilingual = await ensureBilingual(generated, apiKey);
+      await saveStored(bilingual);
+      return storedToBriefing(bilingual);
     }
   }
 
   const fromNews = storedFromNews(dateKey, news);
   if (fromNews) {
-    await saveStored(fromNews);
-    return storedToBriefing(fromNews);
+    const bilingual = await ensureBilingual(fromNews, apiKey);
+    await saveStored(bilingual);
+    return storedToBriefing(bilingual);
   }
 
   const recent = await loadRecentStored(now);
-  if (recent) return storedToBriefing(recent);
+  if (recent) return storedToBriefing(await ensureBilingual(recent, apiKey));
   return null;
 }
