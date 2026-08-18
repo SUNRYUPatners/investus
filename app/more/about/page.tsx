@@ -11,12 +11,12 @@ export default function AboutPage() {
 
   const DAILY_STEPS = isKo ? [
     { icon: <TrendingUp className="w-4 h-4" />, color: "#10b981", step: "DAILY", title: "홈 — 매일 아침 5분", desc: "선물·지수·환율·공포탐욕지수·버핏지수·섹터 히트맵까지, 홈탭 하나로 전날 장을 완벽히 정리하고 오늘 장을 준비하세요." },
-    { icon: <Layers className="w-4 h-4" />, color: "#d4af37", step: "REPORT", title: "Investus 리포트 — 최고투자책임자의 시각", desc: "SUNRYU Partners CIO가 직접 분석한 리포트를 인사이트 탭에서 확인하세요. 단순 뉴스 요약이 아닌, 투자 판단에 직결되는 핵심 분석입니다." },
+    { icon: <Layers className="w-4 h-4" />, color: "var(--mint)", step: "REPORT", title: "Investus 리포트 — 최고투자책임자의 시각", desc: "SUNRYU Partners CIO가 직접 분석한 리포트를 인사이트 탭에서 확인하세요. 단순 뉴스 요약이 아닌, 투자 판단에 직결되는 핵심 분석입니다." },
     { icon: <BookOpen className="w-4 h-4" />, color: "#60a5fa", step: "STUDY", title: "추천 책 — 투자 기준 확립", desc: "흔들리지 않는 투자를 하려면 나만의 기준이 필요합니다. Investus가 엄선한 책들로 투자의 철학과 원칙을 다지세요." },
     { icon: <PlayCircle className="w-4 h-4" />, color: "#ef4444", step: "WATCH", title: "추천 유튜브 — 시장 분석 심화", desc: "신뢰할 수 있는 채널을 통해 시장 흐름을 추가로 파악하세요. 좋은 채널 하나가 수백 개의 노이즈를 대신합니다." },
   ] : [
     { icon: <TrendingUp className="w-4 h-4" />, color: "#10b981", step: "DAILY", title: "Home — 5 minutes every morning", desc: "Futures, indices, forex, Fear & Greed, Buffett Indicator, and sector heatmap — the Home tab gives you a complete picture of the last session and helps you prep for today." },
-    { icon: <Layers className="w-4 h-4" />, color: "#d4af37", step: "REPORT", title: "Investus Reports — CIO Perspective", desc: "Read reports directly analyzed by the SUNRYU Partners CIO in the Insights tab. Not just news summaries — core analysis that directly informs investment decisions." },
+    { icon: <Layers className="w-4 h-4" />, color: "var(--mint)", step: "REPORT", title: "Investus Reports — CIO Perspective", desc: "Read reports directly analyzed by the SUNRYU Partners CIO in the Insights tab. Not just news summaries — core analysis that directly informs investment decisions." },
     { icon: <BookOpen className="w-4 h-4" />, color: "#60a5fa", step: "STUDY", title: "Recommended Books — Build Your Framework", desc: "Sound investing requires a personal framework. Build your investment philosophy with books curated by Investus." },
     { icon: <PlayCircle className="w-4 h-4" />, color: "#ef4444", step: "WATCH", title: "Recommended YouTube — Go Deeper", desc: "Follow trusted channels to supplement your market analysis. One good channel beats hundreds of noisy sources." },
   ];

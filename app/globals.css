@@ -17,63 +17,62 @@ vercel-toolbar,
 }
 
 /*
-  Investus theme tokens
-  - Default = light
-  - data-theme="dark" = 다크
-  - --mint = 브랜드 골드 (CTA·로고)
-  - --navy = 네이비 포인트
+  Investus theme tokens — 골드 × 네이비 × 잉크블랙
+  - --mint  = 앤티크 골드 (CTA·활성·로고 배경)
+  - --navy  = 옥스포드 네이비 (워드마크·강조 텍스트)
+  - --on-accent / --text = 로고 차트와 같은 잉크 블랙
   - --up / --down = 미국주식 관례 (상승 초록 · 하락 빨강)
 */
 :root {
   color-scheme: light;
-  --bg: #f7f8fa;
+  --bg: #f3f4f7;
   --card: #ffffff;
-  --border: #d8dde8;
-  --mint: #b8962e;
-  --mint-rgb: 184, 150, 46;
-  --navy: #152238;
-  --navy-rgb: 21, 34, 56;
+  --border: #d5dbe6;
+  --mint: #b38f38;
+  --mint-rgb: 179, 143, 56;
+  --navy: #10203c;
+  --navy-rgb: 16, 32, 60;
   --up: #16a34a;
   --up-rgb: 22, 163, 74;
   --down: #dc2626;
   --down-rgb: 220, 38, 38;
   --analyst: #7c3aed;
   --analyst-rgb: 124, 58, 237;
-  --text: #0b1220;
-  --muted: #3f4b63;
-  --muted-2: #eef1f6;
-  --on-accent: #152238;
+  --text: #0a0c10;
+  --muted: #4e596b;
+  --muted-2: #eef1f5;
+  --on-accent: #0a0c10;
   --ad-surface: #ffffff;
   --ad-border: #e2e6ee;
   --header-bg: #ffffff;
   --elevated: #ffffff;
-  --sidebar-label: #1a2438;
+  --sidebar-label: #1c2a44;
 }
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0b0c0e;
-  --card: #14161a;
-  --border: #1e2330;
-  --mint: #d4af37;
-  --mint-rgb: 212, 175, 55;
-  --navy: #a8b8d8;
-  --navy-rgb: 168, 184, 216;
+  --bg: #07090e;
+  --card: #10141c;
+  --border: #1c2433;
+  --mint: #d4b56a;
+  --mint-rgb: 212, 181, 106;
+  --navy: #c8d0e0;
+  --navy-rgb: 200, 208, 224;
   --up: #22c55e;
   --up-rgb: 34, 197, 94;
   --down: #ef4444;
   --down-rgb: 239, 68, 68;
   --analyst: #8b5cf6;
   --analyst-rgb: 139, 92, 246;
-  --text: #f5f6f8;
-  --muted: #a8b0bc;
-  --muted-2: #252830;
-  --on-accent: #0b0c0e;
-  --ad-surface: #1a1d24;
-  --ad-border: #2a303c;
-  --header-bg: #0b0c0e;
-  --elevated: #181b21;
-  --sidebar-label: #e8ecf4;
+  --text: #f3f0e8;
+  --muted: #9aa3b5;
+  --muted-2: #1a2030;
+  --on-accent: #0a0c10;
+  --ad-surface: #141824;
+  --ad-border: #252c3c;
+  --header-bg: #07090e;
+  --elevated: #161b26;
+  --sidebar-label: #e6eaf2;
 }
 
 html {

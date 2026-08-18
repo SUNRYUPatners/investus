@@ -21,7 +21,7 @@ const COURSE = {
   badge: "VIP 전용",
   desc: "CIO와 1:1로만 진행합니다. 수강생 일정에 맞춰 수업 시간을 조율하며, 실계좌 성장 과정과 그 기반이 된 투자 원칙·노하우를 교육 목적으로 전달합니다.",
   details: ["1:1 VIP 전용", "고객 맞춤 일정", "CIO 직접 지도", "수강료 99만원"],
-  detailColor: "#d4af37",
+  detailColor: "var(--mint)",
 };
 
 const PORTFOLIO = [
@@ -90,8 +90,8 @@ export default function EducationPage() {
   if (step === "success") {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-6 gap-6 pb-safe" style={{ background: "var(--bg)" }}>
-        <div className="w-20 h-20 rounded-full flex items-center justify-center" style={{ background: "rgba(212,175,55,0.15)" }}>
-          <CheckCircle className="w-10 h-10" style={{ color: "#d4af37" }} />
+        <div className="w-20 h-20 rounded-full flex items-center justify-center" style={{ background: "rgba(var(--mint-rgb),0.15)" }}>
+          <CheckCircle className="w-10 h-10" style={{ color: "var(--mint)" }} />
         </div>
         <div className="text-center">
           <p className="text-lg font-bold font-syne mb-1" style={{ color: "var(--text)" }}>{ed.successTitle}</p>
@@ -125,11 +125,11 @@ export default function EducationPage() {
 
   const heroJSX = (
     <div className="rounded-2xl px-5 py-6 mb-6 relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #1c1500 0%, #0d0b00 60%, #0a0c10 100%)", border: "1px solid rgba(212,175,55,0.3)" }}>
+        style={{ background: "linear-gradient(135deg, #10203c 0%, #0a0c10 60%, #07090e 100%)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}>
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(circle at 80% 20%, rgba(212,175,55,0.1) 0%, transparent 60%)" }} />
+        style={{ background: "radial-gradient(circle at 80% 20%, rgba(var(--mint-rgb),0.1) 0%, transparent 60%)" }} />
       <div className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-3"
-        style={{ background: "rgba(212,175,55,0.18)", color: "#d4af37" }}>
+        style={{ background: "rgba(var(--mint-rgb),0.18)", color: "var(--mint)" }}>
         {ed.badge}
       </div>
       <h1 className="text-xl font-bold font-syne mb-2" style={{ color: "#f5f6f8" }}>
@@ -146,14 +146,14 @@ export default function EducationPage() {
   );
 
   const cioJSX = (
-    <div className="mb-6 rounded-2xl border overflow-hidden" style={{ borderColor: "rgba(212,175,55,0.3)" }}>
+    <div className="mb-6 rounded-2xl border overflow-hidden" style={{ borderColor: "rgba(var(--mint-rgb),0.3)" }}>
       <div className="px-5 py-4 border-b"
         style={{ borderColor: "var(--border)", background: "linear-gradient(135deg, #1c1500 0%, #0a0c10 100%)" }}>
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-            style={{ background: "rgba(212,175,55,0.15)", border: "1px solid rgba(212,175,55,0.3)" }}>🎯</div>
+            style={{ background: "rgba(var(--mint-rgb),0.15)", border: "1px solid rgba(var(--mint-rgb),0.3)" }}>🎯</div>
           <div>
-            <p className="text-[10px] font-bold" style={{ color: "#d4af37" }}>SUNRYU Partners CIO</p>
+            <p className="text-[10px] font-bold" style={{ color: "var(--mint)" }}>SUNRYU Partners CIO</p>
             <p className="text-base font-bold font-syne" style={{ color: "#f5f6f8" }}>류현우</p>
             <p className="text-[11px]" style={{ color: "rgba(255,255,255,0.7)" }}>미국주식 투자 전략가 · 포트폴리오 매니저</p>
           </div>
@@ -163,7 +163,7 @@ export default function EducationPage() {
         {[
           { value: "+103.69%", label: "실계좌 전체 총 수익률", color: "#4ade80" },
           { value: "0개",       label: "손실 종목",             color: "#4ade80" },
-          { value: "수억 원대", label: "운용 금액",             color: "#d4af37" },
+          { value: "수억 원대", label: "운용 금액",             color: "var(--mint)" },
         ].map((stat, i) => (
           <div key={stat.label} className="py-4 text-center"
             style={{ borderLeft: i > 0 ? "1px solid var(--border)" : undefined }}>
@@ -196,7 +196,7 @@ export default function EducationPage() {
   /* ── 수업 일정 (고객 맞춤) ── */
   const scheduleJSX = (
     <div className="mb-6">
-      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "#d4af37" }}>
+      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "var(--mint)" }}>
         {ed.scheduleTitle}
       </p>
       <p className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
@@ -231,7 +231,7 @@ export default function EducationPage() {
   /* ── 수업 흐름 ── */
   const flowJSX = (
     <div className="mb-6">
-      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "#d4af37" }}>
+      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "var(--mint)" }}>
         {ed.flowTitle}
       </p>
       <p className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
@@ -244,7 +244,7 @@ export default function EducationPage() {
         {ed.steps.map((s) => (
           <div key={s.step} className="rounded-xl p-3.5 border"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-            <p className="text-[9px] font-bold mb-1.5 font-syne" style={{ color: "#d4af37" }}>{s.step}</p>
+            <p className="text-[9px] font-bold mb-1.5 font-syne" style={{ color: "var(--mint)" }}>{s.step}</p>
             <p className="text-[12px] font-semibold mb-1" style={{ color: "var(--text)" }}>{s.title}</p>
             <p className="text-[10px] leading-snug" style={{ color: "var(--muted)" }}>{s.desc}</p>
           </div>
@@ -256,7 +256,7 @@ export default function EducationPage() {
   /* ── 일정 변경 ── */
   const makeupJSX = (
     <div className="mb-6">
-      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "#d4af37" }}>
+      <p className="text-[10px] font-semibold tracking-widest uppercase mb-1 font-syne" style={{ color: "var(--mint)" }}>
         {ed.makeupTitle}
       </p>
       <p className="text-xl font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
@@ -334,7 +334,7 @@ export default function EducationPage() {
               className="w-full flex items-center justify-between px-4 py-3.5">
               <div className="flex items-center gap-3 text-left">
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded-full flex-shrink-0"
-                  style={{ background: "rgba(212,175,55,0.15)", color: "#d4af37" }}>{c.week}</span>
+                  style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>{c.week}</span>
                 <span className="text-sm font-semibold" style={{ color: "var(--text)" }}>{c.title}</span>
               </div>
               <ChevronDown className="w-4 h-4 flex-shrink-0 transition-transform"
@@ -344,7 +344,7 @@ export default function EducationPage() {
               <div className="px-4 pb-3.5">
                 {c.items.map((item) => (
                   <div key={item} className="flex items-start gap-2 py-1">
-                    <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: "#d4af37" }} />
+                    <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: "var(--mint)" }} />
                     <p className="text-[12px]" style={{ color: "var(--muted)" }}>{item}</p>
                   </div>
                 ))}
@@ -436,9 +436,9 @@ export default function EducationPage() {
           return (
             <button key={f.id} onClick={() => setFormat(f.id as "online" | "offline")}
               className="rounded-2xl p-4 border text-left transition-all"
-              style={sel ? { background: "rgba(212,175,55,0.12)", borderColor: "#d4af37" } : { background: "var(--card)", borderColor: "var(--border)" }}>
+              style={sel ? { background: "rgba(var(--mint-rgb),0.12)", borderColor: "var(--mint)" } : { background: "var(--card)", borderColor: "var(--border)" }}>
               <span className="text-2xl block mb-2">{f.emoji}</span>
-              <p className="text-sm font-bold mb-0.5" style={{ color: sel ? "#d4af37" : "var(--text)" }}>{f.label}</p>
+              <p className="text-sm font-bold mb-0.5" style={{ color: sel ? "var(--mint)" : "var(--text)" }}>{f.label}</p>
               <p className="text-[10px] leading-snug" style={{ color: "var(--muted)" }}>{f.desc}</p>
             </button>
           );
@@ -453,7 +453,7 @@ export default function EducationPage() {
         <div key={h.label} className="rounded-xl p-3.5 border flex items-center gap-3"
           style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "rgba(212,175,55,0.12)", color: "#d4af37" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
             {HIGHLIGHT_ICONS[i]}
           </div>
           <div>
@@ -488,7 +488,7 @@ export default function EducationPage() {
               <button key={a} onClick={() => setAgeRange(ageRange === a ? "" : a)}
                 className="py-2.5 rounded-xl border text-xs font-medium transition-all"
                 style={ageRange === a
-                  ? { background: "rgba(212,175,55,0.18)", borderColor: "#d4af37", color: "#d4af37" }
+                  ? { background: "rgba(var(--mint-rgb),0.18)", borderColor: "var(--mint)", color: "var(--mint)" }
                   : { background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}>
                 {a}
               </button>
@@ -502,7 +502,7 @@ export default function EducationPage() {
               <button key={l} onClick={() => setLevel(l)}
                 className="py-2.5 rounded-xl border text-xs font-medium transition-all"
                 style={level === l
-                  ? { background: "rgba(212,175,55,0.18)", borderColor: "#d4af37", color: "#d4af37" }
+                  ? { background: "rgba(var(--mint-rgb),0.18)", borderColor: "var(--mint)", color: "var(--mint)" }
                   : { background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}>
                 {l}
               </button>
@@ -516,7 +516,7 @@ export default function EducationPage() {
               <button key={ts} onClick={() => setTimeSlot(timeSlot === ts ? "" : ts)}
                 className="py-2.5 rounded-xl border text-xs font-medium transition-all text-left px-3"
                 style={timeSlot === ts
-                  ? { background: "rgba(212,175,55,0.18)", borderColor: "#d4af37", color: "#d4af37" }
+                  ? { background: "rgba(var(--mint-rgb),0.18)", borderColor: "var(--mint)", color: "var(--mint)" }
                   : { background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}>
                 {ts}
               </button>
@@ -530,7 +530,7 @@ export default function EducationPage() {
               <button key={a} onClick={() => setAmount(amount === a ? "" : a)}
                 className="py-2.5 rounded-xl border text-xs font-medium transition-all"
                 style={amount === a
-                  ? { background: "rgba(212,175,55,0.18)", borderColor: "#d4af37", color: "#d4af37" }
+                  ? { background: "rgba(var(--mint-rgb),0.18)", borderColor: "var(--mint)", color: "var(--mint)" }
                   : { background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}>
                 {a}
               </button>
@@ -565,9 +565,9 @@ export default function EducationPage() {
       <button onClick={handleSubmit} disabled={submitting}
         className="w-full py-4 rounded-2xl text-base font-bold active:opacity-80 transition-opacity disabled:opacity-60"
         style={{
-          background: "linear-gradient(135deg, #b8960c, #d4af37)",
+          background: "linear-gradient(135deg, var(--navy), var(--mint))",
           color: "#000",
-          boxShadow: "0 4px 24px #d4af3755",
+          boxShadow: "0 4px 24px var(--mint)55",
         }}>
         {submitting ? ed.submitting : ed.submit}
       </button>
@@ -600,7 +600,7 @@ export default function EducationPage() {
         <div className="mt-2 mb-4 flex items-center gap-3">
           <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
           <span className="text-[11px] font-bold tracking-widest font-syne px-3 py-1 rounded-full"
-            style={{ background: "rgba(212,175,55,0.12)", color: "#d4af37" }}>수강 신청</span>
+            style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>수강 신청</span>
           <div className="flex-1 h-px" style={{ background: "var(--border)" }} />
         </div>
         {courseTypesJSX}

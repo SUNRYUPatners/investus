@@ -6,8 +6,9 @@ export const alt         = "Investus 인베스트어스 — 미국주식 투자 
 export const size        = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const GOLD = "#c4a035";
-const NAVY = "#1b2a4a";
+const GOLD = "#b38f38";
+const NAVY = "#10203c";
+const INK  = "#0a0c10";
 
 export default function OgImage() {
   return new ImageResponse(
@@ -16,7 +17,7 @@ export default function OgImage() {
         style={{
           width: "1200px",
           height: "630px",
-          background: "#f4f5f8",
+          background: "#f3f4f7",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -31,7 +32,7 @@ export default function OgImage() {
           width: "600px",
           height: "600px",
           borderRadius: "50%",
-          background: `radial-gradient(circle, rgba(196,160,53,0.12) 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(179,143,56,0.14) 0%, transparent 70%)`,
           top: "-100px",
           left: "-100px",
           display: "flex",
@@ -41,7 +42,7 @@ export default function OgImage() {
           width: "500px",
           height: "500px",
           borderRadius: "50%",
-          background: `radial-gradient(circle, rgba(27,42,74,0.08) 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(16,32,60,0.10) 0%, transparent 70%)`,
           bottom: "-100px",
           right: "-80px",
           display: "flex",
@@ -58,8 +59,8 @@ export default function OgImage() {
             justifyContent: "center",
           }}>
             <svg width="58" height="58" viewBox="0 0 24 24" fill="none">
-              <polyline points="3,17 9,11 13,15 21,7" stroke={NAVY} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              <polyline points="15,7 21,7 21,13" stroke={NAVY} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <polyline points="3,17 9,11 13,15 21,7" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <polyline points="15,7 21,7 21,13" stroke={INK} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
 
@@ -105,8 +106,8 @@ export default function OgImage() {
               style={{
                 padding: "8px 18px",
                 borderRadius: "999px",
-                background: "rgba(196,160,53,0.1)",
-                border: "1px solid rgba(196,160,53,0.28)",
+                background: "rgba(179,143,56,0.12)",
+                border: "1px solid rgba(179,143,56,0.32)",
                 color: NAVY,
                 fontSize: "20px",
               }}

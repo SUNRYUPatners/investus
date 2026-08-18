@@ -50,16 +50,16 @@ export function ReportUpdateBanner() {
         }}
       >
         {/* Accent top bar */}
-        <div style={{ height: "3px", background: "linear-gradient(90deg, #60a5fa, var(--mint))" }} />
+        <div style={{ height: "3px", background: "linear-gradient(90deg, var(--navy), var(--mint))" }} />
 
         <div className="px-5 pt-5 pb-5">
           {/* Header row */}
           <div className="flex items-start gap-3 mb-4">
             <div
               className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center"
-              style={{ background: "rgba(96,165,250,0.15)" }}
+              style={{ background: "rgba(var(--navy-rgb),0.12)" }}
             >
-              <FileText className="w-5 h-5" style={{ color: "#60a5fa" }} />
+              <FileText className="w-5 h-5" style={{ color: "var(--navy)" }} />
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>

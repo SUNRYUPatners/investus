@@ -55,8 +55,8 @@ export async function POST(req: NextRequest) {
         to:   ["sunryupatners@gmail.com"],
         subject: `[Investus] 수강 신청 — ${name.trim()}`,
         html: `
-          <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;background:#0a0c10;color:#e5e7eb;border-radius:12px">
-            <h2 style="color:#d4af37;margin-top:0">📚 새 수강 신청이 들어왔습니다</h2>
+          <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;background:#07090e;color:#f3f0e8;border-radius:12px">
+            <h2 style="color:#b38f38;margin-top:0">📚 새 수강 신청이 들어왔습니다</h2>
             <table style="width:100%;border-collapse:collapse;font-size:14px">
               <tr><td style="padding:8px 0;color:#9ca3af;width:80px">이름</td><td style="padding:8px 0;color:#e5e7eb;font-weight:bold">${name.trim()}</td></tr>
               <tr><td style="padding:8px 0;color:#9ca3af">연락처</td><td style="padding:8px 0;color:#e5e7eb">${phone.trim()}</td></tr>
@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
             <hr style="border:none;border-top:1px solid #1e2028;margin:20px 0"/>
             <p style="font-size:12px;color:#6b7280;margin:0">
               신청자 목록 전체 보기 →
-              <a href="https://investus.kr/admin/applications" style="color:#d4af37">investus.kr/admin/applications</a>
+              <a href="https://investus.kr/admin/applications" style="color:#b38f38">investus.kr/admin/applications</a>
             </p>
           </div>
         `,

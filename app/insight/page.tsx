@@ -34,7 +34,7 @@ export default async function InsightPage() {
     >
       <div
         className="relative px-4 py-4 flex items-center gap-3"
-        style={{ background: "linear-gradient(135deg, #001a12 0%, #0d0b00 60%, #0a0c10 100%)" }}
+        style={{ background: "linear-gradient(135deg, #10203c 0%, #0a0c10 60%, #07090e 100%)" }}
       >
         <div className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(circle at 75% 50%, rgba(var(--mint-rgb),0.08) 0%, transparent 55%)" }} />
@@ -72,8 +72,8 @@ export default async function InsightPage() {
     <>
       <style>{`
         @keyframes edu-border-glow {
-          0%, 100% { box-shadow: 0 0 0 1px rgba(212,175,55,0.3), 0 0 18px rgba(212,175,55,0.08); }
-          50%       { box-shadow: 0 0 0 1px rgba(212,175,55,0.9), 0 0 32px rgba(212,175,55,0.35); }
+          0%, 100% { box-shadow: 0 0 0 1px rgba(179,143,56,0.3), 0 0 18px rgba(179,143,56,0.08); }
+          50%       { box-shadow: 0 0 0 1px rgba(179,143,56,0.9), 0 0 32px rgba(179,143,56,0.35); }
         }
         @keyframes edu-sweep {
           0%   { left: -80%; }
@@ -83,7 +83,7 @@ export default async function InsightPage() {
         .edu-sweep-line {
           position: absolute; top: 0; left: -80%;
           width: 55%; height: 100%;
-          background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.09) 50%, transparent 100%);
+          background: linear-gradient(90deg, transparent 0%, rgba(179,143,56,0.09) 50%, transparent 100%);
           animation: edu-sweep 3.2s ease-in-out infinite;
           pointer-events: none;
         }
@@ -91,30 +91,30 @@ export default async function InsightPage() {
       <Link
         href="/education"
         className="block rounded-2xl overflow-hidden border edu-banner-glow active:opacity-90 transition-opacity"
-        style={{ borderColor: "rgba(212,175,55,0.3)" }}
+        style={{ borderColor: "rgba(var(--mint-rgb),0.3)" }}
       >
       <div
         className="relative px-5 py-5 flex items-center gap-4 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #1c1500 0%, #0d0b00 60%, #0a0c10 100%)" }}
+        style={{ background: "linear-gradient(135deg, #10203c 0%, #0a0c10 60%, #07090e 100%)" }}
       >
         <div className="edu-sweep-line" />
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(circle at 80% 50%, rgba(212,175,55,0.1) 0%, transparent 60%)" }} />
+          style={{ background: "radial-gradient(circle at 80% 50%, rgba(var(--mint-rgb),0.12) 0%, transparent 60%)" }} />
         <div className="relative w-[68px] h-[68px] rounded-2xl flex-shrink-0 flex items-center justify-center shadow-lg"
-          style={{ background: "linear-gradient(145deg, #2a1f00, #1a1400)", border: "1px solid rgba(212,175,55,0.4)", boxShadow: "0 8px 24px rgba(212,175,55,0.2)" }}>
+          style={{ background: "linear-gradient(145deg, #1a2744, #0a0c10)", border: "1px solid rgba(var(--mint-rgb),0.4)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.2)" }}>
           <span className="text-3xl">🎓</span>
         </div>
         <div className="flex-1 min-w-0">
           <div className="inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full mb-2"
-            style={{ background: "rgba(212,175,55,0.18)", color: "#d4af37" }}>
+            style={{ background: "rgba(var(--mint-rgb),0.18)", color: "var(--mint)" }}>
             {t.exclusiveClass}
           </div>
           <p className="text-sm font-bold leading-snug mb-1" style={{ color: "#f5f6f8" }}>{t.courseTitle}</p>
           <p className="text-[11px] mb-2.5" style={{ color: "rgba(255,255,255,0.72)" }}>{t.courseSub}</p>
           <div className="flex items-center justify-between">
-            <p className="text-xs" style={{ color: "#e8c84a" }}>{t.limitedSpots}</p>
+            <p className="text-xs" style={{ color: "var(--mint)" }}>{t.limitedSpots}</p>
             <span className="text-[11px] font-bold px-3 py-1.5 rounded-full"
-              style={{ background: "linear-gradient(135deg, #d4af37, #f0d78c)", color: "#152238" }}>
+              style={{ background: "linear-gradient(135deg, var(--mint), #d4b56a)", color: "var(--on-accent)" }}>
               {t.apply}
             </span>
           </div>
