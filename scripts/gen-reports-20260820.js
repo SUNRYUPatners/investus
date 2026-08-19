@@ -259,14 +259,14 @@ const T=[
 
 // 9. Tesla Cybertruck 8/23 launch + Robotaxi FSD unsupervised ready
 {file:'tesla-cybertruck-823-launch-robotaxi-fsd-unsupervised',symbol:'TSLA',
- ko:{title:'Tesla Cybertruck 8월 23일 launch·Robotaxi FSD unsupervised 준비 완료·5개 이상 새 도시 8/23 전 배치·5개 이상 새 도시 9/25 전 추가',heroIcon:'🚕',heroBig:'8/23',heroSub:'Tesla Cybertruck launch가 8월 23일에 열리며, Robotaxi 함대 확장이 FSD unsupervised가 준비 완료됐음을 신호한다. 5개 이상의 새 도시에 8월 23일 이전 배치 예정이고, 추가로 5개 이상 도시에 9월 25일 이전 배치 예정이다.',
-  cards:[{icon:'🚕',big:'8/23',mid:'Cybertruck launch',sub:'날짜 확정'},{icon:'🤖',big:'FSD unsupervised',mid:'준비 완료 신호',sub:'Robotaxi 확장'},{icon:'📅',big:'10+ 도시',mid:'8/23·9/25 전 배치',sub:'실 상용 확장'}],
-  quote:'"Cybertruck launch가 8월 23일 확정이며, Robotaxi 함대 확장은 FSD unsupervised가 준비 완료됐음을 신호한다. 5개 이상 새 도시에 8월 23일 이전 배치·5개 이상 도시에 9월 25일 이전 추가 배치 예정이다."',
-  noteHead:'왜 중요한가',noteSub:'8/19 Cybercab launch 이번 달 안 Austin·8/17 Robotaxi 200일 무사고와 결합해 실 상용 배치가 급속 확장된다. 실 매출 반영 시점이다.',footer:'TSLA · Cybertruck 8/23 · Robotaxi 확장',brand:BK},
- en:{title:'Tesla Cybertruck Launches August 23 · Robotaxi FSD Unsupervised Ready · 5+ New Cities Before 8/23 · 5+ More Before 9/25',heroIcon:'🚕',heroBig:'AUG 23',heroSub:'Tesla Cybertruck launch is set for August 23. Robotaxi fleet expansion signals FSD unsupervised is ready. 5+ new cities will be deployed before August 23 · another 5+ cities before September 25.',
-  cards:[{icon:'🚕',big:'Aug 23',mid:'Cybertruck launch',sub:'Date confirmed'},{icon:'🤖',big:'FSD unsupervised',mid:'Ready signal',sub:'Robotaxi expansion'},{icon:'📅',big:'10+ cities',mid:'Before 8/23 & 9/25',sub:'Real commercial expansion'}],
-  quote:'"Cybertruck launch is set for August 23. Robotaxi fleet expansion signals that FSD unsupervised is ready. 5+ new cities will be deployed before August 23 and 5+ more cities before September 25."',
-  noteHead:'Why this matters',noteSub:'Combined with 8/19 Cybercab public launch in Austin this month and 8/17 Robotaxi 200-day incident-free, real commercial deployment expands rapidly. Real revenue reflection timing.',footer:'TSLA · Cybertruck 8/23 · Robotaxi expansion',brand:BE}},
+ ko:{title:'Tesla Cybercab 공개 launch 8월 23일·Robotaxi 함대 FSD unsupervised 준비 완료·5+ 새 도시 8/23 전·5+ 새 도시 9/25 전',heroIcon:'🚕',heroBig:'8/23',heroSub:'Tesla Cybercab의 공개 launch 이벤트가 8월 23일에 확정됐고, 이 이벤트가 FSD unsupervised가 준비 완료됐음을 신호한다. 5개 이상의 새 도시에 8월 23일 이전 배치 예정이고, 추가로 5개 이상 도시에 9월 25일 이전 배치 예정이다.',
+  cards:[{icon:'🚕',big:'8/23',mid:'Cybercab 공개 launch',sub:'날짜 확정 · 8/25 발표'},{icon:'🤖',big:'FSD unsupervised',mid:'준비 완료 신호',sub:'Robotaxi 확장'},{icon:'📅',big:'10+ 도시',mid:'8/23·9/25 전 배치',sub:'실 상용 확장'}],
+  quote:'"Cybercab 공개 launch 이벤트가 8월 23일 확정이며 Robotaxi 앱에서는 8/23 밤 11:59pm까지 라이드 완료 시 참여 가능하다. 당첨자는 8/25 발표. Robotaxi 함대 확장은 FSD unsupervised가 준비 완료됐음을 신호하며, 5개 이상 새 도시에 8/23 이전·5+ 도시에 9/25 이전 추가 배치 예정이다."',
+  noteHead:'왜 중요한가',noteSub:'Cybercab 공개 launch가 8/23 확정되면서 8/19 이번 달 안 Austin·8/17 Robotaxi 200일 무사고와 결합해 실 상용 배치가 급속 확장된다. 실 매출 반영 시점이다.',footer:'TSLA · Cybercab 8/23 · Robotaxi 확장',brand:BK},
+ en:{title:'Tesla Cybertruck Launches August 23 · Robotaxi FSD Unsupervised Ready · 5+ New Cities Before 8/23 · 5+ More Before 9/25',heroIcon:'🚕',heroBig:'AUG 23',heroSub:'Tesla Cybercab public launch event is confirmed for August 23. Robotaxi app requires rides completed by 11:59pm on 8/23; winners announced 8/25. Robotaxi fleet expansion signals FSD unsupervised is ready. 5+ new cities deployed before Aug 23 · 5+ more before Sep 25.',
+  cards:[{icon:'🚕',big:'Aug 23',mid:'Cybercab public launch',sub:'Confirmed · 8/25 announce'},{icon:'🤖',big:'FSD unsupervised',mid:'Ready signal',sub:'Robotaxi expansion'},{icon:'📅',big:'10+ cities',mid:'Before 8/23 & 9/25',sub:'Real commercial expansion'}],
+  quote:'"Cybercab public launch confirmed for August 23. Robotaxi app rides must be completed by 11:59pm on 8/23; winners announced 8/25. Robotaxi fleet expansion signals FSD unsupervised is ready. 5+ new cities before Aug 23 and 5+ more before September 25."',
+  noteHead:'Why this matters',noteSub:'Cybercab public launch confirmed for 8/23 combined with 8/19 Austin frame and 8/17 Robotaxi 200-day incident-free · real commercial deployment expands rapidly. Real revenue reflection timing.',footer:'TSLA · Cybercab 8/23 · Robotaxi expansion',brand:BE}},
 
 // 10. Musk Cybercab profit exceeds Uber+Lyft combined
 {file:'musk-cybercab-profit-exceeds-uber-lyft-combined',symbol:'TSLA',

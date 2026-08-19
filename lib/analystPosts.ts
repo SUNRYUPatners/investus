@@ -60,7 +60,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -829, alias: "여의도 매 #22", symbol: "TSLA",
-    content: "Tesla Cybertruck launch가 8월 23일에 확정됐다. Robotaxi 함대 확장이 FSD unsupervised가 준비 완료됐음을 신호하며, 5개 이상 새 도시에 8/23 이전, 다시 5개 이상 도시에 9/25 이전 배치 예정이다.",
+    content: "Tesla Cybercab 공개 launch가 8월 23일에 확정됐다. Robotaxi 함대 확장이 FSD unsupervised가 준비 완료됐음을 신호하며, 5개 이상 새 도시에 8/23 이전, 다시 5개 이상 도시에 9/25 이전 배치 예정이다.",
     likes: 3, comments: 3, created_at: "2026-08-20T00:60:00.000Z", liked: false,
   },
   {

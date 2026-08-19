@@ -128,7 +128,7 @@ export const MOCK_POSTS: Post[] = [
     content: "BLS가 이전 벤치마크 revision에서 100만 개 일자리 감산. 12개월 손실 처리. 재무부 20-30년 환매 준비",
     createdAt: T20AU + 64*60_000, likes: 5, comments: 0 },
   { id: 1027, symbol: "TSLA", nickname: "익명_2828", holdingLabel: "관심종목",
-    content: "Cybertruck 8월 23일 launch 확정! Robotaxi FSD unsupervised 준비 완료. 5+ 새 도시 8/23 전",
+    content: "Cybercab 8월 23일 공개 launch 확정! Robotaxi FSD unsupervised 준비 완료. 5+ 새 도시 8/23 전",
     createdAt: T20AU + 72*60_000, likes: 3, comments: 0 },
   { id: 1028, symbol: "TSLA", nickname: "익명_2929", holdingLabel: "관심종목",
     content: "Musk 왈: Cybercab 이익이 Uber+Lyft 합계 초과할 것. Tesla 12x 배수 재평가 요인",
