@@ -18,9 +18,11 @@ vercel-toolbar,
 
 /*
   Investus theme tokens — 포인트는 골드와 네이비만
-  - --mint       = 앤티크 골드 (CTA·활성·로고 배경)
-  - --navy       = 옥스포드 네이비 (워드마크·로고 차트·골드 위 글자)
-  - --on-accent  = 골드 위 네이비 (블랙 포인트 사용 안 함)
+  - --mint       = 앤티크 골드 (CTA·활성)
+  - --logo-bg    = 로고 아이콘 배경 (옥스포드 네이비)
+  - --logo-icon  = 로고 차트 화살표 (골드)
+  - --navy       = 워드마크 (라이트 네이비 · 다크 골드)
+  - --on-accent  = 골드 CTA 위 네이비 글자
   - --text       = 본문 글자 (블랙/아이보리, 포인트 아님)
   - --up / --down = 미국주식 관례 (상승 초록 · 하락 빨강)
 */
@@ -31,6 +33,9 @@ vercel-toolbar,
   --border: #d5dbe6;
   --mint: #b38f38;
   --mint-rgb: 179, 143, 56;
+  --logo-bg: #1a365d;
+  --logo-bg-rgb: 26, 54, 93;
+  --logo-icon: #b38f38;
   --navy: #1a365d;
   --navy-rgb: 26, 54, 93;
   --up: #16a34a;
@@ -57,6 +62,9 @@ html[data-theme="dark"] {
   --border: #243250;
   --mint: #d4b56a;
   --mint-rgb: 212, 181, 106;
+  --logo-bg: #1a365d;
+  --logo-bg-rgb: 26, 54, 93;
+  --logo-icon: #d4b56a;
   --navy: #d4b56a;
   --navy-rgb: 212, 181, 106;
   --up: #22c55e;

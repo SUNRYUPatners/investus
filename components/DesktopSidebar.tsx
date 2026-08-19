@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { TrendingUp } from "lucide-react";
+import { LogoMark } from "@/components/LogoMark";
 import { useLocale } from "@/contexts/LocaleContext";
 import { isMarketOpen } from "@/lib/marketHours";
 
@@ -55,10 +55,7 @@ export function DesktopSidebar() {
       {/* Logo */}
       <div className="px-5 py-5 border-b" style={{ borderColor: "var(--border)" }}>
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "var(--mint)" }}>
-            <TrendingUp className="w-4.5 h-4.5" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
-          </div>
+          <LogoMark size="md" />
           <div>
             <div className="text-base font-bold tracking-tight font-syne leading-tight"
               style={{ color: "var(--navy)" }}>

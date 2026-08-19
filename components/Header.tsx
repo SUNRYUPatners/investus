@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { TrendingUp } from "lucide-react";
+import { LogoMark } from "@/components/LogoMark";
 import { useLocale } from "@/contexts/LocaleContext";
 import { isMarketOpen } from "@/lib/marketHours";
 
@@ -45,12 +45,7 @@ export function Header() {
       <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
         {/* 로고 — 모바일만 표시 */}
         <div className="flex items-center gap-2 lg:hidden">
-          <div
-            className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-            style={{ background: "var(--mint)" }}
-          >
-            <TrendingUp className="w-4 h-4" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
-          </div>
+          <LogoMark size="sm" />
           <span
             className="text-lg font-bold tracking-tight font-syne"
             style={{ color: "var(--navy)" }}

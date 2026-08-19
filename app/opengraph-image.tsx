@@ -52,14 +52,14 @@ export default function OgImage() {
             width: "100px",
             height: "100px",
             borderRadius: "24px",
-            background: GOLD,
+            background: NAVY,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}>
             <svg width="58" height="58" viewBox="0 0 24 24" fill="none">
-              <polyline points="3,17 9,11 13,15 21,7" stroke={NAVY} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              <polyline points="15,7 21,7 21,13" stroke={NAVY} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <polyline points="3,17 9,11 13,15 21,7" stroke={GOLD} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <polyline points="15,7 21,7 21,13" stroke={GOLD} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
 

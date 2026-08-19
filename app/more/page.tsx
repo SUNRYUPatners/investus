@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { ChevronRight, LogOut, User, Mail, Lock, Eye, EyeOff, Pencil, X, Send, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
+import { ChevronRight, LogOut, User, Mail, Lock, Eye, EyeOff, Pencil, X, Send, CheckCircle2, Sparkles } from "lucide-react";
+import { LogoMark } from "@/components/LogoMark";
 import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
@@ -1053,10 +1054,7 @@ export default function MorePage() {
                   background: "linear-gradient(135deg, var(--card) 0%, rgba(var(--navy-rgb),0.06) 50%, rgba(var(--mint-rgb),0.1) 100%)",
                   borderColor: "rgba(var(--mint-rgb),0.3)",
                 }}>
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3"
-                  style={{ background: "var(--mint)" }}>
-                  <TrendingUp className="w-7 h-7" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
-                </div>
+                <LogoMark size="lg" className="mx-auto mb-3" />
                 <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--navy)" }}>Investus</p>
                 <p className="text-xs" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
                 <p className="text-[10px] mt-1 font-mono font-semibold" style={{ color: "var(--mint)" }}>investus.kr</p>
@@ -1141,10 +1139,7 @@ export default function MorePage() {
                 background: "linear-gradient(135deg, var(--card) 0%, rgba(var(--navy-rgb),0.06) 50%, rgba(var(--mint-rgb),0.1) 100%)",
                 borderColor: "rgba(var(--mint-rgb),0.3)",
               }}>
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3"
-                style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.25)" }}>
-                <TrendingUp className="w-8 h-8" style={{ color: "var(--on-accent)" }} strokeWidth={2.5} />
-              </div>
+              <LogoMark size="xl" className="mx-auto mb-3" shadow />
               <p className="text-base font-bold font-syne mb-1" style={{ color: "var(--navy)" }}>Investus</p>
               <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>{mo.tagline}</p>
               <p className="text-[10px] mt-2 font-mono font-semibold" style={{ color: "var(--mint)" }}>investus.kr</p>

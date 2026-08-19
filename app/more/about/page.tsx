@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/Header";
 import { ChevronLeft, BookOpen, PlayCircle, TrendingUp, Shield, Layers, AlertTriangle, Award } from "lucide-react";
+import { LogoMark } from "@/components/LogoMark";
 import Link from "next/link";
 import { useLocaleCode } from "@/contexts/LocaleContext";
 
@@ -90,10 +91,7 @@ export default function AboutPage() {
             style={{ background: "radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%)", transform: "translate(30%, 30%)" }} />
 
           <div className="relative flex items-center gap-3 mb-5">
-            <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-              style={{ background: "var(--mint)", boxShadow: "0 8px 24px rgba(var(--mint-rgb),0.35)" }}>
-              <TrendingUp className="w-7 h-7 text-black" strokeWidth={2.5} />
-            </div>
+            <LogoMark size="lg" shadow />
             <div>
               <p className="text-xl font-bold font-syne" style={{ color: "var(--text)" }}>Investus</p>
               <p className="text-[11px]" style={{ color: "var(--mint)" }}>Invest · US · Together</p>
