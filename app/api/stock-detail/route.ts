@@ -5,7 +5,7 @@ import {
   fetchFinnhubMetrics,
 } from "@/lib/finnhub";
 import { fetchBatchQuotes, fetchQuoteV8 } from "@/lib/yahooFinance";
-import { isMarketOpen } from "@/lib/marketHours";
+import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
 
@@ -62,8 +62,14 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  // 장 마감: 캐시 있으면 바로 서빙 (API 호출 없음)
-  if (!open && cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
+  // 장 마감: 직전 세션 종가(16:00 ET 이후) 캐시만 서빙
+  if (!open && cached) {
+    const fetchedAt = Number(cached.data._fetchedAt ?? cached.at ?? 0);
+    if (isEodCacheFresh(fetchedAt)) {
+      return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
+    }
+    cached = null;
+  }
   // 장 중: 60초 TTL 내 캐시면 바로 서빙
   if (cached && Date.now() - cached.at < LIVE_TTL) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
 

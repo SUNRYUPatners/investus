@@ -11,7 +11,7 @@ import type { IndexQuote, Quote, FutureItem } from "@/lib/api";
 import { RECOMMENDED_SYMBOLS } from "@/lib/api";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { SectionInfo } from "./SectionInfo";
-import { isMarketOpen } from "@/lib/marketHours";
+import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION, proPriceSummaryKo } from "@/lib/subscription";
 import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
@@ -106,10 +106,15 @@ export function LiveMarket() {
         const hasData = (d?.quotes?.length ?? 0) > 0 || (d?.indices?.length ?? 0) > 0;
         if (!hasData) throw new Error("empty");
 
-        // 장 중인데 데이터가 10분 이상 오래됐으면 CDN 스테일 → 캐시 우회로 1회 재요청.
-        // (장 마감 캐시가 개장 후까지 서빙되어 어제 종가가 보이던 문제 방어)
+        // 장 중: 10분 초과 스테일 → CDN 우회 재요청
         const dataAge = Date.now() - (d.liveAt ?? 0);
         if (!bustCdn && isMarketOpen() && dataAge > 10 * 60 * 1000) {
+          doLoad(false, retryDelay, true);
+          return;
+        }
+
+        // 장 마감: 마감 전 스냅샷(종가 아님)이면 즉시 재요청
+        if (!bustCdn && !isMarketOpen() && d.liveAt && !isEodCacheFresh(d.liveAt)) {
           doLoad(false, retryDelay, true);
           return;
         }

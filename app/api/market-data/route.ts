@@ -1,6 +1,6 @@
 import { NextResponse, after } from "next/server";
 import { fetchFinnhubBatch, fetchFinnhubRawQuote, type FinnhubRawQuote } from "@/lib/finnhub";
-import { fetchBatchQuotes, fetchFutureV8, fetchQuoteV8, type YFQuote } from "@/lib/yahooFinance";
+import { fetchBatchQuotes, fetchFutureV8, fetchQuoteV8, resolvePreviousClose, type YFQuote } from "@/lib/yahooFinance";
 
 // YF 프록시 (YF_PROXY_URL 설정 시 CF Worker 경유)
 const YF_PROXY = process.env.YF_PROXY_URL ?? "";
@@ -9,7 +9,7 @@ function yfProxyFetch(url: string, init: RequestInit = {}): Promise<Response> {
   return fetch(url, { headers: { "User-Agent": "Mozilla/5.0", Accept: "application/json" }, ...init });
 }
 import { fetchStooqFuture } from "@/lib/stooq";
-import { isMarketOpen, secondsUntilNextOpen } from "@/lib/marketHours";
+import { isMarketOpen, isEodCacheFresh, secondsUntilNextOpen } from "@/lib/marketHours";
 import { kvGetDetail, kvSetDetail, kvGetPrice, kvSetPrice } from "@/lib/kv";
 import {
   mockQuotes, mockFutures,
@@ -203,10 +203,12 @@ export async function GET(req: Request) {
     if (kvData) {
       const payload = kvData as unknown as CachePayload;
       const age = Date.now() - (payload.liveAt ?? 0);
-      // 장 마감: fresh로 복원. 장 중: liveAt=0으로 복원해 아래서 API 갱신 유도
-      // 단, 장 중 30분 초과 스테일 데이터는 즉시 갱신 필수 (가격 오차 방지)
       const staleForMarket = open && age > STALE_LIMIT;
-      _cache = { data: payload, at: staleForMarket ? 0 : (open ? 0 : Date.now()) };
+      const eodFresh = isEodCacheFresh(payload.liveAt ?? 0);
+      _cache = {
+        data: payload,
+        at: staleForMarket ? 0 : open ? 0 : eodFresh ? Date.now() : 0,
+      };
     }
   }
 
@@ -216,7 +218,8 @@ export async function GET(req: Request) {
   const MAX_CLOSED_AGE = 4 * 24 * 60 * 60_000; // 4일 (주말 + 여유)
   if (!open && !refresh && _cache) {
     const dataAge = Date.now() - (_cache.data.liveAt ?? 0);
-    if (dataAge < MAX_CLOSED_AGE) {
+    const eodFresh = isEodCacheFresh(_cache.data.liveAt ?? 0);
+    if (dataAge < MAX_CLOSED_AGE && eodFresh) {
       return NextResponse.json(_cache.data, {
         headers: {
           "Cache-Control": ccHeader,
@@ -225,7 +228,7 @@ export async function GET(req: Request) {
         },
       });
     }
-    _cache = null; // 4일 초과 → 강제 갱신
+    if (!eodFresh) _cache = null; // 장중 스냅샷·마감 전 캐시 → 강제 갱신
   }
   // 장 중: liveAt(실제 데이터 신선도) 기준 55초 TTL
   if (!refresh && _cache) {
@@ -248,11 +251,7 @@ export async function GET(req: Request) {
 
   const [yfStockQuotes, fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap] = await Promise.all([
     // YF v7 batch — Yahoo Finance 앱 종가와 일치하는 정확한 가격 소스
-    // 18s 캡: v7 실패 → v8 chunk fallback이 30s maxDuration 초과하는 것 방지
-    Promise.race([
-      fetchBatchQuotes(stockSymbols),
-      new Promise<YFQuote[]>((r) => setTimeout(() => r([]), 18_000)),
-    ]),
+    fetchBatchQuotes(stockSymbols),
     // Finnhub — ETF 프록시(지수·선물용)만 사용 (주식 가격은 YF v8로 통일)
     fetchFinnhubBatch([...ETF_PROXY_SYMS]),
     getForexRates(),
@@ -315,10 +314,9 @@ export async function GET(req: Request) {
           const meta   = result?.meta;
           if (!meta?.regularMarketPrice) return;
           const price  = Number(meta.regularMarketPrice);
-          const isOpen = meta.marketState === "REGULAR";
           const rawC: unknown[] = result?.indicators?.quote?.[0]?.close ?? [];
           const closes = rawC.filter((c): c is number => typeof c === "number" && c > 0);
-          const prev   = isOpen ? (closes.at(-1) ?? price) : (closes.at(-2) ?? closes.at(-1) ?? price);
+          const prev   = resolvePreviousClose(meta, closes);
           out.set(sym, { price, change: price - prev, changePercent: prev > 0 ? ((price - prev) / prev) * 100 : 0 });
         } catch { /* ignore */ }
       }));

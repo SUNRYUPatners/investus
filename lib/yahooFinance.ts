@@ -54,6 +54,46 @@ function yfFetch(url: string, init: RequestInit = {}): Promise<Response> {
   return fetch(url, { headers: yfHeaders(), ...init });
 }
 
+type YFMetaPrev = {
+  regularMarketPrice?: number;
+  chartPreviousClose?: number;
+  previousClose?: number;
+  regularMarketPreviousClose?: number;
+};
+
+/**
+ * v8 chart에서 일간 등락 기준 전일 종가.
+ * meta.chartPreviousClose 단독 사용은 range 불일치로 오차가 커서 closes 배열을 우선한다.
+ */
+export function resolvePreviousClose(meta: YFMetaPrev, closes: number[]): number {
+  const price = Number(meta.regularMarketPrice ?? 0);
+  if (closes.length === 0) {
+    const metaPrev = Number(
+      meta.chartPreviousClose ?? meta.previousClose ?? meta.regularMarketPreviousClose ?? 0,
+    );
+    return metaPrev > 0 ? metaPrev : price;
+  }
+
+  const lastBar = closes.at(-1)!;
+  const priorBar = closes.at(-2);
+
+  // 당일 일봉이 series에 반영됨 → 전일 종가는 직전 봉
+  if (price > 0 && priorBar != null && Math.abs(lastBar - price) / price < 0.003) {
+    return priorBar;
+  }
+
+  // 마감 직후: meta 가격만 갱신되고 당일 봉 미반영 → 마지막 봉이 전일 종가
+  if (price > 0 && Math.abs(lastBar - price) / price >= 0.003) {
+    return lastBar;
+  }
+
+  const metaPrev = Number(
+    meta.chartPreviousClose ?? meta.previousClose ?? meta.regularMarketPreviousClose ?? 0,
+  );
+  if (metaPrev > 0) return metaPrev;
+  return priorBar ?? lastBar ?? price;
+}
+
 // ── v8 Chart ─────────────────────────────────────────────────────────────────
 
 export async function fetchQuoteV8(symbol: string): Promise<YFQuote | null> {
@@ -71,21 +111,13 @@ export async function fetchQuoteV8(symbol: string): Promise<YFQuote | null> {
       if (!meta || meta.regularMarketPrice == null) continue;
 
       const price  = Number(meta.regularMarketPrice);
-      const isOpen = meta.marketState === "REGULAR";
-
-      // chartPreviousClose는 부정확 — closes 배열에서 직접 전날 종가 추출
-      // 장 마감: closes[-1]=당일종가, closes[-2]=전날종가
-      // 장 중:  closes[-1]=전날종가 (당일 캔들 미완성), regularMarketPrice=현재가
       const q0         = result?.indicators?.quote?.[0] ?? {};
       const rawCloses: unknown[] = q0.close ?? [];
       const rawOpens:  unknown[] = q0.open  ?? [];
       const closes = rawCloses.filter((c): c is number => typeof c === "number" && c > 0);
       const opens  = rawOpens.filter((o): o is number  => typeof o === "number" && o > 0);
 
-      const prev = isOpen
-        ? (closes.at(-1) ?? price)
-        : (closes.at(-2) ?? closes.at(-1) ?? price);
-
+      const prev = resolvePreviousClose(meta, closes);
       const change = price - prev;
 
       // open: meta field (장 중) → last valid bar open (장 마감) → null
@@ -224,12 +256,9 @@ export async function fetchFutureV8(
           const meta   = result?.meta;
           if (!meta?.regularMarketPrice) return null;
           const price  = Number(meta.regularMarketPrice);
-          const isOpen = meta.marketState === "REGULAR";
           const rawCloses: unknown[] = result?.indicators?.quote?.[0]?.close ?? [];
           const closes = rawCloses.filter((c): c is number => typeof c === "number" && c > 0);
-          const prev   = isOpen
-            ? (closes.at(-1) ?? price)
-            : (closes.at(-2) ?? closes.at(-1) ?? price);
+          const prev   = resolvePreviousClose(meta, closes);
           return {
             price,
             change:        price - prev,

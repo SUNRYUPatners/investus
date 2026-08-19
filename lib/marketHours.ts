@@ -113,3 +113,38 @@ export function isMarketOpen(): boolean {
   const mins = et.getHours() * 60 + et.getMinutes();
   return mins >= 9 * 60 + 30 && mins < 16 * 60;
 }
+
+function sessionCloseMsEt(ymd: string): number {
+  for (const offset of ["-04:00", "-05:00"] as const) {
+    const ms = Date.parse(`${ymd}T16:00:00${offset}`);
+    if (Number.isFinite(ms) && toETDateString(new Date(ms)) === ymd) return ms;
+  }
+  return Date.parse(`${ymd}T21:00:00Z`);
+}
+
+/** 직전 완료된 정규장 세션 16:00 ET (epoch ms). */
+export function lastSessionCloseMs(now = new Date()): number {
+  const et = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+  const pastCloseToday = et.getHours() * 60 + et.getMinutes() >= 16 * 60;
+
+  for (let back = pastCloseToday ? 0 : 1; back < 10; back++) {
+    const d = new Date(et);
+    d.setDate(d.getDate() - back);
+    const ymd = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    const dow = d.getDay();
+    if (dow === 0 || dow === 6 || NYSE_HOLIDAYS.has(ymd)) continue;
+    return sessionCloseMsEt(ymd);
+  }
+  return 0;
+}
+
+/**
+ * 장마감 후 서빙 가능한 EOD 캐시인지.
+ * 장중(16:00 ET 이전)에 저장된 스냅샷은 종가가 아니므로 무효.
+ */
+export function isEodCacheFresh(liveAt: number, now = new Date()): boolean {
+  if (!liveAt || liveAt <= 0) return false;
+  const closeMs = lastSessionCloseMs(now);
+  if (!closeMs) return false;
+  return liveAt >= closeMs - 120_000; // 크론 지연 2분 허용
+}
