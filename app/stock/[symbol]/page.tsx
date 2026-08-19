@@ -12,7 +12,7 @@ import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import type { NewsItem } from "@/lib/api";
 import { SEED_REPORTS, REPORT_TICKERS, CATEGORY_STYLE, CATEGORY_EMOJI } from "@/lib/reports";
 import type { Report } from "@/lib/reports";
-import { isMarketOpen as checkMarketOpen } from "@/lib/marketHours";
+import { isMarketOpen as checkMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { AnalystTargets } from "@/components/AnalystTargets";
 import { StockCommunity } from "@/components/StockCommunity";
@@ -415,9 +415,17 @@ export default function StockPage({
       const raw = localStorage.getItem("market-data-cache");
       if (!raw) return null;
       const md = JSON.parse(raw) as {
+        liveAt?: number;
         quotes?: { symbol: string; price: number; change: number; changePercent: number }[];
         indices?: { symbol: string; value: number; change: number; changePercent: number }[];
       };
+      const liveAt = md.liveAt ?? 0;
+      if (liveAt > 0) {
+        const fresh = isMarketOpen()
+          ? Date.now() - liveAt < 10 * 60 * 1000
+          : isEodCacheFresh(liveAt);
+        if (!fresh) return null;
+      }
       const q = md?.quotes?.find((q) => q.symbol === upper);
       if (q && q.price > 0) return { price: q.price, change: q.change, changePercent: q.changePercent };
       const idx = md?.indices?.find((i) => i.symbol === upper);

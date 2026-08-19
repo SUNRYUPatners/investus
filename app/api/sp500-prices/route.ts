@@ -74,7 +74,7 @@ const SECTORS: SectorDef[] = [
 ];
 
 // ── Server-side in-memory cache (60s during market, 30min off-hours) ─────────
-import { isMarketOpen } from "@/lib/marketHours";
+import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 
 type SectorResult = {
   isLive: boolean;
@@ -106,9 +106,11 @@ export async function GET() {
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=1800, stale-while-revalidate=86400";
 
-  // Serve from in-memory cache if fresh
+  // Serve from in-memory cache if fresh (장마감 후에는 EOD 이후 갱신분만)
   if (_cached && Date.now() - _cached.at < TTL) {
-    return NextResponse.json(_cached.data, { headers: { "Cache-Control": cc } });
+    if (open || isEodCacheFresh(_cached.at)) {
+      return NextResponse.json(_cached.data, { headers: { "Cache-Control": cc } });
+    }
   }
 
   const allSymbols = SECTORS.flatMap((s) => s.stocks.map((t) => t.symbol));

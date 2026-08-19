@@ -174,15 +174,16 @@ export function LiveMarket() {
   doLoadRef.current = doLoad;
 
   useEffect(() => {
-    // 1. 캐시를 즉시 표시 — 5분 이내 데이터만 사용 (오래된 캐시는 잘못된 가격 표시 방지)
+    // 1. 캐시를 즉시 표시 — 장중 5분 / 장마감 후 EOD(liveAt)만
     try {
       const cached = localStorage.getItem("market-data-cache");
       if (cached) {
         const parsed = JSON.parse(cached) as MarketData & { _ts?: number };
-        const ageMs = Date.now() - (parsed._ts ?? 0);
-        // 장 중 5분 / 마감 후 18시간(다음날 장 전까지 로컬 즉시 표시 — 서버 KV는 별도 갱신)
-        const FRESH_MS = isMarketOpen() ? 5 * 60 * 1000 : 18 * 60 * 60 * 1000;
-        if (ageMs < FRESH_MS && ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0)) {
+        const liveAt = parsed.liveAt ?? parsed._ts ?? 0;
+        const ok = isMarketOpen()
+          ? liveAt > 0 && Date.now() - liveAt < 10 * 60 * 1000
+          : isEodCacheFresh(liveAt);
+        if (ok && ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0)) {
           setData(parsed);
           setLoading(false);
         }

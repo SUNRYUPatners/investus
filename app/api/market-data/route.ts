@@ -421,9 +421,9 @@ export async function GET(req: Request) {
         );
         return buildStockQuote(mock, yf);
       }
-      // 2) KV persistent cache (전 거래일 종가 — YF 장애 시)
+      // 2) KV persistent cache (전 거래일 종가 — YF 장애 시, 마감 후 EOD만)
       const kv = await kvGetPrice(mock.symbol);
-      if (kv && kv.price > 0) {
+      if (kv && kv.price > 0 && (open || isEodCacheFresh(kv.at ?? 0))) {
         return buildStockQuote(mock, kv);
       }
       return null;

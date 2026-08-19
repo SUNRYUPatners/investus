@@ -7,7 +7,7 @@
  */
 
 import { fetchBatchQuotes, fetchQuoteV8, type YFQuote } from "@/lib/yahooFinance";
-import { isMarketOpen } from "@/lib/marketHours";
+import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 import { kvGetPrice, kvSetPrice, type PriceData } from "@/lib/kv";
 
 export type PriceEntry = { price: number; change: number; changePercent: number };
@@ -22,8 +22,8 @@ const CLOSED_KV_TTL = 23 * 60 * 60_000; // 23h — force YF v7 refresh once per 
 function getCached(sym: string, open: boolean): CacheEntry | null {
   const e = _cache.get(sym);
   if (!e) return null;
-  if (!open) return e;
-  return Date.now() - e.at < LIVE_TTL ? e : null;
+  if (open) return Date.now() - e.at < LIVE_TTL ? e : null;
+  return isEodCacheFresh(e.at) ? e : null;
 }
 
 function setCache(sym: string, data: PriceEntry): void {
@@ -78,11 +78,12 @@ export async function getPrices(
   const stillNeed: string[] = [];
   for (const { sym, d } of kvRows) {
     if (d && d.price > 0) {
-      const kvAge   = Date.now() - (d.at ?? 0);
-      const tooOld  = !open && kvAge > CLOSED_KV_TTL;
+      const kvAge    = Date.now() - (d.at ?? 0);
+      const eodFresh = isEodCacheFresh(d.at ?? 0);
+      const tooOld   = !open && (!eodFresh || kvAge > CLOSED_KV_TTL);
       result[sym] = { price: d.price, change: d.change, changePercent: d.changePercent };
       _cache.set(sym, { ...d, at: open || tooOld ? 0 : Date.now() });
-      if (open || tooOld) stillNeed.push(sym); // re-fetch when live or KV is stale
+      if (open || tooOld) stillNeed.push(sym);
     } else {
       stillNeed.push(sym);
     }
