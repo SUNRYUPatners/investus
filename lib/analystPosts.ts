@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-20 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
+  {
+    id: -821, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "일론 머스크가 팀 구성 원칙을 다시 밝혔다. 극도로 동기 있는 소수의 뛰어난 사람들이 평범하고 소극적으로 동기 있는 대규모 인원보다 훨씬 나은 성과를 낸다는 프레임이다. Tesla·SpaceX·xAI 인재 채용의 명확한 지향이다.",
+    likes: 4, comments: 3, created_at: "2026-08-20T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -822, alias: "강남 표범 #46", symbol: "MACRO",
+    content: "미국 재무부가 유동성 공급을 위해 국채 환매 규모를 대폭 확대하고 있다. 10-20년·20-30년 장기 채권 섹터에서 최소 두 배로 매입 확대되며 operation당 최대치가 20억에서 40억 달러 이상, 일부는 50억 달러까지 올라간다.",
+    likes: 14, comments: 0, created_at: "2026-08-20T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -823, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "xAI가 Memphis 남부에 100,000 GPU 규모의 대형 컴퓨트 클러스터를 세우고 있다. Mississippi 전력이 미국 평균 대비 5% 저렴한 것이 부지 선택의 축이었고, 이번 몇 주 안에 서비스 개시가 예정이다. 완공 시 세계 최대급 규모가 된다.",
+    likes: 14, comments: 0, created_at: "2026-08-20T00:18:00.000Z", liked: false,
+  },
+  {
+    id: -824, alias: "을지로 팔콘 #71", symbol: "NVDA",
+    content: "NVIDIA CEO 젠슨 황이 공개 발언에서 Musk의 AI 활용 능력을 최상위로 인정했다. NVIDIA는 xAI·Tesla FSD·SpaceX 컴퓨트의 최대 GPU 공급자다. 8/12 NVDA + SPCX 2,600억 GPU 딜의 배경 신뢰 요인이다.",
+    likes: 4, comments: 2, created_at: "2026-08-20T00:25:00.000Z", liked: false,
+  },
+  {
+    id: -825, alias: "광화문 늑대 #33", symbol: "TSLA",
+    content: "Giga Texas의 Cybertruck 팩토리에 100대 분량 보디쉘이 이미 준비돼 있다. 8월 하순 대량 unveil 이벤트를 위한 라인 준비가 완료 단계이며, 이 팩토리에서 Cybercab과 Model Y가 2027년부터 대량 생산으로 램프될 예정이다.",
+    likes: 12, comments: 2, created_at: "2026-08-20T00:32:00.000Z", liked: false,
+  },
+  {
+    id: -826, alias: "마포 올빼미 #24", symbol: "MACRO",
+    content: "국채 수익률이 다중 십년 최고 수준까지 오른 이후 미국 재무부가 국채 환매 사업을 대폭 확대하고 있다. 오래된 국채·덜 매매되는 국채가 대상이고, 목적은 국채 시장 유동성 개선과 장기 채권 이자 부담 축소다.",
+    likes: 11, comments: 1, created_at: "2026-08-20T00:39:00.000Z", liked: false,
+  },
+  {
+    id: -827, alias: "종로 매 #12", symbol: "MACRO",
+    content: "미국 노동자 21%가 상반기 업무에서 AI 도구를 성공적으로 사용했다는 관측이다. 2020년 대화형 챗봇 상용 launch 이후 가장 높은 채택률이고, 프로그래머·컴퓨팅·핵심 기술 그룹이 채택을 리드하고 있다.",
+    likes: 9, comments: 0, created_at: "2026-08-20T00:46:00.000Z", liked: false,
+  },
+  {
+    id: -828, alias: "부산 갈매기 #77", symbol: "MACRO",
+    content: "노동통계국이 이전 벤치마크 revision에서 100만 개 이상의 일자리를 감산했다. 지난 12개월 손실로 처리되며, 이 데이터를 근거로 재무부가 20-30년 섹터에서 최소 20억 달러 규모의 환매 operation을 준비 중이다.",
+    likes: 14, comments: 0, created_at: "2026-08-20T00:53:00.000Z", liked: false,
+  },
+  {
+    id: -829, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "Tesla Cybertruck launch가 8월 23일에 확정됐다. Robotaxi 함대 확장이 FSD unsupervised가 준비 완료됐음을 신호하며, 5개 이상 새 도시에 8/23 이전, 다시 5개 이상 도시에 9/25 이전 배치 예정이다.",
+    likes: 3, comments: 3, created_at: "2026-08-20T00:60:00.000Z", liked: false,
+  },
+  {
+    id: -830, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "Musk가 Tesla Cybercab의 이익 규모가 Uber와 Lyft가 합쳐서 만든 이익을 넘어설 것이라고 밝혔다. Robotaxi가 몇 년 안에 실적 컨트리뷰터로 자리 잡으며 Tesla 12x forward 배수를 재평가하는 요인이 된다는 프레임이다.",
+    likes: 4, comments: 0, created_at: "2026-08-20T00:67:00.000Z", liked: false,
+  },
+  {
+    id: -831, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "Starlink가 궤도 위성 총 11,003대를 넘어섰다. 2018년 46대로 시작한 발사가 매년 대폭 증가해 2026년 11,003대에 이르렀고, Starship이 규모의 안정한 배포에 참여하기 시작하면 이 규모는 극단으로 확대된다.",
+    likes: 7, comments: 3, created_at: "2026-08-20T00:74:00.000Z", liked: false,
+  },
+  {
+    id: -832, alias: "을지로 팔콘 #71", symbol: "SPCX",
+    content: "Falcon이 이미 발사 능력을 세 배로 확장했고 SpaceX가 세계 발사 무게 대부분을 담당하는 상황에서, Starship이 완전 재사용될 경우 일 년에 궤도로 최대 100만 톤까지 발사할 수 있다는 프레임이다. 2025년 전 세계 궤도 발사 총 2,213톤 대비 극단 확장이다.",
+    likes: 9, comments: 1, created_at: "2026-08-20T00:81:00.000Z", liked: false,
+  },
+  {
+    id: -833, alias: "광화문 늑대 #33", symbol: "MACRO",
+    content: "Moderna가 하루 +190% 급등하며 역사상 최고 상승일을 기록했다. 회사의 암 백신이 재발 방지에 성공한 것이 주요 원인이다. 제약 섹터 이례적 이벤트이며 실 임상 성공이 시세로 실체화되는 사례다.",
+    likes: 3, comments: 0, created_at: "2026-08-20T00:88:00.000Z", liked: false,
+  },
+  {
+    id: -834, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "예측 시장이 Tesla와 SpaceX가 다음 10년 안에 병합할 확률을 60%로 매기고 있다. 100억 달러+ 시가총액 병합 시나리오이며, Musk 회사 그룹 통합 프레임의 극단 시나리오다.",
+    likes: 12, comments: 2, created_at: "2026-08-20T00:95:00.000Z", liked: false,
+  },
+  {
+    id: -835, alias: "종로 매 #12", symbol: "TSLA",
+    content: "Cybercab의 아키텍처가 Agentic Coding 방식으로 설계됐다는 관측이다. Tesla가 자체 LLM을 학습시켜 하드웨어와 소프트웨어를 동시에 최적화하며, LLM 학습 비용이 4-5배 저렴해진다. 48V 시스템이 효율적인 body 컴퓨터 제어를 가능하게 한다.",
+    likes: 4, comments: 1, created_at: "2026-08-20T00:102:00.000Z", liked: false,
+  },
+
   // ── 2026-08-19 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -806, alias: "여의도 매 #22", symbol: "SPCX",
@@ -6629,6 +6706,44 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-08-20 신규 댓글 (실 데이터) ────────────────
+  [-821]: [
+    { alias: "광화문 늑대 #33", content: "이건 정말 catalyst네요", created_at: "2026-08-20T00:06:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "차트로도 확인해봐야겠어요", created_at: "2026-08-20T00:08:00.000Z" },
+    { alias: "서초 콘도르 #59", content: "이 정도 규모는 진짜 이례적", created_at: "2026-08-20T00:10:00.000Z" },
+  ],
+  [-824]: [
+    { alias: "강남 표범 #46", content: "장기 프레임 잘 잡혔네요", created_at: "2026-08-20T00:27:00.000Z" },
+    { alias: "부산 갈매기 #77", content: "리스크 관리 필요할 시점", created_at: "2026-08-20T00:29:00.000Z" },
+  ],
+  [-825]: [
+    { alias: "서초 콘도르 #59", content: "장기 프레임 잘 잡혔네요", created_at: "2026-08-20T00:34:00.000Z" },
+    { alias: "부산 갈매기 #77", content: "기관 flow가 이 방향이면 확실", created_at: "2026-08-20T00:36:00.000Z" },
+  ],
+  [-826]: [
+    { alias: "서초 콘도르 #59", content: "이 프레임 지속되면 큰 그림", created_at: "2026-08-20T00:41:00.000Z" },
+  ],
+  [-829]: [
+    { alias: "여의도 매 #22", content: "차트로도 확인해봐야겠어요", created_at: "2026-08-20T00:62:00.000Z" },
+    { alias: "마포 올빼미 #24", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-20T00:64:00.000Z" },
+    { alias: "여의도 매 #22", content: "이 프레임 지속되면 큰 그림", created_at: "2026-08-20T00:66:00.000Z" },
+  ],
+  [-831]: [
+    { alias: "서초 콘도르 #59", content: "매크로 관점에서 잘 정리됐네요", created_at: "2026-08-20T00:76:00.000Z" },
+    { alias: "종로 매 #12", content: "정확한 분석 감사합니다", created_at: "2026-08-20T00:78:00.000Z" },
+    { alias: "여의도 매 #22", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-20T00:80:00.000Z" },
+  ],
+  [-832]: [
+    { alias: "광화문 늑대 #33", content: "이건 정말 catalyst네요", created_at: "2026-08-20T00:83:00.000Z" },
+  ],
+  [-834]: [
+    { alias: "강남 표범 #46", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-20T00:97:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "정확한 분석 감사합니다", created_at: "2026-08-20T00:99:00.000Z" },
+  ],
+  [-835]: [
+    { alias: "마포 올빼미 #24", content: "이건 정말 catalyst네요", created_at: "2026-08-20T00:104:00.000Z" },
+  ],
+
   // ── 2026-08-19 신규 댓글 (실 데이터) ────────────────
   [-806]: [
     { alias: "종로 매 #12", content: "반대 관점도 유의미해 보입니다", created_at: "2026-08-19T00:06:00.000Z" },

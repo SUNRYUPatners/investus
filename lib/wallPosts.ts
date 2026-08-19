@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T20AU = 1787180400000; // 2026-08-20 08:00 KST
 const T19AU = 1787094000000; // 2026-08-19 08:00 KST
 const T18AU = 1787007600000; // 2026-08-18 08:00 KST
 const T14AU = 1786662000000; // 2026-08-14 08:00 KST
@@ -82,7 +83,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T19AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T20AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -101,6 +102,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-20 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 1019, symbol: "TSLA", nickname: "익명_2020", holdingLabel: "관심종목",
+    content: "Musk가 팀 원칙 다시 말함. 소수 정예가 대규모 평범한 인원보다 낫다. 질이 양보다 우선·항상 그렇다는 프레임",
+    createdAt: T20AU + 8*60_000, likes: 10, comments: 1 },
+  { id: 1020, symbol: "MACRO", nickname: "익명_2121", holdingLabel: "관심종목",
+    content: "재무부가 국채 환매 대폭 확대함. operation당 40-50억 달러로 상향. 유동성 공급 목적",
+    createdAt: T20AU + 16*60_000, likes: 13, comments: 1 },
+  { id: 1021, symbol: "SPCX", nickname: "익명_2222", holdingLabel: "관심종목",
+    content: "xAI가 Memphis에 100,000 GPU 클러스터 완공한대. Mississippi 전력 5% 저렴. MacHarder 이름",
+    createdAt: T20AU + 24*60_000, likes: 11, comments: 3 },
+  { id: 1022, symbol: "NVDA", nickname: "익명_2323", holdingLabel: "관심종목",
+    content: "NVIDIA CEO 젠슨 황이 Musk가 AI 활용 1위라고 발언. 세계 최대 GPU 회사 CEO가 인정",
+    createdAt: T20AU + 32*60_000, likes: 12, comments: 1 },
+  { id: 1023, symbol: "TSLA", nickname: "익명_2424", holdingLabel: "관심종목",
+    content: "Cybertruck 팩토리 100대 보디쉘 준비됐대. 8월 하순 대형 이벤트. 2027부터 Cybercab·Model Y 램프",
+    createdAt: T20AU + 40*60_000, likes: 9, comments: 1 },
+  { id: 1024, symbol: "MACRO", nickname: "익명_2525", holdingLabel: "관심종목",
+    content: "재무부 다중 십년 최고 수익률 이후 환매 급증. 오래된 국채·덜 매매되는 국채 대상",
+    createdAt: T20AU + 48*60_000, likes: 13, comments: 1 },
+  { id: 1025, symbol: "MACRO", nickname: "익명_2626", holdingLabel: "관심종목",
+    content: "미국 노동자 21%가 상반기 업무에서 AI 사용. 2020 챗봇 launch 이후 최고. 프로그래머 우세",
+    createdAt: T20AU + 56*60_000, likes: 4, comments: 3 },
+  { id: 1026, symbol: "MACRO", nickname: "익명_2727", holdingLabel: "관심종목",
+    content: "BLS가 이전 벤치마크 revision에서 100만 개 일자리 감산. 12개월 손실 처리. 재무부 20-30년 환매 준비",
+    createdAt: T20AU + 64*60_000, likes: 5, comments: 0 },
+  { id: 1027, symbol: "TSLA", nickname: "익명_2828", holdingLabel: "관심종목",
+    content: "Cybertruck 8월 23일 launch 확정! Robotaxi FSD unsupervised 준비 완료. 5+ 새 도시 8/23 전",
+    createdAt: T20AU + 72*60_000, likes: 3, comments: 0 },
+  { id: 1028, symbol: "TSLA", nickname: "익명_2929", holdingLabel: "관심종목",
+    content: "Musk 왈: Cybercab 이익이 Uber+Lyft 합계 초과할 것. Tesla 12x 배수 재평가 요인",
+    createdAt: T20AU + 80*60_000, likes: 7, comments: 1 },
+  { id: 1029, symbol: "SPCX", nickname: "익명_3030", holdingLabel: "관심종목",
+    content: "Starlink 궤도 위성 11,003대 돌파! 2018년 46대에서 시작해 240배 확장",
+    createdAt: T20AU + 88*60_000, likes: 9, comments: 0 },
+  { id: 1030, symbol: "SPCX", nickname: "익명_3131", holdingLabel: "관심종목",
+    content: "Starship 완전 재사용 시 연 100M톤 궤도 발사 가능. 2025 세계 총 2,213톤 대비 450배",
+    createdAt: T20AU + 96*60_000, likes: 4, comments: 2 },
+  { id: 1031, symbol: "MACRO", nickname: "익명_3232", holdingLabel: "관심종목",
+    content: "Moderna 하루 +190% 급등! 역사상 최고 상승일. 암 백신 재발 방지 성공",
+    createdAt: T20AU + 104*60_000, likes: 14, comments: 0 },
+  { id: 1032, symbol: "TSLA", nickname: "익명_3333", holdingLabel: "관심종목",
+    content: "예측 시장이 Tesla+SpaceX 10년 안 병합 60% 확률. Musk 회사 그룹 통합 시나리오",
+    createdAt: T20AU + 112*60_000, likes: 11, comments: 1 },
+  { id: 1033, symbol: "TSLA", nickname: "익명_3434", holdingLabel: "관심종목",
+    content: "Cybercab Agentic Coding 아키텍처. 자체 LLM 학습으로 4-5배 저렴. 48V 시스템 효율",
+    createdAt: T20AU + 120*60_000, likes: 14, comments: 2 },
+
   // ── 2026-08-19 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 1004, symbol: "SPCX", nickname: "익명_1911", holdingLabel: "관심종목",
     content: "Musk가 2035년 우주 경제 1.8조보다 훨씬 크다고 답했다는데 얼마나 클지 안 알려줌ㅋ",
@@ -3698,6 +3746,47 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-20 신규 댓글 (실 데이터) ────────────────
+  1019: [
+    { id: 1, nickname: "익명_6789", holdingLabel: "관심종목", content: "규제 이슈만 없으면 갈듯", createdAt: T20AU + 8*60_000 + 3*60_000, likes: 9 },
+  ],
+  1020: [
+    { id: 1, nickname: "익명_5678", holdingLabel: "관심종목", content: "이 정도면 조정 한번 오지 않을까", createdAt: T20AU + 16*60_000 + 3*60_000, likes: 9 },
+  ],
+  1021: [
+    { id: 1, nickname: "익명_7788", holdingLabel: "관심종목", content: "매크로 리스크는 여전하네", createdAt: T20AU + 24*60_000 + 3*60_000, likes: 6 },
+    { id: 2, nickname: "익명_3456", holdingLabel: "관심종목", content: "정보 감사합니다", createdAt: T20AU + 24*60_000 + 6*60_000, likes: 7 },
+    { id: 3, nickname: "익명_6789", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T20AU + 24*60_000 + 9*60_000, likes: 1 },
+  ],
+  1022: [
+    { id: 1, nickname: "익명_5678", holdingLabel: "관심종목", content: "차트 좋아 보이긴 하는데", createdAt: T20AU + 32*60_000 + 3*60_000, likes: 8 },
+  ],
+  1023: [
+    { id: 1, nickname: "익명_2345", holdingLabel: "관심종목", content: "SPCX vs TSLA 어느 게 좋을까요", createdAt: T20AU + 40*60_000 + 3*60_000, likes: 10 },
+  ],
+  1024: [
+    { id: 1, nickname: "익명_2345", holdingLabel: "관심종목", content: "다음 실적 발표 대기", createdAt: T20AU + 48*60_000 + 3*60_000, likes: 0 },
+  ],
+  1025: [
+    { id: 1, nickname: "익명_2233", holdingLabel: "관심종목", content: "다음 실적 발표 대기", createdAt: T20AU + 56*60_000 + 3*60_000, likes: 5 },
+    { id: 2, nickname: "익명_1234", holdingLabel: "관심종목", content: "SPCX vs TSLA 어느 게 좋을까요", createdAt: T20AU + 56*60_000 + 6*60_000, likes: 6 },
+    { id: 3, nickname: "익명_6677", holdingLabel: "관심종목", content: "정보 감사합니다", createdAt: T20AU + 56*60_000 + 9*60_000, likes: 3 },
+  ],
+  1028: [
+    { id: 1, nickname: "익명_6789", holdingLabel: "관심종목", content: "이건 진짜 catalyst네", createdAt: T20AU + 80*60_000 + 3*60_000, likes: 1 },
+  ],
+  1030: [
+    { id: 1, nickname: "익명_5678", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T20AU + 96*60_000 + 3*60_000, likes: 10 },
+    { id: 2, nickname: "익명_2233", holdingLabel: "관심종목", content: "이거 진짜야? 대박", createdAt: T20AU + 96*60_000 + 6*60_000, likes: 7 },
+  ],
+  1032: [
+    { id: 1, nickname: "익명_1122", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T20AU + 112*60_000 + 3*60_000, likes: 7 },
+  ],
+  1033: [
+    { id: 1, nickname: "익명_7788", holdingLabel: "관심종목", content: "너무 늦게 진입한 건 아닌지", createdAt: T20AU + 120*60_000 + 3*60_000, likes: 9 },
+    { id: 2, nickname: "익명_4455", holdingLabel: "관심종목", content: "다음 실적 발표 대기", createdAt: T20AU + 120*60_000 + 6*60_000, likes: 8 },
+  ],
+
   // ── 2026-08-19 신규 댓글 (실 데이터) ────────────────
   1004: [
     { id: 1, nickname: "익명_5566", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T19AU + 8*60_000 + 3*60_000, likes: 5 },
