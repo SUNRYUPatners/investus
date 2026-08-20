@@ -303,14 +303,14 @@ const T=[
 
 // 13. Moderna 190% best day in history (cancer vaccine)
 {file:'moderna-190pct-best-day-history-cancer-vaccine',symbol:'MACRO',
- ko:{title:'Moderna 하루 +190% 급등·역사상 최고 상승일·암 백신 재발 방지 성공',heroIcon:'💊',heroBig:'+190%',heroSub:'Moderna가 하루 +190% 급등하며 역사상 최고 상승일을 기록했다. 암 백신이 재발 방지에 성공한 것이 주요 원인이다.',
-  cards:[{icon:'💊',big:'+190%',mid:'Moderna 하루 상승',sub:'역사상 최고 상승일'},{icon:'🧪',big:'암 백신',mid:'재발 방지 성공',sub:'주요 원인'},{icon:'📅',big:'역사 기록',mid:'단일 종목 하루 상승',sub:'제약 섹터 이례적'}],
-  quote:'"Moderna가 하루 +190% 급등하며 역사상 최고 상승일을 기록했다. 이 회사의 암 백신이 재발 방지에 성공한 것이 주요 원인이다."',
-  noteHead:'왜 중요한가',noteSub:'제약 섹터 이례적 이벤트이며, 실 임상 성공이 시세 극단 상승으로 실체화되는 사례다.',footer:'MRNA · +190% 하루',brand:BK},
- en:{title:'Moderna +190% Best Day in History · Cancer Vaccine Success in Preventing Recurrence',heroIcon:'💊',heroBig:'+190%',heroSub:'Moderna soared +190% in a single day, best day in history. The company cancer vaccine succeeded in preventing recurrence, driving the move.',
-  cards:[{icon:'💊',big:'+190%',mid:'Moderna daily rise',sub:'Best day in history'},{icon:'🧪',big:'Cancer vaccine',mid:'Recurrence prevention success',sub:'Main driver'},{icon:'📅',big:'Historic record',mid:'Single stock daily rise',sub:'Unusual pharma sector event'}],
-  quote:'"Moderna soared +190% in a single day, best day in history · driven by the company cancer vaccine succeeding in preventing recurrence."',
-  noteHead:'Why this matters',noteSub:'Unusual pharma sector event · case of real clinical success materializing as extreme price rise.',footer:'MRNA · +190% Day',brand:BE}},
+ ko:{title:'Moderna 하루 +146% 급등·역사상 최고 상승일·암 백신 재발 방지 성공',heroIcon:'💊',heroBig:'+146%',heroSub:'Moderna가 하루 +146% 급등하며 역사상 최고 상승일을 기록했다. 암 백신이 재발 방지에 성공한 것이 주요 원인이다.',
+  cards:[{icon:'💊',big:'+146%',mid:'Moderna 하루 상승',sub:'역사상 최고 상승일'},{icon:'🧪',big:'암 백신',mid:'재발 방지 성공',sub:'주요 원인'},{icon:'📅',big:'역사 기록',mid:'단일 종목 하루 상승',sub:'제약 섹터 이례적'}],
+  quote:'"Moderna가 하루 +146% 급등하며 역사상 최고 상승일을 기록했다. 이 회사의 암 백신이 재발 방지에 성공한 것이 주요 원인이다."',
+  noteHead:'왜 중요한가',noteSub:'제약 섹터 이례적 이벤트이며, 실 임상 성공이 시세 극단 상승으로 실체화되는 사례다.',footer:'MRNA · +146% 하루',brand:BK},
+ en:{title:'Moderna +146% Best Day in History · Cancer Vaccine Success in Preventing Recurrence',heroIcon:'💊',heroBig:'+146%',heroSub:'Moderna soared +146% in a single day, best day in history. The company cancer vaccine succeeded in preventing recurrence, driving the move.',
+  cards:[{icon:'💊',big:'+146%',mid:'Moderna daily rise',sub:'Best day in history'},{icon:'🧪',big:'Cancer vaccine',mid:'Recurrence prevention success',sub:'Main driver'},{icon:'📅',big:'Historic record',mid:'Single stock daily rise',sub:'Unusual pharma sector event'}],
+  quote:'"Moderna soared +146% in a single day, best day in history · driven by the company cancer vaccine succeeding in preventing recurrence."',
+  noteHead:'Why this matters',noteSub:'Unusual pharma sector event · case of real clinical success materializing as extreme price rise.',footer:'MRNA · +146% Day',brand:BE}},
 
 // 14. Kalshi 60% Tesla+SpaceX merge in next 10 years
 {file:'kalshi-60pct-tesla-spacex-merge-10-years',symbol:'TSLA',

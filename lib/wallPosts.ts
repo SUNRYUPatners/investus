@@ -140,7 +140,7 @@ export const MOCK_POSTS: Post[] = [
     content: "Starship 완전 재사용 시 연 100M톤 궤도 발사 가능. 2025 세계 총 2,213톤 대비 450배",
     createdAt: T20AU + 96*60_000, likes: 4, comments: 2 },
   { id: 1031, symbol: "MACRO", nickname: "익명_3232", holdingLabel: "관심종목",
-    content: "Moderna 하루 +190% 급등! 역사상 최고 상승일. 암 백신 재발 방지 성공",
+    content: "Moderna 하루 +146% 급등! 역사상 최고 상승일. 암 백신 재발 방지 성공",
     createdAt: T20AU + 104*60_000, likes: 14, comments: 0 },
   { id: 1032, symbol: "TSLA", nickname: "익명_3333", holdingLabel: "관심종목",
     content: "예측 시장이 Tesla+SpaceX 10년 안 병합 60% 확률. Musk 회사 그룹 통합 시나리오",

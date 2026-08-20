@@ -80,7 +80,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -833, alias: "광화문 늑대 #33", symbol: "MACRO",
-    content: "Moderna가 하루 +190% 급등하며 역사상 최고 상승일을 기록했다. 회사의 암 백신이 재발 방지에 성공한 것이 주요 원인이다. 제약 섹터 이례적 이벤트이며 실 임상 성공이 시세로 실체화되는 사례다.",
+    content: "Moderna가 하루 +146% 급등하며 역사상 최고 상승일을 기록했다. 회사의 암 백신이 재발 방지에 성공한 것이 주요 원인이다. 제약 섹터 이례적 이벤트이며 실 임상 성공이 시세로 실체화되는 사례다.",
     likes: 3, comments: 0, created_at: "2026-08-20T00:88:00.000Z", liked: false,
   },
   {

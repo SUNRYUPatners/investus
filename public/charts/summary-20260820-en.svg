@@ -17,7 +17,7 @@
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".15">15</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="70" font-weight="900" fill="#4ade80" text-anchor="middle">TOP 15</text>
   <text x="540" y="300" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">Cybercab 8/23 · MacHarder 100K · Treasury Buybacks · Cybercab</text>
-  <text x="540" y="342" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Musk team principle · Starlink 11,003 · Starship 100M ton · Moderna +190%</text>
+  <text x="540" y="342" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Musk team principle · Starlink 11,003 · Starship 100M ton · Moderna +146%</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
@@ -59,7 +59,7 @@
   <rect x="60" y="842" width="960" height="120" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="880" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">EXTRA COVERAGE</text>
   <text x="540" y="912" font-family="Arial" font-size="18" fill="#e5e7eb" text-anchor="middle">Musk team quality &gt; quantity · NVDA Jensen "Musk uses AI best" · Cybertruck 100 shells · BLS -1M revision · US 21% AI at work</text>
-  <text x="540" y="940" font-family="Arial" font-size="18" fill="#e5e7eb" text-anchor="middle">Treasury buyback after multi-decade yields · Moderna +190% · TSLA+SPCX merger 60% · Cybercab Agentic architecture (4-5x LLM)</text>
+  <text x="540" y="940" font-family="Arial" font-size="18" fill="#e5e7eb" text-anchor="middle">Treasury buyback after multi-decade yields · Moderna +146% · TSLA+SPCX merger 60% · Cybercab Agentic architecture (4-5x LLM)</text>
 
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">INVESTUS · TOP 15 STORIES · 2026.08.20</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
