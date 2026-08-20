@@ -54,7 +54,20 @@ export function validateWarmPayload(data: WarmPayload): WarmCheckResult {
   };
 }
 
-/** UTC 22:00 이후 마지막 워밍 슬롯 (vercel.json 0 22 * * *) */
-export function isFinalWarmAttempt(now = new Date()): boolean {
-  return now.getUTCHours() >= 22;
+/**
+ * 사람 알림을 보낼 최종 슬롯인지.
+ * - ?phase=final 크론(장전 복구)만 알림
+ * - 그 외 실패는 로그만 + 이후 자동 재시도
+ */
+export function isAlertPhase(reqUrl: string, now = new Date()): boolean {
+  try {
+    const phase = new URL(reqUrl).searchParams.get("phase");
+    if (phase === "final") return true;
+  } catch { /* ignore */ }
+  // 하위 호환: 명시 phase 없이 UTC 10시 이후(장전 복구 창)면 최종로 간주
+  return now.getUTCHours() >= 10 && now.getUTCHours() < 13;
+}
+
+export function sleep(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
 }
