@@ -30,7 +30,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -838, alias: "서초 콘도르 #59", symbol: "MACRO",
-    content: "미국 재무부가 4분기에 사상 최대 규모의 국채 환매를 실시하고 있다. Q4에만 170억 달러 추가 buyback이 예상되며, 재무부가 유동성 개선과 이자 부담 감소를 위해 매수측으로 개입한다.",
+    content: "미국 재무부의 buyback 확대 발표 후 3시간 안에 귀금속·크립토 시총이 17조 달러 증가했다. Bitcoin +12%, Gold +4%, US Dollar -7% 반응이 나왔으며, 재무부는 재정 통합 focus를 강화하고 있다.",
     likes: 8, comments: 1, created_at: "2026-08-21T00:18:00.000Z", liked: false,
   },
   {
@@ -55,7 +55,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -843, alias: "부산 갈매기 #77", symbol: "MACRO",
-    content: "미국 10년 국채 수익률이 5.22%로 큰 폭 하락했다. 재무부가 국채 환매를 대폭 확대하면서 이자 부담이 감소했고 시장이 이에 반응했다. 30년 국채도 함께 하락했다.",
+    content: "미국 30년 국채 수익률이 5.22% 아래로 하락했다. 화요일에 5.337%까지 올라 2007년 이후 최고를 기록했으나, 재무부가 auction 사이즈를 두 배로 늘리고 buybacks를 두 배로 발표한 지 한 시간 안에 5.18%로 급락했다.",
     likes: 8, comments: 2, created_at: "2026-08-21T00:53:00.000Z", liked: false,
   },
   {
@@ -75,17 +75,17 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -847, alias: "을지로 팔콘 #71", symbol: "MACRO",
-    content: "애널리스트들이 2027년 AI CAPEX 규모를 1,850억 달러로 전망한다. 주요 하이퍼스케일러와 파트너 회사들이 데이터센터·GPU·전력 인프라에 지속 대량 투자하는 흐름이다.",
+    content: "2027년 AI CAPEX 규모가 1.9조 달러로 전망된다. 컴퓨트 6,850억 달러·데이터센터 3,080억 달러 배분이며, 주요 하이퍼스케일러와 파트너 회사들이 데이터센터·GPU·전력 인프라에 지속 대량 투자하는 흐름이다.",
     likes: 10, comments: 0, created_at: "2026-08-21T00:81:00.000Z", liked: false,
   },
   {
     id: -848, alias: "광화문 늑대 #33", symbol: "MACRO",
-    content: "미국 국내 평균 휘발유 가격이 갤런당 $3.85까지 오르며 2028년 이후 최고 수준을 기록했다. 원유·정제 시장의 공급 부족이 요인이며 소비자 지출 부담이 증가하고 있다.",
+    content: "AAA 데이터에 따르면 미국 국내 평균 휘발유 가격이 갤런당 $4.10 (regular)까지 올랐고 디젤은 $5.50를 초과했다. 2028년 이후 최고 수준이며 소비자 지출 부담이 증가하고 있다.",
     likes: 8, comments: 3, created_at: "2026-08-21T00:88:00.000Z", liked: false,
   },
   {
     id: -849, alias: "마포 올빼미 #24", symbol: "TSLA",
-    content: "Tesla Model Y 판매가 전월 대비 200% 급증했다는 관측이다. 최근 개월 중 가장 강한 판매 실적이며 아시아·미국 시장에서 Model Y가 다각 회복되고 있다는 신호다.",
+    content: "Tesla Model Y 판매가 인도 시장에서 전월 대비 300% 급증했다. Tesla가 인도 시장에 진입한 이후 가속되는 판매 성장 실체다.",
     likes: 14, comments: 1, created_at: "2026-08-21T00:95:00.000Z", liked: false,
   },
   {

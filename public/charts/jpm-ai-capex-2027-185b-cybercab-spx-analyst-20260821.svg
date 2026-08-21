@@ -11,20 +11,20 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.21</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">AI CAPEX 2027년 1,850억 달러 예상·</text>
-  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">주요 하이퍼스케일러 인프라 확장 지속</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">AI CAPEX 2027년 1.9조 달러 (Compute 6,850억·</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">DC 3,080억) 예상·주요 하이퍼스케일러 인프라 확장 지속</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#94a3b8" text-anchor="middle" opacity=".15">💻</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#94a3b8" text-anchor="middle">💻</text>
   <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">1,850억</text>
-  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">애널리스트들이 2027년 AI CAPEX 규모를 1,850억 달러로 전망한다. 주요 하이퍼스케일러와 파트너</text>
-  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">회사들이 데이터센터·GPU·</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">애널리스트들이 2027년 AI CAPEX 규모를 1.9조 달러 (Compute 6,850억·</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">DC 3,080억)로 전망한다. 주요 하이퍼스케일러와 파트너 회사들이 데이터센터·GPU·</text>
   <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">전력 인프라에 지속 대량 투자하는 흐름이며, 이는 2026년 대비 대폭 증가한 수치다.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">💻</text>
-  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">1,850억 달러</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">1.9조 달러 (Compute 6,850억·DC 3,080억)</text>
   <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2027년 AI CAPEX</text>
   <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">전망 규모</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
@@ -38,14 +38,15 @@
   <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">데이터센터·GPU·전력</text>
   <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">주요 투자 대상</text>
   <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="700" font-family="Arial" font-size="20" fill="#94a3b8" text-anchor="middle">"애널리스트들이 2027년 AI CAPEX 규모를 1,850억 달러로 전망한다. 주요 하이퍼스케일러와 파트너</text>
-  <text x="540" y="730" font-family="Arial" font-size="20" fill="#94a3b8" text-anchor="middle">회사들이 데이터센터·GPU·전력 인프라에 지속 대량 투자한다는 프레임이다."</text>
+  <text x="540" y="700" font-family="Arial" font-size="20" fill="#94a3b8" text-anchor="middle">"애널리스트들이 2027년 AI CAPEX 규모를 1.9조 달러 (Compute 6,850억·</text>
+  <text x="540" y="730" font-family="Arial" font-size="20" fill="#94a3b8" text-anchor="middle">DC 3,080억)로 전망한다. 주요 하이퍼스케일러와 파트너 회사들이 데이터센터·GPU·</text>
+  <text x="540" y="760" font-family="Arial" font-size="20" fill="#94a3b8" text-anchor="middle">전력 인프라에 지속 대량 투자한다는 프레임이다."</text>
   <text x="540" y="808" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">2026.08.21</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
   <text x="540" y="884" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
   <text x="540" y="930" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">8/12 NVDA + SPCX 2,600억 GPU 딜·8/11 NVDA 5,000억 컨소시엄·</text>
   <text x="540" y="954" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">오늘 별개 리포트의 Musk MacHarder 100K GPU와 결합해 AI CAPEX 사이클이 2027년까지 확장된다.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">매크로 · AI CAPEX 2027 · 1,850억 · 2026.08.21</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">매크로 · AI CAPEX 2027 · 1.9조 · 2026.08.21</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>
