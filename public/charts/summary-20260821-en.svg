@@ -28,21 +28,21 @@
 
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏛️</text>
-  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">Treasury $17T mcap</text>
-  <text x="540" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Record bond buyback</text>
-  <text x="540" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Liquidity improvement</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">$17T asset mcap surge</text>
+  <text x="540" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Precious metals + crypto rally</text>
+  <text x="540" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Bitcoin +12% · Gold +4%</text>
 
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📋</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">Anthropic S-1</text>
   <text x="870" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">End August IPO filing</text>
-  <text x="870" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">October IPO progress</text>
+  <text x="870" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Major AI IPO progress</text>
 
   <rect x="60" y="642" width="300" height="180" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
   <text x="210" y="694" font-family="Arial" font-size="36" text-anchor="middle">📉</text>
   <text x="210" y="738" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">30Y Treasury 5.22%</text>
   <text x="210" y="768" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Sharp drop post buyback</text>
-  <text x="210" y="796" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">30Y also declined</text>
+  <text x="210" y="796" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Bond rally continues</text>
 
   <rect x="390" y="642" width="300" height="180" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="694" font-family="Arial" font-size="36" text-anchor="middle">🔓</text>

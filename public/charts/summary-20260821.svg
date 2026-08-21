@@ -28,21 +28,21 @@
 
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏛️</text>
-  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">재무부 $17T 시총</text>
-  <text x="540" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">국채 환매 사상 최대</text>
-  <text x="540" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">유동성 개선</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">$17T 자산 시총 급등</text>
+  <text x="540" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">귀금속·크립토 3시간 랠리</text>
+  <text x="540" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Bitcoin +12% · Gold +4%</text>
 
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📋</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">Anthropic S-1</text>
   <text x="870" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">8월 말 IPO 신청 준비</text>
-  <text x="870" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">10월 상장 진전</text>
+  <text x="870" y="590" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">AI 대형주 상장 진전</text>
 
   <rect x="60" y="642" width="300" height="180" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
   <text x="210" y="694" font-family="Arial" font-size="36" text-anchor="middle">📉</text>
   <text x="210" y="738" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">30Y 국채 5.22%</text>
   <text x="210" y="768" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">환매 확대 후 급락</text>
-  <text x="210" y="796" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">30년물도 동반 하락</text>
+  <text x="210" y="796" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">채권 랠리 지속</text>
 
   <rect x="390" y="642" width="300" height="180" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="694" font-family="Arial" font-size="36" text-anchor="middle">🔓</text>
