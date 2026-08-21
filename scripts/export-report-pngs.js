@@ -12,6 +12,22 @@ const REPORT_DIR = path.join(__dirname, '../01.investus 리포트');
 // Each entry: { ko, en (optional), label, date }
 // en: null if no English version exists
 const PAIRS = [
+  // ── 2026-08-22 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260822.svg', en: 'summary-20260822-en.svg', label: 'summary', date: '20260822' },
+  { ko: 'tsla-jpm-fsd-v15-450-20260822.svg', en: 'tsla-jpm-fsd-v15-450-20260822-en.svg', label: 'tsla-jpm-fsd-v15-450', date: '20260822' },
+  { ko: 'tsla-solar-roof-discontinued-20260822.svg', en: 'tsla-solar-roof-discontinued-20260822-en.svg', label: 'tsla-solar-roof-discontinued', date: '20260822' },
+  { ko: 'tsla-optimus-giga-berlin-gen2-20260822.svg', en: 'tsla-optimus-giga-berlin-gen2-20260822-en.svg', label: 'tsla-optimus-giga-berlin-gen2', date: '20260822' },
+  { ko: 'tsla-nevada-av-permit-vegas-robotaxi-20260822.svg', en: 'tsla-nevada-av-permit-vegas-robotaxi-20260822-en.svg', label: 'tsla-nevada-av-permit-vegas-robotaxi', date: '20260822' },
+  { ko: 'tsla-austin-cybercab-imminent-20260822.svg', en: 'tsla-austin-cybercab-imminent-20260822-en.svg', label: 'tsla-austin-cybercab-imminent', date: '20260822' },
+  { ko: 'spcx-starship-flt14-sep15-20260822.svg', en: 'spcx-starship-flt14-sep15-20260822-en.svg', label: 'spcx-starship-flt14-sep15', date: '20260822' },
+  { ko: 'spcx-revenue-growth-2090-musk-exceed-20260822.svg', en: 'spcx-revenue-growth-2090-musk-exceed-20260822-en.svg', label: 'spcx-revenue-growth-2090-musk-exceed', date: '20260822' },
+  { ko: 'spcx-ast-6b-spectrum-20260822.svg', en: 'spcx-ast-6b-spectrum-20260822-en.svg', label: 'spcx-ast-6b-spectrum', date: '20260822' },
+  { ko: 'spcx-q2-2026-78b-revenue-20260822.svg', en: 'spcx-q2-2026-78b-revenue-20260822-en.svg', label: 'spcx-q2-2026-78b-revenue', date: '20260822' },
+  { ko: 'waymo-20k-hardware-5nm-1000tops-20260822.svg', en: 'waymo-20k-hardware-5nm-1000tops-20260822-en.svg', label: 'waymo-20k-hardware-5nm-1000tops', date: '20260822' },
+  { ko: 'meta-mag7-worst-52pct-5yr-20260822.svg', en: 'meta-mag7-worst-52pct-5yr-20260822-en.svg', label: 'meta-mag7-worst-52pct-5yr', date: '20260822' },
+  { ko: 'dalio-gold-15pct-bonds-20260822.svg', en: 'dalio-gold-15pct-bonds-20260822-en.svg', label: 'dalio-gold-15pct-bonds', date: '20260822' },
+  { ko: 'gold-4643-btc-77840-20260822.svg', en: 'gold-4643-btc-77840-20260822-en.svg', label: 'gold-4643-btc-77840', date: '20260822' },
+  { ko: 'us-30y-yield-5282-erase-buyback-20260822.svg', en: 'us-30y-yield-5282-erase-buyback-20260822-en.svg', label: 'us-30y-yield-5282-erase-buyback', date: '20260822' },
   // ── 2026-07-20 ─────────────────────────────────────────────────────────
   { ko: 'summary-20260720.svg',                        en: 'summary-20260720-en.svg',                        label: 'summary',                    date: '20260720' },
   { ko: 'cbrtruck-giga-texas-240-20260720.svg',        en: 'cbrtruck-giga-texas-240-20260720-en.svg',        label: 'cbrtruck-giga-texas-240',    date: '20260720' },

@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T22AU = 1787353200000; // 2026-08-22 08:00 KST
 const T21AU = 1787266800000; // 2026-08-21 08:00 KST
 const T20AU = 1787180400000; // 2026-08-20 08:00 KST
 const T19AU = 1787094000000; // 2026-08-19 08:00 KST
@@ -84,7 +85,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T21AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T22AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -103,6 +104,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-22 신규 ────────────────
+  { id: 1049, symbol: "TSLA", nickname: "익명_5050", holdingLabel: "120주 보유",
+    content: "JPM이 FSD V15를 step-change라네. Kalshi 노트에 $450 PT도 같이 나옴",
+    createdAt: T22AU + 8*60_000, likes: 14, comments: 2 },
+  { id: 1050, symbol: "TSLA", nickname: "익명_5151", holdingLabel: "관심종목",
+    content: "Solar Roof 타일 단종… 경제성 없다더라. Megapack만 남기는 느낌",
+    createdAt: T22AU + 16*60_000, likes: 6, comments: 0 },
+  { id: 1051, symbol: "TSLA", nickname: "익명_5252", holdingLabel: "관심종목",
+    content: "미확인이지만 Optimus Gen2가 베를린에서 4680 분류한다는데… 진짠가",
+    createdAt: T22AU + 24*60_000, likes: 9, comments: 1 },
+  { id: 1052, symbol: "TSLA", nickname: "익명_5353", holdingLabel: "45주 보유",
+    content: "네바다 풀 AV Network 허가!! Vegas 유료 Robotaxi 길 열렸다",
+    createdAt: T22AU + 32*60_000, likes: 18, comments: 3 },
+  { id: 1053, symbol: "TSLA", nickname: "익명_5454", holdingLabel: "관심종목",
+    content: "Austin Cybercab 공개 라이드 임박이라네. Nevada 회의에서 직접 말함",
+    createdAt: T22AU + 40*60_000, likes: 11, comments: 1 },
+  { id: 1054, symbol: "SPCX", nickname: "익명_5555", holdingLabel: "관심종목",
+    content: "Starship FLT-14 NET 9/15. COMPASS 발표 기준",
+    createdAt: T22AU + 48*60_000, likes: 7, comments: 0 },
+  { id: 1055, symbol: "SPCX", nickname: "익명_5656", holdingLabel: "30주 보유",
+    content: "5년 매출 성장 예상 SpaceX +2,090%… Musk는 추정치 넘길 거래",
+    createdAt: T22AU + 56*60_000, likes: 15, comments: 2 },
+  { id: 1056, symbol: "SPCX", nickname: "익명_5757", holdingLabel: "관심종목",
+    content: "AST랑 $6B 스펙트럼 기회? 미국 거의 전역 D2D",
+    createdAt: T22AU + 64*60_000, likes: 8, comments: 0 },
+  { id: 1057, symbol: "SPCX", nickname: "익명_5858", holdingLabel: "관심종목",
+    content: "Q2 매출 $7.8B (+93%)인데 시총은 $100B+ 빠졌대. AI +572%는 미쳤고",
+    createdAt: T22AU + 72*60_000, likes: 16, comments: 2 },
+  { id: 1058, symbol: "GOOGL", nickname: "익명_5959", holdingLabel: "관심종목",
+    content: "Waymo HW $115K→$20K. 5nm 칩 1000 TOPS. 원가 전쟁 시작",
+    createdAt: T22AU + 80*60_000, likes: 10, comments: 1 },
+  { id: 1059, symbol: "META", nickname: "익명_6060", holdingLabel: "관심종목",
+    content: "META 5년 52%로 Mag7 꼴찌인데 성장은 NVDA 빼고 1위라네. 괴리 큼",
+    createdAt: T22AU + 88*60_000, likes: 9, comments: 0 },
+  { id: 1060, symbol: "MACRO", nickname: "익명_6161", holdingLabel: "관심종목",
+    content: "Dalio가 채권 줄이고 금 15%까지. 부채 위기 프레임",
+    createdAt: T22AU + 96*60_000, likes: 12, comments: 1 },
+  { id: 1061, symbol: "MACRO", nickname: "익명_6262", holdingLabel: "관심종목",
+    content: "금 4643 (+1.58%)·비트 77840 (+7.17%). El-Erian 차트 같이 튐",
+    createdAt: T22AU + 104*60_000, likes: 13, comments: 1 },
+  { id: 1062, symbol: "MACRO", nickname: "익명_6363", holdingLabel: "관심종목",
+    content: "30Y 5.282%로 환매 급락 다 지워짐. 48시간 만에 5.18에서 복귀",
+    createdAt: T22AU + 112*60_000, likes: 11, comments: 2 },
+  { id: 1063, symbol: "TSLA", nickname: "익명_6464", holdingLabel: "관심종목",
+    content: "오늘 TSLA는 FSD·허가·Cybercab 삼연타. Solar만 좀 아프네",
+    createdAt: T22AU + 120*60_000, likes: 5, comments: 0 },
+
   // ── 2026-08-21 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 1034, symbol: "TSLA", nickname: "익명_3535", holdingLabel: "관심종목",
     content: "Tesla가 영국 Harmony Energy와 15개 Megapack 계약. 재생 에너지 유연성 지원한대",
@@ -3794,6 +3842,43 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-22 신규 댓글 ────────────────
+  1049: [
+    { id: 1, nickname: "익명_7070", holdingLabel: "관심종목", content: "$450이면 지금 자리에서도 꽤 여유 있는 PT인데", createdAt: T22AU + 8*60_000 + 3*60_000, likes: 5 },
+    { id: 2, nickname: "익명_7171", holdingLabel: "관심종목", content: "step-change라는 표현이 포인트임. 점진 업그레이드가 아님", createdAt: T22AU + 8*60_000 + 6*60_000, likes: 4 },
+  ],
+  1051: [
+    { id: 1, nickname: "익명_7272", holdingLabel: "관심종목", content: "미확인이라 일단 북마크만. 사진 더 나와야", createdAt: T22AU + 24*60_000 + 3*60_000, likes: 3 },
+  ],
+  1052: [
+    { id: 1, nickname: "익명_7373", holdingLabel: "관심종목", content: "Vegas 유료면 진짜 상용이야. 파일럿이랑 다름", createdAt: T22AU + 32*60_000 + 3*60_000, likes: 7 },
+    { id: 2, nickname: "익명_7474", holdingLabel: "관심종목", content: "Florida 다음에 서부 축이네", createdAt: T22AU + 32*60_000 + 6*60_000, likes: 4 },
+    { id: 3, nickname: "익명_7575", holdingLabel: "관심종목", content: "Austin Cybercab이랑 같은 날 나와서 더 세게 느껴짐", createdAt: T22AU + 32*60_000 + 9*60_000, likes: 6 },
+  ],
+  1053: [
+    { id: 1, nickname: "익명_7676", holdingLabel: "관심종목", content: "임박이면 이번 주·다음 주 스케줄 봐야지", createdAt: T22AU + 40*60_000 + 3*60_000, likes: 2 },
+  ],
+  1055: [
+    { id: 1, nickname: "익명_7777", holdingLabel: "관심종목", content: "+2090%는 차트가 아니라 지수임 ㅋㅋ", createdAt: T22AU + 56*60_000 + 3*60_000, likes: 8 },
+    { id: 2, nickname: "익명_7878", holdingLabel: "관심종목", content: "Musk가 둘 다 넘긴다니까 SPCX랑 TSLA 같이 보는 중", createdAt: T22AU + 56*60_000 + 6*60_000, likes: 5 },
+  ],
+  1057: [
+    { id: 1, nickname: "익명_7979", holdingLabel: "관심종목", content: "매출은 미친데 시총 빠지는 날이네. 락업 여운?", createdAt: T22AU + 72*60_000 + 3*60_000, likes: 6 },
+    { id: 2, nickname: "익명_8080", holdingLabel: "관심종목", content: "AI +572%가 진짜 스토리. Starlink만 보는 시대 끝", createdAt: T22AU + 72*60_000 + 6*60_000, likes: 9 },
+  ],
+  1058: [
+    { id: 1, nickname: "익명_8181", holdingLabel: "관심종목", content: "$20K면 Tesla랑 원가 격차 많이 줄겠네", createdAt: T22AU + 80*60_000 + 3*60_000, likes: 4 },
+  ],
+  1060: [
+    { id: 1, nickname: "익명_8282", holdingLabel: "관심종목", content: "채권 버리고 금이라… 장기물 5%대랑 맞물림", createdAt: T22AU + 96*60_000 + 3*60_000, likes: 3 },
+  ],
+  1061: [
+    { id: 1, nickname: "익명_8383", holdingLabel: "관심종목", content: "금이랑 BTC가 같이 뛰면 달러 쪽 뭔가 있음", createdAt: T22AU + 104*60_000 + 3*60_000, likes: 5 },
+  ],
+  1062: [
+    { id: 1, nickname: "익명_8484", holdingLabel: "관심종목", content: "환매 효과 48시간이면 너무 짧다", createdAt: T22AU + 112*60_000 + 3*60_000, likes: 7 },
+    { id: 2, nickname: "익명_8585", holdingLabel: "관심종목", content: "Bessent $4B 넘긴다는데도 금리가 이렇게 복귀?", createdAt: T22AU + 112*60_000 + 6*60_000, likes: 4 },
+  ],
   // ── 2026-08-21 신규 댓글 (실 데이터) ────────────────
   1034: [
     { id: 1, nickname: "익명_2345", holdingLabel: "관심종목", content: "너무 늦게 진입한 건 아닌지", createdAt: T21AU + 8*60_000 + 3*60_000, likes: 4 },

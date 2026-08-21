@@ -17,6 +17,78 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-22 신규 (14개 · 구조 혼합 · 콜론 도입 금지) ──────────────────────
+  {
+    id: -851, alias: "판교 여우 #81", symbol: "TSLA",
+    content: "JPM이 FSD V15를 step-change라고 부른 게 오늘 TSLA 채널의 중심이다. Kalshi 노트에 $450 PT가 같이 붙어 있는데, 성능 도약과 목표가 재조정이 한 줄에 실린 셈이다. 소프트웨어가 하드웨어 사이클을 앞서가는 국면이면 밸류 논거가 달라진다.",
+    likes: 13, comments: 2, created_at: "2026-08-22T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -852, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "Solar Roof 타일 단종.\n— First Squawk: 경제성 없음\n— 주택 태양광 타일 축 축소\n— Megapack 등 스케일 제품으로 무게 이동\n관망. 에너지 매출 구성이 어떻게 바뀌는지가 다음 확인점.",
+    likes: 7, comments: 0, created_at: "2026-08-22T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -853, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "왜 Berlin Optimus 뉴스가 민감할까? 답은 간단하다 — 공장 내부 물류·4680 핸들링이 휴머노이드 실 배치의 첫 현장이기 때문이다. 다만 Alex 소스의 미확인 보도라서 사진·공식 확인 전까지는 비중을 싣기 어렵다.",
+    likes: 9, comments: 1, created_at: "2026-08-22T00:18:00.000Z", liked: false,
+  },
+  {
+    id: -854, alias: "서초 콘도르 #59", symbol: "TSLA",
+    content: "숫자만. Nevada 풀 AV Network Company 허가. Vegas 유료 공개 Robotaxi 경로 개방. Evan·Sawyer. 파일럿에서 상용으로 넘어가는 규제 관문이다.",
+    likes: 15, comments: 1, created_at: "2026-08-22T00:25:00.000Z", liked: false,
+  },
+  {
+    id: -855, alias: "을지로 팔콘 #71", symbol: "TSLA",
+    content: "Austin Cybercab 공개 라이드가 임박하다고 Nevada 교통당국 회의에서 직접 나왔다. Model Y 개조 Robotaxi랑 다른 유닛 이코노믹스 검증이 시작되는 거고… 같은 날 Vegas 허가랑 겹쳐서 타임라인이 확 압축됨!",
+    likes: 11, comments: 0, created_at: "2026-08-22T00:32:00.000Z", liked: false,
+  },
+  {
+    id: -856, alias: "광화문 늑대 #33", symbol: "SPCX",
+    content: "Starship FLT-14 NET 9/15. CADENA/COMPASS Space Ops 프레젠테이션 기준이다. 재사용·대량 수송 로드맵의 다음 체크포인트인데, NET이라 지연 여지는 남는다. 발사 성공 여부가 Starlink 배치 신뢰도에 바로 붙는다.",
+    likes: 8, comments: 0, created_at: "2026-08-22T00:39:00.000Z", liked: false,
+  },
+  {
+    id: -857, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "애널 평균 5년 매출 성장 SpaceX +2,090%. NVDA +288%, TSLA +119%와 격차가 크다. Musk는 SpaceX와 Tesla 둘 다 추정치를 넘길 거라고 답했다. 컨센서스 상방 스탠스인데, 실 CAGR은 분기 실적이 말해준다. 매수 쪽으로 기운다.",
+    likes: 12, comments: 2, created_at: "2026-08-22T00:46:00.000Z", liked: false,
+  },
+  {
+    id: -858, alias: "종로 매 #12", symbol: "SPCX",
+    content: "AST SpaceMobile과 $6B 스펙트럼 기회. 미국 거의 전역 direct-to-device. Polymarket Money 쪽 프레임인데, 스펙트럼이 병목이면 Starlink 모바일 레이어의 커버리지·요금제 경쟁력이 여기서 갈린다. 딜 성사 여부는 별개로 추적.",
+    likes: 6, comments: 0, created_at: "2026-08-22T00:53:00.000Z", liked: false,
+  },
+  {
+    id: -859, alias: "부산 갈매기 #77", symbol: "SPCX",
+    content: "Q2 매출 $7.8B (+93%), GP $4.3B (+141%), Starlink $4.3B, AI Solutions $2.2B (+572%). 순손실. OpEx $4.5B. 당일 시총 $100B+ 소실 맥락까지 붙었다. 성장 스토리와 밸류 충격이 같은 화면에 있는 날이다 — 어느 쪽을 가격에 넣을지가 포지션을 가른다.",
+    likes: 14, comments: 3, created_at: "2026-08-22T01:00:00.000Z", liked: false,
+  },
+  {
+    id: -860, alias: "인천 독수리 #88", symbol: "GOOGL",
+    content: "Waymo HW 원가 $115K에서 $20K. 6세대. 커스텀 5nm 1,000 TOPS. Shay Boloor. Tesla 대비 원가 궤적이 이렇게 좁혀지면 로보택시 스케일 경쟁의 전제가 바뀐다. 다만 lidar 스택 유지 여부·실 대당 원가 검증은 아직이다.",
+    likes: 10, comments: 1, created_at: "2026-08-22T01:07:00.000Z", liked: false,
+  },
+  {
+    id: -861, alias: "대전 학 #63", symbol: "META",
+    content: "META 5년 +52%로 Mag7 최하. SPX 73%보다 20%p 낮다. 그런데 성장은 NVDA 빼고 전 Mag7 중 가장 빠르다. 펀더와 주가의 괴리가 이렇게 크면 재평가 논쟁 아니면 멀티플 압축 지속 — 둘 중 하나로 수렴한다. 지금은 중립.",
+    likes: 9, comments: 0, created_at: "2026-08-22T01:14:00.000Z", liked: false,
+  },
+  {
+    id: -862, alias: "송파 매 #91", symbol: "MACRO",
+    content: "Dalio가 채권을 줄이고 금 15%까지 올리라고 했다. 부채 위기가 다가온다는 프레임. dump bonds, buy gold. 장기물 5%대 복귀와 맞물리면 안전자산 수요 논거가 더 세진다.",
+    likes: 8, comments: 1, created_at: "2026-08-22T01:21:00.000Z", liked: false,
+  },
+  {
+    id: -863, alias: "해운대 상어 #55", symbol: "MACRO",
+    content: "Gold Dec'26 4,643.70 (+1.58%). Bitcoin 77,840.65 (+7.17%). El-Erian 맥락. 같은 세션에 금과 BTC가 같이 뛰면 달러·실질금리·헤지 수요가 동시에 돌아가는 그림이다. Dalio 15%랑 붙이면 스토리가 이어진다.",
+    likes: 11, comments: 0, created_at: "2026-08-22T01:28:00.000Z", liked: false,
+  },
+  {
+    id: -864, alias: "잠실 호랑이 #40", symbol: "MACRO",
+    content: "30Y가 환매 급락을 다 지웠다. 발표 한 시간 안에 5.18%까지 갔다가 48시간 만에 5.282%. Bessent는 환매가 $4B를 넘을 수 있다고 했는데도 금리가 복귀했다. 개입 효과가 짧았다는 뜻이고, 할인율 압력은 다시 열린다. 조심.",
+    likes: 12, comments: 2, created_at: "2026-08-22T01:35:00.000Z", liked: false,
+  },
+
   // ── 2026-08-21 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -836, alias: "여의도 매 #22", symbol: "TSLA",
@@ -6783,6 +6855,36 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-08-22 신규 댓글 ────────────────
+  [-851]: [
+    { alias: "강남 표범 #46", content: "$450 PT가 Kalshi에 뜬 것만으로도 채널 온도가 달라짐", created_at: "2026-08-22T00:06:00.000Z" },
+    { alias: "마포 올빼미 #24", content: "step-change라는 워딩이 점진 업데이트랑 결이 다름", created_at: "2026-08-22T00:08:00.000Z" },
+  ],
+  [-853]: [
+    { alias: "을지로 팔콘 #71", content: "미확인이면 베를린 현장 사진이 나와야 설득력 생김", created_at: "2026-08-22T00:20:00.000Z" },
+  ],
+  [-854]: [
+    { alias: "종로 매 #12", content: "Vegas 유료 공개면 규제 티켓이 진짜로 열린 거", created_at: "2026-08-22T00:27:00.000Z" },
+  ],
+  [-857]: [
+    { alias: "부산 갈매기 #77", content: "+2090%는 기대치 과잉인지 실체인지 분기마다 검증해야", created_at: "2026-08-22T00:48:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "Musk exceed 발언은 컨센 상방이긴 한데 숫자로 확인 전엔 할인", created_at: "2026-08-22T00:50:00.000Z" },
+  ],
+  [-859]: [
+    { alias: "여의도 매 #22", content: "AI +572%가 매출 믹스의 진짜 변화 신호", created_at: "2026-08-22T01:02:00.000Z" },
+    { alias: "인천 독수리 #88", content: "시총 $100B 소실이랑 실적 고성장이 같은 날이면 변동성 장세", created_at: "2026-08-22T01:04:00.000Z" },
+    { alias: "판교 여우 #81", content: "순손실이면 OpEx R&D $2.5B 쪽이 시장 해석의 핵심", created_at: "2026-08-22T01:06:00.000Z" },
+  ],
+  [-860]: [
+    { alias: "서초 콘도르 #59", content: "$20K면 AV 원가 경쟁 구도가 한 단계 바뀜", created_at: "2026-08-22T01:09:00.000Z" },
+  ],
+  [-862]: [
+    { alias: "강남 표범 #46", content: "금 15%는 헤지 비중치고 꽤 공격적", created_at: "2026-08-22T01:23:00.000Z" },
+  ],
+  [-864]: [
+    { alias: "마포 올빼미 #24", content: "48시간 복귀면 환매는 노이즈에 가깝다", created_at: "2026-08-22T01:37:00.000Z" },
+    { alias: "을지로 팔콘 #71", content: "10Y 4.727도 같이 보면 커브 전체가 되돌아간 느낌", created_at: "2026-08-22T01:39:00.000Z" },
+  ],
   // ── 2026-08-21 신규 댓글 (실 데이터) ────────────────
   [-837]: [
     { alias: "여의도 매 #22", content: "이 부분은 좀 다르게 볼 수도 있을 듯", created_at: "2026-08-21T00:13:00.000Z" },
