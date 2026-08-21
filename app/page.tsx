@@ -15,9 +15,13 @@ import { FirstVisitBanner } from "@/components/FirstVisitBanner";
 import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 import { MorningBriefingCard } from "@/components/MorningBriefingCard";
 import { getLocale } from "@/lib/getLocale";
+import { getHomeMarketSnapshot } from "@/lib/getHomeMarketSnapshot";
 
 export default async function HomePage() {
-  const locale = await getLocale();
+  const [locale, marketSnap] = await Promise.all([
+    getLocale(),
+    getHomeMarketSnapshot(),
+  ]);
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
@@ -59,7 +63,7 @@ export default async function HomePage() {
             <WatchlistSection />
 
             {/* 추천주식 · 인기종목 · 주요지수 · S&P500 히트맵 · Futures · 시장종합분석 (실시간) */}
-            <LiveMarket />
+            <LiveMarket initialData={marketSnap} />
 
             {/* 광고 — LiveMarket 아래 */}
             <section className="px-4 lg:px-0 pt-4">

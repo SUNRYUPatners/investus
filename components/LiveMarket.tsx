@@ -70,29 +70,60 @@ function CardSkeleton() {
 }
 
 
-export function LiveMarket() {
+function persistMarketCache(d: MarketData) {
+  try {
+    if ((d?.quotes?.length ?? 0) > 0) {
+      localStorage.setItem("market-data-cache", JSON.stringify({ ...d, _ts: Date.now() }));
+      window.dispatchEvent(new StorageEvent("storage", { key: "market-data-cache" }));
+    }
+  } catch { /* ignore */ }
+}
+
+function fillMissingQuotes(d: MarketData, onExtras: (extras: Quote[]) => void): void {
+  const quoteSym = new Set(d.quotes.map((q) => q.symbol));
+  const allNeeded = [...new Set([...RECOMMENDED_SYMBOLS, "AAPL", "NVDA", "MSFT", "AMZN", "META", "AMD"])];
+  const missing = allNeeded.filter((s) => !quoteSym.has(s));
+  if (missing.length === 0) return;
+
+  void fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`)
+    .then((r) => r.json())
+    .then((prices: Record<string, { price: number; change: number; changePercent: number }>) => {
+      const extras: Quote[] = [];
+      for (const sym of missing) {
+        const p = prices[sym];
+        if (p?.price > 0) {
+          extras.push({
+            symbol: sym, name: sym,
+            price: p.price, change: p.change, changePercent: p.changePercent,
+            sparkline: [], volume: "0", marketCap: "—",
+          });
+        }
+      }
+      if (extras.length > 0) onExtras(extras);
+    })
+    .catch(() => {});
+}
+
+export function LiveMarket({ initialData = null }: { initialData?: MarketData | null }) {
   const t      = useLocale();
   const locale = useLocaleCode();
   const { user } = useAuth();
   const picksLocked = SUBSCRIPTION.enabled && user?.isPro !== true;
-  const [data, setData]       = useState<MarketData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<MarketData | null>(initialData);
+  const [loading, setLoading] = useState(!initialData);
 
   const recScroll    = useScrollIndicator();
   const quotesScroll = useScrollIndicator();
   const idxScroll    = useScrollIndicator();
 
-  // Ref so the interval always calls the latest version of doLoad
   const doLoadRef = useRef<(isRetry?: boolean) => void>(() => {});
 
   const doLoad = (isRetry = false, retryDelay = 3000, bustCdn = false) => {
-    if (isRetry) { setLoading(true); }
+    // 이미 종가/시세가 보이면 스켈레톤으로 되돌리지 않음
+    if (isRetry) setLoading(true);
 
-    // 15초 타임아웃
     const controller = new AbortController();
-    const timeout    = setTimeout(() => controller.abort(), 15_000);
-
-    // bustCdn: 장 중인데 CDN이 오래된 응답을 물고 있을 때 우회용
+    const timeout = setTimeout(() => controller.abort(), 15_000);
     const url = bustCdn ? `/api/market-data?ts=${Date.now()}` : "/api/market-data";
 
     fetch(url, { signal: controller.signal, cache: "no-store" })
@@ -101,66 +132,46 @@ export function LiveMarket() {
         if (!r.ok) throw new Error("http " + r.status);
         return r.json();
       })
-      .then(async (d: MarketData) => {
+      .then((d: MarketData) => {
         clearTimeout(timeout);
         const hasData = (d?.quotes?.length ?? 0) > 0 || (d?.indices?.length ?? 0) > 0;
         if (!hasData) throw new Error("empty");
 
-        // 장 중: 10분 초과 스테일 → CDN 우회 재요청
         const dataAge = Date.now() - (d.liveAt ?? 0);
         if (!bustCdn && isMarketOpen() && dataAge > 10 * 60 * 1000) {
           doLoad(false, retryDelay, true);
           return;
         }
-
-        // 장 마감: 마감 전 스냅샷(종가 아님)이면 즉시 재요청
         if (!bustCdn && !isMarketOpen() && d.liveAt && !isEodCacheFresh(d.liveAt)) {
           doLoad(false, retryDelay, true);
           return;
         }
 
-        // 누락 심볼 보완: RECOMMENDED_SYMBOLS + POPULAR 중 quotes에 없는 심볼 개별 fetch
-        const quoteSym = new Set(d.quotes.map((q) => q.symbol));
-        const allNeeded = [...new Set([...RECOMMENDED_SYMBOLS, "AAPL", "NVDA", "MSFT", "AMZN", "META", "AMD"])];
-        const missing   = allNeeded.filter((s) => !quoteSym.has(s));
-        if (missing.length > 0) {
-          try {
-            const pr = await fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`);
-            const prices = await pr.json() as Record<string, { price: number; change: number; changePercent: number }>;
-            for (const sym of missing) {
-              const p = prices[sym];
-              if (p?.price > 0) {
-                d.quotes.push({
-                  symbol: sym, name: sym,
-                  price: p.price, change: p.change, changePercent: p.changePercent,
-                  sparkline: [], volume: "0", marketCap: "—",
-                });
-              }
-            }
-          } catch { /* 보완 실패 시 있는 데이터로 표시 */ }
-        }
-
+        // 즉시 페인트 — guru-prices는 막지 않음
         setData(d);
         setLoading(false);
-        try {
-          if ((d?.quotes?.length ?? 0) > 0) {
-            localStorage.setItem("market-data-cache", JSON.stringify({ ...d, _ts: Date.now() }));
-            window.dispatchEvent(new StorageEvent("storage", { key: "market-data-cache" }));
-          }
-        } catch { /* ignore */ }
+        persistMarketCache(d);
+        fillMissingQuotes(d, (extras) => {
+          setData((prev) => {
+            if (!prev) return prev;
+            const have = new Set(prev.quotes.map((q) => q.symbol));
+            const add = extras.filter((q) => !have.has(q.symbol));
+            if (add.length === 0) return prev;
+            const next = { ...prev, quotes: [...prev.quotes, ...add] };
+            persistMarketCache(next);
+            return next;
+          });
+        });
       })
       .catch((e: unknown & { retry?: boolean }) => {
         clearTimeout(timeout);
         const shouldRetry = (e as { retry?: boolean })?.retry;
         if (shouldRetry) {
-          // 503 일시적 오류 — 데이터 없으면 스켈레톤 유지하면서 재시도, 있으면 보이는 채로 재시도
           const next = Math.min(retryDelay * 2, 15_000);
           setTimeout(() => doLoad(false, next), retryDelay);
         } else {
-          // 기존 데이터 있으면 그대로 유지, 없으면 재시도 버튼 (절대 빈 화면 금지)
           setData((prev) => {
             if (!prev) {
-              // 데이터 없을 때도 재시도 버튼 대신 자동 재시도
               setTimeout(() => doLoad(true, 3000), 5000);
               setLoading(false);
             }
@@ -170,40 +181,39 @@ export function LiveMarket() {
       });
   };
 
-  // Keep ref pointing to the latest doLoad on every render
   doLoadRef.current = doLoad;
 
   useEffect(() => {
-    // 1. 캐시를 즉시 표시 — 장중 5분 / 장마감 후 EOD(liveAt)만
-    try {
-      const cached = localStorage.getItem("market-data-cache");
-      if (cached) {
-        const parsed = JSON.parse(cached) as MarketData & { _ts?: number };
-        const liveAt = parsed.liveAt ?? parsed._ts ?? 0;
-        const ok = isMarketOpen()
-          ? liveAt > 0 && Date.now() - liveAt < 10 * 60 * 1000
-          : isEodCacheFresh(liveAt);
-        if (ok && ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0)) {
-          setData(parsed);
-          setLoading(false);
+    // SSR 데이터가 없으면 localStorage EOD/신선 캐시로 즉시 표시
+    if (!initialData) {
+      try {
+        const cached = localStorage.getItem("market-data-cache");
+        if (cached) {
+          const parsed = JSON.parse(cached) as MarketData & { _ts?: number };
+          const liveAt = parsed.liveAt ?? parsed._ts ?? 0;
+          const ok = isMarketOpen()
+            ? liveAt > 0 && Date.now() - liveAt < 10 * 60 * 1000
+            : isEodCacheFresh(liveAt);
+          if (ok && ((parsed?.quotes?.length ?? 0) > 0 || (parsed?.indices?.length ?? 0) > 0)) {
+            setData(parsed);
+            setLoading(false);
+          }
         }
-      }
-    } catch { /* ignore */ }
+      } catch { /* ignore */ }
+    } else {
+      persistMarketCache(initialData);
+    }
 
-    // 항상 최신 데이터를 서버에서 가져옴 (localStorage는 로딩 중 임시 표시용)
-    // 장 마감 중이어도 1회 fetch — 서버 KV 캐시에서 당일 종가를 즉시 반환
+    // 백그라운드 최신화 (이미 보이면 스켈레톤 없이)
     doLoadRef.current();
 
-    // 장 중: 60초마다 갱신 / 장 마감: 5분마다 갱신 (항상 최신 데이터 유지)
     const id = setInterval(() => {
       doLoadRef.current();
     }, isMarketOpen() ? 60_000 : 5 * 60_000);
 
-    // 다른 앱/탭에서 돌아오면 즉시 갱신 (임계값 없음)
     const onVisibility = () => {
       if (!document.hidden) doLoadRef.current();
     };
-    // 데스크탑: 창 포커스 복귀 시에도 갱신
     const onFocus = () => doLoadRef.current();
 
     document.addEventListener("visibilitychange", onVisibility);
