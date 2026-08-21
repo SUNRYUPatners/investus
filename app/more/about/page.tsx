@@ -82,7 +82,7 @@ export default function AboutPage() {
           </Link>
         </div>
 
-        {/* Hero */}
+        {/* Hero — 다크 패널: 라이트 테마 --text/--muted 쓰면 안 보임 → 밝은 글자 고정 */}
         <div className="relative rounded-3xl overflow-hidden p-6 mb-6"
           style={{ background: "linear-gradient(145deg, #0d1f18 0%, #0a0c10 50%, #0e0c1f 100%)" }}>
           <div className="absolute top-0 left-0 w-40 h-40 rounded-full pointer-events-none"
@@ -93,8 +93,8 @@ export default function AboutPage() {
           <div className="relative flex items-center gap-3 mb-5">
             <LogoMark size="lg" shadow />
             <div>
-              <p className="text-xl font-bold font-syne" style={{ color: "var(--text)" }}>Investus</p>
-              <p className="text-[11px]" style={{ color: "var(--mint)" }}>Invest · US · Together</p>
+              <p className="text-xl font-bold font-syne" style={{ color: "#f3f0e8" }}>Investus</p>
+              <p className="text-[11px]" style={{ color: "#d4af37" }}>Invest · US · Together</p>
             </div>
           </div>
 
@@ -102,8 +102,8 @@ export default function AboutPage() {
           <div className="relative flex flex-col gap-2 mb-5">
             <div className="flex items-start gap-2">
               <span className="text-[11px] font-bold px-2 py-0.5 rounded-full flex-shrink-0 mt-0.5"
-                style={{ background: "rgba(var(--mint-rgb),0.15)", color: "var(--mint)" }}>Invest US</span>
-              <p className="text-[12px] leading-relaxed" style={{ color: "var(--text)" }}>
+                style={{ background: "rgba(212,175,55,0.2)", color: "#e8c547" }}>Invest US</span>
+              <p className="text-[12px] leading-relaxed" style={{ color: "#e5e7eb" }}>
                 {isKo
                   ? "미국(United States)에 투자하라 — 세계에서 가장 검증된 시장"
                   : "Invest in the United States — the world's most proven market"}
@@ -111,8 +111,8 @@ export default function AboutPage() {
             </div>
             <div className="flex items-start gap-2">
               <span className="text-[11px] font-bold px-2 py-0.5 rounded-full flex-shrink-0 mt-0.5"
-                style={{ background: "rgba(99,102,241,0.15)", color: "#a78bfa" }}>Invest us</span>
-              <p className="text-[12px] leading-relaxed" style={{ color: "var(--text)" }}>
+                style={{ background: "rgba(167,139,250,0.2)", color: "#c4b5fd" }}>Invest us</span>
+              <p className="text-[12px] leading-relaxed" style={{ color: "#e5e7eb" }}>
                 {isKo
                   ? "우리와 함께 투자하라 — 혼자가 아닌, 같은 방향으로"
                   : "Invest with us — together, not alone, in the same direction"}
@@ -120,17 +120,17 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <p className="relative text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+          <p className="relative text-sm leading-relaxed" style={{ color: "#9ca3af" }}>
             {isKo ? (
               <>두 가지 의미를 담은 이름처럼,<br />
-              Investus는 <span style={{ color: "var(--text)", fontWeight: 600 }}>미국주식에 집중</span>하고
-              <span style={{ color: "var(--text)", fontWeight: 600 }}> 함께 성장</span>하는
+              Investus는 <span style={{ color: "#f3f0e8", fontWeight: 600 }}>미국주식에 집중</span>하고
+              <span style={{ color: "#f3f0e8", fontWeight: 600 }}> 함께 성장</span>하는
               투자 정보 플랫폼입니다.</>
             ) : (
               <>Like the dual meaning in its name,<br />
               Investus is an investment information platform focused on{" "}
-              <span style={{ color: "var(--text)", fontWeight: 600 }}>US stocks</span> and built for{" "}
-              <span style={{ color: "var(--text)", fontWeight: 600 }}>growing together</span>.</>
+              <span style={{ color: "#f3f0e8", fontWeight: 600 }}>US stocks</span> and built for{" "}
+              <span style={{ color: "#f3f0e8", fontWeight: 600 }}>growing together</span>.</>
             )}
           </p>
         </div>
@@ -212,7 +212,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* E-book */}
+        {/* E-book — 다크 패널: 밝은 글자 고정 */}
         <div className="rounded-2xl p-5 mb-4"
           style={{ background: "linear-gradient(145deg, #0d1a2e 0%, #0a0c10 100%)", border: "1px solid rgba(96,165,250,0.2)" }}>
           <div className="flex items-center gap-2 mb-3">
@@ -220,34 +220,34 @@ export default function AboutPage() {
               style={{ background: "rgba(96,165,250,0.12)", color: "#60a5fa" }}>
               <BookOpen className="w-4 h-4" />
             </div>
-            <p className="text-xs font-bold font-syne" style={{ color: "var(--text)" }}>
+            <p className="text-xs font-bold font-syne" style={{ color: "#f3f0e8" }}>
               {isKo ? "Investus 전자책" : "Investus E-Book"}
             </p>
           </div>
           {isKo ? (
             <>
-              <p className="text-[12px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+              <p className="text-[12px] leading-relaxed mb-3" style={{ color: "#9ca3af" }}>
                 SUNRYU Partners CIO가 직접 집필한 전자책입니다.
-                수년간의 미국주식 투자 경험에서 걸러낸 <span style={{ color: "#60a5fa", fontWeight: 600 }}>핵심만</span>을 담았습니다.
+                수년간의 미국주식 투자 경험에서 걸러낸 <span style={{ color: "#93c5fd", fontWeight: 600 }}>핵심만</span>을 담았습니다.
               </p>
-              <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)", opacity: 0.8 }}>
+              <p className="text-[11px] leading-relaxed" style={{ color: "#6b7280" }}>
                 불필요한 이론은 없습니다. 당장 내일 투자에 적용할 수 있는 판단 기준과 원칙만으로 구성되어 있습니다.
               </p>
             </>
           ) : (
             <>
-              <p className="text-[12px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+              <p className="text-[12px] leading-relaxed mb-3" style={{ color: "#9ca3af" }}>
                 Written directly by the SUNRYU Partners CIO — distilling years of US stock investing experience into
-                <span style={{ color: "#60a5fa", fontWeight: 600 }}> only what matters</span>.
+                <span style={{ color: "#93c5fd", fontWeight: 600 }}> only what matters</span>.
               </p>
-              <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)", opacity: 0.8 }}>
+              <p className="text-[11px] leading-relaxed" style={{ color: "#6b7280" }}>
                 No unnecessary theory. Only the decision-making frameworks and principles you can apply to tomorrow&apos;s investments.
               </p>
             </>
           )}
         </div>
 
-        {/* Education */}
+        {/* Education — 다크 패널: 밝은 글자 고정 */}
         <div className="rounded-2xl p-5 mb-6"
           style={{ background: "linear-gradient(145deg, #1a0d1f 0%, #0a0c10 100%)", border: "1px solid rgba(192,132,252,0.2)" }}>
           <div className="flex items-center gap-2 mb-3">
@@ -255,29 +255,29 @@ export default function AboutPage() {
               style={{ background: "rgba(192,132,252,0.12)", color: "#c084fc" }}>
               <Shield className="w-4 h-4" />
             </div>
-            <p className="text-xs font-bold font-syne" style={{ color: "var(--text)" }}>
+            <p className="text-xs font-bold font-syne" style={{ color: "#f3f0e8" }}>
               {isKo ? "투자 교육" : "Investment Education"}
             </p>
           </div>
           {isKo ? (
             <>
-              <p className="text-[12px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+              <p className="text-[12px] leading-relaxed mb-3" style={{ color: "#9ca3af" }}>
                 투자는 어릴 때부터 배워야 합니다. 선진국에서는 금융 교육이 일상이지만,
-                대한민국에서는 아직도 <span style={{ color: "#c084fc", fontWeight: 600 }}>투자 교육이 절대적으로 부족</span>합니다.
+                대한민국에서는 아직도 <span style={{ color: "#d8b4fe", fontWeight: 600 }}>투자 교육이 절대적으로 부족</span>합니다.
               </p>
-              <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
+              <p className="text-[12px] leading-relaxed" style={{ color: "#9ca3af" }}>
                 Investus의 투자 교육은 이 공백을 채우기 위해 존재합니다.
                 올바른 기준과 사고방식을 갖춘 투자자를 만드는 것 — 그것이 우리가 교육을 하는 이유입니다.
               </p>
             </>
           ) : (
             <>
-              <p className="text-[12px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+              <p className="text-[12px] leading-relaxed mb-3" style={{ color: "#9ca3af" }}>
                 Investment education should start early. In developed countries, financial literacy is part of daily life —
                 but far too many people encounter investing for the first time only after entering the workforce,
                 unprepared and exposed to unverified information.
               </p>
-              <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
+              <p className="text-[12px] leading-relaxed" style={{ color: "#9ca3af" }}>
                 Investus education exists to fill that gap — building investors with the right frameworks and mindset from the start.
               </p>
             </>
