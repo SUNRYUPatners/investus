@@ -6871,9 +6871,9 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
     { alias: "광화문 늑대 #33", content: "Musk exceed 발언은 컨센 상방이긴 한데 숫자로 확인 전엔 할인", created_at: "2026-08-22T00:50:00.000Z" },
   ],
   [-859]: [
-    { alias: "여의도 매 #22", content: "AI +572%가 매출 믹스의 진짜 변화 신호", created_at: "2026-08-22T01:02:00.000Z" },
+    { alias: "여의도 매 #22", content: "AI +673%가 매출 믹스의 진짜 변화 신호", created_at: "2026-08-22T01:02:00.000Z" },
     { alias: "인천 독수리 #88", content: "시총 $100B 소실이랑 실적 고성장이 같은 날이면 변동성 장세", created_at: "2026-08-22T01:04:00.000Z" },
-    { alias: "판교 여우 #81", content: "순손실이면 OpEx R&D $2.5B 쪽이 시장 해석의 핵심", created_at: "2026-08-22T01:06:00.000Z" },
+    { alias: "판교 여우 #81", content: "순손실이면 OpEx R&D $3.5B 쪽이 시장 해석의 핵심", created_at: "2026-08-22T01:06:00.000Z" },
   ],
   [-860]: [
     { alias: "서초 콘도르 #59", content: "$20K면 AV 원가 경쟁 구도가 한 단계 바뀜", created_at: "2026-08-22T01:09:00.000Z" },
