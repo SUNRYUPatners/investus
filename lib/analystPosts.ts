@@ -60,7 +60,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -859, alias: "부산 갈매기 #77", symbol: "SPCX",
-    content: "Q2 매출 $7.8B (+93%), GP $4.3B (+141%), Starlink $4.3B, AI Solutions $2.2B (+572%). 순손실. OpEx $4.5B. 당일 시총 $100B+ 소실 맥락까지 붙었다. 성장 스토리와 밸류 충격이 같은 화면에 있는 날이다 — 어느 쪽을 가격에 넣을지가 포지션을 가른다.",
+    content: "Q2 매출 $7.8B (+92%), GP $4.3B (+141%), Starlink $4.3B(+66%), AI Solutions $2.2B (+673%). 순손실. OpEx $4.5B(R&D $3.5B·SG&A $0.9B). 당일 시총 $100B+ 소실 맥락까지 붙었다. 성장 스토리와 밸류 충격이 같은 화면에 있는 날이다 — 어느 쪽을 가격에 넣을지가 포지션을 가른다.",
     likes: 14, comments: 3, created_at: "2026-08-22T01:00:00.000Z", liked: false,
   },
   {
@@ -70,7 +70,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -861, alias: "대전 학 #63", symbol: "META",
-    content: "META 5년 +52%로 Mag7 최하. SPX 73%보다 20%p 낮다. 그런데 성장은 NVDA 빼고 전 Mag7 중 가장 빠르다. 펀더와 주가의 괴리가 이렇게 크면 재평가 논쟁 아니면 멀티플 압축 지속 — 둘 중 하나로 수렴한다. 지금은 중립.",
+    content: "META 5년 +53%로 Mag7 최하. SPX 73%보다 20%p 낮다. 그런데 성장은 NVDA 빼고 전 Mag7 중 가장 빠르다. 펀더와 주가의 괴리가 이렇게 크면 재평가 논쟁 아니면 멀티플 압축 지속 — 둘 중 하나로 수렴한다. 지금은 중립.",
     likes: 9, comments: 0, created_at: "2026-08-22T01:14:00.000Z", liked: false,
   },
   {

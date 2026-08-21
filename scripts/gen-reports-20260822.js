@@ -154,14 +154,14 @@ function summarySvg(lang){
   const c = [
     {icon:'🤖', big: ko?'JPM FSD V15':'$450 PT', mid: ko?'step-change·$450 PT':'JPM step-change', sub: ko?'Kalshi 노트':'FSD V15 frame', stroke:'#4ade80', card:'#0a1a0a'},
     {icon:'🚕', big: ko?'Nevada AV':'Nevada AV', mid: ko?'풀 AV Network 허가':'Full AV Network', sub: ko?'Vegas 유료 Robotaxi':'Paid Vegas Robotaxi', stroke:'#4ade80', card:'#0a1a0a'},
-    {icon:'🚀', big: ko?'Q2 $7.8B':'Q2 $7.8B', mid: ko?'매출 +93% YoY':'Revenue +93% YoY', sub: ko?'Starlink $4.3B 55%':'Starlink $4.3B 55%', stroke:'#c084fc', card:'#1a0f2a'},
+    {icon:'🚀', big: ko?'Q2 $7.8B':'Q2 $7.8B', mid: ko?'매출 +92% YoY':'Revenue +92% YoY', sub: ko?'Starlink $4.3B 55%':'Starlink $4.3B 55%', stroke:'#c084fc', card:'#1a0f2a'},
     {icon:'📈', big: '+2,090%', mid: ko?'SPCX 5년 매출 성장':'SPCX 5yr rev growth', sub: ko?'Musk 초과 전망':'Musk: exceed est.', stroke:'#c084fc', card:'#1a0f2a'},
     {icon:'🥇', big: '4,643', mid: ko?'Gold Dec\'26':'Gold Dec\'26', sub: ko?'BTC 77,840 (+7.17%)':'BTC 77,840 (+7.17%)', stroke:'#94a3b8', card:'#111827'},
     {icon:'📉', big: '5.282%', mid: ko?'US 30Y 수익률':'US 30Y yield', sub: ko?'환매 급락 완전 소멸':'Buyback crash erased', stroke:'#94a3b8', card:'#111827'},
   ];
   const extra1 = ko
-    ? 'Solar Roof 중단 · Optimus Berlin Gen2 · AST $6B 스펙트럼 · Waymo $20K HW · META Mag7 최하 52%'
-    : 'Solar Roof discontinued · Optimus Berlin Gen2 · AST $6B spectrum · Waymo $20K HW · META Mag7 worst 52%';
+    ? 'Solar Roof 중단 · Optimus Berlin Gen2 · AST $6B 스펙트럼 · Waymo $20K HW · META Mag7 최하 53%'
+    : 'Solar Roof discontinued · Optimus Berlin Gen2 · AST $6B spectrum · Waymo $20K HW · META Mag7 worst 53%';
   const extra2 = ko
     ? 'Dalio 금 15% · FLT-14 NET 9/15 · Austin Cybercab 임박 · Starship/FSD 축 동시 진전'
     : 'Dalio gold 15% · FLT-14 NET 9/15 · Austin Cybercab imminent · Starship/FSD axes advance';
@@ -306,14 +306,14 @@ const T=[
 
 // 9. Q2 2026 $7.8B revenue
 {file:'spcx-q2-2026-78b-revenue',symbol:'SPCX',
- ko:{title:'SpaceX Q2 2026 매출 $7.8B (+93% YoY)·총이익 $4.3B·Starlink $4.3B 55%·AI $2.2B·순손실·시총 $100B+ 소실 맥락',heroIcon:'💰',heroBig:'$7.8B',heroSub:'Q2 2026: 매출 $7.8B (+93%)·총이익 $4.3B (+141%)·매출원가 $3.5B (+53%)·순손실. Starlink $4.3B 55% (+68%)·AI Solutions $2.2B 28% (+572%)·Launches $1.0B 13% (+29%)·Advertising $0.3B 4% (-2%). OpEx $4.5B (+62%)=R&D $2.5B (+81%)+SG&A $2.0B (+35%). 소셜 맥락: 당일 시총 $100B+ 소실.',
-  cards:[{icon:'💵',big:'$7.8B',mid:'매출 +93% YoY',sub:'Q2 2026'},{icon:'🛰️',big:'$4.3B',mid:'Starlink 55%',sub:'+68% YoY'},{icon:'🧠',big:'$2.2B',mid:'AI 28% · +572%',sub:'고성장 축'}],
-  quote:'"SpaceX Q2 매출 $7.8B (+93%)·총이익 $4.3B (+141%). Starlink $4.3B·AI $2.2B (+572%). 순손실·OpEx $4.5B. 당일 시총 $100B+ 소실 맥락."',
-  noteHead:'왜 중요한가',noteSub:'매출·총이익 고성장과 순손실·시총 급락이 동시에 드러난 분기 스냅샷이다. AI Solutions +572%가 발사·Starlink 다음 성장 축으로 확인된다.',footer:'SPCX · Q2 $7.8B · +93%',brand:BK},
- en:{title:'SpaceX Q2 2026 Revenue $7.8B (+93% YoY) · GP $4.3B · Starlink $4.3B 55% · AI $2.2B · Net Loss · >$100B Mcap Lost Context',heroIcon:'💰',heroBig:'$7.8B',heroSub:'Q2 2026: Revenue $7.8B (+93%); Gross Profit $4.3B (+141%); Cost of Sales $3.5B (+53%); Net Income loss. Starlink $4.3B 55% (+68%); AI Solutions $2.2B 28% (+572%); Launches $1.0B 13% (+29%); Advertising $0.3B 4% (-2%). OpEx $4.5B (+62%) = R&D $2.5B (+81%) + SG&A $2.0B (+35%). Social context: market cap lost over $100B today.',
-  cards:[{icon:'💵',big:'$7.8B',mid:'Revenue +93% YoY',sub:'Q2 2026'},{icon:'🛰️',big:'$4.3B',mid:'Starlink 55%',sub:'+68% YoY'},{icon:'🧠',big:'$2.2B',mid:'AI 28% · +572%',sub:'High-growth axis'}],
-  quote:'"SpaceX Q2 revenue $7.8B (+93%) · GP $4.3B (+141%). Starlink $4.3B · AI $2.2B (+572%). Net loss · OpEx $4.5B. Context: >$100B mcap lost today."',
-  noteHead:'Why this matters',noteSub:'High growth in revenue/GP lands alongside net loss and mcap drawdown. AI Solutions +572% confirms the next growth axis after launch/Starlink.',footer:'SPCX · Q2 $7.8B · +93%',brand:BE}},
+ ko:{title:'SpaceX Q2 2026 매출 $7.8B (+92% YoY)·총이익 $4.3B·Starlink $4.3B 55%·AI $2.2B·순손실·시총 $100B+ 소실 맥락',heroIcon:'💰',heroBig:'$7.8B',heroSub:'Q2 2026: 매출 $7.8B (+92%)·총이익 $4.3B (+141%)·매출원가 $3.5B (+53%)·순손실. Starlink $4.3B 55% (+66%)·AI Solutions $2.2B 28% (+673%)·Launches $1.0B 12% (+29%)·Advertising $0.4B 5% (-17%). OpEx $4.5B (+62%)=R&D $3.5B (+81%)+SG&A $0.9B (+50%). 소셜 맥락: 당일 시총 $100B+ 소실.',
+  cards:[{icon:'💵',big:'$7.8B',mid:'매출 +92% YoY',sub:'Q2 2026'},{icon:'🛰️',big:'$4.3B',mid:'Starlink 55%',sub:'+66% YoY'},{icon:'🧠',big:'$2.2B',mid:'AI 28% · +673%',sub:'고성장 축'}],
+  quote:'"SpaceX Q2 매출 $7.8B (+92%)·총이익 $4.3B (+141%). Starlink $4.3B·AI $2.2B (+673%). 순손실·OpEx $4.5B. 당일 시총 $100B+ 소실 맥락."',
+  noteHead:'왜 중요한가',noteSub:'매출·총이익 고성장과 순손실·시총 급락이 동시에 드러난 분기 스냅샷이다. AI Solutions +673%가 발사·Starlink 다음 성장 축으로 확인된다.',footer:'SPCX · Q2 $7.8B · +92%',brand:BK},
+ en:{title:'SpaceX Q2 2026 Revenue $7.8B (+92% YoY) · GP $4.3B · Starlink $4.3B 55% · AI $2.2B · Net Loss · >$100B Mcap Lost Context',heroIcon:'💰',heroBig:'$7.8B',heroSub:'Q2 2026: Revenue $7.8B (+92%); Gross Profit $4.3B (+141%); Cost of Sales $3.5B (+53%); Net Income loss. Starlink $4.3B 55% (+66%); AI Solutions $2.2B 28% (+673%); Launches $1.0B 12% (+29%); Advertising $0.4B 5% (-17%). OpEx $4.5B (+62%) = R&D $3.5B (+81%) + SG&A $0.9B (+50%). Social context: market cap lost over $100B today.',
+  cards:[{icon:'💵',big:'$7.8B',mid:'Revenue +92% YoY',sub:'Q2 2026'},{icon:'🛰️',big:'$4.3B',mid:'Starlink 55%',sub:'+66% YoY'},{icon:'🧠',big:'$2.2B',mid:'AI 28% · +673%',sub:'High-growth axis'}],
+  quote:'"SpaceX Q2 revenue $7.8B (+92%) · GP $4.3B (+141%). Starlink $4.3B · AI $2.2B (+673%). Net loss · OpEx $4.5B. Context: >$100B mcap lost today."',
+  noteHead:'Why this matters',noteSub:'High growth in revenue/GP lands alongside net loss and mcap drawdown. AI Solutions +673% confirms the next growth axis after launch/Starlink.',footer:'SPCX · Q2 $7.8B · +92%',brand:BE}},
 
 // 10. Waymo $20K hardware 5nm 1000 TOPS
 {file:'waymo-20k-hardware-5nm-1000tops',symbol:'GOOGL',
@@ -326,16 +326,16 @@ const T=[
   quote:'"Waymo HW cost ~$115K → ~$20K (6th-gen). Custom 5nm chip 1,000 TOPS for camera/lidar/radar."',
   noteHead:'Why this matters',noteSub:'Hardware cost is the core AV unit-economics bottleneck. ~$20K shows Waymo cost trajectory in the robotaxi scale race vs Tesla.',footer:'GOOGL · Waymo HW ~$20K · 1,000 TOPS',brand:BE}},
 
-// 11. META Mag7 worst 52% 5yr
+// 11. META Mag7 worst 53% 5yr
 {file:'meta-mag7-worst-52pct-5yr',symbol:'META',
- ko:{title:'META 5년 수익률 52%·Mag7 최하·S&P500 73% 대비 20%p 저조·성장은 NVDA 제외 최상위',heroIcon:'📊',heroBig:'52%',heroSub:'5년 수익률: META 52%(Mag7 최하)·MSFT 58%·TSLA 59%·AMZN 61%·S&P500 73%·AAPL 108%·GOOGL 146%·NVDA 936%. SPX 대비 20%p 저조. 성장 속도는 NVDA 제외 전 Mag7 대비 빠르다.',
-  cards:[{icon:'📉',big:'52%',mid:'5년 수익률',sub:'Mag7 최하'},{icon:'📊',big:'-20%p',mid:'vs S&P500 73%',sub:'상대 저조'},{icon:'📈',big:'성장',mid:'NVDA 제외 최고',sub:'펀더 vs 주가'}],
-  quote:'"META 5년 +52%로 Mag7 최하·SPX 73% 대비 20%p 저조. 성장은 NVDA 제외 전 Mag7 중 가장 빠르다."',
-  noteHead:'왜 중요한가',noteSub:'펀더멘털 성장과 주가 성과의 괴리다. AI CAPEX·광고 회복이 주가에 아직 충분히 반영되지 않았다는 재평가 논쟁의 출발점이다.',footer:'META · Mag7 최하 52% · vs SPX',brand:BK},
- en:{title:'META 5yr Return 52% — Worst Mag7 · Underperforms S&P500 73% by 20pp · Growing Faster Than All Except NVDA',heroIcon:'📊',heroBig:'52%',heroSub:'5yr returns: META 52% (worst Mag7); MSFT 58%; TSLA 59%; AMZN 61%; S&P500 73%; AAPL 108%; GOOGL 146%; NVDA 936%. Underperforming SPX by 20pp. Growing faster than all except NVDA.',
-  cards:[{icon:'📉',big:'52%',mid:'5yr return',sub:'Worst Mag7'},{icon:'📊',big:'-20pp',mid:'vs S&P500 73%',sub:'Relative lag'},{icon:'📈',big:'Growth',mid:'Fastest ex-NVDA',sub:'Fund vs price'}],
-  quote:'"META +52% over 5yrs — worst Mag7; 20pp behind SPX 73%. Growing faster than all Mag7 except NVDA."',
-  noteHead:'Why this matters',noteSub:'Gap between fundamental growth and stock performance. Starting point for re-rating debate if AI CAPEX/ad recovery is underpriced.',footer:'META · Mag7 Worst 52% · vs SPX',brand:BE}},
+ ko:{title:'META 5년 수익률 53%·Mag7 최하·S&P500 73% 대비 20%p 저조·성장은 NVDA 제외 최상위',heroIcon:'📊',heroBig:'53%',heroSub:'5년 수익률: META 53%(Mag7 최하)·MSFT 58%·TSLA 59%·AMZN 61%·S&P500 73%·AAPL 108%·GOOGL 146%·NVDA 936%. SPX 대비 20%p 저조. 성장 속도는 NVDA 제외 전 Mag7 대비 빠르다.',
+  cards:[{icon:'📉',big:'53%',mid:'5년 수익률',sub:'Mag7 최하'},{icon:'📊',big:'-20%p',mid:'vs S&P500 73%',sub:'상대 저조'},{icon:'📈',big:'성장',mid:'NVDA 제외 최고',sub:'펀더 vs 주가'}],
+  quote:'"META 5년 +53%로 Mag7 최하·SPX 73% 대비 20%p 저조. 성장은 NVDA 제외 전 Mag7 중 가장 빠르다."',
+  noteHead:'왜 중요한가',noteSub:'펀더멘털 성장과 주가 성과의 괴리다. AI CAPEX·광고 회복이 주가에 아직 충분히 반영되지 않았다는 재평가 논쟁의 출발점이다.',footer:'META · Mag7 최하 53% · vs SPX',brand:BK},
+ en:{title:'META 5yr Return 53% — Worst Mag7 · Underperforms S&P500 73% by 20pp · Growing Faster Than All Except NVDA',heroIcon:'📊',heroBig:'53%',heroSub:'5yr returns: META 53% (worst Mag7); MSFT 58%; TSLA 59%; AMZN 61%; S&P500 73%; AAPL 108%; GOOGL 146%; NVDA 936%. Underperforming SPX by 20pp. Growing faster than all except NVDA.',
+  cards:[{icon:'📉',big:'53%',mid:'5yr return',sub:'Worst Mag7'},{icon:'📊',big:'-20pp',mid:'vs S&P500 73%',sub:'Relative lag'},{icon:'📈',big:'Growth',mid:'Fastest ex-NVDA',sub:'Fund vs price'}],
+  quote:'"META +53% over 5yrs — worst Mag7; 20pp behind SPX 73%. Growing faster than all Mag7 except NVDA."',
+  noteHead:'Why this matters',noteSub:'Gap between fundamental growth and stock performance. Starting point for re-rating debate if AI CAPEX/ad recovery is underpriced.',footer:'META · Mag7 Worst 53% · vs SPX',brand:BE}},
 
 // 12. Dalio gold 15% bonds
 {file:'dalio-gold-15pct-bonds',symbol:'MACRO',
