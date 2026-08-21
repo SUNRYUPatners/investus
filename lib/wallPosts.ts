@@ -120,7 +120,7 @@ export const MOCK_POSTS: Post[] = [
     content: "Waymo도 자체 AI ASIC chip 개발한대. Nvidia 파트너십은 병행",
     createdAt: T21AU + 40*60_000, likes: 13, comments: 0 },
   { id: 1039, symbol: "SPCX", nickname: "익명_4040", holdingLabel: "관심종목",
-    content: "SPCX 39M주 lockup 앞두고 JPM 500K주 buyback 준비. 현재 $130.94",
+    content: "SPCX 두 번째 소규모 lockup 만료 완료·약 39M주 매도로 -7% 하락. 현재 $130.94",
     createdAt: T21AU + 48*60_000, likes: 5, comments: 0 },
   { id: 1040, symbol: "MACRO", nickname: "익명_4141", holdingLabel: "관심종목",
     content: "Musk 왈: X가 인플루언서·크리에이터 stablecoin 결제 인프라 될 것. 결제 사업 확장",

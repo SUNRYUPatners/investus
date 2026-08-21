@@ -45,7 +45,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -841, alias: "마포 올빼미 #24", symbol: "SPCX",
-    content: "SPCX가 39M주 규모의 lockup 만료를 앞두고 있으며 JPM이 500,000주 buyback을 준비 중이다. 현재 SPCX 주가는 $130.94이고, Vest Financial 등이 lockup 헤지 파트너십 구조에 관여하고 있다.",
+    content: "SPCX가 두 번째 소규모 lockup 만료 이벤트 이후 주가가 7% 이상 하락했다. 직원과 투자자가 약 39M주를 매도해서 시장에 유입시켰고 현재 SPCX 주가는 $130.94이다. 별개로 Cognition CEO가 Bloomberg의 인수 협상 보도를 부인했다.",
     likes: 7, comments: 3, created_at: "2026-08-21T00:39:00.000Z", liked: false,
   },
   {

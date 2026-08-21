@@ -226,14 +226,14 @@ const T=[
 
 // 6. SPCX 39M-share lockup expiration + JPM buyback 500K shares
 {file:'spcx-39m-share-lockup-jpm-buyback-500k-vest-13094',symbol:'SPCX',
- ko:{title:'SPCX 39M주 lockup 만료 앞두고 JPM 500K주 buyback 준비·주가 $130.94·Vest capital 파트너십',heroIcon:'🔓',heroBig:'39M주',heroSub:'SPCX가 39,300만 주 규모의 lockup 만료 관련 논의 중이라는 보도가 있고, JPM이 SPCX 500,000주 buyback을 준비하고 있다. 현재 SPCX 주가는 $130.94이며 Vest Financial과의 파트너십을 통해 이 lockup 만료를 헤지하는 구조가 논의되고 있다.',
-  cards:[{icon:'🔓',big:'39M주',mid:'lockup 만료 대기',sub:'논의 진행 중'},{icon:'💰',big:'JPM 500K주',mid:'buyback 준비',sub:'lockup 매도 흡수'},{icon:'💵',big:'$130.94',mid:'현재 SPCX 주가',sub:'lockup 논의 시점'}],
-  quote:'"SPCX가 39,300만 주 규모 lockup 만료를 앞두고 JPM이 500,000주 buyback을 준비 중이다. 현재 SPCX 주가는 $130.94이며 Vest Financial 등이 lockup 만료 헤지 파트너십에 관여하고 있다."',
-  noteHead:'왜 중요한가',noteSub:'8/8 첫 락업 unlock 이후 계속되는 lockup 사이클의 실 조치다. JPM 같은 대형 금융사가 buyback으로 매수측을 담당하면 lockup 매도 압박이 상쇄된다.',footer:'SPCX · 39M lockup · JPM 500K',brand:BK},
- en:{title:'SPCX 39M-Share Lockup Expiration · JPM Preparing 500K Share Buyback · Stock $130.94',heroIcon:'🔓',heroBig:'39M SHARES',heroSub:'SPCX is reportedly in discussions around a 393M-share lockup expiration, with JPM preparing to buy back 500,000 SPCX shares. Current SPCX price is $130.94 and Vest Financial partnership structures are being discussed to hedge the lockup expiration.',
-  cards:[{icon:'🔓',big:'39M shares',mid:'Lockup expiration pending',sub:'Discussion ongoing'},{icon:'💰',big:'JPM 500K',mid:'Buyback preparation',sub:'Absorb lockup sales'},{icon:'💵',big:'$130.94',mid:'Current SPCX price',sub:'Lockup discussion time'}],
-  quote:'"SPCX facing a 393M-share lockup expiration · JPM preparing to buy back 500,000 shares. Current SPCX price is $130.94 · Vest Financial and others involved in lockup expiration hedge partnership."',
-  noteHead:'Why this matters',noteSub:'Real action in the ongoing lockup cycle since 8/8 first unlock. When large financial firms like JPM take the buyer side via buyback, lockup selling pressure is offset.',footer:'SPCX · 39M lockup · JPM 500K',brand:BE}},
+ ko:{title:'SPCX 두 번째 소규모 lockup 만료 완료·직원·투자자 약 39M주 매도·주가 -7% 하락 $130.94',heroIcon:'🔓',heroBig:'39M주 매도',heroSub:'SPCX가 두 번째 소규모 lockup 만료 이벤트 이후 주가가 7% 이상 하락했다. 직원과 투자자가 약 39M주를 매도해 시장에 유입시켰고 현재 SPCX 주가는 $130.94이다. 별개로 Cognition CEO가 Bloomberg의 인수 협상 보도를 부인했다.',
+  cards:[{icon:'🔓',big:'만료 완료',mid:'두 번째 소규모 lockup',sub:'이벤트 종료'},{icon:'📉',big:'-7%',mid:'주가 하락',sub:'약 39M주 매도 유입'},{icon:'💵',big:'$130.94',mid:'현재 SPCX 주가',sub:'-$8.71 세션 하락'}],
+  quote:'"SPCX 두 번째 소규모 lockup 만료 이벤트 이후 직원과 투자자가 약 39M주를 매도해 시장에 유입시켰다. 주가는 7% 이상 하락해 현재 $130.94이며 Cognition CEO는 Bloomberg의 인수 협상 보도를 부인했다."',
+  noteHead:'왜 중요한가',noteSub:'8/8 첫 락업 unlock 이후 두 번째 lockup 이벤트가 실 완료됐다. 약 39M주 매도로 시세 -7% 하락 실 반영됐고, Cognition 인수 협상 부인이 별도 부정 요인이다.',footer:'SPCX · 39M 매도 · -7% $130.94',brand:BK},
+ en:{title:'SPCX 2nd Smaller Lockup Expiration Completed · Employees/Investors Sold ~39M Shares · Stock -7% at $130.94',heroIcon:'🔓',heroBig:'-7%',heroSub:'SPCX dropped over 7% after a second smaller lockup expiration event. Employees and investors sold ~39M shares into the trading market. Current SPCX price is $130.94. Separately, Cognition CEO denied a Bloomberg report of acquisition talks.',
+  cards:[{icon:'🔓',big:'Completed',mid:'2nd smaller lockup expiration',sub:'Event finished'},{icon:'📉',big:'-7%',mid:'Stock drop',sub:'~39M shares sold into market'},{icon:'💵',big:'$130.94',mid:'Current SPCX price',sub:'-$8.71 session decline'}],
+  quote:'"SPCX dropped over 7% after 2nd smaller lockup expiration · employees and investors sold ~39M shares into trading market · current $130.94 · Cognition CEO denied Bloomberg acquisition talks report."',
+  noteHead:'Why this matters',noteSub:'Second lockup event completed since 8/8 first unlock. Real -7% price reaction to ~39M shares sold · Cognition acquisition denial is separate negative factor.',footer:'SPCX · 39M 매도 · -7% $130.94',brand:BE}},
 
 // 7. Musk: X stablecoins for creators
 {file:'musk-x-stablecoins-creators-payment-frame',symbol:'MACRO',
