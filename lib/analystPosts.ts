@@ -17,6 +17,83 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-21 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
+  {
+    id: -836, alias: "여의도 매 #22", symbol: "TSLA",
+    content: "Tesla가 영국 Harmony Energy에 15개 Megapack 배터리 저장 시스템 공급 계약을 확보했다. 재생 에너지 유연성 지원·낮 저장·필요 시 방출 사이클로 소비자·기업 에너지 효율화한다.",
+    likes: 11, comments: 0, created_at: "2026-08-21T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -837, alias: "강남 표범 #46", symbol: "SPCX",
+    content: "호주 우주국이 SpaceX Starship 회수 시도를 국가급으로 지원한다. 크리스마스 섬에서 국제 조사관이 파도에 밀려온 물체를 검사할 예정이며 이는 SpaceX Flight 13 이후 진행된다.",
+    likes: 12, comments: 2, created_at: "2026-08-21T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -838, alias: "서초 콘도르 #59", symbol: "MACRO",
+    content: "미국 재무부가 4분기에 사상 최대 규모의 국채 환매를 실시하고 있다. Q4에만 170억 달러 추가 buyback이 예상되며, 재무부가 유동성 개선과 이자 부담 감소를 위해 매수측으로 개입한다.",
+    likes: 8, comments: 1, created_at: "2026-08-21T00:18:00.000Z", liked: false,
+  },
+  {
+    id: -839, alias: "을지로 팔콘 #71", symbol: "MACRO",
+    content: "Anthropic이 이번 달 안에 S-1 IPO 신청 파일을 제출할 준비를 하고 있다. 8월 말이 실 신청 시점이며 10월 상장 timeline이 실현될 가능성이 커진다. 2조 달러+ 잠재 밸류다.",
+    likes: 10, comments: 1, created_at: "2026-08-21T00:25:00.000Z", liked: false,
+  },
+  {
+    id: -840, alias: "광화문 늑대 #33", symbol: "GOOGL",
+    content: "Waymo가 자체 AI ASIC chip 개발을 진행 중이라는 관측이다. Nvidia 파트너십을 유지하면서 자체 실리콘 전략을 병행하고, 다음 주 새 hotchip이 발표될 예정이다.",
+    likes: 8, comments: 3, created_at: "2026-08-21T00:32:00.000Z", liked: false,
+  },
+  {
+    id: -841, alias: "마포 올빼미 #24", symbol: "SPCX",
+    content: "SPCX가 39M주 규모의 lockup 만료를 앞두고 있으며 JPM이 500,000주 buyback을 준비 중이다. 현재 SPCX 주가는 $130.94이고, Vest Financial 등이 lockup 헤지 파트너십 구조에 관여하고 있다.",
+    likes: 7, comments: 3, created_at: "2026-08-21T00:39:00.000Z", liked: false,
+  },
+  {
+    id: -842, alias: "종로 매 #12", symbol: "MACRO",
+    content: "Musk가 X 플랫폼이 인플루언서와 콘텐츠 크리에이터를 위한 stablecoin 결제 인프라가 될 것이라고 밝혔다. X를 소셜 미디어에서 결제·금융 플랫폼으로 확장하는 프레임이다.",
+    likes: 8, comments: 1, created_at: "2026-08-21T00:46:00.000Z", liked: false,
+  },
+  {
+    id: -843, alias: "부산 갈매기 #77", symbol: "MACRO",
+    content: "미국 10년 국채 수익률이 5.22%로 큰 폭 하락했다. 재무부가 국채 환매를 대폭 확대하면서 이자 부담이 감소했고 시장이 이에 반응했다. 30년 국채도 함께 하락했다.",
+    likes: 8, comments: 2, created_at: "2026-08-21T00:53:00.000Z", liked: false,
+  },
+  {
+    id: -844, alias: "여의도 매 #22", symbol: "SPCX",
+    content: "Grok Bot이 개인 삶을 변화시킬 수 있는 AI 코워커 형태의 어시스턴트로 자리 잡고 있다는 관측이다. 지난 2년간 개발자·전문가에게 실 어시스턴트 역할을 해왔고 이제 개인 코워커로 확장된다.",
+    likes: 8, comments: 1, created_at: "2026-08-21T00:60:00.000Z", liked: false,
+  },
+  {
+    id: -845, alias: "강남 표범 #46", symbol: "TSLA",
+    content: "Cybercab 공개 launch가 임박한 상황에서 FSD v15가 곧 등장할 것으로 보인다. Tesla가 상용 로보택시 확장 사이클에 들어가면서 FSD, Cybercab, Robotaxi가 동시 진전하는 국면이다.",
+    likes: 9, comments: 1, created_at: "2026-08-21T00:67:00.000Z", liked: false,
+  },
+  {
+    id: -846, alias: "서초 콘도르 #59", symbol: "SPCX",
+    content: "미국 루이지애나 주가 다중 십억 달러 규모의 우주항 개발을 승인하고 있으며 SpaceX가 이 개발에 참여할 예정이다. Boca Chica 외 미국 다른 주로의 확장 시도다.",
+    likes: 6, comments: 3, created_at: "2026-08-21T00:74:00.000Z", liked: false,
+  },
+  {
+    id: -847, alias: "을지로 팔콘 #71", symbol: "MACRO",
+    content: "애널리스트들이 2027년 AI CAPEX 규모를 1,850억 달러로 전망한다. 주요 하이퍼스케일러와 파트너 회사들이 데이터센터·GPU·전력 인프라에 지속 대량 투자하는 흐름이다.",
+    likes: 10, comments: 0, created_at: "2026-08-21T00:81:00.000Z", liked: false,
+  },
+  {
+    id: -848, alias: "광화문 늑대 #33", symbol: "MACRO",
+    content: "미국 국내 평균 휘발유 가격이 갤런당 $3.85까지 오르며 2028년 이후 최고 수준을 기록했다. 원유·정제 시장의 공급 부족이 요인이며 소비자 지출 부담이 증가하고 있다.",
+    likes: 8, comments: 3, created_at: "2026-08-21T00:88:00.000Z", liked: false,
+  },
+  {
+    id: -849, alias: "마포 올빼미 #24", symbol: "TSLA",
+    content: "Tesla Model Y 판매가 전월 대비 200% 급증했다는 관측이다. 최근 개월 중 가장 강한 판매 실적이며 아시아·미국 시장에서 Model Y가 다각 회복되고 있다는 신호다.",
+    likes: 14, comments: 1, created_at: "2026-08-21T00:95:00.000Z", liked: false,
+  },
+  {
+    id: -850, alias: "종로 매 #12", symbol: "TSLA",
+    content: "Cybercab의 센서 아키텍처가 관측되고 있다. Tesla가 이전 Robotaxi (Model Y 개조)에서 인건비를 제거한 첫 상용 사양이며, 자체 개발한 Cybercab이 상용 로보택시로 전환되는 국면을 뜻한다.",
+    likes: 12, comments: 3, created_at: "2026-08-21T00:102:00.000Z", liked: false,
+  },
+
   // ── 2026-08-20 신규 (짧고 15개 완전 다른 톤·콜론 도입 금지) ──────────────────────
   {
     id: -821, alias: "여의도 매 #22", symbol: "TSLA",
@@ -6706,6 +6783,59 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  // ── 2026-08-21 신규 댓글 (실 데이터) ────────────────
+  [-837]: [
+    { alias: "여의도 매 #22", content: "이 부분은 좀 다르게 볼 수도 있을 듯", created_at: "2026-08-21T00:13:00.000Z" },
+    { alias: "광화문 늑대 #33", content: "이 정도 규모는 진짜 이례적", created_at: "2026-08-21T00:15:00.000Z" },
+  ],
+  [-838]: [
+    { alias: "강남 표범 #46", content: "반대 관점도 유의미해 보입니다", created_at: "2026-08-21T00:20:00.000Z" },
+  ],
+  [-839]: [
+    { alias: "여의도 매 #22", content: "밸류에이션 여전 부담스럽긴 함", created_at: "2026-08-21T00:27:00.000Z" },
+  ],
+  [-840]: [
+    { alias: "서초 콘도르 #59", content: "리스크 관리 필요할 시점", created_at: "2026-08-21T00:34:00.000Z" },
+    { alias: "마포 올빼미 #24", content: "밸류에이션 여전 부담스럽긴 함", created_at: "2026-08-21T00:36:00.000Z" },
+    { alias: "강남 표범 #46", content: "정확한 분석 감사합니다", created_at: "2026-08-21T00:38:00.000Z" },
+  ],
+  [-841]: [
+    { alias: "여의도 매 #22", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-21T00:41:00.000Z" },
+    { alias: "종로 매 #12", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-21T00:43:00.000Z" },
+    { alias: "여의도 매 #22", content: "이 프레임 지속되면 큰 그림", created_at: "2026-08-21T00:45:00.000Z" },
+  ],
+  [-842]: [
+    { alias: "을지로 팔콘 #71", content: "이 부분은 좀 다르게 볼 수도 있을 듯", created_at: "2026-08-21T00:48:00.000Z" },
+  ],
+  [-843]: [
+    { alias: "광화문 늑대 #33", content: "다음 발표까지 지켜봅시다", created_at: "2026-08-21T00:55:00.000Z" },
+    { alias: "서초 콘도르 #59", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-21T00:57:00.000Z" },
+  ],
+  [-844]: [
+    { alias: "여의도 매 #22", content: "실적 반영은 좀 더 시간 걸릴 듯", created_at: "2026-08-21T00:62:00.000Z" },
+  ],
+  [-845]: [
+    { alias: "을지로 팔콘 #71", content: "이 정도 규모는 진짜 이례적", created_at: "2026-08-21T00:69:00.000Z" },
+  ],
+  [-846]: [
+    { alias: "강남 표범 #46", content: "차트로도 확인해봐야겠어요", created_at: "2026-08-21T00:76:00.000Z" },
+    { alias: "서초 콘도르 #59", content: "장기 프레임 잘 잡혔네요", created_at: "2026-08-21T00:78:00.000Z" },
+    { alias: "마포 올빼미 #24", content: "이 부분은 좀 다르게 볼 수도 있을 듯", created_at: "2026-08-21T00:80:00.000Z" },
+  ],
+  [-848]: [
+    { alias: "강남 표범 #46", content: "차트로도 확인해봐야겠어요", created_at: "2026-08-21T00:90:00.000Z" },
+    { alias: "마포 올빼미 #24", content: "기관 flow가 이 방향이면 확실", created_at: "2026-08-21T00:92:00.000Z" },
+    { alias: "부산 갈매기 #77", content: "이 정도 규모는 진짜 이례적", created_at: "2026-08-21T00:94:00.000Z" },
+  ],
+  [-849]: [
+    { alias: "광화문 늑대 #33", content: "리스크 관리 필요할 시점", created_at: "2026-08-21T00:97:00.000Z" },
+  ],
+  [-850]: [
+    { alias: "여의도 매 #22", content: "이 프레임 지속되면 큰 그림", created_at: "2026-08-21T00:104:00.000Z" },
+    { alias: "서초 콘도르 #59", content: "밸류에이션 여전 부담스럽긴 함", created_at: "2026-08-21T00:106:00.000Z" },
+    { alias: "종로 매 #12", content: "정확한 분석 감사합니다", created_at: "2026-08-21T00:108:00.000Z" },
+  ],
+
   // ── 2026-08-20 신규 댓글 (실 데이터) ────────────────
   [-821]: [
     { alias: "광화문 늑대 #33", content: "이건 정말 catalyst네요", created_at: "2026-08-20T00:06:00.000Z" },

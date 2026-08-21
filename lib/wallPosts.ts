@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T21AU = 1787266800000; // 2026-08-21 08:00 KST
 const T20AU = 1787180400000; // 2026-08-20 08:00 KST
 const T19AU = 1787094000000; // 2026-08-19 08:00 KST
 const T18AU = 1787007600000; // 2026-08-18 08:00 KST
@@ -83,7 +84,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T20AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T21AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -102,6 +103,53 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-21 신규 (짧고 15개 완전 다른 톤) ────────────────
+  { id: 1034, symbol: "TSLA", nickname: "익명_3535", holdingLabel: "관심종목",
+    content: "Tesla가 영국 Harmony Energy와 15개 Megapack 계약. 재생 에너지 유연성 지원한대",
+    createdAt: T21AU + 8*60_000, likes: 4, comments: 3 },
+  { id: 1035, symbol: "SPCX", nickname: "익명_3636", holdingLabel: "관심종목",
+    content: "호주 우주국이 SpaceX Starship 회수 지원! 크리스마스 섬에서 파도에 밀려온 물체 검사한대",
+    createdAt: T21AU + 16*60_000, likes: 5, comments: 0 },
+  { id: 1036, symbol: "MACRO", nickname: "익명_3737", holdingLabel: "관심종목",
+    content: "재무부 Q4 국채 환매 사상 최대·170억 추가 buyback. 10Y 수익률 급락 반응",
+    createdAt: T21AU + 24*60_000, likes: 10, comments: 3 },
+  { id: 1037, symbol: "MACRO", nickname: "익명_3838", holdingLabel: "관심종목",
+    content: "Anthropic이 8월 말까지 S-1 신청 준비 중. 10월 상장 실현 가능",
+    createdAt: T21AU + 32*60_000, likes: 4, comments: 2 },
+  { id: 1038, symbol: "GOOGL", nickname: "익명_3939", holdingLabel: "관심종목",
+    content: "Waymo도 자체 AI ASIC chip 개발한대. Nvidia 파트너십은 병행",
+    createdAt: T21AU + 40*60_000, likes: 13, comments: 0 },
+  { id: 1039, symbol: "SPCX", nickname: "익명_4040", holdingLabel: "관심종목",
+    content: "SPCX 39M주 lockup 앞두고 JPM 500K주 buyback 준비. 현재 $130.94",
+    createdAt: T21AU + 48*60_000, likes: 5, comments: 0 },
+  { id: 1040, symbol: "MACRO", nickname: "익명_4141", holdingLabel: "관심종목",
+    content: "Musk 왈: X가 인플루언서·크리에이터 stablecoin 결제 인프라 될 것. 결제 사업 확장",
+    createdAt: T21AU + 56*60_000, likes: 11, comments: 0 },
+  { id: 1041, symbol: "MACRO", nickname: "익명_4242", holdingLabel: "관심종목",
+    content: "10Y 국채 5.22% 급락! 재무부 환매 확대 후 시장 반응",
+    createdAt: T21AU + 64*60_000, likes: 11, comments: 0 },
+  { id: 1042, symbol: "SPCX", nickname: "익명_4343", holdingLabel: "관심종목",
+    content: "Grok Bot이 개인 삶 변화 AI 코워커래. 2년간 개발자·전문가 실 사용",
+    createdAt: T21AU + 72*60_000, likes: 9, comments: 1 },
+  { id: 1043, symbol: "TSLA", nickname: "익명_4444", holdingLabel: "관심종목",
+    content: "Cybercab 공개 launch 임박·FSD v15 곧 등장. 상용 로보택시 확장 사이클",
+    createdAt: T21AU + 80*60_000, likes: 13, comments: 1 },
+  { id: 1044, symbol: "SPCX", nickname: "익명_4545", holdingLabel: "관심종목",
+    content: "루이지애나 주가 다중 십억 우주항 개발 승인. SpaceX 참여 예정",
+    createdAt: T21AU + 88*60_000, likes: 12, comments: 2 },
+  { id: 1045, symbol: "MACRO", nickname: "익명_4646", holdingLabel: "관심종목",
+    content: "2027년 AI CAPEX 1,850억 예상. 하이퍼스케일러·파트너 지속 투자",
+    createdAt: T21AU + 96*60_000, likes: 12, comments: 1 },
+  { id: 1046, symbol: "MACRO", nickname: "익명_4747", holdingLabel: "관심종목",
+    content: "미국 휘발유 $3.85/gal! 2028 이후 최고. 소비자 부담 증가",
+    createdAt: T21AU + 104*60_000, likes: 15, comments: 1 },
+  { id: 1047, symbol: "TSLA", nickname: "익명_4848", holdingLabel: "관심종목",
+    content: "Tesla Model Y 판매 전월 대비 +200% 급증! 최근 개월 중 최강",
+    createdAt: T21AU + 112*60_000, likes: 12, comments: 1 },
+  { id: 1048, symbol: "TSLA", nickname: "익명_4949", holdingLabel: "관심종목",
+    content: "Cybercab 센서 아키텍처 관측. 인건비 제거된 첫 상용 사양이래",
+    createdAt: T21AU + 120*60_000, likes: 6, comments: 0 },
+
   // ── 2026-08-20 신규 (짧고 15개 완전 다른 톤) ────────────────
   { id: 1019, symbol: "TSLA", nickname: "익명_2020", holdingLabel: "관심종목",
     content: "Musk가 팀 원칙 다시 말함. 소수 정예가 대규모 평범한 인원보다 낫다. 질이 양보다 우선·항상 그렇다는 프레임",
@@ -3746,6 +3794,41 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-21 신규 댓글 (실 데이터) ────────────────
+  1034: [
+    { id: 1, nickname: "익명_2345", holdingLabel: "관심종목", content: "너무 늦게 진입한 건 아닌지", createdAt: T21AU + 8*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6677", holdingLabel: "관심종목", content: "차트 좋아 보이긴 하는데", createdAt: T21AU + 8*60_000 + 6*60_000, likes: 4 },
+    { id: 3, nickname: "익명_6789", holdingLabel: "관심종목", content: "이 정도 규모는 진짜 이례적", createdAt: T21AU + 8*60_000 + 9*60_000, likes: 5 },
+  ],
+  1036: [
+    { id: 1, nickname: "익명_3456", holdingLabel: "관심종목", content: "장기 보유 관점에서는 좋은 시그널", createdAt: T21AU + 24*60_000 + 3*60_000, likes: 9 },
+    { id: 2, nickname: "익명_5566", holdingLabel: "관심종목", content: "관심 종목에 넣어놨는데 다행이네", createdAt: T21AU + 24*60_000 + 6*60_000, likes: 7 },
+    { id: 3, nickname: "익명_5566", holdingLabel: "관심종목", content: "너무 늦게 진입한 건 아닌지", createdAt: T21AU + 24*60_000 + 9*60_000, likes: 6 },
+  ],
+  1037: [
+    { id: 1, nickname: "익명_2233", holdingLabel: "관심종목", content: "관심 종목에 넣어놨는데 다행이네", createdAt: T21AU + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_1122", holdingLabel: "관심종목", content: "unlock 매도 압박 이겨낼 수 있을까", createdAt: T21AU + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1042: [
+    { id: 1, nickname: "익명_2233", holdingLabel: "관심종목", content: "실적 반영은 좀 더 시간 걸릴 듯", createdAt: T21AU + 72*60_000 + 3*60_000, likes: 6 },
+  ],
+  1043: [
+    { id: 1, nickname: "익명_2233", holdingLabel: "관심종목", content: "차트 좋아 보이긴 하는데", createdAt: T21AU + 80*60_000 + 3*60_000, likes: 0 },
+  ],
+  1044: [
+    { id: 1, nickname: "익명_4455", holdingLabel: "관심종목", content: "SPCX vs TSLA 어느 게 좋을까요", createdAt: T21AU + 88*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3344", holdingLabel: "관심종목", content: "이거 진짜야? 대박", createdAt: T21AU + 88*60_000 + 6*60_000, likes: 6 },
+  ],
+  1045: [
+    { id: 1, nickname: "익명_8899", holdingLabel: "관심종목", content: "매크로 리스크는 여전하네", createdAt: T21AU + 96*60_000 + 3*60_000, likes: 3 },
+  ],
+  1046: [
+    { id: 1, nickname: "익명_8899", holdingLabel: "관심종목", content: "실적 반영은 좀 더 시간 걸릴 듯", createdAt: T21AU + 104*60_000 + 3*60_000, likes: 7 },
+  ],
+  1047: [
+    { id: 1, nickname: "익명_1122", holdingLabel: "관심종목", content: "이 정도 규모는 진짜 이례적", createdAt: T21AU + 112*60_000 + 3*60_000, likes: 3 },
+  ],
+
   // ── 2026-08-20 신규 댓글 (실 데이터) ────────────────
   1019: [
     { id: 1, nickname: "익명_6789", holdingLabel: "관심종목", content: "규제 이슈만 없으면 갈듯", createdAt: T20AU + 8*60_000 + 3*60_000, likes: 9 },
