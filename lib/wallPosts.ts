@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T24AU = 1787526000000; // 2026-08-24 08:00 KST
 const T22AU = 1787353200000; // 2026-08-22 08:00 KST
 const T21AU = 1787266800000; // 2026-08-21 08:00 KST
 const T20AU = 1787180400000; // 2026-08-20 08:00 KST
@@ -85,7 +86,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T22AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T24AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -104,6 +105,49 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-24 신규 ────────────────
+  { id: 1064, symbol: "TSLA", nickname: "익명_8686", holdingLabel: "80주 보유",
+    content: "Cybercab 초대장 9월 3일 Austin이래. 09.03.26이 2026년 맞제",
+    createdAt: T24AU + 8*60_000, likes: 16, comments: 2 },
+  { id: 1065, symbol: "TSLA", nickname: "익명_8787", holdingLabel: "관심종목",
+    content: "4680 캐소드를 오스틴에서 직접 뽑는다고? 중국 90%라더니",
+    createdAt: T24AU + 16*60_000, likes: 9, comments: 1 },
+  { id: 1066, symbol: "TSLA", nickname: "익명_8888", holdingLabel: "관심종목",
+    content: "토요일 밤에 Cybercab이 오스틴을 돈다… 새벽 3시 데이터 수집이라네",
+    createdAt: T24AU + 24*60_000, likes: 14, comments: 2 },
+  { id: 1067, symbol: "TSLA", nickname: "익명_8989", holdingLabel: "55주 보유",
+    content: "Citizens가 IRR 87%래. 차 10만 달러여도 기사가 없으면 된대",
+    createdAt: T24AU + 32*60_000, likes: 11, comments: 1 },
+  { id: 1068, symbol: "TSLA", nickname: "익명_9090", holdingLabel: "관심종목",
+    content: "WSJ가 신형 Y에서 FSD가 제일 좋다고 씀. Supervised긴 한데",
+    createdAt: T24AU + 40*60_000, likes: 8, comments: 0 },
+  { id: 1069, symbol: "MACRO", nickname: "익명_9191", holdingLabel: "관심종목",
+    content: "30년물 주간 종가 5.27%. 2007년 6월 이후 최고래",
+    createdAt: T24AU + 48*60_000, likes: 12, comments: 2 },
+  { id: 1070, symbol: "MACRO", nickname: "익명_9292", holdingLabel: "관심종목",
+    content: "다음 주 수요일 PCE랑 GDP, 금요일 Warsh 잭슨홀",
+    createdAt: T24AU + 56*60_000, likes: 7, comments: 0 },
+  { id: 1071, symbol: "NVDA", nickname: "익명_9393", holdingLabel: "20주 보유",
+    content: "엔비디아가 Poolside에 60억? 직원 100명 넘게 데려간대",
+    createdAt: T24AU + 64*60_000, likes: 15, comments: 2 },
+  { id: 1072, symbol: "NVDA", nickname: "익명_9494", holdingLabel: "관심종목",
+    content: "AI 가격 15% 넘게 올린다는데 대기열 있으면 어쩔 수 없긴 함",
+    createdAt: T24AU + 72*60_000, likes: 10, comments: 1 },
+  { id: 1073, symbol: "SPCX", nickname: "익명_9595", holdingLabel: "관심종목",
+    content: "DB가 연말 ARR 981억이래. Neocloud가 480억… 이게 맞아?",
+    createdAt: T24AU + 80*60_000, likes: 18, comments: 3 },
+  { id: 1074, symbol: "SPCX", nickname: "익명_9696", holdingLabel: "40주 보유",
+    content: "스타링크 1만 1040기. 나머지 아홉 개 합쳐도 2100기라네",
+    createdAt: T24AU + 88*60_000, likes: 13, comments: 1 },
+  { id: 1075, symbol: "SPCX", nickname: "익명_9797", holdingLabel: "관심종목",
+    content: "Ship 41이 추진제 1000톤 넘게 싣고 궤도 한 바퀴? F14 더 어렵대",
+    createdAt: T24AU + 96*60_000, likes: 9, comments: 0 },
+  { id: 1076, symbol: "SPCX", nickname: "익명_9898", holdingLabel: "관심종목",
+    content: "가스 트레이더 뽑는 SpaceX… 메탄이랑 전기 때문에?",
+    createdAt: T24AU + 104*60_000, likes: 6, comments: 1 },
+  { id: 1077, symbol: "SPCX", nickname: "익명_9999", holdingLabel: "관심종목",
+    content: "트럼프가 SPCX 1.5만~5만 달러 샀다 공시. 6월 거래 8월 공개",
+    createdAt: T24AU + 112*60_000, likes: 8, comments: 1 },
   // ── 2026-08-22 신규 ────────────────
   { id: 1049, symbol: "TSLA", nickname: "익명_5050", holdingLabel: "120주 보유",
     content: "JPM이 FSD V15를 step-change라네. Kalshi 노트에 $450 PT도 같이 나옴",
@@ -3842,6 +3886,46 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-24 신규 댓글 ────────────────
+  1064: [
+    { id: 1, nickname: "익명_0101", holdingLabel: "관심종목", content: "9월 3일이면 진짜 2주네", createdAt: T24AU + 8*60_000 + 3*60_000, likes: 6 },
+    { id: 2, nickname: "익명_0102", holdingLabel: "관심종목", content: "전용차 공개면 Y 개조랑 완전히 다른 이야기", createdAt: T24AU + 8*60_000 + 6*60_000, likes: 5 },
+  ],
+  1065: [
+    { id: 1, nickname: "익명_0103", holdingLabel: "관심종목", content: "건식 코팅이 핵심이라던데 수율이 관건", createdAt: T24AU + 16*60_000 + 3*60_000, likes: 4 },
+  ],
+  1066: [
+    { id: 1, nickname: "익명_0104", holdingLabel: "관심종목", content: "감독관만 타고 핸들 안 잡으면 거의 무인이네", createdAt: T24AU + 24*60_000 + 3*60_000, likes: 7 },
+    { id: 2, nickname: "익명_0105", holdingLabel: "관심종목", content: "3시에 여러 대면 파일럿 규모가 있는 거 아님?", createdAt: T24AU + 24*60_000 + 6*60_000, likes: 3 },
+  ],
+  1067: [
+    { id: 1, nickname: "익명_0106", holdingLabel: "관심종목", content: "18.5트립이 매일 나오겠냐. 가정이 장미빛", createdAt: T24AU + 32*60_000 + 3*60_000, likes: 8 },
+  ],
+  1069: [
+    { id: 1, nickname: "익명_0107", holdingLabel: "관심종목", content: "환매로 빠졌던 금리가 주간으로 19년 고점…", createdAt: T24AU + 48*60_000 + 3*60_000, likes: 6 },
+    { id: 2, nickname: "익명_0108", holdingLabel: "관심종목", content: "모기지랑 AI 캡엑스 둘 다 맞음", createdAt: T24AU + 48*60_000 + 6*60_000, likes: 4 },
+  ],
+  1071: [
+    { id: 1, nickname: "익명_0109", holdingLabel: "관심종목", content: "칩만 팔다 모델까지 사네", createdAt: T24AU + 64*60_000 + 3*60_000, likes: 5 },
+    { id: 2, nickname: "익명_0110", holdingLabel: "관심종목", content: "Nemotron이 DeepSeek 대항마라는 프레임", createdAt: T24AU + 64*60_000 + 6*60_000, likes: 4 },
+  ],
+  1072: [
+    { id: 1, nickname: "익명_0111", holdingLabel: "관심종목", content: "15%면 클라우드 원가에 바로 붙지", createdAt: T24AU + 72*60_000 + 3*60_000, likes: 3 },
+  ],
+  1073: [
+    { id: 1, nickname: "익명_0112", holdingLabel: "관심종목", content: "Neocloud 480억은 전력이 안 되면 공상", createdAt: T24AU + 80*60_000 + 3*60_000, likes: 9 },
+    { id: 2, nickname: "익명_0113", holdingLabel: "관심종목", content: "Cursor 120억도 0에서 출발이라 야심임", createdAt: T24AU + 80*60_000 + 6*60_000, likes: 7 },
+    { id: 3, nickname: "익명_0114", holdingLabel: "관심종목", content: "그래도 DB가 표로 박은 건 의미 있음", createdAt: T24AU + 80*60_000 + 9*60_000, likes: 5 },
+  ],
+  1074: [
+    { id: 1, nickname: "익명_0115", holdingLabel: "관심종목", content: "원웹이 651기면 격차가 장난 아님", createdAt: T24AU + 88*60_000 + 3*60_000, likes: 4 },
+  ],
+  1076: [
+    { id: 1, nickname: "익명_0116", holdingLabel: "관심종목", content: "테라팹 전기 때문에 가스 데스크라니 스케일이…", createdAt: T24AU + 104*60_000 + 3*60_000, likes: 2 },
+  ],
+  1077: [
+    { id: 1, nickname: "익명_0117", holdingLabel: "관심종목", content: "5만 달러면 시세에 영향 없는 금액인데 헤드라인은 큼", createdAt: T24AU + 112*60_000 + 3*60_000, likes: 6 },
+  ],
   // ── 2026-08-22 신규 댓글 ────────────────
   1049: [
     { id: 1, nickname: "익명_7070", holdingLabel: "관심종목", content: "$450이면 지금 자리에서도 꽤 여유 있는 PT인데", createdAt: T22AU + 8*60_000 + 3*60_000, likes: 5 },

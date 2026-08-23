@@ -17,6 +17,78 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-24 신규 (14개 · 구조 혼합 · 콜론 도입 금지) ──────────────────────
+  {
+    id: -865, alias: "성수 너구리 #15", symbol: "TSLA",
+    content: "Cybercab 초대장이 날짜를 박았다. 09.03.26은 2026년 9월 3일이고 장소는 Austin이다. 전용차는 개조 Model Y와 원가 구조가 다르다. 약 2주 카운트다운은 소셜 발언이지만, 로밍 목격과 같은 지리면 캘린더 촉매로 충분하다.",
+    likes: 14, comments: 2, created_at: "2026-08-24T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -866, alias: "한남 재규어 #27", symbol: "TSLA",
+    content: "북미 캐소드.\n— Austin 대형 플랜트\n— 중국 공급 ~90%\n— 건식 코팅, 풀 전극 2026.01\n허가(2022)와 가동 사이가 길었다. 수율이 나오기 전엔 내러티브만.",
+    likes: 8, comments: 0, created_at: "2026-08-24T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -867, alias: "압구정 치타 #44", symbol: "TSLA",
+    content: "왜 심야 로밍이 무서울까? 답은 공공도로다. 감독관만 타고 운전자가 없으면 사고 한 건이 바로 상품 리스크다. 동시에 유료 직전 단계라는 뜻이기도 하다. 목격 대수는 아직 세지 않았다.",
+    likes: 11, comments: 1, created_at: "2026-08-24T00:18:00.000Z", liked: false,
+  },
+  {
+    id: -868, alias: "여의도 수리 #28", symbol: "TSLA",
+    content: "숫자만. IRR 약 87%. 대당 ~10만 달러. 하루 18.50트립, 15달러, 연 매출 ~10.1만. 금융 12%. 현금흐름 0년 −1만, 1년 +1.17만. 가정이 장미빛이면 표는 접는다.",
+    likes: 10, comments: 1, created_at: "2026-08-24T00:25:00.000Z", liked: false,
+  },
+  {
+    id: -869, alias: "삼성동 올빼미 #19", symbol: "TSLA",
+    content: "WSJ가 신형 Model Y의 최고점을 FSD라고 적음. Supervised라 무인은 아님… 그래도 주류 자동차면이 소프트웨어를 상품의 중심으로 올려준 주는 의미가 큼!",
+    likes: 7, comments: 0, created_at: "2026-08-24T00:32:00.000Z", liked: false,
+  },
+  {
+    id: -870, alias: "광화문 여우 #62", symbol: "MACRO",
+    content: "30Y 주간 종가 5.27%, 2007년 6월 이후 최고. 환매로 빠졌던 금리가 주간 기준으로 19년 고점이다. 성장 멀티플과 모기지가 같은 할인을 받는다. 조심.",
+    likes: 13, comments: 2, created_at: "2026-08-24T00:39:00.000Z", liked: false,
+  },
+  {
+    id: -871, alias: "마포 살쾡이 #08", symbol: "MACRO",
+    content: "다음 주 수 PCE와 GDP, 금 Warsh 잭슨홀. 환매 안도는 이미 한 번 지워졌다. 데이터가 5.27%를 고착할지, 되돌릴지가 이번 세트의 매크로 핵심이다. 관망.",
+    likes: 6, comments: 0, created_at: "2026-08-24T00:46:00.000Z", liked: false,
+  },
+  {
+    id: -872, alias: "판교 늑대 #90", symbol: "NVDA",
+    content: "왜 60억을 스타트업에 쓰나. 칩만으로는 DeepSeek·Kimi 같은 오픈웨이트를 못 막겠다는 쪽에 가깝다. 사람 100명 이상을 옮기는 건 모델 레이어 보험이다. 라이선스와 잔류가 다음이다.",
+    likes: 12, comments: 1, created_at: "2026-08-24T00:53:00.000Z", liked: false,
+  },
+  {
+    id: -873, alias: "분당 매 #31", symbol: "NVDA",
+    content: "Bloomberg 15% 초과 인상. 대기열이 있으면 ASP가 매출을 받친다. 대기열이 사라지면 취소가 온다. Poolside 지출과 한 화면에 두면 파워와 불안이 같다.",
+    likes: 9, comments: 0, created_at: "2026-08-24T01:00:00.000Z", liked: false,
+  },
+  {
+    id: -874, alias: "해운대 고래 #03", symbol: "SPCX",
+    content: "DB ARR 313억에서 981억. Neocloud 64억에서 480억, Cursor 0에서 120억. 추정치다. 전력이 안 열리면 상단은 접어야 한다. 그래도 상장 스토리가 로켓에서 구독으로 기울었다는 신호는 분명하다.",
+    likes: 16, comments: 2, created_at: "2026-08-24T01:07:00.000Z", liked: false,
+  },
+  {
+    id: -875, alias: "송파 독수리 #66", symbol: "SPCX",
+    content: "Starlink 1만 1040. 다음 아홉 LEO 합 2100. 스케일은 이겼다. ARR 표에서 Starlink는 상대적으로 완만하다. 해자는 위성, 멀티플은 클라우드.",
+    likes: 8, comments: 0, created_at: "2026-08-24T01:14:00.000Z", liked: false,
+  },
+  {
+    id: -876, alias: "인천 갈매기 #52", symbol: "SPCX",
+    content: "Flight 14가 13보다 어렵다. Ship 41은 7.8km/s, 완전 궤도, 재진입, 추진제 1000–1100톤. NET 9/15과 같은 축. 난이도 상승은 옵션가치이자 일정 리스크다.",
+    likes: 7, comments: 1, created_at: "2026-08-24T01:21:00.000Z", liked: false,
+  },
+  {
+    id: -877, alias: "대전 표범 #14", symbol: "SPCX",
+    content: "가스 트레이더 채용.\n실물+헤지.\n메탄과 전력.\nStarbase 또는 Cape.\nNeocloud 480억이 종이로 안 남으려면 분자가 먼저다.",
+    likes: 5, comments: 0, created_at: "2026-08-24T01:28:00.000Z", liked: false,
+  },
+  {
+    id: -878, alias: "종로 학 #77", symbol: "SPCX",
+    content: "트럼프 SPCX 매수 밴드 1.5만에서 5만 달러. 6월 23일 거래, 8월 22일 공시. 시세를 움직이는 돈이 아니다. 헤드라인은 크고 수급은 없다. 본경기는 ARR과 금리다.",
+    likes: 10, comments: 1, created_at: "2026-08-24T01:35:00.000Z", liked: false,
+  },
+
   // ── 2026-08-22 신규 (14개 · 구조 혼합 · 콜론 도입 금지) ──────────────────────
   {
     id: -851, alias: "판교 여우 #81", symbol: "TSLA",
@@ -6855,6 +6927,33 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-865]: [
+    { alias: "댓글_2401", content: "날짜가 박히면 연기 헤드라인도 같이 열린다", created_at: "2026-08-24T00:08:00.000Z" },
+    { alias: "댓글_2402", content: "로밍이랑 같은 도시라 설득력은 있음", created_at: "2026-08-24T00:09:00.000Z" },
+  ],
+  [-867]: [
+    { alias: "댓글_2403", content: "유료 전환 전엔 매출 숫자로 안 옮김", created_at: "2026-08-24T00:21:00.000Z" },
+  ],
+  [-868]: [
+    { alias: "댓글_2404", content: "18.5트립이 매일이면 차는 안 쉰다", created_at: "2026-08-24T00:28:00.000Z" },
+  ],
+  [-870]: [
+    { alias: "댓글_2405", content: "주간 종가라 장중 고점이랑 혼동 말자", created_at: "2026-08-24T00:42:00.000Z" },
+    { alias: "댓글_2406", content: "PCE 전까지는 듀레이션 줄이는 편", created_at: "2026-08-24T00:43:00.000Z" },
+  ],
+  [-872]: [
+    { alias: "댓글_2407", content: "6B가 지분인지 컴퓨팅인지도 아직 모호", created_at: "2026-08-24T00:56:00.000Z" },
+  ],
+  [-874]: [
+    { alias: "댓글_2408", content: "Cursor 12는 너무 앞선 가정이다", created_at: "2026-08-24T01:10:00.000Z" },
+    { alias: "댓글_2409", content: "그래도 Neocloud가 대부분의 점프", created_at: "2026-08-24T01:11:00.000Z" },
+  ],
+  [-876]: [
+    { alias: "댓글_2410", content: "적재 늘리는 비행은 실패 시 이미지가 큼", created_at: "2026-08-24T01:24:00.000Z" },
+  ],
+  [-878]: [
+    { alias: "댓글_2411", content: "밴드 공시라 주수도 모른다", created_at: "2026-08-24T01:38:00.000Z" },
+  ],
   // ── 2026-08-22 신규 댓글 ────────────────
   [-851]: [
     { alias: "강남 표범 #46", content: "$450 PT가 Kalshi에 뜬 것만으로도 채널 온도가 달라짐", created_at: "2026-08-22T00:06:00.000Z" },
