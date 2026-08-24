@@ -17,6 +17,68 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-25 신규 (12개 · 존댓말 · 구조 혼합) ──────────────────────
+  {
+    id: -879, alias: "성수 너구리 #15", symbol: "TSLA",
+    content: "독일 원격 로보택시 협의는 대도시 쇼케이스가 아닙니다. 통신 음영과 보험이 먼저입니다. 주 이름이 나오기 전에는 옵션 가치만 적어 두시는 편이 안전합니다.",
+    likes: 12, comments: 2, created_at: "2026-08-25T00:04:00.000Z", liked: false,
+  },
+  {
+    id: -880, alias: "한남 재규어 #27", symbol: "TSLA",
+    content: "사이버캡 출고.\n— 기가 텍사스 부지\n— 9월 3일 오스틴 행사\n— 전용차, 모델Y 개조 아님\n출고와 유료 개시는 단계가 다릅니다. 행사 코멘트를 기다리겠습니다.",
+    likes: 10, comments: 1, created_at: "2026-08-25T00:11:00.000Z", liked: false,
+  },
+  {
+    id: -881, alias: "압구정 치타 #44", symbol: "TSLA",
+    content: "왜 스위치야드가 중요할까요. 차가 나가도 전력이 없으면 라인은 쉽니다. 코텍스 학습과 생산이 같은 캠퍼스를 나눕니다. 메가와트 숫자가 나오기 전에는 반만 반영하시면 됩니다.",
+    likes: 8, comments: 0, created_at: "2026-08-25T00:18:00.000Z", liked: false,
+  },
+  {
+    id: -882, alias: "여의도 수리 #28", symbol: "NVDA",
+    content: "숫자만 정리합니다. 목표가 325달러, 화면 약 208달러, 하루 −2.91%. 전제는 매출·이익·가이던스 상회입니다. 가이던스가 인라인이면 간격은 부담이 됩니다.",
+    likes: 14, comments: 2, created_at: "2026-08-25T00:25:00.000Z", liked: false,
+  },
+  {
+    id: -883, alias: "삼성동 올빼미 #19", symbol: "NVDA",
+    content: "베라 루빈 NVL72를 지상 그록과 스타마인드 위성에 같이 쓰겠다는 그림입니다. 궤도 랙은 설계 언어입니다. 이번 주 실적의 본경기는 여전히 데이터센터 숫자입니다.",
+    likes: 9, comments: 1, created_at: "2026-08-25T00:32:00.000Z", liked: false,
+  },
+  {
+    id: -884, alias: "광화문 여우 #62", symbol: "SPCX",
+    content: "스타십이 301 스테인리스를 떠나 자체 합금으로 갑니다. 궤도 랙은 더 가볍다는 주장입니다. 소재 전환은 원가 레버인 동시에 시험 일정 리스크입니다. 비행으로 검증되기 전에는 할인해서 보겠습니다.",
+    likes: 11, comments: 1, created_at: "2026-08-25T00:39:00.000Z", liked: false,
+  },
+  {
+    id: -885, alias: "마포 살쾡이 #08", symbol: "META",
+    content: "5,000억 달러는 다년 전망입니다.\n149억 달러는 2024년 6월 말 취소 불가 약정입니다.\n기간을 섞으면 규모가 열 배처럼 보입니다. 분기 캡엑스를 따라가시면 됩니다.",
+    likes: 13, comments: 2, created_at: "2026-08-25T00:46:00.000Z", liked: false,
+  },
+  {
+    id: -886, alias: "판교 늑대 #90", symbol: "AMZN",
+    content: "주스는 핸들이 없는 양방향 차입니다. 샌프란시스코는 도로, 라스베이거스는 유료입니다. 테슬라 전용차 서사와 같은 주에 다른 폼팩터가 이미 요금을 받습니다. 독점 가정은 접으시는 편이 맞습니다.",
+    likes: 10, comments: 0, created_at: "2026-08-25T00:53:00.000Z", liked: false,
+  },
+  {
+    id: -887, alias: "분당 매 #31", symbol: "MSFT",
+    content: "업무 에이전트 주간 사용자 2,000만입니다. 1월 20만, 7월 600만이었습니다. 기업 판매 +50% 이상, 전체 성장 +35%입니다. WAU는 결제자가 아니니 유료 좌석을 따로 보시면 됩니다.",
+    likes: 12, comments: 1, created_at: "2026-08-25T01:00:00.000Z", liked: false,
+  },
+  {
+    id: -888, alias: "해운대 고래 #03", symbol: "BE",
+    content: "펠로시 공시는 블룸 에너지 주식과 콜입니다. 상한 약 1,200만 달러 밴드로 읽히나 구간 공시입니다. 7월 거래, 8월 21일 공개입니다. 연료전지 테마와 정치 헤드라인을 한 포지션으로 묶지 마시기 바랍니다.",
+    likes: 15, comments: 2, created_at: "2026-08-25T01:07:00.000Z", liked: false,
+  },
+  {
+    id: -889, alias: "송파 독수리 #66", symbol: "MACRO",
+    content: "순이자/GDP 약 3.2%, 1991년 이후 최고입니다. 장기 자산 할인율이 한 방향으로 조여집니다. 개별 테마 위에 매크로 덮개를 씌워 크기를 줄이시는 구간입니다.",
+    likes: 11, comments: 1, created_at: "2026-08-25T01:14:00.000Z", liked: false,
+  },
+  {
+    id: -890, alias: "인천 갈매기 #52", symbol: "MACRO",
+    content: "금 12월물 약 4,710달러, 비트코인 약 78,143달러가 같은 날 올랐습니다. 헤지 수요와 위험 선호가 한 캔들에 섞일 수 있습니다. 실질금리와 달러를 다음 필터로 두시면 됩니다.",
+    likes: 7, comments: 0, created_at: "2026-08-25T01:21:00.000Z", liked: false,
+  },
+
   // ── 2026-08-24 신규 (14개 · 구조 혼합 · 콜론 도입 금지) ──────────────────────
   {
     id: -865, alias: "성수 너구리 #15", symbol: "TSLA",
@@ -6927,6 +6989,29 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-879]: [
+    { alias: "댓글_2501", content: "주 이름이 나와야 허가 트랙을 따라갈 수 있습니다", created_at: "2026-08-25T00:08:00.000Z" },
+    { alias: "댓글_2502", content: "원격은 대도시보다 보험 설계가 어렵습니다", created_at: "2026-08-25T00:09:00.000Z" },
+  ],
+  [-880]: [
+    { alias: "댓글_2503", content: "출고 대수가 공시되는지 보겠습니다", created_at: "2026-08-25T00:14:00.000Z" },
+  ],
+  [-882]: [
+    { alias: "댓글_2504", content: "208과 325 사이는 실적 톤이 메웁니다", created_at: "2026-08-25T00:28:00.000Z" },
+    { alias: "댓글_2505", content: "가이던스가 본경기입니다", created_at: "2026-08-25T00:29:00.000Z" },
+  ],
+  [-885]: [
+    { alias: "댓글_2506", content: "약정과 전망을 한 줄에 더하지 않습니다", created_at: "2026-08-25T00:49:00.000Z" },
+    { alias: "댓글_2507", content: "2024 공시 시차도 표시해 두면 좋습니다", created_at: "2026-08-25T00:50:00.000Z" },
+  ],
+  [-888]: [
+    { alias: "댓글_2508", content: "카피 매매는 늦은 정보입니다", created_at: "2026-08-25T01:10:00.000Z" },
+    { alias: "댓글_2509", content: "수주가 확인되면 그때 펀더입니다", created_at: "2026-08-25T01:11:00.000Z" },
+  ],
+  [-889]: [
+    { alias: "댓글_2510", content: "성장주 포지션 크기부터 줄이겠습니다", created_at: "2026-08-25T01:17:00.000Z" },
+  ],
+  // ── 2026-08-24 신규 ────────────────
   [-865]: [
     { alias: "댓글_2401", content: "날짜가 박히면 연기 헤드라인도 같이 열린다", created_at: "2026-08-24T00:08:00.000Z" },
     { alias: "댓글_2402", content: "로밍이랑 같은 도시라 설득력은 있음", created_at: "2026-08-24T00:09:00.000Z" },

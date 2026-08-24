@@ -12,6 +12,20 @@ const REPORT_DIR = path.join(__dirname, '../01.investus 리포트');
 // Each entry: { ko, en (optional), label, date }
 // en: null if no English version exists
 const PAIRS = [
+  // ── 2026-08-25 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260825.svg', en: 'summary-20260825-en.svg', label: 'summary', date: '20260825' },
+  { ko: 'tsla-germany-robotaxi-talks-20260825.svg', en: 'tsla-germany-robotaxi-talks-20260825-en.svg', label: 'tsla-germany-robotaxi-talks', date: '20260825' },
+  { ko: 'tsla-cybercab-giga-ship-0903-20260825.svg', en: 'tsla-cybercab-giga-ship-0903-20260825-en.svg', label: 'tsla-cybercab-giga-ship-0903', date: '20260825' },
+  { ko: 'tsla-giga-texas-switchyard-power-20260825.svg', en: 'tsla-giga-texas-switchyard-power-20260825-en.svg', label: 'tsla-giga-texas-switchyard-power', date: '20260825' },
+  { ko: 'nvda-pt-325-earnings-week-20260825.svg', en: 'nvda-pt-325-earnings-week-20260825-en.svg', label: 'nvda-pt-325-earnings-week', date: '20260825' },
+  { ko: 'nvda-vera-rubin-starmind-20260825.svg', en: 'nvda-vera-rubin-starmind-20260825-en.svg', label: 'nvda-vera-rubin-starmind', date: '20260825' },
+  { ko: 'spcx-starship-alloys-orbital-rack-20260825.svg', en: 'spcx-starship-alloys-orbital-rack-20260825-en.svg', label: 'spcx-starship-alloys-orbital-rack', date: '20260825' },
+  { ko: 'meta-ai-infra-500b-20260825.svg', en: 'meta-ai-infra-500b-20260825-en.svg', label: 'meta-ai-infra-500b', date: '20260825' },
+  { ko: 'amzn-zoox-sf-vegas-20260825.svg', en: 'amzn-zoox-sf-vegas-20260825-en.svg', label: 'amzn-zoox-sf-vegas', date: '20260825' },
+  { ko: 'msft-openai-agents-20m-20260825.svg', en: 'msft-openai-agents-20m-20260825-en.svg', label: 'msft-openai-agents-20m', date: '20260825' },
+  { ko: 'be-pelosi-bloom-energy-20260825.svg', en: 'be-pelosi-bloom-energy-20260825-en.svg', label: 'be-pelosi-bloom-energy', date: '20260825' },
+  { ko: 'macro-us-net-interest-32-gdp-20260825.svg', en: 'macro-us-net-interest-32-gdp-20260825-en.svg', label: 'macro-us-net-interest-32-gdp', date: '20260825' },
+  { ko: 'macro-gold-btc-4710-78143-20260825.svg', en: 'macro-gold-btc-4710-78143-20260825-en.svg', label: 'macro-gold-btc-4710-78143', date: '20260825' },
   // ── 2026-08-22 ─────────────────────────────────────────────────────────
   { ko: 'summary-20260822.svg', en: 'summary-20260822-en.svg', label: 'summary', date: '20260822' },
   { ko: 'tsla-jpm-fsd-v15-450-20260822.svg', en: 'tsla-jpm-fsd-v15-450-20260822-en.svg', label: 'tsla-jpm-fsd-v15-450', date: '20260822' },

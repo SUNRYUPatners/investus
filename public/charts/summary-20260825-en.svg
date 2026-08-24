@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#f9fafb" text-anchor="middle">Daily Snapshot · 2026.08.25</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">Germany is talking robotaxis</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">A German state is in talks with Tesla to deploy robotaxis in remote regions.</text>
+
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">Cybercabs are leaving the factory</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">Ahead of the September 3 Austin event, dedicated robotaxis are shipping from Giga Texas.</text>
+  <text x="970" y="312" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="end">9/3</text>
+
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#0a0f1a" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">Nvidia price target $325</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">Earnings are expected to beat estimates, with the next chip architecture as a growth driver.</text>
+  <text x="970" y="436" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="end">$325</text>
+
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#0a0a14" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#c084fc"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">AI compute is heading to orbit</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">The same chip design is framed for Grok on the ground and Starmind satellites in space.</text>
+
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#0a1420" stroke="#1877f2" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#1877f2"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">Metas AI infrastructure spend</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">Chip, power, and datacenter outlays could exceed $500 billion over the coming years.</text>
+  <text x="970" y="684" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="end">$500B+</text>
+
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#201408" stroke="#ff9900" stroke-width="1.5"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#ff9900"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ff9900">Amazon Zoox is on city streets</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">Vehicles with no wheel or pedals run in San Francisco and charge for rides in Las Vegas.</text>
+
+  <rect x="60" y="866" width="960" height="112" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="60" y="866" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="908" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">US interest costs have jumped</text>
+  <text x="116" y="946" font-family="Arial" font-size="18" fill="#9ca3af">Net interest is about 3.2% of GDP, the highest share since 1991.</text>
+  <text x="970" y="932" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#94a3b8" text-anchor="end">3.2%</text>
+
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Also: Giga Texas power · 20M AI agents · gold and bitcoin · Bloom Energy buys</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

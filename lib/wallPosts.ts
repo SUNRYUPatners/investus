@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T25AU = 1787612400000; // 2026-08-25 08:00 KST
 const T24AU = 1787526000000; // 2026-08-24 08:00 KST
 const T22AU = 1787353200000; // 2026-08-22 08:00 KST
 const T21AU = 1787266800000; // 2026-08-21 08:00 KST
@@ -86,7 +87,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T24AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T25AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -105,6 +106,43 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-25 신규 ────────────────
+  { id: 1078, symbol: "TSLA", nickname: "익명_1010", holdingLabel: "관심종목",
+    content: "독일이 외딴 데 로보택시 넣는다며? 장관이 협의 중이라는데 주 이름은 안 나옴",
+    createdAt: T25AU + 8*60_000, likes: 12, comments: 2 },
+  { id: 1079, symbol: "TSLA", nickname: "익명_1111", holdingLabel: "90주 보유",
+    content: "기가텍사스에서 사이버캡 막 나간대. 9월 3일 행사 전에 차가 움직이네",
+    createdAt: T25AU + 16*60_000, likes: 16, comments: 2 },
+  { id: 1080, symbol: "TSLA", nickname: "익명_1212", holdingLabel: "관심종목",
+    content: "스위치야드 9개월이면 전력은 진짜 급한 거 아님? 코텍스랑 공장 같이 먹는다며",
+    createdAt: T25AU + 24*60_000, likes: 8, comments: 1 },
+  { id: 1081, symbol: "NVDA", nickname: "익명_1313", holdingLabel: "관심종목",
+    content: "목표가 325 나왔는데 지금 208이래. 실적 주간에 갭 메우겠다는 소리인가",
+    createdAt: T25AU + 32*60_000, likes: 14, comments: 2 },
+  { id: 1082, symbol: "NVDA", nickname: "익명_1414", holdingLabel: "관심종목",
+    content: "그록이랑 위성에 같은 칩 쓴다며. 스타마인드? 궤도 컴퓨터 실화냐",
+    createdAt: T25AU + 40*60_000, likes: 9, comments: 1 },
+  { id: 1083, symbol: "SPCX", nickname: "익명_1515", holdingLabel: "관심종목",
+    content: "스타십 301 스테인리스 그만 쓴대. 자체 합금 + 궤도 랙이 더 가볍다네",
+    createdAt: T25AU + 48*60_000, likes: 11, comments: 1 },
+  { id: 1084, symbol: "META", nickname: "익명_1616", holdingLabel: "관심종목",
+    content: "메타 AI에 5000억 달러? 10-Q 약정은 149억이랬는데 기간이 다른 거지?",
+    createdAt: T25AU + 56*60_000, likes: 10, comments: 2 },
+  { id: 1085, symbol: "AMZN", nickname: "익명_1717", holdingLabel: "관심종목",
+    content: "주스 샌프 돌아다니고 베가스는 돈 받는대. 핸들 없는 차",
+    createdAt: T25AU + 64*60_000, likes: 13, comments: 1 },
+  { id: 1086, symbol: "MSFT", nickname: "익명_1818", holdingLabel: "관심종목",
+    content: "챗지피티 업무 에이전트 주간 2천만. 1월에 20만이었다며 미쳤다",
+    createdAt: T25AU + 72*60_000, likes: 15, comments: 1 },
+  { id: 1087, symbol: "BE", nickname: "익명_1919", holdingLabel: "관심종목",
+    content: "펠로시가 블룸에너지 주식이랑 콜 샀다 공시. 7월 거래 8월 공개",
+    createdAt: T25AU + 80*60_000, likes: 18, comments: 2 },
+  { id: 1088, symbol: "MACRO", nickname: "익명_2020", holdingLabel: "관심종목",
+    content: "미국 이자 부담이 GDP의 3.2%래. 1991년 이후 최고면 예산 다 잡아먹겠는데",
+    createdAt: T25AU + 88*60_000, likes: 12, comments: 1 },
+  { id: 1089, symbol: "MACRO", nickname: "익명_2121", holdingLabel: "관심종목",
+    content: "금 12월물 4710 찍고 비트도 7.8만. 이자 고점인데 둘 다 오르네",
+    createdAt: T25AU + 96*60_000, likes: 7, comments: 0 },
   // ── 2026-08-24 신규 ────────────────
   { id: 1064, symbol: "TSLA", nickname: "익명_8686", holdingLabel: "80주 보유",
     content: "Cybercab 초대장 9월 3일 Austin이래. 09.03.26이 2026년 맞제",
@@ -3886,6 +3924,45 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-25 신규 댓글 ────────────────
+  1078: [
+    { id: 1, nickname: "익명_2201", holdingLabel: "관심종목", content: "외딴 지역이면 통신이 더 문제 아님?", createdAt: T25AU + 8*60_000 + 3*60_000, likes: 5 },
+    { id: 2, nickname: "익명_2202", holdingLabel: "관심종목", content: "협의랑 허가랑은 하늘과 땅", createdAt: T25AU + 8*60_000 + 6*60_000, likes: 4 },
+  ],
+  1079: [
+    { id: 1, nickname: "익명_2203", holdingLabel: "관심종목", content: "출고가 양산이면 9/3이 진짜 쇼", createdAt: T25AU + 16*60_000 + 3*60_000, likes: 7 },
+    { id: 2, nickname: "익명_2204", holdingLabel: "관심종목", content: "내부 이동일 수도 있지 사진만으로", createdAt: T25AU + 16*60_000 + 6*60_000, likes: 3 },
+  ],
+  1080: [
+    { id: 1, nickname: "익명_2205", holdingLabel: "관심종목", content: "메가와트 숫자 나오기 전엔 반만 믿음", createdAt: T25AU + 24*60_000 + 3*60_000, likes: 4 },
+  ],
+  1081: [
+    { id: 1, nickname: "익명_2206", holdingLabel: "관심종목", content: "가이던스 못하면 325는 종이", createdAt: T25AU + 32*60_000 + 3*60_000, likes: 8 },
+    { id: 2, nickname: "익명_2207", holdingLabel: "관심종목", content: "오늘 -3%인데 PT 올리는 타이밍이네", createdAt: T25AU + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1082: [
+    { id: 1, nickname: "익명_2208", holdingLabel: "관심종목", content: "궤도 랙은 내년 이야기도 아님 수년", createdAt: T25AU + 40*60_000 + 3*60_000, likes: 4 },
+  ],
+  1083: [
+    { id: 1, nickname: "익명_2209", holdingLabel: "관심종목", content: "합금 바꾸면 비행 시험 다시 해야 하는 거 아님", createdAt: T25AU + 48*60_000 + 3*60_000, likes: 6 },
+  ],
+  1084: [
+    { id: 1, nickname: "익명_2210", holdingLabel: "관심종목", content: "5000억이랑 149억 헷갈리면 큰일", createdAt: T25AU + 56*60_000 + 3*60_000, likes: 9 },
+    { id: 2, nickname: "익명_2211", holdingLabel: "관심종목", content: "캡엑스 가이던스가 본경기다", createdAt: T25AU + 56*60_000 + 6*60_000, likes: 4 },
+  ],
+  1085: [
+    { id: 1, nickname: "익명_2212", holdingLabel: "관심종목", content: "베가스 유료면 테슬라보다 한 발 앞이네", createdAt: T25AU + 64*60_000 + 3*60_000, likes: 6 },
+  ],
+  1086: [
+    { id: 1, nickname: "익명_2213", holdingLabel: "관심종목", content: "WAU 2천만이면 칩 녹는다", createdAt: T25AU + 72*60_000 + 3*60_000, likes: 7 },
+  ],
+  1087: [
+    { id: 1, nickname: "익명_2214", holdingLabel: "관심종목", content: "구간 공시라 얼마 샀는지는 모름", createdAt: T25AU + 80*60_000 + 3*60_000, likes: 8 },
+    { id: 2, nickname: "익명_2215", holdingLabel: "관심종목", content: "인텔도 같이 샀다며 전력+반도체", createdAt: T25AU + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1088: [
+    { id: 1, nickname: "익명_2216", holdingLabel: "관심종목", content: "이자에 예산 잡아먹히면 성장주 할인", createdAt: T25AU + 88*60_000 + 3*60_000, likes: 6 },
+  ],
   // ── 2026-08-24 신규 댓글 ────────────────
   1064: [
     { id: 1, nickname: "익명_0101", holdingLabel: "관심종목", content: "9월 3일이면 진짜 2주네", createdAt: T24AU + 8*60_000 + 3*60_000, likes: 6 },

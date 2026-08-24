@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1205"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="#f59e0b30" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f59e0b" text-anchor="middle">BE</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.25</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">낸시 펠로시가 블룸 에너지를 주식과 콜옵션으로 매수했다고</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">공시했습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#f59e0b" text-anchor="middle" opacity=".15">⚡</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#f59e0b" text-anchor="middle">⚡</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">BE</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">블룸 에너지는 연료전지로 전력을 만드는 회사입니다. 공시는 2026년 8월 21일이고, 거래는 7월 말입니다.</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">주식과 콜을 합치면 상한 약 1,200만 달러 밴드로 읽힙니다. 같은 표에 인텔 매수도 있습니다. 화면 가격은 약</text>
+  <text x="540" y="392" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">204.02달러, +1.28%였습니다.</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📝</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="middle">8/21</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">공시일</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">7월 말 거래</text>
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">💵</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="middle">~$12M</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">상한 밴드</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">주식+콜</text>
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">💻</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="middle">INTC</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">콜·주식</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">같은 공시</text>
+  <rect x="60" y="630" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="688" font-family="Arial" font-size="19" fill="#f59e0b" text-anchor="middle">"낸시 펠로시 공시에 블룸 에너지 주식과 콜옵션 매수가 적혀 있습니다. 콜옵션은 정해진 가격에 살 수 있는</text>
+  <text x="540" y="714" font-family="Arial" font-size="19" fill="#f59e0b" text-anchor="middle">권리입니다. 금액은 구간 공시라 정확한 주수는 아닙니다. 인텔 콜과 주식 매수도 같은 표에 있습니다. 거래는 7월</text>
+  <text x="540" y="740" font-family="Arial" font-size="19" fill="#f59e0b" text-anchor="middle">말, 공시는 8월 21일입니다."</text>
+  <text x="540" y="818" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">2026.08.25</text>
+  <rect x="60" y="838" width="960" height="140" rx="14" fill="#201408" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="868" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">고위 정치인 거래는 헤드라인이 크지만, 구간 공시라 수급 신호로 쓰기 어렵습니다. 연료전지는 데이터센터 전력 테마와 겹칩니다.</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이해충돌 논쟁과 펀더멘털은 따로 보면 됩니다.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">BE · 펠로시 공시 · 2026.08.25</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
