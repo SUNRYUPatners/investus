@@ -10,7 +10,7 @@ import { ShareButton } from "@/components/ShareButton";
 import { useWatchlist } from "@/hooks/useWatchlist";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import type { NewsItem } from "@/lib/api";
-import { SEED_REPORTS, REPORT_TICKERS, CATEGORY_STYLE, CATEGORY_EMOJI } from "@/lib/reports";
+import { SEED_REPORTS, REPORT_TICKERS, CATEGORY_STYLE, CATEGORY_EMOJI, reportBadgeSubject } from "@/lib/reports";
 import type { Report } from "@/lib/reports";
 import { isMarketOpen as checkMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 import { AdFitBanner } from "@/components/AdFitBanner";
@@ -96,6 +96,7 @@ function ReportCard({ r }: { r: Report }) {
   const style = CATEGORY_STYLE[r.categoryColor];
   const emoji = CATEGORY_EMOJI[r.category];
   const hasImages = (r.images?.length ?? 0) > 0;
+  const badgeSubject = reportBadgeSubject(r, "ko");
 
   return (
     <div
@@ -112,12 +113,12 @@ function ReportCard({ r }: { r: Report }) {
           >
             {emoji} {r.category}
           </span>
-          {r.subject && (
+          {badgeSubject && (
             <span
               className="text-[9px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0"
               style={{ background: "rgba(255,255,255,0.06)", color: "var(--text)" }}
             >
-              {r.subject}
+              {badgeSubject}
             </span>
           )}
           <span

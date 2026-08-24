@@ -105,7 +105,7 @@ export const SEED_REPORTS: Report[] = [
     titleEn: 'US 30Y Weekly Close 5.27% · Highest Since June 2007',
     summaryEn: 'Weekly close 5.27%, highest since Jun 2007. USTY30.RT Fri Aug 21 +0.04.',
     bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
-    category: '매크로', categoryColor: 'orange', subject: '30Y 5.27%',
+    category: '매크로', categoryColor: 'orange', subject: '미국 금리',
     date: "2026-08-24", updatedAt: "2026.08.24 08:00",
     images: ["/charts/us-30y-527-weekly-close-2007-20260824.svg"],
     imagesEn: ["/charts/us-30y-527-weekly-close-2007-20260824-en.svg"],
@@ -115,7 +115,7 @@ export const SEED_REPORTS: Report[] = [
     titleEn: 'Next Week Wed PCE+GDP · Fri Kevin Warsh at Jackson Hole',
     summaryEn: 'Yields dipped after buybacks. Wed PCE+GDP, Fri Warsh at Jackson Hole.',
     bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
-    category: '매크로', categoryColor: 'orange', subject: 'PCE·Warsh',
+    category: '매크로', categoryColor: 'orange', subject: '경제 일정',
     date: "2026-08-24", updatedAt: "2026.08.24 08:00",
     images: ["/charts/macro-week-pce-gdp-warsh-jackson-hole-20260824.svg"],
     imagesEn: ["/charts/macro-week-pce-gdp-warsh-jackson-hole-20260824-en.svg"],
@@ -15188,3 +15188,44 @@ export const REPORT_TICKERS: Record<string, string[]> = {
   "seed-556": ["GOOGL"],
   "seed-557": ["AAPL"],
 };
+
+const TICKER_BADGE_KO: Record<string, string> = {
+  TSLA: "테슬라", SPCX: "스페이스X", NVDA: "엔비디아", AAPL: "애플",
+  GOOGL: "구글", META: "메타", MSFT: "마이크로소프트", AMZN: "아마존",
+  AMD: "AMD", AVGO: "브로드컴", PLTR: "팔란티어", TSM: "TSMC",
+  ASML: "ASML", BRK: "버크셔", "BRK.B": "버크셔", SPY: "S&P500",
+  XPEV: "샤오펑", IBM: "IBM", EQIX: "에퀴닉스", SNDK: "샌디스크",
+  MU: "마이크론", COIN: "코인베이스", SMCI: "슈퍼마이크로",
+};
+
+const TICKER_BADGE_EN: Record<string, string> = {
+  TSLA: "Tesla", SPCX: "SpaceX", NVDA: "Nvidia", AAPL: "Apple",
+  GOOGL: "Google", META: "Meta", MSFT: "Microsoft", AMZN: "Amazon",
+  AMD: "AMD", AVGO: "Broadcom", PLTR: "Palantir", TSM: "TSMC",
+  ASML: "ASML", BRK: "Berkshire", "BRK.B": "Berkshire", SPY: "S&P 500",
+  XPEV: "XPeng", IBM: "IBM", EQIX: "Equinix", SNDK: "Sandisk",
+  MU: "Micron", COIN: "Coinbase", SMCI: "Super Micro",
+};
+
+/** 종목분석 옆 배지: 토픽 슬러그 대신 종목명 */
+export function reportBadgeSubject(report: Report, lang: "ko" | "en" = "ko"): string | undefined {
+  const isSnapshot =
+    report.category === "특집" ||
+    report.subject === "한장요약" ||
+    (report.subject?.includes("한장") ?? false);
+  if (isSnapshot) return lang === "en" ? "Daily snapshot" : "한장요약";
+  if (report.category === "매크로") return lang === "en" ? "Macro" : "매크로";
+
+  const mapped = REPORT_TICKERS[report.id];
+  let sym = mapped?.find((t) => t !== "MACRO") ?? mapped?.[0];
+  if (!sym && report.images?.[0]) {
+    const m = report.images[0].match(/\/charts\/([a-z0-9.]+)-/i);
+    if (m) sym = m[1].toUpperCase();
+  }
+  if (sym && (report.category === "종목분석" || report.category === "어닝" || report.category === "BREAKING" || report.category === "섹터")) {
+    const table = lang === "en" ? TICKER_BADGE_EN : TICKER_BADGE_KO;
+    return table[sym] ?? (lang === "en" ? sym : report.subject);
+  }
+  return report.subject;
+}
+

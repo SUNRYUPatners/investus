@@ -128,6 +128,7 @@ import {
   SEED_REPORTS,
   CATEGORY_STYLE,
   CATEGORY_EMOJI,
+  reportBadgeSubject,
   type Report,
 } from "@/lib/reports";
 
@@ -297,6 +298,8 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
   const t     = useLocale();
   const style = CATEGORY_STYLE[report.categoryColor];
   const emoji = CATEGORY_EMOJI[report.category];
+  const langCode = lang === "en" ? "en" : "ko";
+  const badgeSubject = reportBadgeSubject(report, langCode);
 
   const handleImgError = useCallback((idx: number) => {
     setFailedImgs((prev) => new Set(prev).add(idx));
@@ -329,12 +332,12 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
               >
                 {emoji} {report.category}
               </span>
-              {report.subject && (
+              {badgeSubject && (
                 <span
                   className="text-[9px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0"
                   style={{ background: "rgba(255,255,255,0.06)", color: "var(--text)" }}
                 >
-                  {report.subject}
+                  {badgeSubject}
                 </span>
               )}
               {report.isPinned && (
@@ -389,12 +392,12 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
           >
             {emoji} {report.category}
           </span>
-          {report.subject && (
+          {badgeSubject && (
             <span
               className="text-[9px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0"
               style={{ background: "rgba(255,255,255,0.06)", color: "var(--text)" }}
             >
-              {report.subject}
+              {badgeSubject}
             </span>
           )}
           {report.isPinned && (
@@ -479,9 +482,9 @@ function ReportCard({ report, lang }: { report: Report; lang?: "ko" | "en" }) {
               >
                 {emoji} {report.category}
               </span>
-              {report.subject && (
+              {badgeSubject && (
                 <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-                  {report.subject}
+                  {badgeSubject}
                 </span>
               )}
             </div>
