@@ -365,8 +365,8 @@ const T=[
 
 
 let n=0;
-fs.writeFileSync(path.join(OUT,`summary-${DATETAG}.svg`), summarySvg('ko'));
-fs.writeFileSync(path.join(OUT,`summary-${DATETAG}-en.svg`), summarySvg('en'));
+// 한장요약은 7/2 리스트형(제목+본문 1문장)으로 수동 유지. TOP 14 그리드로 덮어쓰지 말 것.
+// public/charts/summary-20260824.svg · -en.svg
 n+=2;
 
 for(const t of T){
