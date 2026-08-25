@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T26AU = 1787698800000; // 2026-08-26 08:00 KST
 const T25AU = 1787612400000; // 2026-08-25 08:00 KST
 const T24AU = 1787526000000; // 2026-08-24 08:00 KST
 const T22AU = 1787353200000; // 2026-08-22 08:00 KST
@@ -87,7 +88,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T25AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T26AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -106,6 +107,43 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-26 신규 ────────────────
+  { id: 1091, symbol: "NVDA", nickname: "익명_2300", holdingLabel: "관심종목",
+    content: "그록 3 LPX 풀 프로덕션이래. 베라 루빈에서 네비우스가 첫 고객",
+    createdAt: T26AU + 8*60_000, likes: 10, comments: 2 },
+  { id: 1092, symbol: "TSLA", nickname: "익명_2301", holdingLabel: "관심종목",
+    content: "테슬라만 대규모 자율주행 한다는데… 웨이모는 뭐라고 하지",
+    createdAt: T26AU + 16*60_000, likes: 11, comments: 1 },
+  { id: 1093, symbol: "SPCX", nickname: "익명_2302", holdingLabel: "관심종목",
+    content: "루이지애나 1000억+ 우주항 30척/일 17패드 2027 착공??",
+    createdAt: T26AU + 24*60_000, likes: 12, comments: 1 },
+  { id: 1094, symbol: "SPCX", nickname: "익명_2303", holdingLabel: "관심종목",
+    content: "교토대가 스타링크 1200기로 대기권 단층촬영했다네 tomography",
+    createdAt: T26AU + 32*60_000, likes: 13, comments: 2 },
+  { id: 1095, symbol: "TSLA", nickname: "익명_2304", holdingLabel: "관심종목",
+    content: "포트워스에 사이버캡 대기중. 달러스에서 서쪽 32마일",
+    createdAt: T26AU + 40*60_000, likes: 14, comments: 1 },
+  { id: 1096, symbol: "TSLA", nickname: "익명_2305", holdingLabel: "관심종목",
+    content: "세미 롤아웃 9월 24일 스파크스. 사이버캡 9/3이랑 같은 달",
+    createdAt: T26AU + 48*60_000, likes: 15, comments: 1 },
+  { id: 1097, symbol: "AVGO", nickname: "익명_2306", holdingLabel: "관심종목",
+    content: "CDS 126bp NVDA 87bp 사상 최고래. 신용 시장도 AI 걱정?",
+    createdAt: T26AU + 56*60_000, likes: 16, comments: 2 },
+  { id: 1098, symbol: "MACRO", nickname: "익명_2307", holdingLabel: "관심종목",
+    content: "재무부 buyback 40억+ TGA 9500억 narrative 또 도네",
+    createdAt: T26AU + 64*60_000, likes: 10, comments: 1 },
+  { id: 1099, symbol: "MACRO", nickname: "익명_2308", holdingLabel: "관심종목",
+    content: "연준 10~15년물 절반 넘게 보유? QT랑 같이 봐야지",
+    createdAt: T26AU + 72*60_000, likes: 11, comments: 1 },
+  { id: 1100, symbol: "MACRO", nickname: "익명_2309", holdingLabel: "관심종목",
+    content: "Anthropic IPO 2조 밸류 1000억 조달? 미쳤다 진짜",
+    createdAt: T26AU + 80*60_000, likes: 12, comments: 2 },
+  { id: 1101, symbol: "GOOGL", nickname: "익명_2310", holdingLabel: "관심종목",
+    content: "Gemini Enterprise 금융·법무 버전 MSCI Moodys FactSet",
+    createdAt: T26AU + 88*60_000, likes: 13, comments: 1 },
+  { id: 1102, symbol: "NVDA", nickname: "익명_2311", holdingLabel: "관심종목",
+    content: "엔비디아 직원이 칩 중국 밀수 혐의로 기소? 통제 이슈",
+    createdAt: T26AU + 96*60_000, likes: 14, comments: 1 },
   // ── 2026-08-25 신규 ────────────────
   { id: 1078, symbol: "TSLA", nickname: "익명_1010", holdingLabel: "관심종목",
     content: "독일이 외딴 데 로보택시 넣는다며? 장관이 협의 중이라는데 주 이름은 안 나옴",
@@ -3924,6 +3962,51 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-26 신규 댓글 ────────────────
+  1091: [
+    { id: 1, nickname: "익명_3491", holdingLabel: "관심종목", content: "LPX가 추론 칩이면 API 수요랑 직결", createdAt: T26AU + 8*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3492", holdingLabel: "관심종목", content: "네비우스 하나만으론 부족", createdAt: T26AU + 8*60_000 + 6*60_000, likes: 5 },
+  ],
+  1092: [
+    { id: 1, nickname: "익명_3492", holdingLabel: "관심종목", content: "정의가 애매함 무인 유료 마일로 봐야지", createdAt: T26AU + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3493", holdingLabel: "관심종목", content: "웨이모 베가스는?", createdAt: T26AU + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1093: [
+    { id: 1, nickname: "익명_3493", holdingLabel: "관심종목", content: "1000억이면 허가부터… 2027 착공이 현실?", createdAt: T26AU + 24*60_000 + 3*60_000, likes: 4 },
+  ],
+  1094: [
+    { id: 1, nickname: "익명_3494", holdingLabel: "관심종목", content: "스타링크가 과학 데이터까지? 부가수익?", createdAt: T26AU + 32*60_000 + 3*60_000, likes: 4 },
+  ],
+  1095: [
+    { id: 1, nickname: "익명_3495", holdingLabel: "관심종목", content: "ready랑 유료는 다름 허가 봐야", createdAt: T26AU + 40*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3496", holdingLabel: "관심종목", content: "DFW geofence 확장 기대", createdAt: T26AU + 40*60_000 + 6*60_000, likes: 5 },
+  ],
+  1096: [
+    { id: 1, nickname: "익명_3496", holdingLabel: "관심종목", content: "9월에 사이버캡 세미 둘 다네 총알 장전", createdAt: T26AU + 48*60_000 + 3*60_000, likes: 4 },
+  ],
+  1097: [
+    { id: 1, nickname: "익명_3497", holdingLabel: "관심종목", content: "CDS만 오르고 주가는 버티면 decouple", createdAt: T26AU + 56*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3498", holdingLabel: "관심종목", content: "실적이 신용 잡아줄듯", createdAt: T26AU + 56*60_000 + 6*60_000, likes: 5 },
+  ],
+  1098: [
+    { id: 1, nickname: "익명_3498", holdingLabel: "관심종목", content: "말만 하고 실제 buyback 규모가 관건", createdAt: T26AU + 64*60_000 + 3*60_000, likes: 4 },
+  ],
+  1099: [
+    { id: 1, nickname: "익명_3499", holdingLabel: "관심종목", content: "50%면 QT가 그 구간에 더 민감한 거 아님", createdAt: T26AU + 72*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3500", holdingLabel: "관심종목", content: "10-15Y 금리", createdAt: T26AU + 72*60_000 + 6*60_000, likes: 5 },
+  ],
+  1100: [
+    { id: 1, nickname: "익명_3500", holdingLabel: "관심종목", content: "S-1 전까지는 rumor", createdAt: T26AU + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3501", holdingLabel: "관심종목", content: "2조면 Mag7 AI 리레이팅", createdAt: T26AU + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1101: [
+    { id: 1, nickname: "익명_3501", holdingLabel: "관심종목", content: "출시랑 대형 계약은 다른 단계", createdAt: T26AU + 88*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3502", holdingLabel: "관심종목", content: "MSCI 붙은 건 신뢰", createdAt: T26AU + 88*60_000 + 6*60_000, likes: 5 },
+  ],
+  1102: [
+    { id: 1, nickname: "익명_3502", holdingLabel: "관심종목", content: "직원 1명이면 회사랑 분리해야", createdAt: T26AU + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_3503", holdingLabel: "관심종목", content: "통제 더 세질 수도", createdAt: T26AU + 96*60_000 + 6*60_000, likes: 5 },
+  ],
   // ── 2026-08-25 신규 댓글 ────────────────
   1078: [
     { id: 1, nickname: "익명_2201", holdingLabel: "관심종목", content: "외딴 지역이면 통신이 더 문제 아님?", createdAt: T25AU + 8*60_000 + 3*60_000, likes: 5 },

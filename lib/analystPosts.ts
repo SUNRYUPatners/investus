@@ -17,6 +17,67 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-26 신규 (12개 · 존댓말 · 구조 혼합) ──────────────────────
+  {
+    id: -891, alias: "성수 너구리 #15", symbol: "NVDA",
+    content: "그록 3 LPX 풀 프로덕션.\n— 베라 루빈 플랫폼\n— 네비우스 첫 고객\n— 추론 칩 양산\n학습만이 아닌 API·에이전트 축입니다. 추가 고객을 기다리겠습니다.",
+    likes: 11, comments: 2, created_at: "2026-08-26T00:00:00.000Z", liked: false,
+  },
+  {
+    id: -892, alias: "한남 재규어 #27", symbol: "TSLA",
+    content: "왜 scale-only 주장이 민감할까요. 답은 정의입니다. 무인·유료·마일·도시 수로 좁히면 검증 가능합니다. 독점 서사는 프리미엄을 키웁니다.",
+    likes: 12, comments: 2, created_at: "2026-08-26T00:07:00.000Z", liked: false,
+  },
+  {
+    id: -893, alias: "압구정 치타 #44", symbol: "SPCX",
+    content: "루이지애나 100B+·Terabay 3 door·30/day·17 pads·2027.\n숫자가 크므로 허가·자금·flight rate를 함께 보시면 됩니다.",
+    likes: 13, comments: 1, created_at: "2026-08-26T00:14:00.000Z", liked: false,
+  },
+  {
+    id: -894, alias: "여의도 수리 #28", symbol: "SPCX",
+    content: "교토대 Starlink 1,200기 tomography.\n통신 ARR과 과학 데이터 옵션을 분리하세요. 위성 수가 관측 해상도를 키웁니다.",
+    likes: 14, comments: 0, created_at: "2026-08-26T00:21:00.000Z", liked: false,
+  },
+  {
+    id: -895, alias: "삼성동 올빼미 #19", symbol: "TSLA",
+    content: "포트워스 Cybercab ready는 DFW 지리 확장 신호입니다. ready≠paid. TX 허가와 geofence map을 확인하겠습니다.",
+    likes: 15, comments: 1, created_at: "2026-08-26T00:28:00.000Z", liked: false,
+  },
+  {
+    id: -896, alias: "광화문 여우 #62", symbol: "TSLA",
+    content: "9/24 Semi Rollout · Sparks NV.\n9/3 Cybercab과 같은 달 이중 촉매입니다. TCO·충전·인도 숫자가 본경기입니다.",
+    likes: 11, comments: 1, created_at: "2026-08-26T00:35:00.000Z", liked: false,
+  },
+  {
+    id: -897, alias: "마포 살쾡이 #08", symbol: "AVGO",
+    content: "숫자만 정리합니다. AVGO CDS 126.225bp, NVDA 86.735bp, 8월 ATH wide.\n주가와 decouple될 수 있습니다. 실적이 신용을 안정시키는지 보겠습니다.",
+    likes: 12, comments: 2, created_at: "2026-08-26T00:42:00.000Z", liked: false,
+  },
+  {
+    id: -898, alias: "판교 늑대 #90", symbol: "MACRO",
+    content: "재무부 buyback $4B+ narrative와 TGA $950B.\nrhetoric과 집행 규모는 다릅니다. 10–15Y Fed 50%+ chart와 같은 macro bundle입니다.",
+    likes: 13, comments: 2, created_at: "2026-08-26T00:49:00.000Z", liked: false,
+  },
+  {
+    id: -899, alias: "분당 매 #31", symbol: "MACRO",
+    content: "Fed 10–15Y bucket 50%+ 보유.\nQT roll-off가 그 구간 금리에 민감합니다. SOMA·auction을 추적하시면 됩니다.",
+    likes: 14, comments: 1, created_at: "2026-08-26T00:56:00.000Z", liked: false,
+  },
+  {
+    id: -900, alias: "해운대 고래 #03", symbol: "MACRO",
+    content: "Anthropic: TAM $30T+, Q2 rev $11.6B, IPO ~$100B raise ~$2T.\nS-1 전까지 plan과 fact를 나누겠습니다.",
+    likes: 15, comments: 2, created_at: "2026-08-26T00:63:00.000Z", liked: false,
+  },
+  {
+    id: -901, alias: "송파 독수리 #66", symbol: "GOOGL",
+    content: "Gemini Enterprise Legal/Financial.\nMSCI·Moody's·FactSet launch partners.\n출시와 대형 계약은 단계가 다릅니다.",
+    likes: 11, comments: 0, created_at: "2026-08-26T00:70:00.000Z", liked: false,
+  },
+  {
+    id: -902, alias: "인천 갈매기 #52", symbol: "NVDA",
+    content: "고급 칩 중국 밀반출 기소 보도.\n개인 사건이지만 export control·compliance scrutiny narrative입니다. 회사 statement를 확인하겠습니다.",
+    likes: 12, comments: 1, created_at: "2026-08-26T00:77:00.000Z", liked: false,
+  },
   // ── 2026-08-25 신규 (12개 · 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -879, alias: "성수 너구리 #15", symbol: "TSLA",
@@ -6989,6 +7050,24 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-891]: [
+    { alias: "댓글_260891", content: "추론 매출 비중이 실적에 나올까요", created_at: "2026-08-26T00:10:00.000Z" },
+  ],
+  [-892]: [
+    { alias: "댓글_260892", content: "웨이모 유료 도시는 scale에 포함?", created_at: "2026-08-26T00:10:00.000Z" },
+  ],
+  [-893]: [
+    { alias: "댓글_260893", content: "2027 착공 공식 문서", created_at: "2026-08-26T00:10:00.000Z" },
+  ],
+  [-897]: [
+    { alias: "댓글_260897", content: "실적 beat면 CDS 좁혀짐", created_at: "2026-08-26T00:10:00.000Z" },
+  ],
+  [-898]: [
+    { alias: "댓글_260898", content: "buyback weekly 집행", created_at: "2026-08-26T00:10:00.000Z" },
+  ],
+  [-900]: [
+    { alias: "댓글_260900", content: "S-1 delay risk", created_at: "2026-08-26T00:10:00.000Z" },
+  ],
   [-879]: [
     { alias: "댓글_2501", content: "주 이름이 나와야 허가 트랙을 따라갈 수 있습니다", created_at: "2026-08-25T00:08:00.000Z" },
     { alias: "댓글_2502", content: "원격은 대도시보다 보험 설계가 어렵습니다", created_at: "2026-08-25T00:09:00.000Z" },

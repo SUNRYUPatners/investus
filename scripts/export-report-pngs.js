@@ -12,6 +12,20 @@ const REPORT_DIR = path.join(__dirname, '../01.investus 리포트');
 // Each entry: { ko, en (optional), label, date }
 // en: null if no English version exists
 const PAIRS = [
+  // ── 2026-08-26 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260826.svg', en: 'summary-20260826-en.svg', label: 'summary', date: '20260826' },
+  { ko: 'nvda-groq3-lpx-production-20260826.svg', en: 'nvda-groq3-lpx-production-20260826-en.svg', label: 'nvda-groq3-lpx-production', date: '20260826' },
+  { ko: 'tsla-fsd-scale-only-20260826.svg', en: 'tsla-fsd-scale-only-20260826-en.svg', label: 'tsla-fsd-scale-only', date: '20260826' },
+  { ko: 'spcx-louisiana-100b-terabay-20260826.svg', en: 'spcx-louisiana-100b-terabay-20260826-en.svg', label: 'spcx-louisiana-100b-terabay', date: '20260826' },
+  { ko: 'spcx-starlink-tomography-20260826.svg', en: 'spcx-starlink-tomography-20260826-en.svg', label: 'spcx-starlink-tomography', date: '20260826' },
+  { ko: 'tsla-cybercab-fort-worth-20260826.svg', en: 'tsla-cybercab-fort-worth-20260826-en.svg', label: 'tsla-cybercab-fort-worth', date: '20260826' },
+  { ko: 'tsla-semi-rollout-sept24-20260826.svg', en: 'tsla-semi-rollout-sept24-20260826-en.svg', label: 'tsla-semi-rollout-sept24', date: '20260826' },
+  { ko: 'avgo-nvda-cds-record-20260826.svg', en: 'avgo-nvda-cds-record-20260826-en.svg', label: 'avgo-nvda-cds-record', date: '20260826' },
+  { ko: 'macro-treasury-bond-intervention-20260826.svg', en: 'macro-treasury-bond-intervention-20260826-en.svg', label: 'macro-treasury-bond-intervention', date: '20260826' },
+  { ko: 'macro-fed-treasuries-half-10-15-20260826.svg', en: 'macro-fed-treasuries-half-10-15-20260826-en.svg', label: 'macro-fed-treasuries-half-10-15', date: '20260826' },
+  { ko: 'anthropic-30t-ipo-20260826.svg', en: 'anthropic-30t-ipo-20260826-en.svg', label: 'anthropic-30t-ipo', date: '20260826' },
+  { ko: 'googl-gemini-enterprise-finance-20260826.svg', en: 'googl-gemini-enterprise-finance-20260826-en.svg', label: 'googl-gemini-enterprise-finance', date: '20260826' },
+  { ko: 'nvda-chip-smuggling-china-20260826.svg', en: 'nvda-chip-smuggling-china-20260826-en.svg', label: 'nvda-chip-smuggling-china', date: '20260826' },
   // ── 2026-08-25 ─────────────────────────────────────────────────────────
   { ko: 'summary-20260825.svg', en: 'summary-20260825-en.svg', label: 'summary', date: '20260825' },
   { ko: 'tsla-germany-robotaxi-talks-20260825.svg', en: 'tsla-germany-robotaxi-talks-20260825-en.svg', label: 'tsla-germany-robotaxi-talks', date: '20260825' },

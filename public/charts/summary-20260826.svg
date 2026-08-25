@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="36" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.08.26 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">그록 3 LPX가 본격 양산에 들어갑니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">베라 루빈 플랫폼 위에서 그록 3 LPX가 풀 프로덕션에 들어갔고, 네비우스가 첫 고객으로 잡혔습니다.</text>
+  <text x="970" y="188" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="end">LPX</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">테슬라만 대규모 자율주행을 한다는 주장</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">규모 있는 자율주행을 실제로 하고 있는 회사는 테슬라뿐이라는 주장이 나왔습니다. 경쟁사와 비교해 검증이 필요합니다.</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#c084fc"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">루이지애나에 1,000억 달러 우주항</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">스타베이스 루이지애나 우주항 투자가 1,000억 달러를 넘고, 테라베이 3문·하루 30척·17패드 설계가 공개됐습니다.</text>
+  <text x="970" y="436" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="end">$100B+</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">포트워스에 사이버캡 대기</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">달러스 로보택시 구역 서쪽 약 32마일 포트워스에 사이버캡 함대가 준비됐다는 설명이 나왔습니다.</text>
+  <text x="970" y="560" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">FW</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#201018" stroke="#f472b6" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#f472b6"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f472b6">AVGO·NVDA CDS 사상 최고</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">8월 차트 기준 브로드컴 CDS 126.225bp, 엔비디아 86.735bp로 사상 최고 구간에 있습니다.</text>
+  <text x="970" y="684" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f472b6" text-anchor="end">CDS</text>
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#1a1030" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">Anthropic IPO 최대 2조 달러</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">TAM 30조 달러 이상, 2분기 매출 116억 달러, 9~10월 IPO로 최대 1,000억 달러 조달·약 2조 달러 밸류 전망입니다.</text>
+  <text x="970" y="808" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="end">$2T</text>
+  <rect x="60" y="866" width="960" height="112" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="866" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="908" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">연준 10~15년물 50% 이상</text>
+  <text x="116" y="946" font-family="Arial" font-size="18" fill="#9ca3af">연준이 10~15년물 국채 1,028억 달러 중 540억 달러 이상, 50% 넘게 보유하고 있다는 차트가 나왔습니다.</text>
+  <text x="970" y="932" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="end">50%+</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 세미 9/24 · 스타링크 층권 · 재무부 개입 · Gemini Enterprise · 중국 밀수 기소</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

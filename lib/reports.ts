@@ -39,6 +39,761 @@ export const CATEGORY_EMOJI: Record<ReportCategory, string> = {
 };
 
 export const SEED_REPORTS: Report[] = [
+  // ── 2026-08-26 신규 ──────────────────────────────────────────────────────
+  { id: "seed-1101", title: '2026년 8월 26일 한장 요약입니다. 그록 3 LPX 양산, 루이지애나 1,000억 우주항, 사이버캡 포트워스, CDS·국채·Anthropic IPO를 모았습니다', summary: '그록 3 LPX가 베라 루빈에서 풀 프로덕션에 들어갔고, 루이지애나 스타베이스는 1,000억 달러+·테라베이 스펙이 공개됐습니다. 테슬라는 FSD scale 주장·포트워스 사이버캡·9/24 세미 행사, AVGO·NVDA CDS 사상 최고, 재무부 buyback·Fed 10–15Y 50%+, Anthropic IPO·Gemini Enterprise·칩 밀반출 기소도 같이 보시기 바랍니다.',
+    body: "",
+    titleEn: 'Daily snapshot for August 26, 2026: Groq 3 LPX, Louisiana $100B+, Cybercab Fort Worth, CDS, Treasuries, Anthropic IPO',
+    summaryEn: 'Groq 3 LPX is in full production; Louisiana Starbase tops $100B. Tesla FSD scale claim, Cybercab in Fort Worth, Semi 9/24. AVGO/NVDA CDS at records, Treasury/Fed charts, Anthropic IPO, Gemini Enterprise, chip smuggling charge.',
+    category: '특집', categoryColor: 'mint', subject: '한장요약',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/summary-20260826.svg"],
+    imagesEn: ["/charts/summary-20260826-en.svg"],
+    isPinned: true, imageOnly: true,
+  },
+  { id: "seed-1102", title: '그록 3 LPX가 베라 루빈 플랫폼에서 본격 양산에 들어갔습니다', summary: '그록 3 LPX는 엔비디아 차세대 추론 가속기 설계입니다. 베라 루빈 플랫폼 위에서 풀 프로덕션에 들어갔고, 네비우스가 첫 채택 고객으로 잡혔습니다. 추론 칩 수요가 클라우드에서 AI 팩토리로 확장되는 신호입니다.',
+    body: `■ 상세
+
+그록 3 LPX는 엔비디아가 추론(inference)에 맞춘 차세대 가속기 라인입니다. LPX는 대규모 언어 모델 답변을 빠르게 내는 칩·랙 설계를 뜻합니다. 베라 루빈(Vera Rubin)은 블랙웰 다음 세대 GPU 플랫폼 이름입니다.
+
+이번 화면은 LPX가 시범이 아니라 풀 프로덕션(full production) 단계에 들어갔다는 설명입니다. 네비우스(Nebius)가 첫 고객으로 적혀 있습니다. 네비우스는 AI 클라우드·GPU 호스팅을 하는 업체로, 신규 칩을 실제 워크로드에 올리는 첫 파트너 역할을 합니다.
+
+학습(training)용 칩과 추론용 칩은 수요 곡선이 다릅니다. LPX가 양산되면 API 호출·에이전트·실시간 서비스 쪽 매출 믹스가 커질 수 있습니다. 다만 출하 대수·단가·마진은 이번 카드만으로 확정되지 않습니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 풀 프로덕션은 개발 데모를 넘어 고객 납품 가능 상태를 뜻합니다.
+
+2. 베라 루빈 플랫폼과 묶이면 차세대 납품 일정과 같이 읽힙니다.
+
+3. 네비우스 선점은 AI 클라우드 경쟁에서 칩 우선권 신호입니다.
+
+4. 추론 수요는 챗봇·코딩 에이전트 확대와 직결됩니다.
+
+5. 경쟁사 커스텀 실리콘·TPU와 비교 검증이 필요합니다.
+
+■ 시나리오
+
+**A: 네비우스 실적·캡엑스 가이던스에 LPX 비중이 드러납니다.**
+**B: 추가 고객 발표가 이어집니다.**
+**C: 양산 지연·수율 이슈가 나오면 일정이 밀립니다.**
+
+■ 오늘까지 흐름
+
+- 블랙웰 출시·베라 루빈 로드맵
+- 오늘 LPX 풀 프로덕션·네비우스
+- 실적에서 데이터센터·추론 믹스 확인 필요
+
+■ 반대 관점
+
+(1) 첫 고객 한 곳만으로 수요 확정은 아닙니다
+(2) 추론 칩 ASP 하락 가능
+(3) 수출 규제·지역 제한
+(4) 소프트웨어 스택 호환
+(5) 전력·냉각 병목
+
+■ 앞으로 볼 것
+
+(1) 추가 LPX 고객
+(2) 베라 루빈 양산 시점
+(3) 추론 매출 비중
+(4) 네비우스 캡엑스
+(5) 경쟁 TPU·ASIC
+
+■ 투자시사점
+
+LPX는 학습 한 줄기가 아니라 추론 매출 축입니다. 네비우스는 초기 검증 고객이지 전체 수요가 아닙니다. 실적에서 데이터센터 가이던스와 함께 추론 믹스를 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Groq 3 LPX enters full production on the Vera Rubin platform',
+    summaryEn: 'Groq 3 LPX is in full production on Vera Rubin, with Nebius as the first adopter.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'blue', subject: '엔비디아',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/nvda-groq3-lpx-production-20260826.svg"],
+    imagesEn: ["/charts/nvda-groq3-lpx-production-20260826-en.svg"],
+  },
+  { id: "seed-1103", title: '규모 있는 자율주행을 실제로 하는 회사는 테슬라뿐이라는 주장이 나왔습니다', summary: '대규모 자율주행을 상용 규모로 하고 있는 회사는 테슬라뿐이라는 주장이 나왔습니다. 로보택시·FSD·데이터 마일이 뒷받침해야 하며, 경쟁사 실적과 비교해 검증이 필요합니다.',
+    body: `■ 상세
+
+자율주행 at scale은 몇 대 시험차가 아니라, 많은 차량이 매일 공공도로에서 소프트웨어로 운전하고 데이터를 쌓는 상태를 뜻합니다. 이번 주장은 그 기준에서 테슬라만 해당한다는 쪽입니다.
+
+테슬라 쪽 근거로는 오스틴·달러스 로보택시 구역, FSD 구독·감독 주행 마일, 사이버캡 출고 등이 같은 내러티브에 묶입니다. 반면 웨이모·주스 등은 유료 도시·제한 구역에서 다른 규모로 운행 중입니다.
+
+주장과 팩트는 구분해야 합니다. “유일”은 정의(무인·유료·도시 수·마일)에 따라 달라집니다. 안전·개입률·규제 허가는 별도 지표입니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 로보택시 내러티브의 독점 프레임이 다시 강조됩니다.
+
+2. 규모=차량 대수×운행 시간×지리 범위입니다.
+
+3. 경쟁사와 비교 시 허가·유료·무인 조건이 달라집니다.
+
+4. FSD v15·사이버캡·포트워스 함대와 같은 주에 읽힙니다.
+
+5. 과장 주장이면 규제·여론 반발 리스크가 있습니다.
+
+■ 시나리오
+
+**A: 유료 마일·도시 수가 늘면 주장이 강해집니다.**
+**B: 사고·회수로 규모 주장이 약해집니다.**
+**C: 경쟁사가 무인 유료를 확대하면 “유일” 프레임이 깨집니다.**
+
+■ 오늘까지 흐름
+
+- 로보택시 파일럿·유료 도시 확대
+- 오늘 scale-only 주장
+- 사이버캡·포트워스·세미 행사 일정
+
+■ 반대 관점
+
+(1) 감독원 탑승·무인 구분
+(2) 지리적 geofence 한계
+(3) 마일 수 공개 부족
+(4) 경쟁사 유료 서비스
+(5) 규제 지역별 상이
+
+■ 앞으로 볼 것
+
+(1) 유료 로보택시 마일
+(2) geofence 확대
+(3) 개입률·사고
+(4) 경쟁사 도시 수
+(5) FSD v15 출시
+
+■ 투자시사점
+
+독점 내러티브는 밸류에이션 프리미엄을 키웁니다. 다만 정의를 좁히면 검증 가능합니다. 유료 마일·도시·무인 조건을 숫자로 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'A claim says Tesla is the only company doing self-driving at scale',
+    summaryEn: 'The claim is that only Tesla runs self-driving at commercial scale. Robotaxi miles and paid service need to back it up.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'mint', subject: '테슬라',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/tsla-fsd-scale-only-20260826.svg"],
+    imagesEn: ["/charts/tsla-fsd-scale-only-20260826-en.svg"],
+  },
+  { id: "seed-1104", title: '루이지애나 스타베이스 우주항 투자가 1,000억 달러를 넘고 테라베이 설계가 공개됐습니다', summary: '스타베이스 루이지애나 우주항 투자 규모가 1,000억 달러 이상으로 잡혔습니다. 테라베이 3문, 하루 30척 스타십, 17개 패드, 연 15,000회 이상 발사 용량, 2027년 착공이 핵심 숫자입니다.',
+    body: `■ 상세
+
+스타베이스 루이지애나는 텍사스 스타베이스와 별도로 건설되는 대형 우주항 프로젝트입니다. 투자 규모가 1,000억 달러(100B+)를 넘는다는 설명이 나왔습니다. 테라베이(Terabay)는 스타십 조립·출고를 위한 대형 시설로, 3개의 door(거대 개구부)가 적혀 있습니다.
+
+생산 목표는 하루 30척 Starship, 17개 launch pad, 연간 15,000회 이상 발사 capacity입니다. 착공은 2027년으로 잡혀 있습니다. 숫자가 크기 때문에 허가·환경·자금 조달·실제 공정 수율이 병목이 됩니다.
+
+스타링크·스타십·궤도 데이터센터 내러티브와 같은 축입니다. 발사 cadence가 늘면 위성·궤도 컴퓨팅 비용 곡선에 영향을 줄 수 있습니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 100B+는 인프라 CAPEX 내러티브의 상한을 올립니다.
+
+2. 하루 30척은 현재 cadence와 비교해 극단적 목표입니다.
+
+3. 17 pads·15,000+/year는 위성·화물 수요 가정을 내포합니다.
+
+4. 2027 착공은 단기 실적보다 장기 옵션입니다.
+
+5. 허가·지역 정치·환경이 일정 리스크입니다.
+
+■ 시나리오
+
+**A: 2027 착공·EPC 계약이 나오면 구체화됩니다.**
+**B: 규제 지연으로 로드맵이 밀립니다.**
+**C: cadence 목표 하향 조정.**
+
+■ 오늘까지 흐름
+
+- 루이지애나 주 승인·토지
+- 오늘 100B+·Terabay 스펙
+- 스타십 비행·스타링크 위성 수
+
+■ 반대 관점
+
+(1) 100B+는 계획치
+(2) 하루 30척 수율·안전
+(3) 환경·주민 소송
+(4) 금리·자금 조달
+(5) 패드·인프라 병목
+
+■ 앞으로 볼 것
+
+(1) 2027 착공 공식 일정
+(2) EPC·지역 고용
+(3) 패드 건설 단계
+(4) Starship flight rate
+(5) 위성·화물 수요
+
+■ 투자시사점
+
+루이지애나는 장기 콜 옵션입니다. 숫자는 방향이지 단기 EPS가 아닙니다. 착공·허가·실제 flight rate를 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Starbase Louisiana is framed above $100B with Terabay design details',
+    summaryEn: 'Investment tops $100B+. Terabay has 3 doors, 30 Starship/day, 17 pads, 15,000+/year capacity, construction from 2027.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'purple', subject: '스페이스X',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/spcx-louisiana-100b-terabay-20260826.svg"],
+    imagesEn: ["/charts/spcx-louisiana-100b-terabay-20260826-en.svg"],
+  },
+  { id: "seed-1105", title: '교토대가 1,200기 스타링크 위성으로 대기권 밀도 단층촬영을 했습니다', summary: '교토대는 약 1,200기의 스타링크 위성 신호를 이용해 thermospheric density tomography(대기권 상층 밀도 단층촬영)를 수행했습니다. 위성 통신망이 과학 관측 인프라로도 쓰일 수 있음을 보여줍니다.',
+    body: `■ 상세
+
+단층촬영(tomography)은 여러 각도에서 측정해 3차원 구조를 재구성하는 방법입니다. 이번 연구는 스타링크 위성 약 1,200기의 신호를 활용해 thermosphere(대기권 상층, 약 80~600km) 밀도를 추정했습니다.
+
+스타링크는 원래 인터넷 통신용 저궤도(LEO) 위성입니다. 위성 수가 많아지면서 과학·기상·우주 날씨 관측에 재활용 가능하다는 사례입니다. 대기권 상층 밀도는 위성 궤도·재진입·통신 지연에 영향을 줍니다.
+
+매출 직접 기여는 작을 수 있으나, 위성 네트워크의 부가 가치·데이터 라이선스·정부 계약 가능성을 보여줍니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 1,200기 규모는 다른 LEO 합보다 밀도가 높습니다.
+
+2. 과학 활용은 통신 외 수익원 옵션입니다.
+
+3. 우주 날씨·궤도 예측 수요와 맞닿습니다.
+
+4. 데이터 품질·교정 방법이 재현성을 가릅니다.
+
+5. 규제·스펙트럼 외 연구 파트너십도 변수입니다.
+
+■ 시나리오
+
+**A: 정부·대학 계약이 늘면 부가 매출 축이 생깁니다.**
+**B: 과학용은 부수적, 통신 ARR이 여전히 중심.**
+**C: 위성 신호 개방 범위 제한.**
+
+■ 오늘까지 흐름
+
+- 스타링크 위성 수 확대
+- 교토대 tomography 연구
+- 상용 ARR vs 부가 데이터
+
+■ 반대 관점
+
+(1) 논문·재현성
+(2) 상업 매출 기여 미미
+(3) 경쟁 LEO
+(4) 신호 품질
+(5) 데이터 독점
+
+■ 앞으로 볼 것
+
+(1) 후속 논문·인용
+(2) NASA·JAXA 협력
+(3) 데이터 제품화
+(4) 위성 수
+(5) 스펙트럼
+
+■ 투자시사점
+
+과학 활용은 옵션 가치입니다. 통신 ARR이 본체입니다. 정부·연구 데이터 계약이 늘면 재평가 여지가 있습니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Kyoto University used 1,200 Starlink satellites for thermospheric tomography',
+    summaryEn: 'About 1,200 Starlink satellites were used for thermospheric density tomography, showing the constellation as science infrastructure.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'purple', subject: '스페이스X',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/spcx-starlink-tomography-20260826.svg"],
+    imagesEn: ["/charts/spcx-starlink-tomography-20260826-en.svg"],
+  },
+  { id: "seed-1106", title: '포트워스에 사이버캡 로보택시 함대가 준비됐다는 설명이 나왔습니다', summary: '텍사스 포트워스(Fort Worth)에 사이버캡 함대가 준비됐다는 설명이 나왔습니다. 달러스 로보택시 geofence 서쪽 약 32마일 지점으로, 지리 확장 신호로 읽힙니다.',
+    body: `■ 상세
+
+포트워스는 텍사스 북부 도시로, 달러스 대都会 로보택시 시범 구역(geofence)에서 서쪽으로 약 32마일(약 51km) 떨어져 있습니다. 사이버캡은 운전석 없는 전용 로보택시 차량입니다.
+
+함대가 “ready”라는 것은 차량·충전·원격 지원·맵이 해당 지역에서 운행 가능 상태에 가깝다는 뜻으로 읽을 수 있습니다. 유료 승객 개시·허가 범위는 별도 확인이 필요합니다.
+
+달러스 geofence 확장·연결 또는 새 geofence의 전주곡일 수 있습니다. 로보택시는 지리를 넓힐수록 데이터·유료 마일이 늘지만, 규제·보험·통신 음영도 함께 검증해야 합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 32마일은 달러스와 다른 도시권이지만 같은 DFW 축입니다.
+
+2. 사이버캡 전용차는 모델Y 개조와 원가·센서 배치가 다릅니다.
+
+3. ready는 상용과 동일하지 않을 수 있습니다.
+
+4. 지리 확대는 유료 마일 옵션을 키웁니다.
+
+5. 경쟁 로보택시·규제 속도와 비교 필요.
+
+■ 시나리오
+
+**A: 포트워스 유료 개시·geofence 공식 발표.**
+**B: 차량 대기·내부 테스트만.**
+**C: 일정 지연·규제 보류.**
+
+■ 오늘까지 흐름
+
+- 달러스 로보택시 geofence
+- 포트워스 Cybercab ready
+- 9/3 오스틴 행사·세미 9/24
+
+■ 반대 관점
+
+(1) ready 정의 모호
+(2) 허가 미확인
+(3) 사고·회수
+(4) geofence 미연결
+(5) 유료 미개시
+
+■ 앞으로 볼 것
+
+(1) TX 당국 허가
+(2) 유료 앱 전환
+(3) fleet size
+(4) geofence map
+(5) 9/3 행사
+
+■ 투자시사점
+
+지리 확장은 로보택시 실물 진전입니다. ready를 paid miles로 연결해 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'A Cybercab robotaxi fleet is described as ready in Fort Worth, TX',
+    summaryEn: 'Cybercab fleet ready in Fort Worth, about 32 miles west of the Dallas robotaxi geofence.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'mint', subject: '테슬라',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/tsla-cybercab-fort-worth-20260826.svg"],
+    imagesEn: ["/charts/tsla-cybercab-fort-worth-20260826-en.svg"],
+  },
+  { id: "seed-1107", title: '테슬라 세미 롤아웃 행사가 2026년 9월 24일 네바다 스파크스에서 열립니다', summary: '테슬라 세미(Tesla Semi) 롤아웃 이벤트가 2026년 9월 24일 네바다 스파크스 공장에서 열린다고 알려졌습니다. 대형 전기 트럭 상용 일정의 캘린더 앵커입니다.',
+    body: `■ 상세
+
+테슬라 세미는 Class 8 대형 전기 트럭입니다. 롤아웃(rollout) 행사는 양산·고객 인도·스펙 공개를 묶는 이벤트로 읽힙니다. 일정은 2026년 9월 24일, 장소는 네바다 스파크스(Sparks) 공장입니다.
+
+세미는 펩시·월마트 등 대형 물류 수요와 연결됩니다. 배터리·충전·총소유비(TCO)가 판매 관건입니다. 행사에서 생산 목표·예약·충전 네트워크가 나올 수 있습니다.
+
+사이버캡 9/3, 세미 9/24로 9월에 두 개의 하드웨어 이벤트가 붙습니다. 일정 연기 시 캘린더 신뢰 비용이 생깁니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 9/24는 분기 말 촉매입니다.
+
+2. 스파크스는 세미 생산 거점입니다.
+
+3. 대형 트럭 TCO·충전이 상용 관건입니다.
+
+4. 사이버캡과 같은 달 이중 이벤트.
+
+5. 예약→인도 전환율이 실적 관건.
+
+■ 시나리오
+
+**A: 행사에서 생산·고객 코멘트.**
+**B: 제한적 데모.**
+**C: 일정 연기.**
+
+■ 오늘까지 흐름
+
+- 세미 예약·파일럿
+- 9/24 Sparks Rollout 발표
+- Cybercab 9/3
+
+■ 반대 관점
+
+(1) 행사만 있고 인도 미미
+(2) TCO 불리
+(3) 충전 infra
+(4) 경쟁 전기·디젤
+(5) 일정 slip
+
+■ 앞으로 볼 것
+
+(1) 행사 스펙·가격
+(2) 생산 run-rate
+(3) 고객 인도
+(4) 메가차arger
+(5) 4680·배터리
+
+■ 투자시사점
+
+세미는 로보택시와 다른 축이지만 같은 9월 캘린더입니다. 행사 코멘트와 인도 숫자를 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Tesla Semi Rollout event is set for September 24, 2026 in Sparks, Nevada',
+    summaryEn: 'The Tesla Semi Rollout event is September 24, 2026 at the Sparks, Nevada factory.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'mint', subject: '테슬라',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/tsla-semi-rollout-sept24-20260826.svg"],
+    imagesEn: ["/charts/tsla-semi-rollout-sept24-20260826-en.svg"],
+  },
+  { id: "seed-1108", title: 'AVGO·NVDA CDS가 2026년 8월 차트 기준 사상 최고 구간에 있습니다', summary: 'CDS(신용부도스와프) 스프레드가 AVGO 126.225bp, NVDA 86.735bp로 2026년 8월 차트에서 사상 최고(wide) 구간에 있습니다. 반도체·AI 이름의 신용 프리미엄 상승 신호로 읽힙니다.',
+    body: `■ 상세
+
+CDS(신용부도스와프)는 특정 회사 채권의 부도 위험을 보험하는 파생상품 가격입니다. 스프레드가 넓어(wide)진다는 것은 시장이 신용 리스크 프리미엄을 더 요구한다는 뜻입니다. bp는 basis point(0.01%p)입니다.
+
+2026년 8월 차트에서 AVGO(브로드컴) 126.225bp, NVDA(엔비디아) 86.735bp가 사상 최고 구간으로 표시됩니다. AI·반도체 CAPEX 사이클, 밸류에이션, 금리, 공급망·규제가 배경에 있을 수 있습니다.
+
+주가와 CDS는 항상 같은 방향은 아닙니다. CDS 급확대는 헤지 수요·기관 리스크 관리 신호일 수 있습니다. 실적·가이던스가 신용을 안정시키는지 봐야 합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 사상 최고 CDS는 낙관과 별도 신용 경계입니다.
+
+2. AVGO는 커스텀 실리콘·M&A 레버가 큽니다.
+
+3. NVDA는 AI CAPEX 허브입니다.
+
+4. 금리·macro와 함께 읽힙니다.
+
+5. 단기 spike vs 지속 추세 구분 필요.
+
+■ 시나리오
+
+**A: 실적 beat로 CDS 축소.**
+**B: macro shock로 further widening.**
+**C: 헤지 일시 수요.**
+
+■ 오늘까지 흐름
+
+- AI CAPEX·밸류 논쟁
+- 8월 CDS chart wides
+- Treasury·Fed 국채 이야기
+
+■ 반대 관점
+
+(1) CDS≠주가
+(2) 유동성 thin
+(3) 일시 헤지
+(4) 실적 개선
+(5) index inclusion
+
+■ 앞으로 볼 것
+
+(1) weekly CDS
+(2) earnings
+(3) bond spread
+(4) buyback
+(5) macro
+
+■ 투자시사점
+
+CDS는 보조 지표입니다. AI 낙관과 신용 헤지가 동시에 존재할 수 있습니다. 실적과 bond market을 함께 보세요.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'AVGO and NVDA CDS hit all-time wides on August 2026 charts',
+    summaryEn: 'CDS spreads: AVGO 126.225 and NVDA 86.735, all-time wides on August 2026 charts.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'blue', subject: '브로드컴',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/avgo-nvda-cds-record-20260826.svg"],
+    imagesEn: ["/charts/avgo-nvda-cds-record-20260826-en.svg"],
+  },
+  { id: "seed-1109", title: '미국 재무부가 국채 시장 개입·환매 narrative가 다시 부각됐습니다', summary: '재무부 장관 베센트가 40억 달러 이상 buyback, 9,500억 달러 general account 등 국채·유동성 narrative와 맞물려 시장이 장기금리·수급을 재평가하고 있습니다.',
+    body: `■ 상세
+
+국채 buyback(환매)은 재무부가 시장에서 자국 국채를 다시 사들여 유동성·수익률 곡선을 관리하는 도구입니다. general account(TGA)는 재무부가 연준에 예치한 현금 계정으로, 잔고가 크면 시장 유동성을 흡수할 수 있습니다.
+
+이번 narrative는 베센트 장관과 40억 달러 이상 buyback, 9,500억 달러 general account 규모가 함께 거론됩니다. 장기금리 급등 구간에서 “개입” 기대가 생기면 금리·성장주·은행주가 동시에 움직일 수 있습니다.
+
+실제 개입 규모·지속성·Fed QT와의 상호작용을 구분해야 합니다. 헤드라인만으로 지속적 금리 하락을 가정하면 위험합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 장기금리·30Y·10Y와 직결됩니다.
+
+2. buyback는 supply 흡수 도구입니다.
+
+3. TGA·유동성 narrative는 risk asset과 연결됩니다.
+
+4. Fed 10–15Y 보유와 같은 주 macro 축.
+
+5. 정치·예산·부채한도가 배경.
+
+■ 시나리오
+
+**A: buyback 확대→금리 완화.**
+**B: rhetoric만, 실제 규모 제한.**
+**C: inflation 재가열→금리 재상승.**
+
+■ 오늘까지 흐름
+
+- 30Y·10Y 급등
+- Treasury buyback narrative
+- Fed 국채 보유 chart
+
+■ 반대 관점
+
+(1) 개입 규모 과대
+(2) inflation
+(3) Fed independence
+(4) supply wall
+(5) dollar
+
+■ 앞으로 볼 것
+
+(1) weekly buyback
+(2) TGA balance
+(3) 10Y·30Y
+(4) auction
+(5) CPI
+
+■ 투자시사점
+
+macro 덮개입니다. buyback 실제 집행과 TGA를 숫자로 추적하세요.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Treasury bond intervention narrative is back in focus',
+    summaryEn: 'Bessent buybacks $4B+, $950B general account frame ties to Treasury supply and liquidity.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '매크로', categoryColor: 'red', subject: '금리',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/macro-treasury-bond-intervention-20260826.svg"],
+    imagesEn: ["/charts/macro-treasury-bond-intervention-20260826-en.svg"],
+  },
+  { id: "seed-1110", title: '연준이 10~15년물 국채의 50% 이상을 보유하고 있다는 차트가 나왔습니다', summary: '연준(Fed)이 10~15년 만기 국채 1,028억 달러 중 540억 달러 이상, 50% 넘게 보유한다는 차트가 나왔습니다. QT·금리·수급 논쟁의 핵심 그림입니다.',
+    body: `■ 상세
+
+연준은 QE(양적완화) 기간에 국채를 대량 매입했고, QT(양적긴축)로 일부를 줄이고 있습니다. 10~15년물은 중기 장기금리·모기지·기업 차입금과 연결된 구간입니다.
+
+차트는 전체 1,028억 달러 중 연준 보유 540억 달러 이상, 50% 초과를 보여줍니다. 연준이 특정 maturity bucket을 많이 쥐면, QT 속도·재투자·Maturity runoff가 그 구간 수익률에 더 민감해질 수 있습니다.
+
+재무부 buyback narrative·30Y 금리·CDS와 같은 주 macro 화면에 두면, “누가 국채를 받느냐”가 자산 가격 할인율의 공통 변수입니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 50%+ 보유는 해당 maturity 수급 집중을 뜻합니다.
+
+2. QT·roll-off가 10–15Y에 민감할 수 있습니다.
+
+3. 재무부·Fed·시장삼자 수급 균형.
+
+4. 금리 peak·cut path와 연결.
+
+5. 차트 시점·정의 확인 필요.
+
+■ 시나리오
+
+**A: QT slow→10–15Y 완화.**
+**B: supply wall→yield up.**
+**C: Fed pivot rhetoric only.**
+
+■ 오늘까지 흐름
+
+- QE legacy·QT
+- 10–15Y Fed share chart
+- Treasury buyback same week
+
+■ 반대 관점
+
+(1) bucket 정의
+(2) QT pace change
+(3) fiscal supply
+(4) inflation
+(5) foreign demand
+
+■ 앞으로 볼 것
+
+(1) Fed SOMA
+(2) QT minutes
+(3) 10Y auction
+(4) term premium
+(5) bank demand
+
+■ 투자시사점
+
+Fed balance sheet는 macro anchor입니다. 10–15Y bucket과 QT를 함께 추적하세요.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'The Fed owns over 50% of 10–15 year Treasuries, a chart shows',
+    summaryEn: 'Fed holds over $540B of $1,028B in 10–15Y Treasuries, above 50%.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '매크로', categoryColor: 'red', subject: '금리',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/macro-fed-treasuries-half-10-15-20260826.svg"],
+    imagesEn: ["/charts/macro-fed-treasuries-half-10-15-20260826-en.svg"],
+  },
+  { id: "seed-1111", title: 'Anthropic TAM 30조 달러·2분기 매출 116억·IPO 최대 2조 밸류 전망이 나왔습니다', summary: 'TAM 30조 달러 이상, 2분기 매출 116억 달러, 9~10월 IPO로 최대 1,000억 달러 조달·약 2조 달러 밸류 전망이 나왔습니다. AI 상장·밸류에이션 anchor입니다.',
+    body: `■ 상세
+
+TAM(total addressable market)은 회사가 겨냥하는 전체 시장 규모 추정치입니다. 30조 달러+ TAM은 AI·엔터프라이즈 소프트웨어 전체를 넓게 잡은 숫자로 읽힙니다. 2분기 매출 116억 달러는 ARR run-rate가 아니라 분기 매출입니다.
+
+IPO는 9~10월, 조달 규모 최대 1,000억 달러, 밸류에이션 약 2조 달러 전망이 함께 거론됩니다. 역대급 규모라 S-1·SEC 일정·시장 risk appetite가 관건입니다. Amazon·Google 등 기존 투자자 지분·lockup도 변수입니다.
+
+상장은 AI private→public 재평가 이벤트입니다. OpenAI·Meta·MSFT 밸류와 연결되지만, 실제 S-1 숫자로 검증해야 합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 2T 밸류는 AI bubble 논쟁의 anchor.
+
+2. 116억 Q2는 성장 속도 확인 필요.
+
+3. 100B raise는 유동성·index demand 필요.
+
+4. 9~10월은 macro·금리와 겹칩니다.
+
+5. private mark vs public price gap.
+
+■ 시나리오
+
+**A: S-1→oversubscribed IPO.**
+**B: delay·down-round.**
+**C: macro shock blocks window.**
+
+■ 오늘까지 흐름
+
+- Anthropic revenue·S-1 rumor
+- Sept/Oct IPO window
+- Mag7 AI spend
+
+■ 반대 관점
+
+(1) TAM 과장
+(2) loss·burn
+(3) delay
+(4) regulation
+(5) competition
+
+■ 앞으로 볼 것
+
+(1) S-1 filing
+(2) revenue growth
+(3) raise size
+(4) lockup
+(5) first-day trade
+
+■ 투자시사점
+
+IPO는 catalyst이지 확정이 아닙니다. S-1 전까지 private mark discount를 두세요.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Anthropic $30T+ TAM, $11.6B Q2 revenue, IPO up to $2T valuation',
+    summaryEn: '$30T+ TAM, Q2 revenue $11.6B, Sept/Oct IPO raising up to $100B at ~$2T valuation.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '매크로', categoryColor: 'purple', subject: 'AI',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/anthropic-30t-ipo-20260826.svg"],
+    imagesEn: ["/charts/anthropic-30t-ipo-20260826-en.svg"],
+  },
+  { id: "seed-1112", title: 'Gemini Enterprise for Legal/Financial Services가 출시됐고 MSCI·무디스·FactSet 등이 파트너입니다', summary: 'Gemini Enterprise for Legal and Financial Services가 출시됐고, MSCI·Moody\'s·FactSet 등이 런치 파트너로 적혀 있습니다. 금융·법무 워크플로에 AI를 넣는 B2B 축입니다.',
+    body: `■ 상세
+
+Gemini Enterprise는 구글이 기업용으로 제공하는 AI 제품군입니다. Legal/Financial Services 버전은 법무·금융 규제·리서치·데이터 워크플로에 맞춘 패키지입니다.
+
+MSCI(지수·ESG 데이터), Moody's(신용·리스크), FactSet(금융 데이터·분석) 등이 launch partner로 적혀 있습니다. 파트너 데이터·도구와 LLM을 묶으면 금융기관·자산운용·법무팀의 채택 장벽을 낮출 수 있습니다.
+
+매출 기여 시점·좌석 가격·경쟁(OpenAI·MSFT Copilot·Anthropic)은 아직 숫자로 확인해야 합니다. 클라우드·Workspace와 cross-sell 가능성이 큽니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 금융 B2B는 ARPU가 높습니다.
+
+2. MSCI·Moody's·FactSet는 신뢰·데이터 moat.
+
+3. 규제·감사·hallucination 리스크 관리가 관건.
+
+4. GOOGL vs MSFT enterprise AI 경쟁.
+
+5. 출시≠대규모 계약.
+
+■ 시나리오
+
+**A: 대형 bank·AM pilot→좌석 확대.**
+**B: slow compliance sales.**
+**C: 경쟁사 win.**
+
+■ 오늘까지 흐름
+
+- Gemini enterprise roadmap
+- Legal/Financial launch
+- Mag7 AI spend
+
+■ 반대 관점
+
+(1) pilot only
+(2) compliance delay
+(3) data privacy
+(4) pricing
+(5) MSFT lock-in
+
+■ 앞으로 볼 것
+
+(1) customer logos
+(2) seat pricing
+(3) cloud attach
+(4) partner rev share
+(5) earnings comment
+
+■ 투자시사점
+
+Enterprise finance vertical은 TAM 확장입니다. 계약·좌석 숫자가 나올 때까지 narrative discount를 유지하세요.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Gemini Enterprise for Legal/Financial Services launches with MSCI, Moody\'s, FactSet',
+    summaryEn: 'Gemini Enterprise for Legal/Financial Services launched with partners including MSCI, Moody\'s, and FactSet.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'blue', subject: '구글',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/googl-gemini-enterprise-finance-20260826.svg"],
+    imagesEn: ["/charts/googl-gemini-enterprise-finance-20260826-en.svg"],
+  },
+  { id: "seed-1113", title: '엔비디아 직원이 고급 칩을 중국으로 밀반출한 혐의로 기소됐다는 보도가 나왔습니다', summary: '엔비디아 직원이 고급 AI 칩을 중국으로 밀반출한 혐의로 기소됐다는 보도가 나왔습니다. 수출 통제·컴플라이언스·중국 수요 우회 리스크 이슈입니다.',
+    body: `■ 상세
+
+미국은 고성능 AI/GPU 칩의 중국 수출에 통제를 두고 있습니다. 밀반출(smuggling)은 허가 없이 칩을 중국 등 제한 지역으로 옮기는 행위입니다.
+
+보도는 엔비디아 직원이 고급 칩 밀반출 혐의로 기소됐다는 내용입니다. 개인 범죄 사건이지만, 회사 컴플라이언스·내부 통제·규제 당국 scrutiny·중국 grey market 수요 narrative와 연결됩니다.
+
+전체 매출에 직접 hit는 아닐 수 있으나, 수출 통제 강화·추가 audit·평판 리스크로 읽힐 수 있습니다. 중국 legitimate sales vs 우회 수요를 구분해야 합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 수출 통제는 NVDA 중국 narrative의 핵심.
+
+2. 직원 1건≠회사 정책 실패로 단정 금지.
+
+3. grey market는 real demand signal.
+
+4. 규제 강화 tail risk.
+
+5. 경쟁사·대체 chip 우회.
+
+■ 시나리오
+
+**A: isolated case, limited impact.**
+**B: tighter export audit.**
+**C: political escalation.**
+
+■ 오늘까지 흐름
+
+- US export controls
+- smuggling charge report
+- China AI demand
+
+■ 반대 관점
+
+(1) one employee
+(2) immaterial revenue
+(3) headline risk
+(4) policy tightening
+(5) denial
+
+■ 앞으로 볼 것
+
+(1) court filing
+(2) NVDA statement
+(3) DoC rules
+(4) China revenue
+(5) compliance spend
+
+■ 투자시사점
+
+컴플라이언스 headline입니다. 매출 비중과 회사 statement를 확인하세요. 통제 강화가 tail risk입니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'An Nvidia employee was charged with smuggling advanced chips to China, reports say',
+    summaryEn: 'Reports say an Nvidia employee was charged with smuggling advanced chips to China.',
+    bodyEn: 'See Korean body.\n\ninvestus.kr SRP Chief Investment Officer',
+    category: '종목분석', categoryColor: 'blue', subject: '엔비디아',
+    date: "2026-08-26", updatedAt: "2026.08.26 08:00",
+    images: ["/charts/nvda-chip-smuggling-china-20260826.svg"],
+    imagesEn: ["/charts/nvda-chip-smuggling-china-20260826-en.svg"],
+  },
   // ── 2026-08-25 신규 ──────────────────────────────────────────────────────
   { id: "seed-1088", title: '2026년 8월 25일 한장 요약입니다. 독일 로보택시 협의, 사이버캡 출고, 엔비디아 목표가, 메타 인프라, 주스 유료 운행을 한눈에 모았습니다', summary: '독일의 한 주가 외딴 지역 로보택시를 협의하고, 기가 텍사스에서 사이버캡이 나가며 9월 3일 행사가 남았습니다. 엔비디아는 325달러 목표가와 궤도 칩 설계, 메타는 다년 5,000억 달러 인프라 이야기, 아마존 주스는 샌프란시스코와 유료 라스베이거스입니다. 이자 부담 3.2%, 에이전트 2,000만, 금과 비트코인도 같이 보시기 바랍니다.',
     body: "",
@@ -48,7 +803,7 @@ export const SEED_REPORTS: Report[] = [
     date: "2026-08-25", updatedAt: "2026.08.25 08:00",
     images: ["/charts/summary-20260825.svg"],
     imagesEn: ["/charts/summary-20260825-en.svg"],
-    isPinned: true, imageOnly: true,
+    isPinned: false, imageOnly: true,
   },
   { id: "seed-1089", title: '독일의 한 주가 외딴 지역에 테슬라 로보택시를 넣는 방안을 협의합니다', summary: '독일 교통 장관은 한 주가 원격 지역에 테슬라 로보택시를 시범 운행하는 협의를 하고 있다고 밝혔습니다. 로보택시는 기사 없이 소프트웨어가 운전하는 호출 차량입니다. 주 이름과 허가, 유료 여부는 이 발언만으로 확정되지 않습니다.',
     body: `■ 상세
@@ -15304,6 +16059,20 @@ investus.kr SRP 최고투자책임자 발행`,
 
 // 종목별 리포트 매핑 — 개별 종목 페이지에서 관련 리포트 필터링에 사용
 export const REPORT_TICKERS: Record<string, string[]> = {
+  // 2026-08-26
+  "seed-1101": ['NVDA', 'TSLA', 'SPCX', 'AVGO', 'GOOGL', 'MACRO'],
+  "seed-1102": ['NVDA'],
+  "seed-1103": ['TSLA'],
+  "seed-1104": ['SPCX'],
+  "seed-1105": ['SPCX'],
+  "seed-1106": ['TSLA'],
+  "seed-1107": ['TSLA'],
+  "seed-1108": ['AVGO', 'NVDA'],
+  "seed-1109": ['MACRO'],
+  "seed-1110": ['MACRO'],
+  "seed-1111": ['MACRO'],
+  "seed-1112": ['GOOGL'],
+  "seed-1113": ['NVDA'],
   // 2026-08-25
   "seed-1088": ['TSLA', 'NVDA', 'META', 'AMZN', 'MSFT', 'BE', 'MACRO'],
   "seed-1089": ['TSLA'],
