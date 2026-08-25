@@ -119,16 +119,21 @@ export default function CreatorDashboardPage() {
     }
 
     // 항상 서버에서 최신 상태 동기화 (localStorage 없을 때도 복원)
-    fetch(`/api/creator/list?id=${encodeURIComponent(user.email)}`)
-      .then((r) => r.json())
-      .then((data) => {
+    void (async () => {
+      const { data: { session } } = await getSupabase().auth.getSession();
+      const headers: HeadersInit = session?.access_token
+        ? { Authorization: `Bearer ${session.access_token}` }
+        : {};
+      try {
+        const r = await fetch("/api/creator/list?mine=1", { headers });
+        const data = await r.json();
         if (!Array.isArray(data) || data.length === 0) {
           if (!local) router.replace("/creator/setup");
           return;
         }
         const d = data[0];
         const restored: MyCreator = {
-          id:                  d.phone ?? user.email,
+          id:                  d.id ?? user.email,
           nickname:            d.nickname ?? "",
           avatar:              d.avatar ?? "🦁",
           bio:                 d.bio ?? "",
@@ -151,8 +156,10 @@ export default function CreatorDashboardPage() {
           setESubPrice(restored.subscriptionPrice ?? 9900);
           setContents(loadContents());
         }
-      })
-      .catch(() => { if (!local) router.replace("/creator/setup"); });
+      } catch {
+        if (!local) router.replace("/creator/setup");
+      }
+    })();
   }, [authLoaded, user, router]);
 
   // auth 로딩 중이면 빈 화면 대신 로딩 표시
@@ -170,7 +177,11 @@ export default function CreatorDashboardPage() {
     if (!confirm("신청을 취소하시겠어요? 프로필과 신청 내역이 삭제됩니다.")) return;
     setCancelling(true);
     // Supabase에서 삭제
-    await fetch(`/api/creator/cancel?phone=${encodeURIComponent(user.email)}`, { method: "DELETE" }).catch(() => {});
+    const { data: { session } } = await getSupabase().auth.getSession();
+    await fetch("/api/creator/cancel", {
+      method: "DELETE",
+      headers: session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {},
+    }).catch(() => {});
     // localStorage 정리
     try { localStorage.removeItem("investus_my_creator"); } catch {}
     try { localStorage.removeItem("investus_creator_contents"); } catch {}
@@ -179,11 +190,14 @@ export default function CreatorDashboardPage() {
 
   const handleVerify = async () => {
     // Submit to server as pending (admin must approve)
+    const { data: { session } } = await getSupabase().auth.getSession();
     await fetch("/api/admin/verifications", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+      },
       body: JSON.stringify({
-        phone: user.email,
         nickname: creator.nickname,
         avatar: creator.avatar,
         bio: creator.bio,
@@ -354,7 +368,7 @@ export default function CreatorDashboardPage() {
           </button>
           {creator.status === "approved" && (
             <Link
-              href={`/creator/${encodeURIComponent(user.email)}`}
+              href={`/creator/${encodeURIComponent(creator.id)}`}
               className="text-[11px] font-semibold px-3 py-1.5 rounded-lg"
               style={{ background: "rgba(var(--mint-rgb),0.1)", color: "var(--mint)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}
             >

@@ -1,13 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
+import { getAdminSupabase } from "@/lib/supabase";
+import { escapeHtml } from "@/lib/htmlEscape";
+
+const ipLog = new Map<string, { count: number; resetAt: number }>();
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const rec = ipLog.get(ip);
+  if (!rec || now > rec.resetAt) {
+    ipLog.set(ip, { count: 1, resetAt: now + 60_000 });
+    return true;
+  }
+  if (rec.count >= 8) return false;
+  rec.count++;
+  return true;
+}
 
 export async function POST(req: NextRequest) {
-  const url  = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-  if (!url || !key) {
-    return NextResponse.json({ error: "서버 설정 오류" }, { status: 500 });
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
+  if (!checkRateLimit(ip)) {
+    return NextResponse.json({ error: "잠시 후 다시 시도해주세요." }, { status: 429 });
   }
 
   let body: unknown;
@@ -30,9 +42,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "입력값이 너무 깁니다" }, { status: 400 });
   }
 
-  const supabase = createClient(url, key);
-
-  const { error } = await supabase.from("edu_applications").insert([{
+  const { error } = await getAdminSupabase().from("edu_applications").insert([{
     name:    name.trim(),
     phone:   phone.trim(),
     level:   level.trim(),
@@ -45,7 +55,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "저장 실패. 잠시 후 다시 시도해주세요." }, { status: 500 });
   }
 
-  // 이메일 알림 (RESEND_API_KEY 설정 시 활성화)
   const resendKey = process.env.RESEND_API_KEY;
   if (resendKey) {
     try {
@@ -53,27 +62,21 @@ export async function POST(req: NextRequest) {
       await resend.emails.send({
         from: "Investus <onboarding@resend.dev>",
         to:   ["sunryupatners@gmail.com"],
-        subject: `[Investus] 수강 신청 — ${name.trim()}`,
+        subject: `[Investus] 수강 신청 — ${name.trim().slice(0, 40)}`,
         html: `
           <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;background:#07090e;color:#f3f0e8;border-radius:12px">
-            <h2 style="color:#b38f38;margin-top:0">📚 새 수강 신청이 들어왔습니다</h2>
+            <h2 style="color:#b38f38;margin-top:0">새 수강 신청이 들어왔습니다</h2>
             <table style="width:100%;border-collapse:collapse;font-size:14px">
-              <tr><td style="padding:8px 0;color:#9ca3af;width:80px">이름</td><td style="padding:8px 0;color:#e5e7eb;font-weight:bold">${name.trim()}</td></tr>
-              <tr><td style="padding:8px 0;color:#9ca3af">연락처</td><td style="padding:8px 0;color:#e5e7eb">${phone.trim()}</td></tr>
-              <tr><td style="padding:8px 0;color:#9ca3af">과정/경력</td><td style="padding:8px 0;color:#e5e7eb">${level.trim()}</td></tr>
-              ${amount?.trim() ? `<tr><td style="padding:8px 0;color:#9ca3af">투자 규모</td><td style="padding:8px 0;color:#e5e7eb">${amount.trim()}</td></tr>` : ""}
-              ${message?.trim() ? `<tr><td style="padding:8px 0;color:#9ca3af;vertical-align:top">문의</td><td style="padding:8px 0;color:#a78bfa">${message.trim()}</td></tr>` : ""}
+              <tr><td style="padding:8px 0;color:#9ca3af;width:80px">이름</td><td style="padding:8px 0;color:#e5e7eb;font-weight:bold">${escapeHtml(name.trim())}</td></tr>
+              <tr><td style="padding:8px 0;color:#9ca3af">연락처</td><td style="padding:8px 0;color:#e5e7eb">${escapeHtml(phone.trim())}</td></tr>
+              <tr><td style="padding:8px 0;color:#9ca3af">과정/경력</td><td style="padding:8px 0;color:#e5e7eb">${escapeHtml(level.trim())}</td></tr>
+              ${amount?.trim() ? `<tr><td style="padding:8px 0;color:#9ca3af">투자 규모</td><td style="padding:8px 0;color:#e5e7eb">${escapeHtml(amount.trim())}</td></tr>` : ""}
+              ${message?.trim() ? `<tr><td style="padding:8px 0;color:#9ca3af;vertical-align:top">문의</td><td style="padding:8px 0;color:#a78bfa">${escapeHtml(message.trim())}</td></tr>` : ""}
             </table>
-            <hr style="border:none;border-top:1px solid #1e2028;margin:20px 0"/>
-            <p style="font-size:12px;color:#6b7280;margin:0">
-              신청자 목록 전체 보기 →
-              <a href="https://investus.kr/admin/applications" style="color:#b38f38">investus.kr/admin/applications</a>
-            </p>
           </div>
         `,
       });
     } catch (emailErr) {
-      // 이메일 실패는 신청 자체를 막지 않음
       console.error("email send error:", emailErr);
     }
   }

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabase, getUserFromRequest } from "@/lib/supabase";
+import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 
@@ -24,7 +24,7 @@ export async function PATCH(req: NextRequest) {
     subscription_price:   typeof subscription_price === "number" ? subscription_price : null,
   };
 
-  let { error } = await getSupabase()
+  let { error } = await getAdminSupabase()
     .from("creator_verifications")
     .update(fullPayload)
     .eq("phone", authUser.email);
@@ -37,7 +37,7 @@ export async function PATCH(req: NextRequest) {
       avatar:   fullPayload.avatar,
       tags:     fullPayload.tags,
     };
-    const { error: e2 } = await getSupabase()
+    const { error: e2 } = await getAdminSupabase()
       .from("creator_verifications")
       .update(minimal)
       .eq("phone", authUser.email);

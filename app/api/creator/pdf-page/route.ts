@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import path from "path";
 import { getAdminSupabase } from "@/lib/supabase";
-import { assertPublishedPdfPath, CREATOR_PDF_BUCKET } from "@/lib/creatorPdf";
+import { resolvePublishedPdfPath, CREATOR_PDF_BUCKET } from "@/lib/creatorPdf";
 
 export const dynamic = "force-dynamic";
 // Extend timeout for PDF rendering (default 300s on Vercel)
@@ -16,13 +16,14 @@ export async function GET(req: NextRequest) {
 
   if (!pdfPath) return new Response("No path", { status: 400 });
 
-  if (!(await assertPublishedPdfPath(pdfPath))) {
+  const storagePath = await resolvePublishedPdfPath(pdfPath);
+  if (!storagePath) {
     return new Response("Not found", { status: 404 });
   }
 
   // Download PDF bytes from Supabase
   const supabase = getAdminSupabase();
-  const { data, error } = await supabase.storage.from(CREATOR_PDF_BUCKET).download(pdfPath);
+  const { data, error } = await supabase.storage.from(CREATOR_PDF_BUCKET).download(storagePath);
   if (error || !data) {
     console.error("[pdf-page] download error:", error?.message);
     return new Response("Not found", { status: 404 });

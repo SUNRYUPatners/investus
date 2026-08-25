@@ -1,38 +1,53 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabase } from "@/lib/supabase";
+import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
+import { findCreatorByPublicOrEmail, looksLikeEmail, publicCreatorDto } from "@/lib/creatorPublicId";
 
 export const dynamic = "force-dynamic";
 
-// GET /api/creator/list          — all approved creators
-// GET /api/creator/list?id=email — single creator by email
 export async function GET(req: NextRequest) {
   const rawId = req.nextUrl.searchParams.get("id");
-  // Normalise: decode once in case the caller double-encoded (e.g. %2540 → %40 → @)
+  const mine = req.nextUrl.searchParams.get("mine") === "1";
   const id = rawId ? (() => { try { return decodeURIComponent(rawId); } catch { return rawId; } })() : null;
+  const authUser = await getUserFromRequest(req);
+  const db = getAdminSupabase();
 
-  let base = getSupabase()
+  if (mine) {
+    if (!authUser) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    const { data, error } = await db
+      .from("creator_verifications")
+      .select("nickname, avatar, bio, status, annual_return, portfolio_scale, top_holdings, tags, subscription_enabled, subscription_price, submitted_at, phone")
+      .eq("phone", authUser.email)
+      .maybeSingle();
+    if (error) return NextResponse.json([]);
+    if (!data) return NextResponse.json([]);
+    return NextResponse.json([publicCreatorDto(data)]);
+  }
+
+  if (id && looksLikeEmail(id)) {
+    if (!authUser || authUser.email.toLowerCase() !== id.toLowerCase()) {
+      return NextResponse.json([]);
+    }
+    const { data } = await db
+      .from("creator_verifications")
+      .select("nickname, avatar, bio, status, annual_return, portfolio_scale, top_holdings, tags, subscription_enabled, subscription_price, submitted_at, phone")
+      .eq("phone", authUser.email)
+      .maybeSingle();
+    return NextResponse.json(data ? [publicCreatorDto(data)] : []);
+  }
+
+  if (id) {
+    const row = await findCreatorByPublicOrEmail(id);
+    if (!row || row.status !== "approved") return NextResponse.json([]);
+    return NextResponse.json([publicCreatorDto(row)]);
+  }
+
+  const { data, error } = await db
     .from("creator_verifications")
-    .select("phone, nickname, avatar, bio, status, annual_return, portfolio_scale, top_holdings, tags, subscription_enabled, subscription_price, submitted_at")
+    .select("nickname, avatar, bio, status, annual_return, portfolio_scale, top_holdings, tags, subscription_enabled, subscription_price, submitted_at, phone")
     .eq("status", "approved")
     .order("submitted_at", { ascending: false });
 
-  if (id) base = base.eq("phone", id);
-
-  const { data, error } = await base;
-
-  if (error) {
-    // Extra columns may not exist — fallback to minimal select
-    let fallback = getSupabase()
-      .from("creator_verifications")
-      .select("phone, nickname, avatar, bio, status, submitted_at")
-      .eq("status", "approved")
-      .order("submitted_at", { ascending: false });
-
-    if (id) fallback = fallback.eq("phone", id);
-
-    const { data: d2 } = await fallback;
-    return NextResponse.json(d2 ?? []);
-  }
-
-  return NextResponse.json(data ?? []);
+  if (error) return NextResponse.json([]);
+  return NextResponse.json((data ?? []).map((r) => publicCreatorDto(r)));
 }
+

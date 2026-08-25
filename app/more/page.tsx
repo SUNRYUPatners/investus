@@ -9,7 +9,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { ProfileEditModal } from "@/components/ProfileEditModal";
 import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { ProPricingSection } from "@/components/PaidProductsSection";
-import { useForm, ValidationError } from "@formspree/react";
 import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { ThemeSettingsCard } from "@/components/ThemeSettingsCard";
 
@@ -46,9 +45,11 @@ const CATEGORY_EMOJIS = ["🐛", "💡", "🌟", "💬"];
 function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: string; nickname: string } | null }) {
   const t = useLocale();
   const fb = t.more.feedback;
-  const [state, handleSubmit] = useForm("xgodqoey");
   const [category, setCategory] = useState("feature");
   const [message,  setMessage]  = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [succeeded, setSucceeded] = useState(false);
+  const [error, setError] = useState("");
 
   const CATEGORIES = [
     { key: "bug",     label: fb.bug,     emoji: CATEGORY_EMOJIS[0] },
@@ -58,30 +59,28 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
   ];
 
   const categoryLabel = CATEGORIES.find((c) => c.key === category)?.label ?? category;
-  const canSend = message.trim().length >= 5 && !state.submitting;
+  const canSend = message.trim().length >= 5 && !submitting;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.6)" }}
-      onClick={() => !state.submitting && onClose()}>
+      onClick={() => !submitting && onClose()}>
       <div
         className="w-full max-w-[480px] rounded-3xl max-h-[90vh] overflow-y-auto"
         style={{ background: "var(--card)" }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
         <div className="flex items-center justify-between px-5 pt-5 mb-5">
           <div className="flex items-center gap-2">
             <span className="text-xl">💌</span>
             <h2 className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>{fb.title}</h2>
           </div>
-          <button onClick={onClose} disabled={state.submitting}>
+          <button onClick={onClose} disabled={submitting}>
             <X className="w-5 h-5" style={{ color: "var(--muted)" }} />
           </button>
         </div>
 
         <div className="px-5 pb-6">
-          {state.succeeded ? (
-            /* Success */
+          {succeeded ? (
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="w-14 h-14 rounded-full flex items-center justify-center"
                 style={{ background: "rgba(var(--mint-rgb),0.15)" }}>
@@ -98,24 +97,35 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
               </button>
             </div>
           ) : (
-            /* Form */
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                handleSubmit({
-                  category: categoryLabel,
-                  message: message.trim(),
-                  sender: user
-                    ? `${user.nickname} (${user.email})`
-                    : "익명",
-                  _subject: `[Investus 피드백] ${categoryLabel}`,
-                });
+                if (!canSend) return;
+                setSubmitting(true);
+                setError("");
+                try {
+                  const res = await fetch("/api/feedback", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      category: categoryLabel,
+                      message: message.trim(),
+                      sender: user ? `${user.nickname} (${user.email})` : "익명",
+                    }),
+                  });
+                  if (!res.ok) {
+                    const j = await res.json().catch(() => ({}));
+                    setError(typeof j.error === "string" ? j.error : "전송에 실패했습니다.");
+                    return;
+                  }
+                  setSucceeded(true);
+                } catch {
+                  setError("네트워크 오류입니다.");
+                } finally {
+                  setSubmitting(false);
+                }
               }}
             >
-              {/* Hidden fields passed via handleSubmit, but Formspree also reads input names */}
-              <input type="hidden" name="_subject" value={`[Investus 피드백] ${categoryLabel}`} />
-
-              {/* Category */}
               <p className="text-[10px] font-semibold mb-2" style={{ color: "var(--muted)" }}>{fb.typeLabel}</p>
               <div className="grid grid-cols-4 gap-2 mb-4">
                 {CATEGORIES.map((c) => (
@@ -133,7 +143,6 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
                 ))}
               </div>
 
-              {/* Message */}
               <p className="text-[10px] font-semibold mb-1.5" style={{ color: "var(--muted)" }}>{fb.msgLabel}</p>
               <textarea
                 name="message"
@@ -145,8 +154,6 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
                 className="w-full px-4 py-3 rounded-xl border text-sm outline-none resize-none mb-1"
                 style={{ background: "var(--bg)", borderColor: "var(--border)", color: "var(--text)", fontSize: "16px" }}
               />
-              <ValidationError field="message" prefix="내용" errors={state.errors}
-                className="text-xs mb-2" style={{ color: "#ef4444" }} />
               <div className="flex justify-between mb-4">
                 <span className="text-[10px]" style={{ color: "var(--muted)" }}>{fb.minChars}</span>
                 <span className="text-[10px] font-mono-num" style={{ color: "var(--muted)" }}>
@@ -154,9 +161,9 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
                 </span>
               </div>
 
-              {/* Generic form error */}
-              <ValidationError errors={state.errors}
-                className="text-xs mb-3 text-center block" style={{ color: "#ef4444" }} />
+              {error && (
+                <p className="text-xs mb-3 text-center" style={{ color: "#ef4444" }}>{error}</p>
+              )}
 
               <button
                 type="submit"
@@ -164,7 +171,7 @@ function FeedbackModal({ onClose, user }: { onClose: () => void; user: { email: 
                 className="w-full py-3 rounded-xl text-sm font-bold text-black flex items-center justify-center gap-2 transition-opacity active:opacity-80 disabled:opacity-40"
                 style={{ background: "var(--mint)" }}
               >
-                {state.submitting
+                {submitting
                   ? <><span className="animate-spin inline-block">⏳</span> {fb.sending}</>
                   : <><Send className="w-4 h-4" />{fb.send}</>
                 }

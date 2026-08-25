@@ -65,7 +65,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
         if (Array.isArray(data) && data.length > 0) {
           const d = data[0];
           const mapped: Creator = {
-            id: d.phone ?? id,
+            id: d.id ?? id,
             nickname:      d.nickname ?? id,
             avatar:        d.avatar ?? "🦁",
             coverGradient: "linear-gradient(135deg,#0d0d0d,#1a1a2e)",

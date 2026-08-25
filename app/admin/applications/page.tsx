@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { createClient } from "@supabase/supabase-js";
 
 // Token entered at runtime — not bundled
 
@@ -28,33 +27,30 @@ export default function ApplicationsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState("");
 
+  const [token, setToken]     = useState("");
+
   const login = async () => {
-    // Validate token against the API — never check it client-side
     const res = await fetch("/api/admin/verifications", {
       headers: { Authorization: `Bearer ${pw}` },
     });
-    if (res.ok) { setAuthed(true); setPwError(false); }
+    if (res.ok) { setToken(pw); setAuthed(true); setPwError(false); }
     else { setPwError(true); }
   };
 
   useEffect(() => {
-    if (!authed) return;
-    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-    if (!url || !key) { setError("Supabase 환경변수 없음"); setLoading(false); return; }
-
+    if (!authed || !token) return;
     setLoading(true);
-    const supabase = createClient(url, key);
-    supabase
-      .from("edu_applications")
-      .select("*")
-      .order("created_at", { ascending: false })
-      .then(({ data, error: e }) => {
-        if (e) setError(e.message);
-        else   setRows(data ?? []);
-        setLoading(false);
-      });
-  }, [authed]);
+    fetch("/api/admin/edu-applications", {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then(async (res) => {
+        if (!res.ok) throw new Error("조회 실패");
+        return res.json();
+      })
+      .then((data) => setRows(Array.isArray(data) ? data : []))
+      .catch((e) => setError(e instanceof Error ? e.message : "조회 실패"))
+      .finally(() => setLoading(false));
+  }, [authed, token]);
 
   if (!authed) {
     return (

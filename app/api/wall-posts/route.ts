@@ -1,15 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabase, getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
+import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
+import { makeAnonNick } from "@/lib/wallNick";
 
 export const dynamic = "force-dynamic";
-
-function makeAnonNick(email: string): string {
-  let hash = 0;
-  for (let i = 0; i < email.length; i++) {
-    hash = (hash * 31 + email.charCodeAt(i)) & 0x7fffffff;
-  }
-  return `익명_${String(hash % 10000).padStart(4, "0")}`;
-}
 
 // Block content that resembles financial fraud / external links
 const BANNED_PATTERNS = [
@@ -28,7 +21,7 @@ export async function GET(req: NextRequest) {
   if (!symbol) return NextResponse.json([]);
 
   const [{ data, error }, authUser] = await Promise.all([
-    getSupabase()
+    getAdminSupabase()
       .from("wall_posts")
       .select("id, symbol, user_id, nickname, holding_label, content, likes, comments, created_at")
       .eq("symbol", symbol)
@@ -72,7 +65,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "게시할 수 없는 내용이 포함되어 있습니다." }, { status: 400 });
   }
 
-  const { data, error } = await getSupabase()
+  const { data, error } = await getAdminSupabase()
     .from("wall_posts")
     .insert({
       symbol:        symbol.toUpperCase(),
@@ -112,7 +105,7 @@ export async function PATCH(req: NextRequest) {
   if (isContentBanned(trimmed)) return NextResponse.json({ error: "게시할 수 없는 내용이 포함되어 있습니다." }, { status: 400 });
 
   // Verify ownership
-  const { data: post } = await getSupabase()
+  const { data: post } = await getAdminSupabase()
     .from("wall_posts")
     .select("user_id")
     .eq("id", id)
@@ -143,7 +136,7 @@ export async function DELETE(req: NextRequest) {
   if (!id) return NextResponse.json({ error: "필수 항목 누락" }, { status: 400 });
 
   // Verify ownership before deleting
-  const { data: post } = await getSupabase()
+  const { data: post } = await getAdminSupabase()
     .from("wall_posts")
     .select("user_id")
     .eq("id", id)

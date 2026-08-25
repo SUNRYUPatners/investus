@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabase, getUserFromRequest } from "@/lib/supabase";
+import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -84,7 +84,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Use server-verified email from JWT — not from client body
-  const { error } = await getSupabase()
+  const { error } = await getAdminSupabase()
     .from("creator_verifications")
     .upsert(
       {

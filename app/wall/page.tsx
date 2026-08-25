@@ -1006,7 +1006,7 @@ export default function WallPage() {
     .sort((a, b) => b.createdAt - a.createdAt);
 
   const mappedCreators: import("@/lib/creators").Creator[] = apiCreators.map((d) => ({
-    id: d.phone ?? d.id,   // phone = email = lookup key for /creator/[id]
+    id: d.id,
     nickname: d.nickname,
     avatar: d.avatar,
     coverGradient: "linear-gradient(135deg,#0d0d0d,#1a1a2e)",

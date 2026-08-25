@@ -1,10 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-);
+import { getAdminSupabase } from "@/lib/supabase";
 
 export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => null);
@@ -12,7 +7,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "missing endpoint" }, { status: 400 });
   }
 
-  const { error } = await supabase
+  const { error } = await getAdminSupabase()
     .from("push_subscriptions")
     .delete()
     .eq("endpoint", body.endpoint);

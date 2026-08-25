@@ -85,10 +85,12 @@ export default function BuyPage() {
       try {
         await fetch("/api/book-order", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+          },
           body: JSON.stringify({
             name: buyerName,
-            email: buyerEmail,
             paid: true,
             paymentId,
           }),

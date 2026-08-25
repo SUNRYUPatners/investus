@@ -1,23 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabase, getUserFromRequest } from "@/lib/supabase";
+import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
+import { makeAnonNick } from "@/lib/wallNick";
 
 export const dynamic = "force-dynamic";
 
-function makeAnonNick(email: string): string {
-  let hash = 0;
-  for (let i = 0; i < email.length; i++) {
-    hash = (hash * 31 + email.charCodeAt(i)) & 0x7fffffff;
-  }
-  return `익명_${String(hash % 10000).padStart(4, "0")}`;
-}
-
-// GET /api/wall-comments?post_id=123
 export async function GET(req: NextRequest) {
   const postId = req.nextUrl.searchParams.get("post_id");
   if (!postId) return NextResponse.json([]);
 
   const [{ data, error }, authUser] = await Promise.all([
-    getSupabase()
+    getAdminSupabase()
       .from("wall_comments")
       .select("id, post_id, user_id, nickname, content, likes, created_at, parent_id")
       .eq("post_id", postId)
@@ -28,7 +20,6 @@ export async function GET(req: NextRequest) {
 
   if (error) return NextResponse.json([]);
 
-  // Strip user_id (email) — never expose to client.
   const safe = (data ?? []).map(({ user_id, ...rest }) => ({
     ...rest,
     is_mine: !!authUser && user_id === authUser.email,
@@ -36,7 +27,6 @@ export async function GET(req: NextRequest) {
   return NextResponse.json(safe);
 }
 
-// POST /api/wall-comments  — requires JWT
 export async function POST(req: NextRequest) {
   const authUser = await getUserFromRequest(req);
   if (!authUser) {
@@ -56,7 +46,8 @@ export async function POST(req: NextRequest) {
   if (trimmed.length < 1)   return NextResponse.json({ error: "내용을 입력해주세요." }, { status: 400 });
   if (trimmed.length > 200) return NextResponse.json({ error: "200자 이내로 작성해주세요." }, { status: 400 });
 
-  const { data, error } = await getSupabase()
+  const db = getAdminSupabase();
+  const { data, error } = await db
     .from("wall_comments")
     .insert({ post_id, user_id: authUser.email, nickname: makeAnonNick(authUser.email), content: trimmed, parent_id: parent_id ?? null })
     .select("id, post_id, nickname, content, likes, created_at, parent_id")
@@ -64,14 +55,13 @@ export async function POST(req: NextRequest) {
 
   if (error) return NextResponse.json({ error: "댓글 게시 실패" }, { status: 500 });
 
-  // Increment comment count on the parent post
-  const { data: parentPost } = await getSupabase()
+  const { data: parentPost } = await db
     .from("wall_posts")
     .select("comments")
     .eq("id", post_id)
     .single();
   if (parentPost) {
-    await getSupabase()
+    await db
       .from("wall_posts")
       .update({ comments: parentPost.comments + 1 })
       .eq("id", post_id);
@@ -80,7 +70,6 @@ export async function POST(req: NextRequest) {
   return NextResponse.json({ ...data, post_id, is_mine: true }, { status: 201 });
 }
 
-// DELETE /api/wall-comments?id=123  — requires JWT (owner only)
 export async function DELETE(req: NextRequest) {
   const authUser = await getUserFromRequest(req);
   if (!authUser) {
@@ -90,7 +79,8 @@ export async function DELETE(req: NextRequest) {
   const id = req.nextUrl.searchParams.get("id");
   if (!id) return NextResponse.json({ error: "필수 항목 누락" }, { status: 400 });
 
-  const { data: comment } = await getSupabase()
+  const db = getAdminSupabase();
+  const { data: comment } = await db
     .from("wall_comments")
     .select("user_id, post_id")
     .eq("id", id)
@@ -100,17 +90,16 @@ export async function DELETE(req: NextRequest) {
     return NextResponse.json({ error: "권한 없음" }, { status: 403 });
   }
 
-  const { error } = await getSupabase().from("wall_comments").delete().eq("id", id);
+  const { error } = await db.from("wall_comments").delete().eq("id", id);
   if (error) return NextResponse.json({ error: "삭제 실패" }, { status: 500 });
 
-  // Decrement comment count
-  const { data: parentPost } = await getSupabase()
+  const { data: parentPost } = await db
     .from("wall_posts")
     .select("comments")
     .eq("id", comment.post_id)
     .single();
   if (parentPost && parentPost.comments > 0) {
-    await getSupabase()
+    await db
       .from("wall_posts")
       .update({ comments: parentPost.comments - 1 })
       .eq("id", comment.post_id);

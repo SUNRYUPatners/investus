@@ -48,7 +48,6 @@ const CSP = [
     "https://stooq.com",
     "https://fred.stlouisfed.org",
     "https://production.dataviz.cnn.io",
-    "https://formspree.io",
     "https://*.supabase.co",
     "https://accounts.google.com",
     "https://kauth.kakao.com",

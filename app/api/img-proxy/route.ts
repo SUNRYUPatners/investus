@@ -1,22 +1,47 @@
+import { lookup } from "node:dns/promises";
+import { isIP } from "node:net";
 import { NextRequest, NextResponse } from "next/server";
 
-// Block private/loopback ranges to prevent SSRF
-function isPrivateUrl(raw: string): boolean {
+export const runtime = "nodejs";
+
+function isPrivateIp(ip: string): boolean {
+  const v = ip.toLowerCase();
+  if (v === "::1" || v.startsWith("fc") || v.startsWith("fd") || v.startsWith("fe80:")) return true;
+  const mapped = v.startsWith("::ffff:") ? v.slice(7) : v;
+  const m = mapped.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/);
+  if (!m) return /^(localhost)$/i.test(ip);
+  const a = Number(m[1]), b = Number(m[2]);
+  if (a === 10 || a === 127 || a === 0) return true;
+  if (a === 169 && b === 254) return true;
+  if (a === 192 && b === 168) return true;
+  if (a === 172 && b >= 16 && b <= 31) return true;
+  return false;
+}
+
+function isBlockedHost(hostname: string): boolean {
+  const h = hostname.toLowerCase();
+  if (h === "localhost" || h === "metadata.google.internal" || h.endsWith(".internal")) return true;
+  if (isIP(h) && isPrivateIp(h)) return true;
+  if (/^(127\.|10\.|192\.168\.|169\.254\.|172\.(1[6-9]|2\d|3[01])\.)/.test(h)) return true;
+  return false;
+}
+
+async function assertPublicHttps(raw: string): Promise<boolean> {
   try {
-    const { protocol, hostname } = new URL(raw);
-    if (protocol !== "https:") return true;
-    // Block loopback, private, metadata endpoints
-    if (/^(localhost|127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|169\.254\.|::1|fd[0-9a-f]{2}:|fc)/i.test(hostname)) return true;
-    if (hostname === "metadata.google.internal") return true;
-    return false;
-  } catch {
+    const u = new URL(raw);
+    if (u.protocol !== "https:") return false;
+    if (isBlockedHost(u.hostname)) return false;
+    const { address } = await lookup(u.hostname, { all: false });
+    if (isPrivateIp(address)) return false;
     return true;
+  } catch {
+    return false;
   }
 }
 
 export async function GET(req: NextRequest) {
   const url = req.nextUrl.searchParams.get("url") ?? "";
-  if (!url || isPrivateUrl(url)) {
+  if (!url || !(await assertPublicHttps(url))) {
     return new NextResponse(null, { status: 400 });
   }
 
@@ -30,7 +55,6 @@ export async function GET(req: NextRequest) {
       redirect: "manual",
       signal: AbortSignal.timeout(6000),
     });
-    // Do not follow redirects — redirect target could be private (SSRF)
     if (res.status >= 300 && res.status < 400) {
       return new NextResponse(null, { status: 400 });
     }

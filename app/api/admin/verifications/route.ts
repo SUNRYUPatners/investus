@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabase } from "@/lib/supabase";
+import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
+import { notifyAdminEmail, notifyOneUserEmail } from "@/lib/adminNotify";
+import { escapeHtml } from "@/lib/htmlEscape";
 
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || null; // null when unset — never matches empty string
 
@@ -32,7 +34,7 @@ export async function GET(req: NextRequest) {
 
   // Admin: list all verifications
   if (ADMIN_TOKEN && token === ADMIN_TOKEN) {
-    const { data, error } = await getSupabase()
+    const { data, error } = await getAdminSupabase()
       .from("creator_verifications")
       .select("*")
       .order("submitted_at", { ascending: false });
@@ -46,7 +48,7 @@ export async function GET(req: NextRequest) {
     const authHeader = req.headers.get("authorization");
     const jwtToken = authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : null;
     if (jwtToken) {
-      const { data: { user } } = await getSupabase().auth.getUser(jwtToken);
+      const user = await getUserFromRequest(req);
       if (!user || user.email !== phone) {
         return NextResponse.json({ status: null });
       }
@@ -55,7 +57,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ status: null });
     }
 
-    const { data } = await getSupabase()
+    const { data } = await getAdminSupabase()
       .from("creator_verifications")
       .select("status")
       .eq("phone", phone)
@@ -72,21 +74,22 @@ export async function GET(req: NextRequest) {
 
 // POST /api/admin/verifications — submit verification request
 export async function POST(req: NextRequest) {
+  const authUser = await getUserFromRequest(req);
+  if (!authUser) return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
+
   let body: Record<string, unknown>;
   try { body = await req.json(); }
   catch { return NextResponse.json({ error: "잘못된 요청" }, { status: 400 }); }
 
   const {
-    phone, nickname, avatar, bio,
+    nickname, avatar, bio,
     tags, annual_return, portfolio_scale, top_holdings,
   } = body as Record<string, unknown>;
 
-  const phoneStr    = String(phone ?? "");
+  const phoneStr    = authUser.email;
   const nicknameStr = String(nickname ?? "");
   const bioStr      = String(bio ?? "");
   const avatarStr   = String(avatar ?? "");
-
-  if (!phoneStr) return NextResponse.json({ error: "phone required" }, { status: 400 });
   // Size guards — prevent oversized payloads
   if (phoneStr.length > 100 || nicknameStr.length > 50
       || bioStr.length > 500 || avatarStr.length > 2000) {
@@ -108,28 +111,24 @@ export async function POST(req: NextRequest) {
   };
 
   // Upsert (re-submission resets)
-  let { error } = await getSupabase()
+  let { error } = await getAdminSupabase()
     .from("creator_verifications")
     .upsert(upsertData, { onConflict: "phone" });
 
-  // Fallback: optional columns may not exist yet — retry with base fields only
   if (error) {
     const baseData = { phone: phoneStr, nickname: nicknameStr, avatar: avatarStr, bio: bioStr, status, submitted_at: now };
-    ({ error } = await getSupabase().from("creator_verifications").upsert(baseData, { onConflict: "phone" }));
+    ({ error } = await getAdminSupabase().from("creator_verifications").upsert(baseData, { onConflict: "phone" }));
   }
 
   if (error) return NextResponse.json({ error: "저장 실패" }, { status: 500 });
 
   // Email notification to admin
   try {
-    await fetch("https://formspree.io/f/xgodqoey", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        _subject: `[Investus] 크리에이터 인증 신청 — ${nicknameStr}`,
-        message: `새 크리에이터 인증 신청\n\n닉네임: ${nicknameStr}\n이메일: ${phoneStr}\n자기소개: ${bioStr}\n상태: 검토 대기 (관리자 승인 필요)\n\n승인 페이지: https://investus.kr/admin/creators`,
-      }),
-    });
+    await notifyAdminEmail(
+      `[Investus] 크리에이터 인증 신청 — ${nicknameStr.slice(0, 40)}`,
+      `<p>닉네임: ${escapeHtml(nicknameStr)}</p><p>상태: 검토 대기</p>`,
+      `새 크리에이터 인증 신청\n닉네임: ${nicknameStr}\n상태: 검토 대기`,
+    );
   } catch {}
 
   return NextResponse.json({ status: "pending" });
@@ -150,7 +149,7 @@ export async function PATCH(req: NextRequest) {
   }
   const status = action === "approve" ? "approved" : "rejected";
 
-  const { error } = await getSupabase()
+  const { error } = await getAdminSupabase()
     .from("creator_verifications")
     .update({ status, reviewed_at: new Date().toISOString() })
     .eq("phone", phone);
@@ -161,19 +160,15 @@ export async function PATCH(req: NextRequest) {
   if (phone.includes("@")) {
     try {
       const isApproved = action === "approve";
-      await fetch("https://formspree.io/f/xgodqoey", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          _replyto: phone,
-          _subject: isApproved
-            ? "[Investus] 크리에이터 인증이 승인되었습니다 🎉"
-            : "[Investus] 크리에이터 인증 심사 결과 안내",
-          message: isApproved
-            ? `안녕하세요!\n\nInvestus 크리에이터 인증이 승인되었습니다.\n이제 투자 리포트와 콘텐츠를 작성하고 구독자를 모집할 수 있습니다.\n\nInvestus 앱에서 크리에이터 대시보드를 확인해 주세요.\nhttps://investus.kr`
-            : `안녕하세요.\n\nInvestus 크리에이터 인증 심사 결과, 이번에는 승인이 어렵습니다.\n계좌 인증 캡처가 불명확하거나 요건을 충족하지 못한 경우 재신청이 가능합니다.\n\n문의: sunryupatners@gmail.com`,
-        }),
-      });
+      await notifyOneUserEmail(
+        phone,
+        isApproved
+          ? "[Investus] 크리에이터 인증이 승인되었습니다"
+          : "[Investus] 크리에이터 인증 심사 결과 안내",
+        isApproved
+          ? `안녕하세요.\n\nInvestus 크리에이터 인증이 승인되었습니다.\nhttps://www.investus.kr/creator/dashboard`
+          : `안녕하세요.\n\n이번에는 승인이 어렵습니다. 재신청이 가능합니다.\n문의: sunryupatners@gmail.com`,
+      );
     } catch { /* 알림 실패는 무시 */ }
   }
 

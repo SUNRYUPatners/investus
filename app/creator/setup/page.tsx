@@ -312,11 +312,14 @@ export default function CreatorSetupPage() {
       value:      h.value,
     }));
 
+    const { data: { session } } = await getSupabase().auth.getSession();
     await fetch("/api/admin/verifications", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+      },
       body: JSON.stringify({
-        phone:           user.email,
         nickname:        draft.nickname,
         avatar:          draft.avatar,
         bio:             draft.bio,

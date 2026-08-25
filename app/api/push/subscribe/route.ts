@@ -1,12 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+import { getAdminSupabase } from "@/lib/supabase";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-);
-
-// 간단한 IP rate limit: 분당 5회 (스팸 구독 방지)
 const ipLog = new Map<string, { count: number; resetAt: number }>();
 
 function checkRateLimit(ip: string): boolean {
@@ -32,12 +26,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "invalid subscription" }, { status: 400 });
   }
 
-  // endpoint 길이 제한 (스팸 방지)
   if (String(body.endpoint).length > 500) {
     return NextResponse.json({ error: "invalid endpoint" }, { status: 400 });
   }
 
-  const { error } = await supabase
+  const { error } = await getAdminSupabase()
     .from("push_subscriptions")
     .upsert(
       {

@@ -7,6 +7,7 @@
  */
 import { NextRequest, NextResponse } from "next/server";
 import { getUserFromRequest, getAdminSupabase } from "@/lib/supabase";
+import { emailForCreatorId } from "@/lib/creatorPublicId";
 import { chargeWithBillingKey, makePaymentId, nextBillingDate } from "@/lib/portone";
 import { planPriceKrw, type SubPeriod } from "@/lib/subscription";
 
@@ -14,7 +15,7 @@ type Body = {
   billingKey: string;
   planKind: "pro" | "creator";
   planPeriod?: SubPeriod; // pro only — month | year
-  planRef?: string;       // creator subscription 시 creator id (phone)
+  planRef?: string;       // creator public id (or legacy email)
   customerName?: string;
   payMethod?: string;
 };
@@ -42,10 +43,14 @@ export async function POST(req: NextRequest) {
   } else {
     // creator — never trust client priceKrw; load registered price from DB
     const sbPrice = getAdminSupabase();
+    const creatorEmail = await emailForCreatorId(planRef!);
+    if (!creatorEmail) {
+      return NextResponse.json({ error: "크리에이터를 찾을 수 없음" }, { status: 400 });
+    }
     const { data: creatorRow } = await sbPrice
       .from("creator_verifications")
       .select("subscription_price, subscription_enabled, status")
-      .eq("phone", planRef!)
+      .eq("phone", creatorEmail)
       .maybeSingle();
     const registered = Number(creatorRow?.subscription_price ?? 0);
     if (
@@ -66,7 +71,7 @@ export async function POST(req: NextRequest) {
   const paymentId = makePaymentId(planKind === "pro" ? "PRO" : "CRT", user.id);
   const orderName = planKind === "pro"
     ? `Investus Pro ${planPeriod === "year" ? "연간" : "월간"} 구독`
-    : `Investus 크리에이터 구독 (${planRef})`;
+    : "Investus 크리에이터 구독";
 
   try {
     await chargeWithBillingKey({
