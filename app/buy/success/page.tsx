@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle, Download, Loader2, XCircle } from "lucide-react";
 import Link from "next/link";
-import { Suspense } from "react";
+import { getSupabase } from "@/lib/supabase";
 
 const BOOK_FILE = "/ebook/book.pdf";
 const BOOK_NAME = "절대로 잃지 말고 미래에 투자하라";
@@ -25,17 +25,24 @@ function SuccessContent() {
       return;
     }
 
-    fetch("/api/confirm-payment", {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      body:    JSON.stringify({ paymentKey, orderId, amount }),
-    })
+    void (async () => {
+      const { data: { session } } = await getSupabase().auth.getSession();
+      const headers: HeadersInit = {
+        "Content-Type": "application/json",
+        ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+      };
+      fetch("/api/confirm-payment", {
+        method:  "POST",
+        headers,
+        body:    JSON.stringify({ paymentKey, orderId, amount }),
+      })
       .then((r) => r.json())
       .then((d) => {
         if (d.ok) setStatus("ok");
         else { setErrMsg(d.message ?? "결제 확인에 실패했습니다."); setStatus("error"); }
       })
       .catch(() => { setErrMsg("서버 오류가 발생했습니다."); setStatus("error"); });
+    })();
   }, [paymentKey, orderId, amount]);
 
   if (status === "loading") {

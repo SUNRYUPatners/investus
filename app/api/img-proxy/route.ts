@@ -65,6 +65,7 @@ export async function GET(req: NextRequest) {
     if (!ct.startsWith("image/")) return new NextResponse(null, { status: 415 });
 
     const body = await res.arrayBuffer();
+    if (body.byteLength > 2_000_000) return new NextResponse(null, { status: 413 });
     return new NextResponse(body, {
       headers: {
         "Content-Type":  ct,

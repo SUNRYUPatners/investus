@@ -19,6 +19,9 @@ export async function POST(req: NextRequest) {
   if (!cardBase64 || !idBase64) {
     return NextResponse.json({ error: "명함과 신분증 이미지가 필요합니다." }, { status: 400 });
   }
+  if (cardBase64.length > 4_000_000 || idBase64.length > 4_000_000) {
+    return NextResponse.json({ error: "파일 크기가 너무 큽니다." }, { status: 413 });
+  }
 
   // Compute one-way hash — raw user.id is NEVER stored in the DB
   const { userHash, alias } = anonymize(user.id);

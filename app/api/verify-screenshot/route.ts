@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
+import { getUserFromRequest } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -81,26 +81,6 @@ export async function POST(req: NextRequest) {
       approved: false,
       message: "증권사 계좌 화면이 아닌 것 같습니다. 계좌 잔고나 보유 종목 화면을 캡처해주세요.",
     });
-  }
-
-  // Use server-verified email from JWT — not from client body
-  const { error } = await getAdminSupabase()
-    .from("creator_verifications")
-    .upsert(
-      {
-        phone:        authUser.email,
-        nickname:     authUser.email.split("@")[0],
-        avatar:       "",
-        bio:          "스크린샷 자동 인증",
-        status:       "approved",
-        submitted_at: new Date().toISOString(),
-        reviewed_at:  new Date().toISOString(),
-      },
-      { onConflict: "phone" }
-    );
-
-  if (error) {
-    return NextResponse.json({ error: "승인 처리 중 오류가 발생했습니다." }, { status: 500 });
   }
 
   return NextResponse.json({ approved: true });

@@ -29,6 +29,21 @@ export async function POST(req: NextRequest) {
   if (String(body.endpoint).length > 500) {
     return NextResponse.json({ error: "invalid endpoint" }, { status: 400 });
   }
+  try {
+    const u = new URL(String(body.endpoint));
+    if (u.protocol !== "https:") return NextResponse.json({ error: "invalid endpoint" }, { status: 400 });
+    const h = u.hostname.toLowerCase();
+    const ok =
+      h.endsWith(".fcm.googleapis.com") ||
+      h === "fcm.googleapis.com" ||
+      h.endsWith(".googleapis.com") && h.includes("fcm") ||
+      h.endsWith("push.services.mozilla.com") ||
+      h.endsWith(".push.apple.com") ||
+      h.endsWith("notify.windows.com");
+    if (!ok) return NextResponse.json({ error: "invalid endpoint" }, { status: 400 });
+  } catch {
+    return NextResponse.json({ error: "invalid endpoint" }, { status: 400 });
+  }
 
   const { error } = await getAdminSupabase()
     .from("push_subscriptions")

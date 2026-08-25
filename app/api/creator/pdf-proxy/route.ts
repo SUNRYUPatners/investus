@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
+import { storagePathFromPublic } from "@/lib/creatorPublicId";
 
 export const dynamic = "force-dynamic";
 
@@ -11,14 +12,16 @@ export async function GET(req: NextRequest) {
   if (!authUser) return new Response("Unauthorized", { status: 401 });
 
   const path = new URL(req.url).searchParams.get("path");
-  if (!path) return new Response("No path", { status: 400 });
+  if (!path || path.includes("..")) return new Response("No path", { status: 400 });
 
-  if (!path.startsWith(authUser.email + "/")) {
+  const email = authUser.email;
+  const realPath = storagePathFromPublic(path, email);
+  if (!realPath.startsWith(email + "/")) {
     return new Response("Forbidden", { status: 403 });
   }
 
   const supabase = getAdminSupabase();
-  const { data, error } = await supabase.storage.from(BUCKET).download(path);
+  const { data, error } = await supabase.storage.from(BUCKET).download(realPath);
 
   if (error || !data) {
     console.error("[pdf-proxy] download error:", error?.message, "path:", path);

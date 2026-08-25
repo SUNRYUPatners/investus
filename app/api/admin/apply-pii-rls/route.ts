@@ -5,7 +5,11 @@ export const dynamic = "force-dynamic";
 async function probeAnon(): Promise<Record<string, { status: number; rows: number }>> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const anon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-  const tables = ["edu_applications", "creator_verifications", "wall_posts", "wall_comments", "push_subscriptions"] as const;
+  const tables = [
+    "edu_applications", "creator_verifications", "push_subscriptions",
+    "wall_posts", "wall_comments",
+    "analyst_posts", "analyst_post_comments", "analyst_post_likes", "analyst_verifications",
+  ] as const;
   const result: Record<string, { status: number; rows: number }> = {};
   for (const t of tables) {
     const res = await fetch(`${url}/rest/v1/${t}?select=*&limit=1`, {
@@ -30,11 +34,11 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   if (!isAdmin(req)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const anonProbe = await probeAnon();
-  const leaked = Object.values(anonProbe).some((p) => p.status === 200 && p.rows !== 0);
+  const leaked = Object.values(anonProbe).some((p) => p.status === 200);
   return NextResponse.json({
     applied: false,
     anonProbe,
     leaked,
-    hint: "Supabase SQL Editor에서 supabase/migrations/20260825_lock_pii_rls.sql 을 실행하세요. DB 비밀번호는 이 저장소에 없습니다.",
+    hint: "SQL Editor에서 20260825_lock_pii_rls.sql 와 20260825_lock_analyst_rls.sql 을 실행하세요.",
   }, { status: leaked ? 503 : 200 });
 }

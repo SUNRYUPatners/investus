@@ -14,7 +14,9 @@ export async function POST(req: NextRequest) {
   catch { return NextResponse.json({ error: "잘못된 요청" }, { status: 400 }); }
 
   const { contentId } = body;
-  if (!contentId) return NextResponse.json({ error: "contentId 필요" }, { status: 400 });
+  if (!contentId || !/^[\w.-]{1,80}$/.test(contentId)) {
+    return NextResponse.json({ error: "contentId 필요" }, { status: 400 });
+  }
 
   const supabase = getAdminSupabase();
 

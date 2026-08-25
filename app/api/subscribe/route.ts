@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { getUserFromRequest } from "@/lib/supabase";
 import { SUBSCRIPTION, formatSubPrice } from "@/lib/subscription";
+import { escapeHtml } from "@/lib/htmlEscape";
 
 export async function POST(req: NextRequest) {
   let body: unknown;
@@ -36,9 +37,9 @@ export async function POST(req: NextRequest) {
           <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;background:#0a0c10;color:#e5e7eb;border-radius:12px">
             <h2 style="color:#00e5a0;margin-top:0">💎 Investus Pro 구독 신청</h2>
             <table style="width:100%;border-collapse:collapse;font-size:14px">
-              <tr><td style="padding:8px 0;color:#9ca3af;width:90px">입금자명</td><td style="padding:8px 0;font-weight:bold">${name.trim()}</td></tr>
-              <tr><td style="padding:8px 0;color:#9ca3af">이메일</td><td style="padding:8px 0">${email.trim()}</td></tr>
-              <tr><td style="padding:8px 0;color:#9ca3af">User ID</td><td style="padding:8px 0;font-size:12px">${userId ?? authUser.id}</td></tr>
+              <tr><td style="padding:8px 0;color:#9ca3af;width:90px">입금자명</td><td style="padding:8px 0;font-weight:bold">${escapeHtml(name.trim())}</td></tr>
+              <tr><td style="padding:8px 0;color:#9ca3af">이메일</td><td style="padding:8px 0">${escapeHtml(email.trim())}</td></tr>
+              <tr><td style="padding:8px 0;color:#9ca3af">User ID</td><td style="padding:8px 0;font-size:12px">${escapeHtml(userId ?? authUser.id)}</td></tr>
               <tr><td style="padding:8px 0;color:#9ca3af">금액</td><td style="padding:8px 0;color:#00e5a0;font-weight:bold">${formatSubPrice()}/${SUBSCRIPTION.periodLabel}</td></tr>
             </table>
             <p style="font-size:12px;color:#6b7280;margin-top:16px">
