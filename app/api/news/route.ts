@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getNews } from "@/lib/api";
 
-export const maxDuration = 15;
+export const maxDuration = 25;
 
 let _cache: { data: Awaited<ReturnType<typeof getNews>>; at: number } | null = null;
 const TTL = 10 * 60_000; // 10 min
