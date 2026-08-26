@@ -24,12 +24,12 @@
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🗼</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">12+</text>
   <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">발사대</text>
-  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">tower</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">발사 타워</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🚀</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">30+/일</text>
   <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">스타십</text>
-  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">cadence</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">하루 발사 빈도</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">⚖️</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">2M+ t</text>
@@ -39,7 +39,10 @@
   <text x="540" y="680" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">"루이지애나 스타베이스는 발사대 12개 이상, 하루 30척 이상을 목표합니다. Starship 4대는 연 200만 톤 이상</text>
   <text x="540" y="706" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">궤도 투입을 겨냥합니다. 숫자가 크므로 허가·자금·실제 비행률을 계획과 나눠 보세요."</text>
   <rect x="60" y="860" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">위성·화물 비용의 상류입니다. 목표 cadence와 실제 flight rate를 분리해 추적하세요.</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">루이지애나 스타베이스는 스타십 전용 고빈도 발사 기지입니다. 발사대 12개 이상·하루 30척 이상은 위성·화물</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">kg당 비용을 줄이겠다는 목표치입니다. 스타십 4대는 연 200만 톤 이상 궤도 투입을 겨냥합니다.</text>
+  <text x="540" y="956" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">허가·자금·실제 비행률을 계획 숫자와 분리해 추적하시면, 내러티브와 실적의 간격을 알 수 있습니다.</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · 루이지애나 cadence · 2026.08.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

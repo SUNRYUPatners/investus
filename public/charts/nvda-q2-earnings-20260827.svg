@@ -42,8 +42,10 @@
   <text x="540" y="732" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">보셔야 합니다."</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
   <text x="540" y="878" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">AI CAPEX 허브 실적입니다. 숫자는 강하지만 기대치가 더 높았을 수 있습니다. 3분기 가이던스와 데이터센터 믹스를 추적하시면</text>
-  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">됩니다.</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">매출 961억·주당순이익 2.22달러·데이터센터 890억·총마진 75%로 예상을 모두 넘겼습니다. 그런데 시간외 약 -2%는</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">‘beat’보다 더 높은 기대가 깔려 있었다는 뜻입니다. AI 설비투자 허브 실적이라 빅테크 캡엑스와 같이 봅니다.</text>
+  <text x="540" y="956" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">3분기 가이던스, 데이터센터 믹스, 베라 루빈 출하 코멘트를 다음 확인 포인트로 두시면 됩니다.</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">NVDA · 2분기 실적 · 2026.08.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

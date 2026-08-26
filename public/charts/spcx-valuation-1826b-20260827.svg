@@ -40,7 +40,10 @@
   <text x="540" y="680" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">"시가총액 1조 8,260억 달러, 1조 달러 이상 51일째입니다. 발행가 135달러, 최초 표기 150(-8%), 사상 최고</text>
   <text x="540" y="706" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">226, 거래대금 약 70억. 비상장 mark는 공개 시장과 다를 수 있으니 유동성과 발행가를 함께 보세요."</text>
   <rect x="60" y="860" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">우주·위성 내러티브의 밸류 anchor입니다. 상장 전까지 mark discount를 유지하시면 됩니다.</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">시가총액 1조 8,260억 달러로 1조 달러 이상을 51거래일 연속 유지했습니다. 발행가 135달러(+2%) 대비</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">최초 표기 150달러(-8%), 사상 최고 226달러(-70%)입니다. 거래대금 약 70억 달러로 유동성도 함께 봅니다.</text>
+  <text x="540" y="956" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">비상장 mark는 공개 시장과 다를 수 있습니다. 상장 전까지 할인·프리미엄 변동을 발행가와 함께 추적하세요.</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · $1.8T 밸류 · 2026.08.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

@@ -36,8 +36,10 @@
   <text x="870" y="646" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Chips</text>
   <text x="870" y="706" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Next-gen</text>
   <rect x="60" y="760" width="960" height="200" rx="14" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="800" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">Why this matters</text>
-  <text x="540" y="840" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Links Anthropic growth to NVDA supply. MW online is the gating item.</text>
+  <text x="540" y="788" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">Why this matters</text>
+  <text x="540" y="822" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Anthropic needs power, chips, and land as one package to scale Claude. The $45B / 460MW deal locks that</text>
+  <text x="540" y="846" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">scale in writing—not a GPU order alone but a 6-year infrastructure bundle. Vera Rubin pre-books next-gen</text>
+  <text x="540" y="870" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">NVIDIA supply. Watch MW online dates, Rubin allocation, and site groundbreaking in phases.</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">AI · Nscale $45B · 2026.08.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>

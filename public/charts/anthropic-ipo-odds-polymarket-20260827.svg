@@ -42,10 +42,12 @@
   <text x="870" y="662" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">2026</text>
   <text x="870" y="696" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">최대 IPO</text>
   <text x="870" y="756" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">확률 기준</text>
-  <rect x="60" y="810" width="960" height="150" rx="14" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="870" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">"2026년 가장 큰 IPO가 앤트로픽일 확률 63%, 스페이스X 37%로 거래됩니다. 확률은 확정이 아니라 시장</text>
-  <text x="540" y="898" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">기대입니다. 상장 일정·조달 규모·증권신고서가 나오면 숫자가 바뀔 수 있습니다."</text>
-  <rect x="60" y="970" width="960" height="0" fill="none"/>
+  <rect x="60" y="810" width="960" height="200" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="858" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">"2026년 가장 큰 IPO가 앤트로픽일 확률 63%, 스페이스X 37%로 거래됩니다. 7월 말 스페이스X 우세에서</text>
+  <text x="540" y="884" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">8월 앤트로픽 쪽으로 기울었습니다. 확률은 확정이 아니라 시장 기대입니다."</text>
+  <text x="540" y="918" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="948" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">AI 소프트웨어 상장과 우주·위성 상장 중 어느 쪽이 더 큰 밸류에이션을 받을지 상대 비교입니다.</text>
+  <text x="540" y="972" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">상장 일정·조달 규모·증권신고서가 나오면 숫자가 바뀔 수 있습니다.</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">AI · IPO 확률 · 2026.08.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

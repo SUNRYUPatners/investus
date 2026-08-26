@@ -38,12 +38,14 @@
   <rect x="720" y="570" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="618" font-family="Arial" font-size="36" text-anchor="middle">⚔️</text>
   <text x="870" y="662" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">경쟁</text>
-  <text x="870" y="696" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">EV pickup</text>
+  <text x="870" y="696" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전기 픽업</text>
   <text x="870" y="756" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Rivian·Ford</text>
-  <rect x="60" y="810" width="960" height="150" rx="14" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="870" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">"사이버트럭 가격이 5,000달러 올랐습니다. 원가·마진·수요를 동시에 조정하는 lever입니다. 인상 후에도 주문이</text>
-  <text x="540" y="898" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">유지되는지, 취소가 늘지는지가 다음 확인 포인트입니다."</text>
-  <rect x="60" y="970" width="960" height="0" fill="none"/>
+  <rect x="60" y="810" width="960" height="200" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="858" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">"사이버트럭 가격이 5,000달러 올랐습니다. 원가·마진·수요를 동시에 조정하는 수단입니다. 전기 픽업 시장에서</text>
+  <text x="540" y="884" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">경쟁이 치열할 때 인상은 수요 테스트이기도 합니다."</text>
+  <text x="540" y="918" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="948" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">인상 후에도 신규 주문이 유지되는지, 취소·재고가 늘지 않는지가 핵심입니다. 리비안·포드 등 경쟁 가격과</text>
+  <text x="540" y="972" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">함께 비교하시면 마진 개선인지 수요 둔화 신호인지 구분할 수 있습니다.</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Cybertruck +$5K · 2026.08.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

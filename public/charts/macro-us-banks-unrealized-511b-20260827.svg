@@ -39,7 +39,10 @@
   <text x="540" y="680" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">"미국 은행 미실현 손실이 5,117억 달러로 집계됐고, 2분기 연속 늘었습니다. 아직 팔지 않은 채권 평가</text>
   <text x="540" y="706" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">손실입니다. 금리와 채권 가격이 변수이며, AI·데이터센터 부채와 같은 화면의 금융 여력 이슈입니다."</text>
   <rect x="60" y="860" width="960" height="100" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">macro overlay입니다. 실현 손실과 예금 이탈을 분리해 보시고, 분기 은행 보고서를 확인하세요.</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">미실현 손실 5,117억 달러는 은행이 아직 팔지 않은 채권의 평가 손실입니다. 2분기 연속 늘었다는 점이</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">중요합니다. 금리가 높을수록 채권 가격이 내려가 평가손이 커질 수 있습니다.</text>
+  <text x="540" y="956" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">AI·데이터센터 부채 확대와 같은 화면의 ‘금융 여력’ 이슈입니다. 실현 손실·예금 이탈을 분리해 분기 보고서를 보세요.</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">MACRO · bank unrealized · 2026.08.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
