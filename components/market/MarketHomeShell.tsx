@@ -22,6 +22,7 @@ import { MarketBriefingCard } from "@/components/market/MarketBriefingCard";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
 import { PlatformIntro } from "@/components/PlatformIntro";
 import { MarketSwitcherDesktop } from "@/components/MarketSwitcherDesktop";
+import { ShopPreviewSection } from "@/components/ShopPreviewSection";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { Locale } from "@/lib/i18n";
@@ -140,6 +141,8 @@ export function MarketHomeShell({
             <section className="px-4 lg:px-0 pt-4 lg:pt-6">
               <ReportFeed market={market} />
             </section>
+
+            <ShopPreviewSection />
 
             <section className="px-4 pt-3 pb-2">
               <AdFitBanner />

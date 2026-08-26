@@ -32,6 +32,10 @@ export function SiteLegalFooter() {
           className="flex flex-wrap gap-x-3 gap-y-1.5 text-[12px] mb-5"
           aria-label="약관 및 정책"
         >
+          <Link href="/shop" className="hover:underline" style={{ color: "var(--text)" }}>
+            유료상품
+          </Link>
+          <span style={{ color: "var(--border)" }} aria-hidden>|</span>
           <Link href="/more/terms" className="hover:underline" style={{ color: "var(--text)" }}>
             이용약관
           </Link>
