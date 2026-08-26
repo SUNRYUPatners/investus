@@ -5,12 +5,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LogoMark } from "@/components/LogoMark";
 import { useLocale } from "@/contexts/LocaleContext";
-import { isMarketOpen } from "@/lib/marketHours";
-import { parsePreviewPath, previewHref } from "@/lib/markets/previewPath";
-import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
+import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { marketHref, parseMarketPath, type MarketTab } from "@/lib/markets/marketPath";
 
-function useClock() {
+function useClock(timezone: string, market: ReturnType<typeof parseMarketPath>["market"]) {
   const [time, setTime] = useState("");
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -20,53 +19,44 @@ function useClock() {
     const tick = () => {
       const now = new Date();
       const t = now.toLocaleTimeString("en-US", {
-        timeZone: "America/New_York",
+        timeZone: timezone,
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
         hour12: false,
       });
       setTime(t);
-      setOpen(isMarketOpen());
+      setOpen(isMarketSessionOpen(market));
     };
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, []);
+  }, [timezone, market]);
 
   return { time, open, mounted };
 }
 
 export function DesktopSidebar() {
   const t = useLocale();
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const router = useRouter();
-  const { time, open, mounted } = useClock();
-  const { market } = parsePreviewPath(pathname);
-  const inPreview = market != null;
+  const { market, tab } = parseMarketPath(pathname);
+  const cfg = getMarketConfig(market);
+  const { time, open, mounted } = useClock(cfg.timezone, market);
 
-  const NAV = inPreview
-    ? ([
-        { href: previewHref(market as MarketId, "home"), emoji: "📊", label: t.nav.home, tab: "home" as const },
-        { href: previewHref(market as MarketId, "search"), emoji: "🔍", label: t.nav.search, tab: "search" as const },
-        { href: previewHref(market as MarketId, "portfolio"), emoji: "💼", label: t.nav.portfolio, tab: "portfolio" as const },
-        { href: previewHref(market as MarketId, "wall"), emoji: "💬", label: t.nav.wall, tab: "wall" as const },
-        { href: previewHref(market as MarketId, "insight"), emoji: "💡", label: t.nav.insight, tab: "insight" as const },
-        { href: previewHref(market as MarketId, "more"), emoji: "···", label: t.nav.more, tab: "more" as const },
-      ])
-    : ([
-        { href: "/", emoji: "📊", label: t.nav.home, tab: "home" as const },
-        { href: "/search", emoji: "🔍", label: t.nav.search, tab: "search" as const },
-        { href: "/portfolio", emoji: "💼", label: t.nav.portfolio, tab: "portfolio" as const },
-        { href: "/wall", emoji: "💬", label: t.nav.wall, tab: "wall" as const },
-        { href: "/insight", emoji: "💡", label: t.nav.insight, tab: "insight" as const },
-        { href: "/more", emoji: "···", label: t.nav.more, tab: "more" as const },
-      ]);
+  const tabs: MarketTab[] = ["home", "search", "portfolio", "wall", "insight", "more"];
+  const NAV = tabs.map((tabKey) => ({
+    href: marketHref(market, tabKey),
+    emoji: tabKey === "home" ? "📊" : tabKey === "search" ? "🔍" : tabKey === "portfolio" ? "💼" : tabKey === "wall" ? "💬" : tabKey === "insight" ? "💡" : "···",
+    label: tabKey === "home" ? t.nav.home : tabKey === "search" ? t.nav.search : tabKey === "portfolio" ? t.nav.portfolio : tabKey === "wall" ? t.nav.wall : tabKey === "insight" ? t.nav.insight : t.nav.more,
+    tab: tabKey,
+  }));
 
-  const homeHref = inPreview ? previewHref(market as MarketId, "home") : "/";
-  const tagline = inPreview
-    ? `${getMarketConfig(market as MarketId).emoji} ${getMarketConfig(market as MarketId).labelKo} · 미리보기`
-    : t.more.tagline.split(" · ")[0];
+  const homeHref = marketHref(market, "home");
+  const tagline =
+    market === "us"
+      ? t.more.tagline
+      : `${cfg.emoji} ${cfg.labelKo}`;
 
   return (
     <aside
@@ -83,7 +73,7 @@ export function DesktopSidebar() {
             >
               Investus
             </div>
-            <div className="text-[11px] font-medium leading-none mt-0.5" style={{ color: "var(--muted)" }}>
+            <div className="text-[11px] font-medium leading-snug mt-0.5" style={{ color: "var(--muted)" }}>
               {tagline}
             </div>
           </div>
@@ -91,14 +81,8 @@ export function DesktopSidebar() {
       </div>
 
       <nav className="flex-1 px-3 py-4 overflow-y-auto">
-        {NAV.map(({ href, emoji, label, tab }) => {
-          const isActive = inPreview
-            ? tab === "home"
-              ? pathname === href || pathname === `/preview/${market}`
-              : pathname.startsWith(href)
-            : href === "/"
-              ? pathname === "/"
-              : pathname.startsWith(href);
+        {NAV.map(({ href, emoji, label, tab: tabKey }) => {
+          const isActive = tabKey === tab;
           return (
             <button
               key={href}
@@ -136,23 +120,25 @@ export function DesktopSidebar() {
                 {time}
               </span>
               <span className="text-[10px] font-semibold" style={{ color: "var(--muted)" }}>
-                EST
+                {cfg.clockLabel}
               </span>
             </div>
-            <div
-              className="w-full py-2 rounded-xl text-center text-[11px] font-bold"
-              style={
-                open
-                  ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
-                  : { background: "var(--muted-2)", color: "var(--muted)" }
-              }
-            >
-              {open ? t.header.marketOpen : t.header.marketClosed}
-            </div>
+            {market !== "safe" && (
+              <div
+                className="w-full py-2 rounded-xl text-center text-[11px] font-bold"
+                style={
+                  open
+                    ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
+                    : { background: "var(--muted-2)", color: "var(--muted)" }
+                }
+              >
+                {open ? t.header.marketOpen : t.header.marketClosed}
+              </div>
+            )}
           </>
         )}
-        <p className="text-[10px] text-center font-medium" style={{ color: "var(--muted)" }}>
-          investus.kr × SRP
+        <p className="text-[10px] text-center font-medium leading-relaxed" style={{ color: "var(--muted)" }}>
+          AI 기반 WM 핀테크
         </p>
       </div>
     </aside>

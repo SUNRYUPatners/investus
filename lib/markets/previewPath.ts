@@ -1,29 +1,23 @@
-import { MARKET_IDS, type MarketId } from "./types";
+import type { MarketId } from "./types";
+import { marketHref, parseMarketPath, type MarketTab } from "./marketPath";
 
-/** `/preview/kr/search` → `{ market: "kr", tab: "search" }` */
+/** @deprecated use parseMarketPath */
 export function parsePreviewPath(pathname: string): {
   market: MarketId | null;
-  tab: "home" | "search" | "portfolio" | "wall" | "insight" | "more";
+  tab: MarketTab;
   suffix: string;
 } {
-  const m = pathname.match(/^\/preview\/([^/]+)(\/.*)?$/);
-  if (!m) return { market: null, tab: "home", suffix: "" };
-  const raw = m[1];
-  if (!(MARKET_IDS as string[]).includes(raw)) {
-    return { market: null, tab: "home", suffix: "" };
+  const parsed = parseMarketPath(pathname);
+  if (parsed.isPreview) {
+    return { market: parsed.market, tab: parsed.tab, suffix: parsed.suffix };
   }
-  const rest = m[2] ?? "";
-  const suffix = rest || "";
-  let tab: "home" | "search" | "portfolio" | "wall" | "insight" | "more" = "home";
-  if (rest.startsWith("/search")) tab = "search";
-  else if (rest.startsWith("/portfolio")) tab = "portfolio";
-  else if (rest.startsWith("/wall")) tab = "wall";
-  else if (rest.startsWith("/insight")) tab = "insight";
-  else if (rest.startsWith("/more")) tab = "more";
-  return { market: raw as MarketId, tab, suffix };
+  // 본사 `/kr` 등도 market 반환 (스위처·네비 호환)
+  return { market: parsed.market, tab: parsed.tab, suffix: parsed.suffix };
 }
 
-export function previewHref(market: MarketId, tab: "home" | "search" | "portfolio" | "wall" | "insight" | "more"): string {
-  if (tab === "home") return `/preview/${market}`;
-  return `/preview/${market}/${tab}`;
+/** @deprecated use marketHref */
+export function previewHref(market: MarketId, tab: MarketTab): string {
+  return marketHref(market, tab);
 }
+
+export { marketHref, parseMarketPath, type MarketTab };

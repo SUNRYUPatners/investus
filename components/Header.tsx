@@ -5,13 +5,16 @@ import { usePathname } from "next/navigation";
 import { LogoMark } from "@/components/LogoMark";
 import { MarketSwitcher } from "@/components/MarketSwitcher";
 import { useLocale } from "@/contexts/LocaleContext";
-import { isMarketOpen } from "@/lib/marketHours";
-import { parsePreviewPath } from "@/lib/markets/previewPath";
+import { getMarketConfig } from "@/lib/markets/config";
+import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { isMarketHomePath, parseMarketPath } from "@/lib/markets/marketPath";
 
 export function Header() {
   const t = useLocale();
   const pathname = usePathname() ?? "";
-  const previewMarket = parsePreviewPath(pathname).market;
+  const { market } = parseMarketPath(pathname);
+  const cfg = getMarketConfig(market);
+  const showSwitcher = isMarketHomePath(pathname);
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
   const [open, setOpen] = useState(false);
@@ -22,25 +25,28 @@ export function Header() {
     const tick = () => {
       const now = new Date();
       const timeStr = now.toLocaleTimeString("en-US", {
-        timeZone: "America/New_York",
+        timeZone: cfg.timezone,
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
         hour12: false,
       });
       const dateStr = now.toLocaleDateString("en-US", {
-        timeZone: "America/New_York",
+        timeZone: cfg.timezone,
         month: "numeric",
         day: "numeric",
       });
       setTime(timeStr);
       setDate(dateStr);
-      setOpen(isMarketOpen());
+      setOpen(isMarketSessionOpen(market));
     };
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, []);
+  }, [market, cfg.timezone]);
+
+  const desktopTagline =
+    market === "us" ? t.header.tagline : `${cfg.emoji} ${cfg.labelKo} · ${cfg.tagline}`;
 
   return (
     <>
@@ -49,7 +55,6 @@ export function Header() {
         style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
       >
         <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
-          {/* 로고 — 모바일만 표시 */}
           <div className="flex items-center gap-2 lg:hidden">
             <LogoMark size="sm" />
             <span
@@ -60,12 +65,10 @@ export function Header() {
             </span>
           </div>
 
-          {/* 데스크톱: 사이트 타이틀 */}
           <span className="hidden lg:block text-sm font-semibold font-syne" style={{ color: "var(--text)" }}>
-            {t.header.tagline}
+            {desktopTagline}
           </span>
 
-          {/* EST 시계 + 마켓 상태 */}
           <div className="flex items-center gap-2">
             {mounted && (
               <>
@@ -73,19 +76,21 @@ export function Header() {
                   className="text-xs font-mono-num tabular-nums font-medium"
                   style={{ color: "var(--text)" }}
                 >
-                  {date} {time} EST
+                  {date} {time} {cfg.clockLabel}
                 </span>
-                <span
-                  className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                  style={
-                    open
-                      ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
-                      : { background: "rgba(107,114,128,0.12)", color: "var(--muted)" }
-                  }
-                >
-                  {open ? "● OPEN" : "● CLOSED"}
-                </span>
-                {open && (
+                {market !== "safe" && (
+                  <span
+                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                    style={
+                      open
+                        ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
+                        : { background: "rgba(107,114,128,0.12)", color: "var(--muted)" }
+                    }
+                  >
+                    {open ? "● OPEN" : "● CLOSED"}
+                  </span>
+                )}
+                {open && market === "us" && (
                   <span
                     className="text-[9px] font-mono-num"
                     style={{ color: "var(--muted)", opacity: 0.6 }}
@@ -98,8 +103,7 @@ export function Header() {
           </div>
         </div>
       </header>
-      {/* 미리보기만: 시장 전환. 본사이트 레이아웃은 그대로, 스위처만 추가 */}
-      {previewMarket && <MarketSwitcher current={previewMarket} />}
+      {showSwitcher && <MarketSwitcher current={market} />}
     </>
   );
 }

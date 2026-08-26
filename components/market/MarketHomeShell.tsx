@@ -20,6 +20,8 @@ import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 import { MorningBriefingCard } from "@/components/MorningBriefingCard";
 import { MarketBriefingCard } from "@/components/market/MarketBriefingCard";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
+import { PlatformIntro } from "@/components/PlatformIntro";
+import { MarketSwitcherDesktop } from "@/components/MarketSwitcherDesktop";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { Locale } from "@/lib/i18n";
@@ -54,7 +56,7 @@ export function MarketHomeShell({
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <h1 className="sr-only">
-        Investus {isUs ? "미국주식" : cfg.labelKo} — 본사이트와 동일 레이아웃
+        Investus — AI 기반 차세대 자산관리(WM) 핀테크 · {isUs ? "미국주식" : cfg.labelKo}
       </h1>
       <Header />
       {/* 미국 = 본사이트와 동일 티커. 다른 시장은 해당 시장 시세 슬롯(LiveMarket 대체)에서 표시 */}
@@ -68,6 +70,9 @@ export function MarketHomeShell({
       <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-2">
           <div className="lg:flex-1 lg:min-w-0">
+            <div className="hidden lg:block px-0 pt-1 pb-2 max-w-[520px]">
+              <MarketSwitcherDesktop current={market} />
+            </div>
             <FirstVisitBanner />
 
             <section className="px-4 lg:px-0 pt-3">
@@ -160,20 +165,7 @@ export function MarketHomeShell({
         </div>
       </main>
 
-      <section aria-label="서비스 소개" className="max-w-[480px] mx-auto px-4 pt-4 pb-6 lg:hidden">
-        <p className="text-[11px] leading-relaxed" style={{ color: "var(--muted)" }}>
-          {isUs ? (
-            <>
-              SUNRYU Partners CIO의 일일 시장 분석 리포트 · 미국주식 실시간 시세 · S&amp;P500·NASDAQ·다우존스 지수 · 공포탐욕지수 · 버핏지수를 무료로 제공합니다.
-              <span className="ml-1" style={{ color: "var(--mint)" }}>매일 아침 Investus 하나로 전날 시장을 파악하세요.</span>
-            </>
-          ) : (
-            <>
-              {cfg.labelKo} 미리보기 · 본사이트와 같은 구성에서 시세·뉴스·리포트만 이 시장 기준으로 표시합니다.
-            </>
-          )}
-        </p>
-      </section>
+      <PlatformIntro className="max-w-[480px] mx-auto px-4 pt-4 pb-6 lg:max-w-none lg:px-8 lg:pb-8" />
 
       {isUs && <OnboardingModal />}
     </div>

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 // Edge는 1MB 한도 — next/og 번들이 Hobby 한도를 넘김. Node 런타임으로 생성.
 export const runtime     = "nodejs";
-export const alt         = "Investus 인베스트어스 — 미국주식 투자 플랫폼";
+export const alt         = "Investus 인베스트어스 — AI 기반 WM 핀테크";
 export const size        = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -91,7 +91,7 @@ export default function OgImage() {
           fontWeight: "400",
           letterSpacing: "0.5px",
         }}>
-          미국주식 실시간 분석 · 리포트 · 투자 커뮤니티
+          글로벌 자산(주식·암호화폐·금·부동산) · AI 리포트 · WM 인사이트
         </div>
 
         <div style={{

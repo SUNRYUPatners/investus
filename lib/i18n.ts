@@ -9,7 +9,7 @@ const ko = {
     insight:   "인사이트",
     more:      "더보기",
   },
-  header: { tagline: "실시간 미국주식", marketOpen: "● 마켓 개장 중", marketClosed: "● 마켓 종료" },
+  header: { tagline: "글로벌 자산 · AI 인사이트", marketOpen: "● 마켓 개장 중", marketClosed: "● 마켓 종료" },
   market: {
     picks:      "Investus 추천주식",
     cioPicks:   "CIO 선정",
@@ -188,14 +188,14 @@ const ko = {
   more: {
     title:   "더보기 ···",
     footer:  "본 앱은 투자 참고용으로만 제공됩니다.\n투자 판단 및 책임은 본인에게 있습니다.",
-    tagline: "미국주식 투자 플랫폼",
+    tagline: "AI 기반 차세대 자산관리(WM) 핀테크",
     sections: [
       {
         title: "앱 정보",
         items: [
           { label: "Investus 사용법",          sub: "처음 왔다면 여기서 시작하세요" },
           { label: "미국주식 초보 가이드",      sub: "계좌·ETF·리포트 읽는 법" },
-          { label: "Investus 소개",            sub: "미국주식 투자 플랫폼" },
+          { label: "Investus 소개",            sub: "AI 기반 WM 핀테크 플랫폼" },
           { label: "문의 · 연락처",            sub: "고객지원 · 광고 제휴" },
           { label: "버전 정보",                sub: "업데이트 이력" },
         ],
@@ -433,7 +433,7 @@ const en: typeof ko = {
     insight:   "Insights",
     more:      "More",
   },
-  header: { tagline: "US Stock Live", marketOpen: "● MARKET OPEN", marketClosed: "● MARKET CLOSED" },
+  header: { tagline: "Global Assets · AI Insights", marketOpen: "● MARKET OPEN", marketClosed: "● MARKET CLOSED" },
   market: {
     picks:      "Investus Picks",
     cioPicks:   "CIO Picks",
@@ -612,7 +612,7 @@ const en: typeof ko = {
   more: {
     title:   "More ···",
     footer:  "This app is for informational purposes only.\nInvestment decisions and risks are your own.",
-    tagline: "Investus · US Stock Investment Platform",
+    tagline: "Investus · AI Wealth Management Fintech",
     sections: [
       {
         title: "App Info",

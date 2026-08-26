@@ -202,23 +202,34 @@ description: >-
 
 ---
 
-## 멀티마켓 미리보기 (`/preview/[market]`) — 2026-08-26~
+## 멀티마켓 본사 (`/`, `/kr`, `/safe`, `/kr-re`) — 2026-08-27~
 
-프로덕션 `/` 미국 홈은 그대로 두고, 미리보기는 `/preview/us|kr|safe|kr-re` 에서만 확장한다. **배포 요청이 없으면 `deploy.sh` 실행 금지.**
+미국·한국주식·안전자산·한국부동산을 **본사이트**에서 이모지 스위처로 전환한다. `/preview/*`는 `/`, `/kr` 등으로 **301 리다이렉트**.
+
+### 「리포트 업데이트 해줘」 워크플로 (필수)
+
+| 시장 | 트리거 | 데이터 소스 | 산출물 |
+|------|--------|-------------|--------|
+| **us** (미국) | `리포트 업데이트` | `01.investus 리포트/` **스크린샷 Read** (기존과 동일) | `lib/reports.ts`, SVG, wall, analyst |
+| **kr** (한국주식) | 같은 요청 시 **자동 포함** (별도 말 없어도) | **웹 검색** — 당일·전일 한국장 뉴스·정책·수급 (스크린샷 없음) | `lib/reports-kr.ts`, `*-kr-*.svg`, markets wall/analyst |
+| **safe** (안전자산) |同上 | **웹 검색** — BTC·ETH·금·은 등 전일~당일 뉴스 | `lib/reports-safe.ts`, `*-safe-*.svg` |
+| **kr-re** (한국부동산) |同上 | **웹 검색** — 부동산 정책·전세·매매·공급 이슈 | `lib/reports-kr-re.ts`, `*-krre-*.svg` |
+
+- 미국만 스크린샷 기반. **kr / safe / kr-re는 에이전트가 뉴스·정책을 검색해 리포트·SVG·본문을 스스로 작성**한다.
+- 모든 시장 본문: **한글 존댓말 문장형**, 영문 불릿 금지 (위 「8/28 강제」).
+- SVG noteSub 3~4줄, 카드 한글 맥락 필수.
 
 ### 시장별 리포트·피드 갱신 리듬
 
 | 시장 | 시점 | 시드 파일 | 내용 축 |
 |------|------|-----------|---------|
-| `us` | 기존과 동일 (미국장) | `lib/reports.ts`, `wallPosts.ts`, `analystPosts.ts` | Mag7·매크로 |
-| `kr` | **한국장 마감 후** (KST ~15:30+) | `lib/reports-kr.ts`, `wallPosts-markets.ts`, `analystPosts-markets.ts` | 시총 탑7 (삼전·하이닉스·현대차 등) |
-| `safe` | **매일 아침 9시 KST** 전일·새벽 뉴스 분석 | `lib/reports-safe.ts` + markets wall/analyst | BTC·ETH·SOL + 금·은·구리 |
-| `kr-re` | 정책·시세 이슈 있을 때 (또는 일일) | `lib/reports-kr-re.ts` + markets wall/analyst | 공급·전세·세제·지역 |
+| `us` | 미국장 (기존) | `lib/reports.ts`, `wallPosts.ts`, `analystPosts.ts` | Mag7·매크로 |
+| `kr` | **한국장 마감 후** (KST ~15:30+) | `lib/reports-kr.ts`, `wallPosts-markets.ts`, `analystPosts-markets.ts` | 시총 탑10 |
+| `safe` | **매일 아침 9시 KST** | `lib/reports-safe.ts` + markets wall/analyst | BTC·ETH + 금·은 (이모지 🪙) |
+| `kr-re` | 정책·시세 이슈 (일일) | `lib/reports-kr-re.ts` + markets wall/analyst | 공급·전세·세제 (이모지 🏢) |
 
-요청 예: `한국주식 리포트 업데이트`, `안전자산 리포트 업데이트`, `부동산 리포트 업데이트`.
+요청 예: `리포트 업데이트` (4시장 일괄), `한국주식만`, `안전자산만`.
 
-미리보기 URL: `/preview/kr`, `/preview/safe`, `/preview/kr-re` (+ `/wall`). 이모지 스위처로 전환. 뉴스·시세는 `?market=` API 분기.
-
-**미국(`/preview/us`)은 본사이트(`/`)와 동일 레이아웃·동일 컴포넌트** — 시장 스위처만 추가. 내용이 달라지면 안 됨.
+URL: `/` (미국), `/kr`, `/safe`, `/kr-re`. 홈에서 이모지 스위처 — **모바일: 헤더 아래**, **데스크탑: 본문 상단 2×2 그리드**.
 
 **한국 시총 탑10** (브리핑·리포트·인기종목 기준): 삼성전자 · SK하이닉스 · LG에너지솔루션 · 삼성바이오로직스 · 현대차 · 기아 · 셀트리온 · KB금융 · 신한지주 · NAVER. 코스피 히트맵은 S&P500 히트맵과 동일 UI(섹터 타일). 리포트 SVG는 `public/charts/*-kr-*.svg` 로 함께 생성.

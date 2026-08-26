@@ -153,10 +153,10 @@ export const MARKET_CONFIG: Record<MarketId, MarketConfig> = {
   },
   safe: {
     id: "safe",
-    emoji: "🛡️",
+    emoji: "🪙",
     labelKo: "안전자산",
     labelEn: "Safe Assets",
-    tagline: "가상화폐 · 금 · 은",
+    tagline: "비트코인 · 금 · 은",
     timezone: "UTC",
     clockLabel: "UTC",
     portfolioKey: "investus-portfolio-safe",
@@ -178,7 +178,7 @@ export const MARKET_CONFIG: Record<MarketId, MarketConfig> = {
   },
   "kr-re": {
     id: "kr-re",
-    emoji: "🏠",
+    emoji: "🏢",
     labelKo: "한국부동산",
     labelEn: "KR Real Estate",
     tagline: "매매 · 전세 · 정책",

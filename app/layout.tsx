@@ -41,13 +41,14 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "인베스트어스 | 미국주식 투자 플랫폼 — 실시간 시세 · 투자 리포트",
-  description: "인베스트어스(Investus) — 미국주식 실시간 시세, S&P500·NASDAQ·다우존스 지수, 투자 리포트, 공포탐욕지수, 버핏지수를 한눈에. 선류파트너스 CIO의 매일 시장 분석 리포트 제공. 미국주식 투자자를 위한 무료 플랫폼.",
+  title: "인베스트어스 | AI 기반 차세대 자산관리(WM) 핀테크 — 글로벌 자산 · 투자 리포트",
+  description:
+    "인베스트어스(Investus) — 한국주식·미국주식·비트코인·금·한국 부동산까지 AI가 연결하는 차세대 WM 핀테크. 실시간 시세, 일일 투자 리포트, AI 포트폴리오 인사이트를 무료로 제공합니다.",
   metadataBase: new URL("https://www.investus.kr"),
   keywords: [
     "인베스트어스", "investus", "investus.kr", "인베스트어스케이알",
     "선류파트너스", "선류 파트너스", "SUNRYU Partners",
-    "미국주식", "미국 주식", "미국주식 투자", "미국주식 플랫폼",
+    "한국주식", "안전자산", "비트코인", "금", "한국부동산", "자산관리", "WM", "핀테크",
     "주식", "S&P500", "나스닥", "NASDAQ", "다우존스", "DOW",
     "투자", "주가", "실시간 주가", "선물", "비트코인",
     "투자정보", "주식정보", "시세", "실시간시세",
@@ -56,8 +57,9 @@ export const metadata: Metadata = {
     "공포탐욕지수", "버핏지수", "섹터분석", "미국주식투자정보",
   ],
   openGraph: {
-    title: "인베스트어스(Investus) — 미국주식 투자 플랫폼",
-    description: "미국주식 실시간 시세, S&P500·NASDAQ 지수, 투자 리포트, 공포탐욕지수, 버핏지수를 한눈에. 선류파트너스 CIO의 매일 시장 분석 리포트 제공.",
+    title: "인베스트어스(Investus) — AI 기반 차세대 자산관리(WM) 핀테크",
+    description:
+      "한국주식·미국주식·비트코인·금·한국 부동산 — AI가 연결하는 글로벌 자산 인사이트. 실시간 시세와 일일 리포트.",
     url: "https://www.investus.kr",
     siteName: "인베스트어스 — Investus",
     locale: "ko_KR",
@@ -66,8 +68,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "인베스트어스(Investus) — 미국주식 투자 플랫폼",
-    description: "미국주식 실시간 시세, S&P500·NASDAQ 지수, 투자 리포트, 공포탐욕지수, 버핏지수를 한눈에.",
+    title: "인베스트어스(Investus) — AI 기반 WM 핀테크",
+    description: "글로벌 자산(주식·암호화폐·금·부동산)을 AI가 하나로 연결하는 투자 플랫폼.",
   },
   alternates: {
     canonical: "https://www.investus.kr",
@@ -106,7 +108,7 @@ const jsonLd = {
       "url": "https://www.investus.kr",
       "name": "Investus — 인베스트어스",
       "alternateName": ["인베스트어스", "investus.kr", "인베스트어스케이알", "Investus Korea"],
-      "description": "미국주식 실시간 시세 · 시장 분석 리포트 · 선류파트너스 CIO 투자 정보",
+      "description": "AI 기반 차세대 자산관리(WM) 핀테크 — 글로벌 자산 시세·리포트·AI 인사이트",
       "inLanguage": "ko-KR",
       "publisher": { "@id": "https://www.investus.kr/#organization" },
       "potentialAction": {
@@ -130,7 +132,7 @@ const jsonLd = {
         "width": 512,
         "height": 512,
       },
-      "description": "미국주식 투자 플랫폼 — 실시간 시세, 시장 분석 리포트, 투자 기초 교육",
+      "description": "AI 기반 차세대 자산관리(WM) 핀테크 — 실시간 시세, 시장 분석 리포트, 투자 기초 교육",
       "foundingDate": "2024",
       "address": {
         "@type": "PostalAddress",
@@ -147,10 +149,10 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": "https://www.investus.kr/#webpage",
       "url": "https://www.investus.kr",
-      "name": "Investus — 인베스트어스 | 미국주식 투자 플랫폼",
+      "name": "Investus — 인베스트어스 | AI 기반 WM 핀테크",
       "isPartOf": { "@id": "https://www.investus.kr/#website" },
       "about": { "@id": "https://www.investus.kr/#organization" },
-      "description": "인베스트어스(Investus) — 미국 주식 실시간 시세 · S&P500 · NASDAQ · 시장 분석 리포트",
+      "description": "한국주식·미국주식·비트코인·금·한국 부동산 — AI가 연결하는 글로벌 자산 인사이트",
       "inLanguage": "ko-KR",
     },
   ],

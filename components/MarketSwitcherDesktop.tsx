@@ -6,15 +6,15 @@ import { MARKET_CONFIG } from "@/lib/markets/config";
 import { MARKET_IDS, type MarketId } from "@/lib/markets/types";
 import { marketHref, parseMarketPath } from "@/lib/markets/marketPath";
 
-/** 모바일 — 헤더 아래 가로 이모지 시장 선택 */
-export function MarketSwitcher({ current }: { current: MarketId }) {
+/** 데스크탑 사이드바·홈 상단 — 2×2 이모지 그리드 */
+export function MarketSwitcherDesktop({ current }: { current: MarketId }) {
   const pathname = usePathname();
   const { tab } = parseMarketPath(pathname ?? "");
 
   return (
     <div
-      className="flex items-center justify-center gap-1 px-3 py-2 border-b lg:hidden"
-      style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
+      className="grid grid-cols-2 gap-1.5 p-2 rounded-xl border mb-3"
+      style={{ background: "var(--bg)", borderColor: "var(--border)" }}
       role="navigation"
       aria-label="시장 선택"
     >
@@ -26,18 +26,18 @@ export function MarketSwitcher({ current }: { current: MarketId }) {
           <Link
             key={id}
             href={href}
-            className="flex flex-col items-center gap-0.5 min-w-[68px] flex-1 max-w-[88px] px-1.5 py-1.5 rounded-xl transition-opacity"
+            className="flex items-center gap-2 px-2.5 py-2 rounded-lg transition-opacity"
             style={{
-              background: active ? "rgba(var(--mint-rgb),0.12)" : "transparent",
-              opacity: active ? 1 : 0.72,
+              background: active ? "rgba(var(--mint-rgb),0.14)" : "transparent",
+              opacity: active ? 1 : 0.78,
             }}
             aria-current={active ? "page" : undefined}
           >
-            <span className="text-[22px] leading-none" aria-hidden>
+            <span className="text-lg leading-none" aria-hidden>
               {m.emoji}
             </span>
             <span
-              className="text-[9px] font-semibold tracking-tight text-center leading-tight"
+              className="text-[11px] font-semibold leading-tight"
               style={{ color: active ? "var(--mint)" : "var(--muted)" }}
             >
               {m.labelKo}
