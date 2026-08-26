@@ -11,23 +11,40 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.26</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Treasury bond intervention narrative is back</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Treasury buyback and intervention talk is back in focus</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="230" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#94a3b8" text-anchor="middle">BUYBACK</text>
-  <text x="540" y="280" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">$4B+ buyback and $950B general account narrative affects yields and liquidity.</text>
-  <rect x="80" y="320" width="920" height="240" rx="18" fill="#0f172a" stroke="#94a3b8" stroke-width="2"/>
-  <text x="540" y="400" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">"Treasury buyback narrative is in focus. Buybacks repurchase bonds from the</text>
-  <text x="540" y="430" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">market. The general account ties to liquidity. Rhetoric can exceed actual size."</text>
-  <rect x="120" y="590" width="400" height="120" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="320" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#94a3b8" text-anchor="middle">$4B+</text>
-  <text x="320" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Buyback</text>
-  <rect x="560" y="590" width="400" height="120" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="760" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#94a3b8" text-anchor="middle">$950B</text>
-  <text x="760" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">TGA</text>
-  <rect x="60" y="740" width="960" height="200" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="780" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">Why this matters</text>
-  <text x="540" y="820" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Long yields and growth-stock discount rates move together. Verify actual buybacks and TGA.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">MACRO · Treasury intervention · 2026.08.26</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#94a3b8" text-anchor="middle" opacity=".15">🏦</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#94a3b8" text-anchor="middle">🏦</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">Buyback</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Talk of $4B+ Treasury buybacks and a ~$950B general account is back. Supply, liquidity, and</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">long yields can move together.</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">💵</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">$4B+</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Buybacks</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Talked size</text>
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏦</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">$950B</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">TGA cash</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Treasury account</text>
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📉</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">Yields</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Supply·liquidity</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Discount rates</text>
+  <rect x="60" y="630" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">"A Treasury buyback means the government buys its own bonds back in the market to ease supply.</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">The general account is Treasury cash at the Fed, and a large balance can absorb liquidity. Rhetoric</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">and actual execution can differ, so check weekly buybacks, balances, and 10Y/30Y yields. Do not</text>
+  <text x="540" y="758" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">treat a headline as a guaranteed rate drop."</text>
+  <rect x="60" y="850" width="960" height="110" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">Why this matters</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Long yields sit with equity and housing discount rates. Verify actual buybacks and TGA balances alongside inflation and</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">issuance.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">MACRO · Treasury buyback · 2026.08.26</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
 </svg>

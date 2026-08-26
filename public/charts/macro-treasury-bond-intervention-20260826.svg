@@ -13,23 +13,35 @@
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.26</text>
   <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">미국 재무부의 국채 시장 개입·환매 이야기가 다시 부각됐습니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="230" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#94a3b8" text-anchor="middle">환매</text>
-  <text x="540" y="280" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">40억 달러 이상 국채 환매, 약 9,500억 달러 일반계정 이야기가 다시 나왔습니다. 국채 수급·</text>
-  <text x="540" y="306" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">유동성 기대가 장기금리에 영향을 줄 수 있습니다.</text>
-  <rect x="80" y="320" width="920" height="240" rx="18" fill="#0f172a" stroke="#94a3b8" stroke-width="2"/>
-  <text x="540" y="400" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">"재무부가 이미 발행한 국채를 다시 사들이는 환매는 수급을 완화하는 도구입니다.</text>
-  <text x="540" y="430" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">일반계정은 재무부가 연준에 맡긴 현금 통장입니다. 발언과 실제 집행 규모는 다를 수</text>
-  <text x="540" y="460" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">있으니, 주간 환매·잔고·10년·</text>
-  <text x="540" y="490" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">30년 금리를 숫자로 확인하세요. 헤드라인만으로 금리 하락을 확정하면 위험합니다."</text>
-  <rect x="120" y="590" width="400" height="120" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="320" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#94a3b8" text-anchor="middle">$4B+</text>
-  <text x="320" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">환매 규모</text>
-  <rect x="560" y="590" width="400" height="120" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="760" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#94a3b8" text-anchor="middle">$950B</text>
-  <text x="760" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">일반계정</text>
-  <rect x="60" y="740" width="960" height="200" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="780" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="820" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기금리는 주식·부동산 할인율과 한 묶음입니다. 실제 환매와 일반계정 잔고를 확인하시고, 물가·발행 물량과 같이 보시면 됩니다.</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#94a3b8" text-anchor="middle" opacity=".15">🏦</text>
+  <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#94a3b8" text-anchor="middle">🏦</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">환매</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">40억 달러 이상 국채 환매, 약 9,500억 달러 일반계정 이야기가 다시 나왔습니다. 국채 수급·</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">유동성 기대가 장기금리에 영향을 줄 수 있습니다.</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">💵</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">$4B+</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">환매 규모</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">이야기 기준</text>
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏦</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">$950B</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">일반계정</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">재무부 현금</text>
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📉</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">장기금리</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">수급·유동성</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">할인율 연결</text>
+  <rect x="60" y="630" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">"재무부가 이미 발행한 국채를 다시 사들이는 환매는 수급을 완화하는 도구입니다. 일반계정은 재무부가 연준에</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">맡긴 현금 통장입니다. 잔고가 크면 시중 유동성에 영향을 줄 수 있습니다. 발언과 실제 집행 규모는 다를 수 있으니,</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">주간 환매·잔고·10년·30년 금리를 숫자로 확인하세요. 헤드라인만으로 금리 하락을 확정하면 위험합니다."</text>
+  <rect x="60" y="850" width="960" height="110" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기금리는 주식·부동산 할인율과 한 묶음입니다. 실제 환매와 일반계정 잔고를 확인하시고, 물가·국채 발행 물량과 같이 보시면 됩니다.</text>
   <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">MACRO · 국채 환매 · 2026.08.26</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
