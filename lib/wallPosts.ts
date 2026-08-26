@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T27AU = 1787785200000; // 2026-08-27 08:00 KST
 const T26AU = 1787698800000; // 2026-08-26 08:00 KST
 const T25AU = 1787612400000; // 2026-08-25 08:00 KST
 const T24AU = 1787526000000; // 2026-08-24 08:00 KST
@@ -88,7 +89,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T26AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T27AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -107,6 +108,49 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-27  // ── 2026-08-26 신규 ────────────────
+  { id: 1103, symbol: "NVDA", nickname: "익명_3100", holdingLabel: "관심종목",
+    content: "NVDA 2분기 961억 beat인데 AH -2%?? 가이던스 봐야지",
+    createdAt: T27AU + 8*60_000, likes: 10, comments: 2 },
+  { id: 1104, symbol: "MACRO", nickname: "익명_3117", holdingLabel: "관심종목",
+    content: "앤트로픽 63% vs 스페이스X 37% 2026 최대 IPO odds",
+    createdAt: T27AU + 16*60_000, likes: 11, comments: 1 },
+  { id: 1105, symbol: "SPCX", nickname: "익명_3134", holdingLabel: "관심종목",
+    content: "스페이스X 1.8T 51일째 1T 위. ATH 226",
+    createdAt: T27AU + 24*60_000, likes: 12, comments: 1 },
+  { id: 1106, symbol: "SPCX", nickname: "익명_3151", holdingLabel: "관심종목",
+    content: "루이지애나 12+타워 30척/일 200만톤/년??",
+    createdAt: T27AU + 32*60_000, likes: 13, comments: 2 },
+  { id: 1107, symbol: "SPCX", nickname: "익명_3168", holdingLabel: "관심종목",
+    content: "테라팹 텍사스 +480억 총 1190억 sub-2nm",
+    createdAt: T27AU + 40*60_000, likes: 14, comments: 1 },
+  { id: 1108, symbol: "MACRO", nickname: "익명_3185", holdingLabel: "관심종목",
+    content: "DC 66GW 파이프라인 부채 7000억+ JLL 미쳤다",
+    createdAt: T27AU + 48*60_000, likes: 15, comments: 1 },
+  { id: 1109, symbol: "TSLA", nickname: "익명_3202", holdingLabel: "관심종목",
+    content: "로보택시 6개 도시 16시간 6am-10pm 무인도 늘었다네",
+    createdAt: T27AU + 56*60_000, likes: 16, comments: 2 },
+  { id: 1110, symbol: "TSLA", nickname: "익명_3219", holdingLabel: "관심종목",
+    content: "그록 Think Fast 2.0 S2S 1위 차량 내비 음악 제어",
+    createdAt: T27AU + 64*60_000, likes: 10, comments: 1 },
+  { id: 1111, symbol: "META", nickname: "익명_3236", holdingLabel: "관심종목",
+    content: "메타 5GW 잉여 재판매 ROI 38%?? WF 시나리오",
+    createdAt: T27AU + 72*60_000, likes: 11, comments: 1 },
+  { id: 1112, symbol: "GOOGL", nickname: "익명_3253", holdingLabel: "관심종목",
+    content: "TPU v8 내부용 아니고 broader market 겨냥",
+    createdAt: T27AU + 80*60_000, likes: 12, comments: 2 },
+  { id: 1113, symbol: "MACRO", nickname: "익명_3270", holdingLabel: "관심종목",
+    content: "은행 미실현손실 5117억 2분기 연속 증가 BREAKING",
+    createdAt: T27AU + 88*60_000, likes: 13, comments: 1 },
+  { id: 1114, symbol: "TSLA", nickname: "익명_3287", holdingLabel: "관심종목",
+    content: "사이버트럭 5000달러 올랐대 +5K",
+    createdAt: T27AU + 96*60_000, likes: 14, comments: 1 },
+  { id: 1115, symbol: "MACRO", nickname: "익명_3304", holdingLabel: "관심종목",
+    content: "앤트로픽 Nscale 450억 460MW Vera Rubin 내년말",
+    createdAt: T27AU + 104*60_000, likes: 15, comments: 2 },
+  { id: 1116, symbol: "NVDA", nickname: "익명_3321", holdingLabel: "관심종목",
+    content: "오늘 NVDA 실적+SPCX+로보택시+은행손실 한판 정리",
+    createdAt: T27AU + 112*60_000, likes: 16, comments: 1 },
   // ── 2026-08-26 신규 ────────────────
   { id: 1091, symbol: "NVDA", nickname: "익명_2300", holdingLabel: "관심종목",
     content: "그록 3 LPX 풀 프로덕션이래. 베라 루빈에서 네비우스가 첫 고객",
@@ -3962,6 +4006,63 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-27  // ── 2026-08-26 신규 댓글 ────────────────
+  1103: [
+    { id: 1, nickname: "익명_4303", holdingLabel: "관심종목", content: "beat인데 -2%면 가이던스 약한 거 아님", createdAt: T27AU + 8*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4306", holdingLabel: "관심종목", content: "DC 890억은 여전히 크다", createdAt: T27AU + 8*60_000 + 6*60_000, likes: 5 },
+  ],
+  1104: [
+    { id: 1, nickname: "익명_4304", holdingLabel: "관심종목", content: "polymarket odds는 S-1 전까지 변함", createdAt: T27AU + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4307", holdingLabel: "관심종목", content: "스페이스X delay면 역전", createdAt: T27AU + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1105: [
+    { id: 1, nickname: "익명_4305", holdingLabel: "관심종목", content: "private mark vs 상장가 gap", createdAt: T27AU + 24*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4308", holdingLabel: "관심종목", content: "7B volume이 핵심", createdAt: T27AU + 24*60_000 + 6*60_000, likes: 5 },
+  ],
+  1106: [
+    { id: 1, nickname: "익명_4306", holdingLabel: "관심종목", content: "30/day 현실성… 허가부터", createdAt: T27AU + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4309", holdingLabel: "관심종목", content: "200만톤/year 목표", createdAt: T27AU + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1107: [
+    { id: 1, nickname: "익명_4307", holdingLabel: "관심종목", content: "1190억이면 funding", createdAt: T27AU + 40*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4310", holdingLabel: "관심종목", content: "sub-2nm는 NVDA랑 겹침", createdAt: T27AU + 40*60_000 + 6*60_000, likes: 5 },
+  ],
+  1108: [
+    { id: 1, nickname: "익명_4308", holdingLabel: "관심종목", content: "7000억 debt 금리 올라가면", createdAt: T27AU + 48*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4311", holdingLabel: "관심종목", content: "은행 미실현이랑 연결", createdAt: T27AU + 48*60_000 + 6*60_000, likes: 5 },
+  ],
+  1109: [
+    { id: 1, nickname: "익명_4309", holdingLabel: "관심종목", content: "16h≠유료 승객", createdAt: T27AU + 56*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4312", holdingLabel: "관심종목", content: "FL 3개 도시 확장", createdAt: T27AU + 56*60_000 + 6*60_000, likes: 5 },
+  ],
+  1110: [
+    { id: 1, nickname: "익명_4310", holdingLabel: "관심종목", content: "벤치 1위 vs 실차 UX", createdAt: T27AU + 64*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4313", holdingLabel: "관심종목", content: "OTA 언제", createdAt: T27AU + 64*60_000 + 6*60_000, likes: 5 },
+  ],
+  1111: [
+    { id: 1, nickname: "익명_4311", holdingLabel: "관심종목", content: "시나리오일 뿐 가이던스 아님", createdAt: T27AU + 72*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4314", holdingLabel: "관심종목", content: "5GW excess 가정", createdAt: T27AU + 72*60_000 + 6*60_000, likes: 5 },
+  ],
+  1112: [
+    { id: 1, nickname: "익명_4312", holdingLabel: "관심종목", content: "NVDA 대안 실리콘", createdAt: T27AU + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4315", holdingLabel: "관심종목", content: "GCP 가격 봐야", createdAt: T27AU + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1113: [
+    { id: 1, nickname: "익명_4313", holdingLabel: "관심종목", content: "HTM 채권 평가손", createdAt: T27AU + 88*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4316", holdingLabel: "관심종목", content: "금리 cut이면 회복", createdAt: T27AU + 88*60_000 + 6*60_000, likes: 5 },
+  ],
+  1114: [
+    { id: 1, nickname: "익명_4314", holdingLabel: "관심종목", content: "+5K 후 cancel율", createdAt: T27AU + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4317", holdingLabel: "관심종목", content: "Rivian이랑 비교", createdAt: T27AU + 96*60_000 + 6*60_000, likes: 5 },
+  ],
+  1115: [
+    { id: 1, nickname: "익명_4315", holdingLabel: "관심종목", content: "460MW 전력 허가", createdAt: T27AU + 104*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4318", holdingLabel: "관심종목", content: "Rubin 출하", createdAt: T27AU + 104*60_000 + 6*60_000, likes: 5 },
+  ],
+  1116: [
+    { id: 1, nickname: "익명_4316", holdingLabel: "관심종목", content: "한장요약 8/27", createdAt: T27AU + 112*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4319", holdingLabel: "관심종목", content: "NVDA+macro bundle", createdAt: T27AU + 112*60_000 + 6*60_000, likes: 5 },
+  ],
   // ── 2026-08-26 신규 댓글 ────────────────
   1091: [
     { id: 1, nickname: "익명_3491", holdingLabel: "관심종목", content: "LPX가 추론 칩이면 API 수요랑 직결", createdAt: T26AU + 8*60_000 + 3*60_000, likes: 4 },

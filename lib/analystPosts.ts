@@ -17,6 +17,77 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-27 신규 (14개 · 존댓말 · 구조 혼합) ──────────────────────
+  {
+    id: -903, alias: "성수 너구리 #15", symbol: "NVDA",
+    content: "2분기 매출 961억·EPS 2.22·DC 890억·GM 75%로 beat였습니다.\n시간외 -2%는 가이던스·기대치 문제로 읽히며, 3분기 코멘트를 확인하겠습니다.",
+    likes: 11, comments: 2, created_at: "2026-08-27T00:00:00.000Z", liked: false,
+  },
+  {
+    id: -904, alias: "한남 재규어 #27", symbol: "MACRO",
+    content: "2026 최대 IPO odds: Anthropic 63%, SpaceX 37%.\n확률은 thermometer이며 S-1·일정으로 검증하시면 됩니다.",
+    likes: 12, comments: 1, created_at: "2026-08-27T00:07:00.000Z", liked: false,
+  },
+  {
+    id: -905, alias: "압구정 치타 #44", symbol: "SPCX",
+    content: "시가총액 $1,826B, 51일 $1T+.\n발행가 $135, ATH $226, volume ~$7B.\nprivate mark와 상장가는 다를 수 있습니다.",
+    likes: 13, comments: 2, created_at: "2026-08-27T00:14:00.000Z", liked: false,
+  },
+  {
+    id: -906, alias: "여의도 수리 #28", symbol: "SPCX",
+    content: "루이지애나: 12+ towers, 30+ Starship/day, 2M+ tons/year.\n허가·flight rate를 계획과 분리해 추적하겠습니다.",
+    likes: 14, comments: 1, created_at: "2026-08-27T00:21:00.000Z", liked: false,
+  },
+  {
+    id: -907, alias: "삼성동 올빼미 #19", symbol: "SPCX",
+    content: "Terafab Texas +$48B, total $119B, Phase 1 $16.8B committed.\nsub-2nm AI chips, Dec 2026–Dec 2028 build window입니다.",
+    likes: 15, comments: 0, created_at: "2026-08-27T00:28:00.000Z", liked: false,
+  },
+  {
+    id: -908, alias: "광화문 여우 #62", symbol: "MACRO",
+    content: "66GW DC pipeline, $700B+ permanent debt through 2028.\nMSFT·META·GOOG·AMZN·ORCL capex·debt bundle입니다.",
+    likes: 11, comments: 2, created_at: "2026-08-27T00:35:00.000Z", liked: false,
+  },
+  {
+    id: -909, alias: "마포 살쾡이 #08", symbol: "TSLA",
+    content: "로보택시 6 cities, 16h/day 6am–10pm.\nunsupervised fleet growth cited.\n유료 마일로 검증하겠습니다.",
+    likes: 12, comments: 2, created_at: "2026-08-27T00:42:00.000Z", liked: false,
+  },
+  {
+    id: -910, alias: "판교 늑대 #90", symbol: "TSLA",
+    content: "Grok Think Fast 2.0 #1 speech-to-speech.\nvehicle·nav·music control.\n벤치 1위와 OTA rollout은 다릅니다.",
+    likes: 13, comments: 1, created_at: "2026-08-27T00:49:00.000Z", liked: false,
+  },
+  {
+    id: -911, alias: "분당 매 #31", symbol: "META",
+    content: "5GW excess compute resale by 2030.\n$38B/GW capex, $20B/GW rev, 38% ROI scenario.\n모델과 가이던스를 분리하세요.",
+    likes: 14, comments: 2, created_at: "2026-08-27T00:56:00.000Z", liked: false,
+  },
+  {
+    id: -912, alias: "해운대 고래 #03", symbol: "GOOGL",
+    content: "TPU v8 targets broader AI market beyond internal.\nGCP pricing·availability가 채택 관건입니다.",
+    likes: 15, comments: 0, created_at: "2026-08-27T00:63:00.000Z", liked: false,
+  },
+  {
+    id: -913, alias: "송파 독수리 #66", symbol: "MACRO",
+    content: "US bank unrealized losses $511.7B, up two quarters.\nDC debt·NVDA earnings와 같은 macro screen입니다.",
+    likes: 11, comments: 2, created_at: "2026-08-27T00:70:00.000Z", liked: false,
+  },
+  {
+    id: -914, alias: "인천 갈매기 #52", symbol: "TSLA",
+    content: "Cybertruck +$5,000 price hike.\n주문·cancel율이 demand elasticity test입니다.",
+    likes: 12, comments: 1, created_at: "2026-08-27T00:77:00.000Z", liked: false,
+  },
+  {
+    id: -915, alias: "역삼 판다 #77", symbol: "MACRO",
+    content: "Anthropic–Nscale $45B, 460MW, Vera Rubin, online late next year.\nMW energize가 gating item입니다.",
+    likes: 13, comments: 2, created_at: "2026-08-27T00:84:00.000Z", liked: false,
+  },
+  {
+    id: -916, alias: "종로 까치 #41", symbol: "NVDA",
+    content: "오늘 bundle: NVDA beat/AH -2%, SpaceX $1.8T, bank $511.7B unrealized.\n실물 AI capex와 financial overlay를 함께 보시면 됩니다.",
+    likes: 14, comments: 1, created_at: "2026-08-27T01:31:00.000Z", liked: false,
+  },
   // ── 2026-08-26 신규 (12개 · 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -891, alias: "성수 너구리 #15", symbol: "NVDA",
@@ -7050,6 +7121,27 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-903]: [
+    { alias: "댓글_270903", content: "3분기 가이던스가 AH -2% 원인일까요", created_at: "2026-08-27T00:10:00.000Z" },
+  ],
+  [-905]: [
+    { alias: "댓글_270905", content: "51일 $1T+ 지속 가능?", created_at: "2026-08-27T00:10:00.000Z" },
+  ],
+  [-908]: [
+    { alias: "댓글_270908", content: "7000억 debt와 은행 미실현 연결", created_at: "2026-08-27T00:10:00.000Z" },
+  ],
+  [-909]: [
+    { alias: "댓글_270909", content: "6 cities 유료 마일 공개 시점", created_at: "2026-08-27T00:10:00.000Z" },
+  ],
+  [-911]: [
+    { alias: "댓글_270911", content: "5GW excess 현실성", created_at: "2026-08-27T00:10:00.000Z" },
+  ],
+  [-913]: [
+    { alias: "댓글_270913", content: "5117억 추세 반전 조건", created_at: "2026-08-27T00:10:00.000Z" },
+  ],
+  [-915]: [
+    { alias: "댓글_270915", content: "460MW 전력 허가 일정", created_at: "2026-08-27T00:10:00.000Z" },
+  ],
   [-891]: [
     { alias: "댓글_260891", content: "추론 매출 비중이 실적에 나올까요", created_at: "2026-08-26T00:10:00.000Z" },
   ],

@@ -12,6 +12,21 @@ const REPORT_DIR = path.join(__dirname, '../01.investus 리포트');
 // Each entry: { ko, en (optional), label, date }
 // en: null if no English version exists
 const PAIRS = [
+  // ── 2026-08-27 ─────────────────────────────────────────────────────────
+  { ko: 'summary-20260827.svg', en: 'summary-20260827-en.svg', label: 'summary', date: '20260827' },
+  { ko: 'nvda-q2-earnings-20260827.svg', en: 'nvda-q2-earnings-20260827-en.svg', label: 'nvda-q2-earnings', date: '20260827' },
+  { ko: 'anthropic-ipo-odds-polymarket-20260827.svg', en: 'anthropic-ipo-odds-polymarket-20260827-en.svg', label: 'anthropic-ipo-odds-polymarket', date: '20260827' },
+  { ko: 'spcx-valuation-1826b-20260827.svg', en: 'spcx-valuation-1826b-20260827-en.svg', label: 'spcx-valuation-1826b', date: '20260827' },
+  { ko: 'spcx-starbase-louisiana-cadence-20260827.svg', en: 'spcx-starbase-louisiana-cadence-20260827-en.svg', label: 'spcx-starbase-louisiana-cadence', date: '20260827' },
+  { ko: 'spcx-terafab-texas-48b-20260827.svg', en: 'spcx-terafab-texas-48b-20260827-en.svg', label: 'spcx-terafab-texas-48b', date: '20260827' },
+  { ko: 'macro-dc-debt-jll-700b-20260827.svg', en: 'macro-dc-debt-jll-700b-20260827-en.svg', label: 'macro-dc-debt-jll-700b', date: '20260827' },
+  { ko: 'tsla-robotaxi-16h-6cities-20260827.svg', en: 'tsla-robotaxi-16h-6cities-20260827-en.svg', label: 'tsla-robotaxi-16h-6cities', date: '20260827' },
+  { ko: 'tsla-grok-think-fast-2-20260827.svg', en: 'tsla-grok-think-fast-2-20260827-en.svg', label: 'tsla-grok-think-fast-2', date: '20260827' },
+  { ko: 'meta-compute-resale-wf-20260827.svg', en: 'meta-compute-resale-wf-20260827-en.svg', label: 'meta-compute-resale-wf', date: '20260827' },
+  { ko: 'googl-tpu-v8-broader-market-20260827.svg', en: 'googl-tpu-v8-broader-market-20260827-en.svg', label: 'googl-tpu-v8-broader-market', date: '20260827' },
+  { ko: 'macro-us-banks-unrealized-511b-20260827.svg', en: 'macro-us-banks-unrealized-511b-20260827-en.svg', label: 'macro-us-banks-unrealized-511b', date: '20260827' },
+  { ko: 'tsla-cybertruck-price-5000-20260827.svg', en: 'tsla-cybertruck-price-5000-20260827-en.svg', label: 'tsla-cybertruck-price-5000', date: '20260827' },
+  { ko: 'anthropic-nscale-45b-vera-rubin-20260827.svg', en: 'anthropic-nscale-45b-vera-rubin-20260827-en.svg', label: 'anthropic-nscale-45b-vera-rubin', date: '20260827' },
   // ── 2026-08-26 ─────────────────────────────────────────────────────────
   { ko: 'summary-20260826.svg', en: 'summary-20260826-en.svg', label: 'summary', date: '20260826' },
   { ko: 'nvda-groq3-lpx-production-20260826.svg', en: 'nvda-groq3-lpx-production-20260826-en.svg', label: 'nvda-groq3-lpx-production', date: '20260826' },
