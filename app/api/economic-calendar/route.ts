@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { STATIC_US_ECO_EVENTS } from "@/lib/economicEventsStatic";
+import { STATIC_KR_ECO_EVENTS } from "@/lib/economicEventsKrStatic";
 
 export const maxDuration = 15;
 
@@ -41,6 +42,7 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   let from = searchParams.get("from") ?? "";
   let to   = searchParams.get("to")   ?? "";
+  const market = searchParams.get("market") ?? "us";
 
   if (!from || !to) {
     const now = new Date();
@@ -51,14 +53,13 @@ export async function GET(req: Request) {
     to   = `${now.getFullYear()}-${pad(m)}-${lastDay}`;
   }
 
-  // Economic events: always use hardcoded static list (Finnhub free tier often empty)
-  const economicEvents: EconomicEvent[] = STATIC_US_ECO_EVENTS.filter(
+  const staticList = market === "kr" ? STATIC_KR_ECO_EVENTS : STATIC_US_ECO_EVENTS;
+  const economicEvents: EconomicEvent[] = staticList.filter(
     (e) => e.date >= from && e.date <= to,
   );
 
-  // Earnings: Finnhub (real data, filtered to major symbols)
   let earningsEvents: EarningsEvent[] = [];
-  if (key) {
+  if (market === "us" && key) {
     try {
       const r = await fetch(
         `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&token=${key}`,
@@ -72,7 +73,7 @@ export async function GET(req: Request) {
   }
 
   return NextResponse.json(
-    { from, to, economicEvents, earningsEvents },
+    { from, to, economicEvents, earningsEvents, market },
     { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=3600" } },
   );
 }

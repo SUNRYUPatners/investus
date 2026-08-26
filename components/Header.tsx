@@ -1,12 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { LogoMark } from "@/components/LogoMark";
+import { MarketSwitcher } from "@/components/MarketSwitcher";
 import { useLocale } from "@/contexts/LocaleContext";
 import { isMarketOpen } from "@/lib/marketHours";
+import { parsePreviewPath } from "@/lib/markets/previewPath";
 
 export function Header() {
   const t = useLocale();
+  const pathname = usePathname() ?? "";
+  const previewMarket = parsePreviewPath(pathname).market;
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
   const [open, setOpen] = useState(false);
@@ -38,59 +43,63 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className="sticky top-0 z-50 border-b"
-      style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
-    >
-      <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
-        {/* 로고 — 모바일만 표시 */}
-        <div className="flex items-center gap-2 lg:hidden">
-          <LogoMark size="sm" />
-          <span
-            className="text-lg font-bold tracking-tight font-syne"
-            style={{ color: "var(--navy)" }}
-          >
-            Investus
+    <>
+      <header
+        className="sticky top-0 z-50 border-b"
+        style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
+      >
+        <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
+          {/* 로고 — 모바일만 표시 */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <LogoMark size="sm" />
+            <span
+              className="text-lg font-bold tracking-tight font-syne"
+              style={{ color: "var(--navy)" }}
+            >
+              Investus
+            </span>
+          </div>
+
+          {/* 데스크톱: 사이트 타이틀 */}
+          <span className="hidden lg:block text-sm font-semibold font-syne" style={{ color: "var(--text)" }}>
+            {t.header.tagline}
           </span>
-        </div>
 
-        {/* 데스크톱: 사이트 타이틀 */}
-        <span className="hidden lg:block text-sm font-semibold font-syne" style={{ color: "var(--text)" }}>
-          {t.header.tagline}
-        </span>
-
-        {/* EST 시계 + 마켓 상태 */}
-        <div className="flex items-center gap-2">
-          {mounted && (
-            <>
-              <span
-                className="text-xs font-mono-num tabular-nums font-medium"
-                style={{ color: "var(--text)" }}
-              >
-                {date} {time} EST
-              </span>
-              <span
-                className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                style={
-                  open
-                    ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
-                    : { background: "rgba(107,114,128,0.12)", color: "var(--muted)" }
-                }
-              >
-                {open ? "● OPEN" : "● CLOSED"}
-              </span>
-              {open && (
+          {/* EST 시계 + 마켓 상태 */}
+          <div className="flex items-center gap-2">
+            {mounted && (
+              <>
                 <span
-                  className="text-[9px] font-mono-num"
-                  style={{ color: "var(--muted)", opacity: 0.6 }}
+                  className="text-xs font-mono-num tabular-nums font-medium"
+                  style={{ color: "var(--text)" }}
                 >
-                  ↻ 60s
+                  {date} {time} EST
                 </span>
-              )}
-            </>
-          )}
+                <span
+                  className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                  style={
+                    open
+                      ? { background: "rgba(var(--up-rgb),0.12)", color: "var(--up)" }
+                      : { background: "rgba(107,114,128,0.12)", color: "var(--muted)" }
+                  }
+                >
+                  {open ? "● OPEN" : "● CLOSED"}
+                </span>
+                {open && (
+                  <span
+                    className="text-[9px] font-mono-num"
+                    style={{ color: "var(--muted)", opacity: 0.6 }}
+                  >
+                    ↻ 60s
+                  </span>
+                )}
+              </>
+            )}
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      {/* 미리보기만: 시장 전환. 본사이트 레이아웃은 그대로, 스위처만 추가 */}
+      {previewMarket && <MarketSwitcher current={previewMarket} />}
+    </>
   );
 }

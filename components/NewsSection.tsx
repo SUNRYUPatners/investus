@@ -21,18 +21,26 @@ function NewsSkeleton() {
   );
 }
 
-export function NewsSection({ news: initialNews }: { news?: NewsItem[] }) {
+export function NewsSection({
+  news: initialNews,
+  market = "us",
+}: {
+  news?: NewsItem[];
+  market?: string;
+}) {
   const [news, setNews]         = useState<NewsItem[]>(initialNews ?? []);
   const [expanded, setExpanded] = useState(false);
   const [loaded, setLoaded]     = useState(!!initialNews?.length);
 
   useEffect(() => {
     if (initialNews?.length) return; // already have server data
-    fetch("/api/news")
+    const url = market === "us" ? "/api/news" : `/api/news?market=${market}`;
+    setLoaded(false);
+    fetch(url)
       .then((r) => r.ok ? r.json() : [])
       .then((d) => { setNews(Array.isArray(d) ? d : []); setLoaded(true); })
       .catch(() => setLoaded(true));
-  }, [initialNews]);
+  }, [initialNews, market]);
 
   const visible = expanded ? news : news.slice(0, INITIAL_COUNT);
 

@@ -32,13 +32,27 @@ function PrevValue({ label, value, zones }: { label: string; value: number; zone
   );
 }
 
-export function FearGreedGauge({ data, locale }: { data: FearGreedData; locale?: Locale }) {
+export function FearGreedGauge({
+  data,
+  locale,
+  titleOverride,
+  subtitleOverride,
+  note,
+}: {
+  data: FearGreedData;
+  locale?: Locale;
+  titleOverride?: string;
+  subtitleOverride?: string;
+  note?: string;
+}) {
   const t    = getT(locale ?? "ko");
   const idx  = Math.max(0, getZoneIdx(data.value));
   const color = ZONE_COLORS[idx];
   const icon  = ZONE_ICONS[idx];
   const zone  = { color, icon, label: t.fearGreed.zones[idx].label, desc: t.fearGreed.zones[idx].desc };
   const dashOffset = C * (1 - data.value / 100);
+  const title = titleOverride ?? t.fearGreed.title;
+  const subtitle = subtitleOverride ?? t.fearGreed.subtitle;
 
   return (
     <div
@@ -49,19 +63,19 @@ export function FearGreedGauge({ data, locale }: { data: FearGreedData; locale?:
         className="flex items-center justify-between px-4 py-3 border-b"
         style={{ borderColor: "var(--border)" }}
       >
-        <SectionInfo title={t.fearGreed.sectionTitle} side="right">
-          <p className="font-bold mb-1" style={{ color: "#ffd166" }}>공포 & 탐욕 지수란?</p>
+        <SectionInfo title={titleOverride ?? t.fearGreed.sectionTitle} side="right">
+          <p className="font-bold mb-1" style={{ color: "#ffd166" }}>{title}</p>
           <p style={{ color: "var(--muted)" }}>지금 투자자들이 <b>얼마나 두려워하거나 욕심내는지</b>를 0~100으로 표현해요.</p>
+          {note && <p className="mt-2 text-[11px] leading-relaxed" style={{ color: "var(--mint)" }}>{note}</p>}
           <div className="mt-2 space-y-1">
-            <p>😱 <b>0~25 극단적 공포</b> — 공황 상태. 역사적으로 <b>매수 기회</b></p>
+            <p>😱 <b>0~25 극단적 공포</b> — 매도 심리가 매우 강함</p>
             <p>😟 <b>26~44 공포</b> — 불안 심리 우세</p>
             <p>😐 <b>45~55 중립</b> — 균형 상태</p>
             <p>😊 <b>56~74 탐욕</b> — 낙관 심리 우세</p>
-            <p>🤑 <b>75~100 극단적 탐욕</b> — 과열. 버핏이 현금 비중 늘리는 구간</p>
+            <p>🤑 <b>75~100 극단적 탐욕</b> — 과열 구간</p>
           </div>
-          <p className="mt-2 text-[10px]" style={{ color: "var(--muted)" }}>"남들이 탐욕스러울 때 공포를 느끼고, 남들이 공포스러울 때 탐욕스러워라" — 워런 버핏</p>
         </SectionInfo>
-        <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>{t.fearGreed.subtitle}</span>
+        <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>{subtitle}</span>
       </div>
 
       <div className="flex items-center gap-5 px-4 py-4">
@@ -84,7 +98,7 @@ export function FearGreedGauge({ data, locale }: { data: FearGreedData; locale?:
 
         <div className="flex-1 min-w-0">
           <p className="text-[15px] font-bold font-syne mb-1" style={{ color: "var(--text)" }}>
-            {t.fearGreed.title}
+            {title}
           </p>
           <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>{zone.desc}</p>
           <div

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition, useEffect } from "react";
+import { useState, useTransition, useEffect, useMemo } from "react";
 import { Search, X } from "lucide-react";
 import Link from "next/link";
 import { mockQuotes, type Quote, RECOMMENDED_SYMBOLS } from "@/lib/api";
@@ -14,29 +14,43 @@ import { NewsSection } from "@/components/NewsSection";
 import { EconomicCalendar } from "@/components/EconomicCalendar";
 import { Star } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
+import { useMarket } from "@/contexts/MarketContext";
 import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
 import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
+import { getMarketConfig } from "@/lib/markets/config";
 const UP   = "var(--up)";
 const DOWN = "var(--down)";
 
-const POPULAR = ["AAPL", "NVDA", "TSLA", "MSFT", "AMZN", "META", "GOOGL", "AMD"];
+const POPULAR_US = ["AAPL", "NVDA", "TSLA", "MSFT", "AMZN", "META", "GOOGL", "AMD"];
 
-// Static symbol registry — source of truth for symbol + name only
-const SYMBOL_REGISTRY = mockQuotes.map(({ symbol, name, volume, marketCap }) => ({
+// Static symbol registry — source of truth for symbol + name only (US)
+const SYMBOL_REGISTRY_US = mockQuotes.map(({ symbol, name, volume, marketCap }) => ({
   symbol, name, volume, marketCap,
 }));
+
+function formatPrice(price: number, market: string) {
+  if (market === "kr") return Math.round(price).toLocaleString("ko-KR") + "원";
+  if (market === "safe") {
+    return price >= 100
+      ? "$" + price.toLocaleString("en-US", { maximumFractionDigits: 0 })
+      : "$" + price.toFixed(2);
+  }
+  return "$" + price.toFixed(2);
+}
 
 function StockRow({
   stock,
   hasLivePrice,
   inWatchlist,
   onToggle,
+  market,
 }: {
   stock: Quote;
   hasLivePrice: boolean;
   inWatchlist: boolean;
   onToggle: () => void;
+  market: string;
 }) {
   const t     = useLocale();
   const pos   = stock.changePercent >= 0;
@@ -66,7 +80,7 @@ function StockRow({
           {hasLivePrice ? (
             <>
               <p className="text-sm font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
-                ${stock.price.toFixed(2)}
+                {formatPrice(stock.price, market)}
               </p>
               <p className="text-xs font-mono-num" style={{ color }}>
                 {pos ? "+" : ""}{stock.changePercent.toFixed(2)}%
@@ -99,6 +113,9 @@ function StockRow({
 
 export default function SearchPage() {
   const t = useLocale();
+  const market = useMarket();
+  const cfg = getMarketConfig(market);
+  const isUs = market === "us";
   const { user } = useAuth();
   const picksLocked = SUBSCRIPTION.enabled && user?.isPro !== true;
   const [query, setQuery]     = useState("");
@@ -106,15 +123,37 @@ export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const { list, toggle }      = useWatchlist();
 
+  const POPULAR = useMemo(
+    () => (isUs ? POPULAR_US : cfg.popular.map((s) => s.symbol)),
+    [isUs, cfg.popular],
+  );
+  const RECOMMENDED = useMemo(
+    () => (isUs ? RECOMMENDED_SYMBOLS : cfg.recommended.map((s) => s.symbol)),
+    [isUs, cfg.recommended],
+  );
+  const SYMBOL_REGISTRY = useMemo(() => {
+    if (isUs) return SYMBOL_REGISTRY_US;
+    const all = [...cfg.recommended, ...cfg.popular, ...cfg.indices];
+    const seen = new Set<string>();
+    return all
+      .filter((s) => {
+        if (seen.has(s.symbol)) return false;
+        seen.add(s.symbol);
+        return true;
+      })
+      .map((s) => ({ symbol: s.symbol, name: s.name, volume: "—", marketCap: "—" }));
+  }, [isUs, cfg]);
+
   // Live prices: localStorage 캐시 → 누락 심볼은 API 직접 fetch
   const [liveMap, setLiveMap] = useState<Map<string, Quote>>(new Map());
 
   useEffect(() => {
-    const ALL_SYMBOLS = [...new Set([...POPULAR, ...RECOMMENDED_SYMBOLS, ...SYMBOL_REGISTRY.map(s => s.symbol)])];
+    const ALL_SYMBOLS = [...new Set([...POPULAR, ...RECOMMENDED, ...SYMBOL_REGISTRY.map(s => s.symbol)])];
+    const cacheKey = cfg.marketCacheKey;
 
     const loadFromCache = (): Map<string, Quote> => {
       try {
-        const cached = localStorage.getItem("market-data-cache");
+        const cached = localStorage.getItem(cacheKey);
         if (cached) {
           const d = JSON.parse(cached) as { quotes?: Quote[] };
           if (Array.isArray(d?.quotes)) return new Map(d.quotes.map((q) => [q.symbol, q]));
@@ -127,6 +166,18 @@ export default function SearchPage() {
       const missing = ALL_SYMBOLS.filter((s) => !map.has(s));
       if (missing.length === 0) return;
       try {
+        if (!isUs) {
+          const r = await fetch(`/api/market-data?market=${market}`, { cache: "no-store" });
+          if (!r.ok) return;
+          const d = await r.json() as { quotes?: Quote[] };
+          if (!Array.isArray(d?.quotes)) return;
+          setLiveMap((prev) => {
+            const next = new Map(prev);
+            for (const q of d.quotes!) next.set(q.symbol, q);
+            return next;
+          });
+          return;
+        }
         const r = await fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`);
         const data = await r.json() as Record<string, { price: number; change: number; changePercent: number }>;
         setLiveMap((prev) => {
@@ -150,14 +201,14 @@ export default function SearchPage() {
     const init = async () => {
       const map = loadFromCache();
       if (map.size > 0) setLiveMap(map);
-      // 캐시 여부와 무관하게 누락 심볼 보완
       await fetchMissing(map);
     };
 
+    setLiveMap(new Map());
     init();
 
     const onStorage = (e: StorageEvent) => {
-      if (e.key !== "market-data-cache") return;
+      if (e.key !== cacheKey) return;
       const map = loadFromCache();
       setLiveMap(map);
       fetchMissing(map);
@@ -165,7 +216,7 @@ export default function SearchPage() {
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [market, cfg.marketCacheKey]);
 
   // Build enriched stock list: static symbol/name + live price (or no price flag)
   const enriched = SYMBOL_REGISTRY.map((s) => {
@@ -186,8 +237,9 @@ export default function SearchPage() {
     setApiResults([]);
   };
 
-  // Fetch Yahoo Finance when local results < 3
+  // Fetch Yahoo Finance when local results < 3 (US only)
   useEffect(() => {
+    if (!isUs) { setApiResults([]); return; }
     if (!searchQuery.trim() || searchQuery.length < 1) { setApiResults([]); return; }
     const lq2 = searchQuery.toLowerCase();
     const localCount = enriched.filter(({ stock }) =>
@@ -199,7 +251,6 @@ export default function SearchPage() {
       try {
         const r = await fetch(`/api/stock-search?q=${encodeURIComponent(searchQuery)}`);
         const data = await r.json() as { symbol: string; name: string; exchange: string }[];
-        // exclude symbols already in local registry
         const localSymbols = new Set(SYMBOL_REGISTRY.map(s => s.symbol));
         setApiResults((Array.isArray(data) ? data : []).filter(d => !localSymbols.has(d.symbol)));
       } catch { /* ignore */ }
@@ -207,7 +258,7 @@ export default function SearchPage() {
     }, 400);
     return () => clearTimeout(timer);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchQuery]);
+  }, [searchQuery, isUs]);
 
   const lq = searchQuery.toLowerCase();
   const results = searchQuery.trim()
@@ -217,14 +268,18 @@ export default function SearchPage() {
     : [];
 
   const popularStocks     = enriched.filter(({ stock }) => POPULAR.includes(stock.symbol));
-  const recommendedStocks = enriched.filter(({ stock }) => RECOMMENDED_SYMBOLS.includes(stock.symbol));
+  const recommendedStocks = enriched.filter(({ stock }) => RECOMMENDED.includes(stock.symbol));
   const showResults   = query.length > 0;
 
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <Header />
-      <TickerTape />
-      <EcoTickerTape />
+      {isUs && (
+        <>
+          <TickerTape />
+          <EcoTickerTape />
+        </>
+      )}
 
       <main className="max-w-[480px] mx-auto lg:max-w-none px-4 lg:px-8 pt-5 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start">
@@ -267,6 +322,7 @@ export default function SearchPage() {
                           hasLivePrice={hasLivePrice}
                           inWatchlist={list.includes(stock.symbol)}
                           onToggle={() => toggle(stock.symbol)}
+                        market={market}
                         />
                       ))}
                       {/* Yahoo Finance API fallback results */}
@@ -312,7 +368,7 @@ export default function SearchPage() {
               <div className="flex flex-col gap-6">
                 {/* 시장 뉴스 — 모바일 최상단 */}
                 <div className="lg:hidden">
-                  <NewsSection />
+                  <NewsSection market={market} />
                 </div>
 
                 <div>
@@ -339,7 +395,7 @@ export default function SearchPage() {
 
                 {/* 시장 뉴스 — 데스크톱: 추천주식 위 */}
                 <div className="hidden lg:block">
-                  <NewsSection />
+                  <NewsSection market={market} />
                 </div>
 
                 {/* 경제 캘린더 — 데스크톱 */}
@@ -376,6 +432,7 @@ export default function SearchPage() {
                         hasLivePrice={hasLivePrice}
                         inWatchlist={list.includes(stock.symbol)}
                         onToggle={() => toggle(stock.symbol)}
+                        market={market}
                       />
                     ))}
                     </SubscribeBlurOverlay>
@@ -398,6 +455,7 @@ export default function SearchPage() {
                         hasLivePrice={hasLivePrice}
                         inWatchlist={list.includes(stock.symbol)}
                         onToggle={() => toggle(stock.symbol)}
+                        market={market}
                       />
                     ))}
                   </div>

@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, TrendingUp, BarChart3 } from "lucide-react";
 import Link from "next/link";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+import { useMarket } from "@/contexts/MarketContext";
 import type { EconomicEvent, EarningsEvent } from "@/app/api/economic-calendar/route";
 
 type CalendarData = {
@@ -309,7 +310,11 @@ function DetailPanel({ dateStr, data, locale }: { dateStr: string; data: Calenda
 
 // ── Main Component ────────────────────────────────────────────────────────────
 export function EconomicCalendar() {
-  const locale = useLocaleCode();
+  const localeCode = useLocaleCode();
+  const market = useMarket();
+  const calMarket = market === "kr" ? "kr" : "us";
+  // 한국시장 미리보기에서는 캘린더 UI·일정 모두 한글
+  const locale = calMarket === "kr" ? "ko" : localeCode;
   const now = new Date();
   const [year,  setYear]  = useState(now.getFullYear());
   const [month, setMonth] = useState(now.getMonth() + 1);
@@ -324,7 +329,7 @@ export function EconomicCalendar() {
     const from = `${y}-${pad(m)}-01`;
     const to   = `${y}-${pad(m)}-${lastDay}`;
     try {
-      const r = await fetch(`/api/economic-calendar?from=${from}&to=${to}`);
+      const r = await fetch(`/api/economic-calendar?from=${from}&to=${to}&market=${calMarket}`);
       if (!r.ok) throw new Error("failed");
       const d = await r.json() as CalendarData;
       setData(d);
@@ -339,7 +344,7 @@ export function EconomicCalendar() {
       if (nearest) setSelected(nearest);
     } catch { setData(null); }
     setLoading(false);
-  }, []);
+  }, [calMarket]);
 
   useEffect(() => { load(year, month); }, [year, month, load]);
 
@@ -363,7 +368,9 @@ export function EconomicCalendar() {
         <div className="flex items-center gap-1.5">
           <BarChart3 className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} />
           <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
-            {locale === "ko" ? "경제 캘린더" : "Economic Calendar"}
+            {calMarket === "kr"
+              ? "한국 경제 캘린더"
+              : locale === "ko" ? "경제 캘린더" : "Economic Calendar"}
           </h2>
         </div>
         <div className="flex items-center gap-1">

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#4ade80"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="170" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="125" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#4ade80" text-anchor="middle">SK하이닉스</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.26</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">SK하이닉스는 HBM·AI 서버 스토리가 시총을 떠받치는 구조입니다</text>
+  <line x1="80" y1="140" x2="1000" y2="140" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="220" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#4ade80" text-anchor="middle">🧠</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#f9fafb" text-anchor="middle">HBM</text>
+  <text x="540" y="326" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">HBM은 AI 학습·추론 서버에 들어가는 고대역폭 메모리입니다. 수요가</text>
+  <text x="540" y="352" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">늘면 하이닉스 실적 기대도 같이 올라갑니다. 다만 기대가 이미 크면</text>
+  <text x="540" y="378" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">출하·판가 확인 전 변동성이 커질 수 있습니다.</text>
+  <line x1="80" y1="400" x2="1000" y2="400" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="420" width="300" height="200" rx="16" fill="#0a1420" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="468" font-family="Arial" font-size="34" text-anchor="middle">🚀</text>
+  <text x="210" y="510" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="middle">HBM 수요</text>
+  <text x="210" y="542" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">AI 서버</text>
+  <text x="210" y="580" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">고대역폭</text>
+  <rect x="390" y="420" width="300" height="200" rx="16" fill="#0a1420" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="468" font-family="Arial" font-size="34" text-anchor="middle">⚖️</text>
+  <text x="540" y="510" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="middle">눈높이</text>
+  <text x="540" y="542" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">선반영 여부</text>
+  <text x="540" y="580" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">변동성</text>
+  <rect x="720" y="420" width="300" height="200" rx="16" fill="#0a1420" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="468" font-family="Arial" font-size="34" text-anchor="middle">👀</text>
+  <text x="870" y="510" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="middle">체크포인트</text>
+  <text x="870" y="542" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">출하·판가</text>
+  <text x="870" y="580" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">고객 재고</text>
+  <rect x="60" y="640" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="688" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">"SK하이닉스는 삼성전자와 함께 한국 반도체 투톱입니다. AI가 잘되면</text>
+  <text x="540" y="716" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">하이닉스도 같이 본다는 연결고리만 잡으셔도 초보 관점에서는 충분합니다.</text>
+  <text x="540" y="744" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">설비투자 부담과 고객사 재고 조정이 나타나면 주가는 급격히 흔들릴 수</text>
+  <text x="540" y="772" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">있으니, 출하와 판가 코멘트를 우선 확인하세요."</text>
+  <rect x="60" y="840" width="960" height="110" rx="14" fill="#0a1420" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="902" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">HBM 기대가 시총을 떠받칩니다. 출하·판가가 확인되면 강세, 재고 조정이</text>
+  <text x="540" y="926" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">나오면 눈높이가 내려갈 수 있습니다. 숫자 확인 전엔 변동성을 각오하세요.</text>
+  <text x="540" y="994" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">SK하이닉스 · HBM·AI 서버 · 2026.08.26</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -7,11 +7,12 @@ export type LearnArticle = {
   tagColor: string;
   minutes: string;
   /** Optional series for hub grouping */
-  series?: "입문 7일" | "세금·계좌" | "매크로" | "분석·전략" | "자산·상품";
+  series?: "입문 7일" | "세금·계좌" | "매크로" | "분석·전략" | "자산·상품" | "시장별";
 };
 
 export const LEARN_SERIES: { id: NonNullable<LearnArticle["series"]>; title: string; blurb: string }[] = [
   { id: "입문 7일", title: "입문 로드맵", blurb: "처음이라면 이 순서로" },
+  { id: "시장별", title: "시장별 가이드", blurb: "한국·안전자산·부동산" },
   { id: "세금·계좌", title: "세금·계좌", blurb: "세후 수익률을 좌우" },
   { id: "매크로", title: "매크로·시장", blurb: "금리·지표·캘린더" },
   { id: "분석·전략", title: "분석·전략", blurb: "숫자·철학·체크리스트" },
@@ -28,6 +29,36 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     tagColor: "#10b981",
     minutes: "22분",
     series: "입문 7일",
+  },
+  {
+    href: "/learn/korea-stocks",
+    emoji: "🇰🇷",
+    title: "한국주식 투자 입문 가이드",
+    desc: "코스피·시총상위·수급·장전·장중·장후, 미국주식과의 차이.",
+    tag: "한국",
+    tagColor: "#10b981",
+    minutes: "22분",
+    series: "시장별",
+  },
+  {
+    href: "/learn/safe-assets",
+    emoji: "🛡️",
+    title: "안전자산 가이드 — 비트코인·이더·금·은",
+    desc: "가상화폐와 현물을 나눠 보기, 금리·달러·ETF 수급, 비중.",
+    tag: "안전자산",
+    tagColor: "#a78bfa",
+    minutes: "24분",
+    series: "시장별",
+  },
+  {
+    href: "/learn/korea-real-estate",
+    emoji: "🏠",
+    title: "한국 부동산 입문 — 매매·전세·정책",
+    desc: "공급·전세·대출·세제 삼각 축, 실수요 vs 투자 수요.",
+    tag: "부동산",
+    tagColor: "#34d399",
+    minutes: "22분",
+    series: "시장별",
   },
   {
     href: "/learn/myths",

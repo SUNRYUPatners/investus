@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "@/contexts/LocaleContext";
+import { getT } from "@/lib/i18n";
 import Link from "next/link";
 import { ThumbsUp, MessageCircle, Lock, ShieldCheck, Upload, User, Sparkles, Users, TrendingUp, Send, X, EyeOff, FileCheck, Heart, Pencil, Check } from "lucide-react";
 import { Header } from "@/components/Header";
@@ -11,8 +12,9 @@ import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { useAuth } from "@/hooks/useAuth";
 import { getSupabase } from "@/lib/supabase";
 import { CREATORS } from "@/lib/creators";
-import { MOCK_POSTS, MOCK_COMMENTS, LATEST_UPDATE, type Post, type Comment } from "@/lib/wallPosts";
-import { MOCK_ANALYST_POSTS, MOCK_ANALYST_COMMENTS } from "@/lib/analystPosts";
+import { type Post, type Comment } from "@/lib/wallPosts";
+import { useMarket } from "@/contexts/MarketContext";
+import { getWallSeeds } from "@/lib/markets/wallSeeds";
 
 // Attach the current Supabase JWT to every authenticated API call
 async function authHeaders(extra: Record<string, string> = {}): Promise<HeadersInit> {
@@ -54,23 +56,13 @@ function getRelativeTime(ts: number, w: WallT): string {
 
 type ApiComment = { id: number; post_id: number; is_mine: boolean; nickname: string; content: string; likes: number; created_at: string; parent_id?: number | null };
 
-// ── 서학개미 인기 종목 + ETF ──────────────────────────────────────────────────
-const ALL_SYMBOLS = [
-  "NVDA", "TSLA", "SPCX", "AAPL", "PLTR", "MSFT", "META",
-  "AMZN", "GOOGL", "AMD", "AVGO", "COIN", "SMCI",
-  "RKLB", "IONQ", "CEG",
-  "VOO", "SPY", "QQQ", "SCHD",
-];
-
-
-
 // ── Comment Modal ─────────────────────────────────────────────────────────────
 type CommentWithReplies = Comment & { parentId?: number | null; replies?: Comment[] };
 
-function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: number; onClose: () => void }) {
+function CommentModal({ post, realPostId, onClose, commentsMap = {}, wall }: { post: Post; realPostId?: number; onClose: () => void; commentsMap?: Record<number, Comment[]>; wall?: WallT }) {
   const { user } = useAuth();
   const t = useLocale();
-  const w = t.wall;
+  const w = wall ?? t.wall;
   const [allComments, setAllComments] = useState<CommentWithReplies[]>([]);
   const [likedComments, setLikedComments] = useState<Set<number>>(new Set());
   const [input, setInput] = useState("");
@@ -102,9 +94,9 @@ function CommentModal({ post, realPostId, onClose }: { post: Post; realPostId?: 
         })
         .catch(() => {});
     } else {
-      setAllComments((MOCK_COMMENTS[post.id] ?? []).map((c) => ({ ...c, parentId: null })));
+      setAllComments((commentsMap[post.id] ?? []).map((c) => ({ ...c, parentId: null })));
     }
-  }, [post.id, realPostId]);
+  }, [post.id, realPostId, commentsMap]);
 
   useEffect(() => {
     const id = setInterval(() => setTick((tick) => tick + 1), 60_000);
@@ -316,7 +308,7 @@ const FALLBACK_CHIPS = [
   "목표주가 얼마로 보면 돼?",
 ];
 
-function AskAI({ symbol }: { symbol: string }) {
+function AskAI({ symbol, wall }: { symbol: string; wall?: WallT }) {
   const router = useRouter();
   const [question, setQuestion] = useState("");
   const [answer, setAnswer]     = useState("");
@@ -325,7 +317,7 @@ function AskAI({ symbol }: { symbol: string }) {
   const [chips, setChips]       = useState<string[]>(FALLBACK_CHIPS);
   const inputRef                = useRef<HTMLInputElement>(null);
   const t = useLocale();
-  const w = t.wall;
+  const w = wall ?? t.wall;
 
   useEffect(() => {
     try {
@@ -491,13 +483,13 @@ type AnalystPost    = { id: number; alias: string; content: string; symbol: stri
 type AnalystComment = { id: number; alias: string; content: string; created_at: string };
 type CreatorSort = "popular" | "return" | "views" | "subscribers" | "newest";
 
-function computeDefaultSymbol(): string {
+function computeDefaultSymbol(posts: Post[], fallback = "AAPL"): string {
   if (typeof window !== "undefined") {
     const q = new URLSearchParams(window.location.search).get("symbol");
-    if (q && /^[A-Za-z.]{1,10}$/.test(q)) return q.toUpperCase();
+    if (q && q.length >= 1 && q.length <= 24) return q;
   }
-  if (MOCK_POSTS.length === 0) return "AAPL";
-  return MOCK_POSTS.reduce((best, post) =>
+  if (posts.length === 0) return fallback;
+  return posts.reduce((best, post) =>
     post.createdAt > best.createdAt ? post : best
   ).symbol;
 }
@@ -513,13 +505,35 @@ function computeDefaultTab(): MainTab {
 export default function WallPage() {
   const { user, verify, loginWithOAuth } = useAuth();
   const t  = useLocale();
-  const w  = t.wall;
+  const market = useMarket();
+  // 한국·안전자산·부동산 미리보기는 피드 UI 한글 고정 (쿠키 en이어도)
+  const wBase = market === "us" ? t.wall : getT("ko").wall;
+  const w = market === "us" ? wBase : {
+    ...wBase,
+    analystDesc: market === "kr"
+      ? "공개석상에서 못하는 말, 여기선 할 수 있어요.\n코스피·코스닥 종목을 중심으로 애널리스트 의견을 나눕니다."
+      : market === "safe"
+        ? "공개석상에서 못하는 말, 여기선 할 수 있어요.\n비트코인·이더·금·은 등 안전자산을 중심으로 나눕니다."
+        : "공개석상에서 못하는 말, 여기선 할 수 있어요.\n매매·전세·정책 이슈를 중심으로 나눕니다.",
+    notice: market === "kr"
+      ? "종목토론은 보유·관심 인증 후 참여할 수 있어요. 티커 대신 종목명으로 표시됩니다."
+      : wBase.notice,
+  };
+  const seeds = useMemo(() => getWallSeeds(market), [market]);
+  const MOCK_POSTS = seeds.posts;
+  const MOCK_COMMENTS = seeds.comments;
+  const MOCK_ANALYST_POSTS = seeds.analystPosts;
+  const MOCK_ANALYST_COMMENTS = seeds.analystComments;
+  const ALL_SYMBOLS = seeds.symbols;
+  const LATEST_UPDATE = seeds.latestUpdate;
+  const isUs = market === "us";
+  const nameOnlyChips = market === "kr" || market === "safe" || market === "kr-re";
   const [mainTab, setMainTabRaw]          = useState<MainTab>(computeDefaultTab);
   const setMainTab = (tab: MainTab) => {
     setMainTabRaw(tab);
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   };
-  const [selected, setSelected]           = useState(computeDefaultSymbol);
+  const [selected, setSelected]           = useState(() => computeDefaultSymbol(getWallSeeds(market).posts, getWallSeeds(market).symbols[0] ?? "AAPL"));
   const [liked, setLiked]                 = useState<Set<number>>(new Set());
   const [showVerify, setShowVerify]       = useState(false);
   const [verifyMode, setVerifyMode]       = useState<VerifyMode>("none");
@@ -571,6 +585,11 @@ export default function WallPage() {
     } catch {}
   }, []);
 
+  // 시장 전환 시 종목 칩·시드 리셋
+  useEffect(() => {
+    setSelected(computeDefaultSymbol(MOCK_POSTS, ALL_SYMBOLS[0] ?? "AAPL"));
+  }, [market]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Precompute latest post time per symbol (for sort + NEW badge)
   const latestPostTime = useMemo(() => {
     const map: Record<string, number> = {};
@@ -578,12 +597,12 @@ export default function WallPage() {
       if (!map[p.symbol] || p.createdAt > map[p.symbol]) map[p.symbol] = p.createdAt;
     }
     return map;
-  }, []);
+  }, [MOCK_POSTS]);
 
   // Sort symbols: most recent post first
   const sortedSymbols = useMemo(() =>
     [...ALL_SYMBOLS].sort((a, b) => (latestPostTime[b] ?? 0) - (latestPostTime[a] ?? 0)),
-  [latestPostTime]);
+  [latestPostTime, ALL_SYMBOLS]);
 
   // NEW badge: symbol has posts from today's update that user hasn't seen
   const isNew = (sym: string) => {
@@ -680,6 +699,14 @@ export default function WallPage() {
   useEffect(() => {
     if (mainTab !== "analyst") return;
     setAnalystLoading(true);
+    if (!isUs) {
+      const fallback = [...MOCK_ANALYST_POSTS].sort(
+        (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      );
+      setAnalystPosts(fallback);
+      setAnalystLoading(false);
+      return;
+    }
     authHeaders().then((h) =>
       fetch("/api/analyst/posts", { headers: h })
         .then((r) => r.json())
@@ -697,7 +724,7 @@ export default function WallPage() {
         })
         .finally(() => setAnalystLoading(false))
     );
-  }, [mainTab]);
+  }, [mainTab, isUs, MOCK_ANALYST_POSTS]);
 
   // ── Analyst handlers ────────────────────────────────────────────────────────
   const toBase64 = (file: File): Promise<{ base64: string; mime: string }> =>
@@ -1002,8 +1029,10 @@ export default function WallPage() {
     likes:        r.likes,
     comments:     r.comments,
   }));
-  const posts = [...realAsPost, ...MOCK_POSTS.filter((p) => p.symbol === selected)]
-    .sort((a, b) => b.createdAt - a.createdAt);
+  const posts = [
+    ...(isUs ? realAsPost : []),
+    ...MOCK_POSTS.filter((p) => p.symbol === selected),
+  ].sort((a, b) => b.createdAt - a.createdAt);
 
   const mappedCreators: import("@/lib/creators").Creator[] = apiCreators.map((d) => ({
     id: d.id,
@@ -1232,21 +1261,23 @@ export default function WallPage() {
                         boxShadow: "0 1px 4px rgba(var(--down-rgb),0.45)",
                       }}>N</span>
                     )}
-                    <span className="text-xs font-bold font-mono-num leading-none"
+                    <span className={`text-xs font-bold leading-none ${nameOnlyChips ? "" : "font-mono-num"}`}
                       style={{ color: active ? "#fff" : "var(--text)" }}>
-                      {sym}
+                      {nameOnlyChips ? sym : sym}
                     </span>
-                    <span className="text-[9px] leading-none"
-                      style={{ color: active ? "rgba(255,255,255,0.85)" : "var(--muted)" }}>
-                      {w.stockNames[sym] ?? sym}
-                    </span>
+                    {!nameOnlyChips && (
+                      <span className="text-[9px] leading-none"
+                        style={{ color: active ? "rgba(255,255,255,0.85)" : "var(--muted)" }}>
+                        {w.stockNames[sym] ?? sym}
+                      </span>
+                    )}
                   </button>
                 );
               })}
             </div>
 
             <div className="px-4 mb-2">
-              <AskAI symbol={selected} />
+              <AskAI symbol={selected} wall={w} />
             </div>
 
             <div className="px-4">
@@ -1673,13 +1704,21 @@ export default function WallPage() {
                       className="flex-1 py-2 px-3 rounded-xl text-xs outline-none border"
                       style={{ background: "var(--bg)", borderColor: "rgba(124,58,237,0.3)", color: "var(--muted)" }}>
                       <option value="">종목·지수 선택 (선택사항)</option>
-                      <optgroup label="🇰🇷 한국 지수">
-                        <option value="KOSPI">KOSPI — 코스피</option>
-                        <option value="KOSDAQ">KOSDAQ — 코스닥</option>
-                      </optgroup>
-                      <optgroup label="🇺🇸 미국 종목">
-                        {ALL_SYMBOLS.map((s) => <option key={s} value={s}>{s}</option>)}
-                      </optgroup>
+                      {isUs ? (
+                        <>
+                          <optgroup label="🇰🇷 한국 지수">
+                            <option value="KOSPI">KOSPI — 코스피</option>
+                            <option value="KOSDAQ">KOSDAQ — 코스닥</option>
+                          </optgroup>
+                          <optgroup label="🇺🇸 미국 종목">
+                            {ALL_SYMBOLS.map((s) => <option key={s} value={s}>{s}</option>)}
+                          </optgroup>
+                        </>
+                      ) : (
+                        <optgroup label={market === "kr" ? "한국 종목" : market === "safe" ? "안전자산" : "부동산"}>
+                          {ALL_SYMBOLS.map((s) => <option key={s} value={s}>{s}</option>)}
+                        </optgroup>
+                      )}
                     </select>
                     <button
                       onClick={handleAnalystPost}

@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState, useTransition } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "@/contexts/LocaleContext";
+import { parsePreviewPath, previewHref } from "@/lib/markets/previewPath";
+import type { MarketId } from "@/lib/markets/types";
 
 export function BottomNav() {
   const pathname = usePathname();
@@ -12,23 +14,33 @@ export function BottomNav() {
   const [pending, setPending] = useState<string | null>(null);
   const lastTap = useRef<{ href: string; time: number } | null>(null);
 
-  // Clear pending when navigation finishes
+  const { market } = parsePreviewPath(pathname);
+  const inPreview = market != null;
+
   useEffect(() => { setPending(null); }, [pathname]);
 
-  const navItems = [
-    { href: "/",           emoji: "📊", label: t.nav.home      },
-    { href: "/search",     emoji: "🔍", label: t.nav.search    },
-    { href: "/portfolio",  emoji: "💼", label: t.nav.portfolio },
-    { href: "/wall",       emoji: "💬", label: t.nav.wall      },
-    { href: "/insight",    emoji: "💡", label: t.nav.insight   },
-    { href: "/more",       emoji: "···", label: t.nav.more     },
-  ];
+  const navItems = inPreview
+    ? ([
+        { href: previewHref(market as MarketId, "home"),      emoji: "📊", label: t.nav.home,      tab: "home" as const },
+        { href: previewHref(market as MarketId, "search"),    emoji: "🔍", label: t.nav.search,    tab: "search" as const },
+        { href: previewHref(market as MarketId, "portfolio"), emoji: "💼", label: t.nav.portfolio, tab: "portfolio" as const },
+        { href: previewHref(market as MarketId, "wall"),      emoji: "💬", label: t.nav.wall,      tab: "wall" as const },
+        { href: previewHref(market as MarketId, "insight"),   emoji: "💡", label: t.nav.insight,   tab: "insight" as const },
+        { href: previewHref(market as MarketId, "more"),      emoji: "···", label: t.nav.more,     tab: "more" as const },
+      ])
+    : ([
+        { href: "/",          emoji: "📊", label: t.nav.home,      tab: "home" as const },
+        { href: "/search",    emoji: "🔍", label: t.nav.search,    tab: "search" as const },
+        { href: "/portfolio", emoji: "💼", label: t.nav.portfolio, tab: "portfolio" as const },
+        { href: "/wall",      emoji: "💬", label: t.nav.wall,      tab: "wall" as const },
+        { href: "/insight",   emoji: "💡", label: t.nav.insight,   tab: "insight" as const },
+        { href: "/more",      emoji: "···", label: t.nav.more,     tab: "more" as const },
+      ]);
 
-  // Prefetch all routes so JS chunks are ready before tap
   useEffect(() => {
     navItems.forEach(({ href }) => router.prefetch(href));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [market]);
 
   return (
     <nav
@@ -41,11 +53,14 @@ export function BottomNav() {
       }}
     >
       <div className="max-w-[480px] mx-auto flex items-center h-[52px]">
-        {navItems.map(({ href, emoji, label }) => {
-          // Use pending override for instant visual feedback on tap
+        {navItems.map(({ href, emoji, label, tab }) => {
           const isActive = pending
             ? href === pending
-            : (href === "/" ? pathname === "/" : pathname.startsWith(href));
+            : inPreview
+              ? (tab === "home"
+                  ? pathname === href || pathname === `/preview/${market}`
+                  : pathname.startsWith(href))
+              : (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
           return (
             <button
@@ -59,16 +74,7 @@ export function BottomNav() {
                   now - lastTap.current.time < 400;
                 lastTap.current = { href, time: now };
 
-                if (isDoubleTap) {
-                  // 더블탭 → 무조건 루트로
-                  if (pathname !== href) {
-                    setPending(href);
-                    startTransition(() => { router.push(href); });
-                  } else {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }
-                } else if (isActive && !pending) {
-                  // 싱글탭 (이미 활성) → 서브페이지면 루트로, 루트면 맨위로
+                if (isDoubleTap || (isActive && !pending)) {
                   if (pathname !== href) {
                     setPending(href);
                     startTransition(() => { router.push(href); });
@@ -102,7 +108,6 @@ export function BottomNav() {
           );
         })}
       </div>
-      {/* Explicit safe-area fill — prevents page content from showing below nav on iOS */}
       <div style={{ height: "env(safe-area-inset-bottom)", background: "var(--card)" }} />
     </nav>
   );

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#60a5fa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.08.26 한국장 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">시총 탑10이 지수를 좌우합니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">삼성·하이닉스·LG엔솔·삼바·현대차·기아 축</text>
+  <text x="970" y="188" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">TOP10</text>
+
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#0a1420" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">반도체 — AI 메모리 수급 공방</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">삼전·하이닉스가 외국인 수급의 바로미터입니다</text>
+  <text x="970" y="312" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">SEMI</text>
+
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#0a1420" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#fb923c"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c">자동차 — 해외 판매·믹스</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">현대차·기아의 미국·유럽 판매를 같이 보세요</text>
+  <text x="970" y="436" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">AUTO</text>
+
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#0a1420" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">바이오·금융·플랫폼</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">삼바·셀트리온·KB·신한·NAVER 흐름</text>
+  <text x="970" y="560" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">MIX</text>
+
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#0a1420" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">장전·장중·장후 체크</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">개장 전 뉴스 → 장중 수급 → 마감 후 정리</text>
+  <text x="970" y="684" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">세션</text>
+
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#0a1420" stroke="#f472b6" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#f472b6"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f472b6">앞으로 볼 것</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">수출·환율·외국인·실적 코멘트를 추적하세요</text>
+  <text x="970" y="808" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f472b6" text-anchor="end">WATCH</text>
+
+  <text x="540" y="1010" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">한국 시총 탑10 · 장전·장중·장후 브리핑</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

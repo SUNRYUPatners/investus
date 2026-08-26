@@ -180,3 +180,26 @@ description: >-
 - 워크플로: `.claude/commands/report-update.md`
 - **비주얼 레퍼런스 (직접 Read할 것): 메인 `public/charts/*20260702*.svg`, 서브 `*20260703*.svg`** — `*20260704*.svg`는 금지
 - 룰: `.cursor/rules/investus-report-update.mdc`
+
+---
+
+## 멀티마켓 미리보기 (`/preview/[market]`) — 2026-08-26~
+
+프로덕션 `/` 미국 홈은 그대로 두고, 미리보기는 `/preview/us|kr|safe|kr-re` 에서만 확장한다. **배포 요청이 없으면 `deploy.sh` 실행 금지.**
+
+### 시장별 리포트·피드 갱신 리듬
+
+| 시장 | 시점 | 시드 파일 | 내용 축 |
+|------|------|-----------|---------|
+| `us` | 기존과 동일 (미국장) | `lib/reports.ts`, `wallPosts.ts`, `analystPosts.ts` | Mag7·매크로 |
+| `kr` | **한국장 마감 후** (KST ~15:30+) | `lib/reports-kr.ts`, `wallPosts-markets.ts`, `analystPosts-markets.ts` | 시총 탑7 (삼전·하이닉스·현대차 등) |
+| `safe` | **매일 아침 9시 KST** 전일·새벽 뉴스 분석 | `lib/reports-safe.ts` + markets wall/analyst | BTC·ETH·SOL + 금·은·구리 |
+| `kr-re` | 정책·시세 이슈 있을 때 (또는 일일) | `lib/reports-kr-re.ts` + markets wall/analyst | 공급·전세·세제·지역 |
+
+요청 예: `한국주식 리포트 업데이트`, `안전자산 리포트 업데이트`, `부동산 리포트 업데이트`.
+
+미리보기 URL: `/preview/kr`, `/preview/safe`, `/preview/kr-re` (+ `/wall`). 이모지 스위처로 전환. 뉴스·시세는 `?market=` API 분기.
+
+**미국(`/preview/us`)은 본사이트(`/`)와 동일 레이아웃·동일 컴포넌트** — 시장 스위처만 추가. 내용이 달라지면 안 됨.
+
+**한국 시총 탑10** (브리핑·리포트·인기종목 기준): 삼성전자 · SK하이닉스 · LG에너지솔루션 · 삼성바이오로직스 · 현대차 · 기아 · 셀트리온 · KB금융 · 신한지주 · NAVER. 코스피 히트맵은 S&P500 히트맵과 동일 UI(섹터 타일). 리포트 SVG는 `public/charts/*-kr-*.svg` 로 함께 생성.

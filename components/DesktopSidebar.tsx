@@ -6,10 +6,13 @@ import { useEffect, useState } from "react";
 import { LogoMark } from "@/components/LogoMark";
 import { useLocale } from "@/contexts/LocaleContext";
 import { isMarketOpen } from "@/lib/marketHours";
+import { parsePreviewPath, previewHref } from "@/lib/markets/previewPath";
+import type { MarketId } from "@/lib/markets/types";
+import { getMarketConfig } from "@/lib/markets/config";
 
 function useClock() {
-  const [time, setTime]   = useState("");
-  const [open, setOpen]   = useState(false);
+  const [time, setTime] = useState("");
+  const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -18,7 +21,9 @@ function useClock() {
       const now = new Date();
       const t = now.toLocaleTimeString("en-US", {
         timeZone: "America/New_York",
-        hour: "2-digit", minute: "2-digit", second: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
         hour12: false,
       });
       setTime(t);
@@ -37,42 +42,63 @@ export function DesktopSidebar() {
   const pathname = usePathname();
   const router = useRouter();
   const { time, open, mounted } = useClock();
+  const { market } = parsePreviewPath(pathname);
+  const inPreview = market != null;
 
-  const NAV = [
-    { href: "/",          emoji: "📊", label: t.nav.home      },
-    { href: "/search",    emoji: "🔍", label: t.nav.search    },
-    { href: "/portfolio", emoji: "💼", label: t.nav.portfolio },
-    { href: "/wall",      emoji: "💬", label: t.nav.wall      },
-    { href: "/insight",   emoji: "💡", label: t.nav.insight   },
-    { href: "/more",      emoji: "···", label: t.nav.more     },
-  ];
+  const NAV = inPreview
+    ? ([
+        { href: previewHref(market as MarketId, "home"), emoji: "📊", label: t.nav.home, tab: "home" as const },
+        { href: previewHref(market as MarketId, "search"), emoji: "🔍", label: t.nav.search, tab: "search" as const },
+        { href: previewHref(market as MarketId, "portfolio"), emoji: "💼", label: t.nav.portfolio, tab: "portfolio" as const },
+        { href: previewHref(market as MarketId, "wall"), emoji: "💬", label: t.nav.wall, tab: "wall" as const },
+        { href: previewHref(market as MarketId, "insight"), emoji: "💡", label: t.nav.insight, tab: "insight" as const },
+        { href: previewHref(market as MarketId, "more"), emoji: "···", label: t.nav.more, tab: "more" as const },
+      ])
+    : ([
+        { href: "/", emoji: "📊", label: t.nav.home, tab: "home" as const },
+        { href: "/search", emoji: "🔍", label: t.nav.search, tab: "search" as const },
+        { href: "/portfolio", emoji: "💼", label: t.nav.portfolio, tab: "portfolio" as const },
+        { href: "/wall", emoji: "💬", label: t.nav.wall, tab: "wall" as const },
+        { href: "/insight", emoji: "💡", label: t.nav.insight, tab: "insight" as const },
+        { href: "/more", emoji: "···", label: t.nav.more, tab: "more" as const },
+      ]);
+
+  const homeHref = inPreview ? previewHref(market as MarketId, "home") : "/";
+  const tagline = inPreview
+    ? `${getMarketConfig(market as MarketId).emoji} ${getMarketConfig(market as MarketId).labelKo} · 미리보기`
+    : t.more.tagline.split(" · ")[0];
 
   return (
     <aside
       className="hidden lg:flex flex-col fixed top-0 left-0 h-full w-64 border-r z-40"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
-      {/* Logo */}
       <div className="px-5 py-5 border-b" style={{ borderColor: "var(--border)" }}>
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href={homeHref} className="flex items-center gap-2.5">
           <LogoMark size="md" />
           <div>
-            <div className="text-base font-bold tracking-tight font-syne leading-tight"
-              style={{ color: "var(--navy)" }}>
+            <div
+              className="text-base font-bold tracking-tight font-syne leading-tight"
+              style={{ color: "var(--navy)" }}
+            >
               Investus
             </div>
             <div className="text-[11px] font-medium leading-none mt-0.5" style={{ color: "var(--muted)" }}>
-              {t.more.tagline.split(" · ")[0]}
+              {tagline}
             </div>
           </div>
         </Link>
       </div>
 
-      {/* Nav items */}
       <nav className="flex-1 px-3 py-4 overflow-y-auto">
-        {NAV.map(({ href, emoji, label }) => {
-          const isActive =
-            href === "/" ? pathname === "/" : pathname.startsWith(href);
+        {NAV.map(({ href, emoji, label, tab }) => {
+          const isActive = inPreview
+            ? tab === "home"
+              ? pathname === href || pathname === `/preview/${market}`
+              : pathname.startsWith(href)
+            : href === "/"
+              ? pathname === "/"
+              : pathname.startsWith(href);
           return (
             <button
               key={href}
@@ -95,28 +121,23 @@ export function DesktopSidebar() {
                 {label}
               </span>
               {isActive && (
-                <span
-                  className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                  style={{ background: "var(--mint)" }}
-                />
+                <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--mint)" }} />
               )}
             </button>
           );
         })}
       </nav>
 
-      {/* Bottom: clock + market status */}
-      <div
-        className="px-5 py-4 border-t space-y-3 flex-shrink-0"
-        style={{ borderColor: "var(--border)" }}
-      >
+      <div className="px-5 py-4 border-t space-y-3 flex-shrink-0" style={{ borderColor: "var(--border)" }}>
         {mounted && (
           <>
             <div className="flex items-center justify-between">
               <span className="text-xs font-mono-num tabular-nums font-medium" style={{ color: "var(--text)" }}>
                 {time}
               </span>
-              <span className="text-[10px] font-semibold" style={{ color: "var(--muted)" }}>EST</span>
+              <span className="text-[10px] font-semibold" style={{ color: "var(--muted)" }}>
+                EST
+              </span>
             </div>
             <div
               className="w-full py-2 rounded-xl text-center text-[11px] font-bold"
@@ -130,7 +151,6 @@ export function DesktopSidebar() {
             </div>
           </>
         )}
-
         <p className="text-[10px] text-center font-medium" style={{ color: "var(--muted)" }}>
           investus.kr × SRP
         </p>

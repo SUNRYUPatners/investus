@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#60a5fa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="170" height="38" rx="19" fill="#60a5fa30" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="125" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#60a5fa" text-anchor="middle">정책</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.26</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f9fafb" text-anchor="middle">공급·재건축 발표는 기대와 실행 속도가 가격을 가릅니다</text>
+  <line x1="80" y1="140" x2="1000" y2="140" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="220" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#60a5fa" text-anchor="middle">📜</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#f9fafb" text-anchor="middle">공급정책</text>
+  <text x="540" y="326" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">공급 확대 발표는 '당장 집이 늘어난다'기보다 '앞으로 늘어날 수</text>
+  <text x="540" y="352" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">있다'는 기대에 가깝습니다. 재건축도 절차·이주·공사비 때문에</text>
+  <text x="540" y="378" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">체감까지 시간이 걸립니다.</text>
+  <line x1="80" y1="400" x2="1000" y2="400" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="420" width="300" height="200" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="210" y="468" font-family="Arial" font-size="34" text-anchor="middle">📢</text>
+  <text x="210" y="510" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="middle">발표</text>
+  <text x="210" y="542" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">심리 먼저</text>
+  <text x="210" y="580" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">헤드라인</text>
+  <rect x="390" y="420" width="300" height="200" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="468" font-family="Arial" font-size="34" text-anchor="middle">⏱️</text>
+  <text x="540" y="510" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="middle">실행</text>
+  <text x="540" y="542" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">인허가·착공</text>
+  <text x="540" y="580" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">시차</text>
+  <rect x="720" y="420" width="300" height="200" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="870" y="468" font-family="Arial" font-size="34" text-anchor="middle">🧱</text>
+  <text x="870" y="510" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="middle">공사비</text>
+  <text x="870" y="542" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이주</text>
+  <text x="870" y="580" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">현실 변수</text>
+  <rect x="60" y="640" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="688" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">"초보자께서는 헤드라인만 보고 매수하기보다, 실제 인허가·분양·</text>
+  <text x="540" y="716" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">입주 일정표를 같이 보셔야 합니다. 규제 완화가 나와도 사업이</text>
+  <text x="540" y="744" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">바로 속도가 나지 않으면 관망이 길어질 수 있습니다.</text>
+  <text x="540" y="772" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">금리·대출 규제가 겹치면 거래가 멈추기도 합니다."</text>
+  <rect x="60" y="840" width="960" height="110" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="902" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">기대만 있고 실행이 늦으면 관망, 사업이 가속되면 선호지 강세입니다.</text>
+  <text x="540" y="926" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">다음에 시행령·안전진단·공사비를 확인하세요.</text>
+  <text x="540" y="994" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">정책 · 공급·재건축 · 2026.08.26</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

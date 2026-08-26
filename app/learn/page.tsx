@@ -7,13 +7,13 @@ import { LEARN_ARTICLES, LEARN_SERIES } from "@/lib/learnArticles";
 import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 
 export const metadata: Metadata = {
-  title: "투자 지식 허브 — 미국주식·ETF·세금·밸류에이션 가이드 | 인베스트어스",
+  title: "투자 지식 허브 — 미국·한국주식·안전자산·부동산·ETF 가이드 | 인베스트어스",
   description:
-    "미국주식 입문, ETF, REITs, 옵션, 실적시즌, ISA·연금, 매크로, 체크리스트까지 Investus 오리지널 심화 가이드.",
+    "미국주식·한국주식·안전자산(비트코인·금)·한국 부동산·ETF·세금까지 Investus 오리지널 심화 가이드.",
   alternates: { canonical: "https://www.investus.kr/learn" },
   openGraph: {
     title: "투자 지식 허브 | 인베스트어스 Investus",
-    description: "미국주식 투자 심화 가이드 모음",
+    description: "미국·한국·안전자산·부동산 투자 심화 가이드 모음",
     url: "https://www.investus.kr/learn",
     type: "website",
   },

@@ -131,6 +131,8 @@ import {
   reportBadgeSubject,
   type Report,
 } from "@/lib/reports";
+import { getReportsForMarket } from "@/lib/markets/reports";
+import type { MarketId } from "@/lib/markets/types";
 
 function SwipeCloseHint() {
   const t = useLocale();
@@ -572,13 +574,14 @@ function DailyQuote() {
 
 // ── ReportFeed (main export) ──────────────────────────────────────────────
 
-export function ReportFeed({ lang }: { lang?: "ko" | "en" } = {}) {
+export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market?: MarketId } = {}) {
   const { user } = useAuth();
   const isPro = user?.isPro === true;
   const t = useLocale();
   const [showOlder, setShowOlder] = useState(false);
 
-  const recent = SEED_REPORTS.filter(isWithinWeek);
+  const seed = market === "us" ? SEED_REPORTS : getReportsForMarket(market);
+  const recent = seed.filter(isWithinWeek);
 
   const latestDateKey = recent.reduce((max, r) => {
     const d = getDateKey(r);

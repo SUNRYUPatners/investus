@@ -182,6 +182,55 @@ export async function GET(req: Request) {
   const refresh = url.searchParams.has("refresh");
   /** warm=1: 장마감 크론 — KV 쓰기를 응답 전에 await (fire-and-forget 유실 방지) */
   const warm    = url.searchParams.has("warm");
+  const marketParam = url.searchParams.get("market") ?? "us";
+
+  // Preview multi-market: kr / safe / kr-re (US path unchanged)
+  if (marketParam !== "us") {
+    const { parseMarketId } = await import("@/lib/markets/types");
+    const { fetchAltMarketData } = await import("@/lib/markets/fetchAltMarket");
+    const { kvGetDetail, kvSetDetail } = await import("@/lib/kv");
+    const market = parseMarketId(marketParam, "us");
+    if (market === "us") {
+      // fall through to US logic
+    } else {
+      const kvKey = `market-data:${market}:v2`;
+      try {
+        if (!refresh) {
+          const cached = await kvGetDetail(kvKey);
+          if (cached && typeof (cached as { liveAt?: number }).liveAt === "number") {
+            const age = Date.now() - ((cached as { liveAt: number }).liveAt ?? 0);
+            const qLen = Array.isArray((cached as { quotes?: unknown[] }).quotes)
+              ? (cached as { quotes: unknown[] }).quotes.length
+              : 0;
+            // 실데이터 캐시만 서빙 (빈/목업 캐시 거부)
+            if (age < 55_000 && (market === "kr-re" || qLen > 0)) {
+              return NextResponse.json(cached, {
+                headers: { "Cache-Control": "public, s-maxage=55, stale-while-revalidate=60", "X-Market": market },
+              });
+            }
+          }
+        }
+        const payload = await fetchAltMarketData(market);
+        // 실호가 있을 때만 KV 저장
+        if (market === "kr-re" || (payload.quotes?.length ?? 0) > 0) {
+          after(() => kvSetDetail(kvKey, payload as unknown as Record<string, unknown>));
+        }
+        return NextResponse.json(payload, {
+          headers: { "Cache-Control": "public, s-maxage=55, stale-while-revalidate=60", "X-Market": market },
+        });
+      } catch {
+        const cached = await kvGetDetail(kvKey);
+        const qLen = Array.isArray((cached as { quotes?: unknown[] } | null)?.quotes)
+          ? ((cached as { quotes: unknown[] }).quotes.length)
+          : 0;
+        if (cached && qLen > 0) {
+          return NextResponse.json(cached, { headers: { "X-Market": market, "X-Market-Cache": "STALE" } });
+        }
+        return NextResponse.json({ error: "일시적 오류" }, { status: 503, headers: { "Retry-After": "3" } });
+      }
+    }
+  }
+
   const open    = isMarketOpen();
 
   // 장 마감 중 CDN 캐시는 "다음 장 시작"을 절대 넘기지 않도록 캡을 씌운다.

@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { ReportFeed } from "@/components/ReportFeed";
+import { useMarket } from "@/contexts/MarketContext";
 
 export function InsightReportSection() {
   const [lang, setLang] = useState<"ko" | "en">("ko");
+  const market = useMarket();
 
   return (
     <div>
@@ -21,7 +23,7 @@ export function InsightReportSection() {
           {lang === "ko" ? "🌐 English" : "🇰🇷 한국어"}
         </button>
       </div>
-      <ReportFeed lang={lang} />
+      <ReportFeed lang={lang} market={market} />
     </div>
   );
 }
