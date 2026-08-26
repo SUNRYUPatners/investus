@@ -16,32 +16,34 @@
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".15">🚕</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#4ade80" text-anchor="middle">🚕</text>
-  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">FW</text>
-  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">달러스 geofence 서쪽 약 32마일 포트워스에 사이버캡 함대가 준비됐습니다. 전용 로보택시 차량입니다.</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">포트워스</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">달러스 로보택시 운행 구역 서쪽 약 32마일(약 51km) 포트워스에 사이버캡 함대가 준비됐다는 설명입니다.</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">운전석 없는 전용 로보택시입니다.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📍</text>
-  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">32 mi</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">32마일</text>
   <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">달러스 서쪽</text>
-  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Fort Worth</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">DFW 축</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🚕</text>
-  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Cybercab</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전용차</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">사이버캡</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전용 차량</text>
   <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">운전석 없음</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🗺️</text>
-  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Geofence</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">DFW 확장</text>
-  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">지리 신호</text>
-  <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="700" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">"포트워스에 사이버캡 함대가 준비됐다는 설명이 나왔습니다. 포트워스는 달러스 로보택시 구역에서 서쪽 약</text>
-  <text x="540" y="728" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">32마일 떨어진 도시입니다. ready는 운행 준비 상태이지, 유료 개시를 뜻하지 않을 수 있습니다."</text>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">✅</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">준비</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">함대 대기</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">유료와는 별개</text>
+  <rect x="60" y="630" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">"텍사스 포트워스에 사이버캡 함대가 준비됐다는 설명이 나왔습니다. 달러스 운행 구역에서 서쪽으로 약 32마일</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">떨어진 지점입니다. 준비는 차량·충전·원격 지원이 대기 가능하다는 뜻에 가깝고, 유료 승객 개시·</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">허가와는 단계가 다릅니다. 달러스–포트워스 축에서 지리가 넓어지는 전주곡으로 읽을 수 있습니다."</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="884" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="920" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">DFW 축에서 지리가 넓어집니다. 허가·유료 전환을 다음 확인 포인트로 두세요.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Cybercab Fort Worth · 2026.08.26</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">지리 확장은 로보택시 실물 진전 신호입니다. 다만 준비와 유료는 다릅니다. 다음엔 허가·요금 앱·공식 운행 구역 지도를 확인하세요.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · 사이버캡 포트워스 · 2026.08.26</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

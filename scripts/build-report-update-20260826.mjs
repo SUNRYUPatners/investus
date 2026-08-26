@@ -130,11 +130,11 @@ function tpl(oRaw) {
 ${multilineIfOverflow(oRaw.heroSub, 540, 340, F.HERO_SUB, MAX_W.WIDE, 3, 26, `font-family="Arial" font-size="${F.HERO_SUB}" fill="#9ca3af" text-anchor="middle"`)}
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 ${renderCards(oRaw.cards, p)}
-  <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
-${multilineIfOverflow(oRaw.quote, 540, 700, F.QUOTE, MAX_W.WIDE, 4, 28, `font-family="Arial" font-size="${F.QUOTE}" fill="${p.fg}" text-anchor="middle"`)}
+  <rect x="60" y="630" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
+${multilineIfOverflow(oRaw.quote, 540, 680, F.QUOTE, MAX_W.WIDE, 5, 26, `font-family="Arial" font-size="${F.QUOTE}" fill="${p.fg}" text-anchor="middle"`)}
   <rect x="60" y="850" width="960" height="110" rx="14" fill="${p.card}" stroke="${p.fg}" stroke-width="1"/>
-${multilineIfOverflow(oRaw.noteHead, 540, 884, F.NOTE_HEAD, MAX_W.WIDE, 2, 24, `font-family="Arial" font-size="${F.NOTE_HEAD}" fill="${p.fg}" text-anchor="middle"`)}
-${multilineIfOverflow(oRaw.noteSub, 540, 920, F.NOTE_SUB, MAX_W.WIDE, 3, 22, `font-family="Arial" font-size="${F.NOTE_SUB}" fill="#9ca3af" text-anchor="middle"`)}
+${multilineIfOverflow(oRaw.noteHead, 540, 878, F.NOTE_HEAD, MAX_W.WIDE, 1, 24, `font-family="Arial" font-size="${F.NOTE_HEAD}" fill="${p.fg}" text-anchor="middle"`)}
+${multilineIfOverflow(oRaw.noteSub, 540, 908, F.NOTE_SUB, MAX_W.WIDE, 3, 22, `font-family="Arial" font-size="${F.NOTE_SUB}" fill="#9ca3af" text-anchor="middle"`)}
 ${svgFooter(o, p)}`;
 }
 
@@ -147,10 +147,10 @@ function tplBreaking(oRaw) {
 ${multilineIfOverflow(oRaw.heroSub, 540, 340, 22, MAX_W.WIDE, 3, 28, `font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle"`)}
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 ${renderCards(oRaw.cards, p, 402)}
-  <rect x="60" y="642" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
-${multilineIfOverflow(oRaw.quote, 540, 710, F.QUOTE, MAX_W.WIDE, 5, 28, `font-family="Arial" font-size="${F.QUOTE}" fill="${p.fg}" text-anchor="middle"`)}
-  <rect x="60" y="862" width="960" height="100" rx="14" fill="${p.card}" stroke="${p.fg}" stroke-width="1"/>
-${multilineIfOverflow(oRaw.noteSub, 540, 910, F.NOTE_SUB, MAX_W.WIDE, 3, 22, `font-family="Arial" font-size="${F.NOTE_SUB}" fill="#9ca3af" text-anchor="middle"`)}
+  <rect x="60" y="630" width="960" height="210" rx="16" fill="#0f172a" stroke="#374151"/>
+${multilineIfOverflow(oRaw.quote, 540, 680, F.QUOTE, MAX_W.WIDE, 6, 26, `font-family="Arial" font-size="${F.QUOTE}" fill="${p.fg}" text-anchor="middle"`)}
+  <rect x="60" y="860" width="960" height="100" rx="14" fill="${p.card}" stroke="${p.fg}" stroke-width="1"/>
+${multilineIfOverflow(oRaw.noteSub, 540, 900, F.NOTE_SUB, MAX_W.WIDE, 3, 22, `font-family="Arial" font-size="${F.NOTE_SUB}" fill="#9ca3af" text-anchor="middle"`)}
 ${svgFooter(o, p)}`;
 }
 
@@ -216,13 +216,13 @@ function summarySvg(lang) {
   const brand = ko ? 'investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE' : 'investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE';
   const title = ko ? `${DATE} 한장 요약` : `Daily Snapshot ${DATE}`;
   const rows = ko ? [
-    { stroke: '#60a5fa', fill: '#0a1420', title: '그록 3 LPX가 본격 양산에 들어갑니다', body: '베라 루빈 플랫폼 위에서 그록 3 LPX가 풀 프로덕션에 들어갔고, 네비우스가 첫 고객으로 잡혔습니다.', stat: 'LPX' },
-    { stroke: '#4ade80', fill: '#0a1a0a', title: '테슬라만 대규모 자율주행을 한다는 주장', body: '규모 있는 자율주행을 실제로 하고 있는 회사는 테슬라뿐이라는 주장이 나왔습니다. 경쟁사와 비교해 검증이 필요합니다.', stat: '' },
-    { stroke: '#c084fc', fill: '#1a0f2a', title: '루이지애나에 1,000억 달러 우주항', body: '스타베이스 루이지애나 우주항 투자가 1,000억 달러를 넘고, 테라베이 3문·하루 30척·17패드 설계가 공개됐습니다.', stat: '$100B+' },
-    { stroke: '#4ade80', fill: '#0a1a0a', title: '포트워스에 사이버캡 대기', body: '달러스 로보택시 구역 서쪽 약 32마일 포트워스에 사이버캡 함대가 준비됐다는 설명이 나왔습니다.', stat: 'FW' },
-    { stroke: '#f472b6', fill: '#201018', title: 'AVGO·NVDA CDS 사상 최고', body: '8월 차트 기준 브로드컴 CDS 126.225bp, 엔비디아 86.735bp로 사상 최고 구간에 있습니다.', stat: 'CDS' },
-    { stroke: '#a78bfa', fill: '#1a1030', title: 'Anthropic IPO 최대 2조 달러', body: 'TAM 30조 달러 이상, 2분기 매출 116억 달러, 9~10월 IPO로 최대 1,000억 달러 조달·약 2조 달러 밸류 전망입니다.', stat: '$2T' },
-    { stroke: '#94a3b8', fill: '#111827', title: '연준 10~15년물 50% 이상', body: '연준이 10~15년물 국채 1,028억 달러 중 540억 달러 이상, 50% 넘게 보유하고 있다는 차트가 나왔습니다.', stat: '50%+' },
+    { stroke: '#60a5fa', fill: '#0a1420', title: '그록 3 LPX가 본격 양산에 들어갑니다', body: '베라 루빈에서 LPX가 납품 가능한 양산에 들어갔고, 네비우스가 첫 고객입니다.', stat: 'LPX' },
+    { stroke: '#4ade80', fill: '#061209', title: '테슬라만 규모 있는 자율주행이라는 주장', body: '‘규모’ 기준에서 테슬라만 해당한다는 주장입니다. 유료·무인·마일 정의로 검증하세요.', stat: 'FSD' },
+    { stroke: '#a78bfa', fill: '#120b1f', title: '루이지애나 우주항 1,000억 달러+·테라베이', body: '하루 30척·발사대 17개·2027 착공 스펙입니다. 허가·실제 수율을 나눠 보세요.', stat: '$100B' },
+    { stroke: '#4ade80', fill: '#061209', title: '포트워스 사이버캡·세미 9/24', body: '포트워스 사이버캡 준비와 9월 24일 세미 행사입니다. 준비와 유료는 다릅니다.', stat: 'TSLA' },
+    { stroke: '#fb923c', fill: '#1a1008', title: 'AVGO·NVDA CDS 사상 최고 구간', body: '브로드컴·엔비디아 신용 보험료가 사상 최고 구간입니다. 실적과 같이 보세요.', stat: 'CDS' },
+    { stroke: '#94a3b8', fill: '#0f1419', title: '국채 환매·연준 10~15년물 50%+', body: '재무부 환매 이야기와 연준 10~15년물 50%+ 보유 차트가 같은 주에 겹칩니다.', stat: '금리' },
+    { stroke: '#a78bfa', fill: '#120b1f', title: '앤트로픽 상장·제미니·칩 밀반출', body: '앤트로픽 상장 전망, 법무·금융 제미니 출시, 엔비디아 칩 밀반출 기소 보도입니다.', stat: 'AI' },
   ] : [
     { stroke: '#60a5fa', fill: '#0a1420', title: 'Groq 3 LPX enters full production', body: 'Groq 3 LPX is in full production on the Vera Rubin platform, with Nebius named as the first adopter.', stat: 'LPX' },
     { stroke: '#4ade80', fill: '#0a1a0a', title: 'Tesla-only self-driving at scale claim', body: 'A claim says Tesla is the only company doing self-driving at scale. That needs a side-by-side check with rivals.', stat: '' },
@@ -292,10 +292,10 @@ const TOPICS = [
     '(1) 추가 LPX 고객\n(2) 베라 루빈 양산 시점\n(3) 추론 매출 비중\n(4) 네비우스 캡엑스\n(5) 경쟁 TPU·ASIC',
     'LPX는 학습 한 줄기가 아니라 추론 매출 축입니다. 네비우스는 초기 검증 고객이지 전체 수요가 아닙니다. 실적에서 데이터센터 가이던스와 함께 추론 믹스를 추적하시면 됩니다.'
   ),
-  ko:{title:'그록 3 LPX가 베라 루빈 플랫폼에서 본격 양산에 들어갔습니다',heroIcon:'🧠',heroBig:'LPX',heroSub:'그록 3 LPX는 추론용 가속기입니다. 베라 루빈 위에서 풀 프로덕션에 들어갔고, 네비우스가 첫 고객입니다. 시범이 아니라 납품 가능 단계라는 점이 핵심입니다.',
-    cards:[{icon:'🏭',big:'풀 양산',mid:'Full production',sub:'시범 단계 아님'},{icon:'🧠',big:'Groq 3',mid:'LPX 설계',sub:'추론 가속'},{icon:'☁️',big:'Nebius',mid:'첫 채택',sub:'AI 클라우드'}],
-    quote:'"그록 3 LPX가 베라 루빈 플랫폼에서 풀 프로덕션에 들어갔습니다. LPX는 대규모 언어 모델 답변을 빠르게 내는 추론 칩 계열입니다. 네비우스가 첫 고객으로 적혀 있어, 신규 칩이 실제 워크로드에 올라가기 시작했음을 보여줍니다."',
-    noteHead:'왜 중요한가',noteSub:'학습 칩만이 아니라 추론 칩이 양산 단계에 들어갔습니다. API·에이전트 수요와 직결됩니다. 다음엔 추가 고객과 출하 코멘트를 보면 됩니다.',footer:'NVDA · Groq 3 LPX',brand:BK},
+  ko:{title:'그록 3 LPX가 베라 루빈 플랫폼에서 본격 양산에 들어갔습니다',heroIcon:'🧠',heroBig:'LPX',heroSub:'그록 3 LPX는 이미 학습이 끝난 AI가 답을 내놓는 단계(추론)를 빠르게 처리하는 가속기입니다. 베라 루빈 위에서 본격 양산에 들어갔고, 네비우스가 첫 고객입니다. 시범이 아니라 납품 가능한 공장 단계라는 점이 핵심입니다.',
+    cards:[{icon:'🏭',big:'본격 양산',mid:'납품 가능',sub:'시범 단계 아님'},{icon:'🧠',big:'그록 3',mid:'LPX 설계',sub:'추론 가속'},{icon:'☁️',big:'네비우스',mid:'첫 채택',sub:'AI 클라우드'}],
+    quote:'"그록 3 LPX가 베라 루빈 플랫폼에서 본격 양산에 들어갔습니다. LPX는 대규모 언어 모델이 질문을 받아 답을 빨리 내도록 돕는 추론용 칩·랙입니다. 네비우스가 첫 고객으로 적혀 있어, 새 칩이 실제 클라우드 워크로드에 올라가기 시작했음을 보여 줍니다. 학습용 칩 이야기만 보던 시선이 추론 매출로도 넓어질 수 있습니다."',
+    noteHead:'왜 중요한가',noteSub:'학습만이 아니라 추론 칩이 양산 단계에 들어갔습니다. 챗봇·에이전트 수요와 직결됩니다. 다음엔 추가 고객과 출하·실적 코멘트를 보시면 됩니다.',footer:'NVDA · 그록 3 LPX',brand:BK},
   en:{title:'Groq 3 LPX enters full production on Vera Rubin',heroIcon:'🧠',heroBig:'LPX',heroSub:'Groq 3 LPX is an inference accelerator on Vera Rubin in full production. Nebius is the first adopter. This is deliverable production, not a demo.',
     cards:[{icon:'🏭',big:'Full prod',mid:'Not pilot',sub:'Shippable'},{icon:'🧠',big:'Groq 3',mid:'LPX design',sub:'Inference'},{icon:'☁️',big:'Nebius',mid:'First adopter',sub:'AI cloud'}],
     quote:'"Groq 3 LPX is in full production on the Vera Rubin platform. LPX targets fast LLM inference. Nebius is listed as the first customer, meaning the new design is entering live workloads."',
@@ -316,10 +316,10 @@ const TOPICS = [
     '(1) 유료 로보택시 마일\n(2) geofence 확대\n(3) 개입률·사고\n(4) 경쟁사 도시 수\n(5) FSD v15 출시',
     '독점 내러티브는 밸류에이션 프리미엄을 키웁니다. 다만 정의를 좁히면 검증 가능합니다. 유료 마일·도시·무인 조건을 숫자로 추적하시면 됩니다.'
   ),
-  ko:{title:'규모 있는 자율주행을 실제로 하는 회사는 테슬라뿐이라는 주장이 나왔습니다',heroBig:'SCALE',heroSub:'자율주행 at scale은 많은 차가 매일 실제 도로에서 소프트웨어로 운행하는 상태입니다.',
-    cards:[{icon:'🚕',big:'로보택시',mid:'오스틴·달러스',sub:'geofence'},{icon:'📊',big:'FSD',mid:'감독 주행',sub:'마일 축적'}],
-    quote:'"규모 있는 자율주행을 하고 있는 회사는 테슬라뿐이라는 주장이 나왔습니다. at scale은 시험 몇 대가 아니라, 상용에 가까운 차량 수와 운행 시간을 뜻합니다. 웨이모·주스 등은 다른 도시·다른 조건에서 경쟁합니다. 유일 여부는 무인·유료·마일 정의에 달립니다."',
-    noteHead:'왜 중요한가',noteSub:'독점 서사는 테슬라 프리미엄과 연결됩니다. 정의를 좁혀 유료 마일과 도시 수로 검증하세요. 경쟁사 확대 시 프레임이 약해질 수 있습니다.',footer:'TSLA · FSD at scale',brand:BK},
+  ko:{title:'규모 있는 자율주행을 실제로 하는 회사는 테슬라뿐이라는 주장이 나왔습니다',heroBig:'규모',heroSub:'규모 있는 자율주행은 시험차 몇 대가 아니라, 많은 차가 매일 실제 도로에서 소프트웨어로 운행하는 상태를 뜻합니다. 이번 주장은 그 기준에서 테슬라만 해당한다는 쪽입니다.',
+    cards:[{icon:'🚕',big:'로보택시',mid:'오스틴·달러스',sub:'운행 구역'},{icon:'📊',big:'FSD',mid:'감독 주행',sub:'마일 축적'}],
+    quote:'"규모 있는 자율주행을 하고 있는 회사는 테슬라뿐이라는 주장이 나왔습니다. 규모란 상용에 가까운 차량 수와 운행 시간을 뜻합니다. 웨이모·주스 등은 다른 도시·다른 조건에서 경쟁합니다. ‘유일’ 여부는 완전 무인인지, 유료인지, 누적 마일이 얼마인지 정의에 달립니다. 주장과 공식 통계를 나눠 보셔야 합니다."',
+    noteHead:'왜 중요한가',noteSub:'독점 이야기는 테슬라 밸류에이션 프리미엄과 연결됩니다. 정의를 좁혀 유료 마일과 도시 수로 검증하세요. 경쟁사가 유료·무인을 늘리면 프레임이 약해질 수 있습니다.',footer:'TSLA · 자율주행 규모',brand:BK},
   en:{title:'Only Tesla does self-driving at scale, a claim says',heroBig:'SCALE',heroSub:'At scale means many cars daily on public roads under software control, not a handful of pilots.',
     cards:[{icon:'🚕',big:'Robotaxi',mid:'Austin·Dallas',sub:'Geofence'},{icon:'📊',big:'FSD',mid:'Supervised',sub:'Mile accumulation'}],
     quote:'"A claim says Tesla is the only company doing self-driving at scale. That means commercial-like fleet size and hours, not a few test cars. Waymo and Zoox compete under different cities and rules. Uniqueness depends on driverless, paid, and mile definitions."',
@@ -340,10 +340,10 @@ const TOPICS = [
     '(1) 2027 착공 공식 일정\n(2) EPC·지역 고용\n(3) 패드 건설 단계\n(4) Starship flight rate\n(5) 위성·화물 수요',
     '루이지애나는 장기 콜 옵션입니다. 숫자는 방향이지 단기 EPS가 아닙니다. 착공·허가·실제 flight rate를 추적하시면 됩니다.'
   ),
-  ko:{title:'루이지애나 스타베이스 우주항 투자가 1,000억 달러를 넘고 테라베이 설계가 공개됐습니다',heroBig:'$100B+',heroSub:'테라베이 3문, 하루 30 Starship, 17 pads, 연 15,000+ 발사 capacity, 2027 착공입니다.',
-    cards:[{icon:'🚀',big:'30/일',mid:'Starship',sub:'생산 목표'},{icon:'🛫',big:'17',mid:'Launch pads',sub:'15,000+/yr'},{icon:'📅',big:'2027',mid:'착공',sub:'건설 시작'}],
-    quote:'"루이지애나 스타베이스 투자가 1,000억 달러를 넘고, 테라베이에 3 door, 하루 30척, 17 패드, 연 15,000회 이상 capacity, 2027 착공이 적혀 있습니다. 우주항은 발사 cadence와 위성·화물 비용의 장기 레버입니다."',
-    noteSub:'발사 infra는 스타링크·궤도 컴퓨팅의 상류입니다. 숫자가 크므로 허가·자금·수율을 함께 보세요.',footer:'SPCX · Louisiana Terabay',brand:BK},
+  ko:{title:'루이지애나 스타베이스 우주항 투자가 1,000억 달러를 넘고 테라베이 설계가 공개됐습니다',heroBig:'$100B+',heroSub:'테라베이는 문 3개짜리 초대형 조립동으로 소개됩니다. 하루 스타십 30척, 발사대 17개, 연 1만 5,000회 이상 발사 용량, 2027년 착공이 핵심 숫자입니다.',
+    cards:[{icon:'🚀',big:'30척/일',mid:'스타십',sub:'생산 목표'},{icon:'🛫',big:'17개',mid:'발사대',sub:'연 1.5만회+'},{icon:'📅',big:'2027',mid:'착공',sub:'건설 시작'}],
+    quote:'"루이지애나 스타베이스 투자가 1,000억 달러를 넘고, 테라베이에 문 3개·하루 30척·발사대 17개·연 1만 5,000회 이상·2027년 착공이 적혀 있습니다. 우주항은 발사 횟수와 위성·화물 비용의 장기 레버입니다. 숫자가 크므로 허가·환경·자금·실제 수율을 계획과 나눠 보셔야 합니다. 단기 실적보다 장기 옵션에 가깝습니다."',
+    noteSub:'발사 인프라는 스타링크·궤도 컴퓨팅의 상류입니다. 착공·허가·실제 비행률이 나오기 전에는 목표 숫자만으로 확정하지 마세요.',footer:'SPCX · 루이지애나 테라베이',brand:BK},
   en:{title:'Starbase Louisiana tops $100B with Terabay specs disclosed',heroBig:'$100B+',heroSub:'Terabay: 3 doors, 30 Starship/day, 17 pads, 15,000+/year capacity, construction from 2027.',
     cards:[{icon:'🚀',big:'30/day',mid:'Starship',sub:'Target rate'},{icon:'🛫',big:'17',mid:'Launch pads',sub:'15,000+/yr'},{icon:'📅',big:'2027',mid:'Start',sub:'Construction'}],
     quote:'"Starbase Louisiana is framed above $100B. Terabay lists 3 doors, 30 Starships per day, 17 pads, 15,000+ launches per year, and a 2027 construction start. Launch infra is the upstream lever for Starlink and orbital compute."',
@@ -364,10 +364,10 @@ const TOPICS = [
     '(1) 후속 논문·인용\n(2) NASA·JAXA 협력\n(3) 데이터 제품화\n(4) 위성 수\n(5) 스펙트럼',
     '과학 활용은 옵션 가치입니다. 통신 ARR이 본체입니다. 정부·연구 데이터 계약이 늘면 재평가 여지가 있습니다.'
   ),
-  ko:{title:'교토대가 1,200기 스타링크 위성으로 대기권 밀도 단층촬영을 했습니다',heroIcon:'🛰️',heroBig:'1,200',heroSub:'스타링크 위성 신호로 thermospheric density tomography를 수행했습니다. 통신망이 과학 관측에도 쓰일 수 있음을 보여줍니다.',
-    cards:[{icon:'🛰️',big:'1,200',mid:'Starlink sats',sub:'신호 소스'},{icon:'📡',big:'Tomography',mid:'밀도 재구성',sub:'대기권 상층'},{icon:'🎓',big:'교토대',mid:'연구 사례',sub:'과학 활용'}],
-    quote:'"교토대는 약 1,200기 스타링크 위성을 이용해 thermospheric density tomography를 수행했습니다. tomography는 여러 측정으로 3D 구조를 복원하는 기법입니다. 위성 인터넷망이 우주 날씨·과학 데이터 인프라가 될 수 있음을 보여줍니다."',
-    noteHead:'왜 중요한가',noteSub:'통신 외 데이터·정부 계약 옵션이 열립니다. 본체 ARR과 구분해 보세요. 위성 수가 많을수록 관측 해상도가 좋아질 수 있습니다.',footer:'SPCX · Starlink tomography',brand:BK},
+  ko:{title:'교토대가 1,200기 스타링크 위성으로 대기권 밀도 단층촬영을 했습니다',heroIcon:'🛰️',heroBig:'1,200',heroSub:'스타링크 위성 약 1,200기 신호로 대기권 상층(열권) 밀도 단층촬영을 했습니다. 인터넷용 위성망이 과학 관측에도 쓰일 수 있음을 보여 줍니다.',
+    cards:[{icon:'🛰️',big:'1,200기',mid:'스타링크',sub:'신호 소스'},{icon:'📡',big:'단층촬영',mid:'밀도 재구성',sub:'대기권 상층'},{icon:'🎓',big:'교토대',mid:'연구 사례',sub:'과학 활용'}],
+    quote:'"교토대는 약 1,200기 스타링크 위성을 이용해 대기권 상층 밀도 단층촬영을 수행했습니다. 단층촬영은 여러 방향 측정으로 입체 구조를 복원하는 기법입니다. 병원 CT처럼, 위성 신호로 열권 밀도를 추정한 것입니다. 통신 구독 매출에 바로 큰 숫자가 붙진 않을 수 있으나, 우주 날씨·연구·정부 데이터 옵션을 보여 줍니다."',
+    noteHead:'왜 중요한가',noteSub:'통신 외 데이터·정부 계약 옵션이 열립니다. 본체는 여전히 통신 구독입니다. 위성 수가 많을수록 관측 해상도가 좋아질 수 있습니다.',footer:'SPCX · 스타링크 단층촬영',brand:BK},
   en:{title:'Kyoto Univ. used 1,200 Starlink sats for thermospheric tomography',heroIcon:'🛰️',heroBig:'1,200',heroSub:'Starlink signals were used for thermospheric density tomography, showing the network as science infrastructure.',
     cards:[{icon:'🛰️',big:'1,200',mid:'Starlink',sub:'Signal source'},{icon:'📡',big:'Tomography',mid:'Density map',sub:'Thermosphere'},{icon:'🎓',big:'Kyoto',mid:'Research',sub:'Science use'}],
     quote:'"Kyoto University used about 1,200 Starlink satellites for thermospheric density tomography. Tomography rebuilds 3D structure from many measurements. A consumer LEO network can double as space-weather and science data infrastructure."',
@@ -388,10 +388,10 @@ const TOPICS = [
     '(1) TX 당국 허가\n(2) 유료 앱 전환\n(3) fleet size\n(4) geofence map\n(5) 9/3 행사',
     '지리 확장은 로보택시 실물 진전입니다. ready를 paid miles로 연결해 추적하시면 됩니다.'
   ),
-  ko:{title:'포트워스에 사이버캡 로보택시 함대가 준비됐다는 설명이 나왔습니다',heroIcon:'🚕',heroBig:'FW',heroSub:'달러스 geofence 서쪽 약 32마일 포트워스에 사이버캡 함대가 준비됐습니다. 전용 로보택시 차량입니다.',
-    cards:[{icon:'📍',big:'32 mi',mid:'달러스 서쪽',sub:'Fort Worth'},{icon:'🚕',big:'Cybercab',mid:'전용차',sub:'운전석 없음'},{icon:'🗺️',big:'Geofence',mid:'DFW 확장',sub:'지리 신호'}],
-    quote:'"포트워스에 사이버캡 함대가 준비됐다는 설명이 나왔습니다. 포트워스는 달러스 로보택시 구역에서 서쪽 약 32마일 떨어진 도시입니다. ready는 운행 준비 상태이지, 유료 개시를 뜻하지 않을 수 있습니다."',
-    noteHead:'왜 중요한가',noteSub:'DFW 축에서 지리가 넓어집니다. 허가·유료 전환을 다음 확인 포인트로 두세요.',footer:'TSLA · Cybercab Fort Worth',brand:BK},
+  ko:{title:'포트워스에 사이버캡 로보택시 함대가 준비됐다는 설명이 나왔습니다',heroIcon:'🚕',heroBig:'포트워스',heroSub:'달러스 로보택시 운행 구역 서쪽 약 32마일(약 51km) 포트워스에 사이버캡 함대가 준비됐다는 설명입니다. 운전석 없는 전용 로보택시입니다.',
+    cards:[{icon:'📍',big:'32마일',mid:'달러스 서쪽',sub:'DFW 축'},{icon:'🚕',big:'사이버캡',mid:'전용 차량',sub:'운전석 없음'},{icon:'✅',big:'준비',mid:'함대 대기',sub:'유료와는 별개'}],
+    quote:'"텍사스 포트워스에 사이버캡 함대가 준비됐다는 설명이 나왔습니다. 달러스 운행 구역에서 서쪽으로 약 32마일 떨어진 지점입니다. 준비는 차량·충전·원격 지원이 대기 가능하다는 뜻에 가깝고, 유료 승객 개시·허가와는 단계가 다릅니다. 달러스–포트워스 축에서 지리가 넓어지는 전주곡으로 읽을 수 있습니다."',
+    noteHead:'왜 중요한가',noteSub:'지리 확장은 로보택시 실물 진전 신호입니다. 다만 준비와 유료는 다릅니다. 다음엔 허가·요금 앱·공식 운행 구역 지도를 확인하세요.',footer:'TSLA · 사이버캡 포트워스',brand:BK},
   en:{title:'Cybercab fleet ready in Fort Worth, TX',heroIcon:'🚕',heroBig:'FW',heroSub:'Fort Worth sits about 32 miles west of the Dallas robotaxi geofence. A Cybercab fleet is described as ready.',
     cards:[{icon:'📍',big:'32 mi',mid:'West of Dallas',sub:'Fort Worth'},{icon:'🚕',big:'Cybercab',mid:'Dedicated',sub:'No wheel'},{icon:'🗺️',big:'Geofence',mid:'DFW axis',sub:'Expansion'}],
     quote:'"A Cybercab fleet is described as ready in Fort Worth, about 32 miles west of the Dallas robotaxi geofence. Ready means prepared to run, not necessarily paid service yet."',
@@ -412,11 +412,10 @@ const TOPICS = [
     '(1) 행사 스펙·가격\n(2) 생산 run-rate\n(3) 고객 인도\n(4) 메가차arger\n(5) 4680·배터리',
     '세미는 로보택시와 다른 축이지만 같은 9월 캘린더입니다. 행사 코멘트와 인도 숫자를 추적하시면 됩니다.'
   ),
-  ko:{title:'테슬라 세미 롤아웃 행사가 2026년 9월 24일 네바다 스파크스에서 열립니다',heroBig:'9/24',ddayLabel:'SEMI ROLLOUT · SPARKS NV',
-    heroSub:'2026년 9월 24일 네바다 스파크스 공장에서 Tesla Semi 롤아웃 이벤트가 열립니다. Class 8 전기 트럭 상용 일정의 앵커입니다.',
-    cards:[{icon:'🚛',big:'Semi',mid:'Class 8',sub:'전기 트럭'},{icon:'🏭',big:'Sparks',mid:'Nevada',sub:'공장'},{icon:'📅',big:'9/24',mid:'2026',sub:'Rollout'}],
-    quote:'"Tesla Semi Rollout 이벤트가 2026년 9월 24일 스파크스 네바다에서 열립니다. Semi는 대형 전기 트럭이며, rollout은 양산·인도 일정을 알리는 행사입니다."',
-    noteHead:'왜 중요한가',noteSub:'9월에 Cybercab(9/3)과 Semi(9/24) 촉매가 겹칩니다. 행사에서 생산·TCO·충전 코멘트를 보세요.',footer:'TSLA · Semi 9/24',brand:BK},
+  ko:{title:'테슬라 세미 롤아웃 행사가 2026년 9월 24일 네바다 스파크스에서 열립니다',heroBig:'9/24',ddayLabel:'세미 롤아웃',heroSub:'2026년 9월 24일 네바다 스파크스 공장에서 테슬라 세미 공개·양산 일정이 묶인 행사가 열립니다. 대형 전기 트럭 상용 캘린더의 앵커입니다.',
+    cards:[{icon:'🚛',big:'세미',mid:'대형 전기트럭',sub:'화물용'},{icon:'🏭',big:'스파크스',mid:'네바다 공장',sub:'생산 거점'},{icon:'📅',big:'9월 24일',mid:'2026년',sub:'행사 일정'}],
+    quote:'"테슬라 세미 롤아웃이 2026년 9월 24일 스파크스에서 열린다고 알려졌습니다. 세미는 대형 화물용 전기 트럭입니다. 행사에서 생산·가격·충전·고객 인도 코멘트가 나올 수 있습니다. 같은 달 9월 3일 사이버캡 행사와 겹쳐, 하드웨어 실행력을 두 번 보여주는 달입니다."',
+    noteHead:'왜 중요한가',noteSub:'9월에 사이버캡(3일)과 세미(24일) 촉매가 겹칩니다. 행사만 보고 매출을 당기지 마시고, 생산·총소유비용·충전·인도 숫자를 보시면 됩니다.',footer:'TSLA · 세미 9/24',brand:BK},
   en:{title:'Tesla Semi Rollout is September 24, 2026 in Sparks, Nevada',heroBig:'9/24',ddayLabel:'SEMI ROLLOUT · SPARKS NV',
     heroSub:'The Tesla Semi Rollout event is September 24, 2026 at the Sparks, Nevada factory. It anchors the Class 8 electric truck timeline.',
     cards:[{icon:'🚛',big:'Semi',mid:'Class 8',sub:'Electric truck'},{icon:'🏭',big:'Sparks',mid:'Nevada',sub:'Factory'},{icon:'📅',big:'9/24',mid:'2026',sub:'Rollout'}],
@@ -438,11 +437,12 @@ const TOPICS = [
     '(1) weekly CDS\n(2) earnings\n(3) bond spread\n(4) buyback\n(5) macro',
     'CDS는 보조 지표입니다. AI 낙관과 신용 헤지가 동시에 존재할 수 있습니다. 실적과 bond market을 함께 보세요.'
   ),
-  ko:{title:'AVGO·NVDA CDS가 2026년 8월 차트 기준 사상 최고 구간에 있습니다',heroBig:'CDS',heroSub:'8월 차트: AVGO 126.225bp, NVDA 86.735bp. CDS는 부도 위험 프리미엄입니다.',
-    beforeLabel:'이전 구간',beforeBig:'좁음',beforeSub:'낮은 프리미엄',afterLabel:'2026년 8월',afterBig:'ATH wide',afterSub:'AVGO·NVDA',
-    cards:[{icon:'📈',big:'126.2',mid:'AVGO bp',sub:'사상 최고'},{icon:'📈',big:'86.7',mid:'NVDA bp',sub:'사상 최고'},{icon:'⚠️',big:'신용',mid:'헤지 수요',sub:'macro'}],
-    quote:'"AVGO CDS 126.225bp, NVDA 86.735bp가 8월 차트에서 사상 최고입니다. CDS spread가 넓어지면 시장이 더 높은 신용 프리미엄을 요구합니다. AI 낙관과 별도로 채권·헤지 시장의 경계 신호일 수 있습니다."',
-    noteHead:'왜 중요한가',noteSub:'주가와 CDS는 decouple될 수 있습니다. 실적·가이던스가 신용을 안정시키는지 추적하세요.',footer:'AVGO·NVDA · CDS record',brand:BK},
+  ko:{title:'AVGO·NVDA CDS가 2026년 8월 차트 기준 사상 최고 구간에 있습니다',heroBig:'CDS',heroSub:'2026년 8월 차트에서 브로드컴 약 126.2bp, 엔비디아 약 86.7bp로 사상 가장 넓은 구간입니다. CDS는 회사 부도 위험에 대한 보험료에 가깝습니다.',
+    cards:[{icon:'📉',big:'126.2',mid:'브로드컴',sub:'bp 스프레드'},{icon:'📉',big:'86.7',mid:'엔비디아',sub:'bp 스프레드'},{icon:'📈',big:'사상 최고',mid:'8월 차트',sub:'와이드'}],
+    beforeLabel:'브로드컴 CDS',beforeBig:'126.2bp',beforeSub:'사상 최고 구간',
+    afterLabel:'엔비디아 CDS',afterBig:'86.7bp',afterSub:'사상 최고 구간',
+    quote:'"신용부도스와프(CDS) 스프레드가 넓어졌다는 것은 시장이 신용 위험에 더 높은 프리미엄을 요구한다는 뜻입니다. 주가가 강해도 CDS만 먼저 경계할 수 있습니다. AI·반도체 낙관과 신용 헤지가 동시에 존재할 수 있으니, 실적·회사채와 같이 보시면 됩니다."',
+    noteHead:'왜 중요한가',noteSub:'주가와 CDS는 항상 같이 움직이지 않습니다. 실적·가이던스가 신용을 안정시키는지, 일시 헤지인지 추적하세요.',footer:'AVGO·NVDA · CDS',brand:BK},
   en:{title:'AVGO and NVDA CDS at all-time wides in August 2026',heroBig:'CDS',heroSub:'August chart: AVGO 126.225bp, NVDA 86.735bp. CDS prices default-risk premium.',
     beforeLabel:'Prior',beforeBig:'Tighter',beforeSub:'Lower premium',afterLabel:'Aug 2026',afterBig:'ATH wide',afterSub:'AVGO·NVDA',
     cards:[{icon:'📈',big:'126.2',mid:'AVGO bp',sub:'Record'},{icon:'📈',big:'86.7',mid:'NVDA bp',sub:'Record'},{icon:'⚠️',big:'Credit',mid:'Hedge demand',sub:'Macro'}],
@@ -464,10 +464,10 @@ const TOPICS = [
     '(1) weekly buyback\n(2) TGA balance\n(3) 10Y·30Y\n(4) auction\n(5) CPI',
     'macro 덮개입니다. buyback 실제 집행과 TGA를 숫자로 추적하세요.'
   ),
-  ko:{title:'미국 재무부가 국채 시장 개입·환매 narrative가 다시 부각됐습니다',heroBig:'BUYBACK',heroSub:'40억 달러+ buyback, 9,500억 달러 general account narrative. 국채 수급·유동성 기대가 금리에 영향을 줍니다.',
-    cards:[{icon:'🏦',big:'$4B+',mid:'Buyback',sub:'환매 narrative'},{icon:'💵',big:'$950B',mid:'TGA',sub:'General account'}],
-    quote:'"재무부 국채 buyback narrative가 부각됐습니다. buyback는 재무부가 시장에서 국채를 사들이는 도구입니다. general account는 재무부 예치금으로, 유동성과 맞물립니다. rhetoric과 실제 집행 규모는 다를 수 있습니다."',
-    noteHead:'왜 중요한가',noteSub:'장기금리·성장주 할인율과 한 묶음입니다. 실제 buyback·TGA 잔고를 확인하세요.',footer:'MACRO · Treasury intervention',brand:BK},
+  ko:{title:'미국 재무부의 국채 시장 개입·환매 이야기가 다시 부각됐습니다',heroBig:'환매',heroSub:'40억 달러 이상 국채 환매, 약 9,500억 달러 일반계정 이야기가 다시 나왔습니다. 국채 수급·유동성 기대가 장기금리에 영향을 줄 수 있습니다.',
+    cards:[{icon:'💵',big:'$4B+',mid:'환매 규모',sub:'이야기 기준'},{icon:'🏦',big:'$950B',mid:'일반계정',sub:'재무부 현금'},{icon:'📉',big:'수급',mid:'장기금리',sub:'유동성'}],
+    quote:'"재무부가 이미 발행한 국채를 다시 사들이는 환매는 수급을 완화하는 도구입니다. 일반계정은 재무부가 연준에 맡긴 현금 통장입니다. 발언과 실제 집행 규모는 다를 수 있으니, 주간 환매·잔고·10년·30년 금리를 숫자로 확인하세요. 헤드라인만으로 금리 하락을 확정하면 위험합니다."',
+    noteHead:'왜 중요한가',noteSub:'장기금리는 주식·부동산 할인율과 한 묶음입니다. 실제 환매와 일반계정 잔고를 확인하시고, 물가·발행 물량과 같이 보시면 됩니다.',footer:'MACRO · 국채 환매',brand:BK},
   en:{title:'Treasury bond intervention narrative is back',heroBig:'BUYBACK',heroSub:'$4B+ buyback and $950B general account narrative affects yields and liquidity.',
     cards:[{icon:'🏦',big:'$4B+',mid:'Buyback',sub:'Intervention'},{icon:'💵',big:'$950B',mid:'TGA',sub:'Cash account'}],
     quote:'"Treasury buyback narrative is in focus. Buybacks repurchase bonds from the market. The general account ties to liquidity. Rhetoric can exceed actual size."',
@@ -488,10 +488,10 @@ const TOPICS = [
     '(1) Fed SOMA\n(2) QT minutes\n(3) 10Y auction\n(4) term premium\n(5) bank demand',
     'Fed balance sheet는 macro anchor입니다. 10–15Y bucket과 QT를 함께 추적하세요.'
   ),
-  ko:{title:'연준이 10~15년물 국채의 50% 이상을 보유하고 있다는 차트가 나왔습니다',heroIcon:'📊',heroBig:'50%+',heroSub:'10~15년물 1,028억 달러 중 540억 달러 이상을 Fed가 보유합니다. QT·금리·수급에 민감한 구간입니다.',
-    cards:[{icon:'🏦',big:'$540B+',mid:'Fed 보유',sub:'10–15Y'},{icon:'📈',big:'$1,028B',mid:'전체',sub:'bucket'},{icon:'📉',big:'QT',mid:'roll-off',sub:'수급'}],
-    quote:'"연준이 10~15년물 국채 1,028억 달러 중 540억 달러 이상, 50% 넘게 보유한다는 차트가 나왔습니다. 특정 만기 구간에 보유가 몰리면 QT·재투자가 그 구간 금리에 더 큰 영향을 줄 수 있습니다."',
-    noteHead:'왜 중요한가',noteSub:'재무부 buyback·30Y·CDS와 같은 macro bundle입니다. SOMA·QT pace를 확인하세요.',footer:'MACRO · Fed 10–15Y',brand:BK},
+  ko:{title:'연준이 10~15년물 국채의 50% 이상을 보유하고 있다는 차트가 나왔습니다',heroIcon:'📊',heroBig:'50%+',heroSub:'10~15년물 국채 약 1,028억 달러 중 540억 달러 이상을 연준이 보유합니다. 양적긴축·금리·수급에 민감한 만기 구간입니다.',
+    cards:[{icon:'🏦',big:'$540B+',mid:'연준 보유',sub:'10~15년물'},{icon:'📈',big:'$1,028B',mid:'해당 구간',sub:'전체 규모'},{icon:'📉',big:'긴축',mid:'보유 축소',sub:'수급 민감'}],
+    quote:'"연준이 10~15년물 국채 1,028억 달러 중 540억 달러 이상, 즉 50%를 넘게 보유한다는 차트가 나왔습니다. 특정 만기에 보유가 몰리면 보유를 줄이는 속도가 그 구간 금리에 더 큰 영향을 줄 수 있습니다. 같은 주 재무부 환매 이야기와 묶어, 누가 국채를 받는지 보시면 됩니다."',
+    noteHead:'왜 중요한가',noteSub:'재무부 환매·30년 금리·CDS와 같은 매크로 묶음입니다. 연준 보유 내역과 양적긴축 속도를 확인하세요.',footer:'MACRO · 연준 10~15년물',brand:BK},
   en:{title:'Fed owns over 50% of 10–15 year Treasuries',heroIcon:'📊',heroBig:'50%+',heroSub:'Fed holds over $540B of $1,028B in 10–15Y Treasuries. QT and supply matter here.',
     cards:[{icon:'🏦',big:'$540B+',mid:'Fed holds',sub:'10–15Y'},{icon:'📈',big:'$1,028B',mid:'Total',sub:'Bucket'},{icon:'📉',big:'QT',mid:'Roll-off',sub:'Supply'}],
     quote:'"A chart shows the Fed holding over $540B of $1,028B in 10–15 year Treasuries, above 50%. Concentrated holdings make QT and reinvestment more sensitive for that part of the curve."',
@@ -512,10 +512,10 @@ const TOPICS = [
     '(1) S-1 filing\n(2) revenue growth\n(3) raise size\n(4) lockup\n(5) first-day trade',
     'IPO는 catalyst이지 확정이 아닙니다. S-1 전까지 private mark discount를 두세요.'
   ),
-  ko:{title:'Anthropic TAM 30조 달러·2분기 매출 116억·IPO 최대 2조 밸류 전망이 나왔습니다',heroBig:'$2T',heroSub:'TAM 30조+, Q2 매출 116억, 9~10월 IPO 최대 1,000억 조달·약 2조 밸류. AI 상장 anchor입니다.',
-    cards:[{icon:'🌍',big:'$30T+',mid:'TAM',sub:'시장 규모'},{icon:'💰',big:'$11.6B',mid:'Q2 매출',sub:'분기'},{icon:'📅',big:'Sep/Oct',mid:'IPO',sub:'~$100B raise'}],
-    quote:'"TAM 30조 달러+, 2분기 매출 116억, 9~10월 IPO로 최대 1,000억 조달·약 2조 밸류 전망입니다. TAM은 전체 시장 추정, Q2 매출은 분기 실적입니다. S-1 전까지는 rumor와 plan으로 구분하세요."',
-    noteSub:'AI public re-rating 이벤트입니다. S-1·burn·lockup을 확인하세요.',footer:'AI · Anthropic IPO',brand:BK},
+  ko:{title:'앤트로픽 전체 시장 30조 달러·2분기 매출 116억·상장 시 약 2조 밸류 전망이 나왔습니다',heroBig:'$2T',heroSub:'전체 시장 추정 30조 달러 이상, 2분기 매출 116억 달러, 9~10월 기업공개로 최대 1,000억 달러 조달·약 2조 달러 기업가치 전망입니다. AI 상장의 기준점으로 읽힙니다.',
+    cards:[{icon:'🌍',big:'$30T+',mid:'전체 시장',sub:'추정 규모'},{icon:'💰',big:'$11.6B',mid:'2분기 매출',sub:'분기 실적'},{icon:'📅',big:'9~10월',mid:'기업공개',sub:'최대 $100B 조달'}],
+    quote:'"전체 시장 규모(TAM) 30조 달러 이상은 ‘이론상 닿을 수 있는 시장’ 추정이지 곧 매출이 아닙니다. 2분기 매출 116억 달러는 그 분기 실적입니다. 9~10월 상장으로 최대 1,000억 달러를 조달하고 기업가치를 약 2조 달러로 잡는다는 전망이 함께 나왔습니다. 규모가 워낙 커서 당시 금리·주식시장 분위기와 증권신고서 일정이 관건입니다. 증권신고서가 나오기 전에는 소문과 계획을 구분해 두세요."',
+    noteSub:'비상장 AI가 공개 시장으로 나오는 재평가 이벤트입니다. 증권신고서·현금 소진·기존 주주 매도 제한(보호예수)을 확인하세요.',footer:'AI · 앤트로픽 상장',brand:BK},
   en:{title:'Anthropic $30T+ TAM, $11.6B Q2, IPO up to $2T',heroBig:'$2T',heroSub:'$30T+ TAM, $11.6B Q2 revenue, Sept/Oct IPO up to $100B raise at ~$2T valuation.',
     cards:[{icon:'🌍',big:'$30T+',mid:'TAM',sub:'Market size'},{icon:'💰',big:'$11.6B',mid:'Q2 rev',sub:'Quarter'},{icon:'📅',big:'Sep/Oct',mid:'IPO',sub:'~$100B raise'}],
     quote:'"$30T+ TAM, $11.6B Q2 revenue, Sept/Oct IPO raising up to $100B at roughly $2T valuation. Treat as plan until S-1."',
@@ -536,10 +536,10 @@ const TOPICS = [
     '(1) customer logos\n(2) seat pricing\n(3) cloud attach\n(4) partner rev share\n(5) earnings comment',
     'Enterprise finance vertical은 TAM 확장입니다. 계약·좌석 숫자가 나올 때까지 narrative discount를 유지하세요.'
   ),
-  ko:{title:'Gemini Enterprise for Legal/Financial Services가 출시됐고 MSCI·무디스·FactSet 등이 파트너입니다',heroIcon:'💼',heroBig:'Enterprise',heroSub:'법무·금융용 Gemini Enterprise가 출시됐고 MSCI·Moody\'s·FactSet 등이 파트너입니다. B2B AI 워크플로 확장입니다.',
-    cards:[{icon:'⚖️',big:'Legal',mid:'법무',sub:'워크플로'},{icon:'🏦',big:'Finance',mid:'금융',sub:'리스크·데이터'},{icon:'🤝',big:'MSCI',mid:'Moody\'s',sub:'FactSet'}],
-    quote:'"Gemini Enterprise for Legal and Financial Services가 출시됐습니다. MSCI·Moody\'s·FactSet 등 데이터·신용 파트너와 LLM을 묶어 금융·법무 팀 채택을 노립니다. 출시와 대규모 매출은 단계가 다릅니다."',
-    noteHead:'왜 중요한가',noteSub:'고 ARPU B2B vertical입니다. pilot→계약 숫자를 추적하세요.',footer:'GOOGL · Gemini Enterprise',brand:BK},
+  ko:{title:'구글이 법무·금융용 제미니 엔터프라이즈를 출시했고 MSCI·무디스·FactSet 등이 파트너입니다',heroIcon:'💼',heroBig:'기업용',heroSub:'법무·금융 업무에 맞춘 제미니 엔터프라이즈가 출시됐습니다. MSCI·무디스·FactSet 등이 파트너로, 데이터와 AI를 묶어 기업 채택을 노립니다.',
+    cards:[{icon:'⚖️',big:'법무',mid:'규제·문서',sub:'업무 흐름'},{icon:'🏦',big:'금융',mid:'리스크·데이터',sub:'기관 고객'},{icon:'🤝',big:'파트너',mid:'MSCI 등',sub:'무디스·FactSet'}],
+    quote:'"법무·금융용 제미니 엔터프라이즈가 출시됐습니다. 일반 챗봇이 아니라, 규정과 정확성이 중요한 현장용 기업 제품입니다. MSCI·무디스·FactSet 같은 데이터·신용 파트너와 언어모델을 묶어 은행·운용·법무팀 채택을 노립니다. 출시와 대규모 유료 계약은 단계가 다릅니다. 시험 도입에서 좌석 확산·가격·클라우드 연계까지가 다음 확인 포인트입니다."',
+    noteHead:'왜 중요한가',noteSub:'금융·법무는 사용자당 매출이 높은 기업 시장입니다. 시험 도입이 실제 계약·좌석 숫자로 이어지는지 추적하세요.',footer:'GOOGL · 제미니 엔터프라이즈',brand:BK},
   en:{title:'Gemini Enterprise for Legal/Financial Services launches with major partners',heroIcon:'💼',heroBig:'Enterprise',heroSub:'Gemini Enterprise for Legal and Financial Services launched with MSCI, Moody\'s, FactSet and others.',
     cards:[{icon:'⚖️',big:'Legal',mid:'Workflow',sub:'Enterprise'},{icon:'🏦',big:'Finance',mid:'Risk·data',sub:'B2B'},{icon:'🤝',big:'MSCI',mid:'Moody\'s',sub:'FactSet'}],
     quote:'"Gemini Enterprise for Legal and Financial Services launched with partners including MSCI, Moody\'s, and FactSet. Launch and large revenue are different stages."',
@@ -560,10 +560,10 @@ const TOPICS = [
     '(1) court filing\n(2) NVDA statement\n(3) DoC rules\n(4) China revenue\n(5) compliance spend',
     '컴플라이언스 headline입니다. 매출 비중과 회사 statement를 확인하세요. 통제 강화가 tail risk입니다.'
   ),
-  ko:{title:'엔비디아 직원이 고급 칩을 중국으로 밀반출한 혐의로 기소됐다는 보도가 나왔습니다',heroBig:'EXPORT',heroSub:'고급 AI 칩 중국 밀반출 혐의 기소. 수출 통제·컴플라이언스·grey market 이슈입니다.',
-    cards:[{icon:'🚫',big:'통제',mid:'Export rules',sub:'고급 GPU'},{icon:'⚖️',big:'기소',mid:'직원 1건',sub:'개별 사건'}],
-    quote:'"엔비디아 직원이 고급 칩을 중국으로 밀반출한 혐의로 기소됐다는 보도가 나왔습니다. 미국은 AI 칩 중국 수출을 제한합니다. 개인 사건이지만 컴플라이언스·규제 scrutiny narrative와 연결됩니다."',
-    noteHead:'왜 중요한가',noteSub:'중국 수요·통제 강화 tail risk입니다. 회사 statement와 매출 비중을 확인하세요.',footer:'NVDA · chip smuggling',brand:BK},
+  ko:{title:'엔비디아 직원이 고급 칩을 중국으로 밀반출한 혐의로 기소됐다는 보도가 나왔습니다',heroBig:'수출',heroSub:'고급 AI 칩을 중국으로 밀반출한 혐의로 직원이 기소됐다는 보도입니다. 수출 통제와 내부 준수, 우회 수요 이슈로 읽힙니다.',
+    cards:[{icon:'🛂',big:'통제',mid:'수출 규칙',sub:'대중국'},{icon:'⚖️',big:'기소',mid:'직원 1건',sub:'개인 사건'},{icon:'🇨🇳',big:'중국',mid:'수요·우회',sub:'리스크'}],
+    quote:'"엔비디아 직원이 고급 칩을 중국으로 밀반출한 혐의로 기소됐다는 보도가 나왔습니다. 미국은 AI 칩 중국 수출을 제한합니다. 개인 사건과 회사 정책 위반은 구분해야 하지만, 시장은 내부 통제·규제 감독·우회 수요 이야기와 연결해 읽습니다. 합법 매출과 암시장 수요를 나눠 보셔야 합니다."',
+    noteHead:'왜 중요한가',noteSub:'중국 수요와 통제 강화는 꼬리 위험입니다. 회사 입장과 매출 비중을 확인하시고, 한 건의 기사만으로 중장기 비중을 크게 바꾸지 마세요.',footer:'NVDA · 칩 밀반출',brand:BK},
   en:{title:'Nvidia employee charged with smuggling advanced chips to China',heroBig:'EXPORT',heroSub:'Advanced AI chip smuggling charge. Export controls and compliance risk.',
     cards:[{icon:'🚫',big:'Controls',mid:'Export rules',sub:'Advanced GPU'},{icon:'⚖️',big:'Charge',mid:'One employee',sub:'Individual case'}],
     quote:'"Reports say an Nvidia employee was charged with smuggling advanced chips to China. The US restricts AI chip exports. An individual case, but it ties to compliance and scrutiny."',
@@ -757,9 +757,11 @@ function patchExportPairs() {
 }
 
 function main() {
-  console.log('=== Investus 2026-08-26 report build ===');
+  const svgOnly = process.argv.includes('--svg-only');
+  console.log('=== Investus 2026-08-26 report build' + (svgOnly ? ' (SVG only)' : '') + ' ===');
   const svgCount = writeSvgs();
   console.log(`✅ ${svgCount} SVG written to public/charts/`);
+  if (svgOnly) { console.log('Done (SVG only).'); return; }
   patchReports();
   console.log('✅ lib/reports.ts patched (seed-1088 unpinned, seed-1101–1113, tickers)');
   patchWallPosts();

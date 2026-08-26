@@ -11,37 +11,39 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.26</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Anthropic TAM 30조 달러·2분기 매출 116억·</text>
-  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">IPO 최대 2조 밸류 전망이 나왔습니다</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">앤트로픽 전체 시장 30조 달러·2분기 매출 116억·</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">상장 시 약 2조 밸류 전망이 나왔습니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <rect x="420" y="168" width="240" height="36" rx="18" fill="#a78bfa40" stroke="#a78bfa" stroke-width="2"/>
   <text x="540" y="192" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#a78bfa" text-anchor="middle">BREAKING</text>
   <text x="540" y="280" font-family="Arial Black,Arial" font-size="64" font-weight="900" fill="#a78bfa" text-anchor="middle">$2T</text>
-  <text x="540" y="340" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">TAM 30조+, Q2 매출 116억, 9~10월 IPO 최대 1,000억 조달·</text>
-  <text x="540" y="368" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">약 2조 밸류. AI 상장 anchor입니다.</text>
+  <text x="540" y="340" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">전체 시장 추정 30조 달러 이상, 2분기 매출 116억 달러, 9~10월 기업공개로 최대 1,000억 달러</text>
+  <text x="540" y="368" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">조달·약 2조 달러 기업가치 전망입니다. AI 상장의 기준점으로 읽힙니다.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a1030" stroke="#a78bfa" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🌍</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">$30T+</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">TAM</text>
-  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">시장 규모</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전체 시장</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">추정 규모</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a1030" stroke="#a78bfa" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">💰</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">$11.6B</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Q2 매출</text>
-  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">분기</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2분기 매출</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">분기 실적</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a1030" stroke="#a78bfa" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📅</text>
-  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">Sep/Oct</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">IPO</text>
-  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">~$100B raise</text>
-  <rect x="60" y="642" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="710" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">"TAM 30조 달러+, 2분기 매출 116억, 9~10월 IPO로 최대 1,000억 조달·약 2조 밸류 전망입니다. TAM은 전체</text>
-  <text x="540" y="738" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">시장 추정, Q2 매출은 분기 실적입니다. S-1 전까지는 rumor와 plan으로 구분하세요."</text>
-  <rect x="60" y="862" width="960" height="100" rx="14" fill="#1a1030" stroke="#a78bfa" stroke-width="1"/>
-  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">AI public re-rating 이벤트입니다. S-1·burn·lockup을 확인하세요.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">AI · Anthropic IPO · 2026.08.26</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">9~10월</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">기업공개</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">최대 $100B 조달</text>
+  <rect x="60" y="630" width="960" height="210" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">"전체 시장 규모(TAM) 30조 달러 이상은 ‘이론상 닿을 수 있는 시장’ 추정이지 곧 매출이 아닙니다. 2분기 매출</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">116억 달러는 그 분기 실적입니다. 9~10월 상장으로 최대 1,000억 달러를 조달하고 기업가치를 약 2조 달러로</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">잡는다는 전망이 함께 나왔습니다. 규모가 워낙 커서 당시 금리·</text>
+  <text x="540" y="758" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">주식시장 분위기와 증권신고서 일정이 관건입니다. 증권신고서가 나오기 전에는 소문과 계획을 구분해 두세요."</text>
+  <rect x="60" y="860" width="960" height="100" rx="14" fill="#1a1030" stroke="#a78bfa" stroke-width="1"/>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">비상장 AI가 공개 시장으로 나오는 재평가 이벤트입니다. 증권신고서·현금 소진·기존 주주 매도 제한(보호예수)을 확인하세요.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">AI · 앤트로픽 상장 · 2026.08.26</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

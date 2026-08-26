@@ -11,38 +11,40 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.26</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Gemini Enterprise for Legal/Financial Services가 출시됐고</text>
-  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">MSCI·무디스·FactSet 등이 파트너입니다</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">구글이 법무·금융용 제미니 엔터프라이즈를 출시했고 MSCI·무디스·</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">FactSet 등이 파트너입니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="90" font-weight="900" fill="#4285f4" text-anchor="middle" opacity=".15">💼</text>
   <text x="540" y="240" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#4285f4" text-anchor="middle">💼</text>
-  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">Enterprise</text>
-  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">법무·금융용 Gemini Enterprise가 출시됐고 MSCI·Moody's·</text>
-  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">FactSet 등이 파트너입니다. B2B AI 워크플로 확장입니다.</text>
+  <text x="540" y="300" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">기업용</text>
+  <text x="540" y="340" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">법무·금융 업무에 맞춘 제미니 엔터프라이즈가 출시됐습니다. MSCI·무디스·</text>
+  <text x="540" y="366" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">FactSet 등이 파트너로, 데이터와 AI를 묶어 기업 채택을 노립니다.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">⚖️</text>
-  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">Legal</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">법무</text>
-  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">워크플로</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">법무</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">규제·문서</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">업무 흐름</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏦</text>
-  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">Finance</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금융</text>
-  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">리스크·데이터</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">금융</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">리스크·데이터</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">기관 고객</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🤝</text>
-  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">MSCI</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Moody's</text>
-  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">FactSet</text>
-  <rect x="60" y="642" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="700" font-family="Arial" font-size="19" fill="#4285f4" text-anchor="middle">"Gemini Enterprise for Legal and Financial Services가 출시됐습니다. MSCI·Moody's·FactSet 등 데이터·</text>
-  <text x="540" y="728" font-family="Arial" font-size="19" fill="#4285f4" text-anchor="middle">신용 파트너와 LLM을 묶어 금융·법무 팀 채택을 노립니다. 출시와 대규모 매출은 단계가 다릅니다."</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4285f4" text-anchor="middle">파트너</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">MSCI 등</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">무디스·FactSet</text>
+  <rect x="60" y="630" width="960" height="200" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#4285f4" text-anchor="middle">"법무·금융용 제미니 엔터프라이즈가 출시됐습니다. 일반 챗봇이 아니라, 규정과 정확성이 중요한 현장용 기업</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#4285f4" text-anchor="middle">제품입니다. MSCI·무디스·FactSet 같은 데이터·신용 파트너와 언어모델을 묶어 은행·운용·</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#4285f4" text-anchor="middle">법무팀 채택을 노립니다. 출시와 대규모 유료 계약은 단계가 다릅니다. 시험 도입에서 좌석 확산·가격·</text>
+  <text x="540" y="758" font-family="Arial" font-size="19" fill="#4285f4" text-anchor="middle">클라우드 연계까지가 다음 확인 포인트입니다."</text>
   <rect x="60" y="850" width="960" height="110" rx="14" fill="#0a1420" stroke="#4285f4" stroke-width="1"/>
-  <text x="540" y="884" font-family="Arial" font-size="18" fill="#4285f4" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="920" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">고 ARPU B2B vertical입니다. pilot→계약 숫자를 추적하세요.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">GOOGL · Gemini Enterprise · 2026.08.26</text>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#4285f4" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">금융·법무는 사용자당 매출이 높은 기업 시장입니다. 시험 도입이 실제 계약·좌석 숫자로 이어지는지 추적하세요.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">GOOGL · 제미니 엔터프라이즈 · 2026.08.26</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>
