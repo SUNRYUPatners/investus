@@ -617,7 +617,7 @@ export async function getNews(): Promise<NewsItem[]> {
     const { fetchFinnhubMarketNews } = await import("./finnhub");
     const items = await fetchFinnhubMarketNews();
     if (items.length > 0) {
-      const raw = items.slice(0, 20);
+      const raw = items.slice(0, 12);
       const { translateHeadlines } = await import("./translate");
       const titles = await translateHeadlines(raw.map((n) => n.headline));
       return raw.map((n, i) => {
