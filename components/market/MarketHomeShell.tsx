@@ -18,7 +18,6 @@ import { HomeAIInsight } from "@/components/HomeAIInsight";
 import { FirstVisitBanner } from "@/components/FirstVisitBanner";
 import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 import { MorningBriefingCard } from "@/components/MorningBriefingCard";
-import { MarketBriefingCard } from "@/components/market/MarketBriefingCard";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
 import { PlatformIntro } from "@/components/PlatformIntro";
 import { ShopPreviewSection } from "@/components/ShopPreviewSection";
@@ -77,11 +76,7 @@ export function MarketHomeShell({
             <FirstVisitBanner />
 
             <section className="px-4 lg:px-0 pt-3">
-              {isUs || market === "kr" ? (
-                <MorningBriefingCard locale={uiLocale} market={market} />
-              ) : (
-                <MarketBriefingCard market={market} />
-              )}
+              <MorningBriefingCard locale={uiLocale} market={market} />
             </section>
 
             <section className="px-4 lg:px-0 pt-3">

@@ -63,7 +63,12 @@ export function MorningBriefingCard({
   const viewEn = viewLang === "en";
   const isKo = !viewEn;
   const isKr = market === "kr";
-  const apiUrl = isKr ? "/api/kr-session-briefing" : "/api/session-briefing";
+  const isDaily = market === "safe" || market === "kr-re";
+  const apiUrl = isKr
+    ? "/api/kr-session-briefing"
+    : isDaily
+      ? `/api/daily-briefing?market=${market}`
+      : "/api/session-briefing";
 
   useEffect(() => {
     let cancelled = false;
@@ -83,19 +88,23 @@ export function MorningBriefingCard({
 
   if (!briefing) return null;
 
-  const isPre = briefing.phase === "pre";
+  const isPre = isDaily || briefing.phase === "pre";
   const accent = isPre ? "#fbbf24" : "#60a5fa";
   const Icon = isPre ? Moon : Sun;
   const label = isKo ? briefing.labelKo : briefing.labelEn;
   const headline = pickText(viewEn, briefing.headline, briefing.headlineEn);
   const bullets = viewEn && briefing.bulletsEn?.length ? briefing.bulletsEn : briefing.bullets;
   const teaserTitle = isKo
-    ? isKr
-      ? (isPre ? "한국장 개장 전, 오늘 핵심" : "한국장 마감 후, 세션 핵심")
-      : (isPre ? "미국 개장 전, 오늘 핵심" : "미국 장마감 후, 세션 핵심")
-    : isKr
-      ? (isPre ? "Before KRX open" : "After KRX close")
-      : (isPre ? "Before the open" : "After the close");
+    ? isDaily
+      ? "오늘 아침 9시, 핵심 정리"
+      : isKr
+        ? (isPre ? "한국장 개장 전, 오늘 핵심" : "한국장 마감 후, 세션 핵심")
+        : (isPre ? "미국 개장 전, 오늘 핵심" : "미국 장마감 후, 세션 핵심")
+    : isDaily
+      ? "Today's 9 AM brief"
+      : isKr
+        ? (isPre ? "Before KRX open" : "After KRX close")
+        : (isPre ? "Before the open" : "After the close");
 
   if (!isPro) {
     return (
@@ -165,12 +174,20 @@ export function MorningBriefingCard({
       {briefing.source === "session-news" && (
         <p className="text-[10px] mb-2" style={{ color: "var(--muted)" }}>
           {isKo
-            ? isKr
-              ? "뉴스 기반 · 시총 탑10(삼성전자·SK하이닉스·현대차 등)"
-              : "장중 뉴스 기반 · 테슬라·스페이스X·빅테크(M7)"
-            : isKr
-              ? "News-based · KRX top 10"
-              : "Session news · Tesla, SpaceX, Mag7"}
+            ? isDaily
+              ? market === "safe"
+                ? "전일~9시 뉴스 · 비트코인·이더·금·은 등"
+                : "전일~9시 뉴스 · 매매·전세·정책"
+              : isKr
+                ? "뉴스 기반 · 시총 탑10(삼성전자·SK하이닉스·현대차 등)"
+                : "장중 뉴스 기반 · 테슬라·스페이스X·빅테크(M7)"
+            : isDaily
+              ? market === "safe"
+                ? "Overnight–9 AM news · BTC, ETH, gold…"
+                : "Overnight–9 AM news · sale, jeonse, policy"
+              : isKr
+                ? "News-based · KRX top 10"
+                : "Session news · Tesla, SpaceX, Mag7"}
         </p>
       )}
 
