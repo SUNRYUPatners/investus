@@ -77,8 +77,8 @@ export function MarketHomeShell({
             <FirstVisitBanner />
 
             <section className="px-4 lg:px-0 pt-3">
-              {isUs ? (
-                <MorningBriefingCard locale={uiLocale} />
+              {isUs || market === "kr" ? (
+                <MorningBriefingCard locale={uiLocale} market={market} />
               ) : (
                 <MarketBriefingCard market={market} />
               )}

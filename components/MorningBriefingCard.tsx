@@ -6,6 +6,8 @@ import { ChevronDown, Lock, Moon, Sun } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import type { SessionBriefing } from "@/lib/morningBriefing";
 
+import type { MarketId } from "@/lib/markets/types";
+
 type ViewLang = "ko" | "en";
 
 function LangToggle({ value, onChange }: { value: ViewLang; onChange: (v: ViewLang) => void }) {
@@ -46,7 +48,13 @@ function pickText(viewEn: boolean, ko: string | undefined, en: string | undefine
   return (ko || en || "").trim();
 }
 
-export function MorningBriefingCard({ locale: _locale = "ko" }: { locale?: string }) {
+export function MorningBriefingCard({
+  locale: _locale = "ko",
+  market = "us",
+}: {
+  locale?: string;
+  market?: MarketId;
+}) {
   const { user } = useAuth();
   const isPro = user?.isPro === true;
   const [briefing, setBriefing] = useState<SessionBriefing | null>(null);
@@ -54,10 +62,12 @@ export function MorningBriefingCard({ locale: _locale = "ko" }: { locale?: strin
   const [viewLang, setViewLang] = useState<ViewLang>("ko");
   const viewEn = viewLang === "en";
   const isKo = !viewEn;
+  const isKr = market === "kr";
+  const apiUrl = isKr ? "/api/kr-session-briefing" : "/api/session-briefing";
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/api/session-briefing")
+    fetch(apiUrl)
       .then(async (r) => {
         const d = await r.json().catch(() => null) as { briefing?: SessionBriefing | null } | null;
         return d;
@@ -69,7 +79,7 @@ export function MorningBriefingCard({ locale: _locale = "ko" }: { locale?: strin
         if (!cancelled) setBriefing(null);
       });
     return () => { cancelled = true; };
-  }, []);
+  }, [apiUrl]);
 
   if (!briefing) return null;
 
@@ -80,8 +90,12 @@ export function MorningBriefingCard({ locale: _locale = "ko" }: { locale?: strin
   const headline = pickText(viewEn, briefing.headline, briefing.headlineEn);
   const bullets = viewEn && briefing.bulletsEn?.length ? briefing.bulletsEn : briefing.bullets;
   const teaserTitle = isKo
-    ? (isPre ? "미국 개장 전, 오늘 핵심" : "미국 장마감 후, 세션 핵심")
-    : (isPre ? "Before the open" : "After the close");
+    ? isKr
+      ? (isPre ? "한국장 개장 전, 오늘 핵심" : "한국장 마감 후, 세션 핵심")
+      : (isPre ? "미국 개장 전, 오늘 핵심" : "미국 장마감 후, 세션 핵심")
+    : isKr
+      ? (isPre ? "Before KRX open" : "After KRX close")
+      : (isPre ? "Before the open" : "After the close");
 
   if (!isPro) {
     return (
@@ -150,7 +164,13 @@ export function MorningBriefingCard({ locale: _locale = "ko" }: { locale?: strin
       </div>
       {briefing.source === "session-news" && (
         <p className="text-[10px] mb-2" style={{ color: "var(--muted)" }}>
-          {isKo ? "장중 뉴스 기반 · 테슬라·스페이스X·빅테크(M7)" : "Session news · Tesla, SpaceX, Mag7"}
+          {isKo
+            ? isKr
+              ? "뉴스 기반 · 시총 탑10(삼성전자·SK하이닉스·현대차 등)"
+              : "장중 뉴스 기반 · 테슬라·스페이스X·빅테크(M7)"
+            : isKr
+              ? "News-based · KRX top 10"
+              : "Session news · Tesla, SpaceX, Mag7"}
         </p>
       )}
 
