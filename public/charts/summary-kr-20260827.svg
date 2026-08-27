@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="25%" style="stop-color:#ef4444"/><stop offset="50%" style="stop-color:#fb923c"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#4ade80"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.08.27 한국장 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a1000" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#f59e0b"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f59e0b">🏦 한국은행이 두 번 연속 금리를 올렸습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">그런데도 코스피는 약 1.53% 올라 6,900선에 안착했습니다.</text>
+  <text x="970" y="188" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="end">금리</text>
+
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">🧠 반도체가 지수를 위로 끌어올렸습니다</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">삼성전자 266,000원 +1.72%, SK하이닉스 1,730,000원 +2.49%입니다.</text>
+  <text x="970" y="312" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="end">반도체</text>
+
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#fb923c"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c">🔋 삼성SDI가 10% 넘게 뛰었습니다</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">LG에너지솔루션 +5.56%, LG화학 +4.17%로 소재까지 같이 올랐습니다.</text>
+  <text x="970" y="436" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#fb923c" text-anchor="end">+10.27%</text>
+
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">🚗 현대차와 기아가 나란히 올랐습니다</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">현대차 398,000원 +2.45%, 기아 126,100원 +4.03%로 마쳤습니다.</text>
+  <text x="970" y="560" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="end">자동차</text>
+
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">🏭 협력사와 함께 AI 훈련센터를 엽니다</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">현대차·기아가 부품사 생산 현장의 인공지능 전환을 같이 교육합니다.</text>
+  <text x="970" y="684" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="end">AI 전환</text>
+
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">🟢 네이버도 플랫폼 안에서 상대 강세였습니다</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">216,500원 +1.59%로, 광고와 인공지능 기대가 함께 붙었습니다.</text>
+  <text x="970" y="808" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">NAVER</text>
+
+  <rect x="60" y="866" width="960" height="112" rx="14" fill="#0f1419" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="866" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="908" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">📈 다음은 7,000선 안착 여부입니다</text>
+  <text x="116" y="946" font-family="Arial" font-size="18" fill="#9ca3af">외국인 수급, 원/달러 환율, 반도체 수출을 함께 보시기 바랍니다.</text>
+  <text x="970" y="932" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="end">체크</text>
+
+  <text x="540" y="1014" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">금리를 올린 날에도 코스피가 오른 이유는 반도체·2차전지·자동차가 함께 움직였기 때문입니다</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="25%" style="stop-color:#ef4444"/><stop offset="50%" style="stop-color:#fb923c"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#4ade80"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">Korea market wrap — August 27, 2026</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a1000" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#f59e0b"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f59e0b">🏦 Bank of Korea hiked for a second straight meeting</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">KOSPI still closed about 1.53% higher and held the 6,900 line.</text>
+  <text x="970" y="188" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="end">RATES</text>
+
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">🧠 Chipmakers did the heavy lifting for the index</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">Samsung Electronics 266,000 won +1.72%, SK Hynix 1,730,000 won +2.49%.</text>
+  <text x="970" y="312" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="end">SEMI</text>
+
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#fb923c"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c">🔋 Samsung SDI jumped more than 10% on the day</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">LG Energy Solution +5.56% and LG Chem +4.17% joined the battery move.</text>
+  <text x="970" y="436" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#fb923c" text-anchor="end">+10.27%</text>
+
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">🚗 Hyundai Motor and Kia both finished higher</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">Hyundai 398,000 won +2.45%, Kia 126,100 won +4.03% at the close.</text>
+  <text x="970" y="560" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="end">AUTO</text>
+
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">🏭 A joint AI training centre for parts suppliers</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">Hyundai and Kia will train supplier plants on shop-floor AI adoption.</text>
+  <text x="970" y="684" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="end">AI SHIFT</text>
+
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">🟢 Naver outperformed inside the platform group</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">216,500 won +1.59% as ad recovery and AI hopes lined up together.</text>
+  <text x="970" y="808" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">NAVER</text>
+
+  <rect x="60" y="866" width="960" height="112" rx="14" fill="#0f1419" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="866" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="908" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">📈 Next question is whether 7,000 holds</text>
+  <text x="116" y="946" font-family="Arial" font-size="18" fill="#9ca3af">Watch foreign flows, the won-dollar rate and chip export data together.</text>
+  <text x="970" y="932" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="end">WATCH</text>
+
+  <text x="540" y="1014" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">The index rose on a hike day because chips, batteries and autos all moved in the same direction</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1005"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fb923c"/><stop offset="100%" style="stop-color:#f97316"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="170" height="38" rx="19" fill="#fb923c30" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="125" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#fb923c" text-anchor="middle">BATTERY</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.27</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Samsung SDI surged over 10% and pulled cells and materials up with it</text>
+  <line x1="80" y1="122" x2="1000" y2="122" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="372" y="136" width="336" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="164" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">SURGE — all three battery names up</text>
+
+  <rect x="80" y="198" width="920" height="136" rx="18" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="176" y="282" font-family="Arial" font-size="52" text-anchor="middle">🔋</text>
+  <text x="400" y="272" font-family="Arial Black,Arial" font-size="58" font-weight="900" fill="#fb923c" text-anchor="middle">+10.27%</text>
+  <text x="760" y="252" font-family="Arial" font-size="22" fill="#f9fafb" text-anchor="middle">Samsung SDI closed at 569,000 won</text>
+  <text x="760" y="288" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">An unusually large one-day move</text>
+
+  <rect x="60" y="354" width="300" height="196" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="210" y="400" font-family="Arial" font-size="34" text-anchor="middle">🔋</text>
+  <text x="210" y="440" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c" text-anchor="middle">Samsung SDI</text>
+  <text x="210" y="474" font-family="Arial" font-size="20" fill="#f9fafb" text-anchor="middle">569,000 KRW</text>
+  <text x="210" y="504" font-family="Arial" font-size="17" fill="#fb923c" text-anchor="middle">+10.27%</text>
+  <text x="210" y="532" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Makes battery cells</text>
+
+  <rect x="390" y="354" width="300" height="196" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="540" y="400" font-family="Arial" font-size="34" text-anchor="middle">⚡</text>
+  <text x="540" y="440" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c" text-anchor="middle">LG Energy Solution</text>
+  <text x="540" y="474" font-family="Arial" font-size="20" fill="#f9fafb" text-anchor="middle">370,500 KRW</text>
+  <text x="540" y="504" font-family="Arial" font-size="17" fill="#fb923c" text-anchor="middle">+5.56%</text>
+  <text x="540" y="532" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Korea's largest cell maker</text>
+
+  <rect x="720" y="354" width="300" height="196" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="870" y="400" font-family="Arial" font-size="34" text-anchor="middle">🧪</text>
+  <text x="870" y="440" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c" text-anchor="middle">LG Chem</text>
+  <text x="870" y="474" font-family="Arial" font-size="20" fill="#f9fafb" text-anchor="middle">274,500 KRW</text>
+  <text x="870" y="504" font-family="Arial" font-size="17" fill="#fb923c" text-anchor="middle">+4.17%</text>
+  <text x="870" y="532" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Supplies cathode materials</text>
+
+  <rect x="60" y="572" width="960" height="188" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="618" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">"What stands out is that cell makers (Samsung SDI, LG Energy Solution) and a materials</text>
+  <text x="540" y="646" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">supplier (LG Chem) all rose on the same day. One stock moving is a company story; cells and</text>
+  <text x="540" y="674" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">materials moving together means the view on the whole sector has shifted. Cathode material</text>
+  <text x="540" y="702" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">sits on the positive side of a battery cell, so cell orders pull material orders behind them.</text>
+  <text x="540" y="730" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">A double-digit day can also carry short covering, not only fundamentals."</text>
+
+  <rect x="60" y="778" width="960" height="146" rx="14" fill="#1a1005" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="808" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">Why this matters</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Battery names had been held down by worries about slowing electric-vehicle demand. That the group outpaced</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">semiconductors on a rate-hike day suggests money is spreading beyond the chip trade into neighbouring</text>
+  <text x="540" y="886" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">sectors. One-day spikes often give some of it back, so check order-win disclosures, US and European EV</text>
+  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">sales, and cathode selling prices to see whether the fundamentals point the same way.</text>
+  <text x="540" y="992" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">Battery · Samsung SDI +10.27% · LGES +5.56% · LG Chem +4.17% · 2026.08.27</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
+</svg>

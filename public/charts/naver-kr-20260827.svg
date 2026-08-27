@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">NAVER</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.27</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="29" font-weight="900" fill="#f9fafb" text-anchor="middle">네이버가 216,500원으로 1.59% 오르며 플랫폼 안에서 앞섰습니다</text>
+  <line x1="80" y1="122" x2="1000" y2="122" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="316" y="136" width="448" height="44" rx="22" fill="rgba(74,222,128,.12)" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="165" font-family="Arial" font-size="18" fill="#86efac" text-anchor="middle">🟢 광고와 인공지능 기대가 같은 날 붙었습니다</text>
+
+  <text x="540" y="250" font-family="Arial" font-size="56" text-anchor="middle">🔎</text>
+  <text x="540" y="308" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#4ade80" text-anchor="middle">216,500원 · +1.59%</text>
+
+  <rect x="60" y="336" width="300" height="56" rx="28" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="210" y="372" font-family="Arial" font-size="19" fill="#86efac" text-anchor="middle">광고 매출 회복</text>
+  <rect x="390" y="336" width="300" height="56" rx="28" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="540" y="372" font-family="Arial" font-size="19" fill="#86efac" text-anchor="middle">커머스 거래액</text>
+  <rect x="720" y="336" width="300" height="56" rx="28" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="870" y="372" font-family="Arial" font-size="19" fill="#86efac" text-anchor="middle">인공지능 검색</text>
+
+  <rect x="60" y="412" width="460" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="290" y="464" font-family="Arial" font-size="34" text-anchor="middle">📢</text>
+  <text x="290" y="506" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">광고가 실적의 뼈대입니다</text>
+  <text x="290" y="540" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">검색·디스플레이 광고가 매출에서 큰 비중을 차지합니다.</text>
+  <text x="290" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">경기가 좋아지면 기업들이 광고비부터 늘립니다.</text>
+
+  <rect x="560" y="412" width="460" height="180" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="790" y="464" font-family="Arial" font-size="34" text-anchor="middle">🛒</text>
+  <text x="790" y="506" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">커머스는 수수료 사업입니다</text>
+  <text x="790" y="540" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">쇼핑 거래액이 늘면 받는 수수료도 함께 늘어납니다.</text>
+  <text x="790" y="568" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">거래액과 수수료율을 나눠 보시면 됩니다.</text>
+
+  <rect x="60" y="610" width="960" height="180" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="654" font-family="Arial" font-size="19" fill="#86efac" text-anchor="middle">"네이버는 216,500원에서 1.59% 올랐습니다. 반도체나 2차전지처럼 큰 폭은 아니지만,</text>
+  <text x="540" y="682" font-family="Arial" font-size="19" fill="#86efac" text-anchor="middle">금리를 올린 날 플랫폼 업종이 함께 올랐다는 점이 의미가 있습니다. 플랫폼 회사는 보통</text>
+  <text x="540" y="710" font-family="Arial" font-size="19" fill="#86efac" text-anchor="middle">금리가 오르면 미래 이익의 현재 가치가 줄어 불리한 쪽으로 분류됩니다. 그런데도 올랐다는</text>
+  <text x="540" y="738" font-family="Arial" font-size="19" fill="#86efac" text-anchor="middle">것은 광고 회복과 인공지능 서비스에 대한 기대가 금리 부담보다 컸다는 뜻으로 읽힙니다.</text>
+  <text x="540" y="766" font-family="Arial" font-size="19" fill="#86efac" text-anchor="middle">다만 하루 흐름만으로 방향을 단정하지는 않으시는 편이 좋습니다."</text>
+
+  <rect x="60" y="808" width="960" height="146" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="838" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">네이버는 코스피 시가총액 상위 10위 안에 드는 대표 플랫폼 기업이라, 이 종목의 방향은 내수 경기와 광고 시장의</text>
+  <text x="540" y="892" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">온도를 보여 주는 참고 지표가 됩니다. 반도체·자동차가 수출로 움직인다면, 네이버는 국내 소비와 기업 광고비로</text>
+  <text x="540" y="916" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">움직인다는 점이 다릅니다. 다음에는 분기 광고 매출 증가율, 쇼핑 거래액, 인공지능 서비스의 유료 전환 여부를</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인하시면 오늘의 상승이 실적으로 이어지는지 판단하실 수 있습니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">NAVER · 216,500원 +1.59% · 2026.08.27</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

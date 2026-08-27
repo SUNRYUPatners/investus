@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a0a"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="100%" style="stop-color:#f87171"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="190" height="38" rx="19" fill="#ef444430" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="135" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#ef4444" text-anchor="middle">HYUNDAI · KIA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.27</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="29" font-weight="900" fill="#f9fafb" text-anchor="middle">Hyundai and Kia will run a joint AI training centre for parts suppliers</text>
+  <line x1="80" y1="122" x2="1000" y2="122" stroke="#1f2937" stroke-width="1"/>
+
+  <text x="540" y="200" font-family="Arial" font-size="58" text-anchor="middle">✅</text>
+  <text x="540" y="256" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f9fafb" text-anchor="middle">Supplier AI training centre</text>
+  <text x="540" y="290" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">The two carmakers will teach staff at their component suppliers how to apply AI on the shop floor.</text>
+  <line x1="80" y1="308" x2="1000" y2="308" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="320" width="300" height="176" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <text x="210" y="366" font-family="Arial" font-size="34" text-anchor="middle">🏭</text>
+  <text x="210" y="406" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="middle">Shop-floor first</text>
+  <text x="210" y="438" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Usable inside the plant</text>
+  <text x="210" y="470" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Defect checks, machine care</text>
+  <rect x="390" y="320" width="300" height="176" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="366" font-family="Arial" font-size="34" text-anchor="middle">🤖</text>
+  <text x="540" y="406" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="middle">AX shift</text>
+  <text x="540" y="438" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Changing how work runs</text>
+  <text x="540" y="470" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">AX means AI transformation</text>
+  <rect x="720" y="320" width="300" height="176" rx="16" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <text x="870" y="366" font-family="Arial" font-size="34" text-anchor="middle">🤝</text>
+  <text x="870" y="406" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="middle">Supply chain</text>
+  <text x="870" y="438" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Supplier cost is their cost</text>
+  <text x="870" y="470" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Part quality sets car quality</text>
+
+  <rect x="60" y="510" width="460" height="96" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <text x="130" y="556" font-family="Arial" font-size="30" text-anchor="middle">🚗</text>
+  <text x="330" y="552" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f87171" text-anchor="middle">398,000 KRW +2.45%</text>
+  <text x="330" y="584" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Hyundai Motor close</text>
+  <rect x="560" y="510" width="460" height="96" rx="14" fill="#1a0a0a" stroke="#f87171" stroke-width="1.5"/>
+  <text x="630" y="556" font-family="Arial" font-size="30" text-anchor="middle">🚙</text>
+  <text x="830" y="552" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f87171" text-anchor="middle">126,100 KRW +4.03%</text>
+  <text x="830" y="584" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Kia close</text>
+
+  <rect x="60" y="620" width="960" height="152" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="664" font-family="Arial" font-size="19" fill="#fca5a5" text-anchor="middle">"The logic for teaching suppliers is simple. Defect rates and productivity at the companies</text>
+  <text x="540" y="692" font-family="Arial" font-size="19" fill="#fca5a5" text-anchor="middle">that build the parts eventually show up in the carmaker's own cost and quality. AX is short</text>
+  <text x="540" y="720" font-family="Arial" font-size="19" fill="#fca5a5" text-anchor="middle">for AI transformation: replacing visual inspection and handwritten records with machines,</text>
+  <text x="540" y="748" font-family="Arial" font-size="19" fill="#fca5a5" text-anchor="middle">and changing the way the work itself is organised."</text>
+
+  <rect x="60" y="788" width="960" height="146" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="818" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">Why this matters</text>
+  <text x="540" y="848" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Auto shares usually trade on US and European sales and the currency, but today a second axis appeared:</text>
+  <text x="540" y="872" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">supply-chain productivity. Lower supplier costs help the carmaker's margin with a lag, and a supplier that</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">fails can stop the assembly line outright. A training centre does not hit earnings immediately, so keep</text>
+  <text x="540" y="920" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">watching monthly US sales, average selling prices and incentive spending to judge whether the move sticks.</text>
+  <text x="540" y="998" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">Hyundai 398,000 KRW +2.45% · Kia 126,100 KRW +4.03% · 2026.08.27</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
+</svg>

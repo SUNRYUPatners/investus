@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b22"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#a78bfa"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="190" height="38" rx="19" fill="#a78bfa30" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="135" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#a78bfa" text-anchor="middle">SK하이닉스</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.27</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">SK하이닉스가 1,730,000원까지 2.49% 오르며 인공지능</text>
+  <text x="540" y="142" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">서버 메모리 기대를 그대로 받아냈습니다</text>
+  <line x1="80" y1="158" x2="1000" y2="158" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="70" y="178" width="940" height="140" rx="18" fill="#140b22" stroke="#a78bfa" stroke-width="2"/>
+  <text x="160" y="266" font-family="Arial" font-size="54" text-anchor="middle">💾</text>
+  <text x="450" y="252" font-family="Arial Black,Arial" font-size="48" font-weight="900" fill="#a78bfa" text-anchor="middle">1,730,000원</text>
+  <text x="450" y="292" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">전일 대비 2.49% 상승한 종가입니다</text>
+  <rect x="700" y="212" width="260" height="72" rx="16" fill="#0f0a1a" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="830" y="248" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c4b5fd" text-anchor="middle">+2.49%</text>
+  <text x="830" y="272" font-family="Arial" font-size="15" fill="#9ca3af" text-anchor="middle">코스피 상승률을 앞섰습니다</text>
+
+  <rect x="60" y="338" width="225" height="188" rx="16" fill="#140b22" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="172" y="386" font-family="Arial" font-size="34" text-anchor="middle">🧩</text>
+  <text x="172" y="428" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">HBM</text>
+  <text x="172" y="458" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">고대역폭 메모리</text>
+  <text x="172" y="488" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">인공지능 가속기에</text>
+  <text x="172" y="508" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">붙여 쓰는 메모리입니다</text>
+
+  <rect x="305" y="338" width="225" height="188" rx="16" fill="#140b22" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="417" y="386" font-family="Arial" font-size="34" text-anchor="middle">📊</text>
+  <text x="417" y="428" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">실적 확인</text>
+  <text x="417" y="458" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">출하량과 판매가</text>
+  <text x="417" y="488" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">기대가 숫자로 바뀌는</text>
+  <text x="417" y="508" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">지점을 봐야 합니다</text>
+
+  <rect x="550" y="338" width="225" height="188" rx="16" fill="#140b22" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="662" y="386" font-family="Arial" font-size="34" text-anchor="middle">🏗️</text>
+  <text x="662" y="428" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">설비투자</text>
+  <text x="662" y="458" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">증설 부담</text>
+  <text x="662" y="488" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">공장을 늘리는 비용은</text>
+  <text x="662" y="508" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">이익률을 먼저 누릅니다</text>
+
+  <rect x="795" y="338" width="225" height="188" rx="16" fill="#140b22" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="907" y="386" font-family="Arial" font-size="34" text-anchor="middle">🌍</text>
+  <text x="907" y="428" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">외국인</text>
+  <text x="907" y="458" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">수급 방향</text>
+  <text x="907" y="488" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">반도체 두 종목에</text>
+  <text x="907" y="508" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">먼저 들어옵니다</text>
+
+  <rect x="60" y="548" width="960" height="196" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="598" font-family="Arial" font-size="19" fill="#c4b5fd" text-anchor="middle">"SK하이닉스는 1,730,000원에서 2.49% 올랐습니다. 고대역폭 메모리(HBM)는 인공지능</text>
+  <text x="540" y="626" font-family="Arial" font-size="19" fill="#c4b5fd" text-anchor="middle">가속기 옆에 붙어 데이터를 빠르게 주고받는 메모리로, 이 회사 실적의 중심축입니다.</text>
+  <text x="540" y="654" font-family="Arial" font-size="19" fill="#c4b5fd" text-anchor="middle">미국 인공지능 반도체 기업의 분기 실적이 예상을 넘겼다는 소식이 전해지면서, 국내에서는</text>
+  <text x="540" y="682" font-family="Arial" font-size="19" fill="#c4b5fd" text-anchor="middle">부품을 대는 회사들의 출하 기대가 함께 올라갔습니다. 기대와 계약은 다른 단계이므로,</text>
+  <text x="540" y="710" font-family="Arial" font-size="19" fill="#c4b5fd" text-anchor="middle">실제 공급 일정이 공시로 확인되는지를 보시면 됩니다."</text>
+
+  <rect x="60" y="764" width="960" height="146" rx="14" fill="#140b22" stroke="#a78bfa" stroke-width="1"/>
+  <text x="540" y="794" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="824" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">SK하이닉스는 삼성전자와 함께 코스피 반도체 비중의 대부분을 차지하기 때문에, 이 종목이 오르면 지수도 같이</text>
+  <text x="540" y="848" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">올라갑니다. 오늘 상승은 자체 실적이 아니라 해외 인공지능 수요에서 넘어온 기대라는 점이 지난 상승 국면과</text>
+  <text x="540" y="872" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">다릅니다. 기대에 기댄 상승은 되돌림이 빠르므로, 고객사 재고와 메모리 계약 가격, 회사가 밝히는 공급 일정</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">세 가지를 다음 확인 포인트로 잡아 두시기 바랍니다.</text>
+  <text x="540" y="984" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">SK하이닉스 · 1,730,000원 +2.49% · 2026.08.27</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

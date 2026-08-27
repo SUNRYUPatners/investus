@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1005"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fb923c"/><stop offset="100%" style="stop-color:#f97316"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="170" height="38" rx="19" fill="#fb923c30" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="125" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#fb923c" text-anchor="middle">2차전지</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.27</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="29" font-weight="900" fill="#f9fafb" text-anchor="middle">삼성SDI가 10% 넘게 오르며 2차전지와 소재가 함께 뛰었습니다</text>
+  <line x1="80" y1="122" x2="1000" y2="122" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="372" y="136" width="336" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="164" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">급등 — 배터리 3종목 동반 강세</text>
+
+  <rect x="80" y="198" width="920" height="136" rx="18" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="176" y="282" font-family="Arial" font-size="52" text-anchor="middle">🔋</text>
+  <text x="400" y="272" font-family="Arial Black,Arial" font-size="58" font-weight="900" fill="#fb923c" text-anchor="middle">+10.27%</text>
+  <text x="760" y="252" font-family="Arial" font-size="22" fill="#f9fafb" text-anchor="middle">삼성SDI 569,000원으로 마감했습니다</text>
+  <text x="760" y="288" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">하루 변동으로는 이례적으로 큰 폭입니다</text>
+
+  <rect x="60" y="354" width="300" height="196" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="210" y="400" font-family="Arial" font-size="34" text-anchor="middle">🔋</text>
+  <text x="210" y="440" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#fb923c" text-anchor="middle">삼성SDI</text>
+  <text x="210" y="474" font-family="Arial" font-size="20" fill="#f9fafb" text-anchor="middle">569,000원</text>
+  <text x="210" y="504" font-family="Arial" font-size="17" fill="#fb923c" text-anchor="middle">+10.27%</text>
+  <text x="210" y="532" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">배터리 셀을 직접 만듭니다</text>
+
+  <rect x="390" y="354" width="300" height="196" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="540" y="400" font-family="Arial" font-size="34" text-anchor="middle">⚡</text>
+  <text x="540" y="440" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#fb923c" text-anchor="middle">LG에너지솔루션</text>
+  <text x="540" y="474" font-family="Arial" font-size="20" fill="#f9fafb" text-anchor="middle">370,500원</text>
+  <text x="540" y="504" font-family="Arial" font-size="17" fill="#fb923c" text-anchor="middle">+5.56%</text>
+  <text x="540" y="532" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">국내 최대 배터리 회사입니다</text>
+
+  <rect x="720" y="354" width="300" height="196" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="870" y="400" font-family="Arial" font-size="34" text-anchor="middle">🧪</text>
+  <text x="870" y="440" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#fb923c" text-anchor="middle">LG화학</text>
+  <text x="870" y="474" font-family="Arial" font-size="20" fill="#f9fafb" text-anchor="middle">274,500원</text>
+  <text x="870" y="504" font-family="Arial" font-size="17" fill="#fb923c" text-anchor="middle">+4.17%</text>
+  <text x="870" y="532" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">양극재 등 소재를 만듭니다</text>
+
+  <rect x="60" y="572" width="960" height="188" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="618" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">"셀을 만드는 회사(삼성SDI·LG에너지솔루션)와 소재를 만드는 회사(LG화학)가 같은 날 함께</text>
+  <text x="540" y="646" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">올랐다는 점이 오늘의 특징입니다. 한 종목만 오르면 개별 재료지만, 셀과 소재가 같이 오르면</text>
+  <text x="540" y="674" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">업종 전체에 대한 기대가 바뀌었다는 뜻으로 읽습니다. 양극재는 배터리에서 전기를 내보내는</text>
+  <text x="540" y="702" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">쪽의 핵심 재료로, 셀 주문이 늘면 소재 주문도 따라 늘어나는 구조입니다. 다만 하루 10%대</text>
+  <text x="540" y="730" font-family="Arial" font-size="19" fill="#fdba74" text-anchor="middle">상승에는 공매도 환매 같은 수급 요인도 섞이곤 합니다."</text>
+
+  <rect x="60" y="778" width="960" height="146" rx="14" fill="#1a1005" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="808" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">2차전지는 그동안 전기차 수요 둔화 우려로 눌려 있던 업종입니다. 그 업종이 금리 인상일에 반도체보다 더 크게</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">올랐다는 것은, 자금이 반도체 한 곳에만 머물지 않고 옆 업종으로 번지기 시작했다는 신호로 볼 수 있습니다.</text>
+  <text x="540" y="886" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">다만 하루 급등은 수급 되돌림도 잦습니다. 다음에는 수주 공시, 미국·유럽 전기차 판매, 양극재 판매 단가가</text>
+  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">같은 방향으로 움직이는지를 확인하시면 오늘 상승의 성격을 구분하실 수 있습니다.</text>
+  <text x="540" y="992" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">2차전지 · 삼성SDI +10.27% · LG에너지솔루션 +5.56% · LG화학 +4.17% · 2026.08.27</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1000"/></linearGradient>
+    <linearGradient id="yg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#yg)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="rgba(245,158,11,.18)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#f59e0b" text-anchor="middle">RATES</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.27</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">The KOSPI gained 1.53% even after a second straight Bank of Korea hike</text>
+  <line x1="80" y1="122" x2="1000" y2="122" stroke="#1f2937" stroke-width="1"/>
+
+  <text x="540" y="196" font-family="Arial" font-size="54" text-anchor="middle">🏦</text>
+  <text x="540" y="252" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f59e0b" text-anchor="middle">A hike did not mean a fall</text>
+  <text x="540" y="286" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">The market moved against the textbook today. The panels below break down why.</text>
+  <line x1="80" y1="304" x2="1000" y2="304" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="318" width="420" height="152" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
+  <text x="270" y="356" font-family="Arial" font-size="19" fill="#6b7280" text-anchor="middle">The usual expectation</text>
+  <text x="270" y="406" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#9ca3af" text-anchor="middle">Equity drag</text>
+  <text x="270" y="440" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Borrowing gets more expensive</text>
+  <text x="270" y="462" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">and risk assets look less appealing</text>
+
+  <text x="540" y="406" font-family="Arial Black,Arial" font-size="42" fill="#f59e0b" text-anchor="middle">→</text>
+
+  <rect x="600" y="318" width="420" height="152" rx="16" fill="#1a1000" stroke="#f59e0b" stroke-width="2"/>
+  <text x="810" y="356" font-family="Arial" font-size="19" fill="#f59e0b" text-anchor="middle">What actually happened</text>
+  <text x="810" y="406" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f59e0b" text-anchor="middle">KOSPI +1.53%</text>
+  <text x="810" y="440" font-family="Arial" font-size="16" fill="#fcd34d" text-anchor="middle">An AI semiconductor tailwind</text>
+  <text x="810" y="462" font-family="Arial" font-size="16" fill="#fcd34d" text-anchor="middle">outweighed the rate drag</text>
+
+  <rect x="60" y="486" width="300" height="156" rx="16" fill="#1a1000" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="210" y="530" font-family="Arial" font-size="32" text-anchor="middle">🏦</text>
+  <text x="210" y="570" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="middle">Second hike</text>
+  <text x="210" y="600" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Two meetings in a row</text>
+  <text x="210" y="626" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">A response to prices and the won</text>
+
+  <rect x="390" y="486" width="300" height="156" rx="16" fill="#1a1000" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="540" y="530" font-family="Arial" font-size="32" text-anchor="middle">📈</text>
+  <text x="540" y="570" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="middle">About +1.53%</text>
+  <text x="540" y="600" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">KOSPI daily gain</text>
+  <text x="540" y="626" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Back above the 6,900 line</text>
+
+  <rect x="720" y="486" width="300" height="156" rx="16" fill="#1a1000" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="870" y="530" font-family="Arial" font-size="32" text-anchor="middle">🎯</text>
+  <text x="870" y="570" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f59e0b" text-anchor="middle">7,000 level</text>
+  <text x="870" y="600" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">The next hurdle</text>
+  <text x="870" y="626" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Reaching it is easier than holding</text>
+
+  <rect x="60" y="660" width="960" height="152" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="704" font-family="Arial" font-size="19" fill="#fcd34d" text-anchor="middle">"The policy rate is the price of money set by the Bank of Korea. When it rises, loan costs</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#fcd34d" text-anchor="middle">go up, spending and investment cool, and equities normally suffer. This time the hike was</text>
+  <text x="540" y="760" font-family="Arial" font-size="19" fill="#fcd34d" text-anchor="middle">already expected, and news that a US AI chipmaker had beaten estimates arrived at the same</text>
+  <text x="540" y="788" font-family="Arial" font-size="19" fill="#fcd34d" text-anchor="middle">time, pulling buyers into exporters. The market looked at earnings before rates."</text>
+
+  <rect x="60" y="830" width="960" height="146" rx="14" fill="#1a1000" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="860" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">Why this matters</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">An index rising on a hike day is unusual. One reading is that investors cared less about this hike than about</text>
+  <text x="540" y="914" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">the signal that follows it, namely whether tightening stops here. If rates stay high for long, the borrowing</text>
+  <text x="540" y="938" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">burden still shows up in corporate profits and consumption with a lag. Watch the governor's tone, the</text>
+  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">won-dollar rate, the three-year government bond yield and foreign net buying to tell trend from relief.</text>
+  <text x="540" y="1016" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">Second consecutive policy rate hike · KOSPI about +1.53% · 2026.08.27</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#yg)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
+</svg>
