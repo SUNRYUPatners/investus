@@ -219,11 +219,18 @@ description: >-
 | 시장 | 트리거 | 데이터 소스 | 산출물 |
 |------|--------|-------------|--------|
 | **us** (미국) | `리포트 업데이트` | `01.investus 리포트/` **스크린샷 Read** (기존과 동일) | `lib/reports.ts`, SVG, wall, analyst |
-| **kr** (한국주식) | 같은 요청 시 **자동 포함** (별도 말 없어도) | **웹 검색** — 당일·전일 한국장 뉴스·정책·수급 (스크린샷 없음) | `lib/reports-kr.ts`, `*-kr-*.svg`, markets wall/analyst |
-| **safe** (안전자산) |同上 | **웹 검색** — BTC·ETH·금·은 등 전일~당일 뉴스 | `lib/reports-safe.ts`, `*-safe-*.svg` |
-| **kr-re** (한국부동산) |同上 | **웹 검색** — 부동산 정책·전세·매매·공급 이슈 | `lib/reports-kr-re.ts`, `*-krre-*.svg` |
+| **kr** (한국주식) | 같은 요청 시 **자동 포함** (별도 말 없어도) | **웹 검색** — 당일·전일 한국장 뉴스·정책·수급 (스크린샷 없음) | `lib/reports-kr.ts`, `*-kr-*.svg`, **`wallPosts-markets` 종토방**, **`analystPosts-markets` 애널** |
+| **safe** (안전자산) |同上 | **웹 검색** — BTC·ETH·금·은 등 전일~당일 뉴스 | `lib/reports-safe.ts`, `*-safe-*.svg`, **`wallPosts-markets` 종토방**, **`analystPosts-markets` 애널** |
+| **kr-re** (한국부동산) |同上 | **웹 검색** — 부동산 정책·전세·매매·공급 이슈 | `lib/reports-kr-re.ts`, `*-krre-*.svg`, **`wallPosts-markets` 종토방**, **`analystPosts-markets` 애널** |
 
 - 미국만 스크린샷 기반. **kr / safe / kr-re는 에이전트가 뉴스·정책을 검색해 리포트·SVG·본문을 스스로 작성**한다.
+- **kr / safe / kr-re 피드 — 애널 + 종목토론 둘 다 필수 (2026-08-28~)**  
+  `리포트 업데이트` 할 때 아래 **4가지를 빠짐없이** 갱신한다. 애널만 올리고 종토방을 빼면 **미완성**.
+  1. `lib/reports-{kr|safe|kr-re}.ts` — 당일 리포트 시드
+  2. `public/charts/*-{kr|safe|krre}-*.svg` — 차트
+  3. `lib/wallPosts-markets.ts` — **`MOCK_POSTS_KR` / `_SAFE` / `_KR_RE` + 댓글** (종목토론 탭)
+  4. `lib/analystPosts-markets.ts` — **`MOCK_ANALYST_POSTS_KR` / `_SAFE` / `_KR_RE` + 댓글** (애널 탭)
+  - 당일 **개별 리포트 1개 = 애널 1개** (1:1). 종토방은 리포트 주제를 **커버하는 글 4~8개** + 댓글.
 - 모든 시장 본문: **한글 존댓말 문장형**, 영문 불릿 금지 (위 「8/28 강제」).
 - SVG noteSub 3~4줄, 카드 한글 맥락 필수.
 

@@ -63,7 +63,10 @@
 - `MOCK_COMMENTS` 맵에 해당 게시글 댓글 추가
 - `LATEST_UPDATE`를 오늘 날짜 타임스탬프로 갱신
 
-### 3b. lib/wallPosts-markets.ts — 한국주식·안전자산·한국부동산 종토방 (필수)
+### 3b. lib/wallPosts-markets.ts — 한국주식·안전자산·한국부동산 **종목토론** (필수)
+
+> **애널(4b)만으로 끝내지 말 것.** kr/safe/kr-re는 **종목토론(wall) + 애널** 두 탭 모두 당일분을 올린다.
+
 - **`리포트 업데이트` 요청 시 US와 함께 자동 포함** — 별도 지시 없어도 4시장 모두 갱신
 - `MOCK_POSTS_KR` / `MOCK_POSTS_SAFE` / `MOCK_POSTS_KR_RE` 각각 당일 리포트 주제에 맞는 게시글·댓글 추가
 - 한국장: `symbol`은 **종목 한글명** (예: `삼성전자`, `SK하이닉스`)
@@ -76,7 +79,10 @@
 - `MOCK_ANALYST_COMMENTS` 맵에 댓글 추가
 - **당일 개별 리포트마다 1개씩 커버 필수** — 개별 리포트 수 = 애널 포스트 최소 수. 빠진 리포트 없이 전부 커버.
 
-### 4b. lib/analystPosts-markets.ts — 한국·안전자산·부동산 애널 (필수)
+### 4b. lib/analystPosts-markets.ts — 한국·안전자산·부동산 **애널** (필수)
+
+> **종목토론(3b)과 쌍으로 갱신.** 한쪽만 하면 미완성.
+
 - **`리포트 업데이트` 시 kr/safe/kr-re 리포트마다 1개씩** `MOCK_ANALYST_POSTS_KR` / `_SAFE` / `_KR_RE` 추가
 - 당일 `lib/reports-kr.ts` · `reports-safe.ts` · `reports-kr-re.ts` 시드와 **1:1 대응** — 빠진 리포트 없이 전부 커버
 - 존댓말·출처 생략 규칙은 US 애널과 동일
