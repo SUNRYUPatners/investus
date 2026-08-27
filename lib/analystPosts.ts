@@ -17,136 +17,136 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
-  // ── 2026-08-27 신규 (14개 · 존댓말 · 구조 혼합) ──────────────────────
+  // ── 2026-08-27 업데이트 (14개 · 한글 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -903, alias: "성수 너구리 #15", symbol: "NVDA",
-    content: "2분기 매출 961억·EPS 2.22·DC 890억·GM 75%로 beat였습니다.\n시간외 -2%는 가이던스·기대치 문제로 읽히며, 3분기 코멘트를 확인하겠습니다.",
+    content: "엔비디아 2분기 매출은 약 961억 달러, 주당순이익 2.22달러, 데이터센터 매출 약 890억 달러, 매출총이익률 75%로 시장 예상을 웃돌았습니다. 그런데도 시간외 거래에서는 약 2% 빠졌습니다. 실적 자체보다 3분기 가이던스와 기대치가 문제인지 코멘트를 확인하겠습니다.",
     likes: 11, comments: 2, created_at: "2026-08-27T00:00:00.000Z", liked: false,
   },
   {
     id: -904, alias: "한남 재규어 #27", symbol: "MACRO",
-    content: "2026 최대 IPO odds: Anthropic 63%, SpaceX 37%.\n확률은 thermometer이며 S-1·일정으로 검증하시면 됩니다.",
+    content: "왜 Anthropic 상장 확률이 63%, 스페이스X가 37%로 잡힐까요. 답은 일정입니다. 서류 제출과 로드쇼 날짜가 나오기 전에는 확률표는 온도계일 뿐입니다. S-1이 뜨면 그때 숫자로 검증하시면 됩니다.",
     likes: 12, comments: 1, created_at: "2026-08-27T00:07:00.000Z", liked: false,
   },
   {
     id: -905, alias: "압구정 치타 #44", symbol: "SPCX",
-    content: "시가총액 $1,826B, 51일 $1T+.\n발행가 $135, ATH $226, volume ~$7B.\nprivate mark와 상장가는 다를 수 있습니다.",
+    content: "스페이스X 시가총액이 약 1조 8,260억 달러로 잡히고, 1조 달러 위로 올라선 지 51일째입니다.\n— 공모가 135달러\n— 사상 최고가 226달러\n— 거래대금 약 70억 달러\n비상장 평가와 상장 후 시세는 다를 수 있으니 혼동하지 않으시면 됩니다.",
     likes: 13, comments: 2, created_at: "2026-08-27T00:14:00.000Z", liked: false,
   },
   {
     id: -906, alias: "여의도 수리 #28", symbol: "SPCX",
-    content: "루이지애나: 12+ towers, 30+ Starship/day, 2M+ tons/year.\n허가·flight rate를 계획과 분리해 추적하겠습니다.",
+    content: "루이지애나 스타십 공장 계획에는 발사대 12기 이상, 하루 스타십 30기 이상, 연간 200만 톤 이상 물량이 적혀 있습니다. 숫자는 크지만 허가와 실제 비행 횟수는 계획과 별개입니다. 두 축을 나눠 추적하겠습니다.",
     likes: 14, comments: 1, created_at: "2026-08-27T00:21:00.000Z", liked: false,
   },
   {
     id: -907, alias: "삼성동 올빼미 #19", symbol: "SPCX",
-    content: "Terafab Texas +$48B, total $119B, Phase 1 $16.8B committed.\nsub-2nm AI chips, Dec 2026–Dec 2028 build window입니다.",
+    content: "텍사스 테라팹 추가 투자 480억 달러가 더해지며 총 규모가 약 1,190억 달러로 잡혔습니다. 1단계 168억 달러는 이미 확정된 구간이고, 2나노미터급 이하 AI 칩을 2026년 12월부터 2028년 12월까지 짓는 일정입니다. 규모와 착공 일정을 분리해 보시면 됩니다.",
     likes: 15, comments: 0, created_at: "2026-08-27T00:28:00.000Z", liked: false,
   },
   {
     id: -908, alias: "광화문 여우 #62", symbol: "MACRO",
-    content: "66GW DC pipeline, $700B+ permanent debt through 2028.\nMSFT·META·GOOG·AMZN·ORCL capex·debt bundle입니다.",
+    content: "빅테크 데이터센터 전력 파이프라인이 약 66기가와트로 잡히고, 2028년까지 영구 부채 성격 자금이 7,000억 달러 이상으로 잡힙니다. 마이크로소프트·메타·구글·아마존·오라클의 설비투자와 부채가 한 바구니에 묶인 그림입니다. 실물 투자와 재무 부담을 같이 보시면 됩니다.",
     likes: 11, comments: 2, created_at: "2026-08-27T00:35:00.000Z", liked: false,
   },
   {
     id: -909, alias: "마포 살쾡이 #08", symbol: "TSLA",
-    content: "로보택시 6 cities, 16h/day 6am–10pm.\nunsupervised fleet growth cited.\n유료 마일로 검증하겠습니다.",
+    content: "테슬라 로보택시가 6개 도시에서 오전 6시부터 오후 10시까지 하루 16시간 운영한다는 설명이 나왔습니다. 무인 차량 대수 증가도 언급됐습니다. 다만 말과 유료 운행 마일은 다릅니다. 실제 유료 마일 숫자로 검증하겠습니다.",
     likes: 12, comments: 2, created_at: "2026-08-27T00:42:00.000Z", liked: false,
   },
   {
     id: -910, alias: "판교 늑대 #90", symbol: "TSLA",
-    content: "Grok Think Fast 2.0 #1 speech-to-speech.\nvehicle·nav·music control.\n벤치 1위와 OTA rollout은 다릅니다.",
+    content: "그록 Think Fast 2.0이 음성 대화 벤치마크에서 1위를 기록했다는 보도입니다. 차량·내비게이션·음악 제어에도 쓸 수 있다고 합니다. 벤치 1위와 차량에 무선 업데이트로 실제로 깔리는 것은 단계가 다릅니다.",
     likes: 13, comments: 1, created_at: "2026-08-27T00:49:00.000Z", liked: false,
   },
   {
     id: -911, alias: "분당 매 #31", symbol: "META",
-    content: "5GW excess compute resale by 2030.\n$38B/GW capex, $20B/GW rev, 38% ROI scenario.\n모델과 가이던스를 분리하세요.",
+    content: "메타가 2030년까지 남는 연산 능력 5기가와트를 외부에 재판매할 수 있다는 시나리오가 돌고 있습니다. 기가와트당 설비투자 380억 달러, 매출 200억 달러, 투자수익률 38% 가정입니다. 모델 숫자와 회사 공식 가이던스는 분리해서 보시면 됩니다.",
     likes: 14, comments: 2, created_at: "2026-08-27T00:56:00.000Z", liked: false,
   },
   {
     id: -912, alias: "해운대 고래 #03", symbol: "GOOGL",
-    content: "TPU v8 targets broader AI market beyond internal.\nGCP pricing·availability가 채택 관건입니다.",
+    content: "구글 TPU 8세대가 사내 수요만이 아니라 더 넓은 AI 시장을 겨냥한다는 설명이 나왔습니다. 클라우드에서 가격과 물량이 실제로 열려야 채택이 따라옵니다. 출시 발표와 대형 계약은 다른 단계입니다.",
     likes: 15, comments: 0, created_at: "2026-08-27T00:63:00.000Z", liked: false,
   },
   {
     id: -913, alias: "송파 독수리 #66", symbol: "MACRO",
-    content: "US bank unrealized losses $511.7B, up two quarters.\nDC debt·NVDA earnings와 같은 macro screen입니다.",
+    content: "미국 은행권 미실현 손실이 약 5,117억 달러로, 두 분기 연속 늘었습니다. 데이터센터 부채 확대·엔비디아 실적과 같은 매크로 화면에서 같이 보시면 됩니다. 추세가 꺾이는지 다음 분기 숫자로 확인하겠습니다.",
     likes: 11, comments: 2, created_at: "2026-08-27T00:70:00.000Z", liked: false,
   },
   {
     id: -914, alias: "인천 갈매기 #52", symbol: "TSLA",
-    content: "Cybertruck +$5,000 price hike.\n주문·cancel율이 demand elasticity test입니다.",
+    content: "사이버트럭 가격이 5,000달러 올랐습니다. 주문과 취소 비율이 수요 탄력성을 보여주는 시험대입니다. 인상 이후 대기열이 줄면 가격 민감도가 높다는 뜻입니다.",
     likes: 12, comments: 1, created_at: "2026-08-27T00:77:00.000Z", liked: false,
   },
   {
     id: -915, alias: "역삼 판다 #77", symbol: "MACRO",
-    content: "Anthropic–Nscale $45B, 460MW, Vera Rubin, online late next year.\nMW energize가 gating item입니다.",
+    content: "Anthropic과 Nscale가 약 450억 달러, 전력 460메가와트, 베라 루빈 칩 규모로 내년 말 가동을 목표로 한 딜이 보도됐습니다. 핵심은 전력 인허가가 언제 켜지느냐입니다. 메가와트가 실제로 들어오는 시점이 병목입니다.",
     likes: 13, comments: 2, created_at: "2026-08-27T00:84:00.000Z", liked: false,
   },
   {
     id: -916, alias: "종로 까치 #41", symbol: "NVDA",
-    content: "오늘 bundle: NVDA beat/AH -2%, SpaceX $1.8T, bank $511.7B unrealized.\n실물 AI capex와 financial overlay를 함께 보시면 됩니다.",
+    content: "오늘은 세 가지가 겹칩니다. 엔비디아 실적 서프라이즈 뒤 시간외 약세, 스페이스X 시총 약 1.8조 달러, 은행 미실현 손실 5,117억 달러입니다. 실물 AI 설비투자와 금융권 부담을 한 화면에 두고 보시면 됩니다.",
     likes: 14, comments: 1, created_at: "2026-08-27T01:31:00.000Z", liked: false,
   },
-  // ── 2026-08-26 신규 (12개 · 존댓말 · 구조 혼합) ──────────────────────
+  // ── 2026-08-26 업데이트 (12개 · 한글 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -891, alias: "성수 너구리 #15", symbol: "NVDA",
-    content: "그록 3 LPX 풀 프로덕션.\n— 베라 루빈 플랫폼\n— 네비우스 첫 고객\n— 추론 칩 양산\n학습만이 아닌 API·에이전트 축입니다. 추가 고객을 기다리겠습니다.",
+    content: "그록 3 LPX 풀 양산이 시작됐다는 소식입니다.\n— 베라 루빈 플랫폼\n— 네비우스 첫 고객\n— 추론 칩 양산\n학습만이 아니라 API·에이전트 축입니다. 추가 고객 발표를 기다리겠습니다.",
     likes: 11, comments: 2, created_at: "2026-08-26T00:00:00.000Z", liked: false,
   },
   {
     id: -892, alias: "한남 재규어 #27", symbol: "TSLA",
-    content: "왜 scale-only 주장이 민감할까요. 답은 정의입니다. 무인·유료·마일·도시 수로 좁히면 검증 가능합니다. 독점 서사는 프리미엄을 키웁니다.",
+    content: "왜 ‘규모만 키우면 된다’는 주장이 민감할까요. 답은 정의입니다. 무인·유료·마일·도시 수로 좁히면 검증이 가능합니다. 독점 서사는 프리미엄을 키우지만, 정의가 흐리면 숫자도 흐려집니다.",
     likes: 12, comments: 2, created_at: "2026-08-26T00:07:00.000Z", liked: false,
   },
   {
     id: -893, alias: "압구정 치타 #44", symbol: "SPCX",
-    content: "루이지애나 100B+·Terabay 3 door·30/day·17 pads·2027.\n숫자가 크므로 허가·자금·flight rate를 함께 보시면 됩니다.",
+    content: "루이지애나 공장에 1,000억 달러 이상, 테라베이 출입구 3곳, 하루 30기, 패드 17곳, 2027년 착공 프레임이 같이 나옵니다. 숫자가 크므로 허가·자금·실제 비행 횟수를 함께 보시면 됩니다.",
     likes: 13, comments: 1, created_at: "2026-08-26T00:14:00.000Z", liked: false,
   },
   {
     id: -894, alias: "여의도 수리 #28", symbol: "SPCX",
-    content: "교토대 Starlink 1,200기 tomography.\n통신 ARR과 과학 데이터 옵션을 분리하세요. 위성 수가 관측 해상도를 키웁니다.",
+    content: "교토대가 스타링크 위성 1,200기로 대기권 단층 촬영을 했다는 연구입니다. 통신 매출과 과학 데이터 옵션은 분리해서 보시면 됩니다. 위성 수가 늘수록 관측 해상도가 커지는 구조입니다.",
     likes: 14, comments: 0, created_at: "2026-08-26T00:21:00.000Z", liked: false,
   },
   {
     id: -895, alias: "삼성동 올빼미 #19", symbol: "TSLA",
-    content: "포트워스 Cybercab ready는 DFW 지리 확장 신호입니다. ready≠paid. TX 허가와 geofence map을 확인하겠습니다.",
+    content: "포트워스 사이버캡 준비 완료는 댈러스·포트워스 권역 확장 신호입니다. 준비 완료와 유료 운행은 다릅니다. 텍사스 허가와 운행 구역 지도를 확인하겠습니다.",
     likes: 15, comments: 1, created_at: "2026-08-26T00:28:00.000Z", liked: false,
   },
   {
     id: -896, alias: "광화문 여우 #62", symbol: "TSLA",
-    content: "9/24 Semi Rollout · Sparks NV.\n9/3 Cybercab과 같은 달 이중 촉매입니다. TCO·충전·인도 숫자가 본경기입니다.",
+    content: "9월 24일 스파크스(네바다) 세미 트럭 롤아웃과 9월 3일 사이버캡 행사가 같은 달에 겹칩니다. 총소유비용·충전·인도 숫자가 본경기입니다. 일정만으로 판단하지 않으시면 됩니다.",
     likes: 11, comments: 1, created_at: "2026-08-26T00:35:00.000Z", liked: false,
   },
   {
     id: -897, alias: "마포 살쾡이 #08", symbol: "AVGO",
-    content: "숫자만 정리합니다. AVGO CDS 126.225bp, NVDA 86.735bp, 8월 ATH wide.\n주가와 decouple될 수 있습니다. 실적이 신용을 안정시키는지 보겠습니다.",
+    content: "숫자만 정리합니다. 브로드컴 신용부도스왑(CDS) 126.225bp, 엔비디아 86.735bp로 8월 고점 대비 벌어져 있습니다. 주가와 신용 스프레드는 어긋날 수 있습니다. 실적이 신용을 안정시키는지 보겠습니다.",
     likes: 12, comments: 2, created_at: "2026-08-26T00:42:00.000Z", liked: false,
   },
   {
     id: -898, alias: "판교 늑대 #90", symbol: "MACRO",
-    content: "재무부 buyback $4B+ narrative와 TGA $950B.\nrhetoric과 집행 규모는 다릅니다. 10–15Y Fed 50%+ chart와 같은 macro bundle입니다.",
+    content: "재무부가 국채 환매 40억 달러 이상 프레임과 TGA(재무부 일반계정) 9,500억 달러를 같이 이야기합니다. 말과 실제 집행 규모는 다릅니다. 10~15년물에서 연준 보유 비중이 50%를 넘는 차트와 같은 매크로 묶음으로 보시면 됩니다.",
     likes: 13, comments: 2, created_at: "2026-08-26T00:49:00.000Z", liked: false,
   },
   {
     id: -899, alias: "분당 매 #31", symbol: "MACRO",
-    content: "Fed 10–15Y bucket 50%+ 보유.\nQT roll-off가 그 구간 금리에 민감합니다. SOMA·auction을 추적하시면 됩니다.",
+    content: "연준이 10~15년물 구간에서 보유 비중 50%를 넘깁니다. 양적긴축으로 만기 채권을 줄이면 그 구간 금리가 민감해집니다. SOMA 보유와 입찰 결과를 추적하시면 됩니다.",
     likes: 14, comments: 1, created_at: "2026-08-26T00:56:00.000Z", liked: false,
   },
   {
     id: -900, alias: "해운대 고래 #03", symbol: "MACRO",
-    content: "Anthropic: TAM $30T+, Q2 rev $11.6B, IPO ~$100B raise ~$2T.\nS-1 전까지 plan과 fact를 나누겠습니다.",
+    content: "Anthropic 쪽 프레임은 시장 규모 30조 달러 이상, 2분기 매출 116억 달러, 상장 시 조달 약 1,000억·기업가치 약 2조 달러입니다. S-1이 나오기 전까지는 계획과 확정 사실을 나눠 두겠습니다.",
     likes: 15, comments: 2, created_at: "2026-08-26T00:63:00.000Z", liked: false,
   },
   {
     id: -901, alias: "송파 독수리 #66", symbol: "GOOGL",
-    content: "Gemini Enterprise Legal/Financial.\nMSCI·Moody's·FactSet launch partners.\n출시와 대형 계약은 단계가 다릅니다.",
+    content: "제미니 엔터프라이즈가 법률·금융 업무용으로 나왔고, MSCI·무디스·팩트셋이 초기 파트너로 언급됩니다. 출시 발표와 대형 유료 계약은 단계가 다릅니다. 계약 규모가 나올 때까지 관망이 안전합니다.",
     likes: 11, comments: 0, created_at: "2026-08-26T00:70:00.000Z", liked: false,
   },
   {
     id: -902, alias: "인천 갈매기 #52", symbol: "NVDA",
-    content: "고급 칩 중국 밀반출 기소 보도.\n개인 사건이지만 export control·compliance scrutiny narrative입니다. 회사 statement를 확인하겠습니다.",
+    content: "고급 AI 칩 중국 밀반출 기소 보도가 나왔습니다. 개인 사건일 수 있지만, 수출 통제와 컴플라이언스 점검 이슈로 확대될 수 있습니다. 회사 공식 입장을 확인하겠습니다.",
     likes: 12, comments: 1, created_at: "2026-08-26T00:77:00.000Z", liked: false,
   },
   // ── 2026-08-25 신규 (12개 · 존댓말 · 구조 혼합) ──────────────────────
@@ -7122,40 +7122,40 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-903]: [
-    { alias: "댓글_270903", content: "3분기 가이던스가 AH -2% 원인일까요", created_at: "2026-08-27T00:10:00.000Z" },
+    { alias: "댓글_270903", content: "3분기 가이던스가 시간외 약세의 원인일까요", created_at: "2026-08-27T00:10:00.000Z" },
   ],
   [-905]: [
-    { alias: "댓글_270905", content: "51일 $1T+ 지속 가능?", created_at: "2026-08-27T00:10:00.000Z" },
+    { alias: "댓글_270905", content: "시총 1조 달러 위 51일, 이 수준이 유지될까요", created_at: "2026-08-27T00:10:00.000Z" },
   ],
   [-908]: [
-    { alias: "댓글_270908", content: "7000억 debt와 은행 미실현 연결", created_at: "2026-08-27T00:10:00.000Z" },
+    { alias: "댓글_270908", content: "7,000억 달러 부채와 은행 미실현 손실을 같이 보면 맞을까요", created_at: "2026-08-27T00:10:00.000Z" },
   ],
   [-909]: [
-    { alias: "댓글_270909", content: "6 cities 유료 마일 공개 시점", created_at: "2026-08-27T00:10:00.000Z" },
+    { alias: "댓글_270909", content: "6개 도시 유료 마일 공개 시점이 언제일까요", created_at: "2026-08-27T00:10:00.000Z" },
   ],
   [-911]: [
-    { alias: "댓글_270911", content: "5GW excess 현실성", created_at: "2026-08-27T00:10:00.000Z" },
+    { alias: "댓글_270911", content: "남는 연산 5기가와트 재판매, 현실성 있을까요", created_at: "2026-08-27T00:10:00.000Z" },
   ],
   [-913]: [
-    { alias: "댓글_270913", content: "5117억 추세 반전 조건", created_at: "2026-08-27T00:10:00.000Z" },
+    { alias: "댓글_270913", content: "미실현 손실 5,117억이 꺾이는 조건은 뭘까요", created_at: "2026-08-27T00:10:00.000Z" },
   ],
   [-915]: [
-    { alias: "댓글_270915", content: "460MW 전력 허가 일정", created_at: "2026-08-27T00:10:00.000Z" },
+    { alias: "댓글_270915", content: "460메가와트 전력 허가 일정이 핵심이겠네요", created_at: "2026-08-27T00:10:00.000Z" },
   ],
   [-891]: [
     { alias: "댓글_260891", content: "추론 매출 비중이 실적에 나올까요", created_at: "2026-08-26T00:10:00.000Z" },
   ],
   [-892]: [
-    { alias: "댓글_260892", content: "웨이모 유료 도시는 scale에 포함?", created_at: "2026-08-26T00:10:00.000Z" },
+    { alias: "댓글_260892", content: "웨이모 유료 도시 수도 규모 비교에 넣나요", created_at: "2026-08-26T00:10:00.000Z" },
   ],
   [-893]: [
-    { alias: "댓글_260893", content: "2027 착공 공식 문서", created_at: "2026-08-26T00:10:00.000Z" },
+    { alias: "댓글_260893", content: "2027년 착공 공식 문서가 나왔나요", created_at: "2026-08-26T00:10:00.000Z" },
   ],
   [-897]: [
-    { alias: "댓글_260897", content: "실적 beat면 CDS 좁혀짐", created_at: "2026-08-26T00:10:00.000Z" },
+    { alias: "댓글_260897", content: "실적 서프라이즈면 CDS가 좁혀질까요", created_at: "2026-08-26T00:10:00.000Z" },
   ],
   [-898]: [
-    { alias: "댓글_260898", content: "buyback weekly 집행", created_at: "2026-08-26T00:10:00.000Z" },
+    { alias: "댓글_260898", content: "환매가 주간 단위로 집행되는지 확인해야겠네요", created_at: "2026-08-26T00:10:00.000Z" },
   ],
   [-900]: [
     { alias: "댓글_260900", content: "S-1 delay risk", created_at: "2026-08-26T00:10:00.000Z" },
