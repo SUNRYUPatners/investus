@@ -42,7 +42,7 @@ export function BottomNav() {
         WebkitTransform: "translate3d(0,0,0)",
       }}
     >
-      <div className="max-w-[480px] mx-auto flex items-center h-[56px]">
+      <div className="max-w-[480px] mx-auto flex items-stretch h-[60px]">
         {navItems.map(({ href, emoji, label, tab: tabKey }) => {
           const isActive = pending
             ? href === pending
@@ -74,12 +74,20 @@ export function BottomNav() {
                   startTransition(() => { router.push(href); });
                 }
               }}
-              className="flex-1 flex flex-col items-center justify-center gap-0.5 h-full touch-manipulation select-none"
+              className="flex-1 flex flex-col items-center justify-center gap-1.5 px-0.5 pt-1.5 pb-1 h-full touch-manipulation select-none"
               style={{ color: isActive ? "var(--mint)" : "var(--muted)" }}
               aria-current={isActive ? "page" : undefined}
             >
-              <span className="text-[17px] leading-none">{emoji}</span>
-              <span className="text-[9px] font-semibold leading-none">{label}</span>
+              {/* iOS 이모지 글리프 overflow → 고정 높이 박스로 라벨과 분리 */}
+              <span
+                className="flex h-5 w-full items-center justify-center text-[16px] leading-none overflow-hidden"
+                aria-hidden
+              >
+                {emoji}
+              </span>
+              <span className="text-[9px] font-semibold leading-tight tracking-tight whitespace-nowrap">
+                {label}
+              </span>
             </button>
           );
         })}
