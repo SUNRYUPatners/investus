@@ -2,8 +2,8 @@
 name: investus-report-update
 description: >-
   Investus 일일 리포트 업데이트 규칙. 리포트 추가, report-update,
-  SEED_REPORTS, charts SVG, 종토방/애널 포스트, 01.investus 리포트
-  폴더 스크린샷 반영 시 반드시 사용한다.
+  SEED_REPORTS, charts SVG(public/charts만), 종토방/애널 포스트,
+  스크린샷 반영 시 사용. PNG·01.investus 폴더 저장은 폐지.
 ---
 
 # Investus 리포트 업데이트 스킬
@@ -125,7 +125,7 @@ description: >-
 - `big`은 짧아도 됨. `mid`·`sub`에는 **초보가 맥락 잡는 보조 설명**을 넣기 (지명·기간·비교 대상).
 
 **레이아웃 여유**
-- 글이 늘면 quote/note 박스 높이·`multilineIfOverflow` maxLines를 **먼저 늘리고** 잘라내지 말 것 (잘림·빈공간 체크는 PNG로).
+- 글이 늘면 quote/note 박스 높이·`multilineIfOverflow` maxLines를 **먼저 늘리고** 잘라내지 말 것 (SVG Read로 점검).
 - 「투자 시사점」 라벨은 여전히 SVG에 금지 — 설명은 자연 문장으로만.
 
 ### SVG 밀도 — 2026-08-28부터 강제 (8/27 부실 반려)
@@ -141,7 +141,7 @@ description: >-
 1. noteSub **3~4줄**, KO **120~200자**, 구조: (1) 왜 뉴스인가 → (2) 뭐가 다른지/용어 풀이 → (3) 다음 확인 포인트
 2. KPI 카드 3칸 `sub`에 **한글 맥락** (기간·비교·정의 중 1개)
 3. quote 박스 **2~4줄** (80~140자), 용어는 괄호로 한 줄 정의
-4. PNG export 후 눈으로 note 영역 **3문장 이상** 확인 — 미달 시 SVG 수정 후 재export
+4. SVG를 Read로 열어 note 영역 **3문장 이상** 확인 — 미달 시 SVG 수정 (PNG export/폴더 저장 불필요)
 
 **팩트 보강:** 스크린샷에 없는 맥락은 `lib/reports.ts` body·공개 보도·이전 리포트에서 **숫자 창작 없이** 끌어와 noteSub에 녹인다.
 
@@ -157,8 +157,8 @@ description: >-
 1. 오늘 다룰 소재 16개(또는 해당 개수)를 확인하고, 각 소재를 위 매칭 가이드로 레이아웃 1~6에 분배한다 (하나의 레이아웃이 전체의 40%를 넘지 않게)
 2. 레이아웃별로 해당하는 7/2 파일을 Read로 열어 정확한 구조·좌표를 확인한다
 3. 그 구조를 그대로 이번 소재 데이터로 채워서 생성 — "핵심사실/투자시사점" 2단 카드나 배경 그리드는 넣지 않음
-4. 완성 후 sharp로 PNG 렌더링해서 실제로 눈으로 확인 (잘림/오버플로/이모지 깨짐/레이아웃 겹침 체크)
-5. **이모지 주의**: `scripts/export-report-pngs.js`의 `stripEmoji()`가 `\u{1F000}-\u{1FFFF}`, `\u{2600}-\u{27BF}`, `\u{FE00}-\u{FE0F}` 범위만 제거한다. 이 범위 밖 이모지(예: ⏳ U+23F3)는 stripped되지 않고 깨진 fallback 글리프(검은 박스)로 렌더링되니 반드시 위 범위 안의 이모지만 사용할 것.
+4. 완성 후 SVG를 Read로 열어 잘림/오버플로/이모지 깨짐/레이아웃 겹침만 점검 (**PNG·폴더 저장 불필요**)
+5. **이모지**: `\u{1F000}-\u{1FFFF}`, `\u{2600}-\u{27BF}`, `\u{FE00}-\u{FE0F}` 범위 안만 사용 (범위 밖은 깨진 박스로 렌더될 수 있음)
 
 ## 본문(body) 원칙
 
@@ -180,16 +180,14 @@ description: >-
 ## 실행 체크리스트 (빠지면 미완성)
 
 0. **대규모 배치면 Opus 5 서브에이전트(`claude-opus-5-thinking-high`)로 위임** (위 「서브에이전트」)
-1. `01.investus 리포트/` 원본 스크린샷 Read로 팩트 추출
-2. **7/2 SVG(메인)을 먼저 Read로 열어보고**, 애매하면 7/3(서브)도 참고해 구조를 따라 SVG KO+EN 작성 (7/4 스타일 금지)
+1. `01.investus 리포트/` 원본 스크린샷 Read로 팩트 추출 (미국장)
+2. **7/2 SVG(메인)을 먼저 Read로 열어보고**, 애매하면 7/3(서브)도 참고해 구조를 따라 SVG KO+EN을 **`public/charts/`에만** 작성 (7/4 스타일 금지)
 3. `lib/reports.ts` seed + tickers — **존댓말 문장형 제목·요약 + 본문 풍성(초보 풀이) + 투자시사점**
-4. `lib/wallPosts.ts` 글/댓글 + `LATEST_UPDATE`
-5. `lib/analystPosts.ts` 개별 리포트마다 1개 이상 — **⚠️ 글 구조를 "인트로+1)2)3)4)5)+투자:+STANCE(qualifier)." 하나로 통일 금지 (2026-07-16 반려 사유). 프로즈/대시나열/Q&A/데이터먼저/회의적톤/캐주얼톤 등 최소 5~6가지 구조를 하루치 세트 안에서 섞어 쓴다. 상세 규칙은 `.claude/commands/report-update.md`의 "애널리스트 글 작성 규칙" 참고. 댓글도 티커만 바꾼 범용 템플릿 복붙 금지 — 소재별로 구체적으로 새로 쓴다.**
-6. `scripts/export-report-pngs.js` PAIRS (오늘 date만)
-7. `node scripts/export-report-pngs.js` (**`--all` 금지**)
-8. 팩트체크: 스크린샷 재 Read 후 수치 1:1 대조
-9. PNG 렌더링해서 실제 눈으로 레이아웃 확인 (잘림/빈공간 체크)
-10. commit + `bash scripts/deploy.sh` (필요 시 `--notify`)
+4. `lib/wallPosts.ts` 글/댓글 + `LATEST_UPDATE` (+ markets wall)
+5. `lib/analystPosts.ts` 개별 리포트마다 1개 이상 (+ markets analyst) — **⚠️ 글 구조를 "인트로+1)2)3)4)5)+투자:+STANCE(qualifier)." 하나로 통일 금지. 상세는 `.claude/commands/report-update.md`.**
+6. ~~`export-report-pngs.js` / PNG 폴더 저장~~ — **폐지 (2026-08-27~). 하지 말 것.**
+7. 팩트체크: 스크린샷 재 Read 후 수치 1:1 대조
+8. commit + `bash scripts/deploy.sh` (필요 시 `--notify`)
 
 ## 본문 최소 구조 (개별 리포트)
 

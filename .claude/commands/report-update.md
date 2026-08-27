@@ -40,7 +40,7 @@
 - 색상: TSLA=`#00e5a0`/`#4ade80`, SPCX=`#c084fc`, NVDA/TSM/META=`#60a5fa`, 위험/BREAKING=`#ef4444`/`#f97316`
 - XML에서 `&` → `&amp;` 필수
 - **이모지는 `\u{1F000}-\u{1FFFF}`, `\u{2600}-\u{27BF}`, `\u{FE00}-\u{FE0F}` 범위 안에서만 사용** — 이 범위 밖 이모지(예: ⏳)는 export 스크립트가 제거하지 못해 깨진 fallback 박스로 렌더링됨
-- 생성 후 sharp로 PNG 렌더링해서 실제로 눈으로 잘림/오버플로/이모지 깨짐 확인
+- 생성 후 SVG를 Read로 열어 잘림·오버플로·이모지 깨짐만 점검 (PNG 폴더 저장 불필요)
 
 #### 한장요약 SVG
 
@@ -81,22 +81,12 @@
 - 당일 `lib/reports-kr.ts` · `reports-safe.ts` · `reports-kr-re.ts` 시드와 **1:1 대응** — 빠진 리포트 없이 전부 커버
 - 존댓말·출처 생략 규칙은 US 애널과 동일
 
-### 5. scripts/export-report-pngs.js — PAIRS 추가
-- `PAIRS` 배열에 오늘 날짜 항목 추가
-- `{ ko: '파일명.svg', en: 'en파일명.svg' or null, label: '라벨', date: 'YYYYMMDD' }` 형식
-- 영어판 없으면 `en: null`
+### 5. ~~PNG 폴더 저장~~ — **폐지 (2026-08-27~)**
 
-### 6. PNG 내보내기 (당일 신규 이미지만)
+> ⛔ **더 이상 하지 않음:** `scripts/export-report-pngs.js` PAIRS 추가, `node scripts/export-report-pngs.js` 실행, `01.investus 리포트/` 폴더에 PNG/이미지 저장.
+> ✅ 사이트용 SVG는 계속 `public/charts/`에만 두면 된다. 레이아웃 점검은 SVG 파일을 직접 Read하거나 배포 후 카드에서 확인.
 
-> ⛔ **절대 금지**: `--all` 플래그 사용, 이전 날짜 PAIRS 재처리, 여러 날짜 한꺼번에 내보내기
-> ✅ **반드시**: 오늘 날짜 PAIRS만 처리 — `01.investus 리포트/` 폴더에는 오늘 새로 만든 이미지만 추가
-
-- `node scripts/export-report-pngs.js` 실행 (**인수 없이** — 오늘 UTC 날짜로 자동 필터링)
-- **`--all` 플래그 절대 사용 금지** — 이전 날짜(6/13, 6/15, 6/16...) 전부 재내보내기되는 낭비
-- 0개 출력 시 원인: UTC/KST 시차. `--all` 쓰지 말고 PAIRS의 date 필드가 오늘 KST 날짜(예: '20260618')인지 확인
-- `/Users/ryu-macmini/Desktop/investus/01.investus 리포트/` 에 **오늘 날짜 파일만** 추가됐는지 확인
-
-### 7. 배포 전 팩트체크 (필수 — 생략 불가)
+### 6. 배포 전 팩트체크 (필수 — 생략 불가)
 
 > ⛔ **이 단계 없이 commit/deploy 절대 금지**
 > ⛔ **"팩트체크 완료" 선언은 실제로 스크린샷을 다시 Read한 후에만 가능**
@@ -124,7 +114,8 @@
 - [ ] 없는 사실 창작 여부 → 스크린샷에 없는 내용 0건
 
 **Step 4 — 불일치 발견 시**
-즉시 수정 → 해당 SVG·ts 파일 재생성 → 스크린샷 재확인 → 체크리스트 재통과
+즉시 수정 → 해당 SVG·ts 파일 수정 → 스크린샷 재확인 → 체크리스트 재통과
+(PNG/`01.investus 리포트/` 저장은 하지 않음)
 
 **⚠️ 과거 오류 사례 (반복 금지)**
 - 2026-07-10: SPCX Raymond James PT를 스크린샷 "$800"을 "$8,800"으로 잘못 기록
@@ -133,7 +124,7 @@
 
 불일치 0건 확인 후에만 다음 단계 진행.
 
-### 8. 커밋 + 배포
+### 7. 커밋 + 배포
 ```
 git add <수정된 파일들>
 git commit -m "feat: <날짜> 리포트 추가"
@@ -145,7 +136,7 @@ bash scripts/deploy.sh
 - **같은 종목이라도 이벤트/주제가 다르면 반드시 별도 리포트로 분리** — 한 seed에 독립적인 여러 이벤트 묶지 않는다 (예: 한국 FSD 구독 개시와 스페인 FSD 승인은 별도 seed)
 - 날짜별 타임스탬프는 상대 오프셋으로 계산 (`_now - N*3600_000`)
 - 배포 전 TypeScript 오류 0개 확인 필수
-- **PNG 내보내기는 오늘 새로 만든 SVG만** — 이전 날짜 이미지 재생성 절대 금지
+- **PNG/폴더 저장 폐지** — `export-report-pngs.js` · `01.investus 리포트/` 저장 불필요. 사이트용은 `public/charts/*.svg`만.
 - **SVG는 `*20260702*.svg`(메인)를 먼저 직접 Read해서 따라 만들고, 애매할 때만 `*20260703*.svg`(서브) 참고 — `*20260704*.svg`는 금지** / 본문에는 항상 상세 글 + 투자시사점 (스킬: `.cursor/skills/investus-report-update/`)
 
 ## 종토방(wallPosts.ts) 글 작성 규칙
