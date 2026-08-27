@@ -168,7 +168,7 @@ export function EcoTickerTape({ market = "us" }: { market?: MarketId }) {
   return (
     <Link
       href={searchHref}
-      className="block overflow-hidden py-1.5 border-b no-underline"
+      className="block overflow-hidden py-1.5 border-b lg:border-b-0 no-underline h-full"
       style={{ background: "var(--bg)", borderColor: "var(--border)" }}
       aria-label={locale === "ko" ? "경제 캘린더" : "Economic calendar"}
     >

@@ -4,13 +4,12 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LogoMark } from "@/components/LogoMark";
 import { MarketSwitcher } from "@/components/MarketSwitcher";
-import { useLocale } from "@/contexts/LocaleContext";
+import { MarketSwitcherDesktop } from "@/components/MarketSwitcherDesktop";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
 import { isMarketHomePath, parseMarketPath } from "@/lib/markets/marketPath";
 
 export function Header() {
-  const t = useLocale();
   const pathname = usePathname() ?? "";
   const { market } = parseMarketPath(pathname);
   const cfg = getMarketConfig(market);
@@ -45,16 +44,13 @@ export function Header() {
     return () => clearInterval(id);
   }, [market, cfg.timezone]);
 
-  const desktopTagline =
-    market === "us" ? t.header.tagline : `${cfg.emoji} ${cfg.labelKo} · ${cfg.tagline}`;
-
   return (
     <>
       <header
         className="sticky top-0 z-50 border-b"
         style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
       >
-        <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
+        <div className="max-w-[480px] lg:max-w-none mx-auto px-4 lg:px-8 h-14 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 lg:hidden">
             <LogoMark size="sm" />
             <span
@@ -65,11 +61,9 @@ export function Header() {
             </span>
           </div>
 
-          <span className="hidden lg:block text-sm font-semibold font-syne" style={{ color: "var(--text)" }}>
-            {desktopTagline}
-          </span>
+          <MarketSwitcherDesktop current={market} />
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-shrink-0">
             {mounted && (
               <>
                 <span

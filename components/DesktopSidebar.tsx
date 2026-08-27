@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LogoMark } from "@/components/LogoMark";
-import { MarketSwitcherDesktop } from "@/components/MarketSwitcherDesktop";
 import { useLocale } from "@/contexts/LocaleContext";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
@@ -112,10 +111,6 @@ export function DesktopSidebar() {
           );
         })}
       </nav>
-
-      <div className="px-3 py-3 border-t flex-shrink-0" style={{ borderColor: "var(--border)" }}>
-        <MarketSwitcherDesktop current={market} />
-      </div>
 
       <div className="px-5 py-4 border-t space-y-3 flex-shrink-0" style={{ borderColor: "var(--border)" }}>
         {mounted && (

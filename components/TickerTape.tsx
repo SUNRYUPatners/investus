@@ -60,7 +60,7 @@ export function TickerTape({ market = "us" }: { market?: MarketId }) {
   const duration = Math.max(60, quotes.length * 2.5);
 
   return (
-    <div className="overflow-hidden py-2 border-b" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+    <div className="overflow-hidden py-2 border-b lg:border-b-0" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
       <div className="ticker-track" style={{ "--ticker-duration": `${duration}s` } as React.CSSProperties}>
         {items.map((q, i) => <TickerItem key={`${q.symbol}-${i}`} q={q} market={market} />)}
       </div>
