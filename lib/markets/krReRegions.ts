@@ -1,4 +1,4 @@
-/** 한국부동산원 R-ONE — (월) 지역별 매매지수_아파트 MoM 변동률 */
+/** 한국부동산원 R-ONE — 아파트 매매지수 등락 · 매매 거래호수 */
 
 export type RegionCell = {
   id: string;
@@ -7,7 +7,16 @@ export type RegionCell = {
   type: "sale";
 };
 
-const STATBL_ID = "A_2024_00178";
+export type TxnCell = {
+  id: string;
+  name: string;
+  volume: number;
+  /** 전월 대비 거래호수 증감률 (%) */
+  changePercent: number | null;
+};
+
+const SALE_STATBL = "A_2024_00178";
+const TXN_STATBL = "A_2024_00554"; // (월) 행정구역별 아파트매매거래현황
 const ITM_ID = "100001";
 const BASE = "https://www.reb.or.kr/r-one/openapi/SttsApiTblData.do";
 
@@ -17,6 +26,8 @@ type RebRow = {
   CLS_FULLNM?: string;
   WRTTIME_IDTFR_ID?: string;
   DTA_VAL?: string | number;
+  ITM_ID?: number | string;
+  ITM_NM?: string;
 };
 
 function monthKey(d = new Date()): string {
@@ -32,9 +43,17 @@ function prevMonthKey(key: string): string {
   return monthKey(d);
 }
 
-async function fetchMonth(wrt: string, apiKey?: string): Promise<RebRow[]> {
+function periodLabelFromKey(key: string): string {
+  return `${key.slice(0, 4)}년 ${parseInt(key.slice(4, 6), 10)}월`;
+}
+
+async function fetchMonth(
+  statbl: string,
+  wrt: string,
+  apiKey?: string,
+): Promise<RebRow[]> {
   const params = new URLSearchParams({
-    STATBL_ID,
+    STATBL_ID: statbl,
     DTACYCLE_CD: "MM",
     ITM_ID: String(ITM_ID),
     START_WRTTIME: wrt,
@@ -56,7 +75,21 @@ async function fetchMonth(wrt: string, apiKey?: string): Promise<RebRow[]> {
   return block?.row ?? [];
 }
 
-function toRegions(cur: RebRow[], prev: RebRow[]): RegionCell[] {
+async function findLatestMonth(
+  statbl: string,
+  apiKey?: string,
+  maxBack = 8,
+): Promise<{ key: string; rows: RebRow[] }> {
+  let key = monthKey();
+  for (let i = 0; i < maxBack; i++) {
+    const rows = await fetchMonth(statbl, key, apiKey);
+    if (rows.length > 0) return { key, rows };
+    key = prevMonthKey(key);
+  }
+  return { key, rows: [] };
+}
+
+function toSaleRegions(cur: RebRow[], prev: RebRow[]): RegionCell[] {
   const prevMap = new Map<string, number>();
   for (const r of prev) {
     const id = String(r.CLS_ID ?? r.CLS_NM ?? "");
@@ -82,7 +115,39 @@ function toRegions(cur: RebRow[], prev: RebRow[]): RegionCell[] {
   return out.sort((a, b) => b.changePercent - a.changePercent);
 }
 
-/** 최신 공표월 아파트 매매지수로 전월대비 등락률 계산 (공표 지연 시 최대 8개월 역추적) */
+/** 시도(depth 0)만 — 전국·서울·경기 … */
+function sidoRows(rows: RebRow[]): RebRow[] {
+  return rows.filter((r) => {
+    const full = String(r.CLS_FULLNM ?? r.CLS_NM ?? "");
+    return !full.includes(">");
+  });
+}
+
+function toTxnCells(cur: RebRow[], prev: RebRow[]): TxnCell[] {
+  const prevMap = new Map<string, number>();
+  for (const r of sidoRows(prev)) {
+    const id = String(r.CLS_ID ?? r.CLS_NM ?? "");
+    const v = parseFloat(String(r.DTA_VAL ?? ""));
+    if (id && Number.isFinite(v)) prevMap.set(id, v);
+  }
+
+  const out: TxnCell[] = [];
+  for (const r of sidoRows(cur)) {
+    const id = String(r.CLS_ID ?? r.CLS_NM ?? "");
+    const name = String(r.CLS_NM ?? id);
+    const volume = parseFloat(String(r.DTA_VAL ?? ""));
+    if (!id || !Number.isFinite(volume)) continue;
+    const prevV = prevMap.get(id);
+    let changePercent: number | null = null;
+    if (prevV !== undefined && prevV > 0) {
+      changePercent = Math.round(((volume - prevV) / prevV) * 1000) / 10;
+    }
+    out.push({ id, name, volume: Math.round(volume), changePercent });
+  }
+  return out.sort((a, b) => b.volume - a.volume);
+}
+
+/** 최신 공표월 아파트 매매지수 전월대비 등락률 */
 export async function fetchKrReSaleRegions(): Promise<{
   regions: RegionCell[];
   periodLabel: string;
@@ -90,30 +155,49 @@ export async function fetchKrReSaleRegions(): Promise<{
   limited: boolean;
 }> {
   const apiKey = process.env.REB_API_KEY;
-  let curKey = monthKey();
-  let cur: RebRow[] = [];
-
-  for (let i = 0; i < 8; i++) {
-    cur = await fetchMonth(curKey, apiKey);
-    if (cur.length > 0) break;
-    curKey = prevMonthKey(curKey);
-  }
-
+  const { key: curKey, rows: cur } = await findLatestMonth(SALE_STATBL, apiKey);
   let prevKey = prevMonthKey(curKey);
   let prev: RebRow[] = [];
   for (let i = 0; i < 4; i++) {
-    prev = await fetchMonth(prevKey, apiKey);
+    prev = await fetchMonth(SALE_STATBL, prevKey, apiKey);
     if (prev.length > 0) break;
     prevKey = prevMonthKey(prevKey);
   }
 
-  const regions = toRegions(cur, prev);
-  const y = curKey.slice(0, 4);
-  const m = curKey.slice(4, 6);
+  const regions = toSaleRegions(cur, prev);
   return {
     regions,
-    periodLabel: `${y}년 ${parseInt(m, 10)}월 전월대비`,
+    periodLabel: `${periodLabelFromKey(curKey)} 전월대비`,
     source: "한국부동산원 · 전국주택가격동향조사 · 아파트 매매가격지수",
+    limited: !apiKey && regions.length <= 5,
+  };
+}
+
+/** 최신 공표월 시도별 아파트 매매 거래호수 */
+export async function fetchKrReTxnVolumes(): Promise<{
+  regions: TxnCell[];
+  national: number | null;
+  periodLabel: string;
+  source: string;
+  limited: boolean;
+}> {
+  const apiKey = process.env.REB_API_KEY;
+  const { key: curKey, rows: cur } = await findLatestMonth(TXN_STATBL, apiKey);
+  let prevKey = prevMonthKey(curKey);
+  let prev: RebRow[] = [];
+  for (let i = 0; i < 4; i++) {
+    prev = await fetchMonth(TXN_STATBL, prevKey, apiKey);
+    if (prev.length > 0) break;
+    prevKey = prevMonthKey(prevKey);
+  }
+
+  const regions = toTxnCells(cur, prev);
+  const national = regions.find((r) => r.name === "전국")?.volume ?? null;
+  return {
+    regions,
+    national,
+    periodLabel: `${periodLabelFromKey(curKey)} 매매 거래호수`,
+    source: "한국부동산원 · 부동산거래현황 · 아파트매매거래현황",
     limited: !apiKey && regions.length <= 5,
   };
 }

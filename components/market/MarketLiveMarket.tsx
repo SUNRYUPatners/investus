@@ -29,7 +29,7 @@ function KrReMarketBlocks() {
         <div className="px-4 py-3" style={{ background: "var(--card)" }}>
           <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>한국 아파트 · 매매 시장</p>
           <p className="text-[11px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
-            정책·지역 매매 동향을 한곳에서 확인하세요.
+            시도별 거래호수·매매등락과 정부정책을 한곳에서 확인하세요.
           </p>
         </div>
       </div>
