@@ -53,10 +53,7 @@ export function DesktopSidebar() {
   }));
 
   const homeHref = marketHref(market, "home");
-  const tagline =
-    market === "us"
-      ? t.more.tagline
-      : `${cfg.emoji} ${cfg.labelKo}`;
+  const isUsBrand = market === "us";
 
   return (
     <aside
@@ -66,7 +63,7 @@ export function DesktopSidebar() {
       <div className="px-5 py-5 border-b" style={{ borderColor: "var(--border)" }}>
         <Link href={homeHref} className="flex items-center gap-2.5">
           <LogoMark size="md" />
-          <div>
+          <div className="min-w-0">
             <div
               className="text-base font-bold tracking-tight font-syne leading-tight"
               style={{ color: "var(--navy)" }}
@@ -74,7 +71,15 @@ export function DesktopSidebar() {
               Investus
             </div>
             <div className="text-[11px] font-medium leading-snug mt-0.5" style={{ color: "var(--muted)" }}>
-              {tagline}
+              {isUsBrand ? (
+                <>
+                  AI기반 차세대 자산관리(WM)
+                  <br />
+                  핀테크 플랫폼
+                </>
+              ) : (
+                `${cfg.emoji} ${cfg.labelKo}`
+              )}
             </div>
           </div>
         </Link>
