@@ -2,8 +2,12 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Sparkles, ChevronDown, ChevronUp, RefreshCw } from "lucide-react";
-import { usePortfolio } from "@/hooks/usePortfolio";
+import { useMarketPortfolio } from "@/hooks/useMarketPortfolio";
 import { NYSE_HOLIDAYS, isMarketOpen } from "@/lib/marketHours";
+import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { getMarketConfig } from "@/lib/markets/config";
+import type { MarketId } from "@/lib/markets/types";
+import { marketHref } from "@/lib/markets/marketPath";
 import { useRouter } from "next/navigation";
 
 type LiveQ = { symbol: string; price: number; change: number; changePercent: number };
@@ -13,7 +17,20 @@ type MacroFuture = { symbol: string; name: string; price?: number; changePercent
 const INTRADAY_LIMIT = 3;
 
 /** YYYY-MM-DD of the most recent NYSE trading day that has already closed (≥ 16:00 ET) */
-function lastMarketCloseDate(): string {
+function lastMarketCloseDate(market: MarketId): string {
+  if (market !== "us") {
+    const cfg = getMarketConfig(market);
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: cfg.timezone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).formatToParts(new Date());
+    const y = parts.find((p) => p.type === "year")?.value ?? "2026";
+    const m = parts.find((p) => p.type === "month")?.value ?? "01";
+    const d = parts.find((p) => p.type === "day")?.value ?? "01";
+    return `${y}-${m}-${d}`;
+  }
   const now  = new Date();
   const etNow = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
   const pastCloseToday = etNow.getHours() * 60 + etNow.getMinutes() >= 16 * 60;
@@ -29,26 +46,29 @@ function lastMarketCloseDate(): string {
   return new Date().toISOString().slice(0, 10);
 }
 
-function todayET(): string {
+function todayET(market: MarketId): string {
+  if (market !== "us") {
+    return lastMarketCloseDate(market);
+  }
   const et = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
   return `${et.getFullYear()}-${String(et.getMonth() + 1).padStart(2, "0")}-${String(et.getDate()).padStart(2, "0")}`;
 }
 
 // ─── localStorage helpers ────────────────────────────────────────────────────
-function intradayCountKey()              { return `home_ai_intra_${todayET()}`; }
-function closeCacheKey(date: string)     { return `home_ai_close_${date}`; }
-function closeRetryKey(date: string)     { return `home_ai_close_retry_${date}`; }
+function intradayCountKey(market: MarketId)              { return `home_ai_intra_${market}_${todayET(market)}`; }
+function closeCacheKey(market: MarketId, date: string)     { return `home_ai_close_${market}_${date}`; }
+function closeRetryKey(market: MarketId, date: string)     { return `home_ai_close_retry_${market}_${date}`; }
 
-function readIntradayCount(): number     { try { return parseInt(localStorage.getItem(intradayCountKey()) ?? "0", 10); } catch { return 0; } }
-function bumpIntradayCount(): number     { const n = readIntradayCount() + 1; try { localStorage.setItem(intradayCountKey(), String(n)); } catch { /* ignore */ } return n; }
-function readCloseCache(date: string)    { try { return localStorage.getItem(closeCacheKey(date)) ?? null; } catch { return null; } }
-function writeCloseCache(date: string, text: string) { try { localStorage.setItem(closeCacheKey(date), text); } catch { /* ignore */ } }
-function readCloseRetryUsed(date: string): boolean { try { return localStorage.getItem(closeRetryKey(date)) === "1"; } catch { return false; } }
-function markCloseRetryUsed(date: string) { try { localStorage.setItem(closeRetryKey(date), "1"); } catch { /* ignore */ } }
+function readIntradayCount(market: MarketId): number     { try { return parseInt(localStorage.getItem(intradayCountKey(market)) ?? "0", 10); } catch { return 0; } }
+function bumpIntradayCount(market: MarketId): number     { const n = readIntradayCount(market) + 1; try { localStorage.setItem(intradayCountKey(market), String(n)); } catch { /* ignore */ } return n; }
+function readCloseCache(market: MarketId, date: string)    { try { return localStorage.getItem(closeCacheKey(market, date)) ?? null; } catch { return null; } }
+function writeCloseCache(market: MarketId, date: string, text: string) { try { localStorage.setItem(closeCacheKey(market, date), text); } catch { /* ignore */ } }
+function readCloseRetryUsed(market: MarketId, date: string): boolean { try { return localStorage.getItem(closeRetryKey(market, date)) === "1"; } catch { return false; } }
+function markCloseRetryUsed(market: MarketId, date: string) { try { localStorage.setItem(closeRetryKey(market, date), "1"); } catch { /* ignore */ } }
 
-function readMacroSnapshot(): { indices: MacroIndex[]; futures: MacroFuture[] } {
+function readMacroSnapshot(cacheKey: string): { indices: MacroIndex[]; futures: MacroFuture[] } {
   try {
-    const raw = localStorage.getItem("market-data-cache");
+    const raw = localStorage.getItem(cacheKey);
     if (!raw) return { indices: [], futures: [] };
     const d = JSON.parse(raw) as {
       indices?: MacroIndex[];
@@ -63,9 +83,11 @@ function readMacroSnapshot(): { indices: MacroIndex[]; futures: MacroFuture[] } 
   }
 }
 
-export function HomeAIInsight() {
+export function HomeAIInsight({ market = "us" }: { market?: MarketId }) {
   const router = useRouter();
-  const { holdings, loaded, isLoggedIn } = usePortfolio();
+  const cfg = getMarketConfig(market);
+  const cacheKey = cfg.marketCacheKey;
+  const { holdings, loaded } = useMarketPortfolio(market);
   const [quotes,        setQuotes]        = useState<LiveQ[]>([]);
   const [usdkrw,        setUsdkrw]        = useState(1350);
   const [displayAnswer, setDisplayAnswer] = useState<string | null>(null);
@@ -83,13 +105,14 @@ export function HomeAIInsight() {
 
   // Init market status + poll every minute
   useEffect(() => {
-    setMarketOpen(isMarketOpen());
-    setIntradayUsed(readIntradayCount());
+    const open = market === "us" ? isMarketOpen() : isMarketSessionOpen(market);
+    setMarketOpen(open);
+    setIntradayUsed(readIntradayCount(market));
 
-    const update = () => setMarketOpen(isMarketOpen());
+    const update = () => setMarketOpen(market === "us" ? isMarketOpen() : isMarketSessionOpen(market));
     const id = setInterval(update, 60_000);
     return () => clearInterval(id);
-  }, []);
+  }, [market]);
 
   // Sync prices from market-data-cache
   useEffect(() => {
@@ -98,7 +121,7 @@ export function HomeAIInsight() {
 
     const applyCache = (fromEvent: boolean) => {
       try {
-        const raw = localStorage.getItem("market-data-cache");
+        const raw = localStorage.getItem(cacheKey);
         if (!raw) return;
         const d = JSON.parse(raw) as {
           _ts?:    number;
@@ -118,11 +141,11 @@ export function HomeAIInsight() {
       } catch { /* ignore */ }
     };
 
-    applyCache(false); // mount — fresh only if cache < 10 min old
-    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") applyCache(true); };
+    applyCache(false);
+    const onStorage = (e: StorageEvent) => { if (e.key === cacheKey) applyCache(true); };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
-  }, [loaded, holdings.length]);
+  }, [loaded, holdings.length, cacheKey]);
 
   // Auto-fetch post-close: wait for fresh prices + ALL holdings priced, then debounce 2s
   useEffect(() => {
@@ -131,14 +154,13 @@ export function HomeAIInsight() {
     if (quotes.length === 0 || holdings.length === 0) return;       // no data yet
     if (quotes.length < holdings.length) return;                    // not all holdings priced yet
 
-    const day = lastMarketCloseDate();
+    const day = lastMarketCloseDate(market);
 
-    // Use cached analysis if available (persists across page refreshes)
-    const cached = readCloseCache(day);
+    const cached = readCloseCache(market, day);
     if (cached) {
       setDisplayAnswer(cached);
       setAnalysisDate(day);
-      setCloseRetryUsed(readCloseRetryUsed(day));
+      setCloseRetryUsed(readCloseRetryUsed(market, day));
       setExpanded(true);
       return;
     }
@@ -156,11 +178,11 @@ export function HomeAIInsight() {
       if (analysisTimer.current) clearTimeout(analysisTimer.current);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pricesFresh, marketOpen, quotes.length, holdings.length]);
+  }, [pricesFresh, marketOpen, quotes.length, holdings.length, market]);
 
   function buildPayload() {
     const liveMap   = Object.fromEntries(quotes.map((q) => [q.symbol, q]));
-    const macro = readMacroSnapshot();
+    const macro = readMacroSnapshot(cacheKey);
     const totalValue = holdings.reduce((s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0);
     const totalCost  = holdings.reduce((s, h) => s + h.shares * h.avgCost, 0);
     const totalPnlPct = totalCost > 0 ? ((totalValue - totalCost) / totalCost) * 100 : 0;
@@ -185,7 +207,10 @@ export function HomeAIInsight() {
         method:  "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          question: "오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지, 그리고 Futures Map 기준 매크로 환경이 내 종목들에 어떤 영향을 줬는지 같이 분석해줘",
+          question: market === "us"
+            ? "오늘 내 포트폴리오 각 종목이 왜 올랐거나 내렸는지, 그리고 Futures Map 기준 매크로 환경이 내 종목들에 어떤 영향을 줬는지 같이 분석해줘"
+            : `${cfg.labelKo} 포트폴리오 기준으로 오늘 각 보유 자산이 왜 올랐거나 내렸는지, 해당 시장 매크로·뉴스 맥락과 함께 분석해줘`,
+          market,
           ...buildPayload(),
           fetchNews: true,
         }),
@@ -201,14 +226,14 @@ export function HomeAIInsight() {
       const a = d.answer;
       setDisplayAnswer(a);
       if (isIntraday) {
-        const n = bumpIntradayCount();
+        const n = bumpIntradayCount(market);
         setIntradayUsed(n);
       } else {
-        const day = closeDay ?? lastMarketCloseDate();
+        const day = closeDay ?? lastMarketCloseDate(market);
         setAnalysisDate(day);
-        writeCloseCache(day, a); // 성공 결과만 캐시 — 새로고침해도 재분석 안 함
+        writeCloseCache(market, day, a);
         if (isCloseRetry) {
-          markCloseRetryUsed(day);
+          markCloseRetryUsed(market, day);
           setCloseRetryUsed(true);
         }
       }
@@ -227,7 +252,33 @@ export function HomeAIInsight() {
     runAnalysis(true);
   }
 
-  if (!loaded || !isLoggedIn || holdings.length === 0) return null;
+  if (!loaded) return null;
+
+  if (holdings.length === 0) {
+    return (
+      <div className="px-4 lg:px-0 mt-3">
+        <button
+          type="button"
+          onClick={() => router.push(marketHref(market, "portfolio"))}
+          className="w-full rounded-2xl border p-4 text-left transition-opacity active:opacity-80"
+          style={{ background: "var(--card)", borderColor: "rgba(var(--mint-rgb),0.2)" }}
+        >
+          <div className="flex items-center gap-2 mb-1.5">
+            <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
+            <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
+              {cfg.labelKo} 포트폴리오 분석
+            </span>
+          </div>
+          <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
+            보유 종목을 등록하면 이 시장 기준으로 AI 등락 분석을 받을 수 있습니다. 미국 시장 데이터와는 분리됩니다.
+          </p>
+          <p className="text-[11px] font-semibold mt-2" style={{ color: "var(--mint)" }}>
+            포트폴리오 등록하기 →
+          </p>
+        </button>
+      </div>
+    );
+  }
 
   const remaining = INTRADAY_LIMIT - intradayUsed;
   const limitReached = marketOpen && intradayUsed >= INTRADAY_LIMIT;
@@ -246,7 +297,7 @@ export function HomeAIInsight() {
           <Sparkles className="w-4 h-4 flex-shrink-0" style={{ color: "var(--mint)" }} />
           <div className="flex-1 text-left min-w-0">
             <span className="text-sm font-bold font-syne" style={{ color: "var(--text)" }}>
-              {marketOpen ? "장중 포트폴리오 분석" : "오늘 포트폴리오 등락 분석"}
+              {marketOpen ? `${cfg.labelKo} 장중 분석` : `${cfg.labelKo} 등락 분석`}
             </span>
             {!marketOpen && analysisDate && (
               <span className="block text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
@@ -293,7 +344,7 @@ export function HomeAIInsight() {
               ) : displayAnswer === "__error__" ? (
                 <div className="flex items-center justify-between py-1">
                   <p className="text-[12px]" style={{ color: "var(--muted)" }}>분석 중 오류가 발생했어요.</p>
-                  <button onClick={() => runAnalysis(false, lastMarketCloseDate())}
+                  <button onClick={() => runAnalysis(false, lastMarketCloseDate(market))}
                     className="text-[11px] font-bold px-3 py-1 rounded-lg"
                     style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
                     다시 시도
@@ -315,12 +366,11 @@ export function HomeAIInsight() {
               <div className="px-4 pb-3 border-t pt-2.5" style={{ borderColor: "rgba(var(--mint-rgb),0.06)" }}>
                 <button
                   onClick={() => {
-                    const day = lastMarketCloseDate();
-                    const newDay = day;
-                    writeCloseCache(newDay, ""); // clear cached result
-                    try { localStorage.removeItem(closeCacheKey(newDay)); } catch { /* ignore */ }
+                    const day = lastMarketCloseDate(market);
+                    writeCloseCache(market, day, "");
+                    try { localStorage.removeItem(closeCacheKey(market, day)); } catch { /* ignore */ }
                     fetchedForDay.current = "";
-                    runAnalysis(false, newDay, true);
+                    runAnalysis(false, lastMarketCloseDate(market), true);
                   }}
                   disabled={loading}
                   className="w-full flex items-center justify-between rounded-xl px-3.5 py-2 transition-opacity active:opacity-60 disabled:opacity-40"

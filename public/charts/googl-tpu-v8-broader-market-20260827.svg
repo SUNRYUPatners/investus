@@ -7,31 +7,31 @@
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
   <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
   <rect x="40" y="20" width="150" height="38" rx="19" fill="#4285f430" stroke="#4285f4" stroke-width="1.5"/>
-  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4285f4" text-anchor="middle">GOOGL</text>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4285f4" text-anchor="middle">구글</text>
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.27</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">구글 TPU v8이 내부용을 넘어 더 넓은 AI 시장을 겨냥합니다</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">구글 AI 전용칩 8세대가 내부용을 넘어</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">더 넓은 AI 시장을 겨냥합니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="230" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4285f4" text-anchor="middle">TPU v8</text>
-  <text x="540" y="280" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Tensor Processing Unit 8세대. 내부 워크로드뿐 아니라 외부 AI 시장을 겨냥합니다.</text>
+  <text x="540" y="230" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4285f4" text-anchor="middle">8세대 TPU</text>
+  <text x="540" y="280" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">텐서 처리 장치 8세대. 내부 연산뿐 아니라 외부 AI 시장을 겨냥합니다.</text>
   <rect x="80" y="320" width="920" height="240" rx="18" fill="#0f172a" stroke="#4285f4" stroke-width="2"/>
-  <text x="540" y="400" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">"TPU v8은 구글 AI 칩 8세대입니다. 예전에는 주로 내부·GCP에 썼지만, 이제 더 넓은 AI</text>
-  <text x="540" y="430" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">시장을 겨냥한다는 설명입니다. GPU 독점에 대한 클라우드 대안 실리콘 narrative입니다.</text>
+  <text x="540" y="400" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">"구글 AI 전용칩 8세대는 예전에는 주로 내부·구글 클라우드에 썼지만, 이제 더 넓은 AI</text>
+  <text x="540" y="430" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">시장을 겨냥한다는 설명입니다. GPU 일변도에 대한 클라우드 대안 반도체 서사입니다.</text>
   <text x="540" y="460" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">가용성과 소프트웨어 호환이 관건입니다."</text>
   <rect x="120" y="590" width="400" height="120" rx="14" fill="#0a1420" stroke="#4285f4" stroke-width="1.5"/>
-  <text x="320" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4285f4" text-anchor="middle">v8</text>
-  <text x="320" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">차세대 TPU</text>
+  <text x="320" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4285f4" text-anchor="middle">8세대</text>
+  <text x="320" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">차세대 AI 전용칩</text>
   <rect x="560" y="590" width="400" height="120" rx="14" fill="#0a1420" stroke="#4285f4" stroke-width="1.5"/>
   <text x="760" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4285f4" text-anchor="middle">외부</text>
   <text x="760" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">외부 AI 시장 겨냥</text>
   <rect x="60" y="740" width="960" height="200" rx="14" fill="#0a1420" stroke="#4285f4" stroke-width="1"/>
   <text x="540" y="780" font-family="Arial" font-size="18" fill="#4285f4" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="788" font-family="Arial" font-size="18" fill="#4285f4" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="822" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">TPU는 구글이 AI 연산용으로 만든 전용 칩입니다. v8을 사내용을 넘어 외부에 판다는 뜻은, 클라우드·엔터프라이즈</text>
-  <text x="540" y="846" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">고객에게 엔비디아 GPU 대신 TPU 옵션을 주겠다는 신호입니다. 메타·아마zon 자체칩과 같은 축입니다.</text>
-  <text x="540" y="870" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">GCP TPU 시간당 가격, 대형 기업 계약, v8 출시 일정을 함께 보시면 수요가 실제 매출로 이어지는지 알 수 있습니다.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">GOOGL · TPU v8 · 2026.08.27</text>
+  <text x="540" y="822" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">TPU는 구글이 AI 연산용으로 만든 전용 칩입니다. 8세대를 사내용을 넘어 외부에 판다는 뜻은, 클라우드·기업</text>
+  <text x="540" y="846" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">고객에게 엔비디아 GPU 대신 TPU 옵션을 주겠다는 신호입니다. 메타·아마존 자체칩과 같은 축입니다.</text>
+  <text x="540" y="870" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">구글 클라우드 TPU 시간당 가격, 대형 기업 계약, 8세대 출시 일정을 함께 보시면 수요가 실제 매출로 이어지는지 알 수 있습니다.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">구글 · AI 전용칩 8세대 · 2026.08.27</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

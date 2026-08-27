@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { ChevronLeft, BookOpen, PlayCircle, TrendingUp, Shield, Layers, AlertTriangle, Award } from "lucide-react";
 import { LogoMark } from "@/components/LogoMark";
 import Link from "next/link";
+import { PlatformIntro } from "@/components/PlatformIntro";
 import { useLocaleCode } from "@/contexts/LocaleContext";
 
 export default function AboutPage() {
@@ -85,6 +86,8 @@ export default function AboutPage() {
         {/* Hero — 라이트/다크 테마 토큰으로 통일 (하드코딩 다크 패널 제거) */}
         <div className="relative rounded-3xl overflow-hidden p-6 mb-6 border"
           style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+          <PlatformIntro locale={isKo ? "ko" : "en"} variant="about" className="relative mb-5" />
+
           <div className="absolute top-0 left-0 w-40 h-40 rounded-full pointer-events-none"
             style={{ background: "radial-gradient(circle, rgba(var(--mint-rgb),0.1) 0%, transparent 70%)", transform: "translate(-30%, -30%)" }} />
           <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full pointer-events-none"

@@ -18,7 +18,21 @@ type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[
 
 function KrReMarketBlocks() {
   return (
-    <section className="px-4 lg:px-0 pt-5 space-y-4">
+    <section className="px-4 lg:px-0 pt-3 space-y-4">
+      <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/kr-re-apartment-hero.svg"
+          alt="아파트 단지"
+          className="w-full h-[120px] object-cover object-center"
+        />
+        <div className="px-4 py-3" style={{ background: "var(--card)" }}>
+          <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>한국 아파트 · 매매 시장</p>
+          <p className="text-[11px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
+            정책·지역 매매 동향을 한곳에서 확인하세요.
+          </p>
+        </div>
+      </div>
       <PolicyHighlightCards />
       <RegionHeatmap />
     </section>
@@ -97,23 +111,27 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
   const recommended = quotes.filter((q) => recSyms.has(q.symbol));
   const popular = quotes.filter((q) => popSyms.has(q.symbol));
 
+  const showRecommended = market !== "kr";
+
   return (
     <>
-      <section className="px-4 lg:px-0 pt-5">
-        <div className="flex items-center gap-1.5 mb-3">
-          <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
-          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
-            {market === "safe" ? "추천 자산" : "추천 종목"}
-          </h2>
-        </div>
-        <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
-          {loading && recommended.length === 0
-            ? Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="min-w-[155px] h-[148px] rounded-2xl border animate-pulse flex-shrink-0" style={{ borderColor: "var(--border)", background: "var(--card)" }} />
-              ))
-            : recommended.map((q) => <StockCard key={q.symbol} stock={q} />)}
-        </div>
-      </section>
+      {showRecommended && (
+        <section className="px-4 lg:px-0 pt-5">
+          <div className="flex items-center gap-1.5 mb-3">
+            <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
+            <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
+              {market === "safe" ? "추천 자산" : "추천 종목"}
+            </h2>
+          </div>
+          <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
+            {loading && recommended.length === 0
+              ? Array.from({ length: 4 }).map((_, i) => (
+                  <div key={i} className="min-w-[155px] h-[148px] rounded-2xl border animate-pulse flex-shrink-0" style={{ borderColor: "var(--border)", background: "var(--card)" }} />
+                ))
+              : recommended.map((q) => <StockCard key={q.symbol} stock={q} />)}
+          </div>
+        </section>
+      )}
 
       <section className="px-4 lg:px-0 pt-5">
         <h2 className="text-xs font-semibold tracking-widest uppercase font-syne mb-3" style={{ color: "var(--text)" }}>

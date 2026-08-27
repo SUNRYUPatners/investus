@@ -134,9 +134,9 @@ a, button, [role="button"] {
   font-family: var(--font-syne), 'Syne', sans-serif;
 }
 
-/* ── Bottom nav safe area ── */
+/* ── Bottom nav safe area (nav 56px + inset + sticky ad) ── */
 .pb-safe {
-  padding-bottom: calc(env(safe-area-inset-bottom) + 7.5rem);
+  padding-bottom: calc(max(env(safe-area-inset-bottom), 12px) + 9rem);
 }
 
 @media (min-width: 1024px) {
@@ -171,7 +171,7 @@ html[data-sticky-ad="hidden"] .pb-safe {
 
 @media (display-mode: standalone) {
   .pb-safe {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 8rem);
+    padding-bottom: calc(max(env(safe-area-inset-bottom), 12px) + 9.5rem);
   }
 }
 

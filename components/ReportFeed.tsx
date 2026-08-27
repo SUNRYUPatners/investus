@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ChevronDown, Pin, X, Lock } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
-import { useLocale } from "@/contexts/LocaleContext";
+import { useLocale, useLocaleCode } from "@/contexts/LocaleContext";
 import { ShareButton } from "@/components/ShareButton";
 import { RelatedLearnLinks } from "@/components/RelatedLearnLinks";
 import { SUBSCRIPTION, isFreeReport, formatSubPrice, proPriceSummaryKo } from "@/lib/subscription";
@@ -132,6 +132,7 @@ import {
   type Report,
 } from "@/lib/reports";
 import { getReportsForMarket } from "@/lib/markets/reports";
+import { getReportCioIntro, getReportSubtitle } from "@/lib/markets/reportIntro";
 import type { MarketId } from "@/lib/markets/types";
 
 function SwipeCloseHint() {
@@ -578,7 +579,12 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
   const { user } = useAuth();
   const isPro = user?.isPro === true;
   const t = useLocale();
+  const localeCode = useLocaleCode();
   const [showOlder, setShowOlder] = useState(false);
+
+  const uiLang: "ko" | "en" = lang ?? (localeCode === "en" ? "en" : "ko");
+  const cioIntro = getReportCioIntro(market, uiLang);
+  const reportSubtitle = getReportSubtitle(market, uiLang);
 
   const seed = market === "us" ? SEED_REPORTS : getReportsForMarket(market);
   const recent = seed.filter(isWithinWeek);
@@ -627,7 +633,10 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
             {t.reports.sectionTitle}
           </h2>
           <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
-            {t.reports.subtitle}
+            {reportSubtitle}
+          </p>
+          <p className="text-[11px] mt-1.5 leading-relaxed" style={{ color: "var(--muted)" }}>
+            {cioIntro}
           </p>
           <p className="text-[11px] mt-1.5 leading-relaxed" style={{ color: "var(--muted)" }}>
             <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>

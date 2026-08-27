@@ -5,7 +5,7 @@ import { fetchYahooChartLive } from "@/lib/yahooChartLive";
 import type { FutureItem, IndexQuote, Quote } from "@/lib/api";
 import { getMarketConfig, KR_TOP10, KR_HEATMAP, SAFE_ASSETS, type MarketSymbol } from "./config";
 import type { MarketId } from "./types";
-import { KR_RE_REGIONS } from "./krReMock";
+import type { RegionCell } from "./krReRegions";
 
 function spark(price: number, changePercent: number): number[] {
   const n = 9;
@@ -197,7 +197,7 @@ export type AltMarketPayload = {
   quotes: Quote[];
   futures: FutureItem[];
   liveAt: number;
-  regions?: typeof KR_RE_REGIONS;
+  regions?: RegionCell[];
   /** 히트맵용 추가 종목 (KR) */
   heatmapQuotes?: Quote[];
 };
@@ -211,7 +211,7 @@ export async function fetchAltMarketData(market: MarketId): Promise<AltMarketPay
       quotes: [],
       futures: [],
       liveAt: Date.now(),
-      regions: KR_RE_REGIONS,
+      regions: [],
     };
   }
 

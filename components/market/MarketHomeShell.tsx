@@ -21,7 +21,6 @@ import { MorningBriefingCard } from "@/components/MorningBriefingCard";
 import { MarketBriefingCard } from "@/components/market/MarketBriefingCard";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
 import { PlatformIntro } from "@/components/PlatformIntro";
-import { MarketSwitcherDesktop } from "@/components/MarketSwitcherDesktop";
 import { ShopPreviewSection } from "@/components/ShopPreviewSection";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
@@ -57,23 +56,20 @@ export function MarketHomeShell({
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <h1 className="sr-only">
-        Investus — AI 기반 차세대 자산관리(WM) 핀테크 · {isUs ? "미국주식" : cfg.labelKo}
+        Investus — AI 기반 차세대 자산관리(WM) 플랫폼 · {isUs ? "미국주식" : cfg.labelKo}
       </h1>
       <Header />
-      {/* 미국 = 본사이트와 동일 티커. 다른 시장은 해당 시장 시세 슬롯(LiveMarket 대체)에서 표시 */}
-      {isUs && (
+      {/* 미국·한국 홈 — 본사이트와 동일 티커·경제일정 상단바 */}
+      {(isUs || market === "kr") && (
         <>
-          <TickerTape />
-          <EcoTickerTape />
+          <TickerTape market={market} />
+          <EcoTickerTape market={market} />
         </>
       )}
 
       <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-2">
           <div className="lg:flex-1 lg:min-w-0">
-            <div className="hidden lg:block px-0 pt-1 pb-2 max-w-[520px]">
-              <MarketSwitcherDesktop current={market} />
-            </div>
             <FirstVisitBanner />
 
             <section className="px-4 lg:px-0 pt-3">
@@ -90,9 +86,11 @@ export function MarketHomeShell({
 
             {isUs ? <PortfolioWidget /> : market !== "kr-re" ? <MarketPortfolioStub market={market} /> : null}
 
-            <section className="px-4 lg:px-0 pt-3">
-              <HomeAIInsight />
-            </section>
+            {market !== "kr-re" && (
+              <section className="px-4 lg:px-0 pt-3">
+                <HomeAIInsight market={market} />
+              </section>
+            )}
 
             <WatchlistSection />
 
@@ -150,6 +148,10 @@ export function MarketHomeShell({
           </div>
 
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
+            <PlatformIntro
+              locale={uiLocale === "ko" ? "ko" : "en"}
+              className="pt-1"
+            />
             {showFear && (
               <>
                 {isUs ? (
@@ -167,8 +169,6 @@ export function MarketHomeShell({
           </div>
         </div>
       </main>
-
-      <PlatformIntro className="max-w-[480px] mx-auto px-4 pt-4 pb-6 lg:max-w-none lg:px-8 lg:pb-8" />
 
       {isUs && <OnboardingModal />}
     </div>

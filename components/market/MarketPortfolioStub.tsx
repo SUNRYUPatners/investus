@@ -1,73 +1,91 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
+import { Wallet, ChevronRight } from "lucide-react";
 import type { Quote } from "@/lib/api";
 import { getMarketConfig } from "@/lib/markets/config";
+import { marketHref } from "@/lib/markets/marketPath";
 import type { MarketId } from "@/lib/markets/types";
-
-type Holding = { symbol: string; shares: number; avgCost: number };
+import { useMarketPortfolio } from "@/hooks/useMarketPortfolio";
 
 export function MarketPortfolioStub({ market }: { market: MarketId }) {
+  const router = useRouter();
   const cfg = getMarketConfig(market);
-  const [holdings, setHoldings] = useState<Holding[]>([]);
+  const { holdings, loaded } = useMarketPortfolio(market);
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(cfg.portfolioKey);
-      if (raw) {
-        const parsed = JSON.parse(raw) as Holding[];
-        if (Array.isArray(parsed)) setHoldings(parsed);
-      } else if (market === "kr") {
-        // seed demo holdings for preview
-        const demo: Holding[] = [
-          { symbol: "005930.KS", shares: 10, avgCost: 70000 },
-          { symbol: "000660.KS", shares: 5, avgCost: 180000 },
-        ];
-        localStorage.setItem(cfg.portfolioKey, JSON.stringify(demo));
-        setHoldings(demo);
-      } else if (market === "safe") {
-        const demo: Holding[] = [
-          { symbol: "BTC-USD", shares: 0.05, avgCost: 60000 },
-          { symbol: "GC=F", shares: 1, avgCost: 2300 },
-        ];
-        localStorage.setItem(cfg.portfolioKey, JSON.stringify(demo));
-        setHoldings(demo);
-      }
-    } catch { /* ignore */ }
-
-    const url = market === "us" ? "/api/market-data" : `/api/market-data?market=${market}`;
+    const url = `/api/market-data?market=${market}`;
     fetch(url)
       .then((r) => r.json())
       .then((d: { quotes?: Quote[] }) => setQuotes(d.quotes ?? []))
       .catch(() => {});
-  }, [market, cfg.portfolioKey]);
+  }, [market]);
 
   const rows = useMemo(() => {
     return holdings.map((h) => {
       const q = quotes.find((x) => x.symbol === h.symbol);
       const price = q?.price ?? h.avgCost;
-      const pnlPct = h.avgCost > 0 ? ((price - h.avgCost) / h.avgCost) * 100 : 0;
       const name = q?.name ?? h.symbol;
-      return { ...h, price, pnlPct, name, changePercent: q?.changePercent ?? 0 };
+      return { ...h, price, name, changePercent: q?.changePercent ?? 0 };
     });
   }, [holdings, quotes]);
 
-  if (rows.length === 0) return null;
+  if (!loaded) return null;
 
-  const dayMove =
-    rows.reduce((acc, r) => acc + r.changePercent * r.shares * r.price, 0) /
-    Math.max(1, rows.reduce((acc, r) => acc + r.shares * r.price, 0));
+  const portfolioHref = marketHref(market, "portfolio");
+
+  if (rows.length === 0) {
+    return (
+      <section className="px-4 lg:px-0 pt-3">
+        <button
+          type="button"
+          onClick={() => router.push(portfolioHref)}
+          className="w-full rounded-2xl border p-4 text-left transition-opacity active:opacity-80"
+          style={{ background: "var(--card)", borderColor: "var(--border)" }}
+        >
+          <div className="flex items-center gap-3">
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "rgba(var(--mint-rgb),0.12)" }}
+            >
+              <Wallet className="w-5 h-5" style={{ color: "var(--mint)" }} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold" style={{ color: "var(--text)" }}>
+                {cfg.labelKo} 포트폴리오를 등록해 주세요
+              </p>
+              <p className="text-[11px] mt-0.5 leading-relaxed" style={{ color: "var(--muted)" }}>
+                보유 종목을 등록하면 홈에서 시세·AI 분석을 볼 수 있습니다.
+              </p>
+            </div>
+            <ChevronRight className="w-4 h-4 flex-shrink-0" style={{ color: "var(--muted)" }} />
+          </div>
+        </button>
+      </section>
+    );
+  }
 
   return (
-    <section className="px-4 lg:px-0 pt-3 space-y-2">
+    <section className="px-4 lg:px-0 pt-3">
       <div
         className="rounded-2xl border p-4"
         style={{ background: "var(--card)", borderColor: "var(--border)" }}
       >
-        <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: "var(--muted)" }}>
-          내 포트폴리오 ({cfg.labelKo})
-        </p>
+        <div className="flex items-center justify-between mb-2">
+          <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "var(--muted)" }}>
+            내 포트폴리오 ({cfg.labelKo})
+          </p>
+          <button
+            type="button"
+            onClick={() => router.push(portfolioHref)}
+            className="text-[10px] font-semibold"
+            style={{ color: "var(--mint)" }}
+          >
+            편집
+          </button>
+        </div>
         <div className="space-y-2">
           {rows.map((r) => (
             <div key={r.symbol} className="flex items-center justify-between gap-2">
@@ -89,23 +107,6 @@ export function MarketPortfolioStub({ market }: { market: MarketId }) {
             </div>
           ))}
         </div>
-      </div>
-
-      <div
-        className="rounded-2xl border p-4"
-        style={{ background: "var(--card)", borderColor: "var(--border)" }}
-      >
-        <p className="text-xs font-semibold mb-1" style={{ color: "var(--text)" }}>
-          오늘 포트폴리오 등락 분석
-        </p>
-        <p className="text-[12px] leading-relaxed" style={{ color: "var(--muted)" }}>
-          {cfg.labelKo} 보유분 가중 등락은 약{" "}
-          <span style={{ color: dayMove >= 0 ? "var(--up)" : "var(--down)", fontWeight: 700 }}>
-            {dayMove >= 0 ? "+" : ""}
-            {dayMove.toFixed(2)}%
-          </span>
-          입니다. 미리보기용 간단 집계이며, 미국 홈의 AI 인사이트와 동일한 슬롯입니다.
-        </p>
       </div>
     </section>
   );

@@ -57,16 +57,29 @@
 - **본문에 글 충분히, 짧게 끊지 말 것** — SVG에 못 넣은 배경·스펙·출처를 **초보가 읽히는 문단**으로. 키워드 불릿으로 분량만 채우지 말 것.
 - **개별 리포트마다 `■ 투자시사점` / EN `■ Investment Implications` 필수** (사실만 나열하고 끝내지 말 것)
 
-### 3. lib/wallPosts.ts — 종토방 글/댓글 추가
+### 3. lib/wallPosts.ts — 미국 종토방 글/댓글 추가
 - 날짜 타임스탬프 상수 추가 (`const T<DD>J = _now - <n> * 3600_000`)
 - `MOCK_POSTS` 배열에 새 날짜 게시글 추가 (ID는 기존 최대값+1부터)
 - `MOCK_COMMENTS` 맵에 해당 게시글 댓글 추가
 - `LATEST_UPDATE`를 오늘 날짜 타임스탬프로 갱신
 
-### 4. lib/analystPosts.ts — 애널리스트 글/댓글 추가
+### 3b. lib/wallPosts-markets.ts — 한국주식·안전자산·한국부동산 종토방 (필수)
+- **`리포트 업데이트` 요청 시 US와 함께 자동 포함** — 별도 지시 없어도 4시장 모두 갱신
+- `MOCK_POSTS_KR` / `MOCK_POSTS_SAFE` / `MOCK_POSTS_KR_RE` 각각 당일 리포트 주제에 맞는 게시글·댓글 추가
+- 한국장: `symbol`은 **종목 한글명** (예: `삼성전자`, `SK하이닉스`)
+- 안전자산: `비트코인`, `금` 등 자산명
+- 부동산: `서울매매`, `전세`, `정책` 등
+- `MOCK_COMMENTS_KR` / `MOCK_COMMENTS_SAFE` / `MOCK_COMMENTS_KR_RE` 맵도 함께 갱신
+
+### 4. lib/analystPosts.ts — 미국 애널리스트 글/댓글 추가
 - `MOCK_ANALYST_POSTS` 배열에 새 날짜 포스트 추가 (id는 음수, 최소값-1부터)
 - `MOCK_ANALYST_COMMENTS` 맵에 댓글 추가
 - **당일 개별 리포트마다 1개씩 커버 필수** — 개별 리포트 수 = 애널 포스트 최소 수. 빠진 리포트 없이 전부 커버.
+
+### 4b. lib/analystPosts-markets.ts — 한국·안전자산·부동산 애널 (필수)
+- **`리포트 업데이트` 시 kr/safe/kr-re 리포트마다 1개씩** `MOCK_ANALYST_POSTS_KR` / `_SAFE` / `_KR_RE` 추가
+- 당일 `lib/reports-kr.ts` · `reports-safe.ts` · `reports-kr-re.ts` 시드와 **1:1 대응** — 빠진 리포트 없이 전부 커버
+- 존댓말·출처 생략 규칙은 US 애널과 동일
 
 ### 5. scripts/export-report-pngs.js — PAIRS 추가
 - `PAIRS` 배열에 오늘 날짜 항목 추가

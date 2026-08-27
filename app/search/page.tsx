@@ -116,6 +116,8 @@ export default function SearchPage() {
   const market = useMarket();
   const cfg = getMarketConfig(market);
   const isUs = market === "us";
+  const isKr = market === "kr";
+  const hidePicks = isKr;
   const { user } = useAuth();
   const picksLocked = SUBSCRIPTION.enabled && user?.isPro !== true;
   const [query, setQuery]     = useState("");
@@ -237,9 +239,8 @@ export default function SearchPage() {
     setApiResults([]);
   };
 
-  // Fetch Yahoo Finance when local results < 3 (US only)
+  // Fetch remote search when local results are sparse
   useEffect(() => {
-    if (!isUs) { setApiResults([]); return; }
     if (!searchQuery.trim() || searchQuery.length < 1) { setApiResults([]); return; }
     const lq2 = searchQuery.toLowerCase();
     const localCount = enriched.filter(({ stock }) =>
@@ -249,7 +250,13 @@ export default function SearchPage() {
     const timer = setTimeout(async () => {
       setApiLoading(true);
       try {
-        const r = await fetch(`/api/stock-search?q=${encodeURIComponent(searchQuery)}`);
+        const endpoint = isUs
+          ? `/api/stock-search?q=${encodeURIComponent(searchQuery)}`
+          : isKr
+            ? `/api/kr-stock-search?q=${encodeURIComponent(searchQuery)}`
+            : null;
+        if (!endpoint) { setApiResults([]); setApiLoading(false); return; }
+        const r = await fetch(endpoint);
         const data = await r.json() as { symbol: string; name: string; exchange: string }[];
         const localSymbols = new Set(SYMBOL_REGISTRY.map(s => s.symbol));
         setApiResults((Array.isArray(data) ? data : []).filter(d => !localSymbols.has(d.symbol)));
@@ -258,7 +265,7 @@ export default function SearchPage() {
     }, 400);
     return () => clearTimeout(timer);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchQuery, isUs]);
+  }, [searchQuery, isUs, isKr]);
 
   const lq = searchQuery.toLowerCase();
   const results = searchQuery.trim()
@@ -276,8 +283,14 @@ export default function SearchPage() {
       <Header />
       {isUs && (
         <>
-          <TickerTape />
-          <EcoTickerTape />
+          <TickerTape market="us" />
+          <EcoTickerTape market="us" />
+        </>
+      )}
+      {market === "kr" && (
+        <>
+          <TickerTape market="kr" />
+          <EcoTickerTape market="kr" />
         </>
       )}
 
@@ -407,7 +420,8 @@ export default function SearchPage() {
                   <AdFitBanner />
                 </div>
 
-                {/* Investus 추천주식 */}
+                {/* Investus 추천주식 — 한국장은 미표시 */}
+                {!hidePicks && (
                 <div>
                   <div className="flex items-center gap-1.5 mb-3">
                     <Star className="w-3.5 h-3.5" style={{ color: "var(--mint)" }} fill="var(--mint)" />
@@ -438,6 +452,7 @@ export default function SearchPage() {
                     </SubscribeBlurOverlay>
                   </div>
                 </div>
+                )}
 
                 {/* 인기 종목 */}
                 <div>

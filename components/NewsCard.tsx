@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import type { NewsItem } from "@/lib/api";
 
 const categoryStyle: Record<string, { bg: string; color: string }> = {
@@ -9,27 +12,33 @@ const categoryStyle: Record<string, { bg: string; color: string }> = {
   orange: { bg: "rgba(249,115,22,0.12)", color: "#fb923c" },
 };
 
+function thumbSrc(image: string): string {
+  if (image.startsWith("/")) return image;
+  return `/api/img-proxy?url=${encodeURIComponent(image)}`;
+}
+
 export function NewsCard({ item, large = false }: { item: NewsItem; large?: boolean }) {
   const style = categoryStyle[item.categoryColor] ?? categoryStyle.blue;
+  const [imgBroken, setImgBroken] = useState(false);
+  const showImg = !!item.image && !imgBroken;
 
   const inner = (
     <div className="flex items-start gap-3">
-      {/* Thumbnail or color block */}
-      {item.image ? (
+      {showImg ? (
         /* eslint-disable-next-line @next/next/no-img-element */
         <img
-          src={`/api/img-proxy?url=${encodeURIComponent(item.image)}`}
+          src={thumbSrc(item.image!)}
           alt=""
           className={`flex-shrink-0 rounded-xl object-cover ${large ? "w-20 h-14" : "w-10 h-10"}`}
+          onError={() => setImgBroken(true)}
         />
       ) : (
         <div
-          className="flex-shrink-0 w-10 rounded-xl"
-          style={{ background: style.bg, minHeight: large ? 52 : 44 }}
+          className={`flex-shrink-0 rounded-xl ${large ? "w-20 h-14" : "w-10 h-10"}`}
+          style={{ background: style.bg }}
         />
       )}
 
-      {/* Content */}
       <div className="flex-1 min-w-0">
         <h3
           className={`font-medium leading-snug ${large ? "text-[14px] line-clamp-3" : "text-[13px] line-clamp-2"}`}
@@ -42,7 +51,6 @@ export function NewsCard({ item, large = false }: { item: NewsItem; large?: bool
             {item.summary}
           </p>
         )}
-        {/* Source · time · category — all same line, same size */}
         <div className="flex items-center gap-1.5 mt-1.5 flex-wrap">
           <span className="text-[10px] font-semibold" style={{ color: style.color }}>
             {item.source}

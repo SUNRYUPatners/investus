@@ -178,7 +178,7 @@ export const MARKET_CONFIG: Record<MarketId, MarketConfig> = {
   },
   "kr-re": {
     id: "kr-re",
-    emoji: "🏢",
+    emoji: "🏠",
     labelKo: "한국부동산",
     labelEn: "KR Real Estate",
     tagline: "매매 · 전세 · 정책",

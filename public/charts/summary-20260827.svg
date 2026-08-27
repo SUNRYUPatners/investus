@@ -17,9 +17,9 @@
   <text x="970" y="188" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="end">NVDA</text>
   <rect x="60" y="246" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
   <rect x="60" y="246" width="8" height="112" rx="4" fill="#a78bfa"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">앤트로픽 63%·스페이스X 37%로 2026년 최대 IPO 확률이 나왔습니다</text>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">앤트로픽 63%·스페이스X 37%로 2026년 최대 기업공개 확률이 나왔습니다</text>
   <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">예측시장 기준 앤트로픽이 스페이스X보다 높게 잡혔습니다. AI·우주 상장 서사의 기준점입니다.</text>
-  <text x="970" y="312" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="end">IPO</text>
+  <text x="970" y="312" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="end">기업공개</text>
   <rect x="60" y="370" width="960" height="112" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <rect x="60" y="370" width="8" height="112" rx="4" fill="#c084fc"/>
   <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">스페이스X 시가총액 1조 8,260억 달러·1조 달러 이상 51일째입니다</text>
@@ -28,16 +28,16 @@
   <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <rect x="60" y="494" width="8" height="112" rx="4" fill="#c084fc"/>
   <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">루이지애나 스타베이스는 발사대 12개 이상·하루 30척 이상을 목표합니다</text>
-  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">스타십 4대는 연간 200만 톤 이상 궤도 투입을 겨냥합니다. 발사 cadence가 위성·화물 비용의 상류입니다.</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">스타십 4대는 연간 200만 톤 이상 궤도 투입을 겨냥합니다. 발사 빈도가 위성·화물 비용의 상류입니다.</text>
   <text x="970" y="560" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
   <rect x="60" y="618" width="960" height="112" rx="14" fill="#050c19" stroke="#1877f2" stroke-width="2"/>
   <rect x="60" y="618" width="8" height="112" rx="4" fill="#1877f2"/>
-  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#1877f2">메타는 2030년까지 5GW 잉여 컴퓨트를 재판매한다는 시나리오가 나왔습니다</text>
-  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">GW당 캡엑스 380억·매출 200억, 마진 73%, ROI 38%로 잡힙니다. AI 인프라가 자산이 될 수 있다는 프레임입니다.</text>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#1877f2">메타는 2030년까지 5기가와트 잉여 연산을 재판매한다는 시나리오가 나왔습니다</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">1기가와트당 설비투자 380억·매출 200억, 마진 73%, 투자수익률 38%로 잡힙니다. AI 인프라가 자산이 될 수 있다는 프레임입니다.</text>
   <text x="970" y="684" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#1877f2" text-anchor="end">META</text>
   <rect x="60" y="742" width="960" height="112" rx="14" fill="#0f1419" stroke="#94a3b8" stroke-width="2"/>
   <rect x="60" y="742" width="8" height="112" rx="4" fill="#94a3b8"/>
-  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">미국 은행 미실현 손실 5,117억 달러로 BREAKING 수준입니다</text>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">미국 은행 미실현 손실 5,117억 달러로 직전 2분기 연속 증가했습니다</text>
   <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">직전 2분기 연속 증가했습니다. 금리·채권 평가와 AI·매크로 리스크가 같은 화면에 겹칩니다.</text>
   <text x="970" y="808" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="end">$512B</text>
   <rect x="60" y="866" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
@@ -45,7 +45,7 @@
   <text x="116" y="908" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">테슬라 로보택시는 6개 도시에서 하루 16시간 운행합니다</text>
   <text x="116" y="946" font-family="Arial" font-size="18" fill="#9ca3af">오스틴·달러스·휴스턴·마이애미·올랜도·탬파, 오전 6시~오후 10시입니다. 무인 함대도 늘었다는 설명입니다.</text>
   <text x="970" y="932" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 테라팹 1,190억 · DC 부채 7,000억+ · 그록 2.0 · TPU v8 · 사이버트럭 +5,000 · Nscale 450억</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 테라팹 1,190억 · 데이터센터 부채 7,000억+ · 그록 빠른 사고 2.0 · 구글 AI 전용칩 8세대 · 사이버트럭 +5,000 · 엔스케일 450억</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

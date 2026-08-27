@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { EconomicEvent, EarningsEvent } from "@/app/api/economic-calendar/route";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+import type { MarketId } from "@/lib/markets/types";
+import { marketHref } from "@/lib/markets/marketPath";
 
 type TapeItem = {
   key: string;
@@ -95,9 +97,10 @@ function EcoItem({ item }: { item: TapeItem }) {
   );
 }
 
-export function EcoTickerTape() {
+export function EcoTickerTape({ market = "us" }: { market?: MarketId }) {
   const locale = useLocaleCode();
   const [items, setItems] = useState<TapeItem[]>([]);
+  const searchHref = marketHref(market, "search");
 
   useEffect(() => {
     let cancelled = false;
@@ -106,7 +109,7 @@ export function EcoTickerTape() {
 
     (async () => {
       try {
-        const res = await fetch(`/api/economic-calendar?from=${from}&to=${to}`);
+        const res = await fetch(`/api/economic-calendar?from=${from}&to=${to}&market=${market}`);
         if (!res.ok) return;
         const data = (await res.json()) as {
           economicEvents?: EconomicEvent[];
@@ -155,7 +158,7 @@ export function EcoTickerTape() {
     return () => {
       cancelled = true;
     };
-  }, [locale]);
+  }, [locale, market]);
 
   if (items.length === 0) return null;
 
@@ -164,7 +167,7 @@ export function EcoTickerTape() {
 
   return (
     <Link
-      href="/search"
+      href={searchHref}
       className="block overflow-hidden py-1.5 border-b no-underline"
       style={{ background: "var(--bg)", borderColor: "var(--border)" }}
       aria-label={locale === "ko" ? "경제 캘린더" : "Economic calendar"}

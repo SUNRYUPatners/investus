@@ -36,11 +36,13 @@ export function BottomNav() {
       style={{
         background: "var(--card)",
         borderColor: "var(--border)",
+        /* iOS 홈 인디케이터와 탭이 겹치지 않도록 하단 inset + 여유 */
+        paddingBottom: "max(env(safe-area-inset-bottom, 0px), 12px)",
         transform: "translate3d(0,0,0)",
         WebkitTransform: "translate3d(0,0,0)",
       }}
     >
-      <div className="max-w-[480px] mx-auto flex items-center h-[52px]">
+      <div className="max-w-[480px] mx-auto flex items-center h-[56px]">
         {navItems.map(({ href, emoji, label, tab: tabKey }) => {
           const isActive = pending
             ? href === pending

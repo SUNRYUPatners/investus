@@ -1,5 +1,6 @@
 import type { NewsItem } from "@/lib/api";
 import { getMarketConfig } from "./config";
+import { newsFallbackImage } from "./newsThumbnails";
 import type { MarketId } from "./types";
 
 function detectCategory(headline: string): { category: string; categoryColor: NewsItem["categoryColor"] } {
@@ -23,8 +24,8 @@ function stripHtml(s: string): string {
   return s.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').trim();
 }
 
-function parseRssItems(xml: string): { title: string; link: string; pubDate: string; source: string }[] {
-  const items: { title: string; link: string; pubDate: string; source: string }[] = [];
+function parseRssItems(xml: string): { title: string; link: string; pubDate: string; source: string; image?: string }[] {
+  const items: { title: string; link: string; pubDate: string; source: string; image?: string }[] = [];
   const blocks = xml.split(/<item[\s>]/i).slice(1);
   for (const block of blocks.slice(0, 16)) {
     const title = stripHtml((block.match(/<title[^>]*><!\[CDATA\[(.*?)\]\]><\/title>/i)?.[1]
@@ -33,27 +34,31 @@ function parseRssItems(xml: string): { title: string; link: string; pubDate: str
     const link = (block.match(/<link[^>]*>(.*?)<\/link>/i)?.[1] ?? "").trim();
     const pubDate = (block.match(/<pubDate[^>]*>(.*?)<\/pubDate>/i)?.[1] ?? "").trim();
     const source = stripHtml((block.match(/<source[^>]*>(.*?)<\/source>/i)?.[1] ?? "News").trim()) || "News";
-    if (title) items.push({ title, link, pubDate, source });
+    const image =
+      block.match(/<media:content[^>]+url=["']([^"']+)["']/i)?.[1]
+      ?? block.match(/<media:thumbnail[^>]+url=["']([^"']+)["']/i)?.[1]
+      ?? block.match(/<enclosure[^>]+url=["']([^"']+)["']/i)?.[1];
+    if (title) items.push({ title, link, pubDate, source, image: image || undefined });
   }
   return items;
 }
 
 const MOCK_BY_MARKET: Record<Exclude<MarketId, "us">, NewsItem[]> = {
   kr: [
-    { id: 1, title: "코스피, 반도체·자동차 중심 혼조 — 시총 상위주 장중 흐름", summary: "", source: "Investus", time: "1시간 전", category: "한국증시", categoryColor: "blue" },
-    { id: 2, title: "삼성전자·SK하이닉스, AI 메모리 수요 기대 속 수급 공방", summary: "", source: "Investus", time: "2시간 전", category: "한국증시", categoryColor: "blue" },
-    { id: 3, title: "현대차, 해외 판매·전기차 믹스 주시 — 자동차 섹터 동반", summary: "", source: "Investus", time: "3시간 전", category: "한국증시", categoryColor: "yellow" },
+    { id: 1, title: "코스피, 반도체·자동차 중심 혼조 — 시총 상위주 장중 흐름", summary: "", source: "Investus", time: "1시간 전", category: "한국증시", categoryColor: "blue", image: newsFallbackImage("kr", "한국증시") },
+    { id: 2, title: "삼성전자·SK하이닉스, AI 메모리 수요 기대 속 수급 공방", summary: "", source: "Investus", time: "2시간 전", category: "한국증시", categoryColor: "blue", image: newsFallbackImage("kr", "한국증시") },
+    { id: 3, title: "현대차, 해외 판매·전기차 믹스 주시 — 자동차 섹터 동반", summary: "", source: "Investus", time: "3시간 전", category: "한국증시", categoryColor: "yellow", image: newsFallbackImage("kr", "한국증시") },
   ],
   safe: [
-    { id: 1, title: "비트코인, ETF 수급·매크로 변수에 민감 — 단기 변동성 주시", summary: "", source: "Investus", time: "1시간 전", category: "암호화폐", categoryColor: "purple" },
-    { id: 2, title: "금값, 실질금리·달러 동향에 반응 — 안전자산 수요 점검", summary: "", source: "Investus", time: "2시간 전", category: "현물", categoryColor: "yellow" },
-    { id: 3, title: "이더리움·솔라나, 리스크온 구간에서 비트와 동행 여부 주목", summary: "", source: "Investus", time: "3시간 전", category: "암호화폐", categoryColor: "purple" },
-    { id: 4, title: "은·구리 등 현물, 산업수요와 금리 기대가 겹치는 구간", summary: "", source: "Investus", time: "4시간 전", category: "현물", categoryColor: "yellow" },
+    { id: 1, title: "비트코인, ETF 수급·매크로 변수에 민감 — 단기 변동성 주시", summary: "", source: "Investus", time: "1시간 전", category: "암호화폐", categoryColor: "purple", image: newsFallbackImage("safe", "암호화폐") },
+    { id: 2, title: "금값, 실질금리·달러 동향에 반응 — 안전자산 수요 점검", summary: "", source: "Investus", time: "2시간 전", category: "현물", categoryColor: "yellow", image: newsFallbackImage("safe", "현물") },
+    { id: 3, title: "이더리움·솔라나, 리스크온 구간에서 비트와 동행 여부 주목", summary: "", source: "Investus", time: "3시간 전", category: "암호화폐", categoryColor: "purple", image: newsFallbackImage("safe", "암호화폐") },
+    { id: 4, title: "은·구리 등 현물, 산업수요와 금리 기대가 겹치는 구간", summary: "", source: "Investus", time: "4시간 전", category: "현물", categoryColor: "yellow", image: newsFallbackImage("safe", "현물") },
   ],
   "kr-re": [
-    { id: 1, title: "정부 주택공급·재건축 논의 — 서울 매매심리에 영향", summary: "", source: "Investus", time: "1시간 전", category: "정책", categoryColor: "mint" },
-    { id: 2, title: "전세가 상승세 지속 — 수도권 전세 수급 타이트", summary: "", source: "Investus", time: "2시간 전", category: "부동산", categoryColor: "orange" },
-    { id: 3, title: "DSR·전세대출 한도 이슈, 실수요 거래 관망", summary: "", source: "Investus", time: "3시간 전", category: "정책", categoryColor: "mint" },
+    { id: 1, title: "정부 주택공급·재건축 논의 — 서울 매매심리에 영향", summary: "", source: "Investus", time: "1시간 전", category: "정책", categoryColor: "mint", image: newsFallbackImage("kr-re", "정책") },
+    { id: 2, title: "전세가 상승세 지속 — 수도권 전세 수급 타이트", summary: "", source: "Investus", time: "2시간 전", category: "부동산", categoryColor: "orange", image: newsFallbackImage("kr-re", "부동산") },
+    { id: 3, title: "DSR·전세대출 한도 이슈, 실수요 거래 관망", summary: "", source: "Investus", time: "3시간 전", category: "정책", categoryColor: "mint", image: newsFallbackImage("kr-re", "정책") },
   ],
 };
 
@@ -93,6 +98,7 @@ export async function getNewsForMarket(market: MarketId): Promise<NewsItem[]> {
     return raw.map((r, i) => {
       const { category, categoryColor } = detectCategory(r.title);
       const pub = r.pubDate ? new Date(r.pubDate) : new Date();
+      // 외부 RSS 썸네일은 깨지는 경우가 많아 시장별 대체 이미지를 우선 사용
       return {
         id: i + 1,
         title: titles[i] ?? r.title,
@@ -102,6 +108,7 @@ export async function getNewsForMarket(market: MarketId): Promise<NewsItem[]> {
         category,
         categoryColor,
         url: r.link || undefined,
+        image: newsFallbackImage(market, category),
       };
     });
   } catch {

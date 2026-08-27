@@ -41,9 +41,9 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "인베스트어스 | AI 기반 차세대 자산관리(WM) 핀테크 — 글로벌 자산 · 투자 리포트",
+  title: "인베스트어스 | AI 기반 차세대 자산관리(WM) 플랫폼 — 글로벌 자산 · 투자 리포트",
   description:
-    "인베스트어스(Investus) — 한국주식·미국주식·비트코인·금·한국 부동산까지 AI가 연결하는 차세대 WM 핀테크. 실시간 시세, 일일 투자 리포트, AI 포트폴리오 인사이트를 무료로 제공합니다.",
+    "한국주식을 넘어 미국 주식, 비트코인·금, 한국 부동산까지 — 파편화된 투자 데이터를 AI가 하나로 연결합니다. 실시간 시세, 일일 투자 리포트, AI 포트폴리오 인사이트를 무료로 제공합니다.",
   metadataBase: new URL("https://www.investus.kr"),
   keywords: [
     "인베스트어스", "investus", "investus.kr", "인베스트어스케이알",
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     "공포탐욕지수", "버핏지수", "섹터분석", "미국주식투자정보",
   ],
   openGraph: {
-    title: "인베스트어스(Investus) — AI 기반 차세대 자산관리(WM) 핀테크",
+    title: "인베스트어스(Investus) — AI 기반 차세대 자산관리(WM) 플랫폼",
     description:
-      "한국주식·미국주식·비트코인·금·한국 부동산 — AI가 연결하는 글로벌 자산 인사이트. 실시간 시세와 일일 리포트.",
+      "한국주식을 넘어 미국 주식, 비트코인·금, 한국 부동산까지 — AI가 연결하는 글로벌 자산 인사이트. 실시간 시세와 일일 리포트.",
     url: "https://www.investus.kr",
     siteName: "인베스트어스 — Investus",
     locale: "ko_KR",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "인베스트어스(Investus) — AI 기반 WM 핀테크",
+    title: "인베스트어스(Investus) — AI 기반 차세대 자산관리(WM) 플랫폼",
     description: "글로벌 자산(주식·암호화폐·금·부동산)을 AI가 하나로 연결하는 투자 플랫폼.",
   },
   alternates: {
@@ -108,7 +108,7 @@ const jsonLd = {
       "url": "https://www.investus.kr",
       "name": "Investus — 인베스트어스",
       "alternateName": ["인베스트어스", "investus.kr", "인베스트어스케이알", "Investus Korea"],
-      "description": "AI 기반 차세대 자산관리(WM) 핀테크 — 글로벌 자산 시세·리포트·AI 인사이트",
+      "description": "AI 기반 차세대 자산관리(WM) 플랫폼 — 글로벌 자산 시세·리포트·AI 인사이트",
       "inLanguage": "ko-KR",
       "publisher": { "@id": "https://www.investus.kr/#organization" },
       "potentialAction": {
@@ -132,7 +132,7 @@ const jsonLd = {
         "width": 512,
         "height": 512,
       },
-      "description": "AI 기반 차세대 자산관리(WM) 핀테크 — 실시간 시세, 시장 분석 리포트, 투자 기초 교육",
+      "description": "AI 기반 차세대 자산관리(WM) 플랫폼 — 실시간 시세, 시장 분석 리포트, 투자 기초 교육",
       "foundingDate": "2024",
       "address": {
         "@type": "PostalAddress",
@@ -149,7 +149,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": "https://www.investus.kr/#webpage",
       "url": "https://www.investus.kr",
-      "name": "Investus — 인베스트어스 | AI 기반 WM 핀테크",
+      "name": "Investus — 인베스트어스 | AI 기반 차세대 자산관리(WM) 플랫폼",
       "isPartOf": { "@id": "https://www.investus.kr/#website" },
       "about": { "@id": "https://www.investus.kr/#organization" },
       "description": "한국주식·미국주식·비트코인·금·한국 부동산 — AI가 연결하는 글로벌 자산 인사이트",
