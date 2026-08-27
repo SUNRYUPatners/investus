@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#60a5fa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="170" height="38" rx="19" fill="#60a5fa30" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="125" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#60a5fa" text-anchor="middle">삼성전자</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.28</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Samsung Electronics rose 1.32% to 269,500 won</text>
+  <text x="540" y="142" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">US Nvidia rally spilled into Korean chips</text>
+  <line x1="80" y1="158" x2="1000" y2="158" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="244" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#60a5fa" text-anchor="middle">🧠</text>
+  <text x="540" y="304" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">269,500 KRW</text>
+  <text x="540" y="344" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Nvidia jumped 8.74% in the US regular session.</text>
+  <text x="540" y="370" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">AI server memory demand expectations strengthened again.</text>
+  <line x1="80" y1="392" x2="1000" y2="392" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="404" width="300" height="216" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="36" text-anchor="middle">💹</text>
+  <text x="210" y="496" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">+1.32%</text>
+  <text x="210" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Daily gain</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Slightly ahead of</text>
+  <text x="210" y="590" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">KOSPI +1.05%</text>
+  <rect x="390" y="404" width="300" height="216" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="36" text-anchor="middle">🏭</text>
+  <text x="540" y="496" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">Server memory</text>
+  <text x="540" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Demand axis</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">AI data centers</text>
+  <text x="540" y="590" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">drive the cycle</text>
+  <rect x="720" y="404" width="300" height="216" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="36" text-anchor="middle">🌍</text>
+  <text x="870" y="496" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">Foreign flows</text>
+  <text x="870" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Signal</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Key at 7,000</text>
+  <text x="870" y="590" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">retest zone</text>
+  <rect x="60" y="632" width="960" height="196" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="682" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">"269,500 won reflects renewed US AI demand expectations.</text>
+  <text x="540" y="710" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">Unlike the after-hours dip post-earnings,</text>
+  <text x="540" y="738" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">the next-day US rally carried over here.</text>
+  <text x="540" y="766" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">Verify with export and contract data."</text>
+  <rect x="60" y="846" width="960" height="120" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="876" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">Why it matters</text>
+  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Largest stock by market cap moves the index.</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Expectations can reverse quickly—watch monthly chip exports.</text>
+  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Next checkpoint: server memory contract prices.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">Samsung · 269,500 KRW +1.32% · 2026.08.28</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -2,6 +2,41 @@ import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
   {
+    id: -1931, alias: "여의도 너구리 #11", symbol: "코스피",
+    content: "오늘 코스피는 6,984.95로 1.05% 올랐고, 장중 7,000을 터치했지만 마감까지는 버티지 못했습니다. 전날 밤 미국에서 엔비디아가 8.74% 급등한 게 반도체를 끌어올렸고, 국내에서는 전력기기가 같은 날 같이 받쳐 줬습니다. 다만 오늘 밤 잭슨홀 워시 연설이 남아 있어, 내일 외국인 수급과 환율을 먼저 보시는 편이 안전합니다.",
+    likes: 28, comments: 2, created_at: "2026-08-28T06:00:00.000Z", liked: false,
+  },
+  {
+    id: -1932, alias: "판교 치타 #22", symbol: "삼성전자",
+    content: "269,500원, +1.32%입니다. 실적 발표 직후 시간외 -2%와 정규장 +8.74% 급등이 같은 주에 공존할 수 있다는 점이 오늘 장의 핵심입니다. 우리 실적이 아니라 미국 AI 수요 기대가 다시 붙은 날이므로, 월간 반도체 수출과 서버용 메모리 계약 가격으로 확인하시기 바랍니다.",
+    likes: 23, comments: 2, created_at: "2026-08-28T06:08:00.000Z", liked: false,
+  },
+  {
+    id: -1933, alias: "삼성동 여우 #08", symbol: "SK하이닉스",
+    content: "1,755,000원, +1.45%. HBM 비중이 큰 쪽이 AI 수요 재확인 구간에서 상대적으로 앞서는 경우가 많습니다. 매출 증가율과 영업이익률을 나눠 보시기 바랍니다.",
+    likes: 21, comments: 1, created_at: "2026-08-28T06:16:00.000Z", liked: false,
+  },
+  {
+    id: -1934, alias: "성수 수달 #35", symbol: "전력기기",
+    content: "미국 전력망 보호 행정명령 이후 HD현대일렉트릭 등 미국 현지 생산 거점 업체가 부각됐습니다. 행정명령은 심리를 먼저 움직이므로 분기 수주 잔고로 테마인지 추세인지 구분하셔야 합니다.",
+    likes: 27, comments: 2, created_at: "2026-08-28T06:24:00.000Z", liked: false,
+  },
+  {
+    id: -1935, alias: "한남 두루미 #17", symbol: "삼성SDI",
+    content: "555,000원, -2.46%. 어제 +10%대 급등 뒤 되돌림은 흔한 패턴입니다. 수주 공시와 전기차 판매 통계를 함께 보시기 바랍니다.",
+    likes: 19, comments: 1, created_at: "2026-08-28T06:32:00.000Z", liked: false,
+  },
+  {
+    id: -1936, alias: "잠실 백로 #29", symbol: "현대차",
+    content: "현대차 402,000원(+1.01%), 기아 127,500원(+1.11%). 오늘 장의 주인공은 아니었지만 지수 상승일에 같이 올랐습니다. 미국 월간 판매와 재고 일수가 본체입니다.",
+    likes: 16, comments: 1, created_at: "2026-08-28T06:40:00.000Z", liked: false,
+  },
+  {
+    id: -1937, alias: "광화문 물총새 #06", symbol: "금리",
+    content: "오늘 밤 잭슨홀에서 워시 연준 의장의 첫 기조연설이 있습니다. 연설 전후 환율·국고채 3년물·외국인 순매수를 한 표에 적어 두시기 바랍니다.",
+    likes: 22, comments: 2, created_at: "2026-08-28T06:48:00.000Z", liked: false,
+  },
+  {
     id: -1901, alias: "여의도 너구리 #11", symbol: "코스피",
     content: "오늘은 순서를 뒤집어서 보시면 이해가 빠릅니다. 한국은행이 기준금리를 두 번 연속 올렸는데도 코스피는 약 1.53% 올라 6,900선에 안착했고, 장중에는 7,000선 회복을 시도했습니다. 금리 인상이 주식에 부담이라는 원칙이 틀린 것이 아니라, 이번 인상이 이미 예상돼 있었고 같은 시각 미국 인공지능 반도체 실적이 예상을 넘겼다는 소식이 겹쳤기 때문입니다. 시장은 금리보다 실적을 먼저 봤습니다. 다만 금리는 사라진 것이 아니라 뒤에 남아 있고, 그 부담은 몇 달에 걸쳐 소비와 기업 이익에 나타납니다. 지금은 7,000선 도달보다 그 위에서 며칠을 버티는지를 보실 때입니다.",
     likes: 26, comments: 2, created_at: "2026-08-27T06:00:00.000Z", liked: false,
@@ -39,6 +74,20 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
+  [-1931]: [
+    { alias: "채권데스크", content: "7000 윗꼬리면 단기 변동성 키울 수 있습니다.", created_at: "2026-08-28T06:30:00.000Z" },
+    { alias: "지수관찰", content: "잭슨홀 전 추격 매수는 리스크 큽니다.", created_at: "2026-08-28T06:52:00.000Z" },
+  ],
+  [-1932]: [
+    { alias: "수급파트", content: "NVDA 급등 후 외국인 반도체 매수가 이어지는지 보세요.", created_at: "2026-08-28T06:35:00.000Z" },
+  ],
+  [-1934]: [
+    { alias: "설비쪽", content: "미국 공장 있는 업체 위주로 수주 확인하겠습니다.", created_at: "2026-08-28T06:50:00.000Z" },
+  ],
+  [-1937]: [
+    { alias: "환율데스크", content: "연설 직후 원달러부터 움직입니다.", created_at: "2026-08-28T07:00:00.000Z" },
+    { alias: "채권데스크", content: "30년물 5.31%가 먼저 반응했습니다.", created_at: "2026-08-28T07:15:00.000Z" },
+  ],
   [-1901]: [
     { alias: "채권데스크", content: "국고채 3년물 금리가 어디서 멈추는지가 결국 답을 줄 것 같습니다.", created_at: "2026-08-27T06:30:00.000Z" },
     { alias: "지수관찰", content: "6,900 안착과 7,000 안착은 난이도가 다릅니다. 사흘은 봐야겠습니다.", created_at: "2026-08-27T06:52:00.000Z" },
@@ -70,6 +119,22 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
   {
+    id: -1941, alias: "온체인 매 #03", symbol: "비트코인",
+    content: "비트코인은 잭슨홀 연설을 앞두고 약 78,800달러에서 관망했습니다.\n30년물 5.31%와 워시 연준 의장 메시지가 단기 변동성의 촉매가 될 수 있으므로, ETF 플로우와 달러 지수를 함께 추적하시기 바랍니다.",
+    likes: 24, comments: 2, created_at: "2026-08-28T09:00:00.000Z", liked: false,
+  },
+  {
+    id: -1942, alias: "금벌레 #17", symbol: "금",
+    content: "금은 30년물 5.31% 상승과 잭슨홀을 앞두고 방향을 가리지 못했습니다.\n장기금리는 부담이지만 지정학·헤지 수요는 상방을 받칩니다. 실질금리와 DXY를 확인하시면 됩니다.",
+    likes: 20, comments: 1, created_at: "2026-08-28T09:08:00.000Z", liked: false,
+  },
+  {
+    id: -1943, alias: "매크로올빼미 #31", symbol: "매크로",
+    content: "오늘 안전자산의 공통 변수는 잭슨홀과 30년물 5.31%입니다.\n비트코인·금·채권이 같은 이벤트에 다르게 반응할 수 있으므로, 연설 전후 변동성에 대비하시기 바랍니다.",
+    likes: 18, comments: 1, created_at: "2026-08-28T09:16:00.000Z", liked: false,
+  },
+
+  {
     id: -1911, alias: "온체인 매 #03", symbol: "비트코인",
     content: "비트코인은 ETF 플로우와 달러 지수를 같이 보세요.\n위험선호 날과 헤지 날이 섞입니다.",
     likes: 16, comments: 1, created_at: "2026-08-26T00:00:00.000Z", liked: false,
@@ -87,10 +152,29 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
+  [-1941]: [{ alias: "헷지", content: "잭슨홀 전 레버리지 줄이는 게 맞을까요?", created_at: "2026-08-28T09:40:00.000Z" }],
+  [-1942]: [{ alias: "실질금리", content: "5.31%면 금 압박 맞나요?", created_at: "2026-08-28T09:48:00.000Z" }],
+
   [-1911]: [{ alias: "헷지", content: "금이랑 같이 오르면 매크로 헤지 수요입니다.", created_at: "2026-08-26T00:40:00.000Z" }],
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  {
+    id: -1951, alias: "정책워처 #01", symbol: "정책",
+    content: "기준금리 3%와 공급 정책은 부동산에 서로 다른 신호를 줍니다.\n공급 발표는 심리를 먼저 움직이고 실행은 늦게 따라오므로, 세부 시행령과 입주 일정을 확인하시기 바랍니다.",
+    likes: 22, comments: 1, created_at: "2026-08-28T10:00:00.000Z", liked: false,
+  },
+  {
+    id: -1952, alias: "전세러 #09", symbol: "전세",
+    content: "금리 3%는 전세대출 부담을 키웁니다.\n전세 매물이 줄면 보증금 상승→매수 전환 심리가 살아날 수 있지만, DSR·대출 한도가 실행을 가릴 수 있습니다.",
+    likes: 19, comments: 2, created_at: "2026-08-28T10:08:00.000Z", liked: false,
+  },
+  {
+    id: -1953, alias: "실수요 #05", symbol: "서울매매",
+    content: "코스피 7,000 재시도와 부동산은 별개 축입니다.\n주식 강세가 곧바로 매매 심리로 이어지지 않을 수 있으므로, 전세·대출·입주 물량을 따로 보시기 바랍니다.",
+    likes: 17, comments: 1, created_at: "2026-08-28T10:16:00.000Z", liked: false,
+  },
+
   {
     id: -1921, alias: "정책워처 #01", symbol: "정책",
     content: "공급 발표는 심리를 먼저 움직입니다.\n인허가·착공 시차를 꼭 보세요.",
@@ -109,5 +193,8 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
+  [-1951]: [{ alias: "실수요", content: "시행령 나오면 거래 살아날까요?", created_at: "2026-08-28T10:50:00.000Z" }],
+  [-1952]: [{ alias: "월세", content: "전세→월세 전환도 늘 수 있겠네요.", created_at: "2026-08-28T10:58:00.000Z" }],
+
   [-1921]: [{ alias: "실수요", content: "세부 시행령이 나와야 거래가 살아납니다.", created_at: "2026-08-26T01:50:00.000Z" }],
 };

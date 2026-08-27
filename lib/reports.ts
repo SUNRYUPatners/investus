@@ -39,6 +39,823 @@ export const CATEGORY_EMOJI: Record<ReportCategory, string> = {
 };
 
 export const SEED_REPORTS: Report[] = [
+  // ── 2026-08-28 신규 ──────────────────────────────────────────────────────
+  { id: "seed-1301", title: '2026년 8월 28일 한장 요약입니다. 엔비디아 8.74% 급등·잭슨홀 워시 연설·전력망 행정명령·30년물 5.31%·비트코인·코스피 7,000 재시도를 모았습니다', summary: '엔비디아가 정규장에서 8.74% 급등하며 나스닥 +1.57%, S&P500 +0.72%로 마감했습니다. 3분기 매출 전망 1,080억 달러가 핵심입니다. 오늘 잭슨홀 워시 연준 의장 연설, 미국 전력망 보호 행정명령, 30년물 5.31%, 비트코인 약 78,800달러, 코스피 6,984.95(+1.05%) 7,000 재시도도 같이 보시기 바랍니다.',
+    body: "",
+    titleEn: 'Daily snapshot August 28, 2026: NVDA +8.74%, Jackson Hole Warsh, grid EO, 30Y 5.31%, BTC, KOSPI 7K retest',
+    summaryEn: 'Nvidia +8.74%, Nasdaq +1.57%, S&P +0.72%, Q3 guide $108B. Jackson Hole Warsh speech, US grid EO, 30Y 5.31%, BTC ~$78.8K, KOSPI 6,984.95.',
+    category: '특집', categoryColor: 'mint', subject: '한장요약',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/summary-20260828.svg"],
+    imagesEn: ["/charts/summary-20260828-en.svg"],
+    isPinned: true, imageOnly: true,
+  },
+  { id: "seed-1302", title: '엔비디아 2분기 매출 961억 달러·주당순이익 2.22달러로 예상을 상회했지만 시간외 -2%로 반응했습니다', summary: '엔비디아 2분기 매출은 961억 달러(컨센서스 922억), 주당순이익 2.22달러(2.10달러)로 예상을 넘겼습니다. 데이터센터 890억 달러(854억), 총마진 75%입니다. 실적은 beat였지만 시간외 약 -2%로 반응했습니다.',
+    body: `■ 상세
+
+엔비디아는 2026 회계 2분기 매출 961억 달러, 주당순이익(adj.) 2.22달러를 기록했습니다. 시장 컨센서스는 매출 922억 달러, EPS 2.10달러였습니다. 데이터센터 매출 890억 달러(컨센서스 854억), 총마진(gross margin) 75%입니다.
+
+실적은 전 구간에서 예상을 상회(beat)했습니다. 다만 발표 직후 시간외 거래에서 주가는 약 -2% 하락했습니다. beat인데도 하락한 것은 가이던스·공급·밸류에이션·매수세 소진 등 여러 해석이 가능합니다.
+
+데이터센터 890억 달러는 AI GPU 수요가 여전히 중심축임을 보여 줍니다. 총마진 75%는 고부가 제품 믹스가 유지되고 있음을 시사합니다. 다음 분기 가이던스와 블랙웰·베라 루빈 출하 코멘트가 주가 방향을 좌우할 수 있습니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 매출·EPS·데이터센터가 모두 beat면 AI CAPEX 사이클이 아직 강하다는 신호입니다.
+
+2. 총마진 75%는 가격·믹스 방어가 되고 있음을 뜻합니다.
+
+3. beat인데 시간외 -2%는 기대치가 더 높았거나 가이던스가 약했을 수 있습니다.
+
+4. 데이터센터 890억은 클라우드·AI 팩토리 수요의 척도입니다.
+
+5. 실적 후 변동성은 옵션·레버리지 ETF 포지션과도 연결됩니다.
+
+■ 시나리오
+
+**A: 가이던스 상향·추가 beat로 시간외 하락을 만회합니다.**
+**B: 가이던스 보수→조정 지속.**
+**C: macro shock와 함께 semi 섹터 동반 조정.**
+
+■ 오늘까지 흐름
+
+- 블랙웰 출하·수율
+- 2분기 beat·시간외 -2%
+- 데이터센터 가이던스
+
+■ 반대 관점
+
+(1) beat=추가 상승 아님
+(2) 공급 제약
+(3) 중국·수출
+(4) 경쟁 TPU·ASIC
+(5) 밸류에이션
+
+■ 앞으로 볼 것
+
+(1) 3분기 가이던스
+(2) 데이터센터 믹스
+(3) 총마진 추이
+(4) CFO 코멘트
+(5) AH→정규장
+
+■ 투자시사점
+
+beat와 주가 반응은 다를 수 있습니다. 데이터센터 890억·마진 75%는 본체이고, 시간외 -2%는 다음 가이던스를 확인하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Nvidia Q2 revenue $96.1B beats, EPS $2.22, but shares fell ~2% after hours',
+    summaryEn: 'Q2 revenue $96.1B vs $92.2B est., EPS $2.22 vs $2.10, data center $89B vs $85.4B, GM 75%. Beat but AH ~-2%.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '어닝', categoryColor: 'blue', subject: '엔비디아',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/nvda-q2-earnings-20260828.svg"],
+    imagesEn: ["/charts/nvda-q2-earnings-20260828-en.svg"],
+  },
+  { id: "seed-1303", title: '2026년 최대 IPO 확률에서 앤트로픽 63%·스페이스X 37%로 나왔습니다', summary: '예측시장 기준 2026년 최대 규모 IPO는 앤트로픽 63%, 스페이스X 37%로 잡혔습니다. AI·우주 상장 서사의 상대 확률을 보여 줍니다.',
+    body: `■ 상세
+
+예측시장(prediction market)은 특정 사건의 발생 확률을 가격으로 거래하는 플랫폼입니다. 이번 화면은 2026년 한 해 중 가장 큰 규모의 IPO가 어느 회사일지에 대한 확률입니다.
+
+앤트로픽(Anthropic) 63%, 스페이스X(SpaceX) 37%로 표시됩니다. 두 회사 모두 비상장(unlisted)이며, 상장 시 시장 전체 밸류에이션·유동성·섹터 재평가에 영향을 줄 수 있습니다.
+
+확률은 사실이 아니라 시장 참여자의 집단 기대입니다. IPO 일정·규모·macro window·SEC 심사가 바뀌면 확률도 빠르게 움직입니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 63% vs 37%는 AI 소프트웨어 vs 우주 인프라 상장 경쟁 프레임입니다.
+
+2. 최대 IPO는 조달 규모·밸류·시장 appetite에 달립니다.
+
+3. 앤트로픽 상장은 Mag7 AI spend와 연결됩니다.
+
+4. 스페이스X는 스타링크·스타십 내러티브와 연결됩니다.
+
+5. 예측시장 확률≠확정 일정.
+
+■ 시나리오
+
+**A: 앤트로픽 S-1→확률 추가 상승.**
+**B: 스페이스X delay→비율 역전.**
+**C: macro 창 닫힘→둘 다 지연.**
+
+■ 오늘까지 흐름
+
+- Anthropic IPO rumor
+- SpaceX private marks
+- 2026 largest IPO odds
+
+■ 반대 관점
+
+(1) 예측시장 유동성
+(2) 확률 급변
+(3) 둘 다 delay
+(4) third rival
+(5) regulation
+
+■ 앞으로 볼 것
+
+(1) S-1 filing
+(2) odds weekly
+(3) raise size
+(4) first-day trade
+(5) peer re-rating
+
+■ 투자시사점
+
+확률은 thermometer입니다. S-1·일정·조달 규모로 검증하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Anthropic 63% vs SpaceX 37% for 2026 largest IPO on prediction markets',
+    summaryEn: 'Prediction markets put Anthropic at 63% and SpaceX at 37% for the biggest 2026 IPO.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '매크로', categoryColor: 'purple', subject: 'AI',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/anthropic-ipo-odds-polymarket-20260828.svg"],
+    imagesEn: ["/charts/anthropic-ipo-odds-polymarket-20260828-en.svg"],
+  },
+  { id: "seed-1304", title: '스페이스X 시가총액 1조 8,260억 달러·1조 달러 이상 51일째입니다', summary: '시가총액 1조 8,260억 달러, 1조 달러 이상 51일, 발행가 135달러(+2%), 최초 표기 150달러(-8%), 사상 최고 226달러, 거래대금 약 70억 달러입니다.',
+    body: `■ 상세
+
+스페이스X 비상장 지분 거래에서 시가총액이 1조 8,260억 달러(약 $1,826B)로 잡혔습니다. 1조 달러($1T) 이상 구간을 51일째 유지 중입니다.
+
+발행가(issuance) 135달러(+2%), 최초 표기(first notation) 150달러(-8%), 사상 최고(ATH) 226달러, 거래대금(volume) 약 70억 달러가 함께 표시됩니다. private mark는 공개 시장 가격과 다를 수 있습니다.
+
+스타링크 ARR·스타십 cadence·정부 계약·상장 odds와 같은 축에서 읽힙니다. 51일 $1T+는 liquidity premium과 narrative momentum 신호입니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. $1,826B는 private 시장의 valuation anchor입니다.
+
+2. 51일 $1T+는 지속적 관심·거래량을 시사합니다.
+
+3. 발행가 vs 표기 vs ATH는 참여자별 가격대 차이입니다.
+
+4. 거래대금 $7B는 secondary 유동성 규모입니다.
+
+5. 상장 전까지 mark vs public price gap 존재.
+
+■ 시나리오
+
+**A: 상장 window→public re-rating.**
+**B: private mark 조정.**
+**C: macro로 secondary 거래 위축.**
+
+■ 오늘까지 흐름
+
+- Starlink·Starship narrative
+- $1,826B cap·51 days $1T+
+- IPO odds same week
+
+■ 반대 관점
+
+(1) private mark only
+(2) illiquid
+(3) insider-only
+(4) delay
+(5) competition
+
+■ 앞으로 볼 것
+
+(1) weekly marks
+(2) volume trend
+(3) issuance price
+(4) S-1 rumor
+(5) Starlink metrics
+
+■ 투자시사점
+
+private valuation은 옵션 가치입니다. 거래대금·발행가·51일 $1T+를 함께 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'SpaceX valuation $1,826B, 51 days above $1T, volume near $7B',
+    summaryEn: 'Market cap $1,826B, 51 days above $1T. Issuance $135 (+2%), first notation $150 (-8%), ATH $226, volume ~$7B.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '종목분석', categoryColor: 'purple', subject: '스페이스X',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/spcx-valuation-1826b-20260828.svg"],
+    imagesEn: ["/charts/spcx-valuation-1826b-20260828-en.svg"],
+  },
+  { id: "seed-1305", title: '루이지애나 스타베이스는 발사대 12개 이상·하루 30척 이상 스타십을 목표합니다', summary: '발사대(tower) 12개 이상, 하루 30척 이상 Starship, Starship 4대는 연간 200만 톤 이상 궤도 투입을 겨냥합니다. 발사 cadence의 구체 숫자입니다.',
+    body: `■ 상세
+
+루이지애나 스타베이스(Louisiana Starbase)는 텍사스와 별도로 건설되는 대형 발사·조립 거점입니다. 이번 스펙은 발사대 12개 이상, 하루 30척 이상 Starship 생산·발사 cadence입니다.
+
+Starship 4대(4-ship fleet)는 연간 200만 톤 이상을 궤도에 올리는 목표와 연결됩니다. 톤nage는 위성·화물·궤도 인프라 비용 곡선의 상류 지표입니다.
+
+숫자가 크므로 허가·환경·자금·실제 flight rate를 계획과 분리해 보셔야 합니다. cadence 목표는 방향이지 단기 EPS가 아닙니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 12+ tower는 동시 발사·turnaround infra를 뜻합니다.
+
+2. 30+/day는 현재 cadence 대비 극단 목표입니다.
+
+3. 200만 톤/년은 위성·화물 수요 가정을 내포합니다.
+
+4. Starship 4 fleet는 병렬 운용 설계입니다.
+
+5. 허가·지역 정치가 일정 리스크입니다.
+
+■ 시나리오
+
+**A: EPC·착공 공식화.**
+**B: cadence 목표 하향.**
+**C: 규제 지연.**
+
+■ 오늘까지 흐름
+
+- Louisiana Starbase plan
+- 12+ towers·30+/day
+- Starship flight rate
+
+■ 반대 관점
+
+(1) plan only
+(2) safety·yield
+(3) funding
+(4) env lawsuit
+(5) pad bottleneck
+
+■ 앞으로 볼 것
+
+(1) permit docs
+(2) construction start
+(3) flight rate
+(4) tonnage delivered
+(5) Starlink demand
+
+■ 투자시사점
+
+발사 cadence는 장기 콜 옵션입니다. 착공·허가·실제 비행률을 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Louisiana Starbase targets 12+ towers, 30+ Starship/day, 2M+ tons/year',
+    summaryEn: '12+ launch towers, 30+ Starship/day, Starship 4 for 2M+ tons/year to orbit.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '종목분석', categoryColor: 'purple', subject: '스페이스X',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/spcx-starbase-louisiana-cadence-20260828.svg"],
+    imagesEn: ["/charts/spcx-starbase-louisiana-cadence-20260828-en.svg"],
+  },
+  { id: "seed-1306", title: '텍사스 테라팹에 추가 약 480억 달러·총 1,190억 달러·서브2nm AI 칩이 잡혔습니다', summary: '추가 투자 약 480억 달러, 1단계 168억 확정, 총 1,190억 달러, 34쪽 세제협약·2026년 12월~2028년 12월 공사, 서브2nm AI 칩 생산이 핵심입니다.',
+    body: `■ 상세
+
+테라팹(Terafab)은 텍사스에 건설되는 대형 반도체·AI 칩 파브 프로젝트로 읽힙니다. 추가 투자 약 480억 달러(~$48B), 1단계(Phase 1) 168억 달러($16.8B) committed, 총 1,190억 달러($119B) 규모가 잡혔습니다.
+
+34페이지 세제협약(tax agreement), 공사 기간 2026년 12월~2028년 12월, 서브2nm(sub-2nm) AI 칩 생산이 핵심 스펙입니다. sub-2nm는 최첨단 공정 노드로 AI 가속기 수요와 맞닿습니다.
+
+스페이스X·xAI·테슬라 AI 실리콘 내러티브와 연결될 수 있습니다. CAPEX 규모가 크므로 자금 조달·인허가·수율 ramp가 관건입니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. $119B total는 semi CAPEX의 상한을 올립니다.
+
+2. Phase 1 $16.8B committed는 단기 executable chunk입니다.
+
+3. sub-2nm는 NVDA·TSMC·삼성과 같은 경쟁 구간입니다.
+
+4. 세제협약 34p는 지역 incentive 민감도를 보여줍니다.
+
+5. 2026.12–2028.12 공사는 2년 착공 window입니다.
+
+■ 시나리오
+
+**A: fab 착공·장비 발주 공식화.**
+**B: CAPEX scale-down.**
+**C: 공정 지연·수율 이슈.**
+
+■ 오늘까지 흐름
+
+- Terafab Texas plan
+- $48B add·$119B total
+- sub-2nm AI chips
+
+■ 반대 관점
+
+(1) plan vs groundbreak
+(2) funding
+(3) talent·water
+(4) foundry competition
+(5) timeline slip
+
+■ 앞으로 볼 것
+
+(1) tax agreement filing
+(2) Phase 1 spend
+(3) equipment orders
+(4) sub-2nm roadmap
+(5) offtake partners
+
+■ 투자시사점
+
+테라팹은 장기 semi 옵션입니다. committed $16.8B와 착공 일정을 숫자로 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Terafab Texas: ~$48B additional, $119B total, sub-2nm AI chips',
+    summaryEn: '~$48B additional capex, Phase 1 $16.8B committed, $119B total, 34-page tax agreement, Dec 2026–Dec 2028 construction, sub-2nm AI chips.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '종목분석', categoryColor: 'purple', subject: '스페이스X',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/spcx-terafab-texas-48b-20260828.svg"],
+    imagesEn: ["/charts/spcx-terafab-texas-48b-20260828-en.svg"],
+  },
+  { id: "seed-1307", title: '데이터센터 파이프라인 66GW·2028년까지 영구부채 7,000억 달러+가 잡혔습니다', summary: 'JLL 기준 데이터센터 파이프라인 66GW, 2028년까지 영구부채(permanent debt) 7,000억 달러 이상. MSFT·META·GOOG·AMZN·ORCL 등 빅테크 CAPEX·부채 축입니다.',
+    body: `■ 상세
+
+데이터센터(data center)는 AI 학습·추론을 위한 GPU·전력·냉각 인프라입니다. JLL 리포트 기준 파이프라인 66GW(기가와트), 2028년까지 영구부채(permanent debt) 7,000억 달러($700B+)가 필요하다는 추정이 나왔습니다.
+
+MSFT(마이크로소프트), META(메타), GOOG(구글), AMZN(아마존), ORCL(오라클) 등 hyperscaler가 CAPEX·부채 발행의 중심입니다. GW는 전력 용량 단위로, AI 팩토리 확장 규모를 보여 줍니다.
+
+$700B+ debt는 금리·신용 스프레드·은행 대출 여력과 연결됩니다. CAPEX boom과 financial leverage가 동시에 진행 중임을 시사합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 66GW pipeline은 전력·부지·grid bottleneck을 내포합니다.
+
+2. $700B+ debt는 AI infra financing wall입니다.
+
+3. hyperscaler 5社는 Mag7 CAPEX의 core.
+
+4. 영구부채는 금리 민감도가 큽니다.
+
+5. 전력·허가 지연이 debt drawdown을 늦출 수 있습니다.
+
+■ 시나리오
+
+**A: debt 발행·프로젝트 financing 가속.**
+**B: 금리·regulation으로 pipeline 축소.**
+**C: utility·grid가 binding constraint.**
+
+■ 오늘까지 흐름
+
+- AI CAPEX boom
+- 66GW·$700B+ debt
+- bank unrealized losses same week
+
+■ 반대 관점
+
+(1) JLL estimate
+(2) project cancel
+(3) rate spike
+(4) power delay
+(5) equity vs debt mix
+
+■ 앞으로 볼 것
+
+(1) quarterly capex
+(2) bond issuance
+(3) GW online
+(4) utility deals
+(5) credit spreads
+
+■ 투자시사점
+
+AI infra는 실물+금융 이중 레버입니다. GW pipeline과 debt issuance를 함께 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Data center 66GW pipeline, $700B+ permanent debt through 2028',
+    summaryEn: '66GW pipeline, $700B+ permanent debt through 2028 per JLL. MSFT, META, GOOG, AMZN, ORCL in focus.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '매크로', categoryColor: 'red', subject: '금리',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/macro-dc-debt-jll-700b-20260828.svg"],
+    imagesEn: ["/charts/macro-dc-debt-jll-700b-20260828-en.svg"],
+  },
+  { id: "seed-1308", title: '테슬라 로보택시가 6개 도시에서 하루 16시간(오전 6시~오후 10시) 운행합니다', summary: '오스틴·달러스·휴스턴·마이애미·올랜도·탬파 6개 도시, 하루 16시간(6am–10pm) 운행. 무인(unsupervised) 함대도 성장했다는 설명입니다.',
+    body: `■ 상세
+
+로보택시(robotaxi)는 자율주행 소프트웨어로 승객을 실어 나르는 서비스입니다. 이번 업데이트는 6개 도시에서 하루 16시간, 오전 6시~오후 10시(6am–10pm) 운행한다는 설명입니다.
+
+도시는 오스틴(Austin), 달러스(Dallas), 휴스턴(Houston), 마이애미(Miami), 올랜도(Orlando), 탬파(Tampa)입니다. 플로리다 3개·텍사스 3개로 geofence가 넓어졌습니다. 무인(unsupervised) 함대도 늘었다는 설명이 함께 나왔습니다.
+
+운행 시간·도시 수·무인 비율은 유료 마일과 revenue run-rate의 선행 지표입니다. 허가·보험·사고·개입률은 별도 확인이 필요합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 16h/day는 차량 utilization 상한을 올립니다.
+
+2. 6 cities는 지리 확장의 실물 신호입니다.
+
+3. unsupervised fleet growth는 감독원 탑승에서 한 단계 전진입니다.
+
+4. FL+TX mix는 규제 환경 다양성을 뜻합니다.
+
+5. 운행 시간≠유료 승객.
+
+■ 시나리오
+
+**A: 유료 마일·도시 추가 발표.**
+**B: 사고·회수로 시간·도시 축소.**
+**C: 경쟁사 유료 확대.**
+
+■ 오늘까지 흐름
+
+- Robotaxi geofence expansion
+- 16h·6 cities·unsupervised
+- Cybercab price hike same week
+
+■ 반대 관점
+
+(1) paid vs test
+(2) geofence map
+(3) incident rate
+(4) weather·night
+(5) insurance
+
+■ 앞으로 볼 것
+
+(1) weekly miles
+(2) city permits
+(3) unsupervised %
+(4) app pricing
+(5) fleet size
+
+■ 투자시사점
+
+로보택시는 지리·시간·무인 세 축입니다. 유료 마일 숫자로 검증하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Tesla robotaxi runs 16 hours/day in six cities, unsupervised fleet grew',
+    summaryEn: 'Six cities Austin–Tampa, 16h/day 6am–10pm. Unsupervised fleet reportedly grew.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '종목분석', categoryColor: 'mint', subject: '테슬라',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/tsla-robotaxi-16h-6cities-20260828.svg"],
+    imagesEn: ["/charts/tsla-robotaxi-16h-6cities-20260828-en.svg"],
+  },
+  { id: "seed-1309", title: '그록 Think Fast 2.0이 음성 대화 1위로 올라 차량·설정·내비·음악을 제어합니다', summary: 'Grok Think Fast 2.0이 speech-to-speech(음성 대화) 벤치 1위. 차량 제어, 설정, 내비, 음악을 음성으로 조작합니다. 차량 OS·AI assistant 축입니다.',
+    body: `■ 상세
+
+Think Fast 2.0은 xAI·테슬라 생태계의 음성 AI 모델입니다. speech-to-speech는 텍스트 중간 없이 음성 입력→음성 출력으로 대화하는 방식입니다.
+
+벤치에서 1위로 표시되며, 차량 제어(vehicle control), 설정(settings), 내비게이션(navigation), 음악(music)을 음성 명령으로 조작합니다. FSD·로보택시와 별도로, 차량 내 UX·체류 시간·구독 monetization 축입니다.
+
+벤치 1위가 곧 실차 만족도는 아닙니다. latency·안전·오프라인·개인정보는 실사용에서 검증해야 합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 음성 UI는 운전 중 hands-free 핵심입니다.
+
+2. 차량 제어 연동은 OS lock-in을 강화합니다.
+
+3. speech-to-speech 1위는 모델 경쟁력 신호입니다.
+
+4. FSD·로보택시와 AI 스택 synergy.
+
+5. 벤치 vs real-world gap 가능.
+
+■ 시나리오
+
+**A: 차량 OTA로 대-scale rollout.**
+**B: rival voice assistant catch-up.**
+**C: safety incident→rollout pause.**
+
+■ 오늘까지 흐름
+
+- Grok in-car stack
+- Think Fast 2.0 #1 S2S
+- Robotaxi same week
+
+■ 반대 관점
+
+(1) bench only
+(2) distraction risk
+(3) privacy
+(4) rival Siri/Google
+(5) subscription
+
+■ 앞으로 볼 것
+
+(1) OTA release notes
+(2) user reviews
+(3) latency
+(4) feature parity
+(5) xAI roadmap
+
+■ 투자시사점
+
+in-car AI는 로보택시 옆 revenue leg입니다. OTA 배포와 실사용 리뷰를 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Grok Think Fast 2.0 ranks #1 in speech-to-speech, controls car/settings/nav/music',
+    summaryEn: 'Grok Think Fast 2.0 #1 in speech-to-speech. Controls vehicle, settings, navigation, and music.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '종목분석', categoryColor: 'mint', subject: '테슬라',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/tsla-grok-think-fast-2-20260828.svg"],
+    imagesEn: ["/charts/tsla-grok-think-fast-2-20260828-en.svg"],
+  },
+  { id: "seed-1310", title: '메타는 2030년까지 5GW 잉여 컴퓨트 재판매 시 GW당 ROI 38% 시나리오가 나왔습니다', summary: '2030년 5GW excess, GW당 캡엑스 380억·매출 200억, 마진 73%, 순이익 146억, ROI 38% 시나리오. AI infra를 자산으로 monetize하는 프레임입니다.',
+    body: `■ 상세
+
+메타(Meta)는 AI 학습·추론을 위해 대규모 GPU 클러스터를 구축 중입니다. 이번 시나리오는 2030년까지 5GW(gigawatt-scale compute) 잉여(excess) capacity를 재판매(resale)한다는 가정입니다.
+
+GW당 캡엑스(capex) 380억 달러($38B/GW), 매출(revenue) 200억($20B/GW), 마진(margin) 73%, 순이익(NI) 146억($14.6B), ROI(return on investment) 38%로 잡혔습니다. 자체 사용 후 남는 컴퓨트를 외부에 파는 asset-light monetization 프레임입니다.
+
+시나리오≠가이던스입니다. 전력·냉각·네트워크·경쟁 클라우드 가격이 ROI를 좌우합니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. 5GW excess는 overshoot capacity 가정입니다.
+
+2. $38B/GW capex는 AI factory cost curve입니다.
+
+3. 73% margin은 utilisation·pricing optimistic일 수 있습니다.
+
+4. 38% ROI는 Mag7 capex debate의 anchor.
+
+5. 재판매는 MSFT·AMZN cloud와 경쟁.
+
+■ 시나리오
+
+**A: resale product launch·enterprise contracts.**
+**B: all capacity internal, no resale.**
+**C: power cost erodes margin.**
+
+■ 오늘까지 흐름
+
+- Meta AI capex
+- 5GW excess resale model
+- DC debt $700B same week
+
+■ 반대 관점
+
+(1) model only
+(2) power cost
+(3) cloud price war
+(4) regulation
+(5) utilisation
+
+■ 앞으로 볼 것
+
+(1) capex guide
+(2) DC online GW
+(3) cloud pricing
+(4) partnership
+(5) earnings call
+
+■ 투자시사점
+
+AI infra monetization은 upside option입니다. capex guide와 실제 GW online을 먼저 보시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Meta 5GW excess compute resale by 2030: $38B/GW capex, 38% ROI scenario',
+    summaryEn: '5GW excess by 2030, $38B/GW capex, $20B/GW revenue, 73% margin, $14.6B NI, 38% ROI.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '종목분석', categoryColor: 'blue', subject: '메타',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/meta-compute-resale-wf-20260828.svg"],
+    imagesEn: ["/charts/meta-compute-resale-wf-20260828-en.svg"],
+  },
+  { id: "seed-1311", title: '구글 TPU v8이 내부용을 넘어 더 넓은 AI 시장을 겨냥합니다', summary: 'TPU v8(Tensor Processing Unit)이 Google 내부 워크로드뿐 아니라 broader AI market(외부·광범위 AI 시장)을 겨냥한다는 설명입니다. NVDA 대안 실리콘 축.',
+    body: `■ 상세
+
+TPU(Tensor Processing Unit)는 구글이 AI 학습·추론용으로 설계한 ASIC 칩입니다. v8은 8세대로, 성능·전력·scale-out이 개선된 버전입니다.
+
+기존 TPU는 주로 Google Cloud·내부 검색·YouTube 워크로드에 쓰였습니다. 이번 메시지는 internal only를 넘어 broader AI market—외부 enterprise·startup·경쟁 클라우드 고객—을 겨냥한다는 쪽입니다.
+
+NVDA GPU dominance에 대한 hyperscaler 대안 실리콘 narrative입니다. availability·소프트웨어 stack·가격·생산 capacity가 채택 관건입니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. broader market는 external sales ramp를 뜻합니다.
+
+2. TPU v8은 NVDA·AMD·custom silicon 경쟁.
+
+3. 구글 vertical integration 강화.
+
+4. cloud margin·capex efficiency lever.
+
+5. 내부→외부는 go-to-market 전환.
+
+■ 시나리오
+
+**A: GCP TPU v8 GA·대형 contract.**
+**B: internal only 유지.**
+**C: yield·supply delay.**
+
+■ 오늘까지 흐름
+
+- Google TPU roadmap
+- v8 broader market
+- NVDA earnings same week
+
+■ 반대 관점
+
+(1) limited supply
+(2) CUDA moat
+(3) software gap
+(4) pricing
+(5) export rules
+
+■ 앞으로 볼 것
+
+(1) GCP pricing page
+(2) customer logos
+(3) v8 benchmarks
+(4) capex comment
+(5) Anthropic tie
+
+■ 투자시사점
+
+TPU externalization은 NVDA TAM narrative의 변수입니다. GCP 가격·가용성을 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Google TPU v8 targets the broader AI market, not just internal use',
+    summaryEn: 'TPU v8 is aimed at the broader AI market beyond Google-internal workloads.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '종목분석', categoryColor: 'blue', subject: '구글',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/googl-tpu-v8-broader-market-20260828.svg"],
+    imagesEn: ["/charts/googl-tpu-v8-broader-market-20260828-en.svg"],
+  },
+  { id: "seed-1312", title: '미국 은행 미실현 손실 5,117억 달러로 직전 2분기 연속 증가했습니다', summary: 'BREAKING: 미국 은행 미실현 손실(unrealized losses) 5,117억 달러($511.7B). 직전 2분기 연속 증가. 금리·채권 평가와 AI·DC debt narrative가 겹칩니다.',
+    body: `■ 상세
+
+미실현 손실(unrealized losses)은 은행이 보유한 채권·증권의 시장가치 하락으로 장부에 잡히지만 아직 실현(sell)하지 않은 손실입니다. Held-to-maturity(만기보유) 포트폴리오에서 특히 논쟁이 됩니다.
+
+이번 수치는 5,117억 달러($511.7B)이며, 직전 2분기 연속 증가했습니다. 장기금리 상승·채권 가격 하락·지역은행 stress memory와 연결됩니다.
+
+AI CAPEX·$700B+ DC debt·NVDA earnings와 같은 주 macro 화면에서, bank balance sheet capacity가 AI financing wall의 변수입니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. $511.7B는 system-wide bond mark risk입니다.
+
+2. 2 quarters up은 추세 신호입니다.
+
+3. unrealized≠immediate failure but limits lending.
+
+4. 금리 peak·cut path와 반대 방향.
+
+5. regional vs money center mix matters.
+
+■ 시나리오
+
+**A: rate cut→marks recover.**
+**B: further rate up→losses widen.**
+**C: forced sales tail risk low but sentiment hit.**
+
+■ 오늘까지 흐름
+
+- Long yields·bond prices
+- $511.7B unrealized
+- DC $700B debt same week
+
+■ 반대 관점
+
+(1) HTM accounting
+(2) deposit flight
+(3) regulatory forbearance
+(4) hedge
+(5) equity raise
+
+■ 앞으로 볼 것
+
+(1) quarterly FDIC/OCC
+(2) 10Y yield
+(3) bank earnings
+(4) credit spreads
+(5) loan growth
+
+■ 투자시사점
+
+은행 marks는 macro risk overlay입니다. 금리·분기 보고서와 함께 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'BREAKING: US banks unrealized losses $511.7B, up two prior quarters',
+    summaryEn: 'Unrealized losses $511.7B, grew for two prior quarters.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '매크로', categoryColor: 'red', subject: '금리',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/macro-us-banks-unrealized-511b-20260828.svg"],
+    imagesEn: ["/charts/macro-us-banks-unrealized-511b-20260828-en.svg"],
+  },
+  { id: "seed-1313", title: '사이버트럭 가격이 5,000달러 인상됐습니다', summary: 'Cybertruck 가격 +$5,000 인상. 수요·원가·마진·경쟁 EV pickup과 연결. 가격 lever는 demand elasticity test입니다.',
+    body: `■ 상세
+
+사이버트럭(Cybertruck)은 테슬라의 각진 스테인리스 전기 픽업입니다. 이번 변경은 가격 5,000달러(+ $5,000) 인상입니다.
+
+인상은 원가(스테인리스·4680·생산 수율), 마진 방어, 수요 과열 완화, 또는 옵션 mix 변경 등 여러 해석이 가능합니다. EV pickup 경쟁(Rivian R1T, Ford F-150 Lightning 등)과 가격 대비를 봐야 합니다.
+
+로보택시·세미와 다른 passenger/cycle 축이지만, 브랜드 pricing power와 reservation cancel율 변수입니다.
+
+■ 왜 이 뉴스가 중요한가
+
+1. +$5K는 visible price lever입니다.
+
+2. 인상 후 주문·cancel율이 demand test.
+
+3. 스테인리스·수율 원가 압력 가능.
+
+4. pickup EV 경쟁 pricing map.
+
+5. 마진 vs volume tradeoff.
+
+■ 시나리오
+
+**A: demand holds→margin up.**
+**B: cancel↑→promo return.**
+**C: competitor undercut.**
+
+■ 오늘까지 흐름
+
+- Cybertruck production
+- +$5K price hike
+- Robotaxi same week
+
+■ 반대 관점
+
+(1) elastic demand
+(2) inventory build
+(3) incentive return
+(4) raw material
+(5) brand
+
+■ 앞으로 볼 것
+
+(1) configurator price
+(2) delivery wait
+(3) cancel data
+(4) competitor MSRP
+(5) gross margin
+
+■ 투자시사점
+
+가격 인상은 demand test입니다. 주문 대기·취소·재고를 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Cybertruck price increased by $5,000',
+    summaryEn: 'Cybertruck gets a $5,000 price hike.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '종목분석', categoryColor: 'mint', subject: '테슬라',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/tsla-cybertruck-price-5000-20260828.svg"],
+    imagesEn: ["/charts/tsla-cybertruck-price-5000-20260828-en.svg"],
+  },
+  { id: "seed-1314", title: '앤트로픽·Nscale 450억 달러·베라 루빈·460MW 내년 말 가동이 잡혔습니다', summary: 'Anthropic–Nscale $45B, Vera Rubin chips, 6-year 460MW deal, late next year online. AI compute supply chain·IPO narrative 연결.',
+    body: `■ 상세
+
+Nscale는 AI 데이터센터·GPU 호스팅 인프라 업체로 읽힙니다. 앤트로픽(Anthropic)과 450억 달러($45B), 6-year, 460MW(megawatt) 규모 계약이 잡혔습니다.
+
+칩은 Vera Rubin(NVIDIA next-gen platform) 기반입니다. 가동(online) 시점은 late next year(내년 말)로 표시됩니다. MW는 전력·compute capacity proxy입니다.
+
+Anthropic IPO odds·NVDA supply·DC debt narrative와 같은 AI infra bundle입니다. $45B는 committed capex/offtake signal이지만 execution risk remains.
+
+■ 왜 이 뉴스가 중요한가
+
+1. $45B는 multi-year compute commitment입니다.
+
+2. 460MW는 대형 AI factory scale.
+
+3. Vera Rubin tie는 NVDA supply chain.
+
+4. late next year online은 calendar anchor.
+
+5. Anthropic IPO·revenue growth lever.
+
+■ 시나리오
+
+**A: on-time energize→capacity online.**
+**B: power·chip delay.**
+**C: contract scale revision.**
+
+■ 오늘까지 흐름
+
+- Anthropic IPO odds
+- Nscale $45B·460MW
+- NVDA Vera Rubin
+
+■ 반대 관점
+
+(1) $45B not all upfront
+(2) power permit
+(3) chip allocation
+(4) competition
+(5) financing
+
+■ 앞으로 볼 것
+
+(1) construction milestone
+(2) MW energized
+(3) Rubin shipment
+(4) Anthropic revenue
+(5) Nscale partners
+
+■ 투자시사점
+
+compute contract는 AI growth의 physical layer입니다. MW energize·Rubin shipment를 추적하시면 됩니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Anthropic Nscale $45B, Vera Rubin, 460MW online late next year',
+    summaryEn: '$45B Nscale deal, Vera Rubin chips, 6-year 460MW, online late next year.',
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: '매크로', categoryColor: 'purple', subject: 'AI',
+    date: "2026.08.28", updatedAt: "2026.08.28 08:00",
+    images: ["/charts/anthropic-nscale-45b-vera-rubin-20260828.svg"],
+    imagesEn: ["/charts/anthropic-nscale-45b-vera-rubin-20260828-en.svg"],
+  },
   // ── 2026-08-27 신규 ──────────────────────────────────────────────────────
   { id: "seed-1201", title: '2026년 8월 27일 한장 요약입니다. 엔비디아 2분기 실적·스페이스X 1.8조·로보택시 16시간·데이터센터 부채 7,000억+·은행 미실현 5,117억을 모았습니다', summary: '엔비디아 2분기 매출 961억 달러·주당순이익 2.22달러로 예상을 상회했지만 시간외 -2%였습니다. 앤트로픽 기업공개 확률 63%, 스페이스X 1.8조 달러·루이지애나 발사 빈도·테라팹 1,190억, 데이터센터 부채 7,000억+, 테슬라 로보택시 16시간·그록 빠른 사고 2.0, 메타 연산 재판매, 구글 AI 전용칩 8세대, 은행 미실현 5,117억, 사이버트럭 +5,000달러, 엔스케일 450억도 같이 보시기 바랍니다.',
     body: "",
@@ -48,7 +865,7 @@ export const SEED_REPORTS: Report[] = [
     date: "2026-08-27", updatedAt: "2026.08.27 08:00",
     images: ["/charts/summary-20260827.svg"],
     imagesEn: ["/charts/summary-20260827-en.svg"],
-    isPinned: true, imageOnly: true,
+    isPinned: false, imageOnly: true,
   },
   { id: "seed-1202", title: '엔비디아 2분기 매출 961억 달러·주당순이익 2.22달러로 예상을 상회했지만 시간외 -2%로 반응했습니다', summary: '엔비디아 2분기 매출은 961억 달러로 시장 예상 922억 달러를 약 39억 달러 넘겼고, 조정 주당순이익도 2.22달러로 예상 2.10달러를 웃돌았습니다. 데이터센터 매출 890억 달러(예상 854억), 총마진 75%로 세 구간 모두 예상을 상회했습니다. 그런데도 시간외 거래에서 주가는 약 2% 하락해, 시장의 기대치가 이미 더 높았을 가능성을 보여 줍니다.',
     body: `■ 상세
@@ -16930,6 +17747,21 @@ investus.kr SRP 최고투자책임자 발행`,
 
 // 종목별 리포트 매핑 — 개별 종목 페이지에서 관련 리포트 필터링에 사용
 export const REPORT_TICKERS: Record<string, string[]> = {
+  // 2026-08-28
+  "seed-1301": ['NVDA', 'MACRO', 'TSLA', 'SPCX', 'META', 'GOOGL', 'AI'],
+  "seed-1302": ['NVDA'],
+  "seed-1303": ['MACRO'],
+  "seed-1304": ['SPCX'],
+  "seed-1305": ['SPCX'],
+  "seed-1306": ['SPCX'],
+  "seed-1307": ['MACRO'],
+  "seed-1308": ['TSLA'],
+  "seed-1309": ['TSLA'],
+  "seed-1310": ['META'],
+  "seed-1311": ['GOOGL'],
+  "seed-1312": ['MACRO'],
+  "seed-1313": ['TSLA'],
+  "seed-1314": ['MACRO'],
   // 2026-08-27
   "seed-1201": ['NVDA', 'TSLA', 'SPCX', 'META', 'GOOGL', 'MACRO', 'AI'],
   "seed-1202": ['NVDA'],

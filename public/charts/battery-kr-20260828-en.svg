@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1005"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fb923c"/><stop offset="100%" style="stop-color:#fb923c"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="170" height="38" rx="19" fill="#fb923c30" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="125" y="44" font-family="Arial Black,Arial" font-size="15" font-weight="900" fill="#fb923c" text-anchor="middle">2차전지</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS KR DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.28</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Samsung SDI fell 2.46% to 555,000 won</text>
+  <text x="540" y="142" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Profit-taking after the prior-day surge</text>
+  <line x1="80" y1="158" x2="1000" y2="158" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="244" font-family="Arial Black,Arial" font-size="76" font-weight="900" fill="#fb923c" text-anchor="middle">🔋</text>
+  <text x="540" y="304" font-family="Arial Black,Arial" font-size="46" font-weight="900" fill="#f9fafb" text-anchor="middle">-2.46%</text>
+  <text x="540" y="344" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Pulled back from 569,000 won.</text>
+  <text x="540" y="370" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">More stock-specific profit-taking than sector weakness.</text>
+  <line x1="80" y1="392" x2="1000" y2="392" stroke="#1f2937" stroke-width="1"/>
+
+  <rect x="60" y="404" width="300" height="216" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="36" text-anchor="middle">📉</text>
+  <text x="210" y="496" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c" text-anchor="middle">555,000</text>
+  <text x="210" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Pullback</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">After +10%</text>
+  <text x="210" y="590" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">prior session</text>
+  <rect x="390" y="404" width="300" height="216" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="36" text-anchor="middle">⚖️</text>
+  <text x="540" y="496" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c" text-anchor="middle">Cells vs materials</text>
+  <text x="540" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Split sector</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Not every battery name</text>
+  <text x="540" y="590" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">fell together</text>
+  <rect x="720" y="404" width="300" height="216" rx="16" fill="#1a1005" stroke="#fb923c" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="36" text-anchor="middle">📦</text>
+  <text x="870" y="496" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c" text-anchor="middle">Orders</text>
+  <text x="870" y="530" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Next check</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Disclosures and EV sales</text>
+  <text x="870" y="590" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">set direction</text>
+  <rect x="60" y="632" width="960" height="196" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="682" font-family="Arial" font-size="19" fill="#fb923c" text-anchor="middle">"A 2% drop after a 10%+ spike is a common pattern.</text>
+  <text x="540" y="710" font-family="Arial" font-size="19" fill="#fb923c" text-anchor="middle">Unlike short-covering yesterday,</text>
+  <text x="540" y="738" font-family="Arial" font-size="19" fill="#fb923c" text-anchor="middle">today looks like profit-taking.</text>
+  <text x="540" y="766" font-family="Arial" font-size="19" fill="#fb923c" text-anchor="middle">Watch order news and EV sales data."</text>
+  <rect x="60" y="846" width="960" height="120" rx="14" fill="#1a1005" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="876" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">Why it matters</text>
+  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Next-day action reveals the move's character.</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Gains without orders are easier to reverse.</text>
+  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Track US/EU EV sales alongside.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="15" fill="#374151" text-anchor="middle">Samsung SDI · 555,000 KRW -2.46% · 2026.08.28</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr · SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

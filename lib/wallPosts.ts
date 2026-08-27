@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T28AU = 1787871600000; // 2026.08.28 08:00 KST
 const T27AU = 1787785200000; // 2026-08-27 08:00 KST
 const T26AU = 1787698800000; // 2026-08-26 08:00 KST
 const T25AU = 1787612400000; // 2026-08-25 08:00 KST
@@ -89,7 +90,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T27AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T28AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -108,7 +109,50 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
-  // ── 2026-08-27  // ── 2026-08-26 신규 ────────────────
+  // ── 2026-08-28 신규 ────────────────
+  { id: 1117, symbol: "NVDA", nickname: "익명_3400", holdingLabel: "관심종목",
+    content: "NVDA AH -2%였는데 정규장 +8.74%?? 3분기 1080억 가이던스가 키네",
+    createdAt: T28AU + 8*60_000, likes: 10, comments: 2 },
+  { id: 1118, symbol: "MACRO", nickname: "익명_3417", holdingLabel: "관심종목",
+    content: "잭슨홀 워시 연설 오늘 10시 ET. 30년물 5.31%까지 올랐음",
+    createdAt: T28AU + 16*60_000, likes: 11, comments: 1 },
+  { id: 1119, symbol: "MACRO", nickname: "익명_3434", holdingLabel: "관심종목",
+    content: "트럼프 전력망 보호 EO에 변압기·전력기기주 들썩",
+    createdAt: T28AU + 24*60_000, likes: 12, comments: 1 },
+  { id: 1120, symbol: "NVDA", nickname: "익명_3451", holdingLabel: "관심종목",
+    content: "나스닥 +1.57% S&P +0.72%. NVDA 랠리가 지수 끌어올림",
+    createdAt: T28AU + 32*60_000, likes: 13, comments: 2 },
+  { id: 1121, symbol: "MACRO", nickname: "익명_3468", holdingLabel: "관심종목",
+    content: "비트코인 78,800달러 부근. 잭슨홀 앞 관망",
+    createdAt: T28AU + 40*60_000, likes: 14, comments: 1 },
+  { id: 1122, symbol: "MACRO", nickname: "익명_3485", holdingLabel: "관심종목",
+    content: "코스피 6984.95 +1.05% 7000 재시도. 한국도 NVDA 후속",
+    createdAt: T28AU + 48*60_000, likes: 15, comments: 1 },
+  { id: 1123, symbol: "SPCX", nickname: "익명_3502", holdingLabel: "관심종목",
+    content: "스페이스X 1.8T 여전히. private mark vs 상장 gap",
+    createdAt: T28AU + 56*60_000, likes: 16, comments: 2 },
+  { id: 1124, symbol: "SPCX", nickname: "익명_3519", holdingLabel: "관심종목",
+    content: "루이지애나 30척/일 cadence… 허가부터",
+    createdAt: T28AU + 64*60_000, likes: 10, comments: 1 },
+  { id: 1125, symbol: "MACRO", nickname: "익명_3536", holdingLabel: "관심종목",
+    content: "DC 부채 7000억+ 30년물 5.31%랑 같이 봐야",
+    createdAt: T28AU + 72*60_000, likes: 11, comments: 1 },
+  { id: 1126, symbol: "TSLA", nickname: "익명_3553", holdingLabel: "관심종목",
+    content: "로보택시 16h 6도시. 유료 마일은 아직?",
+    createdAt: T28AU + 80*60_000, likes: 12, comments: 2 },
+  { id: 1127, symbol: "TSLA", nickname: "익명_3570", holdingLabel: "관심종목",
+    content: "사이버트럭 +5000달러. 수요 탄력성 테스트",
+    createdAt: T28AU + 88*60_000, likes: 13, comments: 1 },
+  { id: 1128, symbol: "META", nickname: "익명_3587", holdingLabel: "관심종목",
+    content: "5GW excess 재판매 ROI 38% 시나리오",
+    createdAt: T28AU + 96*60_000, likes: 14, comments: 1 },
+  { id: 1129, symbol: "GOOGL", nickname: "익명_3604", holdingLabel: "관심종목",
+    content: "TPU v8 broader market. GCP 가격이 관건",
+    createdAt: T28AU + 104*60_000, likes: 15, comments: 2 },
+  { id: 1130, symbol: "AI", nickname: "익명_3621", holdingLabel: "관심종목",
+    content: "앤트로픽 Nscale 450억 460MW Vera Rubin",
+    createdAt: T28AU + 112*60_000, likes: 16, comments: 1 },
+  // ── 2026-08-26 신규 ────────────────
   { id: 1103, symbol: "NVDA", nickname: "익명_3100", holdingLabel: "관심종목",
     content: "NVDA 2분기 961억 beat인데 AH -2%?? 가이던스 봐야지",
     createdAt: T27AU + 8*60_000, likes: 10, comments: 2 },
@@ -4006,7 +4050,64 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
-  // ── 2026-08-27  // ── 2026-08-26 신규 댓글 ────────────────
+  // ── 2026-08-28 신규 댓글 ────────────────
+  1117: [
+    { id: 1, nickname: "익명_4617", holdingLabel: "관심종목", content: "AH -2%랑 정규 +8%는 완전 다른 세계", createdAt: T28AU + 8*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4620", holdingLabel: "관심종목", content: "1080억 가이던스 확인", createdAt: T28AU + 8*60_000 + 6*60_000, likes: 5 },
+  ],
+  1118: [
+    { id: 1, nickname: "익명_4618", holdingLabel: "관심종목", content: "워시 매파 나오면 30년물 더 튈 수", createdAt: T28AU + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4621", holdingLabel: "관심종목", content: "잭슨홀 전 포지션 줄이는 게", createdAt: T28AU + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1119: [
+    { id: 1, nickname: "익명_4619", holdingLabel: "관심종목", content: "EO는 심리 먼저. 수주 공시가 진짜", createdAt: T28AU + 24*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4622", holdingLabel: "관심종목", content: "한국 전력주도 같이", createdAt: T28AU + 24*60_000 + 6*60_000, likes: 5 },
+  ],
+  1120: [
+    { id: 1, nickname: "익명_4620", holdingLabel: "관심종목", content: "지수 랠리 NVDA 의존도 높음", createdAt: T28AU + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4623", holdingLabel: "관심종목", content: "breadth는 봐야", createdAt: T28AU + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1121: [
+    { id: 1, nickname: "익명_4621", holdingLabel: "관심종목", content: "BTC 잭슨홀 민감. DXY 같이", createdAt: T28AU + 40*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4624", holdingLabel: "관심종목", content: "ETF 플로우", createdAt: T28AU + 40*60_000 + 6*60_000, likes: 5 },
+  ],
+  1122: [
+    { id: 1, nickname: "익명_4622", holdingLabel: "관심종목", content: "7000 터치만 하고 내려옴", createdAt: T28AU + 48*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4625", holdingLabel: "관심종목", content: "외국인 순매수", createdAt: T28AU + 48*60_000 + 6*60_000, likes: 5 },
+  ],
+  1123: [
+    { id: 1, nickname: "익명_4623", holdingLabel: "관심종목", content: "private vs 상장 gap", createdAt: T28AU + 56*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4626", holdingLabel: "관심종목", content: "7B volume", createdAt: T28AU + 56*60_000 + 6*60_000, likes: 5 },
+  ],
+  1124: [
+    { id: 1, nickname: "익명_4624", holdingLabel: "관심종목", content: "30/day 현실성…", createdAt: T28AU + 64*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4627", holdingLabel: "관심종목", content: "허가", createdAt: T28AU + 64*60_000 + 6*60_000, likes: 5 },
+  ],
+  1125: [
+    { id: 1, nickname: "익명_4625", holdingLabel: "관심종목", content: "7000억 debt + 5.31% 30Y", createdAt: T28AU + 72*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4628", holdingLabel: "관심종목", content: "은행 미실현", createdAt: T28AU + 72*60_000 + 6*60_000, likes: 5 },
+  ],
+  1126: [
+    { id: 1, nickname: "익명_4626", holdingLabel: "관심종목", content: "16h≠유료", createdAt: T28AU + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4629", holdingLabel: "관심종목", content: "FL 3도시", createdAt: T28AU + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1127: [
+    { id: 1, nickname: "익명_4627", holdingLabel: "관심종목", content: "+5K cancel율", createdAt: T28AU + 88*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4630", holdingLabel: "관심종목", content: "Rivian 비교", createdAt: T28AU + 88*60_000 + 6*60_000, likes: 5 },
+  ],
+  1128: [
+    { id: 1, nickname: "익명_4628", holdingLabel: "관심종목", content: "시나리오일 뿐", createdAt: T28AU + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4631", holdingLabel: "관심종목", content: "5GW excess", createdAt: T28AU + 96*60_000 + 6*60_000, likes: 5 },
+  ],
+  1129: [
+    { id: 1, nickname: "익명_4629", holdingLabel: "관심종목", content: "NVDA 대안", createdAt: T28AU + 104*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4632", holdingLabel: "관심종목", content: "GCP pricing", createdAt: T28AU + 104*60_000 + 6*60_000, likes: 5 },
+  ],
+  1130: [
+    { id: 1, nickname: "익명_4630", holdingLabel: "관심종목", content: "460MW 전력", createdAt: T28AU + 112*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4633", holdingLabel: "관심종목", content: "Rubin 출하", createdAt: T28AU + 112*60_000 + 6*60_000, likes: 5 },
+  ],
+  // ── 2026-08-26 신규 댓글 ────────────────
   1103: [
     { id: 1, nickname: "익명_4303", holdingLabel: "관심종목", content: "beat인데 -2%면 가이던스 약한 거 아님", createdAt: T27AU + 8*60_000 + 3*60_000, likes: 4 },
     { id: 2, nickname: "익명_4306", holdingLabel: "관심종목", content: "DC 890억은 여전히 크다", createdAt: T27AU + 8*60_000 + 6*60_000, likes: 5 },
