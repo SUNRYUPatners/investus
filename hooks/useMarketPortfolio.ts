@@ -94,7 +94,7 @@ export function useMarketPortfolio(market: MarketId) {
     cur: "KRW" as const,
     setCur: () => {},
     loaded,
-    /** KR/Safe: 보유 등록 여부와 무관 — 인증은 통합 자산 탭에서 처리 */
+    /** KR/Safe: 보유 등록은 시장별 포트폴리오 탭에서 */
     isLoggedIn: true,
   };
 }

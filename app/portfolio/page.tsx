@@ -10,10 +10,7 @@ import {
 } from "lucide-react";
 import { getSupabase } from "@/lib/supabase";
 import type { ParsedHolding } from "@/app/api/parse-portfolio-screenshot/route";
-import { useUnifiedPortfolio, segmentLabel } from "@/hooks/useUnifiedPortfolio";
-import { usePathname } from "next/navigation";
-import { parseMarketPath } from "@/lib/markets/marketPath";
-import { getMarketConfig } from "@/lib/markets/config";
+import { usePortfolio } from "@/hooks/usePortfolio";
 import { mockQuotes } from "@/lib/api";
 import type { Holding } from "@/lib/api";
 import { useLocaleCode } from "@/contexts/LocaleContext";
@@ -23,19 +20,10 @@ import { PortfolioLearnHub } from "@/components/PortfolioLearnHub";
 import { PriceAlertsPanel } from "@/components/PriceAlertsPanel";
 import { useWatchlist } from "@/hooks/useWatchlist";
 
+// ── Types & Constants ─────────────────────────────────────────────────────────
+
 type LiveQ = { symbol: string; shortName: string; price: number; changePercent: number };
 type Cur   = "USD" | "KRW";
-
-function holdingValKrw(h: Holding, segment: "us" | "kr" | "safe", live: LiveQ | undefined, usdkrw: number): number {
-  const price = live?.price ?? h.avgCost;
-  const val = h.shares * price;
-  return segment === "kr" ? val : val * usdkrw;
-}
-
-function cardCurRate(segment: "us" | "kr" | "safe", usCur: Cur, usdkrw: number): { cur: Cur; rate: number } {
-  if (segment === "kr") return { cur: "KRW", rate: 1 };
-  return { cur: usCur, rate: usdkrw };
-}
 
 const BROKERAGES_KR = [
   { name: "키움", emoji: "🟠" }, { name: "KB증권", emoji: "🟡" },
@@ -910,19 +898,7 @@ function BrokerageSection({ locale, onImport }: { locale: string; onImport: () =
 
 export default function PortfolioPage() {
   const router                          = useRouter();
-  const pathname = usePathname() ?? "";
-  const { market } = parseMarketPath(pathname);
-  const unified = useUnifiedPortfolio();
-  const activeSegment: "us" | "kr" | "safe" =
-    market === "kr" ? "kr" : market === "safe" ? "safe" : "us";
-  const holdings = unified[activeSegment].holdings;
-  const setHoldings = unified[activeSegment].setHoldings;
-  const cur = activeSegment === "us" ? unified.us.cur : ("KRW" as Cur);
-  const setCur = activeSegment === "us" ? unified.us.setCur : () => {};
-  const loaded = unified.loaded;
-  const isLoggedIn = unified.isLoggedIn;
-  const allHoldings = unified.allTagged;
-  const totalCount = unified.totalCount;
+  const { holdings, setHoldings, cur, setCur, loaded, isLoggedIn } = usePortfolio();
   const { list: watchlist } = useWatchlist();
   const [liveMap, setLiveMap]       = useState<Record<string, LiveQ>>({});
   const [usdkrw, setUsdkrw]        = useState(1350);
@@ -931,7 +907,7 @@ export default function PortfolioPage() {
   const locale                      = useLocaleCode();
 
   const alertSymbols = [
-    ...new Set([...allHoldings.map((h) => h.symbol), ...watchlist]),
+    ...new Set([...holdings.map((h) => h.symbol), ...watchlist]),
   ].filter(Boolean);
 
   const alertLivePrices = Object.fromEntries(
@@ -940,48 +916,35 @@ export default function PortfolioPage() {
 
   const fetchLive = useCallback((syms: string[]) => {
     if (syms.length === 0) return;
-    const cacheKeys = [
-      getMarketConfig("us").marketCacheKey,
-      getMarketConfig("kr").marketCacheKey,
-      getMarketConfig("safe").marketCacheKey,
-    ];
-    const map: Record<string, LiveQ> = {};
     try {
-      for (const key of cacheKeys) {
-        const raw = localStorage.getItem(key);
-        if (!raw) continue;
-        const md = JSON.parse(raw) as {
-          quotes?: { symbol: string; price: number; changePercent: number; name?: string }[];
-          indices?: { symbol: string; value: number }[];
-        };
-        for (const q of md.quotes ?? []) {
-          if (q.price > 0 && syms.includes(q.symbol)) {
-            map[q.symbol] = { symbol: q.symbol, shortName: q.name ?? q.symbol, price: q.price, changePercent: q.changePercent };
-          }
-        }
-        const krw = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
-        if (krw?.value && krw.value > 100) setUsdkrw(krw.value);
-      }
-      if (Object.keys(map).length > 0) setLiveMap((prev) => ({ ...prev, ...map }));
+      const raw = localStorage.getItem("market-data-cache");
+      if (!raw) return;
+      const md = JSON.parse(raw) as {
+        quotes?:  { symbol: string; price: number; changePercent: number }[];
+        indices?: { symbol: string; value: number }[];
+      };
+      const cacheMap = new Map((md.quotes ?? []).map((q) => [q.symbol, q]));
+      const map: Record<string, LiveQ> = {};
+      syms.forEach((s) => {
+        const q = cacheMap.get(s);
+        if (q && q.price > 0) map[s] = { symbol: s, shortName: s, price: q.price, changePercent: q.changePercent };
+      });
+      if (Object.keys(map).length > 0) setLiveMap(map);
+      const krw = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
+      if (krw?.value && krw.value > 100) setUsdkrw(krw.value);
     } catch { /* ignore */ }
   }, []);
 
   useEffect(() => {
     if (!loaded) return;
-    const syms = [...new Set([...allHoldings.map((h) => h.symbol), ...watchlist])];
+    const syms = [...new Set([...holdings.map((h) => h.symbol), ...watchlist])];
     if (syms.length === 0) return;
     fetchLive(syms);
-    const keys = [
-      getMarketConfig("us").marketCacheKey,
-      getMarketConfig("kr").marketCacheKey,
-      getMarketConfig("safe").marketCacheKey,
-    ];
-    const onStorage = (e: StorageEvent) => {
-      if (e.key && keys.includes(e.key)) fetchLive(syms);
-    };
+    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") fetchLive(syms); };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
-  }, [loaded, allHoldings, watchlist, fetchLive]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loaded, holdings, watchlist]);
 
   const addHolding    = (h: Holding) => setHoldings((p: Holding[]) => [...p.filter((x) => x.symbol !== h.symbol), h]);
   const deleteHolding = (sym: string) => setHoldings((p: Holding[]) => p.filter((x) => x.symbol !== sym));
@@ -996,10 +959,7 @@ export default function PortfolioPage() {
     });
   };
 
-  const totalValKrw = allHoldings.reduce(
-    (s, h) => s + holdingValKrw(h, h.segment, liveMap[h.symbol], usdkrw),
-    0,
-  );
+  const totalVal = holdings.reduce((s, h) => s + h.shares * (liveMap[h.symbol]?.price ?? h.avgCost), 0);
 
   // Not logged in — show login prompt
   if (loaded && !isLoggedIn) {
@@ -1017,8 +977,8 @@ export default function PortfolioPage() {
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
               {locale === "ko"
-                ? "로그인 후 미국·한국 주식과 안전자산을\n한곳에서 실시간으로 확인할 수 있습니다"
-                : "Sign in to view US & KR stocks and safe assets\nin one unified portfolio"}
+                ? "포트폴리오는 로그인 후 모든 기기에서\n실시간으로 동기화됩니다"
+                : "Sign in to sync your portfolio\nacross all your devices"}
             </p>
           </div>
           <button
@@ -1048,12 +1008,12 @@ export default function PortfolioPage() {
           <div className="flex items-center justify-between mb-5">
             <div>
               <h1 className="text-base font-bold font-syne" style={{ color: "var(--text)" }}>
-                {locale === "ko" ? "통합 자산 💼" : "Unified Portfolio 💼"}
+                {locale === "ko" ? "내 포트폴리오 💼" : "My Portfolio 💼"}
               </h1>
               <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
                 {locale === "ko"
-                  ? `미국·한국·안전자산 · 1달러 = ${usdkrw.toLocaleString()}원`
-                  : `US · KR · Safe assets · $1 = ₩${usdkrw.toLocaleString()}`}
+                  ? `실시간 · 1달러 = ${usdkrw.toLocaleString()}원`
+                  : `Live · $1 = ₩${usdkrw.toLocaleString()}`}
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -1074,36 +1034,28 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          {loaded && totalCount > 0 && (
-            <div className="rounded-2xl border overflow-hidden relative mb-5"
-              style={{ background: "var(--card)", borderColor: "var(--border)" }}>
-              <div className="relative p-5">
-                <p className="text-[10px] font-semibold tracking-widest uppercase font-syne mb-2" style={{ color: "var(--muted)" }}>
-                  {locale === "ko" ? "총 평가금액 (원화 환산)" : "Total Value (KRW)"}
-                </p>
-                <p className="text-2xl font-bold font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
-                  {fmtKRW(totalValKrw)}
-                </p>
-                <p className="text-[11px] mt-1" style={{ color: "var(--muted)" }}>
-                  {locale === "ko"
-                    ? `미국 ${unified.us.holdings.length} · 한국 ${unified.kr.holdings.length} · 안전자산 ${unified.safe.holdings.length}`
-                    : `US ${unified.us.holdings.length} · KR ${unified.kr.holdings.length} · Safe ${unified.safe.holdings.length}`}
-                </p>
-              </div>
-            </div>
+          {/* Summary */}
+          {loaded && holdings.length > 0 && (
+            <SummaryCard
+              holdings={holdings} liveMap={liveMap}
+              cur={cur} rate={usdkrw}
+              onRefresh={() => fetchLive(holdings.map((h) => h.symbol))}
+              locale={locale}
+            />
           )}
 
-          {/* 모바일 전용: AI 비서 */}
-          {loaded && totalCount > 0 && (
+          {/* 모바일 전용: AI 비서 (전체 요약과 보유종목 사이) */}
+          {loaded && holdings.length > 0 && (
             <div className="lg:hidden mb-5">
-              <PortfolioAI holdings={allHoldings} liveMap={liveMap} usdkrw={usdkrw} />
+              <PortfolioAI holdings={holdings} liveMap={liveMap} usdkrw={usdkrw} />
             </div>
           )}
 
-          {loaded && totalCount > 0 && (
+          {/* Holdings header */}
+          {loaded && holdings.length > 0 && (
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-                {locale === "ko" ? `보유종목 (${totalCount})` : `Holdings (${totalCount})`}
+                {locale === "ko" ? `보유종목 (${holdings.length})` : `Holdings (${holdings.length})`}
               </h2>
               <span className="text-[10px]" style={{ color: "var(--muted)" }}>
                 {locale === "ko" ? "탭하면 차트·뉴스" : "Tap for chart & news"}
@@ -1120,7 +1072,7 @@ export default function PortfolioPage() {
           </div>
 
           {/* Holdings or empty state */}
-          {loaded && totalCount === 0 ? (
+          {loaded && holdings.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 gap-4">
               <div className="w-16 h-16 rounded-2xl flex items-center justify-center"
                 style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
@@ -1152,47 +1104,37 @@ export default function PortfolioPage() {
               </div>
             </div>
           ) : (
-            <div className="flex flex-col gap-6">
-              {(["us", "kr", "safe"] as const).map((seg) => {
-                const segHoldings = unified[seg].holdings;
-                if (segHoldings.length === 0) return null;
-                const { cur: segCur, rate: segRate } = cardCurRate(seg, cur, usdkrw);
-                const segTotal = segHoldings.reduce(
-                  (s, h) => s + holdingValKrw(h, seg, liveMap[h.symbol], usdkrw),
-                  0,
-                );
-                return (
-                  <div key={seg}>
-                    <h3 className="text-xs font-bold mb-2 font-syne" style={{ color: "var(--text)" }}>
-                      {segmentLabel(seg, locale === "ko" ? "ko" : "en")}
-                    </h3>
-                    <div className="flex flex-col gap-3">
-                      {[...segHoldings]
-                        .sort((a, b) => {
-                          const valA = holdingValKrw(a, seg, liveMap[a.symbol], usdkrw);
-                          const valB = holdingValKrw(b, seg, liveMap[b.symbol], usdkrw);
-                          return valB - valA;
-                        })
-                        .map((h) => (
-                          <HoldingCard
-                            key={`${seg}-${h.symbol}`}
-                            holding={h}
-                            live={liveMap[h.symbol]}
-                            weight={segTotal > 0 ? (holdingValKrw(h, seg, liveMap[h.symbol], usdkrw) / segTotal) * 100 : 0}
-                            cur={segCur}
-                            rate={segRate}
-                            onDelete={() => unified[seg].setHoldings((p) => p.filter((x) => x.symbol !== h.symbol))}
-                          />
-                        ))}
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="flex flex-col gap-3">
+              {[...holdings]
+                .sort((a, b) => {
+                  const valA = (liveMap[a.symbol]?.price ?? a.avgCost) * a.shares;
+                  const valB = (liveMap[b.symbol]?.price ?? b.avgCost) * b.shares;
+                  return valB - valA;
+                })
+                .map((h, i) => (
+                <>
+                  <HoldingCard
+                    key={h.symbol}
+                    holding={h}
+                    live={liveMap[h.symbol]}
+                    weight={totalVal > 0 ? ((liveMap[h.symbol]?.price ?? h.avgCost) * h.shares / totalVal) * 100 : 0}
+                    cur={cur}
+                    rate={usdkrw}
+                    onDelete={() => deleteHolding(h.symbol)}
+                  />
+                  {/* Ad after every 2nd holding */}
+                  {(i + 1) % 2 === 0 && i < holdings.length - 1 && (
+                    (i + 1) % 4 === 0
+                      ? <AdFitStrip key={`ad-strip-${i}`} />
+                      : <AdFitBanner key={`ad-${i}`} />
+                  )}
+                </>
+              ))}
               <button onClick={() => setShowAdd(true)}
                 className="w-full py-3.5 rounded-2xl border text-sm font-semibold flex items-center justify-center gap-2 transition-opacity active:opacity-60"
                 style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--muted)" }}>
                 <Plus className="w-4 h-4" />
-                {locale === "ko" ? `${segmentLabel(activeSegment, "ko")} 종목 추가` : `Add ${segmentLabel(activeSegment, "en")}`}
+                {locale === "ko" ? "종목 추가" : "Add stock"}
               </button>
             </div>
           )}
@@ -1207,16 +1149,16 @@ export default function PortfolioPage() {
 
         {/* ── Right (desktop) / Below (mobile) ── */}
         {/* 데스크탑: 증권사(1위) → AI(2위) / 모바일: AI(1위) → 증권사(2위) */}
-        <div className={`flex flex-col ${totalCount > 0 ? "mt-6 lg:mt-0" : "mt-0"}`}>
+        <div className={`flex flex-col ${holdings.length > 0 ? "mt-6 lg:mt-0" : "mt-0"}`}>
           {/* 증권사 계좌 연동 — 데스크탑 1위, 모바일 2위 */}
           <div className="order-2 lg:order-1 mb-5">
             <BrokerageSection locale={locale} onImport={() => setShowImport(true)} />
           </div>
           {/* AI 포트폴리오 비서 — 데스크탑만 표시 (모바일은 왼쪽 컬럼에 삽입) */}
-          {loaded && totalCount > 0 && (
+          {loaded && holdings.length > 0 && (
             <div className="hidden lg:block order-2 mb-5">
               <PortfolioAI
-                holdings={allHoldings}
+                holdings={holdings}
                 liveMap={liveMap}
                 usdkrw={usdkrw}
               />
