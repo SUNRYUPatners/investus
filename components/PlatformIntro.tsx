@@ -5,7 +5,7 @@ export const PLATFORM_INTRO_KO = {
     "파편화된 투자 데이터를 AI가 하나로 연결합니다.",
     "글로벌 자산의 흐름을 한눈에 파악하고, 최적의 자산 배분 인사이트를 얻어보세요.",
   ],
-  title: "AI 기반 차세대 자산관리(WM) 플랫폼",
+  title: "AI 기반 차세대 자산관리(WM) 핀테크 플랫폼",
   footnote:
     "SUNRYU Partners CIO의 일일 리포트 · 실시간 시세 · AI 포트폴리오 인사이트를 무료로 제공합니다.",
 } as const;
@@ -16,7 +16,7 @@ export const PLATFORM_INTRO_EN = {
     "AI connects fragmented investment data in one place.",
     "See global asset flows at a glance and get clearer allocation insights.",
   ],
-  title: "AI-Powered Next-Generation Wealth Management (WM) Platform",
+  title: "AI-Powered Next-Generation Wealth Management (WM) Fintech Platform",
   footnote:
     "Daily CIO reports, live prices, and AI portfolio insights — free.",
 } as const;

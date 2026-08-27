@@ -56,7 +56,7 @@ export function MarketHomeShell({
   return (
     <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
       <h1 className="sr-only">
-        Investus — AI 기반 차세대 자산관리(WM) 플랫폼 · {isUs ? "미국주식" : cfg.labelKo}
+        Investus — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 · {isUs ? "미국주식" : cfg.labelKo}
       </h1>
       <Header />
       {/* 미국·한국 홈 — 본사이트와 동일 티커·경제일정 상단바 */}

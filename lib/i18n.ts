@@ -188,14 +188,14 @@ const ko = {
   more: {
     title:   "더보기 ···",
     footer:  "본 앱은 투자 참고용으로만 제공됩니다.\n투자 판단 및 책임은 본인에게 있습니다.",
-    tagline: "AI 기반 차세대 자산관리(WM) 플랫폼",
+    tagline: "AI 기반 차세대 자산관리(WM) 핀테크 플랫폼",
     sections: [
       {
         title: "앱 정보",
         items: [
           { label: "Investus 사용법",          sub: "처음 왔다면 여기서 시작하세요" },
           { label: "미국주식 초보 가이드",      sub: "계좌·ETF·리포트 읽는 법" },
-          { label: "Investus 소개",            sub: "AI 기반 차세대 자산관리(WM) 플랫폼" },
+          { label: "Investus 소개",            sub: "AI 기반 차세대 자산관리(WM) 핀테크 플랫폼" },
           { label: "문의 · 연락처",            sub: "고객지원 · 광고 제휴" },
           { label: "버전 정보",                sub: "업데이트 이력" },
         ],
