@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BUSINESS_INFO, ftcBusinessCheckUrl } from "@/lib/businessInfo";
+import { PLATFORM_INTRO_KO } from "@/components/PlatformIntro";
 
 /**
  * 전역 푸터 — PG 사전점검·전자상거래법 고시용.
@@ -57,43 +58,64 @@ export function SiteLegalFooter() {
           </Link>
         </nav>
 
-        <div className="text-[11px] leading-relaxed space-y-1" style={{ color: "var(--muted)" }}>
-          <p>
-            <span className="font-semibold" style={{ color: "var(--text)" }}>
-              {companyName}
-            </span>
-            {" · "}
-            {serviceName}
-          </p>
-          <p>대표자: {ceoName}</p>
-          {registrationNumber ? (
+        <div className="lg:grid lg:grid-cols-2 lg:gap-8 mb-5">
+          <div className="mb-5 lg:mb-0">
+            <p className="text-[11px] font-semibold mb-1.5" style={{ color: "var(--text)" }}>
+              {PLATFORM_INTRO_KO.title}
+            </p>
+            <p className="text-[11px] leading-relaxed mb-2" style={{ color: "var(--muted)" }}>
+              {PLATFORM_INTRO_KO.lead.join(" ")}
+            </p>
+            <p className="text-[11px] leading-relaxed mb-2" style={{ color: "var(--mint)" }}>
+              {PLATFORM_INTRO_KO.footnote}
+            </p>
+            <Link
+              href="/more/about"
+              className="text-[11px] font-semibold hover:underline"
+              style={{ color: "var(--text)" }}
+            >
+              Investus 소개 보기 →
+            </Link>
+          </div>
+
+          <div className="text-[11px] leading-relaxed space-y-1" style={{ color: "var(--muted)" }}>
             <p>
-              사업자등록번호: {registrationNumber}{" "}
-              <a
-                href={ftcUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-                style={{ color: "var(--mint)" }}
-              >
-                [사업자정보확인]
+              <span className="font-semibold" style={{ color: "var(--text)" }}>
+                {companyName}
+              </span>
+              {" · "}
+              {serviceName}
+            </p>
+            <p>대표자: {ceoName}</p>
+            {registrationNumber ? (
+              <p>
+                사업자등록번호: {registrationNumber}{" "}
+                <a
+                  href={ftcUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                  style={{ color: "var(--mint)" }}
+                >
+                  [사업자정보확인]
+                </a>
+              </p>
+            ) : null}
+            {address ? <p>사업장 주소: {address}</p> : null}
+            {phone ? <p>전화번호: {phone}</p> : null}
+            <p>
+              이메일:{" "}
+              <a href={`mailto:${email}`} className="hover:underline" style={{ color: "var(--mint)" }}>
+                {email}
               </a>
             </p>
-          ) : null}
-          {address ? <p>사업장 주소: {address}</p> : null}
-          {phone ? <p>전화번호: {phone}</p> : null}
-          <p>
-            이메일:{" "}
-            <a href={`mailto:${email}`} className="hover:underline" style={{ color: "var(--mint)" }}>
-              {email}
-            </a>
-          </p>
-          <p>
-            통신판매업 신고번호:{" "}
-            {mailOrderNumber || "신고 준비중"}
-          </p>
-          <p>호스팅 서비스 제공자: {hostingProvider}</p>
-          <p>개인정보보호책임자: {privacyOfficer}</p>
+            <p>
+              통신판매업 신고번호:{" "}
+              {mailOrderNumber || "신고 준비중"}
+            </p>
+            <p>호스팅 서비스 제공자: {hostingProvider}</p>
+            <p>개인정보보호책임자: {privacyOfficer}</p>
+          </div>
         </div>
 
         <p className="text-[10px] mt-4" style={{ color: "var(--muted)" }}>

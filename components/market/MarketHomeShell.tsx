@@ -19,7 +19,6 @@ import { FirstVisitBanner } from "@/components/FirstVisitBanner";
 import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 import { MorningBriefingCard } from "@/components/MorningBriefingCard";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
-import { PlatformIntro } from "@/components/PlatformIntro";
 import { ShopPreviewSection } from "@/components/ShopPreviewSection";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
@@ -147,10 +146,6 @@ export function MarketHomeShell({
           </div>
 
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
-            <PlatformIntro
-              locale={uiLocale === "ko" ? "ko" : "en"}
-              className="pt-1"
-            />
             {showFear && (
               <>
                 {isUs ? (
