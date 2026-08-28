@@ -44,7 +44,7 @@ export const SUB_PAY_METHODS: {
 ];
 
 /** 관리자 — 구독 없이 Pro(추천주식·과거 리포트) 전부 열람 */
-export const ADMIN_EMAILS = ["sunryupatners@gmail.com"] as const;
+export const ADMIN_EMAILS = ["sunryupatners@gmail.com", "pempep@naver.com"] as const;
 
 export function isAdminEmail(email?: string | null): boolean {
   if (!email) return false;
