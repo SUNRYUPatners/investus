@@ -588,7 +588,7 @@ type AuthMode = "idle" | "login" | "signup" | "reset";
 function AuthSection() {
   const t = useLocale();
   const au = t.more.auth;
-  const { user, login, signup, logout, resetPassword, loginWithOAuth } = useAuth();
+  const { user, login, signup, logout, resetPassword, loginWithOAuth, loginWithNaver } = useAuth();
   const [mode,         setMode]         = useState<AuthMode>("idle");
   const [email,        setEmail]        = useState("");
   const [pw,           setPw]           = useState("");
@@ -885,13 +885,23 @@ function AuthSection() {
               </button>
               <button
                 onClick={() => loginWithOAuth("kakao")}
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium active:opacity-70 transition-opacity"
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium active:opacity-70 transition-opacity mb-2"
                 style={{ background: "#FEE500", color: "#3C1E1E" }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="#3C1E1E" d="M12 3C6.48 3 2 6.72 2 11.28c0 2.9 1.74 5.45 4.36 6.97l-.9 3.35 3.94-2.6c.83.15 1.68.23 2.6.23 5.52 0 10-3.72 10-8.28C22 6.72 17.52 3 12 3z"/>
                 </svg>
                 카카오로 계속하기
+              </button>
+              <button
+                onClick={loginWithNaver}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium active:opacity-70 transition-opacity"
+                style={{ background: "#03C75A", color: "#fff" }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#fff" d="M16.27 4H7.73C5.22 4 3.2 6.02 3.2 8.53v6.94C3.2 17.98 5.22 20 7.73 20h8.54c2.51 0 4.53-2.02 4.53-4.53V8.53C20.8 6.02 18.78 4 16.27 4zm-1.1 11.38h-1.9l-2.2-3.42v3.42H9.17V8.62h1.9l2.2 3.42V8.62h1.9v6.76z"/>
+                </svg>
+                네이버로 계속하기
               </button>
             </div>
           )}
@@ -973,6 +983,16 @@ function AuthSection() {
               <path fill="#3C1E1E" d="M12 3C6.48 3 2 6.72 2 11.28c0 2.9 1.74 5.45 4.36 6.97l-.9 3.35 3.94-2.6c.83.15 1.68.23 2.6.23 5.52 0 10-3.72 10-8.28C22 6.72 17.52 3 12 3z"/>
             </svg>
             카카오
+          </button>
+          <button
+            onClick={loginWithNaver}
+            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-xs font-medium active:opacity-70 transition-opacity"
+            style={{ background: "#03C75A", color: "#fff" }}
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#fff" d="M16.27 4H7.73C5.22 4 3.2 6.02 3.2 8.53v6.94C3.2 17.98 5.22 20 7.73 20h8.54c2.51 0 4.53-2.02 4.53-4.53V8.53C20.8 6.02 18.78 4 16.27 4zm-1.1 11.38h-1.9l-2.2-3.42v3.42H9.17V8.62h1.9l2.2 3.42V8.62h1.9v6.76z"/>
+            </svg>
+            네이버
           </button>
         </div>
       </div>

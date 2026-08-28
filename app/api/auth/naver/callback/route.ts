@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAdminSupabase } from "@/lib/supabase";
+import { siteUrlFromRequest } from "@/lib/auth/siteUrl";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const code = searchParams.get("code");
   const state = searchParams.get("state");
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? `https://${req.headers.get("host")}`;
+  const siteUrl = siteUrlFromRequest(req);
   const errorUrl = `${siteUrl}/more`;
 
   // Validate CSRF state

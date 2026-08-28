@@ -3,29 +3,58 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getSupabase } from "@/lib/supabase";
+import type { EmailOtpType } from "@supabase/supabase-js";
 
 export default function AuthCallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
     const supabase = getSupabase();
+    let done = false;
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
-      if (event === "PASSWORD_RECOVERY") {
-        subscription.unsubscribe();
-        // Return to more page; user updates password via profile settings
-        router.replace("/more");
+    const finish = () => {
+      if (done) return;
+      done = true;
+      router.replace("/more");
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const tokenHash = params.get("token_hash");
+    const type = params.get("type") as EmailOtpType | null;
+
+    let subscription: { unsubscribe: () => void } | null = null;
+    const fallback = setTimeout(finish, 5000);
+
+    (async () => {
+      // Naver 등 커스텀 OAuth → magic link token_hash
+      if (tokenHash && type) {
+        const { error } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type });
+        if (!error) {
+          finish();
+          return;
+        }
+      }
+
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        finish();
         return;
       }
-      if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
-        subscription.unsubscribe();
-        router.replace("/more");
-      }
-    });
 
-    const fallback = setTimeout(() => router.replace("/more"), 5000);
+      const { data } = supabase.auth.onAuthStateChange((event) => {
+        if (event === "PASSWORD_RECOVERY") {
+          finish();
+          return;
+        }
+        if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
+          finish();
+        }
+      });
+      subscription = data.subscription;
+    })();
+
     return () => {
-      subscription.unsubscribe();
+      subscription?.unsubscribe();
       clearTimeout(fallback);
     };
   }, [router]);

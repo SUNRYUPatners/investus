@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { siteUrlFromRequest } from "@/lib/auth/siteUrl";
 
 export async function GET(req: NextRequest) {
   const clientId = process.env.NAVER_CLIENT_ID;
@@ -6,7 +7,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Naver login not configured" }, { status: 501 });
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? `https://${req.headers.get("host")}`;
+  const siteUrl = siteUrlFromRequest(req);
   const redirectUri = `${siteUrl}/api/auth/naver/callback`;
   const state = crypto.randomUUID();
 

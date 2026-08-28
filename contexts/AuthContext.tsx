@@ -24,6 +24,7 @@ type AuthCtx = {
   updateProfile:  (u: { nickname?: string; avatar?: string }) => Promise<void>;
   resetPassword:  (email: string) => Promise<{ ok: boolean; msg: string }>;
   loginWithOAuth: (provider: "google" | "kakao") => Promise<void>;
+  loginWithNaver:   () => void;
 };
 
 const Ctx = createContext<AuthCtx | null>(null);
@@ -149,8 +150,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
+  const loginWithNaver = () => {
+    window.location.href = "/api/auth/naver";
+  };
+
   return (
-    <Ctx.Provider value={{ user, loaded, login, signup, logout, verify, updateProfile, resetPassword, loginWithOAuth }}>
+    <Ctx.Provider value={{ user, loaded, login, signup, logout, verify, updateProfile, resetPassword, loginWithOAuth, loginWithNaver }}>
       {children}
     </Ctx.Provider>
   );
