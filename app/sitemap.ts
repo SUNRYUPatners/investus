@@ -77,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/learn/financial-statements`,   lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/dividend`,               lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/bonds`,                  lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    { url: `${base}/learn/safe-haven-etfs`,       lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/commodities`,            lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/crypto`,                 lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/macro-rates`,            lastModified: now, changeFrequency: "monthly", priority: 0.8  },

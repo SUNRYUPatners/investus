@@ -169,6 +169,7 @@ export default function SafeAssetsPage() {
             <h2 className="text-base font-bold mb-3" style={{ color: "var(--text)" }}>관련 글</h2>
             <p className="text-sm leading-relaxed">
               <Link href="/learn/crypto" style={{ color: "var(--mint)" }}>암호화폐</Link>,
+              <Link href="/learn/safe-haven-etfs" style={{ color: "var(--mint)" }}> 안전자산 탑10 해설</Link>,
               <Link href="/learn/commodities" style={{ color: "var(--mint)" }}> 원자재</Link>,
               <Link href="/learn/bonds" style={{ color: "var(--mint)" }}> 채권</Link>,
               <Link href="/learn/korea-stocks" style={{ color: "var(--mint)" }}> 한국주식</Link>,

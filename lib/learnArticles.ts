@@ -51,6 +51,16 @@ export const LEARN_ARTICLES: LearnArticle[] = [
     series: "시장별",
   },
   {
+    href: "/learn/safe-haven-etfs",
+    emoji: "💵",
+    title: "안전자산 탑10 — 달러·TLT·GLD·SGOV 해설",
+    desc: "히트맵 달러인덱스·국채·금 ETF 10개가 뭔지, 만기·금리 민감도 한 장.",
+    tag: "안전자산",
+    tagColor: "#a78bfa",
+    minutes: "12분",
+    series: "시장별",
+  },
+  {
     href: "/learn/korea-real-estate",
     emoji: "🏠",
     title: "한국 부동산 입문 — 매매·전세·정책",
