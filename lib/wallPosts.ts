@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T29AU = 1787958000000; // 2026.08.29 08:00 KST
 const T28AU = 1787871600000; // 2026.08.28 08:00 KST
 const T27AU = 1787785200000; // 2026-08-27 08:00 KST
 const T26AU = 1787698800000; // 2026-08-26 08:00 KST
@@ -90,7 +91,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T28AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T29AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -109,6 +110,61 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-29 신규 ────────────────
+  { id: 1131, symbol: "MACRO", nickname: "익명_3700", holdingLabel: "관심종목",
+    content: "워시 첫 잭슨홀 연설이 매파. 물가 개선 뚜렷하지 않다고",
+    createdAt: T29AU + 8*60_000, likes: 10, comments: 2 },
+  { id: 1132, symbol: "MACRO", nickname: "익명_3717", holdingLabel: "관심종목",
+    content: "9월 인상 확률 35.4 → 59.7. 하루 만에 기본 시나리오 바뀜",
+    createdAt: T29AU + 16*60_000, likes: 11, comments: 2 },
+  { id: 1133, symbol: "MACRO", nickname: "익명_3734", holdingLabel: "관심종목",
+    content: "2년물 4.317 +2.01%. 1년물 4.123, 5년물 4.451 다 튀었다",
+    createdAt: T29AU + 24*60_000, likes: 12, comments: 1 },
+  { id: 1134, symbol: "MACRO", nickname: "익명_3751", holdingLabel: "관심종목",
+    content: "엔 160.15. 개입 얘기 또 나오는데 일본은 미국 국채 큰손",
+    createdAt: T29AU + 32*60_000, likes: 13, comments: 2 },
+  { id: 1135, symbol: "MACRO", nickname: "익명_3768", holdingLabel: "관심종목",
+    content: "선물시장은 60%인데 다른 예측시장은 49%. 60%가 높다는 반론도 있음",
+    createdAt: T29AU + 40*60_000, likes: 14, comments: 1 },
+  { id: 1136, symbol: "NVDA", nickname: "익명_3785", holdingLabel: "관심종목",
+    content: "목표가 상향 러시. 버른스타인 315→400이 제일 크게 올림",
+    createdAt: T29AU + 48*60_000, likes: 15, comments: 2 },
+  { id: 1137, symbol: "NVDA", nickname: "익명_3802", holdingLabel: "관심종목",
+    content: "베라루빈 2027 초 15% 인상. 1GW당 50억 달러 더 든다는 계산",
+    createdAt: T29AU + 56*60_000, likes: 16, comments: 2 },
+  { id: 1138, symbol: "NVDA", nickname: "익명_3819", holdingLabel: "관심종목",
+    content: "오픈AI 자체 추론칩 지연 4.2배 낮다는데 효율은 비슷하다고",
+    createdAt: T29AU + 64*60_000, likes: 10, comments: 1 },
+  { id: 1139, symbol: "META", nickname: "익명_3836", holdingLabel: "관심종목",
+    content: "소프트뱅크 100억 달러 대출. 오픈AI 투자용 차환이라네",
+    createdAt: T29AU + 72*60_000, likes: 11, comments: 2 },
+  { id: 1140, symbol: "AMZN", nickname: "익명_3853", holdingLabel: "관심종목",
+    content: "앤트로픽 2.5조면 아마존 지분이 시총 20%. 본업은 5년 +10%",
+    createdAt: T29AU + 80*60_000, likes: 12, comments: 2 },
+  { id: 1141, symbol: "TSLA", nickname: "익명_3870", holdingLabel: "관심종목",
+    content: "사이버캡 운행구역 20 → 245제곱마일. 12배 넘게 넓어짐",
+    createdAt: T29AU + 88*60_000, likes: 13, comments: 2 },
+  { id: 1142, symbol: "TSLA", nickname: "익명_3887", holdingLabel: "관심종목",
+    content: "세미 500대 계약. 올해 75대, 내년말까지 425대 추가",
+    createdAt: T29AU + 96*60_000, likes: 14, comments: 1 },
+  { id: 1143, symbol: "TSLA", nickname: "익명_3904", holdingLabel: "관심종목",
+    content: "모델Y 일본 수입차 1위. 경차 강한 시장에서 의외다",
+    createdAt: T29AU + 104*60_000, likes: 15, comments: 1 },
+  { id: 1144, symbol: "SPCX", nickname: "익명_3921", holdingLabel: "관심종목",
+    content: "루이지애나 부지 서쪽 지반 시추. 착공 전 필수 절차",
+    createdAt: T29AU + 112*60_000, likes: 16, comments: 2 },
+  { id: 1145, symbol: "SPCX", nickname: "익명_3938", holdingLabel: "관심종목",
+    content: "군용기 위성통신 + 개인 해상 요금제. 영해 안 월 185달러",
+    createdAt: T29AU + 120*60_000, likes: 10, comments: 2 },
+  { id: 1146, symbol: "MU", nickname: "익명_3955", holdingLabel: "관심종목",
+    content: "메모리 부족 2030년 말까지라는 발언. 시장은 2028년 봤는데",
+    createdAt: T29AU + 128*60_000, likes: 11, comments: 2 },
+  { id: 1147, symbol: "MACRO", nickname: "익명_3972", holdingLabel: "관심종목",
+    content: "금 4500 깨졌고 비트코인 78000 깨졌다. 원인은 하나",
+    createdAt: T29AU + 136*60_000, likes: 12, comments: 1 },
+  { id: 1148, symbol: "MACRO", nickname: "익명_3989", holdingLabel: "관심종목",
+    content: "잭슨홀·9월 확률 59.7·엔 160·목표가 상향 한판 정리",
+    createdAt: T29AU + 144*60_000, likes: 13, comments: 1 },
   // ── 2026-08-28 신규 ────────────────
   { id: 1117, symbol: "NVDA", nickname: "익명_3400", holdingLabel: "관심종목",
     content: "정규장 +8.74%… 하루에 시총 5050억 달러 늘었다는 계산",
@@ -4050,6 +4106,79 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-29 신규 댓글 ────────────────
+  1131: [
+    { id: 1, nickname: "익명_4700", holdingLabel: "관심종목", content: "2% 목표는 바꿀 생각 없다는 말로 들림", createdAt: T29AU + 8*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4703", holdingLabel: "관심종목", content: "9월 인상은 직접 언급 안 했다는 점이 포인트", createdAt: T29AU + 8*60_000 + 6*60_000, likes: 5 },
+  ],
+  1132: [
+    { id: 1, nickname: "익명_4701", holdingLabel: "관심종목", content: "확률은 지표 하나에 또 뒤집힘", createdAt: T29AU + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4704", holdingLabel: "관심종목", content: "9월 초 고용·물가까지 봐야 결론", createdAt: T29AU + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1133: [
+    { id: 1, nickname: "익명_4702", holdingLabel: "관심종목", content: "단기가 더 오르면 곡선 눕는 구조", createdAt: T29AU + 24*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4705", holdingLabel: "관심종목", content: "2년물은 정책 기대 그대로 반영", createdAt: T29AU + 24*60_000 + 6*60_000, likes: 5 },
+  ],
+  1134: [
+    { id: 1, nickname: "익명_4703", holdingLabel: "관심종목", content: "개입은 방향을 못 바꾸고 속도만 늦춤", createdAt: T29AU + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4706", holdingLabel: "관심종목", content: "국채 팔면 미국 금리에도 영향", createdAt: T29AU + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1135: [
+    { id: 1, nickname: "익명_4704", holdingLabel: "관심종목", content: "두 시장 참여자 구성이 다르니까", createdAt: T29AU + 40*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4707", holdingLabel: "관심종목", content: "차이가 벌어질 때가 오히려 볼 만함", createdAt: T29AU + 40*60_000 + 6*60_000, likes: 5 },
+  ],
+  1136: [
+    { id: 1, nickname: "익명_4705", holdingLabel: "관심종목", content: "상향 폭보다 근거가 뭔지가 중요", createdAt: T29AU + 48*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4708", holdingLabel: "관심종목", content: "목표가는 실적 뒤에 따라오는 숫자", createdAt: T29AU + 48*60_000 + 6*60_000, likes: 5 },
+  ],
+  1137: [
+    { id: 1, nickname: "익명_4706", holdingLabel: "관심종목", content: "고객이 그 값을 받아들이는지가 관건", createdAt: T29AU + 56*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4709", holdingLabel: "관심종목", content: "투자 계획 늦추는 곳 나올 수도", createdAt: T29AU + 56*60_000 + 6*60_000, likes: 5 },
+  ],
+  1138: [
+    { id: 1, nickname: "익명_4707", holdingLabel: "관심종목", content: "특정 작업 기준 비교라 범위 확인 필요", createdAt: T29AU + 64*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4710", holdingLabel: "관심종목", content: "물량이 나와야 위협이 됨", createdAt: T29AU + 64*60_000 + 6*60_000, likes: 5 },
+  ],
+  1139: [
+    { id: 1, nickname: "익명_4708", holdingLabel: "관심종목", content: "차환이면 자기 돈이 아니라 빌린 돈", createdAt: T29AU + 72*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4711", holdingLabel: "관심종목", content: "금리 오르는 국면에 이자 부담 커짐", createdAt: T29AU + 72*60_000 + 6*60_000, likes: 5 },
+  ],
+  1140: [
+    { id: 1, nickname: "익명_4709", holdingLabel: "관심종목", content: "2.5조는 가정치라 계산도 가정", createdAt: T29AU + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4712", holdingLabel: "관심종목", content: "본업 5년 +10%가 더 무서운 숫자", createdAt: T29AU + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1141: [
+    { id: 1, nickname: "익명_4710", holdingLabel: "관심종목", content: "면적보다 안전요원 없는 운행이 핵심", createdAt: T29AU + 88*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4713", holdingLabel: "관심종목", content: "구역 넓히면 사고 한 건 무게도 커짐", createdAt: T29AU + 88*60_000 + 6*60_000, likes: 5 },
+  ],
+  1142: [
+    { id: 1, nickname: "익명_4711", holdingLabel: "관심종목", content: "인수 시점이 나뉘어 있어 확인 쉬움", createdAt: T29AU + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4714", holdingLabel: "관심종목", content: "충전 설비가 같이 깔려야 돌아감", createdAt: T29AU + 96*60_000 + 6*60_000, likes: 5 },
+  ],
+  1143: [
+    { id: 1, nickname: "익명_4712", holdingLabel: "관심종목", content: "수입차 안에서 1위라는 점은 기억해야", createdAt: T29AU + 104*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4715", holdingLabel: "관심종목", content: "월 단위라 다음 달 유지가 관건", createdAt: T29AU + 104*60_000 + 6*60_000, likes: 5 },
+  ],
+  1144: [
+    { id: 1, nickname: "익명_4713", holdingLabel: "관심종목", content: "시추는 착공 신호로 보는 게 맞음", createdAt: T29AU + 112*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4716", holdingLabel: "관심종목", content: "결과에 따라 기초 공사비가 달라짐", createdAt: T29AU + 112*60_000 + 6*60_000, likes: 5 },
+  ],
+  1145: [
+    { id: 1, nickname: "익명_4714", holdingLabel: "관심종목", content: "12해리 밖 기가당 6달러는 비싼 편", createdAt: T29AU + 120*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4717", holdingLabel: "관심종목", content: "군·항공·해운은 회선당 매출이 큼", createdAt: T29AU + 120*60_000 + 6*60_000, likes: 5 },
+  ],
+  1146: [
+    { id: 1, nickname: "익명_4715", holdingLabel: "관심종목", content: "사이클 정점 가정이 2년 밀리는 얘기", createdAt: T29AU + 128*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4718", holdingLabel: "관심종목", content: "매출 말고 영업이익률 방향 봐야", createdAt: T29AU + 128*60_000 + 6*60_000, likes: 5 },
+  ],
+  1147: [
+    { id: 1, nickname: "익명_4716", holdingLabel: "관심종목", content: "둘 다 이자 없는 자산이라 그럼", createdAt: T29AU + 136*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4719", holdingLabel: "관심종목", content: "청산 3.69억 달러가 낙폭 키웠다", createdAt: T29AU + 136*60_000 + 6*60_000, likes: 5 },
+  ],
+  1148: [
+    { id: 1, nickname: "익명_4717", holdingLabel: "관심종목", content: "이번 주는 금리 한 줄이 전부였다", createdAt: T29AU + 144*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_4720", holdingLabel: "관심종목", content: "다음 주 고용·물가 일정 체크", createdAt: T29AU + 144*60_000 + 6*60_000, likes: 5 },
+  ],
   // ── 2026-08-28 신규 댓글 ────────────────
   1117: [
     { id: 1, nickname: "익명_4617", holdingLabel: "관심종목", content: "시총 5050억은 계산 기준마다 다르던데", createdAt: T28AU + 8*60_000 + 3*60_000, likes: 4 },

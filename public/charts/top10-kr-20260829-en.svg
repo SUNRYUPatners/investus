@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061520"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#38bdf8"/><stop offset="100%" style="stop-color:#0ea5e9"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="130" height="38" rx="19" fill="#38bdf830" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="105" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#38bdf8" text-anchor="middle">TOP CAPS</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.29</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Large-cap leadership split between weak chips and firm</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">financials and autos</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">⚖️</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#38bdf8" text-anchor="middle">Sectors moved in opposite directions</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">The index fell 1.79%, but not every large cap fell with it on the same day.</text>
+  <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
+  <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Lower</text>
+  <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">Chips, bio</text>
+  <text x="270" y="496" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Samsung Biologics fell over 6%</text>
+  <text x="540" y="455" font-family="Arial Black,Arial" font-size="40" fill="#38bdf8" text-anchor="middle">&#8594;</text>
+  <rect x="600" y="356" width="420" height="168" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
+  <text x="810" y="400" font-family="Arial" font-size="20" fill="#38bdf8" text-anchor="middle">Higher</text>
+  <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#38bdf8" text-anchor="middle">Banks, autos</text>
+  <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">KB Financial and Kia advanced</text>
+  <rect x="60" y="548" width="300" height="164" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">🏦</text>
+  <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#38bdf8" text-anchor="middle">Up over 2%</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">KB Financial</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Financials were relatively strong</text>
+  <rect x="390" y="548" width="300" height="164" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">🚗</text>
+  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#38bdf8" text-anchor="middle">Up over 1%</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Kia</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Autos held up in a down market</text>
+  <rect x="720" y="548" width="300" height="164" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">🧪</text>
+  <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#38bdf8" text-anchor="middle">Down over 6%</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Samsung Biologics</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">One of the largest large-cap drops</text>
+  <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">Even on a down day, chemicals rose over 3% while textiles, apparel, food and tobacco gained 2-3%. Tech</text>
+  <text x="540" y="801" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">hardware fell over 3%, and utilities and pharma dropped around 3%.</text>
+  <rect x="60" y="878" width="960" height="140" rx="14" fill="#0a1a26" stroke="#38bdf8" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">Why it matters</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">An index is an average, so it hides sector-level temperature differences. When rate expectations move higher,</text>
+  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">financials tend to gain relative appeal while richly priced tech gets marked down first. Read the sector table next to</text>
+  <text x="540" y="984" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">the index level.</text>
+  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Top caps · sector divergence · 2026.08.29</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

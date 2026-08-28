@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.08.29 안전자산 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#f7931a"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f7931a">비트코인이 7만 8,000달러를 밑돌았습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">자정 기준 79,623.35달러에서 0.86% 내린 뒤 새벽에 주요 가격대를 내줬습니다.</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a" text-anchor="end">BTC</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">24시간 청산 금액이 3억 6,900만 달러였습니다</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">청산된 거래자는 8만 7,082명으로 집계됐습니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">청산</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">이더리움은 2,500달러 선을 내줬습니다</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">자정 기준 2,516.31달러에서 0.08% 내렸습니다.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">ETH</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#facc15"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">금 현물이 온스당 4,500달러를 밑돌았습니다</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">장중 100달러 넘게 떨어졌고 24시간 하락률은 2.3% 수준입니다.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15" text-anchor="end">GOLD</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#0f1419" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">미국 2년물 금리가 장중 4.33%까지 올랐습니다</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">4.286%로 7월 말 이후 최고를 기록한 뒤 10bp 더 올랐습니다.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8" text-anchor="end">2년물</text>
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">원인은 잭슨홀에서 나온 매파 발언 하나였습니다</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">물가에 관해 해야 할 일이 남아 있다는 취지의 발언이 나왔습니다.</text>
+  <text x="985" y="808" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa" text-anchor="end">원인</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 비트코인 7만 8,000달러 하회 · 청산 3억 6,900만 달러 · 이더리움 2,516.31달러 · 금 4,500달러 하회 · 미국 2년물 4.33%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0c1017"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#94a3b8"/><stop offset="100%" style="stop-color:#64748b"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#94a3b830" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#94a3b8" text-anchor="middle">MACRO</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.29</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">워시 연준 의장이 잭슨홀 첫 기조연설에서 물가가 충분히 내려오지</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">않으면 금리를 더 올릴 수 있다고 말했습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="355.5" y="166" width="369" height="46" rx="23" fill="#94a3b818" stroke="#94a3b8" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#94a3b8" text-anchor="middle">🌐 잭슨홀 기조연설 · 2026.08.28</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🎤</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#94a3b8" text-anchor="middle">해야 할 일이 남아 있습니다</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">물가상승률이 충분히 내려가고 있다고 확신할 수 없다면 해야 할 일이 남아 있다는 표현으로, 추가 인상</text>
+  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">가능성을 열어 두었습니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">🎯</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#94a3b8" text-anchor="middle">2%</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">물가 목표</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">목표 복귀를 정책의 중심에 두었습니다</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">📊</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#94a3b8" text-anchor="middle">54%</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">3% 이상 오른 품목 비중</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">코로나 이전 20년 평균은 32%였습니다</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">🧮</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#94a3b8" text-anchor="middle">4.1%</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">6개월 연율 물가</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">최근 개선을 추세로 보기는 이르다는</text>
+  <text x="870" y="617" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">판단입니다</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">"물가상승률이 충분히 내려가고 있다고 확신할 수 없다면 해야 할 일이 남아 있습니다." 특정 회의 결정을 미리</text>
+  <text x="540" y="716" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">알려 주는 선제적 지침은 제공하지 않겠다고 밝혔고, 인공지능 관련 투자가 2021년 이후 가장 빠른 속도로</text>
+  <text x="540" y="742" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">늘고 있다는 언급도 함께 나왔습니다.</text>
+  <rect x="60" y="848" width="960" height="144" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#94a3b8" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">연초까지 시장을 지배했던 금리 인하 기대가 사실상 정리된 발언입니다. 선제적 지침을 주지 않겠다는 것은 회의마다 지표를 보고</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">결정한다는 뜻이므로, 9월 초 발표되는 8월 고용과 소비자물가가 다음 판단 재료가 됩니다.</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">잭슨홀 · 워시 첫 기조연설 · 2026.08.29</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

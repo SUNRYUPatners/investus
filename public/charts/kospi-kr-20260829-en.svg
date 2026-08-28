@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061520"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#38bdf8"/><stop offset="100%" style="stop-color:#0ea5e9"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#38bdf830" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#38bdf8" text-anchor="middle">KOSPI</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.29</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">KOSPI closed 123.49 points lower at 6,788.88, giving up the</text>
+  <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">6,800 line</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">BELOW THE 6,800 LINE</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#38bdf8" text-anchor="middle">6,788.88</text>
+  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">The index closed above 6,900 the day before, then gave most of it back.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">📉</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#38bdf8" text-anchor="middle">-1.79%</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Index change</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">A drop of 123.49 points</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🔻</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#38bdf8" text-anchor="middle">6,780</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Session low</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Down as much as 1.91%</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🔼</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#38bdf8" text-anchor="middle">6,902</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Session high</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Recovered to just -0.15%</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">📗</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#38bdf8" text-anchor="middle">838.41</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">KOSDAQ close</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Up 0.09%, essentially flat</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">The index opened lower at 6,846.54 and swung both ways but never closed the gap</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Caution ahead of Jackson Hole combined with external policy uncertainty</text>
+  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="740" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">Strong AI chip earnings in the US the night before did not carry over. Good news failed to lift the</text>
+  <text x="540" y="765" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">index, and the driver sat outside Korea rather than inside it.</text>
+  <rect x="60" y="842" width="960" height="148" rx="14" fill="#0a1a26" stroke="#38bdf8" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">Why it matters</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Giving back a full session gain in one day suggests the rally was not built on domestic fundamentals. The 6,800 line is</text>
+  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">a psychological marker, so the first check next week is whether it is reclaimed, alongside any turn in foreign net</text>
+  <text x="540" y="948" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">buying.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">KOSPI · below 6,800 · 2026.08.29</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

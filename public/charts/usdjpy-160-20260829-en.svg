@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1600"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#facc15"/><stop offset="100%" style="stop-color:#eab308"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#facc1530" stroke="#facc15" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#facc15" text-anchor="middle">JPY</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.29</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">The dollar-yen rate pushed above 160, the weakest yen level</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">in about a month</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="238" font-family="Arial Black,Arial" font-size="86" font-weight="900" fill="#facc15" text-anchor="middle" opacity=".15">💱</text>
+  <text x="540" y="238" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#facc15" text-anchor="middle">💱</text>
+  <text x="540" y="298" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">160.15</text>
+  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">After the Jackson Hole speech, the US-Japan rate gap came back into focus and the yen</text>
+  <text x="540" y="364" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">weakened about 0.48% on the day.</text>
+  <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="402" width="300" height="220" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🇯🇵</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#facc15" text-anchor="middle">+0.48%</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Dollar-yen change</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">A higher number means a weaker</text>
+  <text x="210" y="605" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">yen</text>
+  <rect x="390" y="402" width="300" height="220" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">📅</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#facc15" text-anchor="middle">~1 month</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Since the last 160 print</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">The first time since the July 31</text>
+  <text x="540" y="605" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">joint action</text>
+  <rect x="720" y="402" width="300" height="220" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏦</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#facc15" text-anchor="middle">Treasuries</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Japan is a top holder</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">A long yen slide keeps intervention</text>
+  <text x="870" y="605" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">live</text>
+  <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="686" font-family="Arial" font-size="19" fill="#facc15" text-anchor="middle">This is the first move above 160 since the coordinated US-Japan intervention on July 31. A rising</text>
+  <text x="540" y="712" font-family="Arial" font-size="19" fill="#facc15" text-anchor="middle">dollar-yen number means more yen are needed to buy one dollar, which is yen weakness rather</text>
+  <text x="540" y="738" font-family="Arial" font-size="19" fill="#facc15" text-anchor="middle">than strength.</text>
+  <rect x="60" y="844" width="960" height="148" rx="14" fill="#1c1805" stroke="#facc15" stroke-width="1"/>
+  <text x="540" y="874" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">Why it matters</text>
+  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">A weaker yen lifts the value of Japanese holdings abroad but raises import costs. Japan is also a major holder of US</text>
+  <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Treasuries, so actual intervention can push back into US long-end yields. Watch official comments and the next Bank</text>
+  <text x="540" y="950" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">of Japan meeting.</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">FX · yen weakness · 2026.08.29</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0f00"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f7931a"/><stop offset="100%" style="stop-color:#e07c0a"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#f7931a30" stroke="#f7931a" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f7931a" text-anchor="middle">BTC</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.29</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">비트코인이 잭슨홀 매파 발언 이후 7만 8,000달러를 내줬습니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="295.5" y="160" width="489" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">24시간 청산 3억 6,900만 달러 · 8만 7,082명</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#201408" stroke="#f7931a" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#f7931a" text-anchor="middle">7만 8,000달러 하회</text>
+  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">자정 기준 79,623.35달러에서 0.86% 내린 뒤 새벽 1시 25분 무렵 기준선을 내줬습니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#201408" stroke="#f7931a" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🪙</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f7931a" text-anchor="middle">79,623</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">자정 기준 가격(달러)</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">전날보다 0.86% 낮았습니다</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#201408" stroke="#f7931a" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">💥</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f7931a" text-anchor="middle">3.69억</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">24시간 청산(달러)</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">8만 7,082명이</text>
+  <text x="408" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">정리됐습니다</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#201408" stroke="#f7931a" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🔗</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f7931a" text-anchor="middle">2,516</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이더리움(달러)</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">2,500달러를 내줬습니다</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#201408" stroke="#f7931a" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">📉</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f7931a" text-anchor="middle">218만</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">단일 최대 청산(달러)</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">한 파생상품 거래쌍에서</text>
+  <text x="872" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">나왔습니다</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">청산은 빌린 돈으로 잡은 포지션이 손실 한계를 넘겨 강제로 정리되는 것을 말합니다</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">이때 나오는 매도는 투자자 판단과 무관하므로 하락이 하락을 부르는 구조를 만듭니다</text>
+  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="740" font-family="Arial" font-size="18" fill="#f7931a" text-anchor="middle">파생상품 거래량은 함께 줄었고 비트코인 점유율은 낮아졌습니다. 새 자금이 들어오는 국면이 아니라 기존 포지션이</text>
+  <text x="540" y="765" font-family="Arial" font-size="18" fill="#f7931a" text-anchor="middle">정리되는 국면이었다는 뜻입니다.</text>
+  <rect x="60" y="842" width="960" height="148" rx="14" fill="#201408" stroke="#f7931a" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#f7931a" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">비트코인은 이자를 주지 않는 자산이라, 금리가 더 오를 수 있다는 전망이 나오면 예금과 채권의 상대 매력이 올라갑니다. 그래서</text>
+  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이날 하락의 원인은 가상자산 내부가 아니라 금리 기대에 있습니다. 다음에는 미국 2년물 금리와 현물 상장지수펀드 순유입을 함께</text>
+  <text x="540" y="948" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인하시면 됩니다.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">비트코인 · 잭슨홀 이후 · 2026.08.29</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
