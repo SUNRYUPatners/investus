@@ -128,7 +128,7 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
               ? Array.from({ length: 4 }).map((_, i) => (
                   <div key={i} className="min-w-[155px] h-[148px] rounded-2xl border animate-pulse flex-shrink-0" style={{ borderColor: "var(--border)", background: "var(--card)" }} />
                 ))
-              : recommended.map((q) => <StockCard key={q.symbol} stock={q} />)}
+              : recommended.map((q) => <StockCard key={q.symbol} stock={q} market={market} />)}
           </div>
         </section>
       )}
@@ -138,7 +138,7 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
           인기 종목
         </h2>
         <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
-          {popular.map((q) => <StockCard key={q.symbol} stock={q} />)}
+          {popular.map((q) => <StockCard key={q.symbol} stock={q} market={market} />)}
         </div>
       </section>
 

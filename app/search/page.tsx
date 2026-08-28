@@ -19,6 +19,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { SUBSCRIPTION } from "@/lib/subscription";
 import { SubscribeBlurOverlay } from "@/components/SubscribeGate";
 import { getMarketConfig } from "@/lib/markets/config";
+import { formatMarketPrice } from "@/lib/markets/formatPrice";
+import type { MarketId } from "@/lib/markets/types";
 const UP   = "var(--up)";
 const DOWN = "var(--down)";
 
@@ -29,14 +31,8 @@ const SYMBOL_REGISTRY_US = mockQuotes.map(({ symbol, name, volume, marketCap }) 
   symbol, name, volume, marketCap,
 }));
 
-function formatPrice(price: number, market: string) {
-  if (market === "kr") return Math.round(price).toLocaleString("ko-KR") + "원";
-  if (market === "safe") {
-    return price >= 100
-      ? "$" + price.toLocaleString("en-US", { maximumFractionDigits: 0 })
-      : "$" + price.toFixed(2);
-  }
-  return "$" + price.toFixed(2);
+function formatPrice(price: number, market: MarketId) {
+  return formatMarketPrice(market, price);
 }
 
 function StockRow({
@@ -50,11 +46,13 @@ function StockRow({
   hasLivePrice: boolean;
   inWatchlist: boolean;
   onToggle: () => void;
-  market: string;
+  market: MarketId;
 }) {
   const t     = useLocale();
   const pos   = stock.changePercent >= 0;
   const color = pos ? UP : DOWN;
+  const primary = market === "kr" || market === "safe" ? stock.name : stock.symbol;
+  const secondary = market === "kr" || market === "safe" ? stock.symbol.replace(/\.(KS|KQ)$/i, "") : stock.name;
 
   return (
     <div
@@ -66,14 +64,14 @@ function StockRow({
           className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
           style={{ background: "var(--border)" }}
         >
-          <span className="text-xs font-bold font-mono-num" style={{ color: "var(--text)" }}>
-            {stock.symbol.slice(0, 2)}
+          <span className="text-xs font-bold" style={{ color: "var(--text)" }}>
+            {primary.slice(0, 2)}
           </span>
         </div>
 
         <div className="flex-1 text-left min-w-0">
-          <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{stock.symbol}</p>
-          <p className="text-xs truncate" style={{ color: "var(--muted)" }}>{stock.name}</p>
+          <p className="text-sm font-bold truncate" style={{ color: "var(--text)" }}>{primary}</p>
+          <p className="text-xs truncate" style={{ color: "var(--muted)" }}>{secondary}</p>
         </div>
 
         <div className="text-right flex-shrink-0">
@@ -117,7 +115,7 @@ export default function SearchPage() {
   const cfg = getMarketConfig(market);
   const isUs = market === "us";
   const isKr = market === "kr";
-  const hidePicks = isKr;
+  const hidePicks = isKr || market === "kr-re";
   const { user } = useAuth();
   const picksLocked = SUBSCRIPTION.enabled && user?.isPro !== true;
   const [query, setQuery]     = useState("");
@@ -254,12 +252,34 @@ export default function SearchPage() {
           ? `/api/stock-search?q=${encodeURIComponent(searchQuery)}`
           : isKr
             ? `/api/kr-stock-search?q=${encodeURIComponent(searchQuery)}`
-            : null;
+            : market === "safe"
+              ? `/api/market-data?market=safe`
+              : market === "kr-re"
+                ? `/api/kr-re-regions`
+                : null;
         if (!endpoint) { setApiResults([]); setApiLoading(false); return; }
         const r = await fetch(endpoint);
-        const data = await r.json() as { symbol: string; name: string; exchange: string }[];
+        const data = await r.json();
         const localSymbols = new Set(SYMBOL_REGISTRY.map(s => s.symbol));
-        setApiResults((Array.isArray(data) ? data : []).filter(d => !localSymbols.has(d.symbol)));
+        if (market === "safe") {
+          const quotes = (data as { quotes?: { symbol: string; name: string }[] }).quotes ?? [];
+          const lq3 = searchQuery.toLowerCase();
+          setApiResults(
+            quotes
+              .filter((d) => !localSymbols.has(d.symbol) && (d.symbol.toLowerCase().includes(lq3) || d.name.toLowerCase().includes(lq3)))
+              .map((d) => ({ symbol: d.symbol, name: d.name, exchange: "SAFE" })),
+          );
+        } else if (market === "kr-re") {
+          const regions = (data as { regions?: { id: string; name: string }[] }).regions ?? [];
+          const lq3 = searchQuery.toLowerCase();
+          setApiResults(
+            regions
+              .filter((d) => !localSymbols.has(d.id) && d.name.toLowerCase().includes(lq3))
+              .map((d) => ({ symbol: d.id, name: d.name, exchange: "KR-RE" })),
+          );
+        } else {
+          setApiResults((Array.isArray(data) ? data : []).filter((d: { symbol: string }) => !localSymbols.has(d.symbol)));
+        }
       } catch { /* ignore */ }
       setApiLoading(false);
     }, 400);
@@ -291,6 +311,12 @@ export default function SearchPage() {
         <>
           <TickerTape market="kr" />
           <EcoTickerTape market="kr" />
+        </>
+      )}
+      {market === "safe" && (
+        <>
+          <TickerTape market="safe" />
+          <EcoTickerTape market="safe" />
         </>
       )}
 
@@ -388,10 +414,12 @@ export default function SearchPage() {
                   <AdFitStrip />
                 </div>
 
-                {/* 투자 대가 13F — 모바일에서만 여기 */}
+                {/* 투자 대가 13F — 미국주식만 */}
+                {isUs && (
                 <div className="lg:hidden">
                   <GuruHoldings />
                 </div>
+                )}
 
                 <div>
                   <AdFitBanner />
@@ -480,7 +508,8 @@ export default function SearchPage() {
             )}
           </div>
 
-          {/* 오른쪽: 투자대가 13F — 데스크톱 전용 sticky */}
+          {/* 오른쪽: 투자대가 13F — 미국주식 데스크톱 전용 */}
+          {isUs && (
           <div
             className="hidden lg:block lg:w-[340px] lg:flex-shrink-0 overflow-y-auto no-scrollbar"
             style={{
@@ -499,6 +528,7 @@ export default function SearchPage() {
               <AdFitStrip />
             </div>
           </div>
+          )}
 
         </div>
       </main>

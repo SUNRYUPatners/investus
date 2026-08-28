@@ -3,31 +3,19 @@
 import { useEffect, useState } from "react";
 import type { Quote } from "@/lib/api";
 import { getMarketConfig } from "@/lib/markets/config";
+import { formatMarketPrice, marketQuoteLabel } from "@/lib/markets/formatPrice";
 import type { MarketId } from "@/lib/markets/types";
-
-function formatPrice(market: MarketId, price: number): string {
-  if (market === "kr") return `₩${Math.round(price).toLocaleString("ko-KR")}`;
-  if (market === "safe") {
-    if (price >= 1000) return `$${price.toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
-    return `$${price.toFixed(2)}`;
-  }
-  return `$${price.toFixed(2)}`;
-}
-
-function displaySymbol(market: MarketId, symbol: string): string {
-  if (market === "kr") return symbol.replace(/\.(KS|KQ)$/i, "");
-  return symbol;
-}
 
 function TickerItem({ q, market }: { q: Quote; market: MarketId }) {
   const pos = q.changePercent >= 0;
+  const label = marketQuoteLabel(market, q);
   return (
     <span className="inline-flex items-center gap-2 px-5 border-r" style={{ borderColor: "var(--border)" }}>
-      <span className="text-xs font-bold font-mono-num" style={{ color: "var(--text)" }}>
-        {displaySymbol(market, q.symbol)}
+      <span className="text-xs font-bold" style={{ color: "var(--text)" }}>
+        {label}
       </span>
       <span className="text-xs font-mono-num tabular-nums" style={{ color: "var(--text)" }}>
-        {formatPrice(market, q.price)}
+        {formatMarketPrice(market, q.price)}
       </span>
       <span className="text-xs font-mono-num tabular-nums" style={{ color: pos ? "var(--up)" : "var(--down)" }}>
         {pos ? "▲" : "▼"} {Math.abs(q.changePercent).toFixed(2)}%

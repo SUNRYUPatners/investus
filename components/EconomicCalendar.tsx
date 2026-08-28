@@ -312,7 +312,7 @@ function DetailPanel({ dateStr, data, locale }: { dateStr: string; data: Calenda
 export function EconomicCalendar() {
   const localeCode = useLocaleCode();
   const market = useMarket();
-  const calMarket = market === "kr" ? "kr" : "us";
+  const calMarket = market === "kr" || market === "kr-re" ? "kr" : "us";
   // 한국시장 미리보기에서는 캘린더 UI·일정 모두 한글
   const locale = calMarket === "kr" ? "ko" : localeCode;
   const now = new Date();

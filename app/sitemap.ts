@@ -29,9 +29,20 @@ const SYMBOLS = [
 // 중복 제거
 const UNIQUE = [...new Set(SYMBOLS)];
 
+const MARKET_PATHS = ["kr", "safe", "kr-re"] as const;
+const MARKET_TABS = ["", "/wall", "/insight", "/search", "/portfolio", "/more"] as const;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.investus.kr";
   const now  = new Date();
+  const marketEntries: MetadataRoute.Sitemap = MARKET_PATHS.flatMap((m) =>
+    MARKET_TABS.map((tab) => ({
+      url: `${base}/${m}${tab}`,
+      lastModified: now,
+      changeFrequency: tab === "" ? ("always" as const) : tab === "/insight" ? ("daily" as const) : ("always" as const),
+      priority: tab === "" ? 0.95 : tab === "/insight" ? 0.9 : 0.8,
+    })),
+  );
   return [
     { url: base,                          lastModified: now, changeFrequency: "always",  priority: 1    },
     { url: `${base}/insight`,             lastModified: now, changeFrequency: "daily",   priority: 0.95 },
@@ -85,6 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/learn/fear-greed`,             lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/buffett-indicator`,      lastModified: now, changeFrequency: "monthly", priority: 0.8  },
     { url: `${base}/learn/portfolio-strategy`,     lastModified: now, changeFrequency: "monthly", priority: 0.8  },
+    ...marketEntries,
     ...UNIQUE.map((sym) => ({
       url: `${base}/stock/${sym}`,
       lastModified: now,

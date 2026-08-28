@@ -47,7 +47,7 @@ export function MarketHomeShell({
 }) {
   const cfg = getMarketConfig(market);
   const isUs = market === "us";
-  const showFear = market === "us" || market === "kr";
+  const showFear = market === "us" || market === "kr" || market === "kr-re";
   const showBuffett = market === "us";
   const uiLocale: Locale = market === "kr" || market === "kr-re" || market === "safe" ? "ko" : locale;
 
@@ -58,7 +58,7 @@ export function MarketHomeShell({
       </h1>
       <Header />
       {/* 미국·한국 홈 — 데스크탑은 티커·경제일정 가로 1줄 */}
-      {(isUs || market === "kr") && (
+      {(isUs || market === "kr" || market === "safe") && (
         <div className="lg:flex lg:items-stretch lg:border-b" style={{ borderColor: "var(--border)" }}>
           <div className="lg:flex-1 lg:min-w-0 lg:border-r" style={{ borderColor: "var(--border)" }}>
             <TickerTape market={market} />
@@ -82,7 +82,7 @@ export function MarketHomeShell({
               <TodaysGuideCard locale={uiLocale} />
             </section>
 
-            {isUs ? <PortfolioWidget /> : market !== "kr-re" ? <MarketPortfolioStub market={market} /> : null}
+            {isUs ? <PortfolioWidget /> : <MarketPortfolioStub market={market} />}
 
             {market !== "kr-re" && (
               <section className="px-4 lg:px-0 pt-3">

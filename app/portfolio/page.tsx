@@ -10,7 +10,12 @@ import {
 } from "lucide-react";
 import { getSupabase } from "@/lib/supabase";
 import type { ParsedHolding } from "@/app/api/parse-portfolio-screenshot/route";
-import { usePortfolio } from "@/hooks/usePortfolio";
+import { useMarketPortfolio } from "@/hooks/useMarketPortfolio";
+import { useMarket } from "@/contexts/MarketContext";
+import { getMarketConfig } from "@/lib/markets/config";
+import { marketHref } from "@/lib/markets/marketPath";
+import type { MarketId } from "@/lib/markets/types";
+import { formatMarketPrice } from "@/lib/markets/formatPrice";
 import { mockQuotes } from "@/lib/api";
 import type { Holding } from "@/lib/api";
 import { useLocaleCode } from "@/contexts/LocaleContext";
@@ -468,11 +473,16 @@ function ScreenshotImportSheet({ onClose, onImport, existing }: {
 
 // ── Add stock sheet ───────────────────────────────────────────────────────────
 
-function AddSheet({ onClose, onAdd, existing }: {
+function AddSheet({ onClose, onAdd, existing, market }: {
   onClose: () => void;
   onAdd: (h: Holding) => void;
   existing: string[];
+  market: MarketId;
 }) {
+  const cfg = getMarketConfig(market);
+  const symbolRegistry = [...cfg.recommended, ...cfg.popular, ...cfg.indices].filter(
+    (s, i, arr) => arr.findIndex((x) => x.symbol === s.symbol) === i,
+  );
   const [query, setQuery]     = useState("");
   const [selected, setSelected] = useState<{ symbol: string; name: string; price: number } | null>(null);
   const [shares, setShares]   = useState("");
@@ -484,8 +494,9 @@ function AddSheet({ onClose, onAdd, existing }: {
   useEffect(() => { setTimeout(() => inputRef.current?.focus(), 120); }, []);
 
   const suggestions = query.length >= 1
-    ? mockQuotes.filter((q) =>
-        (q.symbol.toLowerCase().startsWith(query.toLowerCase()) ||
+    ? (market === "us" ? mockQuotes : symbolRegistry.map((s) => ({ ...s, price: 0, change: 0, changePercent: 0, sparkline: [] })))
+        .filter((q) =>
+        (q.symbol.toLowerCase().includes(query.toLowerCase()) ||
          q.name.toLowerCase().includes(query.toLowerCase())) &&
         !existing.includes(q.symbol)
       ).slice(0, 6)
@@ -493,11 +504,31 @@ function AddSheet({ onClose, onAdd, existing }: {
 
   async function lookupTicker(sym: string) {
     const upper = sym.trim().toUpperCase();
-    if (!upper) return;
-    const known = mockQuotes.find((q) => q.symbol === upper);
+    const qLower = sym.trim();
+    if (!qLower) return;
+    const known = (market === "us" ? mockQuotes : symbolRegistry.map((s) => ({ ...s, price: 0 })))
+      .find((q) => q.symbol.toUpperCase() === upper || q.symbol === qLower || q.name.includes(qLower));
     if (known) {
+      if (market !== "us") {
+        try {
+          const res = await fetch(`/api/market-data?market=${market}`, { cache: "no-store" });
+          const data = await res.json() as { quotes?: { symbol: string; price: number }[] };
+          const live = data.quotes?.find((x) => x.symbol === known.symbol);
+          const price = live?.price ?? 0;
+          setSelected({ symbol: known.symbol, name: known.name, price });
+          setAvgCost(price > 0 ? String(Math.round(price)) : "");
+        } catch {
+          setSelected({ symbol: known.symbol, name: known.name, price: 0 });
+          setAvgCost("");
+        }
+        return;
+      }
       setSelected({ symbol: known.symbol, name: known.name, price: known.price });
       setAvgCost(known.price.toFixed(2));
+      return;
+    }
+    if (market !== "us") {
+      setErr("종목을 찾을 수 없습니다. 목록에서 선택해 주세요.");
       return;
     }
     setLooking(true); setErr("");
@@ -545,7 +576,7 @@ function AddSheet({ onClose, onAdd, existing }: {
                 <input
                   ref={inputRef}
                   type="text"
-                  placeholder="티커 입력 (예: AAPL, NVDA, TSLA)"
+                  placeholder={market === "kr" ? "종목명 또는 코드 (예: 삼성전자, 005930)" : market === "safe" ? "자산명 (예: 비트코인, BTC-USD)" : "티커 입력 (예: AAPL, NVDA, TSLA)"}
                   value={query}
                   onChange={(e) => { setQuery(e.target.value); setErr(""); }}
                   onKeyDown={(e) => e.key === "Enter" && lookupTicker(query)}
@@ -566,7 +597,9 @@ function AddSheet({ onClose, onAdd, existing }: {
                         <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{q.symbol}</p>
                         <p className="text-[11px] truncate" style={{ color: "var(--muted)" }}>{q.name}</p>
                       </div>
-                      <p className="text-sm font-mono-num tabular-nums ml-4 flex-shrink-0" style={{ color: "var(--text)" }}>${q.price.toFixed(2)}</p>
+                      <p className="text-sm font-mono-num tabular-nums ml-4 flex-shrink-0" style={{ color: "var(--text)" }}>
+                        {q.price > 0 ? formatMarketPrice(market, q.price) : "—"}
+                      </p>
                     </button>
                   ))}
                 </div>
@@ -898,7 +931,10 @@ function BrokerageSection({ locale, onImport }: { locale: string; onImport: () =
 
 export default function PortfolioPage() {
   const router                          = useRouter();
-  const { holdings, setHoldings, cur, setCur, loaded, isLoggedIn } = usePortfolio();
+  const market = useMarket();
+  const cfg = getMarketConfig(market);
+  const isUs = market === "us";
+  const { holdings, setHoldings, cur, setCur, loaded, isLoggedIn } = useMarketPortfolio(market);
   const { list: watchlist } = useWatchlist();
   const [liveMap, setLiveMap]       = useState<Record<string, LiveQ>>({});
   const [usdkrw, setUsdkrw]        = useState(1350);
@@ -916,31 +952,50 @@ export default function PortfolioPage() {
 
   const fetchLive = useCallback((syms: string[]) => {
     if (syms.length === 0) return;
-    try {
-      const raw = localStorage.getItem("market-data-cache");
-      if (!raw) return;
-      const md = JSON.parse(raw) as {
-        quotes?:  { symbol: string; price: number; changePercent: number }[];
-        indices?: { symbol: string; value: number }[];
-      };
-      const cacheMap = new Map((md.quotes ?? []).map((q) => [q.symbol, q]));
+    const applyQuotes = (quotes: { symbol: string; price: number; changePercent: number; name?: string }[]) => {
+      const cacheMap = new Map(quotes.map((q) => [q.symbol, q]));
       const map: Record<string, LiveQ> = {};
       syms.forEach((s) => {
         const q = cacheMap.get(s);
-        if (q && q.price > 0) map[s] = { symbol: s, shortName: s, price: q.price, changePercent: q.changePercent };
+        if (q && q.price > 0) {
+          map[s] = {
+            symbol: s,
+            shortName: q.name ?? s,
+            price: q.price,
+            changePercent: q.changePercent,
+          };
+        }
       });
       if (Object.keys(map).length > 0) setLiveMap(map);
-      const krw = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
-      if (krw?.value && krw.value > 100) setUsdkrw(krw.value);
+    };
+    try {
+      const raw = localStorage.getItem(cfg.marketCacheKey);
+      if (raw) {
+        const md = JSON.parse(raw) as {
+          quotes?:  { symbol: string; price: number; changePercent: number; name?: string }[];
+          indices?: { symbol: string; value: number }[];
+        };
+        applyQuotes(md.quotes ?? []);
+        const krw = (md.indices ?? []).find((i) => i.symbol === "USDKRW");
+        if (krw?.value && krw.value > 100) setUsdkrw(krw.value);
+      }
     } catch { /* ignore */ }
-  }, []);
+    if (!isUs) {
+      fetch(`/api/market-data?market=${market}`, { cache: "no-store" })
+        .then((r) => r.json())
+        .then((d: { quotes?: { symbol: string; price: number; changePercent: number; name?: string }[] }) => {
+          applyQuotes(d.quotes ?? []);
+        })
+        .catch(() => {});
+    }
+  }, [cfg.marketCacheKey, isUs, market]);
 
   useEffect(() => {
     if (!loaded) return;
     const syms = [...new Set([...holdings.map((h) => h.symbol), ...watchlist])];
     if (syms.length === 0) return;
     fetchLive(syms);
-    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") fetchLive(syms); };
+    const onStorage = (e: StorageEvent) => { if (e.key === cfg.marketCacheKey) fetchLive(syms); };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -982,7 +1037,7 @@ export default function PortfolioPage() {
             </p>
           </div>
           <button
-            onClick={() => router.push("/more")}
+            onClick={() => router.push(marketHref(market, "more"))}
             className="flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold"
             style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
             <LogIn className="w-4 h-4" />
@@ -1011,14 +1066,16 @@ export default function PortfolioPage() {
                 {locale === "ko" ? "내 포트폴리오 💼" : "My Portfolio 💼"}
               </h1>
               <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-                {locale === "ko"
-                  ? `실시간 · 1달러 = ${usdkrw.toLocaleString()}원`
-                  : `Live · $1 = ₩${usdkrw.toLocaleString()}`}
+                {isUs
+                  ? (locale === "ko"
+                    ? `실시간 · 1달러 = ${usdkrw.toLocaleString()}원`
+                    : `Live · $1 = ₩${usdkrw.toLocaleString()}`)
+                  : `${cfg.labelKo} · ${locale === "ko" ? "시장별 포트폴리오" : "Market portfolio"}`}
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <CurrencyToggle cur={cur} onChange={setCur} />
-              {holdings.length > 0 && (
+              {isUs && <CurrencyToggle cur={cur} onChange={setCur} />}
+              {holdings.length > 0 && isUs && (
                 <button onClick={() => setShowImport(true)}
                   className="w-8 h-8 flex items-center justify-center rounded-full border"
                   style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }}>
@@ -1089,12 +1146,14 @@ export default function PortfolioPage() {
                 </p>
               </div>
               <div className="flex items-center gap-3">
+                {isUs && (
                 <button onClick={() => setShowImport(true)}
                   className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold border"
                   style={{ background: "var(--card)", borderColor: "var(--border)", color: "var(--text)" }}>
                   <Camera className="w-4 h-4" />
                   {locale === "ko" ? "스크린샷으로 가져오기" : "Import from screenshot"}
                 </button>
+                )}
                 <button onClick={() => setShowAdd(true)}
                   className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold"
                   style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
@@ -1183,8 +1242,8 @@ export default function PortfolioPage() {
         </div>
       </main>
 
-      {showAdd    && <AddSheet             onClose={() => setShowAdd(false)}    onAdd={addHolding}         existing={holdings.map((h) => h.symbol)} />}
-      {showImport && <ScreenshotImportSheet onClose={() => setShowImport(false)} onImport={importHoldings} existing={holdings.map((h) => h.symbol)} />}
+      {showAdd    && <AddSheet             onClose={() => setShowAdd(false)}    onAdd={addHolding}         existing={holdings.map((h) => h.symbol)} market={market} />}
+      {showImport && isUs && <ScreenshotImportSheet onClose={() => setShowImport(false)} onImport={importHoldings} existing={holdings.map((h) => h.symbol)} />}
     </div>
   );
 }

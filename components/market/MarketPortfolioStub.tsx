@@ -8,6 +8,7 @@ import { getMarketConfig } from "@/lib/markets/config";
 import { marketHref } from "@/lib/markets/marketPath";
 import type { MarketId } from "@/lib/markets/types";
 import { useMarketPortfolio } from "@/hooks/useMarketPortfolio";
+import { formatMarketPrice } from "@/lib/markets/formatPrice";
 
 export function MarketPortfolioStub({ market }: { market: MarketId }) {
   const router = useRouter();
@@ -95,7 +96,7 @@ export function MarketPortfolioStub({ market }: { market: MarketId }) {
               </div>
               <div className="text-right">
                 <p className="text-sm font-mono font-semibold" style={{ color: "var(--text)" }}>
-                  {r.price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                  {formatMarketPrice(market, r.price)}
                 </p>
                 <p
                   className="text-[11px] font-mono font-semibold"

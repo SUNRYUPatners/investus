@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useWatchlist } from "@/hooks/useWatchlist";
+import { useMarket } from "@/contexts/MarketContext";
+import { getMarketConfig } from "@/lib/markets/config";
+import { formatMarketPrice } from "@/lib/markets/formatPrice";
 import type { Quote } from "@/lib/api";
 import { Sparkline } from "./Sparkline";
 import { Star } from "lucide-react";
@@ -15,6 +18,8 @@ type PriceData = { price: number; change: number; changePercent: number };
 
 export function WatchlistSection() {
   const t = useLocale();
+  const market = useMarket();
+  const cfg = getMarketConfig(market);
   const { list, remove } = useWatchlist();
   const [liveQuotes, setLiveQuotes]   = useState<Quote[]>([]);
   const [extraPrices, setExtraPrices] = useState<Map<string, PriceData>>(new Map());
@@ -23,7 +28,7 @@ export function WatchlistSection() {
   useEffect(() => {
     const load = () => {
       try {
-        const cached = localStorage.getItem("market-data-cache");
+        const cached = localStorage.getItem(cfg.marketCacheKey);
         if (cached) {
           const d = JSON.parse(cached) as { quotes?: Quote[] };
           if (Array.isArray(d?.quotes)) setLiveQuotes(d.quotes);
@@ -31,10 +36,10 @@ export function WatchlistSection() {
       } catch { /* ignore */ }
     };
     load();
-    const onStorage = (e: StorageEvent) => { if (e.key === "market-data-cache") load(); };
+    const onStorage = (e: StorageEvent) => { if (e.key === cfg.marketCacheKey) load(); };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
-  }, []);
+  }, [cfg.marketCacheKey]);
 
   useEffect(() => {
     const liveMap = new Map(liveQuotes.map((q) => [q.symbol, q]));
@@ -45,19 +50,39 @@ export function WatchlistSection() {
 
     missing.forEach((sym) => fetchedRef.current.add(sym));
 
-    fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`)
+    if (market === "us") {
+      fetch(`/api/guru-prices?symbols=${encodeURIComponent(missing.join(","))}`)
+        .then((r) => r.json())
+        .then((data: Record<string, PriceData>) => {
+          setExtraPrices((prev) => {
+            const next = new Map(prev);
+            for (const sym of missing) {
+              if (data[sym]?.price > 0) next.set(sym, data[sym]);
+            }
+            return next;
+          });
+        })
+        .catch(() => {});
+      return;
+    }
+
+    fetch(`/api/market-data?market=${market}`, { cache: "no-store" })
       .then((r) => r.json())
-      .then((data: Record<string, PriceData>) => {
+      .then((d: { quotes?: Quote[] }) => {
+        const quotes = d.quotes ?? [];
         setExtraPrices((prev) => {
           const next = new Map(prev);
           for (const sym of missing) {
-            if (data[sym]?.price > 0) next.set(sym, data[sym]);
+            const q = quotes.find((x) => x.symbol === sym);
+            if (q && q.price > 0) {
+              next.set(sym, { price: q.price, change: q.change, changePercent: q.changePercent });
+            }
           }
           return next;
         });
       })
       .catch(() => {});
-  }, [list, liveQuotes, extraPrices]);
+  }, [list, liveQuotes, extraPrices, market]);
 
   if (list.length === 0) return null;
 
@@ -84,6 +109,9 @@ export function WatchlistSection() {
             ? { price: stock.price, change: stock.change, changePercent: stock.changePercent }
             : extra ?? null;
 
+          const displayName = stock?.name ?? sym;
+          const displaySymbol = market === "kr" ? sym.replace(/\.(KS|KQ)$/i, "") : sym;
+
           if (!priceData) {
             return (
               <Link
@@ -100,7 +128,7 @@ export function WatchlistSection() {
                   <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
                 </button>
                 <div className="mb-2 pr-5">
-                  <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>{sym}</p>
+                  <p className="text-sm font-bold truncate" style={{ color: "var(--text)" }}>{displayName}</p>
                   <p className="text-[10px]" style={{ color: "var(--muted)" }}>{t.watchlist.loading}</p>
                 </div>
                 <div className="h-[28px]" />
@@ -132,11 +160,11 @@ export function WatchlistSection() {
               </button>
 
               <div className="mb-2 pr-5">
-                <p className="text-sm font-bold font-mono-num" style={{ color: "var(--text)" }}>
-                  {sym}
+                <p className="text-sm font-bold truncate max-w-[100px] lg:max-w-full" style={{ color: "var(--text)" }}>
+                  {market === "kr" || market === "safe" ? displayName : displaySymbol}
                 </p>
                 <p className="text-[10px] truncate max-w-[100px] lg:max-w-full" style={{ color: "var(--muted)" }}>
-                  {stock?.name ?? sym}
+                  {market === "kr" || market === "safe" ? displaySymbol : displayName}
                 </p>
               </div>
 
@@ -144,7 +172,7 @@ export function WatchlistSection() {
 
               <div className="mt-1.5 flex items-end justify-between gap-1">
                 <p className="text-sm font-bold font-mono-num tabular-nums truncate min-w-0" style={{ color: "var(--text)" }}>
-                  ${priceData.price.toFixed(2)}
+                  {formatMarketPrice(market, priceData.price)}
                 </p>
                 <p className="text-xs font-mono-num flex-shrink-0" style={{ color }}>
                   {pos ? "+" : ""}{priceData.changePercent.toFixed(2)}%
