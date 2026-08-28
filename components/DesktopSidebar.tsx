@@ -142,8 +142,8 @@ export function DesktopSidebar() {
             )}
           </>
         )}
-        <p className="text-[10px] text-center font-medium leading-relaxed" style={{ color: "var(--muted)" }}>
-          AI 기반 차세대 자산관리(WM) 핀테크 플랫폼
+        <p className="text-[10px] text-center font-semibold tracking-wide leading-relaxed" style={{ color: "var(--muted)" }}>
+          investus x SRP
         </p>
       </div>
     </aside>
