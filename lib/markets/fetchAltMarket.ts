@@ -6,6 +6,7 @@ import type { FutureItem, IndexQuote, Quote } from "@/lib/api";
 import { getMarketConfig, KR_TOP10, KR_HEATMAP, SAFE_ASSETS, SAFE_MACRO_INDICES, type MarketSymbol } from "./config";
 import type { MarketId } from "./types";
 import type { RegionCell } from "./krReRegions";
+import { fetchFuturesMap } from "./fetchFuturesMap";
 
 function spark(price: number, changePercent: number): number[] {
   const n = 9;
@@ -238,26 +239,16 @@ export async function fetchAltMarketData(market: MarketId): Promise<AltMarketPay
       const n = heatMap.get(s.symbol) ?? heatMap.get(code);
       if (n && n.price > 0) heatmapQuotes.push(toQuote(s, n));
     }
-    return { indices, quotes, futures: [], liveAt: Date.now(), heatmapQuotes };
+    const futures = await fetchFuturesMap();
+    return { indices, quotes, futures, liveAt: Date.now(), heatmapQuotes };
   }
 
   // safe
-  const { quotes, indices } = await liveSafeQuotes();
+  const [{ quotes, indices }, futures] = await Promise.all([
+    liveSafeQuotes(),
+    fetchFuturesMap(),
+  ]);
   if (quotes.length === 0 && indices.length === 0) throw new Error("safe: no live quotes");
-
-  const futures: FutureItem[] = quotes.map((q) => ({
-    symbol: q.symbol,
-    name: q.name,
-    price: q.price,
-    change: q.change,
-    changePercent: q.changePercent,
-    group:
-      q.symbol.includes("USD") || q.symbol.startsWith("BTC") || q.symbol.startsWith("ETH") || q.symbol.startsWith("SOL")
-        ? "암호화폐"
-        : q.symbol.includes("=F")
-          ? "현물"
-          : "안전자산",
-  }));
 
   return { indices, quotes, futures, liveAt: Date.now() };
 }

@@ -159,7 +159,7 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
         {(cfg.heatmap === "safe6" || cfg.heatmap === "safe10") && <SafeAssetsHeatmap quotes={quotes} />}
       </section>
 
-      {market === "us" && futures.length > 0 && (
+      {(market === "us" || market === "kr" || market === "safe") && futures.length > 0 && (
         <section className="px-4 lg:px-0 pt-5">
           <FuturesHeatmap items={futures} />
         </section>
