@@ -11,37 +11,39 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.28</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">스페이스X 시가총액 1조 8,260억 달러·</text>
-  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">1조 달러 이상 51일째입니다</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">스페이스X 주가가 매력적인 수준이라는 평가와 함께 2033년 매출</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">3조 5,000억 달러 전망이 나왔습니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <rect x="420" y="168" width="240" height="36" rx="18" fill="#c084fc40" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="192" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">BREAKING</text>
-  <text x="540" y="280" font-family="Arial Black,Arial" font-size="64" font-weight="900" fill="#c084fc" text-anchor="middle">$1,826B</text>
-  <text x="540" y="340" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">시가총액 1조 8,260억 달러, 1조 달러 이상 51일. 발행가 135(+2%), 표기 150(-8%), ATH</text>
-  <text x="540" y="368" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">226, 거래대금 약 70억.</text>
+  <text x="540" y="280" font-family="Arial Black,Arial" font-size="64" font-weight="900" fill="#c084fc" text-anchor="middle">$3.5T</text>
+  <text x="540" y="340" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">2033년 무렵 매출 3조 5,000억 달러 전망입니다. 엔비디아 최근 12개월 매출의 약 11.5배이며,</text>
+  <text x="540" y="368" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">현재 주가는 매력적이라는 평가가 함께 나왔습니다.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">💎</text>
-  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">$1.8T</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">시가총액</text>
-  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">51일 $1T+</text>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">💰</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">$3.5T</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">매출 전망</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">2033년 무렵 목표</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">💵</text>
-  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">$135</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">발행가</text>
-  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">+2%</text>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">⚖️</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">11.5배</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">엔비디아 대비</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">최근 12개월 매출 기준</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📊</text>
-  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">$7B</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">거래대금</text>
-  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">ATH $226</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">저평가</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">현재 주가 평가</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">비상장 거래 기준</text>
   <rect x="60" y="630" width="960" height="210" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="680" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">"시가총액 1조 8,260억 달러, 1조 달러 이상 51일째입니다. 발행가 135달러, 최초 표기 150(-8%), 사상 최고</text>
-  <text x="540" y="706" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">226, 거래대금 약 70억. 비상장 mark는 공개 시장과 다를 수 있으니 유동성과 발행가를 함께 보세요."</text>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">"현재 스페이스X 주가가 매력적인 수준이라는 평가가 나왔습니다. 2033년 무렵 매출은 약 3조 5,000억 달러로</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">언급됐고, 엔비디아 최근 12개월 매출의 약 11.5배 규모입니다. 7년 뒤 목표이므로 가입자와 정부 계약으로</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">검증하시기 바랍니다."</text>
   <rect x="60" y="860" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">우주·위성 내러티브의 밸류 anchor입니다. 상장 전까지 mark discount를 유지하시면 됩니다.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · $1.8T 밸류 · 2026.08.28</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기 매출 전망은 방향을 보여 주는 자료이지 실적 추정치가 아닙니다. 엔비디아 최근 12개월 매출의 11.5배라는 비교는 기대의 크기를</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">보여 주지만 사업 구조가 달라 단순 비교는 어렵습니다. 발사 빈도와 위성 가입자, 정부 계약을 단계별로 확인하시면 됩니다.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · 2033년 매출 전망 · 2026.08.28</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

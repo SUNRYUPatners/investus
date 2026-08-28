@@ -11,25 +11,28 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.28</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Grok Think Fast 2.0 #1 speech-to-speech, controls</text>
-  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">car/nav/music</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Tesla Semi rollout set for September 24 with a 50,000 per</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">year plant</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="230" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">#1 S2S</text>
-  <text x="540" y="280" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">#1 in speech-to-speech. Controls vehicle, settings, navigation, and music by voice.</text>
+  <text x="540" y="230" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">Sep 24</text>
+  <text x="540" y="280" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">The Semi rollout event is set for September 24, with the Nevada plant targeting 50,000 units</text>
+  <text x="540" y="306" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">per year.</text>
   <rect x="80" y="320" width="920" height="240" rx="18" fill="#0f172a" stroke="#4ade80" stroke-width="2"/>
-  <text x="540" y="400" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">"Grok Think Fast 2.0 ranks #1 in speech-to-speech. It controls vehicle,</text>
-  <text x="540" y="430" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">settings, navigation, and music without text in the middle. Bench rank and</text>
-  <text x="540" y="460" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">in-car satisfaction can differ—watch OTA rollout."</text>
+  <text x="540" y="400" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">"The Tesla Semi rollout event is set for September 24. The Nevada plant has</text>
+  <text x="540" y="430" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">been under construction since April targeting 50,000 units a year, and two</text>
+  <text x="540" y="460" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">logistics operators ordered 870 trucks. Packs are 822 kWh with a dedicated</text>
+  <text x="540" y="490" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">charging network."</text>
   <rect x="120" y="590" width="400" height="120" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="320" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">#1</text>
-  <text x="320" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Speech-to-speech</text>
+  <text x="320" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">50,000</text>
+  <text x="320" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Units per year</text>
   <rect x="560" y="590" width="400" height="120" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="760" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">4-in-1</text>
-  <text x="760" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Car·nav·music</text>
+  <text x="760" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">870</text>
+  <text x="760" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Trucks ordered</text>
   <rect x="60" y="740" width="960" height="200" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="780" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why this matters</text>
-  <text x="540" y="820" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">In-car AI competes with phone assistants. Separate leg from robotaxi. Track OTA scope.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Grok Think Fast 2.0 · 2026.08.28</text>
+  <text x="540" y="820" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Heavy trucks use several times more battery per unit than cars, and charging time drives route planning. Closing the</text>
+  <text x="540" y="844" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">gap between 50,000 units of capacity and 870 orders is the key, with driverless operation a long term goal.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Semi September 24 · 2026.08.28</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
 </svg>

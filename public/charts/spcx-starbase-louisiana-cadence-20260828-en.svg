@@ -11,35 +11,38 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.28</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Louisiana Starbase: 12+ towers, 30+ Starship/day</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Ship 40 inspected off Christmas Island, tile samples</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">collected</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <rect x="420" y="168" width="240" height="36" rx="18" fill="#c084fc40" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="192" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">BREAKING</text>
-  <text x="540" y="280" font-family="Arial Black,Arial" font-size="64" font-weight="900" fill="#c084fc" text-anchor="middle">30+/day</text>
-  <text x="540" y="340" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">12+ launch towers, 30+ Starship per day. Starship 4 targets 2M+ tons/year to orbit.</text>
+  <text x="540" y="280" font-family="Arial Black,Arial" font-size="64" font-weight="900" fill="#c084fc" text-anchor="middle">Ship 40</text>
+  <text x="540" y="340" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">Ship 40 was inspected in waters off Christmas Island. Heat shield tile samples were</text>
+  <text x="540" y="368" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">collected and will feed reentry improvements.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🗼</text>
-  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">12+</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Towers</text>
-  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Launch pads</text>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🛰️</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">Ship 40</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Inspected</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Off Christmas Island</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🚀</text>
-  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">30+/d</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Starship</text>
-  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Cadence</text>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🔥</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">Tiles</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Samples taken</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Damage analysis</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">⚖️</text>
-  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">2M+ t</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Per year</text>
-  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Starship 4</text>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🔁</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#c084fc" text-anchor="middle">Reentry</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Improvements</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Next flights</text>
   <rect x="60" y="630" width="960" height="210" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="680" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">"Louisiana Starbase targets 12+ towers and 30+ Starships per day. Starship 4 aims for 2M+</text>
-  <text x="540" y="706" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">tons/year to orbit. Separate plans from permits and actual flight rate."</text>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">"Ship 40 was inspected off Christmas Island. Heat shield tile samples were collected, showing</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">which positions took damage, and reentry improvements are planned on that basis."</text>
   <rect x="60" y="860" width="960" height="100" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Upstream of satellite and cargo cost curves. Track permits vs flight rate.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Louisiana cadence · 2026.08.28</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Reentry reliability gates reuse, and reuse sets launch cost. Sample collection is the start of analysis, so watch</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">whether damage actually falls on the next flight.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Ship 40 inspection · 2026.08.28</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
 </svg>

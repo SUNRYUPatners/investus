@@ -20,73 +20,73 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-08-28 신규 (14개 · 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -917, alias: "성수 너구리 #15", symbol: "NVDA",
-    content: "엔비디아가 정규장에서 8.74% 급등하며 나스닥 +1.57%, S&P500 +0.72%로 마감했습니다.\n시간외 -2%와 정규장 급등이 같은 주에 공존할 수 있다는 점이 핵심입니다. 3분기 매출 전망 1,080억 달러를 확인하시기 바랍니다.",
+    content: "엔비디아가 실적 발표 다음 정규장에서 8.74% 올라 하루 만에 시가총액이 3,600억~5,050억 달러 늘었습니다.\n이 상승분이 같은 날 미국 시장 전체 상승의 약 77%를 차지했습니다. 회계 2분기 데이터센터 매출 890억 2,000만 달러와 3분기 전망 1,080억 달러를 확인하시기 바랍니다.",
     likes: 11, comments: 2, created_at: "2026-08-28T00:00:00.000Z", liked: false,
   },
   {
-    id: -918, alias: "한남 재규어 #27", symbol: "MACRO",
-    content: "오늘 잭슨홀에서 워시 연준 의장의 기조연설이 예정돼 있습니다.\n30년물 국채 금리 5.31%와 겹치는 구간이므로, 인플레이션·추가 금리 인상 가능성에 대한 단서를 찾을 것으로 보입니다.",
+    id: -918, alias: "한남 재규어 #27", symbol: "META",
+    content: "앤트로픽의 기업공개 가치가 2조 달러까지 거론되고 있습니다.\n다만 메타가 자체 도구를 늘리거나 다른 모델 사용을 확대하면 상장 전에 앤트로픽 매출이 줄어들 수 있다는 지적도 함께 나옵니다.",
     likes: 12, comments: 2, created_at: "2026-08-28T00:07:00.000Z", liked: false,
   },
   {
-    id: -919, alias: "압구정 치타 #44", symbol: "MACRO",
-    content: "미국 전력망 보호 행정명령이 전력기기·변압기주를 들썩이게 했습니다.\n미국 현지 생산 거점을 둔 업체의 경쟁력이 부각됐으며, 한국 전력기기주도 같은 날 강세를 보였습니다.",
+    id: -919, alias: "압구정 치타 #44", symbol: "SPCX",
+    content: "스페이스X 주가가 매력적인 수준이라는 평가와 함께 2033년 무렵 매출 3조 5,000억 달러 전망이 제시됐습니다.\n엔비디아 최근 12개월 매출의 약 11.5배 규모이므로, 위성 가입자와 정부 계약으로 검증하시기 바랍니다.",
     likes: 13, comments: 1, created_at: "2026-08-28T00:14:00.000Z", liked: false,
   },
   {
-    id: -920, alias: "여의도 수리 #28", symbol: "MACRO",
-    content: "30년물 국채 금리가 5.31%까지 올라 장기 금리 부담이 커졌습니다.\n재정·발행 우려와 연준 메시지가 겹치는 구간이므로, 잭슨홀 연설과 함께 보시기 바랍니다.",
+    id: -920, alias: "여의도 수리 #28", symbol: "SPCX",
+    content: "스타십 40호기가 크리스마스섬 인근 해상에서 점검되고 내열 타일 시료가 회수됐습니다.\n손상 위치를 특정하면 개선 범위를 좁힐 수 있으며, 재진입 신뢰도는 기체 재사용과 발사 단가로 이어집니다.",
     likes: 14, comments: 2, created_at: "2026-08-28T00:21:00.000Z", liked: false,
   },
   {
-    id: -921, alias: "삼성동 올빼미 #19", symbol: "MACRO",
-    content: "비트코인은 약 78,800달러 부근에서 잭슨홀을 앞두고 관망했습니다.\n위험자산·유동성·달러 방향에 민감하게 반응할 이벤트이므로, ETF 플로우와 DXY를 같이 추적하시면 됩니다.",
+    id: -921, alias: "삼성동 올빼미 #19", symbol: "SPCX",
+    content: "우주군이 군용기용 위성통신을 스페이스X 단독 공급으로 발주했습니다.\n전 세계 통신과 하향 500Mbps·상향 100Mbps가 조건이며, 기본 계약은 2027년 7월까지, 2028년 7월까지 연장 선택권이 포함됐습니다.",
     likes: 15, comments: 1, created_at: "2026-08-28T00:28:00.000Z", liked: false,
   },
   {
     id: -922, alias: "광화문 여우 #62", symbol: "MACRO",
-    content: "한국 증시도 엔비디아 후속과 전력기기 강세로 7,000선을 재시도했습니다.\n코스피 6,984.95(+1.05%)로 마감했으며, 장중 7,000 터치 후 되돌림이 나왔습니다.",
+    content: "외국인의 미국 주식 순매수가 최근 1년 동안 8,000억 달러를 넘어 1986년 이후 가장 큰 규모가 됐습니다.\n수급은 상승의 배경이면서 되돌림의 조건이므로, 월별 유입 흐름과 달러 방향을 함께 보시기 바랍니다.",
     likes: 11, comments: 1, created_at: "2026-08-28T00:35:00.000Z", liked: false,
   },
   {
-    id: -923, alias: "마포 살쾡이 #08", symbol: "SPCX",
-    content: "스페이스X 시가총액 $1,826B, 51일 $1T+.\nprivate mark와 상장가는 다를 수 있으므로, volume과 일정 지연을 추적하시면 됩니다.",
+    id: -923, alias: "마포 살쾡이 #08", symbol: "TSLA",
+    content: "사이버캡 전면 조명이 색을 바꿔 호출한 차량을 군중 속에서 찾도록 설계됐습니다.\n무인 차량은 안내해 줄 사람이 없으므로 승객 식별이 운영 효율과 직접 연결되며, 탑승 대기 시간이 줄면 회전율이 올라갑니다.",
     likes: 12, comments: 1, created_at: "2026-08-28T00:42:00.000Z", liked: false,
   },
   {
     id: -924, alias: "판교 늑대 #90", symbol: "TSLA",
-    content: "로보택시 6개 도시 16시간 운행.\nunsupervised fleet growth는 긍정적이나, 유료 마일로 검증하시기 바랍니다.",
+    content: "테슬라 세미의 본격 출시 행사가 9월 24일로 예정됐습니다.\n네바다 공장은 연 5만 대 생산 능력을 목표로 하고 선주문은 870대가 확인됐습니다. 배터리는 822kWh이며 전용 충전망 구축이 관건입니다.",
     likes: 13, comments: 2, created_at: "2026-08-28T00:49:00.000Z", liked: false,
   },
   {
     id: -925, alias: "분당 매 #31", symbol: "META",
-    content: "5GW excess compute resale by 2030 시나리오.\n$38B/GW capex, 38% ROI는 모델이므로 가이던스와 분리해 보시면 됩니다.",
+    content: "메타는 앤트로픽 사용을 줄이겠다고 밝혔지만 실제로는 매달 수억 달러를 계속 쓰고 있습니다.\n자체 도구로 전환하면 비용이 사용료에서 인프라 투자로 옮겨 가므로, 총액이 줄어드는지를 확인하시면 됩니다.",
     likes: 14, comments: 1, created_at: "2026-08-28T00:56:00.000Z", liked: false,
   },
   {
-    id: -926, alias: "해운대 고래 #03", symbol: "GOOGL",
-    content: "TPU v8이 broader AI market을 겨냥합니다.\nGCP pricing·availability가 채택 관건입니다.",
-    likes: 15, comments: 0, created_at: "2026-08-28T01:03:00.000Z", liked: false,
+    id: -926, alias: "해운대 고래 #03", symbol: "MU",
+    content: "마이크론이 미국 내 인공지능·첨단 연산 연구시설에 100억 달러를 추가 투자하겠다고 밝혔습니다.\n기존에 발표한 2,500억 달러 약속에 더해지는 금액이며, 생산 설비가 아니라 연구 기능에 배분됩니다.",
+    likes: 15, comments: 0, created_at: "2026-08-28T00:63:00.000Z", liked: false,
   },
   {
     id: -927, alias: "송파 독수리 #66", symbol: "MACRO",
-    content: "미국 은행 미실현손실 $511.7B, 2분기 연속 증가.\nDC debt·30Y 5.31%와 같은 macro screen입니다.",
-    likes: 11, comments: 2, created_at: "2026-08-28T01:10:00.000Z", liked: false,
+    content: "재무장관은 미국의 차입 비용을 낮추고 싶다는 뜻을 밝혔지만 채권시장은 반대 방향으로 움직였습니다.\n장기 금리는 발행 물량과 물가 기대, 재정 지속성으로 결정되므로 정책 의도만으로는 방향이 바뀌지 않습니다.",
+    likes: 11, comments: 2, created_at: "2026-08-28T00:70:00.000Z", liked: false,
   },
   {
-    id: -928, alias: "인천 갈매기 #52", symbol: "TSLA",
-    content: "Cybertruck +$5,000 price hike.\n주문·cancel율이 demand elasticity test입니다.",
-    likes: 12, comments: 1, created_at: "2026-08-28T01:17:00.000Z", liked: false,
+    id: -928, alias: "인천 갈매기 #52", symbol: "SPCX",
+    content: "대한항공이 9월 초부터 저궤도 위성 기반 기내 와이파이를 무료로 제공합니다.\n국내 항공사 가운데 처음이며, 게임과 영상 통화까지 가능한 속도를 제시했습니다. 항공 부문은 단가가 높은 시장입니다.",
+    likes: 12, comments: 1, created_at: "2026-08-28T00:77:00.000Z", liked: false,
   },
   {
-    id: -929, alias: "역삼 판다 #77", symbol: "AI",
-    content: "Anthropic–Nscale $45B, 460MW, Vera Rubin, online late next year.\nMW energize가 gating item입니다.",
-    likes: 13, comments: 2, created_at: "2026-08-28T01:24:00.000Z", liked: false,
+    id: -929, alias: "역삼 판다 #77", symbol: "NVDA",
+    content: "엔비디아 중앙처리장치 매출이 2028 회계연도에 두 배 이상 늘어날 것으로 전망됩니다.\n서버를 통째로 공급하는 방식이 늘면서 부품 선택권이 공급자 쪽으로 옮겨 가고 있으며, 기존 업체는 점유율 압박을 받습니다.",
+    likes: 13, comments: 2, created_at: "2026-08-28T00:84:00.000Z", liked: false,
   },
   {
-    id: -930, alias: "종로 까치 #41", symbol: "NVDA",
-    content: "오늘 bundle: NVDA +8.74%, Jackson Hole Warsh, grid EO, 30Y 5.31%, BTC ~$78.8K, KOSPI 7K retest.\n실물 AI capex와 financial overlay를 함께 보시면 됩니다.",
-    likes: 14, comments: 1, created_at: "2026-08-28T01:31:00.000Z", liked: false,
+    id: -930, alias: "종로 까치 #41", symbol: "MACRO",
+    content: "오늘 함께 보실 항목은 엔비디아 8.74% 급등, 잭슨홀 워시 연준 의장 연설, 미국 전력망 보호 행정명령입니다.\n30년물 국채 금리 5.31%, 비트코인 약 78,800달러, 코스피 6,984.95의 7,000선 재시도도 같은 화면입니다.",
+    likes: 14, comments: 1, created_at: "2026-08-28T00:91:00.000Z", liked: false,
   },
   // ── 2026-08-27 업데이트 (14개 · 한글 존댓말 · 구조 혼합) ──────────────────────
   {
@@ -7193,25 +7193,25 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   [-917]: [
-    { alias: "댓글_280917", content: "정규장 +8.74% vs AH -2% 해석", created_at: "2026-08-28T00:10:00.000Z" },
+    { alias: "댓글_280917", content: "시가총액 증가폭이 기준에 따라 달라지는 이유가 있을까요", created_at: "2026-08-28T00:10:00.000Z" },
   ],
   [-918]: [
-    { alias: "댓글_280918", content: "워시 연설 매파 나올까요", created_at: "2026-08-28T00:10:00.000Z" },
+    { alias: "댓글_280918", content: "2조 달러는 어디까지 근거가 있는 숫자일까요", created_at: "2026-08-28T00:10:00.000Z" },
   ],
   [-920]: [
-    { alias: "댓글_280920", content: "5.31% 30Y와 잭슨홀", created_at: "2026-08-28T00:10:00.000Z" },
+    { alias: "댓글_280920", content: "내열 타일 개선이 다음 비행에 바로 반영될까요", created_at: "2026-08-28T00:10:00.000Z" },
   ],
   [-921]: [
-    { alias: "댓글_280921", content: "78,800 BTC 잭슨홀 민감도", created_at: "2026-08-28T00:10:00.000Z" },
+    { alias: "댓글_280921", content: "연장 선택권 행사 가능성은 어느 정도일까요", created_at: "2026-08-28T00:10:00.000Z" },
   ],
   [-924]: [
-    { alias: "댓글_280924", content: "로보택시 유료 마일 시점", created_at: "2026-08-28T00:10:00.000Z" },
+    { alias: "댓글_280924", content: "충전망 없이 인도 대수가 늘어날 수 있을까요", created_at: "2026-08-28T00:10:00.000Z" },
   ],
   [-927]: [
-    { alias: "댓글_280927", content: "5117억 미실현 추세", created_at: "2026-08-28T00:10:00.000Z" },
+    { alias: "댓글_280927", content: "만기 구성을 바꾸면 평균 비용이 내려갈까요", created_at: "2026-08-28T00:10:00.000Z" },
   ],
   [-929]: [
-    { alias: "댓글_280929", content: "460MW 전력 허가 일정", created_at: "2026-08-28T00:10:00.000Z" },
+    { alias: "댓글_280929", content: "중앙처리장치 매출이 따로 공개될까요", created_at: "2026-08-28T00:10:00.000Z" },
   ],
   [-903]: [
     { alias: "댓글_270903", content: "3분기 가이던스가 시간외 약세의 원인일까요", created_at: "2026-08-27T00:10:00.000Z" },

@@ -11,35 +11,39 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.28</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">BREAKING: US bank unrealized losses $511.7B</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Treasury wants lower borrowing costs, the bond market</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">disagrees</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <rect x="420" y="168" width="240" height="36" rx="18" fill="#94a3b840" stroke="#94a3b8" stroke-width="2"/>
   <text x="540" y="192" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#94a3b8" text-anchor="middle">BREAKING</text>
-  <text x="540" y="280" font-family="Arial Black,Arial" font-size="64" font-weight="900" fill="#94a3b8" text-anchor="middle">$511.7B</text>
-  <text x="540" y="340" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">Unrealized losses $511.7B, up two prior quarters. Bond marks and rate sensitivity.</text>
+  <text x="540" y="280" font-family="Arial Black,Arial" font-size="64" font-weight="900" fill="#94a3b8" text-anchor="middle">Rate gap</text>
+  <text x="540" y="340" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">Policy wants lower borrowing costs, but the bond market moved the other way as it</text>
+  <text x="540" y="368" font-family="Arial" font-size="22" fill="#e5e7eb" text-anchor="middle">priced issuance volume and fiscal burden.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
 
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
-  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏦</text>
-  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">$511.7B</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Unrealized</text>
-  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">All banks</text>
+  <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏛️</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">Policy</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Lower borrowing cost</text>
+  <text x="210" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Interest burden</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
-  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">📉</text>
-  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">2Q</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Consecutive</text>
-  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Increase</text>
+  <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">📈</text>
+  <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">Market</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Upward pressure</text>
+  <text x="540" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Issuance·fiscal</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
-  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📊</text>
-  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">Bonds</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Mark loss</text>
-  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">HTM·AFS</text>
+  <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">⚖️</text>
+  <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#94a3b8" text-anchor="middle">Gap</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Intent vs outcome</text>
+  <text x="870" y="588" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Long end pressure</text>
   <rect x="60" y="630" width="960" height="210" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="680" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">"US bank unrealized losses hit $511.7B, rising two quarters in a row. Paper losses on bonds—</text>
-  <text x="540" y="706" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">not yet sold. Rates and AI financing capacity sit on the same screen."</text>
+  <text x="540" y="680" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">"The Treasury secretary wants lower US borrowing costs. Yet yields are set by issuance volume,</text>
+  <text x="540" y="706" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">inflation expectations, and fiscal sustainability rather than intent. When policy and market diverge,</text>
+  <text x="540" y="732" font-family="Arial" font-size="19" fill="#94a3b8" text-anchor="middle">long end volatility rises."</text>
   <rect x="60" y="860" width="960" height="100" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="1"/>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Macro overlay. Separate marks from deposit flight. Watch quarterly bank filings.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">MACRO · unrealized losses · 2026.08.28</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Long yields serve as the discount rate for equity valuation. Intent alone rarely turns the trend, so track the</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">maturity mix of issuance plans alongside long end yields.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">MACRO · policy vs yields · 2026.08.28</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE</text>
 </svg>

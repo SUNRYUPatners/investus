@@ -11,25 +11,26 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.28</text>
-  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">그록 Think Fast 2.0이 음성 대화 1위로 올라 차량·설정·내비·</text>
-  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">음악을 제어합니다</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">테슬라 세미가 9월 24일 행사에서 본격 출시되고 연 5만 대 생산</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">공장이 준비됐습니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="230" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">#1 S2S</text>
-  <text x="540" y="280" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">음성 대화(speech-to-speech) 1위. 차량·설정·내비·음악 음성 제어.</text>
+  <text x="540" y="230" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">9월 24일</text>
+  <text x="540" y="280" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">세미 본격 출시 행사가 9월 24일로 예정됐습니다. 네바다 공장은 연 5만 대 생산 능력을 목표로 합니다.</text>
   <rect x="80" y="320" width="920" height="240" rx="18" fill="#0f172a" stroke="#4ade80" stroke-width="2"/>
-  <text x="540" y="400" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">"그록 Think Fast 2.0이 음성 대화 벤치 1위입니다. 텍스트 없이 말로 대화하고, 차량·설정</text>
-  <text x="540" y="430" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">내비·음악을 조작합니다. 운전 중 손을 떼지 않는 UX가 목표입니다. 벤치 1위와 실차</text>
-  <text x="540" y="460" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">만족도는 다를 수 있으니 OTA 후 리뷰를 보세요."</text>
+  <text x="540" y="400" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">"테슬라 세미의 본격 출시 행사가 9월 24일로 예정됐습니다. 네바다 공장은 4월부터 건설돼</text>
+  <text x="540" y="430" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">연 5만 대 생산 능력을 목표로 하고, 물류 업체 두 곳에서 870대 선주문이 확인됐습니다.</text>
+  <text x="540" y="460" font-family="Arial" font-size="21" fill="#f9fafb" text-anchor="middle">배터리는 822kWh이며 전용 충전망도 함께 구축됩니다."</text>
   <rect x="120" y="590" width="400" height="120" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="320" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">#1</text>
-  <text x="320" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">음성 대화</text>
+  <text x="320" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">5만 대</text>
+  <text x="320" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">연간 생산 능력</text>
   <rect x="560" y="590" width="400" height="120" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="760" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">4-in-1</text>
-  <text x="760" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">차량·내비·음악</text>
+  <text x="760" y="640" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">870대</text>
+  <text x="760" y="680" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인된 선주문</text>
   <rect x="60" y="740" width="960" height="200" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="780" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="820" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">차량 OS·AI assistant 경쟁력입니다. 로보택시와 별도 monetization leg. OTA 배포 범위를 확인하세요.</text>
-  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Grok Think Fast 2.0 · 2026.08.28</text>
+  <text x="540" y="820" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">대형 트럭은 대당 배터리 사용량이 승용차의 여러 배이고, 충전 시간이 운행 계획을 좌우합니다. 연 5만 대 생산 능력과 870대 선주문</text>
+  <text x="540" y="844" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">사이의 간격을 메우는 속도가 관건이며, 운전자 없는 운행은 장기 목표로 남아 있습니다.</text>
+  <text x="540" y="994" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · 세미 9월 24일 · 2026.08.28</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

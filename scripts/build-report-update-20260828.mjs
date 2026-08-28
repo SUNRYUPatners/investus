@@ -278,1123 +278,1215 @@ function write(rel, data) { fs.writeFileSync(path.join(ROOT, rel), data); }
 const TOPICS = [
 { file:'nvda-q2-earnings', symbol:'NVDA', layout:'tpl', seed:'seed-1302',
   category:'어닝', categoryColor:'blue', subject:'엔비디아', tickers:['NVDA'],
-  title:'엔비디아 2분기 매출 961억 달러·주당순이익 2.22달러로 예상을 상회했지만 시간외 -2%로 반응했습니다',
-  summary:'엔비디아 2분기 매출은 961억 달러(컨센서스 922억), 주당순이익 2.22달러(2.10달러)로 예상을 넘겼습니다. 데이터센터 890억 달러(854억), 총마진 75%입니다. 실적은 beat였지만 시간외 약 -2%로 반응했습니다.',
-  titleEn:'Nvidia Q2 revenue $96.1B beats, EPS $2.22, but shares fell ~2% after hours',
-  summaryEn:'Q2 revenue $96.1B vs $92.2B est., EPS $2.22 vs $2.10, data center $89B vs $85.4B, GM 75%. Beat but AH ~-2%.',
+  title:'엔비디아가 실적 발표 뒤 정규장에서 8.74% 급등하며 하루에 시가총액을 최대 5,050억 달러 늘렸습니다',
+  summary:'엔비디아는 실적 발표 다음 정규장에서 8.74% 올랐고, 하루 만에 시가총액이 3,600억~5,050억 달러 늘었습니다. 이 상승분은 같은 날 미국 시장 전체 상승의 약 77%를 차지했습니다. 회계 2분기 데이터센터 매출은 890억 2,000만 달러로 전년 대비 116.6% 늘었고, 3분기 매출 전망은 약 1,080억 달러입니다.',
+  titleEn:'Nvidia jumps 8.74% after earnings, adding up to $505B of market cap in one day',
+  summaryEn:'Nvidia rose 8.74% in the regular session after earnings, adding $360-505B of market cap in a single day, roughly 77% of the entire US market gain. FQ2 data center revenue was $89.02B, up 116.6% year over year and $13.78B quarter over quarter, with Q3 guidance near $108B.',
   body: `■ 상세
 
-엔비디아는 2026 회계 2분기 매출 961억 달러, 주당순이익(adj.) 2.22달러를 기록했습니다. 시장 컨센서스는 매출 922억 달러, EPS 2.10달러였습니다. 데이터센터 매출 890억 달러(컨센서스 854억), 총마진(gross margin) 75%입니다.
+엔비디아는 실적 발표 다음 정규장에서 8.74% 상승했습니다. 집계 기준에 따라 7~10% 상승으로도 인용됩니다. 하루 만에 시가총액이 3,600억 달러에서 5,050억 달러까지 늘어났고, 같은 날 미국 시장 전체 상승분의 약 77%를 이 한 종목이 만들어 냈습니다.
 
-실적은 전 구간에서 예상을 상회(beat)했습니다. 다만 발표 직후 시간외 거래에서 주가는 약 -2% 하락했습니다. beat인데도 하락한 것은 가이던스·공급·밸류에이션·매수세 소진 등 여러 해석이 가능합니다.
+회계 2분기 데이터센터 매출은 890억 2,000만 달러입니다. 전년 같은 기간보다 116.6% 늘었고, 직전 분기보다 137억 8,000만 달러 증가했습니다. 단순 계산하면 하루 매출이 약 10억 달러에 이릅니다. 3분기 매출 전망은 약 1,080억 달러로 제시됐습니다.
 
-데이터센터 890억 달러는 AI GPU 수요가 여전히 중심축임을 보여 줍니다. 총마진 75%는 고부가 제품 믹스가 유지되고 있음을 시사합니다. 다음 분기 가이던스와 블랙웰·베라 루빈 출하 코멘트가 주가 방향을 좌우할 수 있습니다.
+자기주식 매입은 200억 달러 규모로 집행됐고 추가 매입 계획도 함께 언급됐습니다. 최고경영자는 성장률의 하한을 약 70%로 제시했는데, 시장이 기대한 수준은 40% 부근이었습니다. 수요가 아니라 공급이 제약이라는 설명이며, 아마존은 200만 개 이상의 그래픽처리장치를 추가로 확보하겠다고 밝혔습니다. 중앙처리장치 매출은 2028 회계연도에 두 배 이상 늘어날 것으로 전망됩니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. 매출·EPS·데이터센터가 모두 beat면 AI CAPEX 사이클이 아직 강하다는 신호입니다.
+1. 한 종목이 시장 상승의 약 77%를 만들었다는 점은 지수 상승의 폭이 좁다는 뜻입니다.
 
-2. 총마진 75%는 가격·믹스 방어가 되고 있음을 뜻합니다.
+2. 데이터센터 매출이 전년 대비 116.6% 늘어난 것은 인공지능 투자 사이클이 아직 감속하지 않았음을 보여 줍니다.
 
-3. beat인데 시간외 -2%는 기대치가 더 높았거나 가이던스가 약했을 수 있습니다.
+3. 성장률 하한 70%와 시장 기대 40%의 차이는 앞으로의 추정치 상향 여지를 뜻합니다.
 
-4. 데이터센터 890억은 클라우드·AI 팩토리 수요의 척도입니다.
+4. 수요가 아니라 공급이 제약이라는 설명은 가격과 마진 방어에 유리한 조건입니다.
 
-5. 실적 후 변동성은 옵션·레버리지 ETF 포지션과도 연결됩니다.
+5. 200억 달러 자기주식 매입은 현금흐름이 주주환원까지 감당한다는 신호입니다.
 
 ■ 시나리오
 
-**A: 가이던스 상향·추가 beat로 시간외 하락을 만회합니다.**
-**B: 가이던스 보수→조정 지속.**
-**C: macro shock와 함께 semi 섹터 동반 조정.**
+**A: 3분기 매출이 1,080억 달러 전망을 넘기면 추정치 상향이 이어질 수 있습니다.**
+**B: 공급 제약이 길어지면 매출 인식 시점이 뒤로 밀릴 수 있습니다.**
+**C: 금리와 유동성 여건이 나빠지면 실적과 무관하게 밸류에이션이 낮아질 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- 블랙웰 출하·수율
-- 2분기 beat·시간외 -2%
-- 데이터센터 가이던스
+- 실적 발표 직후 시간외에서는 방향이 엇갈렸습니다.
+- 다음 정규장에서 8.74% 상승으로 정리됐습니다.
+- 하루 매출 약 10억 달러와 3분기 전망 1,080억 달러가 상승 근거로 인용됐습니다.
 
 ■ 반대 관점
 
-(1) beat=추가 상승 아님
-(2) 공급 제약
-(3) 중국·수출
-(4) 경쟁 TPU·ASIC
-(5) 밸류에이션
+(1) 시가총액 증가폭은 계산 기준에 따라 3,600억에서 5,050억 달러까지 편차가 큽니다.
+
+(2) 한 종목 의존도가 높은 상승은 되돌림도 빠를 수 있습니다.
+
+(3) 성장률 하한은 확약이 아니라 경영진의 표현입니다.
+
+(4) 공급 제약은 경쟁사에 기회를 주기도 합니다.
+
+(5) 아마존의 추가 확보 약속은 실제 계약 물량과 다를 수 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) 3분기 가이던스
-(2) 데이터센터 믹스
-(3) 총마진 추이
-(4) CFO 코멘트
-(5) AH→정규장
+(1) 3분기 실제 매출이 1,080억 달러 전망과 얼마나 차이 나는지 확인하시면 됩니다.
+
+(2) 데이터센터 매출의 분기 증가액이 137억 달러 수준을 유지하는지 보시기 바랍니다.
+
+(3) 추가 자기주식 매입의 발표 시점과 규모를 확인하시면 됩니다.
+
+(4) 공급 제약이 완화되는 신호가 나오는지 살펴보시기 바랍니다.
+
+(5) 중앙처리장치 매출이 2028 회계연도 목표대로 늘어나는지 추적하시면 됩니다.
 
 ■ 투자시사점
 
-beat와 주가 반응은 다를 수 있습니다. 데이터센터 890억·마진 75%는 본체이고, 시간외 -2%는 다음 가이던스를 확인하시면 됩니다.
+숫자는 강했고 주가도 이를 반영했습니다. 다만 시장 상승의 약 77%가 한 종목에서 나왔다는 점은 분산의 필요를 함께 말해 줍니다. 3분기 매출 1,080억 달러 전망의 달성 여부를 다음 확인 지점으로 두시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'엔비디아 2분기 매출 961억 달러·주당순이익 2.22달러로 예상을 상회했지만 시간외 -2%로 반응했습니다',
+    title:'엔비디아가 실적 발표 뒤 정규장에서 8.74% 급등하며 하루에 시가총액을 최대 5,050억 달러 늘렸습니다',
     heroIcon:'📊',
-    heroBig:'$96.1B',
-    heroSub:'매출 961억 달러(예상 922억), 주당순이익 2.22달러(2.10), 데이터센터 890억, 총마진 75%입니다. 실적은 beat였지만 시간외 약 -2% 하락했습니다.',
-    cards:[{icon:'💰',big:'$96.1B',mid:'매출 beat',sub:'예상 922억'},{icon:'🖥️',big:'$89B',mid:'데이터센터',sub:'예상 854억'},{icon:'📈',big:'75%',mid:'총마진',sub:'AH 약 -2%'}],
-    quote:'"2분기 매출 961억 달러, 주당순이익 2.22달러로 시장 예상을 넘겼습니다. 데이터센터 890억, 총마진 75%입니다. 실적은 좋았지만 시간외 -2%로 반응했습니다. beat인데도 하락할 때는 가이던스와 다음 분기 코멘트를 함께 보셔야 합니다."',
+    heroBig:'+8.74%',
+    heroSub:'실적 발표 뒤 정규장에서 8.74% 올랐고 하루에 시가총액이 최대 5,050억 달러 늘었습니다. 같은 날 미국 시장 상승분의 약 77%를 이 종목이 만들었습니다.',
+    cards:[{icon:'💰',big:'$89.02B',mid:'데이터센터 매출',sub:'전년 대비 116.6% 증가'},{icon:'📈',big:'$108B',mid:'3분기 매출 전망',sub:'하루 매출 약 10억 달러'},{icon:'🔁',big:'$20B',mid:'자기주식 매입',sub:'추가 매입도 예고'}],
+    quote:'"실적 발표 다음 정규장에서 8.74% 올랐고, 하루 만에 시가총액이 3,600억에서 5,050억 달러까지 늘었습니다. 회계 2분기 데이터센터 매출은 890억 2,000만 달러로 전년 대비 116.6% 증가했고, 3분기 매출 전망은 약 1,080억 달러입니다."',
     noteHead:'왜 중요한가',
-    noteSub:'AI CAPEX 허브 실적입니다. 숫자는 강하지만 기대치가 더 높았을 수 있습니다. 3분기 가이던스와 데이터센터 믹스를 추적하시면 됩니다.',
-    footer:'NVDA · 2분기 실적',
+    noteSub:'최고경영자는 성장률 하한을 약 70%로 제시했고 시장 기대는 40% 부근이었습니다. 수요가 아니라 공급이 제약이라는 설명이며, 아마존은 200만 개 이상의 그래픽처리장치를 추가로 확보하겠다고 밝혔습니다. 중앙처리장치 매출도 2028 회계연도에 두 배 이상 늘어날 전망입니다.',
+    footer:'NVDA · 실적 뒤 급등',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Nvidia Q2 beats at $96.1B revenue, EPS $2.22, AH ~-2%',
+    title:'Nvidia jumps 8.74% after earnings, up to $505B added in a day',
     heroIcon:'📊',
-    heroBig:'$96.1B',
-    heroSub:'Revenue beat $92.2B est., EPS $2.22 vs $2.10, data center $89B, GM 75%. Shares fell ~2% after hours despite the beat.',
-    cards:[{icon:'💰',big:'$96.1B',mid:'Rev beat',sub:'vs $92.2B'},{icon:'🖥️',big:'$89B',mid:'Data ctr',sub:'vs $85.4B'},{icon:'📈',big:'75%',mid:'GM',sub:'AH ~-2%'}],
-    quote:'"Q2 revenue $96.1B and EPS $2.22 beat estimates. Data center $89B, gross margin 75%. After-hours was about -2% despite the beat. Check guidance and next-quarter comments."',
+    heroBig:'+8.74%',
+    heroSub:'Nvidia rose 8.74% in the regular session after earnings, adding up to $505B of market cap in one day, about 77% of the entire US market gain.',
+    cards:[{icon:'💰',big:'$89.02B',mid:'Data center',sub:'+116.6% YoY'},{icon:'📈',big:'$108B',mid:'Q3 guide',sub:'~$1B revenue/day'},{icon:'🔁',big:'$20B',mid:'Buyback',sub:'More planned'}],
+    quote:'"Nvidia rose 8.74% in the regular session, adding $360-505B of market cap in one day. FQ2 data center revenue was $89.02B, up 116.6% year over year and $13.78B sequentially. Q3 guidance is near $108B."',
     noteHead:'Why this matters',
-    noteSub:'Core AI earnings print. Numbers are strong but expectations may have been higher. Track Q3 guidance and data-center mix.',
-    footer:'NVDA · Q2 earnings',
+    noteSub:'Management framed roughly 70% as the growth floor while the street expected about 40%. The constraint is supply, not demand, and Amazon pledged two million more GPUs.',
+    footer:'NVDA · post-earnings surge',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'anthropic-ipo-odds-polymarket', symbol:'AI', layout:'tplCompare', seed:'seed-1303',
-  category:'매크로', categoryColor:'purple', subject:'AI', tickers:['MACRO'],
-  title:'2026년 최대 IPO 확률에서 앤트로픽 63%·스페이스X 37%로 나왔습니다',
-  summary:'예측시장 기준 2026년 최대 규모 IPO는 앤트로픽 63%, 스페이스X 37%로 잡혔습니다. AI·우주 상장 서사의 상대 확률을 보여 줍니다.',
-  titleEn:'Anthropic 63% vs SpaceX 37% for 2026 largest IPO on prediction markets',
-  summaryEn:'Prediction markets put Anthropic at 63% and SpaceX at 37% for the biggest 2026 IPO.',
+  category:'매크로', categoryColor:'purple', subject:'AI', tickers:['META'],
+  title:'앤트로픽 기업공개 가치가 2조 달러까지 거론되지만 상장 전 매출 훼손 위험이 함께 지적됩니다',
+  summary:'앤트로픽의 기업공개 가치가 2조 달러까지 거론됩니다. 다만 메타가 자체 도구를 늘리거나 오픈AI 사용을 확대하면 상장 전에 앤트로픽 매출이 줄어들 수 있다는 지적이 함께 나옵니다. 대형 인공지능 기업의 상장이 서로의 매출을 흔드는 구도입니다.',
+  titleEn:'Anthropic IPO talk reaches a $2T valuation while pre-IPO revenue risk is flagged',
+  summaryEn:'Anthropic could be valued near $2T at IPO. At the same time, Meta shifting to internal tools or wider OpenAI usage could cut Anthropic revenue before the listing.',
   body: `■ 상세
 
-예측시장(prediction market)은 특정 사건의 발생 확률을 가격으로 거래하는 플랫폼입니다. 이번 화면은 2026년 한 해 중 가장 큰 규모의 IPO가 어느 회사일지에 대한 확률입니다.
+앤트로픽의 기업공개 가치가 2조 달러까지 거론되고 있습니다. 아직 상장 일정이 확정된 단계가 아니므로, 이 숫자는 시장에서 논의되는 상단으로 이해하시는 편이 안전합니다.
 
-앤트로픽(Anthropic) 63%, 스페이스X(SpaceX) 37%로 표시됩니다. 두 회사 모두 비상장(unlisted)이며, 상장 시 시장 전체 밸류에이션·유동성·섹터 재평가에 영향을 줄 수 있습니다.
+같은 화면에서 반대쪽 위험도 지적됩니다. 메타는 앤트로픽 사용을 줄이겠다는 방침을 밝혔지만 실제로는 매달 수억 달러를 계속 쓰고 있습니다. 메타가 자체 도구를 늘리거나 오픈AI 사용을 확대하면 상장 전에 앤트로픽 매출이 줄어들 수 있습니다.
 
-확률은 사실이 아니라 시장 참여자의 집단 기대입니다. IPO 일정·규모·macro window·SEC 심사가 바뀌면 확률도 빠르게 움직입니다.
+대형 인공지능 기업들은 서로의 고객이면서 경쟁자입니다. 한쪽의 내부화 결정이 다른 쪽의 매출 성장률을 바꾸는 구조이므로, 기업공개 가치와 매출 지속성을 함께 보셔야 합니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. 63% vs 37%는 AI 소프트웨어 vs 우주 인프라 상장 경쟁 프레임입니다.
+1. 2조 달러라는 숫자는 비상장 인공지능 기업 밸류에이션의 기준점 역할을 합니다.
 
-2. 최대 IPO는 조달 규모·밸류·시장 appetite에 달립니다.
+2. 대형 고객 한 곳의 지출 변화가 매출 성장률을 크게 흔들 수 있습니다.
 
-3. 앤트로픽 상장은 Mag7 AI spend와 연결됩니다.
+3. 상장 전 매출 훼손은 공모가 산정에 직접 반영됩니다.
 
-4. 스페이스X는 스타링크·스타십 내러티브와 연결됩니다.
+4. 메타가 매달 수억 달러를 계속 쓰고 있다는 사실은 축소 방침과 실제 집행이 다르다는 뜻입니다.
 
-5. 예측시장 확률≠확정 일정.
+5. 인공지능 기업 간 고객 관계는 언제든 경쟁 관계로 바뀔 수 있습니다.
 
 ■ 시나리오
 
-**A: 앤트로픽 S-1→확률 추가 상승.**
-**B: 스페이스X delay→비율 역전.**
-**C: macro 창 닫힘→둘 다 지연.**
+**A: 메타 지출이 유지되면 2조 달러 논의가 이어질 수 있습니다.**
+**B: 메타가 내부 도구로 전환하면 상장 전 성장률이 낮아질 수 있습니다.**
+**C: 상장 창구가 닫히면 일정 자체가 뒤로 밀릴 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- Anthropic IPO rumor
-- SpaceX private marks
-- 2026 largest IPO odds
+- 메타는 앤트로픽 사용 축소 방침을 밝혔습니다.
+- 실제로는 매달 수억 달러 지출이 이어지고 있습니다.
+- 기업공개 가치는 2조 달러까지 거론되기 시작했습니다.
 
 ■ 반대 관점
 
-(1) 예측시장 유동성
-(2) 확률 급변
-(3) 둘 다 delay
-(4) third rival
-(5) regulation
+(1) 2조 달러는 확정 가치가 아니라 논의되는 상단입니다.
+
+(2) 상장 일정이 나오지 않은 단계입니다.
+
+(3) 메타의 지출 축소는 발표와 실행 사이에 시차가 있습니다.
+
+(4) 기업 고객 매출은 계약 구조에 따라 인식 시점이 다릅니다.
+
+(5) 경쟁 모델의 성능 변화가 고객 이동을 앞당길 수 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) S-1 filing
-(2) odds weekly
-(3) raise size
-(4) first-day trade
-(5) peer re-rating
+(1) 메타의 월 지출 규모가 실제로 줄어드는지 확인하시면 됩니다.
+
+(2) 앤트로픽의 상장 서류가 제출되는 시점을 보시기 바랍니다.
+
+(3) 거론되는 기업공개 가치가 2조 달러에서 어떻게 움직이는지 추적하시면 됩니다.
+
+(4) 대형 고객 집중도가 공개되는지 살펴보시기 바랍니다.
+
+(5) 메타 자체 도구의 실제 대체 범위를 확인하시면 됩니다.
 
 ■ 투자시사점
 
-확률은 thermometer입니다. S-1·일정·조달 규모로 검증하시면 됩니다.
+기업공개 가치는 기대이고, 매출 지속성은 사실입니다. 2조 달러라는 숫자보다 대형 고객의 월 지출이 유지되는지를 먼저 확인하시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'2026년 최대 IPO 확률에서 앤트로픽 63%·스페이스X 37%로 나왔습니다',
-    heroBig:'63% vs 37%',
-    heroSub:'예측시장에서 2026년 최대 IPO는 앤트로픽 63%, 스페이스X 37%입니다. AI와 우주 상장의 상대 확률입니다.',
-    beforeLabel:'스페이스X',
-    beforeBig:'37%',
-    beforeSub:'2026 최대 IPO',
-    afterLabel:'앤트로픽',
-    afterBig:'63%',
-    afterSub:'2026 최대 IPO',
-    cards:[{icon:'🤖',big:'63%',mid:'앤트로픽',sub:'AI 소프트웨어'},{icon:'🚀',big:'37%',mid:'스페이스X',sub:'우주·위성'},{icon:'📅',big:'2026',mid:'최대 IPO',sub:'확률 기준'}],
-    quote:'"2026년 가장 큰 IPO가 앤트로픽일 확률 63%, 스페이스X 37%로 거래됩니다. 확률은 확정이 아니라 시장 기대입니다. 상장 일정·조달 규모·증권신고서가 나오면 숫자가 바뀔 수 있습니다."',
-    noteHead:'왜 중요한가',
-    noteSub:'비상장 AI·우주의 공개 시장 재평가 온도계입니다. 확률만으로 매매하지 말고 S-1과 일정을 확인하세요.',
-    footer:'AI · IPO 확률',
+    title:'앤트로픽 기업공개 가치가 2조 달러까지 거론되지만 상장 전 매출 훼손 위험이 함께 지적됩니다',
+    heroBig:'$2T',
+    heroSub:'기업공개 가치는 2조 달러까지 거론됩니다. 다만 대형 고객의 내부화가 상장 전 매출을 줄일 수 있습니다.',
+    beforeLabel:'상장 전 위험',
+    beforeBig:'매출 훼손',
+    beforeSub:'대형 고객 이탈 가능성',
+    afterLabel:'기업공개 가치',
+    afterBig:'$2T',
+    afterSub:'거론되는 상단',
+    cards:[{icon:'🏛️',big:'$2T',mid:'기업공개 가치',sub:'논의되는 상단'},{icon:'💵',big:'월 수억',mid:'대형 고객 지출',sub:'축소 방침에도 지속'},{icon:'⚔️',big:'내부화',mid:'자체 도구 확대',sub:'매출 감소 위험'}],
+    quote:'"앤트로픽의 기업공개 가치가 2조 달러까지 거론됩니다. 동시에 메타가 자체 도구를 늘리거나 오픈AI 사용을 확대하면 상장 전에 앤트로픽 매출이 줄어들 수 있다는 지적도 나옵니다. 대형 인공지능 기업은 서로의 고객이면서 경쟁자입니다."',
+    footer:'AI · 앤트로픽 상장 논의',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Anthropic 63% vs SpaceX 37% for 2026 largest IPO',
-    heroBig:'63% vs 37%',
-    heroSub:'Prediction markets: Anthropic 63%, SpaceX 37% for the biggest 2026 IPO.',
-    beforeLabel:'SpaceX',
-    beforeBig:'37%',
-    beforeSub:'Largest 2026 IPO',
-    afterLabel:'Anthropic',
-    afterBig:'63%',
-    afterSub:'Largest 2026 IPO',
-    cards:[{icon:'🤖',big:'63%',mid:'Anthropic',sub:'AI software'},{icon:'🚀',big:'37%',mid:'SpaceX',sub:'Space·sat'},{icon:'📅',big:'2026',mid:'Largest IPO',sub:'Odds'}],
-    quote:'"Odds trade Anthropic at 63% vs SpaceX 37% for the largest 2026 IPO. These are expectations, not schedules. S-1 filings and window timing can move them quickly."',
-    noteHead:'Why this matters',
-    noteSub:'Thermometer for AI vs space listings. Verify with filings, not odds alone.',
-    footer:'AI · IPO odds',
+    title:'Anthropic IPO talk near $2T, with pre-IPO revenue risk flagged',
+    heroBig:'$2T',
+    heroSub:'IPO talk reaches a $2T valuation, while a large customer moving in-house could cut revenue before the listing.',
+    beforeLabel:'Pre-IPO risk',
+    beforeBig:'Revenue hit',
+    beforeSub:'Large customer shift',
+    afterLabel:'IPO valuation',
+    afterBig:'$2T',
+    afterSub:'Upper end discussed',
+    cards:[{icon:'🏛️',big:'$2T',mid:'IPO value',sub:'Upper end'},{icon:'💵',big:'$100Ms',mid:'Monthly spend',sub:'Despite pullback'},{icon:'⚔️',big:'In-house',mid:'Internal tools',sub:'Revenue risk'}],
+    quote:'"Anthropic IPO talk reaches a $2T valuation. At the same time, Meta expanding internal tools or OpenAI usage could reduce Anthropic revenue before the listing. These firms are customers and rivals at once."',
+    footer:'AI · Anthropic IPO talk',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'spcx-valuation-1826b', symbol:'SPCX', layout:'tplBreaking', seed:'seed-1304',
   category:'종목분석', categoryColor:'purple', subject:'스페이스X', tickers:['SPCX'],
-  title:'스페이스X 시가총액 1조 8,260억 달러·1조 달러 이상 51일째입니다',
-  summary:'시가총액 1조 8,260억 달러, 1조 달러 이상 51일, 발행가 135달러(+2%), 최초 표기 150달러(-8%), 사상 최고 226달러, 거래대금 약 70억 달러입니다.',
-  titleEn:'SpaceX valuation $1,826B, 51 days above $1T, volume near $7B',
-  summaryEn:'Market cap $1,826B, 51 days above $1T. Issuance $135 (+2%), first notation $150 (-8%), ATH $226, volume ~$7B.',
+  title:'스페이스X 주가가 매력적인 수준이라는 평가와 함께 2033년 매출 3조 5,000억 달러 전망이 나왔습니다',
+  summary:'스페이스X 주가가 매력적인 밸류에이션이라는 평가가 나왔습니다. 일론 머스크는 2033년 무렵 스페이스X 매출이 약 3조 5,000억 달러에 이를 수 있다고 언급했습니다. 이는 엔비디아 최근 12개월 매출의 약 11.5배 규모입니다.',
+  titleEn:'SpaceX called attractively valued as a $3.5T revenue outlook for 2033 emerges',
+  summaryEn:'SpaceX stock is described as attractively valued. Elon Musk pointed to roughly $3.5T of SpaceX revenue around 2033, about 11.5 times Nvidia trailing twelve month revenue.',
   body: `■ 상세
 
-스페이스X 비상장 지분 거래에서 시가총액이 1조 8,260억 달러(약 \$1,826B)로 잡혔습니다. 1조 달러(\$1T) 이상 구간을 51일째 유지 중입니다.
+스페이스X 주가가 현재 수준에서 매력적인 밸류에이션이라는 평가가 나왔습니다. 비상장 지분 거래 시장에서 형성된 가격을 기준으로 한 판단이므로, 상장 이후 가격과는 다를 수 있습니다.
 
-발행가(issuance) 135달러(+2%), 최초 표기(first notation) 150달러(-8%), 사상 최고(ATH) 226달러, 거래대금(volume) 약 70억 달러가 함께 표시됩니다. private mark는 공개 시장 가격과 다를 수 있습니다.
+일론 머스크는 2033년 무렵 스페이스X 매출이 약 3조 5,000억 달러에 이를 수 있다고 언급했습니다. 이 숫자는 엔비디아의 최근 12개월 매출과 비교하면 약 11.5배 규모입니다. 위성 통신과 발사 서비스만으로 설명되기 어려운 수준이므로, 어떤 사업이 포함된 전망인지 확인이 필요합니다.
 
-스타링크 ARR·스타십 cadence·정부 계약·상장 odds와 같은 축에서 읽힙니다. 51일 \$1T+는 liquidity premium과 narrative momentum 신호입니다.
+장기 전망은 방향을 보여 주는 자료이지 실적 추정치가 아닙니다. 7년 뒤 매출 목표는 발사 빈도, 위성 가입자, 정부 계약이 모두 계획대로 진행된다는 가정을 담고 있습니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. \$1,826B는 private 시장의 valuation anchor입니다.
+1. 3조 5,000억 달러는 현재 대형 기술기업 매출과 비교해도 매우 큰 숫자입니다.
 
-2. 51일 \$1T+는 지속적 관심·거래량을 시사합니다.
+2. 엔비디아 매출의 11.5배라는 비교는 기대치의 크기를 직관적으로 보여 줍니다.
 
-3. 발행가 vs 표기 vs ATH는 참여자별 가격대 차이입니다.
+3. 비상장 지분 가격이 저평가라는 평가는 2차 거래 수요를 자극할 수 있습니다.
 
-4. 거래대금 \$7B는 secondary 유동성 규모입니다.
+4. 장기 매출 전망은 상장 시 공모가 논의의 출발점이 됩니다.
 
-5. 상장 전까지 mark vs public price gap 존재.
+5. 목표가 클수록 실행 위험도 같이 커집니다.
 
 ■ 시나리오
 
-**A: 상장 window→public re-rating.**
-**B: private mark 조정.**
-**C: macro로 secondary 거래 위축.**
+**A: 위성 가입자와 정부 계약이 함께 늘면 전망의 신뢰도가 올라갑니다.**
+**B: 발사 빈도가 계획보다 낮으면 목표 시점이 뒤로 밀립니다.**
+**C: 상장이 늦어지면 비상장 가격과 공개 시장 가격의 차이가 유지됩니다.**
 
 ■ 오늘까지 흐름
 
-- Starlink·Starship narrative
-- \$1,826B cap·51 days \$1T+
-- IPO odds same week
+- 비상장 지분 가격이 계속 높은 수준을 유지해 왔습니다.
+- 현재 주가가 매력적이라는 평가가 새로 제시됐습니다.
+- 2033년 매출 3조 5,000억 달러 전망이 함께 언급됐습니다.
 
 ■ 반대 관점
 
-(1) private mark only
-(2) illiquid
-(3) insider-only
-(4) delay
-(5) competition
+(1) 7년 뒤 매출 전망은 검증 구간이 매우 깁니다.
+
+(2) 비상장 가격은 거래량이 적어 왜곡될 수 있습니다.
+
+(3) 엔비디아 매출과의 배수 비교는 사업 구조가 달라 단순 비교가 어렵습니다.
+
+(4) 위성 통신 시장의 경쟁이 강화되고 있습니다.
+
+(5) 규제와 주파수 배분이 성장 속도를 제한할 수 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) weekly marks
-(2) volume trend
-(3) issuance price
-(4) S-1 rumor
-(5) Starlink metrics
+(1) 위성 통신 가입자와 매출 공개 여부를 확인하시면 됩니다.
+
+(2) 정부 계약 수주가 이어지는지 보시기 바랍니다.
+
+(3) 비상장 지분 거래 가격과 거래량을 추적하시면 됩니다.
+
+(4) 발사 빈도가 목표 대비 어떻게 움직이는지 살펴보시기 바랍니다.
+
+(5) 상장 관련 서류가 제출되는 시점을 확인하시면 됩니다.
 
 ■ 투자시사점
 
-private valuation은 옵션 가치입니다. 거래대금·발행가·51일 \$1T+를 함께 추적하시면 됩니다.
+장기 전망은 기대의 크기를 보여 주는 자료입니다. 3조 5,000억 달러라는 숫자보다 가입자와 정부 계약처럼 검증 가능한 지표를 먼저 확인하시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'스페이스X 시가총액 1조 8,260억 달러·1조 달러 이상 51일째입니다',
-    heroBig:'$1,826B',
-    heroSub:'시가총액 1조 8,260억 달러, 1조 달러 이상 51일. 발행가 135(+2%), 표기 150(-8%), ATH 226, 거래대금 약 70억.',
-    cards:[{icon:'💎',big:'$1.8T',mid:'시가총액',sub:'51일 $1T+'},{icon:'💵',big:'$135',mid:'발행가',sub:'+2%'},{icon:'📊',big:'$7B',mid:'거래대금',sub:'ATH $226'}],
-    quote:'"시가총액 1조 8,260억 달러, 1조 달러 이상 51일째입니다. 발행가 135달러, 최초 표기 150(-8%), 사상 최고 226, 거래대금 약 70억. 비상장 mark는 공개 시장과 다를 수 있으니 유동성과 발행가를 함께 보세요."',
-    noteSub:'우주·위성 내러티브의 밸류 anchor입니다. 상장 전까지 mark discount를 유지하시면 됩니다.',
-    footer:'SPCX · $1.8T 밸류',
+    title:'스페이스X 주가가 매력적인 수준이라는 평가와 함께 2033년 매출 3조 5,000억 달러 전망이 나왔습니다',
+    heroBig:'$3.5T',
+    heroSub:'2033년 무렵 매출 3조 5,000억 달러 전망입니다. 엔비디아 최근 12개월 매출의 약 11.5배이며, 현재 주가는 매력적이라는 평가가 함께 나왔습니다.',
+    cards:[{icon:'💰',big:'$3.5T',mid:'매출 전망',sub:'2033년 무렵 목표'},{icon:'⚖️',big:'11.5배',mid:'엔비디아 대비',sub:'최근 12개월 매출 기준'},{icon:'📊',big:'저평가',mid:'현재 주가 평가',sub:'비상장 거래 기준'}],
+    quote:'"현재 스페이스X 주가가 매력적인 수준이라는 평가가 나왔습니다. 2033년 무렵 매출은 약 3조 5,000억 달러로 언급됐고, 엔비디아 최근 12개월 매출의 약 11.5배 규모입니다. 7년 뒤 목표이므로 가입자와 정부 계약으로 검증하시기 바랍니다."',
+    noteSub:'장기 매출 전망은 방향을 보여 주는 자료이지 실적 추정치가 아닙니다. 엔비디아 최근 12개월 매출의 11.5배라는 비교는 기대의 크기를 보여 주지만 사업 구조가 달라 단순 비교는 어렵습니다. 발사 빈도와 위성 가입자, 정부 계약을 단계별로 확인하시면 됩니다.',
+    footer:'SPCX · 2033년 매출 전망',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'SpaceX valuation $1,826B, 51 days above $1T',
-    heroBig:'$1,826B',
-    heroSub:'Market cap $1,826B, 51 days above $1T. Issuance $135 (+2%), notation $150 (-8%), ATH $226, volume ~$7B.',
-    cards:[{icon:'💎',big:'$1.8T',mid:'Market cap',sub:'51d $1T+'},{icon:'💵',big:'$135',mid:'Issuance',sub:'+2%'},{icon:'📊',big:'$7B',mid:'Volume',sub:'ATH $226'}],
-    quote:'"Market cap $1,826B with 51 days above $1T. Issuance $135, first notation $150 (-8%), ATH $226, volume near $7B. Private marks can differ from a public listing price."',
-    noteSub:'Valuation anchor for space narrative. Keep a mark discount until IPO.',
-    footer:'SPCX · $1.8T valuation',
+    title:'SpaceX called attractively valued, $3.5T revenue outlook for 2033',
+    heroBig:'$3.5T',
+    heroSub:'Revenue around 2033 is put near $3.5T, roughly 11.5 times Nvidia trailing twelve month revenue, while the current stock is called attractively valued.',
+    cards:[{icon:'💰',big:'$3.5T',mid:'Revenue view',sub:'Around 2033'},{icon:'⚖️',big:'11.5x',mid:'vs Nvidia',sub:'Trailing revenue'},{icon:'📊',big:'Cheap',mid:'Current price',sub:'Private marks'}],
+    quote:'"SpaceX stock is described as attractively valued. Revenue around 2033 is put near $3.5T, roughly 11.5 times Nvidia trailing twelve month revenue. That is a seven year horizon, so verify with subscribers and contracts."',
+    noteSub:'A long dated revenue outlook shows direction, not an estimate. Track launch cadence, satellite subscribers, and government contracts step by step.',
+    footer:'SPCX · 2033 revenue view',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'spcx-starbase-louisiana-cadence', symbol:'SPCX', layout:'tplBreaking', seed:'seed-1305',
   category:'종목분석', categoryColor:'purple', subject:'스페이스X', tickers:['SPCX'],
-  title:'루이지애나 스타베이스는 발사대 12개 이상·하루 30척 이상 스타십을 목표합니다',
-  summary:'발사대(tower) 12개 이상, 하루 30척 이상 Starship, Starship 4대는 연간 200만 톤 이상 궤도 투입을 겨냥합니다. 발사 cadence의 구체 숫자입니다.',
-  titleEn:'Louisiana Starbase targets 12+ towers, 30+ Starship/day, 2M+ tons/year',
-  summaryEn:'12+ launch towers, 30+ Starship/day, Starship 4 for 2M+ tons/year to orbit.',
+  title:'스타십 40호기가 크리스마스섬 해상에서 점검됐고 내열 타일 시료가 회수됐습니다',
+  summary:'스타십 40호기가 크리스마스섬 인근 해상에서 점검됐습니다. 내열 타일 시료가 회수돼 손상 정도를 분석할 수 있게 됐고, 이를 토대로 재진입 성능 개선이 예정돼 있습니다.',
+  titleEn:'Starship Ship 40 inspected off Christmas Island, heat shield tile samples collected',
+  summaryEn:'Ship 40 was inspected off Christmas Island. Heat shield tile samples were collected for damage analysis, and reentry improvements are planned on that basis.',
   body: `■ 상세
 
-루이지애나 스타베이스(Louisiana Starbase)는 텍사스와 별도로 건설되는 대형 발사·조립 거점입니다. 이번 스펙은 발사대 12개 이상, 하루 30척 이상 Starship 생산·발사 cadence입니다.
+스타십 40호기가 크리스마스섬 인근 해상에서 점검됐습니다. 착수한 기체를 직접 확인했다는 뜻이므로, 비행 후 상태를 사진과 계측 자료가 아니라 실물로 검증할 수 있게 됐습니다.
 
-Starship 4대(4-ship fleet)는 연간 200만 톤 이상을 궤도에 올리는 목표와 연결됩니다. 톤nage는 위성·화물·궤도 인프라 비용 곡선의 상류 지표입니다.
+점검 과정에서 내열 타일 시료가 회수됐습니다. 내열 타일은 대기권 재진입 때 발생하는 고온으로부터 기체를 보호하는 부품입니다. 어느 위치의 타일이 얼마나 손상됐는지를 확인하면 다음 비행에서 보완할 지점을 특정할 수 있습니다.
 
-숫자가 크므로 허가·환경·자금·실제 flight rate를 계획과 분리해 보셔야 합니다. cadence 목표는 방향이지 단기 EPS가 아닙니다.
+회수된 시료를 바탕으로 재진입 성능 개선이 예정돼 있습니다. 재진입 신뢰도는 기체 재사용의 전제 조건이므로, 발사 비용 곡선과 직접 연결되는 항목입니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. 12+ tower는 동시 발사·turnaround infra를 뜻합니다.
+1. 착수 기체를 실물로 점검한 것은 설계 검증의 질을 높입니다.
 
-2. 30+/day는 현재 cadence 대비 극단 목표입니다.
+2. 내열 타일 손상 위치를 특정하면 개선 범위를 좁힐 수 있습니다.
 
-3. 200만 톤/년은 위성·화물 수요 가정을 내포합니다.
+3. 재진입 신뢰도는 기체 재사용의 전제 조건입니다.
 
-4. Starship 4 fleet는 병렬 운용 설계입니다.
+4. 재사용이 안정되면 발사 단가가 내려갑니다.
 
-5. 허가·지역 정치가 일정 리스크입니다.
+5. 발사 단가는 위성 통신 사업의 원가와 직접 연결됩니다.
 
 ■ 시나리오
 
-**A: EPC·착공 공식화.**
-**B: cadence 목표 하향.**
-**C: 규제 지연.**
+**A: 타일 개선이 반영되면 다음 비행의 재진입 손상이 줄어들 수 있습니다.**
+**B: 손상 범위가 넓게 확인되면 설계 변경에 시간이 더 걸립니다.**
+**C: 회수 작업 자체가 지연되면 개선 반영 시점도 늦어집니다.**
 
 ■ 오늘까지 흐름
 
-- Louisiana Starbase plan
-- 12+ towers·30+/day
-- Starship flight rate
+- 40호기가 비행을 마치고 해상에 착수했습니다.
+- 크리스마스섬 인근 해상에서 기체 점검이 이뤄졌습니다.
+- 내열 타일 시료가 회수되고 재진입 개선 계획이 언급됐습니다.
 
 ■ 반대 관점
 
-(1) plan only
-(2) safety·yield
-(3) funding
-(4) env lawsuit
-(5) pad bottleneck
+(1) 시료 회수는 분석의 시작이지 개선의 완료가 아닙니다.
+
+(2) 해상 점검은 날씨와 작업 환경에 크게 좌우됩니다.
+
+(3) 타일 손상 원인은 여러 요인이 겹칠 수 있습니다.
+
+(4) 개선 설계가 반영되는 데는 여러 차례 비행이 필요합니다.
+
+(5) 재사용 목표와 실제 재사용 횟수는 차이가 큽니다.
 
 ■ 앞으로 볼 것
 
-(1) permit docs
-(2) construction start
-(3) flight rate
-(4) tonnage delivered
-(5) Starlink demand
+(1) 내열 타일 손상 분석 결과가 공개되는지 확인하시면 됩니다.
+
+(2) 다음 비행 일정과 개선 항목을 보시기 바랍니다.
+
+(3) 재진입 후 기체 상태가 이전보다 나아지는지 살펴보시기 바랍니다.
+
+(4) 기체 회수 방식이 표준화되는지 추적하시면 됩니다.
+
+(5) 발사 빈도가 실제로 올라가는지 확인하시면 됩니다.
 
 ■ 투자시사점
 
-발사 cadence는 장기 콜 옵션입니다. 착공·허가·실제 비행률을 추적하시면 됩니다.
+재진입 신뢰도는 발사 단가를 결정하는 핵심 변수입니다. 내열 타일 개선이 다음 비행에서 실제 손상 감소로 확인되는지를 지켜보시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'루이지애나 스타베이스는 발사대 12개 이상·하루 30척 이상 스타십을 목표합니다',
-    heroBig:'30+/day',
-    heroSub:'발사대 12개 이상, 하루 30척 이상 Starship. Starship 4는 연 200만 톤+ 궤도 투입 목표입니다.',
-    cards:[{icon:'🗼',big:'12+',mid:'발사대',sub:'tower'},{icon:'🚀',big:'30+/일',mid:'스타십',sub:'cadence'},{icon:'⚖️',big:'2M+ t',mid:'연간 투입',sub:'Starship 4'}],
-    quote:'"루이지애나 스타베이스는 발사대 12개 이상, 하루 30척 이상을 목표합니다. Starship 4대는 연 200만 톤 이상 궤도 투입을 겨냥합니다. 숫자가 크므로 허가·자금·실제 비행률을 계획과 나눠 보세요."',
-    noteSub:'위성·화물 비용의 상류입니다. 목표 cadence와 실제 flight rate를 분리해 추적하세요.',
-    footer:'SPCX · 루이지애나 cadence',
+    title:'스타십 40호기가 크리스마스섬 해상에서 점검됐고 내열 타일 시료가 회수됐습니다',
+    heroBig:'Ship 40',
+    heroSub:'크리스마스섬 인근 해상에서 40호기가 점검됐습니다. 내열 타일 시료가 회수돼 재진입 성능 개선에 반영될 예정입니다.',
+    cards:[{icon:'🛰️',big:'40호기',mid:'해상 점검',sub:'크리스마스섬 인근'},{icon:'🔥',big:'내열 타일',mid:'시료 회수',sub:'손상 정도 분석'},{icon:'🔁',big:'재진입',mid:'성능 개선',sub:'다음 비행 반영'}],
+    quote:'"스타십 40호기가 크리스마스섬 인근 해상에서 점검됐습니다. 내열 타일 시료가 회수돼 어느 위치가 얼마나 손상됐는지 확인할 수 있게 됐고, 이를 토대로 재진입 성능 개선이 예정돼 있습니다."',
+    noteSub:'재진입 신뢰도는 기체 재사용의 전제 조건이고, 재사용은 발사 단가를 결정합니다. 발사 단가는 위성 통신 사업의 원가와 직접 연결됩니다. 시료 회수는 분석의 시작이므로 다음 비행에서 손상이 실제로 줄어드는지 확인하시면 됩니다.',
+    footer:'SPCX · 40호기 점검',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Louisiana Starbase: 12+ towers, 30+ Starship/day',
-    heroBig:'30+/day',
-    heroSub:'12+ launch towers, 30+ Starship per day. Starship 4 targets 2M+ tons/year to orbit.',
-    cards:[{icon:'🗼',big:'12+',mid:'Towers',sub:'Launch pads'},{icon:'🚀',big:'30+/d',mid:'Starship',sub:'Cadence'},{icon:'⚖️',big:'2M+ t',mid:'Per year',sub:'Starship 4'}],
-    quote:'"Louisiana Starbase targets 12+ towers and 30+ Starships per day. Starship 4 aims for 2M+ tons/year to orbit. Separate plans from permits and actual flight rate."',
-    noteSub:'Upstream of satellite and cargo cost curves. Track permits vs flight rate.',
-    footer:'SPCX · Louisiana cadence',
+    title:'Ship 40 inspected off Christmas Island, tile samples collected',
+    heroBig:'Ship 40',
+    heroSub:'Ship 40 was inspected in waters off Christmas Island. Heat shield tile samples were collected and will feed reentry improvements.',
+    cards:[{icon:'🛰️',big:'Ship 40',mid:'Inspected',sub:'Off Christmas Island'},{icon:'🔥',big:'Tiles',mid:'Samples taken',sub:'Damage analysis'},{icon:'🔁',big:'Reentry',mid:'Improvements',sub:'Next flights'}],
+    quote:'"Ship 40 was inspected off Christmas Island. Heat shield tile samples were collected, showing which positions took damage, and reentry improvements are planned on that basis."',
+    noteSub:'Reentry reliability gates reuse, and reuse sets launch cost. Sample collection is the start of analysis, so watch whether damage actually falls on the next flight.',
+    footer:'SPCX · Ship 40 inspection',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'spcx-terafab-texas-48b', symbol:'SPCX', layout:'tpl', seed:'seed-1306',
   category:'종목분석', categoryColor:'purple', subject:'스페이스X', tickers:['SPCX'],
-  title:'텍사스 테라팹에 추가 약 480억 달러·총 1,190억 달러·서브2nm AI 칩이 잡혔습니다',
-  summary:'추가 투자 약 480억 달러, 1단계 168억 확정, 총 1,190억 달러, 34쪽 세제협약·2026년 12월~2028년 12월 공사, 서브2nm AI 칩 생산이 핵심입니다.',
-  titleEn:'Terafab Texas: ~$48B additional, $119B total, sub-2nm AI chips',
-  summaryEn:'~$48B additional capex, Phase 1 $16.8B committed, $119B total, 34-page tax agreement, Dec 2026–Dec 2028 construction, sub-2nm AI chips.',
+  title:'우주군이 군용기 위성통신을 스페이스X 단독으로 발주하고 하향 500Mbps 속도를 명시했습니다',
+  summary:'미 우주군이 군용기용 위성통신 사업을 스페이스X 단독 공급으로 발주했습니다. 전 세계 지역 제한 없는 통신, 하향 500Mbps·상향 100Mbps 속도, 타일형과 소형 단말이 조건에 담겼습니다. 기본 계약은 2027년 7월까지이고 2028년 7월까지 연장 선택권이 있습니다.',
+  titleEn:'Space Force awards SpaceX a sole source Starshield deal for military aircraft at 500Mbps down',
+  summaryEn:'The Space Force awarded SpaceX a sole source satellite communications contract for military aircraft, with worldwide coverage, 500Mbps down and 100Mbps up, tile and mini terminals, a base period through July 2027 and an option to July 2028.',
   body: `■ 상세
 
-테라팹(Terafab)은 텍사스에 건설되는 대형 반도체·AI 칩 파브 프로젝트로 읽힙니다. 추가 투자 약 480억 달러(~\$48B), 1단계(Phase 1) 168억 달러(\$16.8B) committed, 총 1,190억 달러(\$119B) 규모가 잡혔습니다.
+미 우주군이 군용기용 위성통신 사업을 발주했고, 공급자는 스페이스X 단독으로 지정됐습니다. 단독 공급은 경쟁 입찰 없이 특정 업체만 조건을 충족한다고 판단할 때 사용하는 방식입니다.
 
-34페이지 세제협약(tax agreement), 공사 기간 2026년 12월~2028년 12월, 서브2nm(sub-2nm) AI 칩 생산이 핵심 스펙입니다. sub-2nm는 최첨단 공정 노드로 AI 가속기 수요와 맞닿습니다.
+조건에는 전 세계 지역 제한 없는 통신, 하향 500Mbps와 상향 100Mbps 속도, 타일형 단말과 소형 단말 공급이 담겼습니다. 군용기는 이동 속도가 빠르고 고도 변화가 크기 때문에 위성 추적과 지연 시간 관리가 까다로운 영역입니다.
 
-스페이스X·xAI·테슬라 AI 실리콘 내러티브와 연결될 수 있습니다. CAPEX 규모가 크므로 자금 조달·인허가·수율 ramp가 관건입니다.
+기본 계약 기간은 2027년 7월까지이고, 2028년 7월까지 연장할 수 있는 선택권이 포함됐습니다. 계약은 7월 28일에 이뤄졌고 8월 25일에 공개됐습니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. \$119B total는 semi CAPEX의 상한을 올립니다.
+1. 단독 공급 지정은 대체 사업자가 사실상 없다는 판단을 담고 있습니다.
 
-2. Phase 1 \$16.8B committed는 단기 executable chunk입니다.
+2. 군용기 통신은 민간 서비스보다 요구 조건이 까다롭고 단가도 높습니다.
 
-3. sub-2nm는 NVDA·TSMC·삼성과 같은 경쟁 구간입니다.
+3. 하향 500Mbps는 기존 군용 위성통신 대비 큰 개선입니다.
 
-4. 세제협약 34p는 지역 incentive 민감도를 보여줍니다.
+4. 2028년 7월까지의 선택권은 매출 가시성을 늘려 줍니다.
 
-5. 2026.12–2028.12 공사는 2년 착공 window입니다.
+5. 정부 계약은 위성 통신 사업의 매출 변동성을 낮춰 줍니다.
 
 ■ 시나리오
 
-**A: fab 착공·장비 발주 공식화.**
-**B: CAPEX scale-down.**
-**C: 공정 지연·수율 이슈.**
+**A: 연장 선택권이 행사되면 계약 매출이 1년 더 이어집니다.**
+**B: 다른 기종으로 적용이 확대되면 규모가 커질 수 있습니다.**
+**C: 예산 조정이나 대체 사업자 등장으로 단독 구조가 흔들릴 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- Terafab Texas plan
-- \$48B add·\$119B total
-- sub-2nm AI chips
+- 군용 위성통신 수요가 저궤도 통신망으로 이동해 왔습니다.
+- 7월 28일 계약이 체결됐습니다.
+- 8월 25일 계약 내용이 공개됐습니다.
 
 ■ 반대 관점
 
-(1) plan vs groundbreak
-(2) funding
-(3) talent·water
-(4) foundry competition
-(5) timeline slip
+(1) 단독 공급은 정책 변화에 따라 재검토될 수 있습니다.
+
+(2) 계약 금액이 공개되지 않아 매출 기여를 추정하기 어렵습니다.
+
+(3) 표기된 속도는 조건이며 실제 운용 성능과 다를 수 있습니다.
+
+(4) 군용 단말 인증에는 시간이 걸립니다.
+
+(5) 국방 예산 편성 일정에 따라 집행이 늦어질 수 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) tax agreement filing
-(2) Phase 1 spend
-(3) equipment orders
-(4) sub-2nm roadmap
-(5) offtake partners
+(1) 연장 선택권 행사 여부를 확인하시면 됩니다.
+
+(2) 적용 기종이 늘어나는지 보시기 바랍니다.
+
+(3) 단말 납품 일정이 지켜지는지 살펴보시기 바랍니다.
+
+(4) 계약 금액이 추후 공개되는지 추적하시면 됩니다.
+
+(5) 다른 군 조직으로 확대되는지 확인하시면 됩니다.
 
 ■ 투자시사점
 
-테라팹은 장기 semi 옵션입니다. committed \$16.8B와 착공 일정을 숫자로 추적하시면 됩니다.
+정부 단독 공급 계약은 매출의 질을 높여 줍니다. 2028년 7월 연장 선택권 행사와 적용 기종 확대를 확인 지점으로 두시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'텍사스 테라팹에 추가 약 480억 달러·총 1,190억 달러·서브2nm AI 칩이 잡혔습니다',
-    heroIcon:'🏭',
-    heroBig:'$119B',
-    heroSub:'추가 ~480억, 1단계 168억 확정, 총 1,190억. 2026.12~2028.12 공사, 서브2nm AI 칩.',
-    cards:[{icon:'💰',big:'$48B',mid:'추가 투자',sub:'on top'},{icon:'✅',big:'$16.8B',mid:'1단계',sub:'committed'},{icon:'🔬',big:'sub-2nm',mid:'AI 칩',sub:'첨단 공정'}],
-    quote:'"테라팹 텍사스에 추가 약 480억, 1단계 168억 확정, 총 1,190억입니다. 34쪽 세제협약, 2026년 12월~2028년 12월 공사, 서브2nm AI 칩. 규모가 크므로 착공·장비 발주·수율을 단계별로 확인하세요."',
+    title:'우주군이 군용기 위성통신을 스페이스X 단독으로 발주하고 하향 500Mbps 속도를 명시했습니다',
+    heroIcon:'🛡️',
+    heroBig:'500Mbps',
+    heroSub:'군용기용 위성통신을 스페이스X 단독 공급으로 발주했습니다. 전 세계 통신, 하향 500Mbps와 상향 100Mbps, 타일형과 소형 단말이 조건입니다.',
+    cards:[{icon:'✈️',big:'군용기',mid:'전 세계 통신',sub:'지역 제한 없음'},{icon:'📶',big:'500/100',mid:'하향·상향 속도',sub:'단위는 Mbps'},{icon:'📅',big:'2027년 7월',mid:'기본 계약 종료',sub:'2028년 7월 연장 선택'}],
+    quote:'"군용기용 위성통신이 스페이스X 단독 공급으로 발주됐습니다. 전 세계 지역 제한 없는 통신과 하향 500Mbps, 상향 100Mbps가 조건이며, 기본 계약은 2027년 7월까지입니다. 2028년 7월까지 연장 선택권이 포함됐습니다."',
     noteHead:'왜 중요한가',
-    noteSub:'AI 실리콘 vertical integration 옵션입니다. committed 금액과 착공이 나오기 전까지는 계획으로 두세요.',
-    footer:'SPCX · 테라팹 $119B',
+    noteSub:'단독 공급 지정은 대체 사업자가 사실상 없다는 판단을 담고 있습니다. 군용기 통신은 민간 서비스보다 요구 조건이 까다롭고 단가도 높은 영역입니다. 계약은 7월 28일에 이뤄져 8월 25일 공개됐고, 연장 선택권 행사 여부가 매출 가시성을 결정합니다.',
+    footer:'SPCX · 군용기 위성통신',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Terafab Texas ~$48B additional, $119B total, sub-2nm AI',
-    heroIcon:'🏭',
-    heroBig:'$119B',
-    heroSub:'~$48B additional, Phase 1 $16.8B committed, Dec 2026–Dec 2028 build, sub-2nm AI chips.',
-    cards:[{icon:'💰',big:'$48B',mid:'Additional',sub:'Capex'},{icon:'✅',big:'$16.8B',mid:'Phase 1',sub:'Committed'},{icon:'🔬',big:'sub-2nm',mid:'AI chips',sub:'Leading edge'}],
-    quote:'"Terafab Texas adds ~$48B for $119B total. Phase 1 $16.8B committed, 34-page tax agreement, Dec 2026–Dec 2028 construction, sub-2nm AI chips."',
+    title:'Space Force awards SpaceX sole source military aircraft satcom at 500Mbps',
+    heroIcon:'🛡️',
+    heroBig:'500Mbps',
+    heroSub:'A sole source award covers satellite communications for military aircraft, with worldwide coverage, 500Mbps down, 100Mbps up, and tile and mini terminals.',
+    cards:[{icon:'✈️',big:'Aircraft',mid:'Worldwide',sub:'No region limit'},{icon:'📶',big:'500/100',mid:'Down·up speed',sub:'Megabits per second'},{icon:'📅',big:'Jul 2027',mid:'Base period',sub:'Option to Jul 2028'}],
+    quote:'"Military aircraft satellite communications were awarded to SpaceX on a sole source basis. Worldwide coverage with 500Mbps down and 100Mbps up is specified, with a base period through July 2027 and an option to July 2028."',
     noteHead:'Why this matters',
-    noteSub:'Long-dated silicon option. Track committed spend and groundbreak before treating as near-term EPS.',
-    footer:'SPCX · Terafab $119B',
+    noteSub:'A sole source award implies no practical alternative supplier. The contract was made on July 28 and disclosed on August 25, and the option exercise will drive revenue visibility.',
+    footer:'SPCX · military satcom',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'macro-dc-debt-jll-700b', symbol:'MACRO', layout:'tpl', seed:'seed-1307',
-  category:'매크로', categoryColor:'red', subject:'금리', tickers:['MACRO'],
-  title:'데이터센터 파이프라인 66GW·2028년까지 영구부채 7,000억 달러+가 잡혔습니다',
-  summary:'JLL 기준 데이터센터 파이프라인 66GW, 2028년까지 영구부채(permanent debt) 7,000억 달러 이상. MSFT·META·GOOG·AMZN·ORCL 등 빅테크 CAPEX·부채 축입니다.',
-  titleEn:'Data center 66GW pipeline, $700B+ permanent debt through 2028',
-  summaryEn:'66GW pipeline, $700B+ permanent debt through 2028 per JLL. MSFT, META, GOOG, AMZN, ORCL in focus.',
+  category:'매크로', categoryColor:'red', subject:'수급', tickers:['MACRO'],
+  title:'외국인의 미국 주식 순매수가 최근 1년간 8,000억 달러를 넘어 사상 최대를 기록했습니다',
+  summary:'외국인의 미국 주식 순매수 규모가 최근 1년 동안 8,000억 달러를 넘었습니다. 1986년 이후 집계에서 가장 큰 규모이며, 미국 자산으로 자금이 집중되고 있음을 보여 줍니다.',
+  titleEn:'Foreign net purchases of US equities top $800B over the past year, the largest on record',
+  summaryEn:'Foreign investors bought more than $800B of US equities on a net basis over the past year, the largest amount in records going back to 1986.',
   body: `■ 상세
 
-데이터센터(data center)는 AI 학습·추론을 위한 GPU·전력·냉각 인프라입니다. JLL 리포트 기준 파이프라인 66GW(기가와트), 2028년까지 영구부채(permanent debt) 7,000억 달러(\$700B+)가 필요하다는 추정이 나왔습니다.
+외국인의 미국 주식 순매수 규모가 최근 1년 동안 8,000억 달러를 넘었습니다. 순매수는 매수 금액에서 매도 금액을 뺀 값이므로, 실제로 미국 주식으로 들어온 자금 규모를 보여 줍니다.
 
-MSFT(마이크로소프트), META(메타), GOOG(구글), AMZN(아마존), ORCL(오라클) 등 hyperscaler가 CAPEX·부채 발행의 중심입니다. GW는 전력 용량 단위로, AI 팩토리 확장 규모를 보여 줍니다.
+1986년부터의 장기 집계와 비교하면 이번 수치는 가장 큰 규모입니다. 과거 여러 차례 급증 구간이 있었지만, 이번처럼 8,000억 달러를 넘어선 사례는 없었습니다.
 
-\$700B+ debt는 금리·신용 스프레드·은행 대출 여력과 연결됩니다. CAPEX boom과 financial leverage가 동시에 진행 중임을 시사합니다.
+해외 자금이 미국 주식에 집중되는 이유로는 인공지능 관련 기업의 실적 성장, 달러 자산 선호, 다른 지역 대비 높은 수익률이 함께 거론됩니다. 다만 자금 유입은 방향이 바뀔 때 속도도 빠릅니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. 66GW pipeline은 전력·부지·grid bottleneck을 내포합니다.
+1. 8,000억 달러 순매수는 미국 주식 상승의 수급 배경을 설명합니다.
 
-2. \$700B+ debt는 AI infra financing wall입니다.
+2. 1986년 이후 최대라는 점은 현재 국면이 예외적임을 보여 줍니다.
 
-3. hyperscaler 5社는 Mag7 CAPEX의 core.
+3. 해외 자금 비중이 높아지면 환율과 주가의 연동이 강해집니다.
 
-4. 영구부채는 금리 민감도가 큽니다.
+4. 자금 유입이 멈추는 시점이 조정의 계기가 될 수 있습니다.
 
-5. 전력·허가 지연이 debt drawdown을 늦출 수 있습니다.
+5. 특정 지역 자금 편중은 정책 변화에 민감합니다.
 
 ■ 시나리오
 
-**A: debt 발행·프로젝트 financing 가속.**
-**B: 금리·regulation으로 pipeline 축소.**
-**C: utility·grid가 binding constraint.**
+**A: 실적 성장이 이어지면 순매수 흐름이 유지될 수 있습니다.**
+**B: 달러가 약해지면 환차손 부담으로 유입 속도가 줄어들 수 있습니다.**
+**C: 다른 지역 수익률이 개선되면 자금이 분산될 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- AI CAPEX boom
-- 66GW·\$700B+ debt
-- bank unrealized losses same week
+- 해외 자금의 미국 주식 순매수가 수년간 늘어났습니다.
+- 최근 1년 누적 규모가 8,000억 달러를 넘었습니다.
+- 1986년 이후 집계에서 가장 큰 규모로 확인됐습니다.
 
 ■ 반대 관점
 
-(1) JLL estimate
-(2) project cancel
-(3) rate spike
-(4) power delay
-(5) equity vs debt mix
+(1) 순매수 통계는 발표 시차가 있어 최신 흐름과 다를 수 있습니다.
+
+(2) 명목 금액은 시장 규모가 커지면 자연히 늘어납니다.
+
+(3) 특정 국가의 대규모 거래가 전체 수치를 왜곡할 수 있습니다.
+
+(4) 지수 편입 관련 기계적 매수가 포함될 수 있습니다.
+
+(5) 사상 최대라는 표현 자체가 과열 신호로 읽힐 수도 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) quarterly capex
-(2) bond issuance
-(3) GW online
-(4) utility deals
-(5) credit spreads
+(1) 월별 순매수 흐름이 유지되는지 확인하시면 됩니다.
+
+(2) 달러 지수 방향과 함께 보시기 바랍니다.
+
+(3) 국가별 자금 구성이 공개되는지 살펴보시기 바랍니다.
+
+(4) 채권과 주식 사이 자금 배분 변화를 추적하시면 됩니다.
+
+(5) 유입이 둔화되는 첫 신호가 어디서 나오는지 확인하시면 됩니다.
 
 ■ 투자시사점
 
-AI infra는 실물+금융 이중 레버입니다. GW pipeline과 debt issuance를 함께 추적하시면 됩니다.
+수급은 가격을 설명하는 중요한 축입니다. 사상 최대 순매수는 상승의 배경이자 되돌림의 조건이므로, 월별 흐름의 방향 전환을 확인 지점으로 두시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'데이터센터 파이프라인 66GW·2028년까지 영구부채 7,000억 달러+가 잡혔습니다',
-    heroIcon:'🏗️',
-    heroBig:'$700B+',
-    heroSub:'파이프라인 66GW, 2028년까지 영구부채 7,000억+. MSFT·META·GOOG·AMZN·ORCL CAPEX·부채 축.',
-    cards:[{icon:'⚡',big:'66GW',mid:'파이프라인',sub:'전력 용량'},{icon:'💳',big:'$700B+',mid:'영구부채',sub:'~2028'},{icon:'🏢',big:'5社',mid:'hyperscaler',sub:'MSFT·META 등'}],
-    quote:'"데이터센터 파이프라인 66GW, 2028년까지 영구부채 7,000억 달러 이상이 필요하다는 추정입니다. AI 팩토리는 GPU만이 아니라 전력·부지·금융이 묶입니다. 금리와 은행 여력이 같은 화면의 변수입니다."',
+    title:'외국인의 미국 주식 순매수가 최근 1년간 8,000억 달러를 넘어 사상 최대를 기록했습니다',
+    heroIcon:'🌐',
+    heroBig:'$800B+',
+    heroSub:'최근 1년 외국인 순매수가 8,000억 달러를 넘었습니다. 1986년 이후 집계에서 가장 큰 규모입니다.',
+    cards:[{icon:'📈',big:'$800B+',mid:'최근 1년 순매수',sub:'사상 최대 규모'},{icon:'🗓️',big:'1986년',mid:'집계 시작',sub:'40년 비교 기준'},{icon:'💵',big:'달러',mid:'환율·유동성',sub:'함께 볼 변수'}],
+    quote:'"외국인의 미국 주식 순매수가 최근 1년 동안 8,000억 달러를 넘어 1986년 이후 가장 큰 규모가 됐습니다. 인공지능 실적 성장과 달러 자산 선호가 배경으로 거론됩니다. 자금 유입은 방향이 바뀔 때 속도도 빠릅니다."',
     noteHead:'왜 중요한가',
-    noteSub:'AI CAPEX와 부채 발행이 동시에 커집니다. GW 착공과 bond issuance를 숫자로 확인하세요.',
-    footer:'MACRO · DC debt $700B+',
+    noteSub:'해외 자금 비중이 커지면 환율과 주가의 연동이 강해집니다. 인공지능 실적 성장과 달러 자산 선호가 배경으로 거론되지만, 명목 금액은 시장 규모가 커지면 자연히 늘어납니다. 월별 유입 흐름의 방향 전환을 확인하시면 됩니다.',
+    footer:'MACRO · 외국인 순매수',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Data center 66GW pipeline, $700B+ debt through 2028',
-    heroIcon:'🏗️',
-    heroBig:'$700B+',
-    heroSub:'66GW pipeline, $700B+ permanent debt through 2028. MSFT, META, GOOG, AMZN, ORCL capex and debt in focus.',
-    cards:[{icon:'⚡',big:'66GW',mid:'Pipeline',sub:'Power capacity'},{icon:'💳',big:'$700B+',mid:'Permanent debt',sub:'Through 2028'},{icon:'🏢',big:'5',mid:'Hyperscalers',sub:'Big Tech'}],
-    quote:'"A 66GW data-center pipeline may need $700B+ permanent debt through 2028. AI factories tie GPUs to power, land, and financing. Rates and bank capacity matter on the same screen."',
+    title:'Foreign net purchases of US equities top $800B, the largest on record',
+    heroIcon:'🌐',
+    heroBig:'$800B+',
+    heroSub:'Foreign investors bought more than $800B of US equities on a net basis over the past year, the largest in records since 1986.',
+    cards:[{icon:'📈',big:'$800B+',mid:'Net buying',sub:'Past twelve months'},{icon:'🗓️',big:'1986',mid:'Record start',sub:'Forty year window'},{icon:'💵',big:'USD',mid:'FX·liquidity',sub:'Watch alongside'}],
+    quote:'"Foreign net purchases of US equities exceeded $800B over the past year, the largest since records began in 1986. AI driven earnings growth and dollar asset preference are cited. Flows can reverse quickly."',
     noteHead:'Why this matters',
-    noteSub:'AI capex and debt issuance scale together. Track GW builds and bond supply.',
-    footer:'MACRO · DC debt $700B+',
+    noteSub:'A larger foreign share ties equity prices more closely to the currency. Record buying is both a support and a condition for reversal, so watch the monthly turn in flows.',
+    footer:'MACRO · foreign flows',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'tsla-robotaxi-16h-6cities', symbol:'TSLA', layout:'tpl', seed:'seed-1308',
   category:'종목분석', categoryColor:'mint', subject:'테슬라', tickers:['TSLA'],
-  title:'테슬라 로보택시가 6개 도시에서 하루 16시간(오전 6시~오후 10시) 운행합니다',
-  summary:'오스틴·달러스·휴스턴·마이애미·올랜도·탬파 6개 도시, 하루 16시간(6am–10pm) 운행. 무인(unsupervised) 함대도 성장했다는 설명입니다.',
-  titleEn:'Tesla robotaxi runs 16 hours/day in six cities, unsupervised fleet grew',
-  summaryEn:'Six cities Austin–Tampa, 16h/day 6am–10pm. Unsupervised fleet reportedly grew.',
+  title:'사이버캡 전면 조명이 색을 바꿔 호출한 차량을 군중 속에서 찾도록 설계됐습니다',
+  summary:'사이버캡 전면에 색을 바꿀 수 있는 조명 띠가 적용됐습니다. 호출 앱이 차량마다 색을 배정해 승객이 붐비는 곳에서도 자기 차량을 구분할 수 있게 하는 방식입니다. 시험 주행에서는 금색 차체에 녹색과 주황색 띠가 켜진 모습이 확인됐습니다.',
+  titleEn:'Cybercab front light bar changes color so riders can find their assigned car in a crowd',
+  summaryEn:'Cybercab carries an RGB front light bar. The app assigns a color per ride so passengers can identify their car in a crowd, and gold test units were seen with green and orange strips.',
   body: `■ 상세
 
-로보택시(robotaxi)는 자율주행 소프트웨어로 승객을 실어 나르는 서비스입니다. 이번 업데이트는 6개 도시에서 하루 16시간, 오전 6시~오후 10시(6am–10pm) 운행한다는 설명입니다.
+사이버캡 전면에 색을 바꿀 수 있는 조명 띠가 적용됐습니다. 호출 앱이 차량마다 색을 배정하고 그 색이 전면 조명에 표시되는 방식입니다. 승객은 번호판을 확인하지 않고도 자기 차량을 구분할 수 있습니다.
 
-도시는 오스틴(Austin), 달러스(Dallas), 휴스턴(Houston), 마이애미(Miami), 올랜도(Orlando), 탬파(Tampa)입니다. 플로리다 3개·텍사스 3개로 geofence가 넓어졌습니다. 무인(unsupervised) 함대도 늘었다는 설명이 함께 나왔습니다.
+시험 주행에서는 금색 차체에 녹색과 주황색 띠가 켜진 모습이 확인됐습니다. 색 배정이 실제로 작동하는 단계임을 보여 주는 장면입니다.
 
-운행 시간·도시 수·무인 비율은 유료 마일과 revenue run-rate의 선행 지표입니다. 허가·보험·사고·개입률은 별도 확인이 필요합니다.
+운전자가 없는 차량은 승객을 찾아 주는 사람도 없습니다. 따라서 승객이 차량을 빨리 찾도록 돕는 장치는 편의 기능이 아니라 운영 효율과 직접 연결됩니다. 승객 대기 시간이 줄면 차량 회전율이 올라갑니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. 16h/day는 차량 utilization 상한을 올립니다.
+1. 무인 차량은 승객이 스스로 차량을 찾아야 하므로 식별 장치가 필요합니다.
 
-2. 6 cities는 지리 확장의 실물 신호입니다.
+2. 승객 탑승 시간이 줄면 차량 한 대의 하루 운행 횟수가 늘어납니다.
 
-3. unsupervised fleet growth는 감독원 탑승에서 한 단계 전진입니다.
+3. 조명 색 배정은 앱과 차량이 실시간으로 연동돼야 작동합니다.
 
-4. FL+TX mix는 규제 환경 다양성을 뜻합니다.
+4. 시험 주행 차량이 목격됐다는 것은 검증 단계가 진행 중이라는 뜻입니다.
 
-5. 운행 시간≠유료 승객.
+5. 승객 경험의 세부 설계는 기존 호출 서비스와의 경쟁 요소입니다.
 
 ■ 시나리오
 
-**A: 유료 마일·도시 추가 발표.**
-**B: 사고·회수로 시간·도시 축소.**
-**C: 경쟁사 유료 확대.**
+**A: 색 배정이 안정되면 승객 대기 시간이 줄어 회전율이 올라갑니다.**
+**B: 야간이나 악천후에서 식별이 어려우면 보완 장치가 필요합니다.**
+**C: 조명 관련 규정이 지역별로 다르면 적용 범위가 제한될 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- Robotaxi geofence expansion
-- 16h·6 cities·unsupervised
-- Cybercab price hike same week
+- 무인 호출 서비스의 승객 식별 문제가 계속 지적돼 왔습니다.
+- 사이버캡 전면에 색 변경 조명 띠가 적용됐습니다.
+- 금색 차체에 녹색과 주황색 띠가 켜진 시험 차량이 확인됐습니다.
 
 ■ 반대 관점
 
-(1) paid vs test
-(2) geofence map
-(3) incident rate
-(4) weather·night
-(5) insurance
+(1) 조명 색 식별은 밝은 낮이나 먼 거리에서 효과가 떨어질 수 있습니다.
+
+(2) 색을 구분하기 어려운 승객을 위한 대안이 필요합니다.
+
+(3) 차량 외부 조명은 지역 규정의 제약을 받습니다.
+
+(4) 목격된 차량은 시험 단계일 수 있습니다.
+
+(5) 식별 편의가 곧 유료 운행 확대를 뜻하지는 않습니다.
 
 ■ 앞으로 볼 것
 
-(1) weekly miles
-(2) city permits
-(3) unsupervised %
-(4) app pricing
-(5) fleet size
+(1) 호출 앱에 색 안내 기능이 정식으로 들어가는지 확인하시면 됩니다.
+
+(2) 사이버캡 양산 일정과 배치 도시를 보시기 바랍니다.
+
+(3) 승객 탑승까지 걸리는 시간이 줄어드는지 살펴보시기 바랍니다.
+
+(4) 차량 외부 조명 관련 규정 대응을 추적하시면 됩니다.
+
+(5) 유료 운행 대수가 늘어나는지 확인하시면 됩니다.
 
 ■ 투자시사점
 
-로보택시는 지리·시간·무인 세 축입니다. 유료 마일 숫자로 검증하시면 됩니다.
+무인 호출 서비스의 수익성은 차량 회전율에서 나옵니다. 승객 식별 장치는 작아 보이지만 회전율에 직접 영향을 주므로, 탑승 대기 시간 변화를 확인 지점으로 두시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'테슬라 로보택시가 6개 도시에서 하루 16시간(오전 6시~오후 10시) 운행합니다',
+    title:'사이버캡 전면 조명이 색을 바꿔 호출한 차량을 군중 속에서 찾도록 설계됐습니다',
     heroIcon:'🚕',
-    heroBig:'16h',
-    heroSub:'6개 도시, 6am–10pm, 16시간/일. 오스틴·달러스·휴스턴·마이애미·올랜도·탬파. 무인 함대도 성장.',
-    cards:[{icon:'🌆',big:'6개',mid:'도시',sub:'TX·FL'},{icon:'⏰',big:'16h',mid:'운행',sub:'6am–10pm'},{icon:'🤖',big:'무인',mid:'함대 성장',sub:'unsupervised'}],
-    quote:'"로보택시가 6개 도시에서 하루 16시간 운행합니다. 오전 6시~오후 10시, 텍사스·플로리다 3개씩입니다. 무인 함대도 늘었다는 설명입니다. 운행 시간과 유료 승객은 단계가 다르므로 마일·요금 앱을 확인하세요."',
+    heroBig:'색상 배정',
+    heroSub:'전면 조명 띠가 색을 바꿉니다. 호출 앱이 차량마다 색을 배정해 붐비는 곳에서도 자기 차량을 구분할 수 있습니다.',
+    cards:[{icon:'🌈',big:'조명 띠',mid:'전면 색 변경',sub:'차량마다 다른 색'},{icon:'📱',big:'앱 배정',mid:'색으로 식별',sub:'호출 차량 확인'},{icon:'👀',big:'금색 차량',mid:'시험 주행 목격',sub:'녹색·주황 띠 확인'}],
+    quote:'"사이버캡 전면 조명이 색을 바꿉니다. 호출 앱이 차량마다 색을 배정해 승객이 붐비는 곳에서도 자기 차량을 찾을 수 있게 하는 방식입니다. 시험 주행에서는 금색 차체에 녹색과 주황색 띠가 켜진 모습이 확인됐습니다."',
     noteHead:'왜 중요한가',
-    noteSub:'지리·시간·무인이 동시에 늘면 실물 진전입니다. 유료 전환과 사고율을 함께 보시면 됩니다.',
-    footer:'TSLA · 로보택시 16h',
+    noteSub:'무인 차량은 승객을 안내해 줄 사람이 없으므로 식별 장치가 운영 효율과 직접 연결됩니다. 탑승 대기 시간이 줄면 차량 한 대의 하루 운행 횟수가 늘어납니다. 다만 밝은 낮이나 먼 거리에서는 색 식별 효과가 떨어질 수 있습니다.',
+    footer:'TSLA · 사이버캡 조명',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Tesla robotaxi 16h/day in six cities',
+    title:'Cybercab front light bar assigns a color so riders find their car',
     heroIcon:'🚕',
-    heroBig:'16h',
-    heroSub:'Six cities, 6am–10pm, 16 hours/day. Austin through Tampa. Unsupervised fleet reportedly grew.',
-    cards:[{icon:'🌆',big:'6',mid:'Cities',sub:'TX·FL'},{icon:'⏰',big:'16h',mid:'Daily',sub:'6am–10pm'},{icon:'🤖',big:'Fleet',mid:'Unsupervised',sub:'Grew'}],
-    quote:'"Robotaxi service runs 16 hours per day across six cities, 6am–10pm. Unsupervised fleet growth is cited. Operating hours and paid passengers are different stages—check miles and pricing."',
+    heroBig:'Color ID',
+    heroSub:'The front light bar changes color. The ride app assigns a color per car so passengers can identify their vehicle in a crowd.',
+    cards:[{icon:'🌈',big:'Light bar',mid:'Front strip',sub:'Color per car'},{icon:'📱',big:'App',mid:'Assigns color',sub:'Find your ride'},{icon:'👀',big:'Gold unit',mid:'Test sighting',sub:'Green·orange strips'}],
+    quote:'"The Cybercab front light bar changes color. The app assigns a color per ride so passengers can find their car in a crowd. Gold test units were seen running green and orange strips."',
     noteHead:'Why this matters',
-    noteSub:'Geography, hours, and driverless mix advancing together. Verify paid conversion and safety stats.',
-    footer:'TSLA · Robotaxi 16h',
+    noteSub:'With no driver to flag riders down, identification directly affects operations. Shorter pickup time raises how many trips each car completes per day.',
+    footer:'TSLA · Cybercab lighting',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'tsla-grok-think-fast-2', symbol:'TSLA', layout:'tplQuote', seed:'seed-1309',
   category:'종목분석', categoryColor:'mint', subject:'테슬라', tickers:['TSLA'],
-  title:'그록 Think Fast 2.0이 음성 대화 1위로 올라 차량·설정·내비·음악을 제어합니다',
-  summary:'Grok Think Fast 2.0이 speech-to-speech(음성 대화) 벤치 1위. 차량 제어, 설정, 내비, 음악을 음성으로 조작합니다. 차량 OS·AI assistant 축입니다.',
-  titleEn:'Grok Think Fast 2.0 ranks #1 in speech-to-speech, controls car/settings/nav/music',
-  summaryEn:'Grok Think Fast 2.0 #1 in speech-to-speech. Controls vehicle, settings, navigation, and music.',
+  title:'테슬라 세미가 9월 24일 행사에서 본격 출시되고 연 5만 대 생산 공장이 준비됐습니다',
+  summary:'테슬라 세미의 본격 출시 행사가 9월 24일로 예정됐습니다. 네바다 공장은 4월부터 건설돼 연 5만 대 생산 능력을 갖췄고, 선주문은 두 곳에서 870대가 확인됐습니다. 배터리 용량은 822kWh이며 전용 충전망도 함께 구축됩니다.',
+  titleEn:'Tesla Semi gets a September 24 rollout event with a 50,000 per year Nevada plant',
+  summaryEn:'Tesla Semi has a big rollout event set for September 24. The Nevada factory has been under construction since April with 50,000 units per year of capacity, Einride and WattEV ordered 870 trucks, packs are 822 kWh, and a dedicated charging network is being built.',
   body: `■ 상세
 
-Think Fast 2.0은 xAI·테슬라 생태계의 음성 AI 모델입니다. speech-to-speech는 텍스트 중간 없이 음성 입력→음성 출력으로 대화하는 방식입니다.
+테슬라 세미의 본격 출시 행사가 9월 24일로 예정됐습니다. 세미는 장거리 화물용 대형 전기 트럭으로, 승용차와는 판매 구조와 고객이 완전히 다릅니다.
 
-벤치에서 1위로 표시되며, 차량 제어(vehicle control), 설정(settings), 내비게이션(navigation), 음악(music)을 음성 명령으로 조작합니다. FSD·로보택시와 별도로, 차량 내 UX·체류 시간·구독 monetization 축입니다.
+네바다 공장은 4월부터 건설이 진행됐고 연 5만 대 생산 능력을 목표로 합니다. 선주문은 두 물류 업체에서 870대가 확인됐습니다. 배터리 용량은 822kWh로, 대형 트럭에 필요한 주행거리를 확보하기 위한 규모입니다.
 
-벤치 1위가 곧 실차 만족도는 아닙니다. latency·안전·오프라인·개인정보는 실사용에서 검증해야 합니다.
+충전은 전용 대용량 충전망을 통해 이뤄집니다. 대형 트럭은 충전 시간이 운행 계획에 직접 영향을 주므로, 노선을 따라 충전소가 배치돼야 실제 운행이 가능합니다. 장기적으로는 운전자 없는 세미 운행도 목표로 제시됐습니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. 음성 UI는 운전 중 hands-free 핵심입니다.
+1. 연 5만 대 생산 능력은 시험 생산 단계를 넘어섰다는 뜻입니다.
 
-2. 차량 제어 연동은 OS lock-in을 강화합니다.
+2. 870대 선주문은 물류 업체가 실제 운행을 계획하고 있음을 보여 줍니다.
 
-3. speech-to-speech 1위는 모델 경쟁력 신호입니다.
+3. 822kWh 배터리는 대당 배터리 수요가 승용차의 여러 배임을 뜻합니다.
 
-4. FSD·로보택시와 AI 스택 synergy.
+4. 전용 충전망 구축은 초기 투자 부담과 진입 장벽을 동시에 만듭니다.
 
-5. 벤치 vs real-world gap 가능.
+5. 9월 24일 행사는 일정이 특정된 확인 지점입니다.
 
 ■ 시나리오
 
-**A: 차량 OTA로 대-scale rollout.**
-**B: rival voice assistant catch-up.**
-**C: safety incident→rollout pause.**
+**A: 행사에서 양산 일정과 추가 주문이 공개되면 사업 가시성이 올라갑니다.**
+**B: 충전망 구축이 늦어지면 인도 대수가 계획보다 낮아질 수 있습니다.**
+**C: 배터리 물량 배분에서 승용차와 경쟁하면 생산이 제한될 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- Grok in-car stack
-- Think Fast 2.0 #1 S2S
-- Robotaxi same week
+- 네바다 공장이 4월부터 건설돼 왔습니다.
+- 물류 업체 두 곳에서 870대 주문이 확인됐습니다.
+- 9월 24일 본격 출시 행사가 예정됐습니다.
 
 ■ 반대 관점
 
-(1) bench only
-(2) distraction risk
-(3) privacy
-(4) rival Siri/Google
-(5) subscription
+(1) 생산 능력은 설비 기준이며 실제 생산량과 다릅니다.
+
+(2) 선주문은 취소와 조건 변경이 가능합니다.
+
+(3) 대형 트럭 충전망 구축에는 시간과 비용이 많이 듭니다.
+
+(4) 대당 배터리 사용량이 커 승용차 생산과 물량 경쟁이 생깁니다.
+
+(5) 운전자 없는 운행은 장기 목표이며 규제 허가가 남아 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) OTA release notes
-(2) user reviews
-(3) latency
-(4) feature parity
-(5) xAI roadmap
+(1) 9월 24일 행사에서 공개되는 양산 일정을 확인하시면 됩니다.
+
+(2) 870대 이후 추가 주문이 나오는지 보시기 바랍니다.
+
+(3) 충전소 배치 계획과 완공 시점을 살펴보시기 바랍니다.
+
+(4) 분기별 인도 대수가 집계에 반영되는지 추적하시면 됩니다.
+
+(5) 배터리 물량 배분 관련 언급을 확인하시면 됩니다.
 
 ■ 투자시사점
 
-in-car AI는 로보택시 옆 revenue leg입니다. OTA 배포와 실사용 리뷰를 추적하시면 됩니다.
+세미는 승용차와 다른 매출 축입니다. 연 5만 대 생산 능력과 870대 선주문 사이의 간격을 메우는 속도가 핵심이므로, 9월 24일 행사에서 나오는 양산 일정을 확인 지점으로 두시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'그록 Think Fast 2.0이 음성 대화 1위로 올라 차량·설정·내비·음악을 제어합니다',
-    heroBig:'#1 S2S',
-    heroSub:'음성 대화(speech-to-speech) 1위. 차량·설정·내비·음악 음성 제어.',
-    chip1big:'#1',
-    chip1sub:'음성 대화',
-    chip2big:'4-in-1',
-    chip2sub:'차량·내비·음악',
-    cards:[{icon:'🎙️',big:'S2S',mid:'음성 대화',sub:'벤치 1위'},{icon:'🚗',big:'차량',mid:'제어',sub:'설정·내비'},{icon:'🎵',big:'음악',mid:'연동',sub:'hands-free'}],
-    quote:'"그록 Think Fast 2.0이 음성 대화 벤치 1위입니다. 텍스트 없이 말로 대화하고, 차량·설정·내비·음악을 조작합니다. 운전 중 손을 떼지 않는 UX가 목표입니다. 벤치 1위와 실차 만족도는 다를 수 있으니 OTA 후 리뷰를 보세요."',
+    title:'테슬라 세미가 9월 24일 행사에서 본격 출시되고 연 5만 대 생산 공장이 준비됐습니다',
+    heroBig:'9월 24일',
+    heroSub:'세미 본격 출시 행사가 9월 24일로 예정됐습니다. 네바다 공장은 연 5만 대 생산 능력을 목표로 합니다.',
+    chip1big:'5만 대',
+    chip1sub:'연간 생산 능력',
+    chip2big:'870대',
+    chip2sub:'확인된 선주문',
+    cards:[{icon:'🚛',big:'5만 대',mid:'연간 생산 능력',sub:'네바다 공장'},{icon:'🔋',big:'822kWh',mid:'배터리 용량',sub:'대형 트럭 기준'},{icon:'⚡',big:'전용 충전',mid:'충전망 구축',sub:'노선별 배치 필요'}],
+    quote:'"테슬라 세미의 본격 출시 행사가 9월 24일로 예정됐습니다. 네바다 공장은 4월부터 건설돼 연 5만 대 생산 능력을 목표로 하고, 물류 업체 두 곳에서 870대 선주문이 확인됐습니다. 배터리는 822kWh이며 전용 충전망도 함께 구축됩니다."',
     noteHead:'왜 중요한가',
-    noteSub:'차량 OS·AI assistant 경쟁력입니다. 로보택시와 별도 monetization leg. OTA 배포 범위를 확인하세요.',
-    footer:'TSLA · Grok Think Fast 2.0',
+    noteSub:'대형 트럭은 대당 배터리 사용량이 승용차의 여러 배이고, 충전 시간이 운행 계획을 좌우합니다. 연 5만 대 생산 능력과 870대 선주문 사이의 간격을 메우는 속도가 관건이며, 운전자 없는 운행은 장기 목표로 남아 있습니다.',
+    footer:'TSLA · 세미 9월 24일',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Grok Think Fast 2.0 #1 speech-to-speech, controls car/nav/music',
-    heroBig:'#1 S2S',
-    heroSub:'#1 in speech-to-speech. Controls vehicle, settings, navigation, and music by voice.',
-    chip1big:'#1',
-    chip1sub:'Speech-to-speech',
-    chip2big:'4-in-1',
-    chip2sub:'Car·nav·music',
-    cards:[{icon:'🎙️',big:'S2S',mid:'Voice',sub:'#1 bench'},{icon:'🚗',big:'Car',mid:'Control',sub:'Settings·nav'},{icon:'🎵',big:'Music',mid:'Linked',sub:'Hands-free'}],
-    quote:'"Grok Think Fast 2.0 ranks #1 in speech-to-speech. It controls vehicle, settings, navigation, and music without text in the middle. Bench rank and in-car satisfaction can differ—watch OTA rollout."',
+    title:'Tesla Semi rollout set for September 24 with a 50,000 per year plant',
+    heroBig:'Sep 24',
+    heroSub:'The Semi rollout event is set for September 24, with the Nevada plant targeting 50,000 units per year.',
+    chip1big:'50,000',
+    chip1sub:'Units per year',
+    chip2big:'870',
+    chip2sub:'Trucks ordered',
+    cards:[{icon:'🚛',big:'50,000',mid:'Annual capacity',sub:'Nevada plant'},{icon:'🔋',big:'822kWh',mid:'Battery pack',sub:'Class 8 truck'},{icon:'⚡',big:'Charging',mid:'Dedicated network',sub:'Route coverage'}],
+    quote:'"The Tesla Semi rollout event is set for September 24. The Nevada plant has been under construction since April targeting 50,000 units a year, and two logistics operators ordered 870 trucks. Packs are 822 kWh with a dedicated charging network."',
     noteHead:'Why this matters',
-    noteSub:'In-car AI competes with phone assistants. Separate leg from robotaxi. Track OTA scope.',
-    footer:'TSLA · Grok Think Fast 2.0',
+    noteSub:'Heavy trucks use several times more battery per unit than cars, and charging time drives route planning. Closing the gap between 50,000 units of capacity and 870 orders is the key, with driverless operation a long term goal.',
+    footer:'TSLA · Semi September 24',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'meta-compute-resale-wf', symbol:'META', layout:'tplCompare', seed:'seed-1310',
   category:'종목분석', categoryColor:'blue', subject:'메타', tickers:['META'],
-  title:'메타는 2030년까지 5GW 잉여 컴퓨트 재판매 시 GW당 ROI 38% 시나리오가 나왔습니다',
-  summary:'2030년 5GW excess, GW당 캡엑스 380억·매출 200억, 마진 73%, 순이익 146억, ROI 38% 시나리오. AI infra를 자산으로 monetize하는 프레임입니다.',
-  titleEn:'Meta 5GW excess compute resale by 2030: $38B/GW capex, 38% ROI scenario',
-  summaryEn:'5GW excess by 2030, $38B/GW capex, $20B/GW revenue, 73% margin, $14.6B NI, 38% ROI.',
+  title:'메타는 앤트로픽 사용을 줄이겠다고 밝혔지만 여전히 매달 수억 달러를 쓰고 있습니다',
+  summary:'메타는 앤트로픽 사용을 줄이겠다는 방침을 밝혔지만 실제로는 매달 수억 달러를 계속 지출하고 있습니다. 자체 도구와 다른 모델로 전환이 진행되면 지출 구조가 바뀔 수 있어, 외부 모델 비용과 자체 개발 비용의 균형이 관건입니다.',
+  titleEn:'Meta said it would pull back from Anthropic yet still spends hundreds of millions a month',
+  summaryEn:'Meta signaled a pullback from Anthropic but still spends hundreds of millions of dollars per month. A shift to internal tools or other models would change that cost structure.',
   body: `■ 상세
 
-메타(Meta)는 AI 학습·추론을 위해 대규모 GPU 클러스터를 구축 중입니다. 이번 시나리오는 2030년까지 5GW(gigawatt-scale compute) 잉여(excess) capacity를 재판매(resale)한다는 가정입니다.
+메타는 앤트로픽 사용을 줄이겠다는 방침을 밝혔습니다. 그러나 실제 지출은 매달 수억 달러 수준으로 이어지고 있습니다. 방침과 집행 사이에 시차가 있다는 뜻입니다.
 
-GW당 캡엑스(capex) 380억 달러(\$38B/GW), 매출(revenue) 200억(\$20B/GW), 마진(margin) 73%, 순이익(NI) 146억(\$14.6B), ROI(return on investment) 38%로 잡혔습니다. 자체 사용 후 남는 컴퓨트를 외부에 파는 asset-light monetization 프레임입니다.
+외부 모델 사용료는 손익계산서에서 비용으로 인식됩니다. 자체 모델과 내부 도구로 전환하면 비용 항목이 사용료에서 인프라 투자와 인건비로 옮겨 갑니다. 총액이 줄어드는지, 항목만 바뀌는지가 실제 관심사입니다.
 
-시나리오≠가이던스입니다. 전력·냉각·네트워크·경쟁 클라우드 가격이 ROI를 좌우합니다.
+메타는 다른 모델 사용도 함께 늘릴 수 있습니다. 대형 인공지능 기업들은 서로의 고객이면서 경쟁자이므로, 한쪽의 내부화 결정이 다른 쪽의 매출 성장률을 바꿉니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. 5GW excess는 overshoot capacity 가정입니다.
+1. 매달 수억 달러 지출은 외부 모델 비용의 실제 규모를 보여 줍니다.
 
-2. \$38B/GW capex는 AI factory cost curve입니다.
+2. 축소 방침과 실제 집행의 차이는 전환에 시간이 걸린다는 뜻입니다.
 
-3. 73% margin은 utilisation·pricing optimistic일 수 있습니다.
+3. 자체 도구 전환은 비용 항목을 사용료에서 투자로 옮깁니다.
 
-4. 38% ROI는 Mag7 capex debate의 anchor.
+4. 대형 고객의 결정이 공급 기업의 매출 성장률을 흔듭니다.
 
-5. 재판매는 MSFT·AMZN cloud와 경쟁.
+5. 인공지능 비용 구조는 영업이익률의 핵심 변수입니다.
 
 ■ 시나리오
 
-**A: resale product launch·enterprise contracts.**
-**B: all capacity internal, no resale.**
-**C: power cost erodes margin.**
+**A: 자체 도구가 성능을 맞추면 외부 사용료가 줄어들 수 있습니다.**
+**B: 전환이 늦어지면 매달 수억 달러 지출이 유지됩니다.**
+**C: 다른 모델로 옮기면 총액은 유지되고 공급처만 바뀝니다.**
 
 ■ 오늘까지 흐름
 
-- Meta AI capex
-- 5GW excess resale model
-- DC debt \$700B same week
+- 메타는 앤트로픽 사용 축소 방침을 밝혔습니다.
+- 실제 지출은 매달 수억 달러 수준으로 이어졌습니다.
+- 자체 도구와 다른 모델 사용 확대가 함께 거론되고 있습니다.
 
 ■ 반대 관점
 
-(1) model only
-(2) power cost
-(3) cloud price war
-(4) regulation
-(5) utilisation
+(1) 수억 달러라는 표현은 범위가 넓어 정확한 규모를 알기 어렵습니다.
+
+(2) 계약 구조에 따라 최소 사용 약정이 남아 있을 수 있습니다.
+
+(3) 자체 도구의 성능이 외부 모델을 대체할 수준인지 확인이 필요합니다.
+
+(4) 비용을 줄이면 서비스 품질이 낮아질 수 있습니다.
+
+(5) 전환 과정에서 이중 비용이 발생할 수 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) capex guide
-(2) DC online GW
-(3) cloud pricing
-(4) partnership
-(5) earnings call
+(1) 월 지출 규모가 실제로 줄어드는지 확인하시면 됩니다.
+
+(2) 자체 모델 관련 인프라 투자 계획을 보시기 바랍니다.
+
+(3) 외부 모델 공급처 구성이 바뀌는지 살펴보시기 바랍니다.
+
+(4) 인공지능 관련 비용이 실적 발표에서 어떻게 설명되는지 추적하시면 됩니다.
+
+(5) 영업이익률이 비용 전환과 함께 어떻게 움직이는지 확인하시면 됩니다.
 
 ■ 투자시사점
 
-AI infra monetization은 upside option입니다. capex guide와 실제 GW online을 먼저 보시면 됩니다.
+비용 축소 방침은 발표보다 집행이 중요합니다. 매달 수억 달러 지출이 실제로 줄어드는지, 아니면 항목만 옮겨 가는지를 확인 지점으로 두시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'메타는 2030년까지 5GW 잉여 컴퓨트 재판매 시 GW당 ROI 38% 시나리오가 나왔습니다',
-    heroBig:'38% ROI',
-    heroSub:'5GW 잉여, GW당 캡엑스 380억·매출 200억, 마진 73%, 순이익 146억.',
-    beforeLabel:'GW당 캡엑스',
-    beforeBig:'$38B',
-    beforeSub:'투자',
-    afterLabel:'GW당 매출',
-    afterBig:'$20B',
-    afterSub:'73% 마진',
-    cards:[{icon:'⚡',big:'5GW',mid:'잉여',sub:'2030'},{icon:'💰',big:'$14.6B',mid:'순이익',sub:'시나리오'},{icon:'📈',big:'38%',mid:'ROI',sub:'재판매'}],
-    quote:'"2030년 5GW 잉여 컴퓨트를 재판매하면 GW당 캡엑스 380억, 매출 200억, 마진 73%, ROI 38%라는 시나리오입니다. AI 인프라를 자산으로 돌리는 그림입니다. 시나리오와 실적 가이던스는 다릅니다."',
-    noteHead:'왜 중요한가',
-    noteSub:'Mag7 capex가 revenue leg로 확장될 수 있다는 프레임입니다. 모델과 실제 GW·계약을 분리하세요.',
-    footer:'META · compute resale',
+    title:'메타는 앤트로픽 사용을 줄이겠다고 밝혔지만 여전히 매달 수억 달러를 쓰고 있습니다',
+    heroBig:'월 수억 달러',
+    heroSub:'축소 방침을 밝혔지만 실제 지출은 매달 수억 달러로 이어집니다. 자체 도구 전환은 비용 항목을 옮길 뿐일 수 있습니다.',
+    beforeLabel:'공식 방침',
+    beforeBig:'사용 축소',
+    beforeSub:'외부 의존도 줄이기',
+    afterLabel:'실제 지출',
+    afterBig:'월 수억 달러',
+    afterSub:'축소에도 지속',
+    cards:[{icon:'💵',big:'월 수억',mid:'외부 모델 비용',sub:'지출 지속 중'},{icon:'🛠️',big:'자체 도구',mid:'전환 추진',sub:'항목 이동 가능성'},{icon:'📉',big:'성장률',mid:'공급 기업 영향',sub:'고객 이탈 위험'}],
+    quote:'"메타는 앤트로픽 사용을 줄이겠다고 밝혔지만 실제로는 매달 수억 달러를 계속 쓰고 있습니다. 자체 도구로 전환하면 비용이 사용료에서 인프라 투자로 옮겨 갑니다. 총액이 줄어드는지, 항목만 바뀌는지를 확인하셔야 합니다."',
+    footer:'META · 외부 모델 비용',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Meta 5GW excess compute resale, 38% ROI scenario',
-    heroBig:'38% ROI',
-    heroSub:'5GW excess by 2030. $38B/GW capex, $20B/GW revenue, 73% margin, $14.6B NI.',
-    beforeLabel:'Capex/GW',
-    beforeBig:'$38B',
-    beforeSub:'Investment',
-    afterLabel:'Revenue/GW',
-    afterBig:'$20B',
-    afterSub:'73% margin',
-    cards:[{icon:'⚡',big:'5GW',mid:'Excess',sub:'By 2030'},{icon:'💰',big:'$14.6B',mid:'Net income',sub:'Scenario'},{icon:'📈',big:'38%',mid:'ROI',sub:'Resale'}],
-    quote:'"A scenario resells 5GW excess compute by 2030 at $38B/GW capex and $20B/GW revenue, 73% margin, 38% ROI. Separate model from official guidance."',
-    noteHead:'Why this matters',
-    noteSub:'Frames AI infra as monetizable assets. Track GW online and contracts.',
-    footer:'META · compute resale',
+    title:'Meta signaled a pullback yet still spends hundreds of millions monthly',
+    heroBig:'$100Ms/mo',
+    heroSub:'Despite a stated pullback, monthly spending continues at hundreds of millions. Internal tools may only move the cost line.',
+    beforeLabel:'Stated policy',
+    beforeBig:'Pull back',
+    beforeSub:'Less external use',
+    afterLabel:'Actual spend',
+    afterBig:'$100Ms/mo',
+    afterSub:'Still ongoing',
+    cards:[{icon:'💵',big:'$100Ms',mid:'External model cost',sub:'Monthly run rate'},{icon:'🛠️',big:'In-house',mid:'Tool shift',sub:'Cost line moves'},{icon:'📉',big:'Growth',mid:'Supplier impact',sub:'Customer risk'}],
+    quote:'"Meta said it would reduce Anthropic usage but still spends hundreds of millions a month. Moving to internal tools shifts cost from usage fees to infrastructure. The question is whether the total falls or the line item moves."',
+    footer:'META · external model cost',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
-{ file:'googl-tpu-v8-broader-market', symbol:'GOOGL', layout:'tplQuote', seed:'seed-1311',
-  category:'종목분석', categoryColor:'blue', subject:'구글', tickers:['GOOGL'],
-  title:'구글 TPU v8이 내부용을 넘어 더 넓은 AI 시장을 겨냥합니다',
-  summary:'TPU v8(Tensor Processing Unit)이 Google 내부 워크로드뿐 아니라 broader AI market(외부·광범위 AI 시장)을 겨냥한다는 설명입니다. NVDA 대안 실리콘 축.',
-  titleEn:'Google TPU v8 targets the broader AI market, not just internal use',
-  summaryEn:'TPU v8 is aimed at the broader AI market beyond Google-internal workloads.',
+{ file:'googl-tpu-v8-broader-market', symbol:'MU', layout:'tplQuote', seed:'seed-1311',
+  category:'종목분석', categoryColor:'blue', subject:'마이크론', tickers:['MU'],
+  title:'마이크론이 인공지능 연구시설에 100억 달러를 추가로 투자하겠다고 밝혔습니다',
+  summary:'마이크론이 미국 내 인공지능·첨단 연산 연구시설에 100억 달러를 추가 투자하겠다고 밝혔습니다. 기존에 발표한 2,500억 달러 규모 투자 약속에 더해지는 금액입니다.',
+  titleEn:'Micron commits an additional $10B to US research labs for AI and advanced computing',
+  summaryEn:'Micron will add $10B for US research labs focused on AI and advanced computing, on top of a previously announced $250B commitment.',
   body: `■ 상세
 
-TPU(Tensor Processing Unit)는 구글이 AI 학습·추론용으로 설계한 ASIC 칩입니다. v8은 8세대로, 성능·전력·scale-out이 개선된 버전입니다.
+마이크론이 미국 내 연구시설에 100억 달러를 추가로 투자하겠다고 밝혔습니다. 대상은 인공지능과 첨단 연산 분야이며, 생산 설비가 아니라 연구 기능에 배분되는 금액입니다.
 
-기존 TPU는 주로 Google Cloud·내부 검색·YouTube 워크로드에 쓰였습니다. 이번 메시지는 internal only를 넘어 broader AI market—외부 enterprise·startup·경쟁 클라우드 고객—을 겨냥한다는 쪽입니다.
+이 금액은 기존에 발표한 2,500억 달러 규모 투자 약속에 더해집니다. 기존 약속이 주로 생산 설비 확충에 초점을 맞췄던 것과 달리, 이번 발표는 연구 역량 쪽으로 범위를 넓힌 것입니다.
 
-NVDA GPU dominance에 대한 hyperscaler 대안 실리콘 narrative입니다. availability·소프트웨어 stack·가격·생산 capacity가 채택 관건입니다.
+메모리 반도체는 인공지능 서버에서 연산 칩과 함께 병목이 되는 부품입니다. 고대역폭 메모리 수요가 늘어나는 국면에서 연구 투자를 늘리는 것은 다음 세대 제품 경쟁을 준비하는 성격으로 읽힙니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. broader market는 external sales ramp를 뜻합니다.
+1. 100억 달러는 연구 기능에 배분되는 금액으로는 큰 규모입니다.
 
-2. TPU v8은 NVDA·AMD·custom silicon 경쟁.
+2. 기존 2,500억 달러 약속에 더해지는 구조여서 총 투자 규모가 커집니다.
 
-3. 구글 vertical integration 강화.
+3. 메모리는 인공지능 서버 성능의 병목 지점입니다.
 
-4. cloud margin·capex efficiency lever.
+4. 미국 내 투자 확대는 정책 환경과 맞물려 있습니다.
 
-5. 내부→외부는 go-to-market 전환.
+5. 연구 투자는 다음 세대 제품의 경쟁력으로 이어집니다.
 
 ■ 시나리오
 
-**A: GCP TPU v8 GA·대형 contract.**
-**B: internal only 유지.**
-**C: yield·supply delay.**
+**A: 연구 성과가 제품에 반영되면 고부가 메모리 비중이 올라갑니다.**
+**B: 투자 집행이 늦어지면 발표와 실제의 차이가 남습니다.**
+**C: 메모리 가격 사이클이 꺾이면 투자 속도가 조정될 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- Google TPU roadmap
-- v8 broader market
-- NVDA earnings same week
+- 인공지능 서버 수요로 고대역폭 메모리 수요가 늘어났습니다.
+- 미국 내 생산 설비 투자 약속이 2,500억 달러 규모로 발표됐습니다.
+- 연구시설에 100억 달러 추가 투자가 더해졌습니다.
 
 ■ 반대 관점
 
-(1) limited supply
-(2) CUDA moat
-(3) software gap
-(4) pricing
-(5) export rules
+(1) 투자 발표는 집행 일정과 조건이 함께 확인돼야 합니다.
+
+(2) 연구 투자 성과는 실적에 반영되기까지 시간이 걸립니다.
+
+(3) 메모리 산업은 가격 변동성이 큰 사이클 산업입니다.
+
+(4) 정책 변화에 따라 투자 조건이 달라질 수 있습니다.
+
+(5) 경쟁사도 같은 방향으로 투자를 늘리고 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) GCP pricing page
-(2) customer logos
-(3) v8 benchmarks
-(4) capex comment
-(5) Anthropic tie
+(1) 연구시설의 위치와 착공 일정을 확인하시면 됩니다.
+
+(2) 100억 달러의 연도별 집행 계획을 보시기 바랍니다.
+
+(3) 고대역폭 메모리 매출 비중 변화를 살펴보시기 바랍니다.
+
+(4) 기존 2,500억 달러 약속의 진행 상황을 추적하시면 됩니다.
+
+(5) 메모리 가격 흐름과 함께 확인하시면 됩니다.
 
 ■ 투자시사점
 
-TPU externalization은 NVDA TAM narrative의 변수입니다. GCP 가격·가용성을 추적하시면 됩니다.
+연구 투자는 다음 세대 제품 경쟁력의 선행 지표입니다. 다만 성과 반영에는 시간이 걸리므로, 고대역폭 메모리 매출 비중과 투자 집행 일정을 함께 확인하시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'구글 TPU v8이 내부용을 넘어 더 넓은 AI 시장을 겨냥합니다',
-    heroBig:'TPU v8',
-    heroSub:'Tensor Processing Unit 8세대. 내부 워크로드뿐 아니라 외부 AI 시장을 겨냥합니다.',
-    chip1big:'v8',
-    chip1sub:'차세대 TPU',
-    chip2big:'외부',
-    chip2sub:'broader market',
-    cards:[{icon:'🔬',big:'TPU v8',mid:'ASIC',sub:'AI 칩'},{icon:'☁️',big:'GCP',mid:'클라우드',sub:'외부 판매'},{icon:'⚔️',big:'대안',mid:'NVDA',sub:'GPU 경쟁'}],
-    quote:'"TPU v8은 구글 AI 칩 8세대입니다. 예전에는 주로 내부·GCP에 썼지만, 이제 더 넓은 AI 시장을 겨냥한다는 설명입니다. GPU 독점에 대한 클라우드 대안 실리콘 narrative입니다. 가용성과 소프트웨어 호환이 관건입니다."',
+    title:'마이크론이 인공지능 연구시설에 100억 달러를 추가로 투자하겠다고 밝혔습니다',
+    heroBig:'$10B',
+    heroSub:'인공지능·첨단 연산 연구시설에 100억 달러 추가 투자입니다. 기존 2,500억 달러 약속에 더해집니다.',
+    chip1big:'$10B',
+    chip1sub:'연구시설 추가 투자',
+    chip2big:'$250B',
+    chip2sub:'기존 투자 약속',
+    cards:[{icon:'🔬',big:'$10B',mid:'연구시설 투자',sub:'인공지능·첨단 연산'},{icon:'🏭',big:'$250B',mid:'기존 약속',sub:'미국 내 투자 규모'},{icon:'🧠',big:'메모리',mid:'서버 병목 부품',sub:'고대역폭 수요 증가'}],
+    quote:'"마이크론이 미국 내 인공지능·첨단 연산 연구시설에 100억 달러를 추가로 투자하겠다고 밝혔습니다. 기존에 발표한 2,500억 달러 약속에 더해지는 금액이며, 생산 설비가 아니라 연구 기능에 배분됩니다."',
     noteHead:'왜 중요한가',
-    noteSub:'hyperscaler custom silicon이 외부 매출로 나올 수 있습니다. GCP TPU 가격·대형 계약을 확인하세요.',
-    footer:'GOOGL · TPU v8',
+    noteSub:'메모리는 인공지능 서버에서 연산 칩과 함께 병목이 되는 부품입니다. 연구 투자는 다음 세대 제품 경쟁력의 선행 지표이지만 실적 반영에는 시간이 걸리므로, 집행 일정과 고대역폭 메모리 매출 비중을 함께 확인하시면 됩니다.',
+    footer:'MU · 연구시설 $10B',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Google TPU v8 targets broader AI market beyond internal use',
-    heroBig:'TPU v8',
-    heroSub:'8th-gen Tensor Processing Unit aimed at external AI market, not just Google workloads.',
-    chip1big:'v8',
-    chip1sub:'Next TPU',
-    chip2big:'External',
-    chip2sub:'Broader market',
-    cards:[{icon:'🔬',big:'TPU v8',mid:'ASIC',sub:'AI chip'},{icon:'☁️',big:'GCP',mid:'Cloud',sub:'External sales'},{icon:'⚔️',big:'Alt',mid:'vs NVDA',sub:'GPU rival'}],
-    quote:'"TPU v8 targets the broader AI market beyond internal Google workloads. Custom silicon as a cloud alternative to GPU dominance. Availability and software stack are gating factors."',
+    title:'Micron adds $10B for US AI and advanced computing research labs',
+    heroBig:'$10B',
+    heroSub:'An additional $10B goes to US research labs for AI and advanced computing, on top of a prior $250B commitment.',
+    chip1big:'$10B',
+    chip1sub:'Research labs',
+    chip2big:'$250B',
+    chip2sub:'Prior commitment',
+    cards:[{icon:'🔬',big:'$10B',mid:'Research labs',sub:'AI·advanced compute'},{icon:'🏭',big:'$250B',mid:'Prior pledge',sub:'US investment'},{icon:'🧠',big:'Memory',sub:'HBM demand rising',mid:'Server bottleneck'}],
+    quote:'"Micron will add $10B for US research labs focused on AI and advanced computing. The amount sits on top of a previously announced $250B commitment and goes to research capability rather than production lines."',
     noteHead:'Why this matters',
-    noteSub:'Hyperscaler silicon may externalize. Watch GCP TPU pricing and logos.',
-    footer:'GOOGL · TPU v8',
+    noteSub:'Memory is a bottleneck alongside compute in AI servers. Research spending leads next generation competitiveness but takes time to show in earnings, so track the spending schedule and the high bandwidth memory mix.',
+    footer:'MU · $10B research labs',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
 { file:'macro-us-banks-unrealized-511b', symbol:'MACRO', layout:'tplBreaking', seed:'seed-1312',
   category:'매크로', categoryColor:'red', subject:'금리', tickers:['MACRO'],
-  title:'미국 은행 미실현 손실 5,117억 달러로 직전 2분기 연속 증가했습니다',
-  summary:'BREAKING: 미국 은행 미실현 손실(unrealized losses) 5,117억 달러($511.7B). 직전 2분기 연속 증가. 금리·채권 평가와 AI·DC debt narrative가 겹칩니다.',
-  titleEn:'BREAKING: US banks unrealized losses $511.7B, up two prior quarters',
-  summaryEn:'Unrealized losses $511.7B, grew for two prior quarters.',
+  title:'재무장관은 국채 금리를 낮추길 원하지만 채권시장은 다른 방향으로 움직이고 있습니다',
+  summary:'재무장관은 미국의 차입 비용을 낮추고 싶다는 뜻을 밝혔습니다. 그러나 채권시장은 발행 물량과 재정 부담을 반영해 반대 방향으로 움직이고 있습니다. 정책 의도와 시장 반응이 어긋나는 국면입니다.',
+  titleEn:'The Treasury chief wants lower US borrowing costs, but the bond market has other ideas',
+  summaryEn:'The Treasury secretary wants lower US borrowing costs, yet the bond market is moving the other way as it prices issuance volume and fiscal burden.',
   body: `■ 상세
 
-미실현 손실(unrealized losses)은 은행이 보유한 채권·증권의 시장가치 하락으로 장부에 잡히지만 아직 실현(sell)하지 않은 손실입니다. Held-to-maturity(만기보유) 포트폴리오에서 특히 논쟁이 됩니다.
+재무장관은 미국의 차입 비용을 낮추고 싶다는 뜻을 밝혔습니다. 국채 이자 부담이 재정에서 차지하는 비중이 커지고 있으므로, 정책 담당자로서는 금리를 낮추려는 유인이 분명합니다.
 
-이번 수치는 5,117억 달러(\$511.7B)이며, 직전 2분기 연속 증가했습니다. 장기금리 상승·채권 가격 하락·지역은행 stress memory와 연결됩니다.
+그러나 채권시장은 반대 방향으로 움직이고 있습니다. 국채 금리는 정책 의도가 아니라 발행 물량, 물가 기대, 재정 지속성에 대한 판단으로 결정됩니다. 발행이 늘어나는 국면에서는 매수자가 더 높은 금리를 요구합니다.
 
-AI CAPEX·\$700B+ DC debt·NVDA earnings와 같은 주 macro 화면에서, bank balance sheet capacity가 AI financing wall의 변수입니다.
+정책 의도와 시장 반응이 어긋나면 장기 금리 변동성이 커집니다. 장기 금리는 주식 밸류에이션의 할인율로 쓰이므로, 이 괴리는 주식시장에도 그대로 전달됩니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. \$511.7B는 system-wide bond mark risk입니다.
+1. 국채 금리는 모든 자산 가격의 기준이 되는 할인율입니다.
 
-2. 2 quarters up은 추세 신호입니다.
+2. 정책 의도만으로 장기 금리를 낮추기는 어렵습니다.
 
-3. unrealized≠immediate failure but limits lending.
+3. 발행 물량이 늘어나면 매수자는 더 높은 금리를 요구합니다.
 
-4. 금리 peak·cut path와 반대 방향.
+4. 이자 부담 증가는 재정 여력을 줄입니다.
 
-5. regional vs money center mix matters.
+5. 정책과 시장의 괴리는 변동성을 키웁니다.
 
 ■ 시나리오
 
-**A: rate cut→marks recover.**
-**B: further rate up→losses widen.**
-**C: forced sales tail risk low but sentiment hit.**
+**A: 물가가 낮아지면 정책 의도와 시장 방향이 일치할 수 있습니다.**
+**B: 발행 물량이 계속 늘면 장기 금리 부담이 이어집니다.**
+**C: 단기 금리는 내려가고 장기 금리는 오르는 구간이 나타날 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- Long yields·bond prices
-- \$511.7B unrealized
-- DC \$700B debt same week
+- 국채 이자 부담이 재정에서 차지하는 비중이 커져 왔습니다.
+- 재무장관이 차입 비용을 낮추고 싶다는 뜻을 밝혔습니다.
+- 채권시장은 발행 물량과 재정 부담을 반영해 반대로 움직였습니다.
 
 ■ 반대 관점
 
-(1) HTM accounting
-(2) deposit flight
-(3) regulatory forbearance
-(4) hedge
-(5) equity raise
+(1) 정책 발언은 시장 심리에 단기적으로 영향을 줄 수 있습니다.
+
+(2) 발행 구조를 단기물 중심으로 바꾸면 평균 비용을 낮출 수 있습니다.
+
+(3) 금리는 성장률과 물가에 따라 자연히 내려갈 수도 있습니다.
+
+(4) 해외 수요가 강하면 발행 부담이 완화됩니다.
+
+(5) 단기 금리와 장기 금리는 다른 요인으로 움직입니다.
 
 ■ 앞으로 볼 것
 
-(1) quarterly FDIC/OCC
-(2) 10Y yield
-(3) bank earnings
-(4) credit spreads
-(5) loan growth
+(1) 장기 국채 금리의 방향을 확인하시면 됩니다.
+
+(2) 국채 발행 계획의 만기 구성 변화를 보시기 바랍니다.
+
+(3) 물가 지표가 기대를 낮추는지 살펴보시기 바랍니다.
+
+(4) 해외 투자자의 국채 수요를 추적하시면 됩니다.
+
+(5) 이자 비용이 재정에서 차지하는 비중을 확인하시면 됩니다.
 
 ■ 투자시사점
 
-은행 marks는 macro risk overlay입니다. 금리·분기 보고서와 함께 추적하시면 됩니다.
+장기 금리는 정책 의도보다 수급과 물가로 결정됩니다. 정책과 시장의 괴리가 길어지면 변동성이 커지므로, 발행 계획의 만기 구성과 장기 금리 방향을 함께 확인하시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'미국 은행 미실현 손실 5,117억 달러로 직전 2분기 연속 증가했습니다',
-    heroBig:'$511.7B',
-    heroSub:'미실현 손실 5,117억 달러. 직전 2분기 연속 증가. 채권 평가와 금리 민감도.',
-    cards:[{icon:'🏦',big:'$511.7B',mid:'미실현',sub:'은행 전체'},{icon:'📉',big:'2분기',mid:'연속 증가',sub:'추세'},{icon:'📊',big:'채권',mid:'평가손',sub:'HTM·AFS'}],
-    quote:'"미국 은행 미실현 손실이 5,117억 달러로 집계됐고, 2분기 연속 늘었습니다. 아직 팔지 않은 채권 평가 손실입니다. 금리와 채권 가격이 변수이며, AI·데이터센터 부채와 같은 화면의 금융 여력 이슈입니다."',
-    noteSub:'macro overlay입니다. 실현 손실과 예금 이탈을 분리해 보시고, 분기 은행 보고서를 확인하세요.',
-    footer:'MACRO · bank unrealized',
+    title:'재무장관은 국채 금리를 낮추길 원하지만 채권시장은 다른 방향으로 움직이고 있습니다',
+    heroBig:'금리 역행',
+    heroSub:'차입 비용을 낮추려는 정책 의도와 달리 채권시장은 발행 물량과 재정 부담을 반영해 반대로 움직였습니다.',
+    cards:[{icon:'🏛️',big:'정책 목표',mid:'차입 비용 인하',sub:'이자 부담 축소'},{icon:'📈',big:'시장 반응',mid:'금리 상승 압력',sub:'발행·재정 우려'},{icon:'⚖️',big:'괴리',mid:'의도와 결과',sub:'장기물 중심 부담'}],
+    quote:'"재무장관은 미국의 차입 비용을 낮추고 싶다는 뜻을 밝혔습니다. 그러나 국채 금리는 정책 의도가 아니라 발행 물량과 물가 기대, 재정 지속성으로 결정됩니다. 정책과 시장이 어긋나면 장기 금리 변동성이 커집니다."',
+    noteSub:'장기 금리는 주식 밸류에이션의 할인율로 쓰입니다. 발행이 늘어나는 국면에서는 매수자가 더 높은 금리를 요구하며, 이자 부담 증가는 재정 여력을 줄입니다. 국채 발행 계획의 만기 구성과 장기물 금리 방향을 함께 확인하시면 됩니다.',
+    footer:'MACRO · 정책과 금리',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'BREAKING: US bank unrealized losses $511.7B',
-    heroBig:'$511.7B',
-    heroSub:'Unrealized losses $511.7B, up two prior quarters. Bond marks and rate sensitivity.',
-    cards:[{icon:'🏦',big:'$511.7B',mid:'Unrealized',sub:'All banks'},{icon:'📉',big:'2Q',mid:'Consecutive',sub:'Increase'},{icon:'📊',big:'Bonds',mid:'Mark loss',sub:'HTM·AFS'}],
-    quote:'"US bank unrealized losses hit $511.7B, rising two quarters in a row. Paper losses on bonds—not yet sold. Rates and AI financing capacity sit on the same screen."',
-    noteSub:'Macro overlay. Separate marks from deposit flight. Watch quarterly bank filings.',
-    footer:'MACRO · unrealized losses',
+    title:'Treasury wants lower borrowing costs, the bond market disagrees',
+    heroBig:'Rate gap',
+    heroSub:'Policy wants lower borrowing costs, but the bond market moved the other way as it priced issuance volume and fiscal burden.',
+    cards:[{icon:'🏛️',big:'Policy',mid:'Lower borrowing cost',sub:'Interest burden'},{icon:'📈',big:'Market',mid:'Upward pressure',sub:'Issuance·fiscal'},{icon:'⚖️',big:'Gap',mid:'Intent vs outcome',sub:'Long end pressure'}],
+    quote:'"The Treasury secretary wants lower US borrowing costs. Yet yields are set by issuance volume, inflation expectations, and fiscal sustainability rather than intent. When policy and market diverge, long end volatility rises."',
+    noteSub:'Long yields serve as the discount rate for equity valuation. Intent alone rarely turns the trend, so track the maturity mix of issuance plans alongside long end yields.',
+    footer:'MACRO · policy vs yields',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
-{ file:'tsla-cybertruck-price-5000', symbol:'TSLA', layout:'tplCompare', seed:'seed-1313',
-  category:'종목분석', categoryColor:'mint', subject:'테슬라', tickers:['TSLA'],
-  title:'사이버트럭 가격이 5,000달러 인상됐습니다',
-  summary:'Cybertruck 가격 +$5,000 인상. 수요·원가·마진·경쟁 EV pickup과 연결. 가격 lever는 demand elasticity test입니다.',
-  titleEn:'Cybertruck price increased by $5,000',
-  summaryEn:'Cybertruck gets a $5,000 price hike.',
+{ file:'tsla-cybertruck-price-5000', symbol:'SPCX', layout:'tplCompare', seed:'seed-1313',
+  category:'종목분석', categoryColor:'purple', subject:'스페이스X', tickers:['SPCX'],
+  title:'대한항공이 9월 초부터 기내 위성 와이파이를 무료로 제공합니다',
+  summary:'대한항공이 9월 초부터 저궤도 위성 기반 기내 와이파이를 무료로 제공합니다. 국내 항공사 중 처음이며, 게임과 영상 통화까지 가능한 수준의 속도를 제시했습니다.',
+  titleEn:'Korean Air will offer free Starlink onboard Wi-Fi from early September',
+  summaryEn:'Korean Air will provide free satellite based onboard Wi-Fi from early September, the first Korean carrier to do so, with speeds supporting gaming and video calls.',
   body: `■ 상세
 
-사이버트럭(Cybertruck)은 테슬라의 각진 스테인리스 전기 픽업입니다. 이번 변경은 가격 5,000달러(+ \$5,000) 인상입니다.
+대한항공이 9월 초부터 기내 와이파이를 무료로 제공합니다. 저궤도 위성 통신망을 이용하는 방식이며, 국내 항공사 가운데 처음입니다.
 
-인상은 원가(스테인리스·4680·생산 수율), 마진 방어, 수요 과열 완화, 또는 옵션 mix 변경 등 여러 해석이 가능합니다. EV pickup 경쟁(Rivian R1T, Ford F-150 Lightning 등)과 가격 대비를 봐야 합니다.
+기존 기내 통신은 정지궤도 위성을 이용해 지연 시간이 길고 속도도 제한적이었습니다. 저궤도 위성은 고도가 낮아 지연 시간이 짧으므로, 게임과 영상 통화처럼 실시간 반응이 필요한 사용까지 가능하다는 설명입니다.
 
-로보택시·세미와 다른 passenger/cycle 축이지만, 브랜드 pricing power와 reservation cancel율 변수입니다.
+기내 와이파이를 유료 부가서비스가 아니라 무료 기본 서비스로 제공하는 것은 항공사 간 경쟁 요소가 바뀐다는 뜻입니다. 위성 통신 사업자 쪽에서는 항공 부문이 가입자 대비 단가가 높은 시장입니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. +\$5K는 visible price lever입니다.
+1. 국내 항공사 최초 적용은 다른 항공사의 도입 압력으로 이어집니다.
 
-2. 인상 후 주문·cancel율이 demand test.
+2. 무료 제공은 기내 서비스 경쟁의 기준을 바꿉니다.
 
-3. 스테인리스·수율 원가 압력 가능.
+3. 저궤도 위성의 짧은 지연 시간이 실사용 품질을 결정합니다.
 
-4. pickup EV 경쟁 pricing map.
+4. 항공 부문은 위성 통신 사업에서 단가가 높은 시장입니다.
 
-5. 마진 vs volume tradeoff.
+5. 기업용 항공 계약은 매출의 안정성을 높여 줍니다.
 
 ■ 시나리오
 
-**A: demand holds→margin up.**
-**B: cancel↑→promo return.**
-**C: competitor undercut.**
+**A: 이용자 반응이 좋으면 다른 항공사 도입이 이어질 수 있습니다.**
+**B: 동시 접속이 많은 노선에서 속도가 떨어지면 만족도가 낮아질 수 있습니다.**
+**C: 무료 제공 비용 부담으로 적용 노선이 제한될 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- Cybertruck production
-- +\$5K price hike
-- Robotaxi same week
+- 저궤도 위성 통신의 항공 적용이 여러 항공사로 확대돼 왔습니다.
+- 대한항공이 국내 최초로 도입을 확정했습니다.
+- 9월 초부터 무료 제공이 시작됩니다.
 
 ■ 반대 관점
 
-(1) elastic demand
-(2) inventory build
-(3) incentive return
-(4) raw material
-(5) brand
+(1) 무료 제공은 노선과 기종에 따라 단계적으로 적용될 수 있습니다.
+
+(2) 동시 접속자가 많으면 실제 속도는 낮아집니다.
+
+(3) 단말 설치에는 기종별 인증과 시간이 필요합니다.
+
+(4) 무료화는 항공사 비용 부담으로 이어집니다.
+
+(5) 경쟁 위성 통신 사업자도 항공 시장에 진입하고 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) configurator price
-(2) delivery wait
-(3) cancel data
-(4) competitor MSRP
-(5) gross margin
+(1) 적용 노선과 기종이 얼마나 빠르게 늘어나는지 확인하시면 됩니다.
+
+(2) 다른 국내 항공사의 도입 발표를 보시기 바랍니다.
+
+(3) 실제 이용 속도와 만족도를 살펴보시기 바랍니다.
+
+(4) 위성 통신 사업자의 항공 부문 계약 건수를 추적하시면 됩니다.
+
+(5) 기내 서비스 비용이 항공사 손익에 어떻게 반영되는지 확인하시면 됩니다.
 
 ■ 투자시사점
 
-가격 인상은 demand test입니다. 주문 대기·취소·재고를 추적하시면 됩니다.
+항공 부문은 위성 통신 사업에서 단가가 높은 시장입니다. 국내 첫 무료 제공이 다른 항공사 도입으로 이어지는지를 확인 지점으로 두시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'사이버트럭 가격이 5,000달러 인상됐습니다',
-    heroBig:'+$5,000',
-    heroSub:'Cybertruck 가격 5,000달러 인상. 수요·원가·마진·경쟁 픽업과 연결.',
-    beforeLabel:'인상 전',
-    beforeBig:'기존가',
-    beforeSub:'MSRP',
-    afterLabel:'인상 후',
-    afterBig:'+$5K',
-    afterSub:'신규 가격',
-    cards:[{icon:'🛻',big:'+$5K',mid:'인상',sub:'Cybertruck'},{icon:'📋',big:'수요',mid:'주문·취소',sub:'elasticity'},{icon:'⚔️',big:'경쟁',mid:'EV pickup',sub:'Rivian·Ford'}],
-    quote:'"사이버트럭 가격이 5,000달러 올랐습니다. 원가·마진·수요를 동시에 조정하는 lever입니다. 인상 후에도 주문이 유지되는지, 취소가 늘지는지가 다음 확인 포인트입니다."',
-    noteHead:'왜 중요한가',
-    noteSub:'pricing power vs demand elasticity입니다. 설정 페이지 가격과 대기 기간을 확인하세요.',
-    footer:'TSLA · Cybertruck +$5K',
+    title:'대한항공이 9월 초부터 기내 위성 와이파이를 무료로 제공합니다',
+    heroBig:'무료 제공',
+    heroSub:'9월 초부터 저궤도 위성 기반 기내 와이파이를 무료로 제공합니다. 국내 항공사 중 처음입니다.',
+    beforeLabel:'기존 기내 통신',
+    beforeBig:'제한적',
+    beforeSub:'속도·지연 시간 부담',
+    afterLabel:'9월 초부터',
+    afterBig:'무료 제공',
+    afterSub:'국내 항공사 최초',
+    cards:[{icon:'✈️',big:'9월 초',mid:'서비스 시작',sub:'국내 최초 도입'},{icon:'🛰️',big:'저궤도',mid:'위성 통신망',sub:'지연 시간 짧음'},{icon:'🎮',big:'게임·통화',mid:'영상 통화 가능',sub:'실시간 사용 지원'}],
+    quote:'"대한항공이 9월 초부터 저궤도 위성 기반 기내 와이파이를 무료로 제공합니다. 국내 항공사 가운데 처음이며, 게임과 영상 통화까지 가능한 속도를 제시했습니다. 항공 부문은 위성 통신에서 단가가 높은 시장입니다."',
+    footer:'SPCX · 기내 위성 와이파이',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Cybertruck price up $5,000',
-    heroBig:'+$5,000',
-    heroSub:'Cybertruck MSRP raised by $5,000. Tests demand, cost, and margin.',
-    beforeLabel:'Before',
-    beforeBig:'Prior',
-    beforeSub:'MSRP',
-    afterLabel:'After',
-    afterBig:'+$5K',
-    afterSub:'New price',
-    cards:[{icon:'🛻',big:'+$5K',mid:'Hike',sub:'Cybertruck'},{icon:'📋',big:'Demand',mid:'Orders',sub:'Elasticity'},{icon:'⚔️',big:'Rivals',mid:'EV pickup',sub:'Comp set'}],
-    quote:'"Cybertruck price rose $5,000. A lever on cost, margin, and demand. Watch orders, cancellations, and wait times after the hike."',
-    noteHead:'Why this matters',
-    noteSub:'Pricing power test. Check configurator and delivery queue.',
-    footer:'TSLA · Cybertruck +$5K',
+    title:'Korean Air offers free satellite onboard Wi-Fi from early September',
+    heroBig:'Free Wi-Fi',
+    heroSub:'From early September, low earth orbit satellite Wi-Fi will be free onboard, a first among Korean carriers.',
+    beforeLabel:'Previous onboard',
+    beforeBig:'Limited',
+    beforeSub:'Speed and latency',
+    afterLabel:'From early Sep',
+    afterBig:'Free',
+    afterSub:'First Korean carrier',
+    cards:[{icon:'✈️',big:'Early Sep',mid:'Service start',sub:'First in Korea'},{icon:'🛰️',big:'LEO',mid:'Satellite network',sub:'Lower latency'},{icon:'🎮',big:'Gaming',mid:'Video calls',sub:'Real time use'}],
+    quote:'"Korean Air will offer free low earth orbit satellite Wi-Fi onboard from early September, a first among Korean carriers, with speeds supporting gaming and video calls. Aviation is a high value segment for satellite connectivity."',
+    footer:'SPCX · onboard satellite Wi-Fi',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }},
 
-{ file:'anthropic-nscale-45b-vera-rubin', symbol:'AI', layout:'tplDday', seed:'seed-1314',
-  category:'매크로', categoryColor:'purple', subject:'AI', tickers:['MACRO'],
-  title:'앤트로픽·Nscale 450억 달러·베라 루빈·460MW 내년 말 가동이 잡혔습니다',
-  summary:'Anthropic–Nscale $45B, Vera Rubin chips, 6-year 460MW deal, late next year online. AI compute supply chain·IPO narrative 연결.',
-  titleEn:'Anthropic Nscale $45B, Vera Rubin, 460MW online late next year',
-  summaryEn:'$45B Nscale deal, Vera Rubin chips, 6-year 460MW, online late next year.',
+{ file:'anthropic-nscale-45b-vera-rubin', symbol:'NVDA', layout:'tplDday', seed:'seed-1314',
+  category:'종목분석', categoryColor:'blue', subject:'엔비디아', tickers:['NVDA'],
+  title:'엔비디아 중앙처리장치 매출이 2028 회계연도에 두 배 이상 늘어날 전망입니다',
+  summary:'엔비디아의 중앙처리장치 매출이 2028 회계연도에 두 배 이상 늘어날 것으로 전망됩니다. 그래픽처리장치와 함께 공급하는 구조가 자리 잡으면서 서버용 중앙처리장치 공급에서도 선두를 노리는 흐름입니다.',
+  titleEn:'Nvidia CPU revenue is expected to more than double in fiscal 2028',
+  summaryEn:'Nvidia CPU revenue is expected to more than double in fiscal 2028, as bundling with GPUs positions the company as a leading server CPU supplier.',
   body: `■ 상세
 
-Nscale는 AI 데이터센터·GPU 호스팅 인프라 업체로 읽힙니다. 앤트로픽(Anthropic)과 450억 달러(\$45B), 6-year, 460MW(megawatt) 규모 계약이 잡혔습니다.
+엔비디아의 중앙처리장치 매출이 2028 회계연도에 두 배 이상 늘어날 것으로 전망됩니다. 중앙처리장치는 서버 전체의 작업을 조율하는 칩으로, 그래픽처리장치와 짝을 이뤄 사용됩니다.
 
-칩은 Vera Rubin(NVIDIA next-gen platform) 기반입니다. 가동(online) 시점은 late next year(내년 말)로 표시됩니다. MW는 전력·compute capacity proxy입니다.
+엔비디아는 그래픽처리장치를 중심으로 성장했지만, 인공지능 서버를 통째로 공급하는 방식이 늘면서 중앙처리장치도 함께 판매되고 있습니다. 고객이 서버 단위로 구매하면 개별 부품을 따로 고르는 여지가 줄어듭니다.
 
-Anthropic IPO odds·NVDA supply·DC debt narrative와 같은 AI infra bundle입니다. \$45B는 committed capex/offtake signal이지만 execution risk remains.
+이 흐름이 이어지면 서버용 중앙처리장치 공급에서도 선두 사업자가 될 수 있다는 전망이 나옵니다. 기존 중앙처리장치 업체들에게는 점유율 위협이 되는 구조입니다.
 
 ■ 왜 이 뉴스가 중요한가
 
-1. \$45B는 multi-year compute commitment입니다.
+1. 두 배 이상 증가는 중앙처리장치가 부수 사업을 넘어선다는 뜻입니다.
 
-2. 460MW는 대형 AI factory scale.
+2. 서버 단위 판매는 부품 선택권을 공급자 쪽으로 옮깁니다.
 
-3. Vera Rubin tie는 NVDA supply chain.
+3. 중앙처리장치까지 확보하면 서버당 매출이 늘어납니다.
 
-4. late next year online은 calendar anchor.
+4. 기존 중앙처리장치 업체는 점유율 압박을 받습니다.
 
-5. Anthropic IPO·revenue growth lever.
+5. 2028 회계연도라는 시점이 명시돼 검증이 가능합니다.
 
 ■ 시나리오
 
-**A: on-time energize→capacity online.**
-**B: power·chip delay.**
-**C: contract scale revision.**
+**A: 서버 단위 판매가 늘면 중앙처리장치 매출 증가가 이어집니다.**
+**B: 고객이 부품을 직접 조합하면 증가 속도가 낮아질 수 있습니다.**
+**C: 기존 업체가 가격으로 대응하면 마진이 압박받을 수 있습니다.**
 
 ■ 오늘까지 흐름
 
-- Anthropic IPO odds
-- Nscale \$45B·460MW
-- NVDA Vera Rubin
+- 인공지능 서버 수요가 그래픽처리장치를 중심으로 늘어났습니다.
+- 서버를 통째로 공급하는 방식이 확대됐습니다.
+- 중앙처리장치 매출이 2028 회계연도에 두 배 이상 늘어날 전망이 제시됐습니다.
 
 ■ 반대 관점
 
-(1) \$45B not all upfront
-(2) power permit
-(3) chip allocation
-(4) competition
-(5) financing
+(1) 전망은 계획이며 실제 매출과 다를 수 있습니다.
+
+(2) 서버 단위 판매를 원하지 않는 고객도 있습니다.
+
+(3) 기존 중앙처리장치 업체의 생태계가 아직 강합니다.
+
+(4) 두 배 증가는 기준 금액이 작을 때 상대적으로 쉽습니다.
+
+(5) 부품 구성 변화는 총마진에 다른 방향으로 작용할 수 있습니다.
 
 ■ 앞으로 볼 것
 
-(1) construction milestone
-(2) MW energized
-(3) Rubin shipment
-(4) Anthropic revenue
-(5) Nscale partners
+(1) 분기 실적에서 중앙처리장치 매출이 별도로 공개되는지 확인하시면 됩니다.
+
+(2) 서버 단위 판매 비중을 보시기 바랍니다.
+
+(3) 기존 중앙처리장치 업체의 점유율 변화를 살펴보시기 바랍니다.
+
+(4) 서버당 평균 판매 금액 추이를 추적하시면 됩니다.
+
+(5) 총마진이 부품 구성 변화와 함께 어떻게 움직이는지 확인하시면 됩니다.
 
 ■ 투자시사점
 
-compute contract는 AI growth의 physical layer입니다. MW energize·Rubin shipment를 추적하시면 됩니다.
+중앙처리장치는 그래픽처리장치 매출에 더해지는 두 번째 축입니다. 2028 회계연도 두 배 증가 전망이 분기 실적에서 확인되는지를 다음 점검 지점으로 두시면 됩니다.
 
 investus.kr SRP 최고투자책임자 발행`,
   ko:{
-    title:'앤트로픽·Nscale 450억 달러·베라 루빈·460MW 내년 말 가동이 잡혔습니다',
-    heroBig:'$45B',
-    ddayLabel:'내년 말 가동',
-    heroSub:'6년 460MW, Vera Rubin 칩. Nscale 인프라에 앤트로픽 compute commitment.',
-    cards:[{icon:'💰',big:'$45B',mid:'계약',sub:'6-year'},{icon:'⚡',big:'460MW',mid:'전력',sub:'AI factory'},{icon:'🧠',big:'Vera Rubin',mid:'칩',sub:'NVDA next-gen'}],
-    quote:'"앤트로픽과 Nscale이 450억 달러, 6년, 460MW 규모로 맞손했습니다. Vera Rubin 칩, 내년 말 가동 목표입니다. AI 수요를 전력·칩·부지로 전환하는 계약입니다. 일정·전력·칩 allocation을 단계별로 확인하세요."',
+    title:'엔비디아 중앙처리장치 매출이 2028 회계연도에 두 배 이상 늘어날 전망입니다',
+    heroBig:'2배 이상',
+    ddayLabel:'2028 회계연도 전망',
+    heroSub:'중앙처리장치 매출이 두 배 이상 늘어날 전망입니다. 서버를 통째로 공급하는 방식이 확대된 결과입니다.',
+    quote:'"엔비디아 중앙처리장치 매출이 2028 회계연도에 두 배 이상 늘어날 전망입니다. 서버 단위 공급이 늘면서 부품 선택권이 공급자 쪽으로 옮겨 가고 있습니다."',
+    cards:[{icon:'🧠',big:'2배 이상',mid:'매출 증가 전망',sub:'2028 회계연도'},{icon:'🖥️',big:'서버용',mid:'중앙처리장치',sub:'그래픽칩과 함께 공급'},{icon:'🏆',big:'선두 목표',mid:'서버 칩 공급',sub:'점유율 확대 시나리오'}],
     noteHead:'왜 중요한가',
-    noteSub:'Anthropic growth와 NVDA supply의 접점입니다. MW online과 Rubin 출하가 관건입니다.',
-    footer:'AI · Nscale $45B',
+    noteSub:'서버를 통째로 공급하면 고객이 개별 부품을 고르는 여지가 줄어들고 서버당 매출이 늘어납니다. 기존 중앙처리장치 업체에는 점유율 압박이며, 2028 회계연도라는 시점이 명시돼 분기 실적으로 검증할 수 있습니다. 다만 전망은 계획이며 실제 매출과 다를 수 있습니다.',
+    footer:'NVDA · 중앙처리장치 매출',
     brand:'INVESTUS · SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE',
   },
   en:{
-    title:'Anthropic Nscale $45B, Vera Rubin, 460MW late next year',
-    heroBig:'$45B',
-    ddayLabel:'ONLINE LATE NEXT YEAR',
-    heroSub:'6-year 460MW deal on Vera Rubin chips. Nscale infra for Anthropic compute.',
-    cards:[{icon:'💰',big:'$45B',mid:'Deal',sub:'6-year'},{icon:'⚡',big:'460MW',mid:'Power',sub:'AI factory'},{icon:'🧠',big:'Vera Rubin',mid:'Chips',sub:'Next-gen'}],
-    quote:'"$45B, 6-year, 460MW Anthropic–Nscale deal on Vera Rubin chips, online late next year. Track power, chips, and construction milestones."',
+    title:'Nvidia CPU revenue expected to more than double in fiscal 2028',
+    heroBig:'2x+',
+    ddayLabel:'FISCAL 2028 OUTLOOK',
+    heroSub:'CPU revenue is expected to more than double as full server level supply expands.',
+    quote:'"Nvidia CPU revenue is expected to more than double in fiscal 2028. As full server supply expands, component choice shifts toward the vendor."',
+    cards:[{icon:'🧠',big:'2x+',mid:'Revenue growth',sub:'Fiscal 2028'},{icon:'🖥️',big:'Server',mid:'CPU business',sub:'Sold with GPUs'},{icon:'🏆',big:'Leader',mid:'Server CPU supply',sub:'Share gain path'}],
     noteHead:'Why this matters',
-    noteSub:'Links Anthropic growth to NVDA supply. MW online is the gating item.',
-    footer:'AI · Nscale $45B',
+    noteSub:'Selling complete servers reduces customer component choice and raises revenue per server. Incumbent CPU vendors face share pressure, and the fiscal 2028 timeline makes the claim checkable in quarterly results.',
+    footer:'NVDA · CPU revenue',
     brand:'INVESTUS · SRP CHIEF INVESTMENT OFFICER · NOT FINANCIAL ADVICE',
   }}
 ];
@@ -1421,7 +1513,7 @@ function buildSeedReport(t) {
     body: \`${t.body}\`,
     titleEn: '${t.titleEn.replace(/'/g, "\\'")}',
     summaryEn: '${t.summaryEn.replace(/'/g, "\\'")}',
-    bodyEn: '${BODY_EN}',
+    bodyEn: ${JSON.stringify(BODY_EN)},
     category: '${t.category}', categoryColor: '${t.categoryColor}', subject: '${t.subject}',
     date: "${DATE_ISO}", updatedAt: "${UPDATED_AT}",
     images: ["${img}"],
@@ -1440,20 +1532,20 @@ function buildTickersBlock() {
 
 function buildWallPosts() {
   const posts = [
-    ['NVDA', 'NVDA AH -2%였는데 정규장 +8.74%?? 3분기 1080억 가이던스가 키네'],
-    ['MACRO', '잭슨홀 워시 연설 오늘 10시 ET. 30년물 5.31%까지 올랐음'],
-    ['MACRO', '트럼프 전력망 보호 EO에 변압기·전력기기주 들썩'],
-    ['NVDA', '나스닥 +1.57% S&P +0.72%. NVDA 랠리가 지수 끌어올림'],
-    ['MACRO', '비트코인 78,800달러 부근. 잭슨홀 앞 관망'],
-    ['MACRO', '코스피 6984.95 +1.05% 7000 재시도. 한국도 NVDA 후속'],
-    ['SPCX', '스페이스X 1.8T 여전히. private mark vs 상장 gap'],
-    ['SPCX', '루이지애나 30척/일 cadence… 허가부터'],
-    ['MACRO', 'DC 부채 7000억+ 30년물 5.31%랑 같이 봐야'],
-    ['TSLA', '로보택시 16h 6도시. 유료 마일은 아직?'],
-    ['TSLA', '사이버트럭 +5000달러. 수요 탄력성 테스트'],
-    ['META', '5GW excess 재판매 ROI 38% 시나리오'],
-    ['GOOGL', 'TPU v8 broader market. GCP 가격이 관건'],
-    ['AI', '앤트로픽 Nscale 450억 460MW Vera Rubin'],
+    ['NVDA', '정규장 +8.74%… 하루에 시총 5050억 달러 늘었다는 계산'],
+    ['META', '앤트로픽 IPO 2조 달러 얘기 나오네. 메타 지출 줄면 어쩔'],
+    ['SPCX', '2033년 매출 3.5조? 엔비디아 최근 12개월 매출 11.5배라는데'],
+    ['SPCX', '스타십 40호기 내열 타일 시료 회수했대. 재진입 개선 들어감'],
+    ['SPCX', '우주군 군용기 위성통신 단독 수주. 하향 500Mbps'],
+    ['MACRO', '외국인 미국주식 순매수 1년 8000억 넘음. 1986년 이후 최대'],
+    ['TSLA', '사이버캡 앞 조명 색으로 내 차 찾는 거 은근 실용적'],
+    ['TSLA', '세미 9월 24일 행사. 네바다 연 5만대, 선주문 870대'],
+    ['META', '줄인다더니 앤트로픽에 아직 월 수억 달러 쓰는 중'],
+    ['MU', '마이크론 연구시설 100억 추가. 기존 2500억에 얹는 거'],
+    ['MACRO', '재무장관은 금리 내리고 싶은데 채권시장은 반대로 감'],
+    ['SPCX', '대한항공 9월 초부터 기내 와이파이 무료. 국내 최초'],
+    ['NVDA', 'NVDA CPU 매출 FY28에 2배 이상? 서버 통째로 파니까'],
+    ['MACRO', '잭슨홀 워시 연설·30년물 5.31%·코스피 7000 재시도 같이 보자'],
   ];
   let out = '  // ── 2026-08-28 신규 ────────────────\n';
   posts.forEach((p, i) => {
@@ -1466,20 +1558,20 @@ function buildWallPosts() {
 
 function buildWallComments() {
   const comments = [
-    [1117, ['AH -2%랑 정규 +8%는 완전 다른 세계', '1080억 가이던스 확인']],
-    [1118, ['워시 매파 나오면 30년물 더 튈 수', '잭슨홀 전 포지션 줄이는 게']],
-    [1119, ['EO는 심리 먼저. 수주 공시가 진짜', '한국 전력주도 같이']],
-    [1120, ['지수 랠리 NVDA 의존도 높음', 'breadth는 봐야']],
-    [1121, ['BTC 잭슨홀 민감. DXY 같이', 'ETF 플로우']],
-    [1122, ['7000 터치만 하고 내려옴', '외국인 순매수']],
-    [1123, ['private vs 상장 gap', '7B volume']],
-    [1124, ['30/day 현실성…', '허가']],
-    [1125, ['7000억 debt + 5.31% 30Y', '은행 미실현']],
-    [1126, ['16h≠유료', 'FL 3도시']],
-    [1127, ['+5K cancel율', 'Rivian 비교']],
-    [1128, ['시나리오일 뿐', '5GW excess']],
-    [1129, ['NVDA 대안', 'GCP pricing']],
-    [1130, ['460MW 전력', 'Rubin 출하']],
+    [1117, ['시총 5050억은 계산 기준마다 다르던데', '3분기 1080억 가이던스가 핵심']],
+    [1118, ['2조는 거론되는 상단 얘기지', '메타가 내부 도구로 갈아타면 매출 빠짐']],
+    [1119, ['7년 뒤 전망이라 검증 구간 김', '비상장 가격이라 거래량 봐야']],
+    [1120, ['타일 손상 위치 특정되면 개선 빠름', '착수 기체 실물 점검이 크다']],
+    [1121, ['단독 수주면 대체 사업자 없다는 뜻', '2028년 7월 연장 선택권 주목']],
+    [1122, ['수급 좋으면 되돌림도 빠름', '달러 방향 같이 봐야']],
+    [1123, ['무인차라 승객이 직접 찾아야 하니까', '밤이나 비 올 때도 잘 보일까']],
+    [1124, ['822kWh면 승용차 여러 대분', '충전망이 먼저 깔려야']],
+    [1125, ['발표랑 집행이 다르네', '항목만 옮기는 거 아닌지']],
+    [1126, ['연구시설이라 실적 반영은 느림', '고대역폭 메모리 비중이 관건']],
+    [1127, ['발행 물량 늘면 금리 못 내림', '만기 구성 바꾸는지 봐야']],
+    [1128, ['무료면 다른 항공사도 따라올 듯', '동시 접속 많으면 느려질 텐데']],
+    [1129, ['서버 통째로 팔면 부품 선택권 없어짐', '기존 CPU 업체 점유율 압박']],
+    [1130, ['30년물 5.31%가 제일 부담', '코스피 7000은 터치만 했음']],
   ];
   let out = '  // ── 2026-08-28 신규 댓글 ────────────────\n';
   for (const [postId, lines] of comments) {
@@ -1494,20 +1586,20 @@ function buildWallComments() {
 
 function buildAnalystPosts() {
   const items = [
-    [-917, '성수 너구리 #15', 'NVDA', '엔비디아가 정규장에서 8.74% 급등하며 나스닥 +1.57%, S&P500 +0.72%로 마감했습니다.\n시간외 -2%와 정규장 급등이 같은 주에 공존할 수 있다는 점이 핵심입니다. 3분기 매출 전망 1,080억 달러를 확인하시기 바랍니다.', 2],
-    [-918, '한남 재규어 #27', 'MACRO', '오늘 잭슨홀에서 워시 연준 의장의 기조연설이 예정돼 있습니다.\n30년물 국채 금리 5.31%와 겹치는 구간이므로, 인플레이션·추가 금리 인상 가능성에 대한 단서를 찾을 것으로 보입니다.', 2],
-    [-919, '압구정 치타 #44', 'MACRO', '미국 전력망 보호 행정명령이 전력기기·변압기주를 들썩이게 했습니다.\n미국 현지 생산 거점을 둔 업체의 경쟁력이 부각됐으며, 한국 전력기기주도 같은 날 강세를 보였습니다.', 1],
-    [-920, '여의도 수리 #28', 'MACRO', '30년물 국채 금리가 5.31%까지 올라 장기 금리 부담이 커졌습니다.\n재정·발행 우려와 연준 메시지가 겹치는 구간이므로, 잭슨홀 연설과 함께 보시기 바랍니다.', 2],
-    [-921, '삼성동 올빼미 #19', 'MACRO', '비트코인은 약 78,800달러 부근에서 잭슨홀을 앞두고 관망했습니다.\n위험자산·유동성·달러 방향에 민감하게 반응할 이벤트이므로, ETF 플로우와 DXY를 같이 추적하시면 됩니다.', 1],
-    [-922, '광화문 여우 #62', 'MACRO', '한국 증시도 엔비디아 후속과 전력기기 강세로 7,000선을 재시도했습니다.\n코스피 6,984.95(+1.05%)로 마감했으며, 장중 7,000 터치 후 되돌림이 나왔습니다.', 1],
-    [-923, '마포 살쾡이 #08', 'SPCX', '스페이스X 시가총액 $1,826B, 51일 $1T+.\nprivate mark와 상장가는 다를 수 있으므로, volume과 일정 지연을 추적하시면 됩니다.', 1],
-    [-924, '판교 늑대 #90', 'TSLA', '로보택시 6개 도시 16시간 운행.\nunsupervised fleet growth는 긍정적이나, 유료 마일로 검증하시기 바랍니다.', 2],
-    [-925, '분당 매 #31', 'META', '5GW excess compute resale by 2030 시나리오.\n$38B/GW capex, 38% ROI는 모델이므로 가이던스와 분리해 보시면 됩니다.', 1],
-    [-926, '해운대 고래 #03', 'GOOGL', 'TPU v8이 broader AI market을 겨냥합니다.\nGCP pricing·availability가 채택 관건입니다.', 0],
-    [-927, '송파 독수리 #66', 'MACRO', '미국 은행 미실현손실 $511.7B, 2분기 연속 증가.\nDC debt·30Y 5.31%와 같은 macro screen입니다.', 2],
-    [-928, '인천 갈매기 #52', 'TSLA', 'Cybertruck +$5,000 price hike.\n주문·cancel율이 demand elasticity test입니다.', 1],
-    [-929, '역삼 판다 #77', 'AI', 'Anthropic–Nscale $45B, 460MW, Vera Rubin, online late next year.\nMW energize가 gating item입니다.', 2],
-    [-930, '종로 까치 #41', 'NVDA', '오늘 bundle: NVDA +8.74%, Jackson Hole Warsh, grid EO, 30Y 5.31%, BTC ~$78.8K, KOSPI 7K retest.\n실물 AI capex와 financial overlay를 함께 보시면 됩니다.', 1],
+    [-917, '성수 너구리 #15', 'NVDA', '엔비디아가 실적 발표 다음 정규장에서 8.74% 올라 하루 만에 시가총액이 3,600억~5,050억 달러 늘었습니다.\n이 상승분이 같은 날 미국 시장 전체 상승의 약 77%를 차지했습니다. 회계 2분기 데이터센터 매출 890억 2,000만 달러와 3분기 전망 1,080억 달러를 확인하시기 바랍니다.', 2],
+    [-918, '한남 재규어 #27', 'META', '앤트로픽의 기업공개 가치가 2조 달러까지 거론되고 있습니다.\n다만 메타가 자체 도구를 늘리거나 다른 모델 사용을 확대하면 상장 전에 앤트로픽 매출이 줄어들 수 있다는 지적도 함께 나옵니다.', 2],
+    [-919, '압구정 치타 #44', 'SPCX', '스페이스X 주가가 매력적인 수준이라는 평가와 함께 2033년 무렵 매출 3조 5,000억 달러 전망이 제시됐습니다.\n엔비디아 최근 12개월 매출의 약 11.5배 규모이므로, 위성 가입자와 정부 계약으로 검증하시기 바랍니다.', 1],
+    [-920, '여의도 수리 #28', 'SPCX', '스타십 40호기가 크리스마스섬 인근 해상에서 점검되고 내열 타일 시료가 회수됐습니다.\n손상 위치를 특정하면 개선 범위를 좁힐 수 있으며, 재진입 신뢰도는 기체 재사용과 발사 단가로 이어집니다.', 2],
+    [-921, '삼성동 올빼미 #19', 'SPCX', '우주군이 군용기용 위성통신을 스페이스X 단독 공급으로 발주했습니다.\n전 세계 통신과 하향 500Mbps·상향 100Mbps가 조건이며, 기본 계약은 2027년 7월까지, 2028년 7월까지 연장 선택권이 포함됐습니다.', 1],
+    [-922, '광화문 여우 #62', 'MACRO', '외국인의 미국 주식 순매수가 최근 1년 동안 8,000억 달러를 넘어 1986년 이후 가장 큰 규모가 됐습니다.\n수급은 상승의 배경이면서 되돌림의 조건이므로, 월별 유입 흐름과 달러 방향을 함께 보시기 바랍니다.', 1],
+    [-923, '마포 살쾡이 #08', 'TSLA', '사이버캡 전면 조명이 색을 바꿔 호출한 차량을 군중 속에서 찾도록 설계됐습니다.\n무인 차량은 안내해 줄 사람이 없으므로 승객 식별이 운영 효율과 직접 연결되며, 탑승 대기 시간이 줄면 회전율이 올라갑니다.', 1],
+    [-924, '판교 늑대 #90', 'TSLA', '테슬라 세미의 본격 출시 행사가 9월 24일로 예정됐습니다.\n네바다 공장은 연 5만 대 생산 능력을 목표로 하고 선주문은 870대가 확인됐습니다. 배터리는 822kWh이며 전용 충전망 구축이 관건입니다.', 2],
+    [-925, '분당 매 #31', 'META', '메타는 앤트로픽 사용을 줄이겠다고 밝혔지만 실제로는 매달 수억 달러를 계속 쓰고 있습니다.\n자체 도구로 전환하면 비용이 사용료에서 인프라 투자로 옮겨 가므로, 총액이 줄어드는지를 확인하시면 됩니다.', 1],
+    [-926, '해운대 고래 #03', 'MU', '마이크론이 미국 내 인공지능·첨단 연산 연구시설에 100억 달러를 추가 투자하겠다고 밝혔습니다.\n기존에 발표한 2,500억 달러 약속에 더해지는 금액이며, 생산 설비가 아니라 연구 기능에 배분됩니다.', 0],
+    [-927, '송파 독수리 #66', 'MACRO', '재무장관은 미국의 차입 비용을 낮추고 싶다는 뜻을 밝혔지만 채권시장은 반대 방향으로 움직였습니다.\n장기 금리는 발행 물량과 물가 기대, 재정 지속성으로 결정되므로 정책 의도만으로는 방향이 바뀌지 않습니다.', 2],
+    [-928, '인천 갈매기 #52', 'SPCX', '대한항공이 9월 초부터 저궤도 위성 기반 기내 와이파이를 무료로 제공합니다.\n국내 항공사 가운데 처음이며, 게임과 영상 통화까지 가능한 속도를 제시했습니다. 항공 부문은 단가가 높은 시장입니다.', 1],
+    [-929, '역삼 판다 #77', 'NVDA', '엔비디아 중앙처리장치 매출이 2028 회계연도에 두 배 이상 늘어날 것으로 전망됩니다.\n서버를 통째로 공급하는 방식이 늘면서 부품 선택권이 공급자 쪽으로 옮겨 가고 있으며, 기존 업체는 점유율 압박을 받습니다.', 2],
+    [-930, '종로 까치 #41', 'MACRO', '오늘 함께 보실 항목은 엔비디아 8.74% 급등, 잭슨홀 워시 연준 의장 연설, 미국 전력망 보호 행정명령입니다.\n30년물 국채 금리 5.31%, 비트코인 약 78,800달러, 코스피 6,984.95의 7,000선 재시도도 같은 화면입니다.', 1],
   ];
   const base = '2026-08-28T00:';
   let out = '  // ── 2026-08-28 신규 (14개 · 존댓말 · 구조 혼합) ──────────────────────\n';
@@ -1519,7 +1611,7 @@ function buildAnalystPosts() {
 }
 
 function buildAnalystComments() {
-  const pairs = [[-917, ['정규장 +8.74% vs AH -2% 해석']], [-918, ['워시 연설 매파 나올까요']], [-920, ['5.31% 30Y와 잭슨홀']], [-921, ['78,800 BTC 잭슨홀 민감도']], [-924, ['로보택시 유료 마일 시점']], [-927, ['5117억 미실현 추세']], [-929, ['460MW 전력 허가 일정']]];
+  const pairs = [[-917, ['시가총액 증가폭이 기준에 따라 달라지는 이유가 있을까요']], [-918, ['2조 달러는 어디까지 근거가 있는 숫자일까요']], [-920, ['내열 타일 개선이 다음 비행에 바로 반영될까요']], [-921, ['연장 선택권 행사 가능성은 어느 정도일까요']], [-924, ['충전망 없이 인도 대수가 늘어날 수 있을까요']], [-927, ['만기 구성을 바꾸면 평균 비용이 내려갈까요']], [-929, ['중앙처리장치 매출이 따로 공개될까요']]];
   let out = '';
   for (const [id, lines] of pairs) {
     out += `  [${id}]: [\n`;
@@ -1620,4 +1712,7 @@ function main() {
   console.log('Done.');
 }
 
-main();
+const __filename = fileURLToPath(import.meta.url);
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) main();
+
+export { TOPICS, LAYOUTS, writeSvgs, buildSeedReport, buildSeedSummary, buildWallPosts, buildWallComments, buildAnalystPosts, buildAnalystComments, tpl, DATE, DATETAG, DATE_ISO, UPDATED_AT, ROOT, CHARTS };
