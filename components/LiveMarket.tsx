@@ -277,35 +277,6 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
         </div>
       </section>
 
-      {/* 인기 종목 */}
-      <section className="px-4 lg:px-0 pt-6">
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
-            {t.market.popular}
-          </h2>
-          <ESTClock />
-        </div>
-        <div className="relative">
-          {quotesScroll.canLeft && (
-            <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
-              style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
-              <ChevronLeft className="w-4 h-4 ml-1 opacity-60" style={{ color: "var(--muted)" }} />
-            </div>
-          )}
-          <div ref={quotesScroll.ref} className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
-            {loading
-              ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
-              : quotes.map((s) => <StockCard key={s.symbol} stock={s} />)}
-          </div>
-          {quotesScroll.canRight && (
-            <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
-              style={{ background: "linear-gradient(to left, var(--bg) 40%, transparent)" }}>
-              <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
-            </div>
-          )}
-        </div>
-      </section>
-
       {/* 주요 지수 */}
       <section className="px-4 lg:px-0 pt-6">
         <div className="flex items-center justify-between mb-3">
@@ -345,6 +316,35 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
               : indices.map((idx) => <IndexCard key={idx.symbol} index={idx} />)}
           </div>
           {idxScroll.canRight && (
+            <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
+              style={{ background: "linear-gradient(to left, var(--bg) 40%, transparent)" }}>
+              <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* 인기 종목 */}
+      <section className="px-4 lg:px-0 pt-6">
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--muted)" }}>
+            {t.market.popular}
+          </h2>
+          <ESTClock />
+        </div>
+        <div className="relative">
+          {quotesScroll.canLeft && (
+            <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
+              style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
+              <ChevronLeft className="w-4 h-4 ml-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
+          <div ref={quotesScroll.ref} className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+            {loading
+              ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
+              : quotes.map((s) => <StockCard key={s.symbol} stock={s} />)}
+          </div>
+          {quotesScroll.canRight && (
             <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
               style={{ background: "linear-gradient(to left, var(--bg) 40%, transparent)" }}>
               <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />

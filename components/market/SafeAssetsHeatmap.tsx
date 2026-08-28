@@ -4,15 +4,20 @@ import { useMemo } from "react";
 import type { Quote } from "@/lib/api";
 import { heatmapTile } from "@/lib/heatmapColors";
 import { SectionInfo } from "@/components/SectionInfo";
-import { SAFE_CRYPTO_TOP5, SAFE_PHYSICAL_TOP5 } from "@/lib/markets/config";
+import {
+  SAFE_CRYPTO_TOP10,
+  SAFE_HAVEN_TOP10,
+  SAFE_PHYSICAL_TOP10,
+  type MarketSymbol,
+} from "@/lib/markets/config";
 
 type StockTile = { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number };
 type Sector = { key: string; name: string; stocks: StockTile[] };
 
-/** S&P500 / 코스피 히트맵과 동일한 섹터 타일 레이아웃 */
 const LAYOUT: { rowH: number; sections: { key: string; flex: number; maxStocks: number }[] }[] = [
-  { rowH: 110, sections: [{ key: "CRYPTO", flex: 10, maxStocks: 5 }] },
-  { rowH: 110, sections: [{ key: "PHYS", flex: 10, maxStocks: 5 }] },
+  { rowH: 96, sections: [{ key: "CRYPTO", flex: 10, maxStocks: 10 }] },
+  { rowH: 96, sections: [{ key: "PHYS", flex: 10, maxStocks: 10 }] },
+  { rowH: 96, sections: [{ key: "HAVEN", flex: 10, maxStocks: 10 }] },
 ];
 
 function SectorBlock({
@@ -47,26 +52,26 @@ function SectorBlock({
           return (
             <div
               key={s.symbol}
-              className="flex flex-col items-start justify-between p-1.5 overflow-hidden select-none"
+              className="flex flex-col items-start justify-between p-1 overflow-hidden select-none"
               style={{ flex: s.weight / totalW, background: c.bg, minWidth: 0 }}
             >
               <div className="w-full overflow-hidden">
-                <p className="text-[11px] font-bold leading-none truncate" style={{ color: c.fg }}>
+                <p className="text-[10px] font-bold leading-none truncate" style={{ color: c.fg }}>
                   {s.name}
                 </p>
-                <p className="text-[8px] leading-tight truncate mt-0.5 font-medium" style={{ color: c.sub }}>
-                  {s.symbol.replace("-USD", "").replace("=F", "")}
+                <p className="text-[7px] leading-tight truncate mt-0.5 font-medium" style={{ color: c.sub }}>
+                  {s.symbol.replace("-USD", "").replace("=F", "").replace("DX-Y.NYB", "DXY")}
                 </p>
               </div>
               <div className="w-full">
                 {s.price != null && (
-                  <p className="text-[10px] font-mono-num tabular-nums leading-none truncate font-medium" style={{ color: c.sub }}>
+                  <p className="text-[9px] font-mono-num tabular-nums leading-none truncate font-medium" style={{ color: c.sub }}>
                     {s.price >= 1000
                       ? s.price.toLocaleString("en-US", { maximumFractionDigits: 0 })
                       : s.price.toFixed(2)}
                   </p>
                 )}
-                <p className="text-[11px] font-mono-num tabular-nums font-bold leading-none mt-0.5" style={{ color: c.fg }}>
+                <p className="text-[10px] font-mono-num tabular-nums font-bold leading-none mt-0.5" style={{ color: c.fg }}>
                   {s.changePercent == null
                     ? "—"
                     : `${s.changePercent >= 0 ? "+" : ""}${s.changePercent.toFixed(2)}%`}
@@ -82,7 +87,7 @@ function SectorBlock({
 
 function buildSectors(quotes: Quote[]): Sector[] {
   const bySym = new Map(quotes.map((q) => [q.symbol, q]));
-  const toTiles = (list: typeof SAFE_CRYPTO_TOP5, weightBase: number): StockTile[] =>
+  const toTiles = (list: MarketSymbol[], weightBase: number): StockTile[] =>
     list.map((s, i) => {
       const q = bySym.get(s.symbol);
       return {
@@ -95,8 +100,9 @@ function buildSectors(quotes: Quote[]): Sector[] {
     }).filter((t) => t.price != null || t.changePercent != null);
 
   return [
-    { key: "CRYPTO", name: "가상화폐 탑5", stocks: toTiles(SAFE_CRYPTO_TOP5, 10) },
-    { key: "PHYS", name: "현물자산 탑5", stocks: toTiles(SAFE_PHYSICAL_TOP5, 10) },
+    { key: "CRYPTO", name: "가상화폐 탑10", stocks: toTiles(SAFE_CRYPTO_TOP10, 20) },
+    { key: "PHYS", name: "현물자산 탑10", stocks: toTiles(SAFE_PHYSICAL_TOP10, 20) },
+    { key: "HAVEN", name: "안전자산 탑10", stocks: toTiles(SAFE_HAVEN_TOP10, 20) },
   ].filter((sec) => sec.stocks.length > 0);
 }
 
@@ -114,7 +120,7 @@ export function SafeAssetsHeatmap({ quotes }: { quotes: Quote[] }) {
           안전자산 히트맵
         </h3>
         <SectionInfo title="안전자산 히트맵">
-          <p>가상화폐 탑5 · 현물 탑5를 본사이트 S&amp;P500 히트맵과 같은 타일로 보여 줍니다. 초록은 상승, 빨강은 하락입니다.</p>
+          <p>가상화폐·현물·달러·국채 등 안전자산 탑10을 타일로 보여 줍니다. 초록은 상승, 빨강은 하락입니다.</p>
         </SectionInfo>
       </div>
       <div className="rounded-xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>

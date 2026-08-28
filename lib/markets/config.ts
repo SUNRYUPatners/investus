@@ -68,25 +68,71 @@ export const KR_HEATMAP: MarketSymbol[] = [
   { symbol: "259960.KS", name: "크래프톤" },
 ];
 
-/** 가상화폐 탑5 */
-export const SAFE_CRYPTO_TOP5: MarketSymbol[] = [
+/** 가상화폐 탑10 */
+export const SAFE_CRYPTO_TOP10: MarketSymbol[] = [
   { symbol: "BTC-USD", name: "비트코인" },
   { symbol: "ETH-USD", name: "이더리움" },
   { symbol: "SOL-USD", name: "솔라나" },
   { symbol: "XRP-USD", name: "리플" },
   { symbol: "BNB-USD", name: "BNB" },
+  { symbol: "ADA-USD", name: "에이다" },
+  { symbol: "DOGE-USD", name: "도지코인" },
+  { symbol: "TRX-USD", name: "트론" },
+  { symbol: "AVAX-USD", name: "아발란체" },
+  { symbol: "LINK-USD", name: "체인링크" },
 ];
 
-/** 현물·원자재 탑5 */
-export const SAFE_PHYSICAL_TOP5: MarketSymbol[] = [
+/** @deprecated use SAFE_CRYPTO_TOP10 */
+export const SAFE_CRYPTO_TOP5 = SAFE_CRYPTO_TOP10;
+
+/** 현물·원자재 탑10 */
+export const SAFE_PHYSICAL_TOP10: MarketSymbol[] = [
   { symbol: "GC=F", name: "금" },
   { symbol: "SI=F", name: "은" },
-  { symbol: "HG=F", name: "구리" },
   { symbol: "PL=F", name: "백금" },
+  { symbol: "PA=F", name: "팔라듐" },
   { symbol: "CL=F", name: "WTI원유" },
+  { symbol: "NG=F", name: "천연가스" },
+  { symbol: "HG=F", name: "구리" },
+  { symbol: "ZC=F", name: "옥수수" },
+  { symbol: "ZW=F", name: "밀" },
+  { symbol: "ZS=F", name: "대두" },
 ];
 
-export const SAFE_ASSETS: MarketSymbol[] = [...SAFE_CRYPTO_TOP5, ...SAFE_PHYSICAL_TOP5];
+/** @deprecated use SAFE_PHYSICAL_TOP10 */
+export const SAFE_PHYSICAL_TOP5 = SAFE_PHYSICAL_TOP10;
+
+/** 달러·국채 등 전통 안전자산 탑10 */
+export const SAFE_HAVEN_TOP10: MarketSymbol[] = [
+  { symbol: "DX-Y.NYB", name: "달러인덱스" },
+  { symbol: "TLT", name: "미국 장기국채" },
+  { symbol: "IEF", name: "미국 중기국채" },
+  { symbol: "SHY", name: "미국 단기국채" },
+  { symbol: "TIP", name: "물가연동국채" },
+  { symbol: "UUP", name: "달러 ETF" },
+  { symbol: "GLD", name: "금 ETF" },
+  { symbol: "BND", name: "총채권 ETF" },
+  { symbol: "SGOV", name: "초단기국채" },
+  { symbol: "LQD", name: "투자등급채권" },
+];
+
+/** 안전자산 판단용 주요 지표 (주요 지수 섹션) */
+export const SAFE_MACRO_INDICES: MarketSymbol[] = [
+  { symbol: "DX-Y.NYB", name: "달러인덱스" },
+  { symbol: "^TNX", name: "미국 10년물" },
+  { symbol: "^VIX", name: "VIX" },
+  { symbol: "GC=F", name: "금" },
+  { symbol: "SI=F", name: "은" },
+  { symbol: "ZN=F", name: "10년물 선물" },
+  { symbol: "^IRX", name: "단기국채금리" },
+  { symbol: "TLT", name: "장기국채 ETF" },
+];
+
+export const SAFE_ASSETS: MarketSymbol[] = [
+  ...SAFE_CRYPTO_TOP10,
+  ...SAFE_PHYSICAL_TOP10,
+  ...SAFE_HAVEN_TOP10,
+];
 
 export const MARKET_CONFIG: Record<MarketId, MarketConfig> = {
   us: {
@@ -162,13 +208,9 @@ export const MARKET_CONFIG: Record<MarketId, MarketConfig> = {
     portfolioKey: "investus-portfolio-safe",
     watchlistKey: "investus-watchlist-safe",
     marketCacheKey: "market-data-cache-safe-v2",
-    recommended: [...SAFE_CRYPTO_TOP5.slice(0, 3), ...SAFE_PHYSICAL_TOP5.slice(0, 2)],
+    recommended: [],
     popular: SAFE_ASSETS,
-    indices: [
-      { symbol: "BTC-USD", name: "비트코인" },
-      { symbol: "ETH-USD", name: "이더리움" },
-      { symbol: "GC=F", name: "금" },
-    ],
+    indices: SAFE_MACRO_INDICES,
     newsQuery: "비트코인 OR 이더리움 OR 금값 OR 은값 OR 암호화폐 OR 현물금",
     newsHl: "ko",
     newsGl: "KR",

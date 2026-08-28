@@ -57,15 +57,11 @@ export function MarketHomeShell({
         Investus — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 · {isUs ? "미국주식" : cfg.labelKo}
       </h1>
       <Header />
-      {/* 미국·한국 홈 — 데스크탑은 티커·경제일정 가로 1줄 */}
+      {/* 시세 티커 · 경제일정 — 각각 1줄씩 (세로 2줄) */}
       {(isUs || market === "kr" || market === "safe") && (
-        <div className="lg:flex lg:items-stretch lg:border-b" style={{ borderColor: "var(--border)" }}>
-          <div className="lg:flex-1 lg:min-w-0 lg:border-r" style={{ borderColor: "var(--border)" }}>
-            <TickerTape market={market} />
-          </div>
-          <div className="lg:flex-1 lg:min-w-0">
-            <EcoTickerTape market={market} />
-          </div>
+        <div className="border-b" style={{ borderColor: "var(--border)" }}>
+          <TickerTape market={market} />
+          <EcoTickerTape market={market} />
         </div>
       )}
 

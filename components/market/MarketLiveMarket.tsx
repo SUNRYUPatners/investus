@@ -111,7 +111,7 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
   const recommended = quotes.filter((q) => recSyms.has(q.symbol));
   const popular = quotes.filter((q) => popSyms.has(q.symbol));
 
-  const showRecommended = market !== "kr";
+  const showRecommended = market === "us";
 
   return (
     <>
@@ -120,7 +120,7 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
           <div className="flex items-center gap-1.5 mb-3">
             <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
             <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
-              {market === "safe" ? "추천 자산" : "추천 종목"}
+              추천 종목
             </h2>
           </div>
           <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
@@ -133,21 +133,23 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
         </section>
       )}
 
-      <section className="px-4 lg:px-0 pt-5">
-        <h2 className="text-xs font-semibold tracking-widest uppercase font-syne mb-3" style={{ color: "var(--text)" }}>
-          인기 종목
-        </h2>
-        <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
-          {popular.map((q) => <StockCard key={q.symbol} stock={q} market={market} />)}
-        </div>
-      </section>
+      {(market === "us" || market === "kr" || market === "safe") && (
+        <section className="px-4 lg:px-0 pt-5">
+          <h2 className="text-xs font-semibold tracking-widest uppercase font-syne mb-3" style={{ color: "var(--text)" }}>
+            {market === "safe" ? "주요 지표" : "주요 지수"}
+          </h2>
+          <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
+            {indices.map((idx) => <IndexCard key={idx.symbol} index={idx} />)}
+          </div>
+        </section>
+      )}
 
       <section className="px-4 lg:px-0 pt-5">
         <h2 className="text-xs font-semibold tracking-widest uppercase font-syne mb-3" style={{ color: "var(--text)" }}>
-          주요 지수
+          {market === "safe" ? "인기 자산" : "인기 종목"}
         </h2>
         <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-1">
-          {indices.map((idx) => <IndexCard key={idx.symbol} index={idx} />)}
+          {popular.map((q) => <StockCard key={q.symbol} stock={q} market={market} />)}
         </div>
       </section>
 
