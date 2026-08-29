@@ -25,15 +25,19 @@ function todayStr() {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
-function monthRange() {
+/** 오늘부터 앞으로 45일 — 월말·주말에도 다음 달 일정이 티커에 보이게 */
+function tickerCalendarRange() {
   const now = new Date();
-  const y = now.getFullYear();
-  const m = now.getMonth() + 1;
-  const last = new Date(y, m, 0).getDate();
-  return {
-    from: `${y}-${pad(m)}-01`,
-    to: `${y}-${pad(m)}-${pad(last)}`,
-  };
+  const from = todayStr();
+  const end = new Date(now);
+  end.setDate(end.getDate() + 45);
+  const to = `${end.getFullYear()}-${pad(end.getMonth() + 1)}-${pad(end.getDate())}`;
+  return { from, to };
+}
+
+function eventDate(iso: string | undefined, fallbackDate?: string): string {
+  if (fallbackDate) return fallbackDate;
+  return (iso ?? "").split("T")[0] ?? "";
 }
 
 function impactColor(impact: string): string {
@@ -104,7 +108,7 @@ export function EcoTickerTape({ market = "us" }: { market?: MarketId }) {
 
   useEffect(() => {
     let cancelled = false;
-    const { from, to } = monthRange();
+    const { from, to } = tickerCalendarRange();
     const today = todayStr();
 
     (async () => {
@@ -112,24 +116,30 @@ export function EcoTickerTape({ market = "us" }: { market?: MarketId }) {
         const res = await fetch(`/api/economic-calendar?from=${from}&to=${to}&market=${market}`);
         if (!res.ok) return;
         const data = (await res.json()) as {
-          economicEvents?: EconomicEvent[];
+          economicEvents?: (EconomicEvent & { date?: string })[];
           earningsEvents?: EarningsEvent[];
         };
 
         const eco: TapeItem[] = (data.economicEvents ?? [])
           .filter((e) => {
-            const ds = (e.time ?? "").split("T")[0];
+            const ds = eventDate(e.time, e.date);
             return ds >= today && (e.impact === "high" || e.impact === "medium");
           })
           .map((e, i) => {
-            const ds = (e.time ?? "").split("T")[0];
+            const ds = eventDate(e.time, e.date);
             const t = kstTime(e.time);
+            const usTag =
+              market === "kr" && e.country === "US"
+                ? locale === "ko"
+                  ? "미국 "
+                  : "US "
+                : "";
             return {
               key: `eco-${ds}-${e.event}-${i}`,
               kind: "eco" as const,
               impact: e.impact,
               sortKey: e.time || `${ds}T12:00:00Z`,
-              label: `${shortDate(ds)}${t ? ` ${t}` : ""} · ${e.event}`,
+              label: `${shortDate(ds)}${t ? ` ${t}` : ""} · ${usTag}${e.event}`,
             };
           });
 

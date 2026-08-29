@@ -53,10 +53,18 @@ export async function GET(req: Request) {
     to   = `${now.getFullYear()}-${pad(m)}-${lastDay}`;
   }
 
-  const staticList = market === "kr" ? STATIC_KR_ECO_EVENTS : STATIC_US_ECO_EVENTS;
-  const economicEvents: EconomicEvent[] = staticList.filter(
-    (e) => e.date >= from && e.date <= to,
-  );
+  const staticList =
+    market === "kr"
+      ? [
+          ...STATIC_KR_ECO_EVENTS,
+          // 한국장·외국인 수급에 직결되는 미국 고·중 impact 지표
+          ...STATIC_US_ECO_EVENTS.filter((e) => e.impact === "high" || e.impact === "medium"),
+        ]
+      : STATIC_US_ECO_EVENTS;
+
+  const economicEvents: EconomicEvent[] = staticList
+    .filter((e) => e.date >= from && e.date <= to)
+    .sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time));
 
   let earningsEvents: EarningsEvent[] = [];
   if (market === "us" && key) {
