@@ -3,7 +3,7 @@ import type { Report } from "@/lib/reports";
 const body = (lines: string) =>
   `${lines}\n\ninvestus.kr SRP 최고투자책임자 발행`;
 
-/** 한국주식 미리보기 시드 — 시총 탑10 중심. 장 마감 후 일일 업데이트 예정 */
+/** 한국주식 시드 — 한장요약 + 삼성·하이닉스 + 시총 탑5 이슈 종목 2~3 (+ 코스피·수급·매크로). 장 마감 후 일일 업데이트 */
 export const SEED_REPORTS_KR: Report[] = [
   // ── 2026-08-29 신규 ────────────────────────────────────────────────────────
   {
