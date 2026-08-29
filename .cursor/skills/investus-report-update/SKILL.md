@@ -230,7 +230,7 @@ description: >-
 |------|--------|-------------|--------|
 | **us** (미국) | `리포트 업데이트` | `01.investus 리포트/` **스크린샷 Read** (기존과 동일) | `lib/reports.ts`, SVG, wall, analyst |
 | **kr** (한국주식) | 같은 요청 시 **자동 포함** (별도 말 없어도) | **웹 검색** — 당일·전일 한국장 뉴스·정책·수급 (스크린샷 없음) | `lib/reports-kr.ts`, `*-kr-*.svg`, **`wallPosts-markets` 종토방**, **`analystPosts-markets` 애널** |
-| **safe** (안전자산) |同上 | **웹 검색** — BTC·ETH·금·은 등 전일~당일 뉴스 | `lib/reports-safe.ts`, `*-safe-*.svg`, **`wallPosts-markets` 종토방**, **`analystPosts-markets` 애널** |
+| **safe** (안전자산) |同上 | **웹 검색** — BTC·금 필수 + **당일 이슈 있는 기타 안전자산 2~3개** | `lib/reports-safe.ts`, `*-safe-*.svg`, **`wallPosts-markets` 종토방**, **`analystPosts-markets` 애널** |
 | **kr-re** (한국부동산) |同上 | **웹 검색** — 부동산 정책·전세·매매·공급 이슈 | `lib/reports-kr-re.ts`, `*-krre-*.svg`, **`wallPosts-markets` 종토방**, **`analystPosts-markets` 애널** |
 
 - 미국만 스크린샷 기반. **kr / safe / kr-re는 에이전트가 뉴스·정책을 검색해 리포트·SVG·본문을 스스로 작성**한다.
@@ -250,7 +250,7 @@ description: >-
 |------|------|-----------|---------|
 | `us` | 미국장 (기존) | `lib/reports.ts`, `wallPosts.ts`, `analystPosts.ts` | Mag7·매크로 |
 | `kr` | **한국장 마감 후** (KST ~15:30+) | `lib/reports-kr.ts`, `wallPosts-markets.ts`, `analystPosts-markets.ts` | 시총 탑10 |
-| `safe` | **매일 아침 9시 KST** | `lib/reports-safe.ts` + markets wall/analyst | BTC·ETH + 금·은 (이모지 🪙) |
+| `safe` | **매일 아침 9시 KST** | `lib/reports-safe.ts` + markets wall/analyst | **한장요약 1 + BTC·금 각 1 + 기타 이슈 자산 2~3** (총 **5~6개**) |
 | `kr-re` | 정책·시세 이슈 (일일) | `lib/reports-kr-re.ts` + markets wall/analyst | 공급·전세·세제 (이모지 🏢) |
 
 요청 예: `리포트 업데이트` (4시장 일괄), `한국주식만`, `안전자산만`.
@@ -258,3 +258,23 @@ description: >-
 URL: `/` (미국), `/kr`, `/safe`, `/kr-re`. 홈에서 이모지 스위처 — **모바일: 헤더 아래**, **데스크탑: 본문 상단 2×2 그리드**.
 
 **한국 시총 탑10** (브리핑·리포트·인기종목 기준): 삼성전자 · SK하이닉스 · LG에너지솔루션 · 삼성바이오로직스 · 현대차 · 기아 · 셀트리온 · KB금융 · 신한지주 · NAVER. 코스피 히트맵은 S&P500 히트맵과 동일 UI(섹터 타일). 리포트 SVG는 `public/charts/*-kr-*.svg` 로 함께 생성.
+
+### 안전자산(`safe`) 리포트 — BTC·금 + 추가 2~3개 (2026-08-30~)
+
+> **피드백:** 매일 **비트코인·금만** 개별 리포트를 만들면 피드가 좁습니다. **당일 이슈가 있는 다른 안전자산을 2~3개 더** 발행합니다.
+
+**당일 최소 구성 (총 5~6개 seed)**
+1. **한장요약** 1개 (`isPinned: true`, `subject: "한장요약"`) — BTC·금·추가 커버 자산을 한 줄씩 포함
+2. **비트코인** 1개 — **매일 필수**
+3. **금** 1개 — **매일 필수**
+4. **추가 개별 리포트 2~3개** — **매일 필수**, 당일 뉴스·가격·정책 이슈가 있는 자산만
+
+**추가 2~3개 고르는 방법**
+- `lib/markets/config.ts`의 `SAFE_CRYPTO_TOP10` · `SAFE_PHYSICAL_TOP10` · `SAFE_HAVEN_TOP10` 풀에서 **웹 검색**으로 당일·전일 **실제 이슈**가 있는 것만 고릅니다.
+- **우선 후보 (로테이션):** 이더리움 · 은 · 달러인덱스 · 미국 장기국채(TLT) · 물가연동국채(TIP) · WTI원유 · VIX·금리 매크로 · 솔라나 등 — **매일 같은 2~3개 고정 금지**.
+- **선택 기준:** (1) 전일 대비 큰 변동 (2) 정책·규제·ETF·지정학 (3) 금·BTC와 연동된 매크로 이슈 (4) 한장요약에 언급한 자산 중 개별 깊이가 필요한 것.
+- **금지:** 이슈 없이 습관적으로 「은」「이더」만 넣기 · 한 주제를 BTC/금과 **중복**해서 세 번 쓰기(한장요약 vs 개별 역할 분리).
+
+**산출물 연동**
+- 추가 seed마다 SVG KO+EN · `MOCK_ANALYST_POSTS_SAFE` 1:1 · 종토방 글은 **전체 safe 주제**를 4~8개로 커버(추가 자산 언급 포함).
+- `subject`: 자산 **한글명** (`이더리움`, `은`, `달러인덱스`, `미국 장기국채` 등). 매크로는 `금리`, `달러` 등 짧은 분류.

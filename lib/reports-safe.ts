@@ -2,7 +2,7 @@ import type { Report } from "@/lib/reports";
 
 const body = (lines: string) => `${lines}\n\ninvestus.kr SRP 최고투자책임자 발행`;
 
-/** 안전자산 미리보기 시드 — 크립토 탑3 + 현물 탑3. 매일 아침 9시 업데이트 예정 */
+/** 안전자산 시드 — 한장요약 + BTC + 금 + 당일 이슈 자산 2~3 (총 5~6). 매일 아침 9시 KST 업데이트 */
 export const SEED_REPORTS_SAFE: Report[] = [
   // ── 2026-08-29 신규 ────────────────────────────────────────────────────────
   {
