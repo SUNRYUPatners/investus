@@ -16,11 +16,34 @@ type NaverItem = {
   cd: string;
   nm?: string;
   nv: number; // last
-  cv: number; // change
-  cr: number; // change %
+  sv?: number; // previous close
+  cv: number; // change (absolute magnitude)
+  cr: number; // change % (absolute for stocks; signed for indices)
+  rf?: string; // 1=상한 2=상승 3=보합 4=하한 5=하락
   aq?: number; // volume
   pcv?: number;
 };
+
+/** 종목 SERVICE_ITEM: cv·cr는 절댓값만 오고 rf(또는 nv vs sv)로 방향 판별 */
+function signedStockChange(row: NaverItem): number {
+  const cv = Math.abs(row.cv ?? 0);
+  if (cv === 0) return 0;
+  if (row.rf === "5" || row.rf === "4") return -cv;
+  if (row.rf === "2" || row.rf === "1") return cv;
+  if (row.rf === "3") return 0;
+  if (row.sv != null && row.sv > 0) return row.nv >= row.sv ? cv : -cv;
+  return row.cv;
+}
+
+function signedStockChangePercent(row: NaverItem): number {
+  const cr = Math.abs(row.cr ?? 0);
+  if (cr === 0) return 0;
+  if (row.rf === "5" || row.rf === "4") return -cr;
+  if (row.rf === "2" || row.rf === "1") return cr;
+  if (row.rf === "3") return 0;
+  if (row.sv != null && row.sv > 0) return row.nv >= row.sv ? cr : -cr;
+  return row.cr;
+}
 
 function parseArea(json: unknown, areaName: string): NaverItem[] {
   const root = json as {
@@ -59,8 +82,8 @@ export async function fetchNaverStockQuotes(codes: string[]): Promise<Map<string
         code: row.cd,
         name: row.nm,
         price: row.nv,
-        change: row.cv,
-        changePercent: row.cr,
+        change: signedStockChange(row),
+        changePercent: signedStockChangePercent(row),
         volume: row.aq ?? 0,
       });
       // also key as Yahoo-style

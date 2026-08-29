@@ -169,7 +169,7 @@ export function KospiHeatmap() {
 
   useEffect(() => {
     try {
-      const cached = localStorage.getItem("kospi-heatmap-cache-v2");
+      const cached = localStorage.getItem("kospi-heatmap-cache-v3");
       if (cached) {
         const parsed = JSON.parse(cached) as ApiResponse;
         if (parsed?.sectors) {
@@ -186,7 +186,7 @@ export function KospiHeatmap() {
           setSectors(data.sectors);
           setIsLive(data.isLive);
           try {
-            localStorage.setItem("kospi-heatmap-cache-v2", JSON.stringify(data));
+            localStorage.setItem("kospi-heatmap-cache-v3", JSON.stringify(data));
           } catch { /* ignore */ }
         })
         .catch(() => {});
