@@ -27,7 +27,7 @@
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🥇</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#facc15" text-anchor="middle">금 연동</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">귀금속 basket</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">귀금속 묶음</text>
   <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">투자·헤지 수요</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">📈</text>

@@ -50,550 +50,110 @@ export const SEED_REPORTS: Report[] = [
     imagesEn: ["/charts/summary-20260831-en.svg"],
     isPinned: true, imageOnly: true,
   },
-  { id: "seed-1417", title: '에이전트 메모리 수요가 2030년까지 약 24배 늘 수 있고 HBM은 2026~27년 품귀가 이어질 수 있다는 전망이 나왔습니다', summary: '인공지능 에이전트 확산을 가정하면 메모리 수요가 2030년까지 약 24배 늘 수 있다는 장기 전망이 제시됐습니다. 고대역폭 메모리(HBM)는 2026~27년 품귀가 이어질 수 있고, 에이전트 한 번 호출에 토큰 사용량이 5~30배 늘 수 있습니다.',
-    body: `■ 상세
-
-에이전트는 사용자 질문에 한 번 답하는 챗봇과 다릅니다. 검색·계산·코딩·API 호출을 연속으로 수행하는 프로그램에 가깝습니다. 그래서 같은 사용자 수라도 GPU뿐 아니라 메모리에 오가는 데이터량이 크게 늘어납니다.
-
-장기 전망에서는 2030년까지 에이전트 관련 메모리 수요가 약 24배 늘 수 있다는 추정이 나왔습니다. 고대역폭 메모리(HBM)는 AI 가속기 옆에 붙어 데이터를 빠르게 주고받는 칩으로, 2026~27년까지 품귀가 이어질 수 있다는 전망도 함께 제시됐습니다. 에이전트 한 번 실행에 쓰이는 토큰(텍스트 조각)은 5~30배까지 늘 수 있다는 점도 핵심입니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. AI 투자 논의가 「GPU 몇 장」에서 「메모리 몇 기가바이트」로 옮겨가고 있습니다. 수요를 칩 단위가 아니라 데이터 트래픽 단위로 읽어야 합니다.
-
-2. HBM 품귀는 메모리 업체의 가격·제품 Mix에 직접 연결됩니다. 범용 DRAM과 달리 고객 맞춤형 물량이 많아 가격 협상력이 다릅니다.
-
-3. 에이전트 상용화가 늘면 추론(inference) 수요가 학습(training) 수요와 분리됩니다. 추론은 24시간 돌아가므로 메모리 대역폭이 병목이 되기 쉽습니다.
-
-4. 24배 전망은 가정에 민감합니다. 그러나 방향성은 분명합니다. AI 워크로드가 길어질수록 메모리 wall이 커집니다.
-
-5. 국내 SK하이닉스·삼성전자 실적에도 같은 논리가 적용됩니다. HBM mix가 올라가는 분기부터 실적 가시성이 달라집니다.
-
-■ 시나리오
-
-**A: 에이전트 출시가 예상보다 빠르면 2026~27 HBM 품귀가 더 길어질 수 있습니다.**
-**B: 모델 효율 개선으로 토큰 사용이 줄면 24배 전망은 하향 조정될 수 있습니다.**
-**C: 클라우드 업체가 자체 메모리 아키텍처를 쓰면 공급자 mix가 바뀔 수 있습니다.**
-
-■ 오늘까지 흐름
-
-이번 주 국내외에서 에이전트·HBM 테마가 SK하이닉스 주가와 엇갈리며 부각됐습니다. 장기 수요 전망은 강하지만 단기에는 외국인 매도와 지수 조정이 먼저 반영됐습니다.
-
-■ 장기 투자 관점
-
-메모리 산업은 2016~18년 범용 DRAM 호황 뒤 2019~20년 급락을 겪었습니다. 이번 사이클은 AI·HBM·고객 맞춤형 비중이 커져 과거와 다른 구조입니다. 2030년까지 tight supply 전망이 맞다면, 단기 주가 조정은 장기 공급자에게 유리한 진입 구간으로 기록될 수 있습니다. 다만 capex 과잉이 다시 나오면 2028년 이후 전망은 바뀔 수 있습니다.
-
-■ 앞으로 볼 것
-
-(1) 분기 HBM 출하량과 ASP (2) 주요 CSP의 에이전트 상용 일정 (3) OpenAI·Google·Meta의 inference capex (4) SK하이닉스·마이크론·삼성 HBM roadmap (5) 2026~27 supply gap 추정치 변화
-
-■ 투자시사점
-
-에이전트 메모리는 「테마」가 아니라 「용량 계획」 문제입니다. 투자 시에는 GPU 발표 수치와 HBM attach rate를 같은 표에 두시기 바랍니다. 장기 투자자라면 2026~27 품귀가 실적 Mix로 전환되는 분기를 기준점으로 삼으시면 됩니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '에이전트 메모리 수요가 2030년까지 약 24배 늘 수 있고 HBM은 2026~27년 품귀가 이어질 수 있다는 전망이 나왔습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1417", title: '인공지능 에이전트 확산 시 메모리 수요가 2030년까지 약 24배 늘 수 있고 고대역폭 메모리는 2026~27년 품귀가 이어질 수 있다는 전망이 나왔습니다', summary: '인공지능 에이전트는 질문에 한 번 답하는 챗봇과 달리 검색·계산·외부 연동을 연속 수행하므로 메모리 사용량이 크게 늘어납니다. 장기 전망에서는 2030년까지 에이전트 관련 메모리 수요가 약 24배 늘 수 있다는 추정이 제시됐고, 고대역폭 메모리는 2026~27년까지 공급이 빠듯할 수 있습니다. 에이전트 한 번 실행에 쓰이는 텍스트 조각(토큰)은 기존 챗봇 대비 5~30배까지 늘 수 있다는 점도 함께 거론됐습니다.',
+    body: `■ 상세\n\n인공지능 에이전트는 사용자 질문에 한 번 답하고 끝나는 챗봇과 다릅니다. 검색·계산·코딩·외부 프로그램 연동을 연속으로 수행하는 프로그램에 가깝습니다. 그래서 같은 사용자 수라도 그래픽 처리 장치뿐 아니라 메모리에 오가는 데이터량이 크게 늘어납니다.\n\n장기 전망에서는 2030년까지 에이전트 관련 메모리 수요가 약 24배 늘 수 있다는 추정이 나왔습니다. 고대역폭 메모리는 인공지능 가속기 옆에 붙어 데이터를 빠르게 주고받는 칩으로, 2026~27년까지 품귀가 이어질 수 있다는 전망도 함께 제시됐습니다. 에이전트 한 번 실행에 쓰이는 토큰(텍스트 조각)은 5~30배까지 늘 수 있다는 점이 핵심입니다. 토큰이 많아지면 추론(이미 학습된 모델로 답을 만드는 과정) 단계에서 메모리 대역폭이 병목이 되기 쉽습니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 인공지능 투자 논의가 「그래픽 처리 장치 몇 장」에서 「메모리 몇 기가바이트」로 옮겨가고 있습니다. 수요를 칩 단위가 아니라 데이터 이동량 단위로 읽어야 합니다.\n\n2. 고대역폭 메모리 품귀는 메모리 업체의 가격과 제품 구성에 직접 연결됩니다. 범용 동적랜덤액세스메모리와 달리 고객 맞춤형 물량이 많아 가격 협상력이 다릅니다.\n\n3. 에이전트 상용화가 늘면 추론 수요가 학습 수요와 분리됩니다. 추론은 24시간 돌아가므로 메모리 대역폭이 병목이 되기 쉽습니다.\n\n4. 24배 전망은 가정에 민감합니다. 그러나 방향성은 분명합니다. 인공지능 작업이 길어질수록 메모리 한계가 커집니다.\n\n5. 국내 SK하이닉스·삼성전자 실적에도 같은 논리가 적용됩니다. 고대역폭 메모리 비중이 올라가는 분기부터 실적 가시성이 달라집니다.\n\n■ 시나리오\n\n**A: 에이전트 출시가 예상보다 빠르면 2026~27년 고대역폭 메모리 품귀가 더 길어질 수 있습니다.**\n**B: 모델 효율 개선으로 토큰 사용이 줄면 24배 전망은 하향 조정될 수 있습니다.**\n**C: 클라우드 업체가 자체 메모리 설계를 쓰면 공급자 구성이 바뀔 수 있습니다.**\n\n■ 오늘까지 흐름\n\n이번 주 국내외에서 에이전트·고대역폭 메모리 테마가 SK하이닉스 주가와 엇갈리며 부각됐습니다. 장기 수요 전망은 강하지만 단기에는 외국인 매도와 지수 조정이 먼저 반영됐습니다.\n\n■ 장기 투자 관점\n\n메모리 산업은 2016~18년 범용 동적랜덤액세스메모리 호황 뒤 2019~20년 급락을 겪었습니다. 이번 사이클은 인공지능·고대역폭 메모리·고객 맞춤형 비중이 커져 과거와 다른 구조입니다. 2030년까지 공급 부족 전망이 맞다면, 단기 주가 조정은 장기 공급자에게 유리한 진입 구간으로 기록될 수 있습니다. 다만 설비 투자 과잉이 다시 나오면 2028년 이후 전망은 바뀔 수 있습니다.\n\n■ 앞으로 볼 것\n\n(1) 분기 고대역폭 메모리 출하량과 평균 판매 가격을 확인하시면 됩니다.\n\n(2) 주요 클라우드 업체의 에이전트 상용 일정을 보시기 바랍니다.\n\n(3) 대형 인공지능 기업의 추론 설비투자 계획을 추적하시면 됩니다.\n\n(4) SK하이닉스·마이크론·삼성의 고대역폭 메모리 로드맵을 살펴보시기 바랍니다.\n\n(5) 2026~27년 공급 격차 추정치 변화를 확인하시면 됩니다.\n\n■ 투자시사점\n\n에이전트 메모리는 「테마」가 아니라 「용량 계획」 문제입니다. 투자 시에는 그래픽 처리 장치 발표 수치와 고대역폭 메모리 장착 비율을 같은 표에 두시기 바랍니다.\n\n장기 투자자라면 2026~27년 품귀가 실적 구성으로 전환되는 분기를 기준점으로 삼으시면 됩니다. 단기 수급과 장기 수요 전망을 분리해 기록해 두는 편이 혼선을 줄입니다.\n\n국내 메모리 업체는 범용 가격과 고대역폭 메모리 믹스를 함께 봐야 합니다. 에이전트 확산이 느리면 전망은 하향 조정될 수 있으므로, 분기 실적에서 고대역폭 메모리 매출 비중 변화를 우선 확인하시기 바랍니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Agent-driven AI could lift memory demand roughly 24-fold by 2030, with high-bandwidth memory tight through 2026-27',
+    summaryEn: 'AI agents that chain search, calculation, and external calls use far more memory than one-shot chatbots. Long-range estimates point to about 24 times more agent-related memory demand by 2030, tight high-bandwidth memory supply through 2026-27, and five to thirty times more tokens per agent run versus chat.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '섹터', categoryColor: 'purple', subject: '인공지능',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/agent-memory-goldman-20260831.svg"],
     imagesEn: ["/charts/agent-memory-goldman-20260831-en.svg"],
   },
-  { id: "seed-1418", title: '로마 우주 망원경이 10.15톤짜리 팔콘 헤비 13번째 비행으로 발사됐습니다', summary: '8월 30일 오전 7시 26분(동부) 팔콘 헤비 13번째 비행으로 10.15톤급 로마 망원경이 지구 2차 궤도(L2) 향해 올라갔습니다. 과학 임무용 대형 광학 위성이 상업 재사용 로켓으로 발사된 사례입니다.',
-    body: `■ 상세
-
-로마(Roman) 우주 망원경은 암흑물질·외계행성 탐색 등을 위한 NASA 과학 임무입니다. 8월 30일 오전 7시 26분(동부) 텍사스에서 팔콘 헤비 13번째 비행(FH13)으로 발사됐고, 화물 중량은 10.15톤입니다. 목표는 지구에서 약 150만 km 떨어진 지구 2차 궤도(L2)로, 허블급 2.4m 주 거울을 실었습니다.
-
-L2는 태양·지구 중력이 맞서 관측에 유리한 위치입니다. 대형 과학 위성이 재사용 로켓으로 올라가면 발사 비용·일정 협상 구조가 달라집니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. 헤비급 대형 화물 실적은 정부·과학 계약 협상에 영향을 줍니다. 신뢰성 숫자는 상업 발사 cadence와 같이 쌓입니다.
-
-2. 같은 주 AI·우주·위성 뉴스가 겹치며 「우주 경제」 내러티브가 다시 부각됐습니다.
-
-3. 과학 임무는 직접 매출보다 브랜드·기술 신뢰성에 기여합니다.
-
-4. L2 전개·개막 일정이 다음 가시적 마일스톤입니다.
-
-5. 대형 위성 AI 페이로드(2027 Q4) 일정과 같은 생태계 안에서 읽힙니다.
-
-■ 시나리오
-
-**A: L2 도달·개막이 예정대로면 우주 과학+cadence 신뢰 동시 강화**
-**B: 전개 지연 시 과학 일정만 미뤄지고 상업 cadence와 분리**
-**C: 대형 과학 발사 증가 시 헤비급 수요 재평가**
-
-■ 오늘까지 흐름
-
-FH13은 8월 30일 발사됐고, 같은 주 스타베이스 수자원·AI 위성·NVDA-SPCX 지분 논의가 겹쳤습니다.
-
-■ 장기 투자 관점
-
-스페이스X는 2010년대 Falcon 9 재사용으로 발사 비용 구조를 바꿨습니다. 2020년대에는 Starship·헤비·위성 인터넷으로 「운송+인프라」로 확장 중입니다. 과학 위성 성공은 장기적으로 상업·정부 고객에게 같은 로켓을 파는 신뢰 자료가 됩니다.
-
-■ 앞으로 볼 것
-
-(1) L2 도달 확인 (2) 첫 light 일정 (3) FH cadence (4) NASA·ESA 후속 계약 (5) AI 위성 Q4 2027 로드맵
-
-■ 투자시사점
-
-비상장 SPCX를 직접 살 수 없는 투자자는 cadence·대형 화물 실적·위성 서비스 일정을 간접 지표로 쓰시면 됩니다. Roman은 단기 earnings가 아니라 5년 execution track record에 더 가깝습니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '로마 우주 망원경이 10.15톤짜리 팔콘 헤비 13번째 비행으로 발사됐습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1418", title: '로마 우주 망원경이 10.15톤짜리 팔콘 헤비 13번째 비행으로 8월 30일 발사됐습니다', summary: '8월 30일 오전 7시 26분(동부) 팔콘 헤비 13번째 비행으로 10.15톤급 로마 우주 망원경이 지구에서 약 150만 km 떨어진 태양·지구 2차 궤도(L2) 향해 올라갔습니다. 과학 임무용 대형 광학 위성이 상업 재사용 로켓으로 발사된 사례입니다.',
+    body: `■ 상세\n\n로마 우주 망원경은 암흑물질·외계행성 탐색 등을 위한 미국 항공우주국 과학 임무입니다. 8월 30일 오전 7시 26분(동부) 텍사스에서 팔콘 헤비 13번째 비행으로 발사됐고, 화물 중량은 10.15톤입니다. 목표는 지구에서 약 150만 km 떨어진 태양·지구 2차 궤도(L2)이며, 허블급 2.4m 주 거울을 실었습니다.\n\nL2는 태양·지구 중력이 맞서 관측에 유리한 위치입니다. 대형 과학 위성이 재사용 로켓으로 올라가면 발사 비용과 일정 협상 구조가 달라집니다. 같은 주 인공지능 위성·수자원·지분 논의와 겹치며 우주 인프라 투자가 한 흐름으로 읽힙니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 헤비급 대형 화물 실적은 정부·과학 계약 협상에 영향을 줍니다. 발사 성공 기록은 상업 발사 빈도와 함께 쌓이는 신뢰 자료입니다.\n\n2. 같은 주 인공지능·우주·위성 뉴스가 겹치며 「우주 경제」 내러티브가 다시 부각됐습니다.\n\n3. 과학 임무는 직접 매출보다 브랜드와 기술 신뢰성에 기여합니다. 대형 화물을 안정적으로 올릴 수 있다는 증거는 상업 고객 유치에도 도움이 됩니다.\n\n4. L2 도달과 망원경 개막 일정이 다음 가시적 마일스톤입니다. 전개·교정 과정에서 지연이 나오면 과학 일정만 미뤄질 수 있습니다.\n\n5. 2027년 4분기 인공지능 위성 일정과 같은 생태계 안에서 읽힙니다. 발사·궤도·연산 서비스가 한 묶음으로 확장되는 그림입니다.\n\n■ 시나리오\n\n**A: L2 도달과 개막이 예정대로면 우주 과학과 발사 신뢰성이 동시에 강화될 수 있습니다.**\n**B: 전개 지연이 나오면 과학 일정만 미뤄지고 상업 발사 실적과는 분리될 수 있습니다.**\n**C: 대형 과학 발사가 늘면 헤비급 수요 재평가로 이어질 수 있습니다.**\n\n■ 오늘까지 흐름\n\n팔콘 헤비 13번째 비행은 8월 30일 발사됐고, 같은 주 스타베이스 수자원·인공지능 위성·엔비디아 지분 논의가 겹쳤습니다.\n\n■ 장기 투자 관점\n\n스페이스X는 2010년대 팔콘 9 재사용으로 발사 비용 구조를 바꿨습니다. 2020년대에는 스타십·헤비·위성 인터넷으로 「운송+인프라」로 확장 중입니다. 과학 위성 성공은 장기적으로 상업·정부 고객에게 같은 로켓을 파는 신뢰 자료가 됩니다.\n\n■ 앞으로 볼 것\n\n(1) L2 도달 여부를 확인하시면 됩니다.\n\n(2) 첫 관측(개막) 일정을 보시기 바랍니다.\n\n(3) 팔콘 헤비 연간 발사 횟수를 추적하시면 됩니다.\n\n(4) 후속 과학 계약 발표를 살펴보시기 바랍니다.\n\n(5) 2027년 4분기 인공지능 위성 로드맵과 함께 보시면 됩니다.\n\n■ 투자시사점\n\n비상장 스페이스X를 직접 살 수 없는 투자자는 발사 빈도·대형 화물 실적·위성 서비스 일정을 간접 지표로 쓰시면 됩니다.\n\n로마 망원경은 단기 실적보다 5년 실행 기록에 더 가깝습니다. 과학 임무 성공은 브랜드와 계약 협상력에 기여하지만, 주가에 바로 반영되지는 않습니다.\n\n같은 주 우주·인공지능 뉴스가 겹칠 때는 「발사」와 「서비스 상용화」를 구분해 추적하시기 바랍니다. 발사 성공만으로 수익이 확정되지는 않습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'The 10.15-ton Roman Space Telescope launched on Falcon Heavy flight 13 on August 30',
+    summaryEn: 'On August 30 at 7:26 a.m. ET, Falcon Heavy flight 13 lifted the 10.15-ton Roman Space Telescope toward the Sun-Earth L2 point about 1.5 million km away. It is a major science payload launched on a commercial reusable rocket.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: 'BREAKING', categoryColor: 'purple', subject: '스페이스X',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/roman-space-telescope-20260831.svg"],
     imagesEn: ["/charts/roman-space-telescope-20260831-en.svg"],
   },
-  { id: "seed-1419", title: '엔비디아가 스페이스X 지분 200억 달러 규모로 매수할 가능성이 예측시장에서 크게 올랐습니다', summary: '8월 29일 기준 예측시장에서 엔비디아의 200억 달러 스페이스X 지분 매수 확률이 급등했습니다. AI 칩과 위성·발사 인프라 연결 시나리오가 다시 거론됐습니다.',
-    body: `■ 상세
-
-200억 달러 규모 스페이스X 지분 매수는 아직 공식 확인된 거래가 아닙니다. 8월 29일 예측시장에서 확률이 크게 올랐고, 시장은 AI 데이터센터와 저궤도 위성망을 연결하는 시나리오에 더 많은 관심을 두고 있습니다.
-
-궤도 AI 위성은 지상망이 약한 구간에서 추론을 돌릴 수 있습니다. 엔비디아 칩 탑재 위성 서비스 2027 Q4 목표와 맞물립니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. NVDA 투자 논의가 칩 판매를 넘어 compute placement로 확장됩니다.
-
-2. 비상장 지분 거래는 공시·규제·실행 리스크가 큽니다.
-
-3. 예측시장 확률은 확정이 아니라 관심 온도계입니다.
-
-4. SPCX valuation과 NVDA cash·buyback 정책이 함께 봐야 합니다.
-
-5. 위성 AI가 상용화되면 TAM story가 hardware에서 service로 이동합니다.
-
-■ 시나리오
-
-**A: 공식 발표 시 NVDA+space basket 재평가**
-**B: 무발표 시 단기 기대만 정리**
-**C: 부분 partnership(칩 공급)만 확인될 수도**
-
-■ 오늘까지 흐름
-
-Roman 발사·AI 위성 Q4 2027·Kalshi odds 급등이 같은 주에 나왔습니다.
-
-■ 장기 투자 관점
-
-엔비디아는 PC GPU에서 data center AI로 10년간 TAM을 확장해 왔습니다. 다음 5년은 「지상 data center」에서 「지상+궤도」로 story가 넓어질 수 있는지가 관심사입니다. stake가 real이면 vertical integration, 아니면 supply deal 수준으로도 의미 있습니다.
-
-■ 앞으로 볼 것
-
-(1) 공식 발표 (2) 2027 Q4 AI satellite launch count (3) NVDA capex·M&A commentary (4) SPCX funding round rumors (5) regulatory review
-
-■ 투자시사점
-
-NVDA 주가에 직접 반영되기 전까지는 odds 변화만으로 포지션을 키우기보다, confirmed deal vs chip supply contract를 구분해 추적하시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '엔비디아가 스페이스X 지분 200억 달러 규모로 매수할 가능성이 예측시장에서 크게 올랐습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1419", title: '엔비디아가 스페이스X 지분 200억 달러 규모로 매수할 가능성이 8월 29일 예측시장에서 크게 올랐습니다', summary: '8월 29일 기준 예측시장에서 엔비디아의 200억 달러 스페이스X 지분 매수 확률이 급등했습니다. 아직 공식 확인된 거래는 아니며, 인공지능 칩과 위성·발사 인프라를 연결하는 시나리오가 다시 거론됐습니다.',
+    body: `■ 상세\n\n200억 달러 규모 스페이스X 지분 매수는 아직 공식 확인된 거래가 아닙니다. 8월 29일 예측시장에서 확률이 크게 올랐고, 시장은 인공지능 데이터센터와 저궤도 위성망을 연결하는 시나리오에 더 많은 관심을 두고 있습니다.\n\n궤도 인공지능 위성은 지상망이 약한 구간에서 추론을 돌릴 수 있습니다. 엔비디아 칩을 탑재한 위성 서비스 2027년 4분기 목표와 맞물립니다. 예측시장 확률은 확정이 아니라 관심의 온도계에 가깝습니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 엔비디아 투자 논의가 칩 판매를 넘어 「연산이 어디에 놓이는가」로 확장됩니다. 지상 데이터센터만이 아니라 궤도까지 포함하는 그림입니다.\n\n2. 비상장 지분 거래는 공시·규제·실행 불확실성이 큽니다. 확률 상승만으로 거래가 성사된다고 보기 어렵습니다.\n\n3. 예측시장 확률은 확정이 아니라 관심 온도계입니다. 공식 발표 전까지는 기대만 올라간 상태로 읽어야 합니다.\n\n4. 스페이스X 기업가치와 엔비디아 현금·자사주 매입 정책을 함께 봐야 합니다. 대규모 지분 매수는 재무 여력과 우선순위 문제입니다.\n\n5. 궤도 인공지능이 상용화되면 시장 규모 이야기가 하드웨어에서 서비스로 이동합니다. 칩 판매를 넘어 운영 수익이 관건이 됩니다.\n\n■ 시나리오\n\n**A: 공식 발표가 나오면 엔비디아와 우주 테마가 함께 재평가될 수 있습니다.**\n**B: 발표가 없으면 단기 기대만 정리될 수 있습니다.**\n**C: 지분 매수 대신 칩 공급 협력만 확인될 수도 있습니다.**\n\n■ 오늘까지 흐름\n\n로마 망원경 발사·2027년 4분기 인공지능 위성·예측시장 확률 급등이 같은 주에 나왔습니다.\n\n■ 장기 투자 관점\n\n엔비디아는 개인용 그래픽 처리 장치에서 데이터센터 인공지능으로 10년간 시장을 확장해 왔습니다. 다음 5년은 「지상 데이터센터」에서 「지상+궤도」로 이야기가 넓어질 수 있는지가 관심사입니다. 지분 매수가 실현되면 수직 통합, 아니면 공급 계약 수준으로도 의미가 있습니다.\n\n■ 앞으로 볼 것\n\n(1) 공식 발표 여부를 확인하시면 됩니다.\n\n(2) 2027년 4분기 인공지능 위성 발사 계획을 보시기 바랍니다.\n\n(3) 엔비디아 설비투자·인수합병 관련 언급을 추적하시면 됩니다.\n\n(4) 스페이스X 추가 펀딩 루머를 살펴보시기 바랍니다.\n\n(5) 규제 검토 가능성을 함께 보시면 됩니다.\n\n■ 투자시사점\n\n엔비디아 주가에 직접 반영되기 전까지는 확률 변화만으로 포지션을 키우기보다, 확정된 거래와 칩 공급 계약을 구분해 추적하시기 바랍니다.\n\n우주·인공지능 연결은 내러티브가 강하지만 실행 확인이 늦을 수 있습니다. 공식 발표·계약서·위성 일정 세 가지 중 하나라도 구체화될 때까지는 기대 프리미엄만 올라간 상태로 볼 수 있습니다.\n\n장기 투자자는 칩 수요 본업과 궤도 연산 옵션을 분리해 기록하시면 됩니다. 후자는 성사 시 추가이지만, 미성사 시 단기 변동성만 키울 수 있습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Prediction markets sharply raised the odds of a \$20 billion Nvidia stake in SpaceX on August 29',
+    summaryEn: 'On August 29, prediction-market odds of a \$20 billion Nvidia SpaceX stake jumped sharply. No deal is confirmed, but markets are revisiting links between AI chips and satellite launch infrastructure.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '종목분석', categoryColor: 'blue', subject: '엔비디아',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/nvda-spacex-stake-20260831.svg"],
     imagesEn: ["/charts/nvda-spacex-stake-20260831-en.svg"],
   },
-  { id: "seed-1420", title: '스타베이스 인근 444에이커 수자원 권리가 최대 2억 2,000만 달러에 거래될 수 있다고 전해졌습니다', summary: '텍사스 스타베이스 주변 444에이커(약 180만㎡) 수자원 권리가 최대 2억 2,000만 달러 규모로 거래될 수 있다고 전해졌습니다. 대형 로켓 시험·발사 cadence 확대의 선행 투자로 읽힙니다.',
-    body: `■ 상세
-
-스타베이스는 텍사스 남부의 스페이스X 발사·시험 허브입니다. 444에이커 수자원 권리가 최대 2억 2,000만 달러에 거래될 수 있다는 보도는, 발사 빈도를 늘리기 위한 토지·상하수 인프라 확보의 일환으로 해석됩니다.
-
-대형 로켓 시험은 소음·소화수·냉각수 수요가 큽니다. cadence 경쟁은 로켓 성능만이 아니라 현장 인프라도 포함합니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. 발사 cadence는 물리적 인프라 한계를 먼저 맞습니다.
-
-2. 토지·수자원 deal은 capacity expansion leading indicator입니다.
-
-3. 지역 환경·규제가 장기 bottleneck이 될 수 있습니다.
-
-4. capex가 늘면 free cash flow narrative와 trade-off입니다.
-
-5. Starbase와 Louisiana campus가 같은 infra race입니다.
-
-■ 시나리오
-
-**A: deal close → cadence target 상향 기대**
-**B: 환경 litigation → 일정 지연**
-**C: infra spend만 늘고 발사는 flat**
-
-■ 오늘까지 흐름
-
-루이지애나 지반 조사·Roman 발사·수자원 deal이 같은 주 infra theme로 묶였습니다.
-
-■ 장기 투자 관점
-
-항공·우주 산업은 1960년대 이후 「few launches」에서 2020년대 「rapid reuse」로 이동 중입니다. infra 선행 투자는 5년 뷰에서 cadence monetization의 전제입니다.
-
-■ 앞으로 볼 것
-
-(1) deal closing (2) launch license (3) monthly launch count (4) environmental filings (5) capex guide
-
-■ 투자시사점
-
-SPCX 간접 투자자는 발사 횟수와 infra capex를 같은 dashboard에 두시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '스타베이스 인근 444에이커 수자원 권리가 최대 2억 2,000만 달러에 거래될 수 있다고 전해졌습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1420", title: '스타베이스 인근 444에이커 수자원 권리가 최대 2억 2,000만 달러에 거래될 수 있다고 전해졌습니다', summary: '텍사스 스타베이스 주변 444에이커(약 180만㎡) 수자원 권리가 최대 2억 2,000만 달러 규모로 거래될 수 있다고 전해졌습니다. 대형 로켓 시험·발사 빈도 확대를 위한 토지·상하수 인프라 선행 투자로 읽힙니다.',
+    body: `■ 상세\n\n스타베이스는 텍사스 남부의 스페이스X 발사·시험 허브입니다. 444에이커(약 180만㎡) 수자원 권리가 최대 2억 2,000만 달러에 거래될 수 있다는 보도는, 발사 빈도를 늘리기 위한 토지·상하수 인프라 확보의 일환으로 해석됩니다.\n\n대형 로켓 시험은 소음·소화수·냉각수 수요가 큽니다. 발사 빈도 경쟁은 로켓 성능만이 아니라 현장 인프라도 포함합니다. 수자원·환경 허가가 병목이 되면 일정이 밀릴 수 있습니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 발사 빈도는 물리적 인프라 한계를 먼저 맞습니다. 로켓 성능만으로는 해결되지 않는 병목이 있습니다.\n\n2. 토지·수자원 거래는 생산능력 확대의 선행 지표입니다. 돈이 먼저 쓰이면 발사 목표 상향 기대가 따라올 수 있습니다.\n\n3. 지역 환경·규제가 장기 병목이 될 수 있습니다. 소송·허가 지연이 나오면 인프라 투자만 늘고 발사는 그대로일 수 있습니다.\n\n4. 설비 투자가 늘면 잉여현금흐름 내러티브와 상충할 수 있습니다. 성장과 현금 사이의 균형을 봐야 합니다.\n\n5. 스타베이스와 루이지애나 부지 확장이 같은 인프라 경쟁 안에서 읽힙니다.\n\n■ 시나리오\n\n**A: 거래가 마무리되면 발사 목표 상향 기대가 커질 수 있습니다.**\n**B: 환경 소송이 길어지면 일정만 지연될 수 있습니다.**\n**C: 인프라 지출만 늘고 발사 횟수는 정체될 수 있습니다.**\n\n■ 오늘까지 흐름\n\n루이지애나 지반 조사·로마 망원경 발사·수자원 거래 보도가 같은 주 인프라 테마로 묶였습니다.\n\n■ 장기 투자 관점\n\n항공·우주 산업은 1960년대 이후 「소수 발사」에서 2020년대 「재사용·고빈도」로 이동 중입니다. 인프라 선행 투자는 5년 뷰에서 발사 빈도를 수익으로 바꾸는 전제입니다.\n\n■ 앞으로 볼 것\n\n(1) 거래 마무리 여부를 확인하시면 됩니다.\n\n(2) 발사 허가·면허 갱신을 보시기 바랍니다.\n\n(3) 월별 발사 횟수를 추적하시면 됩니다.\n\n(4) 환경 관련 공시·소송 진행을 살펴보시기 바랍니다.\n\n(5) 설비투자 가이던스 변화를 확인하시면 됩니다.\n\n■ 투자시사점\n\n스페이스X 간접 투자자는 발사 횟수와 인프라 설비투자를 같은 대시보드에 두시기 바랍니다.\n\n수자원 거래는 「돈이 먼저 나갔다」는 신호이지 「발사가 늘었다」는 확인은 아닙니다. 거래 마무리·허가·실제 발사 횟수 순으로 확인하시면 됩니다.\n\n장기적으로는 인프라가 선행되고 수익화가 뒤따르는 구조입니다. 단기 이벤트 거래보다 분기별 발사 실적 추적이 더 유용합니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Up to \$220 million in water rights near Starbase, covering 444 acres, may be changing hands',
+    summaryEn: 'Water rights on about 444 acres near Texas Starbase may trade for up to \$220 million, seen as upfront land and utility investment to support heavier rocket testing and launch cadence.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '종목분석', categoryColor: 'purple', subject: '스페이스X',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/starbase-water-rights-20260831.svg"],
     imagesEn: ["/charts/starbase-water-rights-20260831-en.svg"],
   },
-  { id: "seed-1421", title: '2027년 4분기부터 엔비디아 칩 탑재 AI 위성 서비스가 시작될 수 있다는 일정이 거론됐습니다', summary: '엔비디아 칩을 탑재한 AI 위성 서비스가 2027년 4분기 시작될 수 있다는 일정이 거론됐습니다. 궤도 추론은 지상망이 약한 구간의 데이터 처리를 가능하게 합니다.',
-    body: `■ 상세
-
-AI 위성은 센서·이미지 데이터를 궤도에서 바로 분석합니다. 2027 Q4 엔비디아 칩 탑재 서비스 일정은 상용화 timeline이 분기 단위로 내려온 사례입니다.
-
-해상·군·재난·농업 등 지연에 민감한 use case가 초기 수요입니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. 일정 구체화는 execution risk 감소에 기여합니다.
-
-2. NVDA는 chip seller에서 space compute participant로 story 확장.
-
-3. 서비스 revenue model(구독 vs capacity)이 valuation key.
-
-4. regulation·spectrum·export control 변수.
-
-5. ground AI capex와 substitute/compete 관계.
-
-■ 시나리오
-
-**A: on-time launch → space-AI revenue line visible**
-**B: delay → narrative only**
-**C: hybrid ground-orbit split architecture**
-
-■ 오늘까지 흐름
-
-NVDA stake odds·Roman·AI satellite timeline이 같은 ecosystem news flow입니다.
-
-■ 장기 투자 관점
-
-위성 인터넷이 connectivity에서 compute로 확장하는 그림은 10년 story입니다. 2027 Q4는 첫 commercial proof point 후보입니다.
-
-■ 앞으로 볼 것
-
-(1) first launch manifest (2) pricing (3) latency SLA (4) export licenses (5) customer LOIs
-
-■ 투자시사점
-
-칩주·발사사·서비스 operator 중 어디에 margin이 남는지 추적하시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '2027년 4분기부터 엔비디아 칩 탑재 AI 위성 서비스가 시작될 수 있다는 일정이 거론됐습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1421", title: '2027년 4분기부터 엔비디아 칩을 탑재한 인공지능 위성 서비스가 시작될 수 있다는 일정이 거론됐습니다', summary: '엔비디아 칩을 탑재한 인공지능 위성 서비스가 2027년 4분기 시작될 수 있다는 일정이 거론됐습니다. 궤도에서 바로 데이터를 분석하면 지상망이 약한 구간에서도 지연을 줄일 수 있습니다.',
+    body: `■ 상세\n\n인공지능 위성은 센서·이미지 데이터를 궤도에서 바로 분석합니다. 2027년 4분기 엔비디아 칩 탑재 서비스 일정은 상용화 시점이 분기 단위로 내려온 사례입니다.\n\n해상·군·재난·농업 등 지연에 민감한 용도가 초기 수요입니다. 위성 인터넷이 연결성에서 연산으로 확장하는 그림의 첫 상용화 후보입니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 일정이 구체화되면 실행 불확실성이 줄어듭니다. 「언젠가」에서 「2027년 4분기」로 내려온 것이 의미 있습니다.\n\n2. 엔비디아 이야기가 칩 판매를 넘어 궤도 연산 참여로 확장됩니다.\n\n3. 수익 모델이 구독인지 용량 판매인지에 따라 기업가치 평가가 달라집니다.\n\n4. 규제·주파수·수출 통제 변수가 남아 있습니다.\n\n5. 지상 데이터센터와 경쟘지 대체할지 아직 불분명합니다.\n\n■ 시나리오\n\n**A: 예정대로 발사되면 궤도 인공지능 수익 라인이 보이기 시작할 수 있습니다.**\n**B: 지연이 길어지면 내러티브만 남을 수 있습니다.**\n**C: 지상과 궤도를 나눠 쓰는 혼합 구조가 나올 수 있습니다.**\n\n■ 오늘까지 흐름\n\n엔비디아 지분 논의·로마 망원경 발사·인공지능 위성 일정이 같은 주 우주·연산 뉴스 흐름을 이뤘습니다.\n\n■ 장기 투자 관점\n\n위성 인터넷이 연결성에서 연산으로 확장하는 그림은 10년짜리 이야기입니다. 2027년 4분기는 첫 상용화 증거가 될 수 있는 시점입니다.\n\n■ 앞으로 볼 것\n\n(1) 첫 발사 목록을 확인하시면 됩니다.\n\n(2) 가격·요금 구조를 보시기 바랍니다.\n\n(3) 지연 시간 보장 수준을 추적하시면 됩니다.\n\n(4) 수출·규제 허가를 살펴보시기 바랍니다.\n\n(5) 고객 사전 계약(의향서) 발표를 확인하시면 됩니다.\n\n■ 투자시사점\n\n칩 제조사·발사사·서비스 운영사 중 어디에 이익이 남는지 추적하시기 바랍니다.\n\n일정 발표만으로는 수익이 확정되지 않습니다. 발사 성공·고객 계약·반복 매출 세 단계를 구분해 보시면 됩니다.\n\n장기 투자자는 「연결」과 「연산」을 분리해 기록하시기 바랍니다. 후자가 실현되면 추가 프리미엄이지만, 지연 시 내러티브만 정리될 수 있습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'An AI satellite service using Nvidia chips may begin in the fourth quarter of 2027',
+    summaryEn: 'A satellite AI service with Nvidia chips may start in Q4 2027. On-orbit inference can cut latency where ground networks are weak.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '종목분석', categoryColor: 'purple', subject: '스페이스X',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/spcx-ai-satellites-20260831.svg"],
     imagesEn: ["/charts/spcx-ai-satellites-20260831-en.svg"],
   },
-  { id: "seed-1422", title: '연간 100기가와트급 태양광과 스페이스X·테슬라의 사내 풍력 터빈 주조 계획이 거론됐습니다', summary: '연간 100GW 태양광 목표와 스페이스X·테슬라의 in-house 풍력 터빈 주조 계획이 함께 거론됐습니다. AI·EV·로켓 전력 수요가 발전 장비 vertical integration으로 이어지는 그림입니다.',
-    body: `■ 상세
-
-100GW/yr solar는 국가 단위 설치량을 넘는 목표입니다. 터빈 in-house casting는 공급 지연·가격 변동을 줄이려는 수직 통합입니다.
-
-AI data center·Megafactory·Starbase 모두 24/7 전력이 필요합니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. power bottleneck이 chip bottleneck만큼 중요해짐.
-
-2. energy equipment OEM과 customer 경계 blur.
-
-3. 100GW announcement vs actual install gap 주의.
-
-4. grid interconnect still external bottleneck.
-
-5. Tesla Energy narrative reinforcement.
-
-■ 시나리오
-
-**A: factory announcements → equipment orders visible**
-**B: regulatory delay → solar/turbine story only**
-**C: third-party suppliers still win share**
-
-■ 오늘까지 흐름
-
-터빈 2030 sold out·AI 15GW delay·100GW solar가 same power theme.
-
-■ 장기 투자 관점
-
-테슬라는 2010년 EV, 2020년 AI/robotaxi, 2020년대 후반 energy infra로 story arc 확장 중입니다. energy가 real이면 TAM multiple expansion입니다.
-
-■ 앞으로 볼 것
-
-(1) factory site (2) turbine casting capex (3) solar cell capacity (4) utility interconnect queue (5) Tesla Energy revenue
-
-■ 투자시사점
-
-TSLA 투자 시 automotive margin만이 아니라 generation equipment optionality를 메모에 포함하시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '연간 100기가와트급 태양광과 스페이스X·테슬라의 사내 풍력 터빈 주조 계획이 거론됐습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1422", title: '연간 100기가와트급 태양광과 스페이스X·테슬라의 사내 풍력 터빈 주조 계획이 거론됐습니다', summary: '연간 100기가와트급 태양광 목표와 스페이스X·테슬라의 사내 풍력 터빈 주조 계획이 함께 거론됐습니다. 인공지능·전기차·로켓 전력 수요가 발전 장비 자체 제작으로 이어지는 그림입니다.',
+    body: `■ 상세\n\n연간 100기가와트급 태양광은 국가 단위 설치량을 넘는 목표입니다. 터빈을 사내에서 주조한다는 계획은 공급 지연·가격 변동을 줄이려는 수직 통합입니다.\n\n인공지능 데이터센터·메가팩토리·스타베이스 모두 24시간 전력이 필요합니다. 칩 병목만큼 전력 병목도 커지고 있습니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 전력 병목이 칩 병목만큼 중요해지고 있습니다. 연산 경쟁은 실리콘에서 전력망으로 이동합니다.\n\n2. 발전 장비 제조사와 수요 기업의 경계가 흐려집니다.\n\n3. 100기가와트 발표와 실제 설치량 사이 간극에 주의해야 합니다.\n\n4. 송전망 연결은 여전히 외부 병목입니다.\n\n5. 테슬라 에너지 사업 내러티브가 다시 강화됩니다.\n\n■ 시나리오\n\n**A: 공장·설비 발표가 이어지면 장비 주문이 가시화될 수 있습니다.**\n**B: 규제 지연이 나오면 태양광·터빈 이야기만 남을 수 있습니다.**\n**C: 제3자 공급사가 여전히 점유율을 가져갈 수 있습니다.**\n\n■ 오늘까지 흐름\n\n터빈 2030년까지 매진·인공지능 15기가와트 전력 지연·100기가와트 태양광이 같은 주 전력 테마로 묶였습니다.\n\n■ 장기 투자 관점\n\n테슬라는 2010년대 전기차, 2020년대 자율주행·로보택시, 2020년대 후반 에너지 인프라로 이야기가 확장 중입니다. 에너지가 실현되면 시장 규모 평가도 넓어질 수 있습니다.\n\n■ 앞으로 볼 것\n\n(1) 공장 부지 발표를 확인하시면 됩니다.\n\n(2) 터빈 주조 설비투자를 보시기 바랍니다.\n\n(3) 태양광 셀 생산능력을 추적하시면 됩니다.\n\n(4) 송전망 연결 대기열을 살펴보시기 바랍니다.\n\n(5) 테슬라 에너지 매출을 확인하시면 됩니다.\n\n■ 투자시사점\n\n테슬라 투자 시 자동차 마진만이 아니라 발전 장비 선택권도 메모에 포함하시기 바랍니다.\n\n100기가와트는 선언과 실제 설치를 구분해 보셔야 합니다. 공장 착공·전력 구매 계약·에너지 매출이 따라와야 내러티브가 실적으로 연결됩니다.\n\n장기 투자자는 「차」와 「전력」을 분리해 기록하시면 혼선이 줄어듭니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Plans for 100 gigawatts of solar per year and in-house wind-turbine casting at SpaceX and Tesla were discussed',
+    summaryEn: 'Talk of 100 GW per year of solar plus in-house wind-turbine casting at SpaceX and Tesla ties AI, EV, and rocket power demand to vertical integration in generation equipment.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '종목분석', categoryColor: 'mint', subject: '테슬라',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/elon-solar-turbine-20260831.svg"],
     imagesEn: ["/charts/elon-solar-turbine-20260831-en.svg"],
   },
-  { id: "seed-1423", title: '약 15기가와트 AI 연산 설비가 2027년까지 전력·변압기·배선·냉각 문제로 가동하지 못할 수 있다는 전망이 나왔습니다', summary: '약 15GW AI compute가 transformer·wiring·cooling 병목으로 2027까지 power-on 못할 수 있다는 전망이 나왔습니다. AI 경쟁은 silicon에서 grid infra로 이동하고 있습니다.',
-    body: `■ 상세
-
-GPU/HBM order는 front-end news, power-on은 back-end reality입니다. 15GW는 대형 발전단지 여러 개 규모입니다.
-
-변압기 lead time 2~3년, cooling·water permit, utility interconnection이 병목입니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. hyperscaler earnings에서 power delay language 주목.
-
-2. grid equipment makers new alpha pocket.
-
-3. data center without power is stranded capex.
-
-4. regional disparity (Texas vs Virginia vs Europe).
-
-5. nuclear·gas·renewable mix debate intensifies.
-
-■ 시나리오
-
-**A: infra catches up → delayed GPU revenue recognized later**
-**B: persistent delay → order cut rumors**
-**C: onsite generation (solar/gas) accelerates**
-
-■ 오늘까지 흐름
-
-100GW solar·turbine sold out·15GW delay가 same week power stack narrative.
-
-■ 장기 투자 관점
-
-2010s cloud build-out도 처음엔 chip, 나중엔 power가 issue였습니다. AI는 scale가 더 커서 infra cycle이 더 길 수 있습니다.
-
-■ 앞으로 볼 것
-
-(1) utility interconnection queue (2) transformer lead times (3) hyperscaler power-on dates (4) EPC backlog (5) on-site generation projects
-
-■ 투자시사점
-
-NVDA multiples에 implicit하는 data center build 가정이 power reality check를 받는 구간입니다. infra names를 pair trade로 보시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '약 15기가와트 AI 연산 설비가 2027년까지 전력·변압기·배선·냉각 문제로 가동하지 못할 수 있다는 전망이 나왔습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1423", title: '약 15기가와트 인공지능 연산 설비가 2027년까지 전력·변압기·배선·냉각 문제로 가동하지 못할 수 있다는 전망이 나왔습니다', summary: '약 15기가와트 규모 인공지능 연산 설비가 변압기·배선·냉각 병목으로 2027년까지 전원을 넣지 못할 수 있다는 전망이 나왔습니다. 인공지능 경쟁은 칩 주문에서 전력망 현실로 이동하고 있습니다.',
+    body: `■ 상세\n\n그래픽 처리 장치·고대역폭 메모리 주문은 앞단 뉴스, 실제 전원 투입은 뒷단 현실입니다. 15기가와트는 대형 발전단지 여러 개 규모입니다.\n\n변압기 납기 2~3년, 냉각·용수 허가, 송전망 연결이 병목입니다. 데이터센터 건물만 지어지고 전기가 들어오지 않으면 설비투자가 묶입니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 대형 클라우드 업체 실적에서 전력 지연 언급을 주목해야 합니다.\n\n2. 송전·변압 장비 업체에 새로운 투자 여지가 생깁니다.\n\n3. 전력 없는 데이터센터는 묶인 설비투자입니다.\n\n4. 지역별 차이(텍사스·버지니아·유럽)가 큽니다.\n\n5. 원자력·가스·재생에너지 혼합 논쟁이 거세집니다.\n\n■ 시나리오\n\n**A: 인프라가 따라잡히면 지연된 칩 매출이 뒤늦게 인식될 수 있습니다.**\n**B: 지연이 길어지면 주문 축소 루머가 나올 수 있습니다.**\n**C: 현장 발전(태양광·가스)이 빨라질 수 있습니다.**\n\n■ 오늘까지 흐름\n\n100기가와트 태양광·터빈 매진·15기가와트 전력 지연이 같은 주 전력 스택 내러티브를 이뤘습니다.\n\n■ 장기 투자 관점\n\n2010년대 클라우드 확장도 처음엔 칩, 나중엔 전력이 이슈였습니다. 인공지능은 규모가 더 커서 인프라 사이클이 더 길 수 있습니다.\n\n■ 앞으로 볼 것\n\n(1) 송전망 연결 대기열을 확인하시면 됩니다.\n\n(2) 변압기 납기를 보시기 바랍니다.\n\n(3) 클라우드 업체 전원 투입 일정을 추적하시면 됩니다.\n\n(4) 토목·전기 공사 적체를 살펴보시기 바랍니다.\n\n(5) 현장 자체 발전 프로젝트를 확인하시면 됩니다.\n\n■ 투자시사점\n\n엔비디아 밸류에이션에 담긴 데이터센터 건설 가정이 전력 현실 점검을 받는 구간입니다. 인프라 관련 종목을 함께 보시기 바랍니다.\n\n칩 주문과 전원 투입 일정을 분리해 기록하시면, 지연이 매출 인식 시점만 미루는지 수요 자체를 줄이는지 구분할 수 있습니다.\n\n장기 투자자는 「칩」과 「전력망」을 한 표에 두시기 바랍니다. 후자가 병목이면 전자는 먼저, 인프라는 나중에 반영됩니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'About 15 gigawatts of AI compute may stay offline through 2027 because of power, transformer, wiring, and cooling bottlenecks',
+    summaryEn: 'Roughly 15 GW of AI compute may not reach power-on by 2027 due to transformer, wiring, and cooling constraints, shifting the AI race from chip orders to grid reality.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '섹터', categoryColor: 'purple', subject: '인공지능',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/elon-ai-power-bottleneck-20260831.svg"],
     imagesEn: ["/charts/elon-ai-power-bottleneck-20260831-en.svg"],
   },
-  { id: "seed-1424", title: 'ARKK·테슬라·스페이스X 관련 ETF 자금 흐름이 같은 주에 크게 움직였습니다', summary: 'ARKK 약 6억 달러, 테슬라 약 3.91억 달러 규모 관련 ETF 자금 흐름이 부각됐습니다. 혁신·로bo택시·우주 테마가 one basket으로 trade되는지 확인할 구간입니다.',
-    body: `■ 상세
-
-ETF flow는 개별 headline보다 theme-level risk appetite를 보여 줍니다. ARKK ~\$600M, TSLA ~\$391M move는 innovation sleeve repositioning signal일 수 있습니다.
-
-SPCX는 pre-IPO proxy로 ETF·private fund·theme names에 capital이 연결됩니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. passive inflow는 reversal 시 volatility amplify.
-
-2. Cybercab Sept 3가 TSLA flow catalyst.
-
-3. space theme correlates with ARKK on risk-on days.
-
-4. rate shocks hit both via duration.
-
-5. flow ≠ fundamental confirmation.
-
-■ 시나리오
-
-**A: inflows continue into Cybercab → momentum**
-**B: outflows on hawkish data → correlation sell**
-**C: divergence (TSLA up, ARKK flat) → stock-specific**
-
-■ 오늘까지 흐름
-
-SPY low vol week에 theme ETF flow는 diverge할 수 있습니다.
-
-■ 장기 투자 관점
-
-2020년 ARK inflow era와 2022 outflow era를 거치며 ETF flow가 growth valuation에 feedback loop를 만든 history가 있습니다. 2026에는 AI+autonomy+space가 new bundle입니다.
-
-■ 앞으로 볼 것
-
-(1) ARKK daily flow (2) TSLA options skew (3) space ETF creations (4) Sept 3 event (5) 2Y yield
-
-■ 투자시사점
-
-single-stock vs basket exposure를 flow dashboard로 정리하시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: 'ARKK·테슬라·스페이스X 관련 ETF 자금 흐름이 같은 주에 크게 움직였습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1424", title: 'ARKK·테슬라·스페이스X 관련 상장지수펀드 자금 흐름이 같은 주에 크게 움직였습니다', summary: '혁신 테마 ARKK 약 6억 달러, 테슬라 약 3.91억 달러 규모 관련 상장지수펀드 자금 흐름이 부각됐습니다. 혁신·로보택시·우주 테마가 한 묶음으로 거래되는지 확인할 구간입니다.',
+    body: `■ 상세\n\n상장지수펀드 자금 흐름은 개별 헤드라인보다 테마 단위 위험 선호를 보여 줍니다. ARKK 약 6억 달러, 테슬라 약 3.91억 달러 규모 움직임은 혁신 포트폴리오 재배치 신호일 수 있습니다.\n\n스페이스X는 비상장이라 상장지수펀드·사모펀드·테마 종목으로 자금이 간접 연결됩니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 수동형 유입은 반대 방향으로 돌 때 변동성을 키울 수 있습니다.\n\n2. 9월 3일 사이버캡 행사가 테슬라 자금 흐름 촉매입니다.\n\n3. 우주 테마는 위험 선호가 큰 날 ARKK와 같이 움직일 수 있습니다.\n\n4. 금리 충격은 둘 다 금리 민감도로 연결됩니다.\n\n5. 자금 흐름만으로 펀더멘털이 확인된 것은 아닙니다.\n\n■ 시나리오\n\n**A: 유입이 이어지면 9월 3일 행사까지 모멘텀이 갈 수 있습니다.**\n**B: 매파 지표가 나오면 함께 조정될 수 있습니다.**\n**C: 테슬라만 오르고 ARKK는 정체되면 종목별 분화입니다.**\n\n■ 오늘까지 흐름\n\nSPY 변동성이 낮은 주에도 테마 상장지수펀드 자금은 따로 움직일 수 있습니다.\n\n■ 장기 투자 관점\n\n2020년 ARK 유입 시대와 2022년 유출 시대를 거치며 상장지수펀드 자금이 성장주 밸류에이션에 되먹임을 만든 역사가 있습니다. 2026년에는 인공지능+자율주행+우주가 새 묶음입니다.\n\n■ 앞으로 볼 것\n\n(1) ARKK 일별 자금 흐름을 확인하시면 됩니다.\n\n(2) 테슬라 옵션 시장 심리를 보시기 바랍니다.\n\n(3) 우주 테마 상장지수펀드 설정·환매를 추적하시면 됩니다.\n\n(4) 9월 3일 행사 전후 변동성을 살펴보시기 바랍니다.\n\n(5) 2년물 국채 금리와 함께 보시면 됩니다.\n\n■ 투자시사점\n\n개별 종목과 테마 바구니 노출을 자금 흐름 대시보드로 정리하시기 바랍니다.\n\n유입 구간에서는 변동성 확대에 대비하고, 유출 구간에서는 상관관계 매도를 염두에 두시면 됩니다.\n\n장기 투자자는 「테슬라」와 「혁신 ETF」를 분리해 기록하시면 이벤트 주변 혼선이 줄어듭니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'ETF flows moved sharply for ARKK, Tesla, and space-linked themes in the same week',
+    summaryEn: 'Innovation ETF ARKK saw about \$600 million in flow and Tesla-linked ETFs about \$391 million, raising questions about whether autonomy and space themes are trading as one basket.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '매크로', categoryColor: 'red', subject: '금리',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/arkk-tsla-spcx-flow-20260831.svg"],
     imagesEn: ["/charts/arkk-tsla-spcx-flow-20260831-en.svg"],
   },
-  { id: "seed-1425", title: '운전석·페달 없는 사이버캡 전용 행사가 9월 3일 텍사스 오스틴에서 열립니다', summary: '사이버캡 전용 행사가 9월 3일 오스틴에서 열립니다. 차량 목표가 3만 달러, 운행비 마일당 0.20달러. 무인 전용 로보택시가 calendar event가 됐습니다.',
-    body: `■ 상세
-
-Cybercab는 steering wheel·pedal 없는 purpose-built robotaxi입니다. Sept 3 Austin event는 vehicle reveal·geofence·regulatory path·unit economics(\$30K, \$0.20/mi)를 동시에 확인할 자리입니다.
-
-Model Y retrofit과 다릅니다.
-
-■ 왜 이 뉴스가 중요한가
-
-1. date fix는 execution risk down on 5Y view.
-
-2. \$0.20/mile은 ride-hail cost benchmark.
-
-3. permit scope determines scalability.
-
-4. production timing vs event hype gap.
-
-5. TSLA options vol into Sept 3.
-
-■ 시나리오
-
-**A: live unmanned demo → re-rate**
-**B: prototype only → sell the news**
-**C: delay → narrative reset**
-
-■ 오늘까지 흐름
-
-Cybercab geofence expansion·Sept 3 date·Robotaxi Thursday rumor same theme week.
-
-■ 장기 투자 관점
-
-로bo택시 narrative는 2016 «Full Self-Driving soon»에서 2026 «dated event»로 evolved. history상 calendar+vehicle+price overlap은 milestone입니다.
-
-■ 앞으로 볼 것
-
-(1) unmanned footage (2) geofence map (3) production timeline (4) regulatory filings (5) \$0.20/mile assumptions
-
-■ 투자시사점
-
-event trade vs 5Y autonomy option: 행사 전후 48h vol 확대 가능. long-term holder는 permit·miles driven data에 focus하시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '운전석·페달 없는 사이버캡 전용 행사가 9월 3일 텍사스 오스틴에서 열립니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1425", title: '운전석·페달 없는 사이버캡 전용 행사가 9월 3일 텍사스 오스틴에서 열립니다', summary: '운전석과 페달이 없는 전용 로보택시 사이버캡 행사가 9월 3일 오스틴에서 열립니다. 차량 목표가 3만 달러, 운행비는 마일당 0.20달러로 거론됐으며, 무인 전용 차량이 날짜가 정해진 일정이 됐습니다.',
+    body: `■ 상세\n\n사이버캡은 운전석·페달 없이 처음부터 무인 운행용으로 만든 전용 로보택시입니다. 9월 3일 오스틴 행사에서는 차량 공개·운행 구역·규제 경로·대당 3만 달러·마일당 0.20달러 운행비를 동시에 확인할 수 있습니다.\n\n기존 모델Y에 소프트웨어만 얹은 차와 다릅니다. 날짜가 정해지면 상용 일정이 말에서 달력으로 내려온 것입니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 날짜 확정은 5년 뷰에서 실행 불확실성을 줄이는 데 기여합니다.\n\n2. 마일당 0.20달러는 기존 승차 공유 비용과 비교할 기준선입니다.\n\n3. 허가 범위가 얼마나 넓은지가 확장 속도를 가릅니다.\n\n4. 행사와 양산 일정 사이 간극에 주의해야 합니다.\n\n5. 9월 3일 전후 테슬라 옵션 변동성이 커질 수 있습니다.\n\n■ 시나리오\n\n**A: 무인 시연이 공개되면 재평가가 나올 수 있습니다.**\n**B: 프로토타입만 보이면 기대 정리 매도가 나올 수 있습니다.**\n**C: 일정 연기가 나오면 내러티브가 초기화될 수 있습니다.**\n\n■ 오늘까지 흐름\n\n사이버캡 운행 구역 확대·9월 3일 확정·목요일 로보택시 일정 루머가 같은 주 테마로 겹쳤습니다.\n\n■ 장기 투자 관점\n\n로보택시 내러티브는 2016년 「곧 완전자율주행」에서 2026년 「날짜가 정해진 행사」로 진화했습니다. 역사상 일정·차량·가격이 겹치는 구간은 이정표로 기록될 수 있습니다.\n\n■ 앞으로 볼 것\n\n(1) 무인 운행 영상을 확인하시면 됩니다.\n\n(2) 운행 허용 구역 지도를 보시기 바랍니다.\n\n(3) 양산 일정을 추적하시면 됩니다.\n\n(4) 규제 공시를 살펴보시기 바랍니다.\n\n(5) 마일당 0.20달러 가정의 근거를 확인하시면 됩니다.\n\n■ 투자시사점\n\n행사 전후 48시간 변동성 확대에 대비하시기 바랍니다. 장기 보유자는 허가·누적 주행 거리 데이터에 집중하시면 됩니다.\n\n이벤트 거래와 5년 자율주행 옵션을 구분하시기 바랍니다. 전자는 단기, 후자는 허가·주행 데이터가 확인 축입니다.\n\n3만 달러·0.20달러는 목표치이므로 원가·허가·수율이 따라와야 내러티브가 실적으로 연결됩니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Tesla will hold a dedicated Cybercab event in Austin on September 3 with no steering wheel or pedals',
+    summaryEn: 'Tesla\'s purpose-built Cybercab event is set for September 3 in Austin, targeting a \$30,000 vehicle and about \$0.20 per mile, turning a wheel-less robotaxi into a dated calendar event.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: 'BREAKING', categoryColor: 'mint', subject: '테슬라',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/tsla-cybercab-sept3-20260831.svg"],
     imagesEn: ["/charts/tsla-cybercab-sept3-20260831-en.svg"],
   },
-  { id: "seed-1426", title: 'SPY 주간 변동성이 2004년 12월 이후 최저 근처이며 8월 28일 769.35달러(-0.23%)로 마감했습니다', summary: 'SPY weekly vol이 Dec 2004 이후 최저 근처입니다. close \$769.35, -0.23% on Aug 28. quiet surface 아래 Sept hike odds 57.5%가 남아 있습니다.',
-    body: `■ 상세
-
-Low vol ≠ low risk. SPY \$769.35, -0.23% on Aug 28 after Jackson Hole. Sept hike odds ~57.5%, jobs Sept 4, FOMC Sept 15-16 ahead.
-
-Complacency in vol often precedes macro data shocks.
-
-■ 왜 이 뉴스가 중요한가
-
-1. VIX·skew can rise before SPY moves.
-
-2. 2Y yield leads equity vol.
-
-3. low weekly vol can mean crowded positioning.
-
-4. Sept seasonality mixed.
-
-5. Mag7 event week adds idiosyncratic vol.
-
-■ 시나리오
-
-**A: soft jobs → vol crush continues**
-**B: hot CPI → vol spike**
-**C: hawkish FOMC → correlation sell**
-
-■ 오늘까지 흐름
-
-Jackson Hole hawkish → front-end rates up → SPY still quiet into week-end.
-
-■ 장기 투자 관점
-
-2004 low-vol periods preceded 2005 tightening cycle volatility. rate path uncertainty eventually shows in vol, often on data days.
-
-■ 앞으로 볼 것
-
-(1) VIX (2) SPY implied vol (3) Sept 4 jobs (4) Sept CPI (5) FOMC statement
-
-■ 투자시사점
-
-index level만 보면 calm; options·2Y· hike odds를 same screen에 두시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: 'SPY 주간 변동성이 2004년 12월 이후 최저 근처이며 8월 28일 769.35달러(-0.23%)로 마감했습니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1426", title: 'SPY 주간 변동성이 2004년 12월 이후 최저 근처이며 8월 28일 769.35달러(-0.23%)로 마감했습니다', summary: 'SPY 주간 변동성이 2004년 12월 이후 최저 근처입니다. 8월 28일 종가 769.35달러(-0.23%)로 잭슨홀 이후에도 표면은 잔잔하지만, 9월 금리 인상 확률 57.5%·9월 4일 고용·9월 15~16일 정책회의가 앞에 남아 있습니다.',
+    body: `■ 상세\n\n변동성이 낮다고 해서 위험이 없는 것은 아닙니다. SPY는 8월 28일 769.35달러(-0.23%)로 마감했고, 잭슨홀 매파 해석 이후에도 주간 변동성은 2004년 12월 이후 최저 근처입니다.\n\n9월 금리 인상 확률은 약 57.5%, 9월 4일 고용, 9월 15~16일 연준 정책회의가 임박했습니다. 변동성 침체는 종종 거시 지표 발표 전에 깨집니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 공포지수·옵션 비대칭는 SPY가 움직이기 전에 먼저 오를 수 있습니다.\n\n2. 2년물 국채 금리가 주식 변동성을 이끄는 경우가 많습니다.\n\n3. 주간 변동성이 낮으면 포지션이 과밀일 수 있습니다.\n\n4. 9월 계절성은 혼재돼 있습니다.\n\n5. 빅테크 개별 이벤트가 지수와 다른 변동성을 더합니다.\n\n■ 시나리오\n\n**A: 고용이 부드러우면 변동성 축소가 이어질 수 있습니다.**\n**B: 물가가 강하면 변동성 급등이 나올 수 있습니다.**\n**C: 매파 정책회의면 동반 조정이 나올 수 있습니다.**\n\n■ 오늘까지 흐름\n\n잭슨홀 매파 해석 → 단기 금리 상승 → SPY는 주말까지 여전히 잔잔했습니다.\n\n■ 장기 투자 관점\n\n2004년 저변동 구간 뒤 2005년 긴축 사이클 변동성이 커진 전례가 있습니다. 금리 경로 불확실성은 결국 변동성에 나타나며, 종종 지표 발표일에 드러납니다.\n\n■ 앞으로 볼 것\n\n(1) 공포지수를 확인하시면 됩니다.\n\n(2) SPY 내재 변동성을 보시기 바랍니다.\n\n(3) 9월 4일 고용을 추적하시면 됩니다.\n\n(4) 9월 소비자물가를 살펴보시기 바랍니다.\n\n(5) 정책회의 성명 변화를 확인하시면 됩니다.\n\n■ 투자시사점\n\n지수 수준만 보면 잔잔해 보입니다. 옵션·2년물·인상 확률을 같은 화면에 두시기 바랍니다.\n\n저변동 구간에서는 헷지 비용이 싸 보일 수 있지만, 지표 발표 직전 급등할 수 있습니다.\n\n장기 투자자도 9월 4일·15~16일 전후 포지션 크기를 미리 정해 두시면 혼선이 줄어듭니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'SPY weekly volatility is near its lowest since December 2004; it closed at \$769.35 (-0.23%) on August 28',
+    summaryEn: 'SPY weekly volatility sits near December 2004 lows after a \$769.35 close (-0.23%) on August 28, but September hike odds near 57.5%, jobs on Sept 4, and the Sept 15-16 FOMC remain ahead.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '매크로', categoryColor: 'red', subject: '연준',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
     images: ["/charts/spy-low-volatility-20260831.svg"],
     imagesEn: ["/charts/spy-low-volatility-20260831-en.svg"],
   },
-  { id: "seed-1427", title: '이번 주 빅테크는 애플 최고운영책임자(CEO) 후보 논의와 테슬라 로보택시 목요일 일정이 겹칩니다', summary: 'Apple COO succession rumor와 Tesla robotaxi Thursday schedule가 same week. Mag7 idiosyncratic vol 가능성이 큽니다.',
-    body: `■ 상세
-
-Apple COO는 product execution·supply chain 핵심 role입니다. Tesla Thursday robotaxi schedule는 autonomy re-test. Mag7 correlation rises on leadership+autonomy headlines.
-
-Calendar-driven vol week for tech.
-
-■ 왜 이 뉴스가 중요한가
-
-1. COO news hits supply chain confidence.
-
-2. robotaxi date hits TSLA beta.
-
-3. sector ETFs move on largest weights.
-
-4. event vol ≠ earnings vol.
-
-5. hedge cost rises into dated events.
-
-■ 시나리오
-
-**A: orderly COO plan + robotaxi demo → sector bid**
-**B: surprise negative → Mag7 drawdown**
-**C: stock-specific divergence increases**
-
-■ 오늘까지 흐름
-
-Cybercab Sept 3 adjacent to Thursday robotaxi mention; Apple rumor parallel.
-
-■ 장기 투자 관점
-
-Mag7 leadership transitions (Jobs→Cook era etc.) show ops leadership matters for multi-year execution premium. autonomy is similar ops+software bet.
-
-■ 앞으로 볼 것
-
-(1) Apple leadership statements (2) Tesla Thursday schedule detail (3) QQQ implied vol (4) Mag7 breadth (5) Sept 3 overlap
-
-■ 투자시사점
-
-index hedge vs single-name event: week of dated catalysts favors defined-risk structures.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '이번 주 빅테크는 애플 최고운영책임자(CEO) 후보 논의와 테슬라 로보택시 목요일 일정이 겹칩니다',
-    summaryEn: 'See Korean summary.',
+  { id: "seed-1427", title: '이번 주 빅테크는 애플 최고운영책임자 후계 논의와 테슬라 로보택시 목요일 일정이 겹칩니다', summary: '애플 최고운영책임자(차기 최고경영자) 후보로 테르너스 임원이 거론됐고, 테슬라 로보택시 목요일 일정도 같은 주에 있습니다. 빅테크 7개 종목 개별 변동성이 커질 수 있는 주입니다.',
+    body: `■ 상세\n\n애플 최고운영책임자는 제품 실행·공급망의 핵심 역할입니다. 차기 최고경영자 후보로 하드웨어 총괄 임원 테르너스가 거론됐습니다. 테슬라는 목요일 로보택시 관련 일정이 예정돼 있습니다.\n\n리더십·자율주행 헤드라인이 겹치면 빅테크 상관관계가 일시적으로 높아질 수 있습니다. 일정이 정해진 이벤트 주간입니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 최고운영책임자 이슈는 공급망 신뢰에 영향을 줍니다.\n\n2. 로보택시 일정은 테슬라 시장 민감도에 직접 연결됩니다.\n\n3. 섹터 상장지수펀드는 시가총액 상위 비중 때문에 같이 움직일 수 있습니다.\n\n4. 이벤트 변동성과 실적 변동성은 다릅니다.\n\n5. 일정이 정해진 주에는 헷지 비용이 오를 수 있습니다.\n\n■ 시나리오\n\n**A: 순조로운 후계 계획과 로보택시 시연이면 섹터 강세가 나올 수 있습니다.**\n**B: 부정적 서프라이즈면 빅테크 조정이 나올 수 있습니다.**\n**C: 종목별 분화가 커질 수 있습니다.**\n\n■ 오늘까지 흐름\n\n9월 3일 사이버캡 행사와 인접한 목요일 로보택시 일정, 애플 후계 루머가 같은 주에 겹쳤습니다.\n\n■ 장기 투자 관점\n\n빅테크 리더십 교체(잡스→쿡 시대 등)는 다년 실행 프리미엄에 영향을 줬습니다. 자율주행도 비슷한 「운영+소프트웨어」 장기 베팅입니다.\n\n■ 앞으로 볼 것\n\n(1) 애플 경영진 발언을 확인하시면 됩니다.\n\n(2) 테슬라 목요일 일정 세부를 보시기 바랍니다.\n\n(3) 나스닥100 내재 변동성을 추적하시면 됩니다.\n\n(4) 빅테크 확산 폭를 살펴보시기 바랍니다.\n\n(5) 9월 3일 행사와 겹치는지 확인하시면 됩니다.\n\n■ 투자시사점\n\n지수 헷지와 개별 이벤트 노출을 구분하시기 바랍니다. 일정이 정해진 주에는 손실 한도가 있는 구조가 유리할 수 있습니다.\n\n애플은 공급망·제품 일정, 테슬라는 허가·주행 데이터를 각각 추적하시면 됩니다.\n\n같은 「빅테크」라도 이번 주 촉매는 완전히 다릅니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Big Tech faces an Apple COO succession debate and a Tesla robotaxi Thursday schedule in the same week',
+    summaryEn: 'Apple COO successor talk involving hardware chief Jeff Ternus overlaps with Tesla\'s Thursday robotaxi schedule, setting up a week of Mag7 idiosyncratic volatility.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '매크로', categoryColor: 'blue', subject: '연준',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
@@ -601,49 +161,9 @@ investus.kr SRP 최고투자책임자 발행`,
     imagesEn: ["/charts/big-tech-week-20260831-en.svg"],
   },
   { id: "seed-1428", title: '미국 취미·여가 소비가 재화 지출 가운데 5%를 넘어 사상 최고 수준에 도달했다는 데이터가 나왔습니다', summary: '미국 취미·여가 소비가 재화 지출 가운데 5%를 넘어 사상 최고 수준에 도달했다는 데이터가 나왔습니다. 금리가 높은 환경에서도 체험·취미 지출이 일부 카테고리에서 견조하다는 신호로 읽힙니다.',
-    body: `■ 상세
-
-5% hobby share of goods spending is record. contradicts simple «high rates kill discretionary» story. outdoor, gaming, collectibles, leisure gear benefit scattered.
-
-post-pandemic experience preference persists.
-
-■ 왜 이 뉴스가 중요한가
-
-1. consumer slowdown is uneven across categories.
-
-2. hobby ATH coexists with macro caution.
-
-3. retail stock picking > sector ETF.
-
-4. wealth effect vs income effect mix.
-
-5. tariff/goods price noise in data.
-
-■ 시나리오
-
-**A: soft landing → hobby stays strong**
-**B: labor weakness → hobby rolls over late**
-**C: inflation re-accel → goods mix shifts**
-
-■ 오늘까지 흐름
-
-same week as hawkish Fed talk yet micro consumer resilience datapoint.
-
-■ 장기 투자 관점
-
-2008 이후 low-rate era boosted experiences; 2022-24 high-rate era did not kill hobby line—structural shift possible.
-
-■ 앞으로 볼 것
-
-(1) next retail sales split (2) leisure goods CPI (3) credit card spend by category (4) employment in leisure (5) holiday guide
-
-■ 투자시사점
-
-macro bear thesis에 micro hobby strength counterexample; stock level analysis 필요.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '미국 취미·여가 소비가 재화 지출 가운데 5%를 넘어 사상 최고 수준에 도달했다는 데이터가 나왔습니다',
-    summaryEn: 'See Korean summary.',
+    body: `■ 상세\n\n재화 지출 가운데 취미·여가 비중이 5%를 넘어 사상 최고라는 데이터가 나왔습니다. 「금리가 오르면 임의 소비가 전부 줄어든다」는 단순한 그림과는 다릅니다.\n\n야외·게임·수집·레저 장비 등 카테고리별로 흩어져 강세가 나타났습니다. 팬데믹 이후 체험·취미 선호가 구조적으로 남아 있을 수 있습니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 소비 둔화는 카테고리마다 다릅니다. 전체 숫자만 보면 놓치기 쉽습니다.\n\n2. 취미 지출 사상 최고는 거시적 경계와 함께 공존할 수 있습니다.\n\n3. 소매는 섹터 상장지수펀드보다 종목별 분석이 유리할 수 있습니다.\n\n4. 자산 효과와 소득 효과가 섞여 있습니다.\n\n5. 관세·재화 가격 노이즈가 통계에 섞일 수 있습니다.\n\n■ 시나리오\n\n**A: 연착륙이 이어지면 취미 지출이 강세를 유지할 수 있습니다.**\n**B: 고용이 약해지면 취미 지출이 늦게 꺾일 수 있습니다.**\n**C: 물가 재가속이면 재화 mix가 바뀔 수 있습니다.**\n\n■ 오늘까지 흐름\n\n잭슨홀 매파 발언과 같은 주에도 미시 소비 회복력 데이터가 나왔습니다.\n\n■ 장기 투자 관점\n\n2008년 이후 저금리 시대는 체험 소비를 키웠고, 2022~24년 고금리 시대에도 취미 지출 선이 완전히 꺾이지 않았습니다. 구조적 이동 가능성을 배제하기 어렵습니다.\n\n■ 앞으로 볼 것\n\n(1) 다음 소매판매 세부 항목을 확인하시면 됩니다.\n\n(2) 레저 재화 물가를 보시기 바랍니다.\n\n(3) 카테고리별 신용카드 지출을 추적하시면 됩니다.\n\n(4) 레저 고용 지표를 살펴보시기 바랍니다.\n\n(5) 연말 소비 가이드를 확인하시면 됩니다.\n\n■ 투자시사점\n\n거시 약세 논거에 미시 취미 강세가 반례가 될 수 있습니다. 종목 단위 분석이 필요합니다.\n\n섹터 전체를 한 번에 사거나 팔기보다, 카테고리별 실적·재고·마진을 나눠 보시기 바랍니다.\n\n금리·고용·취미 지출 세 줄을 같은 표에 두시면 「둔화」와 「회복」 신호가 동시에 보일 때 혼선이 줄어듭니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'U.S. hobby and leisure spending has exceeded 5% of goods outlays, reaching a record share',
+    summaryEn: 'Hobby and leisure spending has passed 5% of U.S. goods spending, a record share that suggests some discretionary categories remain resilient despite higher rates.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '매크로', categoryColor: 'orange', subject: '연준',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",
@@ -651,49 +171,9 @@ investus.kr SRP 최고투자책임자 발행`,
     imagesEn: ["/charts/hobby-spending-ath-20260831-en.svg"],
   },
   { id: "seed-1429", title: '풍력·에너지 터빈 수요가 2030년까지 매진 상태라는 전망이 나왔습니다', summary: '풍력·에너지 터빈 수요가 2030년까지 매진 상태라는 전망이 나왔습니다. 연간 100기가와트급 태양광·사내 터빈 주조 계획과 겹쳐 전력 인프라 투자가 한 묶음으로 읽힙니다.',
-    body: `■ 상세
-
-Sold out through 2030 implies price, lead time, vertical integration pressure. AI+EV+data center power pull simultaneously.
-
-Tesla/SpaceX in-house casting tries to bypass OEM backlog.
-
-■ 왜 이 뉴스가 중요한가
-
-1. energy equipment supercycle narrative.
-
-2. OEM margins vs integrator capture.
-
-3. 2030 sold out = long lead indicator not quarterly EPS.
-
-4. grid still bottleneck beyond turbine.
-
-5. policy/tax credit sensitivity.
-
-■ 시나리오
-
-**A: backlog converts → OEM rally**
-**B: in-house success → integrator captures margin**
-**C: demand slip → backlog unwind 2028+**
-
-■ 오늘까지 흐름
-
-100GW solar + turbine sold out + 15GW power delay = power stack week.
-
-■ 장기 투자 관점
-
-2000s wind boom-bust repeated supply chain lesson; 2020s AI power may extend boom with different players (hyperscaler+integrator).
-
-■ 앞으로 볼 것
-
-(1) OEM order books (2) casting factory announcements (3) interconnection queue (4) PPA prices (5) policy credits
-
-■ 투자시사점
-
-energy infra를 TSLA/SPCX story의 second engine으로 track하시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: '풍력·에너지 터빈 수요가 2030년까지 매진 상태라는 전망이 나왔습니다',
-    summaryEn: 'See Korean summary.',
+    body: `■ 상세\n\n2030년까지 매진 상태라는 전망은 가격·납기·수직 통합 압력을 뜻합니다. 인공지능·전기차·데이터센터 전력 수요가 동시에 겹칩니다.\n\n테슬라·스페이스X의 사내 터빈 주조는 장비 제조사 대기열을 우회하려는 시도입니다. 전력 병목이 칩 병목만큼 커지는 주간입니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 에너지 장비 슈퍼사이클 내러티브가 강화됩니다.\n\n2. 장비 제조사 마진과 통합 기업의 마진 포착 중 누가 이익을 가져갈지가 관건입니다.\n\n3. 2030년 매진은 분기 실적보다 장기 납기 지표에 가깝습니다.\n\n4. 터빈만 해결돼도 송전망 병목은 남습니다.\n\n5. 정책·세액공제 민감도가 큽니다.\n\n■ 시나리오\n\n**A: 수주잔고가 실적로 전환되면 장비주 강세가 이어질 수 있습니다.**\n**B: 사내 주조가 성공하면 통합 기업이 마진을 가져갈 수 있습니다.**\n**C: 수요가 꺾이면 2028년 이후 수주잔고가 풀릴 수 있습니다.**\n\n■ 오늘까지 흐름\n\n100기가와트 태양광·터빈 매진·15기가와트 전력 지연이 같은 주 전력 스택 내러티브를 이뤘습니다.\n\n■ 장기 투자 관점\n\n2000년대 풍력 호황·불황이 공급망 교훈을 남겼습니다. 2020년대 인공지능 전력 수요는 다른 플레이어(대형 클라우드·통합 기업)와 함께 붐을 연장할 수 있습니다.\n\n■ 앞으로 볼 것\n\n(1) 장비사 수주잔고를 확인하시면 됩니다.\n\n(2) 주조 공장 발표를 보시기 바랍니다.\n\n(3) 송전망 연결 대기열을 추적하시면 됩니다.\n\n(4) 전력구매계약 가격을 살펴보시기 바랍니다.\n\n(5) 정책·세액공제 변화를 확인하시면 됩니다.\n\n■ 투자시사점\n\n에너지 인프라를 테슬라·스페이스X 이야기의 두 번째 엔진으로 추적하시기 바랍니다.\n\n매진 전망은 「주문은 많다」는 신호이지 「수익이 확인됐다」는 뜻은 아닙니다. 납기·가격·실제 설치량을 함께 보시면 됩니다.\n\n장기 투자자는 자동차·로켓과 발전 장비를 분리해 기록하시면, 전력 테마가 실적으로 연결되는 시점을 놓치기 어렵습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: 'Wind and energy turbines may be sold out through 2030 amid surging power demand',
+    summaryEn: 'Wind and energy turbines may stay sold out through 2030, aligning with 100 GW-per-year solar targets and in-house turbine casting plans as power infrastructure stacks up.',
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: '종목분석', categoryColor: 'mint', subject: '테슬라',
     date: "2026.08.31", updatedAt: "2026.08.31 08:00",

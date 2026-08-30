@@ -20,77 +20,77 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-08-31 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -946, alias: "종로 까치 #41", symbol: "MACRO",
-    content: "오늘 한 화면: 에이전트 메모리 24배·Roman FH13·NVDA $20B SPCX·Cybercab 9/3·SPY 저변동·터빈 2030 매진.",
+    content: "오늘 한 화면에 놓으실 항목을 정리해 드립니다.\n— 에이전트 메모리 수요 2030년까지 약 24배 전망\n— 로마 우주 망원경 10.15톤·팔콘 헤비 13번째 비행 발사\n— 엔비디아 200억 달러 스페이스X 지분 논의(예측시장 확률 급등)\n— 사이버캡 9월 3일 오스틴 행사\n— SPY 주간 변동성 2004년 12월 이후 최저 근처\n— 풍력·터빈 2030년까지 매진 전망\n우주·인공지능·전력·자율주행이 한 주에 겹친 날입니다.",
     likes: 12, comments: 1, created_at: "2026-08-31T00:00:00.000Z", liked: false,
   },
   {
     id: -947, alias: "광화문 여우 #62", symbol: "AI",
-    content: "에이전트 한 번 호출에 토큰 5~30배. HBM 2026~27 품귀면 메모리 Mix가 실적을 이끕니다.",
+    content: "에이전트 한 번 실행에 쓰이는 토큰(텍스트 조각)이 챗봇 대비 5~30배 늘 수 있다는 전망이 나왔습니다.\n고대역폭 메모리가 2026~27년 품귀면 메모리 업체 실적 구성이 바뀝니다.\n그래픽 처리 장치 수치와 함께 메모리 출하·가격을 같은 표에 두시기 바랍니다.",
     likes: 13, comments: 2, created_at: "2026-08-31T00:07:00.000Z", liked: false,
   },
   {
     id: -948, alias: "여의도 수리 #28", symbol: "SPCX",
-    content: "Roman 10.15t FH13 발사. L2 도달·개막 일정이 다음 확인 포인트입니다.",
+    content: "10.15톤급 로마 우주 망원경이 8월 30일 오전 7시 26분(동부) 팔콘 헤비 13번째 비행으로 발사됐습니다.\n목표는 태양·지구 2차 궤도(L2)입니다.\n다음 확인 포인트는 L2 도달과 첫 관측(개막) 일정입니다.",
     likes: 14, comments: 1, created_at: "2026-08-31T00:14:00.000Z", liked: false,
   },
   {
     id: -949, alias: "송파 독수리 #66", symbol: "NVDA",
-    content: "SPCX $20B stake는 아직 미확인. odds 변화만으로 포지션 키우기보다 공식 발표를 기다리시기 바랍니다.",
+    content: "200억 달러 규모 스페이스X 지분 매수는 아직 공식 확인되지 않았습니다.\n8월 29일 예측시장에서 확률만 크게 올랐으므로, 확률 변화만으로 포지션을 키우기보다 공식 발표를 기다리시기 바랍니다.\n칩 공급 계약과 지분 매수는 규모와 리스크가 다릅니다.",
     likes: 15, comments: 2, created_at: "2026-08-31T00:21:00.000Z", liked: false,
   },
   {
     id: -950, alias: "분당 매 #31", symbol: "SPCX",
-    content: "스타베이스 444ac 수자원 deal은 cadence 확대 선행 지표로 읽힙니다.",
+    content: "스타베이스 인근 444에이커(약 180만㎡) 수자원 권리가 최대 2억 2,000만 달러에 거래될 수 있다는 보도가 나왔습니다.\n대형 로켓 시험·발사 빈도를 늘리려는 토지·상하수 인프라 선행 투자로 읽힙니다.\n거래 마무리와 월별 발사 횟수를 함께 보시면 됩니다.",
     likes: 16, comments: 1, created_at: "2026-08-31T00:28:00.000Z", liked: false,
   },
   {
     id: -951, alias: "성수 너구리 #15", symbol: "SPCX",
-    content: "AI 위성 2027 Q4 NVDA 칩. 궤도 compute timeline이 분기 단위로 내려왔습니다.",
+    content: "엔비디아 칩을 탑재한 인공지능 위성 서비스가 2027년 4분기 시작될 수 있다는 일정이 거론됐습니다.\n궤도에서 바로 데이터를 분석하면 지상망이 약한 구간에서 지연을 줄일 수 있습니다.\n일정이 분기 단위로 내려온 것이 의미 있습니다.",
     likes: 12, comments: 2, created_at: "2026-08-31T00:35:00.000Z", liked: false,
   },
   {
     id: -952, alias: "역삼 판다 #77", symbol: "TSLA",
-    content: "100GW solar + in-house turbine casting. power bottleneck이 chip만큼 중요해집니다.",
+    content: "연간 100기가와트급 태양광 목표와 사내 풍력 터빈 주조 계획이 함께 거론됐습니다.\n인공지능 데이터센터·공장·발사장 모두 24시간 전력이 필요합니다.\n전력 병목이 칩 병목만큼 중요해지는 구간입니다.",
     likes: 13, comments: 1, created_at: "2026-08-31T00:42:00.000Z", liked: false,
   },
   {
     id: -953, alias: "삼성동 올빼미 #19", symbol: "AI",
-    content: "~15GW AI compute power-on delay. transformer·cooling이 새 병목입니다.",
+    content: "약 15기가와트 규모 인공지능 연산 설비가 2027년까지 변압기·배선·냉각 문제로 전원을 넣지 못할 수 있다는 전망이 나왔습니다.\n칩 주문과 실제 가동 시점을 분리해 보시기 바랍니다.\n송전·변압 장비 납기가 새로운 병목입니다.",
     likes: 14, comments: 2, created_at: "2026-08-31T00:49:00.000Z", liked: false,
   },
   {
     id: -954, alias: "한남 재규어 #27", symbol: "MACRO",
-    content: "ARKK ~$600M, TSLA ~$391M flow. theme basket risk appetite thermometer.",
+    content: "혁신 테마 ARKK 약 6억 달러, 테슬라 관련 상장지수펀드 약 3.91억 달러 규모 자금 흐름이 부각됐습니다.\n개별 헤드라인보다 테마 단위 위험 선호를 보여 주는 지표입니다.\n9월 3일 사이버캡 행사 전후 변동성에 대비하시기 바랍니다.",
     likes: 15, comments: 1, created_at: "2026-08-31T00:56:00.000Z", liked: false,
   },
   {
     id: -955, alias: "해운대 고래 #03", symbol: "TSLA",
-    content: "Cybercab Sept 3 Austin. $30K, $0.20/mi. calendar event로 execution risk down.",
+    content: "운전석·페달 없는 사이버캡 전용 행사가 9월 3일 텍사스 오스틴에서 열립니다.\n차량 목표가 3만 달러, 운행비 마일당 0.20달러로 거론됐습니다.\n날짜가 정해지면 상용 일정이 말에서 달력으로 내려온 것입니다.",
     likes: 16, comments: 2, created_at: "2026-08-31T00:63:00.000Z", liked: false,
   },
   {
     id: -956, alias: "마포 살쾡이 #08", symbol: "MACRO",
-    content: "SPY weekly vol near Dec 2004 lows. quiet surface, Sept hike 57.5% still live.",
+    content: "SPY 주간 변동성이 2004년 12월 이후 최저 근처입니다.\n8월 28일 종가 769.35달러(-0.23%)로 표면은 잔잔하지만, 9월 금리 인상 확률 57.5%·9월 4일 고용·9월 15~16일 정책회의가 남아 있습니다.\n지수 수준과 변동성 지표를 같이 보시기 바랍니다.",
     likes: 12, comments: 1, created_at: "2026-08-31T00:70:00.000Z", liked: false,
   },
   {
     id: -957, alias: "판교 늑대 #90", symbol: "MACRO",
-    content: "Big Tech week: Apple COO rumor + Tesla robotaxi Thursday. Mag7 idiosyncratic vol.",
+    content: "애플 최고운영책임자(차기 최고경영자) 후계 논의와 테슬라 로보택시 목요일 일정이 같은 주에 겹칩니다.\n빅테크 7개 종목은 개별 이벤트 변동성이 커질 수 있는 주입니다.\n지수 헷지와 개별 종목 노출을 구분하시기 바랍니다.",
     likes: 13, comments: 2, created_at: "2026-08-31T00:77:00.000Z", liked: false,
   },
   {
     id: -958, alias: "인천 갈매기 #52", symbol: "MACRO",
-    content: "Hobby spending >5% of goods ATH. consumer slowdown is category-uneven.",
+    content: "미국 취미·여가 소비가 재화 지출 가운데 5%를 넘어 사상 최고 수준에 도달했다는 데이터가 나왔습니다.\n금리가 높은 환경에서도 일부 카테고리 소비는 견조할 수 있습니다.\n거시 둔화 논거와 미시 소비 데이터를 함께 보시면 됩니다.",
     likes: 14, comments: 1, created_at: "2026-08-31T00:84:00.000Z", liked: false,
   },
   {
     id: -959, alias: "종로 까치 #41", symbol: "TSLA",
-    content: "Turbines sold out through 2030. energy equipment supercycle narrative.",
+    content: "풍력·에너지 터빈 수요가 2030년까지 매진 상태라는 전망이 나왔습니다.\n연간 100기가와트급 태양광·사내 터빈 주조 계획과 겹쳐 전력 인프라 투자가 한 묶음으로 읽힙니다.\n매진 전망은 납기·가격 신호이지 수익 확인은 아닙니다.",
     likes: 15, comments: 2, created_at: "2026-08-31T00:91:00.000Z", liked: false,
   },
   {
     id: -960, alias: "광화문 여우 #62", symbol: "NVDA",
-    content: "Agent memory + space AI + stake talk: NVDA story widens from chips to compute placement.",
+    content: "에이전트 메모리·궤도 인공지능·지분 논의가 겹치며 엔비디아 이야기가 칩 판매를 넘어 「연산이 어디에 놓이는가」로 넓어지고 있습니다.\n공식 발표·위성 일정·고대역폭 메모리 실적을 분리해 추적하시기 바랍니다.\n내러티브 확장과 실적 확인은 다른 속도로 움직입니다.",
     likes: 16, comments: 1, created_at: "2026-08-31T00:98:00.000Z", liked: false,
   },
   // ── 2026-08-29 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
