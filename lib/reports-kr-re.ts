@@ -4,6 +4,167 @@ const body = (lines: string) => `${lines}\n\ninvestus.kr SRP 최고투자책임�
 
 /** 한국부동산 미리보기 시드 — 정책·매매·전세 */
 export const SEED_REPORTS_KR_RE: Report[] = [
+  {
+    id: "krre-seed-109",
+    title: "2026년 8월 31일 부동산 한장 요약입니다. 서울 +0.29%·강남 -0.11%·중랑 +0.56%·전세 +0.22%",
+    summary: "Seoul sale +0.29%, Gangnam -0.11% 3wk down, Jungnang +0.56%, jeonse +0.22%.",
+    body: `■ 오늘의 큰 그림
+
+Seoul average up but Gangnam down, outer north up, jeonse +0.22%.
+
+■ 앞으로 볼 것
+
+(1) Gangnam trend (2) outer Seoul persistence (3) jeonse ratio (4) tax policy (5) loan rules
+
+■ 투자시사점
+
+평균 한 줄이 아니라 구별 heat map으로 보시기 바랍니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "2026년 8월 31일 부동산 한장 요약입니다. 서울 +0.29%·강남 -0.11%·중랑 +0.56%·전세 +0.22%",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "특집",
+    categoryColor: "mint",
+    subject: "한장요약",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    isPinned: true,
+    images: ["/charts/summary-krre-20260831.svg"],
+    imagesEn: ["/charts/summary-krre-20260831-en.svg"],
+  },
+  {
+    id: "krre-seed-110",
+    title: "강남·서초 3주 연속 하락, 세제개편 부담",
+    summary: "Gangnam -0.11%, Seocho -0.05% third week; tax reform pressure.",
+    body: `■ 상세
+
+Gangnam/Seocho 3-week decline, tax burden on high-end.
+
+■ 왜 이 뉴스가 중요한가
+
+1. tax reform 2. forced sales 3. vs outer Seoul 4. transaction volume 5. jeonse linkage
+
+■ 시나리오
+
+**A stabilize** **B deeper correction** **C policy tweak**
+
+■ 오늘까지 흐름
+
+Southeast cluster weak 0.03%.
+
+■ 장기 투자 관점
+
+High-end policy shocks rotate demand outward historically.
+
+■ 앞으로 볼 것
+
+(1) Gangnam weekly (2) forced listings (3) tax detail (4) mortgage rules (5) jeonse ratio Gangnam
+
+■ 투자시사점
+
+District-level not city average.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "강남·서초 3주 연속 하락, 세제개편 부담",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "시장분석",
+    categoryColor: "purple",
+    subject: "정책",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/gangnam-decline-20260831.svg"],
+    imagesEn: ["/charts/gangnam-decline-20260831-en.svg"],
+  },
+  {
+    id: "krre-seed-111",
+    title: "중랑 +0.56% 등 외곽·강북 상승이 서울 평균을 이끌었습니다",
+    summary: "Jungnang +0.56%, north 14 districts avg 0.40%, affordability rotation.",
+    body: `■ 상세
+
+Outer/north Seoul led +0.29% city avg.
+
+■ 왜 이 뉴스가 중요한가
+
+1. affordability migration 2. vs Gangnam discount 3. jeonse co-move 4. supply 5. loan limits
+
+■ 시나리오
+
+**A continue rotation** **B mean revert** **C policy caps outer**
+
+■ 오늘까지 흐름
+
+Jeonse +0.22% same week.
+
+■ 장기 투자 관점
+
+Seoul price tier rotation recurring theme.
+
+■ 앞으로 볼 것
+
+(1) district table (2) jeonse/sale gap (3) transaction count (4) loan DSR (5) north vs south
+
+■ 투자시사점
+
+Read as tier rotation not city heat.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "중랑 +0.56% 등 외곽·강북 상승이 서울 평균을 이끌었습니다",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "시장분석",
+    categoryColor: "orange",
+    subject: "전세",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/outer-seoul-surge-20260831.svg"],
+    imagesEn: ["/charts/outer-seoul-surge-20260831-en.svg"],
+  },
+  {
+    id: "krre-seed-112",
+    title: "서울 전세 +0.22%, 전주 0.19%에서 확대",
+    summary: "Seoul jeonse +0.22% from 0.19%; supply shortage factor.",
+    body: `■ 상세
+
+Jeonse +0.22%, Gyeonggi +0.19%.
+
+■ 왜 이 뉴스가 중요한가
+
+1. listing shortage 2. sale linkage 3. wolse shift 4. policy programs 5. jeonse-to-price ratio
+
+■ 시나리오
+
+**A continue if listings tight** **B policy supply ease** **C rate hurt demand**
+
+■ 오늘까지 흐름
+
+Rising where sale also strong.
+
+■ 장기 투자 관점
+
+Jeonse scarcity post-jeonse fraud era persists.
+
+■ 앞으로 볼 것
+
+(1) jeonse ratio by gu (2) listing count (3) safe-trust program (4) loan rate (5) wolse premium
+
+■ 투자시사점
+
+Ratio more important than weekly %.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "서울 전세 +0.22%, 전주 0.19%에서 확대",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "시장분석",
+    categoryColor: "orange",
+    subject: "전세",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/jeonse-rise-20260831.svg"],
+    imagesEn: ["/charts/jeonse-rise-20260831-en.svg"],
+  },
   // ── 2026-08-29 신규 ────────────────────────────────────────────────────────
   {
     id: "krre-seed-106",

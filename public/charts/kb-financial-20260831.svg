@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#60a5fa30" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#60a5fa" text-anchor="middle">KB금융</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.31</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">KB금융이 2.08% 올라 하락장에서 금융주 강세를 이끌었습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="360" y="166" width="360" height="46" rx="23" fill="#60a5fa18" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#60a5fa" text-anchor="middle">🏦 금리 상승 기대 · +2.08%</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🏦</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#60a5fa" text-anchor="middle">+2.08%</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">9월 금리 인상 확률 57.5% 수준으로, 예금·대출 금리차(이자마진) 기대가 커졌습니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">+2.08%</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">KB금융</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">지수 -1.79%와 대비</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">💹</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">57.5%</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">9월 인상 확률</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">미국 금리 기대</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">🏛️</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">은행</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금융 섹터</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">금리 민감 업종</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">금리가 오를 수 있다는 전망은 은행에 유리합니다. 예금 금리보다 대출 금리가 더 빨리·크게 오르면</text>
+  <text x="540" y="716" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">이자마진이 넓어지기 때문입니다. KB금융 상승은 「성장주 실망 vs 금융주 방어」가 같은 날 나타난</text>
+  <text x="540" y="742" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">사례입니다.</text>
+  <rect x="60" y="848" width="960" height="144" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">금융주는 「금리 오르면 오른다」가 항상 맞지는 않습니다. 연체율·대출 성장·배당 정책도 필요합니다. 다만 이번처럼 지수가 내릴 때</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">KB가 버티면 섹터 로테이션 신호로 볼 수 있습니다. NIM 가이던스와 배당 공시를 함께 보시면 됩니다.</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">KB금융 · 금리 수혜 · 2026.08.31</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

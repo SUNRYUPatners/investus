@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0d02"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fb923c"/><stop offset="100%" style="stop-color:#f97316"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="113" height="38" rx="19" fill="#fb923c30" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="96.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#fb923c" text-anchor="middle">JEONSE</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.31</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Outer and northern Seoul led the city average, with Jungnang</text>
+  <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">up 0.56%</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">OUTER SEOUL SURGE</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#20130a" stroke="#fb923c" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#fb923c" text-anchor="middle">+0.56%</text>
+  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Northern 14 districts averaged 0.40%. Demand is shifting to lower-price areas.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb923c" text-anchor="middle">+0.56%</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Jungnang</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Top weekly gain</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏘️</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb923c" text-anchor="middle">0.40%</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">North 14</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Average gain</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏙️</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb923c" text-anchor="middle">0.29%</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">All Seoul</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">City average</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">📉</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb923c" text-anchor="middle">0.03%</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Southeast</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Gangnam weak</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">Southeast districts (Gangnam, Seocho, Songpa, Gangdong) rose only 0.03%</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">With jeonse up 0.22%, real demand may be moving outward</text>
+  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="740" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">Seoul's 0.29% average does not mean every district rose. Northern and outer districts pulled the mean</text>
+  <text x="540" y="765" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">while Gangnam softened—a price-tier rotation.</text>
+  <rect x="60" y="842" width="960" height="148" rx="14" fill="#20130a" stroke="#fb923c" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">Why it matters</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Outer gains coexist with Gangnam discount, not pure city-wide heat. Track jeonse/sale gaps, loan rules, and</text>
+  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">forced-sale counts by district. If policy stays targeted at high-end homes, the pattern can persist.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">JEONSE · outer Seoul surge · 2026.08.31</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

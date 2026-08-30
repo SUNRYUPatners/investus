@@ -1,6 +1,12 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
+  { id: -1968, alias: "여의도 너구리 #11", symbol: "코스피", content: "8월 31일 한국장 한장 요약입니다. 코스피는 6,788.88로 1.79% 내렸고, 이번 주 외국인 순매도는 약 8조 3,153억 원 규모로 집계됐습니다. SemiCon Taiwan(8/31), 9월 4일 미국 고용, 9월 15~16일 FOMC, 9월 인상 확률 57.5%가 같은 주 변수입니다.", likes: 28, comments: 2, created_at: "2026-08-31T06:00:00.000Z", liked: false, },
+  { id: -1969, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자는 중국 CXMT 대비 +874% 수출 증가와 1조 5,000억 원 자사주 매입을 발표했지만 주가는 3.38% 내렸습니다. HBM mix와 월간 수출 통계로 기대와 실적의 간격을 확인하시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-08-31T06:08:00.000Z", liked: false, },
+  { id: -1970, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "SK하이닉스는 4.45% 하락했지만, 에이전트 메모리 24배·HBM 2026~27 품귀 전망은 장기 수요 story를 유지합니다. 단기 수급과 장기 mix를 분리해 보시면 됩니다.", likes: 26, comments: 2, created_at: "2026-08-31T06:16:00.000Z", liked: false, },
+  { id: -1971, alias: "성수 수달 #35", symbol: "현대차", content: "현대차는 CID(차량 내 정보·디스플레이) 기대에 대한 실망으로 3.73% 내렸습니다. 소프트웨어 프리미엄은 발표가 아니라 상용 일정과 수율로 증명됩니다.", likes: 25, comments: 2, created_at: "2026-08-31T06:24:00.000Z", liked: false, },
+  { id: -1972, alias: "한남 두루미 #17", symbol: "KB금융", content: "KB금융은 2.08% 올랐습니다. 9월 인상 확률 57.5%와 2년물 금리를 함께 보시면 금융주 방향을 잡기 쉽습니다.", likes: 24, comments: 2, created_at: "2026-08-31T06:32:00.000Z", liked: false, },
+  { id: -1973, alias: "잠실 백로 #29", symbol: "수급", content: "이번 주 외국인 순매도 약 8.3조 원은 반도체 비중이 큰 편입니다. 환율·외국인 순매수·인상 확률 세 줄이 같이 정리될 때 지수도 방향을 잡습니다.", likes: 23, comments: 2, created_at: "2026-08-31T06:40:00.000Z", liked: false, },
   {
     id: -1961, alias: "여의도 너구리 #11", symbol: "코스피",
     content: "8월 28일 코스피는 123.49포인트 내린 6,788.88로 마감해 1.79% 하락했습니다. 6,846.54로 하락 출발한 뒤 장중 6,901.78까지 올랐다가 6,780.13까지 밀렸습니다.\n하루 안에 120포인트가 넘는 폭으로 오르고 내렸다는 점, 그리고 전날 1.53% 상승분을 대부분 반납했다는 점이 이날의 성격을 보여 줍니다. 전날 상승의 근거가 국내 요인이 아니었기 때문에 되돌림도 빨랐습니다. 코스닥은 838.41로 0.09% 올라 강보합을 유지했습니다.",
@@ -185,6 +191,11 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
+  { id: -1991, alias: "온체인 매 #03", symbol: "비트코인", content: "비트코인은 약 78,128달러 부근입니다. 78,000달러 선 재시험과 9월 인상 확률 57.5%가 같은 축입니다. 현물 상장지수펀드 순유입을 함께 보시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-08-31T09:00:00.000Z", liked: false, },
+  { id: -1992, alias: "금벌레 #17", symbol: "금", content: "금은 약 4,635달러 부근입니다. 실질금리와 달러 지수가 방향을 좌우하며, 4,600~4,700달러 구간이 단기 기준선입니다.", likes: 23, comments: 2, created_at: "2026-08-31T09:08:00.000Z", liked: false, },
+  { id: -1993, alias: "이더러 #44", symbol: "이더리움", content: "이더리움은 약 2,459달러로 2,500달러 선을 시험했습니다. 매크로 베타가 커서 금리 기대와 같이 움직입니다.", likes: 22, comments: 2, created_at: "2026-08-31T09:16:00.000Z", liked: false, },
+  { id: -1994, alias: "실물러 #22", symbol: "은", content: "은은 귀금속·산업 수요가 겹칩니다. 금 대비 은 비율(금은비)로 상대 매력을 보시면 됩니다.", likes: 21, comments: 2, created_at: "2026-08-31T09:24:00.000Z", liked: false, },
+  { id: -1995, alias: "매크로올빼미 #31", symbol: "매크로", content: "9월 인상 확률 57.5%로 비트코인·금·채권이 함께 재가격되는 구간입니다. 이자를 주지 않는 자산이 먼저 반응합니다.", likes: 20, comments: 2, created_at: "2026-08-31T09:32:00.000Z", liked: false, },
   {
     id: -1971, alias: "온체인 매 #03", symbol: "비트코인",
     content: "비트코인은 8월 29일 0시 1분 기준 79,623.35달러로 전날보다 0.86% 낮았고, 새벽 1시 25분 무렵 78,000달러 선을 밑돌았습니다. 이더리움도 2,516.31달러에서 2,500달러를 내줬습니다.\n낙폭을 키운 것은 청산입니다. 24시간 청산액은 3억 6,900만 달러, 청산된 거래자는 8만 7,082명이며 단일 최대 청산은 약 218만 달러였습니다.\n청산은 빌린 돈으로 잡은 포지션이 손실 한계를 넘겨 강제로 정리되는 것을 말합니다. 이 매도는 판단과 무관하게 나오므로 하락이 하락을 부르는 구조를 만듭니다. 78,000달러 회복 여부와 미국 2년물 금리를 함께 보시기 바랍니다.",
@@ -254,6 +265,10 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  { id: -1984, alias: "실수요 #05", symbol: "서울매매", content: "서울 아파트 매매가는 0.29% 올랐지만 강남구는 3주 연속 -0.11%로 내렸습니다. 중랑구 +0.56%, 전세 +0.22%로 지역·전세를 나눠 보셔야 합니다.", likes: 22, comments: 2, created_at: "2026-08-31T10:00:00.000Z", liked: false, },
+  { id: -1985, alias: "정책워처 #01", symbol: "강남", content: "강남·서초는 세제개편 부담으로 급매물이 늘며 하락세가 이어졌습니다. 고가 주택과 외곽 상승의 대비가 핵심입니다.", likes: 21, comments: 2, created_at: "2026-08-31T10:08:00.000Z", liked: false, },
+  { id: -1986, alias: "전세러 #09", symbol: "전세", content: "전세가격은 0.22% 올랐습니다. 매물 부족과 전월세 전환 흐름이 겹치면 상승 폭이 커질 수 있습니다.", likes: 20, comments: 2, created_at: "2026-08-31T10:16:00.000Z", liked: false, },
+  { id: -1987, alias: "외곽분석 #12", symbol: "중랑", content: "외곽·강북 상승은 affordability rotation 신호입니다. 서울 평균 한 줄만 보면 놓치기 쉽습니다.", likes: 19, comments: 2, created_at: "2026-08-31T10:24:00.000Z", liked: false, },
   {
     id: -1981, alias: "실수요 #05", symbol: "서울매매",
     content: "8월 넷째 주 서울 아파트 매매가격은 8월 24일 기준으로 0.29% 올랐습니다. 전주 0.22%보다 0.07%포인트 확대됐고, 7월 둘째 주 0.30% 이후 6주 만에 가장 높은 상승 폭입니다.\n그런데 오름세를 이끈 곳은 강남권이 아니었습니다. 중랑구 0.56%, 성북구와 강북구 각각 0.55%, 도봉구와 노원구 각각 0.54%, 서대문구 0.53%입니다. 성북구와 강북구, 종로구는 2012년 5월 통계 공표 이후 약 14년 3개월 만에 가장 높은 주간 상승률을 기록했습니다.\n수도권은 0.15%에서 0.22%, 전국은 0.08%에서 0.11%로 함께 확대됐습니다. 서울 평균 한 줄만 보면 이 이동을 놓치게 됩니다.",

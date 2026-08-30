@@ -17,6 +17,82 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-08-31 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
+  {
+    id: -946, alias: "종로 까치 #41", symbol: "MACRO",
+    content: "오늘 한 화면: 에이전트 메모리 24배·Roman FH13·NVDA $20B SPCX·Cybercab 9/3·SPY 저변동·터빈 2030 매진.",
+    likes: 12, comments: 1, created_at: "2026-08-31T00:00:00.000Z", liked: false,
+  },
+  {
+    id: -947, alias: "광화문 여우 #62", symbol: "AI",
+    content: "에이전트 한 번 호출에 토큰 5~30배. HBM 2026~27 품귀면 메모리 Mix가 실적을 이끕니다.",
+    likes: 13, comments: 2, created_at: "2026-08-31T00:07:00.000Z", liked: false,
+  },
+  {
+    id: -948, alias: "여의도 수리 #28", symbol: "SPCX",
+    content: "Roman 10.15t FH13 발사. L2 도달·개막 일정이 다음 확인 포인트입니다.",
+    likes: 14, comments: 1, created_at: "2026-08-31T00:14:00.000Z", liked: false,
+  },
+  {
+    id: -949, alias: "송파 독수리 #66", symbol: "NVDA",
+    content: "SPCX $20B stake는 아직 미확인. odds 변화만으로 포지션 키우기보다 공식 발표를 기다리시기 바랍니다.",
+    likes: 15, comments: 2, created_at: "2026-08-31T00:21:00.000Z", liked: false,
+  },
+  {
+    id: -950, alias: "분당 매 #31", symbol: "SPCX",
+    content: "스타베이스 444ac 수자원 deal은 cadence 확대 선행 지표로 읽힙니다.",
+    likes: 16, comments: 1, created_at: "2026-08-31T00:28:00.000Z", liked: false,
+  },
+  {
+    id: -951, alias: "성수 너구리 #15", symbol: "SPCX",
+    content: "AI 위성 2027 Q4 NVDA 칩. 궤도 compute timeline이 분기 단위로 내려왔습니다.",
+    likes: 12, comments: 2, created_at: "2026-08-31T00:35:00.000Z", liked: false,
+  },
+  {
+    id: -952, alias: "역삼 판다 #77", symbol: "TSLA",
+    content: "100GW solar + in-house turbine casting. power bottleneck이 chip만큼 중요해집니다.",
+    likes: 13, comments: 1, created_at: "2026-08-31T00:42:00.000Z", liked: false,
+  },
+  {
+    id: -953, alias: "삼성동 올빼미 #19", symbol: "AI",
+    content: "~15GW AI compute power-on delay. transformer·cooling이 새 병목입니다.",
+    likes: 14, comments: 2, created_at: "2026-08-31T00:49:00.000Z", liked: false,
+  },
+  {
+    id: -954, alias: "한남 재규어 #27", symbol: "MACRO",
+    content: "ARKK ~$600M, TSLA ~$391M flow. theme basket risk appetite thermometer.",
+    likes: 15, comments: 1, created_at: "2026-08-31T00:56:00.000Z", liked: false,
+  },
+  {
+    id: -955, alias: "해운대 고래 #03", symbol: "TSLA",
+    content: "Cybercab Sept 3 Austin. $30K, $0.20/mi. calendar event로 execution risk down.",
+    likes: 16, comments: 2, created_at: "2026-08-31T00:63:00.000Z", liked: false,
+  },
+  {
+    id: -956, alias: "마포 살쾡이 #08", symbol: "MACRO",
+    content: "SPY weekly vol near Dec 2004 lows. quiet surface, Sept hike 57.5% still live.",
+    likes: 12, comments: 1, created_at: "2026-08-31T00:70:00.000Z", liked: false,
+  },
+  {
+    id: -957, alias: "판교 늑대 #90", symbol: "MACRO",
+    content: "Big Tech week: Apple COO rumor + Tesla robotaxi Thursday. Mag7 idiosyncratic vol.",
+    likes: 13, comments: 2, created_at: "2026-08-31T00:77:00.000Z", liked: false,
+  },
+  {
+    id: -958, alias: "인천 갈매기 #52", symbol: "MACRO",
+    content: "Hobby spending >5% of goods ATH. consumer slowdown is category-uneven.",
+    likes: 14, comments: 1, created_at: "2026-08-31T00:84:00.000Z", liked: false,
+  },
+  {
+    id: -959, alias: "종로 까치 #41", symbol: "TSLA",
+    content: "Turbines sold out through 2030. energy equipment supercycle narrative.",
+    likes: 15, comments: 2, created_at: "2026-08-31T00:91:00.000Z", liked: false,
+  },
+  {
+    id: -960, alias: "광화문 여우 #62", symbol: "NVDA",
+    content: "Agent memory + space AI + stake talk: NVDA story widens from chips to compute placement.",
+    likes: 16, comments: 1, created_at: "2026-08-31T00:98:00.000Z", liked: false,
+  },
   // ── 2026-08-29 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -931, alias: "종로 까치 #41", symbol: "MACRO",
@@ -7268,6 +7344,8 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-946]: [{ alias: "댓글_310946", content: "한 화면 정리 감사합니다", created_at: "2026-08-31T00:10:00.000Z" }],
+  [-955]: [{ alias: "댓글_310955", content: "9/3 행사 전후 변동성 조심", created_at: "2026-08-31T01:10:00.000Z" }],
   [-931]: [
     { alias: "댓글_290931", content: "금리 한 줄이 전부라는 말이 이번 주에 딱 맞네요", created_at: "2026-08-29T00:10:00.000Z" },
     { alias: "댓글_290932", content: "다음 주에는 어떤 지표부터 보면 좋을까요", created_at: "2026-08-29T00:12:00.000Z" },

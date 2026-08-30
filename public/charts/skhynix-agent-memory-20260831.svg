@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1205"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="139" height="38" rx="19" fill="#f59e0b30" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="109.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f59e0b" text-anchor="middle">SK하이닉스</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.08.31</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">SK하이닉스는 4.45% 내렸지만 에이전트 메모리·HBM 수요 전망은</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">여전히 강합니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">🧊</text>
+  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#f59e0b" text-anchor="middle">-4.45%</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">단기 주가 조정과 장기 AI 메모리 부존 전망이 같은 종목에서 동시에 나타났습니다.</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">주가</text>
+  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">-4.45%</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">일간 조정</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">외국인 매도 영향</text>
+  <rect x="390" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">테마</text>
+  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">에이전트</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">메모리 24배</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">2030년까지 수요 전망</text>
+  <rect x="720" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">HBM</text>
+  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">2026~27</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">품귀</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">고대역폭 메모리</text>
+  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">단기 vs 장기 해석</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📉 지수·수급이 먼저 주가를 눌렀습니다</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🧠 에이전트는 토큰·메모리 사용량을 크게 늘립니다</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🏭 HBM 증설 일정이 실적로 연결되는지가 관건입니다</text>
+  <rect x="60" y="800" width="960" height="148" rx="14" fill="#201408" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="830" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">하이닉스는 「오늘 외국인이 팔았는가」와 「2027 HBM mix가 올라가는가」를 동시에 봐야 합니다. 에이전트 테마는 장기 수요,</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">-4.45%는 단기 포지션 정리입니다. 분기 HBM 매출 비중과 인디애나·용인 capex 일정을 확인하시면 됩니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SK하이닉스 · 에이전트 메모리 · 2026.08.31</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

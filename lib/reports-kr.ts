@@ -5,6 +5,255 @@ const body = (lines: string) =>
 
 /** 한국주식 시드 — 한장요약 + 삼성·하이닉스 + 시총 탑5 이슈 종목 2~3 (+ 코스피·수급·매크로). 장 마감 후 일일 업데이트 */
 export const SEED_REPORTS_KR: Report[] = [
+  {
+    id: "kr-seed-125",
+    title: "2026년 8월 31일 한국장 한장 요약입니다. 코스피 6,788.88 -1.79%·외국인 8.3조·SemiCon Taiwan·FOMC·고용 9/4를 모았습니다",
+    summary: "코스피 6,788.88(-1.79%), 외국인 순매도 약 8조 3,153억 원, SemiCon Taiwan 8/31 개막, FOMC 9/15-16, 9/4 고용, 9월 인상 57.5%. SK하이닉스 -4.45%, KB금융 +2.08%.",
+    body: `■ 오늘의 큰 그림
+
+코스피 6788.88 -1.79%, 외국인 매도 우위, 금융주 상대 강세.
+
+■ 앞으로 볼 것
+
+(1) SemiCon Taiwan (2) 9/4 jobs (3) FOMC (4) foreign flow turn (5) 6800 reclaim
+
+■ 투자시사점
+
+환율·외국인·9월 hike odds 세 줄을 한 표에 두시기 바랍니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "2026년 8월 31일 한국장 한장 요약입니다. 코스피 6,788.88 -1.79%·외국인 8.3조·SemiCon Taiwan·FOMC·고용 9/4를 모았습니다",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "특집",
+    categoryColor: "mint",
+    subject: "한장요약",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    isPinned: true,
+    images: ["/charts/summary-kr-20260831.svg"],
+    imagesEn: ["/charts/summary-kr-20260831-en.svg"],
+  },
+  {
+    id: "kr-seed-126",
+    title: "CXMT 실적 급증과 삼성전자 1조 5,000억 원 자사주 매입·-3.38% 조정이 같은 주에 부각됐습니다",
+    summary: "CXMT H1 +874% 보도, 삼성전자 1.5조 buyback, -3.38%. supply vs shareholder return collision.",
+    body: `■ 상세
+
+CXMT 중국 memory expansion vs Samsung 1.5T buyback.
+
+■ 왜 이 뉴스가 중요한가
+
+1. supply fear 2. buyback support 3. HBM mix key 4. export data 5. ASP path
+
+■ 시나리오
+
+**A tight HBM** **B price war** **C mix shift**
+
+■ 오늘까지 흐름
+
+Aug 28 foreign sell hit semis.
+
+■ 장기 투자 관점
+
+Memory cycles differ when custom HBM share rises.
+
+■ 앞으로 볼 것
+
+(1) monthly exports (2) ASP (3) buyback pace (4) CXMT capacity (5) HBM revenue share
+
+■ 투자시사점
+
+Track mix not headline price.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "CXMT 실적 급증과 삼성전자 1조 5,000억 원 자사주 매입·-3.38% 조정이 같은 주에 부각됐습니다",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "종목분석",
+    categoryColor: "blue",
+    subject: "삼성전자",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/samsung-cxmt-20260831.svg"],
+    imagesEn: ["/charts/samsung-cxmt-20260831-en.svg"],
+  },
+  {
+    id: "kr-seed-127",
+    title: "SK하이닉스 -4.45% 조정과 에이전트 메모리·HBM 2026~27 품귀 전망이 겹쳤습니다",
+    summary: "-4.45% day move vs 24x agent memory / HBM tight 2026-27 outlook.",
+    body: `■ 상세
+
+Foreign sell -4.45% vs long HBM/agent demand.
+
+■ 왜 이 뉴스가 중요한가
+
+1. flows vs fundamentals 2. HBM mix 3. agent token growth 4. Indiana/Yongin capex 5. margin path
+
+■ 시나리오
+
+**A flows reverse** **B HBM pricing up** **C capex overshoot**
+
+■ 오늘까지 흐름
+
+Same week as US agent memory note.
+
+■ 장기 투자 관점
+
+Hynix HBM arc from 2023 shortage to 2027+ custom mix.
+
+■ 앞으로 볼 것
+
+(1) HBM revenue % (2) ASP (3) foreign flows (4) capex (5) customer guidance
+
+■ 투자시사점
+
+Separate daily flow from HBM mix trajectory.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "SK하이닉스 -4.45% 조정과 에이전트 메모리·HBM 2026~27 품귀 전망이 겹쳤습니다",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "종목분석",
+    categoryColor: "orange",
+    subject: "SK하이닉스",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/skhynix-agent-memory-20260831.svg"],
+    imagesEn: ["/charts/skhynix-agent-memory-20260831-en.svg"],
+  },
+  {
+    id: "kr-seed-128",
+    title: "현대차 CID 업데이트 실망으로 3.73% 하락했습니다",
+    summary: "CID infotainment disappointment, -3.73%. software UX premium thesis tested.",
+    body: `■ 상세
+
+CID central display UX missed expectations.
+
+■ 왜 이 뉴스가 중요한가
+
+1. software as premium driver 2. OTA cadence 3. EV/SW revenue 4. competition 5. multiple impact
+
+■ 시나리오
+
+**A fix in next OTA** **B repeated misses hurt premium** **C peer leapfrog**
+
+■ 오늘까지 흐름
+
+Down more than index on software headline.
+
+■ 장기 투자 관점
+
+Auto valuation increasingly includes SW execution.
+
+■ 앞으로 볼 것
+
+(1) OTA notes (2) SW revenue (3) EV orders (4) China mix (5) margin guide
+
+■ 투자시사점
+
+Watch SW roadmap delivery not just launches.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "현대차 CID 업데이트 실망으로 3.73% 하락했습니다",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "종목분석",
+    categoryColor: "blue",
+    subject: "현대차",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/hyundai-cid-20260831.svg"],
+    imagesEn: ["/charts/hyundai-cid-20260831-en.svg"],
+  },
+  {
+    id: "kr-seed-129",
+    title: "KB금융 +2.08%로 하락장에서 금융주 강세를 이끌었습니다",
+    summary: "+2.08% vs KOSPI -1.79%; Sept hike odds 57.5% help NIM hopes.",
+    body: `■ 상세
+
+KB +2.08% on rate hike hopes.
+
+■ 왜 이 뉴스가 중요한가
+
+1. NIM expansion 2. sector rotation 3. credit quality still matters 4. dividend 5. vs growth selloff
+
+■ 시나리오
+
+**A rates up banks win** **B credit event** **C curve inversion hurt**
+
+■ 오늘까지 흐름
+
+Financials outperformed semis same day.
+
+■ 장기 투자 관점
+
+Rate cycles often rotate into banks late in hike cycle.
+
+■ 앞으로 볼 것
+
+(1) NIM guide (2) loan growth (3) dividend (4) credit cost (5) FX
+
+■ 투자시사점
+
+Pair KB with 2Y US yield monitor.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "KB금융 +2.08%로 하락장에서 금융주 강세를 이끌었습니다",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "종목분석",
+    categoryColor: "blue",
+    subject: "KB금융",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/kb-financial-20260831.svg"],
+    imagesEn: ["/charts/kb-financial-20260831-en.svg"],
+  },
+  {
+    id: "kr-seed-130",
+    title: "이번 주 외국인 순매도가 약 8조 3,153억 원 수준으로 집계됐습니다",
+    summary: "Weekly foreign net sell ~8.3153T won; chip-heavy; FX-rate-flow divergence possible.",
+    body: `■ 상세
+
+Weekly foreign sell ~8.3T, concentrated large chips.
+
+■ 왜 이 뉴스가 중요한가
+
+1. weekly vs daily 2. ETF/hedge flows 3. FX linkage 4. sector split 5. turn timing
+
+■ 시나리오
+
+**A buyback turn** **B more sell on US data** **C passive only**
+
+■ 오늘까지 흐름
+
+Post-Jackson Hole repositioning.
+
+■ 장기 투자 관점
+
+Foreign ownership level still structurally important for KOSPI.
+
+■ 앞으로 볼 것
+
+(1) daily foreign (2) USD/KRW (3) Sept odds (4) top10 net (5) weekly ETF
+
+■ 투자시사점
+
+Do not overfit one weekly print.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "이번 주 외국인 순매도가 약 8조 3,153억 원 수준으로 집계됐습니다",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "시장분석",
+    categoryColor: "mint",
+    subject: "수급",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/foreign-flow-kr-20260831.svg"],
+    imagesEn: ["/charts/foreign-flow-kr-20260831-en.svg"],
+  },
   // ── 2026-08-29 신규 ────────────────────────────────────────────────────────
   {
     id: "kr-seed-118",

@@ -1,12 +1,20 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T31 = 1788130800000; // 2026-08-31 08:00 KST
 const T29 = 1787958000000; // 2026-08-29 08:00 KST
 const T28 = 1787871600000; // 2026-08-28 08:00 KST
 const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9029, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "관심종목", content: "6788.88 -1.79%. 이번 주 SemiCon·FOMC·9/4 고용", createdAt: T31 - 0, likes: 30, comments: 2, },
+  { id: 9030, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "관심종목", content: "CXMT +874% vs 자사주 1.5조. 공급 vs 환원", createdAt: T31 - 1800000, likes: 29, comments: 2, },
+  { id: 9031, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "관심종목", content: "-4.45%인데 에이전트 메모리 24배 전망", createdAt: T31 - 3600000, likes: 28, comments: 2, },
+  { id: 9032, symbol: "현대차", nickname: "자동차매니아", holdingLabel: "관심종목", content: "CID 실망 -3.73%. SW 프리미엄 테스트", createdAt: T31 - 5400000, likes: 27, comments: 2, },
+  { id: 9033, symbol: "KB금융", nickname: "은행주러", holdingLabel: "관심종목", content: "+2.08% 금리 기대", createdAt: T31 - 7200000, likes: 26, comments: 2, },
+  { id: 9034, symbol: "수급", nickname: "외국인추적", holdingLabel: "관심종목", content: "주간 외국인 8.3조 순매도", createdAt: T31 - 9000000, likes: 25, comments: 2, },
+  { id: 9035, symbol: "코스피", nickname: "매크로덕후", holdingLabel: "관심종목", content: "9월 인상 57.5%·환율·수급 세 줄", createdAt: T31 - 10800000, likes: 24, comments: 2, },
   { id: 9021, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "인덱스 보유", content: "6788.88 -1.79%. 어제 6900 올라선 거 하루 만에 거의 다 반납했습니다. 장중에 6901까지 갔다가 6780까지 밀렸어요. 하루 변동 폭이 120포인트 넘습니다.", createdAt: T29, likes: 42, comments: 3 },
   { id: 9022, symbol: "코스피", nickname: "외국인추적", holdingLabel: "관망", content: "외국인 1조 7564억 순매도. 아침 9시 13분엔 407억이었는데 마감까지 43배로 늘었네요. 잭슨홀 앞두고 대기 성격 매도였다고 봅니다.", createdAt: T29 - 1800_000, likes: 37, comments: 3 },
   { id: 9023, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "삼성전자 보유", content: "3% 안팎 하락. 어제 밤 미국 AI 반도체 실적 좋았는데 우리는 반대로 갔습니다. 좋은 뉴스가 이미 가격에 있으면 더 못 올린다는 걸 오늘 배웠어요.", createdAt: T29 - 3600_000, likes: 31, comments: 2 },
@@ -122,6 +130,11 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9125, symbol: "비트코인", nickname: "온체인러", holdingLabel: "관심종목", content: "~78128, 78K 재테스트", createdAt: T31 - 0, likes: 28, comments: 2, },
+  { id: 9126, symbol: "금", nickname: "금벌레", holdingLabel: "관심종목", content: "~4635, 실질금리 변수", createdAt: T31 - 1800000, likes: 27, comments: 2, },
+  { id: 9127, symbol: "이더리움", nickname: "이더러", holdingLabel: "관심종목", content: "~2459, 2500 선", createdAt: T31 - 3600000, likes: 26, comments: 2, },
+  { id: 9128, symbol: "은", nickname: "실물러", holdingLabel: "관심종목", content: "금+산업 수요, Au/Ag ratio", createdAt: T31 - 5400000, likes: 25, comments: 2, },
+  { id: 9129, symbol: "매크로", nickname: "채권덕후", holdingLabel: "관심종목", content: "인상 57.5%, BTC·금 같이 재가격", createdAt: T31 - 7200000, likes: 24, comments: 2, },
   { id: 9121, symbol: "비트코인", nickname: "온체인러", holdingLabel: "BTC 보유", content: "자정에 79,623달러였는데 새벽 1시 25분쯤 78,000 깨졌습니다. 워시 발언 이후 청산이 몰렸어요. 24시간 청산 3억 6900만 달러.", createdAt: T29, likes: 41, comments: 3 },
   { id: 9122, symbol: "금", nickname: "금벌레", holdingLabel: "금 ETF", content: "장중에 100달러 넘게 빠져서 4500 아래로 갔습니다. 24시간 -2.3%. 며칠 올린 걸 하루에 되돌렸네요. 안전자산인데 금리에 이렇게 민감합니다.", createdAt: T29 - 1800_000, likes: 33, comments: 3 },
   { id: 9123, symbol: "이더리움", nickname: "스테이커", holdingLabel: "ETH 보유", content: "2,516달러에서 2500 선 내줬습니다. 비트보다는 덜 빠졌어요. 파생 거래량이 줄어서 새 자금보다 기존 포지션 정리 국면 같습니다.", createdAt: T29 - 3600_000, likes: 21, comments: 2 },
@@ -170,6 +183,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9225, symbol: "서울매매", nickname: "실수요자", holdingLabel: "관심", content: "서울 +0.29%, 강남 -0.11% 3주", createdAt: T31 - 0, likes: 26, comments: 2, },
+  { id: 9226, symbol: "강남", nickname: "강남권", holdingLabel: "관심", content: "세제 부담 급매", createdAt: T31 - 2400000, likes: 25, comments: 2, },
+  { id: 9227, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "전세 +0.22%", createdAt: T31 - 4800000, likes: 24, comments: 2, },
+  { id: 9228, symbol: "중랑", nickname: "외곽거주", holdingLabel: "관심", content: "중랑 +0.56%", createdAt: T31 - 7200000, likes: 23, comments: 2, },
   { id: 9221, symbol: "서울매매", nickname: "실수요자", holdingLabel: "관망", content: "서울 아파트 0.29% 상승. 전주 0.22%보다 커졌고 6주 만에 최대 폭이네요. 그런데 오른 곳은 강남이 아니라 중랑·성북·강북입니다.", createdAt: T29, likes: 32, comments: 3 },
   { id: 9222, symbol: "강남", nickname: "강남권", holdingLabel: "자가", content: "강남 -0.11%, 서초 -0.05%로 3주 연속 하락. 강남은 낙폭이 더 커졌습니다. 세제개편 부담에 급매물이 나온 영향이라는 해석이 많네요.", createdAt: T29 - 2400_000, likes: 29, comments: 3 },
   { id: 9223, symbol: "전세", nickname: "전세러", holdingLabel: "전세", content: "서울 전세 0.22%, 전주 0.19%에서 커졌습니다. 매매 강한 지역에서 전세도 같이 오르는 구조예요. 전세 물건 자체가 줄어든 것도 있고요.", createdAt: T29 - 4800_000, likes: 26, comments: 2 },

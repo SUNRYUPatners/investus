@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T31AU = 1788130800000; // 2026.08.31 08:00 KST
 const T29AU = 1787958000000; // 2026.08.29 08:00 KST
 const T28AU = 1787871600000; // 2026.08.28 08:00 KST
 const T27AU = 1787785200000; // 2026-08-27 08:00 KST
@@ -91,7 +92,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T29AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T31AU;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -110,6 +111,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-08-31 신규 ────────────────
+  { id: 1149, symbol: "MACRO", nickname: "익명_4000", holdingLabel: "관심종목",
+    content: "에이전트 메모리 24배 전망. HBM 26~27 품귀",
+    createdAt: T31AU + 8*60_000, likes: 10, comments: 1 },
+  { id: 1150, symbol: "AI", nickname: "익명_4017", holdingLabel: "관심종목",
+    content: "토큰 5~30배 늘면 메모리가 병목",
+    createdAt: T31AU + 16*60_000, likes: 11, comments: 2 },
+  { id: 1151, symbol: "SPCX", nickname: "익명_4034", holdingLabel: "관심종목",
+    content: "로마 망원경 FH13 10.15t L2 향해",
+    createdAt: T31AU + 24*60_000, likes: 12, comments: 1 },
+  { id: 1152, symbol: "NVDA", nickname: "익명_4051", holdingLabel: "관심종목",
+    content: "SPCX 200억 달러 지분? 예측시장 확률 급등",
+    createdAt: T31AU + 32*60_000, likes: 13, comments: 2 },
+  { id: 1153, symbol: "SPCX", nickname: "익명_4068", holdingLabel: "관심종목",
+    content: "스타베이스 수자원 444ac 최대 2.2억",
+    createdAt: T31AU + 40*60_000, likes: 14, comments: 1 },
+  { id: 1154, symbol: "SPCX", nickname: "익명_4085", holdingLabel: "관심종목",
+    content: "AI 위성 2027 Q4 NVDA 칩 탑재",
+    createdAt: T31AU + 48*60_000, likes: 15, comments: 2 },
+  { id: 1155, symbol: "TSLA", nickname: "익명_4102", holdingLabel: "관심종목",
+    content: "100GW 태양광+터빈 주조 in-house",
+    createdAt: T31AU + 56*60_000, likes: 10, comments: 1 },
+  { id: 1156, symbol: "AI", nickname: "익명_4119", holdingLabel: "관심종목",
+    content: "AI 15GW 전력 못 켠다는 병목",
+    createdAt: T31AU + 64*60_000, likes: 11, comments: 2 },
+  { id: 1157, symbol: "MACRO", nickname: "익명_4136", holdingLabel: "관심종목",
+    content: "ARKK 6억 TSLA 3.91억 flow",
+    createdAt: T31AU + 72*60_000, likes: 12, comments: 1 },
+  { id: 1158, symbol: "TSLA", nickname: "익명_4153", holdingLabel: "관심종목",
+    content: "사이버캡 9/3 오스틴 3만달러 0.2/mi",
+    createdAt: T31AU + 80*60_000, likes: 13, comments: 2 },
+  { id: 1159, symbol: "MACRO", nickname: "익명_4170", holdingLabel: "관심종목",
+    content: "SPY 변동성 2004년 이후 최저 근처",
+    createdAt: T31AU + 88*60_000, likes: 14, comments: 1 },
+  { id: 1160, symbol: "MACRO", nickname: "익명_4187", holdingLabel: "관심종목",
+    content: "애플 COO + 테슬라 목요일 로보택시",
+    createdAt: T31AU + 96*60_000, likes: 15, comments: 2 },
+  { id: 1161, symbol: "MACRO", nickname: "익명_4204", holdingLabel: "관심종목",
+    content: "취미지출 5% ATH",
+    createdAt: T31AU + 104*60_000, likes: 10, comments: 1 },
+  { id: 1162, symbol: "TSLA", nickname: "익명_4221", holdingLabel: "관심종목",
+    content: "터빈 2030까지 매진",
+    createdAt: T31AU + 112*60_000, likes: 11, comments: 2 },
+  { id: 1163, symbol: "NVDA", nickname: "익명_4238", holdingLabel: "관심종목",
+    content: "에이전트+우주+칩 한 주에 다 모임",
+    createdAt: T31AU + 120*60_000, likes: 12, comments: 1 },
   // ── 2026-08-29 신규 ────────────────
   { id: 1131, symbol: "MACRO", nickname: "익명_3700", holdingLabel: "관심종목",
     content: "워시 첫 잭슨홀 연설이 매파. 물가 개선 뚜렷하지 않다고",
@@ -4106,6 +4153,67 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-08-31 신규 댓글 ────────────────
+  1149: [
+    { id: 1, nickname: "익명_6149", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 8*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6249", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 8*60_000 + 6*60_000, likes: 5 },
+  ],
+  1150: [
+    { id: 1, nickname: "익명_6150", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6250", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1151: [
+    { id: 1, nickname: "익명_6151", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 24*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6251", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 24*60_000 + 6*60_000, likes: 5 },
+  ],
+  1152: [
+    { id: 1, nickname: "익명_6152", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6252", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1153: [
+    { id: 1, nickname: "익명_6153", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 40*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6253", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 40*60_000 + 6*60_000, likes: 5 },
+  ],
+  1154: [
+    { id: 1, nickname: "익명_6154", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 48*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6254", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 48*60_000 + 6*60_000, likes: 5 },
+  ],
+  1155: [
+    { id: 1, nickname: "익명_6155", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 56*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6255", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 56*60_000 + 6*60_000, likes: 5 },
+  ],
+  1156: [
+    { id: 1, nickname: "익명_6156", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 64*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6256", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 64*60_000 + 6*60_000, likes: 5 },
+  ],
+  1157: [
+    { id: 1, nickname: "익명_6157", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 72*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6257", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 72*60_000 + 6*60_000, likes: 5 },
+  ],
+  1158: [
+    { id: 1, nickname: "익명_6158", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6258", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1159: [
+    { id: 1, nickname: "익명_6159", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 88*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6259", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 88*60_000 + 6*60_000, likes: 5 },
+  ],
+  1160: [
+    { id: 1, nickname: "익명_6160", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6260", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 96*60_000 + 6*60_000, likes: 5 },
+  ],
+  1161: [
+    { id: 1, nickname: "익명_6161", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 104*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6261", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 104*60_000 + 6*60_000, likes: 5 },
+  ],
+  1162: [
+    { id: 1, nickname: "익명_6162", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 112*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6262", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 112*60_000 + 6*60_000, likes: 5 },
+  ],
+  1163: [
+    { id: 1, nickname: "익명_6163", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 120*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6263", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T31AU + 120*60_000 + 6*60_000, likes: 5 },
+  ],
   // ── 2026-08-29 신규 댓글 ────────────────
   1131: [
     { id: 1, nickname: "익명_4700", holdingLabel: "관심종목", content: "2% 목표는 바꿀 생각 없다는 말로 들림", createdAt: T29AU + 8*60_000 + 3*60_000, likes: 4 },

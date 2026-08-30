@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.08.31 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">에이전트 메모리 수요가 2030년까지 24배 늘 수 있다는…</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">고대역폭 메모리는 2026~27년 품귀가 이어질 수 있고, 에이전트 한 번 호출에 토큰이 5~30배 늘 수…</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa" text-anchor="end">AI</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#c084fc"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">로마 망원경이 10.15톤짜리 팔콘 헤비로 지구 2차 궤도에…</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">8월 30일 오전 7시 26분(동부) 발사로, 우주 과학 임무와 상업 발사 역량이 같은 주에 겹쳤습니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">엔비디아가 스페이스X 지분 200억 달러 규모로 매수할…</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">예측시장에서 8월 29일 기준 확률이 크게 올랐고, AI와 우주 인프라 연결 논의가 다시 부각됐습니다.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">NVDA</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">운전석·페달 없는 사이버캡 전용 행사가 9월 3일 오스틴에서…</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">차량 가격 3만 달러, 마일당 0.20달러 목표가 함께 제시됐고, 로보택시 일정이 말에서 달력으로…</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#0f1419" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">S&amp;P500 ETF 주간 변동성이 2004년 12월 이후 최저 수준에…</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">8월 28일 종가 769.35달러, -0.23%로 조용히 마감했지만, 잭슨홀 이후 금리 변수는 남아 있습니다.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8" text-anchor="end">SPY</text>
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">태양광·풍력 터빈 수요가 2030년까지 매진 상태로…</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">연간 100기가와트급 태양광과 스페이스X·테슬라의 사내 터빈 주조 계획이 전력 병목과 맞물립니다.</text>
+  <text x="985" y="808" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 에이전트 메모리 24배 · 로마 망원경 FH13 · NVDA 200억 달러 SPCX · 사이버캡 9/3 · SPY 저변동 · 터빈 2030 매진</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

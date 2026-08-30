@@ -4,6 +4,211 @@ const body = (lines: string) => `${lines}\n\ninvestus.kr SRP 최고투자책임�
 
 /** 안전자산 시드 — 한장요약 + BTC + 금 + 당일 이슈 자산 2~3 (총 5~6). 매일 아침 9시 KST 업데이트 */
 export const SEED_REPORTS_SAFE: Report[] = [
+  {
+    id: "safe-seed-109",
+    title: "2026년 8월 31일 안전자산 한장 요약입니다. BTC ~78,128·ETH ~2,459·금 ~4,635·인상 57.5%를 모았습니다",
+    summary: "BTC ~78128, ETH ~2459, gold ~4635, Sept hike 57.5%. safe assets repricing with rates.",
+    body: `■ 오늘의 큰 그림
+
+BTC 78K test, gold 4635, ETH 2459, hike odds elevated.
+
+■ 앞으로 볼 것
+
+(1) 2Y yield (2) DXY (3) ETF flows (4) Sept jobs (5) gold 4600-4700 band
+
+■ 투자시사점
+
+금리·달러·ETF 유입 세 변수를 같이 추적하시기 바랍니다.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "2026년 8월 31일 안전자산 한장 요약입니다. BTC ~78,128·ETH ~2,459·금 ~4,635·인상 57.5%를 모았습니다",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "특집",
+    categoryColor: "mint",
+    subject: "한장요약",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    isPinned: true,
+    images: ["/charts/summary-safe-20260831.svg"],
+    imagesEn: ["/charts/summary-safe-20260831-en.svg"],
+  },
+  {
+    id: "safe-seed-110",
+    title: "비트코인 ~78,128달러, 7만 8,000달러 선 재테스트",
+    summary: "BTC ~78128 retests 78K; rate-sensitive non-yield asset.",
+    body: `■ 상세
+
+\$78,128, \$78K band, rate odds 57.5%.
+
+■ 왜 이 뉴스가 중요한가
+
+1. opportunity cost 2. ETF flows 3. liquidations 4. DXY 5. correlation with gold
+
+■ 시나리오
+
+**A hold 78K** **B break on hot CPI** **C short squeeze**
+
+■ 오늘까지 흐름
+
+Post-Jackson Hole macro driver.
+
+■ 장기 투자 관점
+
+BTC institutional era since 2024 ETF still rate-sensitive.
+
+■ 앞으로 볼 것
+
+(1) ETF net (2) funding (3) liqs (4) 2Y (5) 78000 break/hold
+
+■ 투자시사점
+
+Flows + rates on one screen.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "비트코인 ~78,128달러, 7만 8,000달러 선 재테스트",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "시장분석",
+    categoryColor: "orange",
+    subject: "비트코인",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/btc-safe-20260831.svg"],
+    imagesEn: ["/charts/btc-safe-20260831-en.svg"],
+  },
+  {
+    id: "safe-seed-111",
+    title: "금 ~4,635달러, 실질금리·달러 변수 재점검",
+    summary: "Gold ~4635/oz; real rates and dollar drive.",
+    body: `■ 상세
+
+Spot gold ~4635.
+
+■ 왜 이 뉴스가 중요한가
+
+1. real rates 2. DXY 3. geopolitical bid 4. central bank buying 5. vs BTC
+
+■ 시나리오
+
+**A real rates peak gold bid** **B dollar rally press** **C stagflation bid**
+
+■ 오늘까지 흐름
+
+Pulled back from higher prints recent weeks.
+
+■ 장기 투자 관점
+
+Gold 2020s bull includes fiscal/geopolitical layer beyond real rates.
+
+■ 앞으로 볼 것
+
+(1) real yield (2) DXY (3) 4600 support (4) 4700 resist (5) ETF holdings
+
+■ 투자시사점
+
+4600-4700 band watch.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "금 ~4,635달러, 실질금리·달러 변수 재점검",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "시장분석",
+    categoryColor: "orange",
+    subject: "금",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/gold-safe-20260831.svg"],
+    imagesEn: ["/charts/gold-safe-20260831-en.svg"],
+  },
+  {
+    id: "safe-seed-112",
+    title: "이더리움 ~2,459달러, BTC와 같은 거시 변수 연동",
+    summary: "ETH ~2459; macro linked; \$2500 psychological.",
+    body: `■ 상세
+
+ETH ~2459, BTC macro beta.
+
+■ 왜 이 뉴스가 중요한가
+
+1. BTC correlation 2. staking yield vs rates 3. gas/L2 medium term 4. ETF narrative 5. 2500 level
+
+■ 시나리오
+
+**A beta rally** **B decorrelate on upgrade** **C macro drag**
+
+■ 오늘까지 흐름
+
+2500 line context.
+
+■ 장기 투자 관점
+
+ETH utility thesis vs macro beta coexist.
+
+■ 앞으로 볼 것
+
+(1) BTC ETH ratio (2) gas (3) staking APR vs 2Y (4) 2400-2500 (5) ETF
+
+■ 투자시사점
+
+Medium-term fundamentals, near-term rates.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "이더리움 ~2,459달러, BTC와 같은 거시 변수 연동",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "시장분석",
+    categoryColor: "orange",
+    subject: "이더리움",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/eth-safe-20260831.svg"],
+    imagesEn: ["/charts/eth-safe-20260831-en.svg"],
+  },
+  {
+    id: "safe-seed-113",
+    title: "은, 금·산업 수요 겹치는 안전자산으로 부각",
+    summary: "Silver: precious + industrial; solar/electronics link.",
+    body: `■ 상세
+
+Silver industrial+p investment demand.
+
+■ 왜 이 뉴스가 중요한가
+
+1. gold/silver ratio 2. solar demand 3. growth sensitivity 4. precious basket 5. volatility vs gold
+
+■ 시나리오
+
+**A gold rally lag catch-up** **B industrial drag** **C ratio mean revert**
+
+■ 오늘까지 흐름
+
+Part of precious metals week.
+
+■ 장기 투자 관점
+
+Silver often higher beta to gold in moves.
+
+■ 앞으로 볼 것
+
+(1) Au/Ag ratio (2) solar installs (3) gold direction (4) industrial PMI (5) ETF
+
+■ 투자시사점
+
+Complement gold not duplicate.
+
+investus.kr SRP 최고투자책임자 발행`,
+    titleEn: "은, 금·산업 수요 겹치는 안전자산으로 부각",
+    summaryEn: "See Korean summary.",
+    bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
+    category: "시장분석",
+    categoryColor: "orange",
+    subject: "은",
+    date: "2026-08-31",
+    updatedAt: "2026.08.31 08:00",
+    images: ["/charts/silver-safe-20260831.svg"],
+    imagesEn: ["/charts/silver-safe-20260831-en.svg"],
+  },
   // ── 2026-08-29 신규 ────────────────────────────────────────────────────────
   {
     id: "safe-seed-106",
