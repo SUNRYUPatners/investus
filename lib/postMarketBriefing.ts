@@ -1,13 +1,13 @@
 import { fetchFinnhubBatch, fetchFinnhubCompanyNews, fetchFinnhubMarketNews } from "@/lib/finnhub";
 import { kvGetDetail, kvSetDetailEx } from "@/lib/kv";
 import { NYSE_HOLIDAYS, toETDateString } from "@/lib/marketHours";
-import type { SessionBriefing } from "@/lib/morningBriefing";
+import type { BriefPhase, SessionBriefing } from "@/lib/morningBriefing";
+import { REPORT_TICKERS, SEED_REPORTS } from "@/lib/reports";
 import { getAdminSupabase } from "@/lib/supabase";
 
-const KV_PREFIX = "post-market-briefing:";
 const KV_TTL = 7 * 24 * 3600;
 
-/** Tesla · SpaceX · Magnificent 7 */
+/** Tesla · SpaceX · Magnificent 7 — 장전·장후 브리핑 공통 유니버스 */
 export const POST_MARKET_UNIVERSE = [
   { symbol: "TSLA", name: "Tesla" },
   { symbol: "SPCX", name: "SpaceX" },
@@ -18,6 +18,9 @@ export const POST_MARKET_UNIVERSE = [
   { symbol: "AMZN", name: "Amazon" },
   { symbol: "META", name: "Meta" },
 ] as const;
+
+/** 매 브리핑에 반드시 포함 (뉴스 없어도 CIO 리포트·프리마켓 시세로 채움) */
+export const MANDATORY_BRIEFING_SYMBOLS = ["SPCX"] as const;
 
 type NewsLine = { symbol: string; headline: string; summary: string; datetime: number; source: string };
 
@@ -62,8 +65,29 @@ export function lastCompletedSessionDate(now = new Date()): string {
   return toETDateString(now);
 }
 
-function kvKey(dateKey: string) {
-  return `${KV_PREFIX}${dateKey}`;
+function kvKey(phase: BriefPhase, dateKey: string) {
+  const prefix = phase === "pre" ? "pre-market-briefing" : "post-market-briefing";
+  return `${prefix}:${dateKey}`;
+}
+
+/** 다음 정규장 세션 날짜 (ET). 마감 후면 다음 거래일. */
+export function upcomingSessionDate(now = new Date()): string {
+  const et = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+  const pastClose = et.getHours() * 60 + et.getMinutes() >= 16 * 60;
+  for (let forward = 0; forward < 10; forward++) {
+    const d = new Date(et);
+    d.setDate(d.getDate() + forward);
+    const dow = d.getDay();
+    const str = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    if (dow === 0 || dow === 6 || NYSE_HOLIDAYS.has(str)) continue;
+    if (forward === 0 && pastClose) continue;
+    return str;
+  }
+  return toETDateString(now);
+}
+
+function sessionDateKey(phase: BriefPhase, now = new Date()): string {
+  return phase === "pre" ? upcomingSessionDate(now) : lastCompletedSessionDate(now);
 }
 
 function parseItem(raw: unknown): GeneratedItem | null {
@@ -161,19 +185,20 @@ function needsEnglish(s: PostMarketStored): boolean {
   return s.items.some((it) => !it.titleEn?.trim() && !it.summaryEn?.trim());
 }
 
-async function loadStored(dateKey: string): Promise<PostMarketStored | null> {
-  const fromKv = asStored(await kvGetDetail(kvKey(dateKey)));
+async function loadStored(phase: BriefPhase, dateKey: string): Promise<PostMarketStored | null> {
+  const key = kvKey(phase, dateKey);
+  const fromKv = asStored(await kvGetDetail(key));
   if (fromKv) return fromKv;
   try {
     const sb = getAdminSupabase();
-    const { data, error } = await sb.from("app_kv").select("value").eq("key", kvKey(dateKey)).maybeSingle();
+    const { data, error } = await sb.from("app_kv").select("value").eq("key", key).maybeSingle();
     if (!error && data?.value) return asStored(data.value);
   } catch { /* ignore */ }
   return null;
 }
 
-async function saveStored(payload: PostMarketStored): Promise<void> {
-  const key = kvKey(payload.dateKey);
+async function saveStored(phase: BriefPhase, payload: PostMarketStored): Promise<void> {
+  const key = kvKey(phase, payload.dateKey);
   await kvSetDetailEx(key, payload, KV_TTL);
   try {
     const sb = getAdminSupabase();
@@ -192,13 +217,19 @@ function dayStartUnix(dateKey: string): number {
 
 const LISTED_UNIVERSE = POST_MARKET_UNIVERSE.filter((u) => u.symbol !== "SPCX");
 
-async function collectSessionNews(dateKey: string): Promise<{ news: NewsLine[]; quotes: string }> {
-  const from = dateKey;
-  const startUnix = dayStartUnix(dateKey);
+async function collectSessionNews(
+  phase: BriefPhase,
+  sessionDate: string,
+  now = new Date(),
+): Promise<{ news: NewsLine[]; quotes: string }> {
+  const from =
+    phase === "pre" ? lastCompletedSessionDate(now) : sessionDate;
+  const to = sessionDate;
+  const startUnix = dayStartUnix(from);
   const perSymbol = await Promise.all(
     LISTED_UNIVERSE.map(async ({ symbol }) => {
       try {
-        const items = await fetchFinnhubCompanyNews(symbol, from, dateKey);
+        const items = await fetchFinnhubCompanyNews(symbol, from, to);
         return items
           .filter((n) => n.headline)
           .slice(0, 6)
@@ -254,7 +285,88 @@ async function collectSessionNews(dateKey: string): Promise<{ news: NewsLine[]; 
   return { news: deduped, quotes: quoteLines };
 }
 
-function storedFromNews(dateKey: string, news: NewsLine[]): PostMarketStored | null {
+function latestReportForSymbol(symbol: string) {
+  for (const r of SEED_REPORTS) {
+    const tickers = REPORT_TICKERS[r.id];
+    if (tickers?.includes(symbol) || (symbol === "SPCX" && r.subject === "스페이스X")) {
+      return r;
+    }
+  }
+  return null;
+}
+
+function fallbackItemForSymbol(symbol: string, news: NewsLine[], quotes: string): GeneratedItem {
+  const meta = POST_MARKET_UNIVERSE.find((u) => u.symbol === symbol);
+  const name = meta?.name ?? symbol;
+  const rows = news.filter((n) => n.symbol === symbol);
+  if (rows.length > 0) {
+    const top = rows[0];
+    return {
+      symbol,
+      title: "",
+      summary: "",
+      body: "",
+      titleEn: top.headline.slice(0, 72),
+      summaryEn: (top.summary || top.headline).slice(0, 180),
+      bodyEn: rows
+        .slice(0, 3)
+        .map((n) => `· ${n.headline}${n.summary ? `\n${n.summary}` : ""}`)
+        .join("\n\n"),
+    };
+  }
+
+  const report = latestReportForSymbol(symbol);
+  if (report) {
+    return {
+      symbol,
+      title: report.title,
+      summary: report.summary,
+      body: (report.body || report.summary).slice(0, 1200),
+      titleEn: report.titleEn,
+      summaryEn: report.summaryEn,
+      bodyEn: report.bodyEn,
+    };
+  }
+
+  const quoteLine = quotes.split("\n").find((l) => l.startsWith(`${name}(${symbol})`));
+  const move = quoteLine?.includes("n/a") ? "" : quoteLine?.split(": ")[1] ?? "";
+  const phaseHint =
+    symbol === "SPCX"
+      ? "스타링크·스타십·발사 일정·위성 AI 등 우주 사업 뉴스를 개장 전·마감 후마다 함께 짚습니다."
+      : `${name} 관련 헤드라인이 오늘 피드에 없습니다.`;
+
+  return {
+    symbol,
+    title: `${name} · ${move ? `프리/정규장 ${move}` : "오늘 헤드라인 없음"}`,
+    summary: phaseHint,
+    body: `${phaseHint}\n\n당일 등락: ${quoteLine || "시세 데이터 없음"}\n\n투자 판단은 공식 실적·발사·계약 공시를 기준으로 하시기 바랍니다.`,
+    titleEn: `${name} · ${move ? `session ${move}` : "no headline today"}`,
+    summaryEn: `SpaceX is included in every US pre/post brief alongside Mag 7 and Tesla.`,
+    bodyEn: `${phaseHint}\n\nSession move: ${quoteLine || "n/a"}`,
+  };
+}
+
+function ensureMandatorySymbols(
+  stored: PostMarketStored,
+  news: NewsLine[],
+  quotes: string,
+): PostMarketStored {
+  const items = [...stored.items];
+  const have = new Set(items.map((it) => it.symbol));
+
+  for (const symbol of MANDATORY_BRIEFING_SYMBOLS) {
+    if (have.has(symbol)) continue;
+    const item = fallbackItemForSymbol(symbol, news, quotes);
+    const tslaIdx = items.findIndex((it) => it.symbol === "TSLA");
+    const insertAt = symbol === "SPCX" && tslaIdx >= 0 ? tslaIdx + 1 : 0;
+    items.splice(insertAt, 0, item);
+    have.add(symbol);
+  }
+
+  return normalizeStored({ ...stored, items: items.slice(0, 8) });
+}
+
+function storedFromNews(dateKey: string, news: NewsLine[], quotes: string): PostMarketStored | null {
   const items: GeneratedItem[] = [];
   for (const { symbol } of POST_MARKET_UNIVERSE) {
     const rows = news.filter((n) => n.symbol === symbol).slice(0, 3);
@@ -273,17 +385,22 @@ function storedFromNews(dateKey: string, news: NewsLine[]): PostMarketStored | n
     });
     if (items.length >= 8) break;
   }
-  if (items.length === 0) return null;
-  return {
-    dateKey,
-    headline: "",
-    headlineEn: `${dateKey} session · ${items[0].symbol} ${items[0].titleEn || ""}`.slice(0, 80),
-    items,
-    generatedAt: Date.now(),
-  };
+  return ensureMandatorySymbols(
+    {
+      dateKey,
+      headline: "",
+      headlineEn: items.length > 0
+        ? `${dateKey} session · ${items[0].symbol} ${items[0].titleEn || ""}`.slice(0, 80)
+        : `${dateKey} · Tesla · SpaceX · Mag7`,
+      items,
+      generatedAt: Date.now(),
+    },
+    news,
+    quotes,
+  );
 }
 
-async function loadRecentStored(now = new Date()): Promise<PostMarketStored | null> {
+async function loadRecentStored(phase: BriefPhase, now = new Date()): Promise<PostMarketStored | null> {
   const et = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
   for (let back = 0; back < 10; back++) {
     const d = new Date(et);
@@ -291,7 +408,7 @@ async function loadRecentStored(now = new Date()): Promise<PostMarketStored | nu
     const dow = d.getDay();
     const str = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
     if (dow === 0 || dow === 6 || NYSE_HOLIDAYS.has(str)) continue;
-    const cached = await loadStored(str);
+    const cached = await loadStored(phase, str);
     if (cached) return cached;
   }
   return null;
@@ -397,7 +514,11 @@ ${JSON.stringify(payload)}`;
   }
 }
 
-async function ensureBilingual(stored: PostMarketStored, apiKey?: string): Promise<PostMarketStored> {
+async function ensureBilingual(
+  phase: BriefPhase,
+  stored: PostMarketStored,
+  apiKey?: string,
+): Promise<PostMarketStored> {
   const normalized = normalizeStored(stored);
   if (!apiKey) return normalized;
   if (!needsKorean(normalized) && !needsEnglish(normalized)) return normalized;
@@ -407,12 +528,13 @@ async function ensureBilingual(stored: PostMarketStored, apiKey?: string): Promi
     filled.headlineEn !== stored.headlineEn ||
     JSON.stringify(filled.items) !== JSON.stringify(stored.items)
   ) {
-    await saveStored(filled);
+    await saveStored(phase, filled);
   }
   return filled;
 }
 
 async function generateWithClaude(
+  phase: BriefPhase,
   dateKey: string,
   news: NewsLine[],
   quotes: string,
@@ -422,23 +544,30 @@ async function generateWithClaude(
     .map((n) => `[${n.symbol}] ${n.headline}${n.summary ? ` — ${n.summary}` : ""} (${n.source})`)
     .join("\n");
 
-  const prompt = `오늘(${dateKey}) 미국 정규장 마감 후 브리핑을 한국어와 영어로 동시에 작성해.
+  const phaseKo = phase === "pre" ? "개장 전(전일 마감~프리마켓)" : "마감 후(프리마켓~정규장 마감)";
+  const newsWindow =
+    phase === "pre"
+      ? "전일 마감 이후~개장 전 뉴스와 프리/선물 시세"
+      : "오늘 장중(프리마켓~마감) 실제 뉴스와 당일 등락";
 
-우선순위: Tesla, SpaceX, Magnificent 7 (NVDA·AAPL·MSFT·GOOGL·AMZN·META).
-아래는 오늘 장중(프리마켓~마감) 실제 뉴스와 당일 등락이다. 여기에 없는 사실·수치·가이던스를 지어내지 마라.
-뉴스가 없는 종목은 생략. 비슷한 뉴스는 하나로 합쳐라.
+  const prompt = `오늘(${dateKey}) 미국 정규장 ${phaseKo} 브리핑을 한국어와 영어로 동시에 작성해.
+
+우선순위: Tesla, SpaceX(SPCX), Magnificent 7 (NVDA·AAPL·MSFT·GOOGL·AMZN·META).
+아래는 ${newsWindow}이다. 여기에 없는 사실·수치·가이던스를 지어내지 마라.
+**SpaceX(SPCX)는 뉴스가 없어도 items에 반드시 1개 포함** — 스타링크·스타십·발사·위성 AI 등 최근 맥락을 짧게 정리.
+그 외 뉴스가 없는 종목은 생략. 비슷한 뉴스는 하나로 합쳐라.
 투자 권유·목표가·매수/매도 금지.
 한국어는 증권사 데스크 톤. 영어는 concise US desk English. 두 언어는 같은 사실이어야 한다.
 
-당일 등락:
+당일·프리 등락:
 ${quotes}
 
-장중 뉴스:
+뉴스:
 ${newsBlock}
 
 JSON만 출력:
 {"headlineKo":"세션 핵심 한 줄(80자 이내)","headlineEn":"one-line session takeaway","items":[{"symbol":"TSLA","titleKo":"짧은 제목","titleEn":"short title","summaryKo":"2문장","summaryEn":"2 sentences","bodyKo":"4~6문장. 뉴스 근거.","bodyEn":"4-6 sentences grounded in the news."}]}
-items는 6~8개. Tesla·SpaceX를 앞에 두고 나머진 임팩트 순.`;
+items는 6~8개. Tesla·SpaceX(SPCX)를 앞에 두고 나머진 임팩트 순. SPCX는 필수.`;
 
   try {
     const res = await fetch("https://api.anthropic.com/v1/messages", {
@@ -460,31 +589,35 @@ items는 6~8개. Tesla·SpaceX를 앞에 두고 나머진 임팩트 순.`;
     const text = data.content?.[0]?.text?.trim() ?? "";
     const parsed = extractJson(text);
     if (!parsed) return null;
-    return normalizeStored({
-      dateKey,
-      headline: parsed.headline,
-      headlineEn: parsed.headlineEn,
-      items: parsed.items,
-      generatedAt: Date.now(),
-    });
+    return ensureMandatorySymbols(
+      normalizeStored({
+        dateKey,
+        headline: parsed.headline,
+        headlineEn: parsed.headlineEn,
+        items: parsed.items,
+        generatedAt: Date.now(),
+      }),
+      news,
+      quotes,
+    );
   } catch {
     return null;
   }
 }
 
-export function storedToBriefing(stored: PostMarketStored): SessionBriefing {
+export function storedToBriefing(stored: PostMarketStored, phase: BriefPhase = "post"): SessionBriefing {
   return {
-    phase: "post",
+    phase,
     dateKey: stored.dateKey,
     source: "session-news",
-    labelKo: "장후 브리핑",
-    labelEn: "After-close brief",
+    labelKo: phase === "pre" ? "장전 브리핑" : "장후 브리핑",
+    labelEn: phase === "pre" ? "Pre-market brief" : "After-close brief",
     headline: stored.headline || stored.headlineEn || "",
     headlineEn: stored.headlineEn || undefined,
     bullets: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.title || it.titleEn || ""}`.slice(0, 72)),
     bulletsEn: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.titleEn || it.title || ""}`.slice(0, 72)),
     reports: stored.items.map((it, i) => ({
-      id: `pm-${stored.dateKey}-${it.symbol}-${i}`,
+      id: `${phase === "pre" ? "am" : "pm"}-${stored.dateKey}-${it.symbol}-${i}`,
       title: `${it.symbol} · ${it.title || it.titleEn || ""}`,
       summary: it.summary || it.summaryEn || "",
       body: it.body || it.bodyEn || "",
@@ -495,22 +628,22 @@ export function storedToBriefing(stored: PostMarketStored): SessionBriefing {
   };
 }
 
-export async function getOrCreatePostMarketBriefing(opts?: {
-  force?: boolean;
-  now?: Date;
-}): Promise<SessionBriefing | null> {
+async function getOrCreateSessionBriefing(
+  phase: BriefPhase,
+  opts?: { force?: boolean; now?: Date },
+): Promise<SessionBriefing | null> {
   const now = opts?.now ?? new Date();
-  const dateKey = lastCompletedSessionDate(now);
+  const dateKey = sessionDateKey(phase, now);
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!opts?.force) {
-    const cached = await loadStored(dateKey);
-    if (cached) return storedToBriefing(await ensureBilingual(cached, apiKey));
+    const cached = await loadStored(phase, dateKey);
+    if (cached) return storedToBriefing(await ensureBilingual(phase, cached, apiKey), phase);
   }
 
   let news: NewsLine[] = [];
   let quotes = "";
   try {
-    const collected = await collectSessionNews(dateKey);
+    const collected = await collectSessionNews(phase, dateKey, now);
     news = collected.news;
     quotes = collected.quotes;
   } catch {
@@ -518,22 +651,54 @@ export async function getOrCreatePostMarketBriefing(opts?: {
   }
 
   if (apiKey && news.length > 0) {
-    const generated = await generateWithClaude(dateKey, news, quotes, apiKey);
+    const generated = await generateWithClaude(phase, dateKey, news, quotes, apiKey);
     if (generated) {
-      const bilingual = await ensureBilingual(generated, apiKey);
-      await saveStored(bilingual);
-      return storedToBriefing(bilingual);
+      const bilingual = await ensureBilingual(phase, generated, apiKey);
+      await saveStored(phase, bilingual);
+      return storedToBriefing(bilingual, phase);
     }
   }
 
-  const fromNews = storedFromNews(dateKey, news);
+  const fromNews = storedFromNews(dateKey, news, quotes);
   if (fromNews) {
-    const bilingual = await ensureBilingual(fromNews, apiKey);
-    await saveStored(bilingual);
-    return storedToBriefing(bilingual);
+    const bilingual = await ensureBilingual(phase, fromNews, apiKey);
+    await saveStored(phase, bilingual);
+    return storedToBriefing(bilingual, phase);
   }
 
-  const recent = await loadRecentStored(now);
-  if (recent) return storedToBriefing(await ensureBilingual(recent, apiKey));
+  const mandatoryOnly = ensureMandatorySymbols(
+    {
+      dateKey,
+      headline: "",
+      headlineEn: `${dateKey} · Tesla · SpaceX · Mag7`,
+      items: [],
+      generatedAt: Date.now(),
+    },
+    news,
+    quotes,
+  );
+  if (mandatoryOnly.items.length > 0) {
+    const bilingual = await ensureBilingual(phase, mandatoryOnly, apiKey);
+    await saveStored(phase, bilingual);
+    return storedToBriefing(bilingual, phase);
+  }
+
+  const recent = await loadRecentStored(phase, now);
+  if (recent) return storedToBriefing(await ensureBilingual(phase, recent, apiKey), phase);
   return null;
+}
+
+/** 장전 — Tesla·SpaceX·Mag7 뉴스 기반 (SPCX 매번 포함) */
+export async function getOrCreatePreMarketBriefing(opts?: {
+  force?: boolean;
+  now?: Date;
+}): Promise<SessionBriefing | null> {
+  return getOrCreateSessionBriefing("pre", opts);
+}
+
+export async function getOrCreatePostMarketBriefing(opts?: {
+  force?: boolean;
+  now?: Date;
+}): Promise<SessionBriefing | null> {
+  return getOrCreateSessionBriefing("post", opts);
 }

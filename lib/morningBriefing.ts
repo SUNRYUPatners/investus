@@ -69,7 +69,7 @@ function shorten(s: string, max: number): string {
   return `${t.slice(0, max - 1)}…`;
 }
 
-/** 장전 브리핑 — 최신 일자 CIO 리포트. 장마감은 getOrCreatePostMarketBriefing 사용. */
+/** 장전 — getOrCreatePreMarketBriefing (Tesla·SpaceX·Mag7). 장후 — getOrCreatePostMarketBriefing */
 export function buildSessionBriefing(now = new Date()): SessionBriefing | null {
   const dateKey = latestDateKey();
   if (!dateKey) return null;

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAdminSupabase } from "@/lib/supabase";
 import webpush from "web-push";
-import { buildMorningBriefing } from "@/lib/morningBriefing";
+import { getOrCreatePreMarketBriefing } from "@/lib/postMarketBriefing";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -48,9 +48,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ skipped: true, reason: "not pre-market briefing window" });
   }
 
-  const briefing = buildMorningBriefing();
+  const briefing = await getOrCreatePreMarketBriefing();
   if (!briefing) {
-    return NextResponse.json({ skipped: true, reason: "no today reports" });
+    return NextResponse.json({ skipped: true, reason: "no pre-market briefing" });
   }
 
   const { data: subs, error } = await supabase

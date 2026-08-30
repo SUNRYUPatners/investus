@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { buildSessionBriefing, getBriefPhase, type SessionBriefing } from "@/lib/morningBriefing";
-import { getOrCreatePostMarketBriefing } from "@/lib/postMarketBriefing";
+import { getOrCreatePostMarketBriefing, getOrCreatePreMarketBriefing } from "@/lib/postMarketBriefing";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
@@ -27,9 +27,14 @@ export async function GET(req: NextRequest) {
   const phase = getBriefPhase();
 
   if (phase === "pre") {
-    const briefing = buildSessionBriefing();
-    if (!briefing) return NextResponse.json({ briefing: null, phase });
-    return NextResponse.json({ briefing: asPhase(briefing, "pre"), phase });
+    try {
+      const briefing = await getOrCreatePreMarketBriefing({ force });
+      if (briefing) return NextResponse.json({ briefing: asPhase(briefing, "pre"), phase: "pre" });
+    } catch { /* CIO 리포트로 폴백 */ }
+
+    const reports = buildSessionBriefing();
+    if (!reports) return NextResponse.json({ briefing: null, phase });
+    return NextResponse.json({ briefing: asPhase(reports, "pre"), phase: "pre" });
   }
 
   try {
