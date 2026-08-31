@@ -39,6 +39,14 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
 fi
 ok "워킹트리 clean"
 
+# ── 0-B. 애널 MOCK 댓글 데이터 누락 차단 (comments>0 인데 MOCK 비어 있으면 실패) ─
+step 0 "애널 MOCK 댓글 동기화..."
+if node scripts/validate-analyst-mock-sync.js; then
+  ok "애널 댓글 데이터 OK"
+else
+  fail "애널 MOCK 댓글 누락 — node scripts/validate-analyst-mock-sync.js 확인"
+fi
+
 # ── 0. SW 캐시 키 갱신 (배포마다 새 타임스탬프 → 모든 브라우저 SW 업데이트 강제) ─
 NEW_TS=$(node -e "process.stdout.write(String(Date.now()))")
 sed -i '' "s/investus-v[0-9]*/investus-v${NEW_TS}/" public/sw.js

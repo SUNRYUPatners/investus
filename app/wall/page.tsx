@@ -483,6 +483,21 @@ type AnalystPost    = { id: number; alias: string; content: string; symbol: stri
 type AnalystComment = { id: number; alias: string; content: string; created_at: string };
 type CreatorSort = "popular" | "return" | "views" | "subscribers" | "newest";
 
+/** 시드(음수 id) 글: MOCK 댓글 배열 길이를 우선 — comments 숫자와 불일치 방지 */
+function analystCommentCount(
+  postId: number,
+  declared: number | undefined,
+  mockMap: Record<number, { alias: string; content: string; created_at: string }[]>,
+  loaded?: AnalystComment[],
+): number {
+  if (postId < 0) {
+    const mockLen = mockMap[postId]?.length ?? 0;
+    return mockLen > 0 ? mockLen : (declared ?? 0);
+  }
+  if (loaded !== undefined) return loaded.length;
+  return declared ?? 0;
+}
+
 function computeDefaultSymbol(posts: Post[], fallback = "AAPL"): string {
   if (typeof window !== "undefined") {
     const q = new URLSearchParams(window.location.search).get("symbol");
@@ -1843,11 +1858,12 @@ export default function WallPage() {
                           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                         </svg>
                         <span>
-                          {post.id < 0
-                            ? (post.comments ?? 0)
-                            : analystComments[post.id] !== undefined
-                              ? analystComments[post.id].length
-                              : (post.comments ?? 0)}
+                          {analystCommentCount(
+                            post.id,
+                            post.comments,
+                            MOCK_ANALYST_COMMENTS,
+                            post.id >= 0 ? analystComments[post.id] : undefined,
+                          )}
                         </span>
                       </button>
                     </div>
@@ -1878,6 +1894,12 @@ export default function WallPage() {
                             <p className="text-[12px] leading-relaxed" style={{ color: "var(--text)" }}>{c.content}</p>
                           </div>
                         ))}
+                        {post.id < 0 && (MOCK_ANALYST_COMMENTS[post.id] ?? []).length === 0 && (
+                          <p className="text-xs text-center py-2" style={{ color: "var(--muted)" }}>{w.commentEmpty}</p>
+                        )}
+                        {post.id >= 0 && (analystComments[post.id] ?? []).length === 0 && (
+                          <p className="text-xs text-center py-2" style={{ color: "var(--muted)" }}>{w.commentEmpty}</p>
+                        )}
 
                         {/* Comment input — analysts only */}
                         {analystStatus === "approved" && post.id >= 0 && (

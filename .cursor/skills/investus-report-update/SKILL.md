@@ -196,6 +196,7 @@ description: >-
 3. `lib/reports.ts` seed + tickers — **존댓말 문장형 제목·요약 + 본문 풍성(초보 풀이) + 투자시사점**
 4. `lib/wallPosts.ts` 글/댓글 + `LATEST_UPDATE` (+ markets wall)
 5. `lib/analystPosts.ts` 개별 리포트마다 1개 이상 (+ markets analyst) — **⚠️ 글 구조를 "인트로+1)2)3)4)5)+투자:+STANCE(qualifier)." 하나로 통일 금지. 상세는 `.claude/commands/report-update.md`.**
+   - **애널 댓글 필수:** `comments: N`이면 `MOCK_ANALYST_COMMENTS[같은 id]`에 **N개** 댓글 객체를 반드시 추가 (누락 시 피드에서 숫자만 보이고 클릭하면 빈 화면). 배포 전 `node scripts/validate-analyst-mock-sync.js` 통과.
 6. ~~`export-report-pngs.js` / PNG 폴더 저장~~ — **폐지 (2026-08-27~). 하지 말 것.**
 7. 팩트체크: 스크린샷 재 Read 후 수치 1:1 대조
 8. commit + `bash scripts/deploy.sh` (필요 시 `--notify`)
