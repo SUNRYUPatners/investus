@@ -144,7 +144,7 @@ export function lastCompletedSessionDate(now = new Date()): string {
 }
 
 function kvKey(phase: BriefPhase, dateKey: string) {
-  const prefix = phase === "pre" ? "pre-market-briefing" : "post-market-briefing";
+  const prefix = phase === "pre" ? "pre-market-briefing:v2" : "post-market-briefing:v2";
   return `${prefix}:${dateKey}`;
 }
 
