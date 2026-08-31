@@ -62,6 +62,67 @@ function cleanNewsText(s: string): string {
   return fixUtf8Mojibake(s.replace(/\s+/g, " ").trim());
 }
 
+const SYMBOL_NAME_RE: Record<string, RegExp> = {
+  TSLA: /\b(tesla|tsla|cybercab|robotaxi|optimus|fsd)\b/i,
+  NVDA: /\b(nvidia|nvda|rubin|blackwell|hopper)\b/i,
+  AAPL: /\b(apple|aapl|iphone|ipad|mac)\b/i,
+  MSFT: /\b(microsoft|msft|azure|copilot)\b/i,
+  GOOGL: /\b(google|googl|alphabet|gemini|waymo)\b/i,
+  AMZN: /\b(amazon|amzn|aws)\b/i,
+  META: /\b(meta|facebook|instagram|whatsapp|llama)\b/i,
+  SPCX: /\b(spacex|spcx|starlink|starship|falcon)\b/i,
+};
+
+const JUNK_NEWS_EN =
+  /\b(are you curious|get information|find out|wondering what|most active stock|top movers?|winners and losers|comprehensive overview|leading the (way|pack)|look at today'?s session)\b/i;
+
+const JUNK_BRIEF_KO =
+  /(궁금하십니까|정보를 받아보세요|알아보세요|최고 변동 항목|가장 활발한 주식|최고 성과자|최고 승자)/;
+
+/** Finnhub SEO·지수 요약 스팸 — 종목 브리핑에 쓰면 안 됨 */
+function isJunkNewsLine(n: NewsLine, symbol: string): boolean {
+  const text = `${n.headline} ${n.summary}`;
+  if (!text.trim() || text.length < 16) return true;
+  if (JUNK_NEWS_EN.test(text)) return true;
+  if (/\bs&p\s*500\b/i.test(text) && !SYMBOL_NAME_RE[symbol]?.test(text)) return true;
+  if (/\bdow jones\b/i.test(text) && !SYMBOL_NAME_RE[symbol]?.test(text)) return true;
+  if (/\b(nasdaq|index)\b/i.test(text) && !SYMBOL_NAME_RE[symbol]?.test(text)) return true;
+  return false;
+}
+
+function isLowQualityBriefText(text: string | undefined): boolean {
+  const t = (text || "").trim();
+  if (!t) return false;
+  if (JUNK_NEWS_EN.test(t) || JUNK_BRIEF_KO.test(t)) return true;
+  if (/^(TSLA|NVDA|AAPL|MSFT|GOOGL|AMZN|META|SPCX)\s*이\s+S&P/i.test(t)) return true;
+  if (/S&P\s*500.*(세션|session).*(움직|moving)/i.test(t) && !SYMBOL_NAME_RE.TSLA.test(t)) return true;
+  return false;
+}
+
+function itemLooksLowQuality(it: GeneratedItem): boolean {
+  const blob = [it.title, it.summary, it.body, it.titleEn, it.summaryEn, it.bodyEn].join(" ");
+  return isLowQualityBriefText(blob);
+}
+
+function storedHasLowQuality(stored: PostMarketStored): boolean {
+  if (isLowQualityBriefText(stored.headline) || isLowQualityBriefText(stored.headlineEn)) return true;
+  return stored.items.some((it) => itemLooksLowQuality(it));
+}
+
+function qualityNewsForSymbol(news: NewsLine[], symbol: string): NewsLine[] {
+  return news.filter((n) => n.symbol === symbol && !isJunkNewsLine(n, symbol));
+}
+
+function defaultSessionHeadline(dateKey: string, phase: BriefPhase): { ko: string; en: string } {
+  const ko = phase === "pre"
+    ? `${dateKey} 장전 · 테슬라·스페이스X·빅테크 핵심`
+    : `${dateKey} 장후 · 테슬라·스페이스X·빅테크 세션 정리`;
+  const en = phase === "pre"
+    ? `${dateKey} pre-market · Tesla · SpaceX · Mag7`
+    : `${dateKey} after-close · Tesla · SpaceX · Mag7`;
+  return { ko, en };
+}
+
 function asText(v: unknown): string {
   return typeof v === "string" ? v.trim() : "";
 }
@@ -283,6 +344,7 @@ async function collectSessionNews(
   const seen = new Set<string>();
   const deduped: NewsLine[] = [];
   for (const n of news) {
+    if (isJunkNewsLine(n, n.symbol)) continue;
     const k = n.headline.toLowerCase().replace(/\s+/g, " ").trim();
     if (seen.has(k)) continue;
     seen.add(k);
@@ -314,7 +376,7 @@ function latestReportForSymbol(symbol: string) {
 function fallbackItemForSymbol(symbol: string, news: NewsLine[], quotes: string): GeneratedItem {
   const meta = POST_MARKET_UNIVERSE.find((u) => u.symbol === symbol);
   const name = meta?.name ?? symbol;
-  const rows = news.filter((n) => n.symbol === symbol);
+  const rows = qualityNewsForSymbol(news, symbol);
   if (rows.length > 0) {
     const top = rows[0];
     return {
@@ -382,10 +444,45 @@ function ensureMandatorySymbols(
   return normalizeStored({ ...stored, items: items.slice(0, 8) });
 }
 
-function storedFromNews(dateKey: string, news: NewsLine[], quotes: string): PostMarketStored | null {
+function repairStoredItems(
+  stored: PostMarketStored,
+  news: NewsLine[],
+  quotes: string,
+  phase: BriefPhase,
+): PostMarketStored {
+  const items = stored.items.map((it) => {
+    if (!itemLooksLowQuality(it)) return it;
+    const fresh = fallbackItemForSymbol(it.symbol, news, quotes);
+    if (itemLooksLowQuality(fresh)) return it;
+    return fresh;
+  });
+  const head = defaultSessionHeadline(stored.dateKey, phase);
+  let headline = stored.headline;
+  let headlineEn = stored.headlineEn;
+  if (isLowQualityBriefText(headline)) headline = head.ko;
+  if (isLowQualityBriefText(headlineEn)) headlineEn = head.en;
+  if (!hasHangul(headline) && items.some((it) => hasHangul(it.title))) {
+    const first = items.find((it) => hasHangul(it.title));
+    if (first) headline = `${stored.dateKey} 장후 · ${first.title}`.slice(0, 80);
+  }
+  return normalizeStored({
+    ...stored,
+    headline,
+    headlineEn,
+    items,
+    generatedAt: Date.now(),
+  });
+}
+
+function storedFromNews(
+  dateKey: string,
+  news: NewsLine[],
+  quotes: string,
+  phase: BriefPhase = "post",
+): PostMarketStored | null {
   const items: GeneratedItem[] = [];
   for (const { symbol } of POST_MARKET_UNIVERSE) {
-    const rows = news.filter((n) => n.symbol === symbol).slice(0, 3);
+    const rows = qualityNewsForSymbol(news, symbol).slice(0, 3);
     if (rows.length === 0) continue;
     const top = rows[0];
     items.push({
@@ -401,13 +498,12 @@ function storedFromNews(dateKey: string, news: NewsLine[], quotes: string): Post
     });
     if (items.length >= 8) break;
   }
+  const head = defaultSessionHeadline(dateKey, phase);
   return ensureMandatorySymbols(
     {
       dateKey,
-      headline: "",
-      headlineEn: items.length > 0
-        ? `${dateKey} session · ${items[0].symbol} ${items[0].titleEn || ""}`.slice(0, 80)
-        : `${dateKey} · Tesla · SpaceX · Mag7`,
+      headline: head.ko,
+      headlineEn: head.en,
       items,
       generatedAt: Date.now(),
     },
@@ -537,7 +633,10 @@ async function translateStoredToKorean(stored: PostMarketStored): Promise<PostMa
   let headline = stored.headline;
   if (!hasHangul(headline)) {
     const src = headline || stored.headlineEn || "";
-    if (src) headline = await translateText(src, "ko", "en");
+    if (src) {
+      const translated = await translateText(src, "ko", "en");
+      if (!isLowQualityBriefText(translated)) headline = translated;
+    }
   }
 
   const items = await Promise.all(
@@ -551,14 +650,21 @@ async function translateStoredToKorean(stored: PostMarketStored): Promise<PostMa
       let body = it.body;
 
       if (!hasHangul(title) && (title || titleEn)) {
-        title = await translateText(title || titleEn, "ko", "en");
+        const translated = await translateText(title || titleEn, "ko", "en");
+        if (!isLowQualityBriefText(translated)) title = translated;
       }
       if (!hasHangul(summary) && (summary || summaryEn)) {
-        summary = await translateText(summary || summaryEn, "ko", "en");
+        const translated = await translateText(summary || summaryEn, "ko", "en");
+        if (!isLowQualityBriefText(translated)) summary = translated;
       }
       if (!hasHangul(body) && (body || bodyEn)) {
         const src = body || bodyEn;
-        body = src.length > 1800 ? src : await translateText(src, "ko", "en");
+        if (src.length > 1800) {
+          body = src;
+        } else {
+          const translated = await translateText(src, "ko", "en");
+          if (!isLowQualityBriefText(translated)) body = translated;
+        }
       }
 
       return {
@@ -702,8 +808,16 @@ async function resolveStoredBriefing(
   phase: BriefPhase,
   stored: PostMarketStored,
   apiKey: string | undefined,
+  ctx?: { news: NewsLine[]; quotes: string },
 ): Promise<SessionBriefing> {
-  const normalized = normalizeStored(stored);
+  let normalized = normalizeStored(stored);
+  if (storedHasLowQuality(normalized) && ctx) {
+    const repaired = repairStoredItems(normalized, ctx.news, ctx.quotes, phase);
+    if (!storedHasLowQuality(repaired)) {
+      normalized = await ensureBilingual(phase, repaired, apiKey);
+      await saveStored(phase, normalized);
+    }
+  }
   if (!needsKorean(normalized)) {
     return storedToBriefing(normalized, phase);
   }
@@ -718,10 +832,6 @@ async function getOrCreateSessionBriefing(
   const now = opts?.now ?? new Date();
   const dateKey = sessionDateKey(phase, now);
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!opts?.force) {
-    const cached = await loadStored(phase, dateKey);
-    if (cached) return resolveStoredBriefing(phase, cached, apiKey);
-  }
 
   let news: NewsLine[] = [];
   let quotes = "";
@@ -733,6 +843,21 @@ async function getOrCreateSessionBriefing(
     news = [];
   }
 
+  const ctx = { news, quotes };
+
+  if (!opts?.force) {
+    const cached = await loadStored(phase, dateKey);
+    if (cached) {
+      if (storedHasLowQuality(cached)) {
+        const repaired = repairStoredItems(cached, news, quotes, phase);
+        const bilingual = await ensureBilingual(phase, repaired, apiKey);
+        await saveStored(phase, bilingual);
+        return storedToBriefing(bilingual, phase);
+      }
+      return resolveStoredBriefing(phase, cached, apiKey, ctx);
+    }
+  }
+
   if (apiKey && news.length > 0) {
     const generated = await generateWithClaude(phase, dateKey, news, quotes, apiKey);
     if (generated) {
@@ -742,7 +867,7 @@ async function getOrCreateSessionBriefing(
     }
   }
 
-  const fromNews = storedFromNews(dateKey, news, quotes);
+  const fromNews = storedFromNews(dateKey, news, quotes, phase);
   if (fromNews) {
     const bilingual = await ensureBilingual(phase, fromNews, apiKey);
     await saveStored(phase, bilingual);
@@ -767,7 +892,7 @@ async function getOrCreateSessionBriefing(
   }
 
   const recent = await loadRecentStored(phase, now);
-  if (recent) return resolveStoredBriefing(phase, recent, apiKey);
+  if (recent) return resolveStoredBriefing(phase, recent, apiKey, ctx);
   return null;
 }
 
