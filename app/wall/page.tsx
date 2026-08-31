@@ -491,8 +491,7 @@ function analystCommentCount(
   loaded?: AnalystComment[],
 ): number {
   if (postId < 0) {
-    const mockLen = mockMap[postId]?.length ?? 0;
-    return mockLen > 0 ? mockLen : (declared ?? 0);
+    return mockMap[postId]?.length ?? 0;
   }
   if (loaded !== undefined) return loaded.length;
   return declared ?? 0;

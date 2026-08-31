@@ -197,7 +197,7 @@ description: >-
 3. `lib/reports.ts` seed + tickers — **존댓말 문장형 제목·요약 + 본문 풍성(초보 풀이) + 투자시사점**
 4. `lib/wallPosts.ts` 글/댓글 + `LATEST_UPDATE` (+ markets wall)
 5. `lib/analystPosts.ts` 개별 리포트마다 1개 이상 (+ markets analyst) — **⚠️ 글 구조를 "인트로+1)2)3)4)5)+투자:+STANCE(qualifier)." 하나로 통일 금지. 상세는 `.claude/commands/report-update.md`.**
-   - **애널 댓글 필수:** `comments: N`이면 `MOCK_ANALYST_COMMENTS[같은 id]`에 **N개** 댓글 객체를 반드시 추가 (누락 시 피드에서 숫자만 보이고 클릭하면 빈 화면). 배포 전 `node scripts/validate-analyst-mock-sync.js` 통과.
+   - **애널 댓글 필수:** `comments: N`이면 해당 시장 `MOCK_ANALYST_COMMENTS_*`에 **N개** 댓글 객체를 반드시 추가 (누락 시 피드에서 숫자만 보이고 클릭하면 빈 화면). 배포 전 `node scripts/validate-analyst-mock-sync.js` 통과 — **US·KR·Safe·KR-RE 모두 실패 시 배포 차단**.
 6. ~~`export-report-pngs.js` / PNG 폴더 저장~~ — **폐지 (2026-08-27~). 하지 말 것.**
 7. 팩트체크: 스크린샷 재 Read 후 수치 1:1 대조
 8. commit + `bash scripts/deploy.sh` (필요 시 `--notify`)
@@ -241,7 +241,7 @@ description: >-
   1. `lib/reports-{kr|safe|kr-re}.ts` — 당일 리포트 시드
   2. `public/charts/*-{kr|safe|krre}-*.svg` — 차트
   3. `lib/wallPosts-markets.ts` — **`MOCK_POSTS_KR` / `_SAFE` / `_KR_RE` + 댓글** (종목토론 탭)
-  4. `lib/analystPosts-markets.ts` — **`MOCK_ANALYST_POSTS_KR` / `_SAFE` / `_KR_RE` + 댓글** (애널 탭)
+  4. `lib/analystPosts-markets.ts` — **`MOCK_ANALYST_POSTS_*` 1:1 + `MOCK_ANALYST_COMMENTS_*` 동일 id·동일 개수** (애널 탭)
   - 당일 **개별 리포트 1개 = 애널 1개** (1:1). 종토방은 리포트 주제를 **커버하는 글 4~8개** + 댓글.
 - 모든 시장 본문: **한글 존댓말 문장형**, 영문 불릿 금지 (위 「8/28 강제」).
 - SVG noteSub 3~4줄, 카드 한글 맥락 필수.
