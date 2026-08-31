@@ -47,7 +47,14 @@ else
   fail "애널 MOCK 댓글 누락 — node scripts/validate-analyst-mock-sync.js 확인"
 fi
 
-# ── 0. SW 캐시 키 갱신 (배포마다 새 타임스탬프 → 모든 브라우저 SW 업데이트 강제) ─
+step 0 "한글 리포트 영문 스켈레톤 검증..."
+if node scripts/validate-report-korean.js; then
+  ok "한글 리포트 OK"
+else
+  fail "한글 리포트 영문 혼입 — node scripts/validate-report-korean.js 확인"
+fi
+
+# ── 0. SW 캐시 키 갱신
 NEW_TS=$(node -e "process.stdout.write(String(Date.now()))")
 sed -i '' "s/investus-v[0-9]*/investus-v${NEW_TS}/" public/sw.js
 ok "SW 캐시 키 갱신: investus-v${NEW_TS}"

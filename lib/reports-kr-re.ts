@@ -7,22 +7,10 @@ export const SEED_REPORTS_KR_RE: Report[] = [
   {
     id: "krre-seed-109",
     title: "2026년 8월 31일 부동산 한장 요약입니다. 서울 +0.29%·강남 -0.11%·중랑 +0.56%·전세 +0.22%",
-    summary: "Seoul sale +0.29%, Gangnam -0.11% 3wk down, Jungnang +0.56%, jeonse +0.22%.",
-    body: `■ 오늘의 큰 그림
-
-Seoul average up but Gangnam down, outer north up, jeonse +0.22%.
-
-■ 앞으로 볼 것
-
-(1) Gangnam trend (2) outer Seoul persistence (3) jeonse ratio (4) tax policy (5) loan rules
-
-■ 투자시사점
-
-평균 한 줄이 아니라 구별 heat map으로 보시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "2026년 8월 31일 부동산 한장 요약입니다. 서울 +0.29%·강남 -0.11%·중랑 +0.56%·전세 +0.22%",
-    summaryEn: "See Korean summary.",
+    summary: "8월 넷째 주 서울 아파트 매매가격은 0.29% 올랐지만 강남구는 -0.11%로 3주 연속 내렸습니다. 중랑구 0.56% 등 외곽·강북 상승이 서울 평균을 이끌었고, 서울 전세는 0.22% 올랐습니다.",
+    body: `■ 오늘의 큰 그림\n\n8월 넷째 주 부동산 시장의 핵심은 「서울 평균」과 「구별 흐름」이 갈렸다는 점입니다. 서울 아파트 매매가격은 0.29% 올랐지만, 강남구는 -0.11%로 3주 연속 하락했습니다. 서초구도 -0.05%로 같은 흐름입니다.\n\n상승을 이끈 곳은 강남권이 아니라 외곽·강북이었습니다. 중랑구 0.56%, 강북 14개 구 평균 0.40%로 집값 부담이 낮은 지역으로 매수세가 옮겨 간 모습입니다. 서울 전세는 0.22% 올라 전주 0.19%보다 상승 폭을 키웠습니다.\n\n같은 도시 안에서 고가·저가 가격대가 반대로 움직이는 국면입니다. 평균 한 줄만 보면 강남 약세와 중랑 강세를 동시에 놓치게 됩니다.\n\n■ 앞으로 볼 것\n\n(1) 강남·서초 3주 연속 하락이 이어지는지 확인하시기 바랍니다.\n\n(2) 강북·외곽 상승률 유지 여부를 보시면 됩니다.\n\n(3) 서울 전세 0.22% 상승이 매매와 같이 움직이는지 추적하시기 바랍니다.\n\n(4) 세제개편·대출 규제 후속을 확인하시면 됩니다.\n\n(5) 전월세 전환·안심신탁 공고 일정(9월 말)을 보시기 바랍니다.\n\n■ 투자시사점\n\n부동산은 「서울 +0.29%」 한 줄로 읽지 마시고 구별로 지도처럼 보시기 바랍니다. 강남 약세와 중랑 강세가 동시에 있으면 가격대별 수요 이동으로 해석하는 편이 정확합니다.\n\n전세 0.22% 상승은 매물 부족·금리 변수와 연결됩니다. 매매와 전세를 같은 구 단위로 나란히 적어 두시면 왜곡이 줄어듭니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: "Korean property wrap August 31, 2026: Seoul +0.29%, Gangnam -0.11% third week down, Jungnang +0.56%, jeonse +0.22%",
+    summaryEn: "Fourth week of August: Seoul apartments +0.29% but Gangnam -0.11% for a third week; Jungnang +0.56% led outer/north Seoul; Seoul jeonse +0.22%.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "특집",
     categoryColor: "mint",
@@ -36,38 +24,10 @@ investus.kr SRP 최고투자책임자 발행`,
   {
     id: "krre-seed-110",
     title: "강남·서초 3주 연속 하락, 세제개편 부담",
-    summary: "Gangnam -0.11%, Seocho -0.05% third week; tax reform pressure.",
-    body: `■ 상세
-
-Gangnam/Seocho 3-week decline, tax burden on high-end.
-
-■ 왜 이 뉴스가 중요한가
-
-1. tax reform 2. forced sales 3. vs outer Seoul 4. transaction volume 5. jeonse linkage
-
-■ 시나리오
-
-**A stabilize** **B deeper correction** **C policy tweak**
-
-■ 오늘까지 흐름
-
-Southeast cluster weak 0.03%.
-
-■ 장기 투자 관점
-
-High-end policy shocks rotate demand outward historically.
-
-■ 앞으로 볼 것
-
-(1) Gangnam weekly (2) forced listings (3) tax detail (4) mortgage rules (5) jeonse ratio Gangnam
-
-■ 투자시사점
-
-District-level not city average.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "강남·서초 3주 연속 하락, 세제개편 부담",
-    summaryEn: "See Korean summary.",
+    summary: "강남구는 -0.11%, 서초구는 -0.05%로 3주 연속 하락했습니다. 세제개편·보유세 부담이 고가 주택 tier에 먼저 반영되는 흐름으로 해석됩니다.",
+    body: `■ 상세\n\n8월 넷째 주 강남구 아파트 매매가격은 -0.11%, 서초구는 -0.05%로 3주 연속 하락했습니다. 송파·강동을 포함한 동남권 전체 상승률은 0.03%에 그쳐, 「강남 3구」 약세가 뚜렷합니다.\n\n세제개편·보유세·양도세 부담이 고가 주택 보유자에게 먼저 작용하면, 급매물 증가·거래 위축으로 가격이 먼저 조정받을 수 있습니다. 반면 가격 부담이 낮은 외곽·강북은 같은 주 서울 평균(0.29%)을 끌어올리는 쪽으로 움직였습니다.\n\n강남·서초는 서울 부동산의 「바로미터」로 자주 인용됩니다. 3주 연속 하락은 단기 조정인지 추세 전환인지 구별하려면 거래량·급매 비율을 함께 봐야 합니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 3주 연속 하락은 우연이 아닐 수 있습니다. 정책 기대가 가격에 선반영되는 패턴입니다.\n\n2. 고가 아파트 약세는 전체 서울 평균을 깎지 않을 수 있습니다. 외곽 상승이 평균을 막고 있습니다.\n\n3. 급매·압박 매물이 늘면 하락 폭이 커질 수 있습니다.\n\n4. 전세가격·전세가율도 강남에서 먼저 변할 수 있습니다.\n\n5. 대출 규정·DSR(총부채원리금상환비율) 변화는 고가 지역에 더 크게 작용합니다.\n\n■ 시나리오\n\n**A: 정책 불확실성이 줄면 3주 하락 후 횡보·안정화할 수 있습니다.**\n**B: 세제 세부 내용이 강하면 추가 조정이 이어질 수 있습니다.**\n**C: 정책 미세 조정 시 강남만 선반등할 수 있습니다.**\n\n■ 오늘까지 흐름\n\n8월 둘째~넷째 주 강남·서초가 연속 하락했고, 같은 기간 중랑·강북은 강한 상승을 기록했습니다. 서울 평균은 +0.29%로 양립하는 그림입니다.\n\n■ 장기 투자 관점\n\n역사적으로 고가 정책 충격 이후 수요가 외곽·위성도시로 옮겨 가는 가격대별 이동이 반복됐습니다. 장기적으로는 강남 프리미엄이 사라진다기보다, 프리미엄 확대·축소 주기가 반복됩니다.\n\n■ 앞으로 볼 것\n\n(1) 강남·서초 주간 변동률 4주차 추이를 확인하시기 바랍니다.\n\n(2) 급매·압박 매물 비율을 보시면 됩니다.\n\n(3) 세제개편 확정 세부 내용을 추적하시기 바랍니다.\n\n(4) 강남 전세가율·전세가격을 확인하시면 됩니다.\n\n(5) 고가 아파트 DSR·주담대 규제 변화를 보시기 바랍니다.\n\n■ 투자시사점\n\n강남·서초는 「서울 평균」이 아니라 「고가 아파트」로 따로 추적하시기 바랍니다. 3주 하락은 경고등이지만, 거래량 없는 하락과 급매 동반 하락은 의미가 다릅니다.\n\n실수요·투자 모두 정책 불안이 꺾이는 시점과 거래량 바닥을 함께 보시는 편이 좋습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: "Gangnam and Seocho fell for a third week amid tax reform pressure",
+    summaryEn: "Gangnam -0.11% and Seocho -0.05% for a third straight week; tax and holding-cost burdens hit high-end districts first.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "시장분석",
     categoryColor: "purple",
@@ -80,38 +40,10 @@ investus.kr SRP 최고투자책임자 발행`,
   {
     id: "krre-seed-111",
     title: "중랑 +0.56% 등 외곽·강북 상승이 서울 평균을 이끌었습니다",
-    summary: "Jungnang +0.56%, north 14 districts avg 0.40%, affordability rotation.",
-    body: `■ 상세
-
-Outer/north Seoul led +0.29% city avg.
-
-■ 왜 이 뉴스가 중요한가
-
-1. affordability migration 2. vs Gangnam discount 3. jeonse co-move 4. supply 5. loan limits
-
-■ 시나리오
-
-**A continue rotation** **B mean revert** **C policy caps outer**
-
-■ 오늘까지 흐름
-
-Jeonse +0.22% same week.
-
-■ 장기 투자 관점
-
-Seoul price tier rotation recurring theme.
-
-■ 앞으로 볼 것
-
-(1) district table (2) jeonse/sale gap (3) transaction count (4) loan DSR (5) north vs south
-
-■ 투자시사점
-
-Read as tier rotation not city heat.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "중랑 +0.56% 등 외곽·강북 상승이 서울 평균을 이끌었습니다",
-    summaryEn: "See Korean summary.",
+    summary: "중랑구 0.56%, 강북 14개 구 평균 0.40%로 외곽·강북 상승이 서울 매매 0.29%를 이끌었습니다. 강남 약세와 대비되는 가격 부담 낮은 지역으로의 수요 이동입니다.",
+    body: `■ 상세\n\n8월 넷째 주 서울 아파트 매매가격 0.29% 상승의 주인공은 강남권이 아니었습니다. 중랑구 0.56%, 성북·강북 0.55%, 도봉·노원 0.54% 등 강북·외곽이 서울 평균을 끌어올렸습니다. 강북 14개 구 평균은 0.40%로 서울 전체를 크게 웃돌았습니다.\n\n강남·서초가 3주 연속 하락하는 동안 저렴한 가격대가 오르는 패턴은 「가격 부담 낮은 지역으로의 수요 이동」으로 불립니다. 세제·대출 부담이 큰 고가 지역에서 매수 여력이 있는 지역으로 수요가 옮겨 가는 그림입니다.\n\n같은 주 서울 전세 0.22% 상승과도 맞물립니다. 매매·전세 모두 「강남이 아닌 곳」에서 상승 폭이 커지는 조합입니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 서울 평균 0.29%만 보면 오해하기 쉽습니다. 구별로 보면 +0.56%와 -0.11%가 공존합니다.\n\n2. 가격 부담 낮은 지역으로의 이동은 금리·대출 규제와 함께 움직입니다.\n\n3. 외곽 상승이 2~3주 이상 이어지면 추세, 1주면 일시적 변동에 가깝습니다.\n\n4. 전세가 매매와 같이 움직이면 실수요 이동 신호일 수 있습니다.\n\n5. 강남 상대 저평가 논의가 커지면 수요 이동이 가속할 수 있습니다.\n\n■ 시나리오\n\n**A: 수요 이동이 4주 이상 지속되면 중랑·강북 추세로 볼 수 있습니다.**\n**B: 강남이 안정되면 이동 속도가 느려질 수 있습니다.**\n**C: 외곽·강북 규제 강화 시 상승 폭이 제한될 수 있습니다.**\n\n■ 오늘까지 흐름\n\n8월 셋째~넷째 주 강남 약세와 동시에 중랑·강북 강세. 서울 전세 +0.22%도 같은 주 확대됐습니다.\n\n■ 장기 투자 관점\n\n서울 내부 가격대별 수요 이동은 2010년대 이후 여러 번 반복됐습니다. 장기적으로는 「강남만 오른다」는 해석과 「여러 권역으로 분산된다」는 해석이 교차합니다.\n\n■ 앞으로 볼 것\n\n(1) 구별 주간 변동표를 확인하시기 바랍니다.\n\n(2) 구별 전세·매매 격차를 보시면 됩니다.\n\n(3) 거래 건수·실수요 비중을 추적하시기 바랍니다.\n\n(4) DSR·LTV(담보인정비율) 규제 변화를 확인하시면 됩니다.\n\n(5) 강북 vs 강남 4주 누적 상승률을 비교하시기 바랍니다.\n\n■ 투자시사점\n\n「서울이 올랐다」가 아니라 「어디가 올랐는지」를 먼저 보시기 바랍니다. 가격대별 이동 국면에서는 평균 한 줄이 의사결정을 흐립니다.\n\n투자·실거주 모두 강북·외곽 상승이 전세·매매 동반인지, 매매만인지 구별하시면 수요 성격을 가늠하기 쉽습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: "Jungnang +0.56% and north Seoul led the city’s +0.29% average",
+    summaryEn: "Jungnang +0.56% and a 0.40% average across 14 northern districts led Seoul’s +0.29% gain — affordability rotation vs weak Gangnam.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "시장분석",
     categoryColor: "orange",
@@ -124,38 +56,10 @@ investus.kr SRP 최고투자책임자 발행`,
   {
     id: "krre-seed-112",
     title: "서울 전세 +0.22%, 전주 0.19%에서 확대",
-    summary: "Seoul jeonse +0.22% from 0.19%; supply shortage factor.",
-    body: `■ 상세
-
-Jeonse +0.22%, Gyeonggi +0.19%.
-
-■ 왜 이 뉴스가 중요한가
-
-1. listing shortage 2. sale linkage 3. wolse shift 4. policy programs 5. jeonse-to-price ratio
-
-■ 시나리오
-
-**A continue if listings tight** **B policy supply ease** **C rate hurt demand**
-
-■ 오늘까지 흐름
-
-Rising where sale also strong.
-
-■ 장기 투자 관점
-
-Jeonse scarcity post-jeonse fraud era persists.
-
-■ 앞으로 볼 것
-
-(1) jeonse ratio by gu (2) listing count (3) safe-trust program (4) loan rate (5) wolse premium
-
-■ 투자시사점
-
-Ratio more important than weekly %.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "서울 전세 +0.22%, 전주 0.19%에서 확대",
-    summaryEn: "See Korean summary.",
+    summary: "서울 전세가격은 0.22% 올라 전주 0.19%보다 상승 폭을 키웠습니다. 경기 0.19%와 함께 수도권 전세 상승이 확대됐고, 매물 부족·전세가율 변수가 함께 거론됩니다.",
+    body: `■ 상세\n\n8월 넷째 주 서울 전세가격은 0.22% 올랐습니다. 전주 0.19%보다 0.03%포인트 확대됐고, 경기도도 0.19% 올랐습니다. 같은 주 매매가격도 서울 0.29%로 올라, 전세·매매가 같은 방향으로 움직였습니다.\n\n전세 상승은 대개 매물 부족·전세사기 이후 임대인·임차인의 위험 회피·금리 변수가 겹칠 때 나옵니다. 전세가율(매매가 대비 전세가 비율)이 높은 지역은 전세가 오르면 매매로의 전환 압력도 커질 수 있습니다.\n\n주간 0.22%는 숫자 자체보다 「몇 주 연속 확대인지」와 「어느 구에서 컸는지」가 중요합니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 전세 매물 부족은 실수요 체감과 연결됩니다.\n\n2. 매매와 같이 오르면 「가격 전반」 과열, 전세만 오르면 「임대 쪽」 과열로 읽힙니다.\n\n3. 월세 전환이 있는 지역은 전세 상승 의미가 다릅니다.\n\n4. 전월세 안심신탁 9월 말 공고는 공급·거래 구조 변수입니다.\n\n5. 구별 전세가율이 매매 판단에 직접 연결됩니다.\n\n■ 시나리오\n\n**A: 매물 부족이 지속되면 전세 상승이 2~3주 더 이어질 수 있습니다.**\n**B: 안심신탁 등 정책 공급이 늘면 상승 폭이 둔화될 수 있습니다.**\n**C: 금리 상승이 수요를 줄이면 전세·매매 동반 둔화 가능합니다.**\n\n■ 오늘까지 흐름\n\n8월 셋째 주 서울 전세 0.19% → 넷째 주 0.22%로 확대. 매매 0.29% 상승과 같은 주에 기록됐습니다.\n\n■ 장기 투자 관점\n\n전세사기 이후 전세 부족 이슈는 2020년대 내내 반복됐습니다. 장기적으로는 월세 비중 증가·정책 프로그램이 균형을 바꿀 수 있습니다.\n\n■ 앞으로 볼 것\n\n(1) 구별 전세가율을 확인하시기 바랍니다.\n\n(2) 전세 매물 수·체류 기간을 보시면 됩니다.\n\n(3) 전월세 안심신탁 9월 말 공고를 추적하시기 바랍니다.\n\n(4) 주담대·전세대출 금리 변화를 확인하시면 됩니다.\n\n(5) 월세 전환 시 추가 부담(프리미엄)을 보시기 바랍니다.\n\n■ 투자시사점\n\n전세 주간 등락률보다 전세가율이 더 중요합니다. 0.22% 상승이 「싸게 전세 살 기회 감소」인지 「매매로 전환 압력」인지는 구별 전세가율로 판단하시기 바랍니다.\n\n전세 구하시는 분은 매물 수와 안심신탁 일정을, 매매 검토하시는 분은 전세가율 상한·금리를 함께 보시면 됩니다.\n\ninvestus.kr SRP 최고투자책임자 발행`,
+    titleEn: "Seoul jeonse rose 0.22%, up from 0.19% last week",
+    summaryEn: "Seoul jeonse +0.22% vs 0.19% prior week; Gyeonggi +0.19% — listing tightness and jeonse-to-price ratios in focus.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "시장분석",
     categoryColor: "orange",

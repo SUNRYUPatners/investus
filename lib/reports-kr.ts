@@ -8,22 +8,10 @@ export const SEED_REPORTS_KR: Report[] = [
   {
     id: "kr-seed-125",
     title: "2026년 8월 31일 한국장 한장 요약입니다. 코스피 6,788.88 -1.79%·외국인 8.3조·SemiCon Taiwan·FOMC·고용 9/4를 모았습니다",
-    summary: "코스피 6,788.88(-1.79%), 외국인 순매도 약 8조 3,153억 원, SemiCon Taiwan 8/31 개막, FOMC 9/15-16, 9/4 고용, 9월 인상 57.5%. SK하이닉스 -4.45%, KB금융 +2.08%.",
-    body: `■ 오늘의 큰 그림
-
-코스피 6788.88 -1.79%, 외국인 매도 우위, 금융주 상대 강세.
-
-■ 앞으로 볼 것
-
-(1) SemiCon Taiwan (2) 9/4 jobs (3) FOMC (4) foreign flow turn (5) 6800 reclaim
-
-■ 투자시사점
-
-환율·외국인·9월 hike odds 세 줄을 한 표에 두시기 바랍니다.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "2026년 8월 31일 한국장 한장 요약입니다. 코스피 6,788.88 -1.79%·외국인 8.3조·SemiCon Taiwan·FOMC·고용 9/4를 모았습니다",
-    summaryEn: "See Korean summary.",
+    summary: "코스피는 6,788.88로 1.79% 내렸고, 이번 주 외국인 순매도는 약 8조 3,153억 원 수준으로 집계됐습니다. SK하이닉스는 4.45% 하락했고 KB금융은 2.08% 올라 금융주가 상대적으로 강했습니다. 이번 주 대만 반도체 전시회 개막, 9월 4일 미국 고용, 9월 15~16일 연준 회의, 9월 금리 인상 확률 57.5%가 겹칩니다.",
+    body: body(`■ 오늘의 큰 그림\n\n8월 31일 한국 증시의 첫 번째 특징은 지수와 수급이 함께 약했다는 점입니다. 코스피는 6,788.88로 1.79% 내렸고, 이번 주 외국인 순매도는 약 8조 3,153억 원 수준으로 집계됐습니다. 반도체 대형주 중심으로 매도가 몰리면서 지수 하락을 이끌었습니다.\n\n두 번째 특징은 업종 간 온도 차입니다. SK하이닉스는 4.45% 하락했고 삼성전자도 3%대 조정을 받았습니다. 반면 KB금융은 2.08% 올라 금융주가 하락장에서 상대 강세를 보였습니다. 9월 금리 인상 확률이 57.5% 수준으로 높게 잡히면서 순이자마진(NIM) 개선 기대가 금융주에 우선 반영된 흐름입니다.\n\n세 번째 특징은 이번 주 일정이 겹친다는 점입니다. 8월 31일 대만 반도체 전시회(SemiCon Taiwan)가 개막했고, 9월 4일 미국 고용, 9월 15~16일 연준 금융정책위원회(FOMC) 회의가 이어집니다. 단기 주가는 실적보다 금리 기대와 외국인 수급이 먼저 움직일 가능성이 큽니다.\n\n■ 앞으로 볼 것\n\n(1) 대만 반도체 전시회에서 나오는 수요·공급 메시지를 확인하시기 바랍니다.\n\n(2) 9월 4일 미국 고용 지표와 9월 인상 확률 변화를 보시면 됩니다.\n\n(3) 9월 15~16일 FOMC 전후 외국인 순매수 전환 여부를 추적하시기 바랍니다.\n\n(4) 코스피 6,800선 회복과 환율·외국인 수급의 방향이 같은지 확인하시면 됩니다.\n\n(5) SK하이닉스·삼성전자 등 반도체 대형주 외국인 순매도 규모를 보시기 바랍니다.\n\n■ 투자시사점\n\n이번 주에는 코스피 종가 한 줄보다 세 줄을 함께 적어 두시는 편이 좋습니다. 원·달러 환율, 외국인 순매수 금액, 미국 9월 금리 인상 확률입니다. 이 세 줄이 같은 방향으로 정리되면 지수도 방향을 잡기 쉽습니다.\n\n반도체는 장기 수요 전망과 단기 수급이 엇갈릴 수 있습니다. 고대역폭 메모리(HBM) 품귀 전망이 나와도 외국인 매도가 이어지면 주가는 먼저 조정받을 수 있으므로, 실적 구조와 수급을 분리해서 보시기 바랍니다.\n\ninvestus.kr SRP 최고투자책임자 발행`),
+    titleEn: "Korea market wrap August 31, 2026: KOSPI -1.79% at 6,788.88, foreign sell ~8.3T KRW, SemiCon Taiwan and FOMC ahead",
+    summaryEn: "KOSPI fell 1.79% to 6,788.88 with weekly foreign net selling near 8.315 trillion won. SK Hynix -4.45%, KB Financial +2.08%. SemiCon Taiwan opens this week; US jobs Sep 4, FOMC Sep 15-16; September hike odds ~57.5%.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "특집",
     categoryColor: "mint",
@@ -37,38 +25,10 @@ investus.kr SRP 최고투자책임자 발행`,
   {
     id: "kr-seed-126",
     title: "CXMT 실적 급증과 삼성전자 1조 5,000억 원 자사주 매입·-3.38% 조정이 같은 주에 부각됐습니다",
-    summary: "CXMT H1 +874% 보도, 삼성전자 1.5조 buyback, -3.38%. supply vs shareholder return collision.",
-    body: `■ 상세
-
-CXMT 중국 memory expansion vs Samsung 1.5T buyback.
-
-■ 왜 이 뉴스가 중요한가
-
-1. supply fear 2. buyback support 3. HBM mix key 4. export data 5. ASP path
-
-■ 시나리오
-
-**A tight HBM** **B price war** **C mix shift**
-
-■ 오늘까지 흐름
-
-Aug 28 foreign sell hit semis.
-
-■ 장기 투자 관점
-
-Memory cycles differ when custom HBM share rises.
-
-■ 앞으로 볼 것
-
-(1) monthly exports (2) ASP (3) buyback pace (4) CXMT capacity (5) HBM revenue share
-
-■ 투자시사점
-
-Track mix not headline price.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "CXMT 실적 급증과 삼성전자 1조 5,000억 원 자사주 매입·-3.38% 조정이 같은 주에 부각됐습니다",
-    summaryEn: "See Korean summary.",
+    summary: "중국 메모리 업체 CXMT의 상반기 실적 급증 보도와 삼성전자 1조 5,000억 원 규모 자사주 매입 계획이 같은 주에 겹쳤습니다. 삼성전자는 3.38% 하락했고, 시장은 공급 확대 우려와 주주환원을 동시에 가격에 반영했습니다. 범용 메모리 가격보다 고대역폭 메모리(HBM) 믹스와 수출 데이터가 더 중요해지는 구간입니다.",
+    body: body(`■ 상세\n\n8월 말 한국 증시에서는 두 가지 메시지가 삼성전자 주가에 동시에 작용했습니다. 첫째, 중국 메모리 업체 CXMT의 상반기 실적이 크게 늘었다는 보도가 나왔습니다. 시장 일부는 중국 쪽 범용 메모리 공급 확대가 장기적으로 가격 경쟁을 키울 수 있다고 해석했습니다.\n\n둘째, 삼성전자는 1조 5,000억 원 규모 자사주 매입을 발표했습니다. 자사주 매입은 유통 주식 수를 줄여 주당 가치를 높이려는 주주환원 수단입니다. 공급 우려와 환원 호재가 같은 날 겹치면서 주가는 3.38% 하락했습니다.\n\n삼성전자의 수익 구조는 과거와 다릅니다. 범용 동적랜덤액세스메모리(DRAM) 가격만으로 실적을 읽기 어렵고, 인공지능 가속기용 고대역폭 메모리(HBM) 비중이 커질수록 제품 믹스가 더 중요해집니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. CXMT 실적 보도는 「중국 공급」이라는 키워드를 다시 끌어올립니다. 범용 메모리에서 가격 경쟁이 심해지면 업황 회복 속도가 느려질 수 있습니다.\n\n2. 1조 5,000억 원 자사주 매입은 주가 하락 구간에서 매수 수요를 만들 수 있습니다. 다만 매입만으로 공급 우려를 완전히 상쇄하기는 어렵습니다.\n\n3. HBM은 고객 맞춤형 물량 비중이 커서 범용 가격과 다른 궤적을 그릴 수 있습니다. 삼성전자 실적을 볼 때 HBM 매출 비중 변화가 핵심입니다.\n\n4. 월간 수출·반도체 출하 데이터가 나오면 시장 해석이 바뀔 수 있습니다. 보도와 실제 출하 간 간극을 확인해야 합니다.\n\n5. 외국인 매도가 반도체 대형주에 집중된 주에는 개별 실적보다 수급이 먼저 주가를 움직일 수 있습니다.\n\n■ 시나리오\n\n**A: HBM 수요가 예상보다 강하면 공급 우려에도 실적 믹스가 방어재가 될 수 있습니다.**\n**B: 범용 메모리 가격이 다시 약세로 돌아서면 자사주 매입에도 주가 조정이 이어질 수 있습니다.**\n**C: HBM 비중 확대가 빠르면 삼성전자는 「범용 업체」가 아니라 「고부가 메모리 업체」로 재평가될 수 있습니다.**\n\n■ 오늘까지 흐름\n\n8월 28일 외국인 매도가 반도체 대형주에 몰리면서 SK하이닉스와 삼성전자가 함께 약세를 보였습니다. 이번 주에는 CXMT 보도와 자사주 매입이 겹치며 공급 대 환원이라는 두 축이 부각됐습니다.\n\n■ 장기 투자 관점\n\n메모리 산업은 과거에도 공급 확대 → 가격 하락 → 적자 → 감산 사이클을 반복했습니다. 이번 사이클은 인공지능 수요와 HBM 비중이 커져 구조가 다릅니다. 장기 투자자라면 범용 가격 한 줄보다 HBM 출하·고객사 다변화·설비 투자 속도를 함께 추적하시는 편이 정확합니다.\n\n■ 앞으로 볼 것\n\n(1) 월간 반도체 수출·출하 통계를 확인하시기 바랍니다.\n\n(2) 범용 DRAM·낸드 평균 판매 가격(ASP) 추이를 보시면 됩니다.\n\n(3) 자사주 매입 집행 속도와 잔여 규모를 추적하시기 바랍니다.\n\n(4) CXMT 등 중국 쪽 증설·가동률 보도와 실제 출하를 대조하시면 됩니다.\n\n(5) 분기 HBM 매출 비중 가이던스를 확인하시기 바랍니다.\n\n■ 투자시사점\n\n삼성전자를 볼 때 「가격」 한 줄만 따라가면 실적 구조 변화를 놓치기 쉽습니다. 범용 가격, HBM 비중, 자사주 매입, 외국인 수급 네 가지를 같은 표에 두시기 바랍니다.\n\n단기 조정은 공급 우려가 크게 작용할 수 있지만, 장기적으로는 HBM 믹스가 실적과 밸류에이션을 이끕니다. 분기 실적에서 HBM 매출 비중이 올라가는지부터 확인하시는 편이 좋습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`),
+    titleEn: "Samsung -3.38% as CXMT surge narrative collides with 1.5 trillion won buyback plan",
+    summaryEn: "Reports of surging CXMT H1 results overlapped with Samsung\'s 1.5 trillion won buyback plan. Shares fell 3.38% as supply fears and shareholder returns were priced together; HBM mix and export data matter more than headline DRAM prices.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "종목분석",
     categoryColor: "blue",
@@ -81,38 +41,10 @@ investus.kr SRP 최고투자책임자 발행`,
   {
     id: "kr-seed-127",
     title: "SK하이닉스 -4.45% 조정과 에이전트 메모리·HBM 2026~27 품귀 전망이 겹쳤습니다",
-    summary: "-4.45% day move vs 24x agent memory / HBM tight 2026-27 outlook.",
-    body: `■ 상세
-
-Foreign sell -4.45% vs long HBM/agent demand.
-
-■ 왜 이 뉴스가 중요한가
-
-1. flows vs fundamentals 2. HBM mix 3. agent token growth 4. Indiana/Yongin capex 5. margin path
-
-■ 시나리오
-
-**A flows reverse** **B HBM pricing up** **C capex overshoot**
-
-■ 오늘까지 흐름
-
-Same week as US agent memory note.
-
-■ 장기 투자 관점
-
-Hynix HBM arc from 2023 shortage to 2027+ custom mix.
-
-■ 앞으로 볼 것
-
-(1) HBM revenue % (2) ASP (3) foreign flows (4) capex (5) customer guidance
-
-■ 투자시사점
-
-Separate daily flow from HBM mix trajectory.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "SK하이닉스 -4.45% 조정과 에이전트 메모리·HBM 2026~27 품귀 전망이 겹쳤습니다",
-    summaryEn: "See Korean summary.",
+    summary: "SK하이닉스는 4.45% 하락했지만, 인공지능 에이전트 확산 시 메모리 수요가 2030년까지 약 24배 늘 수 있다는 장기 전망과 2026~27년 고대역폭 메모리(HBM) 품귀 가능성이 함께 거론됐습니다. 단기 수급과 장기 수요 전망이 엇갈리는 구간입니다.",
+    body: body(`■ 상세\n\nSK하이닉스는 8월 28일 기준 4.45% 하락하며 외국인 매도의 중심에 섰습니다. 같은 주에는 인공지능 에이전트가 확산될 때 메모리 수요가 2030년까지 약 24배 늘 수 있다는 장기 전망과, 2026~27년 HBM 공급이 빠듯할 수 있다는 분석이 국내외에서 함께 부각됐습니다.\n\n에이전트는 검색·계산·외부 연동을 연속 수행하므로 챗봇 한 번 답하기보다 메모리 사용량이 훨씬 큽니다. 토큰(텍스트 조각) 사용량이 5~30배까지 늘 수 있다는 점도 함께 거론됐습니다. HBM은 그래픽 처리 장치 옆에서 데이터를 빠르게 주고받는 고대역폭 메모리로, SK하이닉스 실적의 핵심 축입니다.\n\n주가는 단기적으로 외국인 순매도에 반응했지만, 장기 수요 전망은 여전히 강합니다. 「오늘의 등락」과 「2026~27년 공급 계획」을 분리해서 보는 것이 중요합니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 외국인 매도 4.45% 하락은 수급 변수입니다. 실적 전망이 바뀌었다기보다 지수·금리 기대에 따른 포지션 조정일 수 있습니다.\n\n2. HBM 품귀 전망이 맞다면 ASP(평균 판매 가격)와 믹스가 실적을 이끕니다. 범용 메모리 가격보다 HBM 출하 비중이 더 중요합니다.\n\n3. 에이전트 확산은 추론(이미 학습된 모델로 답을 만드는 과정) 수요를 키웁니다. 추론은 24시간 돌아가므로 메모리 대역폭 병목이 커질 수 있습니다.\n\n4. 용인·미국 등 대규모 설비 투자(CapEx) 계획은 공급 확대와 마진 사이의 균형을 시험합니다. 투자 속도가 수요를 앞서면 2028년 이후 전망은 달라질 수 있습니다.\n\n5. 미국·국내에서 같은 테마가 SK하이닉스와 함께 거론되면, 단기 조정 후에도 기관·외국인 재진입 시점이 빨라질 수 있습니다.\n\n■ 시나리오\n\n**A: 외국인 매도가 둔화되면 HBM 전망이 다시 주가를 이끌 수 있습니다.**\n**B: HBM 가격이 예상보다 강하면 4.45% 조정은 매수 기회로 기록될 수 있습니다.**\n**C: 설비 투자가 과도하면 2027년 이후 공급 과잉 우려가 다시 커질 수 있습니다.**\n\n■ 오늘까지 흐름\n\n8월 28일 외국인 1조 7,564억 원 순매도가 반도체 대형주에 집중됐고 SK하이닉스 낙폭이 가장 컸습니다. 같은 주 미국·국내 리포트에서 에이전트 메모리·HBM 테마가 병행 부각됐습니다.\n\n■ 장기 투자 관점\n\nSK하이닉스는 2023~24년 HBM 호황으로 「AI 메모리 1위」 이미지를 강화했습니다. 2026~27년 품귀가 이어지면 고객 맞춤형 물량과 가격 협상력이 유지될 수 있습니다. 다만 메모리 산업은 과거에도 호황 뒤 공급 과잉 사이클이 반복했으므로, CapEx와 고객사 발주를 분기마다 확인하시기 바랍니다.\n\n■ 앞으로 볼 것\n\n(1) 분기 HBM 매출 비중과 ASP를 확인하시기 바랍니다.\n\n(2) 외국인·기관 순매수 전환 시점을 보시면 됩니다.\n\n(3) 주요 클라우드·AI 기업의 HBM 발주·가이던스를 추적하시기 바랍니다.\n\n(4) 용인·미국 등 CapEx 집행 속도를 확인하시면 됩니다.\n\n(5) 에이전트 상용 일정과 토큰 사용량 추정치 변화를 보시기 바랍니다.\n\n■ 투자시사점\n\nSK하이닉스는 「오늘 -4.45%」와 「2030년 24배」를 동시에 기록해 두는 편이 좋습니다. 단기는 수급, 장기는 HBM 믹스가 각각 다른 속도로 움직입니다.\n\n장기 투자자라면 2026~27년 HBM 품귀가 분기 실적 숫자로 전환되는 시점을 기준점으로 삼으시면 됩니다. 그 전까지의 조정은 외국인 매도·금리 기대가 크게 작용할 수 있습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`),
+    titleEn: "SK Hynix -4.45% as agent-memory 24x outlook meets HBM tightness through 2026-27",
+    summaryEn: "SK Hynix fell 4.45% while long-range views cite up to 24x agent-related memory demand by 2030 and tight HBM supply through 2026-27 — a gap between near-term flows and fundamentals.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "종목분석",
     categoryColor: "orange",
@@ -125,38 +57,10 @@ investus.kr SRP 최고투자책임자 발행`,
   {
     id: "kr-seed-128",
     title: "현대차 CID 업데이트 실망으로 3.73% 하락했습니다",
-    summary: "CID infotainment disappointment, -3.73%. software UX premium thesis tested.",
-    body: `■ 상세
-
-CID central display UX missed expectations.
-
-■ 왜 이 뉴스가 중요한가
-
-1. software as premium driver 2. OTA cadence 3. EV/SW revenue 4. competition 5. multiple impact
-
-■ 시나리오
-
-**A fix in next OTA** **B repeated misses hurt premium** **C peer leapfrog**
-
-■ 오늘까지 흐름
-
-Down more than index on software headline.
-
-■ 장기 투자 관점
-
-Auto valuation increasingly includes SW execution.
-
-■ 앞으로 볼 것
-
-(1) OTA notes (2) SW revenue (3) EV orders (4) China mix (5) margin guide
-
-■ 투자시사점
-
-Watch SW roadmap delivery not just launches.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "현대차 CID 업데이트 실망으로 3.73% 하락했습니다",
-    summaryEn: "See Korean summary.",
+    summary: "현대차는 중앙 정보 표시(CID) 인포테인먼트 소프트웨어 업데이트가 기대에 못 미쳤다는 평가 속에 3.73% 하락했습니다. 자동차 업체 밸류에이션에 소프트웨어 실행력이 얼마나 반영되는지 시험받는 구간입니다.",
+    body: body(`■ 상세\n\n현대차는 8월 28일 3.73% 하락하며 지수(-1.79%)보다 큰 폭으로 조정받았습니다. 원인으로는 중앙 정보 표시(CID) 화면의 인포테인먼트 소프트웨어 업데이트가 사용자 기대에 미치지 못했다는 시장 평가가 거론됐습니다.\n\n최근 자동차 산업에서는 하드웨어(차체·배터리)뿐 아니라 소프트웨어(화면 사용성·무선 업데이트·자율주행 기능)가 프리미엄의 핵심으로 평가받습니다. OTA(무선 소프트웨어 업데이트)는 출고 후에도 기능을 개선할 수 있어, 「한 번 실망 → 다음 업데이트로 회복」이 가능한 구조이기도 합니다.\n\n다만 같은 유형의 실망이 반복되면 「소프트웨어 프리미엄」 논리가 약해질 수 있습니다. 경쟁사 대비 화면 반응 속도·앱 연동·업데이트 주기가 밸류에이션에 직접 연결됩니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. CID는 운전자가 매일 보는 화면입니다. 첫인상이 나쁘면 브랜드 프리미엄 전체에 영향을 줄 수 있습니다.\n\n2. 소프트웨어 매출·구독 모델은 장기 밸류에이션의 새 축입니다. 실행력이 기대보다 느리면 멀티플 할인 요인이 됩니다.\n\n3. OTA로 개선 가능하다는 점은 방어 요인이지만, 「언제 고쳐지는지」 일정이 불투명하면 주가는 먼저 반응합니다.\n\n4. 전기차·중국 경쟁과 겹치면 소프트웨어 실망은 「가격·기술 전반」에 대한 불신으로 확대될 수 있습니다.\n\n5. 지수 대비 큰 낙폭은 단기 이벤트성 매도일 수 있어, 다음 OTA 릴리스 일정을 확인하는 것이 중요합니다.\n\n■ 시나리오\n\n**A: 다음 OTA에서 사용성이 개선되면 이번 조정은 일시적일 수 있습니다.**\n**B: 유사 실망이 반복되면 소프트웨어 프리미엄 할인이 길어질 수 있습니다.**\n**C: 경쟁사가 같은 기능에서 앞서면 상대적 밸류에이션 재조정이 이어질 수 있습니다.**\n\n■ 오늘까지 흐름\n\n8월 28일 하락장에서 현대차는 CID 관련 소프트웨어 이슈로 지수보다 크게 약세를 보였습니다. 같은 날 기아 등 다른 완성차는 상대적으로 버틴 흐름과 대비됩니다.\n\n■ 장기 투자 관점\n\n글로벌 완성차 업체는 「하드웨어 제조사」에서 「소프트웨어·플랫폼 기업」으로 재평가받는 중입니다. 현대차도 전기차·SDV(소프트웨어 정의 차량) 로드맵을 제시했으므로, 장기적으로는 OTA 실행력과 소프트웨어 매출 비중이 밸류에이션에 더 큰 비중을 차지할 수 있습니다.\n\n■ 앞으로 볼 것\n\n(1) CID·인포테인먼 관련 OTA 릴리스 노트와 일정을 확인하시기 바랍니다.\n\n(2) 소프트웨어·구독 매출 가이던스를 보시면 됩니다.\n\n(3) 전기차 주문·중국 판매 믹스를 추적하시기 바랍니다.\n\n(4) 경쟁사 대비 화면·사용성 벤치마크를 확인하시면 됩니다.\n\n(5) 영업이익률·원가 가이던스 변화를 보시기 바랍니다.\n\n■ 투자시사점\n\n현대차를 볼 때 「차량 출고」와 「소프트웨어 로드맵 이행」을 분리해서 추적하시기 바랍니다. 이번 하락은 후자에 대한 시장의 경계심이 커진 신호일 수 있습니다.\n\n단기 투자자라면 다음 OTA 일정과 개선 내용이 핵심 확인 지점입니다. 장기 투자자라면 소프트웨어 매출 비중이 분기마다 늘어나는지 보시는 편이 정확합니다.\n\ninvestus.kr SRP 최고투자책임자 발행`),
+    titleEn: "Hyundai Motor fell 3.73% on CID infotainment update disappointment",
+    summaryEn: "Hyundai shares dropped 3.73% as a central infotainment (CID) software update fell short of expectations, testing how much software execution is priced into auto valuations.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "종목분석",
     categoryColor: "blue",
@@ -169,38 +73,10 @@ investus.kr SRP 최고투자책임자 발행`,
   {
     id: "kr-seed-129",
     title: "KB금융 +2.08%로 하락장에서 금융주 강세를 이끌었습니다",
-    summary: "+2.08% vs KOSPI -1.79%; Sept hike odds 57.5% help NIM hopes.",
-    body: `■ 상세
-
-KB +2.08% on rate hike hopes.
-
-■ 왜 이 뉴스가 중요한가
-
-1. NIM expansion 2. sector rotation 3. credit quality still matters 4. dividend 5. vs growth selloff
-
-■ 시나리오
-
-**A rates up banks win** **B credit event** **C curve inversion hurt**
-
-■ 오늘까지 흐름
-
-Financials outperformed semis same day.
-
-■ 장기 투자 관점
-
-Rate cycles often rotate into banks late in hike cycle.
-
-■ 앞으로 볼 것
-
-(1) NIM guide (2) loan growth (3) dividend (4) credit cost (5) FX
-
-■ 투자시사점
-
-Pair KB with 2Y US yield monitor.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "KB금융 +2.08%로 하락장에서 금융주 강세를 이끌었습니다",
-    summaryEn: "See Korean summary.",
+    summary: "KB금융은 코스피가 1.79% 내린 날 2.08% 올라 금융주 상대 강세를 이끌었습니다. 9월 금리 인상 확률 57.5% 수준에서 순이자마진(NIM) 개선 기대가 반영된 흐름으로 해석됩니다.",
+    body: body(`■ 상세\n\n8월 28일 코스피는 1.79% 하락했지만 KB금융은 2.08% 올랐습니다. 같은 날 SK하이닉스·삼성전자 등 성장·반도체주는 약세를 보였고, 금융주가 상대적으로 강한 「섹터 로테이션」이 나타났습니다.\n\n9월 미국 금리 인상 확률이 57.5% 수준으로 높게 잡히면서, 은행의 순이자마진(NIM, 예대마진) 개선 기대가 커졌습니다. NIM은 은행이 예금 금리와 대출 금리 차이에서 버는 수익률로, 금리 인상 국면에서 통상 유리하게 해석됩니다.\n\n다만 금융주 강세는 금리만으로 결정되지 않습니다. 신용 비용, 대출 성장, 환율, 배당 정책도 함께 봐야 합니다. KB금융은 국내 대표 금융지주로 금리·경기 변수에 민감하게 반응합니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 금리 인상 기대는 NIM 확대 기대를 만듭니다. 성장주 매도와 함께 「가치·금융」으로 자금이 옮겨갈 때 KB금융 같은 대형주가 먼저 움직일 수 있습니다.\n\n2. 코스피 -1.79%와 +2.08%의 대비는 「지수 약세 ≠ 전 종목 약세」를 보여 줍니다. 포트폴리오 분산 관점에서 의미가 있습니다.\n\n3. 금융주는 여전히 신용 사이클에 민감합니다. 금리만 오르고 부실 채권이 늘면 NIM 개선 효과가 상쇄될 수 있습니다.\n\n4. 배당·자사주 정책은 금융주 총수익에 큰 비중을 차지합니다. 금리 기대와 함께 주주환원 일정을 확인해야 합니다.\n\n5. 원·달러 환율과 외국인 수급은 금융주에도 영향을 줍니다. 환헤지·해외 사업 비중을 함께 보시기 바랍니다.\n\n■ 시나리오\n\n**A: 9월 금리 인상이 현실화되면 NIM 기대가 이어져 금융주 강세가 지속될 수 있습니다.**\n**B: 경기 둔화·신용 비용 증가가 나오면 금리 호재에도 주가가 횡보할 수 있습니다.**\n**C: 수익률 곡선 역전이 심해지면 NIM 개선 기대가 약해질 수 있습니다.**\n\n■ 오늘까지 흐름\n\n8월 28일 잭슨홀 이후 금리 인상 기대가 커지면서 성장주·반도체는 약하고 금융주는 상대 강세를 보였습니다. KB금융 +2.08%는 그 날의 대표 사례입니다.\n\n■ 장기 투자 관점\n\n금리 인상 사이클 후반에는 통상 은행주가 상대 강세를 보이는 경우가 많습니다. 다만 한국 금융지주는 규제·배당·신용 비용 구조가 달라 미국과 같은 궤적을 그리지 않을 수 있습니다. 장기 투자자라면 NIM 가이던스와 배당 정책을 분기마다 확인하시기 바랍니다.\n\n■ 앞으로 볼 것\n\n(1) 분기 NIM·순이자이익 가이던스를 확인하시기 바랍니다.\n\n(2) 대출 성장·연체율 추이를 보시면 됩니다.\n\n(3) 배당·자사주 매입 계획을 추적하시기 바랍니다.\n\n(4) 미국 2년물 국채 금리와 9월 인상 확률을 함께 보시면 됩니다.\n\n(5) 신용 비용·충당금 변화를 확인하시기 바랍니다.\n\n■ 투자시사점\n\nKB금융을 볼 때 「9월 인상 확률」과 「분기 NIM」을 같은 화면에 두시기 바랍니다. 금리 기대는 주가에 먼저 반영되고, 실적은 분기 뒤에 따라옵니다.\n\n하락장에서 +2.08%는 단기 로테이션 신호일 수 있습니다. 신용 비용이 악화되지 않는지 확인한 뒤 금융 비중을 조정하시는 편이 안전합니다.\n\ninvestus.kr SRP 최고투자책임자 발행`),
+    titleEn: "KB Financial +2.08% led financials higher while KOSPI fell 1.79%",
+    summaryEn: "KB Financial rose 2.08% on a day KOSPI fell 1.79%, as ~57.5% September hike odds lifted net interest margin (NIM) hopes for banks.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "종목분석",
     categoryColor: "blue",
@@ -213,38 +89,10 @@ investus.kr SRP 최고투자책임자 발행`,
   {
     id: "kr-seed-130",
     title: "이번 주 외국인 순매도가 약 8조 3,153억 원 수준으로 집계됐습니다",
-    summary: "Weekly foreign net sell ~8.3153T won; chip-heavy; FX-rate-flow divergence possible.",
-    body: `■ 상세
-
-Weekly foreign sell ~8.3T, concentrated large chips.
-
-■ 왜 이 뉴스가 중요한가
-
-1. weekly vs daily 2. ETF/hedge flows 3. FX linkage 4. sector split 5. turn timing
-
-■ 시나리오
-
-**A buyback turn** **B more sell on US data** **C passive only**
-
-■ 오늘까지 흐름
-
-Post-Jackson Hole repositioning.
-
-■ 장기 투자 관점
-
-Foreign ownership level still structurally important for KOSPI.
-
-■ 앞으로 볼 것
-
-(1) daily foreign (2) USD/KRW (3) Sept odds (4) top10 net (5) weekly ETF
-
-■ 투자시사점
-
-Do not overfit one weekly print.
-
-investus.kr SRP 최고투자책임자 발행`,
-    titleEn: "이번 주 외국인 순매도가 약 8조 3,153억 원 수준으로 집계됐습니다",
-    summaryEn: "See Korean summary.",
+    summary: "이번 주 외국인 순매도는 약 8조 3,153억 원 수준으로 집계됐습니다. 반도체 대형주에 매도가 집중됐고, 환율과 수급이 항상 같은 방향으로 움직이지는 않습니다. 잭슨홀 이후 포지션 조정과 9월 미국 지표가 겹친 구간입니다.",
+    body: body(`■ 상세\n\n8월 넷째 주 외국인 순매도는 약 8조 3,153억 원 수준으로 집계됐습니다. 일별로는 8월 28일 하루만 해도 1조 7,564억 원을 팔았고, SK하이닉스·삼성전자 등 시가총액 상위 반도체주에 매도가 집중됐습니다.\n\n외국인 매도가 나오면 통상 환전 수요로 원·달러 환율이 오르는 경우가 많습니다. 그러나 같은 기간 달러 약세·글로벌 환율 변수가 겹치면 「주식 매도 + 환율 하락」 조합도 가능합니다. 수급과 환율을 한 줄로만 연결해 읽으면 오판하기 쉽습니다.\n\n주간 8조 원대 순매도는 ETF·헤지·패시브 자금까지 포함한 「한 주 전체」 그림입니다. 하루치만으로 주간 추세를 단정하지 않는 편이 좋습니다.\n\n■ 왜 이 뉴스가 중요한가\n\n1. 주간 8조 원대는 코스피 지수 레벨에 구조적으로 중요한 규모입니다. 외국인 보유 비중이 높은 시장에서는 순매도 지속이 지수 하방 압력이 됩니다.\n\n2. 반도체 집중 매도는 섹터·지수 동시 약세로 이어집니다. 개별 종목 실적보다 포지션 정리가 먼저일 수 있습니다.\n\n3. 잭슨홀 이후 금리 인상 기대 재조정이 매도 배경일 수 있습니다. 9월 4일 고용·물가가 다음 트리거입니다.\n\n4. 환율과 수급 괴리는 「매도했지만 달러가 약했다」는 뜻으로, 원인을 분리해 봐야 합니다.\n\n5. 순매도가 둔화·전환되는 시점이 코스피 6,800선 회복과 종종 맞물립니다.\n\n■ 시나리오\n\n**A: 9월 지표가 부드러우면 외국인 순매수 전환이 빨라질 수 있습니다.**\n**B: 고용·물가가 강하면 8조 원대 매도 이후 추가 매도가 이어질 수 있습니다.**\n**C: 패시브·ETF 자금만 빠지고 액티브는 유지되면 종목별 차별화가 커질 수 있습니다.**\n\n■ 오늘까지 흐름\n\n8월 28일 외국인 1조 7,564억 원 순매도로 하루 수급이 크게 악화됐고, 주간 누적은 약 8조 3,153억 원 수준입니다. 잭슨홀 매파 해석 이후 포지션 조정 국면으로 읽힙니다.\n\n■ 장기 투자 관점\n\n코스피는 외국인 보유 비중이 높아 순매수·순매도가 중기 추세에 큰 영향을 줍니다. 장기 투자자라도 「한 주 8조」는 무시하기 어렵지만, 한 번의 주간 숫자로 장기 비중을 바꾸기보다 2~3주 흐름과 환율·금리를 함께 보시기 바랍니다.\n\n■ 앞으로 볼 것\n\n(1) 일별·주간 외국인 순매수 금액을 확인하시기 바랍니다.\n\n(2) 원·달러 환율과 수급 방향을 나란히 보시면 됩니다.\n\n(3) 9월 금리 인상 확률 변화를 추적하시기 바랍니다.\n\n(4) 시가총액 상위 10종목 외국인 순매도를 확인하시면 됩니다.\n\n(5) 국내 상장 ETF 자금 유입·유출을 보시기 바랍니다.\n\n■ 투자시사점\n\n외국인 순매도 「8조」는 크지만, 한 번의 주간 숫자에 과잉 반응하지 않으시기 바랍니다. 일별 추이, 환율, 9월 지표 세 가지가 함께 개선될 때 지수 회복이 수월합니다.\n\n반도체 비중이 큰 포트폴리오라면 외국인 매도가 SK하이닉스·삼성전자에 얼마나 몰렸는지 종목별로 확인하시는 편이 좋습니다.\n\ninvestus.kr SRP 최고투자책임자 발행`),
+    titleEn: "Foreign investors net sold roughly 8.315 trillion won this week, chip-heavy",
+    summaryEn: "Weekly foreign net selling near 8.315 trillion won concentrated in large chips; FX and equity flows can diverge post-Jackson Hole ahead of September US data.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "시장분석",
     categoryColor: "mint",

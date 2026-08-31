@@ -568,6 +568,11 @@ function buildKrreAnalyst() {
 }
 
 function main() {
+  console.error(
+    'DEPRECATED: insert-reports-20260831.js는 영문 스켈레톤을 삽입합니다. 재실행 금지.\n' +
+      '한글 본문은 scripts/fix-reports-20260831-ko.js 및 fix-reports-20260831-ko-markets.js 사용.',
+  );
+  process.exit(1);
   if (read('lib/wallPosts.ts').includes('T31AU')) {
     console.log('already inserted — skip');
     return;
