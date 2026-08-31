@@ -1,5 +1,26 @@
 #!/usr/bin/env node
-// 2026-08-31 Investus report insert — patches lib/*.ts BEFORE 2026-08-29 blocks
+/**
+ * DEPRECATED — 2026-08-31 사고(영문 스켈레톤·짧은 본문) 재발 방지.
+ * kr/safe/kr-re 리포트는 insert-reports로 넣지 말 것.
+ * 대신: scripts/topics-YYYYMMDD-kr-markets-data.js 작성
+ *       → node scripts/fix-reports-YYYYMMDD-ko-markets.js
+ *       → node scripts/validate-report-korean.js
+ * 스킬: .cursor/skills/investus-report-update/SKILL.md 「다시장 본문 — 재발 방지」
+ */
+console.error(`
+✗ scripts/insert-reports-20260831.js 는 사용 금지입니다.
+
+kr / safe / kr-re 리포트는 영문 스켈레톤 일괄 삽입 스크립트로 만들지 마세요.
+올바른 순서:
+  1. 웹 검색으로 팩트 수집
+  2. scripts/topics-YYYYMMDD-kr-markets-data.js (한글 풍성 본문)
+  3. node scripts/fix-reports-YYYYMMDD-ko-markets.js
+  4. node scripts/validate-report-korean.js
+  5. commit + bash scripts/deploy.sh
+`);
+process.exit(1);
+
+// --- 아래 코드는 보관용 (실행되지 않음) ---
 const fs = require('fs');
 const path = require('path');
 

@@ -8,6 +8,8 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const VALIDATE_SINCE = "2026-08-29";
+/** 분량·섹션 검증 — 8/31 사고 이후 신규분만 (8/29 레거시는 ■반대 관점 등 허용) */
+const VALIDATE_RICH_SINCE = "2026-08-31";
 
 /** 허용 약어·고유명 (소문자 비교) */
 const ALLOW = new Set([
@@ -98,7 +100,9 @@ function parseReports(src) {
     const title = extractQuoted(chunk, "title:");
     const summary = extractQuoted(chunk, "summary:");
     const body = extractBody(chunk);
-    reports.push({ id, date, title, summary, body });
+    const subject = extractQuoted(chunk, "subject:");
+    const isPinned = /isPinned:\s*true/.test(chunk);
+    reports.push({ id, date, title, summary, body, subject, isPinned });
   }
   return reports;
 }
@@ -155,6 +159,88 @@ function latinWordRatio(text) {
   return bad.length;
 }
 
+function validateRichness(r, file) {
+  const errors = [];
+  const isSummary =
+    r.isPinned ||
+    r.subject === "한장요약" ||
+    /summary-(kr|safe|krre)/.test(r.id);
+
+  const MIN_SUMMARY_LEN = 120;
+  const MIN_BODY_SUMMARY = 1000;
+  const MIN_BODY_DETAIL = 1500;
+
+  if (r.summary && r.summary.length < MIN_SUMMARY_LEN) {
+    errors.push(
+      `${file} ${r.id} summary: 너무 짧음 (${r.summary.length}자 < ${MIN_SUMMARY_LEN}자). 8/29 kr-seed-118·safe-seed-107 수준의 팩트 문장으로 보강하세요.`,
+    );
+  }
+
+  const minBody = isSummary ? MIN_BODY_SUMMARY : MIN_BODY_DETAIL;
+  if (r.body && r.body.length < minBody) {
+    errors.push(
+      `${file} ${r.id} body: 너무 짧음 (${r.body.length}자 < ${minBody}자). seed-994·kr-seed-118·safe-seed-107 길이를 참고하세요.`,
+    );
+  }
+
+  const requiredSummary = ["■ 오늘의 큰 그림", "■ 앞으로 볼 것", "■ 투자시사점"];
+  const requiredDetail = [
+    "■ 상세",
+    "■ 왜 이 뉴스가 중요한가",
+    "■ 장기 투자 관점",
+    "■ 투자시사점",
+  ];
+  for (const sec of isSummary ? requiredSummary : requiredDetail) {
+    if (r.body && !r.body.includes(sec)) {
+      errors.push(`${file} ${r.id} body: 필수 섹션 누락 (${sec})`);
+    }
+  }
+
+  if (!isSummary && r.body) {
+    const detailMatch = r.body.match(/■ 상세\n\n([\s\S]*?)\n\n■/);
+    if (detailMatch) {
+      const paras = detailMatch[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+      if (paras.length < 3) {
+        errors.push(
+          `${file} ${r.id} body: ■ 상세 문단 부족 (${paras.length}개 < 3개). 배경·숫자·맥락을 문단으로 이어 쓰세요.`,
+        );
+      }
+    }
+    const whyMatch = r.body.match(/■ 왜 이 뉴스가 중요한가\n\n([\s\S]*?)\n\n■/);
+    if (whyMatch) {
+      const items = (whyMatch[1].match(/^\d+\./gm) || []).length;
+      if (items < 5) {
+        errors.push(
+          `${file} ${r.id} body: ■ 왜 항목 부족 (${items}개 < 5개). 번호마다 2~4문장 합니다체.`,
+        );
+      }
+    }
+    const investMatch = r.body.match(/■ 투자시사점\n\n([\s\S]*?)(\n\ninvestus|$)/);
+    if (investMatch) {
+      const paras = investMatch[1].split(/\n\n/).filter((p) => p.trim().length > 30);
+      if (paras.length < 2) {
+        errors.push(
+          `${file} ${r.id} body: ■ 투자시사점 문단 부족 (${paras.length}개 < 2개).`,
+        );
+      }
+    }
+  }
+
+  if (isSummary && r.body) {
+    const bigPic = r.body.match(/■ 오늘의 큰 그림\n\n([\s\S]*?)\n\n■/);
+    if (bigPic) {
+      const paras = bigPic[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+      if (paras.length < 3) {
+        errors.push(
+          `${file} ${r.id} body: ■ 오늘의 큰 그림 문단 부족 (${paras.length}개 < 3개). 지수·수급·일정 등 팩트를 문단으로.`,
+        );
+      }
+    }
+  }
+
+  return errors;
+}
+
 function validateReport(r, file) {
   const errors = [];
   const fields = [
@@ -187,6 +273,9 @@ const FILES = [
   "lib/reports-kr-re.ts",
 ];
 
+/** 분량·섹션 검증 대상 (8/31 사고 시장 — kr·safe 우선) */
+const RICH_FILES = new Set(["lib/reports-kr.ts", "lib/reports-safe.ts"]);
+
 const allErrors = [];
 for (const file of FILES) {
   const src = load(file);
@@ -194,6 +283,9 @@ for (const file of FILES) {
   for (const r of reports) {
     if (r.date < VALIDATE_SINCE) continue;
     allErrors.push(...validateReport(r, file));
+    if (r.date >= VALIDATE_RICH_SINCE && RICH_FILES.has(file)) {
+      allErrors.push(...validateRichness(r, file));
+    }
   }
 }
 
@@ -216,4 +308,4 @@ if (allErrors.length > 0) {
   process.exit(1);
 }
 
-console.log("✓ 한글 리포트(title/summary/body) + SVG 영문 스켈레톤 검증 OK");
+console.log("✓ 한글 리포트(title/summary/body 분량·섹션) + SVG 영문 스켈레톤 검증 OK");
