@@ -45,7 +45,7 @@ function LangToggle({ value, onChange }: { value: ViewLang; onChange: (v: ViewLa
 
 function pickText(viewEn: boolean, ko: string | undefined, en: string | undefined): string {
   if (viewEn) return (en || ko || "").trim();
-  return (ko || en || "").trim();
+  return (ko || "").trim();
 }
 
 export function MorningBriefingCard({

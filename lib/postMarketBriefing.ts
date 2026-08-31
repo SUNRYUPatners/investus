@@ -4,6 +4,7 @@ import { NYSE_HOLIDAYS, toETDateString } from "@/lib/marketHours";
 import type { BriefPhase, SessionBriefing } from "@/lib/morningBriefing";
 import { REPORT_TICKERS, SEED_REPORTS } from "@/lib/reports";
 import { getAdminSupabase } from "@/lib/supabase";
+import { translateText } from "@/lib/translate";
 
 const KV_TTL = 7 * 24 * 3600;
 
@@ -44,6 +45,21 @@ export type PostMarketStored = {
 
 function hasHangul(s: string | undefined): boolean {
   return !!s && /[가-힣]/.test(s);
+}
+
+/** Finnhub/YF 헤드라인 UTF-8 mojibake (Augustâs 등) 복구 */
+function fixUtf8Mojibake(s: string): string {
+  if (!s || !/â/.test(s)) return s;
+  try {
+    const fixed = Buffer.from(s, "latin1").toString("utf8");
+    return fixed.includes("\ufffd") ? s : fixed;
+  } catch {
+    return s;
+  }
+}
+
+function cleanNewsText(s: string): string {
+  return fixUtf8Mojibake(s.replace(/\s+/g, " ").trim());
 }
 
 function asText(v: unknown): string {
@@ -235,8 +251,8 @@ async function collectSessionNews(
           .slice(0, 6)
           .map((n) => ({
             symbol,
-            headline: n.headline,
-            summary: (n.summary || "").slice(0, 220),
+            headline: cleanNewsText(n.headline),
+            summary: cleanNewsText((n.summary || "").slice(0, 220)),
             datetime: n.datetime,
             source: n.source || "",
           }));
@@ -255,8 +271,8 @@ async function collectSessionNews(
     if (!spacexRe.test(`${n.headline} ${n.summary || ""}`)) continue;
     news.push({
       symbol: "SPCX",
-      headline: n.headline,
-      summary: (n.summary || "").slice(0, 220),
+      headline: cleanNewsText(n.headline),
+      summary: cleanNewsText((n.summary || "").slice(0, 220)),
       datetime: n.datetime,
       source: n.source || "",
     });
@@ -306,11 +322,11 @@ function fallbackItemForSymbol(symbol: string, news: NewsLine[], quotes: string)
       title: "",
       summary: "",
       body: "",
-      titleEn: top.headline.slice(0, 72),
-      summaryEn: (top.summary || top.headline).slice(0, 180),
+      titleEn: cleanNewsText(top.headline.slice(0, 72)),
+      summaryEn: cleanNewsText((top.summary || top.headline).slice(0, 180)),
       bodyEn: rows
         .slice(0, 3)
-        .map((n) => `· ${n.headline}${n.summary ? `\n${n.summary}` : ""}`)
+        .map((n) => `· ${cleanNewsText(n.headline)}${n.summary ? `\n${cleanNewsText(n.summary)}` : ""}`)
         .join("\n\n"),
     };
   }
@@ -377,10 +393,10 @@ function storedFromNews(dateKey: string, news: NewsLine[], quotes: string): Post
       title: "",
       summary: "",
       body: "",
-      titleEn: top.headline.slice(0, 72),
-      summaryEn: (top.summary || top.headline).slice(0, 180),
+      titleEn: cleanNewsText(top.headline.slice(0, 72)),
+      summaryEn: cleanNewsText((top.summary || top.headline).slice(0, 180)),
       bodyEn: rows
-        .map((n) => `· ${n.headline}${n.summary ? `\n${n.summary}` : ""}`)
+        .map((n) => `· ${cleanNewsText(n.headline)}${n.summary ? `\n${cleanNewsText(n.summary)}` : ""}`)
         .join("\n\n"),
     });
     if (items.length >= 8) break;
@@ -514,15 +530,68 @@ ${JSON.stringify(payload)}`;
   }
 }
 
+/** Claude 실패 시 Google/MyMemory로 한글 필드 채움 — UI에 영어 노출 방지 */
+async function translateStoredToKorean(stored: PostMarketStored): Promise<PostMarketStored> {
+  if (!needsKorean(stored)) return stored;
+
+  let headline = stored.headline;
+  if (!hasHangul(headline)) {
+    const src = headline || stored.headlineEn || "";
+    if (src) headline = await translateText(src, "ko", "en");
+  }
+
+  const items = await Promise.all(
+    stored.items.map(async (it) => {
+      const titleEn = it.titleEn || (!hasHangul(it.title) ? it.title : "");
+      const summaryEn = it.summaryEn || (!hasHangul(it.summary) ? it.summary : "");
+      const bodyEn = it.bodyEn || (!hasHangul(it.body) ? it.body : "");
+
+      let title = it.title;
+      let summary = it.summary;
+      let body = it.body;
+
+      if (!hasHangul(title) && (title || titleEn)) {
+        title = await translateText(title || titleEn, "ko", "en");
+      }
+      if (!hasHangul(summary) && (summary || summaryEn)) {
+        summary = await translateText(summary || summaryEn, "ko", "en");
+      }
+      if (!hasHangul(body) && (body || bodyEn)) {
+        const src = body || bodyEn;
+        body = src.length > 1800 ? src : await translateText(src, "ko", "en");
+      }
+
+      return {
+        ...it,
+        title,
+        summary,
+        body,
+        titleEn: titleEn || undefined,
+        summaryEn: summaryEn || undefined,
+        bodyEn: bodyEn || undefined,
+      };
+    }),
+  );
+
+  return normalizeStored({ ...stored, headline, items });
+}
+
 async function ensureBilingual(
   phase: BriefPhase,
   stored: PostMarketStored,
   apiKey?: string,
 ): Promise<PostMarketStored> {
   const normalized = normalizeStored(stored);
-  if (!apiKey) return normalized;
   if (!needsKorean(normalized) && !needsEnglish(normalized)) return normalized;
-  const filled = await fillMissingLang(normalized, apiKey);
+
+  let filled = normalized;
+  if (apiKey && (needsKorean(normalized) || needsEnglish(normalized))) {
+    filled = await fillMissingLang(normalized, apiKey);
+  }
+  if (needsKorean(filled)) {
+    filled = await translateStoredToKorean(filled);
+  }
+
   if (
     filled.headline !== stored.headline ||
     filled.headlineEn !== stored.headlineEn ||
@@ -612,15 +681,15 @@ export function storedToBriefing(stored: PostMarketStored, phase: BriefPhase = "
     source: "session-news",
     labelKo: phase === "pre" ? "장전 브리핑" : "장후 브리핑",
     labelEn: phase === "pre" ? "Pre-market brief" : "After-close brief",
-    headline: stored.headline || stored.headlineEn || "",
+    headline: stored.headline || "",
     headlineEn: stored.headlineEn || undefined,
-    bullets: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.title || it.titleEn || ""}`.slice(0, 72)),
+    bullets: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.title || ""}`.slice(0, 72)),
     bulletsEn: stored.items.slice(0, 3).map((it) => `${it.symbol} · ${it.titleEn || it.title || ""}`.slice(0, 72)),
     reports: stored.items.map((it, i) => ({
       id: `${phase === "pre" ? "am" : "pm"}-${stored.dateKey}-${it.symbol}-${i}`,
-      title: `${it.symbol} · ${it.title || it.titleEn || ""}`,
-      summary: it.summary || it.summaryEn || "",
-      body: it.body || it.bodyEn || "",
+      title: `${it.symbol} · ${it.title || ""}`,
+      summary: it.summary || "",
+      body: it.body || "",
       titleEn: it.titleEn ? `${it.symbol} · ${it.titleEn}` : undefined,
       summaryEn: it.summaryEn,
       bodyEn: it.bodyEn,
@@ -632,29 +701,22 @@ async function resolveStoredBriefing(
   phase: BriefPhase,
   stored: PostMarketStored,
   apiKey: string | undefined,
-  awaitLang: boolean,
 ): Promise<SessionBriefing> {
   const normalized = normalizeStored(stored);
-  if (apiKey && (needsKorean(normalized) || needsEnglish(normalized))) {
-    if (awaitLang) {
-      return storedToBriefing(await ensureBilingual(phase, normalized, apiKey), phase);
-    }
-    void ensureBilingual(phase, normalized, apiKey);
-  }
-  return storedToBriefing(normalized, phase);
+  const filled = await ensureBilingual(phase, normalized, apiKey);
+  return storedToBriefing(filled, phase);
 }
 
 async function getOrCreateSessionBriefing(
   phase: BriefPhase,
-  opts?: { force?: boolean; now?: Date; awaitLang?: boolean },
+  opts?: { force?: boolean; now?: Date },
 ): Promise<SessionBriefing | null> {
   const now = opts?.now ?? new Date();
   const dateKey = sessionDateKey(phase, now);
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  const awaitLang = opts?.awaitLang !== false;
   if (!opts?.force) {
     const cached = await loadStored(phase, dateKey);
-    if (cached) return resolveStoredBriefing(phase, cached, apiKey, awaitLang);
+    if (cached) return resolveStoredBriefing(phase, cached, apiKey);
   }
 
   let news: NewsLine[] = [];
@@ -701,7 +763,7 @@ async function getOrCreateSessionBriefing(
   }
 
   const recent = await loadRecentStored(phase, now);
-  if (recent) return resolveStoredBriefing(phase, recent, apiKey, awaitLang);
+  if (recent) return resolveStoredBriefing(phase, recent, apiKey);
   return null;
 }
 
@@ -709,8 +771,6 @@ async function getOrCreateSessionBriefing(
 export async function getOrCreatePreMarketBriefing(opts?: {
   force?: boolean;
   now?: Date;
-  /** false면 캐시 즉시 반환(한글 번역은 백그라운드). 푸시·크론은 true 유지 */
-  awaitLang?: boolean;
 }): Promise<SessionBriefing | null> {
   return getOrCreateSessionBriefing("pre", opts);
 }
@@ -718,7 +778,6 @@ export async function getOrCreatePreMarketBriefing(opts?: {
 export async function getOrCreatePostMarketBriefing(opts?: {
   force?: boolean;
   now?: Date;
-  awaitLang?: boolean;
 }): Promise<SessionBriefing | null> {
   return getOrCreateSessionBriefing("post", opts);
 }
