@@ -94,8 +94,9 @@ function isLowQualityBriefText(text: string | undefined): boolean {
   const t = (text || "").trim();
   if (!t) return false;
   if (JUNK_NEWS_EN.test(t) || JUNK_BRIEF_KO.test(t)) return true;
-  if (/^(TSLA|NVDA|AAPL|MSFT|GOOGL|AMZN|META|SPCX)\s*이\s+S&P/i.test(t)) return true;
-  if (/S&P\s*500.*(세션|session).*(움직|moving)/i.test(t) && !SYMBOL_NAME_RE.TSLA.test(t)) return true;
+  if (/TSLA\s*이\s+S&P/i.test(t)) return true;
+  if (/S&P\s*500.*(세션|session).*(움직|moving)/i.test(t)) return true;
+  if (/세션\s*·\s*TSLA\s*이\b/.test(t)) return true;
   return false;
 }
 
@@ -373,9 +374,28 @@ function latestReportForSymbol(symbol: string) {
   return null;
 }
 
-function fallbackItemForSymbol(symbol: string, news: NewsLine[], quotes: string): GeneratedItem {
+function fallbackItemForSymbol(
+  symbol: string,
+  news: NewsLine[],
+  quotes: string,
+  preferReport = false,
+): GeneratedItem {
   const meta = POST_MARKET_UNIVERSE.find((u) => u.symbol === symbol);
   const name = meta?.name ?? symbol;
+
+  const report = latestReportForSymbol(symbol);
+  if (preferReport && report) {
+    return {
+      symbol,
+      title: report.title,
+      summary: report.summary,
+      body: (report.body || report.summary).slice(0, 1200),
+      titleEn: report.titleEn,
+      summaryEn: report.summaryEn,
+      bodyEn: report.bodyEn,
+    };
+  }
+
   const rows = qualityNewsForSymbol(news, symbol);
   if (rows.length > 0) {
     const top = rows[0];
@@ -393,7 +413,6 @@ function fallbackItemForSymbol(symbol: string, news: NewsLine[], quotes: string)
     };
   }
 
-  const report = latestReportForSymbol(symbol);
   if (report) {
     return {
       symbol,
@@ -452,7 +471,7 @@ function repairStoredItems(
 ): PostMarketStored {
   const items = stored.items.map((it) => {
     if (!itemLooksLowQuality(it)) return it;
-    const fresh = fallbackItemForSymbol(it.symbol, news, quotes);
+    const fresh = fallbackItemForSymbol(it.symbol, news, quotes, true);
     if (itemLooksLowQuality(fresh)) return it;
     return fresh;
   });
@@ -857,6 +876,8 @@ async function getOrCreateSessionBriefing(
       return resolveStoredBriefing(phase, cached, apiKey, ctx);
     }
   }
+
+  // force 재생성 시에도 스팸 뉴스는 제외하고 Claude 또는 리포트 폴백 사용
 
   if (apiKey && news.length > 0) {
     const generated = await generateWithClaude(phase, dateKey, news, quotes, apiKey);
