@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
 import { fetchBatchQuotes } from "@/lib/yahooFinance";
+import { kvGetDetail } from "@/lib/kv";
+import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 20;
+
+const KV_MARKET_KEY = "market-data:v3";
 
 type SectorStock = { symbol: string; name: string; weight: number };
 type SectorDef   = { key: string; name: string; stocks: SectorStock[] };
@@ -73,18 +77,22 @@ const SECTORS: SectorDef[] = [
   ]},
 ];
 
-// ── Server-side in-memory cache (60s during market, 30min off-hours) ─────────
-import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
-
 type SectorResult = {
   isLive: boolean;
+  liveAt: number;
   sectors: { key: string; name: string; stocks: { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number }[] }[];
 };
 let _cached: { data: SectorResult; at: number } | null = null;
 
-function buildSectors(priceMap: Record<string, number>, changeMap: Record<string, number | null>, isLive: boolean): SectorResult {
+function buildSectors(
+  priceMap: Record<string, number>,
+  changeMap: Record<string, number | null>,
+  isLive: boolean,
+  liveAt: number,
+): SectorResult {
   return {
     isLive,
+    liveAt,
     sectors: SECTORS.map((s) => ({
       key:    s.key,
       name:   s.name,
@@ -108,7 +116,8 @@ export async function GET() {
 
   // Serve from in-memory cache if fresh (장마감 후에는 EOD 이후 갱신분만)
   if (_cached && Date.now() - _cached.at < TTL) {
-    if (open || isEodCacheFresh(_cached.at)) {
+    const dataLiveAt = _cached.data.liveAt || _cached.at;
+    if (open ? Date.now() - dataLiveAt < 55_000 : isEodCacheFresh(dataLiveAt)) {
       return NextResponse.json(_cached.data, { headers: { "Cache-Control": cc } });
     }
   }
@@ -117,27 +126,56 @@ export async function GET() {
   const changeMap: Record<string, number | null> = {};
   const priceMap:  Record<string, number> = {};
   let isLive = false;
+  let liveAt = 0;
+
+  // 1) market-data KV와 동일 소스 우선 (추천주·인기종목과 숫자 일치)
+  try {
+    const kvRaw = await kvGetDetail(KV_MARKET_KEY) as {
+      quotes?: { symbol: string; price: number; changePercent: number }[];
+      liveAt?: number;
+    } | null;
+    const kvLiveAt = kvRaw?.liveAt ?? 0;
+    const kvFresh = kvLiveAt > 0 && (open
+      ? Date.now() - kvLiveAt < 55_000
+      : isEodCacheFresh(kvLiveAt));
+    if (kvFresh && kvRaw?.quotes?.length) {
+      liveAt = kvLiveAt;
+      isLive = true;
+      for (const q of kvRaw.quotes) {
+        if (allSymbols.includes(q.symbol) && q.price > 0) {
+          priceMap[q.symbol] = q.price;
+          changeMap[q.symbol] = q.changePercent;
+        }
+      }
+    }
+  } catch { /* ignore */ }
+
+  const missing = allSymbols.filter((s) => !priceMap[s]);
 
   try {
-    // Split into two parallel batches to halve Yahoo Finance latency
-    const mid   = Math.ceil(allSymbols.length / 2);
-    const [a, b] = await Promise.all([
-      fetchBatchQuotes(allSymbols.slice(0, mid)),
-      fetchBatchQuotes(allSymbols.slice(mid)),
-    ]);
-    const yfQuotes = [...a, ...b];
-    if (yfQuotes.length > 0) {
-      isLive = true;
-      for (const q of yfQuotes) {
-        if (q.price > 0) {
-          changeMap[q.symbol] = q.changePercent;
-          priceMap[q.symbol]  = q.price;
+    if (missing.length > 0) {
+      const mid = Math.ceil(missing.length / 2);
+      const [a, b] = await Promise.all([
+        fetchBatchQuotes(missing.slice(0, mid)),
+        fetchBatchQuotes(missing.slice(mid)),
+      ]);
+      const yfQuotes = [...a, ...b];
+      if (yfQuotes.length > 0) {
+        if (!liveAt) liveAt = Date.now();
+        isLive = true;
+        for (const q of yfQuotes) {
+          if (q.price > 0) {
+            changeMap[q.symbol] = q.changePercent;
+            priceMap[q.symbol]  = q.price;
+          }
         }
       }
     }
   } catch { /* fall through — isLive stays false */ }
 
-  const result: SectorResult = buildSectors(priceMap, changeMap, isLive);
+  if (!liveAt && Object.keys(priceMap).length > 0) liveAt = Date.now();
+
+  const result: SectorResult = buildSectors(priceMap, changeMap, isLive, liveAt);
   _cached = { data: result, at: Date.now() };
 
   return NextResponse.json(result, { headers: { "Cache-Control": cc } });

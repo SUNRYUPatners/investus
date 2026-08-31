@@ -585,11 +585,12 @@ async function ensureBilingual(
   if (!needsKorean(normalized) && !needsEnglish(normalized)) return normalized;
 
   let filled = normalized;
-  if (apiKey && (needsKorean(normalized) || needsEnglish(normalized))) {
-    filled = await fillMissingLang(normalized, apiKey);
-  }
+  // 읽기 API — 한글만 보장(영어 EN 보완은 최초 생성·푸시 시)
   if (needsKorean(filled)) {
-    filled = await translateStoredToKorean(filled);
+    if (apiKey) filled = await fillMissingLang(filled, apiKey);
+    if (needsKorean(filled)) filled = await translateStoredToKorean(filled);
+  } else if (apiKey && needsEnglish(filled)) {
+    filled = await fillMissingLang(filled, apiKey);
   }
 
   if (
@@ -703,6 +704,9 @@ async function resolveStoredBriefing(
   apiKey: string | undefined,
 ): Promise<SessionBriefing> {
   const normalized = normalizeStored(stored);
+  if (!needsKorean(normalized)) {
+    return storedToBriefing(normalized, phase);
+  }
   const filled = await ensureBilingual(phase, normalized, apiKey);
   return storedToBriefing(filled, phase);
 }

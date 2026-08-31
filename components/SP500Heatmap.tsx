@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MiniChartPopup } from "./MiniChartPopup";
 import { SectionInfo } from "./SectionInfo";
 import { useLocaleCode } from "@/contexts/LocaleContext";
 import { heatmapTile } from "@/lib/heatmapColors";
+import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
+import { readMarketDataQuotes } from "@/lib/marketDataCacheClient";
 
 function useIsDesktop() {
   const [lg, setLg] = useState(false);
@@ -19,7 +21,27 @@ function useIsDesktop() {
 
 type StockTile = { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number };
 type Sector    = { key: string; name: string; stocks: StockTile[] };
-type ApiResponse = { isLive: boolean; sectors: Sector[] };
+type ApiResponse = { isLive: boolean; liveAt?: number; sectors: Sector[] };
+
+function overlayMarketDataPrices(sectors: Sector[]): Sector[] {
+  const quotes = readMarketDataQuotes();
+  if (!quotes) return sectors;
+  return sectors.map((sector) => ({
+    ...sector,
+    stocks: sector.stocks.map((s) => {
+      const q = quotes.get(s.symbol);
+      if (!q || q.price <= 0) return s;
+      return { ...s, price: q.price, changePercent: q.changePercent };
+    }),
+  }));
+}
+
+function isSp500CacheFresh(liveAt: number): boolean {
+  if (!liveAt) return false;
+  return isMarketOpen()
+    ? Date.now() - liveAt < 10 * 60 * 1000
+    : isEodCacheFresh(liveAt);
+}
 
 const SECTOR_EN: Record<string, string> = {
   "정보기술":    "Information Technology",
@@ -104,7 +126,6 @@ function SectorBlock({
 
   return (
     <div className="flex flex-col overflow-hidden" style={{ flex, minWidth: 0 }}>
-      {/* Sector name strip */}
       <div
         className="flex items-center px-1.5 flex-shrink-0"
         style={{ height: LABEL_H, background: "var(--muted-2)" }}
@@ -114,7 +135,6 @@ function SectorBlock({
         </span>
       </div>
 
-      {/* Individual stock tiles */}
       <div className="flex overflow-hidden" style={{ height: tileH, gap: "1px" }}>
         {visibleStocks.map((s) => {
           const c = heatmapTile(s.changePercent);
@@ -188,14 +208,23 @@ function SkeletonRow({ rowH, sections }: { rowH: number; sections: { flex: numbe
 }
 
 export function SP500Heatmap() {
-  const [sectors, setSectors] = useState<Sector[] | null>(null);
+  const [baseSectors, setBaseSectors] = useState<Sector[] | null>(null);
   const [isLive, setIsLive]   = useState(true);
+  const [cacheTick, setCacheTick] = useState(0);
   const [popup, setPopup]     = useState<PopupState | null>(null);
   const isDesktop = useIsDesktop();
   const [thumbL, setThumbL]   = useState(0);
   const [thumbW, setThumbW]   = useState(100);
   const scrollRef             = useRef<HTMLDivElement>(null);
   const locale                = useLocaleCode();
+
+  const sectors = useMemo(() => {
+    if (!baseSectors) return null;
+    void cacheTick;
+    return overlayMarketDataPrices(baseSectors);
+  }, [baseSectors, cacheTick]);
+
+  const bumpMarketCache = useCallback(() => setCacheTick((n) => n + 1), []);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -219,18 +248,24 @@ export function SP500Heatmap() {
       const cached = localStorage.getItem("sp500-cache");
       if (cached) {
         const parsed = JSON.parse(cached) as ApiResponse | Sector[];
-        const sectors = Array.isArray(parsed) ? parsed : parsed.sectors;
-        setSectors(sectors);
-        if (!Array.isArray(parsed)) setIsLive(parsed.isLive);
+        const liveAt = Array.isArray(parsed) ? 0 : (parsed.liveAt ?? 0);
+        if (isSp500CacheFresh(liveAt)) {
+          const list = Array.isArray(parsed) ? parsed : parsed.sectors;
+          setBaseSectors(list);
+          if (!Array.isArray(parsed)) setIsLive(parsed.isLive);
+        }
       }
     } catch { /* ignore */ }
 
+    bumpMarketCache();
+
     const doFetch = () => {
-      fetch("/api/sp500-prices")
+      fetch("/api/sp500-prices", { cache: "no-store" })
         .then((r) => r.json())
         .then((data: ApiResponse) => {
-          setSectors(data.sectors);
+          setBaseSectors(data.sectors);
           setIsLive(data.isLive);
+          bumpMarketCache();
           try { localStorage.setItem("sp500-cache", JSON.stringify(data)); } catch { /* ignore */ }
         })
         .catch(() => { /* keep cached or null */ });
@@ -238,9 +273,17 @@ export function SP500Heatmap() {
 
     doFetch();
     const id = setInterval(doFetch, 60_000);
-    return () => clearInterval(id);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === "market-data-cache") bumpMarketCache();
+    };
+    window.addEventListener("storage", onStorage);
+
+    return () => {
+      clearInterval(id);
+      window.removeEventListener("storage", onStorage);
+    };
+  }, [bumpMarketCache]);
 
   const sectorMap = Object.fromEntries(
     (sectors ?? []).map((s) => [s.key, s])
@@ -255,7 +298,6 @@ export function SP500Heatmap() {
       className="rounded-2xl border overflow-hidden"
       style={{ background: "var(--card)", borderColor: "var(--border)" }}
     >
-      {/* Header */}
       <div
         className="flex items-center justify-between px-4 py-3 border-b"
         style={{ borderColor: "var(--border)" }}
@@ -284,11 +326,10 @@ export function SP500Heatmap() {
           </>)}
         </SectionInfo>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          {locale === "ko" ? "섹터별 등락률" : "Sector Changes"}
+          {locale === "ko" ? "섹터별 등락률 · 추천주와 동일 시세" : "Sector changes · same prices as picks"}
         </span>
       </div>
 
-      {/* Treemap — horizontal scroll on small screens */}
       <div ref={scrollRef} className="overflow-x-auto no-scrollbar" style={{ touchAction: "pan-x pan-y", overflowY: "hidden" }}>
         <div style={{ minWidth: "520px", touchAction: "pan-x pan-y" }}>
           <div className="flex flex-col" style={{ gap: "1px", background: "var(--border)" }}>
@@ -326,7 +367,6 @@ export function SP500Heatmap() {
         </div>
       </div>
 
-      {/* Scroll indicator — always visible */}
       <div className="px-4 py-2.5" style={{ borderTop: "1px solid var(--border)" }}>
         <div className="relative h-[3px] rounded-full" style={{ background: "var(--border)" }}>
           <div
@@ -336,7 +376,6 @@ export function SP500Heatmap() {
         </div>
       </div>
 
-      {/* Footer */}
       <div className="px-4 py-2 border-t flex items-center justify-between" style={{ borderColor: "var(--border)" }}>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
           S&P 500 · 섹터 구성 · 시가총액 비례
