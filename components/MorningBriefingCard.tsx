@@ -58,6 +58,7 @@ export function MorningBriefingCard({
   const { user } = useAuth();
   const isPro = user?.isPro === true;
   const [briefing, setBriefing] = useState<SessionBriefing | null>(null);
+  const [loading, setLoading] = useState(true);
   const [openId, setOpenId] = useState<string | null>(null);
   const [viewLang, setViewLang] = useState<ViewLang>("ko");
   const viewEn = viewLang === "en";
@@ -72,19 +73,47 @@ export function MorningBriefingCard({
 
   useEffect(() => {
     let cancelled = false;
+    setLoading(true);
     fetch(apiUrl)
       .then(async (r) => {
         const d = await r.json().catch(() => null) as { briefing?: SessionBriefing | null } | null;
         return d;
       })
       .then((d: { briefing?: SessionBriefing | null } | null) => {
-        if (!cancelled) setBriefing(d?.briefing ?? null);
+        if (!cancelled) {
+          setBriefing(d?.briefing ?? null);
+          setLoading(false);
+        }
       })
       .catch(() => {
-        if (!cancelled) setBriefing(null);
+        if (!cancelled) {
+          setBriefing(null);
+          setLoading(false);
+        }
       });
     return () => { cancelled = true; };
   }, [apiUrl]);
+
+  if (loading && !isDaily) {
+    return (
+      <div
+        className="rounded-2xl border p-4 animate-pulse"
+        style={{ background: "linear-gradient(135deg, #fbbf2414 0%, var(--card) 55%)", borderColor: "#fbbf2440" }}
+        aria-busy="true"
+        aria-label={isKo ? "장전·장후 브리핑 불러오는 중" : "Loading session brief"}
+      >
+        <div className="flex items-center gap-2 mb-3">
+          <Moon className="w-4 h-4" style={{ color: "#fbbf24" }} />
+          <span className="text-[9px] font-bold px-2 py-0.5 rounded-full" style={{ background: "#fbbf2426", color: "#fbbf24" }}>
+            {isKo ? "브리핑 준비 중…" : "Loading brief…"}
+          </span>
+        </div>
+        <div className="h-3 rounded bg-white/10 w-3/4 mb-2" />
+        <div className="h-3 rounded bg-white/10 w-full mb-2" />
+        <div className="h-3 rounded bg-white/10 w-5/6" />
+      </div>
+    );
+  }
 
   if (!briefing) return null;
 

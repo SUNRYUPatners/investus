@@ -628,16 +628,33 @@ export function storedToBriefing(stored: PostMarketStored, phase: BriefPhase = "
   };
 }
 
+async function resolveStoredBriefing(
+  phase: BriefPhase,
+  stored: PostMarketStored,
+  apiKey: string | undefined,
+  awaitLang: boolean,
+): Promise<SessionBriefing> {
+  const normalized = normalizeStored(stored);
+  if (apiKey && (needsKorean(normalized) || needsEnglish(normalized))) {
+    if (awaitLang) {
+      return storedToBriefing(await ensureBilingual(phase, normalized, apiKey), phase);
+    }
+    void ensureBilingual(phase, normalized, apiKey);
+  }
+  return storedToBriefing(normalized, phase);
+}
+
 async function getOrCreateSessionBriefing(
   phase: BriefPhase,
-  opts?: { force?: boolean; now?: Date },
+  opts?: { force?: boolean; now?: Date; awaitLang?: boolean },
 ): Promise<SessionBriefing | null> {
   const now = opts?.now ?? new Date();
   const dateKey = sessionDateKey(phase, now);
   const apiKey = process.env.ANTHROPIC_API_KEY;
+  const awaitLang = opts?.awaitLang !== false;
   if (!opts?.force) {
     const cached = await loadStored(phase, dateKey);
-    if (cached) return storedToBriefing(await ensureBilingual(phase, cached, apiKey), phase);
+    if (cached) return resolveStoredBriefing(phase, cached, apiKey, awaitLang);
   }
 
   let news: NewsLine[] = [];
@@ -684,7 +701,7 @@ async function getOrCreateSessionBriefing(
   }
 
   const recent = await loadRecentStored(phase, now);
-  if (recent) return storedToBriefing(await ensureBilingual(phase, recent, apiKey), phase);
+  if (recent) return resolveStoredBriefing(phase, recent, apiKey, awaitLang);
   return null;
 }
 
@@ -692,6 +709,8 @@ async function getOrCreateSessionBriefing(
 export async function getOrCreatePreMarketBriefing(opts?: {
   force?: boolean;
   now?: Date;
+  /** false면 캐시 즉시 반환(한글 번역은 백그라운드). 푸시·크론은 true 유지 */
+  awaitLang?: boolean;
 }): Promise<SessionBriefing | null> {
   return getOrCreateSessionBriefing("pre", opts);
 }
@@ -699,6 +718,7 @@ export async function getOrCreatePreMarketBriefing(opts?: {
 export async function getOrCreatePostMarketBriefing(opts?: {
   force?: boolean;
   now?: Date;
+  awaitLang?: boolean;
 }): Promise<SessionBriefing | null> {
   return getOrCreateSessionBriefing("post", opts);
 }

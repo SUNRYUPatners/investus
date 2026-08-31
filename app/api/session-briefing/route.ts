@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
 
   if (phase === "pre") {
     try {
-      const briefing = await getOrCreatePreMarketBriefing({ force });
+      const briefing = await getOrCreatePreMarketBriefing({ force, awaitLang: false });
       if (briefing) return NextResponse.json({ briefing: asPhase(briefing, "pre"), phase: "pre" });
     } catch { /* CIO 리포트로 폴백 */ }
 
@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const briefing = await getOrCreatePostMarketBriefing({ force });
+    const briefing = await getOrCreatePostMarketBriefing({ force, awaitLang: false });
     if (briefing) return NextResponse.json({ briefing: asPhase(briefing, "post"), phase: "post" });
   } catch { /* CIO 리포트로 폴백 */ }
 
