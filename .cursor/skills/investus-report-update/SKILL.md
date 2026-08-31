@@ -243,6 +243,7 @@ description: >-
   3. `lib/wallPosts-markets.ts` — **`MOCK_POSTS_KR` / `_SAFE` / `_KR_RE` + 댓글** (종목토론 탭)
   4. `lib/analystPosts-markets.ts` — **`MOCK_ANALYST_POSTS_*` 1:1 + `MOCK_ANALYST_COMMENTS_*` 동일 id·동일 개수** (애널 탭)
   - 당일 **개별 리포트 1개 = 애널 1개** (1:1). 종토방은 리포트 주제를 **커버하는 글 4~8개** + 댓글.
+  - **애널 댓글 버그 방지:** `comments: N`이면 `MOCK_ANALYST_COMMENTS_{KR|SAFE|KR_RE}[같은 id]`에 **N개** 필수. MOCK 없으면 클릭 시 빈 화면. `validate-analyst-mock-sync.js` — **4시장 모두 실패 시 deploy 차단**.
 - 모든 시장 본문: **한글 존댓말 문장형**, 영문 불릿 금지 (위 「8/28 강제」).
 - SVG noteSub 3~4줄, 카드 한글 맥락 필수.
 
