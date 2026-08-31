@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T01SEP = 1788217200000; // 2026.09.01 08:00 KST
 const T31AU = 1788130800000; // 2026.08.31 08:00 KST
 const T29AU = 1787958000000; // 2026.08.29 08:00 KST
 const T28AU = 1787871600000; // 2026.08.28 08:00 KST
@@ -92,7 +93,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T31AU;      // NEW 배지 기준
+export const LATEST_UPDATE = T01SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -111,6 +112,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-01 신규 ────────────────
+  { id: 1164, symbol: "MACRO", nickname: "익명_4300", holdingLabel: "관심종목",
+    content: "9/1 한장: 로보택시 314대·위성3세대·F14 9/15·TSLA +5%·FSD 140억마일·HBM70%·금 준비자산",
+    createdAt: T01SEP + 8*60_000, likes: 10, comments: 1 },
+  { id: 1165, symbol: "SPCX", nickname: "익명_4317", holdingLabel: "관심종목",
+    content: "와겐보르크 건화물선 ~160척 스타링크 해상 확대 · B2B ARPU",
+    createdAt: T01SEP + 16*60_000, likes: 11, comments: 2 },
+  { id: 1166, symbol: "TSLA", nickname: "익명_4334", holdingLabel: "관심종목",
+    content: "텍사스 로보택시 5일 +124 → 314(사이버캡 45·모델Y 269) · 9/3 오스틴 D-2",
+    createdAt: T01SEP + 24*60_000, likes: 12, comments: 1 },
+  { id: 1167, symbol: "SPCX", nickname: "익명_4351", holdingLabel: "관심종목",
+    content: "스타링크 V3 FCC + F14 9/15 전후 · 위성당 용량 ~10배",
+    createdAt: T01SEP + 32*60_000, likes: 13, comments: 2 },
+  { id: 1168, symbol: "SPCX", nickname: "익명_4368", holdingLabel: "관심종목",
+    content: "NASA 로마 43억$ 암흑물질/암흑에너지 · FH13 회고 아님",
+    createdAt: T01SEP + 40*60_000, likes: 14, comments: 1 },
+  { id: 1169, symbol: "TSLA", nickname: "익명_4385", holdingLabel: "관심종목",
+    content: "기가텍사스 사이버캡 24대 · 신호등·고속도로·야간 무인 시험",
+    createdAt: T01SEP + 48*60_000, likes: 15, comments: 2 },
+  { id: 1170, symbol: "TSLA", nickname: "익명_4402", holdingLabel: "관심종목",
+    content: "TSLA +4.4~5.51% · 시총 +540억$ · 옵티머스 100만대/년 · S/X 라인 해체",
+    createdAt: T01SEP + 56*60_000, likes: 10, comments: 1 },
+  { id: 1171, symbol: "TSLA", nickname: "익명_4419", holdingLabel: "관심종목",
+    content: "FSD 140억 마일 · 13→14억 24일 · 7배 안전 통계",
+    createdAt: T01SEP + 64*60_000, likes: 11, comments: 2 },
+  { id: 1172, symbol: "SPCX", nickname: "익명_4436", holdingLabel: "관심종목",
+    content: "사우스헤이븐 11기 터빈 중단 · 1.2GW 청정대기법",
+    createdAt: T01SEP + 72*60_000, likes: 12, comments: 1 },
+  { id: 1173, symbol: "NVDA", nickname: "익명_4453", holdingLabel: "관심종목",
+    content: "Vera Rubin GW당 400억$+ · 젠슨 황 발언",
+    createdAt: T01SEP + 80*60_000, likes: 13, comments: 2 },
+  { id: 1174, symbol: "NVDA", nickname: "익명_4470", holdingLabel: "관심종목",
+    content: "삼성 HBM 생산능력 70% · HBM3E 현물 ~5×",
+    createdAt: T01SEP + 88*60_000, likes: 14, comments: 1 },
+  { id: 1175, symbol: "MACRO", nickname: "익명_4487", holdingLabel: "관심종목",
+    content: "캐시 우드 테슬라+스페이스X ~10억$ 보유",
+    createdAt: T01SEP + 96*60_000, likes: 15, comments: 2 },
+  { id: 1176, symbol: "AMZN", nickname: "익명_4504", holdingLabel: "관심종목",
+    content: "AWS 사우디 53억$+ · 12월 리전 · HUMAIN 50MW 2028",
+    createdAt: T01SEP + 104*60_000, likes: 10, comments: 1 },
+  { id: 1177, symbol: "MACRO", nickname: "익명_4521", holdingLabel: "관심종목",
+    content: "데이터가 지배한다 · 미국 DC 5375개 세계1위",
+    createdAt: T01SEP + 112*60_000, likes: 11, comments: 2 },
+  { id: 1178, symbol: "SPCX", nickname: "익명_4538", holdingLabel: "관심종목",
+    content: "슈퍼헤비 33엔진 정적점화 · F14 준비",
+    createdAt: T01SEP + 120*60_000, likes: 12, comments: 1 },
   // ── 2026-08-31 신규 ────────────────
   { id: 1149, symbol: "MACRO", nickname: "익명_4000", holdingLabel: "관심종목",
     content: "에이전트 메모리 24배 전망. HBM 26~27 품귀",
@@ -4153,6 +4200,59 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-09-01 신규 댓글 ────────────────
+  1164: [
+    { id: 1, nickname: "익명_6164", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 8*60_000 + 3*60_000, likes: 4 },
+  ],
+  1165: [
+    { id: 1, nickname: "익명_6165", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6265", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T01SEP + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1166: [
+    { id: 1, nickname: "익명_6166", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 24*60_000 + 3*60_000, likes: 4 },
+  ],
+  1167: [
+    { id: 1, nickname: "익명_6167", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6267", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T01SEP + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1168: [
+    { id: 1, nickname: "익명_6168", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 40*60_000 + 3*60_000, likes: 4 },
+  ],
+  1169: [
+    { id: 1, nickname: "익명_6169", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 48*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6269", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T01SEP + 48*60_000 + 6*60_000, likes: 5 },
+  ],
+  1170: [
+    { id: 1, nickname: "익명_6170", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 56*60_000 + 3*60_000, likes: 4 },
+  ],
+  1171: [
+    { id: 1, nickname: "익명_6171", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 64*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6271", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T01SEP + 64*60_000 + 6*60_000, likes: 5 },
+  ],
+  1172: [
+    { id: 1, nickname: "익명_6172", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 72*60_000 + 3*60_000, likes: 4 },
+  ],
+  1173: [
+    { id: 1, nickname: "익명_6173", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6273", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T01SEP + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1174: [
+    { id: 1, nickname: "익명_6174", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 88*60_000 + 3*60_000, likes: 4 },
+  ],
+  1175: [
+    { id: 1, nickname: "익명_6175", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6275", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T01SEP + 96*60_000 + 6*60_000, likes: 5 },
+  ],
+  1176: [
+    { id: 1, nickname: "익명_6176", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 104*60_000 + 3*60_000, likes: 4 },
+  ],
+  1177: [
+    { id: 1, nickname: "익명_6177", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 112*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6277", holdingLabel: "관심종목", content: "다음 지표도 같이 봐야겠어요", createdAt: T01SEP + 112*60_000 + 6*60_000, likes: 5 },
+  ],
+  1178: [
+    { id: 1, nickname: "익명_6178", holdingLabel: "관심종목", content: "9/1 핵심 포인트네요", createdAt: T01SEP + 120*60_000 + 3*60_000, likes: 4 },
+  ],
   // ── 2026-08-31 신규 댓글 ────────────────
   1149: [
     { id: 1, nickname: "익명_6149", holdingLabel: "관심종목", content: "이번 주 핵심 포인트네요", createdAt: T31AU + 8*60_000 + 3*60_000, likes: 4 },

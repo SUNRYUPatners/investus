@@ -1,6 +1,12 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
+  { id: -1974, alias: "여의도 너구리 #11", symbol: "코스피", content: "9월 1일 코스피 6,812.44(+0.35%)로 금요일 조정 뒤 소폭 반등했습니다. 외국인 412억 원 순매수, 기관 891억 원 순매도, 개인 623억 원 순매수입니다. SemiCon Taiwan·9월 3일 사이버캡·FOMC 9/15~16·인상 57%가 겹칩니다.", likes: 28, comments: 2, created_at: "2026-09-01T06:00:00.000Z", liked: false, },
+  { id: -1975, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자 +0.82%. HBM 생산능력 70%·HBM3E 현물가 계약가 대비 약 5배 전망이 국내 메모리주에 전달됐습니다. 분기 HBM 출하·평균 판매 가격으로 검증하시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-01T06:08:00.000Z", liked: false, },
+  { id: -1976, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "SK하이닉스 +1.12%로 대형주 중 상대 강세. HBM 품귀 전망과 단기 수급 완화가 겹친 날입니다.", likes: 26, comments: 2, created_at: "2026-09-01T06:16:00.000Z", liked: false, },
+  { id: -1977, alias: "성수 수달 #35", symbol: "LG에너지솔루션", content: "LG에너지솔루션 +0.55%로 2차전지가 지수 반등을 받쳤습니다. 전기차·에너지저장장치 수요와 원·달러 1,369.2원(-3.3원)을 함께 보시면 됩니다.", likes: 25, comments: 2, created_at: "2026-09-01T06:24:00.000Z", liked: false, },
+  { id: -1978, alias: "한남 두루미 #17", symbol: "기아", content: "기아 +0.91%. 미국 로보택시 314대·9월 3일 사이버캡 행사가 완성차 심리 변수입니다.", likes: 24, comments: 2, created_at: "2026-09-01T06:32:00.000Z", liked: false, },
+  { id: -1979, alias: "잠실 백로 #29", symbol: "NAVER", content: "NAVER -0.34%로 반등장에서 플랫폼주는 상대 약세. 반도체·2차전지·완성차가 지수를 이끈 날입니다.", likes: 23, comments: 2, created_at: "2026-09-01T06:40:00.000Z", liked: false, },
   { id: -1968, alias: "여의도 너구리 #11", symbol: "코스피", content: "8월 31일 한국장 한장 요약입니다. 코스피는 6,788.88로 1.79% 내렸고, 이번 주 외국인 순매도는 약 8조 3,153억 원 규모로 집계됐습니다. SemiCon Taiwan(8/31), 9월 4일 미국 고용, 9월 15~16일 FOMC, 9월 인상 확률 57.5%가 같은 주 변수입니다.", likes: 28, comments: 2, created_at: "2026-08-31T06:00:00.000Z", liked: false, },
   { id: -1969, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자는 중국 CXMT 대비 +874% 수출 증가와 1조 5,000억 원 자사주 매입을 발표했지만 주가는 3.38% 내렸습니다. HBM 비중과 월간 수출 통계로 기대와 실적의 간격을 확인하시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-08-31T06:08:00.000Z", liked: false, },
   { id: -1970, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "SK하이닉스는 4.45% 하락했지만, 에이전트 메모리 24배·HBM 2026~27 품귀 전망은 장기 수요 그림을 유지합니다. 단기 수급과 장기 비중을 분리해 보시면 됩니다.", likes: 26, comments: 2, created_at: "2026-08-31T06:16:00.000Z", liked: false, },
@@ -115,6 +121,30 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
+  [-1974]: [
+    { alias: "수급파트", content: "외국인 412억은 금요일 대비 크게 줄었네요.", created_at: "2026-09-01T06:24:00.000Z" },
+    { alias: "환율데스크", content: "6800선 회복과 환율 1369원 같이 봐야겠습니다.", created_at: "2026-09-01T06:36:00.000Z" },
+  ],
+  [-1975]: [
+    { alias: "메모리사이클", content: "HBM 70%는 분기 출하로 검증해야죠.", created_at: "2026-09-01T06:32:00.000Z" },
+    { alias: "수출통계러", content: "현물 5배는 품귀 신호 맞습니다.", created_at: "2026-09-01T06:44:00.000Z" },
+  ],
+  [-1976]: [
+    { alias: "HBM러버", content: "+1.12%는 테마가 수급보다 먼저 반응한 날.", created_at: "2026-09-01T06:40:00.000Z" },
+    { alias: "이익률체크", content: "분기 ASP 같이 추적하겠습니다.", created_at: "2026-09-01T06:52:00.000Z" },
+  ],
+  [-1977]: [
+    { alias: "배터리존버", content: "2차전지가 지수 받쳐준 흐름 맞네요.", created_at: "2026-09-01T06:48:00.000Z" },
+    { alias: "가동률체크", content: "수주 공시 나올 때까지는 조심.", created_at: "2026-09-01T07:00:00.000Z" },
+  ],
+  [-1978]: [
+    { alias: "자동차매니아", content: "미국 로보택시 314대는 글로벌 변수죠.", created_at: "2026-09-01T06:56:00.000Z" },
+    { alias: "미국판매러", content: "9/3 사이버캡 행사도 같이 보겠습니다.", created_at: "2026-09-01T07:08:00.000Z" },
+  ],
+  [-1979]: [
+    { alias: "플랫폼러", content: "반등장에서 플랫폼 약세 패턴이네요.", created_at: "2026-09-01T07:04:00.000Z" },
+    { alias: "광고업계", content: "분기 광고 매출 나올 때까지 관망.", created_at: "2026-09-01T07:16:00.000Z" },
+  ],
   [-1961]: [
     { alias: "지수관찰", content: "장중 폭이 120포인트를 넘으면 종가 하나로 판단하기 어렵습니다.", created_at: "2026-08-29T06:24:00.000Z" },
     { alias: "채권데스크", content: "6,800선 회복이 첫 확인 지점이 되겠네요.", created_at: "2026-08-29T06:36:00.000Z" },
@@ -215,6 +245,11 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
+  { id: -1996, alias: "온체인 매 #03", symbol: "비트코인", content: "9월 1일 안전자산 한장 요약입니다. 비트코인 약 108,248달러, 금 약 3,475달러, 이더리움 약 4,512달러, 달러인덱스 98.2. 9월 인상 확률 57%·FOMC 9/15~16이 공통 변수입니다.", likes: 24, comments: 2, created_at: "2026-09-01T09:00:00.000Z", liked: false, },
+  { id: -1997, alias: "금벌레 #17", symbol: "비트코인", content: "비트코인 약 108,248달러, 10.8만 달러 심리선 부근. 9월 인상 확률 57%·달러인덱스 98.2와 함께 금리 민감 자산으로 부각됐습니다. 현물 상장지수펀드 순유입을 함께 보시기 바랍니다.", likes: 23, comments: 2, created_at: "2026-09-01T09:08:00.000Z", liked: false, },
+  { id: -1998, alias: "금벌레 #17", symbol: "금", content: "금 약 3,475달러. 금 보유액이 달러를 넘는 준비자산 논의와 FOMC 9/15~16이 겹칩니다. 실질금리·달러인덱스·중앙은행 매수가 방향을 좌우합니다.", likes: 22, comments: 2, created_at: "2026-09-01T09:16:00.000Z", liked: false, },
+  { id: -1999, alias: "이더러 #44", symbol: "이더리움", content: "이더리움 약 4,512달러, 4,500달러 선 위. 비트코인·금과 같은 거시 변수를 공유합니다. 스테이킹 수익과 2년물 금리 격차도 확인하시기 바랍니다.", likes: 21, comments: 2, created_at: "2026-09-01T09:24:00.000Z", liked: false, },
+  { id: -2000, alias: "매크로올빼미 #31", symbol: "달러인덱스", content: "달러인덱스(DXY) 약 98.2. 9월 인상 57%·FOMC 9/15~16·원·달러 1,369.2원과 함께 비트코인·금·원화 자산의 공통 변수입니다.", likes: 20, comments: 2, created_at: "2026-09-01T09:32:00.000Z", liked: false, },
   { id: -1991, alias: "온체인 매 #03", symbol: "비트코인", content: "비트코인은 약 78,128달러 부근입니다. 78,000달러 선 재시험과 9월 인상 확률 57.5%가 같은 축입니다. 현물 상장지수펀드 순유입을 함께 보시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-08-31T09:00:00.000Z", liked: false, },
   { id: -1992, alias: "금벌레 #17", symbol: "금", content: "금은 약 4,635달러 부근입니다. 실질금리와 달러 지수가 방향을 좌우하며, 4,600~4,700달러 구간이 단기 기준선입니다.", likes: 23, comments: 2, created_at: "2026-08-31T09:08:00.000Z", liked: false, },
   { id: -1993, alias: "이더러 #44", symbol: "이더리움", content: "이더리움은 약 2,459달러로 2,500달러 선을 시험했습니다. 거시 변수에 연동성이 커서 금리 기대와 같이 움직입니다.", likes: 22, comments: 2, created_at: "2026-08-31T09:16:00.000Z", liked: false, },
@@ -269,6 +304,26 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
+  [-1996]: [
+    { alias: "헷지", content: "10.8만·3475·4512·DXY 98.2 네 줄 같이 보겠습니다.", created_at: "2026-09-01T09:24:00.000Z" },
+    { alias: "실질금리", content: "57%면 이자 없는 자산이 먼저 재가격.", created_at: "2026-09-01T09:36:00.000Z" },
+  ],
+  [-1997]: [
+    { alias: "ETF추적", content: "10.8만$ 선과 ETF 순유입 같이 봐야죠.", created_at: "2026-09-01T09:32:00.000Z" },
+    { alias: "헷지", content: "인상 57%면 기회비용 재계산 구간.", created_at: "2026-09-01T09:44:00.000Z" },
+  ],
+  [-1998]: [
+    { alias: "실질금리", content: "금>달러 준비자산 서사는 중장기 변수.", created_at: "2026-09-01T09:40:00.000Z" },
+    { alias: "달러보기", content: "FOMC 9/15~16 전후 변동성 대비.", created_at: "2026-09-01T09:52:00.000Z" },
+  ],
+  [-1999]: [
+    { alias: "스테이커", content: "4500$ 선과 비트 10.8만 같이 보겠습니다.", created_at: "2026-09-01T09:48:00.000Z" },
+    { alias: "헷지", content: "스테이킹 수익 vs 2년물 금리도 확인.", created_at: "2026-09-01T10:00:00.000Z" },
+  ],
+  [-2000]: [
+    { alias: "채권데스크", content: "98선 위·아래 반응 기록하겠습니다.", created_at: "2026-09-01T09:56:00.000Z" },
+    { alias: "환율데스크", content: "원·달러 1369원과 DXY 연동 맞네요.", created_at: "2026-09-01T10:08:00.000Z" },
+  ],
   [-1971]: [
     { alias: "헷지", content: "청산 8만 7,082명이면 레버리지가 꽤 넓게 쓰였다는 뜻이네요.", created_at: "2026-08-29T09:24:00.000Z" },
     { alias: "실질금리", content: "이자 없는 자산이라 금리 기대에 먼저 반응합니다.", created_at: "2026-08-29T09:32:00.000Z" },
@@ -309,6 +364,10 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  { id: -1988, alias: "실수요 #05", symbol: "전세", content: "9월 1일 부동산 한장 요약입니다. 전세는 학군·역세권 일부 소폭 반등, 매매는 FOMC·세금 부담으로 관망. 9월 입주 물량·전세대출 규제·인상 57%가 변수입니다.", likes: 22, comments: 2, created_at: "2026-09-01T10:00:00.000Z", liked: false, },
+  { id: -1989, alias: "전세러 #09", symbol: "전세", content: "9월 1일 전세는 학군·역세권 일부 소폭 반등, 지방은 약세 지속. 9월 입주 물량·전세대출 규제가 변수입니다.", likes: 21, comments: 2, created_at: "2026-09-01T10:08:00.000Z", liked: false, },
+  { id: -1990, alias: "실수요 #05", symbol: "매매", content: "매매는 FOMC·세금 부담으로 관망. 수도권 실거래 지수는 보합~ -0.1% 구간입니다. 거래량보다 가격을 먼저 보시기 바랍니다.", likes: 20, comments: 2, created_at: "2026-09-01T10:16:00.000Z", liked: false, },
+  { id: -2001, alias: "정책워처 #01", symbol: "정책", content: "9월 정책基調: 공급 확대 수사·대출 규제 유지. FOMC 결과가 주담대·전세대출 심리에 영향을 줄 수 있습니다.", likes: 19, comments: 2, created_at: "2026-09-01T10:24:00.000Z", liked: false, },
   { id: -1984, alias: "실수요 #05", symbol: "서울매매", content: "서울 아파트 매매가는 0.29% 올랐지만 강남구는 3주 연속 -0.11%로 내렸습니다. 중랑구 +0.56%, 전세 +0.22%로 지역·전세를 나눠 보셔야 합니다.", likes: 22, comments: 2, created_at: "2026-08-31T10:00:00.000Z", liked: false, },
   { id: -1985, alias: "정책워처 #01", symbol: "강남", content: "강남·서초는 세제개편 부담으로 급매물이 늘며 하락세가 이어졌습니다. 고가 주택과 외곽 상승의 대비가 핵심입니다.", likes: 21, comments: 2, created_at: "2026-08-31T10:08:00.000Z", liked: false, },
   { id: -1986, alias: "전세러 #09", symbol: "전세", content: "전세가격은 0.22% 올랐습니다. 매물 부족과 전월세 전환 흐름이 겹치면 상승 폭이 커질 수 있습니다.", likes: 20, comments: 2, created_at: "2026-08-31T10:16:00.000Z", liked: false, },
@@ -362,6 +421,22 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
+  [-1988]: [
+    { alias: "실수요", content: "전세·매매 혼조를 한 줄로 정리해 주셨네요.", created_at: "2026-09-01T10:24:00.000Z" },
+    { alias: "전세대출", content: "FOMC 결과가 전세 심리 좌우하겠습니다.", created_at: "2026-09-01T10:36:00.000Z" },
+  ],
+  [-1989]: [
+    { alias: "전세러", content: "입주 물량이 변수 맞습니다.", created_at: "2026-09-01T10:32:00.000Z" },
+    { alias: "대출상담", content: "LTV·DSR 규제가 수요를 제한하죠.", created_at: "2026-09-01T10:44:00.000Z" },
+  ],
+  [-1990]: [
+    { alias: "실수요", content: "보합~ -0.1% 구간 맞네요.", created_at: "2026-09-01T10:40:00.000Z" },
+    { alias: "세제확인", content: "세금 부담에 FOMC까지 겹치면 관망.", created_at: "2026-09-01T10:52:00.000Z" },
+  ],
+  [-2001]: [
+    { alias: "정책워처", content: "공급 수사만으로는 단기 가격 안 잡혀요.", created_at: "2026-09-01T10:48:00.000Z" },
+    { alias: "전세러", content: "대출 규제가 더 직접적 지렛대죠.", created_at: "2026-09-01T11:00:00.000Z" },
+  ],
   [-1981]: [
     { alias: "실수요", content: "강남구가 -0.11%로 낙폭이 커진 것과 대비되네요.", created_at: "2026-08-29T10:24:00.000Z" },
     { alias: "통계보는사람", content: "동남권 상승률이 0.03%까지 내려온 게 더 눈에 띕니다.", created_at: "2026-08-29T10:32:00.000Z" },

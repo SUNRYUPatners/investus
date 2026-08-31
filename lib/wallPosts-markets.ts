@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T01 = 1788217200000; // 2026-09-01 08:00 KST
 const T31 = 1788130800000; // 2026-08-31 08:00 KST
 const T29 = 1787958000000; // 2026-08-29 08:00 KST
 const T28 = 1787871600000; // 2026-08-28 08:00 KST
@@ -8,6 +9,12 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9036, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "관심종목", content: "6812.44 +0.35% · 외국인 412억 순매수 · SemiCon·FOMC", createdAt: T01 - 0, likes: 30, comments: 2, },
+  { id: 9037, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "관심종목", content: "HBM 70%·HBM3E 5× · +0.82%", createdAt: T01 - 1800000, likes: 29, comments: 2, },
+  { id: 9038, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "관심종목", content: "+1.12% · HBM 품귀 전망", createdAt: T01 - 3600000, likes: 28, comments: 2, },
+  { id: 9039, symbol: "LG에너지솔루션", nickname: "배터리존버", holdingLabel: "관심종목", content: "+0.55% · 2차전지 지수 받침", createdAt: T01 - 5400000, likes: 27, comments: 2, },
+  { id: 9040, symbol: "기아", nickname: "자동차매니아", holdingLabel: "관심종목", content: "+0.91% · 로보택시 314대 글로벌", createdAt: T01 - 7200000, likes: 26, comments: 2, },
+  { id: 9041, symbol: "NAVER", nickname: "플랫폼러", holdingLabel: "관심종목", content: "-0.34% · 플랫폼 약세", createdAt: T01 - 9000000, likes: 25, comments: 2, },
   { id: 9029, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "관심종목", content: "6788.88 -1.79%. 이번 주 SemiCon·FOMC·9/4 고용", createdAt: T31 - 0, likes: 30, comments: 2, },
   { id: 9030, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "관심종목", content: "CXMT +874% vs 자사주 1.5조. 공급 vs 환원", createdAt: T31 - 1800000, likes: 29, comments: 2, },
   { id: 9031, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "관심종목", content: "-4.45%인데 에이전트 메모리 24배 전망", createdAt: T31 - 3600000, likes: 28, comments: 2, },
@@ -44,6 +51,30 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9036: [
+    { id: 1, nickname: "수급쟁이", holdingLabel: "관심종목", content: "외국인 412억은 금요일 대비 크게 줄었네요.", createdAt: T01 + 600_000, likes: 5 },
+    { id: 2, nickname: "지수관찰", holdingLabel: "관심종목", content: "6800선 회복 확인했습니다.", createdAt: T01 + 1200_000, likes: 4 },
+  ],
+  9037: [
+    { id: 1, nickname: "메모리사이클", holdingLabel: "관심종목", content: "HBM 70% 전망은 분기 출하로 검증해야죠.", createdAt: T01 - 1200_000, likes: 6 },
+    { id: 2, nickname: "수출통계러", holdingLabel: "관심종목", content: "현물 5배는 품귀 신호 맞습니다.", createdAt: T01 - 900_000, likes: 5 },
+  ],
+  9038: [
+    { id: 1, nickname: "HBM러버", holdingLabel: "관심종목", content: "+1.12%는 HBM 테마가 먼저 반응한 날이네요.", createdAt: T01 - 3000_000, likes: 5 },
+    { id: 2, nickname: "이익률체크", holdingLabel: "관심종목", content: "분기 ASP 같이 봐야 합니다.", createdAt: T01 - 2400_000, likes: 4 },
+  ],
+  9039: [
+    { id: 1, nickname: "배터리존버", holdingLabel: "관심종목", content: "2차전지가 지수 받쳐준 날 맞습니다.", createdAt: T01 - 4800_000, likes: 5 },
+    { id: 2, nickname: "가동률체크", holdingLabel: "관심종목", content: "수주 공시 나올 때까지는 조심.", createdAt: T01 - 4200_000, likes: 4 },
+  ],
+  9040: [
+    { id: 1, nickname: "자동차매니아", holdingLabel: "관심종목", content: "미국 로보택시 314대는 완성차 심리 변수죠.", createdAt: T01 - 6600_000, likes: 5 },
+    { id: 2, nickname: "미국판매러", holdingLabel: "관심종목", content: "9/3 사이버캡 행사도 같이 봐야겠어요.", createdAt: T01 - 6000_000, likes: 4 },
+  ],
+  9041: [
+    { id: 1, nickname: "플랫폼러", holdingLabel: "관심종목", content: "반등장에서 플랫폼은 상대 약세 패턴.", createdAt: T01 - 8400_000, likes: 4 },
+    { id: 2, nickname: "광고업계", holdingLabel: "관심종목", content: "분기 광고 매출 나올 때까지 관망.", createdAt: T01 - 7800_000, likes: 3 },
+  ],
   9021: [
     { id: 1, nickname: "채권쟁이", holdingLabel: "관망", content: "하루에 오르고 내리는 폭이 120포인트면 종가 하나로 판단하기 어렵습니다.", createdAt: T29 + 600_000, likes: 9 },
     { id: 2, nickname: "지수관찰", holdingLabel: "인덱스 보유", content: "전날 상승분을 하루에 반납하는 건 상승 동력이 국내가 아니라는 뜻이죠.", createdAt: T29 + 1200_000, likes: 7 },
@@ -130,6 +161,11 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9130, symbol: "비트코인", nickname: "온체인러", holdingLabel: "관심종목", content: "~108248 · 10.8만$ 선", createdAt: T01 - 0, likes: 28, comments: 2, },
+  { id: 9131, symbol: "금", nickname: "금벌레", holdingLabel: "관심종목", content: "~3475 · 금>달러 준비자산", createdAt: T01 - 1800000, likes: 27, comments: 2, },
+  { id: 9132, symbol: "이더리움", nickname: "이더러", holdingLabel: "관심종목", content: "~4512 · 4500$ 선", createdAt: T01 - 3600000, likes: 26, comments: 2, },
+  { id: 9133, symbol: "은", nickname: "실물러", holdingLabel: "관심종목", content: "금+산업 수요 · Au/Ag ratio", createdAt: T01 - 5400000, likes: 25, comments: 2, },
+  { id: 9134, symbol: "매크로", nickname: "채권덕후", holdingLabel: "관심종목", content: "9월 인상 57% · FOMC 9/15~16", createdAt: T01 - 7200000, likes: 24, comments: 2, },
   { id: 9125, symbol: "비트코인", nickname: "온체인러", holdingLabel: "관심종목", content: "~78128, 78K 재테스트", createdAt: T31 - 0, likes: 28, comments: 2, },
   { id: 9126, symbol: "금", nickname: "금벌레", holdingLabel: "관심종목", content: "~4635, 실질금리 변수", createdAt: T31 - 1800000, likes: 27, comments: 2, },
   { id: 9127, symbol: "이더리움", nickname: "이더러", holdingLabel: "관심종목", content: "~2459, 2500 선", createdAt: T31 - 3600000, likes: 26, comments: 2, },
@@ -153,6 +189,26 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9130: [
+    { id: 1, nickname: "헷지러", holdingLabel: "관심종목", content: "10.8만$ 선 지키는지 봐야겠어요.", createdAt: T01 + 600_000, likes: 5 },
+    { id: 2, nickname: "실질금리", holdingLabel: "관심종목", content: "인상 57%면 기회비용 재계산이죠.", createdAt: T01 + 1200_000, likes: 4 },
+  ],
+  9131: [
+    { id: 1, nickname: "금선물러", holdingLabel: "관심종목", content: "금>달러 준비자산 서사 계속 추적.", createdAt: T01 - 1200_000, likes: 5 },
+    { id: 2, nickname: "달러보기", holdingLabel: "관심종목", content: "FOMC 9/15~16이 변수네요.", createdAt: T01 - 900_000, likes: 4 },
+  ],
+  9132: [
+    { id: 1, nickname: "스테이커", holdingLabel: "관심종목", content: "4500$ 선 위면 비트보다 버틴 셈.", createdAt: T01 - 3000_000, likes: 4 },
+    { id: 2, nickname: "온체인러", holdingLabel: "관심종목", content: "비트 10.8만과 같이 봐야죠.", createdAt: T01 - 2400_000, likes: 3 },
+  ],
+  9133: [
+    { id: 1, nickname: "실물러", holdingLabel: "관심종목", content: "금은비 높으면 은이 뒤늦게 따라올 수 있어요.", createdAt: T01 - 4800_000, likes: 4 },
+    { id: 2, nickname: "헷지러", holdingLabel: "관심종목", content: "산업 수요 PMI도 챙기겠습니다.", createdAt: T01 - 4200_000, likes: 3 },
+  ],
+  9134: [
+    { id: 1, nickname: "채권쟁이", holdingLabel: "관심종목", content: "57%면 이자 없는 자산이 먼저 반응.", createdAt: T01 - 6600_000, likes: 5 },
+    { id: 2, nickname: "미장러", holdingLabel: "관심종목", content: "9/4 고용 나오면 확률부터 움직일 겁니다.", createdAt: T01 - 6000_000, likes: 4 },
+  ],
   9121: [
     { id: 1, nickname: "헷지러", holdingLabel: "금+BTC", content: "청산 8만 7082명이면 레버리지 쓴 사람이 그만큼 많았다는 뜻이죠.", createdAt: T29 + 600_000, likes: 8 },
     { id: 2, nickname: "실질금리", holdingLabel: "관망", content: "이자 없는 자산이라 금리 기대에 먼저 반응합니다.", createdAt: T29 + 1200_000, likes: 6 },
@@ -183,6 +239,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9229, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "학군·역세권 소폭 반등", createdAt: T01 - 0, likes: 26, comments: 2, },
+  { id: 9230, symbol: "매매", nickname: "실수요자", holdingLabel: "관심", content: "FOMC·세금 부담 관망", createdAt: T01 - 2400000, likes: 25, comments: 2, },
+  { id: 9231, symbol: "정책", nickname: "정책워처", holdingLabel: "관심", content: "공급 확대·대출 규제 유지", createdAt: T01 - 4800000, likes: 24, comments: 2, },
+  { id: 9232, symbol: "서울매매", nickname: "강남권", holdingLabel: "관심", content: "전세·매매 혼조", createdAt: T01 - 7200000, likes: 23, comments: 2, },
   { id: 9225, symbol: "서울매매", nickname: "실수요자", holdingLabel: "관심", content: "서울 +0.29%, 강남 -0.11% 3주", createdAt: T31 - 0, likes: 26, comments: 2, },
   { id: 9226, symbol: "강남", nickname: "강남권", holdingLabel: "관심", content: "세제 부담 급매", createdAt: T31 - 2400000, likes: 25, comments: 2, },
   { id: 9227, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "전세 +0.22%", createdAt: T31 - 4800000, likes: 24, comments: 2, },
@@ -203,6 +263,22 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9229: [
+    { id: 1, nickname: "전세대출", holdingLabel: "관심", content: "FOMC 결과가 전세 심리 좌우하겠네요.", createdAt: T01 + 600_000, likes: 4 },
+    { id: 2, nickname: "실수요준비", holdingLabel: "관심", content: "입주 물량이 변수 맞습니다.", createdAt: T01 + 1200_000, likes: 3 },
+  ],
+  9230: [
+    { id: 1, nickname: "대출걱정", holdingLabel: "관심", content: "세금 부담에 FOMC까지 겹치면 관망이 길어지죠.", createdAt: T01 - 1800_000, likes: 4 },
+    { id: 2, nickname: "실수요자", holdingLabel: "관심", content: "보합~ -0.1% 구간 맞네요.", createdAt: T01 - 1200_000, likes: 3 },
+  ],
+  9231: [
+    { id: 1, nickname: "정책워처", holdingLabel: "관심", content: "공급 수사만으로는 단기 가격 안 잡혀요.", createdAt: T01 - 4200_000, likes: 4 },
+    { id: 2, nickname: "전세러", holdingLabel: "관심", content: "LTV·DSR 규제가 더 직접적이죠.", createdAt: T01 - 3600_000, likes: 3 },
+  ],
+  9232: [
+    { id: 1, nickname: "강남권", holdingLabel: "관심", content: "서울 평균만 보면 혼조를 놓치기 쉽습니다.", createdAt: T01 - 6600_000, likes: 4 },
+    { id: 2, nickname: "외곽거주", holdingLabel: "관심", content: "구별 온도 차 분리해서 봐야겠어요.", createdAt: T01 - 6000_000, likes: 3 },
+  ],
   9221: [
     { id: 1, nickname: "통계보는사람", holdingLabel: "관망", content: "성북·강북·종로는 14년 3개월 만에 최고 주간 상승률이라던데요.", createdAt: T29 + 600_000, likes: 8 },
     { id: 2, nickname: "외곽거주", holdingLabel: "자가", content: "강남이 눌린 만큼 외곽이 키 맞추기 하는 흐름으로 보입니다.", createdAt: T29 + 1200_000, likes: 6 },

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.01</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">테슬라 주가가 4.4~5.51% 급등하며 시가총액 약 540억 달러가</text>
+  <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">늘었습니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="336.5" y="160" width="407" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">주가 +4.4~5.51% · 시총 +540억 달러</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">+~5%</text>
+  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">옵티머스(Optimus) 프리몬트 1년 100만 대 생산 목표와 모델S·X 라인 해체가 같은 날 거론됐습니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">+5%</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">일간 상승</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">로보택시·로봇 기대 반영</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🤖</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">1M/yr</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">옵티머스</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">프리몬트 생산 목표</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏭</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">S/X</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">라인 해체</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">생산능력 재배치</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">💰</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">~$54B</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">시총 증가</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">하루 유동성·기대 반영</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">모델S·X 라인 해체는 공장 공간을 로봇·로보택시 쪽으로 옮기는 신호일 수 있습니다</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">주가 급등은 fleet·행사·로봇 목표가 같은 날 겹칠 때 자주 나옵니다</text>
+  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="740" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">옵티머스는 사람형 로봇으로, 1년 100만 대는 선언 수준의 목표이지만 공장 라인을 옮긴다는 메시지와 맞물립니다.</text>
+  <text x="540" y="765" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">모델S·X 생산 라인 해체는 프리몬트 capacity를 재배치한다는 뜻으로 읽힙니다. 540억 달러 시총 증가는 실적보다</text>
+  <text x="540" y="790" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">「실행 일정」에 대한 기대가 커진 날입니다.</text>
+  <rect x="60" y="842" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">급등일에는 「무엇이 확인됐는가」와 「무엇이 기대만 올랐는가」를 나눠야 합니다. 옵티머스 100만 대는 로드맵이고, 로보택시</text>
+  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">314대·9월 3일 행사는 달력에 있는 사실입니다. 행사 후 변동성 확대에 대비하려면 포지션 크기와 옵션 내재변동성을 함께 보시면</text>
+  <text x="540" y="948" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">됩니다.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · 급등·옵티머스 · 2026.09.01</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

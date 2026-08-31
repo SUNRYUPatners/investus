@@ -17,81 +17,81 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
-  // ── 2026-08-31 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
+  // ── 2026-09-01 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
   {
-    id: -946, alias: "종로 까치 #41", symbol: "MACRO",
-    content: "오늘 한 화면에 놓으실 항목을 정리해 드립니다.\n— 에이전트 메모리 수요 2030년까지 약 24배 전망\n— 로마 우주 망원경 10.15톤·팔콘 헤비 13번째 비행 발사\n— 엔비디아 200억 달러 스페이스X 지분 논의(예측시장 확률 급등)\n— 사이버캡 9월 3일 오스틴 행사\n— SPY 주간 변동성 2004년 12월 이후 최저 근처\n— 풍력·터빈 2030년까지 매진 전망\n우주·인공지능·전력·자율주행이 한 주에 겹친 날입니다.",
-    likes: 12, comments: 1, created_at: "2026-08-31T00:00:00.000Z", liked: false,
+    id: -961, alias: "종로 까치 #41", symbol: "MACRO",
+    content: "오늘 한 화면에 놓으실 항목을 정리해 드립니다.\n— 텍사스 로보택시 5일 +124대·누적 314대(사이버캡 45·모델Y 269)\n— 스타링크 V3·F14 9/15 전후·해상 160척\n— 테슬라 +4.4~5.51%·옵티머스 100만 대/년·FSD 140억 mi\n— 삼성 HBM capacity 70%·HBM3E 현물 ~5×\n— 금 보유액이 USD를 넘는 준비자산 논의\n— AWS 사우디 \$5.3B+·Let Data Reign·DC 5375개\n로보택시·위성·AI·전력·안전자산이 9/3 행사 전후로 겹칩니다.",
+    likes: 12, comments: 1, created_at: "2026-09-01T00:00:00.000Z", liked: false,
   },
   {
-    id: -947, alias: "광화문 여우 #62", symbol: "AI",
-    content: "에이전트 한 번 실행에 쓰이는 토큰(텍스트 조각)이 챗봇 대비 5~30배 늘 수 있다는 전망이 나왔습니다.\n고대역폭 메모리가 2026~27년 품귀면 메모리 업체 실적 구성이 바뀝니다.\n그래픽 처리 장치 수치와 함께 메모리 출하·가격을 같은 표에 두시기 바랍니다.",
-    likes: 13, comments: 2, created_at: "2026-08-31T00:07:00.000Z", liked: false,
+    id: -962, alias: "광화문 여우 #62", symbol: "SPCX",
+    content: "로얄 와겐보르크 선단 약 160척에 스타링크 해상 서비스 확대 보도가 나왔습니다.\n원양에서도 선박·화물 데이터를 실시간으로 보낼 수 있어 B2B ARPU가 가정용과 달라질 수 있습니다.\nV3 용량 증가와 같은 맥락이므로 위성 세대·해상 계약을 함께 보시기 바랍니다.",
+    likes: 13, comments: 2, created_at: "2026-09-01T00:07:00.000Z", liked: false,
   },
   {
-    id: -948, alias: "여의도 수리 #28", symbol: "SPCX",
-    content: "10.15톤급 로마 우주 망원경이 8월 30일 오전 7시 26분(동부) 팔콘 헤비 13번째 비행으로 발사됐습니다.\n목표는 태양·지구 2차 궤도(L2)입니다.\n다음 확인 포인트는 L2 도달과 첫 관측(개막) 일정입니다.",
-    likes: 14, comments: 1, created_at: "2026-08-31T00:14:00.000Z", liked: false,
+    id: -963, alias: "여의도 수리 #28", symbol: "TSLA",
+    content: "텍사스 로보택시 fleet이 5일 만에 124대 늘어 314대입니다. 사이버캡 7→45대가 핵심입니다.\n9월 3일 오스틴 행사 이틀 전 숫자이므로 일별 추이·허가 구역·무인 마일 비중을 함께 확인하시기 바랍니다.\nfleet 숫자만으로 상용화가 확인된 것은 아닙니다.",
+    likes: 14, comments: 1, created_at: "2026-09-01T00:14:00.000Z", liked: false,
   },
   {
-    id: -949, alias: "송파 독수리 #66", symbol: "NVDA",
-    content: "200억 달러 규모 스페이스X 지분 매수는 아직 공식 확인되지 않았습니다.\n8월 29일 예측시장에서 확률만 크게 올랐으므로, 확률 변화만으로 포지션을 키우기보다 공식 발표를 기다리시기 바랍니다.\n칩 공급 계약과 지분 매수는 규모와 리스크가 다릅니다.",
-    likes: 15, comments: 2, created_at: "2026-08-31T00:21:00.000Z", liked: false,
+    id: -964, alias: "송파 독수리 #66", symbol: "SPCX",
+    content: "스타링크 V3 FCC 허가와 스타십 F14가 9월 15일 2026년 전후로 겹칠 수 있다는 일정이 거론됐습니다.\nV3는 위성당 용량 약 10배입니다. 허가+발사+세대 교체가 한 달에 몰리면 cadence narrative가 강해집니다.\nF14 결과와 V3 첫 상용 배치 수를 다음 확인 포인트로 두시면 됩니다.",
+    likes: 15, comments: 2, created_at: "2026-09-01T00:21:00.000Z", liked: false,
   },
   {
-    id: -950, alias: "분당 매 #31", symbol: "SPCX",
-    content: "스타베이스 인근 444에이커(약 180만㎡) 수자원 권리가 최대 2억 2,000만 달러에 거래될 수 있다는 보도가 나왔습니다.\n대형 로켓 시험·발사 빈도를 늘리려는 토지·상하수 인프라 선행 투자로 읽힙니다.\n거래 마무리와 월별 발사 횟수를 함께 보시면 됩니다.",
-    likes: 16, comments: 1, created_at: "2026-08-31T00:28:00.000Z", liked: false,
+    id: -965, alias: "분당 매 #31", symbol: "SPCX",
+    content: "NASA 로마 망원경 43억 달러 임무는 암흑물질·암흑에너지 탐사가 목표입니다. FH13 발사 recap이 아니라 과학 임무·대형 화물 역량 관점입니다.\n과학 발사는 직접 매출보다 헤비급 track record에 기여합니다.\n첫 과학 데이터 일정을 추적하시기 바랍니다.",
+    likes: 16, comments: 1, created_at: "2026-09-01T00:28:00.000Z", liked: false,
   },
   {
-    id: -951, alias: "성수 너구리 #15", symbol: "SPCX",
-    content: "엔비디아 칩을 탑재한 인공지능 위성 서비스가 2027년 4분기 시작될 수 있다는 일정이 거론됐습니다.\n궤도에서 바로 데이터를 분석하면 지상망이 약한 구간에서 지연을 줄일 수 있습니다.\n일정이 분기 단위로 내려온 것이 의미 있습니다.",
-    likes: 12, comments: 2, created_at: "2026-08-31T00:35:00.000Z", liked: false,
+    id: -966, alias: "성수 너구리 #15", symbol: "TSLA",
+    content: "기가 텍사스 사이버캡 24대가 신호등·고속도로·야간 무인 시험 중입니다. D-2 구간입니다.\n공장 시험이 공개 도로 fleet 314대로 이어지는지가 관건입니다.\n행사 다음 날부터 무인 영상·양산 일정을 확인하시면 됩니다.",
+    likes: 12, comments: 2, created_at: "2026-09-01T00:35:00.000Z", liked: false,
   },
   {
-    id: -952, alias: "역삼 판다 #77", symbol: "TSLA",
-    content: "연간 100기가와트급 태양광 목표와 사내 풍력 터빈 주조 계획이 함께 거론됐습니다.\n인공지능 데이터센터·공장·발사장 모두 24시간 전력이 필요합니다.\n전력 병목이 칩 병목만큼 중요해지는 구간입니다.",
-    likes: 13, comments: 1, created_at: "2026-08-31T00:42:00.000Z", liked: false,
+    id: -967, alias: "역삼 판다 #77", symbol: "TSLA",
+    content: "테슬라가 4.4~5.51% 급등하며 시총 약 540억 달러가 늘었습니다. 옵티머스 100만 대/년·모델S/X 라인 해체가 같은 날 거론됐습니다.\n급등일에는 「확인」과 「기대 repricing」을 나누세요. 9/3 행사 전후 변동성에 대비하시기 바랍니다.",
+    likes: 13, comments: 1, created_at: "2026-09-01T00:42:00.000Z", liked: false,
   },
   {
-    id: -953, alias: "삼성동 올빼미 #19", symbol: "AI",
-    content: "약 15기가와트 규모 인공지능 연산 설비가 2027년까지 변압기·배선·냉각 문제로 전원을 넣지 못할 수 있다는 전망이 나왔습니다.\n칩 주문과 실제 가동 시점을 분리해 보시기 바랍니다.\n송전·변압 장비 납기가 새로운 병목입니다.",
-    likes: 14, comments: 2, created_at: "2026-08-31T00:49:00.000Z", liked: false,
+    id: -968, alias: "삼성동 올빼미 #19", symbol: "TSLA",
+    content: "FSD 누적 140억 mi, 13→14억 mi는 약 24일입니다. ~7배 안전은 동일 metric 기준입니다.\n무인 mi와 감독 하 mi는 다릅니다. 로보택시 허가 논의에 쓰이는 근거이므로 정의를 확인하시기 바랍니다.",
+    likes: 14, comments: 2, created_at: "2026-09-01T00:49:00.000Z", liked: false,
   },
   {
-    id: -954, alias: "한남 재규어 #27", symbol: "MACRO",
-    content: "혁신 테마 ARKK 약 6억 달러, 테슬라 관련 상장지수펀드 약 3.91억 달러 규모 자금 흐름이 부각됐습니다.\n개별 헤드라인보다 테마 단위 위험 선호를 보여 주는 지표입니다.\n9월 3일 사이버캡 행사 전후 변동성에 대비하시기 바랍니다.",
-    likes: 15, comments: 1, created_at: "2026-08-31T00:56:00.000Z", liked: false,
+    id: -969, alias: "한남 재규어 #27", symbol: "SPCX",
+    content: "사우스헤이븐 11기 임시 터빈 중단·1.2GW Clean Air 이슈는 지역 전력·허가 리스크를 보여 줍니다.\n로켓·공장·DC는 전력망에 의존합니다.\n가동 재개·대체 전력 계약을 추적하시면 됩니다.",
+    likes: 15, comments: 1, created_at: "2026-09-01T00:56:00.000Z", liked: false,
   },
   {
-    id: -955, alias: "해운대 고래 #03", symbol: "TSLA",
-    content: "운전석·페달 없는 사이버캡 전용 행사가 9월 3일 텍사스 오스틴에서 열립니다.\n차량 목표가 3만 달러, 운행비 마일당 0.20달러로 거론됐습니다.\n날짜가 정해지면 상용 일정이 말에서 달력으로 내려온 것입니다.",
-    likes: 16, comments: 2, created_at: "2026-08-31T00:63:00.000Z", liked: false,
+    id: -970, alias: "해운대 고래 #03", symbol: "NVDA",
+    content: "젠슨 황 CEO는 Vera Rubin이 GW당 400억 달러+ 매출 가능하다고 말했습니다.\nGW는 AI 팹 규모 단위입니다. 숫자가 크면 밸류에이션 debate도 커집니다.\n다음 earnings에서 Vera Rubin 일정·GW 수주·전력 지연 언급을 보시기 바랍니다.",
+    likes: 16, comments: 2, created_at: "2026-09-01T00:63:00.000Z", liked: false,
   },
   {
-    id: -956, alias: "마포 살쾡이 #08", symbol: "MACRO",
-    content: "SPY 주간 변동성이 2004년 12월 이후 최저 근처입니다.\n8월 28일 종가 769.35달러(-0.23%)로 표면은 잔잔하지만, 9월 금리 인상 확률 57.5%·9월 4일 고용·9월 15~16일 정책회의가 남아 있습니다.\n지수 수준과 변동성 지표를 같이 보시기 바랍니다.",
-    likes: 12, comments: 1, created_at: "2026-08-31T00:70:00.000Z", liked: false,
+    id: -971, alias: "마포 살쾡이 #08", symbol: "NVDA",
+    content: "삼성 memory capacity의 ~70%를 2031년까지 NVDA·MSFT·GOOGL에 공급할 수 있다는 전망과 HBM3E spot ~5×가 겹쳤습니다.\n국내 SK하이닉스·삼성 실적 mix와 바로 연결됩니다.\n70%는 plan이므로 분기 HBM 출하·ASP로 검증하시기 바랍니다.",
+    likes: 12, comments: 1, created_at: "2026-09-01T00:70:00.000Z", liked: false,
   },
   {
-    id: -957, alias: "판교 늑대 #90", symbol: "MACRO",
-    content: "애플 최고운영책임자(차기 최고경영자) 후계 논의와 테슬라 로보택시 목요일 일정이 같은 주에 겹칩니다.\n빅테크 7개 종목은 개별 이벤트 변동성이 커질 수 있는 주입니다.\n지수 헷지와 개별 종목 노출을 구분하시기 바랍니다.",
-    likes: 13, comments: 2, created_at: "2026-08-31T00:77:00.000Z", liked: false,
+    id: -972, alias: "판교 늑대 #90", symbol: "MACRO",
+    content: "캐시 우드 관련 테슬라+스페이스X 보유 합산 ~\$10억 규모가 거론됐습니다.\n로보택시·우주가 한 ETF 바구니로 움직일 수 있습니다.\n9/3 전후 ARK·TSLA flow를 함께 보시기 바랍니다.",
+    likes: 13, comments: 2, created_at: "2026-09-01T00:77:00.000Z", liked: false,
   },
   {
-    id: -958, alias: "인천 갈매기 #52", symbol: "MACRO",
-    content: "미국 취미·여가 소비가 재화 지출 가운데 5%를 넘어 사상 최고 수준에 도달했다는 데이터가 나왔습니다.\n금리가 높은 환경에서도 일부 카테고리 소비는 견조할 수 있습니다.\n거시 둔화 논거와 미시 소비 데이터를 함께 보시면 됩니다.",
-    likes: 14, comments: 1, created_at: "2026-08-31T00:84:00.000Z", liked: false,
+    id: -973, alias: "인천 갈매기 #52", symbol: "AMZN",
+    content: "AWS 사우디 \$5.3B+, 2026년 12월 첫 리전, 2028 HUMAIN AI Zone 50MW, Marvell Trainium + NVDA mix입니다.\n중동 AI는 에너지+주권+칩 경쟁입니다.\n착공·전력 계약·Trainium 채택률을 추적하시면 됩니다.",
+    likes: 14, comments: 1, created_at: "2026-09-01T00:84:00.000Z", liked: false,
   },
   {
-    id: -959, alias: "종로 까치 #41", symbol: "TSLA",
-    content: "풍력·에너지 터빈 수요가 2030년까지 매진 상태라는 전망이 나왔습니다.\n연간 100기가와트급 태양광·사내 터빈 주조 계획과 겹쳐 전력 인프라 투자가 한 묶음으로 읽힙니다.\n매진 전망은 납기·가격 신호이지 수익 확인은 아닙니다.",
-    likes: 15, comments: 2, created_at: "2026-08-31T00:91:00.000Z", liked: false,
+    id: -974, alias: "종로 까치 #41", symbol: "MACRO",
+    content: "「Let Data Reign」과 미국 DC 5375개(세계 1위) 집계가 겹쳤습니다.\n투자는 「몇 개」보다 「몇 GW가 전원 투입됐는가」가 중요합니다.\n칩 주문과 powered DC gap이 2026~27 핵심 변수입니다.",
+    likes: 15, comments: 2, created_at: "2026-09-01T00:91:00.000Z", liked: false,
   },
   {
-    id: -960, alias: "광화문 여우 #62", symbol: "NVDA",
-    content: "에이전트 메모리·궤도 인공지능·지분 논의가 겹치며 엔비디아 이야기가 칩 판매를 넘어 「연산이 어디에 놓이는가」로 넓어지고 있습니다.\n공식 발표·위성 일정·고대역폭 메모리 실적을 분리해 추적하시기 바랍니다.\n내러티브 확장과 실적 확인은 다른 속도로 움직입니다.",
-    likes: 16, comments: 1, created_at: "2026-08-31T00:98:00.000Z", liked: false,
+    id: -975, alias: "광화문 여우 #62", symbol: "SPCX",
+    content: "Super Heavy 33-engine static fire가 F14 준비로 거론됐습니다.\n정적점화 성공은 pad·날씨·허가만 남았다는 신호에 가깝습니다.\nV3 배치 cadence와 직결되므로 점화 영상·발사 창을 확인하시기 바랍니다.",
+    likes: 16, comments: 1, created_at: "2026-09-01T00:98:00.000Z", liked: false,
   },
   // ── 2026-08-29 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
   {
@@ -7344,6 +7344,42 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
+  [-961]: [{ alias: "댓글_310961", content: "9/3 사이버캡 전후 한 화면 정리 감사합니다", created_at: "2026-09-01T00:10:00.000Z" }],
+  [-962]: [
+    { alias: "댓글_310962", content: "해상 160척 규모가 B2B 매출에 얼마나 반영될지 궁금합니다", created_at: "2026-09-01T00:12:00.000Z" },
+    { alias: "댓글_310963", content: "V3와 해상 계약을 같이 보라는 말이 도움이 됩니다", created_at: "2026-09-01T00:14:00.000Z" },
+  ],
+  [-963]: [{ alias: "댓글_310964", content: "사이버캡 7→45대 증가가 핵심이네요", created_at: "2026-09-01T00:20:00.000Z" }],
+  [-964]: [
+    { alias: "댓글_310965", content: "9/15 전후 V3와 F14 일정 겹침을 주목하겠습니다", created_at: "2026-09-01T00:27:00.000Z" },
+    { alias: "댓글_310966", content: "용량 10배가 실제 서비스로 이어지는 시점이 관건이겠네요", created_at: "2026-09-01T00:29:00.000Z" },
+  ],
+  [-965]: [{ alias: "댓글_310967", content: "과학 임무 관점으로 다시 읽어보겠습니다", created_at: "2026-09-01T00:34:00.000Z" }],
+  [-966]: [
+    { alias: "댓글_310968", content: "야간 무인 시험 결과가 9/3 행사에 나올까요", created_at: "2026-09-01T00:41:00.000Z" },
+    { alias: "댓글_310969", content: "공장 시험과 공개 fleet 숫자를 분리해서 보라는 말 공감합니다", created_at: "2026-09-01T00:43:00.000Z" },
+  ],
+  [-967]: [{ alias: "댓글_310970", content: "급등일에는 기대와 확인을 나누라는 조언 유용합니다", created_at: "2026-09-01T00:48:00.000Z" }],
+  [-968]: [
+    { alias: "댓글_310971", content: "140억 mi 중 무인 비중은 어디서 확인할 수 있을까요", created_at: "2026-09-01T00:55:00.000Z" },
+    { alias: "댓글_310972", content: "24일 만에 10억 mi 증가 속도가 인상적이네요", created_at: "2026-09-01T00:57:00.000Z" },
+  ],
+  [-969]: [{ alias: "댓글_310973", content: "전력·허가 리스크는 DC·로켓 모두에 해당하겠네요", created_at: "2026-09-01T01:02:00.000Z" }],
+  [-970]: [
+    { alias: "댓글_310974", content: "GW당 400억 달러 가정의 근거가 궁금합니다", created_at: "2026-09-01T01:10:00.000Z" },
+    { alias: "댓글_310975", content: "다음 실적에서 Vera Rubin 일정 언급을 확인하겠습니다", created_at: "2026-09-01T01:12:00.000Z" },
+  ],
+  [-971]: [{ alias: "댓글_310976", content: "삼성 70% 전망은 분기 HBM 출하로 검증해야겠네요", created_at: "2026-09-01T01:18:00.000Z" }],
+  [-972]: [
+    { alias: "댓글_310977", content: "테슬라+스페이스X 묶음 보유는 ETF 흐름과 연동될 수 있겠습니다", created_at: "2026-09-01T01:25:00.000Z" },
+    { alias: "댓글_310978", content: "9/3 전후 ARK 유입을 같이 보겠습니다", created_at: "2026-09-01T01:27:00.000Z" },
+  ],
+  [-973]: [{ alias: "댓글_310979", content: "사우디 AI Zone 50MW 전력 계약이 관건이겠네요", created_at: "2026-09-01T01:32:00.000Z" }],
+  [-974]: [
+    { alias: "댓글_310980", content: "DC 개수보다 GW 전원 투입이 중요하다는 말에 동의합니다", created_at: "2026-09-01T01:39:00.000Z" },
+    { alias: "댓글_310981", content: "칩 주문과 powered DC gap을 추적하겠습니다", created_at: "2026-09-01T01:41:00.000Z" },
+  ],
+  [-975]: [{ alias: "댓글_310982", content: "33엔진 정적점화 후 발사 창만 남았다는 해석이 맞다면 9/15 전후가 변수네요", created_at: "2026-09-01T01:48:00.000Z" }],
   [-946]: [{ alias: "댓글_310946", content: "한 화면 정리 감사합니다", created_at: "2026-08-31T00:10:00.000Z" }],
   [-947]: [
     { alias: "댓글_310947", content: "고대역폭 메모리 출하량은 분기 실적에서 어디를 보면 될까요", created_at: "2026-08-31T00:12:00.000Z" },

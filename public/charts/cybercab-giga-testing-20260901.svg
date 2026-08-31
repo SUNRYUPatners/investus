@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.01</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">기가 텍사스에서 사이버캡 24대가 신호등·고속도로 구간을 야간 무인</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">시험 중입니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">🏭</text>
+  <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">24대 · D-2</text>
+  <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">9월 1일 기준 사이버캡 전용 행사까지 이틀. 공장 단지에서 신호등·고속도로·야간 무인 운행을 동시에</text>
+  <text x="540" y="369" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">검증합니다.</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">🚗</text>
+  <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">24대</text>
+  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">기가 텍사스</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">전용 사이버캡 시험 fleet</text>
+  <rect x="390" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🚦</text>
+  <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">신호등</text>
+  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">도심·교차로</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">정지·출발·양보 판단</text>
+  <rect x="720" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">🌙</text>
+  <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">야간</text>
+  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">무인 시험</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">조명·센서 성능 검증</text>
+  <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">사이버캡(Cybercab)은 운전석·페달 없이 처음부터 무인용으로 만든 전용 로보택시입니다. 24대가 기가</text>
+  <text x="540" y="682" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">텍사스에서 신호등·고속도로·야간 구간을 돌며, 9월 3일 오스틴 행사 직전 마지막 시험을 하는 그림입니다.</text>
+  <text x="540" y="708" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">「공장 안 시험」이 「공개 도로 fleet」으로 이어지는지가 관건입니다.</text>
+  <rect x="60" y="814" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="844" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">시험 차량 수는 상용 fleet의 선행 지표입니다. 야간 무인은 카메라·레이더 성능과 규제 허용 범위를 동시에 시험합니다. 행사 다음</text>
+  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">날부터는 실제 무인 영상·허가 구역·양산 일정을 확인하시면 됩니다. 단기 주가는 기대치 조정에 민감하므로 「시험」과 「상용」을</text>
+  <text x="540" y="920" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">구분해 기록하시기 바랍니다.</text>
+  <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · 사이버캡 공장 시험 · 2026.09.01</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
