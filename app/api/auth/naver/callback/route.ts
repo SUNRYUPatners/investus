@@ -1,20 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAdminSupabase } from "@/lib/supabase";
-import { siteUrlFromRequest } from "@/lib/auth/siteUrl";
+import {
+  isSupabaseUserAlreadyExists,
+  oauthCanonicalSiteUrl,
+} from "@/lib/auth/siteUrl";
+
+function loginFailedRedirect(siteUrl: string, reason: string) {
+  console.error(`[naver/callback] ${reason}`);
+  const url = new URL(`${siteUrl}/more`);
+  url.searchParams.set("login_error", "naver");
+  return NextResponse.redirect(url.toString());
+}
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const code = searchParams.get("code");
   const state = searchParams.get("state");
 
-  const siteUrl = siteUrlFromRequest(req);
-  const errorUrl = `${siteUrl}/more`;
+  const siteUrl = oauthCanonicalSiteUrl();
 
   // Validate CSRF state
   const storedState = req.cookies.get("naver_oauth_state")?.value;
   if (!code || !state || state !== storedState) {
-    console.error("[naver/callback] invalid state or missing code");
-    return NextResponse.redirect(errorUrl);
+    return loginFailedRedirect(siteUrl, "invalid state or missing code");
   }
 
   const clientId = process.env.NAVER_CLIENT_ID!;
@@ -34,8 +42,7 @@ export async function GET(req: NextRequest) {
   const tokenData = await tokenRes.json() as { access_token?: string; error?: string };
 
   if (!tokenData.access_token) {
-    console.error("[naver/callback] token exchange failed:", tokenData.error);
-    return NextResponse.redirect(errorUrl);
+    return loginFailedRedirect(siteUrl, `token exchange failed: ${tokenData.error ?? "unknown"}`);
   }
 
   // 2. Get Naver user profile
@@ -50,8 +57,7 @@ export async function GET(req: NextRequest) {
 
   const naverUser = profileData.response;
   if (!naverUser?.email) {
-    console.error("[naver/callback] no email in Naver profile");
-    return NextResponse.redirect(errorUrl);
+    return loginFailedRedirect(siteUrl, "no email in Naver profile");
   }
 
   const email = naverUser.email;
@@ -60,15 +66,14 @@ export async function GET(req: NextRequest) {
 
   const admin = getAdminSupabase();
 
-  // 3. Create user if not exists (ignore already-registered error)
+  // 3. Create user if not exists — 재로그인 시 「already been registered」는 정상
   const { error: createError } = await admin.auth.admin.createUser({
     email,
     email_confirm: true,
     user_metadata: { nickname, naver_id: naverId, provider: "naver" },
   });
-  if (createError && !createError.message.toLowerCase().includes("already registered")) {
-    console.error("[naver/callback] createUser failed:", createError.message);
-    return NextResponse.redirect(errorUrl);
+  if (createError && !isSupabaseUserAlreadyExists(createError)) {
+    return loginFailedRedirect(siteUrl, `createUser failed: ${createError.message}`);
   }
 
   // 4. Generate a one-time magic link to establish Supabase session
@@ -79,8 +84,7 @@ export async function GET(req: NextRequest) {
   });
 
   if (linkError || !linkData?.properties?.hashed_token) {
-    console.error("[naver/callback] generateLink failed:", linkError?.message);
-    return NextResponse.redirect(errorUrl);
+    return loginFailedRedirect(siteUrl, `generateLink failed: ${linkError?.message ?? "no token"}`);
   }
 
   // 5. Redirect to our callback with the token_hash — callback calls verifyOtp

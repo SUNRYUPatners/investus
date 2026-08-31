@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { siteUrlFromRequest } from "@/lib/auth/siteUrl";
+import { oauthCanonicalSiteUrl } from "@/lib/auth/siteUrl";
 
 export async function GET(req: NextRequest) {
   const clientId = process.env.NAVER_CLIENT_ID;
@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Naver login not configured" }, { status: 501 });
   }
 
-  const siteUrl = siteUrlFromRequest(req);
+  const siteUrl = oauthCanonicalSiteUrl();
   const redirectUri = `${siteUrl}/api/auth/naver/callback`;
   const state = crypto.randomUUID();
 
@@ -24,6 +24,7 @@ export async function GET(req: NextRequest) {
     sameSite: "lax",
     maxAge: 600,
     path: "/",
+    domain: process.env.NODE_ENV === "production" ? ".investus.kr" : undefined,
   });
   return res;
 }

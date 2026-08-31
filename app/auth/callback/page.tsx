@@ -33,6 +33,9 @@ export default function AuthCallbackPage() {
           finish();
           return;
         }
+        console.error("[auth/callback] verifyOtp failed:", error.message);
+        router.replace("/more?login_error=session");
+        return;
       }
 
       const { data: { session } } = await supabase.auth.getSession();
