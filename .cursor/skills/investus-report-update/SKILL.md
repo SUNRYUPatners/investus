@@ -68,7 +68,7 @@ description: >-
 **자가 점검 (배포 전)**
 - 제목이 고유명사 나열인가? → 문장으로.
 - 한글 본문에 `다.` / `이다.` / `한다.` / `임.` 으로 끝나나? → 합니다체로.
-- **한글 `title`/`summary`/`body`에 영문 키워드 덤프(`supply fear`, `BTC ~78128`, `**A hold**` 등)가 섞였는가? → 전부 한국어 문장으로. 배포 전 `node scripts/validate-report-korean.js` 통과 필수.
+- **한글 `title`/`summary`/`body`에 영문 키워드 덤프(`supply fear`, `BTC ~78128`, `**A hold**` 등)가 섞였는가? → 전부 한국어 문장으로. **`public/charts/*-YYYYMMDD.svg`(한글판, `-en` 제외) caption·heroSub도 동일.** 배포 전 `node scripts/validate-report-korean.js` 통과 필수.
 - 카드·인용·hero에 소셜/매체 출처 이름이 보이나? → 지우고 내용만.
 - 약어를 설명 없이 쓰는가? → 풀이 추가.
 - body가 한 화면에 다 들어오나? → 문단 보강.

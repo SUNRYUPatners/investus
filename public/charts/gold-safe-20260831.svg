@@ -36,12 +36,12 @@
   <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">금 가격을 읽는 세 줄</text>
   <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📈 명목 금리가 오르면 금 매력이 줄 수 있습니다</text>
   <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">💵 달러가 약하면 금은 올라가기 쉽습니다</text>
-  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🌍 지정학·신용 리스크는 단기 bid를 줍니다</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🌍 지정학·신용 리스크는 단기 매수 수요를 키울 수 있습니다</text>
   <rect x="60" y="800" width="960" height="148" rx="14" fill="#1c1805" stroke="#facc15" stroke-width="1"/>
   <text x="540" y="830" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">왜 중요한가</text>
   <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">금은 「인플레이 헤지」와 「무이자 자산」 두 성격이 공존합니다. 이번처럼 금리 기대가 올라가는 구간에서는 조정이 나올 수 있습니다.</text>
   <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">4,600달러·4,700달러 구간에서 지지·저항을 확인하시면 됩니다.</text>
-  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">GOLD · 4635 · 2026.08.31</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">금 · 4,635달러 · 2026.08.31</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

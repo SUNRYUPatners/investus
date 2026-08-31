@@ -46,6 +46,43 @@ const BAD_PATTERNS = [
   /;\s*[a-z]{3,}/, // "BTC ~78128, ETH ~2459;" style dumps
 ];
 
+/** 한글 SVG(-en 제외) caption·본문 텍스트 검증 패턴 */
+const SVG_BAD_PATTERNS = [
+  /\bBTC ~\d/i,
+  /\bgold ~\d/i,
+  /\bSept hike\b/i,
+  /\bETH-only\b/i,
+  /\bshock\b/i,
+  /\b odds\b/i,
+  /\bbid를\b/i,
+  /\bSilver\b/,
+  /\b78K\b/,
+  /\bgold\/silver ratio\b/i,
+  /\baffordability rotation\b/i,
+];
+
+function validateSvgKo(filePath) {
+  const errors = [];
+  const src = load(filePath);
+  for (const re of SVG_BAD_PATTERNS) {
+    if (re.test(src)) {
+      errors.push(`${filePath}: 한글 SVG 영문 혼입 (${re})`);
+    }
+  }
+  return errors;
+}
+
+function validateTextFields(text, label) {
+  const errors = [];
+  for (const re of BAD_PATTERNS) {
+    if (re.test(text)) {
+      errors.push(`${label}: 영문 스켈레톤 패턴 (${re})`);
+      break;
+    }
+  }
+  return errors;
+}
+
 function load(rel) {
   return fs.readFileSync(path.join(ROOT, rel), "utf8");
 }
@@ -160,9 +197,23 @@ for (const file of FILES) {
   }
 }
 
+// 한글 SVG (public/charts/*YYYYMMDD.svg, *-en.svg 제외)
+const chartsDir = path.join(ROOT, "public/charts");
+if (fs.existsSync(chartsDir)) {
+  for (const name of fs.readdirSync(chartsDir)) {
+    if (!name.endsWith(".svg") || name.includes("-en.")) continue;
+    const m = name.match(/(\d{8})\.svg$/);
+    if (!m) continue;
+    const ymd = m[1];
+    const iso = `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
+    if (iso < VALIDATE_SINCE) continue;
+    allErrors.push(...validateSvgKo(`public/charts/${name}`));
+  }
+}
+
 if (allErrors.length > 0) {
-  console.error("✗ 한글 리포트 영문 혼입:\n" + allErrors.map((e) => `  - ${e}`).join("\n"));
+  console.error("✗ 한글 리포트·SVG 영문 혼입:\n" + allErrors.map((e) => `  - ${e}`).join("\n"));
   process.exit(1);
 }
 
-console.log("✓ 한글 리포트(title/summary/body) 영문 스켈레톤 검증 OK");
+console.log("✓ 한글 리포트(title/summary/body) + SVG 영문 스켈레톤 검증 OK");

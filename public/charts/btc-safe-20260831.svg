@@ -22,7 +22,7 @@
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#201408" stroke="#f7931a" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📉</text>
-  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f7931a" text-anchor="middle">$78K</text>
+  <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f7931a" text-anchor="middle">7.8만$</text>
   <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">지지·저항</text>
   <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">심리적 가격대</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#201408" stroke="#f7931a" stroke-width="2"/>
@@ -40,9 +40,9 @@
   <text x="540" y="712" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">기회비용이 커집니다. 동시에 달러가 약하면 일부 매수는 유입될 수 있어, 금리·달러를 같이 봐야 합니다.</text>
   <rect x="60" y="844" width="960" height="148" rx="14" fill="#201408" stroke="#f7931a" stroke-width="1"/>
   <text x="540" y="874" font-family="Arial" font-size="18" fill="#f7931a" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">BTC 투자에서는 「ETF 유입」과 「금리 경로」를 같은 화면에 두는 것이 좋습니다. 9월 4일 고용·9월 FOMC 전후로 7만 8,000달러가</text>
+  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">비트코인 투자에서는 「ETF 유입」과 「금리 경로」를 같은 화면에 두는 것이 좋습니다. 9월 4일 고용·9월 FOMC 전후로 7만 8,000달러가</text>
   <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">깨지는지, 아니면 반등하는지가 다음 분기점입니다. 청산 규모도 함께 확인하시면 됩니다.</text>
-  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">BTC · 78K 테스트 · 2026.08.31</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">비트코인 · 7만 8천달러 테스트 · 2026.08.31</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

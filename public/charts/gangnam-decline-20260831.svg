@@ -46,7 +46,7 @@
   <text x="540" y="801" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">영향을 줍니다. 급매물이 늘면 단기 가격은 더 빨리 내려갈 수 있습니다.</text>
   <rect x="60" y="878" width="960" height="140" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="1"/>
   <text x="540" y="908" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">부동산은 평균 가격 한 줄로 읽으면 안 됩니다. 강남 하락은 정책·세금 shock, 외곽 상승은 가격 부담 이동입니다. 다음 주 강남 하락</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">부동산은 평균 가격 한 줄로 읽으면 안 됩니다. 강남 하락은 정책·세금 부담, 외곽 상승은 가격 부담 이동입니다. 다음 주 강남 하락</text>
   <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">폭과 거래량을 같이 보시면 「급매 vs 실수요」를 구분할 수 있습니다.</text>
   <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">POLICY · 강남 하락 · 2026.08.31</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
