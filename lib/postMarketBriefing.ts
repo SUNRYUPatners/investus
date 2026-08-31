@@ -468,11 +468,12 @@ function repairStoredItems(
   news: NewsLine[],
   quotes: string,
   phase: BriefPhase,
+  fullReset = false,
 ): PostMarketStored {
   const items = stored.items.map((it) => {
-    if (!itemLooksLowQuality(it)) return it;
+    if (!fullReset && !itemLooksLowQuality(it)) return it;
     const fresh = fallbackItemForSymbol(it.symbol, news, quotes, true);
-    if (itemLooksLowQuality(fresh)) return it;
+    if (!fullReset && itemLooksLowQuality(fresh)) return it;
     return fresh;
   });
   const head = defaultSessionHeadline(stored.dateKey, phase);
@@ -868,7 +869,7 @@ async function getOrCreateSessionBriefing(
     const cached = await loadStored(phase, dateKey);
     if (cached) {
       if (storedHasLowQuality(cached)) {
-        const repaired = repairStoredItems(cached, news, quotes, phase);
+        const repaired = repairStoredItems(cached, news, quotes, phase, true);
         const bilingual = await ensureBilingual(phase, repaired, apiKey);
         await saveStored(phase, bilingual);
         return storedToBriefing(bilingual, phase);
