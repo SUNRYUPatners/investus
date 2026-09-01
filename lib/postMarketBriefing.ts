@@ -63,7 +63,7 @@ function cleanNewsText(s: string): string {
 }
 
 const SYMBOL_NAME_RE: Record<string, RegExp> = {
-  TSLA: /\b(tesla|tsla|cybercab|robotaxi|optimus|fsd)\b/i,
+  TSLA: /\b(tesla|tsla|cybercab|robotaxi|optimus|fsd|musk)\b/i,
   NVDA: /\b(nvidia|nvda|rubin|blackwell|hopper)\b/i,
   AAPL: /\b(apple|aapl|iphone|ipad|mac)\b/i,
   MSFT: /\b(microsoft|msft|azure|copilot)\b/i,
@@ -87,6 +87,7 @@ function isJunkNewsLine(n: NewsLine, symbol: string): boolean {
   if (/\bs&p\s*500\b/i.test(text) && !SYMBOL_NAME_RE[symbol]?.test(text)) return true;
   if (/\bdow jones\b/i.test(text) && !SYMBOL_NAME_RE[symbol]?.test(text)) return true;
   if (/\b(nasdaq|index)\b/i.test(text) && !SYMBOL_NAME_RE[symbol]?.test(text)) return true;
+  if (SYMBOL_NAME_RE[symbol] && !SYMBOL_NAME_RE[symbol].test(text)) return true;
   return false;
 }
 
@@ -144,7 +145,7 @@ export function lastCompletedSessionDate(now = new Date()): string {
 }
 
 function kvKey(phase: BriefPhase, dateKey: string) {
-  const prefix = phase === "pre" ? "pre-market-briefing:v2" : "post-market-briefing:v2";
+  const prefix = phase === "pre" ? "pre-market-briefing:v3" : "post-market-briefing:v3";
   return `${prefix}:${dateKey}`;
 }
 
@@ -365,7 +366,26 @@ async function collectSessionNews(
 }
 
 function latestReportForSymbol(symbol: string) {
+  const subjectBySymbol: Record<string, string> = {
+    TSLA: "테슬라",
+    NVDA: "엔비디아",
+    AAPL: "애플",
+    MSFT: "마이크로소프트",
+    GOOGL: "알파벳",
+    AMZN: "아마존",
+    META: "메타",
+    SPCX: "스페이스X",
+  };
+  const wantSubject = subjectBySymbol[symbol];
+
   for (const r of SEED_REPORTS) {
+    if (r.isPinned || r.subject === "한장요약") continue;
+    const tickers = REPORT_TICKERS[r.id];
+    if (!tickers?.includes(symbol) && !(symbol === "SPCX" && r.subject === "스페이스X")) continue;
+    if (wantSubject && r.subject === wantSubject && tickers?.length === 1) return r;
+  }
+  for (const r of SEED_REPORTS) {
+    if (r.isPinned || r.subject === "한장요약") continue;
     const tickers = REPORT_TICKERS[r.id];
     if (tickers?.includes(symbol) || (symbol === "SPCX" && r.subject === "스페이스X")) {
       return r;
@@ -503,19 +523,23 @@ function storedFromNews(
   const items: GeneratedItem[] = [];
   for (const { symbol } of POST_MARKET_UNIVERSE) {
     const rows = qualityNewsForSymbol(news, symbol).slice(0, 3);
-    if (rows.length === 0) continue;
-    const top = rows[0];
-    items.push({
-      symbol,
-      title: "",
-      summary: "",
-      body: "",
-      titleEn: cleanNewsText(top.headline.slice(0, 72)),
-      summaryEn: cleanNewsText((top.summary || top.headline).slice(0, 180)),
-      bodyEn: rows
-        .map((n) => `· ${cleanNewsText(n.headline)}${n.summary ? `\n${cleanNewsText(n.summary)}` : ""}`)
-        .join("\n\n"),
-    });
+    if (rows.length === 0) {
+      const fb = fallbackItemForSymbol(symbol, news, quotes, true);
+      if (fb.title || fb.titleEn) items.push(fb);
+    } else {
+      const top = rows[0];
+      items.push({
+        symbol,
+        title: "",
+        summary: "",
+        body: "",
+        titleEn: cleanNewsText(top.headline.slice(0, 72)),
+        summaryEn: cleanNewsText((top.summary || top.headline).slice(0, 180)),
+        bodyEn: rows
+          .map((n) => `· ${cleanNewsText(n.headline)}${n.summary ? `\n${cleanNewsText(n.summary)}` : ""}`)
+          .join("\n\n"),
+      });
+    }
     if (items.length >= 8) break;
   }
   const head = defaultSessionHeadline(dateKey, phase);
