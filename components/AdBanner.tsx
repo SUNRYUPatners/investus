@@ -47,7 +47,11 @@ export function AdBanner({ slot, format = "auto" }: AdBannerProps) {
       : { display: "block" };
 
   return (
-    <div className="ad-slot w-full my-2 overflow-hidden" style={{ minHeight: 72 }}>
+    <div
+      className="ad-slot w-full my-2 overflow-hidden"
+      data-filled={adFilled ? "true" : "false"}
+      style={{ minHeight: adFilled ? 72 : 0 }}
+    >
       {/* 광고 미승인 중일 때 표시되는 광고 문의 배너 */}
       {!adFilled && (
         <a

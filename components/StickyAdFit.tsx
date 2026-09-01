@@ -33,7 +33,7 @@ export function StickyAdFit() {
 
   return (
     <div
-      className="fixed z-40 left-0 right-0 lg:left-64 flex justify-center pointer-events-auto bottom-[calc(60px+max(env(safe-area-inset-bottom,0px),12px))] lg:bottom-[env(safe-area-inset-bottom,0px)]"
+      className="sticky-ad-fit-bar fixed z-40 left-0 right-0 lg:left-64 flex justify-center pointer-events-auto bottom-[calc(60px+max(env(safe-area-inset-bottom,0px),12px))] lg:bottom-[env(safe-area-inset-bottom,0px)]"
       style={{
         background: "var(--ad-surface)",
         borderTop: "1px solid var(--ad-border)",

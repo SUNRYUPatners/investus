@@ -77,8 +77,8 @@ html[data-theme="dark"] {
   --muted: #9aa8c0;
   --muted-2: #1a2740;
   --on-accent: #1a365d;
-  --ad-surface: #17243c;
-  --ad-border: #2a3c5c;
+  --ad-surface: #121c30;
+  --ad-border: #243250;
   --header-bg: #0c1424;
   --elevated: #17243c;
   --sidebar-label: #dce4f2;
@@ -200,17 +200,40 @@ select {
 }
 
 /*
-  Kakao AdFit · AdSense iframe은 항상 밝은 배경(흰색)으로 내려옴 — 내부 CSS 수정 불가.
-  다크모드에서는 슬롯 전체에 밝기·채도 필터로 UI 톤에 맞춤 (creator AdGate와 동일 원리).
+  Kakao AdFit · AdSense iframe은 항상 밝은 배경(흰색) — 내부 CSS 수정 불가.
+  다크모드: 슬롯 배경을 카드 톤으로 맞추고 brightness/saturate 필터 + 어두운 오버레이.
+  :has(iframe) — data-filled 갱신 전에도 iframe 로드 즉시 적용.
 */
-html[data-theme="dark"] .ad-slot[data-filled="true"] {
-  background: var(--elevated);
-  border-color: var(--ad-border);
-  filter: brightness(0.9) saturate(0.86);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+html[data-theme="dark"] .ad-slot {
+  background: var(--card);
+  border-color: var(--border);
 }
 
-/* 필터가 주변 UI로 번지지 않도록 격리 */
-html[data-theme="dark"] .ad-slot[data-filled="true"] {
+html[data-theme="dark"] .ad-slot[data-filled="true"],
+html[data-theme="dark"] .ad-slot:has(iframe),
+html[data-theme="dark"] .ad-slot:has(ins.adsbygoogle[data-ad-status="filled"]) {
+  position: relative;
   isolation: isolate;
+  background: #0e1628;
+  border-color: var(--border);
+  filter: brightness(0.58) saturate(0.72) contrast(1.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme="dark"] .ad-slot[data-filled="true"]::after,
+html[data-theme="dark"] .ad-slot:has(iframe)::after,
+html[data-theme="dark"] .ad-slot:has(ins.adsbygoogle[data-ad-status="filled"])::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: rgba(8, 12, 22, 0.22);
+  mix-blend-mode: multiply;
+}
+
+/* 하단 스티키 광고 바 — iframe 밖 여백도 카드 톤 */
+html[data-theme="dark"] .sticky-ad-fit-bar {
+  background: var(--card) !important;
+  border-top-color: var(--border) !important;
 }
