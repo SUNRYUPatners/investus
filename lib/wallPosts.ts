@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T02SEP = 1788303600000; // 2026.09.02 08:00 KST
 const T01SEP = 1788217200000; // 2026.09.01 08:00 KST
 const T31AU = 1788130800000; // 2026.08.31 08:00 KST
 const T29AU = 1787958000000; // 2026.08.29 08:00 KST
@@ -93,7 +94,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T01SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T02SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -112,6 +113,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-02 신규 ────────────────
+  { id: 1179, symbol: "MACRO", nickname: "익명_4600", holdingLabel: "관심종목",
+    content: "9/2 한장: 기가텍사스 반도체 ~697만SF·사이버캡 45·F14 9/15·웨이모 14도시·공포44",
+    createdAt: T02SEP + 8*60_000, likes: 10, comments: 1 },
+  { id: 1180, symbol: "TSLA", nickname: "익명_4617", holdingLabel: "관심종목",
+    content: "노스캠퍼스 6,974,854SF·오스틴팹 489,600 · 반도체 설비 등록",
+    createdAt: T02SEP + 16*60_000, likes: 11, comments: 2 },
+  { id: 1181, symbol: "TSLA", nickname: "익명_4634", holdingLabel: "관심종목",
+    content: "사이버캡 45대·골든캡·구역 +9% → ~264sq mi · D-1 오스틴",
+    createdAt: T02SEP + 24*60_000, likes: 12, comments: 1 },
+  { id: 1182, symbol: "SPCX", nickname: "익명_4651", holdingLabel: "관심종목",
+    content: "궤도 컴퓨트 2030 매출 1조$ 시나리오 · DC 조직 개편",
+    createdAt: T02SEP + 32*60_000, likes: 13, comments: 2 },
+  { id: 1183, symbol: "SPCX", nickname: "익명_4668", holdingLabel: "관심종목",
+    content: "F14 9/15 최초 궤도 후보 · V3 10× · FCC 42GHz STA",
+    createdAt: T02SEP + 40*60_000, likes: 14, comments: 1 },
+  { id: 1184, symbol: "NVDA", nickname: "익명_4685", holdingLabel: "관심종목",
+    content: "앤스로픽 350억$ 람다 · 텍사스 헛8 DC · 엔비디아 GPU",
+    createdAt: T02SEP + 48*60_000, likes: 15, comments: 2 },
+  { id: 1185, symbol: "GOOGL", nickname: "익명_4702", holdingLabel: "관심종목",
+    content: "유타 지열 396MW · Fervo 파트너십",
+    createdAt: T02SEP + 56*60_000, likes: 10, comments: 1 },
+  { id: 1186, symbol: "GOOGL", nickname: "익명_4719", holdingLabel: "관심종목",
+    content: "웨이모 14개 도시 · 덴버·샌디에이고·탬파 유료",
+    createdAt: T02SEP + 64*60_000, likes: 11, comments: 2 },
+  { id: 1187, symbol: "DELL", nickname: "익명_4736", holdingLabel: "관심종목",
+    content: "DELL EPS 7.04 vs 4.92 · 매출 469억$ vs 445억$",
+    createdAt: T02SEP + 72*60_000, likes: 12, comments: 1 },
+  { id: 1188, symbol: "PANW", nickname: "익명_4753", holdingLabel: "관심종목",
+    content: "PANW EPS 1.02 vs 0.98 · 매출 34.1억$",
+    createdAt: T02SEP + 80*60_000, likes: 13, comments: 2 },
+  { id: 1189, symbol: "TSLA", nickname: "익명_4770", holdingLabel: "관심종목",
+    content: "유럽 8월 프랑스 +279% YoY · 덴마크 +104%",
+    createdAt: T02SEP + 88*60_000, likes: 14, comments: 1 },
+  { id: 1190, symbol: "AAPL", nickname: "익명_4787", holdingLabel: "관심종목",
+    content: "애플, 오픈AI 증거 파괴 주장 · 소송 변수",
+    createdAt: T02SEP + 96*60_000, likes: 15, comments: 2 },
+  { id: 1191, symbol: "MACRO", nickname: "익명_4804", holdingLabel: "관심종목",
+    content: "공포탐욕 44(공포) · 일주 전 56(탐욕)",
+    createdAt: T02SEP + 104*60_000, likes: 10, comments: 1 },
+  { id: 1192, symbol: "AMZN", nickname: "익명_4821", holdingLabel: "관심종목",
+    content: "유튜브 영상 상품 태깅 · 아마존 연동",
+    createdAt: T02SEP + 112*60_000, likes: 11, comments: 2 },
+  { id: 1193, symbol: "SPCX", nickname: "익명_4838", holdingLabel: "관심종목",
+    content: "스페이스X DC 리더십 셰이크업 · 궤도 컴퓨트 맥락",
+    createdAt: T02SEP + 120*60_000, likes: 12, comments: 1 },
   // ── 2026-09-01 신규 ────────────────
   { id: 1164, symbol: "MACRO", nickname: "익명_4300", holdingLabel: "관심종목",
     content: "9/1 한장: 로보택시 314대·위성3세대·F14 9/15·TSLA +5%·FSD 140억마일·HBM70%·금 준비자산",
@@ -4155,7 +4202,59 @@ export const MOCK_POSTS: Post[] = [
     content: "트럼프가 코인 매수 선언하고 CLARITY Act도 진행 중이니 규제 환경이 완전히 바뀌고 있어요. ETF 자금 유입도 계속 늘어나는 중.",
     createdAt: T14 - h(3), likes: 15, comments: 0 },
   { id: 42, symbol: "COIN", nickname: "익명_7712", holdingLabel: "55주 보유",
-    content: "비트코인 현물 ETF 자금 유입이 사상 최대치 경신 중이에요. Coinbase가 ETF 수탁 기관이라 수수료 수익 꾸준히 늘어날 것 같아요.",
+    content: "비트코인 현물 ETF 자금 유입이 사상 최대치 경신 중이에요. Coinbase가 ETF 수탁 기관이라 수수  1179: [
+    { id: 1, nickname: "익명_6179", holdingLabel: "관심종목", content: "9/2 핵심 포인트네요", createdAt: T02SEP + 8*60_000 + 3*60_000, likes: 4 },
+  ],
+  1180: [
+    { id: 1, nickname: "익명_6180", holdingLabel: "관심종목", content: "697만 SF면 설비 규모가 꽤 크네요", createdAt: T02SEP + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6280", holdingLabel: "관심종목", content: "2029 완공 일정도 같이 봐야겠어요", createdAt: T02SEP + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1181: [
+    { id: 1, nickname: "익명_6181", holdingLabel: "관심종목", content: "내일 사이버캡 D-1 맞죠", createdAt: T02SEP + 24*60_000 + 3*60_000, likes: 4 },
+  ],
+  1182: [
+    { id: 1, nickname: "익명_6182", holdingLabel: "관심종목", content: "1조$ 시나리오는 GW 가정이 핵심이겠네요", createdAt: T02SEP + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6282", holdingLabel: "관심종목", content: "DC 조직 개편도 같이 추적할게요", createdAt: T02SEP + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1183: [
+    { id: 1, nickname: "익명_6183", holdingLabel: "관심종목", content: "9/15 F14 일정 주목합니다", createdAt: T02SEP + 40*60_000 + 3*60_000, likes: 4 },
+  ],
+  1184: [
+    { id: 1, nickname: "익명_6184", holdingLabel: "관심종목", content: "350억$ 람다 계약 규모가 크네요", createdAt: T02SEP + 48*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6284", holdingLabel: "관심종목", content: "GPU 공급 일정도 봐야겠어요", createdAt: T02SEP + 48*60_000 + 6*60_000, likes: 5 },
+  ],
+  1185: [
+    { id: 1, nickname: "익명_6185", holdingLabel: "관심종목", content: "396MW 지열은 DC 전력 변수죠", createdAt: T02SEP + 56*60_000 + 3*60_000, likes: 4 },
+  ],
+  1186: [
+    { id: 1, nickname: "익명_6186", holdingLabel: "관심종목", content: "14개 도시면 Waymo 스케일이 보이네요", createdAt: T02SEP + 64*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6286", holdingLabel: "관심종목", content: "유료 서비스 도시 수가 관건이겠어요", createdAt: T02SEP + 64*60_000 + 6*60_000, likes: 5 },
+  ],
+  1187: [
+    { id: 1, nickname: "익명_6187", holdingLabel: "관심종목", content: "EPS 비트 폭이 크네요", createdAt: T02SEP + 72*60_000 + 3*60_000, likes: 4 },
+  ],
+  1188: [
+    { id: 1, nickname: "익명_6188", holdingLabel: "관심종목", content: "사이버보안 실적도 좋았군요", createdAt: T02SEP + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6288", holdingLabel: "관심종목", content: "가이던스도 같이 볼게요", createdAt: T02SEP + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1189: [
+    { id: 1, nickname: "익명_6189", holdingLabel: "관심종목", content: "프랑스 +279%는 등록 기준이죠?", createdAt: T02SEP + 88*60_000 + 3*60_000, likes: 4 },
+  ],
+  1190: [
+    { id: 1, nickname: "익명_6190", holdingLabel: "관심종목", content: "소송 변수가 커지겠네요", createdAt: T02SEP + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6290", holdingLabel: "관심종목", content: "증거 보전 명령 나올지 봐야겠어요", createdAt: T02SEP + 96*60_000 + 6*60_000, likes: 5 },
+  ],
+  1191: [
+    { id: 1, nickname: "익명_6191", holdingLabel: "관심종목", content: "56→44면 심리가 꽤 식었네요", createdAt: T02SEP + 104*60_000 + 3*60_000, likes: 4 },
+  ],
+  1192: [
+    { id: 1, nickname: "익명_6192", holdingLabel: "관심종목", content: "쇼핑 태깅이 커머스 수익화죠", createdAt: T02SEP + 112*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6292", holdingLabel: "관심종목", content: "크리에이터 수익 구조도 바뀌겠네요", createdAt: T02SEP + 112*60_000 + 6*60_000, likes: 5 },
+  ],
+  1193: [
+    { id: 1, nickname: "익명_6193", holdingLabel: "관심종목", content: "궤도 컴퓨트랑 연결해서 봐야겠어요", createdAt: T02SEP + 120*60_000 + 3*60_000, likes: 4 },
+  ],
+료 수익 꾸준히 늘어날 것 같아요.",
     createdAt: T14 - h(4), likes: 34, comments: 0 },
 
   { id: 24, symbol: "SMCI", nickname: "익명_8871", holdingLabel: "25주 보유",
