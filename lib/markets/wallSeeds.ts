@@ -83,7 +83,10 @@ export function getWallSeeds(market: MarketId): WallSeeds {
       comments: MOCK_COMMENTS_KR_RE,
       analystPosts: MOCK_ANALYST_POSTS_KR_RE,
       analystComments: MOCK_ANALYST_COMMENTS_KR_RE,
-      symbols: symbolsFromPosts(MOCK_POSTS_KR_RE, ["서울매매", "전세", "정책", "강남", "수도권"]),
+      symbols: symbolsFromPosts(MOCK_POSTS_KR_RE, [
+        "서울", "경기", "인천", "부산", "대구", "제주", "광주",
+        "전세", "매매", "정책", "서울매매", "강남", "수도권",
+      ]),
       latestUpdate: latestFromPosts(MOCK_POSTS_KR_RE),
     };
   }

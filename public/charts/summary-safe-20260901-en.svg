@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.01 Safe-haven snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#f7931a"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f7931a">Bitcoin near $108,248 trades around the $108K line</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">September hike odds near 57% reset opportunity cost.</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a" text-anchor="end">BTC</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#facc15"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">Gold near $3,475 an ounce</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">Gold-over-USD reserve narrative meets FOMC Sept 15-16.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15" text-anchor="end">GOLD</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">Ethereum near $4,512 holds above $4,500</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">Shares macro shocks with bitcoin and gold.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">ETH</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#0f1419" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">Dollar index near 98.2</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">The 98 line is a near-term pivot.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8" text-anchor="end">DXY</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#c084fc"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">Silver near $38.6 blends gold and industrial demand</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">Watch the gold-silver ratio.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">Ag</text>
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">September hike odds near 57% are the common driver</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">Track the 2-year yield, ETF flows and DXY together.</text>
+  <text x="985" y="808" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">57%</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: BTC ~108,248 · gold ~3,475 · ETH ~4,512 · DXY ~98.2 · silver ~38.6 · hike 57%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

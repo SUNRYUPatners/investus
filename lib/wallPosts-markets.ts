@@ -239,10 +239,15 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
-  { id: 9229, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "학군·역세권 소폭 반등", createdAt: T01 - 0, likes: 26, comments: 2, },
-  { id: 9230, symbol: "매매", nickname: "실수요자", holdingLabel: "관심", content: "FOMC·세금 부담 관망", createdAt: T01 - 2400000, likes: 25, comments: 2, },
-  { id: 9231, symbol: "정책", nickname: "정책워처", holdingLabel: "관심", content: "공급 확대·대출 규제 유지", createdAt: T01 - 4800000, likes: 24, comments: 2, },
-  { id: 9232, symbol: "서울매매", nickname: "강남권", holdingLabel: "관심", content: "전세·매매 혼조", createdAt: T01 - 7200000, likes: 23, comments: 2, },
+  { id: 9233, symbol: "서울", nickname: "서울러", holdingLabel: "관심", content: "강남·마포 일부 0.2~0.4% 소폭 반등. 구별로 온도 차 큽니다.", createdAt: T01 - 0, likes: 28, comments: 2, },
+  { id: 9234, symbol: "경기", nickname: "경기거주", holdingLabel: "관심", content: "수도권 외곽 전세 0.19% 확대. 서울보다 완만하지만 입주 물량 변수.", createdAt: T01 - 1200000, likes: 27, comments: 2, },
+  { id: 9235, symbol: "부산", nickname: "부산러", holdingLabel: "관심", content: "해운대·센텀은 버티는데 외은 약세. 지역 내 격차 큼.", createdAt: T01 - 2400000, likes: 26, comments: 2, },
+  { id: 9236, symbol: "제주", nickname: "제주민", holdingLabel: "관심", content: "관광·이전 수요 vs 공급. 전세·매매 둘 다 서울이랑 다른 그림.", createdAt: T01 - 3600000, likes: 25, comments: 2, },
+  { id: 9237, symbol: "인천", nickname: "인천러", holdingLabel: "관심", content: "GTX·역세권 기대 있는 데 FOMC 전엔 관망 많아요.", createdAt: T01 - 4800000, likes: 24, comments: 2, },
+  { id: 9238, symbol: "대구", nickname: "대구러", holdingLabel: "관심", content: "수도권 대비 거래량 얇음. 금리 변수에 더 민감하게 반응.", createdAt: T01 - 6000000, likes: 23, comments: 2, },
+  { id: 9229, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "학군·역세권 소폭 반등", createdAt: T01 - 7200000, likes: 26, comments: 2, },
+  { id: 9230, symbol: "매매", nickname: "실수요자", holdingLabel: "관심", content: "FOMC·세금 부담 관망", createdAt: T01 - 8400000, likes: 25, comments: 2, },
+  { id: 9231, symbol: "정책", nickname: "정책워처", holdingLabel: "관심", content: "공급 확대·대출 규제 유지", createdAt: T01 - 9600000, likes: 24, comments: 2, },
   { id: 9225, symbol: "서울매매", nickname: "실수요자", holdingLabel: "관심", content: "서울 +0.29%, 강남 -0.11% 3주", createdAt: T31 - 0, likes: 26, comments: 2, },
   { id: 9226, symbol: "강남", nickname: "강남권", holdingLabel: "관심", content: "세제 부담 급매", createdAt: T31 - 2400000, likes: 25, comments: 2, },
   { id: 9227, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "전세 +0.22%", createdAt: T31 - 4800000, likes: 24, comments: 2, },
@@ -263,6 +268,30 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9233: [
+    { id: 1, nickname: "강남권", holdingLabel: "관심", content: "강남·마포만 올라도 서울 평균은 올라 보여요. 구별로 봐야죠.", createdAt: T01 + 600_000, likes: 4 },
+    { id: 2, nickname: "실수요준비", holdingLabel: "관심", content: "FOMC 전이라 반등이 지속될지는 미지수네요.", createdAt: T01 + 1200_000, likes: 3 },
+  ],
+  9234: [
+    { id: 1, nickname: "경기남부", holdingLabel: "관심", content: "분당·판교는 서울이랑 비슷하게 움직이는데 외곽은 다릅니다.", createdAt: T01 - 600_000, likes: 4 },
+    { id: 2, nickname: "입주추적", holdingLabel: "관심", content: "9월 입주 물량이 경기 전세에 더 크게 올 수 있어요.", createdAt: T01 - 0, likes: 3 },
+  ],
+  9235: [
+    { id: 1, nickname: "해운대", holdingLabel: "관심", content: "해운대·센텀은 버티는데 북구·서구는 약해요.", createdAt: T01 - 1800_000, likes: 4 },
+    { id: 2, nickname: "지방관망", holdingLabel: "관심", content: "거래량 얇으면 한 건에도 지수가 흔들립니다.", createdAt: T01 - 1200_000, likes: 3 },
+  ],
+  9236: [
+    { id: 1, nickname: "제주전세", holdingLabel: "관심", content: "관광 수요랑 실거주 수요가 섞여서 해석이 어렵네요.", createdAt: T01 - 3000_000, likes: 4 },
+    { id: 2, nickname: "이전수요", holdingLabel: "관심", content: "본토에서 내려오는 수요가 있는지도 봐야죠.", createdAt: T01 - 2400_000, likes: 3 },
+  ],
+  9237: [
+    { id: 1, nickname: "송도", holdingLabel: "관심", content: "GTX 기대 있는 구역은 관망 속에도 문의는 들어온다더라고요.", createdAt: T01 - 4200_000, likes: 4 },
+    { id: 2, nickname: "경기남부", holdingLabel: "관심", content: "인천은 서울·경기랑 같이 묶지 말고 따로 보는 게 맞습니다.", createdAt: T01 - 3600_000, likes: 3 },
+  ],
+  9238: [
+    { id: 1, nickname: "수도권비교", holdingLabel: "관심", content: "대구는 금리에 더 민감하게 반응하는 느낌이에요.", createdAt: T01 - 5400_000, likes: 4 },
+    { id: 2, nickname: "지방거래", holdingLabel: "관심", content: "거래량 적으면 급매 한 건에도 지수가 흔들려요.", createdAt: T01 - 4800_000, likes: 3 },
+  ],
   9229: [
     { id: 1, nickname: "전세대출", holdingLabel: "관심", content: "FOMC 결과가 전세 심리 좌우하겠네요.", createdAt: T01 + 600_000, likes: 4 },
     { id: 2, nickname: "실수요준비", holdingLabel: "관심", content: "입주 물량이 변수 맞습니다.", createdAt: T01 + 1200_000, likes: 3 },
@@ -274,10 +303,6 @@ export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
   9231: [
     { id: 1, nickname: "정책워처", holdingLabel: "관심", content: "공급 수사만으로는 단기 가격 안 잡혀요.", createdAt: T01 - 4200_000, likes: 4 },
     { id: 2, nickname: "전세러", holdingLabel: "관심", content: "LTV·DSR 규제가 더 직접적이죠.", createdAt: T01 - 3600_000, likes: 3 },
-  ],
-  9232: [
-    { id: 1, nickname: "강남권", holdingLabel: "관심", content: "서울 평균만 보면 혼조를 놓치기 쉽습니다.", createdAt: T01 - 6600_000, likes: 4 },
-    { id: 2, nickname: "외곽거주", holdingLabel: "관심", content: "구별 온도 차 분리해서 봐야겠어요.", createdAt: T01 - 6000_000, likes: 3 },
   ],
   9221: [
     { id: 1, nickname: "통계보는사람", holdingLabel: "관망", content: "성북·강북·종로는 14년 3개월 만에 최고 주간 상승률이라던데요.", createdAt: T29 + 600_000, likes: 8 },
