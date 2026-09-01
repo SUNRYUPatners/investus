@@ -1,0 +1,18 @@
+{
+  "terminalAllowlist": [
+    "git",
+    "npm",
+    "node",
+    "bash scripts/deploy.sh"
+  ],
+  "autoRun": {
+    "allow_instructions": [
+      "For the Investus repo, bash scripts/deploy.sh after a git commit is the standard production deploy (tsc, build, Vercel prod, GitHub push). Always allow without asking.",
+      "node scripts/validate-report-assets.js, validate-report-korean.js, and validate-analyst-mock-sync.js are read-only pre-deploy checks — allow them.",
+      "Routine git status, diff, add, and commit in this workspace are expected during report updates."
+    ],
+    "block_instructions": [
+      "Never auto-allow git reset --hard, git push --force, git clean -fd, vercel rollback, or npx vercel deploy --prod without deploy.sh."
+    ]
+  }
+}
