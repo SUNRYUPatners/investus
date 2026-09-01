@@ -677,10 +677,8 @@ function ContentCard({ content, locked, onUnlock }: { content: CreatorContent; l
               <p className="text-[11px]" style={{ color: "var(--muted)" }}>광고 시청 후 무료로 이용하실 수 있어요</p>
             </div>
           </div>
-          {/* Ad — full-width, no padding, dark filter */}
-          <div style={{ filter: "brightness(0.55) saturate(0.75)" }}>
-            <AdFitBanner width={320} height={100} className="!my-0" />
-          </div>
+          {/* Ad — full-width, no padding */}
+          <AdFitBanner width={320} height={100} className="!my-0" />
           {/* Buttons */}
           <div className="px-5 py-4 flex flex-col gap-2">
             <button
