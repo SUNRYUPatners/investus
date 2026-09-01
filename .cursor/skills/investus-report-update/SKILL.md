@@ -200,7 +200,29 @@ description: >-
    - **애널 댓글 필수:** `comments: N`이면 해당 시장 `MOCK_ANALYST_COMMENTS_*`에 **N개** 댓글 객체를 반드시 추가 (누락 시 피드에서 숫자만 보이고 클릭하면 빈 화면). 배포 전 `node scripts/validate-analyst-mock-sync.js` 통과 — **US·KR·Safe·KR-RE 모두 실패 시 배포 차단**.
 6. ~~`export-report-pngs.js` / PNG 폴더 저장~~ — **폐지 (2026-08-27~). 하지 말 것.**
 7. 팩트체크: 스크린샷 재 Read 후 수치 1:1 대조
-8. commit + `bash scripts/deploy.sh` (필요 시 `--notify`)
+8. **배포 전 검증 (전부 통과 필수 — 하나라도 실패 시 deploy 차단):**
+   - `node scripts/validate-report-assets.js` — `images`/`imagesEn` 경로 ↔ `public/charts/` 파일 존재
+   - `node scripts/validate-report-korean.js`
+   - `node scripts/validate-analyst-mock-sync.js`
+9. commit + `bash scripts/deploy.sh` (필요 시 `--notify`)
+
+### SVG 생성 스크립트 (날짜 TAG 동일하게)
+
+| 시장 | 스크립트 |
+|------|----------|
+| **us** | `node scripts/gen-reports-YYYYMMDD.js` |
+| **kr / safe / kr-re** | `node scripts/gen-markets-svg-YYYYMMDD.js` (topics·fix-reports **후** 반드시) |
+
+> **9/1 사고:** kr/safe/kr-re 시드만 merge하고 markets SVG 스크립트를 안 돌려 30개 파일 누락 → `validate-report-assets.js` 추가로 재발 차단.
+
+### 실수가 반복되는 이유 (에이전트·운영 공통)
+
+1. **US와 다시장 SVG 생성기가 분리** — TS만 고치고 SVG를 “나중에” 하다가 누락
+2. **문서 체크리스트만 있고 배포 게이트 없음** — (2026-09-01부터 assets 검증으로 차단)
+3. **서브에이전트 위임** — 본문·시드 작성까지만 하고 SVG·wall·analyst를 다른 턴에 맡기면 부모가 “완료”로 착각. **한 번의 리포트 업데이트 = 한 담당(또는 한 서브에이전트)이 4시장 전체 체크리스트를 끝까지**
+4. **대량 diff** — 검증 스크립트 돌리기 전에 commit/deploy하면 실수가 그대로 prod
+
+**서브에이전트 쓸 때:** `claude-opus-5-thinking-high`에 **전체 체크리스트 + validate 3종 통과까지** 명시. 부모는 deploy.sh 성공 로그 확인 전 “완료” 금지.
 
 ## 본문 최소 구조 (개별 리포트)
 

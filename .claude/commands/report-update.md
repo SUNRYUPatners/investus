@@ -147,6 +147,14 @@
 
 불일치 0건 확인 후에만 다음 단계 진행.
 
+### 6b. SVG·에셋 존재 검증 (필수 — 배포 전)
+```bash
+node scripts/validate-report-assets.js
+```
+- `lib/reports*.ts`의 `images`/`imagesEn` 경로와 `public/charts/*.svg` 실제 파일 대조
+- **미국만** `gen-reports-*.js`로 SVG 생성 → **kr/safe/kr-re는 반드시** `gen-markets-svg-YYYYMMDD.js` + `-topics.js` 별도 실행
+- 이 검증은 `scripts/deploy.sh`에 포함됨 — SVG 누락 시 배포 자동 차단
+
 ### 7. 커밋 + 배포
 ```
 git add <수정된 파일들>
