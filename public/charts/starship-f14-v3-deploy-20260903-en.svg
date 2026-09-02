@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.03</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Starship F14 to deploy 20-60 operational V3 Starlinks; HLS</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">hatch mockup</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">🚀</text>
+  <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">F14</text>
+  <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Mechazilla Starship photo and McGregor HLS hatch mockup in the same launch cadence arc.</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">🛰️</text>
+  <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">20-60</text>
+  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">V3 sats</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Operational deploy</text>
+  <rect x="390" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🚀</text>
+  <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">F14</text>
+  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Flight 14</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Launch cadence</text>
+  <rect x="720" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">🌙</text>
+  <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">HLS</text>
+  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Hatch mockup</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">McGregor</text>
+  <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">V3 Starlinks carry ~10× per-sat capacity vs prior gen—operational deployment affects service</text>
+  <text x="540" y="682" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">quality, not just test milestones.</text>
+  <rect x="60" y="814" width="960" height="148" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="844" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
+  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">20-60 is a batch band until post-launch counts confirm. F14 success lifts reusable rocket credibility and</text>
+  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Starlink/orbital compute narratives together. Overlaps Sept 3 Cybercab and mid-September FOMC volatility.</text>
+  <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · F14 V3 · 2026.09.03</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

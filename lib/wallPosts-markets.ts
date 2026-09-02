@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T03 = 1788390000000; // 2026-09-03 08:00 KST
 const T02 = 1788303600000; // 2026-09-02 08:00 KST
 const T01 = 1788217200000; // 2026-09-01 08:00 KST
 const T31 = 1788130800000; // 2026-08-31 08:00 KST
@@ -10,6 +11,12 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9054, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "인덱스 보유", content: "6562.72 -3.99% 급락. WTI $91+·10년 4.8%·외국인 1.9~2.4조 매도가 겹친 shock 날이에요", createdAt: T03 - 0, likes: 40, comments: 2, },
+  { id: 9055, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "삼성전자 보유", content: "250,500원 -4.02%. 유가·금리 shock에 반도체가 같이 빠졌어요. 수급보다 매크로가 먼저인 날", createdAt: T03 - 1800000, likes: 32, comments: 2, },
+  { id: 9056, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "하이닉스 보유", content: "161.3만원 -4.73%. 성장주 베타에 외국인 대량 매도가 겹쳤습니다", createdAt: T03 - 3600000, likes: 30, comments: 2, },
+  { id: 9057, symbol: "LG에너지솔루션", nickname: "배터리존버", holdingLabel: "LG엔솔 관심", content: "-5.31%로 2차전지가 크게 약세. 유가·금리·성장주 약세가 한꺼번에", createdAt: T03 - 5400000, likes: 28, comments: 2, },
+  { id: 9058, symbol: "현대차", nickname: "자동차매니아", holdingLabel: "현대차 관심", content: "-5.62%. WTI $91+ shock에 완성차도 약세. 오늘 밤 사이버캡 행사는 별도 변수", createdAt: T03 - 7200000, likes: 27, comments: 2, },
+  { id: 9059, symbol: "코스피", nickname: "외국인추적", holdingLabel: "관망", content: "외국인 1.9~2.4조·기관 2.43조 매도 vs 개인 2.3조 매수. shock 다음 날 수급이 더 중요해요", createdAt: T03 - 9000000, likes: 26, comments: 2, },
   { id: 9048, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "인덱스 보유", content: "6,875 +0.9%로 9/1 6,812 대비 수급이 살아났어요. 외국인 412억→890억 전환은 체감 큽니다. 다만 기관·개인이 역방향이면 지수만 오르는 날일 수 있어요.", createdAt: T02 - 0, likes: 38, comments: 2, },
   { id: 9049, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "삼성전자 보유", content: "삼전 +1.8%는 코스피 +0.9%보다 두 배 빠르게 움직였습니다. HBM 테마 맞는데 사이버캡 D-1 전이라 내일 변동성 각오 중이에요.", createdAt: T02 - 1800000, likes: 31, comments: 2, },
   { id: 9050, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "하이닉스 보유", content: "하이닉스 +1.6%. 삼전 +1.8%랑 같이 올랐는데 외국인 890억이 업종 전체에 퍼진 건지 종목별 순매수는 따로 봐야 합니다.", createdAt: T02 - 3600000, likes: 29, comments: 2, },
@@ -58,6 +65,30 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9054: [
+    { id: 1, nickname: "수급쟁이", holdingLabel: "관심종목", content: "-3.99%면 shock 맞습니다. 내일 외국인 이어지는지 봐야죠", createdAt: T03 + 600_000, likes: 5 },
+    { id: 2, nickname: "유가체크", holdingLabel: "관심종목", content: "WTI $91+가 코스피에 바로 전달됐네요", createdAt: T03 + 1200_000, likes: 4 },
+  ],
+  9055: [
+    { id: 1, nickname: "메모리사이클", holdingLabel: "관심종목", content: "매크로 shock 때는 HBM 테마도 잠깐 뒤로 밀리죠", createdAt: T03 - 1200_000, likes: 5 },
+    { id: 2, nickname: "수출통계러", holdingLabel: "관심종목", content: "250,500원 마감 기록해두겠습니다", createdAt: T03 - 900_000, likes: 4 },
+  ],
+  9056: [
+    { id: 1, nickname: "HBM러버", holdingLabel: "관심종목", content: "-4.73%는 베타가 크게 작용한 날", createdAt: T03 - 3000_000, likes: 5 },
+    { id: 2, nickname: "이익률체크", holdingLabel: "관심종목", content: "shock 구간에선 분기 실적보다 수급 먼저", createdAt: T03 - 2400_000, likes: 4 },
+  ],
+  9057: [
+    { id: 1, nickname: "배터리존버", holdingLabel: "관심종목", content: "-5.31%는 2차전지 베타가 선명한 날", createdAt: T03 - 4800_000, likes: 5 },
+    { id: 2, nickname: "가동률체크", holdingLabel: "관심종목", content: "유가 shock에 LGES도 같이 빠졌네요", createdAt: T03 - 4200_000, likes: 4 },
+  ],
+  9058: [
+    { id: 1, nickname: "자동차매니아", holdingLabel: "관심종목", content: "완성차는 유가·금리 민감도가 높죠", createdAt: T03 - 6600_000, likes: 5 },
+    { id: 2, nickname: "미국판매러", holdingLabel: "관심종목", content: "오늘 밤 사이버캡은 별도 트랙", createdAt: T03 - 6000_000, likes: 4 },
+  ],
+  9059: [
+    { id: 1, nickname: "수급파트", holdingLabel: "관심종목", content: "개인 2.3조 매수 vs 외국인·기관 매도 패턴이네요", createdAt: T03 - 8400_000, likes: 4 },
+    { id: 2, nickname: "환율데스크", holdingLabel: "관심종목", content: "10년 4.8%·유가·환율 한 표에 적어둘게요", createdAt: T03 - 7800_000, likes: 3 },
+  ],
   9048: [
     { id: 1, nickname: "수급쟁이", holdingLabel: "관망", content: "기관이 팔았는지 집계 다시 봐야겠네요.", createdAt: T02 + 600_000, likes: 5 },
     { id: 2, nickname: "지수관찰", holdingLabel: "인덱스 보유", content: "6,900선은 아직 심리 구간 맞습니다.", createdAt: T02 + 1200_000, likes: 4 },
@@ -193,6 +224,12 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9146, symbol: "매크로", nickname: "채권덕후", holdingLabel: "관망", content: "WTI $91+·10년 4.80%·코스피 -3.99%. 유가·금리 shock가 공통 변수예요", createdAt: T03 - 0, likes: 30, comments: 2, },
+  { id: 9147, symbol: "비트코인", nickname: "온체인러", holdingLabel: "BTC 보유", content: "~106,000달러, 리스크오프 조정. 직전 10.8만$ 대비 소폭 약세 구간", createdAt: T03 - 1800000, likes: 29, comments: 2, },
+  { id: 9148, symbol: "금", nickname: "금벌레", holdingLabel: "금 ETF", content: "~3,600달러, 유가·지정학 헤지. 실질금리·DXY 같이 봐야 해요", createdAt: T03 - 3600000, likes: 28, comments: 2, },
+  { id: 9149, symbol: "WTI", nickname: "유가러", holdingLabel: "관심", content: "WTI $91+·중동 shock·인플레·금리. 코스피 -3.99%와 같은 날", createdAt: T03 - 5400000, likes: 27, comments: 2, },
+  { id: 9150, symbol: "달러인덱스", nickname: "환율보는사람", holdingLabel: "관심", content: "DXY·원·달러·EM 변수. 유가 shock 때 달러 반응은 케이스별", createdAt: T03 - 7200000, likes: 26, comments: 2, },
+  { id: 9151, symbol: "은", nickname: "실물러", holdingLabel: "관심", content: "금·은비·산업 수요. 금 ~3600과 PMI·유가 연동", createdAt: T03 - 9000000, likes: 25, comments: 2, },
   { id: 9141, symbol: "비트코인", nickname: "온체인러", holdingLabel: "BTC 보유", content: "108,248달러, 10.8만$ 심리선 부근이에요. 공포탐욕 44(1주 전 56)면 리스크온보다는 조심스러운 구간 같습니다.", createdAt: T02 - 0, likes: 32, comments: 2, },
   { id: 9142, symbol: "금", nickname: "금벌레", holdingLabel: "금 ETF", content: "금 3,475달러. 코스피 +0.9%인데 금도 버티는 날이면 매크로 헤지 수요가 섞인 걸로 봅니다.", createdAt: T02 - 1800000, likes: 28, comments: 2, },
   { id: 9143, symbol: "이더리움", nickname: "스테이커", holdingLabel: "ETH 보유", content: "이더 4,512달러, 4,500$ 선 위. 단기엔 BTC·금리 베타가 크고 스테이킹 수익은 2년물 국채랑 비교 중이에요.", createdAt: T02 - 3600000, likes: 26, comments: 2, },
@@ -226,6 +263,30 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9146: [
+    { id: 1, nickname: "헷지", holdingLabel: "관심종목", content: "유가·금리·코스피 세 줄 같이 기록하겠습니다", createdAt: T03 - 3000_000, likes: 5 },
+    { id: 2, nickname: "실질금리", holdingLabel: "관심종목", content: "shock 구간에선 안전자산도 같이 재가격", createdAt: T03 - 2400_000, likes: 4 },
+  ],
+  9147: [
+    { id: 1, nickname: "ETF추적", holdingLabel: "관심종목", content: "10.6만$대와 ETF 순유입 같이 봐야죠", createdAt: T03 - 4800_000, likes: 5 },
+    { id: 2, nickname: "헷지", holdingLabel: "관심종목", content: "리스크오프면 청산 변수도", createdAt: T03 - 4200_000, likes: 4 },
+  ],
+  9148: [
+    { id: 1, nickname: "실질금리", holdingLabel: "관심종목", content: "3600달러대면 지정학 헤지 수요 섞인 듯", createdAt: T03 - 6600_000, likes: 5 },
+    { id: 2, nickname: "달러보기", holdingLabel: "관심종목", content: "DXY·금 같이 추적", createdAt: T03 - 6000_000, likes: 4 },
+  ],
+  9149: [
+    { id: 1, nickname: "유가러", holdingLabel: "관심종목", content: "$91+면 인플레·금리 변수 같이", createdAt: T03 - 8400_000, likes: 4 },
+    { id: 2, nickname: "매크로", holdingLabel: "관심종목", content: "코스피 shock와 같은 날 맞네요", createdAt: T03 - 7800_000, likes: 3 },
+  ],
+  9150: [
+    { id: 1, nickname: "환율데스크", holdingLabel: "관심종목", content: "유가 shock 때 DXY 반응은 케이스별이죠", createdAt: T03 - 10200_000, likes: 5 },
+    { id: 2, nickname: "EM체크", holdingLabel: "관심종목", content: "원·달러·EM 같이 기록", createdAt: T03 - 9600_000, likes: 4 },
+  ],
+  9151: [
+    { id: 1, nickname: "실물러", holdingLabel: "관심종목", content: "금 강세 때 은 추격·PMI 둔화면 약세 패턴", createdAt: T03 - 12000_000, likes: 4 },
+    { id: 2, nickname: "비율체크", holdingLabel: "관심종목", content: "Au/Ag ratio 추적", createdAt: T03 - 11400_000, likes: 3 },
+  ],
   9141: [
     { id: 1, nickname: "ETF추적", holdingLabel: "BTC 보유", content: "현물 ETF 순유입이 이어지는지 먼저 볼게요.", createdAt: T02 + 600_000, likes: 5 },
     { id: 2, nickname: "헷지러", holdingLabel: "관망", content: "공포44면 레버리지는 줄이는 게 맞죠.", createdAt: T02 + 1200_000, likes: 4 },
@@ -297,6 +358,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9253, symbol: "정책", nickname: "정책워처", holdingLabel: "관심", content: "공급·LTV·DSR·전세대출 규제 유지. 유가·금리 충격이 주담대 심리 변수", createdAt: T03 - 0, likes: 28, comments: 2, },
+  { id: 9254, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "전세 관망·입주 물량·FOMC 9/15 전후. shock 구간에선 거래량 먼저", createdAt: T03 - 1200000, likes: 27, comments: 2, },
+  { id: 9255, symbol: "매매", nickname: "실수요자", holdingLabel: "관심", content: "WTI $91+·10년 4.8%·wealth effect. 매매 관망 지속", createdAt: T03 - 2400000, likes: 26, comments: 2, },
+  { id: 9256, symbol: "서울", nickname: "서울러", holdingLabel: "관심", content: "매크로 shock·정책 규제·전세·매매 관망. 지역별 온도차 분리", createdAt: T03 - 3600000, likes: 25, comments: 2, },
   { id: 9244, symbol: "서울", nickname: "서울러", holdingLabel: "관심", content: "강남·마포는 소폭 반등인데 외곽은 다릅니다. 서울 평균 한 줄만 보면 구별 온도차를 놓치기 쉬워요.", createdAt: T02 - 0, likes: 28, comments: 2, },
   { id: 9245, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "학군·역세권 전세는 버티는데 9월 입주 물량이 변수예요. 보증금은 오늘 숫자보다 다음 달 공급이 먼저입니다.", createdAt: T02 - 1200000, likes: 27, comments: 2, },
   { id: 9246, symbol: "매매", nickname: "실수요자", holdingLabel: "관심", content: "FOMC·세금 부담으로 매매는 관망이 이어집니다. 가격보다 거래량이 먼저 줄어드는 패턴이에요.", createdAt: T02 - 2400000, likes: 26, comments: 2, },
@@ -332,6 +397,22 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9253: [
+    { id: 1, nickname: "정책워처", holdingLabel: "관심", content: "공급 수사 vs LTV·DSR 실행 분리", createdAt: T03 + 600_000, likes: 4 },
+    { id: 2, nickname: "전세대출", holdingLabel: "관심", content: "유가 충격이 주담대 심리에도", createdAt: T03 + 1200_000, likes: 3 },
+  ],
+  9254: [
+    { id: 1, nickname: "전세러", holdingLabel: "관심", content: "입주 물량·FOMC 전후 점검", createdAt: T03 - 600_000, likes: 4 },
+    { id: 2, nickname: "대출상담", holdingLabel: "관심", content: "전세대출 규제가 수요 제한", createdAt: T03 - 300_000, likes: 3 },
+  ],
+  9255: [
+    { id: 1, nickname: "실수요", holdingLabel: "관심", content: "wealth effect에 shock 겹치면 관망", createdAt: T03 - 1800_000, likes: 4 },
+    { id: 2, nickname: "세제확인", holdingLabel: "관심", content: "10년 4.8%면 주담대 부담", createdAt: T03 - 1200_000, likes: 3 },
+  ],
+  9256: [
+    { id: 1, nickname: "서울러", holdingLabel: "관심", content: "서울·경기·지방 분리 기록", createdAt: T03 - 3000_000, likes: 4 },
+    { id: 2, nickname: "실수요", holdingLabel: "관심", content: "shock 구간에선 거래량 선행", createdAt: T03 - 2400_000, likes: 3 },
+  ],
   9244: [
     { id: 1, nickname: "실수요", holdingLabel: "관심", content: "구별로 온도 차 큰 날 맞습니다.", createdAt: T02 + 600_000, likes: 4 },
     { id: 2, nickname: "전세대출", holdingLabel: "관심", content: "FOMC 전엔 관망 거래 늘기 쉽죠.", createdAt: T02 + 1200_000, likes: 3 },

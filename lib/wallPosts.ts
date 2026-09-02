@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T03SEP = 1788390000000; // 2026.09.03 08:00 KST
 const T02SEP = 1788303600000; // 2026.09.02 08:00 KST
 const T01SEP = 1788217200000; // 2026.09.01 08:00 KST
 const T31AU = 1788130800000; // 2026.08.31 08:00 KST
@@ -94,7 +95,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T02SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T03SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -113,6 +114,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-03 신규 ────────────────
+  { id: 1195, symbol: "MACRO", nickname: "익명_4872", holdingLabel: "관심종목",
+    content: "9/3 한장: 사이버캡 5:45PM·중국 86,166·우버 10%·NVDA 물리AI·구글 TPU·F14·10년 4.80%·연금 112%",
+    createdAt: T03SEP + 8*60_000, likes: 10, comments: 1 },
+  { id: 1196, symbol: "TSLA", nickname: "익명_4889", holdingLabel: "관심종목",
+    content: "오늘 오스틴 5:45 PM ET 사이버캡 행사입니다. V15 무인 시승·플릿 대량 투입 기대가 최대인 날이에요",
+    createdAt: T03SEP + 16*60_000, likes: 11, comments: 2 },
+  { id: 1197, symbol: "TSLA", nickname: "익명_4906", holdingLabel: "관심종목",
+    content: "중국 8월 도매 86,166대(+3.57%)·소매 27,249·수출 58,917. 미국 행사랑 축이 완전히 다르네요",
+    createdAt: T03SEP + 24*60_000, likes: 12, comments: 1 },
+  { id: 1198, symbol: "UBER", nickname: "익명_4923", holdingLabel: "관심종목",
+    content: "우버 10% 감원·로bo 100억$+ 투자 보도가 사이버캡 행사랑 같은 날이에요. 플랫폼 vs OEM fleet",
+    createdAt: T03SEP + 32*60_000, likes: 13, comments: 2 },
+  { id: 1199, symbol: "NVDA", nickname: "익명_4940", holdingLabel: "관심종목",
+    content: "물리 AI가 디지털 AI보다 10배·로봇 10년 1,000억$·제조업 미국 복귀. 사이버캡이 소비자 facing 예시",
+    createdAt: T03SEP + 40*60_000, likes: 14, comments: 1 },
+  { id: 1200, symbol: "GOOGL", nickname: "익명_4957", holdingLabel: "관심종목",
+    content: "TPU 2027년 840억·2028년 1,080억$ 전망 상향(기존 620/790억). AI 가속기 수요 재평가",
+    createdAt: T03SEP + 48*60_000, likes: 15, comments: 2 },
+  { id: 1201, symbol: "SPCX", nickname: "익명_4974", holdingLabel: "관심종목",
+    content: "F14 V3 20~60기 operational·HLS hatch mockup·Mechazilla 사진. 9/15 발사 cadence 같이 봐야죠",
+    createdAt: T03SEP + 56*60_000, likes: 10, comments: 1 },
+  { id: 1202, symbol: "SPCX", nickname: "익명_4991", holdingLabel: "관심종목",
+    content: "2027년 AI 전력 15GW 부족·1.2GW 발전·구글·앤스로픽 임대. 전력이 칩만큼 관문",
+    createdAt: T03SEP + 64*60_000, likes: 11, comments: 2 },
+  { id: 1203, symbol: "TSLA", nickname: "익명_5008", holdingLabel: "관심종목",
+    content: "기가 텍사스: 사이버캡 시험·생산·칩 fab 기초·Cortex 2 Megapacks·옵티머스 N Campus 철골",
+    createdAt: T03SEP + 72*60_000, likes: 12, comments: 1 },
+  { id: 1204, symbol: "TSLA", nickname: "익명_5025", holdingLabel: "관심종목",
+    content: "FSD 프랑스 화상회의·도로 2대 시험·EU 승인 수주 내. 미국 사이버캡이랑 규제 트랙 분리",
+    createdAt: T03SEP + 80*60_000, likes: 13, comments: 2 },
+  { id: 1205, symbol: "MACRO", nickname: "익명_5042", holdingLabel: "관심종목",
+    content: "10년물 4.80%·30년 ~5.30%·신용 리스크 불안. FOMC 9/15 전 할인율 변수",
+    createdAt: T03SEP + 88*60_000, likes: 14, comments: 1 },
+  { id: 1206, symbol: "MACRO", nickname: "익명_5059", holdingLabel: "관심종목",
+    content: "연금 충당률 112%·2001년 이후 최고·98백분위. de-risking flow 변수",
+    createdAt: T03SEP + 96*60_000, likes: 15, comments: 2 },
+  { id: 1207, symbol: "AAPL", nickname: "익명_5076", holdingLabel: "관심종목",
+    content: "캐시 우드, 고점에서 애플 AI disruption 리스크 경고. Siri·Services AI 일정이 관건",
+    createdAt: T03SEP + 104*60_000, likes: 10, comments: 1 },
+  { id: 1208, symbol: "TSLA", nickname: "익명_5093", holdingLabel: "관심종목",
+    content: "배터리 블로그: 2,850억 mi 자발적 화재 0·4680·8년 70% 보증. 로bo fleet 안전 논거",
+    createdAt: T03SEP + 112*60_000, likes: 11, comments: 2 },
+  { id: 1209, symbol: "TSLA", nickname: "익명_5110", holdingLabel: "관심종목",
+    content: "ARK 사이버캡 TAM 30~60× vs 우버 탄력성. 오늘 행사가 모델 가정 검증일",
+    createdAt: T03SEP + 120*60_000, likes: 12, comments: 1 },
   // ── 2026-09-02 신규 ────────────────
   { id: 1179, symbol: "MACRO", nickname: "익명_4600", holdingLabel: "관심종목",
     content: "9/2 한장: 기가텍사스 반도체 ~697만SF·사이버캡 45·F14 9/15·웨이모 14도시·공포44",
@@ -4199,7 +4246,60 @@ export const MOCK_POSTS: Post[] = [
     createdAt: T14 - d(1), likes: 1, comments: 0 },
 
   { id: 22, symbol: "COIN", nickname: "익명_4481", holdingLabel: "40주 보유",
-    content: "CLARITY Act 통과되면 규제 불확실성 사라지면서 기관 자금이 대규모 유입될 것 같아요. 미국 1위 거래소로 최대 수혜.",
+    content: "CLARITY Act 통과되면 규제 불확실성 사라지면서 기관 자금이 대규모 유입될 것 같아요. 미국   // ── 2026-09-03 신규 댓글 ────────────────
+  1195: [
+    { id: 1, nickname: "익명_6195", holdingLabel: "관심종목", content: "9/3 한장에 사이버캡·중국·우버·금리까지 정리 감사합니다", createdAt: T03SEP + 8*60_000 + 3*60_000, likes: 4 },
+  ],
+  1196: [
+    { id: 1, nickname: "익명_6196", holdingLabel: "관심종목", content: "5:45 PM ET 행사 후 무인 영상 나오면 바로 확인할게요", createdAt: T03SEP + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6296", holdingLabel: "관심종목", content: "플릿 flooding이 말인지 숫자인지 구분해서 봐야겠네요", createdAt: T03SEP + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1197: [
+    { id: 1, nickname: "익명_6197", holdingLabel: "관심종목", content: "수출 58,917이 크네요. 내수랑 분리 추적해야죠", createdAt: T03SEP + 24*60_000 + 3*60_000, likes: 4 },
+  ],
+  1198: [
+    { id: 1, nickname: "익명_6198", holdingLabel: "관심종목", content: "감원+로bo capex가 같은 날이면 비용 구조 재편 신호 같아요", createdAt: T03SEP + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6298", holdingLabel: "관심종목", content: "사이버캡 행사랑 겹친 타이밍이 포인트네요", createdAt: T03SEP + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1199: [
+    { id: 1, nickname: "익명_6199", holdingLabel: "관심종목", content: "물리 AI 10배는 로bo·공장·자율주행 전부 해당이겠네요", createdAt: T03SEP + 40*60_000 + 3*60_000, likes: 4 },
+  ],
+  1200: [
+    { id: 1, nickname: "익명_6200", holdingLabel: "관심종목", content: "TPU 전망 상향 폭이 꽤 크네요", createdAt: T03SEP + 48*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6300", holdingLabel: "관심종목", content: "GPU vs TPU capex 같이 추적하겠습니다", createdAt: T03SEP + 48*60_000 + 6*60_000, likes: 5 },
+  ],
+  1201: [
+    { id: 1, nickname: "익명_6201", holdingLabel: "관심종목", content: "V3 20~60기 operational이 핵심 숫자죠", createdAt: T03SEP + 56*60_000 + 3*60_000, likes: 4 },
+  ],
+  1202: [
+    { id: 1, nickname: "익명_6202", holdingLabel: "관심종목", content: "15GW gap이면 전력 capex가 칩만큼 중요하겠네요", createdAt: T03SEP + 64*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6302", holdingLabel: "관심종목", content: "1.2GW 발전소 일정도 같이 봐야겠어요", createdAt: T03SEP + 64*60_000 + 6*60_000, likes: 5 },
+  ],
+  1203: [
+    { id: 1, nickname: "익명_6203", holdingLabel: "관심종목", content: "칩 fab 기초 공사랑 사이버캡 생산이 같은 캠퍼스네요", createdAt: T03SEP + 72*60_000 + 3*60_000, likes: 4 },
+  ],
+  1204: [
+    { id: 1, nickname: "익명_6204", holdingLabel: "관심종목", content: "EU 승인 수주 내는지 행사 후 확인할게요", createdAt: T03SEP + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6304", holdingLabel: "관심종목", content: "프랑스 2대 시험이 무인인지 감독인지가 관건", createdAt: T03SEP + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1205: [
+    { id: 1, nickname: "익명_6205", holdingLabel: "관심종목", content: "4.80%면 성장주 할인율 부담 커지는 구간이죠", createdAt: T03SEP + 88*60_000 + 3*60_000, likes: 4 },
+  ],
+  1206: [
+    { id: 1, nickname: "익명_6206", holdingLabel: "관심종목", content: "112% 충당률이면 de-risking flow 변수 맞네요", createdAt: T03SEP + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6306", holdingLabel: "관심종목", content: "2001년 이후 최고라는 게 인상적이에요", createdAt: T03SEP + 96*60_000 + 6*60_000, likes: 5 },
+  ],
+  1207: [
+    { id: 1, nickname: "익명_6207", holdingLabel: "관심종목", content: "고점에서 disruption 경고는 심리적으로 무겁네요", createdAt: T03SEP + 104*60_000 + 3*60_000, likes: 4 },
+  ],
+  1208: [
+    { id: 1, nickname: "익명_6208", holdingLabel: "관심종목", content: "2,850억 mi 0건은 로bo fleet 안전 논거로 쓰이겠네요", createdAt: T03SEP + 112*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6308", holdingLabel: "관심종목", content: "4680·8년 70% 보증도 fleet 운영에 중요하죠", createdAt: T03SEP + 112*60_000 + 6*60_000, likes: 5 },
+  ],
+  1209: [
+    { id: 1, nickname: "익명_6209", holdingLabel: "관심종목", content: "30~60× TAM은 오늘 행사 숫자로 검증해야겠네요", createdAt: T03SEP + 120*60_000 + 3*60_000, likes: 4 },
+  ],
+1위 거래소로 최대 수혜.",
     createdAt: T14 - h(1), likes: 18, comments: 3 },
   { id: 23, symbol: "COIN", nickname: "익명_6603", holdingLabel: "20주 보유",
     content: "트럼프가 코인 매수 선언하고 CLARITY Act도 진행 중이니 규제 환경이 완전히 바뀌고 있어요. ETF 자금 유입도 계속 늘어나는 중.",

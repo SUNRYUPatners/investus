@@ -17,6 +17,82 @@ export type AnalystMockComment = {
 
 // Negative IDs so they never collide with real Supabase IDs (which start at 1)
 export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
+  // ── 2026-09-03 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
+  {
+    id: -992, alias: "종로 까치 #41", symbol: "MACRO",
+    content: "9/3 한장: Cybercab 5:45PM ET·중국 86,166·Uber 10%·NVDA physical AI·Google TPU \$84B/\$108B·F14 V3·10yr 4.80%·연금 112%",
+    likes: 12, comments: 1, created_at: "2026-09-03T00:00:00.000Z", liked: false,
+  },
+  {
+    id: -993, alias: "광화문 여우 #62", symbol: "TSLA",
+    content: "9/3 오스틴 5:45 PM ET 사이버캡 행사일입니다. V15 무인·fleet flooding 기대가 최대—행사 후 무인 영상·등록 대수·지오펜스를 확인하시기 바랍니다.",
+    likes: 13, comments: 2, created_at: "2026-09-03T00:07:00.000Z", liked: false,
+  },
+  {
+    id: -994, alias: "여의도 수리 #28", symbol: "TSLA",
+    content: "중국 8월 도매 86,166(+3.57%)·소매 27,249·수출 58,917. 미국 Cybercab과 규제 축이 다릅니다.",
+    likes: 14, comments: 1, created_at: "2026-09-03T00:14:00.000Z", liked: false,
+  },
+  {
+    id: -995, alias: "송파 독수리 #66", symbol: "UBER",
+    content: "Uber 10% 감원·\$10B+ robotaxi capex. Cybercab 행사와 같은 날 플랫폼 vs OEM fleet 프레임이 강합니다.",
+    likes: 15, comments: 2, created_at: "2026-09-03T00:21:00.000Z", liked: false,
+  },
+  {
+    id: -996, alias: "분당 매 #31", symbol: "NVDA",
+    content: "물리 AI 10× digital·로봇 10년 \$100B·제조업 미국 복귀. Cybercab은 소비자-facing physical AI 예시입니다.",
+    likes: 16, comments: 1, created_at: "2026-09-03T00:28:00.000Z", liked: false,
+  },
+  {
+    id: -997, alias: "성수 너구리 #15", symbol: "GOOGL",
+    content: "TPU 매출 2027 \$84B·2028 \$108B(기존 \$62B/\$79B). AI 가속기 수요 전망 상향입니다.",
+    likes: 12, comments: 2, created_at: "2026-09-03T00:35:00.000Z", liked: false,
+  },
+  {
+    id: -998, alias: "역삼 판다 #77", symbol: "SPCX",
+    content: "F14 V3 20-60기 operational·HLS hatch mockup. 발사 cadence와 powered GW를 분리 추적하시기 바랍니다.",
+    likes: 13, comments: 1, created_at: "2026-09-03T00:42:00.000Z", liked: false,
+  },
+  {
+    id: -999, alias: "한남 재규어 #27", symbol: "SPCX",
+    content: "15GW AI power gap 2027·1.2GW plant·Google/Anthropic lease. 전력이 칩만큼 capex 관문입니다.",
+    likes: 14, comments: 2, created_at: "2026-09-03T00:49:00.000Z", liked: false,
+  },
+  {
+    id: -1000, alias: "삼성동 올빼미 #19", symbol: "TSLA",
+    content: "Giga Texas: Cybercab test/prod·chip fab foundation·Cortex 2 Megapacks·Optimus N steel.",
+    likes: 15, comments: 1, created_at: "2026-09-03T00:56:00.000Z", liked: false,
+  },
+  {
+    id: -1001, alias: "해운대 고래 #03", symbol: "TSLA",
+    content: "FSD France virtual·2 cars road test·EU approval weeks. US Cybercab과 별개 규제 트랙입니다.",
+    likes: 16, comments: 2, created_at: "2026-09-03T00:63:00.000Z", liked: false,
+  },
+  {
+    id: -1002, alias: "마포 살쾡이 #08", symbol: "MACRO",
+    content: "10yr 4.80%·30yr ~5.30%·credit anxiety. FOMC 9/15~16 전 할인율 변수입니다.",
+    likes: 12, comments: 1, created_at: "2026-09-03T00:70:00.000Z", liked: false,
+  },
+  {
+    id: -1003, alias: "판교 늑대 #90", symbol: "MACRO",
+    content: "연금 funding 112%·98th percentile since 2001. De-risking flow 변수입니다.",
+    likes: 13, comments: 2, created_at: "2026-09-03T00:77:00.000Z", liked: false,
+  },
+  {
+    id: -1004, alias: "인천 갈매기 #52", symbol: "AAPL",
+    content: "Cathie Wood Apple AI disruption at highs. Siri·Services AI 일정이 관건입니다.",
+    likes: 14, comments: 1, created_at: "2026-09-03T00:84:00.000Z", liked: false,
+  },
+  {
+    id: -1005, alias: "압구정 치타 #44", symbol: "TSLA",
+    content: "Battery blog: 285B mi zero spontaneous fire·4680·8yr 70% warranty. Robo fleet safety argument입니다.",
+    likes: 15, comments: 2, created_at: "2026-09-03T00:91:00.000Z", liked: false,
+  },
+  {
+    id: -1006, alias: "종로 까치 #41", symbol: "TSLA",
+    content: "ARK Cybercab TAM 30-60× vs Uber elasticity. 9/3 행사가 모델 가정 검증일입니다.",
+    likes: 16, comments: 1, created_at: "2026-09-03T00:98:00.000Z", liked: false,
+  },
   // ── 2026-09-02 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -976, alias: "종로 까치 #41", symbol: "MACRO",
@@ -7482,6 +7558,60 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
     { alias: "분당 매 #31", content: "미국 사이버캡이랑 중국 V14는 같은 FSD라도 스토리가 다르네요. 공식 확인 전까지는 루머로 분류하겠습니다.", created_at: "2026-09-02T01:12:00.000Z" },
     { alias: "역삼 판다 #77", content: "중국 규제 승인 일정이 나오면 그때 다시 보겠습니다.", created_at: "2026-09-02T01:18:00.000Z" },
   ],
+  // ── 2026-09-03 애널 댓글 ──────────────────────
+  [-992]: [
+    { alias: "종로 까치 #41", content: "9/3 한장에 사이버캡·중국·우버·금리까지 한눈에 보기 좋습니다", created_at: "2026-09-03T00:10:00.000Z" },
+  ],
+  [-993]: [
+    { alias: "광화문 여우 #62", content: "5:45 PM ET 행사 후 무인 영상 나오면 바로 확인할게요", created_at: "2026-09-03T00:13:00.000Z" },
+    { alias: "역삼 판다 #77", content: "플릿 flooding이 말인지 등록 대수인지 구분해서 봐야겠네요", created_at: "2026-09-03T00:14:00.000Z" },
+  ],
+  [-994]: [
+    { alias: "여의도 수리 #28", content: "수출 58,917대가 크네요. 내수 27,249와 분리 추적하겠습니다", created_at: "2026-09-03T00:16:00.000Z" },
+  ],
+  [-995]: [
+    { alias: "송파 독수리 #66", content: "10% 감원과 로bo 100억$+ 투자가 같은 날이면 비용 구조 재편 신호 같아요", created_at: "2026-09-03T00:19:00.000Z" },
+    { alias: "해운대 고래 #03", content: "사이버캡 행사랑 겹친 타이밍이 포인트네요", created_at: "2026-09-03T00:20:00.000Z" },
+  ],
+  [-996]: [
+    { alias: "분당 매 #31", content: "물리 AI 10배는 로bo·공장·자율주행 전부 해당이겠네요", created_at: "2026-09-03T00:22:00.000Z" },
+  ],
+  [-997]: [
+    { alias: "성수 너구리 #15", content: "TPU 840억·1,080억$ 전망 상향 폭이 꽤 크네요", created_at: "2026-09-03T00:25:00.000Z" },
+    { alias: "한남 재규어 #27", content: "GPU vs TPU capex 같이 추적하겠습니다", created_at: "2026-09-03T00:26:00.000Z" },
+  ],
+  [-998]: [
+    { alias: "역삼 판다 #77", content: "V3 20~60기 operational이 핵심 숫자죠", created_at: "2026-09-03T00:28:00.000Z" },
+  ],
+  [-999]: [
+    { alias: "한남 재규어 #27", content: "15GW gap이면 전력 capex가 칩만큼 중요하겠네요", created_at: "2026-09-03T00:31:00.000Z" },
+    { alias: "삼성동 올빼미 #19", content: "1.2GW 발전소 일정도 같이 봐야겠어요", created_at: "2026-09-03T00:32:00.000Z" },
+  ],
+  [-1000]: [
+    { alias: "삼성동 올빼미 #19", content: "칩 fab 기초 공사랑 사이버캡 생산이 같은 캠퍼스네요", created_at: "2026-09-03T00:34:00.000Z" },
+  ],
+  [-1001]: [
+    { alias: "해운대 고래 #03", content: "EU 승인 수주 내는지 행사 후 확인할게요", created_at: "2026-09-03T00:37:00.000Z" },
+    { alias: "마포 살쾡이 #08", content: "프랑스 2대 시험이 무인인지 감독인지가 관건", created_at: "2026-09-03T00:38:00.000Z" },
+  ],
+  [-1002]: [
+    { alias: "마포 살쾡이 #08", content: "4.80%면 성장주 할인율 부담 커지는 구간이죠", created_at: "2026-09-03T00:40:00.000Z" },
+  ],
+  [-1003]: [
+    { alias: "판교 늑대 #90", content: "112% 충당률이면 de-risking flow 변수 맞네요", created_at: "2026-09-03T00:43:00.000Z" },
+    { alias: "인천 갈매기 #52", content: "2001년 이후 최고라는 게 인상적이에요", created_at: "2026-09-03T00:44:00.000Z" },
+  ],
+  [-1004]: [
+    { alias: "인천 갈매기 #52", content: "고점에서 disruption 경고는 심리적으로 무겁네요", created_at: "2026-09-03T00:46:00.000Z" },
+  ],
+  [-1005]: [
+    { alias: "압구정 치타 #44", content: "2,850억 mi 0건은 로bo fleet 안전 논거로 쓰이겠네요", created_at: "2026-09-03T00:49:00.000Z" },
+    { alias: "종로 까치 #41", content: "4680·8년 70% 보증도 fleet 운영에 중요하죠", created_at: "2026-09-03T00:50:00.000Z" },
+  ],
+  [-1006]: [
+    { alias: "종로 까치 #41", content: "30~60× TAM은 오늘 행사 숫자로 검증해야겠네요", created_at: "2026-09-03T00:52:00.000Z" },
+  ],
+
   [-961]: [{ alias: "댓글_310961", content: "9/3 사이버캡 전후 한 화면 정리 감사합니다", created_at: "2026-09-01T00:10:00.000Z" }],
   [-962]: [
     { alias: "댓글_310962", content: "해상 160척 규모가 B2B 매출에 얼마나 반영될지 궁금합니다", created_at: "2026-09-01T00:12:00.000Z" },
