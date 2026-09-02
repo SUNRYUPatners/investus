@@ -22,14 +22,21 @@ export function getAdminSupabase(): SupabaseClient {
 
 // Verify a request's JWT and return { email, id }, or null if unauthenticated.
 // Usage: const user = await getUserFromRequest(req); if (!user) return 401;
-export async function getUserFromRequest(req: NextRequest): Promise<{ email: string; id: string } | null> {
+export async function getUserFromRequest(
+  req: NextRequest,
+): Promise<{ email: string; id: string; nickname: string } | null> {
   const authHeader = req.headers.get("authorization");
   const token = authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : null;
   if (!token) return null;
   try {
     const { data: { user }, error } = await getAdminSupabase().auth.getUser(token);
     if (error || !user?.email) return null;
-    return { email: user.email, id: user.id };
+    const meta = user.user_metadata?.nickname;
+    const nickname =
+      typeof meta === "string" && meta.trim().length >= 2
+        ? meta.trim().slice(0, 16)
+        : `투자자_${user.email.split("@")[0]?.slice(-4) ?? "user"}`;
+    return { email: user.email, id: user.id, nickname };
   } catch {
     return null;
   }

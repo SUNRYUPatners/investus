@@ -1,7 +1,6 @@
 import { Redis } from "@upstash/redis";
 import type { PostgrestError } from "@supabase/supabase-js";
 import { getAdminSupabase } from "@/lib/supabase";
-import { makeAnonNick } from "@/lib/wallNick";
 import type { SessionChatMessage } from "./types";
 
 const TTL_SEC = 48 * 60 * 60;
@@ -24,6 +23,12 @@ type StoredRow = {
   at: number;
 };
 
+export type SessionChatAuthor = {
+  userId: string;
+  nickname: string;
+  actorKey: string;
+};
+
 let _redis: Redis | null = null;
 
 function getRedis(): Redis | null {
@@ -39,8 +44,8 @@ function redisKey(market: "us" | "kr"): string {
   return `session-chat:${market}`;
 }
 
-function rateKey(market: "us" | "kr", email: string): string {
-  return `session-chat:rate:${market}:${email.trim().toLowerCase()}`;
+function rateKey(market: "us" | "kr", userId: string): string {
+  return `session-chat:rate:${market}:${userId}`;
 }
 
 export function isSessionChatDbUnavailable(error: PostgrestError | null): boolean {
@@ -53,29 +58,29 @@ export function isSessionChatDbUnavailable(error: PostgrestError | null): boolea
   );
 }
 
-function rowToMessage(row: DbRow, authEmail: string | null): SessionChatMessage {
+function rowToMessage(row: DbRow, actorKey: string | null): SessionChatMessage {
   return {
     id: `u-${row.id}`,
     nick: row.nickname,
     content: row.content,
     at: new Date(row.created_at).getTime(),
-    is_mine: !!authEmail && row.user_id === authEmail,
+    is_mine: !!actorKey && row.user_id === actorKey,
   };
 }
 
-function storedToMessage(row: StoredRow, authEmail: string | null): SessionChatMessage {
+function storedToMessage(row: StoredRow, actorKey: string | null): SessionChatMessage {
   return {
     id: row.id,
     nick: row.nickname,
     content: row.content,
     at: row.at,
-    is_mine: !!authEmail && row.user_id === authEmail,
+    is_mine: !!actorKey && row.user_id === actorKey,
   };
 }
 
 async function loadFromRedis(
   market: "us" | "kr",
-  authEmail: string | null,
+  actorKey: string | null,
   sinceMs: number,
   limit: number,
 ): Promise<SessionChatMessage[]> {
@@ -92,7 +97,7 @@ async function loadFromRedis(
       .filter((r): r is StoredRow => !!r && r.at >= since)
       .sort((a, b) => a.at - b.at)
       .slice(-limit);
-    return rows.map((r) => storedToMessage(r, authEmail));
+    return rows.map((r) => storedToMessage(r, actorKey));
   } catch {
     return [];
   }
@@ -100,8 +105,7 @@ async function loadFromRedis(
 
 async function saveToRedis(
   market: "us" | "kr",
-  email: string,
-  nickname: string,
+  author: SessionChatAuthor,
   content: string,
 ): Promise<SessionChatMessage | null> {
   const redis = getRedis();
@@ -111,8 +115,8 @@ async function saveToRedis(
   const row: StoredRow = {
     id: `u-r-${market}-${at}-${Math.random().toString(36).slice(2, 8)}`,
     market,
-    user_id: email,
-    nickname,
+    user_id: author.userId,
+    nickname: author.nickname,
     content,
     at,
   };
@@ -122,18 +126,18 @@ async function saveToRedis(
     await redis.lpush(key, JSON.stringify(row));
     await redis.ltrim(key, 0, MAX_STORED - 1);
     await redis.expire(key, TTL_SEC);
-    await redis.set(rateKey(market, email), at, { ex: 5 });
-    return storedToMessage(row, email);
+    await redis.set(rateKey(market, author.userId), at, { ex: 5 });
+    return storedToMessage(row, author.actorKey);
   } catch {
     return null;
   }
 }
 
-async function hasRecentRedisPost(market: "us" | "kr", email: string): Promise<boolean> {
+async function hasRecentRedisPost(market: "us" | "kr", userId: string): Promise<boolean> {
   const redis = getRedis();
   if (!redis) return false;
   try {
-    const last = await redis.get<number>(rateKey(market, email));
+    const last = await redis.get<number>(rateKey(market, userId));
     return typeof last === "number" && Date.now() - last < 5_000;
   } catch {
     return false;
@@ -142,7 +146,7 @@ async function hasRecentRedisPost(market: "us" | "kr", email: string): Promise<b
 
 export async function loadSessionUserMessages(
   market: "us" | "kr",
-  authEmail: string | null,
+  actorKey: string | null,
   sinceMs: number,
   limit = 80,
 ): Promise<SessionChatMessage[]> {
@@ -156,14 +160,14 @@ export async function loadSessionUserMessages(
     .order("created_at", { ascending: true })
     .limit(limit);
 
-  const fromRedis = await loadFromRedis(market, authEmail, sinceMs, limit);
+  const fromRedis = await loadFromRedis(market, actorKey, sinceMs, limit);
 
   if (error) {
     if (isSessionChatDbUnavailable(error)) return fromRedis;
     return fromRedis;
   }
 
-  const fromDb = (data as DbRow[] ?? []).map((row) => rowToMessage(row, authEmail));
+  const fromDb = (data as DbRow[] ?? []).map((row) => rowToMessage(row, actorKey));
   const merged = new Map<string, SessionChatMessage>();
   for (const m of [...fromDb, ...fromRedis]) merged.set(m.id, m);
   return [...merged.values()].sort((a, b) => a.at - b.at).slice(-limit);
@@ -203,10 +207,9 @@ export async function countSessionParticipants(market: "us" | "kr"): Promise<num
 
 export async function saveSessionUserMessage(
   market: "us" | "kr",
-  email: string,
+  author: SessionChatAuthor,
   content: string,
 ): Promise<{ message?: SessionChatMessage; error?: string; status?: number }> {
-  const nickname = makeAnonNick(email);
   const db = getAdminSupabase();
 
   const fiveSecAgo = new Date(Date.now() - 5_000).toISOString();
@@ -214,7 +217,7 @@ export async function saveSessionUserMessage(
     .from("session_chat_messages")
     .select("id")
     .eq("market", market)
-    .eq("user_id", email)
+    .eq("user_id", author.userId)
     .gte("created_at", fiveSecAgo)
     .limit(1);
 
@@ -222,7 +225,7 @@ export async function saveSessionUserMessage(
     return { error: "잠시 후 다시 보내주세요.", status: 429 };
   }
   if (recentErr && isSessionChatDbUnavailable(recentErr)) {
-    if (await hasRecentRedisPost(market, email)) {
+    if (await hasRecentRedisPost(market, author.userId)) {
       return { error: "잠시 후 다시 보내주세요.", status: 429 };
     }
   }
@@ -231,8 +234,8 @@ export async function saveSessionUserMessage(
     .from("session_chat_messages")
     .insert({
       market,
-      user_id: email,
-      nickname,
+      user_id: author.userId,
+      nickname: author.nickname,
       content,
     })
     .select("id, nickname, content, created_at")
@@ -255,7 +258,7 @@ export async function saveSessionUserMessage(
     console.error("[session-chat] insert failed:", error.code, error.message);
   }
 
-  const fallback = await saveToRedis(market, email, nickname, content);
+  const fallback = await saveToRedis(market, author, content);
   if (fallback) return { message: fallback };
 
   if (error && isSessionChatDbUnavailable(error)) {

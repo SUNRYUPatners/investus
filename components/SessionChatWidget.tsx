@@ -1,20 +1,20 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { LogIn, Send, UserPlus, X, Users } from "lucide-react";
+import { Send, X, Users } from "lucide-react";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isSessionChatOpen, sessionChatSupported } from "@/lib/markets/sessionChatOpen";
 import type { SessionChatMessage } from "@/lib/sessionChat/types";
 import { sessionChatAuthHeaders } from "@/lib/sessionChat/authHeaders";
+import { getOrCreateGuestId } from "@/lib/sessionChat/guestId";
 import { useAuth } from "@/hooks/useAuth";
 
 const MAX_MESSAGES = 80;
 const READ_KEY = (market: MarketId) => `investus-session-chat-read-${market}`;
 
 export function SessionChatWidget({ market }: { market: MarketId }) {
-  const { user, loaded, loginWithOAuth, loginWithNaver } = useAuth();
+  const { user, loaded, loginWithOAuth } = useAuth();
   const [panelOpen, setPanelOpen] = useState(false);
   const [sessionOpen, setSessionOpen] = useState(false);
   const [messages, setMessages] = useState<SessionChatMessage[]>([]);
@@ -29,6 +29,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
   const sinceRef = useRef(Date.now() - 8 * 60_000);
   const lastMsgAtRef = useRef(0);
   const panelOpenRef = useRef(panelOpen);
+  const replyTimersRef = useRef<number[]>([]);
   const cfg = getMarketConfig(market);
 
   const supported = sessionChatSupported(market);
@@ -36,6 +37,14 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
   useEffect(() => {
     panelOpenRef.current = panelOpen;
   }, [panelOpen]);
+
+  useEffect(() => {
+    getOrCreateGuestId();
+    return () => {
+      for (const id of replyTimersRef.current) window.clearTimeout(id);
+      replyTimersRef.current = [];
+    };
+  }, []);
 
   // 모바일: 팝업 열릴 때 뒤 페이지 스크롤 잠금
   useEffect(() => {
@@ -175,8 +184,22 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     }
   }, [messages, panelOpen, markRead, scrollToBottom]);
 
+  const scheduleBotReplies = useCallback((replies: SessionChatMessage[]) => {
+    const now = Date.now();
+    for (const reply of replies) {
+      const delay = Math.max(0, reply.at - now);
+      const timerId = window.setTimeout(() => {
+        setMessages((prev) => {
+          if (prev.some((m) => m.id === reply.id)) return prev;
+          return [...prev, reply].sort((a, b) => a.at - b.at).slice(-MAX_MESSAGES);
+        });
+        requestAnimationFrame(scrollToBottom);
+      }, delay);
+      replyTimersRef.current.push(timerId);
+    }
+  }, [scrollToBottom]);
+
   const submitMessage = async () => {
-    if (!user) return;
     const content = draft.trim();
     if (content.length < 2) {
       setSubmitErr("2자 이상 작성해주세요.");
@@ -188,9 +211,13 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
       const res = await fetch("/api/session-chat", {
         method: "POST",
         headers: await sessionChatAuthHeaders(),
-        body: JSON.stringify({ market, content }),
+        body: JSON.stringify({ market, content, guestId: getOrCreateGuestId() }),
       });
-      const data = await res.json() as { message?: SessionChatMessage; error?: string };
+      const data = await res.json() as {
+        message?: SessionChatMessage;
+        botReplies?: SessionChatMessage[];
+        error?: string;
+      };
       if (!res.ok || data.error) {
         setSubmitErr(data.error ?? "전송 실패");
         return;
@@ -201,6 +228,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
         setDraft("");
         markRead();
         requestAnimationFrame(scrollToBottom);
+        if (data.botReplies?.length) scheduleBotReplies(data.botReplies);
       }
     } catch {
       setSubmitErr("네트워크 오류");
@@ -410,99 +438,67 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                 <p className="text-center text-[11px] py-2" style={{ color: "var(--muted)" }}>
                   확인 중…
                 </p>
-              ) : user ? (
-                  <>
-                    <div className="flex gap-2 items-end">
-                      <textarea
-                        value={draft}
-                        onChange={(e) => setDraft(e.target.value)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" && !e.shiftKey) {
-                            e.preventDefault();
-                            void submitMessage();
-                          }
-                        }}
-                        rows={2}
-                        maxLength={200}
-                        placeholder="장중 시황을 남겨보세요 (2~200자)"
-                        className="flex-1 resize-none rounded-xl px-3 py-2 text-[13px] outline-none border"
-                        style={{
-                          background: "var(--bg)",
-                          color: "var(--text)",
-                          borderColor: "var(--border)",
-                        }}
-                      />
+              ) : (
+                <>
+                  <div className="flex gap-2 items-end">
+                    <textarea
+                      value={draft}
+                      onChange={(e) => setDraft(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" && !e.shiftKey) {
+                          e.preventDefault();
+                          void submitMessage();
+                        }
+                      }}
+                      rows={2}
+                      maxLength={200}
+                      placeholder="장중 시황을 남겨보세요 (2~200자)"
+                      className="flex-1 resize-none rounded-xl px-3 py-2 text-[13px] outline-none border"
+                      style={{
+                        background: "var(--bg)",
+                        color: "var(--text)",
+                        borderColor: "var(--border)",
+                      }}
+                    />
+                    <button
+                      type="button"
+                      disabled={submitting || draft.trim().length < 2}
+                      onClick={() => void submitMessage()}
+                      className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center disabled:opacity-40"
+                      style={{ background: "var(--mint)", color: "var(--on-accent)" }}
+                      aria-label="보내기"
+                    >
+                      <Send size={18} />
+                    </button>
+                  </div>
+                  {submitErr && (
+                    <p className="text-[10px] mt-1.5" style={{ color: "var(--down)" }}>
+                      {submitErr}
+                    </p>
+                  )}
+                  <p className="text-[10px] mt-1" style={{ color: "var(--muted)" }}>
+                    {user
+                      ? `${user.nickname}(으)로 표시됩니다`
+                      : "익명 번호로 표시됩니다"}
+                    {" · "}
+                    {draft.trim().length}/200
+                  </p>
+                  {!user && (
+                    <p className="text-[10px] mt-1.5 text-center" style={{ color: "var(--muted)" }}>
+                      로그인하면{" "}
                       <button
                         type="button"
-                        disabled={submitting || draft.trim().length < 2}
-                        onClick={() => void submitMessage()}
-                        className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center disabled:opacity-40"
-                        style={{ background: "var(--mint)", color: "var(--on-accent)" }}
-                        aria-label="보내기"
+                        onClick={() => loginWithOAuth("google")}
+                        className="underline font-semibold"
+                        style={{ color: "var(--mint)" }}
                       >
-                        <Send size={18} />
+                        프로필 닉네임
                       </button>
-                    </div>
-                    {submitErr && (
-                      <p className="text-[10px] mt-1.5" style={{ color: "var(--down)" }}>
-                        {submitErr}
-                      </p>
-                    )}
-                    <p className="text-[10px] mt-1" style={{ color: "var(--muted)" }}>
-                      익명 닉네임으로 표시됩니다 · {draft.trim().length}/200
+                      으로 표시돼요
                     </p>
-                  </>
-                ) : (
-                  <div className="py-1">
-                    <div
-                      className="rounded-xl px-3 py-3 mb-3 text-center"
-                      style={{ background: "rgba(var(--mint-rgb),0.08)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}
-                    >
-                      <p className="text-[13px] font-semibold" style={{ color: "var(--text)" }}>
-                        채팅하려면 로그인이 필요합니다
-                      </p>
-                      <p className="text-[11px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
-                        회원가입 또는 로그인 후 장중 시황을 남길 수 있습니다.
-                        <br />
-                        읽기는 로그인 없이 가능합니다.
-                      </p>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => loginWithOAuth("google")}
-                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border mb-2 text-[13px] font-semibold"
-                      style={{ borderColor: "var(--border)", background: "var(--bg)", color: "var(--text)" }}
-                    >
-                      <LogIn size={16} />
-                      Google로 로그인
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => loginWithOAuth("kakao")}
-                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl mb-2 text-[13px] font-semibold"
-                      style={{ background: "#FEE500", color: "#3C1E1E" }}
-                    >
-                      카카오로 로그인
-                    </button>
-                    <button
-                      type="button"
-                      onClick={loginWithNaver}
-                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl mb-3 text-[13px] font-semibold"
-                      style={{ background: "#03C75A", color: "#fff" }}
-                    >
-                      네이버로 로그인
-                    </button>
-                    <Link
-                      href="/more"
-                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[13px] font-semibold no-underline"
-                      style={{ background: "var(--mint)", color: "var(--on-accent)" }}
-                      onClick={() => setPanelOpen(false)}
-                    >
-                      <UserPlus size={16} />
-                      이메일 회원가입 · 로그인
-                    </Link>
-                  </div>
-                )}
+                  )}
+                </>
+              )}
             </div>
           </div>
         </>

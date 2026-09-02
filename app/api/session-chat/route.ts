@@ -3,11 +3,14 @@ import { parseMarketId } from "@/lib/markets/types";
 import { isSessionChatOpen, sessionChatSupported } from "@/lib/markets/sessionChatOpen";
 import { generateSessionMessages, fakeOnlineCount, type ChatQuote } from "@/lib/sessionChat/generate";
 import { isSessionChatBanned } from "@/lib/sessionChat/banned";
+import { guestUserId, readGuestIdFromRequest } from "@/lib/sessionChat/guestId";
+import { guestNick, sanitizeSessionNick } from "@/lib/sessionChat/nickname";
 import {
   countSessionParticipants,
   loadSessionUserMessages,
   saveSessionUserMessage,
 } from "@/lib/sessionChat/persist";
+import { generateRepliesToUserMessages } from "@/lib/sessionChat/replies";
 import type { SessionChatMessage } from "@/lib/sessionChat/types";
 import type { IndexQuote, Quote } from "@/lib/api";
 import { kvGetDetail } from "@/lib/kv";
@@ -66,10 +69,17 @@ function mergeMessages(lists: SessionChatMessage[][]): SessionChatMessage[] {
   return [...map.values()].sort((a, b) => a.at - b.at);
 }
 
+function resolveActorKey(req: NextRequest, authEmail: string | null): string | null {
+  if (authEmail) return authEmail;
+  const guestId = readGuestIdFromRequest(req);
+  return guestId ? guestUserId(guestId) : null;
+}
+
 export async function GET(req: NextRequest) {
   const url = new URL(req.url);
   const market = parseMarketId(url.searchParams.get("market") ?? "us", "us");
   const authUser = await getUserFromRequest(req);
+  const actorKey = resolveActorKey(req, authUser?.email ?? null);
 
   if (!sessionChatSupported(market)) {
     return NextResponse.json({ open: false, supported: false, messages: [] });
@@ -84,24 +94,21 @@ export async function GET(req: NextRequest) {
   const safeSince = Number.isFinite(sinceMs) ? sinceMs : defaultSince;
 
   const snap = await loadMarketSnap(m);
-  const userMsgs = await loadSessionUserMessages(
-    m,
-    authUser?.email ?? null,
-    safeSince,
-    open ? 80 : 120,
-  );
+  const chatQuotes = toChatQuotes(snap.quotes);
+  const chatIndices = toIndexQuotes(snap.indices);
 
-  const botMsgs = generateSessionMessages(
-    m,
-    toChatQuotes(snap.quotes),
-    toIndexQuotes(snap.indices),
-    {
-      sinceMs: open ? safeSince : Math.max(safeSince, Date.now() - 24 * 60 * 60_000),
-      maxBackfill: open ? 20 : 50,
-    },
-  );
+  const userMsgs = await loadSessionUserMessages(m, actorKey, safeSince, open ? 80 : 120);
 
-  const messages = mergeMessages([userMsgs, botMsgs]).slice(-80);
+  const botMsgs = generateSessionMessages(m, chatQuotes, chatIndices, {
+    sinceMs: open ? safeSince : Math.max(safeSince, Date.now() - 24 * 60 * 60_000),
+    maxBackfill: open ? 20 : 50,
+  });
+
+  const replyMsgs = open
+    ? generateRepliesToUserMessages(userMsgs, m, chatQuotes, chatIndices, safeSince)
+    : [];
+
+  const messages = mergeMessages([userMsgs, botMsgs, replyMsgs]).slice(-80);
   const recentUsers = open ? await countSessionParticipants(m) : 0;
   const online = open ? fakeOnlineCount(m) + recentUsers : 0;
 
@@ -119,11 +126,13 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   const authUser = await getUserFromRequest(req);
-  if (!authUser) {
-    return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
+  const guestId = readGuestIdFromRequest(req);
+
+  if (!authUser && !guestId) {
+    return NextResponse.json({ error: "게스트 ID가 필요합니다. 페이지를 새로고침해주세요." }, { status: 400 });
   }
 
-  let body: { market?: string; content?: string };
+  let body: { market?: string; content?: string; guestId?: string };
   try {
     body = await req.json();
   } catch {
@@ -147,10 +156,35 @@ export async function POST(req: NextRequest) {
   }
 
   const m = market as "us" | "kr";
-  const result = await saveSessionUserMessage(m, authUser.email, trimmed);
-  if (result.error) {
-    return NextResponse.json({ error: result.error }, { status: result.status ?? 500 });
+
+  const author = authUser
+    ? {
+        userId: authUser.email,
+        nickname: sanitizeSessionNick(authUser.nickname),
+        actorKey: authUser.email,
+      }
+    : {
+        userId: guestUserId(guestId!),
+        nickname: guestNick(guestId!),
+        actorKey: guestUserId(guestId!),
+      };
+
+  const result = await saveSessionUserMessage(m, author, trimmed);
+  if (result.error || !result.message) {
+    return NextResponse.json({ error: result.error ?? "전송 실패" }, { status: result.status ?? 500 });
   }
 
-  return NextResponse.json({ message: result.message }, { status: 201 });
+  const snap = await loadMarketSnap(m);
+  const chatQuotes = toChatQuotes(snap.quotes);
+  const chatIndices = toIndexQuotes(snap.indices);
+  const botReplies = generateRepliesToUserMessages(
+    [result.message],
+    m,
+    chatQuotes,
+    chatIndices,
+    result.message.at - 1,
+    { onlyPast: false },
+  );
+
+  return NextResponse.json({ message: result.message, botReplies }, { status: 201 });
 }
