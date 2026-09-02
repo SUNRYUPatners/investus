@@ -215,14 +215,17 @@ function patchWallPosts() {
 
 function patchWallPostsMarkets() {
   let c = read('lib/wallPosts-markets.ts');
-  if (c.includes('const T02 =')) {
-    console.log('wallPosts-markets: T02 already present');
+  // T02만 있어도 9048~9053 중복 배치가 다시 들어갈 수 있음 — 완료 마커로 스킵
+  if (c.includes('id: 9048, symbol: "코스피", nickname: "칠천피존버"')) {
+    console.log('wallPosts-markets: 9/2 unique batch (9048+) already present');
     return;
   }
-  c = c.replace(
-    'const T01 = 1788217200000; // 2026-09-01 08:00 KST',
-    'const T02 = 1788303600000; // 2026-09-02 08:00 KST\nconst T01 = 1788217200000; // 2026-09-01 08:00 KST',
-  );
+  if (!c.includes('const T02 =')) {
+    c = c.replace(
+      'const T01 = 1788217200000; // 2026-09-01 08:00 KST',
+      'const T02 = 1788303600000; // 2026-09-02 08:00 KST\nconst T01 = 1788217200000; // 2026-09-01 08:00 KST',
+    );
+  }
   const krPosts = `  { id: 9042, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "관심종목", content: "6873.50 +0.90% · 외국인 890억 순매수 · 사이버캡 D-1", createdAt: T02 - 0, likes: 31, comments: 2, },
   { id: 9043, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "관심종목", content: "HBM 70%·HBM3E 5× · +0.82%", createdAt: T02 - 1800000, likes: 30, comments: 2, },
   { id: 9044, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "관심종목", content: "+1.12% · HBM 품귀 전망", createdAt: T02 - 3600000, likes: 29, comments: 2, },
@@ -311,7 +314,7 @@ function patchWallPostsMarkets() {
   c = c.replace('export const MOCK_POSTS_KR_RE: Post[] = [\n', `export const MOCK_POSTS_KR_RE: Post[] = [\n${rePosts}`);
   c = c.replace('export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {\n', `export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {\n${reComments}`);
   write('lib/wallPosts-markets.ts', c);
-  console.log('wallPosts-markets: KR/Safe/KR-RE 9/2 posts');
+  console.log('wallPosts-markets: KR/Safe/KR-RE 9/2 posts (legacy 9042 batch — rerun dedup if duplicates)');
 }
 
 function patchAnalystMarkets() {

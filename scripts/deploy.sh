@@ -47,6 +47,13 @@ else
   fail "애널 MOCK 댓글 누락 — node scripts/validate-analyst-mock-sync.js 확인"
 fi
 
+step 0 "종토방·소셜 중복 검증..."
+if node scripts/validate-wall-social.js; then
+  ok "종토방 소셜 OK"
+else
+  fail "종토방 중복·보일러플레이트 — node scripts/validate-wall-social.js 확인"
+fi
+
 step 0 "한글 리포트 영문 스켈레톤 검증..."
 if node scripts/validate-report-korean.js; then
   ok "한글 리포트 OK"
