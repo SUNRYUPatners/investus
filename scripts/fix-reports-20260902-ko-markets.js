@@ -102,8 +102,8 @@ function main() {
   );
   replaceBlock(
     'lib/reports-kr-re.ts',
-    'krre-seed-115',
-    '    id: "krre-seed-110"',
+    'krre-seed-114',
+    '  {\n    id: "krre-seed-110"',
     DATA.KRRE,
     false,
   );
