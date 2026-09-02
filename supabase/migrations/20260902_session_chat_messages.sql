@@ -14,3 +14,4 @@ create index if not exists session_chat_messages_market_created_idx
 alter table public.session_chat_messages enable row level security;
 revoke all on table public.session_chat_messages from anon, authenticated;
 grant all on table public.session_chat_messages to service_role;
+grant usage, select on all sequences in schema public to service_role;

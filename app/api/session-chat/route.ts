@@ -3,11 +3,15 @@ import { parseMarketId } from "@/lib/markets/types";
 import { isSessionChatOpen, sessionChatSupported } from "@/lib/markets/sessionChatOpen";
 import { generateSessionMessages, fakeOnlineCount, type ChatQuote } from "@/lib/sessionChat/generate";
 import { isSessionChatBanned } from "@/lib/sessionChat/banned";
+import {
+  countSessionParticipants,
+  loadSessionUserMessages,
+  saveSessionUserMessage,
+} from "@/lib/sessionChat/persist";
 import type { SessionChatMessage } from "@/lib/sessionChat/types";
 import type { IndexQuote, Quote } from "@/lib/api";
 import { kvGetDetail } from "@/lib/kv";
-import { getAdminSupabase, getUserFromRequest } from "@/lib/supabase";
-import { makeAnonNick } from "@/lib/wallNick";
+import { getUserFromRequest } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 15;
@@ -54,57 +58,6 @@ function toIndexQuotes(indices: IndexQuote[]): ChatQuote[] {
   }));
 }
 
-type DbRow = {
-  id: number;
-  nickname: string;
-  content: string;
-  created_at: string;
-  user_id: string;
-};
-
-async function loadUserMessages(
-  market: "us" | "kr",
-  authEmail: string | null,
-  sinceMs: number,
-  limit = 80,
-): Promise<SessionChatMessage[]> {
-  const db = getAdminSupabase();
-  const sinceIso = new Date(Math.max(sinceMs, Date.now() - 24 * 60 * 60_000)).toISOString();
-  const { data, error } = await db
-    .from("session_chat_messages")
-    .select("id, nickname, content, created_at, user_id")
-    .eq("market", market)
-    .gte("created_at", sinceIso)
-    .order("created_at", { ascending: true })
-    .limit(limit);
-
-  if (error) {
-    if (error.code === "42P01") return [];
-    return [];
-  }
-
-  return (data as DbRow[] ?? []).map((row) => ({
-    id: `u-${row.id}`,
-    nick: row.nickname,
-    content: row.content,
-    at: new Date(row.created_at).getTime(),
-    is_mine: !!authEmail && row.user_id === authEmail,
-  }));
-}
-
-async function countRecentParticipants(market: "us" | "kr"): Promise<number> {
-  const db = getAdminSupabase();
-  const since = new Date(Date.now() - 10 * 60_000).toISOString();
-  const { data, error } = await db
-    .from("session_chat_messages")
-    .select("user_id")
-    .eq("market", market)
-    .gte("created_at", since);
-
-  if (error || !data) return 0;
-  return new Set(data.map((r: { user_id: string }) => r.user_id)).size;
-}
-
 function mergeMessages(lists: SessionChatMessage[][]): SessionChatMessage[] {
   const map = new Map<string, SessionChatMessage>();
   for (const list of lists) {
@@ -131,7 +84,7 @@ export async function GET(req: NextRequest) {
   const safeSince = Number.isFinite(sinceMs) ? sinceMs : defaultSince;
 
   const snap = await loadMarketSnap(m);
-  const userMsgs = await loadUserMessages(
+  const userMsgs = await loadSessionUserMessages(
     m,
     authUser?.email ?? null,
     safeSince,
@@ -149,7 +102,7 @@ export async function GET(req: NextRequest) {
   );
 
   const messages = mergeMessages([userMsgs, botMsgs]).slice(-80);
-  const recentUsers = open ? await countRecentParticipants(m) : 0;
+  const recentUsers = open ? await countSessionParticipants(m) : 0;
   const online = open ? fakeOnlineCount(m) + recentUsers : 0;
 
   return NextResponse.json({
@@ -194,50 +147,10 @@ export async function POST(req: NextRequest) {
   }
 
   const m = market as "us" | "kr";
-  const db = getAdminSupabase();
-
-  // 5초 이내 연속 전송 방지
-  const fiveSecAgo = new Date(Date.now() - 5_000).toISOString();
-  const { data: recent } = await db
-    .from("session_chat_messages")
-    .select("id")
-    .eq("market", m)
-    .eq("user_id", authUser.email)
-    .gte("created_at", fiveSecAgo)
-    .limit(1);
-
-  if (recent && recent.length > 0) {
-    return NextResponse.json({ error: "잠시 후 다시 보내주세요." }, { status: 429 });
+  const result = await saveSessionUserMessage(m, authUser.email, trimmed);
+  if (result.error) {
+    return NextResponse.json({ error: result.error }, { status: result.status ?? 500 });
   }
 
-  const { data, error } = await db
-    .from("session_chat_messages")
-    .insert({
-      market: m,
-      user_id: authUser.email,
-      nickname: makeAnonNick(authUser.email),
-      content: trimmed,
-    })
-    .select("id, nickname, content, created_at")
-    .single();
-
-  if (error) {
-    if (error.code === "42P01") {
-      return NextResponse.json({
-        error: "DB 설정 필요 — Supabase에서 session_chat_messages 테이블을 생성해주세요.",
-      }, { status: 503 });
-    }
-    return NextResponse.json({ error: "전송 실패" }, { status: 500 });
-  }
-
-  const row = data as { id: number; nickname: string; content: string; created_at: string };
-  const message: SessionChatMessage = {
-    id: `u-${row.id}`,
-    nick: row.nickname,
-    content: row.content,
-    at: new Date(row.created_at).getTime(),
-    is_mine: true,
-  };
-
-  return NextResponse.json({ message }, { status: 201 });
+  return NextResponse.json({ message: result.message }, { status: 201 });
 }
