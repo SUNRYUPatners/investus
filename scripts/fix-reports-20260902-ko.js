@@ -108,18 +108,54 @@ function buildTickersBlock() {
   return out;
 }
 
+function insertAnalystAndComments() {
+  const analystPath = 'lib/analystPosts.ts';
+  let a = read(analystPath);
+  const aStart902 = '  // ── 2026-09-02 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────';
+  if (a.indexOf(aStart902) === -1) {
+    const aStart901 = '  // ── 2026-09-01 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────';
+    const aStartIdx = a.indexOf(aStart901);
+    if (aStartIdx === -1) throw new Error('analystPosts.ts: 2026-09-01 marker not found');
+    a = a.slice(0, aStartIdx) + buildAnalystBlock() + a.slice(aStartIdx);
+    write(analystPath, a);
+    console.log('analystPosts.ts: inserted -976~-990');
+  }
+
+  a = read(analystPath);
+  if (a.indexOf('  [-976]:') === -1) {
+    const commMarker = '  // ── 2026-09-01 애널 댓글 ──';
+    const commInsert = a.indexOf(commMarker);
+    const block = '  // ── 2026-09-02 애널 댓글 ──────────────────────\n' + buildAnalystCommentsBlock() + '\n';
+    if (commInsert === -1) {
+      const alt = a.indexOf('  [-961]:');
+      if (alt === -1) throw new Error('analystPosts comments marker not found');
+      a = a.slice(0, alt) + block + a.slice(alt);
+    } else {
+      a = a.slice(0, commInsert) + block + a.slice(commInsert);
+    }
+    write(analystPath, a);
+    console.log('analystPosts.ts: inserted comments for -976~-990');
+  }
+}
+
 function main() {
   const reportsPath = 'lib/reports.ts';
   let c = read(reportsPath);
   const insertAt = c.indexOf('  { id: "seed-1430"');
   if (insertAt === -1) throw new Error('reports.ts: seed-1430 not found');
-  if (c.indexOf('  { id: "seed-1445"') !== -1) {
-    console.log('reports.ts: seed-1445 already present, skip insert');
+  const hadSeeds = c.indexOf('  { id: "seed-1445"') !== -1;
+  if (hadSeeds) {
+    const replace = require('./replace-reports-20260902-content.js');
+    replace.replaceReportsBlock();
+    replace.replaceAnalystPosts();
+    replace.replaceAnalystComments();
+    console.log('reports.ts: upserted seed-1445~1459 from fix-reports source');
   } else {
     const newBlock = buildReportsBlock();
     c = c.slice(0, insertAt) + newBlock + c.slice(insertAt);
     write(reportsPath, c);
     console.log('reports.ts: inserted seed-1445~1459 before seed-1430');
+    insertAnalystAndComments();
   }
 
   c = read(reportsPath);
@@ -133,39 +169,6 @@ function main() {
     c = c.slice(0, tickInsert) + buildTickersBlock() + c.slice(tickInsert);
     write(reportsPath, c);
     console.log('REPORT_TICKERS: inserted seed-1445~1459');
-  }
-
-  const analystPath = 'lib/analystPosts.ts';
-  let a = read(analystPath);
-  const aStart902 = '  // ── 2026-09-02 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────';
-  if (a.indexOf(aStart902) !== -1) {
-    console.log('analystPosts.ts: 2026-09-02 block already present');
-  } else {
-    const aStart901 = '  // ── 2026-09-01 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────';
-    const aStartIdx = a.indexOf(aStart901);
-    if (aStartIdx === -1) throw new Error('analystPosts.ts: 2026-09-01 marker not found');
-    a = a.slice(0, aStartIdx) + buildAnalystBlock() + a.slice(aStartIdx);
-    write(analystPath, a);
-    console.log('analystPosts.ts: inserted -976~-990');
-  }
-
-  a = read(analystPath);
-  const commMarker = '  // ── 2026-09-01 애널 댓글 ──';
-  if (a.indexOf('  [-976]:') !== -1) {
-    console.log('analystPosts comments: -976 already present');
-  } else {
-    const commInsert = a.indexOf(commMarker);
-    if (commInsert === -1) {
-      const alt = a.indexOf('  [-961]:');
-      if (alt === -1) throw new Error('analystPosts comments marker not found');
-      const block = '  // ── 2026-09-02 애널 댓글 ──────────────────────\n' + buildAnalystCommentsBlock() + '\n';
-      a = a.slice(0, alt) + block + a.slice(alt);
-    } else {
-      const block = '  // ── 2026-09-02 애널 댓글 ──────────────────────\n' + buildAnalystCommentsBlock() + '\n';
-      a = a.slice(0, commInsert) + block + a.slice(commInsert);
-    }
-    write(analystPath, a);
-    console.log('analystPosts.ts: inserted comments for -976~-990');
   }
   console.log('done');
 }

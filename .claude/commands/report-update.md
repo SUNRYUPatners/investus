@@ -155,6 +155,14 @@ node scripts/validate-report-assets.js
 - **미국만** `gen-reports-*.js`로 SVG 생성 → **kr/safe/kr-re는 반드시** `gen-markets-svg-YYYYMMDD.js` + `-topics.js` 별도 실행
 - 이 검증은 `scripts/deploy.sh`에 포함됨 — SVG 누락 시 배포 자동 차단
 
+### 6c. 토픽·slug 일치 검증 (필수 — 배포 전, 2026-09-02 사고 대응)
+```bash
+node scripts/validate-report-topics.js
+```
+- 당일 US seed의 `images` slug가 `scripts/fix-reports-YYYYMMDD-ko-reports.js`와 일치하는지 대조
+- **한장요약만 갱신되고 상세 14개가 어제 본문인 경우** 배포 차단
+- `fix-reports`는 seed가 이미 있어도 **upsert**(replace) — `skip insert` 금지
+
 ### 7. 커밋 + 배포
 ```
 git add <수정된 파일들>

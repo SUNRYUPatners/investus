@@ -61,6 +61,13 @@ else
   fail "리포트 SVG 누락 — node scripts/validate-report-assets.js 확인"
 fi
 
+step 0 "리포트 토픽·slug 일치 검증..."
+if node scripts/validate-report-topics.js; then
+  ok "report topics OK"
+else
+  fail "리포트 토픽 불일치(어제 본문 잔존) — node scripts/validate-report-topics.js 확인"
+fi
+
 # ── 0. SW 캐시 키 갱신
 NEW_TS=$(node -e "process.stdout.write(String(Date.now()))")
 sed -i '' "s/investus-v[0-9]*/investus-v${NEW_TS}/" public/sw.js

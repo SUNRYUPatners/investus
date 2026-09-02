@@ -202,6 +202,7 @@ description: >-
 7. 팩트체크: 스크린샷 재 Read 후 수치 1:1 대조
 8. **배포 전 검증 (전부 통과 필수 — 하나라도 실패 시 deploy 차단):**
    - `node scripts/validate-report-assets.js` — `images`/`imagesEn` 경로 ↔ `public/charts/` 파일 존재
+   - `node scripts/validate-report-topics.js` — **당일 seed slug·애널이 `fix-reports-YYYYMMDD` 소스와 일치** (9/2 사고: skip insert로 9/1 본문 잔존 → 재발 차단)
    - `node scripts/validate-report-korean.js`
    - `node scripts/validate-analyst-mock-sync.js`
 9. commit + `bash scripts/deploy.sh` (필요 시 `--notify`)
@@ -214,6 +215,8 @@ description: >-
 | **kr / safe / kr-re** | `node scripts/gen-markets-svg-YYYYMMDD.js` (topics·fix-reports **후** 반드시) |
 
 > **9/1 사고:** kr/safe/kr-re 시드만 merge하고 markets SVG 스크립트를 안 돌려 30개 파일 누락 → `validate-report-assets.js` 추가로 재발 차단.
+
+> **9/2 사고:** `fix-reports`가 seed 존재 시 **skip insert** → 한장요약만 9/2·상세 14개는 9/1 본문 그대로 배포. `validate-report-topics.js` + fix 스크립트 **upsert**로 재발 차단.
 
 ### 실수가 반복되는 이유 (에이전트·운영 공통)
 
