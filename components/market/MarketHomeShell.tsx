@@ -20,6 +20,7 @@ import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 import { MorningBriefingCard } from "@/components/MorningBriefingCard";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
 import { ShopPreviewSection } from "@/components/ShopPreviewSection";
+import { SessionChatWidget } from "@/components/SessionChatWidget";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import type { Locale } from "@/lib/i18n";
@@ -161,6 +162,7 @@ export function MarketHomeShell({
       </main>
 
       {isUs && <OnboardingModal />}
+      <SessionChatWidget market={market} />
     </div>
   );
 }
