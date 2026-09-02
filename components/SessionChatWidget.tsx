@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { LogIn, MessageCircle, Send, UserPlus, X, Users } from "lucide-react";
+import { LogIn, Send, UserPlus, X, Users } from "lucide-react";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isSessionChatOpen, sessionChatSupported } from "@/lib/markets/sessionChatOpen";
@@ -10,7 +10,7 @@ import type { SessionChatMessage } from "@/lib/sessionChat/types";
 import { sessionChatAuthHeaders } from "@/lib/sessionChat/authHeaders";
 import { useAuth } from "@/hooks/useAuth";
 
-const MAX_MESSAGES = 60;
+const MAX_MESSAGES = 80;
 const READ_KEY = (market: MarketId) => `investus-session-chat-read-${market}`;
 
 export function SessionChatWidget({ market }: { market: MarketId }) {
@@ -86,11 +86,12 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     if (!supported) return;
     const isOpen = isSessionChatOpen(market);
     setSessionOpen(isOpen);
-    if (!isOpen) return;
 
     if (initial) setLoading(true);
     try {
-      const since = initial ? Date.now() - 8 * 60_000 : sinceRef.current;
+      const since = initial
+        ? (isOpen ? Date.now() - 8 * 60_000 : Date.now() - 24 * 60 * 60_000)
+        : sinceRef.current;
       const res = await fetch(`/api/session-chat?market=${market}&since=${since}`, {
         cache: "no-store",
         headers: await sessionChatAuthHeaders(),
@@ -100,25 +101,27 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
         open: boolean;
         messages: SessionChatMessage[];
         online?: number;
+        pollMs?: number;
       };
-      if (!data.open) {
-        setSessionOpen(false);
-        return;
-      }
-      if (data.online) setOnline(data.online);
+      setSessionOpen(data.open);
+
+      if (data.open && data.online) setOnline(data.online);
+      if (!data.open) setOnline(0);
 
       if (data.messages?.length) {
         const latestAt = Math.max(...data.messages.map((m) => m.at));
-        let readAt = 0;
-        try {
-          readAt = Number(localStorage.getItem(READ_KEY(market)) ?? "0");
-        } catch { /* ignore */ }
 
-        if (!panelOpenRef.current && latestAt > readAt) {
-          const newCount = data.messages.filter((m) => m.at > readAt && !m.is_mine).length;
-          if (newCount > 0) {
-            setUnread((u) => Math.min(99, u + newCount));
-            setHasNewPulse(true);
+        if (data.open && !panelOpenRef.current) {
+          let readAt = 0;
+          try {
+            readAt = Number(localStorage.getItem(READ_KEY(market)) ?? "0");
+          } catch { /* ignore */ }
+          if (latestAt > readAt) {
+            const newCount = data.messages.filter((m) => m.at > readAt && !m.is_mine).length;
+            if (newCount > 0) {
+              setUnread((u) => Math.min(99, u + newCount));
+              setHasNewPulse(true);
+            }
           }
         }
 
@@ -130,10 +133,12 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
         });
 
         const last = data.messages[data.messages.length - 1];
-        if (last) {
+        if (last && data.open) {
           sinceRef.current = last.at;
           lastMsgAtRef.current = last.at;
         }
+      } else if (initial) {
+        setMessages([]);
       }
     } catch { /* ignore */ }
     finally {
@@ -150,14 +155,18 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     return () => clearInterval(id);
   }, [market, supported]);
 
-  // 장중이면 패널 열림 여부와 관계없이 폴링 (새 글 알림)
+  // 장중: 백그라운드 폴링 · 마감: 패널 열릴 때만 이력 로드
   useEffect(() => {
-    if (!supported || !sessionOpen) return;
-    sinceRef.current = Date.now() - 8 * 60_000;
+    if (!supported) return;
+    if (!sessionOpen && !panelOpen) return;
+
+    sinceRef.current = sessionOpen ? Date.now() - 8 * 60_000 : Date.now() - 24 * 60 * 60_000;
     void poll(true);
+    if (!sessionOpen) return;
+
     const id = setInterval(() => void poll(false), 8_000);
     return () => clearInterval(id);
-  }, [poll, sessionOpen, supported]);
+  }, [poll, sessionOpen, supported, panelOpen]);
 
   useEffect(() => {
     if (panelOpen) {
@@ -202,9 +211,9 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
 
   if (!supported) return null;
 
-  const closedLabel = market === "us"
-    ? "미국 장 마감 후에는 열리지 않습니다"
-    : "한국 장 마감 후에는 열리지 않습니다";
+  const closedHint = market === "us"
+    ? "미국 장 마감 — 채팅은 장중에만 가능합니다"
+    : "한국 장 마감 — 채팅은 장중에만 가능합니다";
 
   const showPulse = sessionOpen && (unread > 0 || hasNewPulse);
 
@@ -214,46 +223,60 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
       {!panelOpen && (
         <div className="session-chat-fab-host">
           <div className="session-chat-fab-inner">
-            <div className="relative pointer-events-auto">
-              {showPulse && (
-                <span
-                  className="absolute inset-0 rounded-full session-chat-ring pointer-events-none"
-                  aria-hidden
-                />
-              )}
-              <button
-                type="button"
-                onClick={() => {
-                  setPanelOpen(true);
-                  markRead();
-                }}
-                aria-label="장중 실시간 시황방"
-                className={`relative flex items-center justify-center rounded-full shadow-lg border transition-transform active:scale-95 w-[52px] h-[52px] ${
+            <div className="flex flex-col items-end gap-1.5 pointer-events-auto">
+              <span
+                className={`session-chat-fab-label ${
+                  sessionOpen ? "session-chat-fab-label--live" : "session-chat-fab-label--idle"
+                }`}
+              >
+                {sessionOpen ? (
+                  <>
+                    <span className="session-chat-fab-live-dot" aria-hidden />
+                    실시간 시황 토크중
+                  </>
+                ) : (
+                  "지난 시황 보기"
+                )}
+              </span>
+              <div
+                className={`relative ${sessionOpen ? "session-chat-fab-glow-wrap" : ""} ${
                   showPulse ? "session-chat-fab-pulse" : ""
                 }`}
-                style={{
-                  background: sessionOpen ? "var(--accent)" : "var(--card)",
-                  borderColor: showPulse ? "var(--mint)" : "var(--border)",
-                  color: sessionOpen ? "#fff" : "var(--muted)",
-                }}
               >
-                <MessageCircle size={24} strokeWidth={2.25} className="block" />
-                {sessionOpen && (
+                {sessionOpen && <span className="session-chat-fab-sweep" aria-hidden />}
+                {showPulse && (
                   <span
-                    className="absolute bottom-1.5 right-1.5 w-2 h-2 rounded-full bg-emerald-400"
-                    style={{ boxShadow: "0 0 0 2px var(--accent)" }}
+                    className="absolute inset-0 rounded-full session-chat-ring pointer-events-none"
                     aria-hidden
                   />
                 )}
-                {unread > 0 && (
-                  <span
-                    className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full text-[10px] font-bold leading-[18px] text-center text-white"
-                    style={{ background: "var(--down)" }}
-                  >
-                    {unread > 99 ? "99+" : unread}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setPanelOpen(true);
+                    markRead();
+                  }}
+                  aria-label={sessionOpen ? "실시간 시황 토크 열기" : "지난 시황 보기"}
+                  className="relative flex items-center justify-center rounded-full shadow-lg border transition-transform active:scale-95 w-[52px] h-[52px]"
+                  style={{
+                    background: sessionOpen ? "var(--accent)" : "var(--card)",
+                    borderColor: sessionOpen ? "rgba(var(--mint-rgb),0.5)" : "var(--border)",
+                    color: sessionOpen ? "#fff" : "var(--muted)",
+                  }}
+                >
+                  <span className="text-[22px] leading-none" aria-hidden>
+                    💬
                   </span>
-                )}
-              </button>
+                  {unread > 0 && (
+                    <span
+                      className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full text-[10px] font-bold leading-[18px] text-center text-white"
+                      style={{ background: "var(--down)" }}
+                    >
+                      {unread > 99 ? "99+" : unread}
+                    </span>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -312,23 +335,31 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
               style={{ background: "var(--bg)", WebkitOverflowScrolling: "touch" }}
             >
               {!sessionOpen && (
-                <div className="text-center py-10 px-4">
-                  <p className="text-sm font-medium" style={{ color: "var(--text)" }}>
-                    지금은 장이 열려 있지 않습니다
-                  </p>
-                  <p className="text-xs mt-2 leading-relaxed" style={{ color: "var(--muted)" }}>
-                    {closedLabel}
-                  </p>
+                <div
+                  className="rounded-xl px-3 py-2 mb-1 text-center text-[11px] leading-relaxed"
+                  style={{
+                    background: "rgba(var(--mint-rgb),0.06)",
+                    color: "var(--muted)",
+                    border: "1px solid var(--border)",
+                  }}
+                >
+                  {closedHint} · 아래는 최근 24시간 대화입니다
                 </div>
               )}
 
-              {sessionOpen && loading && messages.length === 0 && (
+              {loading && messages.length === 0 && (
                 <p className="text-center text-xs py-8" style={{ color: "var(--muted)" }}>
-                  시황방 연결 중…
+                  대화 불러오는 중…
                 </p>
               )}
 
-              {sessionOpen && messages.map((m) => (
+              {!loading && messages.length === 0 && (
+                <p className="text-center text-xs py-8" style={{ color: "var(--muted)" }}>
+                  {sessionOpen ? "아직 대화가 없습니다. 첫 시황을 남겨보세요." : "최근 대화 기록이 없습니다."}
+                </p>
+              )}
+
+              {messages.map((m) => (
                 <div
                   key={m.id}
                   className={`flex gap-2 items-start ${m.is_mine ? "flex-row-reverse" : ""}`}
@@ -367,16 +398,19 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
               ))}
             </div>
 
-            {sessionOpen && (
-              <div
-                className="px-3 py-2.5 border-t shrink-0"
-                style={{ borderColor: "var(--border)", background: "var(--card)" }}
-              >
-                {!loaded ? (
-                  <p className="text-center text-[11px] py-2" style={{ color: "var(--muted)" }}>
-                    확인 중…
-                  </p>
-                ) : user ? (
+            <div
+              className="px-3 py-2.5 border-t shrink-0"
+              style={{ borderColor: "var(--border)", background: "var(--card)" }}
+            >
+              {!sessionOpen ? (
+                <p className="text-center text-[11px] py-2 leading-relaxed" style={{ color: "var(--muted)" }}>
+                  {closedHint}
+                </p>
+              ) : !loaded ? (
+                <p className="text-center text-[11px] py-2" style={{ color: "var(--muted)" }}>
+                  확인 중…
+                </p>
+              ) : user ? (
                   <>
                     <div className="flex gap-2 items-end">
                       <textarea
@@ -469,8 +503,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                     </Link>
                   </div>
                 )}
-              </div>
-            )}
+            </div>
           </div>
         </>
       )}

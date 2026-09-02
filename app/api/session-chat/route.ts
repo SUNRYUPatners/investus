@@ -66,6 +66,7 @@ async function loadUserMessages(
   market: "us" | "kr",
   authEmail: string | null,
   sinceMs: number,
+  limit = 80,
 ): Promise<SessionChatMessage[]> {
   const db = getAdminSupabase();
   const sinceIso = new Date(Math.max(sinceMs, Date.now() - 24 * 60 * 60_000)).toISOString();
@@ -75,7 +76,7 @@ async function loadUserMessages(
     .eq("market", market)
     .gte("created_at", sinceIso)
     .order("created_at", { ascending: true })
-    .limit(80);
+    .limit(limit);
 
   if (error) {
     if (error.code === "42P01") return [];
@@ -122,43 +123,41 @@ export async function GET(req: NextRequest) {
   }
 
   const open = isSessionChatOpen(market);
-  if (!open) {
-    return NextResponse.json({
-      open: false,
-      supported: true,
-      messages: [],
-      online: 0,
-      pollMs: 30_000,
-    });
-  }
-
-  const sinceParam = url.searchParams.get("since");
-  const sinceMs = sinceParam ? Number(sinceParam) : Date.now() - 8 * 60_000;
-  const safeSince = Number.isFinite(sinceMs) ? sinceMs : Date.now() - 8 * 60_000;
   const m = market as "us" | "kr";
 
-  const [snap, userMsgs, recentUsers] = await Promise.all([
-    loadMarketSnap(m),
-    loadUserMessages(m, authUser?.email ?? null, safeSince),
-    countRecentParticipants(m),
-  ]);
+  const sinceParam = url.searchParams.get("since");
+  const defaultSince = open ? Date.now() - 8 * 60_000 : Date.now() - 24 * 60 * 60_000;
+  const sinceMs = sinceParam ? Number(sinceParam) : defaultSince;
+  const safeSince = Number.isFinite(sinceMs) ? sinceMs : defaultSince;
+
+  const snap = await loadMarketSnap(m);
+  const userMsgs = await loadUserMessages(
+    m,
+    authUser?.email ?? null,
+    safeSince,
+    open ? 80 : 120,
+  );
 
   const botMsgs = generateSessionMessages(
     m,
     toChatQuotes(snap.quotes),
     toIndexQuotes(snap.indices),
-    { sinceMs: safeSince },
+    {
+      sinceMs: open ? safeSince : Math.max(safeSince, Date.now() - 24 * 60 * 60_000),
+      maxBackfill: open ? 20 : 50,
+    },
   );
 
-  const messages = mergeMessages([userMsgs, botMsgs]).slice(-60);
-  const online = fakeOnlineCount(m) + recentUsers;
+  const messages = mergeMessages([userMsgs, botMsgs]).slice(-80);
+  const recentUsers = open ? await countRecentParticipants(m) : 0;
+  const online = open ? fakeOnlineCount(m) + recentUsers : 0;
 
   return NextResponse.json({
-    open: true,
+    open,
     supported: true,
     messages,
     online,
-    pollMs: 8_000,
+    pollMs: open ? 8_000 : 60_000,
     liveAt: Date.now(),
   }, {
     headers: { "Cache-Control": "no-store" },
