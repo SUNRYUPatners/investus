@@ -145,7 +145,8 @@ export function lastCompletedSessionDate(now = new Date()): string {
 }
 
 function kvKey(phase: BriefPhase, dateKey: string) {
-  const prefix = phase === "pre" ? "pre-market-briefing:v3" : "post-market-briefing:v3";
+  // v4 장후: CIO 일일 리포트 폴백 제거 — 장중 Finnhub 뉴스만 (구 캐시 무효화)
+  const prefix = phase === "pre" ? "pre-market-briefing:v3" : "post-market-briefing:v4";
   return `${prefix}:${dateKey}`;
 }
 
@@ -365,6 +366,21 @@ async function collectSessionNews(
   return { news: deduped, quotes: quoteLines };
 }
 
+/** 장후 브리핑에 CIO 일일 리포트 본문이 섞였는지 (■ 상세·발행 footer 등) */
+function looksLikeCioReport(it: GeneratedItem): boolean {
+  const blob = [it.title, it.summary, it.body].join("\n");
+  if (/■\s*상세/.test(blob)) return true;
+  if (/investus\.kr SRP/.test(blob)) return true;
+  if ((it.body || "").length > 800 && /■\s*왜 이 뉴스/.test(blob)) return true;
+  if (/2030년 궤도 연산|1조 달러 매출|10GW/.test(blob) && !it.titleEn?.trim()) return true;
+  return false;
+}
+
+function storedHasReportFallback(stored: PostMarketStored, phase: BriefPhase): boolean {
+  if (phase !== "post") return false;
+  return stored.items.some((it) => looksLikeCioReport(it));
+}
+
 function latestReportForSymbol(symbol: string) {
   const subjectBySymbol: Record<string, string> = {
     TSLA: "테슬라",
@@ -394,14 +410,57 @@ function latestReportForSymbol(symbol: string) {
   return null;
 }
 
+function noSessionNewsItem(
+  symbol: string,
+  quotes: string,
+  phase: BriefPhase,
+): GeneratedItem {
+  const meta = POST_MARKET_UNIVERSE.find((u) => u.symbol === symbol);
+  const name = meta?.name ?? symbol;
+  const quoteLine = quotes.split("\n").find((l) => l.startsWith(`${name}(${symbol})`));
+  const move = quoteLine?.includes("n/a") ? "" : quoteLine?.split(": ")[1] ?? "";
+  const windowKo = phase === "pre" ? "개장 전 구간" : "오늘 정규장(프리~마감)";
+  const windowEn = phase === "pre" ? "pre-market window" : "today's regular session (pre through close)";
+
+  return {
+    symbol,
+    title: `${name} · ${move ? `세션 ${move}` : `${windowKo} 헤드라인 없음`}`,
+    summary: `${windowKo}에 ${name} 관련 뉴스 헤드라인이 수집되지 않았습니다. 당일 등락과 공식 공시만 참고하시기 바랍니다.`,
+    body: `${windowKo} Finnhub 뉴스 피드에 ${name}(${symbol}) 관련 헤드라인이 없었습니다.\n\n당일 등락: ${quoteLine || "시세 데이터 없음"}\n\nCIO 일일 리포트와 별개로, 장후 브리핑은 장중·프리마켓 뉴스 팩트만 다룹니다.`,
+    titleEn: `${name} · ${move ? `session ${move}` : `no headline in ${windowEn}`}`,
+    summaryEn: `No ${name} headline in the ${windowEn} news feed. Use session move and official filings only.`,
+    bodyEn: `No Finnhub headline for ${name}(${symbol}) during the ${windowEn}.\n\nSession move: ${quoteLine || "n/a"}\n\nAfter-close briefs use intraday news only, not CIO daily reports.`,
+  };
+}
+
+function newsRowsToItem(symbol: string, rows: NewsLine[]): GeneratedItem {
+  const top = rows[0];
+  return {
+    symbol,
+    title: "",
+    summary: "",
+    body: "",
+    titleEn: cleanNewsText(top.headline.slice(0, 72)),
+    summaryEn: cleanNewsText((top.summary || top.headline).slice(0, 180)),
+    bodyEn: rows
+      .slice(0, 3)
+      .map((n) => `· ${cleanNewsText(n.headline)}${n.summary ? `\n${cleanNewsText(n.summary)}` : ""}`)
+      .join("\n\n"),
+  };
+}
+
 function fallbackItemForSymbol(
   symbol: string,
   news: NewsLine[],
   quotes: string,
+  phase: BriefPhase,
   preferReport = false,
 ): GeneratedItem {
-  const meta = POST_MARKET_UNIVERSE.find((u) => u.symbol === symbol);
-  const name = meta?.name ?? symbol;
+  const rows = qualityNewsForSymbol(news, symbol);
+  if (rows.length > 0) return newsRowsToItem(symbol, rows);
+
+  // 장후: CIO 일일 리포트 폴백 금지 — 장중 뉴스 없으면 시세·무헤드라인 안내만
+  if (phase === "post") return noSessionNewsItem(symbol, quotes, phase);
 
   const report = latestReportForSymbol(symbol);
   if (preferReport && report) {
@@ -413,23 +472,6 @@ function fallbackItemForSymbol(
       titleEn: report.titleEn,
       summaryEn: report.summaryEn,
       bodyEn: report.bodyEn,
-    };
-  }
-
-  const rows = qualityNewsForSymbol(news, symbol);
-  if (rows.length > 0) {
-    const top = rows[0];
-    return {
-      symbol,
-      title: "",
-      summary: "",
-      body: "",
-      titleEn: cleanNewsText(top.headline.slice(0, 72)),
-      summaryEn: cleanNewsText((top.summary || top.headline).slice(0, 180)),
-      bodyEn: rows
-        .slice(0, 3)
-        .map((n) => `· ${cleanNewsText(n.headline)}${n.summary ? `\n${cleanNewsText(n.summary)}` : ""}`)
-        .join("\n\n"),
     };
   }
 
@@ -445,35 +487,21 @@ function fallbackItemForSymbol(
     };
   }
 
-  const quoteLine = quotes.split("\n").find((l) => l.startsWith(`${name}(${symbol})`));
-  const move = quoteLine?.includes("n/a") ? "" : quoteLine?.split(": ")[1] ?? "";
-  const phaseHint =
-    symbol === "SPCX"
-      ? "스타링크·스타십·발사 일정·위성 AI 등 우주 사업 뉴스를 개장 전·마감 후마다 함께 짚습니다."
-      : `${name} 관련 헤드라인이 오늘 피드에 없습니다.`;
-
-  return {
-    symbol,
-    title: `${name} · ${move ? `프리/정규장 ${move}` : "오늘 헤드라인 없음"}`,
-    summary: phaseHint,
-    body: `${phaseHint}\n\n당일 등락: ${quoteLine || "시세 데이터 없음"}\n\n투자 판단은 공식 실적·발사·계약 공시를 기준으로 하시기 바랍니다.`,
-    titleEn: `${name} · ${move ? `session ${move}` : "no headline today"}`,
-    summaryEn: `SpaceX is included in every US pre/post brief alongside Mag 7 and Tesla.`,
-    bodyEn: `${phaseHint}\n\nSession move: ${quoteLine || "n/a"}`,
-  };
+  return noSessionNewsItem(symbol, quotes, phase);
 }
 
 function ensureMandatorySymbols(
   stored: PostMarketStored,
   news: NewsLine[],
   quotes: string,
+  phase: BriefPhase,
 ): PostMarketStored {
   const items = [...stored.items];
   const have = new Set(items.map((it) => it.symbol));
 
   for (const symbol of MANDATORY_BRIEFING_SYMBOLS) {
     if (have.has(symbol)) continue;
-    const item = fallbackItemForSymbol(symbol, news, quotes);
+    const item = fallbackItemForSymbol(symbol, news, quotes, phase);
     const tslaIdx = items.findIndex((it) => it.symbol === "TSLA");
     const insertAt = symbol === "SPCX" && tslaIdx >= 0 ? tslaIdx + 1 : 0;
     items.splice(insertAt, 0, item);
@@ -490,10 +518,12 @@ function repairStoredItems(
   phase: BriefPhase,
   fullReset = false,
 ): PostMarketStored {
+  const preferReport = phase === "pre";
   const items = stored.items.map((it) => {
-    if (!fullReset && !itemLooksLowQuality(it)) return it;
-    const fresh = fallbackItemForSymbol(it.symbol, news, quotes, true);
-    if (!fullReset && itemLooksLowQuality(fresh)) return it;
+    const staleReport = phase === "post" && looksLikeCioReport(it);
+    if (!fullReset && !staleReport && !itemLooksLowQuality(it)) return it;
+    const fresh = fallbackItemForSymbol(it.symbol, news, quotes, phase, preferReport);
+    if (!fullReset && !staleReport && itemLooksLowQuality(fresh)) return it;
     return fresh;
   });
   const head = defaultSessionHeadline(stored.dateKey, phase);
@@ -520,28 +550,21 @@ function storedFromNews(
   quotes: string,
   phase: BriefPhase = "post",
 ): PostMarketStored | null {
+  const preferReport = phase === "pre";
   const items: GeneratedItem[] = [];
   for (const { symbol } of POST_MARKET_UNIVERSE) {
     const rows = qualityNewsForSymbol(news, symbol).slice(0, 3);
     if (rows.length === 0) {
-      const fb = fallbackItemForSymbol(symbol, news, quotes, true);
+      // 장후: 뉴스 없는 종목은 CIO 리포트 대신 생략 (필수 SPCX는 ensureMandatorySymbols에서 처리)
+      if (phase === "post" && symbol !== "SPCX") continue;
+      const fb = fallbackItemForSymbol(symbol, news, quotes, phase, preferReport);
       if (fb.title || fb.titleEn) items.push(fb);
     } else {
-      const top = rows[0];
-      items.push({
-        symbol,
-        title: "",
-        summary: "",
-        body: "",
-        titleEn: cleanNewsText(top.headline.slice(0, 72)),
-        summaryEn: cleanNewsText((top.summary || top.headline).slice(0, 180)),
-        bodyEn: rows
-          .map((n) => `· ${cleanNewsText(n.headline)}${n.summary ? `\n${cleanNewsText(n.summary)}` : ""}`)
-          .join("\n\n"),
-      });
+      items.push(newsRowsToItem(symbol, rows));
     }
     if (items.length >= 8) break;
   }
+  if (items.length === 0 && phase === "post") return null;
   const head = defaultSessionHeadline(dateKey, phase);
   return ensureMandatorySymbols(
     {
@@ -553,6 +576,7 @@ function storedFromNews(
     },
     news,
     quotes,
+    phase,
   );
 }
 
@@ -770,12 +794,17 @@ async function generateWithClaude(
       ? "전일 마감 이후~개장 전 뉴스와 프리/선물 시세"
       : "오늘 장중(프리마켓~마감) 실제 뉴스와 당일 등락";
 
+  const spcxRule =
+    phase === "pre"
+      ? "**SpaceX(SPCX)는 뉴스가 없어도 items에 반드시 1개 포함** — 아래 뉴스·시세만 근거로 짧게 정리."
+      : "**SpaceX(SPCX)**: 아래 뉴스 블록에 SPCX/SpaceX 헤드라인이 있을 때만 포함. 없으면 당일 등락·「헤드라인 없음」만. CIO 리포트·과거 서사(2030 궤도연산 등) 금지.";
+
   const prompt = `오늘(${dateKey}) 미국 정규장 ${phaseKo} 브리핑을 한국어와 영어로 동시에 작성해.
 
 우선순위: Tesla, SpaceX(SPCX), Magnificent 7 (NVDA·AAPL·MSFT·GOOGL·AMZN·META).
-아래는 ${newsWindow}이다. 여기에 없는 사실·수치·가이던스를 지어내지 마라.
-**SpaceX(SPCX)는 뉴스가 없어도 items에 반드시 1개 포함** — 스타링크·스타십·발사·위성 AI 등 최근 맥락을 짧게 정리.
-그 외 뉴스가 없는 종목은 생략. 비슷한 뉴스는 하나로 합쳐라.
+아래는 ${newsWindow}이다. **여기에 없는 사실·수치·가이던스·과거 리포트 내용을 지어내거나 가져오지 마라.**
+${spcxRule}
+뉴스가 없는 종목은 생략하거나 「당일 헤드라인 없음 + 등락」만. 비슷한 뉴스는 하나로 합쳐라.
 투자 권유·목표가·매수/매도 금지.
 한국어는 증권사 데스크 톤. 영어는 concise US desk English. 두 언어는 같은 사실이어야 한다.
 
@@ -819,6 +848,7 @@ items는 6~8개. Tesla·SpaceX(SPCX)를 앞에 두고 나머진 임팩트 순. S
       }),
       news,
       quotes,
+      phase,
     );
   } catch {
     return null;
@@ -892,7 +922,8 @@ async function getOrCreateSessionBriefing(
   if (!opts?.force) {
     const cached = await loadStored(phase, dateKey);
     if (cached) {
-      if (storedHasLowQuality(cached)) {
+      const hasReportLeak = storedHasReportFallback(cached, phase);
+      if (storedHasLowQuality(cached) || hasReportLeak) {
         const repaired = repairStoredItems(cached, news, quotes, phase, true);
         const bilingual = await ensureBilingual(phase, repaired, apiKey);
         await saveStored(phase, bilingual);
@@ -902,7 +933,7 @@ async function getOrCreateSessionBriefing(
     }
   }
 
-  // force 재생성 시에도 스팸 뉴스는 제외하고 Claude 또는 리포트 폴백 사용
+  // force 재생성: 장후는 Finnhub 뉴스·시세만 (CIO 리포트 폴백 없음)
 
   if (apiKey && news.length > 0) {
     const generated = await generateWithClaude(phase, dateKey, news, quotes, apiKey);
@@ -930,12 +961,16 @@ async function getOrCreateSessionBriefing(
     },
     news,
     quotes,
+    phase,
   );
   if (mandatoryOnly.items.length > 0) {
     const bilingual = await ensureBilingual(phase, mandatoryOnly, apiKey);
     await saveStored(phase, bilingual);
     return storedToBriefing(bilingual, phase);
   }
+
+  // 장후: 과거 세션 캐시·CIO 리포트로 채우지 않음
+  if (phase === "post") return null;
 
   const recent = await loadRecentStored(phase, now);
   if (recent) return resolveStoredBriefing(phase, recent, apiKey, ctx);

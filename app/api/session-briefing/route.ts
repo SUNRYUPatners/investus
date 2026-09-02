@@ -40,14 +40,7 @@ export async function GET(req: NextRequest) {
   try {
     const briefing = await getOrCreatePostMarketBriefing({ force });
     if (briefing) return NextResponse.json({ briefing: asPhase(briefing, "post"), phase: "post" });
-  } catch { /* CIO 리포트로 폴백 */ }
+  } catch { /* 장중 뉴스 없으면 null — CIO 일일 리포트로 대체하지 않음 */ }
 
-  const reports = buildSessionBriefing();
-  if (reports) {
-    return NextResponse.json({
-      briefing: asPhase({ ...reports, source: "reports" }, "post"),
-      phase: "post",
-    });
-  }
   return NextResponse.json({ briefing: null, phase: "post" });
 }
