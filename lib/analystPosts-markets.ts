@@ -128,28 +128,28 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
   [-2020]: [
-    { alias: "수급파트", content: "외국인 890억은 금요일 대비 줄었지만 순매수 전환이네요.", created_at: "2026-09-02T06:24:00.000Z" },
-    { alias: "환율데스크", content: "6870선 회복과 환율 1366.5원 같이 봐야겠습니다.", created_at: "2026-09-02T06:36:00.000Z" },
+    { alias: "판교 치타 #22", content: "외국인 890억은 금요일 대비 줄었지만 순매수 전환이네요.", created_at: "2026-09-02T06:24:00.000Z" },
+    { alias: "광화문 물총새 #06", content: "6870선 회복과 환율 1366.5원 같이 봐야겠습니다.", created_at: "2026-09-02T06:36:00.000Z" },
   ],
   [-2021]: [
-    { alias: "메모리사이클", content: "HBM 70%는 분기 출하로 검증해야죠.", created_at: "2026-09-02T06:32:00.000Z" },
-    { alias: "수출통계러", content: "현물 5배는 품귀 신호 맞습니다.", created_at: "2026-09-02T06:44:00.000Z" },
+    { alias: "삼성동 여우 #08", content: "HBM 70%는 분기 출하로 검증해야죠.", created_at: "2026-09-02T06:32:00.000Z" },
+    { alias: "성수 수달 #35", content: "현물 5배는 품귀 신호 맞습니다.", created_at: "2026-09-02T06:44:00.000Z" },
   ],
   [-2022]: [
-    { alias: "HBM러버", content: "+1.12%는 테마가 수급보다 먼저 반응한 날.", created_at: "2026-09-02T06:40:00.000Z" },
-    { alias: "이익률체크", content: "분기 ASP 같이 추적하겠습니다.", created_at: "2026-09-02T06:52:00.000Z" },
+    { alias: "한남 두루미 #17", content: "+1.12%는 테마가 수급보다 먼저 반응한 날.", created_at: "2026-09-02T06:40:00.000Z" },
+    { alias: "잠실 백로 #29", content: "분기 ASP 같이 추적하겠습니다.", created_at: "2026-09-02T06:52:00.000Z" },
   ],
   [-2023]: [
-    { alias: "배터리존버", content: "2차전지가 지수 받쳐준 흐름 맞네요.", created_at: "2026-09-02T06:48:00.000Z" },
-    { alias: "가동률체크", content: "수주 공시 나올 때까지는 조심.", created_at: "2026-09-02T07:00:00.000Z" },
+    { alias: "여의도 너구리 #11", content: "2차전지가 지수 받쳐준 흐름 맞네요.", created_at: "2026-09-02T06:48:00.000Z" },
+    { alias: "판교 치타 #22", content: "수주 공시 나올 때까지는 조심.", created_at: "2026-09-02T07:00:00.000Z" },
   ],
   [-2024]: [
-    { alias: "자동차매니아", content: "사이버캡 D-1은 글로벌 변수죠.", created_at: "2026-09-02T06:56:00.000Z" },
-    { alias: "미국판매러", content: "내일 행사 결과도 같이 보겠습니다.", created_at: "2026-09-02T07:08:00.000Z" },
+    { alias: "성수 수달 #35", content: "사이버캡 D-1은 글로벌 변수죠.", created_at: "2026-09-02T06:56:00.000Z" },
+    { alias: "삼성동 여우 #08", content: "내일 행사 결과도 같이 보겠습니다.", created_at: "2026-09-02T07:08:00.000Z" },
   ],
   [-2025]: [
-    { alias: "플랫폼러", content: "반등장에서 플랫폼 약세 패턴이네요.", created_at: "2026-09-02T07:04:00.000Z" },
-    { alias: "광고업계", content: "분기 광고 매출 나올 때까지 관망.", created_at: "2026-09-02T07:16:00.000Z" },
+    { alias: "여의도 너구리 #11", content: "반등장에서 플랫폼 약세 패턴이네요.", created_at: "2026-09-02T07:04:00.000Z" },
+    { alias: "한남 두루미 #17", content: "분기 광고 매출 나올 때까지 관망.", created_at: "2026-09-02T07:16:00.000Z" },
   ],
   [-1974]: [
     { alias: "수급파트", content: "외국인 412억은 금요일 대비 크게 줄었네요.", created_at: "2026-09-01T06:24:00.000Z" },
@@ -340,24 +340,24 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
   [-2026]: [
-    { alias: "헷지", content: "10.8만·3475·4512·DXY 98.2 네 줄 같이 보겠습니다.", created_at: "2026-09-02T09:24:00.000Z" },
-    { alias: "실질금리", content: "공포44면 리스크오프도 변수.", created_at: "2026-09-02T09:36:00.000Z" },
+    { alias: "금벌레 #17", content: "10.8만·3475·4512·DXY 98.2 네 줄 같이 보겠습니다.", created_at: "2026-09-02T09:24:00.000Z" },
+    { alias: "이더러 #44", content: "공포44면 리스크오프도 변수.", created_at: "2026-09-02T09:36:00.000Z" },
   ],
   [-2027]: [
-    { alias: "ETF추적", content: "10.8만$ 선과 ETF 순유입 같이 봐야죠.", created_at: "2026-09-02T09:32:00.000Z" },
-    { alias: "헷지", content: "인상 57%면 기회비용 재계산 구간.", created_at: "2026-09-02T09:44:00.000Z" },
+    { alias: "온체인 매 #03", content: "10.8만$ 선과 ETF 순유입 같이 봐야죠.", created_at: "2026-09-02T09:32:00.000Z" },
+    { alias: "매크로올빼미 #31", content: "인상 57%면 기회비용 재계산 구간.", created_at: "2026-09-02T09:44:00.000Z" },
   ],
   [-2028]: [
-    { alias: "실질금리", content: "금>달러 준비자산 서사는 중장기 변수.", created_at: "2026-09-02T09:40:00.000Z" },
-    { alias: "달러보기", content: "FOMC 9/15~16 전후 변동성 대비.", created_at: "2026-09-02T09:52:00.000Z" },
+    { alias: "온체인 매 #03", content: "금>달러 준비자산 서사는 중장기 변수.", created_at: "2026-09-02T09:40:00.000Z" },
+    { alias: "이더러 #44", content: "FOMC 9/15~16 전후 변동성 대비.", created_at: "2026-09-02T09:52:00.000Z" },
   ],
   [-2029]: [
-    { alias: "스테이커", content: "4500$ 선과 비트 10.8만 같이 보겠습니다.", created_at: "2026-09-02T09:48:00.000Z" },
-    { alias: "헷지", content: "스테이킹 수익 vs 2년물 금리도 확인.", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "금벌레 #17", content: "4500$ 선과 비트 10.8만 같이 보겠습니다.", created_at: "2026-09-02T09:48:00.000Z" },
+    { alias: "매크로올빼미 #31", content: "스테이킹 수익 vs 2년물 금리도 확인.", created_at: "2026-09-02T10:00:00.000Z" },
   ],
   [-2030]: [
-    { alias: "채권데스크", content: "98선 위·아래 반응 기록하겠습니다.", created_at: "2026-09-02T09:56:00.000Z" },
-    { alias: "환율데스크", content: "원·달러 1366.5원과 DXY 연동 맞네요.", created_at: "2026-09-02T10:08:00.000Z" },
+    { alias: "온체인 매 #03", content: "98선 위·아래 반응 기록하겠습니다.", created_at: "2026-09-02T09:56:00.000Z" },
+    { alias: "금벌레 #17", content: "원·달러 1366.5원과 DXY 연동 맞네요.", created_at: "2026-09-02T10:08:00.000Z" },
   ],
   [-1996]: [
     { alias: "헷지", content: "10.8만·3475·4512·DXY 98.2 네 줄 같이 보겠습니다.", created_at: "2026-09-01T09:24:00.000Z" },
@@ -481,20 +481,20 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
   [-2031]: [
-    { alias: "실수요", content: "전세·매매 혼조를 한 줄로 정리해 주셨네요.", created_at: "2026-09-02T10:24:00.000Z" },
-    { alias: "전세대출", content: "FOMC 결과가 전세 심리 좌우하겠습니다.", created_at: "2026-09-02T10:36:00.000Z" },
+    { alias: "전세러 #09", content: "전세·매매 혼조를 한 줄로 정리해 주셨네요.", created_at: "2026-09-02T10:24:00.000Z" },
+    { alias: "정책워처 #01", content: "FOMC 결과가 전세 심리 좌우하겠습니다.", created_at: "2026-09-02T10:36:00.000Z" },
   ],
   [-2032]: [
-    { alias: "전세러", content: "입주 물량이 변수 맞습니다.", created_at: "2026-09-02T10:32:00.000Z" },
-    { alias: "대출상담", content: "LTV·DSR 규제가 수요를 제한하죠.", created_at: "2026-09-02T10:44:00.000Z" },
+    { alias: "실수요 #05", content: "입주 물량이 변수 맞습니다.", created_at: "2026-09-02T10:32:00.000Z" },
+    { alias: "정책워처 #01", content: "LTV·DSR 규제가 수요를 제한하죠.", created_at: "2026-09-02T10:44:00.000Z" },
   ],
   [-2033]: [
-    { alias: "실수요", content: "보합~ -0.1% 구간 맞네요.", created_at: "2026-09-02T10:40:00.000Z" },
-    { alias: "세제확인", content: "세금 부담에 FOMC까지 겹치면 관망.", created_at: "2026-09-02T10:52:00.000Z" },
+    { alias: "실수요 #05", content: "보합~ -0.1% 구간 맞네요.", created_at: "2026-09-02T10:40:00.000Z" },
+    { alias: "전세러 #09", content: "세금 부담에 FOMC까지 겹치면 관망.", created_at: "2026-09-02T10:52:00.000Z" },
   ],
   [-2034]: [
-    { alias: "정책워처", content: "공급 수사만으로는 단기 가격 안 잡혀요.", created_at: "2026-09-02T10:48:00.000Z" },
-    { alias: "전세러", content: "대출 규제가 더 직접적 지렛대죠.", created_at: "2026-09-02T11:00:00.000Z" },
+    { alias: "실수요 #05", content: "공급 수사만으로는 단기 가격 안 잡혀요.", created_at: "2026-09-02T10:48:00.000Z" },
+    { alias: "전세러 #09", content: "대출 규제가 더 직접적 지렛대죠.", created_at: "2026-09-02T11:00:00.000Z" },
   ],
   [-1988]: [
     { alias: "실수요", content: "전세·매매 혼조를 한 줄로 정리해 주셨네요.", created_at: "2026-09-01T10:24:00.000Z" },

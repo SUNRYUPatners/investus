@@ -18,6 +18,8 @@ const PLACEHOLDER_CONTENT = [
   /FOMC 전후 같이 보겠습니다$/,
 ];
 const GENERIC_ALIASES = new Set(["팔로워", "질문", "댓글"]);
+/** 애널 페르소나 ID (예: "분당 매 #31") */
+const ANALYST_ALIAS_RE = /^.+ #\d{1,3}$/;
 
 function loadFile(rel) {
   return fs.readFileSync(path.join(ROOT, rel), "utf8");
@@ -84,6 +86,11 @@ function validateCommentQuality(commentsSection, postsSection, label) {
     if (GENERIC_ALIASES.has(e.alias)) {
       errors.push(
         `${label} id ${e.postId}: generic alias "${e.alias}" — 주제 맞춤 alias 필요`,
+      );
+    }
+    if (!ANALYST_ALIAS_RE.test(e.alias)) {
+      errors.push(
+        `${label} id ${e.postId}: 애널 ID 형식 아님 "${e.alias}" — "지역 동물 #번호" 사용`,
       );
     }
     const key = e.content.trim();
