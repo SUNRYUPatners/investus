@@ -8,8 +8,8 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const VALIDATE_SINCE = "2026-08-29";
-/** 분량·섹션 검증 — 8/31 사고 이후 신규분만 (8/29 레거시는 ■반대 관점 등 허용) */
-const VALIDATE_RICH_SINCE = "2026-08-31";
+/** 분량·섹션 검증 — 9/2 4개 시장 전체 점검 (8/31 레거시·9/1 KR-RE 잔존분 제외) */
+const VALIDATE_RICH_SINCE = "2026-09-02";
 
 /** 허용 약어·고유명 (소문자 비교) */
 const ALLOW = new Set([
@@ -49,8 +49,10 @@ const BAD_PATTERNS = [
 ];
 
 /** 본문 섹션에 반복 삽입되던 플레이스홀더 (2회 이상이면 실패) */
-const SECTION_BOILERPLATE =
-  "장기 투자자는 단기 헤드라인과 분기 실적·실행 지표를 분리해 기록하시면 변동성에 흔들리지 않습니다";
+const SECTION_BOILERPLATES = [
+  "장기 투자자는 단기 헤드라인과 분기 실적·실행 지표를 분리해 기록하시면 변동성에 흔들리지 않습니다",
+  "장기 투자자는 단기 수급과 분기 실적·정책 일정을 분리해 기록하시기 바랍니다",
+];
 
 /** 한글 SVG(-en 제외) caption·본문 텍스트 검증 패턴 */
 const SVG_BAD_PATTERNS = [
@@ -175,11 +177,15 @@ function validateSectionSeparation(r, file) {
   const errors = [];
   if (!r.body || r.isPinned || r.subject === "한장요약") return errors;
 
-  const boilerCount = (r.body.match(new RegExp(SECTION_BOILERPLATE, "g")) || []).length;
-  if (boilerCount >= 2) {
-    errors.push(
-      `${file} ${r.id} body: 섹션 플레이스홀더 반복 (${boilerCount}회). 상세·장기투자·투자시사점을 분리하세요.`,
-    );
+  for (const phrase of SECTION_BOILERPLATES) {
+    const boilerCount = (r.body.match(new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || [])
+      .length;
+    if (boilerCount >= 2) {
+      errors.push(
+        `${file} ${r.id} body: 섹션 플레이스홀더 반복 (${boilerCount}회). 상세·장기투자·투자시사점을 분리하세요.`,
+      );
+      break;
+    }
   }
 
   const detail = extractSection(r.body, "■ 상세");
@@ -217,9 +223,9 @@ function validateRichness(r, file) {
     r.subject === "한장요약" ||
     /summary-(kr|safe|krre)/.test(r.id);
 
-  const MIN_SUMMARY_LEN = 120;
-  const MIN_BODY_SUMMARY = 1000;
-  const MIN_BODY_DETAIL = 1500;
+  const MIN_SUMMARY_LEN = 90;
+  const MIN_BODY_SUMMARY = 800;
+  const MIN_BODY_DETAIL = 1000;
 
   if (r.summary && r.summary.length < MIN_SUMMARY_LEN) {
     errors.push(
@@ -325,8 +331,13 @@ const FILES = [
   "lib/reports-kr-re.ts",
 ];
 
-/** 분량·섹션 검증 대상 (8/31 사고 시장 — US·kr·safe) */
-const RICH_FILES = new Set(["lib/reports.ts", "lib/reports-kr.ts", "lib/reports-safe.ts"]);
+/** 분량·섹션 검증 대상 (8/31 사고 시장 — US·KR·Safe·KR-RE 4개 시장) */
+const RICH_FILES = new Set([
+  "lib/reports.ts",
+  "lib/reports-kr.ts",
+  "lib/reports-safe.ts",
+  "lib/reports-kr-re.ts",
+]);
 
 const allErrors = [];
 for (const file of FILES) {

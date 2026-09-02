@@ -339,6 +339,20 @@ URL: `/` (미국), `/kr`, `/safe`, `/kr-re`. 홈에서 이모지 스위처 — *
 
 ---
 
+## 본문 섹션 중복·플레이스홀더 — 4시장 전체 점검 (2026-09-02 · **필수**)
+
+> **사고:** `상세`·`장기 투자 관점`·`투자시사점`에 동일 문장이 수십 회 반복. US만 고치고 KR/Safe/KR-RE를 놓치면 재발.
+
+### 사용자가 본문·반복·어제 내용을 지적할 때
+
+1. **4개 시장 전부 점검** — `lib/reports.ts` · `lib/reports-kr.ts` · `lib/reports-safe.ts` · `lib/reports-kr-re.ts` (하나만 수정 금지).
+2. **플레이스홀더 검색** — US: `단기 헤드라인과 분기 실적·실행 지표` / KR·Safe·KR-RE: `단기 수급과 분기 실적·정책 일정` (2회 이상이면 실패).
+3. **섹션 역할 분리** — `상세`=오늘 팩트, `장기 투자 관점`=5년·사이클, `투자시사점`=무엇을 추적할지. 문단 복붙 금지.
+4. **날짜 확인** — `date`·본문 숫자가 **당일(9/1→9/2 비교)** 인지. 플레이스홀더만 제거하고 어제 숫자가 남지 않았는지 `validate-report-topics.js`로 확인.
+5. **패치 후** — `node scripts/patch-reports-YYYYMMDD-markets-bodies.js` (또는 US용 `patch-reports-YYYYMMDD-bodies.js`) → `node scripts/validate-report-korean.js` → `bash scripts/deploy.sh`.
+
+---
+
 ## 다시장 본문 — 재발 방지 (2026-08-31 사고 · **필수**)
 
 > **사고:** 8/31 kr/safe/kr-re 일괄 삽입 시 **영문 키워드 스켈레톤** + **짧은 본문**이 들어감. US는 수정됐지만 kr/safe는 한장요약·종목 리포트 본문이 8/29 대비 지나치게 짧았음.
