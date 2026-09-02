@@ -48,6 +48,10 @@ const BAD_PATTERNS = [
   /;\s*[a-z]{3,}/, // "BTC ~78128, ETH ~2459;" style dumps
 ];
 
+/** 본문 섹션에 반복 삽입되던 플레이스홀더 (2회 이상이면 실패) */
+const SECTION_BOILERPLATE =
+  "장기 투자자는 단기 헤드라인과 분기 실적·실행 지표를 분리해 기록하시면 변동성에 흔들리지 않습니다";
+
 /** 한글 SVG(-en 제외) caption·본문 텍스트 검증 패턴 */
 const SVG_BAD_PATTERNS = [
   /\bBTC ~\d/i,
@@ -159,6 +163,53 @@ function latinWordRatio(text) {
   return bad.length;
 }
 
+function extractSection(body, heading) {
+  const re = new RegExp(
+    `${heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\n\\n([\\s\\S]*?)(\\n\\n■ |\\n\\ninvestus|$)`,
+  );
+  const m = body.match(re);
+  return m ? m[1].trim() : "";
+}
+
+function validateSectionSeparation(r, file) {
+  const errors = [];
+  if (!r.body || r.isPinned || r.subject === "한장요약") return errors;
+
+  const boilerCount = (r.body.match(new RegExp(SECTION_BOILERPLATE, "g")) || []).length;
+  if (boilerCount >= 2) {
+    errors.push(
+      `${file} ${r.id} body: 섹션 플레이스홀더 반복 (${boilerCount}회). 상세·장기투자·투자시사점을 분리하세요.`,
+    );
+  }
+
+  const detail = extractSection(r.body, "■ 상세");
+  const longTerm = extractSection(r.body, "■ 장기 투자 관점");
+  const invest = extractSection(r.body, "■ 투자시사점");
+  const sections = [
+    ["상세", detail],
+    ["장기투자", longTerm],
+    ["투자시사점", invest],
+  ].filter(([, text]) => text.length > 80);
+
+  for (let i = 0; i < sections.length; i++) {
+    for (let j = i + 1; j < sections.length; j++) {
+      const [nameA, textA] = sections[i];
+      const [nameB, textB] = sections[j];
+      const parasA = textA.split(/\n\n+/).map((p) => p.trim()).filter((p) => p.length > 60);
+      for (const para of parasA) {
+        if (textB.includes(para)) {
+          errors.push(
+            `${file} ${r.id} body: ■ ${nameA}와 ■ ${nameB} 문단 중복. 섹션 역할을 나누세요.`,
+          );
+          break;
+        }
+      }
+    }
+  }
+
+  return errors;
+}
+
 function validateRichness(r, file) {
   const errors = [];
   const isSummary =
@@ -268,13 +319,14 @@ function validateReport(r, file) {
 }
 
 const FILES = [
+  "lib/reports.ts",
   "lib/reports-kr.ts",
   "lib/reports-safe.ts",
   "lib/reports-kr-re.ts",
 ];
 
-/** 분량·섹션 검증 대상 (8/31 사고 시장 — kr·safe 우선) */
-const RICH_FILES = new Set(["lib/reports-kr.ts", "lib/reports-safe.ts"]);
+/** 분량·섹션 검증 대상 (8/31 사고 시장 — US·kr·safe) */
+const RICH_FILES = new Set(["lib/reports.ts", "lib/reports-kr.ts", "lib/reports-safe.ts"]);
 
 const allErrors = [];
 for (const file of FILES) {
@@ -285,6 +337,7 @@ for (const file of FILES) {
     allErrors.push(...validateReport(r, file));
     if (r.date >= VALIDATE_RICH_SINCE && RICH_FILES.has(file)) {
       allErrors.push(...validateRichness(r, file));
+      allErrors.push(...validateSectionSeparation(r, file));
     }
   }
 }
