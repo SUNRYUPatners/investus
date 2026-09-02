@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import { isMarketOpen } from "@/lib/marketHours";
 import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
@@ -136,7 +136,7 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
     try {
       const url  = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=${cfg.interval}&range=${cfg.range}&includePrePost=false`;
       const ctrl = new AbortController();
-      const tid  = setTimeout(() => ctrl.abort(), 8_000);
+      const tid  = setTimeout(() => ctrl.abort(), 6_000);
       const res  = await yfProxyFetch(url, { cache: "no-store", signal: ctrl.signal });
       clearTimeout(tid);
       if (!res.ok) continue;
@@ -159,7 +159,7 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
       // 주말/휴장: 1D 5분봉이 비어있음 → range=5d 로 마지막 거래일 데이터 사용
       if (points.length < 2 && cfg.range === "1d") {
         const ctrl2 = new AbortController();
-        const tid2  = setTimeout(() => ctrl2.abort(), 8_000);
+        const tid2  = setTimeout(() => ctrl2.abort(), 5_000);
         const url5d = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=5m&range=5d&includePrePost=false`;
         const res2  = await yfProxyFetch(url5d, { cache: "no-store", signal: ctrl2.signal });
         clearTimeout(tid2);
@@ -187,25 +187,10 @@ async function fetchYahooChart(rawSym: string, period: string): Promise<ChartRes
 
       const meta   = result.meta as Record<string, unknown>;
       const price  = Number(meta.regularMarketPrice ?? points[points.length - 1].close);
-      const isOpen = meta.marketState === "REGULAR";
 
-      let prevClose: number | null = meta.regularMarketPreviousClose
+      const prevClose: number | null = meta.regularMarketPreviousClose
         ? Number(meta.regularMarketPreviousClose)
         : null;
-
-      // prevClose 없으면 5d daily 범위로 보완
-      if (!prevClose) {
-        try {
-          const dailyUrl = `${base}/v8/finance/chart/${encodeURIComponent(yfSym)}?interval=1d&range=5d&includePrePost=false`;
-          const dr = await yfProxyFetch(dailyUrl, { cache: "no-store" });
-          if (dr.ok) {
-            const dj = await dr.json();
-            const dc = (dj?.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? []) as (number | null)[];
-            const validDc = dc.filter((c): c is number => typeof c === "number" && c > 0);
-            prevClose = isOpen ? (validDc.at(-1) ?? null) : (validDc.at(-2) ?? null);
-          }
-        } catch { /* ignore */ }
-      }
 
       return {
         symbol:             rawSym,
@@ -356,6 +341,35 @@ async function fetchFinnhubMinimalChart(symbol: string): Promise<ChartResult | n
   } catch { return null; }
 }
 
+/** 소스별 상한 — 병렬 race로 maxDuration(25s) 초과 방지 */
+const SOURCE_CAP_MS = 9_000;
+
+function withSourceCap<T>(p: Promise<T | null>): Promise<T | null> {
+  return Promise.race([
+    p,
+    new Promise<null>((r) => setTimeout(() => r(null), SOURCE_CAP_MS)),
+  ]);
+}
+
+/** Yahoo → Twelve → Stooq → Finnhub 우선순위로 첫 유효 결과 반환 (병렬 fetch) */
+async function fetchChartParallel(
+  symbol: string,
+  period: string,
+  isFutureOrCrypto: boolean,
+): Promise<ChartResult | null> {
+  const [yahoo, twelve, stooq, minimal] = await Promise.all([
+    withSourceCap(fetchYahooChart(symbol, period)),
+    withSourceCap(fetchTwelveData(symbol, period)),
+    isFutureOrCrypto ? withSourceCap(fetchStooqChart(symbol, period)) : Promise.resolve(null),
+    period === "1D" ? withSourceCap(fetchFinnhubMinimalChart(symbol)) : Promise.resolve(null),
+  ]);
+
+  for (const r of [yahoo, twelve, stooq, minimal]) {
+    if (r && r.points.length >= 2) return r;
+  }
+  return null;
+}
+
 // ── Handler ───────────────────────────────────────────────────────────────
 export async function GET(req: NextRequest) {
   const symbol = (req.nextUrl.searchParams.get("symbol") ?? "AAPL").toUpperCase().slice(0, 12);
@@ -394,31 +408,21 @@ export async function GET(req: NextRequest) {
 
   const save = (data: ChartResult) => {
     _cache.set(cKey, { data, at: Date.now() });
-    kvSetDetail(`chart:${cKey}`, data as unknown as Record<string, unknown>);
+    after(() => kvSetDetail(`chart:${cKey}`, data as unknown as Record<string, unknown>));
   };
 
-  // YF via CF 프록시 — primary (모든 종목/선물/지수/크립토)
-  const yahoo = await fetchYahooChart(symbol, period);
-  if (yahoo) { save(yahoo); return NextResponse.json(yahoo, { headers: { "Cache-Control": cc } }); }
-
-  // TwelveData — fallback
-  const twelve = await fetchTwelveData(symbol, period);
-  if (twelve) { save(twelve); return NextResponse.json(twelve, { headers: { "Cache-Control": cc } }); }
-
-  // Stooq — 선물/지수 전용 추가 fallback
-  if (isFutureOrCrypto) {
-    const stooq = await fetchStooqChart(symbol, period);
-    if (stooq) { save(stooq); return NextResponse.json(stooq, { headers: { "Cache-Control": cc } }); }
-  }
-
-  // Finnhub minimal — 1D 최후 수단
-  if (period === "1D") {
-    const minimal = await fetchFinnhubMinimalChart(symbol);
-    if (minimal) { save(minimal); return NextResponse.json(minimal, { headers: { "Cache-Control": cc } }); }
-  }
+  const chart = await fetchChartParallel(symbol, period, isFutureOrCrypto);
+  if (chart) { save(chart); return NextResponse.json(chart, { headers: { "Cache-Control": cc } }); }
 
   // 모든 API 실패 → 스테일 캐시 무조건 서빙 (오류 반환 절대 금지)
   if (cached) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
+
+  // KV 재조회 (인메모리 miss 후 cold start race)
+  const kvRetry = await kvGetDetail(`chart:${cKey}`);
+  if (kvRetry && Array.isArray((kvRetry as { points?: unknown[] }).points) &&
+      ((kvRetry as { points: unknown[] }).points.length >= 2)) {
+    return NextResponse.json(kvRetry, { headers: { "Cache-Control": cc } });
+  }
 
   // 진짜 아무것도 없음 (최초 접속 + 모든 API 실패) → 재시도 신호
   return NextResponse.json({ error: "일시적 오류" }, { status: 503, headers: { "Cache-Control": "no-store" } });

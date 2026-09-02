@@ -186,14 +186,17 @@ export async function fetchBatchQuotes(symbols: string[]): Promise<YFQuote[]> {
     }
   } catch { /* fall through */ }
 
-  // 누락 심볼: 3개씩 순차 chunked v8
+  // 누락 심볼: 5개씩 순차 chunked v8 (상한 8s — P75 18s 방지)
   const v7Map   = new Map(v7Results.map((q) => [q.symbol, q]));
   const missing = symbols.filter((s) => !v7Map.has(s));
   if (missing.length === 0) return v7Results;
 
   const out: YFQuote[] = [...v7Results];
-  const CHUNK = 3, DELAY = 200;
+  const CHUNK = 5, DELAY = 150;
+  const fallbackDeadline = Date.now() + 8_000;
+
   for (let i = 0; i < missing.length; i += CHUNK) {
+    if (Date.now() >= fallbackDeadline) break;
     const chunk = missing.slice(i, i + CHUNK);
     const rows  = await Promise.all(chunk.map(fetchQuoteV8));
     rows.forEach((q) => { if (q && q.price > 0) out.push(q); });

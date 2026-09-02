@@ -298,6 +298,10 @@ export async function GET(req: Request) {
   const stockSymbols = mockQuotes.map((q) => q.symbol);
   const cryptoFHSyms = Object.values(CRYPTO_FH);
 
+  // 전체 fetch 상한 — cold start에서 30s maxDuration·타임아웃 방지
+  const FETCH_BUDGET_MS = 22_000;
+
+  const fetchLiveData = async () => {
   const [yfStockQuotes, fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap] = await Promise.all([
     // YF v7 batch — Yahoo Finance 앱 종가와 일치하는 정확한 가격 소스
     fetchBatchQuotes(stockSymbols),
@@ -332,8 +336,8 @@ export async function GET(req: Request) {
       // Iterate over union of Stooq + YF keys (RTY is YF-only)
       const allFutureKeys = [...new Set([...Object.keys(COMMODITY_STOOQ), ...Object.keys(COMMODITY_FUTURES_YF)])];
 
-      // Master 10s timeout — parallel fetchFutureV8 (4 bases×ranges simultaneously) resolves in ~4s
-      const masterTimeout = new Promise<CommodityEntry[]>((res) => setTimeout(() => res([]), 10_000));
+      // Master 7s timeout — parallel fetchFutureV8 resolves in ~4s typically
+      const masterTimeout = new Promise<CommodityEntry[]>((res) => setTimeout(() => res([]), 7_000));
       const allFetches    = Promise.allSettled(
         allFutureKeys.map((key) => fetchWithTimeout(key, COMMODITY_STOOQ[key] ?? ""))
       ).then((results) => {
@@ -372,6 +376,42 @@ export async function GET(req: Request) {
       return out;
     })(),
   ]);
+
+  return { yfStockQuotes, fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap };
+  };
+
+  let live: Awaited<ReturnType<typeof fetchLiveData>> | null = null;
+  try {
+    live = await Promise.race([
+      fetchLiveData(),
+      new Promise<null>((r) => setTimeout(() => r(null), FETCH_BUDGET_MS)),
+    ]);
+  } catch { /* fall through to stale */ }
+
+  if (!live) {
+    if (_cache) {
+      return NextResponse.json(_cache.data, {
+        headers: {
+          "Cache-Control": ccHeader,
+          "X-Market-Cache": "STALE-TIMEOUT",
+          "X-Market-Quotes": String(_cache.data.quotes?.length ?? 0),
+        },
+      });
+    }
+    const kvStale = await kvGetDetail(KV_MARKET_KEY);
+    if (kvStale && Array.isArray((kvStale as { quotes?: unknown[] }).quotes) &&
+        ((kvStale as { quotes: unknown[] }).quotes.length > 0)) {
+      return NextResponse.json(kvStale, {
+        headers: { "Cache-Control": ccHeader, "X-Market-Cache": "KV-STALE" },
+      });
+    }
+    return NextResponse.json({ error: "일시적 오류" }, {
+      status: 503,
+      headers: { "Retry-After": "3", "Cache-Control": "no-store" },
+    });
+  }
+
+  const { yfStockQuotes, fhMap, fxRates, cryptoResults, cgMap, yfComEntries, yfIndexMap } = live;
 
   // 앱 내부 심볼 (CL, NG, …) → 실선물 시세
   const yfComMap = new Map(yfComEntries.map((r) => [r.key, r]));
