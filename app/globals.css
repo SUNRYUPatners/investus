@@ -238,6 +238,59 @@ html[data-theme="dark"] .sticky-ad-fit-bar {
   border-top-color: var(--border) !important;
 }
 
+/* ── 장중 시황방 FAB 위치 (모바일: 콘텐츠 열 우측 · 네비+광고 위) ── */
+:root {
+  --session-chat-nav-h: 60px;
+  --session-chat-sticky-ad-h: 58px;
+  --session-chat-fab-gap: 10px;
+  --session-chat-safe-bottom: max(env(safe-area-inset-bottom, 0px), 12px);
+}
+
+.session-chat-fab-host {
+  position: fixed;
+  z-index: 45;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  bottom: calc(
+    var(--session-chat-nav-h) + var(--session-chat-safe-bottom) +
+    var(--session-chat-sticky-ad-h) + var(--session-chat-fab-gap)
+  );
+}
+
+html[data-sticky-ad="hidden"] .session-chat-fab-host {
+  bottom: calc(
+    var(--session-chat-nav-h) + var(--session-chat-safe-bottom) + var(--session-chat-fab-gap)
+  );
+}
+
+.session-chat-fab-inner {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .session-chat-fab-host {
+    left: 16rem; /* lg sidebar w-64 */
+    right: 0;
+    bottom: calc(var(--session-chat-sticky-ad-h) + 16px + env(safe-area-inset-bottom, 0px));
+  }
+
+  html[data-sticky-ad="hidden"] .session-chat-fab-host {
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .session-chat-fab-inner {
+    max-width: none;
+    margin: 0;
+    padding-right: 24px;
+  }
+}
+
 /* ── 장중 시황방 FAB 알림 ── */
 @keyframes session-chat-pulse {
   0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--mint-rgb), 0.45); }

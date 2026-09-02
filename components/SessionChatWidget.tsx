@@ -210,47 +210,54 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
 
   return (
     <>
-      {/* FAB */}
-      <div className="fixed z-[45] right-4 bottom-[calc(72px+max(env(safe-area-inset-bottom,0px),12px))] lg:bottom-6">
-        {showPulse && (
-          <span
-            className="absolute inset-0 rounded-full session-chat-ring pointer-events-none"
-            aria-hidden
-          />
-        )}
-        <button
-          type="button"
-          onClick={() => {
-            setPanelOpen((v) => !v);
-            if (!panelOpen) markRead();
-          }}
-          aria-label="장중 실시간 시황방"
-          className={`relative flex items-center justify-center rounded-full shadow-lg border transition-transform active:scale-95 w-14 h-14 ${
-            showPulse ? "session-chat-fab-pulse" : ""
-          }`}
-          style={{
-            background: sessionOpen ? "var(--accent)" : "var(--card)",
-            borderColor: showPulse ? "var(--mint)" : "var(--border)",
-            color: sessionOpen ? "#fff" : "var(--muted)",
-          }}
-        >
-          {sessionOpen && (
-            <span
-              className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2"
-              style={{ borderColor: "var(--accent)" }}
-            />
-          )}
-          {unread > 0 && (
-            <span
-              className="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 rounded-full text-[10px] font-bold flex items-center justify-center text-white"
-              style={{ background: "var(--down)" }}
-            >
-              {unread > 99 ? "99+" : unread}
-            </span>
-          )}
-          <MessageCircle size={26} strokeWidth={2} />
-        </button>
-      </div>
+      {/* FAB — 패널 열리면 숨김 (헤더 X로 닫기) */}
+      {!panelOpen && (
+        <div className="session-chat-fab-host">
+          <div className="session-chat-fab-inner">
+            <div className="relative pointer-events-auto">
+              {showPulse && (
+                <span
+                  className="absolute inset-0 rounded-full session-chat-ring pointer-events-none"
+                  aria-hidden
+                />
+              )}
+              <button
+                type="button"
+                onClick={() => {
+                  setPanelOpen(true);
+                  markRead();
+                }}
+                aria-label="장중 실시간 시황방"
+                className={`relative flex items-center justify-center rounded-full shadow-lg border transition-transform active:scale-95 w-[52px] h-[52px] ${
+                  showPulse ? "session-chat-fab-pulse" : ""
+                }`}
+                style={{
+                  background: sessionOpen ? "var(--accent)" : "var(--card)",
+                  borderColor: showPulse ? "var(--mint)" : "var(--border)",
+                  color: sessionOpen ? "#fff" : "var(--muted)",
+                }}
+              >
+                <MessageCircle size={24} strokeWidth={2.25} className="block" />
+                {sessionOpen && (
+                  <span
+                    className="absolute bottom-1.5 right-1.5 w-2 h-2 rounded-full bg-emerald-400"
+                    style={{ boxShadow: "0 0 0 2px var(--accent)" }}
+                    aria-hidden
+                  />
+                )}
+                {unread > 0 && (
+                  <span
+                    className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full text-[10px] font-bold leading-[18px] text-center text-white"
+                    style={{ background: "var(--down)" }}
+                  >
+                    {unread > 99 ? "99+" : unread}
+                  </span>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Panel — overlay와 시트 분리 (모바일 스크롤 격리) */}
       {panelOpen && (
@@ -264,8 +271,8 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
           />
           <div
             className="session-chat-sheet fixed inset-x-0 bottom-0 z-[47] flex flex-col border shadow-2xl overflow-hidden
-              h-[min(78dvh,560px)] max-h-[78dvh] min-h-0 rounded-t-2xl
-              lg:inset-auto lg:right-6 lg:bottom-24 lg:left-auto lg:w-[380px] lg:h-[min(560px,78dvh)] lg:max-h-[78dvh] lg:rounded-2xl"
+              h-[min(78dvh,560px)] max-h-[78dvh] min-h-0 rounded-t-2xl max-lg:pb-[env(safe-area-inset-bottom,0px)]
+              lg:left-auto lg:right-6 lg:bottom-[calc(58px+16px+env(safe-area-inset-bottom,0px))] lg:w-[380px] lg:h-[min(560px,78dvh)] lg:max-h-[78dvh] lg:rounded-2xl"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
             role="dialog"
             aria-label="장중 실시간 시황방"
