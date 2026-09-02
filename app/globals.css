@@ -254,3 +254,8 @@ html[data-theme="dark"] .sticky-ad-fit-bar {
   animation: session-chat-ring 1.6s ease-out infinite;
   border: 2px solid rgba(var(--mint-rgb), 0.55);
 }
+.session-chat-scroll {
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}

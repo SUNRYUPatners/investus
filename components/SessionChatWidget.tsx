@@ -36,6 +36,36 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     panelOpenRef.current = panelOpen;
   }, [panelOpen]);
 
+  // 모바일: 팝업 열릴 때 뒤 페이지 스크롤 잠금
+  useEffect(() => {
+    if (!panelOpen) return;
+    const scrollY = window.scrollY;
+    const { style } = document.body;
+    const prev = {
+      overflow: style.overflow,
+      position: style.position,
+      top: style.top,
+      left: style.left,
+      right: style.right,
+      width: style.width,
+    };
+    style.overflow = "hidden";
+    style.position = "fixed";
+    style.top = `-${scrollY}px`;
+    style.left = "0";
+    style.right = "0";
+    style.width = "100%";
+    return () => {
+      style.overflow = prev.overflow;
+      style.position = prev.position;
+      style.top = prev.top;
+      style.left = prev.left;
+      style.right = prev.right;
+      style.width = prev.width;
+      window.scrollTo(0, scrollY);
+    };
+  }, [panelOpen]);
+
   const markRead = useCallback(() => {
     const now = Date.now();
     try {
@@ -221,19 +251,21 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
         </button>
       </div>
 
-      {/* Panel */}
+      {/* Panel — overlay와 시트 분리 (모바일 스크롤 격리) */}
       {panelOpen && (
-        <div
-          className="fixed inset-0 z-[46] lg:bg-black/20"
-          onClick={() => setPanelOpen(false)}
-          role="presentation"
-        >
+        <>
           <div
-            className="absolute flex flex-col border shadow-2xl overflow-hidden
-              inset-x-0 bottom-0 rounded-t-2xl max-h-[78vh]
-              lg:inset-auto lg:right-6 lg:bottom-24 lg:w-[380px] lg:max-h-[min(560px,78vh)] lg:rounded-2xl"
+            className="fixed inset-0 z-[46] bg-black/40 lg:bg-black/20"
+            onClick={() => setPanelOpen(false)}
+            onTouchMove={(e) => e.preventDefault()}
+            role="presentation"
+            aria-hidden
+          />
+          <div
+            className="session-chat-sheet fixed inset-x-0 bottom-0 z-[47] flex flex-col border shadow-2xl overflow-hidden
+              h-[min(78dvh,560px)] max-h-[78dvh] min-h-0 rounded-t-2xl
+              lg:inset-auto lg:right-6 lg:bottom-24 lg:left-auto lg:w-[380px] lg:h-[min(560px,78dvh)] lg:max-h-[78dvh] lg:rounded-2xl"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
-            onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-label="장중 실시간 시황방"
           >
@@ -268,8 +300,8 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
 
             <div
               ref={listRef}
-              className="flex-1 overflow-y-auto px-3 py-3 space-y-2.5 min-h-[200px]"
-              style={{ background: "var(--bg)" }}
+              className="session-chat-scroll flex-1 min-h-0 overflow-y-auto overscroll-contain px-3 py-3 space-y-2.5"
+              style={{ background: "var(--bg)", WebkitOverflowScrolling: "touch" }}
             >
               {!sessionOpen && (
                 <div className="text-center py-10 px-4">
@@ -410,7 +442,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
               </div>
             )}
           </div>
-        </div>
+        </>
       )}
     </>
   );
