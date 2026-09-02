@@ -4246,7 +4246,58 @@ export const MOCK_POSTS: Post[] = [
     createdAt: T14 - d(1), likes: 1, comments: 0 },
 
   { id: 22, symbol: "COIN", nickname: "익명_4481", holdingLabel: "40주 보유",
-    content: "CLARITY Act 통과되면 규제 불확실성 사라지면서 기관 자금이 대규모 유입될 것 같아요. 미국   // ── 2026-09-03 신규 댓글 ────────────────
+    content: "CLARITY Act 통과되면 규제 불확실성 사라지면서 기관 자금이 대규모 유입될 것 같아요. 미국 1위 거래소로 최대 수혜.",
+    createdAt: T14 - h(1), likes: 18, comments: 3 },
+  { id: 23, symbol: "COIN", nickname: "익명_6603", holdingLabel: "20주 보유",
+    content: "트럼프가 코인 매수 선언하고 CLARITY Act도 진행 중이니 규제 환경이 완전히 바뀌고 있어요. ETF 자금 유입도 계속 늘어나는 중.",
+    createdAt: T14 - h(3), likes: 15, comments: 0 },
+  { id: 42, symbol: "COIN", nickname: "익명_7712", holdingLabel: "55주 보유",
+    content: "비트코인 현물 ETF 자금 유입이 사상 최대치 경신 중이에요. Coinbase가 ETF 수탁 기관이라 수수료 수익 꾸준히 늘어날 것 같아요.",
+    createdAt: T14 - h(4), likes: 34, comments: 0 },
+
+  { id: 24, symbol: "SMCI", nickname: "익명_8871", holdingLabel: "25주 보유",
+    content: "AI 서버 랙 솔루션에서 NVIDIA 파트너로 독보적인 위치. 회계 이슈 해결 후 주가 정상화 중이라 지금이 기회라고 보는데 리스크도 여전히 있긴 하죠.",
+    createdAt: T14 - m(45), likes: 12, comments: 0 },
+  { id: 25, symbol: "SMCI", nickname: "익명_3302", holdingLabel: "10주 보유",
+    content: "GB200 NVL72 랙 주요 조립업체라는 게 엄청난 포지션이에요. 데이터센터 AI 클러스터 수요 폭증하면 직접 수혜받는 구조.",
+    createdAt: T14 - h(6), likes: 9, comments: 0 },
+  { id: 47, symbol: "SMCI", nickname: "익명_1176", holdingLabel: "15주 보유",
+    content: "회계 감사 리스크가 완전히 해소된 건지 아직 불확실해요. 좋은 회사긴 한데 그 부분이 계속 발목 잡을 것 같아요.",
+    createdAt: T14 - h(1), likes: 3, comments: 0 },
+
+  { id: 26, symbol: "RKLB", nickname: "익명_5541", holdingLabel: "200주 보유",
+    content: "Electron 발사 성공률이 엄청나게 높아요. Neutron 중형 로켓 개발 완료되면 SpaceX 소형-중형 시장 다 커버하는 회사가 됩니다.",
+    createdAt: T14 - h(2), likes: 6, comments: 4 },
+  { id: 27, symbol: "RKLB", nickname: "익명_7712", holdingLabel: "500주 보유",
+    content: "Space Systems 부품 사업 매출이 생각보다 탄탄해요. 발사 사업 + 위성 부품 + Neutron = 3단 성장 스토리. SpaceX 상장해도 RKLB은 소형 위성 발사 독점 포지션이라 영역이 다른 독립 회사예요.",
+    createdAt: T14 - d(1), likes: 3, comments: 2 },
+  { id: 43, symbol: "RKLB", nickname: "익명_4419", holdingLabel: "100주 보유",
+    content: "국방부 계약이 계속 들어오고 있어요. 국가 안보 분야에서 신뢰받는 위성 발사 업체로 자리잡은 것 같아요.",
+    createdAt: T14 - h(7), likes: 72, comments: 0 },
+
+  { id: 28, symbol: "IONQ", nickname: "익명_2234", holdingLabel: "150주 보유",
+    content: "이온트랩 방식이 안정성 면에서 압도적이라는 게 증명되고 있어요. AWS·Azure·GCP 모두 IonQ 양자컴퓨터 클라우드 접근 제공 중.",
+    createdAt: T14 - h(1), likes: 20, comments: 0 },
+  { id: 29, symbol: "IONQ", nickname: "익명_9908", holdingLabel: "300주 보유",
+    content: "미국 정부 양자컴퓨터 계약 늘어나는 거 보면 국방·안보 분야 수요가 진짜 핵심인 것 같아요. 아직 수익화 초기지만 기술 해자는 인정.",
+    createdAt: T14 - h(5), likes: 17, comments: 0 },
+  { id: 44, symbol: "IONQ", nickname: "익명_6631", holdingLabel: "80주 보유",
+    content: "양자컴퓨터가 실제 상용화되려면 아직 수년 더 필요하지만, 지금 선점하는 게 맞다고 생각해요. 고위험 고수익 섹터.",
+    createdAt: T14 - h(2), likes: 54, comments: 0 },
+
+  { id: 30, symbol: "CEG", nickname: "익명_6678", holdingLabel: "35주 보유",
+    content: "AI 데이터센터 전력 문제가 심각해지면서 원자력이 유일한 해결책으로 부상 중이에요. Microsoft·Google이 컨스텔레이션과 장기 전력 계약 체결한 게 다 이유가 있죠.",
+    createdAt: T14 - h(3), likes: 14, comments: 0 },
+  { id: 31, symbol: "CEG", nickname: "익명_4456", holdingLabel: "20주 보유",
+    content: "쓰리마일 아일랜드 재가동이 상징적이에요. AI발 전력 수요 급증 + 탈탄소 압박 = 원자력 르네상스. CEG가 미국 최대 원전 운영사.",
+    createdAt: T14 - d(1), likes: 11, comments: 0 },
+  { id: 45, symbol: "CEG", nickname: "익명_9918", holdingLabel: "10주 보유",
+    content: "바이든이 아니라 트럼프도 원자력 지지해요. 초당적 지지 받는 에너지 섹터라 정치 리스크가 낮아요.",
+    createdAt: T14 - h(8), likes: 9, comments: 0 },
+];
+
+export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-09-03 신규 댓글 ────────────────
   1195: [
     { id: 1, nickname: "익명_6195", holdingLabel: "관심종목", content: "9/3 한장에 사이버캡·중국·우버·금리까지 정리 감사합니다", createdAt: T03SEP + 8*60_000 + 3*60_000, likes: 4 },
   ],
@@ -4299,57 +4350,6 @@ export const MOCK_POSTS: Post[] = [
   1209: [
     { id: 1, nickname: "익명_6209", holdingLabel: "관심종목", content: "30~60× TAM은 오늘 행사 숫자로 검증해야겠네요", createdAt: T03SEP + 120*60_000 + 3*60_000, likes: 4 },
   ],
-1위 거래소로 최대 수혜.",
-    createdAt: T14 - h(1), likes: 18, comments: 3 },
-  { id: 23, symbol: "COIN", nickname: "익명_6603", holdingLabel: "20주 보유",
-    content: "트럼프가 코인 매수 선언하고 CLARITY Act도 진행 중이니 규제 환경이 완전히 바뀌고 있어요. ETF 자금 유입도 계속 늘어나는 중.",
-    createdAt: T14 - h(3), likes: 15, comments: 0 },
-  { id: 42, symbol: "COIN", nickname: "익명_7712", holdingLabel: "55주 보유",
-    content: "비트코인 현물 ETF 자금 유입이 사상 최대치 경신 중이에요. Coinbase가 ETF 수탁 기관이라 수수료 수익 꾸준히 늘어날 것 같아요.",
-    createdAt: T14 - h(4), likes: 34, comments: 0 },
-
-  { id: 24, symbol: "SMCI", nickname: "익명_8871", holdingLabel: "25주 보유",
-    content: "AI 서버 랙 솔루션에서 NVIDIA 파트너로 독보적인 위치. 회계 이슈 해결 후 주가 정상화 중이라 지금이 기회라고 보는데 리스크도 여전히 있긴 하죠.",
-    createdAt: T14 - m(45), likes: 12, comments: 0 },
-  { id: 25, symbol: "SMCI", nickname: "익명_3302", holdingLabel: "10주 보유",
-    content: "GB200 NVL72 랙 주요 조립업체라는 게 엄청난 포지션이에요. 데이터센터 AI 클러스터 수요 폭증하면 직접 수혜받는 구조.",
-    createdAt: T14 - h(6), likes: 9, comments: 0 },
-  { id: 47, symbol: "SMCI", nickname: "익명_1176", holdingLabel: "15주 보유",
-    content: "회계 감사 리스크가 완전히 해소된 건지 아직 불확실해요. 좋은 회사긴 한데 그 부분이 계속 발목 잡을 것 같아요.",
-    createdAt: T14 - h(1), likes: 3, comments: 0 },
-
-  { id: 26, symbol: "RKLB", nickname: "익명_5541", holdingLabel: "200주 보유",
-    content: "Electron 발사 성공률이 엄청나게 높아요. Neutron 중형 로켓 개발 완료되면 SpaceX 소형-중형 시장 다 커버하는 회사가 됩니다.",
-    createdAt: T14 - h(2), likes: 6, comments: 4 },
-  { id: 27, symbol: "RKLB", nickname: "익명_7712", holdingLabel: "500주 보유",
-    content: "Space Systems 부품 사업 매출이 생각보다 탄탄해요. 발사 사업 + 위성 부품 + Neutron = 3단 성장 스토리. SpaceX 상장해도 RKLB은 소형 위성 발사 독점 포지션이라 영역이 다른 독립 회사예요.",
-    createdAt: T14 - d(1), likes: 3, comments: 2 },
-  { id: 43, symbol: "RKLB", nickname: "익명_4419", holdingLabel: "100주 보유",
-    content: "국방부 계약이 계속 들어오고 있어요. 국가 안보 분야에서 신뢰받는 위성 발사 업체로 자리잡은 것 같아요.",
-    createdAt: T14 - h(7), likes: 72, comments: 0 },
-
-  { id: 28, symbol: "IONQ", nickname: "익명_2234", holdingLabel: "150주 보유",
-    content: "이온트랩 방식이 안정성 면에서 압도적이라는 게 증명되고 있어요. AWS·Azure·GCP 모두 IonQ 양자컴퓨터 클라우드 접근 제공 중.",
-    createdAt: T14 - h(1), likes: 20, comments: 0 },
-  { id: 29, symbol: "IONQ", nickname: "익명_9908", holdingLabel: "300주 보유",
-    content: "미국 정부 양자컴퓨터 계약 늘어나는 거 보면 국방·안보 분야 수요가 진짜 핵심인 것 같아요. 아직 수익화 초기지만 기술 해자는 인정.",
-    createdAt: T14 - h(5), likes: 17, comments: 0 },
-  { id: 44, symbol: "IONQ", nickname: "익명_6631", holdingLabel: "80주 보유",
-    content: "양자컴퓨터가 실제 상용화되려면 아직 수년 더 필요하지만, 지금 선점하는 게 맞다고 생각해요. 고위험 고수익 섹터.",
-    createdAt: T14 - h(2), likes: 54, comments: 0 },
-
-  { id: 30, symbol: "CEG", nickname: "익명_6678", holdingLabel: "35주 보유",
-    content: "AI 데이터센터 전력 문제가 심각해지면서 원자력이 유일한 해결책으로 부상 중이에요. Microsoft·Google이 컨스텔레이션과 장기 전력 계약 체결한 게 다 이유가 있죠.",
-    createdAt: T14 - h(3), likes: 14, comments: 0 },
-  { id: 31, symbol: "CEG", nickname: "익명_4456", holdingLabel: "20주 보유",
-    content: "쓰리마일 아일랜드 재가동이 상징적이에요. AI발 전력 수요 급증 + 탈탄소 압박 = 원자력 르네상스. CEG가 미국 최대 원전 운영사.",
-    createdAt: T14 - d(1), likes: 11, comments: 0 },
-  { id: 45, symbol: "CEG", nickname: "익명_9918", holdingLabel: "10주 보유",
-    content: "바이든이 아니라 트럼프도 원자력 지지해요. 초당적 지지 받는 에너지 섹터라 정치 리스크가 낮아요.",
-    createdAt: T14 - h(8), likes: 9, comments: 0 },
-];
-
-export const MOCK_COMMENTS: Record<number, Comment[]> = {
   // ── 2026-09-02 신규 댓글 ────────────────
   1179: [
     { id: 1, nickname: "익명_6179", holdingLabel: "관심종목", content: "9/2 핵심 포인트네요", createdAt: T02SEP + 8*60_000 + 3*60_000, likes: 4 },

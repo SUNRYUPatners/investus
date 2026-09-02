@@ -124,9 +124,10 @@ function patchWallPosts() {
   const postMarker = '  // ── 2026-09-02 신규 ────────────────';
   const commentMarker = '  // ── 2026-09-02 신규 댓글 ────────────────';
   const pi = c.indexOf(postMarker);
-  const ci = c.indexOf(commentMarker);
-  if (pi === -1 || ci === -1) throw new Error('wallPosts markers not found');
+  if (pi === -1) throw new Error('wallPosts post marker not found');
   c = c.slice(0, pi) + posts + c.slice(pi);
+  const ci = c.indexOf(commentMarker);
+  if (ci === -1) throw new Error('wallPosts comment marker not found');
   c = c.slice(0, ci) + comments + c.slice(ci);
   write('lib/wallPosts.ts', c);
   console.log('wallPosts: T03SEP, posts 1195-1209, comments');
