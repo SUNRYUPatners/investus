@@ -10,9 +10,13 @@ description: >-
 
 리포트 날짜 세트를 추가할 때 **항상** 이 스킬 + `.claude/commands/report-update.md` 전체 순서를 따른다.
 
-## 서브에이전트 — 리포트 업데이트 시 Opus 5 사용 (2026-08-27~)
+## 에이전트 — 리포트 업데이트는 Auto (2026-09-02~)
 
-리포트 업데이트(`리포트 업데이트`, `report-update`, 일일 seed·SVG·본문 배치)는 **Task 서브에이전트**를 **`claude-opus-5-thinking-high`(Opus 5)** 로 실행한다. `lib/reports.ts` 본문 풍성화·한글 SVG·다시장(kr/safe/kr-re) 일괄 작성처럼 **분량이 큰 작업**은 부모 에이전트가 전부 직접 쓰지 말고 Opus 5 서브에이전트에 위임한다. 단순 팩트 수정·시드 1~2개만 고치는 경우는 예외.
+리포트 업데이트(`리포트 업데이트`, `report-update`, 일일 seed·SVG·본문 배치)는 **부모 에이전트(Auto 기본 라우팅)가 직접** 끝까지 수행한다.
+
+- **금지:** Task 서브에이전트에 **`claude-opus-5-thinking-high`(Opus 5) 등 모델을 지정**해 위임하는 것. 리포트 업데이트용 Opus 강제 규칙은 **폐지**.
+- **허용:** 분량이 커도 부모가 직접 처리. 정말 위임이 필요하면 Task 서브에이전트에 **`model` 없이(inherit/Auto)** 전체 체크리스트를 넘긴다.
+- **완료 기준:** `validate-*` 통과 + `bash scripts/deploy.sh` 성공 로그 확인 전 “완료” 금지 (모델과 무관).
 
 ## 문장으로 쓰기 · 존댓말 — 제목·부제·본문 (2026-08-25부터 필수)
 
@@ -191,7 +195,7 @@ description: >-
 
 ## 실행 체크리스트 (빠지면 미완성)
 
-0. **대규모 배치면 Opus 5 서브에이전트(`claude-opus-5-thinking-high`)로 위임** (위 「서브에이전트」)
+0. **Auto(기본)로 전체 체크리스트 직접 수행** — Opus 등 모델 지정 서브에이전트 **사용 금지** (위 「에이전트」)
 1. `01.investus 리포트/` 원본 스크린샷 Read로 팩트 추출 (미국장)
 2. **7/2 SVG(메인)을 먼저 Read로 열어보고**, 애매하면 7/3(서브)도 참고해 구조를 따라 SVG KO+EN을 **`public/charts/`에만** 작성 (7/4 스타일 금지)
 3. `lib/reports.ts` seed + tickers — **존댓말 문장형 제목·요약 + 본문 풍성(초보 풀이) + 투자시사점**
@@ -222,10 +226,10 @@ description: >-
 
 1. **US와 다시장 SVG 생성기가 분리** — TS만 고치고 SVG를 “나중에” 하다가 누락
 2. **문서 체크리스트만 있고 배포 게이트 없음** — (2026-09-01부터 assets 검증으로 차단)
-3. **서브에이전트 위임** — 본문·시드 작성까지만 하고 SVG·wall·analyst를 다른 턴에 맡기면 부모가 “완료”로 착각. **한 번의 리포트 업데이트 = 한 담당(또는 한 서브에이전트)이 4시장 전체 체크리스트를 끝까지**
+3. **위임 시 착각** — 본문·시드만 하고 SVG·wall·analyst를 다른 턴에 맡기면 “완료”로 착각. **한 번의 리포트 업데이트 = 한 담당이 4시장 전체 체크리스트를 끝까지** (Auto 직접 또는 inherit 서브에이전트 1회)
 4. **대량 diff** — 검증 스크립트 돌리기 전에 commit/deploy하면 실수가 그대로 prod
 
-**서브에이전트 쓸 때:** `claude-opus-5-thinking-high`에 **전체 체크리스트 + validate 3종 통과까지** 명시. 부모는 deploy.sh 성공 로그 확인 전 “완료” 금지.
+**완료 전 확인:** `validate-report-assets.js` + `validate-report-topics.js` + `validate-report-korean.js` + `validate-analyst-mock-sync.js` 통과, `deploy.sh` 성공 로그 확인.
 
 ## 본문 최소 구조 (개별 리포트)
 

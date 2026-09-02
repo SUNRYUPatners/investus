@@ -28,7 +28,7 @@ alwaysApply: false
 |------|------|
 | **파이프라인 분리** | US는 `gen-reports-*.js`, kr/safe/kr-re는 `topics` + `fix-reports-*-ko-markets.js` — **SVG는 별도 `gen-markets-svg-*.js`** 인데 한쪽만 돌리기 쉬움 |
 | **검증 공백** | 예전엔 한글·애널만 검증, **파일 존재는 안 봄** → 시드만 merge되고 SVG 없어도 배포됨 |
-| **서브에이전트 분업** | Opus에 kr/safe 본문 위임 시 **SVG·wall·analyst까지 한 에이전트가 끝까지** 책임져야 하는데, 부모가 TS만 확인하고 “완료” 처리한 경우 있음 |
+| **위임·분업 착각** | 본문만 하고 SVG·wall·analyst를 빼먹고 “완료” 처리한 경우 있음 — **한 담당이 4시장 체크리스트 끝까지** (Auto 직접 권장, Opus 강제 없음) |
 | **체크리스트 ≠ 게이트** | SKILL·report-update.md에 순서는 있으나 **deploy.sh가 막지 않으면** 사람/에이전트 실수 그대로 통과 |
 
 **재발 방지 (필수 순서):**
