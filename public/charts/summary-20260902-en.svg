@@ -7,39 +7,39 @@
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
   <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
   <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
-  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.01 Daily Snapshot</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.02 Daily Snapshot</text>
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="122" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
   <rect x="60" y="122" width="8" height="112" rx="4" fill="#4ade80"/>
-  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">Texas robotaxi fleet rose 124 in five days to 314…</text>
-  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">Cybercab 7→45, Model Y 269. The Sept 3 Austin Cybercab event is two days away.</text>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">Giga Texas North Campus semiconductor cited at…</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">Austin Fab 489,600 SF, Cortex 2.0 46,400 SF; completion target Dec 31, 2029.</text>
   <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
-  <rect x="60" y="246" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
-  <rect x="60" y="246" width="8" height="112" rx="4" fill="#c084fc"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">Starlink V3 and Starship Flight 14 may overlap aroun…</text>
-  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">V3 targets ~10x capacity with FCC clearance tied to F14. Satellite and launch cadence alig…</text>
-  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">Dell beat with EPS $7.04 vs $4.92 and revenue $46.9B…</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">AI server demand may be flowing into prints ahead of Sept 3 Cybercab.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">DELL</text>
   <rect x="60" y="370" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
   <rect x="60" y="370" width="8" height="112" rx="4" fill="#4ade80"/>
-  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">Tesla rallied 4.4–5.51%, adding roughly $54B in market…</text>
-  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">Optimus targets 1M units/year at Fremont while Model S/X lines are dismantled—robotaxi…</text>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">Austin Cybercab fleet at 45, geofence ~264 sq mi;…</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">Golden cabs cited with ~9% geofence expansion ahead of the dedicated event.</text>
   <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
-  <rect x="60" y="494" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
-  <rect x="60" y="494" width="8" height="112" rx="4" fill="#4ade80"/>
-  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">Full Self-Driving cumulative miles passed 14 billion</text>
-  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">13B→14B in ~24 days; data cited ~7x safer than human driving on the same metric.</text>
-  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
-  <rect x="60" y="618" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
-  <rect x="60" y="618" width="8" height="112" rx="4" fill="#60a5fa"/>
-  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">Samsung may supply ~70% of memory capacity through…</text>
-  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">HBM3E spot trades near ~5x contract levels as high-bandwidth memory tightness hits pric…</text>
-  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">NVDA</text>
-  <rect x="60" y="742" width="960" height="112" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
-  <rect x="60" y="742" width="8" height="112" rx="4" fill="#facc15"/>
-  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">Gold holdings are discussed as overtaking USD as the…</text>
-  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">Central-bank diversification and geopolitics are reshaping safe-asset portfolios.</text>
-  <text x="985" y="808" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15" text-anchor="end">GOLD</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Also: robotaxi 314 · V3/F14 Sept 15 · TSLA +5% · FSD 14B mi · Samsung HBM 70% · gold vs USD reserves</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#c084fc"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">Orbital compute 10 GW / ~$1T revenue narrative…</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">V3 10x, FCC STA 42.0-42.5 GHz, and datacenter team shakeup in the same arc.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">Anthropic $35B Lambda, Google 396MW Fervo…</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">Hut 8 Texas GPUs, Utah geothermal, Denver/SD/Tampa paid rides anchor AI infra.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa" text-anchor="end">AI</text>
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">Fear &amp; Greed fell to 44 from 56 (greed) a week ago</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">Apple alleging OpenAI destroyed evidence adds legal overhang into Sept 3/15.</text>
+  <text x="985" y="808" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">44</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Also: Giga Texas 6.97M SF · DELL EPS $7.04 · Cybercab 45 D-1 · F14 Sept 15 · Anthropic $35B · Waymo 14 · F&amp;G 44</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -102,8 +102,8 @@ function main() {
   );
   replaceBlock(
     'lib/reports-kr-re.ts',
-    'krre-seed-114',
-    '  // ── 2026-08-29 신규 ────────────────────────────────────────────────────────',
+    'krre-seed-115',
+    '    id: "krre-seed-110"',
     DATA.KRRE,
     false,
   );

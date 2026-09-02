@@ -11,12 +11,12 @@
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
   <rect x="60" y="122" width="8" height="112" rx="4" fill="#f7931a"/>
-  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f7931a">비트코인이 약 108,248달러, 10.8만 달러 선 부근입니다</text>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f7931a">비트코인이 약 79,500달러, 7.95만 달러 선 부근입니다</text>
   <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">금리 인상 확률 57%와 함께 기회비용을 재계산받습니다.</text>
   <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a" text-anchor="end">비트</text>
   <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
   <rect x="60" y="246" width="8" height="112" rx="4" fill="#facc15"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">금은 온스당 약 3,475달러입니다</text>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">금은 온스당 약 2,520달러입니다</text>
   <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">금&gt;달러 준비자산 서사와 FOMC 9/15~16이 겹칩니다.</text>
   <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15" text-anchor="end">금</text>
   <rect x="60" y="370" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
@@ -39,7 +39,7 @@
   <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">9월 금리 인상 확률 57%가 공통 변수입니다</text>
   <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">2년물 금리·상장지수펀드 유입·달러지수 세 줄을 같이 보세요.</text>
   <text x="985" y="808" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">57%</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 비트코인 약 108,248달러 · 금 약 3,475달러 · 이더리움 약 4,512달러 · 달러인덱스 98.2 · 은 약 38.6달러 · 인상 57%</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 비트코인 약 79,500달러 · 금 약 2,520달러 · 이더리움 약 4,512달러 · 달러인덱스 98.2 · 은 약 38.6달러 · 인상 57%</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

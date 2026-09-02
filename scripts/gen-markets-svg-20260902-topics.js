@@ -36,7 +36,7 @@ add('summary-kr', 'ROWS', 'KOSPI', {
   caption: 'Watch: KOSPI 6,875 · foreign +89B won · Samsung +1.8% · Hynix +1.6% · USDKRW 1,366.5 · FOMC 9/15-16',
 });
 
-add('samsung-hbm-capacity-kr', 'L1', 'SEC', {
+add('samsung-cybercab-kr', 'L1', 'SEC', {
   badge: '삼성전자',
   title: '삼성전자가 HBM 생산능력 70%·HBM3E 현물가 5배 전망과 함께 +1.8% 반등했습니다',
   heroIcon: '🧠', heroBig: '+1.8%',
@@ -64,7 +64,7 @@ add('samsung-hbm-capacity-kr', 'L1', 'SEC', {
   footer: 'Samsung · HBM 70%',
 });
 
-add('skhynix-hbm-kr', 'L3', 'HYNIX', {
+add('skhynix-foreign-kr', 'L3', 'HYNIX', {
   badge: 'SK하이닉스',
   title: 'SK하이닉스가 +1.6%로 반도체 대형주 중 상대 강세였습니다',
   heroIcon: '🧊', heroBig: '+1.6%',
@@ -92,7 +92,7 @@ add('skhynix-hbm-kr', 'L3', 'HYNIX', {
   footer: 'SK Hynix · HBM bounce',
 });
 
-add('lg-energy-kr', 'L1', 'SEC', {
+add('hyundai-cybercab-kr', 'L1', 'SEC', {
   badge: 'LG에너지솔루션',
   title: 'LG에너지솔루션이 +0.55%로 2차전지가 지수 반등을 받쳤습니다',
   heroIcon: '🔋', heroBig: '+0.55%',
@@ -120,7 +120,7 @@ add('lg-energy-kr', 'L1', 'SEC', {
   footer: 'LG Energy · batteries',
 });
 
-add('kia-robotaxi-kr', 'L3', 'TSLA', {
+add('kospi-flow-kr', 'L3', 'TSLA', {
   badge: '기아',
   title: '기아가 +0.91%로 사이버캡 D-1 글로벌 자율주행 테마와 겹쳤습니다',
   heroIcon: '🚗', heroBig: '+0.91%',
@@ -148,7 +148,7 @@ add('kia-robotaxi-kr', 'L3', 'TSLA', {
   footer: 'Kia · Cybercab D-1',
 });
 
-add('naver-ai-kr', 'L4', 'AI', {
+add('fx-1366-kr', 'L4', 'AI', {
   badge: 'NAVER', badgeLine: '🌐 플랫폼 · AI capex 변수',
   title: 'NAVER가 -0.34%로 반등장에서 플랫폼주는 상대 약세였습니다',
   heroIcon: '📱', heroBig: '지수와 엇갈림',
@@ -308,7 +308,7 @@ add('eth-safe', 'L3', 'AI', {
   footer: 'Ethereum · $4,500',
 });
 
-add('dxy-safe', 'L2', 'RATES', {
+add('silver-safe', 'L2', 'RATES', {
   badge: '달러인덱스',
   title: '달러인덱스(DXY) 약 98.2, 금·비트코인·원화와 연동됩니다',
   heroIcon: '💵', heroBig: '~98.2',
@@ -478,6 +478,88 @@ add('policy-krre', 'L2', 'POLICY', {
   ],
   noteSub: 'LTV, DSR and move-in schedules matter more than slogans. Local housing plans widen regional gaps. Log Seoul, Gyeonggi, Busan and Jeju separately.',
   footer: 'Policy · supply and rules',
+});
+
+add('macro-safe', 'L4', 'MACRO', {
+  badge: '매크로',
+  title: '9월 3일 사이버캡·9월 4일 고용·9월 15~16일 FOMC가 안전·위험 자산 공통 변수입니다',
+  heroIcon: '📅', heroBig: 'D-1',
+  heroSub: '사이버캡 행사가 하루 앞이며 FOMC·고용이 같은 주에 겹칩니다.',
+  cards: [
+    { icon:'🚕', big:'9/3', mid:'사이버캡', sub:'테크·완성차 심리' },
+    { icon:'📊', big:'9/4', mid:'미국 고용', sub:'금리 기대' },
+    { icon:'🏦', big:'9/15', mid:'FOMC', sub:'달러·금·BTC' },
+  ],
+  quote: '캘린더 클러스터는 변동성을 키웁니다. 일정 전후 포지션 크기에 유의하시기 바랍니다.',
+  noteSub: '코스피 +0.9%·외국인 890억은 위험자산 쪽 수급이지만 FOMC 전 되돌림이 나올 수 있습니다. BTC ~79,500·금 ~2,520과 방향이 다를 수 있으니 분리해 기록하시기 바랍니다.',
+  footer: '매크로 · 캘린더',
+}, {
+  badge: 'MACRO',
+  title: 'Cybercab Sept 3, jobs Sept 4, FOMC Sept 15-16 are shared catalysts',
+  heroIcon: '📅', heroBig: 'D-1',
+  heroSub: 'Cybercab event is one day away; jobs and FOMC stack the week.',
+  cards: [
+    { icon:'🚕', big:'Sept 3', mid:'Cybercab', sub:'Tech/auto beta' },
+    { icon:'📊', big:'Sept 4', mid:'US jobs', sub:'Rate expectations' },
+    { icon:'🏦', big:'Sept 15', mid:'FOMC', sub:'USD, gold, BTC' },
+  ],
+  quote: 'Calendar clusters lift volatility. Mind position size into events.',
+  noteSub: 'KOSPI +0.9% and foreign +89B won help risk assets but FOMC can reverse flows. Log BTC ~79.5K and gold ~2,520 separately.',
+  footer: 'Macro · calendar',
+});
+
+add('seoul-krre', 'L3', 'JEONSE', {
+  badge: '서울',
+  title: '서울 강남·마포 등 일부 구에서 소폭 반등, 구별 온도 차가 큽니다',
+  heroIcon: '🏙️', heroBig: '혼조',
+  heroSub: '강남·마포는 소폭 오르고 외곽·지방은 다른 수급입니다.',
+  cards: [
+    { icon:'📍', big:'강남·마포', mid:'소폭 반등', sub:'학군·역세권' },
+    { icon:'📉', big:'지방', mid:'약세 지속', sub:'수급 분리' },
+    { icon:'🏦', big:'FOMC', mid:'9/15', sub:'주담대 심리' },
+  ],
+  quote: '서울 평균 한 줄만 보면 구별 흐름을 놓치게 됩니다.',
+  noteSub: '전세·매매를 같은 구 단위로 나란히 적어 두시면 왜곡이 줄어듭니다. 9월 입주 물량과 LTV·DSR 규제를 같이 추적하시기 바랍니다.',
+  footer: '서울 · 구별 온도',
+}, {
+  badge: 'SEOUL',
+  title: 'Gangnam and Mapo pockets bounce while districts diverge',
+  heroIcon: '🏙️', heroBig: 'Mixed',
+  heroSub: 'Select districts up modestly; regions follow different supply.',
+  cards: [
+    { icon:'📍', big:'Gangnam/Mapo', mid:'Modest up', sub:'School/transit premium' },
+    { icon:'📉', big:'Regions', mid:'Weaker', sub:'Split flows' },
+    { icon:'🏦', big:'FOMC', mid:'Sept 15', sub:'Mortgage mood' },
+  ],
+  quote: 'A single Seoul average line hides district-level moves.',
+  noteSub: 'Log jeonse and sales by district. Track September move-ins with LTV and DSR caps.',
+  footer: 'Seoul · district map',
+});
+
+add('regions-krre', 'L5', 'KOSPI', {
+  badge: '지방',
+  title: '경기·부산·제주 등 지방은 수도권과 다른 수급 흐름입니다',
+  beforeLabel: '수도권', beforeValue: '관망·소폭', afterLabel: '지방', afterValue: '약세·입주',
+  cards: [
+    { label:'경기', big:'외곽', mid:'입주 변수', sub:'수요 이동' },
+    { label:'부산', big:'거래량', mid:'선행 지표', sub:'가격보다 먼저' },
+    { label:'제주', big:'관광·전세', mid:'계절성', sub:'구조적 변수' },
+  ],
+  quote: '지방은 공급 과잉 지역에서 거래량이 먼저 줄어듭니다.',
+  noteSub: '미분양·거래량을 지역별로 분리해 기록하시기 바랍니다. FOMC 결과가 주담대 심리에 전가되면 지방 매매 관망이 길어질 수 있습니다.',
+  footer: '지방 · 수급 격차',
+}, {
+  badge: 'REGIONS',
+  title: 'Gyeonggi, Busan and Jeju follow different supply than Seoul',
+  beforeLabel: 'Metro', beforeValue: 'Sideline', afterLabel: 'Regions', afterValue: 'Weak/move-ins',
+  cards: [
+    { label:'Gyeonggi', big:'Outer', mid:'Move-ins', sub:'Demand shift' },
+    { label:'Busan', big:'Volume', mid:'Leading', sub:'Before prices' },
+    { label:'Jeju', big:'Tourism', mid:'Seasonal', sub:'Structural' },
+  ],
+  quote: 'Oversupply regions often see volume fall before prices.',
+  noteSub: 'Split unsold inventory and volume by region. FOMC pass-through can extend regional sales freezes.',
+  footer: 'Regions · supply gap',
 });
 
 /* output */

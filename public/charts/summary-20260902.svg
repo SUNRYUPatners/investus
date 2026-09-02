@@ -7,39 +7,40 @@
   <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
   <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
   <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
-  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.01 한장 요약</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.02 한장 요약</text>
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="122" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
   <rect x="60" y="122" width="8" height="112" rx="4" fill="#4ade80"/>
-  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">텍사스 로보택시 차량이 5일 만에 124대 늘어 누적 314대에…</text>
-  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">사이버캡 7→45대, 모델Y 269대. 9월 3일 오스틴 사이버캡 전용 행사가 이틀 앞으로 다가왔습니다.</text>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">기가 텍사스 북캠퍼스 반도체 연면적이 약 697만 평방피트…</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">오스틴 팹 489,600·코텍스 2.0 46,400 SF, 완공 목표 2029년 12월 31일입니다.</text>
   <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
-  <rect x="60" y="246" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
-  <rect x="60" y="246" width="8" height="112" rx="4" fill="#c084fc"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">스타링크 V3 위성과 스타십 14번째 비행(F14)이 9월 15일…</text>
-  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">V3는 용량이 약 10배 커지고 FCC 허가가 F14 발사와 맞물립니다. 위성망과 발사 cadence가 같은 달…</text>
-  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">델이 주당순이익 7.04달러·매출 469억 달러로 예상을 크게…</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">예상 주당순이익 4.92달러·매출 445억 달러 대비 AI 서버 수요가 반영된 결과로 읽힙니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">DELL</text>
   <rect x="60" y="370" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
   <rect x="60" y="370" width="8" height="112" rx="4" fill="#4ade80"/>
-  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">테슬라 주가가 4.4~5.51% 급등하며 시가총액 약 540억…</text>
-  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">옵티머스 1년에 100만 대 생산 목표와 모델S·X 라인 해체가 함께 거론됐습니다. 로보택시·로봇…</text>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">오스틴 사이버캡 45대, 지오펜스 약 264제곱마일, 9월 3일…</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">골든 캡과 함께 지오펜스가 약 9% 확대됐으며 전용 무인 차량 행사가 하루 앞입니다.</text>
   <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
-  <rect x="60" y="494" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
-  <rect x="60" y="494" width="8" height="112" rx="4" fill="#4ade80"/>
-  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">완전자율주행(FSD) 누적 주행거리가 140억 마일을…</text>
-  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">13억→14억 마일은 약 24일 만에 달성됐고, 통계상 인간 운전 대비 약 7배 안전하다는 데이터가 함께…</text>
-  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
-  <rect x="60" y="618" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
-  <rect x="60" y="618" width="8" height="112" rx="4" fill="#60a5fa"/>
-  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">삼성전자 메모리 capacity의 약 70%를 2031년까지…</text>
-  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">HBM3E 현물가는 계약가 대비 약 5배 수준으로, 고대역폭 메모리 품귀가 가격·믹스로 이어지는…</text>
-  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">NVDA</text>
-  <rect x="60" y="742" width="960" height="112" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
-  <rect x="60" y="742" width="8" height="112" rx="4" fill="#facc15"/>
-  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">금 보유액이 미국 달러를 넘어 세계 최대 준비자산으로…</text>
-  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">중앙은행·기관의 달러 의존 축소와 지정학 리스크가 겹치며, 안전자산 포트폴리오 재편 논의가…</text>
-  <text x="985" y="808" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15" text-anchor="end">GOLD</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 로보택시 314대 · V3/F14 9/15 · TSLA +5% · FSD 140억 mi · 삼성 HBM 70% · 금&gt;USD 준비자산</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#c084fc"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">궤도 연산 10GW·2030년 매출 1조 달러 서사와 F14 9월…</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">V3 위성 10배·FCC 42.0~42.5GHz STA와 데이터센터 팀 변동도 같은 우주·AI 흐름입니다.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">앤스로픽 350억 달러 람다 계약·구글 396MW 지열·웨이모…</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">텍사스 헛8·엔비디아 GPU, 유타 페르보 지열, 덴버·샌디에이고·탬파 유료 승차가 AI 인프라·자율주행…</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa" text-anchor="end">AI</text>
+  <rect x="60" y="742" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="742" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="784" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">공포·탐욕 지수 44, 1주 전 56(탐욕)에서 하락했습니다</text>
+  <text x="116" y="822" font-family="Arial" font-size="18" fill="#9ca3af">애플의 OpenAI 증거 파기 주장과 함께 9월 3일·15일 일정 앞 심리 둔화 변수입니다.</text>
+  <text x="985" y="808" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">44</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 기가텍사스 6.97M SF · DELL EPS $7.04 · Cybercab 45 D-1 · F14 9/15 · Anthropic $35B · Waymo 14 cities · F&amp;G</text>
+  <text x="540" y="1032" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">44</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

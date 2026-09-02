@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4285f4"/><stop offset="100%" style="stop-color:#34a853"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4285f430" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4285f4" text-anchor="middle">GOOGL</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.02</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">웨이모가 14개 도시에서 유료 승차를 확대합니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">14개 도시 · 유료 승차</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4285f4" text-anchor="middle">14 cities</text>
+  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">덴버·샌디에이고·탬파 유료 승차가 거론됩니다. 9월 3일 테슬라 사이버캡와 경쟁 프레임이 강해집니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏙️</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4285f4" text-anchor="middle">14</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">도시</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">서비스 중</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">💳</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4285f4" text-anchor="middle">유료</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">승차</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">상용 전환</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🚕</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4285f4" text-anchor="middle">DEN</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Denver</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">신규 시장</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">📅</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4285f4" text-anchor="middle">9/3</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Cybercab</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">TSLA 이벤트</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">유료 승차는 마일당 손익 검증 단계입니다</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">도시마다 허가·지도·날씨가 달라 확장 속도도 다릅니다</text>
+  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="740" font-family="Arial" font-size="18" fill="#4285f4" text-anchor="middle">로보택시는 「몇 대」와 「유료 마일」이 함께 올라가야 상용화로 읽힙니다. fleet 표의 차량 수·면적을 주간</text>
+  <text x="540" y="765" font-family="Arial" font-size="18" fill="#4285f4" text-anchor="middle">추적하시기 바랍니다.</text>
+  <rect x="60" y="842" width="960" height="148" rx="14" fill="#0a1420" stroke="#4285f4" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#4285f4" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이 소식은 단기 주가뿐 아니라 실행 일정과 분기 실적로 검증해야 합니다. 전문 용어는 공식 발표·가이던스·규제 문서로 정의를</text>
+  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인하시기 바랍니다. 9월 3일 사이버캡·9월 15일 F14·FOMC 전후 변동성에 대비하시면 됩니다.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Waymo · 14 cities · 2026.09.02</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -21,7 +21,7 @@
   <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">🔗</text>
   <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#a78bfa" text-anchor="middle">BTC 연동</text>
   <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">단기 베타</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">10.8만 달러와 같이 봅니다</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">7.95만 달러와 같이 봅니다</text>
   <rect x="390" y="396" width="300" height="196" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🔑</text>
   <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#a78bfa" text-anchor="middle">4,500</text>
@@ -36,7 +36,7 @@
   <text x="540" y="656" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">스테이킹은 네트워크에 코인을 맡겨 검증 보상을 받는 방식입니다. 그 수익도 채권 금리와 비교됩니다.</text>
   <rect x="60" y="814" width="960" height="148" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="1"/>
   <text x="540" y="844" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">단기에는 비트코인·금리가 더 큰 비중을 차지합니다. 4,500달러 재돌파는 비트코인 10.8만 달러 회복과 종종 같이 움직이니 한</text>
+  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">단기에는 비트코인·금리가 더 큰 비중을 차지합니다. 4,500달러 재돌파는 비트코인 7.95만 달러 회복과 종종 같이 움직이니 한</text>
   <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">화면에 두시면 편합니다.</text>
   <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">이더리움 · 4,500달러 · 2026.09.02</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

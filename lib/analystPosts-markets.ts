@@ -1,6 +1,12 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
+  { id: -1980, alias: "여의도 너구리 #11", symbol: "코스피", content: "9월 2일 코스피 약 6,875(+0.9%), 외국인 약 890억 원 순매수. 삼성 +1.8%, 하이닉스 +1.6%. Cybercab D-1·FOMC 9/15~16.", likes: 28, comments: 2, created_at: "2026-09-02T06:00:00.000Z", liked: false, },
+  { id: -1981, alias: "여의도 너구리 #11", symbol: "삼성전자", content: "삼성전자 +1.8%. 외국인 순매수 확대·HBM 테마. 분기 출하·ASP로 검증하시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-02T06:08:00.000Z", liked: false, },
+  { id: -1982, alias: "여의도 너구리 #11", symbol: "SK하이닉스", content: "SK하이닉스 +1.6%. HBM mix와 수급이 겹친 날입니다.", likes: 26, comments: 2, created_at: "2026-09-02T06:16:00.000Z", liked: false, },
+  { id: -1983, alias: "여의도 너구리 #11", symbol: "현대차", content: "현대차는 Cybercab D-1 글로벌 자율주행 심리와 연동됩니다.", likes: 25, comments: 2, created_at: "2026-09-02T06:24:00.000Z", liked: false, },
+  { id: -1984, alias: "여의도 너구리 #11", symbol: "코스피", content: "외국인 890억·환율 1,366.5원·코스피 6,875 세 줄을 같이 보시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-02T06:32:00.000Z", liked: false, },
+  { id: -1985, alias: "여의도 너구리 #11", symbol: "환율", content: "원·달러 약 1,366.5원. 외국인 순매수와 원화 강세가 겹친 날입니다.", likes: 23, comments: 2, created_at: "2026-09-02T06:40:00.000Z", liked: false, },
   { id: -2020, alias: "여의도 너구리 #11", symbol: "코스피", content: "9월 2일 코스피 6,873.50(+0.90%)로 금요일 조정 뒤 반등을 이어갔습니다. 외국인 890억 원 순매수, 기관 891억 원 순매도, 개인 623억 원 순매수입니다. 9월 3일 사이버캡 D-1·FOMC 9/15~16·인상 57%가 겹칩니다.", likes: 28, comments: 2, created_at: "2026-09-02T06:00:00.000Z", liked: false, },
   { id: -2021, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자 +0.82%. HBM 생산능력 70%·HBM3E 현물가 계약가 대비 약 5배 전망이 국내 메모리주에 전달됐습니다. 분기 HBM 출하·평균 판매 가격으로 검증하시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-02T06:08:00.000Z", liked: false, },
   { id: -2022, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "SK하이닉스 +1.12%로 대형주 중 상대 강세. HBM 품귀 전망과 외국인 순매수 전환 구간이 겹친 날입니다.", likes: 26, comments: 2, created_at: "2026-09-02T06:16:00.000Z", liked: false, },
@@ -127,6 +133,30 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
+  [-1980]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-1981]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-1982]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-1983]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-1984]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-1985]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
   [-2020]: [
     { alias: "수급파트", content: "외국인 890억은 금요일 대비 줄었지만 순매수 전환이네요.", created_at: "2026-09-02T06:24:00.000Z" },
     { alias: "환율데스크", content: "6870선 회복과 환율 1366.5원 같이 봐야겠습니다.", created_at: "2026-09-02T06:36:00.000Z" },
@@ -275,6 +305,12 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
+  { id: -2002, alias: "온체인 매 #03", symbol: "비트코인", content: "9월 2일 안전자산: BTC ~79,500, 금 ~2,520, FOMC 9/15~16.", likes: 24, comments: 2, created_at: "2026-09-02T09:00:00.000Z", liked: false, },
+  { id: -2003, alias: "온체인 매 #03", symbol: "비트코인", content: "비트코인 약 79,500달러. ETF 순유입·2년물·인상 확률을 보시기 바랍니다.", likes: 23, comments: 2, created_at: "2026-09-02T09:08:00.000Z", liked: false, },
+  { id: -2004, alias: "온체인 매 #03", symbol: "금", content: "금 약 2,520달러. 실질금리·DXY가 방향을 좌우합니다.", likes: 22, comments: 2, created_at: "2026-09-02T09:16:00.000Z", liked: false, },
+  { id: -2005, alias: "온체인 매 #03", symbol: "이더리움", content: "이더리움은 BTC·금리 연동. 스테이킹 vs 채권 금리를 확인하시기 바랍니다.", likes: 21, comments: 2, created_at: "2026-09-02T09:24:00.000Z", liked: false, },
+  { id: -2006, alias: "온체인 매 #03", symbol: "은", content: "은은 금·산업 수요가 겹칩니다. Au/Ag ratio를 보시기 바랍니다.", likes: 20, comments: 2, created_at: "2026-09-02T09:32:00.000Z", liked: false, },
+  { id: -2007, alias: "온체인 매 #03", symbol: "매크로", content: "9/3 Cybercab·9/4 고용·9/15 FOMC가 공통 변수입니다.", likes: 19, comments: 2, created_at: "2026-09-02T09:40:00.000Z", liked: false, },
   { id: -2026, alias: "온체인 매 #03", symbol: "비트코인", content: "9월 2일 안전자산 한장 요약입니다. 비트코인 약 108,248달러, 금 약 3,475달러, 이더리움 약 4,512달러, 달러인덱스 98.2. 공포탐욕 44·FOMC 9/15~16·인상 57%가 공통 변수입니다.", likes: 24, comments: 2, created_at: "2026-09-02T09:00:00.000Z", liked: false, },
   { id: -2027, alias: "금벌레 #17", symbol: "비트코인", content: "비트코인 약 108,248달러, 10.8만 달러 심리선 부근. 공포탐욕 44·달러인덱스 98.2와 함께 금리 민감 자산으로 부각됐습니다.", likes: 23, comments: 2, created_at: "2026-09-02T09:08:00.000Z", liked: false, },
   { id: -2028, alias: "금벌레 #17", symbol: "금", content: "금 약 3,475달러. 금 보유액이 달러를 넘는 준비자산 논의와 FOMC 9/15~16이 겹칩니다.", likes: 22, comments: 2, created_at: "2026-09-02T09:16:00.000Z", liked: false, },
@@ -339,6 +375,30 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
+  [-2002]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2003]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2004]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2005]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2006]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2007]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
   [-2026]: [
     { alias: "헷지", content: "10.8만·3475·4512·DXY 98.2 네 줄 같이 보겠습니다.", created_at: "2026-09-02T09:24:00.000Z" },
     { alias: "실질금리", content: "공포44면 리스크오프도 변수.", created_at: "2026-09-02T09:36:00.000Z" },
@@ -419,6 +479,12 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  { id: -2008, alias: "실수요 #05", symbol: "전세", content: "9월 2일 부동산: 전세 일부 반등·매매 관망·LTV·DSR·FOMC.", likes: 22, comments: 2, created_at: "2026-09-02T10:00:00.000Z", liked: false, },
+  { id: -2009, alias: "실수요 #05", symbol: "전세", content: "입주 물량·전세대출 규제가 변수입니다.", likes: 21, comments: 2, created_at: "2026-09-02T10:08:00.000Z", liked: false, },
+  { id: -2010, alias: "실수요 #05", symbol: "매매", content: "FOMC·세금 부담으로 관망. 거래량을 먼저 보시기 바랍니다.", likes: 20, comments: 2, created_at: "2026-09-02T10:16:00.000Z", liked: false, },
+  { id: -2011, alias: "실수요 #05", symbol: "정책", content: "공급 확대 수사·대출 규제 유지가 공존합니다.", likes: 19, comments: 2, created_at: "2026-09-02T10:24:00.000Z", liked: false, },
+  { id: -2012, alias: "실수요 #05", symbol: "서울", content: "강남·마포 일부 반등. 구별 온도 차를 분리하시기 바랍니다.", likes: 18, comments: 2, created_at: "2026-09-02T10:32:00.000Z", liked: false, },
+  { id: -2013, alias: "실수요 #05", symbol: "지방", content: "경기·부산·제주는 수도권과 다른 수급입니다.", likes: 17, comments: 2, created_at: "2026-09-02T10:40:00.000Z", liked: false, },
   { id: -2031, alias: "실수요 #05", symbol: "전세", content: "9월 2일 부동산 한장 요약입니다. 전세는 학군·역세권 일부 소폭 반등, 매매는 FOMC·세금 부담으로 관망. 9월 입주 물량·전세대출 규제·인상 57%가 변수입니다.", likes: 22, comments: 2, created_at: "2026-09-02T10:00:00.000Z", liked: false, },
   { id: -2032, alias: "전세러 #09", symbol: "전세", content: "9월 2일 전세는 학군·역세권 일부 소폭 반등, 지방은 약세 지속. 9월 입주 물량·전세대출 규제가 변수입니다.", likes: 21, comments: 2, created_at: "2026-09-02T10:08:00.000Z", liked: false, },
   { id: -2033, alias: "실수요 #05", symbol: "매매", content: "매매는 FOMC·세금 부담으로 관망. 수도권 실거래 지수는 보합~ -0.1% 구간입니다.", likes: 20, comments: 2, created_at: "2026-09-02T10:16:00.000Z", liked: false, },
@@ -480,6 +546,30 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
+  [-2008]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2009]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2010]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2011]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2012]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
+  [-2013]: [
+    { alias: "팔로워", content: "9/2 포인트 감사합니다", created_at: "2026-09-02T10:00:00.000Z" },
+    { alias: "질문", content: "FOMC 전후 같이 보겠습니다", created_at: "2026-09-02T10:12:00.000Z" },
+  ],
   [-2031]: [
     { alias: "실수요", content: "전세·매매 혼조를 한 줄로 정리해 주셨네요.", created_at: "2026-09-02T10:24:00.000Z" },
     { alias: "전세대출", content: "FOMC 결과가 전세 심리 좌우하겠습니다.", created_at: "2026-09-02T10:36:00.000Z" },

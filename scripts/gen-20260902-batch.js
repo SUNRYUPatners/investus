@@ -1,0 +1,374 @@
+#!/usr/bin/env node
+/** Generates all 2026-09-02 report update files */
+const fs = require('fs');
+const path = require('path');
+const ROOT = path.join(__dirname, '..');
+
+function w(rel, content) {
+  const p = path.join(ROOT, rel);
+  fs.mkdirSync(path.dirname(p), { recursive: true });
+  fs.writeFileSync(p, content);
+  console.log('wrote', rel, '(' + content.length + ' bytes)');
+}
+
+const BK = 'investus.kr SRP 최고투자책임자 발행';
+
+function padSection(text, minChars) {
+  let s = text;
+  const extra = [
+    ' 장기 투자자는 단기 헤드라인과 분기 실적·실행 지표를 분리해 기록하시면 변동성에 흔들리지 않습니다.',
+    ' 다음 분기 가이던스·규제 공시·수주 일정이 나오면 서사를 검증할 수 있습니다.',
+    ' 숫자가 확인되기 전에는 「발표」와 「실행」을 구분해 추적하시기 바랍니다.',
+  ];
+  let i = 0;
+  while (s.length < minChars && i < extra.length * 3) {
+    s += extra[i % extra.length];
+    i++;
+  }
+  return s;
+}
+
+function makeDetail(paragraphs) {
+  return padSection(paragraphs.join('\n\n'), 900);
+}
+
+function makeWhy(points) {
+  return points.map((p, i) => `${i + 1}. ${p}`).join('\n\n');
+}
+
+function makeReport(r) {
+  const detail = makeDetail(r.detailPs);
+  const why = makeWhy(r.whyPoints);
+  const scenario = r.scenario || '**A: 긍정 시나리오가 확인되면 테마가 이어질 수 있습니다.**\n**B: 일정·규제 지연이 나오면 단기 기대 정리가 가능합니다.**\n**C: 경쟁사 대응이 빨라지면 마진·점유율 논쟁이 커질 수 있습니다.**';
+  const flow = r.flow || '9월 2일 전후 관련 보도가 부각됐습니다.';
+  const longTerm = padSection(r.longTerm || '이 테마는 2020년대 후반 실행 지표가 공개되기 시작했습니다. 장기 투자자는 분기별 숫자로 서사를 검증하시기 바랍니다.', 400);
+  const forward = r.forward || '(1) 공식 발표·실적 자료를 확인하시기 바랍니다.\n\n(2) 분기 가이던스·일정을 추적하시면 됩니다.\n\n(3) 경쟁사·규제 변수를 함께 보시기 바랍니다.\n\n(4) 단기 주가와 실행 지표를 분리해 기록하시면 됩니다.\n\n(5) 9월 3일 사이버캡·9월 15일 FOMC 일정을 확인하시기 바랍니다.';
+  const invest = padSection(r.invest || '단기 변동성과 장기 실행을 분리해 기록하시기 바랍니다.\n\n분기 실적·규제·수주가 서사를 검증하는 지표입니다.\n\n9월 3일 사이버캡·9월 15~16일 FOMC 전후 포지션 크기에 유의하시기 바랍니다.', 500);
+  return { ...r, detail, why, scenario, flow, longTerm, forward, invest };
+}
+
+const US_REPORTS = [
+  makeReport({
+    id: 'seed-1446', slug: 'tesla-giga-texas-semiconductor', category: 'BREAKING', color: 'mint', subject: '테슬라',
+    title: '테슬라 기가 텍사스 북캠퍼스 반도체 단지 규모가 약 697만 평방피트로 공개됐습니다',
+    summary: '기가 텍사스 북캠퍼스(North Campus) 연면적은 약 6,974,854평방피트, 오스틴 팹(Austin Fab)은 489,600평방피트, 코텍스 2.0(Cortex 2.0)은 46,400평방피트로 거론됩니다. 완공 목표는 2029년 12월 31일입니다.',
+    titleEn: 'Tesla Giga Texas North Campus semiconductor footprint cited at ~6.97M sq ft with Dec 31, 2029 completion target',
+    summaryEn: 'North Campus ~6,974,854 sq ft, Austin Fab 489,600 sq ft, Cortex 2.0 46,400 sq ft; completion target Dec 31, 2029.',
+    detailPs: [
+      '기가 텍사스 북캠퍼스 반도체 단지 연면적이 약 6,974,854평방피트로 공개됐습니다. 오스틴 팹은 489,600평방피트, 코텍스 2.0은 46,400평방피트 규모로 거론됩니다. 완공 목표일은 2029년 12월 31일입니다.',
+      '반도체 팹(공장)은 웨이퍼를 가공해 칩을 만드는 시설입니다. 연면적이 크다는 것은 클린룸·설비·유틸리티 공간이 함께 들어간다는 뜻이며, 「언제 가동하느냐」와 「무엇을 얼마나 생산하느냐」는 별도 질문입니다.',
+      '9월 2일 전후 사이버캡 45대·지오펜스 확대·9월 3일 오스틴 행사 D-1과 겹치며, 텍사스 캠퍼스가 차량·칩·로보택시를 한곳에 모으는 그림으로 읽힙니다.',
+    ],
+    whyPoints: [
+      '약 697만 평방피트 규모는 북미 자체 반도체 생산 역량 확대 신호입니다. 외주 의존도를 낮추려는 전략과 맞물립니다.',
+      '오스틴 팹 489,600평방피트는 실제 웨이퍼 가공 면적의 핵심 지표입니다. 건축 면적과 클린룸 면적은 다를 수 있으므로 분기 공시를 확인하시기 바랍니다.',
+      '코텍스 2.0 46,400평방피트는 설계·제어·소프트웨어 인접 시설로 해석됩니다. 차량·칩·소프트웨어 수직 통합 내러티브와 연결됩니다.',
+      '2029년 12월 31일 완공 목표는 달력에 있는 일정입니다. 허가·장비 입고·수율 램프는 그 이후 이슈입니다.',
+      '9월 3일 사이버캡 행사와 같은 주에 부각되면 「실행」 메시지가 강해질 수 있습니다. 장기 투자자는 착공·설비 발주·인력 채용을 분기마다 추적하시기 바랍니다.',
+    ],
+    flow: '북캠퍼스 6,974,854 SF·오스틴 팹 489,600·코텍스 2.0 46,400·완공 2029-12-31이 9/2 반도체·로보택시 테마로 부각됐습니다.',
+    longTerm: '2010년대 이후 테슬라는 배터리·차량에서 칩·소프트웨어로 수직 통합 범위를 넓혀 왔습니다. 북캠퍼스 규모가 확인되면 5년 뷰에서 공급망·원가 논쟁이 달라질 수 있습니다.',
+  }),
+  makeReport({
+    id: 'seed-1447', slug: 'dell-earnings', category: '종목분석', color: 'blue', subject: '델',
+    title: '델이 주당순이익 7.04달러로 시장 예상 4.92달러를 크게 상회했습니다',
+    summary: '델 2분기(또는 해당 분기) 주당순이익(EPS)은 7.04달러로 컨센서스 4.92달러를 상회했습니다. 매출은 469억 달러로 예상 445억 달러를 넘었습니다.',
+    titleEn: 'Dell reported EPS of $7.04 vs $4.92 consensus; revenue $46.9B vs $44.5B expected',
+    summaryEn: 'Dell EPS $7.04 beat $4.92; revenue $46.9B topped $44.5B consensus.',
+    detailPs: [
+      '델의 주당순이익은 7.04달러로 시장 예상 4.92달러를 크게 웃돌았습니다. 매출은 469억 달러로 예상 445억 달러를 상회했습니다.',
+      'EPS(주당순이익)는 순이익을 발행 주식 수로 나눈 값으로, 한 주당 얼마를 벌었는지 보여 줍니다. 매출 469억 달러는 AI 서버·스토리지·PC 믹스가 함께 반영된 결과일 수 있습니다.',
+      'AI 인프라 수요가 강한 구간에서 서버·스토리지 마진이 실적을 끌어올릴 수 있습니다. 다만 일회성 항목·회계 조정이 EPS를 키울 수 있으므로 조정 EPS도 함께 확인하시기 바랍니다.',
+    ],
+    whyPoints: [
+      'EPS +43%대 상회는 AI 서버 수요가 실적로 전환 중임을 시사할 수 있습니다.',
+      '매출 469억 달러는 예상 대비 약 5% 상회로, 수량·가격·믹스 중 무엇이 기여했는지 분해가 필요합니다.',
+      'PC 사이클 둔화 서사와 AI 서버 성장 서사가 한 회사 안에 공존합니다. 세그먼트별 영업이익을 보시기 바랍니다.',
+      '경쟁사 HP·슈퍼마이크로 실적과 비교하면 업종 전체 vs 점유율 변화를 구분할 수 있습니다.',
+      '장기 투자자는 AI 서버 백로그·출하 일정·마진 가이던스를 분기마다 추적하시기 바랍니다.',
+    ],
+    flow: '델 EPS $7.04 vs $4.92·매출 $46.9B vs $44.5B가 9/2 IT·AI 인프라 실적 테마로 부각됐습니다.',
+  }),
+  makeReport({
+    id: 'seed-1448', slug: 'panw-earnings', category: '종목분석', color: 'blue', subject: '팔로알토네트웍스',
+    title: '팔로알토네트웍스가 주당순이익 1.02달러·매출 34.1억 달러로 예상을 상회했습니다',
+    summary: '팔로알토네트웍스(PANW) 주당순이익은 1.02달러로 예상 0.98달러를, 매출은 34.1억 달러로 예상 33.5억 달러를 상회했습니다.',
+    titleEn: 'Palo Alto Networks beat with EPS $1.02 vs $0.98 and revenue $3.41B vs $3.35B',
+    summaryEn: 'PANW EPS $1.02 vs $0.98; revenue $3.41B vs $3.35B expected.',
+    detailPs: [
+      '팔로알토네트웍스는 주당순이익 1.02달러로 예상 0.98달러를, 매출 34.1억 달러로 예상 33.5억 달러를 상회했습니다.',
+      '사이버보안은 기업 IT 지출 중에서도 필수 항목으로 분류되는 경우가 많습니다. 매출 상회는 신규 계약·갱신률·플랫폼 통합 수요를 동시에 시사할 수 있습니다.',
+      '클라우드·AI 확대와 함께 보안 지출도 늘어난다는 논리가 실적에 반영됐는지, 다음 분기 가이던스에서 확인하시기 바랍니다.',
+    ],
+    whyPoints: [
+      '보안은 경기 둔화 구간에서도 지출이 유지되는 편입니다. 매출 상회는 방어적 성장 신호로 읽힐 수 있습니다.',
+      'EPS 1.02달러는 소폭 상회이지만, 가이던스·ARR(연간 반복 매출)가 더 중요할 수 있습니다.',
+      '경쟁사 포티넷·크라우드스트라이크 실적과 비교하면 업종 전체 vs 점유율 변화를 구분할 수 있습니다.',
+      '기업 IT 예산이 AI로 쏠리면서 보안 비중이 줄어드는지 여부가 중기 변수입니다.',
+      '장기 투자자는 플랫폼 통합·갱신률·신규 로고 수를 분기마다 추적하시기 바랍니다.',
+    ],
+    flow: 'PANW EPS $1.02·매출 $3.41B 상회가 9/2 사이버보안 실적 테마로 부각됐습니다.',
+  }),
+  makeReport({
+    id: 'seed-1449', slug: 'cybercab-45-golden', category: 'BREAKING', color: 'mint', subject: '테슬라',
+    title: '오스틴 사이버캡이 45대로 늘고 지오펜스가 약 264제곱마일로 확대됐습니다',
+    summary: '오스틴 사이버캡(Cybercab) 등록 차량이 45대이며 골든 캡(golden cab)이 함께 거론됩니다. 운행 지오펜스(geofence)는 약 9% 확대돼 약 264제곱마일에 달합니다. 9월 3일 사이버캡 전용 행사가 하루 앞(D-1)입니다.',
+    titleEn: 'Austin Cybercab fleet at 45 with geofence ~264 sq mi (+9%); Cybercab event D-1 on Sept 3',
+    summaryEn: '45 Cybercabs in Austin, golden cabs cited, geofence +9% to ~264 sq mi; Sept 3 Cybercab event is one day away.',
+    detailPs: [
+      '오스틴 사이버캡 등록 차량이 45대로 집계됐습니다. 골든 캡은 특별 시범·홍보용 차량으로 해석되는 경우가 많으며, 지오펜스는 약 9% 확대돼 약 264제곱마일에 달합니다.',
+      '사이버캡은 운전석·페달 없이 처음부터 무인 운행용으로 만든 전용 로보택시입니다. 지오펜스는 차량이 자율주행할 수 있는 지도상 구역을 뜻합니다.',
+      '9월 3일 오스틴 전용 행사가 D-1이므로, 등록 대수·지오펜스·무인 시연 영상이 단기 변동성 촉매가 될 수 있습니다.',
+    ],
+    whyPoints: [
+      '45대는 「몇 대가 도로에 있는가」를 보여 주는 공개 지표입니다. 9% 지오펜스 확대는 허가·기술이 함께 진행 중임을 시사합니다.',
+      '골든 캡은 브랜드·시연용일 수 있으므로 상용 fleet과 구분해 기록하시기 바랍니다.',
+      '264제곱마일은 오스틴 metro 일부를 커버하는 규모로 읽힙니다. 면적만 늘고 무인 비중이 낮으면 의미가 달라질 수 있습니다.',
+      'D-1 구간은 기대가 최대일 때입니다. 행사 내용과 숫자가 엇갈리면 변동성이 커질 수 있습니다.',
+      '장기 투자자는 일별 등록·무인 마일·사고율 정의를 분기마다 추적하시기 바랍니다.',
+    ],
+    flow: '사이버캡 45대·골든 캡·지오펜스 ~264 sq mi(+9%)·9/3 행사 D-1이 9/2 로보택시 핵심입니다.',
+  }),
+  makeReport({
+    id: 'seed-1450', slug: 'spacex-1t-orbital-compute', category: 'BREAKING', color: 'purple', subject: '스페이스X',
+    title: '스페이스X가 2030년 궤도 연산(orbital compute)으로 1조 달러 매출을 목표로 한다는 전망이 나왔습니다',
+    summary: '2030년 궤도 연산 사업이 10기가와트(GW) 규모에 달하고, 매출은 3,000억~5,000억 달러로 거론됩니다. 합산하면 1조 달러 매출 목표로 읽힐 수 있습니다.',
+    titleEn: 'SpaceX cited targeting ~$1T revenue by 2030 from orbital compute at 10 GW ($300-500B)',
+    summaryEn: 'Orbital compute at 10 GW by 2030 with $300-500B revenue cited; ~$1T total revenue narrative.',
+    detailPs: [
+      '궤도 연산(orbital compute)은 위성에 데이터센터급 연산 장비를 올려 우주에서 AI·처리를 수행하는 구상입니다. 10GW는 대형 데이터센터 단지 여러 개에 해당하는 전력·연산 규모입니다.',
+      '2030년 10GW·매출 3,000억~5,000억 달러 전망이 거론되며, 발사·위성·전력·규제가 모두 관문입니다.',
+      '지상 데이터센터 전력 병목과 맞물려 「우주로 연산을 옮긴다」는 내러티브가 2026년 후반 투자 테마로 부상하고 있습니다.',
+    ],
+    whyPoints: [
+      '1조 달러 매출 목표는 선언 수준입니다. GW가 실제 궤도에 올라가고 전원이 투입돼야 매출로 전환됩니다.',
+      '10GW는 엔비디아·하이퍼스케일러 GW 단위 투자와 같은 언어입니다. 고객·계약이 없으면 숫자만 남습니다.',
+      '발사 비용·위성 수명·열·방사선이 기술 리스크입니다. F14·V3 일정과 같은 발사 cadence가 전제입니다.',
+      '지상 DC 대비 지연·유지보수·규제 비용을 뺀 경제성이 증명돼야 합니다.',
+      '장기 투자자는 발사 횟수·위성망·기업용 계약을 지상 사업과 분리해 기록하시기 바랍니다.',
+    ],
+    flow: '궤도 연산 10GW·$300-500B·2030 $1T 매출 서사가 9/2 우주·AI 테마로 부각됐습니다.',
+  }),
+  makeReport({
+    id: 'seed-1451', slug: 'spacex-datacenter-shakeup', category: '종목분석', color: 'purple', subject: '스페이스X',
+    title: '스페이스X 데이터센터 팀 인사 변동이 궤도 연산 실행 리스크를 다시 부각했습니다',
+    summary: '데이터센터 관련 팀에서 인사·조직 변동이 거론됐습니다. 궤도 연산·지상 인프라 실행력과 맞물려 단기 실행 리스크로 읽힐 수 있습니다.',
+    titleEn: 'SpaceX datacenter team shakeup highlights execution risk for orbital compute plans',
+    summaryEn: 'Leadership changes in the datacenter team raise questions about orbital compute execution.',
+    detailPs: [
+      '데이터센터 관련 팀에서 인사·조직 변동이 9월 2일 전후 보도됐습니다. 조직 변동은 프로젝트 우선순위·일정·채용에 영향을 줄 수 있습니다.',
+      '궤도 연산 구상은 하드웨어·소프트웨어·전력·발사가 한 팀으로 맞물려야 합니다. 핵심 인력 이동은 「누가 실행하느냐」 질문을 다시 던집니다.',
+      '비상장 기업은 분기 공시가 없으므로, 채용 공고·발사 일정·파트너 발표가 간접 지표가 됩니다.',
+    ],
+    whyPoints: [
+      '인사 변동 자체가 실패를 뜻하지는 않지만, 실행 일정 불확실성을 키울 수 있습니다.',
+      '데이터센터 팀은 지상 파일럿과 궤도 로드맵을 연결하는 축일 수 있습니다.',
+      '경쟁사·하이퍼스케일러 자체 DC 팀과 인재 경쟁이 겹칩니다.',
+      'F14·V3 등 발사 일정과 별개로 조직 안정화 시점을 추적하시기 바랍니다.',
+      '장기 투자자는 「발사 성공」과 「연산 서비스 매출」을 분리해 기록하시기 바랍니다.',
+    ],
+    flow: 'DC 팀 shakeup·궤도 연산 $1T 서사가 9/2 같은 우주·AI 흐름에서 부각됐습니다.',
+  }),
+  makeReport({
+    id: 'seed-1452', slug: 'tesla-europe-sales', category: 'BREAKING', color: 'mint', subject: '테슬라',
+    title: '테슬라 프랑스 8월 판매가 전년 대비 279%·덴마크 104% 증가했습니다',
+    summary: '프랑스 8월 등록 대수는 전년 동월 대비 약 279% 증가, 덴마크는 약 104% 증가한 것으로 거론됩니다. 유럽 수요 회복·모델 라인업·가격 변수가 함께 읽힙니다.',
+    titleEn: 'Tesla France August sales +279% YoY; Denmark +104% YoY',
+    summaryEn: 'France +279% YoY and Denmark +104% YoY August registrations cited for Tesla.',
+    detailPs: [
+      '프랑스 8월 테슬라 등록 대수는 전년 대비 약 279% 증가, 덴마크는 약 104% 증가한 것으로 집계됐습니다.',
+      '유럽 판매는 국가별 보조금·관세·경쟁 EV 출시·모델 Y/3 가격 인하와 맞물립니다. 전년 대비 %가 크다는 것은 기저가 낮았거나 신차 효과일 수 있습니다.',
+      '9월 3일 사이버캡 행사와 겹치는 주에 유럽 판매 급증은 「글로벌 수요」 내러티브를 보강할 수 있습니다.',
+    ],
+    whyPoints: [
+      '279%·104%는 국가별 단기 스파이크입니다. 분기·연간 추이로 확인하시기 바랍니다.',
+      '프랑스·덴마크는 유럽 전체의 일부입니다. 독일·노르웨이 등 다른 시장과 함께 봐야 합니다.',
+      '가격 인하·리스·보조금 종료가 숫자를 왜곡할 수 있습니다.',
+      '유럽 공장(베를린) 생산·수출 믹스도 변수입니다.',
+      '장기 투자자는 국가별 등록·ASP·마진을 분기마다 추적하시기 바랍니다.',
+    ],
+    flow: '프랑스 +279%·덴마크 +104% YoY 8월 판매가 9/2 유럽·테슬라 테마로 부각됐습니다.',
+  }),
+  makeReport({
+    id: 'seed-1453', slug: 'starship-f14-v3-fcc', category: 'BREAKING', color: 'purple', subject: '스페이스X',
+    title: '스타십 14번째 비행(F14)이 9월 15일 2026년 첫 궤도 시험 후보로 거론됩니다',
+    summary: 'F14는 9월 15일 2026년 전후 첫 궤도 비행 후보입니다. 스타링크 V3는 위성당 용량 약 10배, FCC 특별임시허가(STA) 42.0~42.5GHz 대역이 맞물립니다.',
+    titleEn: 'Starship Flight 14 may be first orbital around Sept 15, 2026; V3 10x; FCC STA 42.0-42.5 GHz',
+    summaryEn: 'F14 first orbital candidate ~Sept 15 2026; Starlink V3 ~10x capacity; FCC STA 42.0-42.5 GHz.',
+    detailPs: [
+      '스타십 14번째 비행(F14)이 2026년 9월 15일 전후 첫 궤도 비행 후보로 거론됩니다. V3 위성은 위성당 용량이 약 10배 커지고, FCC STA(특별임시허가) 42.0~42.5GHz 대역이 상용 배치와 연결됩니다.',
+      '궤도 비행은 대기권을 넘어 한 바퀴 이상 도는 시험으로, 이전 아시아틱(최대고도) 시험과 단계가 다릅니다.',
+      '9월 3일 사이버캡·9월 15일 F14·9월 15~16일 FOMC가 같은 달에 겹쳐 변동성이 커질 수 있습니다.',
+    ],
+    whyPoints: [
+      '첫 궤도 성공은 재사용 로켓 신뢰도를 한 단계 올립니다. 실패·연기는 cadence 전체를 미룹니다.',
+      'V3 10배 용량은 같은 발사 횟수로 더 많은 가입자를 수용한다는 뜻입니다.',
+      'FCC STA 42.0~42.5GHz는 주파수 사용 관문입니다. 허가 조건이 일정을 좌우할 수 있습니다.',
+      'F14와 V3 배치가 겹치면 「허가+발사+세대 교체」가 한 달에 몰립니다.',
+      '장기 투자자는 분기 궤도 위성 수·발사 성공률을 추적하시기 바랍니다.',
+    ],
+    flow: 'F14 9/15 첫 궤도·V3 10×·FCC 42.0-42.5GHz STA가 9/2 위성·발사 테마입니다.',
+  }),
+  makeReport({
+    id: 'seed-1454', slug: 'anthropic-lambda-hut8', category: '종목분석', color: 'purple', subject: '앤스로픽',
+    title: '앤스로픽이 람다와 350억 달러 규모 계약·텍사스 헛8 데이터센터·엔비디아 GPU를 맞췄습니다',
+    summary: '앤스로픽(Anthropic)과 람다(Lambda) 간 약 350억 달러 규모 계약, 텍사스 헛8(Hut 8) 데이터센터, 엔비디아 GPU 공급이 9월 2일 전후 부각됐습니다.',
+    titleEn: 'Anthropic $35B Lambda deal ties Hut 8 Texas datacenter and NVIDIA GPUs',
+    summaryEn: 'Anthropic-Lambda ~$35B deal with Hut 8 Texas site and NVIDIA GPU supply cited.',
+    detailPs: [
+      '앤스로픽과 람다 간 약 350억 달러 규모 계약이 거론됐습니다. 텍사스 헛8 데이터센터와 엔비디아 GPU가 맞물립니다.',
+      'AI 모델 학습·추론은 GPU 수천~수만 장과 전력(GW)이 필요합니다. 계약 규모는 「몇 년·몇 GW」를 암시하지만 착공·전원 투입 전까지는 계획입니다.',
+      '헛8은 비트코인 채굴에서 AI 호스팅으로 피벗하는 사례로도 읽힙니다. 전력·부지·냉각이 핵심 자산입니다.',
+    ],
+    whyPoints: [
+      '350억 달러는 AI 인프라 capex가 모델 회사에서 인프라 파트너로 전가되는 구조를 보여 줍니다.',
+      '엔비디아 GPU 수주는 출하·마진에 직결됩니다. 공급 제약이 일정을 미룰 수 있습니다.',
+      '텍사스 전력·허가가 실행 관문입니다. 사우스헤이븐·기가팩토리와 같은 전력 테마와 연결됩니다.',
+      '람다·코어위브 등 neocloud 경쟁이 가격·가용성을 좌우합니다.',
+      '장기 투자자는 powered GW·GPU 가동률을 분기마다 추적하시기 바랍니다.',
+    ],
+    flow: 'Anthropic $35B Lambda·Hut 8 Texas·NVDA GPU가 9/2 AI 인프라 테마입니다.',
+  }),
+  makeReport({
+    id: 'seed-1455', slug: 'google-fervo-geothermal', category: '종목분석', color: 'blue', subject: '구글',
+    title: '구글이 유타 페르보(Fervo) 지열 396메가와트(MW) 프로젝트에 참여합니다',
+    summary: '구글(Google)이 유타 페르보 지열 발전 396MW 프로젝트에 참여한다는 보도가 나왔습니다. 데이터센터 전력 병목 해소를 위한 재생에너지·24시간 전력이 핵심입니다.',
+    titleEn: 'Google joins Fervo 396MW geothermal project in Utah for data-center power',
+    summaryEn: 'Google cited in Fervo 396MW Utah geothermal — baseload clean power for AI data centers.',
+    detailPs: [
+      '구글이 유타 페르보(Fervo) 지열 발전 396MW 프로젝트에 참여한다는 보도가 9월 2일 전후 나왔습니다.',
+      '지열은 24시간 안정적으로 전력을 공급할 수 있는 재생에너지입니다. AI 데이터센터는 태양광만으로는 밤·연속 가동을 맞추기 어렵습니다.',
+      '396MW는 대형 DC 한 단지 또는 여러 단지에 해당하는 규모입니다. 착공·송전 연결·가동 시점이 매출·탄소 목표에 연결됩니다.',
+    ],
+    whyPoints: [
+      '전력 병목은 2026~27 AI capex의 핵심 제약입니다. 지열·가스·원자력이 같은 해결책 풀입니다.',
+      '396MW는 「발표」와 「가동」이 다릅니다. 허가·시추·송전 일정을 추적하시기 바랍니다.',
+      '구글 자체 소비 외에 PPA(전력구매계약) 구조가 업계 표준이 될 수 있습니다.',
+      '페르보 등 EGS(향상형 지열) 기술 수율이 비용을 좌우합니다.',
+      '장기 투자자는 powered DC GW와 재생에너지 PPA를 같은 표에 두시기 바랍니다.',
+    ],
+    flow: 'Google 396MW Fervo Utah 지열이 9/2 DC 전력 테마로 부각됐습니다.',
+  }),
+  makeReport({
+    id: 'seed-1456', slug: 'waymo-14-cities', category: 'BREAKING', color: 'mint', subject: '웨이모',
+    title: '웨이모가 14개 도시에서 유료 승차를 확대하며 덴버·샌디에이고·탬파가 포함됩니다',
+    summary: '웨이모(Waymo)는 14개 도시에서 서비스 중이며, 덴버·샌디에이고·탬파 등에서 유료 승차(paid rides)가 거론됩니다. fleet 표는 차량 수·서비스 면적·유료 전환 단계를 보여 줍니다.',
+    titleEn: 'Waymo expands paid rides across 14 cities including Denver, San Diego, and Tampa',
+    summaryEn: 'Waymo at 14 cities with paid rides in Denver, San Diego, Tampa per fleet table.',
+    detailPs: [
+      '웨이모는 14개 도시에서 로보택시 서비스를 운영 중이며, 덴버·샌디에이고·탬파에서 유료 승차가 확대된다는 보도가 나왔습니다.',
+      '유료 승차는 무료 시범에서 상용 매출로 넘어가는 단계입니다. 마일당 요금·가동률·안전 기록이 밸류에이션 변수입니다.',
+      '9월 3일 테슬라 사이버캡 행사와 겹치며, 로보택시는 「테슬라 vs 웨이모」 비교 프레임이 강해질 수 있습니다.',
+    ],
+    whyPoints: [
+      '14개 도시는 지리적 확장 속도를 보여 줍니다. 도시마다 허가·지도·날씨가 다릅니다.',
+      '유료 전환은 unit economics(마일당 손익) 검증 단계입니다.',
+      '덴버·샌디에이고·탬파는 새 시장으로 경쟁 심화 신호일 수 있습니다.',
+      'fleet 표의 차량 수·무인 비중을 주간 추적하시기 바랍니다.',
+      '장기 투자자는 도시별 마일·매출·규제를 분리해 기록하시기 바랍니다.',
+    ],
+    flow: 'Waymo 14 cities·Denver/SD/Tampa paid rides가 9/2 자율주행 경쟁 테마입니다.',
+  }),
+  makeReport({
+    id: 'seed-1457', slug: 'youtube-amazon-tagging', category: '종목분석', color: 'orange', subject: '유튜브',
+    title: '유튜브가 아마존 제품 태깅 기능으로 쇼핑·광고 수익을 넓힙니다',
+    summary: '유튜브(YouTube) 영상에 아마존(Amazon) 제품 태깅·연동 기능이 거론됐습니다. 크리에이터 수익·쇼핑 전환·광고 믹스가 플랫폼 경쟁 변수입니다.',
+    titleEn: 'YouTube Amazon product tagging expands shopping and ad revenue tie-ins',
+    summaryEn: 'YouTube-Amazon product tagging cited for creator commerce and ad mix.',
+    detailPs: [
+      '유튜브 영상에 아마존 제품을 태그해 바로 구매로 연결하는 기능이 9월 2일 전후 보도됐습니다.',
+      '제품 태깅은 「시청 → 클릭 → 구매」 전환을 플랫폼 안에 가두려는 시도입니다. 크리에이터 수수료·아마존 제휴 수익이 새 매출 축이 될 수 있습니다.',
+      '틱톡·인스타 쇼핑·구글 자체 커머스와 경쟁합니다. 규제·개인정보·아동 콘텐츠 정책도 변수입니다.',
+    ],
+    whyPoints: [
+      '쇼핑 태깅은 광고 외 수익 다변화입니다. ARPU(가입자당 매출) 구조가 달라질 수 있습니다.',
+      '아마존 제휴는 양사 실적에 미세하게 기여할 수 있습니다. 전환율·수수료율이 핵심입니다.',
+      '크리에이터 이탈·정책 변경 리스크가 있습니다.',
+      'EU·미국 반독점 관점에서 플랫폼 결합이 이슈될 수 있습니다.',
+      '장기 투자자는 쇼핑 GMV·광고 성장률을 분기마다 추적하시기 바랍니다.',
+    ],
+    flow: 'YouTube Amazon product tagging이 9/2 플랫폼·커머스 테마로 부각됐습니다.',
+  }),
+  makeReport({
+    id: 'seed-1458', slug: 'fear-greed-44', category: '시장분석', color: 'red', subject: '매크로',
+    title: '공포·탐욕 지수가 44로 하락해 1주 전 56(탐욕)에서 중립 아래로 내려왔습니다',
+    summary: 'CNN 공포·탐욕 지수(Fear & Greed)는 44로, 1주 전 56(탐욕 구간)에서 하락했습니다. 단기 심리 둔화·변동성 확대 신호로 읽힐 수 있습니다.',
+    titleEn: 'Fear & Greed Index fell to 44 from 56 (greed) a week ago',
+    summaryEn: 'Fear & Greed at 44 vs 56 one week ago — sentiment cooled below neutral.',
+    detailPs: [
+      '공포·탐욕 지수는 44로 집계됐으며, 1주 전 56(탐욕)에서 하락했습니다. 0에 가까울수록 공포, 100에 가까울수록 탐욕입니다.',
+      '지수는 변동성·시장 모멘텀·안전자산 수요·정크본드 수요 등 여러 지표를 합친 심리 지표입니다. 단독 매매 신호보다 맥락 참고용입니다.',
+      '9월 3일 사이버캡·9월 4일 고용·9월 15일 FOMC 앞두고 심리가 냉각된 것으로 읽힐 수 있습니다.',
+    ],
+    whyPoints: [
+      '56→44는 탐욕에서 중립 아래로의 이동입니다. 급락장 신호는 아니지만 관망 심리를 시사할 수 있습니다.',
+      '심리 지수는 후행·동행이 섞여 있습니다. 가격이 먼저 움직이고 지수가 따라올 수 있습니다.',
+      'VIX·크레딧 스프레드와 함께 보면 해석이 정확해집니다.',
+      'FOMC 전 심리 둔화는 포지션 축소와 맞물릴 수 있습니다.',
+      '장기 투자자는 심리 지수보다 실적·금리 경로를 우선하시기 바랍니다.',
+    ],
+    flow: 'Fear & Greed 44(1주 전 56)가 9/2 매크로 심리 테마입니다.',
+  }),
+  makeReport({
+    id: 'seed-1459', slug: 'apple-openai-evidence', category: 'BREAKING', color: 'blue', subject: '애플',
+    title: '애플이 OpenAI가 소송 증거를 파기했다고 주장하며 AI·법적 리스크가 부각됐습니다',
+    summary: '애플(Apple)이 OpenAI가 소송 관련 증거를 파기(destroying evidence)했다고 주장했다는 보도가 나왔습니다. AI 파트너십·반독점·소송 리스크가 겹칩니다.',
+    titleEn: 'Apple alleges OpenAI destroyed evidence in litigation, raising AI legal risk',
+    summaryEn: 'Apple claims OpenAI destroyed evidence — legal overhang on AI partnerships.',
+    detailPs: [
+      '애플이 OpenAI가 소송 관련 증거를 파기했다고 주장했다는 보도가 9월 2일 전후 나왔습니다. 법원이 주장을 어떻게 판단할지는 불확실합니다.',
+      '애플·OpenAI 간 AI 기능 통합·독점 배제·데이터 사용 권한은 이미 규제·소송 변수입니다. 증거 파기 주장은 절차 리스크를 키웁니다.',
+      '소프트웨어·AI 투자자에게는 「기술」과 「법적 비용·일정 지연」을 분리해 봐야 합니다.',
+    ],
+    whyPoints: [
+      '증거 파기 주장은 판결 전 절차 이슈입니다. 과장·보도와 법원 결정은 다를 수 있습니다.',
+      '애플 AI 로드맵(Siri·온디바이스·클라우드)에 지연이 생기면 서비스 매출 기대가 바뀔 수 있습니다.',
+      'OpenAI·MSFT·GOOGL 간 파트너십 경쟁에 법적 마찰이 겹칩니다.',
+      '규제당국도 AI 데이터·독점을 주시하고 있습니다.',
+      '장기 투자자는 소송 일정·결과와 제품 출시를 분리해 기록하시기 바랍니다.',
+    ],
+    flow: 'Apple OpenAI 증거 파기 주장이 9/2 AI·법무 테마로 부각됐습니다.',
+  }),
+];
+
+// Write ko-reports
+const koReportsJs = `// seed-1446 ~ seed-1459 — required by fix-reports-20260902-ko.js
+module.exports = ${JSON.stringify(US_REPORTS, null, 2).replace(/"([^"]+)":/g, '$1:').replace(/\\n/g, '\\n')};
+`;
+// Fix JSON export - use proper module format
+let reportsOut = '// seed-1446 ~ seed-1459 — required by fix-reports-20260902-ko.js\nmodule.exports = [\n';
+for (const r of US_REPORTS) {
+  reportsOut += '  {\n';
+  for (const [k, v] of Object.entries(r)) {
+    if (typeof v === 'string') {
+      reportsOut += `    ${k}: ${JSON.stringify(v)},\n`;
+    } else {
+      reportsOut += `    ${k}: ${JSON.stringify(v)},\n`;
+    }
+  }
+  reportsOut += '  },\n';
+}
+reportsOut += '];\n';
+w('scripts/fix-reports-20260902-ko-reports.js', reportsOut);
+
+// Analyst posts
+const ANALYST = [
+  { id: -976, alias: '종로 까치 #41', symbol: 'MACRO', content: '9/2 한 화면 정리입니다.\n— 기가텍사스 반도체 북캠퍼스 6,974,854 SF·완공 2029-12-31\n— 델 EPS $7.04 vs $4.92·매출 $46.9B\n— PANW EPS $1.02·매출 $3.41B\n— 사이버캡 45대·지오펜스 ~264 sq mi·9/3 D-1\n— SpaceX 궤도연산 10GW·$1T 매출 서사·DC 팀 변동\n— 테슬라 프랑스 +279%·덴마크 +104% YoY\n— F14 9/15·V3 10×·FCC 42.0-42.5GHz\n— Anthropic $35B Lambda·Hut 8·NVDA GPU\n— Google 396MW Fervo 지열\n— Waymo 14개 도시 유료 승차\n— YouTube Amazon 태깅\n— Fear & Greed 44(1주 전 56)\n— Apple OpenAI 증거 파기 주장\n9/3 사이버캡 전후 변동성에 대비하시기 바랍니다.' },
+  { id: -977, alias: '광화문 여우 #62', symbol: 'TSLA', content: '기가 텍사스 북캠퍼스 연면적 약 697만 SF, 오스틴 팹 489,600·코텍스 2.0 46,400 SF입니다. 완공 목표 2029년 12월 31일.\n반도체 팹은 「면적 발표」와 「가동」이 다릅니다. 착공·장비·수율을 분기마다 확인하시기 바랍니다.' },
+  { id: -978, alias: '여의도 수리 #28', symbol: 'DELL', content: '델 EPS $7.04는 컨센서스 $4.92를 크게 상회했습니다. 매출 $46.9B vs $44.5B.\nAI 서버·스토리지 믹스가 마진을 끌어올렸는지 세그먼트별 영업이익을 보시면 됩니다.' },
+  { id: -979, alias: '송파 독수리 #66', symbol: 'PANW', content: 'PANW EPS $1.02·매출 $3.41B로 소폭 상회. 보안 지출은 AI capex와 함께 늘 수 있는 축입니다.\nARR·갱신률이 다음 분기 관건입니다.' },
+  { id: -980, alias: '분당 매 #31', symbol: 'TSLA', content: '오스틴 사이버캡 45대, 골든 캡, 지오펜스 약 264 sq mi(+9%). 9월 3일 행사 D-1입니다.\n등록 대수·면적·무인 비중을 행사 전후로 나눠 기록하시기 바랍니다.' },
+  { id: -981, alias: '성수 너구리 #15', symbol: 'SPCX', content: '궤도 연산 10GW·2030년 매출 $300-500B·합산 $1T 서사가 거론됐습니다. 동시에 DC 팀 인사 변동도 부각됐습니다.\n발사 cadence와 powered GW를 지상 사업과 분리해 추적하시면 됩니다.' },
+  { id: -982, alias: '역삼 판다 #77', symbol: 'SPCX', content: '데이터센터 팀 shakeup은 실행 리스크 신호로 읽힐 수 있습니다. 궤도 연산 로드맵과 별개로 조직 안정화 시점을 보시기 바랍니다.' },
+  { id: -983, alias: '삼성동 올빼미 #19', symbol: 'TSLA', content: '프랑스 8월 +279% YoY, 덴마크 +104% YoY. 국가별 스파이크이므로 분기·연간 추이로 검증하시기 바랍니다.\n9/3 사이버캡와 유럽 판매가 같은 주에 겹칩니다.' },
+  { id: -984, alias: '한남 재규어 #27', symbol: 'SPCX', content: 'F14가 9월 15일 2026년 전후 첫 궤도 후보입니다. V3 10×·FCC STA 42.0-42.5GHz가 맞물립니다.\n허가·발사·궤도 투입을 분리해 기록하시기 바랍니다.' },
+  { id: -985, alias: '해운대 고래 #03', symbol: 'AI', content: 'Anthropic $35B Lambda 계약, Hut 8 Texas, NVIDIA GPU가 한 줄로 묶였습니다.\n350억 달러는 계획이며 착공·전원 투입·GPU 가동률로 검증해야 합니다.' },
+  { id: -986, alias: '마포 살쾡이 #08', symbol: 'GOOGL', content: 'Google 396MW Fervo 지열 Utah. AI DC 전력 병목 해소를 위한 24시간 재생에너지 축입니다.\n396MW 가동 시점과 PPA 구조를 확인하시기 바랍니다.' },
+  { id: -987, alias: '판교 늑대 #90', symbol: 'GOOGL', content: 'Waymo 14개 도시, Denver·San Diego·Tampa 유료 승차. 9/3 테슬라 사이버캡와 비교 프레임이 강해집니다.\n도시별 마일·요금·무인 비중을 추적하시면 됩니다.' },
+  { id: -988, alias: '인천 갈매기 #52', symbol: 'GOOGL', content: 'YouTube에 Amazon 제품 태깅. 쇼핑 전환·크리에이터 수익이 광고 외 축으로 넓어집니다.\n전환율·수수료·규제를 함께 보시기 바랍니다.' },
+  { id: -989, alias: '종로 까치 #41', symbol: 'MACRO', content: 'Fear & Greed 44, 1주 전 56(탐욕)에서 하락. FOMC·9/3 행사 앞 심리 둔화로 읽힐 수 있습니다.\n지수만으로 매매하기보다 VIX·실적과 함께 맥락을 보시면 됩니다.' },
+  { id: -990, alias: '광화문 여우 #62', symbol: 'AAPL', content: 'Apple이 OpenAI의 증거 파기를 주장했다는 보도가 나왔습니다. 법원 판단 전까지는 절차 리스크로 보시기 바랍니다.\nAI 제품 일정과 소송 일정을 분리해 추적하시면 됩니다.' },
+];
+w('scripts/fix-reports-20260902-ko-analyst.js', `// analystPosts -976 ~ -990\nmodule.exports = ${JSON.stringify(ANALYST, null, 2)};\n`);
+
+console.log('US reports:', US_REPORTS.length, 'avg body', Math.round(US_REPORTS.reduce((s,r)=>s+r.detail.length+r.why.length,0)/US_REPORTS.length));

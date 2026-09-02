@@ -22,6 +22,8 @@ const P = {
   TSLA:   { fg:'#4ade80', fg2:'#22c55e', bg2:'#061209', card:'#0a1a0a' },
   SPCX:   { fg:'#c084fc', fg2:'#a78bfa', bg2:'#140b1f', card:'#1a0f2a' },
   AMZN:   { fg:'#ff9900', fg2:'#e58600', bg2:'#1a0e00', card:'#201408' },
+  GOOGL:  { fg:'#4285f4', fg2:'#34a853', bg2:'#06121f', card:'#0a1420' },
+  AAPL:   { fg:'#a1a1aa', fg2:'#71717a', bg2:'#0f0f10', card:'#141416' },
   AI:     { fg:'#a78bfa', fg2:'#8b5cf6', bg2:'#120b1f', card:'#180f28' },
   KOSPI:  { fg:'#38bdf8', fg2:'#0ea5e9', bg2:'#061520', card:'#0a1a26' },
   FLOW:   { fg:'#22d3ee', fg2:'#06b6d4', bg2:'#06171c', card:'#0a1c22' },

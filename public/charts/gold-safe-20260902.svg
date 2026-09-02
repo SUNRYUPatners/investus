@@ -11,10 +11,10 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.02</text>
-  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">금이 온스당 약 3,475달러, 금&gt;달러 준비자산 서사를 재점검합니다</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">금이 온스당 약 2,520달러, 금&gt;달러 준비자산 서사를 재점검합니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🥇</text>
-  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#facc15" text-anchor="middle">약 3,475달러</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#facc15" text-anchor="middle">약 2,520달러</text>
   <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">금요일 조정 뒤 월요일 재정비 구간으로, 3,450~3,500달러 밴드를 확인합니다.</text>
   <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
   <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">8월 말</text>
@@ -23,7 +23,7 @@
   <text x="540" y="455" font-family="Arial Black,Arial" font-size="40" fill="#facc15" text-anchor="middle">&#8594;</text>
   <rect x="600" y="356" width="420" height="168" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="810" y="400" font-family="Arial" font-size="20" fill="#facc15" text-anchor="middle">9월 1일</text>
-  <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#facc15" text-anchor="middle">3,475달러</text>
+  <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#facc15" text-anchor="middle">2,520달러</text>
   <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">준비자산 서사 재점검</text>
   <rect x="60" y="548" width="300" height="164" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="1.5"/>
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">🏦</text>
@@ -46,7 +46,7 @@
   <text x="540" y="908" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">왜 중요한가</text>
   <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">단기 조정과 장기 중앙은행 수요를 분리해서 보시기 바랍니다. 3,450~3,500달러 구간에서 횡보하면 금리 변수 변화를 기다리는</text>
   <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">구간일 수 있습니다. 금 ETF 보유량 변화도 함께 확인하시면 됩니다.</text>
-  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">금 · 3,475달러 · 2026.09.02</text>
+  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">금 · 2,520달러 · 2026.09.02</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

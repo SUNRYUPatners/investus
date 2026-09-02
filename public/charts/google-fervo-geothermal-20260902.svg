@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4285f4"/><stop offset="100%" style="stop-color:#34a853"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4285f430" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4285f4" text-anchor="middle">GOOGL</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.02</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">구글이 유타 페르보 지열 396메가와트 프로젝트에 참여합니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">♨️</text>
+  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#4285f4" text-anchor="middle">396 MW</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">지열은 24시간 전력을 공급할 수 있어 AI 데이터센터 baseload(기저전력) 후보입니다.</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="418" width="300" height="176" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">규모</text>
+  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4285f4" text-anchor="middle">396 MW</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">지열</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">유타 페르보</text>
+  <rect x="390" y="418" width="300" height="176" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">24h</text>
+  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4285f4" text-anchor="middle">기저</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">안정 전력</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">태양광 보완</text>
+  <rect x="720" y="418" width="300" height="176" rx="16" fill="#0a1420" stroke="#4285f4" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">DC</text>
+  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4285f4" text-anchor="middle">AI</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">전력 병목</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">GW 단위 수요</text>
+  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">왜 지열인가</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">♨️ EGS(향상형 지열)로 24시간 전력</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">⚡ AI DC는 연속 가동 전력이 필요</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">📋 허가·시추·송전이 일정 변수</text>
+  <rect x="60" y="800" width="960" height="148" rx="14" fill="#0a1420" stroke="#4285f4" stroke-width="1"/>
+  <text x="540" y="830" font-family="Arial" font-size="18" fill="#4285f4" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이 소식은 단기 주가뿐 아니라 실행 일정과 분기 실적로 검증해야 합니다. 전문 용어는 공식 발표·가이던스·규제 문서로 정의를</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인하시기 바랍니다. 9월 3일 사이버캡·9월 15일 F14·FOMC 전후 변동성에 대비하시면 됩니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">GOOGL · Fervo 지열 · 2026.09.02</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

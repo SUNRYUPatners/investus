@@ -10,6 +10,12 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9048, symbol: "코스피", nickname: "종토_9048", holdingLabel: "관심종목", content: "6875 +0.9% · 외국인 890억 순매수 · Cybercab D-1", createdAt: T02 - 0, likes: 30, comments: 2, },
+  { id: 9049, symbol: "삼성전자", nickname: "종토_9049", holdingLabel: "관심종목", content: "+1.8% · HBM · 외국인 수급", createdAt: T02 - 1800000, likes: 29, comments: 2, },
+  { id: 9050, symbol: "SK하이닉스", nickname: "종토_9050", holdingLabel: "관심종목", content: "+1.6% · HBM 테마", createdAt: T02 - 3600000, likes: 28, comments: 2, },
+  { id: 9051, symbol: "현대차", nickname: "종토_9051", holdingLabel: "관심종목", content: "Cybercab D-1 · 완성차 심리", createdAt: T02 - 5400000, likes: 27, comments: 2, },
+  { id: 9052, symbol: "코스피", nickname: "종토_9052", holdingLabel: "관심종목", content: "외국인 890억 · 환율 1366.5", createdAt: T02 - 7200000, likes: 26, comments: 2, },
+  { id: 9053, symbol: "환율", nickname: "종토_9053", holdingLabel: "관심종목", content: "1366.5원 · 외국인 순매수 연동", createdAt: T02 - 9000000, likes: 25, comments: 2, },
   { id: 9042, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "관심종목", content: "6873.50 +0.90% · 외국인 890억 순매수 · 사이버캡 D-1", createdAt: T02 - 0, likes: 31, comments: 2, },
   { id: 9043, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "관심종목", content: "HBM 70%·HBM3E 5× · +0.82%", createdAt: T02 - 1800000, likes: 30, comments: 2, },
   { id: 9044, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "관심종목", content: "+1.12% · HBM 품귀 전망", createdAt: T02 - 3600000, likes: 29, comments: 2, },
@@ -58,6 +64,31 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9048: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9049: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9050: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9051: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9052: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9053: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+
   9042: [
     { id: 1, nickname: "수급쟁이", holdingLabel: "관심종목", content: "외국인 890억은 금요일 대비 줄었지만 순매수 전환", createdAt: T02 + 600_000, likes: 5 },
     { id: 2, nickname: "지수관찰", holdingLabel: "관심종목", content: "6870선 회복 확인했습니다.", createdAt: T02 + 1200_000, likes: 4 },
@@ -192,6 +223,11 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9141, symbol: "비트코인", nickname: "종토_9141", holdingLabel: "관심종목", content: "~79500 · FOMC 9/15", createdAt: T02 - 0, likes: 30, comments: 2, },
+  { id: 9142, symbol: "금", nickname: "종토_9142", holdingLabel: "관심종목", content: "~2520 · 실질금리", createdAt: T02 - 1800000, likes: 29, comments: 2, },
+  { id: 9143, symbol: "이더리움", nickname: "종토_9143", holdingLabel: "관심종목", content: "BTC 연동 · 스테이킹", createdAt: T02 - 3600000, likes: 28, comments: 2, },
+  { id: 9144, symbol: "은", nickname: "종토_9144", holdingLabel: "관심종목", content: "금+산업 · Au/Ag", createdAt: T02 - 5400000, likes: 27, comments: 2, },
+  { id: 9145, symbol: "매크로", nickname: "종토_9145", holdingLabel: "관심종목", content: "9/3 Cybercab · 9/15 FOMC", createdAt: T02 - 7200000, likes: 26, comments: 2, },
   { id: 9135, symbol: "비트코인", nickname: "온체인러", holdingLabel: "관심종목", content: "~108248 · 10.8만$ · 공포44", createdAt: T02 - 0, likes: 28, comments: 2, },
   { id: 9136, symbol: "금", nickname: "금벌레", holdingLabel: "관심종목", content: "~3475 · 금>달러 준비자산", createdAt: T02 - 1800000, likes: 27, comments: 2, },
   { id: 9137, symbol: "이더리움", nickname: "이더러", holdingLabel: "관심종목", content: "~4512 · 4500$ 선", createdAt: T02 - 3600000, likes: 26, comments: 2, },
@@ -225,6 +261,27 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9141: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9142: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9143: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9144: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9145: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+
   9135: [
     { id: 1, nickname: "ETF추적", holdingLabel: "관심종목", content: "10.8만$ 선과 ETF 순유입 같이 봐야죠.", createdAt: T02 - 3000_000, likes: 5 },
     { id: 2, nickname: "헷지", holdingLabel: "관심종목", content: "공포44면 리스크오프도 변수.", createdAt: T02 - 2400_000, likes: 4 },
@@ -295,6 +352,12 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9244, symbol: "서울", nickname: "종토_9244", holdingLabel: "관심종목", content: "강남·마포 소폭 · 구별 온도차", createdAt: T02 - 0, likes: 30, comments: 2, },
+  { id: 9245, symbol: "전세", nickname: "종토_9245", holdingLabel: "관심종목", content: "입주·LTV 변수", createdAt: T02 - 1800000, likes: 29, comments: 2, },
+  { id: 9246, symbol: "매매", nickname: "종토_9246", holdingLabel: "관심종목", content: "FOMC 관망", createdAt: T02 - 3600000, likes: 28, comments: 2, },
+  { id: 9247, symbol: "정책", nickname: "종토_9247", holdingLabel: "관심종목", content: "공급+규제", createdAt: T02 - 5400000, likes: 27, comments: 2, },
+  { id: 9248, symbol: "경기", nickname: "종토_9248", holdingLabel: "관심종목", content: "외곽 수요 vs 입주", createdAt: T02 - 7200000, likes: 26, comments: 2, },
+  { id: 9249, symbol: "부산", nickname: "종토_9249", holdingLabel: "관심종목", content: "지역별 격차", createdAt: T02 - 9000000, likes: 25, comments: 2, },
   { id: 9239, symbol: "서울", nickname: "서울러", holdingLabel: "관심", content: "강남·마포 소폭 반등 · FOMC 전 관망", createdAt: T02 - 0, likes: 28, comments: 2, },
   { id: 9240, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "학군·역세권 소폭 반등 · 입주 물량 변수", createdAt: T02 - 1200000, likes: 27, comments: 2, },
   { id: 9241, symbol: "매매", nickname: "실수요자", holdingLabel: "관심", content: "FOMC·세금 부담 관망 · 보합~-0.1%", createdAt: T02 - 2400000, likes: 26, comments: 2, },
@@ -328,6 +391,31 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9244: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9245: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9246: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9247: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9248: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+  9249: [
+    { id: 1, nickname: "댓글러", holdingLabel: "관심종목", content: "9/2 수급 체크", createdAt: T02 + 600_000, likes: 4 },
+    { id: 2, nickname: "팔로워", holdingLabel: "관심종목", content: "Cybercab D-1 같이 봐야죠", createdAt: T02 + 1200_000, likes: 3 },
+  ],
+
   9239: [
     { id: 1, nickname: "실수요", holdingLabel: "관심", content: "구별 온도 차 큰 날 맞네요.", createdAt: T02 + 600_000, likes: 4 },
     { id: 2, nickname: "전세대출", holdingLabel: "관심", content: "FOMC 결과가 심리 좌우하겠습니다.", createdAt: T02 + 1200_000, likes: 3 },
