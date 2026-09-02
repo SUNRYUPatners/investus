@@ -135,6 +135,7 @@ export const SEED_REPORTS_KR_RE: Report[] = [
     images: ["/charts/regions-krre-20260902.svg"],
     imagesEn: ["/charts/regions-krre-20260902-en.svg"],
   },
+  {
     id: "krre-seed-110",
     title: "2026년 9월 1일 한국부동산 한장 요약입니다. 전세·매매 혼조·공급·9월 FOMC 변수를 모았습니다",
     summary: "9월 1일 부동산 시장은 전세는 일부 학군·역세권에서 소폭 반등, 매매는 관망세가 이어지는 혼조입니다. 9월 입주 예정 물량과 전세대출 규제, 9/15~16 FOMC·인상 확률 57%가 주담대·전세 심리 변수입니다. 정책은 「공급 확대+규제 유지」基調입니다.",
