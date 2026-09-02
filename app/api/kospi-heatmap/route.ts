@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
-import { fetchNaverStockQuotes } from "@/lib/naverFinance";
+import { fetchNaverStockQuotes, type NaverLiveQuote } from "@/lib/naverFinance";
+import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
+
+const KV_HEATMAP_KEY = "kospi-heatmap:eod:v1";
 
 /** S&P500 히트맵과 동일한 섹터 타일 구조 — 코스피 대형주 */
 const SECTORS: {
@@ -89,29 +92,90 @@ const SECTORS: {
   },
 ];
 
+type HeatmapStock = { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number };
+type HeatmapSector = { key: string; name: string; stocks: HeatmapStock[] };
+
+function buildSectors(map: Map<string, NaverLiveQuote>): HeatmapSector[] {
+  return SECTORS.map((sec) => ({
+    key: sec.key,
+    name: sec.name,
+    stocks: sec.stocks.map((st) => {
+      const q = map.get(st.symbol) ?? map.get(`${st.symbol}.KS`);
+      return {
+        symbol: st.symbol,
+        name: st.name,
+        price: q?.price ?? null,
+        changePercent: q?.changePercent ?? null,
+        weight: st.weight,
+      };
+    }),
+  }));
+}
+
+function mergeChangeFromCache(
+  sectors: HeatmapSector[],
+  cached: { sectors?: HeatmapSector[] },
+): HeatmapSector[] {
+  const pctMap = new Map<string, number>();
+  for (const sec of cached.sectors ?? []) {
+    for (const st of sec.stocks) {
+      if (st.changePercent != null && st.changePercent !== 0) {
+        pctMap.set(st.symbol, st.changePercent);
+      }
+    }
+  }
+  if (pctMap.size === 0) return sectors;
+
+  return sectors.map((sec) => ({
+    ...sec,
+    stocks: sec.stocks.map((st) => {
+      if (st.changePercent !== 0 && st.changePercent != null) return st;
+      const cachedPct = pctMap.get(st.symbol);
+      return cachedPct != null ? { ...st, changePercent: cachedPct } : st;
+    }),
+  }));
+}
+
 export async function GET() {
   try {
     const codes = [...new Set(SECTORS.flatMap((s) => s.stocks.map((x) => x.symbol)))];
     const map = await fetchNaverStockQuotes(codes);
 
-    const sectors = SECTORS.map((sec) => ({
-      key: sec.key,
-      name: sec.name,
-      stocks: sec.stocks.map((st) => {
-        const q = map.get(st.symbol) ?? map.get(`${st.symbol}.KS`);
-        return {
-          symbol: st.symbol,
-          name: st.name,
-          price: q?.price ?? null,
-          changePercent: q?.changePercent ?? null,
-          weight: st.weight,
-        };
-      }),
-    }));
+    let sectors = buildSectors(map);
 
+    const allZero = sectors.every((s) =>
+      s.stocks.every((x) => x.changePercent == null || x.changePercent === 0),
+    );
+    if (allZero) {
+      const cached = await kvGetDetail(KV_HEATMAP_KEY);
+      if (cached && Array.isArray((cached as { sectors?: unknown }).sectors)) {
+        sectors = mergeChangeFromCache(sectors, cached as { sectors: HeatmapSector[] });
+      }
+    } else {
+      void kvSetDetail(KV_HEATMAP_KEY, { sectors, liveAt: Date.now() } as Record<string, unknown>);
+    }
+
+    const isPreopen = [...map.values()].some((q) => q.marketStatus === "PREOPEN");
     const isLive = sectors.some((s) => s.stocks.some((x) => x.price != null));
-    return NextResponse.json({ isLive, sectors, liveAt: Date.now() });
+    const cc = isPreopen
+      ? "public, s-maxage=120, stale-while-revalidate=300"
+      : "public, s-maxage=55, stale-while-revalidate=60";
+
+    return NextResponse.json(
+      { isLive, isPreopen, sectors, liveAt: Date.now() },
+      { headers: { "Cache-Control": cc, "X-Kospi-Preopen": isPreopen ? "1" : "0" } },
+    );
   } catch {
+    const cached = await kvGetDetail(KV_HEATMAP_KEY);
+    if (cached && Array.isArray((cached as { sectors?: unknown }).sectors)) {
+      return NextResponse.json({
+        isLive: true,
+        isPreopen: true,
+        sectors: (cached as { sectors: HeatmapSector[] }).sectors,
+        liveAt: (cached as { liveAt?: number }).liveAt ?? Date.now(),
+        fromCache: true,
+      });
+    }
     return NextResponse.json({ isLive: false, sectors: [], liveAt: Date.now(), error: true });
   }
 }

@@ -18,7 +18,7 @@ function useIsDesktop() {
 
 type StockTile = { symbol: string; name: string; price: number | null; changePercent: number | null; weight: number };
 type Sector = { key: string; name: string; stocks: StockTile[] };
-type ApiResponse = { isLive: boolean; sectors: Sector[] };
+type ApiResponse = { isLive: boolean; isPreopen?: boolean; sectors: Sector[] };
 
 type PopupState = {
   symbol: string;
@@ -138,6 +138,7 @@ function SkeletonRow({ rowH, sections }: { rowH: number; sections: { flex: numbe
 export function KospiHeatmap() {
   const [sectors, setSectors] = useState<Sector[] | null>(null);
   const [isLive, setIsLive] = useState(true);
+  const [isPreopen, setIsPreopen] = useState(false);
   const [popup, setPopup] = useState<PopupState | null>(null);
   const isDesktop = useIsDesktop();
   const [thumbL, setThumbL] = useState(0);
@@ -169,12 +170,13 @@ export function KospiHeatmap() {
 
   useEffect(() => {
     try {
-      const cached = localStorage.getItem("kospi-heatmap-cache-v3");
+      const cached = localStorage.getItem("kospi-heatmap-cache-v4");
       if (cached) {
         const parsed = JSON.parse(cached) as ApiResponse;
         if (parsed?.sectors) {
           setSectors(parsed.sectors);
           setIsLive(parsed.isLive);
+          setIsPreopen(!!parsed.isPreopen);
         }
       }
     } catch { /* ignore */ }
@@ -185,8 +187,9 @@ export function KospiHeatmap() {
         .then((data: ApiResponse) => {
           setSectors(data.sectors);
           setIsLive(data.isLive);
+          setIsPreopen(!!data.isPreopen);
           try {
-            localStorage.setItem("kospi-heatmap-cache-v3", JSON.stringify(data));
+            localStorage.setItem("kospi-heatmap-cache-v4", JSON.stringify(data));
           } catch { /* ignore */ }
         })
         .catch(() => {});
@@ -218,7 +221,7 @@ export function KospiHeatmap() {
           </div>
         </SectionInfo>
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>
-          섹터별 등락률
+          {isPreopen ? "전일 종가 등락률" : "섹터별 등락률"}
         </span>
       </div>
 

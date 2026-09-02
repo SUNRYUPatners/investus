@@ -10,6 +10,8 @@ export type NaverLiveQuote = {
   change: number;
   changePercent: number;
   volume: number;
+  /** Naver ms: PREOPEN | OPEN | CLOSE | ... */
+  marketStatus?: string;
 };
 
 type NaverItem = {
@@ -22,6 +24,7 @@ type NaverItem = {
   rf?: string; // 1=상한 2=상승 3=보합 4=하한 5=하락
   aq?: number; // volume
   pcv?: number;
+  ms?: string; // PREOPEN | OPEN | CLOSE
 };
 
 /** 종목 SERVICE_ITEM: cv·cr는 절댓값만 오고 rf(또는 nv vs sv)로 방향 판별 */
@@ -43,6 +46,118 @@ function signedStockChangePercent(row: NaverItem): number {
   if (row.rf === "3") return 0;
   if (row.sv != null && row.sv > 0) return row.nv >= row.sv ? cr : -cr;
   return row.cr;
+}
+
+type NaverMobileDay = {
+  localTradedAt?: string;
+  closePrice?: string;
+  compareToPreviousClosePrice?: string;
+  compareToPreviousPrice?: { code?: string };
+  fluctuationsRatio?: string;
+  accumulatedTradingVolume?: number;
+};
+
+function parseKrPrice(s: string | undefined): number {
+  if (!s) return 0;
+  return Number(s.replace(/,/g, "")) || 0;
+}
+
+function signedFromMobile(row: NaverMobileDay): number {
+  const raw = parseKrPrice(row.compareToPreviousClosePrice);
+  if (raw === 0) return 0;
+  const code = row.compareToPreviousPrice?.code;
+  if (code === "5" || code === "4") return -Math.abs(raw);
+  if (code === "2" || code === "1") return Math.abs(raw);
+  return raw;
+}
+
+/** 장 시작 전(PREOPEN): polling cr=0 → 전일 완료 세션 등락률 */
+async function fetchNaverMobilePrevDay(code: string): Promise<Pick<NaverLiveQuote, "change" | "changePercent"> | null> {
+  try {
+    const res = await fetch(
+      `https://m.stock.naver.com/api/stock/${encodeURIComponent(code)}/price?pageSize=3&page=1`,
+      {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+          Accept: "application/json",
+          Referer: "https://m.stock.naver.com/",
+        },
+        cache: "no-store",
+        signal: AbortSignal.timeout(5000),
+      },
+    );
+    if (!res.ok) return null;
+    const rows = (await res.json()) as NaverMobileDay[];
+    if (!Array.isArray(rows) || rows.length === 0) return null;
+
+    // 오늘(0번)이 PREOPEN 0%면 전일(1번) 완료 세션 사용
+    const today = rows[0];
+    const todayPct = Math.abs(parseFloat(today?.fluctuationsRatio ?? "0"));
+    const todayVol = today?.accumulatedTradingVolume ?? 0;
+    const prev = rows[1];
+    const prevVol = prev?.accumulatedTradingVolume ?? 0;
+
+    const usePrev =
+      prev &&
+      (todayPct === 0 ||
+        (prevVol > 0 && todayVol > 0 && todayVol < prevVol * 0.08));
+
+    const row = usePrev ? prev : today;
+    if (!row) return null;
+
+    const changePercent = parseFloat(row.fluctuationsRatio ?? "0");
+    if (!Number.isFinite(changePercent)) return null;
+
+    return {
+      change: signedFromMobile(row),
+      changePercent,
+    };
+  } catch {
+    return null;
+  }
+}
+
+async function enrichPreopenFromMobile(
+  out: Map<string, NaverLiveQuote>,
+  codes: string[],
+): Promise<void> {
+  const preopen = [...out.values()].some((q) => q.marketStatus === "PREOPEN");
+  if (!preopen) return;
+
+  const needFix = codes.filter((c) => {
+    const key = c.replace(/\.KS$/i, "");
+    const q = out.get(key) ?? out.get(`${key}.KS`);
+    return q && q.changePercent === 0;
+  });
+  if (needFix.length === 0) return;
+
+  const CHUNK = 8;
+  for (let i = 0; i < needFix.length; i += CHUNK) {
+    const chunk = needFix.slice(i, i + CHUNK);
+    const results = await Promise.all(
+      chunk.map(async (code) => {
+        const key = code.replace(/\.KS$/i, "");
+        const prev = await fetchNaverMobilePrevDay(key);
+        return { key, prev };
+      }),
+    );
+    for (const { key, prev } of results) {
+      if (!prev) continue;
+      const existing = out.get(key) ?? out.get(`${key}.KS`);
+      if (!existing) continue;
+      const updated: NaverLiveQuote = {
+        ...existing,
+        change: prev.change,
+        changePercent: prev.changePercent,
+      };
+      out.set(key, updated);
+      out.set(`${key}.KS`, updated);
+    }
+    if (i + CHUNK < needFix.length) {
+      await new Promise<void>((r) => setTimeout(r, 80));
+    }
+  }
 }
 
 function parseArea(json: unknown, areaName: string): NaverItem[] {
@@ -85,10 +200,12 @@ export async function fetchNaverStockQuotes(codes: string[]): Promise<Map<string
         change: signedStockChange(row),
         changePercent: signedStockChangePercent(row),
         volume: row.aq ?? 0,
+        marketStatus: row.ms,
       });
       // also key as Yahoo-style
       out.set(`${row.cd}.KS`, out.get(row.cd)!);
     }
+    await enrichPreopenFromMobile(out, cleaned);
   } catch { /* ignore */ }
   return out;
 }
