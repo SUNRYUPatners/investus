@@ -148,7 +148,8 @@ function patchWallPosts() {
     content: "스페이스X DC 리더십 셰이크업 · 궤도 컴퓨트 맥락",
     createdAt: T02SEP + 120*60_000, likes: 12, comments: 1 },
 `;
-  const comments = `  1179: [
+  const comments = `  // ── 2026-09-02 신규 댓글 ────────────────
+  1179: [
     { id: 1, nickname: "익명_6179", holdingLabel: "관심종목", content: "9/2 핵심 포인트네요", createdAt: T02SEP + 8*60_000 + 3*60_000, likes: 4 },
   ],
   1180: [
@@ -202,7 +203,7 @@ function patchWallPosts() {
   ],
 `;
   const postMarker = '  // ── 2026-09-01 신규 ────────────────';
-  const commentMarker = '  1164: [';
+  const commentMarker = '  // ── 2026-09-01 신규 댓글 ────────────────';
   const pi = c.indexOf(postMarker);
   const ci = c.indexOf(commentMarker);
   if (pi === -1 || ci === -1) throw new Error('wallPosts markers not found');
