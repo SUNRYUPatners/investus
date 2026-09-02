@@ -1,25 +1,50 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { MessageCircle, X, Users } from "lucide-react";
+import { MessageCircle, Send, X, Users } from "lucide-react";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isSessionChatOpen, sessionChatSupported } from "@/lib/markets/sessionChatOpen";
 import type { SessionChatMessage } from "@/lib/sessionChat/types";
+import { sessionChatAuthHeaders } from "@/lib/sessionChat/authHeaders";
+import { useAuth } from "@/hooks/useAuth";
 
-const MAX_MESSAGES = 40;
+const MAX_MESSAGES = 60;
+const READ_KEY = (market: MarketId) => `investus-session-chat-read-${market}`;
 
 export function SessionChatWidget({ market }: { market: MarketId }) {
-  const [open, setOpen] = useState(false);
+  const { user, loginWithOAuth, loginWithNaver } = useAuth();
+  const [panelOpen, setPanelOpen] = useState(false);
   const [sessionOpen, setSessionOpen] = useState(false);
   const [messages, setMessages] = useState<SessionChatMessage[]>([]);
   const [online, setOnline] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [unread, setUnread] = useState(0);
+  const [draft, setDraft] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitErr, setSubmitErr] = useState("");
+  const [hasNewPulse, setHasNewPulse] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
-  const sinceRef = useRef(Date.now() - 5 * 60_000);
+  const sinceRef = useRef(Date.now() - 8 * 60_000);
+  const lastMsgAtRef = useRef(0);
+  const panelOpenRef = useRef(panelOpen);
   const cfg = getMarketConfig(market);
 
   const supported = sessionChatSupported(market);
+
+  useEffect(() => {
+    panelOpenRef.current = panelOpen;
+  }, [panelOpen]);
+
+  const markRead = useCallback(() => {
+    const now = Date.now();
+    try {
+      localStorage.setItem(READ_KEY(market), String(now));
+    } catch { /* ignore */ }
+    setUnread(0);
+    setHasNewPulse(false);
+    lastMsgAtRef.current = now;
+  }, [market]);
 
   const scrollToBottom = useCallback(() => {
     const el = listRef.current;
@@ -35,28 +60,49 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     if (initial) setLoading(true);
     try {
       const since = initial ? Date.now() - 8 * 60_000 : sinceRef.current;
-      const res = await fetch(`/api/session-chat?market=${market}&since=${since}`, { cache: "no-store" });
+      const res = await fetch(`/api/session-chat?market=${market}&since=${since}`, {
+        cache: "no-store",
+        headers: await sessionChatAuthHeaders(),
+      });
       if (!res.ok) return;
       const data = await res.json() as {
         open: boolean;
         messages: SessionChatMessage[];
         online?: number;
-        pollMs?: number;
       };
       if (!data.open) {
         setSessionOpen(false);
         return;
       }
       if (data.online) setOnline(data.online);
+
       if (data.messages?.length) {
+        const latestAt = Math.max(...data.messages.map((m) => m.at));
+        let readAt = 0;
+        try {
+          readAt = Number(localStorage.getItem(READ_KEY(market)) ?? "0");
+        } catch { /* ignore */ }
+
+        if (!panelOpenRef.current && latestAt > readAt) {
+          const newCount = data.messages.filter((m) => m.at > readAt && !m.is_mine).length;
+          if (newCount > 0) {
+            setUnread((u) => Math.min(99, u + newCount));
+            setHasNewPulse(true);
+          }
+        }
+
         setMessages((prev) => {
           const map = new Map(prev.map((m) => [m.id, m]));
           for (const m of data.messages) map.set(m.id, m);
           const merged = [...map.values()].sort((a, b) => a.at - b.at);
           return merged.slice(-MAX_MESSAGES);
         });
+
         const last = data.messages[data.messages.length - 1];
-        if (last) sinceRef.current = last.at;
+        if (last) {
+          sinceRef.current = last.at;
+          lastMsgAtRef.current = last.at;
+        }
       }
     } catch { /* ignore */ }
     finally {
@@ -64,6 +110,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     }
   }, [market, supported]);
 
+  // 장중 여부 체크
   useEffect(() => {
     if (!supported) return;
     const tick = () => setSessionOpen(isSessionChatOpen(market));
@@ -72,17 +119,55 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     return () => clearInterval(id);
   }, [market, supported]);
 
+  // 장중이면 패널 열림 여부와 관계없이 폴링 (새 글 알림)
   useEffect(() => {
-    if (!supported || !open) return;
-    sinceRef.current = Date.now() - 5 * 60_000;
+    if (!supported || !sessionOpen) return;
+    sinceRef.current = Date.now() - 8 * 60_000;
     void poll(true);
-    const id = setInterval(() => void poll(false), 12_000);
+    const id = setInterval(() => void poll(false), 8_000);
     return () => clearInterval(id);
-  }, [open, poll, supported]);
+  }, [poll, sessionOpen, supported]);
 
   useEffect(() => {
-    if (open) scrollToBottom();
-  }, [messages, open, scrollToBottom]);
+    if (panelOpen) {
+      markRead();
+      scrollToBottom();
+    }
+  }, [messages, panelOpen, markRead, scrollToBottom]);
+
+  const submitMessage = async () => {
+    if (!user) return;
+    const content = draft.trim();
+    if (content.length < 2) {
+      setSubmitErr("2자 이상 작성해주세요.");
+      return;
+    }
+    setSubmitting(true);
+    setSubmitErr("");
+    try {
+      const res = await fetch("/api/session-chat", {
+        method: "POST",
+        headers: await sessionChatAuthHeaders(),
+        body: JSON.stringify({ market, content }),
+      });
+      const data = await res.json() as { message?: SessionChatMessage; error?: string };
+      if (!res.ok || data.error) {
+        setSubmitErr(data.error ?? "전송 실패");
+        return;
+      }
+      if (data.message) {
+        setMessages((prev) => [...prev, data.message!].slice(-MAX_MESSAGES));
+        sinceRef.current = data.message.at;
+        setDraft("");
+        markRead();
+        requestAnimationFrame(scrollToBottom);
+      }
+    } catch {
+      setSubmitErr("네트워크 오류");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   if (!supported) return null;
 
@@ -90,48 +175,68 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     ? "미국 장 마감 후에는 열리지 않습니다"
     : "한국 장 마감 후에는 열리지 않습니다";
 
+  const showPulse = sessionOpen && (unread > 0 || hasNewPulse);
+
   return (
     <>
       {/* FAB */}
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-label="장중 실시간 시황방"
-        className="session-chat-fab fixed z-[45] flex items-center justify-center rounded-full shadow-lg border transition-transform active:scale-95 bottom-[calc(72px+max(env(safe-area-inset-bottom,0px),12px))] lg:bottom-6 right-4"
-        style={{
-          width: 56,
-          height: 56,
-          background: sessionOpen ? "var(--accent)" : "var(--card)",
-          borderColor: "var(--border)",
-          color: sessionOpen ? "#fff" : "var(--muted)",
-        }}
-      >
-        {sessionOpen && (
+      <div className="fixed z-[45] right-4 bottom-[calc(72px+max(env(safe-area-inset-bottom,0px),12px))] lg:bottom-6">
+        {showPulse && (
           <span
-            className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2"
-            style={{ borderColor: "var(--accent)" }}
+            className="absolute inset-0 rounded-full session-chat-ring pointer-events-none"
+            aria-hidden
           />
         )}
-        <MessageCircle size={26} strokeWidth={2} />
-      </button>
+        <button
+          type="button"
+          onClick={() => {
+            setPanelOpen((v) => !v);
+            if (!panelOpen) markRead();
+          }}
+          aria-label="장중 실시간 시황방"
+          className={`relative flex items-center justify-center rounded-full shadow-lg border transition-transform active:scale-95 w-14 h-14 ${
+            showPulse ? "session-chat-fab-pulse" : ""
+          }`}
+          style={{
+            background: sessionOpen ? "var(--accent)" : "var(--card)",
+            borderColor: showPulse ? "var(--mint)" : "var(--border)",
+            color: sessionOpen ? "#fff" : "var(--muted)",
+          }}
+        >
+          {sessionOpen && (
+            <span
+              className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2"
+              style={{ borderColor: "var(--accent)" }}
+            />
+          )}
+          {unread > 0 && (
+            <span
+              className="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 rounded-full text-[10px] font-bold flex items-center justify-center text-white"
+              style={{ background: "var(--down)" }}
+            >
+              {unread > 99 ? "99+" : unread}
+            </span>
+          )}
+          <MessageCircle size={26} strokeWidth={2} />
+        </button>
+      </div>
 
       {/* Panel */}
-      {open && (
+      {panelOpen && (
         <div
           className="fixed inset-0 z-[46] lg:bg-black/20"
-          onClick={() => setOpen(false)}
+          onClick={() => setPanelOpen(false)}
           role="presentation"
         >
           <div
-            className="session-chat-panel absolute flex flex-col border shadow-2xl overflow-hidden
-              inset-x-0 bottom-0 rounded-t-2xl max-h-[72vh]
-              lg:inset-auto lg:right-6 lg:bottom-24 lg:w-[380px] lg:max-h-[min(520px,70vh)] lg:rounded-2xl"
+            className="absolute flex flex-col border shadow-2xl overflow-hidden
+              inset-x-0 bottom-0 rounded-t-2xl max-h-[78vh]
+              lg:inset-auto lg:right-6 lg:bottom-24 lg:w-[380px] lg:max-h-[min(560px,78vh)] lg:rounded-2xl"
             style={{ background: "var(--card)", borderColor: "var(--border)" }}
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-label="장중 실시간 시황방"
           >
-            {/* Header */}
             <div
               className="flex items-center justify-between px-4 py-3 border-b shrink-0"
               style={{ borderColor: "var(--border)" }}
@@ -152,7 +257,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
               </div>
               <button
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={() => setPanelOpen(false)}
                 className="p-2 rounded-lg"
                 style={{ color: "var(--muted)" }}
                 aria-label="닫기"
@@ -161,7 +266,6 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
               </button>
             </div>
 
-            {/* Messages */}
             <div
               ref={listRef}
               className="flex-1 overflow-y-auto px-3 py-3 space-y-2.5 min-h-[200px]"
@@ -174,8 +278,6 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                   </p>
                   <p className="text-xs mt-2 leading-relaxed" style={{ color: "var(--muted)" }}>
                     {closedLabel}
-                    <br />
-                    장이 열리면 실시간 시세를 반영한 시황 대화가 이어집니다.
                   </p>
                 </div>
               )}
@@ -187,15 +289,22 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
               )}
 
               {sessionOpen && messages.map((m) => (
-                <div key={m.id} className="flex gap-2 items-start">
+                <div
+                  key={m.id}
+                  className={`flex gap-2 items-start ${m.is_mine ? "flex-row-reverse" : ""}`}
+                >
                   <div
                     className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-bold"
-                    style={{ background: "var(--card)", color: "var(--accent)", border: "1px solid var(--border)" }}
+                    style={{
+                      background: m.is_mine ? "var(--mint)" : "var(--card)",
+                      color: m.is_mine ? "var(--on-accent)" : "var(--accent)",
+                      border: m.is_mine ? "none" : "1px solid var(--border)",
+                    }}
                   >
                     {m.nick.slice(0, 2)}
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-baseline gap-2 flex-wrap">
+                  <div className={`min-w-0 flex-1 ${m.is_mine ? "text-right" : ""}`}>
+                    <div className={`flex items-baseline gap-2 flex-wrap ${m.is_mine ? "justify-end" : ""}`}>
                       <span className="text-[11px] font-semibold" style={{ color: "var(--text)" }}>
                         {m.nick}
                       </span>
@@ -204,8 +313,12 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                       </time>
                     </div>
                     <p
-                      className="text-[13px] leading-snug mt-0.5 rounded-xl px-3 py-2"
-                      style={{ background: "var(--card)", color: "var(--text)" }}
+                      className="text-[13px] leading-snug mt-0.5 rounded-xl px-3 py-2 inline-block text-left max-w-[92%]"
+                      style={{
+                        background: m.is_mine ? "rgba(var(--mint-rgb),0.15)" : "var(--card)",
+                        color: "var(--text)",
+                        border: m.is_mine ? "1px solid rgba(var(--mint-rgb),0.25)" : "none",
+                      }}
                     >
                       {m.content}
                     </p>
@@ -214,13 +327,88 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
               ))}
             </div>
 
-            {/* Footer */}
-            <div
-              className="px-3 py-2.5 border-t text-[10px] leading-relaxed text-center shrink-0"
-              style={{ borderColor: "var(--border)", color: "var(--muted)" }}
-            >
-              실시간 시세 반영 · AI 시뮬레이션 시황 (읽기 전용)
-            </div>
+            {sessionOpen && (
+              <div
+                className="px-3 py-2.5 border-t shrink-0"
+                style={{ borderColor: "var(--border)", background: "var(--card)" }}
+              >
+                {user ? (
+                  <>
+                    <div className="flex gap-2 items-end">
+                      <textarea
+                        value={draft}
+                        onChange={(e) => setDraft(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" && !e.shiftKey) {
+                            e.preventDefault();
+                            void submitMessage();
+                          }
+                        }}
+                        rows={2}
+                        maxLength={200}
+                        placeholder="장중 시황을 남겨보세요 (2~200자)"
+                        className="flex-1 resize-none rounded-xl px-3 py-2 text-[13px] outline-none border"
+                        style={{
+                          background: "var(--bg)",
+                          color: "var(--text)",
+                          borderColor: "var(--border)",
+                        }}
+                      />
+                      <button
+                        type="button"
+                        disabled={submitting || draft.trim().length < 2}
+                        onClick={() => void submitMessage()}
+                        className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center disabled:opacity-40"
+                        style={{ background: "var(--mint)", color: "var(--on-accent)" }}
+                        aria-label="보내기"
+                      >
+                        <Send size={18} />
+                      </button>
+                    </div>
+                    {submitErr && (
+                      <p className="text-[10px] mt-1.5" style={{ color: "var(--down)" }}>
+                        {submitErr}
+                      </p>
+                    )}
+                    <p className="text-[10px] mt-1" style={{ color: "var(--muted)" }}>
+                      익명 닉네임으로 표시됩니다 · {draft.trim().length}/200
+                    </p>
+                  </>
+                ) : (
+                  <div className="text-center py-1">
+                    <p className="text-[11px] mb-2" style={{ color: "var(--muted)" }}>
+                      로그인하면 시황을 남길 수 있습니다
+                    </p>
+                    <div className="flex gap-2 justify-center">
+                      <button
+                        type="button"
+                        onClick={() => loginWithOAuth("google")}
+                        className="text-[11px] font-semibold px-3 py-2 rounded-lg border"
+                        style={{ borderColor: "var(--border)", color: "var(--text)" }}
+                      >
+                        Google 로그인
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => loginWithOAuth("kakao")}
+                        className="text-[11px] font-semibold px-3 py-2 rounded-lg"
+                        style={{ background: "#FEE500", color: "#191919" }}
+                      >
+                        카카오 로그인
+                      </button>
+                      <button
+                        type="button"
+                        onClick={loginWithNaver}
+                        className="text-[11px] font-semibold px-3 py-2 rounded-lg"
+                        style={{ background: "#03C75A", color: "#fff" }}
+                      >
+                        네이버
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}

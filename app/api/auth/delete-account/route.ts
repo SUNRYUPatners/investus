@@ -20,6 +20,8 @@ export async function DELETE(req: NextRequest) {
     // 2. Delete wall comments
     await admin.from("wall_comments").delete().eq("user_id", authUser.email);
 
+    await admin.from("session_chat_messages").delete().eq("user_id", authUser.email);
+
     // 3. Delete creator verification record
     await admin.from("creator_verifications").delete().eq("phone", authUser.email);
 

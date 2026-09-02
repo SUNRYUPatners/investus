@@ -4,4 +4,5 @@ export type SessionChatMessage = {
   content: string;
   symbol?: string;
   at: number;
+  is_mine?: boolean;
 };

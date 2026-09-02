@@ -7,7 +7,7 @@ async function probeAnon(): Promise<Record<string, { status: number; rows: numbe
   const anon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
   const tables = [
     "edu_applications", "creator_verifications", "push_subscriptions",
-    "wall_posts", "wall_comments",
+    "wall_posts", "wall_comments", "session_chat_messages",
     "analyst_posts", "analyst_post_comments", "analyst_post_likes", "analyst_verifications",
   ] as const;
   const result: Record<string, { status: number; rows: number }> = {};
