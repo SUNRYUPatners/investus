@@ -159,6 +159,9 @@ export const MOCK_POSTS: Post[] = [
   { id: 1193, symbol: "SPCX", nickname: "익명_4838", holdingLabel: "관심종목",
     content: "스페이스X DC 리더십 셰이크업 · 궤도 컴퓨트 맥락",
     createdAt: T02SEP + 120*60_000, likes: 12, comments: 1 },
+  { id: 1194, symbol: "TSLA", nickname: "익명_4855", holdingLabel: "관심종목",
+    content: "상하이 기가에서 FSD V14 직원 내부 시험 루머… 미국 사이버캡이랑 완전 다른 축이네요. 공식 확인 전까진 조심",
+    createdAt: T02SEP + 128*60_000, likes: 13, comments: 2 },
   // ── 2026-09-01 신규 ────────────────
   { id: 1164, symbol: "MACRO", nickname: "익명_4300", holdingLabel: "관심종목",
     content: "9/1 한장: 로보택시 314대·위성3세대·F14 9/15·TSLA +5%·FSD 140억마일·HBM70%·금 준비자산",
@@ -4299,6 +4302,10 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
   ],
   1193: [
     { id: 1, nickname: "익명_6193", holdingLabel: "관심종목", content: "궤도 컴퓨트랑 연결해서 봐야겠어요", createdAt: T02SEP + 120*60_000 + 3*60_000, likes: 4 },
+  ],
+  1194: [
+    { id: 1, nickname: "익명_6194", holdingLabel: "관심종목", content: "중국 승인 일정이 더 중요하죠", createdAt: T02SEP + 128*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6294", holdingLabel: "관심종목", content: "V14랑 오스틴 45대는 따로 봐야겠어요", createdAt: T02SEP + 128*60_000 + 6*60_000, likes: 5 },
   ],
   // ── 2026-09-01 신규 댓글 ────────────────
   1164: [

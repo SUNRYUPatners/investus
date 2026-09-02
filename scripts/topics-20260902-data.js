@@ -117,6 +117,32 @@ add('panw-earnings', 'L1', 'NVDA', {
   footer: 'PANW · earnings',
 });
 
+add('tsla-fsd-v14-china-internal', 'L3', 'TSLA', {
+  badge: 'TSLA', title: '중국 상하이 기가에서 FSD V14 직원 대상 내부 시험 미확인 보도가 나왔습니다',
+  heroIcon: '🇨🇳', heroBig: 'FSD V14',
+  heroSub: '직원 거의 전원 대상 내부 시험이라는 전언입니다. 공식 승인·공시가 아닌 미확인 보도이며, 미국 사이버캡과 지역·규제 축이 다릅니다.',
+  cards: [
+    { icon:'🏭', big:'상하이', mid:'기가팩토리', sub:'Giga Shanghai' },
+    { icon:'👥', big:'직원', mid:'내부 시험', sub:'미확인 보도' },
+    { icon:'📋', big:'V14', mid:'소프트웨어', sub:'미국과 별개' },
+  ],
+  quote: '중국 FSD 상용 승인은 미국 fleet 숫자와 별개입니다. 루머 단계에서는 공식 확인·규제 문서를 우선하시기 바랍니다.',
+  noteSub: '미확인 보도입니다. 9/3 오스틴 사이버캡·중국 V14 시험은 같은 날짜라도 스토리를 분리해 추적하시기 바랍니다.',
+  footer: 'TSLA · 중국 FSD V14',
+}, {
+  badge: 'TSLA', title: 'Unconfirmed: FSD V14 internal employee testing at Giga Shanghai',
+  heroIcon: '🇨🇳', heroBig: 'FSD V14',
+  heroSub: 'Alleged near-company-wide internal test—not official approval; separate from US Cybercab.',
+  cards: [
+    { icon:'🏭', big:'Shanghai', mid:'Giga', sub:'China hub' },
+    { icon:'👥', big:'Staff', mid:'Internal', sub:'Unconfirmed' },
+    { icon:'📋', big:'V14', mid:'Software', sub:'vs US fleet' },
+  ],
+  quote: 'China FSD approval is a separate regulatory track from Austin Cybercab counts.',
+  noteSub: 'Treat as rumor until official confirmation. Track US and China autonomy on separate lines.',
+  footer: 'TSLA · China FSD V14',
+});
+
 add('cybercab-45-golden', 'L5', 'TSLA', {
   badge: 'TSLA', title: '오스틴 사이버캡 45대, 지오펜스 약 264제곱마일, 9월 3일 행사 D-1입니다',
   heroIcon: '🚕', heroBig: '45대 · D-1',

@@ -20,7 +20,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   // ── 2026-09-02 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
   {
     id: -976, alias: "종로 까치 #41", symbol: "MACRO",
-    content: "9/2 한 화면 정리입니다.\n— 기가텍사스 반도체 북캠퍼스 6,974,854 SF·완공 2029-12-31\n— 델 EPS \$7.04 vs \$4.92·매출 \$46.9B\n— PANW EPS \$1.02·매출 \$3.41B\n— 사이버캡 45대·지오펜스 ~264 sq mi·9/3 D-1\n— SpaceX 궤도연산 10GW·\$1T 매출 서사·DC 팀 변동\n— 테슬라 프랑스 +279%·덴마크 +104% YoY\n— F14 9/15·V3 10×·FCC 42.0-42.5GHz\n— Anthropic \$35B Lambda·Hut 8·NVDA GPU\n— Google 396MW Fervo 지열\n— Waymo 14개 도시 유료 승차\n— YouTube Amazon 태깅\n— Fear & Greed 44(1주 전 56)\n— Apple OpenAI 증거 파기 주장\n9/3 사이버캡 전후 변동성에 대비하시기 바랍니다.",
+    content: "9/2 한 화면 정리입니다.\n— 기가텍사스 반도체 북캠퍼스 6,974,854 SF·완공 2029-12-31\n— 델 EPS \$7.04 vs \$4.92·매출 \$46.9B\n— PANW EPS \$1.02·매출 \$3.41B\n— 사이버캡 45대·지오펜스 ~264 sq mi·9/3 D-1\n— SpaceX 궤도연산 10GW·\$1T 매출 서사·DC 팀 변동\n— 테슬라 프랑스 +279%·덴마크 +104% YoY\n— F14 9/15·V3 10×·FCC 42.0-42.5GHz\n— Anthropic \$35B Lambda·Hut 8·NVDA GPU\n— Google 396MW Fervo 지열\n— Waymo 14개 도시 유료 승차\n— YouTube Amazon 태깅\n— Fear & Greed 44(1주 전 56)\n— 중국 상하이 FSD V14 직원 내부 시험(미확인 보도)\n— Apple OpenAI 증거 파기 주장\n9/3 사이버캡 전후 변동성에 대비하시기 바랍니다.",
     likes: 12, comments: 1, created_at: "2026-09-02T00:00:00.000Z", liked: false,
   },
   {
@@ -92,6 +92,11 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
     id: -990, alias: "광화문 여우 #62", symbol: "AAPL",
     content: "Apple이 OpenAI의 증거 파기를 주장했다는 보도가 나왔습니다. 법원 판단 전까지는 절차 리스크로 보시기 바랍니다.\nAI 제품 일정과 소송 일정을 분리해 추적하시면 됩니다.",
     likes: 16, comments: 1, created_at: "2026-09-02T00:98:00.000Z", liked: false,
+  },
+  {
+    id: -991, alias: "여의도 수리 #28", symbol: "TSLA",
+    content: "중국 상하이 기가에서 FSD V14 직원 대상 내부 시험이 진행 중이라는 **미확인 보도**가 올라왔습니다. 공식 승인·공시는 아닙니다.\n미국 오스틴 사이버캡 45대·9월 3일 행사와 지역·규제 축이 다릅니다. 중국 FSD 상용 승인은 별도 변수이므로 루머와 확인을 분리해 기록하시기 바랍니다.",
+    likes: 17, comments: 2, created_at: "2026-09-02T01:05:00.000Z", liked: false,
   },
   // ── 2026-09-01 신규 (15개 · 존댓말 · 구조 혼합) ──────────────────────
   {
@@ -7472,6 +7477,10 @@ export const MOCK_ANALYST_COMMENTS: Record<number, AnalystMockComment[]> = {
   ],
   [-990]: [
     { alias: "송파 독수리 #66", content: "증거 파기 주장은 절차 리스크라 판결 전까지 일정 변수로 두겠습니다.", created_at: "2026-09-02T01:56:00.000Z" },
+  ],
+  [-991]: [
+    { alias: "분당 매 #31", content: "미국 사이버캡이랑 중국 V14는 같은 FSD라도 스토리가 다르네요. 공식 확인 전까지는 루머로 분류하겠습니다.", created_at: "2026-09-02T01:12:00.000Z" },
+    { alias: "역삼 판다 #77", content: "중국 규제 승인 일정이 나오면 그때 다시 보겠습니다.", created_at: "2026-09-02T01:18:00.000Z" },
   ],
   [-961]: [{ alias: "댓글_310961", content: "9/3 사이버캡 전후 한 화면 정리 감사합니다", created_at: "2026-09-01T00:10:00.000Z" }],
   [-962]: [
