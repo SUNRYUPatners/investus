@@ -68,15 +68,15 @@ function buildAnalystBlock() {
 }
 
 function buildAnalystCommentsBlock() {
+  const ANALYST_COMMENTS = require('./fix-reports-20260902-ko-analyst-comments.js');
   let out = '';
-  ANALYST.forEach((a, i) => {
-    const n = a.comments || (1 + (i % 2));
-    const comments = [];
-    for (let j = 0; j < n; j++) {
-      comments.push(`    { alias: "댓글_${310000 + Math.abs(a.id) * 10 + j}", content: "9/2 핵심 포인트 잘 정리됐습니다", created_at: "2026-09-02T00:${String(i * 7 + j + 2).padStart(2, '0')}:00.000Z" }`);
-    }
-    out += `  [${a.id}]: [\n${comments.join(',\n')},\n  ],\n`;
-  });
+  for (const [id, comments] of Object.entries(ANALYST_COMMENTS)) {
+    const lines = comments.map(
+      (c) =>
+        `    { alias: "${c.alias}", content: "${esc(c.content)}", created_at: "${c.created_at}" }`,
+    );
+    out += `  [${id}]: [\n${lines.join(',\n')},\n  ],\n`;
+  }
   return out;
 }
 

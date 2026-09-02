@@ -11,8 +11,96 @@ const ROOT = path.join(__dirname, "..");
 /** 2026-08-29 이후 시드부터 댓글 본문 필수 */
 const VALIDATE_SINCE = "2026-08-29";
 
+/** 자동 생성·플레이스홀더 댓글 차단 (2026-09-02 사고) */
+const PLACEHOLDER_CONTENT = [
+  /핵심 포인트 잘 정리/,
+  /포인트 감사합니다/,
+  /FOMC 전후 같이 보겠습니다$/,
+];
+const GENERIC_ALIASES = new Set(["팔로워", "질문", "댓글"]);
+
 function loadFile(rel) {
   return fs.readFileSync(path.join(ROOT, rel), "utf8");
+}
+
+function parseCommentEntries(commentsSection, postDates) {
+  const entries = [];
+  const blockRe = /\[(-\d+)\]:\s*\[([\s\S]*?)\n\s*\],/g;
+  let m;
+  while ((m = blockRe.exec(commentsSection)) !== null) {
+    const postId = Number(m[1]);
+    const postDate = postDates.get(postId);
+    if (!postDate || postDate < VALIDATE_SINCE) continue;
+    const inner = m[2];
+    const cmRe = /alias:\s*"([^"]+)"[\s\S]*?content:\s*"((?:\\.|[^"\\])*)"/g;
+    let cm;
+    while ((cm = cmRe.exec(inner)) !== null) {
+      const content = cm[2].replace(/\\n/g, "\n").replace(/\\"/g, '"');
+      entries.push({ postId, alias: cm[1], content });
+    }
+  }
+  return entries;
+}
+
+function buildPostDateMap(postsSection) {
+  const map = new Map();
+  for (const p of parseMockPosts(postsSection)) {
+    map.set(p.id, p.created_at.slice(0, 10));
+  }
+  return map;
+}
+
+function getLatestPostDate(postsSection) {
+  let max = "";
+  for (const p of parseMockPosts(postsSection)) {
+    if (p.id >= 0) continue;
+    const d = p.created_at.slice(0, 10);
+    if (d > max) max = d;
+  }
+  return max;
+}
+
+function validateCommentQuality(commentsSection, postsSection, label) {
+  const errors = [];
+  const latestDate = getLatestPostDate(postsSection);
+  if (!latestDate) return errors;
+  const postDates = buildPostDateMap(postsSection);
+  const entries = parseCommentEntries(commentsSection, postDates);
+  const contentCount = new Map();
+
+  for (const e of entries) {
+    const postDate = postDates.get(e.postId);
+    if (!postDate || postDate !== latestDate) continue;
+    if (PLACEHOLDER_CONTENT.some((re) => re.test(e.content))) {
+      errors.push(
+        `${label} id ${e.postId}: 플레이스홀더 댓글 — "${e.content.slice(0, 40)}…"`,
+      );
+    }
+    if (/^댓글_\d+$/.test(e.alias)) {
+      errors.push(
+        `${label} id ${e.postId}: 자동 생성 alias "${e.alias}" — 페르소나 alias 사용`,
+      );
+    }
+    if (GENERIC_ALIASES.has(e.alias)) {
+      errors.push(
+        `${label} id ${e.postId}: generic alias "${e.alias}" — 주제 맞춤 alias 필요`,
+      );
+    }
+    const key = e.content.trim();
+    if (!contentCount.has(key)) contentCount.set(key, []);
+    contentCount.get(key).push(e.postId);
+  }
+
+  for (const [content, ids] of contentCount) {
+    const unique = [...new Set(ids)];
+    if (unique.length > 1) {
+      errors.push(
+        `${label}: 동일 댓글 ${unique.length}곳 중복 — "${content.slice(0, 36)}…"`,
+      );
+    }
+  }
+
+  return errors;
 }
 
 function countMockComments(hay, id) {
@@ -103,6 +191,11 @@ const us = validateUs();
 allErrors.push(...us.errors);
 allWarnings.push(...us.warnings);
 
+const usSrc = loadFile("lib/analystPosts.ts");
+allErrors.push(
+  ...validateCommentQuality(usSrc, usSrc, "lib/analystPosts.ts"),
+);
+
 for (const [postsName, commentsName, label] of [
   ["MOCK_ANALYST_POSTS_KR", "MOCK_ANALYST_COMMENTS_KR", "KR"],
   ["MOCK_ANALYST_POSTS_SAFE", "MOCK_ANALYST_COMMENTS_SAFE", "SAFE"],
@@ -116,6 +209,15 @@ for (const [postsName, commentsName, label] of [
   );
   allErrors.push(...errors);
   allWarnings.push(...warnings);
+  const postsSection = extractSection(marketsSrc, postsName);
+  const commentsSection = extractSection(marketsSrc, commentsName);
+  allErrors.push(
+    ...validateCommentQuality(
+      commentsSection,
+      postsSection,
+      `lib/analystPosts-markets.ts (${label})`,
+    ),
+  );
 }
 
 for (const w of allWarnings) {
