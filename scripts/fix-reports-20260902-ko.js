@@ -188,3 +188,9 @@ const ANALYST = require('./fix-reports-20260902-ko-analyst.js');
 if (require.main === module) {
   main();
 }
+
+module.exports = {
+  buildReportsBlock,
+  buildAnalystBlock,
+  buildAnalystCommentsBlock,
+};
