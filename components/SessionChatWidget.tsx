@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { MessageCircle, Send, X, Users } from "lucide-react";
+import Link from "next/link";
+import { LogIn, MessageCircle, Send, UserPlus, X, Users } from "lucide-react";
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isSessionChatOpen, sessionChatSupported } from "@/lib/markets/sessionChatOpen";
@@ -13,7 +14,7 @@ const MAX_MESSAGES = 60;
 const READ_KEY = (market: MarketId) => `investus-session-chat-read-${market}`;
 
 export function SessionChatWidget({ market }: { market: MarketId }) {
-  const { user, loginWithOAuth, loginWithNaver } = useAuth();
+  const { user, loaded, loginWithOAuth, loginWithNaver } = useAuth();
   const [panelOpen, setPanelOpen] = useState(false);
   const [sessionOpen, setSessionOpen] = useState(false);
   const [messages, setMessages] = useState<SessionChatMessage[]>([]);
@@ -364,7 +365,11 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                 className="px-3 py-2.5 border-t shrink-0"
                 style={{ borderColor: "var(--border)", background: "var(--card)" }}
               >
-                {user ? (
+                {!loaded ? (
+                  <p className="text-center text-[11px] py-2" style={{ color: "var(--muted)" }}>
+                    확인 중…
+                  </p>
+                ) : user ? (
                   <>
                     <div className="flex gap-2 items-end">
                       <textarea
@@ -407,36 +412,54 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                     </p>
                   </>
                 ) : (
-                  <div className="text-center py-1">
-                    <p className="text-[11px] mb-2" style={{ color: "var(--muted)" }}>
-                      로그인하면 시황을 남길 수 있습니다
-                    </p>
-                    <div className="flex gap-2 justify-center">
-                      <button
-                        type="button"
-                        onClick={() => loginWithOAuth("google")}
-                        className="text-[11px] font-semibold px-3 py-2 rounded-lg border"
-                        style={{ borderColor: "var(--border)", color: "var(--text)" }}
-                      >
-                        Google 로그인
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => loginWithOAuth("kakao")}
-                        className="text-[11px] font-semibold px-3 py-2 rounded-lg"
-                        style={{ background: "#FEE500", color: "#191919" }}
-                      >
-                        카카오 로그인
-                      </button>
-                      <button
-                        type="button"
-                        onClick={loginWithNaver}
-                        className="text-[11px] font-semibold px-3 py-2 rounded-lg"
-                        style={{ background: "#03C75A", color: "#fff" }}
-                      >
-                        네이버
-                      </button>
+                  <div className="py-1">
+                    <div
+                      className="rounded-xl px-3 py-3 mb-3 text-center"
+                      style={{ background: "rgba(var(--mint-rgb),0.08)", border: "1px solid rgba(var(--mint-rgb),0.2)" }}
+                    >
+                      <p className="text-[13px] font-semibold" style={{ color: "var(--text)" }}>
+                        채팅하려면 로그인이 필요합니다
+                      </p>
+                      <p className="text-[11px] mt-1 leading-relaxed" style={{ color: "var(--muted)" }}>
+                        회원가입 또는 로그인 후 장중 시황을 남길 수 있습니다.
+                        <br />
+                        읽기는 로그인 없이 가능합니다.
+                      </p>
                     </div>
+                    <button
+                      type="button"
+                      onClick={() => loginWithOAuth("google")}
+                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border mb-2 text-[13px] font-semibold"
+                      style={{ borderColor: "var(--border)", background: "var(--bg)", color: "var(--text)" }}
+                    >
+                      <LogIn size={16} />
+                      Google로 로그인
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => loginWithOAuth("kakao")}
+                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl mb-2 text-[13px] font-semibold"
+                      style={{ background: "#FEE500", color: "#3C1E1E" }}
+                    >
+                      카카오로 로그인
+                    </button>
+                    <button
+                      type="button"
+                      onClick={loginWithNaver}
+                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl mb-3 text-[13px] font-semibold"
+                      style={{ background: "#03C75A", color: "#fff" }}
+                    >
+                      네이버로 로그인
+                    </button>
+                    <Link
+                      href="/more"
+                      className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[13px] font-semibold no-underline"
+                      style={{ background: "var(--mint)", color: "var(--on-accent)" }}
+                      onClick={() => setPanelOpen(false)}
+                    >
+                      <UserPlus size={16} />
+                      이메일 회원가입 · 로그인
+                    </Link>
                   </div>
                 )}
               </div>
