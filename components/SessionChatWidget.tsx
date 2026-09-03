@@ -9,6 +9,7 @@ import type { SessionChatMessage } from "@/lib/sessionChat/types";
 import { sessionChatAuthHeaders } from "@/lib/sessionChat/authHeaders";
 import { getOrCreateGuestId } from "@/lib/sessionChat/guestId";
 import { humanizeKrCodesInText } from "@/lib/sessionChat/labels";
+import { SESSION_CHAT_OPEN_EVENT, type SessionChatOpenDetail } from "@/lib/sessionChat/openPanel";
 import { useAuth } from "@/hooks/useAuth";
 
 const MAX_MESSAGES = 80;
@@ -164,6 +165,20 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     const id = setInterval(tick, 30_000);
     return () => clearInterval(id);
   }, [market, supported]);
+
+  // 장중 배너 등 외부에서 패널 열기
+  useEffect(() => {
+    if (!supported) return;
+    const onOpen = (e: Event) => {
+      const detail = (e as CustomEvent<SessionChatOpenDetail>).detail;
+      if (detail?.market && detail.market !== market) return;
+      setPanelOpen(true);
+      markRead();
+      void poll(true);
+    };
+    window.addEventListener(SESSION_CHAT_OPEN_EVENT, onOpen);
+    return () => window.removeEventListener(SESSION_CHAT_OPEN_EVENT, onOpen);
+  }, [market, supported, markRead, poll]);
 
   // 장중: 백그라운드 폴링 · 마감: 패널 열릴 때만 이력 로드
   useEffect(() => {
