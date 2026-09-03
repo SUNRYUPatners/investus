@@ -73,25 +73,59 @@ function signedFromMobile(row: NaverMobileDay): number {
 
 /** 장 시작 전(PREOPEN): polling cr=0 → 전일 완료 세션 등락률 */
 async function fetchNaverMobilePrevDay(code: string): Promise<Pick<NaverLiveQuote, "change" | "changePercent"> | null> {
+  const row = await fetchNaverMobileDayRow(
+    `https://m.stock.naver.com/api/stock/${encodeURIComponent(code)}/price?pageSize=3&page=1`,
+  );
+  if (!row) return null;
+
+  const changePercent = parseFloat(row.fluctuationsRatio ?? "0");
+  if (!Number.isFinite(changePercent)) return null;
+
+  return {
+    change: signedFromMobile(row),
+    changePercent,
+  };
+}
+
+/** 지수 — PREOPEN 시 전일 종가·등락 (모바일 0번 = 최근 완료 거래일) */
+async function fetchNaverMobileIndexEod(
+  indexCode: "KOSPI" | "KOSDAQ",
+): Promise<NaverLiveQuote | null> {
+  const row = await fetchNaverMobileDayRow(
+    `https://m.stock.naver.com/api/index/${indexCode}/price?pageSize=2&page=1`,
+  );
+  if (!row) return null;
+
+  const price = parseKrPrice(row.closePrice);
+  const changePercent = parseFloat(row.fluctuationsRatio ?? "0");
+  if (!(price > 0) || !Number.isFinite(changePercent)) return null;
+
+  return {
+    code: indexCode,
+    price,
+    change: signedFromMobile(row),
+    changePercent,
+    volume: 0,
+    marketStatus: "PREOPEN",
+  };
+}
+
+async function fetchNaverMobileDayRow(url: string): Promise<NaverMobileDay | null> {
   try {
-    const res = await fetch(
-      `https://m.stock.naver.com/api/stock/${encodeURIComponent(code)}/price?pageSize=3&page=1`,
-      {
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-          Accept: "application/json",
-          Referer: "https://m.stock.naver.com/",
-        },
-        cache: "no-store",
-        signal: AbortSignal.timeout(5000),
+    const res = await fetch(url, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        Accept: "application/json",
+        Referer: "https://m.stock.naver.com/",
       },
-    );
+      cache: "no-store",
+      signal: AbortSignal.timeout(5000),
+    });
     if (!res.ok) return null;
     const rows = (await res.json()) as NaverMobileDay[];
     if (!Array.isArray(rows) || rows.length === 0) return null;
 
-    // 오늘(0번)이 PREOPEN 0%면 전일(1번) 완료 세션 사용
     const today = rows[0];
     const todayPct = Math.abs(parseFloat(today?.fluctuationsRatio ?? "0"));
     const todayVol = today?.accumulatedTradingVolume ?? 0;
@@ -103,16 +137,7 @@ async function fetchNaverMobilePrevDay(code: string): Promise<Pick<NaverLiveQuot
       (todayPct === 0 ||
         (prevVol > 0 && todayVol > 0 && todayVol < prevVol * 0.08));
 
-    const row = usePrev ? prev : today;
-    if (!row) return null;
-
-    const changePercent = parseFloat(row.fluctuationsRatio ?? "0");
-    if (!Number.isFinite(changePercent)) return null;
-
-    return {
-      change: signedFromMobile(row),
-      changePercent,
-    };
+    return usePrev ? prev : today;
   } catch {
     return null;
   }
@@ -240,10 +265,27 @@ export async function fetchNaverIndices(): Promise<Map<string, NaverLiveQuote>> 
         change,
         changePercent: row.cr,
         volume: row.aq ?? 0,
+        marketStatus: row.ms,
       };
       out.set(row.cd, q);
       if (row.cd === "KOSPI") out.set("^KS11", q);
       if (row.cd === "KOSDAQ") out.set("^KQ11", q);
+    }
+
+    const preopen = [...out.values()].some((q) => q.marketStatus === "PREOPEN");
+    if (preopen) {
+      const [kospiEod, kosdaqEod] = await Promise.all([
+        fetchNaverMobileIndexEod("KOSPI"),
+        fetchNaverMobileIndexEod("KOSDAQ"),
+      ]);
+      if (kospiEod) {
+        out.set("KOSPI", kospiEod);
+        out.set("^KS11", kospiEod);
+      }
+      if (kosdaqEod) {
+        out.set("KOSDAQ", kosdaqEod);
+        out.set("^KQ11", kosdaqEod);
+      }
     }
   } catch { /* ignore */ }
   return out;

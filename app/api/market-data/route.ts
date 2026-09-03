@@ -192,6 +192,60 @@ export async function GET(req: Request) {
     const market = parseMarketId(marketParam, "us");
     if (market === "us") {
       // fall through to US logic
+    } else if (market === "kr") {
+      const kvKey = `market-data:${market}:v3`;
+      const {
+        krPayloadHasEodChanges,
+        mergeKrEodPayload,
+        shouldServeKrClosedCache,
+        krCacheControlHeader,
+      } = await import("@/lib/markets/krEodCache");
+      const { isMarketSessionOpen } = await import("@/lib/markets/hours");
+      const krOpen = isMarketSessionOpen("kr");
+
+      const cachedRaw = !refresh ? await kvGetDetail(kvKey) : null;
+      const cached = cachedRaw as import("@/lib/markets/fetchAltMarket").AltMarketPayload | null;
+
+      if (cached && shouldServeKrClosedCache(cached) && !refresh) {
+        return NextResponse.json(cached, {
+          headers: {
+            "Cache-Control": krCacheControlHeader(false),
+            "X-Market": market,
+            "X-Market-Cache": "EOD-HIT",
+          },
+        });
+      }
+
+      try {
+        let payload = await fetchAltMarketData(market);
+
+        if (!krPayloadHasEodChanges(payload) && cached && krPayloadHasEodChanges(cached)) {
+          payload = mergeKrEodPayload(payload, cached);
+        }
+
+        if (krPayloadHasEodChanges(payload)) {
+          if (warm) {
+            await kvSetDetail(kvKey, payload as unknown as Record<string, unknown>);
+          } else {
+            after(() => kvSetDetail(kvKey, payload as unknown as Record<string, unknown>));
+          }
+        }
+
+        return NextResponse.json(payload, {
+          headers: {
+            "Cache-Control": krCacheControlHeader(krOpen),
+            "X-Market": market,
+            "X-Market-Cache": krOpen ? "LIVE" : "EOD",
+          },
+        });
+      } catch {
+        if (cached && (cached.quotes?.length ?? 0) > 0) {
+          return NextResponse.json(cached, {
+            headers: { "X-Market": market, "X-Market-Cache": "STALE" },
+          });
+        }
+        return NextResponse.json({ error: "일시적 오류" }, { status: 503, headers: { "Retry-After": "3" } });
+      }
     } else {
       const kvKey = `market-data:${market}:v2`;
       try {
@@ -202,7 +256,6 @@ export async function GET(req: Request) {
             const qLen = Array.isArray((cached as { quotes?: unknown[] }).quotes)
               ? (cached as { quotes: unknown[] }).quotes.length
               : 0;
-            // 실데이터 캐시만 서빙 (빈/목업 캐시 거부)
             if (age < 55_000 && (market === "kr-re" || qLen > 0)) {
               return NextResponse.json(cached, {
                 headers: { "Cache-Control": "public, s-maxage=55, stale-while-revalidate=60", "X-Market": market },
@@ -211,7 +264,6 @@ export async function GET(req: Request) {
           }
         }
         const payload = await fetchAltMarketData(market);
-        // 실호가 있을 때만 KV 저장
         if (market === "kr-re" || (payload.quotes?.length ?? 0) > 0) {
           after(() => kvSetDetail(kvKey, payload as unknown as Record<string, unknown>));
         }

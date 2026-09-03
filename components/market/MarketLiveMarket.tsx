@@ -16,6 +16,13 @@ import { isMarketSessionOpen } from "@/lib/markets/hours";
 
 type MarketData = { indices: IndexQuote[]; quotes: Quote[]; futures: FutureItem[]; liveAt?: number };
 
+function hasNonZeroChanges(d: MarketData): boolean {
+  return (
+    (d.quotes ?? []).some((q) => q.changePercent !== 0) ||
+    (d.indices ?? []).some((i) => i.changePercent !== 0)
+  );
+}
+
 function KrReMarketBlocks() {
   return (
     <section className="px-4 lg:px-0 pt-3 space-y-4">
@@ -63,11 +70,29 @@ export function MarketLiveMarket({ market }: { market: MarketId }) {
         clearTimeout(timeout);
         const has = (d?.quotes?.length ?? 0) > 0 || (d?.indices?.length ?? 0) > 0;
         if (!has) throw Object.assign(new Error("empty"), { retry: true });
+
+        // 장마감·장전: PREOPEN 0% 응답으로 localStorage 덮어쓰기 방지
+        if (market === "kr" && !isMarketSessionOpen(market) && !hasNonZeroChanges(d)) {
+          try {
+            const raw = localStorage.getItem(cfg.marketCacheKey);
+            if (raw) {
+              const prev = JSON.parse(raw) as MarketData;
+              if (hasNonZeroChanges(prev)) {
+                setData(prev);
+                setLoading(false);
+                return;
+              }
+            }
+          } catch { /* ignore */ }
+        }
+
         setData(d);
         setLoading(false);
-        try {
-          localStorage.setItem(cfg.marketCacheKey, JSON.stringify({ ...d, _ts: Date.now() }));
-        } catch { /* ignore */ }
+        if (hasNonZeroChanges(d) || isMarketSessionOpen(market)) {
+          try {
+            localStorage.setItem(cfg.marketCacheKey, JSON.stringify({ ...d, _ts: Date.now() }));
+          } catch { /* ignore */ }
+        }
       })
       .catch((e: unknown & { retry?: boolean }) => {
         clearTimeout(timeout);

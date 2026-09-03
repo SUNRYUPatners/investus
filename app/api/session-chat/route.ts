@@ -26,7 +26,7 @@ async function loadMarketSnap(market: "us" | "kr"): Promise<{ quotes: Quote[]; i
       const data = await fetchAltMarketData("kr");
       return { quotes: data.quotes ?? [], indices: data.indices ?? [] };
     } catch {
-      const cached = await kvGetDetail("market-data:kr:v2");
+      const cached = await kvGetDetail("market-data:kr:v3");
       if (cached) {
         const c = cached as { quotes?: Quote[]; indices?: IndexQuote[] };
         return { quotes: c.quotes ?? [], indices: c.indices ?? [] };

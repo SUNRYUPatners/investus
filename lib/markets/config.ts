@@ -183,7 +183,7 @@ export const MARKET_CONFIG: Record<MarketId, MarketConfig> = {
     clockLabel: "KST",
     portfolioKey: "investus-portfolio-kr",
     watchlistKey: "investus-watchlist-kr",
-    marketCacheKey: "market-data-cache-kr-v2",
+    marketCacheKey: "market-data-cache-kr-v3",
     recommended: KR_TOP10.slice(0, 4),
     popular: KR_TOP10,
     indices: [
