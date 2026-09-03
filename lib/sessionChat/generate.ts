@@ -2,6 +2,7 @@ import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import { pickSessionNick } from "./nicks";
 import { chatStockLabel } from "./labels";
+import { filterQuotesForMarket } from "./filterQuotes";
 import type { SessionChatMessage } from "./types";
 
 export type ChatQuote = {
@@ -236,13 +237,18 @@ export function generateSessionMessages(
   const startSlot = Math.floor(since / slot) * slot;
   const max = opts.maxBackfill ?? 20;
 
+  // 이중 방어: 호출측 필터 누락 시에도 시장 혼입 차단
+  const m = market === "kr" ? "kr" : "us";
+  const safeQuotes = filterQuotesForMarket(m, quotes);
+  const safeIndices = filterQuotesForMarket(m, indices);
+
   const out: SessionChatMessage[] = [];
   const usedSymbols = new Set<string>();
   const usedContents = new Set<string>();
 
   for (let t = startSlot; t <= currentSlot && out.length < max; t += slot) {
     if (hashSeed(`${market}-skip-${t}`) % 10 < 3) continue;
-    const msg = messageForSlot(market, t, quotes, indices, usedSymbols, usedContents);
+    const msg = messageForSlot(market, t, safeQuotes, safeIndices, usedSymbols, usedContents);
     if (msg && msg.at > since) {
       out.push(msg);
       if (usedSymbols.size > 6) {

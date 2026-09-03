@@ -136,12 +136,17 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
           }
         }
 
-        setMessages((prev) => {
-          const map = new Map(prev.map((m) => [m.id, m]));
-          for (const m of data.messages) map.set(m.id, m);
-          const merged = [...map.values()].sort((a, b) => a.at - b.at);
-          return merged.slice(-MAX_MESSAGES);
-        });
+        // 최초 로드는 교체, 이후 폴링만 병합 — 시장 전환 시 타시장 잔여 메시지 방지
+        if (initial) {
+          setMessages(data.messages.slice(-MAX_MESSAGES).sort((a, b) => a.at - b.at));
+        } else {
+          setMessages((prev) => {
+            const map = new Map(prev.map((m) => [m.id, m]));
+            for (const m of data.messages) map.set(m.id, m);
+            const merged = [...map.values()].sort((a, b) => a.at - b.at);
+            return merged.slice(-MAX_MESSAGES);
+          });
+        }
 
         const last = data.messages[data.messages.length - 1];
         if (last && data.open) {
@@ -350,10 +355,10 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
             >
               <div>
                 <p className="text-sm font-bold" style={{ color: "var(--text)" }}>
-                  {sessionOpen ? "장중 실시간 시황방" : "시황방 (마감)"}
+                  {sessionOpen ? `${cfg.labelKo} 실시간 시황방` : `${cfg.labelKo} 시황방 (마감)`}
                 </p>
                 <p className="text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>
-                  {cfg.labelKo}
+                  {market === "us" ? "미국주식 전용 · NYSE · NASDAQ" : "한국주식 전용 · 코스피 · 코스닥"}
                   {sessionOpen && online > 0 && (
                     <span className="inline-flex items-center gap-1 ml-2">
                       <Users size={11} />

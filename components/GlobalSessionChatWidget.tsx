@@ -37,5 +37,6 @@ export function GlobalSessionChatWidget() {
 
   if (!sessionChatSupported(market)) return null;
 
-  return <SessionChatWidget market={market} />;
+  // market별 인스턴스 분리 — US/KR 메시지 상태 혼입 방지
+  return <SessionChatWidget key={market} market={market} />;
 }

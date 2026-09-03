@@ -54,10 +54,23 @@ function classifyIntent(content: string): UserIntent {
   return "general";
 }
 
-function findMentionedQuote(content: string, pool: ChatQuote[]): ChatQuote | null {
+function findMentionedQuote(
+  content: string,
+  pool: ChatQuote[],
+  market: MarketId,
+): ChatQuote | null {
   for (const hint of TICKER_HINTS) {
     if (!hint.re.test(content)) continue;
     for (const sym of hint.symbols) {
+      const isKr = /^\d{6}/.test(sym) || sym.endsWith(".KS") || sym === "^KS11" || sym === "^KQ11";
+      if (market === "us" && isKr) continue;
+      if (market === "kr" && !isKr && !sym.startsWith("^")) {
+        // US 티커 힌트는 KR 방에서 무시 (코스피 등 지수는 위에서 처리)
+        if (/^[A-Z]{1,5}$/.test(sym.replace(".KS", ""))) continue;
+      }
+      if (market === "kr" && (sym === "^IXIC" || sym === "^GSPC" || sym === "^DJI")) continue;
+      if (market === "us" && (sym === "^KS11" || sym === "^KQ11")) continue;
+
       const q = pool.find(
         (x) => x.symbol === sym || x.symbol.replace(".KS", "") === sym.replace(".KS", ""),
       );
@@ -247,7 +260,7 @@ export function generateRepliesToUserMessage(
   const h = hashSeed(`${market}-reply-${userMsg.id}`);
   const count = 2 + (h % 2);
   const intent = classifyIntent(userMsg.content);
-  const mentioned = findMentionedQuote(userMsg.content, pool);
+  const mentioned = findMentionedQuote(userMsg.content, pool, market);
   const slotQuotes = pickDistinctQuotes(pool, userMsg.id, count, mentioned);
   if (mentioned) slotQuotes[0] = mentioned;
 

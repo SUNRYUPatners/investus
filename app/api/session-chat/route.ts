@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { parseMarketId } from "@/lib/markets/types";
 import { isSessionChatOpen, sessionChatSupported } from "@/lib/markets/sessionChatOpen";
 import { generateSessionMessages, fakeOnlineCount, type ChatQuote } from "@/lib/sessionChat/generate";
+import { filterQuotesForMarket } from "@/lib/sessionChat/filterQuotes";
 import { isSessionChatBanned } from "@/lib/sessionChat/banned";
 import { guestUserId, readGuestIdFromRequest } from "@/lib/sessionChat/guestId";
 import { guestNick, sanitizeSessionNick } from "@/lib/sessionChat/nickname";
@@ -94,8 +95,8 @@ export async function GET(req: NextRequest) {
   const safeSince = Number.isFinite(sinceMs) ? sinceMs : defaultSince;
 
   const snap = await loadMarketSnap(m);
-  const chatQuotes = toChatQuotes(snap.quotes);
-  const chatIndices = toIndexQuotes(snap.indices);
+  const chatQuotes = filterQuotesForMarket(m, toChatQuotes(snap.quotes));
+  const chatIndices = filterQuotesForMarket(m, toIndexQuotes(snap.indices));
 
   const userMsgs = await loadSessionUserMessages(m, actorKey, safeSince, open ? 80 : 120);
 
@@ -175,8 +176,8 @@ export async function POST(req: NextRequest) {
   }
 
   const snap = await loadMarketSnap(m);
-  const chatQuotes = toChatQuotes(snap.quotes);
-  const chatIndices = toIndexQuotes(snap.indices);
+  const chatQuotes = filterQuotesForMarket(m, toChatQuotes(snap.quotes));
+  const chatIndices = filterQuotesForMarket(m, toIndexQuotes(snap.indices));
   const botReplies = generateRepliesToUserMessages(
     [result.message],
     m,
