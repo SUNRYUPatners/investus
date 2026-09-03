@@ -105,9 +105,16 @@ export async function GET(req: NextRequest) {
     maxBackfill: open ? 20 : 50,
   });
 
-  const replyMsgs = open
-    ? generateRepliesToUserMessages(userMsgs, m, chatQuotes, chatIndices, safeSince)
-    : [];
+  // 장중: 아직 안 뜬 호응도 내려서 클라이언트가 딜레이 후 표시.
+  // 마감: 이미 지난 호응만 — 대화 이력에 사람 말에 대한 답이 남게.
+  const replyMsgs = generateRepliesToUserMessages(
+    userMsgs,
+    m,
+    chatQuotes,
+    chatIndices,
+    safeSince,
+    { onlyPast: !open },
+  );
 
   const messages = mergeMessages([userMsgs, botMsgs, replyMsgs]).slice(-80);
   const recentUsers = open ? await countSessionParticipants(m) : 0;

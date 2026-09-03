@@ -32,6 +32,8 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
   const lastMsgAtRef = useRef(0);
   const panelOpenRef = useRef(panelOpen);
   const replyTimersRef = useRef<number[]>([]);
+  const scheduledReplyIdsRef = useRef<Set<string>>(new Set());
+  const [someoneTyping, setSomeoneTyping] = useState(false);
   const cfg = getMarketConfig(market);
 
   const supported = sessionChatSupported(market);
@@ -93,6 +95,27 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     if (el) el.scrollTop = el.scrollHeight;
   }, []);
 
+  const scheduleBotReplies = useCallback((replies: SessionChatMessage[]) => {
+    const now = Date.now();
+    let queued = 0;
+    for (const reply of replies) {
+      if (scheduledReplyIdsRef.current.has(reply.id)) continue;
+      scheduledReplyIdsRef.current.add(reply.id);
+      const delay = Math.max(0, reply.at - now);
+      if (delay > 400) queued++;
+      const timerId = window.setTimeout(() => {
+        setMessages((prev) => {
+          if (prev.some((m) => m.id === reply.id)) return prev;
+          return [...prev, reply].sort((a, b) => a.at - b.at).slice(-MAX_MESSAGES);
+        });
+        setSomeoneTyping(false);
+        requestAnimationFrame(scrollToBottom);
+      }, delay);
+      replyTimersRef.current.push(timerId);
+    }
+    if (queued > 0) setSomeoneTyping(true);
+  }, [scrollToBottom]);
+
   const poll = useCallback(async (initial = false) => {
     if (!supported) return;
     const isOpen = isSessionChatOpen(market);
@@ -120,15 +143,19 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
       if (!data.open) setOnline(0);
 
       if (data.messages?.length) {
-        const latestAt = Math.max(...data.messages.map((m) => m.at));
+        const now = Date.now();
+        const ready = data.messages.filter((m) => m.at <= now);
+        const pending = data.messages.filter((m) => m.at > now);
 
-        if (data.open && !panelOpenRef.current) {
+        const latestAt = ready.length > 0 ? Math.max(...ready.map((m) => m.at)) : 0;
+
+        if (data.open && !panelOpenRef.current && latestAt > 0) {
           let readAt = 0;
           try {
             readAt = Number(localStorage.getItem(READ_KEY(market)) ?? "0");
           } catch { /* ignore */ }
           if (latestAt > readAt) {
-            const newCount = data.messages.filter((m) => m.at > readAt && !m.is_mine).length;
+            const newCount = ready.filter((m) => m.at > readAt && !m.is_mine).length;
             if (newCount > 0) {
               setUnread((u) => Math.min(99, u + newCount));
               setHasNewPulse(true);
@@ -138,20 +165,21 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
 
         // 최초 로드는 교체, 이후 폴링만 병합 — 시장 전환 시 타시장 잔여 메시지 방지
         if (initial) {
-          setMessages(data.messages.slice(-MAX_MESSAGES).sort((a, b) => a.at - b.at));
+          setMessages(ready.slice(-MAX_MESSAGES).sort((a, b) => a.at - b.at));
         } else {
           setMessages((prev) => {
             const map = new Map(prev.map((m) => [m.id, m]));
-            for (const m of data.messages) map.set(m.id, m);
+            for (const m of ready) map.set(m.id, m);
             const merged = [...map.values()].sort((a, b) => a.at - b.at);
             return merged.slice(-MAX_MESSAGES);
           });
         }
 
-        const last = data.messages[data.messages.length - 1];
-        if (last && data.open) {
-          sinceRef.current = last.at;
-          lastMsgAtRef.current = last.at;
+        if (pending.length) scheduleBotReplies(pending);
+
+        if (latestAt > 0 && data.open) {
+          sinceRef.current = latestAt;
+          lastMsgAtRef.current = latestAt;
         }
       } else if (initial) {
         setMessages([]);
@@ -160,7 +188,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
     finally {
       if (initial) setLoading(false);
     }
-  }, [market, supported]);
+  }, [market, supported, scheduleBotReplies]);
 
   // 장중 여부 체크
   useEffect(() => {
@@ -204,21 +232,6 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
       scrollToBottom();
     }
   }, [messages, panelOpen, markRead, scrollToBottom]);
-
-  const scheduleBotReplies = useCallback((replies: SessionChatMessage[]) => {
-    const now = Date.now();
-    for (const reply of replies) {
-      const delay = Math.max(0, reply.at - now);
-      const timerId = window.setTimeout(() => {
-        setMessages((prev) => {
-          if (prev.some((m) => m.id === reply.id)) return prev;
-          return [...prev, reply].sort((a, b) => a.at - b.at).slice(-MAX_MESSAGES);
-        });
-        requestAnimationFrame(scrollToBottom);
-      }, delay);
-      replyTimersRef.current.push(timerId);
-    }
-  }, [scrollToBottom]);
 
   const submitMessage = async () => {
     const content = draft.trim();
@@ -445,6 +458,12 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                   </div>
                 </div>
               ))}
+
+              {someoneTyping && sessionOpen && (
+                <p className="text-[11px] pl-10 py-1" style={{ color: "var(--muted)" }}>
+                  누군가 입력 중…
+                </p>
+              )}
             </div>
 
             <div

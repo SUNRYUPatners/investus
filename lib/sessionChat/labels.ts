@@ -18,6 +18,9 @@ for (const id of ["us", "kr"] as const) {
 }
 INDEX_LABEL["^KS11"] = INDEX_LABEL["^KS11"] ?? "코스피";
 INDEX_LABEL["^KQ11"] = "코스닥";
+INDEX_LABEL["^IXIC"] = "나스닥";
+INDEX_LABEL["^GSPC"] = "S&P500";
+INDEX_LABEL["^DJI"] = "다우";
 
 function cleanQuoteName(raw: string): string {
   let name = raw.trim();
