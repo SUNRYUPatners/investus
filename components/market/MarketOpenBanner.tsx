@@ -67,7 +67,7 @@ const BANNER_STYLES = (
   `}</style>
 );
 
-/** 헤더 시장 탭 바로 아래 — 교육 배너 스타일 장중 안내 */
+/** 시세 티커 아래 — 교육 배너 스타일 장중 안내 */
 export function MarketOpenBanner({ market }: { market: MarketId }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);

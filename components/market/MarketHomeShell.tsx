@@ -3,6 +3,7 @@
 import { Header } from "@/components/Header";
 import { TickerTape } from "@/components/TickerTape";
 import { EcoTickerTape } from "@/components/EcoTickerTape";
+import { MarketOpenBanner } from "@/components/market/MarketOpenBanner";
 import { LiveMarket } from "@/components/LiveMarket";
 import { MarketLiveMarket } from "@/components/market/MarketLiveMarket";
 import { NewsSection } from "@/components/NewsSection";
@@ -57,11 +58,21 @@ export function MarketHomeShell({
         Investus — AI 기반 차세대 자산관리(WM) 핀테크 플랫폼 · {isUs ? "미국주식" : cfg.labelKo}
       </h1>
       <Header />
-      {/* 시세 티커 · 경제일정 — 각각 1줄씩 (세로 2줄) */}
+      {/* 시세·경제 티커는 항상 장중 배너보다 위 */}
       {(isUs || market === "kr" || market === "safe") && (
         <div className="border-b" style={{ borderColor: "var(--border)" }}>
           <TickerTape market={market} />
           <EcoTickerTape market={market} />
+        </div>
+      )}
+      {(isUs || market === "kr") && (
+        <div
+          className="px-4 lg:px-8 pt-2 pb-2 border-b"
+          style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
+        >
+          <div className="max-w-[480px] lg:max-w-none mx-auto">
+            <MarketOpenBanner market={market} />
+          </div>
         </div>
       )}
 
