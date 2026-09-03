@@ -124,7 +124,7 @@ function fmtKrPrice(n: number): string {
 function buildCtx(q: ChatQuote, market: MarketId): TemplateCtx {
   const label = chatStockLabel(q, market);
   const short = label;
-  const ticker = market === "kr" ? label : q.symbol.replace(/\.KS$/i, "");
+  const ticker = label;
   const pct = fmtPct(q.changePercent);
   const price = market === "kr" ? fmtKrPrice(q.price) : fmtPrice(q.price);
   const up = q.changePercent >= 0;

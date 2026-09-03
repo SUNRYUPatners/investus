@@ -1,5 +1,6 @@
 import { KR_HEATMAP, MARKET_CONFIG } from "@/lib/markets/config";
 import type { MarketId } from "@/lib/markets/types";
+import { US_NAME_KO_BY_SYMBOL } from "@/lib/stockSearchDb";
 import type { ChatQuote } from "./generate";
 
 const KR_NAME_BY_SYMBOL = new Map<string, string>();
@@ -29,6 +30,22 @@ function isKrCode(s: string): boolean {
   return /^\d{6}$/.test(s);
 }
 
+function isUsTicker(s: string): boolean {
+  return /^[A-Z]{1,5}(?:-[A-Z])?$/.test(s);
+}
+
+function truncateLabel(name: string): string {
+  return name.length > 22 ? `${name.slice(0, 20)}…` : name;
+}
+
+function shortEnglishName(raw: string): string | null {
+  const name = cleanQuoteName(raw);
+  if (!name || isUsTicker(name)) return null;
+  const short = name.replace(/\s+(Inc\.?|Corp\.?|Co\.?|Ltd\.?|plc|PLC).*$/i, "").trim();
+  if (!short || isUsTicker(short)) return null;
+  return truncateLabel(short);
+}
+
 /** 채팅·시황 토크에 노출할 종목명 (KR은 숫자 코드 대신 회사명) */
 export function chatStockLabel(q: ChatQuote, market: MarketId): string {
   const sym = q.symbol.trim();
@@ -47,11 +64,18 @@ export function chatStockLabel(q: ChatQuote, market: MarketId): string {
     return mapped ?? name ?? code;
   }
 
+  if (market === "us" || isUsTicker(sym)) {
+    const mapped = US_NAME_KO_BY_SYMBOL[sym];
+    if (mapped) return truncateLabel(mapped);
+
+    const english = shortEnglishName(q.name);
+    if (english) return english;
+  }
+
   const name = cleanQuoteName(q.name);
-  if (name && name.length <= 18) return name;
-  if (/^[A-Z]{1,5}$/.test(sym)) return sym;
-  if (name) return name.length > 22 ? `${name.slice(0, 20)}…` : name;
-  return sym;
+  if (name && name.length <= 18 && !isUsTicker(name)) return name;
+  if (name && !isUsTicker(name)) return truncateLabel(name);
+  return US_NAME_KO_BY_SYMBOL[sym] ?? sym;
 }
 
 /** 저장된 메시지 본문의 6자리 KR 코드 → 회사명 (구 메시지 보정) */
@@ -59,4 +83,17 @@ export function humanizeKrCodesInText(text: string): string {
   return text.replace(/\b(\d{6})\b/g, (match, code: string) => {
     return KR_NAME_BY_SYMBOL.get(code) ?? match;
   });
+}
+
+/** 저장된 메시지 본문의 US 티커 → 한글 회사명 (구 메시지 보정) */
+export function humanizeUsTickersInText(text: string): string {
+  return text.replace(/\b[A-Z]{1,5}(?:-[A-Z])?\b/g, (match) => {
+    return US_NAME_KO_BY_SYMBOL[match] ?? match;
+  });
+}
+
+export function humanizeChatStockText(text: string, market: MarketId): string {
+  if (market === "kr") return humanizeKrCodesInText(text);
+  if (market === "us") return humanizeUsTickersInText(text);
+  return text;
 }

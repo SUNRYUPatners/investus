@@ -617,3 +617,20 @@ export const STOCK_SEARCH_DB: { symbol: string; name: string; nameKo?: string }[
   // ── 여행/숙박 ──────────────────────────────────────────────────
   { symbol: "WH",    name: "Wyndham Hotels & Resorts Inc.",      nameKo: "윈덤호텔앤리조트" },
 ];
+
+/** 시황 토크·UI — US 티커 → 한글 회사명 */
+export const US_NAME_KO_BY_SYMBOL: Readonly<Record<string, string>> = (() => {
+  const m: Record<string, string> = {};
+  for (const row of STOCK_SEARCH_DB) {
+    if (row.nameKo) m[row.symbol] = row.nameKo;
+  }
+  Object.assign(m, {
+    SPCX: "스페이스X",
+    JNJ: "J&J",
+    APD: "에어프로덕츠",
+    "^GSPC": "S&P 500",
+    "^IXIC": "나스닥",
+    "^DJI": "다우존스",
+  });
+  return m;
+})();
