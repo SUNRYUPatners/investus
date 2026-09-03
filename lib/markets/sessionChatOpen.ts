@@ -2,7 +2,7 @@ import { isMarketOpen } from "@/lib/marketHours";
 import type { MarketId } from "./types";
 import { isMarketSessionOpen } from "./hours";
 
-/** 홈탭 실시간 시황방 — US·KR 장중만 */
+/** 실시간 시황방 — US·KR (전 페이지 FAB) */
 export function sessionChatSupported(market: MarketId): boolean {
   return market === "us" || market === "kr";
 }

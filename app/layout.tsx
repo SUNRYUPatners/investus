@@ -17,6 +17,7 @@ import { getLocale } from "@/lib/getLocale";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SiteLegalFooter } from "@/components/SiteLegalFooter";
+import { GlobalSessionChatWidget } from "@/components/GlobalSessionChatWidget";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -222,6 +223,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
             <StickyAdFit />
             <BottomNav />
+            <GlobalSessionChatWidget />
           </AuthProvider>
           </MarketProvider>
         </LocaleProvider>
