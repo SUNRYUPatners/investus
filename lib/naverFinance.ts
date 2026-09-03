@@ -91,23 +91,40 @@ async function fetchNaverMobilePrevDay(code: string): Promise<Pick<NaverLiveQuot
 async function fetchNaverMobileIndexEod(
   indexCode: "KOSPI" | "KOSDAQ",
 ): Promise<NaverLiveQuote | null> {
-  const row = await fetchNaverMobileDayRow(
-    `https://m.stock.naver.com/api/index/${indexCode}/price?pageSize=2&page=1`,
-  );
-  if (!row) return null;
+  try {
+    const res = await fetch(
+      `https://m.stock.naver.com/api/index/${indexCode}/price?pageSize=1&page=1`,
+      {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+          Accept: "application/json",
+          Referer: "https://m.stock.naver.com/",
+        },
+        cache: "no-store",
+        signal: AbortSignal.timeout(5000),
+      },
+    );
+    if (!res.ok) return null;
+    const rows = (await res.json()) as NaverMobileDay[];
+    const row = rows?.[0];
+    if (!row) return null;
 
-  const price = parseKrPrice(row.closePrice);
-  const changePercent = parseFloat(row.fluctuationsRatio ?? "0");
-  if (!(price > 0) || !Number.isFinite(changePercent)) return null;
+    const price = parseKrPrice(row.closePrice);
+    const changePercent = parseFloat(row.fluctuationsRatio ?? "0");
+    if (!(price > 0) || !Number.isFinite(changePercent)) return null;
 
-  return {
-    code: indexCode,
-    price,
-    change: signedFromMobile(row),
-    changePercent,
-    volume: 0,
-    marketStatus: "PREOPEN",
-  };
+    return {
+      code: indexCode,
+      price,
+      change: signedFromMobile(row),
+      changePercent,
+      volume: 0,
+      marketStatus: "PREOPEN",
+    };
+  } catch {
+    return null;
+  }
 }
 
 async function fetchNaverMobileDayRow(url: string): Promise<NaverMobileDay | null> {
@@ -146,9 +163,10 @@ async function fetchNaverMobileDayRow(url: string): Promise<NaverMobileDay | nul
 async function enrichPreopenFromMobile(
   out: Map<string, NaverLiveQuote>,
   codes: string[],
+  force = false,
 ): Promise<void> {
   const preopen = [...out.values()].some((q) => q.marketStatus === "PREOPEN");
-  if (!preopen) return;
+  if (!preopen && !force) return;
 
   const needFix = codes.filter((c) => {
     const key = c.replace(/\.KS$/i, "");
@@ -231,6 +249,18 @@ export async function fetchNaverStockQuotes(codes: string[]): Promise<Map<string
       out.set(`${row.cd}.KS`, out.get(row.cd)!);
     }
     await enrichPreopenFromMobile(out, cleaned);
+
+    const { isMarketSessionOpen } = await import("@/lib/markets/hours");
+    if (!isMarketSessionOpen("kr")) {
+      const stillZero = cleaned.filter((c) => {
+        const key = c.replace(/\.KS$/i, "");
+        const q = out.get(key) ?? out.get(`${key}.KS`);
+        return q && q.changePercent === 0;
+      });
+      if (stillZero.length > 0) {
+        await enrichPreopenFromMobile(out, stillZero, true);
+      }
+    }
   } catch { /* ignore */ }
   return out;
 }
@@ -285,6 +315,23 @@ export async function fetchNaverIndices(): Promise<Map<string, NaverLiveQuote>> 
       if (kosdaqEod) {
         out.set("KOSDAQ", kosdaqEod);
         out.set("^KQ11", kosdaqEod);
+      }
+    } else {
+      // 장마감 후에도 polling이 프리마켓 값을 줄 수 있음 — 모바일 EOD로 덮어씀
+      const { isMarketSessionOpen } = await import("@/lib/markets/hours");
+      if (!isMarketSessionOpen("kr")) {
+        const [kospiEod, kosdaqEod] = await Promise.all([
+          fetchNaverMobileIndexEod("KOSPI"),
+          fetchNaverMobileIndexEod("KOSDAQ"),
+        ]);
+        if (kospiEod) {
+          out.set("KOSPI", kospiEod);
+          out.set("^KS11", kospiEod);
+        }
+        if (kosdaqEod) {
+          out.set("KOSDAQ", kosdaqEod);
+          out.set("^KQ11", kosdaqEod);
+        }
       }
     }
   } catch { /* ignore */ }
