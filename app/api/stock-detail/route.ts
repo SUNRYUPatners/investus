@@ -5,7 +5,17 @@ import {
   fetchFinnhubMetrics,
 } from "@/lib/finnhub";
 import { fetchBatchQuotes, fetchQuoteV8 } from "@/lib/yahooFinance";
+import { fetchNaverIndices, fetchNaverStockQuotes } from "@/lib/naverFinance";
 import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
+import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { krClosedCacheFresh } from "@/lib/markets/krEodCache";
+import {
+  isKrIndexSymbol,
+  isKrSymbol,
+  krStockDisplayName,
+  normalizeKrStockSymbol,
+  parseKrStockCode,
+} from "@/lib/markets/krSymbol";
 import { kvGetDetail, kvSetDetail } from "@/lib/kv";
 
 
@@ -16,15 +26,44 @@ export const maxDuration = 20;
 const _cache = new Map<string, { data: Record<string, unknown>; at: number }>();
 const LIVE_TTL = 60_000;
 
-function saveAndRespond(symbol: string, data: Record<string, unknown>) {
-  const isOpen = isMarketOpen();
-  const cc = isOpen
+function detailCacheFresh(symbol: string, fetchedAt: number): boolean {
+  if (!fetchedAt) return false;
+  if (isKrSymbol(symbol)) {
+    if (isMarketSessionOpen("kr")) return Date.now() - fetchedAt < LIVE_TTL;
+    return krClosedCacheFresh(fetchedAt);
+  }
+  if (!isMarketOpen()) return isEodCacheFresh(fetchedAt);
+  return Date.now() - fetchedAt < LIVE_TTL;
+}
+
+function saveAndRespond(symbol: string, data: Record<string, unknown>, kr = isKrSymbol(symbol)) {
+  const open = kr ? isMarketSessionOpen("kr") : isMarketOpen();
+  const cc = open
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=3600, stale-while-revalidate=86400";
   const now = Date.now();
-  _cache.set(symbol, { data, at: now });
-  kvSetDetail(symbol, { ...data, _fetchedAt: now });
-  return NextResponse.json(data, { headers: { "Cache-Control": cc } });
+  const cp = Number(data.changePercent ?? 0);
+  _cache.set(symbol, { data: { ...data, _fetchedAt: now }, at: now });
+  // PREOPEN 0% 스냅샷은 KV에 저장하지 않음
+  if (!(kr && !open && cp === 0)) {
+    kvSetDetail(symbol, { ...data, _fetchedAt: now });
+  }
+  return NextResponse.json({ ...data, _fetchedAt: now }, { headers: { "Cache-Control": cc } });
+}
+
+function mergeKrDetailFromCache(
+  fresh: Record<string, unknown>,
+  stale: Record<string, unknown>,
+): Record<string, unknown> {
+  const cp = Number(fresh.changePercent ?? 0);
+  const staleCp = Number(stale.changePercent ?? 0);
+  if (cp !== 0 || staleCp === 0) return fresh;
+  return {
+    ...fresh,
+    change: stale.change,
+    changePercent: stale.changePercent,
+    price: stale.price ?? fresh.price,
+  };
 }
 
 // ── Index sources (same priority as market-data/route.ts) ────────────────
@@ -43,7 +82,8 @@ export async function GET(req: NextRequest) {
   const rawSymbol = (req.nextUrl.searchParams.get("symbol") ?? "").toUpperCase().slice(0, 12);
   if (!rawSymbol) return NextResponse.json({ error: "no symbol" }, { status: 400 });
 
-  const open = isMarketOpen();
+  const kr = isKrSymbol(rawSymbol);
+  const open = kr ? isMarketSessionOpen("kr") : isMarketOpen();
   const cc = open
     ? "public, s-maxage=55, stale-while-revalidate=120"
     : "public, s-maxage=3600, stale-while-revalidate=86400";
@@ -55,25 +95,78 @@ export async function GET(req: NextRequest) {
     const kvData = await kvGetDetail(rawSymbol);
     if (kvData) {
       const kvAge = Date.now() - (Number(kvData._fetchedAt ?? 0));
-      // 장 중 30분 초과 스테일: API 강제 갱신 (at=0). 장 마감: fresh 그대로.
       const tooStale = open && kvAge > STALE_LIMIT;
-      cached = { data: kvData, at: tooStale ? 0 : (open ? 0 : Date.now()) };
+      cached = { data: kvData, at: tooStale ? 0 : open ? 0 : Date.now() };
       _cache.set(rawSymbol, cached);
     }
   }
 
-  // 장 마감: 직전 세션 종가(16:00 ET 이후) 캐시만 서빙
+  // 장마감·장전: EOD 캐시만 서빙
   if (!open && cached) {
     const fetchedAt = Number(cached.data._fetchedAt ?? cached.at ?? 0);
-    if (isEodCacheFresh(fetchedAt)) {
+    if (detailCacheFresh(rawSymbol, fetchedAt)) {
       return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
     }
     cached = null;
   }
   // 장 중: 60초 TTL 내 캐시면 바로 서빙
-  if (cached && Date.now() - cached.at < LIVE_TTL) return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
+  if (cached && Date.now() - cached.at < LIVE_TTL) {
+    return NextResponse.json(cached.data, { headers: { "Cache-Control": cc } });
+  }
 
   try {
+    // ── KR 지수 (^KS11 / ^KQ11) ─────────────────────────────────────────────
+    if (isKrIndexSymbol(rawSymbol)) {
+      const idxMap = await fetchNaverIndices();
+      const key = rawSymbol === "^KQ11" || rawSymbol === "KOSDAQ" ? "^KQ11" : "^KS11";
+      const q = idxMap.get(key) ?? idxMap.get(key === "^KS11" ? "KOSPI" : "KOSDAQ");
+      if (q && q.price > 0) {
+        let data: Record<string, unknown> = {
+          symbol: key,
+          name: krStockDisplayName(key),
+          exchange: "KRX",
+          currency: "KRW",
+          price: q.price,
+          change: q.change,
+          changePercent: q.changePercent,
+          open: null, high: null, low: null, volume: q.volume > 0 ? q.volume : null,
+          week52High: null, week52Low: null, pe: null, marketCap: null,
+          avgVolume: null, dividendYield: null, beta: null, eps: null,
+        };
+        if (cached && Number(data.changePercent) === 0) {
+          data = mergeKrDetailFromCache(data, cached.data);
+        }
+        return saveAndRespond(rawSymbol, data, true);
+      }
+    }
+
+    // ── KR 종목 (005930.KS / 005930) ────────────────────────────────────────
+    const krCode = parseKrStockCode(rawSymbol);
+    if (krCode) {
+      const canon = normalizeKrStockSymbol(krCode);
+      const map = await fetchNaverStockQuotes([krCode]);
+      const q = map.get(krCode) ?? map.get(canon);
+      if (q && q.price > 0) {
+        let data: Record<string, unknown> = {
+          symbol: canon,
+          name: krStockDisplayName(krCode, q.name),
+          exchange: "KRX",
+          currency: "KRW",
+          price: q.price,
+          change: q.change,
+          changePercent: q.changePercent,
+          open: null, high: null, low: null, volume: q.volume > 0 ? q.volume : null,
+          week52High: null, week52Low: null, pe: null, marketCap: null,
+          avgVolume: null, dividendYield: null, beta: null, eps: null,
+        };
+        if (cached && Number(data.changePercent) === 0) {
+          data = mergeKrDetailFromCache(data, cached.data);
+        }
+        return saveAndRespond(rawSymbol, data, true);
+      }
+    }
+
+    // ── US logic below ──────────────────────────────────────────────────────
     // ── 1) 주요 지수: YF direct primary → Finnhub ETF proxy fallback ────────
     // market-data와 완전히 동일한 우선순위 — 가격 일치 보장
     const idxMeta = INDEX_ETF[rawSymbol];

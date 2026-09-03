@@ -7,7 +7,10 @@
  */
 
 import { fetchBatchQuotes, fetchQuoteV8, type YFQuote } from "@/lib/yahooFinance";
+import { fetchNaverStockQuotes } from "@/lib/naverFinance";
 import { isMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
+import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { parseKrStockCode, normalizeKrStockSymbol } from "@/lib/markets/krSymbol";
 import { kvGetPrice, kvSetPrice, type PriceData } from "@/lib/kv";
 
 export type PriceEntry = { price: number; change: number; changePercent: number };
@@ -90,6 +93,33 @@ export async function getPrices(
   }
   need.splice(0, need.length, ...stillNeed);
   if (need.length === 0) return result;
+
+  // 2b) KR 종목 — Naver (005930.KS 등)
+  const krNeed: string[] = [];
+  const usNeed: string[] = [];
+  for (const sym of need) {
+    if (parseKrStockCode(sym)) krNeed.push(sym);
+    else usNeed.push(sym);
+  }
+  if (krNeed.length > 0) {
+    const codes = krNeed.map((s) => parseKrStockCode(s)!);
+    const map = await fetchNaverStockQuotes(codes);
+    for (const sym of krNeed) {
+      const code = parseKrStockCode(sym)!;
+      const canon = normalizeKrStockSymbol(code);
+      const q = map.get(code) ?? map.get(canon);
+      if (q && q.price > 0) {
+        const entry = { price: q.price, change: q.change, changePercent: q.changePercent };
+        result[sym] = entry;
+        if (q.changePercent !== 0 || isMarketSessionOpen("kr")) {
+          setCache(sym, entry);
+        }
+      } else {
+        usNeed.push(sym);
+      }
+    }
+  }
+  need.splice(0, need.length, ...usNeed);
   if (need.length === 0) return result;
 
   // 3) Yahoo Finance v7 batch (same source as market-data — correct prices)

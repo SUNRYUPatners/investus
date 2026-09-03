@@ -13,6 +13,9 @@ import type { NewsItem } from "@/lib/api";
 import { SEED_REPORTS, REPORT_TICKERS, CATEGORY_STYLE, CATEGORY_EMOJI, reportBadgeSubject } from "@/lib/reports";
 import type { Report } from "@/lib/reports";
 import { isMarketOpen as checkMarketOpen, isEodCacheFresh } from "@/lib/marketHours";
+import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { readSymbolFromMarketCache } from "@/lib/marketDataCacheClient";
+import { isKrSymbol, krMarketCacheKey, normalizeKrStockSymbol } from "@/lib/markets/krSymbol";
 import { AdFitBanner } from "@/components/AdFitBanner";
 import { AnalystTargets } from "@/components/AnalystTargets";
 import { StockCommunity } from "@/components/StockCommunity";
@@ -397,6 +400,10 @@ export default function StockPage({
 }) {
   const { symbol } = use(params);
   const upper      = symbol.toUpperCase();
+  const stockMarket = isKrSymbol(upper) ? "kr" as const : "us" as const;
+  const canonSymbol = stockMarket === "kr" && !upper.includes(".")
+    ? normalizeKrStockSymbol(upper)
+    : upper;
   const router     = useRouter();
   const { list: watchlist, toggle: toggleWatchlist } = useWatchlist();
   const t          = useLocale();
@@ -412,27 +419,15 @@ export default function StockPage({
 
   // market-data-cache의 해당 심볼 가격 조회 (홈탭과 동일한 숫자 보장)
   const getMarketCachePrice = (): { price: number; change: number; changePercent: number } | null => {
-    try {
-      const raw = localStorage.getItem("market-data-cache");
-      if (!raw) return null;
-      const md = JSON.parse(raw) as {
-        liveAt?: number;
-        quotes?: { symbol: string; price: number; change: number; changePercent: number }[];
-        indices?: { symbol: string; value: number; change: number; changePercent: number }[];
-      };
-      const liveAt = md.liveAt ?? 0;
-      if (liveAt > 0) {
-        const fresh = isMarketOpen()
-          ? Date.now() - liveAt < 10 * 60 * 1000
-          : isEodCacheFresh(liveAt);
-        if (!fresh) return null;
-      }
-      const q = md?.quotes?.find((q) => q.symbol === upper);
-      if (q && q.price > 0) return { price: q.price, change: q.change, changePercent: q.changePercent };
-      const idx = md?.indices?.find((i) => i.symbol === upper);
-      if (idx && idx.value > 0) return { price: idx.value, change: idx.change, changePercent: idx.changePercent };
-    } catch { /* ignore */ }
-    return null;
+    const cacheKey = stockMarket === "kr" ? krMarketCacheKey() : "market-data-cache";
+    const fromCache = readSymbolFromMarketCache(canonSymbol, cacheKey, stockMarket);
+    if (fromCache && (fromCache.changePercent !== 0 || isMarketSessionOpen(stockMarket))) {
+      return fromCache;
+    }
+    if (canonSymbol !== upper) {
+      return readSymbolFromMarketCache(upper, cacheKey, stockMarket);
+    }
+    return fromCache;
   };
 
   const fetchDetail = () => {
@@ -460,7 +455,8 @@ export default function StockPage({
     if (!hasCached && marketPrice) {
       setDetail((prev) => prev
         ? { ...prev, ...marketPrice }
-        : { symbol: upper, name: upper, exchange: "US", currency: "USD", ...marketPrice,
+        : { symbol: canonSymbol, name: canonSymbol, exchange: stockMarket === "kr" ? "KRX" : "US",
+            currency: stockMarket === "kr" ? "KRW" : "USD", ...marketPrice,
             open: null, high: null, low: null, volume: null, pe: null, marketCap: null,
             week52High: null, week52Low: null, avgVolume: null, dividendYield: null, beta: null, eps: null });
       setDetailLoading(false);
@@ -471,7 +467,7 @@ export default function StockPage({
 
 
     const tryFetch = (delay: number) => {
-      fetch(`/api/stock-detail?symbol=${encodeURIComponent(upper)}`, { cache: "no-store" })
+      fetch(`/api/stock-detail?symbol=${encodeURIComponent(canonSymbol)}`, { cache: "no-store" })
         .then((r) => {
           // 503 = 일시적 오류 → 재시도. 그 외 non-ok = 심볼 없음
           if (r.status === 503) throw Object.assign(new Error("retry"), { retry: true });
@@ -480,10 +476,18 @@ export default function StockPage({
         })
         .then((d: Detail) => {
           const latestMarketPrice = getMarketCachePrice();
-          const final = latestMarketPrice ? { ...d, ...latestMarketPrice } : d;
-          setDetail(final);
+          const merged = latestMarketPrice && latestMarketPrice.changePercent !== 0
+            ? { ...d, ...latestMarketPrice }
+            : d.changePercent !== 0
+              ? d
+              : latestMarketPrice
+                ? { ...d, ...latestMarketPrice }
+                : d;
+          setDetail(merged);
           setDetailLoading(false);
-          try { localStorage.setItem(cacheKey, JSON.stringify(d)); } catch { /* ignore */ }
+          if (merged.changePercent !== 0 || isMarketSessionOpen(stockMarket)) {
+            try { localStorage.setItem(cacheKey, JSON.stringify(merged)); } catch { /* ignore */ }
+          }
         })
         .catch(() => {
           // 503이든 네트워크 오류든 모두 재시도 — 절대 에러 상태 표시 금지
@@ -515,14 +519,15 @@ export default function StockPage({
 
     // 장중 60초마다 자동 갱신 — market-data-cache 가격 먼저 반영 후 API 호출
     const timer = setInterval(() => {
-      if (!isMarketOpen()) return;
+      const sessionOpen = stockMarket === "kr" ? isMarketSessionOpen("kr") : isMarketOpen();
+      if (!sessionOpen) return;
       const mp = getMarketCachePrice();
       if (mp) setDetail((prev) => prev ? { ...prev, ...mp } : prev);
       fetchDetailRef.current();
     }, 60_000);
     return () => clearInterval(timer);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [upper]);
+  }, [upper, canonSymbol, stockMarket]);
 
   const isUp  = (detail?.changePercent ?? 0) >= 0;
   const color = isUp ? UP : DOWN;
@@ -661,7 +666,7 @@ export default function StockPage({
               style={{ background: "var(--card)", borderColor: "var(--border)" }}
             >
               <StockChart
-                symbol={upper}
+                symbol={canonSymbol}
                 livePrice={detail?.price}
                 liveChange={detail?.change}
                 liveChangePercent={detail?.changePercent}
