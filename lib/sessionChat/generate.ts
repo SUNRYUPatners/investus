@@ -1,6 +1,7 @@
 import type { MarketId } from "@/lib/markets/types";
 import { getMarketConfig } from "@/lib/markets/config";
 import { pickSessionNick } from "./nicks";
+import { chatStockLabel } from "./labels";
 import type { SessionChatMessage } from "./types";
 
 export type ChatQuote = {
@@ -120,20 +121,10 @@ function fmtKrPrice(n: number): string {
   return Math.round(n).toLocaleString("ko-KR");
 }
 
-function shortLabel(q: ChatQuote): string {
-  const dash = q.name.indexOf(" — ");
-  if (dash >= 0) return q.name.slice(dash + 3).trim();
-  if (q.name.length <= 14) return q.name;
-  return q.symbol.replace(/\.KS$/, "");
-}
-
-function tickerLabel(q: ChatQuote): string {
-  return q.symbol.replace(/\.KS$/, "");
-}
-
 function buildCtx(q: ChatQuote, market: MarketId): TemplateCtx {
-  const short = shortLabel(q);
-  const ticker = tickerLabel(q);
+  const label = chatStockLabel(q, market);
+  const short = label;
+  const ticker = market === "kr" ? label : q.symbol.replace(/\.KS$/i, "");
   const pct = fmtPct(q.changePercent);
   const price = market === "kr" ? fmtKrPrice(q.price) : fmtPrice(q.price);
   const up = q.changePercent >= 0;

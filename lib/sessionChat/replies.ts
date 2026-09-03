@@ -1,5 +1,6 @@
 import type { MarketId } from "@/lib/markets/types";
 import { pickSessionNick } from "./nicks";
+import { chatStockLabel } from "./labels";
 import type { SessionChatMessage } from "./types";
 import type { ChatQuote } from "./generate";
 
@@ -39,11 +40,8 @@ function fmtPct(n: number): string {
   return `${sign}${n.toFixed(2)}%`;
 }
 
-function shortLabel(q: ChatQuote): string {
-  const dash = q.name.indexOf(" — ");
-  if (dash >= 0) return q.name.slice(dash + 3).trim();
-  if (q.name.length <= 14) return q.name;
-  return q.symbol.replace(/\.KS$/, "");
+function shortLabel(q: ChatQuote, market: MarketId): string {
+  return chatStockLabel(q, market);
 }
 
 function classifyIntent(content: string): UserIntent {
@@ -133,7 +131,7 @@ function maybeNick(nick: string, seed: string, rate = 0.35): string {
 function buildReply(ctx: ReplyCtx): string {
   const { userNick, intent, market, quote, slot, seed } = ctx;
   const nick = maybeNick(userNick, seed);
-  const s = quote ? shortLabel(quote) : "";
+  const s = quote ? shortLabel(quote, market) : "";
   const pct = quote ? fmtPct(quote.changePercent) : "";
   const up = quote ? quote.changePercent >= 0 : true;
 

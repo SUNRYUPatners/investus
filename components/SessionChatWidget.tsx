@@ -8,6 +8,7 @@ import { isSessionChatOpen, sessionChatSupported } from "@/lib/markets/sessionCh
 import type { SessionChatMessage } from "@/lib/sessionChat/types";
 import { sessionChatAuthHeaders } from "@/lib/sessionChat/authHeaders";
 import { getOrCreateGuestId } from "@/lib/sessionChat/guestId";
+import { humanizeKrCodesInText } from "@/lib/sessionChat/labels";
 import { useAuth } from "@/hooks/useAuth";
 
 const MAX_MESSAGES = 80;
@@ -419,7 +420,7 @@ export function SessionChatWidget({ market }: { market: MarketId }) {
                         border: m.is_mine ? "1px solid rgba(var(--mint-rgb),0.25)" : "none",
                       }}
                     >
-                      {m.content}
+                      {market === "kr" ? humanizeKrCodesInText(m.content) : m.content}
                     </p>
                   </div>
                 </div>
