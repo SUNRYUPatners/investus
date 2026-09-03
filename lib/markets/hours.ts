@@ -1,3 +1,4 @@
+import { isMarketOpen } from "@/lib/marketHours";
 import type { MarketId } from "./types";
 import { getMarketConfig } from "./config";
 
@@ -32,4 +33,11 @@ export function isMarketSessionOpen(market: MarketId, date = new Date()): boolea
   const { day, minutes } = wallClockMinutes(cfg.timezone, date);
   if (day === 0 || day === 6) return false;
   return minutes >= cfg.openHours.startMin && minutes < cfg.openHours.endMin;
+}
+
+/** US/KR 정규장 (휴장일·공휴일 반영). */
+export function isStockMarketOpen(market: MarketId, date = new Date()): boolean {
+  if (market === "us") return isMarketOpen();
+  if (market === "kr") return isMarketSessionOpen("kr", date);
+  return false;
 }

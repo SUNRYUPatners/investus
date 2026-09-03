@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 import { LogoMark } from "@/components/LogoMark";
 import { MarketSwitcher } from "@/components/MarketSwitcher";
 import { MarketSwitcherDesktop } from "@/components/MarketSwitcherDesktop";
+import { MarketOpenBanner } from "@/components/market/MarketOpenBanner";
 import { getMarketConfig } from "@/lib/markets/config";
-import { isMarketSessionOpen } from "@/lib/markets/hours";
+import { isMarketSessionOpen, isStockMarketOpen } from "@/lib/markets/hours";
 import { isMarketHomePath, parseMarketPath } from "@/lib/markets/marketPath";
 
 export function Header() {
@@ -37,7 +38,7 @@ export function Header() {
       });
       setTime(timeStr);
       setDate(dateStr);
-      setOpen(isMarketSessionOpen(market));
+      setOpen(market === "us" || market === "kr" ? isStockMarketOpen(market) : isMarketSessionOpen(market));
     };
     tick();
     const id = setInterval(tick, 1000);
@@ -81,7 +82,7 @@ export function Header() {
                         : { background: "rgba(107,114,128,0.12)", color: "var(--muted)" }
                     }
                   >
-                    {open ? "● OPEN" : "● CLOSED"}
+                    {open ? "● 장중" : "● CLOSED"}
                   </span>
                 )}
                 {open && market === "us" && (
@@ -98,6 +99,16 @@ export function Header() {
         </div>
       </header>
       {showSwitcher && <MarketSwitcher current={market} />}
+      {showSwitcher && (market === "us" || market === "kr") && (
+        <div
+          className="px-4 lg:px-8 pt-2 pb-2 border-b"
+          style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
+        >
+          <div className="max-w-[480px] lg:max-w-none mx-auto">
+            <MarketOpenBanner market={market} />
+          </div>
+        </div>
+      )}
     </>
   );
 }

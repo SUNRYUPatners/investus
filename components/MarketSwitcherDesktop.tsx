@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MarketOpenChip } from "@/components/MarketOpenChip";
 import { MARKET_CONFIG } from "@/lib/markets/config";
 import { MARKET_IDS, type MarketId } from "@/lib/markets/types";
 import { marketHref, parseMarketPath } from "@/lib/markets/marketPath";
@@ -40,6 +41,7 @@ export function MarketSwitcherDesktop({ current }: { current: MarketId }) {
             >
               {m.labelKo}
             </span>
+            {(id === "us" || id === "kr") && <MarketOpenChip market={id} />}
           </Link>
         );
       })}
