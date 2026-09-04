@@ -120,15 +120,8 @@ function insertMarketReports() {
 }
 
 function analystContent(r, i) {
-  const oneLiners = [
-    `${r.subject} 리포트입니다. ${r.title.replace(/습니다$/, "습니다.")} 숫자와 허가를 공시·문서로 대조하시기 바랍니다.`,
-    `${r.title} 단기 주가보다 실행 지표를 주간 표로 남기시기 바랍니다.`,
-    `핵심만 정리합니다. ${r.summary.split(/(?<=[가-힣])[.。]/)[0]}. 다음 확인은 공식 숫자입니다.`,
-  ];
-  const n = r.body && !r.pinned ? (i % 3 === 0 ? 2 : 1) : 1;
-  let content = oneLiners[i % 3];
-  if (content.length < 80) content += " 레버리지는 확인 전 보수적으로 두시기 바랍니다.";
-  return { content, comments: n };
+  // 템플릿 금지 — 실제 카피는 rewrite-analyst-20260904-diverse.js / 수동 작성
+  throw new Error("analystContent template disabled — write diverse copy manually");
 }
 
 function isoMin(i, extra) {
@@ -208,12 +201,7 @@ function insertAnalystUs() {
 }
 
 function uniqueAnalystComment(i, k) {
-  const r = US[i];
-  const hook = r.summary.replace(/\s+/g, " ").slice(0, 48);
-  if (k === 0) {
-    return `${r.subject} ${r.id} 메모입니다. ${hook} 이 줄만 따로 적어두겠습니다.`;
-  }
-  return `${r.id} 후속입니다. ${r.title.slice(0, 32)} 쪽은 다음 주 표에 반영하겠습니다.`;
+  throw new Error("uniqueAnalystComment template disabled — write diverse comments manually");
 }
 
 function writeFixReports(posts) {
