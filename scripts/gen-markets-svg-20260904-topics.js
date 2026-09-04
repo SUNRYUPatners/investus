@@ -24,7 +24,7 @@ add('summary-kr', 'ROWS', 'KOSPI', {
 });
 
 add('samsung-kr', 'L1', 'SEC', {
-  badge: '삼성전자', title: '삼성전자가 25만 원으로 0.20% 내리며 지수 반등과 엇갈렸습니다',
+  badge: '삼성전자', title: '삼성전자 자사주가 기타법인으로 잡히며 지수와 디커플됐습니다',
   heroIcon: '📱', heroBig: '250,000',
   heroSub: '기타법인 자사주 매입이 수급을 받쳤지만 종가는 약보합입니다. 장중 이란 관련 소문에 출렁인 뒤 되돌렸습니다.',
   cards: [
@@ -36,7 +36,7 @@ add('samsung-kr', 'L1', 'SEC', {
   noteSub: '0.20%는 전날 급락 다음 날의 숨 고르기입니다. 자사주가 받쳐 줘도 외국인이 계속 팔면 종가는 약할 수 있습니다. 오늘 밤 미국 고용과 다음 주 연준 회의 전에 수급 세 줄을 같은 표에 두시기 바랍니다.',
   footer: '삼성전자 · 9월 3일',
 }, {
-  badge: 'Samsung', title: 'Samsung Electronics closed 250,000 won, down 0.20%, diverging from the index rebound',
+  badge: 'Samsung', title: 'Samsung treasury buys left the market leader diverging from the index',
   heroIcon: '📱', heroBig: '250,000',
   heroSub: 'Other-corp treasury buys supported flows, but the close was slightly red after an Iran-rumor swing.',
   cards: [
@@ -50,7 +50,7 @@ add('samsung-kr', 'L1', 'SEC', {
 });
 
 add('skhynix-kr', 'L2', 'HYNIX', {
-  badge: 'SK하이닉스', title: '에스케이하이닉스가 159만 6천 원으로 1.05% 내렸습니다',
+  badge: 'SK하이닉스', title: '하이닉스 소각 매입이 기타법인에 잡혔지만 성장주는 추가 조정됐습니다',
   heroIcon: '💾', heroBig: '-1.05%',
   heroSub: '자사주 소각 목적 매입이 기타법인 순매수에 포함됐습니다. 성장주 베타가 장중 급락 구간에 더 크게 반응했습니다.',
   cards: [
@@ -63,7 +63,7 @@ add('skhynix-kr', 'L2', 'HYNIX', {
   noteSub: '소각은 사들인 주식을 없애 남은 주식의 가치를 높이는 절차입니다. 하루 -1.05%는 그 효과를 가리지 못합니다. 다음엔 외국인 순매도와 고대역폭 메모리 출하를 분리해 보시면 됩니다.',
   footer: '하이닉스 · 9월 3일',
 }, {
-  badge: 'SK Hynix', title: 'SK Hynix closed 1,596,000 won, down 1.05%',
+  badge: 'SK Hynix', title: 'Hynix cancellation buybacks sat in other-corps while growth took another cut',
   heroIcon: '💾', heroBig: '-1.05%',
   heroSub: 'Treasury purchases for cancellation sat inside other-corp buying. Growth beta amplified the afternoon dump.',
   cards: [
@@ -78,7 +78,7 @@ add('skhynix-kr', 'L2', 'HYNIX', {
 });
 
 add('lges-kr', 'L3', 'SEC', {
-  badge: 'LG에너지솔루션', title: '엘지에너지솔루션이 36만 5,500원으로 5.18% 올랐습니다',
+  badge: 'LG에너지솔루션', title: '엘지엔솔이 공시 없이 에너지저장·태양광 맥락으로 반등했습니다',
   heroIcon: '🔋', heroBig: '+5.18%',
   heroSub: '뚜렷한 호재 공시는 없었습니다. 하나증권 목표주가 48만 원, 에너지저장·태양광 맥락이 거론됐습니다.',
   cards: [
@@ -90,7 +90,7 @@ add('lges-kr', 'L3', 'SEC', {
   noteSub: '5.18%는 시가총액 상위 가운데 두드러진 상승입니다. 다음 확인할 것은 수주·가동률과 전날 급락 되돌림인지입니다. 유가 90달러대가 원가에 미치는 영향은 별도 줄로 두시기 바랍니다.',
   footer: '엘지엔솔 · 9월 3일',
 }, {
-  badge: 'LGES', title: 'LG Energy Solution closed 365,500 won, up 5.18%',
+  badge: 'LGES', title: 'LG Energy Solution led a battery rebound on storage talk without a filing',
   heroIcon: '🔋', heroBig: '+5.18%',
   heroSub: 'No clear positive filing. A 480,000-won research target and energy-storage/solar demand were the context.',
   cards: [
@@ -105,7 +105,7 @@ add('lges-kr', 'L3', 'SEC', {
 
 add('hyundai-kr', 'L4', 'SEC', {
   badge: '현대차', badgeLine: '🚗 +1.46% · 383,500원',
-  title: '현대차가 38만 3,500원으로 1.46% 올랐습니다',
+  title: '현대차가 원화 강세와 유가 90달러대 사이에서 되돌렸습니다',
   heroIcon: '🚗', heroBig: '+1.46%',
   heroSub: '전날 유가 충격 급락 다음 날 운송장비 업종이 지수보다 강했습니다. 미국 사이버캡 행사와는 수요·규제 축이 다릅니다.',
   cards: [
@@ -118,7 +118,7 @@ add('hyundai-kr', 'L4', 'SEC', {
   footer: '현대차 · 9월 3일',
 }, {
   badge: 'Hyundai', badgeLine: '🚗 +1.46% · 383,500 won',
-  title: 'Hyundai Motor closed 383,500 won, up 1.46%',
+  title: 'Hyundai bounced between a stronger won and oil still above 90',
   heroIcon: '🚗', heroBig: '+1.46%',
   heroSub: 'Transport equipment outperformed the day after the oil-shock crash. The US Cybercab event is a separate demand and regulatory axis.',
   cards: [
@@ -132,7 +132,7 @@ add('hyundai-kr', 'L4', 'SEC', {
 });
 
 add('kb-fin-kr', 'L5', 'FLOW', {
-  badge: 'KB금융', title: '케이비금융이 17만 7,900원으로 5.20% 올라 금리 수혜 프레임이 재점화됐습니다',
+  badge: 'KB금융', title: '금리 인상 기대가 되살아나며 금융주가 로테이션됐습니다',
   heroIcon: '🏦', heroBig: '+5.20%',
   heroSub: '신한지주 +3.62%, 하나금융 +3.41%, 삼성생명 +3.06%로 금융주가 동반 강세였습니다. 미국 금리 인상 기대가 순이자마진 이야기로 읽혔습니다.',
   before: { label:'전일', big:'169,100', sub:'종가 참고' },
@@ -146,7 +146,7 @@ add('kb-fin-kr', 'L5', 'FLOW', {
   noteSub: '금리 수혜는 신용 비용이 같이 오르면 상쇄됩니다. 고용 지표가 약하면 인상 기대가 꺾여 금융주가 되돌릴 수 있습니다. 오늘 밤 비농업 고용과 연체율을 같은 화면에 두시기 바랍니다.',
   footer: '케이비금융 · 9월 3일',
 }, {
-  badge: 'KB Financial', title: 'KB Financial closed 177,900 won, up 5.20%, reigniting the higher-rate NIM frame',
+  badge: 'KB Financial', title: 'Hike expectations revived and rotated money into banks led by KB Financial',
   heroIcon: '🏦', heroBig: '+5.20%',
   heroSub: 'Shinhan +3.62%, Hana +3.41%, Samsung Life +3.06%. Hike odds were read as net-interest-margin support.',
   before: { label:'Prior', big:'169,100', sub:'Close ref' },
@@ -184,7 +184,7 @@ add('summary-safe', 'ROWS', 'MACRO', {
 });
 
 add('btc-safe', 'L1', 'BTC', {
-  badge: '비트코인', title: '비트코인이 8만 1,254달러로 5.11% 오르며 8만 달러를 회복했습니다',
+  badge: '비트코인', title: '비트코인이 8만 달러를 되찾았고 오늘 밤 고용이 지지선을 시험합니다',
   heroIcon: '₿', heroBig: '81,254',
   heroSub: '저점 약 7만 6,930달러, 고점 약 8만 2,280달러입니다. 금 반등과 같은 날 위험자산·헤지가 같이 올랐습니다.',
   cards: [
@@ -196,7 +196,7 @@ add('btc-safe', 'L1', 'BTC', {
   noteSub: '고용 지표가 강하면 금리가 다시 올라 비트코인이 되돌릴 수 있습니다. 한국 기사 일부는 7만 7천 달러를 인용하니, 거래소 종가를 기준으로 두시기 바랍니다. 다음엔 유입·미결제약정·달러지수를 보시면 됩니다.',
   footer: '비트코인 · 9월 3일',
 }, {
-  badge: 'Bitcoin', title: 'Bitcoin closed 81,254 dollars, up 5.11%, reclaiming 80,000',
+  badge: 'Bitcoin', title: 'Bitcoin reclaimed 80,000 dollars; payrolls test the line tonight',
   heroIcon: '₿', heroBig: '81,254',
   heroSub: 'Low about 76,930, high about 82,280. Gold rallied the same day—risk and haven bounced together.',
   cards: [
@@ -210,7 +210,7 @@ add('btc-safe', 'L1', 'BTC', {
 });
 
 add('gold-safe', 'L2', 'GOLD', {
-  badge: '금', title: '금이 온스당 약 4,470달러로 반등하며 전날 저점을 되돌렸습니다',
+  badge: '금', title: '달러 약세와 인상 기대 완화로 금이 전날 저점에서 되돌아왔습니다',
   heroIcon: '🥇', heroBig: '~4,470',
   heroSub: '장중 4,511달러까지 거론됐고, 전날 저점은 약 4,282달러였습니다. 달러 약세와 인상 기대 완화가 겹쳤습니다.',
   cards: [
@@ -223,7 +223,7 @@ add('gold-safe', 'L2', 'GOLD', {
   noteSub: '4,470달러는 거래 시간대마다 다릅니다. 고용·물가가 다시 매파로 읽히면 반등이 짧을 수 있습니다. 은·유가와 같은 표에 두시되, 금만의 중앙은행 매수 요인을 한 줄 남기시기 바랍니다.',
   footer: '금 · 9월 3일',
 }, {
-  badge: 'Gold', title: 'Gold recovered toward about 4,470 dollars an ounce from the prior low',
+  badge: 'Gold', title: 'A softer dollar pulled gold back from the prior-session plunge low',
   heroIcon: '🥇', heroBig: '~4,470',
   heroSub: 'Intraday prints near 4,511 were cited; the prior low was about 4,282. A softer dollar and cooler hike talk helped.',
   cards: [
@@ -238,7 +238,7 @@ add('gold-safe', 'L2', 'GOLD', {
 });
 
 add('silver-safe', 'L3', 'GOLD', {
-  badge: '은', title: '은이 온스당 약 66.8달러로 오르며 금보다 변동이 컸습니다',
+  badge: '은', title: '은이 금보다 큰 폭으로 움직이며 산업·헤지가 동시에 붙었습니다',
   heroIcon: '⚪', heroBig: '~66.8',
   heroSub: '장중 67.60달러까지 거론된 뒤 숨 고르기입니다. 산업 수요와 금 연동이 동시에 작용합니다.',
   cards: [
@@ -250,7 +250,7 @@ add('silver-safe', 'L3', 'GOLD', {
   noteSub: '금은비(금 가격을 은으로 나눈 값)가 벌어지면 은이 소외된 것입니다. 고용 전후 변동성이 금보다 클 수 있으니 레버리지를 보수적으로 두시기 바랍니다.',
   footer: '은 · 9월 3일',
 }, {
-  badge: 'Silver', title: 'Silver near 66.8 dollars an ounce, more volatile than gold',
+  badge: 'Silver', title: 'Silver moved harder than gold as industrial and haven flows hit together',
   heroIcon: '⚪', heroBig: '~66.8',
   heroSub: 'Prints toward 67.60 were cited before a pause. Industrial demand and gold beta moved together.',
   cards: [
@@ -265,7 +265,7 @@ add('silver-safe', 'L3', 'GOLD', {
 
 add('eth-safe', 'L4', 'BTC', {
   badge: '이더리움', badgeLine: 'Ξ 약 2,400달러',
-  title: '이더리움이 약 2,400달러로 비트코인 반등에 연동됐습니다',
+  title: '이더리움이 비트코인 반등에 연동되며 2,500달러 아래에서 거래됐습니다',
   heroIcon: 'Ξ', heroBig: '~2,400',
   heroSub: '고점 약 2,429달러, 저점 약 2,356달러입니다. 스테이킹 수익은 2년물 국채와 비교하는 별도 줄입니다.',
   cards: [
@@ -278,7 +278,7 @@ add('eth-safe', 'L4', 'BTC', {
   footer: '이더리움 · 9월 3일',
 }, {
   badge: 'Ether', badgeLine: 'Ξ about $2,400',
-  title: 'Ether near 2,400 dollars tracked the bitcoin bounce',
+  title: 'Ether tracked bitcoin while still trading below the 2,500 line',
   heroIcon: 'Ξ', heroBig: '~2,400',
   heroSub: 'High about 2,429, low about 2,356. Staking yield is a separate line versus the two-year Treasury.',
   cards: [
@@ -292,7 +292,7 @@ add('eth-safe', 'L4', 'BTC', {
 });
 
 add('wti-nfp-safe', 'L5', 'RATES', {
-  badge: '유가', title: '서부텍사스유가 91.01달러, 서비스 구매관리자지수 55.4, 오늘 밤 고용이 겹칩니다',
+  badge: '유가', title: '유가가 90달러를 지키는 가운데 서비스 확장과 오늘 밤 고용이 겹칩니다',
   heroIcon: '🛢', heroBig: '91.01',
   heroSub: '브렌트 95.63달러(+1.04%), 달러지수 약 99.6입니다. 민간고용은 3만 8천 명 증가였습니다.',
   before: { label:'예상', big:'54.3', sub:'서비스 지수' },
@@ -306,7 +306,7 @@ add('wti-nfp-safe', 'L5', 'RATES', {
   noteSub: '민간고용 3만 8천 명은 정부 비농업 고용과 표본이 다릅니다. 오늘 밤 숫자가 강하면 달러·금리가 다시 오를 수 있습니다. 비트코인·금 반등이 고용 하나로 뒤집힐 수 있으니 포지션 크기를 먼저 정하시기 바랍니다.',
   footer: '유가 · 고용 대기',
 }, {
-  badge: 'Oil', title: 'WTI 91.01, ISM services 55.4, and payrolls tonight overlap',
+  badge: 'Oil', title: 'WTI holds above 90 as services expand and payrolls land tonight',
   heroIcon: '🛢', heroBig: '91.01',
   heroSub: 'Brent 95.63 (+1.04%), dollar index about 99.6. ADP added 38,000 jobs.',
   before: { label:'Exp', big:'54.3', sub:'Services PMI' },
