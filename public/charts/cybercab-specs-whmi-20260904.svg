@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.04</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">사이버캡 전비가 마일당 165와트시로 루시드·모델3보다 약 28~31%</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">낮다고 소개됐습니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">🔋</text>
+  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#4ade80" text-anchor="middle">165</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">배터리는 48킬로와트시, 주행거리는 약 470킬로미터, 공차중량 1,412킬로그램입니다. 전면 모터 219마력,</text>
+  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">무선 충전, 나비문, 도색 없는 폴리우레탄 외피가 같은 스펙입니다.</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">전비</text>
+  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">165</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">와트시/마일</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">16.5kWh/100mi</text>
+  <rect x="390" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">배터리</text>
+  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">48</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">킬로와트시</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">약 470km</text>
+  <rect x="720" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">생산</text>
+  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">5초</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">대당</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">목표 사이클</text>
+  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">왜 전비가 중요한가</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">🔋 마일당 전기가 적으면 플릿 원가가 내려갑니다</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">⚖️ 루시드 약 23, 모델3 약 24와 비교합니다</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🏭 대당 5초는 공장 목표이며 수율과 별개입니다</text>
+  <rect x="60" y="800" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="830" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">전비는 한 마일을 가는 데 쓰는 전기입니다. 165와트시/마일은 약 6.1마일/킬로와트시로, 같은 배터리로 더 멀리 가거나 배터리를</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">더 작게 가져갈 수 있습니다. 5초/대는 라인 속도 목표이므로 실제 출하·품질과 분리해 기록하시기 바랍니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 사이버캡 스펙 · 2026.09.04</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

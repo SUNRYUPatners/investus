@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.04 부동산 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">비거주 1주택 종합부동산세 공제가 12억 원으로 유지됩니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">9억으로 낮추는 안이 철회됐습니다. 실거주 공제는 14억 원입니다.</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa" text-anchor="end">12억</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#fb923c"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c">세부담 상한이 150%로 남고, 부부 공동명의 비거주는 6억…</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">200%로 올리는 안이 아닙니다. 국회 심사가 남아 있습니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c" text-anchor="end">150%</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#38bdf8"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#38bdf8">개인종합자산관리계좌 혜택이 원안대로 복구되는 방향입니다</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">양도세 장기보유특별공제는 2029년 보유기간 공제 폐지·거주는 연 8%입니다.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8" text-anchor="end">ISA</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#f59e0b"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f59e0b">5년 세수 효과 +3.44조 원은 유지된다는 설명입니다</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">오늘 밤 미국 고용이 주담대 금리 심리에 겹칩니다.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b" text-anchor="end">+3.44조</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 종부세 12억 유지 · 실거주 14억 · 상한 150% · 계좌 복구 · 양도 장특 · 세수 3.44조</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

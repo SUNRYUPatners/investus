@@ -1,6 +1,12 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
+  { id: -2051, alias: "여의도 너구리 #11", symbol: "코스피", content: "9월 3일 코스피 6,579.48(+0.26%)로 장중 243포인트 출렁인 뒤 강보합 마감했습니다. 기타법인 1조 5,936억 원 순매수(12일 연속)가 개인·외국인·기관 순매도를 가렸습니다. 오늘 밤 고용 전 수급 세 줄을 분리해 적으시기 바랍니다.", likes: 28, comments: 2, created_at: "2026-09-04T06:00:00.000Z", liked: false, },
+  { id: -2052, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자 25만 원(-0.20%)으로 지수와 디커플이었습니다. 자사주가 기타법인으로 잡히니 외국인 매도와 혼동하지 마시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-04T06:08:00.000Z", liked: false, },
+  { id: -2053, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "하이닉스 159만 6천 원(-1.05%). 소각 매입이 있어도 성장주 베타가 오후 급락에 더 반응했습니다.", likes: 26, comments: 2, created_at: "2026-09-04T06:16:00.000Z", liked: false, },
+  { id: -2054, alias: "성수 수달 #35", symbol: "LG에너지솔루션", content: "엘지에너지솔루션 36만 5,500원(+5.18%). 뚜렷한 호재 공시는 없었습니다. 공시 없는 5%는 추격보다 수주 확인이 먼저입니다.", likes: 25, comments: 2, created_at: "2026-09-04T06:24:00.000Z", liked: false, },
+  { id: -2055, alias: "한남 두루미 #17", symbol: "현대차", content: "현대차 38만 3,500원(+1.46%). 환율 1,359원과 유가 91달러가 반대 방향입니다. 사이버캡 행사와 국내 판매를 한 줄로 묶지 마시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-04T06:32:00.000Z", liked: false, },
+  { id: -2056, alias: "잠실 백로 #29", symbol: "KB금융", content: "케이비금융 17만 7,900원(+5.20%). 금리 수혜 프레임이지만 고용 발표가 인상 기대를 뒤집으면 하루 만에 되돌릴 수 있습니다.", likes: 23, comments: 2, created_at: "2026-09-04T06:40:00.000Z", liked: false, },
   { id: -2035, alias: "여의도 너구리 #11", symbol: "코스피", content: "9월 3일 코스피 6,562.72(-3.99%)로 WTI $91+·10년물 4.80%·중동 유가 shock에 급락했습니다. 외국인 순매도 약 1.92~2.44조 원, 기관 약 2.43조 원, 개인 순매수 약 2.3조 원입니다. shock 다음 날 수급·유가·금리를 먼저 추적하시기 바랍니다.", likes: 28, comments: 2, created_at: "2026-09-03T06:00:00.000Z", liked: false, },
   { id: -2036, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자 -4.02% 250,500원. 유가·금리 shock에 반도체 대형주가 동반 약세였습니다. shock 구간에서는 분기 실적보다 수급·매크로를 먼저 보시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-03T06:08:00.000Z", liked: false, },
   { id: -2037, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "SK하이닉스 -4.73% 1,613,000원. 성장주 베타와 외국인 대량 매도가 겹친 날입니다.", likes: 26, comments: 2, created_at: "2026-09-03T06:16:00.000Z", liked: false, },
@@ -133,6 +139,30 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
+  [-2051]: [
+    { alias: "여의도 너구리 #11", content: "코스피 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T06:00:10.000Z" },
+    { alias: "분당 매 #31", content: "다음 확인 지표는 코스피 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T06:00:20.000Z" },
+  ],
+  [-2052]: [
+    { alias: "판교 치타 #22", content: "삼성전자 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T06:08:10.000Z" },
+    { alias: "성수 너구리 #15", content: "다음 확인 지표는 삼성전자 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T06:08:20.000Z" },
+  ],
+  [-2053]: [
+    { alias: "삼성동 여우 #08", content: "SK하이닉스 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T06:16:10.000Z" },
+    { alias: "역삼 판다 #77", content: "다음 확인 지표는 SK하이닉스 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T06:16:20.000Z" },
+  ],
+  [-2054]: [
+    { alias: "성수 수달 #35", content: "LG에너지솔루션 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T06:24:10.000Z" },
+    { alias: "한남 재규어 #27", content: "다음 확인 지표는 LG에너지솔루션 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T06:24:20.000Z" },
+  ],
+  [-2055]: [
+    { alias: "한남 두루미 #17", content: "현대차 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T06:32:10.000Z" },
+    { alias: "삼성동 올빼미 #19", content: "다음 확인 지표는 현대차 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T06:32:20.000Z" },
+  ],
+  [-2056]: [
+    { alias: "잠실 백로 #29", content: "KB금융 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T06:40:10.000Z" },
+    { alias: "해운대 고래 #03", content: "다음 확인 지표는 KB금융 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T06:40:20.000Z" },
+  ],
   [-2035]: [
     { alias: "여의도 너구리 #12", content: "-3.99% shock 맞습니다. 내일 외국인 이어지는지 봐야죠", created_at: "2026-09-03T06:24:00.000Z" },
     { alias: "마포 살쾡이 #09", content: "WTI $91+·10년 4.8% 같이 기록하겠습니다", created_at: "2026-09-03T06:36:00.000Z" },
@@ -305,6 +335,12 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
+  { id: -2057, alias: "온체인 매 #03", symbol: "매크로", content: "안전자산 한장입니다. 비트코인 81,254달러(+5.11%), 금 약 4,470달러, 은 약 66.8달러, 유가 91.01달러, 달러지수 약 99.6입니다. 오늘 밤 고용이 공통 변수입니다.", likes: 28, comments: 2, created_at: "2026-09-04T09:00:00.000Z", liked: false, },
+  { id: -2058, alias: "금벌레 #17", symbol: "비트코인", content: "비트코인 81,254달러로 8만 달러를 회복했습니다. 일부 기사의 7만 7천 달러와 거래소 종가를 맞추시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-04T09:08:00.000Z", liked: false, },
+  { id: -2059, alias: "금벌레 #17", symbol: "금", content: "금이 약 4,470달러로 전날 저점 약 4,282달러를 되돌렸습니다. 4,500달러 안착은 고용 이후 확인하시기 바랍니다.", likes: 26, comments: 2, created_at: "2026-09-04T09:16:00.000Z", liked: false, },
+  { id: -2060, alias: "실물러 #12", symbol: "은", content: "은 약 66.8달러로 금보다 변동이 컸습니다. 산업 수요와 금 연동을 분리해 비중을 금보다 작게 두시기 바랍니다.", likes: 25, comments: 2, created_at: "2026-09-04T09:24:00.000Z", liked: false, },
+  { id: -2061, alias: "이더러 #44", symbol: "이더리움", content: "이더리움 약 2,400달러(고 2,429·저 2,356)입니다. 비트코인 베타가 커 고용 전 알트 레버리지는 보수적으로 두시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-04T09:32:00.000Z", liked: false, },
+  { id: -2062, alias: "유가러 #44", symbol: "WTI", content: "서부텍사스유 91.01달러, 서비스 구매관리자지수 55.4, 민간고용 +3만 8천 명입니다. 90달러 유가가 버티면 금리 기대가 쉽게 내려가지 않습니다.", likes: 23, comments: 2, created_at: "2026-09-04T09:40:00.000Z", liked: false, },
   { id: -2041, alias: "온체인 매 #03", symbol: "매크로", content: "9월 3일 안전자산 한장 요약입니다. WTI $91+·10년물 4.80%·코스피 -3.99% shock. 금 ~3,550~3,650달러, BTC ~105,000~107,000달러, DXY·은·WTI를 분리 추적하시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-03T09:00:00.000Z", liked: false, },
   { id: -2042, alias: "금벌레 #17", symbol: "비트코인", content: "비트코인 ~105,000~107,000달러. 리스크오프 조정 구간으로 ETF 유입·청산·금리 변수를 함께 보시기 바랍니다.", likes: 23, comments: 2, created_at: "2026-09-03T09:08:00.000Z", liked: false, },
   { id: -2043, alias: "금벌레 #17", symbol: "금", content: "금 ~3,550~3,650달러. 유가·지정학 헤지와 실질금리·DXY 연동입니다.", likes: 22, comments: 2, created_at: "2026-09-03T09:16:00.000Z", liked: false, },
@@ -375,6 +411,30 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
+  [-2057]: [
+    { alias: "온체인 매 #03", content: "매크로 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T09:00:10.000Z" },
+    { alias: "분당 매 #31", content: "다음 확인 지표는 매크로 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T09:00:20.000Z" },
+  ],
+  [-2058]: [
+    { alias: "금벌레 #17", content: "비트코인 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T09:08:10.000Z" },
+    { alias: "성수 너구리 #15", content: "다음 확인 지표는 비트코인 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T09:08:20.000Z" },
+  ],
+  [-2059]: [
+    { alias: "금벌레 #17", content: "금 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T09:16:10.000Z" },
+    { alias: "역삼 판다 #77", content: "다음 확인 지표는 금 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T09:16:20.000Z" },
+  ],
+  [-2060]: [
+    { alias: "실물러 #12", content: "은 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T09:24:10.000Z" },
+    { alias: "한남 재규어 #27", content: "다음 확인 지표는 은 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T09:24:20.000Z" },
+  ],
+  [-2061]: [
+    { alias: "이더러 #44", content: "이더리움 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T09:32:10.000Z" },
+    { alias: "삼성동 올빼미 #19", content: "다음 확인 지표는 이더리움 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T09:32:20.000Z" },
+  ],
+  [-2062]: [
+    { alias: "유가러 #44", content: "WTI 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T09:40:10.000Z" },
+    { alias: "해운대 고래 #03", content: "다음 확인 지표는 WTI 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T09:40:20.000Z" },
+  ],
   [-2041]: [
     { alias: "분당 매 #31", content: "유가·금리·코스피·BTC·금 다섯 줄 기록", created_at: "2026-09-03T09:24:00.000Z" },
     { alias: "압구정 치타 #44", content: "shock 구간에선 안전자산도 재가격", created_at: "2026-09-03T09:36:00.000Z" },
@@ -479,6 +539,10 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  { id: -2063, alias: "실수요 #05", symbol: "정책", content: "비거주 1주택 종부세 공제 12억 원 유지, 실거주 14억 원, 상한 150%입니다. 9억 하향안이 철회된 완화이지 세금이 사라진 것이 아닙니다.", likes: 28, comments: 2, created_at: "2026-09-04T10:00:00.000Z", liked: false, },
+  { id: -2064, alias: "정책워처 #01", symbol: "종부세", content: "부부 공동명의 비거주 6억 원씩입니다. 공시가·실거주 요건으로 고지서를 다시 계산하시기 바랍니다. 국회 심사가 남았습니다.", likes: 27, comments: 2, created_at: "2026-09-04T10:08:00.000Z", liked: false, },
+  { id: -2065, alias: "전세러 #09", symbol: "전세", content: "개인종합자산관리계좌 혜택이 원안 복구 방향입니다. 한도는 시행령 확인 전입니다. 부동산만 산다는 단정은 이릅니다.", likes: 26, comments: 2, created_at: "2026-09-04T10:16:00.000Z", liked: false, },
+  { id: -2066, alias: "실수요 #05", symbol: "매매", content: "양도 장특 보유기간 공제는 2029년 폐지, 거주는 연 8%입니다. 투자 목적 매각 일정을 지금부터 표로 두시기 바랍니다.", likes: 25, comments: 2, created_at: "2026-09-04T10:24:00.000Z", liked: false, },
   { id: -2047, alias: "실수요 #05", symbol: "정책", content: "9월 3일 부동산 한장 요약입니다. 공급·LTV·DSR·전세대출 규제 유지. WTI $91+·10년 4.80%·코스피 -3.99% shock가 주담대·실수요 심리 변수입니다.", likes: 22, comments: 2, created_at: "2026-09-03T10:00:00.000Z", liked: false, },
   { id: -2048, alias: "전세러 #09", symbol: "전세", content: "전세 시장 관망·입주 물량·FOMC 9/15 전후. shock 구간에선 거래량이 가격보다 먼저 움직입니다.", likes: 21, comments: 2, created_at: "2026-09-03T10:08:00.000Z", liked: false, },
   { id: -2049, alias: "실수요 #05", symbol: "매매", content: "매매 시장 관망·주담대·wealth effect. WTI·10년물 shock가 실수요 심리를 누릅니다.", likes: 20, comments: 2, created_at: "2026-09-03T10:16:00.000Z", liked: false, },
@@ -544,6 +608,22 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
+  [-2063]: [
+    { alias: "실수요 #05", content: "정책 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T10:00:10.000Z" },
+    { alias: "분당 매 #31", content: "다음 확인 지표는 정책 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T10:00:20.000Z" },
+  ],
+  [-2064]: [
+    { alias: "정책워처 #01", content: "종부세 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T10:08:10.000Z" },
+    { alias: "성수 너구리 #15", content: "다음 확인 지표는 종부세 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T10:08:20.000Z" },
+  ],
+  [-2065]: [
+    { alias: "전세러 #09", content: "전세 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T10:16:10.000Z" },
+    { alias: "역삼 판다 #77", content: "다음 확인 지표는 전세 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T10:16:20.000Z" },
+  ],
+  [-2066]: [
+    { alias: "실수요 #05", content: "매매 확인했습니다. 숫자부터 표에 남기겠습니다.", created_at: "2026-09-04T10:24:10.000Z" },
+    { alias: "한남 재규어 #27", content: "다음 확인 지표는 매매 쪽에서 따로 보겠습니다.", created_at: "2026-09-04T10:24:20.000Z" },
+  ],
   [-2047]: [
     { alias: "강남 두더지 #02", content: "유가 shock가 주담대 심리에도", created_at: "2026-09-03T10:24:00.000Z" },
     { alias: "전세러 #09", content: "LTV·DSR·입주 일정", created_at: "2026-09-03T10:36:00.000Z" },

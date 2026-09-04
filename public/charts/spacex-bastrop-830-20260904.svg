@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.04</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">스페이스X가 스타마인드 북동쪽 에프엠969·독 브라이슨 로드에</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">830에이커를 더 확보했습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">🗺</text>
+  <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">+830</text>
+  <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">니켈 초합금 터빈 블레이드·베인 주조 공장으로 거론됐습니다. 에이커는 약 4,047제곱미터로, 830에이커는</text>
+  <text x="540" y="369" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">대형 산업 부지입니다.</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">📐</text>
+  <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">830</text>
+  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">에이커</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">추가 부지</text>
+  <rect x="390" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🔥</text>
+  <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">주조</text>
+  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">터빈</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">블레이드·베인</text>
+  <rect x="720" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">🛣</text>
+  <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">FM969</text>
+  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">교차</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">독 브라이슨</text>
+  <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">터빈 블레이드와 베인은 엔진·발전기의 고온 부품입니다. 니켈 초합금은 고온에서 버티는 금속입니다.</text>
+  <text x="540" y="682" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">스타마인드 옆 부지면 발사·제조·소재가 한 권역으로 붙는 그림입니다.</text>
+  <rect x="60" y="814" width="960" height="148" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="844" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">부지 확보는 착공·환경 허가·전력 인입이 아닙니다. 주조 공장이 실제로 돌아가는 시점과 고용 규모를 카운티 문서에서 확인하시기</text>
+  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">바랍니다. 사이버캡 오스틴 캠퍼스와는 다른 공급망 축입니다.</text>
+  <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 배스트롭 · 2026.09.04</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

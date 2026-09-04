@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T04SEP = 1788476400000; // 2026.09.04 08:00 KST
 const T03SEP = 1788390000000; // 2026.09.03 08:00 KST
 const T02SEP = 1788303600000; // 2026.09.02 08:00 KST
 const T01SEP = 1788217200000; // 2026.09.01 08:00 KST
@@ -95,7 +96,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T03SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T04SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -114,6 +115,79 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-04 신규 ────────────────
+  { id: 1210, symbol: "MACRO", nickname: "익명_5200", holdingLabel: "관심종목",
+    content: "한장요약 오늘 포인트는 2026년 9월 4일 한장 요약입니다. 사이버캡 행사·요금 4.20달러·한국 1만 400대·엔비디아 129억 달러 인수·스페이스X 150달러를 모았는 점이에요",
+    createdAt: T04SEP + 8*60_000, likes: 10, comments: 1 },
+  { id: 1211, symbol: "TSLA", nickname: "익명_5201", holdingLabel: "관심종목",
+    content: "9월 3일 텍사스 오스틴에서 사이버캡 전용 행사가 미 동부 오후 5시 45분에 열렸습니다. 나는 허가랑 공시부터 볼 거예요",
+    createdAt: T04SEP + 16*60_000, likes: 11, comments: 2 },
+  { id: 1212, symbol: "TSLA", nickname: "익명_5202", holdingLabel: "관심종목",
+    content: "숫자만 남기면 로보택시 앱이 사이버캡 2인승·모델와이 4인… 이 부분이에요. 레버리지는 내일 볼게요",
+    createdAt: T04SEP + 24*60_000, likes: 12, comments: 1 },
+  { id: 1213, symbol: "TSLA", nickname: "익명_5203", holdingLabel: "관심종목",
+    content: "테슬라 오늘 포인트는 사이버캡 전비가 마일당 165와트시로 루시드·모델3보다 약 28~31% 낮다고 소개됐는 점이에요",
+    createdAt: T04SEP + 32*60_000, likes: 13, comments: 2 },
+  { id: 1214, symbol: "TSLA", nickname: "익명_5204", holdingLabel: "관심종목",
+    content: "운용 원가 마일당 약 20센트, 세금 포함 시 30~40센트로 버스 약 1달러/마일보다 낮다는 비교가 나왔습니다. 나는 허가랑 공시부터 볼 거예요",
+    createdAt: T04SEP + 40*60_000, likes: 14, comments: 1 },
+  { id: 1215, symbol: "TSLA", nickname: "익명_5205", holdingLabel: "관심종목",
+    content: "숫자만 남기면 테슬라가 2028년까지 오스틴 본사·공장 일… 이 부분이에요. 레버리지는 내일 볼게요",
+    createdAt: T04SEP + 48*60_000, likes: 15, comments: 2 },
+  { id: 1216, symbol: "TSLA", nickname: "익명_5206", holdingLabel: "관심종목",
+    content: "테슬라 오늘 포인트는 텍사스 로보택시 420대 가운데 무인 인가 차량은 45대로 집계됐는 점이에요",
+    createdAt: T04SEP + 56*60_000, likes: 10, comments: 1 },
+  { id: 1217, symbol: "TSLA", nickname: "익명_5207", holdingLabel: "관심종목",
+    content: "한국수입자동차협회 집계로 테슬라 8월 판매는 1만 400대, 전년 대비 30. 나는 허가랑 공시부터 볼 거예요",
+    createdAt: T04SEP + 64*60_000, likes: 11, comments: 2 },
+  { id: 1218, symbol: "TSLA", nickname: "익명_5208", holdingLabel: "관심종목",
+    content: "숫자만 남기면 테슬라 호주 판매가 전년 대비 160% 늘었… 이 부분이에요. 레버리지는 내일 볼게요",
+    createdAt: T04SEP + 72*60_000, likes: 12, comments: 1 },
+  { id: 1219, symbol: "UBER", nickname: "익명_5209", holdingLabel: "관심종목",
+    content: "우버 오늘 포인트는 우버와 웨이브가 런던에서 넓은 자율주행 서비스를 시작했고 운전석은 사람이 앉는 점이에요",
+    createdAt: T04SEP + 80*60_000, likes: 13, comments: 2 },
+  { id: 1220, symbol: "UBER", nickname: "익명_5210", holdingLabel: "관심종목",
+    content: "우버가 택시기사 단체와 로보택시 확대를 늦추는 쪽에 서 있다는 보도가 나왔습니다. 나는 허가랑 공시부터 볼 거예요",
+    createdAt: T04SEP + 88*60_000, likes: 14, comments: 1 },
+  { id: 1221, symbol: "NVDA", nickname: "익명_5211", holdingLabel: "관심종목",
+    content: "숫자만 남기면 엔비디아가 허깅페이스를 약 129억 달러에 … 이 부분이에요. 레버리지는 내일 볼게요",
+    createdAt: T04SEP + 96*60_000, likes: 15, comments: 2 },
+  { id: 1222, symbol: "SPCX", nickname: "익명_5212", holdingLabel: "관심종목",
+    content: "스페이스X 오늘 포인트는 스페이스X 비상장 호가가 약 150달러로 7.5% 올랐고 시가총액 2조 달러가 거론됐는 점이에요",
+    createdAt: T04SEP + 104*60_000, likes: 10, comments: 1 },
+  { id: 1223, symbol: "SPCX", nickname: "익명_5213", holdingLabel: "관심종목",
+    content: "현재 1. 나는 허가랑 공시부터 볼 거예요",
+    createdAt: T04SEP + 112*60_000, likes: 11, comments: 2 },
+  { id: 1224, symbol: "SPCX", nickname: "익명_5214", holdingLabel: "관심종목",
+    content: "숫자만 남기면 스페이스X가 스타마인드 북동쪽 에프엠969·… 이 부분이에요. 레버리지는 내일 볼게요",
+    createdAt: T04SEP + 120*60_000, likes: 12, comments: 1 },
+  { id: 1225, symbol: "SPCX", nickname: "익명_5215", holdingLabel: "관심종목",
+    content: "스페이스X 오늘 포인트는 스페이스엑스에이아이 데이터센터가 사우스헤이븐 60만 평방피트·51에이커로 추진됩니다",
+    createdAt: T04SEP + 128*60_000, likes: 13, comments: 2 },
+  { id: 1226, symbol: "SPCX", nickname: "익명_5216", holdingLabel: "관심종목",
+    content: "6월 말 이후 약 2,000건, 주거 50% 할인, 신규는 단말기 선납이 없습니다. 나는 허가랑 공시부터 볼 거예요",
+    createdAt: T04SEP + 136*60_000, likes: 14, comments: 1 },
+  { id: 1227, symbol: "AI", nickname: "익명_5217", holdingLabel: "관심종목",
+    content: "숫자만 남기면 앤스로픽이 가장 빨리 크고 있으며 연말 기업… 이 부분이에요. 레버리지는 내일 볼게요",
+    createdAt: T04SEP + 144*60_000, likes: 15, comments: 2 },
+  { id: 1228, symbol: "AI", nickname: "익명_5218", holdingLabel: "관심종목",
+    content: "인공지능 오늘 포인트는 오픈에이아이가 지피티6 아스트라를 배포하며 사이버 가드레일을 같이 걸었는 점이에요",
+    createdAt: T04SEP + 152*60_000, likes: 10, comments: 1 },
+  { id: 1229, symbol: "GOOGL", nickname: "익명_5219", holdingLabel: "관심종목",
+    content: "에이블은 약 15개월 전 180~190달러에 구글 매수를 시작했다고 설명했습니다. 나는 허가랑 공시부터 볼 거예요",
+    createdAt: T04SEP + 160*60_000, likes: 11, comments: 2 },
+  { id: 1230, symbol: "MACRO", nickname: "익명_5220", holdingLabel: "관심종목",
+    content: "숫자만 남기면 에스앤피500에서 배당수익률이 국채 10년물… 이 부분이에요. 레버리지는 내일 볼게요",
+    createdAt: T04SEP + 168*60_000, likes: 12, comments: 1 },
+  { id: 1231, symbol: "SPCX", nickname: "익명_5221", holdingLabel: "관심종목",
+    content: "스페이스X 오늘 포인트는 루이지애나 스타베이스에 약 100억 달러 메탄 설비 제안이 36개월 일정으로 돌았으나 확인되지 않았는 점이에요",
+    createdAt: T04SEP + 176*60_000, likes: 13, comments: 2 },
+  { id: 1232, symbol: "SPCX", nickname: "익명_5222", holdingLabel: "관심종목",
+    content: "100테라와트는 기가와트의 1,000배입니다. 나는 허가랑 공시부터 볼 거예요",
+    createdAt: T04SEP + 184*60_000, likes: 14, comments: 1 },
+  { id: 1233, symbol: "SPCX", nickname: "익명_5223", holdingLabel: "관심종목",
+    content: "숫자만 남기면 스타십 42호기가 극저온 시험을 시작했고 4… 이 부분이에요. 레버리지는 내일 볼게요",
+    createdAt: T04SEP + 192*60_000, likes: 15, comments: 2 },
   // ── 2026-09-03 신규 ────────────────
   { id: 1195, symbol: "MACRO", nickname: "익명_4872", holdingLabel: "관심종목",
     content: "9/3 한장: 사이버캡 5:45PM·중국 86,166·우버 10%·NVDA 물리AI·구글 TPU·F14·10년 4.80%·연금 112%",
@@ -4297,6 +4371,91 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  // ── 2026-09-04 신규 댓글 ────────────────
+  1210: [
+    { id: 1, nickname: "익명_6200", holdingLabel: "관심종목", content: "요금 4.20달러가 고정인지부터 봐야죠", createdAt: T04SEP + 8*60_000 + 3*60_000, likes: 4 },
+  ],
+  1211: [
+    { id: 1, nickname: "익명_6201", holdingLabel: "관심종목", content: "45대 무인이면 아직 시작 단계 같아요", createdAt: T04SEP + 16*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6301", holdingLabel: "관심종목", content: "메탄 100억은 미확인이라 패스", createdAt: T04SEP + 16*60_000 + 6*60_000, likes: 5 },
+  ],
+  1212: [
+    { id: 1, nickname: "익명_6202", holdingLabel: "관심종목", content: "한국 1만 400대는 행사랑 따로 적을게요", createdAt: T04SEP + 24*60_000 + 3*60_000, likes: 4 },
+  ],
+  1213: [
+    { id: 1, nickname: "익명_6203", holdingLabel: "관심종목", content: "129억 공시는 숫자가 확실해서 좋네요", createdAt: T04SEP + 32*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6303", holdingLabel: "관심종목", content: "종부세 12억 유지는 고지서 다시 계산해야겠어요", createdAt: T04SEP + 32*60_000 + 6*60_000, likes: 5 },
+  ],
+  1214: [
+    { id: 1, nickname: "익명_6204", holdingLabel: "관심종목", content: "150달러 호가는 거래량 보고 판단할게요", createdAt: T04SEP + 40*60_000 + 3*60_000, likes: 4 },
+  ],
+  1215: [
+    { id: 1, nickname: "익명_6205", holdingLabel: "관심종목", content: "1.4기가와트가 더 와닿아요", createdAt: T04SEP + 48*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6305", holdingLabel: "관심종목", content: "케이비 5%는 고용 전에 추격 안 할래요", createdAt: T04SEP + 48*60_000 + 6*60_000, likes: 5 },
+  ],
+  1216: [
+    { id: 1, nickname: "익명_6206", holdingLabel: "관심종목", content: "메탄 100억은 미확인이라 패스", createdAt: T04SEP + 56*60_000 + 3*60_000, likes: 4 },
+  ],
+  1217: [
+    { id: 1, nickname: "익명_6207", holdingLabel: "관심종목", content: "오늘 밤 고용 전에 레버리지 줄일게요", createdAt: T04SEP + 64*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6307", holdingLabel: "관심종목", content: "요금 4.20달러가 고정인지부터 봐야죠", createdAt: T04SEP + 64*60_000 + 6*60_000, likes: 5 },
+  ],
+  1218: [
+    { id: 1, nickname: "익명_6208", holdingLabel: "관심종목", content: "종부세 12억 유지는 고지서 다시 계산해야겠어요", createdAt: T04SEP + 72*60_000 + 3*60_000, likes: 4 },
+  ],
+  1219: [
+    { id: 1, nickname: "익명_6209", holdingLabel: "관심종목", content: "금이랑 비트가 같이 오르면 달러부터 볼게요", createdAt: T04SEP + 80*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6309", holdingLabel: "관심종목", content: "한국 1만 400대는 행사랑 따로 적을게요", createdAt: T04SEP + 80*60_000 + 6*60_000, likes: 5 },
+  ],
+  1220: [
+    { id: 1, nickname: "익명_6210", holdingLabel: "관심종목", content: "케이비 5%는 고용 전에 추격 안 할래요", createdAt: T04SEP + 88*60_000 + 3*60_000, likes: 4 },
+  ],
+  1221: [
+    { id: 1, nickname: "익명_6211", holdingLabel: "관심종목", content: "엘지엔솔 공시 없이 5%면 관망이요", createdAt: T04SEP + 96*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6311", holdingLabel: "관심종목", content: "150달러 호가는 거래량 보고 판단할게요", createdAt: T04SEP + 96*60_000 + 6*60_000, likes: 5 },
+  ],
+  1222: [
+    { id: 1, nickname: "익명_6212", holdingLabel: "관심종목", content: "요금 4.20달러가 고정인지부터 봐야죠", createdAt: T04SEP + 104*60_000 + 3*60_000, likes: 4 },
+  ],
+  1223: [
+    { id: 1, nickname: "익명_6213", holdingLabel: "관심종목", content: "45대 무인이면 아직 시작 단계 같아요", createdAt: T04SEP + 112*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6313", holdingLabel: "관심종목", content: "메탄 100억은 미확인이라 패스", createdAt: T04SEP + 112*60_000 + 6*60_000, likes: 5 },
+  ],
+  1224: [
+    { id: 1, nickname: "익명_6214", holdingLabel: "관심종목", content: "한국 1만 400대는 행사랑 따로 적을게요", createdAt: T04SEP + 120*60_000 + 3*60_000, likes: 4 },
+  ],
+  1225: [
+    { id: 1, nickname: "익명_6215", holdingLabel: "관심종목", content: "129억 공시는 숫자가 확실해서 좋네요", createdAt: T04SEP + 128*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6315", holdingLabel: "관심종목", content: "종부세 12억 유지는 고지서 다시 계산해야겠어요", createdAt: T04SEP + 128*60_000 + 6*60_000, likes: 5 },
+  ],
+  1226: [
+    { id: 1, nickname: "익명_6216", holdingLabel: "관심종목", content: "150달러 호가는 거래량 보고 판단할게요", createdAt: T04SEP + 136*60_000 + 3*60_000, likes: 4 },
+  ],
+  1227: [
+    { id: 1, nickname: "익명_6217", holdingLabel: "관심종목", content: "1.4기가와트가 더 와닿아요", createdAt: T04SEP + 144*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6317", holdingLabel: "관심종목", content: "케이비 5%는 고용 전에 추격 안 할래요", createdAt: T04SEP + 144*60_000 + 6*60_000, likes: 5 },
+  ],
+  1228: [
+    { id: 1, nickname: "익명_6218", holdingLabel: "관심종목", content: "메탄 100억은 미확인이라 패스", createdAt: T04SEP + 152*60_000 + 3*60_000, likes: 4 },
+  ],
+  1229: [
+    { id: 1, nickname: "익명_6219", holdingLabel: "관심종목", content: "오늘 밤 고용 전에 레버리지 줄일게요", createdAt: T04SEP + 160*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6319", holdingLabel: "관심종목", content: "요금 4.20달러가 고정인지부터 봐야죠", createdAt: T04SEP + 160*60_000 + 6*60_000, likes: 5 },
+  ],
+  1230: [
+    { id: 1, nickname: "익명_6220", holdingLabel: "관심종목", content: "종부세 12억 유지는 고지서 다시 계산해야겠어요", createdAt: T04SEP + 168*60_000 + 3*60_000, likes: 4 },
+  ],
+  1231: [
+    { id: 1, nickname: "익명_6221", holdingLabel: "관심종목", content: "금이랑 비트가 같이 오르면 달러부터 볼게요", createdAt: T04SEP + 176*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6321", holdingLabel: "관심종목", content: "한국 1만 400대는 행사랑 따로 적을게요", createdAt: T04SEP + 176*60_000 + 6*60_000, likes: 5 },
+  ],
+  1232: [
+    { id: 1, nickname: "익명_6222", holdingLabel: "관심종목", content: "케이비 5%는 고용 전에 추격 안 할래요", createdAt: T04SEP + 184*60_000 + 3*60_000, likes: 4 },
+  ],
+  1233: [
+    { id: 1, nickname: "익명_6223", holdingLabel: "관심종목", content: "엘지엔솔 공시 없이 5%면 관망이요", createdAt: T04SEP + 192*60_000 + 3*60_000, likes: 4 },
+    { id: 2, nickname: "익명_6323", holdingLabel: "관심종목", content: "150달러 호가는 거래량 보고 판단할게요", createdAt: T04SEP + 192*60_000 + 6*60_000, likes: 5 },
+  ],
   // ── 2026-09-03 신규 댓글 ────────────────
   1195: [
     { id: 1, nickname: "익명_6195", holdingLabel: "관심종목", content: "9/3 한장에 사이버캡·중국·우버·금리까지 정리 감사합니다", createdAt: T03SEP + 8*60_000 + 3*60_000, likes: 4 },

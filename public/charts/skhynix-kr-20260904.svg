@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1205"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="139" height="38" rx="19" fill="#f59e0b30" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="109.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f59e0b" text-anchor="middle">SK하이닉스</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.04</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">에스케이하이닉스가 159만 6천 원으로 1.05% 내렸습니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">💾</text>
+  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#f59e0b" text-anchor="middle">-1.05%</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">자사주 소각 목적 매입이 기타법인 순매수에 포함됐습니다. 성장주 베타가 장중 급락 구간에 더 크게</text>
+  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">반응했습니다.</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">종가</text>
+  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">1,596,000</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">원</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">-1.05%</text>
+  <rect x="390" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">소각</text>
+  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">자사주</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">매입</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">기타법인</text>
+  <rect x="720" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">지수</text>
+  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">+0.26%</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">코스피</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">디커플</text>
+  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">왜 지수와 달랐나</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">💾 고대역폭 메모리 성장주는 금리·유가에 베타가 큽니다</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🏦 소각 매입은 유통 물량을 줄이는 환원입니다</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">📉 오후 급락 때 낙폭이 삼성전자보다 컸습니다</text>
+  <rect x="60" y="800" width="960" height="148" rx="14" fill="#201408" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="830" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">소각은 사들인 주식을 없애 남은 주식의 가치를 높이는 절차입니다. 하루 -1.05%는 그 효과를 가리지 못합니다. 다음엔 외국인</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">순매도와 고대역폭 메모리 출하를 분리해 보시면 됩니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">하이닉스 · 9월 3일 · 2026.09.04</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

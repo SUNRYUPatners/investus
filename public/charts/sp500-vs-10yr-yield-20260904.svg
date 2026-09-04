@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a0a"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="100%" style="stop-color:#dc2626"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#ef444430" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#ef4444" text-anchor="middle">RATES</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.04</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">에스앤피500에서 배당수익률이 국채 10년물을 넘는 종목이 5%</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">미만입니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">📉</text>
+  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#ef4444" text-anchor="middle">&lt;5%</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">2007년 5월 이후 가장 적은 비중입니다. 8월 31일 기준 10년물은 4.41%였고, 과거 평균은 약 18%입니다.</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="418" width="300" height="176" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">지금</text>
+  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#ef4444" text-anchor="middle">&lt;5%</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">종목 비중</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">배당&gt;10년</text>
+  <rect x="390" y="418" width="300" height="176" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">평균</text>
+  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#ef4444" text-anchor="middle">~18%</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">역사</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">비교</text>
+  <rect x="720" y="418" width="300" height="176" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">10년</text>
+  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#ef4444" text-anchor="middle">4.41%</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">8월 31일</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">국채</text>
+  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">왜 비중이 줄었는가</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📉 금리가 높으면 배당이 매력이 줄어듭니다</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">📊 성장주 비중이 커지면 배당 종목이 희귀해집니다</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">⚠️ 2007년은 금융위기 직전 구간입니다</text>
+  <rect x="60" y="800" width="960" height="148" rx="14" fill="#1c0d0d" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="830" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">배당이 국채보다 높은 종목이 드물면, 주식은 배당보다 성장·바이백으로 설명됩니다. 4.41%는 8월 31일 스냅샷이며 9월 초 금리는</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">다를 수 있습니다. 고용 지표가 금리를 다시 올리면 이 비중은 더 줄어들 수 있습니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">매크로 · 배당 vs 국채 · 2026.09.04</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06171c"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#22d3ee"/><stop offset="100%" style="stop-color:#06b6d4"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="151" height="38" rx="19" fill="#22d3ee30" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="115.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#22d3ee" text-anchor="middle">KB Financial</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.04</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">KB Financial closed 177,900 won, up 5.20%, reigniting the</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">higher-rate NIM frame</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🏦</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#22d3ee" text-anchor="middle">+5.20%</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Shinhan +3.62%, Hana +3.41%, Samsung Life +3.06%. Hike odds were read as net-interest-margin</text>
+  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">support.</text>
+  <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
+  <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Prior</text>
+  <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">169,100</text>
+  <text x="270" y="496" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Close ref</text>
+  <text x="540" y="455" font-family="Arial Black,Arial" font-size="40" fill="#22d3ee" text-anchor="middle">&#8594;</text>
+  <rect x="600" y="356" width="420" height="168" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="2"/>
+  <text x="810" y="400" font-family="Arial" font-size="20" fill="#22d3ee" text-anchor="middle">Sept 3</text>
+  <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#22d3ee" text-anchor="middle">177,900</text>
+  <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">+5.20%</text>
+  <rect x="60" y="548" width="300" height="164" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">📈</text>
+  <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee" text-anchor="middle">+5.20%</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">KB</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">177,900 won</text>
+  <rect x="390" y="548" width="300" height="164" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">🏦</text>
+  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee" text-anchor="middle">+3.6%</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Shinhan</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Banks</text>
+  <rect x="720" y="548" width="300" height="164" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">📊</text>
+  <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee" text-anchor="middle">3.40%</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Finance</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Sector</text>
+  <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#22d3ee" text-anchor="middle">NIM is loan yield minus deposit cost. Hike talk can reprice banks before earnings. Plus 5.20% is one</text>
+  <text x="540" y="801" font-family="Arial" font-size="18" fill="#22d3ee" text-anchor="middle">session, not a print.</text>
+  <rect x="60" y="878" width="960" height="140" rx="14" fill="#0a1c22" stroke="#22d3ee" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial" font-size="18" fill="#22d3ee" text-anchor="middle">Why it matters</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Rate gains fade if credit costs rise with them. Soft payrolls can unwind hike odds and bank stocks. Pair tonight’s</text>
+  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">jobs print with delinquency data.</text>
+  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">KB Financial · Sept 3 · 2026.09.04</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

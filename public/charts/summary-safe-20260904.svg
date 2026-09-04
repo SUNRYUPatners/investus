@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.04 안전자산 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#f7931a"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f7931a">비트코인이 8만 1,254달러로 5.11% 오르며 8만 달러를…</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">거래 범위는 약 7만 6,930~8만 2,280달러였습니다. 금·은과 같은 날 반등했습니다.</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a" text-anchor="end">81,254</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#facc15"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">금이 온스당 약 4,470달러 부근으로 반등했습니다</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">전날 저점 약 4,282달러에서 되돌렸고, 달러 약세·금리 기대 완화가 겹쳤습니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15" text-anchor="end">~4,470</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#0f1419" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#94a3b8"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">은이 온스당 약 66.8달러로 올랐습니다</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">산업 수요와 금 연동이 같이 움직인 날입니다. 금만 보지 마시기 바랍니다.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8" text-anchor="end">~66.8</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#0a0f24" stroke="#627eea" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#627eea"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#627eea">이더리움이 약 2,400달러, 고유 2,429·저 2,356달러…</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">비트코인 베타가 큰 날입니다. 스테이킹 수익은 별도 줄입니다.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#627eea" text-anchor="end">~2,400</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#f59e0b"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f59e0b">서부텍사스유가 91.01달러(+0.88%), 달러지수 약…</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">서비스 구매관리자지수 55.4, 민간고용 +3.8만 명, 오늘 밤 비농업 고용이 공통 변수입니다.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b" text-anchor="end">$91.01</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 비트코인 81254 · 금 4470달러 · 은 66.8 · 이더 2400 · 유가 91.01 · 고용 발표</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.04</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">머스크가 달 인공지능 위성과 질량 가속기, 탈출 속도 초속 약</text>
+  <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">2,400미터를 말했습니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">달 · 100테라와트</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#c084fc" text-anchor="middle">100 TW</text>
+  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">테라와트는 기가와트의 1,000배입니다. 질량 가속기는 전자기력으로 화물을 쏘아 올리는 레일입니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🌙</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">달</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">위성</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">인공지능</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">⚡</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">100TW</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">규모</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">비전</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🧲</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">가속기</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">질량</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">레일</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">🚀</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">2400</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">m/s</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">탈출 속도</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">비전 발언은 분기 가동 기가와트와 시간 축이 다릅니다</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">달 탈출 속도는 지구(약 11.2km/s)보다 낮아 질량 가속기 아이디어가 나옵니다</text>
+  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="740" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">초속 2,400미터는 달에서 중력을 벗어나기 쉬운 숫자로 자주 인용됩니다. 100테라와트는 지구 전력망 전체를 넘는</text>
+  <text x="540" y="765" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">규모라 일정·허가·재료가 없습니다. 지상 1.4기가와트와 혼동하지 마시기 바랍니다.</text>
+  <rect x="60" y="842" width="960" height="148" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기 비전은 스타십 케이던스가 버텨야 의미가 있습니다. 오늘 추적할 것은 지상 전력과 발사 횟수입니다. 달 데이터센터는</text>
+  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">연구·수사 단계로 분류하시기 바랍니다.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 달 비전 · 2026.09.04</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
