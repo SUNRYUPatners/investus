@@ -13,9 +13,9 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
   { id: 9060, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "인덱스 보유", content: "6579.48 +0.26%인데 장중 243포인트나 출렁였어요. 기타법인 1.6조가 받친 강보합이라 외국인 복귀로 착각하면 안 됩니다", createdAt: T04 - 0, likes: 40, comments: 2, },
-  { id: 9061, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "삼성전자 보유", content: "25만 원 -0.20%. 지수는 올랐는데 1위는 내렸습니다. 자사주 기타법인이라 수급이 좋아 보이는 착시가 있어요", createdAt: T04 - 1800000, likes: 39, comments: 2, },
+  { id: 9061, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "삼성전자 보유", content: "지수 반등인데 삼성은 따로 갔네요. 자사주가 기타법인으로 잡혀서 수급이 좋아 보이는 착시가 있어요", createdAt: T04 - 1800000, likes: 39, comments: 2, },
   { id: 9062, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "하이닉스 보유", content: "159.6만 원 -1.05%. 소각 매입이 있어도 베타가 커서 오후 급락 때 더 빠졌습니다", createdAt: T04 - 3600000, likes: 38, comments: 2, },
-  { id: 9063, symbol: "LG에너지솔루션", nickname: "배터리존버", holdingLabel: "LG엔솔 관심", content: "365,500원 +5.18%. 공시 없이 올랐어요. 목표가 48만 원 이야기만으로 추격하긴 이릅니다", createdAt: T04 - 5400000, likes: 37, comments: 2, },
+  { id: 9063, symbol: "LG에너지솔루션", nickname: "배터리존버", holdingLabel: "LG엔솔 관심", content: "공시 없이 ESS·태양광 이야기로 배터리만 튀었네요. 목표가 48만 원만 보고 추격하긴 이릅니다", createdAt: T04 - 5400000, likes: 37, comments: 2, },
   { id: 9064, symbol: "현대차", nickname: "자동차매니아", holdingLabel: "현대차 관심", content: "383,500원 +1.46%. 환율 1,359원은 좋은데 유가 91달러는 여전히 부담이에요", createdAt: T04 - 7200000, likes: 36, comments: 2, },
   { id: 9065, symbol: "KB금융", nickname: "은행주러", holdingLabel: "KB금융 관심", content: "177,900원 +5.20%. 금리 수혜 프레임인데 오늘 밤 고용 하나에 뒤집어질 수 있습니다", createdAt: T04 - 9000000, likes: 35, comments: 2, },
   { id: 9054, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "인덱스 보유", content: "6562.72 -3.99% 급락. WTI $91+·10년 4.8%·외국인 1.9~2.4조 매도가 겹친 shock 날이에요", createdAt: T03 - 0, likes: 40, comments: 2, },
@@ -256,7 +256,7 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 
 export const MOCK_POSTS_SAFE: Post[] = [
   { id: 9152, symbol: "매크로", nickname: "채권덕후", holdingLabel: "관망", content: "비트 81,254·금 4,470·유가 91달러가 같은 날이에요. 고용 전까지는 한 방향 베팅 안 합니다", createdAt: T04 - 0, likes: 40, comments: 2, },
-  { id: 9153, symbol: "비트코인", nickname: "온체인러", holdingLabel: "BTC 보유", content: "81,254달러 +5.11%. 어떤 기사는 7만 7천을 쓰는데 거래소 종가랑 맞춰봐야 해요", createdAt: T04 - 1800000, likes: 39, comments: 2, },
+  { id: 9153, symbol: "비트코인", nickname: "온체인러", holdingLabel: "BTC 보유", content: "8만 달러 다시 밟았는데 오늘 밤 고용 전에 레버리지 키우긴 위험해요. 기사 7만 7천이랑 거래소 종가 맞춰봐야죠", createdAt: T04 - 1800000, likes: 39, comments: 2, },
   { id: 9154, symbol: "금", nickname: "금벌레", holdingLabel: "금 ETF", content: "4,470달러로 전날 4,282 저점을 되돌렸어요. 4,500 안착은 고용 보고 판단할게요", createdAt: T04 - 3600000, likes: 38, comments: 2, },
   { id: 9155, symbol: "은", nickname: "실물러", holdingLabel: "관심", content: "은 66.8달러. 금보다 출렁여서 비중은 더 작게 가져가려요", createdAt: T04 - 5400000, likes: 37, comments: 2, },
   { id: 9156, symbol: "이더리움", nickname: "스테이커", holdingLabel: "ETH 보유", content: "이더 2,400달러, 2,500 아래. 비트 베타가 커서 고용 전 레버리지는 접었습니다", createdAt: T04 - 7200000, likes: 36, comments: 2, },

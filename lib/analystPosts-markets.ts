@@ -1,12 +1,12 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
-  { id: -2051, alias: "여의도 너구리 #11", symbol: "코스피", content: "9월 3일 코스피 6,579.48(+0.26%)로 장중 243포인트 출렁인 뒤 강보합 마감했습니다. 기타법인 1조 5,936억 원 순매수(12일 연속)가 개인·외국인·기관 순매도를 가렸습니다. 오늘 밤 고용 전 수급 세 줄을 분리해 적으시기 바랍니다.", likes: 28, comments: 2, created_at: "2026-09-04T06:00:00.000Z", liked: false, },
-  { id: -2052, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자 25만 원(-0.20%)으로 지수와 디커플이었습니다. 자사주가 기타법인으로 잡히니 외국인 매도와 혼동하지 마시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-04T06:08:00.000Z", liked: false, },
-  { id: -2053, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "하이닉스 159만 6천 원(-1.05%). 소각 매입이 있어도 성장주 베타가 오후 급락에 더 반응했습니다.", likes: 26, comments: 2, created_at: "2026-09-04T06:16:00.000Z", liked: false, },
-  { id: -2054, alias: "성수 수달 #35", symbol: "LG에너지솔루션", content: "엘지에너지솔루션 36만 5,500원(+5.18%). 뚜렷한 호재 공시는 없었습니다. 공시 없는 5%는 추격보다 수주 확인이 먼저입니다.", likes: 25, comments: 2, created_at: "2026-09-04T06:24:00.000Z", liked: false, },
-  { id: -2055, alias: "한남 두루미 #17", symbol: "현대차", content: "현대차 38만 3,500원(+1.46%). 환율 1,359원과 유가 91달러가 반대 방향입니다. 사이버캡 행사와 국내 판매를 한 줄로 묶지 마시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-04T06:32:00.000Z", liked: false, },
-  { id: -2056, alias: "잠실 백로 #29", symbol: "KB금융", content: "케이비금융 17만 7,900원(+5.20%). 금리 수혜 프레임이지만 고용 발표가 인상 기대를 뒤집으면 하루 만에 되돌릴 수 있습니다.", likes: 23, comments: 2, created_at: "2026-09-04T06:40:00.000Z", liked: false, },
+  { id: -2051, alias: "여의도 너구리 #11", symbol: "코스피", content: "기타법인이 12거래일 연속 순매수하며 장중 243포인트 출렁 뒤 코스피가 강보합으로 마감했습니다. 개인·외국인·기관 매도와 자사주·소각 매입을 분리해 적으시기 바랍니다. 오늘 밤 고용이 다음 변수입니다.", likes: 28, comments: 2, created_at: "2026-09-04T06:00:00.000Z", liked: false, },
+  { id: -2052, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자 자사주가 기타법인으로 잡히며 지수 반등에도 시가총액 1위가 따로 움직였습니다. 외국인 매도와 자사주 완충을 한 화면에 두지 마시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-04T06:08:00.000Z", liked: false, },
+  { id: -2053, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "하이닉스 소각용 자사주가 기타법인에 잡혔지만 성장주는 장중 급락 뒤 추가 조정을 받았습니다. 환원 완충과 베타를 분리해 보시기 바랍니다.", likes: 26, comments: 2, created_at: "2026-09-04T06:16:00.000Z", liked: false, },
+  { id: -2054, alias: "성수 수달 #35", symbol: "LG에너지솔루션", content: "엘지에너지솔루션이 공시 없이 에너지저장·태양광 맥락으로 2차전지 반등을 이끌었습니다. 공시 없는 급등은 추격보다 수주 확인이 먼저입니다.", likes: 25, comments: 2, created_at: "2026-09-04T06:24:00.000Z", liked: false, },
+  { id: -2055, alias: "한남 두루미 #17", symbol: "현대차", content: "현대차가 원화 강세와 유가 90달러대 사이에서 완성차 되돌림을 시도했습니다. 사이버캡 행사와 국내 판매를 한 줄로 묶지 마시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-04T06:32:00.000Z", liked: false, },
+  { id: -2056, alias: "잠실 백로 #29", symbol: "KB금융", content: "금리 인상 기대가 되살아나며 케이비금융을 중심으로 금융주가 로테이션됐습니다. 고용 발표가 인상 기대를 뒤집으면 하루 만에 되돌릴 수 있습니다.", likes: 23, comments: 2, created_at: "2026-09-04T06:40:00.000Z", liked: false, },
   { id: -2035, alias: "여의도 너구리 #11", symbol: "코스피", content: "9월 3일 코스피 6,562.72(-3.99%)로 WTI $91+·10년물 4.80%·중동 유가 shock에 급락했습니다. 외국인 순매도 약 1.92~2.44조 원, 기관 약 2.43조 원, 개인 순매수 약 2.3조 원입니다. shock 다음 날 수급·유가·금리를 먼저 추적하시기 바랍니다.", likes: 28, comments: 2, created_at: "2026-09-03T06:00:00.000Z", liked: false, },
   { id: -2036, alias: "판교 치타 #22", symbol: "삼성전자", content: "삼성전자 -4.02% 250,500원. 유가·금리 shock에 반도체 대형주가 동반 약세였습니다. shock 구간에서는 분기 실적보다 수급·매크로를 먼저 보시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-03T06:08:00.000Z", liked: false, },
   { id: -2037, alias: "삼성동 여우 #08", symbol: "SK하이닉스", content: "SK하이닉스 -4.73% 1,613,000원. 성장주 베타와 외국인 대량 매도가 겹친 날입니다.", likes: 26, comments: 2, created_at: "2026-09-03T06:16:00.000Z", liked: false, },
@@ -335,12 +335,12 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
-  { id: -2057, alias: "온체인 매 #03", symbol: "매크로", content: "안전자산 한장입니다. 비트코인 81,254달러(+5.11%), 금 약 4,470달러, 은 약 66.8달러, 유가 91.01달러, 달러지수 약 99.6입니다. 오늘 밤 고용이 공통 변수입니다.", likes: 28, comments: 2, created_at: "2026-09-04T09:00:00.000Z", liked: false, },
-  { id: -2058, alias: "금벌레 #17", symbol: "비트코인", content: "비트코인 81,254달러로 8만 달러를 회복했습니다. 일부 기사의 7만 7천 달러와 거래소 종가를 맞추시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-04T09:08:00.000Z", liked: false, },
-  { id: -2059, alias: "금벌레 #17", symbol: "금", content: "금이 약 4,470달러로 전날 저점 약 4,282달러를 되돌렸습니다. 4,500달러 안착은 고용 이후 확인하시기 바랍니다.", likes: 26, comments: 2, created_at: "2026-09-04T09:16:00.000Z", liked: false, },
-  { id: -2060, alias: "실물러 #12", symbol: "은", content: "은 약 66.8달러로 금보다 변동이 컸습니다. 산업 수요와 금 연동을 분리해 비중을 금보다 작게 두시기 바랍니다.", likes: 25, comments: 2, created_at: "2026-09-04T09:24:00.000Z", liked: false, },
-  { id: -2061, alias: "이더러 #44", symbol: "이더리움", content: "이더리움 약 2,400달러(고 2,429·저 2,356)입니다. 비트코인 베타가 커 고용 전 알트 레버리지는 보수적으로 두시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-04T09:32:00.000Z", liked: false, },
-  { id: -2062, alias: "유가러 #44", symbol: "WTI", content: "서부텍사스유 91.01달러, 서비스 구매관리자지수 55.4, 민간고용 +3만 8천 명입니다. 90달러 유가가 버티면 금리 기대가 쉽게 내려가지 않습니다.", likes: 23, comments: 2, created_at: "2026-09-04T09:40:00.000Z", liked: false, },
+  { id: -2057, alias: "온체인 매 #03", symbol: "매크로", content: "고용 발표 전야에 달러가 약해지며 비트코인·금·유가 90달러가 한꺼번에 재가격됐습니다. 오늘 밤 비농업 고용이 공통 변수입니다.", likes: 28, comments: 2, created_at: "2026-09-04T09:00:00.000Z", liked: false, },
+  { id: -2058, alias: "금벌레 #17", symbol: "비트코인", content: "비트코인이 8만 달러를 되찾았고 오늘 밤 고용이 지지선을 시험합니다. 일부 기사의 7만 7천 달러와 거래소 종가를 맞추시기 바랍니다.", likes: 27, comments: 2, created_at: "2026-09-04T09:08:00.000Z", liked: false, },
+  { id: -2059, alias: "금벌레 #17", symbol: "금", content: "달러 약세와 인상 기대 완화로 금이 전날 급락 저점에서 되돌아왔습니다. 4,500달러 안착은 고용 이후 확인하시기 바랍니다.", likes: 26, comments: 2, created_at: "2026-09-04T09:16:00.000Z", liked: false, },
+  { id: -2060, alias: "실물러 #12", symbol: "은", content: "은이 금보다 큰 폭으로 움직이며 산업 수요와 헤지가 동시에 붙었습니다. 비중을 금보다 작게 두시기 바랍니다.", likes: 25, comments: 2, created_at: "2026-09-04T09:24:00.000Z", liked: false, },
+  { id: -2061, alias: "이더러 #44", symbol: "이더리움", content: "이더리움이 비트코인 반등에 연동되며 2,500달러 심리선 아래에서 거래됐습니다. 고용 전 알트 레버리지는 보수적으로 두시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-04T09:32:00.000Z", liked: false, },
+  { id: -2062, alias: "유가러 #44", symbol: "WTI", content: "서부텍사스유가 90달러를 지키는 가운데 서비스 경기 확장과 오늘 밤 고용이 겹칩니다. 90달러가 버티면 금리 기대가 쉽게 내려가지 않습니다.", likes: 23, comments: 2, created_at: "2026-09-04T09:40:00.000Z", liked: false, },
   { id: -2041, alias: "온체인 매 #03", symbol: "매크로", content: "9월 3일 안전자산 한장 요약입니다. WTI $91+·10년물 4.80%·코스피 -3.99% shock. 금 ~3,550~3,650달러, BTC ~105,000~107,000달러, DXY·은·WTI를 분리 추적하시기 바랍니다.", likes: 24, comments: 2, created_at: "2026-09-03T09:00:00.000Z", liked: false, },
   { id: -2042, alias: "금벌레 #17", symbol: "비트코인", content: "비트코인 ~105,000~107,000달러. 리스크오프 조정 구간으로 ETF 유입·청산·금리 변수를 함께 보시기 바랍니다.", likes: 23, comments: 2, created_at: "2026-09-03T09:08:00.000Z", liked: false, },
   { id: -2043, alias: "금벌레 #17", symbol: "금", content: "금 ~3,550~3,650달러. 유가·지정학 헤지와 실질금리·DXY 연동입니다.", likes: 22, comments: 2, created_at: "2026-09-03T09:16:00.000Z", liked: false, },
