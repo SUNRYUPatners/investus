@@ -207,6 +207,68 @@ function validateWallMarket(src, postsExport, commentsExport, label) {
   return errors;
 }
 
+function validateUsWallCrossMarket() {
+  const src = load("lib/wallPosts.ts");
+  const errors = [];
+  const pStart = src.indexOf("  // ── 2026-09-04 신규 ────────────────");
+  const pEnd = src.indexOf("  // ── 2026-09-03 신규 ────────────────");
+  const cStart = src.indexOf("  // ── 2026-09-04 신규 댓글 ────────────────");
+  const cEnd = src.indexOf("  // ── 2026-09-03 신규 댓글 ────────────────");
+  if (pStart === -1 || pEnd === -1 || cStart === -1 || cEnd === -1) {
+    return errors; // older tree without 9/4 — skip
+  }
+  const posts = src.slice(pStart, pEnd);
+  const comments = src.slice(cStart, cEnd);
+  const blob = posts + "\n" + comments;
+
+  const CROSS = [
+    /종부세/,
+    /케이비/,
+    /KB금융/,
+    /엘지엔솔/,
+    /LG엔솔/,
+    /코스피/,
+    /하이닉스/,
+    /삼성전자/,
+    /기타법인/,
+  ];
+  const TEMPLATES = [
+    /숫자만 남기면/,
+    /이 부분이에요\. 레버리지는 내일/,
+    /나는 허가랑 공시부터 볼 거예요/,
+    /오늘 포인트는 .+는 점이에요/,
+  ];
+  for (const re of CROSS) {
+    if (re.test(blob)) {
+      errors.push(
+        `US wall 9/4: 다른 시장 키워드 혼입 (${re}) — 미국 종토방에 KR/부동산 문구 금지`,
+      );
+    }
+  }
+  for (const re of TEMPLATES) {
+    if (re.test(blob)) {
+      errors.push(`US wall 9/4: 템플릿 문구 잔존 (${re})`);
+    }
+  }
+
+  // comment text reuse within 9/4 batch
+  const cmRe = /content:\s*"((?:\\.|[^"\\])*)"/g;
+  const counts = new Map();
+  let m;
+  while ((m = cmRe.exec(comments)) !== null) {
+    const key = normalizeContent(m[1]);
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  for (const [text, count] of counts) {
+    if (count >= 2) {
+      errors.push(
+        `US wall 9/4: 동일 댓글 ${count}회 — "${text.slice(0, 36)}…"`,
+      );
+    }
+  }
+  return errors;
+}
+
 function main() {
   const wall = load("lib/wallPosts-markets.ts");
   const errors = [
@@ -228,13 +290,14 @@ function main() {
       "MOCK_COMMENTS_KR_RE",
       "KR-RE",
     ),
+    ...validateUsWallCrossMarket(),
   ];
 
   if (errors.length) {
     console.error("validate-wall-social: FAIL\n" + errors.map((e) => `  - ${e}`).join("\n"));
     process.exit(1);
   }
-  console.log("validate-wall-social: OK (KR · SAFE · KR-RE)");
+  console.log("validate-wall-social: OK (US · KR · SAFE · KR-RE)");
 }
 
 main();

@@ -256,71 +256,12 @@ if (require.main === module) {
 }
 
 function patchWallUs() {
-  let c = read("lib/wallPosts.ts");
-  if (c.includes("T04SEP")) {
-    console.log("wallPosts: T04SEP already present");
-    return;
-  }
-  c = c.replace(
-    "const T03SEP = 1788390000000; // 2026.09.03 08:00 KST",
-    "const T04SEP = 1788476400000; // 2026.09.04 08:00 KST\nconst T03SEP = 1788390000000; // 2026.09.03 08:00 KST",
-  );
-  c = c.replace("export const LATEST_UPDATE = T03SEP;", "export const LATEST_UPDATE = T04SEP;");
-  const posts = [];
-  const comments = [];
-  US.forEach((r, i) => {
-    const id = 1210 + i;
-    const nComments = i % 2 === 0 ? 1 : 2;
-    const nick = `익명_${5200 + i}`;
-    const sym = r.pinned ? "MACRO" : (r.tickers && r.tickers[0]) || "MACRO";
-    const sentences = [
-      `${r.subject} 오늘 포인트는 ${r.title.replace(/습니다$/, "는 점이에요")}`,
-      `${r.summary.split(".")[0]}. 나는 허가랑 공시부터 볼 거예요`,
-      `숫자만 남기면 ${r.title.slice(0, 24)}… 이 부분이에요. 레버리지는 내일 볼게요`,
-    ];
-    posts.push(`  { id: ${id}, symbol: ${JSON.stringify(sym)}, nickname: ${JSON.stringify(nick)}, holdingLabel: "관심종목",
-    content: ${JSON.stringify(sentences[i % 3])},
-    createdAt: T04SEP + ${(i + 1) * 8}*60_000, likes: ${10 + (i % 6)}, comments: ${nComments} },`);
-    const c1 = uniqueWallComment(i, 0);
-    let block = `  ${id}: [\n    { id: 1, nickname: ${JSON.stringify("익명_" + (6200 + i))}, holdingLabel: "관심종목", content: ${JSON.stringify(c1)}, createdAt: T04SEP + ${(i + 1) * 8}*60_000 + 3*60_000, likes: 4 },`;
-    if (nComments === 2) {
-      block += `\n    { id: 2, nickname: ${JSON.stringify("익명_" + (6300 + i))}, holdingLabel: "관심종목", content: ${JSON.stringify(uniqueWallComment(i, 1))}, createdAt: T04SEP + ${(i + 1) * 8}*60_000 + 6*60_000, likes: 5 },`;
-    }
-    block += `\n  ],`;
-    comments.push(block);
-  });
-  const postBlock = `  // ── 2026-09-04 신규 ────────────────\n${posts.join("\n")}\n`;
-  const pMark = "  // ── 2026-09-03 신규";
-  const pIdx = c.indexOf(pMark);
-  if (pIdx === -1) throw new Error("wall 2026-09-03 posts marker missing");
-  c = c.slice(0, pIdx) + postBlock + c.slice(pIdx);
-  const cMark = "  // ── 2026-09-03 신규 댓글";
-  const cIdx = c.indexOf(cMark);
-  if (cIdx === -1) throw new Error("wall 2026-09-03 comments marker missing");
-  const commBlock = `  // ── 2026-09-04 신규 댓글 ────────────────\n${comments.join("\n")}\n`;
-  c = c.slice(0, cIdx) + commBlock + c.slice(cIdx);
-  write("lib/wallPosts.ts", c);
-  console.log("wallPosts: T04SEP, posts 1210-1233");
+  // 템플릿·교차시장 댓글 금지 — rewrite-wall-us-20260904-diverse.js / 수동 작성
+  console.log("patchWallUs: skipped (use rewrite-wall-us-20260904-diverse.js)");
 }
 
 function uniqueWallComment(i, k) {
-  const a = [
-    "요금 4.20달러가 고정인지부터 봐야죠",
-    "45대 무인이면 아직 시작 단계 같아요",
-    "한국 1만 400대는 행사랑 따로 적을게요",
-    "129억 공시는 숫자가 확실해서 좋네요",
-    "150달러 호가는 거래량 보고 판단할게요",
-    "1.4기가와트가 더 와닿아요",
-    "메탄 100억은 미확인이라 패스",
-    "고용  tonight 레버리지 줄일게요",
-    "종부세 12억 유지는 고지서 다시 계산해야겠어요",
-    "금이랑 비트가 같이 오르면 달러부터 볼게요",
-    "케이비 5%는 고용 전에 추격 안 할래요",
-    "엘지엔솔 공시 없이 5%면 관망이요",
-  ];
-  // avoid English "tonight"
-  a[7] = "오늘 밤 고용 전에 레버리지 줄일게요";
-  return a[(i + k * 5) % a.length];
+  throw new Error("uniqueWallComment disabled — never mix KR/Safe/KR-RE phrases into US wall");
 }
 
 function patchWallMarkets() {
