@@ -381,81 +381,9 @@ function patchWallMarkets() {
 }
 
 function patchAnalystMarkets() {
-  let c = read("lib/analystPosts-markets.ts");
-  if (c.includes("id: -2051")) {
-    console.log("analyst-markets: -2051 already present");
-    return;
-  }
-  const kr = [
-    [-2051, "여의도 너구리 #11", "코스피", "9월 3일 코스피 6,579.48(+0.26%)로 장중 243포인트 출렁인 뒤 강보합 마감했습니다. 기타법인 1조 5,936억 원 순매수(12일 연속)가 개인·외국인·기관 순매도를 가렸습니다. 오늘 밤 고용 전 수급 세 줄을 분리해 적으시기 바랍니다."],
-    [-2052, "판교 치타 #22", "삼성전자", "삼성전자 25만 원(-0.20%)으로 지수와 디커플이었습니다. 자사주가 기타법인으로 잡히니 외국인 매도와 혼동하지 마시기 바랍니다."],
-    [-2053, "삼성동 여우 #08", "SK하이닉스", "하이닉스 159만 6천 원(-1.05%). 소각 매입이 있어도 성장주 베타가 오후 급락에 더 반응했습니다."],
-    [-2054, "성수 수달 #35", "LG에너지솔루션", "엘지에너지솔루션 36만 5,500원(+5.18%). 뚜렷한 호재 공시는 없었습니다. 공시 없는 5%는 추격보다 수주 확인이 먼저입니다."],
-    [-2055, "한남 두루미 #17", "현대차", "현대차 38만 3,500원(+1.46%). 환율 1,359원과 유가 91달러가 반대 방향입니다. 사이버캡 행사와 국내 판매를 한 줄로 묶지 마시기 바랍니다."],
-    [-2056, "잠실 백로 #29", "KB금융", "케이비금융 17만 7,900원(+5.20%). 금리 수혜 프레임이지만 고용 발표가 인상 기대를 뒤집으면 하루 만에 되돌릴 수 있습니다."],
-  ];
-  const safe = [
-    [-2057, "온체인 매 #03", "매크로", "안전자산 한장입니다. 비트코인 81,254달러(+5.11%), 금 약 4,470달러, 은 약 66.8달러, 유가 91.01달러, 달러지수 약 99.6입니다. 오늘 밤 고용이 공통 변수입니다."],
-    [-2058, "금벌레 #17", "비트코인", "비트코인 81,254달러로 8만 달러를 회복했습니다. 일부 기사의 7만 7천 달러와 거래소 종가를 맞추시기 바랍니다."],
-    [-2059, "금벌레 #17", "금", "금이 약 4,470달러로 전날 저점 약 4,282달러를 되돌렸습니다. 4,500달러 안착은 고용 이후 확인하시기 바랍니다."],
-    [-2060, "실물러 #12", "은", "은 약 66.8달러로 금보다 변동이 컸습니다. 산업 수요와 금 연동을 분리해 비중을 금보다 작게 두시기 바랍니다."],
-    [-2061, "이더러 #44", "이더리움", "이더리움 약 2,400달러(고 2,429·저 2,356)입니다. 비트코인 베타가 커 고용 전 알트 레버리지는 보수적으로 두시기 바랍니다."],
-    [-2062, "유가러 #44", "WTI", "서부텍사스유 91.01달러, 서비스 구매관리자지수 55.4, 민간고용 +3만 8천 명입니다. 90달러 유가가 버티면 금리 기대가 쉽게 내려가지 않습니다."],
-  ];
-  const re = [
-    [-2063, "실수요 #05", "정책", "비거주 1주택 종부세 공제 12억 원 유지, 실거주 14억 원, 상한 150%입니다. 9억 하향안이 철회된 완화이지 세금이 사라진 것이 아닙니다."],
-    [-2064, "정책워처 #01", "종부세", "부부 공동명의 비거주 6억 원씩입니다. 공시가·실거주 요건으로 고지서를 다시 계산하시기 바랍니다. 국회 심사가 남았습니다."],
-    [-2065, "전세러 #09", "전세", "개인종합자산관리계좌 혜택이 원안 복구 방향입니다. 한도는 시행령 확인 전입니다. 부동산만 산다는 단정은 이릅니다."],
-    [-2066, "실수요 #05", "매매", "양도 장특 보유기간 공제는 2029년 폐지, 거주는 연 8%입니다. 투자 목적 매각 일정을 지금부터 표로 두시기 바랍니다."],
-  ];
-
-  function postsInsert(arr, afterNeedle, hour) {
-    const block = arr
-      .map((p, i) => {
-        const mm = String(i * 8).padStart(2, "0");
-        return `  { id: ${p[0]}, alias: ${JSON.stringify(p[1])}, symbol: ${JSON.stringify(p[2])}, content: ${JSON.stringify(p[3])}, likes: ${28 - i}, comments: 2, created_at: "2026-09-04T${hour}:${mm}:00.000Z", liked: false, },`;
-      })
-      .join("\n") + "\n";
-    const idx = c.indexOf(afterNeedle);
-    if (idx === -1) throw new Error("needle not found " + afterNeedle);
-    c = c.slice(0, idx) + block + c.slice(idx);
-  }
-
-  postsInsert(kr, '  { id: -2035,', "06");
-  postsInsert(safe, '  { id: -2041,', "09");
-  postsInsert(re, '  { id: -2047,', "10");
-
-  function commentsFor(arr, hour) {
-    return arr
-      .map((p, i) => {
-        const texts = [
-          "숫자부터 표에 남기겠습니다.",
-          "고용 전후로 한 줄 더 적겠습니다.",
-        ];
-        return `  [${p[0]}]: [
-    { alias: ${JSON.stringify(p[1])}, content: ${JSON.stringify(p[2] + " 확인했습니다. 숫자부터 표에 남기겠습니다.")}, created_at: "2026-09-04T${hour}:${String(i * 8).padStart(2, "0")}:10.000Z" },
-    { alias: ${JSON.stringify(ALIASES[(i + 4) % ALIASES.length])}, content: ${JSON.stringify("다음 확인 지표는 " + p[2] + " 쪽에서 따로 보겠습니다.")}, created_at: "2026-09-04T${hour}:${String(i * 8).padStart(2, "0")}:20.000Z" },
-  ],`;
-      })
-      .join("\n");
-  }
-
-  // comments - insert after opening of each comments export
-  c = c.replace(
-    "export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {\n",
-    "export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {\n" + commentsFor(kr, "06") + "\n",
-  );
-  c = c.replace(
-    "export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {\n",
-    "export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {\n" + commentsFor(safe, "09") + "\n",
-  );
-  c = c.replace(
-    "export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {\n",
-    "export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {\n" + commentsFor(re, "10") + "\n",
-  );
-
-  write("lib/analystPosts-markets.ts", c);
-  console.log("analyst-markets: inserted -2051~-2066");
+  // 금지: 「종목 가격(+%)」동일 오프닝 + 「확인했습니다. 숫자부터」댓글 풀
+  // → scripts/rewrite-markets-social-20260904-diverse.js / 수동 작성
+  console.log("patchAnalystMarkets: skipped (template disabled)");
 }
 
 function main() {
