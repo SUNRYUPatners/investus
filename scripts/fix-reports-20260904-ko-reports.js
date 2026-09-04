@@ -1,5 +1,16 @@
 module.exports = [
   {
+    "id": "seed-1500",
+    "slug": "cybercab-launch-wrap",
+    "category": "특집",
+    "color": "mint",
+    "subject": "특집",
+    "title": "사이버캡 출시 특집입니다. 오스틴 행사가 끝난 뒤 앱 배차·플릿 양식·아시아 전시가 남았습니다",
+    "summary": "테슬라는 2026년 9월 3일 텍사스 오스틴에서 초청 행사로 전용 로보택시 사이버캡을 상용 서비스에 올렸습니다. 생중계는 없었고, 로보택시 앱·웹이 「오스틴 제한 구역에서 탑승 가능」으로 바뀐 것이 공식에 가깝습니다.\n\n핸들·페달 없는 2인승이며, 텍사스 등록 기준 전용차는 약 45대(전체 로보택시 등록 약 420대 중)입니다. 앱에서는 요금 약 4.20달러·사이버캡 2인승과 모델와이 4인승이 함께 보였고, 같은 날 상업용 플릿 관심 양식이 열렸습니다. 아시아(홍콩·도쿄·베이징·상하이)는 이달 전시 안내이며 서비스 개시는 아닙니다.",
+    "titleEn": "Cybercab launch special: after Austin, app rides, fleet form, and Asia displays remain",
+    "summaryEn": "Sept 3 Austin invite-only launch put purpose-built Cybercab into limited Robotaxi service. No livestream; app/web say rides available. ~45 of ~420 TX units; ~$4.20 fare; fleet interest form; Asia display tour (not service). TSLA +5.42%."
+  },
+  {
     "id": "seed-1477",
     "slug": "cybercab-event-austin",
     "category": "BREAKING",

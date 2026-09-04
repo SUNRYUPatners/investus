@@ -116,6 +116,9 @@ const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
   // ── 2026-09-04 신규 ────────────────
+  { id: 1218, symbol: "TSLA", nickname: "출시특집러", holdingLabel: "테슬라 관심",
+    content: "행사 생중계는 없었는데 앱으로 오스틴에서 사이버캡 탄다는 안내가 남았음. 45대밖에 없으면 운 좋아야 배정되는 거 아님? 아시아 전시는 구경이고 서비스는 아닌 듯",
+    createdAt: T04SEP + 4*60_000, likes: 18, comments: 2 },
   { id: 1210, symbol: "TSLA", nickname: "로보택시덕후", holdingLabel: "테슬라 일부",
     content: "어제 오스틴 행사 끝나고 376달러까지 뛰었는데, 나는 주가보다 앱에 뜬 4.20달러 요금이 더 궁금해요. 프로모션인지 기준 요금인지만 알면 논쟁이 달라지거든요",
     createdAt: T04SEP + 8*60_000, likes: 14, comments: 2 },
@@ -4323,6 +4326,10 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  1218: [
+    { id: 121801, nickname: "로보택시덕후", holdingLabel: "테슬라 일부", content: "차종 지정 불가면 모델와이 나올 확률이 훨씬 큼. 전용차 탔다는 인증이 더 희귀해질 듯", createdAt: T04SEP + 5*60_000, likes: 6 },
+    { id: 121802, nickname: "텍사스플릿", holdingLabel: "테슬라 보유", content: "플릿 관심 양식 열린 건 눈여겨볼 만함. 가격·납기 없으면 그냥 대기자 명단이긴 함", createdAt: T04SEP + 6*60_000, likes: 5 },
+  ],
   // ── 2026-09-04 신규 댓글 ────────────────
   1210: [
     { id: 1, nickname: "요금표러", holdingLabel: "관심종목", content: "4.20이 고정이면 단가 논쟁 게임이 바뀌죠. 앱 캡처 더 있으면 공유해주세요", createdAt: T04SEP + 8*60_000 + 3*60_000, likes: 5 },
