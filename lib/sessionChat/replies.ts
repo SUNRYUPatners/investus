@@ -38,6 +38,7 @@ type UserIntent =
   | "bullish"
   | "bearish"
   | "question"
+  | "whyMove"
   | "buyask"
   | "pushback"
   | "index"
@@ -62,12 +63,98 @@ function classifyIntent(content: string): UserIntent {
   const t = content.trim();
   if (/^(ㅎㅇ|하이|안녕하세요?|헬로|hi|hello)[\sㅋㅎㅇ!~]*$/i.test(t)) return "greeting";
   if (/사도\s*돼|지금\s*사|매수할까|들어갈까|익절|손절할까|비중/i.test(t)) return "buyask";
-  if (/왜|뭐임|뭔소리|틀린|아닌|맞아\?|진짜\?|설마|아닌데/i.test(t)) return "pushback";
-  if (/\?|궁금|알려|어때|어떻게|언제/i.test(t)) return "question";
+  // 「왜 오르/내리」는 원인 질문 — pushback보다 먼저
+  if (/왜\s*(오르|올라|급등|떡상|강세|내리|빠져|급락|약세|빨개)/i.test(t) || /왜오르|왜내리|왜빠져|왜올라/i.test(t)) {
+    return "whyMove";
+  }
+  if (/뭐임|뭔소리|틀린|아닌데|설마|진짜\?/i.test(t)) return "pushback";
+  if (/\?|궁금|알려|어때|어떻게|언제|왜/i.test(t)) return "question";
   if (/코스피|나스닥|s&p|지수|다우|nasdaq|kospi|코스닥/i.test(t)) return "index";
   if (/올라|상승|떡상|초록|강세|달린|불장|급등|반등|회복|좋네|개이득|가즈아/i.test(t)) return "bullish";
   if (/내려|하락|빠졌|약세|공포|손절|폭락|붕괴|피곤|물렸|죽겠|빨개/i.test(t)) return "bearish";
   return "general";
+}
+
+/** 종목별 추측성 한 줄 (단정 금지 — ~일 수도 / 뉴스 쪽?) */
+function speculativeHints(quote: ChatQuote | null, market: MarketId, up: boolean): string[] {
+  const sym = (quote?.symbol ?? "").replace(/\.KS$/i, "");
+  const kr: Record<string, { up: string[]; down: string[] }> = {
+    "000660": {
+      up: [
+        "HBM·AI 메모리 기대 뉴스 쪽 아닐까요?",
+        "자사주·ADR 강세 이야기 이어진 건가…",
+        "반도체 수급 붙는다는 얘기 있던데 그거?",
+      ],
+      down: [
+        "차익실현·고베타 조정일 수도",
+        "금리·달러 쪽 뉴스 반영된 건가",
+        "외국인 매도 소식 있던데 그거 아닐지",
+      ],
+    },
+    "005930": {
+      up: [
+        "자사주 수급 방패 이야기가 또 나온 건가",
+        "HBM·반도체 로테이션으로 붙는 느낌?",
+        "외국인·기관 같이 산다는 속보 있었나",
+      ],
+      down: [
+        "프로그램 매도·차익실현 쪽일 수도",
+        "지수보다 먼저 쉬는 날도 있더라",
+        "환율·금리 뉴스에 베타로 빠진 건가",
+      ],
+    },
+    "373220": {
+      up: ["에너지저장·수주 뉴스 있었나?", "2차전지 섹터 로테이션일 수도"],
+      down: ["전기차 수요 둔화 이야기 반영된 듯?", "반도체만 강한 날 배터리는 쉬더라"],
+    },
+    "005380": {
+      up: ["수출·모빌리티 이슈 붙은 건가", "환율 우호 쪽으로 읽는 사람 있던데"],
+      down: ["유가·금리 부담으로 빠진 건가", "완성차는 반도체랑 따로 노는 날 많음"],
+    },
+    "105560": {
+      up: ["금리 기대가 금융주에 우호로 바뀐 건가"],
+      down: ["할인율·금리 재가격으로 은행주 먼저 빠지더라"],
+    },
+  };
+  const us: Record<string, { up: string[]; down: string[] }> = {
+    TSLA: {
+      up: ["로보택시·FSD 뉴스 흐름 아닐까요?", "사이버캡 이슈 여운인가…"],
+      down: ["규제·조사 헤드라인 반영된 건가", "고배율이라 차익실현 빠른 듯"],
+    },
+    NVDA: {
+      up: ["AI 캡엑스·실적 기대가 붙는 날?", "반도체 섹터 전체 탄력이려나"],
+      down: ["차익실현·금리 민감으로 먼저 쉬는 듯", "가이던스 소화 구간일 수도"],
+    },
+    SPCX: {
+      up: ["발사·스타링크 뉴스 있었나?", "상장 테마로 붙는 날도 있더라"],
+      down: ["비상장 호가 노이즈일 수도", "테슬라랑 같이 흔들리는 구간?"],
+    },
+  };
+  const pack = market === "kr" ? kr[sym] : us[sym];
+  if (pack) return up ? pack.up : pack.down;
+  return up
+    ? [
+        "수급·뉴스 둘 중 하나일 듯한데 확실하진 않음",
+        "섹터 전체가 붙는 흐름일 수도",
+        "장중엔 재료 없이 튀는 날도 있음",
+      ]
+    : [
+        "차익실현·수급 이탈 쪽일 수도",
+        "지수 약세에 베타로 빠진 건가",
+        "뉴스 없이 밀릴 때도 있더라",
+      ];
+}
+
+function uncertainReplies(userNick: string, s: string, seed: string): string[] {
+  // maybeNick is defined below — call via local prefix only when building buildReply
+  return [
+    `솔직히 나도 잘 모르겠음. 아시는분?`,
+    `${s ? `${s} ` : ""}왜 그런지 단정 못 하겠음 ㅋㅋ 누가 알려주셈`,
+    "뉴스 못 봤는데… 수급만인가? 아시는분 계세요?",
+    `몰라서 물어본 건데 같이 찾아보죠`,
+    "저도 궁금함. 속보 보신 분?",
+    `${s ? `${s} ` : ""}장중이라 추측만 나옴. 확정 재료 보신 분?`,
+  ];
 }
 
 function findMentionedQuote(
@@ -159,6 +246,47 @@ function buildReply(ctx: ReplyCtx): string {
   const { s, pct, up, strong } = quoteBits(quote, market);
   const extraBits = quoteBits(extra, market);
 
+  // 「왜 오르/내리」— 슬롯마다 톤을 다르게 (가격 복창만 하지 않음)
+  if (intent === "whyMove") {
+    const hints = speculativeHints(quote, market, up);
+    const hint = pick(hints, `${seed}-hint`);
+    if (slot === 0) {
+      const mode = hashSeed(`${seed}-wm0`) % 10;
+      if (mode < 4) {
+        return maybeNick(userNick, seed, 0.5) + pick(uncertainReplies(userNick, s, seed), `${seed}-unc`);
+      }
+      if (quote) {
+        return pick([
+          `${nick}${hint}`,
+          `${s} ${pct}인데… ${hint}`,
+          `${nick}${up ? "오르는" : "빠지는"} 이유 단정은 어렵고, ${hint}`,
+          `${hint}${s ? ` (${s} ${pct})` : ""}`,
+        ], seed);
+      }
+      return pick([`${nick}${hint}`, ...uncertainReplies(userNick, "", seed).slice(0, 2)], seed);
+    }
+    if (slot === 1) {
+      const mode = hashSeed(`${seed}-wm1`) % 10;
+      if (mode < 4) {
+        return pick(uncertainReplies(userNick, s, `${seed}-u2`), `${seed}-u2`);
+      }
+      return pick([
+        `${nick}그거 나도 궁금했음. ${hint}`,
+        quote ? `방금 ${s} ${pct}인데 ${hint}` : hint,
+        `${nick}속보 본 사람? 나는 ${hint}`,
+        market === "kr"
+          ? "외인·기관 수급이랑 뉴스 같이 보면 힌트 나올 때 있음"
+          : "섹터 ETF·헤드라인 같이 보면 방향 잡기 쉬움",
+      ], seed);
+    }
+    return pick([
+      "ㅇㅇ 장중엔 추측만 난무함 ㅋㅋ",
+      `${nick}오후에 재료 확인되면 얘기하죠`,
+      quote ? `${s}는 계속 보되 추격은 조심` : "일단 관망하면서 속보만 체크",
+      "맞아 확정 전엔 비중 안 키우는 게",
+    ], seed);
+  }
+
   if (slot === 0) {
     if (intent === "greeting") {
       return pick([
@@ -186,10 +314,14 @@ function buildReply(ctx: ReplyCtx): string {
 
     if (intent === "question" || intent === "pushback") {
       if (quote) {
+        const hints = speculativeHints(quote, market, up);
+        const hint = pick(hints, `${seed}-qh`);
         return pick([
-          `${nick}${s} 지금 ${pct}인데, ${strong ? "뉴스·수급 같이 봐야" : "지수 따라가는 느낌"} 함`,
-          `${s} ${pct} 보고 있으면 그 질문 나와요. 오후에 한번 더 보시죠`,
-          `${s} ${pct}. 장중에 단정하긴 이름`,
+          `${nick}${hint}`,
+          `${nick}${s} 지금 ${pct}인데, ${strong ? hint : "지수 따라가는 느낌도 있음"}`,
+          `${s} ${pct} 보고 있으면 그 질문 나와요. ${hint}`,
+          pick(uncertainReplies(userNick, s, seed), `${seed}-qu`),
+          `${s} ${pct}. 장중이라 단정은 이르죠 — ${hint}`,
         ], seed);
       }
       return pick([
@@ -197,6 +329,7 @@ function buildReply(ctx: ReplyCtx): string {
         "뉴스 없이 움직이면 수급 쪽 먼저 의심하는 편",
         market === "kr" ? "외인·기관 방향 같이 보면 답 나올 때 많음" : "섹터 ETF 같이 보면 방향 잡기 쉬움",
         `${nick}말씀도 일리 있음. 오늘은 개별주가 더 튀는 날`,
+        pick(uncertainReplies(userNick, "", seed), `${seed}-qg`),
       ], seed);
     }
 
@@ -267,15 +400,24 @@ function buildReply(ctx: ReplyCtx): string {
   }
 
   if (slot === 1) {
+    if (intent === "question" || intent === "pushback") {
+      const hints = speculativeHints(quote, market, up);
+      const hint = pick(hints, `${seed}-s1q`);
+      return pick([
+        pick(uncertainReplies(userNick, s, `${seed}-s1u`), `${seed}-s1u`),
+        hint,
+        quote ? `${s} ${pct}만 보고 단정은 금물. ${hint}` : "오후에 재료 나오면 다시 얘기하죠",
+        `${nick}나도 같은 고민 중 ㅋㅋ`,
+      ], seed);
+    }
+
     if (quote) {
       return pick([
         `지금 ${s} ${pct}. ${up ? "수급 붙는" : "되돌림 나오는"} 느낌`,
         `${s} ${pct}면 ${up ? "추세" : "지지"} 테스트 중인 듯`,
         `나는 ${s} ${pct} 쪽 보고 있음. ${up ? "쉬어갈 타이밍인지" : "더 밀릴지"} 고민`,
         `${s} ${pct} ${up ? "↑" : "↓"} 다른 종목이랑 같이 움직이는지 봐야 함`,
-        intent === "question"
-          ? `${nick}질문 그거 — ${s} ${pct} 보면서 같이 정리 중`
-          : `방금 ${s} ${pct} 찍혔는데 ${strong ? "뉴스 있나" : "지수 따라간 듯"}`,
+        `방금 ${s} ${pct} 찍혔는데 ${strong ? "뉴스 있나" : "지수 따라간 듯"}`,
       ], seed);
     }
 
