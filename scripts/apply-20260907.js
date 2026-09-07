@@ -429,123 +429,12 @@ function insertMarketsSocial() {
 }
 
 function insertAnalystMarkets() {
-  let c = read("lib/analystPosts-markets.ts");
-  if (c.includes("id: -2100")) {
-    console.log("analyst markets -2100 already — skip");
-    return;
-  }
-  const mkAlias = [
-    "여의도 너구리 #11", "판교 치타 #22", "삼성동 여우 #08", "성수 수달 #35",
-    "한남 두루미 #17", "잠실 백로 #29", "광화문 물총새 #06",
-  ];
-  const krPosts = KR.map((r, i) => ({
-    id: -2100 - i,
-    alias: mkAlias[i % mkAlias.length],
-    symbol: r.subject,
-    content:
-      i === 0
-        ? `월요일 브리핑입니다. ${r.summary.replace(/\n/g, " ").slice(0, 140)}`
-        : i % 2 === 0
-          ? `${r.subject}만 보면 놓칩니다. ${r.summary.replace(/\n/g, " ").slice(0, 130)}`
-          : `왜 ${r.subject}인가요? ${r.summary.replace(/\n/g, " ").slice(0, 130)}`,
-    comments: 2,
-    likes: 28 - i,
-    created_at: `2026-09-07T06:${String(i * 8).padStart(2, "0")}:00.000Z`,
-  }));
-  const safePosts = SAFE.map((r, i) => ({
-    id: -2120 - i,
-    alias: ["온체인 매 #03", "금벌레 학 #14", "달러 올빼미 #09", "스테이킹 수달 #21", "채권 치타 #18", "유가 갈매기 #05"][i],
-    symbol: r.subject,
-    content:
-      i === 0
-        ? `안전자산 한장입니다. ${r.summary.replace(/\n/g, " ").slice(0, 140)}`
-        : `${r.subject} 축: ${r.summary.replace(/\n/g, " ").slice(0, 130)}`,
-    comments: 2,
-    likes: 26 - i,
-    created_at: `2026-09-07T09:${String(i * 8).padStart(2, "0")}:00.000Z`,
-  }));
-  const rePosts = KRRE.map((r, i) => ({
-    id: -2140 - i,
-    alias: ["전세 참새 #02", "강남 학 #16", "매물 여우 #27", "정책 백로 #33", "실수요 너구리 #19"][i],
-    symbol: r.subject,
-    content:
-      i === 0
-        ? `부동산 한장입니다. ${r.summary.replace(/\n/g, " ").slice(0, 140)}`
-        : `${r.subject}: ${r.summary.replace(/\n/g, " ").slice(0, 130)}`,
-    comments: 2,
-    likes: 24 - i,
-    created_at: `2026-09-07T10:${String(i * 8).padStart(2, "0")}:00.000Z`,
-  }));
-
-  function postsBlock(arr, label) {
-    return (
-      `  // ── 2026-09-07 ${label} ──────────────────────\n` +
-      arr
-        .map(
-          (p) =>
-            `  { id: ${p.id}, alias: ${JSON.stringify(p.alias)}, symbol: ${JSON.stringify(p.symbol)}, content: ${JSON.stringify(p.content)}, likes: ${p.likes}, comments: ${p.comments}, created_at: ${JSON.stringify(p.created_at)}, liked: false, },`,
-        )
-        .join("\n") +
-      "\n"
-    );
-  }
-  function commentsBlock(arr, label) {
-    return (
-      `  // ── 2026-09-07 ${label} 댓글 ──────────────────────\n` +
-      arr
-        .map((p, i) => {
-          const c1 = [
-            "숫자와 해석을 칸으로 나누겠습니다.",
-            "주간 일정표에 먼저 붙이겠습니다.",
-            "추격보다 확인 라인이 우선입니다.",
-            "축이 다른 뉴스는 합치지 않겠습니다.",
-          ][i % 4];
-          const c2 = [
-            "동의합니다. 레버리지는 지표 뒤로요.",
-            "표로 남기면 노이즈가 줄어요.",
-            "다음 공시·통계를 기다리겠습니다.",
-            "관망이 맞는 구간으로 봅니다.",
-          ][i % 4];
-          return `  [${p.id}]: [
-    { alias: ${JSON.stringify(ALIASES[(i + 2) % ALIASES.length])}, content: ${JSON.stringify(c1)}, created_at: ${JSON.stringify(p.created_at.replace(/:00\.000Z$/, ":10:00.000Z"))} },
-    { alias: ${JSON.stringify(ALIASES[(i + 5) % ALIASES.length])}, content: ${JSON.stringify(c2)}, created_at: ${JSON.stringify(p.created_at.replace(/:00\.000Z$/, ":17:00.000Z"))} },
-  ],`;
-        })
-        .join("\n") +
-      "\n"
-    );
-  }
-
-  c = c.replace(
-    "export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [\n",
-    `export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [\n${postsBlock(krPosts, "KR")}`,
+  // 2026-09-07 사고: summary 앞에 「만 보면 놓칩니다」「왜 ~인가요?」「~ 축:」을 붙이고
+  // 댓글은 동일 문장+번호만 바꿔 validate를 우회 → 피드가 복붙처럼 보임.
+  // 애널 소셜은 rewrite-analyst-markets-*-diverse.js 또는 수동 고유 문장만 허용.
+  throw new Error(
+    "insertAnalystMarkets disabled — do not auto-template KR/Safe/KR-RE analyst posts/comments. Use scripts/rewrite-analyst-markets-20260907-diverse.js (or hand-write unique openings).",
   );
-  // SAFE / KR_RE exports
-  if (c.includes("export const MOCK_ANALYST_POSTS_SAFE")) {
-    c = c.replace(
-      "export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [\n",
-      `export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [\n${postsBlock(safePosts, "SAFE")}`,
-    );
-  }
-  if (c.includes("export const MOCK_ANALYST_POSTS_KR_RE")) {
-    c = c.replace(
-      "export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [\n",
-      `export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [\n${postsBlock(rePosts, "KR-RE")}`,
-    );
-  }
-
-  // comments maps
-  for (const [name, arr, label] of [
-    ["MOCK_ANALYST_COMMENTS_KR", krPosts, "KR"],
-    ["MOCK_ANALYST_COMMENTS_SAFE", safePosts, "SAFE"],
-    ["MOCK_ANALYST_COMMENTS_KR_RE", rePosts, "KR-RE"],
-  ]) {
-    const needle = `export const ${name}: Record<number, AnalystMockComment[]> = {\n`;
-    if (!c.includes(needle)) throw new Error(name + " missing");
-    c = c.replace(needle, needle + commentsBlock(arr, label));
-  }
-  write("lib/analystPosts-markets.ts", c);
-  console.log("analystPosts-markets: KR/SAFE/KR-RE 9/7");
 }
 
 function main() {
@@ -554,8 +443,8 @@ function main() {
   insertAnalystUs();
   insertWallUs();
   insertMarketsSocial();
-  insertAnalystMarkets();
-  console.log("apply-20260907 done");
+  // insertAnalystMarkets disabled — use rewrite-analyst-markets-*-diverse.js
+  console.log("apply-20260907 done (analyst markets skipped — diverse rewrite only)");
 }
 
 main();

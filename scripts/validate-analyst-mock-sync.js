@@ -107,6 +107,69 @@ function validateCommentQuality(commentsSection, postsSection, label) {
     }
   }
 
+  // 번호만 다른 템플릿 댓글 (한국 3번째… / 안전자산 5: … / 부동산 2 후속…)
+  const stemCount = new Map();
+  for (const e of entries) {
+    const stem = e.content
+      .replace(/한국\s*\d+\s*(번째\s*)?/g, "한국N")
+      .replace(/안전자산\s*\d+/g, "안전자산N")
+      .replace(/부동산\s*\d+/g, "부동산N")
+      .replace(/\d+/g, "#")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (stem.length < 12) continue;
+    if (!stemCount.has(stem)) stemCount.set(stem, []);
+    stemCount.get(stem).push(e.postId);
+  }
+  for (const [stem, ids] of stemCount) {
+    const unique = [...new Set(ids)];
+    if (unique.length >= 3) {
+      errors.push(
+        `${label}: 번호만 다른 댓글 템플릿 ${unique.length}곳 — "${stem.slice(0, 40)}…"`,
+      );
+    }
+  }
+
+  return errors;
+}
+
+/** 당일 애널 글 오프닝 템플릿 (9/7 사고) */
+function validatePostOpenings(postsSection, label) {
+  const errors = [];
+  const posts = [];
+  const re =
+    /\{\s*id:\s*(-\d+),[\s\S]*?content:\s*"((?:\\.|[^"\\])*)"[\s\S]*?created_at:\s*"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(postsSection)) !== null) {
+    if (!m[3].startsWith("2026-09-07")) continue;
+    posts.push({ id: Number(m[1]), content: m[2].replace(/\\"/g, '"') });
+  }
+  if (posts.length < 3) return errors;
+
+  const BAD = [
+    [/만 보면 놓칩니다/, "「만 보면 놓칩니다」"],
+    [/왜\s+.+\s*인가요\?/, "「왜 ~인가요?」"],
+    [/^[가-힣A-Za-z0-9]+\s*축:/, "「종목 축:」"],
+    [/한장입니다\.\s/, "「~한장입니다.」+요약 복붙"],
+  ];
+  for (const [pat, name] of BAD) {
+    const hit = posts.filter((p) => pat.test(p.content));
+    if (hit.length >= 2) {
+      errors.push(
+        `${label}: ${name} 오프닝 ${hit.length}/${posts.length} — 글마다 구조 다양화 필요`,
+      );
+    }
+  }
+
+  // summary 복붙: 같은 날짜·가격 구문이 3글 이상에 반복
+  const priceSnippet = posts.filter((p) =>
+    /9월\s*4일[\s\S]{0,40}\d[\d,]*\s*원/.test(p.content),
+  );
+  if (priceSnippet.length >= Math.ceil(posts.length * 0.6)) {
+    errors.push(
+      `${label}: ${priceSnippet.length}개 글이 「9월 4일 …원」 요약 복붙형 — 각도별 문장 필요`,
+    );
+  }
   return errors;
 }
 
@@ -221,6 +284,12 @@ for (const [postsName, commentsName, label] of [
   allErrors.push(
     ...validateCommentQuality(
       commentsSection,
+      postsSection,
+      `lib/analystPosts-markets.ts (${label})`,
+    ),
+  );
+  allErrors.push(
+    ...validatePostOpenings(
       postsSection,
       `lib/analystPosts-markets.ts (${label})`,
     ),

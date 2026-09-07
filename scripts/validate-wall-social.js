@@ -269,71 +269,92 @@ function validateUsWallCrossMarket() {
   return errors;
 }
 
-/** 당일(T04 / 2026-09-04) 배치만 — 템플릿·교차시장·동일 오프닝 */
+/** 최신 배치(9/7) — 템플릿 오프닝·댓글·교차시장 */
 function validateMarketsDayBatch() {
   const errors = [];
   const wall = load("lib/wallPosts-markets.ts");
   const analyst = load("lib/analystPosts-markets.ts");
 
-  const TEMPLATE_RES = [
-    /확인했습니다\.\s*숫자부터 표에 남기겠습니다/,
-    /다음 확인 지표는 .+ 쪽에서 따로 보겠습니다/,
-    /숫자만 남기면/,
-    /레버리지는 내일 볼게요/,
-    /나는 허가랑 공시부터/,
-  ];
-  for (const re of TEMPLATE_RES) {
-    if (re.test(wall) || re.test(analyst)) {
-      errors.push(`markets: 템플릿 문구 잔존 (${re})`);
-    }
-  }
-
-  // Analyst KR/Safe/KR-RE 9/4 blocks: no shared comment pool pattern
   const dayAnalyst = [];
   const aRe =
-    /\{\s*id:\s*(-205[1-6]|-205[7-9]|-206[0-6]),[\s\S]*?content:\s*"((?:\\.|[^"\\])*)"/g;
+    /\{\s*id:\s*(-21(?:0[0-6]|2[0-5]|4[0-4])),[\s\S]*?content:\s*"((?:\\.|[^"\\])*)"/g;
   let am;
   while ((am = aRe.exec(analyst)) !== null) {
     dayAnalyst.push({ id: Number(am[1]), content: am[2].replace(/\\"/g, '"') });
   }
 
-  // Opening sameness: "종목명 숫자원(+x%)" or same prefix
+  const missOpen = dayAnalyst.filter((p) =>
+    /만 보면 놓칩니다|왜\s+.+\s*인가요\?|\s축:/.test(p.content),
+  );
+  if (missOpen.length >= 2) {
+    errors.push(
+      `analyst markets 9/7: ${missOpen.length}개가 템플릿 오프닝(만 보면/왜~인가요/축:) — 다양화 필요`,
+    );
+  }
+
   const priceOpen = dayAnalyst.filter((p) =>
     /^[가-힣A-Za-z]+[\s\S]{0,12}\d[\d,]*\s*원\s*\([+-]/.test(p.content),
   );
   if (priceOpen.length >= 3) {
     errors.push(
-      `analyst markets 9/4: ${priceOpen.length}개가 「종목+가격(+%)」로 시작 — 오프닝 다양화 필요`,
+      `analyst markets 9/7: ${priceOpen.length}개가 「종목+가격(+%)」로 시작 — 오프닝 다양화 필요`,
     );
   }
 
-  // Same ending boilerplate
-  const endCounts = new Map();
-  for (const p of dayAnalyst) {
-    const tail = p.content.slice(-24);
-    endCounts.set(tail, (endCounts.get(tail) || 0) + 1);
+  const commentBlob = [];
+  for (const id of [
+    -2100, -2101, -2102, -2103, -2104, -2105, -2106,
+    -2120, -2121, -2122, -2123, -2124, -2125,
+    -2140, -2141, -2142, -2143, -2144,
+  ]) {
+    const start = analyst.indexOf(`[${id}]:`);
+    if (start === -1) continue;
+    const end = analyst.indexOf("],", start);
+    const block = analyst.slice(start, end + 2);
+    const cmRe = /content:\s*"((?:\\.|[^"\\])*)"/g;
+    let m;
+    while ((m = cmRe.exec(block)) !== null) {
+      commentBlob.push(m[1].replace(/\\"/g, '"'));
+    }
   }
-  for (const [tail, n] of endCounts) {
-    if (n >= 3) {
-      errors.push(`analyst markets 9/4: 동일 종결 ${n}회 — "…${tail}"`);
+  const stemBanned = [
+    /지난 종가와 이번 주 일정을 분리/,
+    /자사주·외국인·물가를 칸으로/,
+    /가격·상관·금리 확률을 한 줄에/,
+    /CPI·FOMC 전 레버리지는 보수적/,
+    /전세·매매·정책을 축으로 나눠/,
+    /매물 수와 호가를 같이 보겠습니다/,
+  ];
+  for (const re of stemBanned) {
+    const n = commentBlob.filter((c) => re.test(c)).length;
+    if (n >= 2) {
+      errors.push(`analyst markets 9/7: 템플릿 댓글 ${n}회 (${re})`);
     }
   }
 
-  // Cross-market: Safe day posts must not talk 종부세/코스피수급 as primary; KR-RE not BTC
-  const safeSlice = analyst.includes("id: -2057")
-    ? analyst.slice(analyst.indexOf("id: -2057"), analyst.indexOf("id: -2041") > -1 ? analyst.indexOf("id: -2041") : analyst.length)
+  const safe07 = analyst.includes("id: -2120")
+    ? analyst.slice(
+        analyst.indexOf("id: -2120"),
+        analyst.indexOf("id: -2057") > -1
+          ? analyst.indexOf("id: -2057")
+          : analyst.indexOf("MOCK_ANALYST_COMMENTS_SAFE"),
+      )
     : "";
-  if (/종부세|케이비금융|기타법인 12/.test(safeSlice)) {
-    errors.push("SAFE analyst 9/4: KR/부동산 키워드 혼입");
+  if (/종부세|케이비금융|기타법인 12/.test(safe07)) {
+    errors.push("SAFE analyst 9/7: KR/부동산 키워드 혼입");
   }
-  const reSlice = analyst.includes("id: -2063")
-    ? analyst.slice(analyst.indexOf("id: -2063"), analyst.indexOf("id: -2047") > -1 ? analyst.indexOf("id: -2047") : analyst.length)
+  const re07 = analyst.includes("id: -2140")
+    ? analyst.slice(
+        analyst.indexOf("id: -2140"),
+        analyst.indexOf("id: -2063") > -1
+          ? analyst.indexOf("id: -2063")
+          : analyst.indexOf("MOCK_ANALYST_COMMENTS_KR_RE"),
+      )
     : "";
-  if (/비트코인|허깅페이스|사이버캡 요금/.test(reSlice)) {
-    errors.push("KR-RE analyst 9/4: US/크립토 키워드 혼입");
+  if (/비트코인|허깅페이스|사이버캡 요금/.test(re07)) {
+    errors.push("KR-RE analyst 9/7: US/크립토 키워드 혼입");
   }
 
-  // Wall comment uniqueness within each market's T04 ids
   function checkWallCommentUniq(ids, label) {
     const texts = [];
     for (const id of ids) {
@@ -351,9 +372,9 @@ function validateMarketsDayBatch() {
       if (n >= 2) errors.push(`${label} wall: 동일 댓글 ${n}회 — "${t.slice(0, 36)}…"`);
     }
   }
-  checkWallCommentUniq([9060, 9061, 9062, 9063, 9064, 9065], "KR");
-  checkWallCommentUniq([9152, 9153, 9154, 9155, 9156, 9157], "SAFE");
-  checkWallCommentUniq([9257, 9258, 9259, 9260], "KR-RE");
+  checkWallCommentUniq([9070, 9071, 9072, 9073, 9074, 9075, 9076], "KR");
+  checkWallCommentUniq([9160, 9161, 9162, 9163, 9164, 9165], "SAFE");
+  checkWallCommentUniq([9270, 9271, 9272, 9273, 9274], "KR-RE");
 
   return errors;
 }
