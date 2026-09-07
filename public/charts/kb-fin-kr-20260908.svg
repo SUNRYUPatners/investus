@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a0a"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="100%" style="stop-color:#dc2626"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#ef444430" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#ef4444" text-anchor="middle">KB금융</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.08</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">케이비금융이 +2.27%로 위험온·원화 강세 날 금융주 베타를 맞춰</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">갔습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="360" y="166" width="360" height="46" rx="23" fill="#ef444418" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#ef4444" text-anchor="middle">🏦 +2.27% · 금융 동행</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🏦</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#ef4444" text-anchor="middle">+2.27%</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">반도체보다 작은 상승입니다. 순이자마진과 신용 비용·할인율은 다른 줄입니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">+2.27%</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">등락</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">📉</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">금리</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">경로</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">연준</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">💱</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">환율</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">민감</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">동행</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">하루 +2.27%는 분기 이익 확인이 아닙니다. 마진 기대와 연체·신용 비용을 한 화면에 두시고, 반도체 급등일을</text>
+  <text x="540" y="716" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">금융 추격 이유로만 쓰지 마시기 바랍니다.</text>
+  <rect x="60" y="848" width="960" height="144" rx="14" fill="#1c0d0d" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="878" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">금리·환율 기대가 은행 주가의 단기 1등 변수입니다. 이번 주 물가와 9월 15~16일 연준이 할인을 다시 정합니다. 신한·하나 상대</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">성과를 적어두시면 업종 베타인지 개별 이슈인지 구분됩니다.</text>
+  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">KB금융 · 금리 민감 · 2026.09.08</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

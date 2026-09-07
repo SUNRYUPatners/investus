@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.08 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">노동절 오스틴 사이버캡이 대기 약 15분·요금 6.15달러로…</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">모델Y 로보택시보다 약 3달러 저렴하고, 언박스트는 10초 미만·목표 5초입니다.</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#22d3ee"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee">완전 자율주행 감독이 슬로베니아에서 승인돼 유럽이 여섯…</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">10월 유럽연합 표결 서사와 베를린 주당 약 7,500대·21개 도시 채용이 겹칩니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee" text-anchor="end">FSD</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">장기국채 10년 롤링이 −2%, 일본은 해외증권 약 880억 달러…</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">구리는 사상 최고·전년 대비 약 17%, 비트코인은 증폭된 금처럼 해석됩니다.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">MACRO</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#c084fc"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">선박 42호기 극저온이 끝났고 루이지애나 운하를 약…</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">다음은 랩터 장착·15번째 비행, 스타십 바지선 수송 통로입니다.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">칩 접근권이 평화 협상 카드가 됐고 암·삼성 2나노 가속기가…</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">옵티머스 발주는 미확인 보도, 목표주가 500달러·레벨4 문서 정렬도 같은 표입니다.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">NVDA</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 6.15달러·10초·슬로베니아·880억·구리ATH·베를린7500·옵티머스미확인·Ship42·NVDA외교·500달러</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

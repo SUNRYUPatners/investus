@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.08 안전자산 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#f7931a"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f7931a">비트코인이 약 8만 달러에서 금 대비 비율 18온스대를 새로…</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">증폭 금 서사와 90일 상관 약 0.56이 같이 거론됐습니다.</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a" text-anchor="end">~80,724</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#facc15"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">금이 온스 약 4,400달러대에서 매크로 헤지 축을…</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">실질금리·달러가 단기 1등 변수입니다. 비율과 상관을 분리하시기 바랍니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15" text-anchor="end">~4,400</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#1a1a1a" stroke="#c0c0c0" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#c0c0c0"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c0c0c0">은이 산업·통화 이중 성격으로 헤지 서사 옆에 섰습니다</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">금은비율과 달러 방향을 같이 보시면 됩니다.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c0c0c0" text-anchor="end">은</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">달러인덱스가 금·비트코인·은·구리의 공통 분모입니다</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">헤지 서사와 달러 강세는 같은 주에도 충돌할 수 있습니다.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">DXY</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#fb923c"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c">구리가 성장·전력망 온도계로 헤지 옆 자리를 차지했습니다</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">재고·중국 수요는 구리 고유 줄입니다. 연준 15~16일이 공통 관문입니다.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c" text-anchor="end">구리</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 비트코인 ~80724 · 금 ~4400 · 비율 18.17 · 은 · 달러 · 구리 · FOMC 15-16</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

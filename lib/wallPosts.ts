@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T08SEP = 1788822000000; // 2026.09.08 08:00 KST
 const T07SEP = 1788735600000; // 2026.09.07 08:00 KST
 const T04SEP = 1788476400000; // 2026.09.04 08:00 KST
 const T03SEP = 1788390000000; // 2026.09.03 08:00 KST
@@ -97,7 +98,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T07SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T08SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -116,6 +117,31 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-08 신규 ────────────────
+  { id: 1310, symbol: "TSLA", nickname: "오스틴요금러", holdingLabel: "테슬라 보유",
+    content: "노동절에 사이버캡 6.15달러·대기 15분 찍힌 거 봤는데, 연휴랑 평일 출퇴근은 표 칸을 나눠야 할 듯. 모델Y보다 3달러 싸다는 건 같은 화면 비교로만",
+    createdAt: T08SEP + 8*60_000, likes: 20, comments: 2 },
+  { id: 1311, symbol: "TSLA", nickname: "언박스트초시계", holdingLabel: "관심종목",
+    content: "10초 미만이면 이론상 미친 처리량인데 수율 칸이 비어 있음. 5초 목표는 비전으로 두고 주간 완성 대수 나올 때까지 대기",
+    createdAt: T08SEP + 16*60_000, likes: 19, comments: 2 },
+  { id: 1312, symbol: "TSLA", nickname: "유럽승인맵", holdingLabel: "관망",
+    content: "슬로베니아까지 여섯이면 지도는 예뻐지는데 독일·프랑스 칸은 아직 빈칸. 10월 표결은 이벤트 리스크로만 적을게요",
+    createdAt: T08SEP + 24*60_000, likes: 18, comments: 2 },
+  { id: 1313, symbol: "MACRO", nickname: "국채롤링체크", holdingLabel: "관심",
+    content: "장기채 10년 롤링 −2%면 과거가 아팠다는 거지 내년이 자동 상승은 아님. 물가·발행 같이 봐야",
+    createdAt: T08SEP + 32*60_000, likes: 17, comments: 2 },
+  { id: 1314, symbol: "MACRO", nickname: "엔개입추적", holdingLabel: "관망",
+    content: "일본이 해외증권 880억 달러 판 달이면 수급 쇼크 가능. 연속인지 일회인지가 핵심",
+    createdAt: T08SEP + 40*60_000, likes: 16, comments: 2 },
+  { id: 1315, symbol: "TSLA", nickname: "미확인필터", holdingLabel: "관심종목",
+    content: "옵티머스 5천 발주·1만5천 목표 이야기는 미확인으로 따로 둠. 감사 통과 전엔 모델에 안 넣음",
+    createdAt: T08SEP + 48*60_000, likes: 15, comments: 2 },
+  { id: 1316, symbol: "SPCX", nickname: "Ship42체크", holdingLabel: "관심",
+    content: "극저온 끝났으면 다음은 랩터. 비행 곧이라는 말과 날짜 공지는 가중치가 다름",
+    createdAt: T08SEP + 56*60_000, likes: 14, comments: 2 },
+  { id: 1317, symbol: "NVDA", nickname: "칩외교메모", holdingLabel: "엔비디아 보유",
+    content: "칩 접근권이 외교 카드가 됐다는 건 전략재 서사인데, 분기 매출로 바로 환산하진 않을게요",
+    createdAt: T08SEP + 64*60_000, likes: 13, comments: 2 },
   // ── 2026-09-07 신규 ────────────────
   { id: 1300, symbol: "TSLA", nickname: "전비실측러", holdingLabel: "테슬라 보유",
     content: "주말에 전비 6.1마일/킬로와트시 이야기 많이 보이는데, 슬라이드랑 실도로를 따로 적을게요. 5시간 탔다는 후기랑 같이 보면 체감은 커요",
@@ -4352,6 +4378,38 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  1310: [
+    { id: 13101, nickname: "언박스트초시계", holdingLabel: "관심종목", content: "대기가 줄어야 시간당 매출이 살아남", createdAt: T08SEP + 600000, likes: 5 },
+    { id: 13102, nickname: "유럽승인맵", holdingLabel: "관심종목", content: "지오펜스 차량 수도 같이 적어야지", createdAt: T08SEP + 660000, likes: 6 },
+  ],
+  1311: [
+    { id: 13111, nickname: "오스틴요금러", holdingLabel: "관심종목", content: "사이클이랑 출고는 다른 지표죠", createdAt: T08SEP + 660000, likes: 5 },
+    { id: 13112, nickname: "미확인필터", holdingLabel: "관심종목", content: "양산 주간 숫자 나오기 전엔 원가 확정 금지", createdAt: T08SEP + 720000, likes: 6 },
+  ],
+  1312: [
+    { id: 13121, nickname: "오스틴요금러", holdingLabel: "관심종목", content: "구독 가격·출시일이 매출 스위치", createdAt: T08SEP + 720000, likes: 5 },
+    { id: 13122, nickname: "국채롤링체크", holdingLabel: "관심종목", content: "소국 여섯이랑 대형국 일정을 섞지 말자", createdAt: T08SEP + 780000, likes: 6 },
+  ],
+  1313: [
+    { id: 13131, nickname: "엔개입추적", holdingLabel: "관심종목", content: "실질금리랑 같이 보면 설득력 생김", createdAt: T08SEP + 780000, likes: 5 },
+    { id: 13132, nickname: "칩외교메모", holdingLabel: "관심종목", content: "성장주 할인율이랑 한 화면에", createdAt: T08SEP + 840000, likes: 6 },
+  ],
+  1314: [
+    { id: 13141, nickname: "국채롤링체크", holdingLabel: "관심종목", content: "미 10년물 입찰 소화율도 옆에", createdAt: T08SEP + 840000, likes: 5 },
+    { id: 13142, nickname: "Ship42체크", holdingLabel: "관심종목", content: "엔캐리 청산 구간이면 위험자산 출렁임", createdAt: T08SEP + 900000, likes: 6 },
+  ],
+  1315: [
+    { id: 13151, nickname: "언박스트초시계", holdingLabel: "관심종목", content: "주당 런레이트랑 연간 누적 헷갈리지 말기", createdAt: T08SEP + 900000, likes: 5 },
+    { id: 13152, nickname: "오스틴요금러", holdingLabel: "관심종목", content: "공시 나오기 전 레버리지는 패스", createdAt: T08SEP + 960000, likes: 6 },
+  ],
+  1316: [
+    { id: 13161, nickname: "미확인필터", holdingLabel: "관심종목", content: "정적화염·스택이 다음 체크", createdAt: T08SEP + 960000, likes: 5 },
+    { id: 13162, nickname: "칩외교메모", holdingLabel: "관심종목", content: "케이던스 기대를 테슬라에 이식 금지", createdAt: T08SEP + 1020000, likes: 6 },
+  ],
+  1317: [
+    { id: 13171, nickname: "엔개입추적", holdingLabel: "관심종목", content: "라이선스·동맹 수요는 옵션으로만", createdAt: T08SEP + 1020000, likes: 5 },
+    { id: 13172, nickname: "국채롤링체크", holdingLabel: "관심종목", content: "지정학 프리미엄이랑 규제 리스크는 세트", createdAt: T08SEP + 1080000, likes: 6 },
+  ],
   1300: [
     { id: 13001, nickname: "앱순위체크", holdingLabel: "관심종목", content: "전비는 EPA 조정 전후를 구분해야 헷갈림이 줄어요", createdAt: T07SEP + 600000, likes: 4 },
     { id: 13002, nickname: "요금비교러", holdingLabel: "관심종목", content: "실도로 공개되면 그때 다시 맞추죠", createdAt: T07SEP + 660000, likes: 5 },
