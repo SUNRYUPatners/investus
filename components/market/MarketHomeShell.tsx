@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { TickerTape } from "@/components/TickerTape";
 import { EcoTickerTape } from "@/components/EcoTickerTape";
 import { MarketOpenBanner } from "@/components/market/MarketOpenBanner";
+import { NyseHolidayBanner } from "@/components/market/NyseHolidayBanner";
 import { LiveMarket } from "@/components/LiveMarket";
 import { MarketLiveMarket } from "@/components/market/MarketLiveMarket";
 import { NewsSection } from "@/components/NewsSection";
@@ -70,7 +71,8 @@ export function MarketHomeShell({
           className="px-4 lg:px-8 pt-2 pb-2 border-b"
           style={{ background: "var(--header-bg)", borderColor: "var(--border)" }}
         >
-          <div className="max-w-[480px] lg:max-w-none mx-auto">
+          <div className="max-w-[480px] lg:max-w-none mx-auto flex flex-col gap-2">
+            {isUs && <NyseHolidayBanner locale={uiLocale} />}
             <MarketOpenBanner market={market} />
           </div>
         </div>
