@@ -98,6 +98,8 @@ function isLowQualityBriefText(text: string | undefined): boolean {
   if (/TSLA\s*이\s+S&P/i.test(t)) return true;
   if (/S&P\s*500.*(세션|session).*(움직|moving)/i.test(t)) return true;
   if (/세션\s*·\s*TSLA\s*이\b/.test(t)) return true;
+  // Finnhub 수집 실패 플레이스홀더 — 뉴스 재수집 후 교체 대상
+  if (/헤드라인 없음|관련 뉴스 없음|No Finnhub headline|no headline in/i.test(t)) return true;
   return false;
 }
 
@@ -145,8 +147,8 @@ export function lastCompletedSessionDate(now = new Date()): string {
 }
 
 function kvKey(phase: BriefPhase, dateKey: string) {
-  // v4 장후: CIO 일일 리포트 폴백 제거 — 장중 Finnhub 뉴스만 (구 캐시 무효화)
-  const prefix = phase === "pre" ? "pre-market-briefing:v3" : "post-market-briefing:v4";
+  // v5: SPCX도 company-news·시세 조회 (이전엔 general 피드 키워드만 → 매일 「헤드라인 없음」)
+  const prefix = phase === "pre" ? "pre-market-briefing:v4" : "post-market-briefing:v5";
   return `${prefix}:${dateKey}`;
 }
 
@@ -295,8 +297,6 @@ function dayStartUnix(dateKey: string): number {
   return Number.isFinite(t) ? Math.floor(t / 1000) : 0;
 }
 
-const LISTED_UNIVERSE = POST_MARKET_UNIVERSE.filter((u) => u.symbol !== "SPCX");
-
 async function collectSessionNews(
   phase: BriefPhase,
   sessionDate: string,
@@ -306,8 +306,10 @@ async function collectSessionNews(
     phase === "pre" ? lastCompletedSessionDate(now) : sessionDate;
   const to = sessionDate;
   const startUnix = dayStartUnix(from);
+  // SPCX도 다른 Mag7처럼 company-news를 친다. (과거엔 비상장 가정으로 제외 → general 피드만
+  // 키워드 매칭했고, general에는 SpaceX가 거의 안 실려 매일 「헤드라인 없음」이 떴다.)
   const perSymbol = await Promise.all(
-    LISTED_UNIVERSE.map(async ({ symbol }) => {
+    POST_MARKET_UNIVERSE.map(async ({ symbol }) => {
       try {
         const items = await fetchFinnhubCompanyNews(symbol, from, to);
         return items
@@ -328,8 +330,9 @@ async function collectSessionNews(
 
   const news: NewsLine[] = perSymbol.flat();
 
-  const general = await fetchFinnhubMarketNews();
+  // 보조: general 피드·테슬라 뉴스에 섞인 SpaceX 헤드라인도 SPCX로 합친다
   const spacexRe = /\b(spacex|starship|starlink|spcx)\b/i;
+  const general = await fetchFinnhubMarketNews();
   for (const n of general) {
     if (!n.headline || (n.datetime ?? 0) < startUnix) continue;
     if (!spacexRe.test(`${n.headline} ${n.summary || ""}`)) continue;
@@ -339,6 +342,16 @@ async function collectSessionNews(
       summary: cleanNewsText((n.summary || "").slice(0, 220)),
       datetime: n.datetime,
       source: n.source || "",
+    });
+  }
+  for (const n of news.filter((row) => row.symbol === "TSLA")) {
+    if (!spacexRe.test(`${n.headline} ${n.summary}`)) continue;
+    news.push({
+      symbol: "SPCX",
+      headline: n.headline,
+      summary: n.summary,
+      datetime: n.datetime,
+      source: n.source,
     });
   }
 
@@ -355,7 +368,7 @@ async function collectSessionNews(
     if (deduped.length >= 40) break;
   }
 
-  const quotes = await fetchFinnhubBatch(LISTED_UNIVERSE.map((u) => u.symbol));
+  const quotes = await fetchFinnhubBatch(POST_MARKET_UNIVERSE.map((u) => u.symbol));
   const quoteLines = POST_MARKET_UNIVERSE.map(({ symbol, name }) => {
     const q = quotes.get(symbol);
     if (!q) return `${name}(${symbol}): n/a`;
