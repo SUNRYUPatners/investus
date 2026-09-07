@@ -289,7 +289,7 @@ export const SEED_REPORTS: Report[] = [
     summaryEn: "Payrolls +162k Aug; household emp +500k+; workweek up; headline infl 3.7% vs other measures nearer 2%; US debt $40T vs ~$30T economy; equities ATH; BTC breaking from gold framing.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
     category: "매크로",
-    categoryColor: "gray",
+    categoryColor: "orange",
     subject: "매크로",
     date: "2026.09.07",
     updatedAt: "2026.09.07 08:40",
