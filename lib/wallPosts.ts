@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T07SEP = 1788735600000; // 2026.09.07 08:00 KST
 const T04SEP = 1788476400000; // 2026.09.04 08:00 KST
 const T03SEP = 1788390000000; // 2026.09.03 08:00 KST
 const T02SEP = 1788303600000; // 2026.09.02 08:00 KST
@@ -96,7 +97,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T04SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T07SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -115,6 +116,31 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-07 신규 ────────────────
+  { id: 1300, symbol: "TSLA", nickname: "전비실측러", holdingLabel: "테슬라 보유",
+    content: "주말에 전비 6.1마일/킬로와트시 이야기 많이 보이는데, 슬라이드랑 실도로를 따로 적을게요. 5시간 탔다는 후기랑 같이 보면 체감은 커요",
+    createdAt: T07SEP + 8*60_000, likes: 18, comments: 2 },
+  { id: 1301, symbol: "TSLA", nickname: "앱순위체크", holdingLabel: "관심종목",
+    content: "로보택시 앱이 여행 앱 1위 찍었다는 건 설치 순위지 매출 1위는 아니죠. 그래도 우버랑 같은 화면에서 비교되는 건 의미 있음",
+    createdAt: T07SEP + 16*60_000, likes: 17, comments: 2 },
+  { id: 1302, symbol: "TSLA", nickname: "요금비교러", holdingLabel: "관망",
+    content: "3시간 92.51달러 vs 우버 200달러 추정… 시범 루프 요금일 수 있어서 통근 평균으로 확대는 안 함",
+    createdAt: T07SEP + 24*60_000, likes: 16, comments: 2 },
+  { id: 1303, symbol: "SPCX", nickname: "F14준비러", holdingLabel: "관심종목",
+    content: "41호기·부스터21 정적화염까지 끝났으면 다음은 스택이네요. 발사일 나오기 전엔 케이던스 확정 안 함",
+    createdAt: T07SEP + 32*60_000, likes: 15, comments: 2 },
+  { id: 1304, symbol: "NVDA", nickname: "지분포트폴", holdingLabel: "엔비디아 보유",
+    content: "전략 투자 합계 990억 달러면 칩만 파는 회사가 아님. 허깅페이스 인수랑 축이 겹침",
+    createdAt: T07SEP + 40*60_000, likes: 14, comments: 2 },
+  { id: 1305, symbol: "GOOGL", nickname: "웨이모부채", holdingLabel: "관망",
+    content: "웨이모 첫 부채 30억 달러+·가산금리 500bp 이상 이야기… 플릿 키우려면 돈이 필요한 건 분명함",
+    createdAt: T07SEP + 48*60_000, likes: 13, comments: 2 },
+  { id: 1306, symbol: "MACRO", nickname: "주거불안체크", holdingLabel: "관심",
+    content: "Can't Afford Home 검색이 금융위기 때보다 높다는데, 금리·주택 심리 변수로만 표에 남겨둘게요",
+    createdAt: T07SEP + 56*60_000, likes: 12, comments: 2 },
+  { id: 1307, symbol: "MACRO", nickname: "연준디커플", holdingLabel: "관망",
+    content: "이번 달 미 연준만 동결 쪽으로 가고 유럽·영국·일본은 인상 쪽이라면 달러·성장주 해석이 갈라짐",
+    createdAt: T07SEP + 64*60_000, likes: 11, comments: 2 },
   // ── 2026-09-04 신규 ────────────────
   { id: 1218, symbol: "TSLA", nickname: "출시특집러", holdingLabel: "테슬라 관심",
     content: "행사 생중계는 없었는데 앱으로 오스틴에서 사이버캡 탄다는 안내가 남았음. 45대밖에 없으면 운 좋아야 배정되는 거 아님? 아시아 전시는 구경이고 서비스는 아닌 듯",
@@ -4326,6 +4352,38 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  1300: [
+    { id: 13001, nickname: "앱순위체크", holdingLabel: "관심종목", content: "전비는 EPA 조정 전후를 구분해야 헷갈림이 줄어요", createdAt: T07SEP + 600000, likes: 4 },
+    { id: 13002, nickname: "요금비교러", holdingLabel: "관심종목", content: "실도로 공개되면 그때 다시 맞추죠", createdAt: T07SEP + 660000, likes: 5 },
+  ],
+  1301: [
+    { id: 13011, nickname: "전비실측러", holdingLabel: "관심종목", content: "1위 배지가 며칠 가는지도 궁금함", createdAt: T07SEP + 660000, likes: 4 },
+    { id: 13012, nickname: "텍사스플릿", holdingLabel: "관심종목", content: "설치랑 일 이용 건수는 완전 다른 지표", createdAt: T07SEP + 720000, likes: 5 },
+  ],
+  1302: [
+    { id: 13021, nickname: "로보택시덕후", holdingLabel: "관심종목", content: "FSD V15 무인 체감 후기가 더 중요할 듯", createdAt: T07SEP + 720000, likes: 4 },
+    { id: 13022, nickname: "원가회의론", holdingLabel: "관심종목", content: "픽업·하차 동선 수정 필요하다는 말도 같이 적어야", createdAt: T07SEP + 780000, likes: 5 },
+  ],
+  1303: [
+    { id: 13031, nickname: "미확인필터", holdingLabel: "관심종목", content: "정적화염 성공≠허가 완료", createdAt: T07SEP + 780000, likes: 4 },
+    { id: 13032, nickname: "비상장호가러", holdingLabel: "관심종목", content: "통합 캠페인 사진 나오면 일정 감이 생길 듯", createdAt: T07SEP + 840000, likes: 5 },
+  ],
+  1304: [
+    { id: 13041, nickname: "공시읽는사람", holdingLabel: "관심종목", content: "990억은 평가액·장부가 구분이 필요할 수 있음", createdAt: T07SEP + 840000, likes: 4 },
+    { id: 13042, nickname: "판교늑대", holdingLabel: "관심종목", content: "소프트웨어 생태계 쪽 베팅으로 읽음", createdAt: T07SEP + 900000, likes: 5 },
+  ],
+  1305: [
+    { id: 13051, nickname: "런던라이드", holdingLabel: "관심종목", content: "테슬라 소유자 모델이랑 자본구조가 완전 다름", createdAt: T07SEP + 900000, likes: 4 },
+    { id: 13052, nickname: "마일단가러", holdingLabel: "관심종목", content: "부채로 키우는 플릿 vs 고객 소유 플릿", createdAt: T07SEP + 960000, likes: 5 },
+  ],
+  1306: [
+    { id: 13061, nickname: "연준디커플", holdingLabel: "관심종목", content: "검색량=매수 시그널은 아님. 불안 지표", createdAt: T07SEP + 960000, likes: 4 },
+    { id: 13062, nickname: "채권덕후", holdingLabel: "관심종목", content: "모기지·임금이랑 같이 보면 설득력 생김", createdAt: T07SEP + 1020000, likes: 5 },
+  ],
+  1307: [
+    { id: 13071, nickname: "주거불안체크", holdingLabel: "관심종목", content: "물가 지표 나오기 전엔 동결도 조건부", createdAt: T07SEP + 1020000, likes: 4 },
+    { id: 13072, nickname: "유가러", holdingLabel: "관심종목", content: "고유가가 다시 인플레 논쟁 키울 수 있음", createdAt: T07SEP + 1080000, likes: 5 },
+  ],
   1218: [
     { id: 121801, nickname: "로보택시덕후", holdingLabel: "테슬라 일부", content: "차종 지정 불가면 모델와이 나올 확률이 훨씬 큼. 전용차 탔다는 인증이 더 희귀해질 듯", createdAt: T04SEP + 5*60_000, likes: 6 },
     { id: 121802, nickname: "텍사스플릿", holdingLabel: "테슬라 보유", content: "플릿 관심 양식 열린 건 눈여겨볼 만함. 가격·납기 없으면 그냥 대기자 명단이긴 함", createdAt: T04SEP + 6*60_000, likes: 5 },

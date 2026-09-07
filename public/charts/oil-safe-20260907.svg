@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a0a"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="100%" style="stop-color:#dc2626"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#ef444430" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#ef4444" text-anchor="middle">유가</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.07</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">고유가가 인플레 변수로 남으며 동결 기대와 충돌할 수 있습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🛢</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#ef4444" text-anchor="middle">고유가</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">휘발유·항공·물류를 통해 기대 인플레를 붙듭니다. 금·비트코인·장기국채가 같은 할인율 축에서 출렁일 수</text>
+  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">있습니다.</text>
+  <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
+  <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">동결 기대</text>
+  <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">완화</text>
+  <text x="270" y="496" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">월러 맥락</text>
+  <text x="540" y="455" font-family="Arial Black,Arial" font-size="40" fill="#ef4444" text-anchor="middle">&#8594;</text>
+  <rect x="600" y="356" width="420" height="168" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
+  <text x="810" y="400" font-family="Arial" font-size="20" fill="#ef4444" text-anchor="middle">유가</text>
+  <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#ef4444" text-anchor="middle">인플레</text>
+  <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">충돌 가능</text>
+  <rect x="60" y="548" width="300" height="164" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">🛢</text>
+  <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444" text-anchor="middle">고유가</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">인플레</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">꼬리</text>
+  <rect x="390" y="548" width="300" height="164" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">📉</text>
+  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444" text-anchor="middle">금리</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">경로</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">재가격</text>
+  <rect x="720" y="548" width="300" height="164" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">🥇</text>
+  <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444" text-anchor="middle">금·BTC</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">동축</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">할인율</text>
+  <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">유가가 높게 유지되면 연준이 동결을 말해도 매파 해석이 붙을 수 있습니다. 「유가 상승 = 금 상승」으로 단순화하면</text>
+  <text x="540" y="801" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">금리 상쇄를 놓칩니다.</text>
+  <rect x="60" y="878" width="960" height="140" rx="14" fill="#1c0d0d" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">한국은 에너지 수입국이라 유가·환율이 국내 물가 체감에 닿습니다. 재고·지정학·수요를 분리해 적으시기 바랍니다. 9월 15~16일</text>
+  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">회의 전 유가는 확률표의 입력값입니다. 에너지 레버리지는 지정학 갭에 취약합니다.</text>
+  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">유가 · 인플레 변수 · 2026.09.07</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T07 = 1788735600000; // 2026-09-07 08:00 KST
 const T04 = 1788476400000; // 2026-09-04 08:00 KST
 const T03 = 1788390000000; // 2026-09-03 08:00 KST
 const T02 = 1788303600000; // 2026-09-02 08:00 KST
@@ -12,6 +13,12 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9070, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "인덱스 보유", content: "금요일 6687 찍고 주말 넘겼는데, 이번 주는 물가·옵션만기·FOMC가 한 주에 몰려요. 자사주 방패만 믿고 추격하진 않을게요", createdAt: T07 - 0, likes: 40, comments: 2, },
+  { id: 9071, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "삼성전자 보유", content: "자사주가 기타법인으로 잡히니까 수급이 예뻐 보이는데, 남은 물량이 줄면 하단이 얇아질 수 있어서 진행률만 따로 적어요", createdAt: T07 - 1800000, likes: 39, comments: 2, },
+  { id: 9072, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "하이닉스 보유", content: "ADR이 밤에 세게 올랐다는 이야기랑 현물 164만 선을 같은 표에 두면 착시가 나요. 축을 나눠야", createdAt: T07 - 3600000, likes: 38, comments: 2, },
+  { id: 9073, symbol: "LG에너지솔루션", nickname: "배터리존버", holdingLabel: "LG엔솔 관심", content: "금요일엔 배터리만 처진 느낌이었어요. 반도체 강세랑 디커플이면 추격 근거가 약함", createdAt: T07 - 5400000, likes: 37, comments: 2, },
+  { id: 9074, symbol: "현대차", nickname: "자동차매니아", holdingLabel: "현대차 관심", content: "보합으로 숨 고른 날. 오만 수소버스 뉴스는 모멘텀이지 당기 실적은 아니라서 워치만", createdAt: T07 - 7200000, likes: 36, comments: 2, },
+  { id: 9075, symbol: "KB금융", nickname: "은행주러", holdingLabel: "KB금융 관심", content: "금융주가 하루 크게 조이면 금리 민감도 재확인. 이번주 물가 나오기 전엔 비중 추가 안 함", createdAt: T07 - 9000000, likes: 35, comments: 2, },
   { id: 9060, symbol: "코스피", nickname: "칠천피존버", holdingLabel: "인덱스 보유", content: "종가는 강보합인데 장중엔 롤러코스터였어요. 기타법인이 받친 자리라 외국인 복귀로 착각하면 다음날 당합니다", createdAt: T04 - 0, likes: 40, comments: 2, },
   { id: 9061, symbol: "삼성전자", nickname: "반도체장기", holdingLabel: "삼성전자 보유", content: "지수는 올랐는데 삼전만 따로 간 느낌. 자사주가 기타법인으로 잡히니까 수급이 좋아 보이는 착시가 있음", createdAt: T04 - 1800000, likes: 39, comments: 2, },
   { id: 9062, symbol: "SK하이닉스", nickname: "HBM러버", holdingLabel: "하이닉스 보유", content: "소각 매입 있어도 오후 급락 때 더 빠지더라고요. 환원 호재로 당일 베타를 막아주진 못함", createdAt: T04 - 3600000, likes: 38, comments: 2, },
@@ -72,6 +79,30 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9070: [
+    { id: 1, nickname: "외국인추적", holdingLabel: "관망", content: "옵션만기 주는 선물이 현물을 흔들 수 있어서 종가만 보면 안 돼요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "수급쟁이", holdingLabel: "관심종목", content: "기타법인=자사주 비중부터 빼고 외국인을 봐야죠", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9071: [
+    { id: 1, nickname: "메모리사이클", holdingLabel: "관심종목", content: "자사주 소진 속도가 예상보다 빠르다는 보도도 있어서 종료 시점을 적어둘게요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "수출통계러", holdingLabel: "관심종목", content: "지수랑 1위가 같이 간 날은 그래도 수급 착시가 덜해요", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9072: [
+    { id: 1, nickname: "메모리사이클", holdingLabel: "관심종목", content: "ADR 갭은 시차로 메워질 수 있어서 개장 초만 보고 단정 안 함", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "HBM러버", holdingLabel: "하이닉스 보유", content: "소각은 중기, 오늘 베타는 단기. 둘 다 표에", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9073: [
+    { id: 1, nickname: "이차전지", holdingLabel: "관심종목", content: "업종 대비 더 빠진 건지부터 확인해야", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "배터리존버", holdingLabel: "LG엔솔 관심", content: "수주 공시 없으면 반등 추격은 패스", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9074: [
+    { id: 1, nickname: "수출통계러", holdingLabel: "관심종목", content: "모빌리티 해외 뉴스는 테마로만 분류할게요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "자동차매니아", holdingLabel: "현대차 관심", content: "환율·유가 둘 다 표에 두고 주초 흐름 볼게요", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9075: [
+    { id: 1, nickname: "금리보는사람", holdingLabel: "관심종목", content: "물가 서프라이즈면 금융 로테이션이 하루 만에 뒤집혀요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "은행주러", holdingLabel: "KB금융 관심", content: "연체·마진도 같이 봐야 금리 수혜죠", createdAt: T07 + 1200000, likes: 4 },
+  ],
   9060: [
     { id: 1, nickname: "수급쟁이", holdingLabel: "관심종목", content: "기타법인 12일 연속이면 자사주부터 빼서 봐야죠", createdAt: T04 + 600000, likes: 5 },
     { id: 2, nickname: "장중폭", holdingLabel: "관심종목", content: "243포인트면 종가 매매는 비추", createdAt: T04 + 1199000, likes: 4 },
@@ -255,6 +286,12 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9160, symbol: "매크로", nickname: "상관체크러", holdingLabel: "관망", content: "비트랑 금 상관이 50% 넘었다는 주말 메모… 나스닥 베타만 보던 프레임을 잠시 접고 안전자산 축도 같이 볼게요", createdAt: T07 - 0, likes: 38, comments: 2, },
+  { id: 9161, symbol: "비트코인", nickname: "온체인러", holdingLabel: "BTC 보유", content: "8만 달러 안팎에서 주말 횡보. 81400 찍고 내려온 자리라 지지 테스트로만 인식", createdAt: T07 - 1800000, likes: 37, comments: 2, },
+  { id: 9162, symbol: "금", nickname: "금벌레", holdingLabel: "금 ETF", content: "금이 비트랑 같이 움직이면 ‘기술주 대리’가 아니라 ‘통화·금리’ 쪽 해석이 늘어나요", createdAt: T07 - 3600000, likes: 36, comments: 2, },
+  { id: 9163, symbol: "이더리움", nickname: "스테이커", holdingLabel: "ETH 보유", content: "비트 베타가 큰 날은 알트 레버리지부터 접는 게 속 편함. 물가 주간이라 더", createdAt: T07 - 5400000, likes: 35, comments: 2, },
+  { id: 9164, symbol: "금리", nickname: "채권덕후", holdingLabel: "관망", content: "월러 동결 기대가 50%대면 아직 동전 던지기. CPI 나오기 전 TLT 추격은 패스", createdAt: T07 - 7200000, likes: 34, comments: 2, },
+  { id: 9165, symbol: "WTI", nickname: "유가러", holdingLabel: "관심", content: "고유가가 인플레 재점화하면 동결 시나리오가 흔들려요. 유가 밴드를 금리 표 옆에", createdAt: T07 - 9000000, likes: 33, comments: 2, },
   { id: 9152, symbol: "매크로", nickname: "채권덕후", holdingLabel: "관망", content: "비트·금·유가가 같은 날 움직이면 한 방향 베팅은 금물. 고용 전까지는 관망이 답이에요", createdAt: T04 - 0, likes: 40, comments: 2, },
   { id: 9153, symbol: "비트코인", nickname: "온체인러", holdingLabel: "BTC 보유", content: "8만 다시 밟았는데 기사마다 종가가 다르네요. 거래소 하나로 맞추고, 고용 전 레버리지는 접었습니다", createdAt: T04 - 1800000, likes: 39, comments: 2, },
   { id: 9154, symbol: "금", nickname: "금벌레", holdingLabel: "금 ETF", content: "전날 저점에서 되돌린 자리라 4,500 안착은 고용 보고 판단할래요. 급락 반등은 숏커버일 수도", createdAt: T04 - 3600000, likes: 38, comments: 2, },
@@ -300,6 +337,30 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9160: [
+    { id: 1, nickname: "매크로올빼미", holdingLabel: "관심종목", content: "상관은 후행이라 앞으로 방향을 보장하진 않아요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "달러보는사람", holdingLabel: "관심종목", content: "DXY랑 같이 적어야 설득력이 생겨요", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9161: [
+    { id: 1, nickname: "ETF추적", holdingLabel: "관심종목", content: "유입 없이 숏커버면 되돌림이 빠를 수 있음", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "온체인러", holdingLabel: "BTC 보유", content: "8만 지지가 깨지면 다음 심리는 7.9만 쪽", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9162: [
+    { id: 1, nickname: "실질금리", holdingLabel: "관심종목", content: "금은 실질금리 대용이랑 같이 보면 덜 헷갈려요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "금벌레", holdingLabel: "금 ETF", content: "주중 물가 전엔 비중 유지가 기본", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9163: [
+    { id: 1, nickname: "스테이커", holdingLabel: "ETH 보유", content: "이더는 비트보다 출렁여서 포지션 절반만", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "온체인러", holdingLabel: "관심종목", content: "알트 레버리지는 FOMC 전 접는 편", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9164: [
+    { id: 1, nickname: "채권덕후", holdingLabel: "관망", content: "확률 50%면 포지션도 반만", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "금리보는사람", holdingLabel: "관심종목", content: "CPI 서프라이즈 시나리오를 미리 적어둘게요", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9165: [
+    { id: 1, nickname: "인플레체크", holdingLabel: "관심종목", content: "유가 90달러대가 버티면 서비스 물가도 같이 봐요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "유가러", holdingLabel: "관심", content: "지정학 헤드라인은 단기, 재고는 중기", createdAt: T07 + 1200000, likes: 4 },
+  ],
   9152: [
     { id: 1, nickname: "매크로올빼미", holdingLabel: "관심종목", content: "공통 변수는 달러·금리·고용뿐", createdAt: T04 + 600000, likes: 5 },
     { id: 2, nickname: "포지션줄임", holdingLabel: "관심종목", content: "발표 15분만 지켜보고 움직이죠", createdAt: T04 + 1199000, likes: 4 },
@@ -419,6 +480,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9270, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "서울 평균 전세 7.1억 넘었다는 숫자… 매물 줄어 ‘노룩 계약’ 이야기도 같이 들려요. 급하면 더 비싸짐", createdAt: T07 - 0, likes: 36, comments: 2, },
+  { id: 9271, symbol: "강남", nickname: "서울러", holdingLabel: "관심", content: "송파는 전세가 매매보다 더 오른다는 집계. 세제 때문에 매매만 식고 전세는 달리는 구간", createdAt: T07 - 1800000, likes: 35, comments: 2, },
+  { id: 9272, symbol: "매물", nickname: "실수요자", holdingLabel: "관심", content: "전세 물건이 한 달 새 줄면 가격표보다 매물 수가 먼저 신호예요", createdAt: T07 - 3600000, likes: 34, comments: 2, },
+  { id: 9273, symbol: "정책", nickname: "정책워처", holdingLabel: "관심", content: "종부세·세제 개편안은 관망 구간. 실거주 압력과 전세 부족이 동시에 오면 세입자만 힘듦", createdAt: T07 - 5400000, likes: 33, comments: 2, },
   { id: 9257, symbol: "정책", nickname: "정책워처", holdingLabel: "관심", content: "12억 유지가 ‘감세 잔치’는 아니에요. 9억으로 깎이던 안이 철회된 완화일 뿐", createdAt: T04 - 0, likes: 40, comments: 2, },
   { id: 9258, symbol: "종부세", nickname: "실수요자", holdingLabel: "관심", content: "실거주 14억이랑 비거주 12억 차이, 고지서로 다시 찍어봐야 체감이 옵니다", createdAt: T04 - 1800000, likes: 39, comments: 2, },
   { id: 9259, symbol: "전세", nickname: "전세러", holdingLabel: "관심", content: "ISA 원상복구면 여윳돈이 집으로만 가진 않을 수도. 한도 숫자 나와야 판단 가능", createdAt: T04 - 3600000, likes: 38, comments: 2, },
@@ -462,6 +527,22 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9270: [
+    { id: 1, nickname: "갭투자경계", holdingLabel: "관심종목", content: "보증금 올리면 임차만 더 조여요. 매물 수부터", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "전세러", holdingLabel: "관심", content: "가계약부터 걸라는 말이 나올 정도면 수급이 기울어진 거죠", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9271: [
+    { id: 1, nickname: "서울러", holdingLabel: "관심", content: "전세>매매 상승이면 전세가율도 같이 봐야", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "정책워처", holdingLabel: "관심", content: "강남은 매매 위축·전세 강세 조합이 자주 나와요", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9272: [
+    { id: 1, nickname: "실수요자", holdingLabel: "관심", content: "매물 실종이면 호가 협상력이 집주인으로 가요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "전세러", holdingLabel: "관심", content: "입주 물량 달력도 같이 적어둘게요", createdAt: T07 + 1200000, likes: 4 },
+  ],
+  9273: [
+    { id: 1, nickname: "정책워처", holdingLabel: "관심", content: "법안 확정 전 감세 잔치로 읽으면 위험해요", createdAt: T07 + 600000, likes: 5 },
+    { id: 2, nickname: "실수요자", holdingLabel: "관심", content: "실거주 전환 압력이 전세 매물을 더 줄일 수 있음", createdAt: T07 + 1200000, likes: 4 },
+  ],
   9257: [
     { id: 1, nickname: "세무사보", holdingLabel: "관심종목", content: "국회에서 또 바뀔 수 있어요", createdAt: T04 + 600000, likes: 5 },
     { id: 2, nickname: "실수요자", holdingLabel: "관심종목", content: "상한 150%도 같이 계산해야죠", createdAt: T04 + 1199000, likes: 4 },

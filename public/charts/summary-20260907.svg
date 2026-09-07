@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.07 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#4ade80"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">사이버캡 출시 다음 주 테슬라가 354.08달러로 5.92% 빠지…</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">로보택시 앱은 여행 카테고리 1위, 전비는 킬로와트시당 6.1마일 이상 현장이 같은 주에 겹칩니다.</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#c084fc"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">스타십 14번째 비행은 선박·부스터 시험을 마치고…</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">역사·중국 연간 톤 대비와 그록 4.7·기업 스택, 스타베이스 경찰 채용도 같은 축입니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">엔비디아 지분 투자가 약 990억 달러, 웨이모는 첫 부채 30…</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">마일당 요금·원가 비교와 로보택시 100만 마일 이정표가 경쟁 구도를 보여 줍니다.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">NVDA</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#ef4444"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">연준은 9월에 주요국 가운데 올리지 않을 수 있고 고용·부채…</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">「집을 살 수 없다」검색은 사상 최고, 비트코인은 약 8만 달러권입니다.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">MACRO</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#22d3ee"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee">완전 자율주행 감독 14.3.9가 충돌 임박·주의 산만 때 자동…</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">콘솔 연결·라이트바·3만 달러 에어비앤비형 서사도 상품 디테일로 남았습니다.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee" text-anchor="end">FSD</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 354.08·앱1위·6.1mi/kWh·F14시험·웨이모30억·엔비디아990억·고용·주거검색·BTC 8만</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

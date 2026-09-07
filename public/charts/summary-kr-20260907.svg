@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.07 한국장 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="112" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="112" rx="4" fill="#38bdf8"/>
+  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#38bdf8">코스피가 9월 4일 6,687.21로 1.64% 올라 6,700선 재도전…</text>
+  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">월요일 아침 브리핑은 지난 목요일 종가 기준입니다. 반도체·지주가 지수를 끌었습니다.</text>
+  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8" text-anchor="end">+1.64%</text>
+  <rect x="60" y="246" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="246" width="8" height="112" rx="4" fill="#60a5fa"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">삼성전자 +2.20%·하이닉스 +3.20%가 자사주·수요 기대로…</text>
+  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">삼성 자사주 15조 중 상당 진행(보도 약 37.2%), 하이닉스 ADR +8.14%·40조 자사주 계획이 겹쳤습니다.</text>
+  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">255,500</text>
+  <rect x="60" y="370" width="960" height="112" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="370" width="8" height="112" rx="4" fill="#22d3ee"/>
+  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee">9월 4일 외국인 5,034억·기관 1조 6,691억 순매수가…</text>
+  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">주간 외인·개인·기관 순매도 합 약 6.4조에도 자사주 기타법인이 하단 방패로 읽혔습니다.</text>
+  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee" text-anchor="end">+1.7조</text>
+  <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="494" width="8" height="112" rx="4" fill="#f59e0b"/>
+  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f59e0b">엘지엔솔 -1.92%·현대차 보합·케이비 -3.32%로 업종 온도가…</text>
+  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">배터리 조정, 완성차 숨 고르기, 금리·금융주 민감도가 같은 날 겹쳤습니다.</text>
+  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b" text-anchor="end">혼조</text>
+  <rect x="60" y="618" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="618" width="8" height="112" rx="4" fill="#a78bfa"/>
+  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">생산자·소비자 물가, 9월 10일 옵션만기, 9월 15~16일 연준…</text>
+  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">할인율과 파생 포지션이 한 주에 겹치니 레버리지 크기를 먼저 정하시기 바랍니다.</text>
+  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa" text-anchor="end">이번주</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 코스피 6687.21 +1.64% · 삼전 255500 · 하이닉스 1647000 · 외인·기관 순매수 · 물가·옵션·FOMC</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
