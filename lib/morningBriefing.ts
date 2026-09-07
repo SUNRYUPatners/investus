@@ -1,5 +1,5 @@
 import { SEED_REPORTS, type Report } from "@/lib/reports";
-import { isMarketOpen, isNYSEHoliday } from "@/lib/marketHours";
+import { isMarketOpen } from "@/lib/marketHours";
 import { reportDateKey } from "@/lib/subscription";
 
 export type BriefPhase = "pre" | "post";
@@ -38,15 +38,18 @@ function kstParts(now = new Date()) {
 }
 
 /**
- * 장전: 한국 평일 19:00 ~ 미국 정규장 마감(및 장중)
- * 장후: 마감 이후 ~ 다음날 한국 19:00 전, 주말·휴일
+ * 장전: 한국 평일 18:00 ~ 미국 정규장 마감(및 장중)
+ * 장후: 마감 이후 ~ 다음날 한국 18:00 전, 주말
+ *
+ * 미국 휴장일(노동절 등)이라도 다음 거래일 장전이 있으므로
+ * ET 당일 휴장 여부로 막지 않는다 — upcomingSessionDate가 다음 개장일을 잡는다.
  */
 export function getBriefPhase(now = new Date()): BriefPhase {
   if (isMarketOpen()) return "pre";
 
   const { dow, mins } = kstParts(now);
-  // 한국 평일 저녁 7시부터 당일 밤 미국장 장전. 휴장일은 장후 유지.
-  if (dow >= 1 && dow <= 5 && mins >= 19 * 60 && !isNYSEHoliday(now)) return "pre";
+  // 한국 평일 오후 6시부터 다음 미국장 장전.
+  if (dow >= 1 && dow <= 5 && mins >= 18 * 60) return "pre";
   return "post";
 }
 
