@@ -19,6 +19,9 @@ const CSP = [
     "https://cdn.portone.io",
     "https://*.portone.io",
     "https://*.inicis.com",
+    "https://*.iamport.co",
+    "https://*.iamport.kr",
+    "https://service.iamport.kr",
   ].join(" "),
   // styles: Tailwind inline styles + emotion + AdSense
   "style-src 'self' 'unsafe-inline' https://www.googletagservices.com https://www.gstatic.com",
@@ -41,6 +44,9 @@ const CSP = [
     "https://cdn.portone.io",
     "https://*.portone.io",
     "https://*.inicis.com",
+    "https://*.iamport.co",
+    "https://*.iamport.kr",
+    "https://service.iamport.kr",
   ].join(" "),
   // connect: all API sources used by the app + AdSense + PortOne/KG이니시스
   [
@@ -72,12 +78,19 @@ const CSP = [
     "https://*.portone.io",
     "https://api.portone.io",
     "https://*.inicis.com",
+    "https://*.iamport.co",
+    "https://*.iamport.kr",
+    "https://service.iamport.kr",
+    "https://checkout-service.prod.iamport.co",
+    "https://payment-bridge.prod.iamport.co",
+    "https://tx-gateway-service.prod.iamport.co",
+    "https://coretelemetry.prod.iamport.co",
   ].join(" "),
   "font-src 'self' data: https://fonts.gstatic.com",
   "object-src 'none'",
   "base-uri 'self'",
   // 결제창 POST 리다이렉트 허용
-  "form-action 'self' https://*.portone.io https://*.inicis.com",
+  "form-action 'self' https://*.portone.io https://*.inicis.com https://*.iamport.co https://*.iamport.kr https://service.iamport.kr",
   "upgrade-insecure-requests",
 ].join("; ");
 
