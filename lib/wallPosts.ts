@@ -26,6 +26,7 @@ export type Comment = {
   likes:        number;
 };
 
+const T09SEP = 1788908400000; // 2026.09.09 08:00 KST
 const T08SEP = 1788822000000; // 2026.09.08 08:00 KST
 const T07SEP = 1788735600000; // 2026.09.07 08:00 KST
 const T04SEP = 1788476400000; // 2026.09.04 08:00 KST
@@ -98,7 +99,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T08SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T09SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -117,6 +118,58 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-09 신규 ────────────────
+  { id: 121803, symbol: "TSLA", nickname: "유럽곧체크", holdingLabel: "관심종목",
+    content: "유럽 사이버캡이 곧이라는데 날짜가 없음. 오스틴 요금이랑 칸 나눠야지",
+    createdAt: T09SEP + 8*60_000, likes: 22, comments: 2 },
+  { id: 121804, symbol: "TSLA", nickname: "댈러스허브러", holdingLabel: "관심종목",
+    content: "댈러스에 모델Y 40·사이버캡 75+라… 유료 대기 나오기 전엔 공급 뉴스만",
+    createdAt: T09SEP + 16*60_000, likes: 21, comments: 2 },
+  { id: 121805, symbol: "TSLA", nickname: "텍사스플릿표", holdingLabel: "관심종목",
+    content: "웨이모 988 테슬라 432면 격차 크네. 정의 같은지부터 보고 점유율 말하자",
+    createdAt: T09SEP + 24*60_000, likes: 20, comments: 2 },
+  { id: 121806, symbol: "TSLA", nickname: "테일러팹메모", holdingLabel: "관심종목",
+    content: "테일러 풀가동이랑 AI5 2나노는 다른 칸. 수율 나오기 전엔 공장 서사로만",
+    createdAt: T09SEP + 32*60_000, likes: 19, comments: 2 },
+  { id: 121807, symbol: "TSLA", nickname: "사십배구분", holdingLabel: "관심종목",
+    content: "40배랑 8배 섞지 말자. 벤치 조건 없는 배수는 범위로만",
+    createdAt: T09SEP + 40*60_000, likes: 18, comments: 2 },
+  { id: 121808, symbol: "SPCX", nickname: "이백이십피티", holdingLabel: "관심종목",
+    content: "PT 220에 시총 +720억… 의견이랑 테이프 반응 분리해서 봄",
+    createdAt: T09SEP + 48*60_000, likes: 17, comments: 2 },
+  { id: 121809, symbol: "TSLA", nickname: "옵티머스부품", holdingLabel: "관심종목",
+    content: "부품 1만5천이랑 주당 1k→2.5k는 계획. 출고 숫자 전엔 옵션",
+    createdAt: T09SEP + 56*60_000, likes: 16, comments: 2 },
+  { id: 121810, symbol: "JPY", nickname: "십육조엔", holdingLabel: "관심종목",
+    content: "일본 이자 16.59조엔 사상최고면 입찰·엔부터. 위험자산 베타 같이",
+    createdAt: T09SEP + 64*60_000, likes: 15, comments: 2 },
+  { id: 121811, symbol: "MACRO", nickname: "니엠일점사", holdingLabel: "관심종목",
+    content: "중국 은행 NIM 1.4%면 마진 얇다… NPL이랑 한 줄로 합치지 말기",
+    createdAt: T09SEP + 72*60_000, likes: 14, comments: 2 },
+  { id: 121812, symbol: "PLTR", nickname: "소버린묶음", holdingLabel: "관심종목",
+    content: "국가 AI 선호라는데 수주 공시 전엔 가중치 낮게",
+    createdAt: T09SEP + 80*60_000, likes: 13, comments: 2 },
+  { id: 121813, symbol: "ASML", nickname: "십이인치마스크", holdingLabel: "관심종목",
+    content: "12인치 EUV 마스크 협력은 수율 병목 이슈. 장비 출하랑 섞지 마",
+    createdAt: T09SEP + 88*60_000, likes: 22, comments: 2 },
+  { id: 121814, symbol: "MACRO", nickname: "오일삼십가정", holdingLabel: "관심종목",
+    content: "유가 30달러 시나리오랑 추론비용 급감은 인과 아님. 현물이랑 분리",
+    createdAt: T09SEP + 96*60_000, likes: 21, comments: 2 },
+  { id: 121815, symbol: "GOOGL", nickname: "제미니천명", holdingLabel: "관심종목",
+    content: "제미니 엔터프라이즈 1000명… 인력이지 수주 확정은 아님",
+    createdAt: T09SEP + 104*60_000, likes: 20, comments: 2 },
+  { id: 121816, symbol: "MACRO", nickname: "유럽감원표", holdingLabel: "관심종목",
+    content: "JLR 4천 VW 5만은 목표. 확정 인원·EV 판매 보고 판단",
+    createdAt: T09SEP + 112*60_000, likes: 19, comments: 2 },
+  { id: 121817, symbol: "TSLA", nickname: "메가팩오천만", holdingLabel: "관심종목",
+    content: "콜로라도 메가팩 50MW/200MWh 5천만… 한 건이라 백로그로 안 늘림",
+    createdAt: T09SEP + 120*60_000, likes: 18, comments: 2 },
+  { id: 121818, symbol: "TSLA", nickname: "에프에스디플로리다", holdingLabel: "관심종목",
+    content: "FSD v15 플릿 확대라지만 플로리다는 아직 소수. 대수 추이 보자",
+    createdAt: T09SEP + 128*60_000, likes: 17, comments: 2 },
+  { id: 121819, symbol: "TSLA", nickname: "언박스트영상", holdingLabel: "관심종목",
+    content: "4K로 10초마다 한 대… 주간 완성 대수랑은 다른 지표",
+    createdAt: T09SEP + 136*60_000, likes: 16, comments: 2 },
   // ── 2026-09-08 신규 ────────────────
   { id: 1310, symbol: "TSLA", nickname: "오스틴요금러", holdingLabel: "테슬라 보유",
     content: "노동절에 사이버캡 6.15달러·대기 15분 찍힌 거 봤는데, 연휴랑 평일 출퇴근은 표 칸을 나눠야 할 듯. 모델Y보다 3달러 싸다는 건 같은 화면 비교로만",
@@ -4378,6 +4431,74 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  121803: [
+    { id: 1218031, nickname: "댈러스허브러", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 720000, likes: 5 },
+    { id: 1218032, nickname: "테일러팹메모", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 900000, likes: 4 },
+  ],
+  121804: [
+    { id: 1218041, nickname: "텍사스플릿표", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 780000, likes: 5 },
+    { id: 1218042, nickname: "사십배구분", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 960000, likes: 4 },
+  ],
+  121805: [
+    { id: 1218051, nickname: "테일러팹메모", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 840000, likes: 5 },
+    { id: 1218052, nickname: "이백이십피티", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1020000, likes: 4 },
+  ],
+  121806: [
+    { id: 1218061, nickname: "사십배구분", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 900000, likes: 5 },
+    { id: 1218062, nickname: "옵티머스부품", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1080000, likes: 4 },
+  ],
+  121807: [
+    { id: 1218071, nickname: "이백이십피티", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 960000, likes: 5 },
+    { id: 1218072, nickname: "십육조엔", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1140000, likes: 4 },
+  ],
+  121808: [
+    { id: 1218081, nickname: "옵티머스부품", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1020000, likes: 5 },
+    { id: 1218082, nickname: "니엠일점사", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1200000, likes: 4 },
+  ],
+  121809: [
+    { id: 1218091, nickname: "십육조엔", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1080000, likes: 5 },
+    { id: 1218092, nickname: "소버린묶음", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1260000, likes: 4 },
+  ],
+  121810: [
+    { id: 1218101, nickname: "니엠일점사", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1140000, likes: 5 },
+    { id: 1218102, nickname: "십이인치마스크", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1320000, likes: 4 },
+  ],
+  121811: [
+    { id: 1218111, nickname: "소버린묶음", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1200000, likes: 5 },
+    { id: 1218112, nickname: "오일삼십가정", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1380000, likes: 4 },
+  ],
+  121812: [
+    { id: 1218121, nickname: "십이인치마스크", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1260000, likes: 5 },
+    { id: 1218122, nickname: "제미니천명", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1440000, likes: 4 },
+  ],
+  121813: [
+    { id: 1218131, nickname: "오일삼십가정", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1320000, likes: 5 },
+    { id: 1218132, nickname: "유럽감원표", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1500000, likes: 4 },
+  ],
+  121814: [
+    { id: 1218141, nickname: "제미니천명", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1380000, likes: 5 },
+    { id: 1218142, nickname: "메가팩오천만", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1560000, likes: 4 },
+  ],
+  121815: [
+    { id: 1218151, nickname: "유럽감원표", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1440000, likes: 5 },
+    { id: 1218152, nickname: "에프에스디플로리다", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1620000, likes: 4 },
+  ],
+  121816: [
+    { id: 1218161, nickname: "메가팩오천만", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1500000, likes: 5 },
+    { id: 1218162, nickname: "언박스트영상", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1680000, likes: 4 },
+  ],
+  121817: [
+    { id: 1218171, nickname: "에프에스디플로리다", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1560000, likes: 5 },
+    { id: 1218172, nickname: "유럽곧체크", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1740000, likes: 4 },
+  ],
+  121818: [
+    { id: 1218181, nickname: "언박스트영상", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1620000, likes: 5 },
+    { id: 1218182, nickname: "댈러스허브러", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1800000, likes: 4 },
+  ],
+  121819: [
+    { id: 1218191, nickname: "유럽곧체크", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 1680000, likes: 5 },
+    { id: 1218192, nickname: "텍사스플릿표", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 1860000, likes: 4 },
+  ],
   1310: [
     { id: 13101, nickname: "언박스트초시계", holdingLabel: "관심종목", content: "대기가 줄어야 시간당 매출이 살아남", createdAt: T08SEP + 600000, likes: 5 },
     { id: 13102, nickname: "유럽승인맵", holdingLabel: "관심종목", content: "지오펜스 차량 수도 같이 적어야지", createdAt: T08SEP + 660000, likes: 6 },

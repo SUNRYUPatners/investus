@@ -1,6 +1,42 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
+  // ── 2026-09-09 KR ──────────────────────
+  {
+    id: -2200, alias: "여의도 너구리 #11", symbol: "한장요약",
+    content: "수요일 장전입니다. 어제(9/8) 종가만 보면 코스피 6,954(−0.58%)·장중 7,171 되돌림, 개인 약 3조대 매도·외인·기관 약 6조대 매수입니다. 반도체 리밸런싱(10일)과 유가·금리를 세 칸으로 나누겠습니다.",
+    likes: 28, comments: 2, created_at: "2026-09-09T06:00:00.000Z", liked: false,
+  },
+  {
+    id: -2201, alias: "성수 수달 #35", symbol: "코스피",
+    content: "−40포인트보다 장중 고점 대비 되돌림이 본문입니다. 외국인 매수와 지수 하락을 한 문장에 넣지 마세요. 7,000 회복은 종가와 유가가 같이 확인할 때만 적겠습니다.",
+    likes: 27, comments: 2, created_at: "2026-09-09T06:08:00.000Z", liked: false,
+  },
+  {
+    id: -2202, alias: "판교 치타 #22", symbol: "삼성전자",
+    content: "269,500(−0.19%)에 장중 276,500+ 반납입니다. 리밸런싱 추정 매도와 테일러·인공지능5는 칸이 다릅니다. 하이닉스 상대 성과만 표에 남기겠습니다.",
+    likes: 26, comments: 2, created_at: "2026-09-09T06:16:00.000Z", liked: false,
+  },
+  {
+    id: -2203, alias: "삼성동 여우 #08", symbol: "SK하이닉스",
+    content: "1,793,000(+0.56%)이지만 장중 1,872,000 되돌림과 리밸런싱 약 1.2조 매도 추정이 겹칩니다. 종가 플러스를 수급 안도로 읽지 않겠습니다.",
+    likes: 25, comments: 2, created_at: "2026-09-09T06:24:00.000Z", liked: false,
+  },
+  {
+    id: -2204, alias: "잠실 백로 #29", symbol: "LG에너지솔루션",
+    content: "348,500(−3.86%)은 시총 상위 중 큰 폭입니다. 유가·금리 체인으로 먼저 분류하고, 수주·가동률은 중기 칸에만 두겠습니다.",
+    likes: 24, comments: 2, created_at: "2026-09-09T06:32:00.000Z", liked: false,
+  },
+  {
+    id: -2205, alias: "광화문 물총새 #06", symbol: "현대차",
+    content: "약 −2.04%는 완성차 베타입니다. 모빌리티 헤드라인과 섞지 않고 판매·인센티브·유가만 단기 칸에 남기겠습니다.",
+    likes: 23, comments: 2, created_at: "2026-09-09T06:40:00.000Z", liked: false,
+  },
+  {
+    id: -2206, alias: "한남 두루미 #17", symbol: "KB금융",
+    content: "약 −1.25%는 미 10년물 급등 서사와 방향이 같습니다. 순이자마진 기대와 연체를 한 화면에 두고 회의 전 추격은 하지 않겠습니다.",
+    likes: 22, comments: 2, created_at: "2026-09-09T06:48:00.000Z", liked: false,
+  },
   // ── 2026-09-08 KR ──────────────────────
   {
     id: -2150, alias: "여의도 너구리 #11", symbol: "한장요약",
@@ -183,6 +219,35 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-09 KR 댓글 ──────────────────────
+  [-2200]: [
+    { alias: "인천 갈매기 #52", content: "6조대 외인·기관은 방향이지 전 업종 전환이 아닙니다.", created_at: "2026-09-09T06:10:00.000Z" },
+    { alias: "청담 여우 #11", content: "유가 98과 지수 −0.58을 한 줄로 합치지 말죠.", created_at: "2026-09-09T06:17:00.000Z" },
+  ],
+  [-2201]: [
+    { alias: "성북 참새 #33", content: "코스닥 −1.25%면 중소형 체감이 더 아픕니다.", created_at: "2026-09-09T06:10:00.000Z" },
+    { alias: "여의도 학 #12", content: "7000 회복은 종가 확인 후 적겠습니다.", created_at: "2026-09-09T06:17:00.000Z" },
+  ],
+  [-2202]: [
+    { alias: "압구정 치타 #44", content: "리밸런싱 0.2조는 이벤트 수급 가중치를 낮게.", created_at: "2026-09-09T06:10:00.000Z" },
+    { alias: "합정 수달 #07", content: "269,500 지지 여부를 손절 문장에 미리.", created_at: "2026-09-09T06:17:00.000Z" },
+  ],
+  [-2203]: [
+    { alias: "잠실 백로 #29", content: "1.2조 추정이 사흘에 걸쳐 나오는지 보겠습니다.", created_at: "2026-09-09T06:10:00.000Z" },
+    { alias: "이태원 부엉이 #18", content: "장비주 상대 성과를 옆에 둡니다.", created_at: "2026-09-09T06:17:00.000Z" },
+  ],
+  [-2204]: [
+    { alias: "노원 기러기 #21", content: "엔솔 베타와 반도체 베타를 분리해 표에.", created_at: "2026-09-09T06:10:00.000Z" },
+    { alias: "분당 호랑이 #55", content: "원재료·수요가 단기 1등입니다.", created_at: "2026-09-09T06:17:00.000Z" },
+  ],
+  [-2205]: [
+    { alias: "성북 참새 #33", content: "완성차 상대 성과를 반도체와 분리합니다.", created_at: "2026-09-09T06:10:00.000Z" },
+    { alias: "강남 표범 #04", content: "유가·할부가 단기 변수입니다.", created_at: "2026-09-09T06:17:00.000Z" },
+  ],
+  [-2206]: [
+    { alias: "합정 수달 #07", content: "NIM·연체를 한 화면, 추격은 다음입니다.", created_at: "2026-09-09T06:10:00.000Z" },
+    { alias: "마곡 펠리컨 #63", content: "은행 베타는 반도체와 다릅니다.", created_at: "2026-09-09T06:17:00.000Z" },
+  ],
   // ── 2026-09-08 KR 댓글 ──────────────────────
   [-2150]: [
     { alias: "인천 갈매기 #52", content: "2.25조는 두 종목 합입니다. 전 업종 수급으로 확장하지 않겠습니다.", created_at: "2026-09-08T06:10:00.000Z" },
@@ -437,6 +502,37 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
+  // ── 2026-09-09 SAFE ──────────────────────
+  {
+    id: -2220, alias: "온체인 매 #03", symbol: "한장요약",
+    content: "금 온스 약 4,400달러, 비트코인 7만 8천 달러대, 브렌트 약 98달러가 한 주에 겹쳤습니다. 인상 확률은 예측시장과 선물이 갈립니다. 물가 11일·회의 15~16일 전에 자산별 칸을 나누겠습니다.",
+    likes: 28, comments: 2, created_at: "2026-09-09T09:00:00.000Z", liked: false,
+  },
+  {
+    id: -2221, alias: "금벌레 학 #14", symbol: "비트코인",
+    content: "8만 달러 이탈 후 7만 8.3~8.5만입니다. 금 상관이 높아도 청산 속도는 암호화폐입니다. 유입 맵을 먼저 보겠습니다.",
+    likes: 27, comments: 2, created_at: "2026-09-09T09:08:00.000Z", liked: false,
+  },
+  {
+    id: -2222, alias: "달러 올빼미 #09", symbol: "금",
+    content: "4,400달러대는 밴드 앵커이고, 인상 51.5% 대 선물 58~66% 괴리가 있습니다. 실질금리·달러가 안 풀리면 헤지 프레임이 하루짜리가 될 수 있습니다.",
+    likes: 26, comments: 2, created_at: "2026-09-09T09:16:00.000Z", liked: false,
+  },
+  {
+    id: -2223, alias: "원유 갈매기 #05", symbol: "원유",
+    content: "브렌트 약 98·서부텍사스산 약 94는 지정학 프리미엄입니다. 금·비트코인 헤지와 같은 칸에 두지 않겠습니다. 재고와 외교 일정을 분리합니다.",
+    likes: 25, comments: 2, created_at: "2026-09-09T09:24:00.000Z", liked: false,
+  },
+  {
+    id: -2224, alias: "디엑시 치타 #18", symbol: "달러",
+    content: "달러인덱스는 금·비트·은·유가의 공통 분모입니다. 원·달러만 보면 오독합니다. 회의 전 달러 레버리지는 두지 않겠습니다.",
+    likes: 24, comments: 2, created_at: "2026-09-09T09:32:00.000Z", liked: false,
+  },
+  {
+    id: -2225, alias: "은광 수달 #21", symbol: "은",
+    content: "은은 헤지와 산업이 겹칩니다. 금·유가 서사만으로 추격하면 태양광·전자 줄을 놓칩니다. 금은비율과 달러를 같이 보겠습니다.",
+    likes: 23, comments: 2, created_at: "2026-09-09T09:40:00.000Z", liked: false,
+  },
   // ── 2026-09-08 SAFE ──────────────────────
   {
     id: -2170, alias: "온체인 매 #03", symbol: "한장요약",
@@ -551,6 +647,31 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-09 SAFE 댓글 ──────────────────────
+  [-2220]: [
+    { alias: "삼성동 올빼미 #19", content: "원유·달러·은으로 로테이션한 이유를 표에 남기겠습니다.", created_at: "2026-09-09T09:10:00.000Z" },
+    { alias: "판교 늑대 #90", content: "회의 전 알트·비트 레버리지는 줄입니다.", created_at: "2026-09-09T09:17:00.000Z" },
+  ],
+  [-2221]: [
+    { alias: "해운대 고래 #03", content: "유입 없는 반등은 숏커버로만 태그합니다.", created_at: "2026-09-09T09:10:00.000Z" },
+    { alias: "인천 갈매기 #52", content: "거래소 시각을 고정해 두세요.", created_at: "2026-09-09T09:17:00.000Z" },
+  ],
+  [-2222]: [
+    { alias: "마포 살괭이 #08", content: "확률 괴리와 온스를 한 문장에 넣지 않겠습니다.", created_at: "2026-09-09T09:10:00.000Z" },
+    { alias: "압구정 치타 #44", content: "실질금리 대용을 매일 같은 시각에.", created_at: "2026-09-09T09:17:00.000Z" },
+  ],
+  [-2223]: [
+    { alias: "판교 늑대 #90", content: "재고와 지정학을 헤지 서사와 분리합니다.", created_at: "2026-09-09T09:10:00.000Z" },
+    { alias: "잠실 백로 #29", content: "유가 사이즈는 금보다 이벤트 성격이 큽니다.", created_at: "2026-09-09T09:17:00.000Z" },
+  ],
+  [-2224]: [
+    { alias: "인천 갈매기 #52", content: "DXY와 원달러를 다른 시트에 둡니다.", created_at: "2026-09-09T09:10:00.000Z" },
+    { alias: "청담 여우 #11", content: "공통 분모가 흔들리면 포트가 같이 흔들립니다.", created_at: "2026-09-09T09:17:00.000Z" },
+  ],
+  [-2225]: [
+    { alias: "압구정 치타 #44", content: "금은비율이 벌어지면 산업 줄을 먼저 봅니다.", created_at: "2026-09-09T09:10:00.000Z" },
+    { alias: "합정 수달 #07", content: "은 사이즈는 금보다 작게.", created_at: "2026-09-09T09:17:00.000Z" },
+  ],
   // ── 2026-09-08 SAFE 댓글 ──────────────────────
   [-2170]: [
     { alias: "삼성동 올빼미 #19", content: "은·달러·구리로 로테이션한 이유를 표에 남기겠습니다.", created_at: "2026-09-08T09:10:00.000Z" },
@@ -729,6 +850,32 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  // ── 2026-09-09 KR-RE ──────────────────────
+  {
+    id: -2240, alias: "전세 참새 #02", symbol: "한장요약",
+    content: "오늘은 갱신권 없는 재계약 인상 비중(약 88%)·평균 4,680만·매물 20,432·지수 101.9·월세 전환·정책 정합성을 나눕니다. 꼬리 사례로 시장을 단정하지 않겠습니다.",
+    likes: 28, comments: 2, created_at: "2026-09-09T10:00:00.000Z", liked: false,
+  },
+  {
+    id: -2241, alias: "갱신 백로 #33", symbol: "전세",
+    content: "갱신권 유무가 인상폭을 가릅니다. 1억 이상 360건은 꼬리입니다. 평균과 분포를 한 문장에 넣지 않겠습니다.",
+    likes: 27, comments: 2, created_at: "2026-09-09T10:08:00.000Z", liked: false,
+  },
+  {
+    id: -2242, alias: "매물 학 #16", symbol: "전세",
+    content: "매물 −12%와 지수 101.9는 협상력 신호일 수 있습니다. 구별 대출 가능액 없이 ‘사야 한다’로 읽지 않겠습니다.",
+    likes: 26, comments: 2, created_at: "2026-09-09T10:16:00.000Z", liked: false,
+  },
+  {
+    id: -2243, alias: "월세 여우 #27", symbol: "전세",
+    content: "전세→월세 전환은 주거비 구조 변화입니다. 가을 이사 시즌에 한도 조회 없는 계약은 거절하겠습니다.",
+    likes: 25, comments: 2, created_at: "2026-09-09T10:24:00.000Z", liked: false,
+  },
+  {
+    id: -2244, alias: "정책 너구리 #19", symbol: "정책",
+    content: "공급 시계와 규제 시계가 다르면 실수요 자금줄이 먼저 조여집니다. 전세 통계와 정책을 한 신호로 합치지 않겠습니다.",
+    likes: 24, comments: 2, created_at: "2026-09-09T10:32:00.000Z", liked: false,
+  },
   // ── 2026-09-08 KR-RE ──────────────────────
   {
     id: -2190, alias: "전세 참새 #02", symbol: "한장요약",
@@ -830,6 +977,27 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-09 KR-RE 댓글 ──────────────────────
+  [-2240]: [
+    { alias: "분당 매 #31", content: "여섯 칸을 한 ‘사라’ 신호로 합치지 않겠습니다.", created_at: "2026-09-09T10:10:00.000Z" },
+    { alias: "한남 재규어 #27", content: "꼬리 사례와 평균을 섞지 말죠.", created_at: "2026-09-09T10:17:00.000Z" },
+  ],
+  [-2241]: [
+    { alias: "성수 너구리 #15", content: "갱신권 서류 여부를 먼저 확인하세요.", created_at: "2026-09-09T10:10:00.000Z" },
+    { alias: "삼성동 올빼미 #19", content: "대출 한도가 계약 관문입니다.", created_at: "2026-09-09T10:17:00.000Z" },
+  ],
+  [-2242]: [
+    { alias: "역삼 판다 #77", content: "구별 실거래·호가 확인 전엔 추격 안 합니다.", created_at: "2026-09-09T10:10:00.000Z" },
+    { alias: "해운대 고래 #03", content: "매물 추이를 지수 옆에.", created_at: "2026-09-09T10:17:00.000Z" },
+  ],
+  [-2243]: [
+    { alias: "한남 재규어 #27", content: "월세 전환 비율을 매물 신호로만.", created_at: "2026-09-09T10:10:00.000Z" },
+    { alias: "마포 살괭이 #08", content: "노룩 계약 유혹은 거절합니다.", created_at: "2026-09-09T10:17:00.000Z" },
+  ],
+  [-2244]: [
+    { alias: "삼성동 올빼미 #19", content: "입주와 규제 시계가 다르다는 점을 먼저 적습니다.", created_at: "2026-09-09T10:10:00.000Z" },
+    { alias: "판교 늑대 #90", content: "시행령 전 헤드라인을 확정으로 쓰지 마세요.", created_at: "2026-09-09T10:17:00.000Z" },
+  ],
   // ── 2026-09-08 KR-RE 댓글 ──────────────────────
   [-2190]: [
     { alias: "분당 매 #31", content: "네 칸을 한 ‘사라’ 신호로 합치지 않겠습니다.", created_at: "2026-09-08T10:10:00.000Z" },

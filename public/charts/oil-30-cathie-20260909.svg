@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0d02"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f97316"/><stop offset="100%" style="stop-color:#ea580c"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#f9731630" stroke="#f97316" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f97316" text-anchor="middle">MACRO</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.09</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">유가 30달러 시나리오와 인공지능 추론 비용 급감 서사가 같은</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">화면에 올랐습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="360" y="166" width="360" height="46" rx="23" fill="#f9731618" stroke="#f97316" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#f97316" text-anchor="middle">🛢️ 유가 시나리오 · 추론비용</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🛢️</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f97316" text-anchor="middle">$30</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">일부 장기 시나리오에서 원유가 배럴당 30달러까지 내려갈 수 있다는 주장과, 인공지능 추론(답을 계산하는)</text>
+  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">비용이 해마다 크게 싸진다는 설명이 나란히 공유됐습니다. 출처 이름은 적지 않습니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#20130a" stroke="#f97316" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📉</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f97316" text-anchor="middle">$30</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">유가 장기 시나리오</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">확정 전망이 아닌 가정</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#20130a" stroke="#f97316" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">🤖</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f97316" text-anchor="middle">−99.99%</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">추론 비용 급감 서사</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">연율 감소 프레임으로 인용</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#20130a" stroke="#f97316" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">⚡</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f97316" text-anchor="middle">에너지</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전력·원유가 겹치는 축</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">데이터센터 전력 수요와 연결</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#f97316" text-anchor="middle">30달러 유가는 공급 과잉·수요 둔화 가정이 한꺼번에 맞을 때의 시나리오에 가깝습니다. 추론 비용 급감은</text>
+  <text x="540" y="714" font-family="Arial" font-size="19" fill="#f97316" text-anchor="middle">칩·소프트웨어 효율 이야기이지 유가 하락을 보장하지 않습니다. 두 서사를 인과로 묶지 마시기 바랍니다.</text>
+  <rect x="60" y="842" width="960" height="172" rx="14" fill="#20130a" stroke="#f97316" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#f97316" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">실제 브렌트·서부텍사스산 현물과 시나리오를 칸을 나누시기 바랍니다. 다음 확인할 것은 재고·감산·전력 가격입니다. 장기적으로</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">에너지 단가와 AI 원가는 인플레이션·마진 논쟁의 공통 분모입니다.</text>
+  <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">매크로 · 유가·추론비용 · 2026.09.09</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
