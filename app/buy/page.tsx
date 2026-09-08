@@ -15,13 +15,6 @@ const BOOK = {
   price:  EBOOK_PRODUCT.priceKrw,
 };
 
-type PayMethod = "CARD" | "KAKAOPAY";
-
-const PAY_OPTIONS: { id: PayMethod; label: string; hint: string }[] = [
-  { id: "CARD", label: "신용·체크카드", hint: "국내 카드" },
-  { id: "KAKAOPAY", label: "카카오페이", hint: "카카오톡 간편결제" },
-];
-
 function fmt(n: number) {
   return "₩" + n.toLocaleString("ko-KR");
 }
@@ -30,7 +23,6 @@ export default function BuyPage() {
   const { user } = useAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [payMethod, setPayMethod] = useState<PayMethod>("CARD");
   const [termsAgreed, setTermsAgreed] = useState(false);
   const [errMsg, setErrMsg] = useState("");
   const [paying, setPaying] = useState(false);
@@ -44,7 +36,7 @@ export default function BuyPage() {
 
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
     const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
-    if (!storeId || !channelKey) {
+    if (!storeId || !channelKey || storeId.includes("xxxxxxxx") || channelKey.includes("xxxxxxxx")) {
       setErrMsg("결제 설정이 아직 준비되지 않았습니다. 잠시 후 다시 시도해 주세요.");
       return;
     }
@@ -54,7 +46,6 @@ export default function BuyPage() {
     try {
       const PortOne = (await import("@portone/browser-sdk/v2")).default;
       const paymentId = `EBOOK-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-      const isEasy = payMethod !== "CARD";
 
       const res = await PortOne.requestPayment({
         storeId,
@@ -63,8 +54,7 @@ export default function BuyPage() {
         orderName: BOOK.title,
         totalAmount: BOOK.price,
         currency: "KRW",
-        payMethod: isEasy ? "EASY_PAY" : "CARD",
-        ...(isEasy ? { easyPay: { easyPayProvider: payMethod } } : {}),
+        payMethod: "CARD",
         customer: {
           fullName: buyerName,
           email: buyerEmail,
@@ -188,37 +178,17 @@ export default function BuyPage() {
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
             결제 수단
           </p>
-          <div className="flex flex-col gap-2">
-            {PAY_OPTIONS.map((opt) => {
-              const active = payMethod === opt.id;
-              return (
-                <button
-                  key={opt.id}
-                  type="button"
-                  onClick={() => setPayMethod(opt.id)}
-                  className="flex items-center gap-3 rounded-2xl border p-4 text-left w-full"
-                  style={{
-                    background: "var(--card)",
-                    borderColor: active ? "var(--mint)" : "var(--border)",
-                  }}
-                >
-                  {opt.id === "KAKAOPAY" ? (
-                    <span className="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black flex-shrink-0" style={{ background: "#FEE500", color: "#3C1E1E" }}>K</span>
-                  ) : (
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(96,165,250,0.12)" }}>
-                      <CreditCard className="w-5 h-5" style={{ color: "#60a5fa" }} />
-                    </div>
-                  )}
-                  <div className="flex-1">
-                    <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{opt.label}</p>
-                    <p className="text-[11px]" style={{ color: "var(--muted)" }}>{opt.hint}</p>
-                  </div>
-                  <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0" style={{ borderColor: active ? "var(--mint)" : "var(--border)" }}>
-                    {active && <div className="w-2 h-2 rounded-full" style={{ background: "var(--mint)" }} />}
-                  </div>
-                </button>
-              );
-            })}
+          <div
+            className="flex items-center gap-3 rounded-2xl border p-4"
+            style={{ background: "var(--card)", borderColor: "var(--mint)" }}
+          >
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(96,165,250,0.12)" }}>
+              <CreditCard className="w-5 h-5" style={{ color: "#60a5fa" }} />
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-bold" style={{ color: "var(--text)" }}>신용·체크카드</p>
+              <p className="text-[11px]" style={{ color: "var(--muted)" }}>KG이니시스 · 국내 카드</p>
+            </div>
           </div>
         </div>
 
@@ -249,11 +219,11 @@ export default function BuyPage() {
           {paying ? (
             <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>
           ) : (
-            <>{fmt(BOOK.price)} {payMethod === "KAKAOPAY" ? "카카오페이" : "카드"}로 결제하기</>
+            <>{fmt(BOOK.price)} 카드로 결제하기</>
           )}
         </button>
         <p className="text-[10px] text-center mt-3" style={{ color: "var(--muted)" }}>
-          결제 즉시 PDF 안내를 이메일로 발송합니다 · 포트원(PortOne) 안전결제
+          결제 즉시 PDF 안내를 이메일로 발송합니다 · KG이니시스(포트원) 안전결제
         </p>
       </main>
     </div>

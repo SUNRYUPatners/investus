@@ -7,12 +7,10 @@ import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import {
   SUBSCRIPTION,
-  SUB_PAY_METHODS,
   formatSubPrice,
   planPriceKrw,
   planLabel,
   type SubPeriod,
-  type SubPayMethod,
 } from "@/lib/subscription";
 import { getSupabase } from "@/lib/supabase";
 
@@ -22,54 +20,12 @@ const BENEFITS = [
   { icon: Sparkles, title: "포트폴리오 AI 30회",   desc: "무료 3회 → Pro는 하루 30회까지 분석" },
   { icon: Star,     title: "Investus 추천주식",    desc: "CIO 선정 종목과 실시간 시세를 열람할 수 있습니다." },
   { icon: FileText, title: "이전 날짜 리포트",     desc: "오늘자 리포트는 무료, 과거 리포트 전체 열람이 가능합니다." },
-  { icon: Lock,     title: "부담 없는 구독",       desc: "월·연 선택 · 카카오·네이버·토스·카드로 결제" },
+  { icon: Lock,     title: "부담 없는 구독",       desc: "월·연 선택 · 신용·체크카드(KG이니시스) 결제" },
 ];
-
-function PayIcon({ id }: { id: SubPayMethod }) {
-  if (id === "KAKAOPAY") {
-    return (
-      <span
-        className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-black flex-shrink-0"
-        style={{ background: "#FEE500", color: "#3C1E1E" }}
-      >
-        K
-      </span>
-    );
-  }
-  if (id === "NAVERPAY") {
-    return (
-      <span
-        className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-black flex-shrink-0"
-        style={{ background: "#03C75A", color: "#fff" }}
-      >
-        N
-      </span>
-    );
-  }
-  if (id === "TOSSPAY") {
-    return (
-      <span
-        className="w-9 h-9 rounded-xl flex items-center justify-center text-[11px] font-black flex-shrink-0"
-        style={{ background: "#0064FF", color: "#fff" }}
-      >
-        toss
-      </span>
-    );
-  }
-  return (
-    <span
-      className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-      style={{ background: "rgba(var(--mint-rgb),0.12)" }}
-    >
-      <CreditCard className="w-4 h-4" style={{ color: "var(--mint)" }} />
-    </span>
-  );
-}
 
 export default function SubscribePage() {
   const { user, loaded } = useAuth();
   const [period, setPeriod] = useState<SubPeriod>("month");
-  const [payMethod, setPayMethod] = useState<SubPayMethod>("CARD");
   const [paying, setPaying] = useState(false);
   const [error, setError] = useState("");
 
@@ -85,7 +41,7 @@ export default function SubscribePage() {
     }
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
     const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
-    if (!storeId || !channelKey) {
+    if (!storeId || !channelKey || storeId.includes("xxxxxxxx") || channelKey.includes("xxxxxxxx")) {
       setError("결제 설정이 아직 준비되지 않았습니다. 잠시 후 다시 시도해 주세요.");
       return;
     }
@@ -94,15 +50,11 @@ export default function SubscribePage() {
     try {
       const PortOne = (await import("@portone/browser-sdk/v2")).default;
       const billingIssueId = `BK-${period}-${Date.now()}-${user.id.slice(0, 8)}`;
-      const isEasy = payMethod !== "CARD";
 
       const res = await PortOne.requestIssueBillingKey({
         storeId,
         channelKey,
-        billingKeyMethod: isEasy ? "EASY_PAY" : "CARD",
-        ...(isEasy
-          ? { easyPay: { easyPayProvider: payMethod } }
-          : {}),
+        billingKeyMethod: "CARD",
         issueId: billingIssueId,
         issueName: `Investus Pro ${period === "year" ? "연간" : "월간"} 구독`,
         displayAmount: price,
@@ -130,7 +82,7 @@ export default function SubscribePage() {
           planKind: "pro",
           planPeriod: period,
           customerName: user.nickname || undefined,
-          payMethod,
+          payMethod: "CARD",
         }),
       });
       if (!r.ok) {
@@ -255,38 +207,20 @@ export default function SubscribePage() {
           </div>
         ) : (
           <>
-            {/* 결제 수단 */}
-            <p className="text-xs font-semibold tracking-widest uppercase mb-2 font-syne" style={{ color: "var(--muted)" }}>
-              결제 수단
-            </p>
-            <div className="flex flex-col gap-2 mb-5">
-              {SUB_PAY_METHODS.map((m) => {
-                const active = payMethod === m.id;
-                return (
-                  <button
-                    key={m.id}
-                    type="button"
-                    onClick={() => setPayMethod(m.id)}
-                    className="flex items-center gap-3 rounded-2xl border p-3.5 text-left"
-                    style={{
-                      background: active ? "rgba(var(--mint-rgb),0.08)" : "var(--card)",
-                      borderColor: active ? "var(--mint)" : "var(--border)",
-                    }}
-                  >
-                    <PayIcon id={m.id} />
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-bold" style={{ color: "var(--text)" }}>{m.label}</p>
-                      <p className="text-[11px]" style={{ color: "var(--muted)" }}>{m.hint}</p>
-                    </div>
-                    <div
-                      className="w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0"
-                      style={{ borderColor: active ? "var(--mint)" : "var(--border)" }}
-                    >
-                      {active && <div className="w-2 h-2 rounded-full" style={{ background: "var(--mint)" }} />}
-                    </div>
-                  </button>
-                );
-              })}
+            <div
+              className="flex items-center gap-3 rounded-2xl border p-3.5 mb-5"
+              style={{ background: "rgba(var(--mint-rgb),0.08)", borderColor: "var(--mint)" }}
+            >
+              <span
+                className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+                style={{ background: "rgba(var(--mint-rgb),0.12)" }}
+              >
+                <CreditCard className="w-4 h-4" style={{ color: "var(--mint)" }} />
+              </span>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-bold" style={{ color: "var(--text)" }}>신용·체크카드</p>
+                <p className="text-[11px]" style={{ color: "var(--muted)" }}>KG이니시스 · 첫 결제 후 자동 연장</p>
+              </div>
             </div>
 
             {error && <p className="text-xs text-center mb-3" style={{ color: "#ef4444" }}>{error}</p>}
@@ -300,11 +234,11 @@ export default function SubscribePage() {
               {paying ? (
                 <><Loader2 className="w-4 h-4 animate-spin" />결제 진행중…</>
               ) : (
-                <>{formatSubPrice(price)} {period === "year" ? "연간" : "월간"} 결제하기</>
+                <>{formatSubPrice(price)} {period === "year" ? "연간" : "월간"} 카드 결제하기</>
               )}
             </button>
             <p className="text-[10px] text-center mt-3 leading-relaxed" style={{ color: "var(--muted)" }}>
-              포트원 안전결제 · 첫 결제 후 {period === "year" ? "매년" : "매달"} 자동 청구 · 언제든지 해지 가능
+              KG이니시스(포트원) 안전결제 · 첫 결제 후 {period === "year" ? "매년" : "매달"} 자동 청구 · 언제든지 해지 가능
             </p>
           </>
         )}

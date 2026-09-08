@@ -1,5 +1,5 @@
 /**
- * PG·카카오페이 심사용 판매 상품 목록 (결제 경로 포함).
+ * PG(KG이니시스) 심사용 판매 상품 목록 (결제 경로 포함).
  */
 import { EBOOK_PRODUCT } from "./products";
 import { SUBSCRIPTION, formatSubPrice } from "./subscription";
@@ -30,7 +30,7 @@ export const SHOP_PRODUCTS: ShopProduct[] = [
     priceKrw: SUBSCRIPTION.priceKrw,
     href: "/subscribe",
     paymentPath: `${SITE}/subscribe`,
-    paymentMethods: ["신용·체크카드", "카카오페이", "네이버페이", "토스페이"],
+    paymentMethods: ["신용·체크카드 (KG이니시스)"],
     delivery: "결제 즉시 Pro 기능 활성화 (디지털)",
   },
   {
@@ -42,7 +42,7 @@ export const SHOP_PRODUCTS: ShopProduct[] = [
     priceKrw: SUBSCRIPTION.yearlyPriceKrw,
     href: "/subscribe",
     paymentPath: `${SITE}/subscribe`,
-    paymentMethods: ["신용·체크카드", "카카오페이", "네이버페이", "토스페이"],
+    paymentMethods: ["신용·체크카드 (KG이니시스)"],
     delivery: "결제 즉시 Pro 기능 활성화 (디지털)",
   },
   {
@@ -54,7 +54,7 @@ export const SHOP_PRODUCTS: ShopProduct[] = [
     priceKrw: EBOOK_PRODUCT.priceKrw,
     href: EBOOK_PRODUCT.href,
     paymentPath: `${SITE}/buy`,
-    paymentMethods: ["신용·체크카드", "카카오페이"],
+    paymentMethods: ["신용·체크카드 (KG이니시스)"],
     delivery: "결제 후 PDF 안내 이메일 발송 (디지털)",
   },
 ];

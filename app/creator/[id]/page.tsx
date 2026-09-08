@@ -399,7 +399,7 @@ export default function CreatorProfilePage({ params }: { params: Promise<{ id: s
               onClick={async () => {
                 const storeId    = process.env.NEXT_PUBLIC_PORTONE_STORE_ID;
                 const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY;
-                if (!storeId || !channelKey) {
+                if (!storeId || !channelKey || storeId.includes("xxxxxxxx") || channelKey.includes("xxxxxxxx")) {
                   setCreatorPayErr("결제 설정이 아직 준비되지 않았습니다. 잠시 후 다시 시도해 주세요.");
                   return;
                 }

@@ -1,7 +1,8 @@
 /** Investus Pro 구독 — 추천주식 · 이전 날짜 리포트 열람 */
 
 export type SubPeriod = "month" | "year";
-export type SubPayMethod = "CARD" | "KAKAOPAY" | "NAVERPAY" | "TOSSPAY";
+/** KG이니시스 카드 결제만 지원 (카카오·네이버·토스 간편결제 미연동) */
+export type SubPayMethod = "CARD";
 
 const MONTHLY_KRW = 5_900;
 /** 연간 정가 = 월 × 12 */
@@ -37,10 +38,7 @@ export const SUB_PAY_METHODS: {
   label: string;
   hint: string;
 }[] = [
-  { id: "CARD",     label: "신용·체크카드", hint: "국내 카드 · 자동 연장" },
-  { id: "KAKAOPAY", label: "카카오페이",   hint: "카카오톡 간편결제" },
-  { id: "NAVERPAY", label: "네이버페이",   hint: "네이버 간편결제" },
-  { id: "TOSSPAY",  label: "토스페이",     hint: "토스 간편결제" },
+  { id: "CARD", label: "신용·체크카드", hint: "KG이니시스 · 자동 연장" },
 ];
 
 /** 관리자 — 구독 없이 Pro(추천주식·과거 리포트) 전부 열람 */

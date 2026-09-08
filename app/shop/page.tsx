@@ -8,7 +8,7 @@ import { BUSINESS_INFO } from "@/lib/businessInfo";
 export const metadata: Metadata = {
   title: "유료 상품 · 스토어 | Investus",
   description:
-    "Investus Pro 구독(월 5,900원·연간 할인)과 투자 전략 전자책(19,900원)을 구매할 수 있습니다. 카카오페이·카드 결제 지원.",
+    "Investus Pro 구독(월 5,900원·연간 할인)과 투자 전략 전자책(19,900원)을 구매할 수 있습니다. 신용·체크카드(KG이니시스) 결제 지원.",
   alternates: { canonical: SHOP_INDEX_URL },
   robots: { index: true, follow: true },
 };
