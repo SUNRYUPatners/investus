@@ -16,7 +16,12 @@ alwaysApply: false
    - **레퍼런스 Read:** `kr-seed-118`, `safe-seed-107` (8/29 품질)
 5. **안전자산(`safe`)**: 한장요약 + BTC·금 필수 + 이슈 자산 2~3 (총 5~6 seed)
 6. **한국주식(`kr`)**: 삼성·하이닉스 필수 + 시총 탑5 이슈 2~3 + 한장요약
-7. **SVG**: `public/charts/*20260702*.svg` 메인 Read. 7/4 금지. noteSub 3~4줄 한글.
+7. **SVG — 초보가 이미지만으로 이해 (2026-09-08~ · 필수)**  
+   - `public/charts/*20260702*.svg` 메인 Read. 7/4 금지. noteSub 3~4줄 한글.  
+   - **금지:** 카드 `제한/구역`, `무핸들/그림` 식 **1~2단어만**. mid·sub는 **짧은 설명 절**.  
+   - **필수:** heroSub에 **용어 정의 2문장**; quote에 **무슨 일+숫자+괄호 풀이**; L6 그리드 **영문 칩 금지**.  
+   - 배포 전 KO SVG Read로 「처음 보는 사람이 이해하나?」 자가 테스트. 상세는 스킬 「SVG — 이미지만으로 초보 이해」.  
+   - **본문 섹션**도 숫자·일정 중심 + **장기 긍정** (스킬 「본문 섹션 — 숫자·일정 중심」).
 8. 팩트: 스크린샷(US) / 웹 검색(kr·safe·kr-re). 숫자 창작 금지
 9. **애널 댓글:** `comments: N` → `MOCK_ANALYST_COMMENTS_*` N개. `validate-analyst-mock-sync.js` 필수 (4시장)
 10. **종토방 소셜:** 당일 배치 1회 · 문장형 본문 · 댓글 복붙 금지. `validate-wall-social.js` 필수 (kr/safe/kr-re)
