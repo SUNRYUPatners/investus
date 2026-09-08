@@ -20,18 +20,18 @@
   <rect x="60" y="396" width="300" height="196" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">🥇</text>
   <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#facc15" text-anchor="middle">헤지</text>
-  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">동행</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">금 서사</text>
+  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금과 헤지 동행</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">안전자산 서사</text>
   <rect x="390" y="396" width="300" height="196" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🏭</text>
   <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#facc15" text-anchor="middle">산업</text>
-  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">수요</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">태양광·전자</text>
+  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">산업 수요 축</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">태양광·전자 배선</text>
   <rect x="720" y="396" width="300" height="196" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">💱</text>
   <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#facc15" text-anchor="middle">달러</text>
-  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">공통</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">단기</text>
+  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">달러와 공통 분모</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">단기 가격 변수</text>
   <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="656" font-family="Arial" font-size="19" fill="#facc15" text-anchor="middle">은은 금보다 산업 비중이 큽니다. 헤지 서사만으로 설명하면 수요 사이클을 놓칩니다. 금은비율이 벌어지면</text>
   <text x="540" y="682" font-family="Arial" font-size="19" fill="#facc15" text-anchor="middle">해석이 갈리니 두 줄을 나누시기 바랍니다.</text>

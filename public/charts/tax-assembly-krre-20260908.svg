@@ -23,18 +23,18 @@
   <rect x="60" y="450" width="300" height="178" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📅</text>
   <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#a78bfa" text-anchor="middle">일정</text>
-  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">국회</text>
-  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">논의</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">국회 일정·논의</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">확정 전 관측 구간</text>
   <rect x="390" y="450" width="300" height="178" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">🏠</text>
   <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#a78bfa" text-anchor="middle">실거주</text>
-  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">우대</text>
-  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">구분</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">실거주 우대 구분</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">보유·양도 논의</text>
   <rect x="720" y="450" width="300" height="178" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">🏢</text>
   <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#a78bfa" text-anchor="middle">임대</text>
-  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">매물</text>
-  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">영향</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">임대 매물 영향</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">공급 심리와 연결</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="690" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">수정안이 국회로 가면 상담이 확정처럼 들리기 쉽습니다. 아직 법·시행령 전입니다. 본인 명의·주택 수로</text>
   <text x="540" y="716" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">시뮬레이션한 뒤에야 매도·매수 표를 만드시기 바랍니다.</text>

@@ -20,18 +20,18 @@
   <rect x="60" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">📈</text>
   <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">+2.48%</text>
-  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">등락</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일</text>
+  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전일 대비 등락</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일 종가 기준</text>
   <rect x="390" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">💱</text>
   <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">1,340</text>
-  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">원·달러</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">강세</text>
+  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">원·달러 강세</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">수입 원가 부담 완화</text>
   <rect x="720" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">🛢</text>
   <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">유가</text>
-  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">수요</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">단기</text>
+  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">단기 수요 신호</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">유가·환율과 같이 봄</text>
   <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="656" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">반도체 중심 급등일에 완성차는 따라가되 덜 가는 전형입니다. 모빌리티·수소는 중기 칸이고, 미국</text>
   <text x="540" y="682" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">판매·환율·유가를 단기 칸에 두시기 바랍니다.</text>

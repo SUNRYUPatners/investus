@@ -15,34 +15,34 @@
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">🇨🇳</text>
   <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#4ade80" text-anchor="middle">9월</text>
-  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">모델3 재고 5천 위안·모델Y 1만 위안, 도장·보험·최장 5년 무이자입니다. 도매 10개월 연속 성장 유지가</text>
-  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">목표입니다.</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">모델3 재고 5천 위안·모델Y 1만 위안, 도장·보험·최장 5년 무이자가 붙습니다. 도매 10개월 연속 성장 유지가</text>
+  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">목표로 읽힙니다.</text>
   <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">모델3</text>
   <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">¥5k</text>
-  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">재고</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">할인</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">재고차 할인 폭</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 프로모션</text>
   <rect x="390" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">모델Y</text>
   <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">¥10k</text>
-  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">재고</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">할인</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">재고차 할인 폭</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 프로모션</text>
   <rect x="720" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">금융</text>
   <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">0%</text>
-  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">최장 5년</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">무이자</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">최장 5년 무이자</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">할부 이자 부담 완화</text>
   <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">패키지 구성</text>
   <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">🎨 도장 혜택 최대 8,000위안</text>
   <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🛡 일부 모델3 보험 8,000위안</text>
   <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">📈 도매 전년 대비 10개월 연속</text>
-  <rect x="60" y="800" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="830" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">할인은 볼륨 방어와 마진 압력의 동시 신호입니다. 월간 도매·소매·재고 일수를 보고 ASP 가정을 조정하시기 바랍니다. 무이자</text>
-  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">잔고의 신용 비용도 공시에서 찾으시면 됩니다.</text>
-  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 중국 판매 · 2026.09.08</text>
+  <rect x="60" y="792" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="822" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="850" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">할인은 볼륨 방어와 마진 압력의 동시 신호입니다. 월간 도매·소매·재고 일수를 보고 ASP(평균판매가격) 가정을 조정하시기</text>
+  <text x="540" y="872" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">바랍니다. 무이자 잔고의 신용 비용도 공시에서 찾으시면 됩니다. 장기적으로는 중국 수요 유지가 글로벌 인도 안정에 중요합니다.</text>
+  <text x="540" y="990" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 중국 판매 · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

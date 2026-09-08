@@ -23,18 +23,18 @@
   <rect x="60" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">🥇</text>
   <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">금</text>
-  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">공통</text>
-  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">달러 표시</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금과 공통 분모</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">달러 표시 가격</text>
   <rect x="390" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">₿</text>
   <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">비트코인</text>
-  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">공통</text>
-  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">달러 표시</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">비트코인과 공통</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">달러 유동성 축</text>
   <rect x="720" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">⚙️</text>
   <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">은·구리</text>
-  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">공통</text>
-  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">달러 표시</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">은·구리와 공통</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">달러 강세 부담</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="690" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">원·달러 1,340.5원은 국내 체감이고 달러인덱스는 글로벌 체감입니다. 두 줄이 같은 날 반대로 보일 수 있으니</text>
   <text x="540" y="716" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">섞지 마시기 바랍니다.</text>

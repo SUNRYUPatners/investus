@@ -22,18 +22,18 @@
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#201408" stroke="#f7931a" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📈</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f7931a" text-anchor="middle">8만</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">심리선</text>
-  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">안착 관찰</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">8만 달러 심리선</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">안착 여부 관찰</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#201408" stroke="#f7931a" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🥇</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f7931a" text-anchor="middle">0.56</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금 상관</text>
-  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">90일</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금과의 상관</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">최근 90일 기준</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#201408" stroke="#f7931a" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">⚖️</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#f7931a" text-anchor="middle">18.17</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금 비율</text>
-  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">온스</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금 대비 비율</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">온스 환산 비교</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="686" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">상관이 금처럼 보여도 청산 속도는 암호화폐입니다. 비율이 오르면 비트코인이 금보다 상대적으로 강했다는</text>
   <text x="540" y="712" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">뜻이지, 위험이 사라진 뜻은 아닙니다. 현물 펀드 유입을 가격과 따로 적으시기 바랍니다.</text>

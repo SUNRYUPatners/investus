@@ -23,18 +23,18 @@
   <rect x="60" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
   <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">+2.27%</text>
-  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">등락</text>
-  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전일 대비 등락</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일 종가 기준</text>
   <rect x="390" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">📉</text>
   <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">금리</text>
-  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">경로</text>
-  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">연준</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금리 경로 민감</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">연준·국내 금리 동행</text>
   <rect x="720" y="450" width="300" height="178" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">💱</text>
   <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#ef4444" text-anchor="middle">환율</text>
-  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">민감</text>
-  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">동행</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">환율에 민감</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">지수 상승과 같은 날</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="690" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">하루 +2.27%는 분기 이익 확인이 아닙니다. 마진 기대와 연체·신용 비용을 한 화면에 두시고, 반도체 급등일을</text>
   <text x="540" y="716" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">금융 추격 이유로만 쓰지 마시기 바랍니다.</text>

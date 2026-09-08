@@ -15,33 +15,33 @@
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">💾</text>
   <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#a78bfa" text-anchor="middle">SF2</text>
-  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">2나노급 공정에서 설계와 팹이 한 패키지로 붙습니다. 고객·물량은 추가 확인이 필요합니다.</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">2나노급 공정에서 칩 설계(암)와 생산(삼성 팹)이 한 패키지로 붙습니다. 고객·물량은 추가 확인이 필요합니다.</text>
   <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="418" width="300" height="176" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">공정</text>
   <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#a78bfa" text-anchor="middle">2nm</text>
-  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">SF2</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">삼성 노드</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">삼성 SF2 노드</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">최선단 양산 후보</text>
   <rect x="390" y="418" width="300" height="176" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">역할</text>
   <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#a78bfa" text-anchor="middle">설계+팹</text>
-  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">패키지</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">암·삼성</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">한 패키지로 묶음</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">암 IP + 삼성 생산</text>
   <rect x="720" y="418" width="300" height="176" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">목적</text>
   <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#a78bfa" text-anchor="middle">AI</text>
-  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">가속기</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">연산 칩</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">연산 가속기 칩</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">인공지능 서버용</text>
   <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">왜 묶이나</text>
   <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">🧠 암에 인공지능 연산 스택 확장</text>
   <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🏭 삼성에 2나노 실전 레퍼런스</text>
   <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🌐 파운드리 선택지 다양화</text>
-  <rect x="60" y="800" width="960" height="148" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="1"/>
-  <text x="540" y="830" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">발표는 옵션이지 확정 수주가 아닙니다. 샘플·양산 분기와 벤치마크가 다음 게이트입니다. TSMC·자체 칩 일정과 같은 표에 두고,</text>
-  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">로열티·웨이퍼 매출 코멘트를 실적에서 확인하시기 바랍니다.</text>
-  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">반도체 · 암·삼성 · 2026.09.08</text>
+  <rect x="60" y="792" width="960" height="176" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="1"/>
+  <text x="540" y="822" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="850" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">발표는 옵션이지 확정 수주가 아닙니다. 샘플·양산 분기와 벤치마크가 다음 게이트입니다. TSMC·자체 칩 일정과 같은 표에 두고,</text>
+  <text x="540" y="872" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">로열티·웨이퍼 매출 코멘트를 실적에서 확인하시기 바랍니다. 장기적으로는 선단 노드 선택지가 늘면 구매자 협상력이 커집니다.</text>
+  <text x="540" y="990" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">반도체 · 암·삼성 · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

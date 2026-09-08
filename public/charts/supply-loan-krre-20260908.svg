@@ -21,18 +21,18 @@
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏗️</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">공급</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">느림</text>
-  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">수년</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">공급은 수년 단위</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">즉시 늘기 어려움</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏦</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">대출</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">즉시</text>
-  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">규제</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">대출은 즉시 규제</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">매매 심리에 바로 영향</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">👨‍👩‍👧</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#a78bfa" text-anchor="middle">실수요</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">먼저</text>
-  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">압박</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">실수요가 먼저</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">투자 수요보다 압박</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="686" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">지을 곳은 열어 두고 살 길은 막는 구조로 읽히면 정책 정합성 논쟁이 커집니다. 공급 헤드라인만으로 매매를</text>
   <text x="540" y="712" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">서두르지 마시고 대출 가능액을 먼저 계산하시기 바랍니다.</text>

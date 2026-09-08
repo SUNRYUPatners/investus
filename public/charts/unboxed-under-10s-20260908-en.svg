@@ -15,7 +15,8 @@
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🏭</text>
   <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#4ade80" text-anchor="middle">&lt;10s</text>
-  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Long-term goal 5 seconds versus about 34 seconds cited for Model Y—modular takt design.</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Unboxed means large modular body assembly to cut takt time. Long-term goal 5s versus about 34s</text>
+  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">cited for Model Y.</text>
   <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
   <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Model Y</text>
   <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">~34s</text>
@@ -28,26 +29,26 @@
   <rect x="60" y="548" width="300" height="164" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">🏭</text>
   <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">&lt;10s</text>
-  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Design now</text>
-  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Line cycle</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Design cycle now</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Seconds per vehicle</text>
   <rect x="390" y="548" width="300" height="164" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">🎯</text>
   <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">5s</text>
-  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Long goal</text>
-  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Takt</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Long-term takt</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Higher throughput</text>
   <rect x="720" y="548" width="300" height="164" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">📦</text>
-  <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">Unboxed</text>
-  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Modules</text>
-  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Throughput</text>
-  <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="776" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Ten seconds per vehicle implies hundreds per hour on paper. Yield and logistics cut real output—always</text>
-  <text x="540" y="801" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">split design cycle from weekly finished units.</text>
-  <rect x="60" y="878" width="960" height="140" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="908" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Confirm the Model Y 34s definition matches. Unboxed is a cost-moat door, but speed without yield raises rework.</text>
-  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Next gate: weekly production output.</text>
-  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · unboxed · 2026.09.08</text>
+  <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">Modules</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Unboxed assembly</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Cost and speed lever</text>
+  <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="768" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">Ten seconds per vehicle implies hundreds per hour on paper. Yield and logistics cut real output—always split</text>
+  <text x="540" y="791" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">design cycle from weekly finished units.</text>
+  <rect x="60" y="874" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="904" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Confirm the Model Y 34s definition matches. Speed without yield raises rework. Next gate: weekly production</text>
+  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">output. Over time, stable throughput softens robotaxi cost debates.</text>
+  <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · unboxed · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

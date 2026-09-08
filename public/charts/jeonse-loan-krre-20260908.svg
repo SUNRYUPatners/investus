@@ -20,18 +20,18 @@
   <rect x="60" y="418" width="300" height="176" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="2"/>
   <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">임차</text>
   <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#fb923c" text-anchor="middle">한도↓</text>
-  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">현금</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">부족</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">한도 축소·현금</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">보증금 조달 부담</text>
   <rect x="390" y="418" width="300" height="176" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="2"/>
   <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">임대</text>
   <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#fb923c" text-anchor="middle">갱신</text>
-  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">반환</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">압박</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">갱신·반환 압박</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">계약 종료 시점 이슈</text>
   <rect x="720" y="418" width="300" height="176" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="2"/>
   <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">시장</text>
   <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#fb923c" text-anchor="middle">월세</text>
-  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">전환</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">가속</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">월세 전환 가속</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">전세 대비 선택지</text>
   <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">왜 가격보다 금융이 먼저인가</text>
   <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">🏦 전세대출은 임차·임대 양측 유동성입니다</text>

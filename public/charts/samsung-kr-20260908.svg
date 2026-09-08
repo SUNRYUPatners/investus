@@ -23,18 +23,18 @@
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📈</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="middle">+5.68%</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">등락</text>
-  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">전일 대비 등락</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일 종가 기준</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🌏</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="middle">8,817억</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">외인</text>
-  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">순매수</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">외국인 순매수</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">약 8,817억 원 거론</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">🎯</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#60a5fa" text-anchor="middle">40만</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">목표가</text>
-  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">의견</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">중기 목표가</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">의견일 뿐 확정 아님</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="686" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">외국인 하루 매수는 수급 앵커이지 수요 증명이 아닙니다. 목표가 상향은 컨센서스 의견이므로 종가와</text>
   <text x="540" y="712" font-family="Arial" font-size="19" fill="#60a5fa" text-anchor="middle">가중치를 다르게 두시기 바랍니다. 27만 원대에서 분할 기준을 문장으로 남겨 두시면 됩니다.</text>

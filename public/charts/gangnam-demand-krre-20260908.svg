@@ -20,18 +20,18 @@
   <rect x="60" y="396" width="300" height="196" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="2"/>
   <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">🏫</text>
   <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#fb923c" text-anchor="middle">학군</text>
-  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">수요</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">캘린더</text>
+  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">학군 수요 캘린더</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">이사·입학 시즌</text>
   <rect x="390" y="396" width="300" height="196" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="2"/>
   <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🏢</text>
   <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#fb923c" text-anchor="middle">직장</text>
-  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">직주</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">근접</text>
+  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">직장·직주 근접</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">출퇴근 선호 지역</text>
   <rect x="720" y="396" width="300" height="196" rx="16" fill="#20130a" stroke="#fb923c" stroke-width="2"/>
   <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">🏦</text>
   <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#fb923c" text-anchor="middle">대출</text>
-  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">매매</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">제약</text>
+  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">대출이 매매 제약</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">규제·금리와 함께</text>
   <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="656" font-family="Arial" font-size="19" fill="#fb923c" text-anchor="middle">전세가 매매보다 빠르면 빌려 사는 비용이 먼저 오릅니다. 전세가율이 높아도 대출이 막히면 매매 전환이 안</text>
   <text x="540" y="682" font-family="Arial" font-size="19" fill="#fb923c" text-anchor="middle">되고 전세만 더 오를 수 있습니다.</text>

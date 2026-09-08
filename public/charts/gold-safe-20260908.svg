@@ -20,18 +20,18 @@
   <rect x="60" y="418" width="300" height="176" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">온스</text>
   <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#facc15" text-anchor="middle">~4,400</text>
-  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">달러</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">밴드</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">달러 가격 밴드</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">온스당 약 4,400대</text>
   <rect x="390" y="418" width="300" height="176" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">상관</text>
   <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#facc15" text-anchor="middle">0.56</text>
-  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">vs 비트코인</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">90일</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">비트코인 대비</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">최근 90일 동행</text>
   <rect x="720" y="418" width="300" height="176" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">비율</text>
   <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#facc15" text-anchor="middle">18.17</text>
-  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">BTC/XAU</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">상대</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">BTC/금 비율</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">상대 강도 점검</text>
   <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">왜 헤지 축이 유지되나</text>
   <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">🥇 실질금리가 내리면 이자를 안 주는 금의 기회비용이 줄어듭니다</text>

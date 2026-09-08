@@ -13,33 +13,35 @@
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.08</text>
   <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Ship 42 finished cryo testing and rolled to production</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">🚀</text>
-  <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">Cryo ✓</text>
-  <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Raptor installation is next; Flight 15 is described as approaching.</text>
-  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">❄️</text>
-  <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">Cryo</text>
-  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Complete</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Tanks/lines</text>
-  <rect x="390" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🏭</text>
-  <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">Prod</text>
-  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Site</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Rolled back</text>
-  <rect x="720" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">🔧</text>
-  <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">Raptor</text>
-  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Install</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Next gate</text>
-  <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="656" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">Cryo pass is a pre-flight hardware gate. “Flight soon” is field tone, not a dated window—keep</text>
-  <text x="540" y="682" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">static fire, stack, and license slots on a checklist.</text>
-  <rect x="60" y="814" width="960" height="148" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="844" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Flight 15 is the next cadence link. Engine or weld retests can slip months. Tie Starlink deployment plans to launch</text>
-  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">success, but do not map SpaceX milestones one-for-one onto Tesla shares.</text>
-  <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SpaceX · Ship 42 · 2026.09.08</text>
+  <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">🚀</text>
+  <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">Cryo done</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Cryo validates tanks and lines at ultra-low temperature before flight. Raptor installation is next;</text>
+  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Flight 15 is described as approaching.</text>
+  <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">❄️</text>
+  <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Cryo</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Tanks/lines complete</text>
+  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Pre-flight hardware gate</text>
+  <rect x="390" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🏭</text>
+  <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Prod site</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Rolled back</text>
+  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Back to assembly</text>
+  <rect x="720" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🔧</text>
+  <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Raptor</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Install next</text>
+  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Next checklist item</text>
+  <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="658" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Cryo pass is a pre-flight hardware gate. “Flight soon” is field tone, not a dated window—keep static</text>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">fire, stack, and license slots on a checklist.</text>
+  <rect x="60" y="810" width="960" height="176" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="840" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
+  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Flight 15 is the next cadence link. Engine or weld retests can slip months. Tie Starlink deployment plans to launch</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">success, but do not map SpaceX milestones one-for-one onto Tesla shares. Over time, cadence builds the reuse</text>
+  <text x="540" y="912" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">economics story.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SpaceX · Ship 42 · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -28,18 +28,18 @@
   <rect x="60" y="548" width="300" height="164" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">🔌</text>
   <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee" text-anchor="middle">전력망</text>
-  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">중기</text>
-  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">수요</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">전력망 중기 수요</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">전기화 구조 테마</text>
   <rect x="390" y="548" width="300" height="164" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">📦</text>
   <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee" text-anchor="middle">재고</text>
-  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">단기</text>
-  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">수급</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">재고·단기 수급</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">현물 타이트 점검</text>
   <rect x="720" y="548" width="300" height="164" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">💱</text>
   <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee" text-anchor="middle">달러</text>
-  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">공통</text>
-  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">분모</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">달러 공통 분모</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">표시통화 변수</text>
   <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="776" font-family="Arial" font-size="18" fill="#22d3ee" text-anchor="middle">구리가 빠지고 금만 오르면 성장 둔화+헤지 조합일 수 있습니다. 같이 오르면 위험 선호가 금속까지 퍼진 날입니다.</text>
   <text x="540" y="801" font-family="Arial" font-size="18" fill="#22d3ee" text-anchor="middle">상대 성과를 표로 남기시기 바랍니다.</text>

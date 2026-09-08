@@ -17,38 +17,39 @@
   <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">HIRING · 21 CITIES</text>
   <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">21</text>
-  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Night shift implies 24/7 ops intent. A job post is not a launch.</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Night shift implies 24/7 ops intent. A job post is intent, not a paying launch.</text>
   <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🌃</text>
   <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Night</text>
-  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Shift</text>
-  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Overnight</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Overnight shifts</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">24/7 ops premise</text>
   <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🗺</text>
   <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">21</text>
-  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Cities</text>
-  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Posting scale</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Posted cities</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Hiring scale signal</text>
   <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🔧</text>
   <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Fleet</text>
-  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Support</text>
-  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">On-site</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">On-site support</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Incidents and checks</text>
   <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">🚕</text>
-  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Cab</text>
-  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Expand</text>
-  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Framing</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Expand</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Robotaxi framing</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Needs permits and cars</text>
   <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">Posted city ≠ paying service city</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Permits and cars must follow</text>
-  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="740" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Fleet support supervisors stitch incidents, inspections, and shifts on the ground. More cities raise</text>
-  <text x="540" y="765" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">headcount dollars—unless vehicles scale faster per city.</text>
-  <rect x="60" y="842" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="872" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Bellevue, San Diego, Torrance, San Antonio, Dallas appear in the board. Contrast postings with live geofences</text>
-  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">monthly, and haircut full-driverless margin assumptions while labor remains in the stack.</text>
-  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · fleet hiring · 2026.09.08</text>
+  <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="736" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">Fleet support supervisors stitch incidents, inspections, and shifts on the ground. More cities raise</text>
+  <text x="540" y="760" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">headcount dollars—unless vehicles scale faster per city.</text>
+  <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="880" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Bellevue, San Diego, Torrance, San Antonio, Dallas appear in the board. Contrast postings with live geofences</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">monthly, and haircut full-driverless margin assumptions while labor remains in the stack. Over time, fewer humans</text>
+  <text x="540" y="952" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">per car improves unit margins.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · fleet hiring · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

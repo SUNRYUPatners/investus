@@ -29,18 +29,18 @@
   <rect x="60" y="548" width="300" height="164" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">🧬</text>
   <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa" text-anchor="middle">+1.31%</text>
-  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">등락</text>
-  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">전일 대비 등락</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">9월 7일 종가 기준</text>
   <rect x="390" y="548" width="300" height="164" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">📋</text>
   <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa" text-anchor="middle">수주</text>
-  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">중기</text>
-  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">가동률</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">수주·가동률</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">중기 실적 레버</text>
   <rect x="720" y="548" width="300" height="164" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">💱</text>
   <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa" text-anchor="middle">환율</text>
-  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">단기</text>
-  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">채산성</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">환율·채산성</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">단기 마진 변수</text>
   <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="776" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">위탁개발생산 수주는 분기 실적에서 확인됩니다. 하루 +1.31%를 수주 증명으로 쓰지 마시고, 반도체·금융 대비 상대</text>
   <text x="540" y="801" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">성과를 표로 남기시기 바랍니다.</text>

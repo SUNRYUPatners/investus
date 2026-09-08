@@ -17,31 +17,33 @@
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="86" font-weight="900" fill="#ef4444" text-anchor="middle" opacity=".15">📉</text>
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#ef4444" text-anchor="middle">📉</text>
   <text x="540" y="298" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">−2%</text>
-  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">15년 이상 만기의 10년 롤링 연율화 수익률입니다. 장기 진입 논평이 같은 차트에 붙었습니다.</text>
+  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">만기가 15년 넘는 국채를 10년 동안 들고 있을 때 나온 연율화 수익률입니다. 장기 진입을 말하는 논평이</text>
+  <text x="540" y="364" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">같은 차트에 붙었습니다.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📅</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="middle">2026.8</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">저점 월</text>
-  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">시리즈 최저권</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">저점이 찍힌 달</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">긴 시계열에서 최저권</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">📜</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="middle">1959</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">이전 저점</text>
-  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">0% 근처 비교</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">이전 저점 연도</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">당시엔 0% 근처 비교</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">⏱</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="middle">10년</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">롤링</text>
-  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">보유 성과 지표</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">롤링 보유 창</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">쿠폰 대비 가격 성과</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="686" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">롤링 −2%는 지난 10년 가격 손실이 쿠폰을 압도했다는 뜻입니다. 앞으로의 시작 수익률이 높아질 수 있어 장기</text>
-  <text x="540" y="712" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">진입 논평이 나오지만, 물가·재정이 변수입니다.</text>
-  <rect x="60" y="844" width="960" height="148" rx="14" fill="#1c0d0d" stroke="#ef4444" stroke-width="1"/>
-  <text x="540" y="874" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">−2%가 앞으로 10년 수익을 보장하지는 않습니다. 명목·실질 10년물과 근원 물가를 같은 표에 두고, 듀레이션 레버리지는 별도 칸에</text>
-  <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">두시기 바랍니다. 성장주 할인율과 연결해 보시면 포트폴리오 의미가 커집니다.</text>
-  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">매크로 · 장기국채 · 2026.09.08</text>
+  <text x="540" y="686" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">롤링 −2%는 지난 10년 가격 손실이 이자(쿠폰)를 압도했다는 뜻입니다. 앞으로의 시작 수익률이 높아질 수</text>
+  <text x="540" y="710" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">있어 장기 진입 논평이 나오지만, 물가·재정은 여전히 변수입니다.</text>
+  <rect x="60" y="838" width="960" height="172" rx="14" fill="#1c0d0d" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="868" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">−2%가 앞으로 10년 수익을 보장하지는 않습니다. 명목·실질 10년물과 근원 물가를 같은 표에 두고, 레버리지 듀레이션은 별도 칸에</text>
+  <text x="540" y="918" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">두시기 바랍니다. 성장주 할인율과 연결하면 포트폴리오 의미가 커집니다. 장기적으로는 시작 수익률이 높은 구간이 복리의</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">출발점이 될 수 있습니다.</text>
+  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">매크로 · 장기국채 · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -121,7 +121,7 @@ function foot(p, footer, ko, y){
 function noteBox(p, o, y, h, ko){
   return `  <rect x="60" y="${y}" width="960" height="${h}" rx="14" fill="${p.card}" stroke="${p.fg}" stroke-width="1"/>
   <text x="540" y="${y+30}" font-family="Arial" font-size="18" fill="${p.fg}" text-anchor="middle">${esc(o.noteHead || (ko ? '왜 중요한가' : 'Why it matters'))}</text>
-${ml(o.noteSub, 540, y+62, 16, 940, 4, 22, `font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle"`)}`;
+${ml(o.noteSub, 540, y+58, 16, 940, 5, 22, `font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle"`)}`;
 }
 
 function quoteBox(p, text, y, h, size, maxLines, lh){
@@ -149,9 +149,9 @@ ${ml(o.title, 540, 108, 28, 970, 2, 36, `font-family="Arial Black,Arial" font-si
 ${ml(o.heroBig, 540, 298, 42, 940, 1, 44, `font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle"`)}
 ${ml(o.heroSub, 540, 338, 20, 940, 2, 26, `font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle"`)}
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>${cards}
-${quoteBox(p, o.quote, 640, 186, 19, 4, 26)}
-${noteBox(p, o, 844, 148, ko)}
-${foot(p, o.footer, ko, 1024)}`);
+${quoteBox(p, o.quote, 640, 186, 19, 5, 24)}
+${noteBox(p, o, 838, 172, ko)}
+${foot(p, o.footer, ko, 1028)}`);
 }
 
 // ── L2 · 이모지 히어로 + 3-스탯 카드 + 상세 리스트 박스 ──────────────────────
@@ -178,8 +178,8 @@ ${ml(o.heroSub, 540, 358, 19, 940, 2, 25, `font-family="Arial" font-size="19" fi
   <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">${esc(o.detailHead)}</text>
 ${lines}
-${noteBox(p, o, 800, 148, ko)}
-${foot(p, o.footer, ko, 1000)}`);
+${noteBox(p, o, 792, 176, ko)}
+${foot(p, o.footer, ko, 990)}`);
 }
 
 // ── L3 · 체크/이모지 히어로 + 피처 카드 3개 + 큰 인용박스 ─────────────────────
@@ -188,22 +188,22 @@ function L3(o, ko){
   const cards = o.cards.map((c, i) => {
     const x = [60, 390, 720][i];
     return `
-  <rect x="${x}" y="396" width="300" height="196" rx="16" fill="${p.card}" stroke="${p.fg}" stroke-width="2"/>
-  <text x="${x+150}" y="448" font-family="Arial" font-size="40" text-anchor="middle">${c.icon}</text>
-${ml(c.big, x+150, 502, 28, 272, 1, 30, `font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
-${ml(c.mid, x+150, 534, 18, 272, 1, 22, `font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle"`)}
-${ml(c.sub, x+150, 560, 15, 274, 2, 19, `font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle"`)}`;
+  <rect x="${x}" y="386" width="300" height="210" rx="16" fill="${p.card}" stroke="${p.fg}" stroke-width="2"/>
+  <text x="${x+150}" y="438" font-family="Arial" font-size="40" text-anchor="middle">${c.icon}</text>
+${ml(c.big, x+150, 492, 26, 272, 1, 28, `font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
+${ml(c.mid, x+150, 524, 17, 272, 2, 20, `font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle"`)}
+${ml(c.sub, x+150, 568, 14, 274, 2, 18, `font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle"`)}`;
   }).join('');
   return shell(p, `${head(p, o.badge, ko)}
 ${ml(o.title, 540, 106, 28, 970, 2, 34, `font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle"`)}
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">${o.heroIcon}</text>
-${ml(o.heroBig, 540, 306, 44, 940, 1, 46, `font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle"`)}
-${ml(o.heroSub, 540, 344, 19, 940, 2, 25, `font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle"`)}
-  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>${cards}
-${quoteBox(p, o.quote, 610, 186, 19, 4, 26)}
-${noteBox(p, o, 814, 148, ko)}
-${foot(p, o.footer, ko, 1002)}`);
+  <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">${o.heroIcon}</text>
+${ml(o.heroBig, 540, 292, 42, 940, 1, 44, `font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle"`)}
+${ml(o.heroSub, 540, 332, 18, 940, 2, 24, `font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle"`)}
+  <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>${cards}
+${quoteBox(p, o.quote, 612, 186, 18, 5, 24)}
+${noteBox(p, o, 810, 176, ko)}
+${foot(p, o.footer, ko, 1004)}`);
 }
 
 // ── L4 · 배지 + 문구 히어로 + 아이콘 카드 3개 + 큰 인용박스 ───────────────────
@@ -228,9 +228,9 @@ ${ml(o.title, 540, 106, 28, 970, 2, 34, `font-family="Arial Black,Arial" font-si
 ${ml(o.heroBig, 540, 352, 38, 940, 1, 40, `font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
 ${ml(o.heroSub, 540, 392, 19, 940, 2, 25, `font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle"`)}
   <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>${cards}
-${quoteBox(p, o.quote, 644, 186, 19, 4, 26)}
-${noteBox(p, o, 848, 144, ko)}
-${foot(p, o.footer, ko, 1024)}`);
+${quoteBox(p, o.quote, 644, 186, 19, 5, 24)}
+${noteBox(p, o, 842, 172, ko)}
+${foot(p, o.footer, ko, 1030)}`);
 }
 
 // ── L5 · Before → After 비교 + 카드 3개 ─────────────────────────────────────
@@ -260,9 +260,9 @@ ${ml(o.before.sub, 270, 496, 16, 388, 1, 20, `font-family="Arial" font-size="16"
   <text x="810" y="400" font-family="Arial" font-size="20" fill="${p.fg}" text-anchor="middle">${esc(o.after.label)}</text>
 ${ml(o.after.big, 810, 460, 44, 384, 1, 46, `font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
 ${ml(o.after.sub, 810, 496, 16, 388, 1, 20, `font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle"`)}${cards}
-${quoteBox(p, o.quote, 730, 134, 18, 3, 25)}
-${noteBox(p, o, 878, 140, ko)}
-${foot(p, o.footer, ko, 1042)}`);
+${quoteBox(p, o.quote, 722, 142, 17, 4, 23)}
+${noteBox(p, o, 874, 168, ko)}
+${foot(p, o.footer, ko, 1056)}`);
 }
 
 // ── L6 · BREAKING 배지 + 히어로 밴드 + 4칸 그리드 + 컨텍스트 ─────────────────
@@ -285,13 +285,13 @@ ${ml(o.title, 540, 104, 28, 970, 2, 34, `font-family="Arial Black,Arial" font-si
   <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">${esc(o.breaking)}</text>
   <rect x="80" y="220" width="920" height="132" rx="18" fill="${p.card}" stroke="${p.fg}" stroke-width="2"/>
 ${ml(o.heroBig, 540, 288, 50, 880, 1, 52, `font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
-${ml(o.heroSub, 540, 324, 19, 880, 1, 24, `font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle"`)}${grid}
+${ml(o.heroSub, 540, 324, 17, 880, 2, 22, `font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle"`)}${grid}
   <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
 ${ml(o.ctx1, 540, 606, 21, 890, 1, 26, `font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle"`)}
 ${ml(o.ctx2, 540, 644, 18, 890, 1, 24, `font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle"`)}
-${quoteBox(p, o.quote, 694, 134, 18, 3, 25)}
-${noteBox(p, o, 842, 148, ko)}
-${foot(p, o.footer, ko, 1026)}`);
+${quoteBox(p, o.quote, 690, 148, 17, 4, 24)}
+${noteBox(p, o, 850, 168, ko)}
+${foot(p, o.footer, ko, 1034)}`);
 }
 
 // ── ROWS · 한장요약 가로 줄 나열 ─────────────────────────────────────────────

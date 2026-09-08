@@ -17,31 +17,32 @@
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="86" font-weight="900" fill="#4ade80" text-anchor="middle" opacity=".15">🏭</text>
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#4ade80" text-anchor="middle">🏭</text>
   <text x="540" y="298" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">7,500</text>
-  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Special shifts extend runtime—a read on Europe’s supply ceiling.</text>
+  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Special shifts extend runtime toward ~7,500 Model Y per week. A read on Europe’s supply</text>
+  <text x="540" y="364" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">ceiling.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📅</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Mid-Oct</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Timing</text>
-  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Target</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Target start window</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">When volume ramps</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🚗</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">MY</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Model Y</text>
-  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Volume car</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Model Y volume car</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Europe’s main EV</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">⏱</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#4ade80" text-anchor="middle">Shifts</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Special</text>
-  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">More hours</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Special overtime</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">More plant hours</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="686" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">7,500/week annualizes near ~390k on 52 weeks, but holidays and yield cut the year. Do not raise</text>
-  <text x="540" y="712" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">annual guides before a 2–3 week average prints.</text>
-  <rect x="60" y="844" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="874" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">If output cuts wait times, deliveries benefit; if inventory stacks, discounts may follow. Add Shanghai and Texas when</text>
-  <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">you size global supply.</text>
-  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Giga Berlin · 2026.09.08</text>
+  <text x="540" y="710" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">annual guides before a 2–3 week average prints.</text>
+  <rect x="60" y="838" width="960" height="172" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="868" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">If output cuts wait times, deliveries benefit; if inventory stacks, discounts may follow. Add Shanghai and Texas when</text>
+  <text x="540" y="918" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">you size global supply. Over time, more European capacity lowers local supply risk.</text>
+  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Giga Berlin · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

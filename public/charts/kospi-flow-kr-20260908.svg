@@ -22,23 +22,23 @@
   <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
   <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#22d3ee" text-anchor="middle">+4.61%</text>
-  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">코스피</text>
-  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">9/7 종가</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">코스피 전일 종가</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">9월 7일 마감 기준</text>
   <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏦</text>
   <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#22d3ee" text-anchor="middle">외인·기관</text>
-  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">매수</text>
-  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">개인 매도</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">외국인·기관 매수</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">개인은 순매도 쪽</text>
   <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">💾</text>
   <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#22d3ee" text-anchor="middle">2.25조</text>
-  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">삼전+하이닉스</text>
-  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">외인 집중</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">반도체 두 종목</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">외인 매수 집중</text>
   <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1c22" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">💱</text>
   <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#22d3ee" text-anchor="middle">−9.9</text>
-  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">원·달러</text>
-  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">1,340.5</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">원·달러 환율</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">약 1,340.5원 인용</text>
   <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">반도체 집중 매수와 지수 수급을 같은 문장에 섞지 마시기 바랍니다.</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">7,000선은 종가와 수급이 같이 확인할 때만 안착으로 적으시기 바랍니다.</text>

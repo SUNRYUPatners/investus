@@ -14,33 +14,34 @@
   <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">루이지애나 인근 운하를 약 16피트로 준설해 스타십 바지선을</text>
   <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">준비합니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">🚢</text>
-  <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">16ft</text>
-  <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">담수 바이유 운하 작업입니다. 약 1,000억 달러급 거점 서사의 물류 입구입니다.</text>
-  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">🌊</text>
-  <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">16ft</text>
-  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">수심</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">목표 회복</text>
-  <rect x="390" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🏗</text>
-  <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">$100B</text>
-  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">거점</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">스케일 서사</text>
-  <rect x="720" y="396" width="300" height="196" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
-  <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">📦</text>
-  <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#c084fc" text-anchor="middle">바지선</text>
-  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">수송</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">텍사스→LA</text>
-  <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="656" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">대형 선체는 도로보다 해상·운하가 효율적입니다. 준설은 발사 사진보다 덜 화려하지만 케이던스의 지상</text>
-  <text x="540" y="682" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">병목을 푸는 작업입니다.</text>
-  <rect x="60" y="814" width="960" height="148" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
-  <text x="540" y="844" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">환경·허가 지연이 있으면 램프가 밀립니다. 바지선 시험 운항과 수심 측정이 다음 확인 포인트입니다. 1,000억 달러를 당기</text>
-  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">집행액으로 오인하지 마시기 바랍니다.</text>
-  <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 루이지애나 준설 · 2026.09.08</text>
+  <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">🚢</text>
+  <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">16ft</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">담수 바이유 운하를 깊게 파서 대형 선체(바지선)가 지나가게 하는 작업입니다. 약 1,000억 달러급 거점 서사의 물류</text>
+  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">입구입니다.</text>
+  <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🌊</text>
+  <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">16ft</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">목표 회복 수심</text>
+  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">운하 준설 깊이</text>
+  <rect x="390" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🏗</text>
+  <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">$100B</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">거점 스케일 서사</text>
+  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">당기 집행액은 아님</text>
+  <rect x="720" y="386" width="300" height="210" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">📦</text>
+  <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">바지선</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">텍사스→루이지애나</text>
+  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">대형 선체 해상 수송</text>
+  <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="658" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">대형 선체는 도로보다 해상·운하가 효율적입니다. 준설은 발사 사진보다 덜 화려하지만 케이던스의 지상 병목을</text>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">푸는 작업입니다. 목표 수심은 약 16피트입니다.</text>
+  <rect x="60" y="810" width="960" height="176" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="840" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">환경·허가 지연이 있으면 램프가 밀립니다. 바지선 시험 운항과 수심 측정이 다음 확인 포인트입니다. 1,000억 달러를 당기</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">집행액으로 오인하지 마시기 바랍니다. 장기적으로 물류가 열리면 발사 빈도를 올릴 여지가 생깁니다.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 루이지애나 준설 · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

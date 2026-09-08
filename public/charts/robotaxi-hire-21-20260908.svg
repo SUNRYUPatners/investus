@@ -17,38 +17,38 @@
   <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">채용 · 21도시</text>
   <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#4ade80" text-anchor="middle">21</text>
-  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">야간 교대는 24시간 운행 전제입니다. 채용은 의도 신호이지 즉시 오픈이 아닙니다.</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">야간 교대는 24시간 운행을 전제로 한 인력 신호입니다. 채용 공고는 의도이지 즉시 유료 오픈이 아닙니다.</text>
   <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🌃</text>
-  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Night</text>
-  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">교대</text>
-  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">야간</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">야간</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">교대 근무</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">24시간 운행 전제</text>
   <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🗺</text>
   <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">21</text>
-  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">도시</text>
-  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">공고 규모</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">공고 도시 수</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">채용 규모 신호</text>
   <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🔧</text>
-  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Fleet</text>
-  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">지원</text>
-  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">현장 감독</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">플릿</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">현장 지원·감독</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">장애·점검 대응</text>
   <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">🚕</text>
-  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Cab</text>
-  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확대</text>
-  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">해석</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">확대</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">로보택시 해석</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">허가·차량이 따라와야</text>
   <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">공고 도시 ≠ 유료 서비스 도시</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">허가·차량 배치가 따라와야 매출</text>
-  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="740" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">플릿 지원 감독은 장애 대응·점검·교대를 현장에서 묶는 역할입니다. 도시 수가 늘수록 인건비 총액은 커지지만,</text>
-  <text x="540" y="765" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">차량이 더 빨리 늘면 대당 비용은 내려갑니다.</text>
-  <rect x="60" y="842" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="872" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">벨뷰·샌디에이고·토런스·샌안토니오·댈러스 등이 목록에 보입니다. 월간으로 공고 도시와 실제 지오펜스를 대조하고, 인건비가 남는</text>
-  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">구간에서는 완전 무인 마진 가정을 할인하시기 바랍니다.</text>
-  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 플릿 채용 · 2026.09.08</text>
+  <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="736" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">플릿 지원 감독은 장애 대응·점검·교대를 현장에서 묶는 역할입니다. 도시 수가 늘수록 인건비 총액은 커지지만, 차량이 더</text>
+  <text x="540" y="760" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">빨리 늘면 대당 비용은 내려갑니다. 21개 도시는 운영 확대 의도로 읽힙니다.</text>
+  <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="880" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">벨뷰·샌디에이고·토런스·샌안토니오·댈러스 등이 목록에 보입니다. 월간으로 공고 도시와 실제 지오펜스를 대조하고, 인건비가 남는</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">구간에서는 완전 무인 마진 가정을 할인하시기 바랍니다. 장기적으로는 인력이 줄고 차량이 늘면 유닛 마진이 개선되는 경로입니다.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 플릿 채용 · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

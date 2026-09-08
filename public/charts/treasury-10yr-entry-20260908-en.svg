@@ -17,31 +17,33 @@
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="86" font-weight="900" fill="#ef4444" text-anchor="middle" opacity=".15">📉</text>
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#ef4444" text-anchor="middle">📉</text>
   <text x="540" y="298" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">−2%</text>
-  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Worst print in the long series; framed as a long-horizon entry window on the same chart.</text>
+  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Worst print in the long series for 15y+ holdings. Same chart frames a long-horizon entry</text>
+  <text x="540" y="364" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">window.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📅</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="middle">Aug’26</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Trough</text>
-  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Series low</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Trough month</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Series low zone</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">📜</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="middle">1959</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Prior low</text>
-  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Near 0%</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Prior low year</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Near 0% then</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1c0d0d" stroke="#ef4444" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">⏱</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#ef4444" text-anchor="middle">10y</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Rolling</text>
-  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Holding return</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Rolling window</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Holding vs coupons</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="686" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">A −2% rolling return means price losses dominated coupons over the prior decade. Starting yields</text>
-  <text x="540" y="712" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">may look better ahead—but inflation and fiscal risk still decide real outcomes.</text>
-  <rect x="60" y="844" width="960" height="148" rx="14" fill="#1c0d0d" stroke="#ef4444" stroke-width="1"/>
-  <text x="540" y="874" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">Why it matters</text>
-  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">It does not guarantee the next decade. Pair nominal/real 10y and core inflation, keep leveraged duration separate,</text>
-  <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">and link the print to equity discount rates in the portfolio table.</text>
-  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Macro · long Treasuries · 2026.09.08</text>
+  <text x="540" y="710" font-family="Arial" font-size="19" fill="#ef4444" text-anchor="middle">may look better ahead—but inflation and fiscal risk still decide real outcomes.</text>
+  <rect x="60" y="838" width="960" height="172" rx="14" fill="#1c0d0d" stroke="#ef4444" stroke-width="1"/>
+  <text x="540" y="868" font-family="Arial" font-size="18" fill="#ef4444" text-anchor="middle">Why it matters</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">It does not guarantee the next decade. Pair nominal/real 10y and core inflation, keep leveraged duration separate,</text>
+  <text x="540" y="918" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">and link the print to equity discount rates. Long-horizon investors often care more about entry yield than last</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">decade’s scar.</text>
+  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Macro · long Treasuries · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

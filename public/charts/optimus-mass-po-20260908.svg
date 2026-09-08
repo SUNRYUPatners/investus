@@ -15,33 +15,35 @@
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">🤖</text>
   <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#4ade80" text-anchor="middle">미확인</text>
-  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">공급망·언론 보도 기준입니다. 9월 협력사 감사, 주당 1,000→연말 2,000~2,500대 가이던스가 언급됐습니다.</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">공급망·언론 보도 기준이며 공식 공시는 아닙니다. 9월 협력사 감사, 주당 1,000→연말 2,000~2,500대</text>
+  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">가이던스가 언급됐습니다.</text>
   <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">발주</text>
   <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">~5k</text>
-  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">초기</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">보도</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">초기 발주 규모</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">보도·미확인</text>
   <rect x="390" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">연간</text>
   <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">15k</text>
-  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">목표</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">보도</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">연간 목표 숫자</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">보도·미확인</text>
   <rect x="720" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">런레이트</text>
   <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">2.5k</text>
-  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">주당</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">연말 가이던스</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">연말 주당 속도</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">가이던스 보도</text>
   <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">라벨</text>
   <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">⚠️ 공식 공시 전·미확인</text>
   <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🔍 9월 국내 협력사 감사 관문</text>
   <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🏭 파일럿→양산 언어로 전환 시도</text>
-  <rect x="60" y="800" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="830" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">주당 2,500대는 연말 속도이지 연간 누적과 다릅니다. 모델에는 하한 0을 기본으로 두고, 실적·공시에 같은 숫자가 나오는지</text>
-  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인하시기 바랍니다. 보도만으로 레버리지 추격은 피하시기 바랍니다.</text>
-  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 옵티머스(미확인) · 2026.09.08</text>
+  <rect x="60" y="792" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="822" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="850" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">주당 2,500대는 연말 속도이지 연간 누적과 다릅니다. 모델에는 하한 0을 기본으로 두고, 실적·공시에 같은 숫자가 나오는지</text>
+  <text x="540" y="872" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인하시기 바랍니다. 보도만으로 레버리지 추격은 피하시기 바랍니다. 장기적으로 휴머노이드가 공장 노동을 대체하면 원가 구조가</text>
+  <text x="540" y="894" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">바뀔 수 있습니다.</text>
+  <text x="540" y="990" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 옵티머스(미확인) · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

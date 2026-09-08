@@ -13,33 +13,34 @@
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.08</text>
   <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">완전 자율주행 감독 모드가 슬로베니아에서 승인됐습니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">✅</text>
-  <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">6번째</text>
-  <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">벨기에·네덜란드·덴마크·리투아니아·에스토니아에 이어 슬로베니아입니다. 롤아웃이 곧 시작됩니다.</text>
-  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">🇸🇮</text>
-  <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">슬로베니아</text>
-  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">신규 승인</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">유럽</text>
-  <rect x="390" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">🗺</text>
-  <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">6개국</text>
-  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">승인 목록</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">지도 표시</text>
-  <rect x="720" y="396" width="300" height="196" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">📅</text>
-  <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#4ade80" text-anchor="middle">10월</text>
-  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">EU 표결</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">서사·일정</text>
-  <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="656" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">국가 승인은 소프트웨어를 켜는 법적 스위치입니다. 소국 여섯은 파일럿에 가깝고, 독일·프랑스 등 대형국은</text>
-  <text x="540" y="682" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">아직 별도 칸입니다. 자동차 비중이 큰 슬로베니아에서 허가가 나온 점이 주목됩니다.</text>
-  <rect x="60" y="814" width="960" height="148" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="844" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">10월 유럽연합 표결은 전망이지 확정이 아닙니다. 출시일·구독 가격·개입률이 나오면 승인 헤드라인을 매출 표로 옮기시면 됩니다.</text>
-  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">대형국 일정을 소국 숫자와 섞지 마시기 바랍니다.</text>
-  <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 유럽 FSD · 2026.09.08</text>
+  <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">✅</text>
+  <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">6번째</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">벨기에·네덜란드·덴마크·리투아니아·에스토니아에 이어 슬로베니아입니다. 감독 모드란 사람이 개입할 수 있는</text>
+  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">상태로 소프트웨어를 켜는 허가입니다.</text>
+  <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🇸🇮</text>
+  <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">슬로베니아</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">이번에 새로 승인</text>
+  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">유럽 지도에 추가</text>
+  <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🗺</text>
+  <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">6개국</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">승인 국가 합계</text>
+  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">아직 소국 파일럿 맵</text>
+  <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">📅</text>
+  <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">10월</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">EU 표결 서사</text>
+  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">확정 일정은 아님</text>
+  <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">국가 승인은 소프트웨어를 켜는 법적 스위치입니다. 소국 여섯은 파일럿에 가깝고, 독일·프랑스 등 대형국은 아직</text>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">별도 칸입니다. 자동차 비중이 큰 슬로베니아에서 허가가 나온 점이 주목됩니다.</text>
+  <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="840" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">10월 유럽연합 표결은 전망이지 확정이 아닙니다. 출시일·구독 가격·개입률이 나오면 승인 헤드라인을 매출 표로 옮기시면 됩니다.</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">대형국 일정을 소국 숫자와 섞지 마시기 바랍니다. 장기적으로는 국가가 늘어날수록 유럽 구독 서사가 두꺼워집니다.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 유럽 FSD · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -16,31 +16,32 @@
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="86" font-weight="900" fill="#facc15" text-anchor="middle" opacity=".15">🟠</text>
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#facc15" text-anchor="middle">🟠</text>
   <text x="540" y="298" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">ATH</text>
-  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">Tariff and shortage narratives attached; ~$14,533/t cited in early September reports.</text>
+  <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">London Metal Exchange all-time high with tariff and shortage narratives. About $14,533/t</text>
+  <text x="540" y="364" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">cited in early September reports.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📈</text>
   <text x="210" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#facc15" text-anchor="middle">+17%</text>
-  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">YoY</text>
-  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">One-year</text>
+  <text x="210" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Year-over-year gain</text>
+  <text x="210" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">About one-year rise</text>
   <rect x="390" y="402" width="300" height="220" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="540" y="450" font-family="Arial" font-size="36" text-anchor="middle">🏛</text>
   <text x="540" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#facc15" text-anchor="middle">LME</text>
-  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Venue</text>
-  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Price base</text>
+  <text x="540" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Price venue</text>
+  <text x="540" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">London metal benchmark</text>
   <rect x="720" y="402" width="300" height="220" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="870" y="450" font-family="Arial" font-size="36" text-anchor="middle">⚡</text>
   <text x="870" y="494" font-family="Arial Black,Arial" font-size="22" font-weight="900" fill="#facc15" text-anchor="middle">Electrify</text>
-  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Demand</text>
-  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Grid/EVs</text>
+  <text x="870" y="528" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Power and EV demand</text>
+  <text x="870" y="586" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Structural wiring metal</text>
   <rect x="60" y="640" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="686" font-family="Arial" font-size="19" fill="#facc15" text-anchor="middle">Copper is the wiring metal for power and motors. ATHs can mix speculation and structural</text>
-  <text x="540" y="712" font-family="Arial" font-size="19" fill="#facc15" text-anchor="middle">demand—pair inventories, China imports, and the forward curve.</text>
-  <rect x="60" y="844" width="960" height="148" rx="14" fill="#1c1805" stroke="#facc15" stroke-width="1"/>
-  <text x="540" y="874" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">Why it matters</text>
-  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Tariff premia can arrive before rules and fade after. Mine lead times keep supply sticky—that underpins long</text>
-  <text x="540" y="928" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">tightness debates. Split spot versus miners in the portfolio table.</text>
-  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Sector · copper · 2026.09.08</text>
+  <text x="540" y="710" font-family="Arial" font-size="19" fill="#facc15" text-anchor="middle">demand—pair inventories, China imports, and the forward curve. About $14,533/t was cited.</text>
+  <rect x="60" y="838" width="960" height="172" rx="14" fill="#1c1805" stroke="#facc15" stroke-width="1"/>
+  <text x="540" y="868" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">Why it matters</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Tariff premia can arrive before rules and fade after. Mine lead times keep supply sticky—that underpins long</text>
+  <text x="540" y="918" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">tightness debates. Split spot versus miners. Over time, electrification capex keeps a structural demand story.</text>
+  <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Sector · copper · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

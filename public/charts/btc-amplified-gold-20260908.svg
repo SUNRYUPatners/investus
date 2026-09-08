@@ -17,31 +17,31 @@
   <text x="540" y="196" font-family="Arial" font-size="20" fill="#f7931a" text-anchor="middle">⚖️ 금 상관 · 높은 베타</text>
   <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">⚖️</text>
   <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#f7931a" text-anchor="middle">증폭된 금</text>
-  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">방향은 비슷하고 변동 폭은 더 큽니다. 상관은 국면마다 달라집니다.</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">방향은 금과 비슷한데 등락 폭은 더 큰 구간입니다. 상관(같이 움직이는 정도)은 국면마다 달라집니다.</text>
   <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="450" width="300" height="178" rx="16" fill="#201408" stroke="#f7931a" stroke-width="2"/>
   <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">🥇</text>
   <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f7931a" text-anchor="middle">금</text>
-  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">방향</text>
-  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">공통 팩터</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">방향의 공통 팩터</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">실질금리·달러와 연결</text>
   <rect x="390" y="450" width="300" height="178" rx="16" fill="#201408" stroke="#f7931a" stroke-width="2"/>
   <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">₿</text>
   <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f7931a" text-anchor="middle">BTC</text>
-  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">베타</text>
-  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">더 큰 진폭</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">더 큰 진폭(베타)</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">같은 뉴스에 더 크게 반응</text>
   <rect x="720" y="450" width="300" height="178" rx="16" fill="#201408" stroke="#f7931a" stroke-width="2"/>
   <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
   <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f7931a" text-anchor="middle">상관</text>
-  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">국면</text>
-  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">90일 점검</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">90일 국면 점검</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">분산 효과 재계산</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="690" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">실질금리·달러가 공통 동인인 구간에서 비트코인은 금보다 빠르게, 더 크게 반응하는 경우가 많습니다. 분산</text>
-  <text x="540" y="716" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">효과가 줄어들면 비중 합산 리스크를 다시 계산해야 합니다.</text>
-  <rect x="60" y="848" width="960" height="144" rx="14" fill="#201408" stroke="#f7931a" stroke-width="1"/>
-  <text x="540" y="878" font-family="Arial" font-size="18" fill="#f7931a" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="910" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">위험선호가 돌아오면 나스닥 베타로 돌아갈 수 있습니다. 금·비트코인·DXY·실질금리를 한 표에 두고, 안전자산 바스켓 상한을 미리</text>
-  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">정하시기 바랍니다. 증폭은 상승과 낙폭 모두에 적용됩니다.</text>
-  <text x="540" y="1024" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">비트코인 · 금 상관 · 2026.09.08</text>
+  <text x="540" y="714" font-family="Arial" font-size="19" fill="#f7931a" text-anchor="middle">효과가 줄어들면 비중 합산 리스크를 다시 계산해야 합니다. 증폭은 상승과 낙폭 모두에 적용됩니다.</text>
+  <rect x="60" y="842" width="960" height="172" rx="14" fill="#201408" stroke="#f7931a" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#f7931a" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">위험선호가 돌아오면 나스닥 베타로 돌아갈 수 있습니다. 금·비트코인·DXY(달러지수)·실질금리를 한 표에 두고, 안전자산 바스켓</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">상한을 미리 정하시기 바랍니다. 장기적으로는 디지털 희소 자산과 실물 헤지를 역할별로 나누는 편이 읽기 쉽습니다.</text>
+  <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">비트코인 · 금 상관 · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

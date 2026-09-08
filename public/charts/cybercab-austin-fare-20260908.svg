@@ -15,39 +15,41 @@
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🚕</text>
   <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#4ade80" text-anchor="middle">$6.15</text>
-  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">대기 약 15분, 모델Y 로보택시보다 약 3달러 저렴한 표시가입니다. 노동절 아침 오스틴 현장입니다.</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">앱에 찍힌 표시 요금이 6.15달러이고 대기는 약 15분이었습니다. 같은 아침 모델Y 로보택시보다 약 3달러</text>
+  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">저렴해 보였습니다.</text>
   <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
   <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">모델Y 로보택시</text>
   <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">+$3</text>
-  <text x="270" y="496" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">상대 더 비쌈</text>
+  <text x="270" y="496" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">상대적으로 더 비쌈</text>
   <text x="540" y="455" font-family="Arial Black,Arial" font-size="40" fill="#4ade80" text-anchor="middle">&#8594;</text>
   <rect x="600" y="356" width="420" height="168" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="810" y="400" font-family="Arial" font-size="20" fill="#4ade80" text-anchor="middle">사이버캡</text>
   <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#4ade80" text-anchor="middle">$6.15</text>
-  <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">표시 요금</text>
+  <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">앱 표시 요금</text>
   <rect x="60" y="548" width="300" height="164" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">⏱</text>
   <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">~15분</text>
-  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">대기</text>
-  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">노동절 아침</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">호출 후 대기 시간</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">노동절 아침 오스틴</text>
   <rect x="390" y="548" width="300" height="164" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">💵</text>
   <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">$6.15</text>
-  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">요금</text>
-  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">앱 표시</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">앱에 표시된 요금</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">특정 구간 한 건</text>
   <rect x="720" y="548" width="300" height="164" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="1.5"/>
   <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">🚕</text>
   <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80" text-anchor="middle">~$3</text>
-  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">저렴</text>
-  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">모델Y 대비</text>
-  <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="776" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">6.15달러는 특정 구간의 표시가이고, 15분 대기는 공급·회전율 신호입니다. 연휴 수요와 평일 피크를 같은 숫자로</text>
-  <text x="540" y="801" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">합치지 마시고, 마일당·시간당 매출 표로 옮기시면 됩니다.</text>
-  <rect x="60" y="878" width="960" height="140" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="908" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">모델Y는 4인승·사이버캡은 2인승이라 좌석·보험 원가가 다릅니다. 다음 확인할 것은 평일 중앙값 대기·요금과 지오펜스 차량</text>
-  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">대수입니다. 마진은 전기·보험이 비기 전까지 빈칸으로 두시기 바랍니다.</text>
-  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 오스틴 요금 · 2026.09.08</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">모델Y보다 저렴</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">같은 아침 비교</text>
+  <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="768" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">6.15달러는 특정 구간의 표시가이고, 15분 대기는 그날 공급·회전율 신호입니다. 사이버캡은 운전석 없는 전용 로보택시</text>
+  <text x="540" y="791" font-family="Arial" font-size="17" fill="#4ade80" text-anchor="middle">차량입니다. 연휴와 평일 피크를 한 숫자로 합치지 마시고 마일당·시간당 표로 옮기시면 됩니다.</text>
+  <rect x="60" y="874" width="960" height="168" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="904" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">모델Y는 4인승·사이버캡은 2인승이라 좌석·보험 원가가 다릅니다. 다음 확인할 것은 평일 중앙값 대기·요금과 지오펜스(운행 가능</text>
+  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">구역) 차량 대수입니다. 마진은 전기·보험이 비기 전까지 빈칸으로 두시기 바랍니다. 장기적으로는 요금이 반복 측정되면 유닛</text>
+  <text x="540" y="976" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이코노믹스 논쟁이 숫자로 내려옵니다.</text>
+  <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 오스틴 요금 · 2026.09.08</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>
