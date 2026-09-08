@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const CSP = [
   "default-src 'self'",
-  // scripts: Next.js + Vercel analytics + Kakao AdFit + Google AdSense
+  // scripts: Next.js + Vercel analytics + Kakao AdFit + Google AdSense + PortOne(KG이니시스)
   [
     "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
     "https://*.kakaocdn.net",
@@ -16,6 +16,9 @@ const CSP = [
     "https://googleads.g.doubleclick.net",
     "https://tpc.googlesyndication.com",
     "https://*.adtrafficquality.google",
+    "https://cdn.portone.io",
+    "https://*.portone.io",
+    "https://*.inicis.com",
   ].join(" "),
   // styles: Tailwind inline styles + emotion + AdSense
   "style-src 'self' 'unsafe-inline' https://www.googletagservices.com https://www.gstatic.com",
@@ -23,7 +26,7 @@ const CSP = [
   "img-src 'self' data: blob: https:",
   // media: YouTube embeds
   "media-src 'self'",
-  // frames: YouTube + Kakao AdFit + Google AdSense
+  // frames: YouTube + Kakao AdFit + Google AdSense + PortOne/KG이니시스 결제창
   [
     "frame-src",
     "https://www.youtube.com",
@@ -35,8 +38,11 @@ const CSP = [
     "https://www.google.com",
     "https://pagead2.googlesyndication.com",
     "https://*.adtrafficquality.google",
+    "https://cdn.portone.io",
+    "https://*.portone.io",
+    "https://*.inicis.com",
   ].join(" "),
-  // connect: all API sources used by the app + AdSense
+  // connect: all API sources used by the app + AdSense + PortOne/KG이니시스
   [
     "connect-src 'self'",
     "https://finnhub.io",
@@ -62,11 +68,16 @@ const CSP = [
     "https://*.adtrafficquality.google",
     "https://www.google.com",
     "https://www.gstatic.com",
+    "https://cdn.portone.io",
+    "https://*.portone.io",
+    "https://api.portone.io",
+    "https://*.inicis.com",
   ].join(" "),
   "font-src 'self' data: https://fonts.gstatic.com",
   "object-src 'none'",
   "base-uri 'self'",
-  "form-action 'self'",
+  // 결제창 POST 리다이렉트 허용
+  "form-action 'self' https://*.portone.io https://*.inicis.com",
   "upgrade-insecure-requests",
 ].join("; ");
 
