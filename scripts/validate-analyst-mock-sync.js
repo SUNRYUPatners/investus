@@ -133,6 +133,125 @@ function validateCommentQuality(commentsSection, postsSection, label) {
   return errors;
 }
 
+/**
+ * 심볼별 댓글이 다른 종목·주제 키워드를 담으면 차단 (2026-09-08 사고).
+ * 원인: 고유 댓글 일괄 rewrite 시 ID 오프셋으로 NVDA↔TSLA 댓글이 뒤바뀜.
+ */
+const SYMBOL_FORBIDDEN = {
+  TSLA: [
+    /엔비디아/,
+    /파이어버드/,
+    /칩 접근권/,
+    /에이아?르엠|에이알엠/,
+    /해외증권\s*880/,
+    /구리 사상/,
+    /비트코인을 금/,
+  ],
+  NVDA: [
+    /사이버캡/,
+    /테슬라/,
+    /목표주가\s*500/,
+    /언박스트/,
+    /슬로베니아/,
+    /옵티머스/,
+    /기가\s*베를린/,
+    /로보택시\s*플릿/,
+    /스타십/,
+    /준설/,
+  ],
+  SPCX: [
+    /사이버캡/,
+    /엔비디아/,
+    /비트코인/,
+    /슬로베니아/,
+    /옵티머스/,
+    /목표주가\s*500/,
+    /언박스트/,
+  ],
+  BTC: [
+    /사이버캡/,
+    /엔비디아/,
+    /슬로베니아/,
+    /언박스트/,
+    /옵티머스/,
+    /스타십/,
+    /준설/,
+  ],
+  ARM: [
+    /사이버캡/,
+    /엔비디아/,
+    /비트코인/,
+    /옵티머스/,
+    /스타십/,
+    /슬로베니아/,
+  ],
+};
+
+function parsePostsWithSymbol(section) {
+  const posts = [];
+  const re =
+    /\{\s*id:\s*(-\d+),[\s\S]*?symbol:\s*("([^"]*)"|null)[\s\S]*?content:\s*"((?:\\.|[^"\\])*)"[\s\S]*?created_at:\s*"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(section)) !== null) {
+    posts.push({
+      id: Number(m[1]),
+      symbol: m[2] === "null" ? null : m[3],
+      content: m[4].replace(/\\"/g, '"'),
+      created_at: m[5],
+    });
+  }
+  return posts;
+}
+
+function parseCommentTextsByPostId(commentsSection) {
+  const map = new Map();
+  const blockRe = /\[(-\d+)\]:\s*\[([\s\S]*?)\n\s*\],/g;
+  let m;
+  while ((m = blockRe.exec(commentsSection)) !== null) {
+    const id = Number(m[1]);
+    const texts = [];
+    const cmRe = /content:\s*"((?:\\.|[^"\\])*)"/g;
+    let cm;
+    while ((cm = cmRe.exec(m[2])) !== null) {
+      texts.push(cm[1].replace(/\\"/g, '"').replace(/\\n/g, "\n"));
+    }
+    map.set(id, texts);
+  }
+  return map;
+}
+
+function validateCommentSymbolMatch(postsSection, commentsSection, label) {
+  const errors = [];
+  const posts = parsePostsWithSymbol(postsSection);
+  let latest = "";
+  for (const p of posts) {
+    if (p.id >= 0) continue;
+    const d = p.created_at.slice(0, 10);
+    if (d > latest) latest = d;
+  }
+  if (!latest) return errors;
+
+  const comments = parseCommentTextsByPostId(commentsSection);
+  for (const p of posts) {
+    if (p.id >= 0) continue;
+    if (p.created_at.slice(0, 10) !== latest) continue;
+    if (!p.symbol || p.symbol === "MACRO") continue;
+    const rules = SYMBOL_FORBIDDEN[p.symbol];
+    if (!rules) continue;
+    const texts = comments.get(p.id) || [];
+    for (const t of texts) {
+      for (const re of rules) {
+        if (re.test(t)) {
+          errors.push(
+            `${label} id ${p.id} (${p.symbol}): 댓글이 다른 종목·주제 — "${t.slice(0, 48)}…"`,
+          );
+        }
+      }
+    }
+  }
+  return errors;
+}
+
 /** 당일 애널 글 오프닝 템플릿 (9/7 사고) */
 function validatePostOpenings(postsSection, label) {
   const errors = [];
@@ -265,6 +384,9 @@ const usSrc = loadFile("lib/analystPosts.ts");
 allErrors.push(
   ...validateCommentQuality(usSrc, usSrc, "lib/analystPosts.ts"),
 );
+allErrors.push(
+  ...validateCommentSymbolMatch(usSrc, usSrc, "lib/analystPosts.ts"),
+);
 
 for (const [postsName, commentsName, label] of [
   ["MOCK_ANALYST_POSTS_KR", "MOCK_ANALYST_COMMENTS_KR", "KR"],
@@ -291,6 +413,13 @@ for (const [postsName, commentsName, label] of [
   allErrors.push(
     ...validatePostOpenings(
       postsSection,
+      `lib/analystPosts-markets.ts (${label})`,
+    ),
+  );
+  allErrors.push(
+    ...validateCommentSymbolMatch(
+      postsSection,
+      commentsSection,
       `lib/analystPosts-markets.ts (${label})`,
     ),
   );

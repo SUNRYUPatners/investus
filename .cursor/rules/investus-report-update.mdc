@@ -23,7 +23,7 @@ alwaysApply: false
    - 배포 전 KO SVG Read로 「처음 보는 사람이 이해하나?」 자가 테스트. 상세는 스킬 「SVG — 이미지만으로 초보 이해」.  
    - **본문 섹션**도 숫자·일정 중심 + **장기 긍정** (스킬 「본문 섹션 — 숫자·일정 중심」).
 8. 팩트: 스크린샷(US) / 웹 검색(kr·safe·kr-re). 숫자 창작 금지
-9. **애널 댓글:** `comments: N` → `MOCK_ANALYST_COMMENTS_*` N개. `validate-analyst-mock-sync.js` 필수 (4시장)
+9. **애널 댓글:** `comments: N` → `MOCK_ANALYST_COMMENTS_*` N개. **댓글은 글 id·symbol·본문 주제와 1:1** (일괄 index rewrite 금지 — 2026-09-08 NVDA↔TSLA 교차 사고). `validate-analyst-mock-sync.js` 필수 (길이·품질·심볼 교차)
 10. **종토방 소셜:** 당일 배치 1회 · 문장형 본문 · 댓글 복붙 금지. `validate-wall-social.js` 필수 (kr/safe/kr-re)
 11. **스크린샷 전량 반영 (2026-09-02~):** 상위 15개 선별 금지. 스크린샷·이미지 주제마다 seed 1개. 배포 전 **「스크린샷 N장 → seed N개」체크리스트** 100% 채움. 공시 vs 루머·내부시험 팩트체크 후 본문에 라벨. 같은 티커라도 스토리 다르면 별도 리포트.
 12. **SVG 파일 존재:** `node scripts/validate-report-assets.js` — `images` 경로와 `public/charts/` 실제 파일 1:1 (배포 차단)
