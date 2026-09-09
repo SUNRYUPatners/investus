@@ -9,32 +9,42 @@
   <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.09 Korea Real-Estate Snapshot</text>
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
-  <rect x="60" y="122" width="8" height="112" rx="4" fill="#fb923c"/>
-  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#fb923c">~87.6–88% of Seoul apt Jul renewals without…</text>
-  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">Avg raise ~₩46.8M (~9.1%); with-right avg ~₩27.5M (~1.7× lower).</text>
-  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c" text-anchor="end">Jeonse</text>
-  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
-  <rect x="60" y="246" width="8" height="112" rx="4" fill="#ef4444"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">360 cases raised ₩100M+ and 20 raised ₩300M+;…</text>
-  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">Read distribution with averages—avoid sensational single prints.</text>
-  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">Tails</text>
-  <rect x="60" y="370" width="960" height="112" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
-  <rect x="60" y="370" width="8" height="112" rx="4" fill="#a78bfa"/>
-  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#a78bfa">Seoul jeonse listings ~20,432 (−12% YoY)</text>
-  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">Jeonse price index 101.9—highest since Oct 2022.</text>
-  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa" text-anchor="end">Listings</text>
-  <rect x="60" y="494" width="960" height="112" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
-  <rect x="60" y="494" width="8" height="112" rx="4" fill="#38bdf8"/>
-  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#38bdf8">Pure jeonse→wolse conversions overlap autumn…</text>
-  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">Bank limits gate contracts; refuse no-look deals.</text>
-  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8" text-anchor="end">Wolse</text>
-  <rect x="60" y="618" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
-  <rect x="60" y="618" width="8" height="112" rx="4" fill="#c084fc"/>
-  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">Owner-occupancy / permit-zone / supply-mismatch…</text>
-  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">Supply is slow; rules are fast—no panic buy/lease.</text>
-  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">Policy</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: 88% raises · +₩46.8M avg · 20,432 listings · index 101.9 · autumn moves</text>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#fb923c"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c">Most no-right renewals raised deposits</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">About 88% of Seoul July apt renewals without renewal-right raised.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">Jeonse</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#f97316"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f97316">Average raise near ₩46.8 million</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">About +9.1%; with renewal-right the average was near ₩27.5 million.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f97316" text-anchor="end">+₩46.8M</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">Large-raise tails also printed</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">360 cases ₩100M+ and 20 cases ₩300M+—read with averages.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">Tails</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">Jeonse listings fell about 12%</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">Seoul listings near 20,432 versus a year earlier.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">Listings</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#38bdf8"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8">Jeonse price index at 101.9</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">Highest level since October 2022.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">Index</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#22d3ee"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">Jeonse-to-wolse keeps spreading</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">Pure-jeonse conversions overlap autumn moving-season risk.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">Wolse</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">Permit zones stay in another cell</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">Supply is slow; rules are fast—do not mash with jeonse stats.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">Policy</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: 88% raises · +₩46.8M · 20,432 listings · index 101.9 · autumn moves</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

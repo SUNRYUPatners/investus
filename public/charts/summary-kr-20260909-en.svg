@@ -9,32 +9,42 @@
   <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.09 Korea Market Snapshot</text>
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="122" width="960" height="112" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
-  <rect x="60" y="122" width="8" height="112" rx="4" fill="#38bdf8"/>
-  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#38bdf8">KOSPI closed 6,954.52 (−0.58%) after an intraday high…</text>
-  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">KOSDAQ 811.88 (−1.25%). Wednesday briefing uses Tuesday’s close.</text>
-  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8" text-anchor="end">−0.58%</text>
-  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
-  <rect x="60" y="246" width="8" height="112" rx="4" fill="#ef4444"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">Middle East / Saudi energy-facility strike narrative;…</text>
-  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">10y UST spiked near 4.8% on the same board.</text>
-  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">Oil</text>
-  <rect x="60" y="370" width="960" height="112" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
-  <rect x="60" y="370" width="8" height="112" rx="4" fill="#22d3ee"/>
-  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee">Individuals sold ~₩3.0–3.3T; foreign ~₩6.3–6.5T buy;…</text>
-  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">Do not mash index down with flow direction in one sentence.</text>
-  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee" text-anchor="end">Flow</text>
-  <rect x="60" y="494" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
-  <rect x="60" y="494" width="8" height="112" rx="4" fill="#60a5fa"/>
-  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">Samsung 269,500 (−0.19%), Hynix 1,793,000 (+0.56%);…</text>
-  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">Applies from Sep 11; ~₩1.4–1.7T estimated selling from weight caps.</text>
-  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">Semi</text>
-  <rect x="60" y="618" width="960" height="112" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
-  <rect x="60" y="618" width="8" height="112" rx="4" fill="#f59e0b"/>
-  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f59e0b">LGES −3.86%, Hyundai ~−2.04%, Bio ~−1.77%, KB ~−1.25%</text>
-  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">Taylor/AI5 stays on the Samsung axis only.</text>
-  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b" text-anchor="end">Peers</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: KOSPI 6954.52 · KOSDAQ 811.88 · foreign/inst buys · semi rebalance 9/10 · oil/rates</text>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#38bdf8"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8">KOSPI closed at 6,954.52</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">Intraday high near 7,171 then reversed; KOSDAQ 811.88 (−1.25%).</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">−0.58%</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">Middle East oil spike overlapped</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">Brent ~$98, WTI ~$94; 10y UST near 4.8% on the same board.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">Oil</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#22d3ee"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">Retail sold; foreign/inst bought</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">Individuals ~₩3.0–3.3T sold; foreign and institutions ~₩6T each bought.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">Flow</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">Samsung finished at 269,500</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">−0.19% day; Taylor/AI5 stays on its own axis.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">SMSN</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#f59e0b"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b">Hynix finished at 1,793,000</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">+0.56%; Sep 10 semi-index rebalance selling estimates ahead.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">Hynix</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">Semi rebalance is tomorrow</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">~₩1.4–1.7T estimated sells from weight caps; applies from Sep 11.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">Rebal</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#fb923c"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c">LGES, Hyundai, KB softer</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">LGES −3.86%, Hyundai ~−2.04%, KB ~−1.25%—different temperatures.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">Peers</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: 6954.52 · oil/rates · flows · rebalance 9/10 · peer temps</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

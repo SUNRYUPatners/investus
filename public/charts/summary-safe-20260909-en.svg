@@ -9,32 +9,42 @@
   <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.09 Safe-Assets Snapshot</text>
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="122" width="960" height="112" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
-  <rect x="60" y="122" width="8" height="112" rx="4" fill="#facc15"/>
-  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#facc15">Gold holds near $4,400/oz into the Sep 16 Fed meeting</text>
-  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">Polymarket ~51.5% hike / 47.5% hold; CME often higher ~58–66%.</text>
-  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15" text-anchor="end">Gold</text>
-  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
-  <rect x="60" y="246" width="8" height="112" rx="4" fill="#f7931a"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f7931a">BTC ~$78,300–78,500 after losing $80k; BTC–gold…</text>
-  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">Looks like a haven trade, but liquidation speed is crypto.</text>
-  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a" text-anchor="end">BTC</text>
-  <rect x="60" y="370" width="960" height="112" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
-  <rect x="60" y="370" width="8" height="112" rx="4" fill="#f97316"/>
-  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f97316">Brent near $98 shakes the risk/haven border</text>
-  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">Overlaps Middle East strike narrative; split from gold/BTC cells.</text>
-  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f97316" text-anchor="end">Oil</text>
-  <rect x="60" y="494" width="960" height="112" rx="14" fill="#0c1017" stroke="#94a3b8" stroke-width="2"/>
-  <rect x="60" y="494" width="8" height="112" rx="4" fill="#94a3b8"/>
-  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#94a3b8">Dollar and rate path returned as the common…</text>
-  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">Aug CPI Sep 11 and FOMC Sep 15–16 sit on the same calendar.</text>
-  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8" text-anchor="end">USD</text>
-  <rect x="60" y="618" width="960" height="112" rx="14" fill="#111827" stroke="#cbd5e1" stroke-width="2"/>
-  <rect x="60" y="618" width="8" height="112" rx="4" fill="#cbd5e1"/>
-  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#cbd5e1">Silver mixes haven and industrial demand—track apart…</text>
-  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">Gold/silver ratio and DXY reduce misreads.</text>
-  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#cbd5e1" text-anchor="end">Silver</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: gold ~4400 · BTC 78.3–78.5k · split hike odds · Brent ~98 · CPI/FOMC</text>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#facc15"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15">Gold holds near $4,400/oz</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">The ounce band held into the Sep 16 Fed meeting.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#facc15" text-anchor="end">Gold</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a1600" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#f59e0b"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b">Hike odds look like a coin flip</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">Polymarket ~51.5% hike / 47.5% hold; CME often prints higher.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">Odds</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#f7931a"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a">Bitcoin lost the $80,000 handle</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">Trades ~$78,300–78,500 with a louder gold-correlation narrative.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f7931a" text-anchor="end">BTC</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#f97316"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f97316">Brent sits near $98</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">Overlaps Middle East strike narrative—split from gold/BTC cells.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f97316" text-anchor="end">Oil</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#0c1017" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">Dollar and rates are the common factor</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">Aug CPI on Sep 11 and FOMC on Sep 15–16 share the week.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">USD</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#111827" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#cbd5e1"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#cbd5e1">Silver is not just mini-gold</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">Haven plus industrial demand; watch gold/silver ratio and DXY.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#cbd5e1" text-anchor="end">Silver</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#22d3ee"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">CPI and FOMC land this week</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">Those two prints are the next volatility gates for safe assets.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">Calendar</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: gold ~4400 · split hike odds · BTC 78k · Brent ~98 · CPI/FOMC</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

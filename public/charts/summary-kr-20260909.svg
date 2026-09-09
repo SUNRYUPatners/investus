@@ -9,32 +9,42 @@
   <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.09 한국장 한장 요약</text>
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="122" width="960" height="112" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
-  <rect x="60" y="122" width="8" height="112" rx="4" fill="#38bdf8"/>
-  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#38bdf8">코스피가 9월 8일 6,954.52로 0.58% 내렸고 장중 약…</text>
-  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">코스닥은 811.88(−1.25%)입니다. 수요일 아침 브리핑은 전일 종가 기준입니다.</text>
-  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8" text-anchor="end">−0.58%</text>
-  <rect x="60" y="246" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
-  <rect x="60" y="246" width="8" height="112" rx="4" fill="#ef4444"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">중동·사우디 에너지 시설 타격 서사에 브렌트 약…</text>
-  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">미국 10년물 금리가 약 4.8%까지 치솟았다는 설명도 같은 화면에 있습니다.</text>
-  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">유가</text>
-  <rect x="60" y="370" width="960" height="112" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
-  <rect x="60" y="370" width="8" height="112" rx="4" fill="#22d3ee"/>
-  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee">개인이 약 3.0~3.3조 원 팔고 외국인·기관이 각각 약…</text>
-  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">지수 하락과 주체별 방향을 한 문장에 합치지 마시기 바랍니다.</text>
-  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee" text-anchor="end">수급</text>
-  <rect x="60" y="494" width="960" height="112" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
-  <rect x="60" y="494" width="8" height="112" rx="4" fill="#60a5fa"/>
-  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">삼성 269,500(−0.19%)·하이닉스 1,793,000(+0.56%)이고…</text>
-  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">적용은 11일부터, 하이닉스 비중 상한 이슈로 약 1.4~1.7조 원대 매도 추정이 나옵니다.</text>
-  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">반도체</text>
-  <rect x="60" y="618" width="960" height="112" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
-  <rect x="60" y="618" width="8" height="112" rx="4" fill="#f59e0b"/>
-  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#f59e0b">엘지엔솔 −3.86%·현대차 약 −2.04%·삼바 약 −1.77%·케이비…</text>
-  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">테일러 팹·인공지능5 서사는 삼성 개별 축으로만 남기시기 바랍니다.</text>
-  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b" text-anchor="end">시총</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 코스피 6954.52 · 코스닥 811.88 · 외인·기관 매수 · 반도체 리밸런싱 9/10 · 유가·금리</text>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#38bdf8"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8">코스피가 6,954.52로 마감했습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">장중 약 7,171까지 올랐다 되돌렸고, 코스닥은 811.88(−1.25%)입니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">−0.58%</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">중동 유가 급등이 겹쳤습니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">브렌트 약 98달러·서부텍사스산 약 94달러, 미국 10년물 약 4.8% 서사입니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">유가</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#22d3ee"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">개인 매도·외인·기관 매수입니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">개인 약 3.0~3.3조 원 매도, 외국인·기관 각각 약 6조 원대 매수입니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">수급</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">삼성전자 26만 9,500원입니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">하루 −0.19%였고, 테일러 팹·인공지능5 서사는 개별 축으로 둡니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">삼성</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#f59e0b"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b">하이닉스 179만 3,000원입니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">+0.56%이고, 9월 10일 반도체 지수 리밸런싱 매도 추정이 있습니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">하이닉스</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">반도체 리밸런싱이 내일입니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">비중 상한으로 약 1.4~1.7조 원대 매도 추정, 적용은 11일부터입니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">리밸런</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#fb923c"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c">엘지엔솔·현대·케이비가 약세입니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">엘지엔솔 −3.86%·현대차 약 −2.04%·케이비 약 −1.25%로 온도가 달랐습니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">시총</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 6954.52 · 유가·금리 · 수급 · 리밸런싱 9/10 · 시총 온도</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

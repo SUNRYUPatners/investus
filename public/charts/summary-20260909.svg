@@ -9,32 +9,42 @@
   <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.09 한장 요약</text>
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="122" width="960" height="112" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
-  <rect x="60" y="122" width="8" height="112" rx="4" fill="#4ade80"/>
-  <text x="116" y="164" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#4ade80">유럽 사이버캡은 「곧」이라 했고, 댈러스 허브·텍사스…</text>
-  <text x="116" y="202" font-family="Arial" font-size="18" fill="#9ca3af">웨이모 988·테슬라 432·애브라이드 344·죽스 44대(9/8). 플로리다 완전자율주행 15와 메가팩도…</text>
-  <text x="985" y="188" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
-  <rect x="60" y="246" width="960" height="112" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
-  <rect x="60" y="246" width="8" height="112" rx="4" fill="#22d3ee"/>
-  <text x="116" y="288" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#22d3ee">테일러 팹 풀가동 전 양산·인공지능5 공동설계 약 40배…</text>
-  <text x="116" y="326" font-family="Arial" font-size="18" fill="#9ca3af">원 연산 약 8배와 구분해 적습니다. 약 370억 달러급 공장 서사·2나노 주문 축입니다.</text>
-  <text x="985" y="312" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee" text-anchor="end">AI5</text>
-  <rect x="60" y="370" width="960" height="112" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
-  <rect x="60" y="370" width="8" height="112" rx="4" fill="#c084fc"/>
-  <text x="116" y="412" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc">스페이스X 목표가 220달러·매수 의견에 시가총액 약 +720…</text>
-  <text x="116" y="450" font-family="Arial" font-size="18" fill="#9ca3af">머스크 지분 약 48.4%가 같은 화면에 있습니다. 옵티머스 부품은 연말 약 1만 5천 대 분량입니다.</text>
-  <text x="985" y="436" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
-  <rect x="60" y="494" width="960" height="112" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
-  <rect x="60" y="494" width="8" height="112" rx="4" fill="#ef4444"/>
-  <text x="116" y="536" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#ef4444">일본 이자 비용 사상 최고 약 16.59조 엔·중국 은행…</text>
-  <text x="116" y="574" font-family="Arial" font-size="18" fill="#9ca3af">팔란티어–엔비스·에이エス엠엘–티에스엠씨·유럽 자동차 감원·유가 30달러 서사도 겹칩니다.</text>
-  <text x="985" y="560" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444" text-anchor="end">MACRO</text>
-  <rect x="60" y="618" width="960" height="112" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
-  <rect x="60" y="618" width="8" height="112" rx="4" fill="#60a5fa"/>
-  <text x="116" y="660" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa">구글–액센추어 제미니 엔터프라이즈 약 1,000명 유닛이…</text>
-  <text x="116" y="698" font-family="Arial" font-size="18" fill="#9ca3af">콜로라도 메가팩 50메가와트·200메가와시·약 5천만 달러도 같은 아침 표입니다.</text>
-  <text x="985" y="684" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa" text-anchor="end">GOOGL</text>
-  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 유럽곧·댈러스·텍사스플릿·AI5 40x·PT220·옵티머스15k·16.59조엔·NIM1.4%·제미니1000·메가팩</text>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">유럽 사이버캡은 「곧」입니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">확정 날짜 없이 유럽 출시 톤만 남았습니다. 미국 요금·대기와 칸을 나누시기 바랍니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">TSLA</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#061209" stroke="#22c55e" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#22c55e"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22c55e">댈러스 로보택시 허브가 커졌습니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">표시 모델Y 약 40대·검증용 사이버캡 75대 이상이 거론됐습니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22c55e" text-anchor="end">댈러스</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#22d3ee"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">텍사스 자율차 대수가 공개됐습니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">9월 8일 기준 웨이모 988·테슬라 432·애브라이드 344·죽스 44대입니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">플릿</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#06121f" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#38bdf8"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8">테일러 팹·인공지능5 40배입니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">풀가동 전 양산·공동설계 약 40배(원 연산 약 8배와 구분)입니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">AI5</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">스페이스X 목표가 220달러입니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">매수 의견에 시총 약 +720억 달러·지분 약 48.4%가 붙었습니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">일본 이자·중국 은행 마진입니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">이자 약 16.59조 엔 사상 최고·순이자마진 약 1.4%가 같은 표입니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">MACRO</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">제미니 엔터프라이즈 1,000명입니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">구글–액센추어 유닛 서사와 콜로라도 메가팩이 같은 아침입니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">GOOGL</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 유럽곧 · 댈러스 · 텍사스플릿 · AI5 · PT220 · 16.59조엔 · NIM1.4% · 제미니 · 메가팩</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>

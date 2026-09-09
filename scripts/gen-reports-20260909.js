@@ -301,15 +301,31 @@ ${foot(p, o.footer, ko, 1034)}`);
 }
 
 // ── ROWS · 한장요약 가로 줄 나열 ─────────────────────────────────────────────
+// 2026-09-09: 행 수에 맞춰 세로를 채워 하단 여백을 없앰. 제목·본문은 칸 안에 끝나게(… 잘림 금지).
+// 권장: 7행 · 짧은 제목 1줄 + 초보용 본문 1문장 (summary-20260824 기준)
 function ROWS(o, ko){
+  const n = o.rows.length;
+  const top = 122;
+  const bottom = 990; // caption(y≈1010) 직전까지 채움
+  const gap = 10;
+  const h = Math.max(100, Math.floor((bottom - top - Math.max(0, n - 1) * gap) / n));
+  const titleFs = h >= 118 ? 23 : 21;
+  const subFs = h >= 118 ? 17 : 16;
+  const titleMaxPx = 780;
+  const subMaxPx = 860;
+  const titleLines = 1; // 제목은 한 줄로 끝내기 (길면 topics에서 짧게)
+  const subLines = h >= 125 ? 2 : 1;
   const rows = o.rows.map((r, i) => {
-    const y = 122 + i*124;
+    const y = top + i * (h + gap);
+    const titleY = y + Math.floor(h * 0.36);
+    const subY = y + Math.floor(h * (subLines === 2 ? 0.58 : 0.70));
+    const rightY = y + Math.floor(h * 0.52);
     return `
-  <rect x="60" y="${y}" width="960" height="112" rx="14" fill="${r.fill}" stroke="${r.color}" stroke-width="2"/>
-  <rect x="60" y="${y}" width="8" height="112" rx="4" fill="${r.color}"/>
-${ml(r.title, 116, y+42, 24, 740, 1, 28, `font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="${r.color}"`)}
-${ml(r.sub, 116, y+80, 18, 830, 1, 22, `font-family="Arial" font-size="18" fill="#9ca3af"`)}
-  <text x="985" y="${y+66}" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="${r.color}" text-anchor="end">${esc(r.right)}</text>`;
+  <rect x="60" y="${y}" width="960" height="${h}" rx="14" fill="${r.fill}" stroke="${r.color}" stroke-width="2"/>
+  <rect x="60" y="${y}" width="8" height="${h}" rx="4" fill="${r.color}"/>
+${ml(r.title, 116, titleY, titleFs, titleMaxPx, titleLines, titleFs + 4, `font-family="Arial Black,Arial" font-size="${titleFs}" font-weight="900" fill="${r.color}"`)}
+${ml(r.sub, 116, subY, subFs, subMaxPx, subLines, subFs + 4, `font-family="Arial" font-size="${subFs}" fill="#9ca3af"`)}
+  <text x="985" y="${rightY}" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="${r.color}" text-anchor="end">${esc(r.right)}</text>`;
   }).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
   <defs>
