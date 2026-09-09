@@ -106,7 +106,17 @@ function insertMarketReports() {
 
 /** Diverse US analyst one-liners — structure rotated, no shared template */
 function usAnalystCopy(r, i) {
-  const s = r.summary.replace(/\n/g, " ").slice(0, 120);
+  // 절대 summary.slice(0, N) 금지 — 문장 중간 절단
+  const raw = r.summary.replace(/\n/g, " ").replace(/\s+/g, " ").trim();
+  let s = raw;
+  if (s.length > 420) {
+    const cut = s.lastIndexOf("습니다.", 420);
+    s = cut >= 80 ? s.slice(0, cut + 4) : s;
+  }
+  if (!/(습니다|바랍니다|니다)\.?$/.test(s)) {
+    const cut = s.lastIndexOf("습니다.");
+    if (cut >= 40) s = s.slice(0, cut + 4);
+  }
   const modes = [
     () => `오늘 포인트만 남깁니다. ${r.title.replace(/습니다$/, "습니다")}`,
     () => `왜 지금 적나요? ${s}`,
