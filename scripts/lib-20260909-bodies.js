@@ -1,4 +1,7 @@
-/** Unique Korean bodies for 2026-09-09 reports */
+/**
+ * ⚠️ LEGACY — 2026-09-09 전용. 2026-09-10~ 리포트는 `lib-report-bodies.js` 사용.
+ * 상세/왜/시나리오/흐름 템플릿은 본문 리셋으로 폐기됨.
+ */
 const BK = "investus.kr SRP 최고투자책임자 발행";
 
 function why(items) {

@@ -10,6 +10,14 @@ const ROOT = path.join(__dirname, "..");
 const VALIDATE_SINCE = "2026-08-29";
 /** 분량·섹션 검증 — 9/2 4개 시장 전체 점검 (8/31 레거시·9/1 KR-RE 잔존분 제외) */
 const VALIDATE_RICH_SINCE = "2026-09-02";
+/** 2026-09-10~ 본문 리셋 — 초보 이해 구조 */
+const BODY_RESET_SINCE = "2026-09-10";
+
+/** date: "2026.09.04" | "2026-09-04" → "2026-09-04" */
+function normalizeDate(d) {
+  if (!d) return "";
+  return d.replace(/\./g, "-");
+}
 
 /** 허용 약어·고유명 (소문자 비교) */
 const ALLOW = new Set([
@@ -55,6 +63,11 @@ const BAD_PATTERNS = [
 const SECTION_BOILERPLATES = [
   "장기 투자자는 단기 헤드라인과 분기 실적·실행 지표를 분리해 기록하시면 변동성에 흔들리지 않습니다",
   "장기 투자자는 단기 수급과 분기 실적·정책 일정을 분리해 기록하시기 바랍니다",
+  "히어로 숫자",
+  "실측 / 계획 / 의견",
+  "실측/계획/의견",
+  "하루짜리가 아니라 수년짜리",
+  "해자를 기록",
 ];
 
 /** 한글 SVG(-en 제외) caption·본문 텍스트 검증 패턴 */
@@ -104,7 +117,8 @@ function parseReports(src) {
   const blocks = src.split(/\n  \{\n    id: "/).slice(1);
   for (const chunk of blocks) {
     const id = chunk.match(/^([^"]+)"/)?.[1];
-    const date = chunk.match(/date: "([^"]+)"/)?.[1];
+    const dateRaw = chunk.match(/date: "([^"]+)"/)?.[1];
+    const date = normalizeDate(dateRaw);
     if (!id || !date) continue;
     const title = extractQuoted(chunk, "title:");
     const summary = extractQuoted(chunk, "summary:");
@@ -185,18 +199,28 @@ function validateSectionSeparation(r, file) {
       .length;
     if (boilerCount >= 2) {
       errors.push(
-        `${file} ${r.id} body: 섹션 플레이스홀더 반복 (${boilerCount}회). 상세·장기투자·투자시사점을 분리하세요.`,
+        `${file} ${r.id} body: 섹션 플레이스홀더 반복 (${boilerCount}회). 소재별 문장으로 다시 쓰세요.`,
       );
       break;
     }
   }
 
-  const detail = extractSection(r.body, "■ 상세");
-  const longTerm = extractSection(r.body, "■ 장기 투자 관점");
-  const invest = extractSection(r.body, "■ 투자시사점");
+  const useNew = r.date >= BODY_RESET_SINCE;
+  const detail = extractSection(
+    r.body,
+    useNew ? "■ 무슨 일인가요" : "■ 상세",
+  );
+  const longTerm = extractSection(
+    r.body,
+    useNew ? "■ 장기적으로 보면" : "■ 장기 투자 관점",
+  );
+  const invest = extractSection(
+    r.body,
+    useNew ? "■ 투자 시사점" : "■ 투자시사점",
+  );
   const sections = [
-    ["상세", detail],
-    ["장기투자", longTerm],
+    [useNew ? "무슨 일" : "상세", detail],
+    [useNew ? "장기" : "장기투자", longTerm],
     ["투자시사점", invest],
   ].filter(([, text]) => text.length > 80);
 
@@ -243,6 +267,77 @@ function validateRichness(r, file) {
     );
   }
 
+  const useNew = r.date >= BODY_RESET_SINCE;
+
+  if (useNew) {
+    const requiredSummary = ["■ 오늘의 큰 그림", "■ 투자 시사점"];
+    const requiredDetail = [
+      "■ 무슨 일인가요",
+      "■ 조금만 더 알려드리면",
+      "■ 장기적으로 보면",
+      "■ 투자 시사점",
+    ];
+    for (const sec of isSummary ? requiredSummary : requiredDetail) {
+      if (r.body && !r.body.includes(sec)) {
+        errors.push(`${file} ${r.id} body: 필수 섹션 누락 (${sec})`);
+      }
+    }
+
+    if (!isSummary && r.body) {
+      const whatMatch = r.body.match(/■ 무슨 일인가요\n\n([\s\S]*?)\n\n■/);
+      if (whatMatch) {
+        const paras = whatMatch[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+        if (paras.length < 3) {
+          errors.push(
+            `${file} ${r.id} body: ■ 무슨 일인가요 문단 부족 (${paras.length}개 < 3개). 스크린샷·뉴스를 초보 문단으로 풀으세요.`,
+          );
+        }
+      }
+      const moreMatch = r.body.match(/■ 조금만 더 알려드리면\n\n([\s\S]*?)\n\n■/);
+      if (moreMatch) {
+        const paras = moreMatch[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+        if (paras.length < 2) {
+          errors.push(
+            `${file} ${r.id} body: ■ 조금만 더 알려드리면 문단 부족 (${paras.length}개 < 2개). 웹 검색으로 배경을 보충하세요.`,
+          );
+        }
+      }
+      const longMatch = r.body.match(/■ 장기적으로 보면\n\n([\s\S]*?)\n\n■/);
+      if (longMatch) {
+        const paras = longMatch[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+        if (paras.length < 2) {
+          errors.push(
+            `${file} ${r.id} body: ■ 장기적으로 보면 문단 부족 (${paras.length}개 < 2개).`,
+          );
+        }
+      }
+      const investMatch = r.body.match(/■ 투자 시사점\n\n([\s\S]*?)(\n\ninvestus|$)/);
+      if (investMatch) {
+        const paras = investMatch[1].split(/\n\n/).filter((p) => p.trim().length > 30);
+        if (paras.length < 2) {
+          errors.push(
+            `${file} ${r.id} body: ■ 투자 시사점 문단 부족 (${paras.length}개 < 2개).`,
+          );
+        }
+      }
+    }
+
+    if (isSummary && r.body) {
+      const bigPic = r.body.match(/■ 오늘의 큰 그림\n\n([\s\S]*?)\n\n■/);
+      if (bigPic) {
+        const paras = bigPic[1].split(/\n\n/).filter((p) => p.trim().length > 40);
+        if (paras.length < 3) {
+          errors.push(
+            `${file} ${r.id} body: ■ 오늘의 큰 그림 문단 부족 (${paras.length}개 < 3개).`,
+          );
+        }
+      }
+    }
+
+    return errors;
+  }
+
+  // ——— 레거시 (2026-09-09 이하): 구 섹션 구조 ———
   const requiredSummary = ["■ 오늘의 큰 그림", "■ 앞으로 볼 것", "■ 투자시사점"];
   const requiredDetail = [
     "■ 상세",
