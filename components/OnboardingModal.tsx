@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useLocale } from "@/contexts/LocaleContext";
 import { useAuth } from "@/hooks/useAuth";
+import { SocialLoginButtons } from "@/components/SocialLoginButtons";
 
 const STORAGE_KEY = "investus_onboarded";
 
@@ -15,10 +17,10 @@ export function OnboardingModal() {
   const [step, setStep]       = useState(0);
   const t = useLocale();
   const { user, loaded } = useAuth();
+  const router = useRouter();
 
   useEffect(() => {
     if (!loaded) return;
-    // Logged-in members already know the product — never show welcome modal
     if (user) {
       markOnboarded();
       setVisible(false);
@@ -49,7 +51,6 @@ export function OnboardingModal() {
         className="w-full max-w-[340px] rounded-3xl px-6 py-7 flex flex-col items-center text-center"
         style={{ background: "var(--card)" }}
       >
-        {/* 스텝 인디케이터 */}
         <div className="flex gap-1.5 mb-6">
           {steps.map((_, i) => (
             <div
@@ -67,18 +68,38 @@ export function OnboardingModal() {
         <h2 className="text-base font-bold font-syne mb-2" style={{ color: "var(--text)" }}>
           {current.title}
         </h2>
-        <p className="text-[12px] leading-relaxed mb-7" style={{ color: "var(--muted)" }}>
+        <p className="text-[12px] leading-relaxed mb-6" style={{ color: "var(--muted)" }}>
           {current.desc}
         </p>
 
+        {isLast ? (
+          <div className="w-full text-left mb-3">
+            <SocialLoginButtons compact />
+            <button
+              type="button"
+              onClick={() => {
+                markOnboarded();
+                router.push("/more/notifications");
+                setVisible(false);
+              }}
+              className="w-full mt-2 py-2 rounded-xl text-[12px] font-semibold border"
+              style={{ borderColor: "var(--border)", color: "var(--text)" }}
+            >
+              {t.onboarding.alertCta}
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setStep((s) => s + 1)}
+            className="w-full py-3 rounded-2xl text-sm font-bold mb-3"
+            style={{ background: "var(--mint)", color: "var(--on-accent)" }}
+          >
+            {t.onboarding.next}
+          </button>
+        )}
         <button
-          onClick={() => isLast ? finish() : setStep((s) => s + 1)}
-          className="w-full py-3 rounded-2xl text-sm font-bold text-black mb-3"
-          style={{ background: "var(--mint)" }}
-        >
-          {isLast ? t.onboarding.start : t.onboarding.next}
-        </button>
-        <button
+          type="button"
           onClick={finish}
           className="text-xs"
           style={{ color: "var(--muted)" }}

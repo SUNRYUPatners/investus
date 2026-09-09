@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ChevronDown, Lock, Moon, Sun } from "lucide-react";
+import { Bell, ChevronDown, Lock, Moon, Sun, Wallet } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { openGuestLogin } from "@/lib/guestLogin";
 import type { SessionBriefing } from "@/lib/morningBriefing";
 
 import type { MarketId } from "@/lib/markets/types";
@@ -46,6 +47,55 @@ function LangToggle({ value, onChange }: { value: ViewLang; onChange: (v: ViewLa
 function pickText(viewEn: boolean, ko: string | undefined, en: string | undefined): string {
   if (viewEn) return (en || ko || "").trim();
   return (ko || "").trim();
+}
+
+function BriefingValueCard({ isKo }: { isKo: boolean }) {
+  return (
+    <div
+      className="rounded-2xl border p-4"
+      style={{
+        background: "linear-gradient(135deg, #fbbf2414 0%, var(--card) 55%)",
+        borderColor: "#fbbf2440",
+      }}
+    >
+      <div className="flex items-center gap-2 mb-2">
+        <Moon className="w-4 h-4" style={{ color: "#fbbf24" }} />
+        <span
+          className="text-[9px] font-bold px-2 py-0.5 rounded-full"
+          style={{ background: "#fbbf2426", color: "#fbbf24" }}
+        >
+          {isKo ? "아침 브리핑" : "Morning brief"}
+        </span>
+      </div>
+      <p className="text-sm font-bold mb-1 leading-snug" style={{ color: "var(--text)" }}>
+        {isKo ? "어제 마감 · 오늘 일정 · 내 자산 흐름" : "Yesterday, today’s calendar, your holdings"}
+      </p>
+      <p className="text-[12px] leading-relaxed mb-3" style={{ color: "var(--muted)" }}>
+        {isKo
+          ? "장전에 전날 핵심과 오늘 볼 일정을 5분에 맞춥니다. 알림을 켜 두면 올라오는 즉시 받아볼 수 있습니다."
+          : "A 5-minute pre-market recap of yesterday and today’s calendar. Turn on alerts so you get it as soon as it posts."}
+      </p>
+      <div className="flex flex-wrap gap-2">
+        <Link
+          href="/more/notifications"
+          className="inline-flex items-center gap-1.5 text-[12px] font-bold px-3 py-2 rounded-xl"
+          style={{ background: "var(--mint)", color: "var(--on-accent)", textDecoration: "none" }}
+        >
+          <Bell className="w-3.5 h-3.5" />
+          {isKo ? "아침 알림 받기" : "Morning alerts"}
+        </Link>
+        <button
+          type="button"
+          onClick={openGuestLogin}
+          className="inline-flex items-center gap-1.5 text-[12px] font-semibold px-3 py-2 rounded-xl border"
+          style={{ borderColor: "var(--border)", color: "var(--text)", background: "var(--card)" }}
+        >
+          <Wallet className="w-3.5 h-3.5" />
+          {isKo ? "자산 연동" : "Link assets"}
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export function MorningBriefingCard({
@@ -94,6 +144,10 @@ export function MorningBriefingCard({
     return () => { cancelled = true; };
   }, [apiUrl]);
 
+  if (!isPro && (loading || !briefing)) {
+    return <BriefingValueCard isKo={isKo} />;
+  }
+
   if (loading && !isDaily) {
     return (
       <div
@@ -105,7 +159,7 @@ export function MorningBriefingCard({
         <div className="flex items-center gap-2 mb-3">
           <Moon className="w-4 h-4" style={{ color: "#fbbf24" }} />
           <span className="text-[9px] font-bold px-2 py-0.5 rounded-full" style={{ background: "#fbbf2426", color: "#fbbf24" }}>
-            {isKo ? "브리핑 준비 중…" : "Loading brief…"}
+            {isKo ? "브리핑 불러오는 중…" : "Loading brief…"}
           </span>
         </div>
         <div className="h-3 rounded bg-white/10 w-3/4 mb-2" />

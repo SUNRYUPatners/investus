@@ -17,9 +17,9 @@ import { ReportFeed } from "@/components/ReportFeed";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
 import { HomeAIInsight } from "@/components/HomeAIInsight";
-import { FirstVisitBanner } from "@/components/FirstVisitBanner";
 import { TodaysGuideCard } from "@/components/TodaysGuideCard";
 import { MorningBriefingCard } from "@/components/MorningBriefingCard";
+import { HomeValueStrip } from "@/components/HomeValueStrip";
 import { MarketPortfolioStub } from "@/components/market/MarketPortfolioStub";
 import { ShopPreviewSection } from "@/components/ShopPreviewSection";
 import type { MarketId } from "@/lib/markets/types";
@@ -81,7 +81,7 @@ export function MarketHomeShell({
       <main className="max-w-[480px] mx-auto lg:max-w-none lg:px-8 lg:pb-10">
         <div className="lg:flex lg:gap-8 lg:items-start lg:pt-2">
           <div className="lg:flex-1 lg:min-w-0">
-            <FirstVisitBanner />
+            <HomeValueStrip market={market} />
 
             <section className="px-4 lg:px-0 pt-3">
               <MorningBriefingCard locale={uiLocale} market={market} />
@@ -106,10 +106,6 @@ export function MarketHomeShell({
             ) : (
               <MarketLiveMarket market={market} />
             )}
-
-            <section className="px-4 lg:px-0 pt-4">
-              <AdFitBanner />
-            </section>
 
             {showFear && (
               <>
@@ -173,7 +169,7 @@ export function MarketHomeShell({
         </div>
       </main>
 
-      {isUs && <OnboardingModal />}
+      <OnboardingModal />
     </div>
   );
 }

@@ -235,48 +235,6 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
 
   return (
     <>
-      {/* 추천주식 — Pro 유료 상품 */}
-      <section className="px-4 lg:px-0 pt-5" aria-label="Investus 추천주식 유료 상품">
-        <div className="flex items-center justify-between mb-1.5">
-          <div className="flex items-center gap-1.5">
-            <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
-            <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
-              {t.market.picks}
-            </h2>
-          </div>
-          <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
-        </div>
-        <p className="text-[11px] mb-3 leading-relaxed" style={{ color: "var(--muted)" }}>
-          <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>
-          {" — "}CIO 선정 추천주식 열람 · {proPriceSummaryKo()}
-        </p>
-        <div className="relative">
-          <SubscribeBlurOverlay
-            locked={picksLocked}
-            title="Investus 추천주식"
-            description={`유료 구독 상품입니다. CIO 추천주식 열람 · ${proPriceSummaryKo()}`}
-          >
-          {recScroll.canLeft && (
-            <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
-              style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
-              <ChevronLeft className="w-4 h-4 ml-1 opacity-60" style={{ color: "var(--muted)" }} />
-            </div>
-          )}
-          <div ref={recScroll.ref} className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
-            {loading
-              ? Array.from({ length: 3 }).map((_, i) => <CardSkeleton key={i} />)
-              : recommended.map((s) => <StockCard key={s.symbol} stock={s} />)}
-          </div>
-          {recScroll.canRight && (
-            <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
-              style={{ background: "linear-gradient(to left, var(--bg) 40%, transparent)" }}>
-              <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
-            </div>
-          )}
-          </SubscribeBlurOverlay>
-        </div>
-      </section>
-
       {/* 주요 지수 */}
       <section className="px-4 lg:px-0 pt-6">
         <div className="flex items-center justify-between mb-3">
@@ -350,6 +308,48 @@ export function LiveMarket({ initialData = null }: { initialData?: MarketData | 
               <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
             </div>
           )}
+        </div>
+      </section>
+
+      {/* 추천주식 — Pro 유료 상품 (지수·인기종목 아래) */}
+      <section className="px-4 lg:px-0 pt-6" aria-label="Investus 추천주식 유료 상품">
+        <div className="flex items-center justify-between mb-1.5">
+          <div className="flex items-center gap-1.5">
+            <Star className="w-3.5 h-3.5" style={{ color: "#d4af37" }} fill="#d4af37" />
+            <h2 className="text-xs font-semibold tracking-widest uppercase font-syne" style={{ color: "var(--text)" }}>
+              {t.market.picks}
+            </h2>
+          </div>
+          <span className="text-[10px]" style={{ color: "var(--muted)" }}>{t.market.cioPicks}</span>
+        </div>
+        <p className="text-[11px] mb-3 leading-relaxed" style={{ color: "var(--muted)" }}>
+          <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>
+          {" — "}CIO 선정 추천주식 열람 · {proPriceSummaryKo()}
+        </p>
+        <div className="relative">
+          <SubscribeBlurOverlay
+            locked={picksLocked}
+            title="Investus 추천주식"
+            description={`유료 구독 상품입니다. CIO 추천주식 열람 · ${proPriceSummaryKo()}`}
+          >
+          {recScroll.canLeft && (
+            <div className="absolute left-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center"
+              style={{ background: "linear-gradient(to right, var(--bg) 40%, transparent)" }}>
+              <ChevronLeft className="w-4 h-4 ml-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
+          <div ref={recScroll.ref} className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+            {loading
+              ? Array.from({ length: 3 }).map((_, i) => <CardSkeleton key={i} />)
+              : recommended.map((s) => <StockCard key={s.symbol} stock={s} />)}
+          </div>
+          {recScroll.canRight && (
+            <div className="absolute right-0 top-0 bottom-1 w-10 z-10 pointer-events-none flex items-center justify-end"
+              style={{ background: "linear-gradient(to left, var(--bg) 40%, transparent)" }}>
+              <ChevronRight className="w-4 h-4 mr-1 opacity-60" style={{ color: "var(--muted)" }} />
+            </div>
+          )}
+          </SubscribeBlurOverlay>
         </div>
       </section>
 

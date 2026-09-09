@@ -182,7 +182,9 @@ export default function NotificationsPage() {
             {isKo ? "알림 설정" : "Notification Settings"}
           </h1>
           <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>
-            {isKo ? "원하는 알림만 골라서 받으세요" : "Choose which notifications to receive"}
+            {isKo
+              ? "장전 브리핑·리포트가 올라오면 바로 받으려면 아래를 켜 두세요"
+              : "Turn these on so you get the pre-market brief and reports as they post"}
           </p>
         </div>
 

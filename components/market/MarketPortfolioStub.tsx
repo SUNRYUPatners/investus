@@ -9,11 +9,14 @@ import { marketHref } from "@/lib/markets/marketPath";
 import type { MarketId } from "@/lib/markets/types";
 import { useMarketPortfolio } from "@/hooks/useMarketPortfolio";
 import { formatMarketPrice } from "@/lib/markets/formatPrice";
+import { GuestPortfolioPreview } from "@/components/GuestPortfolioPreview";
+import { useAuth } from "@/hooks/useAuth";
 
 export function MarketPortfolioStub({ market }: { market: MarketId }) {
   const router = useRouter();
   const cfg = getMarketConfig(market);
   const { holdings, loaded } = useMarketPortfolio(market);
+  const { user, loaded: authLoaded } = useAuth();
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
   useEffect(() => {
@@ -33,11 +36,18 @@ export function MarketPortfolioStub({ market }: { market: MarketId }) {
     });
   }, [holdings, quotes]);
 
-  if (!loaded) return null;
+  if (!loaded || !authLoaded) return null;
 
   const portfolioHref = marketHref(market, "portfolio");
 
   if (rows.length === 0) {
+    if (!user) {
+      return (
+        <section className="px-4 lg:px-0 pt-3">
+          <GuestPortfolioPreview market={market} />
+        </section>
+      );
+    }
     return (
       <section className="px-4 lg:px-0 pt-3">
         <button

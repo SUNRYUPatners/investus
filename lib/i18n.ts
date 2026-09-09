@@ -288,14 +288,14 @@ const ko = {
   },
   onboarding: {
     steps: [
-      { emoji: "📊", title: "실시간 미국 시장", desc: "S&P500, 나스닥, 선물지수와 공포탐욕지수를 한눈에 확인하세요. 장 시작 전 오늘의 흐름을 파악할 수 있어요." },
-      { emoji: "📋", title: "SUNRYU 인사이트 리포트", desc: "매일 오전 SUNRYU Partners CIO가 작성하는 핵심 뉴스 한장 요약과 종목 심층 분석 리포트를 받아보세요." },
-      { emoji: "💬", title: "종목토론 (종토방)", desc: "실제 보유 인증을 거친 투자자들의 종목 토론방입니다. 허수 없는 진짜 보유자들의 의견을 확인하세요." },
-      { emoji: "🔔", title: "리포트 알림 설정", desc: "알림 설정에서 '리포트 업데이트 알림'을 켜두면 새 리포트가 올라올 때 즉시 알림을 받을 수 있어요." },
+      { emoji: "🌅", title: "매일 아침, 내 자산을 정리합니다", desc: "미국·한국·안전자산·부동산까지 — 전날 흐름과 오늘 일정을 AI가 5분에 맞춰 보여 줍니다. 뉴스 나열이 아니라 내 자산 기준입니다." },
+      { emoji: "💼", title: "종목을 넣으면 분석이 시작됩니다", desc: "보유 종목을 연동하면 시세·비중·흐름이 홈에 붙습니다. 로그인 후 30초면 됩니다. 구글·카카오·네이버로 이어갈 수 있어요." },
+      { emoji: "🔔", title: "장전 알림을 켜 두세요", desc: "브리핑과 리포트가 올라오면 바로 알려 드립니다. 가입은 무료이고, 시세·리포트는 참고용 투자 정보입니다." },
     ],
     start: "시작하기",
     next:  "다음",
     skip:  "건너뛰기",
+    alertCta: "아침 알림만 먼저 받기",
   },
   wall: {
     pageTitle:     "피드 💬",
@@ -712,14 +712,14 @@ const en: typeof ko = {
   },
   onboarding: {
     steps: [
-      { emoji: "📊", title: "US Market Live", desc: "S&P500, Nasdaq, futures and Fear & Greed Index at a glance. Read the market before open." },
-      { emoji: "📋", title: "SUNRYU Insight Reports", desc: "Daily morning reports by SUNRYU Partners CIO — key news summary and in-depth stock analysis." },
-      { emoji: "💬", title: "Stock Discussion", desc: "A discussion board for verified holders only. Real opinions from real investors." },
-      { emoji: "🔔", title: "Report Alerts", desc: "Enable 'Report update alerts' in notification settings to get notified instantly when new reports drop." },
+      { emoji: "🌅", title: "Every morning, your assets in 5 minutes", desc: "US, Korea, safe assets, and real estate — AI recaps yesterday and today's calendar around what you hold, not a news dump." },
+      { emoji: "💼", title: "Add holdings and analysis starts", desc: "Link your positions and prices, weights, and flow land on Home. About 30 seconds after sign-in — Google, Kakao, or Naver." },
+      { emoji: "🔔", title: "Turn on the pre-market alert", desc: "Get pinged when the brief and reports drop. Sign-up is free. Prices and reports are reference information, not advice." },
     ],
     start: "Get Started",
     next:  "Next",
     skip:  "Skip",
+    alertCta: "Just turn on morning alerts",
   },
   wall: {
     pageTitle:     "Discussion 💬",

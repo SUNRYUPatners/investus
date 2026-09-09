@@ -12,27 +12,27 @@ export default function AboutPage() {
   const isKo   = locale === "ko";
 
   const DAILY_STEPS = isKo ? [
-    { icon: <TrendingUp className="w-4 h-4" />, color: "#10b981", step: "DAILY", title: "홈 — 매일 아침 5분", desc: "선물·지수·환율·공포탐욕지수·버핏지수·섹터 히트맵까지, 홈탭 하나로 전날 장을 완벽히 정리하고 오늘 장을 준비하세요." },
-    { icon: <Layers className="w-4 h-4" />, color: "var(--mint)", step: "REPORT", title: "Investus 리포트 — 최고투자책임자의 시각", desc: "SUNRYU Partners CIO가 직접 분석한 리포트를 인사이트 탭에서 확인하세요. 단순 뉴스 요약이 아닌, 투자 판단에 직결되는 핵심 분석입니다." },
-    { icon: <BookOpen className="w-4 h-4" />, color: "#60a5fa", step: "STUDY", title: "추천 책 — 투자 기준 확립", desc: "흔들리지 않는 투자를 하려면 나만의 기준이 필요합니다. Investus가 엄선한 책들로 투자의 철학과 원칙을 다지세요." },
-    { icon: <PlayCircle className="w-4 h-4" />, color: "#ef4444", step: "WATCH", title: "추천 유튜브 — 시장 분석 심화", desc: "신뢰할 수 있는 채널을 통해 시장 흐름을 추가로 파악하세요. 좋은 채널 하나가 수백 개의 노이즈를 대신합니다." },
+    { icon: <TrendingUp className="w-4 h-4" />, color: "#10b981", step: "DAILY", title: "홈 — 매일 아침 5분", desc: "미국·한국·안전자산·부동산 네 시장을 홈에서 이어서 봅니다. 전날 시세와 오늘 일정을 한 번에 맞추고, 내 자산을 연동하면 AI가 그 기준으로 정리합니다." },
+    { icon: <Layers className="w-4 h-4" />, color: "var(--mint)", step: "REPORT", title: "Investus 리포트 — 최고투자책임자의 시각", desc: "SUNRYU Partners CIO가 직접 분석한 리포트를 인사이트 탭에서 확인하세요. 단순 뉴스 요약이 아닌, 판단에 필요한 핵심만 모은 참고용 분석입니다." },
+    { icon: <BookOpen className="w-4 h-4" />, color: "#60a5fa", step: "ASSET", title: "자산 연동 — 아침 AI 분석", desc: "보유 종목을 넣으면 시세·비중·흐름이 홈에 붙습니다. 구글·카카오·네이버로 로그인하면 기기 간에 동기화됩니다." },
+    { icon: <PlayCircle className="w-4 h-4" />, color: "#ef4444", step: "ALERT", title: "알림 — 장전 브리핑을 놓치지 않기", desc: "아침 브리핑과 리포트가 올라오면 바로 알려 드립니다. 더보기 → 알림에서 원하는 항목만 켜 두면 됩니다." },
   ] : [
-    { icon: <TrendingUp className="w-4 h-4" />, color: "#10b981", step: "DAILY", title: "Home — 5 minutes every morning", desc: "Futures, indices, forex, Fear & Greed, Buffett Indicator, and sector heatmap — the Home tab gives you a complete picture of the last session and helps you prep for today." },
-    { icon: <Layers className="w-4 h-4" />, color: "var(--mint)", step: "REPORT", title: "Investus Reports — CIO Perspective", desc: "Read reports directly analyzed by the SUNRYU Partners CIO in the Insights tab. Not just news summaries — core analysis that directly informs investment decisions." },
-    { icon: <BookOpen className="w-4 h-4" />, color: "#60a5fa", step: "STUDY", title: "Recommended Books — Build Your Framework", desc: "Sound investing requires a personal framework. Build your investment philosophy with books curated by Investus." },
-    { icon: <PlayCircle className="w-4 h-4" />, color: "#ef4444", step: "WATCH", title: "Recommended YouTube — Go Deeper", desc: "Follow trusted channels to supplement your market analysis. One good channel beats hundreds of noisy sources." },
+    { icon: <TrendingUp className="w-4 h-4" />, color: "#10b981", step: "DAILY", title: "Home — 5 minutes every morning", desc: "US, Korea, safe assets, and real estate in one home. Recap yesterday and today’s calendar; link holdings so AI frames it around you." },
+    { icon: <Layers className="w-4 h-4" />, color: "var(--mint)", step: "REPORT", title: "Investus Reports — CIO Perspective", desc: "Read reports analyzed by the SUNRYU Partners CIO in Insights. Not news dumps — reference analysis for your own decisions." },
+    { icon: <BookOpen className="w-4 h-4" />, color: "#60a5fa", step: "ASSET", title: "Link assets — morning AI", desc: "Add holdings and prices, weights, and flow land on Home. Google, Kakao, or Naver keeps them in sync across devices." },
+    { icon: <PlayCircle className="w-4 h-4" />, color: "#ef4444", step: "ALERT", title: "Alerts — don’t miss the pre-market brief", desc: "Get pinged when the morning brief and reports drop. Turn on only what you want in More → Notifications." },
   ];
 
   const PHILOSOPHIES = isKo ? [
-    { color: "#10b981", title: "절대 잃지 않는 투자", desc: "수익 극대화 이전에 원금 보존을 최우선합니다. 리스크를 철저히 계산하고, 확신이 없는 종목에는 절대 진입하지 않습니다." },
-    { color: "#60a5fa", title: "오직 미국주식", desc: "세계 최고 기업들이 상장된 미국 시장만 집중합니다. 분산이 아닌 선택과 집중으로 압도적 수익률을 달성합니다." },
-    { color: "#c084fc", title: "실전 데이터 기반", desc: "감이 아닌 데이터로 투자합니다. 실시간 시세·섹터 흐름·거시경제 지표를 종합 분석하여 최적의 타이밍을 포착합니다." },
-    { color: "#fb923c", title: "투명한 공개 원칙", desc: "보유 포트폴리오와 수익률을 투명하게 공개합니다. 숨길 것이 없는 성과만이 진정한 신뢰를 만든다고 믿습니다." },
+    { color: "#10b981", title: "절대 잃지 않는 투자", desc: "수익 극대화 이전에 원금 보존을 최우선합니다. 리스크를 철저히 계산하고, 확신이 없는 자리에는 들어가지 않습니다." },
+    { color: "#60a5fa", title: "미국을 축으로, 글로벌 자산까지", desc: "세계 최고 기업이 모인 미국 시장을 축으로 하되, 한국 주식·안전자산·부동산까지 한 화면에서 배분을 봅니다. 선택이 아니라 연결입니다." },
+    { color: "#c084fc", title: "실전 데이터 기반", desc: "감이 아닌 데이터로 봅니다. 실시간 시세·섹터 흐름·거시 지표를 모아 아침 브리핑과 포트폴리오 분석에 넣습니다." },
+    { color: "#fb923c", title: "투명한 공개 원칙", desc: "운용 철학과 리포트 근거를 공개합니다. 숨길 것이 없는 설명만이 신뢰를 만든다고 믿습니다." },
   ] : [
-    { color: "#10b981", title: "Never Lose", desc: "Capital preservation comes before maximizing returns. Risks are calculated meticulously — we never enter positions without conviction." },
-    { color: "#60a5fa", title: "US Stocks Only", desc: "We focus exclusively on the US market — home to the world's greatest companies. Concentration over diversification delivers superior returns." },
-    { color: "#c084fc", title: "Data-Driven", desc: "We invest on data, not gut feel. Real-time prices, sector flows, and macro indicators are synthesized to identify optimal timing." },
-    { color: "#fb923c", title: "Full Transparency", desc: "Our portfolio and returns are disclosed openly. We believe only performance that can withstand scrutiny earns genuine trust." },
+    { color: "#10b981", title: "Never Lose", desc: "Capital preservation comes before maximizing returns. Risks are calculated meticulously — we never enter without conviction." },
+    { color: "#60a5fa", title: "US as the Axis, Global Assets Around It", desc: "The US market is the core — home to the world’s leading companies — with Korean stocks, safe assets, and real estate on the same screen. Connection, not isolation." },
+    { color: "#c084fc", title: "Data-Driven", desc: "We look at data, not gut feel. Live prices, sector flows, and macro indicators feed the morning brief and portfolio analysis." },
+    { color: "#fb923c", title: "Full Transparency", desc: "Philosophy and report rationale are disclosed. Explanations that can withstand scrutiny earn trust." },
   ];
 
   const WHY_US = isKo ? [
@@ -40,22 +40,24 @@ export default function AboutPage() {
     ["🏆", "검증된 글로벌 기업", "Apple, NVIDIA, Microsoft — 세계를 바꾸는 기업들이 상장된 유일한 시장입니다."],
     ["📊", "완벽한 정보 공개", "SEC 규정에 따라 재무·공시 정보가 완전히 공개되어 데이터 기반 투자가 가능합니다."],
     ["⚡", "24시간 글로벌 흐름", "달러 기반 자산으로 글로벌 경제 성장의 수혜를 직접 향유할 수 있습니다."],
+    ["🧭", "한국·안전·부동산까지", "미국이 축이지만 배분은 한 시장으로 끝나지 않습니다. 코스피, 비트코인·금, 한국 부동산 흐름을 같은 아침 습관으로 봅니다."],
   ] : [
     ["🌐", "World's Largest Capital Market", "The US market accounts for ~42% of global market cap — unmatched in liquidity, transparency, and growth."],
     ["🏆", "Proven Global Companies", "Apple, NVIDIA, Microsoft — the only market where world-changing companies are listed."],
     ["📊", "Full Disclosure", "SEC regulations mandate complete financial disclosure, enabling true data-driven investing."],
     ["⚡", "Global Growth Exposure", "Dollar-denominated assets let you participate directly in global economic growth."],
+    ["🧭", "Korea, Safe Assets, Real Estate", "The US is the axis — allocation does not stop there. KOSPI, Bitcoin and gold, and Korean real estate share the same morning habit."],
   ];
 
   const STATS = isKo ? [
     { value: "100%+", label: "전 종목 수익률", sub: "보유 전 종목 플러스" },
     { value: "0",     label: "누적 손실 종목", sub: "단 한 종목도 손실 없음" },
-    { value: "U.S.",  label: "오직 미국주식",  sub: "검증된 시장만 집중" },
+    { value: "4",     label: "시장 한 화면",     sub: "미국 · 한국 · 안전 · 부동산" },
     { value: "S/O",   label: "싱글패밀리오피스", sub: "독립 운용 구조" },
   ] : [
     { value: "100%+", label: "All-Position Returns", sub: "Every held position is in the green" },
     { value: "0",     label: "Losing Positions",     sub: "Not a single losing position ever" },
-    { value: "U.S.",  label: "US Stocks Only",        sub: "Focused on the proven market" },
+    { value: "4",     label: "Four Markets",        sub: "US · KR · Safe · Real estate" },
     { value: "S/O",   label: "Single Family Office",  sub: "Independent management structure" },
   ];
 
@@ -126,14 +128,14 @@ export default function AboutPage() {
           <p className="relative text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
             {isKo ? (
               <>두 가지 의미를 담은 이름처럼,<br />
-              Investus는 <span style={{ color: "var(--text)", fontWeight: 600 }}>미국주식에 집중</span>하고
-              <span style={{ color: "var(--text)", fontWeight: 600 }}> 함께 성장</span>하는
-              투자 정보 플랫폼입니다.</>
+              Investus는 <span style={{ color: "var(--text)", fontWeight: 600 }}>미국을 축으로</span> 한국·안전자산·부동산까지
+              <span style={{ color: "var(--text)", fontWeight: 600 }}> 함께 보는</span>
+              AI 자산관리 플랫폼입니다.</>
             ) : (
               <>Like the dual meaning in its name,<br />
-              Investus is an investment information platform focused on{" "}
-              <span style={{ color: "var(--text)", fontWeight: 600 }}>US stocks</span> and built for{" "}
-              <span style={{ color: "var(--text)", fontWeight: 600 }}>growing together</span>.</>
+              Investus is an AI wealth platform with{" "}
+              <span style={{ color: "var(--text)", fontWeight: 600 }}>the US at the core</span> and{" "}
+              <span style={{ color: "var(--text)", fontWeight: 600 }}>Korea, safe assets, and real estate</span> on the same screen.</>
             )}
           </p>
         </div>
@@ -355,7 +357,7 @@ export default function AboutPage() {
         {/* Why US stocks only */}
         <div className="rounded-2xl p-5 mb-5 border" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
           <p className="text-[10px] font-semibold tracking-widest uppercase mb-3 font-syne" style={{ color: "var(--muted)" }}>
-            {isKo ? "왜 미국주식만인가" : "WHY ONLY US STOCKS?"}
+            {isKo ? "왜 미국을 축으로 하는가" : "WHY THE US AS THE AXIS?"}
           </p>
           <div className="flex flex-col gap-3">
             {WHY_US.map(([icon, title, desc]) => (
@@ -437,7 +439,7 @@ export default function AboutPage() {
         <div className="text-center py-4">
           <p className="text-xs font-bold font-syne mb-1" style={{ color: "var(--text)" }}>Investus</p>
           <p className="text-[10px]" style={{ color: "var(--muted)" }}>
-            {isKo ? "미국주식, 제대로 알고 투자하세요." : "US stocks — invest with clarity."}
+            {isKo ? "미국을 축으로, 글로벌 자산을 아침마다 정리하세요." : "The US at the core — global assets, every morning."}
           </p>
         </div>
 

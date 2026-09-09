@@ -6,6 +6,7 @@ import { TrendingUp, TrendingDown, ChevronRight, Wallet, ChevronDown, ChevronUp 
 import { usePortfolio } from "@/hooks/usePortfolio";
 import { useLocaleCode } from "@/contexts/LocaleContext";
 import { isMarketOpen } from "@/lib/marketHours";
+import { GuestPortfolioPreview } from "@/components/GuestPortfolioPreview";
 
 type LiveQ = { symbol: string; shortName: string; price: number; changePercent: number };
 type Cur   = "USD" | "KRW";
@@ -106,30 +107,7 @@ export function PortfolioWidget() {
   if (!isLoggedIn) {
     return (
       <section className="px-4 lg:px-0 pt-4">
-        <div className="rounded-2xl overflow-hidden"
-          style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
-          <div className="flex items-center gap-2 px-4 py-3.5">
-            <div className="w-6 h-6 rounded-lg flex items-center justify-center"
-              style={{ background: "rgba(var(--mint-rgb),0.12)" }}>
-              <Wallet className="w-3 h-3" style={{ color: "var(--mint)" }} />
-            </div>
-            <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{isKo ? "내 보유종목" : "My Holdings"}</span>
-          </div>
-          <div className="border-t px-4 py-4 flex items-center justify-between gap-3"
-            style={{ borderColor: "var(--border)" }}>
-            <p className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
-              {isKo
-                ? <>로그인 후 포트폴리오를 연동하면<br/>보유 종목과 수익률을 확인할 수 있어요</>
-                : "Connect your portfolio after logging in to track your holdings and returns."}
-            </p>
-            <button
-              onClick={() => router.push("/portfolio")}
-              className="flex-shrink-0 text-[11px] font-bold px-3 py-1.5 rounded-xl transition-opacity active:opacity-70"
-              style={{ background: "rgba(var(--mint-rgb),0.12)", color: "var(--mint)" }}>
-              {isKo ? "연동하기" : "Connect"}
-            </button>
-          </div>
-        </div>
+        <GuestPortfolioPreview market="us" />
       </section>
     );
   }

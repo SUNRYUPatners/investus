@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import {
   Plus, Trash2, TrendingUp, TrendingDown,
-  Search, X, RefreshCw, Building2, ChevronRight, ChevronDown, ChevronUp, Wallet, LogIn, Lock,
+  Search, X, RefreshCw, Building2, ChevronRight, ChevronDown, ChevronUp, Wallet,
   Camera, CheckSquare, Square, AlertTriangle, Sparkles, CheckCircle2,
 } from "lucide-react";
 import { getSupabase } from "@/lib/supabase";
@@ -13,7 +13,6 @@ import type { ParsedHolding } from "@/app/api/parse-portfolio-screenshot/route";
 import { useMarketPortfolio } from "@/hooks/useMarketPortfolio";
 import { useMarket } from "@/contexts/MarketContext";
 import { getMarketConfig } from "@/lib/markets/config";
-import { marketHref } from "@/lib/markets/marketPath";
 import type { MarketId } from "@/lib/markets/types";
 import { formatMarketPrice } from "@/lib/markets/formatPrice";
 import { mockQuotes } from "@/lib/api";
@@ -23,6 +22,8 @@ import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { PortfolioAI } from "@/components/PortfolioAI";
 import { PortfolioLearnHub } from "@/components/PortfolioLearnHub";
 import { PriceAlertsPanel } from "@/components/PriceAlertsPanel";
+import { GuestPortfolioPreview } from "@/components/GuestPortfolioPreview";
+import { SocialLoginButtons } from "@/components/SocialLoginButtons";
 import { useWatchlist } from "@/hooks/useWatchlist";
 
 // ── Types & Constants ─────────────────────────────────────────────────────────
@@ -1021,28 +1022,24 @@ export default function PortfolioPage() {
     return (
       <div className="min-h-screen pb-safe" style={{ background: "var(--bg)" }}>
         <Header />
-        <div className="flex flex-col items-center justify-center min-h-[65vh] gap-6 px-8 text-center">
-          <div className="w-20 h-20 rounded-2xl flex items-center justify-center"
-            style={{ background: "var(--card)", border: "1px solid var(--border)" }}>
-            <Lock className="w-10 h-10 opacity-25" style={{ color: "var(--muted)" }} />
+        <div className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pt-6 pb-10">
+          <p className="text-base font-bold mb-1" style={{ color: "var(--text)" }}>
+            {locale === "ko" ? "내 종목을 넣으면 이렇게 보입니다" : "This is how your holdings will look"}
+          </p>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
+            {locale === "ko"
+              ? "로그인하면 모든 기기에서 동기화되고, 매일 아침 AI가 내 자산 기준으로 흐름을 정리합니다. 구글·카카오·네이버로 30초면 됩니다."
+              : "Sign in to sync across devices. Every morning AI recaps the flow around your holdings. Google, Kakao, or Naver — about 30 seconds."}
+          </p>
+          <div className="mb-5">
+            <GuestPortfolioPreview market={market} variant="page" />
           </div>
-          <div>
-            <p className="text-base font-bold mb-2" style={{ color: "var(--text)" }}>
-              {locale === "ko" ? "로그인이 필요합니다" : "Login required"}
-            </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-              {locale === "ko"
-                ? "포트폴리오는 로그인 후 모든 기기에서\n실시간으로 동기화됩니다"
-                : "Sign in to sync your portfolio\nacross all your devices"}
-            </p>
-          </div>
-          <button
-            onClick={() => router.push(marketHref(market, "more"))}
-            className="flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold"
-            style={{ background: "var(--mint)", color: "var(--on-accent)" }}>
-            <LogIn className="w-4 h-4" />
-            {locale === "ko" ? "로그인 하기" : "Sign in"}
-          </button>
+          <SocialLoginButtons />
+          <p className="text-[10px] mt-3 leading-relaxed" style={{ color: "var(--muted)" }}>
+            {locale === "ko"
+              ? "가입은 무료입니다. 시세·리포트·포트폴리오 분석은 참고용이며 투자 권유가 아닙니다."
+              : "Sign-up is free. Prices, reports, and portfolio analysis are for reference only — not investment advice."}
+          </p>
         </div>
         <div className="max-w-[480px] lg:max-w-2xl mx-auto px-4 pb-10">
           <PortfolioLearnHub locale={locale} />

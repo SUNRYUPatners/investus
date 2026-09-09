@@ -8,12 +8,16 @@ import { MarketSwitcherDesktop } from "@/components/MarketSwitcherDesktop";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen, isStockMarketOpen } from "@/lib/markets/hours";
 import { isMarketHomePath, parseMarketPath } from "@/lib/markets/marketPath";
+import { GuestStartButton } from "@/components/GuestStartButton";
+import { useAuth } from "@/hooks/useAuth";
 
 export function Header() {
   const pathname = usePathname() ?? "";
   const { market } = parseMarketPath(pathname);
   const cfg = getMarketConfig(market);
   const showSwitcher = isMarketHomePath(pathname);
+  const { user, loaded } = useAuth();
+  const isGuest = loaded && !user;
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
   const [open, setOpen] = useState(false);
@@ -64,8 +68,9 @@ export function Header() {
           <MarketSwitcherDesktop current={market} />
 
           <div className="flex items-center gap-2 flex-shrink-0">
+            <GuestStartButton compact />
             {mounted && (
-              <>
+              <div className={isGuest ? "hidden sm:flex items-center gap-2" : "flex items-center gap-2"}>
                 <span
                   className="text-xs font-mono-num tabular-nums font-medium"
                   style={{ color: "var(--text)" }}
@@ -92,7 +97,7 @@ export function Header() {
                     ↻ 60s
                   </span>
                 )}
-              </>
+              </div>
             )}
           </div>
         </div>

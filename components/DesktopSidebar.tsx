@@ -8,6 +8,7 @@ import { useLocale } from "@/contexts/LocaleContext";
 import { getMarketConfig } from "@/lib/markets/config";
 import { isMarketSessionOpen } from "@/lib/markets/hours";
 import { marketHref, parseMarketPath, type MarketTab } from "@/lib/markets/marketPath";
+import { GuestStartButton } from "@/components/GuestStartButton";
 
 function useClock(timezone: string, market: ReturnType<typeof parseMarketPath>["market"]) {
   const [time, setTime] = useState("");
@@ -118,6 +119,7 @@ export function DesktopSidebar() {
       </nav>
 
       <div className="px-5 py-4 border-t space-y-3 flex-shrink-0" style={{ borderColor: "var(--border)" }}>
+        <GuestStartButton />
         {mounted && (
           <>
             <div className="flex items-center justify-between">
