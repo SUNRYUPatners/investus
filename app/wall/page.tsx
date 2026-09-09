@@ -1834,10 +1834,12 @@ export default function WallPage() {
                       })}
                       className="mb-2 cursor-pointer select-none active:opacity-70"
                     >
-                      <p className={`text-[13px] leading-relaxed ${expandedContent.has(post.id) ? "" : "line-clamp-2"}`} style={{ color: "var(--text)" }}>{post.content}</p>
-                      <span className="text-[11px] mt-0.5 block" style={{ color: "#a78bfa" }}>
-                        {expandedContent.has(post.id) ? "접기" : "더보기"}
-                      </span>
+                      <p className={`text-[13px] leading-relaxed ${expandedContent.has(post.id) || post.content.length < 120 ? "" : "line-clamp-2"}`} style={{ color: "var(--text)" }}>{post.content}</p>
+                      {post.content.length >= 120 && (
+                        <span className="text-[11px] mt-0.5 block" style={{ color: "#a78bfa" }}>
+                          {expandedContent.has(post.id) ? "접기" : "더보기"}
+                        </span>
+                      )}
                     </div>
 
                     {/* Action row: like + comment toggle */}

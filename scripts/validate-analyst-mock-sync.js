@@ -292,6 +292,36 @@ function validatePostOpenings(postsSection, label) {
   return errors;
 }
 
+/** 본문 중간 절단 (summary.slice 사고) — 문장 끝이 아니면 실패 (2026-09-09~) */
+function validatePostContentComplete(postsSection, label, since = "2026-09-08") {
+  const errors = [];
+  const re =
+    /\{\s*id:\s*(-\d+),[\s\S]*?content:\s*"((?:\\.|[^"\\])*)"[\s\S]*?created_at:\s*"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(postsSection)) !== null) {
+    const created = m[3].slice(0, 10);
+    if (created < since) continue;
+    const content = m[2]
+      .replace(/\\n/g, "\n")
+      .replace(/\\"/g, '"')
+      .replace(/\\\\/g, "\\")
+      .trim();
+    if (content.length < 80) continue;
+    const looksCut =
+      /마시기 바$|마시기 바랍$|전기차 점$|킬로와시\)를\s*$|공개되기$|슬로베니아가$|필요합$|추론\s*$/.test(
+        content,
+      ) ||
+      (!/(습니다|바랍니다|니다|요|다|죠)\.?["」』)]*$/.test(content) &&
+        /[을를이가은는에의와과도로자시바점칸기]$/.test(content));
+    if (looksCut) {
+      errors.push(
+        `${label} id ${m[1]}: 본문 중간 절단 — "${content.slice(-36)}…" (summary.slice 금지, 문장 끝까지)`,
+      );
+    }
+  }
+  return errors;
+}
+
 function countMockComments(hay, id) {
   const key = `[${id}]:`;
   const idx = hay.indexOf(key);
@@ -387,6 +417,9 @@ allErrors.push(
 allErrors.push(
   ...validateCommentSymbolMatch(usSrc, usSrc, "lib/analystPosts.ts"),
 );
+allErrors.push(
+  ...validatePostContentComplete(usSrc, "lib/analystPosts.ts"),
+);
 
 for (const [postsName, commentsName, label] of [
   ["MOCK_ANALYST_POSTS_KR", "MOCK_ANALYST_COMMENTS_KR", "KR"],
@@ -420,6 +453,12 @@ for (const [postsName, commentsName, label] of [
     ...validateCommentSymbolMatch(
       postsSection,
       commentsSection,
+      `lib/analystPosts-markets.ts (${label})`,
+    ),
+  );
+  allErrors.push(
+    ...validatePostContentComplete(
+      postsSection,
       `lib/analystPosts-markets.ts (${label})`,
     ),
   );

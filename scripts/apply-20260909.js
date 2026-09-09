@@ -75,16 +75,27 @@ function insertReportsTs() {
 }
 
 function usAnalystCopy(r, i) {
-  const s = r.summary.replace(/\n/g, " ").slice(0, 160);
+  // 절대 summary.slice(0, N) 금지 — 문장 중간 절단 → 애널 피드 「접기」상태에서도 글 잘림
+  const raw = r.summary.replace(/\n/g, " ").replace(/\s+/g, " ").trim();
+  let s = raw;
+  if (s.length > 420) {
+    const cut = s.lastIndexOf("습니다.", 420);
+    s = cut >= 80 ? s.slice(0, cut + 4) : s;
+  }
+  if (!/(습니다|바랍니다|니다)\.?$/.test(s)) {
+    // 문장 끝이 아니면 마지막 완전 문장까지만
+    const cut = s.lastIndexOf("습니다.");
+    if (cut >= 40) s = s.slice(0, cut + 4);
+  }
   const modes = [
     () => `표에 숫자만 남깁니다. ${s}`,
     () => `현장 질문부터입니다. ${r.title}`,
     () => `${r.subject}만 따로 보면 ${s}`,
-    () => `회의록 한 줄: ${s} 확인 전 비중은 유지하겠습니다.`,
+    () => `회의록 한 줄로 정리합니다. ${s}`,
     () => `캘린더 기준으로 보면 ${s}`,
     () => `가정과 실측을 갈랐습니다. ${s}`,
     () => `리스크 칸에 먼저 씁니다. ${s}`,
-    () => `다음 게이트만 적습니다. ${r.title.replace(/습니다$/, "는지 보겠습니다")}`,
+    () => `다음 게이트만 적습니다. ${s}`,
     () => `한장으로 안 묶습니다. ${s}`,
     () => `정의부터 확인합니다. ${s}`,
   ];
