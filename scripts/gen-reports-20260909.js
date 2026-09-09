@@ -166,26 +166,26 @@ function L2(o, ko){
   const cards = o.cards.map((c, i) => {
     const x = [60, 390, 720][i];
     return `
-  <rect x="${x}" y="418" width="300" height="176" rx="16" fill="${p.card}" stroke="${p.fg}" stroke-width="2"/>
-  <text x="${x+150}" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">${esc(c.label)}</text>
-${ml(c.big, x+150, 500, 32, 274, 1, 34, `font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
-${ml(c.mid, x+150, 532, 19, 272, 1, 22, `font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle"`)}
-${ml(c.sub, x+150, 560, 15, 274, 2, 19, `font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle"`)}`;
+  <rect x="${x}" y="400" width="300" height="200" rx="16" fill="${p.card}" stroke="${p.fg}" stroke-width="2"/>
+  <text x="${x+150}" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">${esc(c.label)}</text>
+${ml(c.big, x+150, 486, 30, 274, 1, 32, `font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
+${ml(c.mid, x+150, 524, 17, 272, 2, 21, `font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle"`)}
+${ml(c.sub, x+150, 566, 15, 274, 2, 19, `font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle"`)}`;
   }).join('');
   const lines = o.detailLines.map((t, i) =>
-    ml(t, 100, 686 + i*38, 23, 890, 1, 26, `font-family="Arial" font-size="23" fill="#e5e7eb"`)).join('\n');
+    ml(t, 100, 668 + i*36, 21, 890, 1, 24, `font-family="Arial" font-size="21" fill="#e5e7eb"`)).join('\n');
   return shell(p, `${head(p, o.badge, ko)}
 ${ml(o.title, 540, 108, 28, 970, 2, 36, `font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle"`)}
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">${o.heroIcon}</text>
-${ml(o.heroBig, 540, 318, 60, 940, 1, 60, `font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
-${ml(o.heroSub, 540, 358, 19, 940, 2, 25, `font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle"`)}
-  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>${cards}
-  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">${esc(o.detailHead)}</text>
+  <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">${o.heroIcon}</text>
+${ml(o.heroBig, 540, 290, 52, 940, 1, 54, `font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="${p.fg}" text-anchor="middle"`)}
+${ml(o.heroSub, 540, 334, 18, 940, 2, 24, `font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle"`)}
+  <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>${cards}
+  <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">${esc(o.detailHead)}</text>
 ${lines}
-${noteBox(p, o, 792, 176, ko)}
-${foot(p, o.footer, ko, 990)}`);
+${noteBox(p, o, 780, 210, ko)}
+${foot(p, o.footer, ko, 1012)}`);
 }
 
 // ── L3 · 체크/이모지 히어로 + 피처 카드 3개 + 큰 인용박스 ─────────────────────

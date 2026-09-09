@@ -75,7 +75,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -1154, alias: "판교 늑대 #90", symbol: "ASML",
-    content: "현장 질문부터입니다. 에이아스엠엘과 티에스엠씨가 12인치 극자외선 포토마스크 협력을 진전시켰습니다",
+    content: "현장 질문부터입니다. ASML과 TSMC가 12인치 극자외선 포토마스크 협력을 진전시켰습니다",
     likes: 17, comments: 1, created_at: "2026-09-09T01:06:00.000Z", liked: false,
   },
   {
@@ -105,7 +105,7 @@ export const MOCK_ANALYST_POSTS: AnalystMockPost[] = [
   },
   {
     id: -1160, alias: "이태원 부엉이 #18", symbol: "TSLA",
-    content: "다음 게이트만 적습니다. 사이버캡 언박스트가 4케이 영상에서 약 10초마다 한 대, 목표는 5초로 다시 찍혔는지 보겠습니다",
+    content: "다음 게이트만 적습니다. 사이버캡 언박스트가 4K 영상에서 약 10초마다 한 대, 목표는 5초로 다시 찍혔는지 보겠습니다",
     likes: 15, comments: 1, created_at: "2026-09-09T01:42:00.000Z", liked: false,
   },
   // ── 2026-09-08 신규 (19개 · 존댓말 · 구조 혼합) ──────────────────────

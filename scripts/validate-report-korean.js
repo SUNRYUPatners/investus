@@ -18,6 +18,9 @@ const ALLOW = new Set([
   "apr", "gdp", "cpi", "spy", "arkk", "mac", "cxmt", "kb", "sk", "ai", "sw", "ev",
   "fx", "usd", "krw", "ipo", "sec", "fed", "gdp", "l2", "sdv", "gu", "pm", "ui",
   "ux", "id", "api", "ceo", "cfo", "coo", "gpu", "cpu", "ram", "mix", "nim",
+  // 기업명·기술 약어는 한글 문장 안에서도 영어 유지 (2026-09-09~) — 억지 음역 금지
+  "asml", "tsmc", "euv", "nbis", "pltr", "nebius", "nvidia", "tesla", "spacex",
+  "fsd", "llm", "agi", "ipo", "adr", "etfs", "usd", "mw", "mwh", "gwh",
 ]);
 
 /** 한글 필드에 있으면 실패하는 영문 스켈레톤 패턴 */

@@ -296,7 +296,7 @@ add('china-bank-nim', 'L5', 'MACRO', {
 });
 
 add('pltr-nbis-sovereign', 'L3', 'PLTR', {
-  badge: 'AI', title: '팔란티어와 엔비스가 국가 인공지능 인프라 선호 축으로 묶였습니다',
+  badge: 'AI', title: 'Palantir와 Nebius가 국가 인공지능 인프라 선호 축으로 묶였습니다',
   heroIcon: '✅', heroBig: '국가AI',
   heroSub: '국가(소버린) 인공지능 인프라는 정부가 통제·선호하는 데이터·클라우드·소프트웨어 묶음입니다. 두 회사가 그 선호 목록에 올랐다는 서사입니다.',
   cards: [
@@ -322,30 +322,32 @@ add('pltr-nbis-sovereign', 'L3', 'PLTR', {
 });
 
 add('asml-tsmc-12inch-euv', 'L2', 'ASML', {
-  badge: 'ASML', title: '에이아스엠엘과 티에스엠씨가 12인치 극자외선 포토마스크 협력을 진전시켰습니다',
+  badge: 'ASML', title: 'ASML과 TSMC가 12인치 EUV 포토마스크 협력을 진전시켰습니다',
   heroIcon: '🔬', heroBig: '12″',
-  heroSub: '극자외선(EUV) 포토마스크는 회로 무늬를 웨이퍼에 옮기는 원판입니다. 12인치(300밀리미터) 웨이퍼용 마스크 협력이 파운드리 미세공정 병목을 다루는 뉴스로 읽힙니다.',
+  heroSub: 'EUV 포토마스크는 회로 무늬를 웨이퍼에 옮기는 원판입니다. 12인치(300mm) 규격 협력이 첨단 파운드리 병목을 다루는 뉴스로 읽힙니다.',
   cards: [
-    { label:'마스크', big:'EUV', mid:'극자외선 원판', sub:'미세 회로용 소모재' },
-    { label:'규격', big:'12인치', mid:'300mm 웨이퍼', sub:'첨단 양산 표준' },
-    { label:'수요', big:'TSMC', mid:'파운드리 축', sub:'장비·마스크와 짝' },
+    { label:'마스크', big:'EUV', mid:'극자외선 원판입니다', sub:'미세 회로를 찍는 핵심 소모재입니다' },
+    { label:'규격', big:'12″', mid:'300mm 웨이퍼 표준', sub:'첨단 양산에서 쓰는 큰 판 크기입니다' },
+    { label:'수요', big:'TSMC', mid:'파운드리 수요 축', sub:'장비(ASML)와 마스크가 짝을 이룹니다' },
   ],
-  detailHead: '왜 중요한가',
-  detailLines: ['🪞 마스크 품질·납기가 수율에 직접 닿음','🏭 장비사와 파운드리는 병목을 다른 각도로 봄','⏱ 수출 규제·리드타임과 같이 볼 것'],
-  noteSub: '첨단 노드 램프는 마스크·레지스트·장비 삼각입니다. 다음 확인할 것은 양산 적용 시점·고객 수율입니다. 장기적으로 EUV 생태계 해자는 파운드리 경쟁력의 뼈대입니다.',
+  detailHead: '핵심만 정리',
+  detailLines: ['🪞 마스크 품질·납기가 수율(양품 비율)에 바로 닿습니다','🏭 ASML은 장비, TSMC는 양산 수요로 병목을 나눕니다','⏱ 수출 규제·장비 리드타임을 같은 표에 두시기 바랍니다'],
+  noteHead: '다음에 볼 것',
+  noteSub: '첨단 노드는 마스크·레지스트·장비가 한 세트입니다. 양산 적용 시점과 고객 수율이 나오면 헤드라인을 실행 표로 옮기시면 됩니다. 장기적으로 EUV 생태계는 파운드리 경쟁력의 뼈대입니다. 단발 협력 뉴스만으로 비중을 한 번에 키우지 마시기 바랍니다.',
   footer: '반도체 · EUV 마스크',
 }, {
   badge: 'ASML', title: 'ASML–TSMC advance 12-inch EUV photomask collaboration',
   heroIcon: '🔬', heroBig: '12″',
-  heroSub: 'EUV photomasks are the patterned plates that print circuits onto wafers. 12-inch (300mm) mask work targets advanced foundry bottlenecks.',
+  heroSub: 'EUV photomasks print circuits onto wafers. 12-inch (300mm) work targets advanced foundry bottlenecks.',
   cards: [
-    { label:'Mask', big:'EUV', mid:'Extreme-UV plate', sub:'Advanced-node consumable' },
-    { label:'Size', big:'12″', mid:'300mm wafer', sub:'Leading-edge standard' },
-    { label:'Demand', big:'TSMC', mid:'Foundry axis', sub:'Paired with tools' },
+    { label:'Mask', big:'EUV', mid:'Extreme-UV plate', sub:'Key consumable for fine circuits' },
+    { label:'Size', big:'12″', mid:'300mm wafer standard', sub:'Large plate size for leading-edge fabs' },
+    { label:'Demand', big:'TSMC', mid:'Foundry demand axis', sub:'Paired with ASML tools' },
   ],
-  detailHead: 'Why it matters',
-  detailLines: ['🪞 Mask quality/lead time hit yield','🏭 Vendors and foundries share the bottleneck','⏱ Watch export rules and tool lead times'],
-  noteSub: 'Advanced ramps need masks, resists, and tools. Next: production timing and customer yields. EUV ecosystem moats underpin foundry power for years.',
+  detailHead: 'Key points',
+  detailLines: ['🪞 Mask quality and lead time hit yield','🏭 ASML tools vs TSMC volume share the bottleneck','⏱ Keep export rules and tool lead times on one sheet'],
+  noteHead: 'What to watch next',
+  noteSub: 'Advanced nodes need masks, resists, and tools together. Move headlines into an execution table when production timing and customer yields print. EUV ecosystem moats underpin foundry power for years—do not size up on one collab headline alone.',
   footer: 'Semis · EUV masks',
 });
 
@@ -490,9 +492,9 @@ add('fsd-v15-florida', 'L3', 'TSLA', {
 });
 
 add('unboxed-10s-video', 'L5', 'TSLA', {
-  badge: 'TSLA', title: '사이버캡 언박스트가 4케이 영상에서 약 10초마다 한 대, 목표는 5초로 다시 찍혔습니다',
+  badge: 'TSLA', title: '사이버캡 언박스트가 4K 영상에서 약 10초마다 한 대, 목표는 5초로 다시 찍혔습니다',
   heroIcon: '🎬', heroBig: '10초',
-  heroSub: '언박스트는 차체를 큰 모듈로 조립해 라인 택트(한 대당 시간)를 줄이는 방식입니다. 4케이 영상 기준으로 약 10초마다 한 대가 나오고, 장기 목표는 5초라는 설명이 반복됐습니다.',
+  heroSub: '언박스트는 차체를 큰 모듈로 조립해 라인 택트(한 대당 시간)를 줄이는 방식입니다. 4K 영상 기준으로 약 10초마다 한 대가 나오고, 장기 목표는 5초라는 설명이 반복됐습니다.',
   before: { label:'영상 실측', big:'~10초', sub:'4K로 공유된 사이클' },
   after: { label:'목표', big:'~5초', sub:'더 빠른 택트' },
   cards: [

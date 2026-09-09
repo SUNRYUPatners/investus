@@ -13,36 +13,38 @@
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.09</text>
   <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">ASML–TSMC advance 12-inch EUV photomask collaboration</text>
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">🔬</text>
-  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#38bdf8" text-anchor="middle">12″</text>
-  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">EUV photomasks are the patterned plates that print circuits onto wafers. 12-inch (300mm) mask</text>
-  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">work targets advanced foundry bottlenecks.</text>
-  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="418" width="300" height="176" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
-  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Mask</text>
-  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#38bdf8" text-anchor="middle">EUV</text>
-  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Extreme-UV plate</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Advanced-node consumable</text>
-  <rect x="390" y="418" width="300" height="176" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
-  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Size</text>
-  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#38bdf8" text-anchor="middle">12″</text>
-  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">300mm wafer</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Leading-edge standard</text>
-  <rect x="720" y="418" width="300" height="176" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
-  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Demand</text>
-  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#38bdf8" text-anchor="middle">TSMC</text>
-  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Foundry axis</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Paired with tools</text>
-  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">Why it matters</text>
-  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">🪞 Mask quality/lead time hit yield</text>
-  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🏭 Vendors and foundries share the bottleneck</text>
-  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">⏱ Watch export rules and tool lead times</text>
-  <rect x="60" y="792" width="960" height="176" rx="14" fill="#0a1a26" stroke="#38bdf8" stroke-width="1"/>
-  <text x="540" y="822" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">Why it matters</text>
-  <text x="540" y="850" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Advanced ramps need masks, resists, and tools. Next: production timing and customer yields. EUV ecosystem moats</text>
-  <text x="540" y="872" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">underpin foundry power for years.</text>
-  <text x="540" y="990" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Semis · EUV masks · 2026.09.09</text>
+  <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🔬</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#38bdf8" text-anchor="middle">12″</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">EUV photomasks print circuits onto wafers. 12-inch (300mm) work targets advanced foundry</text>
+  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">bottlenecks.</text>
+  <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="400" width="300" height="200" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
+  <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Mask</text>
+  <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#38bdf8" text-anchor="middle">EUV</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Extreme-UV plate</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Key consumable for fine circuits</text>
+  <rect x="390" y="400" width="300" height="200" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
+  <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Size</text>
+  <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#38bdf8" text-anchor="middle">12″</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">300mm wafer standard</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Large plate size for leading-edge</text>
+  <text x="540" y="585" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">fabs</text>
+  <rect x="720" y="400" width="300" height="200" rx="16" fill="#0a1a26" stroke="#38bdf8" stroke-width="2"/>
+  <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Demand</text>
+  <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#38bdf8" text-anchor="middle">TSMC</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Foundry demand axis</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Paired with ASML tools</text>
+  <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">Key points</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">🪞 Mask quality and lead time hit yield</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">🏭 ASML tools vs TSMC volume share the bottleneck</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">⏱ Keep export rules and tool lead times on one sheet</text>
+  <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a26" stroke="#38bdf8" stroke-width="1"/>
+  <text x="540" y="810" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">What to watch next</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Advanced nodes need masks, resists, and tools together. Move headlines into an execution table when production</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">timing and customer yields print. EUV ecosystem moats underpin foundry power for years—do not size up on one</text>
+  <text x="540" y="882" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">collab headline alone.</text>
+  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Semis · EUV masks · 2026.09.09</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
 </svg>

@@ -14,36 +14,36 @@
   <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">옵티머스 부품이 2026년 말 약 1만 5천 대 분량으로 잡히고 주당 약</text>
   <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">1천→2.5천 대가 거론됐습니다</text>
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
-  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">🤖</text>
-  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#4ade80" text-anchor="middle">15k</text>
-  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">옵티머스는 테슬라 휴머노이드(사람 형태) 로봇입니다. 연말까지 약 1만 5천 대 분량 부품, 9월 말 주당 약</text>
-  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">1,000대에서 연말 주당 약 2,500대 가이던스가 같은 서사에 붙었습니다.</text>
-  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
-  <rect x="60" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">부품</text>
-  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">15k</text>
-  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">연말 대수 분량</text>
-  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">완성 출하와 다를 수 있음</text>
-  <rect x="390" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">9월말</text>
-  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">~1k/주</text>
-  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">주당 런레이트</text>
-  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">조립·출고 목표</text>
-  <rect x="720" y="418" width="300" height="176" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
-  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">연말</text>
-  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#4ade80" text-anchor="middle">~2.5k/주</text>
-  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">주당 목표</text>
-  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">램프업 가정</text>
-  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">단계 구분</text>
-  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📦 부품 확보 ≠ 완제품 출하</text>
-  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🔎 주당 런레이트는 공급망 감사가 받쳐야 함</text>
-  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">📋 보도는 공시와 가중치를 다르게</text>
-  <rect x="60" y="792" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
-  <text x="540" y="822" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="850" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">로봇 매출은 아직 초입입니다. 다음 확인할 것은 공장 감사·주간 실출력·불량률입니다. 장기적으로 옵티머스는 인건비 대체·공장 내</text>
-  <text x="540" y="872" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">자동화 해자 논쟁의 중심입니다.</text>
-  <text x="540" y="990" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 옵티머스 · 2026.09.09</text>
+  <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🤖</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">15k</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">옵티머스는 테슬라 휴머노이드(사람 형태) 로봇입니다. 연말까지 약 1만 5천 대 분량 부품, 9월 말 주당 약</text>
+  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">1,000대에서 연말 주당 약 2,500대 가이던스가 같은 서사에 붙었습니다.</text>
+  <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">부품</text>
+  <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">15k</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">연말 대수 분량</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">완성 출하와 다를 수 있음</text>
+  <rect x="390" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">9월말</text>
+  <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">~1k/주</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">주당 런레이트</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">조립·출고 목표</text>
+  <rect x="720" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">연말</text>
+  <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">~2.5k/주</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">주당 목표</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">램프업 가정</text>
+  <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">단계 구분</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📦 부품 확보 ≠ 완제품 출하</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">🔎 주당 런레이트는 공급망 감사가 받쳐야 함</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">📋 보도는 공시와 가중치를 다르게</text>
+  <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="810" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">로봇 매출은 아직 초입입니다. 다음 확인할 것은 공장 감사·주간 실출력·불량률입니다. 장기적으로 옵티머스는 인건비 대체·공장 내</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">자동화 해자 논쟁의 중심입니다.</text>
+  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 옵티머스 · 2026.09.09</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
 </svg>
