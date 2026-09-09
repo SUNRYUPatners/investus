@@ -26,6 +26,26 @@ export type Comment = {
   likes:        number;
 };
 
+/**
+ * 실유저(Supabase) 글을 목 글과 섞을 때 display id = dbId + OFFSET.
+ * 목 글 id가 10만대를 넘으면 예전 OFFSET(100000)과 충돌 → 클릭 시 API 빈 댓글·0으로 바뀜 (2026-09-09 사고).
+ * 목 id는 반드시 이 값 미만이어야 한다.
+ */
+export const REAL_WALL_POST_OFFSET = 10_000_000;
+
+export function toDisplayWallId(dbId: number): number {
+  return dbId + REAL_WALL_POST_OFFSET;
+}
+
+export function toRealWallId(displayId: number, mockPostIds?: Set<number> | number[]): number | null {
+  if (mockPostIds) {
+    const set = mockPostIds instanceof Set ? mockPostIds : new Set(mockPostIds);
+    if (set.has(displayId)) return null;
+  }
+  if (displayId >= REAL_WALL_POST_OFFSET) return displayId - REAL_WALL_POST_OFFSET;
+  return null;
+}
+
 const T09SEP = 1788908400000; // 2026.09.09 08:00 KST
 const T08SEP = 1788822000000; // 2026.09.08 08:00 KST
 const T07SEP = 1788735600000; // 2026.09.07 08:00 KST

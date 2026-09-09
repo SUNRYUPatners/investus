@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { MessageCircle, PenLine, ChevronRight } from "lucide-react";
 import { MOCK_ANALYST_POSTS } from "@/lib/analystPosts";
-import { MOCK_POSTS, type Post } from "@/lib/wallPosts";
+import { MOCK_POSTS, type Post, toDisplayWallId } from "@/lib/wallPosts";
 import { useAuth } from "@/hooks/useAuth";
 import { usePortfolio } from "@/hooks/usePortfolio";
 import { getSupabase } from "@/lib/supabase";
@@ -127,7 +127,7 @@ export function StockCommunity({ symbol, className = "" }: { symbol: string; cla
 
   const wallPosts: Post[] = useMemo(() => {
     const realAsPost: Post[] = realPosts.map((r) => ({
-      id: r.id + 100000,
+      id: toDisplayWallId(r.id),
       symbol: r.symbol,
       nickname: r.nickname,
       holdingLabel: r.holding_label,

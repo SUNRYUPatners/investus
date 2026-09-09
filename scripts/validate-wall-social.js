@@ -22,7 +22,7 @@ function load(rel) {
 function parsePosts(section, label) {
   const posts = [];
   const re =
-    /\{\s*id:\s*(\d+)[\s\S]*?content:\s*"((?:\\.|[^"\\])*)"[\s\S]*?createdAt:\s*(T\d+)\s*-\s*(\d+)/g;
+    /\{\s*id:\s*(\d+)[\s\S]*?content:\s*"((?:\\.|[^"\\])*)"[\s\S]*?createdAt:\s*(T\d+)\s*-\s*(\d+)[\s\S]*?comments:\s*(\d+)/g;
   let m;
   while ((m = re.exec(section)) !== null) {
     posts.push({
@@ -30,6 +30,7 @@ function parsePosts(section, label) {
       content: m[2].replace(/\\"/g, '"'),
       tVar: m[3],
       offset: Number(m[4]),
+      comments: Number(m[5]),
       label,
     });
   }
@@ -186,6 +187,17 @@ function validateWallMarket(src, postsExport, commentsExport, label) {
     if (count >= 3) {
       errors.push(
         `${label}: 동일 댓글 "${text.slice(0, 40)}…" 가 ${count}건 — 고유화 필요`,
+      );
+    }
+  }
+
+  // posts.comments ↔ MOCK_COMMENTS: 클릭 시 빈 화면만 차단 (숫자 불일치는 표시만 어긋남)
+  for (const p of posts) {
+    if (p.comments <= 0) continue;
+    const actual = (byPost.get(p.id) || []).length;
+    if (actual === 0) {
+      errors.push(
+        `${label} id ${p.id}: comments=${p.comments}인데 MOCK 댓글 0개 — 클릭 시 빈 화면`,
       );
     }
   }
@@ -379,6 +391,49 @@ function validateMarketsDayBatch() {
   return errors;
 }
 
+function validateUsWallIdOffsetAndComments() {
+  const src = load("lib/wallPosts.ts");
+  const errors = [];
+  const OFFSET = 10_000_000; // lib/wallPosts REAL_WALL_POST_OFFSET
+
+  const postRe =
+    /\{\s*id:\s*(\d+),[\s\S]*?comments:\s*(\d+)\s*\}/g;
+  const posts = [];
+  let m;
+  while ((m = postRe.exec(src)) !== null) {
+    // Only MOCK_POSTS section (before MOCK_COMMENTS)
+    if (m.index > src.indexOf("export const MOCK_COMMENTS")) break;
+    posts.push({ id: Number(m[1]), comments: Number(m[2]) });
+  }
+
+  const { byPost } = parseComments(
+    extractCommentsBlock(src, "MOCK_COMMENTS"),
+    "US",
+  );
+
+  for (const p of posts) {
+    if (p.id >= OFFSET) {
+      errors.push(
+        `US id ${p.id}: 목 글 id가 REAL_WALL_POST_OFFSET(${OFFSET}) 이상 — 실유저 글과 충돌`,
+      );
+    }
+    if (p.id >= 100000) {
+      // Soft historical note — still allowed under 10M, but warn via fail if broken path returns
+      // Keep as error only if we'd still collide with OLD offset detection (already fixed in UI).
+      // No error — 12xxxx is intentional until renumber.
+    }
+    if (p.comments > 0) {
+      const actual = (byPost.get(p.id) || []).length;
+      if (actual === 0) {
+        errors.push(
+          `US id ${p.id}: comments=${p.comments}인데 MOCK 댓글 0개 — 클릭 시 빈 화면`,
+        );
+      }
+    }
+  }
+  return errors;
+}
+
 function main() {
   const wall = load("lib/wallPosts-markets.ts");
   const errors = [
@@ -402,6 +457,7 @@ function main() {
     ),
     ...validateUsWallCrossMarket(),
     ...validateMarketsDayBatch(),
+    ...validateUsWallIdOffsetAndComments(),
   ];
 
   if (errors.length) {

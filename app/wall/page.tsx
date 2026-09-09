@@ -12,7 +12,7 @@ import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
 import { useAuth } from "@/hooks/useAuth";
 import { getSupabase } from "@/lib/supabase";
 import { CREATORS } from "@/lib/creators";
-import { type Post, type Comment } from "@/lib/wallPosts";
+import { type Post, type Comment, toDisplayWallId, toRealWallId } from "@/lib/wallPosts";
 import { useMarket } from "@/contexts/MarketContext";
 import { getWallSeeds } from "@/lib/markets/wallSeeds";
 
@@ -1034,7 +1034,7 @@ export default function WallPage() {
 
   // Merge real Supabase posts (first) with mock posts
   const realAsPost: Post[] = realPosts.map((r) => ({
-    id:           r.id + 100000,
+    id:           toDisplayWallId(r.id),
     symbol:       r.symbol,
     nickname:     r.nickname,
     holdingLabel: /주 보유$/.test(r.holding_label ?? "") || ["관심종목","보유확인","보유인증"].includes(r.holding_label ?? "") ? r.holding_label : "보유확인",
@@ -1043,6 +1043,7 @@ export default function WallPage() {
     likes:        r.likes,
     comments:     r.comments,
   }));
+  const mockPostIdSet = new Set(MOCK_POSTS.map((p) => p.id));
   const posts = [
     ...(isUs ? realAsPost : []),
     ...MOCK_POSTS.filter((p) => p.symbol === selected),
@@ -1309,7 +1310,7 @@ export default function WallPage() {
                 ) : (
                   posts.flatMap((post, idx) => {
                     // Look up the real post to check ownership and get realId for delete
-                    const realId   = post.id >= 100000 ? post.id - 100000 : null;
+                    const realId   = toRealWallId(post.id, mockPostIdSet);
                     const realPost = realId != null ? realPosts.find((r) => r.id === realId) : null;
                     const isOwn    = !!realPost && realPost.is_mine;
                     const isEditing = editingPostId === realId;
