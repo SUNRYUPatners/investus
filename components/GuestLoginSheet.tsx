@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { SocialLoginButtons } from "@/components/SocialLoginButtons";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { OPEN_LOGIN_EVENT } from "@/lib/guestLogin";
 
 export function GuestLoginSheet() {
@@ -55,6 +56,7 @@ export function GuestLoginSheet() {
           </button>
         </div>
         <SocialLoginButtons />
+        <NewsletterSignup compact />
         <p className="text-[10px] mt-3 leading-relaxed" style={{ color: "var(--muted)" }}>
           가입은 무료입니다. 리포트·시세·포트폴리오 분석은 참고용이며 투자 권유가 아닙니다.
         </p>

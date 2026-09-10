@@ -13,6 +13,7 @@ const STORAGE_KEY = "investus-sticky-ad-dismissed";
 export function StickyAdFit() {
   const [mounted, setMounted] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const [unlocked, setUnlocked] = useState(false);
 
   useEffect(() => {
     setDismissed(localStorage.getItem(STORAGE_KEY) === "1");
@@ -20,16 +21,34 @@ export function StickyAdFit() {
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
-    document.documentElement.dataset.stickyAd = dismissed ? "hidden" : "visible";
+    if (!mounted || dismissed) return;
+    const unlock = () => setUnlocked(true);
+    if (window.scrollY > 80) {
+      unlock();
+      return;
+    }
+    const onScroll = () => {
+      if (window.scrollY > 80) unlock();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const timer = window.setTimeout(unlock, 8000);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.clearTimeout(timer);
+    };
   }, [mounted, dismissed]);
+
+  useEffect(() => {
+    if (!mounted) return;
+    document.documentElement.dataset.stickyAd = dismissed || !unlocked ? "hidden" : "visible";
+  }, [mounted, dismissed, unlocked]);
 
   const dismiss = () => {
     localStorage.setItem(STORAGE_KEY, "1");
     setDismissed(true);
   };
 
-  if (!mounted || dismissed) return null;
+  if (!mounted || dismissed || !unlocked) return null;
 
   return (
     <div

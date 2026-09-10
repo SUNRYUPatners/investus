@@ -8,11 +8,11 @@ import { useLocaleCode } from "@/contexts/LocaleContext";
 const SECTIONS_KO = [
   {
     title: "1. 개인정보 수집 항목 및 방법",
-    body: "서비스는 다음과 같은 최소한의 정보를 수집합니다.\n\n[회원가입]\n• 이메일/비밀번호 가입: 이메일 주소, 비밀번호(암호화 저장)\n• 소셜 로그인(Google, Kakao): 이메일 주소, 프로필 닉네임 (해당 제공자 정책에 따름)\n\n[투자교육 신청]\n• 이름, 연락처(전화번호), 투자 경험 수준, 투자 가능 금액(선택), 문의 내용(선택)\n• 수집 목적: 교육 과정 안내 및 수강 확인 연락\n• 보유 기간: 교육 신청 처리 완료 후 1년\n\n[자동 수집]\n• 서비스 이용 기록, 접속 로그, 기기 식별 정보(광고 ID), 앱 버전\n\n개인정보는 이용자가 직접 입력하는 방식 또는 서비스 이용 과정에서 자동으로 생성·수집됩니다.",
+    body: "서비스는 다음과 같은 최소한의 정보를 수집합니다.\n\n[회원가입]\n• 이메일/비밀번호 가입: 이메일 주소, 비밀번호(암호화 저장)\n• 소셜 로그인(Google, Kakao): 이메일 주소, 프로필 닉네임 (해당 제공자 정책에 따름)\n\n[아침 브리핑 메일 구독]\n• 이메일 주소(이용자가 직접 입력)\n• 수집 목적: 장전 브리핑 등 투자 참고 정보 이메일 발송\n• 보유 기간: 수신 거부 또는 삭제 요청 시까지\n\n[투자교육 신청]\n• 이름, 연락처(전화번호), 투자 경험 수준, 투자 가능 금액(선택), 문의 내용(선택)\n• 수집 목적: 교육 과정 안내 및 수강 확인 연락\n• 보유 기간: 교육 신청 처리 완료 후 1년\n\n[자동 수집]\n• 서비스 이용 기록, 접속 로그, 기기 식별 정보(광고 ID), 앱 버전\n\n개인정보는 이용자가 직접 입력하는 방식 또는 서비스 이용 과정에서 자동으로 생성·수집됩니다.",
   },
   {
     title: "2. 개인정보 수집 및 이용 목적",
-    body: "수집된 개인정보는 아래 목적으로만 이용됩니다.\n\n• 회원 식별 및 서비스 이용 관리\n• 맞춤형 투자 정보 및 알림 제공\n• 부정 이용 방지 및 보안 강화\n• 서비스 개선을 위한 통계·분석\n• 법적 의무 이행",
+    body: "수집된 개인정보는 아래 목적으로만 이용됩니다.\n\n• 회원 식별 및 서비스 이용 관리\n• 맞춤형 투자 정보 및 알림 제공(푸시·아침 브리핑 메일)\n• 부정 이용 방지 및 보안 강화\n• 서비스 개선을 위한 통계·분석\n• 법적 의무 이행",
   },
   {
     title: "3. 개인정보 보유 및 이용 기간",
@@ -20,7 +20,7 @@ const SECTIONS_KO = [
   },
   {
     title: "4. 개인정보의 제3자 제공 및 국외 이전",
-    body: "서비스는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 다음의 경우에는 예외로 합니다.\n\n• 이용자가 사전에 동의한 경우\n• 법령의 규정에 의거하거나 수사 기관의 요청이 있는 경우\n\n[광고 서비스 — Google AdSense]\n서비스는 Google AdSense를 통해 광고를 게재할 수 있습니다. Google을 포함한 제3자 광고 공급업체는 쿠키·기기 식별자 등을 사용해 이용자의 관심사에 맞는 광고를 표시할 수 있습니다.\n\n• 이전 받는 자: Google LLC\n• 이전 국가: 미국 등 Google이 서비스를 운영하는 국가\n• 이전·처리 목적: 광고 게재, 광고 효과 측정, 부정 트래픽 방지\n• 관련 정책: https://policies.google.com/technologies/ads\n• 맞춤 광고 설정(옵트아웃): https://adssettings.google.com\n\n[개인정보 국외 이전 — 이메일 알림]\n크리에이터 인증 신청 시 이메일 알림 발송을 위해 아래 업체에 최소한의 정보(이메일, 닉네임, 자기소개)가 전송됩니다.\n\n• 이전 받는 자: Resend\n• 이전 국가: 미국\n• 이전 목적: 운영 알림 이메일 전송\n• 보유 기간: 이메일 전송 완료 후 즉시 파기\n\n위 사항에 동의하지 않으실 경우 크리에이터 인증 신청이 제한될 수 있습니다.",
+    body: "서비스는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 다음의 경우에는 예외로 합니다.\n\n• 이용자가 사전에 동의한 경우\n• 법령의 규정에 의거하거나 수사 기관의 요청이 있는 경우\n\n[광고 서비스 — Google AdSense]\n서비스는 Google AdSense를 통해 광고를 게재할 수 있습니다. Google을 포함한 제3자 광고 공급업체는 쿠키·기기 식별자 등을 사용해 이용자의 관심사에 맞는 광고를 표시할 수 있습니다.\n\n• 이전 받는 자: Google LLC\n• 이전 국가: 미국 등 Google이 서비스를 운영하는 국가\n• 이전·처리 목적: 광고 게재, 광고 효과 측정, 부정 트래픽 방지\n• 관련 정책: https://policies.google.com/technologies/ads\n• 맞춤 광고 설정(옵트아웃): https://adssettings.google.com\n\n[개인정보 국외 이전 — 이메일 알림]\n아침 브리핑 메일 구독·크리에이터 인증 신청 시 이메일 알림 발송을 위해 아래 업체에 최소한의 정보(이메일, 닉네임, 자기소개)가 전송됩니다.\n\n• 이전 받는 자: Resend\n• 이전 국가: 미국\n• 이전 목적: 브리핑·운영 알림 이메일 전송\n• 보유 기간: 이메일 전송 완료 후 즉시 파기(구독 이메일은 수신 거부 시까지 보관)\n\n위 사항에 동의하지 않으실 경우 해당 메일 구독·크리에이터 인증 신청이 제한될 수 있습니다.",
   },
   {
     title: "5. 개인정보 처리 위탁",
@@ -48,18 +48,18 @@ const SECTIONS_KO = [
   },
   {
     title: "부칙",
-    body: "본 방침은 2026년 8월 12일부터 시행됩니다. (Google AdSense·광고 쿠키 고지 반영 개정)",
+    body: "본 방침은 2026년 8월 12일부터 시행됩니다. (2026년 9월 10일 아침 브리핑 메일 구독 수집 고지 반영 개정)",
   },
 ];
 
 const SECTIONS_EN = [
   {
     title: "1. Personal Information Collected",
-    body: "The Service collects the minimum necessary information as follows.\n\n[Account Registration]\n• Email/Password: Email address, password (encrypted)\n• Social login (Google, Kakao): Email address, profile nickname (per respective provider policy)\n\n[Investment Education Application]\n• Name, contact (phone number), investment experience level, investable amount (optional), inquiry (optional)\n• Purpose: Course guidance and enrollment confirmation contact\n• Retention: 1 year after application processing is complete\n\n[Automatically Collected]\n• Usage records, access logs, device identifiers (advertising ID), app version\n\nPersonal information is collected directly by the user or automatically generated during service use.",
+    body: "The Service collects the minimum necessary information as follows.\n\n[Account Registration]\n• Email/Password: Email address, password (encrypted)\n• Social login (Google, Kakao): Email address, profile nickname (per respective provider policy)\n\n[Morning brief email]\n• Email address (entered by the user)\n• Purpose: Pre-market briefing and related reference emails\n• Retention: Until unsubscribe or deletion request\n\n[Investment Education Application]\n• Name, contact (phone number), investment experience level, investable amount (optional), inquiry (optional)\n• Purpose: Course guidance and enrollment confirmation contact\n• Retention: 1 year after application processing is complete\n\n[Automatically Collected]\n• Usage records, access logs, device identifiers (advertising ID), app version\n\nPersonal information is collected directly by the user or automatically generated during service use.",
   },
   {
     title: "2. Purpose of Collection and Use",
-    body: "Collected personal information is used solely for the following purposes:\n\n• Member identification and service use management\n• Providing personalized investment information and alerts\n• Preventing unauthorized use and enhancing security\n• Statistics and analysis for service improvement\n• Compliance with legal obligations",
+    body: "Collected personal information is used solely for the following purposes:\n\n• Member identification and service use management\n• Providing personalized investment information and alerts (push and morning brief email)\n• Preventing unauthorized use and enhancing security\n• Statistics and analysis for service improvement\n• Compliance with legal obligations",
   },
   {
     title: "3. Retention and Use Period",
@@ -67,7 +67,7 @@ const SECTIONS_EN = [
   },
   {
     title: "4. Third-Party Disclosure and Cross-Border Transfer",
-    body: "The Service does not, in principle, share personal information with third parties. Exceptions include:\n\n• Cases where the user has given prior consent\n• Cases required by law or requested by investigative authorities\n\n[Advertising — Google AdSense]\nThe Service may display ads via Google AdSense. Google and third-party vendors may use cookies or similar technologies to serve interest-based ads.\n\n• Recipient: Google LLC\n• Countries: United States and other countries where Google operates\n• Purpose: Ad serving, measurement, and fraud prevention\n• Policy: https://policies.google.com/technologies/ads\n• Opt out of personalized ads: https://adssettings.google.com\n\n[Cross-Border Transfer — Email Notifications]\nWhen applying for creator verification, minimal information (email, nickname, self-introduction) is sent for email notifications:\n\n• Recipient: Resend\n• Country: United States\n• Purpose: Operational email delivery\n• Retention: Immediately deleted after email transmission\n\nIf you do not consent to the above, creator verification applications may be restricted.",
+    body: "The Service does not, in principle, share personal information with third parties. Exceptions include:\n\n• Cases where the user has given prior consent\n• Cases required by law or requested by investigative authorities\n\n[Advertising — Google AdSense]\nThe Service may display ads via Google AdSense. Google and third-party vendors may use cookies or similar technologies to serve interest-based ads.\n\n• Recipient: Google LLC\n• Countries: United States and other countries where Google operates\n• Purpose: Ad serving, measurement, and fraud prevention\n• Policy: https://policies.google.com/technologies/ads\n• Opt out of personalized ads: https://adssettings.google.com\n\n[Cross-Border Transfer — Email Notifications]\nWhen you subscribe to the morning brief or apply for creator verification, minimal information (email, nickname, self-introduction) is sent for email delivery:\n\n• Recipient: Resend\n• Country: United States\n• Purpose: Briefing and operational email delivery\n• Retention: Deleted immediately after sending (subscription emails are kept until unsubscribe)\n\nIf you do not consent to the above, email subscription or creator verification applications may be restricted.",
   },
   {
     title: "5. Data Processing Delegation",
@@ -95,7 +95,7 @@ const SECTIONS_EN = [
   },
   {
     title: "Supplementary Provisions",
-    body: "This policy takes effect as of August 12, 2026 (updated for Google AdSense and advertising cookie disclosures).",
+    body: "This policy takes effect as of August 12, 2026 (updated September 10, 2026 for morning brief email collection).",
   },
 ];
 
@@ -117,7 +117,7 @@ export default function PrivacyPage() {
           {isKo ? "개인정보처리방침" : "Privacy Policy"}
         </h1>
         <p className="text-[11px] mb-6" style={{ color: "var(--muted)" }}>
-          {isKo ? "최종 개정일: 2026년 8월 12일" : "Last updated: August 12, 2026"}
+          {isKo ? "최종 개정일: 2026년 9월 10일" : "Last updated: September 10, 2026"}
         </p>
 
         <div className="flex flex-col gap-5">

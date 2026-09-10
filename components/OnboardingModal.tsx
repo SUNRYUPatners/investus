@@ -5,31 +5,26 @@ import { useRouter } from "next/navigation";
 import { useLocale } from "@/contexts/LocaleContext";
 import { useAuth } from "@/hooks/useAuth";
 import { SocialLoginButtons } from "@/components/SocialLoginButtons";
-
-const STORAGE_KEY = "investus_onboarded";
-
-function markOnboarded() {
-  try { localStorage.setItem(STORAGE_KEY, "1"); } catch { /* ignore */ }
-}
+import { useFirstVisitVariant } from "@/hooks/useFirstVisitVariant";
+import { markOnboarded } from "@/lib/firstVisitVariant";
 
 export function OnboardingModal() {
   const [visible, setVisible] = useState(false);
   const [step, setStep]       = useState(0);
   const t = useLocale();
   const { user, loaded } = useAuth();
+  const { variant, onboarded, ready } = useFirstVisitVariant();
   const router = useRouter();
 
   useEffect(() => {
-    if (!loaded) return;
+    if (!loaded || !ready) return;
     if (user) {
       markOnboarded();
       setVisible(false);
       return;
     }
-    try {
-      if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
-    } catch { /* ignore */ }
-  }, [loaded, user]);
+    setVisible(variant === "popup" && !onboarded);
+  }, [loaded, user, variant, onboarded, ready]);
 
   const finish = () => {
     markOnboarded();

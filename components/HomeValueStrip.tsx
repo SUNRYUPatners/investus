@@ -5,6 +5,8 @@ import { Bell, Wallet } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { openGuestLogin } from "@/lib/guestLogin";
 import { useLocaleCode } from "@/contexts/LocaleContext";
+import { useFirstVisitVariant } from "@/hooks/useFirstVisitVariant";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
 import type { MarketId } from "@/lib/markets/types";
 
 export function HomeValueStrip({ market: _market }: { market: MarketId }) {
@@ -12,8 +14,10 @@ export function HomeValueStrip({ market: _market }: { market: MarketId }) {
   const locale = useLocaleCode();
   const isKo = locale === "ko";
   const router = useRouter();
+  const { variant, onboarded, ready } = useFirstVisitVariant();
 
-  if (!loaded || user) return null;
+  if (!loaded || !ready || user) return null;
+  if (variant === "popup" && !onboarded) return null;
 
   return (
     <section className="px-4 lg:px-0 pt-3">
@@ -56,6 +60,9 @@ export function HomeValueStrip({ market: _market }: { market: MarketId }) {
             <Bell className="w-3.5 h-3.5" />
             {isKo ? "아침 알림 받기" : "Morning alerts"}
           </button>
+        </div>
+        <div className="mt-3 pt-3" style={{ borderTop: "1px solid var(--border)" }}>
+          <NewsletterSignup compact />
         </div>
       </div>
     </section>

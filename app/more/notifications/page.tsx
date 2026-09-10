@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { ChevronLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useLocaleCode } from "@/contexts/LocaleContext";
@@ -286,6 +287,10 @@ export default function NotificationsPage() {
               </div>
             );
           })}
+        </div>
+
+        <div className="rounded-2xl border p-4 mb-4" style={{ background: "var(--card)", borderColor: "var(--border)" }}>
+          <NewsletterSignup />
         </div>
 
         {/* Footer notes */}

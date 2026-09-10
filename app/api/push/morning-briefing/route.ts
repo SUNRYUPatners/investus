@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getAdminSupabase } from "@/lib/supabase";
 import webpush from "web-push";
 import { getOrCreatePreMarketBriefing } from "@/lib/postMarketBriefing";
+import { sendBriefingDigestEmails } from "@/lib/newsletter";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
@@ -89,10 +90,27 @@ export async function GET(req: NextRequest) {
     await supabase.from("push_subscriptions").delete().in("endpoint", expired);
   }
 
+  let emailSent = 0;
+  let emailFailed = 0;
+  let emailTotal = 0;
+  try {
+    const digest = await sendBriefingDigestEmails({
+      headlineKo: briefing.headline,
+      headlineEn: briefing.headlineEn,
+      dateKey: briefing.dateKey,
+    });
+    emailSent = digest.sent;
+    emailFailed = digest.failed;
+    emailTotal = digest.total;
+  } catch (e) {
+    console.error("newsletter digest:", e);
+  }
+
   return NextResponse.json({
     sent,
     expired: expired.length,
     total: subs.length,
+    emails: { sent: emailSent, failed: emailFailed, total: emailTotal },
     dateKey: briefing.dateKey,
   });
 }

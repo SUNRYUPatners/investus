@@ -12,7 +12,7 @@ import { FearGreedWidget } from "@/components/FearGreedWidget";
 import { MarketFearWidget } from "@/components/market/MarketFearWidget";
 import { BuffettWidget } from "@/components/BuffettWidget";
 import { WatchlistSection } from "@/components/WatchlistSection";
-import { AdFitBanner, AdFitStrip } from "@/components/AdFitBanner";
+import { AdFitBanner } from "@/components/AdFitBanner";
 import { ReportFeed } from "@/components/ReportFeed";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortfolioWidget } from "@/components/PortfolioWidget";
@@ -116,9 +116,6 @@ export function MarketHomeShell({
                     <MarketFearWidget market={market} locale={uiLocale} />
                   )}
                 </section>
-                <section className="px-4 lg:hidden pt-2">
-                  <AdFitStrip />
-                </section>
                 {showBuffett && (
                   <section className="px-4 lg:hidden pt-2">
                     <BuffettWidget locale={uiLocale} />
@@ -127,16 +124,12 @@ export function MarketHomeShell({
               </>
             )}
 
-            <section className="px-4 pt-4">
-              <AdFitBanner />
-            </section>
-
             <section className="px-4 lg:hidden pt-4">
               <NewsSection market={market} />
             </section>
 
-            <section className="px-4 pt-2">
-              <AdFitStrip />
+            <section className="px-4 pt-4">
+              <AdFitBanner />
             </section>
 
             <section className="px-4 lg:px-0 pt-4 lg:pt-6">
@@ -144,10 +137,6 @@ export function MarketHomeShell({
             </section>
 
             <ShopPreviewSection />
-
-            <section className="px-4 pt-3 pb-2">
-              <AdFitBanner />
-            </section>
           </div>
 
           <div className="hidden lg:flex lg:flex-col lg:w-[340px] lg:flex-shrink-0 lg:sticky lg:top-[57px] lg:max-h-[calc(100vh-57px)] lg:overflow-y-auto no-scrollbar gap-5 pb-10">
@@ -158,9 +147,7 @@ export function MarketHomeShell({
                 ) : (
                   <MarketFearWidget market={market} locale={uiLocale} />
                 )}
-                <AdFitBanner />
                 {showBuffett && <BuffettWidget locale={uiLocale} />}
-                <AdFitStrip />
               </>
             )}
             <NewsSection market={market} />
