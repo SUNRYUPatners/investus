@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T11SEP = 1789081200000; // 2026.09.11 08:00 KST
 const T10SEP = 1788994800000; // 2026.09.10 08:00 KST
 const T09SEP = 1788908400000; // 2026.09.09 08:00 KST
 const T08SEP = 1788822000000; // 2026.09.08 08:00 KST
@@ -120,7 +121,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T10SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T11SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -139,6 +140,70 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-11 신규 ────────────────
+  { id: 121845, symbol: "SPCX", nickname: "라우터사백십", holdingLabel: "관심종목",
+    content: "라우터4가 와이파이7·기기 510·3500평방피트. 실내 규격이지 위성 속도 아님",
+    createdAt: T11SEP + 8*60_000, likes: 22, comments: 2 },
+  { id: 121846, symbol: "TSLA", nickname: "캡전비백육오", holdingLabel: "관심종목",
+    content: "캡 Cd 0.2 미만·165Wh/mi·첫 전륜. 마일당 원가 의견이랑 칸 나눠",
+    createdAt: T11SEP + 16*60_000, likes: 21, comments: 2 },
+  { id: 121847, symbol: "TSLA", nickname: "스트릭구칠", holdingLabel: "관심종목",
+    content: "FSD 훌륭하다 + 97.2%·177.7마일 스트릭. 분모 없는 한 구간임",
+    createdAt: T11SEP + 24*60_000, likes: 20, comments: 2 },
+  { id: 121848, symbol: "SPCX", nickname: "스타십매출창", holdingLabel: "관심종목",
+    content: "다음 스타십이 매출 비행일 수 있다는데 1000억 ARR은 확신 칸. 계약 전엔 시험이랑 분리",
+    createdAt: T11SEP + 32*60_000, likes: 19, comments: 2 },
+  { id: 121849, symbol: "NVDA", nickname: "팔란티어스택", holdingLabel: "관심종목",
+    content: "팔란티어가 엔터프라이즈 스택 핵심이라. 칩 매출이랑 구독 인식 다름. 내부자 매도랑 섞지 마",
+    createdAt: T11SEP + 40*60_000, likes: 18, comments: 2 },
+  { id: 121850, symbol: "MACRO", nickname: "십년사구이", holdingLabel: "관심종목",
+    content: "10년 4.92%(+0.08). 2023년 10월 이후 최고권. 바이백이랑 완화로 한 줄 금지",
+    createdAt: T11SEP + 48*60_000, likes: 17, comments: 2 },
+  { id: 121851, symbol: "TSLA", nickname: "슬로베니아무상", holdingLabel: "관심종목",
+    content: "슬로베니아 FSD 두 달 무상. 체험이지 유럽 허가 아님. 자그레브 무인이랑 다름",
+    createdAt: T11SEP + 56*60_000, likes: 16, comments: 2 },
+  { id: 121852, symbol: "SPCX", nickname: "콜로서스재설계", holdingLabel: "관심종목",
+    content: "xAI 센터를 안정성으로 다시 짠다. 122일 속도 뒤 장애. 테라팹이랑 현장 다름",
+    createdAt: T11SEP + 64*60_000, likes: 15, comments: 2 },
+  { id: 121853, symbol: "SPCX", nickname: "부스터이십이", holdingLabel: "관심종목",
+    content: "부스터22 극저온 통과, 비행15는 42호기. 지상 시험이지 발사 성공 아님",
+    createdAt: T11SEP + 72*60_000, likes: 14, comments: 2 },
+  { id: 121854, symbol: "TSLA", nickname: "보링이십삼조", holdingLabel: "관심종목",
+    content: "보링 30억 조달·가치 230억·UAE 150km+. 개통 전엔 계획. 테슬라 시총이랑 합치지 마",
+    createdAt: T11SEP + 80*60_000, likes: 13, comments: 2 },
+  { id: 121855, symbol: "TSLA", nickname: "앱색맞춤", holdingLabel: "관심종목",
+    content: "로보택시 앱 색을 캡 도장이랑 맞춤. 제품이지 대수 아님. 유타 7대는 앱 미등록",
+    createdAt: T11SEP + 88*60_000, likes: 22, comments: 2 },
+  { id: 121856, symbol: "SPCX", nickname: "테라팹사십", holdingLabel: "관심종목",
+    content: "테라팹 1단계 기초가 한 달 전보다 40~50%. 사진 비교지 수율 아님",
+    createdAt: T11SEP + 96*60_000, likes: 21, comments: 2 },
+  { id: 121857, symbol: "NVDA", nickname: "자그레브이십이", holdingLabel: "관심종목",
+    content: "포니+베르네 자그레브 22km 무인, 엔비디아 드라이브. 시연이지 유료 호출 아님",
+    createdAt: T11SEP + 104*60_000, likes: 20, comments: 2 },
+  { id: 121858, symbol: "TSLA", nickname: "라이더구사", holdingLabel: "관심종목",
+    content: "북미 캡 라이더 가이드 9/4. 안내서지 요금표 아님. 호출 도시 따로",
+    createdAt: T11SEP + 112*60_000, likes: 19, comments: 2 },
+  { id: 121859, symbol: "TSLA", nickname: "유타일곱대", holdingLabel: "관심종목",
+    content: "유타 플레전트그로브 핸들 캡 7대. 텍사스 등록이랑 더하지 마. 앱엔 없음",
+    createdAt: T11SEP + 120*60_000, likes: 18, comments: 2 },
+  { id: 121860, symbol: "TSLA", nickname: "홀츠기어", holdingLabel: "관심종목",
+    content: "홀츠게를링겐 옵티머스 기어트레인 채용. 공장 준비지 출고 아님. 5천대 발주랑 분리",
+    createdAt: T11SEP + 128*60_000, likes: 17, comments: 2 },
+  { id: 121861, symbol: "SPCX", nickname: "다이렉트구이팔", holdingLabel: "관심종목",
+    content: "다이렉트 9/28 일본 밖(미·캐·뉴질 후 필리핀). 휴대폰 문사지 라우터4 아님",
+    createdAt: T11SEP + 136*60_000, likes: 16, comments: 2 },
+  { id: 121862, symbol: "NVDA", nickname: "내부자육억", holdingLabel: "관심종목",
+    content: "스티븐스 지난주 6억+ 매도. 9/2 184만주 222.26, 9/4 102만주 230.51. 종가 223.67 −0.91%",
+    createdAt: T11SEP + 144*60_000, likes: 15, comments: 2 },
+  { id: 121863, symbol: "TSLA", nickname: "블랙록육백만", holdingLabel: "관심종목",
+    content: "블랙록 2분기 TSLA 600만주. 지난 분기 공시. 오늘 플릿이랑 시계 다름",
+    createdAt: T11SEP + 152*60_000, likes: 14, comments: 2 },
+  { id: 121864, symbol: "SPCX", nickname: "궤도내년첫", holdingLabel: "관심종목",
+    content: "CFO가 내년 첫 궤도 컴퓨팅 위성이라. 실증이지 별자리 완성 아님",
+    createdAt: T11SEP + 160*60_000, likes: 13, comments: 2 },
+  { id: 121865, symbol: "SPCX", nickname: "의회일곱", holdingLabel: "관심종목",
+    content: "살라자르 SPCX 1천~1만5천 구간, 6월 이후 7번째. IBM·머크도 같은 공시. 소액 신호",
+    createdAt: T11SEP + 168*60_000, likes: 22, comments: 2 },
   // ── 2026-09-10 신규 ────────────────
   { id: 121820, symbol: "AI", nickname: "경제두배체크", holdingLabel: "관심종목",
     content: "경제 두 배라는데 10년 가정임. 공장 대수 나오기 전엔 부품 5천이랑 칸 나눠야지",
@@ -4528,6 +4593,90 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  121845: [
+    { id: 1218451, nickname: "캡전비백육오", holdingLabel: "관심종목", content: "와이파이7이 위성 속도는 아님", createdAt: T11SEP + 720000, likes: 5 },
+    { id: 1218452, nickname: "스타십매출창", holdingLabel: "관심종목", content: "다이렉트랑 라우터를 한 제품으로 안 묶음", createdAt: T11SEP + 900000, likes: 4 },
+  ],
+  121846: [
+    { id: 1218461, nickname: "스트릭구칠", holdingLabel: "관심종목", content: "165Wh/mi가 실도로인지는 다음", createdAt: T11SEP + 780000, likes: 5 },
+    { id: 1218462, nickname: "팔란티어스택", holdingLabel: "관심종목", content: "전륜 부품 수율이 빈칸이면 가정 낮춤", createdAt: T11SEP + 960000, likes: 4 },
+  ],
+  121847: [
+    { id: 1218471, nickname: "스타십매출창", holdingLabel: "관심종목", content: "97.2% 분모부터 확인하자", createdAt: T11SEP + 840000, likes: 5 },
+    { id: 1218472, nickname: "십년사구이", holdingLabel: "관심종목", content: "슬로베니아 무상이랑 스트릭은 다른 나라", createdAt: T11SEP + 1020000, likes: 4 },
+  ],
+  121848: [
+    { id: 1218481, nickname: "팔란티어스택", holdingLabel: "관심종목", content: "매출 비행은 페이로드 고객이 게이트", createdAt: T11SEP + 900000, likes: 5 },
+    { id: 1218482, nickname: "슬로베니아무상", holdingLabel: "관심종목", content: "1000억 ARR은 수주 잔고가 아님", createdAt: T11SEP + 1080000, likes: 4 },
+  ],
+  121849: [
+    { id: 1218491, nickname: "십년사구이", holdingLabel: "관심종목", content: "스택 평가는 수주 전엔 가중치 낮춤", createdAt: T11SEP + 960000, likes: 5 },
+    { id: 1218492, nickname: "콜로서스재설계", holdingLabel: "관심종목", content: "자그레브 시연이랑 팔란티어는 다른 층", createdAt: T11SEP + 1140000, likes: 4 },
+  ],
+  121850: [
+    { id: 1218501, nickname: "슬로베니아무상", holdingLabel: "관심종목", content: "PPI 5.4%랑 4.92%를 한 완화로 안 봄", createdAt: T11SEP + 1020000, likes: 5 },
+    { id: 1218502, nickname: "부스터이십이", holdingLabel: "관심종목", content: "CPI랑 9/16 회의가 다음 게이트", createdAt: T11SEP + 1200000, likes: 4 },
+  ],
+  121851: [
+    { id: 1218511, nickname: "콜로서스재설계", holdingLabel: "관심종목", content: "두 달 무상 뒤 전환율이 매출", createdAt: T11SEP + 1080000, likes: 5 },
+    { id: 1218512, nickname: "보링이십삼조", holdingLabel: "관심종목", content: "감독 모드랑 무인 시연을 나누자", createdAt: T11SEP + 1260000, likes: 4 },
+  ],
+  121852: [
+    { id: 1218521, nickname: "부스터이십이", holdingLabel: "관심종목", content: "재설계 기간엔 연산이 덜 나옴", createdAt: T11SEP + 1140000, likes: 5 },
+    { id: 1218522, nickname: "앱색맞춤", holdingLabel: "관심종목", content: "가동률 공지 나오기 전엔 용량 확정 금지", createdAt: T11SEP + 1320000, likes: 4 },
+  ],
+  121853: [
+    { id: 1218531, nickname: "보링이십삼조", holdingLabel: "관심종목", content: "극저온 다음이 정적 화재", createdAt: T11SEP + 1200000, likes: 5 },
+    { id: 1218532, nickname: "테라팹사십", holdingLabel: "관심종목", content: "비행 15 창이 열리기 전엔 일정만", createdAt: T11SEP + 1380000, likes: 4 },
+  ],
+  121854: [
+    { id: 1218541, nickname: "앱색맞춤", holdingLabel: "관심종목", content: "150km는 계획 킬로, 개통이 아님", createdAt: T11SEP + 1260000, likes: 5 },
+    { id: 1218542, nickname: "자그레브이십이", holdingLabel: "관심종목", content: "두바이 루프랑 150km를 한 셀 금지", createdAt: T11SEP + 1440000, likes: 4 },
+  ],
+  121855: [
+    { id: 1218551, nickname: "테라팹사십", holdingLabel: "관심종목", content: "색 맞춘 건 대기시간 힌트일 뿐", createdAt: T11SEP + 1320000, likes: 5 },
+    { id: 1218552, nickname: "라이더구사", holdingLabel: "관심종목", content: "텍사스 등록이랑 앱 색은 다른 줄", createdAt: T11SEP + 1500000, likes: 4 },
+  ],
+  121856: [
+    { id: 1218561, nickname: "자그레브이십이", holdingLabel: "관심종목", content: "기초 40%를 양산으로 읽지 마", createdAt: T11SEP + 1380000, likes: 5 },
+    { id: 1218562, nickname: "유타일곱대", holdingLabel: "관심종목", content: "툴 반입이 기초 다음 확인", createdAt: T11SEP + 1560000, likes: 4 },
+  ],
+  121857: [
+    { id: 1218571, nickname: "라이더구사", holdingLabel: "관심종목", content: "22km 한 경로를 유럽 허가로 확장 금지", createdAt: T11SEP + 1440000, likes: 5 },
+    { id: 1218572, nickname: "홀츠기어", holdingLabel: "관심종목", content: "요금·지오펜스 전엔 점유율 단정 금지", createdAt: T11SEP + 1620000, likes: 4 },
+  ],
+  121858: [
+    { id: 1218581, nickname: "유타일곱대", holdingLabel: "관심종목", content: "가이드 PDF랑 요금표는 다름", createdAt: T11SEP + 1500000, likes: 5 },
+    { id: 1218582, nickname: "다이렉트구이팔", holdingLabel: "관심종목", content: "북미 문서지 유럽 가이드 아님", createdAt: T11SEP + 1680000, likes: 4 },
+  ],
+  121859: [
+    { id: 1218591, nickname: "홀츠기어", holdingLabel: "관심종목", content: "핸들 있는 7대는 시험차일 수도", createdAt: T11SEP + 1560000, likes: 5 },
+    { id: 1218592, nickname: "내부자육억", holdingLabel: "관심종목", content: "유타 허가 나오기 전엔 공급 아님", createdAt: T11SEP + 1740000, likes: 4 },
+  ],
+  121860: [
+    { id: 1218601, nickname: "다이렉트구이팔", holdingLabel: "관심종목", content: "채용 공고는 라인 가동이 아님", createdAt: T11SEP + 1620000, likes: 5 },
+    { id: 1218602, nickname: "블랙록육백만", holdingLabel: "관심종목", content: "주당 조립이 나와야 원가 곡선", createdAt: T11SEP + 1800000, likes: 4 },
+  ],
+  121861: [
+    { id: 1218611, nickname: "내부자육억", holdingLabel: "관심종목", content: "9/28은 창이지 가입자 실적 아님", createdAt: T11SEP + 1680000, likes: 5 },
+    { id: 1218612, nickname: "궤도내년첫", holdingLabel: "관심종목", content: "통신사 요금표가 다음 숫자", createdAt: T11SEP + 1860000, likes: 4 },
+  ],
+  121862: [
+    { id: 1218621, nickname: "블랙록육백만", holdingLabel: "관심종목", content: "내부자 매도를 실적 실패로 단정 금지", createdAt: T11SEP + 1740000, likes: 5 },
+    { id: 1218622, nickname: "의회일곱", holdingLabel: "관심종목", content: "추가 폼4가 있으면 옆에 둠", createdAt: T11SEP + 1920000, likes: 4 },
+  ],
+  121863: [
+    { id: 1218631, nickname: "궤도내년첫", holdingLabel: "관심종목", content: "2분기 13F는 이미 지난 스냅샷", createdAt: T11SEP + 1800000, likes: 5 },
+    { id: 1218632, nickname: "라우터사백십", holdingLabel: "관심종목", content: "다음 13F 전엔 추격 패스", createdAt: T11SEP + 1980000, likes: 4 },
+  ],
+  121864: [
+    { id: 1218641, nickname: "의회일곱", holdingLabel: "관심종목", content: "첫 위성은 실증, 용량 넣지 마", createdAt: T11SEP + 1860000, likes: 5 },
+    { id: 1218642, nickname: "캡전비백육오", holdingLabel: "관심종목", content: "다운링크·전력이 궤도 병목", createdAt: T11SEP + 2040000, likes: 4 },
+  ],
+  121865: [
+    { id: 1218651, nickname: "라우터사백십", holdingLabel: "관심종목", content: "구간 공시는 정확한 주수가 없음", createdAt: T11SEP + 1920000, likes: 5 },
+    { id: 1218652, nickname: "스트릭구칠", holdingLabel: "관심종목", content: "락업 물량이랑 소액 PTR 분리", createdAt: T11SEP + 2100000, likes: 4 },
+  ],
   121820: [
     { id: 1218201, nickname: "금캡이275", holdingLabel: "관심종목", content: "발언이랑 출고 대수는 시계가 다름", createdAt: T10SEP + 720000, likes: 5 },
     { id: 1218202, nickname: "텍사스사삼칠", holdingLabel: "관심종목", content: "전력·허가가 빈칸이면 가정 가중치 낮춤", createdAt: T10SEP + 900000, likes: 4 },

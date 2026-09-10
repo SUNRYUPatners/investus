@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.11</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">유타 플레전트그로브에 핸들이 있는 사이버캡 7대가 포착됐습니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">📍</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">7대</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">플레전트그로브는 유타의 도시입니다. 핸들이 달린 사이버캡 7대가 보였고, 로보택시 앱에는 아직 안 올라왔다는</text>
+  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">설명이 붙었습니다.</text>
+  <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">대수</text>
+  <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">7</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">포착된 차량</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">텍사스 등록과 다른 칸</text>
+  <rect x="390" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">핸들</text>
+  <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">있음</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">운전대 장착</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">무핸들 양산과 구분</text>
+  <rect x="720" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">앱</text>
+  <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">미등록</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">호출 앱 미표시</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">유료 공급이 아님</text>
+  <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">현장이 의미하는 것</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 유타는 텍사스 플릿과 주가 다름</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">🛞 핸들 있는 차는 시험·이동용일 수 있음</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">📱 앱 미등록이면 호출 불가</text>
+  <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="810" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">7대는 현지 목격이지 주 전체 등록이 아닙니다. 텍사스 437대 서사와 칸을 나누시기 바랍니다. 다음 확인할 것은 유타 허가입니다.</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기적으로 주가 늘면 전용차 공급 지도가 넓어집니다.</text>
+  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 유타 7대 · 2026.09.11</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

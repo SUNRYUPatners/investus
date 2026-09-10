@@ -1,0 +1,233 @@
+module.exports = [
+  {
+    "id": "seed-1589",
+    "slug": "starlink-router-4",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스타링크 라우터 4가 와이파이 7에 기기 510대·면적 3,500평방피트를 표기했습니다",
+    "summary": "라우터 4는 가정·사무실용 스타링크 단말기입니다. 와이파이 7, 동시 기기 510대, 커버 면적 3,500평방피트, 무게 약 0.9파운드가 스펙으로 찍혔습니다. 실내 와이파이 규격이지 위성 속도가 아닙니다. 스타링크 다이렉트 9월 28일 확대와 칸을 나누시기 바랍니다. 다음 확인할 것은 출하와 실측 속도입니다.",
+    "titleEn": "Starlink Router 4 printed Wi-Fi 7, 510 devices, and 3,500 sq ft",
+    "summaryEn": "Router 4 printed Wi-Fi 7, 510 devices, 3,500 sq ft, about 0.9 lb. Indoor radio, not satellite speed. Split from Direct on Sep 28."
+  },
+  {
+    "id": "seed-1590",
+    "slug": "cybercab-cd-165",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "사이버캡 공기저항이 0.2 미만, 전비 165와트시/마일로 찍혔습니다",
+    "summary": "공기저항계수(Cd)는 차가 공기를 가르는 저항입니다. 0.2 미만이면 매우 낮은 편입니다. 전비 165와트시/마일은 1마일에 쓰는 전력이고, 테슬라 첫 전륜구동으로 설명됐습니다. 마일당 원가 의견·유타 7대와 칸을 나누시기 바랍니다. 다음 확인할 것은 실도로 전비입니다.",
+    "titleEn": "Cybercab Cd printed under 0.2 with 165 Wh per mile",
+    "summaryEn": "Cd under 0.2 and 165 Wh/mi, cited as Tesla’s first FWD. Split from CPM opinions and the Utah 7. Next: on-road Wh/mi."
+  },
+  {
+    "id": "seed-1591",
+    "slug": "tsla-fsd-awesome",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "완전자율주행이 훌륭하다는 발언과 97.2%·177.7마일 스트릭이 같이 나왔습니다",
+    "summary": "스트릭은 개입 없이 이어 간 구간입니다. 97.2%와 177.7마일이 한 화면에 찍혔고, 완전자율주행이 훌륭하다는 발언이 붙었습니다. 분모·개입 정의는 공시되지 않았습니다. 슬로베니아 두 달 무상과 칸을 나누시기 바랍니다. 다음 확인할 것은 공개 개입률입니다.",
+    "titleEn": "A “self-driving is awesome” remark sat beside a 97.2% / 177.7-mile streak",
+    "summaryEn": "97.2% and 177.7 miles printed with a stronger FSD tone. Denominator not disclosed. Split from Slovenia’s two free months."
+  },
+  {
+    "id": "seed-1592",
+    "slug": "spcx-starship-revenue",
+    "category": "BREAKING",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "다음 스타십 비행이 매출을 내는 비행이 될 수 있다는 확신이 나왔습니다",
+    "summary": "지금까지 스타십 비행은 시험에 가까웠습니다. 다음 비행이 고객 화물을 실어 돈을 받는 비행이 될 수 있다는 표현이 나왔고, 연간 반복매출 1,000억 달러 확신이 붙었습니다. 부스터 22호기 극저온 시험과 칸을 나누시기 바랍니다. 1,000억 달러는 가정이지 수주 잔고가 아닙니다. 다음 확인할 것은 페이로드 고객입니다.",
+    "titleEn": "The next Starship flight was framed as revenue-generating",
+    "summaryEn": "Next Starship framed as a paid flight, with $100B ARR conviction. Split from Booster 22 cryo. $100B is not backlog."
+  },
+  {
+    "id": "seed-1593",
+    "slug": "nvda-pltr-stack",
+    "category": "BREAKING",
+    "color": "blue",
+    "subject": "엔비디아",
+    "title": "팔란티어가 엔터프라이즈 스택에서 가장 중요하다는 발언이 나왔습니다",
+    "summary": "엔터프라이즈 스택은 기업이 인공지능을 돌리는 소프트웨어 층입니다. 팔란티어가 그 층에서 가장 중요하다는 평가와 주권 인공지능 스택 그림이 같이 나왔습니다. 칩 판매와 소프트웨어 구독은 매출 인식이 다릅니다. 내부자 6억 달러 매도와 칸을 나누시기 바랍니다. 다음 확인할 것은 공동 레퍼런스입니다.",
+    "titleEn": "Palantir was called the single most important enterprise stack",
+    "summaryEn": "Palantir called the key enterprise layer beside a sovereign-AI stack. Split chip sales from software. Split the $600M insider sale."
+  },
+  {
+    "id": "seed-1594",
+    "slug": "ust-10y-492",
+    "category": "매크로",
+    "color": "red",
+    "subject": "금리",
+    "title": "미국 10년물이 4.92%로 올라 2023년 10월 이후 최고권입니다",
+    "summary": "10년물 금리는 국채 10년을 살 때 받는 수익률입니다. 하루 +0.08%포인트로 4.92%가 됐고, 이 높이는 2023년 10월 이후입니다. 8월 생산자물가는 전년 대비 5.4%로 예상 5.3%를 웃돌았습니다. 바이백 규모와 한 줄의 완화로 합치지 마시기 바랍니다. 다음 확인할 것은 소비자물가입니다.",
+    "titleEn": "The U.S. 10-year printed 4.92%, highest since October 2023",
+    "summaryEn": "10-year 4.92% (+0.08 pp), highest since Oct 2023. August PPI 5.4% vs 5.3% expected. Do not mash with buybacks as easing."
+  },
+  {
+    "id": "seed-1595",
+    "slug": "slovenia-fsd-free",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "슬로베니아에서 완전자율주행을 두 달 무상으로 쓸 수 있다는 안내가 나왔습니다",
+    "summary": "완전자율주행은 운전자 감독 아래 차가 차로·감속을 맡는 소프트웨어입니다. 슬로베니아에서 두 달 동안 요금 없이 쓸 수 있다는 안내가 나왔습니다. 유럽 전역 허가가 아닙니다. 97.2% 스트릭·자그레브 무인과 칸을 나누시기 바랍니다. 다음 확인할 것은 유료 전환율입니다.",
+    "titleEn": "Slovenia was offered two months of FSD at no charge",
+    "summaryEn": "Two free months of supervised FSD in Slovenia. Not an EU-wide permit. Split from the 97.2% streak and Zagreb driverless."
+  },
+  {
+    "id": "seed-1596",
+    "slug": "xai-dc-overhaul",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스페이스엑스가 엑스에이아이 데이터센터를 속도보다 안정성 쪽으로 다시 짜고 있습니다",
+    "summary": "콜로서스는 대규모 인공지능 학습 클러스터입니다. 122일 만에 올린 뒤 장애가 있었고, 이제는 속도보다 안정성을 우선해 설비를 다시 짜는 작업이 거론됐습니다. 재설계는 자본지출 일정이지 학습 성능 확정이 아닙니다. 테라팹 기초와 칸을 나누시기 바랍니다. 다음 확인할 것은 가동률입니다.",
+    "titleEn": "SpaceX is overhauling the xAI data center toward reliability over speed",
+    "summaryEn": "Colossus went up in 122 days then saw outages; the rebuild puts reliability first. Split from Terafab footings. Next: utilization."
+  },
+  {
+    "id": "seed-1597",
+    "slug": "sh22-cryo-f15",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "슈퍼헤비 부스터 22호기가 극저온 시험을 통과했고 15번째 비행에 42호기가 거론됐습니다",
+    "summary": "극저온 시험은 초저온 연료를 넣어 탱크가 새지 않는지 보는 지상 시험입니다. 부스터 22호기가 통과했고, 15번째 비행에는 42호기가 거론됐습니다. 발사 허가가 아닙니다. 매출 비행 확신과 칸을 나누시기 바랍니다. 다음 게이트는 정적 화재와 발사 창입니다.",
+    "titleEn": "Super Heavy Booster 22 cryo-proofed, with Ship 42 cited for Flight 15",
+    "summaryEn": "Booster 22 cryo-proofed; Ship 42 cited for Flight 15. Ground test, not a license. Split from revenue-flight talk."
+  },
+  {
+    "id": "seed-1598",
+    "slug": "boring-3b-23b",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "보링컴퍼니가 30억 달러 조달에 기업가치 230억 달러를 표기했습니다",
+    "summary": "보링컴퍼니는 지하 터널을 파는 회사입니다. 30억 달러 시리즈 D에 기업가치 230억 달러, 아랍에미리트 터널 150km 이상이 붙었습니다. 착공·개통 전에 기업가치를 확정 수요로 읽지 마시기 바랍니다. 테슬라 시총과 합치지 마시기 바랍니다. 다음 확인할 것은 착공 구간입니다.",
+    "titleEn": "The Boring Company printed a $3B raise at a $23B valuation",
+    "summaryEn": "$3B Series D at $23B, with 150+ km UAE tunnels. Valuation is not opened demand. Split from Tesla cap."
+  },
+  {
+    "id": "seed-1599",
+    "slug": "robotaxi-app-hue",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "로보택시 앱 호출 색이 사이버캡 차체 색과 맞춰졌습니다",
+    "summary": "호출 앱에서 픽업 차량을 알아보는 색이 사이버캡 도장과 같아졌다는 현장이 공유됐습니다. 소프트웨어 표식이지 운행 대수가 아닙니다. 유타 7대·텍사스 등록과 칸을 나누시기 바랍니다. 다음 확인할 것은 유료 호출 도시입니다. 라이더 가이드와 한 문장에 넣지 마시기 바랍니다.",
+    "titleEn": "The robotaxi app pickup hue was matched to the Cybercab body color",
+    "summaryEn": "Pickup hue matched Cybercab paint. Product polish, not fleet count. Split from Utah 7 and Texas registry."
+  },
+  {
+    "id": "seed-1600",
+    "slug": "terafab-foundation",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "테라팹 1단계 기초가 한 달 전보다 40~50% 더 진행된 모습입니다",
+    "summary": "테라팹은 대형 칩·패키지 공장 프로젝트입니다. 1단계 기초 공사가 한 달 전 사진보다 40~50% 더 나아갔다는 비교가 나왔습니다. 기초는 착공이지 양산이 아닙니다. 데이터센터 재설계와 칸을 나누시기 바랍니다. 다음 확인할 것은 장비 반입입니다.",
+    "titleEn": "Terafab Phase 1 foundations look 40–50% further than a month ago",
+    "summaryEn": "Phase 1 footings look 40–50% further than a month ago. Groundbreaking, not yield. Split from the xAI DC rebuild."
+  },
+  {
+    "id": "seed-1601",
+    "slug": "pony-zagreb-nvda",
+    "category": "BREAKING",
+    "color": "blue",
+    "subject": "엔비디아",
+    "title": "포니에이아이와 베르네가 자그레브 시내 22km를 운전자 없이 달렸습니다",
+    "summary": "포니에이아이는 중국 로보택시 회사이고 베르네는 유럽 파트너입니다. 크로아티아 자그레브 일반도로 22km를 운전자 없이 달렸고, 엔비디아 드라이브가 붙었습니다. 유럽 첫 사례로 설명됐습니다. 테슬라 사이버캡 배치와 칸을 나누시기 바랍니다. 다음 확인할 것은 반복 운행과 요금입니다.",
+    "titleEn": "Pony.ai and Verne ran 22 km driverless on public roads in Zagreb",
+    "summaryEn": "22 km driverless in Zagreb with NVIDIA DRIVE, cited as a Europe first. A demo, not paid rides. Split from Tesla Cybercab."
+  },
+  {
+    "id": "seed-1602",
+    "slug": "cybercab-rider-guide",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "북미 사이버캡 탑승 안내서가 2026년 9월 4일 자로 나왔습니다",
+    "summary": "라이더 가이드는 승객이 차에 타기 전 읽는 안내서입니다. 북미용 사이버캡 안내서가 2026년 9월 4일 날짜로 공개됐습니다. 유료 호출 확정이 아닙니다. 앱 색·유타 7대와 칸을 나누시기 바랍니다. 다음 확인할 것은 호출이 열리는 도시입니다.",
+    "titleEn": "A North America Cybercab rider guide printed dated 2026/09/04",
+    "summaryEn": "NA Cybercab rider guide dated 2026/09/04. Product prep, not a fare launch. Split from app hue and the Utah 7."
+  },
+  {
+    "id": "seed-1603",
+    "slug": "utah-7-cybercab",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "유타 플레전트그로브에 핸들이 있는 사이버캡 7대가 포착됐습니다",
+    "summary": "플레전트그로브는 유타의 도시입니다. 핸들이 달린 사이버캡 7대가 보였고, 로보택시 앱에는 아직 안 올라왔다는 설명이 붙었습니다. 텍사스 등록 집계와 칸을 나누시기 바랍니다. 핸들 있는 차는 시험·이동용일 수 있습니다. 다음 확인할 것은 유타 허가입니다.",
+    "titleEn": "Seven Cybercabs with steering wheels were spotted in Pleasant Grove, Utah",
+    "summaryEn": "Seven wheeled Cybercabs in Pleasant Grove, not in the hail app. Not the Texas registry. Next: a Utah permit."
+  },
+  {
+    "id": "seed-1604",
+    "slug": "optimus-germany",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "옵티머스 기어트레인 제조 채용이 독일 홀츠게를링겐에서 열렸습니다",
+    "summary": "기어트레인은 관절을 움직이는 기어·감속기 묶음입니다. 독일 홀츠게를링겐에서 옵티머스 기어트레인 제조 인력을 뽑는 공고가 나왔습니다. 채용은 공장 준비이지 출고가 아닙니다. 부품 5,000대 발주와 칸을 나누시기 바랍니다. 다음 확인할 것은 라인 가동입니다.",
+    "titleEn": "An Optimus geartrain manufacturing hire opened in Holzgerlingen, Germany",
+    "summaryEn": "Optimus geartrain manufacturing hire in Holzgerlingen. A hire is not shipments. Split from the 5,000-unit parts order."
+  },
+  {
+    "id": "seed-1605",
+    "slug": "starlink-direct-expand",
+    "category": "BREAKING",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "소프트뱅크 스타링크 다이렉트가 9월 28일 일본 밖으로 넓혀집니다",
+    "summary": "스타링크 다이렉트는 위성에서 휴대폰으로 바로 문자를 보내는 서비스입니다. 일본을 넘어 미국·캐나다·뉴질랜드에 먼저 열리고, 이어 필리핀이 거론됐습니다. 날짜는 9월 28일입니다. 가정용 라우터 4와 칸을 나누시기 바랍니다. 다음 확인할 것은 통신사 요금입니다.",
+    "titleEn": "SoftBank Starlink Direct expands beyond Japan on September 28",
+    "summaryEn": "Direct expands past Japan on Sep 28 to US, Canada, NZ, then Philippines. Phone texts, not Router 4. Next: carrier pricing."
+  },
+  {
+    "id": "seed-1606",
+    "slug": "nvda-insider-600m",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "엔비디아",
+    "title": "마크 스티븐스가 지난주 엔비디아 주식을 6억 달러가 넘게 팔았습니다",
+    "summary": "내부자 매도는 임원·이사가 자기 회사 주식을 파는 공시입니다. 9월 2일 184만 8,501주를 주당 222.26달러, 9월 4일 102만 2,239주를 주당 230.51달러에 팔았고 합이 6억 달러를 넘습니다. 종가는 223.67달러(−0.91%)였습니다. 팔란티어 스택 발언과 칸을 나누시기 바랍니다. 다음 확인할 것은 추가 공시입니다.",
+    "titleEn": "Mark Stevens sold more than $600M of NVIDIA last week",
+    "summaryEn": "Two Form 4s: 1,848,501 at $222.26 on Sep 2 and 1,022,239 at $230.51 on Sep 4, over $600M. Close $223.67 (−0.91%). Split from the Palantir remark."
+  },
+  {
+    "id": "seed-1607",
+    "slug": "blackrock-tsla-6m",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "블랙록이 2분기에 테슬라 주식 600만 주를 사들였습니다",
+    "summary": "블랙록은 세계 큰 자산운용사입니다. 2분기 공시에 테슬라 보통주 600만 주 매수가 찍혔습니다. 이미 지난 분기 스냅샷입니다. 유타 7대·사이버캡 스펙과 칸을 나누시기 바랍니다. 다음 확인할 것은 다음 13F입니다.",
+    "titleEn": "BlackRock bought 6 million Tesla shares in the second quarter",
+    "summaryEn": "BlackRock bought 6 million Tesla shares in Q2. A stale holdings print. Split from Utah 7 and Cybercab specs. Next: the next 13F."
+  },
+  {
+    "id": "seed-1608",
+    "slug": "spcx-orbital-compute",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스페이스엑스 재무가 내년에 첫 궤도 컴퓨팅 위성을 올리겠다고 했습니다",
+    "summary": "궤도 컴퓨팅은 지상 데이터센터 대신 위성에서 연산을 돌리는 그림입니다. 재무담당이 내년에 첫 위성을 올리겠다고 했습니다. 시제·실증 단계입니다. 스타십 매출 비행·데이터센터 재설계와 칸을 나누시기 바랍니다. 다음 확인할 것은 발사 매니페스트입니다.",
+    "titleEn": "SpaceX’s CFO said the first orbital-compute satellites go up next year",
+    "summaryEn": "CFO: first orbital-compute sats next year. A demo, not a constellation. Split from Starship revenue flights and the DC rebuild."
+  },
+  {
+    "id": "seed-1609",
+    "slug": "congress-spcx-buy",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "살라자르 의원이 스페이스엑스를 1천~1만 5천 달러 구간에 사 일곱 번째 매수자가 됐습니다",
+    "summary": "공직자 거래 공시는 금액 구간만 밝힙니다. 살라자르 의원이 스페이스엑스를 1,001~1만 5,000달러 구간에 샀고, 6월 상장 이후 의회 매수자로는 일곱 번째입니다. IBM·머크 매수도 같은 공시에 있습니다. 락업 물량·종가와 칸을 나누시기 바랍니다. 다음 확인할 것은 추가 공시입니다.",
+    "titleEn": "Rep. Salazar bought SpaceX in the $1k–$15k band, the seventh Congress buyer since June",
+    "summaryEn": "Salazar PTR: SPCX in the $1,001–$15,000 band, seventh member since June. IBM and Merck on the same filing. Split from the unlock."
+  }
+];

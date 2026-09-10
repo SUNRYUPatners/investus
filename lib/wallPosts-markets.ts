@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T11 = 1789081200000; // 2026-09-11 08:00 KST
 const T10 = 1788994800000; // 2026-09-10 08:00 KST
 const T09 = 1788908400000; // 2026-09-09 08:00 KST
 const T08 = 1788822000000; // 2026-09-08 08:00 KST
@@ -16,6 +17,13 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9099, symbol: "코스피", nickname: "칠천피사수", holdingLabel: "인덱스 보유", content: "어제 7033.92(−0.25%)에 저점 6898. 종가 7000은 지킴. 외인 −2.48조랑 등락을 한 셀에 넣지 마", createdAt: T11 - 0, likes: 44, comments: 2, },
+  { id: 9100, symbol: "코스피", nickname: "네마녀수급", holdingLabel: "관심종목", content: "선물옵션 만기+리밸런싱. 기타법인 +1.67조는 자사주 칸. 기관 6일 연속 매수", createdAt: T11 - 1800000, likes: 43, comments: 2, },
+  { id: 9101, symbol: "삼성전자", nickname: "이십육만구천", holdingLabel: "삼성전자 보유", content: "269000(−0.19%). 장중 263500 되돌림. 외인 −1.41조·기관 +1.01조", createdAt: T11 - 3600000, likes: 42, comments: 2, },
+  { id: 9102, symbol: "SK하이닉스", nickname: "백팔십오만삼", holdingLabel: "하이닉스 보유", content: "1853000(−0.16%)에 저점 1811000. 외인 −1.78조. 리밸런싱이랑 종가 분리", createdAt: T11 - 5400000, likes: 41, comments: 2, },
+  { id: 9103, symbol: "LG에너지솔루션", nickname: "엔솔일점육", holdingLabel: "관심종목", content: "365000(−1.62%). 전날 +6.46% 다음날. 유가 101이 원가 줄", createdAt: T11 - 7200000, likes: 40, comments: 2, },
+  { id: 9104, symbol: "삼성바이오로직스", nickname: "삼바이퍼", holdingLabel: "관심종목", content: "1423000(−2.00%). 제약 베타. 반도체 외인 매도 연장으로 안 읽음", createdAt: T11 - 9000000, likes: 39, comments: 2, },
+  { id: 9105, symbol: "현대차", nickname: "완성차영점이", holdingLabel: "현대차 관심", content: "+0.26%면 지수·엔솔이랑 온도 다름. 유가 101·금리 4.92%가 할부 줄", createdAt: T11 - 10800000, likes: 38, comments: 2, },
   { id: 9092, symbol: "코스피", nickname: "칠천피재돌파", holdingLabel: "인덱스 보유", content: "어제 7051(+1.40%)에 고점 7112. 33거래일 만에 종가 7000 위. 개인 −2.5조·기관 +9005억을 등락이랑 한 셀에 넣지 마", createdAt: T10 - 0, likes: 44, comments: 2, },
   { id: 9093, symbol: "코스피", nickname: "수급오일치", holdingLabel: "관심종목", content: "기관 5거래일 연속 매수인데 외인은 −1702억. 코스닥은 외인 +2980억이라 시장이 갈림", createdAt: T10 - 1800000, likes: 43, comments: 2, },
   { id: 9094, symbol: "삼성전자", nickname: "이십칠만보합", holdingLabel: "삼성전자 보유", content: "269500 보합. 장중 275000 반납. 하이닉스 +3.51%랑 온도 다름", createdAt: T10 - 3600000, likes: 42, comments: 2, },
@@ -101,6 +109,34 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9099: [
+    { id: 1, nickname: "수급표작성", holdingLabel: "관망", content: "외인 2.48조는 이벤트 수급 칸이에요", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "칠천피사수", holdingLabel: "인덱스 보유", content: "저점 6898 되돌림을 종가랑 같이 적죠", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9100: [
+    { id: 1, nickname: "기관육일", holdingLabel: "관심종목", content: "6일 연속이 전환인지는 다음 주 확인", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "자사주방파", holdingLabel: "관심종목", content: "기타법인 1.67조를 추세 매수로 읽지 마", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9101: [
+    { id: 1, nickname: "이십육만구천", holdingLabel: "삼성전자 보유", content: "장중 저가 반납은 수급이지 펀더 아님", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "메모리비교", holdingLabel: "관심종목", content: "하이닉스 −0.16%랑 온도만 옆에 둠", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9102: [
+    { id: 1, nickname: "백팔십오만삼", holdingLabel: "하이닉스 보유", content: "장중 181.1만이 지지인지는 내일 확인", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "리밸런싱줄", holdingLabel: "관심종목", content: "지수 변경 매물이랑 종가 약보합 분리", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9103: [
+    { id: 1, nickname: "엔솔일점육", holdingLabel: "관심종목", content: "전날 급등 되돌림이랑 유가 칸을 두 줄로", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "원가줄체크", holdingLabel: "관심종목", content: "브렌트 101이 원가 칸에 먼저", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9104: [
+    { id: 1, nickname: "삼바이퍼", holdingLabel: "관심종목", content: "수주 없으면 하루 베타로만 태그", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "제약갈림", holdingLabel: "관심종목", content: "의료정밀 상승이랑 바이오 낙폭이 업종 안에서도 갈림", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9105: [
+    { id: 1, nickname: "완성차영점이", holdingLabel: "현대차 관심", content: "판매·인센티브 전엔 상대 성과만 적음", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "할부금리줄", holdingLabel: "관심종목", content: "10년 4.92%면 완성차 레버리지 줄임", createdAt: T11 + 1200000, likes: 4 },
+  ],
   9092: [
     { id: 1, nickname: "수급표작성", holdingLabel: "관망", content: "개인 2.5조 매도는 이벤트 수급 칸이에요", createdAt: T10 + 600000, likes: 5 },
     { id: 2, nickname: "칠천피재돌파", holdingLabel: "인덱스 보유", content: "고점 7112 반납을 종가랑 같이 적죠", createdAt: T10 + 1200000, likes: 4 },
@@ -384,6 +420,12 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9188, symbol: "매크로", nickname: "물가금리표", holdingLabel: "관망", content: "BTC 7.7만권·금 4365·브렌트 101.21·10년 4.92%가 한 아침. PPI 5.4%를 완화로 읽지 마", createdAt: T11 - 0, likes: 44, comments: 2, },
+  { id: 9189, symbol: "비트코인", nickname: "칠만칠천권", holdingLabel: "BTC 보유", content: "8만 재돌파 실패. 77~78k. 금이랑 속도가 다름. 할인율 4.92% 칸 따로", createdAt: T11 - 1800000, likes: 43, comments: 2, },
+  { id: 9190, symbol: "금", nickname: "사천삼육오", holdingLabel: "금 ETF", content: "온스 4365, 4400 아래. 8월 ETF 180억이랑 하루 가격 시계 다름", createdAt: T11 - 3600000, likes: 42, comments: 2, },
+  { id: 9191, symbol: "이더리움", nickname: "이더이사육공", holdingLabel: "관심", content: "2460권. BTC 베타. 알트 레버 먼저 줄임", createdAt: T11 - 5400000, likes: 41, comments: 2, },
+  { id: 9192, symbol: "원유", nickname: "브렌트백일이", holdingLabel: "관심", content: "브렌트 101.21(+3.36%). 7/23 이후 첫 종가 100. 금 헤지랑 같은 칸 금지", createdAt: T11 - 7200000, likes: 40, comments: 2, },
+  { id: 9193, symbol: "금리", nickname: "십년사구이", holdingLabel: "관망", content: "10년 4.92%(+0.08). PPI 5.4 vs 5.3. CPI·9/16이 게이트", createdAt: T11 - 9000000, likes: 39, comments: 2, },
   { id: 9182, symbol: "매크로", nickname: "안전자산표", holdingLabel: "관망", content: "BTC 7.82만·금 4375·브렌트 101·엔 153이 한 아침. 바이백 60억 해도 10년 4.83%", createdAt: T10 - 0, likes: 41, comments: 2, },
   { id: 9183, symbol: "비트코인", nickname: "팔만실패", holdingLabel: "BTC 보유", content: "8만 재돌파 실패 78208. ETF 4665만 유출·청산 1.52억. 금이랑 속도가 다름", createdAt: T10 - 1800000, likes: 40, comments: 2, },
   { id: 9184, symbol: "금", nickname: "사천삼칠오", holdingLabel: "금 ETF", content: "현물 4375(+0.58%)·선물 4451. 비트보다 느림. 실질금리 칸 따로", createdAt: T10 - 3600000, likes: 39, comments: 2, },
@@ -453,6 +495,30 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9188: [
+    { id: 1, nickname: "할인율체크", holdingLabel: "관망", content: "무이자 자산 기회비용이 커진 아침", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "물가금리표", holdingLabel: "관망", content: "유가랑 금을 한 헤지로 안 묶음", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9189: [
+    { id: 1, nickname: "칠만칠천권", holdingLabel: "BTC 보유", content: "8만은 심리선이지 스위치 아님", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "이티에프유출", holdingLabel: "관심", content: "유출이 며칠 이어지는지가 중기", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9190: [
+    { id: 1, nickname: "사천삼육오", holdingLabel: "금 ETF", content: "실질금리 칸을 온스랑 같이 적죠", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "사천사백아래", holdingLabel: "관심", content: "4400 회복 전엔 추격 패스", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9191: [
+    { id: 1, nickname: "이더이사육공", holdingLabel: "관심", content: "BTC 베타만으로 알트 안 늘림", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "레버먼저", holdingLabel: "관심", content: "물가 주간에 알트부터 줄임", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9192: [
+    { id: 1, nickname: "브렌트백일이", holdingLabel: "관심", content: "종가 100은 테이프, 재고가 다음", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "지정학프리미엄", holdingLabel: "관심", content: "금 온스랑 같은 헤지 아님", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9193: [
+    { id: 1, nickname: "십년사구이", holdingLabel: "관망", content: "바이백이랑 금리 상승을 완화로 안 봄", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "피피아이오사", holdingLabel: "관심", content: "CPI 나오기 전 경로 확정 금지", createdAt: T11 + 1200000, likes: 4 },
+  ],
   9182: [
     { id: 1, nickname: "매크로올빼미", holdingLabel: "관심종목", content: "자산마다 시계가 달라서 한 방향 베팅 안 함", createdAt: T10 + 600000, likes: 5 },
     { id: 2, nickname: "안전자산표", holdingLabel: "관망", content: "물가 이틀 앞에 알트 레버리지 줄임", createdAt: T10 + 1200000, likes: 4 },
@@ -668,6 +734,11 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9293, symbol: "서울", nickname: "키맞춤서울", holdingLabel: "관심", content: "서울 매매 +0.20%인데 강북 +0.33·강남3구 전부 하락. 평균만 보면 오독", createdAt: T11 - 0, likes: 44, comments: 2, },
+  { id: 9294, symbol: "강남", nickname: "강남세구하락", holdingLabel: "관심", content: "강남 −0.35·서초 −0.30·송파 −0.02. 5주·낙폭확대·21주 만. 서울 하락은 아님", createdAt: T11 - 1800000, likes: 43, comments: 2, },
+  { id: 9295, symbol: "전세", nickname: "노원서초전세", holdingLabel: "관심", content: "노원 전세 +0.38, 서초 −0.21. 입주 칸이랑 대단지 칸이 다름. 한도 조회 먼저", createdAt: T11 - 3600000, likes: 42, comments: 2, },
+  { id: 9296, symbol: "공급", nickname: "목동팔십오", holdingLabel: "관심", content: "브라운스톤 목동 85세대 중 일반 29. 계약 11~12일. 단지 규모랑 일반 창 분리", createdAt: T11 - 5400000, likes: 41, comments: 2, },
+  { id: 9297, symbol: "서울", nickname: "오름폭둔화", holdingLabel: "관심", content: "매매 0.22→0.20, 전세 0.21→0.19. 둔화지 하락 전환은 아님. 구별 실거래부터", createdAt: T11 - 7200000, likes: 40, comments: 2, },
   { id: 9288, symbol: "정책", nickname: "종부세유지", holdingLabel: "관심", content: "비거주 1주택 공제 12억 유지·상한 150%. 9억 인하·200%는 철회. 전세 매물이랑 한 신호 금지", createdAt: T10 - 0, likes: 39, comments: 2, },
   { id: 9289, symbol: "전세", nickname: "전세만이구", holdingLabel: "관심", content: "서울 전세매물 19902(−12.8% YoY). 구별 표 없으면 도시만으로 계약 안 함", createdAt: T10 - 1800000, likes: 38, comments: 2, },
   { id: 9290, symbol: "전세", nickname: "월세만이육", holdingLabel: "관심", content: "월세 매물 16921(−11.9%). 전세 감소랑 같은 방향이어도 전환 비율은 별도", createdAt: T10 - 3600000, likes: 37, comments: 2, },
@@ -728,6 +799,26 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9293: [
+    { id: 1, nickname: "키맞춤서울", holdingLabel: "관심", content: "강남 약세를 서울 하락으로 읽지 마", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "강북삼삼", holdingLabel: "관심", content: "강북 0.33%를 평균 옆에 둠", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9294: [
+    { id: 1, nickname: "강남세구하락", holdingLabel: "관심", content: "송파 21주 만 하락은 전환 힌트일 뿐", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "호가체결", holdingLabel: "관심", content: "호가 낮춘 매물이 체결되는지 다음", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9295: [
+    { id: 1, nickname: "노원서초전세", holdingLabel: "관심", content: "도시 평균 0.19%는 가림막", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "한도관문", holdingLabel: "관심", content: "한도 안 나오면 노룩 거절", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9296: [
+    { id: 1, nickname: "목동팔십오", holdingLabel: "관심", content: "85는 단지, 29가 일반 창", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "임의공급추첨", holdingLabel: "관심", content: "가점 없는 추첨·후분양 조건부터", createdAt: T11 + 1200000, likes: 4 },
+  ],
+  9297: [
+    { id: 1, nickname: "오름폭둔화", holdingLabel: "관심", content: "2주 연속 둔화지 방향 전환은 다음 주", createdAt: T11 + 600000, likes: 5 },
+    { id: 2, nickname: "구별실거래", holdingLabel: "관심", content: "평균 상승으로 급매수 안 함", createdAt: T11 + 1200000, likes: 4 },
+  ],
   9288: [
     { id: 1, nickname: "공제십이억", holdingLabel: "관심종목", content: "실거주 14억이랑 비거주 12억 차등을 유지", createdAt: T10 + 600000, likes: 5 },
     { id: 2, nickname: "종부세유지", holdingLabel: "관심", content: "공정시장가액 70%는 내년 칸", createdAt: T10 + 1200000, likes: 4 },
