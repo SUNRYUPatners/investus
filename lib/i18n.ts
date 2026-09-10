@@ -276,7 +276,6 @@ const ko = {
   reports: {
     sectionTitle: "Investus 리포트",
     subtitle:     "시장 분석 · 종목 인사이트",
-    author:       "류현우, SUNRYU Partners CIO 작성",
     lockedCount:  (n: number) => `추가 리포트 ${n}건`,
     lockedDesc:   "유료 구독 — 이전 날짜 리포트 열람 · 월 ₩5,900 · 연 10% 할인",
     subscribe:    "구독하기 월 ₩5,900 · 연 10% 할인",
@@ -700,7 +699,6 @@ const en: typeof ko = {
   reports: {
     sectionTitle: "Investus Reports",
     subtitle:     "Market analysis · Stock insights",
-    author:       "By 류현우, SUNRYU Partners CIO",
     lockedCount:  (n: number) => `+${n} more report${n === 1 ? "" : "s"}`,
     lockedDesc:   "Paid — older reports · ₩5,900/mo · 10% off yearly",
     subscribe:    "Subscribe ₩5,900/mo · 10% off yearly",

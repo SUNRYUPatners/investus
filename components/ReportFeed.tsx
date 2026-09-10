@@ -623,29 +623,24 @@ export function ReportFeed({ lang, market = "us" }: { lang?: "ko" | "en"; market
 
   return (
     <>
-      {/* Section header */}
-      <div className="flex items-center justify-between mb-3">
-        <div>
-          <h2
-            className="text-xs font-semibold tracking-widest uppercase font-syne"
-            style={{ color: "var(--muted)" }}
-          >
-            {t.reports.sectionTitle}
-          </h2>
-          <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
-            {reportSubtitle}
-          </p>
-          <p className="text-[11px] mt-1.5 leading-relaxed" style={{ color: "var(--muted)" }}>
-            {cioIntro}
-          </p>
-          <p className="text-[11px] mt-1.5 leading-relaxed" style={{ color: "var(--muted)" }}>
-            <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>
-            {" — "}오늘자 리포트 무료 · 이전 날짜 열람 {proPriceSummaryKo()}
-          </p>
-        </div>
-        <span className="text-[10px] whitespace-nowrap" style={{ color: "var(--muted)" }}>
-          {t.reports.author}
-        </span>
+      {/* Section header — 모바일에서 저자 라벨이 본문을 가리지 않도록 한 열로만 쌓음 */}
+      <div className="mb-3 min-w-0">
+        <h2
+          className="text-xs font-semibold tracking-widest uppercase font-syne"
+          style={{ color: "var(--muted)" }}
+        >
+          {t.reports.sectionTitle}
+        </h2>
+        <p className="text-[10px] mt-0.5" style={{ color: "var(--muted)" }}>
+          {reportSubtitle}
+        </p>
+        <p className="text-[11px] mt-1.5 leading-relaxed break-keep" style={{ color: "var(--muted)" }}>
+          {cioIntro}
+        </p>
+        <p className="text-[11px] mt-1.5 leading-relaxed break-keep" style={{ color: "var(--muted)" }}>
+          <span className="font-semibold" style={{ color: "var(--text)" }}>유료 구독 상품</span>
+          {" — "}오늘자 리포트 무료 · 이전 날짜 열람 {proPriceSummaryKo()}
+        </p>
       </div>
 
       {/* Daily guru quote */}
