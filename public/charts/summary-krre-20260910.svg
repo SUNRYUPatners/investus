@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.10 한국부동산 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">비거주 1주택 종부세 공제 12억 원 유지가 다시 확인됐습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">9억 축소안은 철회됐고, 세부담 상한 150%·공정시장가액비율 70%입니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">종부세</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#fb923c"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c">서울 아파트 전세 매물이 약 1만 9,902건으로 1년 전보다 12.8%…</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">종부세 유턴만으로 중저가 전세 물량이 늘어나기 어렵다는 평가입니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">전세</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#f97316"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f97316">월세 매물은 약 1만 6,921건으로 전년 대비 11.9% 줄었습니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">전세와 월세가 같이 줄면 협상력이 임차인에게 불리합니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f97316" text-anchor="end">월세</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#38bdf8"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8">실거주 공제 14억 원과 비거주 12억 원은 차등입니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">공동명의 비거주도 합산 12억으로 맞췄습니다. 시행 숫자는 고지서로 확인하시기 바랍니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">실거주</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#22d3ee"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">청년 공공임대·월세 지원이 2027년 예산 축으로 강조됐습니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">서울 임차보증금 이자지원은 최대 2억 원·연 2.0%입니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">청년</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">종부세 과표 12억은 시가 약 44억 원대 주택 이야기입니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">중저가 전월세난과 정책 대상이 다릅니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">한계</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">정책 일관성과 가을 이사 시즌을 같은 신호로 묶지 마시기 바랍니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">대출 한도 조회 없는 계약은 거절하시기 바랍니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">일정</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 공제 12억 · 전세 19902 · 월세 16921 · 실거주 14억 · 청년 임대 · 시가 44억</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1205"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="139" height="38" rx="19" fill="#f59e0b30" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="109.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f59e0b" text-anchor="middle">SK하이닉스</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.10</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">하이닉스가 1,856,000원(+3.51%, +63,000원)으로 마감하며 장중</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">1,883,000원까지 갔습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">💾</text>
+  <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">+3.51%</text>
+  <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">종가 1,856,000원은 6만 3,000원 오른 자리입니다. 장중 1,883,000원까지 올랐습니다. 퀄컴의 아마존</text>
+  <text x="540" y="369" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">인공지능 칩 공급과 인텔 서버용 CPU 가격 인상 기대가 반도체 심리를 받쳤다는 설명이 있습니다.</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="396" width="300" height="196" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">💵</text>
+  <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f59e0b" text-anchor="middle">1,856,000</text>
+  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">종가(원)</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">하루 +3.51%</text>
+  <rect x="390" y="396" width="300" height="196" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">📈</text>
+  <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f59e0b" text-anchor="middle">1,883,000</text>
+  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">장중 고가</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">일부 반납</text>
+  <rect x="720" y="396" width="300" height="196" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">🌐</text>
+  <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f59e0b" text-anchor="middle">KRX반도체</text>
+  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">지수 +2.88%</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">1만 4,217.16</text>
+  <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="19" fill="#f59e0b" text-anchor="middle">하이닉스 베타가 지수보다 큽니다. 종가 강세와 외국인 종목 매수를 한 문장에 넣지 마시기 바랍니다.</text>
+  <text x="540" y="682" font-family="Arial" font-size="19" fill="#f59e0b" text-anchor="middle">리밸런싱은 어제 재료였고 오늘은 종가 확인 칸입니다.</text>
+  <rect x="60" y="814" width="960" height="148" rx="14" fill="#201408" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="844" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">서버 CPU 가격·아마존 칩 계약은 업종 심리이지 하이닉스 수주 공시가 아닙니다. 삼성 보합과 상대 성과를 표에 두시기 바랍니다.</text>
+  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기적으로 고대역폭 메모리 점유가 해자입니다.</text>
+  <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SK하이닉스 · 2026.09.10</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

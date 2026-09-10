@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.10 Daily Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">AI plus robots could double the global economy in under 10 years</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">A stronger tone than the prior 20–30% remark. Split timing and yield from the quote.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">AI</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#061209" stroke="#22c55e" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#22c55e"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22c55e">Texas AV fleet printed 437 (+5 today)</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">Model Y 388 (88.8%) and Cybercab 49 (11.2%). Keep Austin’s 1,000-unit prep on a separate line.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22c55e" text-anchor="end">Fleet</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">NVL72 rack sales seen above $710B in 2027</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">About +214% year on year; rack count about +50%. Split forecast from booked revenue.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">NVDA</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">Treasury tripled long-term buybacks to $6B</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">10-year yield near 4.83%, highest since 2023. Do not mash size and the rate reaction.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">UST</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">SpaceX lockup of ~319M shares entered the day-90 window</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">About 7% of float; next is the 180-day block. Split from Musk’s combined ~$3.48T.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#38bdf8"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8">S&amp;P calendar EPS 2026E printed 367 (+34%)</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">More than double the ~15% expected at year-start. A no-recession earnings path.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">S&amp;P</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#06121f" stroke="#4285f4" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#4285f4"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4285f4">Google Finland AI infrastructure cited above $15B</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">Wind, a 94 MW battery, and a 22-year nuclear deal. Keep the Texas Semi 25 on another cell.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4285f4" text-anchor="end">GOOGL</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: 2× economy · TX 437 · NVL72 · $6B buyback · 319M unlock · EPS 367 · Finland $15B+</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

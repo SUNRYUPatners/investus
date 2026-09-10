@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#120b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#a78bfa"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#a78bfa30" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#a78bfa" text-anchor="middle">AI</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.10</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">인공지능과 로봇이 세계 경제를 10년 안에 두 배로 키울 수 있다는</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">발언이 나왔습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="360" y="166" width="360" height="46" rx="23" fill="#a78bfa18" stroke="#a78bfa" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#a78bfa" text-anchor="middle">🤖 인공지능 · 로봇</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🤖</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#a78bfa" text-anchor="middle">2배</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">이전에는 20~30% 성장 여지를 말한 톤이었습니다. 이번에는 10년 안에 경제 규모가 두 배가 될 수 있다는</text>
+  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">표현으로 한 단계 세졌습니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">⏱</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#a78bfa" text-anchor="middle">&lt;10년</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">두 배가 되는 시계</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">20~30년 단위가 아닌 10년 안</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#a78bfa" text-anchor="middle">20~30%</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">이전 발언 범위</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">같은 주제가 한 단계 커진 것</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">🦾</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#a78bfa" text-anchor="middle">로봇</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">인공지능과 같이 묶인 축</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">소프트웨어만의 성장이 아님</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">경제를 두 배로 키운다는 말은 생산성 가정이 크게 올라갔다는 뜻입니다. 공장 수율·허가·전력은 아직</text>
+  <text x="540" y="714" font-family="Arial" font-size="19" fill="#a78bfa" text-anchor="middle">빈칸입니다. 발언과 실측 출하를 한 문장에 넣지 마시기 바랍니다.</text>
+  <rect x="60" y="842" width="960" height="172" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#a78bfa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">이 발언은 목표가 아니라 생산성 시나리오입니다. 옵티머스 부품 5,000대 주문과 같은 화면에 있어도 칸을 나누시기 바랍니다. 다음</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">확인할 것은 로봇 출고와 공장 가동률입니다. 장기적으로 노동 대체 속도가 국내총생산 가정의 핵심이 됩니다.</text>
+  <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">인공지능 · 경제 두 배 · 2026.09.10</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

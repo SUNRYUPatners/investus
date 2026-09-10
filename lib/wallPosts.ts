@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T10SEP = 1788994800000; // 2026.09.10 08:00 KST
 const T09SEP = 1788908400000; // 2026.09.09 08:00 KST
 const T08SEP = 1788822000000; // 2026.09.08 08:00 KST
 const T07SEP = 1788735600000; // 2026.09.07 08:00 KST
@@ -119,7 +120,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T09SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T10SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -138,6 +139,82 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-10 신규 ────────────────
+  { id: 121820, symbol: "AI", nickname: "경제두배체크", holdingLabel: "관심종목",
+    content: "경제 두 배라는데 10년 가정임. 공장 대수 나오기 전엔 부품 5천이랑 칸 나눠야지",
+    createdAt: T10SEP + 8*60_000, likes: 22, comments: 2 },
+  { id: 121821, symbol: "TSLA", nickname: "금캡이275", holdingLabel: "관심종목",
+    content: "금색 사이버캡이 I-275로 세인트피터즈버그 방향이라… 현장이지 요금표는 아님",
+    createdAt: T10SEP + 16*60_000, likes: 21, comments: 2 },
+  { id: 121822, symbol: "SPCX", nickname: "스펙트럼천메가", holdingLabel: "관심종목",
+    content: "스타링크가 12기가·42기가에서 1000메가헤르츠 이상이라. 가입자 숫자랑 섞지 마",
+    createdAt: T10SEP + 24*60_000, likes: 20, comments: 2 },
+  { id: 121823, symbol: "TSLA", nickname: "텍사스사삼칠", holdingLabel: "관심종목",
+    content: "텍사스 437대, 오늘 +5(모델Y 1·사이버캡 4). 유료 마일 전엔 등록 집계만",
+    createdAt: T10SEP + 32*60_000, likes: 19, comments: 2 },
+  { id: 121824, symbol: "TSLA", nickname: "골드만씨피엠", holdingLabel: "관심종목",
+    content: "마일당 30센트 싸다는 2~3만 달러 가정. 웨이모 비교는 시나리오 칸",
+    createdAt: T10SEP + 40*60_000, likes: 18, comments: 2 },
+  { id: 121825, symbol: "MACRO", nickname: "내슈빌리프트", holdingLabel: "관심종목",
+    content: "리프트+웨이모 내슈빌인데 LYFT 14.90에 −8.25%. 제휴랑 주가 인과로 안 묶음",
+    createdAt: T10SEP + 48*60_000, likes: 17, comments: 2 },
+  { id: 121826, symbol: "NVDA", nickname: "엔브이엘칠일", holdingLabel: "관심종목",
+    content: "NVL72 2027년 7100억·+214%. 랙 대수 +50%랑 가격을 따로 봄",
+    createdAt: T10SEP + 56*60_000, likes: 16, comments: 2 },
+  { id: 121827, symbol: "MACRO", nickname: "델삼삼일", holdingLabel: "관심종목",
+    content: "2월 10일 최대 500만 달러 사놓고 +331%면 개인 베팅 이야기. 종가 535는 테이프",
+    createdAt: T10SEP + 64*60_000, likes: 15, comments: 2 },
+  { id: 121828, symbol: "MACRO", nickname: "바이백육십억", holdingLabel: "관심종목",
+    content: "장기 바이백 60억으로 세 배. 근데 10년 4.83%면 규모랑 금리 반응 분리",
+    createdAt: T10SEP + 72*60_000, likes: 14, comments: 2 },
+  { id: 121829, symbol: "TSLA", nickname: "도장칠십컷", holdingLabel: "관심종목",
+    content: "도장 −70%·사이클 10초 미만·면적 −40%. 사이버캡 무도장이랑 양산 대수 다름",
+    createdAt: T10SEP + 80*60_000, likes: 13, comments: 2 },
+  { id: 121830, symbol: "SPCX", nickname: "사십이호기", holdingLabel: "관심종목",
+    content: "매시의 42호기 두 번째 시험이라. 궤도 성공이랑 칸 나누자",
+    createdAt: T10SEP + 88*60_000, likes: 22, comments: 2 },
+  { id: 121831, symbol: "SPCX", nickname: "락업삼억", holdingLabel: "관심종목",
+    content: "락업 3.19억 주(7%) 90일 창. SPCX 147.55 −3.86%를 소화로 단정 금지",
+    createdAt: T10SEP + 96*60_000, likes: 21, comments: 2 },
+  { id: 121832, symbol: "SPCX", nickname: "시총삼조", holdingLabel: "관심종목",
+    content: "합산 3.48조(SPCX 2.02·TSLA 1.45). 산술이지 지배력 확정은 아님",
+    createdAt: T10SEP + 104*60_000, likes: 20, comments: 2 },
+  { id: 121833, symbol: "SPCX", nickname: "클로즈드루프", holdingLabel: "관심종목",
+    content: "엑스 하루 3.5억·그록 비즈니스 30달러·4.7은 9월 12일권. 스타마인드는 27~28",
+    createdAt: T10SEP + 112*60_000, likes: 19, comments: 2 },
+  { id: 121834, symbol: "MACRO", nickname: "이피에스삼육칠", holdingLabel: "관심종목",
+    content: "S&P EPS 2026년 367(+34%) vs 275. 연초 15% 뷰보다 두 배 이상",
+    createdAt: T10SEP + 120*60_000, likes: 18, comments: 2 },
+  { id: 121835, symbol: "SPCX", nickname: "브이사백사십", holdingLabel: "관심종목",
+    content: "V4 랩터 9기·약 140미터(+16m). 컴퓨팅 위성은 27/28/29 연도 칸",
+    createdAt: T10SEP + 128*60_000, likes: 17, comments: 2 },
+  { id: 121836, symbol: "SPCX", nickname: "호커에프에이에이", holdingLabel: "관심종목",
+    content: "호커 700/800/900 항공 스타링크. 1기가·100메가·20ms는 목표 성능",
+    createdAt: T10SEP + 136*60_000, likes: 16, comments: 2 },
+  { id: 121837, symbol: "NVDA", nickname: "디씨캡엑스", holdingLabel: "관심종목",
+    content: "2050년까지 미국 15.1조·내년 1~1.2조. 50~70%가 미국이라는데 누적이랑 연간 나눠",
+    createdAt: T10SEP + 144*60_000, likes: 15, comments: 2 },
+  { id: 121838, symbol: "MACRO", nickname: "지세븐금리", holdingLabel: "관심종목",
+    content: "G7 차입 2008 이후 최고권. 영국이 상단. 바이백이랑 한 문장 금지",
+    createdAt: T10SEP + 152*60_000, likes: 14, comments: 2 },
+  { id: 121839, symbol: "GOOGL", nickname: "핀란드십오", holdingLabel: "관심종목",
+    content: "구글 핀란드 150억 이상. 풍력+94MW 배터리+22년 원전. 착공 전엔 공약",
+    createdAt: T10SEP + 160*60_000, likes: 13, comments: 2 },
+  { id: 121840, symbol: "TSLA", nickname: "세미이십오", holdingLabel: "관심종목",
+    content: "세미 25대 휴스턴–댈러스. 파일럿이지 전국 물류 아님",
+    createdAt: T10SEP + 168*60_000, likes: 22, comments: 2 },
+  { id: 121841, symbol: "TSLA", nickname: "캡스펙표", holdingLabel: "관심종목",
+    content: "폭 69인치·화면 22·47.6kWh·6.1mi/kWh·3113lbs. 스펙이랑 마일당 원가 분리",
+    createdAt: T10SEP + 176*60_000, likes: 21, comments: 2 },
+  { id: 121842, symbol: "TSLA", nickname: "에이스일사", holdingLabel: "관심종목",
+    content: "SW 2026.27.6 ACE에 감독 FSD 14.3.9. 개입률 전엔 기능=매출 아님",
+    createdAt: T10SEP + 184*60_000, likes: 20, comments: 2 },
+  { id: 121843, symbol: "TSLA", nickname: "오스틴천대", holdingLabel: "관심종목",
+    content: "오스틴 사이버캡 최대 1000대 준비. TSLA 368.81 +4.17%는 테이프, 등록 49랑 섞지 마",
+    createdAt: T10SEP + 192*60_000, likes: 19, comments: 2 },
+  { id: 121844, symbol: "TSLA", nickname: "옵티머스오천", holdingLabel: "관심종목",
+    content: "옵티머스 부품 5000대 발주. 출고 숫자 나오기 전엔 발주 칸만",
+    createdAt: T10SEP + 200*60_000, likes: 18, comments: 2 },
   // ── 2026-09-09 신규 ────────────────
   { id: 121803, symbol: "TSLA", nickname: "유럽곧체크", holdingLabel: "관심종목",
     content: "유럽 사이버캡이 곧이라는데 날짜가 없음. 오스틴 요금이랑 칸 나눠야지",
@@ -4451,6 +4528,106 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  121820: [
+    { id: 1218201, nickname: "금캡이275", holdingLabel: "관심종목", content: "발언이랑 출고 대수는 시계가 다름", createdAt: T10SEP + 720000, likes: 5 },
+    { id: 1218202, nickname: "텍사스사삼칠", holdingLabel: "관심종목", content: "전력·허가가 빈칸이면 가정 가중치 낮춤", createdAt: T10SEP + 900000, likes: 4 },
+  ],
+  121821: [
+    { id: 1218211, nickname: "스펙트럼천메가", holdingLabel: "관심종목", content: "고속도로 현장은 허가 범위부터 확인", createdAt: T10SEP + 780000, likes: 5 },
+    { id: 1218212, nickname: "골드만씨피엠", holdingLabel: "관심종목", content: "세인트피터즈버그 방향은 지오펜스 힌트", createdAt: T10SEP + 960000, likes: 4 },
+  ],
+  121822: [
+    { id: 1218221, nickname: "텍사스사삼칠", holdingLabel: "관심종목", content: "기가헤르츠 창이 두 개라 표를 나눔", createdAt: T10SEP + 840000, likes: 5 },
+    { id: 1218222, nickname: "내슈빌리프트", holdingLabel: "관심종목", content: "단말기 출하랑 스펙트럼은 다른 줄", createdAt: T10SEP + 1020000, likes: 4 },
+  ],
+  121823: [
+    { id: 1218231, nickname: "골드만씨피엠", holdingLabel: "관심종목", content: "오늘 +5가 주간 추세인지는 다음 집계", createdAt: T10SEP + 900000, likes: 5 },
+    { id: 1218232, nickname: "엔브이엘칠일", holdingLabel: "관심종목", content: "사이버캡 11.2%를 점유율로 읽지 마", createdAt: T10SEP + 1080000, likes: 4 },
+  ],
+  121824: [
+    { id: 1218241, nickname: "내슈빌리프트", holdingLabel: "관심종목", content: "2만~3만 가정 깨지면 30센트도 빈칸", createdAt: T10SEP + 960000, likes: 5 },
+    { id: 1218242, nickname: "델삼삼일", holdingLabel: "관심종목", content: "웨이모 CPM이랑 전제를 같이 적기", createdAt: T10SEP + 1140000, likes: 4 },
+  ],
+  121825: [
+    { id: 1218251, nickname: "엔브이엘칠일", holdingLabel: "관심종목", content: "내슈빌 요금표 나오기 전엔 관망", createdAt: T10SEP + 1020000, likes: 5 },
+    { id: 1218252, nickname: "바이백육십억", holdingLabel: "관심종목", content: "LYFT 급락은 수급일 수도 있음", createdAt: T10SEP + 1200000, likes: 4 },
+  ],
+  121826: [
+    { id: 1218261, nickname: "델삼삼일", holdingLabel: "관심종목", content: "214%는 전망이라 출하 실측이 다음", createdAt: T10SEP + 1080000, likes: 5 },
+    { id: 1218262, nickname: "도장칠십컷", holdingLabel: "관심종목", content: "랙 구성이 바뀌면 매출 산술도 바뀜", createdAt: T10SEP + 1260000, likes: 4 },
+  ],
+  121827: [
+    { id: 1218271, nickname: "바이백육십억", holdingLabel: "관심종목", content: "개인 매수 규모랑 종가 성과 분리하자", createdAt: T10SEP + 1140000, likes: 5 },
+    { id: 1218272, nickname: "사십이호기", holdingLabel: "관심종목", content: "500만 달러는 과거 이벤트 칸", createdAt: T10SEP + 1320000, likes: 4 },
+  ],
+  121828: [
+    { id: 1218281, nickname: "도장칠십컷", holdingLabel: "관심종목", content: "PPI 10일·CPI 11일이 금리 게이트", createdAt: T10SEP + 1200000, likes: 5 },
+    { id: 1218282, nickname: "락업삼억", holdingLabel: "관심종목", content: "바이백 규모만으로 금리 하락 단정 금지", createdAt: T10SEP + 1380000, likes: 4 },
+  ],
+  121829: [
+    { id: 1218291, nickname: "사십이호기", holdingLabel: "관심종목", content: "도장 공장이 실제로 줄었는지 면적부터", createdAt: T10SEP + 1260000, likes: 5 },
+    { id: 1218292, nickname: "시총삼조", holdingLabel: "관심종목", content: "무도장 차체와 도장 −70%는 다른 제품", createdAt: T10SEP + 1440000, likes: 4 },
+  ],
+  121830: [
+    { id: 1218301, nickname: "락업삼억", holdingLabel: "관심종목", content: "두 번째 시험이면 실패 시나리오도 칸에", createdAt: T10SEP + 1320000, likes: 5 },
+    { id: 1218302, nickname: "클로즈드루프", holdingLabel: "관심종목", content: "매시 시험 일정을 캘린더에만", createdAt: T10SEP + 1500000, likes: 4 },
+  ],
+  121831: [
+    { id: 1218311, nickname: "시총삼조", holdingLabel: "관심종목", content: "90일 창이랑 180일 블록을 달력에", createdAt: T10SEP + 1380000, likes: 5 },
+    { id: 1218312, nickname: "이피에스삼육칠", holdingLabel: "관심종목", content: "내부자 매도 공시가 있으면 옆에 둠", createdAt: T10SEP + 1560000, likes: 4 },
+  ],
+  121832: [
+    { id: 1218321, nickname: "클로즈드루프", holdingLabel: "관심종목", content: "합산 시총은 가중치 없는 산술임", createdAt: T10SEP + 1440000, likes: 5 },
+    { id: 1218322, nickname: "브이사백사십", holdingLabel: "관심종목", content: "티커별 유동성이 달라서 한 베팅 금지", createdAt: T10SEP + 1620000, likes: 4 },
+  ],
+  121833: [
+    { id: 1218331, nickname: "이피에스삼육칠", holdingLabel: "관심종목", content: "그록 4.7 날짜는 대략이라 확정 아님", createdAt: T10SEP + 1500000, likes: 5 },
+    { id: 1218332, nickname: "호커에프에이에이", holdingLabel: "관심종목", content: "시트당 30달러는 기업 매출 힌트일 뿐", createdAt: T10SEP + 1680000, likes: 4 },
+  ],
+  121834: [
+    { id: 1218341, nickname: "브이사백사십", holdingLabel: "관심종목", content: "연초 15%랑 지금 34% 열을 유지", createdAt: T10SEP + 1560000, likes: 5 },
+    { id: 1218342, nickname: "디씨캡엑스", holdingLabel: "관심종목", content: "가정치 리비전 나오면 표 새로", createdAt: T10SEP + 1740000, likes: 4 },
+  ],
+  121835: [
+    { id: 1218351, nickname: "호커에프에이에이", holdingLabel: "관심종목", content: "140미터는 설계도, 비행은 별도", createdAt: T10SEP + 1620000, likes: 5 },
+    { id: 1218352, nickname: "지세븐금리", holdingLabel: "관심종목", content: "컴퓨팅 위성 연도는 계획 가중치", createdAt: T10SEP + 1800000, likes: 4 },
+  ],
+  121836: [
+    { id: 1218361, nickname: "디씨캡엑스", holdingLabel: "관심종목", content: "FAA 기종 허가가 다음 확인", createdAt: T10SEP + 1680000, likes: 5 },
+    { id: 1218362, nickname: "핀란드십오", holdingLabel: "관심종목", content: "지연 20ms는 항공 링크 목표", createdAt: T10SEP + 1860000, likes: 4 },
+  ],
+  121837: [
+    { id: 1218371, nickname: "지세븐금리", holdingLabel: "관심종목", content: "내년 1조와 2050 누적을 한 셀 금지", createdAt: T10SEP + 1740000, likes: 5 },
+    { id: 1218372, nickname: "세미이십오", holdingLabel: "관심종목", content: "미국 50~70%는 범위지 확정 배분 아님", createdAt: T10SEP + 1920000, likes: 4 },
+  ],
+  121838: [
+    { id: 1218381, nickname: "핀란드십오", holdingLabel: "관심종목", content: "국가별 상단·하단을 범위로만", createdAt: T10SEP + 1800000, likes: 5 },
+    { id: 1218382, nickname: "캡스펙표", holdingLabel: "관심종목", content: "영국 상단이 글로벌 금리의 전부 아님", createdAt: T10SEP + 1980000, likes: 4 },
+  ],
+  121839: [
+    { id: 1218391, nickname: "세미이십오", holdingLabel: "관심종목", content: "22년 계약은 전력 칸, 캡엑스와 분리", createdAt: T10SEP + 1860000, likes: 5 },
+    { id: 1218392, nickname: "에이스일사", holdingLabel: "관심종목", content: "원전 절반 출력은 상한 표현", createdAt: T10SEP + 2040000, likes: 4 },
+  ],
+  121840: [
+    { id: 1218401, nickname: "캡스펙표", holdingLabel: "관심종목", content: "25대 운행 지표가 나와야 확장 논의", createdAt: T10SEP + 1920000, likes: 5 },
+    { id: 1218402, nickname: "오스틴천대", holdingLabel: "관심종목", content: "구글·네보이아 역할 나워서 보기", createdAt: T10SEP + 2100000, likes: 4 },
+  ],
+  121841: [
+    { id: 1218411, nickname: "에이스일사", holdingLabel: "관심종목", content: "전비 6.1이 사이클 평균인지부터", createdAt: T10SEP + 1980000, likes: 5 },
+    { id: 1218412, nickname: "옵티머스오천", holdingLabel: "관심종목", content: "중량 3113파운드는 스펙 시트", createdAt: T10SEP + 2160000, likes: 4 },
+  ],
+  121842: [
+    { id: 1218421, nickname: "오스틴천대", holdingLabel: "관심종목", content: "버전 번호만으로 개입률 추정 금지", createdAt: T10SEP + 2040000, likes: 5 },
+    { id: 1218422, nickname: "경제두배체크", holdingLabel: "관심종목", content: "ACE랑 감독 모드를 같은 기능으로 안 봄", createdAt: T10SEP + 2220000, likes: 4 },
+  ],
+  121843: [
+    { id: 1218431, nickname: "옵티머스오천", holdingLabel: "관심종목", content: "1000대는 상한, 오늘 대수가 실측", createdAt: T10SEP + 2100000, likes: 5 },
+    { id: 1218432, nickname: "금캡이275", holdingLabel: "관심종목", content: "NHTSA 범위와 시가 반응 분리", createdAt: T10SEP + 2280000, likes: 4 },
+  ],
+  121844: [
+    { id: 1218441, nickname: "경제두배체크", holdingLabel: "관심종목", content: "부품 발주서랑 조립 라인을 나누자", createdAt: T10SEP + 2160000, likes: 5 },
+    { id: 1218442, nickname: "스펙트럼천메가", holdingLabel: "관심종목", content: "5천대 부품이 몇 분기 분량인지부터", createdAt: T10SEP + 2340000, likes: 4 },
+  ],
   121803: [
     { id: 1218031, nickname: "댈러스허브러", holdingLabel: "관심종목", content: "숫자 정의부터 표에 남기자", createdAt: T09SEP + 720000, likes: 5 },
     { id: 1218032, nickname: "테일러팹메모", holdingLabel: "관심종목", content: "다음 게이트만 캘린더에 고정", createdAt: T09SEP + 900000, likes: 4 },

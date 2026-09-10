@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="131" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="105.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">BREAKING</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.10</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">미 통신위원회가 스타링크에 12GHz와 42GHz에서 1,000MHz가</text>
+  <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">넘는 대역을 열어 줬습니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">FCC · 스타링크 스펙트럼</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#c084fc" text-anchor="middle">1000+</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">스펙트럼은 무선으로 데이터를 실어 나르는 주파수 구간입니다. 위성 광대역용으로 12GHz와 42GHz에서 합쳐</text>
+  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">1,000MHz가 넘는 폭이 거론됐습니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">📡</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">12GHz</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">낮은 쪽 대역</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">커버·장애물 특성이 다름</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">📶</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">42GHz</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">높은 쪽 대역</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">용량은 크고 도달은 짧음</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">➕</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">1000+</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">MHz 폭</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">두 대역을 합친 규모</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">🛰</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">위성</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">광대역 용도</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">지상망과 다른 전달 경로</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">대역이 넓어지면 가입자당 속도 상한이 올라갈 수 있습니다. 단말·빔 설계가 받쳐야 합니다.</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">허가와 실제 용량은 다릅니다. 혼신·국가별 조율이 남습니다.</text>
+  <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="736" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">1,000MHz가 넘는 폭은 스타링크가 쓸 수 있는 고속도로 차선이 늘었다는 뜻입니다. 요금제 속도·대기 시간과 바로 같지는</text>
+  <text x="540" y="760" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">않습니다. 다음 확인할 것은 상용 채널 배치입니다.</text>
+  <rect x="60" y="850" width="960" height="168" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="880" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">주파수는 인프라 허가이지 분기 매출이 아닙니다. 호커 비즈니스젯 1Gbps 서사와 칸을 나누시기 바랍니다. 다음 게이트는 단말</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">공급과 국가별 승인입니다. 장기적으로 위성 광대역 해자는 스펙트럼·궤도·단말 원가가 겹칠 때 두꺼워집니다.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 스타링크 스펙트럼 · 2026.09.10</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

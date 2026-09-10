@@ -173,7 +173,7 @@ function extractBody(chunk) {
   if (tpl) return tpl[1];
   const fn = rest.match(/body:\s*body\(`([\s\S]*?)`\)/);
   if (fn) return fn[1];
-  return "";
+  return extractQuoted(chunk, "body:");
 }
 
 function latinWordRatio(text) {
@@ -192,6 +192,7 @@ function extractSection(body, heading) {
 
 function validateSectionSeparation(r, file) {
   const errors = [];
+  if (r.date < BODY_RESET_SINCE) return errors;
   if (!r.body || r.isPinned || r.subject === "한장요약") return errors;
 
   for (const phrase of SECTION_BOILERPLATES) {
@@ -259,6 +260,9 @@ function validateRichness(r, file) {
       `${file} ${r.id} summary: 너무 짧음 (${r.summary.length}자 < ${MIN_SUMMARY_LEN}자). 8/29 kr-seed-118·safe-seed-107 수준의 팩트 문장으로 보강하세요.`,
     );
   }
+
+  // 9/9 이전 quoted body는 구 템플릿이 많아 본문 분량·섹션은 2026-09-10부터 강제
+  if (r.date < BODY_RESET_SINCE) return errors;
 
   const minBody = isSummary ? MIN_BODY_SUMMARY : MIN_BODY_DETAIL;
   if (r.body && r.body.length < minBody) {

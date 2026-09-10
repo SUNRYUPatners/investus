@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.10 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">인공지능·로봇이 경제를 10년 안에 두 배로 키울 수 있다는 발언이…</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">이전 20~30% 언급보다 한 단계 센 톤입니다. 일정·수율과 칸을 나누시기 바랍니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">AI</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#061209" stroke="#22c55e" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#22c55e"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22c55e">텍사스 자율차 집계가 437대(오늘 +5)로 찍혔습니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">모델Y 388대(88.8%)·사이버캡 49대(11.2%)입니다. 오스틴 1,000대 준비와 칸을 나누시기 바랍니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22c55e" text-anchor="end">플릿</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#06121f" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">NVL72 랙 매출이 2027년 7,100억 달러 이상으로 전망됐습니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">전년 대비 약 +214%이고, 랙 대수는 약 +50%입니다. 의견과 실적을 나누시기 바랍니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">NVDA</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">재무부가 장기 바이백을 60억 달러로 세 배 키웠습니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">10년물 약 4.83%는 2023년 이후 최고권입니다. 규모와 금리 반응을 한 줄에 합치지 마시기 바랍니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">국채</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">스페이스X 락업 약 3.19억 주가 달력 90일 구간에 들어왔습니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">약 7% 물량이고 다음은 180일 블록입니다. 머스크 합산 시총 약 3.48조 달러와 칸을 나누시기 바랍니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">SPCX</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#38bdf8"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8">S&amp;P 달력 EPS 2026년 추정치가 367(+34%)로 잡혔습니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">연초 약 15% 기대보다 두 배 이상입니다. 침체 없이 이익이 늘어난다는 가정입니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">S&amp;P</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#06121f" stroke="#4285f4" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#4285f4"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4285f4">구글 핀란드 인공지능 인프라가 150억 달러 이상으로 거론됐습니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">풍력·94MW 배터리·22년 원전 계약이 붙었습니다. 텍사스 세미 25대와 칸을 나누시기 바랍니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4285f4" text-anchor="end">GOOGL</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 경제 2배 · 텍사스437 · NVL72 · 바이백60억 · 락업3.19억 · EPS367 · 핀란드150억</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
