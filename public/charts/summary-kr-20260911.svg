@@ -17,7 +17,7 @@
   <rect x="60" y="247" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
   <rect x="60" y="247" width="8" height="115" rx="4" fill="#22d3ee"/>
   <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">외국인이 2조 4,820억 원을 팔고 기타법인이 1조 6,670억 원을 샀습니다</text>
-  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">개인 3,801억·기관 4,334억 매수입니다. 네 마녀의 날과 칸을 나누시기 바랍니다.</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">개인 3,801억·기관 4,334억 매수입니다. 네 마녀의 날과 다른 화면의 숫자입니다.</text>
   <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">외인</text>
   <rect x="60" y="372" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
   <rect x="60" y="372" width="8" height="115" rx="4" fill="#60a5fa"/>
@@ -37,7 +37,7 @@
   <rect x="60" y="747" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
   <rect x="60" y="747" width="8" height="115" rx="4" fill="#a78bfa"/>
   <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">삼성바이오로직스가 1,423,000원(−2.00%)이었습니다</text>
-  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">제약 업종 약세와 같은 줄기입니다. 반도체 베타와 합치지 마시기 바랍니다.</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">제약 업종 약세와 같은 줄기입니다. 반도체 베타와 따로 보시면 됩니다.</text>
   <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">삼바</text>
   <rect x="60" y="872" width="960" height="115" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
   <rect x="60" y="872" width="8" height="115" rx="4" fill="#fb7185"/>

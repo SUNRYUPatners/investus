@@ -39,7 +39,7 @@
   <text x="540" y="710" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">확인할 것은 실도로 전비입니다.</text>
   <rect x="60" y="838" width="960" height="172" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="868" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">스펙은 양산 원가가 아닙니다. 골드만 마일당 원가 서사와 칸을 나누시기 바랍니다. 다음 게이트는 시험 전비와 출고가입니다.</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">스펙은 양산 원가가 아닙니다. 골드만 마일당 원가 서사와 다른 화면의 숫자입니다. 다음 게이트는 시험 전비와 출고가입니다.</text>
   <text x="540" y="918" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기적으로 전비가 낮으면 로보택시 완전 원가가 내려갈 수 있습니다.</text>
   <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 사이버캡 전비 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

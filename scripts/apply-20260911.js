@@ -44,12 +44,24 @@ function tsBlock(r) {
   }`;
 }
 
+function replaceReportRange(c, firstId, nextId, block) {
+  const first = c.indexOf(`id: "${firstId}"`);
+  const next = c.indexOf(`id: "${nextId}"`);
+  if (first === -1 || next === -1) return null;
+  const start = c.lastIndexOf("  {", first);
+  const end = c.lastIndexOf("  {", next);
+  return c.slice(0, start) + block + c.slice(end);
+}
+
 function insertReportsTs() {
   let c = read("lib/reports.ts");
+  const block = US.map((r) => tsBlock(r)).join(",\n") + ",\n";
   if (c.includes('id: "seed-1588"')) {
-    console.log("reports.ts: seed-1588 already present — skip");
+    const next = replaceReportRange(c, "seed-1588", "seed-1562", block);
+    if (!next) throw new Error("reports.ts: failed to replace seed-1588~1562");
+    write("lib/reports.ts", next);
+    console.log("reports.ts: replaced seed-1588~1609");
   } else {
-    const block = US.map((r) => tsBlock(r)).join(",\n") + ",\n";
     const idx2 = c.indexOf('id: "seed-1562"');
     if (idx2 === -1) throw new Error("seed-1562 not found");
     const start = c.lastIndexOf("  {", idx2);

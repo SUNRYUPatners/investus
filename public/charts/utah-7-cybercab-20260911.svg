@@ -40,7 +40,7 @@
   <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">📱 앱 미등록이면 호출 불가</text>
   <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="810" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">7대는 현지 목격이지 주 전체 등록이 아닙니다. 텍사스 437대 서사와 칸을 나누시기 바랍니다. 다음 확인할 것은 유타 허가입니다.</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">7대는 현지 목격이지 주 전체 등록이 아닙니다. 텍사스 437대 서사와 다른 화면의 숫자입니다. 다음 확인할 것은 유타 허가입니다.</text>
   <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기적으로 주가 늘면 전용차 공급 지도가 넓어집니다.</text>
   <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 유타 7대 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

@@ -70,6 +70,18 @@ const SECTION_BOILERPLATES = [
   "해자를 기록",
 ];
 
+/** 2026-09-11~ 금지: 초보가 못 읽는 금지·분리 지시문 */
+const TONE_BANNED_SINCE = "2026-09-11";
+const TONE_BANNED = [
+  "칸을 나누",
+  "가중치를 낮추",
+  "합치지 마시기",
+  "추격하지 마시기",
+  "한 방향 베팅",
+  "레버리지를 키우지",
+  "레버리지를 줄이",
+];
+
 /** 한글 SVG(-en 제외) caption·본문 텍스트 검증 패턴 */
 const SVG_BAD_PATTERNS = [
   /\bBTC ~\d/i,
@@ -400,6 +412,28 @@ function validateRichness(r, file) {
   return errors;
 }
 
+function validateTone(r, file) {
+  const errors = [];
+  if (!r.date || r.date < TONE_BANNED_SINCE) return errors;
+  const fields = [
+    ["title", r.title],
+    ["summary", r.summary],
+    ["body", r.body],
+  ];
+  for (const [name, val] of fields) {
+    if (!val) continue;
+    for (const phrase of TONE_BANNED) {
+      if (val.includes(phrase)) {
+        errors.push(
+          `${file} ${r.id} ${name}: 금지 말투 "${phrase}" (2026-09-11~). 스크린샷을 풀고 긍정 장기 뷰로 다시 쓰세요.`,
+        );
+        break;
+      }
+    }
+  }
+  return errors;
+}
+
 function validateReport(r, file) {
   const errors = [];
   const fields = [
@@ -423,6 +457,7 @@ function validateReport(r, file) {
       errors.push(`${file} ${r.id} body: 허용 외 영단어 ${badLatin}개 (과다)`);
     }
   }
+  errors.push(...validateTone(r, file));
   return errors;
 }
 

@@ -16,7 +16,7 @@
   <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">💠</text>
   <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">2,460</text>
   <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">이더리움은 스마트계약 네트워크의 토큰입니다. 약 2,460달러권으로 비트코인보다 조금 더 약할 수 있습니다.</text>
-  <text x="540" y="369" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">알트 레버리지부터 줄이시기 바랍니다.</text>
+  <text x="540" y="369" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">알트 레버리지부터 가격과 빌린 돈을 구분해 보시면 됩니다.</text>
   <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="396" width="300" height="196" rx="16" fill="#15162a" stroke="#818cf8" stroke-width="2"/>
   <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">💵</text>

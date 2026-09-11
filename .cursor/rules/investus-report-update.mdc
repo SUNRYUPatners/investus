@@ -8,7 +8,7 @@ alwaysApply: false
 
 1. 스킬: `.cursor/skills/investus-report-update/SKILL.md` + `.claude/commands/report-update.md`
 2. **문장 + 존댓말 + 출처 생략 (2026-08-25~)**: 제목·본문·SVG는 합니다체 문장. 출처 이름 금지, 내용만. 종토방만 구어체.
-3. **본문**: 상세 글 + `■ 장기 투자 관점` + `■ 투자시사점` 필수. **`■ 반대 관점` 금지.**
+3. **본문 (2026-09-11~):** 스크린샷·뉴스를 초보 말로 풀고, 장기 뷰는 **긍정**. `칸을 나눠라`·`하지 마라`·`가중치를 낮춰라` 금지. `■ 반대 관점` 금지.
 4. **다시장 재발 방지 (2026-08-31~ · 필수)**  
    - **금지:** `scripts/insert-reports-*.js`로 kr/safe/kr-re 일괄 삽입 · 영문 스켈레톤 · 짧은 본문  
    - **필수:** 웹 검색 → `scripts/topics-YYYYMMDD-kr-markets-data.js` → `fix-reports-*-ko-markets.js` → `validate-report-korean.js`  

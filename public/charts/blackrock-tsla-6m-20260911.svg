@@ -17,7 +17,7 @@
   <text x="540" y="238" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#4ade80" text-anchor="middle">🏦</text>
   <text x="540" y="298" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">6M</text>
   <text x="540" y="338" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">블랙록은 세계 큰 자산운용사입니다. 2분기 공시에 테슬라 보통주 600만 주 매수가 찍혔습니다. 하루</text>
-  <text x="540" y="364" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">종가와 칸을 나누시기 바랍니다.</text>
+  <text x="540" y="364" font-family="Arial" font-size="20" fill="#9ca3af" text-anchor="middle">종가와 다른 화면의 숫자입니다.</text>
   <line x1="80" y1="390" x2="1000" y2="390" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="402" width="300" height="220" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="450" font-family="Arial" font-size="36" text-anchor="middle">📅</text>
@@ -39,7 +39,7 @@
   <text x="540" y="710" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">확인할 것은 다음 분기 13F입니다.</text>
   <rect x="60" y="838" width="960" height="172" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="868" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">2분기 숫자는 이미 지난 스냅샷입니다. 3분기 플릿 실측과 칸을 나누시기 바랍니다. 다음 게이트는 다음 공시입니다. 장기적으로</text>
+  <text x="540" y="896" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">2분기 숫자는 이미 지난 스냅샷입니다. 3분기 플릿 실측과 다른 화면의 숫자입니다. 다음 게이트는 다음 공시입니다. 장기적으로</text>
   <text x="540" y="918" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">패시브 비중이 커지면 수급 변동이 지수와 같이 움직입니다.</text>
   <text x="540" y="1028" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 블랙록 600만 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

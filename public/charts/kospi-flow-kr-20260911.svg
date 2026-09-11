@@ -43,11 +43,11 @@
   <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">외국인 2.48조 매도, 개인·기관 매수, 기타법인 1.67조 매수입니다.</text>
   <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">선물·옵션 동시 만기(네 마녀의 날)와 반도체 지수 리밸런싱이 겹쳤습니다.</text>
   <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="740" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">7,000선 사수는 종가 기준입니다. 장중 6,898 저점과 외국인 매도를 한 문장의 추세로 합치지 마시기 바랍니다.</text>
-  <text x="540" y="765" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">다음 확인할 것은 외국인 연속 매도 여부입니다.</text>
+  <text x="540" y="740" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">7,000선 사수는 종가 기준입니다. 장중 6,898 저점과 외국인 매도를 한 문장의 추세로 따로 보시면 됩니다. 다음</text>
+  <text x="540" y="765" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">확인할 것은 외국인 연속 매도 여부입니다.</text>
   <rect x="60" y="842" width="960" height="148" rx="14" fill="#0a1a26" stroke="#38bdf8" stroke-width="1"/>
   <text x="540" y="872" font-family="Arial" font-size="18" fill="#38bdf8" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">기타법인 순매수는 자사주 매입이 포함된 칸입니다. 유가 100달러·미국 10년 4.9%권과 칸을 나누시기 바랍니다. 장기적으로</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">기타법인 순매수는 자사주 매입이 포함된 칸입니다. 유가 100달러·미국 10년 4.9%권과 다른 화면의 숫자입니다. 장기적으로</text>
   <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">코스피는 반도체 비중과 외국인 지분의 교집합입니다.</text>
   <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">코스피 · 7,000 사수 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

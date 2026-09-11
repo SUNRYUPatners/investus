@@ -38,10 +38,10 @@
   <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">스펙이 의미하는 것</text>
   <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 와이파이 7은 단말 규격이지 위성 속도가 아님</text>
   <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">📶 510대는 동시 접속 상한</text>
-  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">💵 요금제 속도와 칸을 나누시기 바랍니다</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">💵 요금제 속도와 다른 화면의 숫자입니다</text>
   <rect x="60" y="780" width="960" height="210" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="810" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">단말 스펙은 실내 와이파이 성능입니다. 스타링크 다이렉트 확장·스펙트럼 허가와 칸을 나누시기 바랍니다. 다음 확인할 것은 출하와</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">단말 스펙은 실내 와이파이 성능입니다. 스타링크 다이렉트 확장·스펙트럼 허가와 다른 화면의 숫자입니다. 다음 확인할 것은 출하와</text>
   <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">실제 속도입니다. 장기적으로 설치가 쉬워지면 가입 전환 비용이 낮아질 수 있습니다.</text>
   <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 라우터 4 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

@@ -36,6 +36,15 @@ function tsBlock(r) {
   }`;
 }
 
+function replaceReportRange(c, firstId, nextId, block) {
+  const first = c.indexOf(`id: "${firstId}"`);
+  const next = c.indexOf(`id: "${nextId}"`);
+  if (first === -1 || next === -1) return null;
+  const start = c.lastIndexOf("  {", first);
+  const end = c.lastIndexOf("  {", next);
+  return c.slice(0, start) + block + c.slice(end);
+}
+
 function insertMarketReports() {
   const jobs = [
     ["lib/reports-kr.ts", "kr-seed-171", KR],
@@ -44,11 +53,14 @@ function insertMarketReports() {
   ];
   for (const [file, beforeId, arr] of jobs) {
     let c = read(file);
+    const block = arr.map((r) => tsBlock(r)).join(",\n") + ",\n";
     if (c.includes(`id: "${arr[0].id}"`)) {
-      console.log(`${file}: ${arr[0].id} already present — skip`);
+      const next = replaceReportRange(c, arr[0].id, beforeId, block);
+      if (!next) throw new Error(`${file}: failed to replace ${arr[0].id}~${beforeId}`);
+      write(file, next);
+      console.log(`${file}: replaced ${arr[0].id}~${arr[arr.length - 1].id}`);
       continue;
     }
-    const block = arr.map((r) => tsBlock(r)).join(",\n") + ",\n";
     const idx = c.indexOf(`id: "${beforeId}"`);
     if (idx === -1) throw new Error(`${file}: ${beforeId} not found`);
     const start = c.lastIndexOf("  {", idx);

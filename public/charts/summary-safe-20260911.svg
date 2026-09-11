@@ -12,7 +12,7 @@
   <rect x="60" y="122" width="960" height="115" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
   <rect x="60" y="122" width="8" height="115" rx="4" fill="#f7931a"/>
   <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a">비트코인이 7만 7천~7만 8천 달러권에서 약세를 이어 갔습니다</text>
-  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">8만 달러 회복은 실패입니다. 생산자물가 5.4%와 칸을 나누시기 바랍니다.</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">8만 달러 회복은 실패입니다. 생산자물가 5.4%와 다른 화면의 숫자입니다.</text>
   <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f7931a" text-anchor="end">BTC</text>
   <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
   <rect x="60" y="247" width="8" height="115" rx="4" fill="#facc15"/>
@@ -22,7 +22,7 @@
   <rect x="60" y="372" width="960" height="115" rx="14" fill="#0f1024" stroke="#818cf8" stroke-width="2"/>
   <rect x="60" y="372" width="8" height="115" rx="4" fill="#818cf8"/>
   <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#818cf8">이더리움은 약 2,460달러권으로 비트코인 베타를 따랐습니다</text>
-  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">알트 레버리지부터 줄이시기 바랍니다.</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">알트 레버리지부터 가격과 빌린 돈을 구분해 보시면 됩니다.</text>
   <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#818cf8" text-anchor="end">ETH</text>
   <rect x="60" y="497" width="960" height="115" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
   <rect x="60" y="497" width="8" height="115" rx="4" fill="#f97316"/>

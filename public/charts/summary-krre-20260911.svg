@@ -32,12 +32,12 @@
   <rect x="60" y="622" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
   <rect x="60" y="622" width="8" height="115" rx="4" fill="#22d3ee"/>
   <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">브라운스톤 목동은 전체 85세대, 일반분양은 29세대입니다</text>
-  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">계약은 9월 11~12일입니다. 서울 공급 가뭄과 한 단지를 합치지 마시기 바랍니다.</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">계약은 9월 11~12일입니다. 서울 공급 가뭄과 한 단지를 따로 보시면 됩니다.</text>
   <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">공급</text>
   <rect x="60" y="747" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
   <rect x="60" y="747" width="8" height="115" rx="4" fill="#4ade80"/>
   <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">서초 전세 약세는 잠원·반포 입주 영향으로 설명됐습니다</text>
-  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">4주 연속 하락입니다. 매매 약세와 칸을 나누시기 바랍니다.</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">4주 연속 하락입니다. 매매 약세와 다른 화면의 숫자입니다.</text>
   <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">입주</text>
   <rect x="60" y="872" width="960" height="115" rx="14" fill="#0c1017" stroke="#94a3b8" stroke-width="2"/>
   <rect x="60" y="872" width="8" height="115" rx="4" fill="#94a3b8"/>
