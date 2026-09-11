@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#140b1f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="131" height="38" rx="19" fill="#c084fc30" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="105.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#c084fc" text-anchor="middle">BREAKING</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.12</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">스타십 14번째 비행이 9월 18일 아침 창으로 잡혔고 첫 매출 비행에</text>
+  <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">스타링크 3세대를 싣습니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">스타십 비행 14</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#c084fc" text-anchor="middle">9/18</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">텍사스 스타베이스, 아침 7시 15분~9시 14분(중부시간)입니다. 예비 창은 19일 같은 시각입니다. 돈을 받는 첫</text>
+  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">비행이며 양산 스타링크 3세대를 싣습니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🗓</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">9/18</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">기본 창</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">중부 7:15–9:14</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🗓</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">9/19</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">예비 창</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">같은 시각</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">📡</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">V3</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">스타링크</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">양산 위성 화물</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">💵</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">매출</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">첫 유료 비행</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">시험이 아닌 손님 짐</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">세계시로는 12시 15분부터 14시 14분입니다. 목표 궤도에 따라 시각이 달라질 수 있습니다.</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">15번째용 부스터 22와 우주선 42는 이미 극저온 시험을 마쳤습니다.</text>
+  <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="736" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">매출 비행은 보험과 손님이 붙는 단계입니다. 스타링크 3세대는 큰 화물칸이 필요한 다음 위성입니다.</text>
+  <rect x="60" y="850" width="960" height="168" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
+  <text x="540" y="880" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">시험 로켓이 화물 트럭이 되면 발사 횟수가 매출이 됩니다. 오늘은 날짜가 찍힌 날입니다. 앞으로 3~5년 자주 날면 위성망이 더 빨리</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">채워질 수 있습니다.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 비행 14 · 2026.09.12</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

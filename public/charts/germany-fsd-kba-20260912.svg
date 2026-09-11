@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.12</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">독일 교통당국이 유럽 표결 전에 완전자율주행을 쓸 수 있는 두 경로를</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">검토 중이라고 했습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">🇩🇪</text>
+  <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">39조</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">2026년 8월 8일 공문입니다. 유럽 전역 표결 또는 네덜란드 임시 승인을 39조 5항으로 먼저 받는 길을 보고</text>
+  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">있습니다. 아직 승인된 것은 없습니다.</text>
+  <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🇪🇺</text>
+  <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">표결</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">기술위원회</text>
+  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">여러 나라가 같이 표를 던짐</text>
+  <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🇳🇱</text>
+  <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">임시</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">네덜란드 승인</text>
+  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">독일이 먼저 받아들일 수 있는지</text>
+  <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">📄</text>
+  <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">8/8</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">검토 회신</text>
+  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">플렌스부르크 형식승인 부서</text>
+  <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">형식승인은 이 소프트웨어를 차에 넣어도 된다는 도장입니다. 공문은 검토이지 허가가 아닙니다. 다음에 보면 좋은</text>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">것은 후속 공문입니다.</text>
+  <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="840" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">독일은 유럽 최대 자동차 시장입니다. 오늘은 법적 두 길이 적힌 날입니다. 앞으로 3~5년 여러 나라가 같은 소프트웨어를 인정하면</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">구독이 넓어질 수 있습니다.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 독일 검토 · 2026.09.12</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

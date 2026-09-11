@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1600"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#facc15"/><stop offset="100%" style="stop-color:#d4a017"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#facc1530" stroke="#facc15" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#facc15" text-anchor="middle">금</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.12</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">금 온스가 약 4,318~4,377달러에서 금리 인상 확률과 같이</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">흔들렸습니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">🥇</text>
+  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#facc15" text-anchor="middle">4,320</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">한 상품 표는 4,318달러(−1.83%)입니다. 다른 아침 글은 4,377달러를 적었습니다. 둘 다 4,300달러대입니다.</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="418" width="300" height="176" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">온스</text>
+  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#facc15" text-anchor="middle">4318</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">한 화면</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">하루 −1.83%</text>
+  <rect x="390" y="418" width="300" height="176" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">다른 집계</text>
+  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#facc15" text-anchor="middle">4377</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">아침 글</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">같은 4,300달러대</text>
+  <rect x="720" y="418" width="300" height="176" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">은</text>
+  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#facc15" text-anchor="middle">−5.48%</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">더 큰 출렁임</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">금보다 낙폭이 큼</text>
+  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">같은 주 배경</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📍 16일 인상 확률 85~90%권입니다</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🏦 이자를 주지 않는 금의 기회비용이 커집니다</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🛢️ 유가 상승과 금리 기대가 동시에 있었습니다</text>
+  <rect x="60" y="800" width="960" height="148" rx="14" fill="#1c1805" stroke="#facc15" stroke-width="1"/>
+  <text x="540" y="830" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">실질금리가 오르면 금이 부담을 받는 경우가 많습니다. 오늘은 집계가 갈린 4,300달러대입니다. 앞으로 3~5년 물가가 2%로 완전히</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">내려오기 전 보험 수요는 남아 있을 수 있습니다.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">금 · 온스 4,320권 · 2026.09.12</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

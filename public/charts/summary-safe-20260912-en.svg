@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.12 Safe Assets Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#f7931a"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a">Bitcoin ran $76,000 to nearly $79,900 then recovered toward…</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">$80,000 is still a round line. CPI-in-line offered a relief bounce.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f7931a" text-anchor="end">BTC</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#facc15"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15">Gold held near $4,318–$4,377 an ounce</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">One tape printed $4,318 (−1.83%). A smaller fade than silver.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#facc15" text-anchor="end">Gold</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#0f1024" stroke="#818cf8" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#818cf8"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#818cf8">Ether reclaimed about $2,610 after a $2,500 morning</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">Session $2,433–$2,648. A larger daily bounce than bitcoin.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#818cf8" text-anchor="end">ETH</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#0c1017" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">Silver fell 5.48% to about $63.60 an ounce</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">A wider swing than gold. Also a solar and electronics metal.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">Silver</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#f97316"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f97316">WTI near $101 and Brent near $106, week still above $100</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">U.S. diesel printed over $6/gal. An inflation input.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f97316" text-anchor="end">Oil</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">August CPI printed 3.4% YoY and core 0.3% on the month</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">Sep 16 hike odds sit near 85–90%.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">CPI</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#0c1017" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">Higher hike odds raise the opportunity cost of no-yield assets</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">Each asset has its own clock. The meeting is the next gate.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">Disc.</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: BTC 79k · gold 4320 · silver 63.60 · WTI 101 · Brent 106 · hike 85–90%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.12 Korea Housing Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">Seoul apartment sales rose 0.20%, a slower gain</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">Jeonse +0.19%. District keys sit behind the city average.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">+0.20%</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#fb923c"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c">Seongbuk sales rose 0.42% as the lift moved north</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">The year’s cumulative gain is described as Seoul’s highest.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">Sb</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">Gangnam −0.35%, Seocho −0.30%, Songpa −0.02% — all down</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">Fifth down week in Gangnam; Songpa’s first drop in 21 weeks.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">Gn</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#fb923c"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c">Nowon jeonse rose 0.38% while Seocho jeonse fell 0.21%</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">Move-in districts and big transit complexes run different keys.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">Jn</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">Resident single-home CGT deduction ₩14B; non-resident stays…</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">The ₩9B cut was withdrawn. The Assembly still reviews.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">₩14B</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#fb923c"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb923c">Rate hikes and a 70% fair-market ratio remain in the draft</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">Only the basic deduction got less tight.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">70%</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">A jeonse-loan limit check is the autumn moving gate</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">Read district prints before you sign on the city average.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">Loan</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: Seoul +0.20% · Seongbuk +0.42% · Gangnam −0.35% · ₩14B · ₩12B</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

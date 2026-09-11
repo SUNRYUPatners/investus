@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.12 안전자산 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#f7931a"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f7931a">비트코인이 7만 6천~7만 9,900달러를 오간 뒤 7만 9천 달러권으로…</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">8만 달러는 아직 심리선입니다. 물가가 예상과 같아 한숨 돌린 반등입니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f7931a" text-anchor="end">BTC</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#facc15"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15">금 온스가 약 4,318~4,377달러에서 흔들렸습니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">한 화면은 4,318달러(−1.83%)입니다. 은보다 낙폭이 작았습니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#facc15" text-anchor="end">금</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#0f1024" stroke="#818cf8" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#818cf8"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#818cf8">이더리움이 아침 2,500달러권에서 오후 2,610달러권으로 회복했습니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">장중 2,433~2,648달러입니다. 비트코인보다 하루 반등이 컸습니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#818cf8" text-anchor="end">ETH</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#0c1017" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">은이 온스 63.60달러로 하루 5.48% 내렸습니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">금보다 출렁임이 큽니다. 태양광·전자 원료이기도 합니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">은</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#f97316"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f97316">서부텍사스산 101달러권, 브렌트 106달러권으로 주간 100달러 위입니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">경유가 갤런 6달러를 처음 넘었습니다. 물가 입력입니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f97316" text-anchor="end">유가</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">8월 소비자물가가 전년 3.4%, 근원 월 0.3%였습니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">16일 인상 확률은 85~90%권입니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">CPI</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#0c1017" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">금리가 오를 것으로 보면 무이자 자산의 기회비용이 커집니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">자산마다 속도가 다릅니다. 16일 회의가 다음 게이트입니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">할인</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: BTC 7.9만 · 금 4320 · 은 63.60 · WTI 101 · 브렌트 106 · 인상 85–90%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

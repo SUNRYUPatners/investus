@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">TSLA</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.12</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">사이버캡이 9월 9일 홍콩에서 아시아 첫 공개를 했고 다음은</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">도쿄입니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">🇭🇰</text>
+  <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">홍콩</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">금색 차체가 전시장 조명 아래 두 각도로 찍혔습니다. 아시아 투어의 첫 정거장이고 다음이 도쿄입니다. 보여 주는</text>
+  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">차이지 홍콩 유료 호출이 아닙니다.</text>
+  <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">📅</text>
+  <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">9/9</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">홍콩 공개</text>
+  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">아시아 첫 정거장</text>
+  <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🗼</text>
+  <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">도쿄</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">다음 전시</text>
+  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">일본 소프트웨어 발언과 같은 주</text>
+  <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚪</text>
+  <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">2인</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">핸들 없는 차</text>
+  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">처음부터 로보택시용</text>
+  <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">전시는 실물을 익히게 하는 일입니다. 유료 호출은 허가와 보험, 앱이 필요합니다. 다음에 보면 좋은 것은 도쿄</text>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">날짜입니다.</text>
+  <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="840" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">아시아 대도시는 택시 수요가 큽니다. 오늘은 투어의 첫 사진입니다. 앞으로 3~5년 몇 개 도시가 열리는지가 이 투어의</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">성적표입니다.</text>
+  <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 사이버캡 홍콩 · 2026.09.12</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
