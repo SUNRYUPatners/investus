@@ -18,31 +18,32 @@
   <text x="540" y="196" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">🛰 orbital compute</text>
   <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">💻</text>
   <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#c084fc" text-anchor="middle">Next y</text>
-  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Orbital compute runs jobs on satellites instead of terrestrial data centers. The CFO said the first</text>
-  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">satellites go up next year. Split that from a finished constellation year.</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">The screen said the CFO plans to launch the first orbital-compute satellites next year. Orbital</text>
+  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">compute runs jobs on satellites instead of terrestrial data centers.</text>
   <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📅</text>
   <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Next y</text>
   <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">First satellites</text>
-  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Prototype / demo</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">The year prototypes go up</text>
   <rect x="390" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">🛰</text>
   <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Orbit</text>
   <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Compute in space</text>
-  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">A different axis than ground power</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">A path around ground power and land</text>
   <rect x="720" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">💵</text>
   <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">CFO</text>
   <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Finance remark</text>
-  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Not a booked contract</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">A date moving from talk onto a</text>
+  <text x="870" y="617" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">calendar</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="690" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">A first satellite is a demo. Split from Starship revenue flights and the data-center rebuild.</text>
-  <text x="540" y="714" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">Next: the launch manifest.</text>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">On the ground, power and permits bottleneck. Compute in orbit can route around that. Next:</text>
+  <text x="540" y="714" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">which rocket carries the first satellite.</text>
   <rect x="60" y="842" width="960" height="172" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="872" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Power, cooling, and downlink bottleneck orbital jobs. Do not mash with the V4 140 m design. Next: a launch license.</text>
-  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Orbital compute can route around terrestrial power limits over years.</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">A first satellite is a demo that it works. Cooling and the downlink remain homework. Over 3–5 years a working demo</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">can move some demand that outgrew terrestrial power into space.</text>
   <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · orbital compute · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

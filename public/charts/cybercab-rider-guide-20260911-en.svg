@@ -16,30 +16,31 @@
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">📘</text>
   <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">9/4</text>
-  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">A rider guide is what passengers read before they board. The North America Cybercab guide printed</text>
-  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">with a 2026/09/04 date. It is not a paid-ride launch.</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">The screen said Tesla officially published the Cybercab Rider Guide on September 4, 2026. It is a</text>
+  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">downloadable PDF passengers read before they board.</text>
   <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">📅</text>
   <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">9/4</text>
   <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Document date</text>
-  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">4 Sep 2026</text>
+  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Official release 4 Sep 2026</text>
   <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">🌎</text>
   <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">NA</text>
   <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Region in scope</text>
-  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Split from EU/Asia</text>
+  <text x="540" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">North America riders</text>
   <rect x="720" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🚕</text>
   <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Cab</text>
   <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Purpose-built taxi</text>
-  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Not a Model Y robotaxi</text>
+  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Boarding rules for a no-driver car</text>
   <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">A guide is product prep. Split from app hue and the Utah 7. Next: cities that open hailing.</text>
+  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">A guide means the company is preparing a car a stranger can board alone. It covers doors, belts, and</text>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">emergency contacts. Next: cities where this guide is used for hails.</text>
   <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="840" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">A PDF is not a fare card. Split from Slovenia’s free FSD window. Next: actual boarding rules. A standard guide can</text>
-  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">ease insurance and regulator talks over years.</text>
+  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Insurers and regulators start talks faster when a standard guide exists. Today is a PDF day. Over 3–5 years, shared</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">boarding rules can speed city-by-city expansion.</text>
   <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · rider guide · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

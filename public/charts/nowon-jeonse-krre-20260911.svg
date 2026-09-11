@@ -34,14 +34,14 @@
   <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">전세 주간</text>
   <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">대치·압구정</text>
   <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">전세를 구별로 나누면</text>
-  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📍 도시 평균 0.19%는 가림막입니다</text>
-  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🏗 서초는 입주 물량 칸</text>
-  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">💵 대출 한도 없이 계약하지 말 것</text>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">전세를 구별로 보면</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📍 서울 전세 평균은 +0.19%입니다</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">🏗 서초는 잠원·반포 입주 영향입니다</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">💵 가을 이사 때는 전세대출 한도를 먼저 봅니다</text>
   <rect x="60" y="800" width="960" height="148" rx="14" fill="#20130a" stroke="#fb923c" stroke-width="1"/>
   <text x="540" y="830" font-family="Arial" font-size="18" fill="#fb923c" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">전세 오름과 매매 약세를 한 신호로 묶지 마시기 바랍니다. 가을 이사에 한도 조회가 관문입니다. 장기적으로 입주 캘린더가 전세</text>
-  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">키를 결정합니다.</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">노원 전세 +0.38%와 서초 전세 −0.21%가 같은 주의 다른 구입니다. 가을 이사에는 전세대출 한도가 관문입니다. 장기적으로 입주</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">일정이 전세 온도를 만듭니다.</text>
   <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">전세 · 노원 vs 서초 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

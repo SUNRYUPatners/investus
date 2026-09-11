@@ -14,34 +14,34 @@
   <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">테라팹 1단계 기초가 한 달 전보다 40~50% 더 진행된 모습입니다</text>
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🏗</text>
-  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">+40%</text>
-  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">테라팹은 대형 칩·패키지 공장 프로젝트입니다. 1단계 기초 공사가 한 달 전 사진보다 40~50% 더 나아갔다는 비교가</text>
-  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">나왔습니다.</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">40–50%</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">드론 사진에는 넓은 흙바닥과 긴 직사각형 기초 구덩이가 보입니다. 테라팹 1단계 기초가 한 달 전보다 40~50% 더</text>
+  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">나아갔고, 서쪽 임시 작업장과 진입 도로에도 움직임이 있다고 했습니다.</text>
   <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">단계</text>
   <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">1</text>
   <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">1단계 기초</text>
-  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">건물 전체가 아님</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">건물 전체가 아니라 땅 다지기</text>
   <rect x="390" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">진척</text>
   <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">40–50%</text>
   <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">한 달 대비</text>
-  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">사진 비교 추정</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">사진으로 비교한 추정</text>
   <rect x="720" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">다음</text>
   <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">골조</text>
   <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">기초 다음 공정</text>
-  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">장비 반입 전 단계</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">장비를 넣기 전 뼈대</text>
   <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">공사가 의미하는 것</text>
-  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 기초는 착공이지 양산이 아님</text>
-  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">📸 40~50%는 사진 비교</text>
-  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">💵 데이터센터 재설계와 칸을 나눔</text>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">사진이 보여 주는 것</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 스타링크 지상국 자리도 같은 부지에 보입니다</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">📸 한 달 전 첫 방문 때보다 땅 정리와 뒤쪽 작업이 늘었습니다</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">💵 다음에 보면 좋은 것은 골조와 장비 반입입니다</text>
   <rect x="60" y="780" width="960" height="210" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="810" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">기초 진척은 일정 힌트이지 수율 확정이 아닙니다. 엑스에이아이 데이터센터 재설계와 다른 화면의 숫자입니다. 다음 확인할 것은</text>
-  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장비 반입입니다. 장기적으로 공장이 돌면 패키지 병목이 줄어들 수 있습니다.</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">테라팹은 큰 칩·패키지 공장 그림입니다. 기초가 빨라지면 장비를 넣는 날짜가 앞당겨질 수 있습니다. 앞으로 3~5년 공장이 돌면</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">패키지 병목이 줄어 가속기 공급이 더 안정될 수 있습니다.</text>
   <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 테라팹 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

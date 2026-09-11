@@ -18,8 +18,8 @@
   <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">STARLINK DIRECT</text>
   <rect x="80" y="220" width="920" height="132" rx="18" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#c084fc" text-anchor="middle">9/28</text>
-  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Starlink Direct sends texts from satellites to phones. It expands past Japan first to the U.S., Canada,</text>
-  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">and New Zealand, then the Philippines, on September 28.</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">The screen showed Earth with SoftBank and Starlink marks. On September 28 it opens first in the</text>
+  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">U.S., Canada, and New Zealand, then the Philippines in the fall. Direct texts phones from satellites.</text>
   <rect x="80" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">📅</text>
   <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">9/28</text>
@@ -29,27 +29,30 @@
   <rect x="312" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🇺🇸</text>
   <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">US</text>
-  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Next region</text>
-  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">With Canada</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">With Canada</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">North America in the</text>
+  <text x="408" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">first bundle</text>
   <rect x="544" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🇳🇿</text>
   <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">NZ</text>
   <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Oceania</text>
-  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">In the first bundle</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Same-day bundle</text>
   <rect x="776" y="372" width="192" height="176" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">🇵🇭</text>
   <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">PH</text>
-  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Then</text>
-  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">After the first three</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Then this fall</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">No extra cost on eligible</text>
+  <text x="872" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">plans</text>
   <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">Direct is phone texting, not home Router 4.</text>
-  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Carrier contracts remain. Split permit from live service.</text>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">It was described as working in outdoor dead zones. That is not home Router 4.</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Eligible-plan customers were told there is no extra charge. Each carrier will still post a…</text>
   <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="736" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">September 28 is an expansion window, not a subscriber print. Next: carrier pricing.</text>
+  <text x="540" y="736" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">A phone that talks to a satellite fills roaming gaps and silent mountain stretches. September 28 is the day</text>
+  <text x="540" y="760" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">that cover leaves Japan. Next: live service and text quality.</text>
   <rect x="60" y="850" width="960" height="168" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="880" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">More countries can substitute for roaming. Split from Router 4 specs. Next: a live-service notice. Direct as a</text>
-  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">default can thicken the satellite-comms moat over years.</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">If emergency texting lands inside ordinary plans in more countries, sky comms become a phone feature, not a special</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">gadget. Over 3–5 years, Direct as a default can widen everyday use of the SpaceX constellation.</text>
   <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Direct expand · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

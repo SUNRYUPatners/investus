@@ -16,7 +16,7 @@
   <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">🥇</text>
   <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#facc15" text-anchor="middle">4,365</text>
   <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">현물 금은 온스당 약 4,365달러권으로 거론됐습니다. 10년물 4.92%가 실질금리 부담입니다. 8월 금 ETF 유입</text>
-  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">180억 달러와 하루 가격을 나누시기 바랍니다.</text>
+  <text x="540" y="383" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">180억 달러는 한 달 흐름이고, 오늘 온스는 하루 가격입니다.</text>
   <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="418" width="300" height="176" rx="16" fill="#1c1805" stroke="#facc15" stroke-width="2"/>
   <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">온스</text>
@@ -34,14 +34,13 @@
   <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">8월 유입</text>
   <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">하루 가격과 시계가 다름</text>
   <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">헤지와 하루 가격을 나누면</text>
-  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📍 온스는 현물 칸입니다</text>
-  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">📈 금리가 기회비용을 키움</text>
-  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🛢️ 유가 101달러와 같은 헤지 아님</text>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">온스와 금리가 보여 주는 것</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">📍 현물 온스는 약 4,365달러입니다</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">📈 10년 4.92%가 금을 누르는 이자입니다</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">🛢️ 브렌트 101달러는 에너지 가격입니다</text>
   <rect x="60" y="800" width="960" height="148" rx="14" fill="#1c1805" stroke="#facc15" stroke-width="1"/>
   <text x="540" y="830" font-family="Arial" font-size="18" fill="#facc15" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">금은 비트코인보다 느린 헤지입니다. 브렌트 100달러 돌파와 한 문장에 넣지 마시기 바랍니다. 다음 확인할 것은 소비자물가입니다.</text>
-  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기적으로 실질금리가 해자입니다.</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">금은 비트코인보다 천천히 움직입니다. 브렌트 100달러는 에너지 뉴스입니다. 장기적으로 실질금리가 금 가격의 큰 축입니다.</text>
   <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">금 · 온스 4,365 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

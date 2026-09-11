@@ -15,34 +15,34 @@
   <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">month ago</text>
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🏗</text>
-  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">+40%</text>
-  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Terafab is a large chip/packaging plant project. Phase 1 footings look 40–50% further along than photos</text>
-  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">from a month ago.</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">40–50%</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Drone photos show a wide graded pad and a long rectangular footing pit. Phase 1 foundations look</text>
+  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">40–50% further than a month ago, with more work on the west staging area and the access road.</text>
   <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Phase</text>
   <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">1</text>
   <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Phase 1 footings</text>
-  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Not the finished plant</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Groundwork, not the finished plant</text>
   <rect x="390" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Pace</text>
   <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">40–50%</text>
   <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Versus last month</text>
-  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Photo comparison</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">A photo comparison</text>
   <rect x="720" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Next</text>
   <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">Frame</text>
   <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">After foundations</text>
-  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Before tool move-in</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Before tools move in</text>
   <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">What the site means</text>
-  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 Footings are groundbreaking, not yield</text>
-  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">📸 40–50% is a photo compare</text>
-  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">💵 Split from the data-center rebuild</text>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">What the photos show</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 A Starlink ground station sits on the same site</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">📸 More clearing and back-side work than the first visit a month ago</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">💵 Next: framing and tool move-in</text>
   <rect x="60" y="780" width="960" height="210" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="810" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Foundation pace is a calendar hint, not a yield lock. Split from the xAI data-center overhaul. Next: tool move-in. A</text>
-  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">running plant can ease packaging bottlenecks over years.</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Terafab is a large chip and packaging plant. Faster footings can pull tool-install dates forward. Over 3–5 years a</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">running plant can ease packaging bottlenecks and steady accelerator supply.</text>
   <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Terafab · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

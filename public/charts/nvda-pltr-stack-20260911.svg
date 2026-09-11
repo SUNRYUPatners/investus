@@ -11,45 +11,49 @@
   <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
   <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
   <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.11</text>
-  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">팔란티어가 엔터프라이즈 스택에서 가장 중요하다는 발언이</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">팔란티어가 세계에서 가장 중요한 기업용 스택이라는 발언이</text>
   <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">나왔습니다</text>
   <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
   <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
   <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">엔비디아 · 팔란티어</text>
   <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
-  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#60a5fa" text-anchor="middle">스택</text>
-  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">엔터프라이즈 스택은 기업이 인공지능을 돌리는 소프트웨어 층입니다. 팔란티어가 그 층에서 가장 중요하다는</text>
-  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">평가와 주권 인공지능 스택 그림이 같이 나왔습니다.</text>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#60a5fa" text-anchor="middle">온톨로지</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">엔비디아 최고경영자가 팔란티어를 「세계에서 가장 중요한 기업용 스택」이라고 했습니다. 온톨로지는 회사 안</text>
+  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">흩어진 표·문서를 지도처럼 잇는 정리함이고, 엔비디아 칩과 붙이면 빛에 가까운 속도로 처리한다고 했습니다.</text>
   <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
-  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏢</text>
-  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">PLTR</text>
-  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">소프트웨어 층</text>
-  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">데이터·온톨로지 축</text>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🗺</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">온톨로지</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">회사 데이터 지도</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">부품 번호와 납기를</text>
+  <text x="176" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">인공지능이 읽게 함</text>
   <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
-  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🖥</text>
-  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">NVDA</text>
-  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">칩·랙 층</text>
-  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">연산 인프라</text>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏢</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">파운드리</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">AIP와 한 세트</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">업무용 인공지능을 올리는</text>
+  <text x="408" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">층</text>
   <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
   <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🏛</text>
-  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">주권</text>
-  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">국가 단위 도입</text>
-  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">클라우드와 다른 칸</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">주권 AI</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">데이터를 국내에</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">핵심 공급망을 나라 안에서</text>
+  <text x="640" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">돌림</text>
   <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
   <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">🔗</text>
-  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">결합</text>
-  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">칩+소프트웨어</text>
-  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">한 계약이 아님</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">공급망</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">수백만 부품</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">수천 개 협력사 재고를</text>
+  <text x="872" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">실시간으로</text>
   <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">칩 판매와 소프트웨어 구독은 매출 인식이 다릅니다. 한 장의 파트너십이 아닙니다.</text>
-  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">내부자 6억 달러 매도와 다른 화면의 숫자입니다.</text>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">두 회사는 엔비디아 공개 모델과 팔란티어 파운드리·AIP·온톨로지를 묶어 운영 인공지능…</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">첫 그림은 엔비디아 자기 공장 공급망입니다. 칩과 데이터 지도를 같이 쓰면 손님이 한 번에 도입할 수 있습니다.</text>
   <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="736" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">가장 중요하다는 말은 평가입니다. 수주 공시가 나오기 전에는 수주가 나오면 더 분명해집니다. 다음 확인할 것은 공동</text>
-  <text x="540" y="760" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">레퍼런스입니다.</text>
+  <text x="540" y="736" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">기업용 스택은 칩 위에 올라가는 업무용 두뇌입니다. 인공지능이 글을 잘해도 우리 회사 납기를 모르면 결정을 못 합니다.</text>
+  <text x="540" y="760" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">온톨로지가 그 번역기입니다.</text>
   <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
   <text x="540" y="880" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">주권 인공지능은 국가가 데이터를 국내에 두는 그림입니다. 자그레브 무인 22km와 다른 화면의 숫자입니다. 다음 게이트는 계약</text>
-  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">규모입니다. 장기적으로 소프트웨어가 붙으면 칩 교체 비용이 커질 수 있습니다.</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">나라가 공장 데이터를 밖에 내기 싫어하면, 검증된 칩과 보안을 통과한 소프트웨어가 한 세트로 팔릴 기회가 커집니다. 앞으로 3~5년</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">인공지능이 공장·정부 도구가 되면 엔비디아는 가속기를, 팔란티어는 그 위 구독을 늘릴 수 있습니다.</text>
   <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">엔비디아 · 팔란티어 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

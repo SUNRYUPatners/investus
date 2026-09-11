@@ -15,9 +15,9 @@
   <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">나왔습니다</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🚀</text>
-  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#c084fc" text-anchor="middle">매출</text>
-  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">지금까지 스타십 비행은 시험에 가까웠습니다. 다음 비행이 고객 화물을 실어 돈을 받는 비행이 될 수 있다는</text>
-  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">표현이 나왔고, 연간 반복매출 1,000억 달러 확신이 붙었습니다.</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#c084fc" text-anchor="middle">$100B</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">화면에 「다음 스타십 비행이 매출을 낸다」는 문장과 스페이스엑스 주가 약 148.18달러(+0.43%)가 같이</text>
+  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">있었습니다. 시험이 아니라 고객 화물을 실어 돈을 받는 단계로 넘어간다는 뜻입니다.</text>
   <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
   <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">지금까지</text>
   <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">시험</text>
@@ -31,24 +31,24 @@
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">💵</text>
   <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">$100B</text>
   <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">연간 반복매출 확신</text>
-  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">가정이지 수주 잔고가 아님</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">경영진이 말한 목표 크기</text>
   <rect x="390" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
-  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">📅</text>
-  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">다음</text>
-  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">비행 창</text>
-  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">부스터 22·42호기와 분리</text>
+  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">📈</text>
+  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">148.18</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">화면에 찍힌 주가</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">하루 +0.43%</text>
   <rect x="720" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">📦</text>
   <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">화물</text>
   <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">유료 페이로드</text>
-  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">시험 계측과 다른 칸</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">계측기가 아니라 손님 짐</text>
   <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="768" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">매출 비행은 계약·보험·허가가 같이 있어야 합니다. 1,000억 달러는 확신 칸입니다. 궤도 컴퓨팅 위성과 한 문장에 넣지</text>
-  <text x="540" y="791" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">마시기 바랍니다.</text>
+  <text x="540" y="768" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">매출 비행은 보험·허가·손님 이름이 붙을 때 이야기가 더 튼튼해집니다. 1,000억 달러는 「발사 횟수가 늘면 이 정도까지 볼</text>
+  <text x="540" y="791" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">수 있다」는 큰 그림입니다. 다음에 보면 좋은 것은 화물을 맡긴 고객입니다.</text>
   <rect x="60" y="874" width="960" height="168" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="904" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">시험 성공과 매출 인식은 시계가 다릅니다. 부스터 22호기 극저온 시험과 다른 화면의 숫자입니다. 다음 확인할 것은 페이로드</text>
-  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">고객입니다. 장기적으로 케이던스가 붙으면 발사 단가가 내려갈 수 있습니다.</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">지금까지 스타십은 하늘을 배우는 단계였습니다. 돈을 받는 비행이 시작되면 발사 단가를 나누는 손님이 생깁니다. 앞으로 3~5년</text>
+  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">발사가 잦아지면 위성·화물 가격이 내려가 더 많은 손님이 붙을 수 있습니다.</text>
   <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 스타십 매출 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

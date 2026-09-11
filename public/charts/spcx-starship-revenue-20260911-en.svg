@@ -14,9 +14,9 @@
   <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">The next Starship flight was framed as revenue-generating</text>
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🚀</text>
-  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#c084fc" text-anchor="middle">Revenue</text>
-  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Starship flights so far have been closer to tests. The next was framed as a paid,</text>
-  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">customer-payload flight, with $100B ARR conviction attached.</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#c084fc" text-anchor="middle">$100B</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">The screen said the next Starship flight will generate revenue, beside SpaceX near $148.18</text>
+  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">(+0.43%). That is paid customer cargo, not another test instrument.</text>
   <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
   <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">So far</text>
   <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">Test</text>
@@ -30,24 +30,24 @@
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">💵</text>
   <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">$100B</text>
   <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">ARR conviction</text>
-  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Assumption, not backlog</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">A management target size</text>
   <rect x="390" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
-  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">📅</text>
-  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">Next</text>
-  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Flight window</text>
-  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Split from B22 and Ship 42</text>
+  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">📈</text>
+  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">148.18</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Printed share price</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">+0.43% on the day</text>
   <rect x="720" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">📦</text>
   <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">Cargo</text>
   <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Paid payload</text>
-  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Not a test instrument</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">A customer crate, not a sensor</text>
   <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="768" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">A revenue flight needs a contract, insurance, and permits. $100B is a conviction cell. Do not mash with</text>
-  <text x="540" y="791" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">orbital-compute sats.</text>
+  <text x="540" y="768" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">A revenue flight gets firmer when insurance, permits, and a named customer land. $100B is the picture if</text>
+  <text x="540" y="791" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">cadence rises. Next: who books the cargo.</text>
   <rect x="60" y="874" width="960" height="168" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="904" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">A successful test is not revenue recognition. Split from Booster 22 cryo-proof. Next: the payload customer.</text>
-  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Cadence can pull launch cost down over years.</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Starship so far was school. Paid flights bring customers who share launch cost. Over 3–5 years, higher cadence can</text>
+  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">pull satellite and cargo prices down and invite more bookings.</text>
   <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Starship revenue · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

@@ -16,33 +16,34 @@
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">📍</text>
   <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">7</text>
-  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Pleasant Grove is a Utah city. Seven Cybercabs with steering wheels were seen and were described as</text>
-  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">not yet in the robotaxi app.</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Aerial photos show gold Cybercabs lined in a lot beside a white Model Y and a car hauler, next to a Tesla</text>
+  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">store in Pleasant Grove. They were not yet in the robotaxi app.</text>
   <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Count</text>
   <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">7</text>
   <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Vehicles spotted</text>
-  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Not the Texas registry</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Counted in one parking lot</text>
   <rect x="390" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Wheel</text>
   <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">Yes</text>
   <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Steering wheel fitted</text>
-  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Not the no-wheel production look</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">A person can ferry or inspect</text>
   <rect x="720" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">App</text>
   <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">Off</text>
   <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Not in the hail app</text>
-  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Not paid supply</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Printed as not a Utah County</text>
+  <text x="870" y="585" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">accident</text>
   <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">What the sighting means</text>
-  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 Utah is not the Texas fleet</text>
-  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">🛞 Wheeled units may be test or ferry cars</text>
-  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">📱 Off-app means no hail</text>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">What the photos show</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 Gold purpose-built bodies sit with a white existing car</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">🛞 Wheels let a person move and check the car on roads</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">📱 Off-app means riders cannot hail yet</text>
   <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="810" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Seven is a local sighting, not a statewide registry. Split from the Texas 437 story. Next: a Utah permit. More states</text>
-  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">can widen the purpose-built map over years.</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Purpose-built cabs gathering outside Texas, at a Utah store, is a field sign the cars are traveling. Next: a Utah</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">permit and an app listing. Over 3–5 years, more states can widen the purpose-built map.</text>
   <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Utah 7 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

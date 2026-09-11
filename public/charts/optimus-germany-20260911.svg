@@ -16,31 +16,33 @@
   <rect x="360" y="166" width="360" height="46" rx="23" fill="#4ade8018" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="196" font-family="Arial" font-size="20" fill="#4ade80" text-anchor="middle">🦾 옵티머스 · 홀츠게를링겐</text>
   <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">⚙️</text>
-  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#4ade80" text-anchor="middle">기어</text>
-  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">기어트레인은 관절을 움직이는 기어·감속기 묶음입니다. 독일 홀츠게를링겐에서 옵티머스 기어트레인 제조</text>
-  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">인력을 뽑는 공고가 나왔습니다.</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#4ade80" text-anchor="middle">독일</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">화면에 테슬라 로고와 채용 공고가 있고, 독일 홀츠게를링겐에서 옵티머스 기어트레인 제조 인력(로봇 제어</text>
+  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">엔지니어)을 뽑습니다. 기어트레인은 관절을 움직이는 기어·감속기 묶음입니다.</text>
   <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="450" width="300" height="178" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">🇩🇪</text>
   <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">독일</text>
   <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">홀츠게를링겐</text>
-  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">제조 거점 채용</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">유럽 제조 거점 채용</text>
   <rect x="390" y="450" width="300" height="178" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">⚙️</text>
   <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">기어</text>
   <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">관절 구동 부품</text>
-  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">소프트웨어와 다른 축</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">설계부터 양산 라인까지</text>
   <rect x="720" y="450" width="300" height="178" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">👷</text>
   <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">채용</text>
   <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">제조 인력</text>
-  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">출고 대수가 아님</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">연구실 프로젝트가 아니라고 적힘</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="690" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">채용은 공장 준비입니다. 부품 5,000대 발주와 다른 화면의 숫자입니다. 다음 확인할 것은 라인 가동입니다.</text>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">사람이 관절 공장을 준비한다는 것은, 로봇을 「한 대 만들어 보기」에서 「여러 대를 찍어 내기」로 넘어가는</text>
+  <text x="540" y="714" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">신호입니다. 미국 밖 라인은 유럽 부품을 가까이 쓰겠다는 뜻입니다. 다음에 보면 좋은 것은 주당 조립</text>
+  <text x="540" y="738" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">대수입니다.</text>
   <rect x="60" y="842" width="960" height="172" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="872" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">독일 공장은 유럽 공급망 힌트입니다. 경제 두 배 발언과 한 문장에 넣지 마시기 바랍니다. 다음 게이트는 주당 조립 대수입니다.</text>
-  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기적으로 관절 원가가 내려가면 로봇 단가가 따라 내려갈 수 있습니다.</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">인간형 로봇은 소프트웨어만으로는 서지 않고, 값싸고 튼튼한 관절이 필요합니다. 오늘은 독일에서 그 관절을 만들 사람을 뽑는</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">날입니다. 앞으로 3~5년 관절 원가가 내려가면 로봇 한 대 값이 따라 내려갈 수 있습니다.</text>
   <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 옵티머스 독일 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

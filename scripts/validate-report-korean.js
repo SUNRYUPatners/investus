@@ -80,6 +80,9 @@ const TONE_BANNED = [
   "한 방향 베팅",
   "레버리지를 키우지",
   "레버리지를 줄이",
+  "넣지 마시기",
+  "나누시기",
+  "다른 화면의 숫자",
 ];
 
 /** 한글 SVG(-en 제외) caption·본문 텍스트 검증 패턴 */
@@ -97,12 +100,22 @@ const SVG_BAD_PATTERNS = [
   /\baffordability rotation\b/i,
 ];
 
-function validateSvgKo(filePath) {
+function validateSvgKo(filePath, iso) {
   const errors = [];
   const src = load(filePath);
   for (const re of SVG_BAD_PATTERNS) {
     if (re.test(src)) {
       errors.push(`${filePath}: 한글 SVG 영문 혼입 (${re})`);
+    }
+  }
+  if (iso && iso >= TONE_BANNED_SINCE) {
+    for (const phrase of TONE_BANNED) {
+      if (src.includes(phrase)) {
+        errors.push(
+          `${filePath}: SVG 금지 말투 "${phrase}" (2026-09-11~). 스크린샷·뉴스 숫자·장면을 그대로 쓰세요.`,
+        );
+        break;
+      }
     }
   }
   return errors;
@@ -500,7 +513,7 @@ if (fs.existsSync(chartsDir)) {
     const ymd = m[1];
     const iso = `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
     if (iso < VALIDATE_SINCE) continue;
-    allErrors.push(...validateSvgKo(`public/charts/${name}`));
+    allErrors.push(...validateSvgKo(`public/charts/${name}`, iso));
   }
 }
 

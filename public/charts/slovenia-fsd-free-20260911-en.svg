@@ -15,14 +15,14 @@
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="236" font-family="Arial" font-size="72" text-anchor="middle">🇸🇮</text>
   <text x="540" y="292" font-family="Arial Black,Arial" font-size="42" font-weight="900" fill="#f9fafb" text-anchor="middle">2 mo</text>
-  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">FSD is driver-supervised software that handles lanes and braking. Slovenia was offered two months at</text>
-  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">no charge.</text>
+  <text x="540" y="332" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">The screen said Tesla users in Slovenia now receive two months of FSD free. FSD is driver-supervised</text>
+  <text x="540" y="356" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">software that handles lanes and braking.</text>
   <line x1="80" y1="376" x2="1000" y2="376" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="210" y="438" font-family="Arial" font-size="40" text-anchor="middle">🗺</text>
   <text x="210" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Slovenia</text>
   <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Country in scope</text>
-  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">One small EU market</text>
+  <text x="210" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">One small EU market notice</text>
   <rect x="390" y="386" width="300" height="210" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
   <text x="540" y="438" font-family="Arial" font-size="40" text-anchor="middle">⏱</text>
   <text x="540" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">2 mo</text>
@@ -32,13 +32,14 @@
   <text x="870" y="438" font-family="Arial" font-size="40" text-anchor="middle">🛡</text>
   <text x="870" y="492" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">Supervised</text>
   <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Driver remains liable</text>
-  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Not driverless</text>
+  <text x="870" y="568" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Not a driverless ride</text>
   <rect x="60" y="612" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">A free window is a trial. Split from the 97.2% streak and Zagreb driverless. Next: conversion.</text>
+  <text x="540" y="658" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Two months is a trial so owners can feel the software. EU rules differ by country, so this is not a</text>
+  <text x="540" y="682" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">German or French permit. Next: how many stay after the free window.</text>
   <rect x="60" y="810" width="960" height="176" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
   <text x="540" y="840" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">Why it matters</text>
-  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">EU rules differ by country. A Slovenia trial is not a German or French permit. Next: paid-subscription conversion.</text>
-  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Trials that stick can become software revenue over years.</text>
+  <text x="540" y="868" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">A pleasant trial can become a paid subscription, which is software revenue. Today is one country’s welcome. Over</text>
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">3–5 years, more trials can move FSD from optional extra toward a default service.</text>
   <text x="540" y="1004" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">TSLA · Slovenia FSD · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

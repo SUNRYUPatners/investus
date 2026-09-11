@@ -18,37 +18,40 @@
   <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">NVIDIA · ZAGREB</text>
   <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
   <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#60a5fa" text-anchor="middle">22km</text>
-  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Pony.ai is a China robotaxi firm; Verne is the European partner. They ran 22 km driverless on Zagreb</text>
-  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">public roads with NVIDIA DRIVE — described as a first in Europe.</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">NVIDIA’s post called it a new kind of ride through Zagreb. Pony.ai and Verne ran 22 km driverless on</text>
+  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">public roads with no AV operator onboard — powered by NVIDIA DRIVE.</text>
   <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
   <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">📍</text>
   <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">Zagreb</text>
   <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Croatia’s capital</text>
-  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Public-road stretch</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Video over an airport</text>
+  <text x="176" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">runway</text>
   <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
   <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">📏</text>
   <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">22km</text>
   <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Driverless run</text>
-  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">One demonstration</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Cited as a first in Europe</text>
   <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
   <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🖥</text>
   <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">DRIVE</text>
   <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">NVIDIA DRIVE</text>
-  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Vehicle compute stack</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">The in-car AI computer</text>
   <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
   <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">🇪🇺</text>
-  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">Europe</text>
-  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Cited as a first</text>
-  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Confirm the permit scope</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">Riders</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">No one behind the…</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">Passengers only, as</text>
+  <text x="872" y="531" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">printed</text>
   <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">A demo is not a paid ride. Split from Tesla Cybercab deployment.</text>
-  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Do not mash with the Palantir enterprise remark.</text>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">Pony.ai is a China robotaxi firm; Verne is the European partner. NVIDIA supplies the…</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">A demo shows driverless is possible on these streets. A fare card has not printed yet.</text>
   <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="736" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">22 km is one-route evidence. It is not an EU-wide permit. Next: repeat runs and fares.</text>
+  <text x="540" y="736" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">22 km is one route emptied of a driver. The news is a driverless robotaxi trial opening in Europe. Next:</text>
+  <text x="540" y="760" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">repeat runs and a fare.</text>
   <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
   <text x="540" y="880" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">Why it matters</text>
-  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">NVIDIA DRIVE is chips and software. Split from the vehicle-maker’s fleet count. Next: a commercial geofence. More</text>
-  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">EU permits can lift DRIVE units over years.</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">If NVIDIA DRIVE clears European road permits, the same computer can ride in other city fleets. Over 3–5 years, more</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">permitted cities can lift DRIVE units.</text>
   <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">NVDA · Zagreb 22 km · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

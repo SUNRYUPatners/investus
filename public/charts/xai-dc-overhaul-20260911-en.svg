@@ -18,31 +18,31 @@
   <text x="540" y="196" font-family="Arial" font-size="20" fill="#c084fc" text-anchor="middle">🖥 xAI · data center</text>
   <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🔧</text>
   <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#c084fc" text-anchor="middle">122d</text>
-  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Colossus is a large training cluster. It was stood up in 122 days, then saw outages. The rebuild now</text>
-  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">puts reliability ahead of speed.</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">The screen said Colossus went up in 122 days, then saw outages, and the rebuild now puts</text>
+  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">reliability ahead of speed. Colossus is a large training cluster.</text>
   <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">📅</text>
   <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">122d</text>
   <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Colossus build</text>
-  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Speed-first past</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">A speed-first past</text>
   <rect x="390" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">⚠️</text>
   <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Outages</text>
   <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Downtime already seen</text>
-  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Training-calendar risk</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Training calendars can slip</text>
   <rect x="720" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">🛡</text>
   <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">Uptime</text>
   <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Rebuild priority</text>
-  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Utilization over speed</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Stay on more than go fast</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="690" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">A rebuild is a capex calendar, not a locked training result. Split from orbital-compute sats. Next:</text>
-  <text x="540" y="714" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">utilization.</text>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">A fast cluster that stops wastes training days. More reliability means more hours on the same</text>
+  <text x="540" y="714" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">chips. Next: a restart notice and utilization.</text>
   <rect x="60" y="842" width="960" height="172" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="872" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Repairs spend cash first. Do not mash with Terafab foundations. Next: a restart notice. Reliability can pull training</text>
-  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">cost down over years.</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">An AI factory is not “build once.” Steady power and uptime are the job. Today spends on repairs first. Over 3–5</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">years, higher utilization can pull the cost of one training run down.</text>
   <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · xAI DC · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

@@ -15,34 +15,34 @@
   <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">ft</text>
   <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">📡</text>
-  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">Wi-Fi 7</text>
-  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Router 4 is the home/office Starlink terminal. Specs printed Wi-Fi 7, 510 simultaneous devices, 3,500</text>
-  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">sq ft coverage, and about 0.9 lb.</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#c084fc" text-anchor="middle">510</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">Router 4 is the box that spreads dish internet through the home. The screen printed Wi-Fi 7, 510</text>
+  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">devices, 3,500 sq ft, and about 0.9 lb.</text>
   <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Devices</text>
   <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">510</text>
   <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Simultaneous devices</text>
-  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Home and small-office cap</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Room for family and office gadgets</text>
   <rect x="390" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Area</text>
   <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">3,500</text>
   <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Sq ft coverage</text>
-  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">About 325 square meters</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">About 325 m², up from Mini ~2,000</text>
   <rect x="720" y="400" width="300" height="200" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">Weight</text>
   <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#c084fc" text-anchor="middle">0.9lb</text>
-  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Unit weight</text>
-  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">Easier to move and install</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">About 400 g</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">1.8×8×4.5 in, two Ethernet ports</text>
   <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">What the spec means</text>
-  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 Wi-Fi 7 is the indoor radio, not satellite speed</text>
-  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">📶 510 is a concurrent-device cap</text>
-  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">💵 Split from plan speed</text>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">What the screen printed</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">📍 First Starlink Wi-Fi 7 chipset, better peak speed in crowded rooms</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">📶 4×4 on 2.4 GHz and 5×5 on 5 GHz, water-resistant, −30 to +50°C</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">💵 Rolling out in some regions soon; price not yet shown</text>
   <rect x="60" y="780" width="960" height="210" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="810" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">The spec is indoor Wi-Fi, not the satellite hop. Split from Starlink Direct expansion and spectrum permits. Next:</text>
-  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">shipments and real speeds. Easier installs can lower switching costs over years.</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Satellite internet often dies at the old indoor radio. A better router can make Starlink feel like home broadband.</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Lighter terminals over 3–5 years can make satellite the default where fiber never arrives.</text>
   <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SPCX · Router 4 · 2026.09.11</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
