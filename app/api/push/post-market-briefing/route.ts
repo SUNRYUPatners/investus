@@ -6,7 +6,7 @@ import { getOrCreatePostMarketBriefing } from "@/lib/postMarketBriefing";
 import { isNYSEHoliday } from "@/lib/marketHours";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const maxDuration = 90;
 
 webpush.setVapidDetails(
   process.env.VAPID_MAILTO!,
