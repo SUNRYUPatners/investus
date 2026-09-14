@@ -1,6 +1,42 @@
 import type { AnalystMockPost, AnalystMockComment } from "@/lib/analystPosts";
 
 export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
+  // ── 2026-09-14 KR ──────────────────────
+  {
+    id: -2305, alias: "여의도 너구리 #13", symbol: "한장요약",
+    content: "이번 주 브리핑입니다. 코스피는 지난 금요일 6,909.91(-1.76%)로 마감하며 아스트라 효과로 넘었던 7,000선을 다시 내줬습니다. 15~16일 미국 FOMC가 이번 주 최대 변수이며, 증권사들은 6,400~7,400의 넓은 밴드를 제시했습니다.",
+    likes: 28, comments: 2, created_at: "2026-09-14T06:00:00.000Z", liked: false,
+  },
+  {
+    id: -2306, alias: "성수 수달 #37", symbol: "삼성전자",
+    content: "삼성전자 HBM 점유율이 21%에서 33%로 올랐습니다. SK하이닉스와 격차는 37%포인트에서 17%포인트로 좁혀졌습니다. 하반기 HBM4 출하 확대가 다음 관찰 포인트입니다.",
+    likes: 27, comments: 2, created_at: "2026-09-14T06:08:00.000Z", liked: false,
+  },
+  {
+    id: -2307, alias: "판교 치타 #24", symbol: "SK하이닉스",
+    content: "SK하이닉스는 50%로 여전히 1위입니다. 다만 전분기 58%보다는 낮아졌습니다. 시장 전체가 커지는 가운데 삼성전자가 성장분을 더 가져간 결과로 풀이됩니다.",
+    likes: 26, comments: 2, created_at: "2026-09-14T06:16:00.000Z", liked: false,
+  },
+  {
+    id: -2308, alias: "삼성동 여우 #10", symbol: "코스피",
+    content: "이번 주 코스피는 FOMC·유가·금리 삼중 변수를 앞두고 있습니다. NH투자증권은 6,400~7,400 밴드를 제시했습니다. 점도표와 의장 발언 톤이 유가보다 더 중요하다는 의견이 많습니다.",
+    likes: 25, comments: 2, created_at: "2026-09-14T06:24:00.000Z", liked: false,
+  },
+  {
+    id: -2309, alias: "잠실 백로 #31", symbol: "코스피",
+    content: "오픈AI의 아스트라 공개로 국내 반도체 투자심리가 살았습니다. 이 영향으로 코스피가 지난 9일 7,000선을 넘었지만, 유가·금리 부담에 되돌림이 나왔습니다.",
+    likes: 24, comments: 2, created_at: "2026-09-14T06:32:00.000Z", liked: false,
+  },
+  {
+    id: -2310, alias: "광화문 물총새 #08", symbol: "LG에너지솔루션",
+    content: "LG에너지솔루션이 테슬라와 약 6조 원 규모 ESS 계약을 맺었습니다. ESS 매출이 1년 전보다 4.6배 늘며 전기차 캐즘을 보완하고 있습니다.",
+    likes: 23, comments: 2, created_at: "2026-09-14T06:40:00.000Z", liked: false,
+  },
+  {
+    id: -2311, alias: "한남 두루미 #19", symbol: "현대차",
+    content: "현대차그룹이 2028년 엔비디아 기술, 2029년 자체 기술 '아트리아 AI'를 쓰는 투 트랙 전략을 밝혔습니다. 포티투닷은 5년 안에 데이터양을 추월할 수 있다고 말했습니다.",
+    likes: 22, comments: 2, created_at: "2026-09-14T06:48:00.000Z", liked: false,
+  },
   // ── 2026-09-12 KR ──────────────────────
   {
     id: -2264, alias: "여의도 너구리 #12", symbol: "한장요약",
@@ -327,6 +363,35 @@ export const MOCK_ANALYST_POSTS_KR: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-14 KR 댓글 ──────────────────────
+  [-2305]: [
+    { alias: "인천 갈매기 #54", content: "7,000선 반납은 심리선입니다. 개인 순매수가 하단을 받쳤습니다.", created_at: "2026-09-14T06:10:00.000Z" },
+    { alias: "합정 수달 #09", content: "HBM 점유율 변화를 코스피 전체 방향과 한 줄로 묶지 않겠습니다.", created_at: "2026-09-14T06:17:00.000Z" },
+  ],
+  [-2306]: [
+    { alias: "마포 살괭이 #10", content: "수율 개선이 실제 물량 증가로 이어진 결과로 보입니다.", created_at: "2026-09-14T06:10:00.000Z" },
+    { alias: "판교 늑대 #92", content: "다음 분기 HBM4 출하 시점의 점유율이 진짜 확인입니다.", created_at: "2026-09-14T06:17:00.000Z" },
+  ],
+  [-2307]: [
+    { alias: "인천 갈매기 #54", content: "매출 자체가 줄어든 게 아니라 비중이 줄어든 겁니다.", created_at: "2026-09-14T06:10:00.000Z" },
+    { alias: "압구정 치타 #46", content: "엔비디아 선점 협력사 지위는 여전히 강점입니다.", created_at: "2026-09-14T06:17:00.000Z" },
+  ],
+  [-2308]: [
+    { alias: "잠실 백로 #31", content: "점도표 톤이 매파냐 비둘기파냐가 밴드 방향을 가릅니다.", created_at: "2026-09-14T06:10:00.000Z" },
+    { alias: "청담 여우 #13", content: "유가·금리가 함께 안정돼야 반등 여지가 커집니다.", created_at: "2026-09-14T06:17:00.000Z" },
+  ],
+  [-2309]: [
+    { alias: "성북 참새 #35", content: "실제 반도체 수주로 이어지는지가 다음 확인입니다.", created_at: "2026-09-14T06:10:00.000Z" },
+    { alias: "노원 기러기 #23", content: "아스트라 효과는 FOMC 이후 다시 시험대에 오를 겁니다.", created_at: "2026-09-14T06:17:00.000Z" },
+  ],
+  [-2310]: [
+    { alias: "여의도 수리 #30", content: "북미 ESS 생산능력 50GWh 목표가 핵심 지표입니다.", created_at: "2026-09-14T06:10:00.000Z" },
+    { alias: "송파 독수리 #68", content: "전기차 캐즘을 ESS가 보완하는 흐름이 뚜렷합니다.", created_at: "2026-09-14T06:17:00.000Z" },
+  ],
+  [-2311]: [
+    { alias: "분당 매 #33", content: "2028년 첫 출시 모델이 투 트랙 전략의 첫 시험대입니다.", created_at: "2026-09-14T06:10:00.000Z" },
+    { alias: "성수 너구리 #17", content: "아트리아 AI의 실제 주행 데이터가 다음 관찰 포인트입니다.", created_at: "2026-09-14T06:17:00.000Z" },
+  ],
   // ── 2026-09-12 KR 댓글 ──────────────────────
   [-2264]: [
     { alias: "인천 갈매기 #53", content: "7,000선 반납은 심리선입니다. 개인 1.8조가 하단을 받았습니다.", created_at: "2026-09-12T06:10:00.000Z" },
@@ -697,6 +762,37 @@ export const MOCK_ANALYST_COMMENTS_KR: Record<number, AnalystMockComment[]> = {
 };
 
 export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
+  // ── 2026-09-14 SAFE ──────────────────────
+  {
+    id: -2312, alias: "온체인 매 #05", symbol: "한장요약",
+    content: "비트코인 7만 7천 달러권, 금 4,330~4,350달러, 유가 100달러대가 이번 주 한 표입니다. FOMC 결과가 모든 안전자산의 다음 방향을 가를 변수입니다.",
+    likes: 28, comments: 2, created_at: "2026-09-14T09:00:00.000Z", liked: false,
+  },
+  {
+    id: -2313, alias: "금벌레 학 #16", symbol: "비트코인",
+    content: "비트코인이 코인마켓캡 기준 7만 7,255달러에서 OKX 기준 7만 6,985달러까지 내렸습니다. 이더리움이 더 크게 밀리며 비트코인 점유율이 오히려 커졌습니다.",
+    likes: 27, comments: 2, created_at: "2026-09-14T09:08:00.000Z", liked: false,
+  },
+  {
+    id: -2314, alias: "달러 올빼미 #11", symbol: "금",
+    content: "금값이 4,330~4,350달러권입니다. 미 10년물 금리 4.96%가 부담이지만 중동 긴장이 하락을 막고 있습니다. 지지선 4,300, 저항선 4,400을 보고 있습니다.",
+    likes: 26, comments: 2, created_at: "2026-09-14T09:16:00.000Z", liked: false,
+  },
+  {
+    id: -2315, alias: "알트 수달 #23", symbol: "이더리움",
+    content: "이더리움이 2,505달러로 비트코인보다 더 크게 밀렸습니다. 파생상품 거래량 증가는 단기 매매 수요가 커졌다는 신호입니다.",
+    likes: 25, comments: 2, created_at: "2026-09-14T09:24:00.000Z", liked: false,
+  },
+  {
+    id: -2316, alias: "은빛 갈매기 #07", symbol: "원유",
+    content: "국제유가가 호르무즈 임시합의 기대에 2%대 내렸습니다. 브렌트 104.61달러·WTI 100.05달러로, 여전히 100달러 위입니다.",
+    likes: 24, comments: 2, created_at: "2026-09-14T09:32:00.000Z", liked: false,
+  },
+  {
+    id: -2317, alias: "원유 치타 #20", symbol: "달러",
+    content: "코인베이스 CEO가 스테이블코인을 미 국채의 구조적 매수자로 표현했습니다. 준비금의 상당 부분이 미국 단기 국채로 몰리고 있습니다.",
+    likes: 23, comments: 2, created_at: "2026-09-14T09:40:00.000Z", liked: false,
+  },
   // ── 2026-09-12 SAFE ──────────────────────
   {
     id: -2282, alias: "온체인 매 #04", symbol: "한장요약",
@@ -935,6 +1031,31 @@ export const MOCK_ANALYST_POSTS_SAFE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-14 SAFE 댓글 ──────────────────────
+  [-2312]: [
+    { alias: "종로 까치 #43", content: "네 자산을 한 바구니 헤지로 묶지 않겠습니다.", created_at: "2026-09-14T09:10:00.000Z" },
+    { alias: "광화문 여우 #64", content: "FOMC 전까지는 다들 숨 고르기 국면입니다.", created_at: "2026-09-14T09:17:00.000Z" },
+  ],
+  [-2313]: [
+    { alias: "여의도 수리 #30", content: "8만 달러 안착 여부가 다음 확인 지표입니다.", created_at: "2026-09-14T09:10:00.000Z" },
+    { alias: "송파 독수리 #68", content: "비트코인 점유율 상승은 안전선호 이동으로 보입니다.", created_at: "2026-09-14T09:17:00.000Z" },
+  ],
+  [-2314]: [
+    { alias: "분당 매 #33", content: "실질금리와 지정학 리스크가 서로 상쇄되는 구간입니다.", created_at: "2026-09-14T09:10:00.000Z" },
+    { alias: "한남 재규어 #29", content: "4,300~4,400 구간을 지켜보면 됩니다.", created_at: "2026-09-14T09:17:00.000Z" },
+  ],
+  [-2315]: [
+    { alias: "역삼 판다 #79", content: "베타가 큰 자산이라 하락도 더 크게 나옵니다.", created_at: "2026-09-14T09:10:00.000Z" },
+    { alias: "해운대 고래 #05", content: "온체인 활동량이 가격과 별개로 늘어나는지 봅니다.", created_at: "2026-09-14T09:17:00.000Z" },
+  ],
+  [-2316]: [
+    { alias: "한남 재규어 #29", content: "여름 저점 대비 50% 급등 구간이라는 점도 기억할 만합니다.", created_at: "2026-09-14T09:10:00.000Z" },
+    { alias: "마포 살괭이 #10", content: "협상 결렬 시 되돌림 위험도 함께 봐야 합니다.", created_at: "2026-09-14T09:17:00.000Z" },
+  ],
+  [-2317]: [
+    { alias: "삼성동 올빼미 #21", content: "발행사 준비금 공개 내역을 확인하면 됩니다.", created_at: "2026-09-14T09:10:00.000Z" },
+    { alias: "판교 늑대 #92", content: "국채 수요층이 넓어진다는 점은 긍정적입니다.", created_at: "2026-09-14T09:17:00.000Z" },
+  ],
   // ── 2026-09-12 SAFE 댓글 ──────────────────────
   [-2282]: [
     { alias: "종로 까치 #42", content: "네 자산을 한 바구니로 보지 않겠습니다.", created_at: "2026-09-12T09:10:00.000Z" },
@@ -1213,6 +1334,32 @@ export const MOCK_ANALYST_COMMENTS_SAFE: Record<number, AnalystMockComment[]> = 
 };
 
 export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
+  // ── 2026-09-14 KR-RE ──────────────────────
+  {
+    id: -2318, alias: "전세 참새 #04", symbol: "한장요약",
+    content: "전세 매물 -12.2%, 매매 -60%, 월세 160만 원대까지 왔습니다. 세 신호가 서로 다른 방향이라 하나의 문장으로 합치지 않으려 합니다.",
+    likes: 28, comments: 2, created_at: "2026-09-14T10:00:00.000Z", liked: false,
+  },
+  {
+    id: -2319, alias: "갱신 백로 #35", symbol: "전세",
+    content: "서울 전세 매물이 1년 새 12.2% 줄었습니다. 중랑구가 71.6%로 감소 폭이 가장 컸고, 8월 평균 전셋값은 7억 1,178만 원으로 또 최고치입니다.",
+    likes: 27, comments: 2, created_at: "2026-09-14T10:08:00.000Z", liked: false,
+  },
+  {
+    id: -2320, alias: "매물 학 #18", symbol: "매매",
+    content: "8월 서울 아파트 매매가 2,322건으로 전월보다 60% 급감했습니다. 강남3구 거래 비중은 9.1%로 역대 최저이고, 분당·광명 등 비강남권이 더 올랐습니다.",
+    likes: 26, comments: 2, created_at: "2026-09-14T10:16:00.000Z", liked: false,
+  },
+  {
+    id: -2321, alias: "정책 너구리 #21", symbol: "정책",
+    content: "토지거래허가 신청이 3,012건으로 34.8% 줄었습니다. 4개월 연속 감소이며, 세제개편안 확정 지연이 배경으로 꼽힙니다.",
+    likes: 25, comments: 2, created_at: "2026-09-14T10:24:00.000Z", liked: false,
+  },
+  {
+    id: -2322, alias: "월세 여우 #29", symbol: "전세",
+    content: "전세가 줄고 월세가 오르며 서울 월세가 160만 원대에 이르렀습니다. 국회입법조사처는 별도의 전월세 종합대책이 필요하다고 지적했습니다.",
+    likes: 24, comments: 2, created_at: "2026-09-14T10:32:00.000Z", liked: false,
+  },
   // ── 2026-09-12 KR-RE ──────────────────────
   {
     id: -2300, alias: "전세 참새 #03", symbol: "한장요약",
@@ -1418,6 +1565,27 @@ export const MOCK_ANALYST_POSTS_KR_RE: AnalystMockPost[] = [
 ];
 
 export const MOCK_ANALYST_COMMENTS_KR_RE: Record<number, AnalystMockComment[]> = {
+  // ── 2026-09-14 KR-RE 댓글 ──────────────────────
+  [-2318]: [
+    { alias: "분당 매 #33", content: "세 지표를 한 방향 신호로 단정하지 않겠습니다.", created_at: "2026-09-14T10:10:00.000Z" },
+    { alias: "한남 재규어 #29", content: "세제개편안 국회 처리가 다음 변수입니다.", created_at: "2026-09-14T10:17:00.000Z" },
+  ],
+  [-2319]: [
+    { alias: "성수 너구리 #17", content: "노원·성북 등 강북 전세가 상승세가 두드러집니다.", created_at: "2026-09-14T10:10:00.000Z" },
+    { alias: "삼성동 올빼미 #21", content: "다음 달 통계에서 감소세 지속 여부를 봅니다.", created_at: "2026-09-14T10:17:00.000Z" },
+  ],
+  [-2320]: [
+    { alias: "역삼 판다 #79", content: "비강남·수도권으로 상승 축이 옮겨간 모습입니다.", created_at: "2026-09-14T10:10:00.000Z" },
+    { alias: "해운대 고래 #05", content: "세제개편안 확정이 관망세를 풀 열쇠입니다.", created_at: "2026-09-14T10:17:00.000Z" },
+  ],
+  [-2321]: [
+    { alias: "한남 재규어 #29", content: "강북권 10개구 비중이 절반 가까이입니다.", created_at: "2026-09-14T10:10:00.000Z" },
+    { alias: "마포 살괭이 #10", content: "실거주 유예 신청은 아직 효과가 작습니다.", created_at: "2026-09-14T10:17:00.000Z" },
+  ],
+  [-2322]: [
+    { alias: "삼성동 올빼미 #21", content: "보증금 부담은 줄지만 매달 고정비가 늘어납니다.", created_at: "2026-09-14T10:10:00.000Z" },
+    { alias: "판교 늑대 #92", content: "국정감사 후속 대책 발표 여부를 지켜봅니다.", created_at: "2026-09-14T10:17:00.000Z" },
+  ],
   // ── 2026-09-12 KR-RE 댓글 ──────────────────────
   [-2300]: [
     { alias: "분당 매 #32", content: "다섯 이야기를 한 매수 신호로 보지 않겠습니다.", created_at: "2026-09-12T10:10:00.000Z" },

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a0a10"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fb7185"/><stop offset="100%" style="stop-color:#f43f5e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="131" height="38" rx="19" fill="#fb718530" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="105.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#fb7185" text-anchor="middle">BREAKING</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.14</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">현대차그룹이 2028년 엔비디아 기술을 먼저 쓰고 2029년 자체 개발</text>
+  <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">자율주행차를 양산하는 투 트랙 전략을 밝혔습니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">현대차 자율주행 투 트랙</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#201018" stroke="#fb7185" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#fb7185" text-anchor="middle">2029년</text>
+  <text x="540" y="324" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">자체 자율주행 '아트리아 AI' 양산 목표 시점입니다. 2028년엔 엔비디아 기술 차량을 먼저 냅니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#201018" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🅰️</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">아트리아 AI</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">자체 기술</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">포티투닷과 공동 개발</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#201018" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🖥</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">엔비디아</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">2028년 먼저</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">검증된 기술 우선 적용</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#201018" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🚗</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">레벨 2++</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">도심 핸즈프리</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">2029년 하반기 목표</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#201018" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">📊</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#fb7185" text-anchor="middle">5년 내</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">데이터 추월 목표</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">제조 역량으로 승부</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">포티투닷은 "양산이 시작되면 5년 안에 데이터양을 추월할 수 있다"고 말했습니다.</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">지금은 자율주행 전용차가 10~20대 수준이지만 SDV 페이스카 공개 후 크게 늘어날 전망입니다.</text>
+  <rect x="60" y="694" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="740" font-family="Arial" font-size="18" fill="#fb7185" text-anchor="middle">"눈앞의 것을 빨리하려다 인력이 소진되는 실패를 피하려고 투 트랙을 택했다"고 설명했습니다.</text>
+  <rect x="60" y="842" width="960" height="148" rx="14" fill="#201018" stroke="#fb7185" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#fb7185" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="904" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">검증된 외부 기술로 먼저 시장에 진입하고 그 사이 자체 기술을 완성하는 전략입니다. 현대차그룹은 대량 생산 능력이 강해 데이터</text>
+  <text x="540" y="926" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">축적 속도에서 유리할 수 있습니다. 2028년 첫 출시 모델과 실제 주행 데이터가 다음 확인 포인트입니다.</text>
+  <text x="540" y="1026" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">현대차 · 자율주행 전략 · 2026.09.14</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

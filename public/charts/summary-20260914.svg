@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.14 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">오라클 창업자가 75억 달러 주식 매도 계획을 하루 만에 취소했습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">5,000만 주 매도 신탁을 공시 다음 날 스스로 접었습니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">75억</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">테슬라가 새 로드스터를 10월 1일 텍사스 웨이코에서 공개합니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">참석 신청 마감은 9월 16일 밤 12시(태평양시간)입니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">10/1</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">앤스로픽이 여러 회사와 맺은 연산 계약을 더하면 5,170억 달러입니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">전력 용량 약 1만 5천 메가와트, 엔비디아 투자설도 나왔습니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">5,170억</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">오스틴 사이버캡 대기시간이 모델Y의 최대 40배로 치솟았습니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">서지 요금까지 붙어 모델Y보다 요금이 더 비쌌습니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">40배</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">유럽연합이 10월 6일 완전자율주행 승인 표결을 앞두고 있습니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">6개국 찬성, 6개국 찬성 신호로 인구 기준 62%까지 왔습니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">10/6</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">연방준비제도가 최근 3년간 운영 손실 2,120억 달러를 냈습니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">고금리로 지급 이자가 보유 자산 이자보다 커진 결과입니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">2,120억</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">스페이스X가 팰컨 로켓 통산 700번째 발사를 마쳤습니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">2025년 165회로 발사 속도가 해마다 빨라지고 있습니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">700회</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 오라클 75억 · 로드스터 10/1 · 앤스로픽 5,170억 · 사이버캡 40배 · EU 10/6 · 연준 2,120억 · 발사 700회</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,211 @@
+module.exports = [
+  {
+    "id": "seed-1629",
+    "slug": "oracle-ellison-cancel",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "오라클",
+    "title": "오라클 창업자 래리 엘리슨이 75억 달러 규모 주식 매도 계획을 공시 하루 만에 취소했습니다",
+    "summary": "오라클 창업자 래리 엘리슨이 최대 5,000만 주, 약 75억 달러 규모의 주식을 팔려던 매도 계획(트레이딩 플랜)을 취소했습니다. 이 취소는 오라클이 창업자의 주식 매도 계획을 규제 당국에 공시로 알린 지 하루 만에 나왔습니다. 엘리슨은 오라클 창업 때부터 회사의 상당한 지분을 계속 들고 있는 것으로 알려져 있습니다.",
+    "titleEn": "Oracle founder Larry Ellison canceled his plan to sell up to $7.5 billion of ORCL stock",
+    "summaryEn": "Ellison scrapped a trading plan to sell up to 50 million shares (~$7.5B), a day after Oracle disclosed the plan in a regulatory filing."
+  },
+  {
+    "id": "seed-1630",
+    "slug": "roadster-oct1",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라가 새 로드스터를 10월 1일 텍사스 웨이코에서 공개하며 초청장에 숨은 문구로 기대를 키웠습니다",
+    "summary": "테슬라가 새 로드스터 공개 행사를 10월 1일 텍사스 웨이코에서 엽니다. 참석 신청은 9월 16일 밤 12시(태평양시간)까지이고, 신청서를 제출하면 변경이 불가능합니다. 초청장 이미지의 색을 밝게 조정하면 영화 「백 투 더 퓨처」의 명대사를 딴 문구가 나타나 팬들 사이에서 화제가 됐습니다. 일론 머스크는 이 행사가 확실히 재미있을 것이라고 적었습니다.",
+    "titleEn": "Tesla will unveil the new Roadster on Oct 1 in Waco, Texas, with a hidden message teasing the invite",
+    "summaryEn": "RSVP deadline is Sep 16 midnight PT; a brightened invite image reveals a Back to the Future-style hidden line. Musk says it will be fun."
+  },
+  {
+    "id": "seed-1631",
+    "slug": "fed-loss-212b",
+    "category": "종목분석",
+    "color": "red",
+    "subject": "매크로",
+    "title": "미국 연방준비제도가 최근 3년간 운영 손실 2,120억 달러를 냈다는 집계가 나왔습니다",
+    "summary": "미국 중앙은행 연방준비제도가 2023년부터 2025년까지 3년 연속 운영 손실을 냈고, 그 합이 약 2,120억 달러라는 집계가 나왔습니다. 2000년대부터 2022년까지는 해마다 200억~1,170억 달러의 이익을 냈는데, 금리를 빠르게 올린 뒤부터 흑자가 적자로 바뀌었습니다. 중앙은행의 적자는 정부 재정과는 다른 회계이지만, 고금리가 얼마나 오래 이어졌는지를 보여 주는 숫자입니다.",
+    "titleEn": "The Federal Reserve has now lost $212 billion over the last three years, a chart showed",
+    "summaryEn": "The Fed posted operating losses in 2023, 2024, and 2025, totaling about $212B, after two decades of annual profits of $20B–$117B."
+  },
+  {
+    "id": "seed-1632",
+    "slug": "starlink-48-airlines",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스타링크를 선택한 항공사가 48곳으로 늘었고 장착 예정 항공기가 7,000대를 넘었습니다",
+    "summary": "스페이스X의 위성 인터넷 서비스 스타링크를 세계 48개 항공사가 도입했거나 도입을 계약했으며, 장착이 끝났거나 계약이 진행 중인 항공기가 7,000대를 넘었다는 집계가 나왔습니다. 아메리칸항공·유나이티드항공·에미레이트항공·카타르항공 등 주요 항공사가 명단에 포함됩니다. 기내 와이파이 품질이 승객의 항공사 선택 기준이 되고 있다는 분석입니다.",
+    "titleEn": "48 airlines have chosen Starlink, covering more than 7,000 aircraft equipped or under contract",
+    "summaryEn": "Major carriers like American, United, Emirates, and Qatar Airways are on the list, as in-flight Wi-Fi becomes a customer-facing differentiator."
+  },
+  {
+    "id": "seed-1633",
+    "slug": "tsla-q3-delivery-492k",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라 3분기 인도량 예측 시장이 49만 2천 대로 올라오며 최근 한 주 새 1만 3천 대가 늘었습니다",
+    "summary": "예측 거래 플랫폼 칼시에서 테슬라 3분기(7~9월) 전체 인도량 예측치가 49만 2천 대로 집계됐습니다. 마감(10월 21일)까지 38일 남은 시점 기준으로, 최근 한 주 새 예측치가 1만 3천 대 올랐습니다. 소셜미디어에서는 일부 이용자가 「수요와 대기시간이 너무 높아 50만 대에 이를 것」이라는 의견도 냈습니다.",
+    "titleEn": "Prediction markets moved Tesla's Q3 total delivery forecast up to 492K, up 13K in a week",
+    "summaryEn": "With 38 days left until the Oct 21 deadline, Kalshi's forecast rose 13K in a week; some on social media expect it could reach 500K."
+  },
+  {
+    "id": "seed-1634",
+    "slug": "anthropic-517b-compute",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "앤스로픽",
+    "title": "앤스로픽이 구글·아마존·스페이스X 등에 걸쳐 총 5,170억 달러 규모 연산 계약을 맺었고 엔비디아도 투자를 검토한다는 보도가 나왔습니다",
+    "summary": "인공지능 회사 앤스로픽이 구글 클라우드·마이크로소프트 애저·코어위브·아마존 AWS·구글·스페이스X·아카마이·AMD·볼타 인프라·엔스케일·람다까지 걸친 연산 계약을 맺었고, 이를 모두 더하면 지난 10개월 사이 총 5,170억 달러, 확보한 전력 용량은 약 1만 5,000메가와트에 이른다는 집계가 나왔습니다. 같은 날 엔비디아가 앤스로픽의 대형 기업공개(IPO)에 투자를 논의 중이라는 로이터 보도도 있었습니다.",
+    "titleEn": "Anthropic has committed to roughly $517B in cloud, chip and data-center deals across Google, Amazon, SpaceX and more",
+    "summaryEn": "Reuters also reported Nvidia is in talks to invest in Anthropic's upcoming mega IPO."
+  },
+  {
+    "id": "seed-1635",
+    "slug": "tsla-us-ev-share",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라가 미국 전기차 시장에서 점유율 52%로 되살아나며 다른 완성차 업체들의 자리를 되찾아 왔습니다",
+    "summary": "월스트리트저널 보도에 따르면 테슬라의 2026년 1~8월 미국 전기차 판매 점유율이 52%로, 1년 전 43%보다 올랐습니다. 미국 전체 전기차 판매는 1년 새 30% 줄었고 테슬라의 판매도 16% 줄었지만, 시장이 더 빠르게 쪼그라들면서 테슬라의 점유율은 오히려 커졌습니다. 완전자율주행이 판매를 이끄는 주요 요인으로 꼽혔습니다.",
+    "titleEn": "Tesla is reclaiming the U.S. EV market as legacy automakers retreat, WSJ reported",
+    "summaryEn": "Tesla's 2026 YTD U.S. EV share rose to 52% from 43% a year ago, even as its sales fell 16%, because the overall market shrank 30%."
+  },
+  {
+    "id": "seed-1636",
+    "slug": "tsla-98yo-driver",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "1931년식 포드로 운전을 배운 98세 남성이 이제는 테슬라 완전자율주행에 운전을 맡긴다고 말했습니다",
+    "summary": "98세의 한 남성이 1931년식 포드 모델A로 운전을 처음 배운 뒤 80년 넘게 운전해 왔는데, 최근 테슬라를 사서 완전자율주행 기능이 운전대를 대신 잡게 하고 있다는 사연이 소개됐습니다. 다람쥐가 지나가면 차가 스스로 멈췄다는 장면도 함께 전해졌습니다. 소프트웨어가 고령 운전자에게도 안전한 이동 수단이 될 수 있다는 사례로 주목받았습니다.",
+    "titleEn": "A 98-year-old man who learned to drive on a 1931 Model A Ford now lets his Tesla's FSD drive him everywhere",
+    "summaryEn": "After 80 years behind the wheel, he says the novelty of driving wore off; he bought Tesla because it drives itself, even stopping for a chipmunk."
+  },
+  {
+    "id": "seed-1637",
+    "slug": "starship-v3-thrust-eiffel",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스타십 3세대 부스터의 추력이 에펠탑 전체 무게를 들어 올릴 만큼 크다는 비교가 나왔습니다",
+    "summary": "스타십 3세대의 수퍼헤비 부스터가 낼 수 있는 힘(추력)이 약 2천만 파운드에 이르러, 무게 약 7,300톤인 에펠탑 전체 철골 구조를 들어 올릴 수 있는 힘과 맞먹는다는 비교가 소셜미디어에서 소개됐습니다. 스페이스X가 만든 로켓 부스터가 인류가 만든 것 중 가장 강력한 힘을 낸다는 설명이 함께 붙었습니다.",
+    "titleEn": "Starship V3's Super Heavy booster produces nearly 20 million pounds of thrust, comparable to lifting the Eiffel Tower's 7,300-ton structure",
+    "summaryEn": "Social media framed the number as SpaceX building the most powerful rocket booster humanity has created."
+  },
+  {
+    "id": "seed-1638",
+    "slug": "eu-fsd-vote-oct6",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "유럽연합이 23일 뒤인 10월 6일 테슬라 완전자율주행 승인을 표결에 부칩니다",
+    "summary": "유럽연합 27개 나라 가운데 네덜란드·벨기에·덴마크·리투아니아·에스토니아·슬로베니아 6개 나라가 테슬라 완전자율주행에 찬성했습니다. 프랑스·독일·스웨덴·이탈리아·핀란드·그리스 6개 나라도 찬성 신호를 보내고 있습니다. 통과에는 인구 기준 65%·국가 15개 이상의 찬성이 필요한데, 지금 찬성·찬성 신호 국가를 모두 더하면 인구 기준 약 62%, 국가 12개까지 올라온다는 집계가 나왔습니다.",
+    "titleEn": "The EU is set to vote on Tesla's FSD approval in 23 days, on Oct 6",
+    "summaryEn": "Six countries have already approved it and six more are signaling approval; combined that's about 62% of the EU population and 12 of the 25 needed countries."
+  },
+  {
+    "id": "seed-1639",
+    "slug": "spacex-700-launches",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스페이스X가 팰컨 계열 통산 700번째 발사를 마쳤고 발사 속도는 해마다 빨라지고 있습니다",
+    "summary": "스페이스X가 팰컨9·팰컨헤비를 합쳐 통산 700번째 발사와, 케이프커내버럴 40번 발사대(SLC-40)에서 400번째 궤도 발사를 같은 날 마쳤다는 소식이 전해졌습니다. 연도별 발사 횟수는 2010~2019년 80회, 2020~2022년 118회, 2023년 96회, 2024년 134회, 2025년 165회, 2026년 들어 지금까지 107회로, 해마다 발사 속도가 빨라지는 흐름을 보여 줍니다.",
+    "titleEn": "SpaceX completed its 700th Falcon-family launch and its 400th orbital launch from SLC-40 on the same day",
+    "summaryEn": "Yearly launch counts show an accelerating cadence: 80 in 2010-19, 118 in 2020-22, 96 in 2023, 134 in 2024, 165 in 2025, and 107 so far in 2026."
+  },
+  {
+    "id": "seed-1640",
+    "slug": "optimus-v3-reveal-delay",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "일론 머스크가 옵티머스 3세대 로봇의 모습을 아직 공개하지 않는 이유가 경쟁사의 베끼기를 막기 위해서라고 설명했습니다",
+    "summary": "일론 머스크가 테슬라가 인간형 로봇 옵티머스 3세대의 몸체 디자인을 아직 완전히 공개하지 않는 이유는, 경쟁사들이 사진을 한 장씩 뜯어보며 베낄 수 있기 때문이라고 설명했다는 소식이 전해졌습니다. 양산에 더 가까워질 때까지 공개를 미루는 전략이라는 해석과 함께 「똑똑한 판단」이라는 반응이 나왔습니다.",
+    "titleEn": "Elon Musk said Tesla is deliberately holding back unveiling the Optimus V3 robot frame by frame so competitors can't copy it",
+    "summaryEn": "He would rather show it closer to production; one commenter called the strategy \"very smart.\""
+  },
+  {
+    "id": "seed-1641",
+    "slug": "cybercab-austin-demand",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "오스틴에서 사이버캡 대기시간이 모델Y보다 훨씬 길어졌고 서지 요금까지 붙었습니다",
+    "summary": "테슬라 로보택시가 운영되는 텍사스 오스틴에서 토요일 밤 사이버캡 대기시간이 30~40분으로 늘어난 반면 모델Y는 1분에 그쳤습니다. 일요일 아침 7시에는 사이버캡에 서지(수요 급증) 요금이 붙어 요금이 13.85달러로, 모델Y의 9.51달러보다 4.34달러 더 비쌌는데도 사람들이 몰렸습니다. 새 차량에 대한 수요가 차량 공급을 앞서고 있다는 신호로 해석됐습니다.",
+    "titleEn": "Cybercab wait times in Austin stretched to 30-40 minutes versus 1 minute for Model Y, and surge pricing has already kicked in",
+    "summaryEn": "On a Sunday morning, Cybercab cost $13.85 versus Model Y's $9.51—$4.34 more despite a lower base fare and less seating."
+  },
+  {
+    "id": "seed-1642",
+    "slug": "vycap-spacex-10t",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스페이스X 초기 투자자 바이캐피탈이 앞으로 5~7년 안에 기업가치 10조 달러를 넘길 것이라고 밝혔습니다",
+    "summary": "스페이스X의 큰 주주 중 하나인 바이캐피탈이 스페이스X의 기업가치가 5~7년 안에 10조 달러를 넘겨 지구에서 가장 가치 있는 회사가 될 것이라고 밝혔습니다. 바이캐피탈은 2016년 스페이스X에 처음 투자했을 때 회사 가치가 약 150억 달러였고, 지금은 회사 지분 약 3.4%(약 400억 달러 규모)를 보유하고 있다고 알려졌습니다.",
+    "titleEn": "Vy Capital says SpaceX will pass a $10 trillion valuation within the next 5 to 7 years",
+    "summaryEn": "The firm, one of SpaceX's biggest shareholders, first invested in 2016 at a ~$15B valuation and now holds about 3.4%, worth roughly $40B."
+  },
+  {
+    "id": "seed-1643",
+    "slug": "gigatexas-robot-factory",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라의 텍사스 기가팩토리 로봇 공장 건설이 기록적인 속도로 진행되고 있는 항공 사진이 공개됐습니다",
+    "summary": "텍사스 기가팩토리 부지에 짓고 있는 인간형 로봇 옵티머스 생산 공장의 건설 현장을 담은 항공 촬영 영상이 공개됐습니다. 대형 크레인과 철골 구조물이 빠르게 올라가는 모습과 함께, 주차장에 완전자율주행 차량(F 차량)들이 대거 모여 있는 장면도 함께 포착됐습니다.",
+    "titleEn": "Aerial footage shows Tesla's Optimus robot factory at Giga Texas advancing at a record pace",
+    "summaryEn": "The video also spotted a large cluster of FSD test vehicles parked in the outbound lot."
+  },
+  {
+    "id": "seed-1644",
+    "slug": "ms-semi-6x-profit",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "모건스탠리가 테슬라 세미 트럭이 운전자가 필요 없어지면 수익성이 6배로 커질 수 있다고 분석했습니다",
+    "summary": "증권사 모건스탠리는 테슬라의 전기 대형 트럭 세미가 자율주행으로 운전자가 필요 없어지면 수익성이 지금보다 6배 커질 수 있다는 분석을 내놨습니다. 자율주행이 트럭 가동률을 2.3배 높이고, 마일당 운영비를 20% 낮추며, 트럭 한 대당 매달 약 1만 5천 달러의 완전자율주행 소프트웨어 매출을 더한다는 가정을 근거로 들었습니다.",
+    "titleEn": "Morgan Stanley thinks the Tesla Semi could become 6x more profitable once it no longer needs a driver",
+    "summaryEn": "The bank assumes autonomy lifts utilization 2.3x, cuts costs per mile by 20%, and generates about $15,000 in monthly FSD revenue per truck."
+  },
+  {
+    "id": "seed-1645",
+    "slug": "spacex-nasdaq100-weight",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스페이스X의 나스닥100 잠정 비중이 1.28%에서 2.82%로 늘어날 예정이라는 소식이 나왔습니다",
+    "summary": "스페이스X의 나스닥100 지수 내 잠정 비중이 이달 말 약 1.28%에서 2.82%로 늘어날 예정이라는 소식이 나왔습니다. 블룸버그 보도에 따르면 주식 보호예수(락업) 해제가 여러 지수 추종 펀드의 수동적인 매수로 이어질 수 있다는 관측이 있습니다.",
+    "titleEn": "SpaceX's preliminary Nasdaq-100 weighting is set to rise to about 2.82% from about 1.28% later this month",
+    "summaryEn": "Bloomberg reported lockup expirations could trigger billions in passive buying from index-tracking funds."
+  },
+  {
+    "id": "seed-1646",
+    "slug": "tesla-xai-memphis-battery",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라가 xAI의 멤피스 부지에 메가팩 720대를 배치해 미국에서 가장 큰 그리드용 배터리를 지었다고 밝혔습니다",
+    "summary": "테슬라는 일론 머스크의 인공지능 회사 xAI가 있는 테네시주 멤피스 부지에 메가팩 배터리 720대를 설치해, 미국에서 가장 큰 전력망(그리드)용 배터리 저장 시설을 지었다고 밝혔습니다. 이 배터리는 데이터센터가 순간적으로 전력을 많이 끌어다 쓸 때 전력망에 주는 부담을 줄여 주는 역할을 합니다.",
+    "titleEn": "Tesla said it built the largest grid battery in the U.S. at xAI's Memphis site, with 720 Megapacks",
+    "summaryEn": "The battery bank helps smooth out the sudden power draws that AI data centers place on the local electrical grid."
+  },
+  {
+    "id": "seed-1647",
+    "slug": "tesla-4680-charging",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라 자체 4680 배터리 셀이 500킬로와트 최고 충전 속도를 더 오래 유지하도록 개선됐습니다",
+    "summary": "테슬라가 자체 생산하는 4680 배터리 셀에 개선을 더해, 최고 500킬로와트 충전 속도를 더 오래 유지하면서 배터리 잔량 10%에서 80%까지 채우는 시간을 몇 분 더 줄였다고 밝혔습니다. 순간 충전 속도뿐 아니라 실제 도로 여행에서 체감하는 분당 회복 거리(마일)도 함께 늘었다는 설명입니다.",
+    "titleEn": "Tesla's in-house 4680 battery cells got better at sustaining a 500 kW peak charge rate for longer",
+    "summaryEn": "The improvements shrink 10%-to-80% charge times and boost real-world miles-recovered-per-minute on road trips."
+  }
+];

@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T14SEP = 1789340400000; // 2026.09.14 08:00 KST
 const T12SEP = 1789167600000; // 2026.09.12 08:00 KST
 const T11SEP = 1789081200000; // 2026.09.11 08:00 KST
 const T10SEP = 1788994800000; // 2026.09.10 08:00 KST
@@ -122,7 +123,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T12SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T14SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -141,6 +142,64 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-14 신규 ────────────────
+  { id: 121883, symbol: "ORCL", nickname: "매도계획취소", holdingLabel: "관심종목",
+    content: "엘리슨 75억 매도계획 하루만에 접었대. 이유는 안 밝힘",
+    createdAt: T14SEP + 8*60_000, likes: 24, comments: 2 },
+  { id: 121884, symbol: "TSLA", nickname: "로드스터웨이코", holdingLabel: "관심종목",
+    content: "로드스터 10/1 웨이코 공개. 초청장 밝기 올리면 이스터에그 있음",
+    createdAt: T14SEP + 16*60_000, likes: 23, comments: 2 },
+  { id: 121885, symbol: "MACRO", nickname: "연준적자표", holdingLabel: "관심종목",
+    content: "연준 3년 적자 합쳐서 2120억불. 고금리 오래갔다는 증거",
+    createdAt: T14SEP + 24*60_000, likes: 22, comments: 2 },
+  { id: 121886, symbol: "SPCX", nickname: "항공사사십팔", holdingLabel: "관심종목",
+    content: "스타링크 항공사 48곳·비행기 7천대 넘음. 기내 와이파이 전쟁",
+    createdAt: T14SEP + 32*60_000, likes: 21, comments: 2 },
+  { id: 121887, symbol: "TSLA", nickname: "인도량사구이", holdingLabel: "관심종목",
+    content: "칼시 3분기 인도 예측 49.2만대. 한주새 1.3만 늘었대",
+    createdAt: T14SEP + 40*60_000, likes: 20, comments: 2 },
+  { id: 121888, symbol: "NVDA", nickname: "오백십칠빌리언", holdingLabel: "관심종목",
+    content: "앤스로픽 계약 합치면 5170억불. 엔비디아도 IPO 투자설",
+    createdAt: T14SEP + 48*60_000, likes: 19, comments: 2 },
+  { id: 121889, symbol: "TSLA", nickname: "이브점유율", holdingLabel: "관심종목",
+    content: "미국 EV 점유율 52%. 근데 시장이 30% 줄어서 그런 것",
+    createdAt: T14SEP + 56*60_000, likes: 18, comments: 2 },
+  { id: 121890, symbol: "TSLA", nickname: "구팔세할아버지", holdingLabel: "관심종목",
+    content: "98세 할아버지 FSD 맡김. 다람쥐 보고 알아서 멈췄대",
+    createdAt: T14SEP + 64*60_000, likes: 17, comments: 2 },
+  { id: 121891, symbol: "SPCX", nickname: "에펠탑추력", holdingLabel: "관심종목",
+    content: "스타십3 추력 2천만파운드. 에펠탑 통째로 든다는 비유",
+    createdAt: T14SEP + 72*60_000, likes: 16, comments: 2 },
+  { id: 121892, symbol: "TSLA", nickname: "유럽표결디데이", holdingLabel: "관심종목",
+    content: "EU FSD 표결 10/6. 지금 인구기준 62%까지 왔음",
+    createdAt: T14SEP + 80*60_000, likes: 15, comments: 2 },
+  { id: 121893, symbol: "SPCX", nickname: "칠백번째발사", holdingLabel: "관심종목",
+    content: "팰컨 통산 700발. 작년 165회, 올해 벌써 107회",
+    createdAt: T14SEP + 88*60_000, likes: 24, comments: 2 },
+  { id: 121894, symbol: "TSLA", nickname: "프레임비공개", holdingLabel: "관심종목",
+    content: "머스크가 옵티머스3 프레임 비공개 이유 밝힘. 베끼기 방지래",
+    createdAt: T14SEP + 96*60_000, likes: 23, comments: 2 },
+  { id: 121895, symbol: "TSLA", nickname: "오스틴서지", holdingLabel: "관심종목",
+    content: "오스틴 캡 대기 30~40분, 모델Y는 1분. 서지요금까지 붙음",
+    createdAt: T14SEP + 104*60_000, likes: 22, comments: 2 },
+  { id: 121896, symbol: "SPCX", nickname: "바이캐피탈십조", holdingLabel: "관심종목",
+    content: "바이캐피탈 5~7년내 스페이스X 10조불 전망. 지분 3.4% 보유",
+    createdAt: T14SEP + 112*60_000, likes: 21, comments: 2 },
+  { id: 121897, symbol: "TSLA", nickname: "로봇공장항공샷", holdingLabel: "관심종목",
+    content: "기가텍사스 로봇공장 항공샷. 크레인 엄청 빠르게 올라감",
+    createdAt: T14SEP + 120*60_000, likes: 20, comments: 2 },
+  { id: 121898, symbol: "TSLA", nickname: "세미육배", holdingLabel: "관심종목",
+    content: "모건스탠리 세미 무인화되면 수익 6배. 아직 가정 시나리오",
+    createdAt: T14SEP + 128*60_000, likes: 19, comments: 2 },
+  { id: 121899, symbol: "SPCX", nickname: "나스닥백비중", holdingLabel: "관심종목",
+    content: "스페이스X 나스닥100 비중 1.28%→2.82% 예정. 락업해제 겹침",
+    createdAt: T14SEP + 136*60_000, likes: 18, comments: 2 },
+  { id: 121900, symbol: "TSLA", nickname: "멤피스메가팩", holdingLabel: "관심종목",
+    content: "테슬라가 xAI 멤피스에 메가팩 720대. 미국 최대 그리드 배터리",
+    createdAt: T14SEP + 144*60_000, likes: 17, comments: 2 },
+  { id: 121901, symbol: "TSLA", nickname: "사륙팔공셀", holdingLabel: "관심종목",
+    content: "4680 셀 500kW 유지시간 늘림. 분당 회복마일도 개선",
+    createdAt: T14SEP + 152*60_000, likes: 16, comments: 2 },
   // ── 2026-09-12 신규 ────────────────
   { id: 121866, symbol: "TSLA", nickname: "일본에프에스디", holdingLabel: "관심종목",
     content: "일본 사장이 올해 안에 FSD 먼저 켠대. 사이버캡은 그 다음 계단이래",
@@ -4646,6 +4705,82 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  121883: [
+    { id: 1218831, nickname: "로드스터웨이코", holdingLabel: "관심종목", content: "이유 안 밝히면 그냥 지분 유지로 봄", createdAt: T14SEP + 720000, likes: 5 },
+    { id: 1218832, nickname: "항공사사십팔", holdingLabel: "관심종목", content: "매도계획은 취소돼도 다시 신고될수 있음", createdAt: T14SEP + 900000, likes: 4 },
+  ],
+  121884: [
+    { id: 1218841, nickname: "연준적자표", holdingLabel: "관심종목", content: "이스터에그보다 실제 스펙이 궁금함", createdAt: T14SEP + 780000, likes: 5 },
+    { id: 1218842, nickname: "인도량사구이", holdingLabel: "관심종목", content: "웨이코가 스페이스X 시험장이랑 가까움", createdAt: T14SEP + 960000, likes: 4 },
+  ],
+  121885: [
+    { id: 1218851, nickname: "항공사사십팔", holdingLabel: "관심종목", content: "적자 나도 세금으로 바로 안 감", createdAt: T14SEP + 840000, likes: 5 },
+    { id: 1218852, nickname: "오백십칠빌리언", holdingLabel: "관심종목", content: "금리 내리면 적자도 줄어들듯", createdAt: T14SEP + 1020000, likes: 4 },
+  ],
+  121886: [
+    { id: 1218861, nickname: "인도량사구이", holdingLabel: "관심종목", content: "항공사 더 늘면 매출 비중 궁금", createdAt: T14SEP + 900000, likes: 5 },
+    { id: 1218862, nickname: "이브점유율", holdingLabel: "관심종목", content: "속도보다 요금이 더 중요한 사람도 있음", createdAt: T14SEP + 1080000, likes: 4 },
+  ],
+  121887: [
+    { id: 1218871, nickname: "오백십칠빌리언", holdingLabel: "관심종목", content: "10/21 실제 발표가 진짜 숫자", createdAt: T14SEP + 960000, likes: 5 },
+    { id: 1218872, nickname: "구팔세할아버지", holdingLabel: "관심종목", content: "예측시장이라 베팅 평균일 뿐", createdAt: T14SEP + 1140000, likes: 4 },
+  ],
+  121888: [
+    { id: 1218881, nickname: "이브점유율", holdingLabel: "관심종목", content: "5170억은 몇년치 합산이라 매년 지출 아님", createdAt: T14SEP + 1020000, likes: 5 },
+    { id: 1218882, nickname: "에펠탑추력", holdingLabel: "관심종목", content: "AWS·구글 계약이 제일 큼", createdAt: T14SEP + 1200000, likes: 4 },
+  ],
+  121889: [
+    { id: 1218891, nickname: "구팔세할아버지", holdingLabel: "관심종목", content: "완전자율주행 구독자수 나오면 믹서짐", createdAt: T14SEP + 1080000, likes: 5 },
+    { id: 1218892, nickname: "유럽표결디데이", holdingLabel: "관심종목", content: "경쟁사들 하이브리드로 후퇴한것도 한몫", createdAt: T14SEP + 1260000, likes: 4 },
+  ],
+  121890: [
+    { id: 1218901, nickname: "에펠탑추력", holdingLabel: "관심종목", content: "감독모드지 완전무인 아님", createdAt: T14SEP + 1140000, likes: 5 },
+    { id: 1218902, nickname: "칠백번째발사", holdingLabel: "관심종목", content: "고령층 이동권엔 확실히 도움", createdAt: T14SEP + 1320000, likes: 4 },
+  ],
+  121891: [
+    { id: 1218911, nickname: "유럽표결디데이", holdingLabel: "관심종목", content: "엔진 30개 합친 힘이라 개별은 작음", createdAt: T14SEP + 1200000, likes: 5 },
+    { id: 1218912, nickname: "프레임비공개", holdingLabel: "관심종목", content: "화성 갈려면 이정도 힘은 필요하긴 함", createdAt: T14SEP + 1380000, likes: 4 },
+  ],
+  121892: [
+    { id: 1218921, nickname: "칠백번째발사", holdingLabel: "관심종목", content: "3개국 남았는데 8개국이 후보", createdAt: T14SEP + 1260000, likes: 5 },
+    { id: 1218922, nickname: "오스틴서지", holdingLabel: "관심종목", content: "유럽 승인나면 상징성이 큼", createdAt: T14SEP + 1440000, likes: 4 },
+  ],
+  121893: [
+    { id: 1218931, nickname: "프레임비공개", holdingLabel: "관심종목", content: "재사용 성숙해서 속도 붙은거", createdAt: T14SEP + 1320000, likes: 5 },
+    { id: 1218932, nickname: "바이캐피탈십조", holdingLabel: "관심종목", content: "스타링크 수요가 발사속도 밀어줌", createdAt: T14SEP + 1500000, likes: 4 },
+  ],
+  121894: [
+    { id: 1218941, nickname: "오스틴서지", holdingLabel: "관심종목", content: "양산 가까워지면 공개한대", createdAt: T14SEP + 1380000, likes: 5 },
+    { id: 1218942, nickname: "로봇공장항공샷", holdingLabel: "관심종목", content: "경쟁사 베끼기 걱정이 진짜인듯", createdAt: T14SEP + 1560000, likes: 4 },
+  ],
+  121895: [
+    { id: 1218951, nickname: "바이캐피탈십조", holdingLabel: "관심종목", content: "차량 늘면 대기 줄듯", createdAt: T14SEP + 1440000, likes: 5 },
+    { id: 1218952, nickname: "세미육배", holdingLabel: "관심종목", content: "새차 타보고싶은 호기심도 큼", createdAt: T14SEP + 1620000, likes: 4 },
+  ],
+  121896: [
+    { id: 1218961, nickname: "로봇공장항공샷", holdingLabel: "관심종목", content: "비상장이라 실제 가치는 IPO때 확정", createdAt: T14SEP + 1500000, likes: 5 },
+    { id: 1218962, nickname: "나스닥백비중", holdingLabel: "관심종목", content: "150억에서 여기까지 온건 확실히 큼", createdAt: T14SEP + 1680000, likes: 4 },
+  ],
+  121897: [
+    { id: 1218971, nickname: "세미육배", holdingLabel: "관심종목", content: "가동 시작 시점이 관건", createdAt: T14SEP + 1560000, likes: 5 },
+    { id: 1218972, nickname: "멤피스메가팩", holdingLabel: "관심종목", content: "자동차 공장 옆이라 부품망 공유됨", createdAt: T14SEP + 1740000, likes: 4 },
+  ],
+  121898: [
+    { id: 1218981, nickname: "나스닥백비중", holdingLabel: "관심종목", content: "무인화 승인이 먼저 나와야", createdAt: T14SEP + 1620000, likes: 5 },
+    { id: 1218982, nickname: "사륙팔공셀", holdingLabel: "관심종목", content: "인건비 비중이 커서 나온 가정", createdAt: T14SEP + 1800000, likes: 4 },
+  ],
+  121899: [
+    { id: 1218991, nickname: "멤피스메가팩", holdingLabel: "관심종목", content: "락업해제 물량이 얼마나 나오는지가 변수", createdAt: T14SEP + 1680000, likes: 5 },
+    { id: 1218992, nickname: "매도계획취소", holdingLabel: "관심종목", content: "지수펀드 기계적 매수라 실적무관", createdAt: T14SEP + 1860000, likes: 4 },
+  ],
+  121900: [
+    { id: 1219001, nickname: "사륙팔공셀", holdingLabel: "관심종목", content: "데이터센터 전력 급증 완충용", createdAt: T14SEP + 1740000, likes: 5 },
+    { id: 1219002, nickname: "로드스터웨이코", holdingLabel: "관심종목", content: "일론이 테슬라·xAI 둘다 이끄니 자연스러움", createdAt: T14SEP + 1920000, likes: 4 },
+  ],
+  121901: [
+    { id: 1219011, nickname: "매도계획취소", holdingLabel: "관심종목", content: "실제 차주 후기 나오면 체감됨", createdAt: T14SEP + 1800000, likes: 5 },
+    { id: 1219012, nickname: "연준적자표", holdingLabel: "관심종목", content: "충전인프라 늘면 체감 더 커짐", createdAt: T14SEP + 1980000, likes: 4 },
+  ],
   121866: [
     { id: 1218661, nickname: "백이십사미터", holdingLabel: "관심종목", content: "일본 허가 날짜가 나오면 구독이 보여", createdAt: T12SEP + 720000, likes: 5 },
     { id: 1218662, nickname: "홍콩금캡", holdingLabel: "관심종목", content: "홍콩 금색 캡이랑 일본 FSD는 다른 문", createdAt: T12SEP + 900000, likes: 4 },

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.14 한국주식 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#38bdf8"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#38bdf8">코스피가 6,909.91(−1.76%)로 마감하며 7,000선을 다시 내줬습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">아스트라 효과로 7,000을 넘었다가 유가·금리 부담에 되돌림이 나왔습니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">6,910</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#22d3ee"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#22d3ee">이번 주 15~16일 미국 FOMC 결과가 17일 새벽 공개됩니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">인상 확률 추정은 증권사별로 57~87%로 차이가 큽니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">FOMC</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">삼성전자 HBM 점유율이 21%에서 33%로 오르며 격차가 좁혀졌습니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">1위 SK하이닉스는 50%로 전분기(58%)보다 낮아졌습니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">33%</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#f59e0b"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b">SK하이닉스는 HBM 점유율 50%로 1위를 지켰습니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">1년 전(64%)보다는 낮아졌지만 여전히 압도적 1위입니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">50%</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">오픈AI의 'GPT-6 아스트라' 공개가 국내 반도체 투자심리를 살렸습니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">이 효과로 지난 9일 코스피가 한 달 반 만에 7,000선을 넘었습니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">아스트라</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">LG에너지솔루션이 테슬라 메가팩 증설로 ESS 수주를 늘리고 있습니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">약 6조 원 규모 계약을 맺고 북미 ESS 생산능력을 키우고 있습니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">엔솔</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#fb7185"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb7185">현대차그룹이 2029년 자체 자율주행차 양산 계획을 밝혔습니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">2028년엔 엔비디아 기술을 먼저 적용하는 투 트랙 전략입니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb7185" text-anchor="end">2029</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 코스피 6,910 · FOMC 9/17 · 삼성 HBM 33% · 하이닉스 50% · 엔솔 ESS · 현대차 2029</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
