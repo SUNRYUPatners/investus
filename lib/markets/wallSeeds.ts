@@ -30,7 +30,7 @@ export type WallSeeds = {
 };
 
 const US_SYMBOLS = [
-  "NVDA", "TSLA", "SPCX", "AAPL", "PLTR", "MSFT", "META",
+  "TSLA", "SPCX", "NVDA", "AAPL", "PLTR", "MSFT", "META",
   "AMZN", "GOOGL", "AMD", "AVGO", "COIN", "SMCI",
   "RKLB", "IONQ", "CEG",
   "VOO", "SPY", "QQQ", "SCHD",

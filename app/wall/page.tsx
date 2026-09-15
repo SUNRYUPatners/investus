@@ -15,6 +15,7 @@ import { CREATORS } from "@/lib/creators";
 import { type Post, type Comment, toDisplayWallId, toRealWallId } from "@/lib/wallPosts";
 import { useMarket } from "@/contexts/MarketContext";
 import { getWallSeeds } from "@/lib/markets/wallSeeds";
+import type { MarketId } from "@/lib/markets/types";
 
 // Attach the current Supabase JWT to every authenticated API call
 async function authHeaders(extra: Record<string, string> = {}): Promise<HeadersInit> {
@@ -497,11 +498,14 @@ function analystCommentCount(
   return declared ?? 0;
 }
 
-function computeDefaultSymbol(posts: Post[], fallback = "AAPL"): string {
+const US_LANDING_SYMBOLS = ["TSLA", "SPCX"] as const;
+
+function computeDefaultSymbol(posts: Post[], fallback = "AAPL", market: MarketId = "us"): string {
   if (typeof window !== "undefined") {
     const q = new URLSearchParams(window.location.search).get("symbol");
     if (q && q.length >= 1 && q.length <= 24) return q;
   }
+  if (market === "us") return "TSLA";
   if (posts.length === 0) return fallback;
   return posts.reduce((best, post) =>
     post.createdAt > best.createdAt ? post : best
@@ -547,7 +551,7 @@ export default function WallPage() {
     setMainTabRaw(tab);
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   };
-  const [selected, setSelected]           = useState(() => computeDefaultSymbol(getWallSeeds(market).posts, getWallSeeds(market).symbols[0] ?? "AAPL"));
+  const [selected, setSelected]           = useState(() => computeDefaultSymbol(getWallSeeds(market).posts, getWallSeeds(market).symbols[0] ?? "AAPL", market));
   const [liked, setLiked]                 = useState<Set<number>>(new Set());
   const [showVerify, setShowVerify]       = useState(false);
   const [verifyMode, setVerifyMode]       = useState<VerifyMode>("none");
@@ -601,7 +605,7 @@ export default function WallPage() {
 
   // 시장 전환 시 종목 칩·시드 리셋
   useEffect(() => {
-    setSelected(computeDefaultSymbol(MOCK_POSTS, ALL_SYMBOLS[0] ?? "AAPL"));
+    setSelected(computeDefaultSymbol(MOCK_POSTS, ALL_SYMBOLS[0] ?? "AAPL", market));
   }, [market]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Precompute latest post time per symbol (for sort + NEW badge)
@@ -613,10 +617,13 @@ export default function WallPage() {
     return map;
   }, [MOCK_POSTS]);
 
-  // Sort symbols: most recent post first
-  const sortedSymbols = useMemo(() =>
-    [...ALL_SYMBOLS].sort((a, b) => (latestPostTime[b] ?? 0) - (latestPostTime[a] ?? 0)),
-  [latestPostTime, ALL_SYMBOLS]);
+  // Sort symbols: US pins Tesla/SpaceX first, then most recent post
+  const sortedSymbols = useMemo(() => {
+    const byRecency = [...ALL_SYMBOLS].sort((a, b) => (latestPostTime[b] ?? 0) - (latestPostTime[a] ?? 0));
+    if (!isUs) return byRecency;
+    const pinned = US_LANDING_SYMBOLS.filter((s) => ALL_SYMBOLS.includes(s));
+    return [...pinned, ...byRecency.filter((s) => !pinned.includes(s))];
+  }, [latestPostTime, ALL_SYMBOLS, isUs]);
 
   // NEW badge: symbol has posts from today's update that user hasn't seen
   const isNew = (sym: string) => {
@@ -1253,7 +1260,7 @@ export default function WallPage() {
               </p>
             </div>
 
-            {/* Stock selector — sorted by latest post, NEW badge */}
+            {/* Stock selector — US: Tesla/SpaceX first, then latest post */}
             <div className="flex gap-2 px-4 pb-3 overflow-x-auto no-scrollbar">
               {sortedSymbols.map((sym) => {
                 const active = selected === sym;
