@@ -621,7 +621,7 @@ export default function WallPage() {
   const sortedSymbols = useMemo(() => {
     const byRecency = [...ALL_SYMBOLS].sort((a, b) => (latestPostTime[b] ?? 0) - (latestPostTime[a] ?? 0));
     if (!isUs) return byRecency;
-    const pinned = US_LANDING_SYMBOLS.filter((s) => ALL_SYMBOLS.includes(s));
+    const pinned: string[] = US_LANDING_SYMBOLS.filter((s) => ALL_SYMBOLS.includes(s));
     return [...pinned, ...byRecency.filter((s) => !pinned.includes(s))];
   }, [latestPostTime, ALL_SYMBOLS, isUs]);
 
