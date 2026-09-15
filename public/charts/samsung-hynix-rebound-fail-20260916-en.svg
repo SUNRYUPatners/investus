@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="156" height="38" rx="19" fill="#60a5fa30" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="118" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#60a5fa" text-anchor="middle">SMSN/HYNIX</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.16</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">Samsung and SK Hynix rallied intraday on bargain hunting,</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">then faded to close slightly lower</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🔁</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#60a5fa" text-anchor="middle">₩248,500 / ₩1,690,000</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Sept 15 close: Samsung -0.20%, SK Hynix -0.41%. Both had risen 1.41% and 2.73% intraday.</text>
+  <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
+  <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Intraday high</text>
+  <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">+1.41% / +2.73%</text>
+  <text x="270" y="496" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Bargain-hunting rally</text>
+  <text x="540" y="455" font-family="Arial Black,Arial" font-size="40" fill="#60a5fa" text-anchor="middle">&#8594;</text>
+  <rect x="600" y="356" width="420" height="168" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="810" y="400" font-family="Arial" font-size="20" fill="#60a5fa" text-anchor="middle">At the close</text>
+  <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#60a5fa" text-anchor="middle">-0.20% / -0.41%</text>
+  <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Gains faded in the afternoon</text>
+  <rect x="60" y="548" width="300" height="164" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">💸</text>
+  <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">₩1.0T</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Hynix foreign selling</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Largest across KOSPI</text>
+  <rect x="390" y="548" width="300" height="164" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">🏢</text>
+  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">+₩1.6T</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Corporate buying</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Tied to buyback programs</text>
+  <rect x="720" y="548" width="300" height="164" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">🇺🇸</text>
+  <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">Phili SOX -5.86%</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Prior-day US chip index</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Local shares held up better</text>
+  <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">Shinhan Investment said bargain hunters stepped in on the view that prior bad news was already priced</text>
+  <text x="540" y="801" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">in.</text>
+  <rect x="60" y="878" width="960" height="140" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">Why it matters</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Both firms kept buying back their own shares, showing up as corporate net-buying that partly cushioned flows. Core</text>
+  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">strengths like HBM share remain intact, so daily swings mostly reflect macro variables. Next: watch whether</text>
+  <text x="540" y="984" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">foreign selling continues and track US chip-stock moves.</text>
+  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">Samsung/SK Hynix · Stock · 2026.09.16</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="196" height="38" rx="19" fill="#60a5fa30" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="138" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#60a5fa" text-anchor="middle">삼성전자·하이닉스</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.16</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">삼성전자와 SK하이닉스가 장중 반등에 성공했다가 오후 들어 다시</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">밀리며 약보합으로 마감했습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🔁</text>
+  <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#60a5fa" text-anchor="middle">24만8,500원 / 169만 원</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">9월 15일 종가로 삼성전자 −0.20%, SK하이닉스 −0.41%입니다. 장중에는 각각 1.41%, 2.73%까지 올랐습니다.</text>
+  <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
+  <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">장중 최고</text>
+  <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">+1.41% / +2.73%</text>
+  <text x="270" y="496" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">저가매수세로 반등</text>
+  <text x="540" y="455" font-family="Arial Black,Arial" font-size="40" fill="#60a5fa" text-anchor="middle">&#8594;</text>
+  <rect x="600" y="356" width="420" height="168" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="810" y="400" font-family="Arial" font-size="20" fill="#60a5fa" text-anchor="middle">장 마감</text>
+  <text x="810" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#60a5fa" text-anchor="middle">−0.20% / −0.41%</text>
+  <text x="810" y="496" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">오후 들어 상승분 반납</text>
+  <rect x="60" y="548" width="300" height="164" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">💸</text>
+  <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">1조27억</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">하이닉스 외국인 순매도</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">코스피 전체 1위</text>
+  <rect x="390" y="548" width="300" height="164" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">🏢</text>
+  <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">+1조6,057억</text>
+  <text x="540" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">기타법인 순매수</text>
+  <text x="540" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">양사 자사주 매수 영향</text>
+  <rect x="720" y="548" width="300" height="164" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">🇺🇸</text>
+  <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#60a5fa" text-anchor="middle">필라델피아 −5.86%</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">전일 미국 반도체지수</text>
+  <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">국내는 상대적으로 선방</text>
+  <rect x="60" y="730" width="960" height="134" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="776" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">신한투자증권은 전일 악재를 이미 선반영했다는 인식에 저가 매수세가 유입되며 하단이 지지됐다고 설명했습니다.</text>
+  <rect x="60" y="878" width="960" height="140" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="908" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="940" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">두 회사 모두 자사주 매수를 이어가며 기타법인 순매수로 집계돼 수급을 일부 방어했습니다. HBM 점유율 등 근본 경쟁력은 그대로</text>
+  <text x="540" y="962" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">유지되고 있어, 하루짜리 등락은 매크로 변수에 따른 것으로 볼 수 있습니다. 다음 거래일에 외국인 매도가 이어지는지, 미국</text>
+  <text x="540" y="984" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">반도체주 흐름을 함께 확인하면 됩니다.</text>
+  <text x="540" y="1042" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">삼성전자·SK하이닉스 · 주가 · 2026.09.16</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

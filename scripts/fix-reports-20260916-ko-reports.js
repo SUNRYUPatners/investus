@@ -1,0 +1,222 @@
+module.exports = [
+  {
+    "id": "seed-1670",
+    "slug": "tsla-spcx-merger-speculation",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "일론 머스크가 테슬라와 스페이스X의 합병 여부를 묻는 질문에 즉답을 피하며 합병설이 다시 떠올랐습니다",
+    "summary": "예측시장 폴리마켓은 일론 머스크가 2027년 말까지 테슬라와 스페이스X의 합병을 공식 발표할 확률을 52%로 매겼습니다. 머스크는 올인서밋 행사에서 합병 여부를 묻는 질문에 \"질문 참 좋네요, 이렇게 협업이 많은데 말이죠\"라며 즉답을 피했습니다. 같은 날 스페이스X 장외가는 143.49달러로 3.15% 하락했습니다.",
+    "titleEn": "Elon Musk dodged a direct answer on whether Tesla and SpaceX might merge, reviving merger speculation",
+    "summaryEn": "Polymarket puts 52% odds on Musk formally announcing a Tesla-SpaceX merger by the end of 2027, after he stopped short of confirming it at the All-In Summit."
+  },
+  {
+    "id": "seed-1671",
+    "slug": "grok-text-while-driving",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라 차량에서 그록에게 말로 문자와 전화를 시킬 수 있는 기능이 곧 추가됩니다",
+    "summary": "테슬라 모델Y 사용설명서에 인공지능 비서 그록(Grok)에게 음성으로 문자·전화를 시키는 기능이 담긴 것으로 확인됐습니다. 연락처로 전화를 걸거나 문자를 받아쓰게 할 수 있고, 음악 재생·공조 조절·좌석열선까지 음성으로 제어할 수 있습니다.",
+    "titleEn": "Tesla owners will soon be able to ask Grok to text and call hands-free while driving",
+    "summaryEn": "A Model Y owner's manual reveals voice-based texting and calling features via Grok, along with media, climate, and seat-heating controls."
+  },
+  {
+    "id": "seed-1672",
+    "slug": "china-humanoid-robot-factory",
+    "category": "매크로",
+    "color": "orange",
+    "subject": "휴머노이드로봇",
+    "title": "중국이 휴머노이드 로봇을 10분마다 한 대씩 찍어내는 세계 최초 양산 공장을 공식 열었습니다",
+    "summary": "중국이 휴머노이드(사람 모양) 로봇을 컨베이어벨트에서 10분마다 한 대씩 대량생산하는 공장을 열었습니다. 지금까지 휴머노이드 로봇은 대부분 소수의 숙련공이 손으로 조립해 대당 가격이 비쌌는데, 자동차와 비슷한 자동화 공정이 도입된 것은 이번이 세계 최초로 알려졌습니다.",
+    "titleEn": "China officially opened what it calls the world's first mass-production plant making a humanoid robot every 10 minutes",
+    "summaryEn": "The factory builds humanoid robots on a conveyor belt like a car assembly line, a shift from the mostly hand-built process used until now."
+  },
+  {
+    "id": "seed-1673",
+    "slug": "cybercab-us-expansion",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라 사이버캡이 피츠버그에 18대 등장하는 등 미국 여러 도시로 눈에 띄게 퍼지고 있습니다",
+    "summary": "테슬라의 로보택시 차량 사이버캡이 펜실베이니아주 피츠버그에서 처음으로 18대가 한꺼번에 목격됐습니다. 같은 주에 뉴욕 올버니, 유타, 캘리포니아 파사데나·롱비치에서도 신규 목격이 이어졌고, 댈러스 인근 하이랜드빌리지에서도 사이버캡이 확인됐습니다.",
+    "titleEn": "Tesla's Cybercab is visibly spreading to more US cities, with 18 units spotted at once in Pittsburgh",
+    "summaryEn": "New sightings this week span Pittsburgh PA, Albany NY, Utah, Pasadena and Long Beach CA, and a Dallas suburb."
+  },
+  {
+    "id": "seed-1674",
+    "slug": "jensen-terafab-musk-comment",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "엔비디아",
+    "title": "엔비디아 CEO 젠슨 황이 일론 머스크의 초대형 반도체 구상 테라팹을 두고 그가 하면 해낼 것이라고 말했습니다",
+    "summary": "엔비디아 최고경영자 젠슨 황이 일론 머스크가 구상 중인 초대형 반도체·데이터센터 프로젝트 '테라팹'에 대해 \"할 수 있는 사람이 있다면 그건 머스크다\"라고 말했습니다. 두 사람은 비행기에서 오랫동안 이 얘기를 나눴다고 밝혔으며, 테라팹은 아직 공식 부지·규모가 확정되지 않은 구상 단계입니다.",
+    "titleEn": "Nvidia CEO Jensen Huang said if anyone could pull off Elon Musk's giant Terafab chip project, it's Musk",
+    "summaryEn": "Huang said the two spent a long flight discussing the idea, calling Musk's execution 'hard to stop' once he decides to do something."
+  },
+  {
+    "id": "seed-1675",
+    "slug": "jensen-ai-safety-open-models",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "엔비디아",
+    "title": "엔비디아 CEO가 세일즈포스 행사에서 AI에 새 규제가 필요 없다고 말하며 오픈모델 확산 통계를 공개했습니다",
+    "summary": "엔비디아 최고경영자 젠슨 황이 세일즈포스 행사에서 \"AI 안전을 위해 새 법이나 규제가 필요하지 않다\"며 회사들이 스스로 출시 속도를 조절해야 한다고 말했습니다. 그는 최근 벤처 투자를 받은 AI 스타트업 가운데 80%가 오픈모델(공개된 AI모델)을 쓰고 있다는 통계도 함께 공개했습니다.",
+    "titleEn": "Nvidia's CEO said AI doesn't need new regulations at a Salesforce event, citing 80% open-model adoption among funded startups",
+    "summaryEn": "Huang argued firms should pace themselves until confident the market would appreciate a release, rather than face forced regulatory slowdowns."
+  },
+  {
+    "id": "seed-1676",
+    "slug": "ai-token-usage-4-quintillion",
+    "category": "매크로",
+    "color": "purple",
+    "subject": "AI",
+    "title": "2030년까지 AI가 처리하는 토큰량이 연간 4경 개까지 늘어날 것이라는 전망이 나왔습니다",
+    "summary": "리서치업체 에버코어는 2030년 AI의 연간 토큰(글을 읽고 쓸 때 나누는 최소 단위) 사용량이 4경 개에 이를 것으로 전망했습니다. 스스로 여러 단계를 처리하는 에이전틱 AI가 급증의 주요 원인으로 꼽혔고, 마이크로소프트·아마존 같은 클라우드 회사와 엔비디아·구글 같은 칩·모델 공급사가 수요 증가의 직접 수혜자로 지목됐습니다.",
+    "titleEn": "Annual AI token usage is forecast to reach 4 quintillion by 2030, according to Evercore",
+    "summaryEn": "Agentic AI, which runs multi-step tasks rather than single answers, is cited as the main driver, benefiting cloud providers and chipmakers alike."
+  },
+  {
+    "id": "seed-1677",
+    "slug": "ubs-palantir-pt-250",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "팔란티어",
+    "title": "UBS가 팔란티어 목표주가를 220달러에서 250달러로 올리며 매수 의견을 유지했습니다",
+    "summary": "스위스계 투자은행 UBS가 데이터 분석 회사 팔란티어(PLTR)의 목표주가를 기존 220달러에서 250달러로 약 14% 올렸습니다. 매수(Buy) 투자의견은 그대로 유지됐으며, UBS는 팔란티어의 정부·기업용 데이터 분석 수요가 계속 견조하다고 평가했습니다.",
+    "titleEn": "UBS raised Palantir's price target from $220 to $250 while maintaining its Buy rating",
+    "summaryEn": "UBS cited steady demand for Palantir's government and enterprise data analytics work in raising the target about 14%."
+  },
+  {
+    "id": "seed-1678",
+    "slug": "starship-flight14-launch",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스페이스X가 스타십 14번째 시험비행을 9월 22일로 확정했습니다. 처음으로 지구 궤도에 들어갑니다",
+    "summary": "스페이스X가 스타십 14번째 시험비행 날짜를 9월 22일(미국 동부 기준 오전 8시 15분, 한국시간 밤 9시 15분)로 확정했습니다. 고도 약 275km에서 6바퀴를 돌고 약 10시간 뒤 태평양에 착수하는 일정으로, 스타십의 첫 지구 궤도 비행입니다. 열차폐 타일 고정 방식도 새로 개선됐습니다.",
+    "titleEn": "SpaceX locked in Sept 22 for Starship's 14th test flight, its first to reach orbit",
+    "summaryEn": "The vehicle will orbit at roughly 275km for about 6 orbits before splashing down in the Pacific after roughly 10 hours, with upgraded heat-shield tiles."
+  },
+  {
+    "id": "seed-1679",
+    "slug": "starlink-v3-flight14-capacity",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스타십 14차 비행에서 처음 배치되는 스타링크 V3 위성이 기존보다 10배 많은 용량을 실어 나릅니다",
+    "summary": "스타십 14차 비행에서 처음 배치되는 스타링크 V3 위성은 1기당 1테라비피에스(Tbps)의 용량을 더합니다. 이는 기존 V2 미니 위성의 약 10배에 달하는 용량으로, 이번에 26기가 배치되면 이번 한 번의 발사로만 26Tbps의 인터넷 용량이 늘어납니다.",
+    "titleEn": "Starlink V3 satellites, debuting on Starship Flight 14, carry 10x the capacity of the previous generation",
+    "summaryEn": "Each Starlink V3 satellite adds 1 Tbps of capacity; with 26 deployed on this flight, the mission alone adds 26 Tbps of internet capacity."
+  },
+  {
+    "id": "seed-1680",
+    "slug": "spacex-ai-compute-demand",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스페이스X 사장 궤인 숏웰이 AI 컴퓨팅 수요가 매우 강하다며 조만간 관련 발표를 예고했습니다",
+    "summary": "스페이스X 사장 궤인 숏웰이 \"컴퓨팅 임대는 정말 좋은 사업이다. 수요가 전혀 줄어들지 않는 것을 보고 있다\"며 인공지능 연산(컴퓨팅) 수요가 매우 강하다고 말했습니다. 그는 조만간 관련 발표를 하게 될 것 같다고 예고했지만, 구체적인 세부 내용은 아직 공개되지 않았습니다.",
+    "titleEn": "SpaceX President Gwynne Shotwell said AI compute demand remains extremely strong and hinted at an upcoming announcement",
+    "summaryEn": "Shotwell called compute rental 'a heck of a business,' saying she expects the company to make some announcement soon."
+  },
+  {
+    "id": "seed-1681",
+    "slug": "tesla-europe-sales-rebound",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라의 유럽 주간 판매가 88% 넘게 반등했지만 분기 누적으로는 여전히 지난해보다 낮습니다",
+    "summary": "9월 7일부터 13일까지 한 주간 유럽 10개국에서 집계된 테슬라 판매량이 전주 대비 88.2% 급증한 6,400대를 기록했습니다. 작년 같은 주보다는 45.6% 늘었고 연초 대비(YTD)로도 9.6% 증가했지만, 분기 누적(QTD)으로는 여전히 전분기 대비 26.0% 감소한 상태입니다.",
+    "titleEn": "Tesla's European weekly sales rebounded more than 88%, though the quarter-to-date total is still below last year",
+    "summaryEn": "Tesla sold about 6,400 units across 10 European countries in the week of Sept 7-13, up 45.6% year over year but still down 26.0% quarter-to-date."
+  },
+  {
+    "id": "seed-1682",
+    "slug": "tesla-semi-europe-hannover",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라 세미 트럭이 하노버 IAA 상용차 박람회에서 유럽 확장 계획과 메가차저 네트워크를 공개했습니다",
+    "summary": "테슬라 세미 트럭이 지금까지 고객사 운행으로 누적 1,900만km를 달렸다고 독일 하노버 IAA 상용차 박람회에서 밝혔습니다. 독일·프랑스·영국 등 6개국에 메가차저 100기 이상을 우선 설치하며, 충전은 30분에 배터리 60%를 채우는 1.2메가와트급 초고속 방식입니다. 생산능력 목표는 주 1,000대입니다.",
+    "titleEn": "Tesla Semi outlined its European expansion and Megacharger network at the Hannover IAA commercial vehicle show",
+    "summaryEn": "Tesla says customer-run Semi trucks have logged 19 million km to date, with over 100 Megachargers planned across six countries."
+  },
+  {
+    "id": "seed-1683",
+    "slug": "tesla-fsd-insurance-discount",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라가 FSD 이용자에게 보험료를 최대 60% 깎아주는 견적을 주문 페이지에 바로 보여주기 시작했습니다",
+    "summary": "테슬라 보험이 있는 미국 콜로라도 등 일부 주에서, 완전자율주행(FSD) 사용 여부에 따른 보험료 견적을 차량 주문 화면에서 바로 보여주기 시작했습니다. 2026년형 모델Y AWD 기준 FSD 없이는 월 235달러, FSD를 95% 사용하면 월 175달러로 약 25% 할인되며, 월 99달러 구독료를 반영한 실질 부담은 40달러대까지 낮아집니다.",
+    "titleEn": "Tesla now shows FSD-linked insurance discounts of up to 60% right on its ordering page",
+    "summaryEn": "In US states with Tesla Insurance, buyers now see an estimate showing a 2026 Model Y AWD premium drop from $235/mo to $175/mo with 95% FSD use."
+  },
+  {
+    "id": "seed-1684",
+    "slug": "tesla-fsd-accessibility-foppe",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "팔 없이 태어난 존 포피 씨가 FSD 감독형 자율주행으로 일상 운전을 하고 있는 사례가 소개됐습니다",
+    "summary": "팔 없이 태어나 7년 넘게 발로 운전해온 존 포피 씨가 이제는 FSD(감독형) 자율주행으로 비영리단체 출근과 딸을 만나러 가는 500마일 장거리 이동까지 하고 있다는 사례가 소개됐습니다. 그는 \"FSD는 제 삶을 바꿔놓았습니다\"라고 말했습니다.",
+    "titleEn": "John Foppe, born without arms, is now driving daily using FSD (Supervised)",
+    "summaryEn": "Foppe, who has driven with his feet for over seven years, now uses FSD for his daily commute and 500-mile trips to visit his daughter."
+  },
+  {
+    "id": "seed-1685",
+    "slug": "model-y-l-aero-cd",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "6인승 모델Y L이 5인승 모델Y보다 공기저항이 더 낮게 설계된 것으로 확인됐습니다",
+    "summary": "6인승 모델Y L의 공기저항계수(Cd)가 0.216으로, 5인승 모델Y의 0.220보다 낮게 나온 것으로 확인됐습니다. 차체가 더 길고 커졌는데도 재설계된 후면 스포일러와 휠 디자인, 최적화된 차체 라인 덕분에 공기저항계수가 오히려 낮아졌습니다.",
+    "titleEn": "The 6-seat Model Y L is aerodynamically more efficient than the 5-seat Model Y, Tesla confirmed",
+    "summaryEn": "Despite being longer, the Model Y L achieved a 0.216 drag coefficient versus 0.220 for the standard Model Y, thanks to a redesigned rear spoiler and wheels."
+  },
+  {
+    "id": "seed-1686",
+    "slug": "treasury-10y-5-percent",
+    "category": "매크로",
+    "color": "red",
+    "subject": "미국국채",
+    "title": "미국 10년물 국채금리가 장중 5.041%까지 오르며 2007년 이후 가장 높은 수준을 기록했습니다",
+    "summary": "미국 10년 만기 국채의 장중 금리가 5.041%까지 올라 2007년 7월 이후 약 19년 만에 가장 높은 수준을 기록했습니다. 30년물 금리도 2007년 6월 이후 최고치를 찍었습니다. 국제유가 급등과 예상보다 강한 CPI·PPI가 주요 배경으로 꼽혔고, 9월 17일 새벽(한국시간) FOMC 결과가 다음 분수령입니다.",
+    "titleEn": "The US 10-year Treasury yield hit an intraday high of 5.041%, its highest level since 2007",
+    "summaryEn": "Surging oil prices and hotter-than-expected CPI and PPI data drove yields higher, with the Sept 17 FOMC decision as the next catalyst."
+  },
+  {
+    "id": "seed-1687",
+    "slug": "oil-tanker-freight-record",
+    "category": "매크로",
+    "color": "orange",
+    "subject": "원유·해운",
+    "title": "초대형 유조선을 하루 빌리는 비용이 사상 처음으로 100만 달러를 넘어섰습니다",
+    "summary": "중동에서 중국·일본으로 원유를 실어나르는 기준 항로에서, 초대형 유조선(VLCC) 하루 용선료가 사상 처음 100만 달러를 넘어섰습니다. 이는 선박 공급 부족과 물동량 증가가 함께 맞물린 결과로 풀이되며, 운임 상승은 정제사·수입국의 물류 비용 부담으로 이어지고 있습니다.",
+    "titleEn": "The cost of chartering a supertanker for a day topped $1 million for the first time in history",
+    "summaryEn": "On the benchmark Middle East-to-Asia route, VLCC day rates hit this level for the first time, reflecting tight ship supply meeting rising cargo volumes."
+  },
+  {
+    "id": "seed-1688",
+    "slug": "moody-ai-power-plants-110b",
+    "category": "매크로",
+    "color": "purple",
+    "subject": "AI",
+    "title": "무디스가 미국의 AI 붐을 뒷받침하려면 1,100억 달러 규모의 새 발전소가 필요하다고 분석했습니다",
+    "summary": "신용평가사 무디스가 미국 내 AI 데이터센터의 전력 수요를 감당하기 위해 1,100억 달러 규모의 새 발전 설비 투자가 필요하다고 추산했습니다. AI 데이터센터는 대형 그래픽칩 수만~수십만 개를 24시간 가동해 일반 시설보다 훨씬 많은 전력을 쓰는데, 새 발전소는 건설에 수년이 걸려 수요 증가 속도를 따라가기 어렵다는 우려가 제기됩니다.",
+    "titleEn": "Moody's says the US AI boom needs $110 billion worth of new power plants",
+    "summaryEn": "AI data centers run tens or hundreds of thousands of GPUs around the clock, and new power plants take years to permit and build."
+  },
+  {
+    "id": "seed-1689",
+    "slug": "morgan-stanley-tsla-pt-840",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "모건스탠리가 테슬라의 강세 시나리오 목표주가를 840달러로 올리며 로보택시·세미트럭 사업에 주목했습니다",
+    "summary": "모건스탠리가 테슬라의 강세 시나리오(불케이스) 목표주가를 840달러로 제시하며 로보택시(사이버캡)와 세미트럭 사업 확장을 주요 근거로 꼽았습니다. 불케이스는 여러 사업이 계획대로 잘 풀렸을 때를 가정한 목표주가로, 기본 시나리오보다 높게 잡히는 경우가 많습니다.",
+    "titleEn": "Morgan Stanley raised Tesla's bull-case price target to $840, citing its robotaxi and Semi truck businesses",
+    "summaryEn": "The bull case assumes Cybercab expansion and Semi truck growth in both Europe and North America go well simultaneously."
+  }
+];

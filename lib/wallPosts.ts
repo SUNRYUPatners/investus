@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T16SEP = 1789513200000; // 2026.09.16 08:00 KST
 const T15SEP = 1789426800000; // 2026.09.15 08:00 KST
 const T14SEP = 1789340400000; // 2026.09.14 08:00 KST
 const T12SEP = 1789167600000; // 2026.09.12 08:00 KST
@@ -124,7 +125,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T15SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T16SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -143,6 +144,67 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-16 신규 ────────────────
+  { id: 121922, symbol: "TSLA", nickname: "합병설오이", holdingLabel: "관심종목",
+    content: "폴리마켓 테슬라·스페이스X 합병확률 52%. 머스크는 질문에 즉답 피함",
+    createdAt: T16SEP + 8*60_000, likes: 24, comments: 2 },
+  { id: 121923, symbol: "TSLA", nickname: "그록음성문자", holdingLabel: "관심종목",
+    content: "테슬라 모델Y 설명서에 그록 음성문자·전화 기능 등재됨",
+    createdAt: T16SEP + 16*60_000, likes: 23, comments: 2 },
+  { id: 121924, symbol: "AI", nickname: "중국로봇공장", holdingLabel: "관심종목",
+    content: "중국 휴머노이드로봇 10분마다 1대 찍는 양산공장 오픈. 세계최초",
+    createdAt: T16SEP + 24*60_000, likes: 22, comments: 2 },
+  { id: 121925, symbol: "TSLA", nickname: "사이버캡피츠버그", holdingLabel: "관심종목",
+    content: "사이버캡 피츠버그서 18대 동시목격. 올버니·유타·파사데나도 확산중",
+    createdAt: T16SEP + 32*60_000, likes: 21, comments: 2 },
+  { id: 121926, symbol: "NVDA", nickname: "테라팹머스크면", holdingLabel: "관심종목",
+    content: "젠슨황 \"머스크면 테라팹 해낼거다\" 비행기서 오래 얘기했다고",
+    createdAt: T16SEP + 40*60_000, likes: 20, comments: 2 },
+  { id: 121927, symbol: "NVDA", nickname: "젠슨황규제불필요", holdingLabel: "관심종목",
+    content: "젠슨황 \"AI 새규제 필요없다\" 오픈모델 신생기업 80% 씀",
+    createdAt: T16SEP + 48*60_000, likes: 19, comments: 2 },
+  { id: 121928, symbol: "AI", nickname: "토큰사경전망", holdingLabel: "관심종목",
+    content: "에버코어 2030년 AI토큰 연4경개 전망. 에이전틱AI가 주범",
+    createdAt: T16SEP + 56*60_000, likes: 18, comments: 2 },
+  { id: 121929, symbol: "PLTR", nickname: "팔란티어이오공", holdingLabel: "관심종목",
+    content: "UBS 팔란티어 목표가 220→250불 상향. 매수의견 유지",
+    createdAt: T16SEP + 64*60_000, likes: 17, comments: 2 },
+  { id: 121930, symbol: "SPCX", nickname: "스타십구이이", holdingLabel: "관심종목",
+    content: "스타십 14차 9/22 확정. 고도275km 6바퀴 첫 궤도비행",
+    createdAt: T16SEP + 72*60_000, likes: 16, comments: 2 },
+  { id: 121931, symbol: "SPCX", nickname: "스타링크브이삼", holdingLabel: "관심종목",
+    content: "스타링크 V3 위성 1기당 1Tbps, 기존 10배. 26기면 26Tbps",
+    createdAt: T16SEP + 80*60_000, likes: 15, comments: 2 },
+  { id: 121932, symbol: "SPCX", nickname: "컴퓨팅수요강함", holdingLabel: "관심종목",
+    content: "숏웰 사장 \"컴퓨팅임대 정말 좋은사업\" AI수요 강하다고 발표예고",
+    createdAt: T16SEP + 88*60_000, likes: 24, comments: 2 },
+  { id: 121933, symbol: "TSLA", nickname: "유럽판매팔팔", holdingLabel: "관심종목",
+    content: "테슬라 유럽 주간판매 88%↑ 6400대. 근데 분기누적은 아직 -26%",
+    createdAt: T16SEP + 96*60_000, likes: 23, comments: 2 },
+  { id: 121934, symbol: "TSLA", nickname: "세미하노버", holdingLabel: "관심종목",
+    content: "테슬라세미 하노버IAA서 유럽확장 공개. 1900만km 누적운행",
+    createdAt: T16SEP + 104*60_000, likes: 22, comments: 2 },
+  { id: 121935, symbol: "TSLA", nickname: "에프에스디육공", holdingLabel: "관심종목",
+    content: "테슬라 FSD쓰면 보험료 최대60%↓ 주문화면서 바로 견적",
+    createdAt: T16SEP + 112*60_000, likes: 21, comments: 2 },
+  { id: 121936, symbol: "TSLA", nickname: "포피씨오공공", holdingLabel: "관심종목",
+    content: "팔없는 존포피씨 FSD로 500마일 장거리이동. \"삶을 바꿔놓았다\"",
+    createdAt: T16SEP + 120*60_000, likes: 20, comments: 2 },
+  { id: 121937, symbol: "TSLA", nickname: "모델와이엘공기", holdingLabel: "관심종목",
+    content: "6인승 모델Y L 공기저항 0.216, 5인승 0.220보다 더 낮음",
+    createdAt: T16SEP + 128*60_000, likes: 19, comments: 2 },
+  { id: 121938, symbol: "RATES", nickname: "국채금리오공사", holdingLabel: "관심종목",
+    content: "美10년물 국채금리 장중5.041%. 2007년 이후 최고치",
+    createdAt: T16SEP + 136*60_000, likes: 18, comments: 2 },
+  { id: 121939, symbol: "OIL", nickname: "유조선백만불", holdingLabel: "관심종목",
+    content: "초대형유조선 하루용선료 사상최초 100만불 돌파",
+    createdAt: T16SEP + 144*60_000, likes: 17, comments: 2 },
+  { id: 121940, symbol: "AI", nickname: "무디스일일공", holdingLabel: "관심종목",
+    content: "무디스 \"美 AI붐 뒷받침하려면 발전소 1100억불 필요\"",
+    createdAt: T16SEP + 152*60_000, likes: 16, comments: 2 },
+  { id: 121941, symbol: "TSLA", nickname: "모건스탠리팔사공", holdingLabel: "관심종목",
+    content: "모건스탠리 테슬라 불케이스 목표가 840불. 로보택시·세미가 근거",
+    createdAt: T16SEP + 160*60_000, likes: 15, comments: 2 },
   // ── 2026-09-15 신규 ────────────────
   { id: 121902, symbol: "MACRO", nickname: "외인주식육공", holdingLabel: "관심종목",
     content: "외국인 미국주식 비중 60% 역대최고. 2000·2008때보다 높음",
@@ -4767,6 +4829,86 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  121922: [
+    { id: 1219221, nickname: "그록음성문자", holdingLabel: "관심종목", content: "베팅확률일뿐 이사회결의랑은 다름", createdAt: T16SEP + 720000, likes: 5 },
+    { id: 1219222, nickname: "사이버캡피츠버그", holdingLabel: "관심종목", content: "머스크 즉답회피가 공식검토 착수는 아님", createdAt: T16SEP + 900000, likes: 4 },
+  ],
+  121923: [
+    { id: 1219231, nickname: "중국로봇공장", holdingLabel: "관심종목", content: "실제 배포시점은 아직 공지안됨", createdAt: T16SEP + 780000, likes: 5 },
+    { id: 1219232, nickname: "테라팹머스크면", holdingLabel: "관심종목", content: "소프트웨어 구독가치도 같이 봐야함", createdAt: T16SEP + 960000, likes: 4 },
+  ],
+  121924: [
+    { id: 1219241, nickname: "사이버캡피츠버그", holdingLabel: "관심종목", content: "실제 양산수율은 몇달 더 봐야함", createdAt: T16SEP + 840000, likes: 5 },
+    { id: 1219242, nickname: "젠슨황규제불필요", holdingLabel: "관심종목", content: "가격 실제로 내려가는지가 다음신호", createdAt: T16SEP + 1020000, likes: 4 },
+  ],
+  121925: [
+    { id: 1219251, nickname: "테라팹머스크면", holdingLabel: "관심종목", content: "팬계정 집계라 회사 공식수치는 아님", createdAt: T16SEP + 900000, likes: 5 },
+    { id: 1219252, nickname: "토큰사경전망", holdingLabel: "관심종목", content: "새도시마다 무감독전환 시점 다름", createdAt: T16SEP + 1080000, likes: 4 },
+  ],
+  121926: [
+    { id: 1219261, nickname: "젠슨황규제불필요", holdingLabel: "관심종목", content: "비행기 일화라 투자결정과는 거리있음", createdAt: T16SEP + 960000, likes: 5 },
+    { id: 1219262, nickname: "팔란티어이오공", holdingLabel: "관심종목", content: "테라팹 부지·규모 공개시점이 다음", createdAt: T16SEP + 1140000, likes: 4 },
+  ],
+  121927: [
+    { id: 1219271, nickname: "토큰사경전망", holdingLabel: "관심종목", content: "80%는 최근 투자라운드 표본기준", createdAt: T16SEP + 1020000, likes: 5 },
+    { id: 1219272, nickname: "스타십구이이", holdingLabel: "관심종목", content: "자율규제 발언, 정책방향과는 분리해서 봄", createdAt: T16SEP + 1200000, likes: 4 },
+  ],
+  121928: [
+    { id: 1219281, nickname: "팔란티어이오공", holdingLabel: "관심종목", content: "2030년 전망치라 매분기 갱신됨", createdAt: T16SEP + 1080000, likes: 5 },
+    { id: 1219282, nickname: "스타링크브이삼", holdingLabel: "관심종목", content: "에이전틱AI 비중 커지는지 다음지표", createdAt: T16SEP + 1260000, likes: 4 },
+  ],
+  121929: [
+    { id: 1219291, nickname: "스타십구이이", holdingLabel: "관심종목", content: "한 증권사 의견, 다른 하우스뷰도 같이 봐야함", createdAt: T16SEP + 1140000, likes: 5 },
+    { id: 1219292, nickname: "컴퓨팅수요강함", holdingLabel: "관심종목", content: "정부·기업계약 갱신속도가 실적으로 이어지는지", createdAt: T16SEP + 1320000, likes: 4 },
+  ],
+  121930: [
+    { id: 1219301, nickname: "스타링크브이삼", holdingLabel: "관심종목", content: "기상·기술점검따라 며칠 밀릴수있음", createdAt: T16SEP + 1200000, likes: 5 },
+    { id: 1219302, nickname: "유럽판매팔팔", holdingLabel: "관심종목", content: "궤도진입~재진입 전구간 성공여부 지켜봄", createdAt: T16SEP + 1380000, likes: 4 },
+  ],
+  121931: [
+    { id: 1219311, nickname: "컴퓨팅수요강함", holdingLabel: "관심종목", content: "설계목표치, 실제성능은 발사후 확인", createdAt: T16SEP + 1260000, likes: 5 },
+    { id: 1219312, nickname: "세미하노버", holdingLabel: "관심종목", content: "26기 전량 정상궤도 안착여부가 포인트", createdAt: T16SEP + 1440000, likes: 4 },
+  ],
+  121932: [
+    { id: 1219321, nickname: "유럽판매팔팔", holdingLabel: "관심종목", content: "구체적 내용·시점 아직 공개안됨", createdAt: T16SEP + 1320000, likes: 5 },
+    { id: 1219322, nickname: "에프에스디육공", holdingLabel: "관심종목", content: "임대매출 재무제표에 분리공시되는지 봄", createdAt: T16SEP + 1500000, likes: 4 },
+  ],
+  121933: [
+    { id: 1219331, nickname: "세미하노버", holdingLabel: "관심종목", content: "분기누적(QTD)은 아직 마이너스임", createdAt: T16SEP + 1380000, likes: 5 },
+    { id: 1219332, nickname: "포피씨오공공", holdingLabel: "관심종목", content: "다음 몇주 판매량 이어지는지가 진짜신호", createdAt: T16SEP + 1560000, likes: 4 },
+  ],
+  121934: [
+    { id: 1219341, nickname: "에프에스디육공", holdingLabel: "관심종목", content: "유럽인도는 2027년부터, 지금은 공개단계", createdAt: T16SEP + 1440000, likes: 5 },
+    { id: 1219342, nickname: "모델와이엘공기", holdingLabel: "관심종목", content: "초기 물류사 고객계약 체결여부 확인", createdAt: T16SEP + 1620000, likes: 4 },
+  ],
+  121935: [
+    { id: 1219351, nickname: "포피씨오공공", holdingLabel: "관심종목", content: "일부 주 사례, 전국확대는 불명확", createdAt: T16SEP + 1500000, likes: 5 },
+    { id: 1219352, nickname: "국채금리오공사", holdingLabel: "관심종목", content: "실제 체감 보험료인하 후기 늘어나는지", createdAt: T16SEP + 1680000, likes: 4 },
+  ],
+  121936: [
+    { id: 1219361, nickname: "모델와이엘공기", holdingLabel: "관심종목", content: "개인사례라 통계적 안전성과는 구분", createdAt: T16SEP + 1560000, likes: 5 },
+    { id: 1219362, nickname: "유조선백만불", holdingLabel: "관심종목", content: "비슷한 접근성 사례 더 나오는지 봄", createdAt: T16SEP + 1740000, likes: 4 },
+  ],
+  121937: [
+    { id: 1219371, nickname: "국채금리오공사", holdingLabel: "관심종목", content: "차이 작지만 고속주행에 꾸준히 반영", createdAt: T16SEP + 1620000, likes: 5 },
+    { id: 1219372, nickname: "무디스일일공", holdingLabel: "관심종목", content: "실제 고속도로 효율실측치 나오면 비교", createdAt: T16SEP + 1800000, likes: 4 },
+  ],
+  121938: [
+    { id: 1219381, nickname: "유조선백만불", holdingLabel: "관심종목", content: "장중기록, 종가기준과는 약간 다름", createdAt: T16SEP + 1680000, likes: 5 },
+    { id: 1219382, nickname: "모건스탠리팔사공", holdingLabel: "관심종목", content: "9/17 새벽 FOMC가 금리 다시 흔들 변수", createdAt: T16SEP + 1860000, likes: 4 },
+  ],
+  121939: [
+    { id: 1219391, nickname: "무디스일일공", holdingLabel: "관심종목", content: "특정항로 기준, 다른항로는 수준다름", createdAt: T16SEP + 1740000, likes: 5 },
+    { id: 1219392, nickname: "합병설오이", holdingLabel: "관심종목", content: "운임 몇주 더 유지되는지가 관건", createdAt: T16SEP + 1920000, likes: 4 },
+  ],
+  121940: [
+    { id: 1219401, nickname: "모건스탠리팔사공", holdingLabel: "관심종목", content: "신용평가사 추산, 실제투자액과 차이있음", createdAt: T16SEP + 1800000, likes: 5 },
+    { id: 1219402, nickname: "그록음성문자", holdingLabel: "관심종목", content: "발전소는 착공~준공 수년걸림", createdAt: T16SEP + 1980000, likes: 4 },
+  ],
+  121941: [
+    { id: 1219411, nickname: "합병설오이", holdingLabel: "관심종목", content: "불케이스라 기본시나리오와는 다름", createdAt: T16SEP + 1860000, likes: 5 },
+    { id: 1219412, nickname: "중국로봇공장", holdingLabel: "관심종목", content: "로보택시·세미 매출 실제 잡히는 시점 확인", createdAt: T16SEP + 2040000, likes: 4 },
+  ],
   121902: [
     { id: 1219021, nickname: "국채이자일칠조", holdingLabel: "관심종목", content: "60%가 꺾이면 방향전환 신호로 봄", createdAt: T15SEP + 720000, likes: 5 },
     { id: 1219022, nickname: "맥날이오이", holdingLabel: "관심종목", content: "달러·금리랑 같이 보면 방향 더 보임", createdAt: T15SEP + 900000, likes: 4 },

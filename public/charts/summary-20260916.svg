@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.16 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">폴리마켓에서 테슬라·스페이스X 합병 가능성에 52%가 걸렸습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">머스크는 두 회사의 협업이 깊다며 합병 질문에 즉답을 피했습니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">52%</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">스페이스X가 스타십 14번째 시험비행을 9월 22일로 확정했습니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">처음으로 지구 궤도에 들어가 스타링크 V3 위성 26기를 배치합니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">9/22</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">테슬라가 FSD 이용자에게 보험료를 최대 60% 깎아주기 시작했습니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">월 175달러였던 보험료가 구독료를 더해도 실질 40달러대로 낮아집니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">60%</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">테슬라 유럽 판매가 한 주 만에 88% 넘게 반등했습니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">다만 분기 누적으로는 아직 지난해보다 낮은 수준입니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">+88%</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">미국 10년물 국채금리가 2007년 이후 가장 높은 수준까지 올랐습니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">국제유가 상승과 물가 우려가 겹치며 금리를 밀어올렸습니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">5.04%</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">중국이 휴머노이드 로봇을 10분마다 한 대씩 찍어내는 공장을 열었습니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">세계 최초의 대량생산 체제로 알려졌습니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">10분마다</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#f97316"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f97316">초대형 유조선 하루 용선료가 사상 처음 100만 달러를 넘었습니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">해상 운임이 치솟으며 물류 비용 부담이 커지고 있습니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f97316" text-anchor="end">100만불</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 테슬라·스페이스X 합병설 · 스타십 9/22 발사 · FSD 보험할인 · 유럽판매 반등 · 국채금리 5%대 · 중국 로봇공장 · 유조선</text>
+  <text x="540" y="1032" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">운임</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

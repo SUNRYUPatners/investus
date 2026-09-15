@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T16 = 1789513200000; // 2026-09-16 08:00 KST
 const T15 = 1789426800000; // 2026-09-15 08:00 KST
 const T14 = 1789340400000; // 2026-09-14 08:00 KST
 const T12 = 1789167600000; // 2026-09-12 08:00 KST
@@ -20,6 +21,11 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9337, symbol: "코스피", nickname: "육육이칠사일", holdingLabel: "인덱스 보유", content: "코스피 4일연속 하락 6627.26. 외인 5일째 순매도(1.57조)", createdAt: T16 - 0, likes: 44, comments: 2, },
+  { id: 9338, symbol: "삼성전자", nickname: "삼전이오이공", holdingLabel: "삼성전자 보유", content: "삼성전자 장중 25만2천까지 갔다가 결국 -0.20%로 마감. 반등 실패", createdAt: T16 - 1800000, likes: 43, comments: 2, },
+  { id: 9339, symbol: "SK하이닉스", nickname: "하이닉스일칠이구", holdingLabel: "하이닉스 보유", content: "하이닉스도 172만9천까지 반등했다가 -0.41%. 외인 순매도 1위(1조27억)", createdAt: T16 - 3600000, likes: 42, comments: 2, },
+  { id: 9340, symbol: "현대차", nickname: "현대차삼육팔오", holdingLabel: "현대차 관심", content: "현대차 +0.27% 반등, 기아는 -1.53%. 계열사끼리 방향 갈림", createdAt: T16 - 5400000, likes: 41, comments: 2, },
+  { id: 9341, symbol: "KB금융", nickname: "케이비삼일구", holdingLabel: "KB금융 보유", content: "KB금융 3분기 역대최대 순익전망(하나증권 2조600억)에도 -3.19%", createdAt: T16 - 7200000, likes: 40, comments: 2, },
   { id: 9321, symbol: "코스피", nickname: "육육팔사급락", holdingLabel: "인덱스 보유", content: "유가·금리 겹쳐서 코스피 3.26% 급락, 6684까지 밀림. 외인 3.3조 팔았음", createdAt: T15 - 0, likes: 44, comments: 2, },
   { id: 9322, symbol: "삼성전자", nickname: "삼성사공사", holdingLabel: "삼성전자 보유", content: "삼성 -4.05%, 외인 순매도 2위(8482억). 개별악재 아니라 매크로 충격이라는 평", createdAt: T15 - 1800000, likes: 43, comments: 2, },
   { id: 9323, symbol: "SK하이닉스", nickname: "하이닉스육삼오", holdingLabel: "하이닉스 보유", content: "하이닉스 -6.35%, 외인 순매도 1위(2조652억). ADR은 오히려 +0.94%", createdAt: T15 - 3600000, likes: 42, comments: 2, },
@@ -131,6 +137,26 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9337: [
+    { id: 1, nickname: "개인팔삼일구", holdingLabel: "관망", content: "개인·기타법인이 받쳤는데도 4일째 못 막음", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "미국채오공사", holdingLabel: "관심종목", content: "미10년물 2007년 이후 최고치가 배경", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9338: [
+    { id: 1, nickname: "기타법인일육", holdingLabel: "관심종목", content: "기타법인이 1.6조 받아준게 그나마 다행", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "필라델피아오팔육", holdingLabel: "관심종목", content: "전날 미국 반도체지수 -5.86%였는데 국내는 선방", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9339: [
+    { id: 1, nickname: "하이닉스일칠이구", holdingLabel: "하이닉스 보유", content: "오전 반등, 오후 반납 패턴 반복", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "에이치비엠오공", holdingLabel: "관심종목", content: "그래도 HBM 점유율 50%는 여전함", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9340: [
+    { id: 1, nickname: "현대차삼육팔오", holdingLabel: "현대차 관심", content: "전날 -3.92% 급락 반발매수로 보임", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "기아일이이", holdingLabel: "관심종목", content: "기아는 오히려 더 밀림, 개별수급 차이", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9341: [
+    { id: 1, nickname: "케이비삼일구", holdingLabel: "KB금융 보유", content: "10월말 실제실적으로 전망치 확인해야함", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "금융주전반", holdingLabel: "관심종목", content: "삼성생명도 -4.19%로 금융주 전체 약세", createdAt: T16 + 1200000, likes: 4 },
+  ],
   9321: [
     { id: 1, nickname: "개인이조구칠", holdingLabel: "관망", content: "개인이 2.97조 받쳤는데도 못 막음", createdAt: T15 + 600000, likes: 5 },
     { id: 2, nickname: "기관일일칠", holdingLabel: "관심종목", content: "기관도 1.17조 팔아서 다같이 눌림", createdAt: T15 + 1200000, likes: 4 },
@@ -518,6 +544,11 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9342, symbol: "한장요약", nickname: "클래리티부결", holdingLabel: "관망", content: "클래리티법 상원 부결·BTC 4%급락·XRP 15%↓·유가4개월최고", createdAt: T16 - 0, likes: 44, comments: 2, },
+  { id: 9343, symbol: "비트코인", nickname: "비트칠오팔오이", holdingLabel: "BTC 보유", content: "클래리티법 부결직후 BTC 4.37%급락 7.58만불. ETF는 오히려 순유입", createdAt: T16 - 1800000, likes: 43, comments: 2, },
+  { id: 9344, symbol: "엑스알피", nickname: "엑스알피일이칠", holdingLabel: "관심", content: "XRP 14.58%급락 1.27불, 주요코인중 최대낙폭. 표결전엔 2불기대감있었음", createdAt: T16 - 3600000, likes: 42, comments: 2, },
+  { id: 9345, symbol: "원유", nickname: "유가백팔칠오", holdingLabel: "관심", content: "사우디·리비아 겹쳐서 브렌트 108.75불, 4개월최고. WTI는 4.38%↑", createdAt: T16 - 5400000, likes: 41, comments: 2, },
+  { id: 9346, symbol: "금", nickname: "금사이구삼", holdingLabel: "금 ETF", content: "금값 4293불로 오히려 하락. 유가발 인플레우려가 금리인상전망 키움", createdAt: T16 - 7200000, likes: 40, comments: 2, },
   { id: 9327, symbol: "한장요약", nickname: "안전자산화요", holdingLabel: "관망", content: "BTC 7.9만 회복·금 4278 한달최저·유가 108불. FOMC가 이번주 전부 좌우", createdAt: T15 - 0, likes: 44, comments: 2, },
   { id: 9328, symbol: "비트코인", nickname: "칠구삼구구", holdingLabel: "BTC 보유", content: "주말 7.6만까지 밀렸다가 7.9만대 반등. FOMC인상확률은 92.7%로 뜀", createdAt: T15 - 1800000, likes: 43, comments: 2, },
   { id: 9329, symbol: "금", nickname: "금사천이칠팔", holdingLabel: "금 ETF", content: "금값 4278~4298, 한달여만 최저. 금리인상기대+유가급등 겹침", createdAt: T15 - 3600000, likes: 42, comments: 2, },
@@ -610,6 +641,26 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9342: [
+    { id: 1, nickname: "십육일게이트", holdingLabel: "관망", content: "영구폐기 아니라 절차표결 실패일뿐", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "재표결가능", holdingLabel: "관망", content: "양원조정 절차 남아있어서 재추진여지 있음", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9343: [
+    { id: 1, nickname: "비트칠오팔오이", holdingLabel: "BTC 보유", content: "7.4만~7.5만 구간 지켜지는지가 관건", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "청산육칠칠", holdingLabel: "관심", content: "24시간 청산 6.77억불, ETH가 가장컸음", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9344: [
+    { id: 1, nickname: "엑스알피일이칠", holdingLabel: "관심", content: "레버리지 롱포지션 청산이 낙폭 키움", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "규제기대실망", holdingLabel: "관심", content: "규제명확성 최대수혜기대주였어서 실망이 더 큼", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9345: [
+    { id: 1, nickname: "유가백팔칠오", holdingLabel: "관심", content: "사우디송유관 복구시점이 다음 관전포인트", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "리비아유전", holdingLabel: "관심", content: "리비아 유전가동 중단도 겹쳤음", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9346: [
+    { id: 1, nickname: "금사이구삼", holdingLabel: "금 ETF", content: "10년물 금리 2007년이후 최고치가 부담", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "중앙은행매수", holdingLabel: "관심", content: "그래도 중앙은행 순매수는 2분기 62%↑", createdAt: T16 + 1200000, likes: 4 },
+  ],
   9327: [
     { id: 1, nickname: "십육일게이트", holdingLabel: "관망", content: "FOMC랑 클래리티법 표결 겹치는 한주", createdAt: T15 + 600000, likes: 5 },
     { id: 2, nickname: "안전자산화요", holdingLabel: "관망", content: "금은 내리고 BTC는 오르고 엇갈림", createdAt: T15 + 1200000, likes: 4 },
@@ -917,6 +968,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9347, symbol: "한장요약", nickname: "토허이구일", holdingLabel: "관심", content: "토허구역 291곳 해제·재초환 46곳 2.17조·실거주유예 1년연장 제안", createdAt: T16 - 0, likes: 44, comments: 2, },
+  { id: 9348, symbol: "토지허가", nickname: "토허해제이구일", holdingLabel: "관심", content: "잠삼대청 291곳 토허구역 해제. 재건축14곳만 유지", createdAt: T16 - 1800000, likes: 43, comments: 2, },
+  { id: 9349, symbol: "재초환", nickname: "재초환이일칠", holdingLabel: "관심", content: "서울재건축 46곳 재초환 2조1690억 예고. 조합원 반발+행정소송", createdAt: T16 - 3600000, likes: 42, comments: 2, },
+  { id: 9350, symbol: "실거주유예", nickname: "실거주유예일년", holdingLabel: "관심", content: "여당 토허구역 실거주유예 1년더 연장 제안. 세입자있는집 대상", createdAt: T16 - 5400000, likes: 41, comments: 2, },
   { id: 9332, symbol: "한장요약", nickname: "부동산팔육주", holdingLabel: "관심", content: "서울 86주 연속 상승·종부세 14억/12억 확정·월세보증금 6개월째↑", createdAt: T15 - 0, likes: 44, comments: 2, },
   { id: 9333, symbol: "매매", nickname: "팔육주기록", holdingLabel: "관심", content: "서울아파트 86주 연속 상승, 문재인정부때 기록 넘음. 강남3구는 5주째 하락", createdAt: T15 - 1800000, likes: 43, comments: 2, },
   { id: 9334, symbol: "종부세", nickname: "종부세일사일이", holdingLabel: "관심", content: "1주택 종부세 공제 실거주14억·비거주12억 확정. 9억 축소안은 철회됨", createdAt: T15 - 3600000, likes: 42, comments: 2, },
@@ -997,6 +1052,22 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9347: [
+    { id: 1, nickname: "잠삼대청이구일", holdingLabel: "관심", content: "재건축14곳만 빼고 나머지는 실거주의무 없어짐", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "재초환반발", holdingLabel: "관심", content: "부담금 수억원대라 조합원 반발 커짐", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9348: [
+    { id: 1, nickname: "잠삼대청이구일", holdingLabel: "관심", content: "조합설립인가 기준으로 2027년까지 순차해제", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "압구정여의도", holdingLabel: "관심", content: "압구정·여의도·목동·성수는 이번에도 유지", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9349: [
+    { id: 1, nickname: "재초환이일칠", holdingLabel: "관심", content: "용산한강맨션이 6.8억으로 최고수준", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "실거래가지수이의", holdingLabel: "관심", content: "부동산원 실거래가지수 적용에 정비업계 이의제기", createdAt: T16 + 1200000, likes: 4 },
+  ],
+  9350: [
+    { id: 1, nickname: "실거주유예일년", holdingLabel: "관심", content: "올해말 마감이라 연장안되면 내년거래 경색", createdAt: T16 + 600000, likes: 5 },
+    { id: 2, nickname: "세입자계약갱신", holdingLabel: "관심", content: "임대차 계약갱신 허용도 같이 제안됨", createdAt: T16 + 1200000, likes: 4 },
+  ],
   9332: [
     { id: 1, nickname: "강북외곽강세", holdingLabel: "관심", content: "강북 강세·강남 약세 양극화가 특징", createdAt: T15 + 600000, likes: 5 },
     { id: 2, nickname: "세부담상한", holdingLabel: "관심", content: "세부담상한 150% 유지된게 완화포인트", createdAt: T15 + 1200000, likes: 4 },
