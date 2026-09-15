@@ -1,0 +1,222 @@
+module.exports = [
+  {
+    "id": "seed-1649",
+    "slug": "foreign-equity-60pct",
+    "category": "매크로",
+    "color": "purple",
+    "subject": "미국증시",
+    "title": "해외 투자자가 보유한 미국 금융자산 중 주식 비중이 60%로 역대 최고치를 기록했습니다",
+    "summary": "리서치업체 톱다운차트가 미국 연방준비제도의 자금흐름 자료를 분석한 결과, 해외 투자자가 들고 있는 미국 금융자산 가운데 주식(지분) 비중이 60%로 나타났습니다. 이는 1953년 집계를 시작한 이후 가장 높은 수치입니다. 2000년 닷컴버블(약 53%), 2007년 금융위기 직전(약 40%)보다도 높은 수준입니다.",
+    "titleEn": "Foreign investors' allocation to US equities hit a record 60% of their US financial holdings",
+    "summaryEn": "Topdown Charts' analysis of Federal Reserve flow-of-funds data shows the equity share of foreign-held US assets at its highest level since records began in 1953."
+  },
+  {
+    "id": "seed-1650",
+    "slug": "treasury-interest-1-7t",
+    "category": "매크로",
+    "color": "purple",
+    "subject": "미국국채",
+    "title": "미국 국채 이자 비용이 금리가 유지되면 2028년 11월까지 연 1.7조 달러로 늘어 사회보장 지출을 넘어설 수 있다는 전망이 나왔습니다",
+    "summary": "뱅크오브아메리카(BofA) 글로벌 인베스트먼트 전략팀 분석에 따르면, 미국 정부가 국채에 지급하는 연간 이자(12개월 누적)가 지금 금리 수준이 유지될 경우 2028년 11월까지 1.7조 달러로 늘어날 수 있습니다. 5년물 국채 금리가 3.25%까지 내려가는 경우에도 1.4조 달러 수준을 유지할 것으로 예상됐습니다. 이 비용이 계속 늘면 미국 최대 정부 지출인 사회보장(연금)을 넘어설 수 있다는 우려가 나왔습니다.",
+    "titleEn": "US Treasury interest payments could reach $1.7 trillion a year by November 2028 if rates stay elevated, surpassing Social Security spending",
+    "summaryEn": "BofA Global Investment Strategy projects annual interest costs rising sharply unless the 5-year Treasury yield falls below roughly 3.25%."
+  },
+  {
+    "id": "seed-1651",
+    "slug": "grok-bot-dau-surge",
+    "category": "종목분석",
+    "color": "red",
+    "subject": "그록",
+    "title": "그록봇(Grok Bot)의 하루 이용자 수가 닷새 만에 8만 명 가까이 늘며 80% 넘게 급증했습니다",
+    "summary": "시장분석업체 시밀러웹 집계에 따르면, 일론 머스크의 인공지능 회사 xAI가 만든 그록봇의 하루 활성 이용자 수(DAU)가 9월 6일 약 6만 9,000명에서 9월 11일 약 12만 2,000명으로 닷새 만에 80%가 넘게 늘었습니다. 중간에 9일 잠시 주춤했다가 다시 오르는 흐름을 보였습니다.",
+    "titleEn": "Grok Bot's daily active users jumped more than 80% in five days, according to Similarweb data",
+    "summaryEn": "DAU rose from roughly 69,000 on Sept 6 to about 122,000 on Sept 11, dipping briefly on Sept 9 before accelerating again."
+  },
+  {
+    "id": "seed-1652",
+    "slug": "mcd-26mo-low",
+    "category": "종목분석",
+    "color": "orange",
+    "subject": "맥도날드",
+    "title": "맥도날드 주가가 252달러대로 내려 26개월 만에 가장 낮은 가격을 기록했습니다",
+    "summary": "맥도날드(MCD) 주가가 지난 9월 11일 종가 기준 252.53달러로, 최근 26개월 사이 가장 낮은 가격을 기록했다고 금융매체 바차트가 전했습니다. 지난해 3월 335달러대까지 올랐던 주가가 올해 들어 꾸준히 내려오며 250달러대까지 밀린 모습입니다.",
+    "titleEn": "McDonald's stock fell to $252.53, its lowest price in 26 months",
+    "summaryEn": "Shares have declined steadily from a March peak near $335, based on Barchart's daily chart through Sept 11."
+  },
+  {
+    "id": "seed-1653",
+    "slug": "anthropic-profitable-2q",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "앤스로픽",
+    "title": "앤스로픽이 2개 분기 연속 조정영업이익 흑자를 냈다고 투자자들에게 알리며 나스닥 상장을 준비하고 있습니다",
+    "summary": "파이낸셜타임스 보도에 따르면 인공지능 회사 앤스로픽이 소수 주주들에게 조정영업이익이 2개 분기 연속 흑자를 냈다고 알렸습니다. 2분기 매출은 1년 전보다 14배 늘어난 115억 달러였고, 매출의 80% 넘는 매출총이익률을 기록했습니다. 회사는 나스닥을 상장 거래소로 정했고, 기업가치는 2조 달러 안팎으로 거론되는 것으로 전해졌습니다.",
+    "titleEn": "Anthropic told investors its adjusted operating income was positive for a second straight quarter, ahead of a planned Nasdaq listing",
+    "summaryEn": "Q2 revenue reportedly surged 14-fold year over year to about $11.5 billion, with gross margins above 80%."
+  },
+  {
+    "id": "seed-1654",
+    "slug": "cybercab-fleet-1001",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라 로보택시(사이버캡) 차량이 1,001대로 늘며 8개 도시에서 트립 7,345회를 기록했습니다",
+    "summary": "차량 추적 사이트 오토레인 집계에 따르면 테슬라의 로보택시(사이버캡) 서비스 차량이 1,001대로 늘었습니다. 오스틴 197대, 베이에어리어(감독 방식) 696대를 포함해 댈러스·휴스턴·마이애미·올랜도·탬파까지 8개 도시에서 운영 중이며, 지금까지 누적 트립은 7,345회, 최근 30일 활성 차량은 260대입니다. 뉴저지 잉글우드 등 다른 지역에서도 목격 사례가 이어지고 있습니다.",
+    "titleEn": "Tesla's robotaxi (Cybercab) fleet has grown to 1,001 vehicles across 8 cities, logging 7,345 trips",
+    "summaryEn": "Tracking site Autolane shows 197 cars in Austin and 696 in the (supervised) Bay Area, with sightings also spreading to New Jersey and other states."
+  },
+  {
+    "id": "seed-1655",
+    "slug": "fsd-slovenia-global",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라 FSD(완전자율주행 소프트웨어)가 슬로베니아에서 승인된 뒤 해외 곳곳에서 좋은 반응을 얻고 있습니다",
+    "summary": "테슬라의 FSD(감독형 완전자율주행 소프트웨어)가 지난주 슬로베니아에서 승인됐습니다. 슬로베니아의 좁고 굽은 절벽길에서도 안정적으로 주행하는 모습이 SNS에 올라와 화제가 됐습니다. 미국에서는 신형 모델Y 출시 행사에서 FSD 대신 GM의 슈퍼크루즈를 더 낫다고 말했던 한 자동차 평가자가, 실제로 FSD 버전14를 써 본 뒤 생각을 바꿨다는 사례도 소개됐습니다.",
+    "titleEn": "Tesla's FSD (Supervised) won approval in Slovenia last week and is drawing praise for handling narrow cliff roads",
+    "summaryEn": "A car reviewer who once favored GM's Super Cruise over FSD said trying FSD V14 changed his view entirely, calling it \"1000x better.\""
+  },
+  {
+    "id": "seed-1656",
+    "slug": "anthropic-rum-137b",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "앤스로픽",
+    "title": "앤스로픽이 트럼프 측과 연계된 럼 그룹과 137억 달러 규모의 6년짜리 컴퓨팅 계약을 맺은 것으로 확인됐습니다",
+    "summary": "정보매체 디인포메이션 보도에 따르면, 지난달 럼 그룹(럼블 모회사)이 공시한 137억 달러 규모 컴퓨팅 계약의 상대방이 인공지능 회사 앤스로픽으로 확인됐습니다. 계약은 조지아주 메이스빌에 짓고 있는 데이터센터의 GPU 서비스를 6년간 3개 트랜치로 나눠 공급하는 내용입니다. 계약에는 럼 그룹 주식 약 5,100만 주를 주당 1센트에 살 수 있는 워런트도 포함됐습니다.",
+    "titleEn": "Anthropic was confirmed as the customer in Trump-linked RUM Group's $13.7 billion, six-year GPU services deal",
+    "summaryEn": "The agreement covers capacity at a Maysville, Georgia data center still under development, split into three tranches, with warrants for about 51 million RUM shares at $0.01 each."
+  },
+  {
+    "id": "seed-1657",
+    "slug": "nvidia-cuda-q-logical",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "엔비디아",
+    "title": "엔비디아가 양자컴퓨터의 오류를 스스로 고치는 연구를 돕는 CUDA-Q Logical을 내놓았습니다",
+    "summary": "엔비디아가 양자컴퓨팅 연구자들이 오류를 스스로 감지하고 고치는 시스템을 더 쉽게 설계할 수 있도록 돕는 소프트웨어 CUDA-Q Logical을 공개했다는 소식이 SNS에서 화제가 됐습니다. 양자컴퓨터는 특성상 오류가 잦아, 이를 자동으로 교정하는 기술이 실용화의 핵심 과제로 꼽힙니다.",
+    "titleEn": "Nvidia is making quantum computing easier to build with CUDA-Q Logical, a tool that helps researchers design self-correcting error systems",
+    "summaryEn": "Quantum computers are inherently error-prone, and automated error correction is seen as a key hurdle to practical, large-scale quantum machines."
+  },
+  {
+    "id": "seed-1658",
+    "slug": "coreweave-gpu-demand",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "코어위브",
+    "title": "코어위브 최고경영자가 보유한 GPU 모두를 여러 고객에게 팔 수 있을 만큼 수요가 공급을 앞선다고 말했습니다",
+    "summary": "클라우드 회사 코어위브의 최고경영자 마이클 인트레이터가 골드만삭스 콘퍼런스에서 \"매일 수요를 맞추기가 힘들다. 보유한 GPU 모두를 여러 고객에게 팔 수 있다\"고 말했습니다. 코어위브의 2분기 매출은 1년 전보다 112% 늘었고, 조정영업이익은 15억 달러로 2배 넘게 늘었습니다. 회사는 2026년 매출 목표를 124억~132억 달러로 올렸고, 수주잔고(백로그)는 1,040억 달러에 이릅니다.",
+    "titleEn": "CoreWeave's CEO said Nvidia GPU demand outstrips supply every day, with each chip capable of serving multiple clients",
+    "summaryEn": "Q2 revenue surged 112% year over year, and the company raised its 2026 revenue guidance to $12.4-13.2 billion on a $104 billion backlog."
+  },
+  {
+    "id": "seed-1659",
+    "slug": "jensen-ai-safety-trump-call",
+    "category": "종목분석",
+    "color": "blue",
+    "subject": "엔비디아",
+    "title": "엔비디아 젠슨 황 최고경영자가 AI 내부고발자를 용기 있다고 평가하면서도 AI 위협론에는 선을 그었고, 트럼프 대통령은 그에게 라이브로 전화를 걸어 농담을 건넸습니다",
+    "summary": "엔비디아 최고경영자 젠슨 황이 AI 안전 우려를 제기한 내부고발자 제이콥 콕슨을 \"용기 있는 행동\"이라고 평가하며 관련 우려도 신중히 다뤄야 한다고 말했습니다. 다만 AI가 인류를 위협할 것이라는 주장에는 \"과학적 근거가 없다\"며 선을 그었습니다. 도널드 트럼프 대통령은 한 인터뷰 도중 젠슨 황에게 생방송으로 전화를 걸어 \"세계 최고의 AI 칩을 만들면서도 나를 스피커폰으로 연결하는 법은 모른다\"고 농담했습니다.",
+    "titleEn": "Nvidia CEO Jensen Huang called an AI whistleblower's concerns courageous while rejecting AI doom claims as \"not grounded in science,\" as President Trump joked with him live on a call",
+    "summaryEn": "Huang drew a line between taking safety concerns seriously and endorsing broader existential-risk narratives about AI."
+  },
+  {
+    "id": "seed-1660",
+    "slug": "spacex-revenue-10b-month",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "스페이스X가 12월 월간 매출 100억 달러를 목표로 하며 데이터센터·인공지능 컴퓨팅 사업을 빠르게 키우고 있습니다",
+    "summary": "스페이스X는 지난해 말 연 100억 달러였던 연간 반복매출(ARR) 목표를 12월까지 약 1,200억 달러 규모(월 100억 달러)로 끌어올리는 계획을 세운 것으로 분석됩니다. 스타링크·직접단말연결(DTC)·앤스로픽 등 AI 컴퓨팅 임대·신규 리스 계약이 더해지는 구조입니다. 다만 이는 애널리스트 모델링에 기반한 추정치로, 스타링크 실제 2분기 매출은 42억 9,000만 달러(연환산 약 170억 달러)였습니다.",
+    "titleEn": "SpaceX is reportedly targeting roughly $10 billion in monthly revenue by December, driven by Starlink, direct-to-cell, and new AI data-center leases",
+    "summaryEn": "The figure comes from analyst modeling, not confirmed company guidance — Starlink's actual Q2 revenue was $4.29 billion (about $17B annualized)."
+  },
+  {
+    "id": "seed-1661",
+    "slug": "roadster-oct1-reveal-locked",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라가 9년 만에 새 로드스터를 10월 1일 공개하기로 확정했고, 일론 머스크는 실제로 하늘을 나는 차가 될 것이라고 암시했습니다",
+    "summary": "테슬라가 9년 넘게 미뤄온 새 로드스터 공개 행사 날짜를 10월 1일로 확정했습니다. 일론 머스크는 이 소식을 직접 확인했고, 차량에 스페이스X 추진기와 탄소섬유 차체가 쓰일 수 있다는 관측이 나옵니다. 머스크는 2019년 로드스터가 '날 것'이라고 예고한 데 이어, 이번에는 영화 「백투더퓨처」의 날아다니는 드로리안 이미지를 인용해 \"새 로드스터는 실제로 이런 걸 할 것\"이라고 적었습니다.",
+    "titleEn": "Tesla locked in October 1 for the long-delayed Roadster reveal after nine years, and Elon Musk hinted the car will actually fly",
+    "summaryEn": "Musk shared a flying DeLorean image, writing \"the new Roadster will actually do something like this,\" following his 2019 promise that the car would fly."
+  },
+  {
+    "id": "seed-1662",
+    "slug": "starlink-subscribers-double",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "미국 위성 인터넷 가입자가 89% 급증했고, 스타링크 글로벌 가입자는 1년 만에 2배로 늘었습니다",
+    "summary": "미국 연방통신위원회(FCC) 자료에 따르면 2025년 1월부터 2026년 6월까지 미국 위성 인터넷 가입 건수가 89% 급증했습니다. 같은 기간 스타링크의 전 세계 가입자는 600만 명에서 1,200만 명으로 2배 늘었습니다. 스타링크는 최근 2분기 실적에서도 가입자 1,200만 명, 매출 42억 9,000만 달러(1년 전보다 66% 증가)를 기록했습니다.",
+    "titleEn": "US satellite internet subscriptions surged 89% while Starlink's global subscriber base doubled to 12 million in a year, according to FCC data",
+    "summaryEn": "Starlink's Q2 revenue reached $4.29 billion, up 66% year over year, making it SpaceX's most profitable segment."
+  },
+  {
+    "id": "seed-1663",
+    "slug": "zurich-fsd-insurance-discount",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "호주 취리히 보험이 테슬라 FSD 탑재 차량에 보험료를 할인해주는 호주 첫 사례를 시작했습니다",
+    "summary": "호주 보험사 취리히가 테슬라 FSD(감독형 완전자율주행) 기능이 켜진 모델3·모델Y 차량에 보험료를 낮춰주는 정책을 시작했습니다. 취리히는 이번 결정이 FSD를 보험 위험 요소로 반영한 호주 첫 사례이자 전 세계 두 번째 사례라고 밝혔습니다. 테슬라 데이터에 따르면 FSD를 켠 차량은 일반 전기차보다 주요·경미 사고가 7배 더 적었습니다.",
+    "titleEn": "Zurich Insurance Australia began offering discounted premiums for Tesla vehicles with FSD (Supervised) enabled, an Australian first",
+    "summaryEn": "Zurich said Tesla data shows FSD-equipped vehicles get into seven times fewer major or minor collisions than regular EVs."
+  },
+  {
+    "id": "seed-1664",
+    "slug": "tesla-semi-europe-specs",
+    "category": "종목분석",
+    "color": "mint",
+    "subject": "테슬라",
+    "title": "테슬라 세미(전기 대형트럭)의 유럽형 모델이 독일 하노버에서 처음 공개됐고 2027년부터 유럽 인도가 시작됩니다",
+    "summary": "테슬라가 유럽 사양의 전기 대형트럭 세미(Semi)를 독일 하노버 IAA 트랜스포테이션 전시회에서 처음 공개했습니다. 1회 충전 주행거리는 550km이고, 30분 충전으로 최대 주행거리의 60%까지 채울 수 있습니다. 사이드미러 없이 카메라 10대로 360도 시야를 확보했고, 유럽 규정에 맞춰 마커등·앞유리 높이 등을 조정했습니다. 유럽 인도는 2027년부터 시작됩니다.",
+    "titleEn": "Tesla unveiled the European version of its Semi electric truck in Hannover, Germany, with deliveries starting in 2027",
+    "summaryEn": "The European Semi offers 550km of range, up to 60% charge in 30 minutes, and 10 cameras replacing traditional side mirrors."
+  },
+  {
+    "id": "seed-1665",
+    "slug": "waymo-vegas-15th-city",
+    "category": "종목분석",
+    "color": "red",
+    "subject": "웨이모",
+    "title": "구글 웨이모가 라스베이거스에서 유료 로보택시 서비스를 시작하며 15번째 서비스 도시로 확장했습니다",
+    "summary": "구글 모회사 알파벳의 웨이모가 라스베이거스에서 유료 로보택시 서비스를 시작했습니다. 이는 웨이모의 15번째 미국 서비스 도시로, 라스베이거스 스트립과 앨리전트 스타디움 등을 포함한 약 24마일 구역에서 서비스가 시작됐습니다. 지난달 네바다주 교통당국의 승인을 받았고, 서비스 대기자로 등록한 10만 명 넘는 이용자에게 순차적으로 초청이 발송되고 있습니다.",
+    "titleEn": "Google's Waymo launched paid robotaxi service in Las Vegas, its 15th US commercial market",
+    "summaryEn": "The roughly 24-mile service area covers the Strip and Allegiant Stadium, with invites rolling out to more than 100,000 registered riders."
+  },
+  {
+    "id": "seed-1666",
+    "slug": "spacex-nvidia-space-computers",
+    "category": "종목분석",
+    "color": "purple",
+    "subject": "스페이스X",
+    "title": "일론 머스크가 스페이스X가 내년 엔비디아의 AI 컴퓨터를 우주로 쏘아 올릴 것이라 \"매우 확신한다\"고 밝혔습니다",
+    "summary": "일론 머스크가 스페이스X가 내년(2027년)에 엔비디아의 인공지능 컴퓨터를 우주로 발사할 것이라고 \"매우 확신한다\"고 밝혔습니다. 우주에 데이터센터를 짓는 구상은 태양광으로 전력을 끊임없이 얻고 냉각도 쉬워, 지상 데이터센터의 전력·부지 제약을 피할 수 있다는 논리로 최근 여러 회사가 검토하고 있는 아이디어입니다.",
+    "titleEn": "Elon Musk said he is \"highly confident\" SpaceX will launch Nvidia AI computers into space next year",
+    "summaryEn": "Orbital data centers are pitched as a way to tap continuous solar power and easier cooling, sidestepping the land and power constraints of ground-based facilities."
+  },
+  {
+    "id": "seed-1667",
+    "slug": "grok-4-8-training",
+    "category": "종목분석",
+    "color": "red",
+    "subject": "그록",
+    "title": "일론 머스크가 새 인공지능 모델 그록 4.8이 2.5조 개 매개변수 규모로 이번 주 학습을 마친다고 밝혔습니다",
+    "summary": "일론 머스크가 새 인공지능 모델 그록 4.8이 2.5조 개 매개변수(파라미터) 규모이며, 새로 만든 C++ 소프트웨어 스택으로 학습됐다고 밝혔습니다. 이번 주 학습을 마치고 강화학습(RL) 단계로 들어갈 예정입니다. 머스크는 그록 4.9는 오픈AI의 아스트라·페이블급, 그록 5는 '무엇보다 나을 수도 있다'며 회사의 향후 모델 로드맵도 함께 공개했습니다.",
+    "titleEn": "Elon Musk said the new Grok 4.8 model, with 2.5 trillion parameters, will finish training this week",
+    "summaryEn": "Musk outlined a broader roadmap, placing Grok 4.9 in the Astra/Fable class and suggesting Grok 5 could be \"better than anything.\""
+  },
+  {
+    "id": "seed-1668",
+    "slug": "xai-datacenter-capacity-model",
+    "category": "매크로",
+    "color": "red",
+    "subject": "xAI",
+    "title": "AI 데이터센터 전력·칩 증설을 추정한 모델에서 2027년 말 전력 규모가 18.4기가와트까지 커질 것으로 나왔습니다",
+    "summary": "SNS에 공개된 한 추정 모델링 차트에 따르면, AI 데이터센터의 전력 용량은 2026년 3분기 1.85기가와트에서 2027년 4분기 18.4기가와트까지 늘어날 것으로 그려졌습니다. 이 가운데 실제로 설치된 칩 용량은 2027년 말 10.2기가와트로, 전력 용량이 칩 설치 속도보다 앞서 준비되는 구조입니다. 이 차트는 공급된 자료를 바탕으로 재구성한 모델로, 특정 회사의 공식 공시는 아닙니다.",
+    "titleEn": "A modeled estimate of AI data-center buildout shows total energy capacity reaching 18.4 GW by end-2027, ahead of chip installation",
+    "summaryEn": "The chart, reconstructed from a supplied model rather than an official company filing, projects capacity growing from 1.85 GW in Q3 2026 to 18.4 GW by Q4 2027."
+  }
+];

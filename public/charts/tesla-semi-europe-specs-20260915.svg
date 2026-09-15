@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="110" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="95" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">테슬라</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.15</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">테슬라 세미의 유럽형 모델이 독일 하노버에서 처음 공개됐고</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">2027년부터 유럽 인도가 시작됩니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🚚</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">550km</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">1회 충전 주행거리입니다. 30분 충전으로 최대거리의 60%까지 채울 수 있습니다.</text>
+  <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">주행거리</text>
+  <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">550km</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">1회 충전</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">km당 1.0kWh 소비</text>
+  <rect x="390" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">충전</text>
+  <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">30분/60%</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">급속충전</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">최대출력 800kW</text>
+  <rect x="720" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">중량</text>
+  <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">40톤</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">최대 총중량</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">공차 9.1톤 미만</text>
+  <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">유럽형 세미 주요 특징</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">사이드미러 없이 카메라 10대로 360도 시야를 확보했습니다.</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">유럽 트레일러 규정에 맞춰 마커등 위치와 캡 높이를 조정했습니다.</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">CCS2→메가차저(MCS) 변환 어댑터를 제공해 기존 충전소도 이용 가능합니다.</text>
+  <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="810" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">유럽은 배출 규제가 엄격해 전기 대형트럭 수요가 늘어날 여지가 있습니다. 2027년 실제 인도와 초기 고객사가 다음 확인</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">포인트입니다.</text>
+  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 세미 유럽 · 2026.09.15</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

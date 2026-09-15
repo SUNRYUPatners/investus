@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T15SEP = 1789426800000; // 2026.09.15 08:00 KST
 const T14SEP = 1789340400000; // 2026.09.14 08:00 KST
 const T12SEP = 1789167600000; // 2026.09.12 08:00 KST
 const T11SEP = 1789081200000; // 2026.09.11 08:00 KST
@@ -123,7 +124,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T14SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T15SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -142,6 +143,67 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-15 신규 ────────────────
+  { id: 121902, symbol: "MACRO", nickname: "외인주식육공", holdingLabel: "관심종목",
+    content: "외국인 미국주식 비중 60% 역대최고. 2000·2008때보다 높음",
+    createdAt: T15SEP + 8*60_000, likes: 24, comments: 2 },
+  { id: 121903, symbol: "MACRO", nickname: "국채이자일칠조", holdingLabel: "관심종목",
+    content: "미국 국채이자 1.7조불 갈수도. 사회보장 지출 넘어설 판",
+    createdAt: T15SEP + 16*60_000, likes: 23, comments: 2 },
+  { id: 121904, symbol: "XAI", nickname: "그록디에이유", holdingLabel: "관심종목",
+    content: "그록봇 DAU 닷새만에 80%↑. 6.9만→12.2만명",
+    createdAt: T15SEP + 24*60_000, likes: 22, comments: 2 },
+  { id: 121905, symbol: "MCD", nickname: "맥날이오이", holdingLabel: "관심종목",
+    content: "맥날 주가 252불, 26개월 최저. 작년 335불에서 계속 빠짐",
+    createdAt: T15SEP + 32*60_000, likes: 21, comments: 2 },
+  { id: 121906, symbol: "ANTHROPIC", nickname: "앤스로픽흑자", holdingLabel: "관심종목",
+    content: "앤스로픽 2개분기 연속 흑자. 매출 14배 늘어서 115억불",
+    createdAt: T15SEP + 40*60_000, likes: 20, comments: 2 },
+  { id: 121907, symbol: "TSLA", nickname: "사이버캡천일대", holdingLabel: "관심종목",
+    content: "사이버캡 1,001대로 늘음. 오스틴197+베이696+기타",
+    createdAt: T15SEP + 48*60_000, likes: 19, comments: 2 },
+  { id: 121908, symbol: "TSLA", nickname: "슬로베니아절벽", holdingLabel: "관심종목",
+    content: "FSD 슬로베니아 승인. 절벽길도 잘 달림, EU표결 앞두고 호재",
+    createdAt: T15SEP + 56*60_000, likes: 18, comments: 2 },
+  { id: 121909, symbol: "ANTHROPIC", nickname: "럼그룹일삼칠", holdingLabel: "관심종목",
+    content: "앤스로픽이 럼그룹 137억불 계약 상대였음. 코어위브·네비우스 주가는 내림",
+    createdAt: T15SEP + 64*60_000, likes: 17, comments: 2 },
+  { id: 121910, symbol: "NVDA", nickname: "쿠다큐로지컬", holdingLabel: "관심종목",
+    content: "엔비디아 양자컴퓨터 오류교정 툴 CUDA-Q Logical 공개",
+    createdAt: T15SEP + 72*60_000, likes: 16, comments: 2 },
+  { id: 121911, symbol: "CRWV", nickname: "코어위브수요", holdingLabel: "관심종목",
+    content: "코어위브 CEO \"GPU 하나로 여러명한테 팔 판\". 근데 주가는 5%↓",
+    createdAt: T15SEP + 80*60_000, likes: 15, comments: 2 },
+  { id: 121912, symbol: "NVDA", nickname: "젠슨황트럼프콜", holdingLabel: "관심종목",
+    content: "젠슨황 내부고발자 용기있다면서도 AI종말론엔 근거없다고 선긋음. 트럼프가 생방중 전화걸어 농담",
+    createdAt: T15SEP + 88*60_000, likes: 24, comments: 2 },
+  { id: 121913, symbol: "SPCX", nickname: "스페이스엑스백억", holdingLabel: "관심종목",
+    content: "스페이스X 12월 월매출 100억불 목표설. 근데 애널 추정치일뿐",
+    createdAt: T15SEP + 96*60_000, likes: 23, comments: 2 },
+  { id: 121914, symbol: "TSLA", nickname: "로드스터난다", holdingLabel: "관심종목",
+    content: "로드스터 10/1 확정. 머스크가 드로리안 이미지로 '난다' 암시",
+    createdAt: T15SEP + 104*60_000, likes: 22, comments: 2 },
+  { id: 121915, symbol: "SPCX", nickname: "스타링크이배", holdingLabel: "관심종목",
+    content: "스타링크 가입자 1년만에 2배, 1200만명. 미국 위성인터넷 89%↑",
+    createdAt: T15SEP + 112*60_000, likes: 21, comments: 2 },
+  { id: 121916, symbol: "TSLA", nickname: "취리히보험할인", holdingLabel: "관심종목",
+    content: "호주 취리히보험 FSD차량 보험료 할인. 사고 7배 적다고",
+    createdAt: T15SEP + 120*60_000, likes: 20, comments: 2 },
+  { id: 121917, symbol: "TSLA", nickname: "세미유럽하노버", holdingLabel: "관심종목",
+    content: "테슬라 세미 유럽형 하노버서 공개. 550km, 2027년부터 인도",
+    createdAt: T15SEP + 128*60_000, likes: 19, comments: 2 },
+  { id: 121918, symbol: "GOOGL", nickname: "웨이모베가스", holdingLabel: "관심종목",
+    content: "웨이모 라스베가스 15번째 도시로. 테슬라·우버도 곧 진입",
+    createdAt: T15SEP + 136*60_000, likes: 18, comments: 2 },
+  { id: 121919, symbol: "SPCX", nickname: "우주컴퓨터확신", holdingLabel: "관심종목",
+    content: "머스크 \"내년 스페이스X가 엔비디아 AI컴퓨터 우주로 쏜다\" 확신",
+    createdAt: T15SEP + 144*60_000, likes: 17, comments: 2 },
+  { id: 121920, symbol: "XAI", nickname: "그록사팔학습", holdingLabel: "관심종목",
+    content: "그록 4.8 이번주 학습 끝나고 강화학습 단계로",
+    createdAt: T15SEP + 152*60_000, likes: 16, comments: 2 },
+  { id: 121921, symbol: "XAI", nickname: "엑스에이아이전력", holdingLabel: "관심종목",
+    content: "xAI 데이터센터 전력용량 2027년 18.4GW 추정모델. 공식자료 아님",
+    createdAt: T15SEP + 160*60_000, likes: 15, comments: 2 },
   // ── 2026-09-14 신규 ────────────────
   { id: 121883, symbol: "ORCL", nickname: "매도계획취소", holdingLabel: "관심종목",
     content: "엘리슨 75억 매도계획 하루만에 접었대. 이유는 안 밝힘",
@@ -4705,6 +4767,86 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  121902: [
+    { id: 1219021, nickname: "국채이자일칠조", holdingLabel: "관심종목", content: "60%가 꺾이면 방향전환 신호로 봄", createdAt: T15SEP + 720000, likes: 5 },
+    { id: 1219022, nickname: "맥날이오이", holdingLabel: "관심종목", content: "달러·금리랑 같이 보면 방향 더 보임", createdAt: T15SEP + 900000, likes: 4 },
+  ],
+  121903: [
+    { id: 1219031, nickname: "그록디에이유", holdingLabel: "관심종목", content: "5년물 3.25%까지 내리면 1.4조로 줄어듦", createdAt: T15SEP + 780000, likes: 5 },
+    { id: 1219032, nickname: "앤스로픽흑자", holdingLabel: "관심종목", content: "이번주 FOMC가 다음 신호", createdAt: T15SEP + 960000, likes: 4 },
+  ],
+  121904: [
+    { id: 1219041, nickname: "맥날이오이", holdingLabel: "관심종목", content: "일시적 화제성인지 몇주 더 봐야함", createdAt: T15SEP + 840000, likes: 5 },
+    { id: 1219042, nickname: "사이버캡천일대", holdingLabel: "관심종목", content: "새모델 나오면 다시 변화 생길듯", createdAt: T15SEP + 1020000, likes: 4 },
+  ],
+  121905: [
+    { id: 1219051, nickname: "앤스로픽흑자", holdingLabel: "관심종목", content: "가맹점 방식이라 본사 자본부담은 적음", createdAt: T15SEP + 900000, likes: 5 },
+    { id: 1219052, nickname: "슬로베니아절벽", holdingLabel: "관심종목", content: "동일점포매출 개선되는지가 핵심", createdAt: T15SEP + 1080000, likes: 4 },
+  ],
+  121906: [
+    { id: 1219061, nickname: "사이버캡천일대", holdingLabel: "관심종목", content: "S-1 나오면 진짜 숫자 확인됨", createdAt: T15SEP + 960000, likes: 5 },
+    { id: 1219062, nickname: "럼그룹일삼칠", holdingLabel: "관심종목", content: "럼그룹 계약이랑 같은날 나온 소식", createdAt: T15SEP + 1140000, likes: 4 },
+  ],
+  121907: [
+    { id: 1219071, nickname: "슬로베니아절벽", holdingLabel: "관심종목", content: "무감독 지역 넓어지는속도가 관건", createdAt: T15SEP + 1020000, likes: 5 },
+    { id: 1219072, nickname: "쿠다큐로지컬", holdingLabel: "관심종목", content: "뉴저지·미주리서도 테스트 중", createdAt: T15SEP + 1200000, likes: 4 },
+  ],
+  121908: [
+    { id: 1219081, nickname: "럼그룹일삼칠", holdingLabel: "관심종목", content: "EU 표결 65%·15개국 기준 아직 안됨", createdAt: T15SEP + 1080000, likes: 5 },
+    { id: 1219082, nickname: "코어위브수요", holdingLabel: "관심종목", content: "슬로베니아는 개별국가 승인일뿐", createdAt: T15SEP + 1260000, likes: 4 },
+  ],
+  121909: [
+    { id: 1219091, nickname: "쿠다큐로지컬", holdingLabel: "관심종목", content: "공식 확인 안된 보도단계임", createdAt: T15SEP + 1140000, likes: 5 },
+    { id: 1219092, nickname: "젠슨황트럼프콜", holdingLabel: "관심종목", content: "메이스빌 데이터센터 자금조달이 다음", createdAt: T15SEP + 1320000, likes: 4 },
+  ],
+  121910: [
+    { id: 1219101, nickname: "코어위브수요", holdingLabel: "관심종목", content: "상용화까진 몇년 더 걸림", createdAt: T15SEP + 1200000, likes: 5 },
+    { id: 1219102, nickname: "스페이스엑스백억", holdingLabel: "관심종목", content: "연구기관 채택 늘어나는지 봄", createdAt: T15SEP + 1380000, likes: 4 },
+  ],
+  121911: [
+    { id: 1219111, nickname: "젠슨황트럼프콜", holdingLabel: "관심종목", content: "수요강해도 캐펙스 부담 커서 주가는 다르게 움", createdAt: T15SEP + 1260000, likes: 5 },
+    { id: 1219112, nickname: "로드스터난다", holdingLabel: "관심종목", content: "데이터센터 전력 확보 속도가 변수", createdAt: T15SEP + 1440000, likes: 4 },
+  ],
+  121912: [
+    { id: 1219121, nickname: "스페이스엑스백억", holdingLabel: "관심종목", content: "발언은 인터뷰지 정책발표 아님", createdAt: T15SEP + 1320000, likes: 5 },
+    { id: 1219122, nickname: "스타링크이배", holdingLabel: "관심종목", content: "실제 안전조치 나오는지 지켜봄", createdAt: T15SEP + 1500000, likes: 4 },
+  ],
+  121913: [
+    { id: 1219131, nickname: "로드스터난다", holdingLabel: "관심종목", content: "확정 가이던스 아니라 추정모델", createdAt: T15SEP + 1380000, likes: 5 },
+    { id: 1219132, nickname: "취리히보험할인", holdingLabel: "관심종목", content: "10-K 나오면 실제 숫자 비교됨", createdAt: T15SEP + 1560000, likes: 4 },
+  ],
+  121914: [
+    { id: 1219141, nickname: "스타링크이배", holdingLabel: "관심종목", content: "9/16 밤12시 마감이라 서둘러야함", createdAt: T15SEP + 1440000, likes: 5 },
+    { id: 1219142, nickname: "세미유럽하노버", holdingLabel: "관심종목", content: "실제 비행여부는 행사날 나옴", createdAt: T15SEP + 1620000, likes: 4 },
+  ],
+  121915: [
+    { id: 1219151, nickname: "취리히보험할인", holdingLabel: "관심종목", content: "기업용 매출이 소비자용보다 더 빠르게 늚", createdAt: T15SEP + 1500000, likes: 5 },
+    { id: 1219152, nickname: "웨이모베가스", holdingLabel: "관심종목", content: "성장률 둔화되면 포화신호", createdAt: T15SEP + 1680000, likes: 4 },
+  ],
+  121916: [
+    { id: 1219161, nickname: "세미유럽하노버", holdingLabel: "관심종목", content: "할인율 구체적으로 안나옴", createdAt: T15SEP + 1560000, likes: 5 },
+    { id: 1219162, nickname: "우주컴퓨터확신", holdingLabel: "관심종목", content: "다른 보험사 사례 이어지는지 봄", createdAt: T15SEP + 1740000, likes: 4 },
+  ],
+  121917: [
+    { id: 1219171, nickname: "웨이모베가스", holdingLabel: "관심종목", content: "2027년 인도라 아직 시간 있음", createdAt: T15SEP + 1620000, likes: 5 },
+    { id: 1219172, nickname: "그록사팔학습", holdingLabel: "관심종목", content: "초기 물류사 고객 계약이 관건", createdAt: T15SEP + 1800000, likes: 4 },
+  ],
+  121918: [
+    { id: 1219181, nickname: "우주컴퓨터확신", holdingLabel: "관심종목", content: "죽스가 라스베가스 로보택시 원조임", createdAt: T15SEP + 1680000, likes: 5 },
+    { id: 1219182, nickname: "엑스에이아이전력", holdingLabel: "관심종목", content: "테슬라·우버 가동시점이 다음", createdAt: T15SEP + 1860000, likes: 4 },
+  ],
+  121919: [
+    { id: 1219191, nickname: "그록사팔학습", holdingLabel: "관심종목", content: "발사 일정 구체적으로 안나옴", createdAt: T15SEP + 1740000, likes: 5 },
+    { id: 1219192, nickname: "외인주식육공", holdingLabel: "관심종목", content: "실제 위성탑재체 계약이 나와야함", createdAt: T15SEP + 1920000, likes: 4 },
+  ],
+  121920: [
+    { id: 1219201, nickname: "엑스에이아이전력", holdingLabel: "관심종목", content: "학습끝 = 공개 아님", createdAt: T15SEP + 1800000, likes: 5 },
+    { id: 1219202, nickname: "국채이자일칠조", holdingLabel: "관심종목", content: "강화학습 이후 출시일 확인", createdAt: T15SEP + 1980000, likes: 4 },
+  ],
+  121921: [
+    { id: 1219211, nickname: "외인주식육공", holdingLabel: "관심종목", content: "공식 공시 아닌 추정 재구성모델", createdAt: T15SEP + 1860000, likes: 5 },
+    { id: 1219212, nickname: "그록디에이유", holdingLabel: "관심종목", content: "실제 전력계약 발표랑 비교해야함", createdAt: T15SEP + 2040000, likes: 4 },
+  ],
   121883: [
     { id: 1218831, nickname: "로드스터웨이코", holdingLabel: "관심종목", content: "이유 안 밝히면 그냥 지분 유지로 봄", createdAt: T14SEP + 720000, likes: 5 },
     { id: 1218832, nickname: "항공사사십팔", holdingLabel: "관심종목", content: "매도계획은 취소돼도 다시 신고될수 있음", createdAt: T14SEP + 900000, likes: 4 },

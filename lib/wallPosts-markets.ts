@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T15 = 1789426800000; // 2026-09-15 08:00 KST
 const T14 = 1789340400000; // 2026-09-14 08:00 KST
 const T12 = 1789167600000; // 2026-09-12 08:00 KST
 const T11 = 1789081200000; // 2026-09-11 08:00 KST
@@ -19,6 +20,12 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9321, symbol: "코스피", nickname: "육육팔사급락", holdingLabel: "인덱스 보유", content: "유가·금리 겹쳐서 코스피 3.26% 급락, 6684까지 밀림. 외인 3.3조 팔았음", createdAt: T15 - 0, likes: 44, comments: 2, },
+  { id: 9322, symbol: "삼성전자", nickname: "삼성사공사", holdingLabel: "삼성전자 보유", content: "삼성 -4.05%, 외인 순매도 2위(8482억). 개별악재 아니라 매크로 충격이라는 평", createdAt: T15 - 1800000, likes: 43, comments: 2, },
+  { id: 9323, symbol: "SK하이닉스", nickname: "하이닉스육삼오", holdingLabel: "하이닉스 보유", content: "하이닉스 -6.35%, 외인 순매도 1위(2조652억). ADR은 오히려 +0.94%", createdAt: T15 - 3600000, likes: 42, comments: 2, },
+  { id: 9324, symbol: "코스피", nickname: "사우디송유관", holdingLabel: "관심종목", content: "사우디 동서송유관 멈춰서 유가 108불. 미10년물도 4.99%까지 뜀", createdAt: T15 - 5400000, likes: 41, comments: 2, },
+  { id: 9325, symbol: "현대차", nickname: "현대차반토막", holdingLabel: "현대차 관심", content: "현대차 -2.88%, 6월고점대비 반토막. 트럼프 중국차 미국생산 시사발언 겹침", createdAt: T15 - 7200000, likes: 40, comments: 2, },
+  { id: 9326, symbol: "KB금융", nickname: "케이비이조육백", holdingLabel: "KB금융 보유", content: "하나증권 KB금융 3분기 순익 2조600억 전망(역대최대). 근데 시장하락에 눌려 소폭↓", createdAt: T15 - 9000000, likes: 39, comments: 2, },
   { id: 9303, symbol: "코스피", nickname: "칠천피재도전", holdingLabel: "인덱스 보유", content: "지난주 아스트라 효과로 7000 뚫었다가 유가·금리에 6909까지 밀림. 이번주 FOMC가 다음 방향키", createdAt: T14 - 0, likes: 44, comments: 2, },
   { id: 9304, symbol: "삼성전자", nickname: "삼성HBM삼삼", holdingLabel: "삼성전자 보유", content: "HBM 점유율 21→33%. 하이닉스랑 격차 37p에서 17p로 좁혀짐. 하반기 HBM4가 다음 승부처", createdAt: T14 - 1800000, likes: 43, comments: 2, },
   { id: 9305, symbol: "SK하이닉스", nickname: "하이닉스오공", holdingLabel: "하이닉스 보유", content: "여전히 1위 50%인데 전분기 58%보다 빠짐. 삼성 추격이 매출 자체 감소는 아님", createdAt: T14 - 3600000, likes: 42, comments: 2, },
@@ -124,6 +131,30 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9321: [
+    { id: 1, nickname: "개인이조구칠", holdingLabel: "관망", content: "개인이 2.97조 받쳤는데도 못 막음", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "기관일일칠", holdingLabel: "관심종목", content: "기관도 1.17조 팔아서 다같이 눌림", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9322: [
+    { id: 1, nickname: "삼성사공사", holdingLabel: "삼성전자 보유", content: "기타법인이 1.4조 받아준게 그나마 다행", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "메모리업종전체", holdingLabel: "관심종목", content: "코스피 전기전자 업종 전체가 매도우위", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9323: [
+    { id: 1, nickname: "하이닉스육삼오", holdingLabel: "하이닉스 보유", content: "오른만큼 되돌림도 큰 고베타 특징", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "에이치비엠오공", holdingLabel: "관심종목", content: "그래도 HBM 점유율 50%는 여전함", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9324: [
+    { id: 1, nickname: "사우디송유관", holdingLabel: "관심종목", content: "복구까지 3~6주 걸린다는 전망", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "호르무즈연기", holdingLabel: "관심종목", content: "이란·GCC 회담도 갑자기 연기됨", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9325: [
+    { id: 1, nickname: "현대차반토막", holdingLabel: "현대차 관심", content: "아직 인터뷰 발언이지 정책은 아님", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "조지아공장", holdingLabel: "관심종목", content: "조지아 현지생산 기반은 이미 있음", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9326: [
+    { id: 1, nickname: "케이비이조육백", holdingLabel: "KB금융 보유", content: "10월말 실제 실적으로 확인해야함", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "은행최선호주", holdingLabel: "관심종목", content: "은행업종 내 최선호주 의견은 유지됨", createdAt: T15 + 1200000, likes: 4 },
+  ],
   9303: [
     { id: 1, nickname: "개인일팔조", holdingLabel: "관망", content: "개인이 하단 받쳐준게 그나마 다행", createdAt: T14 + 600000, likes: 5 },
     { id: 2, nickname: "외인이조삼", holdingLabel: "관심종목", content: "외인 2.3조 매도는 차익실현 느낌", createdAt: T14 + 1200000, likes: 4 },
@@ -487,6 +518,11 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9327, symbol: "한장요약", nickname: "안전자산화요", holdingLabel: "관망", content: "BTC 7.9만 회복·금 4278 한달최저·유가 108불. FOMC가 이번주 전부 좌우", createdAt: T15 - 0, likes: 44, comments: 2, },
+  { id: 9328, symbol: "비트코인", nickname: "칠구삼구구", holdingLabel: "BTC 보유", content: "주말 7.6만까지 밀렸다가 7.9만대 반등. FOMC인상확률은 92.7%로 뜀", createdAt: T15 - 1800000, likes: 43, comments: 2, },
+  { id: 9329, symbol: "금", nickname: "금사천이칠팔", holdingLabel: "금 ETF", content: "금값 4278~4298, 한달여만 최저. 금리인상기대+유가급등 겹침", createdAt: T15 - 3600000, likes: 42, comments: 2, },
+  { id: 9330, symbol: "이더리움", nickname: "이더이오일삼", holdingLabel: "관심", content: "이더 2513달러, 클래리티법 표결 앞두고 관망. ETF는 오히려 유입중", createdAt: T15 - 5400000, likes: 41, comments: 2, },
+  { id: 9331, symbol: "원유", nickname: "유가백팔달러", holdingLabel: "관심", content: "사우디 송유관 끊겨서 유가 108불. 올해 누적 77% 폭등", createdAt: T15 - 7200000, likes: 40, comments: 2, },
   { id: 9310, symbol: "한장요약", nickname: "세이프브리핑", holdingLabel: "관망", content: "BTC 7.7만권·금 4330~4350·유가 100달러대. 이번주 FOMC가 전부 좌우", createdAt: T14 - 0, likes: 44, comments: 2, },
   { id: 9311, symbol: "비트코인", nickname: "칠만칠천대기", holdingLabel: "BTC 보유", content: "코인마켓캡 77255, OKX는 76985까지 밀림. 이더가 더 크게 빠짐", createdAt: T14 - 1800000, likes: 43, comments: 2, },
   { id: 9312, symbol: "금", nickname: "사천삼백지지선", holdingLabel: "금 ETF", content: "10년물 4.96%인데도 중동 긴장 덕에 4330 지지. 저항은 4400", createdAt: T14 - 3600000, likes: 42, comments: 2, },
@@ -574,6 +610,26 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9327: [
+    { id: 1, nickname: "십육일게이트", holdingLabel: "관망", content: "FOMC랑 클래리티법 표결 겹치는 한주", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "안전자산화요", holdingLabel: "관망", content: "금은 내리고 BTC는 오르고 엇갈림", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9328: [
+    { id: 1, nickname: "칠구삼구구", holdingLabel: "BTC 보유", content: "탐욕공포지수 70이면 탐욕구간", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "이티에프유출", holdingLabel: "관심", content: "BTC ETF는 빠지고 ETH ETF는 들어옴", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9329: [
+    { id: 1, nickname: "금사천이칠팔", holdingLabel: "금 ETF", content: "중앙은행 순매수는 62%나 늘었음", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "실질금리부담", holdingLabel: "관심", content: "10년물 4.97~4.99%가 기회비용 키움", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9330: [
+    { id: 1, nickname: "이더이오일삼", holdingLabel: "관심", content: "저항선 2542~2550이 다음 관문", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "클래리티법", holdingLabel: "관심", content: "초당적 지지 부족해서 통과 불확실", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9331: [
+    { id: 1, nickname: "유가백팔달러", holdingLabel: "관심", content: "얀부항 비축유 5~7일치뿐이라 급함", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "복구삼육주", holdingLabel: "관심", content: "복구는 3~6주 걸린다는 전망", createdAt: T15 + 1200000, likes: 4 },
+  ],
   9310: [
     { id: 1, nickname: "십육일게이트", holdingLabel: "관망", content: "금리 오르면 무이자자산 다 부담", createdAt: T14 + 600000, likes: 5 },
     { id: 2, nickname: "세이프브리핑", holdingLabel: "관망", content: "달러·금리가 공통 변수라 다 같이 움직임", createdAt: T14 + 1200000, likes: 4 },
@@ -861,6 +917,11 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9332, symbol: "한장요약", nickname: "부동산팔육주", holdingLabel: "관심", content: "서울 86주 연속 상승·종부세 14억/12억 확정·월세보증금 6개월째↑", createdAt: T15 - 0, likes: 44, comments: 2, },
+  { id: 9333, symbol: "매매", nickname: "팔육주기록", holdingLabel: "관심", content: "서울아파트 86주 연속 상승, 문재인정부때 기록 넘음. 강남3구는 5주째 하락", createdAt: T15 - 1800000, likes: 43, comments: 2, },
+  { id: 9334, symbol: "종부세", nickname: "종부세일사일이", holdingLabel: "관심", content: "1주택 종부세 공제 실거주14억·비거주12억 확정. 9억 축소안은 철회됨", createdAt: T15 - 3600000, likes: 42, comments: 2, },
+  { id: 9335, symbol: "월세", nickname: "월세일구오칠", holdingLabel: "월세", content: "서울 월세보증금 6개월 연속↑, 1.96억. 토허구역 실거주의무가 배경", createdAt: T15 - 5400000, likes: 41, comments: 2, },
+  { id: 9336, symbol: "임대주택", nickname: "보편형삼육천", holdingLabel: "관심", content: "국토부 내년 임대주택 3만6천가구 공급, 6.2조 투입. 절반이상 청년배정", createdAt: T15 - 7200000, likes: 40, comments: 2, },
   { id: 9316, symbol: "한장요약", nickname: "부동산브리핑", holdingLabel: "관심", content: "전세매물 -12.2%, 매매 -60%, 월세 160만원. 세 신호 다 다른 방향", createdAt: T14 - 0, likes: 44, comments: 2, },
   { id: 9317, symbol: "전세", nickname: "노도강매물감소", holdingLabel: "전세", content: "중랑 -71.6%로 제일 크게 줄음. 8월 전셋값 7.1억 또 최고치", createdAt: T14 - 1800000, likes: 43, comments: 2, },
   { id: 9318, symbol: "매매", nickname: "강남비중구일", holdingLabel: "관심", content: "8월 거래 2322건, 강남3구 비중 9.1%로 역대최저. 분당·광명이 더 올랐음", createdAt: T14 - 3600000, likes: 42, comments: 2, },
@@ -936,6 +997,26 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9332: [
+    { id: 1, nickname: "강북외곽강세", holdingLabel: "관심", content: "강북 강세·강남 약세 양극화가 특징", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "세부담상한", holdingLabel: "관심", content: "세부담상한 150% 유지된게 완화포인트", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9333: [
+    { id: 1, nickname: "팔육주기록", holdingLabel: "관심", content: "누적상승률은 옛 기록의 2배(17.164%)", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "재건축조정", holdingLabel: "관심", content: "강남·서초는 재건축 매물 조정중", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9334: [
+    { id: 1, nickname: "종부세일사일이", holdingLabel: "관심", content: "정기국회 심사에서 세부기준 또 바뀔수 있음", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "전세대출제한", holdingLabel: "관심", content: "내년1월 비거주 전세대출제한도 같이 봐야함", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9335: [
+    { id: 1, nickname: "월세일구오칠", holdingLabel: "월세", content: "반전세 확대가 보증금 상승 배경", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "강동이칠삼", holdingLabel: "관심", content: "강동구가 273만원으로 가장 크게 뜀", createdAt: T15 + 1200000, likes: 4 },
+  ],
+  9336: [
+    { id: 1, nickname: "보편형삼육천", holdingLabel: "관심", content: "착공부터 입주까지 몇년 걸림", createdAt: T15 + 600000, likes: 5 },
+    { id: 2, nickname: "역세권중형", holdingLabel: "관심", content: "역세권·중형평수로 기존 임대와 다름", createdAt: T15 + 1200000, likes: 4 },
+  ],
   9316: [
     { id: 1, nickname: "키맞춤성북", holdingLabel: "관심", content: "평균만 보면 강남 조정 안보임", createdAt: T14 + 600000, likes: 5 },
     { id: 2, nickname: "가을이사", holdingLabel: "관심", content: "노원·성북 강북 전세가 더 뜀", createdAt: T14 + 1200000, likes: 4 },

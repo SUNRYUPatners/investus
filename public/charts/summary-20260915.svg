@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.15 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">앤스로픽이 럼 그룹과 137억 달러 6년 컴퓨팅 계약을 맺었습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">조지아주 데이터센터 GPU를 6년간 3개 구간으로 나눠 공급받습니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">137억</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">앤스로픽이 2개 분기 연속 흑자를 내며 나스닥 상장을 준비 중입니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">2분기 매출은 1년 전보다 14배 늘어난 115억 달러였습니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">2개분기</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">테슬라 로보택시(사이버캡) 차량이 1,001대로 늘었습니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">8개 도시에서 누적 트립 7,345회를 기록했습니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">1,001대</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">해외 투자자의 미국 증시 비중이 60%로 역대 최고치를 찍었습니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">1953년 집계 이후 가장 높은 수준입니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">60%</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">미국 국채 이자 비용이 연 1.7조 달러까지 늘어날 수 있습니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">금리가 유지되면 2028년 11월까지 사회보장 지출을 넘어설 수 있습니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">1.7조</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#fb7185"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb7185">그록봇 하루 이용자 수가 닷새 만에 80% 넘게 늘었습니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">같은 시기 그록 4.8도 학습을 마쳐가고 있습니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb7185" text-anchor="end">+80%</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">구글 웨이모가 라스베이거스에서 15번째 서비스 도시로 확장했습니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">같은 지역에서 테슬라·우버도 곧 서비스를 시작할 예정입니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">15번째</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 앤스로픽 137억 · 나스닥 상장 · 사이버캡 1,001대 · 해외자금 60% · 국채이자 1.7조 · 그록봇 +80% · 웨이모 15번째</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
