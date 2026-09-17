@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#1a1205"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="124" height="38" rx="19" fill="#f59e0b30" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="102" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#f59e0b" text-anchor="middle">SK HYNIX</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.17</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">SK Hynix jumped 4.08% to 1,759,000 won after a labor deal</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">passed and US-plant talks surfaced</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="234" font-family="Arial" font-size="80" text-anchor="middle">💾</text>
+  <text x="540" y="318" font-family="Arial Black,Arial" font-size="60" font-weight="900" fill="#f59e0b" text-anchor="middle">₩1,759,000</text>
+  <text x="540" y="358" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Sept 16 close, up 69,000 won (4.08%). The session high nearly reached 1,760,000 won.</text>
+  <line x1="80" y1="406" x2="1000" y2="406" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="210" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Labor deal</text>
+  <text x="210" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">57.08%</text>
+  <text x="210" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Yes vote on the revised pact</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Cash/stock bonus split 50:50</text>
+  <rect x="390" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="540" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">US output</text>
+  <text x="540" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">Intel plant</text>
+  <text x="540" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Ohio lease under review</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Would be first US memory line</text>
+  <rect x="720" y="418" width="300" height="176" rx="16" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <text x="870" y="452" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">Flows</text>
+  <text x="870" y="500" font-family="Arial Black,Arial" font-size="32" font-weight="900" fill="#f59e0b" text-anchor="middle">-₩441B</text>
+  <text x="870" y="532" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">Foreign selling</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Institutions bought ₩368B</text>
+  <rect x="60" y="612" width="960" height="172" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle" letter-spacing="2">Two headlines in one session</text>
+  <text x="100" y="686" font-family="Arial" font-size="23" fill="#e5e7eb">15,297 production-line union members voted, a 95.37% turnout.</text>
+  <text x="100" y="724" font-family="Arial" font-size="23" fill="#e5e7eb">Cash in the profit-sharing bonus rose from 40% to 50%, ending a three-week…</text>
+  <text x="100" y="762" font-family="Arial" font-size="23" fill="#e5e7eb">In the afternoon, reports said SK Hynix is exploring leasing Intel's Ohio plant.</text>
+  <rect x="60" y="800" width="960" height="148" rx="14" fill="#201408" stroke="#f59e0b" stroke-width="1"/>
+  <text x="540" y="830" font-family="Arial" font-size="18" fill="#f59e0b" text-anchor="middle">Why it matters</text>
+  <text x="540" y="862" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">Settling labor talks before the holiday week reduces production-disruption risk. Leasing Intel's plant is still only</text>
+  <text x="540" y="884" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">talks, but it would be SK Hynix's first memory output on US soil. Next: watch for a concrete contract and whether</text>
+  <text x="540" y="906" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">foreign selling stops.</text>
+  <text x="540" y="1000" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SK Hynix · Stock · 2026.09.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="150" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="115" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">테슬라 · FSD</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.17</text>
+  <text x="540" y="108" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">테슬라 FSD가 스페인 전역에서 2년간 46만km를 달리며 검증됐고,</text>
+  <text x="540" y="144" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">유명 투자자도 극찬했습니다</text>
+  <line x1="80" y1="152" x2="1000" y2="152" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="220" font-family="Arial" font-size="64" text-anchor="middle">🇪🇸</text>
+  <text x="540" y="290" font-family="Arial Black,Arial" font-size="52" font-weight="900" fill="#4ade80" text-anchor="middle">2년 · 46만km</text>
+  <text x="540" y="334" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">FSD(완전자율주행 소프트웨어, 운전자 감독 필요)는 스페인 전역 도로에서 2년간 46만km(약 28.6만마일)를 달리며</text>
+  <text x="540" y="358" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">데이터를 쌓았습니다.</text>
+  <line x1="80" y1="388" x2="1000" y2="388" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">테스트 기간</text>
+  <text x="210" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">2년</text>
+  <text x="210" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">스페인 전역 시험</text>
+  <text x="210" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">감독 하 자율주행(Supervised)</text>
+  <rect x="390" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">주행 거리</text>
+  <text x="540" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">46만km</text>
+  <text x="540" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">약 28.6만마일</text>
+  <text x="540" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">다양한 도로·기후 포함</text>
+  <rect x="720" y="400" width="300" height="200" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="436" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle">투자자 반응</text>
+  <text x="870" y="486" font-family="Arial Black,Arial" font-size="30" font-weight="900" fill="#4ade80" text-anchor="middle">"믿기지 않는다"</text>
+  <text x="870" y="524" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">론 배런(CNBC)</text>
+  <text x="870" y="566" font-family="Arial" font-size="15" fill="#d1d5db" text-anchor="middle">모두가 원할 것이라 평가</text>
+  <rect x="60" y="616" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="650" font-family="Arial" font-size="18" fill="#6b7280" text-anchor="middle" letter-spacing="2">스페인 시험 요약</text>
+  <text x="100" y="668" font-family="Arial" font-size="21" fill="#e5e7eb">2년째 진행 중인 감독형 FSD 시험, 손짓 신호까지 인식</text>
+  <text x="100" y="704" font-family="Arial" font-size="21" fill="#e5e7eb">고속도로·시내 도로를 포함한 실제 교통 상황에서 촬영</text>
+  <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">유명 투자자 론 배런은 CNBC에서 "모두가 원할 기술"이라 평가</text>
+  <rect x="60" y="780" width="960" height="210" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="810" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">자율주행 소프트웨어는 다양한 도로·날씨에서 누적한 주행거리가 늘수록 안전성 검증이 쌓입니다. 스페인처럼 새로운 지역에서</text>
+  <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">장기간 데이터를 모으는 것은 유럽 내 정식 서비스 승인으로 가는 사전 단계로 볼 수 있습니다.</text>
+  <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · FSD 스페인 · 2026.09.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

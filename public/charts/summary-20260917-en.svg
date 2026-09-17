@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.17 Daily Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#ef4444"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ef4444">The Fed raised rates 25bp, its first hike since 2023</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">A unanimous 12-0 vote at new Chair Kevin Warsh’s first meeting.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ef4444" text-anchor="end">3.75-4%</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">Tesla is wiring power for 840 daily charges at its Austin hub</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">A Sept 2 permit filing suggests Cybercab fleet expansion is coming.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">430-840/day</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">SpaceX’s market cap jumped $50B on Starship flight news</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">Shares rose more than 5% in a day after the Sept 22 flight 14 announcement.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">+$51.8B</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">Tesla crossed 200,000 registered vehicles in Norway</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">The Model Y alone now makes up more than half of all Teslas there.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">200,000</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">Morgan Stanley sees Nvidia taking 37.3% of HBM demand</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">Google gets 36% and AMD 12.1% — together about 85% of the market.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">37.3%</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#201408" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#f59e0b"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#f59e0b">SK Hynix explores US output by leasing Intel’s Ohio plant</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">It would be SK Hynix’s first-ever memory chip production on US soil.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">US talks</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">Top US lender UWM posted its 8th straight red month</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">Its longest losing streak on record, following its biggest one-day drop ever.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">8 months</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: Fed +25bp · Austin robotaxi power · SpaceX cap jump · Norway 200K · Nvidia HBM 37% · SK Hynix US output ·</text>
+  <text x="540" y="1032" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">UWM losing streak</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

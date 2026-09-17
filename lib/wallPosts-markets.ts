@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T17 = 1789599600000; // 2026-09-17 08:00 KST
 const T16 = 1789513200000; // 2026-09-16 08:00 KST
 const T15 = 1789426800000; // 2026-09-15 08:00 KST
 const T14 = 1789340400000; // 2026-09-14 08:00 KST
@@ -21,6 +22,11 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9351, symbol: "코스피", nickname: "육칠일칠반등", holdingLabel: "인덱스 보유", content: "코스피 5일만에 반등 6717.97(+1.37%). 외인은 6일째 1.68조 팔았는데 기관이 1.21조 받아냄", createdAt: T17 - 0, likes: 44, comments: 2, },
+  { id: 9352, symbol: "삼성전자", nickname: "삼전이나흘끊음", holdingLabel: "삼성전자 보유", content: "삼성전자 25만3500원 +2.01%. 나흘하락 끊음. 외인 4906억 팔고 기관 4121억 삼", createdAt: T17 - 1800000, likes: 43, comments: 2, },
+  { id: 9353, symbol: "SK하이닉스", nickname: "닉스임단협가결", holdingLabel: "하이닉스 보유", content: "하이닉스 +4.08% 175만9천. 임단협 57.08% 가결 + 인텔 오하이오 공장 임대검토", createdAt: T17 - 3600000, likes: 42, comments: 2, },
+  { id: 9354, symbol: "삼성바이오로직스", nickname: "바이오공개매수", holdingLabel: "관심종목", content: "삼성바이오 폴리펩타이드 공개매수 시작. 주당 44.31프랑, 전량하면 2.7조. 10/12까지", createdAt: T17 - 5400000, likes: 41, comments: 2, },
+  { id: 9355, symbol: "현대차", nickname: "현대차이삼육", holdingLabel: "현대차 관심", content: "현대차 362000원 -1.36%. 코스피는 올랐는데 자동차만 반대로 감", createdAt: T17 - 7200000, likes: 40, comments: 2, },
   { id: 9337, symbol: "코스피", nickname: "육육이칠사일", holdingLabel: "인덱스 보유", content: "코스피 4일연속 하락 6627.26. 외인 5일째 순매도(1.57조)", createdAt: T16 - 0, likes: 44, comments: 2, },
   { id: 9338, symbol: "삼성전자", nickname: "삼전이오이공", holdingLabel: "삼성전자 보유", content: "삼성전자 장중 25만2천까지 갔다가 결국 -0.20%로 마감. 반등 실패", createdAt: T16 - 1800000, likes: 43, comments: 2, },
   { id: 9339, symbol: "SK하이닉스", nickname: "하이닉스일칠이구", holdingLabel: "하이닉스 보유", content: "하이닉스도 172만9천까지 반등했다가 -0.41%. 외인 순매도 1위(1조27억)", createdAt: T16 - 3600000, likes: 42, comments: 2, },
@@ -137,6 +143,26 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9351: [
+    { id: 1, nickname: "기관만이조일", holdingLabel: "관망", content: "외인 6일째 파는데 기관이 지수 지킨거임", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "환율일삼육팔", holdingLabel: "관심종목", content: "환율은 9.2원 오른 1368.6원, 주가랑 반대로 감", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9352: [
+    { id: 1, nickname: "삼전이나흘끊음", holdingLabel: "삼성전자 보유", content: "장중 247500까지 찍고 254000까지 회복", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "에이치비엠가이던스", holdingLabel: "관심종목", content: "3분기 HBM 출하 숫자 나오면 수급이랑 따로 봐야함", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9353: [
+    { id: 1, nickname: "닉스임단협가결", holdingLabel: "하이닉스 보유", content: "현금 50 주식 50으로 바꿔서 3주만에 통과", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "오하이오임대", holdingLabel: "관심종목", content: "미국생산은 아직 검토단계, 계약 나오면 그때 숫자", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9354: [
+    { id: 1, nickname: "바이오공개매수", holdingLabel: "관심종목", content: "최대주주 55.65%는 이미 응모 확약했음", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "십일월종결", holdingLabel: "관심종목", content: "11월말 인수 끝나면 상장폐지 추진한다더라", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9355: [
+    { id: 1, nickname: "현대차이삼육", holdingLabel: "현대차 관심", content: "반도체만 오르고 자동차는 유가 부담", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "기아십이만", holdingLabel: "관심종목", content: "기아 정규장 121800, 애프터는 더 약했음", createdAt: T17 + 1200000, likes: 4 },
+  ],
   9337: [
     { id: 1, nickname: "개인팔삼일구", holdingLabel: "관망", content: "개인·기타법인이 받쳤는데도 4일째 못 막음", createdAt: T16 + 600000, likes: 5 },
     { id: 2, nickname: "미국채오공사", holdingLabel: "관심종목", content: "미10년물 2007년 이후 최고치가 배경", createdAt: T16 + 1200000, likes: 4 },
@@ -544,6 +570,11 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9356, symbol: "한장요약", nickname: "연준인상세이프", holdingLabel: "관망", content: "연준 0.25%p 인상 뒤 BTC 75355까지 찍고 75813 회복. 금은 4324로 반등", createdAt: T17 - 0, likes: 44, comments: 2, },
+  { id: 9357, symbol: "비트코인", nickname: "비트칠오팔일삼", holdingLabel: "BTC 보유", content: "발표 한시간만에 75355 찍고 75813으로 되돌림. 이미 90% 반영이라 충격 짧았음", createdAt: T17 - 1800000, likes: 43, comments: 2, },
+  { id: 9358, symbol: "금", nickname: "금사삼이사", holdingLabel: "금 ETF", content: "금 4324달러 +0.7%. 오전에 4288까지 밀렸다가 달러약세에 반전", createdAt: T17 - 3600000, likes: 42, comments: 2, },
+  { id: 9359, symbol: "이더리움", nickname: "이더이사백", holdingLabel: "관심", content: "이더 2400선 -4%. BTC보다 더 흔들림. ETF도 1.42억 빠짐", createdAt: T17 - 5400000, likes: 41, comments: 2, },
+  { id: 9360, symbol: "원유", nickname: "유가백이불", holdingLabel: "관심", content: "WTI 102.43불 -3.2%. 100불 넘긴 다음날 숨고르기. API랑 EIA 재고가 반대로 나옴", createdAt: T17 - 7200000, likes: 40, comments: 2, },
   { id: 9342, symbol: "한장요약", nickname: "클래리티부결", holdingLabel: "관망", content: "클래리티법 상원 부결·BTC 4%급락·XRP 15%↓·유가4개월최고", createdAt: T16 - 0, likes: 44, comments: 2, },
   { id: 9343, symbol: "비트코인", nickname: "비트칠오팔오이", holdingLabel: "BTC 보유", content: "클래리티법 부결직후 BTC 4.37%급락 7.58만불. ETF는 오히려 순유입", createdAt: T16 - 1800000, likes: 43, comments: 2, },
   { id: 9344, symbol: "엑스알피", nickname: "엑스알피일이칠", holdingLabel: "관심", content: "XRP 14.58%급락 1.27불, 주요코인중 최대낙폭. 표결전엔 2불기대감있었음", createdAt: T16 - 3600000, likes: 42, comments: 2, },
@@ -641,6 +672,26 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9356: [
+    { id: 1, nickname: "워시물가발언", holdingLabel: "관망", content: "인상 자체보다 연내 추가인상 16명이 더 큼", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "은육사불", holdingLabel: "관망", content: "은은 장중 64.4불까지, 금보다 출렁임 컸음", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9357: [
+    { id: 1, nickname: "비트칠오팔일삼", holdingLabel: "BTC 보유", content: "7.5만 구간 오늘도 지키는지가 관건", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "이티에프유출", holdingLabel: "관심", content: "15일 현물ETF 4.5억 빠짐, 하루짜리인지 봐야함", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9358: [
+    { id: 1, nickname: "금사삼이사", holdingLabel: "금 ETF", content: "200일선 4321이 지지로 거론됨", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "중앙은행매수", holdingLabel: "관심", content: "2분기 중앙은행 순매수 1년전보다 62% 늘었음", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9359: [
+    { id: 1, nickname: "이더이사백", holdingLabel: "관심", content: "청산 3.19억으로 메이저 중 가장 컸음", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "클래리티여파", holdingLabel: "관심", content: "규제법 막힌 다음날이라 금리보다 예민했음", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9360: [
+    { id: 1, nickname: "유가백이불", holdingLabel: "관심", content: "API는 재고 +710만, EIA는 -64만이라 해석이 갈림", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "사우디복구", holdingLabel: "관심", content: "송유관 복구 안되면 100불 아래 안착 어려움", createdAt: T17 + 1200000, likes: 4 },
+  ],
   9342: [
     { id: 1, nickname: "십육일게이트", holdingLabel: "관망", content: "영구폐기 아니라 절차표결 실패일뿐", createdAt: T16 + 600000, likes: 5 },
     { id: 2, nickname: "재표결가능", holdingLabel: "관망", content: "양원조정 절차 남아있어서 재추진여지 있음", createdAt: T16 + 1200000, likes: 4 },
@@ -968,6 +1019,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9361, symbol: "한장요약", nickname: "이주십팔만", holdingLabel: "관심", content: "서울 정비사업 이주 18만가구 추산. 전세매물 13%↓, 정부는 착공 23.4만호 지원", createdAt: T17 - 0, likes: 44, comments: 2, },
+  { id: 9362, symbol: "정비사업", nickname: "목동이만육천", holdingLabel: "관심", content: "목동 1~14단지 이주대상 26629가구. 2030년 고도제한 전에 인가받으려 속도냄", createdAt: T17 - 1800000, likes: 43, comments: 2, },
+  { id: 9363, symbol: "전세", nickname: "전세매물삼만칠", holdingLabel: "관심", content: "서울 전월세매물 37386건 1년전보다 13%↓. 대치동은 44.3% 급감", createdAt: T17 - 3600000, likes: 42, comments: 2, },
+  { id: 9364, symbol: "공급정책", nickname: "동의율칠십", holdingLabel: "관심", content: "재개발 조합설립 동의율 75→70%. 이주비대출은 이달 31일부터 완화", createdAt: T17 - 5400000, likes: 41, comments: 2, },
   { id: 9347, symbol: "한장요약", nickname: "토허이구일", holdingLabel: "관심", content: "토허구역 291곳 해제·재초환 46곳 2.17조·실거주유예 1년연장 제안", createdAt: T16 - 0, likes: 44, comments: 2, },
   { id: 9348, symbol: "토지허가", nickname: "토허해제이구일", holdingLabel: "관심", content: "잠삼대청 291곳 토허구역 해제. 재건축14곳만 유지", createdAt: T16 - 1800000, likes: 43, comments: 2, },
   { id: 9349, symbol: "재초환", nickname: "재초환이일칠", holdingLabel: "관심", content: "서울재건축 46곳 재초환 2조1690억 예고. 조합원 반발+행정소송", createdAt: T16 - 3600000, likes: 42, comments: 2, },
@@ -1052,6 +1107,22 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9361: [
+    { id: 1, nickname: "전세칠육일", holdingLabel: "관심", content: "올해 전세 +7.61%, 작년 같은기간의 5배", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "착공대책이주", holdingLabel: "관심", content: "공급 늘리려면 이삿짐이 먼저 나옴", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9362: [
+    { id: 1, nickname: "목동이만육천", holdingLabel: "관심", content: "고도제한 2030년 11월이라 단지들이 서두름", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "순공급칠사", holdingLabel: "관심", content: "재개발 순공급효과가 7.4%밖에 안된다는 분석도 있음", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9363: [
+    { id: 1, nickname: "전세매물삼만칠", holdingLabel: "관심", content: "월세 평균 162만원이 역대 최고라더라", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "갱신계약늘음", holdingLabel: "관심", content: "이사가기 힘드니 그냥 갱신하는 가구 늘고있음", createdAt: T17 + 1200000, likes: 4 },
+  ],
+  9364: [
+    { id: 1, nickname: "동의율칠십", holdingLabel: "관심", content: "동의율 낮춰도 현장 조합설립이 늘어야 의미있음", createdAt: T17 + 600000, likes: 5 },
+    { id: 2, nickname: "이주비삼십일", holdingLabel: "관심", content: "종전·종후 중 큰값으로 LTV 준다는데 31일부터", createdAt: T17 + 1200000, likes: 4 },
+  ],
   9347: [
     { id: 1, nickname: "잠삼대청이구일", holdingLabel: "관심", content: "재건축14곳만 빼고 나머지는 실거주의무 없어짐", createdAt: T16 + 600000, likes: 5 },
     { id: 2, nickname: "재초환반발", holdingLabel: "관심", content: "부담금 수억원대라 조합원 반발 커짐", createdAt: T16 + 1200000, likes: 4 },

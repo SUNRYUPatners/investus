@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#052015"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#34d399"/><stop offset="100%" style="stop-color:#10b981"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="189" height="38" rx="19" fill="#34d39930" stroke="#34d399" stroke-width="1.5"/>
+  <text x="134.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#34d399" text-anchor="middle">삼성바이오로직스</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.17</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">삼성바이오로직스가 스위스 폴리펩타이드그룹 공개매수에 들어가</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">펩타이드 CDMO 인수를 가속합니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <text x="540" y="248" font-family="Arial" font-size="76" text-anchor="middle">🧬</text>
+  <text x="540" y="306" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#f9fafb" text-anchor="middle">약 2조7,000억 원</text>
+  <text x="540" y="344" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">펩타이드 CDMO는 단백질 조각 약을 대신 개발·생산해 주는 사업입니다. 공개매수는 10월 12일까지</text>
+  <text x="540" y="369" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">진행됩니다.</text>
+  <line x1="80" y1="384" x2="1000" y2="384" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="396" width="300" height="196" rx="16" fill="#08251c" stroke="#34d399" stroke-width="2"/>
+  <text x="210" y="448" font-family="Arial" font-size="40" text-anchor="middle">🇨🇭</text>
+  <text x="210" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#34d399" text-anchor="middle">44.31프랑</text>
+  <text x="210" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">주당 매수가격</text>
+  <text x="210" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">전량 응모 시 14.6억 프랑</text>
+  <rect x="390" y="396" width="300" height="196" rx="16" fill="#08251c" stroke="#34d399" stroke-width="2"/>
+  <text x="540" y="448" font-family="Arial" font-size="40" text-anchor="middle">📝</text>
+  <text x="540" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#34d399" text-anchor="middle">55.65%</text>
+  <text x="540" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">최대주주 응모 확약</text>
+  <text x="540" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">드라우프니르 홀딩 지분</text>
+  <rect x="720" y="396" width="300" height="196" rx="16" fill="#08251c" stroke="#34d399" stroke-width="2"/>
+  <text x="870" y="448" font-family="Arial" font-size="40" text-anchor="middle">📅</text>
+  <text x="870" y="502" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#34d399" text-anchor="middle">11월 말</text>
+  <text x="870" y="534" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">최종 인수 목표</text>
+  <text x="870" y="560" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">이후 상장폐지 추진</text>
+  <rect x="60" y="610" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="656" font-family="Arial" font-size="19" fill="#34d399" text-anchor="middle">회사는 펩타이드 위탁개발생산 역량을 가져와 바이오 의약품 생산 범위를 넓히겠다고 밝혔습니다.</text>
+  <rect x="60" y="814" width="960" height="148" rx="14" fill="#08251c" stroke="#34d399" stroke-width="1"/>
+  <text x="540" y="844" font-family="Arial" font-size="18" fill="#34d399" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="876" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">공개매수는 이미 7월에 맺은 인수 계약의 후속 절차입니다. 최대주주가 지분 전량 응모를 약속해 인수 성공 가능성이 높아졌습니다.</text>
+  <text x="540" y="898" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">지분 90%를 넘기면 남은 소수주주 지분도 강제매수할 수 있습니다. 10월 12일 응모 결과와 11월 말 종결 여부를 확인하면 됩니다.</text>
+  <text x="540" y="1002" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">삼성바이오로직스 · 인수 · 2026.09.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

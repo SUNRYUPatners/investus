@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#06121f"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="172" height="38" rx="19" fill="#60a5fa30" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="126" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#60a5fa" text-anchor="middle">엔비디아 · HBM</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.17</text>
+  <text x="540" y="104" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">모건스탠리가 엔비디아의 고대역폭메모리(HBM) 수요 점유율을</text>
+  <text x="540" y="138" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">37.3%로 추산했습니다</text>
+  <line x1="80" y1="146" x2="1000" y2="146" stroke="#1f2937" stroke-width="1"/>
+  <rect x="380" y="160" width="320" height="44" rx="22" fill="rgba(239,68,68,.15)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="540" y="188" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#ef4444" text-anchor="middle">모건스탠리 HBM 수요 전망</text>
+  <rect x="80" y="220" width="920" height="132" rx="18" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <text x="540" y="288" font-family="Arial Black,Arial" font-size="50" font-weight="900" fill="#60a5fa" text-anchor="middle">37.3%</text>
+  <text x="540" y="324" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">HBM(고대역폭메모리)은 AI 반도체에 붙는 고성능 메모리입니다. 엔비디아 한 회사가 전체 수요의 3분의 1 이상을</text>
+  <text x="540" y="346" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">가져간다는 분석입니다.</text>
+  <rect x="80" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="176" y="418" font-family="Arial" font-size="34" text-anchor="middle">🟦</text>
+  <text x="176" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">37.3%</text>
+  <text x="176" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">엔비디아</text>
+  <text x="176" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">HBM 수요 점유율 1위</text>
+  <rect x="312" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="408" y="418" font-family="Arial" font-size="34" text-anchor="middle">🔴</text>
+  <text x="408" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">36%</text>
+  <text x="408" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">구글</text>
+  <text x="408" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">자체 AI 칩용 수요</text>
+  <rect x="544" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="640" y="418" font-family="Arial" font-size="34" text-anchor="middle">🟠</text>
+  <text x="640" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">12.1%</text>
+  <text x="640" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">AMD</text>
+  <text x="640" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">경쟁 AI 가속기용</text>
+  <rect x="776" y="372" width="192" height="176" rx="16" fill="#0a1420" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="872" y="418" font-family="Arial" font-size="34" text-anchor="middle">⚪</text>
+  <text x="872" y="462" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#60a5fa" text-anchor="middle">15%</text>
+  <text x="872" y="492" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">그 외 전체</text>
+  <text x="872" y="514" font-family="Arial" font-size="14" fill="#6b7280" text-anchor="middle">나머지 업체 합산</text>
+  <rect x="80" y="566" width="920" height="112" rx="14" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="606" font-family="Arial" font-size="21" fill="#e5e7eb" text-anchor="middle">엔비디아·구글·AMD 세 회사가 전체 HBM 수요의 약 85%를 차지한다는 계산이 나옵니다.</text>
+  <text x="540" y="644" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">HBM을 만드는 SK하이닉스·마이크론·삼성전자 입장에서는 이 세 회사가 가장 중요한 고객이 되는 셈입니다.</text>
+  <rect x="60" y="690" width="960" height="148" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="736" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">모건스탠리 애널리스트 베스 킨디그는 "엔비디아 37.3%, 구글 36%, AMD 12.1%로 15%만 다른 업체들에 남는다"고</text>
+  <text x="540" y="760" font-family="Arial" font-size="17" fill="#60a5fa" text-anchor="middle">분석했습니다.</text>
+  <rect x="60" y="850" width="960" height="168" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="1"/>
+  <text x="540" y="880" font-family="Arial" font-size="18" fill="#60a5fa" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="908" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">HBM은 생산 능력이 제한적인 고부가 메모리라, 큰 고객사의 수요 비중이 곧 메모리 회사들의 매출 방향을 좌우합니다. 엔비디아의</text>
+  <text x="540" y="930" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">점유율이 유지되는지, 구글·AMD의 자체 칩 수요가 얼마나 커지는지가 다음 관전 포인트입니다.</text>
+  <text x="540" y="1034" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">엔비디아 · HBM 수요 · 2026.09.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

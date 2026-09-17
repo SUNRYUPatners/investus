@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#061209"/></linearGradient>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#g)"/>
+  <rect x="40" y="20" width="187" height="38" rx="19" fill="#4ade8030" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="133.5" y="44" font-family="Arial Black,Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">테슬라 · 옵티머스</text>
+  <text x="540" y="46" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <rect x="900" y="20" width="148" height="38" rx="19" fill="#1f2937" stroke="#374151"/>
+  <text x="974" y="44" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">2026.09.17</text>
+  <text x="540" y="106" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">테슬라의 인간형 로봇 옵티머스가 스타링크를 핵심 통신망으로 쓸</text>
+  <text x="540" y="140" font-family="Arial Black,Arial" font-size="28" font-weight="900" fill="#f9fafb" text-anchor="middle">것이라는 관측이 나왔습니다</text>
+  <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
+  <rect x="220" y="166" width="640" height="46" rx="23" fill="#4ade8018" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="196" font-family="Arial" font-size="20" fill="#4ade80" text-anchor="middle">"스타링크는 옵티머스에 선택이 아니라 필수다" — 그윈 숏웰 인용</text>
+  <text x="540" y="292" font-family="Arial" font-size="66" text-anchor="middle">🤖</text>
+  <text x="540" y="352" font-family="Arial Black,Arial" font-size="38" font-weight="900" fill="#4ade80" text-anchor="middle">옵티머스는 스타링크를 씁니다</text>
+  <text x="540" y="392" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">스타링크는 스페이스X의 위성 인터넷망입니다. 스페이스X 사장 숏웰의 9월 15일 발언에 따르면 옵티머스</text>
+  <text x="540" y="417" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">두뇌의 일부가 이미 스타마인드(스타링크 기반 통신 체계)에 들어 있다는 것입니다.</text>
+  <line x1="80" y1="436" x2="1000" y2="436" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="450" width="300" height="178" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="496" font-family="Arial" font-size="34" text-anchor="middle">🧠</text>
+  <text x="210" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">스타마인드</text>
+  <text x="210" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">로봇 두뇌 일부</text>
+  <text x="210" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">통신이 부가기능 아닌 핵심</text>
+  <rect x="390" y="450" width="300" height="178" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="540" y="496" font-family="Arial" font-size="34" text-anchor="middle">📡</text>
+  <text x="540" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">두 가지 방식</text>
+  <text x="540" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">축소형 위성 단말 또는</text>
+  <text x="540" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">5G→스타링크 중계</text>
+  <rect x="720" y="450" width="300" height="178" rx="16" fill="#0a1a0a" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">🔗</text>
+  <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#4ade80" text-anchor="middle">둘 다 가능</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">혼합 구성도 검토</text>
+  <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">아직 확정 방식은 비공개</text>
+  <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
+  <text x="540" y="690" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">숏웰은 "이건 단순한 연결성 이상이다. 옵티머스가 결심하면 네트워크는 더는 로봇이 연결하는 대상이 아니라</text>
+  <text x="540" y="714" font-family="Arial" font-size="19" fill="#4ade80" text-anchor="middle">로봇의 일부가 된다"고 말했습니다.</text>
+  <rect x="60" y="842" width="960" height="172" rx="14" fill="#0a1a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="872" font-family="Arial" font-size="18" fill="#4ade80" text-anchor="middle">왜 중요한가</text>
+  <text x="540" y="900" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">지금까지 스타링크는 주로 인터넷이 닿기 힘든 지역의 통신 수단으로 알려졌습니다. 로봇의 두뇌 통신망으로 쓰인다면 스타링크의</text>
+  <text x="540" y="922" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">활용 범위가 가정·공장용 로봇까지 넓어질 수 있어, 스페이스X와 테슬라 두 회사의 접점이 한층 커지는 대목입니다.</text>
+  <text x="540" y="1030" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">테슬라 · 옵티머스 · 스타링크 · 2026.09.17</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

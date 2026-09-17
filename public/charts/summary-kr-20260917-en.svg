@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.17 Korea Market Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="165" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="165" rx="4" fill="#38bdf8"/>
+  <text x="116" y="181" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#38bdf8">KOSPI rebounded after five sessions to close at 6,717.97</text>
+  <text x="116" y="217" font-family="Arial" font-size="17" fill="#9ca3af">Up 90.71 points (1.37%) as institutions bought ₩1.21T.</text>
+  <text x="985" y="207" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">6,717.97</text>
+  <rect x="60" y="297" width="960" height="165" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="297" width="8" height="165" rx="4" fill="#60a5fa"/>
+  <text x="116" y="356" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#60a5fa">Samsung Electronics snapped a four-day drop at 253,500…</text>
+  <text x="116" y="392" font-family="Arial" font-size="17" fill="#9ca3af">Foreigners sold ₩490.6B but institutions bought ₩412.1B.</text>
+  <text x="985" y="382" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">+2.01%</text>
+  <rect x="60" y="472" width="960" height="165" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="472" width="8" height="165" rx="4" fill="#f59e0b"/>
+  <text x="116" y="531" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#f59e0b">SK Hynix led the rebound, closing at 1,759,000 won</text>
+  <text x="116" y="567" font-family="Arial" font-size="17" fill="#9ca3af">A labor deal passed with 57.08% support and US-plant talks surfaced.</text>
+  <text x="985" y="557" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">+4.08%</text>
+  <rect x="60" y="647" width="960" height="165" rx="14" fill="#052015" stroke="#34d399" stroke-width="2"/>
+  <rect x="60" y="647" width="8" height="165" rx="4" fill="#34d399"/>
+  <text x="116" y="706" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#34d399">Samsung Biologics launched a tender offer for PolyPeptide</text>
+  <text x="116" y="742" font-family="Arial" font-size="17" fill="#9ca3af">It runs through Oct 12, with the 55.65% controlling stake pledged.</text>
+  <text x="985" y="732" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#34d399" text-anchor="end">₩2.7T</text>
+  <rect x="60" y="822" width="960" height="165" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="822" width="8" height="165" rx="4" fill="#fb7185"/>
+  <text x="116" y="881" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb7185">Hyundai Motor fell to 362,000 won, diverging from chips</text>
+  <text x="116" y="917" font-family="Arial" font-size="17" fill="#9ca3af">Decliners still outnumbered advancers 578 to 304.</text>
+  <text x="985" y="907" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb7185" text-anchor="end">-1.36%</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: KOSPI 6,717.97 · Samsung +2.01% · Hynix +4.08% · Bio tender · Hyundai -1.36%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>
