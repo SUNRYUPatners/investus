@@ -16,7 +16,7 @@
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🎓</text>
   <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX 51.5%</text>
-  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">기부금 펀드는 대학이 오래 굴리는 큰 투자 주머니입니다. 하버드가 공개한 2분기 상장·장외 주식 42억 달러</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">기부금 펀드는 대학이 오래 굴리는 큰 투자 주머니입니다. 하버드가 공개한 2분기 미국 상장 주식 약 42억 달러</text>
   <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">가운데 스페이스X가 절반을 넘었습니다.</text>
   <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
   <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">2위 TSMC</text>
@@ -30,8 +30,8 @@
   <rect x="60" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">💰</text>
   <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">42억불</text>
-  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">2분기 주식 포트</text>
-  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">2026년 2분기 공시 기준입니다</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">2분기 상장 주식</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">2026년 6월 30일 공시 기준입니다</text>
   <rect x="390" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">🏦</text>
   <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">TSMC 7.9%</text>
@@ -40,15 +40,15 @@
   <rect x="720" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">📊</text>
   <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">CBRS 5.9%</text>
-  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">세 번째 비중</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Cerebras 3위</text>
   <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">상위 세 종목이 포트의 65%를 넘습니다</text>
   <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="768" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">대학 기부금은 보통 여러 자산에 나눠 담습니다. 한 비상장 로켓 회사가 주식 포트의 절반을 넘는 것은 이례적입니다.</text>
-  <text x="540" y="791" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">하버드가 스페이스X 상장 전 몸값을 오래 들고 가겠다는 뜻으로 읽힙니다.</text>
+  <text x="540" y="768" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">대학 기부금은 보통 여러 자산에 나눠 담습니다. 6월에 상장한 스페이스X가 공시 주식 포트의 절반을 넘는 것은</text>
+  <text x="540" y="791" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">이례적입니다. 상장 후 처음 잡힌 공시라, 이전 분기 표에는 이 줄이 없었습니다.</text>
   <rect x="60" y="874" width="960" height="168" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="904" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">대형 대학 자금이 이 비중을 유지하면 장외 수요가 받쳐 집니다. 반대로 비중을 줄이면 차익 실현 신호가 됩니다. 다음 분기 공시에서</text>
-  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">51.5%가 유지되는지를 보면 됩니다.</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">대형 대학 자금이 이 비중을 유지하면 공개 시장 수요가 받쳐 집니다. 반대로 비중을 줄이면 차익 실현 신호가 됩니다. 다음 분기</text>
+  <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">공시에서 51.5%가 유지되는지를 보면 됩니다.</text>
   <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 하버드 포트 · 2026.09.18</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>

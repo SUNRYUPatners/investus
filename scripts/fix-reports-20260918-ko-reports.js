@@ -204,9 +204,9 @@ module.exports = [
     "color": "purple",
     "subject": "스페이스X",
     "title": "하버드 기부금 펀드가 2분기 42억 달러 주식 중 스페이스X를 51.5% 담았습니다",
-    "summary": "기부금 펀드는 대학이 오래 굴리는 큰 투자 주머니입니다. 하버드가 공개한 2분기 상장·장외 주식 42억 달러 가운데 스페이스X가 51.5%입니다. 2위 TSMC는 7.9%, 3위 라인은 5.9%였습니다.",
-    "titleEn": "Harvard’s endowment held SpaceX as 51.5% of a $4.2 billion Q2 equity book",
-    "summaryEn": "TSMC was 7.9% and a third name 5.9%; one pre-IPO rocket company was more than half the book."
+    "summary": "기부금 펀드는 대학이 오래 굴리는 큰 투자 주머니입니다. 하버드가 공개한 2분기 미국 상장 주식 약 42억 달러 가운데 스페이스X가 51.5%입니다. 2위 TSMC는 7.9%, 3위 Cerebras는 5.9%였습니다.",
+    "titleEn": "Harvard’s endowment held SpaceX as 51.5% of a $4.2 billion Q2 listed-equity book",
+    "summaryEn": "TSMC was 7.9% and Cerebras 5.9%. SpaceX listed in June as SPCX, then took more than half of Harvard’s disclosed U.S. equity book."
   },
   {
     "id": "seed-1735",

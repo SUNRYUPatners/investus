@@ -16,8 +16,8 @@
   <line x1="80" y1="150" x2="1000" y2="150" stroke="#1f2937" stroke-width="1"/>
   <text x="540" y="222" font-family="Arial" font-size="62" text-anchor="middle">🎓</text>
   <text x="540" y="272" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#c084fc" text-anchor="middle">SPCX 51.5%</text>
-  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">An endowment is a university’s long-term investment pool. Harvard’s published Q2</text>
-  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">listed-and-private equity book of $4.2 billion had SpaceX as more than half.</text>
+  <text x="540" y="308" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">An endowment is a university’s long-term investment pool. Harvard’s published Q2 U.S.</text>
+  <text x="540" y="333" font-family="Arial" font-size="19" fill="#9ca3af" text-anchor="middle">listed-equity book of about $4.2 billion had SpaceX as more than half.</text>
   <rect x="60" y="356" width="420" height="168" rx="16" fill="#0a0a14" stroke="#374151" stroke-width="1.5"/>
   <text x="270" y="400" font-family="Arial" font-size="20" fill="#6b7280" text-anchor="middle">No.2 TSMC</text>
   <text x="270" y="460" font-family="Arial Black,Arial" font-size="44" font-weight="900" fill="#9ca3af" text-anchor="middle">7.9%</text>
@@ -30,8 +30,8 @@
   <rect x="60" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="210" y="592" font-family="Arial" font-size="32" text-anchor="middle">💰</text>
   <text x="210" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">$4.2B</text>
-  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Q2 equity book</text>
-  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">As disclosed for Q2 2026</text>
+  <text x="210" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Q2 listed book</text>
+  <text x="210" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">As of the June 30, 2026 filing</text>
   <rect x="390" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="540" y="592" font-family="Arial" font-size="32" text-anchor="middle">🏦</text>
   <text x="540" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">TSMC 7.9%</text>
@@ -40,14 +40,14 @@
   <rect x="720" y="548" width="300" height="164" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="1.5"/>
   <text x="870" y="592" font-family="Arial" font-size="32" text-anchor="middle">📊</text>
   <text x="870" y="634" font-family="Arial Black,Arial" font-size="24" font-weight="900" fill="#c084fc" text-anchor="middle">CBRS 5.9%</text>
-  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Third-largest line</text>
+  <text x="870" y="662" font-family="Arial" font-size="17" fill="#9ca3af" text-anchor="middle">Cerebras third</text>
   <text x="870" y="686" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Top three names exceed 65%</text>
   <rect x="60" y="722" width="960" height="142" rx="16" fill="#0f172a" stroke="#374151"/>
-  <text x="540" y="768" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">Endowments usually spread bets. One pre-IPO rocket company above 50% of the equity book is unusual. It</text>
-  <text x="540" y="791" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">reads as Harvard choosing to live with SpaceX’s private-market price for longer.</text>
+  <text x="540" y="768" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">Endowments usually spread bets. SpaceX listed in June, then showed up as more than half of Harvard’s</text>
+  <text x="540" y="791" font-family="Arial" font-size="17" fill="#c084fc" text-anchor="middle">disclosed equity book. Prior filings could not show that line because the shares were not yet listed.</text>
   <rect x="60" y="874" width="960" height="168" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="904" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">Why it matters</text>
-  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">If a large university keeps this weight, secondary demand has a bid. A cut would look like profit-taking. Watch</text>
+  <text x="540" y="932" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">If a large university keeps this weight, public-market demand has a bid. A cut would look like profit-taking. Watch</text>
   <text x="540" y="954" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">whether 51.5% still prints in the next quarterly filing.</text>
   <text x="540" y="1056" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">SpaceX · Harvard book · 2026.09.18</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>
