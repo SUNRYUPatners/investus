@@ -1,6 +1,7 @@
 import type { Post, Comment } from "@/lib/wallPosts";
 
 const T = 1787698800000; // 2026-08-26 08:00 KST
+const T18 = 1789686000000; // 2026-09-18 08:00 KST
 const T17 = 1789599600000; // 2026-09-17 08:00 KST
 const T16 = 1789513200000; // 2026-09-16 08:00 KST
 const T15 = 1789426800000; // 2026-09-15 08:00 KST
@@ -22,6 +23,12 @@ const T27 = 1787785200000; // 2026-08-27 08:00 KST
 
 /** 한국 종토방 — 심볼 자리에 종목명(한글) 사용 */
 export const MOCK_POSTS_KR: Post[] = [
+  { id: 9365, symbol: "코스피", nickname: "육칠일오보합", holdingLabel: "인덱스 보유", content: "코스피 6715.41(-0.04%) 보합. 외인 2.28조 팔고 개인 4136억 기관 1588억 받아냄", createdAt: T18 - 0, likes: 44, comments: 2, },
+  { id: 9366, symbol: "삼성전자", nickname: "삼전이오만이천", holdingLabel: "삼성전자 보유", content: "삼성전자 25만2500원 -0.39%. 장중 25만9천까지 갔다가 외인 5626억에 밀림", createdAt: T18 - 1800000, likes: 43, comments: 2, },
+  { id: 9367, symbol: "SK하이닉스", nickname: "닉스일조이천", holdingLabel: "하이닉스 보유", content: "하이닉스 174만5천 -0.80%. 외인이 이 종목만 1.23조 팜. 전날 +4% 숨고르기", createdAt: T18 - 3600000, likes: 42, comments: 2, },
+  { id: 9368, symbol: "현대차", nickname: "현대차삼육삼", holdingLabel: "현대차 관심", content: "현대차 363000원 +0.28%. 어제 -1.36% 하루만에 되돌림. 유가 조정 덕봄", createdAt: T18 - 5400000, likes: 41, comments: 2, },
+  { id: 9369, symbol: "KB금융", nickname: "케이비일사일", holdingLabel: "KB금융 보유", content: "KB금융 +1.41% 178700원. 연준인상 다음날 은행만 강함. 코스피는 보합", createdAt: T18 - 7200000, likes: 40, comments: 2, },
+  { id: 9370, symbol: "코스피", nickname: "코스닥팔이이", holdingLabel: "관심종목", content: "코스닥은 822.18(+0.76%)로 코스피랑 방향 갈림. 환율은 1382원대", createdAt: T18 - 9000000, likes: 39, comments: 2, },
   { id: 9351, symbol: "코스피", nickname: "육칠일칠반등", holdingLabel: "인덱스 보유", content: "코스피 5일만에 반등 6717.97(+1.37%). 외인은 6일째 1.68조 팔았는데 기관이 1.21조 받아냄", createdAt: T17 - 0, likes: 44, comments: 2, },
   { id: 9352, symbol: "삼성전자", nickname: "삼전이나흘끊음", holdingLabel: "삼성전자 보유", content: "삼성전자 25만3500원 +2.01%. 나흘하락 끊음. 외인 4906억 팔고 기관 4121억 삼", createdAt: T17 - 1800000, likes: 43, comments: 2, },
   { id: 9353, symbol: "SK하이닉스", nickname: "닉스임단협가결", holdingLabel: "하이닉스 보유", content: "하이닉스 +4.08% 175만9천. 임단협 57.08% 가결 + 인텔 오하이오 공장 임대검토", createdAt: T17 - 3600000, likes: 42, comments: 2, },
@@ -143,6 +150,30 @@ export const MOCK_POSTS_KR: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
+  9365: [
+    { id: 1, nickname: "외인이조이팔", holdingLabel: "관망", content: "반도체 팔아서 지수 보합 만든거임", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "상승사오삼", holdingLabel: "관심종목", content: "오른종목 453 내린종목 398, 체감은 지수보다 나음", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9366: [
+    { id: 1, nickname: "삼전이오만이천", holdingLabel: "삼성전자 보유", content: "고가 259000 찍은건 매수세가 죽은건 아님", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "에이치비엠출하", holdingLabel: "관심종목", content: "3분기 HBM 숫자 나오면 수급이랑 따로 봐야함", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9367: [
+    { id: 1, nickname: "닉스일조이천", holdingLabel: "하이닉스 보유", content: "전날 임단협 가결 호재 하루만에 수급에 밀림", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "오하이오는검토", holdingLabel: "관심종목", content: "미국생산은 아직 계약 전, 178만5천 회복이 단기확인", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9368: [
+    { id: 1, nickname: "현대차삼육삼", holdingLabel: "현대차 관심", content: "반도체 쉴때 자동차 오르는 로테이션", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "유가백일불", holdingLabel: "관심종목", content: "WTI 101불 조정이 할인율 부담 하루 덜어줌", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9369: [
+    { id: 1, nickname: "케이비일사일", holdingLabel: "KB금융 보유", content: "순이자마진 기대가 붙은 하루짜리일수도", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "대출수요따라", holdingLabel: "관심종목", content: "국내 대출이 안따라오면 마진 이야기 짧아짐", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9370: [
+    { id: 1, nickname: "코스닥팔이이", holdingLabel: "관심종목", content: "코스닥만 강하면 대형 반도체 소외 신호", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "환율일삼팔이", holdingLabel: "관심종목", content: "1380원대면 외인 환차손 부담 남음", createdAt: T18 + 1200000, likes: 4 },
+  ],
   9351: [
     { id: 1, nickname: "기관만이조일", holdingLabel: "관망", content: "외인 6일째 파는데 기관이 지수 지킨거임", createdAt: T17 + 600000, likes: 5 },
     { id: 2, nickname: "환율일삼육팔", holdingLabel: "관심종목", content: "환율은 9.2원 오른 1368.6원, 주가랑 반대로 감", createdAt: T17 + 1200000, likes: 4 },
@@ -570,6 +601,12 @@ export const MOCK_COMMENTS_KR: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_SAFE: Post[] = [
+  { id: 9371, symbol: "한장요약", nickname: "세이프되돌림", holdingLabel: "관망", content: "BTC 76440(+0.8%) 7.6만 지킴. 금 4380 반등, WTI 101불 조정", createdAt: T18 - 0, likes: 44, comments: 2, },
+  { id: 9372, symbol: "비트코인", nickname: "비트칠육사사공", holdingLabel: "BTC 보유", content: "저점 75064에서 76440으로 되돌림. 이미 반영된 인상이라 둘째날 충격 작음", createdAt: T18 - 1800000, likes: 43, comments: 2, },
+  { id: 9373, symbol: "금", nickname: "금사삼팔공", holdingLabel: "금 ETF", content: "금 6주저점 반등 4370~4380. 달러랑 유가 쉬면서 저가매수 붙음", createdAt: T18 - 3600000, likes: 42, comments: 2, },
+  { id: 9374, symbol: "이더리움", nickname: "이더이사사공", holdingLabel: "관심", content: "이더 2430~2440에서 변동 줄음. 전날 -4% 다음 2400선 지킴", createdAt: T18 - 5400000, likes: 41, comments: 2, },
+  { id: 9375, symbol: "은", nickname: "은육십육", holdingLabel: "관심", content: "은 63~66불. 금 따라붙는데 진폭은 더 큼. 66불 위 유지가 온기 신호", createdAt: T18 - 7200000, likes: 40, comments: 2, },
+  { id: 9376, symbol: "원유", nickname: "유가백일불", holdingLabel: "관심", content: "WTI 101불 전후 -1~3%. 100불 넘긴 뒤 이틀째 숨고르기. 재고해석은 갈림", createdAt: T18 - 9000000, likes: 39, comments: 2, },
   { id: 9356, symbol: "한장요약", nickname: "연준인상세이프", holdingLabel: "관망", content: "연준 0.25%p 인상 뒤 BTC 75355까지 찍고 75813 회복. 금은 4324로 반등", createdAt: T17 - 0, likes: 44, comments: 2, },
   { id: 9357, symbol: "비트코인", nickname: "비트칠오팔일삼", holdingLabel: "BTC 보유", content: "발표 한시간만에 75355 찍고 75813으로 되돌림. 이미 90% 반영이라 충격 짧았음", createdAt: T17 - 1800000, likes: 43, comments: 2, },
   { id: 9358, symbol: "금", nickname: "금사삼이사", holdingLabel: "금 ETF", content: "금 4324달러 +0.7%. 오전에 4288까지 밀렸다가 달러약세에 반전", createdAt: T17 - 3600000, likes: 42, comments: 2, },
@@ -672,6 +709,30 @@ export const MOCK_POSTS_SAFE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
+  9371: [
+    { id: 1, nickname: "금사삼팔공", holdingLabel: "관망", content: "BTC 7.6만이랑 금 4370이 오늘 지지 테스트", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "은육십육", holdingLabel: "관망", content: "은은 금보다 출렁임, 투기자금 붙었는지 보는 칸", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9372: [
+    { id: 1, nickname: "비트칠육사사공", holdingLabel: "BTC 보유", content: "75000 깨지면 다음 지지 찾아야함", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "이티에프둘째날", holdingLabel: "관심", content: "현물ETF 유출이 하루짜리인지가 선의 두께", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9373: [
+    { id: 1, nickname: "금사삼팔공", holdingLabel: "금 ETF", content: "추가인상 남아있어서 반등폭은 제한될수도", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "달러같이내려", holdingLabel: "관심", content: "달러인덱스랑 금리가 같이 내려야 반등 지속", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9374: [
+    { id: 1, nickname: "이더이사사공", holdingLabel: "관심", content: "전날 청산 컸던 자산이 하루 쉬는중", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "이천사백지지", holdingLabel: "관심", content: "2400 여러번 지키면 급락 짧게 끝난 신호", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9375: [
+    { id: 1, nickname: "은육십육", holdingLabel: "관심", content: "산업수요 있어서 금이랑 바닥이 다름", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "육십삼하단", holdingLabel: "관심", content: "63불 하단 여러번 터치하면 박스 하단 확인", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9376: [
+    { id: 1, nickname: "유가백일불", holdingLabel: "관심", content: "100불 아래 며칠 안정돼야 금리부담 줄어듬", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "재고엇갈림", holdingLabel: "관심", content: "API랑 EIA 방향 맞을때까지 하루씩 흔들림", createdAt: T18 + 1200000, likes: 4 },
+  ],
   9356: [
     { id: 1, nickname: "워시물가발언", holdingLabel: "관망", content: "인상 자체보다 연내 추가인상 16명이 더 큼", createdAt: T17 + 600000, likes: 5 },
     { id: 2, nickname: "은육사불", holdingLabel: "관망", content: "은은 장중 64.4불까지, 금보다 출렁임 컸음", createdAt: T17 + 1200000, likes: 4 },
@@ -1019,6 +1080,10 @@ export const MOCK_COMMENTS_SAFE: Record<number, Comment[]> = {
 };
 
 export const MOCK_POSTS_KR_RE: Post[] = [
+  { id: 9377, symbol: "한장요약", nickname: "실거주이에칠", holdingLabel: "관심", content: "실거주의무 유예 2027년말까지 1년연장. 10/1 시행, 동북권전세 +10.11%", createdAt: T18 - 0, likes: 44, comments: 2, },
+  { id: 9378, symbol: "공급정책", nickname: "유예이십이칠", holdingLabel: "관심", content: "토지거래허가 실거주 2026말→2027말. 갱신포함, 최장 2029, 5/12부터 무주택", createdAt: T18 - 1800000, likes: 43, comments: 2, },
+  { id: 9379, symbol: "전세", nickname: "동북십점일일", holdingLabel: "관심", content: "동북권 전세 연초대비 +10.11% 11년만 두자릿수. 매물 44.6%↓", createdAt: T18 - 3600000, likes: 42, comments: 2, },
+  { id: 9380, symbol: "정비사업", nickname: "이공이팔갭", holdingLabel: "관심", content: "2028년 이주 45256 vs 입주 15388, 2.9배. 전세공백 가장 큰 해", createdAt: T18 - 5400000, likes: 41, comments: 2, },
   { id: 9361, symbol: "한장요약", nickname: "이주십팔만", holdingLabel: "관심", content: "서울 정비사업 이주 18만가구 추산. 전세매물 13%↓, 정부는 착공 23.4만호 지원", createdAt: T17 - 0, likes: 44, comments: 2, },
   { id: 9362, symbol: "정비사업", nickname: "목동이만육천", holdingLabel: "관심", content: "목동 1~14단지 이주대상 26629가구. 2030년 고도제한 전에 인가받으려 속도냄", createdAt: T17 - 1800000, likes: 43, comments: 2, },
   { id: 9363, symbol: "전세", nickname: "전세매물삼만칠", holdingLabel: "관심", content: "서울 전월세매물 37386건 1년전보다 13%↓. 대치동은 44.3% 급감", createdAt: T17 - 3600000, likes: 42, comments: 2, },
@@ -1107,6 +1172,22 @@ export const MOCK_POSTS_KR_RE: Post[] = [
 ];
 
 export const MOCK_COMMENTS_KR_RE: Record<number, Comment[]> = {
+  9377: [
+    { id: 1, nickname: "서울칠억전세", holdingLabel: "관심", content: "KB서울평균전세 7.1억 +9.2%, 유예랑 같은주", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "십월일매물", holdingLabel: "관심", content: "10/1 이후 전세매물 늘어봐야 유예 효과", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9378: [
+    { id: 1, nickname: "유예이십이칠", holdingLabel: "관심", content: "입주물량은 안늘고 전세놓는 기간만 길어짐", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "오월십이무주택", holdingLabel: "관심", content: "5/12부터 계속 무주택이어야 대상임", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9379: [
+    { id: 1, nickname: "동북십점일일", holdingLabel: "관심", content: "10.15대책 이후 매물 잠긴게 가격 밀어올림", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "십일년만", holdingLabel: "관심", content: "2015년 이후 첫 두자릿수라 최전선 숫자", createdAt: T18 + 1200000, likes: 4 },
+  ],
+  9380: [
+    { id: 1, nickname: "이공이팔갭", holdingLabel: "관심", content: "유예는 매물잠김 늦출뿐 2028 입주는 그대로", createdAt: T18 + 600000, likes: 5 },
+    { id: 2, nickname: "목동동북", holdingLabel: "관심", content: "이주 임박 동 전세매물 더빠지면 가격 먼저감", createdAt: T18 + 1200000, likes: 4 },
+  ],
   9361: [
     { id: 1, nickname: "전세칠육일", holdingLabel: "관심", content: "올해 전세 +7.61%, 작년 같은기간의 5배", createdAt: T17 + 600000, likes: 5 },
     { id: 2, nickname: "착공대책이주", holdingLabel: "관심", content: "공급 늘리려면 이삿짐이 먼저 나옴", createdAt: T17 + 1200000, likes: 4 },

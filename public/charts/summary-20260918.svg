@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.18 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">스타십 14차 비행이 9월 22일에서 28일로 미뤄졌습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">첫 궤도 비행이자 스타링크 V3 위성 26기를 처음 실어 나르는 일정입니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">9/28</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">테슬라 메가팩이 전 세계에 77기가와트시 넘게 깔렸습니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">가동률 99.3%에 라스롭·텍사스 공장이 연 90기가와트시 규모로 돌아갑니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">77+GWh</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">삼성 텍사스 테일러 공장에서 테슬라 AI5 칩 시험생산이 시작됐습니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">2나노 공정 웨이퍼가 나와 양산 검증에 들어갔고, 칩은 2027년 공급을 목표로 합니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">2nm</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">스페이스X 장외가가 한 달 고점 근처에서 시총 510억 달러를 더했습니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">실패한 스타트업 데이터를 인공지능 학습에 쓰려는 논의가 같이 나왔습니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">154.81달러</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">Nebius가 10월 1일부터 GPU 임대료를 약 20% 올린다고 알렸습니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">인공지능 연산 수요가 렌탈 가격을 밀어 올리는 신호입니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">+20%</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">사이버캡 요금이 마일당 30~40센트로 거론됐습니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">오스틴 실차에는 운전대와 페달이 없고, 객실 조명이 음악에 맞춰 움직입니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">30~40센트</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">외국인이 미국 주식을 국채보다 더 산 것은 이번 세기 세 번째입니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">해외 자금이 안전자산보다 미국 기업 지분을 택한 드문 흐름입니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">주식&gt;국채</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 스타십 9/28 · 메가팩 77GWh · 삼성 테일러 AI5 · 스페이스X 시총 · Nebius +20% · 사이버캡 요금 · 외국인 주식매수</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

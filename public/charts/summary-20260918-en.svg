@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.18 Daily Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">Starship Flight 14 slipped from Sept 22 to Monday Sept 28</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">First orbital attempt, carrying 26 Starlink V3 satellites on a revenue flight.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">Sep 28</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">Tesla Megapack deployments passed 77 GWh worldwide</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">Uptime is 99.3%, with Lathrop and Texas factories targeting ~90 GWh a year.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">77+ GWh</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">Tesla AI5 trial production started at Samsung’s Taylor, Texas fab</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">Advanced 2nm wafers are in mass-production checks, with chips aimed at 2027.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">2nm</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">SpaceX shares sat near a one-month high after a $51B cap jump</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">Talks also surfaced about buying failed-startup data for AI training.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">$154.81</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#a78bfa"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#a78bfa">Nebius said GPU rental prices rise about 20% from October 1</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">AI compute demand is showing up in the rental price, not just chip sales.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">+20%</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">Cybercab fares of 30-40 cents a mile were cited</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">An Austin cabin had no wheel or pedals, with cabin lights moving to the music.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">30-40¢</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">Foreigners bought more US stocks than Treasuries a 3rd time</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">Overseas money preferred American company shares over the usual safe bond bid.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">Stocks&gt;bonds</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: Starship Sep 28 · Megapack 77 GWh · Samsung Taylor AI5 · SpaceX cap · Nebius +20% · Cybercab fares · foreign</text>
+  <text x="540" y="1032" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">stock buying</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>

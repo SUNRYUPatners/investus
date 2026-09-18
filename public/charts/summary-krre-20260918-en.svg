@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.18 Korea Real Estate Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="209" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="209" rx="4" fill="#a78bfa"/>
+  <text x="116" y="197" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#a78bfa">Occupancy rule delayed a year, through end-2027</text>
+  <text x="116" y="243" font-family="Arial" font-size="17" fill="#9ca3af">Renewals are included, it starts Oct 1, and the maximum delay runs to 2029.</text>
+  <text x="985" y="230" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">End-2027</text>
+  <rect x="60" y="341" width="960" height="209" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="341" width="8" height="209" rx="4" fill="#fb923c"/>
+  <text x="116" y="416" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb923c">NE Seoul jeonse +10.11% YTD, first double digits in 11 years</text>
+  <text x="116" y="462" font-family="Arial" font-size="17" fill="#9ca3af">Listings there have fallen 44.6% since the Oct 15 policy.</text>
+  <text x="985" y="449" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">+10.11%</text>
+  <rect x="60" y="560" width="960" height="209" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="560" width="8" height="209" rx="4" fill="#38bdf8"/>
+  <text x="116" y="635" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#38bdf8">2028 Seoul moves are 2.9 times new occupancy</text>
+  <text x="116" y="681" font-family="Arial" font-size="17" fill="#9ca3af">45,256 moves vs 15,388 completions — the widest jeonse gap that year.</text>
+  <text x="985" y="668" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">2.9×</text>
+  <rect x="60" y="779" width="960" height="209" rx="14" fill="#052015" stroke="#34d399" stroke-width="2"/>
+  <rect x="60" y="779" width="8" height="209" rx="4" fill="#34d399"/>
+  <text x="116" y="854" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#34d399">KB’s Seoul average jeonse is ₩711.78M, up 9.2% year on year</text>
+  <text x="116" y="900" font-family="Arial" font-size="17" fill="#9ca3af">The occupancy delay and a jeonse spike share the same week.</text>
+  <text x="985" y="887" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#34d399" text-anchor="end">₩712M</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: occupancy delay to end-2027 · NE jeonse +10.11% · 2028 moves 2.9× · Seoul avg jeonse ₩712M</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>
