@@ -11,7 +11,7 @@ add('summary', 'ROWS', 'MACRO', {
       sub:'가동률 99.3%에 라스롭·텍사스 공장이 연 90기가와트시 규모로 돌아갑니다.' },
     { color:'#60a5fa', fill:'#0a1420', right:'2nm', title:'삼성 텍사스 테일러 공장에서 테슬라 AI5 칩 시험생산이 시작됐습니다',
       sub:'2나노 공정 웨이퍼가 나와 양산 검증에 들어갔고, 칩은 2027년 공급을 목표로 합니다.' },
-    { color:'#c084fc', fill:'#140b1f', right:'154.81달러', title:'스페이스X 장외가가 한 달 고점 근처에서 시총 510억 달러를 더했습니다',
+    { color:'#c084fc', fill:'#140b1f', right:'154.81달러', title:'스페이스X 주가가 한 달 고점 근처에서 시총 510억 달러를 더했습니다',
       sub:'실패한 스타트업 데이터를 인공지능 학습에 쓰려는 논의가 같이 나왔습니다.' },
     { color:'#a78bfa', fill:'#120b1f', right:'+20%', title:'Nebius가 10월 1일부터 GPU 임대료를 약 20% 올린다고 알렸습니다',
       sub:'인공지능 연산 수요가 렌탈 가격을 밀어 올리는 신호입니다.' },
@@ -187,29 +187,29 @@ add('tesla-megapack-77gwh', 'L2', 'TSLA', {
 });
 
 add('spacex-156-startup-data', 'L1', 'SPCX', {
-  badge: '스페이스X', title: '스페이스X 장외가가 154.81달러로 오르며 시가총액이 하루 약 510억 달러 늘었습니다',
+  badge: '스페이스X', title: '스페이스X 주가가 154.81달러로 오르며 시가총액이 하루 약 510억 달러 늘었습니다',
   heroIcon: '\u{1F680}', heroBig: '154.81달러',
-  heroSub: '장외가는 거래소에 상장되기 전 장외에서 오가는 가격입니다. 전일보다 2.60% 오른 154.81달러로, 한 달 고점 156.87달러에 가깝습니다.',
+  heroSub: '스페이스X는 6월에 상장한 회사입니다. 티커는 SPCX입니다. 전일보다 2.60% 오른 154.81달러로, 한 달 고점 156.87달러에 가깝습니다.',
   cards: [
     { icon:'\u{1F4B0}', big:'+510억불', mid:'오늘 시총 증가', sub:'스타십 일정 소식과 겹쳤습니다' },
     { icon:'\u{1F4C8}', big:'156.87달러', mid:'한 달 고점', sub:'현재가는 고점 바로 아래입니다' },
     { icon:'\u{1F4DA}', big:'데이터 매입', mid:'실패 스타트업 자료', sub:'인공지능 학습용으로 논의 중입니다' },
   ],
   quote: '스페이스X는 로켓 회사인 동시에 인공지능 학습 데이터를 사들이려는 논의도 하고 있습니다. 문을 닫은 스타트업이 남긴 내부 자료를 모델 훈련에 쓰려는 이야기입니다. 주가 급등과 데이터 매입은 같은 날 화면에 같이 올라왔습니다.',
-  noteHead: '왜 중요한가', noteSub: '시총이 하루에 500억 달러 넘게 움직이면 상장 전 몸값이 다시 매겨지는 중입니다. 데이터 매입은 로켓과 별개인 인공지능 재료입니다. 실제 계약과 다음 스타십 비행이 이 가격을 받치는지 보면 됩니다.',
-  footer: '스페이스X · 장외가',
+  noteHead: '왜 중요한가', noteSub: '시총이 하루에 500억 달러 넘게 움직이면 상장 주가의 기준점이 다시 매겨지는 중입니다. 데이터 매입은 로켓과 별개인 인공지능 재료입니다. 실제 계약과 다음 스타십 비행이 이 가격을 받치는지 보면 됩니다.',
+  footer: '스페이스X · 주가',
 }, {
   badge: 'SPCX', title: 'SpaceX shares rose to $154.81, adding about $51 billion of market cap in a day',
   heroIcon: '\u{1F680}', heroBig: '$154.81',
-  heroSub: 'This is the pre-IPO secondary price. Shares were up 2.60% at $154.81, just under the one-month high of $156.87.',
+  heroSub: 'SpaceX listed in June as SPCX. Shares were up 2.60% at $154.81, just under the one-month high of $156.87.',
   cards: [
     { icon:'\u{1F4B0}', big:'+$51B', mid:'Market-cap jump today', sub:'Landed with Starship calendar news' },
     { icon:'\u{1F4C8}', big:'$156.87', mid:'One-month high', sub:'Spot price sits just below' },
     { icon:'\u{1F4DA}', big:'Data talks', mid:'Failed-startup files', sub:'Being discussed for AI training' },
   ],
   quote: 'SpaceX is a rocket company that is also talking about buying data from failed startups to train AI models. The cap jump and the data talks showed up on the same screen.',
-  noteHead: 'Why it matters', noteSub: 'A $50B one-day cap move reprices the company before any IPO. Data buying is a separate AI story from rockets. Watch whether real contracts and the next Starship flight support this tape.',
-  footer: 'SpaceX · Secondary tape',
+  noteHead: 'Why it matters', noteSub: 'A $50B one-day cap move reprices the listed stock. Data buying is a separate AI story from rockets. Watch whether real contracts and the next Starship flight support this tape.',
+  footer: 'SpaceX · Share price',
 });
 
 add('openai-millennium-prize', 'L4', 'AI', {
@@ -538,7 +538,7 @@ add('cathie-starship-1b-launch', 'L2', 'SPCX', {
   detailHead: '숫자를 나누어 보면',
   detailLines: ['10억×1만 회=10조 달러는 산술이지 수주 장부가 아닙니다', '14차가 궤도에 성공해야 이 그림의 첫 칸이 열립니다', '지금은 시험 비행이 한 해에 열 번 남짓입니다'],
   quote: '조 단위 매출 시나리오는 스타십이 항공사처럼 자주 떠야 성립합니다. 2030년 이야기이지 올해 수주가 아닙니다. 발사당 10억 달러는 천장 가정으로 두고, 실제 발사 횟수를 세면 됩니다.',
-  noteHead: '왜 중요한가', noteSub: '낙관적인 상장 계산은 장외가를 움직일 수 있지만, 증명은 발사 횟수입니다. 연간 비행이 십수 회에 머무르면 10조 달러 그림은 슬라이드에 남습니다. 배수보다 발사 횟수를 먼저 세면 됩니다.',
+  noteHead: '왜 중요한가', noteSub: '낙관적인 매출 계산은 주가를 움직일 수 있지만, 증명은 발사 횟수입니다. 연간 비행이 십수 회에 머무르면 10조 달러 그림은 슬라이드에 남습니다. 배수보다 발사 횟수를 먼저 세면 됩니다.',
   footer: '스페이스X · 발사 매출 시나리오',
 }, {
   badge: 'SPCX', title: 'Cathie Wood said each Starship launch could generate about $1 billion of revenue',
@@ -552,7 +552,7 @@ add('cathie-starship-1b-launch', 'L2', 'SPCX', {
   detailHead: 'Split the arithmetic',
   detailLines: ['$1B times 10,000 is math, not a booked backlog', 'Flight 14 has to reach orbit before this picture even starts', 'Today’s tape is still a handful of test flights a year'],
   quote: 'A trillion-dollar sales case needs Starship to fly like an airline. That is a 2030 story, not a 2026 booking. Treat the $1 billion-per-launch line as a ceiling case, then watch actual flight cadence.',
-  noteHead: 'Why it matters', noteSub: 'Bullish IPO math can move the secondary tape, but cadence is the proof. If yearly flights stay in the teens, the $10 trillion case stays on a slide. Count launches, not just the headline multiple.',
+  noteHead: 'Why it matters', noteSub: 'Bullish revenue math can move the share price, but cadence is the proof. If yearly flights stay in the teens, the $10 trillion case stays on a slide. Count launches, not just the headline multiple.',
   footer: 'SpaceX · Launch-revenue case',
 });
 

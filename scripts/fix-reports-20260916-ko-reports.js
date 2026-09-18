@@ -6,7 +6,7 @@ module.exports = [
     "color": "mint",
     "subject": "테슬라",
     "title": "일론 머스크가 테슬라와 스페이스X의 합병 여부를 묻는 질문에 즉답을 피하며 합병설이 다시 떠올랐습니다",
-    "summary": "예측시장 폴리마켓은 일론 머스크가 2027년 말까지 테슬라와 스페이스X의 합병을 공식 발표할 확률을 52%로 매겼습니다. 머스크는 올인서밋 행사에서 합병 여부를 묻는 질문에 \"질문 참 좋네요, 이렇게 협업이 많은데 말이죠\"라며 즉답을 피했습니다. 같은 날 스페이스X 장외가는 143.49달러로 3.15% 하락했습니다.",
+    "summary": "예측시장 폴리마켓은 일론 머스크가 2027년 말까지 테슬라와 스페이스X의 합병을 공식 발표할 확률을 52%로 매겼습니다. 머스크는 올인서밋 행사에서 합병 여부를 묻는 질문에 \"질문 참 좋네요, 이렇게 협업이 많은데 말이죠\"라며 즉답을 피했습니다. 같은 날 스페이스X 주가는 143.49달러로 3.15% 하락했습니다.",
     "titleEn": "Elon Musk dodged a direct answer on whether Tesla and SpaceX might merge, reviving merger speculation",
     "summaryEn": "Polymarket puts 52% odds on Musk formally announcing a Tesla-SpaceX merger by the end of 2027, after he stopped short of confirming it at the All-In Summit."
   },

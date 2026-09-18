@@ -142,7 +142,7 @@ add('spacex-space-force-shotwell', 'L4', 'SPCX', {
   cards: [
     { icon:'\u{1F4B0}', big:'22억불', mid:'5월 체결 계약', sub:'미 우주군 군사데이터망' },
     { icon:'\u{1F91D}', big:'설계 자율', mid:'위성 수·사양 자체결정', sub:'기존엔 규격이 정해져 있었음' },
-    { icon:'\u{1F4C8}', big:'143.49달러', mid:'스페이스X 장외가', sub:'한달간 2.49% 상승' },
+    { icon:'\u{1F4C8}', big:'143.49달러', mid:'스페이스X 주가', sub:'한달간 2.49% 상승' },
   ],
   quote: '숏웰은 한 인터뷰에서 "스페이스X는 존재하지 않았어야 했다"며, 기존 발사업체들이 안일했기 때문에 새 진입자에게 기회가 열렸다고 말했습니다.',
   noteSub: '9·11 이후 미군은 더 빠른 발사 대응력을 원했지만 기존 업체들은 충분히 빠르지 못했습니다. 스페이스X가 그 틈을 파고들며 지금의 군사 계약 신뢰를 쌓았다는 설명입니다.',
@@ -155,7 +155,7 @@ add('spacex-space-force-shotwell', 'L4', 'SPCX', {
   cards: [
     { icon:'\u{1F4B0}', big:'$2.2B', mid:'Deal signed in May', sub:'Space Force data network' },
     { icon:'\u{1F91D}', big:'Design freedom', mid:'Own satellite specs/count', sub:'Previously fixed by spec' },
-    { icon:'\u{1F4C8}', big:'$143.49', mid:'SpaceX secondary price', sub:'Up 2.49% over the month' },
+    { icon:'\u{1F4C8}', big:'$143.49', mid:'SpaceX share price', sub:'Up 2.49% over the month' },
   ],
   quote: 'Shotwell said in an interview SpaceX "only had a real opening because existing launch providers left major gaps," calling their service inadequate.',
   noteSub: 'After 9/11, the military wanted much faster launch response than incumbents could offer. SpaceX filled that gap and built the trust behind today\u2019s military contracts.',
@@ -406,7 +406,7 @@ add('fsd-spain-ron-baron', 'L2', 'TSLA', {
 
 // 13) L5 — Starship flight14 market reaction
 add('starship-flight14-market-reaction', 'L5', 'SPCX', {
-  badge: '스페이스X · 스타십', title: '스타십 14차 시험비행(9/22) 발표에 스페이스X 장외 시가총액이 500억 달러 넘게 뛰었습니다',
+  badge: '스페이스X · 스타십', title: '스타십 14차 시험비행(9/22) 발표에 스페이스X 시가총액이 500억 달러 넘게 뛰었습니다',
   heroIcon: '\u{1F680}', heroBig: '시총 +500억불',
   heroSub: '스타십은 스페이스X의 재사용 초대형 로켓입니다. 9월 22일로 예정된 14차 비행은 처음으로 완전한 지구 궤도에 들어가 스타링크 V3 위성을 배치하는 시도입니다.',
   before: { label:'팰컨9 방식', big:'10회 발사', sub:'위성 277기, 발사 10번 필요' },
@@ -420,7 +420,7 @@ add('starship-flight14-market-reaction', 'L5', 'SPCX', {
   noteSub: '스타십 1회 발사로 실어나를 수 있는 위성 통신 용량이 팰컨9 로켓 10번어치와 같다는 계산이 나왔습니다. 이 효율이 실제 비용 절감으로 이어지는지가 다음 확인 포인트이며, 9월 22일 실제 비행 성공 여부가 첫 시험대입니다.',
   footer: '스페이스X · 스타십 14차',
 }, {
-  badge: 'SPCX · STARSHIP', title: 'SpaceX\u2019s secondary market cap jumped over $50B on news of Starship\u2019s 14th test flight (Sept 22)',
+  badge: 'SPCX · STARSHIP', title: 'SpaceX\u2019s market cap jumped over $50B on news of Starship\u2019s 14th test flight (Sept 22)',
   heroIcon: '\u{1F680}', heroBig: '+$50B+ Market Cap',
   heroSub: 'Starship is SpaceX\u2019s reusable super-heavy rocket. The Sept 22 flight 14 will attempt its first full orbital mission, deploying Starlink V3 satellites.',
   before: { label:'Via Falcon 9', big:'10 launches', sub:'277 satellites, 10 separate flights' },

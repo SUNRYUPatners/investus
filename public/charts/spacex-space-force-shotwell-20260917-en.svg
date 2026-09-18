@@ -34,7 +34,7 @@
   <rect x="720" y="450" width="300" height="178" rx="16" fill="#1a0f2a" stroke="#c084fc" stroke-width="2"/>
   <text x="870" y="496" font-family="Arial" font-size="34" text-anchor="middle">📈</text>
   <text x="870" y="542" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#c084fc" text-anchor="middle">$143.49</text>
-  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">SpaceX secondary price</text>
+  <text x="870" y="572" font-family="Arial" font-size="18" fill="#9ca3af" text-anchor="middle">SpaceX share price</text>
   <text x="870" y="598" font-family="Arial" font-size="15" fill="#6b7280" text-anchor="middle">Up 2.49% over the month</text>
   <rect x="60" y="644" width="960" height="186" rx="16" fill="#0f172a" stroke="#374151"/>
   <text x="540" y="690" font-family="Arial" font-size="19" fill="#c084fc" text-anchor="middle">Shotwell said in an interview SpaceX "only had a real opening because existing launch providers</text>

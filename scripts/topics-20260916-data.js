@@ -51,7 +51,7 @@ add('tsla-spcx-merger-speculation', 'L4', 'TSLA', {
   cards: [
     { icon:'\u{1F4CA}', big:'52%', mid:'폴리마켓 확률', sub:'2027년 말까지 발표 기준' },
     { icon:'\u{1F399}', big:'"협업이 많죠"', mid:'올인서밋 발언', sub:'합병 여부엔 즉답 피함' },
-    { icon:'\u{1F4C9}', big:'143.49달러', mid:'스페이스X 장외가', sub:'같은 날 3.15% 하락' },
+    { icon:'\u{1F4C9}', big:'143.49달러', mid:'스페이스X 주가', sub:'같은 날 3.15% 하락' },
   ],
   quote: '예측시장 폴리마켓은 머스크가 내년 말까지 두 회사의 합병을 공식 발표할 확률을 52%로 매겼습니다. 머스크는 행사에서 합병 여부를 직접 확인하지는 않았습니다.',
   noteSub: '두 회사는 로켓과 자동차라는 다른 사업이지만 최근 우주 데이터센터·자율주행 등에서 접점이 늘고 있습니다. 실제 합병 신청 서류가 나오는지가 다음 확인 포인트입니다.',
@@ -64,7 +64,7 @@ add('tsla-spcx-merger-speculation', 'L4', 'TSLA', {
   cards: [
     { icon:'\u{1F4CA}', big:'52%', mid:'Polymarket odds', sub:'Merger announced by end-2027' },
     { icon:'\u{1F399}', big:'"So much collaboration"', mid:'All-In Summit remark', sub:'Musk stopped short of confirming' },
-    { icon:'\u{1F4C9}', big:'$143.49', mid:'SpaceX secondary price', sub:'Down 3.15% same day' },
+    { icon:'\u{1F4C9}', big:'$143.49', mid:'SpaceX share price', sub:'Down 3.15% same day' },
   ],
   quote: 'Prediction market Polymarket puts 52% odds on Musk formally announcing a Tesla-SpaceX merger by the end of next year. Musk didn\u2019t confirm it directly at the summit.',
   noteSub: 'The two firms build different products, but overlap is growing in areas like space-based computing and self-driving. Watch for any actual merger filing next.',

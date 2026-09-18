@@ -43,7 +43,7 @@
   <text x="100" y="740" font-family="Arial" font-size="21" fill="#e5e7eb">지금은 시험 비행이 한 해에 열 번 남짓입니다</text>
   <rect x="60" y="780" width="960" height="210" rx="14" fill="#1a0f2a" stroke="#c084fc" stroke-width="1"/>
   <text x="540" y="810" font-family="Arial" font-size="18" fill="#c084fc" text-anchor="middle">왜 중요한가</text>
-  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">낙관적인 상장 계산은 장외가를 움직일 수 있지만, 증명은 발사 횟수입니다. 연간 비행이 십수 회에 머무르면 10조 달러 그림은</text>
+  <text x="540" y="838" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">낙관적인 매출 계산은 주가를 움직일 수 있지만, 증명은 발사 횟수입니다. 연간 비행이 십수 회에 머무르면 10조 달러 그림은</text>
   <text x="540" y="860" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">슬라이드에 남습니다. 배수보다 발사 횟수를 먼저 세면 됩니다.</text>
   <text x="540" y="1012" font-family="Arial" font-size="16" fill="#374151" text-anchor="middle">스페이스X · 발사 매출 시나리오 · 2026.09.18</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#g)" opacity=".4"/>

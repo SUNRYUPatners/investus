@@ -4998,7 +4998,7 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 1219702, nickname: "삼성테일러칩", holdingLabel: "관심종목", content: "텍사스3공장 가동이 속도변수", createdAt: T18SEP + 1140000, likes: 4 },
   ],
   121971: [
-    { id: 1219711, nickname: "오픈에이아이난제", holdingLabel: "관심종목", content: "장외호가 얇아서 하루시총 출렁임큼", createdAt: T18SEP + 1020000, likes: 5 },
+    { id: 1219711, nickname: "오픈에이아이난제", holdingLabel: "관심종목", content: "하루시총 출렁임커서 종가랑 시총 같이봄", createdAt: T18SEP + 1020000, likes: 5 },
     { id: 1219712, nickname: "네비우스임대", holdingLabel: "관심종목", content: "데이터매입은 논의랑 서명 구분", createdAt: T18SEP + 1200000, likes: 4 },
   ],
   121972: [

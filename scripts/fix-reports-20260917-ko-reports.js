@@ -137,9 +137,9 @@ module.exports = [
     "category": "종목분석",
     "color": "purple",
     "subject": "스페이스X",
-    "title": "스타십 14차 시험비행(9/22) 발표에 스페이스X 장외 시가총액이 500억 달러 넘게 뛰었습니다",
-    "summary": "스타십 14차 비행이 9월 22일로 확정됐다는 소식에 스페이스X 장외 주가가 5.15% 급등해 150.88달러로 마감했습니다. 이번 비행은 처음으로 완전한 지구 궤도에 들어가 스타링크 V3 위성을 배치하는 시도로, 위성 26기가 팰컨9 로켓 10번어치의 통신 용량을 실어나릅니다. 머스크는 발사당 10억 달러 매출 시나리오에 대해 불가능하지 않다고 답했습니다.",
-    "titleEn": "SpaceX's secondary market cap jumped over $50B on news of Starship's 14th test flight (Sept 22)",
+    "title": "스타십 14차 시험비행(9/22) 발표에 스페이스X 시가총액이 500억 달러 넘게 뛰었습니다",
+    "summary": "스타십 14차 비행이 9월 22일로 확정됐다는 소식에 스페이스X 주가가 5.15% 급등해 150.88달러로 마감했습니다. 이번 비행은 처음으로 완전한 지구 궤도에 들어가 스타링크 V3 위성을 배치하는 시도로, 위성 26기가 팰컨9 로켓 10번어치의 통신 용량을 실어나릅니다. 머스크는 발사당 10억 달러 매출 시나리오에 대해 불가능하지 않다고 답했습니다.",
+    "titleEn": "SpaceX's market cap jumped over $50B on news of Starship's 14th test flight (Sept 22)",
     "summaryEn": "SpaceX shares jumped 5.15% to $150.88 on the news, with Musk calling a $1B-per-launch revenue scenario at 10,000 flights/year 'not impossible.'"
   },
   {

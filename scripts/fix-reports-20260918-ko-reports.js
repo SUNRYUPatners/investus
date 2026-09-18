@@ -60,10 +60,10 @@ module.exports = [
     "category": "종목분석",
     "color": "purple",
     "subject": "스페이스X",
-    "title": "스페이스X 장외가가 154.81달러로 오르며 시가총액이 하루 약 510억 달러 늘었습니다",
-    "summary": "스페이스X 장외가가 전일보다 2.60% 오른 154.81달러로, 한 달 고점 156.87달러에 가깝습니다. 시가총액은 하루에 약 510억 달러 늘었습니다. 실패한 스타트업 데이터를 인공지능 학습에 쓰려는 논의가 같은 화면에 올랐습니다.",
+    "title": "스페이스X 주가가 154.81달러로 오르며 시가총액이 하루 약 510억 달러 늘었습니다",
+    "summary": "스페이스X 주가가 전일보다 2.60% 오른 154.81달러로, 한 달 고점 156.87달러에 가깝습니다. 시가총액은 하루에 약 510억 달러 늘었습니다. 실패한 스타트업 데이터를 인공지능 학습에 쓰려는 논의가 같은 화면에 올랐습니다.",
     "titleEn": "SpaceX shares rose to $154.81, adding about $51 billion of market cap in a day",
-    "summaryEn": "The pre-IPO tape sat just under a $156.87 one-month high as talks surfaced about buying failed-startup data for AI."
+    "summaryEn": "Listed SPCX sat just under a $156.87 one-month high as talks surfaced about buying failed-startup data for AI."
   },
   {
     "id": "seed-1722",
