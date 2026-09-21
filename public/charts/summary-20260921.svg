@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.21 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">스페이스X가 스타링크 3세대 위성 최대 10만 기를 신청했습니다</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">미국 통신위원회가 9월 18일 서류를 접수했고, 승인은 아직입니다.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">10만기</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">테슬라 감독 주행 소프트웨어 새 버전이 배포되기 시작했습니다</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">주차와 드문 상황을 더 잘 다루도록 학습을 강화했다는 안내입니다.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">v14.3.10</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">엔비디아 주식 포트의 80%가 인텔과 스페이스X 두 종목입니다</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">2분기 말 기준 총 631억 달러 가운데 인텔 47.5%, 스페이스X 33.3%입니다.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">631억달러</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">오스틴에서 무인 사이버캡 목격이 사흘 새 기록을 경신했습니다</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">등록 비율이 약 2주 만에 30%에서 70% 근처로 올라왔다는 집계입니다.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">70%</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#facc15"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#facc15">테슬라가 로드스터 예약을 다시 열었습니다</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">오늘 5,000달러는 환불되고, 10일 안에 4만5,000달러를 보내야 예약이 확정됩니다.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#facc15" text-anchor="end">5천달러</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">외국인이 최근 12개월 미국 주식을 9,420억 달러 순유입했습니다</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">민간과 공식 기관을 합친 12개월 합이 사상 최대 근처로 찍혔습니다.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">9,420억</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">보링컴퍼니가 오스틴~샌안토니오 초고속 터널을 준비한다고 했습니다</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">시속 200마일 넘게 달리면 지금 2시간 반 길이 30분 안으로 줄어든다는 그림입니다.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">&lt;30분</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 스타링크 10만기 · FSD 14.3.10 · 엔비디아 포트 · 무인 사이버캡 · 로드스터 예약 · 외국인 9,420억 · 보링 터널</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

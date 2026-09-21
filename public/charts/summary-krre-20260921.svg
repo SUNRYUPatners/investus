@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.21 한국부동산 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="165" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="165" rx="4" fill="#fb923c"/>
+  <text x="116" y="181" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb923c">서울 아파트 전세의 51.1%가 갱신 계약이었습니다</text>
+  <text x="116" y="217" font-family="Arial" font-size="17" fill="#9ca3af">1월부터 9월 20일까지 8만480건 중 4만1,145건입니다.</text>
+  <text x="985" y="207" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">51.1%</text>
+  <rect x="60" y="297" width="960" height="165" rx="14" fill="#120b1f" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="60" y="297" width="8" height="165" rx="4" fill="#a78bfa"/>
+  <text x="116" y="356" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#a78bfa">서울 전세 매물이 1년 전보다 13.3% 줄었습니다</text>
+  <text x="116" y="392" font-family="Arial" font-size="17" fill="#9ca3af">9월 19일 기준 숫자입니다.</text>
+  <text x="985" y="382" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">2만3,697</text>
+  <rect x="60" y="472" width="960" height="165" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="472" width="8" height="165" rx="4" fill="#c084fc"/>
+  <text x="116" y="531" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#c084fc">실거주 유예 신청이 2027년 말까지 늘어납니다</text>
+  <text x="116" y="567" font-family="Arial" font-size="17" fill="#9ca3af">10월 1일 시행, 갱신 1회면 2029년 말까지 미룰 수 있습니다.</text>
+  <text x="985" y="557" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">2027말</text>
+  <rect x="60" y="647" width="960" height="165" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="647" width="8" height="165" rx="4" fill="#fb7185"/>
+  <text x="116" y="706" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb7185">중랑구 갱신 비율이 서울에서 가장 높았습니다</text>
+  <text x="116" y="742" font-family="Arial" font-size="17" fill="#9ca3af">강서 57.8%, 성북 57.3%, 강동 55.8%입니다.</text>
+  <text x="985" y="732" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb7185" text-anchor="end">61.5%</text>
+  <rect x="60" y="822" width="960" height="165" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="822" width="8" height="165" rx="4" fill="#facc15"/>
+  <text x="116" y="881" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#facc15">신규와 갱신 보증금 격차가 약 8.1억 원으로 거론됐습니다</text>
+  <text x="116" y="917" font-family="Arial" font-size="17" fill="#9ca3af">새로 계약하면 훨씬 비싸다는 뜻입니다.</text>
+  <text x="985" y="907" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#facc15" text-anchor="end">8.1억</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 갱신 51.1% · 매물 2만3,697 · 유예 2027말 · 중랑 61.5% · 격차 8.1억</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T21SEP = 1789945200000; // 2026.09.21 08:00 KST
 const T18SEP = 1789686000000; // 2026.09.18 08:00 KST
 const T17SEP = 1789599600000; // 2026.09.17 08:00 KST
 const T16SEP = 1789513200000; // 2026.09.16 08:00 KST
@@ -127,7 +128,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T18SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T21SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -146,6 +147,52 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-21 신규 ────────────────
+  { id: 121990, symbol: "TSLA", nickname: "에프에스드새버전", holdingLabel: "관심종목",
+    content: "FSD 14.3.10이 차에 내려오기 시작함. 화면은 2026.27.10. 주차랑 드문장면 학습 올렸다는 안내",
+    createdAt: T21SEP + 8*60_000, likes: 24, comments: 2 },
+  { id: 121991, symbol: "TSLA", nickname: "나뭇가지회피", holdingLabel: "관심종목",
+    content: "감독주행이 쓰러진 나뭇가지 보고 경로 바꿈. 핸들 안 잡음. 급정지만 한 장면 아님",
+    createdAt: T21SEP + 16*60_000, likes: 23, comments: 2 },
+  { id: 121992, symbol: "TSLA", nickname: "로드스터오천", holdingLabel: "관심종목",
+    content: "로드스터 예약 다시 열림. 오늘 5천불 환불되고 10일 안에 4만5천 전신해야 확정",
+    createdAt: T21SEP + 24*60_000, likes: 22, comments: 2 },
+  { id: 121993, symbol: "TSLA", nickname: "와코십월일", holdingLabel: "관심종목",
+    content: "10/1 와코 상공 비행제한 베팅 퍼짐. 로켓 연동은 아직 추측. 회사발표 아님",
+    createdAt: T21SEP + 32*60_000, likes: 21, comments: 2 },
+  { id: 121994, symbol: "MACRO", nickname: "외인구사공억", holdingLabel: "관심종목",
+    content: "외국인 12개월 美주식 9420억달러 순유입. 공식기관만 1396억. 민간이 대부분",
+    createdAt: T21SEP + 40*60_000, likes: 20, comments: 2 },
+  { id: 121995, symbol: "NVDA", nickname: "엔비디아포트", holdingLabel: "관심종목",
+    content: "엔비디아 주식포트 631억. 인텔 47.5% + SPCX 33.3% = 80%. 6/12 상장분",
+    createdAt: T21SEP + 48*60_000, likes: 19, comments: 2 },
+  { id: 121996, symbol: "NVDA", nickname: "커서쓴다", holdingLabel: "관심종목",
+    content: "젠슨황이 커서 쓴다고 함. 스페이스X 코딩도구. 지분공시랑은 다른 사용증언",
+    createdAt: T21SEP + 56*60_000, likes: 18, comments: 2 },
+  { id: 121997, symbol: "TSLA", nickname: "시카고이십사", holdingLabel: "관심종목",
+    content: "시카고에서 사이버캡 하루 최소 24대 목격. 유료호출 화면은 없음. 오스틴이랑 다른 도시",
+    createdAt: T21SEP + 64*60_000, likes: 17, comments: 2 },
+  { id: 121998, symbol: "TSLA", nickname: "만찬관측", holdingLabel: "관심종목",
+    content: "머스크 백악관 시진핑 만찬 초청 보도. 공식명단 전. 허가 보장 아님",
+    createdAt: T21SEP + 72*60_000, likes: 16, comments: 2 },
+  { id: 121999, symbol: "TSLA", nickname: "삼십육도시채용", holdingLabel: "관심종목",
+    content: "로보택시 안전요원 공고가 36개 도시. 원격으로 막힌 차 돕는 자리. 출근일 아직",
+    createdAt: T21SEP + 80*60_000, likes: 15, comments: 2 },
+  { id: 122000, symbol: "SPCX", nickname: "스타링크십만", holdingLabel: "관심종목",
+    content: "스타링크 3세대 최대 10만기 신청. 9/18 접수. 허가 아님. 325~475km",
+    createdAt: T21SEP + 88*60_000, likes: 24, comments: 2 },
+  { id: 122001, symbol: "MACRO", nickname: "관세삼백억", holdingLabel: "관심종목",
+    content: "미중 뉴욕에서 서로 관세 300억달러 줄이는 대화 보도. 서명 전. 11/10 연장 거론",
+    createdAt: T21SEP + 96*60_000, likes: 23, comments: 2 },
+  { id: 122002, symbol: "SPCX", nickname: "베라루빈위성", holdingLabel: "관심종목",
+    content: "머스크, 위성마다 베라루빈 NVL72. 10테라비트·250kW. 25GW는 목표",
+    createdAt: T21SEP + 104*60_000, likes: 22, comments: 2 },
+  { id: 122003, symbol: "TSLA", nickname: "오스틴칠십", holdingLabel: "관심종목",
+    content: "오스틴 무인 사이버캡 목격 기록. 등록비율 2주만에 30→70%. 목격은 매출 아님",
+    createdAt: T21SEP + 112*60_000, likes: 21, comments: 2 },
+  { id: 122004, symbol: "SPCX", nickname: "보링삼십분", holdingLabel: "관심종목",
+    content: "보링이 오스틴~샌안토니오 80마일 터널 준비. 200mph+면 2.5시간→30분. 허가 전",
+    createdAt: T21SEP + 120*60_000, likes: 20, comments: 2 },
   // ── 2026-09-18 신규 ────────────────
   { id: 121966, symbol: "SPCX", nickname: "스타십구이팔", holdingLabel: "관심종목",
     content: "스타십14차 9/22→9/28 월 오전8:15 ET. 첫궤도+스타링크V3 26기",
@@ -4977,6 +5024,66 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  121990: [
+    { id: 1219901, nickname: "나뭇가지회피", holdingLabel: "관심종목", content: "버전이 차에 내려가야 품질이 숫자됨", createdAt: T21SEP + 720000, likes: 5 },
+    { id: 1219902, nickname: "와코십월일", holdingLabel: "관심종목", content: "주차 개입통계가 안내문이랑 같은방향인지", createdAt: T21SEP + 900000, likes: 4 },
+  ],
+  121991: [
+    { id: 1219911, nickname: "로드스터오천", holdingLabel: "관심종목", content: "한 클립은 통계 아님. 반복돼야 실력", createdAt: T21SEP + 780000, likes: 5 },
+    { id: 1219912, nickname: "외인구사공억", holdingLabel: "관심종목", content: "클립 버전이 14.3.10이랑 같은숫자인지", createdAt: T21SEP + 960000, likes: 4 },
+  ],
+  121992: [
+    { id: 1219921, nickname: "와코십월일", holdingLabel: "관심종목", content: "5천불 환불분으로는 수요 못 셈", createdAt: T21SEP + 840000, likes: 5 },
+    { id: 1219922, nickname: "엔비디아포트", holdingLabel: "관심종목", content: "10일 송금 들어온 예약만 확정칸", createdAt: T21SEP + 1020000, likes: 4 },
+  ],
+  121993: [
+    { id: 1219931, nickname: "외인구사공억", holdingLabel: "관심종목", content: "고시 나오기 전엔 베팅일 뿐", createdAt: T21SEP + 900000, likes: 5 },
+    { id: 1219932, nickname: "커서쓴다", holdingLabel: "관심종목", content: "로켓 장면 나와야 추측이 사실됨", createdAt: T21SEP + 1080000, likes: 4 },
+  ],
+  121994: [
+    { id: 1219941, nickname: "엔비디아포트", holdingLabel: "관심종목", content: "12개월 합이라 다음달 뒤집힐수도", createdAt: T21SEP + 960000, likes: 5 },
+    { id: 1219942, nickname: "시카고이십사", holdingLabel: "관심종목", content: "공식 1396억이랑 민간 줄 나눠봐야함", createdAt: T21SEP + 1140000, likes: 4 },
+  ],
+  121995: [
+    { id: 1219951, nickname: "커서쓴다", holdingLabel: "관심종목", content: "SPCX는 상장분임. 비상장 아님", createdAt: T21SEP + 1020000, likes: 5 },
+    { id: 1219952, nickname: "만찬관측", holdingLabel: "관심종목", content: "다음 13F에서 비중 유지되는지봄", createdAt: T21SEP + 1200000, likes: 4 },
+  ],
+  121996: [
+    { id: 1219961, nickname: "시카고이십사", holdingLabel: "관심종목", content: "쓰는거랑 들고있는거 다른칸임", createdAt: T21SEP + 1080000, likes: 5 },
+    { id: 1219962, nickname: "삼십육도시채용", holdingLabel: "관심종목", content: "다른 대기업 이름 더 나오는지가 확인", createdAt: T21SEP + 1260000, likes: 4 },
+  ],
+  121997: [
+    { id: 1219971, nickname: "만찬관측", holdingLabel: "관심종목", content: "목격이랑 유료호출은 시차있음", createdAt: T21SEP + 1140000, likes: 5 },
+    { id: 1219972, nickname: "스타링크십만", holdingLabel: "관심종목", content: "시카고 허가서랑 앱화면이 다음", createdAt: T21SEP + 1320000, likes: 4 },
+  ],
+  121998: [
+    { id: 1219981, nickname: "삼십육도시채용", holdingLabel: "관심종목", content: "명단 나오기 전엔 관측으로만", createdAt: T21SEP + 1200000, likes: 5 },
+    { id: 1219982, nickname: "관세삼백억", holdingLabel: "관심종목", content: "만찬이랑 중국FSD 허가는 다른문서", createdAt: T21SEP + 1380000, likes: 4 },
+  ],
+  121999: [
+    { id: 1219991, nickname: "스타링크십만", holdingLabel: "관심종목", content: "공고 도시가 출근으로 바뀌는지가 다음", createdAt: T21SEP + 1260000, likes: 5 },
+    { id: 1219992, nickname: "베라루빈위성", holdingLabel: "관심종목", content: "유료 먼저 뜨는 도시랑 채용도시 대조", createdAt: T21SEP + 1440000, likes: 4 },
+  ],
+  122000: [
+    { id: 1220001, nickname: "관세삼백억", holdingLabel: "관심종목", content: "접수는 심사시작이지 발사 아님", createdAt: T21SEP + 1320000, likes: 5 },
+    { id: 1220002, nickname: "오스틴칠십", holdingLabel: "관심종목", content: "부분허가 기수랑 스타십이 같이가야함", createdAt: T21SEP + 1500000, likes: 4 },
+  ],
+  122001: [
+    { id: 1220011, nickname: "베라루빈위성", holdingLabel: "관심종목", content: "300억은 거론 규모. 세율표가 나와야함", createdAt: T21SEP + 1380000, likes: 5 },
+    { id: 1220012, nickname: "보링삼십분", holdingLabel: "관심종목", content: "11/10 기한 실제로 미뤄지는지", createdAt: T21SEP + 1560000, likes: 4 },
+  ],
+  122002: [
+    { id: 1220021, nickname: "오스틴칠십", holdingLabel: "관심종목", content: "25GW는 목표지 지금 궤도전력 아님", createdAt: T21SEP + 1440000, likes: 5 },
+    { id: 1220022, nickname: "에프에스드새버전", holdingLabel: "관심종목", content: "위성에 상자 실렸다는 명세가 나와야함", createdAt: T21SEP + 1620000, likes: 4 },
+  ],
+  122003: [
+    { id: 1220031, nickname: "보링삼십분", holdingLabel: "관심종목", content: "등록 70%는 매출 아님. 호출 따라와야", createdAt: T21SEP + 1500000, likes: 5 },
+    { id: 1220032, nickname: "나뭇가지회피", holdingLabel: "관심종목", content: "유료호출이 9/19 막대 따라오는지", createdAt: T21SEP + 1680000, likes: 4 },
+  ],
+  122004: [
+    { id: 1220041, nickname: "에프에스드새버전", holdingLabel: "관심종목", content: "허가·착공 나와야 지도가 공사됨", createdAt: T21SEP + 1560000, likes: 5 },
+    { id: 1220042, nickname: "로드스터오천", holdingLabel: "관심종목", content: "보링이랑 SPCX 주가 한줄로 합치지말것", createdAt: T21SEP + 1740000, likes: 4 },
+  ],
   121966: [
     { id: 1219661, nickname: "스페인모델와이", holdingLabel: "관심종목", content: "허가 나오기전엔 카운트다운 확정아님", createdAt: T18SEP + 720000, likes: 5 },
     { id: 1219662, nickname: "태양광그늘개선", holdingLabel: "관심종목", content: "26기 배치성공이 V3달력 첫칸", createdAt: T18SEP + 900000, likes: 4 },

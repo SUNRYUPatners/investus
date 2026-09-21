@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.21 한국주식 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="165" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="165" rx="4" fill="#38bdf8"/>
+  <text x="116" y="181" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#38bdf8">코스피가 2.66% 올라 6,894.23으로 마감했습니다</text>
+  <text x="116" y="217" font-family="Arial" font-size="17" fill="#9ca3af">외국인이 4,245억 원, 기관이 1조5,025억 원을 샀고 개인은 3조5,872억 원을 팔았습니다.</text>
+  <text x="985" y="207" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">6,894.23</text>
+  <rect x="60" y="297" width="960" height="165" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="297" width="8" height="165" rx="4" fill="#60a5fa"/>
+  <text x="116" y="356" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#60a5fa">삼성전자가 8,500원(3.37%) 올라 26만 원선을 회복했습니다</text>
+  <text x="116" y="392" font-family="Arial" font-size="17" fill="#9ca3af">외국인은 4,620억 원을 팔았고 기관은 7,075억 원을 샀습니다.</text>
+  <text x="985" y="382" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">26만1,000원</text>
+  <rect x="60" y="472" width="960" height="165" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="472" width="8" height="165" rx="4" fill="#f59e0b"/>
+  <text x="116" y="531" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#f59e0b">SK하이닉스가 6.42% 올라 185만7,000원에 고가 마감했습니다</text>
+  <text x="116" y="567" font-family="Arial" font-size="17" fill="#9ca3af">외국인이 1조3,272억 원을 사며 유가증권 매수 1위였습니다.</text>
+  <text x="985" y="557" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">185만7,000원</text>
+  <rect x="60" y="647" width="960" height="165" rx="14" fill="#052015" stroke="#34d399" stroke-width="2"/>
+  <rect x="60" y="647" width="8" height="165" rx="4" fill="#34d399"/>
+  <text x="116" y="706" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#34d399">삼성바이오로직스가 0.14% 오르며 반도체 밖에서 보합이었습니다</text>
+  <text x="116" y="742" font-family="Arial" font-size="17" fill="#9ca3af">코스피가 2.66% 오를 때 시가총액 상위 바이오가 거의 쉬었습니다.</text>
+  <text x="985" y="732" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#34d399" text-anchor="end">139만9,000원</text>
+  <rect x="60" y="822" width="960" height="165" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="822" width="8" height="165" rx="4" fill="#22d3ee"/>
+  <text x="116" y="881" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#22d3ee">LG에너지솔루션이 0.27% 내려 36만3,500원이었습니다</text>
+  <text x="116" y="917" font-family="Arial" font-size="17" fill="#9ca3af">2차전지 대형주는 관망이고 소재 일부만 올랐습니다.</text>
+  <text x="985" y="907" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">−0.27%</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 코스피 6,894.23 · 삼성전자 26만1,000원 · 하이닉스 185만7,000원 · 바이오 +0.14% · LG엔솔 −0.27%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>
