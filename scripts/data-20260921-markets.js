@@ -425,7 +425,7 @@ const KR_RE = [
   {
     id: "krre-seed-184",
     slug: "toheo-defer-2027",
-    category: "정책",
+    category: "매크로",
     color: "purple",
     subject: "공급정책",
     title: "토지거래허가구역 실거주 유예가 2027년 말까지 늘고 10월 1일 시행됩니다",

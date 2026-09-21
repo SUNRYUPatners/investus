@@ -45,7 +45,7 @@ export const SEED_REPORTS_KR_RE: Report[] = [
     titleEn: "Toheo occupancy deferral is extended to end-2027 and starts Oct 1",
     summaryEn: "One renewal (two years) can push move-in to end-2029; buyer must stay homeless since May 12.",
     bodyEn: "See Korean body.\n\ninvestus.kr SRP Chief Investment Officer",
-    category: "정책",
+    category: "매크로",
     categoryColor: "purple",
     subject: "공급정책",
     date: "2026-09-21",
