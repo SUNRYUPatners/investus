@@ -144,7 +144,7 @@ function patchFile(rel) {
       console.log(`  skip body find ${id}`);
       continue;
     }
-    const { decoded, start, end } = extractJsonString(c, bodyKey + "\n    body: ".length);
+    const { decoded, end } = extractJsonString(c, bodyKey + "\n    body: ".length);
     if (decoded.includes(MARK)) {
       console.log(`  already ${id} (${decoded.length})`);
       continue;
@@ -152,7 +152,7 @@ function patchFile(rel) {
     const next = decoded.includes(BK)
       ? decoded.replace(BK, `${extra}\n\n${BK}`)
       : `${decoded}\n\n${extra}`;
-    c = c.slice(0, start) + "\n    body: " + JSON.stringify(next) + c.slice(end);
+    c = c.slice(0, bodyKey) + "\n    body: " + JSON.stringify(next) + c.slice(end);
     n++;
     console.log(`  pad ${id} ${decoded.length} → ${next.length}`);
   }
