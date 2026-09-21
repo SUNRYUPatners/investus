@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.22 한국주식 한장 요약</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="165" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="165" rx="4" fill="#38bdf8"/>
+  <text x="116" y="181" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#38bdf8">코스피가 1.65% 올라 7,007.72로 마감하며 7,000선을 다시…</text>
+  <text x="116" y="217" font-family="Arial" font-size="17" fill="#9ca3af">기관 1조4,923억 원, 기타법인 1조6,585억 원이 샀고 외국인은 1,602억 원을 팔았습니다.</text>
+  <text x="985" y="207" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">7,007.72</text>
+  <rect x="60" y="297" width="960" height="165" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="297" width="8" height="165" rx="4" fill="#60a5fa"/>
+  <text x="116" y="356" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#60a5fa">삼성전자가 4.98% 올라 27만 원을 10거래일 만에 회복했습니다</text>
+  <text x="116" y="392" font-family="Arial" font-size="17" fill="#9ca3af">외국인이 1조715억 원을 사며 유가증권 매수 1위였습니다.</text>
+  <text x="985" y="382" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">27만4,000원</text>
+  <rect x="60" y="472" width="960" height="165" rx="14" fill="#1a1205" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="60" y="472" width="8" height="165" rx="4" fill="#f59e0b"/>
+  <text x="116" y="531" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#f59e0b">SK하이닉스가 0.59% 오른 186만8,000원이었고 외국인은…</text>
+  <text x="116" y="567" font-family="Arial" font-size="17" fill="#9ca3af">외국인 순매도 8,121억 원으로 유가증권 매도 1위입니다.</text>
+  <text x="985" y="557" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f59e0b" text-anchor="end">186만8,000원</text>
+  <rect x="60" y="647" width="960" height="165" rx="14" fill="#06171c" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="60" y="647" width="8" height="165" rx="4" fill="#22d3ee"/>
+  <text x="116" y="706" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#22d3ee">LG에너지솔루션이 3.3% 내려 35만2,000원이었습니다</text>
+  <text x="116" y="742" font-family="Arial" font-size="17" fill="#9ca3af">코스피가 오를 때 시가총액 상위 배터리가 빠졌습니다.</text>
+  <text x="985" y="732" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#22d3ee" text-anchor="end">−3.3%</text>
+  <rect x="60" y="822" width="960" height="165" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="822" width="8" height="165" rx="4" fill="#fb7185"/>
+  <text x="116" y="881" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb7185">현대차가 1.64% 내린 35만9,000원으로 외국인 매도 상위에…</text>
+  <text x="116" y="917" font-family="Arial" font-size="17" fill="#9ca3af">외국인이 513억 원을 팔았고 자동차가 반도체와 갈렸습니다.</text>
+  <text x="985" y="907" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb7185" text-anchor="end">−1.64%</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">더 볼 것: 코스피 7,007.72 · 삼성전자 27만4,000원 · 하이닉스 186만8,000원 · 엔솔 −3.3% · 현대차 −1.64%</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP 최고투자책임자 발행 · NOT FINANCIAL ADVICE</text>
+</svg>

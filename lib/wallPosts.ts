@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T22SEP = 1790031600000; // 2026.09.22 08:00 KST
 const T21SEP = 1789945200000; // 2026.09.21 08:00 KST
 const T18SEP = 1789686000000; // 2026.09.18 08:00 KST
 const T17SEP = 1789599600000; // 2026.09.17 08:00 KST
@@ -128,7 +129,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T21SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T22SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -147,6 +148,58 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-22 신규 ────────────────
+  { id: 122005, symbol: "TSLA", nickname: "십오관측", holdingLabel: "관심종목",
+    content: "로보택시 다음 열쇠가 FSD 15라는 관측. 파라미터 100억 vs 14번 10억. 회사 안내문 없음",
+    createdAt: T22SEP + 8*60_000, likes: 24, comments: 2 },
+  { id: 122006, symbol: "TSLA", nickname: "스택겹침", holdingLabel: "관심종목",
+    content: "TSLA+SPCX가 물리AI 스택으로 겹친다는 분석. 따로 상장. 합병은 소셜과장",
+    createdAt: T22SEP + 16*60_000, likes: 23, comments: 2 },
+  { id: 122007, symbol: "TSLA", nickname: "체코승인", holdingLabel: "관심종목",
+    content: "체코 감독주행 승인. 테슬라유럽 알림. EU 7번째. 10/6 표결 15표+65%",
+    createdAt: T22SEP + 24*60_000, likes: 22, comments: 2 },
+  { id: 122008, symbol: "SPCX", nickname: "재사용이칠", holdingLabel: "관심종목",
+    content: "머스크, 스타십 완전재사용 2027 극히유력. 설계가능. 일정은 아직 목표",
+    createdAt: T22SEP + 32*60_000, likes: 21, comments: 2 },
+  { id: 122009, symbol: "META", nickname: "페탈해저", holdingLabel: "관심종목",
+    content: "메타 페탈 해저망. 미-프 7000km 1Pbps. 2029 개통 목표. NEC·스미토모·오렌지",
+    createdAt: T22SEP + 40*60_000, likes: 20, comments: 2 },
+  { id: 122010, symbol: "MACRO", nickname: "설비가주택", holdingLabel: "관심종목",
+    content: "美 2분기 정보처리설비 7520억 > 주택 7480억. 컴퓨터투자가 집을 넘음",
+    createdAt: T22SEP + 48*60_000, likes: 19, comments: 2 },
+  { id: 122011, symbol: "TSLA", nickname: "중국실내", holdingLabel: "관심종목",
+    content: "사이버캡 중국 실내 영상. 양산사양 아님. 판매일정 아직",
+    createdAt: T22SEP + 56*60_000, likes: 18, comments: 2 },
+  { id: 122012, symbol: "TSLA", nickname: "지수지능", holdingLabel: "관심종목",
+    content: "머스크, 지능이 지수로 큰다. 발언. 제품일정 아님",
+    createdAt: T22SEP + 64*60_000, likes: 17, comments: 2 },
+  { id: 122013, symbol: "TSLA", nickname: "충돌회피", holdingLabel: "관심종목",
+    content: "FSD 14.3.10 3번째묶음. 자동충돌회피. HW3 라이트도 14.2",
+    createdAt: T22SEP + 72*60_000, likes: 16, comments: 2 },
+  { id: 122014, symbol: "TSLA", nickname: "마일일이이", holdingLabel: "관심종목",
+    content: "사이버캡 운행 25센트 전력 5센트. 테슬라 마일당 1.20. 인터뷰지 공시아님",
+    createdAt: T22SEP + 80*60_000, likes: 15, comments: 2 },
+  { id: 122015, symbol: "TSLA", nickname: "백만킬로", holdingLabel: "관심종목",
+    content: "모델S 택시 100만km. 2017년부터 BC. 한대 기록이지 플릿평균 아님",
+    createdAt: T22SEP + 88*60_000, likes: 24, comments: 2 },
+  { id: 122016, symbol: "SPCX", nickname: "그록사점이칠", holdingLabel: "관심종목",
+    content: "그록 4.7 나옴. 입력2달러 출력6달러 4.6이랑 같음. 점수만 한단계",
+    createdAt: T22SEP + 96*60_000, likes: 23, comments: 2 },
+  { id: 122017, symbol: "TSLA", nickname: "베가스오천", holdingLabel: "관심종목",
+    content: "라스베이거스 야간시험. 네바다 5000대 상한. 테슬라 1년 2~2.5천",
+    createdAt: T22SEP + 104*60_000, likes: 22, comments: 2 },
+  { id: 122018, symbol: "TSLA", nickname: "옵티머스접수", holdingLabel: "관심종목",
+    content: "옵티머스 프리몬트 요청 276193. ISO 13482/10218. 접수지 허가아님",
+    createdAt: T22SEP + 112*60_000, likes: 21, comments: 2 },
+  { id: 122019, symbol: "SPCX", nickname: "칠일궤도", holdingLabel: "관심종목",
+    content: "머스크 7일뒤 첫 궤도스타십에 스타링크V3 26기. 부스터21. 허가대기",
+    createdAt: T22SEP + 120*60_000, likes: 20, comments: 2 },
+  { id: 122020, symbol: "MACRO", nickname: "사할폭", holdingLabel: "관심종목",
+    content: "S&P 종목 49.50%만 200일선 위. 9/18. 4월초 이후 가장 얇은폭",
+    createdAt: T22SEP + 128*60_000, likes: 19, comments: 2 },
+  { id: 122021, symbol: "TSLA", nickname: "론치이칠", holdingLabel: "관심종목",
+    content: "모델Y 론치 미국 2027년 1~2월. 우편 80001 아르바다. 창이 밀림",
+    createdAt: T22SEP + 136*60_000, likes: 18, comments: 2 },
   // ── 2026-09-21 신규 ────────────────
   { id: 121990, symbol: "TSLA", nickname: "에프에스드새버전", holdingLabel: "관심종목",
     content: "FSD 14.3.10이 차에 내려오기 시작함. 화면은 2026.27.10. 주차랑 드문장면 학습 올렸다는 안내",
@@ -5024,6 +5077,74 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  122005: [
+    { id: 1220051, nickname: "스택겹침", holdingLabel: "관심종목", content: "버전 숫자에 15가 찍혀야 관측이 배포됨", createdAt: T22SEP + 720000, likes: 5 },
+    { id: 1220052, nickname: "재사용이칠", holdingLabel: "관심종목", content: "파라미터 추정이랑 무인시간 나눠봄", createdAt: T22SEP + 900000, likes: 4 },
+  ],
+  122006: [
+    { id: 1220061, nickname: "체코승인", holdingLabel: "관심종목", content: "따로 상장임. 합병공시 없음", createdAt: T22SEP + 780000, likes: 5 },
+    { id: 1220062, nickname: "페탈해저", holdingLabel: "관심종목", content: "공동제품 공시가 나오면 그때 묶음", createdAt: T22SEP + 960000, likes: 4 },
+  ],
+  122007: [
+    { id: 1220071, nickname: "재사용이칠", holdingLabel: "관심종목", content: "차 화면에 내려가야 승인이지 배포", createdAt: T22SEP + 840000, likes: 5 },
+    { id: 1220072, nickname: "설비가주택", holdingLabel: "관심종목", content: "10/6 15표+인구65%가 다음관문", createdAt: T22SEP + 1020000, likes: 4 },
+  ],
+  122008: [
+    { id: 1220081, nickname: "페탈해저", holdingLabel: "관심종목", content: "착륙후 바로 재점화가 증빙임", createdAt: T22SEP + 900000, likes: 5 },
+    { id: 1220082, nickname: "중국실내", holdingLabel: "관심종목", content: "2027은 목표지 확정일정 아님", createdAt: T22SEP + 1080000, likes: 4 },
+  ],
+  122009: [
+    { id: 1220091, nickname: "설비가주택", holdingLabel: "관심종목", content: "착공이 나와야 2029가 달력됨", createdAt: T22SEP + 960000, likes: 5 },
+    { id: 1220092, nickname: "지수지능", holdingLabel: "관심종목", content: "1Pbps는 목표용량. 개통때 확인", createdAt: T22SEP + 1140000, likes: 4 },
+  ],
+  122010: [
+    { id: 1220101, nickname: "중국실내", holdingLabel: "관심종목", content: "다음분기에도 설비가 주택 위인지", createdAt: T22SEP + 1020000, likes: 5 },
+    { id: 1220102, nickname: "충돌회피", holdingLabel: "관심종목", content: "한분기 역전이라 추세는 더봐야함", createdAt: T22SEP + 1200000, likes: 4 },
+  ],
+  122011: [
+    { id: 1220111, nickname: "지수지능", holdingLabel: "관심종목", content: "실내영상이랑 양산은 시차있음", createdAt: T22SEP + 1080000, likes: 5 },
+    { id: 1220112, nickname: "마일일이이", holdingLabel: "관심종목", content: "중국공장 매출이랑 미국허브 분리", createdAt: T22SEP + 1260000, likes: 4 },
+  ],
+  122012: [
+    { id: 1220121, nickname: "충돌회피", holdingLabel: "관심종목", content: "발언이지 가이던스 아님", createdAt: T22SEP + 1140000, likes: 5 },
+    { id: 1220122, nickname: "백만킬로", holdingLabel: "관심종목", content: "다음 모델점수랑 배포일을 봄", createdAt: T22SEP + 1320000, likes: 4 },
+  ],
+  122013: [
+    { id: 1220131, nickname: "마일일이이", holdingLabel: "관심종목", content: "회피가 통계로 나와야 품질임", createdAt: T22SEP + 1200000, likes: 5 },
+    { id: 1220132, nickname: "그록사점이칠", holdingLabel: "관심종목", content: "HW3 라이트랑 본편 묶음 구분", createdAt: T22SEP + 1380000, likes: 4 },
+  ],
+  122014: [
+    { id: 1220141, nickname: "백만킬로", holdingLabel: "관심종목", content: "앱 요금표가 나와야 1.20이 사실", createdAt: T22SEP + 1260000, likes: 5 },
+    { id: 1220142, nickname: "베가스오천", holdingLabel: "관심종목", content: "25센트 5센트도 대담숫자임", createdAt: T22SEP + 1440000, likes: 4 },
+  ],
+  122015: [
+    { id: 1220151, nickname: "그록사점이칠", holdingLabel: "관심종목", content: "한대 100만이지 평균 아님", createdAt: T22SEP + 1320000, likes: 5 },
+    { id: 1220152, nickname: "옵티머스접수", holdingLabel: "관심종목", content: "정비기록이 나와야 내구 증빙", createdAt: T22SEP + 1500000, likes: 4 },
+  ],
+  122016: [
+    { id: 1220161, nickname: "베가스오천", holdingLabel: "관심종목", content: "반값베팅이랑 공식표 다른줄", createdAt: T22SEP + 1380000, likes: 5 },
+    { id: 1220162, nickname: "칠일궤도", holdingLabel: "관심종목", content: "점수표가 며칠뒤에도 같은칸인지", createdAt: T22SEP + 1560000, likes: 4 },
+  ],
+  122017: [
+    { id: 1220171, nickname: "옵티머스접수", holdingLabel: "관심종목", content: "유료호출 화면이 다음", createdAt: T22SEP + 1440000, likes: 5 },
+    { id: 1220172, nickname: "사할폭", holdingLabel: "관심종목", content: "네바다 5000이랑 테슬라 2천은 허가", createdAt: T22SEP + 1620000, likes: 4 },
+  ],
+  122018: [
+    { id: 1220181, nickname: "칠일궤도", holdingLabel: "관심종목", content: "접수는 심사시작이지 허가아님", createdAt: T22SEP + 1500000, likes: 5 },
+    { id: 1220182, nickname: "론치이칠", holdingLabel: "관심종목", content: "ISO번호가 승인문서에 찍히는지", createdAt: T22SEP + 1680000, likes: 4 },
+  ],
+  122019: [
+    { id: 1220191, nickname: "사할폭", holdingLabel: "관심종목", content: "허가가 나와야 28일 근처가 확정", createdAt: T22SEP + 1560000, likes: 5 },
+    { id: 1220192, nickname: "십오관측", holdingLabel: "관심종목", content: "V3 26기 펼쳐져야 말이 숫자됨", createdAt: T22SEP + 1740000, likes: 4 },
+  ],
+  122020: [
+    { id: 1220201, nickname: "론치이칠", holdingLabel: "관심종목", content: "지수강해도 종목반은 200일 아래", createdAt: T22SEP + 1620000, likes: 5 },
+    { id: 1220202, nickname: "스택겹침", holdingLabel: "관심종목", content: "200일선 위 종목수가 늘어야 건강", createdAt: T22SEP + 1800000, likes: 4 },
+  ],
+  122021: [
+    { id: 1220211, nickname: "십오관측", holdingLabel: "관심종목", content: "창이 26년으로 당겨지는지가 다음", createdAt: T22SEP + 1680000, likes: 5 },
+    { id: 1220212, nickname: "체코승인", holdingLabel: "관심종목", content: "주간생산이 창을 당기는지 봄", createdAt: T22SEP + 1860000, likes: 4 },
+  ],
   121990: [
     { id: 1219901, nickname: "나뭇가지회피", holdingLabel: "관심종목", content: "버전이 차에 내려가야 품질이 숫자됨", createdAt: T21SEP + 720000, likes: 5 },
     { id: 1219902, nickname: "와코십월일", holdingLabel: "관심종목", content: "주차 개입통계가 안내문이랑 같은방향인지", createdAt: T21SEP + 900000, likes: 4 },
