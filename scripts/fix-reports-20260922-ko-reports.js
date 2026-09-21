@@ -181,9 +181,9 @@ module.exports = [
     "category": "종목분석",
     "color": "mint",
     "subject": "테슬라",
-    "title": "모델Y 론치 시리즈 미국 주문이 2027년 1~2월 인도입니다",
-    "summary": "주문 화면은 콜로라도 아르바다 기준 인도 예상일을 2027년 1월에서 2월로 보여 줬습니다. 올해 미국 론치 물량은 사실상 끝났다는 설명이 붙었습니다. 화면 한 장이 확정 계약은 아닙니다.",
-    "titleEn": "New US Model Y Launch Series orders show January–February 2027 delivery",
-    "summaryEn": "Arvada, Colorado ZIP 80001 screen; 2026 US slots described as spent. Windows can move."
+    "title": "모델Y L 론치 시리즈 미국 새 주문이 2027년 1~2월 인도입니다",
+    "summary": "제품은 모델Y L입니다. 차체를 늘린 6인승이고, 롱레인지(항속거리 사양)가 아닙니다. 론치 시리즈는 그 차의 출시 한정 사양이며, 미국 새 주문 화면은 2027년 1~2월 인도를 보여 줬습니다.",
+    "titleEn": "New US Model Y L Launch Series orders show January–February 2027 delivery",
+    "summaryEn": "Model Y L is the long-wheelbase six-seater, not Long Range. Launch Series is the first-run spec; Arvada ZIP 80001 showed Jan–Feb 2027."
   }
 ];

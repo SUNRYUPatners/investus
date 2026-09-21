@@ -198,7 +198,7 @@ export const MOCK_POSTS: Post[] = [
     content: "S&P 종목 49.50%만 200일선 위. 9/18. 4월초 이후 가장 얇은폭",
     createdAt: T22SEP + 128*60_000, likes: 19, comments: 2 },
   { id: 122021, symbol: "TSLA", nickname: "론치이칠", holdingLabel: "관심종목",
-    content: "모델Y 론치 미국 2027년 1~2월. 우편 80001 아르바다. 창이 밀림",
+    content: "모델Y L(긴축거 6인승) 론치시리즈 2026 미국 소진. 새주문 27년 1-2월. 롱레인지 아님",
     createdAt: T22SEP + 136*60_000, likes: 18, comments: 2 },
   // ── 2026-09-21 신규 ────────────────
   { id: 121990, symbol: "TSLA", nickname: "에프에스드새버전", holdingLabel: "관심종목",
@@ -5142,8 +5142,8 @@ export const MOCK_COMMENTS: Record<number, Comment[]> = {
     { id: 1220202, nickname: "스택겹침", holdingLabel: "관심종목", content: "200일선 위 종목수가 늘어야 건강", createdAt: T22SEP + 1800000, likes: 4 },
   ],
   122021: [
-    { id: 1220211, nickname: "십오관측", holdingLabel: "관심종목", content: "창이 26년으로 당겨지는지가 다음", createdAt: T22SEP + 1680000, likes: 5 },
-    { id: 1220212, nickname: "체코승인", holdingLabel: "관심종목", content: "주간생산이 창을 당기는지 봄", createdAt: T22SEP + 1860000, likes: 4 },
+    { id: 1220211, nickname: "십오관측", holdingLabel: "관심종목", content: "L은 긴축거 6인승임. 롱레인지 아님", createdAt: T22SEP + 1680000, likes: 5 },
+    { id: 1220212, nickname: "체코승인", holdingLabel: "관심종목", content: "론치시리즈는 출시한정 사양. 주간생산이 창 당기는지", createdAt: T22SEP + 1860000, likes: 4 },
   ],
   121990: [
     { id: 1219901, nickname: "나뭇가지회피", holdingLabel: "관심종목", content: "버전이 차에 내려가야 품질이 숫자됨", createdAt: T21SEP + 720000, likes: 5 },
