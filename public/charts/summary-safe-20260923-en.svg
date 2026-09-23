@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.23 Safe-Haven Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="209" rx="14" fill="#1a0f00" stroke="#f7931a" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="209" rx="4" fill="#f7931a"/>
+  <text x="116" y="197" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#f7931a">Bitcoin held above $86,000 near $86,558 in the Asian…</text>
+  <text x="116" y="243" font-family="Arial" font-size="17" fill="#9ca3af">About +1.25% in 24 hours and +13.9% on the week.</text>
+  <text x="985" y="230" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f7931a" text-anchor="end">$86,558</text>
+  <rect x="60" y="341" width="960" height="209" rx="14" fill="#1a1600" stroke="#facc15" stroke-width="2"/>
+  <rect x="60" y="341" width="8" height="209" rx="4" fill="#facc15"/>
+  <text x="116" y="416" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#facc15">Spot gold rose 0.4% to about $4,359.40 an ounce</text>
+  <text x="116" y="462" font-family="Arial" font-size="17" fill="#9ca3af">Oil’s slide eased hike fears.</text>
+  <text x="985" y="449" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#facc15" text-anchor="end">$4,359</text>
+  <rect x="60" y="560" width="960" height="209" rx="14" fill="#0f1024" stroke="#818cf8" stroke-width="2"/>
+  <rect x="60" y="560" width="8" height="209" rx="4" fill="#818cf8"/>
+  <text x="116" y="635" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#818cf8">Ether sat near $2,764, a calmer follow-through than…</text>
+  <text x="116" y="681" font-family="Arial" font-size="17" fill="#9ca3af">Spot ether funds took in $162.2M on Sept 22.</text>
+  <text x="985" y="668" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#818cf8" text-anchor="end">$2,764</text>
+  <rect x="60" y="779" width="960" height="209" rx="14" fill="#1a0d02" stroke="#f97316" stroke-width="2"/>
+  <rect x="60" y="779" width="8" height="209" rx="4" fill="#f97316"/>
+  <text x="116" y="854" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#f97316">US spot bitcoin funds took in $714.7 million on Sept 22</text>
+  <text x="116" y="900" font-family="Arial" font-size="17" fill="#9ca3af">A fourth straight inflow day after about $999M on the 21st.</text>
+  <text x="985" y="887" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#f97316" text-anchor="end">$715M</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: BTC $86,558 · gold $4,359 · ETH $2,764 · ETF $715M</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>
