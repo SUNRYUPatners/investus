@@ -79,7 +79,7 @@ module.exports = [
   {
     "id": "seed-1782",
     "slug": "grok-47-aa",
-    "category": "산업",
+    "category": "섹터",
     "color": "purple",
     "subject": "그록",
     "title": "그록 4.7이 지능 지수 46점으로 상위 네 실험실에 들어갔습니다",
@@ -90,7 +90,7 @@ module.exports = [
   {
     "id": "seed-1783",
     "slug": "anthropic-5gw",
-    "category": "산업",
+    "category": "섹터",
     "color": "purple",
     "subject": "인공지능",
     "title": "한 인공지능 회사가 연말 계산 용량 5기가와트를 목표로 잡았습니다",
@@ -101,7 +101,7 @@ module.exports = [
   {
     "id": "seed-1784",
     "slug": "meta-muse-paypal",
-    "category": "산업",
+    "category": "섹터",
     "color": "orange",
     "subject": "메타",
     "title": "메타 뮤즈가 페이팔·익스피디아와 손잡고 쇼핑·여행 칸을 열었습니다",
@@ -145,7 +145,7 @@ module.exports = [
   {
     "id": "seed-1788",
     "slug": "musk-ai-2028",
-    "category": "산업",
+    "category": "섹터",
     "color": "purple",
     "subject": "머스크",
     "title": "머스크는 인공지능이 내년 말, 늦어도 2028년에 모든 분야를 앞선다고 했습니다",

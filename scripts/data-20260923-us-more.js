@@ -132,7 +132,7 @@ const MORE = [
     ),
   },
   {
-    id: "seed-1782", slug: "grok-47-aa", category: "산업", color: "purple", subject: "그록", tickers: ["AI"],
+    id: "seed-1782", slug: "grok-47-aa", category: "섹터", color: "purple", subject: "그록", tickers: ["AI"],
     title: "그록 4.7이 지능 지수 46점으로 상위 네 실험실에 들어갔습니다",
     summary: "4.6보다 2점 올랐습니다. 입력 2달러, 출력 6달러로 토큰이 늘었습니다. 코딩 에이전트 칸에서 한 경쟁 모델을 앞질렀다는 설명이 붙었습니다.",
     titleEn: "Grok 4.7 scored 46 on the Intelligence Index and entered the top four labs",
@@ -157,7 +157,7 @@ const MORE = [
     ),
   },
   {
-    id: "seed-1783", slug: "anthropic-5gw", category: "산업", color: "purple", subject: "인공지능", tickers: ["AI"],
+    id: "seed-1783", slug: "anthropic-5gw", category: "섹터", color: "purple", subject: "인공지능", tickers: ["AI"],
     title: "한 인공지능 회사가 연말 계산 용량 5기가와트를 목표로 잡았습니다",
     summary: "계산 용량이 커지면 모델 학습과 응답이 빨라집니다. 5기가와트는 목표입니다. 수전 계약과 실제 가동이 나와야 숫자가 확정됩니다.",
     titleEn: "One AI lab set a year-end compute target of 5 gigawatts",
@@ -182,7 +182,7 @@ const MORE = [
     ),
   },
   {
-    id: "seed-1784", slug: "meta-muse-paypal", category: "산업", color: "orange", subject: "메타", tickers: ["META"],
+    id: "seed-1784", slug: "meta-muse-paypal", category: "섹터", color: "orange", subject: "메타", tickers: ["META"],
     title: "메타 뮤즈가 페이팔·익스피디아와 손잡고 쇼핑·여행 칸을 열었습니다",
     summary: "페이팔 주가는 52.89달러, 0.51% 올랐습니다. 한 은행은 대화형 검색이 나온 뒤 처음 있는 규모의 파트너십이라고 적었습니다. 의견입니다.",
     titleEn: "Meta Muse partnered with PayPal and Expedia on shopping and travel",
@@ -282,7 +282,7 @@ const MORE = [
     ),
   },
   {
-    id: "seed-1788", slug: "musk-ai-2028", category: "산업", color: "purple", subject: "머스크", tickers: ["AI"],
+    id: "seed-1788", slug: "musk-ai-2028", category: "섹터", color: "purple", subject: "머스크", tickers: ["AI"],
     title: "머스크는 인공지능이 내년 말, 늦어도 2028년에 모든 분야를 앞선다고 했습니다",
     summary: "모든 분야를 앞선다는 말은 시험과 직업에서 사람보다 잘한다는 뜻으로 읽힙니다. 내년 말은 2027년 말로 읽히고, 2028년은 한 해 더 여유를 둔 칸입니다. 제품 출시 일정이 아닙니다.",
     titleEn: "Musk said AI will beat all fields by the end of next year, or 2028 at the latest",
