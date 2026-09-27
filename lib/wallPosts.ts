@@ -46,6 +46,7 @@ export function toRealWallId(displayId: number, mockPostIds?: Set<number> | numb
   return null;
 }
 
+const T28SEP = 1790550000000; // 2026.09.28 08:00 KST
 const T23SEP = 1790118000000; // 2026.09.23 08:00 KST
 const T22SEP = 1790031600000; // 2026.09.22 08:00 KST
 const T21SEP = 1789945200000; // 2026.09.21 08:00 KST
@@ -130,7 +131,7 @@ const T13J = 1781305200000; // 2026-06-13 08:00 KST
 const T12J = 1781218800000; // 2026-06-12 08:00 KST
 const T11J = 1781132400000; // 2026-06-11 08:00 KST
 const T10J = 1781046000000; // 2026-06-10 08:00 KST
-export const LATEST_UPDATE = T23SEP;      // NEW 배지 기준
+export const LATEST_UPDATE = T28SEP;      // NEW 배지 기준
 const T29 = 1780009200000; // 2026-05-29 08:00 KST
 const T28 = 1779922800000; // 2026-05-28 08:00 KST
 const T27 = 1779836400000; // 2026-05-27 08:00 KST
@@ -149,6 +150,58 @@ const h = (n: number) => n * 3_600_000;
 const d = (n: number) => n * 86_400_000;
 
 export const MOCK_POSTS: Post[] = [
+  // ── 2026-09-28 신규 ────────────────
+  { id: 122039, symbol: "TSLA", nickname: "노르웨이구팔", holdingLabel: "관심종목",
+    content: "노르웨이 화면 올해 98% 전기차. 모델Y 300% 앞선다는 줄. 8월공식 배터리전기 98.7. 그달 Y는 19위",
+    createdAt: T28SEP + 8*60_000, likes: 24, comments: 2 },
+  { id: 122040, symbol: "NVDA", nickname: "중국오오공", holdingLabel: "관심종목",
+    content: "중국 알리바바 바이트댄스에 RTX프로5500. 바이트 100만장 검토. 12월출하 장당 약1.3만달러",
+    createdAt: T28SEP + 16*60_000, likes: 23, comments: 2 },
+  { id: 122041, symbol: "MACRO", nickname: "버리닷컴", holdingLabel: "관심종목",
+    content: "버리 AI설비 닷컴이랑 겹침. 칩 데이터센터 돈먼저. 쓰임이 따라오는지가 질문. 의견",
+    createdAt: T28SEP + 24*60_000, likes: 22, comments: 2 },
+  { id: 122042, symbol: "MACRO", nickname: "나스닥이십삼배", holdingLabel: "관심종목",
+    content: "나스닥100 향후이익 23배. SPX 19. 동일가중 중형 15. 러셀2000도 23. NTM",
+    createdAt: T28SEP + 32*60_000, likes: 21, comments: 2 },
+  { id: 122043, symbol: "MACRO", nickname: "에이전트인출", holdingLabel: "관심종목",
+    content: "아폴로 에이전트가 예금 초단위 이체하면 인출될수있음. 경고지 사고아님",
+    createdAt: T28SEP + 40*60_000, likes: 20, comments: 2 },
+  { id: 122044, symbol: "SPCX", nickname: "착륙육백오십", holdingLabel: "관심종목",
+    content: "스페이스X 화면 비상장 100억. 착륙650+ 스타링크1천만 드래곤60+. 힘95% 스타십",
+    createdAt: T28SEP + 48*60_000, likes: 19, comments: 2 },
+  { id: 122045, symbol: "AMZN", nickname: "블루삼십억", holdingLabel: "관심종목",
+    content: "베이조스 블루오리진 2000년부터 약300억 투입. 뉴글렌 비행쌓는중. 창립자현금",
+    createdAt: T28SEP + 56*60_000, likes: 18, comments: 2 },
+  { id: 122046, symbol: "XAI", nickname: "그록신뢰", holdingLabel: "관심종목",
+    content: "그록4.7 에이전트 멈추지않음. 점수표 아님. 어제46점이랑 다른장면",
+    createdAt: T28SEP + 64*60_000, likes: 17, comments: 2 },
+  { id: 122047, symbol: "XAI", nickname: "그록오백달러", holdingLabel: "관심종목",
+    content: "그록봇 창작자보상 격주. 예시 2주에 500달러. 엑스게시 2배. 엑스머니",
+    createdAt: T28SEP + 72*60_000, likes: 16, comments: 2 },
+  { id: 122048, symbol: "AAPL", nickname: "비전이공이에잇", holdingLabel: "관심종목",
+    content: "비전프로 생명유지. 후속 빠르면 2028말 늦으면 2029초. 안경이 먼저",
+    createdAt: T28SEP + 80*60_000, likes: 15, comments: 2 },
+  { id: 122049, symbol: "MACRO", nickname: "밈코인법", holdingLabel: "관심종목",
+    content: "캘리포니아 AB2409 서명. 공인얼굴 밈코인 막음. 시행 2027.1.1 민사 40-0 78-0",
+    createdAt: T28SEP + 88*60_000, likes: 24, comments: 2 },
+  { id: 122050, symbol: "SPCX", nickname: "스타십십사", holdingLabel: "관심종목",
+    content: "스타십14 오늘밤 동부8:15 한국21:15. 면허26일개정. 스타링크V3 26기 첫유료",
+    createdAt: T28SEP + 96*60_000, likes: 23, comments: 2 },
+  { id: 122051, symbol: "SPCX", nickname: "달화성두배", holdingLabel: "관심종목",
+    content: "머스크 달화성 생산 해마다 2배+. 발언이지 올해착륙확정아님. 오늘밤14가 사다리",
+    createdAt: T28SEP + 104*60_000, likes: 22, comments: 2 },
+  { id: 122052, symbol: "MACRO", nickname: "시총삼십조", holdingLabel: "관심종목",
+    content: "세계시총10곳 30.66조. NVDA 5.434조 AAPL 4.977조 SPCX 1.958조 7위",
+    createdAt: T28SEP + 112*60_000, likes: 21, comments: 2 },
+  { id: 122053, symbol: "TSLA", nickname: "네바다플로리다", holdingLabel: "관심종목",
+    content: "사이버캡 상업 네바다 플로리다. 캘리포니아 내년중반. 유료호출",
+    createdAt: T28SEP + 120*60_000, likes: 20, comments: 2 },
+  { id: 122054, symbol: "SPCX", nickname: "매시간발사", holdingLabel: "관심종목",
+    content: "스타십 2~3년안에 매시간. 지금은 며칠간격. 오늘밤14가 한칸",
+    createdAt: T28SEP + 128*60_000, likes: 19, comments: 2 },
+  { id: 122055, symbol: "TSLA", nickname: "인도사칠일", holdingLabel: "관심종목",
+    content: "테슬라3분기 인도 471k 넘길지 예측시장. 2분기공식 480126. 마감 10/2 동부자정",
+    createdAt: T28SEP + 136*60_000, likes: 18, comments: 2 },
   // ── 2026-09-23 신규 ────────────────
   { id: 122022, symbol: "TSLA", nickname: "이천오백세미", holdingLabel: "관심종목",
     content: "화물동맹 ZET SCALE 전기8등급 2500대. 테슬라 주공급. 켄워스 볼보 RIDE 예비. 네바다 공장 이틀뒤",
@@ -5130,6 +5183,74 @@ export const MOCK_POSTS: Post[] = [
 ];
 
 export const MOCK_COMMENTS: Record<number, Comment[]> = {
+  122039: [
+    { id: 1220391, nickname: "중국오오공", holdingLabel: "관심종목", content: "300%는 화면. 8월공식은 Y 19위", createdAt: T28SEP + 720000, likes: 5 },
+    { id: 1220392, nickname: "나스닥이십삼배", holdingLabel: "관심종목", content: "9월 월말파일이랑 연간1위 같이봄", createdAt: T28SEP + 900000, likes: 4 },
+  ],
+  122040: [
+    { id: 1220401, nickname: "버리닷컴", holdingLabel: "관심종목", content: "100만장은 검토. 12월 배가 확인", createdAt: T28SEP + 780000, likes: 5 },
+    { id: 1220402, nickname: "에이전트인출", holdingLabel: "관심종목", content: "최상위 연결망이랑 이카드 다른줄", createdAt: T28SEP + 960000, likes: 4 },
+  ],
+  122041: [
+    { id: 1220411, nickname: "나스닥이십삼배", holdingLabel: "관심종목", content: "겹친그림이지 공식전망 아님", createdAt: T28SEP + 840000, likes: 5 },
+    { id: 1220412, nickname: "착륙육백오십", holdingLabel: "관심종목", content: "가동률이랑 구독매출이 따라오는지", createdAt: T28SEP + 1020000, likes: 4 },
+  ],
+  122042: [
+    { id: 1220421, nickname: "에이전트인출", holdingLabel: "관심종목", content: "23배는 NTM. 이익이 따라와야함", createdAt: T28SEP + 900000, likes: 5 },
+    { id: 1220422, nickname: "블루삼십억", holdingLabel: "관심종목", content: "SPX 19배랑 나란히 보면 할증보임", createdAt: T28SEP + 1080000, likes: 4 },
+  ],
+  122043: [
+    { id: 1220431, nickname: "착륙육백오십", holdingLabel: "관심종목", content: "경고지 이미 무너진은행 아님", createdAt: T28SEP + 960000, likes: 5 },
+    { id: 1220432, nickname: "그록신뢰", holdingLabel: "관심종목", content: "이체속도 초안이 나오면 달력", createdAt: T28SEP + 1140000, likes: 4 },
+  ],
+  122044: [
+    { id: 1220441, nickname: "블루삼십억", holdingLabel: "관심종목", content: "100억은 화면숫자. 오늘밤 비행", createdAt: T28SEP + 1020000, likes: 5 },
+    { id: 1220442, nickname: "그록오백달러", holdingLabel: "관심종목", content: "착륙횟수랑 스타링크가입 같이", createdAt: T28SEP + 1200000, likes: 4 },
+  ],
+  122045: [
+    { id: 1220451, nickname: "그록신뢰", holdingLabel: "관심종목", content: "300억은 사반세기 사재", createdAt: T28SEP + 1080000, likes: 5 },
+    { id: 1220452, nickname: "비전이공이에잇", holdingLabel: "관심종목", content: "뉴글렌 수주가 나와야 씨앗됨", createdAt: T28SEP + 1260000, likes: 4 },
+  ],
+  122046: [
+    { id: 1220461, nickname: "그록오백달러", holdingLabel: "관심종목", content: "완수율이 나와야 신뢰가 데이터", createdAt: T28SEP + 1140000, likes: 5 },
+    { id: 1220462, nickname: "밈코인법", holdingLabel: "관심종목", content: "어제46점이랑 오늘신뢰 나눠적음", createdAt: T28SEP + 1320000, likes: 4 },
+  ],
+  122047: [
+    { id: 1220471, nickname: "비전이공이에잇", holdingLabel: "관심종목", content: "500은 예시. 참여수가 다음", createdAt: T28SEP + 1200000, likes: 5 },
+    { id: 1220472, nickname: "스타십십사", holdingLabel: "관심종목", content: "게시2배 조건이 글을 끌어올리는지", createdAt: T28SEP + 1380000, likes: 4 },
+  ],
+  122048: [
+    { id: 1220481, nickname: "밈코인법", holdingLabel: "관심종목", content: "후속은 28말. 안경일정이 입구", createdAt: T28SEP + 1260000, likes: 5 },
+    { id: 1220482, nickname: "달화성두배", holdingLabel: "관심종목", content: "올해판매랑 안경공개일 분리", createdAt: T28SEP + 1440000, likes: 4 },
+  ],
+  122049: [
+    { id: 1220491, nickname: "스타십십사", holdingLabel: "관심종목", content: "27년 시행. 모든토큰금지 아님", createdAt: T28SEP + 1320000, likes: 5 },
+    { id: 1220492, nickname: "시총삼십조", holdingLabel: "관심종목", content: "플랫폼이 어떤코인을 가리는지", createdAt: T28SEP + 1500000, likes: 4 },
+  ],
+  122050: [
+    { id: 1220501, nickname: "달화성두배", holdingLabel: "관심종목", content: "21:15 창. 궤도랑 26기 전개", createdAt: T28SEP + 1380000, likes: 5 },
+    { id: 1220502, nickname: "네바다플로리다", holdingLabel: "관심종목", content: "13번은 궤도 못남. 오늘은 유료", createdAt: T28SEP + 1560000, likes: 4 },
+  ],
+  122051: [
+    { id: 1220511, nickname: "시총삼십조", holdingLabel: "관심종목", content: "2배는 발언. 출고가 달력", createdAt: T28SEP + 1440000, likes: 5 },
+    { id: 1220512, nickname: "매시간발사", holdingLabel: "관심종목", content: "공장출고랑 비행간격이 확인", createdAt: T28SEP + 1620000, likes: 4 },
+  ],
+  122052: [
+    { id: 1220521, nickname: "네바다플로리다", holdingLabel: "관심종목", content: "1.958조는 하루시총. 종가확인", createdAt: T28SEP + 1500000, likes: 5 },
+    { id: 1220522, nickname: "인도사칠일", holdingLabel: "관심종목", content: "100억 효율화면이랑 시총은 다른줄", createdAt: T28SEP + 1680000, likes: 4 },
+  ],
+  122053: [
+    { id: 1220531, nickname: "매시간발사", holdingLabel: "관심종목", content: "두주 상업. 호출건수가 다음", createdAt: T28SEP + 1560000, likes: 5 },
+    { id: 1220532, nickname: "노르웨이구팔", holdingLabel: "관심종목", content: "캘리포니아 허가랑 요금 나눠봄", createdAt: T28SEP + 1740000, likes: 4 },
+  ],
+  122054: [
+    { id: 1220541, nickname: "인도사칠일", holdingLabel: "관심종목", content: "매시간은 목표. 연속간격 확인", createdAt: T28SEP + 1620000, likes: 5 },
+    { id: 1220542, nickname: "중국오오공", holdingLabel: "관심종목", content: "오늘밤 성공해야 다음간격 열림", createdAt: T28SEP + 1800000, likes: 4 },
+  ],
+  122055: [
+    { id: 1220551, nickname: "노르웨이구팔", holdingLabel: "관심종목", content: "471k는 예측. 10월초 공식", createdAt: T28SEP + 1680000, likes: 5 },
+    { id: 1220552, nickname: "버리닷컴", holdingLabel: "관심종목", content: "2분기 480126이랑 나란히", createdAt: T28SEP + 1860000, likes: 4 },
+  ],
   122022: [
     { id: 1220221, nickname: "미국소진", holdingLabel: "관심종목", content: "2500대 중 테슬라 할당이 나와야함", createdAt: T23SEP + 720000, likes: 5 },
     { id: 1220222, nickname: "노르웨이이구오육", holdingLabel: "관심종목", content: "네바다 주간출고랑 허브10곳 같이봄", createdAt: T23SEP + 900000, likes: 4 },

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117"/><stop offset="100%" style="stop-color:#0a0f1a"/></linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ef4444"/><stop offset="25%" style="stop-color:#f59e0b"/><stop offset="50%" style="stop-color:#4ade80"/><stop offset="75%" style="stop-color:#60a5fa"/><stop offset="100%" style="stop-color:#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <rect x="0" y="0" width="1080" height="5" fill="url(#flow)"/>
+  <text x="540" y="48" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle" letter-spacing="3">INVESTUS DAILY REPORT</text>
+  <text x="540" y="92" font-family="Arial Black,Arial" font-size="34" font-weight="900" fill="#f9fafb" text-anchor="middle">2026.09.28 Daily Snapshot</text>
+  <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
+  <rect x="60" y="122" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="122" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="163" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">A screen said 98% of new cars in Norway are electric, with Model …</text>
+  <text x="116" y="202" font-family="Arial" font-size="16" fill="#9ca3af">Official August BEVs were 98.7%. The +300% Model Y claim is social, not the monthly file.</text>
+  <text x="985" y="181" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">98%</text>
+  <rect x="60" y="247" width="960" height="115" rx="14" fill="#0a1420" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="60" y="247" width="8" height="115" rx="4" fill="#60a5fa"/>
+  <text x="116" y="288" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#60a5fa">China may let Alibaba and ByteDance buy NVIDIA RTX Pro 5500…</text>
+  <text x="116" y="327" font-family="Arial" font-size="16" fill="#9ca3af">ByteDance was said to look at about 1 million units. Shipments were put in late December.</text>
+  <text x="985" y="306" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#60a5fa" text-anchor="end">RTX 5500</text>
+  <rect x="60" y="372" width="960" height="115" rx="14" fill="#140b1f" stroke="#c084fc" stroke-width="2"/>
+  <rect x="60" y="372" width="8" height="115" rx="4" fill="#c084fc"/>
+  <text x="116" y="413" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#c084fc">Starship Flight 14 opens tonight at 8:15 a.m. EDT, 9:15 p.m. in…</text>
+  <text x="116" y="452" font-family="Arial" font-size="16" fill="#9ca3af">The aviation license was revised on the 26th. Twenty-six Starlink V3s are the first paid cargo.</text>
+  <text x="985" y="431" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#c084fc" text-anchor="end">21:15</text>
+  <rect x="60" y="497" width="960" height="115" rx="14" fill="#1a0e00" stroke="#ff9900" stroke-width="2"/>
+  <rect x="60" y="497" width="8" height="115" rx="4" fill="#ff9900"/>
+  <text x="116" y="538" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#ff9900">Jeff Bezos was tallied as putting about $30 billion into Blue Origi…</text>
+  <text x="116" y="577" font-family="Arial" font-size="16" fill="#9ca3af">The same screen put SpaceX at 650-plus landings and a $10 billion private mark.</text>
+  <text x="985" y="556" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#ff9900" text-anchor="end">$30B</text>
+  <rect x="60" y="622" width="960" height="115" rx="14" fill="#1a0a10" stroke="#fb7185" stroke-width="2"/>
+  <rect x="60" y="622" width="8" height="115" rx="4" fill="#fb7185"/>
+  <text x="116" y="663" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#fb7185">Grok Bot creator rewards opened every two weeks, with a $500…</text>
+  <text x="116" y="702" font-family="Arial" font-size="16" fill="#9ca3af">Posts on X must at least double, and payouts run through X Money.</text>
+  <text x="985" y="681" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb7185" text-anchor="end">Pay</text>
+  <rect x="60" y="747" width="960" height="115" rx="14" fill="#111827" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="60" y="747" width="8" height="115" rx="4" fill="#94a3b8"/>
+  <text x="116" y="788" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#94a3b8">The world’s top 10 market caps rose to $30.66 trillion, with…</text>
+  <text x="116" y="827" font-family="Arial" font-size="16" fill="#9ca3af">NVIDIA $5.434T, Apple $4.977T, SpaceX $1.958T.</text>
+  <text x="985" y="806" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#94a3b8" text-anchor="end">$30.66T</text>
+  <rect x="60" y="872" width="960" height="115" rx="14" fill="#061209" stroke="#4ade80" stroke-width="2"/>
+  <rect x="60" y="872" width="8" height="115" rx="4" fill="#4ade80"/>
+  <text x="116" y="913" font-family="Arial Black,Arial" font-size="21" font-weight="900" fill="#4ade80">A prediction market asked if Tesla Q3 deliveries would clear…</text>
+  <text x="116" y="952" font-family="Arial" font-size="16" fill="#9ca3af">Official Q2 was 480,126. The market closes at midnight EDT on October 2.</text>
+  <text x="985" y="931" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#4ade80" text-anchor="end">471k</text>
+  <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: Norway 98% · China RTX 5500 · Starship 21:15 · Blue $30B · Grok pay · $30.66T · 471k</text>
+  <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
+  <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>
+</svg>
