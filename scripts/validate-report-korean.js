@@ -96,6 +96,15 @@ const TONE_BANNED = [
   "다른 화면의 숫자",
 ];
 
+/** 2026-09-29~: 스크린샷을 「그래프를 보여 줬다」고 묘사하지 말고, 적힌 글을 옮긴다 */
+const SCREENSHOT_META_SINCE = "2026-09-29";
+const SCREENSHOT_META = [
+  "보여 줬습니다",
+  "가로축은",
+  "색깔이 갈렸",
+  "화면 복기 카드",
+];
+
 /** 한글 SVG(-en 제외) caption·본문 텍스트 검증 패턴 */
 const SVG_BAD_PATTERNS = [
   /\bBTC ~\d/i,
@@ -127,6 +136,13 @@ function validateSvgKo(filePath, iso) {
         );
         break;
       }
+    }
+  }
+  if (iso && iso >= SCREENSHOT_META_SINCE && /^summary/.test(path.basename(filePath))) {
+    if (src.includes("…") || src.includes("...")) {
+      errors.push(
+        `${filePath}: 한장 요약 제목이 …로 잘렸습니다. 완전한 문장으로 2줄까지 넣고 말줄임 금지.`,
+      );
     }
   }
   return errors;
@@ -523,6 +539,22 @@ function validateReport(r, file) {
     }
   }
   errors.push(...validateTone(r, file));
+  errors.push(...validateScreenshotTranscript(r, file));
+  return errors;
+}
+
+function validateScreenshotTranscript(r, file) {
+  const errors = [];
+  if (!r.date || r.date < SCREENSHOT_META_SINCE) return errors;
+  const text = `${r.summary || ""}\n${r.body || ""}`;
+  for (const phrase of SCREENSHOT_META) {
+    if (text.includes(phrase)) {
+      errors.push(
+        `${file} ${r.id}: 스크린샷을 화면 묘사로 쓰지 마세요 ("${phrase}"). 화면에 적힌 글을 거의 그대로 옮긴 뒤 풀이하세요.`,
+      );
+      break;
+    }
+  }
   return errors;
 }
 

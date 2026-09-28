@@ -11,19 +11,22 @@
   <line x1="80" y1="108" x2="1000" y2="108" stroke="#1f2937" stroke-width="1"/>
   <rect x="60" y="122" width="960" height="282" rx="14" fill="#180f28" stroke="#a78bfa" stroke-width="2"/>
   <rect x="60" y="122" width="8" height="282" rx="4" fill="#a78bfa"/>
-  <text x="116" y="223" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#a78bfa">Incheon Gyeyang A6 opens a three-day general sale from…</text>
-  <text x="116" y="285" font-family="Arial" font-size="17" fill="#9ca3af">663 homes. About ₩530 million for 59㎡, ₩710 million for 84㎡.</text>
-  <text x="985" y="268" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">Gyeyang A6</text>
+  <text x="116" y="195" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#a78bfa">Incheon Gyeyang A6 opens a three-day general sale</text>
+  <text x="116" y="222" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#a78bfa">from tomorrow</text>
+  <text x="116" y="313" font-family="Arial" font-size="17" fill="#9ca3af">663 homes. About ₩530 million for 59㎡, ₩710 million for 84㎡.</text>
+  <text x="985" y="263" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#a78bfa" text-anchor="end">Gyeyang A6</text>
   <rect x="60" y="414" width="960" height="282" rx="14" fill="#1a0d02" stroke="#fb923c" stroke-width="2"/>
   <rect x="60" y="414" width="8" height="282" rx="4" fill="#fb923c"/>
-  <text x="116" y="515" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb923c">Sixty percent of 3rd-new-town pre-sale districts delayed…</text>
-  <text x="116" y="577" font-family="Arial" font-size="17" fill="#9ca3af">21 of 35. Some final prices beat the estimate.</text>
-  <text x="985" y="560" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">60%</text>
+  <text x="116" y="487" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb923c">Sixty percent of 3rd-new-town pre-sale districts delayed</text>
+  <text x="116" y="514" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#fb923c">the main sale by a month or more</text>
+  <text x="116" y="605" font-family="Arial" font-size="17" fill="#9ca3af">21 of 35. Some final prices beat the estimate.</text>
+  <text x="985" y="555" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fb923c" text-anchor="end">60%</text>
   <rect x="60" y="706" width="960" height="282" rx="14" fill="#061520" stroke="#38bdf8" stroke-width="2"/>
   <rect x="60" y="706" width="8" height="282" rx="4" fill="#38bdf8"/>
-  <text x="116" y="807" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#38bdf8">The Jipconomy expo opens tomorrow at COEX with…</text>
-  <text x="116" y="869" font-family="Arial" font-size="17" fill="#9ca3af">Transit, anchor employers and urban-complex cases share one hall.</text>
-  <text x="985" y="852" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">Sep 30</text>
+  <text x="116" y="779" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#38bdf8">The Jipconomy expo opens tomorrow at COEX with</text>
+  <text x="116" y="806" font-family="Arial Black,Arial" font-size="23" font-weight="900" fill="#38bdf8">trust-lease counseling</text>
+  <text x="116" y="897" font-family="Arial" font-size="17" fill="#9ca3af">Transit, anchor employers and urban-complex cases share one hall.</text>
+  <text x="985" y="847" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#38bdf8" text-anchor="end">Sep 30</text>
   <text x="540" y="1010" font-family="Arial" font-size="16" fill="#6b7280" text-anchor="middle">Watch: Gyeyang A6 · 60% delay · expo on the 30th</text>
   <rect x="0" y="1060" width="1080" height="20" fill="url(#flow)" opacity=".4"/>
   <text x="540" y="1073" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2">investus.kr SRP Chief Investment Officer · NOT FINANCIAL ADVICE</text>

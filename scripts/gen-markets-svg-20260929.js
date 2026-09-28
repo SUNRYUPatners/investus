@@ -63,11 +63,9 @@ function estimatePxWidth(text, fontSize, isBold){
   return w;
 }
 
-/** 폭을 넘으면 여러 줄로 나눠 <text> 반환 */
-function ml(text, x, y, fontSize, maxPx, maxLines, lh, attrs){
-  const bold = /font-weight="?(bold|[89]00)/i.test(attrs) || /Arial Black/.test(attrs);
+function wrapLines(text, fontSize, maxPx, bold){
   const est = (t) => estimatePxWidth(t, fontSize, bold);
-  if(est(text) <= maxPx) return `  <text x="${x}" y="${y}" ${attrs}>${esc(text)}</text>`;
+  if(est(text) <= maxPx) return [String(text)];
   const words = String(text).split(/(\s+)/).filter(s => s !== '');
   const parts = [];
   for(const wd of words){
@@ -88,8 +86,20 @@ function ml(text, x, y, fontSize, maxPx, maxLines, lh, attrs){
     cur = /^\s+$/.test(p) ? '' : p;
   }
   if(cur.trim()) lines.push(cur.trim());
+  return lines;
+}
+
+/** 폭을 넘으면 여러 줄로 나눠 <text> 반환. opts.noEllipsis면 … 대신 실패 */
+function ml(text, x, y, fontSize, maxPx, maxLines, lh, attrs, opts){
+  const bold = /font-weight="?(bold|[89]00)/i.test(attrs) || /Arial Black/.test(attrs);
+  const est = (t) => estimatePxWidth(t, fontSize, bold);
+  if(est(text) <= maxPx) return `  <text x="${x}" y="${y}" ${attrs}>${esc(text)}</text>`;
+  const lines = wrapLines(text, fontSize, maxPx, bold);
   const out = lines.slice(0, maxLines);
   if(lines.length > maxLines){
+    if(opts && opts.noEllipsis){
+      throw new Error(`SVG 말줄임 금지: "${String(text)}" (${lines.length}줄 > ${maxLines}, fs=${fontSize}, maxPx=${maxPx})`);
+    }
     let last = out[maxLines-1];
     while(last.length > 1 && est(last + '…') > maxPx) last = last.slice(0, -1);
     out[maxLines-1] = last + '…';
@@ -303,29 +313,34 @@ ${foot(p, o.footer, ko, 1026)}`);
 }
 
 // ── ROWS · 한장요약 가로 줄 나열 ─────────────────────────────────────────────
-// 2026-09-09: 행 수에 맞춰 세로를 채워 하단 여백을 없앰. 제목·본문은 칸 안에 끝나게(… 잘림 금지).
+// 2026-09-09/29: 제목은 완전한 문장. … 잘림 금지. 한 줄에 안 되면 2줄 + 글자 축소.
 function ROWS(o, ko){
   const n = o.rows.length;
   const top = 122;
   const bottom = 990;
   const gap = 10;
   const h = Math.max(100, Math.floor((bottom - top - Math.max(0, n - 1) * gap) / n));
-  const titleFs = h >= 118 ? 23 : 21;
+  const titleFs0 = h >= 118 ? 23 : 21;
   const subFs = h >= 118 ? 17 : 16;
-  const titleMaxPx = 780;
-  const subMaxPx = 860;
-  const titleLines = 1;
-  const subLines = h >= 125 ? 2 : 1;
+  const titleLines = 2;
+  const subLines = h >= 110 ? 2 : 1;
   const rows = o.rows.map((r, i) => {
     const y = top + i * (h + gap);
-    const titleY = y + Math.floor(h * 0.36);
-    const subY = y + Math.floor(h * (subLines === 2 ? 0.58 : 0.70));
-    const rightY = y + Math.floor(h * 0.52);
+    const rightW = estimatePxWidth(r.right, 20, true) + 28;
+    const titleMaxPx = Math.max(620, 985 - 116 - rightW);
+    const subMaxPx = Math.max(700, 900 - rightW);
+    let fs = titleFs0;
+    while(fs > 16 && wrapLines(r.title, fs, titleMaxPx, true).length > titleLines) fs--;
+    const usedTitle = wrapLines(r.title, fs, titleMaxPx, true).length;
+    const usedSub = wrapLines(r.sub, subFs, subMaxPx, false).length;
+    const titleY = y + (usedTitle >= 2 ? Math.floor(h * 0.26) : Math.floor(h * 0.36));
+    const subY = y + (usedTitle >= 2 || usedSub >= 2 ? Math.floor(h * 0.68) : Math.floor(h * 0.70));
+    const rightY = y + Math.floor(h * 0.50);
     return `
   <rect x="60" y="${y}" width="960" height="${h}" rx="14" fill="${r.fill}" stroke="${r.color}" stroke-width="2"/>
   <rect x="60" y="${y}" width="8" height="${h}" rx="4" fill="${r.color}"/>
-${ml(r.title, 116, titleY, titleFs, titleMaxPx, titleLines, titleFs + 4, `font-family="Arial Black,Arial" font-size="${titleFs}" font-weight="900" fill="${r.color}"`)}
-${ml(r.sub, 116, subY, subFs, subMaxPx, subLines, subFs + 4, `font-family="Arial" font-size="${subFs}" fill="#9ca3af"`)}
+${ml(r.title, 116, titleY, fs, titleMaxPx, titleLines, fs + 4, `font-family="Arial Black,Arial" font-size="${fs}" font-weight="900" fill="${r.color}"`, { noEllipsis: true })}
+${ml(r.sub, 116, subY, subFs, subMaxPx, subLines, subFs + 4, `font-family="Arial" font-size="${subFs}" fill="#9ca3af"`, { noEllipsis: true })}
   <text x="985" y="${rightY}" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="${r.color}" text-anchor="end">${esc(r.right)}</text>`;
   }).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">

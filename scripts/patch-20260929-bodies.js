@@ -47,7 +47,7 @@ function replaceReports(file, arr, date, updated, tag) {
   console.log(`${file}: patched ${arr[0].id}~${arr[arr.length - 1].id}`);
 }
 
-replaceReports("lib/reports.ts", US, "2026.09.29", "2026.09.29 08:12", "20260929");
+replaceReports("lib/reports.ts", US, "2026.09.29", "2026.09.29 08:25", "20260929");
 replaceReports("lib/reports-kr.ts", KR, "2026-09-29", "2026.09.29 08:12", "20260929");
 replaceReports("lib/reports-safe.ts", SAFE, "2026-09-29", "2026.09.29 08:12", "20260929");
 replaceReports("lib/reports-kr-re.ts", KR_RE, "2026-09-29", "2026.09.29 08:12", "20260929");
